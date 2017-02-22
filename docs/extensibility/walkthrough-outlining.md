@@ -1,0 +1,137 @@
+---
+title: "연습: 개요 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "편집기 [Visual Studio SDK] 새-개요"
+ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
+caps.latest.revision: 30
+caps.handback.revision: 30
+ms.author: "gregvanl"
+manager: "ghogen"
+---
+# 연습: 개요
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+텍스트 영역을 확장 하거나 축소 하려면의 종류를 정의 하 여 개요와 같은 언어 기반 기능을 구현할 수 있습니다. 언어 서비스의 컨텍스트에서 영역을 정의할 수 있습니다 고유한 파일 이름 확장명 및 콘텐츠 형식을 정의 하 고 영역 정의 해당 형식에만 적용할 수 또는 기존 콘텐츠 형식 \(예: "text"\)에 영역 정의 적용할 수 있습니다. 이 연습에는 정의 개요 영역을 표시 하는 방법을 보여 줍니다.  
+  
+## 사전 요구 사항  
+ Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)을 참조하십시오.  
+  
+## MEF\(Managed Extensibility Framework\) 프로젝트 만들기  
+  
+#### MEF 프로젝트를 만들려면  
+  
+1.  VSIX 프로젝트를 만듭니다. 솔루션의 이름을 `OutlineRegionTest`합니다.  
+  
+2.  편집기 분류자 항목 템플릿을 프로젝트에 추가 합니다. 자세한 내용은 [편집기 항목 템플릿을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-an-editor-item-template.md)을 참조하십시오.  
+  
+3.  기존 클래스 파일을 삭제합니다.  
+  
+## 개요는 태거 구현  
+ 개요 영역 종류의 태그 회색으로 표시 됩니다 \(<xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>\). 이 태그는 표준 동작 개요를 제공 합니다. 윤곽선이 있는 영역을 확장 하거나 축소할 수 있습니다. 개요 영역이 확장 되 고 확장 된 영역 세로 선으로 구분 되는 경우 축소 된 경우 더하기 또는 빼기 기호로 표시 됩니다.  
+  
+ 다음 단계에서는 구분 되는 모든 지역에 대 한 개요 영역을 만드는 태거를 정의 하는 방법을 보여 "\[" 및 "\]"입니다.  
+  
+#### 개요는 태거 구현 하려면  
+  
+1.  클래스 파일을 추가 하 고 이름을 `OutliningTagger`합니다.  
+  
+2.  다음 네임 스페이스를 가져옵니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#1](../extensibility/codesnippet/CSharp/walkthrough-outlining_1.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_1.vb)]  
+  
+3.  라는 클래스를 만들고 `OutliningTagger`, 구현 및 <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>:  
+  
+     [!code-cs[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/CSharp/walkthrough-outlining_2.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_2.vb)]  
+  
+4.  텍스트 버퍼 및 스냅숏 추적 하 고 누적 집합 개요 영역으로 태그 지정 해야 하는 줄의 일부 필드를 추가 합니다. 이 코드 개요 영역을 나타내는 \(나중에 정의\)를 지역 개체의 목록이 포함 됩니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/CSharp/walkthrough-outlining_3.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_3.vb)]  
+  
+5.  버퍼를 구문 분석 하 고 이벤트 처리기를 추가 하는 추가 필드를 초기화 하는 태거 생성자는 <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> 이벤트입니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#4](../extensibility/codesnippet/CSharp/walkthrough-outlining_4.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_4.vb)]  
+  
+6.  구현에서 <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> 태그를 인스턴스화하는 메서드를 확장 합니다. 이 예에서는 가정 하는 범위는 <xref:Microsoft.VisualStudio.Text.NormalizedSpanCollection> 메서드에 전달 된이 하지 않더라도 항상 대\/소문자, 연속 되는 합니다. 이 메서드는 각 개요 영역에 대 한 새 태그 범위를 인스턴스화합니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#5](../extensibility/codesnippet/CSharp/walkthrough-outlining_5.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_5.vb)]  
+  
+7.  선언 된 `TagsChanged` 이벤트 처리기입니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#6](../extensibility/codesnippet/CSharp/walkthrough-outlining_6.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_6.vb)]  
+  
+8.  추가 `BufferChanged` 에 응답 하는 이벤트 처리기 <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> 버퍼씩 텍스트를 구문 분석 하 여 이벤트입니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#7](../extensibility/codesnippet/CSharp/walkthrough-outlining_7.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_7.vb)]  
+  
+9. 버퍼를 구문 분석 하는 메서드를 추가 합니다. 여기에 사용 된 예제는 설명 용 으로만입니다. 동기적으로 중첩 된 개요 영역에 버퍼 구문 분석합니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#8](../extensibility/codesnippet/CSharp/walkthrough-outlining_8.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_8.vb)]  
+  
+10. 다음 도우미 메서드 1은 맨 왼쪽 중괄호 쌍 되도록 개요, 수준의 나타내는 정수를 가져옵니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/CSharp/walkthrough-outlining_9.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_9.vb)]  
+  
+11. 다음 도우미 메서드는 SnapshotSpan 영역 \(이 항목의 뒷부분에 정의 됨\)으로 변환 합니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/CSharp/walkthrough-outlining_10.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_10.vb)]  
+  
+12. 다음 코드는 단지입니다. 줄 번호와 개요 영역 및 상위 영역 \(있는 경우\)에 대 한 참조의 시작 오프셋을 포함 하는 PartialRegion 클래스를 정의 합니다. 그러면 파서에서를 설정 하 여 개요 영역을 중첩 합니다. 파생된 영역 클래스 개요 영역 끝의 줄 번호에 대 한 참조를 포함합니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/CSharp/walkthrough-outlining_11.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_11.vb)]  
+  
+## 태거 공급자 구현  
+ 프로그램 태거에 대 한 태거 공급자를 내보내야 합니다. 태거 공급자가 만드는 `OutliningTagger` "text" 콘텐츠 형식 또는 다른 반환 버퍼는 `OutliningTagger` 버퍼 이미 있는 경우.  
+  
+#### 태거 공급자를 구현 하려면  
+  
+1.  라는 클래스를 만들고 `OutliningTaggerProvider` 를 구현 하는 <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>, ContentType 및 TagType 특성이 내보냅니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#12](../extensibility/codesnippet/CSharp/walkthrough-outlining_12.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_12.vb)]  
+  
+2.  구현 된 <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider.CreateTagger%2A> 메서드를 추가 하 여는 `OutliningTagger` 버퍼의 속성에 있습니다.  
+  
+     [!code-cs[VSSDKOutlineRegionTest#13](../extensibility/codesnippet/CSharp/walkthrough-outlining_13.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_13.vb)]  
+  
+## 코드 빌드 및 테스트  
+ 이 코드를 테스트 하려면 OutlineRegionTest 솔루션 빌드하고 실험적 인스턴스에서 실행 합니다.  
+  
+#### 빌드하고 OutlineRegionTest 솔루션을 테스트 하려면  
+  
+1.  솔루션을 빌드합니다.  
+  
+2.  디버거에서 이 프로젝트를 실행하면 Visual Studio의 두 번째 인스턴스가 인스턴스화됩니다.  
+  
+3.  텍스트 파일을 만듭니다. 여는 중괄호와 닫는 중괄호를 포함 하는 일부 텍스트를 입력 합니다.  
+  
+    ```  
+    [  
+       Hello  
+    ]  
+    ```  
+  
+4.  두 중괄호를 포함 하는 개요 영역 없어야 합니다. 개요 영역을 축소 하 여는 중괄호의 왼쪽에 빼기 기호를 클릭 해야 합니다. 때 영역을 축소 줄임표 \(...\) 기호 축소 영역 및 텍스트를 포함 하는 팝업의 왼쪽에 나타날 **가리킨 항목 텍스트** 줄임표 위로 포인터를 이동 하면 표시 됩니다.  
+  
+## 참고 항목  
+ [연습: 파일 이름 확장명에 콘텐츠 형식 연결](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
