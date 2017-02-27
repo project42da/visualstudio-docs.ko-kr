@@ -1,8 +1,7 @@
 ---
 title: "템플릿 정책 및 속성 창 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "속성 창에서 템플릿 정책"
 ms.assetid: 1d8019d3-5e57-47ba-b358-526b0796a63b
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 템플릿 정책 및 속성 창
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

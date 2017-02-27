@@ -1,8 +1,7 @@
 ---
 title: "오류: 프로세스의 ID를 검사할 수 있는 권한이 없습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ dev_langs:
   - "C++"
 ms.assetid: 6233d060-85b8-42be-ae5f-bde7e1d0f241
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 오류: 프로세스의 ID를 검사할 수 있는 권한이 없습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

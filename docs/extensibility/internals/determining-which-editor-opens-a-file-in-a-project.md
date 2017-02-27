@@ -1,8 +1,7 @@
 ---
 title: "프로젝트의 파일 편집기 열리는 결정합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "지 속성 파일을 엽니다 편집기를 결정 합니다."
 ms.assetid: acbcf4d8-a53a-4727-9043-696a47369479
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 프로젝트의 파일 편집기 열리는 결정합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

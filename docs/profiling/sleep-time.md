@@ -1,8 +1,7 @@
 ---
 title: "중지 시간 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "동시성 시각화 도우미, 중지 시간"
 ms.assetid: 3ddb96f9-9bda-4a68-ad4d-ef488a0a68dc
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 중지 시간
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

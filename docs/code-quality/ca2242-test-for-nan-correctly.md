@@ -1,8 +1,7 @@
 ---
 title: "CA2242: NaN에 대해 정확하게 테스트하십시오. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "CA2242"
 ms.assetid: e12dcffc-e255-4e1e-8fdf-3c6054d44abe
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 11
 ---
 # CA2242: NaN에 대해 정확하게 테스트하십시오.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

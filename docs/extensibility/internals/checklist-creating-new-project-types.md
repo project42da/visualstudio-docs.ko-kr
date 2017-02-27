@@ -1,8 +1,7 @@
 ---
 title: "검사 목록: 새 프로젝트 형식 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "프로젝트 형식 만들기에 대 한 검사 목록"
 ms.assetid: 29eb9c3b-1933-4741-aa85-65a33f0825ba
 caps.latest.revision: 23
-caps.handback.revision: 23
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # 검사 목록: 새 프로젝트 형식 만들기
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

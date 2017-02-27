@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 시작 페이지를 배포합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "시작 페이지를 배포 합니다."
 ms.assetid: 4a7eb360-de83-41d5-be53-3cfb160d19f9
 caps.latest.revision: 21
-caps.handback.revision: 21
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 사용자 지정 시작 페이지를 배포합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "관리 코드의 복잡성 및 유지 관리 용이성 측정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "복잡성 관리 코드"
 ms.assetid: 952b6f2e-584f-4c97-a5ba-42d7bd47a576
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "erickson-doug"
 ms.author: "douge"
 manager: "douge"
+caps.handback.revision: 14
 ---
 # 관리 코드의 복잡성 및 유지 관리 용이성 측정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

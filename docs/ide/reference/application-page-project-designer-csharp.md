@@ -1,43 +1,25 @@
 ---
-title: "프로젝트 디자이너, 응용 프로그램 페이지(C#) | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- cs.ProjectPropertiesApplicationWPF
-- cs.ProjectPropertiesApplication
-helpviewer_keywords:
-- Project Designer, Application page
-- Application page in Project Designer
+title: "프로젝트 디자이너, 응용 프로그램 페이지(C#) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "cs.ProjectPropertiesApplicationWPF"
+  - "cs.ProjectPropertiesApplication"
+helpviewer_keywords: 
+  - "프로젝트 디자이너, 응용 프로그램 페이지"
+  - "프로젝트 디자이너의 응용 프로그램 페이지"
 ms.assetid: f13701a8-4e2e-4474-9d60-bb43decbe0c1
 caps.latest.revision: 56
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ccee6976f7c98e62211eb2bda4dec7da7334e031
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 56
 ---
 # <a name="application-page-project-designer-c"></a>프로젝트 디자이너, 응용 프로그램 페이지(C#)
 **프로젝트 디자이너**의 **응용 프로그램** 페이지를 사용하여 프로젝트의 응용 프로그램 설정과 속성을 지정할 수 있습니다.  

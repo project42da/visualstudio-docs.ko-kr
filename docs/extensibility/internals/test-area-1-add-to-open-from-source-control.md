@@ -1,8 +1,7 @@
 ---
 title: "테스트 영역 1: 소스 제어에서 열기에 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "소스 제어 플러그 인을 추가 하 고 솔루션 열기"
 ms.assetid: 5b3b5b08-5e9b-41be-ac72-c63957faed22
 caps.latest.revision: 20
-caps.handback.revision: 20
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 소스 제어에서 열기 /를 추가 하는 테스트 영역 1:
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "데이터 바인딩된 ActiveX 컨트롤 디버깅 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "데이터 바인딩 컨트롤, ActiveX"
 ms.assetid: 9f6e1f00-e25b-48a9-8484-7e67a1232461
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 데이터 바인딩된 ActiveX 컨트롤 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

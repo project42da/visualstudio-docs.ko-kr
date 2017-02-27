@@ -1,8 +1,7 @@
 ---
 title: "식 계산기 구현 전략 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "디버그 엔진을 구현 전략"
 ms.assetid: 1bccaeb3-8109-4128-ae79-16fd8fbbaaa2
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 식 계산기 구현 전략
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

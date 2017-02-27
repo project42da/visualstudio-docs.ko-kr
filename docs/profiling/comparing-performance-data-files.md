@@ -1,40 +1,22 @@
 ---
-title: "성능 데이터 파일 비교 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- profiling tools, comparing profiling tools report files
-- profiling tools reports, comparing
+title: "프로파일링 도구 데이터 파일 비교 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "프로파일링 도구, 프로파일링 도구 보고서 파일 비교"
+  - "프로파일링 도구 보고서, 비교"
 ms.assetid: e6fda144-f21d-4912-9d16-1b8d3555a210
 caps.latest.revision: 12
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9a0b4dcb86aa4241d223dd4a1172267dd8ec20da
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
 # <a name="comparing-performance-data-files"></a>성능 데이터 파일 비교
 프로파일링 도구 데이터 파일 비교 기능을 통해 두 개의 보고서 파일(.VSP/또는 VSP)을 선택하고 프로파일링 세션 간에 발생하는 차이, 성능 저하 및 향상된 기능을 보여 주는 보고서를 생성할 수 있습니다.  

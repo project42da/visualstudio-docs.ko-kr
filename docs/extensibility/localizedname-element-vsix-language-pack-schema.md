@@ -1,8 +1,7 @@
 ---
 title: "LocalizedName 요소 (VSIX 언어 팩 스키마) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 57b7f502-3b04-42d9-90d5-f57772a7c757
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # LocalizedName 요소 (VSIX 언어 팩 스키마)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

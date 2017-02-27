@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "사용 권한, ClickOnce 응용 프로그램"
 ms.assetid: 660459ca-ef73-44a8-b323-610001f63b93
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 17
 ---
 # 방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

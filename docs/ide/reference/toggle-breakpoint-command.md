@@ -1,8 +1,7 @@
 ---
 title: "중단점 설정/해제 명령 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ToggleBreakpoint 명령"
 ms.assetid: d50dfadb-ce79-4d5e-9c09-1cfddd57876d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 중단점 설정/해제 명령
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

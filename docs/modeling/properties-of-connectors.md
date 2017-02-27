@@ -1,8 +1,7 @@
 ---
 title: "연결선의 속성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "도메인별 언어, 연결선"
 ms.assetid: b1f24e8d-cdd7-4a5d-af37-1038f43b45c7
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 21
 ---
 # 연결선의 속성
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

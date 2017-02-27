@@ -1,8 +1,7 @@
 ---
 title: "프로젝트 구성 개체 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "개체를 프로젝트 구성"
 ms.assetid: 877756c9-4261-43d9-9f32-51bf06b4219f
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 프로젝트 구성 개체
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

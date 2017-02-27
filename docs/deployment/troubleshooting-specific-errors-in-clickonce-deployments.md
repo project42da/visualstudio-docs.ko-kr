@@ -1,8 +1,7 @@
 ---
 title: "ClickOnce 배포 관련 오류 문제 해결 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "ClickOnce 배포 문제 해결"
 ms.assetid: 22dfe8f1-8271-4708-9c25-6bbb13920ac8
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 13
 ---
 # ClickOnce 배포 관련 오류 문제 해결
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,43 +1,25 @@
 ---
-title: "방법: 추가 계측 옵션 지정 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.performance.property.advanced
-helpviewer_keywords:
-- instrumentation, options
-- profiling tools, session options
-- performance sessions, options
+title: "방법: 추가 계측 옵션 지정 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.performance.property.advanced"
+helpviewer_keywords: 
+  - "계측, 옵션"
+  - "프로파일링 도구, 세션 옵션"
+  - "성능 세션, 옵션"
 ms.assetid: 639afe26-8335-4bd4-8aa5-f2c607b81f07
 caps.latest.revision: 16
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 84e77bbb0901a677b9974ceacb4363155a26d8cc
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 16
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>방법: 추가 계측 옵션 지정
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] IDE(통합 개발 환경) 내에서 또는 명령줄 도구를 사용하여 이진을 계측할 수 있습니다. IDE 내에서 이진 파일을 계측할 경우 [VSInstr](../profiling/vsinstr.md) 도구에 대한 추가적인 계측 옵션을 지정하여 계측 중에 수집된 데이터 볼륨을 제어할 수 있습니다. 이러한 옵션은 세션 또는 대상 수준에서 사용할 수 있습니다. 예를 들어 계측 프로세스 중에 특정 함수를 포함하거나 제외하려면 대상 수준에서 추가적인 계측 옵션을 사용합니다.  

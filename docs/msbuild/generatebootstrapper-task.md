@@ -1,46 +1,29 @@
 ---
-title: "GenerateBootstrapper 작업 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#GenerateBootstrapper
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- MSBuild, GenerateBootstrapper task
-- GenerateBootstrapper task [MSBuild]
+title: "GenerateBootstrapper 작업 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "http://schemas.microsoft.com/developer/msbuild/2003#GenerateBootstrapper"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - "MSBuild를 GenerateBootstrapper 작업"
+  - "GenerateBootstrapper 작업[MSBuild]"
 ms.assetid: ca3ba2c6-d2ea-41f2-b7e3-0fc2b0730460
 caps.latest.revision: 13
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 6a67893ef4326eaef3d3ca016f6da23e4687c780
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper 작업
 응용 프로그램과 해당 필수 조건을 검색, 다운로드, 설치할 수 있는 자동화된 방법을 제공합니다. 이 작업은 응용 프로그램을 구성하는 모든 구성 요소에 대한 개별 설치 관리자를 통합하는 단일 설치 관리자로 사용됩니다.  

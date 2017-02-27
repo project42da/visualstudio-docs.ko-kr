@@ -1,46 +1,28 @@
 ---
-title: "솔루션 및 프로젝트 만들기 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.openprojectfromweb
-- vs.newproject
-- VS.ToolsOptionsPages.Projects.General
-- SolutionItemsProject
-helpviewer_keywords:
-- solutions [Visual Studio], deleting
-- solutions [Visual Studio], creating
-- projects [Visual Studio], creating
+title: "솔루션 및 프로젝트 만들기 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.openprojectfromweb"
+  - "vs.newproject"
+  - "VS.ToolsOptionsPages.Projects.General"
+  - "SolutionItemsProject"
+helpviewer_keywords: 
+  - "솔루션 [Visual Studio], 삭제"
+  - "솔루션 [Visual Studio], 만들기"
+  - "프로젝트 [Visual Studio], 만들기"
 ms.assetid: 836f8ca0-3fc9-4f4b-9090-45f2e4d2e9c8
 caps.latest.revision: 46
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b36d04886bddba926ab3def55244410b8ff4c61e
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 43
 ---
 # <a name="creating-solutions-and-projects"></a>Creating Solutions and Projects
 프로젝트는 응용 프로그램 빌드에 필요한 모든 항목에 대한 논리적 컨테이너입니다. 주 메뉴에서 **파일 &#124; 새로 만들기 &#124; 프로젝트**를 선택하여 프로젝트를 만드는 경우 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 프로젝트가 포함될 솔루션을 만듭니다. 그런 다음 필요한 경우 새 프로젝트나 기존 프로젝트를 솔루션에 더 추가할 수 있습니다. 기존 코드 파일에서 프로젝트를 만들 수 있으며 작업을 마쳤을 때 삭제될 임시 프로젝트(.NET만 해당)를 만들 수 있습니다.  

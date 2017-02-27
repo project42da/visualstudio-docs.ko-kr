@@ -1,42 +1,24 @@
 ---
-title: "CPU 및 Windows 카운터 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.performance.property.counters
-helpviewer_keywords:
-- Windows counters in Profiling Tools
-- CPU counters in Profiling Tools
+title: "프로파일링 도구의 CPU 및 Windows 카운터 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.performance.property.counters"
+helpviewer_keywords: 
+  - "프로파일링 도구의 Windows 카운터"
+  - "프로파일링 도구의 CPU 카운터"
 ms.assetid: d2c45c6a-f975-45ab-b8a5-4768ddd518fb
 caps.latest.revision: 28
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 51d524bafd6e5014c1542b05d9fd3a908eca41df
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 26
 ---
 # <a name="cpu-and-windows-counters"></a>CPU 및 Windows 카운터
 Visual Studio 프로파일러를 사용하면 운영 체제(Windows 카운터)에 의해 생성된 성능 데이터 및 프로세서 단위(CPU 카운터)에 의해 생성된 성능 데이터를 수집할 수 있습니다.  

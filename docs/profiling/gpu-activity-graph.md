@@ -1,8 +1,7 @@
 ---
 title: "GPU 작업 그래프 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ f1_keywords:
   - "vs.cv.cpu.graph.gpu"
 ms.assetid: d7c769af-95fb-49a3-b5ab-deafecee46fa
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # GPU 작업 그래프
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

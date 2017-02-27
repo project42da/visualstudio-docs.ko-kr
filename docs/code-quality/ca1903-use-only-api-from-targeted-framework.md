@@ -1,8 +1,7 @@
 ---
 title: "CA1903: 대상 프레임워크에서 API만 사용하십시오. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "UseOnlyApiFromTargetedFramework"
 ms.assetid: efdb5cc7-bbd8-4fa7-9fff-02b91e59350e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 8
 ---
 # CA1903: 대상 프레임워크에서 API만 사용하십시오.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

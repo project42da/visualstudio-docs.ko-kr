@@ -1,8 +1,7 @@
 ---
 title: "ClickOnce 응용 프로그램 게시 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "응용 프로그램 배포[ClickOnce], ClickOnce 응용 프로그램 게시"
 ms.assetid: eb6dfe79-f54c-4331-8e36-073688e70973
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 22
 ---
 # ClickOnce 응용 프로그램 게시
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

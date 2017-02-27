@@ -1,8 +1,7 @@
 ---
 title: "방법: 디자이너를 사용하여 ClickOnce 응용 프로그램의 URL 활성화 해제 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "URL 활성화, ClickOnce 응용 프로그램"
 ms.assetid: a337a582-e67c-409a-b52e-607cd1a8fc57
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 16
 ---
 # 방법: 디자이너를 사용하여 ClickOnce 응용 프로그램의 URL 활성화 해제
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

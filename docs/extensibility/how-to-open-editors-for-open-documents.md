@@ -1,8 +1,7 @@
 ---
 title: "방법: 열린 문서에 대 한 편집기를 열어 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "열려 있는 문서를 열 편집기 [Visual Studio SDK]"
 ms.assetid: 1a0fa49c-efa4-4dcc-bdc0-299b7052acdc
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 방법: 열린 문서에 대 한 편집기를 열어
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

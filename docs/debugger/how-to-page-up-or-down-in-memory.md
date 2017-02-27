@@ -1,8 +1,7 @@
 ---
 title: "방법: 메모리에서 위 또는 아래로 한 페이지 이동 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "메모리 창, 메모리에서 페이지 위나 아래로 이동"
 ms.assetid: 50b30a68-66f6-43f8-a48b-59ce12c95471
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 방법: 메모리에서 위 또는 아래로 한 페이지 이동
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

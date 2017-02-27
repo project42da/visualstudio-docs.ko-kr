@@ -1,8 +1,7 @@
 ---
 title: "오류: 사용자는 sp_enable_sql_debug 저장 프로시저를 실행할 수 없습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ dev_langs:
   - "C++"
 ms.assetid: 11957495-c238-4cc5-8937-e4026f5e10e1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 오류: 사용자는 sp_enable_sql_debug 저장 프로시저를 실행할 수 없습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

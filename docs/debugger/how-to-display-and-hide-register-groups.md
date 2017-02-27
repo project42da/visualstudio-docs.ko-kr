@@ -1,8 +1,7 @@
 ---
 title: "방법: 레지스터 그룹 표시 및 숨기기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "레지스터 창, 레지스터 그룹 표시/숨기기"
 ms.assetid: 6be5dfb4-4cfe-4daf-b538-60405640857d
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 방법: 레지스터 그룹 표시 및 숨기기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

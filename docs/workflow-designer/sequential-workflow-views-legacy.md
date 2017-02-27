@@ -1,8 +1,7 @@
 ---
 title: "순차 워크플로 뷰(레거시) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "순차 워크플로, 뷰"
 ms.assetid: 135f24b9-1b37-442b-9ef8-f0f2108a3212
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # 순차 워크플로 뷰(레거시)
 [!INCLUDE[vs2010](../modeling/includes/vs2010_md.md)]에서는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 하는 데 사용할 수 있는 레거시 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]를 제공합니다.  

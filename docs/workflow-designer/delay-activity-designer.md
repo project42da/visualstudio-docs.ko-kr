@@ -1,8 +1,7 @@
 ---
 title: "Delay 활동 디자이너 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Statements.Delay.UI"
 ms.assetid: f51742a8-2c9a-47d1-8a23-18459d03ae19
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 8
 ---
 # Delay 활동 디자이너
 **Delay** 활동 디자이너는 <xref:System.Activities.Statements.Delay> 활동을 만들고 구성하는 데 사용됩니다.  

@@ -1,18 +1,17 @@
 ---
 title: "방법: 프로그램 코드로 파일에서 모델 열기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d7d68697-5418-4263-bdb2-48401924ea71
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 8
 ---
 # 방법: 프로그램 코드로 파일에서 모델 열기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

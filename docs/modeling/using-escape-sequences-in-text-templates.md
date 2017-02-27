@@ -1,8 +1,7 @@
 ---
 title: "텍스트 템플릿에서 이스케이프 시퀀스 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "텍스트 템플릿, 이스케이프 시퀀스"
 ms.assetid: 36fff542-2f42-460f-a2d5-03fc76817f3b
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 29
 ---
 # 텍스트 템플릿에서 이스케이프 시퀀스 사용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

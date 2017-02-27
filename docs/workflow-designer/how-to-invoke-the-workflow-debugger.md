@@ -1,18 +1,17 @@
 ---
 title: "방법: 워크플로 디버거 호출 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 34c592af-f4f6-4d02-99f6-63a94698e48b
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 9
 ---
 # 방법: 워크플로 디버거 호출
 일반적으로 워크플로 디버깅은 다른 Visual Studio 프로그래밍 언어로 작성된 프로그램의 디버깅과 동일합니다.다음과 같은 방법으로 워크플로 디버거를 시작할 수 있습니다.  

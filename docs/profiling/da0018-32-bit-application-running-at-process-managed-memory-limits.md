@@ -1,8 +1,7 @@
 ---
 title: "DA0018: 프로세스 관리 메모리 한도로 실행 중인 32비트 응용 프로그램 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ f1_keywords:
   - "vs.performance.rules.DA0018"
 ms.assetid: 98eb2d96-f92f-42f9-915c-e5ac2330ffbf
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # DA0018: 프로세스 관리 메모리 한도로 실행 중인 32비트 응용 프로그램
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "디버그 엔진 구현 전략 선택 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "디버그 엔진을 구현 전략"
 ms.assetid: 90458fdd-2d34-4f10-82dc-6d8f31b66d8b
 caps.latest.revision: 6
-caps.handback.revision: 6
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 디버그 엔진 구현 전략 선택
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

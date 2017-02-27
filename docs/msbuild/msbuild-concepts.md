@@ -1,38 +1,21 @@
 ---
 title: "MSBuild 개념 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- MSBuild, concepts
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "MSBuild 개념"
 ms.assetid: 083b8ba3-e4ad-45af-bb5d-3bc81d406131
 caps.latest.revision: 13
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: f6c59188abc8cbb9909c12438bc58fa9301d8af9
-ms.openlocfilehash: 9a53328adf662b1c47dc1bf2317764562f2e204e
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
 # <a name="msbuild-concepts"></a>MSBuild 개념
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 빌드 플랫폼이 소프트웨어를 빌드하는 방법을 제어하는 데 사용할 수 있는 기본 XML 스키마를 제공합니다. 빌드의 구성 요소 및 이러한 구성 요소를 빌드할 방법을 지정하려면 MSBuild의 네 가지 부분(속성, 항목, 작업, 대상)을 사용합니다.  

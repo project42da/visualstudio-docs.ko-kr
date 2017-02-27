@@ -1,8 +1,7 @@
 ---
 title: "방법: MIP 수준 만들기 및 수정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f64d4369-2307-4175-a39a-2e45506f7fa1
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 방법: MIP 수준 만들기 및 수정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

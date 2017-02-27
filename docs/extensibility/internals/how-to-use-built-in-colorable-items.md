@@ -1,8 +1,7 @@
 ---
 title: "방법: 기본 제공 색 항목을 사용 하 여 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "언어 서비스, 기본 제공 색 항목"
 ms.assetid: 5e5f3436-6bad-4fd2-8823-6a30353ba648
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 방법: 기본 제공 색 항목을 사용 하 여
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

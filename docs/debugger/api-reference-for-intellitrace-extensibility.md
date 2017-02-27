@@ -1,8 +1,7 @@
 ---
 title: "IntelliTrace 확장성을 위한 API 참조 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "IntelliTrace, API 참조"
 ms.assetid: 46e6c648-293b-45c2-a29e-cca9c36cd865
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # IntelliTrace 확장성을 위한 API 참조
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

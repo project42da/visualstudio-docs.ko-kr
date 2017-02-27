@@ -1,8 +1,7 @@
 ---
 title: "방법: 빌드 정리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "출력, 항목 제거"
 ms.assetid: 999ba473-b0c4-45c7-930a-63ea7a510509
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 방법: 빌드 정리
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

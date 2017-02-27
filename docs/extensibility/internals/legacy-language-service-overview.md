@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스 개요 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "언어 서비스에 대 한 언어 서비스 [관리 되는 패키지 프레임 워크]"
 ms.assetid: bb44e27b-d228-463c-b2cf-cd5c24c7c1b5
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 레거시 언어 서비스 개요
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

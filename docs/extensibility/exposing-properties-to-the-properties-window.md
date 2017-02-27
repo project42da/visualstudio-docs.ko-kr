@@ -1,8 +1,7 @@
 ---
 title: "속성 창에 속성 노출 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "속성을 노출 하는 속성 브라우저"
 ms.assetid: 47f295b5-1ca5-4e7b-bb52-7b926b136622
 caps.latest.revision: 36
-caps.handback.revision: 36
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # 속성 창에 속성 노출
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

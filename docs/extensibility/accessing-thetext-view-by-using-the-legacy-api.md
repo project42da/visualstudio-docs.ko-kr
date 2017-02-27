@@ -1,8 +1,7 @@
 ---
 title: "텍스트 보기에 액세스 하는 레거시 API를 사용 하 여 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-텍스트 보기"
 ms.assetid: 8f751f72-c972-4be3-84ee-19c281e02e25
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 텍스트 보기에 액세스 하는 레거시 API를 사용 하 여
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

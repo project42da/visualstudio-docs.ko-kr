@@ -1,8 +1,7 @@
 ---
 title: "관리 코드에 대한 관리 권장 규칙 규칙 집합 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1d1160f8-4e51-4e70-99cd-82ad10ee7b32
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 10
 ---
 # 관리 코드에 대한 관리 권장 규칙 규칙 집합
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

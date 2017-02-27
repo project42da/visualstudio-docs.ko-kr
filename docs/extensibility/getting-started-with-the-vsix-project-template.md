@@ -1,8 +1,7 @@
 ---
 title: "VSIX 프로젝트 템플릿을 사용 하 여 시작 하기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "VSIX 프로젝트 템플릿 visual Studio SDK"
 ms.assetid: 89fac33e-9380-4723-9b45-048a6e16f0ed
 caps.latest.revision: 25
-caps.handback.revision: 25
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # VSIX 프로젝트 템플릿을 사용 하 여 시작 하기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

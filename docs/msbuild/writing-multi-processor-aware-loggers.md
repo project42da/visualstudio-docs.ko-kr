@@ -1,8 +1,7 @@
 ---
 title: "다중 프로세서 인식 로거 작성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "다중 프로세서 로거"
 ms.assetid: ff987d1b-1798-4803-9ef6-cc8fcc263516
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 다중 프로세서 인식 로거 작성
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "방법: 뷰 문서 데이터를 연결 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK]-사용자 지정 뷰 문서 데이터 연결"
 ms.assetid: f92c0838-45be-42b8-9c55-713e9bb8df07
 caps.latest.revision: 22
-caps.handback.revision: 22
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # 방법: 뷰 문서 데이터를 연결 합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

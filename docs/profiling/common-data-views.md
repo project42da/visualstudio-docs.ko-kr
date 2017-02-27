@@ -1,8 +1,7 @@
 ---
 title: "프로파일러 공통 데이터 뷰 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "프로파일링 도구, 뷰"
 ms.assetid: ee5e964c-1222-496d-b825-166443a89d2b
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 프로파일러 공통 데이터 뷰
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스 파서 및 검사 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "파서는 언어 서비스 [관리 되는 패키지 프레임 워크]"
 ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
 caps.latest.revision: 20
-caps.handback.revision: 20
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 레거시 언어 서비스 파서 및 검사
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

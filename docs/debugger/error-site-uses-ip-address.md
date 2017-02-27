@@ -1,8 +1,7 @@
 ---
 title: "오류: 사이트에서 IP 주소를 사용합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "디버거, 웹 응용 프로그램 오류"
 ms.assetid: b2b8ddc8-746d-46e3-87a6-b956b1ee048d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 오류: 사이트에서 IP 주소를 사용합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

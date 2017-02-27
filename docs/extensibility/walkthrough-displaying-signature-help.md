@@ -1,8 +1,7 @@
 ---
 title: "연습: 서명 도움말 표시 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK]-새 서명 도움말/매개 변수 정보"
 ms.assetid: 4a6a884b-5730-4b54-9264-99684f5b523c
 caps.latest.revision: 28
-caps.handback.revision: 28
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # 연습: 서명 도움말 표시
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

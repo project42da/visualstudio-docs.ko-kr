@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 디버그 엔진 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK], 사용자 지정 디버그 엔진"
 ms.assetid: 52794238-6fae-451c-bf1c-99f344c6f173
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 사용자 지정 디버그 엔진 만들기
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

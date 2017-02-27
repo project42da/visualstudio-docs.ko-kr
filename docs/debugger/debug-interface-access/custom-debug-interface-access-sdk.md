@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정(디버그 인터페이스 액세스 SDK) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "사용자 지정 기호"
 ms.assetid: a219fc83-d2a8-4bc5-b7e1-bfafeb247f16
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 사용자 지정(디버그 인터페이스 액세스 SDK)
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

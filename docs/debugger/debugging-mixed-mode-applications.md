@@ -1,8 +1,7 @@
 ---
 title: "혼합 모드 응용 프로그램 디버깅 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "혼합 모드 디버깅, 속성 확인"
 ms.assetid: 60e34477-ae4e-48c7-9093-3e37f72e1bc3
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # 혼합 모드 응용 프로그램 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

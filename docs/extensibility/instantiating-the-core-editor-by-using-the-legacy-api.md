@@ -1,8 +1,7 @@
 ---
 title: "코어 편집기 레거시 API를 사용 하 여 인스턴스화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-편집기 인스턴스화"
 ms.assetid: dda23b18-96ef-43c6-b0dc-06d15cbe5cbb
 caps.latest.revision: 29
-caps.handback.revision: 29
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # 코어 편집기 레거시 API를 사용 하 여 인스턴스화
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "레거시 언어 서비스의 매개 변수 정보 | Microsoft Docs"
+title: "레거시 언어 Service2의 매개 변수 정보 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "언어 서비스 [관리 되는 패키지 프레임 워크]에서 지 원하는 매개 변수 정보 (IntelliSense)"
 ms.assetid: a117365d-320d-4bb5-b61d-3e6457b8f6bc
 caps.latest.revision: 23
-caps.handback.revision: 23
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # 레거시 언어 서비스의 매개 변수 정보
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

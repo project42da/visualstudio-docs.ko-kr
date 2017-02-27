@@ -1,8 +1,7 @@
 ---
 title: "Visual Studio 디버거 용어집 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK] 용어집"
 ms.assetid: 4a2cfaab-1fbd-4a23-bd00-9ac4cc50d7fd
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Visual Studio 디버거 용어집
 [!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]

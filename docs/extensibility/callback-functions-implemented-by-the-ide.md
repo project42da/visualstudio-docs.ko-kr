@@ -1,8 +1,7 @@
 ---
 title: "IDE에 의해 구현 되는 콜백 함수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "콜백 함수, 소스 제어 플러그 인"
 ms.assetid: 4a8833f0-6ac0-4ea7-9400-8275aa991468
 caps.latest.revision: 24
-caps.handback.revision: 24
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # IDE에 의해 구현 되는 콜백 함수
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "코드 맵 분석기를 사용하여 잠재적 문제 찾기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "그래프 문서, 분석"
 ms.assetid: 9dd799a7-f7eb-42ff-8612-b19dde7ff4eb
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "alexhomer1"
 ms.author: "ahomer"
 manager: "douge"
+caps.handback.revision: 11
 ---
 # 코드 맵 분석기를 사용하여 잠재적 문제 찾기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

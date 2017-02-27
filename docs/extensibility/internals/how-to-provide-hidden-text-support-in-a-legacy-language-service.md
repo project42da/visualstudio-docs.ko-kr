@@ -1,8 +1,7 @@
 ---
 title: "방법: 레거시 언어 서비스에 대 한 숨겨진된 텍스트 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "숨겨진된 텍스트 영역을 구현 하는 언어 서비스"
 ms.assetid: 1c1dce9f-bbe2-4fc3-a736-5f78a237f4cc
 caps.latest.revision: 21
-caps.handback.revision: 21
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 방법: 레거시 언어 서비스에 대 한 숨겨진된 텍스트 지원
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

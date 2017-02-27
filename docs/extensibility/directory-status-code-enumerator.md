@@ -1,8 +1,7 @@
 ---
 title: "디렉터리 상태 코드 열거자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "소스 제어 플러그 인, 디렉터리 상태 열거"
 ms.assetid: 616026b5-f529-40ef-90c1-1836e116d797
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 디렉터리 상태 코드 열거자
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

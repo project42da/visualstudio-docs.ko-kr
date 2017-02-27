@@ -1,8 +1,7 @@
 ---
 title: "Vspackage에 대 한 자동화를 제공합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "Vspackage 자동화 [Visual Studio SDK]"
 ms.assetid: 104c4c55-78b8-42f4-b6b0-9a334101aaea
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Vspackage에 대 한 자동화를 제공합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

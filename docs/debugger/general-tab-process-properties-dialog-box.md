@@ -1,8 +1,7 @@
 ---
 title: "프로세스 속성 대화 상자, 일반 탭 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "Windows NT의 프로세스 속성"
 ms.assetid: 86f4d61d-a594-4aac-8960-c5279b4a10fd
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 프로세스 속성 대화 상자, 일반 탭
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

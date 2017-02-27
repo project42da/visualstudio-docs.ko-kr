@@ -1,8 +1,7 @@
 ---
 title: "디버그 세션 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "디버깅 세션을 [디버깅 SDK]"
 ms.assetid: 18d82199-b2d4-47a9-924f-ab64faf60ca1
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 디버그 세션
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

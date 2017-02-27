@@ -1,8 +1,7 @@
 ---
 title: "방법: 도구 상자에 활동 추가(레거시) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "도구 상자, 활동 추가"
 ms.assetid: b66ea29c-120b-40ba-8a61-c1c8240850fa
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 방법: 도구 상자에 활동 추가(레거시)
 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 하는 레거시 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]를 사용하여 워크플로 솔루션을 빌드할 경우 워크플로 프로젝트에 사용자 지정 활동을 추가하여 해당 디자이너를 액세스하기 쉽도록 **도구 상자**에 배치할 수 있습니다.DLL\(동적 연결 라이브러리\)에서 **도구 상자**로 직접 활동을 추가할 수도 있습니다.  

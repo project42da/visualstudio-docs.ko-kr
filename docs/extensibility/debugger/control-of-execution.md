@@ -1,8 +1,7 @@
 ---
 title: "실행 제어 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK], 실행 제어"
 ms.assetid: 97071846-007e-450f-95a6-f072d0f5e61e
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 실행 제어
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

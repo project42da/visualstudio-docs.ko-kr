@@ -1,16 +1,16 @@
 ---
 title: "색 테마 도구 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 89ab5741-c664-4b45-8662-3dd01a5761be
 caps.latest.revision: 3
-caps.handback.revision: 3
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # 색 테마 도구
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

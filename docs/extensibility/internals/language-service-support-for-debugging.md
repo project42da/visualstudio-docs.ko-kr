@@ -1,8 +1,7 @@
 ---
 title: "디버깅 하기 위한 언어 서비스 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "언어 서비스, 디버깅 지원"
 ms.assetid: 7a44067f-a410-4a6a-84d2-bda5184140bc
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 디버깅 하기 위한 언어 서비스 지원
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

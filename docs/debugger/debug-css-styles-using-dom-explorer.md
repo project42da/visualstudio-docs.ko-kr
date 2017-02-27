@@ -1,8 +1,7 @@
 ---
 title: "DOM 탐색기를 사용하여 CSS 스타일 디버그 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "HTML 디버깅[Windows 스토어 앱]"
 ms.assetid: 2dfef7c6-7db2-4550-b694-783b0e535cea
 caps.latest.revision: 44
-caps.handback.revision: 44
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 44
 ---
 # DOM 탐색기를 사용하여 CSS 스타일 디버그
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

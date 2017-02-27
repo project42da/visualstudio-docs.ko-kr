@@ -1,8 +1,7 @@
 ---
 title: "프로파일링 도구에서 샘플링 데이터 값 이해 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "프로파일링 도구, 샘플링"
 ms.assetid: fad540a8-24b6-4ff9-91ce-e67e9a58399d
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # 프로파일링 도구에서 샘플링 데이터 값 이해
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

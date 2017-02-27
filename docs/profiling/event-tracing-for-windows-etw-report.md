@@ -1,8 +1,7 @@
 ---
 title: "ETW(Windows용 이벤트 추적) 보고서 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "Windows 프로파일링 보고서용 이벤트 추적"
 ms.assetid: 81e88162-b88a-40b6-8b85-a232c8096a47
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # ETW(Windows용 이벤트 추적) 보고서
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

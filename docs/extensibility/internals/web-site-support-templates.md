@@ -1,8 +1,7 @@
 ---
 title: "템플릿을 지 원하는 웹 사이트 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "프로젝트 템플릿 사이트에서는"
 ms.assetid: 37173c97-486b-4b3c-8ed3-cf5890c4de23
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 템플릿을 지 원하는 웹 사이트
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

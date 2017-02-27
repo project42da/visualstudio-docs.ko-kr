@@ -1,8 +1,7 @@
 ---
 title: "방법: 지역화된 부트스트래퍼 패키지 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "필수 구성 요소, 지역화된 부트스트래퍼 패키지 만들기"
 ms.assetid: 66a1bc7e-6540-4164-963d-557196a69d8a
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 15
 ---
 # 방법: 지역화된 부트스트래퍼 패키지 만들기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

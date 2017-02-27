@@ -1,8 +1,7 @@
 ---
 title: "m_parent 필드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "m_parent 필드, 작업 클래스 [.NET Framework 디버그 엔진]"
 ms.assetid: da9e3dc7-8e9b-4c3a-a9e0-12921b5300c6
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # m_parent 필드
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

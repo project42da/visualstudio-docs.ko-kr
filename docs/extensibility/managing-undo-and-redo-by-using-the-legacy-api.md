@@ -1,8 +1,7 @@
 ---
 title: "관리 실행 취소 및 다시 실행 하는 레거시 API를 사용 하 여 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-취소 관리"
 ms.assetid: 838c0ddf-fdf3-4df1-8d21-79610b8ba0b1
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 관리 실행 취소 및 다시 실행 하는 레거시 API를 사용 하 여
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

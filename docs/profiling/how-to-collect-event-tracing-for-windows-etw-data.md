@@ -1,43 +1,25 @@
 ---
-title: "방법: ETW(Windows용 이벤트 추적) 데이터 수집 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.performance.property.events
-helpviewer_keywords:
-- event trace providers, performance tools
-- profiling tools, event trace providers
-- performance tools, enabling event trace providers
+title: "방법: ETW(Windows용 이벤트 추적) 데이터 수집 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.performance.property.events"
+helpviewer_keywords: 
+  - "이벤트 추적 공급자, 성능 도구"
+  - "프로파일링 도구, 이벤트 추적 공급자"
+  - "성능 도구, 이벤트 추적 공급자 사용"
 ms.assetid: aa2261fe-d5f5-49fc-a171-d18842e1dc7d
 caps.latest.revision: 26
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e1344d12e9284b3282d077fb828f30e88a946ddc
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 26
 ---
 # <a name="how-to-collect-event-tracing-for-windows-etw-data"></a>방법: ETW(Windows용 이벤트 추적) 데이터 수집
 ETW(Windows용 이벤트 추적)는 프로파일러 로그 커널 이벤트나 응용 프로그램에서 거부된 이벤트를 사용하도록 설정하는 효율적인 커널 수준 추적 기능입니다. 이벤트 공급자에서 수집된 데이터를 보려면 [VSPerfReport](../profiling/vsperfreport.md) 명령줄 도구의 /**Summary:ETW** 옵션을 사용해야 합니다. 이 보고서를 사용하여 응용 프로그램에서 성능 문제가 발생하는 위치를 확인합니다.  

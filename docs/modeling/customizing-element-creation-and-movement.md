@@ -1,8 +1,7 @@
 ---
 title: "요소 만들기 및 이동 사용자 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "도메인별 언어에서 요소 병합 지시문"
 ms.assetid: cbd28f15-dfd7-46bd-ab79-5430e3ed83c8
 caps.latest.revision: 36
-caps.handback.revision: 36
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 36
 ---
 # 요소 만들기 및 이동 사용자 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

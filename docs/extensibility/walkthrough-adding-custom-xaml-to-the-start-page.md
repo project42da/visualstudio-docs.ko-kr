@@ -1,8 +1,7 @@
 ---
 title: "연습: 시작 페이지 사용자 지정 XAML에 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "xaml 시작 페이지"
 ms.assetid: 9af4d5f9-1cfc-4221-aea7-c8cd3f7571a6
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 연습: 시작 페이지 사용자 지정 XAML에 추가
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 응용 프로그램의 시작 메뉴 이름 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "시작 메뉴 리소스 이름"
 ms.assetid: 4b5183b2-2fd4-4433-9310-4a73bb12c4e3
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 17
 ---
 # 방법: ClickOnce 응용 프로그램의 시작 메뉴 이름 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

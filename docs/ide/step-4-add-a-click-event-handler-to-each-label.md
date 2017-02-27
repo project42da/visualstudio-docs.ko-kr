@@ -1,8 +1,7 @@
 ---
 title: "4단계: 각 레이블에 클릭 이벤트 처리기 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 16bdbc7c-4129-411d-bace-f4a3e5375975
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 4단계: 각 레이블에 클릭 이벤트 처리기 추가
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

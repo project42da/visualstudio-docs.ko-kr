@@ -1,8 +1,7 @@
 ---
 title: "디버그 세션 관리자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "세션 디버그 관리자, 위임"
 ms.assetid: fbb1928d-dddc-43d1-98a4-e23b0ecbae09
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 디버그 세션 관리자
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

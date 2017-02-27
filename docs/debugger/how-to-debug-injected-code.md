@@ -1,8 +1,7 @@
 ---
 title: "방법: 삽입한 코드 디버깅 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "소스 코드 표시 명령[디버거]"
 ms.assetid: a1b4104d-d49e-451f-a91e-e39ceaf35875
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 방법: 삽입한 코드 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

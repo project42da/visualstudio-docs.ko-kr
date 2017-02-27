@@ -1,8 +1,7 @@
 ---
 title: "방법: 레거시 API와 함께 텍스트 버퍼 이벤트에 등록 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-텍스트 버퍼 이벤트에 등록"
 ms.assetid: 5fc00ced-882c-4b48-b46c-1fa5a2469f94
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 방법: 레거시 API와 함께 텍스트 버퍼 이벤트에 등록
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

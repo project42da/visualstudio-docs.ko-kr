@@ -1,8 +1,7 @@
 ---
 title: "오류: IIS에서 웹 사이트 작업자 프로세스를 종료했습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ dev_langs:
   - "C++"
 ms.assetid: 5707b972-71a6-4cc6-ab99-c7c00ca8628c
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 오류: IIS에서 웹 사이트 작업자 프로세스를 종료했습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

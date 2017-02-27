@@ -1,8 +1,7 @@
 ---
 title: "지역 변수를 평가합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "지역 변수를 계산 하는 식 계산"
 ms.assetid: 7d1ed528-4e7a-4d8f-87b4-162440644a75
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 지역 변수를 평가합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

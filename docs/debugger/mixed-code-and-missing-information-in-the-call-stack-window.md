@@ -1,8 +1,7 @@
 ---
 title: "호출 스택 창의 혼합 코드 및 누락된 정보 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "실행 종료, 관리 코드"
 ms.assetid: dd628427-e8d6-4fc2-b524-9d6393ea5376
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 호출 스택 창의 혼합 코드 및 누락된 정보
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

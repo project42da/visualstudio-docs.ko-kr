@@ -1,8 +1,7 @@
 ---
 title: "디버깅할 프로그램을 사용 하도록 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK], 프로그램에 대 한 활성화"
 ms.assetid: 61d24820-0cd9-48b6-8674-6813f7493237
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 디버깅할 프로그램을 사용 하도록 설정
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

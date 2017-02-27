@@ -1,8 +1,7 @@
 ---
 title: "방법: 레지스터 값 편집 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "레지스터 창, 레지스터 값 편집"
 ms.assetid: e27b6bd8-e6d4-4f1d-8a86-9f4047bb1167
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # 방법: 레지스터 값 편집
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

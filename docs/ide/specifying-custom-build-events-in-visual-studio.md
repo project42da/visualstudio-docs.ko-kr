@@ -1,8 +1,7 @@
 ---
 title: "Visual Studio에서 사용자 지정 빌드 이벤트 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "빌드 이벤트, 사용자 지정"
 ms.assetid: 69e935a5-e208-4bcd-865c-3e5f9b047ca8
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Visual Studio에서 사용자 지정 빌드 이벤트 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

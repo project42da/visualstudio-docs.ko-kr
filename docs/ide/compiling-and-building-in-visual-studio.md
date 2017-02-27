@@ -1,39 +1,22 @@
 ---
-title: "Visual Studio에서 컴파일 및 빌드 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- builds [Visual Studio], about building in Visual Studio
-- custom build steps, types of builds
+title: "Visual Studio에서 컴파일 및 빌드 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Visual Studio에서 빌드에 대 한 [Visual Studio] 빌드"
+  - "사용자 지정 빌드 단계, 빌드 유형"
 ms.assetid: c7958821-285f-4e28-9e7a-b5d8b40336a1
 caps.latest.revision: 28
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 828c61720161b63d19451e32134b2a4765fdfd8d
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 28
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>Visual Studio에서 컴파일 및 빌드
 Visual Studio를 사용하여 개발 주기 동안 잦은 간격으로 응용 프로그램을 빌드하고 어셈블리 및 실행 가능 프로그램을 만들 수 있습니다. 코드를 자주 빌드하면 잘못된 구문, 맞춤법 오류가 있는 키워드 및 형식 불일치와 같은 컴파일 타임 오류를 조기에 식별할 수 있습니다. 디버그 버전의 코드를 자주 빌드하고 실행하면 논리 오류 및 의미 오류와 같은 런타임 오류도 찾아 해결할 수 있습니다.  

@@ -1,8 +1,7 @@
 ---
 title: "파일에서 찾기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "파일에서 찾기 탭, 찾기 및 바꾸기 창"
 ms.assetid: 989e0737-46d7-4474-8453-fad52a74669d
 caps.latest.revision: 41
-caps.handback.revision: 41
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 41
 ---
 # 파일에서 찾기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

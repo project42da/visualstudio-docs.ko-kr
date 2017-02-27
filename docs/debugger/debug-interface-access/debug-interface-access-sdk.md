@@ -1,8 +1,7 @@
 ---
 title: "디버그 인터페이스 액세스 SDK | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DIA SDK"
 ms.assetid: 4c0abe53-11d3-4b7a-bdc7-b054f85aaf40
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 디버그 인터페이스 액세스 SDK
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "소스 제어에서 가져올 테스트 영역 2: | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "소스 제어 [Visual Studio SDK]에서 항목 가져오기"
 ms.assetid: cbd345c5-ca43-4630-b7a4-85564f4e2090
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 소스 제어에서 가져올 테스트 영역 2:
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "소스 제어에 대 한 런타임 세부 정보 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "소스 제어 [Visual Studio SDK] 런타임 세부 정보"
 ms.assetid: 1acd30e0-f98c-4bde-b9cd-4076845887df
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 소스 제어에 대 한 런타임 세부 정보
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "코드 조각 함수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "조각[Visual Studio], 함수"
 ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 코드 조각 함수
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

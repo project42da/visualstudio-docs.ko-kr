@@ -1,45 +1,27 @@
 ---
 title: "Visual Studio 이미지 라이브러리 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- animation [Visual Studio]
-- graphics [Visual Studio], Image Library
-- Image Library [Visual Studio]
-- images [Visual Studio], VS Image Library
-- Visual Studio Image Library
-- icons [Visual Studio], Image Library
-- bitmaps [Visual Studio], Image Library
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "애니메이션[Visual Studio]"
+  - "그래픽[Visual Studio], 이미지 라이브러리"
+  - "이미지 라이브러리[Visual Studio]"
+  - "이미지[Visual Studio], VS 이미지 라이브러리"
+  - "Visual Studio 이미지 라이브러리"
+  - "아이콘[Visual Studio], 이미지 라이브러리"
+  - "비트맵[Visual Studio], 이미지 라이브러리"
 ms.assetid: f7a2e7c8-3b9f-4f8e-a6a8-000d72e3811d
 caps.latest.revision: 29
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 9c25532605613b34ded15a4bd6a533e589b7fce2
-ms.openlocfilehash: 3add401b2d9590893ae1a90af7d5f1d9c9360b63
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 29
 ---
 # <a name="the-visual-studio-image-library"></a>Visual Studio 이미지 라이브러리
 Visual Studio 이미지 라이브러리에는 Microsoft Visual Studio, Microsoft Windows, Office system 및 기타 Microsoft 소프트웨어에 나타나는 응용 프로그램 이미지가 포함되어 있습니다. 1,000개가 넘는 이러한 이미지를 사용하여 Microsoft 소프트웨어와 일관된 모양의 응용 프로그램을 만들 수 있습니다.  

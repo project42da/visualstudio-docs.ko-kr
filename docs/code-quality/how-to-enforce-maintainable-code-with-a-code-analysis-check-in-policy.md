@@ -1,8 +1,7 @@
 ---
 title: "방법: 코드 분석 체크 인 정책을 통해 유지 관리할 수 있는 코드 적용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/12/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "코드 분석, 체크 인 정책"
 ms.assetid: d1b3b04f-4dd9-40e6-b2d4-b414d33fb647
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 8
 ---
 # 방법: 코드 분석 체크 인 정책을 통해 유지 관리할 수 있는 코드 적용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

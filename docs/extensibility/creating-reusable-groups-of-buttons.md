@@ -1,8 +1,7 @@
 ---
 title: "단추의 다시 사용할 수 있는 그룹 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "단추를 다시 사용할 수 있는 그룹 만들기"
 ms.assetid: 0c561617-fb86-476d-8bd1-c6e5e7464c65
 caps.latest.revision: 44
-caps.handback.revision: 44
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 44
 ---
 # 단추의 다시 사용할 수 있는 그룹 만들기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

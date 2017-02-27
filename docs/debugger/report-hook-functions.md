@@ -1,8 +1,7 @@
 ---
 title: "보고서 후크 함수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "보고서 후크 함수"
 ms.assetid: 1854bca7-d7eb-4502-89bf-b1ee64cb50ef
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 보고서 후크 함수
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

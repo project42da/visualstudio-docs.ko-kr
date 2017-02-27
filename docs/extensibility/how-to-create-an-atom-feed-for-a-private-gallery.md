@@ -1,8 +1,7 @@
 ---
 title: "방법: Atom 만들기 개인 갤러리 피드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "VSIX 개인 갤러리, Atom 피드"
 ms.assetid: 5897f538-9c41-486f-97d9-a1976d20d9fd
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 방법: Atom 만들기 개인 갤러리 피드
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

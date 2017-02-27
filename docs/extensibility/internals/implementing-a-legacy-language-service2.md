@@ -1,8 +1,7 @@
 ---
-title: "레거시 언어 서비스 구현 | Microsoft Docs"
+title: "레거시 언어 Service2 구현 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "구현 언어 서비스 [관리 되는 패키지 프레임 워크]"
 ms.assetid: 5bcafdc5-f922-48f6-a12e-6c8507a79a05
 caps.latest.revision: 26
-caps.handback.revision: 26
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 레거시 언어 서비스 구현
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

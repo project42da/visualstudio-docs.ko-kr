@@ -1,8 +1,7 @@
 ---
 title: "프로파일링 도구에서 메모리 할당 및 개체 수명 데이터 값 이해 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "프로파일링 도구, .NET 메모리 방법"
 ms.assetid: a22445b3-39a6-4919-8506-2b5b0ceaf77e
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 프로파일링 도구에서 메모리 할당 및 개체 수명 데이터 값 이해
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

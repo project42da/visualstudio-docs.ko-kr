@@ -1,8 +1,7 @@
 ---
 title: "기호 검색 도구를 지원합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,9 +20,9 @@ helpviewer_keywords:
   - "라이브러리, 도구 기호 검색"
 ms.assetid: 70d8c9e5-4b0b-4a69-b3b3-90f36debe880
 caps.latest.revision: 26
-caps.handback.revision: 26
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 기호 검색 도구를 지원합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

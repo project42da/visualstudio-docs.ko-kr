@@ -1,8 +1,7 @@
 ---
 title: "방법: 줄 수준 샘플링 데이터 수집 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "성능 도구, 줄 수준 샘플링"
 ms.assetid: 44803aad-dd39-4c2e-9209-d35185d44983
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # 방법: 줄 수준 샘플링 데이터 수집
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,49 +1,31 @@
 ---
-title: "Devenv 명령줄 스위치 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- switches, Devenv
-- builds [Team System], command-line
-- applications [Visual Studio], executing
-- compiling source code, Devenv
-- command-line switches, Devenv
-- command line [Visual Studio], switches
-- Devenv
-- environment, Devenv commands
-- compilers, Devenv commands
-- switches
-- Devenv, syntax and list of switches
+title: "Devenv 명령줄 스위치 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "응용 프로그램[Visual Studio], 실행"
+  - "빌드[Team System], 명령줄"
+  - "명령줄[Visual Studio], 스위치"
+  - "명령줄 스위치, Devenv"
+  - "컴파일러, Devenv 명령"
+  - "소스 코드 컴파일, Devenv"
+  - "Devenv"
+  - "Devenv, 스위치의 구문 및 목록"
+  - "환경, Devenv 명령"
+  - "스위치"
+  - "스위치, Devenv"
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
 caps.latest.revision: 33
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e6d73f518f62cefc1fbb791d6c51a6d42a4cfae5
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 29
 ---
 # <a name="devenv-command-line-switches"></a>Devenv 명령줄 스위치
 Devenv를 사용하면 IDE(통합 개발 환경)에 대한 다양한 옵션을 설정하고 명령줄에서 프로젝트를 빌드, 디버그 및 배포할 수도 있습니다. 이러한 스위치를 사용하여 스크립트 또는 .bat 파일(예: 야간 빌드 스크립트)에서 IDE를 실행하거나 특정 구성으로 IDE를 시작할 수 있습니다.  

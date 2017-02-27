@@ -1,8 +1,7 @@
 ---
 title: "방법: 기하 도형 기반 그라데이션 셰이더 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 방법: 기하 도형 기반 그라데이션 셰이더 만들기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "오류: IIS 관리자 서비스에서 응답이 없기 때문에 보안 검사에 실패했습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "디버거, 웹 응용 프로그램 오류"
 ms.assetid: 6060e94e-71dc-49f2-bb59-2584216eadbf
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 오류: IIS 관리자 서비스에서 응답이 없기 때문에 보안 검사에 실패했습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

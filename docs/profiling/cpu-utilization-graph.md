@@ -1,8 +1,7 @@
 ---
 title: "CPU 사용률 그래프 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "CPU 사용률 그래프 동시성 시각화 도우미, CPU 사용률 그래프"
 ms.assetid: 5332fd38-622d-47a3-874f-8c2fd7a30f95
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # CPU 사용률 그래프
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

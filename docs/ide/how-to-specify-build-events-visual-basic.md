@@ -1,8 +1,7 @@
 ---
 title: "방법: 빌드 이벤트 지정(Visual Basic) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "빌드 전 이벤트"
 ms.assetid: 40dc83bf-a7c5-4a14-816a-fa0980b6e4c3
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 방법: 빌드 이벤트 지정(Visual Basic)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

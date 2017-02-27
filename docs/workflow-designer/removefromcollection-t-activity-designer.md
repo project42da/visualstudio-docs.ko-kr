@@ -1,8 +1,7 @@
 ---
 title: "RemoveFromCollection&lt;T&gt; 활동 디자이너 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Statements.RemoveFromCollection`1.UI"
 ms.assetid: 6617ba26-c8bc-4aed-b746-112bf490d288
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 6
 ---
 # RemoveFromCollection&lt;T&gt; 활동 디자이너
 **RemoveFromCollection\<T\>** 활동 디자이너는 <xref:System.Activities.Statements.RemoveFromCollection%601> 활동을 만들고 구성하는 데 사용됩니다.  

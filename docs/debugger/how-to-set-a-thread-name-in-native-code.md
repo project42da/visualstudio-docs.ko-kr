@@ -1,8 +1,7 @@
 ---
 title: "방법: 네이티브 코드에 스레드 이름 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "스레딩[Visual Studio], 이름"
 ms.assetid: c85d0968-9f22-4d69-87f4-acca2ae777b8
 caps.latest.revision: 37
-caps.handback.revision: 37
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # 방법: 네이티브 코드에 스레드 이름 설정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

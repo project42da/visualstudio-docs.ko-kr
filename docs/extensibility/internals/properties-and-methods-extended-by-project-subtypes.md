@@ -1,8 +1,7 @@
 ---
 title: "속성 및 프로젝트 하위 형식에 의해 확장 메서드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "프로젝트 하위 형식, 확장 속성"
 ms.assetid: 2b9833bf-8551-4ae1-93db-197ba645c65e
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 속성 및 프로젝트 하위 형식에 의해 확장 메서드
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

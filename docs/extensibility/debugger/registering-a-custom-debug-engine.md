@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 디버그 엔진을 등록합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "등록 하는 디버그 엔진"
 ms.assetid: 9984cd3d-d34f-4662-9ace-31766499abf5
 caps.latest.revision: 6
-caps.handback.revision: 6
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 사용자 지정 디버그 엔진을 등록합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

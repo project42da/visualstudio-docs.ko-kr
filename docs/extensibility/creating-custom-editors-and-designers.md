@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 편집기 및 디자이너 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 사용자 지정"
 ms.assetid: b6a5e8b2-0ae1-4fc3-812d-09d40051b435
 caps.latest.revision: 31
-caps.handback.revision: 31
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # 사용자 지정 편집기 및 디자이너 만들기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

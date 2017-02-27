@@ -1,40 +1,22 @@
 ---
 title: "셰이더 디자이너 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.graphics.designer.effectdesigner
-- vs.graphics.shaderdesigner
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.graphics.designer.effectdesigner"
+  - "vs.graphics.shaderdesigner"
 ms.assetid: 5db09a16-b82c-4ba3-8ec9-630cdc109397
 caps.latest.revision: 32
-author: BrianPeek
-ms.author: brpeek
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ff6e473c6e5b2d7a24a4e906d2f592742e3c2d14
-
+author: "BrianPeek"
+ms.author: "brpeek"
+manager: "ghogen"
+caps.handback.revision: 32
 ---
 # <a name="shader-designer"></a>셰이더 디자이너
 이 문서에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 셰이더 디자이너를 사용하여 *셰이더*라는 사용자 지정 시각 효과를 만들고 수정하고 내보내는 방법을 설명합니다.  

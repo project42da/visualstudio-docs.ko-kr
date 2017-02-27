@@ -1,52 +1,34 @@
 ---
-title: "Visual Studio에서 창 레이아웃 사용자 지정 | Microsoft 문서"
-ms.custom: 
-ms.date: 01/23/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.windows
-- vs.environment
-helpviewer_keywords:
-- windows [Visual Studio], managing
-- custom window configurations
-- layout [Visual Studio], window management
-- document windows [Visual Studio]
-- interface modes
-- AutoHide windows
-- MDI, window interface modes
-- multiple monitors
-- Tabbed Document mode
-- debug mode
-- custom layouts
+title: "Visual Studio에서 창 레이아웃 사용자 지정 | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/23/2017"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.windows"
+  - "vs.environment"
+helpviewer_keywords: 
+  - "자동 숨기기 창"
+  - "사용자 지정 레이아웃"
+  - "사용자 지정 창 구성"
+  - "디버그 모드"
+  - "문서 창[Visual Studio]"
+  - "인터페이스 모드"
+  - "레이아웃[Visual Studio], 창 관리"
+  - "MDI, 창 인터페이스 모드"
+  - "여러 대의 모니터"
+  - "탭 문서 모드"
+  - "Visual Studio], 관리"
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
 caps.latest.revision: 27
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 841c635c00aea5e78396f27098a1e64fbe29a421
-ms.openlocfilehash: b2a09ceddbfcbfb8632f777f55229d186f6e5ae9
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 27
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio에서 창 레이아웃 사용자 지정
 Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 다양한 개발 워크플로에 가장 적합한 창 레이아웃을 만들 수 있습니다. 레이아웃을 사용자 지정할 때 IDE에서는 레이아웃을 기억합니다. 예를 들어 **솔루션 탐색기** 의 도킹 위치를 변경한 후 Visual Studio를 닫고 다음에 다시 시작하면 다른 컴퓨터에서 작업하고 있는 경우에도 **솔루션 탐색기** 가 같은 위치에 도킹됩니다. 또한 사용자 지정 레이아웃에 이름을 지정하고 저장한 다음 단일 명령으로 레이아웃 간을 전환할 수 있습니다. 예를 들어 편집용 레이아웃과 디버그용 레이아웃을 만들고 **창 &#124; 창 레이아웃 적용** 메뉴 명령을 사용하여 레이아웃 간에 전환할 수 있습니다.  

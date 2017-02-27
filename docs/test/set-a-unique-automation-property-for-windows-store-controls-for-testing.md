@@ -1,8 +1,7 @@
 ---
 title: "테스트를 위해 Windows 스토어 컨트롤에 대한 고유 자동화 속성 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9bdd74ff-2534-4fc7-a5c3-a77bf7843037
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 10
 ---
 # 테스트를 위해 Windows 스토어 컨트롤에 대한 고유 자동화 속성 설정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "방법: 가져온 네임스페이스 추가 또는 제거(Visual Basic) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "가져온 네임스페이스 제거"
 ms.assetid: 44cebec3-0ea0-47c2-8406-4edeab6a997e
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 방법: 가져온 네임스페이스 추가 또는 제거(Visual Basic)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

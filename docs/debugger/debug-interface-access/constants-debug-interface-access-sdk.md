@@ -1,8 +1,7 @@
 ---
 title: "상수(디버그 인터페이스 액세스 SDK) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "DIA SDK, 상수"
 ms.assetid: aca4ec77-bc08-4cdd-a6ce-8d4a28ea5ea3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 상수(디버그 인터페이스 액세스 SDK)
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

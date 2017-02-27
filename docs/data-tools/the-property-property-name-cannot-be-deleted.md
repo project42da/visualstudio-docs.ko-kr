@@ -1,18 +1,17 @@
 ---
 title: "&lt;property name&gt; 속성을 삭제할 수 없습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 55873f74-7834-4ec1-8815-eeeb65618d87
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # &lt;property name&gt; 속성을 삭제할 수 없습니다.
 \<property name\> 속성은 \<class name\>과\(와\) \<class name\> 간 상속의 판별자 속성으로 설정되어 있으므로 삭제할 수 없습니다.  

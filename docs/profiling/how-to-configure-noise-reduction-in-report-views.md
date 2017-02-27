@@ -1,8 +1,7 @@
 ---
 title: "방법: 프로파일링 도구 보고서 뷰에서 노이즈 감소 구성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "프로파일링 도구, 접기"
 ms.assetid: b07e0375-bb73-47e3-8d1d-b9b492fb16c9
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 방법: 프로파일링 도구 보고서 뷰에서 노이즈 감소 구성
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

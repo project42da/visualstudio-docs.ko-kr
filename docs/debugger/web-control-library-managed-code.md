@@ -1,8 +1,7 @@
 ---
 title: "웹 컨트롤 라이브러리(관리 코드) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "DLL 디버깅"
 ms.assetid: 2413883f-9e88-406d-b874-0ed743b75d40
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 웹 컨트롤 라이브러리(관리 코드)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

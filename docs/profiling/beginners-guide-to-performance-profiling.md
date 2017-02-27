@@ -1,43 +1,25 @@
 ---
-title: "초보자를 위한 성능 프로파일링 지침 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-f1_keywords:
-- vs.performance.wizard.intropage
-helpviewer_keywords:
-- Profiling Tools, quick start
-- Diagnostics Tools, CPU Usage
-- CPU Usage
-- Diagnostics Tools
+title: "초보자를 위한 성능 프로파일링 지침 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "get-started-article"
+f1_keywords: 
+  - "vs.performance.wizard.intropage"
+helpviewer_keywords: 
+  - "성능 도구, 마법사"
+  - "성능 마법사"
+  - "프로파일링 도구, 퀵 스타트"
 ms.assetid: da2fbf8a-2d41-4654-a509-dd238532d25a
 caps.latest.revision: 45
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 53907b9b88deca671ee0695385dcbc856a35d309
-ms.openlocfilehash: edc4f1e6a332a3c515a1d1a65b15ae3f1b989ed8
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 43
 ---
 # <a name="beginners-guide-to-performance-profiling"></a>초보자를 위한 성능 프로파일링 지침
 Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성능 문제를 분석할 수 있습니다. 이 절차에서는 진단 도구의 **CPU 사용량** 탭을 사용하여 앱의 성능 데이터를 가져오는 방법을 보여 줍니다. 진단 도구는 ASP.NET을 포함한 Visual Studio의 .NET 개발 및 네이티브/C++ 개발에 사용할 수 있습니다.

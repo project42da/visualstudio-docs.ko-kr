@@ -1,8 +1,7 @@
 ---
 title: "소스 제어 플러그 인을 찾기 위한 키로 사용 되는 문자열 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "소스 제어 플러그 인을 쉽게 찾기 위해 사용 되는 문자열"
 ms.assetid: c1e31f76-42a1-4c3d-afb2-664044ef12fd
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 소스 제어 플러그 인을 찾기 위한 키로 사용 되는 문자열
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

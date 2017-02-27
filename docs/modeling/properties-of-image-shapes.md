@@ -1,8 +1,7 @@
 ---
 title: "이미지 모양의 속성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "도메인별 언어, 이미지 모양"
 ms.assetid: 9ce00ccd-07f2-4640-ac96-2a60481d0d72
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 25
 ---
 # 이미지 모양의 속성
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

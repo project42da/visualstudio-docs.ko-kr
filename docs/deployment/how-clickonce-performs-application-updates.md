@@ -1,8 +1,7 @@
 ---
 title: "ClickOnce에서 응용 프로그램 업데이트가 수행되는 방식 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "업데이트, ClickOnce"
 ms.assetid: d54313c2-cf0c-420d-b151-99953a95f0bb
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 9
 ---
 # ClickOnce에서 응용 프로그램 업데이트가 수행되는 방식
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "방법: 프로파일링 시작 및 종료 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "프로파일링 도구, 세션 종료"
 ms.assetid: 9f6eb0d5-d9e9-4bec-b627-445065610bce
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 방법: 프로파일링 시작 및 종료
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

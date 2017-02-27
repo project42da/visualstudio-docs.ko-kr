@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 배포에 대한 자세한 로그 파일 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "로그, ClickOnce 배포"
 ms.assetid: 0807a28d-2e40-4a51-ab10-308d808ded6b
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 9
 ---
 # 방법: ClickOnce 배포에 대한 자세한 로그 파일 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

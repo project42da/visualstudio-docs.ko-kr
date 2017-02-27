@@ -1,8 +1,7 @@
 ---
 title: "레거시 API를 사용 하 여 코드를 사용자 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK]-레거시 코드 창"
 ms.assetid: 5328ab2f-55cb-4680-9744-ec79f55acd1b
 caps.latest.revision: 19
-caps.handback.revision: 19
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # 레거시 API를 사용 하 여 코드를 사용자 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

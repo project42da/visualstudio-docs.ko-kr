@@ -1,8 +1,7 @@
 ---
 title: "코드 조각 스키마 참조 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "조각[Visual Studio], 스키마 참조"
 ms.assetid: 58a60621-725f-4763-93b7-62ea5424ef88
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 코드 조각 스키마 참조
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

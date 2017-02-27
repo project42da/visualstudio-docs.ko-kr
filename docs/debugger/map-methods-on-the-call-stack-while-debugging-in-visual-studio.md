@@ -1,8 +1,7 @@
 ---
 title: "Visual Studio에서 디버깅하는 동안 호출 스택의 맵 메서드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ helpviewer_keywords:
   - "디버깅, 코드 맵"
 ms.assetid: d6a72e5e-f88d-46fc-94a3-1789d34805ef
 caps.latest.revision: 39
-caps.handback.revision: 39
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "douge"
+caps.handback.revision: 39
 ---
 # Visual Studio에서 디버깅하는 동안 호출 스택의 맵 메서드
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

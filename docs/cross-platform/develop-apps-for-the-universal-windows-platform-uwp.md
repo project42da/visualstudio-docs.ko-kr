@@ -1,8 +1,7 @@
 ---
 title: "UWP(유니버설 Windows 플랫폼)용 앱 개발 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: eac59cb6-f12e-4a77-9953-6d62b164a643
 caps.latest.revision: 48
-caps.handback.revision: 48
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 48
 ---
 # UWP(유니버설 Windows 플랫폼)용 앱 개발
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

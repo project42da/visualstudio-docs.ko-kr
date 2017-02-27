@@ -1,8 +1,7 @@
 ---
 title: "방법: 그래프 뷰 및 콘텐츠 모델 뷰에서 다이어그램 인쇄 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 7e1785e4-4aaf-4c66-8735-51e7ca035565
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # 방법: 그래프 뷰 및 콘텐츠 모델 뷰에서 다이어그램 인쇄
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

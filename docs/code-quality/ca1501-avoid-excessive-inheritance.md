@@ -1,8 +1,7 @@
 ---
 title: "CA1501: 상속성을 너무 많이 사용하지 마십시오. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CA1501"
 ms.assetid: 9e934746-1a4d-492a-91e4-085201abafa4
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 17
 ---
 # CA1501: 상속성을 너무 많이 사용하지 마십시오.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

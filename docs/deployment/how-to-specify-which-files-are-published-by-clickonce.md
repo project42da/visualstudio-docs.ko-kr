@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce를 통해 게시할 파일 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "파일, ClickOnce를 통해 게시"
 ms.assetid: 579c134a-d50f-4e0c-8e05-2a4ff654896a
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 16
 ---
 # 방법: ClickOnce를 통해 게시할 파일 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

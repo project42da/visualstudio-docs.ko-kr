@@ -1,8 +1,7 @@
 ---
 title: "디버깅 작업 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK], 작업"
 ms.assetid: 5d60e9e8-305e-4a48-829f-b9440fc8af7b
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 디버깅 작업
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

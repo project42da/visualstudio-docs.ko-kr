@@ -1,8 +1,7 @@
 ---
 title: "방법: 여러 개의 시작 프로젝트 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "시작 프로젝트, 여러 개의 시작 프로젝트 설정"
 ms.assetid: 6131eb80-8745-4eb9-bdab-433e69b41651
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: 여러 개의 시작 프로젝트 설정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

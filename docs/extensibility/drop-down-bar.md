@@ -1,8 +1,7 @@
 ---
 title: "드롭다운 표시줄 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK], 레거시 드롭다운 표시줄"
 ms.assetid: 4bb621bd-72f5-43d5-916f-9f66617da049
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 드롭다운 표시줄
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

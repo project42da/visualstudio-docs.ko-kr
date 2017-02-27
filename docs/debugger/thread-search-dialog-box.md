@@ -1,8 +1,7 @@
 ---
 title: "스레드 검색 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "스레드 검색"
 ms.assetid: 52ecb289-9b86-455c-a52b-3dcd3f7255bf
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 스레드 검색 대화 상자
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

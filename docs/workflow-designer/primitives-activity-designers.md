@@ -1,18 +1,17 @@
 ---
 title: "기본 형식 활동 디자이너 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 0a2b613e-dc04-49a1-a787-caec2ec63b90
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # 기본 형식 활동 디자이너
 기본 활동 디자이너는 Assign 및 Delay 등 <xref:System.Activities.Statement> 네임스페이스에서 다양한 활동을 만들고 구성하는 데 사용됩니다.이 단원의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 및 템플릿 디자이너의 사용 방법에 대한 지침을 제공합니다.  

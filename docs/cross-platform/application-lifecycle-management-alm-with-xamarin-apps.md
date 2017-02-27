@@ -1,37 +1,19 @@
 ---
-title: "ALM(Application Lifecycle Management) 및 Xamarin 앱 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "응용 프로그램 수명 주기 관리 (ALM) 및 Xamarin 앱 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "tgt-pltfrm-cross-plat"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
 caps.latest.revision: 14
-author: ghogen
-ms.author: ghogen
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 37155aa4767b54a8ff057e96a405c8670a66367e
-
+author: "ghogen"
+ms.author: "ghogen"
+manager: "ghogen"
+caps.handback.revision: 14
 ---
 # <a name="application-lifecycle-management-alm-with-xamarin-apps"></a>ALM(Application Lifecycle Management) 및 Xamarin 앱
 Xamarin을 통해 C#, .NET 및 Visual Studio를 사용하여 Android, iOS 및 Windows를 대상으로 하는 플랫폼 간 모바일 앱을 빌드할 수 있습니다. Xamarin을 통해 많은 양의 코드를 플랫폼 간에 공유할 수 있으므로 일부 코드만 플랫폼별로 작성하면 됩니다. Xamarin 자체에 대한 자세한 내용은 [Visual Studio 및 Xamarin](../cross-platform/visual-studio-and-xamarin.md)을 참조하세요.  

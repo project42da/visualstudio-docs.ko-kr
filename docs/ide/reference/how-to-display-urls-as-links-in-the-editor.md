@@ -1,8 +1,7 @@
 ---
 title: "방법: 편집기에서 URL을 링크로 표시 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "URL, 열기"
 ms.assetid: 7c673953-476e-4897-9c2d-1fc15556c172
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 방법: 편집기에서 URL을 링크로 표시
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

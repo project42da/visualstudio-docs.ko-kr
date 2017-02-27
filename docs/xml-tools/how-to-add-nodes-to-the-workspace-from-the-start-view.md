@@ -1,8 +1,7 @@
 ---
 title: "방법: 시작 뷰에서 작업 영역에 노드 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3fc7af94-dcb8-4226-a577-43f03664388b
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 방법: 시작 뷰에서 작업 영역에 노드 추가
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

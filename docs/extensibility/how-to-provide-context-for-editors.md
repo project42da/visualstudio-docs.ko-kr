@@ -1,8 +1,7 @@
 ---
 title: "방법: 편집기에 대 한 컨텍스트를 제공 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-컨텍스트를 제공합니다."
 ms.assetid: 12df4d06-df6b-4eaf-a7bf-c83655a0c683
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 방법: 편집기에 대 한 컨텍스트를 제공 합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

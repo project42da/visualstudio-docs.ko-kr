@@ -1,8 +1,7 @@
 ---
 title: "이벤트 원본 (Visual Studio SDK) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK], 이벤트 소스"
 ms.assetid: b9ba0908-ae4c-4a64-aab1-bee453dd7a22
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 이벤트 원본 (Visual Studio SDK)
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

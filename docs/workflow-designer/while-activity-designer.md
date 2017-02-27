@@ -1,8 +1,7 @@
 ---
 title: "While 활동 디자이너 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Statements.While.UI"
 ms.assetid: ea008091-2e4c-4f64-bfa5-afb919552446
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # While 활동 디자이너
 <xref:System.Activities.Statements.While> 활동은 지정된 <xref:System.Activities.Statements.Condition%2A>이 **true**로 평가될 때까지 <xref:System.Activities.Statements.While.Body%2A>에 포함된 활동을 실행합니다.포함된 활동이 실행되지 않을 수도 있습니다.포함된 활동이 적어도 한 번은 실행되도록 하려면 그 대신 <xref:System.Activities.Statements.DoWhile> 활동을 사용하십시오.  

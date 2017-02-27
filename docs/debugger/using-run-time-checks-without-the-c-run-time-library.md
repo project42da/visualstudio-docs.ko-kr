@@ -1,8 +1,7 @@
 ---
 title: "C 런타임 라이브러리 없이 런타임 검사 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "런타임 오류, 런타임 검사"
 ms.assetid: 30ed90f3-9323-4784-80a4-937449eb54f6
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # C 런타임 라이브러리 없이 런타임 검사 사용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

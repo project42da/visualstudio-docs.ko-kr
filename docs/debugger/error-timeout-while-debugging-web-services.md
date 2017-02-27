@@ -1,8 +1,7 @@
 ---
 title: "오류: 웹 서비스를 디버깅하는 동안 시간이 초과되었습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "XML Web services, 디버깅 동안 시간 제한"
 ms.assetid: 4b7df112-788a-4429-9a0c-4c6dac4fb609
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 오류: 웹 서비스를 디버깅하는 동안 시간이 초과되었습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

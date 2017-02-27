@@ -1,8 +1,7 @@
 ---
 title: "검색 식의 고급 검색 연산자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "제목 검색[도움말 뷰어 2.0]"
 ms.assetid: 0cdc1746-8481-45ec-9c53-d0d89cdcbd5e
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 검색 식의 고급 검색 연산자
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

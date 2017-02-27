@@ -1,8 +1,7 @@
 ---
 title: "연습: 응용 프로그램 프로파일링 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "응용 프로그램 프로파일링, 연습"
 ms.assetid: 36f6f123-0c14-4763-99c3-bd60ecb95b87
 caps.latest.revision: 53
-caps.handback.revision: 53
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 53
 ---
 # 연습: 응용 프로그램 프로파일링
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "스크립트 디버깅의 제한 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "스크립트 디버깅, 제한 사항"
 ms.assetid: 280eead5-693c-47af-967f-dfe9d23f84db
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # 스크립트 디버깅의 제한 사항
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

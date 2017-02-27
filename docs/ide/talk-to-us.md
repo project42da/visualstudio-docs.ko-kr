@@ -1,37 +1,19 @@
 ---
-title: "의견 보내기 | Microsoft 문서"
-ms.custom: 
-ms.date: 01/10/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- product support [Visual Studio]
-- Help [Visual Studio], product support
+title: "의견 보내기 | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/10/2017"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "기술 지원[Visual Studio]"
+  - "도움말[Visual Studio], 기술 지원"
 ms.assetid: e0846d4d-2ce1-48e3-b219-674ff070bf4e
-author: TerryGLee
-ms.author: tglee
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 34cc8dad76b93ee5a8d5b8f544e29f46aa5b6438
-ms.openlocfilehash: 604c1baf9424b63f3c0b8597e9ddb0adb686c33e
-
+author: "TerryGLee"
+ms.author: "tglee"
+manager: "ghogen"
+caps.handback.revision: 31
 ---
 # <a name="talk-to-us"></a>Talk to Us
 제품과 설명서를 개선할 수 있는 아이디어를 보내 주세요. 항상 개인적으로 회신을 드릴 수는 없지만 피드백을 담당자에게 전해 드리겠습니다.  

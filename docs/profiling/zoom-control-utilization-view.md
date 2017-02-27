@@ -1,8 +1,7 @@
 ---
 title: "확대/축소 컨트롤(사용률 뷰) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "동시성 시각화 도우미, 확대/축소 컨트롤(CPU 사용률 뷰)"
 ms.assetid: 8aeff804-0183-4588-8218-52e107a5382e
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 확대/축소 컨트롤(사용률 뷰)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

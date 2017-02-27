@@ -1,8 +1,7 @@
 ---
 title: "열기 및 프로젝트 항목 저장 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 파일 지 속성"
 ms.assetid: f71898ad-335f-4c43-a177-4da87078afd1
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 열기 및 프로젝트 항목 저장
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

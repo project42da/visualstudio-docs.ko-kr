@@ -1,8 +1,7 @@
 ---
 title: "필요한 이벤트 보내기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK], 필요 이벤트"
 ms.assetid: 08319157-43fb-44a9-9a63-50b919fe1377
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 필요한 이벤트 보내기
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

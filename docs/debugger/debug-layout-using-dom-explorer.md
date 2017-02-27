@@ -1,8 +1,7 @@
 ---
 title: "DOM 탐색기를 사용하여 레이아웃 디버깅 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "레이아웃, 디버깅[Windows 스토어 앱]"
 ms.assetid: ded6566d-fc29-49a7-8029-dee8e50fe733
 caps.latest.revision: 33
-caps.handback.revision: 33
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # DOM 탐색기를 사용하여 레이아웃 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

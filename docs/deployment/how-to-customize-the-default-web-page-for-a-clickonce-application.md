@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 응용 프로그램의 기본 웹 페이지 사용자 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "게시, ClickOnce"
 ms.assetid: 418de18c-bee9-4f24-9cd9-0252d175070d
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 14
 ---
 # 방법: ClickOnce 응용 프로그램의 기본 웹 페이지 사용자 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

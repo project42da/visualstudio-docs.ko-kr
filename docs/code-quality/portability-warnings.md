@@ -1,8 +1,7 @@
 ---
 title: "이식성 경고 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "경고, 이식성"
 ms.assetid: 902e859a-2153-4970-baaa-8a5b4a11806f
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 18
 ---
 # 이식성 경고
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

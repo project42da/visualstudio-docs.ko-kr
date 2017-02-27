@@ -1,8 +1,7 @@
 ---
 title: "이벤트에 가입 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "이벤트를 구독 실행 문서 테이블 (RDT)"
 ms.assetid: e94a4fea-94df-488e-8560-9538413422bc
 caps.latest.revision: 35
-caps.handback.revision: 33
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # 이벤트에 가입
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

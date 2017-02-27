@@ -1,8 +1,7 @@
 ---
 title: "포트 공급자 구현 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "포트 공급 업체, 구현"
 ms.assetid: 6b8579df-58df-4c7f-8112-6015993e8765
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 포트 공급자 구현
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

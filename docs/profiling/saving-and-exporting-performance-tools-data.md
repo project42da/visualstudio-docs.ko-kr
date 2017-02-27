@@ -1,8 +1,7 @@
 ---
 title: "성능 도구 데이터 저장 및 내보내기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "성능 도구, 보고서 저장 및 내보내기"
 ms.assetid: 2e9b28fe-3ed2-4e1d-b9cb-0a5e384380b0
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 성능 도구 데이터 저장 및 내보내기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

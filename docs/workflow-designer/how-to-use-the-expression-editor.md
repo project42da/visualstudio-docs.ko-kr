@@ -1,8 +1,7 @@
 ---
 title: "방법: 식 편집기 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Presentation.View.ExpressionTextBox.UI"
 ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 13
 ---
 # 방법: 식 편집기 사용
 식 편집기는 많은 워크플로 활동에서 식을 입력하거나 계산하는 데 사용되는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] 컨트롤입니다.  식 편집기는 IntelliSense, 색 지정, ParamInfo, 오류 물결선 등 다양한 기능이 포함된 완벽한 IDE 편집 환경을 제공합니다.  그리고 컴파일러는 입력된 식의 유효성을 검사합니다.  식이 잘못된 경우 오류 아이콘이 표시됩니다.  편집기를 **식 편집기** 대화 상자로 열 수도 있습니다.  

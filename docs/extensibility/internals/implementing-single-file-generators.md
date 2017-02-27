@@ -1,8 +1,7 @@
 ---
 title: "단일 파일 생성기를 구현합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "프로젝트 [Visual Studio SDK] 사용자 지정 도구를 관리 합니다."
 ms.assetid: fe9ef6b6-4690-4c2c-872c-301c980d17fe
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 단일 파일 생성기를 구현합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

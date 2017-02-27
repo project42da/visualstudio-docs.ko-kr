@@ -1,8 +1,7 @@
 ---
 title: "방법: 네이티브 DLL 디버깅 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "실행 파일, 디버그 세션 지정"
 ms.assetid: 76b34d15-a66d-4963-842e-c8b955c81696
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 방법: 네이티브 DLL 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

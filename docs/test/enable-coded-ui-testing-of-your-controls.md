@@ -1,8 +1,7 @@
 ---
 title: "컨트롤의 코딩된 UI 테스트 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
 caps.latest.revision: 22
-caps.handback.revision: 22
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 22
 ---
 # 컨트롤의 코딩된 UI 테스트 사용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

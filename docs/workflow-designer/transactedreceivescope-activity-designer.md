@@ -1,8 +1,7 @@
 ---
 title: "TransactedReceiveScope 활동 디자이너 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.ServiceModel.Activities.TransactedReceiveScope.UI"
 ms.assetid: 7ca93aad-4e83-4d81-90f4-998ee114d9b6
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 4
 ---
 # TransactedReceiveScope 활동 디자이너
 **TransactedReceiveScope** 디자이너는 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동을 만들고 구성하는 데 사용됩니다.  

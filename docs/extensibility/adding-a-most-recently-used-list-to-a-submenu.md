@@ -1,8 +1,7 @@
 ---
 title: "하위 메뉴에는 목록에 사용 되는 가장 최근에 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "가장 최근 사용"
 ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
 caps.latest.revision: 46
-caps.handback.revision: 46
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 46
 ---
 # 하위 메뉴에는 목록에 사용 되는 가장 최근에 추가
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

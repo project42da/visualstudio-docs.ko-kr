@@ -1,8 +1,7 @@
 ---
 title: "Roslyn 분석기를 시작 하기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 367c2ec8-3059-46a5-9d1c-57bead0419e7
 caps.latest.revision: 6
-caps.handback.revision: 6
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Roslyn 분석기를 시작 하기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

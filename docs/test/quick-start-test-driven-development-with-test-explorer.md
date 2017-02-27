@@ -1,8 +1,7 @@
 ---
 title: "퀵 스타트: 테스트 탐색기를 사용한 테스트 구동 방식 개발 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5161b533-2127-4172-b473-d4ffc76ff05b
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 15
 ---
 # 퀵 스타트: 테스트 탐색기를 사용한 테스트 구동 방식 개발
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

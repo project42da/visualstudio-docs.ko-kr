@@ -1,8 +1,7 @@
 ---
 title: "연습: ClickOnce 응용 프로그램용 사용자 지정 설치 관리자 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "설치 관리자[ClickOnce], 사용자 지정"
 ms.assetid: fb222cc5-8aeb-4b94-8c49-b93e342f5f69
 caps.latest.revision: 34
-caps.handback.revision: 34
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 34
 ---
 # 연습: ClickOnce 응용 프로그램용 사용자 지정 설치 관리자 만들기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

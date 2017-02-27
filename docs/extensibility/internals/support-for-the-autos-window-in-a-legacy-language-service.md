@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스의 자동 창에 대 한 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "언어 서비스 [관리 되는 패키지 프레임 워크]에서 지 원하는 자동 창"
 ms.assetid: 47d40aae-7a3c-41e1-a949-34989924aefb
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 레거시 언어 서비스의 자동 창에 대 한 지원
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

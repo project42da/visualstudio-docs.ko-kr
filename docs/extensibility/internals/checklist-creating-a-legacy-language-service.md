@@ -1,8 +1,7 @@
 ---
 title: "검사 목록: 레거시 언어 서비스 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "언어 서비스, 네이티브 코드"
 ms.assetid: 8b73b341-a33a-4ab5-9390-178c9e563d2d
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 검사 목록: 레거시 언어 서비스 만들기
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

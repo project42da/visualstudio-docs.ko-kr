@@ -1,8 +1,7 @@
 ---
-title: "레거시 언어 서비스 기능 | Microsoft Docs"
+title: "레거시 언어 서비스 Features2 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "개발 시 도움이 될을 코드 편집기 [Visual Studio SDK]"
 ms.assetid: 97c38622-ae0b-4ae0-90ed-604072c298d3
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 레거시 언어 서비스 기능
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

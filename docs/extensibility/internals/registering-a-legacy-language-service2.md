@@ -1,8 +1,7 @@
 ---
-title: "레거시 언어 서비스를 등록 하는 중 | Microsoft Docs"
+title: "레거시 언어 Service2를 등록 하는 중 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "레지스트리, 언어 서비스"
 ms.assetid: ca312aa3-f9f1-4572-8553-89bf3a724deb
 caps.latest.revision: 24
-caps.handback.revision: 24
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # 레거시 언어 서비스를 등록 하는 중
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

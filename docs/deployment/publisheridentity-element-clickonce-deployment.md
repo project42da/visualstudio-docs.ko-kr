@@ -1,8 +1,7 @@
 ---
 title: "&lt;publisherIdentity&gt; 요소(ClickOnce 배포) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "서명된 매니페스트에 대한 필수 요소[ClickOnce], publisherIdentity 요소"
 ms.assetid: 34c579db-d2f2-4b66-b9c8-47207f33d950
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 11
 ---
 # &lt;publisherIdentity&gt; 요소(ClickOnce 배포)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

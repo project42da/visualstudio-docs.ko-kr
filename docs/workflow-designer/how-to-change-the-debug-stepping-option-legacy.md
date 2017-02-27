@@ -1,8 +1,7 @@
 ---
 title: "방법: 단계별 디버깅 옵션 변경(레거시) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "한 단계씩 실행, 옵션 변경"
 ms.assetid: aedc06af-d58a-44d6-aee4-f397f1f923a0
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 방법: 단계별 디버깅 옵션 변경(레거시)
 이 항목에서는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에서 동시 동작이 있는 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 응용 프로그램의 단계별 디버깅 옵션을 변경하는 방법에 대해 설명합니다.레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.  

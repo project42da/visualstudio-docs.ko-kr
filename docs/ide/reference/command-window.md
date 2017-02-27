@@ -1,8 +1,7 @@
 ---
 title: "명령 창 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "명령 창의 디스플레이 모드"
 ms.assetid: 48711628-1909-4713-a73e-d7b714c77f8a
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 명령 창
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,58 +1,41 @@
 ---
-title: "링크 작업 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- VC.Project.VCLinkerTool.ForceFileOutput
-- VC.Project.VCLinkerTool.LinkStatus
-- VC.Project.VCLinkerTool.CLRUnmanagedCodeCheck
-- VC.Project.VCLinkerTool.SpecifySectionAttributes
-- VC.Project.VCLinkerTool.SupportNobindOfDelayLoadedDLL
-- VC.Project.VCLinkerTool.MinimumRequiredVersion
-- VC.Project.VCLinkerTool.PerUserRedirection
-- VC.Project.VCLinkerTool.CreateHotPatchableImage
-- VC.Project.VCLinkerTool.DataExecutionPrevention
-- VC.Project.VCLinkerTool.TreatLinkerWarningsAsErrors
-- vc.task.link
-- VC.Project.VCLinkerTool.ImageHasSafeExceptionHandlers
-- VC.Project.VCLinkerTool.CLRSupportLastError
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- MSBuild (Visual C++), Link task
-- Link task (MSBuild (Visual C++))
+title: "링크 작업 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "VC.Project.VCLinkerTool.ForceFileOutput"
+  - "VC.Project.VCLinkerTool.LinkStatus"
+  - "VC.Project.VCLinkerTool.CLRUnmanagedCodeCheck"
+  - "VC.Project.VCLinkerTool.SpecifySectionAttributes"
+  - "VC.Project.VCLinkerTool.SupportNobindOfDelayLoadedDLL"
+  - "VC.Project.VCLinkerTool.MinimumRequiredVersion"
+  - "VC.Project.VCLinkerTool.PerUserRedirection"
+  - "VC.Project.VCLinkerTool.CreateHotPatchableImage"
+  - "VC.Project.VCLinkerTool.DataExecutionPrevention"
+  - "VC.Project.VCLinkerTool.TreatLinkerWarningsAsErrors"
+  - "vc.task.link"
+  - "VC.Project.VCLinkerTool.ImageHasSafeExceptionHandlers"
+  - "VC.Project.VCLinkerTool.CLRSupportLastError"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - "MSBuild (Visual c + +), 링크 작업"
+  - "링크 작업(MSBuild(Visual C++))"
 ms.assetid: 0a61f168-3113-4fa7-83a3-d9142e2a33f8
 caps.latest.revision: 12
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7efa5c21454ec3cde3e07aa091919703544cc908
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
 # <a name="link-task"></a>링크 작업
 Visual C++ 링커 도구 link.exe를 래핑합니다. 링커 도구는 COFF(Common Object File Format) 개체 파일과 라이브러리를 연결하여 실행 파일(.exe) 또는 DLL(동적 연결 라이브러리)을 만듭니다. 자세한 내용은 [링커 옵션](/visual-cpp/build/reference/linker-options)을 참조하세요.  

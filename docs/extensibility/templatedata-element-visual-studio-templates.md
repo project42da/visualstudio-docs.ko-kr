@@ -1,8 +1,7 @@
 ---
 title: "TemplateData 요소(Visual Studio 템플릿) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "TemplateData 요소[Visual Studio 프로젝트 템플릿]"
 ms.assetid: db17ec9b-bfdf-46b1-bbe7-5ccc140056e2
 caps.latest.revision: 24
-caps.handback.revision: 24
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # TemplateData 요소(Visual Studio 템플릿)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

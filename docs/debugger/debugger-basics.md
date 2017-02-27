@@ -1,8 +1,7 @@
 ---
 title: "디버거 기본 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "디버거, 로드맵"
 ms.assetid: 4da42a10-384d-44d7-b4dc-032202ff784b
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # 디버거 기본 사항
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,38 +1,20 @@
 ---
-title: "Visual Studio에서 플랫폼 간 모바일 개발 | Microsoft 문서"
-ms.custom: 
-ms.date: 12/06/2016
-ms.prod: visual-studio-dev15
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Visual Studio에서 플랫폼 간 개발 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/06/2016"
+ms.prod: "visual-studio-dev15"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "tgt-pltfrm-cross-plat"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 8202717a-e990-45cf-b092-438651ccb38a
 caps.latest.revision: 64
-author: ghogen
-ms.author: ghogen
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 0e180e257a6c03a4971207bfa4df422037ef67ec
-
+author: "ghogen"
+ms.author: "ghogen"
+manager: "ghogen"
+caps.handback.revision: 57
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio에서 플랫폼 간 모바일 개발
 Visual Studio를 사용하여 Android, iOS 및 Windows 장치용 앱을 빌드할 수 있습니다.  앱을 디자인할 때 Visual Studio의 도구를 사용하여 Office 365, Azure App Service 및 Application Insights와 같은 연결된 서비스를 쉽게 추가할 수 있습니다.

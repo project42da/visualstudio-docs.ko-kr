@@ -1,8 +1,7 @@
 ---
 title: "다이어그램의 속성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "도메인별 언어, 다이어그램"
 ms.assetid: 00bba4b8-6aa6-4027-96cb-4f4c41a77d3c
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 25
 ---
 # 다이어그램의 속성
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

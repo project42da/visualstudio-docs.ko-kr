@@ -1,8 +1,7 @@
 ---
 title: "방법: 레지스트리 설정을 사용 하 여 개인 갤러리 관리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "VSIX 개인 갤러리 관리"
 ms.assetid: 86b86442-4293-4cad-9fe2-876eef65f426
 caps.latest.revision: 6
-caps.handback.revision: 6
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 방법: 레지스트리 설정을 사용 하 여 개인 갤러리 관리
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

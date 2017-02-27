@@ -1,8 +1,7 @@
 ---
 title: "프로젝트 형식에 대 한 설계 결정 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "프로젝트 형식에 디자인 결정"
 ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 프로젝트 형식에 대 한 설계 결정 사항
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

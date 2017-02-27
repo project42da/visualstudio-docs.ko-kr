@@ -1,8 +1,7 @@
 ---
 title: "레거시 API를 사용 하 여 편집기 컨트롤 및 메뉴를 사용자 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-컨트롤 및 메뉴"
 ms.assetid: 1ce1f55b-6825-4654-a60a-7831af2ab44f
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 레거시 API를 사용 하 여 편집기 컨트롤 및 메뉴를 사용자 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

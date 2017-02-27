@@ -1,8 +1,7 @@
 ---
 title: "CA2149: 투명한 메서드는 네이티브 코드를 호출해서는 안 됩니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ f1_keywords:
   - "CA2149"
 ms.assetid: 28951bd7-f3db-4871-99aa-bad68d1ead80
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 11
 ---
 # CA2149: 투명한 메서드는 네이티브 코드를 호출해서는 안 됩니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

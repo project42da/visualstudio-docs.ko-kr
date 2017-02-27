@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스 Essentials | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "Visual Studio에 통합 하는 프로그래밍 언어"
 ms.assetid: c15e0ccb-e7c5-4dbb-affb-fe3d3244debe
 caps.latest.revision: 21
-caps.handback.revision: 21
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 레거시 언어 서비스 Essentials
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

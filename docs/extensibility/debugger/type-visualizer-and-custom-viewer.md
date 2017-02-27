@@ -1,8 +1,7 @@
 ---
 title: "시각화 도우미 형식 및 사용자 지정 뷰어 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK] 형식 시각화 도우미"
 ms.assetid: fd3691e6-9c78-4767-846f-43f85ada4375
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 시각화 도우미 형식 및 사용자 지정 뷰어
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

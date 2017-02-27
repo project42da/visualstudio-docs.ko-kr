@@ -1,8 +1,7 @@
 ---
 title: "창 찾기 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "Spy++로 창 찾기"
 ms.assetid: ee733077-d17a-4439-8a49-bc2f5dbc60d0
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 창 찾기 대화 상자
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

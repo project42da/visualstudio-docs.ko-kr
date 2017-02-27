@@ -1,8 +1,7 @@
 ---
 title: "서버 (Visual Studio SDK) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK] 서버"
 ms.assetid: 62236d64-7956-448c-9ac3-5528f3edac1d
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 서버 (Visual Studio SDK)
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "방법: 미리 증가된 알파를 사용하는 질감 내보내기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 방법: 미리 증가된 알파를 사용하는 질감 내보내기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

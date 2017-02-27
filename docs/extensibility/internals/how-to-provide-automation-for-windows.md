@@ -1,8 +1,7 @@
 ---
 title: "방법: Windows에 대 한 자동화를 제공 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "도구 창, 자동화"
 ms.assetid: 512ab2a4-7987-4912-8f40-8804bf66f829
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: Windows에 대 한 자동화를 제공 합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "프로젝트 디자이너, 컴파일 페이지(Visual Basic) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "프로젝트 디자이너의 컴파일 페이지"
 ms.assetid: b2a80230-906e-4e85-b3e0-fcd9c40426e1
 caps.latest.revision: 60
-caps.handback.revision: 60
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 60
 ---
 # 프로젝트 디자이너, 컴파일 페이지(Visual Basic)
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

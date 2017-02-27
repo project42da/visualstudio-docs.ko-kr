@@ -1,8 +1,7 @@
 ---
 title: "방법: 편집기에서 텍스트의 대/소문자 변경 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "텍스트, 대/소문자"
 ms.assetid: b04d1327-a45e-4c12-a0d0-67672b3fa855
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: 편집기에서 텍스트의 대/소문자 변경
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

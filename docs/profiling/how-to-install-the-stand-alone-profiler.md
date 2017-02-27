@@ -1,8 +1,7 @@
 ---
 title: "방법: 독립 실행형 프로파일러 설치 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "프로파일링 도구, 독립 실행형 프로파일러"
 ms.assetid: cae81c95-83cd-4ab6-8a98-84ef977a2f6d
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # 방법: 독립 실행형 프로파일러 설치
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

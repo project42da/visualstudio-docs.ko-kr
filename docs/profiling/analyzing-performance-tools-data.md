@@ -1,8 +1,7 @@
 ---
 title: "프로파일링 도구 데이터 분석 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "프로파일링 도구, 보고서"
 ms.assetid: ae3e198a-b994-4ecb-a633-dec98bd4fd45
 caps.latest.revision: 41
-caps.handback.revision: 41
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 41
 ---
 # 프로파일링 도구 데이터 분석
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

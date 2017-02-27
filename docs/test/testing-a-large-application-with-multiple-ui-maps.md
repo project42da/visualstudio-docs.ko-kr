@@ -1,8 +1,7 @@
 ---
 title: "여러 UI 맵이 포함된 대형 응용 프로그램 테스트 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "코딩된 UI 테스트, 여러 UI 맵"
 ms.assetid: 6e1ae9ec-e9b1-458a-bd96-0eb15e46f1d5
 caps.latest.revision: 22
-caps.handback.revision: 22
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 22
 ---
 # 여러 UI 맵이 포함된 대형 응용 프로그램 테스트
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "소스 제어 플러그 인을 구현 하기 위한 모범 사례 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "소스 제어 [Visual Studio SDK] 플러그 인"
 ms.assetid: 85e73b73-29dc-464f-8734-ed308742c435
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 소스 제어 플러그 인을 구현 하기 위한 모범 사례
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,37 +1,19 @@
 ---
-title: "Visual Studio에 로그인 | Microsoft 문서"
-ms.custom: 
-ms.date: 01/23/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Visual Studio에 로그인 | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/23/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 caps.latest.revision: 30
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 2f67cbb9e3a2895dc6c35e68dbd6b262862c6514
-ms.openlocfilehash: 5a42f721c30dba9c14f7871a0d771f07054e2550
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 28
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio에 로그인
 IDE에 로그인하여 개인 설정 계정을 설정하면 Visual Studio의 개발 환경을 자신에게 맞게 설정하고 최적화할 수 있습니다.  

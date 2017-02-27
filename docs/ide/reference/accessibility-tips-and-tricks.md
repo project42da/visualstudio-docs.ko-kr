@@ -1,38 +1,21 @@
 ---
-title: "접근성 팁과 요령 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- accessibility [Visual Studio]
+title: "내게 필요한 옵션에 대한 유용한 정보 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "내게 필요한 옵션[Visual Studio]"
 ms.assetid: 6b491d88-f79e-4686-8841-857624bdcfda
 caps.latest.revision: 22
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c1e4fdf79ac11095501ca8823ff247cb48374824
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 21
 ---
 # <a name="accessibility-tips-and-tricks"></a>내게 필요한 옵션에 대한 유용한 정보
 쉽게 키보드에서 작업하고 화면 판독기나 기타 보조 기술 장치를 사용할 수 있도록 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에는 기본 제공 접근성 기능이 포함되어 있습니다. 이 항목에는 접근성 및 여러 유용한 바로 가기 키 조합에 맞게 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 최적화하기 위한 몇 가지 제안 사항이 포함되어 있습니다.  

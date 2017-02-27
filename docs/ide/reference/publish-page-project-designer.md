@@ -1,8 +1,7 @@
 ---
 title: "프로젝트 디자이너, 게시 페이지 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "프로젝트 디자이너의 게시 페이지"
 ms.assetid: 153527c6-8b95-4003-8e8e-03a489d0a629
 caps.latest.revision: 33
-caps.handback.revision: 33
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # 프로젝트 디자이너, 게시 페이지
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

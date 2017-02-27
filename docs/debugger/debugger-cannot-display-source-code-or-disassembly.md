@@ -1,8 +1,7 @@
 ---
 title: "디버거가 현재 위치에 대한 소스 코드나 디스어셈블리를 표시할 수 없습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "디스어셈블리 코드, 오류"
 ms.assetid: 112d3ea3-fdd2-4bce-92b4-167a76258934
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 디버거가 현재 위치에 대한 소스 코드나 디스어셈블리를 표시할 수 없습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

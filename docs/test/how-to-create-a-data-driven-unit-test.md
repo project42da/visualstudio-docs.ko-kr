@@ -1,8 +1,7 @@
 ---
 title: "방법: 데이터 기반 단위 테스트 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "데이터 기반 단위 테스트"
 ms.assetid: a0322bc5-02c8-4f9f-af43-100a60b1bd28
 caps.latest.revision: 33
-caps.handback.revision: 33
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 33
 ---
 # 방법: 데이터 기반 단위 테스트 만들기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

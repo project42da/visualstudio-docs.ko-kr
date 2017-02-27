@@ -1,8 +1,7 @@
 ---
 title: "방법: 설치 관리자에 대 한 레지스트리 정보를 생성 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "Vspackage, 등록 매니페스트"
 ms.assetid: b1b41012-a777-4ccf-81a6-3b41f0e96583
 caps.latest.revision: 19
-caps.handback.revision: 19
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # 방법: 설치 관리자에 대 한 레지스트리 정보를 생성 합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

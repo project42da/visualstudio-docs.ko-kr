@@ -1,8 +1,7 @@
 ---
 title: "방법: 3차원 모델에 셰이더 적용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a3877bd6-abd8-4a9d-842c-6848b6c2f335
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 방법: 3차원 모델에 셰이더 적용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "키 바인딩 요소 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "키 바인딩 요소 (VSCT XML 스키마)"
 ms.assetid: 26a15d5c-ddea-4977-af7f-d795ff09c7ad
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 키 바인딩 요소
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Vspackage를 등록 및 등록 취소 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "Vspackage를 등록 하는 중"
 ms.assetid: e25e7a46-6a55-4726-8def-ca316f553d6b
 caps.latest.revision: 35
-caps.handback.revision: 35
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # Vspackage를 등록 및 등록 취소
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

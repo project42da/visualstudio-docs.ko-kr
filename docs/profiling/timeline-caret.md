@@ -1,8 +1,7 @@
 ---
 title: "시간 표시 막대 캐럿 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "동시성 시각화 도우미, 시간 표시 막대 캐럿"
 ms.assetid: cc7d567f-b655-4539-810c-6506e7852121
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 시간 표시 막대 캐럿
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

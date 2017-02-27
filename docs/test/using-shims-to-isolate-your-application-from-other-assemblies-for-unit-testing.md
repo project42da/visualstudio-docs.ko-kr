@@ -1,8 +1,7 @@
 ---
 title: "shim을 사용하여 단위 테스트를 위한 다른 어셈블리에서 응용 프로그램 격리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d2a34de2-6527-4c21-8b93-2f268ee894b7
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 12
 ---
 # shim을 사용하여 단위 테스트를 위한 다른 어셈블리에서 응용 프로그램 격리
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

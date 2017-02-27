@@ -1,8 +1,7 @@
 ---
 title: "웹 응용 프로그램 디버깅: 오류 및 문제 해결 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "웹 서비스, 디버깅 시 시간 초과 오류"
 ms.assetid: 63f2742e-2031-48a8-9773-d9b547c62230
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 웹 응용 프로그램 디버깅: 오류 및 문제 해결
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

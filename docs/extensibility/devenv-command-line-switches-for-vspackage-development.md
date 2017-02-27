@@ -1,8 +1,7 @@
 ---
 title: "VSPackage 개발에 대 한 Devenv 명령줄 스위치 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,9 +19,9 @@ helpviewer_keywords:
   - "Visual Studio SDK 명령줄 스위치"
 ms.assetid: d65d2c04-dd84-42b0-b956-555b11f5a645
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # VSPackage 개발에 대 한 Devenv 명령줄 스위치
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

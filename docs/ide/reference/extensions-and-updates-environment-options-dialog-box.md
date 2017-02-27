@@ -1,8 +1,7 @@
 ---
 title: "옵션 대화 상자, 환경, 확장 및 업데이트 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Environment.ExtensionManager"
 ms.assetid: c73859eb-3c33-4f39-86bf-6788387b5937
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # 옵션 대화 상자, 환경, 확장 및 업데이트
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,55 +1,37 @@
 ---
-title: "CvWriteMessage 함수 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- cvmarkers/CvWriteMessageW
-- cvmarkers/CvWriteMessageExW
-- cvmarkers/CvWriteMessageVA
-- cvmarkers/CvWriteMessageExVW
-- cvmarkers/CvWriteMessageExA
-- cvmarkers/CvWriteMessageA
-- cvmarkers/CvWriteMessageExVA
-- cvmarkers/CvWriteMessageVW
-helpviewer_keywords:
-- CvWriteMessageExVA method
-- CvWriteMessageW method
-- CvWriteMessageVW method
-- CvWriteMessageExVW method
-- CvWriteMessageExW method
-- CvWriteMessageA method
-- CvWriteMessageVA method
-- CvWriteMessageExA method
+title: "CvWriteMessage 함수 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "cvmarkers/CvWriteMessageW"
+  - "cvmarkers/CvWriteMessageExW"
+  - "cvmarkers/CvWriteMessageVA"
+  - "cvmarkers/CvWriteMessageExVW"
+  - "cvmarkers/CvWriteMessageExA"
+  - "cvmarkers/CvWriteMessageA"
+  - "cvmarkers/CvWriteMessageExVA"
+  - "cvmarkers/CvWriteMessageVW"
+helpviewer_keywords: 
+  - "CvWriteMessageExVA 메서드"
+  - "CvWriteMessageW 메서드"
+  - "CvWriteMessageVW 메서드"
+  - "CvWriteMessageExVW 메서드"
+  - "CvWriteMessageExW 메서드"
+  - "CvWriteMessageA 메서드"
+  - "CvWriteMessageVA 메서드"
+  - "CvWriteMessageExA 메서드"
 ms.assetid: e20ae7be-bfa7-437a-b8c1-fa0f1baa7f83
 caps.latest.revision: 3
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 76b65a7cdca1d14d9c9cb7f33abd7132bc0e1212
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 3
 ---
 # <a name="cvwritemessage-function"></a>CvWriteMessage 함수
 동시성 시각화 도우미 추적 파일에 메시지를 씁니다.  

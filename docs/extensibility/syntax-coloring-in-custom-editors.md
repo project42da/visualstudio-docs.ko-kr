@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 편집기에서 색을 지정 하는 구문 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 사용자 지정-구문 색 지정"
 ms.assetid: 74900b9a-baef-432a-8231-4568fb5e19ad
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 사용자 지정 편집기에서 색을 지정 하는 구문
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Visual Studio에서 자주 사용되는 명령의 기본 바로 가기 키 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5839d6ca-e5ac-4468-9025-3d5ea177f19c
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Visual Studio에서 자주 사용되는 명령의 기본 바로 가기 키
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,42 +1,24 @@
 ---
-title: "연습: 관리 코드에 대한 단위 테스트 만들기 및 실행 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- unit tests, walkthrough
-- unit tests, creating
-- unit tests, generating
-- unit tests, running
-- unit tests, authoring
+title: "연습: 관리 코드에 대한 단위 테스트 만들기 및 실행 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-devops-test"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "단위 테스트, 연습"
+  - "단위 테스트, 만들기"
+  - "단위 테스트, 생성"
+  - "단위 테스트, 실행"
+  - "단위 테스트, 제작"
 ms.assetid: 2b018b18-b412-4e0e-b0ee-b580a2f3ba9c
 caps.latest.revision: 83
-ms.author: mlearned
-manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a00b80092a44190d626b93b0ecc5689bafd1a4e3
-
+ms.author: "mlearned"
+manager: "douge"
+caps.handback.revision: 83
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>연습: 관리 코드에 대한 단위 테스트 만들기 및 실행
 이 연습에서는 관리 코드에 대한 Microsoft 단위 테스트 프레임워크 및 Visual Studio 테스트 탐색기를 사용하여 일련의 단위 테스트를 생성, 실행 및 사용자 지정하는 방법을 안내합니다. 개발 중인 C# 프로젝트로 시작하여 해당 코드를 실행해 보는 테스트를 만들어 테스트를 실행하고 결과를 검사합니다. 그런 다음 프로젝트 코드를 변경하고 테스트를 다시 실행할 수 있습니다.  

@@ -1,8 +1,7 @@
 ---
 title: "웹 프로젝트 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "웹 프로젝트"
 ms.assetid: d9c0329f-4b0b-4fda-8061-cce69f2f502d
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 웹 프로젝트
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

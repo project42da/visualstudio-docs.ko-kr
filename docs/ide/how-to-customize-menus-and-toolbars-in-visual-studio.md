@@ -1,8 +1,7 @@
 ---
 title: "방법: Visual Studio에서 메뉴 및 도구 모음 사용자 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "도구 모음[Visual Studio], IDE에서 사용자 지정"
 ms.assetid: b570ae2f-5302-45dc-9cc9-8d4d1ad50603
 caps.latest.revision: 28
-caps.handback.revision: 28
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # 방법: Visual Studio에서 메뉴 및 도구 모음 사용자 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

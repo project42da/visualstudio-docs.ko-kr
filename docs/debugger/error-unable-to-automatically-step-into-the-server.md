@@ -1,8 +1,7 @@
 ---
 title: "오류: 서버에 대해 자동으로 한 단계씩 코드를 실행할 수 없습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "원격 디버깅, 알림 오류"
 ms.assetid: 9a370ccc-d358-429c-b285-9b6c0649bc68
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 오류: 서버에 대해 자동으로 한 단계씩 코드를 실행할 수 없습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
