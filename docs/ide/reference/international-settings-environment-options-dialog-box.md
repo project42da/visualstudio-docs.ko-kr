@@ -1,8 +1,7 @@
 ---
 title: "옵션 대화 상자, 환경, 국가별 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "언어, 기본값 지정"
 ms.assetid: e3a8815c-6995-4099-8e88-34f91fad55b2
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 옵션 대화 상자, 환경, 국가별 설정
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

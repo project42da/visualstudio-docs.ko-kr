@@ -1,8 +1,7 @@
 ---
 title: "테스트 영역 4: 체크 인 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "소스 제어 플러그 인, 항목을 체크 인"
 ms.assetid: d0329fa8-7a8d-4d30-b67b-6f2a97b75a30
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 테스트 영역 4: 체크 인
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

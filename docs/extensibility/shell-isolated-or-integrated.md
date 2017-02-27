@@ -1,8 +1,7 @@
 ---
 title: "Shell (격리 또는 통합) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "셸 [Visual Studio] 셸 기반 응용 프로그램"
 ms.assetid: c64a9bf0-9bf8-45c3-8fa2-306fa6cab66a
 caps.latest.revision: 25
-caps.handback.revision: 25
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Shell (격리 또는 통합)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

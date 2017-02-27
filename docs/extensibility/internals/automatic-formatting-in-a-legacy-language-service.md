@@ -1,8 +1,7 @@
 ---
 title: "자동 레거시 언어 서비스의 형식 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "언어 서비스, 자동 서식 지정"
 ms.assetid: c210fc94-77bd-4694-b312-045087d8a549
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 자동 레거시 언어 서비스의 형식 지정
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

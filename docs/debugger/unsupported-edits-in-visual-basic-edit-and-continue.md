@@ -1,8 +1,7 @@
 ---
 title: "Visual Basic 편집하며 계속하기에서 지원되지 않는 편집 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "편집하며 계속하기[Visual Basic], 지원되지 않는 메서드 및 속성 본문 편집"
 ms.assetid: 9b8fdc41-a193-49ad-ad72-dfcadd46f4b3
 caps.latest.revision: 28
-caps.handback.revision: 28
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # Visual Basic 편집하며 계속하기에서 지원되지 않는 편집
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

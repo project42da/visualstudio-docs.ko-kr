@@ -1,8 +1,7 @@
 ---
 title: "방법: 실행 취소 스택을 지웁니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-실행 취소 스택에 지우기"
 ms.assetid: 2200d2d4-7f58-401c-87fc-ddd32d368193
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 방법: 실행 취소 스택을 지웁니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "할당 후크 및 C 런타임 메모리 할당 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "메모리 할당, 할당 후크 문제 해결"
 ms.assetid: cc34ee96-3d91-41bd-a019-aa3759139e7e
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 할당 후크 및 C 런타임 메모리 할당
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

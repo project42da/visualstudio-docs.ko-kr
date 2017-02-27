@@ -1,41 +1,23 @@
 ---
-title: "잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.cv.threads.tools.gallery
-helpviewer_keywords:
-- Concurrency Visualizer, common patterns for poorly-behaved multithreaded applications
+title: "잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.cv.threads.tools.gallery"
+helpviewer_keywords: 
+  - "동시성 시각화 도우미, 잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴"
 ms.assetid: 00d10629-e20f-4d6d-8643-c59a3879812e
 caps.latest.revision: 12
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 930567937eea5afade80fa607d20fbe70c9526a9
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴
 동시성 시각화 도우미를 사용하면 개발자는 다중 스레드 응용 프로그램의 동작을 시각화할 수 있습니다. 이 도구에는 잘못 동작하는 다중 스레드 응용 프로그램에 대한 일반적인 패턴의 갤러리가 포함되어 있습니다. 갤러리에는 각 패턴으로 표시되는 동작에 대한 설명, 해당 동작의 가능한 결과 및 그 동작을 해결하는 가장 일반적인 방법과 함께 도구를 통해 노출되는 일반적이고 인식 가능한 시각적 패턴이 포함되어 있습니다.  

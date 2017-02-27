@@ -1,8 +1,7 @@
 ---
 title: "방법: 구현 찾기 및 바꾸기 메커니즘 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-찾기 및 바꾸기"
 ms.assetid: bbd348db-3d19-42eb-99a2-3e808528c0ca
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 방법: 구현 찾기 및 바꾸기 메커니즘
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

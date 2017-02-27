@@ -1,8 +1,7 @@
 ---
 title: "도구 모음 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "IDE, 도구 모음 추가"
 ms.assetid: 17302c25-6f59-4e97-8c85-54f95336a07f
 caps.latest.revision: 38
-caps.handback.revision: 38
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 38
 ---
 # 도구 모음 추가
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

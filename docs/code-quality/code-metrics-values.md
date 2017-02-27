@@ -1,8 +1,7 @@
 ---
 title: "코드 메트릭 값 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "코드 품질 측정"
 ms.assetid: bc38831e-2083-4ea4-8527-ee41499a342f
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "erickson-doug"
 ms.author: "douge"
 manager: "douge"
+caps.handback.revision: 20
 ---
 # 코드 메트릭 값
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

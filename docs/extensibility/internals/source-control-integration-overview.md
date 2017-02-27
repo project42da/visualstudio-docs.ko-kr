@@ -1,8 +1,7 @@
 ---
 title: "소스 제어 통합 개요 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "소스 제어에 대 한 소스 제어 [Visual Studio SDK]"
 ms.assetid: 3a46e4eb-e677-49c3-8647-d927d035a19a
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 소스 제어 통합 개요
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ClickOnce 배포의 보안, 버전 관리 및 매니페스트 문제 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "Windows Vista, ClickOnce 배포"
 ms.assetid: d5d0c90b-ac1a-44e2-88dc-0d0ffd881624
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 21
 ---
 # ClickOnce 배포의 보안, 버전 관리 및 매니페스트 문제
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

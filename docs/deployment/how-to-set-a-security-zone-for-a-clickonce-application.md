@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 응용 프로그램의 보안 영역 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "보안 영역, ClickOnce 응용 프로그램"
 ms.assetid: d3dac454-518a-44d7-a76e-ccb7b9c3a150
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 18
 ---
 # 방법: ClickOnce 응용 프로그램의 보안 영역 설정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

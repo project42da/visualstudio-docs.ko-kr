@@ -1,8 +1,7 @@
 ---
 title: "Roslyn 분석기 및 코드 인식 ImmutableArrays 라이브러리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Roslyn 분석기 및 코드 인식 ImmutableArrays 라이브러리
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "다른 사용자가 배포할 수 있는 ClickOnce 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "useManifestForTrust 요소"
 ms.assetid: d20766c7-4ef3-45ab-8aa0-3f15b61eccaa
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 10
 ---
 # 다른 사용자가 배포할 수 있는 ClickOnce 응용 프로그램 만들기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

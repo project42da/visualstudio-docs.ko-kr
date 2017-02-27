@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스의 코드를 주석 달기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "코드 주석 언어 서비스 [관리 되는 패키지 프레임 워크]"
 ms.assetid: 9600d6f0-e2b6-4fe0-b935-fb32affb97a4
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 레거시 언어 서비스의 코드를 주석 달기
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

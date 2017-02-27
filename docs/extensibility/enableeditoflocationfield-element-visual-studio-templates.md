@@ -1,8 +1,7 @@
 ---
 title: "EnableEditOfLocationField 요소(Visual Studio 템플릿) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "EnableEditOfLocationField(Visual Studio 프로젝트 템플릿)"
 ms.assetid: 51a91963-8a3f-4741-928e-bc90c11473bb
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # EnableEditOfLocationField 요소(Visual Studio 템플릿)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

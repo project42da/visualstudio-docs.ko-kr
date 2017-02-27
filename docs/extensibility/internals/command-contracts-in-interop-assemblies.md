@@ -1,8 +1,7 @@
 ---
 title: "Interop 어셈블리에 있는 명령 계약 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "interop 어셈블리, 명령 계약"
 ms.assetid: 57245708-f539-42dc-8963-2754a48f0189
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Interop 어셈블리에 있는 명령 계약
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

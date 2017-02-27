@@ -1,37 +1,19 @@
 ---
-title: "성능 규칙을 사용하여 데이터 분석 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "성능 규칙을 사용하여 프로파일링 데이터 분석 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 1deed23e-b31b-4714-982f-08ceebfc3096
 caps.latest.revision: 16
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 55a86b3aaf61a20b0b33021432e6662024d1929c
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 16
 ---
 # <a name="using-performance-rules-to-analyze-data"></a>성능 규칙을 사용하여 데이터 분석
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구의 성능 경고는 프로파일링된 응용 프로그램에서 프로그램 실행 속도를 저하시킬 수 있는 문제를 나타냅니다. 또한 경고는 보다 유용한 데이터를 수집하기 위해 수집 방법을 변경해야 할 수 있음을 나타낼 수도 있습니다. 성능 경고는 프로파일링 세션에서 자동으로 생성됩니다. 프로파일링 데이터 파일을 Visual Studio에서 열면 **오류 목록** 창에 경고가 표시됩니다. **오류 목록** 창에서 해당 문제의 소스 코드를 찾을 수 있으며 문제를 해결 하는 방법에 대한 정보 등 오류에 대한 자세한 정보를 표시할 수 있습니다. 확인하지 않으려는 경고는 비활성화할 수도 있습니다.  

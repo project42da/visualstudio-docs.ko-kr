@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스에 있는 중단점의 유효성 검사 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "언어 서비스 [관리 되는 패키지 프레임 워크] 중단점 유효성 검사"
 ms.assetid: a7e873cd-dfe1-474f-bda5-fd7532774b15
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 레거시 언어 서비스에 있는 중단점의 유효성 검사
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

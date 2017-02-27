@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 오프라인 또는 온라인 설치 모드 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "온라인 응용 프로그램"
 ms.assetid: 0aee5fc1-e966-4bda-9b8f-d9997aeaa779
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 8
 ---
 # 방법: ClickOnce 오프라인 또는 온라인 설치 모드 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

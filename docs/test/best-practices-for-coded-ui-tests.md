@@ -1,8 +1,7 @@
 ---
 title: "최선의 코딩된 UI 테스트 방법 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "코딩된 UI 테스트, 유용한 정보"
 ms.assetid: d5aef766-a24c-4f1f-ac9b-e5462b6627d4
 caps.latest.revision: 39
-caps.handback.revision: 39
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 39
 ---
 # 최선의 코딩된 UI 테스트 방법
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

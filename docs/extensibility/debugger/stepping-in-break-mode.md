@@ -1,8 +1,7 @@
 ---
 title: "중단 모드에서 단계별 실행 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "중단 모드에서 단계별 실행, 디버깅 [디버깅 SDK]"
 ms.assetid: b08dc8ee-6c63-4462-a097-6f525cfbb35a
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 중단 모드에서 단계별 실행
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ReceiveAndSendReply 템플릿 디자이너 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/23/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ f1_keywords:
   - "System.ServiceModel.Activities.SendReply.UI"
 ms.assetid: d1d9a058-df7e-48f5-a2e7-3caeeba7eaa6
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # ReceiveAndSendReply 템플릿 디자이너
 **ReceiveAndSendReply** 템플릿은 서버의 요청\/응답 메시지 교환 패턴 중 상호 연결되는 <xref:System.Activities.Statements.Sequence> 활동 내의 사전 구성된 <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 활동 쌍을 만드는 데 사용됩니다.  

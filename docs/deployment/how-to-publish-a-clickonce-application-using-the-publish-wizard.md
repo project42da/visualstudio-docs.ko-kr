@@ -1,8 +1,7 @@
 ---
 title: "방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Windows 응용 프로그램, ClickOnce 배포"
 ms.assetid: 2e4aa67c-4445-4f7b-9e03-9acb95829127
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 25
 ---
 # 방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,16 +1,16 @@
 ---
 title: "이미지 서비스 및 카탈로그 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 caps.latest.revision: 37
-caps.handback.revision: 37
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # 이미지 서비스 및 카탈로그
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "모듈 뷰 - 프로파일러 계측 데이터 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "모듈 뷰"
 ms.assetid: 895b9589-1987-4160-916f-53b898a69cf0
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 모듈 뷰 - 프로파일러 계측 데이터
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

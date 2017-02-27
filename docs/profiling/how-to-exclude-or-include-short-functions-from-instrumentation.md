@@ -1,41 +1,23 @@
 ---
-title: "방법: 계측에서 간단한 함수 제외 또는 포함 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- profiling tools, instrument events
-- profiling tools, include short functions
-- profiling tools, exclude short functions
+title: "방법: 계측에서 간단한 함수 제외 또는 포함 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "프로파일링 도구, 계측 이벤트"
+  - "프로파일링 도구, 간단한 함수 포함"
+  - "프로파일링 도구, 간단한 함수 제외"
 ms.assetid: eaeead79-aafe-4490-86ff-6ed4cad9c15f
 caps.latest.revision: 13
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c884cdd26ff2e77ed6ecaf62b1867b302ddd7669
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
 # <a name="how-to-exclude-or-include-short-functions-from-instrumentation"></a>방법: 계측에서 간단한 함수 제외 또는 포함
 기본적으로 프로파일링 도구는 *작은 함수*를 구현에서 제외합니다. 작은 함수는 함수를 호출하지 않는 간단한 함수입니다. 이러한 작은 함수를 제외하면 계측 오버헤드가 감소하므로 계측 속도가 향상됩니다. 또한 성능 프로파일링 데이터 파일(.vsp) 크기가 감소하고 분석에 필요한 시간이 단축됩니다. 작은 함수가 제외되면 작은 함수에 사용되는 시간이 부모 함수의 전용 및 포괄 시간에 포함됩니다. 다음 절차에 설명된 대로 작은 함수를 계측에서 제외하거나 포함할 수 있습니다.  

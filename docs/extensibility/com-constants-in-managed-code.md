@@ -1,8 +1,7 @@
 ---
 title: "관리 코드에서 COM 상수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "관리 되는 VSPackages COM 상수 및 매크로"
 ms.assetid: b6663608-b049-44b0-a75b-080fdc5faafc
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 관리 코드에서 COM 상수
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

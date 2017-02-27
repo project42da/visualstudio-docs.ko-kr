@@ -1,8 +1,7 @@
 ---
 title: "방법: 다른 편집기에서 편집기를 호스트 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK]-레거시 호스트 중첩된 편집기는"
 ms.assetid: 2b0eb705-fe94-4ca8-93e0-9dbd8ce61a44
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 방법: 다른 편집기에서 편집기를 호스트 합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

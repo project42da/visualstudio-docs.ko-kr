@@ -1,8 +1,7 @@
 ---
 title: "방법: IIS 속성 설정 확인 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "웹 응용 프로그램, 속성 설정"
 ms.assetid: 9efc50bf-02fb-4750-9b3e-f03c38f10d8b
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 방법: IIS 속성 설정 확인
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

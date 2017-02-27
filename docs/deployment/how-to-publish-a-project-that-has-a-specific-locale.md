@@ -1,8 +1,7 @@
 ---
 title: "방법: 특정 로캘이 지정된 프로젝트 게시 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "게시, 지역화된 프로젝트"
 ms.assetid: 7c4cd83a-f985-4c85-9022-fadb5dbd2b39
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 11
 ---
 # 방법: 특정 로캘이 지정된 프로젝트 게시
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

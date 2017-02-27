@@ -1,8 +1,7 @@
 ---
 title: "스토어 앱의 Visual C# 코드 단위 테스트 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 23cb0d82-0451-464e-98ea-fa66e7010ead
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "alexhomer1"
 ms.author: "ahomer"
 manager: "robinr"
+caps.handback.revision: 19
 ---
 # 스토어 앱의 Visual C# 코드 단위 테스트
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

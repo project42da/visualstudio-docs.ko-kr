@@ -1,8 +1,7 @@
 ---
 title: "대규모 프로젝트 빌드 시 메모리의 효율적인 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "msbuild, 효율적인 메모리 사용 대형 트리 빌드"
 ms.assetid: 853a21ed-69f7-4817-af00-57f73e2c74b5
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 대규모 프로젝트 빌드 시 메모리의 효율적인 사용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

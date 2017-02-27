@@ -1,53 +1,36 @@
 ---
-title: "전역 Windows Forms 및 Web Forms를 위한 문화권 관련 클래스 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- globalization [Windows Forms], classes
-- Web applications [.NET Framework], globalization
-- culture, culture-specific classes
-- numbers, international
-- localization [Windows Forms], classes
-- globalization [Visual Studio], culture-specific classes
-- Windows Forms, localization
-- international applications [Visual Studio], data formats
-- time [Visual Studio], international
-- dates [Visual Studio], international
-- culture
-- international characters
-- currency formats
-- ASP.NET, globalization
-- classes [Visual Studio], culture-specific
-- localization [Visual Studio], culture-specific classes
+title: "전역 Windows Forms 및 Web Forms을 위한 문화권 관련 클래스 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "전역화[Windows Forms], 클래스"
+  - "웹 응용 프로그램[.NET Framework], 전역화"
+  - "문화권, 문화권 관련 클래스"
+  - "번호, 국가별"
+  - "지역화[Windows Forms], 클래스"
+  - "전역화[Visual Studio], 문화권 관련 클래스"
+  - "Windows Forms, 지역화"
+  - "국가별 응용 프로그램[Visual Studio], 데이터 형식"
+  - "시간[Visual Studio], 국가별"
+  - "날짜[Visual Studio], 국가별"
+  - "culture"
+  - "국가별 문자"
+  - "통화 형식"
+  - "ASP.NET, 전역화"
+  - "클래스[Visual Studio], 문화권 관련"
+  - "지역화[Visual Studio], 문화권 관련 클래스"
 ms.assetid: 0d06a0a4-f887-4f7c-bde7-1d543c06f803
 caps.latest.revision: 10
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 3fb3b66548077a2f92289f1a2f02cc8ae77544cc
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
 # <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>전역 Windows Forms 및 Web Forms을 위한 문화권 관련 클래스
 문화권마다 날짜, 시간, 숫자, 통화 및 기타 정보를 표시하는 규칙이 서로 다릅니다. <xref:System.Globalization> 네임스페이스는 <xref:System.Globalization.DateTimeFormatInfo>, **Calendar**, <xref:System.Globalization.NumberFormatInfo> 등 문화권 관련 값이 표시되는 방식을 수정하는 데 사용할 수 있는 클래스를 포함합니다.  

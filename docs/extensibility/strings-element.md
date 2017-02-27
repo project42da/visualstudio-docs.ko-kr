@@ -1,8 +1,7 @@
 ---
 title: "문자열 요소 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "VSCT XML 스키마 요소, 문자열"
 ms.assetid: 23a42074-a689-481d-824f-b43aa448f266
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 문자열 요소
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

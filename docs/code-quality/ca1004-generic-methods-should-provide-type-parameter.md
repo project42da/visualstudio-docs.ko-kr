@@ -1,8 +1,7 @@
 ---
 title: "CA1004: 제네릭 메서드는 형식 매개 변수를 제공해야 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GenericMethodsShouldProvideTypeParameter"
 ms.assetid: 38755f6a-fb45-4bf2-932e-0354ad826499
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 17
 ---
 # CA1004: 제네릭 메서드는 형식 매개 변수를 제공해야 합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

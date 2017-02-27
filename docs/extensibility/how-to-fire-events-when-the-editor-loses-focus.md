@@ -1,8 +1,7 @@
 ---
 title: "방법: 편집기 포커스를 잃을 때 이벤트를 발생 시키고 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-포커스를 잃거나 이벤트를 발생 시킵니다."
 ms.assetid: 64d40695-6917-468a-8037-a253453ac159
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 방법: 편집기 포커스를 잃을 때 이벤트를 발생 시키고
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

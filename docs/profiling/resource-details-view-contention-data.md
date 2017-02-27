@@ -1,8 +1,7 @@
 ---
 title: "리소스 정보 뷰 - 프로파일러 경합 데이터 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "리소스 정보 뷰"
 ms.assetid: a4ecfe1c-abbc-4fb3-9ab2-34de50486901
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 리소스 정보 뷰 - 프로파일러 경합 데이터
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

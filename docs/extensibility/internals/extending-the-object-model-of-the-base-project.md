@@ -1,8 +1,7 @@
 ---
 title: "기본 프로젝트의 개체 모델 확장 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "자동화 개체 모델"
 ms.assetid: 2f95cc53-dff6-476c-bacd-500fb0ff7725
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 기본 프로젝트의 개체 모델 확장
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "언어 서비스 및 코어 편집기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-언어 서비스"
 ms.assetid: e03199a6-ad5f-4075-bfba-8d36865112b7
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 언어 서비스 및 코어 편집기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

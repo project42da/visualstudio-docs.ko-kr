@@ -1,8 +1,7 @@
 ---
 title: "방법: 메뉴 항목을 사용하여 경고 표시 안 함 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "코드 분석, 경고 표시 안 함"
 ms.assetid: 36bd1850-dcde-4ed0-9bc3-0b83df434362
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 24
 ---
 # 방법: 메뉴 항목을 사용하여 경고 표시 안 함
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

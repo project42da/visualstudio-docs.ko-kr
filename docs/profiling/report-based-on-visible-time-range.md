@@ -1,8 +1,7 @@
 ---
 title: "표시되는 시간 범위를 기반으로 하는 보고서 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "동시성 시각화 도우미, 표시되는 시간 범위를 기반으로 하는 보고서"
 ms.assetid: ef4f6259-a110-43b6-a325-364154e1ba00
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 표시되는 시간 범위를 기반으로 하는 보고서
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

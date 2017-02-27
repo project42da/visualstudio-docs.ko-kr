@@ -1,8 +1,7 @@
 ---
 title: "Visual Studio에서 스토어 앱에 대한 단위 테스트 만들기 및 실행 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "단위 테스트"
 ms.assetid: d3de7b31-0262-4373-ba84-e74eda7651e4
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "alexhomer1"
 ms.author: "ahomer"
 manager: "robinr"
+caps.handback.revision: 26
 ---
 # Visual Studio에서 스토어 앱에 대한 단위 테스트 만들기 및 실행
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "프로젝트 및 항목 템플릿 등록 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "레지스트리, 새 프로젝트 추가 대화 상자"
 ms.assetid: 6b909f93-d7f5-4aec-81c6-ee9ff0f31638
 caps.latest.revision: 27
-caps.handback.revision: 27
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # 프로젝트 및 항목 템플릿 등록
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

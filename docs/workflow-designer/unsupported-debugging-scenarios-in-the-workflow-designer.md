@@ -1,17 +1,16 @@
 ---
 title: "Workflow Designer에서 지원되지 않는 디버깅 시나리오 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 6adbe379-41d0-4681-9cd0-b91f187c3c2c
 caps.latest.revision: 4
-caps.handback.revision: 4
 ms.author: "sdanie"
 manager: "erikre"
+caps.handback.revision: 4
 ---
 # Workflow Designer에서 지원되지 않는 디버깅 시나리오
 [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)]의 Workflow Designer에는 새로운 여러 기능이 추가되었지만 여전히 지원되지 않는 몇 가지 디버깅 시나리오가 있습니다.이 문서에서는 Workflow Designer에서 지원되지 않는 디버깅 시나리오에 대해 자세히 설명합니다.  

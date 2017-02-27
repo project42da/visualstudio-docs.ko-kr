@@ -1,8 +1,7 @@
 ---
 title: "도구 창에는 도구 모음 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "도구 모음 [Visual Studio] 도구 창에 추가"
 ms.assetid: 172f64b3-87f8-4292-9c1c-65bffa2b0970
 caps.latest.revision: 48
-caps.handback.revision: 46
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 48
 ---
 # 도구 창에는 도구 모음 추가
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

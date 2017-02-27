@@ -1,8 +1,7 @@
 ---
 title: "편집기 어댑터로 새롭거나 변경 된 동작 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-어댑터 동작"
 ms.assetid: 5555b116-cfdb-4773-ba62-af80fda64abd
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 편집기 어댑터로 새롭거나 변경 된 동작
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

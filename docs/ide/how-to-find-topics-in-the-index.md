@@ -1,8 +1,7 @@
 ---
 title: "방법: 색인에서 항목 찾기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "도움말 뷰어 2.0, 색인 필터링"
 ms.assetid: cb071e93-f297-459c-a6fa-8ae0dabc42a4
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 방법: 색인에서 항목 찾기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

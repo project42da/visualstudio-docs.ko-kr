@@ -1,8 +1,7 @@
 ---
 title: "제품 및 패키지 스키마 참조 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "Windows Installer, 제품 및 패키지 파일"
 ms.assetid: 5a74878f-b896-4cca-b968-98d00fe78fb0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 7
 ---
 # 제품 및 패키지 스키마 참조
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

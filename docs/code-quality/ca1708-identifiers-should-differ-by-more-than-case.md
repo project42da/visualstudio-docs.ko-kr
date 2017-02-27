@@ -1,8 +1,7 @@
 ---
 title: "CA1708: 식별자에는 대/소문자만 다른 이름을 사용할 수 없습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IdentifiersShouldDifferByMoreThanCase"
 ms.assetid: dac0f01d-dd21-484d-add1-c8cd2bf6969f
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 21
 ---
 # CA1708: 식별자에는 대/소문자만 다른 이름을 사용할 수 없습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

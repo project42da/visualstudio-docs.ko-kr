@@ -1,8 +1,7 @@
 ---
 title: "지 속성 및 실행 Document 테이블 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "실행 중인 document 테이블 (RDT) 아키텍처"
 ms.assetid: 27117eae-6c58-4189-a61a-1397a43b5ecf
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 지 속성 및 실행 Document 테이블
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

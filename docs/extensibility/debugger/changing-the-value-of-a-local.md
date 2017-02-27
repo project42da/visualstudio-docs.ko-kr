@@ -1,8 +1,7 @@
 ---
 title: "로컬 값을 변경 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "프로그래밍 방식으로 값을 변경 하는 식 계산"
 ms.assetid: 8407d3df-d38a-4328-82d1-98084bef43ec
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 로컬 값을 변경
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

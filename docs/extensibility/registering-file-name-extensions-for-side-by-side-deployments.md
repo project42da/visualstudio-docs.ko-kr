@@ -1,8 +1,7 @@
 ---
 title: "병렬 배포에 대 한 파일 이름 확장명을 등록 하는 중입니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "파일 확장명을 함께에 대 한 등록"
 ms.assetid: 9ab046a2-147d-4167-aa14-7d661b1eaaa5
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 병렬 배포에 대 한 파일 이름 확장명을 등록 하는 중입니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

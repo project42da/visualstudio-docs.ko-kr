@@ -1,8 +1,7 @@
 ---
 title: "단위 테스트 기본 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "2016-01-07"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ f1_keywords:
   - "vs.UnitTest.CreateUnitTest"
 ms.assetid: a80ba9cd-4575-483c-b957-af7ed8dc7e20
 caps.latest.revision: 27
-caps.handback.revision: 27
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 27
 ---
 # 단위 테스트 기본 사항
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Workflow Designer 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "Workflow Designer [WFD], 사용"
 ms.assetid: 991a942f-29bc-4868-9299-ed80c5665ab5
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 13
 ---
 # Workflow Designer 사용
 이 단원에서는 기본 제공 디자이너와 몇몇 활동 디자이너에서 호스팅되는 식 편집기를 사용하여 새로운 활동 및 워크플로 프로젝트를 만드는 방법에 대해 설명합니다.  

@@ -1,8 +1,7 @@
 ---
 title: "메뉴 및 도구 모음 명령 최적화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "도구 모음 [Visual Studio] 명령"
 ms.assetid: 8385f1a6-1e98-4dca-83d2-fcbed7177242
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 메뉴 및 도구 모음 명령 최적화
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

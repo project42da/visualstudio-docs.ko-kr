@@ -1,8 +1,7 @@
 ---
 title: "옵션, 텍스트 편집기, C#, 고급 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "XML 문서, 만들기"
 ms.assetid: 947f9d9a-b0f3-408d-9866-d82895bcee31
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # 옵션, 텍스트 편집기, C#, 고급
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

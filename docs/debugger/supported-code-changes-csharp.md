@@ -1,8 +1,7 @@
 ---
 title: "지원되는 코드 변경(C#) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "편집하며 계속하기[C#], 지원되는 코드 변경"
 ms.assetid: c7a48ea9-5a7f-4328-a9d7-f0e76fac399d
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # 지원되는 코드 변경(C#)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

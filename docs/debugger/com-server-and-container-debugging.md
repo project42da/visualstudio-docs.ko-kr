@@ -1,8 +1,7 @@
 ---
 title: "COM 서버 및 컨테이너 디버깅 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "ActiveX 컨트롤 디버깅"
 ms.assetid: b7ce8696-ebb8-4354-a767-f76b8ada4ac1
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # COM 서버 및 컨테이너 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "디렉터리에 추가 된 새 항목 추가 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "새 항목 추가 대화 상자, 확장"
 ms.assetid: 67ae8af6-3752-49e8-8ce3-007aca5f7982
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 디렉터리에 추가 된 새 항목 추가 대화 상자
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

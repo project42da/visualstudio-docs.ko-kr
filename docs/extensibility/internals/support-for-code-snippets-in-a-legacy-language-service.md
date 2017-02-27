@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스의 코드 조각에 대 한 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "코드 조각을 지 원하는 언어 서비스 [관리 되는 패키지 프레임 워크]"
 ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
 caps.latest.revision: 28
-caps.handback.revision: 28
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # 레거시 언어 서비스의 코드 조각에 대 한 지원
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

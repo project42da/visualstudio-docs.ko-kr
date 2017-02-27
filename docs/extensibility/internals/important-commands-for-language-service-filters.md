@@ -1,8 +1,7 @@
 ---
 title: "언어 서비스 필터에 대 한 중요 한 명령 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "언어 서비스를 지원 하기 위해 명령"
 ms.assetid: 4948c494-3d4d-4f50-b3f9-959e73f90e4d
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 언어 서비스 필터에 대 한 중요 한 명령
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

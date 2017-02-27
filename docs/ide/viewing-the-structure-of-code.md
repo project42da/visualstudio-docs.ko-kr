@@ -1,8 +1,7 @@
 ---
 title: "코드 구조 보기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "Visual Studio, 개체 브라우저"
 ms.assetid: e6064f58-5ad9-4f05-8c3f-12e994b6583f
 caps.latest.revision: 28
-caps.handback.revision: 28
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # 코드 구조 보기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

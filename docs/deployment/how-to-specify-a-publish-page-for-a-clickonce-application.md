@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 응용 프로그램의 게시 페이지 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "게시, ClickOnce"
 ms.assetid: 9d70eebb-bdee-4b42-8e7e-7a07e199bdf7
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 18
 ---
 # 방법: ClickOnce 응용 프로그램의 게시 페이지 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

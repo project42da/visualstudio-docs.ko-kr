@@ -1,8 +1,7 @@
 ---
 title: "Windows Vista의 ClickOnce 배포 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Windows, ClickOnce 배포"
 ms.assetid: b21a0ebc-0ff6-4f49-8993-7d1ad3f8cac2
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 12
 ---
 # Windows Vista의 ClickOnce 배포
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

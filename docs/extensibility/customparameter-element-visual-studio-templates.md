@@ -1,8 +1,7 @@
 ---
 title: "CustomParameter 요소(Visual Studio 템플릿) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "CustomParameters 요소[Visual Studio 프로젝트 템플릿]"
 ms.assetid: 743c4489-74ac-403a-bbaa-eed7d785a3ac
 caps.latest.revision: 6
-caps.handback.revision: 6
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CustomParameter 요소(Visual Studio 템플릿)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

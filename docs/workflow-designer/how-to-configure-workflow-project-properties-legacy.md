@@ -1,8 +1,7 @@
 ---
 title: "방법: 워크플로 프로젝트 속성 구성(레거시) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "워크플로 프로젝트, 속성 구성"
 ms.assetid: 850f5c96-8e5b-4126-bc16-fd2c26e6e656
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 방법: 워크플로 프로젝트 속성 구성(레거시)
 워크플로 프로젝트와 연결된 속성을 보거나 수정하려면 다음 단계를 따르십시오.  

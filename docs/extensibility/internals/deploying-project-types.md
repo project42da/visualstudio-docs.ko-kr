@@ -1,8 +1,7 @@
 ---
 title: "배포 프로젝트 형식 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "프로젝트 [Visual Studio SDK], 집계"
 ms.assetid: 7f132f67-8589-464c-90dc-0d57ae02aa8f
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 배포 프로젝트 형식
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

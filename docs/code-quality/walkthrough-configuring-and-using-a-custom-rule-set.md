@@ -1,8 +1,7 @@
 ---
 title: "연습: 사용자 지정 규칙 집합 구성 및 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "코드 분석, 규칙 집합"
 ms.assetid: 7fe0a4e3-1ce0-4f38-a87a-7d81238ec7cd
 caps.latest.revision: 40
-caps.handback.revision: 40
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 40
 ---
 # 연습: 사용자 지정 규칙 집합 구성 및 사용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

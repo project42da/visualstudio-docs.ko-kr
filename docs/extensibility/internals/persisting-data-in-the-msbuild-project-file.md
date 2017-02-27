@@ -1,8 +1,7 @@
 ---
 title: "MSBuild 프로젝트 파일에 데이터를 유지 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "데이터를 유지 하는 프로젝트 파일"
 ms.assetid: 6a920cb7-453d-4ffd-af1c-6f3084bd03f7
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # MSBuild 프로젝트 파일에 데이터를 유지
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

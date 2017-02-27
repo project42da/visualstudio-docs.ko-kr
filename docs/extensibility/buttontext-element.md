@@ -1,8 +1,7 @@
 ---
 title: "요소를 로드 합니다 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "VSCT XML 스키마 요소를 로드 합니다"
 ms.assetid: 56aba884-0356-4894-ae4e-32d3938f6865
 caps.latest.revision: 6
-caps.handback.revision: 6
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 요소를 로드 합니다
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

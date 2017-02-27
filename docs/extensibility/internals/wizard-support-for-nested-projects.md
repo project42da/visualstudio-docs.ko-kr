@@ -1,8 +1,7 @@
 ---
 title: "중첩된 프로젝트에 대 한 마법사 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "새 프로젝트 마법사"
 ms.assetid: 1b496acc-b326-4cdb-bb48-e3b5c6f12e05
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 중첩된 프로젝트에 대 한 마법사 지원
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

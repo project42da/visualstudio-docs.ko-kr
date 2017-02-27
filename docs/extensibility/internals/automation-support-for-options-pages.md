@@ -1,8 +1,7 @@
 ---
 title: "옵션 페이지에 대 한 자동화 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "자동화 [Visual Studio SDK] 도구 옵션 페이지 만들기"
 ms.assetid: 0b25b82c-7432-4e0a-9e84-350269ba8260
 caps.latest.revision: 29
-caps.handback.revision: 29
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # 옵션 페이지에 대 한 자동화 지원
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

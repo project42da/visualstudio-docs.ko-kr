@@ -1,8 +1,7 @@
 ---
 title: "디버깅 오류 및 경고 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "Visual Studio 문제 해결, 디버거 오류"
 ms.assetid: 73baaf39-3026-48c9-be48-8b9ba0063cde
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 디버깅 오류 및 경고 대화 상자
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

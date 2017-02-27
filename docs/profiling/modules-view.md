@@ -1,8 +1,7 @@
 ---
 title: "모듈 뷰 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "프로파일링 도구, 모듈 뷰"
 ms.assetid: 4314a404-2120-425b-be42-180cd4bac840
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 모듈 뷰
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

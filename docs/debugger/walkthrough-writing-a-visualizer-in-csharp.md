@@ -1,8 +1,7 @@
 ---
 title: "연습: C#에서 시각화 도우미 작성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "연습[Visual Studio], 시각화 도우미"
 ms.assetid: 53467461-8e0f-45ee-9bc4-374bbaeaf00f
 caps.latest.revision: 33
-caps.handback.revision: 33
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # 연습: C#에서 시각화 도우미 작성
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

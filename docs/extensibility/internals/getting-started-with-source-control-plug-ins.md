@@ -1,8 +1,7 @@
 ---
 title: "소스 제어 플러그 인 시작 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "시작, 시작된 소스 제어 플러그 인"
 ms.assetid: 46ac1f9f-4ecc-4a72-88d3-4c7e1647e1cb
 caps.latest.revision: 21
-caps.handback.revision: 21
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 소스 제어 플러그 인 시작
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

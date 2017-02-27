@@ -1,8 +1,7 @@
 ---
 title: "방법: 스레드에 플래그 지정 및 스레드의 플래그 해제 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "스레드, 전환[디버깅]"
 ms.assetid: 952d579d-6911-413e-b3e5-54e7e797e70c
 caps.latest.revision: 33
-caps.handback.revision: 33
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # 방법: 스레드에 플래그 지정 및 스레드의 플래그 해제
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

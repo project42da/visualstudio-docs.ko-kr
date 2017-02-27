@@ -1,8 +1,7 @@
 ---
 title: "스레드 속성 대화 상자, 일반 탭 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "스레드 속성"
 ms.assetid: 46b6c668-6786-456e-97dc-337bcac0d812
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 스레드 속성 대화 상자, 일반 탭
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

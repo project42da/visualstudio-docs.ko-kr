@@ -1,8 +1,7 @@
 ---
 title: "Name 요소(Visual Studio 템플릿) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "Name 요소[Visual Studio 프로젝트 템플릿]"
 ms.assetid: 48788dbf-7da0-4443-8061-aab966fc22c8
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Name 요소(Visual Studio 템플릿)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

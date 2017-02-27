@@ -1,8 +1,7 @@
 ---
 title: "오류: 웹 서버가 제대로 구성되어 있지 않습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "디버거, 웹 응용 프로그램 오류"
 ms.assetid: 875ba87f-c372-4126-8fe3-e33931cf26c0
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # 오류: 웹 서버가 제대로 구성되어 있지 않습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

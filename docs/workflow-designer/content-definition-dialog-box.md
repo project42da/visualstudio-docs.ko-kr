@@ -1,8 +1,7 @@
 ---
 title: "콘텐츠 정의 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/23/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "MessageContent.UI"
 ms.assetid: 7e4237c3-90a1-4149-bd8a-3643d1dde0df
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 3
 ---
 # 콘텐츠 정의 대화 상자
 **콘텐츠 정의** 대화 상자는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에서 <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 활동의 **Content** 속성을 구성하는 데 사용됩니다.이 상자를 사용하는 활동 디자이너 [!INCLUDE[crabout](../test/includes/crabout_md.md)][Send](../workflow-designer/send-activity-designer.md), [Receive](../workflow-designer/receive-activity-designer.md), [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md) 및 [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md) 항목을 참조하십시오.  

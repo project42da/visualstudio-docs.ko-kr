@@ -1,8 +1,7 @@
 ---
 title: "방법: 계측 방법을 사용하여 CPU 카운터 데이터 수집 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "성능 도구, 포팅 가능한 CPU 카운터"
 ms.assetid: 102fb6ca-5fbf-4b05-925f-56912ce3f44b
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 방법: 계측 방법을 사용하여 CPU 카운터 데이터 수집
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

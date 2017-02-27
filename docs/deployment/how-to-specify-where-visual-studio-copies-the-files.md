@@ -1,8 +1,7 @@
 ---
 title: "방법: Visual Studio의 파일 복사 위치 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "게시, 위치 지정"
 ms.assetid: 6c552700-dda3-49fe-af98-4717344fda07
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 12
 ---
 # 방법: Visual Studio의 파일 복사 위치 지정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

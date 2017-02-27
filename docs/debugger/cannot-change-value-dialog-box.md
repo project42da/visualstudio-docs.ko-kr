@@ -1,8 +1,7 @@
 ---
 title: "값을 변경할 수 없음 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "변수[디버거], 편집"
 ms.assetid: 19e930c2-5fbf-4c83-aae8-a1dc3f8fcae8
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 값을 변경할 수 없음 대화 상자
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

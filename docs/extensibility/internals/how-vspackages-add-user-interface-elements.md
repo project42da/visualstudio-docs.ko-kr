@@ -1,8 +1,7 @@
 ---
 title: "Vspackage에서 사용자 인터페이스 요소를 추가 하는 방법 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "Vspackage를 UI 요소를 기여 합니다."
 ms.assetid: abc5d9d9-b267-48a1-92ad-75fbf2f4c1b9
 caps.latest.revision: 60
-caps.handback.revision: 60
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 60
 ---
 # Vspackage에서 사용자 인터페이스 요소를 추가 하는 방법
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

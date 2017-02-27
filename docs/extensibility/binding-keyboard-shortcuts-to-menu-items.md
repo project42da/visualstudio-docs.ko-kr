@@ -1,8 +1,7 @@
 ---
 title: "메뉴 항목에 바인딩 바로 가기 키 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "메뉴 항목"
 ms.assetid: 19f483b6-4d3e-424e-9d68-dc129c788e47
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 메뉴 항목에 바인딩 바로 가기 키
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

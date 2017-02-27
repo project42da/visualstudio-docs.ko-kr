@@ -1,8 +1,7 @@
 ---
 title: "Workflow Designer UI 도움말 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "Workflow Designer [WFD], 사용자 인터페이스 도움말"
 ms.assetid: f7afc443-7c7f-4b0f-9517-c58070a640de
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # Workflow Designer UI 도움말
 이 단원에서는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]의 상황에 맞는 도움말 항목을 제공합니다.[!INCLUDE[vs2010](../modeling/includes/vs2010_md.md)]에서 작업하는 경우 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 대화 상자가 열리면 **F1** 키를 눌러 사용자 인터페이스에서 이러한 항목에 액세스할 수 있습니다.  

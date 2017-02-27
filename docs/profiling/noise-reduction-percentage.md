@@ -1,8 +1,7 @@
 ---
 title: "노이즈 감소 백분율 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "동시성 시각화 도우미, 노이즈 감소 백분율"
 ms.assetid: 1c10cd4c-2fdd-48c9-b562-a334b3b2df6c
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 노이즈 감소 백분율
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

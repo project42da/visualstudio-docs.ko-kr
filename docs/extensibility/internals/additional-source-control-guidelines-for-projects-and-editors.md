@@ -1,8 +1,7 @@
 ---
 title: "프로젝트 및 편집기에 대 한 추가 소스 제어 지침 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "소스 제어 [Visual Studio SDK] 프로젝트와 편집기에 대 한 지침"
 ms.assetid: 2483cce5-321c-4d3c-9c5c-ee8385263f74
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 프로젝트 및 편집기에 대 한 추가 소스 제어 지침
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

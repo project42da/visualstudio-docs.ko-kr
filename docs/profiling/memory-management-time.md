@@ -1,8 +1,7 @@
 ---
 title: "메모리 관리 시간 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "동시성 시각화 도우미, 페이징 시간"
 ms.assetid: 67af3509-3a7d-435d-bc37-5262448da915
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 메모리 관리 시간
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "옵션 페이지 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "도구 옵션 페이지 [Visual Studio SDK]를 사용 하 여 만드는 패키지 프레임 워크를 관리 하는"
 ms.assetid: 1bf11fec-dece-4943-8053-6de1483c43eb
 caps.latest.revision: 29
-caps.handback.revision: 29
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # 옵션 페이지 만들기
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

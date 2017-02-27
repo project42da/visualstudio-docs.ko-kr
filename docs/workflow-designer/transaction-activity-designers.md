@@ -1,18 +1,17 @@
 ---
 title: "트랜잭션 활동 디자이너 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 8dd0f60f-88ec-4258-bc8d-233689be9997
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 6
 ---
 # 트랜잭션 활동 디자이너
 트랜잭션 활동 디자이너는 보정 및 확인과 같은 트랜잭션 활동을 만들고 구성하는 데 사용됩니다.이 단원의 항목 및 아래 표의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 및 템플릿 디자이너의 사용 방법에 대한 지침을 제공합니다.  

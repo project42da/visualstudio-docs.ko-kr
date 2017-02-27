@@ -1,43 +1,25 @@
 ---
-title: "Visual Studio 확장 찾기 및 사용 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.ExtensionManager
-helpviewer_keywords:
-- install extensions
-- install packages
-- managing extensions visual studio
+title: "Visual Studio 확장 찾기 및 사용 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.ExtensionManager"
+helpviewer_keywords: 
+  - "확장 설치"
+  - "패키지 설치"
+  - "Visual Studio 확장 관리"
 ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
 caps.latest.revision: 42
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 55c2e1936b0c2f117b1bda1fb0c92c0dd5659a07
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 40
 ---
 # <a name="finding-and-using-visual-studio-extensions"></a>Visual Studio 확장명 찾기 및 사용
 Visual Studio 확장은 Visual Studio 내에서 실행되고 새로운 기능 또는 향상된 Visual Studio 기능을 제공하는 코드 패키지입니다. Visual Studio 확장에 대한 자세한 정보는 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)에서 찾을 수 있습니다.  

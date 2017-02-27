@@ -1,8 +1,7 @@
 ---
 title: "연습: 편집기 확장에 바로 가기 키 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK], 명령에 키 입력을 신규-연결"
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
 caps.latest.revision: 32
-caps.handback.revision: 32
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # 연습: 편집기 확장에 바로 가기 키 사용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

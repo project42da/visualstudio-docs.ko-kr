@@ -1,8 +1,7 @@
 ---
 title: "여러 버전의 Visual Studio 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "Vspackage를 side-by-side-호환성"
 ms.assetid: 0047aa90-1ed4-40d3-8772-622b2719a4b1
 caps.latest.revision: 20
-caps.handback.revision: 20
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 여러 버전의 Visual Studio 지원
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

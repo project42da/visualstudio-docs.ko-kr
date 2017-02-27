@@ -1,8 +1,7 @@
 ---
 title: "구문 색 지정을 구현합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "텍스트를 편집기에서 색 지정"
 ms.assetid: 96e762ca-efd0-41e7-8958-fda4897c8c7a
 caps.latest.revision: 20
-caps.handback.revision: 20
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 구문 색 지정을 구현합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

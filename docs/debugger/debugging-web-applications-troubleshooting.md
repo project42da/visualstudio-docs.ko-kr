@@ -1,8 +1,7 @@
 ---
 title: "웹 응용 프로그램 디버깅: 문제 해결 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "웹 응용 프로그램, 디버깅"
 ms.assetid: 1624e4af-018e-4b7c-9a00-063bfe97fb7d
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 웹 응용 프로그램 디버깅: 문제 해결
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

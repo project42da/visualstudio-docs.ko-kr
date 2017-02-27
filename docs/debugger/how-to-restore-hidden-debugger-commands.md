@@ -1,8 +1,7 @@
 ---
 title: "방법: 숨겨진 디버거 명령 복원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "디버깅[Visual Studio], 명령 복원"
 ms.assetid: 76ac9b77-f536-43b5-a9fc-984854b1c566
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 방법: 숨겨진 디버거 명령 복원
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

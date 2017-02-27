@@ -1,8 +1,7 @@
 ---
 title: "방법: Windows 카운터 데이터 수집 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "프로파일링 도구, Windows 카운터 사용"
 ms.assetid: db4fbac2-bea5-4558-aa8b-160fcccf4b33
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 방법: Windows 카운터 데이터 수집
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

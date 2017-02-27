@@ -1,8 +1,7 @@
 ---
 title: "활동 뷰(레거시) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/24/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "뷰, 활동(activity)"
 ms.assetid: 83dc68cd-2cb2-45c2-9a6e-10d82053171a
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 활동 뷰(레거시)
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]에서 제공하는 많은 활동은 워크플로를 구성하는 데 사용되며 이러한 활동에는 레거시 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에서 사용할 수 있는 몇 가지 디자인 뷰가 있습니다.**도구 상자**에서 디자인 화면으로 활동 디자이너를 끌어 올 때와 그 이후에 활동을 선택할 때마다 **워크플로** 메뉴를 사용하거나 선택된 활동을 마우스 오른쪽 단추로 클릭하는 방법으로 여러 디자인 뷰를 전환할 수 있습니다.또한 선택된 항목의 이름 위로 포인터를 옮기면 드롭다운 탭 집합이 나타나 여러 뷰 사이를 전환할 때 사용할 수 있습니다.  

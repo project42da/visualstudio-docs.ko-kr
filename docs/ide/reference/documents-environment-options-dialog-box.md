@@ -1,8 +1,7 @@
 ---
 title: "옵션 대화 상자, 환경, 문서 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,10 +34,10 @@ helpviewer_keywords:
   - "솔루션 탐색기, 파일 표시"
 ms.assetid: 4e3ccf1b-cd68-4db6-9470-710c911b47fc
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 옵션 대화 상자, 환경, 문서
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

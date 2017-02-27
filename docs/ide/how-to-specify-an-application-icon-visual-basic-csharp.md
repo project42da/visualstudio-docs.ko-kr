@@ -1,40 +1,23 @@
 ---
-title: "방법: 응용 프로그램 아이콘 지정(Visual Basic, C#) | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- icons [Visual Studio], application
-- application properties [Visual Studio], icons
-- application icons [Visual Studio]
+title: "방법: 응용 프로그램 아이콘 지정(Visual Basic, C#) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "응용 프로그램 아이콘 [Visual Studio]"
+  - "응용 프로그램 속성 [Visual Studio] 아이콘"
+  - "응용 프로그램 아이콘[Visual Studio]"
 ms.assetid: ad8e14ed-adc2-45b6-a0be-818b16d5616f
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6889879efe06e8b0541aa08017292a92a736ea50
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 18
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>방법: 응용 프로그램 아이콘 지정(Visual Basic, C#)
 프로젝트에 대한 `Icon` 속성은 컴파일된 응용 프로그램에 대해 파일 탐색기 및 Windows 작업 표시줄에서 표시되는 아이콘 파일(.ico)을 지정합니다.  

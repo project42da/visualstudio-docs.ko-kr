@@ -1,8 +1,7 @@
 ---
 title: "패키지를 디버그 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK], 패키지"
 ms.assetid: 99947fd4-fb87-4c69-b26c-65634e17d285
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 패키지를 디버그 합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

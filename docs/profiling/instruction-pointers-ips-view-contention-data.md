@@ -1,8 +1,7 @@
 ---
 title: "IP(명령 포인터) 뷰 - 프로파일러 경합 데이터 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "명령 포인터 뷰"
 ms.assetid: f5e49c24-d4cf-4f87-977d-37e3223d1196
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # IP(명령 포인터) 뷰 - 프로파일러 경합 데이터
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

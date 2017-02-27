@@ -1,8 +1,7 @@
 ---
 title: "VS 셸 VSPackage 파일 위치를 지정합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "Vspackage, 관리 되는 패키지 파일 위치"
 ms.assetid: beb8607a-4183-4ed2-9ac8-7527f11513b1
 caps.latest.revision: 20
-caps.handback.revision: 20
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # VS 셸 VSPackage 파일 위치를 지정합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,17 +1,16 @@
 ---
 title: "방법: Workflow Designer에서 활동 대리자 정의 및 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: c68e42ad-3ec0-4c2d-b104-fe36c6d83b5e
 caps.latest.revision: 3
-caps.handback.revision: 3
 ms.author: "sdanie"
 manager: "erikre"
+caps.handback.revision: 3
 ---
 # 방법: Workflow Designer에서 활동 대리자 정의 및 사용
 [!INCLUDE[net_v45](../ide/includes/net_v45_md.md)]는 <xref:System.Activities.Statements.InvokeDelegate> 활동에 대해 기본으로 제공되는 새 디자이너를 포함하고 있습니다.이 디자이너는 <xref:System.Activities.ActivityAction> 또는 <xref:System.Activities.ActivityFunc%601> 같은 <xref:System.Activities.ActivityDelegate>에서 파생되는 활동에 대리자를 할당하는 데 사용할 수 있습니다.  

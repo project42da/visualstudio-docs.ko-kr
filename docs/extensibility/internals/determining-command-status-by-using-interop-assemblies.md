@@ -1,8 +1,7 @@
 ---
 title: "Interop 어셈블리를 사용 하 여 명령 상태를 결정 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "interop 어셈블리, 상태를 처리 하는 명령"
 ms.assetid: 2f5104d1-7b4c-4ca0-a626-50530a8f7f5c
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Interop 어셈블리를 사용 하 여 명령 상태를 결정 합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

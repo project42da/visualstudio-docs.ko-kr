@@ -1,8 +1,7 @@
 ---
 title: "명령줄 스위치 (Visual Studio SDK) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "명령줄 스위치"
 ms.assetid: 0a22516f-f60e-4476-ac5b-f41e5ffaaf8b
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 명령줄 스위치 (Visual Studio SDK)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

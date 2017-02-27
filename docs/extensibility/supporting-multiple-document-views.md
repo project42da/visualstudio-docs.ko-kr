@@ -1,8 +1,7 @@
 ---
 title: "여러 문서 보기를 지원합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 사용자 지정-여러 문서 보기"
 ms.assetid: c7ec2366-91c4-477f-908d-e89068bdb3e3
 caps.latest.revision: 25
-caps.handback.revision: 25
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # 여러 문서 보기를 지원합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "편집기에서 레거시 인터페이스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시"
 ms.assetid: 741d45f5-0ea3-4614-972a-8728fe054e07
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 편집기에서 레거시 인터페이스
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

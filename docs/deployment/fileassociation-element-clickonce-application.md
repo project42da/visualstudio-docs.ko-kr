@@ -1,8 +1,7 @@
 ---
 title: "&lt;fileAssociation&gt; 요소(ClickOnce 응용 프로그램) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "매니페스트[ClickOnce], fileAssociation 요소"
 ms.assetid: 8f951b4f-54f9-412e-a9e5-af4e379fcf08
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 8
 ---
 # &lt;fileAssociation&gt; 요소(ClickOnce 응용 프로그램)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

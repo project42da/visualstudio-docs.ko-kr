@@ -1,8 +1,7 @@
 ---
 title: "방법: 파일 변경 알림 표시 안 함 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-파일 변경 알림 표시 안 함"
 ms.assetid: 891c1eb4-f6d0-4073-8df0-2859dbd417ca
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 방법: 파일 변경 알림 표시 안 함
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

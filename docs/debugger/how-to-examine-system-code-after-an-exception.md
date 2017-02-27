@@ -1,8 +1,7 @@
 ---
 title: "방법: 예외 발생 후 시스템 코드 검사 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "예외, 디버깅"
 ms.assetid: a38ad49b-7cf3-483d-91c4-eb3116eba50c
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 방법: 예외 발생 후 시스템 코드 검사
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

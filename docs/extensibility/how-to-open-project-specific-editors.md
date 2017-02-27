@@ -1,8 +1,7 @@
 ---
 title: "방법: 프로젝트에 특정 편집기 열기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "프로젝트 [Visual Studio SDK] 폴더 열기"
 ms.assetid: 83e56d39-c97b-4c6b-86d6-3ffbec97e8d1
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 방법: 프로젝트에 특정 편집기 열기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

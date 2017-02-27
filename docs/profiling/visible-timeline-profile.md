@@ -1,8 +1,7 @@
 ---
 title: "표시되는 시간 표시 막대 프로필 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "vs.cv.threads.activelegendConcurrency 시각화 도우미, 스레드 뷰 활성 범례"
 ms.assetid: 559841d1-967c-4b51-8574-6ace23969580
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 표시되는 시간 표시 막대 프로필
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

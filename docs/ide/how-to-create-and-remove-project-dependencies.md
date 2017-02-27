@@ -1,8 +1,7 @@
 ---
 title: "방법: 프로젝트 종속성 만들기 및 제거 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "vs.build.projectdependencies"
 ms.assetid: e2a0a8ff-dae7-40a8-b774-b88aa5235183
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 방법: 프로젝트 종속성 만들기 및 제거
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

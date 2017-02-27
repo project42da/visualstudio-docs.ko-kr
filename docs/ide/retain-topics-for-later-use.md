@@ -1,8 +1,7 @@
 ---
 title: "나중에 사용하기 위해 항목 보존 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "도움말 뷰어 2.0, 즐겨찾기 탭"
 ms.assetid: f0a4c657-001d-4604-a403-d46f15782724
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 나중에 사용하기 위해 항목 보존
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "디스크 작업 보고서(스레드 뷰) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "동시성 시각화 도우미, 파일 작업 보고서(스레드 뷰)"
 ms.assetid: e352f4f3-f654-45eb-96ed-417863487ddc
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 디스크 작업 보고서(스레드 뷰)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

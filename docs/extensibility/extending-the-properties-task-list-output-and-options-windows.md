@@ -1,8 +1,7 @@
 ---
 title: "속성, 작업 목록, 출력 및 옵션 창을 확장합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "도구 창"
 ms.assetid: 06990510-5424-44b8-9fd9-6481acec5c76
 caps.latest.revision: 37
-caps.handback.revision: 37
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # 속성, 작업 목록, 출력 및 옵션 창을 확장합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

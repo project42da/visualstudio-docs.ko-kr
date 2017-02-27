@@ -1,8 +1,7 @@
 ---
 title: "기호 공급자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "디버깅 기호 처리기 [디버깅 SDK]"
 ms.assetid: 5fce651b-fead-4418-81b0-a011df7644ab
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 기호 공급자
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "단일 파일 생성기를 등록 하는 중 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "레지스트리 설정을 정의 하는 사용자 지정 도구"
 ms.assetid: db7592c0-1273-4843-9617-6e2ddabb6ca8
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 단일 파일 생성기를 등록 하는 중
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

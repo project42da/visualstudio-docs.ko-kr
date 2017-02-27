@@ -1,8 +1,7 @@
 ---
 title: "TemplateGroupID 요소(Visual Studio 템플릿) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "TemplateGroupID 요소[Visual Studio 템플릿]"
 ms.assetid: bce7b49a-90bc-4691-aff3-a87e209f6d83
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # TemplateGroupID 요소(Visual Studio 템플릿)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

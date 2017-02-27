@@ -1,8 +1,7 @@
 ---
 title: "창 속성 대화 상자, 일반 탭 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "창 속성 대화 상자, 일반 탭"
 ms.assetid: 19142c60-9b32-46ba-a556-b62fd77568c1
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 창 속성 대화 상자, 일반 탭
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

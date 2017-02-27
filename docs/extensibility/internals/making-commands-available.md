@@ -1,8 +1,7 @@
 ---
 title: "명령을 사용 가능 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "메뉴 명령, 모범 사례"
 ms.assetid: 3ffc4312-c6db-4759-a946-a4bb85f4a17a
 caps.latest.revision: 35
-caps.handback.revision: 33
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # 명령을 사용 가능
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

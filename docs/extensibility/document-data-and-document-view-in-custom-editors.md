@@ -1,8 +1,7 @@
 ---
 title: "문서 데이터와 사용자 지정 편집기에서 문서 보기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK]-사용자 지정 문서 데이터와 문서 보기"
 ms.assetid: 71eea623-f566-4feb-84cd-ca1ba71bc493
 caps.latest.revision: 23
-caps.handback.revision: 23
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # 문서 데이터와 사용자 지정 편집기에서 문서 보기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

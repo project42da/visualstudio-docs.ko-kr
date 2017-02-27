@@ -1,8 +1,7 @@
 ---
 title: "방법: 패키지 매니페스트 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "필수 구성 요소, 사용자 지정 부트스트래퍼 패키지"
 ms.assetid: 5aecc507-2764-42f2-ae6f-c227971cf0af
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 12
 ---
 # 방법: 패키지 매니페스트 만들기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "활동 디자이너 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "Workflow Designer [WFD], 활동 디자이너"
 ms.assetid: 3c2725c3-091b-49ab-81e7-d4c7028d47a2
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 9
 ---
 # 활동 디자이너 사용
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에는 활동 및 워크플로를 생성할 때 사용할 수 있는 여러 가지 시스템 제공 활동이 포함되어 있습니다.이 단원에서는 사용할 수 있는 시스템 제공 활동 및 디자이너의 범주에 대해 설명합니다.이러한 각 범주의 개별 활동 및 개별 디자이너에 대한 항목에서는 해당 활동의 역할과 사용 방법에 대한 지침을 제공합니다.  

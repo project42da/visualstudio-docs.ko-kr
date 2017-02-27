@@ -1,8 +1,7 @@
 ---
 title: "솔루션에 대 한 부모 컨테이너 폴더를 만들고 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "소스 제어 플러그 인, 부모 컨테이너를 만드는 중"
 ms.assetid: 961e68ed-2603-4479-a306-330eda2b2efa
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 솔루션에 대 한 부모 컨테이너 폴더를 만들고
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

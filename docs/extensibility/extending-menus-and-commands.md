@@ -1,8 +1,7 @@
 ---
 title: "확장 메뉴 및 명령 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - ".vsct 파일을 일반 메뉴 작업"
 ms.assetid: 7b2be4b9-e3fe-4412-874f-ae72ebc84c4b
 caps.latest.revision: 49
-caps.handback.revision: 49
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 49
 ---
 # 확장 메뉴 및 명령
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

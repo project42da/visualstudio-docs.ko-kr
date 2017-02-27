@@ -1,8 +1,7 @@
 ---
 title: "DA0504: 프로파일링 중인 프로세스에 대한 최대 작업 집합(바이트) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ f1_keywords:
   - "vs.performance.rules.DA0504"
 ms.assetid: 36e71603-ece7-4000-85fc-9da4eed61bf2
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # DA0504: 프로파일링 중인 프로세스에 대한 최대 작업 집합(바이트)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

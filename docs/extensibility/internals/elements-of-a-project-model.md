@@ -1,8 +1,7 @@
 ---
 title: "프로젝트 모델의 요소 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "프로젝트 [Visual Studio SDK] 요소"
 ms.assetid: a1dbe0dc-68da-45d7-8704-5b43ff7e4fc4
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 프로젝트 모델의 요소
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

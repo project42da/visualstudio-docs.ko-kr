@@ -1,8 +1,7 @@
 ---
 title: "코드 맵을 사용하여 응용 프로그램 디버그 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Visual Studio Ultimate, 코드 시각화"
 ms.assetid: 9fd0c9a2-d351-40c8-be88-0749788264bf
 caps.latest.revision: 49
-caps.handback.revision: 49
 author: "alexhomer1"
 ms.author: "ahomer"
 manager: "douge"
+caps.handback.revision: 49
 ---
 # 코드 맵을 사용하여 응용 프로그램 디버그
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

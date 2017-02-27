@@ -1,8 +1,7 @@
 ---
 title: "원격 컴퓨터에서 Windows 스토어 앱 실행 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ dev_langs:
   - "C++"
 ms.assetid: 0f6814d6-cd0d-49f3-b501-dea8c094b8ef
 caps.latest.revision: 43
-caps.handback.revision: 43
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 43
 ---
 # 원격 컴퓨터에서 Windows 스토어 앱 실행
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

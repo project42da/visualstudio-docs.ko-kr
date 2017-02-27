@@ -1,8 +1,7 @@
 ---
 title: "방법: 편집하며 계속하기를 사용하여 중단 모드에서 편집 적용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "편집, 중단 모드"
 ms.assetid: 1eef7498-6a1f-4fba-8146-510adc6375c9
 caps.latest.revision: 30
-caps.handback.revision: 30
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # 방법: 편집하며 계속하기를 사용하여 중단 모드에서 편집 적용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

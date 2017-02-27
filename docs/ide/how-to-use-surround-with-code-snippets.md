@@ -1,8 +1,7 @@
 ---
 title: "방법: 코드 감싸기 코드 조각 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "코드 감싸기 조각"
 ms.assetid: 23e5288e-7897-417a-9ded-cf60dfc889ee
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 방법: 코드 감싸기 코드 조각 사용
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

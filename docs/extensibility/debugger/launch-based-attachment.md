@@ -1,8 +1,7 @@
 ---
 title: "시작을 기반으로 첨부 파일 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "프로그램에 연결 되는 디버그 엔진"
 ms.assetid: 362f00ac-1909-4a3a-bacb-c0ceb5549816
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 시작을 기반으로 첨부 파일
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

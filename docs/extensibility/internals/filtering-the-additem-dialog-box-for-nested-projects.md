@@ -1,8 +1,7 @@
 ---
 title: "중첩된 프로젝트에 대 한 항목 추가 대화 상자를 필터링 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "중첩된 프로젝트 항목 추가 대화 상자 필터링"
 ms.assetid: 5b3e352e-7f18-4f66-be16-b0ad55637ce5
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 중첩된 프로젝트에 대 한 항목 추가 대화 상자를 필터링
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

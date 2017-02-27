@@ -1,8 +1,7 @@
 ---
 title: "프로젝트 팩터리를 사용 하 여 프로젝트 인스턴스 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "프로젝트 [Visual Studio SDK], 프로젝트 팩터리"
 ms.assetid: 94c90012-8669-459c-af8e-307ac242c8c4
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 프로젝트 팩터리를 사용 하 여 프로젝트 인스턴스 만들기
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

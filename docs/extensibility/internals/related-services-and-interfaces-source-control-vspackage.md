@@ -1,8 +1,7 @@
 ---
 title: "관련된 서비스 및 인터페이스 (소스 제어 VSPackage) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "인터페이스, 소스 제어 패키지"
 ms.assetid: 3e96e838-5675-46bb-99cf-40d420086038
 caps.latest.revision: 26
-caps.handback.revision: 26
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 관련된 서비스 및 인터페이스 (소스 제어 VSPackage)
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

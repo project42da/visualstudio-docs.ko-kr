@@ -1,8 +1,7 @@
 ---
 title: "CA1043: 인덱서에 정수 또는 문자열 인수를 사용하십시오. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "UseIntegralOrStringArgumentForIndexers"
 ms.assetid: d7f14b9e-2220-4f80-b6b8-48c655a05701
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 14
 ---
 # CA1043: 인덱서에 정수 또는 문자열 인수를 사용하십시오.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

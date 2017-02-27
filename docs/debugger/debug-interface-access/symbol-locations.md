@@ -1,8 +1,7 @@
 ---
 title: "기호 위치 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "기호[DIA SDK], 위치"
 ms.assetid: 7c8cd8fe-169e-4161-9cff-5e9015984add
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 기호 위치
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

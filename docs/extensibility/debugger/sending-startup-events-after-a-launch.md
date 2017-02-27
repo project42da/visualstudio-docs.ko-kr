@@ -1,8 +1,7 @@
 ---
 title: "시작 된 후 시작 이벤트를 전송합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK] 시작 이벤트"
 ms.assetid: 306ea0b4-6d9e-4871-8d8d-a4032d422940
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 시작 된 후 시작 이벤트를 전송합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

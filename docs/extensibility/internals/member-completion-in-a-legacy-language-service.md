@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스에서 멤버 완성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "IntelliSense 멤버 완성 언어 서비스 [관리 되는 패키지 프레임 워크]"
 ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
 caps.latest.revision: 21
-caps.handback.revision: 21
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 레거시 언어 서비스에서 멤버 완성
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

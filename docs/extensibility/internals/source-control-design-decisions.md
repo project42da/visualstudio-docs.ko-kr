@@ -1,8 +1,7 @@
 ---
 title: "소스 제어 디자인 결정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "소스 제어 [Visual Studio SDK] 디자인 결정"
 ms.assetid: 5f60ec1a-5a74-4362-8293-817a4dd73872
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 소스 제어 디자인 결정
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

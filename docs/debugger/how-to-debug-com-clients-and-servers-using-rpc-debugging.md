@@ -1,8 +1,7 @@
 ---
 title: "방법: RPC 디버깅을 사용하여 COM 클라이언트 및 서버 디버깅 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "RPC(원격 프로시저 호출), COM 클라이언트 및 서버 디버깅"
 ms.assetid: 3e8526c8-43b5-4b87-8e0d-b22c24f0a3ea
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # 방법: RPC 디버깅을 사용하여 COM 클라이언트 및 서버 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

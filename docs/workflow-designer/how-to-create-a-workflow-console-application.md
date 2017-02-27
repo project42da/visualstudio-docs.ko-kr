@@ -1,18 +1,17 @@
 ---
 title: "방법: 워크플로 콘솔 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 51a2eea7-921c-49f1-b358-68afc27f1ee9
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 16
 ---
 # 방법: 워크플로 콘솔 응용 프로그램 만들기
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]에서는 시스템 또는 사용자 프로세스를 실행하는 워크플로를 만들 수 있습니다.[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에는 이러한 워크플로를 만들 수 있는 디자인 화면이 있습니다.[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 내에서 워크플로를 만드는 데 사용되거나 디자이너를 다시 호스팅하는 다른 응용 프로그램에 통합될 수 있습니다.  

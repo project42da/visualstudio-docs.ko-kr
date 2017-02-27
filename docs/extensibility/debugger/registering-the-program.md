@@ -1,8 +1,7 @@
 ---
 title: "프로그램을 등록합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "디버깅 [디버깅 SDK] 프로그램 등록"
 ms.assetid: d726a161-7db3-4ef4-b258-9f6a5be68418
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 프로그램을 등록합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

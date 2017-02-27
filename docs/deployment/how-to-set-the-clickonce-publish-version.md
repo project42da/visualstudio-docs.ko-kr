@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 게시 버전 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "게시, ClickOnce"
 ms.assetid: 06f15504-6385-40a6-b01d-cd90ca36dc73
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 9
 ---
 # 방법: ClickOnce 게시 버전 설정
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

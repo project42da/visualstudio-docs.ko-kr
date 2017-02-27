@@ -1,8 +1,7 @@
 ---
 title: "디버깅 세션에 사용할 실행 파일 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "디버깅 세션에 사용할 실행 파일 대화 상자"
 ms.assetid: c0ddbe32-b99f-4425-acf1-f48842804f56
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 디버깅 세션에 사용할 실행 파일 대화 상자
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

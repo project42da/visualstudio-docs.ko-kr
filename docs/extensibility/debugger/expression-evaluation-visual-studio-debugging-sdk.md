@@ -1,8 +1,7 @@
 ---
 title: "식 계산 (Visual Studio 디버깅 SDK) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "식 계산"
 ms.assetid: 5044ced5-c18c-4534-b0bf-cc3e50cd57ac
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 식 계산 (Visual Studio 디버깅 SDK)
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

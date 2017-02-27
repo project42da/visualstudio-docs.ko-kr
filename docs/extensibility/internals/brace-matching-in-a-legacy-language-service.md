@@ -1,8 +1,7 @@
 ---
 title: "중괄호 일치 레거시 언어 서비스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "언어 서비스 [관리 되는 패키지 프레임 워크] 중괄호 일치"
 ms.assetid: 4e3d0a70-f22f-49dd-92d8-edf48ab62b52
 caps.latest.revision: 27
-caps.handback.revision: 27
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # 중괄호 일치 레거시 언어 서비스
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,43 +1,25 @@
 ---
-title: "Visual Studio의 기본 바로 가기 키 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- shortcut keys [Visual Studio], keyboard binding schemes
-- keyboard binding schemes [Visual Studio]
-- Help [Visual Studio], shortcut keys
-- keyboard shortcuts [Visual Studio], keyboard binding schemes
-- keyboard shortcuts
+title: "Visual Studio의 기본 바로 가기 키 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "도움말[Visual Studio], 바로 가기 키"
+  - "키보드 바인딩 구성표[Visual Studio]"
+  - "바로 가기 키"
+  - "바로 가기 키[Visual Studio], 키보드 바인딩 구성표"
+  - "바로 가기 키[Visual Studio], 키보드 바인딩 구성표"
 ms.assetid: c2c64648-00f8-4e48-a8a0-96c67cfd968c
 caps.latest.revision: 55
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b99b15443c652f7a49ca36d701109e1624f1df64
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 51
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio의 기본 바로 가기 키
 해당 바로 가기 키를 선택하여 Visual Studio의 다양한 명령 및 창에 보다 쉽게 액세스할 수 있습니다. 이 항목에는 Visual Studio를 설치할 때 선택한 일반 개발 프로필의 기본 바로 가기 목록이 나와 있습니다. 선택한 프로필에 관계없이 **옵션** 대화 상자를 열고 **환경** 노드를 확장한 다음 **키보드**를 선택하여 명령의 바로 가기를 확인할 수 있습니다. 또한 지정한 명령에 다른 바로 가기를 할당하여 바로 가기를 사용자 지정할 수도 있습니다.  

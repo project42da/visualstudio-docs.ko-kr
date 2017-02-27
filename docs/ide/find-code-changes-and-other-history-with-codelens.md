@@ -1,8 +1,7 @@
 ---
 title: "CodeLens에서 코드 변경 내용 및 기타 기록 찾기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f697d7b4-704e-4cac-b13a-bc57d2ff8318
 caps.latest.revision: 131
-caps.handback.revision: 131
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 131
 ---
 # CodeLens에서 코드 변경 내용 및 기타 기록 찾기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

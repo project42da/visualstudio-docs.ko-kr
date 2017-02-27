@@ -1,8 +1,7 @@
 ---
 title: "추가 MSBuild 리소스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -601,10 +600,10 @@ helpviewer_keywords:
   - "MSBuild, 오류 문제 해결"
 ms.assetid: 29dd85ee-1530-43c1-b085-bb2330ac5a48
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 추가 MSBuild 리소스
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

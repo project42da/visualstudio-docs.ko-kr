@@ -1,46 +1,29 @@
 ---
-title: "지역화를 위한 리소스의 계층적 구성 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- resource files, localized
-- localization [Visual Studio], resources
-- fallback resources
-- international applications [Visual Studio], storing resources
-- satellite assemblies, resource hierarchies
-- globalization [Visual Studio], resources
-- satellite assemblies
-- resources [Visual Studio], fallback system
-- resource files, fallback processes
+title: "지역화를 위한 리소스의 계층적 구성 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "리소스 파일, 지역화된"
+  - "지역화[Visual Studio], 리소스"
+  - "대체(fallback) 리소스"
+  - "국가별 응용 프로그램[Visual Studio], 리소스 저장"
+  - "위성 어셈블리, 리소스 계층 구조"
+  - "전역화[Visual Studio], 리소스"
+  - "위성 어셈블리"
+  - "리소스[Visual Studio LightSwitch], 대체(fallback) 시스템"
+  - "리소스 파일, 대체 프로세스"
 ms.assetid: dadf8f2c-f74c-44d7-bec0-a1e956d8d38d
 caps.latest.revision: 8
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a8bc841364ce5fd7c2bd9f3e4ff68257bdc35165
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>지역화를 위한 리소스의 계층적 구성
 Visual Studio에서 지역화된 리소스(각 문화권에 적절한 문자열 및 이미지와 같은 데이터)는 별도의 파일에 저장되며 UI 문화권 설정에 따라 로드됩니다. 지역화된 리소스가 로드되는 방식을 이해하려면 이러한 리소스를 계층 구조 방식으로 구성된 것으로 생각하는 것이 좋습니다.  

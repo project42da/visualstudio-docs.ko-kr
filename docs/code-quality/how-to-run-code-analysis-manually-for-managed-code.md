@@ -1,8 +1,7 @@
 ---
 title: "방법: 관리 코드에 대해 수동으로 코드 분석 실행 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "코드 분석, 실행"
 ms.assetid: 5086d228-f92e-4515-9708-c5b89b9e9a03
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 14
 ---
 # 방법: 관리 코드에 대해 수동으로 코드 분석 실행
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

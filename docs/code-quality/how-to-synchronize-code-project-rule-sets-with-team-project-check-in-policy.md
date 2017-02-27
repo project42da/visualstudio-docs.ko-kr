@@ -1,8 +1,7 @@
 ---
 title: "방법: 코드 프로젝트 규칙 집합을 팀 프로젝트 체크 인 정책과 동기화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ f1_keywords:
   - "vs.codeanalysis.selecttfsruleset"
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 12
 ---
 # 방법: 코드 프로젝트 규칙 집합을 팀 프로젝트 체크 인 정책과 동기화
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

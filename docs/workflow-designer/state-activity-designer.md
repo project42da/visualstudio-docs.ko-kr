@@ -1,8 +1,7 @@
 ---
 title: "상태 활동 디자이너 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,9 +10,9 @@ f1_keywords:
   - "System.Activities.Statements.State.UI"
 ms.assetid: 9455ab37-93a0-4c46-9eb8-b6611ca23167
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "sdanie"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 상태 활동 디자이너
 <xref:System.Activities.Statements.State>는 상태 시스템이 처할 수 있는 상태를 나타냅니다.  

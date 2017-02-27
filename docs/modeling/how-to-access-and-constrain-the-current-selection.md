@@ -1,8 +1,7 @@
 ---
 title: "방법: 현재 선택 항목 액세스 및 제약 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "도메인별 언어, 현재 선택 항목에 액세스"
 ms.assetid: 2990981e-dfae-416f-b0d0-7197f1242dfa
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 14
 ---
 # 방법: 현재 선택 항목 액세스 및 제약
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

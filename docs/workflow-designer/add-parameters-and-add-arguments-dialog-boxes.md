@@ -1,8 +1,7 @@
 ---
 title: "매개 변수 추가 및 인수 추가 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,9 +10,9 @@ f1_keywords:
   - "AddParameters.UI"
 ms.assetid: a21fb4fe-134b-40b0-8497-86b842940ca1
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "sdanie"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # 매개 변수 추가 및 인수 추가 대화 상자
 다음 표에서는 <xref:System.Activities.Statements.InvokeMethod> 디자이너에서 사용하는 **매개 변수 추가** 대화 상자의 사용자 인터페이스\(UI\) 요소에 대해 설명합니다.  

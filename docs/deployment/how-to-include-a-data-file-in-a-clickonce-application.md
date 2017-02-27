@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 응용 프로그램에 데이터 파일 포함 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "응용 프로그램 배포[ClickOnce], 데이터 파일"
 ms.assetid: 89ee46ef-bc8c-4ab0-a2ac-1220f9da06fc
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 15
 ---
 # 방법: ClickOnce 응용 프로그램에 데이터 파일 포함
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

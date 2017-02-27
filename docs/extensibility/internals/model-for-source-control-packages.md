@@ -1,8 +1,7 @@
 ---
 title: "소스 제어 패키지에 대 한 모델 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "소스 제어 [Visual Studio SDK], 모델"
 ms.assetid: 6164b2d3-a622-4de8-bef3-a6de985e9ebd
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 소스 제어 패키지에 대 한 모델
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

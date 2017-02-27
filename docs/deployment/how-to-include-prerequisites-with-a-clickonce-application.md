@@ -1,8 +1,7 @@
 ---
 title: "방법: ClickOnce 응용 프로그램을 사용하여 필수 구성 요소 포함 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c66bf0a5-8c93-4e68-a224-3b29ac36fe4d
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 16
 ---
 # 방법: ClickOnce 응용 프로그램을 사용하여 필수 구성 요소 포함
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스에서 사용자 지정 문서 속성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "언어 서비스 [관리 되는 패키지 프레임 워크] 사용자 지정 문서 속성"
 ms.assetid: cc714a67-b33e-4440-9203-3c90f648bd9c
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 레거시 언어 서비스에서 사용자 지정 문서 속성
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

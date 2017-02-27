@@ -1,8 +1,7 @@
 ---
 title: "옵션 대화 상자, 환경, 찾기 및 바꾸기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "찾기 및 바꾸기, 사용자 지정"
 ms.assetid: f804d6d5-6309-46e4-8294-b83e880b5ec9
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 옵션 대화 상자, 환경, 찾기 및 바꾸기
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

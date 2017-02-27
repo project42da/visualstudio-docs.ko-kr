@@ -1,8 +1,7 @@
 ---
 title: "힙 할당 함수의 디버그 버전 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "메모리 누수, CRT 디버그 라이브러리 함수"
 ms.assetid: 91748bdc-f4cd-4d8b-ab98-0493dab7ed0d
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 힙 할당 함수의 디버그 버전
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

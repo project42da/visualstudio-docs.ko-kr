@@ -1,8 +1,7 @@
 ---
 title: "코드 분석을 사용하여 관리 코드 품질 분석 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/12/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "관리 코드 분석"
 ms.assetid: 68510a55-da51-4381-81a5-0feba76b8b4f
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 24
 ---
 # 코드 분석을 사용하여 관리 코드 품질 분석
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

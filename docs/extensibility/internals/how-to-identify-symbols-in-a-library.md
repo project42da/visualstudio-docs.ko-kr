@@ -1,8 +1,7 @@
 ---
 title: "방법: 라이브러리에 대 한 기호를 식별 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "호출 브라우저 도구"
 ms.assetid: 8fb0de61-71e7-42d1-8b41-2ad915474384
 caps.latest.revision: 21
-caps.handback.revision: 21
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 방법: 라이브러리에 대 한 기호를 식별 합니다.
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

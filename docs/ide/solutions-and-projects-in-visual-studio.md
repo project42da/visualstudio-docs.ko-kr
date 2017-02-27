@@ -1,78 +1,60 @@
 ---
-title: "Visual Studio의 솔루션 및 프로젝트 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.savedeferredsaveprojectonclose
-- vs.untrustedtemplateopeningdocuments
-- Project Properties.FullPath
-- vs.addnewsolutionitem
-- vs.environment.projects
-- vs.openproject
-- vs.getopenfilename
-- vs.addnewitem
-- vs.encoding
-- vs.addexistingitem
-- Project Properties.URL
-- VS.SolutionExplorer
-- Project Properties.FileName
-- SolutionProperties.Name
-- VS.SaveChangesDlg
-- vs.newproject
-- VS.SolutionExplorer.Selection
-- SolutionProperties.Path
-- vs.getdirectoryname
-- vs.addexistingsolutionitem
-- SolutionProperties.Description
-- vs.environment.solutions
-- vs.saveordiscarddeferredsaveproject
-- VS.SolutionExplorer.Solutions
-helpviewer_keywords:
-- vs.solutionpropertypages
-- vs.solutionpropertypages.startupproject
-- vs.solutionpropertypages.configurationsettings
-- solution items, folder in Solution Explorer
-- solution items, shared
-- solutions [Visual Studio]
-- project items [Visual Studio], about project items
-- workspaces
-- solutions [Visual Studio], designing
-- projects [Visual Studio]
-- solutions [Visual Studio], projects and
-- vs.solutionpropertypages.projectdependencies
-- applications [Visual Studio]
-- projects [Visual Studio], setting up
-- miscellaneous files
+title: "Visual Studio의 솔루션 및 프로젝트 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/16/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.savedeferredsaveprojectonclose"
+  - "vs.untrustedtemplateopeningdocuments"
+  - "Project Properties.FullPath"
+  - "vs.addnewsolutionitem"
+  - "vs.environment.projects"
+  - "vs.openproject"
+  - "vs.getopenfilename"
+  - "vs.addnewitem"
+  - "vs.encoding"
+  - "vs.addexistingitem"
+  - "Project Properties.URL"
+  - "VS.SolutionExplorer"
+  - "Project Properties.FileName"
+  - "SolutionProperties.Name"
+  - "VS.SaveChangesDlg"
+  - "vs.newproject"
+  - "VS.SolutionExplorer.Selection"
+  - "SolutionProperties.Path"
+  - "vs.getdirectoryname"
+  - "vs.addexistingsolutionitem"
+  - "SolutionProperties.Description"
+  - "vs.environment.solutions"
+  - "vs.saveordiscarddeferredsaveproject"
+  - "VS.SolutionExplorer.Solutions"
+helpviewer_keywords: 
+  - "vs.solutionpropertypages"
+  - "vs.solutionpropertypages.startupproject"
+  - "vs.solutionpropertypages.configurationsettings"
+  - "솔루션 탐색기에서 폴더의 솔루션 항목"
+  - "솔루션 항목 공유"
+  - "솔루션[Visual Studio]"
+  - "프로젝트 항목에 대 한 프로젝트 항목 [Visual Studio]"
+  - "작업 영역"
+  - "디자인 솔루션 [Visual Studio]"
+  - "프로젝트[Visual Studio]"
+  - "솔루션 [Visual Studio] 프로젝트 및"
+  - "vs.solutionpropertypages.projectdependencies"
+  - "응용 프로그램[Visual Studio]"
+  - "프로젝트 [Visual Studio] 설정"
+  - "기타 파일"
 ms.assetid: aeaf56cb-c2dd-47f6-b012-23b84b7a7254
 caps.latest.revision: 35
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a88acb10478c5beb68cc6a12334f00145d183b1d
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 35
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio의 솔루션 및 프로젝트
 Visual Studio에서 앱, 응용 프로그램, 웹 사이트, 웹앱, 스크립트, 플러그인 등을 만들 때 *프로젝트*에서 시작합니다. 논리적인 측면에서 프로젝트에는 모든 소스 코드 파일, 아이콘, 이미지, 데이터 파일 및 실행 가능한 프로그램 또는 웹 사이트로 컴파일되는 기타 모든 항목이 포함되어 있거나 컴파일을 수행하는 데 필요한 기타 항목이 포함되어 있습니다.  프로젝트에도 프로그램이 통신하는 여러 서비스 또는 구성 요소에 필요할 수 있는 모든 컴파일러 설정 및 기타 구성 파일이 포함되어 있습니다.

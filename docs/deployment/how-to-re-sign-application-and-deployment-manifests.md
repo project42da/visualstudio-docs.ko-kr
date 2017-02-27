@@ -1,8 +1,7 @@
 ---
 title: "방법: 응용 프로그램 및 배포 매니페스트에 다시 서명 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Visual Studio에서 Office 개발, 매니페스트 서명"
 ms.assetid: d53bceb9-4d3b-4c22-b909-8f370e7231fb
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 17
 ---
 # 방법: 응용 프로그램 및 배포 매니페스트에 다시 서명
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

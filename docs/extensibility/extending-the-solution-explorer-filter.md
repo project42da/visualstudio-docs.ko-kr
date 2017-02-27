@@ -1,8 +1,7 @@
 ---
 title: "솔루션 탐색기 필터를 확장합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "확장성 [Visual Studio], 프로젝트 및 솔루션"
 ms.assetid: df976c76-27ec-4f00-ab6d-a26a745dc6c7
 caps.latest.revision: 25
-caps.handback.revision: 25
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # 솔루션 탐색기 필터를 확장합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

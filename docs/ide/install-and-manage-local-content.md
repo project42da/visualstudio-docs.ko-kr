@@ -1,8 +1,7 @@
 ---
 title: "로컬 콘텐츠 설치 및 관리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "로컬 콘텐츠 업데이트[도움말 뷰어 2.0]"
 ms.assetid: efd9df4c-2e69-4c50-992c-9678a8d8cf19
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # 로컬 콘텐츠 설치 및 관리
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

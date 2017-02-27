@@ -1,8 +1,7 @@
 ---
 title: "레거시 API를 사용 하 여 언어 서비스 컨텍스트를 제공 합니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "편집기 [Visual Studio SDK] 레거시-언어 서비스 컨텍스트"
 ms.assetid: daa2df22-9181-4bad-b007-a7d40302bce1
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 레거시 API를 사용 하 여 언어 서비스 컨텍스트를 제공 합니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

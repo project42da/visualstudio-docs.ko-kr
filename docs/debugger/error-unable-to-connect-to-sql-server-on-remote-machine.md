@@ -1,8 +1,7 @@
 ---
 title: "오류: 원격 컴퓨터의 SQL Server에 연결할 수 없습니다. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ dev_langs:
   - "SQL"
 ms.assetid: a922754e-6deb-43c6-935d-cc6dcc2a74d4
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 오류: 원격 컴퓨터의 SQL Server에 연결할 수 없습니다.
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

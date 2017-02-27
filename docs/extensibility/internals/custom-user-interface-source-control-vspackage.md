@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 사용자 인터페이스 (소스 제어 VSPackage) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "소스 제어 패키지, 사용자 인터페이스"
 ms.assetid: f35ddb24-53bf-461e-b34f-7414f657c082
 caps.latest.revision: 28
-caps.handback.revision: 28
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # 사용자 지정 사용자 인터페이스 (소스 제어 VSPackage)
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

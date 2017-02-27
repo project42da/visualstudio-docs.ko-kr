@@ -1,8 +1,7 @@
 ---
 title: "레거시 언어 서비스의 구문 색 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "언어 서비스 [관리 되는 패키지 프레임 워크], 색 지정"
 ms.assetid: 1ca1736a-f554-42e4-a9c7-fe8c3c1717df
 caps.latest.revision: 28
-caps.handback.revision: 28
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # 레거시 언어 서비스의 구문 색 지정
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

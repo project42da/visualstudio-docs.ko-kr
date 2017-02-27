@@ -1,41 +1,23 @@
 ---
-title: "실행 시간(스레드 뷰) | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.cv.threads.timeline.execution
-helpviewer_keywords:
-- Concurrency Visualizer, Execution Time (Threads View)
+title: "실행 시간(스레드 뷰) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.cv.threads.timeline.execution"
+helpviewer_keywords: 
+  - "동시성 시각화 도우미, 실행 시간(스레드 뷰)"
 ms.assetid: 80c100f8-2502-4613-bfef-4f4f2e09cc8d
 caps.latest.revision: 10
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ee9d0dc29509e9b41fbec9691061c1ed928f063c
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
 # <a name="execution-time-threads-view"></a>실행 시간(스레드 뷰)
 스레드가 시스템의 논리 코어에서 활발히 작업을 수행할 경우 스레드 뷰 타임라인의 이러한 세그먼트는 실행 시간을 나타냅니다.  
