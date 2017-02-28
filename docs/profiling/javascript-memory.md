@@ -1,33 +1,52 @@
 ---
-title: "JavaScript 메모리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "지배자, 메모리 분석기(JavaScript)"
-  - "메모리 누수(JavaScript)"
-  - "힙 메모리, JavaScript"
-  - "누수, 메모리(JavaScript)"
-  - "스냅숏, 메모리 분석기(JavaScript)"
-  - "JavaScript 메모리 분석기"
-  - "메모리 분석, JavaScript"
-  - "메모리 분석기, JavaScript"
+title: "JavaScript 메모리 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- dominators, memory analyzer (JavaScript)
+- memory leaks (JavaScript)
+- heap memory, JavaScript
+- leaks, memory (JavaScript)
+- snapshots, memory analyzer (JavaScript)
+- JavaScript Memory Analyzer
+- analyzing memory, JavaScript
+- memory analyzer, JavaScript
 ms.assetid: 78f8532b-7b4e-4b50-b8b7-68ca0926dd4e
 caps.latest.revision: 49
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 46
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f76e8b2846f0a9dfd37799f6e6f205bee446bbe4
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="javascript-memory"></a>JavaScript 메모리
 Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 JavaScript로 만든 Windows용 스토어 앱의 메모리 사용을 파악하고 메모리 누수를 찾을 수 있습니다. 지원되는 앱에는 Windows Phone 스토어 및 Windows 스토어용 앱이 포함됩니다.  
@@ -399,8 +418,3 @@ if (performance && performance.mark) {
   
 ## <a name="see-also"></a>참고 항목  
  [연습: 메모리 누수 찾기(JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
