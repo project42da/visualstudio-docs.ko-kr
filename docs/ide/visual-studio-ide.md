@@ -1,17 +1,36 @@
 ---
-title: "Visual Studio IDE | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visual Studio IDE | Microsoft 문서"
+ms.custom: 
+ms.date: 01/17/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 772b6cf4-cee5-42d0-bc18-b4eb07e22ff0
 caps.latest.revision: 35
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 32
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: 10db0535b950f1a1525bab89a6df25e4e3f40012
+ms.lasthandoff: 03/03/2017
+
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
 Microsoft Visual Studio 2017 RC는 계획 단계에서 UI 디자인, 코딩, 테스트, 디버그, 코드 품질 및 성능 분석, 고객에게 배포 및 사용량에 대한 원격 분석 수집에 이르기까지 소프트웨어를 만들기 위한 도구 제품군입니다. 이러한 도구는 가능한 한 매끄럽게 작동하도록 설계되었으며, 모두 Visual Studio IDE(통합 개발 환경)를 통해 노출됩니다.  
@@ -202,11 +221,6 @@ Visual Studio 2017 RC의 새로운 기능에 대한 자세한 내용은 [Visual 
  [Visual Studio 2017 RC 설치](../install/install-visual-studio.md)   
  [코드 편집](https://www.visualstudio.com/features/ide-vs)   
  [Visual Studio 2017 RC의 새로운 기능](../ide/whats-new-in-visual-studio.md)   
- [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)   
+ [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [의견 보내기](../ide/talk-to-us.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
