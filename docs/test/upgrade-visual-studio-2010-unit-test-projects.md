@@ -28,9 +28,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: c5b99a1f1661e412ae097660298942ebb89b15b1
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: 806f5004a4ab3d33d4be86cd4784de989c5fd282
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="upgrade-visual-studio-2010-unit-test-projects"></a>Visual Studio 2010 단위 테스트 프로젝트 업그레이드
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/22/2017
 |테스트 탐색기에서 TRX 로그를 통해 실행 결과를 공유합니다.||TRX 로그는 명령줄 및 팀 빌드에서 가져올 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)   
+ [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [코드 단위 테스트](../test/unit-test-your-code.md)   
  [이전 버전의 Visual Studio에서 테스트 업그레이드](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)   
  [Visual Studio 2010에서 코딩된 UI 테스트 업그레이드](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)
