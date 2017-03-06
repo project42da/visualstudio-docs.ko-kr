@@ -3,6 +3,7 @@
 ## [초보자를 위한 성능 프로파일링 지침](beginners-guide-to-performance-profiling.md)
 ## [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](running-profiling-tools-with-or-without-the-debugger.md)
 ## [메모리 사용](memory-usage.md)
+### [사용자 지정 네이티브 ETW 힙 이벤트](custom-native-etw-heap-events.md)
 ### [디버그하지 않는 경우의 메모리 사용](memory-usage-without-debugging2.md)
 ## [CPU 사용](cpu-usage.md)
 ### [Windows 유니버설 앱에서 CPU 사용 분석](analyze-cpu-usage-in-a-windows-universal-app.md)
@@ -365,8 +366,3 @@
 ##### [CvWriteMessage 함수](cvwritemessage-function.md)
 ### [동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd)](concurrency-visualizer-command-line-utility-cvcollectioncmd.md)
 ## [스토어 앱의 에너지 사용 분석](analyze-energy-use-in-store-apps.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
