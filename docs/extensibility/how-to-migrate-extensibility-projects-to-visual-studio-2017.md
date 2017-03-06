@@ -28,9 +28,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 09f14e5b28a506d4f2112f82ee4fd6b0855a8f93
-ms.openlocfilehash: 67e143e1b95a0e4d881d7d6bccae0d7445897aa2
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 4f93b8c1db59dd8d8a407c82002240641be43018
+ms.openlocfilehash: 1f9248442357c4447703ac6d6dac8a27934904e8
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>방법: Visual Studio 2017 확장성 프로젝트 마이그레이션
@@ -76,6 +76,8 @@ NuGet을 업데이트 하려면 Microsoft.VSSDK.BuildTools 참조 합니다.
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>VSIX 확장 매니페스트를 변경
 
 사용자의 Visual Studio 설치에서 확장을 실행 하는 데 필요한 모든 어셈블리를 갖도록 확장 매니페스트 파일에 모든 필수 구성 요소 또는 패키지를 지정 합니다. 사용자가 확장을 설치 하려고는 VSIXInstaller 확인 모든 필수 구성 요소는 설치 되어 있는지 확인 합니다. 일부 값이 없는 경우 사용자는 확장 설치 과정의 일환으로 누락 된 구성 요소를 설치 하 라는 메시지가 표시 됩니다.
+
+>**참고:** 여기에 최소한 모든 확장으로 지정 해야 Visual Studio core 편집기 구성 요소의 필수 구성 요소입니다.
 
 * 확장 매니페스트 파일 (일반적으로 source.extension.vsixmanifest 이라고 함)을 편집 합니다.
 * 확인 `InstallationTarget` 15.0 포함 됩니다.
@@ -213,5 +215,6 @@ Excel 시트에&4; 개의 열이: **구성 요소 이름**, **ComponentId**, **�
 
 예를 들면 다음과 같습니다.
 
-* 디버거 확장을 한 프로젝트에 VSDebugEng.dll VSDebug.dll에 대 한 참조를 알고 있는 경우에 필터 단추를 클릭는 **이진 파일 / 파일 이름을** 헤더입니다.  "VSDebugEng.dll"를 검색 하 고 확인을 선택 합니다.  그런 다음 필터 단추를 클릭는 **이진 파일 / 파일 이름** 다시 헤더 및 "VSDebug.dll"를 검색 합니다.  "추가 현재 선택 영역을 필터링" 확인란을 선택 하 고 확인을 선택 합니다.  이제을 통해 표시는 **구성 요소 이름** 가장 하는 구성 요소를 찾으려고 확장 유형과 관련 된. 이 예제에서는 시간에만 선택한 것 디버거 vsixmanifest 프로그램에 추가 합니다.
+* 디버거 확장을 한 프로젝트에 VSDebugEng.dll VSDebug.dll에 대 한 참조를 알고 있는 경우에 필터 단추를 클릭는 **이진 파일 / 파일 이름을** 헤더입니다.  "VSDebugEng.dll"를 검색 하 고 확인을 선택 합니다.  그런 다음 필터 단추를 클릭는 **이진 파일 / 파일 이름** 다시 머리글과 "VSDebug.dll"를 검색 합니다.  "추가 현재 선택 영역을 필터링" 확인란을 선택 하 고 확인을 선택 합니다.  이제을 통해 표시는 **구성 요소 이름** 가장 하는 구성 요소를 찾으려고 확장 유형과 관련 된. 이 예제에서는 시간에만 선택한 것 디버거 vsixmanifest 프로그램에 추가 합니다.
 * 디버거 요소 다루는 프로젝트를 알고 있는 경우 "디버거에서" 필터 검색 상자에 이름에는 디버거를 포함 하는 구성 요소를 검색할 수 있습니다.
+
