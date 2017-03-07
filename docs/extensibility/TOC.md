@@ -10,8 +10,6 @@
 ## [경량 솔루션 로드](lightweight-solution-load-extension-impact.md)
 ## [질문과 대답](faq-2017.md)
 # [방법: Visual Studio 2017로 확장성 프로젝트 마이그레이션](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-# [Visual Studio 2015 SDK의 새로운 기능](what-s-new-in-the-visual-studio-2015-sdk.md)
-# [방법: Visual Studio 2015로 확장성 프로젝트 마이그레이션](how-to-migrate-extensibility-projects-to-visual-studio-2015.md)
 # [메뉴 및 명령 확장](extending-menus-and-commands.md)
 ## [메뉴 명령을 사용하여 확장 만들기](creating-an-extension-with-a-menu-command.md)
 ## [Visual Studio 메뉴 모음에 메뉴 추가](adding-a-menu-to-the-visual-studio-menu-bar.md)
