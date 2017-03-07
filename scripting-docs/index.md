@@ -1,0 +1,1 @@
+# <a name="welcome-to-scripting-docs"></a>스크립팅 문서를 시작합니다.
