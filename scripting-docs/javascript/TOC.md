@@ -1,5 +1,5 @@
-# [JavaScript의 새로운 기능](what-s-new-in-javascript.md)
 # [JavaScript 언어 참조](javascript-language-reference.md)
+# [JavaScript의 새로운 기능](what-s-new-in-javascript.md)
 # [JavaScript 기본 사항](javascript-fundamentals.md)
 ## [JavaScript 코드 작성](writing-javascript-code.md)
 ## [변수](variables-javascript.md)
