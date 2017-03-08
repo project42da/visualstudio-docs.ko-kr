@@ -199,7 +199,7 @@
 ### [디버깅 준비: Visual C++ 프로젝트 형식](debugging-preparation-visual-cpp-project-types.md)
 ### [방법: 최적화된 코드 디버그](how-to-debug-optimized-code.md)
 ### [DebugBreak 및 __debugbreak](debugbreak-and-debugbreak.md)
-### [C-C++ 어설션](c-cpp-assertions.md)
+### [C/C++ 어설션](c-cpp-assertions.md)
 ### [방법: 인라인 어셈블리 코드 디버그](how-to-debug-inline-assembly-code.md)
 ### [MFC 디버깅 기술](mfc-debugging-techniques.md)
 ### [CRT 디버깅 기술](crt-debugging-techniques.md)
