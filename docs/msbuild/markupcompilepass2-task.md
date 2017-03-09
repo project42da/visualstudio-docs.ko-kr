@@ -1,0 +1,80 @@
+---
+title: "MarkupCompilePass2 Task | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - "performing second-pass markup [WPF MSBuild], MarkupCompilePass2 task"
+  - "MarkupCompilePass2 task [WPF MSBuild]"
+  - "MarkupCompilePass2 task [WPF MSBuild], parameters"
+ms.assetid: 1d25689a-d21f-4b05-be26-95aa0ed4fd03
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+---
+# MarkupCompilePass2 Task
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> 작업은 같은 프로젝트의 형식을 참조하는 [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] 파일에 대해 두 번째 패스 태그 컴파일을 수행합니다.  
+  
+## 작업 매개 변수  
+  
+|Parameter|설명|  
+|---------------|--------|  
+|`AlwaysCompileMarkupFilesInSeparateDomain`|선택적 **Boolean** 매개 변수입니다.<br /><br /> 작업을 별도의 <xref:System.AppDomain>에서 실행할 것인지 여부를 지정합니다.  이 매개 변수에서 **false**를 반환하면 작업이 같은 <xref:System.AppDomain>에서 [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)]로 실행되며 이 경우 실행 속도가 더 빠릅니다.  매개 변수에서 **true**를 반환하면 작업이 [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)]에서 격리된 두 번째 <xref:System.AppDomain>에서 실행되며 이 경우 실행 속도가 더 느립니다.|  
+|`AssembliesGeneratedDuringBuild`|선택적 **String\[\]** 매개 변수입니다.<br /><br /> 빌드 프로세스 동안 변경되는 어셈블리에 대한 참조를 지정합니다.  예를 들어 [!INCLUDE[TLA#tla_visualstu2005](../msbuild/includes/tlasharptla_visualstu2005_md.md)] 솔루션에는 다른 프로젝트의 컴파일된 출력을 참조하는 하나의 프로젝트가 포함될 수 있습니다.  이 경우 두 번째 프로젝트의 컴파일된 출력이 **AssembliesGeneratedDuringBuild**에 추가될 수 있습니다.<br /><br /> 참고: **AssembliesGeneratedDuringBuild**는 빌드 솔루션에 의해 생성되는 전체 어셈블리 집합에 대한 참조를 포함해야 합니다.|  
+|`AssemblyName`|필수 **String** 매개 변수입니다.<br /><br /> 프로젝트에 대해 생성되는 어셈블리의 약식 이름을 지정합니다.  예를 들어 프로젝트에서 이름이 **WinExeAssembly.exe**인 [!INCLUDE[TLA#tla_win](../msbuild/includes/tlasharptla_win_md.md)] 실행 파일을 생성하는 경우 **AssemblyName** 매개 변수의 값은 **WinExeAssembly**입니다.|  
+|`GeneratedBaml`|선택적 **ITaskItem\[\]** 출력 매개 변수입니다.<br /><br /> 생성되는 파일의 목록을 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 이진 형식으로 포함합니다.|  
+|`KnownReferencePaths`|선택적 **String\[\]** 매개 변수입니다.<br /><br /> 빌드 프로세스 동안 변경되지 않는 어셈블리에 대한 참조를 지정합니다.  [!INCLUDE[TLA#tla_gac](../msbuild/includes/tlasharptla_gac_md.md)], [!INCLUDE[TLA#tla_netframewk](../misc/includes/tlasharptla_netframewk_md.md)] 설치 디렉터리 등에 있는 어셈블리를 포함합니다.|  
+|`Language`|필수 **String** 매개 변수입니다.<br /><br /> 컴파일러가 지원하는 관리되는 언어를 지정합니다.  유효한 옵션은  **C\#**,  **VB**,  **JScript**, 및  **C\+\+**.|  
+|`LocalizationDirectivesToLocFile`|선택적 **String** 매개 변수입니다.<br /><br /> 각 소스 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일에 대한 지역화 정보를 생성하는 방법을 지정합니다.  유효한 옵션은 **None**, **CommentsOnly** 및 **All**입니다.|  
+|`OutputPath`|필수 **String** 매개 변수입니다.<br /><br /> [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 이진 형식 파일이 생성되는 디렉터리를 지정합니다.|  
+|`OutputType`|필수 **String** 매개 변수입니다.<br /><br /> 프로젝트에 의해 생성되는 어셈블리의 형식을 지정합니다.  유효한 옵션은 **winexe**, **exe**, **library** 및 **netmodule**입니다.|  
+|`References`|선택적 **ITaskItem\[\]** 매개 변수입니다.<br /><br /> [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일에 사용되는 형식이 포함된 어셈블리에 대한 파일 참조의 목록을 지정합니다.  여기에는 <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> 작업으로 생성된 어셈블리에 대한 참조가 포함되며 이 작업은 <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> 작업 전에 실행되어야 합니다.|  
+|`RootNamespace`|선택적 **String** 매개 변수입니다.<br /><br /> 프로젝트 내부에 있는 클래스에 대한 루트 네임스페이스를 지정합니다.  **RootNamespace**는 해당 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일에 `x:Class` 특성이 포함되어 있지 않을 경우, 생성되는 관리 코드 파일의 기본 네임스페이스로도 사용됩니다.|  
+|`XAMLDebuggingInformation`|선택적 **Boolean** 매개 변수입니다.<br /><br /> **true**인 경우 디버깅에 도움이 되도록 진단 정보가 생성되어 컴파일된 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)]에 포함됩니다.|  
+  
+## 설명  
+ **MarkupCompilePass2**를 실행하기 전에 태그 컴파일 패스가 연기된 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일에서 사용하는 형식이 포함된 임시 어셈블리를 생성해야 합니다.  **GenerateTemporaryTargetAssembly** 작업을 실행하여 임시 어셈블리를 생성합니다.  
+  
+ 생성된 임시 어셈블리에 대한 참조는 <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2>가 실행될 때 이 태그 컴파일 패스에 제공되므로 첫 번째 태그 컴파일 패스에서 컴파일이 연기된 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일을 이제 이진 형식으로 컴파일할 수 있습니다.  
+  
+## 예제  
+ 다음 예제에서는 <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> 작업을 사용하여 두 번째 패스 컴파일을 수행하는 방법을 보여 줍니다.  
+  
+```  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+  <UsingTask   
+    TaskName="Microsoft.Build.Tasks.Windows.MarkupCompilePass2"   
+    AssemblyFile="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationBuildTasks.dll" />  
+  <Target Name="MarkupCompilePass2Task">  
+    <MarkupCompilePass2   
+      AssemblyName="WPFMSBuildSample"  
+      Language="C#"  
+      OutputType="WinExe"  
+      OutputPath="obj\Debug\"  
+      References=".\obj\debug\WPFMSBuildSample.exe;c:\windows\Microsoft.net\Framework\v2.0.50727\System.dll;C:\Program Files\Reference Assemblies\Microsoft\WinFx\v3.0\PresentationCore.dll;C:\Program Files\Reference Assemblies\Microsoft\WinFx\v3.0\PresentationFramework.dll;C:\Program Files\Reference Assemblies\Microsoft\WinFx\v3.0\WindowsBase.dll" />  
+  </Target>  
+</Project>  
+```  
+  
+## 참고 항목  
+ [WPF MSBuild Reference](../msbuild/wpf-msbuild-reference.md)   
+ [Task Reference](../msbuild/wpf-msbuild-task-reference.md)   
+ [MSBuild Reference](../msbuild/msbuild-reference.md)   
+ [Task Reference](../msbuild/msbuild-task-reference.md)   
+ [WPF 응용 프로그램 만들기\(WPF\)](../Topic/Building%20a%20WPF%20Application%20\(WPF\).md)   
+ [WPF XAML 브라우저 응용 프로그램 개요](../Topic/WPF%20XAML%20Browser%20Applications%20Overview.md)

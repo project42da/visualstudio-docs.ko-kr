@@ -1,0 +1,47 @@
+---
+title: "컴파일러 오류 CS0457 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0457"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0457"
+ms.assetid: 5d5cf762-c817-4468-9455-59e966b8c140
+caps.latest.revision: 14
+caps.handback.revision: 14
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0457
+'type name 1'에서 'type name 2'로 변환하는 동안 모호한 사용자 정의 변환 'Conversion method name 1' 및 'Conversion method name 2'가 발생했습니다.  
+  
+ 두 변환 방법이 적합하므로 컴파일러가 어떤 변환을 사용할지 결정할 수 없습니다.  
+  
+ 이 오류를 발생시킬 수 있는 한 가지 시나리오는 다음과 같습니다.  
+  
+-   A와 B가 관련되지 않은 곳에서 클래스 A를 클래스 B로 변환하려고 합니다.  
+  
+-   A가 A0에서 파생되고 A0에서 B로 변환하는 메서드가 있습니다.  
+  
+-   B에 하위 클래스 B1이 있고 A에서 B1로 변환하는 메서드가 있습니다.  
+  
+ 컴파일러가 첫 번째 변환이 최적의 대상 형식이고 두 번째 변환이 최적의 소스 형식이기 때문에 두 변환 메서드에 동일하게 가중치를 부여합니다. 컴파일러가 선택할 수 없으므로 이 오류가 생성됩니다. 이 오류를 해결하려면 A를 B로 변환하는 새 명시적 메서드를 작성합니다.  
+  
+ 이 오류를 발생시키는 다른 시나리오는 A를 B로 변환하는 두 개의 메서드가 있는 경우로, 이를 수정하려면 명시적 캐스트를 통해 사용할 변환을 지정합니다.  
+  
+## 예제  
+ 다음 샘플에서는 CS0457을 생성합니다.  
+  
+```  
+// CS0457.cs using System; public class A { } public class G0 {  } public class G1<R> : G0 {  } public class H0 { public static implicit operator G0(H0 h) { return new G0(); } } public class H1<R> : H0 { public static implicit operator G1<R>(H1<R> h) { return new G1<R>(); } } public class Test { public static void F0(G0 g) {  } public static void Main() { H1<A> h1a = new H1<A>(); F0(h1a);   // CS0457 } }  
+```

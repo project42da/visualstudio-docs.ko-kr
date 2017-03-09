@@ -1,0 +1,43 @@
+---
+title: "컴파일러 경고(수준 1) CS1720 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1720"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1720"
+ms.assetid: 97adc294-3a4c-4418-a4ed-ccff43125b62
+caps.latest.revision: 14
+caps.handback.revision: 14
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 경고(수준 1) CS1720
+'generic type'의 기본값이 null이므로 식에서 항상 System.NullReferenceException이 발생합니다.  
+  
+ 참조 형식\(예: 클래스\)인 제네릭 형식 변수의 기본값을 포함하는 식을 작성하면 이 오류가 발생합니다. 다음 식을 살펴보세요.  
+  
+```  
+default(T).ToString()  
+```  
+  
+ `T`는 참조 형식이기 때문에 해당 기본값이 null이므로 <xref:System.Object.ToString%2A> 메서드를 적용하려고 하면 <xref:System.NullReferenceException>이 발생합니다.  
+  
+## 예제  
+ `T` 형식의 클래스 참조 제약 조건에 따라 `T`는 참조 형식이 됩니다.  
+  
+ 다음 샘플에서는 CS1720을 생성합니다.  
+  
+```  
+// CS1720.cs using System; public class Tester { public static void GenericClass<T>(T t1) where T : class { Console.WriteLine(default(T).ToString());  // CS1720 } public static void Main() {} }  
+```

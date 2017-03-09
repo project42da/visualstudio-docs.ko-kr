@@ -1,0 +1,42 @@
+---
+title: "컴파일러 오류 CS0757 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/16/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0757"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0757"
+ms.assetid: ba093570-306d-4b7b-aad5-1a3855ad6776
+caps.latest.revision: 5
+caps.handback.revision: 5
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0757
+부분 메서드\(Partial Method\)에는 하나의 구현 선언만 사용할 수 있습니다.  
+  
+ 부분 메서드\(Partial Method\)는 정확히 하나의 정의 선언\(서명\)과 하나 또는 0개의 구현 선언\(본문\)으로 구성됩니다. 동일한 정의 선언에 대해 여러 개의 구현 선언은 허용되지 않습니다. 부분 메서드\(Partial Method\)가 오버로드될 수 있으므로 오버로드된 각 버전에 하나 또는 0개의 구현 선언이 있을 수 있습니다.  
+  
+### 이 오류를 해결하려면  
+  
+1.  부분 메서드\(Partial Method\)에 대한 구현 선언 중 하나를 제외하고 모두 제거합니다.  
+  
+## 예제  
+ 다음 예제에서는 CS0757을 생성합니다.  
+  
+```  
+// cs0757.cs using System; public partial class C { // Defining declaration. partial void Part(); // Implementing declaration. partial void Part() { //...Do something. } // Second implementing declaration. partial void Part() // CS0757 { //...Do something. } public static int Main() { return 1; } }  
+```  
+  
+## 참고 항목  
+ [Partial 클래스 및 메서드](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)

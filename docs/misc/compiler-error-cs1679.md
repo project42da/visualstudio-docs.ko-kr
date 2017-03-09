@@ -1,0 +1,37 @@
+---
+title: "컴파일러 오류 CS1679 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1679"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1679"
+ms.assetid: c42e9bca-212a-458e-88f8-b81c812436bb
+caps.latest.revision: 10
+caps.handback.revision: 10
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS1679
+'\/reference'의 extern 별칭이 잘못되었습니다. 'identifier'는 올바른 식별자가 아닙니다.  
+  
+ **\/reference** 옵션의 외부 어셈블리 별칭 기능을 사용하는 경우 **\/reference:** 다음 및 '\=' 앞에 오는 텍스트는 올바른 C\# 식별자 또는 C\# 언어 사양에 따른 키워드여야 합니다.  
+  
+ 이 오류를 해결하려면 "\=" 앞의 텍스트를 올바른 C\# 식별자 또는 키워드로 변경합니다.  
+  
+## 예제  
+ 다음 예제에서는 CS1679를 생성합니다.  
+  
+```  
+// CS1679.cs // compile with: /reference:123$BadIdentifier%=System.dll class TestClass { static void Main() { } }  
+```

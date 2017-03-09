@@ -1,0 +1,39 @@
+---
+title: "컴파일러 오류 CS0831 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0831"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0831"
+ms.assetid: f626a77d-3844-4438-954b-b8201e72b1b5
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0831
+식 트리에는 기본 액세스를 사용할 수 없습니다.  
+  
+ 기본 클래스 메서드의 비가상 함수 호출처럼 일반적으로 가상 함수 호출인 함수를 만드는 것이 기본 액세스입니다. 식 트리 자체에서는 허용되지 않지만 기본 클래스 메서드를 호출하는 클래스에서는 도우미 메서드를 호출할 수 있습니다.  
+  
+### 이 오류를 해결하려면  
+  
+1.  이런 방식으로 기본 클래스 메서드에 액세스해야 하는 경우 기본 클래스로 호출하는 도우미 메서드를 만들어서 식 트리가 도우미 메서드를 호출하게 합니다. 이 기술이 다음 코드에 나옵니다.  
+  
+## 예제  
+ 다음 예제에서는 CS0831을 생성합니다.  
+  
+```  
+// cs0831.cs using System; using System.Linq; using System.Linq.Expressions; public class A { public virtual int BaseMethod() { return 1; } } public class C : A { public override int BaseMethod() { return 2; } public int Test(C c) { Expression<Func<int>> e = () => base.BaseMethod(); // CS0831 // Try the following line instead, // along with the BaseAccessHelper method. // Expression<Func<int>> e2 = () => BaseAccessHelper(); return 1; } // Uncomment to call from e2 expression above. // int BaseAccessHelper() // { //     return base.BaseMethod(); // } }   
+```

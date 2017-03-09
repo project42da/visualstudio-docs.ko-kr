@@ -1,0 +1,1 @@
+.NET Framework 버전 4

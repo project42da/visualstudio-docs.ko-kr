@@ -1,0 +1,37 @@
+---
+title: "컴파일러 경고(수준 1) CS1695 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1695"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1695"
+ms.assetid: cc4e4d00-0618-400d-985b-90968e98772c
+caps.latest.revision: 10
+caps.handback.revision: 10
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 경고(수준 1) CS1695
+\#pragma checksum 구문이 잘못되었습니다. \#pragma checksum "filename" "{XXXXXXXX\-XXXX\-XXXX\-XXXX\-XXXXXXXXXXXX}" "XXXX..."이어야 합니다.  
+  
+ Code Dom API를 통해 코드를 생성하는 경우 일반적으로 런타임에 체크섬이 삽입되기 때문에 이 오류가 거의 발생하지 않아야 합니다.  
+  
+ 그러나 이 `#pragma` 문을 입력해야 하고 GUID 또는 체크섬을 잘못 입력하는 경우 이 오류가 발생합니다. 컴파일러의 구문 검사에서는 올바른 GUID를 입력했는지 확인하지 않고 올바른 자릿수와 구분 기호 및 숫자가 16진수인지를 확인합니다. 마찬가지로, 체크섬에 짝수 숫자가 포함되어 있고 숫자가 16진수인지 확인합니다.  
+  
+## 예제  
+ 다음 예제에서는 CS1695를 생성합니다.  
+  
+```  
+// CS1695.cs #pragma checksum "12345"  // CS1695 public class Test { static void Main() { } }  
+```

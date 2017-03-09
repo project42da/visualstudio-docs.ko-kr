@@ -1,0 +1,40 @@
+---
+title: "LINQ to XML을 사용한 WPF 데이터 바인딩 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 356c2cef-3468-495d-b4bd-f6b7f883446b
+caps.latest.revision: 2
+caps.handback.revision: 2
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+---
+# LINQ to XML을 사용한 WPF 데이터 바인딩
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+이 단원에서는 LINQ to XML을 WPF\(Windows Presentation Foundation\) 응용 프로그램의 데이터 바인딩에 대한 데이터 소스로 사용하는 방법에 대해 설명합니다.이 경우 <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> 및 <xref:System.Xml.Linq.XElement?displayProperty=fullName>의 특수 *동적 속성*을 사용합니다.이러한 동적 속성에 대한 설명도 이 단원에 나와 있습니다.  
+  
+## 단원 내용  
+  
+|항목|설명|  
+|--------|--------|  
+|[LINQ to XML을 사용한 WPF 데이터 바인딩 개요](../designers/wpf-data-binding-with-linq-to-xml-overview.md)|<xref:System.Xml.Linq> 네임스페이스에서 제공하는 동적 데이터 바인딩 기능을 소개하고 이러한 기능을 WPF에서 사용자 인터페이스 구성 요소의 데이터 소스로 사용하는 방법에 대해 설명합니다.|  
+|[LINQ to XML 동적 속성](../designers/linq-to-xml-dynamic-properties.md)|<xref:System.Xml.Linq.XAttribute> 및 <xref:System.Xml.Linq.XElement> 클래스에서 노출하는 동적 속성에 대한 참조 정보를 제공합니다.|  
+|[LINQ to XML을 사용한 WPF 데이터 바인딩 예제](../designers/wpf-data-binding-using-linq-to-xml-example.md)|사용자 인터페이스 구성 요소를 XML 데이터 소스에 바인딩하는 WPF 예제를 제공합니다.|  
+  
+## 참조  
+ <xref:System.Xml.Linq>  
+  
+ <xref:System.Xml.Linq.XElement>  
+  
+ <xref:System.Xml.Linq.XAttribute>  
+  
+## 참고 항목  
+ [고급 LINQ to XML 프로그래밍](../Topic/Advanced%20LINQ%20to%20XML%20Programming.md)

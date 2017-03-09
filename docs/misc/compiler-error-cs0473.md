@@ -1,0 +1,46 @@
+---
+title: "컴파일러 오류 CS0473 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0473"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0473"
+ms.assetid: 58eb141e-7da0-41c8-b868-7cd2a15f07f9
+caps.latest.revision: 9
+caps.handback.revision: 9
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0473
+명시적 인터페이스 구현 'method name'이 두 개 이상의 인터페이스 멤버와 일치합니다. 실제로 선택되는 인터페이스 멤버는 구현에 따라 다릅니다. 대신 비명시적 구현을 사용하는 것이 좋습니다.  
+  
+ 경우에 따라 제네릭 메서드가 제네릭이 아닌 메서드와 동일한 서명을 가져올 수 있습니다. 문제는 CLI\(공용 언어 인프라\) 메타데이터 시스템에 어떤 메서드가 어떤 슬롯을 바인딩하는지 명확하게 나타내는 방법이 없다는 점입니다. CLI에 따라 결정해야 합니다.  
+  
+> [!NOTE]
+>  이 오류는 Visual Studio 2008에서 발생하며, Visual Studio 2005에서는 발생하지 않았던 위치입니다.  
+  
+### 이 오류를 해결하려면  
+  
+1.  명시적 구현을 제거하고 `public int TestMethod(int)` 암시적 구현만으로 두 인터페이스 메서드를 모두 구현합니다.  
+  
+## 예제  
+ 다음 코드에서는 CS0473을 생성합니다.  
+  
+```  
+// cs0473.cs public interface ITest<T> { int TestMethod(int i); int TestMethod(T i); } public class ImplementingClass : ITest<int> { int ITest<int>.TestMethod(int i) // CS0473 { return i + 1; } public int TestMethod(int i) { return i - 1; } } class T { static int Main() { ImplementingClass a = new ImplementingClass(); if (a.TestMethod(0) != -1) return -1; ITest<int> i_a = a; System.Console.WriteLine(i_a.TestMethod(0).ToString()); if (i_a.TestMethod(0) != 1) return -1; return 0; } }  
+  
+```  
+  
+## 참고 항목  
+ [재미있는 코딩 탐험](http://blogs.msdn.com/ericlippert/archive/2006/04/06/570126.aspx)

@@ -1,0 +1,61 @@
+---
+title: "컴파일러 경고(수준 2) CS0728 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0728"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0728"
+ms.assetid: ad6d860d-bac4-48f3-9eab-1efd2b6de6c0
+caps.latest.revision: 12
+caps.handback.revision: 12
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 경고(수준 2) CS0728
+using 또는 lock 문의 인수인 지역 변수 'variable'에 대한 할당이 잘못되었을 수 있습니다.  지역 변수의 원래 값에 대해 Dispose 호출 또는 잠금 해제가 수행됩니다.  
+  
+ 몇 가지 시나리오에서는 `using` 또는 `lock` 블록에서 임시 리소스 누수가 발생합니다. 한 가지 예는 다음과 같습니다.  
+  
+ `thisType f = null;`  
+  
+ `using (f)`  
+  
+ `{`  
+  
+ `f = new thisType();`  
+  
+ `...`  
+  
+ `}`  
+  
+ 이 경우 null과 같은 `thisType` 변수의 원래 값은 `using` 블록이 실행을 완료할 때 제거되지만 블록 내에 만들어진 `thisType` 개체는 결국 가비지로 수집되어도 제거되지는 않습니다.  
+  
+ 이 오류를 해결하려면 다음 형식을 사용합니다.  
+  
+ `using (thisType f = new thisType())`  
+  
+ `{`  
+  
+ `...`  
+  
+ `}`  
+  
+ 이 경우 새로 할당된 `thisType` 개체가 삭제됩니다.  
+  
+## 예제  
+ 다음 코드에서는 CS0728 경고를 생성합니다.  
+  
+```  
+// CS0728.cs using System; public class ValidBase : IDisposable { public void Dispose() {  } } public class Logger { public static void dummy() { ValidBase vb = null; using (vb) { vb = null;  // CS0728 } vb = null; } public static void Main() { } }  
+```

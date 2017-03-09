@@ -1,0 +1,53 @@
+---
+title: "컴파일러 경고(수준 1) CS1682 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1682"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1682"
+ms.assetid: 6f3b19ba-29f3-4472-941d-57f6fda6dc3a
+caps.latest.revision: 15
+caps.handback.revision: 15
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 경고(수준 1) CS1682
+'type' 형식에 대한 참조는 'nested type' 안에 중첩된 것으로 되어 있지만 찾을 수 없습니다.  
+  
+ 이 오류는 다른 참조 또는 작성된 코드와 일치하지 않는 참조를 가져오는 경우에 발생합니다. 이 오류를 발생시키는 일반적인 방법은 메타데이터에서 클래스를 참조하는 코드를 작성한 다음 해당 클래스를 삭제하거나 해당 정의를 수정하는 것입니다.  
+  
+## 예제  
+  
+```  
+// CS1682.cs // compile with: /target:library /keyfile:mykey.snk public class A { public class N1 {} }  
+```  
+  
+## 예제  
+  
+```  
+// CS1682_b.cs // compile with: /target:library /reference:CS1682.dll using System; public class Ref { public static A A1() { return new A(); } public static A.N1 N1() { return new A.N1(); } }  
+```  
+  
+## 예제  
+  
+```  
+// CS1682_c.cs // compile with: /target:library /keyfile:mykey.snk /out:CS1682.dll public class A { public void M1() {} }  
+```  
+  
+## 예제  
+ 다음 샘플에서는 CS1682를 생성합니다.  
+  
+```  
+// CS1682_d.cs // compile with: /reference:CS1682.dll /reference:CS1682_b.dll /W:1 // CS1682 expected class Tester { static void Main() { Ref.A1().M1(); } }  
+```
