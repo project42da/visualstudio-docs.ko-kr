@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4b82b8583ec54af9eee383255d20b40674e7c2c1
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: 99a485f2b7ebda9169797db06212ae56dc4d9eb1
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="managing-references-in-a-project"></a>프로젝트의 참조 관리
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/22/2017
 ### <a name="project-references"></a>프로젝트 참조  
  Windows 10을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 프로젝트는 Windows 10에서 더 이상 사용되지 않는 API를 사용하지 않는 경우 솔루션의 다른 UWP 프로젝트나 Windows 스토어 프로젝트에 대한 참조나 [!INCLUDE[win81](../debugger/includes/win81_md.md)]을 대상으로 하는 또는 이진 파일을 만들 수 있습니다. 자세한 내용은 [Windows 런타임 8에서 UWP로 이동](https://msdn.microsoft.com/en-us/library/windows/apps/dn954974.aspx)을 참조하세요.  
 
- [!INCLUDE[win81](../debugger/includes/win81_md.md)] 프로젝트 대상을 Windows 10으로 다시 지정하도록 선택하는 경우 [Visual Studio 프로젝트 이식, 마이그레이션, 업그레이드](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)를 참조하세요.  
+ [!INCLUDE[win81](../debugger/includes/win81_md.md)] 프로젝트 대상을 Windows 10으로 다시 지정하도록 선택하는 경우 [Visual Studio 프로젝트 이식, 마이그레이션, 업그레이드](../porting/port-migrate-and-upgrade-visual-studio-projects.md)를 참조하세요.  
 
 ### <a name="extension-sdk-references"></a>확장 SDK 참조  
  UWP(유니버설 Windows 플랫폼)를 대상으로 하는 Visual Basic, C#, C++, JavaScript Windows 스토어 프로젝트는 [!INCLUDE[win81](../debugger/includes/win81_md.md)]을 대상으로 하는 확장 SDK가 Windows 10에서 더 이상 사용되지 않는 API를 사용하지 않는 한 이 확장 SDK를 참조할 수 있습니다. UWP를 대상으로 하는 Windows 저장소 프로젝트에서 확장 SDK를 참조할 수 있는지 확인하려면 해당 확장 SDK의 공급업체 사이트를 참조하세요.  
