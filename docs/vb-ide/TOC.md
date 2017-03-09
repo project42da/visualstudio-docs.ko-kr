@@ -7,6 +7,7 @@
 ### [인라인 임시 변수](refactoring/inline-temporary-variable.md)
 ### [형식을 일치하는 파일로 이동](refactoring/move-type-to-matching-file.md)
 ### [이름 바꾸기](refactoring/rename.md)
+### [동기화 형식 및 파일 이름](refactoring/sync-type-and-file.md)
 ## [코드 생성](code-generation-vb.md)
 ### [클래스/형식 생성](code-generation/generate-class-type.md)
 ### [Generate 메서드](code-generation/generate-method.md)
