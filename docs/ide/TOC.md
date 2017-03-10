@@ -1,4 +1,4 @@
-# [Visual Studio IDE](visual-studio-ide.md)
+# [Visual Studio IDE 기능 둘러보기](visual-studio-ide.md)
 # [Visual Studio 시작](get-started-with-visual-studio.md)
 # [사용자 계정 및 업데이트](user-accounts-and-updates.md)
 ## [Visual Studio에 로그인](signing-in-to-visual-studio.md)
@@ -111,6 +111,7 @@
 ### [방법: 편집기에서 텍스트의 대/소문자 변경](how-to-change-text-case-in-the-editor.md)
 ### [방법: 편집기 모드 관리](how-to-manage-editor-modes.md)
 ### [방법: 편집기 창 관리](how-to-manage-editor-windows.md)
+## [프로젝트 또는 솔루션 없이 Visual Studio에서 코드 개발](develop-code-in-visual-studio-without-projects-or-solutions.md)
 ## [휴대용, 사용자 지정 편집기 설정 만들기](create-portable-custom-editor-options.md)
 ## [방법: 스크롤 막대를 사용자 지정하여 코드 추적](how-to-track-your-code-by-customizing-the-scrollbar.md)
 ## 코드 탐색
