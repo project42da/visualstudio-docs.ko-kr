@@ -4,8 +4,9 @@ hide_bc: true
 title: "Visual Studio 설명서"
 description: "Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 개발하는 방법에 대해 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: c1eb1e58e423ff79928708c1fd83a4342eec489d
-ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 2a782993b8e2787c99c384c6df9c72316fe11521
+ms.lasthandoff: 03/07/2017
 
 ---
 <div id="main" class="v2">
@@ -31,7 +32,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                 </a>
             </li>
             <li>
-                <a href="/visualstudio/ide/get-started-with-visual-studio">
+                <a href="/visualstudio/ide/visual-studio-ide">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -60,7 +61,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Visual Studio 2017 RC의 새로운 기능</h3>
+                                    <h3>Visual Studio 2017의 새로운 기능</h3>
                                 </div>
                             </div>
                         </div>
@@ -200,7 +201,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Python</h3>
+                                                    <h3>Python(미리 보기)</h3>
                                                     <p>Django, Flask 등 친숙한 프레임워크를 사용하는 Python 앱에 대한 대화형 개발입니다.</p>
                                                 </div>
                                             </div>
@@ -245,26 +246,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>데이터 과학 및 분석 응용 프로그램</h3>
-                                                    <p>Python, R 및 F#을 포함하여 데이터 과학 응용 프로그램을 만들기 위한 언어 및 도구입니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
+                            </li>                            
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=833075">
                                     <div class="cardSize">
@@ -443,7 +425,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                         <a href="#features1"> </a>
                         <ul id="features1" class="cardsC">
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833076">
+                                <a href="https://docs.microsoft.com/en-us/visualstudio/ide/index-writing-code">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -731,7 +713,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                                             </div>
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833068">
-                                                    <h3>Python</h3>
+                                                    <h3>Python(미리 보기)</h3>
                                                     <p>신속한 응용 프로그램 개발에 자주 사용되는 동적 개체 지향 상위 수준 프로그래밍 언어입니다.</p>
                                                 </a>
                                             </div>
@@ -785,8 +767,4 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
         </ul>
     </div>
 </div>
-
-
-<!--HONumber=Feb17_HO4-->
-
 

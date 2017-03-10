@@ -12,12 +12,14 @@
 ## [MIP 맵 생성 변형](mip-map-generation-variant.md)
 ## [절반/분기 텍스처 크기 변형](half-quarter-texture-dimensions-variant.md)
 ## [BC 텍스처 압축 변형](bc-texture-compression-variant.md)
-# [그래픽 이벤트 목록](graphics-event-list.md)
-# [그래픽 상태](graphics-state.md)
-# [그래픽 파이프라인 단계](graphics-pipeline-stages.md)
-# [그래픽 이벤트 호출 스택](graphics-event-call-stack.md)
-# [그래픽 픽셀 기록](graphics-pixel-history.md)
-# [그래픽 개체 테이블](graphics-object-table.md)
+# [이벤트 목록](graphics-event-list.md)
+# [상태](graphics-state.md)
+# [파이프라인 단계](graphics-pipeline-stages.md)
+# [이벤트 호출 스택](graphics-event-call-stack.md)
+# [픽셀 기록](graphics-pixel-history.md)
+# [개체 테이블](graphics-object-table.md)
+# [API 및 메모리 통계](graphics-api-and-memory-statistics.md)
+# [프레임 유효성 검사](graphics-frame-validation.md)
 # [HLSL 셰이더 디버거](hlsl-shader-debugger.md)
 # [명령줄 캡처 도구](command-line-capture-tool.md)
 # [그래픽 진단 예제](graphics-diagnostics-examples.md)
@@ -45,8 +47,3 @@
 ## [DONT_SAVE_VSGLOG_TO_TEMP](dont-save-vsglog-to-temp.md)
 ## [VSG_DEFAULT_RUN_FILENAME](vsg-default-run-filename.md)
 ## [VSG_NODEFAULT_INSTANCE](vsg-nodefault-instance.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

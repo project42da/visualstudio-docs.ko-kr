@@ -1,7 +1,7 @@
-# [Visual Studio 2017 RC 시작](welcome-to-visual-studio.md)
+# [Visual Studio 2017 시작](welcome-to-visual-studio.md)
 # [새로운 기능](ide/whats-new-in-visual-studio.md)
 # [설치](install/TOC.md)
-# [Visual Studio IDE](ide/visual-studio-ide.md)
+# [Visual Studio IDE 기능 둘러보기](ide/visual-studio-ide.md)
 # [Visual Basic](/dotnet/articles/visual-basic)
 # [Visual C#](/dotnet/articles/csharp)
 # [Visual C++](/cpp/top/visual-cpp-in-visual-studio)
@@ -10,12 +10,8 @@
 # [Visual F#](/dotnet/articles/fsharp/)
 # [데이터 액세스](data-tools/TOC.md)
 # [플랫폼 간 모바일 개발](cross-platform/cross-platform-mobile-development-in-visual-studio.md)
+# [Office/SharePoint 개발](vsto/office-and-sharepoint-development-in-visual-studio.md)
 # [코드 포팅, 마이그레이션 및 업그레이드](porting\port-migrate-and-upgrade-visual-studio-projects.md)
 # [확장성](extensibility/extensibility-in-visual-studio.md)
 # [의견 보내기](ide/talk-to-us.md)
-## [Visual Studio 2017 RC의 문제를 보고하는 방법](ide/how-to-report-a-problem-with-visual-studio-2017.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
+## [Visual Studio 2017의 문제를 보고하는 방법](ide/how-to-report-a-problem-with-visual-studio-2017.md)

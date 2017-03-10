@@ -285,7 +285,7 @@
 #### [내장 함수](intrinsic-functions.md)
 #### [모범 사례 및 예제(SAL)](best-practices-and-examples-sal.md)
 ### [방법: __analysis_assume을 사용하여 추가 코드 정보 지정](how-to-specify-additional-code-information-by-using-analysis-assume.md)
-### [C-C++용 코드 분석 경고](code-analysis-for-c-cpp-warnings.md)
+### [C/C++용 코드 분석 경고](code-analysis-for-c-cpp-warnings.md)
 #### [C1250](c1250.md)
 #### [C1251](c1251.md)
 #### [C1252](c1252.md)
@@ -609,8 +609,3 @@
 # [품질 도구 문제 해결](troubleshooting-quality-tools.md)
 ## [코드 분석 문제 해결](troubleshooting-code-analysis-issues.md)
 ## [코드 메트릭 문제 해결](troubleshooting-code-metrics-issues.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

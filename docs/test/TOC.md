@@ -23,7 +23,7 @@
 #### [제네릭 메서드의 단위 테스트](unit-tests-for-generic-methods.md)
 #### [방법: 이전 버전의 .NET Framework를 대상으로 사용하도록 단위 테스트 구성](how-to-configure-unit-tests-to-target-an-earlier-version-of-the-dotnet-framework.md)
 #### [단위 테스트를 만들기 위한 샘플 프로젝트](sample-project-for-creating-unit-tests.md)
-### [C++용 Microsoft 단위 테스트 프레임워크를 사용하여 C/C++용 단위 테스트 작성](writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)
+### [C++용 Microsoft 유닛 테스트 프레임워크를 사용하여 C/C++용 유닛 테스트 작성](writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)
 #### [테스트 탐색기를 사용하여 기존 C++ 응용 프로그램 단위 테스트](unit-testing-existing-cpp-applications-with-test-explorer.md)
 #### [Microsoft.VisualStudio.TestTools.CppUnitTestFramework 사용](using-microsoft-visualstudio-testtools-cppunittestframework.md)
 ### [코드 검사를 사용하여 테스트할 코드 범위 결정](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
@@ -31,6 +31,8 @@
 #### [빌드 확인 테스트에서 코드 검사 분석](analyzing-code-coverage-in-build-verification-tests.md)
 #### [코드 검사 문제 해결](troubleshooting-code-coverage.md)
 ### [에뮬레이터를 사용하여 Sharepoint 2010 응용 프로그램용 단위 테스트 격리](using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications.md)
+## [Visual Studio 2017 Enterprise Edition에서 Live Unit Testing 사용](live-unit-testing.md)
+### [Live Unit Testing FAQ](live-unit-testing-faq.md)
 ## [UI 자동화를 사용하여 코드 테스트](use-ui-automation-to-test-your-code.md)
 ### [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 ### [코딩된 UI 테스트를 사용하여 Windows 스토어 8.1 앱 테스트](test-windows-store-8-1-apps-with-coded-ui-tests.md)
@@ -58,7 +60,7 @@
 ##### [샘플 Excel 확장: Element 클래스](sample-excel-extension-element-classes.md)
 ##### [샘플 Excel 확장: ActionFilter 클래스](sample-excel-extension-actionfilter-class.md)
 ### [Visual Studio 2010에서 코딩된 UI 테스트 업그레이드](upgrading-coded-ui-tests-from-visual-studio-2010.md)
-## [응용 프로그램 품질 분석](../code-quality)
+## [응용 프로그램 품질 분석](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)
 ## [품질 도구 문제 해결](troubleshooting-quality-tools.md)
 ### [코드 분석 문제 해결](troubleshooting-code-analysis-issues.md)
 ### [코드 메트릭 문제 해결](troubleshooting-code-metrics-issues.md)
@@ -70,8 +72,3 @@
 ### [Visual Studio 정적 코드 분석을 사용하여 스토어 앱의 코드 품질 분석](analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)
 #### [Visual Studio 정적 코드 분석을 사용하여 스토어 앱의 Visual Basic 및 C# 코드 품질 분석](analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md)
 #### [Visual Studio 정적 코드 분석을 사용하여 스토어 앱의 C++ 코드 품질 분석](analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -88,6 +88,7 @@
 ### [도구 상자, 구성 요소 탭](toolbox-components-tab.md)
 ### [도구 상자, 데이터 탭](toolbox-data-tab.md)
 ### [도구 상자, HTML 탭](toolbox-html-tab.md)
+## [XAML 디자이너 옵션 페이지](xaml-designer.md)
 # [Devenv 명령줄 스위치](devenv-command-line-switches.md)
 ## [-? (devenv.exe)](q-devenv-exe.md)
 ## [-Build (devenv.exe)](build-devenv-exe.md)
@@ -162,8 +163,3 @@
 ## [Microsoft의 접근성 제품 및 서비스](accessibility-products-and-services-from-microsoft.md)
 ## [접근성을 제공하는 응용 프로그램 설계를 위한 리소스](resources-for-designing-accessible-applications.md)
 ## [프록시 권한 필요](proxy-authorization-required.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

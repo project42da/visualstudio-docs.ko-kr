@@ -1,5 +1,5 @@
 # [MsBuild](msbuild.md)
-## [MSBuild 12.0의 새로운 기능](what-s-new-in-msbuild-12-0.md)
+## [MSBuild 15.0의 새로운 기능](what-s-new-in-msbuild-15-0.md)
 ## [MSBuild 개념](msbuild-concepts.md)
 ### [MSBuild 속성](msbuild-properties.md)
 #### [방법: 빌드 시 환경 변수 사용](how-to-use-environment-variables-in-a-build.md)
@@ -194,8 +194,3 @@
 ### [이스케이프할 특수 문자](special-characters-to-escape.md)
 ## [MSBuild 용어](msbuild-glossary.md)
 ## [추가 MSBuild 리소스](additional-msbuild-resources.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
