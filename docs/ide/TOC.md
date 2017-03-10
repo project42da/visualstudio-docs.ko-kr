@@ -49,7 +49,7 @@
 #### [8단계: 게임 플레이어가 이겼는지 여부를 확인하는 메서드 추가](step-8-add-a-method-to-verify-whether-the-player-won.md)
 #### [9단계: 기타 기능 사용](step-9-try-other-features.md)
 ## [Visual Studio에서 C++ 시작](getting-started-with-cpp-in-visual-studio.md)
-## [Visual Studio 2015에서 디버깅 시작](getting-started-with-debugging-in-visual-studio.md)
+## [Visual Studio에서 디버깅 시작](getting-started-with-debugging-in-visual-studio.md)
 # [Visual Studio 확장 찾기 및 사용](finding-and-using-visual-studio-extensions.md)
 # [Visual Studio의 솔루션 및 프로젝트](solutions-and-projects-in-visual-studio.md)
 ## [솔루션 및 프로젝트 만들기](creating-solutions-and-projects.md)

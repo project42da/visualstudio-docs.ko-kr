@@ -1,48 +1,63 @@
 ---
 title: "방법: 대상 및 작업 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 92814100-392a-471d-96fd-e26f637d6cc2
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# 방법: 대상 및 작업 구성
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: ac979e7287046164db37848778f648656f7230a6
+ms.lasthandoff: 02/22/2017
 
-선택한 MSBuild 작업은 개발 컴퓨터의 환경에 관계 없이 대상 환경에서 실행 되도록 설정할 수 있습니다.  예를 들어, 64 비트 컴퓨터를 사용 하 여 해당 대상을 32 비트 아키텍처는 응용 프로그램을 빌드하는 경우 선택한 작업 32 비트 프로세스에서 실행 됩니다.  
+---
+# <a name="how-to-configure-targets-and-tasks"></a>방법: 대상 및 작업 구성
+선택된 MSBuild 작업은 개발 컴퓨터의 환경에 관계 없이 대상으로 지정된 환경에서 실행되도록 설정할 수 있습니다. 예를 들어 64비트 컴퓨터를 사용하여 32비트 아키텍처를 대상으로 하는 응용 프로그램을 빌드할 경우 선택한 작업은 32비트 프로세스에서 실행됩니다.  
   
 > [!NOTE]
->  빌드 작업을 작성 하는 경우에.C\# 또는 Visual Basic 같은 언어를 NET 하 고 하지 않는 네이티브 리소스를 사용 하거나 도구, 다음이 실행 될 대상 컨텍스트에서 적응 하지 않고 있습니다.  
+>  빌드 작업이 Visual C# 또는 Visual Basic 같은 .NET 언어로 작성되고 네이티브 리소스 또는 도구를 사용하지 않는 경우 조정 없이도 모든 대상 컨텍스트에서 실행됩니다.  
   
-## UsingTask 특성 및 작업 매개 변수  
- 다음 `UsingTask` 특성이 특정 빌드 프로세스에서 작업의 모든 작업에 영향을 줍니다.  
+## <a name="usingtask-attributes-and-task-parameters"></a>UsingTask 특성 및 작업 매개 변수  
+ 다음 `UsingTask` 특성은 특정 빌드 프로세스에서 작업의 모든 작동에 영향을 줍니다.  
   
--   `Runtime` 특성에 있는 경우 공용 언어 런타임 \(CLR\) 버전을 설정 하는 및 이러한 값 중 하나를 사용할 수 있습니다: `CLR2`, `CLR4`, `CurrentRuntime`, 또는 `*` \(런타임\).  
+-   `Runtime` 특성(있는 경우)은 CLR(공용 언어 런타임) 버전을 설정하고 `CLR2`, `CLR4`, `CurrentRuntime` 또는 `*`(임의 런타임) 값 중 하나를 사용할 수 있습니다.  
   
--   `Architecture` 특성에 있는 경우 플랫폼 및 비트를 설정 하는 및 다음이 값 중 하나를 사용할 수 있습니다: `x86`, `x64`, `CurrentArchitecture`, 또는 `*` \(아키텍처\).  
+-   `Architecture` 특성(있는 경우)은 플랫폼 및 비트를 설정하고 `x86`, `x64`, `CurrentArchitecture` 또는 `*`(임의 아키텍처) 값 중 하나를 사용할 수 있습니다.  
   
--   `TaskFactory` 특성이 있을 경우 설정 만듭니다 및 작업 인스턴스가 실행 되 고 값만을 사용 하는 작업 팩토리의 `TaskHostFactory`.  자세한 내용은이 문서의 뒷부분에 나오는 작업 팩토리 섹션을 참조 하십시오.  
+-   `TaskFactory` 특성은(있는 경우) 작업 인스턴스를 만들고 실행하는 작업 팩터리를 설정하고 값 `TaskHostFactory`만 사용합니다. 자세한 내용은 이 문서 뒷부분에 나오는 작업 팩터리 섹션을 참조하세요.  
   
-```  
+```xml  
 <UsingTask TaskName="SimpleTask"   
    Runtime="CLR2"  
    Architecture="x86"  
    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v3.5.dll" />  
 ```  
   
- 수도 있습니다의 `MSBuildRuntime` 및 `MSBuildArchitecture` 개별 작업의 대상 컨텍스트를 설정 하는 매개 변수입니다.  
+ `MSBuildRuntime` 및 `MSBuildArchitecture` 매개 변수를 사용하여 개별 작업의 대상 컨텍스트를 설정할 수도 있습니다.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    <Target Name="MyTarget">  
       <SimpleTask MSBuildRuntime="CLR2" MSBuildArchitecture= "x86"/>  
@@ -50,14 +65,14 @@ manager: "ghogen"
 </Project>  
 ```  
   
- MSBuild 작업을 실행 하기 전에, 일치를 보이는 `UsingTask` 는 동일한 대상 컨텍스트를가지고 있습니다.  지정 된 매개 변수는 `UsingTask` 일치 하는 해당 작업이 아닌로 간주 됩니다.  작업이 있지만 해당 하는 지정 된 매개 변수 `UsingTask` 도 일치할 것으로 간주 됩니다.  매개 변수 값을 지정 하지 않은 경우는 `UsingTask` 작업 기본 값 또는 `*` \(매개 변수\)입니다.  
+ MSBuild가 작업을 실행하기 전에 동일한 대상 컨텍스트를 갖는 일치하는 `UsingTask`를 찾습니다.  `UsingTask`에 지정되어 있으나 해당 작업에는 지정되지 않은 매개 변수는 일치하는 항목으로 간주됩니다.  작업에 지정되어 있으나 해당 `UsingTask`에는 지정되지 않은 매개 변수도 일치하는 항목으로 간주됩니다. 매개 변수 값이 `UsingTask` 및 작업 둘 다에 지정되지 않은 경우 값의 기본값은 `*`(임의 매개 변수)입니다.  
   
 > [!WARNING]
->  두 개 이상의 경우 `UsingTask` 존재와 모두 일치 하는 `TaskName`, `Runtime`, 및 `Architecture` 특성을 마지막으로 평가 될 대신 다른.  
+>  둘 이상의 `UsingTask`가 존재하며 모두 일치하는 `TaskName`, `Runtime` 및 `Architecture` 특성을 갖는 경우 마지막으로 평가되는 특성이 다른 특성을 대신합니다.  
   
- MSBuild 작업의 매개 변수를 설정 하는 경우 찾으려고 시도 `UsingTask` 는 이러한 매개 변수를 일치 하 또는 적어도 충돌 하 게 아닙니다.  두 개 이상의 `UsingTask` 같은 작업의 대상 컨텍스트를 지정할 수 있습니다.  예를 들어, 다른 실행 가능한 다른 대상 환경에 대 한 작업에이 유사할 수 있습니다.  
+ 매개 변수가 작업에 설정되어 있으면 MSBuild는 이러한 매개 변수와 일치하거나 적어도 충돌하지 않는 `UsingTask`를 찾으려고 합니다.  둘 이상의 `UsingTask`는 동일한 작업의 대상 컨텍스트를 지정할 수 있습니다.  예를 들어, 대상 환경마다 다른 실행 파일을 갖는 작업은 다음과 비슷할 수 있습니다.  
   
-```  
+```xml  
 <UsingTask TaskName="MyTool"   
    Runtime="CLR2"  
    Architecture="x86"  
@@ -76,20 +91,20 @@ manager: "ghogen"
   
 ```  
   
-## 작업 공장  
- 이 작업을 실행 하기 전에 Msbuild는 현재 소프트웨어 컨텍스트에서 실행 하도록 지정 된 여부를 확인 합니다 확인 합니다.  작업 이므로 지정 된 경우 MSBuild 현재 프로세스에서 실행 되는 Assemblytaskfactory를 전달 합니다. 그렇지 않으면 MSBuild 작업 작업 대상 컨텍스트에 일치 하는 프로세스에서 실행 되는 Taskhostfactory를 전달 합니다.  현재 컨텍스트와 대상 컨텍스트를 일치 하는 경우에 작업이 실행 되도록 할 수 있습니다\-설정 하 여 out\-of\-process \(대 한 격리, 보안, 또는 다른 이유로\) `TaskFactory` 에 `TaskHostFactory`.  
+## <a name="task-factories"></a>작업 팩터리  
+ 작업을 실행하기 전에 MSBuild는 작업이 현재 소프트웨어 컨텍스트에서 실행되도록 지정되어 있는지 여부를 확인합니다.  작업이 이렇게 지정된 경우 MSBuild는 작업을 현재 프로세스에서 실행하는 AssemblyTaskFactory로 전달하고, 그렇지 않으면 대상 컨텍스트와 일치하는 프로세스에서 작업을 실행하는 TaskHostFactory로 작업을 전달합니다. 현재 컨텍스트 및 대상 컨텍스트가 일치하더라도 `TaskFactory`를 `TaskHostFactory`로 설정하여 강제로 작업이 out-of-process로 실행되도록 할 수 있습니다(격리, 보안 또는 기타 이유로).  
   
-```  
+```xml  
 <UsingTask TaskName="MisbehavingTask"   
    TaskFactory="TaskHostFactory"  
    AssemblyFile="$(MSBuildToolsPath)\MyTasks.dll">  
 </UsingTask>  
 ```  
   
-## 존재 하지 않는 작업 매개 변수  
- 와 같은 기타 작업 매개 `MSBuildRuntime` 및 `MSBuildArchitecture` 빌드 속성을 설정할 수 있습니다.  
+## <a name="phantom-task-parameters"></a>가상 작업 매개 변수  
+ 다른 모든 작업 매개 변수와 마찬가지로 `MSBuildRuntime` 및 `MSBuildArchitecture`는 빌드 속성에서 설정할 수 있습니다.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    <PropertyGroup>  
       <FrameworkVersion>3.0</FrameworkVersion>  
@@ -98,17 +113,17 @@ manager: "ghogen"
       <SimpleTask MSBuildRuntime="$(FrameworkVerion)" MSBuildArchitecture= "x86"/>  
    </Target>  
 </Project>  
-```  
+```xml  
   
- 달리 다른 작업 매개 변수를 `MSBuildRuntime` 및 `MSBuildArchitecture` 작업에 표시 되지 않습니다.  실행 컨텍스트를 인식 하는 작업을 기록 하는 컨텍스트를 호출 하 여 테스트 해야를 합니다.NET Framework를 하거나 빌드 속성을 사용 하 여 컨텍스트 정보가 다른 작업 매개 변수를 통해 전달 합니다.  
-  
-> [!NOTE]
->  `UsingTask`도구 집합 및 환경 속성에서 특성을 설정할 수 있습니다.  
-  
- `MSBuildRuntime` 및 `MSBuildArchitecture` 매개 변수를 대상 컨텍스트 있지만 가장 제한의 범위를 설정할 수 있는 가장 유연한 방법을 제공 합니다.  한편, 작업 인스턴스를 설정 하 고 작업을 실행 하려고 때까지 평가 되지 않습니다 때문에 값 평가 시간 및 빌드 시간에 모두 사용할 수 있는 속성의 전체 범위에서 파생할 수 있습니다.  반면, 이러한 매개 변수에 특정 인스턴스를 작업의 특정 대상에만 적용 됩니다.  
+ Unlike other task parameters, `MSBuildRuntime` and `MSBuildArchitecture` are not apparent to the task itself.  To write a task that is aware of the context in which it runs, you must either test the context by calling the .NET Framework, or use build properties to pass the context information through other task parameters.  
   
 > [!NOTE]
->  작업 매개 변수는 부모 노드의 컨텍스트에, 호스트의 컨텍스트에서 않습니다 평가 됩니다.런타임 또는 아키텍처\-종속 \(프로그램 파일 위치\)와 같은 환경 변수를 부모 노드를 일치 하는 값을 평가 합니다.  그러나 같은 환경 변수를 작업에서 직접 읽으면 제대로 호스트의 컨텍스트에서 계산 됩니다.  
+>  `UsingTask` attributes can be set from toolset and environment properties.  
   
-## 참고 항목  
- [대상 및 작업 구성](../msbuild/configuring-targets-and-tasks.md)
+ The `MSBuildRuntime` and `MSBuildArchitecture` parameters provide the most flexible way to set the target context, but also the most limited in scope.  On the one hand, because they are set on the task instance itself and are not evaluated until the task is about to run, they can derive their value from the full scope of properties available at both evaluation-time and build-time.  On the other hand, these parameters only apply to a particular instance of a task in a particular target.  
+  
+> [!NOTE]
+>  Task parameters are evaluated in the context of the parent node, not in the context of the task host.Environment variables that are runtime- or architecture- dependent (such as the Program files location) will evaluate to the value that matches the parent node.  However, if the same environment variable is read directly by the task, it will correctly be evaluated in the context of the task host.  
+  
+## See Also  
+ [Configuring Targets and Tasks](../msbuild/configuring-targets-and-tasks.md)

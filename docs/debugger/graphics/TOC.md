@@ -13,7 +13,7 @@
 ## [절반/분기 텍스처 크기 변형](half-quarter-texture-dimensions-variant.md)
 ## [BC 텍스처 압축 변형](bc-texture-compression-variant.md)
 # [이벤트 목록](graphics-event-list.md)
-# [상태](graphics-state.md)
+# [그래픽 상태](graphics-state.md)
 # [파이프라인 단계](graphics-pipeline-stages.md)
 # [이벤트 호출 스택](graphics-event-call-stack.md)
 # [픽셀 기록](graphics-pixel-history.md)

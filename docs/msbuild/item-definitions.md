@@ -1,49 +1,64 @@
 ---
 title: "항목 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "msbuild, 항목 정의"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- msbuild, item definitions
 ms.assetid: 8e3dc223-f9e5-4974-aa0e-5dc7967419cb
 caps.latest.revision: 21
-caps.handback.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# 항목 정의
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: f9359f3828ab31c69e7c5db46a1136990ceeab67
+ms.lasthandoff: 02/22/2017
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0에서는 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 요소를 사용하여 프로젝트 파일의 항목을 정적으로 선언할 수 있지만  메타데이터가 모든 항목에 대해 동일한 경우에도 항목 수준에만 메타데이터를 추가할 수 있습니다.  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5에서 시작하여, [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) 라는 프로젝트 요소가 이 한계를 극복합니다.  *ItemDefinitionGroup*을 사용하면 명명된 항목 형식의 모든 항목에 기본 메타데이터 값을 추가하는 항목 정의 집합을 정의할 수 있습니다.  
+---
+# <a name="item-definitions"></a>항목 정의
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0에서는 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 요소를 사용하여 프로젝트 파일에서 항목의 정적 선언을 수행할 수 있습니다. 그러나 메타데이터는 모든 항목에 대해 동일하더라도 항목 수준에만 추가할 수 있습니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5부터 [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md)이라는 프로젝트 요소가 이 제한 사항을 해결합니다. *ItemDefinitionGroup*을 사용하면 명명된 항목 형식의 모든 항목에 기본 메타데이터 값을 추가하는 항목 정의 집합을 정의할 수 있습니다.  
   
- *ItemDefinitionGroup* 요소는 프로젝트 파일의 [Project](../msbuild/project-element-msbuild.md) 요소 바로 뒤에 표시됩니다.  항목 정의는 다음과 같은 기능을 제공합니다.  
+ *ItemDefinitionGroup* 요소는 프로젝트 파일의 [Project](../msbuild/project-element-msbuild.md) 요소 바로 뒤에 표시됩니다. 항목 정의는 다음과 같은 기능을 제공합니다.  
   
--   대상 밖에 있는 항목에 대한 전역 메타데이터 기본값을 정의할 수 있습니다.  즉, 동일한 메타데이터가 지정된 형식의 모든 항목에 적용됩니다.  
+-   대상 외부에 있는 항목에 대한 전역 기본 메타데이터를 정의할 수 있습니다. 즉, 동일한 메타데이터가 지정된 형식의 모든 항목에 적용됩니다.  
   
--   항목 형식에 여러 정의가 있을 수 있습니다.  항목 형식에 추가 메타데이터 사양을 추가하면 마지막 사양이 우선적으로 적용됩니다. 메타데이터는 속성과 동일한 가져오기 순서를 따릅니다.  
+-   항목 형식은 여러 정의를 포함할 수 있습니다. 추가 메타데이터 사양이 형식에 추가되면 마지막 사양이 우선적으로 적용됩니다. \(메타데이터는 속성이 따르는 동일한 가져오기 순서를 따릅니다.\)  
   
--   메타데이터를 누적할 수 있습니다.  예를 들어, CDefines 값은 설정하고 있는 속성에 따라 조건부로 누적됩니다.  예를 들면 `MT;STD_CALL;DEBUG;UNICODE`와 같습니다.  
+-   메타데이터는 가산될 수 있습니다. 예를 들어 CDefines 값은 설정되는 속성에 따라 조건부로 누적됩니다. 예를 들어, `MT;STD_CALL;DEBUG;UNICODE`을 입력합니다.  
   
--   메타데이터를 제거할 수 있습니다.  
+-   메타데이터는 제거될 수 있습니다.  
   
--   조건을 사용하여 메타데이터의 포함 여부를 제어할 수 있습니다.  
+-   메타데이터의 포함 여부를 제어하는 데 조건을 사용할 수 있습니다.  
   
-## 항목 메타데이터 기본값  
- ItemDefinitionGroup에 정의된 항목 메타데이터는 단지 기본 메타데이터의 선언입니다.  메타데이터는 ItemGroup을 사용하여 메타데이터 값을 포함하는 항목을 정의할 경우에만 적용됩니다.  
+## <a name="item-metadata-default-values"></a>항목 메타데이터 기본값  
+ ItemDefinitionGroup에 정의된 항목 메타데이터는 기본 메타데이터의 선언일 뿐입니다. 이 메타데이터는 ItemGroup을 사용하여 메타데이터 값을 포함하는 Item을 정의해야만 적용됩니다.  
   
 > [!NOTE]
->  이 항목의 많은 예제에는 ItemDefinitionGroup 요소가 나오지만 해당 ItemGroup 정의는 혼동을 피하기 위해 생략되었습니다.  
+>  이 항목에 나오는 대부분의 예제에서는 ItemDefinitionGroup 요소는 표시되지만 해당 ItemGroup 정의는 간결성을 위해 생략되어 있습니다.  
   
- ItemGroup에 명시적으로 정의된 메타데이터는 ItemDefinitionGroup에 있는 메타데이터보다 우선합니다.  ItemDefinitionGroup에 있는 메타데이터는 ItemGroup에 있는 정의되지 않은 메타데이터에 대해서만 적용됩니다.  예를 들면 다음과 같습니다.  
+ ItemGroup에 명시적으로 정의된 메타데이터는 ItemDefinitionGroup의 메타데이터보다 우선합니다. ItemDefinitionGroup의 메타데이터는 ItemGroup의 정의되지 않은 메타데이터에만 적용됩니다. 예:  
   
-```  
+```xml  
 <ItemDefinitionGroup>  
     <i>  
         <m>m1</m>  
@@ -58,43 +73,43 @@ manager: "ghogen"
 </ItemGroup>  
 ```  
   
- 이 예제에서 기본 메타데이터 "m"은 항목 "i"에 의해 명시적으로 정의되지 않으므로 항목 "i"에 적용됩니다.  그러나 기본 메타데이터 "n"은 항목 "i"에 의해 이미 정의되어 있으므로 항목 "i"에 적용되지 않습니다.  
+ 이 예제에서 기본 메타데이터 "m"은 Item "i"로 명시적으로 정의되지 않으므로 Item "i"에 적용됩니다. 그러나 기본 메타데이터 "n"은 Item "i"로 이미 정의되어 있으므로 Item "i"에 적용되지 않습니다.  
   
 > [!NOTE]
->  XML 요소 및 매개 변수 이름은 대\/소문자를 구분합니다.  항목 메타데이터 및 항목\/속성 이름은 대\/소문자를 구분하지 않습니다.  따라서 이름이 대\/소문자만 다른 ItemDefinitionGroup 항목은 동일한 ItemGroup으로 처리되어야 합니다.  
+>  XML 요소 및 매개 변수 이름은 대소문자를 구분합니다. 항목 메타데이터 및 ITEM\/속성 이름은 대소문자를 구분하지 않습니다. 따라서 이름에서 대/소문자만 다른 ItemDefinitionGroup 항목은 같은 ItemGroup으로 취급해야 합니다.  
   
-## 값 소스  
+## <a name="value-sources"></a>값 소스  
  ItemDefinitionGroup에 정의된 메타데이터 값은 다음과 같은 다양한 소스에서 가져올 수 있습니다.  
   
 -   PropertyGroup 속성  
   
--   ItemDefinitionGroup 항목  
+-   ItemDefinitionGroup의 항목  
   
 -   ItemDefinitionGroup 항목의 항목 변환  
   
 -   환경 변수  
   
--   전역 속성\(MSBuild.exe 명령줄\)  
+-   \(MSBuild.exe 명령줄의\) 전역 속성  
   
--   예약 속성  
+-   예약된 속성  
   
--   ItemDefinitionGroup 항목의 잘 알려진 메타데이터  
+-   ItemDefinitionGroup의 Item에 대한 잘 알려진 메타데이터  
   
 -   CDATA 섹션 \<\!\[CDATA\[여기에 있는 내용은 구문 분석되지 않음\]\]\>  
   
 > [!NOTE]
->  ItemDefinitionGroup 요소가 ItemGroup 요소보다 먼저 처리되기 때문에 ItemGroup의 항목 메타데이터는 ItemDefinitionGroup 메타데이터 선언에 도움이 되지 않습니다.  
+>  ItemGroup의 항목 메타데이터는 ItemDefinitionGroup 요소가 ItemGroup 요소보다 먼저 처리되므로 ItemDefinitionGroup 메타데이터 선언에서 사용 가능하지 않습니다.  
   
-## 누적 및 다중 정의  
- 정의를 추가하거나 여러 ItemDefinitionGroup을 사용할 때는 다음 사항을 고려해야 합니다.  
+## <a name="additive-and-multiple-definitions"></a>가산 및 다중 정의  
+ 정의를 추가하거나 여러 ItemDefinitionGroup을 사용할 때는 다음 사항에 유의하세요.  
   
--   추가 메타데이터 사양이 형식에 추가됩니다.  
+-   추가 메타데이터 사양은 형식에 추가됩니다.  
   
 -   마지막 사양이 우선적으로 적용됩니다.  
   
- 여러 ItemDefinitionGroup이 있을 경우 이후의 각 사양을 통해 이전 정의에 해당 메타데이터가 추가됩니다.  예를 들면 다음과 같습니다.  
+ 여러 ItemDefinitionGroup이 있는 경우 각 후속 사양은 해당 메타데이터를 이전 정의에 추가합니다. 예:  
   
-```  
+```xml  
 <ItemDefinitionGroup>  
     <i>  
         <m>m1</m>  
@@ -108,11 +123,11 @@ manager: "ghogen"
 </ItemDefinitionGroup>  
 ```  
   
- 이 예제에서는 메타데이터 "o"가 "m"과 "n"에 추가됩니다.  
+ 이 예제에서는 "o" 메타데이터는 "m"와 "n"에 추가됩니다.  
   
- 또한 이전에 정의된 메타데이터 값이 추가될 수도 있습니다.  예를 들면 다음과 같습니다.  
+ 또한 이전에 정의된 메타데이터 값을 추가할 수도 있습니다. 예:  
   
-```  
+```xml  
 <ItemDefinitionGroup>  
     <i>  
         <m>m1</m>  
@@ -125,14 +140,14 @@ manager: "ghogen"
 </ItemDefinitionGroup>    
 ```  
   
- 이 예제에서는 메타데이터 "m"\(m1\)에 대해 이전에 정의된 값이 새 값\(m2\)에 추가되어 최종 값은 "m1;m2"입니다.  
+ 이 예제에서는 메타데이터 "m"에 대해 이전에 정의된 값 \(m1\)이 새 값 \(m2\)에 추가되므로 최종 값은 "m1;m2"가 됩니다.  
   
 > [!NOTE]
->  이것은 동일한 ItemDefinitionGroup에서도 발생할 수 있습니다.  
+>  이 작업은 동일한 ItemDefinitionGroup에서도 발생할 수 있습니다.  
   
- 이전에 정의된 메타데이터를 재정의하면 마지막 사양이 우선적으로 적용됩니다.  다음 예제에서는 메타데이터 "m"의 최종 값이 "m1"에서 "m1a"로 변경됩니다.  
+ 이전에 정의된 메타데이터를 재정의하면 마지막 사양이 우선적으로 적용됩니다. 다음 예제에서 메타데이터 "m"의 최종 값은 "m1"에서 "m1a"로 이동합니다.  
   
-```  
+```xml  
 <ItemDefinitionGroup>  
     <i>  
         <m>m1</m>  
@@ -145,10 +160,10 @@ manager: "ghogen"
 </ItemDefinitionGroup>    
 ```  
   
-## ItemDefinitionGroup의 조건 사용  
- ItemDefinitionGroup의 조건을 사용하여 메타데이터의 포함 여부를 제어할 수 있습니다.  예를 들면 다음과 같습니다.  
+## <a name="using-conditions-in-an-itemdefinitiongroup"></a>ItemDefinitionGroup에서 조건 사용  
+ ItemDefinitionGroup에서 조건을 사용하여 메타데이터의 포함 여부를 제어할 수 있습니다. 예:  
   
-```  
+```xml  
 <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">  
     <i>  
         <m>m1</m>  
@@ -156,30 +171,45 @@ manager: "ghogen"
 </ItemDefinitionGroup>  
 ```  
   
- 이 예제에서는 "Configuration" 속성의 값이 "Debug"일 경우에만 항목 "i"의 기본 메타데이터 "m1"이 포함됩니다.  
+ 이 경우에 "Configuration" 속성의 값이 "Debug"인 경우에만 항목 "i"의 기본 메타데이터 "m1"이 포함됩니다.  
   
 > [!NOTE]
->  조건에서는 로컬 메타데이터 참조만 지원됩니다.  
+>  로컬 메타데이터 참조만 조건에서 지원됩니다.  
   
- 이전 ItemDefinitionGroup에 정의된 메타데이터에 대한 참조는 정의 그룹이 아니라 항목에 로컬입니다.  즉, 참조 범위는 항목을 기준으로 결정됩니다.  예를 들면 다음과 같습니다.  
+ 이전 ItemDefinitionGroup에 정의된 메타데이터에 대한 참조는 정의 그룹이 아닌 항목에 로컬입니다. 즉, 참조의 범위는 항목별로 고유합니다. 예:  
   
-```  
+```xml  
 <ItemDefinitionGroup>  
     <test>  
         <yes>1</yes>  
     </test>  
-    <i>  
+    <i> 
+        <m>m0</m>
         <m Condition="'%(test.yes)'=='1'">m1</m>  
     </i>  
 </ItemDefinitionGroup>  
-```  
-  
- 이 예제에서는 항목 "i"가 Condition에 있는 항목 "test"를 참조합니다.  
-  
-## 메타데이터 재정의 및 삭제  
- ItemDefinitionGroup 요소에 정의된 메타데이터는 해당 메타데이터 값을 빈 값으로 설정하여 이후 ItemDefinitionGroup 요소에서 재정의할 수 있습니다.  또한 빈 값으로 설정하여 메타데이터 항목을 효과적으로 삭제할 수도 있습니다.  예를 들면 다음과 같습니다.  
   
 ```  
+  
+위 예제에서 항목 "i"는 해당 Condition의 항목 "test"를 참조합니다. MSBuild는 ItemDefinitionGroup의 다른 항목 메타데이터에 대한 참조를 빈 문자열로 해석하기 때문에 이 Condition은 절대 true가 되지 않습니다. 따라서 "m"은 "m0"로 설정됩니다.
+ 
+```xml 
+  <ItemDefinitionGroup>
+    <i>
+      <m>m0</m>
+      <yes>1</yes>
+      <m Condition="'%(i.yes)'=='1'">m1</m>
+    </i>
+  </ItemDefinitionGroup>
+
+```
+
+위 예제에서 Condition은 항목 "yes"에 대한 항목 "i"의 메타데이터 값을 참조하므로 값 "m1"으로 설정됩니다. 
+  
+## <a name="overriding-and-deleting-metadata"></a>메타데이터 재정의 및 삭제  
+ ItemDefinitionGroup 요소에 정의된 메타데이터는 메타데이터 값을 공백으로 설정하여 나중에 ItemDefinitionGroup 요소에서 재정의할 수 있습니다. 또한 빈 값으로 설정하면 메타데이터 항목을 효과적으로 삭제할 수 있습니다. 예:  
+  
+```xml  
 <ItemDefinitionGroup>  
     <i>  
         <m>m1</m>  
@@ -192,12 +222,12 @@ manager: "ghogen"
 </ItemDefinitionGroup>  
 ```  
   
- 항목 "i"는 메타데이터 "m"을 여전히 포함하고 있지만 해당 값은 이제 비어 있습니다.  
+ 항목 "i"에는 여전히 메타데이터 "m"이 포함되지만 해당 값은 이제 비어 있습니다.  
   
-## 메타데이터 범위  
- ItemDefinitionGroup은 정의된 위치에 관계없이 정의된 속성과 전역 속성에서 전역 범위를 갖습니다.  ItemDefinitionGroup의 기본 메타데이터 정의는 자체 참조될 수 있습니다.  예를 들어, 다음 예제에서는 단순 메타데이터 참조를 사용합니다.  
+## <a name="scope-of-metadata"></a>메타데이터의 범위  
+ ItemDefinitionGroup의 정의된 전역 속성에는 해당 항목이 정의되는 전역 범위가 지정됩니다. ItemDefinitionGroup의 기본 메타데이터 정의는 자체 참조될 수 있습니다. 예를 들어 다음에서는 간단한 메타데이터 참조를 사용합니다.  
   
-```  
+```xml  
 <ItemDefinitionGroup>  
     <i>  
         <m>m1</m>  
@@ -206,9 +236,9 @@ manager: "ghogen"
 </ItemDefinitionGroup>  
 ```  
   
- 또한 다음과 같은 정규화된 메타데이터 참조를 사용할 수도 있습니다.  
+ 정규화된 메타데이터 참조를 사용할 수도 있습니다.  
   
-```  
+```xml  
 <ItemDefinitionGroup>  
     <i>  
       <m>m1</m>  
@@ -217,9 +247,9 @@ manager: "ghogen"
 </ItemDefinitionGroup>  
 ```  
   
- 그러나 다음 예제는 올바르지 않습니다.  
+ 그러나 다음은 유효하지 않습니다.  
   
-```  
+```xml  
 <ItemDefinitionGroup>  
     <i>  
         <m>m1</m>  
@@ -228,9 +258,9 @@ manager: "ghogen"
 </ItemDefinitionGroup>  
 ```  
   
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5부터는 ItemGroup도 자체 참조될 수 있습니다.  예를 들면 다음과 같습니다.  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5부터 ItemGroup 또한 자체 참조될 수 있습니다. 예:  
   
-```  
+```xml  
 <ItemGroup>  
     <item Include="a">  
         <m>m1</m>  
@@ -239,5 +269,6 @@ manager: "ghogen"
 </ItemGroup>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [일괄 처리](../msbuild/msbuild-batching.md)
+
