@@ -145,7 +145,7 @@ JavaScript는 Visual Studio의 고급 언어입니다. Visual Studio IDE에서 J
 
 <p><ul class="panelContent cardsW">
     <li>
-        <a href="https://docs.microsoft.com/scripting/javascript">
+        <a href="https://docs.microsoft.com/scripting/javascript/javascript-language-reference">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
