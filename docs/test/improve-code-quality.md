@@ -1,7 +1,7 @@
 ---
 title: "코드 품질 향상"
 ms.custom: na
-ms.date: 10/14/2016
+ms.date: 02/17/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -30,8 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 93f70de0acfa8b5efcfe141a1f8060061a4ba15d
-ms.openlocfilehash: 0c439304b8a23166293fc4cc6d984947fd51f133
+ms.sourcegitcommit: 7a282fc04c1eb01f0c56b1d76880276fc270686d
+ms.openlocfilehash: df5195e7cc435f6da8ebfee4589d7c6258018993
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="improve-code-quality"></a>코드 품질 향상
@@ -49,8 +50,6 @@ ms.openlocfilehash: 0c439304b8a23166293fc4cc6d984947fd51f133
 |[코드 단위 테스트](../test/unit-test-your-code.md)|테스트 탐색기를 사용하면 개발 연습에서 단위 테스트를 쉽게 통합할 수 있습니다. Microsoft 단위 테스트 프레임워크를 사용하거나 여러 타사 및 공개 소스 프레임워크 중 하나를 사용할 수 있습니다.|  
 |[응용 프로그램 품질 분석](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)|정족 코드 분석 도구는 C++ 및 관리 코드에서 디자인, 사용, 유지 관리 및 스타일 문제를 검색합니다. 이러한 문제의 대부분은 표준 테스트 환경에서 재현하기 어려운 버그를 일으킬 수 있습니다.|  
 |[관리 코드의 복잡성 및 유지 관리 용이성 측정](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|코드 메트릭은 개발자가 개발 중인 코드에 대해 더 정확히 파악할 수 있도록 하는 소프트웨어 측정 방법입니다. 메트릭에는 함수 및 클래스에 대한 유지 관리 인덱스, 함수의 순환 복잡성(Cyclomatic Complexity), 클래스의 상속 깊이, 클래스 간의 결합 양을 포함합니다.|  
-|[PreEmptive Analytics for TFS](http://msdn.microsoft.com/library/hh973124.aspx)|TFS용 PreEmptive Analytics CE는 피드백 기반의 개발 프로세스를 개발 워크플로에 통합하는 데 유용합니다. 응용 프로그램 실행 중 오류가 발생하면 예외 보고서 데이터가 자동으로 PreEmptive Analytics 서비스로 다시 전송됩니다. 그런 다음 서비스는 사용자가 정의한 규칙 및 임계값에 따라 Microsoft Team Foundation Server에서 작업 항목을 만들거나 업데이트합니다.|  
-|[PreEmptive Dotfuscator and Analytics CE](assetId:///25d195d4-9f76-4dcc-9fbb-eeb9bdca9a3f)|PreEmptive Dotfuscator는 프로그램을 작고 효율적으로 유지하면서 리버스 엔지니어링으로부터 프로그램을 보호하는 .NET 난독 처리기 및 컴팩터입니다.|  
   
 ## <a name="related-scenarios"></a>관련 시나리오  
  [애플리케이션 수명 주기 관리에 Visual Studio 및 Team Foundation Server 도입](assetId:///7ae9182f-4762-4bd3-b238-39ce987932e5)  
@@ -62,13 +61,11 @@ ms.openlocfilehash: 0c439304b8a23166293fc4cc6d984947fd51f133
  [응용 프로그램 테스트](https://www.visualstudio.com/docs/test/overview)  
  [!INCLUDE[vsPreShort](../test/includes/vspreshort_md.md)] 및 [!INCLUDE[vsUltShort](../test/includes/vsultshort_md.md)]을 사용하여 테스트 수명 주기 전체에서 생산성을 높일 수 있습니다. [!INCLUDE[vsPreShort](../test/includes/vspreshort_md.md)] 또는 [!INCLUDE[vsUltShort](../test/includes/vsultshort_md.md)]에서는 테스트 관련 활동을 계획할 수 있습니다. 수동 테스트와 자동화된 테스트를 모두 만들고, 관리하고, 편집하고, 실행할 수 있습니다. 또한 계획에 따라 테스트 진행률을 검토할 수 있습니다.  
   
+ [PreEmptive Protection - Dotfuscator로 응용 프로그램 보호](../ide/dotfuscator/index.md)  
+ 무료 Dotfuscator Community Edition을 사용하여 거래 비밀 및 기타 IP(지적 재산권)를 보호하고, 불법 복제 및 위조를 줄이고, 변조 및 무단 디버깅으로부터 보호하는 데 도움을 얻을 수 있습니다.  Dotfuscator는 추가적인 프로그래밍이나 소스 코드 액세스 없이도 컴파일된 어셈블리를 보호하고 강화합니다.
+  
  [응용 프로그램 빌드](https://www.visualstudio.com/docs/build/overview)  
  [!INCLUDE[esprbuild](../test/includes/esprbuild_md.md)]를 사용하여 코드에 대해 자동화된 빌드를 만들고 관리할 수 있습니다. [!INCLUDE[esprbuild](../test/includes/esprbuild_md.md)]를 사용하면 서버를 만들어 빌드를 배포할 수 있습니다. 또한 빌드 추세를 분석할 수 있습니다.  
   
  [Visual Studio Online 또는 Team Foundation Server를 사용하여 작업 추적](https://www.visualstudio.com/docs/work/overview)  
  [!INCLUDE[vstsTfsLong](../test/includes/vststfslong_md.md)]를 사용하여 프로젝트에서 활성 프로세스, 공식 프로세스 또는 이러한 프로세스의 변형 중에서 무엇을 사용할지를 계획하고 추적할 수 있습니다. 프로젝트를 계획하고, 계획에 대한 진행률을 추적하고, 필요한 사항을 조정하면 위험을 줄이고, 원하지 않는 상황을 방지하고, 프로젝트 비용을 관리할 수 있습니다.
-
-
-<!--HONumber=Feb17_HO4-->
-
-
