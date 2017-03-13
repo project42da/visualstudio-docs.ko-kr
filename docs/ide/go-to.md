@@ -27,16 +27,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: b259c5d02a452bfaa3bd59f2096b43ee1c1c5942
-ms.openlocfilehash: 352de7f71f8a6c16439061c9815219e5f2b3840a
+ms.sourcegitcommit: 3b812629bf0f655f39c35a56eb1b3ca9113303a6
+ms.openlocfilehash: 8bf6d49b21d128d15f5312fb230d4a8e7a8195af
+ms.lasthandoff: 03/01/2017
 
 ---
 
 # <a name="go-to"></a>이동
 키보드와 마우스를 통해 Visual Studio IDE 내에서 코드를 쉽게 탐색하는 여러 가지 방법이 있습니다.
 
+<!-- VERSIONLESS -->
 ## <a name="go-to-all"></a>전체로 이동
-코드를 탐색하여 찾으려는 특정 비트를 찾습니다.  간단한 인터페이스에서 특정 줄, 형식, 기호, 파일 등을 검색할 수 있습니다.
+이 기능은 Visual Studio 2017 이상에 있습니다.  코드를 탐색하여 찾으려는 특정 비트를 찾을 수 있습니다.  간단한 통합 인터페이스에서 특정 줄, 형식, 기호, 파일 등을 검색할 수 있습니다.
 
 ### <a name="how-to-use"></a>사용 방법
 * **키보드**
@@ -81,6 +83,7 @@ t      | ![형식 아이콘](media/gotoall_typeicon.png)     | Ctrl+1, Ctrl+T | 
 미리 보기 탭 사용 | 선택한 항목을 IDE의 미리 보기 탭에서 즉시 표시합니다.
 자세한 정보 표시    | 문서 주석의 프로젝트, 파일, 줄 및 요약 정보를 창에 표시합니다.
 창 가운데 맞춤   | 이 창을 오른쪽 위가 아니라 IDE 가운데로 이동합니다.
+<!-- END VERSIONLESS -->
 
 ## <a name="go-to-definition"></a>정의로 이동
 형식의 소스로 이동하고 새 탭에서 결과를 엽니다.
@@ -125,8 +128,3 @@ Visual Studio의 탐색 기능을 사용하는 경우 스택에서 앞뒤로 탐
 **Ctrl+Shift+-**    | 스택에서 앞으로 탐색합니다.
 
 **보기 > 뒤로 탐색** 및 **보기 > 앞으로 탐색** 메뉴 항목을 사용할 수도 있습니다.
-
-
-<!--HONumber=Feb17_HO4-->
-
-
