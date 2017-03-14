@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio의 보안 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 8e34062596ab2f87ae97934b89b4c292e8f28f32
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 7a282fc04c1eb01f0c56b1d76880276fc270686d
+ms.openlocfilehash: 96136c7223f3d5f78fff9bfe3106d48cab4dd44a
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="security-in-visual-studio"></a>Visual Studio의 보안
@@ -56,3 +56,12 @@ ms.lasthandoff: 02/22/2017
   
  [보안 모범 사례](/visual-cpp/top/security-best-practices-for-cpp)  
  /GS 컴파일 시간 플래그에서 제공하는 Microsoft Visual C++ 보안 검사 기능의 전체 개요 및 버퍼 오버런에 대해 설명합니다.
+
+## <a name="building-for-security"></a>보안에 대해 빌드  
+ 보안 또한 빌드 프로세스에서 중요한 고려 사항입니다.  몇 가지 추가 단계로 배포된 앱의 보안을 향상하고 무단 리버스 엔지니어링, 스푸핑 또는 기타 공격을 방지할 수 있습니다.
+
+ [Dotfuscator CE(Community Edition)](dotfuscator/index.md)  
+ 무료 PreEmptive Protection - Dotfuscator Community Edition을 설정하고 시작하여 리버스 엔지니어링 및 무단 사용(무단 디버깅 등)으로부터 .NET 어셈블리를 보호하는 방법을 설명합니다.
+  
+ [어셈블리 및 매니페스트 서명 관리](managing-assembly-and-manifest-signing.md)  
+ 이름 스푸핑을 방지하기 위해, 소프트웨어 구성 요소를 고유하게 식별하는 데 사용할 수 있는 강력한 이름 서명에 관해 설명합니다.

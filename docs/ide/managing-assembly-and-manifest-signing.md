@@ -1,7 +1,7 @@
 ---
 title: "어셈블리 및 매니페스트 서명 관리 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 85474fe229980aac7c57205f111656d4264045d1
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 68358885d93e9e6b7f231750c35065be9521c3fe
+ms.openlocfilehash: b1ce5a5c4dc05cb9d0a2ebcb68a10a5054b68893
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>어셈블리 및 매니페스트 서명 관리
@@ -46,6 +46,9 @@ ms.lasthandoff: 02/22/2017
  Visual Basic 및 C# 프로젝트의 어셈블리 서명에 대한 자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9)을 참조하세요.  
   
  Visual C++ 프로젝트의 어셈블리 서명에 대한 자세한 내용은 [강력한 이름 어셈블리(어셈블리 서명)(C++/CLI)](/visual-cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)를 참조하세요.  
+
+> [!NOTE]
+>  강력한 이름 서명은 어셈블리의 리버스 엔지니어링으로부터 보호하지 않습니다.  리버스 엔지니어링으로부터 보호하려면 [Dotfuscator CE(Community Edition)](dotfuscator/index.md)를 참조하세요.
   
 ## <a name="asset-types-and-signing"></a>자산 형식 및 서명  
  .NET 어셈블리 및 응용 프로그램 매니페스트에 서명할 수 있습니다. 이러한 요구 사항은 다음과 같습니다.  
