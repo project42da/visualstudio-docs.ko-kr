@@ -1,0 +1,62 @@
+---
+title: "&#39;&lt;genericproceduresignature&gt;&#39;의 형식 매개 변수 &#39;&lt;typeparametername1&gt;&#39;의 형식 인수를 유추하지 못했습니다. | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/17/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vbc32116"
+  - "bc32116"
+helpviewer_keywords: 
+  - "BC32116"
+ms.assetid: 6bfb02ec-814a-4b1f-a585-6d902a861d00
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# &#39;&lt;genericproceduresignature&gt;&#39;의 형식 매개 변수 &#39;&lt;typeparametername1&gt;&#39;의 형식 인수를 유추하지 못했습니다.
+'\<genericproceduresignature\>'의 형식 매개 변수 '\<typeparametername1\>'의 형식 인수를 유추하지 못했습니다. '\<parametername1\>' 매개 변수에 전달된 인수에서 유추된 형식 인수가 '\<parametername2\>' 매개 변수에 전달된 인수에서 유추된 형식 인수와 충돌합니다.  
+  
+ 제네릭 프로시저가 형식 인수 없이 호출되고, 시도한 형식 유추에서 형식 매개 변수 간에 데이터 형식 충돌이 발생했습니다.  
+  
+ 일반적으로 제네릭 프로시저를 호출하는 경우 제네릭 프로시저가 정의하는 각 형식 매개 변수에 대해 형식 인수를 제공합니다. 형식 인수를 제공하지 않으면 컴파일러에서 형식 매개 변수에 전달될 형식을 유추하려고 합니다. 호출 컨텍스트에서 형식 매개 변수에 대한 충돌 데이터 형식 정보를 제공하는 경우 형식 유추가 실패합니다.  
+  
+ 다음 코드에서는 이 오류를 생성할 수 있습니다.  
+  
+```  
+Public Sub takeTwoValues(Of t)(ByVal x As t, ByVal y As t) End Sub Call takeTwoValues(4, 2.5)  
+```  
+  
+ 컴파일러는 첫 번째 인수로 인해 `t` 형식 매개 변수에 대해 `Integer`를 유추하지만 두 번째 인수로 인해 동일한 형식 매개 변수에 대해 `Double`을 유추하기 때문에 `t`에 전달할 데이터 형식과 관련해서 충돌이 발생합니다.  
+  
+ **오류 ID:** BC32116  
+  
+### 이 오류를 해결하려면  
+  
+-   컴파일러에서 유추할 필요가 없도록 제네릭 형식에 형식 인수를 제공합니다.  
+  
+    ```  
+    Call takeTwoValues(Of Double)(4, 2.5)  
+    ```  
+  
+     이 경우 두 개의 기본 인수가 서로 다른 데이터 형식이므로 호출 코드에서 두 데이터 형식을 모두 수용할 수 있는 형식 인수를 전달해야 합니다. 이 경우 `Integer`가 `Double`로 확대됩니다.  
+  
+     또는  
+  
+-   일반 매개 변수에 대해 서로 다른 형식 매개 변수를 지정하여 형식을 유추하는 동안 충돌이 발생하지 않도록 일반적인 절차를 다시 정의합니다.  
+  
+    ```  
+    Public Sub takeTwoValues(Of t1, t2)(ByVal x As t1, ByVal y As t2)  
+    ```  
+  
+## 참고 항목  
+ [Visual Basic의 제네릭 형식](/dotnet/visual-basic/programming-guide/language-features/data-types/generic-types)   
+ [Generic Procedures in Visual Basic](/dotnet/visual-basic/programming-guide/language-features/data-types/generic-procedures)   
+ [Type List](/dotnet/visual-basic/language-reference/statements/type-list)

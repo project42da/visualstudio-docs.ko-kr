@@ -1,0 +1,1 @@
+Visual Studio 2017 RC에 대한 최신 설명서는 [Visual Studio 2017 RC 설명서](http://docs.microsoft.com/visualstudio)를 참조하세요.

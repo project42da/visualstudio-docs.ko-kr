@@ -1,0 +1,35 @@
+---
+title: "컴파일러 경고(수준 1) CS1694 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1694"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1694"
+ms.assetid: 9cb6b5d4-36a0-4b07-9690-14b5105da44b
+caps.latest.revision: 14
+caps.handback.revision: 14
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 경고(수준 1) CS1694
+전처리기 지시문에 지정한 파일 이름이 잘못되었습니다. 파일 이름이 너무 길거나 유효한 파일 이름이 아닙니다.  
+  
+ 이 경고는 `#pragma checksum` 전처리기 지시문을 사용하는 경우에 발생합니다. 지정한 파일 이름이 256자보다 깁니다. 이 경고를 해결하려면 더 짧은 파일 이름을 사용합니다.  
+  
+## 예제  
+ 다음 샘플에서는 CS1694를 생성합니다.  
+  
+```  
+// cs1694.cs #pragma checksum "MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890MyFile1234567890.txt" {00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F}   // CS1694 class MyClass {}  
+```

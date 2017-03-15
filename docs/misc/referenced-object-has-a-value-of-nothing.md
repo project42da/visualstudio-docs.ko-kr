@@ -1,0 +1,40 @@
+---
+title: "참조된 개체에 &#39;Nothing&#39; 값이 있습니다. | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/17/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "bc30760"
+  - "vbc30760"
+helpviewer_keywords: 
+  - "BC30760"
+ms.assetid: 7e792fd8-2880-402b-a908-c89e5b028300
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# 참조된 개체에 &#39;Nothing&#39; 값이 있습니다.
+사용되는 개체의 값이 `Nothing`이지만 사용 가능한 값이 필요합니다.`Nothing`은 값이 할당되지 않았거나 `Nothing` 값이 할당되었기 때문에 개체에 값이 없음을 나타내는 값입니다.  
+  
+ **오류 ID:** BC30760  
+  
+### 이 오류를 해결하려면  
+  
+1.  개체를 검사하여 오류가 발생한 프로시저의 범위 내에서 선언되었는지 확인합니다.  
+  
+2.  개체의 값이 설정되는지 확인합니다.  
+  
+    > [!NOTE]
+    >  `Nothing` 값은 0 또는 빈 문자열과 다릅니다.`IsNothing`을 사용하여 개체에 `Nothing` 값이 포함되어 있는지 확인할 수 있습니다.  
+  
+## 참고 항목  
+ [Nothing](/dotnet/visual-basic/language-reference/nothing)   
+ [빌드에 없음: IsNothing 함수](http://msdn.microsoft.com/ko-kr/5b2a4626-e6a9-49d1-b9b1-fcc6a1302319)

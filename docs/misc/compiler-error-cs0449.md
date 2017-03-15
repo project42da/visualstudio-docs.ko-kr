@@ -1,0 +1,35 @@
+---
+title: "컴파일러 오류 CS0449 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0449"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0449"
+ms.assetid: 32c07a2c-4c48-4d07-b643-72422a6b9fac
+caps.latest.revision: 12
+caps.handback.revision: 12
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0449
+'class' 또는 'struct' 제약 조건은 다른 모든 제약 조건보다 앞에 와야 합니다.  
+  
+ 제네릭 형식 또는 메서드의 형식 매개 변수에 대한 제약 조건은 특정 순서로 발생해야 합니다. `class` 또는 `struct`가 첫 번째여야 하고\(있는 경우\), 그다음에 인터페이스 제약 조건, 생성자 제약 조건 순으로 와야 합니다. 이 오류는 `class` 또는 `struct` 제약 조건이 첫 번째로 표시되지 않을 경우에 발생합니다. 이 오류를 해결하려면 제약 조건 절을 다시 정렬합니다.  
+  
+## 예제  
+ 다음 샘플에서는 CS0449를 생성합니다.  
+  
+```  
+// CS0449.cs // compile with: /target:library interface I {} public class C4 { public void F1<T>() where T : class, struct, I {}   // CS0449 public void F2<T>() where T : I, struct {}   // CS0449 public void F3<T>() where T : I, class {}   // CS0449 // OK public void F4<T>() where T : class {} public void F5<T>() where T : struct {} public void F6<T>() where T : I {} }  
+```

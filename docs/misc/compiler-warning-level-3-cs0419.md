@@ -1,0 +1,34 @@
+---
+title: "컴파일러 경고(수준 3) CS0419 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0419"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0419"
+ms.assetid: de439ad5-422f-4ed6-96d6-69dade29c7b2
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 경고(수준 3) CS0419
+cref 특성에 모호한 참조가 있습니다. 'Method Name1'  'Method Name2'로 간주하지만 'Method Name3'을 포함하여 다른 오버로드와 일치할 수도 있습니다.  
+  
+ 코드의 XML 문서 주석에서 참조를 확인할 수 없습니다. 메서드가 오버로드된 경우 또는 동일한 이름을 가진 두 개의 서로 다른 식별자가 발견된 경우 이 오류가 발생할 수 있습니다. 경고를 해결하려면 정규화된 이름을 사용하여 참조를 명확하게 하거나 특정 오버로드를 괄호 안에 넣습니다.  
+  
+ 다음 샘플에서는 CS0419를 생성합니다.  
+  
+```  
+// cs0419.cs // compile with: /doc:x.xml /W:3 interface I { /// text for F(void) void F(); /// text for F(int) void F(int i); } /// text for class MyClass public class MyClass { /// <see cref="I.F"/> public static void MyMethod(int i) { } /* Try this instead: /// <see cref="I.F(int)"/> public static void MyMethod(int i) { } */ /// text for Main public static void Main () { } }  
+```

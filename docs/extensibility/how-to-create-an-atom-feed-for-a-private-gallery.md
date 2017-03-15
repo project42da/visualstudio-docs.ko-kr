@@ -1,0 +1,48 @@
+---
+title: "방법: Atom 만들기 개인 갤러리 피드 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Atom 피드를 VSIX 개인 갤러리"
+  - "VSIX 개인 갤러리, Atom 피드"
+ms.assetid: 5897f538-9c41-486f-97d9-a1976d20d9fd
+caps.latest.revision: 9
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
+---
+# 방법: Atom 만들기 개인 갤러리 피드
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+Atom \(RSS\) 피드를 확장을 포함 하는 피드를 추가 하는 인트라넷 위치를 만들 수 있습니다 **확장 및 업데이트** 개인 갤러리입니다. 자세한 내용은 [개인 갤러리](../extensibility/private-galleries.md)을 참조하십시오.  
+  
+## 피드는 Atom 만들기  
+ Atom 개인 갤러리 피드를 만들려면 먼저 폴더로 확장 \(.vsix 파일\)를 수집 합니다. 원하는 경우 하위 폴더에 이러한를 구성할 수 있습니다. 다음 리소스를도 필요 합니다.  
+  
+-   개인 갤러리에 확장을 사용할 수 있도록 하는 atom.xml 파일입니다. Atom.xml 파일을 연결 하는 방법에 대 한 내용은 **확장 및 업데이트**, 참조 [개인 갤러리](../extensibility/private-galleries.md)합니다.  
+  
+-   확장 \(예를 들어, 스크린 샷\)에서 추출 된 모든 이미지 파일이 들어 있는 폴더입니다. Atom.xml 파일에서 사용할 수 있도록 이러한 이미지에 대 한 상대 링크 포함 **확장 및 업데이트**합니다.  
+  
+ 예를 들어 폴더에 다음 두 가지 확장 수집 했다는 것을 가정 합니다.  
+  
+-   Template\_Wizard\_239.vsix 빈 VSIX 프로젝트 서식 파일입니다.  
+  
+-   SelectionHighlight.vsix는 선택된 된 단어의 모든 인스턴스를 강조 표시 하는 도구입니다.  
+  
+ 다음 예제에서는 atom.xml 파일의 내용을 다음과 같습니다.  
+  
+```  
+  <?xml version="1.0" encoding="utf-8" ?> - <feed xmlns="http://www.w3.org/2005/Atom"> <title type="text" /> <id>uuid:bcecded5-97c8-4d24-96f1-7d9e16652433;id=1</id> <updated>2011-04-14T21:25:48Z</updated> - <entry> <id>SelectionHighlight..a14874d2-8199-4a60-af8a-11d6447813aa</id> <title type="text">Highlight all occurrences of selected word</title> <summary type="text">This extends the editor to highlight ….</summary> <published>2011-04-14T14:24:51-07:00</published> <updated>2011-04-14T14:24:22-07:00</updated> - <author> <name>Microsoft</name> </author> <link rel="icon" href="VSIXImages/SelectionHighlight..a14874d2-8199-4a60-af8a-11d6447813aa_Icon_SelectionHighlightIcon.jpg" /> <link rel="previewimage" href="VSIXImages/SelectionHighlight..a14874d2-8199-4a60-af8a-11d6447813aa_PreviewImage_SelectionHighlight.jpg" /> <content type="application/octet-stream" src="SelectionHighlight.vsix" /> - <Vsix xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/developer/vsx-syndication-schema/2010"> <Id>SelectionHighlight..a14874d2-8199-4a60-af8a-11d6447813aa</Id> <Version>1.31</Version> <References /> <Rating xsi:nil="true" /> <RatingCount xsi:nil="true" /> <DownloadCount xsi:nil="true" /> </Vsix> </entry> - <entry> <id>Template_Wizard_239.Microsoft.3b38a7e3-5cbc-4389-a92a-d82tyc2ed592</id> … </entry> </feed>  
+  
+```  
+  
+ 두 링크 태그 이미지의 생성 된 폴더에 스크린 샷을 참조 하는지 확인 합니다.  
+  
+## 참고 항목  
+ [개인 갤러리](../extensibility/private-galleries.md)

@@ -1,0 +1,42 @@
+---
+title: "컴파일러 오류 CS0425 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0425"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0425"
+ms.assetid: cec0391c-a641-43bc-8557-92b23f6ca685
+caps.latest.revision: 13
+caps.handback.revision: 13
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0425
+'method' 메서드의 'type parameter' 형식 매개 변수에 대한 제약 조건이 'method' 인터페이스 메서드의 'type parameter' 형식 매개 변수에 대한 제약 조건과 일치해야 합니다. 명시적 인터페이스 구현을 대신 사용하세요.  
+  
+ 이 오류는 가상 제네릭 메서드가 파생 클래스에서 재정의되었으며 파생 클래스의 메서드에 대한 제약 조건이 기본 클래스의 메서드에 대한 제약 조건과 일치하지 않는 경우에 발생합니다. 이 오류를 방지하려면 `where` 절이 두 선언에서 동일한지 확인하거나 인터페이스를 명시적으로 구현합니다.  
+  
+## 예제  
+ 다음 예제에서는 CS0425를 생성합니다.  
+  
+```  
+// CS0425.cs class C1 { } class C2 { } interface IBase { void F<ItemType>(ItemType item) where ItemType : C1; } class Derived : IBase { public void F<ItemType>(ItemType item) where ItemType : C2  // CS0425 { } } class CMain { public static void Main() { } }  
+```  
+  
+## 예제  
+ 제약 조건 집합이 동일한 의미를 갖는 한 제약 조건이 리터럴하게 일치할 필요는 없습니다. 예를 들어 다음 코드는 허용됩니다.  
+  
+```  
+// CS0425b.cs interface J<Z> { } interface I<S> { void F<T>(S s, T t) where T: J<S>, J<int>; } class C : I<int> { public void F<X>(int s, X x) where X : J<int> { } public static void Main() { } }  
+```

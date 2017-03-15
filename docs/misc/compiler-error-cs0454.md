@@ -1,0 +1,42 @@
+---
+title: "컴파일러 오류 CS0454 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0454"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0454"
+ms.assetid: 2c83bc5e-53bb-473e-92aa-5122dadd79d1
+caps.latest.revision: 10
+caps.handback.revision: 10
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0454
+'Type Parameter 1' 및 'Type Parameter 2'와 관련된 순환 제약 조건 종속성입니다.  
+  
+ 이 오류는 어느 시점에 하나의 형식 매개 변수가 다른 매개 변수를 참조하고 두 번째 매개 변수가 다시 첫 번째 매개 변수를 참조하기 때문에 발생합니다. 이 오류를 해결하려면 제약 조건 중 하나를 제거하여 순환 종속성을 해제합니다. 순환 제약 조건 종속성은 간접적일 수 있습니다.  
+  
+## 예제  
+ 다음 코드에서는 CS0454 오류를 생성합니다.  
+  
+```  
+// CS0554 using System; public class GenericsErrors { public class G4<T> where T : T { } // CS0454 }  
+```  
+  
+## 예제  
+ 다음 예제에서는 두 형식 제약 조건 간의 순환 종속성을 보여 줍니다.  
+  
+```  
+public class Gen<T,U> where T : U where U : T  // CS0454 { }  
+```

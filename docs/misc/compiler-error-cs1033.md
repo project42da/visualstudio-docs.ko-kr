@@ -1,0 +1,28 @@
+---
+title: "컴파일러 오류 CS1033 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1033"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1033"
+ms.assetid: eb0f4001-84a6-4918-a648-cf710d038de7
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS1033
+소스 파일의 줄 수가 PDB에 표시할 수 있는 16,707,565줄을 초과했습니다. 디버그 정보가 올바르지 않을 수 있습니다.  
+  
+ 소스 코드 파일의 줄 수가 컴파일러에서 처리할 수 있는 허용 가능한 최대 개수를 초과했습니다. 이 오류를 해결하려면 원본 파일에서 둘 이상의 소스 코드 파일을 만듭니다. 최대 줄 수는 268,435,454입니다.**\/debug**를 사용 중인 경우 16,707,566줄보다 많이 사용하면 디버그 정보가 손상됩니다.

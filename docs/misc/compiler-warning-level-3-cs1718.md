@@ -1,0 +1,41 @@
+---
+title: "컴파일러 경고(수준 3) CS1718 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1718"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1718"
+ms.assetid: 7c1c11fd-4f91-482d-b8f7-efe2a361634e
+caps.latest.revision: 11
+caps.handback.revision: 11
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 경고(수준 3) CS1718
+같은 변수를 비교했습니다. 다른 요소를 비교하시겠습니까?  
+  
+ 다른 요소와 비교하려는 경우 문을 수정하면 됩니다.  
+  
+ 그러나 true 또는 false인지를 테스트하고 있으며, `if (a == a) (true)` 또는 `if (a < a) (false)`와 같은 문으로 테스트했을 수도 있습니다. 단순히 `if (true)` 또는 `if (false)`라고 지정하는 것이 좋습니다. 여기에는 두 가지 이유가 있습니다.  
+  
+-   더 단순합니다. 항상 의도한 바를 단순히 지정하는 것이 더 명확합니다.  
+  
+-   혼동을 방지합니다. C\# 2.0의 새로운 기능은 SQL Server에서 사용되는 프로그래밍 언어인 T\-SQL의 `null` 값과 유사한 nullable 값 형식입니다. T\-SQL에 익숙한 개발자는 T\-SQL의 3항 논리 사용 때문에 `if (a == a)` 등의 식에 미치는 nullable 형식의 영향에 대해 염려할 수도 있습니다.`true` 또는 `false`를 사용하는 경우 이러한 혼동을 방지할 수 있습니다.  
+  
+## 예제  
+ 다음 코드는 CS1718 경고를 생성합니다.  
+  
+```  
+// CS1718.cs using System; public class Tester { public static void Main() { int i = 0; if (i == i) { // CS1718.cs //if (true) { i++; } } }  
+```

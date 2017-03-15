@@ -1,0 +1,52 @@
+---
+title: "원격 디버깅을 위한 방화벽 구성 대화 상자 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.debug.firewallconfiguration"
+dev_langs: 
+  - "FSharp"
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "JScript"
+helpviewer_keywords: 
+  - "원격 디버깅을 위한 방화벽 구성 대화 상자"
+  - "원격 디버깅, 방화벽 구성"
+  - "방화벽, 원격 디버깅을 위한 구성"
+ms.assetid: 5dff3393-fdeb-4129-a2f6-31f653107a82
+caps.latest.revision: 11
+caps.handback.revision: 11
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+---
+# 원격 디버깅을 위한 방화벽 구성 대화 상자
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+이 대화 상자는 Windows 방화벽에서 디버거가 네트워크를 통해 정보를 받는 것을 차단할 때 나타납니다. 원격 디버깅을 계속하려면 디버거가 정보를 받을 수 있도록 방화벽에서 한 지점을 열어야 합니다.  
+  
+> [!CAUTION]
+>  방화벽에서 한 지점을 열면 방화벽을 통해 차단해야 하는 보안 위협에 컴퓨터가 노출될 수 있습니다. 원격 디버깅을 위해 빈 영역을 열면 Visual Studio 2015에서 4020 및 4021 포트가 차단 해제됩니다. 다른 버전의 Visual Studio에서는 다른 포트 번호가 사용됩니다. 자세한 내용은 [원격 디버거 포트 할당](../debugger/remote-debugger-port-assignments.md)을 참조하십시오. 또한 디버거가 포트를 추가로 열 수 있습니다. 자세한 내용은 [원격 디버깅을 위해 Windows 방화벽 구성](../debugger/configure-the-windows-firewall-for-remote-debugging.md)을 참조하십시오.  
+  
+## UI 요소 목록  
+ **원격 디버깅 취소**  
+ 원격 디버깅 시도를 취소합니다. 컴퓨터의 보안 설정은 그대로 유지됩니다.  
+  
+ **로컬 네트워크\(서브넷\)의 컴퓨터에서 원격 디버깅 차단 해제**  
+ 로컬 서브넷에 있는 컴퓨터의 원격 디버깅을 활성화합니다. 이 옵션을 설정하면 로컬 서브넷에 있는 컴퓨터의 보안이 취약해질 수 있지만 방화벽은 계속해서 서브넷 외부에서 들어오는 정보를 차단합니다.  
+  
+ **모든 컴퓨터에서 원격 디버깅 차단 해제**  
+ 네트워크에 있는 모든 컴퓨터의 원격 디버깅을 활성화합니다. 이 설정은 보안이 가장 취약합니다.  
+  
+## 참고 항목  
+ [디버거 보안](../debugger/debugger-security.md)   
+ [장치에서 원격 도구 설정](../Topic/Set%20Up%20the%20Remote%20Tools%20on%20the%20Device.md)   
+ [사용자 인터페이스 참조 디버깅](../debugger/debugging-user-interface-reference.md)

@@ -1,0 +1,34 @@
+---
+title: "컴파일러 오류 CS0400 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0400"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0400"
+ms.assetid: 58f91f3b-30f4-433b-9a13-0cff258a2630
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0400
+전역 네임스페이스에 'identifier' 형식 또는 네임스페이스 이름이 없습니다. 어셈블리 참조가 있는지 확인합니다.  
+  
+ 전역 범위 연산자\(`::`\)로 범위가 지정된 식별자를 전역 네임스페이스에서 찾을 수 없습니다. 식별자가 포함된 어셈블리 참조를 누락하거나 식별자가 글로벌 네임스페이스 이외의 네임스페이스 또는 클래스에서 선언되었을 수 있습니다. 이 오류는 전역 범위 식별자가 선언되지 않거나 철자가 틀린 경우 발생할 수 있습니다.  
+  
+ 이 오류를 방지하려면 식별자의 선언을 찾고 올바른 철자를 확인한 다음 선언이 별도의 어셈블리에 있는 경우 적절한 어셈블리 참조가 있는지 확인합니다. 식별자가 다른 형식 또는 네임스페이스에서 선언된 경우 :: 뒤에 정규화된 이름을 사용합니다. 다음 샘플에서는 CS0400을 생성합니다.  
+  
+```  
+// CS0400.cs class C { public static void Main() { // CS0400 - D could not be found // in the global namespace. global::D d = new global::D(); } }  
+```

@@ -1,0 +1,37 @@
+---
+title: "컴파일러 오류 CS0462 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0462"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0462"
+ms.assetid: 0732b12d-0f7a-47d5-bc54-8b6147d7249f
+caps.latest.revision: 16
+caps.handback.revision: 16
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0462
+상속된 멤버 'member1'과\(와\) 'member2'은\(는\) 'type' 형식에 동일한 서명이 있으므로 재정의할 수 없습니다.  
+  
+ 이 오류는 제네릭이 도입되어 발생합니다. 일반적으로 한 클래스에서 한 메서드의 두 가지 버전을 동일한 서명으로 사용할 수 없습니다. 그러나 제네릭을 사용하면 특정 형식으로 인스턴스화된 경우 다른 메서드를 복제할 수 있는 제네릭 메서드를 지정할 수 있습니다.  
+  
+## 예제  
+ `C<int>`가 인스턴스화된 경우 `F` 메서드의 두 가지 버전이 동일한 서명으로 만들어지므로 `D` 클래스의 재정의에서 재정의를 적용할 대상을 결정할 수 없습니다.  
+  
+ 다음 샘플에서는 CS0462를 생성합니다.  
+  
+```  
+// CS0462.cs // compile with: /target:library class C<T> { public virtual void F(T t) {} public virtual void F(int t) {} } class D : C<int> { public override void F(int t) {}   // CS0462 }  
+```

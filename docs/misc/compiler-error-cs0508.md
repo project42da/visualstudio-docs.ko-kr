@@ -1,0 +1,35 @@
+---
+title: "컴파일러 오류 CS0508 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0508"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0508"
+ms.assetid: 28403573-6e64-4496-918d-fb50c8851e51
+caps.latest.revision: 10
+caps.handback.revision: 10
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0508
+'Type 1': 반환 형식이 재정의된 'Member Name' 멤버와 일치하려면 'Type 2'여야 합니다.  
+  
+ 메서드 재정의 반환 형식을 변경하려고 했습니다. 이 오류를 해결하려면 두 메서드 모두 동일한 반환 형식을 선언해야 합니다.  
+  
+## 예제  
+ 다음 샘플에서는 CS0508을 생성합니다.  
+  
+```  
+// CS0508.cs // compile with: /target:library abstract public class Clx { public int i = 0; // Return type is int. abstract public int F(); } public class Cly : Clx { public override double F() { return 0.0;   // CS0508 } }  
+```

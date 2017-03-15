@@ -1,0 +1,42 @@
+---
+title: "컴파일러 오류 CS0739 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS0739"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS0739"
+ms.assetid: c2a83015-401c-4d85-bb19-ed29800904c1
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 컴파일러 오류 CS0739
+'type name'에 TypeForwardedToAttribute가 중복되었습니다.  
+  
+ 어셈블리에는 외부 형식에 대해 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>를 하나만 가질 수 있습니다.  
+  
+### 이 오류를 해결하려면  
+  
+1.  중복 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>를 찾고 제거합니다.  
+  
+## 예제  
+ 다음 코드에서는 CS0739를 생성합니다.  
+  
+```  
+// CS0739.cs // CS0739 // Assume that a class Test is declared in a separate dll // with a namespace that is named cs739dll. [assembly: System.Runtime.CompilerServices.TypeForwardedTo(typeof(cs739dll.Test))] [assembly: System.Runtime.CompilerServices.TypeForwardedTo(typeof(cs739dll.Test))] namespace cs0739 { class Program { static void Main(string[] args) { } } }  
+```  
+  
+## 참고 항목  
+ <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
