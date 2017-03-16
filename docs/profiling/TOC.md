@@ -1,5 +1,4 @@
-# [프로파일링 도구](profiling-tools.md)
-## [프로파일링 기능 둘러보기](profiling-feature-tour.md)
+# [프로파일링 기능 둘러보기](profiling-feature-tour.md)
 ## [초보자를 위한 성능 프로파일링 지침](beginners-guide-to-performance-profiling.md)
 ## [프로파일링 도구의 새로운 기능](what-s-new-in-profiling-tools.md)
 ## [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](running-profiling-tools-with-or-without-the-debugger.md)
