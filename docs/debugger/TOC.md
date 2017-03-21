@@ -1,5 +1,4 @@
-# [Visual Studio의 디버깅](debugging-in-visual-studio.md)
-# [디버거 기능 둘러보기](debugger-feature-tour.md)
+# [디버깅 기능 둘러보기](debugger-feature-tour.md)
 # [Visual Studio 디버거의 새로운 기능](what-s-new-for-the-debugger-in-visual-studio.md)
 # [디버거 기본 사항](debugger-basics.md)
 ## [디버거 시작](getting-started-with-the-debugger.md)
