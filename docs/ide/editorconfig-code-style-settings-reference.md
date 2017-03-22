@@ -89,9 +89,9 @@ suggestion | 이 스타일을 따르지 않을 경우 사용자에게 제안으�
         - [Throw 식](#null_checking_throw_expressions)
         - [조건부 대리자 호출](#null_checking_conditional_delegate_calls)
 
-## <a name="a-namethisandmethis-and-me-qualificationa"></a><a name="this_and_me">"This." 및 "Me." 한정</a>
+## <a name="this_and_me">"This." 및 "Me." 한정</a>
 
-### <a name="a-namethisandmefieldsfieldsa"></a><a name="this_and_me_fields">필드</a>
+### <a name="this_and_me_fields">필드</a>
 
 |  옵션 이름 | `dotnet_style_qualification_for_field` |
 | ------------- |:-------------:|
@@ -109,7 +109,7 @@ suggestion | 이 스타일을 따르지 않을 경우 사용자에게 제안으�
 dotnet_style_qualification_for_field = false:suggestion
 ```
 
-### <a name="a-namethisandmepropertiespropertiesa"></a><a name="this_and_me_properties">속성</a>
+### <a name="this_and_me_properties">속성</a>
 
 |  옵션 이름 | `dotnet_style_qualification_for_property` |
 | ------------- |:-------------:|
@@ -128,7 +128,7 @@ dotnet_style_qualification_for_property = false:suggestion
 ```
 
 
-### <a name="a-namethisandmemethodsmethodsa"></a><a name="this_and_me_methods">메서드</a>
+### <a name="this_and_me_methods">메서드</a>
 |  옵션 이름 | `dotnet_style_qualification_for_method` |
 | ------------- |:-------------:|
 | **해당 언어** | C# 및 Visual Basic
@@ -146,7 +146,7 @@ dotnet_style_qualification_for_property = false:suggestion
 dotnet_style_qualification_for_method = false:suggestion
 ```
 
-### <a name="a-namethisandmeeventseventsa"></a><a name="this_and_me_events">이벤트</a>
+### <a name="this_and_me_events">이벤트</a>
 |  옵션 이름 | `dotnet_style_qualification_for_event` |
 | ------------- |:-------------:|
 | **해당 언어** | C# 및 Visual Basic
@@ -164,7 +164,7 @@ dotnet_style_qualification_for_event = false:suggestion
 ```
 
 ## <a name="language_keywords">형식 참조를 위한 언어 키워드(int, string 등) 및 프레임워크 형식 이름</a>
-### <a name="a-namelanguagekeywordsvariableslocals-parameters-and-membersa"></a><a name="language_keywords_variables">로컬 항목, 매개 변수 및 멤버</a>
+### <a name="language_keywords_variables">로컬 항목, 매개 변수 및 멤버</a>
 |  옵션 이름 | `dotnet_style_predefined_type_for_locals_parameters_members` |
 | ------------- |:-------------:|
 | **해당 언어** | C# 및 Visual Basic
@@ -181,7 +181,7 @@ dotnet_style_qualification_for_event = false:suggestion
 dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 ``` 
 
-### <a name="a-namelanguagekeywordsmemberaccessmember-access-expressionsa"></a><a name="language_keywords_member_access">멤버 액세스 식</a>
+### <a name="language_keywords_member_access">멤버 액세스 식</a>
 |  옵션 이름 | `dotnet_style_predefined_type_for_member_access` |
 | ------------- |:-------------:|
 | **해당 언어** | C# 및 Visual Basic
@@ -198,8 +198,8 @@ dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 dotnet_style_predefined_type_for_member_access = true:suggestion
 ``` 
 
-## <a name="a-nameexpressionlevelexpression-level-preferencesa"></a><a name="expression_level">식 수준 기본 설정</a>
-### <a name="a-nameexpressionlevelobjectinitializersobject-initializersa"></a><a name="expression_level_object_initializers">개체 이니셜라이저</a>
+## <a name="expression_level">식 수준 기본 설정</a>
+### <a name="expression_level_object_initializers">개체 이니셜라이저</a>
 |  옵션 이름 | `dotnet_style_object_initializer` |
 | ------------- |:-------------:|
 | **해당 언어** | C# 및 Visual Basic
@@ -216,7 +216,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 dotnet_style_object_initializer = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionlevelcollectioninitializerscollection-initializersa"></a><a name="expression_level_collection_initializers">컬렉션 이니셜라이저</a>
+### <a name="expression_level_collection_initializers">컬렉션 이니셜라이저</a>
 |  옵션 이름 | `dotnet_style_collection_initializer` |
 | ------------- |:-------------:|
 | **해당 언어** | C# 및 Visual Basic
@@ -233,7 +233,7 @@ dotnet_style_object_initializer = true:suggestion
 dotnet_style_collection_initializer = true:suggestion
 ```
 
-### <a name="a-nameexpressionleveltuplenamesexplicit-tuple-namesa"></a><a name="expression_level_tuple_names">명시적 튜플 이름</a>
+### <a name="expression_level_tuple_names">명시적 튜플 이름</a>
 |  옵션 이름 | `dotnet_style_explicit_tuple_names` |
 | ------------- |:-------------:|
 | **해당 언어** | C# 및 Visual Basic
@@ -250,7 +250,7 @@ dotnet_style_collection_initializer = true:suggestion
 dotnet_style_explicit_tuple_names = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionlevelnullcheckingcoalescing-expressions-in-null-checkinga"></a><a name="expression_level_null_checking">"null" 검사에 식 병합</a>
+### <a name="expression_level_null_checking">"null" 검사에 식 병합</a>
 |  옵션 이름 | `dotnet_style_coalesce_expression` |
 | ------------- |:-------------:|
 | **해당 언어** | C# 및 Visual Basic
@@ -267,7 +267,7 @@ dotnet_style_explicit_tuple_names = true:suggestion
 dotnet_style_coalesce_expression = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionlevelnullpropogationnull-propagation-in-null-checkinga"></a><a name="expression_level_null_propogation">"null" 검사의 Null 전파</a>
+### <a name="expression_level_null_propogation">"null" 검사의 Null 전파</a>
 |  옵션 이름 | `dotnet_style_null_propagation` |
 | ------------- |:-------------:|
 | **해당 언어** | C# 및 Visual Basic
@@ -284,9 +284,9 @@ dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_null_propagation = true:suggestion
 ``` 
 
-# <a name="a-namecsharpcodestylecsharp-code-style-settingsa"></a><a name="csharp_codestyle">CSharp 코드 스타일 설정</a>
-## <a name="a-namevarvara"></a><a name="var">"var"</a>
-### <a name="a-namevarbuiltinvar-for-built-in-typesa"></a><a name="var_built_in">기본 제공 형식에 "var" 사용</a>
+# <a name="csharp_codestyle">CSharp 코드 스타일 설정</a>
+## <a name="var">"var"</a>
+### <a name="var_built_in">기본 제공 형식에 "var" 사용</a>
 |  옵션 이름 | `csharp_style_var_for_built_in_types` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -303,7 +303,7 @@ dotnet_style_null_propagation = true:suggestion
 csharp_style_var_for_built_in_types = true:suggestion
 ``` 
 
-### <a name="a-namevarapparentvar-when-type-is-apparenta"></a><a name="var_apparent">형식이 명확한 경우 "var" 사용</a>
+### <a name="var_apparent">형식이 명확한 경우 "var" 사용</a>
 |  옵션 이름 | `csharp_style_var_when_type_is_apparent` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -320,7 +320,7 @@ csharp_style_var_for_built_in_types = true:suggestion
 csharp_style_var_when_type_is_apparent = true:suggestion
 ``` 
 
-### <a name="a-namevarelsewherevar-elsewherea"></a><a name="var_elsewhere">다른 곳에서 "var" 사용</a>
+### <a name="var_elsewhere">다른 곳에서 "var" 사용</a>
 |  옵션 이름 | `csharp_style_var_elsewhere` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -337,7 +337,7 @@ csharp_style_var_when_type_is_apparent = true:suggestion
 csharp_style_var_elsewhere = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersmethodsa"></a><a name="expression_bodied_members">메서드</a>
+### <a name="expression_bodied_members">메서드</a>
 |  옵션 이름 | `csharp_style_expression_bodied_methods` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -354,7 +354,7 @@ csharp_style_var_elsewhere = true:suggestion
 csharp_style_expression_bodied_methods = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersconstructorsconstructorsa"></a><a name="expression_bodied_members_constructors">생성자</a>
+### <a name="expression_bodied_members_constructors">생성자</a>
 |  옵션 이름 | `csharp_style_expression_bodied_constructors` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -371,7 +371,7 @@ csharp_style_expression_bodied_methods = false:none
 csharp_style_expression_bodied_constructors = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersoperatorsoperatorsa"></a><a name="expression_bodied_members_operators">연산자</a>
+### <a name="expression_bodied_members_operators">연산자</a>
 |  옵션 이름 | `csharp_style_expression_bodied_operators` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -388,7 +388,7 @@ csharp_style_expression_bodied_constructors = false:none
 csharp_style_expression_bodied_operators = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmemberspropertiespropertiesa"></a><a name="expression_bodied_members_properties">속성</a>
+### <a name="expression_bodied_members_properties">속성</a>
 |  옵션 이름 | `csharp_style_expression_bodied_properties` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -405,7 +405,7 @@ csharp_style_expression_bodied_operators = false:none
 csharp_style_expression_bodied_properties = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersindexersindexersa"></a><a name="expression_bodied_members_indexers">인덱서</a>
+### <a name="expression_bodied_members_indexers">인덱서</a>
 |  옵션 이름 | `csharp_style_expression_bodied_indexers` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -422,7 +422,7 @@ csharp_style_expression_bodied_properties = false:none
 csharp_style_expression_bodied_indexers = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersaccessorsaccessorsa"></a><a name="expression_bodied_members_accessors">접근자</a>
+### <a name="expression_bodied_members_accessors">접근자</a>
 |  옵션 이름 | `csharp_style_expression_bodied_accessors` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -439,8 +439,8 @@ csharp_style_expression_bodied_indexers = false:none
 csharp_style_expression_bodied_accessors = false:none
 ``` 
 
-## <a name="a-namepatternmatchingpattern-matchinga"></a><a name="pattern_matching">패턴 일치</a>
-### <a name="a-namepatternmatchingiscastis-with-cast-checkinga"></a><a name="pattern_matching_is_cast">"캐스트" 검사를 포함하는 "is"</a>
+## <a name="pattern_matching">패턴 일치</a>
+### <a name="pattern_matching_is_cast">"캐스트" 검사를 포함하는 "is"</a>
 |  옵션 이름 | `csharp_style_pattern_matching_over_is_with_cast_check` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -457,7 +457,7 @@ csharp_style_expression_bodied_accessors = false:none
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 ```
 
-### <a name="a-namepatternmatchingasnullas-with-null-checkinga"></a><a name="pattern_matching_as_null">"null" 검사를 포함하는 "as"</a>
+### <a name="pattern_matching_as_null">"null" 검사를 포함하는 "as"</a>
 |  옵션 이름 | `csharp_style_pattern_matching_over_as_with_null_check` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -474,14 +474,14 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
-### <a name="a-nameinlinedvariabledeclarationsinlined-variable-declarationsa"></a><a name="inlined_variable_declarations">인라인 변수 선언</a>
+### <a name="inlined_variable_declarations">인라인 변수 선언</a>
 |  옵션 이름 | `csharp_style_inlined_variable_declaration` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
 
 | 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | 가능한 경우 `out` 변수를 인라인으로 선언하는 것이 좋습니다. | **C#:** <br>`if (int.TryParse(value out int i) {...}`
+| True | 가능한 경우 `out` 변수를 인라인으로 선언하는 것이 좋습니다. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
 | False | 가능한 경우 `out` 변수를 명시적으로 선언하는 것이 좋습니다.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
 
 #### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
@@ -491,8 +491,8 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 csharp_style_inlined_variable_declaration = true:suggestion
 ```
 
-## <a name="a-namenullcheckingnull-checking-preferencesa"></a><a name="null_checking">"Null" 검사 기본 설정</a>
-### <a name="a-namenullcheckingthrowexpressionsthrow-expressionsa"></a><a name="null_checking_throw_expressions">Throw 식</a>
+## <a name="null_checking">"Null" 검사 기본 설정</a>
+### <a name="null_checking_throw_expressions">Throw 식</a>
 |  옵션 이름 | `csharp_style_throw_expression` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
@@ -509,7 +509,7 @@ csharp_style_inlined_variable_declaration = true:suggestion
 csharp_style_throw_expression = true:suggestion
 ```
 
-### <a name="a-namenullcheckingconditionaldelegatecallsprefer-conditional-delegate-callsa"></a><a name="null_checking_conditional_delegate_calls">조건부 대리자 호출 선호</a>
+### <a name="null_checking_conditional_delegate_calls">조건부 대리자 호출 선호</a>
 |  옵션 이름 | `csharp_style_conditional_delegate_call` |
 | ------------- |:-------------:|
 | **해당 언어** | C#
