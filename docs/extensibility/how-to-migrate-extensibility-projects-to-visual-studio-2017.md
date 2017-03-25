@@ -28,18 +28,16 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4f93b8c1db59dd8d8a407c82002240641be43018
-ms.openlocfilehash: 1f9248442357c4447703ac6d6dac8a27934904e8
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: efd17a3317302fedcb9bd42aded7a38adee2f75f
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>방법: Visual Studio 2017 확장성 프로젝트 마이그레이션
 
->**참고:** 이 설명서는 임시로 제공 되며 Visual Studio 2017 RC 릴리스를 기반으로 합니다.
-
 이 문서에서는 Visual Studio 2017를 확장성 프로젝트를 업그레이드 하는 방법을 설명 합니다. 프로젝트 파일을 업데이트 하는 방법을 설명 하는 외에 확장 매니페스트 v2 버전 2 (VSIX)에서 새 버전 3 VSIX 매니페스트 형식 (VSIX v3)로 업그레이드 하는 방법을 설명 합니다.
 
-## <a name="install-visual-studio-2017-rc-with-required-workloads"></a>필요한 작업 부하와 Visual Studio 2017 RC를 설치 합니다.
+## <a name="install-visual-studio-2017-with-required-workloads"></a>필요한 작업 부하와 Visual Studio 2017 설치
 
 설치에는 다음과 같은 작업에 포함 되어 있는지 확인 합니다.
 
@@ -59,19 +57,16 @@ ms.lasthandoff: 03/01/2017
 
 >**참고:** 솔루션 Microsoft.VSSDK.BuildTools NuGet 패키지를 참조 하지 않으면,이 단계를 건너뛸 수 있습니다.
 
-새 VSIX v 3에서 확장 프로그램을 빌드하려면 (버전 3) 형식으로 새 VSSDK 빌드 도구를 사용 하 여 빌드한 수 하는 솔루션을 해야 합니다. Visual Studio 2017 RC를 설치 합니다 하지만 VSIX v2 확장 NuGet 통해 이전 버전에 대 한 참조를 보유할 수 있습니다. 그렇다면 Microsoft.VSSDK.BuildTools NuGet 패키지를 솔루션에 대 한 업데이트를 수동으로 설치 해야 합니다. RC 릴리스를 시점에이 패키지는 "시험판" 상태의 수 있습니다.
+새 VSIX v 3에서 확장 프로그램을 빌드하려면 (버전 3) 형식으로 새 VSSDK 빌드 도구를 사용 하 여 빌드한 수 하는 솔루션을 해야 합니다. Visual Studio 2017 년으로 설치 됩니다 하지만 VSIX v2 확장 NuGet 통해 이전 버전에 대 한 참조를 보유할 수 있습니다. 그렇다면 Microsoft.VSSDK.BuildTools NuGet 패키지를 솔루션에 대 한 업데이트를 수동으로 설치 해야 합니다.
 
 NuGet을 업데이트 하려면 Microsoft.VSSDK.BuildTools 참조 합니다.
 
 * 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **솔루션에 대 한 NuGet 패키지 관리...**
 * 탐색 하는 **업데이트** 탭 합니다.
-* 확인란을 **시험판 포함**합니다.
 * Microsoft.VSSDK.BuildTools (최신 버전)를 선택 합니다.
 * 키를 눌러 **업데이트**합니다.
 
 ![VSSDK 빌드 도구](media/vssdk-build-tools.png)
-
->**참고:** 스크린샷은 BuildTools의 다른 버전을 보여 줍니다. RC 버전을 선택 하십시오.
 
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>VSIX 확장 매니페스트를 변경
 
@@ -161,7 +156,7 @@ VSIX 필요한 모든 필수 구성 요소가 설치 된 컴퓨터에서 성공�
 
 확장을 설치 하려고 합니다.
 
-* Visual Studio 2017 년 5 rc
+* Visual Studio 2017에
 
 ![Visual Studio 2017에서 VSIX 설치 관리자](media/vsixinstaller-vs-2017.png)
 
@@ -170,7 +165,7 @@ VSIX 필요한 모든 필수 구성 요소가 설치 된 컴퓨터에서 성공�
   * Visual Studio 2012, Visual Studio 2013, Visual Studio 2015에 대해 작동 합니다.
 * 선택 사항: VSIX 설치 관리자 버전 검사 버전 중 하나를 선택할 수 있는지 확인 합니다.
   * (설치) 하는 경우에 이전 버전의 Visual Studio에 포함 됩니다.
-  * Visual Studio 2017 RC에 포함 되어 있습니다.
+  * Visual Studio 2017 포함 되어 있습니다.
 
 Visual Studio 최근에 열려 있으면 다음과 같은 대화 상자가 나타날 수 있습니다.
 
@@ -182,7 +177,7 @@ Visual Studio 최근에 열려 있으면 다음과 같은 대화 상자가 나�
 
 ## <a name="check-when-missing-the-required-prerequisites"></a>필요한 필수 구성 요소를 누락 하는 경우를 확인 합니다.
 
-* 확장을 설치 하는 컴퓨터에 Visual Studio 2017 rc 하지 않는 포함 된 필수 구성 요소 (위 참조)에 정의 된 모든 구성 요소 시도 합니다.
+* 확장을 설치 하는 컴퓨터에 Visual Studio 2017 해당 하지 않는 포함 된 필수 구성 요소 (위 참조)에 정의 된 모든 구성 요소 시도 합니다.
 * 설치가 누락 된 구성 요소/s를 식별 하는 VSIXInstaller 시 필수 구성 요소로 나열 하는지 확인 합니다.
 * 참고: 모든 필수 구성 요소 확장으로 설치 해야 할 경우 권한 상승이 필요한 됩니다 있습니다.
 
@@ -196,7 +191,7 @@ Visual Studio 최근에 열려 있으면 다음과 같은 대화 상자가 나�
 
 확장 형식 | 표시 이름 |    ID
 --- | --- | ---
-편집기 | Visual Studio core 편집기    | Microsoft.VisualStudio.CoreEditor
+편집기 | Visual Studio core 편집기    | Microsoft.VisualStudio.Component.CoreEditor
 Roslyn | C# 및 Visual Basic | Microsoft.VisualStudio.Component.Roslyn.LanguageServices
 WPF | 관리 되는 데스크톱 작업 코어 | Microsoft.VisualStudio.Component.ManagedDesktop.Core
 디버거 | 적시에 디버거 | Microsoft.VisualStudio.Component.Debugger.JustInTime

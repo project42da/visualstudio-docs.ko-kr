@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4e8ceb1c988f639d0ea18b94e206ddec2d3e764c
-ms.openlocfilehash: 5c103b5f038260a17f64af56f78f0b3f37e3bb32
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 6d87c86d0a7793f661c6a3b28e95340f3a28c616
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="installing-outside-the-extensions-folder"></a>확장 폴더 설치
-
->**참고:** 이 설명서는 임시로 제공 되며 Visual Studio 2017 RC 릴리스를 기반으로 합니다.
 
 Visual Studio 2017 및 VSIX v3부터 (버전 3), 확장 폴더 외부 확장 자산 설치 이제 지원 됩니다. 현재는 다음 위치는 올바른 설치 위치 (여기서 [installdir] 매핑되는 Visual Studio 인스턴스의 설치 디렉터리)로 사용 됩니다.
 

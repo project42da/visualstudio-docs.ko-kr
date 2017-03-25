@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 42ab3add7d1d070e82565dd70fbfabac27713d3a
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 46b6f4d13b4c1938797dbe6cf6023e3c8c42d1ed
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="ngen-support-in-vsix-v3"></a>VSIX v&3;에서 Ngen 지원
-
->**참고:** 이 설명서는 임시로 제공 되며 Visual Studio 2017 RC 릴리스를 기반으로 합니다.
 
 Visual Studio 2017 및 새 VSIX v3 (버전 3) 확장 매니페스트에서 형식으로 확장 개발자 있습니다 "ngen" 설치 시 어셈블리입니다.
 
@@ -45,13 +43,13 @@ Visual Studio 2017 및 새 VSIX v3 (버전 3) 확장 매니페스트에서 형�
 >
 >[Ngen.exe (네이티브 이미지 생성기)](https://msdn.microsoft.com/en-us/library/6t9t5wcf(v=vs.110).aspx)
 
-"Ngen" 어셈블리가 순서로 VSIX "인스턴스별 컴퓨터별" 설치 되어야 합니다. Extension.vsixmanifest 디자이너에서 "모든 사용자" 확인란을 선택 하 여이 사용할 수 있습니다.
+어셈블리가 "ngen" 순서로 VSIX "인스턴스별 컴퓨터별" 설치 되어야 합니다. Extension.vsixmanifest 디자이너에서 "모든 사용자" 확인란을 선택 하 여이 사용할 수 있습니다.
 
 ![모든 사용자를 확인 합니다.](media/check-all-users.png)
 
 ## <a name="how-to-enable-ngen"></a>Ngen을 사용 하는 방법
 
-어셈블리 ngen을 사용 하려면 사용할 수는 **속성** Visual Studio의 창.
+어셈블리에 대 한 ngen을 사용 하려면 사용할 수는 **속성** Visual Studio의 창.
 
 4 개의 속성을 설정할 수 있습니다.
 

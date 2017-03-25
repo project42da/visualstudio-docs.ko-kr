@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 221f4911981deec0330f76a82c0cc8a1b968e56e
-ms.openlocfilehash: 081a569fc7e38fecc8cc1ae5b0f8138ae8f25521
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 2e6e4b3d9d1528d57fe181b3765e1ce3624bebad
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 확장성의 변경 내용
-
->**참고:** 이 설명서는 임시로 제공 되며 Visual Studio 2017 RC 릴리스를 기반으로 합니다.
 
 Visual Studio 2017 년 된 것을 제공 하 고는 [, 가벼운 Visual Studio 설치 환경을](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer) 작업 부하와 설치 된 기능을 통해 사용자에 게 선택의 폭을 제공 하는 동안 사용자 시스템에 Visual Studio의 영향을 감소 합니다. 이러한 향상 된이 기능을 지원 하려면 확장성 모델을 변경 했습니다 우리와 Visual Studio 확장성을 몇 가지 주요 변경 했습니다. 이 문서에서는 이러한 변경 내용 및 해결을 위해 수행할 수 있는 기술 세부 정보를 설명 합니다. 일부 정보가 시점에서 구현 정보 이며 나중에 변경할 수 있습니다 note 하십시오.
 
@@ -46,9 +44,9 @@ VSIX v3 도입 간단한 설치 환경을 지 원하는 데 (버전 3) 형식입
 다음과 같은 VSIX 형식 변경
 
 * 필수 구성 요소 설치 프로그램의 선언입니다. 간단한, 빠른 설치 Visual Studio의 약속을 전달 하는 설치 관리자 사용자에 게 더 많은 구성 옵션 이제 제공 합니다. 결과적으로, 기능 및 확장에 필요한 구성 요소 설치 확인 하려면 해당 종속성을 선언 하 확장 해야 합니다.
-  * RC 버전으로 얻고 확장 설치의 일부로 사용자에 대 한 필수 구성 요소를 설치 하는 Visual Studio 2017 설치 관리자가 자동으로 제공 됩니다.
+  * Visual Studio 2017 설치 관리자가 자동으로 가져와서 확장 설치의 일부로 사용자에 대 한 필수 구성 요소를 설치 하 제공 됩니다.
   * 사용자가 만들어지지 않은 새 VSIX v3 형식을 사용 하 여 자신의 매니페스트에서 15.0 버전을 대상으로 표시 된 경우에 확장을 설치 하려고 할 때 경고가 표시 됩니다.
-* VSIX 형식에 대 한 향상 된 기능입니다. 제공 하는 [낮은 영향 설치](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install) -나란히 설치에도 지 Visual Studio의 우리 더 이상 시스템 레지스트리로 대부분의 구성 데이터를 저장 하 고 GAC에서 어셈블리를 Visual Studio 관련 작업을 옮겼습니다. 또한 늘렸습니다 VSIX 형식 및 VSIX 설치 엔진의 기능을 일부 설치 유형에 대 한 확장을 설치 하려면 것 보다는 프로그램의 MSI 또는 EXE를 사용할 수 있습니다.
+* VSIX 형식에 대 한 향상 된 기능입니다. 제공 하는 [낮은 영향 설치](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install) -나란히 설치에도 지 Visual Studio의에서는 더 이상 시스템 레지스트리로 대부분의 구성 데이터를 저장 하 고 GAC에서 어셈블리를 Visual Studio 관련 작업을 옮겼습니다. 또한 늘렸습니다 VSIX 형식 및 VSIX 설치 엔진의 기능을 일부 설치 유형에 대 한 확장을 설치 하려면 것 보다는 프로그램의 MSI 또는 EXE를 사용할 수 있습니다.
 
   다음과 같은 새로운 기능
 

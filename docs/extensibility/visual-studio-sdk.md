@@ -33,9 +33,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 477f57bbca9c49e7d7d13155fc1f6e55ee4667a8
-ms.openlocfilehash: efc5a2722757229057a91f5e3a6c2ad3681f5a89
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: b3cd444e48893057a057c39c515e51ff8b509b34
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
@@ -58,10 +58,10 @@ Visual Studio SDK를 사용 하면 Visual Studio 기능을 확장 하거나 Visu
  이러한 기능에 대 한 자세한 정보를 찾아야 하기 전에 Visual Studio 확장을 작성해 본 경험이 있는 경우 [Visual Studio 확장을 개발 하기 시작](../extensibility/starting-to-develop-visual-studio-extensions.md)합니다.  
   
 ## <a name="installing-the-visual-studio-sdk"></a>Visual Studio SDK 설치  
- Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
+ Visual Studio SDK는 Visual Studio 설치 프로그램의 선택적 기능입니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
-## <a name="whats-new-in-the-visual-studio-2015-sdk"></a>Visual Studio 2015 SDK의 새로운 기능  
- Visual Studio SDK에 전구 및 메뉴 명령, 도구 창 및 VSIX 패키지를 사용 하 여 편집기 확장을 만들 수 있도록 하는 새 프로젝트 항목 등의 몇 가지 새로운 기능이 있습니다. 자세한 내용은 참조 [Visual Studio 2015 SDK의 새로운](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md)합니다.  
+## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>Visual Studio 2017 SDK의 새로운 기능  
+ Visual Studio SDK에 주요 변경 내용 확장을 업데이트 해야 할 수도 있습니다 뿐만 아니라 간단한 솔루션 로드 및 VSIX v3 형식에 대 한 지원과 같은 몇 가지 새로운 기능이 있습니다. 자세한 내용은 참조 [Visual Studio 2017 SDK의 새로운](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)합니다.  
   
 ## <a name="visual-studio-user-experience-guidelines"></a>Visual Studio 사용자 환경 지침  
  확장에 대 한 UI를 디자인 하기 위한 유용한 팁을 확인 [Visual Studio 사용자 환경 지침](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)합니다.  
@@ -92,7 +92,7 @@ Visual Studio SDK를 사용 하면 Visual Studio 기능을 확장 하거나 Visu
   
 ## <a name="see-also"></a>참고 항목  
  [메뉴 명령을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-a-menu-command.md)   
- [방법: Visual Studio 2015로 확장성 프로젝트 마이그레이션](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md)   
+ [방법: Visual Studio 2017 확장성 프로젝트 마이그레이션](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
  [FAQ: VSPackage 확장으로 추가 기능 변환](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
  [관리 코드에서 여러 스레드를 관리합니다.](../extensibility/managing-multiple-threads-in-managed-code.md)   
  [확장 메뉴 및 명령](../extensibility/extending-menus-and-commands.md)   
