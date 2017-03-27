@@ -1,4 +1,5 @@
 ---
+redirect_url: /visualstudio/ide/refactoring-code-generation-quick-actions
 title: "Visual Studio에서 리팩터링 | Microsoft 문서"
 ms.custom: 
 ms.date: 11/04/2016
