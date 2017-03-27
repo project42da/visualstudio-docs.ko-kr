@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7a282fc04c1eb01f0c56b1d76880276fc270686d
-ms.openlocfilehash: df5195e7cc435f6da8ebfee4589d7c6258018993
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 2fa87621ed76fb93a9e92d558be5519d783274c5
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="improve-code-quality"></a>코드 품질 향상
@@ -48,6 +48,7 @@ ms.lasthandoff: 03/01/2017
 |||  
 |-|-|  
 |[코드 단위 테스트](../test/unit-test-your-code.md)|테스트 탐색기를 사용하면 개발 연습에서 단위 테스트를 쉽게 통합할 수 있습니다. Microsoft 단위 테스트 프레임워크를 사용하거나 여러 타사 및 공개 소스 프레임워크 중 하나를 사용할 수 있습니다.|  
+|[Visual Studio를 사용한 Live Unit Testing](../test/live-unit-testing.md)|Live Unit Testing은 자동으로 백그라운드에서 단위 테스트를 실행하고 Visual Studio 코드 편집기의 코드 검사 및 테스트 결과를 그래픽으로 표시합니다.|  
 |[응용 프로그램 품질 분석](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)|정족 코드 분석 도구는 C++ 및 관리 코드에서 디자인, 사용, 유지 관리 및 스타일 문제를 검색합니다. 이러한 문제의 대부분은 표준 테스트 환경에서 재현하기 어려운 버그를 일으킬 수 있습니다.|  
 |[관리 코드의 복잡성 및 유지 관리 용이성 측정](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|코드 메트릭은 개발자가 개발 중인 코드에 대해 더 정확히 파악할 수 있도록 하는 소프트웨어 측정 방법입니다. 메트릭에는 함수 및 클래스에 대한 유지 관리 인덱스, 함수의 순환 복잡성(Cyclomatic Complexity), 클래스의 상속 깊이, 클래스 간의 결합 양을 포함합니다.|  
   

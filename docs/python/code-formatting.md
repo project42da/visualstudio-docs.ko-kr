@@ -1,0 +1,154 @@
+---
+title: "Visual Studio용 Python 도구에서 코드 서식 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 3/7/2017
+ms.prod: visual-studio-dev15
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-python
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 3d0f1631-360b-45d4-a0cb-01c3c10d25f2
+caps.latest.revision: 1
+author: kraigb
+ms.author: kraigb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
+ms.openlocfilehash: c1d7a19438b796c5666daecef33052e43d1f720f
+ms.lasthandoff: 03/10/2017
+
+---
+
+# <a name="formatting-python-code"></a>Python 코드 서식 지정
+
+PTVS(Visual Studio용 Python 도구) 버전 2.0 이상의 코드 서식 지정에서는 미리 구성된 서식 지정 옵션에 맞게 코드 서식을 빠르게 다시 지정할 수 있습니다.
+
+- 선택 항목의 서식을 지정하려면 **편집 > 고급 > 선택 영역 서식**을 선택하거나 Ctrl+E, F를 누릅니다.
+- 전체 파일의 서식을 지정하려면 **편집 > 고급 > 문서 서식**을 선택하거나 Ctrl+E, D를 누릅니다.
+
+옵션은 **도구 > 옵션 > 텍스트 편집기 > Python > 서식** 및 해당 하위 탭을 통해 설정되며, 기본적으로 [PEP 8 스타일 가이드](http://www.python.org/dev/peps/pep-0008/)의 상위 집합과 일치하도록 설정됩니다. **일반** 탭은 서식을 적용할 시기를 결정하며, 다른 세 개의 하위 페이지는 다음 섹션에서 정의됩니다.
+
+PTVS에는 아래에서 설명한 대로 **편집 > 고급** 메뉴에 유용한 [주석 단락 채우기](#fill-comment-paragraph) 명령도 추가되어 있습니다.
+
+## <a name="spacing"></a>간격
+
+**간격**은 다양한 언어 구문 주위에 공백이 삽입되거나 제거되는 위치를 제어합니다. 각 옵션에는 다음 세 가지 가능한 값이 있습니다.
+
+- 선택한 상태: 간격을 적용합니다.
+- 선택 취소됨: 모든 간격을 제거합니다.
+- 비활성화 상태: 원래 서식을 그대로 유지합니다.
+
+다양한 옵션에 대한 예제가 다음 표에 나와 있습니다.
+
+| 클래스 정의 옵션 | 선택한 상태 | 선택 취소됨 |
+| --- | --- | --- | 
+| 클래스 선언의 이름과 베이스 목록 사이에 공백 삽입 | `class X (object): pass` | `class X(object): pass` | 
+| 베이스 목록 괄호 내에 공백 삽입 | `class X( object ): pass` | `class X(object): pass` |
+| 빈 베이스 목록 괄호 내에 공백 삽입 | `class X( ): pass` | `class X(): pass` |
+
+<br/>
+
+| 함수 정의 옵션 | 선택한 상태 | 선택 취소됨 |
+| --- | --- | --- |
+| 함수 선언의 이름과 매개 변수 목록 사이에 공백 삽입 | `def X (): pass` | `def X(): pass` | 
+| 매개 변수 목록 괄호 내에 공백 삽입 | `def X( a, b ): pass` | `def X(a, b): pass` |
+| 빈 매개 변수 목록 괄호 내에 공백 삽입 | `def X( ): pass` | `def X(): pass` |
+| 기본 매개 변수 값의 '=' 주위에 공백 삽입 | `includes X(a = 42): pass` | `includes X(a=42): pass` |
+| 반환 주석 연산자 앞뒤에 공백 삽입 | `includes X() -> 42: pass` | `includes X()->42: pass` |
+
+<br/>
+
+| 연산자 옵션 | 선택한 상태 | 선택 취소됨 |
+| --- | --- | --- |
+| 이항 연산자 주위에 공백 삽입 | `a + b` | `a+b` |
+| 할당 연산자 주위에 공백 삽입 | `a = b` | `a=b` |
+
+<br/>
+
+| 식 간격 옵션 | 선택한 상태 | 선택 취소됨 |
+| --- | --- | --- |
+| 함수 호출의 이름과 인수 목록 사이에 공백 삽입 | `X ()` | `X()` |
+| 빈 인수 목록 괄호 내부에 공백 삽입 | `X( )` | `X()` |
+| 인수 목록 괄호의 내부에 공백 삽입 | `X( a, b )` | `X(a, b)` |
+| 식 괄호 내에 공백 삽입 | `( a )` | `(a)` |
+| 빈 튜플 괄호 내에 공백 삽입 | `( )` | `()` |
+| 튜플 괄호 내에 공백 삽입 | `( a, b )` | `(a, b)` |
+| 빈 대괄호의 내부에 공백 삽입 | `[ ]` | `[]` |
+| 목록 대괄호 내에 공백 삽입 | `[ a, b ]` | `[a, b]` |
+| 여는 대괄호 앞에 공백 삽입 | `x [i]` | `x[i]` |
+| 대괄호 내부에 공백을 삽입합니다. | `x[ i ]` | `x[i]` |
+
+<br/>
+
+## <a name="statements"></a>문
+
+**문**은 더 많은 Python 양식으로 다양한 문을 자동으로 다시 작성하는 것을 제어합니다.
+
+| 옵션 | 서식 지정 앞 | 서식 지정 뒤 |
+| --- | --- | --- |
+| 새 줄에 가져온 모듈 배치 | `import sys, pickle` | `import sys`<br/>`import pickle` |
+| 불필요한 세미콜론 제거 | `x = 42;` | `x = 42` |
+| 새 줄에 여러 문 배치 | `x = 42; y = 100` | `x = 42`<br/>`y = 100` |
+
+
+## <a name="wrapping"></a>줄 바꿈
+
+**줄 바꿈**은 **최대 주석 너비**(기본값: 80)를 설정할 수 있으므로 **너무 넓은 너비가 있는 주석 줄 바꿈** 옵션을 설정하는 경우 PTVS에서 최대 주석 너비를 초과하지 않도록 주석의 서식을 다시 지정합니다.
+
+```python
+# Wrapped to 40 columns
+# There should be one-- and preferably
+# only one --obvious way to do it.
+```
+
+```python
+# Not-wrapped:
+# There should be one-- and preferably only one --obvious way to do it.
+```
+
+
+
+## <a name="fill-comment-paragraph-command"></a>주석 단락 채우기 명령
+
+**편집 > 고급 > 주석 단락 채우기**(Ctrl+E, Ctrl+P)는 주석 텍스트를 다시 배치하고, 해당 서식을 지정하며, 짧은 줄을 결합하고, 긴 줄을 분리합니다.
+
+예:
+
+```python
+# foo 
+# bar
+# baz
+```
+
+다음으로 변경합니다.
+
+```python
+# foo bar baz
+```
+
+```python
+# This is a very long long long long long long long long long long long long long long long long long long long comment
+```
+
+다음으로 변경합니다.
+
+```python
+# This is a very long long long long long long long long long long long long
+# long long long long long long long comment
+```
