@@ -7,6 +7,7 @@
 ### [디버그하지 않는 경우의 메모리 사용](memory-usage-without-debugging2.md)
 ## [CPU 사용](cpu-usage.md)
 ### [Windows 유니버설 앱에서 CPU 사용 분석](analyze-cpu-usage-in-a-windows-universal-app.md)
+## [GPU 사용량](gpu-usage.md)
 ## [응용 프로그램 타임라인](application-timeline.md)
 ## [PerfTips](perftips.md)
 ## [JavaScript 메모리](javascript-memory.md)
