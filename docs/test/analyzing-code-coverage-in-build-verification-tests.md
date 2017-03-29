@@ -1,18 +1,37 @@
 ---
-title: "빌드 확인 테스트에서 코드 검사 분석 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "빌드 확인 테스트에서 코드 검사 분석 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59c07d15-511e-4fd0-b398-bde9d5ed00d9
 caps.latest.revision: 8
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 8
+ms.author: mlearned
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: bfdef1bffe6939631bb50e11d902f500c1d599ce
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="analyzing-code-coverage-in-build-verification-tests"></a>빌드 확인 테스트에서 코드 검사 분석
 Microsoft Visual Studio의 코드 검사 분석에서는 자동화된 테스트에 의해 실행되는 코드의 양을 보여 줍니다. 자세한 내용은 [코드 검사를 사용하여 테스트할 코드 범위 결정](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)을 참조하세요.  
@@ -25,7 +44,7 @@ Microsoft Visual Studio의 코드 검사 분석에서는 자동화된 테스트�
   
      테스트 소스 정의가 두 개 이상일 경우 각각에 대해 이 단계를 반복합니다.  
   
-    -   *하지만 **실행 설정 파일 형식**이라는 필드는 없습니다.*  
+    -   *하지만**실행 설정 파일 형식**이라는 필드는 없습니다.*  
   
          **자동화된 테스트**에서 **테스트 어셈블리**를 선택한 다음 줄임표 단추 **[...]**를 선택합니다. **테스트 실행 추가/편집** 대화 상자의 **Test Runner**에서 **Visual Studio Test Runner**를 선택합니다.  
   
@@ -35,8 +54,3 @@ Microsoft Visual Studio의 코드 검사 분석에서는 자동화된 테스트�
   
 ## <a name="see-also"></a>참고 항목  
  [코드 검사를 사용하여 테스트할 코드 범위 결정](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
