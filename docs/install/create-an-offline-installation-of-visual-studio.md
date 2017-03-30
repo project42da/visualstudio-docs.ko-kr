@@ -2,7 +2,7 @@
 title: "Visual Studio 2017용 오프라인 설치 관리자 만들기 | Microsoft Docs"
 description: "Visual Studio용 오프라인 설치 관리자를 만드는 방법에 대해 알아봅니다."
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 03/21/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
-ms.openlocfilehash: acb47946c29d99cb53b34d67fe8a26f5611307f9
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 563c78a49eb55886b1ddbd4f437951c99c6568e5
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="create-an-offline-installer-for-visual-studio-2017"></a>Visual Studio 2017용 오프라인 설치 관리자 만들기
@@ -54,6 +54,8 @@ ms.lasthandoff: 03/08/2017
 |Visual Studio Enterprise |**vs_enterprise.exe**|  
 |Visual Studio Professional |**vs_professional.exe**|  
 |Visual Studio 커뮤니티 |**vs_community.exe**|
+
+이 밖에 지원되는 부트스트래퍼에는 vs_buildtools.exe, vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe 및 vs_testprofessional.exe가 있습니다.
 
 ## <a name="create-an-offline-installation-folder"></a>오프라인 설치 관리자 폴더 만들기
 모든 언어와 기능을 포함한 오프라인 설치를 만들려면 다음 예제의 명령 중 하나를 사용합니다.
@@ -90,8 +92,6 @@ ms.lasthandoff: 03/08/2017
 * 오프라인 설치 폴더에서 설치한 Visual Studio 인스턴스를 업데이트하려면 Visual Studio 설치 관리자를 실행한 다음 **업데이트**를 클릭합니다.
 * 최신 업데이트가 포함되도록 오프라인 설치 폴더를 새로 고치려면 ```--layout``` 명령을 다시 실행합니다. 이전에 사용한 것과 동일한 폴더를 가리키도록 합니다. 이렇게 하면 ```--layout```을 마지막으로 실행한 이후에 업데이트된 구성 요소만 다운로드합니다.
 
-
-오프라인 설치를 업데이트하려면 `--layout` 명령을 다시 실행합니다. 이전에 사용한 것과 동일한 폴더를 가리키도록 합니다. 이렇게 하면 `--layout`을 마지막으로 실행한 이후에 업데이트된 구성 요소만 다운로드합니다.
 
 ### <a name="how-to-troubleshoot-an-offline-installer"></a>오프라인 설치 관리자 문제를 해결하는 방법
 때로는 무엇인가 잘못됩니다. 다음 표에서는 알려진 문제 및 도움이 되는 몇 가지 해결 방법을 보여 줍니다.
