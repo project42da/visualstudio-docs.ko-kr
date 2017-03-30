@@ -53,7 +53,7 @@ ms.lasthandoff: 02/22/2017
 |구성 요소|설명|  
 |---------------|-----------------|  
 |바인딩 대상|데이터 소스와 연결할 UI 요소입니다. WPF의 시각적 요소는 <xref:System.Windows.UIElement> 클래스에서 파생됩니다.|  
-|대상 속성|데이터 바인딩 원본의 값을 반영하는 바인딩 대상의 *종속성 속성*입니다. 종속성 속성은 </xref:System.Windows.UIElement>가 파생되는 <xref:System.Windows.DependencyObject> 클래스에서 직접 지원됩니다.|  
+|대상 속성|데이터 바인딩 원본의 값을 반영하는 바인딩 대상의 *종속성 속성*입니다. 종속성 속성은 <xref:System.Windows.UIElement>가 파생되는 <xref:System.Windows.DependencyObject> 클래스에서 직접 지원됩니다.|  
 |바인딩 원본|표시하기 위해 UI 요소에 제공되는 하나 이상의 값에 대한 원본 개체입니다. WPF는 CLR 개체, ADO.NET 데이터 개체, XML 데이터(XPath 또는 LINQ to XML 쿼리의 데이터) 또는 다른 <xref:System.Windows.DependencyObject>를 바인딩 원본으로 자동으로 지원합니다.|  
 |원본 경로|바인딩될 값이나 값의 집합으로 확인되는 바인딩 원본의 속성입니다.|  
   
