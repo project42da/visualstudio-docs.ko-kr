@@ -4,6 +4,7 @@
 ### [Python용 Azure SDK](azure-sdk-for-python.md)
 ## [Python 시작](getting-started.md)
 ### [Azure에 게시](publishing-to-azure.md)
+### [Python용 C++ 확장명 만들기](cpp-and-python.md)
 ## [Python 프로젝트](python-projects.md)
 ### [웹 프로젝트 템플릿](template-web.md)
 ### [Django 웹 프로젝트 템플릿](template-django.md)
