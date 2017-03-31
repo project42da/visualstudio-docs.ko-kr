@@ -1,14 +1,10 @@
 ---
-title:
-- "Visual Studio Professional 2017 작업 및 구성 요소 ID | Microsoft Docs"
+title: "Visual Studio Professional 2017 작업 및 구성 요소 ID | Microsoft Docs"
 description: "작업 및 구성 요소 ID를 사용하여 명령줄로 Visual Studio를 설치하거나 VSIX 매니페스트에서 종속성으로 지정합니다."
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:

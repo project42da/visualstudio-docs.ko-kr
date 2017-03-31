@@ -1,14 +1,10 @@
 ---
-title:
-- "Visual Studio Test Professional 2017 작업 및 구성 요소 ID | Microsoft Docs"
+title: "Visual Studio Test Professional 2017 작업 및 구성 요소 ID | Microsoft Docs"
 description: "Visual Studio 작업 및 구성 요소 ID를 사용하여 테스터를 위한 통합된 테스트 도구를 제공합니다."
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:

@@ -1,14 +1,10 @@
 ---
-title:
-- "Visual Studio Feedback Client 2017 작업 및 구성 요소 ID | Microsoft Docs"
+title: "Visual Studio Feedback Client 2017 작업 및 구성 요소 ID | Microsoft Docs"
 description: "Visual Studio 작업 및 구성 요소 ID를 사용하여 Visual Studio Team Services 또는 Team Foundation Server에 대한 풍부한 피드백을 제공할 수 있습니다."
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:
