@@ -1,7 +1,7 @@
 # [Visual Studio 2017 시작](welcome-to-visual-studio.md)
 # [새로운 기능](ide/whats-new-in-visual-studio.md)
 # [설치](install/TOC.md)
-# [Visual Studio IDE](ide/index.md)
+# [Visual Studio IDE](ide/visual-studio-ide.md)
 # [Visual Basic](/dotnet/articles/visual-basic)
 # [Visual C#](/dotnet/articles/csharp)
 # [Visual C++](/cpp/top/visual-cpp-in-visual-studio)

@@ -4,9 +4,9 @@ hide_bc: true
 title: "Visual Studio 설명서"
 description: "Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 개발하는 방법에 대해 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 371d314bfb81e47a13e7f00d4d4269313477ecf9
-ms.openlocfilehash: c00f51ce4662806d4c7112a3bd7a5e531e3ba521
-ms.lasthandoff: 03/23/2017
+ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
+ms.openlocfilehash: 5a8448dff45473fa40892fb07604759a9d015021
+ms.lasthandoff: 03/31/2017
 
 ---
 <div id="main" class="v2">
@@ -287,7 +287,7 @@ ms.lasthandoff: 03/23/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET용 모바일 개발</h3>
+                                                    <h3>.NET을 사용한 모바일 개발</h3>
                                                     <p>Xamarin을 사용하여 iOS, Android 또는 Windows용 플랫폼 간 응용 프로그램을 빌드합니다.</p>
                                                 </div>
                                             </div>
@@ -785,3 +785,4 @@ ms.lasthandoff: 03/23/2017
         </ul>
     </div>
 </div>
+
