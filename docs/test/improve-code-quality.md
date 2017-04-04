@@ -13,7 +13,7 @@ helpviewer_keywords:
 - team-based development
 ms.assetid: 73baa961-c21f-43fe-bb92-3f59ae9b5945
 caps.latest.revision: 39
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -70,3 +70,4 @@ ms.lasthandoff: 03/07/2017
   
  [Visual Studio Online 또는 Team Foundation Server를 사용하여 작업 추적](https://www.visualstudio.com/docs/work/overview)  
  [!INCLUDE[vstsTfsLong](../test/includes/vststfslong_md.md)]를 사용하여 프로젝트에서 활성 프로세스, 공식 프로세스 또는 이러한 프로세스의 변형 중에서 무엇을 사용할지를 계획하고 추적할 수 있습니다. 프로젝트를 계획하고, 계획에 대한 진행률을 추적하고, 필요한 사항을 조정하면 위험을 줄이고, 원하지 않는 상황을 방지하고, 프로젝트 비용을 관리할 수 있습니다.
+

@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f7e9e4a2-5d01-4f78-b408-5be3892bd162
 caps.latest.revision: 25
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 04c981d458912aaf3802e727369893759faab3a5
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>.runsettings 파일을 사용하여 단위 테스트 구성
@@ -58,7 +59,7 @@ ms.openlocfilehash: 04c981d458912aaf3802e727369893759faab3a5
   
  ![실행 설정 파일 사용](../test/media/runsettings-1.png "RunSettings-1")  
   
-##  <a name="a-nameexamplea-copy-this-example-runsettings-file"></a><a name="example"></a> 이 예제의 .runsettings 파일 복사  
+##  <a name="example"></a> 이 예제의 .runsettings 파일 복사  
  다음은 일반적인 *.runsettings 파일입니다. 모든 값에는 기본값이 있으므로 파일의 각 요소는 선택 사항입니다.  
   
 ```xml  
@@ -180,8 +181,4 @@ ms.openlocfilehash: 04c981d458912aaf3802e727369893759faab3a5
 ## <a name="see-also"></a>참고 항목  
  [코드 검사 분석 사용자 지정](../test/customizing-code-coverage-analysis.md)   
  [Visual Studio 테스트에 대한 테스트 설정 지정](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

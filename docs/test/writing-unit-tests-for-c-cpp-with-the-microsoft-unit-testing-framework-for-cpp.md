@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4f4b5f10-7314-4725-8c6e-e72f52eff918
 caps.latest.revision: 14
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -415,3 +415,4 @@ Visual Studio에서는 C++로 작성된 관리되지 않는 코드에 대한 단
  [네이티브 코드 디버그](../debugger/debugging-native-code.md)   
  [연습: 동적 연결 라이브러리 만들기 및 사용(C++)](http://msdn.microsoft.com/Library/3ae94848-44e7-4955-bbad-7d40f493e941)   
  [가져오기 및 내보내기](/visual-cpp/build/importing-and-exporting)
+
