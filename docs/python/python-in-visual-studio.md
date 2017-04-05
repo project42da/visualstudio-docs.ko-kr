@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 9f888c27357a5e13fd5e1977bd51a200e928be64
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 746dd25dde790d5e262e25a3702b49721edc3510
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -127,7 +127,7 @@ Visual Studio 버전(version 및 edition)에서 지원되는 기능:
 
 | 웹 | 2017 | 2015 | 2013 Comm | 2013 Desktop | 2013 Web | 2013 Pro+ | 2012 Pro+ | 2010 SP1 Pro+ |
 | --- | --- | --- | --- | --- | --- | --- | --- | ---|
-| Djano 웹 프로젝트 | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
+| Django 웹 프로젝트 | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
 | Bottle 웹 프로젝트 | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
 | Flask 웹 프로젝트 | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
 | 일반 웹 프로젝트 | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
@@ -192,3 +192,4 @@ Visual Studio 버전(version 및 edition)에서 지원되는 기능:
 
 - [PyKinect를 사용하여 Python으로 Kinect games 게임 작성](https://github.com/Microsoft/PTVS/wiki/PyKinect)(영문)(GitHub wiki)
 - [IIS 및 Python 간 WFastCGI 브리지](https://pypi.python.org/pypi/wfastcgi)(영문)(python.org)
+
