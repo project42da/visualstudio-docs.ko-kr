@@ -71,7 +71,7 @@ ms.lasthandoff: 03/13/2017
 
 |요소|설명|  
 |-------------|-----------------|  
-|[Item](../msbuild/item-element-msbuild.md)|빌드 프로세스에 대한 입력을 정의합니다. `ItemDefinitionGroup`에는&0;개 이상의 `Item` 요소가 있을 수 있습니다.|  
+|[Item](../msbuild/item-element-msbuild.md)|빌드 프로세스에 대한 입력을 정의합니다. `ItemDefinitionGroup`에는 0개 이상의 `Item` 요소가 있을 수 있습니다.|  
 
 ### <a name="parent-elements"></a>부모 요소  
 
