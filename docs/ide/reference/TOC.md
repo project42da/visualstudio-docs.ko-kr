@@ -153,7 +153,7 @@
 ## [중단점 설정/해제 명령](toggle-breakpoint-command.md)
 ## [조사식 명령](watch-command.md)
 # [Visual Studio의 XML 도구](../../xml-tools/xml-tools-in-visual-studio.md)
-# [MSBuild](../../msbuild/msbuild1.md)
+# [MSBuild](../../msbuild/msbuild.md)
 # [장애가 있는 사용자를 위한 접근성](accessibility-for-people-with-disabilities.md)
 ## [Visual Studio의 접근성 기능](accessibility-features-of-visual-studio.md)
 ### [방법: IDE 접근성 옵션 설정](how-to-set-ide-accessibility-options.md)
