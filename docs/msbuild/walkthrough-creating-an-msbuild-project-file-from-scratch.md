@@ -30,15 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: 2db52ef9381f74896969e693467166aaecb8db55
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 8cc8cb349901c7a2b0c94875d29e602c33baa5bf
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>연습: 처음부터 새로 MSBuild 프로젝트 파일 만들기
 .NET Framework를 대상으로 하는 프로그래밍 언어는 MSBuild 프로젝트 파일을 사용하여 응용 프로그램 빌드 프로세스를 설명하고 제어합니다. Visual Studio를 사용하여 MSBuild 프로젝트 파일을 만들 때 적절한 XML이 파일에 자동으로 추가됩니다. 그러나 XML이 구성되는 방식과 이러한 방식을 변경하여 빌드를 제어할 수 있는 방법을 이해하는 것이 좋습니다.  
   
- C++ 프로젝트용 프로젝트 파일을 만드는 방법에 대한 자세한 내용은 [MSBuild(Visual C++)](/visual-cpp/build/msbuild-visual-cpp)를 참조하세요.  
+ C++ 프로젝트용 프로젝트 파일을 만드는 방법에 대한 자세한 내용은 [MSBuild(Visual C++)](/cpp/build/msbuild-visual-cpp)를 참조하세요.  
   
  이 연습에서는 텍스트 편집기만을 사용하여 기본 프로젝트 파일을 증분 방식으로 만드는 방법을 보여 줍니다. 이 연습에서는 다음과 같은 단계를 따릅니다.  
   

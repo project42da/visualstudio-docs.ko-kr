@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d014b703c491603c86fcd6a89c1dc17f35b0deae
-ms.openlocfilehash: 99850b840fbda9f7e7674d926822ff461e69da17
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 79d77230e46bade8e89d4503dbf95b1f1831e464
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="msbuild"></a>MSBuild
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/22/2017
   
  Visual Studio는 MSBuild를 사용하여 관리되는 프로젝트를 로드하고 빌드합니다. Visual Studio의 프로젝트 파일(.csproj, .vbproj, vcxproj 등)에는 IDE를 사용하여 프로젝트를 빌드할 때 실행되는 MSBuild XML 코드가 들어 있습니다. Visual Studio 프로젝트는 필요한 모든 설정을 가져오고 일반적인 개발 작업을 수행하는 프로세스를 빌드하지만 Visual Studio 내에서 또는 XML 편집기를 사용하여 확장하거나 수정할 수 있습니다.  
   
- C++의 MSBuild에 대한 자세한 내용은 [MSBuild (Visual C++)](/visual-cpp/build/msbuild-visual-cpp)를 참조하세요.  
+ C++의 MSBuild에 대한 자세한 내용은 [MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp)를 참조하세요.  
   
  다음 예제에서는 Visual Studio IDE 대신 MSBuild 명령줄을 사용하여 빌드를 실행할 수 있는 경우를 보여 줍니다.  
   

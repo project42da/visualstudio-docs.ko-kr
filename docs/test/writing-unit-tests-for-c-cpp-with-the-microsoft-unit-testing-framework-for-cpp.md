@@ -28,9 +28,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 76721dbf816cf7b7b8691efc10d22aac6b69cb05
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 84549f28f33933eacbf44742b5be129df8ab780e
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>C++용 Microsoft 유닛 테스트 프레임워크를 사용하여 C/C++용 유닛 테스트 작성
@@ -48,7 +48,7 @@ Visual Studio에서는 C++로 작성된 관리되지 않는 코드에 대한 단
   
     -   DLL의 외부 액세스 가능한 함수에 대한 선언이 포함된 `#include` 파일을 `.h`합니다.  
   
-         `.h` 파일에는 `_declspec(dllimport)`로 표시된 함수 선언이 포함됩니다. 또는 DEF 파일을 사용해서 메서드를 내보낼 수 있습니다. 자세한 내용은 [가져오기 및 내보내기](/visual-cpp/build/importing-and-exporting)를 참조하세요.  
+         `.h` 파일에는 `_declspec(dllimport)`로 표시된 함수 선언이 포함됩니다. 또는 DEF 파일을 사용해서 메서드를 내보낼 수 있습니다. 자세한 내용은 [가져오기 및 내보내기](/cpp/build/importing-and-exporting)를 참조하세요.  
   
          단위 테스트는 테스트 중인 DLL에서 내보낸 함수만 액세스할 수 있습니다.  
   
@@ -184,7 +184,7 @@ Visual Studio에서는 C++로 작성된 관리되지 않는 코드에 대한 단
   
      ![새 DLL 코드 프로젝트 및 API 매크로가 있는 .h 파일](../test/media/utecpp07.png "UteCpp07")  
   
-     `__declspec(dllexport)` 선언자는 클래스의 공용 및 보호되는 멤버가 DLL 외부에 표시되도록 만듭니다. 자세한 내용은 [Using dllimport and dllexport in C++ Classes](/visual-cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)을 참조하세요.  
+     `__declspec(dllexport)` 선언자는 클래스의 공용 및 보호되는 멤버가 DLL 외부에 표시되도록 만듭니다. 자세한 내용은 [Using dllimport and dllexport in C++ Classes](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)을 참조하세요.  
   
 4.  주 .cpp 파일에서 함수에 대한 최소한의 본문을 추가합니다.  
   
@@ -414,5 +414,5 @@ Visual Studio에서는 C++로 작성된 관리되지 않는 코드에 대한 단
  [관리되는/관리되지 않는 코드 상호 운용성에 대한 개요](http://msdn.microsoft.com/library/ms973872.aspx)   
  [네이티브 코드 디버그](../debugger/debugging-native-code.md)   
  [연습: 동적 연결 라이브러리 만들기 및 사용(C++)](http://msdn.microsoft.com/Library/3ae94848-44e7-4955-bbad-7d40f493e941)   
- [가져오기 및 내보내기](/visual-cpp/build/importing-and-exporting)
+ [가져오기 및 내보내기](/cpp/build/importing-and-exporting)
 
