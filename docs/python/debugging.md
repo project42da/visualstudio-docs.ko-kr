@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: b0d84db6a16861fb9554af2a644423f906784748
-ms.openlocfilehash: 3ca6c45cd1f61dc4a4419ab01794e24c0c19d44a
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: b5d72a83092c2b97b30b7a8af539a0b1aca50418
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -67,7 +67,7 @@ PTVS(Visual Studio용 Python 도구)는 실행 중인 프로세스에 연결하�
 
 기본적인 디버깅 워크플로에는 다음 섹션에서 설명한 대로 중단점 설정, 단계별 코드 실행, 값 검사 및 예외 처리가 포함됩니다. Visual Studio 디버거에 대한 자세한 내용은 [Visual Studio에서 디버깅](../debugger/debugging-in-visual-studio.md)을 참조하세요.
 
-디버깅 세션은 **디버그 > 디버깅 시작** 명령, 도구 모음의 **시작** 단추 또는 F5 키로 시작됩니다. 이렇게 하면 프로젝트의 활성 환경 및 프로젝트 속성([프로젝트 디버깅 옵션](#project-debugging-options) 참조)에 지정된 명령줄 인수 또는 검색 경로가 포함된 프로젝트의 시작 파일([솔루션 탐색기]에서 굵게 표시됨)이 실행됩니다.
+디버깅 세션은 **디버그 > 디버깅 시작** 명령, 도구 모음의 **시작** 단추 또는 F5 키로 시작됩니다. 이렇게 하면 프로젝트의 활성 환경 및 프로젝트 속성([프로젝트 디버깅 옵션](#project-debugging-options) 참조)에 지정된 명령줄 인수 또는 검색 경로가 포함된 프로젝트의 시작 파일([솔루션 탐색기]에서 굵게 표시됨)이 실행됩니다. 그러나 몇 가지 이유로 시작 파일을 설정하지 않은 경우 Python 출력 창이 잠깐 나타났다가 사라집니다. 이 경우 해당 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
 
 > [!Note]
 > 디버거는 프로젝트에 대해 항상 활성 Python 환경으로 시작합니다. 환경을 변경하려면 [Python 환경](python-environments.md)에서 설명한 대로 다른 환경을 사용하도록 설정합니다.

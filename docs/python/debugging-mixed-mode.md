@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 1e1f72619618d252c43537093b9ebd30eee715ab
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: ddbac5b8ed52e6ed7afae7e7b04dc2fa15f7a0c2
+ms.lasthandoff: 03/27/2017
 
 ---
 
 # <a name="debugging-python-and-c-together"></a>Python과 C++로 디버깅
 
-2.0 이전 버전의 PTVS(Visual Studio용 Python 도구)를 포함한 대부분의 일반 Python 디버거는 Python 코드만 디버그할 수 있습니다. 그러나 실제로 Python은 고성능 또는 플랫폼 API를 직접 호출하는 기능이 필요한 C 또는 C++와 함께 사용됩니다. 모든 Visual Studio 버전의 PTVS 2.0 이상은 결합된 호출 스택, Python과 네이티브 코드 간 단계별 실행 기능, 두 가지 코드 형식의 중단점 및 네이티브 프레임에서 개체의 Python 표현과 Python 프레임에서 개체의 네이티브 표현을 볼 수 있는 기능을 통해 Python과 네이티브(C/C++)를 위한 통합된 동시 혼합 모드 디버깅을 제공합니다.
+대부분의 일반 Python 디버거는 Python 코드만 디버그할 수 있습니다. 그러나 실제로 Python은 고성능 또는 플랫폼 API를 직접 호출하는 기능이 필요한 C 또는 C++와 함께 사용됩니다. 예제는 [Python용 C++ 확장 만들기](cpp-and-python.md)를 참조하세요. Visual Studio 2.0 및 이후 버전용 Python 도구를 사용하는 경우 Visual Studio는 결합된 호출 스택, Python과 네이티브 코드 간 단계별 실행 기능, 두 가지 코드 형식의 중단점 및 네이티브 프레임에서 개체의 Python 표현과 Python 프레임에서 개체의 네이티브 표현을 볼 수 있는 기능을 통해 Python과 네이티브 C/C++를 위한 통합된 동시 혼합 모드 디버깅을 제공합니다.
 
 ![혼합 모드 디버깅](media/mixed-mode-debugging.png) 
 
@@ -51,6 +51,9 @@ Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 
 
     ![네이티브 코드 디버깅 사용](media/mixed-mode-debugging-enable-native.png)
 
+    > [!Tip]    
+    > 네이티브 코드 디버깅을 사용하면 프로그램이 완료되었을 때 일반적인 “계속하려면 아무 키나 누르세요.” 일시 중지를 제공하지 않고 Python 출력 창이 바로 사라질 수 있습니다. 강제로 일시 중지하려면 네이티브 코드 디버깅을 사용할 때 **디버그** 탭의 **실행 > 인터프리터 인수** 필드에 `-i` 옵션을 추가합니다. 이렇게 하면 코드가 완료된 후 Python 인터프리터가 대화형 모드로 전환되며, 이때 Ctrl+Z, Enter 키를 눌러 종료할 때까지 대기합니다.
+
 1. 혼합 모드 디버거를 기존 프로세스에 연결하는 경우(**디버그 > 프로세스에 연결...**), **선택...** 단추를 선택하여 **코드 형식 선택** 대화 상자를 열고, **다음 코드 형식 디버깅** 옵션을 설정하고, 목록에서 **네이티브** 및 **Python**을 모두 선택합니다.
 
     ![네이티브 및 Python 코드 형식 선택](media/mixed-mode-debugging-code-type.png)
@@ -59,8 +62,9 @@ Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 
 
     **네이티브**에 추가하거나 대신하여 다른 코드 형식을 선택할 수 있습니다. 예를 들어 관리되는 응용 프로그램에서 CPython을 호스팅하고, 그 결과로 네이티브 확장 모듈을 사용하며, 이 세 가지를 모두 디버그하려는 경우 결합된 호출 스택 및 세 가지 모두의 런타임 간 단계별 실행을 포함한 통합된 디버깅 환경을 위해 **Python**, **네이티브** 및 관리되는 응용 프로그램**을 모두 검사할 수 있습니다.
 
-1. 처음으로 혼합 모드에서 디버깅을 시작하면 **Python 기호 필요** 대화 상자가 표시됩니다. 자세한 내용은 [혼합 모드 디버깅 기호](debugging-symbols-for-mixed-mode.md)를 참조하세요. 기호는 지정된 Python 환경에 한 번만 설치해야 합니다.
+1. 처음으로 혼합 모드에서 디버깅을 시작하면 **Python 기호 필요** 대화 상자가 표시될 수 있습니다. 자세한 내용은 [혼합 모드 디버깅 기호](debugging-symbols-for-mixed-mode.md)를 참조하세요. 기호는 지정된 Python 환경에 한 번만 설치해야 합니다. Visual Studio 2017 설치 관리자를 통해 Python 지원을 설치하면 기호가 자동으로 포함됩니다.
 
+1. Python 소스 코드 자체를 준비하려고 할 수도 있습니다. 표준 Python의 경우 [https://www.python.org/downloads/source/](https://www.python.org/downloads/source/)에서 가져올 수 있습니다. 사용 중인 버전에 적합한 보관 파일을 다운로드하고 폴더에 압축을 풉니다. 메시지가 표시되는 시점과 관계없이 Visual Studio가 해당 폴더에 있는 특정 파일을 가리키도록 합니다.
 
 ## <a name="mixed-mode-specific-features"></a>혼합 모드의 특정 기능
 
@@ -140,7 +144,7 @@ static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
 
 이 경우 디버거에서 개체의 C 형식이 `FobObject`임을 올바르게 추론할 수 있습니다. `tp_init`에서 더 정밀하게 형식을 확인할 수 없는 경우 다른 필드로 이동합니다. 이러한 필드 중 하나에서 형식을 추론할 수 없는 경우 "[C++ 보기]" 노드는 해당 개체를 `PyObject` 인스턴스로 표시합니다.
 
-작성된 사용자 지정 형식에 대해 항상 유용한 표현을 얻으려면, 형식을 등록할 때 하나 이상의 특수 함수를 등록하고 강력한 형식의 `self` 매개 변수를 사용하는 것이 좋습니다. 대부분의 형식은 자연스럽게 이러한 요구 사항을 충족합니다. 그렇지 않은 경우 일반적으로 `tp_init`가 이 용도로 사용하기에 가장 편리한 항목입니다. 디버거 형식 유추를 사용하도록 설정하기 위해서만 존재하는 형식에 대한 더미 구현인 `tp_init`는 위의 코드 샘플에서와 같이 즉시&0;을 반환할 수 있습니다.
+작성된 사용자 지정 형식에 대해 항상 유용한 표현을 얻으려면, 형식을 등록할 때 하나 이상의 특수 함수를 등록하고 강력한 형식의 `self` 매개 변수를 사용하는 것이 좋습니다. 대부분의 형식은 자연스럽게 이러한 요구 사항을 충족합니다. 그렇지 않은 경우 일반적으로 `tp_init`가 이 용도로 사용하기에 가장 편리한 항목입니다. 디버거 형식 유추를 사용하도록 설정하기 위해서만 존재하는 형식에 대한 더미 구현인 `tp_init`는 위의 코드 샘플에서와 같이 즉시 0을 반환할 수 있습니다.
 
 ## <a name="differences-from-standard-python-debugging"></a>표준 Python 디버깅과의 차이점
 

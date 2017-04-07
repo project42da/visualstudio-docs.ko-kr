@@ -28,9 +28,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: ac979e7287046164db37848778f648656f7230a6
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ce1142acf4acb0e44e85b7e9ab313136d7ed7727
+ms.openlocfilehash: 0ef80ff90b0182405f72f9413de13b699aed971d
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>방법: 대상 및 작업 구성
@@ -113,17 +113,18 @@ ms.lasthandoff: 02/22/2017
       <SimpleTask MSBuildRuntime="$(FrameworkVerion)" MSBuildArchitecture= "x86"/>  
    </Target>  
 </Project>  
-```xml  
+```  
   
- Unlike other task parameters, `MSBuildRuntime` and `MSBuildArchitecture` are not apparent to the task itself.  To write a task that is aware of the context in which it runs, you must either test the context by calling the .NET Framework, or use build properties to pass the context information through other task parameters.  
-  
-> [!NOTE]
->  `UsingTask` attributes can be set from toolset and environment properties.  
-  
- The `MSBuildRuntime` and `MSBuildArchitecture` parameters provide the most flexible way to set the target context, but also the most limited in scope.  On the one hand, because they are set on the task instance itself and are not evaluated until the task is about to run, they can derive their value from the full scope of properties available at both evaluation-time and build-time.  On the other hand, these parameters only apply to a particular instance of a task in a particular target.  
+ 다른 작업 매개 변수와 달리 `MSBuildRuntime` 및 `MSBuildArchitecture`는 작업 자체에 표시되지 않습니다.  실행되는 컨텍스트를 인식하는 작업을 작성하려면 .NET Framework를 호출하여 컨텍스트를 테스트하거나 빌드 속성을 사용하여 다른 작업 매개 변수를 통해 컨텍스트 정보를 전달해야 합니다.  
   
 > [!NOTE]
->  Task parameters are evaluated in the context of the parent node, not in the context of the task host.Environment variables that are runtime- or architecture- dependent (such as the Program files location) will evaluate to the value that matches the parent node.  However, if the same environment variable is read directly by the task, it will correctly be evaluated in the context of the task host.  
+>  `UsingTask` 특성은 도구 집합 및 환경 속성에서 설정할 수 있습니다.  
   
-## See Also  
- [Configuring Targets and Tasks](../msbuild/configuring-targets-and-tasks.md)
+ `MSBuildRuntime` 및 `MSBuildArchitecture` 매개 변수는 대상 컨텍스트 뿐만 아니라 가장 제한적인 범위를 설정하는 가장 유연한 방법을 제공합니다.  한편 이러한 매개 변수는 작업 인스턴스 자체에서 설정되고 작업이 실행된 다음에야 평가되기 때문에 평가 시간과 빌드 시간에 모두 사용할 수 있는 전체 범위의 속성에서 값을 파생시킬 수 있습니다.  반면 이러한 매개 변수는 특정 대상에 있는 특정 작업 인스턴스에만 적용됩니다.  
+  
+> [!NOTE]
+>  작업 매개 변수는 작업 호스트의 컨텍스트가 아니라 부모 노드의 컨텍스트에서 평가됩니다. 런타임 종속적 또는 아키텍처 종속적 환경 변수(예: 프로그램 파일 위치)는 부모 노드와 일치하는 값으로 평가됩니다.  그러나 동일한 환경 변수를 작업에서 직접 읽을 경우 작업 호스트의 컨텍스트에서 올바르게 평가됩니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [대상 및 작업 구성](../msbuild/configuring-targets-and-tasks.md)
+

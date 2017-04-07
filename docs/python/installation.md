@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: dbedb933ce3cabf000e7487fcf03133db3a326b4
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: e0a51155a42fb51244114da86a292381a7a28a21
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -52,13 +52,13 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. [Visual Studio 2017 Preview](https://www.visualstudio.com/vs/preview)를 설치합니다. 이는 현재 Visual Studio 2017용 Python 작업을 설치할 수 있는 유일한 방법입니다.
+1. [https://www.visualstudio.com/vs/preview에서 “Visual Studio 2017 Preview”](https://www.visualstudio.com/vs/preview)를 설치합니다. **참고:** 이 Preview 채널은 릴리스된 Visual Studio 2017 버전과 *구분*되며 Python 지원을 포함하여 향후 Visual Studio 2017 업데이트를 위해 개발 중인 기능이 포함되어 있습니다.
 
 1. Preview 설치 관리자에서 **웹 및 클라우드 > Python 개발** 작업을 선택합니다.
 
     ![Visual Studio 설치 관리자의 Python 개발 작업](media/installation-python-workload.png)
 
-1. 설치 관리자의 오른쪽에서 포함하고자 하는 Python 인터프리터 및 기타 관련 도구를 선택합니다.
+1. 설치 관리자의 오른쪽에서 포함하고자 하는 Python 인터프리터 및 기타 관련 도구를 선택합니다. 예를 들어 Python용 C++ 확장을 개발하려는 경우 **Python 네이티브 개발 도구** 옵션을 포함합니다.
 
     ![Visual Studio 설치 관리자의 Python 개발 옵션](media/installation-python-options.png)
 
