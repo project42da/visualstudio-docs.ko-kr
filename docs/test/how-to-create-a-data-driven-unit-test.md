@@ -1,30 +1,47 @@
 ---
-title: "방법: 데이터 기반 단위 테스트 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.test.testresults.unittest.datadriven"
-  - "vs.test.testresults.unittest.datadriven.failure"
-helpviewer_keywords: 
-  - "단위 테스트, 실행"
-  - "단위 테스트, 데이터 기반"
-  - "데이터 기반 단위 테스트"
+title: "방법: 데이터 기반 단위 테스트 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.test.testresults.unittest.datadriven
+- vs.test.testresults.unittest.datadriven.failure
+helpviewer_keywords:
+- unit tests, running
+- unit tests, data-driven
+- data-driven unit tests
 ms.assetid: a0322bc5-02c8-4f9f-af43-100a60b1bd28
 caps.latest.revision: 33
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 33
----
-# 방법: 데이터 기반 단위 테스트 만들기
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 2eaf4aa44fdc1bec56bb513af54ea7db72dcf3db
+ms.lasthandoff: 04/04/2017
 
-Microsoft 단위 테스트 프레임 워크를 사용하여 관리 되는 코드를 테스트 메서드에서 데이터 소스에서 사용 되는 값을 검색 하는 단위 테스트 메서드를 설정할 수 있습니다.  쉽게 하나의 메서드를 사용하여 다양한 입력 테스트를 데이터 소스의 각 행에에서는 연속적으로 실행 됩니다.  
+---
+# <a name="how-to-create-a-data-driven-unit-test"></a>방법: 데이터 기반 단위 테스트 만들기
+관리 코드에 Microsoft 단위 테스트 프레임워크를 사용하면 데이터 소스에서 테스트 메서드에 사용된 값을 검색하도록 단위 테스트 메서드를 설정할 수 있습니다. 이 메서드는 데이터 소스의 각 행을 대상으로 연속 실행되므로 단일 메서드를 사용하여 다양한 입력을 쉽게 테스트할 수 있습니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
@@ -34,38 +51,38 @@ Microsoft 단위 테스트 프레임 워크를 사용하여 관리 되는 코드
   
 -   [테스트 클래스에 TestContext 추가](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Adding_a_TestContext_to_the_test_class)  
   
--   [테스트 메서드 쓰기](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Writing_the_test_method)  
+-   [테스트 메서드 작성](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Writing_the_test_method)  
   
     -   [DataSourceAttribute 지정](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Specifying_the_DataSourceAttribute)  
   
-    -   [TestContext.DataRow를 사용하여 데이터에 액세스](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Using_TestContext_DataRow_to_access_the_data)  
+    -   [TestContext.DataRow를 사용하여 데이터 액세스](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Using_TestContext_DataRow_to_access_the_data)  
   
 -   [테스트 실행 및 결과 보기](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Running_the_test_and_viewing_results)  
   
  데이터 기반 단위 테스트를 만드는 단계는 다음과 같습니다.  
   
-1.  테스트 메서드에서 사용 하는 값이 포함 된 데이터 원본을 만듭니다.  데이터 원본 테스트를 실행 하는 컴퓨터에 등록 된 형식일 수 있습니다.  
+1.  테스트 메서드에서 사용할 값이 포함된 데이터 소스를 만듭니다. 테스트를 실행할 컴퓨터에 등록된 모든 형식을 데이터 소스로 사용할 수 있습니다.  
   
-2.  추가 개인 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> 필드와 공용 `TestContext` 속성 테스트 클래스에 있습니다.  
+2.  private <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> 필드 및 public `TestContext` 속성을 test 클래스에 추가합니다.  
   
-3.  단위 테스트 메서드를 만들고 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 특성을 추가합니다.  
+3.  단위 테스트 메서드를 만들고 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 특성을 메서드에 추가합니다.  
   
-4.  테스트에서 사용하는 값을 검색하기 위해 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> 인덱서 속성을 사용합니다.  
+4.  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> 인덱서 속성을 사용하여 테스트에서 사용할 값을 검색합니다.  
   
 ##  <a name="BKMK_The_method_under_test"></a> 테스트 중인 메서드  
- 예를 들어, 우리가 만들었다고 가정해 봅시다.  
+ 예를 들어 다음 항목을 만들었다고 가정해 보세요.  
   
-1.  다른 종류의 계정에 대 한 트랜잭션을 처리하고 허용합는 `MyBank` 라고 불리는 솔루션.  
+1.  다양한 형식의 계좌에 대한 트랜잭션을 수락하고 처리하는 `MyBank` 솔루션.  
   
-2.  `MyBank` 라는 `BankDb` 계정에 대한 트랜잭션을 관리 하는 프로젝트.  
+2.  계좌에 대한 트랜잭션을 관리하는 `MyBank`의 `BankDb` 프로젝트.  
   
-3.  `Maths` 에 `DbBank` 프로젝트에서 트랜잭션이 모든 은행을 확인 하기 위해 수학 함수를 수행 하는 프로젝트입니다.  
+3.  모든 트랜잭션이 은행에 이로운지 확인하기 위해 수학적 함수를 실행하는 `DbBank` 프로젝트의 `Maths` 클래스.  
   
-4.  단위 테스트 프로젝트 `BankDbTests` 의 동작을 테스트 하는 `BankDb` 구성 요소입니다.  
+4.  `BankDb` 구성 요소의 동작을 테스트하기 위한 `BankDbTests` 단위 테스트 프로젝트.  
   
-5.  단위 테스트 클래스  `MathsTests`  의 동작을 확인 하는  `Maths`  클래스입니다.  
+5.  `Maths` 클래스의 동작을 확인하기 위한 `MathsTests` 단위 테스트 클래스.  
   
- `Maths` 루프를 사용 하는 두 개의 정수를 추가하는 메서드 테스트를 할 것입니다.  
+ 루프를 사용하여 두 개의 정수를 더하는 `Maths`의 메서드를 테스트하게 됩니다.  
   
 ```  
 public int AddIntegers(int first, int second)  
@@ -80,16 +97,16 @@ public int AddIntegers(int first, int second)
 ```  
   
 ##  <a name="BKMK_Creating_a_data_source"></a> 데이터 소스 만들기  
- 테스트는  `AddIntegers`  메서드를 매개 변수 및 반환 될 것으로 예상 하는 합계 값의 범위를 지정 하는 데이터 원본을 만듭니다.  Sql 압축 데이터베이스 작성 예에서  `MathsData`  라는 테이블을  `AddIntegersData`  다음 열 이름 및 값을 포함 하는 것이 있습니다.  
+ `AddIntegers` 메서드를 테스트하기 위해 반환되어야 하는 매개 변수 및 합계의 값 범위를 지정하는 데이터 소스를 만듭니다. 이 예제에서는 `MathsData` Sql Compact 데이터베이스 및 다음 열 이름과 값이 포함된 `AddIntegersData` 테이블을 만듭니다.  
   
-|FirstNumber|SecondNumber|합계|  
-|-----------------|------------------|--------|  
+|FirstNumber|SecondNumber|Sum|  
+|-----------------|------------------|---------|  
 |0|1|1|  
 |1|1|2|  
-|2|\-3|\-1|  
+|2|-3|-1|  
   
 ##  <a name="BKMK_Adding_a_TestContext_to_the_test_class"></a> 테스트 클래스에 TestContext 추가  
- 단위 테스트 프레임 워크를 `TestContext` 개체를 데이터 기반 테스트에 대 한 데이터 원본 정보를 저장 합니다.  프레임 워크는 다음이 개체의 값으로 설정 된  `TestContext`  속성을 만듭니다.  
+ 단위 테스트 프레임워크는 데이터 기반 테스트를 위해 데이터 소스 정보를 저장할 `TestContext` 개체를 만듭니다. 그런 다음 이 개체를 여기서 만든 `TestContext` 속성의 값으로 설정합니다.  
   
 ```  
   
@@ -102,10 +119,10 @@ public TestContext TestContext
   
 ```  
   
- 테스트 메서드를 통해 데이터에 액세스 하는  `DataRow`  의 인덱서 속성은 `TestContext`입니다.  
+ 테스트 메서드에서 `TestContext`의 `DataRow` 인덱서 속성을 통해 데이터에 액세스합니다.  
   
-##  <a name="BKMK_Writing_the_test_method"></a> 테스트 메서드 쓰기  
- 테스트 메서드에 대한  `AddIntegers`  는 매우 단순합니다.  데이터 소스의 각 행에 대해 호출  `AddIntegers`  에 **FirstNumber** 및 **SecondNumber** 열 값 매개 변수 및 반환 값에 대해 확인  **합계** 열 값입니다.  
+##  <a name="BKMK_Writing_the_test_method"></a> 테스트 메서드 작성  
+ `AddIntegers`에 대한 테스트 메서드는 매우 간단합니다. 데이터 소스의 각 행을 대상으로 **FirstNumber** 및 **SecondNumber** 열 값을 매개 변수로 사용하여 `AddIntegers`를 호출하고 **Sum** 열 값에 대한 반환 값을 확인합니다.  
   
 ```  
   
@@ -128,32 +145,32 @@ public void AddIntegers_FromDataSourceTest()
   
 ```  
   
- `Assert`  메서드를 표시 하는 메시지가 포함 된  `x`  및  `y`  실패 반복 값을 확인하세요.  기본적으로 설정 된 값을  `expected`  및  `actual` , 실패 한 테스트의 세부 정보에 이미 포함 되어 있습니다.  
+ `Assert` 메서드에는 실패한 반복의 `x` 및 `y` 값을 표시하는 메시지가 포함됩니다. 기본적으로 어설션된 값 `expected` 및 `actual`은 이미 실패한 테스트의 세부 정보에 포함되어 있습니다.  
   
 ###  <a name="BKMK_Specifying_the_DataSourceAttribute"></a> DataSourceAttribute 지정  
- `DataSource`  특성 테스트 메서드에서 데이터 소스 사용 하는 테이블의 이름에 대 한 연결 문자열을 지정 합니다.  연결 문자열의 정확한 정보는 사용 중인 데이터 소스의 종류에 따라 달라집니다.  이 예제에서는 SqlServerCe 데이터베이스를 사용했습니다.  
+ `DataSource` 특성은 테스트 메서드에 사용할 테이블의 이름 및 데이터 소스의 연결 문자열을 지정합니다. 연결 문자열의 정확한 정보는 어떤 종류의 데이터 소스를 사용하는지에 따라 달라집니다. 이 예제에서는 SqlServerCe 데이터베이스를 사용했습니다.  
   
 ```  
 [DataSource(@"Provider=Microsoft.SqlServerCe.Client.4.0;Data Source=C:\Data\MathsData.sdf", "AddIntegersData")]  
 ```  
   
- DataSource 특성에 세 명의 생성자가 있습니다.  
+ DataSource 특성에는 세 개의 생성자가 있습니다.  
   
 ```  
 [DataSource(dataSourceSettingName)]  
 ```  
   
- 솔루션에 대 한 app.config 파일에 저장 된 연결 정보를 사용 하는 생성자 매개 변수를 사용 합니다.  *dataSourceSettingsName* 연결 정보를 지정 하는 구성 파일의 Xml 요소 이름입니다.  
+ 하나의 매개 변수가 있는 생성자는 솔루션에 대한 app.config 파일에 저장된 연결 정보를 사용합니다. *dataSourceSettingsName*은 연결 정보를 지정하는 구성 파일의 Xml 요소 이름입니다.  
   
- app.config 파일을 사용하면 단위 테스트 자체를 변경하지 않고도 데이터 소스의 위치를 변경할 수 있다는 이점이 있습니다.  app.config 파일을 만들고 사용하는 방법에 대한 자세한 내용은 [연습: 구성 파일을 통한 데이터 소스 정의](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)를 참조하십시오.  
+ app.config 파일을 사용하면 단위 테스트 자체를 변경하지 않고 데이터 소스의 위치를 변경할 수 있습니다. app.config 파일을 만들고 사용하는 방법에 대한 자세한 내용은 [연습: 구성 파일을 통한 데이터 소스 정의](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)를 참조하세요.  
   
 ```  
 [DataSource(connectionString, tableName)]  
 ```  
   
- `DataSource`  생성자를 두 매개 변수를 사용 하 여 데이터 소스와 테스트 방법에 대 한 데이터가 들어 있는 테이블의 이름에 대 한 연결 문자열을 지정 합니다.  
+ 두 개의 매개 변수가 있는 `DataSource` 생성자는 테스트 메서드에 대한 데이터가 포함된 테이블의 이름 및 데이터 소스의 연결 문자열을 지정합니다.  
   
- 연결 문자열 형식 데이터 원본 유형에 따라 다릅니다 있지만 고정 데이터 공급자의 이름을 지정 하는 공급자 요소를 포함 해야 합니다.  
+ 연결 문자열은 데이터 소스의 형식에 따라 달라지지만 데이터 공급자의 고정 이름을 지정하는 Provider 요소를 포함해야 합니다.  
   
 ```  
 [DataSource(  
@@ -164,8 +181,8 @@ public void AddIntegers_FromDataSourceTest()
     )]  
 ```  
   
-###  <a name="BKMK_Using_TestContext_DataRow_to_access_the_data"></a> TestContext.DataRow를 사용하여 데이터에 액세스  
- 데이터에 액세스 하는  `AddIntegersData`  테이블에서 사용 하는  `TestContext.DataRow`  인덱서를 사용하세요.  `DataRow`이 <xref:System.Data.DataRow> 개체, 인덱스 또는 열 이름으로 열 값을 검색 했습니다.  개체 값이 반환 됩니다 때문에 적절 한 형식으로 변환할 필요 합니다.  
+###  <a name="BKMK_Using_TestContext_DataRow_to_access_the_data"></a> TestContext.DataRow를 사용하여 데이터 액세스  
+ `AddIntegersData` 테이블의 데이터에 액세스하려면 `TestContext.DataRow` 인덱서를 사용합니다. `DataRow`는 <xref:System.Data.DataRow> 개체이므로 인덱스 또는 열 이름별로 열 값을 검색합니다. 값은 개체로 반환되므로 값을 적절한 형식으로 변환해야 합니다.  
   
 ```  
 int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);  
@@ -173,20 +190,21 @@ int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 ```  
   
 ##  <a name="BKMK_Running_the_test_and_viewing_results"></a> 테스트 실행 및 결과 보기  
- 테스트 메서드를 작성 했으면 테스트 프로젝트를 빌드하십시오.  테스트 메서드가 테스트 탐색기 창에 표시 된 **테스트 되지 실행** 그룹에 나타납니다.  테스트를 실행하고 작성하고 다시 실행할 때 테스트 탐색기는 **실패한 테스트**, **통과한 테스트**, **통과된 테스트** 및 실행하지 않은 테스트의 그룹에 결과를 표시합니다.  사용자는 **모두 실행** 을 선택해서 모든 테스트를 실행 하거나 **실행...** 을 선택해서 테스트들의 하위 집합을 실행할 수 있습니다.  
+ 테스트 메서드 작업을 완료하면 테스트 프로젝트를 빌드합니다. 테스트 메서드는 [테스트 탐색기]에서 **테스트 실행 안 함** 그룹에 표시됩니다. 테스트를 실행, 작성 및 재실행할 때 [테스트 탐색기]에는 **실패한 테스트**, **통과한 테스트** 및 **테스트 실행 안 함** 그룹에 결과가 표시됩니다. **모두 실행**을 선택해서 모든 테스트를 실행하거나 **실행...**을 선택해서 실행할 테스트 하위 집합을 선택할 수 있습니다.  
   
- 테스트를 실행할 때 테스트 결과 표시줄 탐색기 상단에 애니메이션 됩니다.  테스트 실행이 끝날 때 테스트 메서드가 통과한다면 녹색이 되고 테스트가 실패하면 빨간색이 될것입니다.  테스트 실행의 요약 테스트 탐색기 창의 아래쪽에 세부 정보 창에 표시 됩니다.  테스트를 선택해서 아래쪽 창에 해당 테스트의 세부 정보를 확인하십시오.  
+ 테스트가 실행되면 탐색기 위쪽에 테스트 결과 표시줄에 애니메이션 효과가 적용됩니다. 테스트 실행이 끝날 때 모든 테스트가 통과했으면 표시줄이 녹색이 되고 테스트가 실패하면 빨간색이 됩니다. [테스트 탐색기] 창 아래쪽의 세부 정보 창에 테스트 실행의 요약이 표시됩니다. 테스트를 선택하면 아래쪽 창에 해당 테스트의 세부 정보가 표시됩니다.  
   
- `AddIntegers_FromDataSourceTest` 예에서 메서드 결과 표시줄이 빨간색으로 바뀝니다 및 테스트 메서드는 이동은 **테스트 실패** 실패 원본 데이터에서 반복 방법을 데이터 기반 테스트에 실패합니다.  테스트 탐색기 창에서 실패 한 데이터 기반 테스트를 선택 하면 세부 정보 창에서 데이터 행 인덱스로 식별 되는 각 반복의 결과 표시 합니다.  이 예제에서는  `AddIntegers`  알고리즘 음수 값을 올바르게 처리 하지 않습니다.  
+ 예제에서 `AddIntegers_FromDataSourceTest` 메서드를 실행한 경우 결과 표시줄이 빨간색으로 바뀌고 테스트 메서드가 **실패한 테스트**로 이동합니다. 데이터 소스의 반복된 메서드가 실패하면 데이터 기반 테스트가 실패합니다. [테스트 탐색기] 창에서 실패한 테스트 기반 테스트를 선택하면 세부 정보 창에 데이터 행 인덱스별로 식별된 각 반복의 결과가 표시됩니다. 예제에서는 `AddIntegers` 알고리즘이 음수 값을 제대로 처리하지 않는 것 같습니다.  
   
- 테스트 대상 메서드를 수정하고 테스트를 다시 실행 결과 모음 녹색으로 바뀌고 테스트 메서드는 이동된 **테스트 통과** 그룹으로 이동합니다.  
+ 테스트 중인 메서드가 수정되고 테스트가 다시 실행되면 결과 표시줄이 녹색으로 바뀌고 테스트 메서드가 **통과한 테스트** 그룹으로 이동합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute?displayProperty=fullName>   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext?displayProperty=fullName>   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A?displayProperty=fullName>   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName>   
- [How to: Create and Run a Unit Test](http://msdn.microsoft.com/ko-kr/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)   
+ [단위 테스트 만들기 및 실행](http://msdn.microsoft.com/en-us/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)   
  [코드 단위 테스트](../test/unit-test-your-code.md)   
  [테스트 탐색기를 사용하여 단위 테스트 실행](../test/run-unit-tests-with-test-explorer.md)   
  [관리 코드용 Microsoft 단위 테스트 프레임워크를 사용하여 .NET Framework용 단위 테스트 작성](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
+

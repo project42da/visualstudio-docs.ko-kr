@@ -1,18 +1,36 @@
 ---
-title: "코딩된 UI 테스트 로그를 사용하여 코딩된 UI 테스트 분석 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "코딩된 UI 테스트 로그를 사용하여 코딩된 UI 테스트 분석 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e795873-1d4b-4a13-a52a-a411d87fb759
 caps.latest.revision: 13
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 13
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: c77c8698a4536bc21b86260bb557fe79f03385cc
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>코딩된 UI 테스트 로그를 사용하여 코딩된 UI 테스트 분석
 코딩된 UI 테스트 로그는 코딩된 UI 테스트 실행에 대한 중요한 정보를 필터링하고 기록합니다.  
@@ -107,8 +125,4 @@ caps.handback.revision: 13
 ## <a name="see-also"></a>참고 항목  
  [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
  [방법: Microsoft Visual Studio에서 테스트 실행](http://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

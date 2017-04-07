@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 221f4911981deec0330f76a82c0cc8a1b968e56e
-ms.openlocfilehash: 60898d7cace1c10006436a8d98cbd7f7628cf972
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 3da360fc4df5516f5d976f807319c07b49d8c4e8
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="what39s-new-in-the-visual-studio-2017-sdk"></a>Visual Studio 2017 SDK의 새로운 기능
-
->**참고:** 이 설명서는 임시로 제공 되며 Visual Studio 2017 RC 릴리스를 기반으로 합니다.
 
 Visual Studio SDK는 Visual Studio 2017에 대 한 다음과 같은 새로운 기능과 업데이트 된 기능에 있습니다.
 
@@ -52,8 +50,8 @@ Visual Studio 2017 새 간단한 설치를 지원 하려면 VSIX 확장 매니�
 이러한 변경에 대해 알아보려면 다음 항목을 참조 합니다.
 
 * [확장성 2017에 대 한 변경 내용](breaking-changes-2017.md)
-* [VSIX v&3;에서 Ngen 지원](ngen-support.md)
-* [확장 폴더 설치](set-install-root.md)
+* [VSIX v3의 Ngen 지원](ngen-support.md)
+* [확장 폴더 외부에 설치](set-install-root.md)
 * [Visual Studio 2017 확장성에 대 한 자주 묻는 질문](faq-2017.md)
 
 ## <a name="migrating-extensibility-project-to-visual-studio-2017"></a>Visual Studio 2017를 마이그레이션 확장성 프로젝트
@@ -68,7 +66,7 @@ LSL Visual Studio 확장 프로그램을 변화 시킬 수 있습니다. 확장 
 
 ## <a name="custom-project-and-item-templates"></a>사용자 지정 프로젝트 및 항목 템플릿
 
-Visual Studio 2017 년부터 사용자 지정 프로젝트 및 항목 템플릿 검색 더 이상 수행 됩니다. 대신, 확장 이러한 서식 파일의 설치 위치를 설명 하는 템플릿 매니페스트 파일을 제공 해야 합니다. Visual Studio 2017 VSIX 확장 업데이트를 사용할 수 있습니다. MSI를 사용 하 여 확장 프로그램을 배포 하는 경우 템플릿 매니페스트 파일을 수동으로 생성 해야 합니다. 자세한 내용은 참조 [사용자 지정 프로젝트 업그레이드 및 Visual Studio 2017에 대 한 항목 템플릿](../extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017.md)합니다. 템플릿 매니페스트 스키마에 설명 되어 [Visual Studio 템플릿 매니페스트 스키마 참조](../extensibility/visual-studio-template-manifest-schema-reference.md)합니다.
+Visual Studio 2017 년부터 사용자 지정 프로젝트 및 항목 템플릿 검색은 더 이상 수행 됩니다. 대신, 확장 이러한 서식 파일의 설치 위치를 설명 하는 템플릿 매니페스트 파일을 제공 해야 합니다. Visual Studio 2017 VSIX 확장 업데이트를 사용할 수 있습니다. MSI를 사용 하 여 확장 프로그램을 배포 하는 경우 템플릿 매니페스트 파일을 수동으로 생성 해야 합니다. 자세한 내용은 참조 [사용자 지정 프로젝트 업그레이드 및 Visual Studio 2017에 대 한 항목 템플릿](../extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017.md)합니다. 템플릿 매니페스트 스키마에 설명 되어 [Visual Studio 템플릿 매니페스트 스키마 참조](../extensibility/visual-studio-template-manifest-schema-reference.md)합니다.
 
 ## <a name="updated-extension-performance-guidelines"></a>업데이트 된 확장 성능 지침
 

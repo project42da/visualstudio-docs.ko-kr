@@ -1,5 +1,5 @@
 ---
-title: "프로파일링 도구 | Microsoft Docs"
+title: "Visual Studio의 프로파일링 도구 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8f844c2d7d975476bc4c059d211a1d6cb0df64eb
-ms.openlocfilehash: 4c995fb6df6316ce7f84fae7075b81063b54ebf7
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 0d129b4820944f5717c63243cb8550bc4fed3385
+ms.openlocfilehash: 380b65540d8f5c6ea6d8a8adf1f3c5575f5dd9dc
+ms.lasthandoff: 03/20/2017
 
 ---
 # <a name="profiling-tools"></a>프로파일링 도구
@@ -103,15 +103,16 @@ ms.lasthandoff: 02/28/2017
 ## <a name="which-tool-should-i-use"></a>사용해야 하는 도구  
  다음 테이블에는 Visual Studio가 제안하는 다양한 도구 및 그와 함께 사용할 수 있는 다양한 프로젝트 형식이 나열되어 있습니다.  
   
-|성능 도구|Windows 바탕 화면|Windows 유니버설/스토어|ASP.NET|  
+|성능 도구|Windows 바탕 화면|Windows 유니버설/스토어|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[메모리 사용](../profiling/memory-usage.md)|예|예|예|  
 |[CPU 사용](../profiling/cpu-usage.md)|예|예|예|  
 |[GPU 사용량](../debugger/gpu-usage.md)|예|예|no|  
 |[응용 프로그램 타임라인](../profiling/application-timeline.md)|예|예|no|  
-|[PerfTips](../profiling/perftips.md)|예|XAML은 예, HTML은 no|no|  
-|[성능 탐색기](../profiling/performance-explorer.md)|예|no|예|  
-|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise만 해당|.NET Enterprise만 해당|.NET Enterprise만 해당|  
+|[PerfTips](../profiling/perftips.md)|예|XAML은 예, HTML은 no|예|  
+|[성능 탐색기](../profiling/performance-explorer.md)|예|no|예(ASP.NET Core의 경우 아니요)|  
+|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise만 해당|.NET Enterprise만 해당|.NET Enterprise만 해당|
+|[네트워크 사용량](../profiling/network-usage.md)|no|예|no| 
 |[HTML UI 응답성](../profiling/html-ui-responsiveness.md)|no|HTML은 예, XAML은 no|no|  
 |[JavaScript 메모리](../profiling/javascript-memory.md)|no|HTML은 예, XAML은 no|no|  
   

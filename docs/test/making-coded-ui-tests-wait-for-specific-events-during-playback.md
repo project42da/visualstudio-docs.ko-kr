@@ -1,18 +1,36 @@
 ---
-title: "코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 41981ad6-673e-492e-b739-9863b14157b1
 caps.latest.revision: 24
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 24
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: 060dc127a1cc08dcf28a59feaa774b0094e42d56
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정
 코딩된 UI 테스트 재생 시 창이 나타나거나 진행률 표시줄이 사라지는 등의 특정 이벤트가 발생할 때까지 기다리도록 테스트에 지시할 수 있습니다. 이렇게 하려면 다음 표에 설명된 대로 적절한 UITestControl.WaitForControlXXX() 메서드를 사용합니다. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> 메서드를 사용하여 컨트롤을 사용하도록 설정할 때까지 기다리는 코딩된 UI 테스트에 대한 예제는 [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)를 참조하세요.  
@@ -115,8 +133,4 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
  [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)   
  [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
  [방법: 코딩된 UI 테스트 편집기를 사용하여 UI 작업 전에 지연 삽입](http://msdn.microsoft.com/Library/509f8ef7-e105-4049-b11b-d64549e055b0)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

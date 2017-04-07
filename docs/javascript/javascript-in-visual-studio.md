@@ -28,28 +28,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: d4741ff741b89997bbfe4fea9b0f60bba84e63db
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 77e7ce26df70e41e2328442454fe78c7a663f1f3
+ms.openlocfilehash: de00ef86413571739446b61427c3a8e6c4680c06
+ms.lasthandoff: 03/08/2017
 
 ---
 # <a name="javascript-in-visual-studio"></a>Visual Studio의 JavaScript
 JavaScript는 Visual Studio의 고급 언어입니다. Visual Studio IDE에서 JavaScript 코드를 작성할 때 대부분 또는 모든 표준 편집 지원(코드 조각, IntelliSense 등)을 사용할 수 있습니다. 여러 응용 프로그램 형식 및 서비스에 대해 JavaScript 코드를 작성할 수 있습니다.  
   
- JavaScript 언어 참조 문서에 대한 자세한 내용은 [JavaScript](http://msdn.microsoft.com/library/d1et7k7c\(v=vs.94\).aspx)를 참조하세요.  
+ JavaScript 언어 참조 문서에 대한 자세한 내용은 [JavaScript](https://docs.microsoft.com/scripting/javascript/javascript-language-reference)를 참조하세요.
   
  특정 버전의 Visual Studio나 특정 Visual Studio 확장은 HTML 및 JavaScript를 사용하여 특정 응용 프로그램 유형 및 서비스를 개발하는 데 필요할 수 있습니다. 다음 목록에 자세한 내용을 볼 수 있는 링크가 있습니다.  
   
--   Apache Cordova를 사용하여 플랫폼 간 앱을 만들려면 [Apache Cordova용 Visual Studio Tools를 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=397606)합니다.  
+-   Apache Cordova를 사용하여 플랫폼 간 앱을 만들려면 [Apache Cordova용 Visual Studio Tools](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/)를 참조하세요.  
   
--   [Windows 스토어](http://dev.windows.com/develop), [Windows Phone](http://dev.windows.com/develop) 및 범용 앱(두 플랫폼 모두 지원)을 만들려면 [도구를 다운로드](http://dev.windows.com/en-us/develop/downloads)합니다.  
-  
--   클라우드 기반 서비스를 만들려면 [Microsoft Azure 사이트](http://azure.microsoft.com/documentation/)를 참조하세요.  
-  
--   웹 사이트 및 웹앱을 만들려면 [ASP.NET 사이트를 참조](http://www.asp.net/get-started/websites)하세요.  
-  
-    > [!NOTE]
-    >  빈 ASP.Net 웹 사이트를 만들고 HTML, CSS 및 JavaScript 프로그래밍에 사용할 수 있습니다. ASP.NET에서 제공하는 Webconfig 파일을 통해 Visual Studio에서 디버깅을 사용할 수 있습니다(또는 앱을 실행하는 경우 F12 도구를 사용할 수 있음).  
+-   Visual Studio에서 사용할 수 있는 JavaScript 기술에 대한 링크는 [JavaScript](https://docs.microsoft.com/scripting/javascript/) 및 [스크립팅 기술](https://docs.microsoft.com/scripting/) 페이지를 참조하세요.
   
  Visual Studio의 JavaScript 편집기는 IntelliSense를 지원합니다. 자세한 내용은 [JavaScript IntelliSense](../ide/javascript-intellisense.md)를 참조하세요.  
   

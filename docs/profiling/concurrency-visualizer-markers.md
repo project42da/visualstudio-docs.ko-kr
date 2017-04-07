@@ -1,21 +1,40 @@
 ---
-title: "동시성 시각화 도우미 표식 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.markersui"
+title: "동시성 시각화 도우미 표식 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.markersui
 ms.assetid: c4692d17-6cd2-4ad1-8590-d7275c771c70
 caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: dcabdd5ca1381ec15e66637a35044c456411c8c7
+ms.lasthandoff: 04/05/2017
+
 ---
 # <a name="concurrency-visualizer-markers"></a>동시성 시각화 도우미 표식
 동시성 시각화 도우미에서 표식은 응용 프로그램의 이벤트를 나타내는 아이콘입니다.  일반적으로 응용 프로그램은 응용 프로그램에서의 단계 또는 발생 작업을 지정하기 위해 이러한 이벤트를 생성합니다.  이벤트는 응용 프로그램에서 생성되거나 응용 프로그램에서 사용되는 라이브러리 및 런타임에 의해 생성될 수 있습니다.  
@@ -49,11 +68,11 @@ caps.handback.revision: 12
   
 -   [PLINQ(병렬 LINQ)](http://msdn.microsoft.com/Library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)  
   
--   [동시성 런타임](/visual-cpp/parallel/concrt/concurrency-runtime)  
+-   [동시성 런타임](/cpp/parallel/concrt/concurrency-runtime)  
   
 -   [시나리오 표식 지원](http://msdn.microsoft.com/en-us/e3b55bc2-b451-4214-ae00-0c7f5a5baec8)  
   
--   [C++ AMP(C++ Accelerated Massive Parallelism)](/visual-cpp/parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism)  
+-   [C++ AMP(C++ Accelerated Massive Parallelism)](/cpp/parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism)  
   
  [고급 설정](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) 대화 상자의 표식 탭에서 여러 소스의 표식을 동시성 시각화 도우미에 표시할지 여부를 제어할 수 있으며, 중요도 및 범주에 따라 표식을 필터링할 수 있습니다.  
   
@@ -65,8 +84,3 @@ caps.handback.revision: 12
  [메시지 표식](../profiling/message-markers.md)   
  [범위 표식](../profiling/span-markers.md)   
  [EventSource 이벤트를 표식으로 시각화](../profiling/visualizing-eventsource-events-as-markers.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

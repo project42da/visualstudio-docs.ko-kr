@@ -1,25 +1,44 @@
 ---
-title: "Visual C# 코드 조각 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "조각[C#], 기본 조각"
-  - "조각[C#], 코드 조각 삽입기"
-  - "코드 조각 삽입기[J#]"
-  - "코드 조각 삽입기[C#]"
-  - "Visual C#, 기본 조각"
+title: "Visual C# 코드 조각 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snippets [C#], default snippets
+- snippets [C#], Code Snippet Inserter
+- Code Snippet Inserter [J#]
+- Code Snippet Inserter [C#]
+- Visual C#, default snippets
 ms.assetid: dbea3dd6-e650-4190-b874-c9f097d7de6e
 caps.latest.revision: 33
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 01c13c4e0c9107f07580fb1701f81eac74a5022f
+ms.lasthandoff: 03/22/2017
+
 ---
 # <a name="visual-c-code-snippets"></a>Visual C# 코드 조각
 코드 조각은 신속하게 코드에 삽입할 수 있는 준비된 코드 조각입니다. 예를 들어 `for` 코드 조각에서는 비어 있는 `for` 루프를 만듭니다. 일부 코드 조각은 코드 감싸기 코드 조각으로, 코드 줄을 선택한 다음 선택한 코드 줄을 통합하는 코드 조각을 선택할 수 있습니다. 예를 들어 코드 줄을 선택한 다음 `for` 코드 조각을 활성화하는 경우 루프 블록 안에 해당 코드 줄을 포함하여 `for` 루프를 만듭니다. 코드 조각을 사용하면 빠르고 쉽게, 안정적으로 프로그램 코드를 작성할 수 있습니다.  
@@ -59,7 +78,7 @@ caps.handback.revision: 33
 |mbox|<xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> 호출을 만듭니다. System.Windows.Forms.dll에 대한 참조를 추가해야 할 수도 있습니다.|메서드, 인덱서, 속성 접근자 또는 이벤트 접근자 내부|  
 |namespace|[namespace](/dotnet/csharp/language-reference/keywords/namespace) 선언을 만듭니다.|네임스페이스(전역 네임스페이스 포함) 내부|  
 |prop|[자동 구현 속성](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) 선언을 만듭니다.|클래스 또는 구조체 내부|  
-ropfull|get 및 set 접근자를 사용하여 속성 선언을 만듭니다.|클래스 또는 구조체 내부|  
+propfull|get 및 set 접근자를 사용하여 속성 선언을 만듭니다.|클래스 또는 구조체 내부|  
 |propg|전용 "set" 접근자를 사용하여 읽기 전용 [자동 구현 속성](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)을 만듭니다.|클래스 또는 구조체 내부|  
 |sim|[static](/dotnet/csharp/language-reference/keywords/static)[int](/dotnet/csharp/language-reference/keywords/int) Main 메서드 선언을 만듭니다.|클래스 또는 구조체 내부|  
 |struct|[struct](/dotnet/csharp/language-reference/keywords/struct) 선언을 만듭니다.|네임스페이스(전역 네임스페이스 포함), 클래스 또는 구조체 내부|  
@@ -79,8 +98,4 @@ ropfull|get 및 set 접근자를 사용하여 속성 선언을 만듭니다.|클
  [템플릿 매개 변수](../ide/template-parameters.md)   
  [방법: 코드 감싸기 코드 조각 사용](../ide/how-to-use-surround-with-code-snippets.md)   
  
-
-
-<!--HONumber=Feb17_HO4-->
-
 

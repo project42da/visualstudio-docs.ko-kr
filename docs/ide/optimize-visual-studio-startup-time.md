@@ -18,9 +18,9 @@ manager: ghogen
 f1_keywords:
 - vs.performancecenter
 translationtype: Human Translation
-ms.sourcegitcommit: ba88bad0753653dcde8a4d28b4dd1c71522d6506
-ms.openlocfilehash: 435197f1536dc9006691c0f2e58fafd0fcf27718
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 27a265dbbb1f9426ba2dd254095c84239bbd0db7
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Visual Studio 시작 시간 최적화
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/22/2017
 
 ## <a name="control-startup-behavior"></a>시작 동작 제어
 
-시작 시간 증가를 방지하기 위해 Visual Studio 2017 RC에서는 요청 시 로드 방법을 사용하여 시작 시 확장이 로드되지 않도록 합니다. 즉, Visual Studio가 시작된 후 즉시 확장이 열리지 않고 시작 후 필요에 따라 비동기적으로 열립니다. 또한 이전 Visual Studio 세션에서 열려 있는 도구 창으로 인해 시작 시간이 느려질 수 있으므로 Visual Studio는 시작 시간에 영향을 주지 않도록 보다 지능적인 방식으로 도구 창을 엽니다.
+Visual Studio 2017에서는 시작 시간이 늘어나지 않도록 요청 시 로드 방법을 사용하여 시작 시 확장이 로드되지 않도록 합니다. 즉, Visual Studio가 시작된 후 즉시 확장이 열리지 않고 시작 후 필요에 따라 비동기적으로 열립니다. 또한 이전 Visual Studio 세션에서 열려 있는 도구 창으로 인해 시작 시간이 느려질 수 있으므로 Visual Studio는 시작 시간에 영향을 주지 않도록 보다 지능적인 방식으로 도구 창을 엽니다.
 
 Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를 초래하는 확장이나 도구 창을 알려주는 팝업 메시지가 나타납니다. 메시지에는 시작 성능에 영향을 주는 확장 및 도구 창을 보여 주는 **Visual Studio 성능 관리** 대화 상자에 대한 링크도 제공됩니다. 이 대화 상자에서 확장 및 도구 창 설정을 변경하여 시작 성능을 향상할 수 있습니다.
 
@@ -55,7 +55,7 @@ Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를
 
 ## <a name="speed-up-solution-load"></a>솔루션 로드 속도 향상
 
-Visual Studio 2017 RC에서는 IDE에서 큰 솔루션을 로드하는 데 필요한 시간과 메모리 크기를 줄이는 **경량 솔루션 로드**라는 새로운 기능이 도입되었습니다. 많은 C#, VB 또는 C++ 프로젝트를 포함하는 큰 솔루션이 있는 경우 경량 솔루션 로드를 사용하면 성능이 향상될 가능성이 큽니다.
+Visual Studio 2017에서는 IDE에서 큰 솔루션을 로드하는 데 필요한 시간과 메모리 크기를 줄이는 **경량 솔루션 로드**라는 새로운 기능이 도입되었습니다. 많은 C#, VB 또는 C++ 프로젝트를 포함하는 큰 솔루션이 있는 경우 경량 솔루션 로드를 사용하면 성능이 향상될 가능성이 큽니다.
 
 경량 솔루션 로드를 사용하는 경우 일부 IDE 기능을 완전히 사용할 수 없기 때문에 이 기능은 기본적으로 꺼져 있습니다. 다음 섹션은 이 기능을 사용할지 여부를 결정하는 데 도움이 됩니다.
 
@@ -77,7 +77,7 @@ Visual Studio 2017 RC에서는 IDE에서 큰 솔루션을 로드하는 데 필�
 
 ### <a name="automatically-enable-lightweight-solution-load"></a>자동으로 경량 솔루션 로드 사용
 
-Visual Studio 2017 RC에서 큰 솔루션을 여는 경우 경량 솔루션 로드를 사용하라는 팝업 메시지가 표시될 수 있습니다. 많은 C#, VB 또는 C++ 프로젝트가 포함된 솔루션의 경우에만 메시지가 나타납니다. **사용** 명령을 선택하면 해당 솔루션에 대해서만 경량 솔루션 로드가 사용됩니다. IDE 차원의 설정은 변경되지 않습니다.
+Visual Studio 2017에서 큰 솔루션을 여는 경우 경량 솔루션 로드를 사용하라는 팝업 메시지가 표시될 수 있습니다. 많은 C#, VB 또는 C++ 프로젝트가 포함된 솔루션의 경우에만 메시지가 나타납니다. **사용** 명령을 선택하면 해당 솔루션에 대해서만 경량 솔루션 로드가 사용됩니다. IDE 차원의 설정은 변경되지 않습니다.
 
 ![팝업 창](../ide/media/VSIDE_LSL Popup.png)
 

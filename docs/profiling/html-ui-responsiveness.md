@@ -1,6 +1,6 @@
 ---
-title: "HTML UI 응답성 | Microsoft Docs"
-ms.custom: 
+title: "UWP 앱의 HTML UI 응답성 분석 | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -40,13 +40,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: bdfe341252a7c4340a8c0a624d4394124c3efada
-ms.openlocfilehash: 1d230cb011c93ce48a855e86355d4a6ccdf55a29
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 618aaec3a0ae735560d14bea43cc2b08bd9e5445
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="html-ui-responsiveness"></a>HTML UI 응답성
-이 항목에서는 Windows 유니버설 앱에 사용할 수 있는 성능 도구인 UI 응답성 프로파일러를 사용하여 앱에서 성능 문제를 격리하는 방법에 대해 설명합니다.  
+# <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>유니버설 Windows 앱의 HTML UI 응답성 분석
+이 항목에서는 유니버설 Windows 앱에 사용할 수 있는 성능 도구인 UI 응답성 프로파일러를 사용하여 앱에서 성능 문제를 격리하는 방법에 대해 설명합니다.  
   
  UI 응답성 프로파일러는 일반적으로 다음과 같은 증상과 함께 발생하는 UI 응답성 문제 또는 플랫폼의 의도하지 않은 결과와 같은 문제를 격리하는 데 유용합니다.  
   
@@ -79,8 +79,7 @@ ms.lasthandoff: 02/22/2017
   
          소스 코드에 액세스할 수 없을 때 이 옵션을 사용하여 컴퓨터에 설치한 앱의 성능을 분석할 수 있습니다. 사용자가 직접 개발하는 응용 프로그램을 제외한 모든 응용 프로그램의 성능을 분석하려는 경우에도 이 옵션이 유용할 수 있습니다.  
   
-3.  
-                **사용 가능한 도구**에서 **HTML UI 응답성**을 선택한 다음 **시작**을 선택합니다.  
+3.  **사용 가능한 도구**에서 **HTML UI 응답성**을 선택한 다음 **시작**을 선택합니다.  
   
 4.  UI 응답성 프로파일러를 시작할 때 사용자 계정 컨트롤 창이 표시되어 Visual Studio ETW Collector.exe를 실행할 수 있는 권한을 요청할 수 있습니다. **예**를 선택합니다.  
   
@@ -240,7 +239,7 @@ if (performance.mark && performance.measure) {
   
 -   앱이 시각적 업데이트가 필요한 작업을 수행 중이라면 실제 FPS의 그래프를 보여 줍니다.  
   
--   프레임이 손실되는 경우 그래프에&0; 값을 보여 줍니다.  
+-   프레임이 손실되는 경우 그래프에 0 값을 보여 줍니다.  
   
  다음 예제에서는 시각적 처리량 그래프의 모양을 보여 줍니다.  
   

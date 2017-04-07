@@ -1,22 +1,46 @@
 ---
-title: "변경 로그(Visual Studio Tools for Unity) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tgt-pltfrm-cross-plat"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "변경 로그(Visual Studio Tools for Unity) | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
 caps.latest.revision: 12
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 10
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
+ms.openlocfilehash: 8c13675dbd06111bb0eced77f9343c80959afba1
+ms.lasthandoff: 03/08/2017
+
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>변경 로그(Visual Studio Tools for Unity)
 Visual Studio Tools for Unity에 대한 변경 로그입니다.  
+
+## <a name="3001"></a>3.0.0.1
+ 릴리스됨 2017-03-07
+
+### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>이 버전에는 2.8.x 시리즈에서 도입된 새로운 모든 기능 및 버그 수정이 포함되었습니다.
 
 ## <a name="282-30-preview-3"></a>2.8.2(3.0 Preview 3)
  릴리스됨 2017-01-25
@@ -912,9 +936,4 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 ## <a name="10--initial-release"></a>1.0 - 초기 버전  
  릴리스됨 2012-08-22
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -1,77 +1,98 @@
 ---
-title: "TaskBody Element (MSBuild) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "TaskBody element [MSBuild]"
-  - "<TaskBody> element [MSBuild]"
+title: "TaskBody 요소(MSBuild) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- TaskBody element [MSBuild]
+- <TaskBody> element [MSBuild]
 ms.assetid: 49d8741b-f1ea-4470-94fd-a1ac27341a6a
 caps.latest.revision: 7
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TaskBody Element (MSBuild)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
+ms.openlocfilehash: 83e34546141a69cf93fb0cbbf86393b8fa749ef4
+ms.lasthandoff: 03/13/2017
 
-`UsingTask` `TaskFactory`로 전달된 데이터를 포함합니다. 자세한 내용은 [UsingTask Element \(MSBuild\)](../msbuild/usingtask-element-msbuild.md)을 참조합니다.  
-  
-## 구문  
-  
+---
+# <a name="taskbody-element-msbuild"></a>TaskBody 요소(MSBuild)
+`UsingTask``TaskFactory`에 전달되는 데이터가 들어 있습니다. 자세한 내용은 [UsingTask 요소(MSBuild)](../msbuild/usingtask-element-msbuild.md)를 참조하세요.  
+
+ \<Project>  
+ \<UsingTask>  
+ \<TaskBody>  
+
+## <a name="syntax"></a>구문  
+
 ```  
 <TaskBody Evaluate="true/false" />  
 ```  
-  
-## 특성 및 요소  
+
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
-  
-### 특성  
-  
+
+### <a name="attributes"></a>특성  
+
 |특성|설명|  
-|--------|--------|  
-|`Evaluate`|선택적 부울 특성입니다.<br /><br /> `true`인 경우 MSBuild는 모든 내부 요소를 평가하고 작업이 인스턴스화될 때 정보가 `TaskFactory`로 전달되기 전에 항목과 속성을 확장합니다.|  
-  
-### 자식 요소  
-  
+|---------------|-----------------|  
+|`Evaluate`|선택적 부울 특성입니다.<br /><br /> `true`인 경우, MSBuild는 내부 요소를 평가하고, 작업을 인스턴스화할 때 정보를 `TaskFactory`에 전달하기 전에 항목 및 속성을 확장합니다.|  
+
+### <a name="child-elements"></a>자식 요소  
+
 |요소|설명|  
-|--------|--------|  
-|데이터|`TaskBody` 태그 사이의 텍스트가 `TaskFactory`로 그대로 보내집니다.|  
-  
-### 부모 요소  
-  
+|-------------|-----------------|  
+|데이터|`TaskBody` 태그 간에 텍스트는 그대로 `TaskFactory`로 전송됩니다.|  
+
+### <a name="parent-elements"></a>부모 요소  
+
 |요소|설명|  
-|--------|--------|  
-|[UsingTask](../msbuild/usingtask-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 내에 작업을 등록할 수 있게 합니다.  프로젝트에 `UsingTask` 요소가 0개 이상 있을 수 있습니다.|  
-  
-## 예제  
- 다음 예제에서는 `TaskBody` 요소를 `Evaluate` 특성과 함께 사용하는 방법을 보여 줍니다.  
-  
-```  
+|-------------|-----------------|  
+|[UsingTask](../msbuild/usingtask-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서 작업을 등록하는 방법을 제공합니다. 프로젝트에는 `UsingTask` 요소가 없을 수도 있고 하나 이상 있을 수 있습니다.|  
+
+## <a name="example"></a>예제  
+ 다음 예제에서는 `Evaluate` 특성에서 `TaskBody` 요소를 사용하는 방법을 보여 줍니다.  
+
+```xml  
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">  
-       <ParameterGroup>  
-              <Parameter1 ParameterType="System.String" Required="False" Output="False"/>  
-              <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>  
-              ...  
+       <ParameterGroup>  
+              <Parameter1 ParameterType="System.String" Required="False" Output="False"/>  
+              <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>  
+              ...  
 </ParameterGroup>  
-       <TaskBody Evaluate="true">  
-      ... Task factory-specific data ...  
-       </TaskBody>  
+       <TaskBody Evaluate="true">  
+      ... Task factory-specific data ...  
+       </TaskBody>  
 </UsingTask>  
 ```  
-  
-## 참고 항목  
+
+## <a name="see-also"></a>참고 항목  
  [작업](../msbuild/msbuild-tasks.md)   
- [Task Reference](../msbuild/msbuild-task-reference.md)   
- [Project File Schema Reference](../msbuild/msbuild-project-file-schema-reference.md)
+ [작업 참조](../msbuild/msbuild-task-reference.md)   
+ [프로젝트 파일 스키마 참조](../msbuild/msbuild-project-file-schema-reference.md)
+

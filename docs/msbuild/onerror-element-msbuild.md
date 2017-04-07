@@ -1,70 +1,90 @@
 ---
-title: "OnError Element (MSBuild) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#OnError"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "OnError Element [MSBuild]"
-  - "<OnError Element [MSBuild]"
+title: "OnError 요소(MSBuild) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#OnError
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- OnError Element [MSBuild]
+- <OnError Element [MSBuild]
 ms.assetid: 765767d3-ecb7-4cd9-ba1e-d9468964dddc
 caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# OnError Element (MSBuild)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
+ms.openlocfilehash: 710eecad79b43c7544565d51536136e39c080d5f
+ms.lasthandoff: 03/13/2017
 
-실패한 작업에 대해 `ContinueOnError` 특성이 `false`인 경우 하나 이상의 대상이 실행되도록 합니다.  
-  
-## 구문  
-  
+---
+# <a name="onerror-element-msbuild"></a>OnError 요소(MSBuild)
+`ContinueOnError` 특성이 실패한 태스크의 `false`인 경우 하나 이상의 대상이 실행되도록 합니다.  
+
+ \<Project>  
+ \<Target>  
+ \<OnError>  
+
+## <a name="syntax"></a>구문  
+
 ```  
 <OnError ExecuteTargets="TargetName"  
     Condition="'String A'=='String B'" />  
 ```  
-  
-## 특성 및 요소  
+
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
-  
-### 특성  
-  
+
+### <a name="attributes"></a>특성  
+
 |특성|설명|  
-|--------|--------|  
-|`Condition`|선택적 특성입니다.<br /><br /> 확인할 조건입니다.  자세한 내용은 [Conditions](../msbuild/msbuild-conditions.md)을 참조하십시오.|  
-|`ExecuteTargets`|필수 특성입니다.<br /><br /> 작업이 실패하는 경우 실행할 대상입니다.  대상이 여러 개이면 세미콜론으로 구분합니다.  여러 대상은 지정 순서대로 실행됩니다.|  
-  
-### 자식 요소  
+|---------------|-----------------|  
+|`Condition`|선택적 특성입니다.<br /><br /> 평가할 조건입니다. 자세한 내용은 [조건](../msbuild/msbuild-conditions.md)을 참조하세요.|  
+|`ExecuteTargets`|필수 특성입니다.<br /><br /> 태스크가 실패한 경우 실행할 대상입니다. 여러 대상을 세미콜론으로 구분합니다. 여러 대상이 지정된 순서로 실행됩니다.|  
+
+### <a name="child-elements"></a>자식 요소  
  없음  
-  
-### 부모 요소  
-  
+
+### <a name="parent-elements"></a>부모 요소  
+
 |요소|설명|  
-|--------|--------|  
-|[대상](../msbuild/target-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 작업에 대한 컨테이너 요소입니다.|  
-  
-## 설명  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]실행은 `OnError` 요소 중 하나의 `Target` 요소의 작업 실패 한다는 `ContinueOnError` 특성을 설정 `ErrorAndStop` \(또는 `false`\).  작업에 실패하면 `ExecuteTargets` 특성에서 지정한 대상이 실행됩니다.  대상의 `OnError` 요소가 하나 이상인 경우 작업에 실패하면 `OnError` 요소가 순차적으로 실행됩니다.  
-  
- 에 대 한 정보는 `ContinueOnError` 특성을 참조 하십시오 [Task Element \(MSBuild\)](../msbuild/task-element-msbuild.md).  대상에 대 한 내용은 [대상](../msbuild/msbuild-targets.md).  
-  
-## 예제  
- 다음 코드에서는 `TaskOne` 및 `TaskTwo` 작업을 실행합니다.  `TaskOne`에 실패하면 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서 `OnError` 요소를 확인하고 `OtherTarget` 대상을 실행합니다.  
-  
-```  
+|-------------|-----------------|  
+|[Target](../msbuild/target-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 태스크의 컨테이너 요소입니다.|  
+
+## <a name="remarks"></a>주의  
+ `Target` 요소의 태스크 중 하나가 `ErrorAndStop`(또는 `false`)로 설정된 `ContinueOnError` 특성으로 실패한 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]은 `OnError` 요소를 실행합니다. 태스크에 실패한 경우 `ExecuteTargets` 특성에 지정된 대상이 실행됩니다. 대상에 하나 이상의 `OnError` 요소가 있는 경우 태스크가 실패하면 `OnError` 요소는 순차적으로 실행됩니다.  
+
+ `ContinueOnError` 특성에 대한 자세한 내용은 [Task 요소(MSBuild)](../msbuild/task-element-msbuild.md)를 참조하세요. 대상에 대한 자세한 내용은 [대상](../msbuild/msbuild-targets.md)을 참조하세요.  
+
+## <a name="example"></a>예제  
+ 다음 코드는 `TaskOne` 및 `TaskTwo` 태스크를 실행합니다. `TaskOne`에 실패하는 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 `OnError` 요소를 평가하고 `OtherTarget` 대상을 실행합니다.  
+
+```xml  
 <Target Name="ThisTarget">  
     <TaskOne ContinueOnError="ErrorAndStop">  
     </TaskOne>  
@@ -73,7 +93,8 @@ caps.handback.revision: 14
     <OnError ExecuteTargets="OtherTarget" />  
 </Target>  
 ```  
-  
-## 참고 항목  
- [Project File Schema Reference](../msbuild/msbuild-project-file-schema-reference.md)   
+
+## <a name="see-also"></a>참고 항목  
+ [프로젝트 파일 스키마 참조](../msbuild/msbuild-project-file-schema-reference.md)   
  [대상](../msbuild/msbuild-targets.md)
+

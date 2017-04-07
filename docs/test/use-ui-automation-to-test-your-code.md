@@ -19,7 +19,7 @@ helpviewer_keywords:
 - coded UI test
 ms.assetid: ad9e3eaa-ab86-436e-95b8-dc20eb1f8b2a
 caps.latest.revision: 85
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -81,13 +81,13 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
 -   [다음 단계](#VerifyCodeUsingCUITWhatsNext)  
   
-##  <a name="a-nameverifyingcodeusingcuitcreatea-creating-coded-ui-tests"></a><a name="VerifyingCodeUsingCUITCreate"></a> 코딩된 UI 테스트 만들기  
+##  <a name="VerifyingCodeUsingCUITCreate"></a> 코딩된 UI 테스트 만들기  
   
 1.  **코딩된 UI 테스트 프로젝트를 만듭니다.**  
   
      코딩된 UI 테스트는 코딩된 UI 테스트 프로젝트에 포함되어 있어야 합니다. 아직 코딩된 UI 테스트 프로젝트가 없으면 하나를 만듭니다. **솔루션 탐색기**의 솔루션 바로 가기 메뉴에서 **추가**, **새 프로젝트**를 차례로 선택하고 **Visual Basic** 또는 **Visual C#**을 선택합니다. 그런 다음 **테스트**, **C코딩된 UI 테스트**를 차례로선택합니다.  
   
-    -   *코딩된 UI 테스트** 프로젝트 템플릿이 표시되지 않습니다.*  
+    -   *코딩된 UI 테스트**프로젝트 템플릿이 표시되지 않습니다.*  
   
          코딩된 UI 테스트를 지원하지 않는 Visual Studio 버전을 사용하는 중일 수 있습니다. 코딩된 UI 테스트를 만들려면 Visual Studio Enterprise를 사용해야 합니다.  
   
@@ -172,7 +172,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
  보다 자세한 예제는 [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)를 참조하세요. 이 연습에서는 간단한 WPF(Windows Presentation Foundation) 웹 응용 프로그램을 만들어, 코딩된 UI 테스트를 만들고 편집하고 유지 관리하는 방법을 보여 줍니다. 이 연습에서는 여러 타이밍 문제 및 제어 리팩터링으로 인해 중단된 테스트를 해결하기 위한 방법을 제공합니다.  
   
-###  <a name="a-namestartinga-starting-and-stopping-the-application-under-test"></a><a name="starting"></a> 테스트 대상 응용 프로그램 시작 및 중지  
+###  <a name="starting"></a> 테스트 대상 응용 프로그램 시작 및 중지  
  *각 테스트마다 응용 프로그램, 브라우저 또는 데이터베이스를 별도로 시작했다가 중지하고 싶지 않습니다. 어떻게 하면 이러한 문제를 피할 수 있나요?*  
   
 -   ![필수 구성 요소](../test/media/prereq.png "Prereq") 테스트 중인 응용 프로그램 시작 작업을 기록하지 않으려는 경우 **기록** 아이콘을 선택하기 전에 응용 프로그램을 시작해야 합니다.  
@@ -183,7 +183,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
 -   ![필수 구성 요소](../test/media/prereq.png "Prereq") [TestCleanup] 특성으로 식별되고 각 테스트 메서드 종료 시 코드를 실행하는 테스트 정리 메서드를 추가할 수 있습니다. 예를 들어 응용 프로그램을 닫는 메서드는 TestCleanup 메서드에서 호출될 수 있습니다.  
   
-###  <a name="a-nameverifyingcodeusingcuitgenerateassertionsa-validating-the-properties-of-ui-controls"></a><a name="VerifyingCodeUsingCUITGenerateAssertions"></a> UI 컨트롤 속성의 유효성 검사  
+###  <a name="VerifyingCodeUsingCUITGenerateAssertions"></a> UI 컨트롤 속성의 유효성 검사  
  **코딩된 UI 테스트 빌더**를 사용해 테스트의 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>에 UI(사용자 인터페이스) 컨트롤을 추가하거나 UI 컨트롤에 어설션을 사용하는 유효성 검사 메서드에 대한 코드를 생성할 수 있습니다.   
   
  UI 컨트롤을 위한 어설션을 생성하려면 코딩된 UI 테스트 빌더에서 **어설션 추가** 도구를 선택하여 올바른지 확인하려는 테스트 중인 응용 프로그램의 컨트롤로 끌어 옵니다. 컨트롤 주위에 상자가 생기면 마우스를 놓습니다. `UIMap.Designer.cs` 파일에 컨트롤 클래스 코드가 즉시 생성됩니다.  
@@ -304,7 +304,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
 ```  
   
-##  <a name="a-nameverifyingcodecuitmodifya-customizing-your-coded-ui-test"></a><a name="VerifyingCodeCUITModify"></a> 코딩된 UI 테스트 사용자 지정  
+##  <a name="VerifyingCodeCUITModify"></a> 코딩된 UI 테스트 사용자 지정  
  코딩된 UI 테스트를 만든 후 Visual Studio에서 다음 도구 중 하나를 사용해 편집할 수 있습니다.  
   
 -   **코딩된 UI 테스트 빌더:** 코딩된 UI 테스트 빌더를 사용하여 테스트에 컨트롤 및 유효성 검사를 더 추가할 수 있습니다. 이 항목의 [컨트롤 추가 및 해당 컨트롤 속성에 대한 유효성 검사](#VerifyingCodeUsingCUITGenerateAssertions) 섹션을 참조하세요.  
@@ -331,7 +331,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
         -   [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)  
   
-###  <a name="a-namegeneratedcodea-the-generated-code"></a><a name="generatedCode"></a> 생성된 코드  
+###  <a name="generatedCode"></a> 생성된 코드  
  **코드 생성**을 선택하면 다음과 같이 여러 코드 조각이 생성됩니다.  
   
 -   **테스트 메서드의 줄**  
@@ -399,7 +399,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
  생성된 코드에 대한 자세한 내용은 [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)을 참조하세요.  
   
-###  <a name="a-nameactionsa-coding-ui-control-actions-and-properties"></a><a name="actions"></a> UI 컨트롤 작업 및 속성 코딩  
+###  <a name="actions"></a> UI 컨트롤 작업 및 속성 코딩  
  코딩된 UI 테스트에서 UI 테스트 컨트롤 작업 시 이러한 컨트롤은 작업과 속성의 두 부분으로 나뉩니다.  
   
 -   첫 번째 부분은 UI 테스트 컨트롤에 대해 수행할 수 있는 작업으로 구성됩니다. 예를 들어 코딩된 UI 테스트는 UI 테스트 컨트롤에서 마우스 클릭을 시뮬레이트하거나 UI 테스트 컨트롤에 영향을 주기 위해 키보드에 입력된 키를 시뮬레이션할 수 있습니다.  
@@ -455,10 +455,10 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
      `SetProperty(myWinCheckBox.PropertyNames.Checked, true);`  
   
-###  <a name="a-namedebugginga-debugging"></a><a name="debugging"></a> 디버깅  
+###  <a name="debugging"></a> 디버깅  
  코딩된 UI 테스트 로그를 사용하여 코딩된 UI 테스트를 분석할 수 있습니다. 코딩된 UI 테스트 로그는 코딩된 UI 테스트 실행에 대한 중요한 정보를 필터링하고 기록합니다. 로그 서식을 통해 문제를 신속하게 디버깅할 수 있습니다. 자세한 내용은 [코딩된 UI 테스트 로그를 사용하여 코딩된 UI 테스트 분석](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)을 참조하세요.  
   
-##  <a name="a-nameverifycodeusingcuitwhatsnexta-whats-next"></a><a name="VerifyCodeUsingCUITWhatsNext"></a> 다음 단계  
+##  <a name="VerifyCodeUsingCUITWhatsNext"></a> 다음 단계  
  **코딩된 UI 테스트 실행을 위한 추가 옵션:** 이 항목의 앞에서 설명한 것처럼 Visual Studio에서 직접 코딩된 UI 테스트를 실행할 수 있습니다. 또한 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 또는 [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]에서 자동화된 UI 테스트를 실행할 수 있습니다. 코딩된 UI 테스트가 자동화된 경우 다른 자동화된 테스트와 달리 코딩된 UI 테스트를 실행할 때는 테스트와 데스크톱 사이에 상호 작용이 필요합니다.  
   
 -   [방법: Microsoft Visual Studio에서 테스트 실행](http://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)  
@@ -510,3 +510,4 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
  [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
  [Visual Studio 2010에서 코딩된 UI 테스트 업그레이드](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)   
  [기존 작업 기록에서 코딩된 UI 테스트 생성](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)
+

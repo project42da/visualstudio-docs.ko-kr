@@ -34,8 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a1edc88394193474b273968d8435e8df06415044
-ms.openlocfilehash: 6169b6d1805808c96647425706bf555e379679a8
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: ba9c9b60de651eecc92ea10ba44579a7dadc36df
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="options-text-editor-cc-advanced"></a>옵션, 텍스트 편집기, C/C++, 고급
@@ -139,7 +140,10 @@ ms.openlocfilehash: 6169b6d1805808c96647425706bf555e379679a8
  IntelliSense 요청 시 활성으로 유지되는 최대 변환 단위 수입니다. 2에서 15 사이의 값을 지정해야 합니다. 이 숫자는 지정된 Visual Studio 인스턴스에 대해 실행할 VCPkgSrv.exe 프로세스의 최대 개수와 직접적인 관련이 있습니다. 기본값은 2지만, 사용 가능한 메모리가 있는 경우 이 값을 늘려 IntelliSense 성능을 좀 더 개선할 수 있습니다.  
   
  변환 단위에 대한 자세한 내용은 [변환 단계](/visual-cpp/preprocessor/phases-of-translation)를 참조하세요.  
-  
+
+ **멤버 목록 점-화살표**  
+ 멤버 목록에 적합한 경우 '.'을 '->'로 바꿉니다.
+
  **적극적 멤버 목록 사용 안 함**  
  형식 또는 변수의 이름을 입력하는 동안 멤버 목록이 나타나지 않습니다. **멤버 목록 커밋 문자** 옵션에 정의된 커밋 문자 중 하나를 입력한 후에만 목록이 나타납니다.  
   
@@ -169,12 +173,14 @@ ms.openlocfilehash: 6169b6d1805808c96647425706bf555e379679a8
  '모든 참조 찾기' 결과에서 확인되지 않은 항목을 숨깁니다. "확인 사용 안 함" 옵션을 해제하는 경우 이 옵션을 사용하여 결과에서 확인되지 않은 항목을 숨길 수 있습니다.  
   
  **참조 강조 사용 안 함**  
+
+ ## <a name="text-editor"></a>텍스트 편집기
+ **범위 확장 사용**  
+ 사용하도록 설정한 경우 텍스트 편집기에 '{'를 입력하면 선택한 텍스트를 중괄호로 둘러쌀 수 있습니다.  
+  
+ **우선 순위 확장 사용**  
+ 사용하도록 설정한 경우 텍스트 편집기에 '('를 입력하면 선택한 텍스트를 괄호로 둘러쌀 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [언어별 편집기 옵션 설정](../../ide/reference/setting-language-specific-editor-options.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -1,7 +1,7 @@
 ---
-title: "CPU 샘플링 초보자를 위한 지침 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
+title: "Visual Studio CPU 샘플링 초보자를 위한 지침 | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
+ms.date: 03/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,8 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 53907b9b88deca671ee0695385dcbc856a35d309
-ms.openlocfilehash: 072783e138fcc20d80ccbe8ec8b66905778cf67d
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: ddd52c1af0a164235de2e5055896e020dc8715c3
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU 샘플링 초보자를 위한 지침
@@ -53,7 +54,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 > [!TIP]
 >  Windows 함수를 호출하는 코드를 프로파일링하는 경우 가장 최근의 .pdb 파일이 있는지 확인해야 합니다. 이 파일이 없으면 보고서 뷰에 암호화되어 이해하기 어려운 Windows 함수 이름이 표시됩니다. 필요한 파일이 있는지 확인하는 방법에 대한 자세한 내용은 [방법: Windows 기호 정보 참조](../profiling/how-to-reference-windows-symbol-information.md)를 참조하세요.  
   
-##  <a name="a-namestep1a-create-and-run-a-performance-session"></a><a name="Step1"></a> 성능 세션 만들기 및 실행  
+##  <a name="Step1"></a> 성능 세션 만들기 및 실행  
  분석이 필요한 데이터를 가져오려면 먼저 성능 세션을 만든 후 세션을 실행해야 합니다. **성능 마법사**로 두 작업을 모두 수행할 수 있습니다.  
   
  Windows 데스크톱 앱 또는 ASP.NET 앱을 프로파일링하지 않는 경우 다른 프로파일링 도구 중 하나를 사용해야 합니다. [프로파일링 도구](../profiling/profiling-tools.md)를 참조하세요.  
@@ -65,7 +66,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
     > [!IMPORTANT]
     >  사용 중인 컴퓨터에서 관리자가 아닌 경우 프로파일러를 사용하는 동안 Visual Studio를 관리자 권한으로 실행해야 합니다. Visual Studio 응용 프로그램 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.  
   
-2.  **디버그** 메뉴에서 **성능 프로파일러**를 클릭합니다.  
+2.  **디버그** 메뉴에서 **프로파일러**를 선택한 다음 **성능 프로파일러**을 선택합니다.  
   
 3.  **성능 마법사** 옵션을 클릭하고 **시작**을 클릭합니다.  
   
@@ -79,7 +80,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
   
      응용 프로그램 실행이 끝나면 프로파일링 데이터의 **요약** 뷰가 주 Visual Studio 창에 나타나고 새 세션에 대한 아이콘이 **성능 탐색기** 창에 표시됩니다.  
   
-##  <a name="a-namestep2a-step-2-analyze-sampling-data"></a><a name="Step2"></a> 2단계: 샘플링 데이터 분석  
+##  <a name="Step2"></a> 2단계: 샘플링 데이터 분석  
  성능 세션 실행이 끝나면 프로파일링 보고서의 **요약** 뷰가 Visual Studio의 주 창에 나타납니다.  
   
  **실행 부하 과다 경로**를 검사한 다음 가장 많은 작업을 수행하는 함수 목록을 검사하고 마지막으로 **요약 타임라인**을 사용하여 다른 함수를 중점으로 데이터를 분석하는 것이 좋습니다. **오류 목록** 창에서 프로파일링 권장 사항 및 경고를 볼 수도 있습니다.  
@@ -124,7 +125,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
   
     -   경고에 대한 자세한 내용을 보려면 오류를 마우스 오른쪽 단추로 클릭하고 **오류 도움말 표시**를 클릭합니다.  
   
-##  <a name="a-namestep3a-step-3-revise-code-and-rerun-a-session"></a><a name="Step3"></a> 3단계: 코드 수정 및 세션 다시 실행  
+##  <a name="Step3"></a> 3단계: 코드 수정 및 세션 다시 실행  
  하나 이상의 함수를 찾아서 최적화한 후에는 프로파일링 실행을 반복하고 데이터를 비교하여 변경 내용이 응용 프로그램 성능에 가져온 차이를 확인할 수 있습니다.  
   
 #### <a name="to-revise-code-and-rerun-the-profiler"></a>코드를 수정하고 프로파일러를 다시 실행하려면  
@@ -143,8 +144,3 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
  [성능 탐색기](../profiling/performance-explorer.md)   
  [시작](../profiling/getting-started-with-performance-tools.md)   
  [개요](../profiling/overviews-performance-tools.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

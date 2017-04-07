@@ -2,7 +2,6 @@
 # [Visual Studio 그래픽 진단 개요](overview-of-visual-studio-graphics-diagnostics.md)
 # [Visual Studio 그래픽 진단 시작](getting-started-with-visual-studio-graphics-diagnostics.md)
 # [그래픽 정보 캡처](capturing-graphics-information.md)
-# [GPU 사용량](gpu-usage.md)
 # [그래픽 로그 문서](graphics-log-document.md)
 # [그래픽 프레임 분석](graphics-frame-analysis.md)
 ## [1x1 뷰포트 크기 변형](1x1-viewport-size-variant.md)

@@ -35,13 +35,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d82c6e70e17866e4bd4d39524faafdb554508fc2
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: a3521e5a8f0bcf3d6d938187031b9a2de73b20d5
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="msbuild-tasks-specific-to-visual-c"></a>Visaul C++ 관련 MSBuild 작업
-작업은 빌드 프로세스 동안 실행되는 코드를 제공합니다. Visual C++가 설치되면 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]와 함께 설치되는 작업 외에 다음 작업을 사용할 수 있습니다. 자세한 내용은 [MSBuild(Visual C++) 개요](/visual-cpp/build/msbuild-visual-cpp-overview)를 참조하세요.  
+작업은 빌드 프로세스 동안 실행되는 코드를 제공합니다. Visual C++가 설치되면 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]와 함께 설치되는 작업 외에 다음 작업을 사용할 수 있습니다. 자세한 내용은 [MSBuild(Visual C++) 개요](/cpp/build/msbuild-visual-cpp-overview)를 참조하세요.  
   
  각 작업에 대한 매개 변수 외에도 모든 작업에는 다음과 같은 매개 변수가 있습니다.  
   

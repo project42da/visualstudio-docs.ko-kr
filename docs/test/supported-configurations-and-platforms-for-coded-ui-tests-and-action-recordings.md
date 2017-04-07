@@ -1,20 +1,39 @@
 ---
 title: "코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-10-04"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "코딩된 UI 테스트"
+ms.custom: 
+ms.date: 2015-10-04
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- coded UI tests
 ms.assetid: 544742b5-4ec1-4d51-b941-72b2f6ff17bc
 caps.latest.revision: 106
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 104
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: b4ca42eedec0f6fe2daaa70b04ab9fdaf37865fc
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼
 아래의 표에는 Visual Studio Enterprise의 코딩된 UI 테스트에 지원되는 구성 및 플랫폼이 나와 있습니다. 이러한 구성은 [!INCLUDE[MTRlong](../test/includes/mtrlong_md.md)]를 사용하여 만든 작업 기록에도 적용됩니다.  
@@ -70,8 +89,4 @@ caps.handback.revision: 104
 ## <a name="see-also"></a>참고 항목  
  [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
  [기존 작업 기록에서 코딩된 UI 테스트 생성](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

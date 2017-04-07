@@ -12,7 +12,7 @@ helpviewer_keywords:
 - code coverage
 ms.assetid: 800fc739-acd2-4242-84cb-1d83b4d82cf9
 caps.latest.revision: 36
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -271,7 +271,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
   
      테스트 소스 정의가 두 개 이상일 경우 각각에 대해 이 단계를 반복합니다.  
   
-    -   *하지만 **실행 설정 파일 형식**이라는 필드는 없습니다.*  
+    -   *하지만**실행 설정 파일 형식**이라는 필드는 없습니다.*  
   
          **자동화된 테스트**에서 **테스트 어셈블리**를 선택한 다음 줄임표 단추 **[...]**를 선택합니다. **테스트 실행 추가/편집** 대화 상자의 **Test Runner**에서 **Visual Studio Test Runner**를 선택합니다.  
   
@@ -302,3 +302,4 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
  [코드 검사 분석 사용자 지정](../test/customizing-code-coverage-analysis.md)   
  [코드 검사 문제 해결](../test/troubleshooting-code-coverage.md)   
  [코드 단위 테스트](../test/unit-test-your-code.md)
+

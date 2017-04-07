@@ -1,25 +1,44 @@
 ---
-title: "초보자를 위한 성능 프로파일링 지침 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "vs.performance.wizard.intropage"
-helpviewer_keywords: 
-  - "성능 도구, 마법사"
-  - "성능 마법사"
-  - "프로파일링 도구, 퀵 스타트"
+title: "Visual Studio 성능 프로파일링 초보자를 위한 지침 | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- vs.performance.wizard.intropage
+helpviewer_keywords:
+- Profiling Tools, quick start
+- Diagnostics Tools, CPU Usage
+- CPU Usage
+- Diagnostics Tools
 ms.assetid: da2fbf8a-2d41-4654-a509-dd238532d25a
 caps.latest.revision: 45
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 43
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: fe329cd5395db3afae1c3f3e98bb6e480323e21f
+ms.lasthandoff: 03/07/2017
+
 ---
 # <a name="beginners-guide-to-performance-profiling"></a>초보자를 위한 성능 프로파일링 지침
 Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성능 문제를 분석할 수 있습니다. 이 절차에서는 진단 도구의 **CPU 사용량** 탭을 사용하여 앱의 성능 데이터를 가져오는 방법을 보여 줍니다. 진단 도구는 ASP.NET을 포함한 Visual Studio의 .NET 개발 및 네이티브/C++ 개발에 사용할 수 있습니다.
@@ -30,7 +49,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 
 이 항목에서는 일반적인 디버깅 워크플로에서의 CPU 사용량 분석에 대해 설명합니다. 디버거를 연결하지 않고 또는 실행 중인 앱을 대상으로 지정하여 CPU 사용량을 분석할 수도 있습니다. 자세한 내용은 [디버그하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)을 참조하세요.
   
-##  <a name="a-namebkmkquickstartcollectdiagnosticdataa-step-1-collect-profiling-data"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 1단계: 프로파일링 데이터 수집 
+##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 1단계: 프로파일링 데이터 수집 
   
 1.  Visual Studio에서 디버그할 프로젝트를 열고 CPU 사용량을 검사할 지점에서 앱에 중단점을 설정합니다.
 
@@ -81,7 +100,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 
      이 시점에서 데이터 분석을 시작할 수 있습니다.
 
-## <a name="a-namestep2a-step-2-analyze-cpu-usage-data"></a><a name="Step2"></a> 2단계: CPU 사용량 데이터 분석
+## <a name="Step2"></a> 2단계: CPU 사용량 데이터 분석
 
 CPU 사용량 아래의 함수 목록을 검사하고, 가장 많은 작업을 수행하는 함수를 확인한 다음, 각 함수를 자세히 살펴보는 방식으로 데이터 분석을 시작하는 것이 좋습니다.
 
@@ -128,7 +147,7 @@ CPU 사용량 아래의 함수 목록을 검사하고, 가장 많은 작업을 �
 
 - **모듈** 함수가 포함된 모듈의 이름 또는 [External Code] 노드에 함수가 포함된 모듈의 수입니다.
 
-## <a name="a-namebkmkexternalcodeaview-external-code"></a><a name="BKMK_External_Code"></a>외부 코드 보기
+## <a name="BKMK_External_Code"></a>외부 코드 보기
 
 외부 코드는 사용자가 작성한 코드에서 실행된 시스템 및 프레임워크 구성 요소의 함수입니다. 외부 코드에는 앱을 시작 및 중지하고, UI를 그리며, 스레딩을 제어하고, 앱에 다른 낮은 수준 서비스를 제공하는 함수가 포함되어 있습니다. 대부분의 경우 외부 코드에 관심이 없으므로 CPU 사용량 도구에서 사용자 메서드의 외부 함수를 하나의 **[External Code]** 노드로 수집합니다.
   
@@ -147,8 +166,3 @@ CPU 사용량 아래의 함수 목록을 검사하고, 가장 많은 작업을 �
  [[메모리 사용량](../profiling/memory-usage.md)
  [CPU 사용량](../profiling/cpu-usage.md)
  [프로파일링 도구](../profiling/profiling-tools.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

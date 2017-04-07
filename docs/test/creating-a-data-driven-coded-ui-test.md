@@ -1,20 +1,38 @@
 ---
-title: "데이터 기반의 코딩된 UI 테스트 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 기반 코딩 된 UI 테스트,"
+title: "데이터 기반의 코딩된 UI 테스트 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- coded UI tests, data-driven
 ms.assetid: 5838f02d-001f-49ce-adce-c9ea1afaec2f
 caps.latest.revision: 56
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 56
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 9885f3cff76b9c5e1d053550be80c4b68cf9de1b
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>데이터 기반의 코딩된 UI 테스트 만들기
 다른 조건을 테스트하려면 각기 다른 매개 변수 값을 사용하여 테스트를 여러 번 실행합니다. 이 경우 데이터 기반의 코딩된 UI 테스트를 사용하면 편리합니다. 데이터 소스에서 매개 변수 값을 정의하면 데이터 소스의 각 행에서 코딩된 UI 테스트가 반복됩니다. 테스트의 전체 결과는 모든 반복의 결과를 기반으로 합니다. 예를 들어 테스트 반복 하나가 실패하면 전체 테스트 결과가 실패로 됩니다.  
@@ -206,7 +224,7 @@ caps.handback.revision: 56
   
 ## <a name="q--a"></a>Q & A  
   
-###  <a name="a-namecreatedatadrivencuitqadatasourceattributesa-what-are-the-data-source-attributes-for-other-data-source-types-such-as-sql-express-or-xml"></a><a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a> SQL Express 또는 XML과 같은 기타 데이터 소스 형식에는 어떤 데이터 소스 특성이 있나요?  
+###  <a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a> SQL Express 또는 XML과 같은 기타 데이터 소스 형식에는 어떤 데이터 소스 특성이 있나요?  
  아래 테이블의 샘플 데이터 소스 문자열을 코드에 복사하고 필요한 항목을 사용자 지정하여 사용할 수 있습니다.  
   
  **데이터 소스 형식 및 특성**  
@@ -256,8 +274,4 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
  [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
  [코딩된 UI 테스트에 대한 모범 사례](../test/best-practices-for-coded-ui-tests.md)   
  [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
-ms.openlocfilehash: 99a485f2b7ebda9169797db06212ae56dc4d9eb1
-ms.lasthandoff: 03/03/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 8c478c49ee429e0c5d96dc60f035fcb460b902c8
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="managing-references-in-a-project"></a>프로젝트의 참조 관리
@@ -124,7 +124,7 @@ ms.lasthandoff: 03/03/2017
 ## <a name="project-to-project-references"></a>프로젝트 간 참조  
  프로젝트 간 참조는 어셈블리가 포함된 프로젝트에 대한 참조로, **프로젝트** 탭을 사용하여 만들 수 있습니다. 프로젝트에 경로가 지정되면 Visual Studio에서 어셈블리를 찾을 수 있습니다.  
 
- 어셈블리를 생성하는 프로젝트를 사용하는 경우에는 프로젝트를 참조하고 파일 참조(아래 참조)를 사용하지 말아야 합니다. 프로젝트 간 참조의 이점은 빌드 시스템에서 프로젝트 간의 종속성을 만들 수 있다는 점입니다. 참조하는 프로젝트가 마지막으로 빌드된 이후 변경된 경우 종속 프로젝트가 빌드됩니다. 파일 참조는 빌드 종속성을 만들지 않습니다. 따라서 종속 프로젝트를 빌드하지 않고 참조되는 프로젝트를 빌드할 수 있으며 해당 참조가 더 이상 사용되지 않습니다. (즉, 프로젝트가 이전에 빌드된 프로젝트 버전을 참조할 수 있습니다.) 그러면 bin 디렉터리에 여러 버전의 단일 DLL이 필요하게 되는데 이것은 불가능합니다. 이러한 충돌이 발생하면 [경고: 프로젝트 '프로젝트'의 종속성 '파일'을 실행 디렉터리에 복사할 수 없습니다. 그러면 참조 ‘파일'을 덮어쓰기 때문입니다.](../misc/warning-the-dependency-file-in-project-project-cannot-be-copied-to-the-run-directory-because-it-would-overwrite-the-reference-file.md)와 같은 메시지가 표시됩니다. 자세한 내용은 [끊어진 참조 문제 해결](../ide/troubleshooting-broken-references.md) 및 [방법: 프로젝트 종속성 만들기 및 제거](../ide/how-to-create-and-remove-project-dependencies.md)를 참조하세요.  
+ 어셈블리를 생성하는 프로젝트를 사용하는 경우에는 프로젝트를 참조하고 파일 참조(아래 참조)를 사용하지 말아야 합니다. 프로젝트 간 참조의 이점은 빌드 시스템에서 프로젝트 간의 종속성을 만들 수 있다는 점입니다. 참조하는 프로젝트가 마지막으로 빌드된 이후 변경된 경우 종속 프로젝트가 빌드됩니다. 파일 참조는 빌드 종속성을 만들지 않습니다. 따라서 종속 프로젝트를 빌드하지 않고 참조되는 프로젝트를 빌드할 수 있으며 해당 참조가 더 이상 사용되지 않습니다. (즉, 프로젝트가 이전에 빌드된 프로젝트 버전을 참조할 수 있습니다.) 그러면 bin 디렉터리에 여러 버전의 단일 DLL이 필요하게 되는데 이것은 불가능합니다. 이러한 충돌이 발생하면 "경고: '프로젝트' 프로젝트의 '파일' 종속성을 실행 디렉터리에 복사할 수 없습니다. 그러면 '파일' 참조를 덮어쓰기 때문입니다."와 같은 메시지가 표시됩니다. 자세한 내용은 [끊어진 참조 문제 해결](../ide/troubleshooting-broken-references.md) 및 [방법: 프로젝트 종속성 만들기 및 제거](../ide/how-to-create-and-remove-project-dependencies.md)를 참조하세요.  
 
 > [!NOTE]
 >  한 프로젝트의 대상 .NET Framework 버전이 버전 4.5이고 다른 프로젝트의 대상 버전이 버전 2, 3, 3.5 또는 4.0인 경우 프로젝트 간 참조 대신 파일 참조가 만들어집니다.  

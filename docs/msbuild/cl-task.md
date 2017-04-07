@@ -1,35 +1,53 @@
 ---
-title: "CL 작업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing"
-  - "vc.task.cl"
-  - "VC.Project.VCCLCompilerTool.TreatSpecificWarningsAsErrors"
-  - "VC.Project.VCCLCompilerTool.CreateHotpatchableImage"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild (Visual c + +), CL 작업"
-  - "CL 작업(MSBuild(Visual C++))"
+title: "CL 작업 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing
+- vc.task.cl
+- VC.Project.VCCLCompilerTool.TreatSpecificWarningsAsErrors
+- VC.Project.VCCLCompilerTool.CreateHotpatchableImage
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MSBuild (Visual C++), CL task
+- CL task (MSBuild (Visual C++))
 ms.assetid: 651ba971-b755-4f03-a549-4816beb3cc0d
 caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 18
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: bde2b08fb3cc1b183d224ab3282e44f21a094403
+ms.lasthandoff: 04/05/2017
+
 ---
 # <a name="cl-task"></a>CL 작업
-Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행(.exe) 파일, 동적 연결 라이브러리(.dll) 파일 또는 코드 모듈(.netmodule) 파일을 생성합니다. 자세한 내용은 [컴파일러 옵션](/visual-cpp/build/reference/compiler-options)을 참조하세요.  
+Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행(.exe) 파일, 동적 연결 라이브러리(.dll) 파일 또는 코드 모듈(.netmodule) 파일을 생성합니다. 자세한 내용은 [컴파일러 옵션](/cpp/build/reference/compiler-options)을 참조하세요.  
   
 ## <a name="parameters"></a>매개 변수  
  다음 표에서는 **CL** 작업의 매개 변수에 대해 설명합니다. 대부분의 작업 매개 변수 및 몇 가지 매개 변수 집합은 명령줄 옵션에 해당합니다.  
@@ -40,7 +58,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      포함 파일을 검색할 디렉터리 목록에 디렉터리를 추가합니다.  
   
-     자세한 내용은 [/I(추가 포함 디렉터리)](/visual-cpp/build/reference/i-additional-include-directories)를 참조하세요.  
+     자세한 내용은 [/I(추가 포함 디렉터리)](/cpp/build/reference/i-additional-include-directories)를 참조하세요.  
   
 -   **AdditionalOptions**  
   
@@ -48,13 +66,13 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      명령줄 옵션의 목록입니다. 예를 들어 "/*option1* /*option2* /*option#*"과 같습니다. 이 매개 변수를 사용하여 다른 작업 매개 변수로 표현되지 않는 명령줄 옵션을 지정합니다.  
   
-     자세한 내용은 [컴파일러 옵션](/visual-cpp/build/reference/compiler-options)을 참조하세요.  
+     자세한 내용은 [컴파일러 옵션](/cpp/build/reference/compiler-options)을 참조하세요.  
   
 -   **AdditionalUsingDirectories**선택적 String[] 매개 변수입니다.  
   
      **#using** 지시문에 전달된 파일 참조를 확인하기 위해 컴파일러가 검색할 디렉터리를 지정합니다.  
   
-     자세한 내용은 [/AI(메타데이터 디렉터리 지정)](/visual-cpp/build/reference/ai-specify-metadata-directories)를 참조하세요.  
+     자세한 내용은 [/AI(메타데이터 디렉터리 지정)](/cpp/build/reference/ai-specify-metadata-directories)를 참조하세요.  
   
 -   **AlwaysAppend**  
   
@@ -66,7 +84,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      어셈블리 코드가 포함된 목록 파일을 만듭니다.  
   
-     자세한 내용은 [/FA, /Fa(목록 파일)](/visual-cpp/build/reference/fa-fa-listing-file)의 **/Fa** 옵션을 참조하세요.  
+     자세한 내용은 [/FA, /Fa(목록 파일)](/cpp/build/reference/fa-fa-listing-file)의 **/Fa** 옵션을 참조하세요.  
   
 -   **AssemblerOutput**  
   
@@ -86,13 +104,13 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **All** - **/FAcs**  
   
-     자세한 내용은 [/FA, /Fa(목록 파일)](/visual-cpp/build/reference/fa-fa-listing-file)의 **/FA**, **/FAc**, **/FAs** 및 **/FAcs** 옵션을 참조하세요.  
+     자세한 내용은 [/FA, /Fa(목록 파일)](/cpp/build/reference/fa-fa-listing-file)의 **/FA**, **/FAc**, **/FAs** 및 **/FAcs** 옵션을 참조하세요.  
   
 -   **BasicRuntimeChecks**  
   
      선택적 문자열 매개 변수입니다.  
   
-     [runtime_checks](/visual-cpp/preprocessor/runtime-checks) pragma와 함께 런타임 오류 검사 기능을 사용하거나 사용하지 않도록 설정합니다.  
+     [runtime_checks](/cpp/preprocessor/runtime-checks) pragma와 함께 런타임 오류 검사 기능을 사용하거나 사용하지 않도록 설정합니다.  
   
      각 명령줄 옵션에 해당하는 다음 값 중 하나를 지정하세요.  
   
@@ -104,7 +122,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **EnableFastChecks** -                          **/RTC1**  
   
-     자세한 내용은 [/RTC(런타임 오류 검사)](/visual-cpp/build/reference/rtc-run-time-error-checks)를 참조하세요.  
+     자세한 내용은 [/RTC(런타임 오류 검사)](/cpp/build/reference/rtc-run-time-error-checks)를 참조하세요.  
   
 -   **BrowseInformation**  
   
@@ -112,7 +130,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 찾아보기 정보 파일을 만듭니다.  
   
-     자세한 내용은 [/FR, /Fr(.Sbr 파일 만들기)](/visual-cpp/build/reference/fr-fr-create-dot-sbr-file)의 **/FR** 옵션을 참조하세요.  
+     자세한 내용은 [/FR, /Fr(.Sbr 파일 만들기)](/cpp/build/reference/fr-fr-create-dot-sbr-file)의 **/FR** 옵션을 참조하세요.  
   
 -   **BrowseInformationFile**  
   
@@ -120,7 +138,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      찾아보기 정보 파일에 대한 파일 이름을 지정합니다.  
   
-     자세한 내용은 이 표의 **BrowseInformation** 매개 변수를 참조하고 [/FR, /Fr(.Sbr 파일 만들기)](/visual-cpp/build/reference/fr-fr-create-dot-sbr-file)도 참조하세요.  
+     자세한 내용은 이 표의 **BrowseInformation** 매개 변수를 참조하고 [/FR, /Fr(.Sbr 파일 만들기)](/cpp/build/reference/fr-fr-create-dot-sbr-file)도 참조하세요.  
   
 -   **BufferSecurityCheck**  
   
@@ -128,7 +146,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 버퍼 크기 제한을 적용하지 않는 코드를 악용하기 위한 일반적인 기술인, 반환 주소를 덮어쓰는 일부 버퍼 오버런을 검색합니다.  
   
-     자세한 내용은 [/GS(버퍼 보안 검사)](/visual-cpp/build/reference/gs-buffer-security-check)를 참조하세요.  
+     자세한 내용은 [/GS(버퍼 보안 검사)](/cpp/build/reference/gs-buffer-security-check)를 참조하세요.  
   
 -   **BuildingInIDE**  
   
@@ -150,7 +168,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **StdCall** -                          **/Gz**  
   
-     자세한 내용은 [/Gd, /Gr, /Gv, /Gz(호출 규칙)](/visual-cpp/build/reference/gd-gr-gv-gz-calling-convention)를 참조하세요.  
+     자세한 내용은 [/Gd, /Gr, /Gv, /Gz(호출 규칙)](/cpp/build/reference/gd-gr-gv-gz-calling-convention)를 참조하세요.  
   
 -   **CompileAs**  
   
@@ -166,7 +184,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **CompileAsCpp** - **/TP**  
   
-     자세한 내용은 [/Tc, /Tp, /TC, /TP(소스 파일 형식 지정)](/visual-cpp/build/reference/tc-tp-tc-tp-specify-source-file-type)를 참조하세요.  
+     자세한 내용은 [/Tc, /Tp, /TC, /TP(소스 파일 형식 지정)](/cpp/build/reference/tc-tp-tc-tp-specify-source-file-type)를 참조하세요.  
   
 -   **CompileAsManaged**  
   
@@ -186,15 +204,15 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **OldSyntax** - **/clr:oldSyntax**  
   
-     자세한 내용은 [/clr(공용 언어 런타임 컴파일)](/visual-cpp/build/reference/clr-common-language-runtime-compilation)을 참조하세요.  
+     자세한 내용은 [/clr(공용 언어 런타임 컴파일)](/cpp/build/reference/clr-common-language-runtime-compilation)을 참조하세요.  
   
 -   **CreateHotpatchableImage**  
   
      선택적 부울 매개 변수입니다.  
   
-     `true`인 경우 컴파일러가 *핫 패치*용 이미지를 준비하도록 합니다. 이 매개 변수는 각 함수의 첫 번째 명령이&2;바이트가 되도록 합니다(핫 패치에 필요함).  
+     `true`인 경우 컴파일러가 *핫 패치*용 이미지를 준비하도록 합니다. 이 매개 변수는 각 함수의 첫 번째 명령이 2바이트가 되도록 합니다(핫 패치에 필요함).  
   
-     자세한 내용은 [/hotpatch(핫 패치 가능 이미지 만들기)](/visual-cpp/build/reference/hotpatch-create-hotpatchable-image)를 참조하세요.  
+     자세한 내용은 [/hotpatch(핫 패치 가능 이미지 만들기)](/cpp/build/reference/hotpatch-create-hotpatchable-image)를 참조하세요.  
   
 -   **DebugInformationFormat**  
   
@@ -210,7 +228,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **EditAndContinue** - **/ZI**  
   
-     자세한 내용은 [/Z7, /Zi, /ZI(디버그 정보 형식)](/visual-cpp/build/reference/z7-zi-zi-debug-information-format)를 참조하세요.  
+     자세한 내용은 [/Z7, /Zi, /ZI(디버그 정보 형식)](/cpp/build/reference/z7-zi-zi-debug-information-format)를 참조하세요.  
   
 -   **DisableLanguageExtensions**  
   
@@ -218,7 +236,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      **true**인 경우 컴파일러가 ANSI C 또는 ANSI C++와 호환되지 않는 언어 구문에 대한 오류를 내보내도록 합니다.  
   
-     자세한 내용은 [/Za, /Ze(언어 확장 사용 안 함)](/visual-cpp/build/reference/za-ze-disable-language-extensions)의 **/Za** 옵션을 참조하세요.  
+     자세한 내용은 [/Za, /Ze(언어 확장 사용 안 함)](/cpp/build/reference/za-ze-disable-language-extensions)의 **/Za** 옵션을 참조하세요.  
   
 -   **DisableSpecificWarnings**  
   
@@ -226,7 +244,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      세미콜론으로 구분된 목록에 지정된 경고 번호를 사용하지 않도록 설정합니다.  
   
-     자세한 내용은 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX(경고 수준)](/visual-cpp/build/reference/compiler-option-warning-level)의 `/wd` 옵션을 참조하세요.  
+     자세한 내용은 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX(경고 수준)](/cpp/build/reference/compiler-option-warning-level)의 `/wd` 옵션을 참조하세요.  
   
 -   **EnableEnhancedInstructionSet**  
   
@@ -240,7 +258,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **StreamingSIMDExtensions2** - **/arch:SSE2**  
   
-     자세한 내용은 [/arch(x86)](/visual-cpp/build/reference/arch-x86)를 참조하세요.  
+     자세한 내용은 [/arch(x86)](/cpp/build/reference/arch-x86)를 참조하세요.  
   
 -   **EnableFiberSafeOptimizations**  
   
@@ -248,7 +266,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 정적 스레드 로컬 저장소를 사용하여 할당한 데이터(즉, `__declspec(thread)`를 사용하여 할당한 데이터)의 파이버 안전을 지원합니다.  
   
-     자세한 내용은 [/GT(파이버 안전 스레드 로컬 저장소 지원)](/visual-cpp/build/reference/gt-support-fiber-safe-thread-local-storage)를 참조하세요.  
+     자세한 내용은 [/GT(파이버 안전 스레드 로컬 저장소 지원)](/cpp/build/reference/gt-support-fiber-safe-thread-local-storage)를 참조하세요.  
   
 -   **EnablePREfast**  
   
@@ -256,7 +274,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 코드 분석을 사용하도록 설정합니다.  
   
-     자세한 내용은 [/analyze(코드 분석)](/visual-cpp/build/reference/analyze-code-analysis)를 참조하세요.  
+     자세한 내용은 [/analyze(코드 분석)](/cpp/build/reference/analyze-code-analysis)를 참조하세요.  
   
 -   **ErrorReporting**  
   
@@ -274,7 +292,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **Send** - **/errorReport:send**  
   
-     자세한 내용은 [/errorReport(내부 컴파일러 오류 보고)](/visual-cpp/build/reference/errorreport-report-internal-compiler-errors)를 참조하세요.  
+     자세한 내용은 [/errorReport(내부 컴파일러 오류 보고)](/cpp/build/reference/errorreport-report-internal-compiler-errors)를 참조하세요.  
   
 -   **ExceptionHandling**  
   
@@ -292,7 +310,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **SyncCThrow** - **/EHs**  
   
-     자세한 내용은 [/EH(예외 처리 모델)](/visual-cpp/build/reference/eh-exception-handling-model)를 참조하세요.  
+     자세한 내용은 [/EH(예외 처리 모델)](/cpp/build/reference/eh-exception-handling-model)를 참조하세요.  
   
 -   **ExpandAttributedSource**  
   
@@ -300,7 +318,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 소스 파일에 확장 특성을 삽입한 목록 파일을 만듭니다.  
   
-     자세한 내용은 [/Fx(삽입된 코드 병합)](/visual-cpp/build/reference/fx-merge-injected-code)를 참조하세요.  
+     자세한 내용은 [/Fx(삽입된 코드 병합)](/cpp/build/reference/fx-merge-injected-code)를 참조하세요.  
   
 -   **FavorSizeOrSpeed**  
   
@@ -316,7 +334,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **Speed** - **/Ot**  
   
-     자세한 내용은 [/Os, /Ot(코드 크기 우선, 코드 속도 우선)](/visual-cpp/build/reference/os-ot-favor-small-code-favor-fast-code)를 참조하세요.  
+     자세한 내용은 [/Os, /Ot(코드 크기 우선, 코드 속도 우선)](/cpp/build/reference/os-ot-favor-small-code-favor-fast-code)를 참조하세요.  
   
 -   **FloatingPointExceptions**  
   
@@ -324,7 +342,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 안정적인 부동 소수점 예외 모델을 사용할 수 있습니다. 예외가 트리거되는 직후 발생합니다.  
   
-     자세한 내용은 [/fp(부동 소수점 동작 지정)](/visual-cpp/build/reference/fp-specify-floating-point-behavior)의 /**fp:except** 옵션을 참조하세요.  
+     자세한 내용은 [/fp(부동 소수점 동작 지정)](/cpp/build/reference/fp-specify-floating-point-behavior)의 /**fp:except** 옵션을 참조하세요.  
   
 -   **FloatingPointModel**  
   
@@ -340,13 +358,13 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **Fast** - **/fp:fast**  
   
-     자세한 내용은 [/fp(부동 소수점 동작 지정)](/visual-cpp/build/reference/fp-specify-floating-point-behavior)를 참조하세요.  
+     자세한 내용은 [/fp(부동 소수점 동작 지정)](/cpp/build/reference/fp-specify-floating-point-behavior)를 참조하세요.  
   
 -   **ForceConformanceInForLoopScope**  
   
      선택적 부울 매개 변수입니다.  
   
-     `true`인 경우 Microsoft 확장([/Ze](/visual-cpp/build/reference/za-ze-disable-language-extensions))을 사용하는 [for](/visual-cpp/cpp/for-statement-cpp) 루프의 표준 C++ 동작을 구현합니다.  
+     `true`인 경우 Microsoft 확장([/Ze](/cpp/build/reference/za-ze-disable-language-extensions))을 사용하는 [for](/cpp/cpp/for-statement-cpp) 루프의 표준 C++ 동작을 구현합니다.  
   
      자세한 내용은 [/Zc:forScope(for 루프 범위의 강제 규칙)](http://msdn.microsoft.com/Library/3031f02d-3b14-4ad0-869e-22b0110c3aed)를 참조하세요.  
   
@@ -356,7 +374,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      전처리기가 하나 이상의 지정된 헤더 파일을 처리하게 합니다.  
   
-     자세한 내용은 [/FI(강제 포함 파일 이름 지정)](/visual-cpp/build/reference/fi-name-forced-include-file)를 참조하세요.  
+     자세한 내용은 [/FI(강제 포함 파일 이름 지정)](/cpp/build/reference/fi-name-forced-include-file)를 참조하세요.  
   
 -   **ForcedUsingFiles**  
   
@@ -364,7 +382,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      전처리기가 하나 이상의 지정된 **#using** 파일을 처리하게 합니다.  
   
-     자세한 내용은 [/FU(강제 #using 파일 이름 지정)](/visual-cpp/build/reference/fu-name-forced-hash-using-file)를 참조하세요.  
+     자세한 내용은 [/FU(강제 #using 파일 이름 지정)](/cpp/build/reference/fu-name-forced-hash-using-file)를 참조하세요.  
   
 -   **FunctionLevelLinking**  
   
@@ -372,7 +390,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 컴파일러가 개별 함수를 패키지된 함수의 형태로 패키지할 수 있습니다(COMDAT).  
   
-     자세한 내용은 [/Gy(함수 수준 링크 사용)](/visual-cpp/build/reference/gy-enable-function-level-linking)를 참조하세요.  
+     자세한 내용은 [/Gy(함수 수준 링크 사용)](/cpp/build/reference/gy-enable-function-level-linking)를 참조하세요.  
   
 -   **GenerateXMLDocumentationFiles**  
   
@@ -380,7 +398,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 컴파일러가 소스 코드 파일의 문서 주석을 처리하고 문서 주석이 포함된 각 소스 코드 파일에 대한 .xdc 파일을 만들도록 합니다.  
   
-     자세한 내용은 [/doc(문서 주석 처리)(C/C++)](/visual-cpp/build/reference/doc-process-documentation-comments-c-cpp)를 참조하세요. 또한 이 표의 **XMLDocumentationFileName** 매개 변수도 참조하세요.  
+     자세한 내용은 [/doc(문서 주석 처리)(C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp)를 참조하세요. 또한 이 표의 **XMLDocumentationFileName** 매개 변수도 참조하세요.  
   
 -   **IgnoreStandardIncludePath**  
   
@@ -388,7 +406,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 컴파일러가 PATH 및 INCLUDE 환경 변수에 지정된 디렉터리에서 포함 파일을 검색하지 않도록 합니다.  
   
-     자세한 내용은 [/X(표준 포함 경로 무시)](/visual-cpp/build/reference/x-ignore-standard-include-paths)를 참조하세요.  
+     자세한 내용은 [/X(표준 포함 경로 무시)](/cpp/build/reference/x-ignore-standard-include-paths)를 참조하세요.  
   
 -   **InlineFunctionExpansion**  
   
@@ -406,7 +424,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **AnySuitable** - **/Ob2**  
   
-     자세한 내용은 [/Ob(인라인 함수 확장)](/visual-cpp/build/reference/ob-inline-function-expansion)를 참조하세요.  
+     자세한 내용은 [/Ob(인라인 함수 확장)](/cpp/build/reference/ob-inline-function-expansion)를 참조하세요.  
   
 -   **IntrinsicFunctions**  
   
@@ -414,7 +432,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 응용 프로그램을 더 빠르게 실행하는 데 도움이 되는 내장 함수 또는 다른 특별한 형태의 함수로 일부 함수 호출을 바꿉니다.  
   
-     자세한 내용은 [/Oi(내장 함수 만들기)](/visual-cpp/build/reference/oi-generate-intrinsic-functions)를 참조하세요.  
+     자세한 내용은 [/Oi(내장 함수 만들기)](/cpp/build/reference/oi-generate-intrinsic-functions)를 참조하세요.  
   
 -   **MinimalRebuild**  
   
@@ -422,7 +440,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 변경된 C++ 클래스 정의(헤더 파일(.h)에 저장됨)가 포함된 C++ 소스 파일을 다시 컴파일해야 하는지 결정하는 최소 다시 빌드를 사용하도록 설정합니다.  
   
-     자세한 내용은 [/Gm(최소 다시 빌드 사용)](/visual-cpp/build/reference/gm-enable-minimal-rebuild)을 참조하세요.  
+     자세한 내용은 [/Gm(최소 다시 빌드 사용)](/cpp/build/reference/gm-enable-minimal-rebuild)을 참조하세요.  
   
 -   **MultiProcessorCompilation**  
   
@@ -430,7 +448,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 다중 프로세서를 사용하여 컴파일합니다. 이 매개 변수는 컴퓨터의 각 유효 프로세서에 대한 프로세스를 만듭니다.  
   
-     자세한 내용은 [/MP(여러 프로세스로 빌드)](/visual-cpp/build/reference/mp-build-with-multiple-processes)를 참조하세요. 또한 이 표의 **ProcessorNumber** 매개 변수도 참조하세요.  
+     자세한 내용은 [/MP(여러 프로세스로 빌드)](/cpp/build/reference/mp-build-with-multiple-processes)를 참조하세요. 또한 이 표의 **ProcessorNumber** 매개 변수도 참조하세요.  
   
 -   **ObjectFileName**  
   
@@ -438,7 +456,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      기본값 대신 사용할 개체(.obj) 파일 이름 또는 디렉터리를 지정합니다.  
   
-     자세한 내용은 [/Fo(개체 파일 이름)](/visual-cpp/build/reference/fo-object-file-name)를 참조하세요.  
+     자세한 내용은 [/Fo(개체 파일 이름)](/cpp/build/reference/fo-object-file-name)를 참조하세요.  
   
 -   **ObjectFiles**  
   
@@ -452,7 +470,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 개체(.obj) 파일에서 기본 C 런타임 라이브러리 이름을 생략합니다. 기본적으로 컴파일러는 올바른 라이브러리로 링커를 보내기 위해 라이브러리 이름을 .obj 파일에 넣습니다.  
   
-     자세한 내용은 [/Zl(기본 라이브러리 이름 생략)](/visual-cpp/build/reference/zl-omit-default-library-name)를 참조하세요.  
+     자세한 내용은 [/Zl(기본 라이브러리 이름 생략)](/cpp/build/reference/zl-omit-default-library-name)를 참조하세요.  
   
 -   **OmitFramePointers**  
   
@@ -460,7 +478,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 호출 스택에서 프레임 포인터를 생성하지 않습니다.  
   
-     자세한 내용은 [/Oy(프레임 포인터 생략)](/visual-cpp/build/reference/oy-frame-pointer-omission)를 참조하세요.  
+     자세한 내용은 [/Oy(프레임 포인터 생략)](/cpp/build/reference/oy-frame-pointer-omission)를 참조하세요.  
   
 -   **OpenMPSupport**  
   
@@ -468,7 +486,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 컴파일러가 OpenMP 절 및 지시문을 처리하게 합니다.  
   
-     자세한 내용은 [/openmp(OpenMP 2.0 지원 활성화)](/visual-cpp/build/reference/openmp-enable-openmp-2-0-support)를 참조하세요.  
+     자세한 내용은 [/openmp(OpenMP 2.0 지원 활성화)](/cpp/build/reference/openmp-enable-openmp-2-0-support)를 참조하세요.  
   
 -   **Optimization**  
   
@@ -486,7 +504,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **Full** - **/Ox**  
   
-     자세한 내용은 [/O 옵션(코드 최적화)](/visual-cpp/build/reference/o-options-optimize-code)을 참조하세요.  
+     자세한 내용은 [/O 옵션(코드 최적화)](/cpp/build/reference/o-options-optimize-code)을 참조하세요.  
   
 -   **PrecompiledHeader**  
   
@@ -502,7 +520,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **Use** - **/Yu**  
   
-     자세한 내용은 [/Yc(미리 컴파일된 헤더 파일 만들기)](/visual-cpp/build/reference/yc-create-precompiled-header-file) 및 [/Yu(미리 컴파일된 헤더 파일 사용)](/visual-cpp/build/reference/yu-use-precompiled-header-file)를 참조하세요. 또한 이 표의 **PrecompiledHeaderFile** 및 **PrecompiledHeaderOutputFile** 매개 변수도 참조하세요.  
+     자세한 내용은 [/Yc(미리 컴파일된 헤더 파일 만들기)](/cpp/build/reference/yc-create-precompiled-header-file) 및 [/Yu(미리 컴파일된 헤더 파일 사용)](/cpp/build/reference/yu-use-precompiled-header-file)를 참조하세요. 또한 이 표의 **PrecompiledHeaderFile** 및 **PrecompiledHeaderOutputFile** 매개 변수도 참조하세요.  
   
 -   **PrecompiledHeaderFile**  
   
@@ -510,7 +528,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      만들거나 사용할 미리 컴파일된 헤더 파일 이름을 지정합니다.  
   
-     자세한 내용은 [/Yc(미리 컴파일된 헤더 파일 만들기)](/visual-cpp/build/reference/yc-create-precompiled-header-file) 및 [/Yu(미리 컴파일된 헤더 파일 사용)](/visual-cpp/build/reference/yu-use-precompiled-header-file)를 참조하세요.  
+     자세한 내용은 [/Yc(미리 컴파일된 헤더 파일 만들기)](/cpp/build/reference/yc-create-precompiled-header-file) 및 [/Yu(미리 컴파일된 헤더 파일 사용)](/cpp/build/reference/yu-use-precompiled-header-file)를 참조하세요.  
   
 -   **PrecompiledHeaderOutputFile**  
   
@@ -518,7 +536,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      기본 경로 이름을 사용하는 대신 미리 컴파일된 헤더의 경로 이름을 지정합니다.  
   
-     자세한 내용은 [/Fp(.Pch 파일 이름 지정)](/visual-cpp/build/reference/fp-name-dot-pch-file)를 참조하세요.  
+     자세한 내용은 [/Fp(.Pch 파일 이름 지정)](/cpp/build/reference/fp-name-dot-pch-file)를 참조하세요.  
   
 -   **PreprocessKeepComments**  
   
@@ -526,7 +544,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 전처리 중 주석을 유지합니다.  
   
-     자세한 내용은 [/C(전처리 중에 주석 유지)](/visual-cpp/build/reference/c-preserve-comments-during-preprocessing)를 참조하세요.  
+     자세한 내용은 [/C(전처리 중에 주석 유지)](/cpp/build/reference/c-preserve-comments-during-preprocessing)를 참조하세요.  
   
 -   **PreprocessorDefinitions**  
   
@@ -534,7 +552,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      소스 파일에 대한 전처리 기호를 정의합니다.  
   
-     자세한 내용은 [/D(전처리기 정의)](/visual-cpp/build/reference/d-preprocessor-definitions)를 참조하세요.  
+     자세한 내용은 [/D(전처리기 정의)](/cpp/build/reference/d-preprocessor-definitions)를 참조하세요.  
   
 -   **PreprocessOutput**  
   
@@ -548,7 +566,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      **PreprocessToFile** 매개 변수가 전처리된 출력을 작성할 출력 파일의 이름을 지정합니다.  
   
-     자세한 내용은 [/Fi(출력 파일 이름 전처리)](/visual-cpp/build/reference/fi-preprocess-output-file-name)를 참조하세요.  
+     자세한 내용은 [/Fi(출력 파일 이름 전처리)](/cpp/build/reference/fi-preprocess-output-file-name)를 참조하세요.  
   
 -   **PreprocessSuppressLineNumbers**  
   
@@ -556,7 +574,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 C 및 C++소스 파일을 전처리하고, 표준 출력 장치에 전처리된 파일을 복사합니다.  
   
-     자세한 내용은 [/EP(#line 지시문 없이 stdout으로 전처리)](/visual-cpp/build/reference/ep-preprocess-to-stdout-without-hash-line-directives)를 참조하세요.  
+     자세한 내용은 [/EP(#line 지시문 없이 stdout으로 전처리)](/cpp/build/reference/ep-preprocess-to-stdout-without-hash-line-directives)를 참조하세요.  
   
 -   **PreprocessToFile**  
   
@@ -564,7 +582,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 C 및 C++ 소스 파일을 전처리하고, 전처리된 출력을 파일에 작성합니다.  
   
-     자세한 내용은 [/P(파일로 전처리)](/visual-cpp/build/reference/p-preprocess-to-a-file)를 참조하세요.  
+     자세한 내용은 [/P(파일로 전처리)](/cpp/build/reference/p-preprocess-to-a-file)를 참조하세요.  
   
 -   **ProcessorNumber**  
   
@@ -578,7 +596,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      PDB(프로그램 데이터베이스) 파일에 대한 파일 이름을 지정합니다.  
   
-     자세한 내용은 [/Fd(프로그램 데이터베이스 파일 이름)](/visual-cpp/build/reference/fd-program-database-file-name)를 참조하세요.  
+     자세한 내용은 [/Fd(프로그램 데이터베이스 파일 이름)](/cpp/build/reference/fd-program-database-file-name)를 참조하세요.  
   
 -   **RuntimeLibrary**  
   
@@ -596,7 +614,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **MultiThreadedDebugDLL** - **/MDd**  
   
-     자세한 내용은 [/MD, /MT, /LD(런타임 라이브러리 사용)](/visual-cpp/build/reference/md-mt-ld-use-run-time-library)를 참조하세요.  
+     자세한 내용은 [/MD, /MT, /LD(런타임 라이브러리 사용)](/cpp/build/reference/md-mt-ld-use-run-time-library)를 참조하세요.  
   
 -   **RuntimeTypeInfo**  
   
@@ -604,7 +622,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 런타임에 C++ 개체의 형식(런타임 형식 정보)을 검사하는 코드를 추가합니다.  
   
-     자세한 내용은 [/GR(런타임 형식 정보 사용)](/visual-cpp/build/reference/gr-enable-run-time-type-information)을 참조하세요.  
+     자세한 내용은 [/GR(런타임 형식 정보 사용)](/cpp/build/reference/gr-enable-run-time-type-information)을 참조하세요.  
   
 -   **ShowIncludes**  
   
@@ -612,7 +630,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 컴파일러가 포함 파일의 목록을 출력하게 합니다.  
   
-     자세한 내용은 [/showIncludes(포함 파일 나열)](/visual-cpp/build/reference/showincludes-list-include-files)를 참조하세요.  
+     자세한 내용은 [/showIncludes(포함 파일 나열)](/cpp/build/reference/showincludes-list-include-files)를 참조하세요.  
   
 -   **SmallerTypeCheck**  
   
@@ -620,7 +638,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 값이 더 작은 데이터 형식에 할당되어 데이터 손실이 발생하면 런타임 오류를 보고합니다.  
   
-     자세한 내용은 [/RTC(런타임 오류 검사)](/visual-cpp/build/reference/rtc-run-time-error-checks)의 **/RTCc** 옵션을 참조하세요.  
+     자세한 내용은 [/RTC(런타임 오류 검사)](/cpp/build/reference/rtc-run-time-error-checks)의 **/RTCc** 옵션을 참조하세요.  
   
 -   **Sources**  
   
@@ -634,7 +652,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 컴파일러가 프로그램 이미지에서 동일한 문자열의 복사본 하나를 만들 수 있습니다.  
   
-     자세한 내용은 [/GF(중복 문자열 제거)](/visual-cpp/build/reference/gf-eliminate-duplicate-strings)를 참조하세요.  
+     자세한 내용은 [/GF(중복 문자열 제거)](/cpp/build/reference/gf-eliminate-duplicate-strings)를 참조하세요.  
   
 -   **StructMemberAlignment**  
   
@@ -656,7 +674,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **16Bytes** - **/Zp16**  
   
-     자세한 내용은 [/Zp(구조체 멤버 맞춤)](/visual-cpp/build/reference/zp-struct-member-alignment)를 참조하세요.  
+     자세한 내용은 [/Zp(구조체 멤버 맞춤)](/cpp/build/reference/zp-struct-member-alignment)를 참조하세요.  
   
 -   **SuppressStartupBanner**  
   
@@ -664,7 +682,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 작업을 시작할 때 저작권과 버전 번호 메시지가 표시되지 않도록 합니다.  
   
-     자세한 내용은 [/nologo(시작 배너 표시 안 함)(C/C++)](/visual-cpp/build/reference/nologo-suppress-startup-banner-c-cpp)를 참조하세요.  
+     자세한 내용은 [/nologo(시작 배너 표시 안 함)(C/C++)](/cpp/build/reference/nologo-suppress-startup-banner-c-cpp)를 참조하세요.  
   
 -   **TrackerLogDirectory**  
   
@@ -680,7 +698,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      지정된 컴파일러 경고 목록을 오류로 처리합니다.  
   
-     자세한 내용은 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX(경고 수준)](/visual-cpp/build/reference/compiler-option-warning-level)의 **/we**`n` 옵션을 참조하세요.  
+     자세한 내용은 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX(경고 수준)](/cpp/build/reference/compiler-option-warning-level)의 **/we**`n` 옵션을 참조하세요.  
   
 -   **TreatWarningAsError**  
   
@@ -688,7 +706,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 모든 컴파일러 경고를 오류로 처리합니다.  
   
-     자세한 내용은 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX(경고 수준)](/visual-cpp/build/reference/compiler-option-warning-level)의 **/WX** 옵션을 참조하세요.  
+     자세한 내용은 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX(경고 수준)](/cpp/build/reference/compiler-option-warning-level)의 **/WX** 옵션을 참조하세요.  
   
 -   **TreatWChar_tAsBuiltInType**  
   
@@ -704,7 +722,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 컴파일러가 정의하는 Microsoft 관련 기호를 정의 해제합니다.  
   
-     자세한 내용은 [/U, /u(기호 정의 해제)](/visual-cpp/build/reference/u-u-undefine-symbols)의 **/u** 옵션을 참조하세요.  
+     자세한 내용은 [/U, /u(기호 정의 해제)](/cpp/build/reference/u-u-undefine-symbols)의 **/u** 옵션을 참조하세요.  
   
 -   **UndefinePreprocessorDefinitions**  
   
@@ -712,7 +730,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      정의 해제할 하나 이상의 전처리기 기호 목록을 지정합니다.  
   
-     자세한 내용은 [/U, /u(기호 정의 해제)](/visual-cpp/build/reference/u-u-undefine-symbols)의 **/U** 옵션을 참조하세요.  
+     자세한 내용은 [/U, /u(기호 정의 해제)](/cpp/build/reference/u-u-undefine-symbols)의 **/U** 옵션을 참조하세요.  
   
 -   **UseFullPaths**  
   
@@ -720,7 +738,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 진단에서 컴파일러에 전달된 소스 코드 파일의 전체 경로를 표시합니다.  
   
-     자세한 내용은 [/FC(진단 소스 코드 파일의 전체 경로)](/visual-cpp/build/reference/fc-full-path-of-source-code-file-in-diagnostics)를 참조하세요.  
+     자세한 내용은 [/FC(진단 소스 코드 파일의 전체 경로)](/cpp/build/reference/fc-full-path-of-source-code-file-in-diagnostics)를 참조하세요.  
   
 -   **UseUnicodeForAssemblerListing**  
   
@@ -728,7 +746,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 출력 파일을 UTF-8 형식으로 만듭니다.  
   
-     자세한 내용은 [/FA, /Fa(목록 파일)](/visual-cpp/build/reference/fa-fa-listing-file)의 **/FAu** 옵션을 참조하세요.  
+     자세한 내용은 [/FA, /Fa(목록 파일)](/cpp/build/reference/fa-fa-listing-file)의 **/FAu** 옵션을 참조하세요.  
   
 -   **WarningLevel**  
   
@@ -750,7 +768,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
     -   **EnableAllWarnings** - **/Wall**  
   
-     자세한 내용은 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX(경고 수준)](/visual-cpp/build/reference/compiler-option-warning-level)의 **/W***n* 옵션을 참조하세요.  
+     자세한 내용은 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX(경고 수준)](/cpp/build/reference/compiler-option-warning-level)의 **/W***n* 옵션을 참조하세요.  
   
 -   **WholeProgramOptimization**  
   
@@ -758,7 +776,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 전체 프로그램 최적화를 사용합니다.  
   
-     자세한 내용은 [/GL(전체 프로그램 최적화)](/visual-cpp/build/reference/gl-whole-program-optimization)을 참조하세요.  
+     자세한 내용은 [/GL(전체 프로그램 최적화)](/cpp/build/reference/gl-whole-program-optimization)을 참조하세요.  
   
 -   **XMLDocumentationFileName**  
   
@@ -766,7 +784,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      생성된 XML 문서 파일의 이름을 지정합니다. 이 매개 변수는 파일 또는 디렉터리 이름일 수 있습니다.  
   
-     자세한 내용은 [/doc(문서 주석 처리)(C/C++)](/visual-cpp/build/reference/doc-process-documentation-comments-c-cpp)의 `name` 인수를 참조하세요. 또한 이 표의 **GenerateXMLDocumentationFiles** 매개 변수도 참조하세요.  
+     자세한 내용은 [/doc(문서 주석 처리)(C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp)의 `name` 인수를 참조하세요. 또한 이 표의 **GenerateXMLDocumentationFiles** 매개 변수도 참조하세요.  
   
 -   **MinimalRebuildFromTracking**  
   
@@ -802,8 +820,3 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
 ## <a name="see-also"></a>참고 항목  
  [작업 참조](../msbuild/msbuild-task-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e273f31cb1f43ff79fd9a4ade37d112351dea9b5
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 19ce2d4cc1ff92240529f35f42845778ded49fdf
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="migrate-64-bit-debugger-com-class-registration"></a>64 비트 디버거 COM 클래스 등록 마이그레이션
-
->**참고:** 이 설명서는 임시로 제공 되며 Visual Studio 2017 RC 릴리스를 기반으로 합니다.
 
 (을 사용 하 여 regasm regsvr32, 레지스트리를 직접 작성) HKEY_CLASSES_ROOT에서 COM 클래스를 등록 하 고 msvsmon.exe (원격 디버거)에 로드 하는 디버거 확장에 대 한 HKEY_CLASSES_ROOT로 쓸 필요 없이이 등록 msvsmon 제공할 수 있도록 되었습니다. 레거시.NET 디버거 식 계산기 또는 msvsmon.exe 프로세스에서 로드 하도록 구성 된 디버그 엔진에 영향을 줍니다.
 
