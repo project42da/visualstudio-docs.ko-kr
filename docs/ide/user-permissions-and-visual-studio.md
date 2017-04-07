@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: dc32236dad42ec169fc1c7a243b7c67fd5a8dbf3
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 0dc9fed1e5fc5a827e836310175d558b14cd41b4
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="user-permissions-and-visual-studio"></a>사용자 권한 및 Visual Studio
@@ -54,8 +54,8 @@ ms.lasthandoff: 03/07/2017
 ||[!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]의 개발자 라이선스 취득|[개발자 라이선스 얻기(Windows 스토어 앱)](http://go.microsoft.com/fwlink/?LinkID=241313)|  
 |도구 상자|**도구 상자**에 클래식 COM 컨트롤 추가.|[도구 상자 사용](../ide/using-the-toolbox.md)|  
 |추가 기능|IDE에서 기본 COM을 사용하여 작성한 추가 기능 설치 및 사용|[추가 기능 및 마법사 만들기](http://msdn.microsoft.com/Library/c5a47c21-6668-4de3-898d-afa969317e73)|  
-|빌드|구성 요소를 등록하는 빌드 후 이벤트 사용|[사용자 지정 빌드 단계 및 빌드 이벤트 이해](/visual-cpp/ide/understanding-custom-build-steps-and-build-events)|  
-||C++ 프로젝트를 빌드할 때 등록 단계 포함|[사용자 지정 빌드 단계 및 빌드 이벤트 이해](/visual-cpp/ide/understanding-custom-build-steps-and-build-events)|  
+|빌드|구성 요소를 등록하는 빌드 후 이벤트 사용|[사용자 지정 빌드 단계 및 빌드 이벤트 이해](/cpp/ide/understanding-custom-build-steps-and-build-events)|  
+||C++ 프로젝트를 빌드할 때 등록 단계 포함|[사용자 지정 빌드 단계 및 빌드 이벤트 이해](/cpp/ide/understanding-custom-build-steps-and-build-events)|  
 |디버깅|높은 권한으로 실행되는 응용 프로그램 디버깅|[디버거 설정 및 준비](../debugger/debugger-settings-and-preparation.md)|  
 ||ASP.NET 웹 사이트와 같이 다른 사용자 계정으로 실행되는 응용 프로그램 디버깅|[ASP.NET 및 AJAX 응용 프로그램 디버그](../debugger/debugging-aspnet-and-ajax-applications.md)|  
 ||XBAP(XAML 브라우저 응용 프로그램) 영역에서 디버깅|[WPF 호스트(PresentationHost.exe)](http://msdn.microsoft.com/Library/3215bfa1-722c-4ac8-a7c5-bdd02d30afbd)|  

@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: cf427f2c06e377895dd6477d67dacbd04c996ec5
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: d4772671e61d2225a97ef5e36f24e6f8a4a45c35
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="supplying-xml-code-comments"></a>XML 코드 주석 제공
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/22/2017
   
  C#에서 코드를 문서로 만드는 방법에 대한 자세한 내용은 [XML 문서 주석](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)을 참조하세요.  
   
- C++에서 코드를 문서로 만드는 방법에 대한 자세한 내용은 [주석](/visual-cpp/cpp/comments-cpp) 및 [XML 문서](/visual-cpp/ide/xml-documentation-visual-cpp)를 참조하세요.  
+ C++에서 코드를 문서로 만드는 방법에 대한 자세한 내용은 [주석](/cpp/cpp/comments-cpp) 및 [XML 문서](/cpp/ide/xml-documentation-visual-cpp)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [IntelliSense 사용](../ide/using-intellisense.md)

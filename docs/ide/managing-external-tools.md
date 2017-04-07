@@ -76,9 +76,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: c36d97b83aa0892235c8f196cf6af63520b3547c
-ms.openlocfilehash: a31b90643e3707348595fce02ec37a1c02a97195
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 07dfd26933090708cf40adff5f7ceb4785686245
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="manage-external-tools"></a>외부 도구 관리
@@ -88,10 +88,10 @@ ms.lasthandoff: 03/01/2017
  **도구** 메뉴에는 다음과 같은 몇 가지 기본 제공 명령이 포함되어 있습니다.
 
 *  [Visual Studio 확장 관리](finding-and-using-visual-studio-extensions.md)를 위한 **확장 및 업데이트**
-*  [코드 조각 구성을 위한](code-snippets.md#code-snippet-manager) **코드 조각 관리자... **
+*  [코드 조각 구성을 위한](code-snippets.md#code-snippet-manager) **코드 조각 관리자...**
 *  [Dotfuscator CE(Community Edition)](dotfuscator/index.md)이 [설치](dotfuscator/install.md)된 경우 실행하기 위한 **PreEmptive Protection - Dotfuscator**
-*  [메뉴 및 도구 모음 사용자 지정](how-to-customize-menus-and-toolbars-in-visual-studio)을 위한 **사용자 지정... **
-*  [Visual Studio IDE 및 기타 도구에 대한 다양한 옵션 설정](reference/options-dialog-box-visual-studio.md)을 위한 **옵션... **
+*  [메뉴 및 도구 모음 사용자 지정](how-to-customize-menus-and-toolbars-in-visual-studio)을 위한 **사용자 지정...**
+*  [Visual Studio IDE 및 기타 도구에 대한 다양한 옵션 설정](reference/options-dialog-box-visual-studio.md)을 위한 **옵션...**
 
 ## <a name="add-new-tools-to-the-tools-menu"></a>도구 메뉴에 새 도구 추가 
  **도구** 메뉴에 외부 도구를 추가할 수 있습니다. **외부 도구...** 대화 상자를 열어 **추가**를 클릭한 후, 정보를 입력합니다. 예를 들어 다음 항목은 현재 Visual Studio에서 열려 있는 파일의 디렉터리를 Windows 탐색기에서 엽니다.  
@@ -127,5 +127,5 @@ ms.lasthandoff: 03/01/2017
 |솔루션 파일 이름|$(SolutionFileName)|현재 솔루션의 파일 이름(드라이브 + 경로 + 파일 이름)입니다.|  
 
 ## <a name="see-also"></a>참고 항목  
- [C/C++ 빌드 도구](/visual-cpp/build/reference/c-cpp-build-tools)
+ [C/C++ 빌드 도구](/cpp/build/reference/c-cpp-build-tools)
 

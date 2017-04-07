@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: ba9c9b60de651eecc92ea10ba44579a7dadc36df
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 9c9e9e8c63d69e797a28ce4f8b1ac0adcf074b77
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="options-text-editor-cc-advanced"></a>옵션, 텍스트 편집기, C/C++, 고급
@@ -139,7 +139,7 @@ ms.lasthandoff: 03/27/2017
  **캐시되는 최대 변환 단위**  
  IntelliSense 요청 시 활성으로 유지되는 최대 변환 단위 수입니다. 2에서 15 사이의 값을 지정해야 합니다. 이 숫자는 지정된 Visual Studio 인스턴스에 대해 실행할 VCPkgSrv.exe 프로세스의 최대 개수와 직접적인 관련이 있습니다. 기본값은 2지만, 사용 가능한 메모리가 있는 경우 이 값을 늘려 IntelliSense 성능을 좀 더 개선할 수 있습니다.  
   
- 변환 단위에 대한 자세한 내용은 [변환 단계](/visual-cpp/preprocessor/phases-of-translation)를 참조하세요.  
+ 변환 단위에 대한 자세한 내용은 [변환 단계](/cpp/preprocessor/phases-of-translation)를 참조하세요.  
 
  **멤버 목록 점-화살표**  
  멤버 목록에 적합한 경우 '.'을 '->'로 바꿉니다.

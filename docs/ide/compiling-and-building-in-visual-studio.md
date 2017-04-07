@@ -1,22 +1,40 @@
 ---
-title: "Visual Studio에서 컴파일 및 빌드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Visual Studio에서 빌드에 대 한 [Visual Studio] 빌드"
-  - "사용자 지정 빌드 단계, 빌드 유형"
+title: "Visual Studio에서 컴파일 및 빌드 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- builds [Visual Studio], about building in Visual Studio
+- custom build steps, types of builds
 ms.assetid: c7958821-285f-4e28-9e7a-b5d8b40336a1
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 28
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
+ms.openlocfilehash: f4ae98f4e9b7dbf4b1066120316ee5a167ae78f2
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>Visual Studio에서 컴파일 및 빌드
 Visual Studio를 사용하여 개발 주기 동안 잦은 간격으로 응용 프로그램을 빌드하고 어셈블리 및 실행 가능 프로그램을 만들 수 있습니다. 코드를 자주 빌드하면 잘못된 구문, 맞춤법 오류가 있는 키워드 및 형식 불일치와 같은 컴파일 타임 오류를 조기에 식별할 수 있습니다. 디버그 버전의 코드를 자주 빌드하고 실행하면 논리 오류 및 의미 오류와 같은 런타임 오류도 찾아 해결할 수 있습니다.  
@@ -29,7 +47,7 @@ Visual Studio를 사용하여 개발 주기 동안 잦은 간격으로 응용 �
 |빌드 방법|이점|추가 정보|  
 |------------------|--------------|--------------------------|  
 |IDE 사용|-   보다 쉽게 즉시 빌드를 만들고 실행할 수 있습니다.<br />-   C++ 및 C# 프로젝트에 대해 다중 프로세서 빌드를 실행할 수 있습니다.<br />-   빌드 시스템의 일부 측면을 사용자 지정할 수 있습니다.|[Visual Studio에서 프로젝트 및 솔루션 빌드 및 정리](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)|  
-|MSBuild 명령줄 실행|-   Visual Studio를 설치하지 않고도 프로젝트를 빌드할 수 있습니다.<br />-   모든 프로젝트 형식에 대해 다중 프로세서 빌드를 실행할 수 있습니다.<br />-   빌드 시스템의 영역 대부분을 사용자 지정할 수 있습니다.|[MSBuild](../msbuild/msbuild1.md)|  
+|MSBuild 명령줄 실행|-   Visual Studio를 설치하지 않고도 프로젝트를 빌드할 수 있습니다.<br />-   모든 프로젝트 형식에 대해 다중 프로세서 빌드를 실행할 수 있습니다.<br />-   빌드 시스템의 영역 대부분을 사용자 지정할 수 있습니다.|[MSBuild](../msbuild/msbuild.md)|  
 |Team Foundation Build 사용|-   빌드 프로세스를 자동화할 수 있습니다. 예를 들어 밤마다 또는 코드를 체크 인할 때마다 하나 이상의 프로젝트를 빌드할 수 있습니다. 개발 컴퓨터 대신 공유 빌드 서버에서 프로젝트를 빌드할 수도 있습니다.<br />-   빌드하려는 코드, 실행하려는 테스트 및 기타 공통 옵션을 빠르게 지정할 수 있습니다.<br />-   빌드 워크플로를 수정하고 필요에 따라 빌드 작업을 만들어 사용자 지정 수준이 높은 작업을 수행할 수 있습니다.|[응용 프로그램 빌드](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)|  
   
 ## <a name="building-from-the-ide"></a>IDE에서 빌드  
@@ -55,8 +73,3 @@ Visual Studio를 사용하여 개발 주기 동안 잦은 간격으로 응용 �
  [빌드 플랫폼 이해](../ide/understanding-build-platforms.md)   
  [웹 사이트 프로젝트 빌드(컴파일)](http://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)   
  [방법: 프로젝트 종속성 만들기 및 제거](../ide/how-to-create-and-remove-project-dependencies.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
