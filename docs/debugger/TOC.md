@@ -97,6 +97,7 @@
 ## [IIS 컴퓨터의 원격 디버그 ASP.NET](remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)
 ## [C# 프로젝트 원격 디버그](remote-debugging-csharp.md)
 ## [C++ 프로젝트 원격 디버그](remote-debugging-cpp.md)
+## [Azure의 원격 디버그 ASP.NET](remote-debugging-azure.md)
 ## [원격 디버깅을 위해 Windows 방화벽 구성](configure-the-windows-firewall-for-remote-debugging.md)
 ## [원격 디버거 포트 할당](remote-debugger-port-assignments.md)
 ## [원격 디버깅 오류 및 문제 해결](remote-debugging-errors-and-troubleshooting.md)
