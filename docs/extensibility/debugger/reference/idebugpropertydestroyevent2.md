@@ -1,58 +1,74 @@
 ---
-title: "IDebugPropertyDestroyEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPropertyDestroyEvent2"
-helpviewer_keywords: 
-  - "IDebugPropertyDestroyEvent2 인터페이스"
+title: IDebugPropertyDestroyEvent2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPropertyDestroyEvent2
+helpviewer_keywords:
+- IDebugPropertyDestroyEvent2 interface
 ms.assetid: 301b7a75-ecfa-46f1-9131-66cf3e4be147
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugPropertyDestroyEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: ac2019677354d99c396cad63d982f72920594ff3
+ms.lasthandoff: 04/05/2017
 
-특정 문서와 연결 된 속성이 소멸 될 때이 인터페이스는 디버그 엔진 \(DE\) 세션 디버그 매니저 \(SDM\) 전송 됩니다.  
+---
+# <a name="idebugpropertydestroyevent2"></a>IDebugPropertyDestroyEvent2
+이 인터페이스는 세션 디버그 관리자 (SDM) 특정 문서와 연결 된 속성 소멸 되려고 할 때 디버그 엔진 (DE)에 의해 보내집니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugPropertyDestroyEvent2 : IUnknown  
 ```  
   
-## 구현자 참고 사항  
- DE 속성 소멸 되었음을 보고 하려면이 인터페이스를 구현 합니다.  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 이 인터페이스와 같은 개체에서 인터페이스를 구현 해야 합니다.  SDM을 사용 하 여 [QueryInterface](/visual-cpp/atl/queryinterface) 액세스 하는 `IDebugEvent2` 인터페이스입니다.  이 인터페이스는 DE 스크립트와 관련 된 속성이 이전에 만든 경우에 구현 됩니다. 속성을 파괴 관련된 스크립트를 IDE에서 제거 합니다.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ DE 속성 소멸 된 보고 하기 위해이 인터페이스를 구현 합니다. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 해당이 인터페이스와 같은 개체에 대해 인터페이스를 구현 해야 합니다. SDM 사용 하 여 [QueryInterface](/cpp/atl/queryinterface) 액세스로는 `IDebugEvent2` 인터페이스입니다. 이 인터페이스는 DE 스크립트;와 연결 된 속성을 이전에 만든가 경우에 구현 됩니다. IDE에서 관련된 스크립트를 제거 속성을 제거 합니다.  
   
-## 호출자에 대 한 참고 사항  
- DE 만들고이 이벤트 개체가 소멸 된 속성이 보고서에 보냅니다.  이벤트를 사용 하 여 전송 되는 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 디버깅 중인 프로그램에 연결 되 면 SDM가 제공 되는 콜백 함수입니다.  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ DE을 만들어 속성 소멸 된 보고서에이 이벤트 개체를 보냅니다. 이벤트를 사용 하 여 보내집니다는 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 디버깅 중인 프로그램에 연결 될 때은 SDM에서 제공 되는 콜백 함수입니다.  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDebugPropertyDestroyEvent2`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugPropertyDestroyEvent2`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertydestroyevent2-getdebugproperty.md)|멸망 하는 속성을 가져옵니다.|  
+|------------|-----------------|  
+|[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertydestroyevent2-getdebugproperty.md)|소멸 되도록 속성을 가져옵니다.|  
   
-## 설명  
- 설명 부분을 참조 하십시오. [IDebugPropertyCreateEvent2](../../../extensibility/debugger/reference/idebugpropertycreateevent2.md) 그 이유에 대 한 자세한 내용은이 이벤트를 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 에 대 한 설명을 참조 [IDebugPropertyCreateEvent2](../../../extensibility/debugger/reference/idebugpropertycreateevent2.md) 이유에 대 한 자세한 내용은 이러한 이벤트는 사용 됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   

@@ -1,58 +1,74 @@
 ---
-title: "IDebugQueryEngine2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugQueryEngine2"
-helpviewer_keywords: 
-  - "IDebugQueryEngine2 인터페이스"
+title: IDebugQueryEngine2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugQueryEngine2
+helpviewer_keywords:
+- IDebugQueryEngine2 interface
 ms.assetid: 8f0e1838-a818-4459-9138-a3dceb7408de
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugQueryEngine2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: cdf774a97ef3b1d0bfeec0be8482d2c116806885
+ms.lasthandoff: 04/05/2017
 
-이 인터페이스에는 세션을 디버그 매니저 \(SDM\) 디버그 엔진 \(DE\)을 나타내는 인터페이스를 검색할 수 있습니다.  
+---
+# <a name="idebugqueryengine2"></a>IDebugQueryEngine2
+이 인터페이스는 디버그 관리자 (SDM) 디버그 엔진 (DE)을 나타내는 인터페이스를 검색 하는 세션 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugQueryEngine2 : IUnknown  
 ```  
   
-## 구현자 참고 사항  
- DE DE 하는 가장 일반적인 인터페이스를 구현 하는 개체에이 인터페이스를 구현 \(같은 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md), [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md), 및 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)\) 액세스를 허용 하는 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) DE 자체의 인터페이스입니다.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ DE는 가장 일반적인 DE 인터페이스를 구현 하는 개체에서이 인터페이스를 구현 합니다 (같은 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md), [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md), 및 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md))에 대 한 액세스를 허용 하기 위해는 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) DE 자체의 인터페이스입니다.  
   
-## 호출자에 대 한 참고 사항  
- 호출 [QueryInterface](/visual-cpp/atl/queryinterface) 일반적인 DE 인터페이스이 인터페이스를 가져올 수 있습니다.  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ 호출 [QueryInterface](/cpp/atl/queryinterface) 이 인터페이스를 가져올 수 있는 일반적인 DE 인터페이스에 있습니다.  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDebugQueryEngine2`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugQueryEngine2`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[GetEngineInterface](../../../extensibility/debugger/reference/idebugqueryengine2-getengineinterface.md)|사용자 지정 디버그 엔진 \(DE\) 인터페이스를 가져옵니다.|  
+|------------|-----------------|  
+|[GetEngineInterface](../../../extensibility/debugger/reference/idebugqueryengine2-getengineinterface.md)|사용자 지정 디버그 엔진 (DE) 인터페이스를 가져옵니다.|  
   
-## 설명  
- 이 인터페이스를 구현 하는 개체에서 일반적으로 구현 되는 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 인과 관계 정렬 기능을 통해; 단계별 실행을 지원 하기 위해 인터페이스 디버거 함수로 단계별로 실행 되 면, 실행 하는 다음 함수 위의 함수 스택의 있지만 함수는 다른 스레드의 완전히 수 있습니다.  참고 "인과 관계"의 정의 [Visual Studio 디버거 용어집](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md).  
+## <a name="remarks"></a>주의  
+ 이 인터페이스는 일반적으로 구현 하는 개체에 구현 된 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 인과 관계 정렬 함수를 통해 단계별 실행을 지원 하기 위해 인터페이스; 즉, 함수에서 디버거를 단계별로 실행 하는 경우 다음 함수를 실행할 수 없습니다는 이전 함수 스택에 수 있지만 다른 스레드의 함수 모두 합니다. "인과 관계"의 정의 참조 하십시오.는 [Visual Studio 디버거 용어집](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
