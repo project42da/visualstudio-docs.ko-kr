@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 제거 | Microsoft Docs"
 description: "Visual Studio를 제거하는 방법을 단계별로 알아봅니다."
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 03/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -32,9 +32,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: b2926232b920fc06c5c14a36d736e6fd73f87f1f
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
+ms.openlocfilehash: 3a4dda7736409ce60d6f1a1aa42b820978d63074
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -47,6 +47,9 @@ ms.lasthandoff: 03/07/2017
 
      ![Visual Studio 설치 관리자](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio 설치 관리자 찾기")
 
+     >[!NOTE]
+     일부 컴퓨터에서는 Visual Studio 설치 관리자가 **Microsoft Visual Studio 설치 관리자**로 문자 **“M”** 아래에 나열될 수 있습니다.
+
 2.  설치 관리자를 클릭하여 시작하고 ![세부 정보 아이콘](media/vs2017uninstall-UninstallIcon.png "옵션 선택 아이콘") 아이콘을 클릭한 다음 **제거**를 클릭합니다.  
 
      ![Visual Studio 2017 수정: 수정, 시작, 복구 또는 제거](media/vs2017-uninstall.PNG "Visual Studio 2017 복구 또는 제거")  
@@ -55,7 +58,7 @@ ms.lasthandoff: 03/07/2017
 
      ![Visual Studio 2017 수정: 제품 제거](media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 제거 확인")  
 
-나중에 마음을 바꾸어 Visual Studio 2017을 다시 설치하려면 Visual Studio 설치 관리자를 다시 시작한 다음 선택 화면에서 **설치**를 선택합니다.
+나중에 마음이 바뀌어 Visual Studio 2017을 다시 설치하려면 Visual Studio 설치 관리자를 다시 시작한 다음 선택 화면에서 **설치**를 선택하면 됩니다.
 
 ## <a name="see-also"></a>참고 항목  
 * [Visual Studio 설치](install-visual-studio.md)

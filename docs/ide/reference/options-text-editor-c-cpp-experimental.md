@@ -31,43 +31,29 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a1edc88394193474b273968d8435e8df06415044
-ms.openlocfilehash: a3fcafe5c191987668dc6e0dce8835d748742ed7
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: 780c643c25f0d43ec0564e43bc50d2f36f1aee79
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="options-text-editor-cc-experimental"></a>옵션, 텍스트 편집기, C/C++, 실험적
-이러한 옵션을 변경하면 C 또는 C++에서 프로그래밍할 때 IntelliSense 및 검색 데이터베이스 관련 동작을 변경할 수 있습니다.  
+이러한 옵션을 변경하면 C 또는 C++에서 프로그래밍할 때 IntelliSense 및 검색 데이터베이스 관련 동작을 변경할 수 있습니다. 이러한 기능은 실험적이며 향후 릴리스의 Visual Studio에서 수정되거나 제거될 수 있습니다.  
   
  이 페이지에 액세스하려면 왼쪽 창의 **옵션** 대화 상자에서 **텍스트 편집기**를 확장하고 **C/C++**를 확장한 다음 **실험적**을 선택합니다.  
-  
- 이러한 기능은 Visual Studio 2015 업데이트 1 RC 설치에서 사용할 수 있습니다.  
+
+ 이러한 기능은 Visual Studio 2017 설치에서 사용할 수 있습니다.  
   
 > [!NOTE]
 >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
-## <a name="browsingnavigation"></a>검색/탐색  
- **새 데이터베이스 엔진 사용**  
- 자동으로 데이터베이스 채우기 속도가 향상되고 **정의로 이동** 및 **모든 참조 찾기**와 같은 작업에 대한 모든 데이터베이스 작업 속도가 빨라지며 정확도가 손실되지 않습니다. 변경 내용을 적용하려면 솔루션을 닫았다가 다시 열면 됩니다. Visual Studio를 다시 시작할 필요가 없습니다.  
-  
-## <a name="intellisense"></a>IntelliSense  
- **멤버 목록 점-화살표**  
- 멤버 목록에 적합한 경우 '.'을 '->'로 바꿉니다.  
-  
-## <a name="refactoring"></a>리팩터링  
- **함수 추출 사용**  
- 선택한 코드를 자체 함수로 추출하고 코드를 새 함수 호출로 바꿉니다. 이 기능에 액세스하려면 선택한 코드를 마우스 오른쪽 단추로 클릭하고 **빠른 작업**을 선택하거나, 간단히 기본 바로 가기인 Ctrl+.[Ctrl+점]을 누릅니다.  
-  
- **시그니처 변경 사용**  
- 함수의 매개 변수를 추가하고, 순서를 바꾸고, 삭제하며 변경 내용을 모든 호출 사이트에 전파합니다. 이 기능에 액세스하려면 모든 함수 사용을 마우스 오른쪽 단추로 클릭하고 **빠른 작업**을 선택하거나, 간단히 기본 바로 가기 Ctrl+.[Ctrl+점]을 누릅니다.  
-  
-## <a name="text-editor"></a>텍스트 편집기  
- **범위 확장 사용**  
- 사용하도록 설정한 경우 텍스트 편집기에 '{'를 입력하면 선택한 텍스트를 중괄호로 둘러쌀 수 있습니다.  
-  
- **우선 순위 확장 사용**  
- 사용하도록 설정한 경우 텍스트 편집기에 '('를 입력하면 선택한 텍스트를 괄호로 둘러쌀 수 있습니다.  
-  
- Visual Studio 갤러리의 추가 텍스트 편집기 기능은 [여기](http://go.microsoft.com/fwlink/?LinkId=692016)에서 목록을 참조하세요. 예제는 [C++ 빠른 조치 방법](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)(영문)이며, 다음을 지원합니다.  
+## <a name="enable-predictive-intellisense"></a>예측 IntelliSense 사용
+예측 IntelliSense는 컨텍스트와 관련이 있는 결과만 표시되도록 IntelliSense 드롭다운 목록에 표시되는 결과의 수를 제한합니다. 예를 들어 <code>int x =</code>을 입력하고 IntelliSense 드롭다운을 호출하면 정수 또는 정수를 반환하는 함수만 표시됩니다. 예측 IntelliSense는 기본적으로 꺼져 있습니다.
+
+## <a name="enable-faster-project-load"></a>빠른 프로젝트 로드 사용
+이 옵션은 “경량 솔루션 로드”라는 기능을 사용합니다. 경량 솔루션 로드를 사용할 경우 Visual Studio는 프로젝트가 실제로 필요하게 된 다음에야 프로젝트를 완전히 로드합니다. 코드베이스 탐색, 코드 편집, 프로젝트 빌드 등 많은 일반적인 작업은 프로젝트를 로드할 필요가 없습니다. 이 옵션을 사용할 경우 프로젝트가 로드될 때까지 기다리지 않고 이러한 일반적인 작업을 더욱 빠르게 시작할 수 있습니다.  
+
+## <a name="additional-features-in-the-visual-studio-gallery"></a>Visual Studio 갤러리의 추가 기능
+Visual Studio 갤러리의 추가 텍스트 편집기 기능은 [여기](http://go.microsoft.com/fwlink/?LinkId=692016)에서 목록을 참조하세요. 예제는 [C++ 빠른 조치 방법](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)(영문)이며, 다음을 지원합니다.  
   
 -   **누락된 #include 추가** - 코드의 알 수 없는 기호에 대해 관련 #include를 제안합니다.  
   
@@ -82,9 +68,4 @@ ms.openlocfilehash: a3fcafe5c191987668dc6e0dce8835d748742ed7
 ## <a name="see-also"></a>참고 항목  
  [언어별 편집기 옵션 설정](../../ide/reference/setting-language-specific-editor-options.md)   
  [C++에서의 리팩터링(VC 블로그)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

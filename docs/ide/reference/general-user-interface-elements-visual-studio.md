@@ -28,9 +28,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 6fd4350f2e11f95f77cd592f91c1467ddada293d
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
+ms.openlocfilehash: 6cbb3f36dd2ffc0e075b2d79753b1e0e96a8f810
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="general-user-interface-elements-visual-studio"></a>일반 사용자 인터페이스 요소(Visual Studio)
@@ -72,6 +72,9 @@ ms.lasthandoff: 02/22/2017
   
  [옵션, 텍스트 편집기, C/C++, 고급](../../ide/reference/options-text-editor-c-cpp-advanced.md)  
  C 또는 C++ 파일에 대한 고급 옵션을 지정할 수 있습니다.  
+
+[옵션, 텍스트 편집기, C/C++, 고급](../../ide/reference/options-text-editor-c-cpp-experimental.md)  
+ C 또는 C++ 파일에 대한 실험 옵션을 지정할 수 있습니다. 여기에서 이러한 옵션을 사용해 보고 피드백을 제공할 수 있습니다. 나중에 제품에서 제거되거나 다른 이름으로 제품에 통합될 수 있습니다. 
   
  [옵션, 텍스트 편집기, C#, 서식](../../ide/reference/options-text-editor-csharp-formatting.md)  
  C# 파일에 대한 서식 옵션을 지정할 수 있습니다.  
