@@ -60,8 +60,7 @@ ms.lasthandoff: 02/22/2017
 |`MSBuildProjectDefaultTargets`|
           `DefaultTargets` 요소의 `Project` 특성에 지정된 대상의 전체 목록입니다. 예를 들어, 다음 `Project` 요소의 `MSBuildDefaultTargets` 속성 값이 `A;B;C`입니다.<br /><br /> `<Project DefaultTargets="A;B;C" >`|예약됨|  
 |`MSBuildProjectDirectory`|프로젝트 파일이 있는 디렉터리의 절대 경로(예: `C:\MyCompany\MyProduct`)입니다.<br /><br /> 이 속성에는 마지막 백슬래시를 포함하지 마세요.|예약됨|  
-|`MSBuildProjectDirectoryNoRoot`|
-          `MSBuildProjectDirectory` 속성 값입니다. 단, 루트 드라이브를 제외합니다.<br /><br /> 이 속성에는 마지막 백슬래시를 포함하지 마세요.|예약됨|  
+|`MSBuildProjectDirectoryNoRoot`|`MSBuildProjectDirectory` 속성 값입니다. 단, 루트 드라이브를 제외합니다.<br /><br /> 이 속성에는 마지막 백슬래시를 포함하지 마세요.|예약됨|  
 |`MSBuildProjectExtension`|마침표가 포함된 프로젝트 파일의 파일 확장명(예: .proj)입니다.|예약됨|  
 |`MSBuildProjectFile`|파일 확장명이 포함된 프로젝트 파일의 전체 파일 이름(예: MyApp.proj)입니다.|예약됨|  
 |`MSBuildProjectFullPath`|파일 확장명이 포함된 프로젝트 파일의 절대 경로와 전체 파일 이름(예: C:\MyCompany\MyProduct\MyApp.proj)입니다.|예약됨|  

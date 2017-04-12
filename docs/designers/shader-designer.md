@@ -1,22 +1,41 @@
 ---
 title: "셰이더 디자이너 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.graphics.designer.effectdesigner"
-  - "vs.graphics.shaderdesigner"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.graphics.designer.effectdesigner
+- vs.graphics.shaderdesigner
 ms.assetid: 5db09a16-b82c-4ba3-8ec9-630cdc109397
 caps.latest.revision: 32
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 32
+author: BrianPeek
+ms.author: brpeek
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: ff6e473c6e5b2d7a24a4e906d2f592742e3c2d14
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="shader-designer"></a>셰이더 디자이너
 이 문서에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 셰이더 디자이너를 사용하여 *셰이더*라는 사용자 지정 시각 효과를 만들고 수정하고 내보내는 방법을 설명합니다.  
@@ -106,13 +125,13 @@ caps.handback.revision: 32
  앱에서 셰이더가 표시되는 방식을 파악하려는 경우 효과 미리 보기 방식을 구성할 수 있습니다. 앱을 대략적으로 구현하려면 렌더링할 여러 도형 중 하나를 선택하고, 질감과 기타 재질 매개 변수를 구성하고, 시간 기반 효과의 애니메이션을 사용하도록 설정하고, 여러 각도에서 미리 보기를 검사합니다.  
   
 #### <a name="shapes"></a>도형  
- 셰이더 디자이너에는 셰이더를 미리 보는 데 사용할 수 있는 구, 정육면체, 원통, 원뿔, 주전자, 평면의&6;개 도형이 포함되어 있습니다. 셰이더에 따라 특정 도형을 선택하면 미리 보기가 더 잘 표시될 수 있습니다.  
+ 셰이더 디자이너에는 셰이더를 미리 보는 데 사용할 수 있는 구, 정육면체, 원통, 원뿔, 주전자, 평면의 6개 도형이 포함되어 있습니다. 셰이더에 따라 특정 도형을 선택하면 미리 보기가 더 잘 표시될 수 있습니다.  
   
 ###### <a name="to-choose-a-preview-shape"></a>미리 보기 도형을 선택하려면  
   
 -   **셰이더 디자이너 모드** 도구 모음에서 원하는 도형을 선택합니다.  
   
-####  <a name="a-namewwsmaterialparametersa-textures-and-material-parameters"></a><a name="WWS_MaterialParameters"></a> 질감 및 재질 매개 변수  
+####  <a name="WWS_MaterialParameters"></a> 질감 및 재질 매개 변수  
  대부분의 셰이더는 질감 및 재질 매개 변수를 사용하여 앱의 각 개체 종류에 대해 고유한 모양을 생성합니다. 앱에서 셰이더가 표시되는 방식을 확인하려는 경우 미리 보기를 렌더링하는 데 사용되는 질감 및 재질 매개 변수를 앱에서 사용할 질감 및 매개 변수와 일치하도록 설정할 수 있습니다.  
   
 ###### <a name="to-bind-a-different-texture-to-a-texture-register-or-to-modify-other-material-parameters"></a>질감 레지스터에 다른 질감을 바인딩하거나 기타 재질 매개 변수를 수정하려면  
@@ -183,11 +202,5 @@ caps.handback.revision: 32
 |제목|설명|  
 |-----------|-----------------|  
 |[게임 및 앱을 위한 3D 자산 작업](../designers/working-with-3-d-assets-for-games-and-apps.md)|질감 및 이미지, 3D 모델 및 셰이더 효과를 작업하는 데 사용할 수 있는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 도구에 대한 개요를 제공합니다.|  
-|[이미지 편집기](../designers/image-editor.md)|
-          [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 이미지 편집기를 사용하여 질감과 이미지 작업을 수행하는 방법을 설명합니다.|  
+|[이미지 편집기](../designers/image-editor.md)|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 이미지 편집기를 사용하여 질감과 이미지 작업을 수행하는 방법을 설명합니다.|  
 |[모델 편집기](../designers/model-editor.md)|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 모델 편집기를 사용하여 3차원 모델 작업을 수행하는 방법을 설명합니다.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-
