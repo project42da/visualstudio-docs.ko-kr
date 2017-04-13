@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: b5d72a83092c2b97b30b7a8af539a0b1aca50418
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: 1d26ca1a464e2ec15c0d5d338a46b6fb1e7e1d65
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -105,7 +105,7 @@ PTVS(Visual Studio용 Python 도구)는 실행 중인 프로세스에 연결하�
 
 ### <a name="inspecting-and-modifying-values"></a>값 검사 및 수정
 
-디버거에서 중지되면 변수 값을 검사하고 수정할 수 있습니다. [조사식] 창을 사용하여 개별 변수와 사용자 지정 식을 모니터링할 수도 있습니다. 자세한 내용은 [변수 검사](../debugger/getting-started-with-the-debugger.md#BKMK_Inspect_Variables)를 참조하세요.
+디버거에서 중지되면 변수 값을 검사하고 수정할 수 있습니다. [조사식] 창을 사용하여 개별 변수와 사용자 지정 식을 모니터링할 수도 있습니다. 자세한 내용은 [변수 검사](../debugger/getting-started-with-the-debugger.md#inspect-variables-with-the-autos-and-locals-windows)를 참조하세요.
 
 DataTips를 사용하여 값을 보려면 편집기에서 변수 위로 마우스를 이동하면 됩니다. 값을 클릭하여 변경할 수 있습니다.
 
