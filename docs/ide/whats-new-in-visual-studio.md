@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: b19199274d116e20af4c415673ebbeded95859d9
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: ddc84f3b92d8e0febaea3d23b415bd6e703cc530
+ms.openlocfilehash: e04b972187b7b7ec225b48cc9b8904d804399ff8
+ms.lasthandoff: 04/07/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
@@ -130,11 +130,11 @@ Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 �
 DevOps 기능을 SQL Server 데이터베이스 개발로 확장하기 위해 Visual Studio 2017의 다음 버전에서 Redgate 데이터 도구를 사용할 수 있습니다.
 
 Visual Studio 2017 Enterprise에는 다음이 포함되어 있습니다.
-- [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=relnotes0317)는 마이그레이션 스크립트를 개발하고, 소스 제어를 사용하여 데이터베이스 변경 내용을 관리하고, SQL Server 데이터베이스 변경 내용을 응용 프로그램 변경 내용과 함께 자동으로 안전하게 배포하는 데 도움이 됩니다.
-- [Redgate SQL Prompt 코어](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=relnotes0317)는 지능형 코드 완성 기능을 통해 SQL을 더 빠르고 정확하게 작성하는 데 도움이 됩니다. SQL 프롬프트는 데이터베이스 및 시스템 개체, 키워드를 자동으로 완성하고 입력 시 열을 제안합니다. 모든 열 이름이나 별칭을 기억할 필요가 없으므로 코드가 더 깔끔해지고 오류가 줄어듭니다.
+- [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs)는 마이그레이션 스크립트를 개발하고, 소스 제어를 사용하여 데이터베이스 변경 내용을 관리하고, SQL Server 데이터베이스 변경 내용을 응용 프로그램 변경 내용과 함께 자동으로 안전하게 배포하는 데 도움이 됩니다.
+- [Redgate SQL Prompt 코어](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs)는 지능형 코드 완성 기능을 통해 SQL을 더 빠르고 정확하게 작성하는 데 도움이 됩니다. SQL 프롬프트는 데이터베이스 및 시스템 개체, 키워드를 자동으로 완성하고 입력 시 열을 제안합니다. 모든 열 이름이나 별칭을 기억할 필요가 없으므로 코드가 더 깔끔해지고 오류가 줄어듭니다.
 
 Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
-- [Redgate SQL 검색](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=relnotes0317)은 여러 데이터베이스에서 SQL 조각 및 개체를 빠르게 찾을 수 있도록 하여 생산성을 높입니다.
+- [Redgate SQL 검색](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs)은 여러 데이터베이스에서 SQL 조각 및 개체를 빠르게 찾을 수 있도록 하여 생산성을 높입니다.
 
 자세한 내용은 [Visual Studio 2017의 Redgate 데이터 도구](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/) 블로그 게시물을 참조하세요.
 
