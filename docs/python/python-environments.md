@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 69740c73cc133e08254fc546d2b59885270725f2
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 2a6555eb9c0a88b1533428cf2aa932b3fc4960ec
+ms.openlocfilehash: 2a92d10d4e47983de6e3f3c5b55adfcc5dc68c8a
+ms.lasthandoff: 03/30/2017
 
 ---
 
@@ -89,6 +89,11 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 >
 > ![Python 환경 창 확장된 보기](media/environments-expanded-view.png)
 
+> [!Note]
+> Visual Studio에서는 system-site-packages 옵션을 적용하지만 Visual Studio 내에 이를 변경하는 방법은 제공하지 않습니다.
+
+### <a name="creating-an-environment-for-an-existing-interpreter"></a>기존 인터프리터에 대한 환경 만들기
+
 일반적으로 Visual Studio는 레지스트리를 검사하여 설치된 Python 인터프리터를 찾지만 인터프리터가 비표준 방식으로 설치된 경우에는 찾을 수 없습니다. 이 경우 다음과 같이 Visual Studio에서 인터프리터를 직접 가리키도록 할 수 있습니다.
 
 1. 환경 창에서 **+ 사용자 지정...**을 선택하면 새 환경이 생성되고 아래 설명된 [**구성** 탭](#configure-tab)이 열립니다.
@@ -100,9 +105,6 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 1. **자동 검색**을 선택하여 Visual Studio에서 나머지 필드를 완성하도록 하거나 수동으로 작성합니다.
 1. **적용**을 선택하여 환경을 저장합니다.
 1. 환경을 제거해야 하는 경우 **구성** 탭에서 **제거** 명령을 선택합니다.
-
-> [!Note]
-> Visual Studio에서는 system-site-packages 옵션을 적용하지만 Visual Studio 내에 이를 변경하는 방법은 제공하지 않습니다.
 
 ### <a name="overview-tab"></a>개요 탭
 
@@ -142,7 +144,7 @@ IntelliSense 완성 데이터베이스의 현재 상태를 보여 줍니다.
 
 ![Python 환경 IntelliSense 탭](media/environments-intellisense-tab.png)
 
-데이터베이스에는 모든 환경의 라이브러리에 대한 메타데이터가 포함되며 IntelliSense 속도가 향상되고 메모리 사용량이 줄어듭니다. Visual Studio에서 새 환경을 검색하거나 사용자가 환경을 추가하면 라이브러리 소스 파일을 분석하여 데이터베이스 컴파일을 자동으로 시작합니다. 이 프로세스는 설치된 항목에 따라&1;분에서&1;시간 또는 그 이상이 소요될 수 있습니다. (예를 들어 Anaconda에는 많은 라이브러리가 함께 제공되며 데이터베이스를 컴파일하는 데 다소 시간이 소요됩니다.) 완료되면 자세한 IntelliSense를 얻게 되며 더 많은 라이브러리를 설치할 때까지 데이터베이스를 다시 새로 고치지 않아도 됩니다(**DB 새로 고침** 단추 사용).
+데이터베이스에는 모든 환경의 라이브러리에 대한 메타데이터가 포함되며 IntelliSense 속도가 향상되고 메모리 사용량이 줄어듭니다. Visual Studio에서 새 환경을 검색하거나 사용자가 환경을 추가하면 라이브러리 소스 파일을 분석하여 데이터베이스 컴파일을 자동으로 시작합니다. 이 프로세스는 설치된 항목에 따라 1분에서 1시간 또는 그 이상이 소요될 수 있습니다. (예를 들어 Anaconda에는 많은 라이브러리가 함께 제공되며 데이터베이스를 컴파일하는 데 다소 시간이 소요됩니다.) 완료되면 자세한 IntelliSense를 얻게 되며 더 많은 라이브러리를 설치할 때까지 데이터베이스를 다시 새로 고치지 않아도 됩니다(**DB 새로 고침** 단추 사용).
 
 컴파일되지 않은 데이터에 대한 라이브러리는 **!**로 표시되며 환경의 데이터베이스가 완료되지 않은 경우 주 환경 목록에서 데이터베이스 옆에도 **!** 가 표시됩니다.
 

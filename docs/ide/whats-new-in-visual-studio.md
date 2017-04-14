@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/08/2017
+ms.date: 04/04/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8c4e45eadd81c54a372885ce89ccced1256d3b3d
-ms.openlocfilehash: 14a06f4344989052b0a020570dc87d9697ba95d0
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: b19199274d116e20af4c415673ebbeded95859d9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/09/2017
 * **Azure로 클라우드 앱 개발** 기본 제공 Azure 도구 모음을 통해 Microsoft Azure 기반의 클라우드 지원 앱을 쉽게 만들 수 있습니다. Visual Studio를 사용하면 Azure에서 직접 앱과 서비스를 쉽게 구성, 빌드, 디버그, 패키징 및 배포할 수 있습니다.
 * **모바일 앱 개발** Visual Studio 2017에서는 하나의 핵심 코드베이스와 기술 집합을 사용하여 다중 플랫폼 모바일 요구 사항을 통합하는 Xamarin에서 혁신적인 결과를 빠르게 얻을 수 있습니다. 기존 팀, 기술 투자 및 C# 코드와 더불어 모바일로 이동하여 예정보다 빨리 예산 수준 이하의 소비자급 환경을 제공합니다. 사용자의 역량을 강화할 수 있도록 모바일 수명 주기의 각 단계를 모두 가속화하여 세계 최고의 소비자 환경 또는 생산성 앱 포트폴리오를 제공합니다.
 
-가장 두드러진 변화 중 일부에 대한 자세한 내용은 다음과 같습니다.
+가장 두드러진 변화 중 몇 가지에 대한 자세한 내용은 다음과 같습니다.
 
 ## <a name="performance-improvements"></a>성능 향상
 
@@ -111,7 +111,7 @@ Visual Studio의 확장 목록을 보려면 도구 > 확장 및 업데이트를 
 
 ### <a name="experience-live-architecture-dependency-validation-and-live-unit-testing"></a>라이브 아키텍처 종속성 유효성 검사 및 Live Unit Testing 경험
 
-이제 종속성 유효성 검사 다이어그램(레이어 다이어그램이라고도 함)을 사용하여 코드 편집기에서 코드를 입력하면 Visual Studio에서 아키텍처 종속성 규칙 위반을 실시간으로  알릴 수 있습니다.
+이제 종속성 유효성 검사 다이어그램(레이어 다이어그램이라고도 함)을 사용하여 코드 편집기에서 코드를 입력하면 Visual Studio에서 아키텍처 종속성 규칙 위반을 실시간으로 알릴 수 있습니다.
 
 오류 목록에 오류가 표시되고, 텍스트 편집기의 물결선은 정확한 위반 위치를 보여 줍니다. 이제 원치 않는 종속성이 늘어날 가능성이 줄었습니다.
 
@@ -123,6 +123,21 @@ Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 �
 
 ![라이브 단위 테스트](../ide/media/lut-codewindow.png "Visual Studio Enterprise 버전에 있는 새 라이브 단위 테스트 기능의 예")
 
+자세한 내용은 [Visual Studio 2017 Enterprise의 Live Unit Testing](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/) 블로그 게시물을 참조하세요.
+
+### <a name="devops"></a>DevOps
+#### <a name="redgate-data-tools"></a>Redgate 데이터 도구:
+DevOps 기능을 SQL Server 데이터베이스 개발로 확장하기 위해 Visual Studio 2017의 다음 버전에서 Redgate 데이터 도구를 사용할 수 있습니다.
+
+Visual Studio 2017 Enterprise에는 다음이 포함되어 있습니다.
+- [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=relnotes0317)는 마이그레이션 스크립트를 개발하고, 소스 제어를 사용하여 데이터베이스 변경 내용을 관리하고, SQL Server 데이터베이스 변경 내용을 응용 프로그램 변경 내용과 함께 자동으로 안전하게 배포하는 데 도움이 됩니다.
+- [Redgate SQL Prompt 코어](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=relnotes0317)는 지능형 코드 완성 기능을 통해 SQL을 더 빠르고 정확하게 작성하는 데 도움이 됩니다. SQL 프롬프트는 데이터베이스 및 시스템 개체, 키워드를 자동으로 완성하고 입력 시 열을 제안합니다. 모든 열 이름이나 별칭을 기억할 필요가 없으므로 코드가 더 깔끔해지고 오류가 줄어듭니다.
+
+Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
+- [Redgate SQL 검색](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=relnotes0317)은 여러 데이터베이스에서 SQL 조각 및 개체를 빠르게 찾을 수 있도록 하여 생산성을 높입니다.
+
+자세한 내용은 [Visual Studio 2017의 Redgate 데이터 도구](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/) 블로그 게시물을 참조하세요.
+
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE 향상
 #### <a name="interact-with-git"></a>Git과 상호 작용:
 Visual Studio에서 프로젝트로 작업할 때 코드를 설정하고 빠르게 커밋하여 Git 서비스에 게시할 수 있습니다. 또한 IDE의 오른쪽 아래 모서리에 있는 단추의 메뉴 클릭을 사용하여 Git 리포지토리를 관리할 수도 있습니다.
@@ -130,7 +145,7 @@ Visual Studio에서 프로젝트로 작업할 때 코드를 설정하고 빠르�
 ![Visual Studio 2017과 Git 대화 상자의 상호 작용](../ide/media/vsIDE-GitInteraction.png "Visual Studio IDE의 Git 도구")
 
 #### <a name="view-and-navigate-code-with-structure-visualizer"></a>구조 시각화 도우미를 사용하여 코드 보기 및 탐색:
-구조 시각화 도우미는 코드에 구조 안내선( 들여쓰기 안내선이라고도 함)을 그립니다. 이 안내선을 사용하면 언제든지 스크롤하지 않고도 어떤 코드 블록을 시각화하고 검색할 수 있습니다. 선 위로 마우스를 가리키면 해당 블록과 그 부모를 열어서 볼 수 있는 도구 설명이 표시됩니다. TextMate 문법 검사뿐만 아니라 C#, Visual Basic 및 XAML을 통해 지원되는 모든 언어에서 사용할 수 있습니다.
+구조 시각화 도우미는 코드에 구조 안내선(들여쓰기 안내선이라고도 함)을 그립니다. 이 안내선을 사용하면 언제든지 스크롤하지 않고도 어떤 코드 블록을 시각화하고 검색할 수 있습니다. 선 위로 마우스를 가리키면 해당 블록과 그 부모를 열어서 볼 수 있는 도구 설명이 표시됩니다. TextMate 문법 검사뿐만 아니라 C#, Visual Basic 및 XAML을 통해 지원되는 모든 언어에서 사용할 수 있습니다.
 
 ![Visual Studio 2017 구조 시각화 도우미](../ide/media/vsIDE-StructureVisualizer.png "Visual Studio의 구조 시각화 도우미")
 

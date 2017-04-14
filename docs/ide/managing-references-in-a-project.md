@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 8c478c49ee429e0c5d96dc60f035fcb460b902c8
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
+ms.openlocfilehash: 890e181643d2cc5d4861d64ffd9052e0400126d0
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="managing-references-in-a-project"></a>프로젝트의 참조 관리
@@ -70,9 +70,9 @@ ms.lasthandoff: 03/07/2017
 ## <a name="windows-store-app-references"></a>Windows 스토어 앱 참조  
 
 ### <a name="project-references"></a>프로젝트 참조  
- Windows 10을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 프로젝트는 Windows 10에서 더 이상 사용되지 않는 API를 사용하지 않는 경우 솔루션의 다른 UWP 프로젝트나 Windows 스토어 프로젝트에 대한 참조나 [!INCLUDE[win81](../debugger/includes/win81_md.md)]을 대상으로 하는 또는 이진 파일을 만들 수 있습니다. 자세한 내용은 [Windows 런타임 8에서 UWP로 이동](https://msdn.microsoft.com/en-us/library/windows/apps/dn954974.aspx)을 참조하세요.  
+ Windows 10을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 프로젝트는 Windows 10에서 더 이상 사용되지 않는 API를 사용하지 않는 경우 솔루션의 다른 UWP 프로젝트나 Windows 스토어 프로젝트에 대한 참조나 [!INCLUDE[win81](../debugger/includes/win81_md.md)]을 대상으로 하는 또는 이진 파일을 만들 수 있습니다. 자세한 내용은 [Windows 런타임 8에서 UWP로 이동](https://docs.microsoft.com/en-us/windows/uwp/porting/w8x-to-uwp-root)을 참조하세요.  
 
- [!INCLUDE[win81](../debugger/includes/win81_md.md)] 프로젝트 대상을 Windows 10으로 다시 지정하도록 선택하는 경우 [Visual Studio 프로젝트 이식, 마이그레이션, 업그레이드](../porting/port-migrate-and-upgrade-visual-studio-projects.md)를 참조하세요.  
+ [!INCLUDE[win81](../debugger/includes/win81_md.md)] 프로젝트 대상을 Windows 10으로 다시 지정하도록 선택하는 경우 [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](../porting/port-migrate-and-upgrade-visual-studio-projects.md)를 참조하세요.  
 
 ### <a name="extension-sdk-references"></a>확장 SDK 참조  
  UWP(유니버설 Windows 플랫폼)를 대상으로 하는 Visual Basic, C#, C++, JavaScript Windows 스토어 프로젝트는 [!INCLUDE[win81](../debugger/includes/win81_md.md)]을 대상으로 하는 확장 SDK가 Windows 10에서 더 이상 사용되지 않는 API를 사용하지 않는 한 이 확장 SDK를 참조할 수 있습니다. UWP를 대상으로 하는 Windows 저장소 프로젝트에서 확장 SDK를 참조할 수 있는지 확인하려면 해당 확장 SDK의 공급업체 사이트를 참조하세요.  

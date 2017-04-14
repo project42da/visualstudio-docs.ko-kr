@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 설치 | Microsoft Docs"
 description: "Visual Studio를 설치하는 방법을 단계별로 알아봅니다."
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 04/03/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -37,9 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8c4e45eadd81c54a372885ce89ccced1256d3b3d
-ms.openlocfilehash: 5552f67ae880e3b7ec832d6d035382e2abcca116
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
+ms.openlocfilehash: 47688935cec36db174c3a0c424b1705ae47c6118
+ms.lasthandoff: 04/03/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 설치
@@ -102,6 +102,8 @@ Visual Studio를 설치하는 새로운 방법이 있습니다. 최신 버전에
 
 기본적으로 설치 관리자 프로그램은 처음 실행될 때 운영 체제의 언어와 일치시키려고 합니다. 설치 관리자는 이 설정을 기억합니다. 명령줄에서 설치 관리자를 실행하면 이 설정을 변경할 수 있습니다. 예를 들어 `vs_installer.exe --locale en-US` 명령을 사용하여 설치 관리자를 영어로 강제 실행할 수 있습니다. 설치 관리자는 다음에 실행될 때 이 설정을 기억합니다. 설치 관리자는 zh-CN, zh-TW, cs-CZ, en-US, fr-FR, de-DE, it-IT, ja-JP, ko-KR, pl-PL, pt-BR, ru-RU, es-ES 및 tr-TR 언어 토큰을 지원합니다.
 
+## <a name="get-support"></a>지원 받기
+때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 실패 문제 해결](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) 기술 자료 문서에서 문제 해결 팁을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
 * [Visual Studio 2017 수정](modify-visual-studio.md)
