@@ -1,66 +1,82 @@
 ---
-title: "IDebugProcessEx2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcessEx2"
-helpviewer_keywords: 
-  - "IDebugProcessEx2 인터페이스"
+title: IDebugProcessEx2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProcessEx2
+helpviewer_keywords:
+- IDebugProcessEx2 interface
 ms.assetid: 44e309ba-1d6f-499b-aa7e-9b34858a6d57
 caps.latest.revision: 21
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# IDebugProcessEx2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 56483c55810f75042184439be9f0d7bcfb2d6836
+ms.lasthandoff: 04/05/2017
 
-이 인터페이스는 세션을 디버그 매니저 \(SDM\)를 연결 하거나 프로세스에서 분리 해도 프로세스를 알릴 수 있습니다.  
+---
+# <a name="idebugprocessex2"></a>IDebugProcessEx2
+이 인터페이스에는 세션을 디버그 관리자 (SDM)에 연결 되었거나 프로세스에서 분리 하는 프로세스를 알릴 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugProcessEx2 : IUnknown  
 ```  
   
-## 구현자 참고 사항  
- 동일한 개체에서이 인터페이스를 구현 하는 사용자 지정 포트 공급자는 [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) 인터페이스를.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ 사용자 지정 포트 공급자와 같은 개체에이 인터페이스를 구현 하는 [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) 하기 위해 인터페이스:  
   
--   프로세스에 연결 된 세션의 추적을 지원  
+-   프로세스에 연결 된 세션의 추적 지원  
   
--   여러 디버깅 엔진에서 지원 자동\-연결  
+-   지원 자동 연결이 여러 디버그 엔진에서  
   
- 사용자 지정 포트 공급자는 선택한 경우이 인터페이스를 구현 합니다.  
+ 사용자 지정 포트 공급자 중에서 선택한 경우이 인터페이스를 구현할 수 있습니다.  
   
-## 호출자에 대 한 참고 사항  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
   
--   SDM 호출 [QueryInterface](/visual-cpp/atl/queryinterface) 에 있는 `IDebugProcess2` 이 인터페이스를 가져올 수 있는 인터페이스입니다.  
+-   SDM 호출 [QueryInterface](/cpp/atl/queryinterface) 에 `IDebugProcess2` 인터페이스가이 인터페이스를 가져올 수 있습니다.  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDebugProcessEx2`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugProcessEx2`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[연결](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|세션 프로세스는 현재 디버깅 하는 프로세스 알려 줍니다.|  
-|[Detach](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|세션 프로세스 더 이상 디버깅 되는 프로세스 알려 줍니다.|  
-|[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|디버깅 엔진의 목록에 대 한 프로그램이 노드를 추가 하는 예제입니다.|  
+|------------|-----------------|  
+|[Attach](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|세션에서 프로세스를 디버깅 이제는 프로세스에 알립니다.|  
+|[Detach](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|세션에서 프로세스를 디버깅 더 이상이 프로세스에 알립니다.|  
+|[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|디버그 엔진의 목록에 대 한 프로그램 노드를 추가합니다.|  
   
-## 설명  
- 이 인터페이스는 SDM 및 프로세스 간에 개인입니다.  
+## <a name="remarks"></a>주의  
+ 이 인터페이스는 SDM와 프로세스 간의 비공개입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: Portpriv.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

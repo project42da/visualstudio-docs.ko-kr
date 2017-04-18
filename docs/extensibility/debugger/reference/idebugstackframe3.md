@@ -1,68 +1,84 @@
 ---
-title: "IDebugStackFrame3 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugStackFrame3"
-helpviewer_keywords: 
-  - "IDebugStackFrame3 인터페이스"
+title: IDebugStackFrame3 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugStackFrame3
+helpviewer_keywords:
+- IDebugStackFrame3 interface
 ms.assetid: 39af2f57-0a01-42b8-b093-b7fbc61e2909
 caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# IDebugStackFrame3
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 71ffa007c894090b9c0af2ad16429f381eb2db8b
+ms.lasthandoff: 04/05/2017
 
-이 인터페이스를 확장 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) 차단된 예외를 처리할 수 있습니다.  
+---
+# <a name="idebugstackframe3"></a>IDebugStackFrame3
+이 인터페이스를 확장 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) 가로챈된 예외를 처리 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugStackFrame3 : IDebugStackFrame2  
 ```  
   
-## 구현자 참고 사항  
- 디버그 엔진 \(DE\)를 구현 하는 동일한 개체에서이 인터페이스는 구현에서 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) 차단된 예외를 지 원하는 인터페이스.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ 디버그 엔진 (DE)를 구현 하는 동일한 개체에서이 인터페이스를 구현 하는 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) 인터페이스를 가로챈된 예외를 지원 합니다.  
   
-## 호출자에 대 한 참고 사항  
- 호출 [QueryInterface](/visual-cpp/atl/queryinterface) 에 있는 `IDebugStackFrame2` 이 인터페이스를 가져올 수 있는 인터페이스입니다.  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ 호출 [QueryInterface](/cpp/atl/queryinterface) 에 `IDebugStackFrame2` 인터페이스가이 인터페이스를 가져올 수 있습니다.  
   
-## 메서드에서 Vtable 순서  
- 상속 된 메서드 외에 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md), `IDebugStackFrame3` 다음 메서드를 노출 합니다.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 상속 된 메서드 외에도 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md), `IDebugStackFrame3` 다음 메서드를 노출 합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)|예외는 일반 예외 처리 하기 전에 현재 스택 프레임에 대 한 처리합니다.|  
-|[GetUnwindCodeContext](../../../extensibility/debugger/reference/idebugstackframe3-getunwindcodecontext.md)|스택 해제가 발생 한 경우에 코드 컨텍스트를 반환 합니다.|  
+|------------|-----------------|  
+|[InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)|일반 예외 처리 하기 전에 현재 스택 프레임에 대 한 예외를 처리합니다.|  
+|[GetUnwindCodeContext](../../../extensibility/debugger/reference/idebugstackframe3-getunwindcodecontext.md)|스택 해제 된 발생 하는 경우 코드 컨텍스트를 반환 합니다.|  
   
-## 설명  
- 차단된 예외는 일반 예외 처리 루틴은 실행된 시간에 따라 호출 되기 전에 디버거에서 예외 처리할 수 있는 의미 합니다.  기본적으로 예외를 가로채 가정 된 예외 처리기가 없는 경우에 런타임에 수행 됩니다.  
+## <a name="remarks"></a>주의  
+ 가로챈된 예외가 실행된 시간이 하 여 모든 일반 예외 처리 루틴을 호출 하기 전에 디버거가 예외를 처리할 수를 의미 합니다. 기본적으로 예외가 가로채 런타임에 존재 하지 않은 경우에 예외 처리기 있다는 것으로 가정 하 의미 합니다.  
   
- [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)유일한 예외는 코드가 혼합 모드 \(관리 되는 표현과 관리 되지 않는 코드\) 디버깅 하는 경우이 경우 예외는 마지막 기회가 콜백 하는 동안 가로챌 수 없습니다 이벤트 \(\) 모든 일반 예외 콜백 중 이라고 합니다.  DE를 구현 하지 않는 경우 `IDebugStackFrame3`, 나는 DE Idebugstackframe3에서 오류를 반환::`InterceptCurrentException` \(같은 `E_NOTIMPL`\), 디버거에서 예외를 정상적으로 처리 하 고 있습니다.  
+ [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) (이 유일한 예외는 경우 코드 디버깅 하는 혼합 모드 (관리 코드와 비관리 코드),이 경우 마지막 기회 콜백 하는 동안 예외를 가로챌 수 없습니다) 하는 모든 일반적인 예외 콜백 이벤트 동안 호출 됩니다. DE 구현 하지 않는 경우 `IDebugStackFrame3`는 DE IDebugStackFrame3에서 오류를 반환 하거나::`InterceptCurrentException` (같은 `E_NOTIMPL`), 다음 디버거가 예외를 정상적으로 처리 됩니다.  
   
- 예외를 가로채 디버거 디버깅 중인 프로그램의 상태를 변경 하 고 다음 예외가 throw 된 지점에서 실행이 다시 시작 할을 수 있습니다.  
+ 디버거 예외를 가로채 사용자 디버깅 중인 프로그램의 상태를 변경 하 고, 예외가 throw 된 지점에서 실행을 다시 허용할 수 있습니다.  
   
 > [!NOTE]
->  차단된 예외 관리 코드에는 CLR \(공용 언어 런타임 아래에서\)를 실행 하는 프로그램, 허용 됩니다.  
+>  가로챈된 예외는 공용 언어 런타임 (CLR)에서 실행 중인 프로그램에서 즉, 관리 되는 코드에만 허용 됩니다.  
   
- 디버그 엔진은 예외를 가로채 "metricExceptions"를 설정 하 여 지원 하도록 값을 1로 런타임에 사용 하 여 지정은 `SetMetric` 함수입니다.  자세한 내용은 [디버깅을 위한 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)를 참조하십시오.  
+ 디버그 엔진 "metricExceptions"를 설정 하 여 예외를 가로채 지원 한다는 값 1 실행 시 사용 하 여 나타냅니다는 `SetMetric` 함수입니다. 자세한 내용은 참조 [디버깅할 수 있도록 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [디버깅을 위한 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

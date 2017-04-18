@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 Python 프로젝트 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 8ae79f6b8e7eb87c0138b0152d8f9ce46eac9a69
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: eb3abd0f37e52f2b1db3793a5471b74a5e0c37ff
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -47,7 +47,7 @@ Visual Studio는 기존 폴더 트리에서 프로젝트를 만드는 템플릿�
 
 항목 내용:
 
-- [파일 추가. 시작 파일 할당. 환경 설정](#adding-file-assigning-a-startup-file-and-setting-environments)
+- [파일 추가. 시작 파일 할당. 환경 설정](#adding-files-assigning-a-startup-file-and-setting-environments)
 - [프로젝트 템플릿](#project-templates)
 - [연결된 파일](#linked-files)
 - [참조](#references)
@@ -71,7 +71,10 @@ Visual Studio에서 Python 프로젝트에 대한 소개는 [Python 도구 시�
 
 응용 프로그램을 개발할 때 일반적으로 다양한 유형의 새 파일을 프로젝트에 추가해야 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 기존 항목...**을 선택하여 추가할 파일을 찾거나 **추가 > 새 항목...**을 선택하면 빈 python 파일, python 클래스, 단위 테스트 및 웹 응용 프로그램과 관련된 다양한 항목 템플릿이 들어 있는 대화 상자가 나타납니다. 테스트 프로젝트를 통해 이러한 옵션을 시도해 보고 사용자의 Visual Studio 버전에서 사용 가능한 항목을 알아보는 것이 좋습니다.
 
-각 Python 프로젝트에는 솔루션 탐색기에서 굵게 표시된 시작 파일이 하나씩 할당되어 있습니다. 이 파일은 디버깅을 시작하거나(F5 또는 **디버그> 디버깅 시작**) 대화형 창에서 프로젝트를 실행할 때(Shift + Alt + F5 또는 **디버그> Python Interactive에서 프로젝트 실행**) 실행됩니다. 파일을 변경하려면 새 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
+각 Python 프로젝트에는 솔루션 탐색기에서 굵게 표시된 시작 파일이 하나씩 할당되어 있습니다. 이 파일은 디버깅을 시작하거나(F5 또는 **디버그 > 디버깅 시작**) 대화형 창에서 프로젝트를 실행할 때(Shift+Alt+F5 또는 **디버그 > Python Interactive에서 프로젝트 실행**) 실행됩니다. 파일을 변경하려면 새 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
+
+> [!Tip]
+> 프로젝트에서 선택한 시작 파일을 제거하고 새 시작 파일을 선택하지 않은 경우에 프로젝트를 실행하려고 하면, Python 출력 창이 나타났다가 거의 바로 사라집니다. 이 동작이 발생할 경우 할당된 시작 파일이 있는지 확인합니다. 또한 이러한 경우 출력 창을 열어 두려면 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**을 선택하고, **디버그** 탭을 선택한 다음 `-i`를 **인터프리터 인수** 필드에 추가합니다. 그러면 프로그램이 완료된 후 인터프리터가 대화형 모드로 전환되어 창이 열린 상태로 유지되며 Ctrl+Z, Enter 키를 누르면 종료됩니다.
 
 새 프로젝트는 항상 기본 글로벌 Python 환경과 연결됩니다. 프로젝트를 다른 환경(가상 환경 포함)과 연결하려면 프로젝트의 **Python 환경** 노드를 마우스 오른쪽 단추로 클릭하고 **Python 환경 추가/제거**를 선택하고 원하는 항목을 선택합니다. 활성 상태의 환경을 변경하려면 원하는 환경을 마우스 오른쪽 단추로 클릭하고 아래 표시된 것처럼 **Activate Environment**(환경 활성화)를 선택합니다. 자세한 내용은 [Python 환경](python-environments.md#project-specific-environments)을 참조하세요.
 
@@ -97,6 +100,7 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 | IronPython Silverlight 웹 페이지 | Silverlight를 사용하여 브라우저에서 실행되는 IronPython 프로젝트입니다. 응용 프로그램의 Python 코드는 웹 페이지에 스크립트로 포함됩니다. 상용구 스크립트 태그는 Python 코드가 DOM과 상호 작용할 수 있는 Silverlight 내부에서 실행되는 IronPython을 초기화하는 일부 JavaScript 코드를 가져옵니다. |
 | IronPython Windows Forms 응용 프로그램 | Windows Forms에서 코드를 사용하여 만든 UI에 IronPython을 사용하는 프로젝트 구조입니다. 콘솔을 표시하지 않고 응용 프로그램을 실행합니다. |
 | 백그라운드 응용 프로그램(IoT) | 장치에서 백그라운드 서비스로 실행되도록 Python 프로젝트 배포를 지원합니다. 자세한 내용은 [Windows IoT 개발자 센터](https://dev.windows.com/en-us/iot)를 참조하세요. |
+| Python 확장 모듈 | 이 템플릿은 Python 워크로드와 함께 **Python 네이티브 개발 도구**를 Visual Studio 2017 Preview에 설치한 경우([설치](installation.md) 참조) Visual C++ 아래에 나타납니다. 이 템플릿은 [Python용 C++ 확장 만들기](cpp-and-python.md)에 설명된 대로 C++ 확장 DLL의 핵심 구조를 제공합니다. |
 
 <a name="create-project-from-existing-files"</a>
 ### <a name="creating-a-project-from-existing-files"></a>기존 파일에서 프로젝트 만들기
@@ -104,15 +108,15 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 1. **파일 > 새로 만들기 > 프로젝트...** 메뉴를 선택한 후 **From Existing Python Code**(기존 Python 코드에서) 템플릿을 선택합니다.
 1. 다음 대화 상자에서 기존 코드에 대한 경로, 파일 형식에 대한 필터, 프로젝트에 필요한 검색 경로를 설정한 후 **다음**을 선택합니다.
 
-    ![기존 코드의 새 프로젝트,&1;단계](media/projects-from-existing-1.png)
+    ![기존 코드의 새 프로젝트, 1단계](media/projects-from-existing-1.png)
 
 1. 프로젝트 및 시작 파일에 대한 환경을 선택한 후 **다음**을 누릅니다. (대화 상자에 폴더 트리 루트에 있는 파일만 표시됩니다. 원하는 파일이 하위 폴더에 있는 경우 시작 파일을 비워 두고 솔루션 탐색기에서 나중에 설정합니다.)
 
-    ![기존 코드의 새 프로젝트,&2;단계](media/projects-from-existing-2.png)
+    ![기존 코드의 새 프로젝트, 2단계](media/projects-from-existing-2.png)
 
 1. 프로젝트 파일을 저장할 위치를 선택합니다(이렇게 할 경우 원본 소스 파일이 이동하거나 복사되지 않으므로 복사하려면 템플릿을 사용하기 전에 하나 만들어야 합니다). 이 대화 상자에서 가상 환경의 자동 검색을 포함하고 다양한 웹 프레임워크에 대한 프로젝트를 사용자 지정할 수도 있습니다.
 
-    ![기존 코드의 새 프로젝트,&3;단계](media/projects-from-existing-3.png)
+    ![기존 코드의 새 프로젝트, 3단계](media/projects-from-existing-3.png)
 
 1.  **마침**을 선택하면 Visual Studio가 프로젝트를 만들고 솔루션 탐색기에서 프로젝트가 열립니다. .pyproj 파일을 다른 위치로 이동하려면 솔루션 탐색기에서 선택하고 **파일 > 다른 이름으로 저장**을 선택합니다. 그러면 프로젝트에서 파일 참조가 업데이트되지만 코드 파일은 이동하지 않습니다.
 

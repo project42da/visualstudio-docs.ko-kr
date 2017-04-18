@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/07/2017
+ms.date: 04/06/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -32,9 +32,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: 230d04f93e8e857fc0dbaf018e56567259ac6c38
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 5760b4f89bea1a972e75aaec8c45527e07ad28ca
+ms.lasthandoff: 04/06/2017
 
 ---
 
@@ -58,11 +58,11 @@ ms.lasthandoff: 03/07/2017
 
 ### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
 
-구성 요소 ID | 이름 | 종속성 유형
---- | --- | ---
-Microsoft.Component.MSBuild | MSBuild | 필수
-Microsoft.VisualStudio.Component.CoreBuildTools | Visual Studio Build Tools 핵심 | 필수
-Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 필수
+구성 요소 ID | 이름 | 버전 | 종속성 유형
+--- | --- | --- | ---
+Microsoft.Component.MSBuild | MSBuild | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.CoreBuildTools | Visual Studio Build Tools 핵심 | 15.0.26228.0 | 필수
+Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 15.0.26208.0 | 필수
 
 
 ## <a name="visual-c-build-tools"></a>Visual C++ 빌드 도구
@@ -73,27 +73,27 @@ Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn �
 
 ### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
 
-구성 요소 ID | 이름 | 종속성 유형
---- | --- | ---
-Microsoft.VisualStudio.Component.VC.CoreBuildTools | Visual C++ Build Tools 핵심 기능 | 필수
-Microsoft.VisualStudio.Component.Windows10SDK | Windows 유니버설 C 런타임 | 필수
-Microsoft.VisualStudio.Component.VC.CMake.Project | CMake용 Visual C++ 도구 | 권장
-Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK(10.0.14393.0) | 권장
-Microsoft.Component.VC.Runtime.UCRTSDK | Windows 유니버설 CRT SDK | Optional
-Microsoft.Net.Component.4.6.1.SDK | .NET Framework 4.6.1 SDK | Optional
-Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 타기팅 팩 | Optional
-Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | Optional
-Microsoft.VisualStudio.Component.VC.ATL | Visual C++ ATL 지원 | Optional
-Microsoft.VisualStudio.Component.VC.ATLMFC | MFC 및 ATL 지원(x86 및 x64) | Optional
-Microsoft.VisualStudio.Component.VC.ClangC2 | Clang/C2(실험적) | Optional
-Microsoft.VisualStudio.Component.VC.CLI.Support | C++/CLI 지원 | Optional
-Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ 핵심 기능 | Optional
-Microsoft.VisualStudio.Component.VC.Modules.x86.x64 | 표준 라이브러리 모듈 | Optional
-Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 도구 집합(x86, x64) | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK(10.0.10240.0) | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK(10.0.10586.0) | Optional
-Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | Optional
-Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK 및 UCRT SDK | Optional
+구성 요소 ID | 이름 | 버전 | 종속성 유형
+--- | --- | --- | ---
+Microsoft.VisualStudio.Component.VC.CoreBuildTools | Visual C++ Build Tools 핵심 기능 | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.Windows10SDK | Windows 유니버설 C 런타임 | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.VC.CMake.Project | CMake용 Visual C++ 도구 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK(10.0.14393.0) | 15.0.26208.0 | 권장
+Microsoft.Component.VC.Runtime.UCRTSDK | Windows 유니버설 CRT SDK | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.6.1.SDK | .NET Framework 4.6.1 SDK | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 타기팅 팩 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.ATL | Visual C++ ATL 지원 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.ATLMFC | MFC 및 ATL 지원(x86 및 x64) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.ClangC2 | Clang/C2(실험적) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.CLI.Support | C++/CLI 지원 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ 핵심 기능 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.Modules.x86.x64 | 표준 라이브러리 모듈 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 도구 집합(x86, x64) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK(10.0.10240.0) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK(10.0.10586.0) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK 및 UCRT SDK | 15.0.26208.0 | Optional
 
 
 ## <a name="web-development-build-tools"></a>웹 개발 빌드 도구
@@ -104,16 +104,16 @@ Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK 및 
 
 ### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
 
-구성 요소 ID | 이름 | 종속성 유형
---- | --- | ---
-Microsoft.VisualStudio.Web.BuildTools.ComponentGroup | 웹 개발 빌드 도구 | 필수
+구성 요소 ID | 이름 | 버전 | 종속성 유형
+--- | --- | --- | ---
+Microsoft.VisualStudio.Web.BuildTools.ComponentGroup | 웹 개발 빌드 도구 | 15.0.26323.1 | 필수
 ## <a name="unaffiliated-components"></a>독립적 구성 요소
 
 이러한 구성 요소는 작업에 포함되지 않지만 개별 구성 요소로 선택할 수 있습니다.
 
-구성 요소 ID | 이름
---- | ---
-해당 없음 | 해당 없음
+구성 요소 ID | 이름 | 버전
+--- | --- | ---
+해당 없음 | 해당 없음 | 해당 없음
 
 
 ## <a name="see-also"></a>참고 항목
@@ -121,5 +121,6 @@ Microsoft.VisualStudio.Web.BuildTools.ComponentGroup | 웹 개발 빌드 도구 
 * [Visual Studio 작업 및 구성 요소 ID](workload-and-component-ids.md)
 * [Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
 * [명령줄 매개 변수를 사용하여 Visual Studio 설치](use-command-line-parameters-to-install-visual-studio.md)
+  * [명령줄 매개 변수 예](command-line-parameter-examples.md)
 * [Visual Studio의 오프라인 설치 만들기](create-an-offline-installation-of-visual-studio.md)
 

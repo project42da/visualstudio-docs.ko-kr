@@ -1,5 +1,5 @@
 ---
-title: "Editorconfig에 대한 .NET 코드 스타일 설정 | Microsoft 문서"
+title: "EditorConfig에 대한 .NET 코드 스타일 설정 | Microsoft 문서"
 ms.custom: 
 ms.date: 12/14/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 31f433b28b67dc6f3179be87cb5894b5b3f0aa4f
-ms.openlocfilehash: e0fcd94f2e42f2ce8d454b9d754cfa4ad063d9e0
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
+ms.openlocfilehash: a5b26ed093ed86c8c438b2024f69d371fde2de36
+ms.lasthandoff: 03/27/2017
 
 ---
 
-# <a name="net-code-style-settings-for-editorconfig"></a>Editorconfig에 대한 .NET 코드 스타일 설정
+# <a name="net-code-style-settings-for-editorconfig"></a>EditorConfig에 대한 .NET 코드 스타일 설정
 
 ## <a name="possible-values"></a>가능한 값
 
@@ -258,7 +258,7 @@ dotnet_style_explicit_tuple_names = true:suggestion
 | 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
 | True | 3개로 구성된 연산자 검사보다 null 병합 식을 사용하는 것이 좋습니다.| **C#:** <br>`var v = x ?? y;` <br><br> **Visual Basic:** <br> `Dim v = If(x, y)`
-| False | null 병합 식보다&3;개로 구성된 연산자 검사를 사용하는 것이 좋습니다. | **C#:** <br>`var v = x != null ? x : y; // or`<br>`var v = x == null ? y : x;` <br><br> **Visual Basic:** <br>`Dim v = If(x Is Nothing, y, x) ' or`<br> `Dim v = If(x IsNot Nothing, x, y)`
+| False | null 병합 식보다 3개로 구성된 연산자 검사를 사용하는 것이 좋습니다. | **C#:** <br>`var v = x != null ? x : y; // or`<br>`var v = x == null ? y : x;` <br><br> **Visual Basic:** <br>`Dim v = If(x Is Nothing, y, x) ' or`<br> `Dim v = If(x IsNot Nothing, x, y)`
 
 #### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
@@ -275,7 +275,7 @@ dotnet_style_coalesce_expression = true:suggestion
 | 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
 | True | 가능한 경우 null 조건부 연산자를 사용하는 것이 좋습니다.| **C#:** <br>`var v = o?.ToString();` <br><br> **Visual Basic:** <br> `Dim v = o?.ToString()`
-| False | 가능한 경우&3;개로 구성된 null 검사를 사용하는 것이 좋습니다. | **C#:** <br>`var v = o == null ? null : o.ToString(); // or`<br>`var v = o != null ? o.String() : null;` <br><br> **Visual Basic:** <br>`Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or`<br> `Dim v = If(o IsNot Nothing, o.ToString(), Nothing)`
+| False | 가능한 경우 3개로 구성된 null 검사를 사용하는 것이 좋습니다. | **C#:** <br>`var v = o == null ? null : o.ToString(); // or`<br>`var v = o != null ? o.String() : null;` <br><br> **Visual Basic:** <br>`Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or`<br> `Dim v = If(o IsNot Nothing, o.ToString(), Nothing)`
 
 #### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```

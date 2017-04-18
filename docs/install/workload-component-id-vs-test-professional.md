@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/07/2017
+ms.date: 04/06/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -32,9 +32,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: 604221ffe4e8218b1e66fcd32d7a8b1ac4a49765
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 130317d20e3da1a10634bd2be60df369f635aeb7
+ms.lasthandoff: 04/06/2017
 
 ---
 
@@ -58,17 +58,17 @@ ms.lasthandoff: 03/07/2017
 
 ### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
 
-구성 요소 ID | 이름 | 종속성 유형
---- | --- | ---
-Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 필수
-Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft Test Manager | 필수
+구성 요소 ID | 이름 | 버전 | 종속성 유형
+--- | --- | --- | ---
+Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft Test Manager | 15.0.26228.0 | 필수
 ## <a name="unaffiliated-components"></a>독립적 구성 요소
 
 이러한 구성 요소는 작업에 포함되지 않지만 개별 구성 요소로 선택할 수 있습니다.
 
-구성 요소 ID | 이름
---- | ---
-해당 없음 | 해당 없음
+구성 요소 ID | 이름 | 버전
+--- | --- | ---
+해당 없음 | 해당 없음 | 해당 없음
 
 
 ## <a name="see-also"></a>참고 항목
@@ -76,5 +76,6 @@ Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft Test
 * [Visual Studio 작업 및 구성 요소 ID](workload-and-component-ids.md)
 * [Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
 * [명령줄 매개 변수를 사용하여 Visual Studio 설치](use-command-line-parameters-to-install-visual-studio.md)
+  * [명령줄 매개 변수 예](command-line-parameter-examples.md)
 * [Visual Studio의 오프라인 설치 만들기](create-an-offline-installation-of-visual-studio.md)
 

@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 68358885d93e9e6b7f231750c35065be9521c3fe
-ms.openlocfilehash: b1ce5a5c4dc05cb9d0a2ebcb68a10a5054b68893
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: a990441ed4ef551a0fc6defcda45d51ff0c0d209
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>어셈블리 및 매니페스트 서명 관리
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/01/2017
   
  Visual Basic 및 C# 프로젝트의 어셈블리 서명에 대한 자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9)을 참조하세요.  
   
- Visual C++ 프로젝트의 어셈블리 서명에 대한 자세한 내용은 [강력한 이름 어셈블리(어셈블리 서명)(C++/CLI)](/visual-cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)를 참조하세요.  
+ Visual C++ 프로젝트의 어셈블리 서명에 대한 자세한 내용은 [강력한 이름 어셈블리(어셈블리 서명)(C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)를 참조하세요.  
 
 > [!NOTE]
 >  강력한 이름 서명은 어셈블리의 리버스 엔지니어링으로부터 보호하지 않습니다.  리버스 엔지니어링으로부터 보호하려면 [Dotfuscator CE(Community Edition)](dotfuscator/index.md)를 참조하세요.
@@ -87,4 +87,4 @@ ms.lasthandoff: 03/01/2017
   
 ## <a name="see-also"></a>참고 항목  
  [강력한 이름의 어셈블리](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)   
- [강력한 이름 어셈블리(어셈블리 서명)(C++/CLI)](/visual-cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)
+ [강력한 이름 어셈블리(어셈블리 서명)(C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)

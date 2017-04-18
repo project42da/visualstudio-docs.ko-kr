@@ -28,9 +28,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 0b87d25195b8e288252e6c53279897d1edff93bd
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: 2659c1a3b1adfc3f462971205460942c5fe5171f
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -230,6 +230,8 @@ Visual Studio는 프로젝트 관리, 풍부한 편집 환경 제공 및 대화�
     > if __name__ == "__main__":  
     >     sys.exit(int(main() or 0))      
     > ```
+    > 
+    > 또는 원하지 않을 때 출력 창이 자동으로 닫히는 경우가 발생하면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**, **디버그** 탭을 차례로 선택한 다음 **인터프리터 인수** 필드에 `-i`를 추가합니다. 그러면 프로그램이 완료된 후 인터프리터가 대화형 모드로 전환되어 창이 열린 상태로 유지되며 Ctrl+Z, Enter 키를 누르면 종료됩니다.
 
 1. `main` 함수의 첫 번째 줄 옆에 있는 왼쪽 회색 여백을 클릭하거나 해당 줄에 캐럿을 추가하고 *디버그 > 중단점 설정/해제** 명령(F9)을 사용하여 해당 줄에 중단점을 설정하세요. 회색 여백에 (아래에 파란색 화살표로 표시된) 중단점을 나타내는 빨간 점이 표시됩니다.
 

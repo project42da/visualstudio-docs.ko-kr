@@ -27,9 +27,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: b0d84db6a16861fb9554af2a644423f906784748
-ms.openlocfilehash: b2ff9c3505b117469854a24cad8e9b13d8039db8
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
+ms.openlocfilehash: c8276097c53ea49d223c43ada5511ab5d5f38036
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="visual-studio-ide-feature-tour"></a>Visual Studio IDE 기능 둘러보기
@@ -68,7 +68,7 @@ Visual Studio는 더 많은 작업을 수행하는 데 도움을 줄 수 있습�
 
 이제 Visual Studio는 그 어느 때보다도 가벼워졌습니다! 새로운 모듈식 설치 관리자를 사용하면 선호하는 프로그래밍 언어 또는 플랫폼에 필요한 기능 그룹인 *작업*을 선택하여 설치할 수 있습니다. 이 전략을 통해 Visual Studio 설치에 필요한 공간을 이전보다 더 작게 유지할 수 있습니다. 즉 Visual Studio를 설치하고 업데이트하는 속도가 매우 빨라집니다.
 
-![Visual Studio 설치 관리자](../install/media/vs2017-workloads.png)
+![Visual Studio 설치 관리자](../ide/media/vside_tour_install_dialog.png)
 
 향상된 설치 성능 외에도 Visual Studio 2017에서 전반적인 IDE 시작 및 솔루션 로드 시간을 향상시키기 위해 많은 개선이 이루어졌습니다. 예를 들어 **도구**, **옵션**, **프로젝트 및 솔루션**의 주 메뉴에 있는 새로운 경량 솔루션 로드 기능을 선택하면 더 큰 솔루션을 더 빨리 로드할 수 있습니다. 시스템에 Visual Studio를 설치하는 방법에 대한 자세한 내용은 [Visual Studio 2017 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio)를 참조하세요.
 
@@ -83,6 +83,8 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 1. Visual Studio를 엽니다. 메뉴에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다. 기본 프로젝트 값을 사용합니다.
 
   ![스크린샷](../ide/media/VSIDE_Tour_NewProject1.png)
+
+  대신 시작 페이지를 사용하여 새 프로젝트를 만들 수 있습니다. 자세한 내용은 [새롭게 디자인된 시작 페이지(블로그)의 장점 활용](https://blogs.msdn.microsoft.com/visualstudio/2016/11/29/harness-the-power-of-the-redesigned-start-page/)을 참조하세요.
 
 1. **새 프로젝트** 대화 상자에는 여러 프로젝트 템플릿이 표시됩니다. **Visual C#**에서 **Windows 유니버설** 범주를 선택하고, **비어 있는 앱(유니버설 Windows)** 템플릿을 선택한 다음, **확인** 단추를 선택합니다.
 
@@ -130,7 +132,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
   물론, 지금 당장은 아니지만, 원하는 경우 나중에 더 많은 기능을 추가할 수 있습니다.
 
-1. 프로그램 실행을 완료했으면 도구 모음에서 중지(![중지 단추](../ide/media/VSIDE_StopButton.png)) 단추를 선택하여 중지합니다.
+1. 프로그램 실행이 완료되면 도구 모음에서 [중지](![중지 단추](../ide/media/VSIDE_StopButton.png))를 선택하여 중지합니다.
 
 지금까지 수행한 작업을 정리해 보겠습니다. Visual Studio에서 새로운 C# Windows 유니버설 프로젝트를 만들고, 코드를 보고, 컨트롤을 디자이너에 추가하고, 일부 XAML 코드를 변경한 다음, 프로젝트를 실행했습니다. 여기서는 이 예제의 프로세스가 간소화되었지만, 자신의 앱을 개발할 때 사용할 Visual Studio IDE의 몇 가지 일반적인 부분을 보여 주었습니다. 이 예제에 대한 자세한 내용은 ["Hello, world" 앱 만들기(XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)을 참조하세요.
 
@@ -193,16 +195,15 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
   ![System.Timer를 보여 주는 개체 브라우저](../ide/media/objectbrowser.png)  
 
-## <a name="collaborate-with-others-and-control-your-source-code"></a>다른 사용자와 공동 작업 및 원본 코드 제어
-GitHub를 포함한 모든 공급자가 호스팅하는 Git 리포지토리에서 원본 코드를 관리할 수 있습니다. 또는 [VSTS(Visual Studio Team Services)](https://www.visualstudio.com/team-services/)를 사용하여 전체 프로젝트의 버그 및 작업 항목과 함께 코드를 관리합니다.
+## <a name="manage-your-source-code-and-collaborate-with-others"></a>소스 코드 관리 및 다른 사용자와 공동 작업
+GitHub를 포함한 모든 공급자가 호스팅하는 Git 리포지토리에서 원본 코드를 관리할 수 있습니다. 또는 [VSTS(Visual Studio Team Services)](https://www.visualstudio.com/team-services/)를 사용하여 전체 프로젝트의 버그 및 작업 항목과 함께 코드를 관리합니다. Visual Studio에서 팀 탐색기를 사용하여 Git 리포지토리를 관리하는 방법에 대해 알아보려면 [Git 및 Team Services 시작하기](https://www.visualstudio.com/en-us/docs/git/gitquickstart-vs2017)를 참조하세요.  Visual Studio에는 기본 제공된 다른 소스 제어 기능이 있습니다. 이에 대한 자세한 내용은 [Visual Studio 2017의 새로운 Git 기능(블로그)](https://blogs.msdn.microsoft.com/visualstudioalm/2017/03/06/new-git-features-in-visual-studio-2017/)을 참조하세요.
 
 VSTS는 소프트웨어 프로젝트를 호스팅하고 팀 공동 작업을 수행할 수 있는 클라우드 기반 서비스입니다. VSTS는 Git 및 Team Foundation 소스 제어 시스템과 Scrum, CMMI 및 Agile 개발 방법론을 지원합니다. TFVC(Team Foundation 버전 제어)는 하나의 중앙 집중식 서버 리포지토리를 사용하여 파일을 추적하고 버전을 관리합니다. 다른 개발자가 최신 변경 내용을 가져올 수 있는 중앙 서버에 로컬 변경 내용이 항상 체크 인됩니다.
 
 TFS(Team Foundation Server)는 Visual Studio용 응용 프로그램 수명 주기 관리 허브입니다. 개발 프로세스와 관련된 모든 사람이 단일 솔루션을 사용하여 참여할 수 있도록 해줍니다. TFS는 성격이 다른 팀과 프로젝트들을 관리하는 데 유용합니다.
 
-네트워크에 Visual Studio Team Services 계정 또는 Team Foundation Server가 있는 경우 Visual Studio의 [팀 탐색기] 창을 통해 연결합니다. 이 창에서 코드를 소스 제어에 체크 인 또는 체크 아웃하고, 작업 항목을 관리하고, 빌드를 시작하고, 단체 방 및 작업 영역에 액세스할 수 있습니다. **빠른 실행** 상자나 **보기, 팀 탐색기** 또는 **팀, 연결 관리**의 주 메뉴에서 [팀 탐색기]를 열 수 있습니다.  
-
-다음 이미지는 VSTS에서 호스팅되는 솔루션에 대한 [팀 탐색기] 창을 보여 줍니다.
+네트워크에 Visual Studio Team Services 계정 또는 Team Foundation Server가 있는 경우 Visual Studio의 [팀 탐색기] 창을 통해 연결합니다. 이 창에서 코드를 소스 제어에 체크 인 또는 체크 아웃하고, 작업 항목을 관리하고, 빌드를 시작하고, 단체 방 및 작업 영역에 액세스할 수 있습니다. **빠른 실행** 상자나 **보기, 팀 탐색기** 또는 **팀, 연결 관리**의 주 메뉴에서 [팀 탐색기]를 열 수 있습니다.
+다음 이미지는 VSTS에서 호스트되는 솔루션에 대한 팀 탐색기 창을 보여 줍니다.
 
 ![Visual Studio 팀 탐색기](../ide/media/vs2017_teamexplorer.png)  
 
@@ -232,7 +233,8 @@ Visual Studio의 **SQL Server 개체 탐색기**는 SQL Server Management Studio
 요구되는 적절한 기능이 Visual Studio에 없으면 추가할 수 있습니다! 워크플로와 스타일에 따라 IDE를 개인 설정하고, Visual Studio와 아직 통합되지 않은 외부 도구에 대한 지원을 추가하고, 기존 기능을 수정하여 생산성을 높일 수 있습니다. Visual Studio는 Microsoft, 파트너 및 커뮤니티로부터 도구, 컨트롤 및 템플릿을 제공합니다. Visual Studio 확장에 대한 자세한 내용은 [Visual Studio IDE 확장](https://www.visualstudio.com/vs/extend/)을 참조하세요.
 
 ## <a name="learn-more-and-find-out-whats-new"></a>새로운 기능에 대한 자세한 정보 확인
-Visual Studio를 처음 사용하는 경우 [Visual Studio 시작](../ide/get-started-with-visual-studio.md)으로 기본 기능에 대해 알아보거나 [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033)에서 제공하는 무료 Visual Studio 과정을 확인해 보세요. Visual Studio 2017의 새로운 기능을 확인하려면 [Visual Studio 2017의 새로운 기능](../ide/whats-new-in-visual-studio.md)을 참조하세요.
+Visual Studio를 사용해 본 적이 없다면 [Visual Studio 시작](../ide/get-started-with-visual-studio.md)으로 기본 기능에 대해 알아보거나 [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033)에서 제공하는 무료 Visual Studio 과정을 확인해 보세요.
+Visual Studio 2017의 새로운 기능을 확인하려면 [Visual Studio 2017의 새로운 기능](../ide/whats-new-in-visual-studio.md)을 참조하세요.
 
 Visual Studio IDE 둘러보기를 완료하신 것을 축하합니다! 주요 기능 중 유용한 일부에 대해 알아보았습니다.
 

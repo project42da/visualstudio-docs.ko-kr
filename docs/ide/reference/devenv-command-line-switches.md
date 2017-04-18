@@ -1,31 +1,50 @@
 ---
-title: "Devenv 명령줄 스위치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "응용 프로그램[Visual Studio], 실행"
-  - "빌드[Team System], 명령줄"
-  - "명령줄[Visual Studio], 스위치"
-  - "명령줄 스위치, Devenv"
-  - "컴파일러, Devenv 명령"
-  - "소스 코드 컴파일, Devenv"
-  - "Devenv"
-  - "Devenv, 스위치의 구문 및 목록"
-  - "환경, Devenv 명령"
-  - "스위치"
-  - "스위치, Devenv"
+title: "Devenv 명령줄 스위치 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- switches, Devenv
+- builds [Team System], command-line
+- applications [Visual Studio], executing
+- compiling source code, Devenv
+- command-line switches, Devenv
+- command line [Visual Studio], switches
+- Devenv
+- environment, Devenv commands
+- compilers, Devenv commands
+- switches
+- Devenv, syntax and list of switches
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
 caps.latest.revision: 33
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 5666566315e94f109c5ca214dcf5b2a539911203
+ms.lasthandoff: 04/05/2017
+
 ---
 # <a name="devenv-command-line-switches"></a>Devenv 명령줄 스위치
 Devenv를 사용하면 IDE(통합 개발 환경)에 대한 다양한 옵션을 설정하고 명령줄에서 프로젝트를 빌드, 디버그 및 배포할 수도 있습니다. 이러한 스위치를 사용하여 스크립트 또는 .bat 파일(예: 야간 빌드 스크립트)에서 IDE를 실행하거나 특정 구성으로 IDE를 시작할 수 있습니다.  
@@ -73,7 +92,7 @@ Devenv를 사용하면 IDE(통합 개발 환경)에 대한 다양한 옵션을 �
 |[/Log (devenv.exe)](../../ide/reference/log-devenv-exe.md)|[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 시작하고 모든 작업을 로그 파일에 기록합니다.|  
 |[/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md) or `/r`|지정한 솔루션을 컴파일하고 실행합니다.|  
 |[/Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)|지정한 솔루션을 컴파일 및 실행하고, 솔루션 실행 시 IDE를 최소화하고, 솔루션 실행이 완료되면 IDE를 닫습니다.|  
-|[/UseEnv (devenv.exe)](../../ide/reference/useenv-devenv-exe.md)|IDE에서 **옵션** 대화 상자, **프로젝트** 옵션의 VC++ 디렉터리 섹션에 지정된 설정 대신 PATH, INCLUDE 및 LIB 환경 변수를 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 컴파일에 사용하도록 합니다. 자세한 내용은 [명령줄 빌드에 맞는 경로 및 환경 변수 설정](/visual-cpp/build/setting-the-path-and-environment-variables-for-command-line-builds)을 참조하세요.|  
+|[/UseEnv (devenv.exe)](../../ide/reference/useenv-devenv-exe.md)|IDE에서 **옵션** 대화 상자, **프로젝트** 옵션의 VC++ 디렉터리 섹션에 지정된 설정 대신 PATH, INCLUDE 및 LIB 환경 변수를 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 컴파일에 사용하도록 합니다. 자세한 내용은 [명령줄 빌드에 맞는 경로 및 환경 변수 설정](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds)을 참조하세요.|  
 |[/Edit (devenv.exe)](../../ide/reference/edit-devenv-exe.md)|이 응용 프로그램의 실행 중인 인스턴스에서 지정한 파일을 엽니다. 실행 중인 인스턴스가 없으면 간단한 창 레이아웃을 사용하여 새 인스턴스를 시작합니다.|  
 |[/ResetAddin (devenv.exe)](../../ide/reference/resetaddin-devenv-exe.md)|지정한 추가 기능을 로드하지 않고 Visual Studio IDE 인스턴스를 시작합니다.|  
 |[/SafeMode (devenv.exe)](../../ide/reference/safemode-devenv-exe.md)|안전 모드에서 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 시작하고 기본 환경 및 서비스와 타사 패키지의 배송된 버전만 로드합니다.|  
@@ -100,8 +119,3 @@ Devenv를 사용하면 IDE(통합 개발 환경)에 대한 다양한 옵션을 �
   
 ## <a name="see-also"></a>참고 항목  
  [옵션 대화 상자, 환경, 일반](../../ide/reference/general-environment-options-dialog-box.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -2,7 +2,7 @@
 title: "Visual Studio 2017용 오프라인 설치 관리자 만들기 | Microsoft Docs"
 description: "Visual Studio용 오프라인 설치 관리자를 만드는 방법에 대해 알아봅니다."
 ms.custom: 
-ms.date: 03/21/2017
+ms.date: 04/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
-ms.openlocfilehash: 563c78a49eb55886b1ddbd4f437951c99c6568e5
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 4e33dc3ebb32569b547aa9bcb6db9a15dbe4fc21
+ms.openlocfilehash: fda1a4fbfebd856312174fe24ff161b0e9d04bb9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="create-an-offline-installer-for-visual-studio-2017"></a>Visual Studio 2017용 오프라인 설치 관리자 만들기
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/22/2017
 - Visual Studio Professional의 경우 다음을 실행합니다. <br> ```vs_professional.exe --layout c:\vs2017offline```
 - Visual Studio Community의 경우 다음을 실행합니다. <br> ```vs_community.exe --layout c:\vs2017offline```
 
-더 많은 예제를 보려면 이 페이지의 [오프라인 설치 관리자를 사용자 지정하는 방법](#how-to-customize-your-offline- installer) 섹션을 참조하세요.
+더 많은 예제를 보려면 이 페이지의 [오프라인 설치 관리자를 사용자 지정하는 방법](#how-to-customize-your-offline-installer) 섹션을 참조하세요.
 
 ## <a name="install-from-the-offline-installation-folder"></a>오프라인 설치 폴더에서 설치
 지금 또는 나중에 오프라인 설치를 실행합니다. 사용자가 선택하는 것이지만, 그러한 경우 다음 단계를 따르세요.
@@ -98,6 +98,7 @@ ms.lasthandoff: 03/22/2017
 
 | 문제       | 항목                   | 솔루션 |
 | ----------- | ---------------------- | -------- |
+| Visual Studio 설치 관리자에서 “설치가 완료되었지만 경고가 발생했습니다.” 메시지가 나타나고 Windows 에뮬레이터가 설치되지 않습니다. | Windows 10 에뮬레이터 | Visual Studio의 오프라인 설치 폴더를 열고 “Win10_Emulator_10.0.15063,version=10.0.15063.12,chip=x64” 하위 폴더로 이동한 후 EmulatorSetup.exe를 실행하여 Windows 에뮬레이터를 설치합니다. |
 | 일부 구성 요소 및 패키지를 설치할 수 없다는 경고 메시지가 나타납니다.  | Android SDK 설치(API 수준) | Android SDK(API 수준) 패키지를 포함하려면 오프라인 설치 관리자를 만들 때 인터넷에 연결되어 있어야 합니다. 제한된 네트워크에 있는 경우 다음 URL에 대한 액세스를 허용해야 합니다. <br><br> - http://dl.google.com:443 <br> - http://dl-ssl.google.com:443 <br>  - https://dl-ssl.google.com/android/repository/*<br><br>가능한 프록시 설정 문제를 해결하는 방법에 대한 자세한 내용은 [Visual Studio install failures (Android SDK Setup) behind a Proxy](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/)(프록시를 사용하는 경우의 Visual Studio 설치 오류(Android SDK 설치)) 블로그 게시물을 참조하세요.  |  
 | 사용자에게 파일에 액세스할 수 있는 권한이 없습니다. | 권한(ACL) | 오프라인 설치를 공유하기 *전에* 먼저 다른 사용자에게 읽기 액세스 권한을 부여하도록 권한(ACL)을 조정해야 합니다. |
 | 새 작업, 구성 요소 또는 언어가 설치되지 않습니다.  | `--layout`  | 부분 레이아웃에서 설치하고 이전 레이아웃에서 사용할 수 없는 작업, 구성 요소 또는 언어를 선택하는 경우 인터넷에 액세스할 수 있는지 확인합니다. |

@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 6de96c79f998cc53fe4230e902fc927b72745d3f
-ms.openlocfilehash: 79391c494271c55a677dc5071139d27c473a6e88
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 89ce216f1273678adf9b97ff789c7d48f3130d77
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Configuring Warnings in Visual Basic
@@ -140,4 +140,4 @@ ms.lasthandoff: 02/22/2017
  [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)   
  [/warnaserror(Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)   
  [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)   
- [기본적으로 해제되어 있는 컴파일러 경고](/visual-cpp/preprocessor/compiler-warnings-that-are-off-by-default)
+ [기본적으로 해제되어 있는 컴파일러 경고](/cpp/preprocessor/compiler-warnings-that-are-off-by-default)

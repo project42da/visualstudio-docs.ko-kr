@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/07/2017
+ms.date: 04/07/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -33,9 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: 82010bee0c2d80e8b91e9ba2cc5d664d0e91bc12
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 293d694cfff4c375b342d8322483c84fbbeb446c
+ms.openlocfilehash: d6ffa77642cb03bbea777e5caf23913d1ba3386e
+ms.lasthandoff: 04/07/2017
 
 ---
 
@@ -45,6 +45,7 @@ ms.lasthandoff: 03/07/2017
 * [Visual Studio Enterprise 2017](workload-component-id-vs-enterprise.md)
 * [Visual Studio Professional 2017](workload-component-id-vs-professional.md)
 * [Visual Studio Community 2017](workload-component-id-vs-community.md)
+* [Visual Studio Team Explorer 2017](workload-component-id-vs-team-explorer.md)
 * [Visual Studio Build Tools 2017](workload-component-id-vs-build-tools.md)
 * [Visual Studio Test Agent 2017](workload-component-id-vs-test-agent.md)
 * [Visual Studio Test Controller 2017](workload-component-id-vs-test-controller.md)
@@ -54,6 +55,8 @@ ms.lasthandoff: 03/07/2017
 이러한 목록을 사용하는 방법에 대한 자세한 내용은 [명령줄 매개 변수를 사용하여 Visual Studio 2017 설치](use-command-line-parameters-to-install-visual-studio.md) 페이지 및 [방법: 확장성 프로젝트를 Visual Studio 2017로 마이그레이션](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) 페이지를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
-* [Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
-* [Visual Studio의 오프라인 설치 만들기](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio 2017용 Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
+* [Visual Studio 2017의 오프라인 설치 만들기](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio 2017 설치에 대한 명령줄 매개 변수 예](command-line-parameter-examples.md)
+* [Visual Studio 2017의 문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

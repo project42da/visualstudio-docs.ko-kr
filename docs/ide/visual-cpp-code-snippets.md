@@ -1,38 +1,54 @@
 ---
-title: "Visual C# 코드 조각 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visual C++ 코드 조각 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74e26fd4-e5ca-4611-a816-0a521b4947a0
 caps.latest.revision: 2
-caps.handback.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Visual C# 코드 조각
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: b4d0801f9e3924fd801f30b750d0f5dbfca634fd
+ms.lasthandoff: 04/05/2017
 
-Visual Studio에서 코드 조각을 사용하여 일반적으로 사용되는 코드를 C\+\+ 코드 파일에 추가할 수 있습니다.  일반적으로 C\#에서와 거의 같은 방법으로 코드 조각을 사용하지만 기본 코드 조각 집합은 서로 다릅니다.  
+---
+# <a name="visual-c-code-snippets"></a>Visual C# 코드 조각
+Visual Studio에서 코드 조각을 사용하여 일반적으로 사용되는 코드를 C++ 코드 파일에 추가할 수 있습니다. 일반적으로 C#에서와 거의 같은 방법으로 코드 조각을 사용하지만 기본 코드 조각 집합은 서로 다릅니다.  
   
- 코드의 특정 위치에 코드 조각을 추가하거나\(삽입\) 몇몇 선택된 코드를 코드 조각으로 감쌀 수 있습니다.  
+ 코드의 특정 위치에 코드 조각을 추가하거나(삽입) 몇몇 선택된 코드를 코드 조각으로 감쌀 수 있습니다.  
   
-## 코드 조각 삽입  
- 코드 조각을 삽입하려면 C\+\+ 코드 파일\(.cpp or .h\)을 열고, 파일 내에서 아무 곳이나 클릭하고, 다음의 하나를 수행합니다.  
+## <a name="inserting-a-code-snippet"></a>코드 조각 삽입  
+ 코드 조각을 삽입하려면 C++ 코드 파일(.cpp or .h)을 열고, 파일 내에서 아무 곳이나 클릭하고, 다음의 하나를 수행합니다.  
   
--   마우스 오른쪽 단추를 클릭하여 컨텍스트 메뉴를 표시하고 **조각 삽입**을 선택합니다.  
+-   마우스 오른쪽 단추를 클릭하여 상황에 맞는 메뉴를 표시하고 **코드 조각 삽입**을 선택합니다.  
   
--   **편집\/IntelliSense** 메뉴에서 **조각 삽입**을 선택합니다.  
+-   **편집/IntelliSense** 메뉴에서 **코드 조각 삽입**을 선택합니다.  
   
--   바로 가기 키 CTRL\+K\+X를 사용합니다.  
+-   바로 가기 키 **Ctrl+K+X**를 사용합니다.  
   
- **\#if**로 시작하는 선택 항목 목록이 표시되어야 합니다.  **\#if**를 선택하면 파일에 추가된 다음 코드가 표시되어야 합니다.  
+ **#if**로 시작하는 선택 항목 목록이 표시되어야 합니다. **#if**를 선택하면 다음 코드가 파일에 추가됩니다.  
   
 ```cpp  
 #if 0  
@@ -42,16 +58,16 @@ Visual Studio에서 코드 조각을 사용하여 일반적으로 사용되는 �
   
  0을 올바른 조건으로 바꿀 수 있습니다.  
   
-## 코드 조각을 사용하여 선택한 코드 감싸기  
+## <a name="using-a-code-snippet-to-surround-selected-code"></a>코드 조각을 사용하여 선택한 코드 감싸기  
  코드 조각을 사용하여 선택한 코드를 감싸려면 한 줄이나 여러 줄을 선택하고 다음의 하나를 수행합니다.  
   
-1.  마우스 오른쪽 단추를 클릭하여 컨텍스트 메뉴를 표시하고 **코드 감싸기**를 선택합니다.  
+1.  마우스 오른쪽 단추를 클릭하여 상황에 맞는 메뉴를 표시하고 **코드 감싸기**를 선택합니다.  
   
-2.  **편집\/IntelliSense** 메뉴에서 **코드 감싸기**를 선택합니다.  
+2.  **편집/IntelliSense** 메뉴에서 **코드 감싸기**를 선택합니다.  
   
-3.  바로 가기 키 CTRL\+K\+S를 사용합니다.  
+3.  바로 가기 키 **Ctrl+K+S**를 사용합니다.  
   
- **\#if**를 선택합니다.  다음과 같이 표시되어야 합니다.  
+ **#if**를 선택합니다. 다음과 같이 표시되어야 합니다.  
   
 ```cpp  
 #if 0  
@@ -61,13 +77,13 @@ Visual Studio에서 코드 조각을 사용하여 일반적으로 사용되는 �
   
  0을 올바른 조건으로 바꿀 수 있습니다.  
   
-## C\+\+ 코드 조각의 전체 목록이 있는 위치  
- C\+\+ 코드 조각의 전체 목록을 찾으려면 **도구** 메뉴에서 **코드 조각 관리자**로 이동하고 **언어**를 **Visual C\+\+**로 설정합니다.  아래 창에서 **Visual C\+\+**를 확장합니다.  모든 C\+\+ 코드 조각의 이름이 사전순으로 표시되어야 합니다.  
+## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>C++ 코드 조각의 전체 목록이 있는 위치  
+ C++ 코드 조각의 전체 목록을 찾으려면 **도구** 메뉴에서 **코드 조각 관리자**로 이동하고 **언어**를 **Visual C++**로 설정합니다. 아래 창에서 **Visual C++**를 확장합니다. 모든 C++ 코드 조각의 이름이 사전순으로 표시되어야 합니다.  
   
  대부분 코드 조각의 이름은 이름 자체로 설명되지만 일부 이름은 혼동될 수 있습니다.  
   
-## Class 및classi  
- **class** 조각은 MyClass 클래스의 정의를 해당하는 기본 생성자 및 소멸자와 함께 제공합니다. 여기서 생성자와 소멸자는 클래스 외부에 있습니다.  
+## <a name="class-vs-classi"></a>class 및 classi  
+ **class** 코드 조각은 MyClass 클래스의 정의를 해당하는 기본 생성자 및 소멸자와 함께 제공합니다. 여기서 생성자와 소멸자는 클래스 외부에 있습니다.  
   
 ```cpp  
 class MyClass  
@@ -108,10 +124,10 @@ private:
 };  
 ```  
   
-## For 및Foreachforr 및 rfor  
+## <a name="for-vs-foreach-vs-forr-vs-rfor"></a>for, foreach, forr 및 rfor  
  다양한 for 루프를 제공하는 네 가지 조각이 있습니다.  
   
- **for** 조각은 조건이 개체의 길이\(`size_t`\)에 기반을 둔 `for` 루프를 제공합니다.  
+ **for** 코드 조각은 조건이 개체의 길이(`size_t`)에 기반을 둔 `for` 루프를 제공합니다.  
   
 ```cpp  
 for (size_t i = 0; i < length; i++)  
@@ -120,7 +136,7 @@ for (size_t i = 0; i < length; i++)
 }  
 ```  
   
- **foreach** 조각은 컬렉션의 멤버를 반복하는 `for each` 루프를 제공합니다.  
+ **foreach** 코드 조각은 컬렉션의 멤버를 반복하는 `for each` 루프를 제공합니다.  
   
 ```cpp  
 for each (object var in collection_to_loop)  
@@ -129,7 +145,7 @@ for each (object var in collection_to_loop)
 }  
 ```  
   
- **forr** 조각은 조건이 개체의 길이\(정수\)에 기반을 둔 역방향 `for` 루프를 제공합니다.  
+ **forr** 코드 조각은 조건이 개체의 길이(정수)에 기반을 둔 역방향 `for` 루프를 제공합니다.  
   
 ```cpp  
 for (int i = length - 1; i >= 0; i--)  
@@ -138,7 +154,7 @@ for (int i = length - 1; i >= 0; i--)
 }  
 ```  
   
- **rfor** 조각은 [범위 기반](/visual-cpp/cpp/range-based-for-statement-cpp) for 루프\(링크\)를 제공합니다.  
+ **rfor** 코드 조각은 [범위 기반](/cpp/cpp/range-based-for-statement-cpp) for 루프(링크)를 제공합니다.  
   
 ```cpp  
 for (auto& i : v)  
@@ -147,8 +163,8 @@ for (auto& i : v)
 }  
 ```  
   
-## 소멸자 조각\(~\)  
- 소멸자 조각\(**~**\)은 다양한 컨텍스트에서 다양한 동작을 보여 줍니다.  이 조각을 클래스 내부에 삽입하면 이 조각이 해당 클래스에 대한 소멸자를 제공합니다.  예를 들어, 다음과 같이 코드를 가정합니다.  
+## <a name="the-destructor-snippet-"></a>소멸자 조각(~)  
+ 소멸자 코드 조각(**~**)은 다양한 컨텍스트에서 다양한 동작을 보여 줍니다. 이 조각을 클래스 내부에 삽입하면 이 조각이 해당 클래스에 대한 소멸자를 제공합니다. 예를 들어, 다음과 같이 코드를 가정합니다.  
   
 ```cpp  
 class SomeClass {  

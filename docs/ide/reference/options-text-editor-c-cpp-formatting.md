@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: f70339a150a53d346ab9a6f59b4b1634263f5b9e
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 80ce7de7e89844d8c9cb1052499b2d873e04965e
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="options-text-editor-cc-formatting"></a>옵션, 텍스트 편집기, C/C++, 서식
@@ -81,16 +81,16 @@ C 또는 C++로 프로그래밍할 때 코드 편집기의 기본 동작을 변�
  파일을 텍스트 편집기로 가져오면 개요 기능을 사용할 수 있습니다. 자세한 내용은 [개요](../../ide/outlining.md)를 참조하세요. 이 옵션을 선택하고 파일을 열면 개요 기능이 활성화됩니다.  
   
  **#pragma 영역 블록을 자동으로 개요 표시**  
- 이 옵션을 선택하면 [pragma 지시문](/visual-cpp/preprocessor/pragma-directives-and-the-pragma-keyword)의 자동 개요 표시를 사용할 수 있습니다. 개요 모드에서 이 pragma 영역 블록을 확장하거나 축소할 수 있습니다.  
+ 이 옵션을 선택하면 [pragma 지시문](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword)의 자동 개요 표시를 사용할 수 있습니다. 개요 모드에서 이 pragma 영역 블록을 확장하거나 축소할 수 있습니다.  
   
  **문 블록을 자동으로 개요 표시**  
  이 옵션이 선택되면 다음 구문에 대해 자동 개요가 활성화됩니다.  
   
 -   [if-else](/dotnet/csharp/language-reference/keywords/if-else)  
   
--   [switch 문(C++)](/visual-cpp/cpp/switch-statement-cpp)  
+-   [switch 문(C++)](/cpp/cpp/switch-statement-cpp)  
   
--   [while 문(C++)](/visual-cpp/cpp/while-statement-cpp)  
+-   [while 문(C++)](/cpp/cpp/while-statement-cpp)  
   
 ## <a name="see-also"></a>참고 항목  
  [옵션 대화 상자, 환경, 일반](../../ide/reference/general-environment-options-dialog-box.md)   

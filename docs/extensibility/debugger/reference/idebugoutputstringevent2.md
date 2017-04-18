@@ -1,62 +1,78 @@
 ---
-title: "IDebugOutputStringEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugOutputStringEvent2"
-helpviewer_keywords: 
-  - "IDebugOutputStringEvent2 인터페이스"
+title: IDebugOutputStringEvent2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugOutputStringEvent2
+helpviewer_keywords:
+- IDebugOutputStringEvent2 interface
 ms.assetid: 86596fd1-cecc-4813-8add-dc3d70068f9b
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugOutputStringEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 42a3b630a501a379d38a53f942c0aceb494d94d7
+ms.lasthandoff: 04/05/2017
 
-이 인터페이스는 디버그 엔진 \(DE\) 세션 디버그 매니저 \(SDM\) 문자열 출력에 전송 됩니다.  
+---
+# <a name="idebugoutputstringevent2"></a>IDebugOutputStringEvent2
+이 인터페이스는 디버그 엔진 (DE)에 의해 세션 디버그 관리자 (SDM)를 출력으로 보내고 문자열  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugOutputStringEvent2 : IUnknown  
 ```  
   
-## 구현자 참고 사항  
- DE 보내는 문자열에이 인터페이스를 구현 합니다.는  **출력** ide 창입니다.  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 이 인터페이스와 같은 개체에서 인터페이스를 구현 해야 합니다.  SDM을 사용 하 여 [QueryInterface](/visual-cpp/atl/queryinterface) 액세스 하는 `IDebugEvent2` 인터페이스입니다.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ DE 문자열을 보내는이 인터페이스를 구현 하는 **출력** IDE의 창. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 해당이 인터페이스와 같은 개체에 대해 인터페이스를 구현 해야 합니다. SDM 사용 하 여 [QueryInterface](/cpp/atl/queryinterface) 액세스로는 `IDebugEvent2` 인터페이스입니다.  
   
-## 호출자에 대 한 참고 사항  
- DE를 만들어이 이벤트 개체는 문자열을 보낼 수를 보내는  **출력** 창입니다.  이벤트를 사용 하 여 전송 되는 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 디버깅 중인 프로그램에 연결 되 면 SDM가 제공 되는 콜백 함수입니다.  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ DE을 만들고이 이벤트 개체를 문자열 보내는 보냅니다는 **출력** 창. 이벤트를 사용 하 여 보내집니다는 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 디버깅 중인 프로그램에 연결 될 때은 SDM에서 제공 되는 콜백 함수입니다.  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDebugOutputStringEvent2`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugOutputStringEvent2`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
+|------------|-----------------|  
 |[GetString](../../../extensibility/debugger/reference/idebugoutputstringevent2-getstring.md)|표시할 수 있는 메시지를 가져옵니다.|  
   
-## 설명  
- 예를 들어, 디버깅 중인 프로그램을 Win32 문자열 보낼 때 관리 되지 않는 코드에서 출력 될 문자열 시작 될 수 있습니다 `OutputDebugString` 함수입니다.  이 문자열 DE 여 가로채서 SDM로 전송의 `IDebugOutputStringEvent2` 이벤트입니다.  
+## <a name="remarks"></a>주의  
+ 예를 들어 비관리 코드에서 문자열에 출력을 가져올 수 있습니다 때 디버깅 중인 프로그램 win32 문자열을 보냅니다 `OutputDebugString` 함수입니다. 이 문자열은는 DE에 의해 차단 되 고으로 SDM 게는 `IDebugOutputStringEvent2` 이벤트입니다.  
   
- 사용 [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md) 사용자 응답을 요구 하는 메시지를 보낼 수 있습니다.  
+ 사용 하 여 [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md) 사용자 응답을 필요로 하는 메시지를 보내려고 합니다.  
   
- 사용 [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) 에 대 한 응답을 요구 하지 않는 오류 메시지를 보낼 수 있습니다.  
+ 사용 하 여 [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) 응답 필요 하지 않은 오류 메시지를 보내려고 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)   
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   

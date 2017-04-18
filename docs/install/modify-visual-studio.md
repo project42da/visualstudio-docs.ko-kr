@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 수정 | Microsoft Docs"
 description: "Visual Studio를 수정하는 방법을 단계별로 알아봅니다."
 ms.custom: H1Hack27Feb2017
-ms.date: 03/07/2017
+ms.date: 03/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7ba87c0ba023b76a1f992eb9af660decd0b80ccd
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
+ms.openlocfilehash: 183f5761e0b3159412d1da6bb4f30d716a4c41db
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>작업과 구성 요소를 추가하거나 제거하여 Visual Studio 2017 수정
@@ -52,6 +52,9 @@ ms.lasthandoff: 03/07/2017
      예를 들어 Windows 10 1주년 업데이트를 실행하는 컴퓨터에서 **시작**을 클릭한 다음 **V** 문자로 스크롤하면 **Visual Studio 설치 관리자**를 찾을 수 있습니다.  
 
      ![Visual Studio 설치 관리자](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio 설치 관리자 찾기")
+
+     >[!NOTE]
+     일부 컴퓨터에서는 Visual Studio 설치 관리자가 **Microsoft Visual Studio 설치 관리자**로 문자 **“M”** 아래에 나열될 수 있습니다.
 
 2.  설치 관리자를 클릭하거나 탭한 다음 **수정**을 선택합니다.  
 

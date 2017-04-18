@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7a282fc04c1eb01f0c56b1d76880276fc270686d
-ms.openlocfilehash: 96136c7223f3d5f78fff9bfe3106d48cab4dd44a
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 57f7d51786d2636eb865eb81bb3468e79c6f19f9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="security-in-visual-studio"></a>Visual Studio의 보안
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/01/2017
  [보안](http://msdn.microsoft.com/Library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)  
  .NET Framework 코드 액세스 보안, 역할 기반 보안, 보안 정책 및 보안 도구에 대해 설명합니다.  
   
- [Defend Your Code with Top Ten Security Tips Every Developer Must Know](http://go.microsoft.com/fwlink/?LinkId=72877)(모든 개발자가 알아야 할&10;가지 보안 팁으로 코드 보호하기)  
+ [Defend Your Code with Top Ten Security Tips Every Developer Must Know](http://go.microsoft.com/fwlink/?LinkId=72877)(모든 개발자가 알아야 할 10가지 보안 팁으로 코드 보호하기)  
  데이터나 시스템이 손상되지 않도록 감시해야 하는 문제에 대해 설명합니다.  
   
 ## <a name="coding-for-security"></a>보안 코딩  
@@ -54,7 +54,7 @@ ms.lasthandoff: 03/01/2017
  [보안 코딩 지침](http://msdn.microsoft.com/Library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)  
  보안 문제를 해결하기 위해 구성 요소를 분류하는 데 필요한 지침을 제공합니다.  
   
- [보안 모범 사례](/visual-cpp/top/security-best-practices-for-cpp)  
+ [보안 모범 사례](/cpp/top/security-best-practices-for-cpp)  
  /GS 컴파일 시간 플래그에서 제공하는 Microsoft Visual C++ 보안 검사 기능의 전체 개요 및 버퍼 오버런에 대해 설명합니다.
 
 ## <a name="building-for-security"></a>보안에 대해 빌드  
