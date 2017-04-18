@@ -31,15 +31,15 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 780c643c25f0d43ec0564e43bc50d2f36f1aee79
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 889d538b732b360b475788ec6d67b47920703c73
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="options-text-editor-cc-experimental"></a>옵션, 텍스트 편집기, C/C++, 실험적
-이러한 옵션을 변경하면 C 또는 C++에서 프로그래밍할 때 IntelliSense 및 검색 데이터베이스 관련 동작을 변경할 수 있습니다. 이러한 기능은 실험적이며 향후 릴리스의 Visual Studio에서 수정되거나 제거될 수 있습니다.  
+이러한 옵션을 변경하면 C 또는 C++에서 프로그래밍할 때 IntelliSense 및 검색 데이터베이스 관련 동작을 변경할 수 있습니다. 이러한 기능은 실험적이며 향후 릴리스의 Visual Studio에서 수정되거나 제거될 수 있습니다. 이 항목에서는 Visual Studio 2017의 옵션을 설명합니다. Visual Studio 2015의 경우 [옵션, 텍스트 편집기, C/C++, 실험적](https://msdn.microsoft.com/library/mt591979.aspx)을 참조하세요. 
   
- 이 페이지에 액세스하려면 왼쪽 창의 **옵션** 대화 상자에서 **텍스트 편집기**를 확장하고 **C/C++**를 확장한 다음 **실험적**을 선택합니다.  
+ 이 속성 페이지에 액세스하려면 **Ctrl+Q**를 눌러 `Quick Launch`를 활성화한 다음 "실험적"을 입력합니다. 빠른 실행에서 처음 몇 글자 페이지 다음의 페이지를 찾습니다. **도구 | 옵션**을 선택하고 **텍스트 편집기**, **C/C++**를 차례로 확장한 다음 **실험적**을 선택하여 액세스할 수도 있습니다.  
 
  이러한 기능은 Visual Studio 2017 설치에서 사용할 수 있습니다.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/27/2017
 예측 IntelliSense는 컨텍스트와 관련이 있는 결과만 표시되도록 IntelliSense 드롭다운 목록에 표시되는 결과의 수를 제한합니다. 예를 들어 <code>int x =</code>을 입력하고 IntelliSense 드롭다운을 호출하면 정수 또는 정수를 반환하는 함수만 표시됩니다. 예측 IntelliSense는 기본적으로 꺼져 있습니다.
 
 ## <a name="enable-faster-project-load"></a>빠른 프로젝트 로드 사용
-이 옵션은 “경량 솔루션 로드”라는 기능을 사용합니다. 경량 솔루션 로드를 사용할 경우 Visual Studio는 프로젝트가 실제로 필요하게 된 다음에야 프로젝트를 완전히 로드합니다. 코드베이스 탐색, 코드 편집, 프로젝트 빌드 등 많은 일반적인 작업은 프로젝트를 로드할 필요가 없습니다. 이 옵션을 사용할 경우 프로젝트가 로드될 때까지 기다리지 않고 이러한 일반적인 작업을 더욱 빠르게 시작할 수 있습니다.  
+이 옵션을 사용하면 다음에 프로젝트를 열 때 Visual Studio에서 프로젝트 데이터를 캐시할 수 있으며, 프로젝트 파일에서 다시 계산하지 않고 캐시한 데이터를 로드할 수 있습니다. 캐시한 데이터를 사용하면 프로젝트 로드 시간이 상당히 빨라집니다.  
 
 ## <a name="additional-features-in-the-visual-studio-gallery"></a>Visual Studio 갤러리의 추가 기능
 Visual Studio 갤러리의 추가 텍스트 편집기 기능은 [여기](http://go.microsoft.com/fwlink/?LinkId=692016)에서 목록을 참조하세요. 예제는 [C++ 빠른 조치 방법](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)(영문)이며, 다음을 지원합니다.  

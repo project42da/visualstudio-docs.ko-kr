@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Test Professional 2017 작업 및 구성 요소 ID | Microsoft Docs"
+title: "Visual Studio Team Explorer 2017 워크로드 및 구성 요소 ID | Microsoft Docs"
 description: "Visual Studio 작업 및 구성 요소 ID를 사용하여 테스터를 위한 통합된 테스트 도구를 제공합니다."
 keywords: 
 author: TerryGLee
@@ -15,7 +15,7 @@ ms.prod: visual-studio-dev15
 ms.service: 
 ms.technology:
 - vs-ide-install
-ms.assetid: 70c03438-8434-4921-ada0-c172519af431
+ms.assetid: c6ef9a3b-d13d-49b4-9faa-51fa06b21e1f
 translation.priority.ht:
 - de-de
 - es-es
@@ -32,13 +32,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: 130317d20e3da1a10634bd2be60df369f635aeb7
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: 293d694cfff4c375b342d8322483c84fbbeb446c
+ms.openlocfilehash: 7a4538f04e18630da5adeb8189716a5ac34f3c47
+ms.lasthandoff: 04/07/2017
 
 ---
 
-# <a name="visual-studio-test-professional-2017-component-directory"></a>Visual Studio Test Professional 2017 구성 요소 디렉터리
+# <a name="visual-studio-team-explorer-2017-component-directory"></a>Visual Studio Team Explorer 2017 구성 요소 디렉터리
 
 이 페이지의 표에는 명령줄을 사용하여 Visual Studio를 설치하는 데 사용할 수 있는 ID가 나열되어 있습니다. Visual Studio에 대한 업데이트를 릴리스할 때 추가 구성 요소가 추가될 것입니다.
 
@@ -50,18 +50,17 @@ ms.lasthandoff: 04/06/2017
 
 이러한 ID를 사용하는 방법에 대한 자세한 내용은 [명령줄 매개 변수를 사용하여 Visual Studio 2017 설치](use-command-line-parameters-to-install-visual-studio.md) 페이지를 참조하세요. 다른 제품의 작업 및 구성 요소 ID 목록은 [Visual Studio 2017 작업 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요.
 
-## <a name="test-professional"></a>Test Professional
+## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Visual Studio 핵심 편집기(Visual Studio Team Explorer 2017에 포함)
 
-**ID:** Microsoft.VisualStudio.Workload.TestProfessional
+**ID:** Microsoft.VisualStudio.Workload.CoreEditor
 
-**설명:** Test Professional은 테스터를 위한 통합된 테스트 도구를 제공하여 테스트 수명 주기 전반에 걸쳐 테스트 요구 사항에 맞게 작동합니다.
+**설명:** 구문 인식 코드 편집, 원본 코드 제어 및 작업 항목 관리를 포함하는 Visual Studio 핵심 셸 환경입니다.
 
 ### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
 
 구성 요소 ID | 이름 | 버전 | 종속성 유형
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft Test Manager | 15.0.26228.0 | 필수
+Microsoft.VisualStudio.Component.CoreEditor | Visual Studio 핵심 편집기 | 15.0.26208.0 | 필수
 ## <a name="unaffiliated-components"></a>독립적 구성 요소
 
 이러한 구성 요소는 작업에 포함되지 않지만 개별 구성 요소로 선택할 수 있습니다.
