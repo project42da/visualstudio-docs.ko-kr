@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 2017 업데이트 | Microsoft Docs"
 description: "Visual Studio를 업데이트하는 방법을 단계별로 알아봅니다."
-ms.date: 04/05/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -32,9 +32,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 4e33dc3ebb32569b547aa9bcb6db9a15dbe4fc21
-ms.openlocfilehash: 24c955a8c571ab0466f33de4d61fd8e65f8ef18c
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: d97358681ba486d75b30d59da1aba8b460c6f757
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Visual Studio 2017을 최신 릴리스 버전으로 업데이트
@@ -47,13 +47,15 @@ Microsoft는 기능을 확장하고 고객이 보고한 문제를 해결하기 �
 
   알림 플래그를 클릭하거나 눌러 **알림** 허브를 엽니다.
 
-  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](media/notification-center.png "Visual Studio의 알림 허브")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](media/notifications-hub.png "Visual Studio의 알림 허브")
 
-  그런 다음 **“Visual Studio 업데이트” 사용 가능**을 클릭하거나 눌러 **확장 및 업데이트** 대화 상자를 엽니다.
+2. **“Visual Studio 업데이트” 사용 가능**을 클릭하여 **확장 및 업데이트** 대화 상자를 엽니다.
 
-  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](media/notification-extension-and-updates.png "Visual Studio의 확장 및 업데이트 대화 상자")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](media/notifications-hub-select.png "Visual Studio의 알림 허브")
 
-2. **업데이트** 단추를 클릭하거나 누릅니다.
+3. **확장 및 업데이트** 대화 상자에서 **업데이트** 단추를 클릭하거나 탭합니다.
+
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](media/notifications-extensions-and-updates.png "Visual Studio의 확장 및 업데이트 대화 상자")
 
 ## <a name="update-by-using-the-visual-studio-installer"></a>Visual Studio 설치 관리자를 사용하여 업데이트
 1.    설치 관리자를 엽니다. 계속하기 전에 설치 관리자를 업데이트해야 할 수 있습니다. 이러한 경우라면 업데이트하라는 메시지가 나타납니다.
@@ -62,7 +64,9 @@ Microsoft는 기능을 확장하고 고객이 보고한 문제를 해결하기 �
 
 2.    설치 관리자의 **제품** 페이지에서 사용자가 설치한 Visual Studio의 버전을 확인합니다.
 
-3.    업데이트를 사용할 수 있는 경우에는 **업데이트** 단추가 표시됩니다. (설치 관리자가 업데이트를 사용할 수 있는지 여부를 확인하는 데 몇 초 정도 걸릴 수 있습니다.) **업데이트** 단추를 클릭하거나 눌러 업데이트를 설치합니다.
+3.    업데이트를 사용할 수 있는 경우에는 **업데이트** 단추가 표시됩니다. (설치 관리자가 업데이트를 사용할 수 있는지 여부를 확인하는 데 몇 초 정도 걸릴 수 있습니다.)
+
+  **업데이트** 단추를 클릭하거나 눌러 업데이트를 설치합니다.
 
      ![Visual Studio 설치 관리자를 사용하여 Visual Studio 2017 업데이트](media/update-visual-studio.png "Visual Studio 설치 관리자를 사용하여 Visual Studio 2017 업데이트")
 
@@ -71,7 +75,8 @@ Microsoft는 기능을 확장하고 고객이 보고한 문제를 해결하기 �
 
 ## <a name="see-also"></a>참고 항목
 * [Visual Studio 2017 설치](https://go.microsoft.com/fwlink/?linkid=833223)
-* [Visual Studio 수정](modify-visual-studio.md)
+* [Visual Studio 2017 수정](modify-visual-studio.md)
 * [Visual Studio 2017 제거](uninstall-visual-studio.md)
-* [Visual Studio 2017의 문제를 보고하는 방법](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+* [Visual Studio 2017용 Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
+* [Visual Studio 2017의 문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 
