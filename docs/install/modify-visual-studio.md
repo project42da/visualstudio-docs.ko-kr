@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 수정 | Microsoft Docs"
 description: "Visual Studio를 수정하는 방법을 단계별로 알아봅니다."
 ms.custom: H1Hack27Feb2017
-ms.date: 03/27/2017
+ms.date: 04/03/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
-ms.openlocfilehash: 183f5761e0b3159412d1da6bb4f30d716a4c41db
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
+ms.openlocfilehash: d1da76eee8295865740720e8575e7258b3719e7e
+ms.lasthandoff: 04/03/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>작업과 구성 요소를 추가하거나 제거하여 Visual Studio 2017 수정
@@ -72,6 +72,8 @@ ms.lasthandoff: 03/27/2017
 
 편리한 작업 기능을 사용하여 Visual Studio 설치를 사용자 지정하지 않으려는 경우 Visual Studio 설치 관리자에서 **개별 구성 요소** 옵션을 선택하고 원하는 구성 요소를 선택한 다음 프롬프트를 따릅니다.  
 
+## <a name="get-support"></a>지원 받기
+때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 실패 문제 해결](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) 기술 자료 문서에서 문제 해결 팁을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
 * [Visual Studio 2017 설치](https://go.microsoft.com/fwlink/?linkid=833223)
