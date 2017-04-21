@@ -29,13 +29,42 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
-ms.openlocfilehash: 8c13675dbd06111bb0eced77f9343c80959afba1
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 2af148cb8367ea3a584ac8e028c8167e4ad6123b
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>변경 로그(Visual Studio Tools for Unity)
 Visual Studio Tools for Unity에 대한 변경 로그입니다.  
+
+## <a name="3100"></a>3.1.0.0
+ 릴리스됨 2017-04-07
+
+### <a name="new-features"></a>새 기능  
+  
+-   **디버거:**  
+
+    -   새로운 Unity 런타임에 대한 지원(.NET 4.6/C# 6 호환성 포함)이 추가되었습니다.
+        
+-   **프로젝트 생성:**  
+
+    -   .NET 4.6 프로필에 대한 지원이 추가되었습니다.
+    
+    -   mcs.rsp 파일에 대한 지원이 추가되었습니다.
+    
+    -   Unity 5.6을 사용할 경우 안전하지 않은 컴파일 스위치를 항상 사용하도록 설정합니다.
+    
+    -   Windows 스토어 플랫폼 및 il2cpp 백 엔드를 사용할 경우 “Player” 프로젝트 생성에 대한 지원이 추가되었습니다.
+   
+### <a name="bug-fixes"></a>버그 수정  
+  
+-   **코드 편집기:**  
+
+    -   자동 완성을 사용하여 메서드를 편집한 후 캐럿 위치가 수정되었습니다.
+  
+-   **프로젝트 생성:**  
+  
+    -   어셈블리 버전 후 처리가 제거되었습니다.
 
 ## <a name="3001"></a>3.0.0.1
  릴리스됨 2017-03-07
@@ -103,7 +132,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
     
     -   문자열 concat 식에 대한 지원이 추가되었습니다.
     
-    -   정수 값의&16;진수 표시에 대한 지원이 추가되었습니다.
+    -   정수 값의 16진수 표시에 대한 지원이 추가되었습니다.
     
     -   새 임시 변수(문)를 만들기 위한 지원이 추가되었습니다.
     

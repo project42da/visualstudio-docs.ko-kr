@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구에서 코드 서식 지정 | Microsoft Docs"
+title: "Visual Studio에서 Python 코드 서식 지정 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,22 +29,22 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: c1d7a19438b796c5666daecef33052e43d1f720f
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: b9e1c2b6be671adb99a13e4a0eb4357fbba477b2
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="formatting-python-code"></a>Python 코드 서식 지정
 
-PTVS(Visual Studio용 Python 도구) 버전 2.0 이상의 코드 서식 지정에서는 미리 구성된 서식 지정 옵션에 맞게 코드 서식을 빠르게 다시 지정할 수 있습니다.
+Visual Studio에서는 미리 구성된 서식 옵션과 일치하도록 빠르게 코드 서식을 다시 지정할 수 있습니다.
 
 - 선택 항목의 서식을 지정하려면 **편집 > 고급 > 선택 영역 서식**을 선택하거나 Ctrl+E, F를 누릅니다.
 - 전체 파일의 서식을 지정하려면 **편집 > 고급 > 문서 서식**을 선택하거나 Ctrl+E, D를 누릅니다.
 
 옵션은 **도구 > 옵션 > 텍스트 편집기 > Python > 서식** 및 해당 하위 탭을 통해 설정되며, 기본적으로 [PEP 8 스타일 가이드](http://www.python.org/dev/peps/pep-0008/)의 상위 집합과 일치하도록 설정됩니다. **일반** 탭은 서식을 적용할 시기를 결정하며, 다른 세 개의 하위 페이지는 다음 섹션에서 정의됩니다.
 
-PTVS에는 아래에서 설명한 대로 **편집 > 고급** 메뉴에 유용한 [주석 단락 채우기](#fill-comment-paragraph) 명령도 추가되어 있습니다.
+Visual Studio의 Python 지원에는 아래에서 설명한 대로 **편집 > 고급** 메뉴에 유용한 [주석 단락 채우기](#fill-comment-paragraph-command) 명령도 추가되어 있습니다.
 
 ## <a name="spacing"></a>간격
 
@@ -109,7 +109,7 @@ PTVS에는 아래에서 설명한 대로 **편집 > 고급** 메뉴에 유용한
 
 ## <a name="wrapping"></a>줄 바꿈
 
-**줄 바꿈**은 **최대 주석 너비**(기본값: 80)를 설정할 수 있으므로 **너무 넓은 너비가 있는 주석 줄 바꿈** 옵션을 설정하는 경우 PTVS에서 최대 주석 너비를 초과하지 않도록 주석의 서식을 다시 지정합니다.
+**줄 바꿈**은 **최대 주석 너비**(기본값: 80)를 설정할 수 있으므로 **너무 넓은 주석 줄 바꿈** 옵션을 설정하는 경우 Visual Studio에서 최대 주석 너비를 초과하지 않도록 주석의 서식을 다시 지정합니다.
 
 ```python
 # Wrapped to 40 columns

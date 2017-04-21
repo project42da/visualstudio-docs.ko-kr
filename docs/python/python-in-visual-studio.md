@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
-ms.openlocfilehash: 746dd25dde790d5e262e25a3702b49721edc3510
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 06f5b9d2223ccb9cbbbff8f2960d89c8efbf05b2
+ms.openlocfilehash: 83a676c5f2f838b6920c5fafbe78dc9b49fbb4cb
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 03/22/2017
 
 Python은 안정적이고, 유연하고, 배우기 쉽고, 모든 운영 체제에서 무료로 사용할 수 있고, 강력한 개발자 커뮤니티에서 지원하고, 많은 무료 라이브러리가 제공되는 널리 사용되는 프로그래밍 언어입니다. Python은 웹 응용 프로그램, 웹 서비스, 데스크톱 앱, 스크립팅 및 과학적 컴퓨팅 등 모든 방식의 개발을 지원하며 대학, 과학자, 아마추어 개발자 및 전문 개발자 등 많은 분야에 사용됩니다. [python.org](https://www.python.org) 및 [Python for Beginners](https://www.python.org/about/gettingstarted/)(초보자를 위한 Python)에서 이 언어에 대해 자세히 알아볼 수 있습니다.
 
-Visual Studio는 Python 워크로드(Visual Studio 2017)와 무료 Visual Studio용 Python 도구 확장(Visual Studio 2015 및 이전 버전)을 통한 Python의 [오픈 소스](https://github.com/Microsoft/ptvs) 지원을 제공합니다. 
+Visual Studio는 Python 워크로드(Visual Studio 2017)와 무료 Visual Studio용 Python 도구 확장(Visual Studio 2015 및 이전 버전)을 통해 Python 언어에 대한 [오픈 소스](https://github.com/Microsoft/ptvs) 지원을 제공합니다. 
 
 [설치 지침](installation.md)에 따라 Python 워크로드를 설치한 후 아래 링크를 사용하여 Python 관련 기능 및 Visual Studio 자체 기능에 대해 자세히 알아봅니다.
 
@@ -57,9 +57,19 @@ Visual Studio는 Python 워크로드(Visual Studio 2017)와 무료 Visual Studio
 
 또한 Python 워크로드는 Windows, Mac OS X 및 Linux에 대한 지원과 함께 Azure 서비스 사용을 간소화하는 [Python용 Azure SDK](azure-sdk-for-python.md)도 포함합니다.
 
-주요 기능에 대한 개요를 제공하는 YouTube의 [getting started and deep dive videos(시작 및 자세히 알아보기 동영상)](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff) 시리즈도 참조하세요.
+주요 기능에 대한 개요를 제공하는 YouTube의 [getting started and deep dive videos](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)(시작 및 자세히 알아보기 동영상) 시리즈입니다.
 
 [![Python 도구 동영상](media/video-general.png)](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+
+## <a name="questions-and-answers"></a>질문과 대답
+
+**질문: UI를 빌드하는 데 Python과 함께 무엇을 사용할 수 있나요?**
+
+대답: 이 영역의 기본 제품은 [Qt Project](https://www.qt.io/qt-for-application-development/), [PySide(공식 바인딩)](http://wiki.qt.io/PySide)([PySide 다운로드](https://download.qt.io/official_releases/pyside/.)도 참조)로 알려진 Python용 바인딩 및 [PyQt](https://wiki.python.org/moin/PyQt)입니다. 현재는 Visual Studio의 Python 지원에 UI 개발용 특정 도구가 포함되지 않습니다.
+
+**질문: Python 프로젝트에서 독립 실행형 실행 파일을 생성할 수 있나요?**
+
+대답: Python은 일반적으로 Visual Studio 및 웹 서버와 같은 Python을 사용할 수 있는 적합한 환경에서 요청 시 실행되는 코드를 포함하는 해석된 언어입니다. 현재는 Visual Studio 자체에서 독립 실행형 실행 파일을 만드는 방법을 제공하지 않습니다. 즉, 기본적으로 포함된 Python 인터프리터가 있는 프로그램입니다. 그러나 [StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)에 설명된 것처럼 Python 커뮤니티 내에 이렇게 하는 다양한 방법이 있습니다. 또한 CPython은 블로그 게시물 [Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/)(CPython의 포함 가능한 Zip 파일 사용)에 설명된 것처럼 네이티브 응용 프로그램 내에 포함되는 기능을 지원합니다.
 
 ## <a name="features-matrix"></a>기능 매트릭스
 
@@ -68,8 +78,8 @@ Visual Studio는 Python 워크로드(Visual Studio 2017)와 무료 Visual Studio
 - [Visual Studio 2017 Preview](https://www.visualstudio.com/vs/preview)
 - [Visual Studio 2015(모든 버전)] (https://www.visualstudio.com/ko-kr/downloads/visual-studio-2015-downloads-vs)
 - [Visual Studio 2013 Community Edition] (https://www.visualstudio.com/ko-kr/products/visual-studio-community-vs.aspx)
-- [Visual Studio 2013 Express for Web, Update 2 이상](http://www.microsoft.com/en-us/download/details.aspx?id=40747)
-- [Visual Studio 2013 Express for Desktop, Update 2 이상](http://www.microsoft.com/en-us/download/details.aspx?id=40787)
+- [Visual Studio 2013 Express for Web, Update 2 이상](https://www.microsoft.com/en-us/download/details.aspx?id=44912)
+- [Visual Studio 2013 Express for Desktop, Update 2 이상](https://www.microsoft.com/en-US/download/details.aspx?id=44914)
 - Visual Studio 2013(Pro 버전 이상)
 - Visual Studio 2012(Pro 버전 이상)
 - Visual Studio 2010 SP1(Pro 버전 이상, .NET 4.5 필요)

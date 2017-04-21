@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
-ms.openlocfilehash: 730207e42f42c0cd5d1b78dc558e58267343d186
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 002c77b27f7283ecd28d7ec5470b0ed44b2bb7a4
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -45,7 +45,7 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
 
 이 항목에서는 쌍곡 탄젠트를 계산하고 Python 코드에서 호출하는 CPython용 C++ 확장을 빌드하는 방법에 대해 설명합니다. 성능 차이를 보여 주기 위해 먼저 Python에서 루틴을 만들고 테스트합니다.
 
-여기에서 사용된 방법은 [Python 설명서](https://docs.python.org/e/c-api/)에 설명된 대로 표준 CPython 확장용입니다. 이 방법과 다른 방법의 비교는 이 항목의 끝에 있는 [대체 방법](#alternative-approaches)에 설명되어 있습니다.
+여기에서 사용된 방법은 [Python 설명서](https://docs.python.org/3/c-api/)에 설명된 대로 표준 CPython 확장용입니다. 이 방법과 다른 방법의 비교는 이 항목의 끝에 있는 [대체 방법](#alternative-approaches)에 설명되어 있습니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -231,7 +231,7 @@ Python에서 DLL을 사용할 수 있도록 설정하는 방법은 두 가지가
 
 1. Visual Studio 2017을 사용하고 있는 경우 Visual Studio 설치 관리자를 실행하고 **수정**을 선택한 다음 **개별 구성 요소 > 컴파일러, 빌드 도구 및 런타임 > Visual C++ 2015.3 v140 toolset**(Visual C++ 2015.3 v140 도구 집합)를 선택합니다. Python(Windows용)은 Visual Studio 2015(버전 14.0)와 함께 자체 빌드되며 여기에 설명된 메서드를 통해 확장을 빌드하면 이러한 도구를 사용할 수 있다고 예상하기 때문입니다.
 
-1. C++ 프로젝트에서 **추가 > 새 항목...*을 선택하고 “Python”을 검색한 다음**Python 파일**을 선택하여 이름을 setup.py로 지정하고 **확인*을 선택하여 `setup.py`라는 파일을 만듭니다.* 편집기에 파일이 표시되면 다음 코드를 붙여넣습니다.
+1. C++ 프로젝트에서 **추가 > 새 항목...*을 선택하고 “Python”을 검색한 다음 **Python 파일**을 선택하여 이름을 setup.py로 지정하고 **확인**을 선택하여 `setup.py`라는 파일을 만듭니다. 편집기에 파일이 표시되면 다음 코드를 붙여넣습니다.
 
     ```python
     from distutils.core import setup, Extension, DEBUG
@@ -284,7 +284,7 @@ Visual Studio의 Python 지원에는 [Python 및 C++ 코드를 함께 디버그]
 
 | 방법 | 연도 | 담당자 | 장점 | 단점 |
 | --- | --- | --- | --- | --- |
-| CPython용 C/C++ 확장 모듈 | 1991 | 표준 라이브러리 | [광범위한 설명서 및 자습서](https://docs.python.org/e/c-api/). 전체 제어. | 컴파일, 이식성, 참조 관리. 높은 C 지식. |
+| CPython용 C/C++ 확장 모듈 | 1991 | 표준 라이브러리 | [광범위한 설명서 및 자습서](https://docs.python.org/3/c-api/). 전체 제어. | 컴파일, 이식성, 참조 관리. 높은 C 지식. |
 | SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 한 번에 여러 언어에 대한 바인딩 생성. | Python이 유일한 대상일 경우 과도한 오버헤드. |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | 컴파일 안 함, 광범위한 가용성. | 번거로운 C 구조체 액세스 및 변경과 오류 발생 가능성. |
 | Cython | 2007 | [gevent](http://www.gevent.org/), [kivy](https://kivy.org/) | Python과 유사. 높은 완성도. 고성능. | 컴파일, 새 구문 및 도구 체인. |

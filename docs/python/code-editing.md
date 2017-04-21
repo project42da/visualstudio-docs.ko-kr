@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구에서 코드 편집 | Microsoft Docs"
+title: "Visual Studio에서 Python 코드 편집 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 79d7c18b672119b745258feee0f646dff96c1922
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 0f2ecd6ca52a04e8813610c0f406251ef4604354
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="editing-python-code"></a>Python 코드 편집
 
-개발자는 코드 편집기에서 많은 시간을 보내기 때문에 PTVS(Visual Studio용 Python 도구)에서 IntelliSense 구문 강조 표시, 자동 완성, 서명 도움말, 메서드 재정의/검색 및 탐색과 같은 생산성 향상에 도움이 되는 기능을 제공합니다. 
+개발자는 코드 편집기에서 많은 시간을 보내므로 Visual Studio의 Python 지원에서 IntelliSense 구문 강조 표시, 자동 완성, 시그니처 도움말, 메서드 재정의/검색 및 탐색과 같은 생산성 향상에 도움이 되는 기능을 제공합니다. 
 
 항목 내용:
 
@@ -45,9 +45,9 @@ ms.lasthandoff: 03/07/2017
 - [코드 조각](#code-snippets)
 - [코드 탐색](#navigating-your-code)
 
-Visual Studio에서 코드 편집에 대한 일반적 설명서는 [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)을 참조하세요. 또한 코드의 특정 섹션에 집중하는 데 도움이 되는 [Visual Studio 개요](../ide/outlining.md)도 참조하세요. PTVS는 각 모듈에 정의된 클래스와 이 클래스에 정의된 함수를 검사하기 위해 Visual Studio 개체 브라우저(**보기 > 다른 창 > 개체 브라우저** 또는 Ctrl+W, J)를 통해 지원합니다. 
+Visual Studio에서 코드 편집에 대한 일반적 설명서는 [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)을 참조하세요. 또한 코드의 특정 섹션에 집중하는 데 도움이 되는 [Visual Studio 개요](../ide/outlining.md)도 참조하세요. Python 지원은 각 모듈에 정의된 클래스와 해당 클래스에 정의된 함수를 검사하기 위해 Visual Studio 개체 브라우저(**보기 > 다른 창 > 개체 브라우저** 또는 Ctrl+W, J) 사용을 포함합니다. 
 
-Python 코드 편집에 대한 소개는 다음 [PTVS 시작 3부: 편집](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)(youtube.com, 3분 48초)를 참조하세요.
+Python 코드 편집에 대한 소개는 [Getting Started with Python in Visual Studio, Part 3: Editing](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)(Visual Studio에서 Python 시작, 3부: 편집)(youtube.com, 3분 48초)을 참조하세요.
 
 > [!VIDEO https://www.youtube.com/embed/uZGZNEyyeKs]
 
@@ -136,16 +136,16 @@ IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [�
 사용자 고유의 코드 조각을 만들려면 [연습: 코드 조각 만들기](https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet)를 참조하세요.
 코드 조각은 [코드 조각을 만들고](https://msdn.microsoft.com/en-us/library/ms165394.aspx) 이를 가져와서 사용자 지정할 수 있습니다. 
 
-공유하려는 중요한 코드 조각을 작성하는 경우 자유롭게 요점에 게시하고 [알려주세요](https://github.com/Microsoft/PTVS/issues). 그러면 PTVS의 향후 릴리스에 포함할 수 있습니다.
+공유하려는 중요한 코드 조각을 작성하는 경우 자유롭게 요점에 게시하고 [알려주세요](https://github.com/Microsoft/PTVS/issues). 그러면 Visual Studio의 향후 릴리스에 포함할 수 있습니다.
 
 
 ## <a name="navigating-your-code"></a>코드 탐색
 
-PTVS는 원본 코드를 사용할 수 있는 라이브러리, 즉 [탐색 모음](#navigation-bar), [정의로 이동](#go-to-definition), [다음 탐색](#navigate-to), [모든 참조 찾기](#find-all-references) 및 [개체 브라우저](#object-browser)를 포함하여 코드 내에서 빠르게 탐색할 수 있는 여러 가지 수단을 제공합니다.
+Visual Studio의 Python 지원에서는 아래에 설명된 것처럼 소스 코드를 사용할 수 있는 라이브러리, 즉 [탐색 모음](#navigation-bar), [정의로 이동](#go-to-definition), [다음 탐색](#navigate-to) 및 [모든 참조 찾기](#find-all-references)를 포함하여 코드 내에서 빠르게 탐색할 수 있는 여러 가지 방법을 제공합니다. Visual Studio [개체 브라우저](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser)를 사용할 수도 있습니다.
 
 ### <a name="navigation-bar"></a>탐색 모음
 
-탐색 모음은 각 편집기 창의 위쪽에 표시되며, 정의의&2;단계 목록을 포함하고 있습니다. 왼쪽 드롭다운에서는 현재 파일의 최상위 클래스와 함수 정의를 포함하고 있으며, 오른쪽 드롭다운에서는 왼쪽에 표시된 범위 내의 정의 목록을 표시합니다. 편집기에서 이동하는 대로 업데이트하여 현재 컨텍스트를 보여 주며, 이러한 목록에서 항목을 선택하여 직접 이동할 수도 있습니다.
+탐색 모음은 각 편집기 창의 위쪽에 표시되며, 정의의 2단계 목록을 포함하고 있습니다. 왼쪽 드롭다운에서는 현재 파일의 최상위 클래스와 함수 정의를 포함하고 있으며, 오른쪽 드롭다운에서는 왼쪽에 표시된 범위 내의 정의 목록을 표시합니다. 편집기에서 이동하는 대로 업데이트하여 현재 컨텍스트를 보여 주며, 이러한 목록에서 항목을 선택하여 직접 이동할 수도 있습니다.
 
 ![탐색 모음](media/code-editing-navigation-bar.png)
 
