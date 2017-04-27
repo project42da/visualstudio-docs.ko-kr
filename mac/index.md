@@ -1,0 +1,1 @@
+# <a name="welcome-to-mac"></a>mac을 시작합니다.

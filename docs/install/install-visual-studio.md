@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 설치 | Microsoft Docs"
 description: "Visual Studio를 설치하는 방법을 단계별로 알아봅니다."
 ms.custom: 
-ms.date: 04/03/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -37,9 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
-ms.openlocfilehash: 47688935cec36db174c3a0c424b1705ae47c6118
-ms.lasthandoff: 04/03/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 059dd2068c5aa0d55f94f293d8430a1f401354ba
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 설치
@@ -76,7 +76,7 @@ Visual Studio를 설치하는 새로운 방법이 있습니다. 최신 버전에
 
 1.  **Visual Studio 설치** 화면에서 원하는 작업을 찾습니다.  
 
-  ![Visual Studio 2017 설치 대화 상자](media/vs2017-workloads.PNG "Visual Studio 2017 설치")
+  ![Visual Studio 2017 설치 대화 상자](media/vs2017-workloads.PNG "Visual Studio 작업 설치")
 
      예를 들어 .NET 데스크톱 개발 작업을 선택합니다. 20개가 넘는 언어에 대한 기본 코드 편집 기능, 프로젝트 없이도 폴더에서 코드를 열어 편집할 수 있는 기능 및 통합 소스 코드 제어 기능이 포함된 기본 핵심 편집기가 제공됩니다.  
 
@@ -90,7 +90,7 @@ Visual Studio를 설치하는 새로운 방법이 있습니다. 최신 버전에
 
 편리한 작업 기능을 사용하여 Visual Studio 설치를 사용자 지정하지 않으려는 경우 Visual Studio 설치 관리자에서 **개별 구성 요소** 옵션을 클릭하고 원하는 구성 요소를 선택한 다음 프롬프트를 따릅니다.
 
-  ![Visual Studio 2017 - 개별 구성 요소 설치](media/vs2017-workloads.PNG "Visual Studio 개별 구성 요소 설치")
+  ![Visual Studio 2017 - 개별 구성 요소 설치](media/vs2017-components.PNG "Visual Studio 개별 구성 요소 설치")
 
 ## <a name="install-language-packs"></a>언어 팩 설치
 
@@ -107,7 +107,10 @@ Visual Studio를 설치하는 새로운 방법이 있습니다. 최신 버전에
 
 ## <a name="see-also"></a>참고 항목  
 * [Visual Studio 2017 수정](modify-visual-studio.md)
+* [Visual Studio 업데이트](update-visual-studio.md)
 * [Visual Studio 2017 제거](uninstall-visual-studio.md)
 * [Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
+* [Visual Studio 2017용 오프라인 설치 관리자 만들기](create-an-offline-installation-of-visual-studio.md)
+* [명령줄 매개 변수를 사용하여 Visual Studio 2017 설치](use-command-line-parameters-to-install-visual-studio.md) 
 * [Visual Studio 2017의 문제를 보고하는 방법](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

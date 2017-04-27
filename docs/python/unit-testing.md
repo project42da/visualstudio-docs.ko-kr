@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: f1148cb9e4d50241580190f274d6a4c2e3979b80
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: 878bd0baaa0e08a31274645213b222bf6faeb412
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -62,7 +62,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
       unittest.main()
   ```
 
-1. 필요한 경우 파일을 저장한 후 **텍스트 > Windows > 텍스트 탐색기** 메뉴 명령으로 테스트 탐색기를 엽니다.
+1. 필요한 경우 파일을 저장한 다음 **테스트 > 창 > 테스트 탐색기** 메뉴 명령으로 테스트 탐색기를 엽니다.
 
 1. 테스트 탐색기는 테스트에 대한 프로젝트를 검색하고 아래와 같이 표시합니다. 테스트를 두 번 클릭하면 해당 소스 파일이 열립니다.
 

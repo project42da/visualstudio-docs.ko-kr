@@ -1,7 +1,7 @@
 ---
 title: "명령줄 매개 변수를 사용하여 Visual Studio 설치 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -32,16 +32,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 2a6555eb9c0a88b1533428cf2aa932b3fc4960ec
-ms.openlocfilehash: e8ddcebccc5a8a949c75a33de6732d42134e6445
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 09c6971e21e48d250e3a9869860459fd8cbbb50f
+ms.lasthandoff: 04/10/2017
 
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>명령줄 매개 변수를 사용하여 Visual Studio 2017 설치
 명령 프롬프트에서 Visual Studio 2017를 설치할 때 다양한 명령줄 매개 변수를 사용하여 설치를 제어하거나 사용자 지정할 수 있습니다. 명령줄에서 다음을 수행할 수 있습니다.
-- 특정 옵션이 미리 선택된 상태로 설치를 시작합니다. 
+- 특정 옵션이 미리 선택된 상태로 설치를 시작합니다.
 - 설치 프로세스를 자동화합니다.
-- 나중에 사용할 설치 파일의 캐시(레이아웃)를 만듭니다. 
+- 나중에 사용할 설치 파일의 캐시(레이아웃)를 만듭니다.
 
 명령줄 옵션은 다운로드 프로세스를 시작하는 작은(약 1MB) 파일인 설치 부트스트래퍼와 함께 사용됩니다. 부트스트래퍼는 Visual Studio 사이트에서 다운로드할 때 첫 번째로 실행되는 실행 파일입니다. 다음 링크에서 설치 중인 제품 버전에 대한 최신 릴리스 부트스트래퍼에 직접 연결된 링크를 가져올 수 있습니다.
 
@@ -54,11 +54,12 @@ ms.lasthandoff: 03/30/2017
 
 >  구문: `vs_enterprise.exe [command] <options>...`
 
-(설치 중인 제품 버전에 적합하게 `vs_enterprise.exe` 바꾸기)
+(설치 중인 제품 버전에 적합하게 `vs_enterprise.exe` 바꿉니다. 예를 보려면 [명령줄 매개 변수 예제](command-line-parameter-examples.md) 페이지를 참조하세요.)
+
 
 | **명령** | **설명** |
-| ----------------------- | --------------- | 
-| (비어 있음) | 제품을 설치합니다. | 
+| ----------------------- | --------------- |
+| (비어 있음) | 제품을 설치합니다. |
 | ```modify``` | 설치된 제품을 수정합니다. |
 | ```update``` | 설치된 제품을 업데이트합니다. |
 | ```repair``` | 설치된 제품을 복구합니다. |
@@ -108,7 +109,6 @@ Visual Studio 제품별로 정렬된 워크로드 및 구성 요소 ID 목록은
 | de-DE | 독일어 |
 | ko-KR | 영어 |
 | es-ES | 스페인어 |
-| cs-CZ | 체코어 |
 | fr-FR | 프랑스어 |
 | it-IT | 이탈리아어 |
 | ja-JP | 일본어 |
@@ -123,17 +123,19 @@ Visual Studio 제품별로 정렬된 워크로드 및 구성 요소 ID 목록은
 
 ## <a name="error-codes"></a>오류 코드
 작업 결과에 따라 `%ERRORLEVEL%` 환경 변수는 다음 값 중 하나로 설정됩니다.
+
 | **Value** | **결과** |
 | --------- | ---------- |
 | 0 | 작업이 완료되었습니다. |
 | 3010 | 작업이 완료되었지만, 사용하려면 다시 부팅해야 합니다. |
 | 기타 | 오류 조건 발생 - 자세한 내용은 로그를 확인하세요. |
 
-각 작업은 `%TEMP%` 디렉터리에 설치 진행률을 나타내는 여러 로그 파일을 생성합니다. 폴더를 날짜별로 정렬하고 부트스트래퍼, 설치 관리자 앱 및 설치 엔진 각각에 대해 `dd_bootstrapper`, `dd_client` 및 `dd_setup`로 시작하는 파일을 찾습니다. 
+각 작업은 `%TEMP%` 디렉터리에 설치 진행률을 나타내는 여러 로그 파일을 생성합니다. 폴더를 날짜별로 정렬하고 부트스트래퍼, 설치 관리자 앱 및 설치 엔진 각각에 대해 `dd_bootstrapper`, `dd_client` 및 `dd_setup`으로 시작하는 파일을 찾습니다.
 
 ## <a name="see-also"></a>참고 항목
 
- * [Visual Studio 설치](install-visual-studio.md)
+ * [Visual Studio 2017 설치](install-visual-studio.md)
  * [Visual Studio 2017의 오프라인 설치 만들기](create-an-offline-installation-of-visual-studio.md)
- * [Visual Studio의 문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+ * [Visual Studio 2017 설치에 대한 명령줄 매개 변수 예](command-line-parameter-examples.md)
+ * [Visual Studio 2017의 문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

@@ -103,7 +103,7 @@ Visual Studio 디버거를 사용하여 프로그램의 런타임 동작을 관�
         </a>
     </li>
     <li>
-        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/debug-multithreaded-applications-in-visual-studio">
+        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/get-started-debugging-multithreaded-applications">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

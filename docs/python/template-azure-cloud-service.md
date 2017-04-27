@@ -1,7 +1,7 @@
 ---
 title: "Python용 Azure Cloud Service 프로젝트 템플릿 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 10ea76d474d96ba4b5aa95584fd1893abe05d991
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 5dd1c40c925327c9494e3a334cdf348692a4981d
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="azure-cloud-service-projects-for-python"></a>Python용 Azure Cloud Service 프로젝트
 
-PTVS(Python Tools for Visual Studio)는 Python을 사용하여 Azure Cloud Services 만들기를 시작하는 데 도움이 되는 템플릿을 제공합니다.
+Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작하는 데 도움이 되는 템플릿을 제공합니다.
 
 [Cloud Service](http://go.microsoft.com/fwlink/?LinkId=306052)는 각각 개념적으로 별개의 작업을 수행하지만 크기 조정 필요에 따라 가상 컴퓨터 간에 별도로 복제할 수 있는 여러 개의 *작업자 역할* 및 *웹 역할*로 구성됩니다. 웹 역할은 프런트 엔드 웹 응용 프로그램의 호스팅을 제공합니다. Python에 관해서는 WSGI를 지원하는 웹 프레임워크를 사용하여 이러한 응용 프로그램([웹 프로젝트 템플릿](template-web.md)에서 지원하는)을 작성할 수 있습니다. 작업자 역할은 사용자와 직접 상호 작용하지 않는 장기적으로 실행되는 프로세스 용도로 사용됩니다. 일반적으로 [데이터](http://go.microsoft.com/fwlink/?LinkId=401571) 및 [앱 서비스](http://go.microsoft.com/fwlink/?LinkId=401572) 라이브러리를 활용하며 `pip install`&nbsp;[`azure`](http://pypi.org/project/azure)와 함께 설치할 수 있습니다.
 
@@ -58,7 +58,7 @@ PTVS(Python Tools for Visual Studio)는 Python을 사용하여 Azure Cloud Servi
 
 1. 프로젝트에 새 역할을 추가하면 몇 가지 구성 지침이 표시됩니다. 이러한 내용은 일반적으로 불필요하지만 향후 프로젝트의 사용자 지정에 도움이 될 수 있습니다. 여러 역할을 동시에 추가할 때는 마지막 역할에 대한 지침만 열려 있습니다. 그러나 역할의 루트 또는 `bin` 폴더에 있는 각 `readme.mht` 파일에서 다른 역할에 대한 지침 및 문제 해결 팁을 찾을 수 있습니다.
 
-1. 프로젝트의 `bin` 폴더에는 Python, 프로젝트의 [requirements.txt](#requirementstxt) 파일 설치 및 IIS 설정(필요한 경우)을 포함하여 원격 가상 컴퓨터를 구성하는 데 사용되는 하나 또는 두 개의 PowerShell 스크립트도 포함되어 있습니다. 대부분의 일반적인 옵션은 다른 방법으로 관리할 수 있지만 배포에 따라 원하는 대로 이러한 파일을 편집할 수 있습니다(아래 [역할 배포 구성 ](#configuring-role-deployment) 참조). 옵션을 사용할 수 없는 경우 레거시 구성 스크립트가 대신 사용되므로 이러한 파일은 제거하지 않는 것이 좋습니다.
+1. 프로젝트의 `bin` 폴더에는 Python, 프로젝트의 [requirements.txt](#dependencies) 파일 설치 및 IIS 설정(필요한 경우)을 포함하여 원격 가상 컴퓨터를 구성하는 데 사용되는 하나 또는 두 개의 PowerShell 스크립트도 포함되어 있습니다. 대부분의 일반적인 옵션은 다른 방법으로 관리할 수 있지만 배포에 따라 원하는 대로 이러한 파일을 편집할 수 있습니다(아래 [역할 배포 구성 ](#configuring-role-deployment) 참조). 옵션을 사용할 수 없는 경우 레거시 구성 스크립트가 대신 사용되므로 이러한 파일은 제거하지 않는 것이 좋습니다.
 
     ![작업자 역할 지원 파일](media/template-azure-cloud-service-worker-role-support-files.png)
 

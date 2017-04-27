@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구에서 PyLint 사용 | Microsoft Docs"
+title: "Visual Studio에서 PyLint 사용 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 23650ba24f127b93dc52a3a93aa1126d67e5cf3e
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: c8bfaf9f20e7fecb3633ca101170b0f3e686aa53
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="using-pylint-to-check-python-code"></a>PyLint를 사용하여 Python 코드 검사
 
-폭넓게 사용되어 Python 코드의 오류를 검사하고 적절한 Python 코딩 패턴을 권장하는 도구인 [PyLint](https://www.pylint.org/)는 Python 프로젝트용 Visual Studio에 통합되어 있습니다.
+Python 코드의 오류를 검사하고 적절한 Python 코딩 패턴을 권장하며 널리 사용되는 도구인 [PyLint](https://www.pylint.org/)는 Python 프로젝트용 Visual Studio에 통합되어 있습니다.
 
 [솔루션 탐색기]에서 Python 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Python > PyLint 실행...**을 차례로 선택합니다.
 

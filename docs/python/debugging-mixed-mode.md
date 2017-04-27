@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구에서 혼합 모드 디버깅 | Microsoft Docs"
+title: "Visual Studio에서 Python에 대한 혼합 모드 디버깅 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: ddbac5b8ed52e6ed7afae7e7b04dc2fa15f7a0c2
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: bdc621831893f907beba7ec5ad503fe4d96c0042
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -70,7 +70,7 @@ Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 
 
 - [결합된 호출 스택](#combined-call-stack)
 - [Python 코드와 네이티브 코드 간 단계별 실행](#stepping-between-python-and-native-code)
-- [네이티브 코드에서 PyObject 값 보기](#pyobject-values-in-native-code)
+- [네이티브 코드에서 PyObject 값 보기](#pyobject-values-view-in-native-code)
 - [Python 코드에서 네이티브 값 보기](#native-values-view-in-python-code)
 
 ### <a name="combined-call-stack"></a>결합된 호출 스택
@@ -153,7 +153,7 @@ static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
 - 지원되지 않는 기능: 조건부 중단점, 대화형 디버그 창 및 플랫폼 간 원격 디버깅
 - 직접 실행 창: 사용 가능하지만 여기서 나열하는 모든 제한을 포함하여 기능의 하위 집합이 제한됩니다.
 - 지원되는 Python 버전: CPython 2.7 및 3.3만
-- Visual Studio Shell: Visual Studio Shell에서 PTVS를 사용하는 경우(예: 통합 설치 관리자를 통해 설치한 경우) Visual Studio에서 C++ 프로젝트를 열 수 없으며 C++ 파일에 대한 편집 환경은 기본 텍스트 편집기의 환경입니다. 그러나 C/C++ 디버깅 및 혼합 모드 디버깅은 셸에서 원본 코드, 네이티브 코드 단계별 실행 및 디버거 창의 C++ 식 계산을 통해 완벽하게 지원됩니다.
+- Visual Studio Shell: Visual Studio Shell에서 Python을 사용하는 경우(예: 통합 설치 관리자를 사용하여 설치한 경우) Visual Studio에서 C++ 프로젝트를 열 수 없으며 C++ 파일에 대한 편집 환경은 기본 텍스트 편집기의 환경입니다. 그러나 C/C++ 디버깅 및 혼합 모드 디버깅은 셸에서 원본 코드, 네이티브 코드 단계별 실행 및 디버거 창의 C++ 식 계산을 통해 완벽하게 지원됩니다.
 - 개체 보기 및 확장: [지역] 및 [조사식] 디버거 도구 창에서 Python 개체를 볼 때 혼합 모드 디버거는 개체의 구조만 표시합니다. 속성을 자동으로 평가하거나 계산된 특성을 표시하지 않습니다. 컬렉션의 경우 기본 제공 컬렉션 형식(`tuple`, `list`, `dict`, `set`)에 대한 요소만 표시합니다. 일부 기본 제공 컬렉션 형식에서 상속되지 않는 한 사용자 지정 컬렉션 형식은 컬렉션으로 시각화되지 않습니다.
 - 식 계산: 아래 참조
 

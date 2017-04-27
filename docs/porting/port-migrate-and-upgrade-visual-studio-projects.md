@@ -39,9 +39,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5951e9c6b61e1cb868d792a5aee9389235cfef30
-ms.openlocfilehash: 533294abad4df8e0c782bbf5d0f98d93e661f406
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 7c10c85c6bb6a300a117cd4a08cf80280cb431db
+ms.openlocfilehash: 16458816633f954da30b8ca78ff6f6ae0f2fced5
+ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드
@@ -76,6 +76,7 @@ ms.lasthandoff: 03/10/2017
 | SharePoint 2010 | Visual Studio 2017을 사용하여 SharePoint 솔루션 프로젝트를 열면 SharePoint 2013 또는 SharePoint 2016으로 업그레이드됩니다. ".NET 데스크탑 개발" 워크로드는 업그레이드를 위해 Visual Studio 2017에 설치되어야 합니다.<br/><br/>SharePoint 프로젝트를 업그레이드하는 방법에 대한 자세한 내용은 [SharePoint 2013으로 업그레이드](https://technet.microsoft.com/en-us/library/cc303420.aspx), [SharePoint Server 2013에서 워크플로 업데이트](https://technet.microsoft.com/en-us/library/dn133867.aspx) 및 [데이터베이스 연결 업그레이드를 위해 SharePoint Server 2016 팜 만들기](https://technet.microsoft.com/en-us/library/cc263026(v=office.16).aspx)를 참조하세요. |
 | SharePoint 2016 | Office 개발자 도구 미리 보기 2에서 만든 SharePoint 추가 기능 프로젝트를 Visual Studio 2017에서 열 수 없습니다. 이 문제를 해결하려면 `.csproj` 또는 `.vbproj` 파일에 있는 `MinimumVisualStudioVersion`을 12.0로 업데이트하고 `MinimumOfficeToolsVersion`를 12.2로 업데이트해야 합니다. |
 | Silverlight | Silverlight 프로젝트는 Visual Studio 2017에서 지원되지 않습니다. Silverlight 응용 프로그램을 유지하려면 Visual Studio 2015를 계속 사용합니다. |
+| SQL Server Reporting Services, SQL Server Analysis Services(SSDT, SSAS, MSAS, SSDT) | 이러한 프로젝트 형식에 대한 지원은 Visual Studio 갤러리의 [Microsoft Analysis Servides Modeling Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) 및 [Microsoft Report Projects for Visual Studio](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)라는 두 개의 확장을 통해 제공됩니다. |
 | Visual C++ | Visual Studio 2017를 사용하여 Visual Studio 2015에서 만든 솔루션 및 프로젝트를 그대로 열 수 있지만, 더 이전 버전의 Visual Studio에서 만든 프로젝트의 경우 Visual Studio 2017에서 빌드하려면 프로젝트를 업그레이드하거나 최신 도구 집합으로 대상을 변경해야 합니다. 자세한 내용은 [방법: Visual C++ 프로젝트를 Visual Studio 2015로 업그레이드](https://msdn.microsoft.com/en-us/library/hh690665.aspx) 및 [Visual C++ 포팅 및 업그레이드 가이드](https://msdn.microsoft.com/en-us/library/dn986839.aspx)를 참조하세요. |
 | Visual Studio 확장성/VSIX | MinimumVersion 14.0 이하의 프로젝트는 업데이트를 통해 MinimumVersion 15.0으로 선언됩니다. 그러면 이전 버전의 Visual Studio에서 프로젝트를 열 수 없습니다. 이전 버전에서 프로젝트를 열 수 있도록 허용하려면 MinimumVersion을 `$(VisualStudioVersion)`(으)로 설정합니다. [방법: Visual Studio 2017로 확장성 프로젝트 마이그레이션](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)을 참조하세요. |
 | Visual Studio Lab Management | Microsoft Test Manager 또는 Visual Studio 2010 SP1 이상을 사용하여 이러한 버전에서 만든 환경을 열 수 있습니다. 그러나 Visual Studio 2010 SP1의 경우 환경을 만들기 전에 Microsoft Test Manager 버전이 Team Foundation Server 버전과 일치해야 합니다. |
