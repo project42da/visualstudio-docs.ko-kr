@@ -129,8 +129,3 @@
 ##### [규칙 집합 선택 대화 상자(레거시)](select-rule-set-dialog-box-legacy.md)
 ##### [테마 구성 대화 상자(레거시)](theme-configuration-dialog-box-legacy.md)
 ##### [테마, 워크플로 디자이너, 옵션 대화 상자(레거시)](themes-workflow-designer-options-dialog-box-legacy.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
