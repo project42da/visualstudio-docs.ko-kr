@@ -22,7 +22,7 @@ caps.handback.revision: 8
 JavaScript에서 런타임 Windows API의 거의 모든 요소를 사용할 수 있습니다.  그러나 JavaScript에서 Windows 런타임 요소를 표현하는 방식 중 몇 가지 주의해야 할 점이 있습니다.  
   
 > [!IMPORTANT]
->  C\+\+, C\# 또는 Visual Basic에서 Windows 런타임 구성 요소를 만들기와 JavaScript에서 사용하는 방법에 대한 자세한 내용은 [Windows Runtime 구성 요소 만들기](../Topic/Creating%20Windows%20Runtime%20Components.md)을\(를\) 참조하십시오.  
+>  C\+\+, C\# 또는 Visual Basic에서 Windows 런타임 구성 요소를 만들기와 JavaScript에서 사용하는 방법에 대한 자세한 내용은 [Windows Runtime 구성 요소 만들기](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133)을\(를\) 참조하십시오.  
   
 ## JavaScript에서 Windows 런타임 형식의 특수 표현 사례  
   

@@ -37,7 +37,7 @@ Debug.function
 ## 설명  
  Debug 개체를 인스턴스화하지 않습니다.`function`을 호출하여 모든 속성 및 메서드에 액세스할 수 있습니다.  
   
- Internet Explorer 및 [!INCLUDE[win8_appname_long](../../javascript/advanced/includes/win8-appname-long-md.md)] 앱을 디버그하는 방법에는 여러 가지가 있습니다.[!INCLUDE[win8_appname_long](../../javascript/advanced/includes/win8-appname-long-md.md)] 앱의 경우 `Debug` 개체의 `write` 및 `writeln` 함수는 런타임에 Visual Studio **출력** 창에 문자열을 표시합니다.[!INCLUDE[win8_appname_long](../../javascript/advanced/includes/win8-appname-long-md.md)] 앱 디버그에 대한 자세한 내용은 [Visual Studio에서 앱 디버깅](../Topic/Debug%20Store%20apps%20in%20Visual%20Studio.md)를 참조하세요.  
+ Internet Explorer 및 [!INCLUDE[win8_appname_long](../../javascript/advanced/includes/win8-appname-long-md.md)] 앱을 디버그하는 방법에는 여러 가지가 있습니다.[!INCLUDE[win8_appname_long](../../javascript/advanced/includes/win8-appname-long-md.md)] 앱의 경우 `Debug` 개체의 `write` 및 `writeln` 함수는 런타임에 Visual Studio **출력** 창에 문자열을 표시합니다.[!INCLUDE[win8_appname_long](../../javascript/advanced/includes/win8-appname-long-md.md)] 앱 디버그에 대한 자세한 내용은 [Visual Studio에서 앱 디버깅](~/debugger/debug-store-apps-in-visual-studio.md)를 참조하세요.  
   
  Internet Explorer 스크립트를 디버그하려면 스크립트 디버거가 설치되어 있어야 하며 디버그 모드에서 스크립트를 실행해야 합니다. Internet Explorer 8 이상 버전에는 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 디버거가 포함되어 있습니다. 이전 버전의 Internet Explorer를 사용하는 경우 [방법: Internet Explorer에서 스크립트 디버깅 사용 및 시작](http://go.microsoft.com/fwlink/?LinkId=133801)을 참조하세요.  
   

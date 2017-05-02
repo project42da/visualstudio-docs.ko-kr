@@ -43,7 +43,7 @@ caps.handback.revision: 28
   
 -   [!INCLUDE[win8_appname_long](../../javascript/advanced/includes/win8-appname-long-md.md)] API에 대한 자세한 내용은 [Windows 런타임 및 JavaScript용 Windows 라이브러리의 API 참조](http://go.microsoft.com/fwlink/p/?LinkID=250938)를 참조하십시오.  
   
- Visual Studio의 JavaScript 편집기는 IntelliSense를 지원합니다.  자세한 내용은 [JavaScript IntelliSense](../Topic/JavaScript%20IntelliSense.md)을 참조하십시오.  
+ Visual Studio의 JavaScript 편집기는 IntelliSense를 지원합니다.  자세한 내용은 [JavaScript IntelliSense](~/ide/javascript-intellisense.md)을 참조하십시오.  
   
 ## 단원 내용  
  [버전 정보](../../javascript/reference/javascript-version-information.md)  

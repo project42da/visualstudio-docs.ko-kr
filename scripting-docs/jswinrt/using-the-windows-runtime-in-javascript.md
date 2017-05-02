@@ -30,7 +30,7 @@ JavaScript를 사용하여 [!INCLUDE[win8_appname_long](../javascript/advanced/i
  참조 문서는 [Windows Runtime reference](http://msdn.microsoft.com/ko-kr/8fe97dbf-8cd4-435f-b481-9e83d0519f9e)를 참조하세요.  코드 예제는 JavaScript뿐만 아니라 C\+\+, C\# 및 Visual Basic으로도 제공됩니다.  
   
 ## C\+\+, C\# 또는 Visual Basic으로 Windows 런타임 구성 요소 작성  
- JavaScript에서 사용할 수 있는 Windows 런타임 구성 요소 작성에 대한 지침과 가이드라인은 [Windows Runtime 구성 요소 만들기](../Topic/Creating%20Windows%20Runtime%20Components.md)를 참조하세요.  
+ JavaScript에서 사용할 수 있는 Windows 런타임 구성 요소 작성에 대한 지침과 가이드라인은 [Windows Runtime 구성 요소 만들기](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133)를 참조하세요.  
   
 ## Windows 런타임 기능의 대\/소문자 사용 규칙  
  JavaScript에서 Windows 런타임 기능의 대\/소문자 사용 규칙은 다른 언어의 대\/소문자 사용 규칙과 약간 다릅니다.  

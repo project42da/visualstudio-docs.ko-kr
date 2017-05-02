@@ -37,4 +37,4 @@ Microsoft Windows 스크립트 호스트를 구현 하는 경우 스크립팅 �
  있는 자유 스레드된 구현 하도록 선택 하는 호스트에 이러한 제한 사항을 적용 [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) 인터페이스 및 자유 스레드 개체 모델입니다.  이러한 호스트를 사용할 수 있는 [IActiveScript](../winscript/reference/iactivescript.md) 제한 없이 모든 스레드에서 인터페이스.  
   
 ## 참고 항목  
- [\<PAVE OVER\> Microsoft Windows 스크립트 인터페이스 \- 소개](../Topic/%3CPAVE%20OVER%3E%20Microsoft%20Windows%20Script%20Interfaces%20-%20Introduction.md)
+ [\<PAVE OVER\> Microsoft Windows 스크립트 인터페이스 \- 소개](http://msdn.microsoft.com/library/3d10169f-2984-49ef-90c6-dd89c97f1dd6)
