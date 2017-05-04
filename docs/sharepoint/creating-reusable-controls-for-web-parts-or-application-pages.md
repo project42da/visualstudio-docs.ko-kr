@@ -25,7 +25,7 @@ manager: "ghogen"
 caps.handback.revision: 19
 ---
 # 웹 파트 또는 응용 프로그램 페이지를 위해 재사용 가능한 컨트롤 만들기
-  Visual Studio에서 SharePoint에서 실행되는 응용 프로그램 페이지와 웹 파트에서 사용할 수 있는 재사용 가능한 사용자 지정 컨트롤을 만들 수 있습니다.  이러한 컨트롤을 사용자 정의 컨트롤이라고 합니다.  사용자 정의 컨트롤에 대한 자세한 내용은 [ASP.NET User Controls](../Topic/ASP.NET%20User%20Controls.md)을 참조하십시오.  
+  Visual Studio에서 SharePoint에서 실행되는 응용 프로그램 페이지와 웹 파트에서 사용할 수 있는 재사용 가능한 사용자 지정 컨트롤을 만들 수 있습니다.  이러한 컨트롤을 사용자 정의 컨트롤이라고 합니다.  사용자 정의 컨트롤에 대한 자세한 내용은 [ASP.NET User Controls](http://msdn.microsoft.com/library/5e601b3d-bb16-4dbe-9e35-7e92a34565ca)을 참조하십시오.  
   
 ## 사용자 정의 컨트롤 만들기  
  사용자 정의 컨트롤을 만들려면 **빈 SharePoint 프로젝트**에 **사용자 정의 컨트롤**을 추가합니다.  자세한 내용은 [방법: SharePoint 응용 프로그램 페이지 또는 웹 파트를 위한 사용자 정의 컨트롤 만들기](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)을 참조하십시오.  
@@ -44,7 +44,7 @@ caps.handback.revision: 19
 ## 사용자 정의 컨트롤 사용  
  응용 프로그램 페이지나 웹 파트에 사용자 정의 컨트롤을 포함해야 SharePoint에 사용자 정의 컨트롤이 표시됩니다.  
   
- 사용자 정의 컨트롤을 응용 프로그램 페이지에 포함하려면 [@ Register](http://msdn.microsoft.com/ko-kr/66f34922-be41-4e36-9dc8-1774d85311d1) 지시문을 응용 프로그램 페이지에 추가한 다음 페이지에서 하나 이상의 콘텐츠 자리 표시자 안에 사용자 정의 컨트롤을 선언합니다.  표준 ASP.NET 웹 페이지에서 이 작업을 수행하는 방법에 대한 예제는 [How to: Include a User Control in an ASP.NET Web Page](../Topic/How%20to:%20Include%20a%20User%20Control%20in%20an%20ASP.NET%20Web%20Page.md)을 참조하십시오.  
+ 사용자 정의 컨트롤을 응용 프로그램 페이지에 포함하려면 [@ Register](http://msdn.microsoft.com/ko-kr/66f34922-be41-4e36-9dc8-1774d85311d1) 지시문을 응용 프로그램 페이지에 추가한 다음 페이지에서 하나 이상의 콘텐츠 자리 표시자 안에 사용자 정의 컨트롤을 선언합니다.  표준 ASP.NET 웹 페이지에서 이 작업을 수행하는 방법에 대한 예제는 [How to: Include a User Control in an ASP.NET Web Page](http://msdn.microsoft.com/library/7c3bfd74-846c-4b88-b1ef-45d75860af92)을 참조하십시오.  
   
  사용자 정의 컨트롤을 웹 파트에 포함하려면 웹 파트 코드 파일의 웹 파트 <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> 컬렉션에 사용자 정의 컨트롤을 추가합니다.  다음 예제에서는 웹 파트의 <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> 컬렉션에 사용자 정의 컨트롤을 추가합니다.  
   

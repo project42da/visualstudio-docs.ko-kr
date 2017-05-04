@@ -39,7 +39,7 @@ caps.handback.revision: 39
   
 #### 데이터 개체를 추가하려면  
   
--   **데이터 원본** 창을 열고 개체에서 데이터 원본을 만듭니다. 자세한 내용은 [방법: 개체의 데이터에 연결](../Topic/How%20to:%20Connect%20to%20Data%20in%20Objects.md)을 참조하세요.  
+-   **데이터 원본** 창을 열고 개체에서 데이터 원본을 만듭니다. 자세한 내용은 [방법: 개체의 데이터에 연결](http://msdn.microsoft.com/library/862fd351-0f4d-4220-9743-6103b87dc24b)을 참조하세요.  
   
 ## BindingSource에 데이터 개체 연결  
  문서 수준 프로젝트에서 문서에 컨트롤을 추가하고 디자인 타임에 데이터에 바인딩합니다.  
@@ -75,6 +75,6 @@ caps.handback.revision: 39
  [방법: 데이터베이스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-a-database.md)   
  [방법: Host 컨트롤의 데이터로 데이터 원본 업데이트](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)   
  [Windows Forms 응용 프로그램에서 데이터에 연결](/visual-studio/data-tools/connecting-to-data-in-windows-forms-applications)   
- [BindingSource 구성 요소 개요](../Topic/BindingSource%20Component%20Overview.md)  
+ [BindingSource 구성 요소 개요](http://msdn.microsoft.com/library/be838caf-fcb0-4b68-827f-58b2c04b747f)  
   
   

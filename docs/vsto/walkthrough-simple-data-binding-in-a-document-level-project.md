@@ -191,7 +191,7 @@ caps.handback.revision: 57
   
 -   필드 하나가 아니라 테이블의 여러 필드에 셀을 바인딩합니다.  자세한 내용은 [연습: 문서 수준 프로젝트의 복합 데이터 바인딩](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)을 참조하십시오.  
   
--   <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 사용하여 레코드를 스크롤합니다.  자세한 내용은 [방법: Windows Forms BindingNavigator 컨트롤을 사용하여 데이터 탐색](../Topic/How%20to:%20Navigate%20Data%20with%20the%20Windows%20Forms%20BindingNavigator%20Control.md)을 참조하십시오.  
+-   <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 사용하여 레코드를 스크롤합니다.  자세한 내용은 [방법: Windows Forms BindingNavigator 컨트롤을 사용하여 데이터 탐색](http://msdn.microsoft.com/library/0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb)을 참조하십시오.  
   
 ## 참고 항목  
  [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)   

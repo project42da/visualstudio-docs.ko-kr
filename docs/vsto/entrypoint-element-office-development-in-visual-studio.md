@@ -50,7 +50,7 @@ caps.handback.revision: 22
 ### assemblyIdentity  
  필수 요소.`vstav3`  네임스페이스의 `assemblyIdentity` 요소는 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 응용 프로그램 매니페스트의 기존 `assemblyIdentity` 요소를 참조합니다.  
   
- `assemblyIdentity`의 역할 및 해당 특성은 [&#60;assemblyIdentity&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](../Topic/%3CassemblyIdentity%3E%20Element%20(ClickOnce%20Application).md)에 정의되어 있습니다.  
+ `assemblyIdentity`의 역할 및 해당 특성은 [&#60;assemblyIdentity&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](~/deployment/assemblyidentity-element-clickonce-application.md)에 정의되어 있습니다.  
   
 ## 문서 수준 사용자 지정 예제  
   

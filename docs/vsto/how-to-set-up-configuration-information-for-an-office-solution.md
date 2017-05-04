@@ -41,12 +41,12 @@ caps.handback.revision: 33
   
 5.  **추가**를 클릭합니다.  
   
-6.  응용 프로그램 구성 파일 스키마에 따라 구성 파일을 만듭니다.  자세한 내용은 [.NET Framework의 구성 파일 스키마](../Topic/Configuration%20File%20Schema%20for%20the%20.NET%20Framework.md)을 참조하십시오.  
+6.  응용 프로그램 구성 파일 스키마에 따라 구성 파일을 만듭니다.  자세한 내용은 [.NET Framework의 구성 파일 스키마](http://msdn.microsoft.com/library/69003d39-dc8a-460c-a6be-e6d93e690b38)을 참조하십시오.  
   
  Office 프로젝트에서 구성 파일을 사용하는 경우 특별히 고려할 사항이 없습니다.  
   
 ## 참고 항목  
- [.NET Framework의 구성 파일 스키마](../Topic/Configuration%20File%20Schema%20for%20the%20.NET%20Framework.md)   
+ [.NET Framework의 구성 파일 스키마](http://msdn.microsoft.com/library/69003d39-dc8a-460c-a6be-e6d93e690b38)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)   
  [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)  
   

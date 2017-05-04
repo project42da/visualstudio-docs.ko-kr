@@ -54,7 +54,7 @@ caps.handback.revision: 48
  Office 프로젝트 디버깅을 시작하면 다른 Visual Basic 또는 C\# 프로젝트 디버깅을 시작할 때 F10 및 F11 동작이 다릅니다. Visual Basic 또는 C\# 프로젝트에서는 디버거가 main 함수에서 중지하고 Office 프로젝트에서는 Visual Studio가 Office 응용 프로그램의 main 함수를 제어하지 않습니다. 그러나 디버깅 중에는 F10과 F11이 Visual Basic 및 C\# 프로젝트에서처럼 동일한 역할을 수행합니다.  
   
 ## 예외 표시  
- 관리 코드가 비관리 코드와 상호 작용하는 방식으로 인해 Visual Studio는 Microsoft Office 응용 프로그램에서 throw되는 오류를 표시하지 않습니다. 예를 들어 Visual Studio에서 Office 개발 도구를 사용하여 만든 VSTO 추가 기능에서 예외를 throw하는 경우 Microsoft Office 응용 프로그램은 오류를 표시하지 않고 계속 진행됩니다. 이러한 오류를 표시하려면 공용 언어 런타임 예외에서 중단하도록 디버거를 설정합니다. 자세한 내용은 [방법: 예외가 throw되었을 때 중단](../Topic/How%20to:%20Break%20When%20an%20Exception%20is%20Thrown.md)을 참조하세요.  
+ 관리 코드가 비관리 코드와 상호 작용하는 방식으로 인해 Visual Studio는 Microsoft Office 응용 프로그램에서 throw되는 오류를 표시하지 않습니다. 예를 들어 Visual Studio에서 Office 개발 도구를 사용하여 만든 VSTO 추가 기능에서 예외를 throw하는 경우 Microsoft Office 응용 프로그램은 오류를 표시하지 않고 계속 진행됩니다. 이러한 오류를 표시하려면 공용 언어 런타임 예외에서 중단하도록 디버거를 설정합니다. 자세한 내용은 [방법: 예외가 throw되었을 때 중단](~/misc/how-to-break-when-an-exception-is-thrown.md)을 참조하세요.  
   
  공용 언어 런타임 예외에서 중단하도록 디버거를 설정하면 이미 처리한 예외 및 런타임 자체의 몇 가지 첫째 예외를 포함한 모든 예외가 프로젝트와 관련 없는 디버거로 중단됩니다. 찾을 수 없는 msosec를 참조하는 오류가 모든 프로젝트에 나타나지만 무시해도 됩니다. 이러한 msosec 예외는 솔루션에 영향을 주지 않습니다.  
   

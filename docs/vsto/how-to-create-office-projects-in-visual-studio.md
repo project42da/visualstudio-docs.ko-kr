@@ -44,7 +44,7 @@ caps.handback.revision: 95
      **새 프로젝트** 대화 상자가 나타납니다.  
   
     > [!NOTE]  
-    >  기본적으로 Office 프로젝트는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]을\(를\) 대상으로 합니다.  자세한 내용은 [.NET Framework Client Profile](../Topic/.NET%20Framework%20Client%20Profile.md)를 참조하세요.  
+    >  기본적으로 Office 프로젝트는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]을\(를\) 대상으로 합니다.  자세한 내용은 [.NET Framework Client Profile](http://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1)를 참조하세요.  
   
 2.  템플릿 창에서 사용할 언어 노드 아래에 있는 **Office\/SharePoint**를 확장합니다.  
   
@@ -95,7 +95,7 @@ caps.handback.revision: 95
      **새 프로젝트** 대화 상자가 나타납니다.  
   
     > [!NOTE]  
-    >  기본적으로 Office 프로젝트는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]을\(를\) 대상으로 합니다.  자세한 내용은 [.NET Framework Client Profile](../Topic/.NET%20Framework%20Client%20Profile.md)를 참조하세요.  
+    >  기본적으로 Office 프로젝트는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]을\(를\) 대상으로 합니다.  자세한 내용은 [.NET Framework Client Profile](http://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1)를 참조하세요.  
   
 2.  템플릿 창에서 사용할 언어 노드 아래에 있는 **Office\/SharePoint**를 확장합니다.  
   

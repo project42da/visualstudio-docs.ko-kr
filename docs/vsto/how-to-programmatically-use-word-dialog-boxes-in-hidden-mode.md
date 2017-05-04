@@ -44,6 +44,6 @@ caps.handback.revision: 47
  [방법: 프로그래밍 방식으로 Word의 기본 제공 대화 상자 사용](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)   
  [Word 개체 모델 개요](../vsto/word-object-model-overview.md)   
  [Office 솔루션에서 런타임에 바인딩](../vsto/late-binding-in-office-solutions.md)   
- [리플렉션&#40;C&#35; 및 Visual Basic&#41;](../Topic/Reflection%20(C%23%20and%20Visual%20Basic).md)  
+ [리플렉션&#40;C&#35; 및 Visual Basic&#41;](http://msdn.microsoft.com/library/5d1d1bcf-08de-4d0b-97a8-912d17c00f26)  
   
   

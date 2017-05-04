@@ -42,7 +42,7 @@ caps.handback.revision: 32
   
 -   마샬링  
   
- 다중 스레딩에 대한 일반적인 내용은 [구성 요소에서 다중 스레딩](../Topic/Multithreading%20in%20Components.md)을 참조하십시오.  
+ 다중 스레딩에 대한 일반적인 내용은 [구성 요소에서 다중 스레딩](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)을 참조하십시오.  
   
  Office는 주 STA에서 실행됩니다.  이러한 사실을 알고 있으면 Office에서 여러 스레드를 사용하는 방법을 이해할 수 있습니다.  
   
@@ -68,16 +68,16 @@ caps.handback.revision: 32
  [!code-csharp[Trin_VstcoreCreatingExcel#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreCreatingExcel/CS/ThisWorkbook.cs#5)]
  [!code-vb[Trin_VstcoreCreatingExcel#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreCreatingExcel/VB/ThisWorkbook.vb#5)]  
   
- 자세한 내용은 [Managed Threading Best Practices](../Topic/Managed%20Threading%20Best%20Practices.md)을 참조하십시오.  
+ 자세한 내용은 [Managed Threading Best Practices](http://msdn.microsoft.com/library/e51988e7-7f4b-4646-a06d-1416cee8d557)을 참조하십시오.  
   
 ## 모덜리스 폼  
  모덜리스 폼을 사용하면 폼이 표시되는 동안 응용 프로그램과 몇 가지 유형의 상호 작용을 할 수 있습니다.  사용자는 폼과 상호 작용하고, 폼은 닫히지 않은 상태로 응용 프로그램과 상호 작용합니다.  Office 개체 모델은 관리되는 모덜리스 폼을 지원하지만, 백그라운드 스레드에서는 이러한 폼을 사용하지 말아야 합니다.  
   
 ## 참고 항목  
- [구성 요소에서 다중 스레딩](../Topic/Multithreading%20in%20Components.md)   
- [Managed Threading](../Topic/Managed%20Threading.md)   
- [스레딩&#40;C&#35; 및 Visual Basic&#41;](../Topic/Threading%20(C%23%20and%20Visual%20Basic).md)   
- [Using Threads and Threading](../Topic/Using%20Threads%20and%20Threading.md)   
+ [구성 요소에서 다중 스레딩](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)   
+ [Managed Threading](http://msdn.microsoft.com/library/7b46a7d9-c6f1-46d1-a947-ae97471bba87)   
+ [스레딩&#40;C&#35; 및 Visual Basic&#41;](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)   
+ [Using Threads and Threading](http://msdn.microsoft.com/library/9b5ec2cd-121b-4d49-b075-222cf26f2344)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
   
   

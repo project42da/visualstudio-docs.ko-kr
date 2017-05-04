@@ -32,7 +32,7 @@ caps.handback.revision: 42
  데이터에 바인딩된 <xref:Microsoft.Office.Tools.Excel.ListObject>에 행을 추가할 때마다 <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow> 이벤트가 발생합니다. 데이터 유효성 검사를 수행하도록 이 이벤트를 처리할 수 있습니다. 예를 들어 18세에서 65세 사이의 직원만 데이터 원본에 추가할 수 있도록 응용 프로그램에서 요구하는 경우 행이 추가되기 전에 입력한 나이가 이 범위에 포함되는지 확인할 수 있습니다.  
   
 > [!NOTE]  
->  클라이언트뿐 아니라 서버에서의 사용자 입력도 항상 확인해야 합니다. 자세한 내용은 [보안 클라이언트 응용 프로그램](../Topic/Secure%20Client%20Applications.md)을 참조하세요.  
+>  클라이언트뿐 아니라 서버에서의 사용자 입력도 항상 확인해야 합니다. 자세한 내용은 [보안 클라이언트 응용 프로그램](http://msdn.microsoft.com/library/6239592e-fa7d-4dea-9f00-d296d0048b01)을 참조하세요.  
   
 #### 데이터 바인딩된 ListObject에 새 행을 추가할 때 데이터 유효성을 검사하려면  
   

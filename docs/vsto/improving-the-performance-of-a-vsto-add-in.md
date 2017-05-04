@@ -77,9 +77,9 @@ caps.handback.revision: 13
   
     ```  
   
-     C\# 프로젝트에서 빌드 후 이벤트를 만드는 방법에 대한 자세한 내용은 [방법: 빌드 이벤트 지정&#40;C&#35;&#41;](../Topic/How%20to:%20Specify%20Build%20Events%20(C%23).md)을 참조하세요.  
+     C\# 프로젝트에서 빌드 후 이벤트를 만드는 방법에 대한 자세한 내용은 [방법: 빌드 이벤트 지정&#40;C&#35;&#41;](~/ide/how-to-specify-build-events-csharp.md)을 참조하세요.  
   
-     Visual Basic 프로젝트에서 빌드 후 이벤트를 만드는 방법에 대한 자세한 내용은 [방법: 빌드 이벤트 지정&#40;C&#35;&#41;](../Topic/How%20to:%20Specify%20Build%20Events%20(C%23).md)을 참조하세요.  
+     Visual Basic 프로젝트에서 빌드 후 이벤트를 만드는 방법에 대한 자세한 내용은 [방법: 빌드 이벤트 지정&#40;C&#35;&#41;](~/ide/how-to-specify-build-events-csharp.md)을 참조하세요.  
   
 ##  <a name="Publish"></a> Windows Installer를 사용하여 Office 솔루션 게시  
  Windows Installer를 사용하여 솔루션을 게시하는 경우 Visual Studio 2010 Tools for Office Runtime은 VSTO 추가 기능이 로드될 때 다음 단계를 우회합니다.  

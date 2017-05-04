@@ -28,12 +28,12 @@ caps.handback.revision: 40
   
 |요소|설명|특성|  
 |--------|--------|--------|  
-|[&#60;assembly&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](../Topic/%3Cassembly%3E%20Element%20(ClickOnce%20Application).md)|필수. 최상위 요소입니다.|`manifestVersion`|  
-|[&#60;assemblyIdentity&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](../Topic/%3CassemblyIdentity%3E%20Element%20(ClickOnce%20Application).md)|필수 요소.[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 응용 프로그램의 주 어셈블리를 식별합니다.|`name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language`|  
-|[&#60;trustInfo&#62; Element &#40;ClickOnce Application&#41;](../Topic/%3CtrustInfo%3E%20Element%20(ClickOnce%20Application).md)|응용 프로그램 보안 요구 사항을 식별합니다.|없음|  
-|[&#60;entryPoint&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](../Topic/%3CentryPoint%3E%20Element%20(ClickOnce%20Application).md)|필수 요소. 실행을 위해 응용 프로그램 코드 진입점을 식별합니다.|`name`<br /><br /> `dependencyName`<br /><br /> `customHostSpecified`|  
-|[&#60;dependency&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](../Topic/%3Cdependency%3E%20Element%20(ClickOnce%20Application).md)|필수 요소. 응용 프로그램을 실행하는 데 필요한 각 종속성을 식별합니다. 필요에 따라 사전 설치해야 하는 어셈블리를 식별합니다.|없음|  
-|[&#60;file&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](../Topic/%3Cfile%3E%20Element%20(ClickOnce%20Application).md)|필수 요소. 응용 프로그램에서 사용되는 각 비어셈블리 파일을 식별합니다. 파일에 연결된 COM\(구성 요소 개체 모델\) 격리 데이터를 포함할 수 있습니다.|`name`<br /><br /> `size`|  
+|[&#60;assembly&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](~/deployment/assembly-element-clickonce-application.md)|필수. 최상위 요소입니다.|`manifestVersion`|  
+|[&#60;assemblyIdentity&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](~/deployment/assemblyidentity-element-clickonce-application.md)|필수 요소.[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 응용 프로그램의 주 어셈블리를 식별합니다.|`name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language`|  
+|[&#60;trustInfo&#62; Element &#40;ClickOnce Application&#41;](~/deployment/trustinfo-element-clickonce-application.md)|응용 프로그램 보안 요구 사항을 식별합니다.|없음|  
+|[&#60;entryPoint&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](~/deployment/entrypoint-element-clickonce-application.md)|필수 요소. 실행을 위해 응용 프로그램 코드 진입점을 식별합니다.|`name`<br /><br /> `dependencyName`<br /><br /> `customHostSpecified`|  
+|[&#60;dependency&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](~/deployment/dependency-element-clickonce-application.md)|필수 요소. 응용 프로그램을 실행하는 데 필요한 각 종속성을 식별합니다. 필요에 따라 사전 설치해야 하는 어셈블리를 식별합니다.|없음|  
+|[&#60;file&#62; 요소&#40;ClickOnce 응용 프로그램&#41;](~/deployment/file-element-clickonce-application.md)|필수 요소. 응용 프로그램에서 사용되는 각 비어셈블리 파일을 식별합니다. 파일에 연결된 COM\(구성 요소 개체 모델\) 격리 데이터를 포함할 수 있습니다.|`name`<br /><br /> `size`|  
   
  Office 솔루션의 응용 프로그램 매니페스트에는 `co.v1` 네임스페이스에 다음과 같은 요소가 있습니다.  
   
@@ -70,7 +70,7 @@ caps.handback.revision: 40
 |[&#60;vstoRuntime&#62; 요소&#40;Visual Studio에서 Office 개발&#41;](../vsto/vstoruntime-element-office-development-in-visual-studio.md)|필수 요소. Office 솔루션에서 지원되는 Visual Studio Tools for Office Runtime의 특정 버전을 설명합니다.|`release`<br /><br /> `version`<br /><br /> `supportUrl`|  
   
 ## 설명  
- Office 솔루션의 응용 프로그램 및 배포 매니페스트를 수동으로 편집할 수 있습니다. 나중에 매니페스트 생성 및 편집 도구\(mage.exe 및 mageui.exe\)를 사용하여 응용 프로그램 및 배포 매니페스트를 다시 서명해야 합니다. 자세한 내용은 [방법: 응용 프로그램 및 배포 매니페스트에 다시 서명](../Topic/How%20to:%20Re-sign%20Application%20and%20Deployment%20Manifests.md)을 참조하세요.  
+ Office 솔루션의 응용 프로그램 및 배포 매니페스트를 수동으로 편집할 수 있습니다. 나중에 매니페스트 생성 및 편집 도구\(mage.exe 및 mageui.exe\)를 사용하여 응용 프로그램 및 배포 매니페스트를 다시 서명해야 합니다. 자세한 내용은 [방법: 응용 프로그램 및 배포 매니페스트에 다시 서명](~/deployment/how-to-re-sign-application-and-deployment-manifests.md)을 참조하세요.  
   
 ## 파일 위치  
  응용 프로그램 매니페스트는 솔루션의 단일 버전에 따라 다릅니다. 이러한 이유로 응용 프로그램 매니페스트를 배포 매니페스트와 분리하여 저장해야 합니다.[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]는 버전별 파일을 게시 폴더의 **응용 프로그램 파일** 하위 디렉터리에 있는 관련 버전을 따라 명명된 하위 디렉터리에 배치합니다.  

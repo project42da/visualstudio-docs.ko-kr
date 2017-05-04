@@ -71,7 +71,7 @@ caps.handback.revision: 22
   
  양식 영역 코드 파일 외부에서 컨트롤에 액세스할 수 있게 하려면 양식 영역 코드 파일 내에서 해당 컨트롤을 반환하도록 속성을 만듭니다.  
   
- C\#에서 속성을 만드는 방법에 대한 자세한 내용은 [방법: 읽기&#47;쓰기 속성 선언 및 사용&#40;C&#35; 프로그래밍 가이드&#41;](../Topic/How%20to:%20Declare%20and%20Use%20Read%20Write%20Properties%20(C%23%20Programming%20Guide).md)을 참조하세요.  
+ C\#에서 속성을 만드는 방법에 대한 자세한 내용은 [방법: 읽기&#47;쓰기 속성 선언 및 사용&#40;C&#35; 프로그래밍 가이드&#41;](http://msdn.microsoft.com/library/a4962fef-af7e-4c4b-a929-4ae4d646ab8a)을 참조하세요.  
   
  Visual Basic에서 속성을 만드는 방법에 대한 자세한 내용은 [빌드에 없음: 방법: 클래스에 필드 및 속성 추가](http://msdn.microsoft.com/ko-kr/ae53f61b-3abc-413e-8931-703c5f5e8fc2)를 참조하세요.  
   

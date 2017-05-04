@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 24
 ---
 # Office 솔루션에서 WPF 컨트롤 사용
-  Visual Studio에서 Office 개발 도구를 사용하여 만든 솔루션은 Windows Forms 컨트롤에서 직접 작동하도록 설계되었지만 솔루션에서 WPF 컨트롤을 사용할 수도 있습니다.  WPF\(Windows Presentation Foundation\)는 Windows Forms 대신 사용자 인터페이스를 디자인하는 데 사용됩니다.  WPF는 XAML\(Extensible Application Markup Language\)이라는 태그 언어를 사용하여 UI, 미디어 및 문서를 통합하기 위한 새로운 기술을 제공합니다.  자세한 내용은 [Visual Studio 2015에서의 WPF 소개](../Topic/Introduction%20to%20WPF%20in%20Visual%20Studio%202015.md)를 참조하세요.  
+  Visual Studio에서 Office 개발 도구를 사용하여 만든 솔루션은 Windows Forms 컨트롤에서 직접 작동하도록 설계되었지만 솔루션에서 WPF 컨트롤을 사용할 수도 있습니다.  WPF\(Windows Presentation Foundation\)는 Windows Forms 대신 사용자 인터페이스를 디자인하는 데 사용됩니다.  WPF는 XAML\(Extensible Application Markup Language\)이라는 태그 언어를 사용하여 UI, 미디어 및 문서를 통합하기 위한 새로운 기술을 제공합니다.  자세한 내용은 [Visual Studio 2015에서의 WPF 소개](http://msdn.microsoft.com/library/582a314e-e23d-4144-b45b-acbbd5579252)를 참조하세요.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
@@ -98,21 +98,21 @@ caps.handback.revision: 24
 ## WPF 리소스  
  Windows Forms 컨트롤 및 폼에 WPF 컨트롤을 호스트하기 위한 아키텍처 및 디자인 문제에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Windows Forms 및 WPF 상호 운용성 입력 아키텍처](../Topic/Windows%20Forms%20and%20WPF%20Interoperability%20Input%20Architecture.md)  
+-   [Windows Forms 및 WPF 상호 운용성 입력 아키텍처](http://msdn.microsoft.com/library/0eb6f137-f088-4c5e-9e37-f96afd28f235)  
   
--   [Windows Forms 및 WPF 속성 매핑](../Topic/Windows%20Forms%20and%20WPF%20Property%20Mapping.md)  
+-   [Windows Forms 및 WPF 속성 매핑](http://msdn.microsoft.com/library/999d8298-9c04-467d-a453-86e41002057d)  
   
--   [WPF 및 Windows Forms 상호 운용성](../Topic/WPF%20and%20Windows%20Forms%20Interoperation.md)  
+-   [WPF 및 Windows Forms 상호 운용성](http://msdn.microsoft.com/library/9e8aa6b6-112c-4579-98d1-c974917df499)  
   
--   [Windows Forms 컨트롤 및 해당 WPF 컨트롤](../Topic/Windows%20Forms%20Controls%20and%20Equivalent%20WPF%20Controls.md)  
+-   [Windows Forms 컨트롤 및 해당 WPF 컨트롤](http://msdn.microsoft.com/library/8a157e6b-8054-46db-a5cf-a78966acc7a1)  
   
  디자인 타임에 Visual Studio에서 Windows Forms 컨트롤과 폼에 WPF 컨트롤을 추가하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기](../Topic/Walkthrough:%20Creating%20New%20WPF%20Content%20on%20Windows%20Forms%20at%20Design%20Time.md)  
+-   [연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기](http://msdn.microsoft.com/library/2e92d8e8-f0e4-4df7-9f07-2acf35cd798c)  
   
--   [연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 정렬](../Topic/Walkthrough:%20Arranging%20WPF%20Content%20on%20Windows%20Forms%20at%20Design%20Time.md)  
+-   [연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 정렬](http://msdn.microsoft.com/library/5efb1c53-1484-43d6-aa8a-f4861b99bb8a)  
   
--   [연습: WPF 콘텐츠 스타일 지정](../Topic/Walkthrough:%20Styling%20WPF%20Content.md)  
+-   [연습: WPF 콘텐츠 스타일 지정](http://msdn.microsoft.com/library/e574aac7-7ea4-4cdb-8034-bab541f000df)  
   
 ## 참고 항목  
  [Office UI 사용자 지정](../vsto/office-ui-customization.md)   

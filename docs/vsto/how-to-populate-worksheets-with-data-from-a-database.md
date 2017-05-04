@@ -38,7 +38,7 @@ caps.handback.revision: 38
   
 1.  Visual Studio에서 Excel 문서 수준 프로젝트를 열고 디자이너에서 워크시트를 엽니다.  
   
-2.  **데이터 소스** 창을 열고 프로젝트의 데이터 소스를 만듭니다.  자세한 내용은 [방법: 데이터베이스의 데이터에 연결](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md)을 참조하십시오.  
+2.  **데이터 소스** 창을 열고 프로젝트의 데이터 소스를 만듭니다.  자세한 내용은 [방법: 데이터베이스의 데이터에 연결](~/data-tools/how-to-connect-to-data-in-a-database.md)을 참조하십시오.  
   
 3.  필요한 필드나 테이블을 **데이터 소스** 창에서 워크시트로 끌어 놓습니다.  
   
@@ -55,11 +55,11 @@ caps.handback.revision: 38
   
 -   데이터베이스의 연결된 데이터 테이블을 캡슐화하는 형식화된 데이터 집합.  자세한 내용은 [Visual Studio에서 데이터 집합 작업](../data-tools/dataset-tools-in-visual-studio.md)을 참조하십시오.  
   
--   형식화된 데이터 집합에 컨트롤을 연결하는 <xref:System.Windows.Forms.BindingSource>.  자세한 내용은 [BindingSource 구성 요소 개요](../Topic/BindingSource%20Component%20Overview.md)을 참조하십시오.  
+-   형식화된 데이터 집합에 컨트롤을 연결하는 <xref:System.Windows.Forms.BindingSource>.  자세한 내용은 [BindingSource 구성 요소 개요](http://msdn.microsoft.com/library/be838caf-fcb0-4b68-827f-58b2c04b747f)을 참조하십시오.  
   
 -   형식화된 데이터 집합을 데이터베이스에 연결하는 TableAdapter.  자세한 내용은 [TableAdapter 개요](/visual-studio/data-tools/tableadapter-overview)을 참조하십시오.  
   
--   계층적 업데이트를 사용하도록 설정하기 위해 데이터 집합의 테이블 어댑터를 조정하는 데 사용되는 TableAdapterManager.  자세한 내용은 [계층적 업데이트](../data-tools/hierarchical-update.md) 및 [TableAdapterManager 개요](../Topic/TableAdapterManager%20Overview.md)를 참조하십시오.  
+-   계층적 업데이트를 사용하도록 설정하기 위해 데이터 집합의 테이블 어댑터를 조정하는 데 사용되는 TableAdapterManager.  자세한 내용은 [계층적 업데이트](../data-tools/hierarchical-update.md) 및 [TableAdapterManager 개요](http://msdn.microsoft.com/library/33076d42-6b41-491a-ac11-6c6339aea650)를 참조하십시오.  
   
  프로젝트를 실행하면 데이터 소스의 첫 번째 레코드가 컨트롤에 표시됩니다.  <xref:System.Windows.Forms.BindingSource>를 사용하여 사용자가 레코드를 스크롤할 수 있게 설정할 수 있습니다.  
   

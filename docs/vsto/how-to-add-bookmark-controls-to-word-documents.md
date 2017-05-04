@@ -53,7 +53,7 @@ caps.handback.revision: 51
   
 -   **데이터 소스** 창에서.  
   
-     **데이터 소스** 창에서 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 문서로 끌어올 수 있습니다. 이 기능은 동시에 컨트롤을 데이터에 바인딩하려는 경우에 유용합니다.**데이터 소스** 창에서 Windows Form 컨트롤을 추가하는 것과 동일한 방법으로 호스트 컨트롤을 추가할 수 있습니다. 자세한 내용은 [데이터 바인딩 및 Windows Forms](../Topic/Data%20Binding%20and%20Windows%20Forms.md)을 참조하십시오.  
+     **데이터 소스** 창에서 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 문서로 끌어올 수 있습니다. 이 기능은 동시에 컨트롤을 데이터에 바인딩하려는 경우에 유용합니다.**데이터 소스** 창에서 Windows Form 컨트롤을 추가하는 것과 동일한 방법으로 호스트 컨트롤을 추가할 수 있습니다. 자세한 내용은 [데이터 바인딩 및 Windows Forms](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27)을 참조하십시오.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   

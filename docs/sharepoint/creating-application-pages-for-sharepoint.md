@@ -77,8 +77,8 @@ caps.handback.revision: 35
   
 ## 참고 항목  
  [SharePoint Foundation Development in Depth](http://go.microsoft.com/fwlink/?LinkID=182103)   
- [ASP.NET 웹 페이지 개요](../Topic/ASP.NET%20Web%20Forms%20Pages%20Overview.md)   
- [ASP.NET 웹 페이지 구문 개요](../Topic/ASP.NET%20Web%20Forms%20Page%20Syntax%20Overview.md)   
+ [ASP.NET 웹 페이지 개요](http://msdn.microsoft.com/library/52fa0455-41ea-4315-8208-2861d1527da2)   
+ [ASP.NET 웹 페이지 구문 개요](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02)   
  [ASP.NET 웹 페이지 프로그래밍](http://msdn.microsoft.com/ko-kr/5626c661-8057-4de8-b658-c2e35ed4b4c9)  
   
   

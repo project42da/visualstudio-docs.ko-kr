@@ -53,7 +53,7 @@ caps.handback.revision: 53
   
  다음 개념을 알고 있으면 연습을 완료하는 데 도움이 되지만 반드시 필요하지는 않습니다.  
   
--   Visual Studio의 프로젝트 마법사 및 항목 템플릿 마법사.  자세한 내용은 [방법: 프로젝트 템플릿에 마법사 사용](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md) 및 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스를 참조하십시오.  
+-   Visual Studio의 프로젝트 마법사 및 항목 템플릿 마법사.  자세한 내용은 [방법: 프로젝트 템플릿에 마법사 사용](~/extensibility/how-to-use-wizards-with-project-templates.md) 및 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스를 참조하십시오.  
   
 -   SharePoint의 사이트 열.  자세한 내용은 [Columns](http://go.microsoft.com/fwlink/?LinkId=183547)를 참조하십시오.  
   
@@ -121,7 +121,7 @@ caps.handback.revision: 53
   
 3.  대상 프레임 워크가 .NET Framework 4.5 클라이언트 프로필이 아닌 .NET Framework 4.5로 설정되어 있는지 확인 하십시오.  
   
-     자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md)을 참조하십시오.  
+     자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](~/ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하십시오.  
   
 4.  **프로젝트템플릿마법사** 프로젝트에 대한 바로 가기 메뉴를 열고 **추가**를 선택한 다음 **새 항목**을 선택합니다.  
   
@@ -168,7 +168,7 @@ caps.handback.revision: 53
   
 13. Visual Basic 프로젝트를 개발하는 중이면, **프로젝트 디자이너**를 사용하여 ProjectTemplateWizard 네임스페이스를 프로젝트로 가져옵니다.  
   
-     자세한 내용은 [방법: 가져온 네임스페이스 추가 또는 제거&#40;Visual Basic&#41;](../Topic/How%20to:%20Add%20or%20Remove%20Imported%20Namespaces%20(Visual%20Basic).md)을 참조하십시오.  
+     자세한 내용은 [방법: 가져온 네임스페이스 추가 또는 제거&#40;Visual Basic&#41;](~/ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)을 참조하십시오.  
   
 #### SharePointCommands 프로젝트를 구성하려면  
   
@@ -551,6 +551,6 @@ caps.handback.revision: 53
  [Defining Custom SharePoint Project Item Types](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [방법: 프로젝트 템플릿에 마법사 사용](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md)  
+ [방법: 프로젝트 템플릿에 마법사 사용](~/extensibility/how-to-use-wizards-with-project-templates.md)  
   
   

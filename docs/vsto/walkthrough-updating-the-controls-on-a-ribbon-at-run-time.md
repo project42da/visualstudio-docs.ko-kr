@@ -291,7 +291,7 @@ caps.handback.revision: 50
 ## 참고 항목  
  [런타임에 리본 메뉴에 액세스](../vsto/accessing-the-ribbon-at-run-time.md)   
  [리본 개요](../vsto/ribbon-overview.md)   
- [LINQ\(Language\-Integrated Query\)](../Topic/LINQ%20(Language-Integrated%20Query).md)   
+ [LINQ\(Language\-Integrated Query\)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
  [방법: 리본 메뉴 사용자 지정 시작](../vsto/how-to-get-started-customizing-the-ribbon.md)   
  [리본 디자이너](../vsto/ribbon-designer.md)   
  [연습: 리본 디자이너를 사용하여 사용자 지정 탭 만들기](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   

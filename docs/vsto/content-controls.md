@@ -155,7 +155,7 @@ caps.handback.revision: 64
  Office 솔루션의 호스트 컨트롤을 데이터에 바인딩하는 방법의 개요는 [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)을 참조하세요.  
   
 ### Windows Forms 데이터 바인딩 모델 사용  
- 대부분의 콘텐츠 컨트롤은 Windows Forms에서 사용하는 단순 데이터 바인딩 모델을 지원합니다.  단순 데이터 바인딩은 컨트롤이 데이터 테이블의 열 값과 같은 단일 데이터 요소에 바인딩됨을 의미합니다.  자세한 내용은 [데이터 바인딩 및 Windows Forms](../Topic/Data%20Binding%20and%20Windows%20Forms.md)를 참조하세요.  
+ 대부분의 콘텐츠 컨트롤은 Windows Forms에서 사용하는 단순 데이터 바인딩 모델을 지원합니다.  단순 데이터 바인딩은 컨트롤이 데이터 테이블의 열 값과 같은 단일 데이터 요소에 바인딩됨을 의미합니다.  자세한 내용은 [데이터 바인딩 및 Windows Forms](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27)를 참조하세요.  
   
  문서 수준 프로젝트에서 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]의 **데이터 소스** 창을 사용하여 데이터를 콘텐츠 컨트롤에 바인딩할 수 있습니다.  데이터 바인딩된 콘텐츠 컨트롤을 문서에 추가하는 방법에 대한 자세한 내용은 [방법: 데이터베이스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-a-database.md) 및 [방법: 개체의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-objects.md)를 참조하세요.  
   

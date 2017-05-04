@@ -206,7 +206,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
   
  “응용 프로그램 도메인을 만들 수 없으므로 사용자 지정을 로드할 수 없습니다.”  
   
- Visual Studio는 Office 솔루션을 로드하기 전에 .NET Framework 어셈블리 로더인 Fusion을 사용하여 어셈블리를 캐시합니다.  Visual Studio가 Fusion 캐시에 쓸 수 있는지 확인한 후 다시 시도합니다.  자세한 내용은 [어셈블리 섀도 복사](../Topic/Shadow%20Copying%20Assemblies.md)를 참조하세요.  
+ Visual Studio는 Office 솔루션을 로드하기 전에 .NET Framework 어셈블리 로더인 Fusion을 사용하여 어셈블리를 캐시합니다.  Visual Studio가 Fusion 캐시에 쓸 수 있는지 확인한 후 다시 시도합니다.  자세한 내용은 [어셈블리 섀도 복사](http://msdn.microsoft.com/library/de8b8759-fca7-4260-896b-5a4973157672)를 참조하세요.  
   
 ### 편집하며 계속하기를 사용한 후 문서 수준 프로젝트에서 디버거를 중지하는 경우 오류 발생  
  프로젝트가 중단 모드에 있는 동안 편집하며 계속하기를 사용하여 Excel 또는 Word용 문서 수준 프로젝트의 코드를 변경하는 경우 이후에 디버거를 중지하면 다음과 같은 오류 메시지가 있는 대화 상자가 표시될 수 있습니다.  

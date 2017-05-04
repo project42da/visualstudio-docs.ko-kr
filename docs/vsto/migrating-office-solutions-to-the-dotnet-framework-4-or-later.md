@@ -40,7 +40,7 @@ caps.handback.revision: 54
   
 ## 참고 항목  
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)   
- [방법: 한 버전의 .NET Framework를 대상으로 지정](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md)   
+ [방법: 한 버전의 .NET Framework를 대상으로 지정](~/ide/how-to-target-a-version-of-the-dotnet-framework.md)   
  [Office 솔루션에서 런타임 오류 문제 해결](../vsto/troubleshooting-errors-in-office-solutions.md)   
  [Office 솔루션 오류에 대한 추가 지원](../vsto/additional-support-for-errors-in-office-solutions.md)  
   

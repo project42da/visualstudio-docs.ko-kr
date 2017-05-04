@@ -99,7 +99,7 @@ caps.handback.revision: 27
  **게시 언어**  
  이 옵션은 Microsoft 소프트웨어 사용 조건의 언어를 설정하고 필수 조건 목록에 언어 팩을 포함합니다. 사용자 지정의 언어에는 영향을 주지 않습니다. 설치 프로그램의 언어는 Visual Studio의 설치된 언어에 의해 결정됩니다.  
   
- **게시 언어**를 변경하는 방법에 대한 자세한 내용은 [방법: ClickOnce 응용 프로그램의 게시 언어 변경](../Topic/How%20to:%20Change%20the%20Publish%20Language%20for%20a%20ClickOnce%20Application.md)을 참조하세요.  
+ **게시 언어**를 변경하는 방법에 대한 자세한 내용은 [방법: ClickOnce 응용 프로그램의 게시 언어 변경](~/deployment/how-to-change-the-publish-language-for-a-clickonce-application.md)을 참조하세요.  
   
  **게시 버전**  
  사용자 지정에 버전 번호를 설정합니다. 버전 번호가 변경되면 응용 프로그램이 업데이트로 게시됩니다. 이전에 게시된 버전을 덮어쓰지 않도록 빌드 프로세스 동안 각 버전에 대해 새 폴더가 만들어집니다. 게시 버전의 각 부분\(**주**, **부**, **빌드**, **수정**\)에는 최대 5개의 숫자가 포함될 수 있습니다.  

@@ -98,7 +98,7 @@ caps.handback.revision: 100
  호스트 컨트롤, 응용 프로그램 또는 문서 이벤트를 포함하여 개체의 이벤트에 응답하는 코드를 작성할 수도 있습니다.  자세한 내용은 [연습: NamedRange 컨트롤의 이벤트 프로그래밍](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)을 참조하세요.  
   
 ## 작업 창의 컨트롤에 데이터 바인딩  
- 작업 창의 컨트롤은 Windows Forms의 컨트롤과 동일한 데이터 바인딩 기능을 가지고 있습니다.  데이터 집합, 형식화된 데이터 집합 및 XML과 같은 데이터 소스에 컨트롤을 바인딩할 수 있습니다.  자세한 내용은 [데이터 바인딩 및 Windows Forms](../Topic/Data%20Binding%20and%20Windows%20Forms.md)를 참조하세요.  
+ 작업 창의 컨트롤은 Windows Forms의 컨트롤과 동일한 데이터 바인딩 기능을 가지고 있습니다.  데이터 집합, 형식화된 데이터 집합 및 XML과 같은 데이터 소스에 컨트롤을 바인딩할 수 있습니다.  자세한 내용은 [데이터 바인딩 및 Windows Forms](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27)를 참조하세요.  
   
  작업 창의 컨트롤과 문서의 컨트롤을 동일한 데이터 집합에 바인딩할 수 있습니다.  예를 들어 작업 창의 컨트롤과 워크시트의 컨트롤 간에 마스터\/세부 관계를 만들 수 있습니다.  자세한 내용은 [연습: Excel 작업 창의 컨트롤에 데이터 바인딩](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)을 참조하세요.  
   
@@ -124,7 +124,7 @@ caps.handback.revision: 100
  [!code-vb[Trin_VstcoreActionsPaneExcel#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneExcel/VB/ThisWorkbook.vb#10)]  
   
 ## 컨트롤 고정  
- 사용자가 런타임에 작업 창의 크기를 조정하는 경우 작업 창과 함께 컨트롤의 크기가 조정될 수 있습니다.  Windows Forms 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 사용하여 작업 창에 컨트롤을 고정할 수 있습니다.  동일한 방식으로 사용자 정의 컨트롤에 Windows Forms 컨트롤을 고정할 수도 있습니다.  자세한 내용은 [방법: Windows Forms에서 컨트롤 고정](../Topic/How%20to:%20Anchor%20Controls%20on%20Windows%20Forms.md)을 참조하세요.  
+ 사용자가 런타임에 작업 창의 크기를 조정하는 경우 작업 창과 함께 컨트롤의 크기가 조정될 수 있습니다.  Windows Forms 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 사용하여 작업 창에 컨트롤을 고정할 수 있습니다.  동일한 방식으로 사용자 정의 컨트롤에 Windows Forms 컨트롤을 고정할 수도 있습니다.  자세한 내용은 [방법: Windows Forms에서 컨트롤 고정](http://msdn.microsoft.com/library/59ea914f-fbd3-427a-80fe-decd02f7ae6d)을 참조하세요.  
   
 ## 작업 창 크기 조정  
  <xref:Microsoft.Office.Tools.ActionsPane>이 작업창에 포함되어 있으므로 <xref:Microsoft.Office.Tools.ActionsPane>의 크기를 직접 변경할 수는 없습니다.  그러나 작업창을 나타내는 <xref:Microsoft.Office.Core.CommandBar>의 <xref:Microsoft.Office.Core.CommandBar.Width%2A> 속성을 설정하여 프로그래밍 방식으로 작업창의 너비를 변경할 수 있습니다.  가로로 도킹되어 있거나 부동 창인 경우 작업창의 높이를 변경할 수 있습니다.  

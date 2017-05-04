@@ -27,7 +27,7 @@ caps.handback.revision: 54
   Visual Studio에서 SharePoint 도구의 확장을 만드는 경우 SharePoint 도구에서 노출하는 확장성 인터페이스를 하나 이상 구현하여 시작합니다.  대부분의 경우 SharePoint 도구에서 제공하는 다른 형식을 사용하여 확장에서 기능도 구현합니다.  일부 시나리오에서는 Visual Studio 및 SharePoint에서 제공하는 다른 개체 모델의 형식을 사용할 수도 있습니다.  이러한 각 개체 모델의 용도를 이해하고 이러한 개체 모델을 서로 사용하여 SharePoint 도구의 확장을 만드는 방법을 알아야 합니다.  
   
 ## 확장성 인터페이스를 구현하여 SharePoint 도구 확장  
- Visual Studio에서는 .NET Framework 4의 MEF\(Managed Extensibility Framework\)를 사용하여 SharePoint 도구에 대한 확장성 모델을 제공합니다.  MEF는 System.ComponentModel.Composition 어셈블리에서 구현된 API로, 응용 프로그램에서 확장성 지점을 노출하고 런타임에 확장을 검색하고 로드할 수 있도록 합니다.  MEF에 대한 자세한 내용은 [MEF&#40;Managed Extensibility Framework&#41;](../Topic/Managed%20Extensibility%20Framework%20(MEF).md)를 참조하세요.  
+ Visual Studio에서는 .NET Framework 4의 MEF\(Managed Extensibility Framework\)를 사용하여 SharePoint 도구에 대한 확장성 모델을 제공합니다.  MEF는 System.ComponentModel.Composition 어셈블리에서 구현된 API로, 응용 프로그램에서 확장성 지점을 노출하고 런타임에 확장을 검색하고 로드할 수 있도록 합니다.  MEF에 대한 자세한 내용은 [MEF&#40;Managed Extensibility Framework&#41;](http://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)를 참조하세요.  
   
  SharePoint 도구를 확장하려면 Visual Studio에서 노출하는 확장성 인터페이스를 하나 이상 구현합니다.  또한 <xref:System.ComponentModel.Composition.ExportAttribute>와 필요에 따라 추가 SharePoint 도구 관련 특성을 인터페이스 구현에 적용해야 합니다.  다음 표에는 SharePoint 도구를 확장하기 위해 구현할 수 있는 인터페이스가 나와 있습니다.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 54
   
  Visual Studio 자동화 개체 모델의 주요 부분은 EnvDTE.dll 어셈블리에서 정의됩니다.  EnvDTE80.dll, EnvDTE90.dll, EnvDTE100.dll 및 EnvDTE110.dll 어셈블리는 각각 Visual Studio 2005, Visual Studio 2008, Visual Studio 2010 및 [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]에 도입된 추가 기능을 제공하며,  Visual Studio에 포함되어 있습니다.  
   
- 자동화 개체 모델에 대한 자세한 내용은 [Extending the Visual Studio Environment](../Topic/Extending%20the%20Visual%20Studio%20Environment.md) 및 [Automation and Extensibility Reference](../Topic/Automation%20and%20Extensibility%20Reference.md)를 참조하세요.  
+ 자동화 개체 모델에 대한 자세한 내용은 [Extending the Visual Studio Environment](http://msdn.microsoft.com/library/4173a963-7ac7-4966-9bb7-e28a9d9f6792) 및 [Automation and Extensibility Reference](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)를 참조하세요.  
   
 ### Visual Studio 통합 개체 모델  
  통합 개체 모델에서는 *VSPackage*를 만들어 Visual Studio에 기능을 추가하는 데 사용할 수 있는 API를 제공합니다.  VSPackage는 도구 창, 편집기, 디자이너, 서비스, 프로젝트 등의 사용자 지정 기능을 제공하여 Visual Studio IDE를 확장하는 모듈입니다.  

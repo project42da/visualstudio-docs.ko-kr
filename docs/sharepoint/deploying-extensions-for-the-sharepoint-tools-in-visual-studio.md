@@ -220,7 +220,7 @@ caps.handback.revision: 39
 ## 수동으로 VSIX 패키지 만들기  
  SharePoint 도구 확장용 VSIX 패키지를 수동으로 만들려는 경우 다음 단계를 수행합니다.  
   
-1.  extension.vsixmanifest 파일, \[Content\_Types\].xml 및 VSIX 패키지 파일\(.vsix 파일\)을 만듭니다.  자세한 내용은 [VSIX 패키지에 대 한 분석](../extensibility/anatomy-of-a-vsix-package.md) 및 [방법: 수동으로 확장 패키지&#40;VSIX 배포&#41;](../Topic/How%20to:%20Manually%20Package%20an%20Extension%20(VSIX%20Deployment).md)를 참조하십시오.  
+1.  extension.vsixmanifest 파일, \[Content\_Types\].xml 및 VSIX 패키지 파일\(.vsix 파일\)을 만듭니다.  자세한 내용은 [VSIX 패키지에 대 한 분석](../extensibility/anatomy-of-a-vsix-package.md) 및 [방법: 수동으로 확장 패키지&#40;VSIX 배포&#41;](~/misc/how-to-manually-package-an-extension-vsix-deployment.md)를 참조하십시오.  
   
 2.  VSIX 패키지에 확장 어셈블리를 추가합니다.  확장에 SharePoint 명령이 포함되어 있으면 SharePoint 명령을 구현하는 어셈블리도 VSIX 패키지에 추가합니다.  
   

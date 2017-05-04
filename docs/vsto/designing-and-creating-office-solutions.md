@@ -47,7 +47,7 @@ caps.handback.revision: 99
   
  .NET Framework 3.5를 대상으로 하는 VSTO 추가 기능 프로젝트를 마이그레이션하는 경우 Visual Studio에서는 설치한 Office 버전에 따라 프로젝트의 대상 프레임워크를 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상으로 변경합니다.  
   
- 그러나 Visual Studio에서 대상 프레임워크를 변경한 후 특정 기능을 사용하는 프로젝트의 일부 코드를 수정해야 할 수 있습니다.  대상 프레임워크를 변경하는 방법에 대한 자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md)을 참조하세요.  프로젝트에서 변경해야 할 수 있는 항목에 대한 자세한 내용은 [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)을 참조하세요.  
+ 그러나 Visual Studio에서 대상 프레임워크를 변경한 후 특정 기능을 사용하는 프로젝트의 일부 코드를 수정해야 할 수 있습니다.  대상 프레임워크를 변경하는 방법에 대한 자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](~/ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.  프로젝트에서 변경해야 할 수 있는 항목에 대한 자세한 내용은 [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)을 참조하세요.  
   
  Visual Studio에서 프로젝트의 대상 .NET Framework를 변경하는 경우 ClickOnce를 사용하는 솔루션을 배포하려면 **필수 구성 요소** 대화 상자에서도 해당 버전의 .NET Framework를 선택해야 합니다.  이 선택은 프로젝트의 대상 프레임워크를 변경할 때 자동으로 변경되지 않습니다.  자세한 내용은 [방법: 최종 사용자 컴퓨터에 Office 솔루션 실행을 위한 필수 구성 요소 설치](http://msdn.microsoft.com/ko-kr/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)를 참조하세요.  
   
@@ -55,14 +55,14 @@ caps.handback.revision: 99
 >  [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]을 사용하여 만드는 Office 프로젝트에서 .NET Framework 3.5 또는 이전 버전을 대상으로 지정할 수 없습니다.  [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]을 사용하여 만드는 Office 프로젝트에는 [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]에서 처음 도입된 기능이 필요합니다.  
   
 ### Office PIA가 최종 사용자 컴퓨터에서 필요한 경우 이해  
- 기본적으로 Office PIA\(주 interop 어셈블리\)는 프로젝트에 있는 각 Office PIA 참조의 **Interop 형식 포함** 속성이 기본값인 **True**로 설정된 경우 최종 사용자 컴퓨터에 설치될 수 있습니다.  이 시나리오에서는 솔루션에서 사용되는 PIA 형식에 대한 형식 정보가 프로젝트를 빌드할 때 솔루션 어셈블리에 포함됩니다.  런타임에 포함된 형식 정보가 Office 응용 프로그램의 COM 기반 개체 모델을 호출하는 데 PIA 대신 사용됩니다.  PIA의 형식이 솔루션에 포함되는 방식에 대한 자세한 내용은 [동일 형식 및 포함된 Interop 형식](../Topic/Type%20Equivalence%20and%20Embedded%20Interop%20Types.md)을 참조하세요.  
+ 기본적으로 Office PIA\(주 interop 어셈블리\)는 프로젝트에 있는 각 Office PIA 참조의 **Interop 형식 포함** 속성이 기본값인 **True**로 설정된 경우 최종 사용자 컴퓨터에 설치될 수 있습니다.  이 시나리오에서는 솔루션에서 사용되는 PIA 형식에 대한 형식 정보가 프로젝트를 빌드할 때 솔루션 어셈블리에 포함됩니다.  런타임에 포함된 형식 정보가 Office 응용 프로그램의 COM 기반 개체 모델을 호출하는 데 PIA 대신 사용됩니다.  PIA의 형식이 솔루션에 포함되는 방식에 대한 자세한 내용은 [동일 형식 및 포함된 Interop 형식](http://msdn.microsoft.com/library/78892eba-2a58-4165-b4b1-0250ee2f41dc)을 참조하세요.  
   
  프로젝트에서 각 Office PIA 참조의 **Interop 형식 포함** 속성이 **False**로 설정된 경우 솔루션을 실행하는 각 최종 사용자 컴퓨터에서 전역 어셈블리 캐시에 Office PIA를 설치하고 등록해야 합니다.  대부분의 경우 PIA는 Office와 함께 기본적으로 설치되지만 PIA 재배포 가능 파일을 솔루션에 대한 필수 구성 요소로 포함할 수도 있습니다.  자세한 내용은 [Office 솔루션 배포 필수 구성 요소](http://msdn.microsoft.com/ko-kr/9f672809-43a3-40a1-9057-397ce3b5126e)를 참조하세요.  
   
 ### Client Profile 이해  
- .NET Framework Client Profile은 전체 .NET Framework의 하위 집합입니다.  .NET Framework의 클라이언트 기능만 사용해야 하고 Office 솔루션에 대한 가장 빠른 배포 환경을 제공하려는 경우 .NET Framework Client Profile을 대상으로 지정할 수 있습니다.  자세한 내용은 [.NET Framework Client Profile](../Topic/.NET%20Framework%20Client%20Profile.md)를 참조하세요.  
+ .NET Framework Client Profile은 전체 .NET Framework의 하위 집합입니다.  .NET Framework의 클라이언트 기능만 사용해야 하고 Office 솔루션에 대한 가장 빠른 배포 환경을 제공하려는 경우 .NET Framework Client Profile을 대상으로 지정할 수 있습니다.  자세한 내용은 [.NET Framework Client Profile](http://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1)를 참조하세요.  
   
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]를 대상으로 하는 Office 프로젝트를 만들 때 기본적으로 [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]가 대상으로 지정됩니다. 전체 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]에 대해 개발하려는 경우 프로젝트가 만들어진 후 이 옵션을 설정해야 합니다.  자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md)을 참조하세요.  
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]를 대상으로 하는 Office 프로젝트를 만들 때 기본적으로 [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]가 대상으로 지정됩니다. 전체 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]에 대해 개발하려는 경우 프로젝트가 만들어진 후 이 옵션을 설정해야 합니다.  자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](~/ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.  
   
 ## 64비트 버전의 Microsoft Office용 솔루션 만들기  
  Microsoft Office는 64비트 및 32비트 버전에서 사용할 수 있습니다.  두 버전 중 하나에서 실행될 수 있는 Office 솔루션을 만들려면 프로젝트의 플랫폼 대상 설정이 **Any CPU**로 설정되어야 합니다.  이 값은 Office 프로젝트에 대한 기본값입니다. 자세한 내용은 [Office 솔루션 빌드](../vsto/building-office-solutions.md)를 참조하세요.  

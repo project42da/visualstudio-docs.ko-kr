@@ -54,7 +54,7 @@ caps.handback.revision: 19
 |[방법: SharePoint 연결 추가 또는 제거](../sharepoint/how-to-add-or-remove-sharepoint-connections.md)|**서버 탐색기**의 **SharePoint 연결** 노드에 새 SharePoint 사이트를 추가하는 데 필요한 단계에 대해 설명합니다.|  
   
 ## 참고 항목  
- [서버 탐색기](../Topic/Server%20Explorer.md)   
+ [서버 탐색기](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d)   
  [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
   
   

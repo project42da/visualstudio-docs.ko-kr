@@ -95,11 +95,11 @@ caps.handback.revision: 14
   
  VSPackage에서는 다음 메서드 중 하나를 사용하여 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> 개체를 요청할 수 있습니다.  
   
--   <xref:Microsoft.VisualStudio.Shell.Package> 클래스에서 파생되는 관리되는 VSPackage의 <xref:System.IServiceProvider.GetService%2A> 메서드.  자세한 내용은 [방법: 서비스 가져오기](../Topic/How%20to:%20Get%20a%20Service.md)을 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.Shell.Package> 클래스에서 파생되는 관리되는 VSPackage의 <xref:System.IServiceProvider.GetService%2A> 메서드.  자세한 내용은 [방법: 서비스 가져오기](~/extensibility/how-to-get-a-service.md)을 참조하십시오.  
   
--   <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> 정적 메서드.  자세한 내용은 [방법: GetGlobalService 사용](../Topic/How%20to:%20Use%20GetGlobalService.md)을 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> 정적 메서드.  자세한 내용은 [방법: GetGlobalService 사용](~/misc/how-to-use-getglobalservice.md)을 참조하십시오.  
   
- <xref:EnvDTE80.DTE2> 개체에 액세스하는 Visual Studio 확장에서 <xref:Microsoft.VisualStudio.Shell.ServiceProvider> 개체의 <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> 메서드를 사용하여 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> 개체를 요청할 수 있습니다.  자세한 내용은 [방법: DTE 개체에서 서비스 가져오기](../Topic/How%20to:%20Get%20a%20Service%20from%20the%20DTE%20Object.md)를 참조하십시오.  
+ <xref:EnvDTE80.DTE2> 개체에 액세스하는 Visual Studio 확장에서 <xref:Microsoft.VisualStudio.Shell.ServiceProvider> 개체의 <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> 메서드를 사용하여 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> 개체를 요청할 수 있습니다.  자세한 내용은 [방법: DTE 개체에서 서비스 가져오기](~/misc/how-to-get-a-service-from-the-dte-object.md)를 참조하십시오.  
   
 ### 예제  
  다음 코드 예제에서는 Visual Studio 추가 기능에서 프로젝트 서비스를 검색하는 방법을 보여 줍니다.  이 코드를 사용하려면 추가 기능 프로젝트의 `Connect` 클래스에서 이 코드를 실행하십시오.  추가 기능 프로젝트에서 `_applicationObject` 개체는 자동으로 생성되며, 이 개체는 <xref:EnvDTE80.DTE2> 인터페이스의 인스턴스입니다.  
@@ -109,15 +109,15 @@ caps.handback.revision: 14
   
  이 예제에는 다음 사항이 필요합니다.  
   
--   Visual Studio 추가 기능 프로젝트.  자세한 내용은 [How to: Create an Add-In](../Topic/How%20to:%20Create%20an%20Add-In.md)를 참조하십시오.  
+-   Visual Studio 추가 기능 프로젝트.  자세한 내용은 [How to: Create an Add-In](http://msdn.microsoft.com/library/50be56d2-e3a5-4cd2-8569-2a0666b268ce)를 참조하십시오.  
   
 -   Microsoft.VisualStudio.OLE.Interop, Microsoft.VisualStudio.Shell 및 Microsoft.VisualStudio.SharePoint 어셈블리에 대한 참조  
   
 ## 참고 항목  
  [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md)   
- [How to: Create an Add-In](../Topic/How%20to:%20Create%20an%20Add-In.md)   
- [방법: 서비스 가져오기](../Topic/How%20to:%20Get%20a%20Service.md)   
- [방법: DTE 개체에서 서비스 가져오기](../Topic/How%20to:%20Get%20a%20Service%20from%20the%20DTE%20Object.md)   
- [방법: 프로젝트 템플릿에 마법사 사용](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md)  
+ [How to: Create an Add-In](http://msdn.microsoft.com/library/50be56d2-e3a5-4cd2-8569-2a0666b268ce)   
+ [방법: 서비스 가져오기](~/extensibility/how-to-get-a-service.md)   
+ [방법: DTE 개체에서 서비스 가져오기](~/misc/how-to-get-a-service-from-the-dte-object.md)   
+ [방법: 프로젝트 템플릿에 마법사 사용](~/extensibility/how-to-use-wizards-with-project-templates.md)  
   
   

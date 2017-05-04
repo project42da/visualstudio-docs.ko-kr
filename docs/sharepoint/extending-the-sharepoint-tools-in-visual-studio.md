@@ -48,7 +48,7 @@ caps.handback.revision: 38
   
  가능하면 [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]도 설치하는 것이 좋습니다.  SDK에는 Visual Studio를 확장하는 데 사용할 수 있는 프로젝트 템플릿과 도구가 포함되어 있습니다.  특히 SDK에는 VSIX\(Visual Studio Extension\) 패키지를 쉽게 만드는 데 사용할 수 있는 프로젝트 템플릿이 들어 있습니다.  VSIX 패키지Visual StudioVisual Studio확장을배포하다하는 기본 방법입니다.   모든 SharePoint 도구 확장은 VSIX 패키지를 사용하여 배포해야 합니다.  이 문서의 모든 연습에서는 [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]가 설치되어 있다고 가정합니다.  
   
- SDK는 [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=164562](http://go.microsoft.com/fwlink/?LinkId=164562)에서 다운로드할 수 있습니다.  Visual Studio 확장에 대한 자세한 내용은 [Visual Studio 확장 개발](../Topic/Developing%20Visual%20Studio%20Extensions.md)을 참조하십시오.  
+ SDK는 [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=164562](http://go.microsoft.com/fwlink/?LinkId=164562)에서 다운로드할 수 있습니다.  Visual Studio 확장에 대한 자세한 내용은 [Visual Studio 확장 개발](http://msdn.microsoft.com/library/5b1b5db3-6005-44cf-83b0-e608d7764d14)을 참조하십시오.  
   
 ## 참고 항목  
  [Overview of the Programming Model of SharePoint Tools Extensions](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   

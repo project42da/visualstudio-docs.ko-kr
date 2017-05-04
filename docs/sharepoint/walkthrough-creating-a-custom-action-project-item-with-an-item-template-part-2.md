@@ -49,7 +49,7 @@ caps.handback.revision: 43
   
  다음 개념을 알고 있으면 연습을 완료하는 데 도움이 되지만 반드시 필요하지는 않습니다.  
   
--   Visual Studio의 프로젝트 마법사 및 항목 템플릿 마법사.  자세한 내용은 [방법: 프로젝트 템플릿에 마법사 사용](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md) 및 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스를 참조하십시오.  
+-   Visual Studio의 프로젝트 마법사 및 항목 템플릿 마법사.  자세한 내용은 [방법: 프로젝트 템플릿에 마법사 사용](~/extensibility/how-to-use-wizards-with-project-templates.md) 및 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스를 참조하십시오.  
   
 -   SharePoint의 사용자 지정 작업.  자세한 내용은 [Custom Action](http://go.microsoft.com/fwlink/?LinkId=177800)을 참조하십시오.  
   
@@ -84,7 +84,7 @@ caps.handback.revision: 43
   
 2.  에 있는  **프로젝트 디자이너**,.NET Framework 4.5로 대상 프레임 워크 설정 되어 있는지 확인 하십시오.  
   
-     C\# 프로젝트의 경우이 값을 설정할 수 있는  **응용 프로그램** 탭입니다.  Visual Basic 프로젝트의 경우이 값을 설정할 수 있는  **컴파일** 탭.  자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md)을 참조하십시오.  
+     C\# 프로젝트의 경우이 값을 설정할 수 있는  **응용 프로그램** 탭입니다.  Visual Basic 프로젝트의 경우이 값을 설정할 수 있는  **컴파일** 탭.  자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](~/ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하십시오.  
   
 3.  에  **ItemTemplateWizard** 프로젝트에 추가 된  **창 \(WPF\)** 프로젝트에 항목을 만든 후 다음 항목의 이름을  **WizardWindow**.  
   
@@ -354,7 +354,7 @@ caps.handback.revision: 43
  [Defining Custom SharePoint Project Item Types](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [방법: 프로젝트 템플릿에 마법사 사용](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md)   
+ [방법: 프로젝트 템플릿에 마법사 사용](~/extensibility/how-to-use-wizards-with-project-templates.md)   
  [Default Custom Action Locations and IDs](http://go.microsoft.com/fwlink/?LinkId=181964)  
   
   

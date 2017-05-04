@@ -34,7 +34,7 @@ caps.handback.revision: 69
   
  호스트 컨트롤은 Word의 콘텐츠 컨트롤 및 Excel의 명명된 범위와 같이 Word 및 Excel 개체 모델에 있는 개체를 확장합니다. 자세한 내용은 [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)을 참조하십시오.  
   
- Windows Forms와 호스트 컨트롤 모두 데이터 집합 및 데이터 테이블 같은 데이터 원본에 대해 *단순 데이터 바인딩*과 *복합 데이터 바인딩*을 둘 다 지원하는 Windows Forms 데이터 바인딩 모델을 사용합니다. Windows Forms에서 데이터 바인딩 모델에 대한 전체 정보는 [데이터 바인딩 및 Windows Forms](../Topic/Data%20Binding%20and%20Windows%20Forms.md)를 참조하세요.  
+ Windows Forms와 호스트 컨트롤 모두 데이터 집합 및 데이터 테이블 같은 데이터 원본에 대해 *단순 데이터 바인딩*과 *복합 데이터 바인딩*을 둘 다 지원하는 Windows Forms 데이터 바인딩 모델을 사용합니다. Windows Forms에서 데이터 바인딩 모델에 대한 전체 정보는 [데이터 바인딩 및 Windows Forms](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27)를 참조하세요.  
   
  ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Excel에서 데이터베이스 데이터 사용](http://go.microsoft.com/fwlink/?LinkID=130287)을 참조하세요.  
   
@@ -53,7 +53,7 @@ caps.handback.revision: 69
 ## 복합 데이터 바인딩  
  복합 데이터 바인딩은 컨트롤 속성이 데이터 테이블의 여러 열과 같이 둘 이상의 데이터 요소에 바인딩될 때 존재합니다. Excel용 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤은 복합 데이터 바인딩을 지원하는 유일한 호스트 컨트롤입니다. 또한 <xref:System.Windows.Forms.DataGridView> 컨트롤 같이 복합 데이터 바인딩을 지원하는 많은 Windows Forms 컨트롤이 있을 수 있습니다.  
   
- 복합 데이터 바인딩을 수행하려면 컨트롤의 DataSource 속성을 복합 데이터 바인딩에서 지원되는 데이터 원본 개체로 설정합니다. 예를 들어 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤의 <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> 속성은 데이터 테이블의 여러 열에 바인딩될 수 있습니다. 데이터 테이블의 모든 데이터는 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤에 나타나며 데이터 테이블의 데이터가 변경되면 <xref:Microsoft.Office.Tools.Excel.ListObject> 역시 변경됩니다. 복합 데이터 바인딩에 사용할 수 있는 데이터 원본 목록은 [Windows Forms에서 지원하는 데이터 소스](../Topic/Data%20Sources%20Supported%20by%20Windows%20Forms.md)을 참조하세요.  
+ 복합 데이터 바인딩을 수행하려면 컨트롤의 DataSource 속성을 복합 데이터 바인딩에서 지원되는 데이터 원본 개체로 설정합니다. 예를 들어 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤의 <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> 속성은 데이터 테이블의 여러 열에 바인딩될 수 있습니다. 데이터 테이블의 모든 데이터는 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤에 나타나며 데이터 테이블의 데이터가 변경되면 <xref:Microsoft.Office.Tools.Excel.ListObject> 역시 변경됩니다. 복합 데이터 바인딩에 사용할 수 있는 데이터 원본 목록은 [Windows Forms에서 지원하는 데이터 소스](http://msdn.microsoft.com/library/3d2c43f6-462b-4d35-9c86-13e9afe012e1)을 참조하세요.  
   
  다음 코드 예제는 두 개의 <xref:System.Data.DataTable> 개체를 사용하여 <xref:System.Data.DataSet>를 만들고 테이블 중 하나를 데이터로 채웁니다. 그런 다음 코드가 <xref:Microsoft.Office.Tools.Excel.ListObject>를 데이터가 포함된 테이블에 바인딩합니다. 이 예제는 Excel 문서 수준 프로젝트에 대한 것입니다.  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 69
  복합 데이터 바인딩을 설명하는 연습은 [연습: 문서 수준 프로젝트의 복합 데이터 바인딩](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)\(문서 수준 프로젝트\) 및 [연습: VSTO 추가 기능 프로젝트의 복합 데이터 바인딩](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)\(VSTO 추가 기능 프로젝트\)를 참조하세요.  
   
 ## 문서 및 통합 문서에서 데이터 표시  
- 문서 수준 프로젝트에서 **데이터 원본** 창을 사용하여 데이터 바인딩된 컨트롤을 문서 또는 통합 문서에 쉽게 추가할 수 있으며 같은 방식으로 Windows Forms에도 사용할 수 있습니다.**데이터 원본** 창을 사용하는 방법에 대한 자세한 내용은 [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../Topic/Binding%20Windows%20Forms%20controls%20to%20data%20in%20Visual%20Studio.md) 및 [데이터 소스 창](../Topic/Data%20Sources%20Window.md)을 참조하세요.  
+ 문서 수준 프로젝트에서 **데이터 원본** 창을 사용하여 데이터 바인딩된 컨트롤을 문서 또는 통합 문서에 쉽게 추가할 수 있으며 같은 방식으로 Windows Forms에도 사용할 수 있습니다.**데이터 원본** 창을 사용하는 방법에 대한 자세한 내용은 [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../Topic/Binding%20Windows%20Forms%20controls%20to%20data%20in%20Visual%20Studio.md) 및 [데이터 소스 창](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)을 참조하세요.  
   
 ### 데이터 원본 창에서 컨트롤 끌기  
  개체를 **데이터 원본** 창에서 끌어 문서에 놓으면 컨트롤이 만들어집니다. 만들어진 컨트롤의 유형은 데이터의 단일 열 또는 여러 열을 바인딩하는지 여부에 따라 달라집니다.  
@@ -103,8 +103,8 @@ caps.handback.revision: 69
   
 ## 참고 항목  
  [어떻게 할까요?: Excel에서 데이터베이스 데이터 사용](http://go.microsoft.com/fwlink/?LinkID=130287)   
- [데이터 바인딩 및 Windows Forms](../Topic/Data%20Binding%20and%20Windows%20Forms.md)   
- [방법: Windows Form에 단순 바인딩된 컨트롤 만들기](../Topic/How%20to:%20Create%20a%20Simple-Bound%20Control%20on%20a%20Windows%20Form.md)   
+ [데이터 바인딩 및 Windows Forms](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27)   
+ [방법: Windows Form에 단순 바인딩된 컨트롤 만들기](http://msdn.microsoft.com/library/3bcaded8-0f1a-4cc0-8830-f59be253bf4e)   
  [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../Topic/Binding%20Windows%20Forms%20controls%20to%20data%20in%20Visual%20Studio.md)   
  [데이터 집합에 데이터 저장](../Topic/Saving%20data%20back%20to%20the%20database.md)   
  [방법: TableAdapter를 사용하여 데이터 업데이트](../data-tools/update-data-by-using-a-tableadapter.md)   

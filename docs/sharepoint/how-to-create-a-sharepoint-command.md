@@ -30,7 +30,7 @@ caps.handback.revision: 21
   
 1.  다음과 같이 구성되는 클래스 라이브러리 프로젝트를 만듭니다.  
   
-    -   .NET Framework 버전 3.5를 대상으로 합니다.  대상 프레임워크를 선택하는 방법에 대한 자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md)을 참조하십시오.  
+    -   .NET Framework 버전 3.5를 대상으로 합니다.  대상 프레임워크를 선택하는 방법에 대한 자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](~/ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하십시오.  
   
     -   AnyCPU 또는 x64 플랫폼을 대상으로 합니다.  기본적으로 클래스 라이브러리 프로젝트의 대상 플랫폼은 AnyCPU입니다.  대상 플랫폼을 선택하는 방법에 대한 자세한 내용은 [NIB: How to: Optimize an Application for a Specific CPU Type](http://msdn.microsoft.com/ko-kr/294a75d2-4279-4b72-8298-2bea05be907a)를 참조하십시오.  
   
@@ -53,7 +53,7 @@ caps.handback.revision: 21
   
     -   선택 사항으로, 반환 값을 사용할 수 있습니다.  
   
-    -   두 번째 매개 변수와 반환 값은 WCF\(Windows Communication Foundation\)에서 serialize할 수 있는 형식이어야 합니다.  자세한 내용은 [데이터 계약 Serializer에서 지원하는 형식](../Topic/Types%20Supported%20by%20the%20Data%20Contract%20Serializer.md) 및 [XmlSerializer 클래스 사용](../Topic/Using%20the%20XmlSerializer%20Class.md)을 참조하십시오.  
+    -   두 번째 매개 변수와 반환 값은 WCF\(Windows Communication Foundation\)에서 serialize할 수 있는 형식이어야 합니다.  자세한 내용은 [데이터 계약 Serializer에서 지원하는 형식](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34) 및 [XmlSerializer 클래스 사용](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)을 참조하십시오.  
   
     -   메서드의 표시 유형은 **public**, **internal** 또는 **private** 중 하나일 수 있고, 메서드는 정적이거나 그렇지 않을 수 있습니다.  
   

@@ -39,7 +39,7 @@ caps.handback.revision: 47
   
 1.  디자이너에서 문서를 열고 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 Word 문서 수준 프로젝트를 엽니다.  
   
-2.  **데이터 소스** 창을 열고 데이터베이스에서 데이터 소스를 만듭니다.  자세한 내용은 [방법: 데이터베이스의 데이터에 연결](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md)을 참조하세요.  
+2.  **데이터 소스** 창을 열고 데이터베이스에서 데이터 소스를 만듭니다.  자세한 내용은 [방법: 데이터베이스의 데이터에 연결](~/data-tools/how-to-connect-to-data-in-a-database.md)을 참조하세요.  
   
 3.  **데이터 소스** 창에서 원하는 필드를 문서로 끌어옵니다.  
   
@@ -52,11 +52,11 @@ caps.handback.revision: 47
   
 -   데이터베이스에서 연결된 데이터 테이블을 캡슐화하는 형식화된 데이터 집합.  자세한 내용은 [Visual Studio에서 데이터 집합 작업](../data-tools/dataset-tools-in-visual-studio.md)를 참조하세요.  
   
--   컨트롤을 형식화된 데이터 집합에 연결하는 <xref:System.Windows.Forms.BindingSource>.  자세한 내용은 [BindingSource 구성 요소 개요](../Topic/BindingSource%20Component%20Overview.md)를 참조하세요.  
+-   컨트롤을 형식화된 데이터 집합에 연결하는 <xref:System.Windows.Forms.BindingSource>.  자세한 내용은 [BindingSource 구성 요소 개요](http://msdn.microsoft.com/library/be838caf-fcb0-4b68-827f-58b2c04b747f)를 참조하세요.  
   
 -   형식화된 데이터 집합을 데이터베이스에 연결하는 TableAdapter.  자세한 내용은 [TableAdapter 개요](/visual-studio/data-tools/tableadapter-overview)를 참조하세요.  
   
--   계층적 업데이트를 사용하도록 데이터 집합의 테이블 어댑터를 조정하는 데 사용되는 TableAdapterManager.  자세한 내용은 [계층적 업데이트](../data-tools/hierarchical-update.md) 및 [TableAdapterManager 개요](../Topic/TableAdapterManager%20Overview.md)를 참조하세요.  
+-   계층적 업데이트를 사용하도록 데이터 집합의 테이블 어댑터를 조정하는 데 사용되는 TableAdapterManager.  자세한 내용은 [계층적 업데이트](../data-tools/hierarchical-update.md) 및 [TableAdapterManager 개요](http://msdn.microsoft.com/library/33076d42-6b41-491a-ac11-6c6339aea650)를 참조하세요.  
   
  프로젝트를 실행하면 컨트롤이 데이터 소스의 첫 번째 레코드를 표시합니다.  <xref:System.Windows.Forms.BindingSource>를 사용하여 사용자가 레코드를 스크롤할 수 있게 할 수 있습니다.  
   
@@ -74,6 +74,6 @@ caps.handback.revision: 47
  [방법: Host 컨트롤의 데이터로 데이터 원본 업데이트](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)   
  [Office 솔루션에서 로컬 데이터베이스 파일 사용 개요](../vsto/using-local-database-files-in-office-solutions-overview.md)   
  [Windows Forms 응용 프로그램에서 데이터에 연결](/visual-studio/data-tools/connecting-to-data-in-windows-forms-applications)   
- [BindingSource 구성 요소 개요](../Topic/BindingSource%20Component%20Overview.md)  
+ [BindingSource 구성 요소 개요](http://msdn.microsoft.com/library/be838caf-fcb0-4b68-827f-58b2c04b747f)  
   
   

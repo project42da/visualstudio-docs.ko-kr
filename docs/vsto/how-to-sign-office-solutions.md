@@ -28,7 +28,7 @@ caps.handback.revision: 17
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- 매니페스트 생성 및 편집 도구\(mage.exe 및 mageui.exe\)를 사용하여 응용 프로그램 및 배포 매니페스트를 수동으로 편집할 경우 이러한 도구를 사용하기 전에 먼저 매니페스트에 다시 서명해야 합니다.  자세한 내용은 [방법: 응용 프로그램 및 배포 매니페스트에 다시 서명](../Topic/How%20to:%20Re-sign%20Application%20and%20Deployment%20Manifests.md)을 참조하십시오.  
+ 매니페스트 생성 및 편집 도구\(mage.exe 및 mageui.exe\)를 사용하여 응용 프로그램 및 배포 매니페스트를 수동으로 편집할 경우 이러한 도구를 사용하기 전에 먼저 매니페스트에 다시 서명해야 합니다.  자세한 내용은 [방법: 응용 프로그램 및 배포 매니페스트에 다시 서명](~/deployment/how-to-re-sign-application-and-deployment-manifests.md)을 참조하십시오.  
   
 ## 인증서를 사용하여 서명  
  인증서는 솔루션 게시자의 고유 키 및 ID가 들어 있는 파일입니다.  인증서는 인증 기관에서 구입할 수도 있고 사용자가 직접 인증서를 만든 후 인증 기관의 서명을 받을 수도 있습니다.  

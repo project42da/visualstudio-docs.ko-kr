@@ -106,7 +106,7 @@ caps.handback.revision: 43
 |Microsoft Visual Basic for Applications Extensibility 5.3|Microsoft.Vbe.Interop.dll|  
   
 ### 바인딩 리디렉션 어셈블리  
- Office PIA를 Office와 함께 또는 PIA의 재배포 가능 패키지를 설치하여 전역 어셈블리 캐시에 설치 및 등록하면 바인딩 리디렉션 어셈블리도 전역 어셈블리 캐시에만 설치됩니다. 이러한 어셈블리를 통해 주 interop 어셈블리의 올바른 버전이 런타임에 로드되도록 할 수 있습니다. 예를 들어 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] 어셈블리를 참조하는 솔루션이 같은 주 interop 어셈블리의 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 버전이 설치된 컴퓨터에서 실행되면 바인딩 리디렉션 어셈블리는 주 interop 어셈블리의 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 버전을 로드하도록 [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] 런타임에 명령합니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../Topic/How%20to:%20Enable%20and%20Disable%20Automatic%20Binding%20Redirection.md)을 참조하세요.  
+ Office PIA를 Office와 함께 또는 PIA의 재배포 가능 패키지를 설치하여 전역 어셈블리 캐시에 설치 및 등록하면 바인딩 리디렉션 어셈블리도 전역 어셈블리 캐시에만 설치됩니다. 이러한 어셈블리를 통해 주 interop 어셈블리의 올바른 버전이 런타임에 로드되도록 할 수 있습니다. 예를 들어 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] 어셈블리를 참조하는 솔루션이 같은 주 interop 어셈블리의 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 버전이 설치된 컴퓨터에서 실행되면 바인딩 리디렉션 어셈블리는 주 interop 어셈블리의 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 버전을 로드하도록 [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] 런타임에 명령합니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](http://msdn.microsoft.com/library/5fca42f3-bdce-4b81-a704-61e42c89d3ba)을 참조하세요.  
   
 ## 참고 항목  
  [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   

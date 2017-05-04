@@ -66,7 +66,7 @@ caps.handback.revision: 17
   
 ## 참고 항목  
  [SharePoint 솔루션 빌드 및 디버깅](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
- [응용 프로그램 테스트](../Topic/Test%20apps%20early%20and%20often.md)   
+ [응용 프로그램 테스트](http://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)   
  [코드 품질 향상](../test/improve-code-quality.md)  
   
   

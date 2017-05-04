@@ -60,7 +60,7 @@ caps.handback.revision: 23
 ## 런타임의 내게 필요한 옵션  
   
 ### Office 문서의 Windows Forms 컨트롤  
- Windows Forms 컨트롤은 화면 판독기와 같은 내게 필요한 옵션 보조 도구에 대한 컨트롤 관련 정보를 제공할 수 있도록 내게 필요한 옵션 속성을 노출합니다.  문서 수준 사용자 지정의 Office 문서에 해당 컨트롤이 있을 때 이러한 내게 필요한 옵션 속성을 사용할 수 있습니다.  자세한 내용은 [Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공](../Topic/Providing%20Accessibility%20Information%20for%20Controls%20on%20a%20Windows%20Form.md)을 참조하십시오.  
+ Windows Forms 컨트롤은 화면 판독기와 같은 내게 필요한 옵션 보조 도구에 대한 컨트롤 관련 정보를 제공할 수 있도록 내게 필요한 옵션 속성을 노출합니다.  문서 수준 사용자 지정의 Office 문서에 해당 컨트롤이 있을 때 이러한 내게 필요한 옵션 속성을 사용할 수 있습니다.  자세한 내용은 [Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공](http://msdn.microsoft.com/library/887dee6f-5059-4d57-957d-7c6fcd4acb10)을 참조하십시오.  
   
  그러나 Windows Forms 컨트롤이 Excel 통합 문서 또는 Word 문서에서 호스팅될 때는 런타임에 내게 필요한 옵션에 대한 약간의 제한 사항이 있습니다.  
   

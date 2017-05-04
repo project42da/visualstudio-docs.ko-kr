@@ -31,7 +31,7 @@ caps.handback.revision: 55
  컨트롤이 쌓이는 순서는 작업 창이 세로로 도킹되어 있는지 가로로 도킹되어 있는지에 따라 달라집니다.  
   
 > [!NOTE]  
->  사용자가 런타임에 작업 창의 크기를 조정하는 경우 컨트롤의 크기도 작업 창과 함께 조정되도록 설정할 수 있습니다.  Windows Forms 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 사용하면 컨트롤을 작업 창에 고정할 수 있습니다.  자세한 내용은 [방법: Windows Forms에서 컨트롤 고정](../Topic/How%20to:%20Anchor%20Controls%20on%20Windows%20Forms.md)을 참조하십시오.  
+>  사용자가 런타임에 작업 창의 크기를 조정하는 경우 컨트롤의 크기도 작업 창과 함께 조정되도록 설정할 수 있습니다.  Windows Forms 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 사용하면 컨트롤을 작업 창에 고정할 수 있습니다.  자세한 내용은 [방법: Windows Forms에서 컨트롤 고정](http://msdn.microsoft.com/library/59ea914f-fbd3-427a-80fe-decd02f7ae6d)을 참조하십시오.  
   
 > [!NOTE]  
 >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다.  설치한 Visual Studio 버전과 사용하는 설정에 따라 이러한 요소가 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  

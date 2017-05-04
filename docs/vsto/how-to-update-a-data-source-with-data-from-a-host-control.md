@@ -98,7 +98,7 @@ caps.handback.revision: 52
   
 1.  컨트롤에 대한 <xref:System.Windows.Forms.BindingSource>의 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드를 호출합니다.  
   
-     디자인 타임에 데이터 바인딩된 컨트롤을 문서나 통합 문서에 추가하면 <xref:System.Windows.Forms.BindingSource>가 자동으로 생성됩니다.<xref:System.Windows.Forms.BindingSource>는 해당 컨트롤을 프로젝트의 형식화된 데이터 집합에 연결합니다. 자세한 내용은 [BindingSource 구성 요소 개요](../Topic/BindingSource%20Component%20Overview.md)을 참조하세요.  
+     디자인 타임에 데이터 바인딩된 컨트롤을 문서나 통합 문서에 추가하면 <xref:System.Windows.Forms.BindingSource>가 자동으로 생성됩니다.<xref:System.Windows.Forms.BindingSource>는 해당 컨트롤을 프로젝트의 형식화된 데이터 집합에 연결합니다. 자세한 내용은 [BindingSource 구성 요소 개요](http://msdn.microsoft.com/library/be838caf-fcb0-4b68-827f-58b2c04b747f)을 참조하세요.  
   
      다음 코드 예제에서는 프로젝트가 `customersBindingSource`라는 <xref:System.Windows.Forms.BindingSource>를 포함하고 있다고 가정합니다.  
   

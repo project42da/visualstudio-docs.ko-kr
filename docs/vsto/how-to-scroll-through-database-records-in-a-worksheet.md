@@ -35,7 +35,7 @@ caps.handback.revision: 32
   
 1.  Visual Studio에서 Excel 응용 프로그램 프로젝트를 엽니다.  
   
-2.  **데이터 소스** 창을 열고 데이터베이스에서 데이터 소스를 만듭니다.  자세한 내용은 [방법: 데이터베이스의 데이터에 연결](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md)을 참조하십시오.  
+2.  **데이터 소스** 창을 열고 데이터베이스에서 데이터 소스를 만듭니다.  자세한 내용은 [방법: 데이터베이스의 데이터에 연결](~/data-tools/how-to-connect-to-data-in-a-database.md)을 참조하십시오.  
   
 3.  표시하려는 데이터가 들어 있는 테이블을 확장하고 특정 열을 선택합니다.  
   
@@ -43,7 +43,7 @@ caps.handback.revision: 32
   
 5.  데이터를 표시하려는 셀에 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 끌어 놓습니다.  
   
-6.  **도구 상자**의 **Windows Forms** 탭에서 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 워크시트에 추가하고 사용할 컨트롤을 설정합니다.  자세한 내용은 [BindingNavigator 컨트롤 개요&#40;Windows Forms&#41;](../Topic/BindingNavigator%20Control%20Overview%20(Windows%20Forms).md)을 참조하십시오.  
+6.  **도구 상자**의 **Windows Forms** 탭에서 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 워크시트에 추가하고 사용할 컨트롤을 설정합니다.  자세한 내용은 [BindingNavigator 컨트롤 개요&#40;Windows Forms&#41;](http://msdn.microsoft.com/library/4423eede-f8d1-4d02-822f-5bf8432680d0)을 참조하십시오.  
   
 ## 참고 항목  
  [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)  

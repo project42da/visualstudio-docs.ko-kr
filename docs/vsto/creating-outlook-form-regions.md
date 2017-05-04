@@ -135,7 +135,7 @@ caps.handback.revision: 41
   
  Visual Basic 프로젝트에서 이벤트를 처리하려면 코드 편집기 맨 위의 메서드 이름 목록에서 이벤트를 선택합니다.  
   
- C\# 프로젝트의 이벤트를 처리하려면 <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> 메서드에서 컨트롤 이벤트를 구독합니다.  자세한 내용은 [방법: 이벤트 구독 및 구독 취소&#40;C&#35; 프로그래밍 가이드&#41;](../Topic/How%20to:%20Subscribe%20to%20and%20Unsubscribe%20from%20Events%20(C%23%20Programming%20Guide).md)를 참조하세요.  
+ C\# 프로젝트의 이벤트를 처리하려면 <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> 메서드에서 컨트롤 이벤트를 구독합니다.  자세한 내용은 [방법: 이벤트 구독 및 구독 취소&#40;C&#35; 프로그래밍 가이드&#41;](http://msdn.microsoft.com/library/6319f39f-282c-4173-8a62-6c4657cf51cd)를 참조하세요.  
   
  양식 영역 팩터리 클래스의 `InitializeManifest` 메서드에서 양식 영역 속성을 변경할 수 있습니다.  
   
