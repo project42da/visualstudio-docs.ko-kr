@@ -1,0 +1,77 @@
+---
+title: "시작(Visual Studio에서의 Office 개발) | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/02/2017"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "office-development"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+helpviewer_keywords: 
+  - "Visual Studio에서 Office 개발, 시작"
+ms.assetid: fc27e84c-dca2-4b0a-8794-f57a2a886262
+caps.latest.revision: 56
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 52
+---
+# 시작(Visual Studio에서의 Office 개발)
+  이 섹션에는 Visual Studio에서 Microsoft Office 개발자 도구 사용을 시작하는 데 도움이 되는 항목이 포함되어 있습니다.  
+  
+## 단원 내용  
+ [Office 솔루션 개발 개요&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)  
+ Visual Studio에서 Office 솔루션을 개발하는 데 필요한 배경 정보를 제공합니다.  
+  
+ [.NET Framework 4 또는 .NET Framework 4.5를 대상으로 하는 Office 프로젝트의 디자인 변경 ](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 Office 프로젝트의 새로운 디자인에 대해 설명하고 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상으로 마이그레이션되는 Office 프로젝트의 주요 코드 변경 내용을 제공합니다.  
+  
+ [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)  
+ 리본 확장성, 사용자 지정 작업창, 작업창 및 양식 영역 등 Office 개발 기능을 사용하는 데 필요한 응용 프로그램 및 프로젝트에 대해 설명합니다.  
+  
+ [Office 솔루션을 개발할 수 있도록 컴퓨터 구성](../vsto/configuring-a-computer-to-develop-office-solutions.md)  
+ Office 개발 도구, 최종 사용자 컴퓨터에서 Office 솔루션을 실행할 수 있도록 하는 런타임 및 Office 주 interop 어셈블리를 설치하는 데 필요한 정보 및 단계를 제공합니다.  
+  
+ [Excel용 문서 수준 사용자 지정 프로그래밍 시작](../vsto/getting-started-programming-document-level-customizations-for-excel.md)  
+ Visual Studio를 사용하여 Excel용 문서 수준 사용자 지정을 만드는 데 필요한 중요한 개념에 대한 요약을 제공합니다.  
+  
+ [Word용 문서 수준 사용자 지정 프로그래밍 시작](../vsto/getting-started-programming-document-level-customizations-for-word.md)  
+ Visual Studio를 사용하여 Word용 문서 수준 사용자 지정을 만드는 데 필요한 중요한 개념에 대한 요약을 제공합니다.  
+  
+ [VSTO 추가 기능 프로그래밍 시작](../vsto/getting-started-programming-vsto-add-ins.md)  
+ Visual Studio를 사용하여 Microsoft Office 응용 프로그램용 응용 프로그램 수준 VSTO\(Visual Studio Tools for Office\) 추가 기능을 만드는 데 필요한 중요한 개념에 대한 요약을 제공합니다.  
+  
+ [VBA 솔루션과 Visual Studio의 Office 솔루션 비교](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)  
+ Visual Studio에서 Office 솔루션을 개발할 때 Visual Basic for Applications와 Office 개발 도구의 상대적 장점에 대해 설명합니다.  
+  
+ [Office 프로그래밍의 일반적인 작업](../vsto/common-tasks-in-office-programming.md)  
+ 일반적인 문제를 해결하는 데 도움이 되는 항목에 대한 링크를 제공합니다.  
+  
+## 관련 단원  
+ [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)  
+ 일반적인 작업을 수행하기 위한 단계별 지침을 제공하는 항목과 샘플 응용 프로그램에 대한 링크를 제공합니다.  
+  
+ [Visual Studio의 Office 솔루션 아키텍처](../vsto/architecture-of-office-solutions-in-visual-studio.md)  
+ Office 솔루션의 구성 요소 및 디자인 타임과 런타임의 작동 방식에 대해 설명합니다.  
+  
+ [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 Office 프로젝트를 만들고 프로젝트를 구성하는 방법에 대한 정보를 제공합니다.  
+  
+ [Office 솔루션 개발](../vsto/developing-office-solutions.md)  
+ Office 프로젝트에서 코드 및 사용자 인터페이스 사용자 지정을 구현하는 방법에 대한 정보를 제공합니다.  
+  
+ [Office 솔루션 보안](../vsto/securing-office-solutions.md)  
+ Office 솔루션의 보안 요구 사항에 대한 정보를 제공합니다.  
+  
+ [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)  
+ 사용자에게 Office 솔루션을 제공하는 방법에 대한 정보를 제공하고 배포 방법을 선택하고 보안을 설정할 때 고려해야 하는 중요한 문제에 대해 설명합니다.  
+  
+ [Visual Studio Tools for Office 기술 문서 및 시각적 방법](http://go.microsoft.com/fwlink/?LinkID=106640)  
+ Visual Studio를 사용하여 만든 Office 솔루션에 대한 기술 문서 및 비디오에 대한 링크를 제공합니다.  
+  
+  
