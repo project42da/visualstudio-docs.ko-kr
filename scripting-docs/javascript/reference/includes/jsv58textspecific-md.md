@@ -1,0 +1,1 @@
+Internet Explorer 8 표준 모드
