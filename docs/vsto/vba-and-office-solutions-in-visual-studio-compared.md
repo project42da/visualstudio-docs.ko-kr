@@ -1,5 +1,5 @@
 ---
-title: "VBA 솔루션과 Visual Studio의 Office 솔루션 비교 | Microsoft Docs"
+title: "VBA 솔루션과 Visual Studio의 Office 솔루션 비교"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

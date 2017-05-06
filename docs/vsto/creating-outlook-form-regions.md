@@ -1,5 +1,5 @@
 ---
-title: "Outlook 양식 영역 만들기 | Microsoft Docs"
+title: "Outlook 양식 영역 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

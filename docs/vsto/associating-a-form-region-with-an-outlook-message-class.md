@@ -1,5 +1,5 @@
 ---
-title: "Outlook 메시지 클래스에 양식 영역 연결 | Microsoft Docs"
+title: "Outlook 메시지 클래스에 양식 영역 연결"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

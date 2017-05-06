@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 환경의 Office 프로젝트 | Microsoft Docs"
+title: "Visual Studio 환경의 Office 프로젝트"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "포함 목록을 사용하여 Office 솔루션 신뢰 | Microsoft Docs"
+title: "포함 목록을 사용하여 Office 솔루션 신뢰"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

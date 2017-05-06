@@ -1,5 +1,5 @@
 ---
-title: "Excel 워크시트에서 Windows Forms 컨트롤 사용 | Microsoft Docs"
+title: "Excel 워크시트에서 Windows Forms 컨트롤 사용"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

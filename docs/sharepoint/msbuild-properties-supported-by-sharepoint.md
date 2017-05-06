@@ -1,5 +1,5 @@
 ---
-title: "SharePoint에서 지원하는 MSBuild 속성 | Microsoft Docs"
+title: "SharePoint에서 지원하는 MSBuild 속성"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

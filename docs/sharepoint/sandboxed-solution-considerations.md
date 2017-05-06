@@ -1,5 +1,5 @@
 ---
-title: "샌드박스가 적용된 솔루션 고려 사항 | Microsoft Docs"
+title: "샌드박스가 적용된 솔루션 고려 사항"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

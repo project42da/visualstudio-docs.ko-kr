@@ -1,5 +1,5 @@
 ---
-title: "연습: 기존 SharePoint 사이트에서 항목 가져오기 | Microsoft Docs"
+title: "연습: 기존 SharePoint 사이트에서 항목 가져오기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

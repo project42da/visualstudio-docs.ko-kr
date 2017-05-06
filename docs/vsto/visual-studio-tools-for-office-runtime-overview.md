@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Tools for Office 런타임 개요 | Microsoft Docs"
+title: "Visual Studio Tools for Office 런타임 개요"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

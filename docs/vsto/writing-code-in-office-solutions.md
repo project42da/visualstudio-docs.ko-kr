@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션에서 코드 작성 | Microsoft Docs"
+title: "Office 솔루션에서 코드 작성"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

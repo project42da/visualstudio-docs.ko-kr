@@ -1,5 +1,5 @@
 ---
-title: "방법: 리본 디자이너에서 리본 XML로 리본 메뉴 내보내기 | Microsoft Docs"
+title: "방법: 리본 디자이너에서 리본 XML로 리본 메뉴 내보내기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

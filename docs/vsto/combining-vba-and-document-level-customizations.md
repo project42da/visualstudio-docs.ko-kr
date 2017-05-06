@@ -1,5 +1,5 @@
 ---
-title: "VBA 및 문서 수준 사용자 지정 결합 | Microsoft Docs"
+title: "VBA 및 문서 수준 사용자 지정 결합"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택 | Microsoft Docs"
+title: "방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: Office 주 Interop 어셈블리 설치 | Microsoft Docs"
+title: "방법: Office 주 Interop 어셈블리 설치"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

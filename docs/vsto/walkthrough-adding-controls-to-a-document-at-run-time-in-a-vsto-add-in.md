@@ -1,5 +1,5 @@
 ---
-title: "연습: 런타임에 VSTO 추가 기능의 문서에 컨트롤 추가 | Microsoft Docs"
+title: "연습: 런타임에 VSTO 추가 기능의 문서에 컨트롤 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

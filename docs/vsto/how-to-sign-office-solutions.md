@@ -1,5 +1,5 @@
 ---
-title: "방법: Office 솔루션에 서명 | Microsoft Docs"
+title: "방법: Office 솔루션에 서명"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "연락처 항목 작업 | Microsoft Docs"
+title: "연락처 항목 작업"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

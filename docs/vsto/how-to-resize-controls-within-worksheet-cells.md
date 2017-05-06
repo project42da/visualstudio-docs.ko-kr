@@ -1,5 +1,5 @@
 ---
-title: "방법: 워크시트 셀에서 컨트롤 크기 조정 | Microsoft Docs"
+title: "방법: 워크시트 셀에서 컨트롤 크기 조정"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

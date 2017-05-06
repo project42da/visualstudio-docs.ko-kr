@@ -1,5 +1,5 @@
 ---
-title: "방법: 데이터베이스의 데이터로 문서 채우기 | Microsoft Docs"
+title: "방법: 데이터베이스의 데이터로 문서 채우기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

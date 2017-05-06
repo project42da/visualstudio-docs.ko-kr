@@ -1,5 +1,5 @@
 ---
-title: "방법: 리본의 탭 위치 변경 | Microsoft Docs"
+title: "방법: 리본의 탭 위치 변경"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

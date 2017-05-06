@@ -1,5 +1,5 @@
 ---
-title: "방법: 특정 목록 인스턴스에 대한 이벤트 수신기 만들기 | Microsoft Docs"
+title: "방법: 특정 목록 인스턴스에 대한 이벤트 수신기 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: Outlook 추가 기능 프로젝트에 양식 영역 추가 | Microsoft Docs"
+title: "방법: Outlook 추가 기능 프로젝트에 양식 영역 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

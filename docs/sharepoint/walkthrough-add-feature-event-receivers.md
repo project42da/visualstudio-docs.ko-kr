@@ -1,5 +1,5 @@
 ---
-title: "연습: 기능 이벤트 수신자 추가 | Microsoft Docs"
+title: "연습: 기능 이벤트 수신자 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

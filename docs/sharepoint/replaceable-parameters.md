@@ -1,5 +1,5 @@
 ---
-title: "대체 가능 매개 변수 | Microsoft Docs"
+title: "대체 가능 매개 변수"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

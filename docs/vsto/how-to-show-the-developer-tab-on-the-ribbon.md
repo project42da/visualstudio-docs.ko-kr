@@ -1,5 +1,5 @@
 ---
-title: "방법: 리본 메뉴에 개발 도구 탭 표시 | Microsoft Docs"
+title: "방법: 리본 메뉴에 개발 도구 탭 표시"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

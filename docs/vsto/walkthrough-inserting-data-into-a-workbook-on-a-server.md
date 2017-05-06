@@ -1,5 +1,5 @@
 ---
-title: "연습: 서버의 통합 문서에 데이터 삽입 | Microsoft Docs"
+title: "연습: 서버의 통합 문서에 데이터 삽입"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "연습: 캐시된 데이터 집합을 사용하여 마스터-세부 관계 만들기 | Microsoft Docs"
+title: "연습: 캐시된 데이터 집합을 사용하여 마스터-세부 관계 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

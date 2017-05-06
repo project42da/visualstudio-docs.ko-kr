@@ -1,5 +1,5 @@
 ---
-title: "연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업 창 표시 | Microsoft Docs"
+title: "연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업 창 표시"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

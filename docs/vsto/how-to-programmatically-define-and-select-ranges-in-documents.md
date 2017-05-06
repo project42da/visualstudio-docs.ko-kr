@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 문서의 범위 정의 및 선택 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 문서의 범위 정의 및 선택"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

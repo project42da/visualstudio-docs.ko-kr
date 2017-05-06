@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio를 사용하여 Office용 VSTO 추가 기능 만들기 | Microsoft Docs"
+title: "Visual Studio를 사용하여 Office용 VSTO 추가 기능 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

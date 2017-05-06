@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션을 개발할 수 있도록 컴퓨터 구성 | Microsoft Docs"
+title: "Office 솔루션을 개발할 수 있도록 컴퓨터 구성"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

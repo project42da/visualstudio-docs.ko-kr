@@ -1,5 +1,5 @@
 ---
-title: "연습: Visual C# 프로젝트에서 VBA의 코드 호출 | Microsoft Docs"
+title: "연습: Visual C# 프로젝트에서 VBA의 코드 호출"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

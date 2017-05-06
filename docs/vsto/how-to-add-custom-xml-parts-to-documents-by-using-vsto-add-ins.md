@@ -1,5 +1,5 @@
 ---
-title: "방법: VSTO 추가 기능을 사용하여 문서에 사용자 지정 XML 부분 추가 | Microsoft Docs"
+title: "방법: VSTO 추가 기능을 사용하여 문서에 사용자 지정 XML 부분 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: SharePoint 프로젝트에 기존 BDC 모델 파일 추가 | Microsoft Docs"
+title: "방법: SharePoint 프로젝트에 기존 BDC 모델 파일 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 워크플로 솔루션 만들기 | Microsoft Docs"
+title: "SharePoint 워크플로 솔루션 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

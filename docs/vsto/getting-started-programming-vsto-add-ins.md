@@ -1,5 +1,5 @@
 ---
-title: "VSTO 추가 기능 프로그래밍 시작 | Microsoft Docs"
+title: "VSTO 추가 기능 프로그래밍 시작"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

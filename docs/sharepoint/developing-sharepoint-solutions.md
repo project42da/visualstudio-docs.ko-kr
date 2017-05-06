@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 솔루션 개발 | Microsoft Docs"
+title: "SharePoint 솔루션 개발"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

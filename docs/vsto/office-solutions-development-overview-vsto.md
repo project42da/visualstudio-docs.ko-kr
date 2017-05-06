@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션 개발 개요(VSTO) | Microsoft Docs"
+title: "Office 솔루션 개발 개요(VSTO)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

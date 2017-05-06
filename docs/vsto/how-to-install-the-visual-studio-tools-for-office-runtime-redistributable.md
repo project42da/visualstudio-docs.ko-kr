@@ -1,5 +1,5 @@
 ---
-title: "방법: 재배포 가능한 Visual Studio Tools for Office 런타임 설치 | Microsoft Docs"
+title: "방법: 재배포 가능한 Visual Studio Tools for Office 런타임 설치"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

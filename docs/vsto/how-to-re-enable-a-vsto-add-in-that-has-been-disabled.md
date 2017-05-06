@@ -1,5 +1,5 @@
 ---
-title: "방법: 비활성화된 VSTO 추가 기능 다시 활성화 | Microsoft Docs"
+title: "방법: 비활성화된 VSTO 추가 기능 다시 활성화"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

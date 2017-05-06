@@ -1,5 +1,5 @@
 ---
-title: "Office 개발 샘플 및 연습 | Microsoft Docs"
+title: "Office 개발 샘플 및 연습"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

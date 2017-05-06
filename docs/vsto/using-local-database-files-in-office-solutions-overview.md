@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션에서 로컬 데이터베이스 파일 사용 개요 | Microsoft Docs"
+title: "Office 솔루션에서 로컬 데이터베이스 파일 사용 개요"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

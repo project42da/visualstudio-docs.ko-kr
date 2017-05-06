@@ -1,5 +1,5 @@
 ---
-title: "문서 수준 솔루션의 문서 보호 | Microsoft Docs"
+title: "문서 수준 솔루션의 문서 보호"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

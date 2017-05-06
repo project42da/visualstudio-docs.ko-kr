@@ -1,5 +1,5 @@
 ---
-title: "방법: 문서에서 관리 코드 확장 제거 | Microsoft Docs"
+title: "방법: 문서에서 관리 코드 확장 제거"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

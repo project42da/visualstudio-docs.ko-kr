@@ -1,5 +1,5 @@
 ---
-title: "비즈니스 데이터 연결 모델 디자인 | Microsoft Docs"
+title: "비즈니스 데이터 연결 모델 디자인"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

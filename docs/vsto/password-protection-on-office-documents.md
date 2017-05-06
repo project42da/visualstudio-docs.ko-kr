@@ -1,5 +1,5 @@
 ---
-title: "Office 문서의 암호 보호 | Microsoft Docs"
+title: "Office 문서의 암호 보호"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

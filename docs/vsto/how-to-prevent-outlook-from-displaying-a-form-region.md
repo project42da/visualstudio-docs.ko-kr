@@ -1,5 +1,5 @@
 ---
-title: "방법: Outlook에서 양식 영역 표시하지 않기 | Microsoft Docs"
+title: "방법: Outlook에서 양식 영역 표시하지 않기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

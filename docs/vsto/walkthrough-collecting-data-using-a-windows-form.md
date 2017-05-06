@@ -1,5 +1,5 @@
 ---
-title: "연습: Windows Form을 사용하여 데이터 수집 | Microsoft Docs"
+title: "연습: Windows Form을 사용하여 데이터 수집"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

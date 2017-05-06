@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션에 대한 특정 보안 고려 사항 | Microsoft Docs"
+title: "Office 솔루션에 대한 특정 보안 고려 사항"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 데이터에 ListObject 열 매핑 | Microsoft Docs"
+title: "방법: 데이터에 ListObject 열 매핑"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

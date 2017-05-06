@@ -1,5 +1,5 @@
 ---
-title: "방법: 바로 가기 메뉴에 명령 추가 | Microsoft Docs"
+title: "방법: 바로 가기 메뉴에 명령 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

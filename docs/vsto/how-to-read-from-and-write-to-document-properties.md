@@ -1,5 +1,5 @@
 ---
-title: "방법: 문서 속성에서 읽기 및 문서 속성에 쓰기 | Microsoft Docs"
+title: "방법: 문서 속성에서 읽기 및 문서 속성에 쓰기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

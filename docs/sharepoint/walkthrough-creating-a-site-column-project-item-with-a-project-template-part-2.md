@@ -1,5 +1,5 @@
 ---
-title: "연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부 | Microsoft Docs"
+title: "연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

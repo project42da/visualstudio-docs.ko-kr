@@ -1,5 +1,5 @@
 ---
-title: "확장된 개체를 사용하여 Word 자동화 | Microsoft Docs"
+title: "확장된 개체를 사용하여 Word 자동화"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

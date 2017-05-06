@@ -1,5 +1,5 @@
 ---
-title: "Office 프로젝트의 내게 필요한 옵션 | Microsoft Docs"
+title: "Office 프로젝트의 내게 필요한 옵션"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

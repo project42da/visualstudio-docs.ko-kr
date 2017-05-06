@@ -1,5 +1,5 @@
 ---
-title: "Office 프로젝트 디버깅 | Microsoft Docs"
+title: "Office 프로젝트 디버깅"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

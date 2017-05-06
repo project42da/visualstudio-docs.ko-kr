@@ -1,5 +1,5 @@
 ---
-title: "SharePoint용 사이트 열, 콘텐츠 형식 및 목록 만들기 | Microsoft Docs"
+title: "SharePoint용 사이트 열, 콘텐츠 형식 및 목록 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: ListObject 컨트롤에 새 행을 추가할 때 데이터 유효성 검사 | Microsoft Docs"
+title: "방법: ListObject 컨트롤에 새 행을 추가할 때 데이터 유효성 검사"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

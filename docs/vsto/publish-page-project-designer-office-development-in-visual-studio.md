@@ -1,5 +1,5 @@
 ---
-title: "게시 페이지, 프로젝트 디자이너(Visual Studio에서는 Office 개발) | Microsoft Docs"
+title: "게시 페이지, 프로젝트 디자이너(Visual Studio에서는 Office 개발)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Excel을 사용한 연습 | Microsoft Docs"
+title: "Excel을 사용한 연습"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: Visual Studio 내에서 워크시트에 스키마 매핑 | Microsoft Docs"
+title: "방법: Visual Studio 내에서 워크시트에 스키마 매핑"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

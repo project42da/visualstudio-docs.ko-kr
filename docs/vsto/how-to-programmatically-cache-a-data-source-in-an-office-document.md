@@ -1,5 +1,5 @@
 ---
-title: "방법: Office 문서에서 프로그래밍 방식으로 데이터 소스 캐싱 | Microsoft Docs"
+title: "방법: Office 문서에서 프로그래밍 방식으로 데이터 소스 캐싱"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

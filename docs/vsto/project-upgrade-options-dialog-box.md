@@ -1,5 +1,5 @@
 ---
-title: "옵션 대화 상자, 프로젝트 업그레이드 | Microsoft Docs"
+title: "옵션 대화 상자, 프로젝트 업그레이드"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "서버 탐색기를 사용하여 SharePoint 연결 찾아보기 | Microsoft Docs"
+title: "서버 탐색기를 사용하여 SharePoint 연결 찾아보기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

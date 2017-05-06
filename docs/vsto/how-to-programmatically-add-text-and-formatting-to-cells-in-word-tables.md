@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 Word 표의 셀에 텍스트 및 서식 추가 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 Word 표의 셀에 텍스트 및 서식 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

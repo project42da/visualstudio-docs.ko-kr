@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 통합 문서에서 일정 범위에 스타일 적용 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 통합 문서에서 일정 범위에 스타일 적용"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "연습: Word 작업 창의 컨트롤에 데이터 바인딩 | Microsoft Docs"
+title: "연습: Word 작업 창의 컨트롤에 데이터 바인딩"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

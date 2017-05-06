@@ -1,5 +1,5 @@
 ---
-title: "문서 수준 사용자 지정의 XML 스키마 및 데이터 | Microsoft Docs"
+title: "문서 수준 사용자 지정의 XML 스키마 및 데이터"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

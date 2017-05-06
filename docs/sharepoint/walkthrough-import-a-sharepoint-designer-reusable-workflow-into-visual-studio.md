@@ -1,5 +1,5 @@
 ---
-title: "연습: Visual Studio에 SharePoint Designer의 다시 사용 가능한 워크플로 가져오기 | Microsoft Docs"
+title: "연습: Visual Studio에 SharePoint Designer의 다시 사용 가능한 워크플로 가져오기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

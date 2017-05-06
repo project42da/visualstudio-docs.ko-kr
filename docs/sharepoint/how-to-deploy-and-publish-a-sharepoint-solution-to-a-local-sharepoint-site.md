@@ -1,5 +1,5 @@
 ---
-title: "방법: 로컬 SharePoint 사이트에 SharePoint 솔루션 배포 및 게시 | Microsoft Docs"
+title: "방법: 로컬 SharePoint 사이트에 SharePoint 솔루션 배포 및 게시"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

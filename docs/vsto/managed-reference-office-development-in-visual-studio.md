@@ -1,5 +1,5 @@
 ---
-title: "관리되는 참조(Visual Studio에서 Office 개발) | Microsoft Docs"
+title: "관리되는 참조(Visual Studio에서 Office 개발)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

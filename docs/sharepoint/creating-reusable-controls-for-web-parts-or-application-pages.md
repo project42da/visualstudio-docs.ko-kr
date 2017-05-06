@@ -1,5 +1,5 @@
 ---
-title: "웹 파트 또는 응용 프로그램 페이지를 위해 재사용 가능한 컨트롤 만들기 | Microsoft Docs"
+title: "웹 파트 또는 응용 프로그램 페이지를 위해 재사용 가능한 컨트롤 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

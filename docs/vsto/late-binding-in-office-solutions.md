@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션에서 런타임에 바인딩 | Microsoft Docs"
+title: "Office 솔루션에서 런타임에 바인딩"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

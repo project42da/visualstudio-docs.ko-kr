@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 Word의 기본 제공 대화 상자 사용 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 Word의 기본 제공 대화 상자 사용"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

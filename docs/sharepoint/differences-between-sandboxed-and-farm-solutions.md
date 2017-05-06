@@ -1,5 +1,5 @@
 ---
-title: "샌드박스 솔루션과 팜 솔루션의 차이점 | Microsoft Docs"
+title: "샌드박스 솔루션과 팜 솔루션의 차이점"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

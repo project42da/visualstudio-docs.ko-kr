@@ -1,5 +1,5 @@
 ---
-title: "VSTO 추가 기능 프로그래밍 | Microsoft Docs"
+title: "VSTO 추가 기능 프로그래밍"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

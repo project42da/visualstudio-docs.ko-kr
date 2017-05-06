@@ -1,5 +1,5 @@
 ---
-title: "사용자 지정 문서 속성 개요 | Microsoft Docs"
+title: "사용자 지정 문서 속성 개요"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

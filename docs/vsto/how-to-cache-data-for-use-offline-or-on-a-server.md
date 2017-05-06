@@ -1,5 +1,5 @@
 ---
-title: "방법: 오프라인이나 서버에서 사용할 데이터 캐싱 | Microsoft Docs"
+title: "방법: 오프라인이나 서버에서 사용할 데이터 캐싱"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

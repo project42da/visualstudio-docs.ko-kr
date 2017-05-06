@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 응용 프로그램 성능 프로파일링 | Microsoft Docs"
+title: "SharePoint 응용 프로그램 성능 프로파일링"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "정보 권한 관리 및 관리 코드 확장 개요 | Microsoft Docs"
+title: "정보 권한 관리 및 관리 코드 확장 개요"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

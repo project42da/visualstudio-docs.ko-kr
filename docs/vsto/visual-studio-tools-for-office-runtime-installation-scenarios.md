@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Tools for Office 런타임 설치 시나리오 | Microsoft Docs"
+title: "Visual Studio Tools for Office 런타임 설치 시나리오"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

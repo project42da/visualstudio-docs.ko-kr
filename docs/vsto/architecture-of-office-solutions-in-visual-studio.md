@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio의 Office 솔루션 아키텍처 | Microsoft Docs"
+title: "Visual Studio의 Office 솔루션 아키텍처"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 기능 종속성 추가 및 제거 | Microsoft Docs"
+title: "방법: 기능 종속성 추가 및 제거"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 특정 폴더 내용 검색 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 특정 폴더 내용 검색"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "연습: 워크시트에서 라디오 단추를 사용하여 차트 업데이트 | Microsoft Docs"
+title: "연습: 워크시트에서 라디오 단추를 사용하여 차트 업데이트"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

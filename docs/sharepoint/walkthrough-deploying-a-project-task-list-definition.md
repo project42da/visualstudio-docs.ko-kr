@@ -1,5 +1,5 @@
 ---
-title: "연습: 프로젝트 작업 목록 정의 배포 | Microsoft Docs"
+title: "연습: 프로젝트 작업 목록 정의 배포"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

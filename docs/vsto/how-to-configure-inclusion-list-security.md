@@ -1,5 +1,5 @@
 ---
-title: "방법: 포함 목록 보안 구성 | Microsoft Docs"
+title: "방법: 포함 목록 보안 구성"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

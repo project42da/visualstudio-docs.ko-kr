@@ -1,5 +1,5 @@
 ---
-title: "방법: ListObject 컨트롤을 데이터로 채우기 | Microsoft Docs"
+title: "방법: ListObject 컨트롤을 데이터로 채우기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "보안 및 배포 연습 | Microsoft Docs"
+title: "보안 및 배포 연습"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

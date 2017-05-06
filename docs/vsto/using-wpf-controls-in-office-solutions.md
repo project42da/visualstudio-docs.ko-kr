@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션에서 WPF 컨트롤 사용 | Microsoft Docs"
+title: "Office 솔루션에서 WPF 컨트롤 사용"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 리본 메뉴 사용자 지정 시작 | Microsoft Docs"
+title: "방법: 리본 메뉴 사용자 지정 시작"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

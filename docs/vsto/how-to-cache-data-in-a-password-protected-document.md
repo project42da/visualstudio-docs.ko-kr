@@ -1,5 +1,5 @@
 ---
-title: "방법: 암호로 보호된 문서의 데이터 캐시 | Microsoft Docs"
+title: "방법: 암호로 보호된 문서의 데이터 캐시"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

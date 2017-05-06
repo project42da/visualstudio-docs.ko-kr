@@ -1,5 +1,5 @@
 ---
-title: "시작(Visual Studio에서의 Office 개발) | Microsoft Docs"
+title: "시작(Visual Studio에서의 Office 개발)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

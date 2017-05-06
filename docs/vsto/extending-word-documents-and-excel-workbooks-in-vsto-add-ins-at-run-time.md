@@ -1,5 +1,5 @@
 ---
-title: "런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장 | Microsoft Docs"
+title: "런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

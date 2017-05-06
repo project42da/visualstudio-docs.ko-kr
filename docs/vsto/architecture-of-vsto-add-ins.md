@@ -1,5 +1,5 @@
 ---
-title: "VSTO 추가 기능의 아키텍처 | Microsoft Docs"
+title: "VSTO 추가 기능의 아키텍처"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

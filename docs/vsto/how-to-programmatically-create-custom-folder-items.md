@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 사용자 지정 폴더 항목 만들기 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 사용자 지정 폴더 항목 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

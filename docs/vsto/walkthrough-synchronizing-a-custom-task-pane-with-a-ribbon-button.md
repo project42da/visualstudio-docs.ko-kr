@@ -1,5 +1,5 @@
 ---
-title: "연습: 사용자 지정 작업 창과 리본 단추 동기화 | Microsoft Docs"
+title: "연습: 사용자 지정 작업 창과 리본 단추 동기화"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

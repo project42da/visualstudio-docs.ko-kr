@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션의 데이터 연습 | Microsoft Docs"
+title: "Office 솔루션의 데이터 연습"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

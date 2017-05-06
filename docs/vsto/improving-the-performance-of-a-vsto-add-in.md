@@ -1,5 +1,5 @@
 ---
-title: "VSTO 추가 기능의 성능 향상 | Microsoft Docs"
+title: "VSTO 추가 기능의 성능 향상"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

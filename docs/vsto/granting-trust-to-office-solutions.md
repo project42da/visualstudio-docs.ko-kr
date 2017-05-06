@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션에 신뢰 부여 | Microsoft Docs"
+title: "Office 솔루션에 신뢰 부여"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "연습: 콘텐츠 컨트롤을 사용자 지정 XML 부분에 바인딩 | Microsoft Docs"
+title: "연습: 콘텐츠 컨트롤을 사용자 지정 XML 부분에 바인딩"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

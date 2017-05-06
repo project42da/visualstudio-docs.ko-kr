@@ -1,5 +1,5 @@
 ---
-title: "이 컴퓨터에 Microsoft Office가 설치되어 있지 않습니다. | Microsoft Docs"
+title: "이 컴퓨터에 Microsoft Office가 설치되어 있지 않습니다."
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

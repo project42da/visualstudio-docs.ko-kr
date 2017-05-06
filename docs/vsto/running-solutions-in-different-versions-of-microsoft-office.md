@@ -1,5 +1,5 @@
 ---
-title: "여러 버전의 Microsoft Office에서 솔루션 실행 | Microsoft Docs"
+title: "여러 버전의 Microsoft Office에서 솔루션 실행"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

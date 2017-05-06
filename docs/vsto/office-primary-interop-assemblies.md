@@ -1,5 +1,5 @@
 ---
-title: "Office 주 Interop 어셈블리 | Microsoft Docs"
+title: "Office 주 Interop 어셈블리"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

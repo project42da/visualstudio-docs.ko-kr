@@ -1,5 +1,5 @@
 ---
-title: "워크시트 호스트 항목 | Microsoft Docs"
+title: "워크시트 호스트 항목"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

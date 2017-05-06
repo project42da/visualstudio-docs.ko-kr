@@ -1,5 +1,5 @@
 ---
-title: "Office 프로젝트의 개체에 전역 액세스 | Microsoft Docs"
+title: "Office 프로젝트의 개체에 전역 액세스"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

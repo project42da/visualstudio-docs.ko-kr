@@ -1,5 +1,5 @@
 ---
-title: "폴더 사용 | Microsoft Docs"
+title: "폴더 사용"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

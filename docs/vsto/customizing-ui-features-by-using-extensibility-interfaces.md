@@ -1,5 +1,5 @@
 ---
-title: "확장성 인터페이스를 사용하여 UI 기능 사용자 지정 | Microsoft Docs"
+title: "확장성 인터페이스를 사용하여 UI 기능 사용자 지정"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

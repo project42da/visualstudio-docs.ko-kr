@@ -1,5 +1,5 @@
 ---
-title: "방법: Office 프로젝트에서 이벤트 처리기 만들기 | Microsoft Docs"
+title: "방법: Office 프로젝트에서 이벤트 처리기 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

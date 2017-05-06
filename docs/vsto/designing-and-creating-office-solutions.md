@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션 디자인 및 만들기 | Microsoft Docs"
+title: "Office 솔루션 디자인 및 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 워크시트에서 데이터베이스 레코드 스크롤 | Microsoft Docs"
+title: "방법: 워크시트에서 데이터베이스 레코드 스크롤"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

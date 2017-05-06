@@ -1,5 +1,5 @@
 ---
-title: "Office 문서에서 Windows Forms 컨트롤에 대한 제한 사항 | Microsoft Docs"
+title: "Office 문서에서 Windows Forms 컨트롤에 대한 제한 사항"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

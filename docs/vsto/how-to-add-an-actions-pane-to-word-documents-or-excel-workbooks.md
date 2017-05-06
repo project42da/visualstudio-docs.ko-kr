@@ -1,5 +1,5 @@
 ---
-title: "방법: Word 문서 또는 Excel 통합 문서에 작업 창 추가 | Microsoft Docs"
+title: "방법: Word 문서 또는 Excel 통합 문서에 작업 창 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

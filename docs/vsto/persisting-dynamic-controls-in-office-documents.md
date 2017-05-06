@@ -1,5 +1,5 @@
 ---
-title: "Office 문서에서 동적 컨트롤 유지 | Microsoft Docs"
+title: "Office 문서에서 동적 컨트롤 유지"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

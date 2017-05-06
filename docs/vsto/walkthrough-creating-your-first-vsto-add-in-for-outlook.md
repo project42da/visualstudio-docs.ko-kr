@@ -1,5 +1,5 @@
 ---
-title: "연습: Outlook용 첫 VSTO 추가 기능 만들기 | Microsoft Docs"
+title: "연습: Outlook용 첫 VSTO 추가 기능 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

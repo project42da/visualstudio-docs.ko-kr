@@ -1,5 +1,5 @@
 ---
-title: "방법: 리소스 파일 추가 | Microsoft Docs"
+title: "방법: 리소스 파일 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

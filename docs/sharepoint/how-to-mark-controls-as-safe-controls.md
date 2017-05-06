@@ -1,5 +1,5 @@
 ---
-title: "방법: 컨트롤을 안전 컨트롤로 표시 | Microsoft Docs"
+title: "방법: 컨트롤을 안전 컨트롤로 표시"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

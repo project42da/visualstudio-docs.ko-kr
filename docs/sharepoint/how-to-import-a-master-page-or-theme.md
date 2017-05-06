@@ -1,5 +1,5 @@
 ---
-title: "방법: 마스터 페이지 또는 테마 가져오기 | Microsoft Docs"
+title: "방법: 마스터 페이지 또는 테마 가져오기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

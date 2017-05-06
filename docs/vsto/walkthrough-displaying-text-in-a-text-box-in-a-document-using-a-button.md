@@ -1,5 +1,5 @@
 ---
-title: "연습: 문서에서 단추를 사용하여 텍스트 상자에 텍스트 표시 | Microsoft Docs"
+title: "연습: 문서에서 단추를 사용하여 텍스트 상자에 텍스트 표시"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

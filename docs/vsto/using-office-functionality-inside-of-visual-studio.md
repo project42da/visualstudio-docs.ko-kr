@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 내에서 Office 기능 사용 | Microsoft Docs"
+title: "Visual Studio 내에서 Office 기능 사용"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

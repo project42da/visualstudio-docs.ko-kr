@@ -1,5 +1,5 @@
 ---
-title: "방법: Office 다국어 사용자 인터페이스 대상 선택 | Microsoft Docs"
+title: "방법: Office 다국어 사용자 인터페이스 대상 선택"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

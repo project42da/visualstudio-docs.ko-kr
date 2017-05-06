@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션의 배포 매니페스트 | Microsoft Docs"
+title: "Office 솔루션의 배포 매니페스트"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: MSBuild 작업을 사용하여 SharePoint 솔루션 패키지 만들기 | Microsoft Docs"
+title: "방법: MSBuild 작업을 사용하여 SharePoint 솔루션 패키지 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

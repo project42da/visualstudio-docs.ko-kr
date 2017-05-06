@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로젝트 출력 참조 추가 | Microsoft Docs"
+title: "방법: 프로젝트 출력 참조 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

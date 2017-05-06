@@ -1,5 +1,5 @@
 ---
-title: "방법: BDC 기능에 사용자 지정 어셈블리 포함 | Microsoft Docs"
+title: "방법: BDC 기능에 사용자 지정 어셈블리 포함"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "연습: 사용자 지정 마스터 페이지 및 사이트 페이지를 이미지로 가져오기 | Microsoft Docs"
+title: "연습: 사용자 지정 마스터 페이지 및 사이트 페이지를 이미지로 가져오기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

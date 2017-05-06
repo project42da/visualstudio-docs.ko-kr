@@ -1,5 +1,5 @@
 ---
-title: "연습: VBA에서 VSTO 추가 기능의 코드 호출 | Microsoft Docs"
+title: "연습: VBA에서 VSTO 추가 기능의 코드 호출"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

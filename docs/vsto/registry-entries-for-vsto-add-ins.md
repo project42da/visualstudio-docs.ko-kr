@@ -1,5 +1,5 @@
 ---
-title: "VSTO 추가 기능에 대한 레지스트리 항목 | Microsoft Docs"
+title: "VSTO 추가 기능에 대한 레지스트리 항목"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "테이블 작업 | Microsoft Docs"
+title: "테이블 작업"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 기본 제공 탭 사용자 지정 | Microsoft Docs"
+title: "방법: 기본 제공 탭 사용자 지정"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

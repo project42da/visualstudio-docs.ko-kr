@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 Outlook 폴더에 웹 페이지 연결 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 Outlook 폴더에 웹 페이지 연결"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

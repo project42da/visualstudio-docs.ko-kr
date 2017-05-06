@@ -1,5 +1,5 @@
 ---
-title: "방법: 추가 기능 사용자 인터페이스 오류 표시 | Microsoft Docs"
+title: "방법: 추가 기능 사용자 인터페이스 오류 표시"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

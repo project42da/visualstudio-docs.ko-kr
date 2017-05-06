@@ -1,5 +1,5 @@
 ---
-title: "방법: 콘텐츠 컨트롤을 사용하여 문서 부분 보호 | Microsoft Docs"
+title: "방법: 콘텐츠 컨트롤을 사용하여 문서 부분 보호"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

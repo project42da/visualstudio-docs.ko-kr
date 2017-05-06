@@ -1,5 +1,5 @@
 ---
-title: "SharePoint에 비즈니스 데이터 통합 | Microsoft Docs"
+title: "SharePoint에 비즈니스 데이터 통합"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

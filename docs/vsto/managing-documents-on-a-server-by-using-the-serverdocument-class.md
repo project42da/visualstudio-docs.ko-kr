@@ -1,5 +1,5 @@
 ---
-title: "ServerDocument 클래스를 사용하여 서버의 문서 관리 | Microsoft Docs"
+title: "ServerDocument 클래스를 사용하여 서버의 문서 관리"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

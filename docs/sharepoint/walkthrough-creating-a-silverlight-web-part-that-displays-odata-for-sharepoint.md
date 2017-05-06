@@ -1,5 +1,5 @@
 ---
-title: "연습: SharePoint용 OData를 표시하는 Silverlight 웹 파트 만들기 | Microsoft Docs"
+title: "연습: SharePoint용 OData를 표시하는 Silverlight 웹 파트 만들기"
 ms.custom: ""
 ms.date: "02/22/2017"
 ms.prod: "visual-studio-dev14"

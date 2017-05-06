@@ -1,5 +1,5 @@
 ---
-title: "연습: Outlook 양식 영역 디자인 | Microsoft Docs"
+title: "연습: Outlook 양식 영역 디자인"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

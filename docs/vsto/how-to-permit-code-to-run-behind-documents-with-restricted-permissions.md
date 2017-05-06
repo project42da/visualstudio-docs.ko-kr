@@ -1,5 +1,5 @@
 ---
-title: "방법: 제한된 권한이 부여된 문서의 숨겨진 코드 실행 허용 | Microsoft Docs"
+title: "방법: 제한된 권한이 부여된 문서의 숨겨진 코드 실행 허용"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

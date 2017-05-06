@@ -1,5 +1,5 @@
 ---
-title: "방법: 작업 창에서 컨트롤 레이아웃 관리 | Microsoft Docs"
+title: "방법: 작업 창에서 컨트롤 레이아웃 관리"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

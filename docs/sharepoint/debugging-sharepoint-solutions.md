@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 솔루션 디버깅 | Microsoft Docs"
+title: "SharePoint 솔루션 디버깅"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

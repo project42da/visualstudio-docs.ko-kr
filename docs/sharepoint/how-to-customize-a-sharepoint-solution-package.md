@@ -1,5 +1,5 @@
 ---
-title: "방법: SharePoint 솔루션 패키지 사용자 지정 | Microsoft Docs"
+title: "방법: SharePoint 솔루션 패키지 사용자 지정"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "서버에 있는 문서의 데이터 액세스 | Microsoft Docs"
+title: "서버에 있는 문서의 데이터 액세스"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

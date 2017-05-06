@@ -1,5 +1,5 @@
 ---
-title: "기능 및 패키지 매니페스트에서 XML 병합 | Microsoft Docs"
+title: "기능 및 패키지 매니페스트에서 XML 병합"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

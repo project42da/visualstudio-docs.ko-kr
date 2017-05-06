@@ -1,5 +1,5 @@
 ---
-title: "Office 프로젝트의 속성 | Microsoft Docs"
+title: "Office 프로젝트의 속성"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

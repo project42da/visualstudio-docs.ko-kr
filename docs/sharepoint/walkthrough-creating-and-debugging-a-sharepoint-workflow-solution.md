@@ -1,5 +1,5 @@
 ---
-title: "연습: SharePoint 워크플로 솔루션 만들기 및 디버깅 | Microsoft Docs"
+title: "연습: SharePoint 워크플로 솔루션 만들기 및 디버깅"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 개체의 데이터로 문서 채우기 | Microsoft Docs"
+title: "방법: 개체의 데이터로 문서 채우기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

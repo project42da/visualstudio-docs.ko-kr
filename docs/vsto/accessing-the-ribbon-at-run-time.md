@@ -1,5 +1,5 @@
 ---
-title: "런타임에 리본 메뉴에 액세스 | Microsoft Docs"
+title: "런타임에 리본 메뉴에 액세스"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

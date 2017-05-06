@@ -1,5 +1,5 @@
 ---
-title: "프로젝트 항목에 패키징 및 배포 정보 제공 | Microsoft Docs"
+title: "프로젝트 항목에 패키징 및 배포 정보 제공"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 솔루션 지역화 | Microsoft Docs"
+title: "SharePoint 솔루션 지역화"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Outlook에 대해 리본 메뉴 사용자 지정 | Microsoft Docs"
+title: "Outlook에 대해 리본 메뉴 사용자 지정"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

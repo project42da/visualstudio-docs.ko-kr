@@ -1,5 +1,5 @@
 ---
-title: "방법: 원격 서버에서 SharePoint 솔루션 배포, 게시 및 업그레이드 | Microsoft Docs"
+title: "방법: 원격 서버에서 SharePoint 솔루션 배포, 게시 및 업그레이드"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

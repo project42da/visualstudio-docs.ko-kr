@@ -1,5 +1,5 @@
 ---
-title: "호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항 | Microsoft Docs"
+title: "호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

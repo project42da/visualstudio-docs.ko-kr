@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션에 대한 이벤트 로깅 | Microsoft Docs"
+title: "Office 솔루션에 대한 이벤트 로깅"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

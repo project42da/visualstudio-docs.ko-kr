@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 통합 문서 저장 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 통합 문서 저장"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

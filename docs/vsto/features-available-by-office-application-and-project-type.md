@@ -1,5 +1,5 @@
 ---
-title: "Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능 | Microsoft Docs"
+title: "Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

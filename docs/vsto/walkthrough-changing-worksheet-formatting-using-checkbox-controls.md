@@ -1,5 +1,5 @@
 ---
-title: "연습: CheckBox 컨트롤을 사용하여 워크시트 서식 변경 | Microsoft Docs"
+title: "연습: CheckBox 컨트롤을 사용하여 워크시트 서식 변경"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

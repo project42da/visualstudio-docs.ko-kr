@@ -1,5 +1,5 @@
 ---
-title: "방법: Visual C# 프로젝트에서 VBA로 코드 노출 | Microsoft Docs"
+title: "방법: Visual C# 프로젝트에서 VBA로 코드 노출"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 응용 프로그램에 사용자 지정 작업 창 추가 | Microsoft Docs"
+title: "방법: 응용 프로그램에 사용자 지정 작업 창 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

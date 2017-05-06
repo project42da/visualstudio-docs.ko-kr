@@ -1,5 +1,5 @@
 ---
-title: "Office 솔루션 배포 문제 해결 | Microsoft Docs"
+title: "Office 솔루션 배포 문제 해결"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

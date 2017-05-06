@@ -1,5 +1,5 @@
 ---
-title: "방법: Office 문서에 Windows Forms 컨트롤 추가 | Microsoft Docs"
+title: "방법: Office 문서에 Windows Forms 컨트롤 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

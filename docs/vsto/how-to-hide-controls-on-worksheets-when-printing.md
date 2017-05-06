@@ -1,5 +1,5 @@
 ---
-title: "방법: 인쇄할 때 워크시트에서 컨트롤 숨기기 | Microsoft Docs"
+title: "방법: 인쇄할 때 워크시트에서 컨트롤 숨기기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

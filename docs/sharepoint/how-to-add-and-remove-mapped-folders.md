@@ -1,5 +1,5 @@
 ---
-title: "방법: 매핑된 폴더 추가 및 제거 | Microsoft Docs"
+title: "방법: 매핑된 폴더 추가 및 제거"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

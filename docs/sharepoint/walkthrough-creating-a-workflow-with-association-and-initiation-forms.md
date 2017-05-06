@@ -1,5 +1,5 @@
 ---
-title: "연습: 연결 및 초기화 폼이 있는 워크플로 만들기 | Microsoft Docs"
+title: "연습: 연결 및 초기화 폼이 있는 워크플로 만들기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

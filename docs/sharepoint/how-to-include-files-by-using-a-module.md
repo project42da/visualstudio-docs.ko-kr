@@ -1,5 +1,5 @@
 ---
-title: "방법: 모듈을 사용하여 파일 포함 | Microsoft Docs"
+title: "방법: 모듈을 사용하여 파일 포함"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

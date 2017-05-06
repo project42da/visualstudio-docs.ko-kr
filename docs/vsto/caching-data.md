@@ -1,5 +1,5 @@
 ---
-title: "데이터 캐싱 | Microsoft Docs"
+title: "데이터 캐싱"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

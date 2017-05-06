@@ -1,5 +1,5 @@
 ---
-title: "연습: 작업 창에서 문서로 텍스트 삽입 | Microsoft Docs"
+title: "연습: 작업 창에서 문서로 텍스트 삽입"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 전자 메일 메시지를 받은 경우 작업 수행 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 전자 메일 메시지를 받은 경우 작업 수행"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

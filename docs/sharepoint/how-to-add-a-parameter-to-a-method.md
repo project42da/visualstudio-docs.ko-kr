@@ -1,5 +1,5 @@
 ---
-title: "방법: 메서드에 매개 변수 추가 | Microsoft Docs"
+title: "방법: 메서드에 매개 변수 추가"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

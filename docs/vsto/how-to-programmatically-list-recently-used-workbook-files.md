@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로그래밍 방식으로 최근에 사용한 통합 문서 파일 나열 | Microsoft Docs"
+title: "방법: 프로그래밍 방식으로 최근에 사용한 통합 문서 파일 나열"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

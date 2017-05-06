@@ -1,5 +1,5 @@
 ---
-title: "연습: IntelliTrace를 사용하여 SharePoint 응용 프로그램 디버깅 | Microsoft Docs"
+title: "연습: IntelliTrace를 사용하여 SharePoint 응용 프로그램 디버깅"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

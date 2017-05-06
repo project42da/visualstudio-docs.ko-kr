@@ -1,5 +1,5 @@
 ---
-title: "방법: 코드를 실행하지 않고 Office 솔루션 열기 | Microsoft Docs"
+title: "방법: 코드를 실행하지 않고 Office 솔루션 열기"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

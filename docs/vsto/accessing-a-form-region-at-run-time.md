@@ -1,5 +1,5 @@
 ---
-title: "런타임에 양식 영역 액세스 | Microsoft Docs"
+title: "런타임에 양식 영역 액세스"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

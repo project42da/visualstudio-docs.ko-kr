@@ -1,5 +1,5 @@
 ---
-title: "방법: SharePoint 솔루션 빌드 | Microsoft Docs"
+title: "방법: SharePoint 솔루션 빌드"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

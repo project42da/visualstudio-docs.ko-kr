@@ -1,5 +1,5 @@
 ---
-title: "연습: 사용자 지정 작업 창을 사용하여 응용 프로그램 자동화 | Microsoft Docs"
+title: "연습: 사용자 지정 작업 창을 사용하여 응용 프로그램 자동화"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"
