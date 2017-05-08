@@ -36,18 +36,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
 ms.openlocfilehash: 059dd2068c5aa0d55f94f293d8430a1f401354ba
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 설치
-Visual Studio를 설치하는 새로운 방법이 있습니다. 최신 버전에서는 필요한 기능만 쉽게 선택해서 설치할 수 있으며, 시스템에 미치는 영향을 최소화하여 이전보다 빨리 설치되도록 Visual Studio의 최소 사용 공간이 줄었습니다.  
+Visual Studio를 설치하는 새로운 방법이 있습니다. 최신 버전에서는 필요한 기능만 쉽게 선택해서 설치할 수 있으며, 시스템에 미치는 영향을 최소화하여 이전보다 빨리 설치되도록 Visual Studio의 최소 사용 공간이 줄었습니다.
 
  다른 새로운 기능에 대해 자세히 알고 싶으세요? [릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs15-relnotes)를 참조하세요. 설치 환경이 어떻게 새롭게 디자인되었는지에 대한 자세한 내용은 블로그 게시물 "[Faster and leaner Visual Studio installer](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer/)(더 빠르고 간결한 Visual Studio 설치 관리자)" 및 "[Anatomy of a low-impact Visual Studio installation](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install/)(영향이 적은 Visual Studio 설치 분석)"을 참조하세요.  
 
- 설치할 준비가 되었나요? 설치 과정을 단계별로 안내합니다. 이제 시작해 보겠습니다.  
+ 설치할 준비가 되었나요? 설치 과정을 단계별로 안내합니다. 이제 시작해 보겠습니다.
 
 ## <a name="install-the-installer"></a>설치 관리자 설치  
  Visual Studio 2017를 다운로드하면 새로운 경량 설치 관리자를 설치하는 부트스트래퍼 파일을 얻을 수 있습니다. 이 새로운 설치 관리자에는 설치를 사용자 지정하는 데 필요한 모든 것이 포함되어 있습니다.  
