@@ -1,22 +1,37 @@
 ---
-title: "NuGet을 사용한 참조 추가와 확장명 SDK를 사용한 참조 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.toolsoptionspages.nuget_package_manager.general"
-  - "vs.toolsoptionspages.nuget_package_manager.package_sources"
+title: "NuGet을 사용한 참조 추가와 확장 SDK를 사용한 참조 추가 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2175581e-83cb-444c-bb52-cc1fca8ea196
 caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3f4740d442a7ef24803d6360cdcc480d9d6fca84
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>NuGet을 사용한 참조 추가와 확장명 SDK를 사용한 참조 추가
 Visual Studio에 대한 NuGet 확장 또는 SDK(소프트웨어 개발 키트)를 사용하여 Visual Studio 프로젝트 내에서 사용할 패키지를 제공할 수 있습니다. 이 항목에서 설명하는 두 메커니즘 간의 유사점과 차이점을 참조하여 작업에 가장 적합한 메커니즘을 선택할 수 있습니다.  
@@ -69,8 +84,3 @@ Visual Studio에 대한 NuGet 확장 또는 SDK(소프트웨어 개발 키트)�
   
 ## <a name="see-also"></a>참고 항목  
  [프로젝트의 참조 관리](../ide/managing-references-in-a-project.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

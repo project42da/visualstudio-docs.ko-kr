@@ -60,8 +60,3 @@
 ### [XSLT 기본 템플릿](xslt-default-templates.md)
 ### [디버거 사용자 인터페이스(XSLT)](debugger-user-interface-xslt.md)
 ### [XSLT 프로파일러](xslt-profiler.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
