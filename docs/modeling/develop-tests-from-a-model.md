@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 08aabdfe0e268f93ef7723076375b7f65b15ccf3
 ms.openlocfilehash: b7cb109d11669f411b5ca3bdf3c4c32a63ac53a1
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -103,11 +104,11 @@ ms.lasthandoff: 02/22/2017
  주문에 항목 추가와 같은 사용 사례를 테스트하려면 테스트 메서드에 다음과 비슷한 코드가 포함될 수 있습니다.  
   
 ```  
-Order order = … ; // set up an order  
+Order order = ... ; // set up an order  
 // Store prior state:  
 int countBefore = order.MenuItems.Count;   
 // Perform use case:  
-MenuItem chosenItem = …; // choose an item  
+MenuItem chosenItem = ...; // choose an item  
 AddItemToOrder (chosenItem, order);   
 // Verify part of postcondition:  
 int countAfter = order.MenuItems.Count;  
@@ -148,7 +149,7 @@ Assert (countAfter == countBefore = 1);
   
  테스트 관점에서 요구 사항 모델은 테스트 축약형으로 간주될 수 있습니다. 따라서 프로젝트 전체에서 테스트와 모델 간의 관계를 유지하는 것이 중요합니다.  
   
-##  <a name="a-nameattachinga-attaching-test-cases-to-model-elements"></a><a name="Attaching"></a>모델 요소에 테스트 사례 연결  
+##  <a name="Attaching"></a>모델 요소에 테스트 사례 연결  
  프로젝트에서 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]를 사용하는 경우 모델의 요소에 테스트를 연결할 수 있습니다. 이렇게 하면 요구 사항 변경의 영향을 받는 테스트를 빠르게 찾을 수 있으며 요구 사항이 인식된 익스텐트를 추적하는 데 도움이 됩니다.  
   
  모든 종류의 요소에 테스트를 연결할 수 있습니다. 다음은 몇 가지 예입니다.  
