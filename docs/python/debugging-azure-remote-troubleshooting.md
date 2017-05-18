@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구를 사용하여 Azure 원격 디버깅 문제 해결 | Microsoft Docs"
+title: "Visual Studio에서 Python에 대한 Azure 원격 디버깅 문제 해결 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: fcf44a3967c0bd391808c9f6b3a23f39aeff05fd
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: f9d9d1bc974e43cdd7d1da2a1468a9b7ef84f44b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/07/2017
 | 프로젝트가 디버그 구성을 사용하여 배포되지 않았습니다. | [솔루션 탐색기]에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택하여 응용 프로그램을 다시 배포합니다. **설정** 탭에서 **디버그**가 선택한 구성인지 확인합니다. |
 | App Service가 실행되고 있지 않습니다. | Visual Studio의 [서버 탐색기] 또는 Azure Portal에서 시작합니다. |
 | App Service가 웹 소켓에 대해 구성되어 있지 않습니다. | [Azure Portal](https://portal.azure.com), App Service로 차례로 이동하고, **설정 > 응용 프로그램 설정** 블레이드를 열어 **일반 설정 > 웹 소켓**을 **사용**으로 설정하고, **저장**을 선택합니다. (이 블레이드에 표시된 **디버깅** 옵션은 Python 디버깅에 *적용되지 않습니다*.) |
-| `web.debug.config`에서 디버그 프록시를 사용하지 않도록 수정되었습니다. | 파일을 삭제하고 프로젝트를 App Service에 다시 게시합니다. 이 기간 동안 Visual Studio용 Python 도구에서 파일을 다시 만듭니다. |
+| `web.debug.config`에서 디버그 프록시를 사용하지 않도록 수정되었습니다. | 파일을 삭제하고 프로젝트를 App Service에 다시 게시합니다. 이 기간에 Visual Studio에서 파일을 다시 만듭니다. |
 
 참고 항목:
 

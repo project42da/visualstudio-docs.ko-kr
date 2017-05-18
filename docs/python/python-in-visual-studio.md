@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 Python | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/2/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 06f5b9d2223ccb9cbbbff8f2960d89c8efbf05b2
-ms.openlocfilehash: 83a676c5f2f838b6920c5fafbe78dc9b49fbb4cb
-ms.lasthandoff: 04/12/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: c46c8b7a0d9ea1509dcda2ef711562b3cf95b259
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/12/2017
 
 Python은 안정적이고, 유연하고, 배우기 쉽고, 모든 운영 체제에서 무료로 사용할 수 있고, 강력한 개발자 커뮤니티에서 지원하고, 많은 무료 라이브러리가 제공되는 널리 사용되는 프로그래밍 언어입니다. Python은 웹 응용 프로그램, 웹 서비스, 데스크톱 앱, 스크립팅 및 과학적 컴퓨팅 등 모든 방식의 개발을 지원하며 대학, 과학자, 아마추어 개발자 및 전문 개발자 등 많은 분야에 사용됩니다. [python.org](https://www.python.org) 및 [Python for Beginners](https://www.python.org/about/gettingstarted/)(초보자를 위한 Python)에서 이 언어에 대해 자세히 알아볼 수 있습니다.
 
-Visual Studio는 Python 워크로드(Visual Studio 2017)와 무료 Visual Studio용 Python 도구 확장(Visual Studio 2015 및 이전 버전)을 통해 Python 언어에 대한 [오픈 소스](https://github.com/Microsoft/ptvs) 지원을 제공합니다. 
+Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visual Studio 2017)와 무료 Visual Studio용 Python 도구 확장(Visual Studio 2015 및 이전 버전)을 통해 Python 언어에 대한 [오픈 소스](https://github.com/Microsoft/ptvs) 지원을 제공합니다. 
 
 [설치 지침](installation.md)에 따라 Python 워크로드를 설치한 후 아래 링크를 사용하여 Python 관련 기능 및 Visual Studio 자체 기능에 대해 자세히 알아봅니다.
 
@@ -75,7 +76,7 @@ Visual Studio는 Python 워크로드(Visual Studio 2017)와 무료 Visual Studio
 
 [설치 가이드](installation.md)에 설명된 대로 Visual Studio의 다음 버전(edition)에 Python 지원을 설치할 수 있습니다.
 
-- [Visual Studio 2017 Preview](https://www.visualstudio.com/vs/preview)
+- [Visual Studio 2017(모든 버전)](https://www.visualstudio.com/vs/)
 - [Visual Studio 2015(모든 버전)] (https://www.visualstudio.com/ko-kr/downloads/visual-studio-2015-downloads-vs)
 - [Visual Studio 2013 Community Edition] (https://www.visualstudio.com/ko-kr/products/visual-studio-community-vs.aspx)
 - [Visual Studio 2013 Express for Web, Update 2 이상](https://www.microsoft.com/en-us/download/details.aspx?id=44912)
@@ -202,4 +203,5 @@ Visual Studio 버전(version 및 edition)에서 지원되는 기능:
 
 - [PyKinect를 사용하여 Python으로 Kinect games 게임 작성](https://github.com/Microsoft/PTVS/wiki/PyKinect)(영문)(GitHub wiki)
 - [IIS 및 Python 간 WFastCGI 브리지](https://pypi.python.org/pypi/wfastcgi)(영문)(python.org)
+- - [Microsoft Virtual Academy의 무료 Python 코스](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 

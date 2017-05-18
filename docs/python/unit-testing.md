@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구에서 단위 테스트 | Microsoft Docs"
+title: "Visual Studio의 Python 유닛 테스트 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 878bd0baaa0e08a31274645213b222bf6faeb412
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 2597583912c7694495617c53839f41aa13cda871
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -39,13 +40,13 @@ ms.lasthandoff: 04/10/2017
 
 단위 테스트는 응용 프로그램의 다른 코드 단위(일반적으로 격리된 함수, 클래스 등)를 테스트하는 코드 조각입니다. 응용 프로그램이 모든 단위 테스트를 통과하면 최소한 하위 수준 기능이 올바른 것으로 신뢰할 수 있습니다.
 
-Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설계하는 동안 시나리오를 검증합니다. PTVS(Visual Studio용 Python 도구)는 단위 테스트의 검색, 실행은 물론, 단위 테스트를 별도로 실행해야 하기보다는 개발 프로세스 컨텍스트 내에서 디버깅하는 것에 대한 지원을 포함합니다.
+Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설계하는 동안 시나리오를 검증합니다. Visual Studio에서 Python 지원에는 단위 테스트 검색, 실행은 물론, 단위 테스트를 별도로 실행해야 하기보다는 개발 프로세스 컨텍스트 내에서 디버깅이 포함됩니다.
 
 이 항목에서는 Visual Studio에서 Python을 사용하여 단위 테스트를 수행하는 기능에 대해 간략히 설명합니다. 일반적인 단위 테스트에 대한 자세한 내용은 [코드 단위 테스트](../test/unit-test-your-code.md)를 참조하세요.
 
 ## <a name="discovering-and-viewing-tests"></a>테스트 검색 및 보기
 
-규칙에 따라 PTVS는 이름이 "test"로 시작하는 메서드로 테스트를 식별합니다. 이를 확인하려면 다음을 수행합니다.
+규칙에 따라 Visual Studio는 이름이 "test"로 시작하는 메서드로 테스트를 식별합니다. 이를 확인하려면 다음을 수행합니다.
 
 1. Visual Studio에 로드된 [Python 프로젝트](python-projects.md)를 열고 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 선택한 후 **Python 단위 테스트**, **추가**를 선택합니다.
 
@@ -81,7 +82,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 테스트 탐색기에서 다양한 방법으로 테스트를 실행할 수 있습니다.
 
 - **모두 실행**은 표시된 모든 테스트를 명확하게 실행합니다(필터 적용).
-- **실행...** 메뉴는 실패한 테스트, 성공한 테스트 또는 실행하지 않은 테스트를 하나의 그룹으로 실행하는 명령을 제공합니다.
+- **실행...**  메뉴는 실패한 테스트, 성공한 테스트 또는 실행하지 않은 테스트를 하나의 그룹으로 실행하는 명령을 제공합니다.
 - 하나 이상의 테스트를 선택하고 마우스 오른쪽 단추로 클릭한 후 **선택한 테스트 실행**을 선택합니다.
 
 백그라운드에서 테스트가 실행되고 테스트가 완료되면 테스트 탐색기에 각 테스트 상태가 업데이트됩니다.
@@ -98,13 +99,13 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 ## <a name="debugging-tests"></a>디버깅 테스트
 
-단위 테스트는 코드 조각이므로 다른 코드처럼 버그가 있을 수 있으며 경우에 따라 디버거에서 실행해야 하여 디버거에서 중단점을 설정하고 변수를 검사하며 코드를 단계별로 실행할 수 있습니다. PTVS에서도 진단 도구 제공
+단위 테스트는 코드 조각이므로 다른 코드처럼 버그가 있을 수 있으며 경우에 따라 디버거에서 실행해야 하여 디버거에서 중단점을 설정하고 변수를 검사하며 코드를 단계별로 실행할 수 있습니다. Visual Studio에서 진단 도구도 제공
 
 디버깅을 시작하려면 코드에 초기 중단점을 설정한 후 테스트 탐색기에서 테스트(또는 선택)를 마우스 오른쪽 단추로 클릭하고 **선택한 테스트 디버그**를 선택합니다. Visual Studio가 응용 프로그램 코드처럼 Python 디버거를 시작합니다.
 
 ![테스트 디버깅](media/unit-test-debugging.png)
 
-PTVS 버전에 따라 **선택한 테스트에 대한 코드 검사 분석** 및 **테스트 프로파일링** 명령도 사용할 수 있습니다([기능 매트릭스](python-in-visual-studio.md#features-matrix) 참조).
+Visual Studio 버전에 따라 **선택한 테스트에 대한 코드 검사 분석** 및 **테스트 프로파일링** 명령도 사용할 수 있습니다([기능 매트릭스](python-in-visual-studio.md#features-matrix) 참조).
 
 ### <a name="known-issues"></a>알려진 문제
 

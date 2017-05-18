@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구에서 웹 프로젝트 템플릿 | Microsoft Docs"
+title: "Visual Studio에서 Python 웹 프로젝트 템플릿 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 2375c0c3b1a692d03d8790e400e3fea606355831
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 20edb7a53adf400fba94556e659b4215a0060c1b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="python-web-project-templates"></a>Python 웹 프로젝트 템플릿
 
-PTVS(Python Tools for Visual Studio)에는 Bottle, Django 및 Flask과 같은 프레임워크에서 웹 프로젝트를 개발하기 위한 지원이 포함됩니다. 여기에는 다양한 프레임워크를 처리하도록 구성할 수 있는 디버그 시작 관리자 및 프로젝트 템플릿이 포함됩니다. 그러나 PTVS는 프레임워크 자체는 포함하지 않으며 프레임워크는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Python > 프레임워크 설치/업그레이드...**를 선택하여 별도로 설치해야 합니다.
+Visual Studio에서 Python 지원에는 Bottle, Django 및 Flask와 같은 프레임워크에서 웹 프로젝트를 개발하기 위한 지원이 포함됩니다. 여기에는 다양한 프레임워크를 처리하도록 구성할 수 있는 디버그 시작 관리자 및 프로젝트 템플릿이 포함됩니다. 그러나 Visual Studio는 프레임워크 자체는 포함하지 않으며 프레임워크는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Python > 프레임워크 설치/업그레이드...**를 선택하여 별도로 설치해야 합니다.
 
 각 템플릿(as accessed through **파일 > 새로 만들기 > 프로젝트...**를 통해 액세스됨)은 임의로 선택된 로컬 포트로 웹 서버를 시작하며 디버깅 시 기본 브라우저를 열고 [Microsoft Azure](http://www.azure.com)로 직접 게시를 허용합니다. 템플릿은 Bottle, Flask 및 Django용으로 제공되고 Pyramid와 같은 다른 프레임워크에 대해 일반 "웹 프로젝트" 템플릿을 사용할 수 있습니다.
 
@@ -59,7 +60,7 @@ Python 웹 프로젝트에 대한 소개는 [PTVS 시작 6부: 웹 사이트](ht
 
 ## <a name="debugging"></a>디버깅
 
-디버깅을 위해 웹 프로젝트가 시작되면 PTVS는 로컬에서 웹 서버를 시작하고 해당 주소 및 포트에 기본 브라우저를 엽니다. 추가 옵션을 지정하려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**를 선택하고 **웹 시작 관리자** 탭을 선택합니다.
+디버깅을 위해 웹 프로젝트가 시작되면 Visual Studio는 로컬에서 웹 서버를 시작하고 해당 주소 및 포트에 기본 브라우저를 엽니다. 추가 옵션을 지정하려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**를 선택하고 **웹 시작 관리자** 탭을 선택합니다.
 
   ![일반 웹 템플릿에 대한 웹 시작 관리자 속성](media/template-web-launcher-properties.png)
 
@@ -67,7 +68,7 @@ Python 웹 프로젝트에 대한 소개는 [PTVS 시작 6부: 웹 사이트](ht
 
 - **경로 검색**, **스크립트 인수**, **인터프리터 인수** 및 **인터프리터 경로**: [일반 디버깅](debugging.md)과 동일함
 - **URL 시작**: 브라우저에서 열리는 URL을 지정합니다. 기본값은 `localhost`입니다.
-- **포트 번호**: URL에 지정되지 않은 경우 사용할 포트입니다(기본적으로 PTVS에서 자동으로 선택). 이렇게 하면 로컬 디버그 서버에서 수신 대기하는 포트를 구성하기 위해 템플릿에서 사용하는 `SERVER_PORT` 환경 변수의 기본값을 재정의할 수 있습니다.
+- **포트 번호**: URL에 지정되지 않은 경우 사용할 포트입니다(기본적으로 Visual Studio에서 자동으로 선택). 이렇게 하면 로컬 디버그 서버에서 수신 대기하는 포트를 구성하기 위해 템플릿에서 사용하는 `SERVER_PORT` 환경 변수의 기본값을 재정의할 수 있습니다.
 
 **서버 실행 명령** 및 **서버 디버그 명령** 그룹의 속성(후자는 아래 이미지에 표시됨)에 따라 웹 서버가 시작되는 방식이 결정됩니다. 많은 프레임워크에서는 현재 프로젝트 외부에서 스크립트를 사용해야 하기 때문에 여기에서 스크립트를 구성할 수 있으며 시작 모듈의 이름을 매개 변수로 전달할 수 있습니다.
 
@@ -94,7 +95,7 @@ Bottle 웹 프로젝트 템플릿은 필요한 구성을 수행하는 상용구 
     - **명령**: `bottle`(모듈)
     - **인수** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-`--reload` 옵션은 디버깅에 PTVS를 사용할 때는 권장되지 않습니다.
+`--reload` 옵션은 디버깅에 Visual Studio를 사용할 때는 권장되지 않습니다.
 
 ### <a name="sample-pyramid-configuration"></a>샘플 Pyramid 구성
 

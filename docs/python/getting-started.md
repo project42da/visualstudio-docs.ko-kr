@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 Python 사용 시작 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/1/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,16 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 2659c1a3b1adfc3f462971205460942c5fe5171f
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 8001036077b8b14af80fabceafad5d3aff9b25f4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="getting-started-with-python-in-visual-studio"></a>Visual Studio에서 Python 시작
 
-Python 작업에 Visual Studio(Visual Studio 2017)가 설치되어 있거나 Visual Studio(Visual Studio 2015 및 이전 버전)가 설치되어 있으면 Python 개발 환경을 살펴볼 수 있습니다.
+Python 작업에 Visual Studio(Visual Studio 2017)가 설치되어 있거나 Visual Studio(Visual Studio 2015 및 이전 버전)가 설치되어 있으면 Python 개발 환경을 살펴볼 수 있습니다. (필요한 경우 [설치](installation.md)를 참조하세요.)
 
 이 연습에서는 빈 Python 응용 프로그램을 새로 만들고, 사용할 Python 환경을 선택하고, 코드 작성을 시작하여 IntelliSense가 작동하는 모습을 확인합니다. 그런 다음 대화형 REPL 창을 사용하여 짧은 시간에 더 많은 코드를 만든 다음 프로그램을 완료하고 자체적으로 실행하고 디버거에서 실행합니다.
 
@@ -271,4 +272,5 @@ Visual Studio는 프로젝트 관리, 풍부한 편집 환경 제공 및 대화�
 - Visual Studio는 [플랫폼 간 원격 디버깅](debugging-cross-platform-remote.md) 및 [Azure 원격 디버깅](debugging-azure-remote.md)에 설명된 것처럼 원격 서버에서 응용 프로그램을 디버깅하는 기능을 제공합니다.
 - [Visual Studio 프로파일링](profiling.md)을 사용하여 Python 코드의 성능을 평가할 수 있습니다.
 - Python으로 작성된 단위 테스트는 [단위 테스트](unit-testing.md)에 설명된 것처럼 Visual Studio 테스트 탐색기와 직접 통합됩니다.
+- [Microsoft Virtual Academy의 무료 Python 코스](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 

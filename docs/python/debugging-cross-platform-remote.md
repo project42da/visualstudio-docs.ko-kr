@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: df4d74d9fe884f3aff1998f4b0b38dbff6d1359f
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: fa3d69cbb34a61a327d0b4c27430ff04b670a568
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -111,7 +112,10 @@ Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내�
 
 1. 나타나는 **프로세스에 연결** 대화 상자에서 **연결 형식**을 **Python remote (ptvsd)**(Python 원격(ptvsd))로 설정합니다. (이전 버전의 Visual Studio에서는 이름이 **전송** 및 **Python 원격 디버깅**이었습니다.)
 
-1. **연결 대상** 필드(이전 버전의 경우 **한정자**)에 `tcp://<secret>@<ip_address>:5678`을 입력합니다. 여기서 `<secret>`은 Python 코드에서 전달된 문자열 `enable_attach`이고, `<ip_address>`는 원격 컴퓨터의 IP 주소이며(명시적 주소 또는 myvm.cloudapp.net과 같은 이름일 수 있음), `:5678`은 원격 디버깅 포트 번호입니다. 
+1. **연결 대상** 필드(이전 버전의 경우 **한정자**)에 `tcp://<secret>@<ip_address>:5678`을 입력합니다. 여기서 `<secret>`은 Python 코드에서 전달된 문자열 `enable_attach`이고, `<ip_address>`는 원격 컴퓨터의 IP 주소이며(명시적 주소 또는 myvm.cloudapp.net과 같은 이름일 수 있음), `:5678`은 원격 디버깅 포트 번호입니다.
+
+    > [!Warning]
+    > 공용 인터넷으로 연결하는 경우 `tcps`를 대신 사용하고 [SSL로 디버거 연결 보안](#securing-the-debugger-connection-with-ssl)에 대한 아래 지침을 따라야 합니다.
 
 1. Enter 키를 눌러 해당 컴퓨터에서 사용할 수 있는 ptvsd 프로세스의 목록을 채웁니다.
 
@@ -194,5 +198,5 @@ Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내�
     ![SSL 인증서 호스트 이름 경고](media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
-> 현재는 이러한 경고를 무시할 경우 Visual Studio 2017 Preview의 작동이 중단됩니다. 연결하기 전에 모든 문제를 해결해야 합니다.
+> 현재는 이러한 경고를 무시할 경우 Visual Studio 2017의 작동이 중단됩니다. 연결하기 전에 모든 문제를 해결해야 합니다.
 
