@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 Python 설치 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,14 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: e0a51155a42fb51244114da86a292381a7a28a21
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 9cdd87d81f0b0f4748a25c7bb87fb840e246854c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
-# <a name="installing-python-support-for-visual-studio"></a>Visual Studio용 Python 지원 설치
+# <a name="installing-python-support-in-visual-studio"></a>Visual Studio에서 Python 지원 설치
 
 Visual Studio용 Python 지원을 설치하려면 Visual Studio 버전과 일치하는 섹션의 지침을 따릅니다.
 
@@ -52,11 +53,14 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. [https://www.visualstudio.com/vs/preview에서 “Visual Studio 2017 Preview”](https://www.visualstudio.com/vs/preview)를 설치합니다. **참고:** 이 Preview 채널은 릴리스된 Visual Studio 2017 버전과 *구분*되며 Python 지원을 포함하여 향후 Visual Studio 2017 업데이트를 위해 개발 중인 기능이 포함되어 있습니다.
+1. [https://www.visualstudio.com/vs/](https://www.visualstudio.com/vs/)에서 Visual Studio 2017을 설치합니다.
 
-1. Preview 설치 관리자에서 **웹 및 클라우드 > Python 개발** 작업을 선택합니다.
+1. Visual Studio 설치 관리자에서 **웹 및 클라우드 > Python 개발** 워크로드를 선택합니다.
 
     ![Visual Studio 설치 관리자의 Python 개발 작업](media/installation-python-workload.png)
+
+    > [!Note]
+    > Python은 **데이터 과학 및 분석 응용 프로그램** 워크로드에도 포함됩니다.
 
 1. 설치 관리자의 오른쪽에서 포함하고자 하는 Python 인터프리터 및 기타 관련 도구를 선택합니다. 예를 들어 Python용 C++ 확장을 개발하려는 경우 **Python 네이티브 개발 도구** 옵션을 포함합니다.
 
@@ -88,7 +92,7 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
 기본적으로 Python 지원은 컴퓨터의 모든 사용자를 위해 설치됩니다.
 
-Visual Studio 2017의 경우 Python 작업이 `%ProgramFiles(x86)%\Microsoft Visual Studio\Preview\<VS_edition>Common7\IDE\Extensions\Microsoft\Python`에 설치됩니다. 여기서 &lt;VS_edition&gt;은 Community, Professional 또는 Enterprise입니다.
+Visual Studio 2017의 경우 Python 작업이 `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\<VS_edition>Common7\IDE\Extensions\Microsoft\Python`에 설치됩니다. 여기서 &lt;VS_edition&gt;은 Community, Professional 또는 Enterprise입니다.
 
 Visual Studio 2015 및 이전 버전에서 설치 경로는 다음과 같습니다.
 
@@ -110,5 +114,5 @@ Visual Studio 2015 및 이전 버전에서 설치 경로는 다음과 같습니�
 
 ### <a name="user-specific-installations-15-and-earlier"></a>사용자 고유의 설치(1.5 및 이전 버전)
 
-Visual Studio 1.5 및 이전 버전용 Python 도구에서는 현재 사용자를 위한 설치만 허용했습니다. 이 경우 설치 경로는 `%LocalAppData%\Microsoft\VisualStudio\<VS_ver>\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`이고, 여기서 &lt;VS_ver&gt; 및 &lt;PTVS_ver&gt;는 위에 설명된 것과 같습니다.
+Visual Studio용 Python 도구 1.5 이하에서는 현재 사용자에 대한 설치만 허용했습니다. 이 경우 설치 경로는 `%LocalAppData%\Microsoft\VisualStudio\<VS_ver>\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`이고, 여기서 &lt;VS_ver&gt; 및 &lt;PTVS_ver&gt;는 위에 설명된 것과 같습니다.
 

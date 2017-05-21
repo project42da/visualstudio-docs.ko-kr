@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구에서 Django 웹 프로젝트 템플릿 | Microsoft Docs"
+title: "Visual Studio의 Python용 Django 웹 프로젝트 템플릿 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7f65641fbf15edfe16931badc19602a0fc773bff
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 4a5db2deb3633e8305dbf83cbe6ba8c0e3344c72
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="django-web-project-template"></a>Django 웹 프로젝트 템플릿
 
-[Django](https://www.djangoproject.com/)는 신속하고 안전하며 확장성 있는 웹 개발을 위해 고안된 상위 수준 Python 프레임워크입니다. PTVS(Python Tools for Visual Studio)는 Django 기반 웹 응용 프로그램의 구조를 설정하기 위한 프로젝트 템플릿을 제공합니다. Visual Studio에서 템플릿을 사용하려면 **파일 > 새로 만들기 > 프로젝트**를 선택하고 "Django"를 검색하고 "Django 웹 프로젝트" 템플릿을 선택합니다. 결과 프로젝트에는 기본 SQLite 데이터베이스와 상용구 코드가 포함됩니다. "빈 Django 웹 프로젝트" 템플릿도 이와 유사하지만 데이터베이스를 포함하지 않습니다.
+[Django](https://www.djangoproject.com/)는 신속하고 안전하며 확장성 있는 웹 개발을 위해 고안된 상위 수준 Python 프레임워크입니다. Visual Studio의 Python 지원은 Django 기반 웹 응용 프로그램의 구조를 설정하기 위한 프로젝트 템플릿을 제공합니다. Visual Studio에서 템플릿을 사용하려면 **파일 > 새로 만들기 > 프로젝트**를 선택하고 "Django"를 검색하고 "Django 웹 프로젝트" 템플릿을 선택합니다. 결과 프로젝트에는 기본 SQLite 데이터베이스와 상용구 코드가 포함됩니다. "빈 Django 웹 프로젝트" 템플릿도 이와 유사하지만 데이터베이스를 포함하지 않습니다.
 
-PTVS는 Django 프로젝트용 전체 IntelliSense를 제공합니다.
+Visual Studio는 Django 프로젝트용 전체 IntelliSense를 제공합니다.
 
 - 템플릿에 전달된 컨텍스트 변수:
 
@@ -56,7 +57,7 @@ PTVS는 Django 프로젝트용 전체 IntelliSense를 제공합니다.
     ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
 
 
-PTVS에서는 Django 프로젝트에 대해 전체 [디버깅 지원](debugging.md)도 제공합니다. 
+Visual Studio에서는 Django 프로젝트에 대해 전체 [디버깅 지원](debugging.md)도 제공합니다. 
 
 ![중단점](media/template-django-debugging.png)
 
