@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 04/06/2017
+ms.date: 05/10/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -32,26 +32,13 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: cc852f23ea9ad3b38e7ed465a717606798ee7af1
-ms.lasthandoff: 04/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 054126ddbdc9f0144983a1ef21fa43875699cbee
+ms.openlocfilehash: 973c12a010579e5c461f2a23bf18d93c58d32554
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
-
-# <a name="visual-studio-professional-2017-component-directory"></a>Visual Studio Professional 2017 구성 요소 디렉터리
-
-이 페이지의 표에는 명령줄을 사용하여 Visual Studio를 설치하는 데 사용할 수 있는 ID 또는 VSIX 매니페스트에서 종속성으로 지정할 수 있는 ID가 나열되어 있습니다. Visual Studio에 대한 업데이트를 릴리스할 때 추가 구성 요소가 추가될 것입니다.
-
-또한 이 페이지에 대해 다음 사항에 유의하세요.
-
-* 각 작업에는 고유한 섹션 및 작업 ID와 해당 작업에 사용할 수 있는 구성 요소 표가 있습니다.
-* 기본적으로 **필수** 구성 요소는 작업을 설치할 때 설치됩니다. 원하는 경우 **권장** 및 **선택적** 구성 요소를 설치할 수도 있습니다.
-* 작업과 관련이 없는 추가 구성 요소를 나열하는 섹션도 추가했습니다.
-
-VSIX 매니페스트에 종속성을 설정하는 경우 구성 요소 ID만 지정해야 합니다. 이 페이지의 표를 사용하여 최소 구성 요소 종속성을 확인합니다. 일부 시나리오에서는 작업에서 하나의 구성 요소만 지정한다고 의미할 수 있습니다. 다른 시나리오에서는 단일 작업에서 여러 구성 요소를 지정하거나 여러 작업에서 여러 구성 요소를 지정한다고 의미할 수 있습니다. 자세한 내용은 [방법: 확장성 프로젝트를 Visual Studio 2017로 마이그레이션](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) 페이지를 참조하세요.
-
-이러한 ID를 사용하는 방법에 대한 자세한 내용은 [명령줄 매개 변수를 사용하여 Visual Studio 2017 설치](use-command-line-parameters-to-install-visual-studio.md) 페이지를 참조하세요. 다른 제품의 작업 및 구성 요소 ID 목록은 [Visual Studio 2017 작업 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요.
 
 ## <a name="visual-studio-core-editor-included-with-visual-studio-professional-2017"></a>Visual Studio 핵심 편집기(Visual Studio Professional 2017에 포함)
 
@@ -101,18 +88,18 @@ Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 타기팅 팩 | 1
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 개발 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 15.0.26323.1 | 권장
-Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure 작성 도구 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.Azure.Compute.Emulator | Azure 계산 에뮬레이터 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure 작성 도구 | 15.0.26419.1 | 권장
+Microsoft.VisualStudio.Component.Azure.Compute.Emulator | Azure 계산 에뮬레이터 | 15.0.26419.1 | 권장
 Microsoft.VisualStudio.Component.Azure.MobileAppsSdk | Azure Mobile Apps SDK | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.Azure.ResourceManager.Tools | Azure Resource Manager 핵심 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.Azure.ServiceFabric.Tools | Service Fabric 도구 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.Azure.Storage.Emulator | Azure Storage 계정 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Azure.Storage.Emulator | Azure Storage 계정 | 15.0.26424.2 | 권장
 Microsoft.VisualStudio.Component.Azure.Waverton | Azure Cloud Services 핵심 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.DiagnosticTools | 프로파일링 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.IntelliTrace.FrontEnd | IntelliTrace | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 진단 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26412.1 | 권장
+Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26419.1 | 권장
 Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# 및 Visual Basic | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.SQL.ADAL | SQL ADAL 런타임 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.SQL.CLR | SQL Server용 CLR 데이터 형식 | 15.0.26208.0 | 권장
@@ -123,7 +110,7 @@ Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.2620
 Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.TextTemplating | 텍스트 템플릿 변환 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.TypeScript.2.2 | TypeScript 2.2 SDK | 15.0.26430.1 | 권장
 Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.Web | ASP.NET 및 웹 개발 도구 | 15.0.26323.1 | 권장
 Microsoft.VisualStudio.Component.WebDeploy | 웹 배포 | 15.0.26208.0 | 권장
@@ -131,10 +118,10 @@ Microsoft.VisualStudio.ComponentGroup.Azure.CloudServices | Azure Cloud Services
 Microsoft.VisualStudio.ComponentGroup.Azure.ResourceManager.Tools | Azure Resource Manager 도구 | 15.0.26323.1 | 권장
 Microsoft.Net.Component.4.6.2.SDK | .NET Framework 4.6.2 SDK | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.6.2.TargetingPack | .NET Framework 4.6.2 타기팅 팩 | 15.0.26208.0 | Optional
-Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26403.0 | Optional
-Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 타기팅 팩 | 15.0.26403.0 | Optional
+Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | 선택적
+Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 타기팅 팩 | 15.0.26419.1 | 선택적
 Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools | .NET Framework 4.6.2 개발 도구 | 15.0.26208.0 | Optional
-Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET Framework 4.7 개발 도구 | 15.0.26403.0 | Optional
+Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET Framework 4.7 개발 도구 | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.Component.Azure.Storage.AzCopy | Azure Storage AzCopy | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.PowerShell.Tools | PowerShell 도구 | 3.0.427 | Optional
 Microsoft.VisualStudio.Component.Wcf.Tooling | Windows Communication Foundation | 15.0.26208.0 | Optional
@@ -167,17 +154,17 @@ Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 타기팅 팩 | 15.0.
 Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 개발 도구 | 15.0.26208.0 | 권장
 Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 개발 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 15.0.26323.1 | 권장
-Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure 작성 도구 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure 작성 도구 | 15.0.26419.1 | 권장
 Microsoft.VisualStudio.Component.Azure.ClientLibs | .NET용 Azure 라이브러리 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.Azure.Compute.Emulator | Azure 계산 에뮬레이터 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.Azure.Storage.Emulator | Azure Storage 계정 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Azure.Compute.Emulator | Azure 계산 에뮬레이터 | 15.0.26419.1 | 권장
+Microsoft.VisualStudio.Component.Azure.Storage.Emulator | Azure Storage 계정 | 15.0.26424.2 | 권장
 Microsoft.VisualStudio.Component.Azure.Waverton | Azure Cloud Services 핵심 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.CloudExplorer | 클라우드 탐색기 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.Common.Azure.Tools | 연결 및 게시 도구 | 1.9.170119.3 | 권장
 Microsoft.VisualStudio.Component.IISExpress | IIS Express  | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 진단 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26412.1 | 권장
+Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26419.1 | 권장
 Microsoft.VisualStudio.Component.NuGet | NuGet 패키지 관리자 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.PortableLibrary | .NET 이식이 가능한 라이브러리 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 15.0.26208.0 | 권장
@@ -191,11 +178,55 @@ Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.2620
 Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.TextTemplating | 텍스트 템플릿 변환 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.TypeScript.2.2 | TypeScript 2.2 SDK | 15.0.26430.1 | 권장
 Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.Web | ASP.NET 및 웹 개발 도구 | 15.0.26323.1 | 권장
 Microsoft.VisualStudio.Component.WebDeploy | 웹 배포 | 15.0.26208.0 | 권장
-Microsoft.VisualStudio.Component.FSharp | F# 언어 지원 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.FSharp | F# 언어 지원 | 15.0.26208.0 | 선택적
+
+
+## <a name="data-science-and-analytical-applications"></a>데이터 과학 및 분석 응용 프로그램
+
+**ID:** Microsoft.VisualStudio.Workload.DataScience
+
+**설명:** Python, R 및 F#을 포함하여 데이터 과학 응용 프로그램을 만들기 위한 언어 및 도구입니다.
+
+### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
+
+구성 요소 ID | 이름 | 버전 | 종속성 유형
+--- | --- | --- | ---
+Component.Anaconda3.x64 | Anaconda3 64비트(4.3.0.1) | 4.3.0.2 | 권장
+Microsoft.Component.CookiecutterTools | Cookiecutter 템플릿 지원 | 15.0.26419.1 | 권장
+Microsoft.Component.PythonTools | Python 언어 지원 | 15.0.26419.1 | 권장
+Microsoft.Component.PythonTools.Web | Python 웹 지원 | 15.0.26419.1 | 권장
+Microsoft.Component.VC.Runtime.UCRTSDK | Windows 유니버설 CRT SDK | 15.0.26208.0 | 권장
+Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 타기팅 팩 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Common.Azure.Tools | 연결 및 게시 도구 | 1.9.170119.3 | 권장
+Microsoft.VisualStudio.Component.FSharp | F# 언어 지원 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.NuGet | NuGet 패키지 관리자 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.R.Open | Microsoft R Client(3.3.2) | 15.0.26419.1 | 권장
+Microsoft.VisualStudio.Component.RHost | R 개발 도구에 대한 런타임 지원 | 15.0.26419.1 | 권장
+Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# 및 Visual Basic | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.RTools | R 언어 지원 | 15.0.26419.1 | 권장
+Microsoft.VisualStudio.Component.SQL.CLR | SQL Server용 CLR 데이터 형식 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.WebDeploy | 웹 배포 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.0.26208.0 | 권장
+Component.Anaconda2.x64 | Anaconda2 64비트(4.3.0.1) | 4.3.0.2 | 선택적
+Component.Anaconda2.x86 | Anaconda2 32비트(4.3.0.1) | 4.3.0.2 | 선택적
+Component.Anaconda3.x86 | Anaconda3 32비트(4.3.0.1) | 4.3.0.2 | 선택적
+Microsoft.ComponentGroup.PythonTools.NativeDevelopment | Python 네이티브 개발 도구 | 15.0.26419.1 | 선택적
+Microsoft.VisualStudio.Component.CoreEditor | Visual Studio 핵심 편집기 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Graphics.Tools | DirectX용 그래픽 디버거 및 GPU 프로파일러 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Graphics.Win81 | 그래픽 도구 Windows 8.1 SDK | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.140 | VC++ 2015.3 v140 도구 집합(x86, x64) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ 핵심 기능 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.VC.DiagnosticTools | C++ 프로파일링 도구 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 도구 집합(x86, x64) | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.Windows10SDK | Windows 유니버설 C 런타임 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK(10.0.10586.0) | 15.0.26208.0 | Optional
 
 
 ## <a name="net-desktop-development"></a>.NET 데스크톱 개발
@@ -214,7 +245,7 @@ Microsoft.Net.Component.4.6.1.SDK | .NET Framework 4.6.1 SDK | 15.0.26208.0 | �
 Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 타기팅 팩 | 15.0.26208.0 | 필수
 Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 개발 도구 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Debugger.JustInTime | Just-In-Time 디버거 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26419.1 | 필수
 Microsoft.VisualStudio.Component.ManagedDesktop.Prerequisites | .NET 데스크톱 개발 도구 | 15.0.26323.1 | 필수
 Microsoft.VisualStudio.Component.PortableLibrary | .NET 이식이 가능한 라이브러리 타기팅 팩 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 15.0.26208.0 | 필수
@@ -238,10 +269,10 @@ Microsoft.VisualStudio.Component.LiveUnitTesting | Live Unit Testing | 15.0.2620
 Component.Dotfuscator | PreEmptive Protection - Dotfuscator | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.6.2.SDK | .NET Framework 4.6.2 SDK | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.6.2.TargetingPack | .NET Framework 4.6.2 타기팅 팩 | 15.0.26208.0 | Optional
-Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26403.0 | Optional
-Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 타기팅 팩 | 15.0.26403.0 | Optional
+Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | 선택적
+Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 타기팅 팩 | 15.0.26419.1 | 선택적
 Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools | .NET Framework 4.6.2 개발 도구 | 15.0.26208.0 | Optional
-Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET Framework 4.7 개발 도구 | 15.0.26403.0 | Optional
+Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET Framework 4.7 개발 도구 | 15.0.26419.1 | 선택적
 Microsoft.Net.Core.Component.SDK | .NET Core 1.0.1 개발 도구 | 15.0.26208.0 | Optional
 Microsoft.NetCore.ComponentGroup.DevelopmentTools | .NET Core 1.0 - 1.1 개발 도구 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.CodeClone | 코드 복제본 | 15.0.26208.0 | Optional
@@ -272,7 +303,7 @@ Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn �
 Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# 및 Visual Basic | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Unity | Visual Studio Tools for Unity | 15.0.26323.1 | 필수
-Component.UnityEngine | Unity 편집기 | 15.0.26323.1 | 권장
+Component.UnityEngine | Unity 5.6 편집기 | 15.0.26430.4 | 권장
 
 
 ## <a name="linux-development-with-c"></a>C++를 사용한 Linux 개발
@@ -433,8 +464,8 @@ Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 1
 Microsoft.VisualStudio.Component.Common.Azure.Tools | 연결 및 게시 도구 | 1.9.170119.3 | 필수
 Microsoft.VisualStudio.Component.IISExpress | IIS Express  | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 진단 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26412.1 | 필수
+Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26419.1 | 필수
 Microsoft.VisualStudio.Component.NuGet | NuGet 패키지 관리자 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.PortableLibrary | .NET 이식이 가능한 라이브러리 타기팅 팩 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 15.0.26208.0 | 필수
@@ -448,7 +479,7 @@ Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.2620
 Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.TextTemplating | 텍스트 템플릿 변환 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.TypeScript.2.2 | TypeScript 2.2 SDK | 15.0.26430.1 | 필수
 Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Web | ASP.NET 및 웹 개발 도구 | 15.0.26323.1 | 필수
 Microsoft.VisualStudio.Component.WebDeploy | 웹 배포 | 15.0.26208.0 | 필수
@@ -474,7 +505,7 @@ Component.Android.SDK23 | Android SDK 설치(API 수준 23) | 15.0.26208.0 | 권
 Component.Google.Android.Emulator.API23.V2 | Google Android 에뮬레이터(API 수준 23) | 15.0.26208.0 | 권장
 Component.HAXM | Intel HAXM(Hardware Accelerated Execution Manager) | 15.0.26208.0 | 권장
 Component.JavaJDK | Java SE Development Kit(8.0.1120.15) | 15.0.26403.0 | 권장
-Component.Xamarin | Xamarin | 15.0.26323.1 | 권장
+Component.Xamarin | Xamarin | 15.0.26424.2 | 권장
 Component.Xamarin.Inspector | Xamarin Workbooks | 15.0.26228.0 | 권장
 Component.Xamarin.Profiler | Xamarin Profiler | 15.0.26228.0 | 권장
 Component.Xamarin.RemotedSimulator | Xamarin 원격 시뮬레이터 | 15.0.26228.0 | 권장
@@ -492,12 +523,12 @@ Microsoft.VisualStudio.Component.DependencyValidation.Enterprise | 실시간 종
 Microsoft.VisualStudio.Component.DiagnosticTools | 프로파일링 도구 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.GraphDocument | DGML 편집기 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Graphics | 이미지 및 3D 모델 편집기 | 15.0.26208.0 | Optional
-Microsoft.VisualStudio.Component.Phone.Emulator.15063 | Windows 10 모바일 에뮬레이터(크리에이터 업데이트) | 15.0.26403.0 | Optional
+Microsoft.VisualStudio.Component.Phone.Emulator.15063 | Windows 10 모바일 에뮬레이터(크리에이터 업데이트) | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.Component.SQL.CLR | SQL Server용 CLR 데이터 형식 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.SQL.LocalDB.Runtime | SQL Server Express 2016 LocalDB | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP용 Windows 10 SDK(10.0.15063.0): C#, VB, JS | 15.0.26403.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP용 Windows 10 SDK(10.0.15063.0): C#, VB, JS | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.ComponentGroup.ArchitectureTools.Managed | 아키텍처 및 분석 도구 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.ComponentGroup.UWP.Xamarin | Xamarin용 유니버설 Windows 플랫폼 도구 | 15.0.26403.0 | Optional
 
@@ -526,8 +557,8 @@ Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 1
 Microsoft.VisualStudio.Component.Common.Azure.Tools | 연결 및 게시 도구 | 1.9.170119.3 | 필수
 Microsoft.VisualStudio.Component.IISExpress | IIS Express  | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 진단 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26412.1 | 필수
+Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26419.1 | 필수
 Microsoft.VisualStudio.Component.NuGet | NuGet 패키지 관리자 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.PortableLibrary | .NET 이식이 가능한 라이브러리 타기팅 팩 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 15.0.26208.0 | 필수
@@ -541,7 +572,7 @@ Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.2620
 Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.TextTemplating | 텍스트 템플릿 변환 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.TypeScript.2.2 | TypeScript 2.2 SDK | 15.0.26430.1 | 필수
 Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Web | ASP.NET 및 웹 개발 도구 | 15.0.26323.1 | 필수
 Microsoft.VisualStudio.Component.WebDeploy | 웹 배포 | 15.0.26208.0 | 필수
@@ -559,10 +590,10 @@ Microsoft.VisualStudio.Component.LiveUnitTesting | Live Unit Testing | 15.0.2620
 Microsoft.VisualStudio.Component.Wcf.Tooling | Windows Communication Foundation | 15.0.26208.0 | 권장
 Microsoft.Net.Component.4.6.2.SDK | .NET Framework 4.6.2 SDK | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.6.2.TargetingPack | .NET Framework 4.6.2 타기팅 팩 | 15.0.26208.0 | Optional
-Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26403.0 | Optional
-Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 타기팅 팩 | 15.0.26403.0 | Optional
+Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | 선택적
+Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 타기팅 팩 | 15.0.26419.1 | 선택적
 Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools | .NET Framework 4.6.2 개발 도구 | 15.0.26208.0 | Optional
-Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET Framework 4.7 개발 도구 | 15.0.26403.0 | Optional
+Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET Framework 4.7 개발 도구 | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.Component.ClassDesigner | 클래스 디자이너 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.CodeClone | 코드 복제본 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.CodeMap | 코드 맵 | 15.0.26208.0 | Optional
@@ -585,9 +616,9 @@ Microsoft.VisualStudio.Web.Mvc4.ComponentGroup | ASP.NET MVC 4 | 15.0.26208.0 | 
 --- | --- | --- | ---
 Component.WebSocket | WebSocket4Net | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 진단 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26412.1 | 필수
 Microsoft.VisualStudio.Component.Node.Tools | Node.js 지원 | 15.0.26323.1 | 필수
-Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.TypeScript.2.2 | TypeScript 2.2 SDK | 15.0.26430.1 | 필수
 Microsoft.VisualStudio.Component.WebDeploy | 웹 배포 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Common.Azure.Tools | 연결 및 게시 도구 | 1.9.170119.3 | 권장
 Microsoft.VisualStudio.Component.Git | Windows용 GIT | 15.0.26208.0 | 권장
@@ -622,8 +653,8 @@ Microsoft.VisualStudio.Component.Common.Azure.Tools | 연결 및 게시 도구 |
 Microsoft.VisualStudio.Component.Debugger.JustInTime | Just-In-Time 디버거 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.IISExpress | IIS Express  | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 진단 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26412.1 | 필수
+Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26419.1 | 필수
 Microsoft.VisualStudio.Component.ManagedDesktop.Prerequisites | .NET 데스크톱 개발 도구 | 15.0.26323.1 | 필수
 Microsoft.VisualStudio.Component.NuGet | NuGet 패키지 관리자 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.PortableLibrary | .NET 이식이 가능한 라이브러리 타기팅 팩 | 15.0.26208.0 | 필수
@@ -639,14 +670,98 @@ Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.2620
 Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.TextTemplating | 텍스트 템플릿 변환 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.TypeScript.2.2 | TypeScript 2.2 SDK | 15.0.26430.1 | 필수
 Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Wcf.Tooling | Windows Communication Foundation | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Web | ASP.NET 및 웹 개발 도구 | 15.0.26323.1 | 필수
 Microsoft.VisualStudio.Component.WebDeploy | 웹 배포 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Workflow | Windows Workflow Foundation | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.TeamOffice | VSTO(Visual Studio Tools for Office) | 15.0.26228.0 | 권장
-Microsoft.VisualStudio.Component.IntelliTrace.FrontEnd | IntelliTrace | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.IntelliTrace.FrontEnd | IntelliTrace | 15.0.26208.0 | 선택적
+
+
+## <a name="python-development"></a>Python 개발
+
+**ID:** Microsoft.VisualStudio.Workload.Python
+
+**설명:** Python에 대한 편집, 디버깅, 대화형 개발 및 소스 제어입니다.
+
+### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
+
+구성 요소 ID | 이름 | 버전 | 종속성 유형
+--- | --- | --- | ---
+Component.CPython3.x64 | Python 3 64비트(3.6.0) | 3.6.0 | 권장
+Microsoft.Component.CookiecutterTools | Cookiecutter 템플릿 지원 | 15.0.26419.1 | 권장
+Microsoft.Component.PythonTools | Python 언어 지원 | 15.0.26419.1 | 권장
+Microsoft.Component.PythonTools.Web | Python 웹 지원 | 15.0.26419.1 | 권장
+Microsoft.Component.VC.Runtime.UCRTSDK | Windows 유니버설 CRT SDK | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Common.Azure.Tools | 연결 및 게시 도구 | 1.9.170119.3 | 권장
+Microsoft.VisualStudio.Component.SQL.CLR | SQL Server용 CLR 데이터 형식 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.WebDeploy | 웹 배포 | 15.0.26208.0 | 권장
+Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.0.26208.0 | 권장
+Component.Anaconda2.x64 | Anaconda2 64비트(4.3.0.1) | 4.3.0.2 | 선택적
+Component.Anaconda2.x86 | Anaconda2 32비트(4.3.0.1) | 4.3.0.2 | 선택적
+Component.Anaconda3.x64 | Anaconda3 64비트(4.3.0.1) | 4.3.0.2 | 선택적
+Component.Anaconda3.x86 | Anaconda3 32비트(4.3.0.1) | 4.3.0.2 | 선택적
+Component.CPython2.x64 | Python 2 64비트(2.7.13) | 2.7.13 | 선택적
+Component.CPython2.x86 | Python 2 32비트(2.7.13) | 2.7.13 | 선택적
+Component.CPython3.x86 | Python 3 32비트(3.6.0) | 3.6.0.1 | 선택적
+Component.WebSocket | WebSocket4Net | 15.0.26208.0 | 선택적
+Microsoft.Component.ClickOnce | ClickOnce 게시 도구 | 15.0.26208.0 | Optional
+Microsoft.Component.MSBuild | MSBuild | 15.0.26208.0 | Optional
+Microsoft.Component.NetFX.Native | .NET 네이티브 | 15.0.26208.0 | 선택적
+Microsoft.Component.PythonTools.UWP | Python IoT 지원 | 15.0.26419.1 | 선택적
+Microsoft.ComponentGroup.PythonTools.NativeDevelopment | Python 네이티브 개발 도구 | 15.0.26419.1 | 선택적
+Microsoft.Net.Component.4.5.1.TargetingPack | .NET Framework 4.5.1 타기팅 팩 | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.5.2.TargetingPack | .NET Framework 4.5.2 타기팅 팩 | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.5.TargetingPack | .NET Framework 4.5 타기팅 팩 | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.6.1.SDK | .NET Framework 4.6.1 SDK | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 타기팅 팩 | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 타기팅 팩 | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 타기팅 팩 | 15.0.26208.0 | Optional
+Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 개발 도구 | 15.0.26208.0 | Optional
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 개발 도구 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 15.0.26323.1 | 선택적
+Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure 작성 도구 | 15.0.26419.1 | 선택적
+Microsoft.VisualStudio.Component.Azure.ClientLibs | .NET용 Azure 라이브러리 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.Azure.Compute.Emulator | Azure 계산 에뮬레이터 | 15.0.26419.1 | 선택적
+Microsoft.VisualStudio.Component.Azure.Storage.Emulator | Azure Storage 계정 | 15.0.26424.2 | 선택적
+Microsoft.VisualStudio.Component.Azure.Waverton | Azure Cloud Services 핵심 도구 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.ClassDesigner | 클래스 디자이너 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.CodeClone | 코드 복제본 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.CodeMap | 코드 맵 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.CoreEditor | Visual Studio 핵심 편집기 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.DiagnosticTools | 프로파일링 도구 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.GraphDocument | DGML 편집기 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Graphics | 이미지 및 3D 모델 편집기 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Graphics.Tools | DirectX용 그래픽 디버거 및 GPU 프로파일러 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Graphics.Win81 | 그래픽 도구 Windows 8.1 SDK | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.IISExpress | IIS Express  | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.IntelliTrace.FrontEnd | IntelliTrace | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 진단 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26412.1 | 선택적
+Microsoft.VisualStudio.Component.ManagedDesktop.Core | 관리되는 데스크톱 워크로드 핵심 | 15.0.26419.1 | 선택적
+Microsoft.VisualStudio.Component.NuGet | NuGet 패키지 관리자 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.PortableLibrary | .NET 이식이 가능한 라이브러리 타기팅 팩 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# 및 Visual Basic | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.SQL.ADAL | SQL ADAL 런타임 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.SQL.CMDUtils | SQL Server 명령줄 유틸리티 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.SQL.DataSources | SQL Server 지원용 데이터 원본 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.SQL.LocalDB.Runtime | SQL Server Express 2016 LocalDB | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.TextTemplating | 텍스트 템플릿 변환 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.TypeScript.2.2 | TypeScript 2.2 SDK | 15.0.26430.1 | 선택적
+Microsoft.VisualStudio.Component.VC.140 | VC++ 2015.3 v140 도구 집합(x86, x64) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ 핵심 기능 | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.VC.DiagnosticTools | C++ 프로파일링 도구 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 도구 집합(x86, x64) | 15.0.26208.0 | 선택적
+Microsoft.VisualStudio.Component.Web | ASP.NET 및 웹 개발 도구 | 15.0.26323.1 | 선택적
+Microsoft.VisualStudio.Component.Windows10SDK | Windows 유니버설 C 런타임 | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK(10.0.10586.0) | 15.0.26208.0 | Optional
 
 
 ## <a name="universal-windows-platform-development"></a>유니버설 Windows 플랫폼 개발
@@ -669,17 +784,17 @@ Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 1
 Microsoft.VisualStudio.Component.DiagnosticTools | 프로파일링 도구 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Graphics | 이미지 및 3D 모델 편집기 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 진단 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26412.1 | 필수
 Microsoft.VisualStudio.Component.NuGet | NuGet 패키지 관리자 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.PortableLibrary | .NET 이식이 가능한 라이브러리 타기팅 팩 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# 및 Visual Basic | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.SQL.CLR | SQL Server용 CLR 데이터 형식 | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | 정적 분석 도구 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.UWP.Support | 유니버설 Windows 플랫폼 도구 | 15.0.26403.0 | 필수
+Microsoft.VisualStudio.Component.TypeScript.2.2 | TypeScript 2.2 SDK | 15.0.26430.1 | 필수
+Microsoft.VisualStudio.Component.UWP.Support | 유니버설 Windows 플랫폼 도구 | 15.0.26412.1 | 필수
 Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP용 Windows 10 SDK(10.0.15063.0): C#, VB, JS | 15.0.26403.0 | 필수
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP용 Windows 10 SDK(10.0.15063.0): C#, VB, JS | 15.0.26419.1 | 필수
 Microsoft.VisualStudio.ComponentGroup.UWP.Cordova | Cordova용 유니버설 Windows 플랫폼 도구 | 15.0.26403.0 | 필수
 Microsoft.VisualStudio.ComponentGroup.UWP.Xamarin | Xamarin용 유니버설 Windows 플랫폼 도구 | 15.0.26403.0 | 필수
 Microsoft.VisualStudio.Component.IntelliTrace.FrontEnd | IntelliTrace | 15.0.26208.0 | 권장
@@ -690,7 +805,7 @@ Microsoft.VisualStudio.Component.DependencyValidation.Enterprise | 실시간 종
 Microsoft.VisualStudio.Component.GraphDocument | DGML 편집기 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Graphics.Tools | DirectX용 그래픽 디버거 및 GPU 프로파일러 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Graphics.Win81 | 그래픽 도구 Windows 8.1 SDK | 15.0.26208.0 | Optional
-Microsoft.VisualStudio.Component.Phone.Emulator.15063 | Windows 10 모바일 에뮬레이터(크리에이터 업데이트) | 15.0.26403.0 | Optional
+Microsoft.VisualStudio.Component.Phone.Emulator.15063 | Windows 10 모바일 에뮬레이터(크리에이터 업데이트) | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.Component.SQL.LocalDB.Runtime | SQL Server Express 2016 LocalDB | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ 핵심 기능 | 15.0.26208.0 | Optional
@@ -699,7 +814,7 @@ Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 도구 집합
 Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK(10.0.10240.0) | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK(10.0.10586.0) | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK(10.0.14393.0) | 15.0.26208.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP용 Windows 10 SDK(10.0.15063.0): C++ | 15.0.26403.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP용 Windows 10 SDK(10.0.15063.0): C++ | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.ComponentGroup.ArchitectureTools.Managed | 아키텍처 및 분석 도구 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.ComponentGroup.UWP.VC | C++ 유니버설 Windows 플랫폼 도구 | 15.0.26403.0 | Optional
 
@@ -762,8 +877,8 @@ Component.CordovaToolset.6.3.1 | Cordova 6.3.1 도구 집합 | 15.0.26323.1 | �
 Component.WebSocket | WebSocket4Net | 15.0.26208.0 | 필수
 Microsoft.VisualStudio.Component.Cordova | JavaScript 핵심 기능을 사용한 모바일 개발 | 15.0.26323.1 | 필수
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 진단 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26208.0 | 필수
-Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.JavaScript.TypeScript | TypeScript 및 JavaScript 언어 지원 | 15.0.26412.1 | 필수
+Microsoft.VisualStudio.Component.TypeScript.2.2 | TypeScript 2.2 SDK | 15.0.26430.1 | 필수
 Component.Android.SDK23 | Android SDK 설치(API 수준 23) | 15.0.26208.0 | Optional
 Component.Google.Android.Emulator.API23.V2 | Google Android 에뮬레이터(API 수준 23) | 15.0.26208.0 | Optional
 Component.HAXM | Intel HAXM(Hardware Accelerated Execution Manager) | 15.0.26208.0 | Optional
@@ -774,10 +889,10 @@ Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 1
 Microsoft.VisualStudio.Component.DiagnosticTools | 프로파일링 도구 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Git | Windows용 GIT | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Graphics | 이미지 및 3D 모델 편집기 | 15.0.26208.0 | Optional
-Microsoft.VisualStudio.Component.Phone.Emulator.15063 | Windows 10 모바일 에뮬레이터(크리에이터 업데이트) | 15.0.26403.0 | Optional
+Microsoft.VisualStudio.Component.Phone.Emulator.15063 | Windows 10 모바일 에뮬레이터(크리에이터 업데이트) | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.Component.SQL.CLR | SQL Server용 CLR 데이터 형식 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP용 Windows 10 SDK(10.0.15063.0): C#, VB, JS | 15.0.26403.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP용 Windows 10 SDK(10.0.15063.0): C#, VB, JS | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.ComponentGroup.UWP.Cordova | Cordova용 유니버설 Windows 플랫폼 도구 | 15.0.26403.0 | Optional
 ## <a name="unaffiliated-components"></a>독립적 구성 요소
 
@@ -785,8 +900,8 @@ Microsoft.VisualStudio.ComponentGroup.UWP.Cordova | Cordova용 유니버설 Wind
 
 구성 요소 ID | 이름 | 버전
 --- | --- | ---
-Component.Android.Emulator | Android용 Visual Studio 에뮬레이터 | 15.0.26208.0
-Component.GitHub.VisualStudio | Visual Studio용 GitHub 확장 | 2.1.1.4
+Component.Android.Emulator | Android용 Visual Studio 에뮬레이터 | 15.0.26430.1
+Component.GitHub.VisualStudio | Visual Studio용 GitHub 확장 | 2.2.0.10
 Microsoft.Component.Blend.SDK.WPF | .NET용 Blend for Visual Studio SDK | 15.0.26208.0
 Microsoft.Component.HelpViewer | 도움말 뷰어 | 15.0.26208.0
 Microsoft.Net.Component.3.5.DeveloperTools | .NET Framework 3.5 개발 도구 | 15.0.26208.0
@@ -795,6 +910,7 @@ Microsoft.VisualStudio.Component.LinqToSql | LINQ to SQL 도구 | 15.0.26208.0
 Microsoft.VisualStudio.Component.Phone.Emulator | Windows 10 모바일 에뮬레이터(Anniversary Edition) | 15.0.26208.0
 Microsoft.VisualStudio.Component.TestTools.Core | 테스트 도구 핵심 기능 | 15.0.26208.0
 Microsoft.VisualStudio.Component.TypeScript.2.0 | TypeScript 2.0 SDK | 15.0.26208.0
+Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0
 
 ## <a name="see-also"></a>참고 항목
 
