@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 03abb5a6508a6c93c6770bd9373381c9173b7103
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
+ms.openlocfilehash: 08677472bc13d58d9ab0b42b856955f8434089e4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/03/2017
 
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 질문과 대답
@@ -229,6 +230,8 @@ Live Unit Testing이 작동하는 어셈블리가 어떤 이유로든 계측되�
 - **도구**, **옵션**, **Live Unit Testing**으로 이동하여 로깅 옵션을 **자세한 정보**로 변경합니다. 이렇게 하면 출력 창에 자세한 로그가 표시됩니다. 
 
 - `LiveUnitTesting_BuildLog` 사용자 환경 변수를 MSBuild 로그를 캡처하는 데 사용하려는 파일의 이름으로 설정합니다. Live Unit Testing 빌드의 자세한 MSBuild 로그 메시지를 해당 파일에서 검색할 수 있습니다.
+
+- `LiveUnitTesting_TestPlatformLog` 사용자 환경 변수를 `1`로 설정하여 테스트 플랫폼 로그를 캡처합니다. Live Unit Testing의 자세한 테스트 플랫폼 로그 메시지를 `[Solution Root]\.vs\[Solution Name]\log\[VisualStudio Process ID]`에서 검색할 수 있습니다.
 
 - `VS_UTE_DIAGNOSTICS`이라는 사용자 수준 환경 변수를 만들고 1(또는 다른 값)로 설정한 다음 Visual Studio를 다시 시작합니다. 이제 Visual Studio의 **출력 - 테스트** 탭에서 여러 로깅이 표시됩니다. 
  

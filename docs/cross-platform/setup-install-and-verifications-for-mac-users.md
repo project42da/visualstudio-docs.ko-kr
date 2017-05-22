@@ -1,7 +1,7 @@
 ---
 title: "Mac 사용자용 설정, 설치 및 확인 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 04/13/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 0220450b828fe49e8436be2897ed374252c2d391
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: b01ab828f06a13f3f8e4c7b9c72e2f05da409840
+ms.openlocfilehash: 49baa370a6d6258f2435b80adb504d78f922b8e8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/14/2017
 
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Mac 사용자용 설정, 설치 및 확인
@@ -38,27 +39,17 @@ ms.lasthandoff: 02/22/2017
 
  Mac에서 Xamarin을 사용하려면 다음이 필요합니다.
 
--   Xamarin 계정. [https://www.xamarin.com/](https://www.xamarin.com/)으로 이동하여 페이지 오른쪽 위에서 **로그인**을 클릭한 다음 나타나는 페이지에서 **새 계정 만들기**를 클릭합니다. Xamarin 계정에 사용할 전자 메일 주소와 암호를 선택합니다.
-
--   Xcode 7 및 Xamarin 4가 설치된 OSX Yosemite(10.10) 이상을 기반으로 둔 Mac.
+-   macOS Sierra 10.12 이상, Xcode 및 Xamarin이 설치된 Mac
 
 -   다음 구성의 하나:
 
     -   **Mac에서 직접 Xamarin Studio를 실행하려면:** Xamarin Studio는 C#을 사용한 Android, iOS 및 Windows 앱 빌드를 지원하는 Xamarin 개발 환경입니다.  Xamarin Studio를 간단히 살펴보려면 [Xamarin Studio 개요](https://xamarin.com/studio) (영문)(xamarin.com)를 참조하세요.
 
-    -   **Mac에 Parallels 또는 VMWare가 구성되어 있는 경우:** Parallels 또는 VMWare 내부에서 Visual Studio 2015 및 Xamarin 4가 설치된 Windows를 실행합니다.  이 구성을 사용하면 Xamarin은 Visual Studio와 함께 설치되고 C#을 사용하여 Android, iOS 및 WinPhone 앱을 빌드하는 데 Visual Studio를 개발 환경으로 사용하는 기능을 제공하는 확장입니다.  Visual Studio Developer Essentials 프로그램 일부로 무료 3개월 Parallels 구독을 구할 수 있습니다. [Microsoft Visual Studio Dev Essentials에 Parallels Desktop Pro 및 Parallels Access가 포함됨](http://blog.parallels.com/blog/2015/11/18/visual-studio-dev-essentials/) (영문)(Parallels 블로그)을 참조하세요.
+    -   **Mac에 Parallels 또는 VMWare가 구성되어 있는 경우:** Parallels 또는 VMWare 내부에서 Visual Studio 2017 및 Xamarin이 설치된 Windows를 실행합니다.  이 구성을 사용하면 Xamarin은 Visual Studio와 함께 설치되고 C#을 사용하여 Android, iOS 및 Windows 앱을 빌드하는 데 Visual Studio를 개발 환경으로 사용하는 기능을 제공하는 확장입니다.  Visual Studio Developer Essentials 프로그램 일부로 무료 3개월 Parallels 구독을 구할 수 있습니다. [Microsoft Visual Studio Dev Essentials에 Parallels Desktop Pro 및 Parallels Access가 포함됨](http://blog.parallels.com/blog/2015/11/18/visual-studio-dev-essentials/) (영문)(Parallels 블로그)을 참조하세요.
 
  이 항목에서는 이러한 요구 사항에 대한 지침을 제공합니다.  설치 프로세스가 실행되는 동안 [Xamarin을 사용한 모바일 개발에 대해 알아보기](../cross-platform/learn-about-mobile-development-with-xamarin.md) 항목을 검토하여 필요한 배경 자료를 읽고 살펴볼 수 있습니다.
 
- **항목 내용:**
-
--   [Mac 설치(Apple ID, Xcode 및 Xamarin)](#mac)
-
--   [Parallels 내부의 Windows 설치(Visual Studio 및 Xamarin)](#windows)
-
--   [환경 확인](#verify)
-
-##  <a name="a-namemaca-mac-setup-apple-id-xcode-and-xamarin"></a><a name="mac"></a> Mac 설치(Apple ID, Xcode 및 Xamarin)
+##  <a name="mac"></a> Mac 설치(Apple ID, Xcode 및 Xamarin)
 
 1.  Apple ID가 없으면 [내 Apple ID](https://appleid.apple.com/) 에서 무료 Apple ID를 만듭니다. Xcode를 설치하고 서명하려면 이 작업이 필요합니다.
 
@@ -68,34 +59,29 @@ ms.lasthandoff: 02/22/2017
 
 4.  Windows 및 Mac 컴퓨터에서 Xamarin 설치를 마친 후 [XMA를 사용하여 Mac에 연결](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac_Using_XMA)(xamarin.com)의 지침에 따라 Windows 컴퓨터의 Visual Studio에서 iOS 및 Mac 작업을 수행할 수 있습니다.
 
-##  <a name="a-namewindowsa-windows-setup-inside-parallels-visual-studio-and-xamarin"></a><a name="windows"></a> Parallels 내부의 Windows 설치(Visual Studio 및 Xamarin)
+##  <a name="windows"></a> Parallels 내부의 Windows 설치(Visual Studio 및 Xamarin)
 
-1.  Parallels/VMWare 내부에 구성한 Windows 데스크톱을 사용하여 [어떤 버전이든 Visual Studio 2015 설치 관리자를 다운로드하여 설치합니다](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (Community, Professional 또는 Enterprise). Visual Studio 2015 Community는 무료 버전이고, Professional 및 Enterprise 버전은 30일 평가판으로 사용할 수 있습니다.
+1.  Parallels/VMWare 내부에 구성한 Windows 데스크톱을 사용하여 [어떤 버전이든 Visual Studio 2017 설치 관리자를 다운로드하여 설치합니다](https://www.visualstudio.com/downloads/) (Community, Professional 또는 Enterprise). Visual Studio 2017 Community는 무료 버전이고, Professional 및 Enterprise 버전은 30일 평가판으로 사용할 수 있습니다.
 
-2.  설치 관리자 내에서 **사용자 지정** 설치를 선택합니다.
+2.  _설치 관리자에서_ **시작** 옆에 있는 **추가 옵션**(세 막대 아이콘) 단추를 클릭한 다음 **수정**을 선택합니다.  
+  
+     ![Visual Studio 설치에서 수정 옵션 선택](../cross-platform/media/cross-plat-xamarin-setup-1a.png "Cross-Plat Xamarin Setup 1")  
+  
+3.  다음 상자를 선택합니다.
 
-     ![Visual Studio 설치에서 사용자 지정 옵션 선택](../cross-platform/media/cross-plat-xamarin-setup-1.png "Cross-Plat Xamarin Setup 1")
+    1.  **모바일 및 게임 >.NET을 사용한 모바일 개발** 그러면 일반 도구와 소프트웨어 개발 키트 아래에서 다양한 Android 도구가 자동으로 선택됩니다. 이 옵션을 사용하는 경우 기존 Xamarin 설치도 업데이트합니다.  
+  
+         ![게임 및 모바일 개발에서 모바일 개발 옵션 선택](../cross-platform/media/cross-plat-xamarin-setup-2a.png "Cross-Plat Xamarin Setup 2")  
+  
+    2. (선택 사항) **Windows > 유니버설 Windows 플랫폼 개발** 여기에는 다운로드하는 데 시간이 더 오래 걸리는 에뮬레이터 이미지를 설치하기 위한 옵션이 포함되고, 언제든지 Visual Studio 설치 관리자로 돌아가서 나중에 추가할 수 있습니다.  
 
-3.  다음 확인란을 선택하거나 선택을 취소합니다.
+4.  **수정** 단추를 클릭하면 프로세스가 실행됩니다. 이 작업도 완료하는 데 약간 시간이 걸리므로 기다리는 동안 Mac 설치 지침을 계속 확인하고 [Xamarin을 사용한 모바일 개발에 대해 알아보기](../cross-platform/learn-about-mobile-development-with-xamarin.md)를 살펴볼 수 있습니다.
 
-    1.  **플랫폼 간 모바일 개발 > C#/.NET(Xamarin)**을 선택합니다. 그러면 일반 도구와 소프트웨어 개발 키트 아래에서 다양한 Android 도구가 자동으로 선택됩니다.
-
-         ![플랫폼 간 모바일 개발 아래에서 Xamarin 옵션 선택](../cross-platform/media/cross-plat-xamarin-setup-2.png "Cross-Plat Xamarin Setup 2")
-
-    2.  **플랫폼 간 모바일 개발 > Microsoft Visual Studio Emulator for Android**를 선택 취소합니다.
-
-4.  설치 단추를 클릭하면 프로세스가 실행됩니다. 이 작업도 완료하는 데 약간 시간이 걸리므로 기다리는 동안 이 항목을 계속 진행하여 [Xamarin을 사용한 모바일 개발에 대해 알아보기](../cross-platform/learn-about-mobile-development-with-xamarin.md)를 살펴볼 수 있습니다.
-
-5.  설치가 완료되면 Visual Studio를 시작하고 메시지가 표시되면 Microsoft 계정으로 로그인합니다(Windows에서 사용하는 것과 같은 계정). 그리고 **도구 > 옵션 >Xamarin** 또는 **도구 > 옵션 Xamarin > 기타**에서 **지금 확인** 링크를 통해 Xamarin 업데이트를 확인합니다.
-
-     ![Visual Studio 옵션에서 Xamarin 업데이트 확인](../cross-platform/media/cross-plat-xamarin-setup-3.png "Cross-Plat Xamarin Setup 3")
-
-    > [!NOTE]
-    >  이전 Xamarin 라이선스 관련 문제를 방지하려면 Xamarin을 4.0.3.214 이상으로 업데이트해야 합니다.  업데이트를 확인하려고 하는데 Microsoft 빌드 도구에 대한 오류가 발생하면 [Xamarin 포럼](http://forums.xamarin.com/discussion/69015/xamarin-update-on-vs-2013-says-i-need-the-build-tools-for-vs-2015)의 스레드를 참조하세요.
+5.  설치가 완료되면 Visual Studio를 시작하고 메시지가 표시되면 Microsoft 계정으로 로그인합니다(Windows에서 사용하는 것과 같은 계정).
 
 6.  Windows 및 Mac 컴퓨터에서 모두 Xamarin 설치를 완료한 후 [XMA를 사용하여 Mac에 연결](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac_Using_XMA)(xamarin.com)의 지침에 따라 Visual Studio에서 iOS 작업을 수행할 수 있습니다.
 
-##  <a name="a-nameverifya-verify-your-environment"></a><a name="verify"></a> 환경 확인
+##  <a name="verify"></a> 환경 확인
  설치 관리자가 완료되면 잠시 Xamarin 개발을 경험할 모든 준비가 되었는지 확인하세요.
 
 ### <a name="xamarin-studio"></a>Xamarin Studio
@@ -103,13 +89,13 @@ ms.lasthandoff: 02/22/2017
 
  ![Xamarin.com에서 올바른 설명서를 확인하기 위해 Xamarin Studio 선택](../cross-platform/media/crossplat-xamarin-mac-1.png "CrossPlat Xamarin Mac 1")
 
- **OWA(Outlook Web Access)**
+**OWA(Outlook Web Access)**
 
 1.  [Android 프로젝트 만들기](http://developer.xamarin.com/recipes/android/general/projects/create_an_android_project/) (영문)(xamarin.com)의 지침에 따라 Android 프로젝트 만들기를 확인합니다.
 
-2.  [Android Player > Xamarin Studio 통합 설명서](https://developer.xamarin.com/guides/android/getting_started/installation/android-player/#Integration_with_Xamarin_Studio)(xamarin.com)를 통해 Android Player의 디버깅 유효성을 검사합니다.
+2.  [Android Player > Xamarin Studio 통합 설명서](https://developer.xamarin.com/guides/android/getting_started/installation/android-player/#Integration_with_Xamarin_Studio)(xamarin.com)를 통해 Android 에뮬레이터의 디버깅 유효성을 검사합니다.
 
- **iOS**
+**iOS**
 
 1.  [iOS 만들기](http://developer.xamarin.com/recipes/ios/general/projects/create_an_ios_project/) (영문)(xamarin.com)의 지침에 따라 iOS 프로젝트 만들기를 확인합니다.
 
@@ -120,9 +106,7 @@ ms.lasthandoff: 02/22/2017
 
  ![Xamarin.com에서 올바른 설명서를 확인하기 위해 Visual Studio 선택](../cross-platform/media/crossplat-xamarin-mac-2.png "CrossPlat Xamarin Mac 2")
 
- 또한 **도구 > Xamarin 계정...**을 통해 Xamarin 계정에 로그인합니다.
-
- **OWA(Outlook Web Access)**
+**Android**
 
 1.  [Android 프로젝트 만들기](http://developer.xamarin.com/recipes/android/general/projects/create_an_android_project/) (영문)(xamarin.com)의 지침에 따라 Android 프로젝트 만들기를 확인합니다.
 
@@ -132,9 +116,9 @@ ms.lasthandoff: 02/22/2017
 
 3.  Visual Studio에서 Mac에 설치된 에뮬레이터로 연결할 수 있는지 확인합니다.  이의 결과로 Visual Studio 내에서 디버깅용으로 선택할 수 있는 에뮬레이터 목록에 Xamarin Player가 표시됩니다.  이 작업을 수행하려면 [Xamarin Android Player에 Visual Studio 연결](http://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/android-player-with-visual-studio-in-vm/) (영문)(xamarin.com)의 지침을 따르세요.
 
- **iOS**
+**iOS**
 
-1.  [XMA를 사용하여 Mac에 연결](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac_Using_XMA) (영문)(xamarin.com)에 설명된 대로 Mac이 네트워크에서 사용 가능하고 Visual Studio와 연결되었는지 확인합니다.
+1.  [Connecting to the Mac](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac)(Mac에 연결)(xamarin.com)에 설명된 대로 Mac이 네트워크에서 사용 가능하고 Visual Studio와 연결되었는지 확인합니다.
 
 2.  [iOS 만들기](http://developer.xamarin.com/recipes/ios/general/projects/create_an_ios_project/) (영문)(xamarin.com)의 지침에 따라 iOS 프로젝트 만들기를 확인합니다.
 
