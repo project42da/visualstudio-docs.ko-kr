@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio의 기본 바로 가기 키 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/02/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,19 +34,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 230e641befbfbbb722c3f6ca21f5aab73322e61c
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4c744284c198a645440494ee79ee0e722904fda5
+ms.openlocfilehash: c3686170b93717c1e55d209a3f8bc8d2725c265d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/04/2017
 
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio의 기본 바로 가기 키
 해당 바로 가기 키를 선택하여 Visual Studio의 다양한 명령 및 창에 보다 쉽게 액세스할 수 있습니다. 이 항목에는 Visual Studio를 설치할 때 선택한 일반 개발 프로필의 기본 바로 가기 목록이 나와 있습니다. 선택한 프로필에 관계없이 **옵션** 대화 상자를 열고 **환경** 노드를 확장한 다음 **키보드**를 선택하여 명령의 바로 가기를 확인할 수 있습니다. 또한 지정한 명령에 다른 바로 가기를 할당하여 바로 가기를 사용자 지정할 수도 있습니다.  
-  
+
  일반적인 바로 가기 키 목록과 기타 생산성 정보는 [팁과 요령](../ide/tips-and-tricks-for-visual-studio.md) 및 [생산성 팁](../ide/productivity-tips-for-visual-studio.md)을 참조하세요.  
-  
+
  다음 표의 섹션에는 Visual Studio의 어디서나 바로 가기 키를 사용하여 액세스할 수 있는 전역 명령이 나와 있습니다.  
-  
+
 |||||  
 |-|-|-|-|  
 |[분석](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)|[편집](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)|[프로젝트](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)|[테스트](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|  
@@ -56,9 +57,9 @@ ms.lasthandoff: 04/05/2017
 |[디버그](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)|[부하 테스트](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_loadtest)|[팀](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_team)|[창](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_window)|  
 |[디버거 상황에 맞는 메뉴](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debugger)|[기타 상황에 맞는 메뉴](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_otherContext)|[Team Foundation 상황에 맞는 메뉴](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFcontext)|[Azure](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_windowsazure)|  
 |[진단 허브](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diagnostics)||||  
-  
+
  다음 표의 각 섹션에는 섹션 이름에 해당하는 컨텍스트와 관련된 바로 가기 키의 명령이 나와 있습니다.  
-  
+
 |||||  
 |-|-|-|-|  
 |[ADO.NET 엔터티 데이터 모델 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_ADONET)|[레이어 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_layerDiagram)|[설정 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SettingsDesigner)|[VC 이미지 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcimageeditor)|  
@@ -73,39 +74,39 @@ ms.lasthandoff: 04/05/2017
 |[HTML 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditor)|[쿼리 결과](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_QueryResults)|[UML 사용 사례 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLusecaseDiagram)|[XAML UI 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xamluidesigner)|  
 |[HTML 편집기 디자인 뷰](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditorDesign)|[보고서 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_ReportDesigner)|[VC 액셀러레이터 키 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcaccelerator)|[XML(텍스트) 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xmlTextEditor)|  
 |[HTML 편집기 소스 뷰](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditorSource)|[시퀀스 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SequenceDiagram)|[VC 대화 상자 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcdialogeditor)|[XML 스키마 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xmlSchemaDesigner)|  
-  
+
 ##  <a name="bkmk_global"></a> 전역  
-  
+
 ###  <a name="bkmk_analyze"></a> 분석  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Analyze.NavigateBackward|Shift+Alt+3|  
 |Analyze.NavigateForward|Shift+Alt+4|  
-  
+
 ###  <a name="bkmk_architecture"></a> 아키텍처  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Architecture.NewDiagram|Ctrl+\\, Ctrl+N|  
-  
+
 ###  <a name="bkmk_build"></a> 빌드  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |빌드.솔루션빌드|Ctrl+Shift+B|  
 |빌드.취소|Ctrl+Break|  
 |빌드.컴파일|Ctrl+F7|  
 |Build.RunCodeAnalysisonSolution|Alt+F11|  
-  
+
 ###  <a name="bkmk_classview"></a> 클래스 뷰 상황에 맞는 메뉴  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |ClassViewContextMenus.ClassViewMultiselectProjectreferencesItems.Properties|Alt+Enter|  
-  
+
 ###  <a name="bkmk_debug"></a> 디버그  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |디버그.코드변경내용적용|Alt+F10|  
@@ -171,23 +172,23 @@ ms.lasthandoff: 04/05/2017
 |디버그.조사식2|Ctrl+Alt+W, 2|  
 |디버그.조사식3|Ctrl+Alt+W, 3|  
 |디버그.조사식4|Ctrl+Alt+W, 4|  
-  
+
 ###  <a name="bkmk_debugger"></a> 디버거 상황에 맞는 메뉴  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |디버거상황에맞는메뉴.중단점창.삭제|Alt+F9, D|  
 |디버거상황에맞는메뉴.중단점창.디스어셈블리로이동|Alt+F9, A|  
 |디버거상황에맞는메뉴.중단점창.소스코드로이동|Alt+F9, S|  
-  
+
 ###  <a name="bkmk_diagnostics"></a> 진단 허브  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |DiagnosticsHub.StopCollection|Ctrl+Alt+F2|  
-  
+
 ###  <a name="bkmk_edit"></a> 편집  
-  
+
 |명령||  
 |--------------|-|  
 |편집.복사|Ctrl+C<br /><br /> 또는<br /><br /> Ctrl+Ins|  
@@ -244,9 +245,9 @@ ms.lasthandoff: 04/05/2017
 |편집.검색중지|Alt+F3, S|  
 |편집.코드감싸기|Ctrl+K, Ctrl+S|  
 |편집.실행취소|Ctrl+Z<br /><br /> 또는<br /><br /> Alt+백스페이스|  
-  
+
 ###  <a name="bkmk_editorContext"></a> 편집기 상황에 맞는 메뉴  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |EditorContextMenus.CodeWindow.Breakpoint.BreakpointEditlabels|Alt+F9, L|  
@@ -255,9 +256,9 @@ ms.lasthandoff: 04/05/2017
 |EditorContextMenus.CodeWindow.GoToView|Ctrl+M, Ctrl+G|  
 |EditorContextMenus.CodeWindow.ToggleHeaderCodeFile|Ctrl+K, Ctrl+O|  
 |EditorContextMenus.CodeWindow.ViewCallHierarchy|Ctrl+K, Ctrl+T<br /><br /> 또는<br /><br /> Ctrl+K, T|  
-  
+
 ###  <a name="bkmk_file"></a> 파일  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |File.Exit|Alt+F4|  
@@ -271,30 +272,30 @@ ms.lasthandoff: 04/05/2017
 |파일.모두저장|Ctrl+Shift+S|  
 |파일.선택한항목저장|Ctrl+S|  
 |파일.브라우저에서보기|Ctrl+Shift+W|  
-  
+
 ###  <a name="bkmk_help"></a> 도움말  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Help.AddandRemoveHelpContent|Ctrl+Alt+F1|  
 |도움말.F1도움말|F1|  
 |도움말.도움말보기|Ctrl+F1|  
 |도움말.창도움말|Shift+F1|  
-  
+
 ###  <a name="bkmk_loadtest"></a> 부하 테스트  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |LoadTest.JumpToCounterPane|Ctrl+R, Q|  
-  
+
 ###  <a name="bkmk_otherContext"></a> 기타 상황에 맞는 메뉴  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |OtherContextMenus.MicrosoftDataEntityDesignContext.AddNewDiagram|Insert|  
-  
+
 ###  <a name="bkmk_project"></a> 프로젝트  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |프로젝트.기존항목추가|Shift+Alt+A|  
@@ -304,16 +305,16 @@ ms.lasthandoff: 04/05/2017
 |Project.Previewchanges|Alt+;, Alt+C|  
 |Project.Publishselectedfiles|Alt+;, Alt+P|  
 |Project.Replaceselectedfilesfromserver|Alt+;, Alt+R|  
-  
+
 ###  <a name="bkmk_projectContext"></a> 프로젝트 및 솔루션 상황에 맞는 메뉴  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |ProjectandSolutionContextMenus.Item.MoveDown|Alt+아래쪽 화살표|  
 |ProjectandSolutionContextMenus.Item.MoveUp|Alt+위쪽 화살표|  
-  
+
 ###  <a name="bkmk_refactor"></a> 리팩터링  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |리팩터링.필드캡슐화|Ctrl+R, Ctrl+E|  
@@ -322,26 +323,26 @@ ms.lasthandoff: 04/05/2017
 |리팩터링.매개변수제거|Ctrl+R, Ctrl+V|  
 |리팩터링.이름바꾸기|Ctrl+R, Ctrl+R|  
 |리팩터링.매개변수다시정렬|Ctrl+R, Ctrl+O|  
-  
+
 ###  <a name="bkmk_solutionexplorerGLOBAL"></a> 솔루션 탐색기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |SolutionExplorer.OpenFilesFilter|Ctrl+[, O<br /><br /> 또는<br /><br /> Ctrl+[, Ctrl+O|  
 |SolutionExplorer.PendingChangesFilter|Ctrl+[, P<br /><br /> 또는<br /><br /> Ctrl+[, Ctrl+P|  
 |SolutionExplorer.SyncWithActiveDocument|Ctrl+[, S<br /><br /> 또는<br /><br /> Ctrl+[, Ctrl+S|  
-  
+
 ###  <a name="bkmk_team"></a> 팀  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Team.Git.GoToGitBranches|Ctrl+0, Ctrl+N<br /><br /> 또는<br /><br /> Ctrl+0, N|  
 |Team.Git.GoToGitChanges|Ctrl+0, Ctrl+G<br /><br /> 또는<br /><br /> Ctrl+0, G|  
 |Team.Git.GoToGitCommits|Ctrl+0, Ctrl+O<br /><br /> 또는<br /><br /> Ctrl+0, O|  
 |Team.TeamExplorerSearch|Ctrl+'|  
-  
+
 ###  <a name="bkmk_TFcontext"></a> Team Foundation 상황에 맞는 메뉴  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |TeamFoundationContextMenus.Commands.GoToBuilds|Ctrl+0, Ctrl+B<br /><br /> 또는<br /><br /> Ctrl+0, B|  
@@ -354,16 +355,16 @@ ms.lasthandoff: 04/05/2017
 |TeamFoundationContextMenus.Commands.GoToSettings|Ctrl+0, Ctrl+S<br /><br /> 또는<br /><br /> Ctrl+0, S|  
 |TeamFoundationContextMenus.Commands.GoToWebAccess|Ctrl+0, Ctrl+A<br /><br /> 또는<br /><br /> Ctrl+0, A|  
 |TeamFoundationContextMenus.Commands.GoToWorkItems|Ctrl+0, Ctrl+W<br /><br /> 또는<br /><br /> Ctrl+0, W|  
-  
+
 ###  <a name="bkmk_test"></a> 테스트  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Test.UseCodedUITestBuilder|Ctrl+\\, Ctrl+C|  
 |Test.UseExistingActionRecording|Ctrl+\\, Ctrl+A|  
-  
+
 ###  <a name="bkmk_testexplorerGLOBAL"></a> 테스트 탐색기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |TestExplorer.DebugAllTests|Ctrl+R, Ctrl+A|  
@@ -371,18 +372,18 @@ ms.lasthandoff: 04/05/2017
 |TestExplorer.RepeatLastRun|Ctrl+R, L|  
 |TestExplorer.RunAllTests|Ctrl+R, A|  
 |TestExplorer.RunAllTestsInContext|Ctrl+R, T|  
-  
+
 ###  <a name="bkmk_tools"></a> 도구  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Tools.AttachtoProcess|Ctrl+Alt+P|  
 |도구.코드조각관리자|Ctrl+K, Ctrl+B|  
 |Tools.ForceGC|Ctrl+Shift+Alt+F12, Ctrl+Shift+Alt+F12|  
 |도구.명령줄로이동|Ctrl+/|  
-  
+
 ###  <a name="bkmk_view"></a> 보기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |View.AllWindows|Shift+Alt+M|  
@@ -429,9 +430,9 @@ ms.lasthandoff: 04/05/2017
 |보기.웹브라우저|Ctrl+Alt+R|  
 |View.ZoomIn|Ctrl+Shift+.|  
 |View.ZoomOut|Ctrl+Shift+,|  
-  
+
 ###  <a name="bkmk_window"></a> 창  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |창.문서창활성화|Esc|  
@@ -460,16 +461,16 @@ ms.lasthandoff: 04/05/2017
 |창.EzMDI파일목록표시|Ctrl+Alt+아래쪽 화살표|  
 |Window.SolutionExplorerSearch|Ctrl+;|  
 |Window.WindowSearch|Alt+`|  
-  
+
 ###  <a name="bkmk_windowsazure"></a> Azure  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |WindowsAzure.RetryMobileServiceScriptOperation|Ctrl+Num *, Ctrl+R|  
 |WindowsAzure.ShowMobileServiceScriptErrorDetails|Ctrl+Num *, Ctrl+D|  
-  
+
 ##  <a name="bkmk_ADONET"></a> ADO.NET 엔터티 데이터 모델 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |OtherContextMenus.MicrosoftDataEntityDesignContext.MoveProperties.Down|Alt+아래쪽 화살표|  
@@ -482,9 +483,9 @@ ms.lasthandoff: 04/05/2017
 |OtherContextMenus.MicrosoftDataEntityDesignContext.RemovefromDiagram|Shift+Del|  
 |View.EntityDataModelBrowser|Ctrl+1|  
 |View.EntityDataModelMappingDetails|Ctrl+2|  
-  
+
 ##  <a name="bkmk_classDiagram"></a> 클래스 다이어그램  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |클래스다이어그램.축소|Num -|  
@@ -494,9 +495,9 @@ ms.lasthandoff: 04/05/2017
 |편집.롤리팝탐색|Shift+Alt+L|  
 |Edit.RemovefromDiagram|삭제|  
 |보기.코드보기|입력|  
-  
+
 ##  <a name="bkmk_codedUItest"></a> 코딩된 UI 테스트 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |OtherContextMenus.UITestEditorContextMenu.CopyReferencetoClipboard|Ctrl+C|  
@@ -505,16 +506,16 @@ ms.lasthandoff: 04/05/2017
 |OtherContextMenus.UITestEditorContextMenu.LocatetheUIControl|Ctrl+Shift+L|  
 |OtherContextMenus.UITestEditorContextMenu.Movecode|Ctrl+Alt+C|  
 |OtherContextMenus.UITestEditorContextMenu.Splitintoanewmethod|Ctrl+Shift+T|  
-  
+
 ##  <a name="bkmk_dataset"></a> 데이터 집합 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |기타상황에맞는메뉴.열컨텍스트.열삽입|Insert|  
 |기타상황에맞는메뉴.DB테이블컨텍스트.추가.열|Ctrl+L|  
-  
+
 ##  <a name="bkmk_diff"></a> 차이점 뷰어  
-  
+
 |||  
 |-|-|  
 |명령|바로 가기 키|  
@@ -529,23 +530,23 @@ ms.lasthandoff: 04/05/2017
 |Diff.SynchronizeViewToggle|Ctrl+\\, Ctrl+아래쪽 화살표|  
 |EditorContextMenus.CodeWindow.AddComment|Ctrl+Shift+K|  
 |EditorContextMenus.CodeWindow.EditLocalFile|Ctrl+Shift+P|  
-  
+
 ##  <a name="bkmk_DOM"></a> DOM 탐색기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |DOMExplorer.Refresh|F5|  
 |DOMExplorer.SelectElement|Ctrl+B|  
 |DOMExplorer.ShowLayout|Ctrl+Shift+I|  
-  
+
 ##  <a name="bkmk_FSharp"></a> F# Interactive  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |OtherContextMenus.FSIConsoleContext.CancelInteractiveEvaluation|Ctrl+Break|  
-  
+
 ##  <a name="bkmk_graphDoc"></a> 그래프 문서 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Add.AddNode|Insert|  
@@ -555,9 +556,9 @@ ms.lasthandoff: 04/05/2017
 |ArchitectureContextMenus.DirectedGraphContextMenu.NewComment|Ctrl+Shift+K<br /><br /> 또는<br /><br /> Ctrl+E, C|  
 |ArchitectureContextMenus.DirectedGraphContextMenu.Remove|삭제|  
 |ArchitectureContextMenus.DirectedGraphContextMenu.Rename|F2|  
-  
+
 ##  <a name="bkmk_graphicsDebugger"></a> 그래픽 진단  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Debug.Graphics.CaptureFrame|없음|  
@@ -569,15 +570,15 @@ ms.lasthandoff: 04/05/2017
 |Graphics.ZoomToFitInWindow|Shift+Alt+9|  
 |Graphics.ZoomIn|Shift+Alt+=|  
 |Graphics.ZoomOut|Shift+Alt+-|  
-  
+
 ##  <a name="bkmk_HTMLeditor"></a> HTML 편집기  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |OtherContextMenus.HTMLContext.GoToController|Ctrl+M, Ctrl+G|  
-  
+
 ##  <a name="bkmk_HTMLeditorDesign"></a> HTML 편집기 디자인 뷰  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |편집.컨트롤아래로이동|Ctrl+아래쪽 화살표|  
@@ -598,9 +599,9 @@ ms.lasthandoff: 04/05/2017
 |보기.스마트태그표시|Shift+Alt+F10|  
 |보기.태그보기|Shift+F7|  
 |창.이전탭|Ctrl+PgUp|  
-  
+
 ##  <a name="bkmk_HTMLeditorSource"></a> HTML 편집기 소스 뷰  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |OtherContextMenus.HTMLContext.GoToController|Ctrl+M, Ctrl+G|  
@@ -608,15 +609,15 @@ ms.lasthandoff: 04/05/2017
 |View.SynchronizeViews|Ctrl+Shift+Y|  
 |보기.디자이너보기|Shift+F7|  
 |창.이전탭|Ctrl+PgUp|  
-  
+
 ##  <a name="bkmk_layerDiagram"></a> 레이어 다이어그램  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |편집.삭제|Shift+Delete|  
-  
+
 ##  <a name="bkmk_managedResources"></a> 관리되는 리소스 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |편집.셀편집|F2|  
@@ -629,17 +630,17 @@ ms.lasthandoff: 04/05/2017
 |리소스.이미지|Ctrl+2|  
 |리소스.기타|Ctrl+6|  
 |리소스.문자열|Ctrl+1|  
-  
+
 ##  <a name="bkmk_MergeEditor"></a> 병합 편집기 창  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |TeamFoundationContextMenus.MergeContextMenu.SetFocusonLeftWindow|Alt+1|  
 |TeamFoundationContextMenus.MergeContextMenu.SetFocusonResultWindow|Alt+2|  
 |TeamFoundationContextMenus.MergeContextMenu.SetFocusonRightWindow|Alt+3|  
-  
+
 ##  <a name="bkmk_SchemaCompare"></a> Microsoft SQL Server Data Tools, 스키마 비교  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |SQL.SSDTSchemaCompareCompare|Shift+Alt+C|  
@@ -648,9 +649,9 @@ ms.lasthandoff: 04/05/2017
 |SQL.SSDTSchemaComparePreviousChange|Shift+Alt+,|  
 |SQL.SSDTSchemaCompareStop|Alt+Break|  
 |SQL.SSDTSchemaCompareWriteUpdates|Shift+Alt+U|  
-  
+
 ##  <a name="bkmk_TableDesigner"></a> Microsoft SQL Server Data Tools, 테이블 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |CommitAllEdits|Shift+Alt+U|  
@@ -659,9 +660,9 @@ ms.lasthandoff: 04/05/2017
 |SQL.MovetoSchema|Ctrl+R, M<br /><br /> 또는<br /><br /> Ctrl+R, Ctrl+M|  
 |SQL.Rename|F2<br /><br /> 또는<br /><br /> Ctrl+R, R<br /><br /> 또는<br /><br /> Ctrl+R, Ctrl+R|  
 |ViewFileInScriptPanel|Shift+Alt+PgDn|  
-  
+
 ##  <a name="bkmk_TSQLeditor"></a> Microsoft SQL Server Data Tools, T-SQL 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |CommitAllEdits|Shift+Alt+U|  
@@ -680,9 +681,9 @@ ms.lasthandoff: 04/05/2017
 |SQL.TSqlEditorToggleResultsPane|Ctrl+D, R|  
 |TSqlEditorCloneQuery|Ctrl+Alt+N|  
 |TSqlEditorDatabaseCombo|Shift+Alt+PgDn|  
-  
+
 ##  <a name="bkmk_linkfix"></a> Microsoft SQL Server Data Tools, T-SQL PDW 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |SQL.TSqlEditorCancelQuery|Alt+Break|  
@@ -695,15 +696,15 @@ ms.lasthandoff: 04/05/2017
 |SQL.TSqlEditorToggleResultsPane|Ctrl+D, R|  
 |TSqlEditorCloneQuery|Ctrl+Alt+N|  
 |TSqlEditorDatabaseCombo|Shift+Alt+PgDn|  
-  
+
 ##  <a name="bkmk_PageInspector"></a> 페이지 검사기  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |PageInspector.Minimize|F12|  
-  
+
 ##  <a name="bkmk_QueryDesigner"></a> 쿼리 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |쿼리디자이너.데이터검색취소|Ctrl+T|  
@@ -714,17 +715,17 @@ ms.lasthandoff: 04/05/2017
 |쿼리디자이너.조인모드|Ctrl+Shift+J|  
 |쿼리디자이너.결과|Ctrl+4|  
 |쿼리디자이너.SQL|Ctrl+3|  
-  
+
 ##  <a name="bkmk_QueryResults"></a> 쿼리 결과  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |SQL.QueryResultsNewRow|Alt+End|  
 |SQL.QueryResultsRefresh|Shift+Alt+R|  
 |SQL.QueryResultsStop|Alt+Break|  
-  
+
 ##  <a name="bkmk_ReportDesigner"></a> 보고서 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |편집.구분선|Enter 키|  
@@ -748,31 +749,31 @@ ms.lasthandoff: 04/05/2017
 |편집.위로컨트롤크기조정|Ctrl+Shift+위쪽 화살표|  
 |편집.왼쪽으로탭이동|Shift+Tab 키|  
 |View.ReportData|Ctrl+Alt+D|  
-  
+
 ##  <a name="bkmk_SequenceDiagram"></a> 시퀀스 다이어그램  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |ArchitectureDesigner.Sequence.NavigateToCode|F12|  
 |편집.삭제|Shift+Del|  
-  
+
 ##  <a name="bkmk_SettingsDesigner"></a> 설정 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |편집.셀편집|F2|  
 |편집.행제거|Ctrl+Delete|  
 |편집.선택취소|Esc|  
 |보기.코드보기|F7|  
-  
+
 ##  <a name="bkmk_SolutionExplorer"></a> 솔루션 탐색기  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |ClassViewContextMenus.ClassViewProject.View.ViewinPageInspector|Ctrl+K, Ctrl+G|  
-  
+
 ##  <a name="bkmk_TeamExplorer"></a> 팀 탐색기  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |편집.삭제|삭제|  
@@ -795,21 +796,21 @@ ms.lasthandoff: 04/05/2017
 |TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageCreateCopyWI|Shift+Alt+C|  
 |TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageNewLinkedWI|Shift+Alt+L|  
 |View.Refresh|F5|  
-  
+
 ##  <a name="bkmk_TFBuild"></a> Team Foundation Build 정보 편집기  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |View.Refresh|F5|  
-  
+
 ##  <a name="bkmk_TestExplorer"></a> 테스트 탐색기  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |TestExplorer.OpenTest|F12|  
-  
+
 ##  <a name="bkmk_TextEditor"></a> 텍스트 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |편집.구분선|Enter 키<br /><br /> 또는<br /><br /> Shift+Enter|  
@@ -917,40 +918,40 @@ ms.lasthandoff: 04/05/2017
 |OtherContextMenus.HTMLContext.ViewinPageInspector|Ctrl+K, Ctrl+G|  
 |TeamFoundationContextMenus.Annotate.TfsAnnotateMoveNextRegion|Alt+PgDn|  
 |TeamFoundationContextMenus.Annotate.TfsAnnotateMovePreviousRegion|Alt+PgUp|  
-  
+
 ##  <a name="bkmk_UMLactivityDiagram"></a> UML 동작 다이어그램  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |편집.삭제|Shift+Del|  
-  
+
 ##  <a name="bkmk_UMLclassDiagram"></a> UML 클래스 다이어그램  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |Edit.DeleteFromModel|Shift+Del|  
-  
+
 ##  <a name="bkmk_UMLcomponentDiagram"></a> UML 구성 요소 다이어그램  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |Edit.DeleteFromModel|Shift+Del|  
-  
+
 ##  <a name="bkmk_UMLusecaseDiagram"></a> UML 사용 사례 다이어그램  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |Edit.DeleteFromModel|Shift+Del|  
-  
+
 ##  <a name="bkmk_vcaccelerator"></a> VC 액셀러레이터 키 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Edit.NewAccelerator|Insert|  
 |Edit.NextKeyTyped|Ctrl+W|  
-  
+
 ##  <a name="bkmk_vcdialogeditor"></a> VC 대화 상자 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |편집.컨트롤아래로이동|아래쪽 화살표|  
@@ -982,9 +983,9 @@ ms.lasthandoff: 04/05/2017
 |Format.TabOrder|Ctrl+D|  
 |Format.TestDialog|Ctrl+T|  
 |Format.ToggleGuides|Ctrl+G|  
-  
+
 ##  <a name="bkmk_vcimageeditor"></a> VC 이미지 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |이미지.에어브러시도구|Ctrl+A|  
@@ -1024,15 +1025,15 @@ ms.lasthandoff: 04/05/2017
 |이미지.선택항목을브러시로사용|Ctrl+U|  
 |이미지.확대|Ctrl+Shift+.<br /><br /> 또는<br /><br /> Ctrl+위쪽 화살표|  
 |이미지.축소|Ctrl+Shift+,<br /><br /> 또는<br /><br /> Ctrl+아래쪽 화살표|  
-  
+
 ##  <a name="bkmk_vcstringeditor"></a> VC 문자열 편집기  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |Edit.NewString|Insert|  
-  
+
 ##  <a name="bkmk_viewDesigner"></a> 뷰 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |쿼리디자이너.데이터검색취소|Ctrl+T|  
@@ -1043,15 +1044,15 @@ ms.lasthandoff: 04/05/2017
 |쿼리디자이너.조인모드|Ctrl+Shift+J|  
 |쿼리디자이너.결과|Ctrl+4|  
 |쿼리디자이너.SQL|Ctrl+3|  
-  
+
 ##  <a name="bkmk_visualstudio"></a> Visual Studio  
-  
+
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |OtherContextMenus.ORDesignerContext.HideMethodsPane|Ctrl+1|  
-  
+
 ##  <a name="bkmk_wfdesigner"></a> Windows Forms 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |편집.구분선|Enter 키|  
@@ -1078,17 +1079,17 @@ ms.lasthandoff: 04/05/2017
 |편집.오른쪽으로컨트롤크기조정|Ctrl+Shift+오른쪽 화살표|  
 |편집.위로컨트롤크기조정|Ctrl+Shift+위쪽 화살표|  
 |편집.왼쪽으로탭이동|Shift+Tab 키|  
-  
+
 ##  <a name="bkmk_workItemEditor"></a> 작업 항목 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Edit.CreateCopyofWorkItem|Shift+Alt+C|  
 |Edit.RefreshWorkItem|F5|  
 |Team.NewLinkedWorkItem|Shift+Alt+L|  
-  
+
 ##  <a name="bkmk_WIqueryview"></a> 작업 항목 쿼리 뷰  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Edit.CreateCopyofWorkItem|Shift+Alt+C|  
@@ -1097,9 +1098,9 @@ ms.lasthandoff: 04/05/2017
 |Team.NewLinkedWorkItem|Shift+Alt+L|  
 |Team.Refresh|F5|  
 |Window.Toggle|Shift+Alt+V|  
-  
+
 ##  <a name="bkmk_WIresultsview"></a> 작업 항목 결과 뷰  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Edit.CreateCopyofWorkItem|Shift+Alt+C|  
@@ -1110,9 +1111,9 @@ ms.lasthandoff: 04/05/2017
 |Team.NewLinkedWorkItem|Shift+Alt+L|  
 |Team.Refresh|F5|  
 |Window.Toggle|Shift+Alt+V|  
-  
+
 ##  <a name="bkmk_workflowdesigner"></a> 워크플로 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |편집.단어자동완성|Ctrl+K, W<br /><br /> 또는<br /><br /> Ctrl+K, Ctrl+W<br /><br /> 또는<br /><br /> Ctrl+스페이스바<br /><br /> 또는<br /><br /> Alt+오른쪽 화살표|  
@@ -1138,9 +1139,9 @@ ms.lasthandoff: 04/05/2017
 |WorkflowDesigner.ToggleSelection|Ctrl+E, Ctrl+S<br /><br /> 또는<br /><br /> Ctrl+E, S|  
 |WorkflowDesigner.ZoomIn|Ctrl+Num +|  
 |WorkflowDesigner.ZoomOut|Ctrl+Num -|  
-  
+
 ##  <a name="bkmk_xamluidesigner"></a> XAML UI 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Design.FitAll|Ctrl+0|  
@@ -1149,21 +1150,26 @@ ms.lasthandoff: 04/05/2017
 |Design.ZoomOut|Ctrl+Alt+-|  
 |Format.EditText|F2|  
 |Format.ResetLayout.All|Ctrl+Shift+R|  
+|프로젝트 코드 실행|Ctrl+F9|  
+|Timeline.Hide(Blend에만 해당)|Ctrl+H|  
+|Timeline.Lock(Blend에만 해당)|Ctrl+L|  
+|Timeline.Show(Blend에만 해당)|Ctrl+Shift+H|  
+|Timeline.Unlock(Blend에만 해당)|Ctrl+Shift+L|  
 |View.EdgeLeftMoveLeft|Ctrl+Shift+,|  
 |View.EdgeLeftMoveRight|Ctrl+Shift+.|  
 |View.EdgeRightMoveLeft|Ctrl+Shift+Alt+,|  
 |View.EdgeRightMoveRight|Ctrl+Shift+Alt+.|  
-|프로젝트 코드 실행|Ctrl+F9|  
-  
+|View.ShowPropertyMarkerMenu|Ctrl+스페이스바|  
+
 ##  <a name="bkmk_xmlTextEditor"></a> XML(텍스트) 편집기  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |XML.StartXSLTDebugging|Alt+F5|  
 |XML.StartXSLTWithoutDebugging|Ctrl+Alt+F5|  
-  
+
 ##  <a name="bkmk_xmlSchemaDesigner"></a> XML 스키마 디자이너  
-  
+
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |GraphView.BottomtoTop|Alt+위쪽 화살표|  
@@ -1174,7 +1180,8 @@ ms.lasthandoff: 04/05/2017
 |XSD디자이너.콘텐츠모델뷰표시|Ctrl+2|  
 |XSD디자이너.그래프뷰표시|Ctrl+3|  
 |XSD디자이너.시작뷰표시|Ctrl+1|  
-  
+
 ## <a name="see-also"></a>참고 항목  
  [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)   
  [IntelliSense 사용](../ide/using-intellisense.md)
+

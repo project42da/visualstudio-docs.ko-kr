@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구를 사용하여 Azure 원격 디버깅 | Microsoft Docs"
+title: "Visual Studio에서 Python을 사용하여 Azure 원격 디버깅 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: ad4cbf1305eec911aa5d6267fefc2c30f622e69a
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: d2caa21359655a2079a853123baea31e471ba040
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="remotely-debugging-python-code-on-azure"></a>Azure에서 Python 코드 원격 디버깅
 
-Visual Studio의 Python 지원에는 Azure App Service에서 실행되는 Python 코드를 원격으로 디버그하는 기능이 포함되어 있습니다. 간단한 원격 디버깅과 달리 이 시나리오의 대상 컴퓨터는 TCP를 통해 직접 액세스할 수 없으므로 Visual Studio에서 HTTP를 통해 디버거 프로토콜을 제공하는 프록시를 제공합니다. 웹 템플릿을 사용하여 만든 프로젝트는 생성된 `web.debug.config` 파일에서 이 프록시를 자동으로 구성합니다. 또한 원격 디버깅은 [Azure App Service에 게시](template-web.md#publishing-to-azure-app-service)에서 설명한 대로 프로젝트의 디버그 구성을 게시할 때 사용할 수도 있습니다.
+[Visual Studio의 Python 지원](installation.md)에는 Azure App Service에서 실행되는 Python 코드를 원격으로 디버그하는 기능이 포함되어 있습니다. 간단한 원격 디버깅과 달리 이 시나리오의 대상 컴퓨터는 TCP를 통해 직접 액세스할 수 없으므로 Visual Studio에서 HTTP를 통해 디버거 프로토콜을 제공하는 프록시를 제공합니다. 웹 템플릿을 사용하여 만든 프로젝트는 생성된 `web.debug.config` 파일에서 이 프록시를 자동으로 구성합니다. 또한 원격 디버깅은 [Azure App Service에 게시](template-web.md#publishing-to-azure-app-service)에서 설명한 대로 프로젝트의 디버그 구성을 게시할 때 사용할 수도 있습니다.
 
 Azure 원격 디버깅에서 웹 소켓을 사용하기 때문에 [Azure Portal](https://portal.azure.com)에서 **설정 > 응용 프로그램 설정**으로 이동하고, **일반 설정 > 웹 소켓**을 **사용**으로 설정한 다음, **저장**을 선택하여 변경 내용을 적용함으로써 App Service를 사용하도록 설정해야 합니다. (**디버깅** 설정은 Python 디버깅에 적용되지 않습니다.)
 

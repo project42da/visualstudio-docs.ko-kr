@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구에서 Python 환경 | Microsoft Docs"
+title: "Visual Studio에서 Python 환경 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 1f8f68e36f94aaf253d304edaa2360333b261be3
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 9140ca7549eefc3ac221f3ca0aa54fde482c8623
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="python-environments"></a>Python 환경
 
-Python 코드는 인터프리터, 라이브러리(일반적으로 Python 표준 라이브러리) 및 설치된 패키지 집합으로 구성된 특정 Python *환경* 내에서 항상 실행됩니다. 이러한 모든 요소에 따라, 어떤 언어로 구성되고 구문이 유효한지, 어떤 운영 체제 기능에 액세스할 수 있으며 어떤 패키지를 사용할 수 있는지가 결정됩니다.
+Visual Studio에서 Python을 통해 여러 Python 환경을 간편하게 관리하고 다양한 프로젝트에 대해 쉽게 전환할 수 있습니다. 
 
-Visual Studio에서 Python 워크로드를 통해 여러 Python 환경을 간편하게 관리하고 다양한 프로젝트에 대해 쉽게 전환할 수 있습니다. 또한 환경에는 환경의 라이브러리에 대한 IntelliSense 데이터베이스가 포함되어 있으므로 Visual Studio 편집기에서 `import`와 같은 문을 입력하면 해당 라이브러리 내의 모듈과 사용 가능한 라이브러리 목록이 자동으로 표시됩니다.
+참고: Visual Studio에서 Python을 처음 사용하는 경우 현재 이 토론의 근간이 되는 다음 항목을 먼저 참조하세요.
+
+    - [Visual Studio에서 Python 작업](python-in-visual-studio.md)
+    - [Visual Studio에서 Python 지원 설치](installation.md)
+
+항상 Python 코드를 실행하는 Python *환경*은 인터프리터, 라이브러리(일반적으로 Python 표준 라이브러리) 및 설치된 패키지 집합으로 구성됩니다. 이러한 모든 요소에 따라, 어떤 언어로 구성되고 구문이 유효한지, 어떤 운영 체제 기능에 액세스할 수 있으며 어떤 패키지를 사용할 수 있는지가 결정됩니다.
+
+또한 Visual Studio 환경에는 환경의 라이브러리에 대한 IntelliSense 데이터베이스가 포함되어 있으므로 Visual Studio 편집기에서 `import`와 같은 문을 입력하면 해당 라이브러리 내의 모듈과 사용 가능한 라이브러리 목록이 자동으로 표시됩니다.
 
 개발자는 하나의 글로벌 Python 환경만 사용하지만 그 외 사용자는 이 항목에서 설명한 대로 여러 글로벌 환경, 프로젝트별 환경 및 가상 환경도 관리해야 하는 경우가 많습니다.
 
@@ -57,7 +65,7 @@ Visual Studio에서 Python 워크로드를 통해 여러 Python 환경을 간편
 
 ## <a name="selecting-and-installing-python-interpreters"></a>Python 인터프리터 선택 및 설치
 
-Visual Studio 2017 Preview를 제외하고, Python 지원에는 Python 인터프리터가 함께 제공되지 않으므로 코드를 실행하려면 다음 중 하나를 설치해야 합니다. 일반적으로 Visual Studio는 새로 설치된 인터프리터를 자동으로 검색하고 이에 대한 환경을 설정합니다. 그렇지 않은 경우 아래 [기존 인터프리터에 대한 환경 만들기](#creating-an-environment-for-an-existing-interpreter)를 참조하세요.
+Visual Studio 2017을 제외하고, Python 지원에는 Python 인터프리터가 함께 제공되지 않으므로 코드를 실행하려면 다음 중 하나를 설치해야 합니다. 일반적으로 Visual Studio는 새로 설치된 인터프리터를 자동으로 검색하고 이에 대한 환경을 설정합니다. 그렇지 않은 경우 아래 [기존 인터프리터에 대한 환경 만들기](#creating-an-environment-for-an-existing-interpreter)를 참조하세요.
 
 | 인터프리터 | 설명 | 
 | --- | --- | 
@@ -82,7 +90,7 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 
 ![Python 환경 창](media/environments-default-view.png)
 
-위의 예에는 Python 3.4(32비트 CPython)가 IronPython 32비트 및 64비트 버전과 함께 설치되어 있습니다. 굵은체로 표시된 기본 환경은 Python 3.4이며 모든 새로운 프로젝트에 사용됩니다. 목록에 환경이 표시되지 않는 경우 Visual Studio용 Python 도구를 설치했으나 Python 인터프리터를 설치하지 않은 것입니다(위의 [Python 인터프리터 선택 및 설치](#selecting-and-installing-python-interpreters) 참조).
+위의 예에는 Python 3.4(32비트 CPython)가 IronPython 2.7 32비트 및 64비트 버전과 함께 설치되어 있습니다. 이 경우 굵게 표시된 기본 환경은 Python 3.4이며 모든 새로운 프로젝트에 사용됩니다. 목록에 환경이 표시되지 않는 경우 Visual Studio 2015 또는 이전 버전에 Visual Studio용 Python 도구를 설치했으나 Python 인터프리터를 설치하지 않은 것입니다(위의 [Python 인터프리터 선택 및 설치](#selecting-and-installing-python-interpreters) 참조). 
 
 > [!Tip]
 > 위에 표시된 것처럼 **Python 환경* 창이 좁으면 환경이 맨 위에 나열되고 아래에 다양한 탭이 표시됩니다. 하지만 창을 충분히 확장하면 넓은 보기가 표시되어 작업하기가 더 편리할 수 있습니다.

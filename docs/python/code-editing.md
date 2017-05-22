@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: 0f2ecd6ca52a04e8813610c0f406251ef4604354
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: b71d44150662c97f355c9b0c14a7888baf6c0683
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="editing-python-code"></a>Python 코드 편집
 
-개발자는 코드 편집기에서 많은 시간을 보내므로 Visual Studio의 Python 지원에서 IntelliSense 구문 강조 표시, 자동 완성, 시그니처 도움말, 메서드 재정의/검색 및 탐색과 같은 생산성 향상에 도움이 되는 기능을 제공합니다. 
+개발자는 코드 편집기에서 많은 시간을 보내므로 [Visual Studio의 Python 지원](installation.md)에서 IntelliSense 구문 강조 표시, 자동 완성, 시그니처 도움말, 메서드 재정의/검색 및 탐색과 같은 생산성 향상에 도움이 되는 기능을 제공합니다. 
 
 항목 내용:
 

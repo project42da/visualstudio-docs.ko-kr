@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: b9e1c2b6be671adb99a13e4a0eb4357fbba477b2
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: a14bc7e8c9194fff3a1bec2739c9e9c2480e905b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -44,7 +45,7 @@ Visual Studio에서는 미리 구성된 서식 옵션과 일치하도록 빠르�
 
 옵션은 **도구 > 옵션 > 텍스트 편집기 > Python > 서식** 및 해당 하위 탭을 통해 설정되며, 기본적으로 [PEP 8 스타일 가이드](http://www.python.org/dev/peps/pep-0008/)의 상위 집합과 일치하도록 설정됩니다. **일반** 탭은 서식을 적용할 시기를 결정하며, 다른 세 개의 하위 페이지는 다음 섹션에서 정의됩니다.
 
-Visual Studio의 Python 지원에는 아래에서 설명한 대로 **편집 > 고급** 메뉴에 유용한 [주석 단락 채우기](#fill-comment-paragraph-command) 명령도 추가되어 있습니다.
+[Visual Studio의 Python 지원](installation.md)에는 아래에서 설명한 대로 **편집 > 고급** 메뉴에 유용한 [주석 단락 채우기](#fill-comment-paragraph-command) 명령도 추가되어 있습니다.
 
 ## <a name="spacing"></a>간격
 

@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 메모리 사용 분석 | Microsoft Docs"
 ms.custom: H1Hack27Feb2017
-ms.date: 11/04/2016
+ms.date: 04/25/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 697b8f5517ad9a953a04f920be39c9ef2cfa2558
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 137f6faa156d188afb99cafb2b1e9dbababdeb4f
+ms.openlocfilehash: a7de37fd82f94fdcef6f839884ea30c5c77061e5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="analyze-memory-usage"></a>메모리 사용 분석
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/05/2017
   
  언제든지 **메모리 사용량** 도구에서 메모리 스냅숏을 수집할 수 있지만 Visual Studio 디버거를 사용하여 성능 문제를 조사하는 동안 응용 프로그램이 실행되는 방식을 제어할 수 있습니다. 중단점 설정, 단계별 실행, 모두 중단 및 기타 디버거 작업은 가장 관련된 코드 경로를 중심으로 성능 조사를 수행하는 데 도움이 됩니다. 앱이 실행되는 동안 이러한 작업을 수행하면 불필요한 노이즈를 코드에서 제거하고, 문제 진단에 걸리는 시간을 크게 줄일 수 있습니다.  
   
- 디버거 외부에서 메모리 도구를 사용할 수도 있습니다. [디버그하지 않는 경우의 메모리 사용량](../profiling/memory-usage-without-debugging2.md)을 참조하세요.  
+ 디버거 외부에서 메모리 도구를 사용할 수도 있습니다. [Memory Usage without Debugging](../profiling/memory-usage-without-debugging2.md)을 참조하세요.  
   
 > [!NOTE]
 >  **사용자 지정 할당자 지원** 기본 메모리 프로파일러는 런타임 중 내보낸 할당 [ETW](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803\(v=vs.85\).aspx) 이벤트 데이터를 수집하여 작동합니다.  CRT 및 Windows SDK의 할당자가 해당 할당 데이터를 캡처할 수 있도록 원본 수준에서 주석이 추가되었습니다.  고유한 할당자를 작성하는 경우 myMalloc에 대한 다음 예제처럼 새로 할당된 힙 메모리에 대한 포인터를 반환하는 모든 함수를 [__declspec](/cpp/cpp/declspec)(allocator)로 데코레이트할 수 있습니다.  
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/05/2017
     ![스냅숏 만들기](../profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot") 
      
      > [!TIP]
-     >  -   메모리 비교 기준을 만들려면 디버깅 세션을 시작할 때 스냅숏을 만드는 것이 좋습니다.  
+     >  메모리 비교 기준을 만들려면 디버깅 세션을 시작할 때 스냅숏을 만드는 것이 좋습니다.  
 
 6.  첫 번째 중단점이 발생할 시나리오를 실행합니다.
 
@@ -113,17 +114,15 @@ ms.lasthandoff: 04/05/2017
 -   **힙 크기(차이)** 열에는 .NET 및 네이티브 힙의 바이트 수가 표시됩니다. 
 
 여러 스냅숏을 만든 경우 요약 테이블의 셀에 행 스냅숏과 이전 스냅숏 간의 값 변경 내용이 포함됩니다.  
-  
-![메모리 요약 표 셀](../profiling/media/dbgdiag_mem_summarytablecell.png "DBGDIAG_MEM_SummaryTableCell")  
 
 메모리 사용량을 분석하려면 메모리 사용량에 대한 자세한 보고서를 여는 다음 링크 중 하나를 클릭합니다.  
 
 -   현재 스냅숏과 이전 스냅숏 간의 차이 정보를 보려면 행의 왼쪽에 있는 변경 링크(![메모리 사용량 증가](../profiling/media/prof-tour-mem-usage-up-arrow.png "메모리 사용량 증가"))를 선택합니다. 빨간색 화살표는 메모리 사용량 증가를 나타내고 녹색 화살표는 감소를 나타냅니다.
 
     > [!TIP]
-    >  메모리 문제를 더 빠르게 확인하기 위해 차이 보고서는 전체 수에서 가장 많이 증가한 개체 형식(**개체(차이)** 열의 변경 링크) 또는 전체 힙 크기에서 가장 많이 증가한 개체 형식(**힙 크기(차이)** 열의 변경 링크)별로 정렬됩니다.
+    >  메모리 문제를 더 빠르게 확인하기 위해 차이 보고서는 전체 수에서 가장 많이 증가한 개체 형식(**개체(차이)** 열의 변경 링크 클릭) 또는 전체 힙 크기에서 가장 많이 증가한 개체 형식(**힙 크기(차이)** 열의 변경 링크 클릭)별로 정렬됩니다.
 
--   선택한 스냅숏의 세부 정보를 보려면 비변경 링크를 선택합니다. 
+-   선택한 스냅숏의 세부 정보를 보려면 비변경 링크를 클릭합니다. 
   
  보고서는 별도의 창에 나타납니다.   
   

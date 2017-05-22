@@ -1,7 +1,7 @@
 ---
 title: "빠른 작업 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/10/2017
+ms.date: 05/08/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.devlang: csharp
 ms.assetid: e173fb7d-c5bd-4568-ba0f-aa61913b3244
-author: BrianPeek
-ms.author: brpeek
+author: kempb
+ms.author: kempb
 manager: ghogen
 dev_langs:
 - CSharp
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
-ms.openlocfilehash: 226e51ace56d51945cc380aaaf3450ae7dacf8e4
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2831d252fbc9601e62c372ac3df7704e1dc65f2a
+ms.openlocfilehash: e59204427c8d7d1706ca6c85261733efdcbc440e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="quick-actions"></a>빠른 작업
@@ -105,7 +106,7 @@ switch(myEnum)
     case MyEnum.Item3:
         break;
     default:
-        break;    
+        break;
 }
 ```
 
@@ -313,7 +314,7 @@ Debug.WriteLine("Hello")
 ```
 
 ### <a name="convert-to-interpolated-string"></a>보간된 문자열로 변환
-[보간된 문자열](/dotnet/articles/csharp/language-reference/keywords/interpolated-strings)은 포함된 변수로 문자열을 표현하는 간단한 방법이며, **[String.Format](https://msdn.microsoft.com/library/system.string.format(v=vs.110).aspx)** 메서드와 유사합니다.  이 빠른 작업은 문자열이 연결되는 사례를 인식하거나 **String.Format**을 사용하여 사용법을 보간된 문자열로 변경합니다.
+[보간된 문자열](/dotnet/articles/csharp/language-reference/keywords/interpolated-strings)은 포함된 변수로 문자열을 표현하는 간단한 방법이며, **[String.Format](https://msdn.microsoft.com/library/system.string.format.aspx)** 메서드와 유사합니다.  이 빠른 작업은 문자열이 연결되는 사례를 인식하거나 **String.Format**을 사용하여 사용법을 보간된 문자열로 변경합니다.
 
 ```CSharp
 // Before
@@ -339,5 +340,95 @@ Dim num as Integer = 3
 Dim s As String = $"My string with {num} in the middle"
 ```
 
+### <a name="remove-merge-conflict-markers"></a>병합 충돌 표식 제거
+이러한 빠른 작업을 통해 충돌 코드 및 표식을 제거하는 “변경을 적용”하여 병합 충돌을 해결할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
+
+![리팩터링 - 병합 충돌 해결](../ide/media/vside-refactoring-merge-conflicts.png)
+
+### <a name="add-null-checks-for-parameters"></a>매개 변수에 대한 null 검사 추가
+빠른 작업을 통해 매개 변수가 null인지 알려주는 검사를 코드에 추가할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
+
+![리팩터링 - null 검사 추가](../ide/media/vside-refactoring-nullcheck.png)
+
+### <a name="constructor-generator-improvements"></a>생성자 생성기 기능 향상
+생성자를 만들 경우 이 빠른 작업을 통해 생성할 속성 또는 필드를 선택할 수 있고 빈 본문에서 생성자를 생성할 수도 있습니다. 빠른 작업을 사용하여 호출 사이트에서 기존 생성자에 매개 변수를 추가할 수도 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
+
+![리팩터링 - 생성자 생성](../ide/media/vside-refactoring-constructors.png)
+
+### <a name="remove-unused-variables"></a>사용하지 않는 변수 제거
+이 빠른 작업을 통해 코드에서 사용된 적이 없고 사용되지 않는 변수를 제거할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
+
+![리팩터링 - 사용하지 않는 변수](../ide/media/vside-refactoring-unusedvars.png)
+
+### <a name="generate-overrides"></a>재정의 생성
+이 빠른 작업을 통해 클래스 또는 구조체의 빈 줄에서 재정의를 만들 수 있습니다. **Pick Members**(멤버 선택) 대화 상자에서 재정의할 멤버를 선택할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
+
+![리팩터링 - 재정의](../ide/media/vside-refactoring-overrides.png)
+
+![리팩터링 - 재정의 대화 상자](../ide/media/vside-refactoring-overrides-dialog.png)
+
+### <a name="change-base-for-numeric-literals"></a>숫자 리터럴에 대한 기본 변경
+이 빠른 작업을 통해 기본 숫자 시스템 간에 숫자 리터럴을 변환할 수 있습니다. 예를 들어 숫자를 16진수 또는 이진 형식으로 변경할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
+
+![리팩터링 - 기본 변경](../ide/media/vside-refactoring-changebase1.png)
+
+![리팩터링 - 기본 변경](../ide/media/vside-refactoring-changebase2.png)
+
+### <a name="insert-digit-separators-into-literals"></a>자릿수 구분 기호를 리터럴로 삽입
+이 빠른 작업을 통해 구분 기호 문자를 리터럴 값으로 추가할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
+
+![리팩터링 - 자릿수 구분 기호 변경](../ide/media/vside-refactoring-separators.png)
+
+### <a name="convert-if-construct-to-switch"></a>**if** 구문을 **switch**로 변환
+이 빠른 작업을 통해 **if-then-else** 구문을 **switch** 구문으로 변환할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
+
+```CSharp
+// Before
+if (obj is string s)
+{
+  Console.WriteLine("obj is a string: " + s);  
+}
+
+else if (obj is int i && i > 10)
+{
+  Console.WriteLine("obj is an int greater than 10");
+}
+
+// Convert to switch
+
+// After
+switch (obj)
+{
+  case string s:
+    Console.WriteLine("Obj is a string: " + s);
+    break;
+  case int i when i > 10:
+    Console.WriteLine("obj is an int greater than 10");
+    break;
+}
+```
+
+```VB
+' Before
+If TypeOf obj Is String s Then
+    Console.WriteLine("obj is a string: " + s)
+Else If TypeOf obj Is Integer i And i > 10 Then
+    Console.WriteLine("obj is an int greater than 10")
+End If
+
+' Convert to switch
+
+' After
+Select Case obj
+  Case String s
+    Console.WriteLine("Obj is a string: " + s)
+    Exit Sub
+  Case Integer i when i > 10
+    Console.WriteLine("obj is an int greater than 10")
+    Exit Sub
+End Select
+```
+
 # <a name="see-also"></a>참고 항목
 * [코드 스타일 및 빠른 작업](code-styles-and-quick-actions.md)
+

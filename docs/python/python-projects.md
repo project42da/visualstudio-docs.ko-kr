@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: eb3abd0f37e52f2b1db3793a5471b74a5e0c37ff
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 3190be68fbba464a84a7a25b2d829979944bdb1f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -71,7 +72,7 @@ Visual Studio에서 Python 프로젝트에 대한 소개는 [Python 도구 시�
 
 응용 프로그램을 개발할 때 일반적으로 다양한 유형의 새 파일을 프로젝트에 추가해야 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 기존 항목...**을 선택하여 추가할 파일을 찾거나 **추가 > 새 항목...**을 선택하면 빈 python 파일, python 클래스, 단위 테스트 및 웹 응용 프로그램과 관련된 다양한 항목 템플릿이 들어 있는 대화 상자가 나타납니다. 테스트 프로젝트를 통해 이러한 옵션을 시도해 보고 사용자의 Visual Studio 버전에서 사용 가능한 항목을 알아보는 것이 좋습니다.
 
-각 Python 프로젝트에는 솔루션 탐색기에서 굵게 표시된 시작 파일이 하나씩 할당되어 있습니다. 이 파일은 디버깅을 시작하거나(F5 또는 **디버그 > 디버깅 시작**) 대화형 창에서 프로젝트를 실행할 때(Shift+Alt+F5 또는 **디버그 > Python Interactive에서 프로젝트 실행**) 실행됩니다. 파일을 변경하려면 새 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
+각 Python 프로젝트에는 솔루션 탐색기에서 굵게 표시된 시작 파일이 하나씩 할당되어 있습니다. 이 파일은 디버깅을 시작하거나(F5 또는  **디버그 > 디버깅 시작**) 대화형 창에서 프로젝트를 실행할 때(Shift+Alt+F5 또는 **디버그 > Python Interactive에서 프로젝트 실행**) 실행됩니다. 파일을 변경하려면 새 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
 
 > [!Tip]
 > 프로젝트에서 선택한 시작 파일을 제거하고 새 시작 파일을 선택하지 않은 경우에 프로젝트를 실행하려고 하면, Python 출력 창이 나타났다가 거의 바로 사라집니다. 이 동작이 발생할 경우 할당된 시작 파일이 있는지 확인합니다. 또한 이러한 경우 출력 창을 열어 두려면 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**을 선택하고, **디버그** 탭을 선택한 다음 `-i`를 **인터프리터 인수** 필드에 추가합니다. 그러면 프로그램이 완료된 후 인터프리터가 대화형 모드로 전환되어 창이 열린 상태로 유지되며 Ctrl+Z, Enter 키를 누르면 종료됩니다.
@@ -100,7 +101,7 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 | IronPython Silverlight 웹 페이지 | Silverlight를 사용하여 브라우저에서 실행되는 IronPython 프로젝트입니다. 응용 프로그램의 Python 코드는 웹 페이지에 스크립트로 포함됩니다. 상용구 스크립트 태그는 Python 코드가 DOM과 상호 작용할 수 있는 Silverlight 내부에서 실행되는 IronPython을 초기화하는 일부 JavaScript 코드를 가져옵니다. |
 | IronPython Windows Forms 응용 프로그램 | Windows Forms에서 코드를 사용하여 만든 UI에 IronPython을 사용하는 프로젝트 구조입니다. 콘솔을 표시하지 않고 응용 프로그램을 실행합니다. |
 | 백그라운드 응용 프로그램(IoT) | 장치에서 백그라운드 서비스로 실행되도록 Python 프로젝트 배포를 지원합니다. 자세한 내용은 [Windows IoT 개발자 센터](https://dev.windows.com/en-us/iot)를 참조하세요. |
-| Python 확장 모듈 | 이 템플릿은 Python 워크로드와 함께 **Python 네이티브 개발 도구**를 Visual Studio 2017 Preview에 설치한 경우([설치](installation.md) 참조) Visual C++ 아래에 나타납니다. 이 템플릿은 [Python용 C++ 확장 만들기](cpp-and-python.md)에 설명된 대로 C++ 확장 DLL의 핵심 구조를 제공합니다. |
+| Python 확장 모듈 | 이 템플릿은 Python 워크로드와 함께 **Python 네이티브 개발 도구**를 Visual Studio 2017에 설치한 경우([설치](installation.md) 참조) Visual C++ 아래에 나타납니다. 이 템플릿은 [Python용 C++ 확장 만들기](cpp-and-python.md)에 설명된 대로 C++ 확장 DLL의 핵심 구조를 제공합니다. |
 
 <a name="create-project-from-existing-files"</a>
 ### <a name="creating-a-project-from-existing-files"></a>기존 파일에서 프로젝트 만들기

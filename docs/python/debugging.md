@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 Python 도구에서 디버깅 | Microsoft Docs"
+title: "Visual Studio에서 Python 디버그 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 1d26ca1a464e2ec15c0d5d338a46b6fb1e7e1d65
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: e15edc1f2739cad0960619aa6cb4b089589eebd8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="debugging-your-python-code"></a>Python 코드 디버깅
 
-PTVS(Visual Studio용 Python 도구)는 실행 중인 프로세스에 연결하고, 조사식 및 직접 실행 창에서 식을 계산하고, 지역 변수, 중단점, 문 단계별 실행/프로시저 나가기/프로시저 단위 실행, 다음 문 설정 등을 검사하는 작업을 포함한 포괄적인 디버깅 환경을 Python에 제공합니다. 
+Visual Studio에서는 실행 중인 프로세스에 연결하고, 조사식 및 직접 실행 창에서 식을 계산하고, 지역 변수, 중단점, 문 단계별 실행/프로시저 나가기/프로시저 단위 실행, 다음 문 설정 등을 검사하는 작업을 포함한 포괄적인 디버깅 환경을 Python에 제공합니다. 
 
 디버깅 개요는 [PTVS 시작 4 부: 디버깅](https://youtu.be/bO7wpzgy74A?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)(youtube.com, 3분 30초)을 참조하세요.
 
@@ -58,7 +59,7 @@ PTVS(Visual Studio용 Python 도구)는 실행 중인 프로세스에 연결하�
 
 <a name="debugging-without-a-project"</a>
 > [!Tip]
-> PTVS는 프로젝트 없이 디버깅을 지원합니다. Visual Studio의 편집기에서 독립 실행형 Python 파일을 마우스 오른쪽 단추로 클릭하여 열고 **디버깅 시작**을 선택하면 PTVS는 전역 기본 환경([Python 환경](python-environments.md) 참조)에서 인수가 없이 스크립트를 실행합니다. 하지만 이때부터 디버깅을 전적으로 지원합니다.
+> Visual Studio의 Python은 프로젝트 없이 디버깅을 지원합니다. 편집기에서 독립 실행형 Python 파일을 마우스 오른쪽 단추로 클릭하여 열고 **디버깅 시작**을 선택하면 Visual Studio는 전역 기본 환경([Python 환경](python-environments.md) 참조)에서 인수 없이 스크립트를 실행합니다. 하지만 이때부터 디버깅을 전적으로 지원합니다.
 >
 > 환경과 인수를 제어하려면 코드에 대한 프로젝트를 만들어야 합니다. [기존 Python 코드에서](python-projects.md#creating-a-project-from-existing-files)를 사용하여 이 작업을 쉽게 수행할 수 있습니다.
 
