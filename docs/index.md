@@ -794,7 +794,7 @@ ms.lasthandoff: 05/10/2017
                 <a href="https://go.microsoft.com/fwlink/?linkid=833101"> Twitter </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833103"> 스택 오버플로 </a>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833103"> Stack Overflow </a>
             </li>
             <li>
                 <a href="https://go.microsoft.com/fwlink/?linkid=833104"> 문제 보고 </a>
