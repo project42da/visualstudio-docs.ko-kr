@@ -42,8 +42,8 @@ Visual Studio에서 Python을 통해 여러 Python 환경을 간편하게 관리
 
 참고: Visual Studio에서 Python을 처음 사용하는 경우 현재 이 토론의 근간이 되는 다음 항목을 먼저 참조하세요.
 
-    - [Visual Studio에서 Python 작업](python-in-visual-studio.md)
-    - [Visual Studio에서 Python 지원 설치](installation.md)
+- [Visual Studio에서 Python 작업](python-in-visual-studio.md)
+- [Visual Studio에서 Python 지원 설치](installation.md)
 
 항상 Python 코드를 실행하는 Python *환경*은 인터프리터, 라이브러리(일반적으로 Python 표준 라이브러리) 및 설치된 패키지 집합으로 구성됩니다. 이러한 모든 요소에 따라, 어떤 언어로 구성되고 구문이 유효한지, 어떤 운영 체제 기능에 액세스할 수 있으며 어떤 패키지를 사용할 수 있는지가 결정됩니다.
 

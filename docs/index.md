@@ -4,8 +4,8 @@ hide_bc: true
 title: "Visual Studio 설명서"
 description: "Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 개발하는 방법에 대해 알아봅니다."
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2831d252fbc9601e62c372ac3df7704e1dc65f2a
-ms.openlocfilehash: a8f12e3418da5ec6fe778d3a7eaed610c120a859
+ms.sourcegitcommit: 601cfd86b10f6194d817fc02e6ea0087608fd0ff
+ms.openlocfilehash: ec537370a7bc42a6d93ac377b9cd280733da6799
 ms.contentlocale: ko-kr
 ms.lasthandoff: 05/10/2017
 
@@ -247,25 +247,25 @@ ms.lasthandoff: 05/10/2017
                                         </div>
                                     </div>
                                 </a>
-                            </li>                            
-                            <li>        
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">        
-                                  <div class="cardSize">        
-                                    <div class="cardPadding">        
-                                      <div class="card">        
-                                        <div class="cardImageOuter">        
-                                          <div class="cardImage bgdAccent1 cardScaleImage">        
-                                            <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />        
-                                        </div>        
-                                        </div>        
-                                          <div class="cardText">        
-                                            <h3>데이터 과학 및 분석 응용 프로그램</h3>        
-                                            <p>Python, R 및 F#을 포함하여 데이터 과학 응용 프로그램을 만들기 위한 언어 및 도구입니다.</p>        
-                                        </div>        
-                                      </div>        
-                                    </div>        
-                                  </div>        
-                                </a>        
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">
+                                  <div class="cardSize">
+                                    <div class="cardPadding">
+                                      <div class="card">
+                                        <div class="cardImageOuter">
+                                          <div class="cardImage bgdAccent1 cardScaleImage">
+                                            <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />
+                                        </div>
+                                        </div>
+                                          <div class="cardText">
+                                            <h3>데이터 과학 및 분석 응용 프로그램</h3>
+                                            <p>데이터 과학 응용 프로그램을 만들기 위한 언어 및 도구입니다(Python, R 및 F# 지원 포함).</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
                             </li>
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=833075">
