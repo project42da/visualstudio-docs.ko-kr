@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 444f6bf46c3eac65a2771655616fd67d8ed83b32
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>최선의 코딩된 UI 테스트 방법
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/04/2017
   
 -   UI(사용자 인터페이스)가 변경되면 테스트 메서드 또는 어설션 메서드를 다시 기록하거나 기존 테스트 메서드의 영향을 받는 섹션을 다시 기록합니다.  
   
--   테스트 중인 응용 프로그램의 각 모듈에 대해 별도<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 파일을 만듭니다. 자세한 내용은 [여러 UI 맵이 포함된 대형 응용 프로그램 테스트](../test/testing-a-large-application-with-multiple-ui-maps.md)를 참조하세요.  
+-   테스트 대상 응용 프로그램의 각 모듈에 대해 별도 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 파일을 만듭니다. 자세한 내용은 [여러 UI 맵이 포함된 대형 응용 프로그램 테스트](../test/testing-a-large-application-with-multiple-ui-maps.md)를 참조하세요.  
   
 -   테스트 대상 응용 프로그램에서 UI 컨트롤을 만들 때 의미 있는 이름을 사용합니다. 이렇게 하면 자동으로 생성된 컨트롤 이름에 더 많은 의미와 유용성이 제공됩니다.  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/04/2017
   
  코딩된 UI 테스트는 사용자 인터페이스의 여러 변경 내용에 맞게 자동으로 조정됩니다. 예를 들어 UI 요소의 위치 또는 색이 변경된 경우에도 대체로 코딩된 UI 테스트에서 올바른 요소를 찾습니다.  
   
- 테스트 실행 중에 테스트 프레임워크가 **코딩된 UI 테스트 빌더**에 의해 `UIMap.Designer.cs`파일에 생성된 정의의 각 컨트롤 클래스에 적용되는 검색 속성 집합을 사용하여 UI 컨트롤을 찾습니다. 검색 속성에는 컨트롤의 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> 및 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> 속성과 같이 컨트롤을 식별하는 데 사용할 수 있는 속성 이름 및 속성 값의 이름-값 쌍이 포함됩니다. 검색 속성이 변경되지 않은 경우 코딩된 UI 테스트가 UI에서 컨트롤을 성공적으로 찾습니다. 검색 속성이 변경된 경우 코딩된 UI 테스트에 추론을 적용하여 UI에서 컨트롤과 창을 찾는 스마트 일치 알고리즘이 있습니다. UI가 변경된 경우 이전에 식별된 요소의 검색 속성을 수정하여 찾을 수 있습니다.  
+ 테스트 실행 중에 테스트 프레임워크가 **코딩된 UI 테스트 빌더**에 의해 `UIMap.Designer.cs`파일에 생성된 정의의 각 컨트롤 클래스에 적용되는 검색 속성 집합을 사용하여 UI 컨트롤을 찾습니다. 검색 속성에는 컨트롤의 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> 및 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> 속성과 같이 컨트롤을 식별하는 데 사용할 수 있는 속성 이름과 속성 값의 이름-값 쌍이 포함됩니다. 검색 속성이 변경되지 않은 경우 코딩된 UI 테스트가 UI에서 컨트롤을 성공적으로 찾습니다. 검색 속성이 변경된 경우 코딩된 UI 테스트에 추론을 적용하여 UI에서 컨트롤과 창을 찾는 스마트 일치 알고리즘이 있습니다. UI가 변경된 경우 이전에 식별된 요소의 검색 속성을 수정하여 찾을 수 있습니다.  
   
 ## <a name="what-to-do-if-your-user-interface-changes"></a>사용자 인터페이스가 변경된 경우 수행할 작업  
  개발 중에는 사용자 인터페이스가 자주 변경됩니다. 이러한 변경의 영향을 줄이는 몇 가지 방법은 다음과 같습니다.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 04/04/2017
  코딩된 UI 테스트를 기록하는 방법에 대한 자세한 내용은 [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)를 참조하세요.  
   
 ## <a name="what-to-do-if-a-background-process-needs-to-complete-before-the-test-can-continue"></a>백그라운드 프로세스가 완료되어야 테스트를 계속할 수 있는 경우 수행할 작업  
- 다음 UI 작업을 계속하기 전에 프로세스가 완료될 때까지 기다려야 할 수도 있습니다. 이 작업을 수행하려면 다음 예제와 같이 <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyLevel%2A>를 사용하여 테스트를 계속하기 전까지 대기할 수 있습니다.  
+ 다음 UI 작업을 계속하기 전에 프로세스가 완료될 때까지 기다려야 할 수도 있습니다. 이렇게 하려면 다음 샘플과 같이 <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyLevel%2A>을 사용하여 테스트를 계속하기 전에 기다릴 수 있습니다.  
   
 ```  
 // Set the playback to wait for all threads to finish  
