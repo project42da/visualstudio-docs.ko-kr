@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: bf50213627703ac18257e3f0ec44c20cc7bb2cc9
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>코딩된 UI 테스트 분석
@@ -73,7 +74,7 @@ using Mouse = Microsoft.VisualStudio.TestTools.UITesting.Mouse;
 using MouseButtons = System.Windows.Forms.MouseButtons;  
 ```  
   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> 네임스페이스는 Windows 사용자 인터페이스(UI)를 위해 포함되어 있습니다. 웹 페이지 UI의 경우 네임스페이스는 <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>이며, Windows Presentation Foundation UI의 경우 네임스페이스는 <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>입니다.  
+ <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> 네임스페이스는 Windows UI(사용자 인터페이스)용으로 포함되었습니다. 웹 페이지 UI의 경우 네임스페이스는 <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>입니다. Windows Presentation Foundation UI의 경우 네임스페이스는 <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>입니다.  
   
 ####  <a name="UIMapClass"></a> UIMap 클래스  
  파일의 다음 섹션은 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 클래스입니다.  
@@ -155,7 +156,7 @@ Assert.AreEqual(
     uIItemEdit.Text);  
 ```  
   
- Windows 계산기 응용 프로그램의 개발자가 공개적으로 사용할 수 있는 컨트롤 이름을 제공하지 않으므로 텍스트 상자 이름은 알 수 없음으로 나열됩니다. 실제 값이 예상 값과 다르면 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName> 메서드가 실패하여 테스트도 실패하게 됩니다. 또한 예상 값은 소수점 뒤에 공백을 포함합니다. 이 특정 테스트의 기능을 수정해야 하는 경우 해당 소수점과 공백을 허용해야 합니다.  
+ Windows 계산기 응용 프로그램의 개발자가 공개적으로 사용할 수 있는 컨트롤 이름을 제공하지 않으므로 텍스트 상자 이름은 알 수 없음으로 나열됩니다. 실제 값이 예상 값과 같지 않은 경우 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName> 메서드가 실패하여 테스트에 실패합니다. 또한 예상 값은 소수점 뒤에 공백을 포함합니다. 이 특정 테스트의 기능을 수정해야 하는 경우 해당 소수점과 공백을 허용해야 합니다.  
   
 #####  <a name="UIMapProperties"></a> UIMap 속성  
  각 속성에 대한 코드도 클래스 전체에서 매우 표준적입니다. `AddItemsParams` 속성에 대한 다음 코드는 `AddItems()` 메서드에서 사용됩니다.  
@@ -199,7 +200,7 @@ public class AddItemsParams
 }  
 ```  
   
- `UIMap.cs` 파일의 모든 클래스와 마찬가지로 이 클래스도 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>로 시작합니다. 이 작은 클래스에는 앞에서 설명한 `UIMap.AddItems()` 메서드에 사용되는 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> 메서드에 대한 매개 변수로 사용할 문자열을 정의하는 `Fields` 구역이 있습니다. 이러한 매개 변수가 사용되는 메서드를 호출하기 전에 해당 문자열 필드의 값을 바꾸는 코드를 작성할 수 있습니다.  
+ `UIMap.cs` 파일의 모든 클래스와 마찬가지로, 이 클래스는 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>로 시작합니다. 이 작은 클래스에는 앞에서 설명한 `UIMap.AddItems()` 메서드에서 사용되는 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> 메서드의 매개 변수로 사용할 문자열을 정의하는 `Fields` 영역이 있습니다. 이러한 매개 변수가 사용되는 메서드를 호출하기 전에 해당 문자열 필드의 값을 바꾸는 코드를 작성할 수 있습니다.  
   
 ###  <a name="UIMapCS"></a> UIMap.cs  
  기본적으로 이 파일은 메서드나 속성이 없는 partial `UIMap` 클래스를 포함합니다.  
@@ -207,7 +208,7 @@ public class AddItemsParams
 #### <a name="uimap-class"></a>UIMap 클래스  
  여기서 사용자 지정 코드를 만들어 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 클래스의 기능을 확장할 수 있습니다. 이 파일에 만드는 코드는 테스트를 수정할 때마다 **코딩된 UI 테스트 빌더**에서 다시 생성되지 않습니다.  
   
- <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>의 모든 파트는 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 클래스의 다른 파트의 메서드 및 속성을 사용할 수 있습니다.  
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>의 모든 부분에서 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 클래스의 다른 부분에 있는 메서드와 속성을 사용할 수 있습니다.  
   
 ###  <a name="CodedUITestCS"></a> CodedUITest1.cs  
  이 파일은 **코딩된 UI 테스트 빌더**에서 생성되지만 테스트를 수정할 때마다 다시 생성되지 않으므로 이 파일의 코드를 수정할 수 있습니다. 파일 이름은 테스트를 만들 때 지정한 테스트 이름에서 생성됩니다.  
@@ -273,7 +274,7 @@ public void MyTestCleanup()
 }  
 ```  
   
- `MyTestInitialize()` 메서드에는 다른 테스트 메서드에 앞서 이 메서드를 호출하도록 테스트 프레임워크에 알리는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>가 적용됩니다. 마찬가지로 `MyTestCleanup()` 메서드에는 다른 모든 테스트 메서드가 호출된 후에 이 메서드를 호출하도록 테스트 프레임워크에 알리는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>가 적용됩니다. 이러한 메서드 사용은 선택 사항입니다. 이 테스트를 위해 `MyTestInitialize()`에서 `UIMap.LaunchCalculator()` 메서드를 호출할 수 있고, `CodedUITest1Method1()` 대신 `MyTestCleanup()`에서 `UIMap.CloseCalculator()` 메서드를 호출할 수 있습니다.  
+ `MyTestInitialize()` 메서드에는 다른 테스트 메서드보다 먼저 이 메서드를 호출하도록 테스트 프레임워크에 지시하는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>가 적용되어 있습니다. 마찬가지로, `MyTestCleanup()` 메서드에는 다른 테스트 메서드가 모두 호출된 후 이 메서드를 호출하도록 테스트 프레임워크에 지시하는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>가 적용되어 있습니다. 이러한 메서드 사용은 선택 사항입니다. 이 테스트를 위해 `MyTestInitialize()`에서 `UIMap.LaunchCalculator()` 메서드를 호출할 수 있고, `CodedUITest1Method1()` 대신 `MyTestCleanup()`에서 `UIMap.CloseCalculator()` 메서드를 호출할 수 있습니다.  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute>를 사용하여 이 클래스에 더 많은 메서드를 추가하는 경우 테스트 프레임워크에서 테스트의 일부로 각 메서드를 호출합니다.  
   
