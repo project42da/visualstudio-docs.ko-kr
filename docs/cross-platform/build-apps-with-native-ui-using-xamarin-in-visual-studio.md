@@ -1,19 +1,39 @@
 ---
-title: "Visual Studio에서 Xamarin을 사용하여 네이티브 UI로 앱 빌드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tgt-pltfrm-cross-plat"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visual Studio에서 Xamarin을 사용하여 네이티브 UI로 앱 빌드 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
 caps.latest.revision: 31
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 23
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 48b5010ae161b2ce6ad22513afbca4a8e5fe82d3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio에서 Xamarin을 사용하여 네이티브 UI로 앱 빌드
 [설정 및 설치](../cross-platform/setup-and-install.md) 및 [Xamarin 환경 확인](../cross-platform/verify-your-xamarin-environment.md)의 단계를 완료했으면 이 연습 과정을 통해 네이티브 UI 레이어로 기본 Xamarin 앱을 빌드하는 방법을 확인합니다(아래 참조). 네이티브 UI에서는 공유 코드가 PCL(이식 가능한 클래스 라이브러리)에 상주하며 개별 플랫폼 프로젝트가 UI 정의를 포함합니다.  
@@ -52,14 +72,14 @@ caps.handback.revision: 23
 >      -   [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)  
 >     -   [Hello, Xamarin.Forms 멀티스크린](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
   
-##  <a name="a-namesolutiona-set-up-your-solution"></a><a name="solution"></a> 솔루션 설정  
+##  <a name="solution"></a> 솔루션 설정  
  다음 단계에서는 공유 코드에 대한 PCL과 두 개의 추가 NuGet 패키지를 포함하는 네이티브 UI로 Xamarin 솔루션을 만듭니다.  
   
 1.  Visual Studio에서 새 **비어 있는 앱(네이티브 이식 가능)** 솔루션을 만들고 **WeatherApp**으로 이름을 지정합니다. 검색 필드에 **네이티브 이식 가능**을 입력하면 이 템플릿을 가장 쉽게 찾을 수 있습니다.  
   
      템플릿이 이 위치에 없으면 Xamarin을 설치하거나 Visual Studio 2015 기능을 사용하도록 설정해야 합니다. [설정 및 설치](../cross-platform/setup-and-install.md)를 참조하세요.  
   
-2.  확인을 클릭하여 솔루션을 만든 후에는 몇 개의 개별 프로젝트가 만들어집니다.  
+2.  [확인]을 클릭하여 솔루션을 만든 후에는 많은 개별 프로젝트가 만들어집니다.  
   
     -   **WeatherApp(이식 가능)**: 일반적인 비즈니스 논리 및 Xamarin.Forms를 사용하는 UI 코드를 포함하여 플랫폼 간에 공유되는 코드를 작성하는 PCL입니다.  
   
@@ -91,8 +111,8 @@ caps.handback.revision: 23
   
 5.  솔루션을 빌드하고 빌드 오류가 없는지 확인합니다.  
   
-##  <a name="a-namedataservicea-write-shared-data-service-code"></a><a name="dataservice"></a> 공유 데이터 서비스 코드 작성  
- **WeatherApp (Portable)** 프로젝트는 모든 플랫폼에서 공유되는 PCL(이식 가능한 클래스 라이브러리)에 대한 코드를 작성하는 프로젝트입니다. PCL은 iOS, Android, Windows Phone 프로젝트에서 빌드된 앱 패키지에 자동으로 포함됩니다.  
+##  <a name="dataservice"></a> 공유 데이터 서비스 코드 작성  
+ **WeatherApp(이식 가능)** 프로젝트는 모든 플랫폼에서 공유되는 PCL(이식 가능한 클래스 라이브러리)에 대한 코드를 작성하는 프로젝트입니다. PCL은 iOS, Android, Windows Phone 프로젝트에서 빌드된 앱 패키지에 자동으로 포함됩니다.  
   
  다음 단계에서는 날씨 서비스의 데이터를 액세스하고 저장하기 위한 코드를 PCL에 추가합니다.  
   
@@ -131,7 +151,7 @@ caps.handback.revision: 23
     }  
     ```  
   
-4.  **DataService.cs** 라는 PCL 프로젝트에 다른 클래스를 추가합니다. 이 프로젝트는 날씨 데이터 서비스의 JSON 데이터를 처리하는 데 사용됩니다.  
+4.  **DataService.cs**라는 PCL 프로젝트에 다른 클래스를 추가합니다. 이 프로젝트는 날씨 데이터 서비스의 JSON 데이터를 처리하는 데 사용됩니다.  
   
 5.  **DataService.cs** 의 전체 내용을 다음 코드로 바꿉니다.  
   
@@ -162,7 +182,7 @@ caps.handback.revision: 23
     }  
     ```  
   
-6.  **Core** 라는 PCL에 세 번째 클래스를 추가합니다. 여기서는 우편 번호를 사용하여 쿼리 문자열을 구성하고, 날씨 데이터 서비스를 호출한 다음 **Weather** 클래스의 인스턴스를 채우는 논리와 같은 공유 비즈니스 논리를 추가하게 됩니다.  
+6.  **Core**라는 PCL에 세 번째 클래스를 추가합니다. 여기서는 우편 번호를 사용하여 쿼리 문자열을 구성하고, 날씨 데이터 서비스를 호출한 다음 **Weather** 클래스의 인스턴스를 채우는 논리와 같은 공유 비즈니스 논리를 추가하게 됩니다.  
   
 7.  그런 후 **Core.cs** 의 내용을 다음으로 바꿉니다.  
   
@@ -220,7 +240,7 @@ caps.handback.revision: 23
   
 10. **WeatherApp** PCL 프로젝트를 빌드하여 코드가 올바른지 확인합니다.  
   
-##  <a name="a-nameandroida-design-ui-for-android"></a><a name="Android"></a> Android용 UI 디자인  
+##  <a name="Android"></a> Android용 UI 디자인  
  이제 사용자 인터페이스를 디자인하고 공유 코드에 연결한 후 앱을 실행합니다.  
   
 ### <a name="design-the-look-and-feel-of-your-app"></a>앱의 모양과 느낌 디자인  
@@ -279,8 +299,8 @@ caps.handback.revision: 23
   
     |속성|값|  
     |--------------|-----------|  
-    |**text**|**Zip Code**|  
-    |**id**|`@+id/ZipCodeLabel`|  
+    |**텍스트**|**우편 번호**|  
+    |**ID**|`@+id/ZipCodeLabel`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginTop**|`5dp`|  
   
@@ -301,7 +321,7 @@ caps.handback.revision: 23
   
     |속성|값|  
     |--------------|-----------|  
-    |**id**|`@+id/zipCodeEntry`|  
+    |**ID**|`@+id/zipCodeEntry`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginBottom**|`10dp`|  
     |**width**|`165dp`|  
@@ -324,8 +344,8 @@ caps.handback.revision: 23
   
     |속성|값|  
     |--------------|-----------|  
-    |**id**|`@+id/weatherBtn`|  
-    |**text**|**Get Weather**|  
+    |**ID**|`@+id/weatherBtn`|  
+    |**텍스트**|**날씨 검색**|  
     |**layout_marginLeft**|`20dp`|  
     |**layout_alignBottom**|`@id/zipCodeEntry`|  
     |**width**|`165dp`|  
@@ -523,7 +543,7 @@ caps.handback.revision: 23
 > [!TIP]
 >  이 프로젝트에 대한 전체 소스 코드는 [GitHub의 xamarin-forms-samples 리포지토리](https://github.com/xamarin/mobile-samples/tree/master/Weather)에 있습니다.  
   
-##  <a name="a-namewindowsa-design-ui-for-windows-phone"></a><a name="Windows"></a> Windows Phone용 UI 디자인  
+##  <a name="Windows"></a> Windows Phone용 UI 디자인  
  이제 Windows Phone용 사용자 인터페이스를 디자인하고 공유 코드에 연결한 후 앱을 실행합니다.  
   
 ### <a name="design-the-look-and-feel-of-your-app"></a>앱의 모양과 느낌 디자인  
@@ -629,7 +649,7 @@ caps.handback.revision: 23
 > [!TIP]
 >  이 프로젝트에 대한 전체 소스 코드는 [GitHub의 xamarin-forms-samples 리포지토리](https://github.com/xamarin/mobile-samples/tree/master/Weather)에 있습니다.  
   
-##  <a name="a-namenexta-next-steps"></a><a name="next"></a> 다음 단계  
+##  <a name="next"></a> 다음 단계  
  **iOS용 UI를 솔루션에 추가**  
   
  iOS용 네이티브 UI를 추가하여 이 샘플을 확장합니다. 이렇게 하려면, 로컬 네트워크에 있으며 Xcode 및 Xamarin이 설치된 Mac에 연결해야 합니다. 완료했으면 Visual Studio에서 직접 iOS 디자이너를 사용할 수 있습니다. 완성된 앱은 [GitHub의 모바일 샘플 리포지토리](https://github.com/xamarin/mobile-samples/tree/master/Weather)를 참조하세요.  
@@ -644,8 +664,3 @@ caps.handback.revision: 23
  [Xamarin 개발자 사이트](http://developer.xamarin.com/)   
  [Windows 개발자 센터](https://dev.windows.com/en-us)   
  [Swift 및 C# 빠른 참조 포스터](http://aka.ms/scposter)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

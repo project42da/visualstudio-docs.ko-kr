@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: c0fa199f2ccbdc7b4e60b4295645ccf83792d435
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8e829f0c69a777dcdcda75aa9305b9202748f23e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-cpu-usage-in-a-universal-windows-app-uwp"></a>UWP(유니버설 Windows 앱)에서 CPU 사용량 분석
@@ -73,7 +74,7 @@ ms.lasthandoff: 03/07/2017
   
      ![CpuUsage 진단 세션 시작](../profiling/media/cpu_use_wt_perfdiaghub.png "CPU_USE_WT_PerfDiagHub")  
   
-4.  앱이 시작되면 **최대 수 가져오기**를 클릭합니다. 출력이 표시되면 약&1;초간 기다린 다음 **Get Max Number Async**(비동기적으로 최대 수 가져오기)를 선택합니다. 단추를 클릭하는 시간 사이에 대기하면 진단 보고서에서 단추 클릭 루틴을 좀 더 쉽게 격리할 수 있습니다.  
+4.  앱이 시작되면 **최대 수 가져오기**를 클릭합니다. 출력이 표시되면 약 1초간 기다린 다음 **Get Max Number Async**(비동기적으로 최대 수 가져오기)를 선택합니다. 단추를 클릭하는 시간 사이에 대기하면 진단 보고서에서 단추 클릭 루틴을 좀 더 쉽게 격리할 수 있습니다.  
   
 5.  두 번째 출력 줄이 나타나면 성능 및 진단 허브에서 **수집 중지** 를 선택합니다.  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 03/07/2017
   
  ![GetMaxNumberAsyncButton&#95;Click 보고서 선택](../profiling/media/cpu_use_wt_getmaxnumberasync_selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
   
- 이 메서드는 `GetMaxNumberButton_Click`보다 약&1;초 더 빨리 완료되었지만 호출 트리 항목의 의미는 덜 명확합니다.  
+ 이 메서드는 `GetMaxNumberButton_Click`보다 약 1초 더 빨리 완료되었지만 호출 트리 항목의 의미는 덜 명확합니다.  
   
 ###  <a name="BKMK_The_CPU_Usage_call_tree"></a> CPU 사용량 호출 트리  
  호출 트리 정보 파악을 시작하려면 `GetMaxNumberButton_Click` 세그먼트를 다시 선택하고 호출 트리 세부 정보를 확인합니다.  
@@ -154,7 +155,7 @@ ms.lasthandoff: 03/07/2017
   
 -   `MainPage::GetMaxNumberAsyncButton_Click`는 아주 작은 기능만을 수행합니다. 이 메서드는 작업 값 목록을 관리하고, 결과의 최대값을 계산하고, 출력을 표시합니다.  
   
--   `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`는 `GetNumberAsync`에 대한 호출을 래핑하는 48개 작업을 예약 및 시작하는 데 필요한 활동을 보여 줍니다.  
+-   `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` 는 `GetNumberAsync`에 대한 호출을 래핑하는 48개 작업을 예약 및 시작하는 데 필요한 활동을 보여 줍니다.  
   
 -   `MainPage::<GetNumberAsync>b__b`는 `GetNumber`를 호출하는 작업의 활동을 보여 줍니다.  
   

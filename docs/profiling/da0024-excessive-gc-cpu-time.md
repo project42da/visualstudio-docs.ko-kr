@@ -1,23 +1,43 @@
 ---
-title: "DA0024: 과도한 GC CPU 시간 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.DA0024"
-  - "vs.performance.24"
-  - "vs.performance.rules.DA0024"
+title: "DA0024: 과도한 GC CPU 시간 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.DA0024
+- vs.performance.24
+- vs.performance.rules.DA0024
 ms.assetid: 228872da-77d0-4da5-b455-ac57fb1867c9
 caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e888457bbd8e1b556ec3e38c3e2b136bf6cd704c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="da0024-excessive-gc-cpu-time"></a>DA0024: 과도한 GC CPU 시간
 |||  
@@ -46,9 +66,4 @@ caps.handback.revision: 10
 ## <a name="how-to-investigate-a-warning"></a>경고를 조사하는 방법  
  [오류 목록] 창에서 메시지를 두 번 클릭하여 프로파일링 데이터의 [표시 뷰](../profiling/marks-view.md)로 이동합니다. **.NET CLR Memory\\% Time in GC** 열을 찾습니다. 다른 단계보다 관리되는 메모리 가비지 수집의 오버헤드가 더 큰 특정 프로그램 실행 단계가 있는지 확인합니다. % Time in GC 값을 **# of Gen 0 Collections**, **# of Gen 1 Collections**, **# of Gen 2 Collections** 값에서 보고된 가비지 수집 비율에 비교합니다.  
   
- % Time in GC 값은 총 처리량에 비례하여 응용 프로그램이 가비지 수집을 수행하는 데 걸리는 시간을 보고하려고 합니다. % Time in GC 값이 매우 높은 값을 보고하지만 과도한 가비지 수집이 원인이 아닌 상황이 있을 수 있습니다. % Time in GC 값이 계산되는 방법에 대한 자세한 내용은 MSDN에서 **Maoni’s Weblog**의 [Difference Between Perf Data Reported by Different Tools – 4](http://go.microsoft.com/fwlink/?LinkId=177863)(여러 가지 도구에서 보고하는 성능 데이터 간의 차이점 – 4) 항목을 참조하세요. 가비 수집 중에 컴퓨터에서 우선순위가 더 높은 다른 작업이 응용 프로그램을 선점하거나 페이지 오류가 발생할 경우 % Time in GC 카운터가 추가적인 지연을 반영합니다.
-
-
-<!--HONumber=Feb17_HO4-->
-
-
+ % Time in GC 값은 총 처리량에 비례하여 응용 프로그램이 가비지 수집을 수행하는 데 걸리는 시간을 보고하려고 합니다. % Time in GC 값이 매우 높은 값을 보고하지만 과도한 가비지 수집이 원인이 아닌 상황이 있을 수 있습니다. % Time in GC 값이 계산되는 방법에 대한 자세한 내용은 MSDN에서 **Maoni’s Weblog**(Maoni의 웹 블로그)의 [Difference Between Perf Data Reported by Different Tools – 4](http://go.microsoft.com/fwlink/?LinkId=177863)(여러 가지 도구에서 보고하는 성능 데이터 간의 차이점 – 4) 항목을 참조하세요. 가비 수집 중에 컴퓨터에서 우선순위가 더 높은 다른 작업이 응용 프로그램을 선점하거나 페이지 오류가 발생할 경우 % Time in GC 카운터가 추가적인 지연을 반영합니다.

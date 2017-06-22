@@ -26,10 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 0bd14e6a67fd78577f28469f495a44841253eaf1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 6a9e8253c555f8f416b18cb46f211c3733ab788f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin 환경 확인
@@ -67,7 +68,7 @@ ms.lasthandoff: 02/22/2017
   
     -   대상 Android 버전에 따라 적절한 에뮬레이터를 선택합니다. 컴퓨터에 연결된 Android 개발 장치가 있으면 에뮬레이터와 함께 여기에 나열됩니다.  
   
-        -   Windows 8+: 아래 표시된 대로 Visual Studio의 디버그 드롭다운에서 **VS 에뮬레이터** 대상을 선택하고 **F5**키를 눌러 디버거를 시작합니다. 자세한 내용은 [Visual Studio Emulator for Android 소개](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx) (영문)(Visual Studio ALM 블로그)를 참조하세요. 에뮬레이터를 작동시키는 중 문제가 발생하면 [Visual Studio Emulator for Android 문제 해결](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)을 참조하세요. **도구 > Visual Studio Emulator for Android...**를 선택하여 에뮬레이터에 대한 새로운 장치 프로필을 만들 수도 있습니다.  
+        -   Windows 8+: 아래 표시된 대로 Visual Studio의 디버그 드롭다운에서 **VS 에뮬레이터** 대상을 선택하고 **F5** 키를 눌러 디버거를 시작합니다. 자세한 내용은 [Introducing Visual Studio's Emulator for Android](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)(Visual Studio Emulator for Android 소개)(Visual Studio ALM 블로그)를 참조하세요. 에뮬레이터를 작동시키는 중 문제가 발생하면 [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)을 참조하세요. **도구 > Visual Studio Emulator for Android...**를 선택하여 에뮬레이터에 대한 새로운 장치 프로필을 만들 수도 있습니다.  
   
              ![Visual Studio Emulator for Android를 디버그 대상으로 선택](../cross-platform/media/crossplat-xamarin-verify-3.png "CrossPlat Xamarin Verify 3")  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 02/22/2017
         -   Windows 7 이하: 대신 드롭다운에서 Xamarin Player for Android를 선택하고 F5 키를 눌러 실행합니다. Xamarin Player, 해당 장치 관리자 및 문제 해결 팁에 대해서는 [Xamarin Android Player](http://developer.xamarin.com/guides/android/getting_started/installation/android-player/) (영문)(xamarin.com)를 참조하세요.  
   
 > [!NOTE]
->  Visual Studio에서 도구 모음에 AVD(Android Emulator Manager) 단추가 표시되는 것을 알 수 있습니다(아래 그림 참조). 이 단추를 선택하면 Google Android 에뮬레이터를 구성하는 데 특별히 사용되는 장치 관리자가 열립니다.  이 단추는 프로필을 구성하는 자체 장치 관리자가 있는 Visual Studio Emulator for Android 또는 Xamarin Player에는 영향을 미치지 않습니다.  자세한 내용은 [Visual Studio Emulator for Android 소개](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx) (영문)(Visual Studio ALM 블로그) 및 [Xamarin Android Player](http://developer.xamarin.com/guides/android/getting_started/installation/android-player/) (영문)(xamarin.com)를 참조하세요.  
+>  Visual Studio에서 도구 모음에 AVD(Android Emulator Manager) 단추가 표시되는 것을 알 수 있습니다(아래 그림 참조). 이 단추를 선택하면 Google Android 에뮬레이터를 구성하는 데 특별히 사용되는 장치 관리자가 열립니다.  이 단추는 프로필을 구성하는 자체 장치 관리자가 있는 Visual Studio Emulator for Android 또는 Xamarin Player에는 영향을 미치지 않습니다.  자세한 내용은 [Introducing Visual Studio's Emulator for Android](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)(Visual Studio Emulator for Android 소개)(Visual Studio ALM 블로그) 및 [Xamarin Android Player](http://developer.xamarin.com/guides/android/getting_started/installation/android-player/)(xamarin.com)를 참조하세요.  
 > ![CrossPlat Xamarin Verify 7](../cross-platform/media/crossplat-xamarin-verify-7.png "CrossPlat Xamarin Verify 7")  
   
 ## <a name="windows-phone"></a>Windows Phone  
@@ -103,7 +104,7 @@ ms.lasthandoff: 02/22/2017
   
     1.  솔루션 탐색기에서 iOS 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.  
   
-    2.  아래 표시된 대로 Visual Studio의 빌드 드롭다운에서 **iPhoneSimulator** 대상을 선택하거나 테더링된 장치가 있는 경우 **iPhone** 대상을 선택합니다. 시뮬레이터가 나열되지 않으면 Mac에서 Xcode를 시작하고 **Xcode->기본 설정**을 선택한 후에 **다운로드**를 클릭합니다. **구성 요소** 에 다운로드할 수 있는 시뮬레이터 버전이 표시되어야 합니다. 디버깅에 대한 추가 지침은 Xamarin의 [디버깅](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) (영문) 페이지(xamarin.com)에서 확인할 수 있습니다.  
+    2.  아래 표시된 대로 Visual Studio의 빌드 드롭다운에서 **iPhoneSimulator** 대상을 선택하거나 테더링된 장치가 있는 경우 **iPhone** 대상을 선택합니다. 시뮬레이터가 나열되지 않으면 Mac에서 Xcode를 시작하고 **Xcode->기본 설정**을 선택한 후에 **다운로드**를 클릭합니다. **구성 요소** 에 다운로드할 수 있는 시뮬레이터 버전이 표시되어야 합니다. 디버깅에 대한 추가 지침은 Xamarin의 [Debugging](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator)(디버깅) 페이지(xamarin.com)에서 확인할 수 있습니다.  
   
          ![IPhoneSimulator 빌드 대상 선택](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")  
   
@@ -115,13 +116,13 @@ ms.lasthandoff: 02/22/2017
   
     5.  “No installed provisioning profiles match the installed iOS signing keys(설치된 프로비저닝 프로필이 설치된 iOS 서명 키와 일치하지 않습니다).”라는 오류가 표시되면 다음을 수행합니다.  
   
-        -   [Xcode에 사용자 계정 추가](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1)(apple.com)에 설명된 대로 Mac의 Xcode에 Apple ID 계정이 추가되어 있는지 확인합니다.  계정을 추가한 후 Visual Studio와 Xcode를 둘 다 다시 시작해야 합니다.  
+        -   [Xcode에 사용자 계정 추가](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1) (영문)(apple.com)에 설명된 대로 Mac의 Xcode에 Apple Id 계정이 추가되어 있는지 확인합니다.  계정을 추가한 후 Visual Studio와 Xcode를 둘 다 다시 시작해야 합니다.  
   
              ![CrossPlat Xamarin Verify 8](../cross-platform/media/crossplat-xamarin-verify-8.png "CrossPlat Xamarin Verify 8")  
   
         -   iOS 번들 서명 탭의 iOS 프로젝트 속성에서 활성 디버그 구성을 위한 사용자 지정 권한 부여 필드가 비어 있는지 확인합니다.  참고: 위의 오류 메시지가 발생하는 경우에만 이 설정을 제거합니다.  
   
-##  <a name="a-namemissinga-are-the-xamarin-project-templates-missing-try-this"></a><a name="missing"></a> Xamarin 프로젝트 템플릿 누락 시 사용 방법  
+##  <a name="missing"></a> Xamarin 프로젝트 템플릿 누락 시 사용 방법  
  Visual Studio 2013과 Visual Studio 2015가 함께 설치되어 있는 경우 Xamarin 웹 사이트에서 직접 Xamarin을 설치하면 템플릿이 누락될 수 있습니다. 쉽게 수정할 수 있습니다. Xamarin 설치 프로그램에서 **Visual Studio 2015용 Xamarin** 기능을 사용하도록 설정하기만 하면 됩니다.  
   
 1.  제어판에서 **프로그램 및 기능**을 열고 **Xamarin** 항목을 선택하고 **변경**을 클릭합니다.  

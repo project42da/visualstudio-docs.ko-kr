@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: 2af148cb8367ea3a584ac8e028c8167e4ad6123b
-ms.lasthandoff: 04/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7aa8de1116409f30cf1a0cd2fd689c03c2242724
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>변경 로그(Visual Studio Tools for Unity)
@@ -760,7 +761,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   버그 UVS-11 수정: 코루틴의 로컬 문제  
   
-## <a name="11--beta-release"></a>1.1 - 베타 릴리스  
+## <a name="11---beta-release"></a>1.1 - 베타 릴리스  
  릴리스됨 2014-10-09  
   
 ## <a name="1013"></a>1.0.13  
@@ -963,6 +964,6 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   UnityScript 및 Boo의 자산 폴더 내부 dll에 대한 완료를 수정했습니다.  
   
-## <a name="10--initial-release"></a>1.0 - 초기 버전  
+## <a name="10---initial-release"></a>1.0 - 초기 릴리스  
  릴리스됨 2012-08-22
 

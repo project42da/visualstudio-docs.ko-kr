@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 2fa87621ed76fb93a9e92d558be5519d783274c5
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: fbc3a182d2c3dbceaa17685f649ea73a3e73ed85
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="improve-code-quality"></a>코드 품질 향상
 코드 품질이란 무엇입니까? 좋은 코드를 만들 때는 정확성, 유지 관리의 편의성 및 정교함까지 고려해야 합니다. 어떻게 정의하든 Visual Studio 테스트 도구를 사용하면 사용자와 팀이 수준 높은 코드를 개발하고 유지할 수 있습니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   이 단원에서 설명하는 도구와 기능 중 일부는 Visual Studio에서 일반적으로 사용할 수 없는 Visual Studio의 특정 버전에서만 사용할 수 있습니다. 이러한 도구와 기능에 대한 설명서에서 특정 버전 요구 사항을 보여 줍니다.  
   

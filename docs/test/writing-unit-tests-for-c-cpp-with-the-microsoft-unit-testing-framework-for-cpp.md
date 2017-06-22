@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 84549f28f33933eacbf44742b5be129df8ab780e
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 203cc6111870cbf3342fd84c5931a0dadc2bdde0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>C++용 Microsoft 유닛 테스트 프레임워크를 사용하여 C/C++용 유닛 테스트 작성
@@ -46,7 +47,7 @@ Visual Studio에서는 C++로 작성된 관리되지 않는 코드에 대한 단
   
 2.  DLL을 테스트 프로젝트에 액세스할 수 있도록 합니다.  
   
-    -   DLL의 외부 액세스 가능한 함수에 대한 선언이 포함된 `#include` 파일을 `.h`합니다.  
+    -   DLL의 외부에서 액세스 가능한 함수의 선언이 포함된 `.h` 파일을 `#include`(포함)합니다.  
   
          `.h` 파일에는 `_declspec(dllimport)`로 표시된 함수 선언이 포함됩니다. 또는 DEF 파일을 사용해서 메서드를 내보낼 수 있습니다. 자세한 내용은 [가져오기 및 내보내기](/cpp/build/importing-and-exporting)를 참조하세요.  
   
@@ -402,7 +403,7 @@ Visual Studio에서는 C++로 작성된 관리되지 않는 코드에 대한 단
   
 -   **격리.** 대부분의 DLL은 데이터베이스 및 기타 DLL과 같은 하위 시스템에 의존합니다. 이러한 다른 구성 요소는 종종 병렬로 개발됩니다. 다른 구성 요소를 아직 사용할 수 없을 때 단위 테스트를 수행할 수 있도록 하려면 대체 모의 항목이 필요합니다.  
   
--   **확인 테스트 빌드.** 설정한 간격에 따라 팀의 빌드 서버에서 테스트가 수행되도록 할 수 있습니다. 이렇게 하면 여러 팀 멤버의 작업을 통합할 때 버그가 유입되지 않도록 보장됩니다.  
+-   **확인 테스트 빌드.** 설정된 간격으로 팀의 빌드 서버에서 테스트를 수행할 수 있습니다. 이렇게 하면 여러 팀 멤버의 작업을 통합할 때 버그가 유입되지 않도록 보장됩니다.  
   
 -   **테스트 체크 인.** 각 팀 멤버가 코드를 소스 제어에 체크 인하기 전에 일부 테스트가 수행되도록 지정할 수 있습니다. 일반적으로 이러한 테스트는 빌드 확인 테스트의 전체 집합 중 일부입니다.  
   

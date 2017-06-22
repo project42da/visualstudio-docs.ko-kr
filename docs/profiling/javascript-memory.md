@@ -42,10 +42,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: e4be61999c3530698f90ea5381b980223791325f
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 24250d68042f77a653fe9ef36c743dd4f32ee57c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP 앱에서 JavaScript 메모리 사용량 분석
@@ -69,9 +70,9 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
   
  [JavaScript 메모리 분석기 실행](#Run)   
  [메모리 사용량 확인](#Check)   
- [메모리 누수 격리](#Isolate)   
+ [Isolate a memory leak](#Isolate)   
  [라이브 메모리 사용 요약 보기](#LiveMemory)   
- [스냅숏 요약 보기](#SnapshotSummary)   
+ [View a snapshot summary](#SnapshotSummary)   
  [스냅숏 정보 보기](#SnapshotDetails)   
  [스냅숏 차이 보기](#SnapshotDiff)   
  [도미네이터별 개체 보기](#FoldObjects)   
@@ -80,7 +81,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
  [공유 개체 참조 보기](#References)   
  [기본 제공 개체 표시](#BuiltInValues)   
  [진단 세션 파일 저장](#Save)   
- [소스 코드를 메모리 사용량 데이터와 연결](#JSConsoleCommands)   
+ [Associate source code with memory usage data](#JSConsoleCommands)   
  [메모리 문제 식별 팁](#Tips)  
   
 ##  <a name="Run"></a> JavaScript 메모리 분석기 실행  
@@ -127,21 +128,21 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
   
  다음 뷰를 사용해서 응용 프로그램에서 메모리 누수를 식별합니다.  
   
--   [라이브 메모리 사용 요약 보기](#LiveMemory) 메모리 사용량 그래프를 사용해서 특정 작업으로 인해 메모리 사용량이 급격하게 증가하거나 지속적으로 증가하는지 확인합니다. 라이브 메모리 사용 요약 뷰를 사용하여 힙의 스냅숏을 만듭니다. 스냅숏은 메모리 사용 그래프 아래에 컬렉션으로 표시됩니다.  
+-   [라이브 메모리 사용 요약 보기](#LiveMemory)을(를) 참조하세요. 메모리 사용량 그래프를 사용해서 특정 작업으로 인해 메모리 사용량이 급격하게 증가하거나 지속적으로 증가하는지 확인합니다. 라이브 메모리 사용 요약 뷰를 사용하여 힙의 스냅숏을 만듭니다. 스냅숏은 메모리 사용 그래프 아래에 컬렉션으로 표시됩니다.  
   
     > [!TIP]
     >  스냅숏을 수행할 때 메모리 사용량에 스파이크가 나타납니다. 증가를 더 정확하게 나타내려면 스냅숏 요약을 사용합니다.  
   
--   [스냅숏 요약 보기](#SnapshotSummary) 메모리 프로파일링 세션 중 또는 이후에 스냅숏 요약 정보를 볼 수 있습니다. 스냅숏 요약을 사용해서 스냅숏 세부 정보 및 스냅숏 차이 뷰에 연결합니다.  
+-   [View a snapshot summary](#SnapshotSummary)을(를) 참조하세요. 메모리 프로파일링 세션 중 또는 이후에 스냅숏 요약 정보를 볼 수 있습니다. 스냅숏 요약을 사용해서 스냅숏 세부 정보 및 스냅숏 차이 뷰에 연결합니다.  
   
     > [!TIP]
     >  일반적으로 스냅숏 차이 뷰에는 메모리 누수에 대해 가장 유용한 정보가 제공됩니다.  
   
--   [스냅숏 정보 보기](#SnapshotDetails) 단일 스냅숏에 대한 메모리 사용 데이터를 자세히 보여 줍니다.  
+-   [스냅숏 정보 보기](#SnapshotDetails)을(를) 참조하세요. 단일 스냅숏에 대한 메모리 사용 데이터를 자세히 보여 줍니다.  
   
--   [스냅숏 차이 보기](#SnapshotDiff) 스냅숏 간의 차이 값을 표시합니다. 이러한 뷰에서는 개체 크기 및 개체 수에서의 차이를 보여줍니다.  
+-   [스냅숏 차이 보기](#SnapshotDiff)을(를) 참조하세요. 스냅숏 간의 차이 값을 표시합니다. 이러한 뷰에서는 개체 크기 및 개체 수에서의 차이를 보여줍니다.  
   
-##  <a name="Isolate"></a> 메모리 누수 격리  
+##  <a name="Isolate"></a> Isolate a memory leak  
  이러한 단계에서는 JavaScript 메모리 분석기를 보다 효율적으로 사용할 수 있도록 도와줄 수 있는 워크플로를 제공합니다. 이러한 단계는 응용 프로그램에 메모리 누수가 있다고 의심될 경우에 유용할 수 있습니다. 작업 중인 앱에서 메모리 누수를 확인하는 과정을 안내하는 자습서는 [연습: 메모리 누수 찾기(JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)를 참조하세요.  
   
 1.  Visual Studio에서 앱을 엽니다.  
@@ -218,7 +219,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
   
  메모리 그래프에 표시되는 메모리 중 일부는 JavaScript 런타임에서 할당합니다. 앱에서 이 메모리 사용을 제어할 수는 없습니다. 그래프에 표시된 메모리 사용량은 첫 번째 스냅숏을 만들 때 증가하고, 스냅숏을 추가로 만들 때마다 아주 조금씩 증가합니다.  
   
-##  <a name="SnapshotSummary"></a> 스냅숏 요약 보기  
+##  <a name="SnapshotSummary"></a> View a snapshot summary  
  현재 상태의 앱 메모리 사용량에 대한 스냅숏을 만들려면 메모리 그래프에서 **힙 스냅숏 만들기** 를 선택합니다. 라이브 메모리 사용 요약(앱 실행 중)과 스냅숏 요약(앱 중지됨) 양쪽에 나타나는 스냅숏 요약 타일은 JavaScript 힙에 대한 정보와 보다 자세한 정보에 대한 링크를 제공합니다. 스냅숏을 여러 개 만든 경우, 특정 스냅숏의 데이터와 이전 스냅숏의 데이터를 비교하여 추가 정보를 제공합니다.  
   
 > [!NOTE]
@@ -298,7 +299,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
   
  스냅숏 간의 차이 정보를 필터링하려면 차이 뷰 상단에 있는 **범위** 필터 중 하나를 선택합니다.  
   
--   **스냅숏 #\<number>**에서 남은 개체. 이 필터는 기본 스냅숏 및 이전 스냅숏과 비교하여 힙에 추가된 개체와 힙에서 제거된 개체 간의 차이를 보여줍니다. 예를 들어 스냅숏 요약에서 개체 수가 +205/-195로 표시된 경우 이 필터는 제거된 것이 아닌 추가된 개체&10;개를 보여줍니다.  
+-   **스냅숏 #\<number>**에서 남은 개체. 이 필터는 기본 스냅숏 및 이전 스냅숏과 비교하여 힙에 추가된 개체와 힙에서 제거된 개체 간의 차이를 보여줍니다. 예를 들어 스냅숏 요약에서 개체 수가 +205/-195로 표시된 경우 이 필터는 제거된 것이 아닌 추가된 개체 10개를 보여줍니다.  
   
     > [!TIP]
     >  이 필터에서 가장 유용한 정보를 표시하려면 [Isolate a memory leak](#Isolate)에 설명된 단계를 따르세요.  
@@ -347,7 +348,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
 ##  <a name="Save"></a> 진단 세션 파일 저장  
  진단 스냅숏 요약과 관련 정보 뷰는 .diagsession 파일로 저장됩니다. **솔루션 탐색기** 의 진단 세션 폴더에는 이전 진단 세션이 표시됩니다. **솔루션 탐색기**에서 이전 세션을 열거나 파일을 제거하거나 파일 이름을 바꿀 수 있습니다.  
   
-##  <a name="JSConsoleCommands"></a> 소스 코드를 메모리 사용량 데이터와 연결  
+##  <a name="JSConsoleCommands"></a> Associate source code with memory usage data  
  메모리 문제가 있는 코드 부분을 분리하려면 다음 방법을 사용합니다.  
   
 -   세부 정보와 다른 뷰에서 DOM 요소의 클래스 이름 및 ID를 찾습니다.  
@@ -360,9 +361,9 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
   
  소스 코드에서 다음 명령을 사용할 수 있습니다.  
   
--   `console.takeHeapSnapshot`은 JavaScript 메모리 분석기에 나타나는 힙 스냅숏을 만듭니다. 이 명령은 [JavaScript 콘솔 명령](../debugger/javascript-console-commands.md) 중 하나입니다.  
+-   `console.takeHeapSnapshot` 은 JavaScript 메모리 분석기에 나타나는 힙 스냅숏을 만듭니다. 이 명령은 [JavaScript Console commands](../debugger/javascript-console-commands.md).  
   
--   `performance.mark`는 응용 프로그램을 실행하는 동안 요약 뷰의 메모리 그래프 타임라인에 나타나는 사용자 표시(역삼각형)를 설정합니다. 이 명령은 이벤트를 기술하는 하나의 문자열 인수를 사용하며 메모리 그래프에 도구 설명으로 나타납니다. 이 설명은 100자를 초과할 수 없습니다.  
+-   `performance.mark` 는 응용 프로그램을 실행하는 동안 요약 뷰의 메모리 그래프 타임라인에 나타나는 사용자 표시(역삼각형)를 설정합니다. 이 명령은 이벤트를 기술하는 하나의 문자열 인수를 사용하며 메모리 그래프에 도구 설명으로 나타납니다. 이 설명은 100자를 초과할 수 없습니다.  
   
 > [!TIP]
 >  `console.takeHeapSnapshot` 을 사용해서 메모리 사용량 시나리오를 반복할 때 분석을 빠르게 수행할 수 있습니다.  
@@ -402,7 +403,7 @@ if (performance && performance.mark) {
   
     -   일부 개체는 사용할 `dispose` 메서드 및 권장 사항을 제공할 수 있습니다. 예를 들어 목록의 `dispose` 메서드를 호출한 다음 페이지에서 벗어날 경우 [WinJS.Binding.List](http://msdn.microsoft.com/library/windows/apps/Hh700774.aspx) 에서 `createFiltered` 를 호출해야 합니다.  
   
-    -   하나 이상의 이벤트 수신기를 제거해야 할 수 있습니다. 자세한 내용은 [DOM 이벤트 수신기 보기](../debugger/view-dom-event-listeners.md)를 참조하세요.  
+    -   하나 이상의 이벤트 수신기를 제거해야 할 수 있습니다. 자세한 내용은 [View DOM event listeners](../debugger/view-dom-event-listeners.md)을 참조하세요.  
   
 -   JavaScript 메모리 분석기에 대한 Build 2013 컨퍼런스에서 [이 비디오](http://channel9.msdn.com/Events/Build/2013/3-316) 의 뒷부분을 시청하세요.  
   

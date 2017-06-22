@@ -27,16 +27,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 07e37b1a1d7b02992bb4da69bd158878095dd789
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-excel-extension-technologymanager-class"></a>샘플 Excel 확장: TechnologyManager 클래스
-이 클래스는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> 클래스를 확장하며 [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 확장용 핵심 서비스를 제공합니다. 기본 클래스에는 여러 가지 메서드가 있지만, 이 샘플에서는 이러한 메서드 중 일부만 사용합니다.  
+이 클래스는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> 클래스를 확장하고 [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 확장용 핵심 서비스를 제공합니다. 기본 클래스에는 여러 가지 메서드가 있지만, 이 샘플에서는 이러한 메서드 중 일부만 사용합니다.  
   
- 일부 메서드는 속성 값만 반환합니다. 개발자는 대부분의 메서드를 통해 코딩된 UI 테스트 엔진에서 기본적으로 제공되는 기본 알고리즘을 재정의할 수 있습니다. 이러한 메서드는 <xref:System.NotSupportedException>을 throw하거나, 프레임워크에 기본 알고리즘을 사용하도록 지시하는 `null`을 반환합니다.  
+ 일부 메서드는 속성 값만 반환합니다. 개발자는 대부분의 메서드를 통해 코딩된 UI 테스트 엔진에서 기본적으로 제공되는 기본 알고리즘을 재정의할 수 있습니다. 이러한 메서드는 <xref:System.NotSupportedException>를 throw하거나 `null`을 반환하여 기본 알고리즘을 사용하도록 프레임워크에 알립니다.  
   
  기본 기술의 복잡도에 따라서는 기술 관리자 코드를 개발하는 데 몇 주에서 몇 달까지 걸릴 수 있습니다. Excel에서는 매우 포괄적으로 활용 가능한 기술 관리자를 만들 수 있습니다. 이 예제에서는 의도적으로 Excel 워크시트 및 셀만 사용하며 제한된 서식을 사용합니다.  
   

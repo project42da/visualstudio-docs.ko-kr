@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 8ce2ccc55a53d03b72f0d1d81c206b2b9a980eed
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 11ae1d653bc34ccb9c8fd8834d134b7212bc4f9a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-windows-store-apps"></a>연습: Windows 스토어 앱용 단위 테스트 만들기 및 실행
@@ -155,13 +156,13 @@ Visual Studio에는 관리되는 [!INCLUDE[win8_appname_long](../debugger/includ
 ## <a name="external-resources"></a>외부 리소스  
   
 ### <a name="videos"></a>비디오  
- [채널 9: XAML을 사용하여 빌드한 Windows 스토어 앱 단위 테스트](http://go.microsoft.com/fwlink/?LinkId=226285)  
+ [채널 9: XAML을 사용하여 빌드한 Windows 스토어 앱 유닛 테스트](http://go.microsoft.com/fwlink/?LinkId=226285)  
   
 ### <a name="forums"></a>포럼  
- [Visual Studio 단위 테스트](http://go.microsoft.com/fwlink/?LinkId=224477)  
+ [Visual Studio 유닛 테스트](http://go.microsoft.com/fwlink/?LinkId=224477)  
   
 ### <a name="msdn-library"></a>MSDN 라이브러리  
- [MSDN 라이브러리 – 기존 코드에 대한 단위 테스트 만들기 및 실행(Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkID=223683)  
+ [MSDN Library - Creating and Running Unit Tests for Existing Code (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkID=223683)(MSDN Library – 기존 코드에 대한 단위 테스트 만들기 및 실행(Visual Studio 2010))  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio로 스토어 앱 테스트](../test/testing-store-apps-with-visual-studio.md)   

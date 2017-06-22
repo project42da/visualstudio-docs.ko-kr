@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 0b25d326d103c5da3b09b79d3a574734debed071
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 89694c49fdd115064d1ebe9f5dfe910b77548a76
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>고급 설정 대화 상자(동시성 시각화 도우미)
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/22/2017
  표식 탭에서는 동시성 시각화 도우미에 표식으로 나타나는 ETW 공급자 집합을 구성할 수 있습니다.  또한 중요도 수준 및 ETW 범주에 따라 표식 컬렉션을 필터링 할 수 있습니다.  [동시성 시각화 도우미 SDK](../profiling/concurrency-visualizer-sdk.md)를 사용 중이고 고유한 표식 공급자를 사용 중이면 스레드 보기에 표시되도록 여기에서 등록할 수 있습니다.  
   
 ### <a name="adding-a-new-provider"></a>새 공급자 추가  
- 코드에 [동시성 시각화 도우미 SDK](../profiling/concurrency-visualizer-sdk.md)가 사용되거나 <xref:System.Diagnostics.Tracing.EventSource> 규칙을 따르는 ETW 이벤트가 생성될 경우, 이 대화 상자에서 등록하여 동시성 시각화 도우미에서 이러한 이벤트를 볼 수 있습니다.  
+ 코드에 [Concurrency 시각화 SDK](../profiling/concurrency-visualizer-sdk.md)가 사용되거나 <xref:System.Diagnostics.Tracing.EventSource> 규칙을 따르는 ETW 이벤트가 생성될 경우, 이 대화 상자에서 등록하여 Concurrency 시각화에서 이러한 이벤트를 볼 수 있습니다.  
   
  이름 필드에는 공급자가 생성하는 이벤트 유형을 설명하는 이름을 입력합니다.  GUID 필드에는 이 공급자와 연관된 GUID를 입력합니다. (GUID는 모든 ETW 공급자와 연결됩니다.)  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 02/22/2017
  이후 추적에 특정 공급자에 대한 데이터를 표시하지 않으려면 제거하려는 공급자 옆에 있는 확인란의 선택을 취소합니다.  
   
 ## <a name="files"></a>파일  
- **파일** 탭에서는 추적이 수집될 때마다 저장되는 추적 파일의 디렉터리를 지정할 수 있습니다.  동시성 시각화 도우미는 수집하는 각 추적에 대해&4;개의 파일을 생성합니다.  
+ **파일** 탭에서는 추적이 수집될 때마다 저장되는 추적 파일의 디렉터리를 지정할 수 있습니다.  동시성 시각화 도우미는 수집하는 각 추적에 대해 4개의 파일을 생성합니다.  
   
 -   커널 모드 ETL(이벤트 추적 로그) 파일(*. kernel.etl)  
   

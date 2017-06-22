@@ -27,16 +27,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
-ms.openlocfilehash: e1bc50e4b6458103ee2443828f2a666d5f230d62
-ms.lasthandoff: 03/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d3936d44f8591753df102cf65c15d9199a679316
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="upgrading-coded-ui-tests-from-visual-studio-2010"></a>Visual Studio 2010에서 코딩된 UI 테스트 업그레이드
 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1에서 만든, 코딩된 UI 테스트를 포함하는 테스트 프로젝트는 Visual Studio 2012에서 열 때 자동으로 복구됩니다. 테스트 프로젝트를 소스 제어로 체크 인하면 프로젝트 파일은 복구를 위해 체크 아웃됩니다. 복구된 다음에는 코딩된 UI 테스트를 포함하는 이러한 테스트 프로젝트를 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1과 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 모두 사용할 수 있습니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   Visual Studio Enterprise  
   
@@ -44,13 +45,13 @@ ms.lasthandoff: 03/03/2017
 >  Visual Studio에는 둘 이상의 테스트 프로젝트 형식이 있습니다. 코딩된 UI 테스트를 새로 만드는 경우 코딩된 UI 테스트 프로젝트 형식으로 만들어집니다. 자세한 내용은 [이전 버전의 Visual Studio에서 테스트 업그레이드](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)를 참조하세요.  
   
 > [!WARNING]
-> 코딩된 UI 테스트를 포함하는  [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 테스트 프로젝트는 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 열거나 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]와 함께 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]에서 여는 경우 다시 작성해야 합니다.  
+> 코딩된 UI 테스트를 포함하는 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 테스트 프로젝트는 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 에서 열거나 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 와 함께 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 여는 경우 다시 작성해야 합니다.  
   
 > [!WARNING]
->  [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]에서 만들고 단위 테스트만 포함하는 테스트 프로젝트는 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 여는 경우 코딩된 UI 테스트를 추가할 수 없습니다. 마찬가지로 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 만든 단위 테스트 프로젝트에는 코딩된 UI 테스트를 추가할 수 없습니다.  
+>  [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 에서 만들고 단위 테스트만 포함하는 테스트 프로젝트는 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 여는 경우 코딩된 UI 테스트를 추가할 수 없습니다. 마찬가지로 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 만든 단위 테스트 프로젝트에는 코딩된 UI 테스트를 추가할 수 없습니다.  
   
 ## <a name="compatibility-issues-between-visual-studio-2010-and-visual-studio-2012"></a>Visual Studio 2010과 Visual Studio 2012 간의 호환성 문제  
- 다음 표에서는 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]과 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 간에 코딩된 UI 테스트를 마이그레이션하는 경우 주의해야 할 문제에 대해 설명합니다.  
+ 다음 표에서는 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 과 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]간에 코딩된 UI 테스트를 마이그레이션하는 경우 주의해야 할 문제에 대해 설명합니다.  
   
 > [!CAUTION]
 >  솔루션 탐색기에 나타나지 않는 코딩된 UI 테스트 프로젝트의 참조와 관련된 알려진 문제가 있습니다. 자세한 내용은 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 설치 미디어에 포함된 추가 정보 파일을 참조하세요.  
@@ -59,8 +60,8 @@ ms.lasthandoff: 03/03/2017
 |----------------------------|-----------|--------------|  
 |[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서는 Silverlight UI 테스트가 지원되지 않습니다.|**빌드가 실패합니다.**<br /><br /> [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 기능 팩 2가 있고 Silverlight 응용 프로그램에 대한 코딩된 UI 테스트 프로젝트를 만든 경우 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 이러한 프로젝트를 열 수 없습니다.|이러한 프로젝트는 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 기능 팩 2에서만 관리하는 것이 좋습니다.|  
 |[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서는 Firefox UI 테스트가 지원되지 않습니다.|**빌드는 성공하지만 테스트 실행이 실패합니다.**<br /><br /> [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 기능 팩 2가 있고 Firefox에서 웹 응용 프로그램에 대한 코딩된 UI 테스트 프로젝트를 만든 경우 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 이러한 프로젝트를 열 수 없습니다.|이러한 프로젝트는 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 기능 팩 2에서만 관리하는 것이 좋습니다.|  
-|새 UI 코드 테스트 API가 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 추가되었습니다.|**빌드가 실패합니다.**<br /><br /> [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 새 UI 테스트 API를 사용하여 코딩된 UI 테스트를 만드는 경우 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]에서 이러한 프로젝트를 열 수 없습니다.|새 API를 사용하는 프로젝트는 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서만 관리해야 합니다.|  
-|[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]에서 참조가 csproj 파일의 'Choose' 문 내부에 추가되었습니다. [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서는 코딩된 UI 테스트 어셈블리 참조를 포함하는 피드백 대상 파일이 사용됩니다.|[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서는 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)](또는 SP1)에서 만든, 코딩된 UI 테스트를 포함하지 않는 테스트 프로젝트에 코딩된 UI 테스트를 추가할 수 없습니다.<br /><br /> 복구 프로세스에서 대상 파일 및 Choose 문을 추가합니다. 코딩된 UI 테스트가 테스트 프로젝트에 없는 경우 프로젝트가 복구됨으로 표시되면 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 코딩된 UI 테스트를 추가할 때 적절한 참조가 추가되지 않습니다.|동일한 솔루션에서 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]를 사용하여 새 테스트 프로젝트를 만들고 새 코딩된 UI 테스트를 추가해야 합니다. 또는 코딩된 UI 테스트를 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1의 테스트 프로젝트에 추가하고 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 해당 프로젝트를 열 수 있습니다.|  
+|새 UI 코드 테스트 API가 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]추가되었습니다.|**빌드가 실패합니다.**<br /><br /> [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 새 UI 테스트 API를 사용하여 코딩된 UI 테스트를 만드는 경우 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]에서 이러한 프로젝트를 열 수 없습니다.|새 API를 사용하는 프로젝트는 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 에서만 관리해야 합니다.|  
+|[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]에서 참조가 csproj 파일의 ‘Choose’ 문 내부에 추가되었습니다. [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서는 코딩된 UI 테스트 어셈블리 참조를 포함하는 피드백 대상 파일이 사용됩니다.|[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서는 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] (또는 SP1)에서 만든, 코딩된 UI 테스트를 포함하지 않는 테스트 프로젝트에 코딩된 UI 테스트를 추가할 수 없습니다.<br /><br /> 복구 프로세스에서 대상 파일 및 Choose 문을 추가합니다. 코딩된 UI 테스트가 테스트 프로젝트에 없는 경우 프로젝트가 복구됨으로 표시되면 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 코딩된 UI 테스트를 추가할 때 적절한 참조가 추가되지 않습니다.|동일한 솔루션에서 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 를 사용하여 새 테스트 프로젝트를 만들고 새 코딩된 UI 테스트를 추가해야 합니다. 또는 코딩된 UI 테스트를 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1의 테스트 프로젝트에 추가하고 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 해당 프로젝트를 열 수 있습니다.|  
   
 ##  <a name="UpgradingCodedUIFromVS2010_Update"></a> Visual Studio 2010 SP1 업데이트  
  Visual Studio 2012 및 Windows 8에 대한 호환성 지원이 있는 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] SP1 업데이트는 [Microsoft 다운로드 센터](http://www.microsoft.com/download/details.aspx?id=34677) 에서 다운로드할 수 있으며 Visual Studio 업데이트로도 사용할 수 있습니다.  

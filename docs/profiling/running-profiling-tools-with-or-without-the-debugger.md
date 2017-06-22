@@ -13,9 +13,11 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2cfcc962e41d67995f1e1e04b787a49edfbbfbf6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8d0cc37019b04d6f734d6bd604c0ddd948b6dc9f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행
@@ -32,13 +34,13 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
 2.  문제가 CPU를 많이 사용하는 처리 때문에 발생하나요?  
   
-     많은 문제의 원인이 파일 I/O 또는 네트워크 응답 성능과 같은 외부 성능 문제이므로 디버거를 사용하거나 사용하지 않고 성능 도구를 실행하는지 여부는 큰 차이를 발생시키지 않습니다. 문제의 원인이 CPU를 많이 사용하는 호출인 경우 릴리스 구성과 디버그 구성 간의 차이는 상당할 수 있으며 디버거 통합 도구를 사용하기 전에 릴리스 빌드에 문제가 있는지 확인해야 할 수 있습니다.  
+     많은 문제의 원인이 파일 I/O 또는 네트워크 응답 성능과 같은 외부 성능 문제이므로 디버거를 사용하거나 사용하지 않고 성능 도구를 실행하는지에 따라 큰 차이가 생기지는 않습니다. 문제의 원인이 CPU를 많이 사용하는 호출인 경우 릴리스 구성과 디버그 구성 간의 차이는 상당할 수 있으며 디버거 통합 도구를 사용하기 전에 릴리스 빌드에 문제가 있는지 확인해야 할 수 있습니다.  
   
 3.  성능을 정확히 측정해야 하나요, 아니면 대략적인 수치라도 괜찮은가요?  
   
-     디버그 빌드에는 릴리스 빌드에서 제공하는 함수 호출 및 상수 인라인 처리, 사용되지 않는 코드 경로 정리 및 디버거가 사용할 수 없는 방식으로 변수 저장과 같은 특정 최적화가 없습니다. 디버거 자체가 디버깅에 필요한 특정 작업(예: 예외 및 모듈 로드 이벤트 가로채기)을 수행하기 때문에 성능 시간을 변경합니다. 따라서 디버거 통합 도구의 성능 수치는 수십 밀리초 범위까지만 정확합니다. 디버거가 없는 도구를 사용한 릴리스 구성의 성능 수치는 훨씬 더 정확합니다.  
+     디버그 빌드에는 함수 호출 및 상수 인라인 처리, 사용되지 않는 코드 경로 정리 및 디버거가 사용할 수 없는 방식으로 변수 저장과 같이 릴리스 빌드에서 제공하는 특정 최적화가 없습니다. 디버거 자체가 디버깅에 필요한 특정 작업(예: 예외 및 모듈 로드 이벤트 가로채기)을 수행하기 때문에 성능 시간을 변경합니다. 따라서 디버거 통합 도구의 성능 수치는 수십 밀리초 범위까지만 정확합니다. 디버거가 없는 도구를 사용한 릴리스 구성의 성능 수치는 훨씬 더 정확합니다.  
   
-##  <a name="a-namebkmkquickstartcollectdiagnosticdataa-collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 디버깅하는 동안 프로파일링 데이터 수집  
+##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 디버깅하는 동안 프로파일링 데이터 수집  
  다음 섹션에서는 로컬 디버그에 대해 설명합니다. 장치에서의 디버그 또는 원격 디버그에 대해서는 뒤의 섹션에서 확인할 수 있습니다.  
   
 1.  디버그할 프로젝트를 연 다음 **디버그 / 디버깅 시작** 을 클릭합니다(또는 도구 모음에서 **시작** 을 클릭하거나 **F5**사용).  
@@ -59,7 +61,7 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
  Visual Studio 2015 업데이트 1에서 **진단 도구** 창을 사용하면 관심 있는 이벤트에 보다 쉽게 집중할 수 있습니다.   이제는 이벤트 이름이 **제스처**, **프로그램 출력**, **중단점**, **파일** 등의 범주 접두사와 함께 표시됩니다. 그러므로 목록에서 지정된 범주를 빠르게 찾거나 확인할 필요가 없는 범주를 건너뛸 수 있습니다.  
   
- 이제 이벤트 목록의 모든 위치에서 특정 문자열을 찾을 수 있도록 창에 검색 상자가 있습니다. 예를 들어 다음 그림에서는&4;개의 이벤트와 일치한 "설치" 문자열에 대한 검색 결과를 보여 줍니다.  
+ 이제 이벤트 목록의 모든 위치에서 특정 문자열을 찾을 수 있도록 창에 검색 상자가 있습니다. 예를 들어 다음 그림에서는 4개의 이벤트와 일치한 "설치" 문자열에 대한 검색 결과를 보여 줍니다.  
   
  ![DiagnosticsEventSearch](../profiling/media/diagnosticseventsearch.png "DiagnosticsEventSearch")  
   
@@ -140,8 +142,3 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
  [Visual Studio 2015의 진단 도구 디버거 창](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015.aspx)  
   
  [Visual Studio Enterprise 2015의 IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/intellitrace-in-visual-studio-ultimate-2015.aspx)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

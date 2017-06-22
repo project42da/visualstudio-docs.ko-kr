@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 1694abeb37e7fa0e5766dfda16a05bd5e7895885
-ms.openlocfilehash: 9168eb964b86f375390157511bf9ec9526709d7b
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b95ff54bded55d16391f57ee53b8a95ca99ca867
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>테스트를 위해 Windows 스토어 컨트롤에 대한 고유 자동화 속성 설정
@@ -73,7 +74,7 @@ XAML 기반 Windows 스토어 응용 프로그램용 코딩된 UI 테스트를 �
  XAML에서 컨트롤에 대해 명시적으로 AutomationProperties.AutomationId를 **ButtonX**로 설정합니다.  
   
 ```xaml  
-<Button AutomationProperties.AutomationId=“ButtonX” Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />  
+<Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />  
   
 ```  
   
@@ -196,8 +197,8 @@ public override string ToString()
   
 ```xaml  
   
-<Button Content=”Button1” Style="{StaticResource MyButton}" Width="140"/>  
-<Button Content=”Button2” Style="{StaticResource MyButton}" Width="140"/>  
+<Button Content="Button1" Style="{StaticResource MyButton}" Width="140"/>  
+<Button Content="Button2" Style="{StaticResource MyButton}" Width="140"/>  
 ```  
   
 ###  <a name="UniquePropertyWindowsStoreControlsDynamicControls"></a> 동적 컨트롤  

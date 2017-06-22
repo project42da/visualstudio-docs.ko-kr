@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 91b3f224d92b9ace5df34cc74c8d7616b8458d6c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 1a47ab6e11e4c67713961078f125bb7abca23bb9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="unit-test-your-code"></a>코드 단위 테스트
@@ -88,13 +89,13 @@ ms.lasthandoff: 02/22/2017
 ## <a name="external-resources"></a>외부 리소스  
   
 ### <a name="videos"></a>비디오  
- [채널 9: XAML을 사용하여 빌드한 Windows 스토어 앱 단위 테스트](http://go.microsoft.com/fwlink/?LinkId=226285)  
+ [채널 9: XAML을 사용하여 빌드한 Windows 스토어 앱 유닛 테스트](http://go.microsoft.com/fwlink/?LinkId=226285)  
   
 ### <a name="forums"></a>포럼  
  [Visual Studio 단위 테스트](http://go.microsoft.com/fwlink/?LinkId=224477)  
   
 ### <a name="guidance"></a>지침  
- [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 2장: 단위 테스트: 내부 테스트](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 2장: 유닛 테스트: 내부 테스트](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ### <a name="reference"></a>참조  
  [단위 테스트에 대한 콘텐츠 인덱스](http://go.microsoft.com/fwlink/?LinkID=254719)  

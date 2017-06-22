@@ -29,16 +29,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 8d08dc2578390db8dedd535cfb27261ea71d73cc
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 67f42e3a79d30254d3f5942b3fc9938957d5ff99
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="unit-test-basics"></a>단위 테스트 기본 사항
-단위 테스트를 만들고 실행하여 코드가 예상대로 작동하는지 확인합니다. 프로그램의 기능을 개별적인 *단위*로 테스트할 수 있는 고유한 테스트 가능 동작으로 구분하므로 이를 단위 테스트라고 합니다. Visual Studio 테스트 탐색기는 Visual Studio에서 단위 테스트를 실행하고 결과를 볼 수 있는 유연하고 효율적인 방법을 제공합니다. Visual Studio에는 관리 코드 및 네이티브 코드에 대한 Microsoft 단위 테스트 프레임워크가 설치됩니다. *단위 테스트 프레임워크* 를 사용하여 단위 테스트를 만들고, 실행하고, 이러한 테스트 결과를 보고합니다. 변경 시 단위 테스트를 다시 실행하여 코드가 여전히 제대로 작동하는지 테스트합니다. Visual Studio Enterprise를 사용하는 경우 빌드할 때마다 테스트를 자동으로 실행할 수 있습니다.  
+단위 테스트를 만들고 실행하여 코드가 예상대로 작동하는지 확인합니다. 프로그램의 기능을 개별적인 *단위*로 테스트할 수 있는 고유한 테스트 가능 동작으로 구분하므로 이를 유닛 테스트라고 합니다. Visual Studio 테스트 탐색기는 Visual Studio에서 단위 테스트를 실행하고 결과를 볼 수 있는 유연하고 효율적인 방법을 제공합니다. Visual Studio에는 관리 코드 및 네이티브 코드에 대한 Microsoft 단위 테스트 프레임워크가 설치됩니다. *단위 테스트 프레임워크* 를 사용하여 단위 테스트를 만들고, 실행하고, 이러한 테스트 결과를 보고합니다. 변경 시 단위 테스트를 다시 실행하여 코드가 여전히 제대로 작동하는지 테스트합니다. Visual Studio Enterprise를 사용하는 경우 빌드할 때마다 테스트를 자동으로 실행할 수 있습니다.  
   
- 단위 테스트는 소프트웨어 개발 워크플로의 핵심 요소로 사용될 때 코드 품질에 대한 효과가 가장 큽니다. 함수 또는 다른 응용 프로그램 코드 블록을 작성하는 즉시 표준, 경계, 잘못된 입력 데이터 사례에 맞게 코드 동작을 확인하고 코드가 가진 모든 명시적 또는 암시적 가정을 확인하는 단위 테스트를 만듭니다. *테스트 기반 개발*을 사용하여 코드를 작성하기 전에 단위 테스트를 만들고, 이러한 단위 테스트를 기능 사양 및 디자인 설명서로 사용합니다.  
+ 유닛 테스트는 소프트웨어 개발 워크플로의 핵심 요소로 사용될 때 코드 품질에 대한 효과가 가장 큽니다. 함수 또는 다른 응용 프로그램 코드 블록을 작성하는 즉시 표준, 경계, 잘못된 입력 데이터 사례에 맞게 코드 동작을 확인하고 코드가 가진 모든 명시적 또는 암시적 가정을 확인하는 단위 테스트를 만듭니다. *테스트 기반 개발*을 사용하여 코드를 작성하기 전에 단위 테스트를 만들고, 이러한 단위 테스트를 기능 사양 및 디자인 설명서로 사용합니다.  
   
  코드에서 테스트 프로젝트 및 테스트 메서드를 빠르게 생성하거나, 필요에 따라 테스트를 수동으로 만들 수 있습니다. IntelliTest를 사용하여 .NET 코드를 탐색하는 경우 테스트 데이터 및 단위 테스트 도구 모음을 생성할 수 있습니다. 코드의 모든 문에 대해 해당 문을 실행할 테스트 입력이 생성됩니다. [코드에 대한 단위 테스트를 생성](http://msdn.microsoft.com/library/dn823749.aspx)하는 방법을 알아봅니다.  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/04/2017
   
 -   [테스트 실행 및 보기](#BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar)  
   
-##  <a name="BKMK_Unit_testing_overview"></a> 유닛 테스트 개요  
+##  <a name="BKMK_Unit_testing_overview"></a> 단위 테스트 개요  
   
 ###  <a name="BKMK_Quick_starts"></a> 빠른 시작  
  코딩으로 직접 이동하는 단위 테스트에 대한 설명을 보려면 다음 항목 중 하나를 참조하세요.  
@@ -82,11 +83,11 @@ ms.lasthandoff: 04/04/2017
   
  `Accounts` 프로젝트를 설계할 때의 첫 번째 작업에는 계좌에 대한 기본 정보를 저장하는 클래스, 계좌에서 자산을 맡기거나 인출하는 것과 같이 모든 유형의 계좌가 공통적으로 갖고 있는 기능을 지정하는 인터페이스, 입출금 계좌(checking account)를 나타내는 인터페이스에서 파생된 클래스가 포함됩니다. Accounts 프로젝트는 다음과 같은 소스 파일을 만드는 것으로 시작됩니다.  
   
--   `AccountInfo.cs`는 계좌에 대한 기본 정보를 정의합니다.  
+-   `AccountInfo.cs` 는 계좌에 대한 기본 정보를 정의합니다.  
   
--   `IAccount.cs`는 계좌에서 자산을 맡기거나 인출하는 메서드 및 계좌 잔액을 가져오는 메서드를 포함해서 계좌에 대한 표준 `IAccount` 인터페이스를 정의합니다.  
+-   `IAccount.cs` 는 계좌에서 자산을 맡기거나 인출하는 메서드 및 계좌 잔액을 가져오는 메서드를 포함해서 계좌에 대한 표준 `IAccount` 인터페이스를 정의합니다.  
   
--   `CheckingAccount.cs`는 입출금 계좌에 대한 `CheckingAccount` 인터페이스를 구현하는 `IAccounts` 클래스를 포함합니다.  
+-   `CheckingAccount.cs` 는 입출금 계좌에 대한 `CheckingAccount` 인터페이스를 구현하는 `IAccounts` 클래스를 포함합니다.  
   
  입출금 계좌에서 금액을 인출할 때는 인출 금액이 계좌 잔액보다 작은지 확인해야 합니다. 따라서 여기에서는 `IAccount.Withdaw` 에서 `CheckingAccount` 메서드를 이러한 조건을 확인할 수 있는 메서드로 재정의합니다. 이 메서드는 다음과 같을 수 있습니다.  
   
@@ -298,9 +299,9 @@ public void My_Test ()
 > [!NOTE]
 >  이러한 절차는 관리 코드에 대한 Microsoft 단위 테스트 프레임워크를 사용하여 작성하는 테스트 메서드에만 적용됩니다. 다른 프레임워크를 사용하는 경우에는 동일한 기능에 대한 해당 프레임워크 설명서를 참조하세요.  
   
- 예를 들어 `CheckingAccount`라는 `AddIntegerHelper` 클래스에 불필요한 메서드를 추가한다고 가정해보세요. `AddIntegerHelper`는 두 개의 정수를 추가합니다.  
+ 예를 들어 `CheckingAccount` 라는 `AddIntegerHelper`클래스에 불필요한 메서드를 추가한다고 가정해보세요. `AddIntegerHelper` 는 두 개의 정수를 추가합니다.  
   
- `AddIntegerHelper` 메서드에 대해 데이터 기반 테스트를 만들려면 먼저 `AccountsTest.accdb`라는 Access 데이터베이스와 `AddIntegerHelperData`라는 테이블을 만듭니다. `AddIntegerHelperData` 표는 추가에 대한 첫 번째 및 두 번째 피연산자를 지정하는 열과 예상 결과를 지정하기 위한 열을 정의합니다. 여러 행에 적절한 값을 채웁니다.  
+ `AddIntegerHelper` 메서드에 대해 데이터 기반 테스트를 만들려면 먼저 `AccountsTest.accdb` 라는 Access 데이터베이스와 `AddIntegerHelperData`라는 테이블을 만듭니다. `AddIntegerHelperData` 표는 추가에 대한 첫 번째 및 두 번째 피연산자를 지정하는 열과 예상 결과를 지정하기 위한 열을 정의합니다. 여러 행에 적절한 값을 채웁니다.  
   
 ```c#  
   

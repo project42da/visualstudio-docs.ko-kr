@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: edb6c75d35f89df363a07eb24ba31e203bc6672e
-ms.openlocfilehash: 30261d8b75029bac15c9ab881d9f43c1a717d8cd
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b699132bf1a31d3ef9dc3ba5af3f99c22890c632
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 
@@ -102,7 +103,7 @@ Live Unit Testing에서 파일에 자세한 MSBuild 로그 메시지를 캡처�
 
 ##    <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>입력할 때 편집기에서 검사 시각화 보기
 
-Live Unit Testing은 일단 활성화되면 Visual Studio 편집기에서 코드 줄 각각을 업데이트하여 작성한 코드에 단위 테스트가 적용되는지 및 적용된 테스트에 통과하는지 여부를 표시합니다.  다음 그림에서는 테스트를 통과하거나 실패한 코드 줄뿐만 아니라 테스트가 적용되지 않은 코드 줄을 보여 줍니다. 녹색 "✓"으로 데코레이트된 줄은 테스트를 통과한 경우에만 적용됩니다. 빨간색 "🞩"으로 데코레이트된 줄은 하나 이상의 테스트에 실패한 경우 적용됩니다. 파란색 ""으로 데코레이트된 줄은 테스트되지 않은 경우에 적용됩니다.
+Live Unit Testing은 일단 활성화되면 Visual Studio 편집기에서 코드 줄 각각을 업데이트하여 작성한 코드에 단위 테스트가 적용되는지 및 적용된 테스트에 통과하는지 여부를 표시합니다.  다음 그림에서는 테스트를 통과하거나 실패한 코드 줄뿐만 아니라 테스트가 적용되지 않은 코드 줄을 보여 줍니다. 녹색 “✓”으로 데코레이트된 줄은 테스트를 통과한 경우에만 적용됩니다. 빨간색 “🞩”으로 데코레이트된 줄은 하나 이상의 테스트에 실패한 경우 적용됩니다. 파란색 “”으로 데코레이트된 줄은 테스트되지 않은 경우에 적용됩니다.
 
   ![이미지](./media/lut-codewindow.png)
 

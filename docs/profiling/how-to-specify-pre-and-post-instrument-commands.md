@@ -1,25 +1,45 @@
 ---
-title: "방법: 계측 전 명령 및 계측 후 명령 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.property.instrument"
-helpviewer_keywords: 
-  - "프로파일링 도구, 계측 전 이벤트"
-  - "이벤트[Visual Studio], 계측 전"
-  - "계측 전 이벤트, 성능 도구"
+title: "방법: 계측 전 명령 및 계측 후 명령 지정 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.property.instrument
+helpviewer_keywords:
+- profiling tools, pre-instrument events
+- events [Visual Studio], pre-instrument
+- pre-instrument events, performance tools
 ms.assetid: 6a8d5340-1d1b-4d81-88dd-8e1f435eb828
 caps.latest.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 28
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: afbc73dbeda9d8201d1ed0cfccdf80025fc82306
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>방법: 계측 전 명령 및 계측 후 명령 지정
 성능 세션의 이진 파일이 계측되기 전이나 계측된 후 실행되는 명령을 지정할 수 있습니다. 명령줄에서 실행될 수 있는 모든 명령을 계측 전 또는 계측 후 이벤트로 지정할 수 있습니다. 예를 들어 이진 파일이 계측된 후 실행되는 배치 파일에서 강력한 이름 키를 사용하여 어셈블리 재서명을 자동화하는 명령을 지정할 수 있습니다.  
@@ -61,7 +81,7 @@ caps.handback.revision: 28
 3.  **계측 전 이벤트** 아래 **명령줄** 텍스트 상자에 명령을 입력합니다.  
   
     > [!NOTE]
-    >  **명령줄** 상자에 인접한 줄임표 단추**(…)**를 클릭하여 해당하는 .exe, .cmd 또는 .bat 파일로 이동하고 파일을 선택합니다.  
+    >  **명령줄** 상자에 인접한 줄임표 단추**(...)**를 클릭하여 해당하는 .exe, .cmd 또는 .bat 파일로 이동하고 파일을 선택합니다.  
   
 4.  **확인**을 클릭합니다.  
   
@@ -80,7 +100,7 @@ caps.handback.revision: 28
 3.  **계측 후 이벤트** 아래 **명령줄** 텍스트 상자에 명령을 입력합니다.  
   
     > [!NOTE]
-    >  **명령줄** 상자에 인접한 줄임표 단추**(…)**를 클릭하여 해당하는 .exe, .cmd 또는 .bat 파일로 이동하고 파일을 선택합니다.  
+    >  **명령줄** 상자에 인접한 줄임표 단추**(...)**를 클릭하여 해당하는 .exe, .cmd 또는 .bat 파일로 이동하고 파일을 선택합니다.  
   
 4.  **확인**을 클릭합니다.  
   
@@ -88,8 +108,3 @@ caps.handback.revision: 28
   
 ## <a name="see-also"></a>참고 항목  
  [성능 세션 구성](../profiling/configuring-performance-sessions.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

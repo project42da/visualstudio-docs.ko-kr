@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2ed718f0cd308293dae0b5e2409b421c4529d09b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0095311f5188260bf1207e4094c1ceb87b1bbb86
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="flag-markers"></a>플래그 표식
@@ -46,9 +47,9 @@ ms.lasthandoff: 02/22/2017
 플래그 중요도를 보여주는 마커  
   
 ## <a name="flag-category"></a>플래그 범주  
- 플래그는 해당 범주에 따라&5;가지 다른 색상 중 하나로 표시됩니다. 범주가&5;개 이상이면 색상이 재사용됩니다. 색상은 선택할 수 없습니다. 모든 마커와 같이 범주는 임의의 정수일 수 있습니다. 다음 그림은 처음&5;개 범주에 대한 색상을 보여줍니다.  
+ 플래그는 해당 범주에 따라 5가지 다른 색상 중 하나로 표시됩니다. 범주가 5개 이상이면 색상이 재사용됩니다. 색상은 선택할 수 없습니다. 모든 마커와 같이 범주는 임의의 정수일 수 있습니다. 다음 그림은 처음 5개 범주에 대한 색상을 보여줍니다.  
   
- ![범주 표식의&5;가지 색](../profiling/media/cvmarkercategory.png "CVMarkerCategory")  
+ ![범주 표식의 5가지 색](../profiling/media/cvmarkercategory.png "CVMarkerCategory")  
 범주를 보여주는 마커  
   
 ## <a name="alerts"></a>경고  

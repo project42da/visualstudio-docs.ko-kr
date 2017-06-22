@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 0d129b4820944f5717c63243cb8550bc4fed3385
-ms.openlocfilehash: 380b65540d8f5c6ea6d8a8adf1f3c5575f5dd9dc
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 09c33f3cc331af03659922e178e4089f177132de
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="profiling-tools"></a>프로파일링 도구
@@ -72,7 +73,7 @@ ms.lasthandoff: 03/20/2017
 ## <a name="perftips"></a>PerfTips  
  ![DiagPerfTips](../profiling/media/diagperftips.png "DiagPerfTips")  
   
- 디버거가 중단점 또는 단계별 실행 작업에서 실행을 중지하는 경우 중단점과 이전 중단점 사이의 경과 시간이 편집기 창에 팁으로 표시됩니다. [PerfTips](../profiling/perftips.md)는 디버깅 중에 앱 성능을 모니터링하고 분석하도록 도와줍니다. **PerfTips** 는 데스크톱, Windows 유니버설, ASP.NET 앱에서 볼 수 있습니다.
+ 디버거가 중단점 또는 단계별 실행 작업에서 실행을 중지하는 경우 중단점과 이전 중단점 사이의 경과 시간이 편집기 창에 팁으로 표시됩니다. [PerfTips](../profiling/perftips.md) 는 디버깅 중에 앱의 성능을 모니터링하고 분석하도록 도와줍니다. **PerfTips** 는 데스크톱, Windows 유니버설, ASP.NET 앱에서 볼 수 있습니다.
 
 ## <a name="performance-explorer"></a>성능 탐색기  
  ![PerfTools](../profiling/media/perftools.png "PerfTools")  
@@ -98,7 +99,7 @@ ms.lasthandoff: 03/20/2017
  [IntelliTrace](../debugger/intellitrace.md)를 사용하면 재현하기 힘든 디버그 오류와 함수 호출 및 디버거 이벤트 중 **로컬** 창의 데이터를 검토하고, 특정 이벤트를 기록할 수 있습니다.  IntelliTrace는 본래 디버깅 도구이지만, 성능 조사에 사용할 수 있는 정보도 제공합니다. 이 도구는 데스크톱, Windows 유니버설, ASP.NET C# 앱의 Visual Studio Enterprise에서만 사용할 수 있습니다. IntelliTrace는 디버깅 중에 **진단 도구** 창에서(**디버그/Windows/진단 도구 표시**) 찾을 수 있습니다.  
   
 ## <a name="profiling-in-production"></a>프로덕션에서 프로파일링  
- 프로덕션에서 프로파일링에 권장되는 방법은 [vsperf.exe를 사용하여 명령줄](../profiling/using-the-profiling-tools-from-the-command-line.md)에서 프로파일링하여 CPU 프로필을 수집하는 것입니다. Azure 앱 서비스의 원격 프로파일링 지원의 경우, [서버 탐색기 또는 Kudu 포털](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/)을 통해 프로파일링할 수 있습니다.  
+ 프로덕션에서 프로파일링에 권장되는 방법은 [vsperf.exe를 사용하여 명령줄](../profiling/using-the-profiling-tools-from-the-command-line.md) 에서 프로파일링하여 CPU 프로필을 수집하는 것입니다. Azure 앱 서비스의 원격 프로파일링 지원의 경우, [서버 탐색기 또는 Kudu 포털](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/)을 통해 프로파일링할 수 있습니다.  
   
 ## <a name="which-tool-should-i-use"></a>사용해야 하는 도구  
  다음 테이블에는 Visual Studio가 제안하는 다양한 도구 및 그와 함께 사용할 수 있는 다양한 프로젝트 형식이 나열되어 있습니다.  
@@ -106,14 +107,14 @@ ms.lasthandoff: 03/20/2017
 |성능 도구|Windows 바탕 화면|Windows 유니버설/스토어|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[메모리 사용](../profiling/memory-usage.md)|예|예|예|  
-|[CPU 사용](../profiling/cpu-usage.md)|예|예|예|  
+|[CPU 사용량](../profiling/cpu-usage.md)|예|예|예|  
 |[GPU 사용량](../debugger/gpu-usage.md)|예|예|no|  
 |[응용 프로그램 타임라인](../profiling/application-timeline.md)|예|예|no|  
 |[PerfTips](../profiling/perftips.md)|예|XAML은 예, HTML은 no|예|  
 |[성능 탐색기](../profiling/performance-explorer.md)|예|no|예(ASP.NET Core의 경우 아니요)|  
 |[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise만 해당|.NET Enterprise만 해당|.NET Enterprise만 해당|
 |[네트워크 사용량](../profiling/network-usage.md)|no|예|no| 
-|[HTML UI 응답성](../profiling/html-ui-responsiveness.md)|no|HTML은 예, XAML은 no|no|  
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|HTML은 예, XAML은 no|no|  
 |[JavaScript 메모리](../profiling/javascript-memory.md)|no|HTML은 예, XAML은 no|no|  
   
 ## <a name="see-also"></a>참고 항목  

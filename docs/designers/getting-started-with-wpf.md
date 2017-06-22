@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: b4c56d1428506de5998f4f430239422d72df9a44
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: a737c447bc97738c6e8f5285f672e9964578061b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="getting-started-with-wpf"></a>WPF 시작
@@ -41,7 +42,7 @@ WPF(Windows Presentation Foundation)는 데스크톱 클라이언트 응용 프�
   
 |||  
 |-|-|  
-|바로 시작|[연습: 내 첫 WPF 데스크톱 응용 프로그램](../designers/walkthrough-my-first-wpf-desktop-application2.md)<br /><br /> [연습: Azure 모바일 서비스에 연결된 WPF 데스크톱 응용 프로그램 만들기](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)|  
+|바로 시작...|[연습: 내 첫 WPF 데스크톱 응용 프로그램](../designers/walkthrough-my-first-wpf-desktop-application2.md)<br /><br /> [연습: Azure 모바일 서비스에 연결된 WPF 데스크톱 응용 프로그램 만들기](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)|  
 |응용 프로그램 UI를 디자인하려면 어떻게 해야 하나요?|[Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](../designers/designing-xaml-in-visual-studio.md)|  
 |.NET을 처음 사용하세요?|[.NET Framework의 개요](https://msdn.microsoft.com/en-us/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [응용 프로그램 주요 사항](http://msdn.microsoft.com/Library/653da4ba-3752-4d1f-a08a-de017dc86ecc)<br /><br /> [Visual C# 및 Visual Basic 시작](https://msdn.microsoft.com/en-us/library/dd492171\(v=vs.140\).aspx)|  
 |WPF에 대한 자세한 설명...|[WPF 소개](../designers/introduction-to-wpf.md)<br /><br /> [XAML 개요(WPF)](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)<br /><br /> [컨트롤](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)<br /><br /> [데이터 바인딩 개요](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)<br /><br /> [LINQ to XML로 WPF 데이터 바인딩](../designers/wpf-data-binding-with-linq-to-xml.md)|  

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 078576d6e1988bf1cefbb09646ea44f61085f5cf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
+ms.openlocfilehash: f1f9931e6e7c8dda4cb74f407901f41467c690cc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/11/2017
 
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild의 예약된 속성 및 잘 알려진 속성
@@ -64,6 +65,7 @@ ms.lasthandoff: 02/22/2017
 |`MSBuildProjectFile`|파일 확장명이 포함된 프로젝트 파일의 전체 파일 이름(예: MyApp.proj)입니다.|예약됨|  
 |`MSBuildProjectFullPath`|파일 확장명이 포함된 프로젝트 파일의 절대 경로와 전체 파일 이름(예: C:\MyCompany\MyProduct\MyApp.proj)입니다.|예약됨|  
 |`MSBuildProjectName`|파일 확장명이 없는 프로젝트 파일의 파일 이름(예: MyApp)입니다.|예약됨|  
+|`MSBuildRuntimeType`|현재 실행 중인 런타임의 형식입니다. MSBuild 15에서 도입되었습니다. MSBuild가 데스크톱 .NET Framework에서 실행 중임을 나타내는 `Full`, MSBuild가 .NET Core에서 실행 중임을 나타내는 `Core` 또는 MSBuild가 Mono에서 실행 중임을 나타내는 `Mono` 값이 정의되어 있지 않을 수 있습니다(MSBuild 15 이전).|예약됨|  
 |`MSBuildStartupDirectory`|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]가 호출되는 폴더의 절대 경로입니다. 이 속성을 사용하면 모든 디렉터리에서 dirs.proj 파일을 만들지 않고 프로젝트 트리에서 특정 지점 아래에 모든 것을 빌드할 수 있습니다. 대신 다음과 같이 프로젝트(예: c:\traversal.proj)를 하나만 포함합니다.<br /><br /> `<Project ...>     <ItemGroup>         <ProjectFiles              Include="$            (MSBuildStartupDirectory)            **\*.csproj"/>     </ItemGroup>     <Target Name="build">         <MSBuild             Projects="@(ProjectFiles)"/>     </Target> </Project>`<br /><br /> 임의의 트리 위치에 빌드하려면 다음을 입력합니다.<br /><br /> `msbuild c:\traversal.proj`<br /><br /> 이 속성에는 마지막 백슬래시를 포함하지 마세요.|예약됨|  
 |`MSBuildThisFile`|`MSBuildThisFileFullPath`의 파일 이름 및 파일 확장명 부분입니다.|예약됨|  
 |`MSBuildThisFileDirectory`|`MSBuildThisFileFullPath`의 디렉터리 부분입니다.<br /><br /> 경로에 마지막 백슬래시를 포함하세요.|예약됨|  

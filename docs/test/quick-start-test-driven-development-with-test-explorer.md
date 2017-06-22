@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: e5e0d87e05a5900d335670cf9dcb79d58839892e
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2efe98a5b421fbffbe2a39cc69a5e0acf06af7db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="quick-start-test-driven-development-with-test-explorer"></a>퀵 스타트: 테스트 탐색기를 사용한 테스트 기반 개발
@@ -168,7 +169,7 @@ ms.lasthandoff: 04/04/2017
 1.  코드가 모든 경우에 작동한다는 확신을 높이기 위해 보다 광범위한 입력 값 범위를 시도하는 테스트를 추가합니다.  
   
     > [!TIP]
-    >  통과한 기존 테스트를 변경하지 마십시오. 대신에 새 테스트를 추가합니다. 사용자 요구 사항이 변경될 때만 기존 테스트를 변경합니다. 이렇게 하면 코드를 확장할 때 기존 기능이 손실되지 않습니다.  
+    >  통과한 기존 테스트를 변경하지 마십시오. 대신에 새 테스트를 추가합니다. 사용자 요구 사항이 변경될 때만 기존 테스트를 변경합니다. 이 정책을 적용하면 코드를 확장할 때 기존 기능이 손실되지 않습니다.  
   
      테스트 클래스에서 입력 값 범위를 시도하는 다음 테스트를 추가합니다.  
   

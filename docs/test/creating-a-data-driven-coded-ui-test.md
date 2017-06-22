@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9885f3cff76b9c5e1d053550be80c4b68cf9de1b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2c4cb515c4442b3c48c42f47f9116e9ff536a5f4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>데이터 기반의 코딩된 UI 테스트 만들기
@@ -127,15 +128,15 @@ ms.lasthandoff: 02/22/2017
   
      ![데이터로 .CSV 파일 채우기](../test/media/cuit_datadriven_adddatatocsvfile.png "CUIT_dataDriven_AddDataToCSVFile")  
   
-3.  .csv 파일은 올바른 인코딩을 사용하여 저장되어야 합니다. **파일** 메뉴에서 **고급 저장 옵션**을 선택하고 인코딩으로 **유니코드(서명 없는 UTF-8) - 코드 페이지 65001**을 선택합니다.  
+3.  .csv 파일은 올바른 인코딩을 사용하여 저장되어야 합니다. **파일** 메뉴에서 **고급 저장 옵션**을 선택하고 인코딩으로 **유니코드(시그니처 없는 UTF-8) - 코드 페이지 65001**을 선택합니다.  
   
 4.  .csv 파일은 출력 디렉터리에 복사해야 하며 그렇지 않으면 테스트를 실행할 수 없습니다. 속성 창에서 해당 파일을 복사합니다.  
   
      ![.CSV 파일 배포](../test/media/cuit_datadriven_deploycsvfile.png "CUIT_dataDriven_DeployCSVFile")  
   
-     이제 데이터 집을 만들었으므로 데이터를 테스트에 바인딩하겠습니다.  
+     이제 데이터 집합을 만들었으므로 데이터를 테스트에 바인딩하겠습니다.  
   
-#### <a name="step-3--add-data-source-binding"></a>3단계 - 데이터 소스 바인딩 추가  
+#### <a name="step-3---add-data-source-binding"></a>3단계 - 데이터 소스 바인딩 추가  
   
 1.  데이터 소스를 바인딩하려면 테스트 메서드 바로 위에 있는 기존 `DataSource` 특성 내에 `[TestMethod]` 특성을 추가합니다.  
   
@@ -159,11 +160,11 @@ ms.lasthandoff: 02/22/2017
   
 2.  테스트를 실행합니다.  
   
-     테스트는&3;회 반복 실행됩니다. 바인딩된 데이터 소스에 데이터 행&3;개가 포함되어 있기 때문입니다. 그러나 테스트는 상수 매개 변수 값을 여전히 사용하고 있어 매번 1+2와 해당 합인 3을 추가하는 것도 확인할 수 있습니다.  
+     테스트는 3회 반복 실행됩니다. 바인딩된 데이터 소스에 데이터 행 3개가 포함되어 있기 때문입니다. 그러나 테스트는 상수 매개 변수 값을 여전히 사용하고 있어 매번 1+2와 해당 합인 3을 추가하는 것도 확인할 수 있습니다.  
   
      다음으로는 데이터 소스 파일의 값을 사용하는 테스트를 구성합니다.  
   
-#### <a name="step-4--use-the-data-in-the-coded-ui-test"></a>4단계 - 코딩된 UI 테스트에서 데이터 사용  
+#### <a name="step-4---use-the-data-in-the-coded-ui-test"></a>4단계 - 코딩된 UI 테스트에서 데이터 사용  
   
 1.  CodedUITest.cs 파일의 맨 위에 `using Microsoft.VisualStudio.TestTools.UITesting.WinControls`를 추가합니다.  
   
@@ -212,17 +213,17 @@ ms.lasthandoff: 02/22/2017
   
 3.  솔루션을 저장합니다.  
   
-#### <a name="step-5--run-the-data-driven-test"></a>5단계 – 데이터 기반 테스트 실행  
+#### <a name="step-5---run-the-data-driven-test"></a>5단계 – 데이터 기반 테스트 실행  
   
 1.  테스트를 다시 실행하여 이제 테스트가 데이터 기반인지를 확인합니다.  
   
-     .csv 파일의 값을 사용하여&3;회 반복 실행되는 테스트를 확인할 수 있습니다. 유효성 검사도 작동해야 하며, 테스트 탐색기에서 테스트가 통과로 표시되어야 합니다.  
+     .csv 파일의 값을 사용하여 3회 반복 실행되는 테스트를 확인할 수 있습니다. 유효성 검사도 작동해야 하며, 테스트 탐색기에서 테스트가 통과로 표시되어야 합니다.  
   
  **지침**  
   
- 자세한 내용은 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)(Visual Studio 2012를 사용한 연속 배달 테스트 - 2장: 단위 테스트: 내부 테스트) 및 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)(Visual Studio 2012를 사용한 연속 배달 테스트 - 5장: 시스템 테스트 자동화)를 참조하세요.  
+ 자세한 내용은 [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 2장: 유닛 테스트: 내부 테스트](http://go.microsoft.com/fwlink/?LinkID=255188) 및 [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 5장: 시스템 테스트 자동화](http://go.microsoft.com/fwlink/?LinkID=255196)를 참조하세요.  
   
-## <a name="q--a"></a>Q & A  
+## <a name="q--a"></a>Q&A  
   
 ###  <a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a> SQL Express 또는 XML과 같은 기타 데이터 소스 형식에는 어떤 데이터 소스 특성이 있나요?  
  아래 테이블의 샘플 데이터 소스 문자열을 코드에 복사하고 필요한 항목을 사용자 지정하여 사용할 수 있습니다.  

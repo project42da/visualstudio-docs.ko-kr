@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 60d05761993a4bd7547d83274e103de1b5c30b34
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 44110390bcddc67d86dcfcc81c2d5961e346ccf7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP 앱에서 네트워크 사용 분석
@@ -40,7 +41,7 @@ Visual Studio **네트워크** 진단 도구는 [Windows.Web.Http API](https://m
  네트워크 도구는 Windows 유니버설 플랫폼 앱만 지원합니다. 지금은 다른 플랫폼이 지원되지 않습니다.  
   
 > [!NOTE]
->  네트워크 도구에 대한 자세한 설명은 [Visual Studio 네트워크 도구 소개](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studio-s-network-tool.aspx)를 참조하세요.  
+>  네트워크 도구에 대한 자세한 설명은 [Introducing Visual Studio's network tool](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studio-s-network-tool.aspx)(Visual Studio 네트워크 도구 소개)을 참조하세요.  
   
 ## <a name="collecting-network-tool-data"></a>네트워크 도구 데이터 수집  
  Visual Studio가 설치된 컴퓨터에 열려 있는 Visual Studio 프로젝트로 **네트워크** 도구를 실행해야 합니다.  
@@ -91,5 +92,5 @@ Visual Studio **네트워크** 진단 도구는 [Windows.Web.Http API](https://m
   
 ## <a name="see-also"></a>참고 항목  
  [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
- [Visual Studio 블로그: Visual Studio의 네트워크 검사기 소개](http://go.microsoft.com/fwlink/?LinkId=535022)   
- [Channel 9 비디오: VS 진단 도구 – 새 네트워크 프로파일러](http://channel9.msdn.com/Series/ConnectOn-Demand/206)
+ [Visual Studio blog: Introducing Visual Studio's network inspector](http://go.microsoft.com/fwlink/?LinkId=535022) (Visual Studio 블로그: Visual Studio의 네트워크 검사기 소개)  
+ [Channel 9 Video: VS Diagnostics tools - New Network Profiler](http://channel9.msdn.com/Series/ConnectOn-Demand/206)(Channel 9 비디오: VS 진단 도구 – 새 네트워크 프로파일러)

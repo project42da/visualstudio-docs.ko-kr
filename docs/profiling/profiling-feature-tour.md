@@ -1,7 +1,7 @@
 ---
 title: "프로파일링 기능 둘러보기 | Microsoft 문서"
-ms.custom: 
-ms.date: 02/03/2016
+ms.custom: H1HackMay2017
+ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -30,13 +30,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 2beee9df6c4897d1fa7d55502a7ed277a1eb6046
-ms.openlocfilehash: 4a64d7385009b6d502fc20acfbead4b49323fa4f
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
+ms.openlocfilehash: a219a09f96b34a434a3bf1103e560104c294eb96
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="profiling-feature-tour"></a>프로파일링 기능 둘러보기
+# <a name="feature-tour-of-profiling-in-visual-studio"></a>Visual Studio의 프로파일링 기능 둘러보기
 
 Visual Studio에서는 앱의 유형에 따라 다른 성능 문제를 진단할 수 있는 다양한 프로파일링 도구를 제공합니다.
 
@@ -169,14 +170,14 @@ CPU 사용량 또는 메모리 사용량 도구에 현재 표시되지 않는 �
 |성능 도구|Windows 바탕 화면|Windows 유니버설/스토어|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[메모리 사용](../profiling/memory-usage.md)|예|예|예|  
-|[CPU 사용](../profiling/cpu-usage.md)|예|예|예|  
+|[CPU 사용량](../profiling/cpu-usage.md)|예|예|예|  
 |[GPU 사용량](../debugger/gpu-usage.md)|예|예|no|  
 |[응용 프로그램 타임라인](../profiling/application-timeline.md)|예|예|no|  
 |[PerfTips](../profiling/perftips.md)|예|XAML은 예, HTML은 no|예|  
 |[성능 탐색기](../profiling/performance-explorer.md)|예|no|예(ASP.NET Core의 경우 아니요)|  
 |[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise만 해당|.NET Enterprise만 해당|.NET Enterprise만 해당|
 |[네트워크 사용량](../profiling/network-usage.md)|no|예|no| 
-|[HTML UI 응답성](../profiling/html-ui-responsiveness.md)|no|HTML은 예, XAML은 no|no|  
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|HTML은 예, XAML은 no|no|  
 |[JavaScript 메모리](../profiling/javascript-memory.md)|no|HTML은 예, XAML은 no|no|  
 
 ## <a name="see-also"></a>참고 항목  

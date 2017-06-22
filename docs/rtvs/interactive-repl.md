@@ -1,0 +1,143 @@
+---
+title: "Visual Studio용 R 도구를 사용한 대화형 REPL | Microsoft Docs"
+ms.custom: 
+ms.date: 4/10/2017
+ms.prod: visual-studio-dev15
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-r
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 45d7c6ff-abd3-42a4-8376-0e9c8f7226d5
+caps.latest.revision: 1
+author: kraigb
+ms.author: kraigb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
+ms.openlocfilehash: d1d1030c112e5c5d27beb7b0623b0450bc3d9732
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/12/2017
+
+---
+
+
+# <a name="working-with-the-r-interactive-window"></a>R 대화형 창 사용
+
+RTVS(Visual Studio용 R 도구)는 R 코드를 입력하고 결과를 즉시 확인할 수 있는 **REPL**(Read-Evaluate-Print-Loop) 창으로 알려진 R 대화형 창을 제공합니다. 모든 모듈, 구문 및 변수와 IntelliSense를 대화형 창에서 사용할 수 있습니다.
+
+또한 대화형 창은 일반 R 편집기 창과 통합됩니다. 코드를 선택하고 Ctrl+Enter를 누르거나 마우스 오른쪽 단추로 클릭하고 **대화형으로 실행**을 선택하면 코드를 직접 입력한 것처럼 코드가 대화형 창에서 한 줄씩 실행됩니다. 커서가 편집기 창의 한 줄 위에 있을 때 Ctrl+Enter를 누르면 이 줄이 대화형 창으로 전송되고 커서가 다음 줄로 이동합니다. 이와 같이 Ctrl+Enter를 반복해서 눌러 코드를 단계별로 실행할 수 있습니다.
+
+이 기능을 사용해 보려면 [R 시작](getting-started-with-r.md) 연습 및 아래 섹션을 따릅니다.
+
+- [대화형 창 개요](#overview-of-the-interactive-window)
+- [작업 영역 및 세션](#workspaces-and-sessions)
+- [작업 디렉터리](#working-directory)
+- [기록](#history)
+
+[코드 조각](code-snippets.md)은 R 편집기 창에서 작동하는 것처럼 대화형 창에서도 작동합니다.
+
+## <a name="overview-of-the-interactive-window"></a>대화형 창 개요
+
+올바른 R 코드를 입력하고 줄 끝에서 Enter 키를 누르면 이 줄에서 코드가 실행됩니다.
+
+```
+> 3 + 3
+[1] 6
+```
+
+한 줄 입력 시 어느 곳에서나 Enter 키를 누르면 해당 줄이 실행됩니다.
+
+REPL의 모든 이전 입력 및 출력은 읽기 전용이고 변경할 수 없습니다. 하지만 언제든지 창에서 텍스트를 선택하여 복사하고 붙여넣을 수 있습니다. 붙여넣은 코드는 한 줄씩 입력된 것처럼 실행됩니다.
+
+즉, 문 입력을 시작하고 Enter 키를 누르면 RTVS는 문을 계속해야 할 경우를 인식하고 왼쪽의 + 프롬프트와 적절한 들여쓰기가 있는 여러 줄 모드를 시작합니다. RTVS는 괄호, 대괄호 및 중괄호를 완성합니다.
+
+![대화형 창의 여러 줄 문 입력](media/repl-multiline-entry.png)
+
+이 여러 줄 모드에서 Enter 키를 누르면 블록의 끝에 있을 경우에만 코드 블록이 실행되고, 이외의 경우에는 새 줄이 삽입됩니다. 하지만 어느 곳에서나 Ctrl+Enter를 눌러 해당 코드 블록을 즉시 실행할 수 있습니다.
+
+### <a name="toolbar-commands"></a>도구 모음 명령
+
+도구 모음이 있는 대화형 창이 다음과 같이 표시됩니다.
+
+![도구 모음이 있는 대화형 창](media/repl-window.png)
+
+도구 모음 명령은 다음과 같습니다. 대부분의 명령은 일치하는 키보드 키가 있고 **R 도구 > 세션** 및 **R 도구 > 작업 디렉터리** 메뉴에서(또는 언급된 대로) 사용할 수도 있습니다.
+
+| 단추 | 명령 | 키 조합 | 설명 | 
+| --- | --- | --- | --- |
+| ![다시 설정 단추](media/repl-toolbar-01-reset.png) | 다시 설정 | Ctrl+Shift+F10 | 대화형 창 세션을 다시 시작하여 모든 변수 및 기록을 지웁니다. |
+| ![지우기 단추](media/repl-toolbar-02-clear.png) | 지우기 | Ctrl+L | 대화형 창에 표시된 출력을 지웁니다. 세션 변수 또는 기록에 영향을 미치지 않습니다. |
+| ![기록 단추](media/repl-toolbar-03-history.png) | 이전 기록 명령<br/>다음 기록 명령 | 위쪽, 아래쪽<br/>Alt+위쪽 화살표, Alt+아래쪽 화살표 | 여러 줄 코드 블록에 대한 특정 동작이 있는 기록을 스크롤합니다. [기록](#history)을 참조하세요. |
+| ![작업 영역 로드 단추](media/repl-toolbar-04-load-workspace.png) | 작업 영역 로드 | 해당 없음 | 이전에 저장된 작업 영역을 로드합니다([작업 영역 및 세션](#workspaces-and-sessions) 참조). |
+| ![다른 이름으로 작업 영역 저장 단추](media/repl-toolbar-05-save-workspace-as.png)| 다른 이름으로 작업 영역 저장 | 해당 없음 | 세션의 현재 상태를 작업 영역으로 저장합니다([작업 영역 및 세션](#workspaces-and-sessions) 참조). |
+| ![R 스크립트 원본 제공 단추](media/repl-toolbar-06-source-r-script.png) | R 스크립트 원본 제공 | Ctrl+Shift+S | 코드를 실행하는 Visual Studio 편집기에 현재 활성 R 스크립트가 있는 `source`를 호출합니다.  이 단추는 R 파일이 Visual Studio 편집기에서 열린 경우에만 나타납니다. | 
+| ![에코를 통해 R 스크립트 원본 제공 단추](media/repl-toolbar-07-source-r-script-with-echo.png) | 에코를 통해 R 스크립트 원본 제공 | Ctrl+Shift+Enter | R 스크립트 원본 제공과 같지만 스크립트 콘텐츠를 대화형 창에 표시합니다. | 
+| ![R 중단 단추](media/repl-toolbar-08-interrupt-r.png)| R 중단 | Esc | 대화형 창에서 위의 스크린샷의 `while` 루프와 같은 코드 실행을 중지합니다. |
+| ![디버거 연결 단추](media/repl-toolbar-09b-attach-debugger.png)| 디버거 연결 | 해당 없음 | **디버그 > R 대화형에 연결** 명령을 통해 사용할 수도 있습니다. | 
+| ![작업 디렉터리를 원본 파일 위치로 설정 단추](media/repl-toolbar-10-set-working-directory-source.png)| 작업 디렉터리를 원본 파일 위치로 설정 | Ctrl+Shift+E | 작업 디렉터리를 대화형 창에 로드된 가장 최근 원본 제공된 파일로 설정합니다(`source` 사용). [작업 디렉터리](#working-directory)를 참조하세요. |
+| ![작업 디렉터리를 프로젝트 위치로 설정 단추](media/repl-toolbar-11-set-working-directory-to-project.png) | 작업 디렉터리를 프로젝트 위치로 설정 | Ctrl+Shift+P | 작업 디렉터리를 Visual Studio에 현재 로드된 프로젝트의 루트로 설정합니다. [작업 디렉터리](#working-directory)를 참조하세요. |
+| (텍스트 필드) | 작업 디렉터리 선택 | 해당 없음 | 작업 디렉터리에 대한 직접 입력 필드입니다. [작업 디렉터리](#working-directory)를 참조하세요. |
+
+
+## <a name="workspaces-and-sessions"></a>작업 영역 및 세션
+
+코드를 대화형 창에서 실행하면 현재 세션에서 전역 변수, 함수 정의, 라이브러리 로드 등으로 구성된 컨텍스트가 생성됩니다. 이 컨텍스트를 전체적으로 *작업 영역*이라고 하고 언제든지 작업 영역을 저장하고 로드할 수 있습니다. 
+
+**다른 이름으로 작업 영역 저장** 단추를 선택하고 **R 도구 > 세션 > 다른 이름으로 작업 영역 저장...** 명령을 사용하면 위치 및 파일 이름(기본 확장은 `.RData`)을 입력할 수 있는 메시지가 표시됩니다.
+특정 파일 이름(기본값은 `.RData`)을 사용하여 작업 영역을 저장하려면 REPL에서 [작업 영역 저장] 단추를 클릭합니다.
+
+이전에 저장된 작업 영역을 다시 로드하려면 **작업 영역 로드** 단추를 선택하거나 **R 도구 > 세션 > 작업 영역 로드...**를 사용하고 작업 영역 파일로 이동합니다.
+
+**다시 설정** 단추 또는 **R 도구 > 세션 > 다시 설정**을 선택하면 세션 컨텍스트가 지워집니다. 원격 세션을 사용 중인 경우 이 작업을 수행하면 원격 컴퓨터에 있는 사용자 프로필이 삭제되어 원격 컴퓨터에 저장된 모든 파일이 지워집니다. [작업 영역](workspaces.md#directories-on-local-and-remote-computers)을 참조하세요.
+
+
+## <a name="working-directory"></a>작업 디렉터리
+
+개발자는 보통 대화형 세션에 있는 동안 작업 디렉터리를 변경하려고 합니다. 도구 모음, **R 도구 > 작업 디렉터리** 메뉴 및 프로젝트 상황에 맞는 메뉴에 제공되는 다양한 명령을 사용하여 간편하게 작업 디렉터리를 소스 파일 위치, 위치나 프로젝트 또는 기타 임의 위치로 설정할 수 있습니다. 이렇게 하면 파일을 참조할 때 전체 경로 이름이나 긴 상대 경로 이름을 입력하지 않아도 됩니다.
+
+ 
+## <a name="history"></a>기록
+
+편집기에서 보낸 줄을 포함하여 대화형 창에서 입력하는 모든 줄은 REPL 기록에서 유지됩니다. 명령줄에서 익숙할 수 있는 위쪽 및 아래쪽 화살표 키를 사용하여 기록을 탐색할 수 있습니다.
+
+한 가지 차이점은 현재 줄에서 입력을 시작하고 위쪽 화살표를 누르면 이 현재 줄을 아직 실행하지 않았더라도 해당 줄이 기록에서 유지된다는 점입니다.
+
+대화형 창의 기록은 여러 줄에 걸쳐 있는 다른 코드 블록의 문을 지능적으로 사용합니다. 위쪽 및 아래쪽 화살표 키를 사용하여 기록을 순환하면 여러 줄 코드 블록이 전체 단위로 검색되고 현재 입력으로 표시됩니다. 이때 화살표 키는 맨 위 또는 맨 아래에 도달할 때까지 해당 코드 블록을 한 줄씩 탐색합니다. 코드 블록의 맨 위에서 위쪽 화살표는 기록에 있는 이전 항목을 검색하고, 맨 아래 줄에서 아래쪽 화살표는 다음 항목을 검색합니다.
+
+이 기능은 위쪽 화살표 및 Enter 키 입력 조합을 사용하여 기록의 마지막 항목을 다시 실행하는 일반적인 경우에도 적용되지만, 위쪽 화살표를 눌러 여러 줄 코드 블록으로 이동하면 해당 블록을 자연스럽게 편집할 수 있습니다.
+
+여러 줄 코드 블록으로 이동하지 않게 하려면 도구 모음 단추를 사용하세요. 그러면 모든 해당 블록이 한 줄로 처리됩니다.
+
+이 기능을 사용해 보는 가장 쉬운 방법은 대화형 창에서 직접 시도해 보는 것입니다. 아래 코드는 여러 개의 적합한 한 줄 문 및 여러 줄 문을 제공합니다. 하지만 각 문을 개별적으로 복사하여 붙여넣으면 적절한 기록이 생성됩니다. 코드를 개별 코드 파일에 붙여넣고 Ctrl+Enter를 사용하여 줄을 대화형 창으로 보내면 동일한 작업을 수행할 수 있습니다.
+
+```R
+3 + 3
+
+4 + 4
+
+5 + 5
+
+add <- function (x, y) {
+  return (x + y)
+}
+
+sub <- function (x, y) {
+  return (x - y)
+}
+```

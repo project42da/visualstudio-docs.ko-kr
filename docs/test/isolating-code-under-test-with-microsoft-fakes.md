@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: acc2f3de7000e438829486b23b9652cb8d34db26
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3941968fa0e2e6205c94076f555c8366f009d4c0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes를 사용하여 테스트 중인 코드 격리
@@ -58,7 +59,7 @@ Microsoft Fakes는 *스텁* 또는 *shim*을 사용하는 응용 프로그램의
   
  **sealed 형식의 정적 메서드.** 인터페이스를 구현할 때는 스텁만 사용할 수 있습니다. 따라서 스텁 형식은 정적 메서드, 비가상 메서드, 봉인된 가상 메서드, 봉인된 형식의 메서드 등에 사용할 수 없습니다.  
   
- **내부 형식.** 어셈블리 특성 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>를 사용하여 액세스할 수 있는 내부 형식에 스텁과 shim을 둘 다 사용할 수 있습니다.  
+ **내부 형식.** 스텁과 shim 둘 다 어셈블리 특성 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>를 사용하여 액세스할 수 있는 내부 형식에 사용할 수 있습니다.  
   
  **전용 메서드.** 메서드 시그니처의 모든 형식이 표시되는 경우 shim은 개인 메서드에 대한 호출을 대체할 수 있습니다. 스텁은 표시되는 메서드만 바꿀 수 있습니다.  
   

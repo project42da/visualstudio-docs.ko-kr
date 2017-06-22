@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 396960f31c60318833b8171a4e17595db6ff9fca
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-excel-extension-element-classes"></a>샘플 Excel 확장: 요소 클래스
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/04/2017
  `Element`는 Excel 확장의 모든 사용자 인터페이스 요소에 대한 기본 클래스이며 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> 클래스에서 속성을 상속합니다. `ElementInformation`은 샘플의 요소 정보 클래스에 대한 기본 클래스이며 구성원은 포함하지 않습니다.  
   
 #### <a name="simple-properties-and-methods"></a>단순 속성 및 메서드  
- 이러한 구성원은 `Name` 속성의 값이나 `ClassName` 속성의 값과 같은 단순한 값을 반환하며, 코드는 명확하고 쉽게 읽을 수 있습니다. `Utility` 클래스를 사용하여 반환되는 값도 있습니다. 이 클래스에 대해서는 뒷부분에서 설명합니다. 그리고 이 샘플 확장과는 관련성이 없으므로 `null`을 반환하는 클래스도 있습니다. 특히 눈여겨볼 만한 두 구성원은 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> 속성과 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.CacheProperties%2A> 메서드입니다.  
+ 이러한 구성원은 `Name` 속성의 값이나 `ClassName` 속성의 값과 같은 단순한 값을 반환하며, 코드는 명확하고 쉽게 읽을 수 있습니다. `Utility` 클래스를 사용하여 반환되는 값도 있습니다. 이 클래스에 대해서는 뒷부분에서 설명합니다. 그리고 이 샘플 확장과는 관련성이 없으므로 `null`을 반환하는 클래스도 있습니다. 특히 눈여겨볼 만한 두 멤버는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> 속성과 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.CacheProperties%2A> 메서드입니다.  
   
 #### <a name="queryid-property"></a>QueryId 속성  
  이 속성은 재생 중에 컨트롤을 고유하게 식별하는 속성 이름/값 쌍으로 구성된 조건을 반환합니다. 개발자는 파생된 각 컨트롤 클래스에 대해 프레임워크가 UI에서 컨트롤을 찾는 데 사용할 수 있는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> 개체를 반환하도록 이 속성을 재정의해야 합니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/04/2017
  `WorksheetInformation` 클래스는 Excel 워크시트에 대한 정보를 나타냅니다. 이 클래스의 구성원은 `SheetName` 속성 하나뿐이며, 이 샘플에서는 해당 속성만 사용해도 충분합니다.  
   
 ## <a name="cellelement-and-cellinformation-classes"></a>CellElement 및 CellInformation 클래스  
- `CellElement` 클래스는 Excel 셀을 나타내며 `Element` 기본 클래스에서 속성을 상속합니다. 재정의되는 구성원은 `RowIndex` 및 `ColumnIndex` 속성을 사용하여 셀을 식별하는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement>를 반환하는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>속성뿐입니다.  
+ `CellElement` 클래스는 Excel 셀을 나타내며 `Element` 기본 클래스에서 속성을 상속합니다. 재정의되는 멤버는 `RowIndex` 및 `ColumnIndex` 속성을 사용하여 셀을 식별하는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement>를 반환하는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> 속성뿐입니다.  
   
 ## <a name="utilities-and-excelutilities-classes"></a>Utilities 및 ExcelUtilities 클래스  
  내부 `ExcelUtilities` 클래스는 기술 이름과 같은 몇 가지 상수 값과, 제공된 창 핸들이 Excel 워크시트를 나타내는지 여부를 확인하는 메서드를 제공합니다.  

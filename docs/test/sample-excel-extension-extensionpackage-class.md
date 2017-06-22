@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 20e3ac96d5b12002b11a9e93b413c48738f57153
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-excel-extension-extensionpackage-class"></a>샘플 Excel 확장: ExtensionPackage 클래스

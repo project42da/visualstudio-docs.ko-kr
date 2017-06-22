@@ -1,22 +1,42 @@
 ---
-title: "ALM(Application Lifecycle Management) 및 Unity 앱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tgt-pltfrm-cross-plat"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ALM(Application Lifecycle Management) 및 Unity 앱 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2dc61e63-9ba2-4c16-b1ad-f46249e576b6
 caps.latest.revision: 12
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 12
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7e95cec543216f13de06d2c2b86bc08040d1a7fb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>ALM(Application Lifecycle Management) 및 Unity 앱
-최신 플랫폼용 앱을 개발하려면 코드 작성 이외에도 많은 작업을 수행해야 합니다. DevOps(개발+운영)라는 이러한 활동은 앱의 전체 수명 주기에 걸쳐 있으며 민첩한 작업 계획 및 추적, 코드 디자인 및 구현, 소스 코드 리포지토리 관리, 빌드 실행, 연속 통합 및 배포 관리, 테스트(유닛 테스트 및 UI 테스트 포함), 개발 및 프로덕션 환경에서 다양한 형태의 진단 실행, 원격 분석 및 분석을 통해 실시간으로 앱 성능과 사용자 동작 모니터링을 포함합니다.  
+최신 플랫폼용 앱을 개발하려면 코드 작성 이외에도 많은 작업을 수행해야 합니다. DevOps(개발+운영)라는 이러한 활동은 앱의 전체 수명 주기에 걸쳐 있으며 민첩한 작업 계획 및 추적, 코드 디자인 및 구현, 소스 코드 리포지토리 관리, 빌드 실행, 연속 통합 및 배포 관리, 테스트(단위 테스트 및 UI 테스트 포함), 개발 및 프로덕션 환경에서 다양한 형태의 진단 실행, 원격 분석 및 분석을 통해 실시간으로 앱 성능과 사용자 동작 모니터링을 포함합니다.  
   
  Visual Studio Team Services 및 Team Foundation Server와 더불어 Visual Studio는 다양한 DevOps 기능(애플리케이션 수명 주기 관리 또는 ALM이라고도 함)을 제공합니다. 이러한 기능은 특히 스크립트 언어로 C#을 사용하는 경우 Unity로 만든 게임 및 몰입형 그래픽 앱을 포함하여 플랫폼 간 프로젝트에 대부분 적용할 수 있습니다. 그러나 Unity에는 자체 개발 환경과 런타임 엔진이 있기 때문에 많은 ALM 기능은 Visual Studio에 빌드된 다른 종류의 프로젝트에 적용되는 것과 같이 적용되지 않습니다.  
   
@@ -118,8 +138,3 @@ caps.handback.revision: 12
 |기능|Unity에서 지원 여부|추가 설명|  
 |-------------|--------------------------|-------------------------|  
 |충돌 분석, 원격 분석 및 베타 분포|예|HockeyApp은 주로 베타 분포를 처리하고 충돌 보고서를 얻는 데 유용합니다.<br /><br /> C# 스크립트에서의 원격 분석에서는 Unity가 사용하는 .NET 버전에서 실행되기만 하면 모든 분석 프레임워크를 사용할 수 있습니다. 그러나 게임 스크립트 내에서만 분석할 수 있고 Unity 엔진 내에서 보다 자세히 분석할 수는 없습니다. 현재 Application Insights에 대한 플러그 인은 없지만, [Unity Analytics](https://www.assetstore.unity3d.com/en/#!/content/28120) 및 [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity) 등 기타 분석 솔루션에 대한 플러그 인은 사용 가능합니다. 물론 Unity 프로젝트의 특성을 이해하는 Unity 분석 등의 서비스가 일반 프레임워크보다 훨씬 더 의미 있는 분석을 제공합니다.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

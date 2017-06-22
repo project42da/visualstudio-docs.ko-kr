@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 2aff9b2c34bf8897adc7edee3a1205317258fc0f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 5acc74abd56b128bf9df708ab7c0f3451c6eb270
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes의 코드 생성, 컴파일 및 명명 규칙
@@ -40,15 +41,32 @@ ms.lasthandoff: 02/22/2017
 -   Visual Studio Enterprise  
   
 ##  <a name="BKMK_In_this_topic"></a> 항목 내용  
- [코드 생성 및 컴파일](#BKMK_Code_generation_and_compilation)  
   
--   [스텁의 코드 생성 구성](#BKMK_Configuring_code_generation_of_stubs) • [형식 필터링](#BKMK_Type_filtering) • [구체적인 클래스 및 가상 메서드 스텁](#BKMK_Stubbing_concrete_classes_and_virtual_methods) • [내부 형식](#BKMK_Internal_types) • [빌드 시간 최적화](#BKMK_Optimizing_build_times) • [어셈블리 이름 충돌 방지](#BKMK_Avoiding_assembly_name_clashing)  
+-   [코드 생성 및 컴파일](#BKMK_Code_generation_and_compilation)  
   
- [Fakes 명명 규칙](#BKMK_Fakes_naming_conventions)  
+-   [스텁의 코드 생성 구성](#BKMK_Configuring_code_generation_of_stubs)
   
--   [Shim 형식 및 스텁 형식 명명 규칙](#BKMK_Shim_type_and_stub_type_naming_conventions) • [Shim 대리자 속성 또는 스텁 대리자 필드 명명 규칙](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions) • [매개 변수 형식 명명 규칙](#BKMK_Parameter_type_naming_conventions) • [재귀 규칙](#BKMK_Recursive_rules)  
+-   [형식 필터링](#BKMK_Type_filtering)
   
- [외부 리소스](#BKMK_External_resources)  
+-   [구체적인 클래스 및 가상 메서드 스텁](#BKMK_Stubbing_concrete_classes_and_virtual_methods)
+  
+-   [내부 형식](#BKMK_Internal_types)
+  
+-   [빌드 시간 최적화](#BKMK_Optimizing_build_times)
+  
+-   [어셈블리 이름 충돌 방지](#BKMK_Avoiding_assembly_name_clashing)  
+  
+-   [Fakes 명명 규칙](#BKMK_Fakes_naming_conventions)  
+  
+-   [shim 형식 및 스텁 형식 명명 규칙](#BKMK_Shim_type_and_stub_type_naming_conventions)
+  
+-   [shim 대리자 속성 또는 스텁 대리자 필드 명명 규칙](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions)
+  
+-   [매개 변수 형식 명명 규칙](#BKMK_Parameter_type_naming_conventions)
+  
+-   [재귀적 규칙](#BKMK_Recursive_rules)  
+  
+-   [외부 리소스](#BKMK_External_resources)  
   
 -   [지침](#BKMK_Guidance)  
   
@@ -285,7 +303,7 @@ attribute of the Assembly element in the .fakes:
 |**배열 형식**`T[]`|`TArray`|  
 |**다차원 배열** 형식 `T[ , , ]`|`T3`|  
 |**포인터** 형식 `T*`|`TPtr`|  
-|**제네릭 형식**`T<R1, …>`|`TOfR1`|  
+|**제네릭 형식**`T<R1, ...>`|`TOfR1`|  
 |`C<TType>` 형식의 **제네릭 형식 인수**`!i`|`Ti`|  
 |`M<MMethod>` 메서드의 **제네릭 메서드 인수**`!!i`|`Mi`|  
 |**중첩 형식**`N.T`|`N`이 추가된 다음 `T`|  
@@ -300,7 +318,7 @@ attribute of the Assembly element in the .fakes:
 ##  <a name="BKMK_External_resources"></a> 외부 리소스  
   
 ###  <a name="BKMK_Guidance"></a> 지침  
- [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 2장: 단위 테스트: 내부 테스트](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 2장: 유닛 테스트: 내부 테스트](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ## <a name="see-also"></a>참고 항목  
  [Microsoft Fakes를 사용하여 테스트 중인 코드 격리](../test/isolating-code-under-test-with-microsoft-fakes.md)
