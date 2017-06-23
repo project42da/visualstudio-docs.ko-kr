@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: e397b2d32ab76c7ef65536df51df875f7b8a67a1
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -152,7 +153,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="batching-one-item-at-a-time"></a>한 번에 하나씩 일괄 처리  
  항목이 만들어질 때 모든 항목에 할당된 잘 알려진 항목 메타데이터에 대해서도 일괄 처리를 수행할 수 있습니다. 이를 통해 컬렉션에 있는 모든 항목이 일괄 처리에 사용할 메타데이터를 갖게 됩니다. `Identity` 메타데이터 값은 모든 항목에 대해 고유하므로 항목 목록에 있는 모든 항목을 별도 일괄 처리로 나누는 데 유용합니다. 잘 알려진 항목 메타데이터의 전체 목록은 [잘 알려진 항목 메타데이터](../msbuild/msbuild-well-known-item-metadata.md)를 참조하세요.  
   
- 다음 예제에서는 항목 목록의 각 항목을 한 번에 하나씩 일괄 처리로 지정하는 방법을 보여 줍니다. 모든 항목의 `Identity` 메타데이터 값은 고유하므로 `ExampColl` 항목 목록은 각각이 항목 목록의 항목&1;개를 포함하는&6;개의 일괄 처리로 나뉩니다. `Text` 특성에 `%(Identity)`가 있으면 일괄 처리가 수행되어야 한다는 알림이 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에 제공됩니다.  
+ 다음 예제에서는 항목 목록의 각 항목을 한 번에 하나씩 일괄 처리로 지정하는 방법을 보여 줍니다. 모든 항목의 `Identity` 메타데이터 값은 고유하므로 `ExampColl` 항목 목록은 각각이 항목 목록의 항목 1개를 포함하는 6개의 일괄 처리로 나뉩니다. `Text` 특성에 `%(Identity)`가 있으면 일괄 처리가 수행되어야 한다는 알림이 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에 제공됩니다.  
   
 ```xml  
 <Project  

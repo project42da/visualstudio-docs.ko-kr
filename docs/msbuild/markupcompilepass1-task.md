@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: d4cb33cd46ab45c580e70ce7e590960ed4fd75a9
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -114,7 +115,7 @@ ms.lasthandoff: 02/22/2017
  지역화가 가능하거나 로컬로 정의된 형식을 참조하는 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일이 있는 경우 두 번째 태그 컴파일 패스가 필요합니다. 이를 위해 [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)와 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)가 차례로 실행되어야 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는&3;개의 `Page`[!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일을 이진 형식 파일로 변환하는 방법을 보여 줍니다. `Page1`에는 형식 `Class1`에 대한 참조가 포함됩니다. 이 형식은 프로젝트의 루트 네임스페이스에 있으므로 이 태그 컴파일 패스에서 이진 형식 파일로 변환되지 않습니다. 대신 [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)가 실행된 다음 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)가 실행됩니다.  
+ 다음 예제에서는 3개의 `Page`[!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일을 이진 형식 파일로 변환하는 방법을 보여 줍니다. `Page1`에는 형식 `Class1`에 대한 참조가 포함됩니다. 이 형식은 프로젝트의 루트 네임스페이스에 있으므로 이 태그 컴파일 패스에서 이진 형식 파일로 변환되지 않습니다. 대신 [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)가 실행된 다음 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)가 실행됩니다.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  

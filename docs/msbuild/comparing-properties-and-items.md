@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: cf04644c98062ffb2aee5b4b826f8426070c3d60
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -43,7 +44,7 @@ MSBuild 속성 및 항목은 둘 다 작업에 정보를 전달하고, 조건을
 -   항목은 일반적으로 파일을 나타내는 개체입니다. 항목 개체에는 연결된 메타데이터 컬렉션이 있을 수 있습니다. 메타데이터는 이름-값 쌍입니다. 자세한 내용은 [항목](../msbuild/msbuild-items.md)을 참조하세요.  
   
 ## <a name="scalars-and-vectors"></a>스칼라 및 벡터  
- MSBuild 속성은 문자열 값이 하나만 있는 이름-값 쌍이므로 보통 *스칼라*로 설명됩니다. MSBuild 항목 종류는 항목의 목록이므로 보통 *벡터*로 설명됩니다. 그러나 실제로 속성이 여러 값을 나타낼 수 있으며 항목 종류에는&0;개 또는&1;개의 항목이 있을 수 있습니다.  
+ MSBuild 속성은 문자열 값이 하나만 있는 이름-값 쌍이므로 보통 *스칼라*로 설명됩니다. MSBuild 항목 종류는 항목의 목록이므로 보통 *벡터*로 설명됩니다. 그러나 실제로 속성이 여러 값을 나타낼 수 있으며 항목 종류에는 0개 또는 1개의 항목이 있을 수 있습니다.  
   
 ### <a name="target-dependency-injection"></a>대상 종속성 주입  
  속성에서 여러 값을 나타낼 수 있는 방법을 알아보려면 빌드할 대상의 목록에 대상을 추가하기 위한 일반적인 사용 패턴을 고려해 보세요. 이 목록은 일반적으로 대상 이름이 세미콜론으로 구분된 속성 값으로 표시됩니다.  
@@ -94,7 +95,7 @@ MSBuild 속성 및 항목은 둘 다 작업에 정보를 전달하고, 조건을
   
  항목은 작업에 <xref:Microsoft.Build.Framework.ITaskItem>개체로 전달됩니다. 작업 내에서 <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A>은 항목의 값을 나타내며 <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A>는 해당 메타데이터를 검색합니다.  
   
- 항목 종류의 항목 목록은 `ITaskItem` 개체의 배열로 전달될 수 있습니다. .NET Framework 3.5부터는 `Remove` 특성을 사용하여 항목 목록에서 항목을 제거할 수 없습니다. 항목 목록에서 항목을 제거할 수 있으므로, 항목 종류의 항목이&0;개일 수도 있습니다. 항목 목록이 작업에 전달되면 작업의 코드에서 이러한 가능성을 확인해야 합니다.  
+ 항목 종류의 항목 목록은 `ITaskItem` 개체의 배열로 전달될 수 있습니다. .NET Framework 3.5부터는 `Remove` 특성을 사용하여 항목 목록에서 항목을 제거할 수 없습니다. 항목 목록에서 항목을 제거할 수 있으므로, 항목 종류의 항목이 0개일 수도 있습니다. 항목 목록이 작업에 전달되면 작업의 코드에서 이러한 가능성을 확인해야 합니다.  
   
 ## <a name="property-and-item-evaluation-order"></a>속성 및 항목 평가 순서  
  빌드의 평가 단계 중 가져온 파일은 표시되는 순서대로 빌드에 통합됩니다. 속성 및 항목이 다음과 같은 순서로 세 단계로 정의됩니다.  

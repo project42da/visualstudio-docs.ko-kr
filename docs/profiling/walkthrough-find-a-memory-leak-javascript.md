@@ -35,9 +35,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 7e848a57962636a8ca346e809f3dadad675a7963
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -209,13 +210,13 @@ ms.lasthandoff: 02/22/2017
         > [!IMPORTANT]
         >  힙 크기에 대한 정확한 메모리 사용량 값은 디버그 대상에 따라 달라집니다.  
   
-    -   스냅숏 #1에 비해 힙의 개체 수(오른쪽에 표시된 빨간색 위쪽 화살표)가 증가했습니다. 개체&1;개가 추가되고(+1) 제거된 개체는 없습니다(-0).  
+    -   스냅숏 #1에 비해 힙의 개체 수(오른쪽에 표시된 빨간색 위쪽 화살표)가 증가했습니다. 개체 1개가 추가되고(+1) 제거된 개체는 없습니다(-0).  
   
      스냅숏 #3는 다음을 보여 줍니다.  
   
     -   힙 크기가 스냅샷 #2에 비해 다시 몇 백 바이트 이상 증가했습니다.  
   
-    -   힙의 개체 수가 스냅샷 #2에 비해 다시 증가했습니다. 개체&1;개가 추가되고(+1) 제거된 개체는 없습니다(-0).  
+    -   힙의 개체 수가 스냅샷 #2에 비해 다시 증가했습니다. 개체 1개가 추가되고(+1) 제거된 개체는 없습니다(-0).  
   
 13. 스냅샷 #3에서 빨간색 위쪽 화살표 옆에 +1/-0 값이 있는 오른쪽 링크 텍스트를 선택합니다.  
   
@@ -240,7 +241,7 @@ ms.lasthandoff: 02/22/2017
     > [!TIP]
     >  경우에 따라 `Global` 개체와 관련하여 개체를 찾으면 해당 개체를 쉽게 확인할 수 있습니다. 이렇게 하려면 식별자에 대한 바로 가기 메뉴를 열고 **루트 뷰에서 보기**를 선택합니다.  
   
-##  <a name="a-namefixingmemorya-fixing-the-memory-issue"></a><a name="FixingMemory"></a> 메모리 문제 수정  
+##  <a name="FixingMemory"></a> 메모리 문제 수정  
   
 1.  프로파일러에 의해 표시된 데이터를 사용하여 ID가 "item"인 DOM 요소 제거를 담당하는 코드를 검사합니다. 이 작업은 `initialize()` 함수에서 수행됩니다.  
   

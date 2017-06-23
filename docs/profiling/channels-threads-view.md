@@ -1,26 +1,46 @@
 ---
-title: "채널(스레드 뷰) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.threads.timeline.channelnames"
-helpviewer_keywords: 
-  - "동시성 시각화 도우미, 채널(스레드 뷰)"
+title: "채널(스레드 뷰) | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.threads.timeline.channelnames
+helpviewer_keywords:
+- Concurrency Visualizer, Channels (Threads View)
 ms.assetid: 2f798c17-2363-42a4-be94-a5751d208eac
 caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f3158349a285cb2875ef8c1058957f1ce2dd88b2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="channels-threads-view"></a>채널(스레드 뷰)
-동시성 시각화 도우미는 스레드 채널, 디스크 채널, 표식 채널 및 GPU 채널의&4;가지 채널을 보여줍니다.  
+동시성 시각화 도우미는 스레드 채널, 디스크 채널, 표식 채널 및 GPU 채널의 4가지 채널을 보여줍니다.  
   
 ## <a name="thread-channels"></a>스레드 채널  
  스레드 채널은 하나의 스레드에 대해서만 스레드 상태를 색으로 보여 줍니다. 채널 이름에서 일시 중지하면 지정된 스레드의 시작 함수가 표시됩니다. 동시성 시각화 도우미는 여러 종류의 스레드를 검색합니다. 가장 일반적인 종류가 다음 표에 나와 있습니다.  
@@ -49,8 +69,3 @@ caps.handback.revision: 16
   
 ## <a name="see-also"></a>참고 항목  
  [스레드 뷰](../profiling/threads-view-parallel-performance.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

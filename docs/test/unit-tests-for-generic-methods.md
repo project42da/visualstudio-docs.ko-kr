@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 14850bf6bf761060cd1e276d1bc38668d04f6b3c
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -91,7 +92,7 @@ public void SizeOfLinkedListTest()
   
 1.  연결된 제네릭 목록을 만듭니다.  
   
-2.  연결된 목록에&4;개의 노드를 추가합니다. 이러한 노드 내용의 데이터 형식은 알 수 없습니다.  
+2.  연결된 목록에 4개의 노드를 추가합니다. 이러한 노드 내용의 데이터 형식은 알 수 없습니다.  
   
 3.  연결된 목록의 예상 크기를 `expected` 변수에 할당합니다.  
   

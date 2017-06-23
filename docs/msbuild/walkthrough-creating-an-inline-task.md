@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: b211beb5f5e09daf0628e33e417e9aad97d0d7e2
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -43,11 +44,11 @@ MSBuild 작업은 일반적으로 <xref:Microsoft.Build.Framework.ITask> 인터�
   
 -   입력 또는 출력 매개 변수가 없는 작업입니다.  
   
--   입력 매개 변수는&1;개 있고 출력 매개 변수는 없는 작업입니다.  
+-   입력 매개 변수는 1개 있고 출력 매개 변수는 없는 작업입니다.  
   
--   2개의 입력 매개 변수와 MSBuild 속성을 반환하는&1;개의 출력 매개 변수가 있는 작업입니다.  
+-   2개의 입력 매개 변수와 MSBuild 속성을 반환하는 1개의 출력 매개 변수가 있는 작업입니다.  
   
--   2개의 입력 매개 변수와 MSBuild 항목을 반환하는&1;개의 출력 매개 변수가 있는 작업입니다.  
+-   2개의 입력 매개 변수와 MSBuild 항목을 반환하는 1개의 출력 매개 변수가 있는 작업입니다.  
   
  작업을 만들고 실행하려면 다음과 같이 Visual Studio와 **Visual Studio 명령 프롬프트 창**을 사용합니다.  
   
@@ -152,7 +153,7 @@ MSBuild 작업은 일반적으로 <xref:Microsoft.Build.Framework.ITask> 인터�
   
      `Greetings!`  
   
- 이 코드는 Echo라고 지칭하며 필수 입력 매개 변수가 Text&1;개 뿐인 인라인 작업을 정의합니다. 기본적으로 매개 변수는 System.String 형식입니다. Text 매개 변수의 값은 TestBuild 대상이 Echo 작업을 호출하는 경우에 설정됩니다.  
+ 이 코드는 Echo라고 지칭하며 필수 입력 매개 변수가 Text 1개 뿐인 인라인 작업을 정의합니다. 기본적으로 매개 변수는 System.String 형식입니다. Text 매개 변수의 값은 TestBuild 대상이 Echo 작업을 호출하는 경우에 설정됩니다.  
   
 ## <a name="defining-the-adder-task"></a>Adder 작업 정의  
  두 개의 정수 매개 변수를 추가하고 합계를 MSBuild 속성으로 내보내는 인라인 작업을 만듭니다.  
@@ -188,7 +189,7 @@ MSBuild 작업은 일반적으로 <xref:Microsoft.Build.Framework.ITask> 인터�
   
      `The sum is 9`  
   
- 이 코드에서는 Adder라고 지칭되며&2;개의 필수 정부 입력 매개 변수인 A와 B 및&1;개의 정수 출력 매개 변수인 C를 갖는 인라인 작업을 정의합니다. Adder 작업은&2;개의 입력 매개 변수를 추가하고 출력 매개 변수에 합계를 반환합니다. 합계는 MSBuild 속성 `Sum`으로 내보내집니다. 입력 매개 변수의 값은 TestBuild 대상이 Adder 작업을 호출하는 경우에 설정됩니다.  
+ 이 코드에서는 Adder라고 지칭되며 2개의 필수 정부 입력 매개 변수인 A와 B 및 1개의 정수 출력 매개 변수인 C를 갖는 인라인 작업을 정의합니다. Adder 작업은 2개의 입력 매개 변수를 추가하고 출력 매개 변수에 합계를 반환합니다. 합계는 MSBuild 속성 `Sum`으로 내보내집니다. 입력 매개 변수의 값은 TestBuild 대상이 Adder 작업을 호출하는 경우에 설정됩니다.  
   
 ## <a name="defining-the-regx-task"></a>RegX 작업 정의  
  항목 그룹 및 정규식을 수락하고 해당 식과 일치하는 파일 콘텐츠를 포함하는 모든 항목의 목록을 반환하는 인라인 작업을 만듭니다.  

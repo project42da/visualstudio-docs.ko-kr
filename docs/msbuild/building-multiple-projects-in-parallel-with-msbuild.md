@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: aa5896619558a1534722fe4aa5bef3ec3b08dfe2
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/22/2017
 >  명령줄의 **/verbosity**(**/v**) 스위치는 빌드 성능에 영향을 줄 수도 있습니다. 빌드 로그 정보의 자세한 정도는 문제 해결을 위해 사용되는 자세히 또는 진단으로 설정되어 있는 경우 빌드 성능이 저하될 수 있습니다. 자세한 내용은 [빌드 로그 가져오기](../msbuild/obtaining-build-logs-with-msbuild.md) 및 [명령줄 참조](../msbuild/msbuild-command-line-reference.md)를 참조하세요.  
   
 ## <a name="maxcpucount-switch"></a>/maxcpucount 스위치  
- 시간을 줄이기 위해 `/maxcpucount` 스위치 또는 `/m`을 사용하는 경우 MSBuild는 병렬로 실행될 수 있는 MSBuild.exe 프로세스를 지정된 수만큼 생성할 수 있습니다. 이러한 프로세스는 "작업자 프로세스"라고도 합니다. 각 작업자 프로세스는 사용 가능한 다른 프로세스가 다른 프로젝트를 빌드할 때 동시에 별도의 코어 또는 프로세서(사용 가능한 경우)를 사용하여 프로젝트를 빌드합니다. 예를 들어, 해당 스위치의 값을 "4"로 설정하면 MSBuild에서&4;개의 작업자 프로세스를 만들어 프로젝트를 빌드할 수 있습니다.  
+ 시간을 줄이기 위해 `/maxcpucount` 스위치 또는 `/m`을 사용하는 경우 MSBuild는 병렬로 실행될 수 있는 MSBuild.exe 프로세스를 지정된 수만큼 생성할 수 있습니다. 이러한 프로세스는 "작업자 프로세스"라고도 합니다. 각 작업자 프로세스는 사용 가능한 다른 프로세스가 다른 프로젝트를 빌드할 때 동시에 별도의 코어 또는 프로세서(사용 가능한 경우)를 사용하여 프로젝트를 빌드합니다. 예를 들어, 해당 스위치의 값을 "4"로 설정하면 MSBuild에서 4개의 작업자 프로세스를 만들어 프로젝트를 빌드할 수 있습니다.  
   
  값을 지정하지 않고 `/maxcpucount` 스위치를 포함하는 경우, MSBuild는 컴퓨터의 최대 프로세서 수만큼 사용합니다.  
   

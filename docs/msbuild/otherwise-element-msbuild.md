@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: ce7adee8cd2c64fb9bca5df27dc436a22452f60c
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -75,9 +76,9 @@ ms.lasthandoff: 02/22/2017
 
 |요소|설명|  
 |-------------|-----------------|  
-|[Choose](../msbuild/choose-element-msbuild.md)|선택적 요소입니다.<br /><br /> 자식 요소를 평가하여 실행할 코드의 한 섹션을 선택합니다. `Choose` 요소에는 `Otherwise` 요소가&0;개 또는 그 이상 있을 수 있습니다.|  
-|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|선택적 요소입니다.<br /><br /> 사용자 정의 [Item](../msbuild/item-element-msbuild.md) 요소 집합을 포함합니다. `ItemGroup` 요소에는 `Otherwise` 요소가&0;개 또는 그 이상 있을 수 있습니다.|  
-|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|선택적 요소입니다.<br /><br /> 사용자 정의 [Property](../msbuild/property-element-msbuild.md) 요소 집합을 포함합니다. `PropertyGroup` 요소에는 `Otherwise` 요소가&0;개 또는 그 이상 있을 수 있습니다.|  
+|[Choose](../msbuild/choose-element-msbuild.md)|선택적 요소입니다.<br /><br /> 자식 요소를 평가하여 실행할 코드의 한 섹션을 선택합니다. `Choose` 요소에는 `Otherwise` 요소가 0개 또는 그 이상 있을 수 있습니다.|  
+|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|선택적 요소입니다.<br /><br /> 사용자 정의 [Item](../msbuild/item-element-msbuild.md) 요소 집합을 포함합니다. `ItemGroup` 요소에는 `Otherwise` 요소가 0개 또는 그 이상 있을 수 있습니다.|  
+|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|선택적 요소입니다.<br /><br /> 사용자 정의 [Property](../msbuild/property-element-msbuild.md) 요소 집합을 포함합니다. `PropertyGroup` 요소에는 `Otherwise` 요소가 0개 또는 그 이상 있을 수 있습니다.|  
 
 ### <a name="parent-elements"></a>부모 요소  
 
@@ -86,7 +87,7 @@ ms.lasthandoff: 02/22/2017
 |[Choose](../msbuild/choose-element-msbuild.md)|자식 요소를 평가하여 실행할 코드의 한 섹션을 선택합니다.|  
 
 ## <a name="remarks"></a>설명  
- `Choose` 요소에 `Otherwise` 요소가&1;개만 있을 수 있으며 마지막 요소여야 합니다.  
+ `Choose` 요소에 `Otherwise` 요소가 1개만 있을 수 있으며 마지막 요소여야 합니다.  
 
  `Choose`, `When` 및 `Otherwise` 요소는 몇 가지 가능한 대안 중에서 실행할 코드의 한 섹션을 선택하는 방법을 제공하기 위해 함께 사용됩니다. 자세한 내용은 [조건부 구문](../msbuild/msbuild-conditional-constructs.md)을 참조하세요.  
 

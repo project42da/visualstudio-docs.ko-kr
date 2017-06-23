@@ -1,23 +1,43 @@
 ---
 title: "스레드 뷰(병렬 성능) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.view.threadblocking"
-helpviewer_keywords: 
-  - "동시성 시각화 도우미, 스레드 뷰(병렬 성능)"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.view.threadblocking
+helpviewer_keywords:
+- Concurrency Visualizer, Threads View (Parallel Performance)
 ms.assetid: 2e441103-a266-407b-88c3-fb58716257a3
 caps.latest.revision: 21
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 21
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1777df83f2c2764e173300f897b18a699a38c197
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="threads-view-parallel-performance"></a>스레드 뷰(병렬 성능)
 스레드 뷰는 Concurrency 시각화에서 가장 자세하며 다양한 기능을 제공하는 뷰입니다. 이 보기를 사용하면 동기화, I/O 또는 기타 이유로 인해 스레드가 차단되는지 아니면 실행되고 있는지를 확인할 수 있습니다.  
@@ -56,7 +76,7 @@ caps.handback.revision: 21
 ## <a name="examining-specific-time-intervals-and-threads"></a>특정 시간 간격 및 스레드 검사  
  스레드 뷰에는 시간 표시 막대가 표시됩니다. 시간 표시 막대 내에서 확대/축소 및 이동하여 응용 프로그램의 특정 간격 및 스레드를 검사할 수 있습니다. x축에는 시간이 표시되고 y축에는 여러 채널이 표시됩니다.  
   
--   시스템의 각 디스크 드라이브에 해당하는&2;개 I/O 채널(쓰기용 채널과 읽기용 채널&1;개씩)  
+-   시스템의 각 디스크 드라이브에 해당하는 2개 I/O 채널(쓰기용 채널과 읽기용 채널 1개씩)  
   
 -   프로세스의 각 스레드에 해당하는 채널  
   
@@ -94,7 +114,7 @@ caps.handback.revision: 21
  실행 세그먼트에서 특정 지점을 선택하면 Concurrency 시각화는 관련 호출 스택에서 해당 시점을 찾은 다음 실행 세그먼트의 선택한 지점 위에 검은색 캐럿을 표시하고 **현재 스택** 탭에는 호출 스택 자체를 표시합니다. 실행 세그먼트에서 여러 지점을 선택할 수 있습니다.  
   
 > [!NOTE]
->  Concurrency 시각화는 실행 세그먼트에서 선택한 지점을 확인하지 못할 수도 있습니다. 일반적으로는 세그먼트의 기간이&1;밀리초보다 짧은 경우 이러한 현상이 발생합니다.  
+>  Concurrency 시각화는 실행 세그먼트에서 선택한 지점을 확인하지 못할 수도 있습니다. 일반적으로는 세그먼트의 기간이 1밀리초보다 짧은 경우 이러한 현상이 발생합니다.  
   
  현재 선택한 시간 범위에서 사용하도록 설정된(숨겨지지 않은) 모든 스레드의 실행 프로필을 가져오려면 활성 범례에서 **실행** 단추를 선택합니다.  
   
@@ -148,8 +168,3 @@ caps.handback.revision: 21
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency 시각화](../profiling/concurrency-visualizer.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
