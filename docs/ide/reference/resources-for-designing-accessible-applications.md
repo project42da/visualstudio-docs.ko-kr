@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: ac4fc2eedd3ed12afca471f0dc946c0b016fdc67
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/22/2017
   
 ## <a name="windows-applications"></a>Windows 응용 프로그램  
   
--   [연습: 내게 필요한 옵션이 지원되는 Windows 기반 응용 프로그램 만들기](http://msdn.microsoft.com/Library/654c7f2f-1586-480b-9f12-9d9b8f5cc32b) 이 항목에서는 Certified for Windows 로고 취득을 위해 갖춰야 하는&5;가지 내게 필요한 옵션 조건을 포함하는 방법을 샘플 Windows 응용 프로그램을 통해 단계별로 설명합니다.  
+-   [연습: 내게 필요한 옵션이 지원되는 Windows 기반 응용 프로그램 만들기](http://msdn.microsoft.com/Library/654c7f2f-1586-480b-9f12-9d9b8f5cc32b) 이 항목에서는 Certified for Windows 로고 취득을 위해 갖춰야 하는 5가지 내게 필요한 옵션 조건을 포함하는 방법을 샘플 Windows 응용 프로그램을 통해 단계별로 설명합니다.  
   
 -   **키보드 사용자 인터페이스 설계 지침** 이 기술 문서에서는 사용자가 키보드로 탐색할 수 있도록 Windows 응용 프로그램 사용자 인터페이스를 설계하는 방법을 설명합니다. 자세한 내용은 [http://msdn2.microsoft.com/library/ms971323.aspx](http://msdn2.microsoft.com/library/ms971323.aspx)를 참조하세요.  
   

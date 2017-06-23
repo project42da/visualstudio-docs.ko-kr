@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 6d7266c35746fa4413ffd4ce058b1acbe9229af2
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -60,12 +61,12 @@ ms.lasthandoff: 02/22/2017
 |용도|식|예제|  
 |-------------|----------------|-------------|  
 |줄 바꿈 이외의 모든 단일 문자를 찾습니다.|입니다.|`a.o`는 "around"의 "aro" 및 "about"의 "abo"와 일치하지만 "across"의 "acro"와 일치하지 않습니다.|  
-|이전 식에서 일치 항목&0;개 이상을 찾습니다(가능한 한 많은 문자를 찾음).|*|`a*r`는 "rack"의 "r", "ark"의 "ar", "aardvark"의 "aar"과 일치합니다.|  
-|임의의 문자를&0;회 이상 찾습니다(와일드카드 *).|.*|c.*e는 “racket”의 “cke”, “comment”의 “comme”, “code”의 “code”와 일치합니다.|  
-|이전 식에서 일치 항목&1;개 이상을 찾습니다(가능한 한 많은 문자를 찾음).|+|`e.+e`는 "feeder"의 "eede"와 일치하지만 "ee"와 일치하지 않습니다.|  
-|임의의 문자를&1;회 이상 찾습니다(와일드카드 ?).|.+|e.+e는 "feeder"의 "eede"와 일치하지만 "ee"와 일치하지 않습니다.|  
-|이전 식에서 일치 항목&0;개 이상을 찾습니다(가능한 한 적은 문자를 찾음).|*?|`e.*?e`는 "feeder"의 "ee"와 일치하지만 "eede"와 일치하지 않습니다.|  
-|이전 식에서 일치 항목&1;개 이상을 찾습니다(가능한 한 적은 문자를 찾음).|+?|`e.+?e`는 "enterprise"의 "ente" 및 "erprise"와 일치하지만 전체 단어 "enterprise"와 일치하지 않습니다.|  
+|이전 식에서 일치 항목 0개 이상을 찾습니다(가능한 한 많은 문자를 찾음).|*|`a*r`는 "rack"의 "r", "ark"의 "ar", "aardvark"의 "aar"과 일치합니다.|  
+|임의의 문자를 0회 이상 찾습니다(와일드카드 *).|.*|c.*e는 “racket”의 “cke”, “comment”의 “comme”, “code”의 “code”와 일치합니다.|  
+|이전 식에서 일치 항목 1개 이상을 찾습니다(가능한 한 많은 문자를 찾음).|+|`e.+e`는 "feeder"의 "eede"와 일치하지만 "ee"와 일치하지 않습니다.|  
+|임의의 문자를 1회 이상 찾습니다(와일드카드 ?).|.+|e.+e는 "feeder"의 "eede"와 일치하지만 "ee"와 일치하지 않습니다.|  
+|이전 식에서 일치 항목 0개 이상을 찾습니다(가능한 한 적은 문자를 찾음).|*?|`e.*?e`는 "feeder"의 "ee"와 일치하지만 "eede"와 일치하지 않습니다.|  
+|이전 식에서 일치 항목 1개 이상을 찾습니다(가능한 한 적은 문자를 찾음).|+?|`e.+?e`는 "enterprise"의 "ente" 및 "erprise"와 일치하지만 전체 단어 "enterprise"와 일치하지 않습니다.|  
 |일치 문자열을 줄 또는 문자열의 시작에 고정합니다.|^|`^car`는 줄의 시작 부분에 나타날 때만 단어 "car"와 일치합니다.|  
 |일치 문자열을 줄의 끝에 고정합니다.|\r?$|`End\r?$`는 줄의 끝 부분에 나타날 때만 단어 "end"와 일치합니다.|  
 |집합에 있는 단일 문자를 찾습니다.|[abc]|`b[abc]`는 "ba", "bb", "bc"와 일치합니다.|  
