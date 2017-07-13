@@ -32,13 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 0dc9fed1e5fc5a827e836310175d558b14cd41b4
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: badbf6892698c6e35ce76500001839c7c9e6734a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="user-permissions-and-visual-studio"></a>사용자 권한 및 Visual Studio
+# 사용자 권한 및 Visual Studio
+<a id="user-permissions-and-visual-studio" class="xliff"></a>
 보안을 위해 가급적 일반 사용자로 Visual Studio를 실행해야 합니다.  
 
 > [!WARNING]
@@ -58,16 +60,18 @@ ms.lasthandoff: 04/05/2017
 ||C++ 프로젝트를 빌드할 때 등록 단계 포함|[사용자 지정 빌드 단계 및 빌드 이벤트 이해](/cpp/ide/understanding-custom-build-steps-and-build-events)|  
 |디버깅|높은 권한으로 실행되는 응용 프로그램 디버깅|[디버거 설정 및 준비](../debugger/debugger-settings-and-preparation.md)|  
 ||ASP.NET 웹 사이트와 같이 다른 사용자 계정으로 실행되는 응용 프로그램 디버깅|[ASP.NET 및 AJAX 응용 프로그램 디버그](../debugger/debugging-aspnet-and-ajax-applications.md)|  
-||XBAP(XAML 브라우저 응용 프로그램) 영역에서 디버깅|[WPF 호스트(PresentationHost.exe)](http://msdn.microsoft.com/Library/3215bfa1-722c-4ac8-a7c5-bdd02d30afbd)|  
+||XBAP(XAML 브라우저 응용 프로그램) 영역에서 디버깅|[WPF 호스트(PresentationHost.exe)](/dotnet/framework/wpf/app-development/wpf-host-presentationhost-exe)|  
 ||에뮬레이터를 사용하여 Microsoft Azure용 클라우드 서비스 프로젝트 디버깅|[Visual Studio에서 Azure 클라우드 서비스 또는 가상 컴퓨터 디버깅](http://go.microsoft.com/fwlink/?LinkId=266725)|  
 ||원격 디버깅을 위한 방화벽 구성|[원격 디버깅](../debugger/remote-debugging.md)|  
 |성능 도구|응용 프로그램 프로파일링|[초보자를 위한 성능 프로파일링 지침](../profiling/beginners-guide-to-performance-profiling.md)|  
 |배포|로컬 컴퓨터에서 IIS(인터넷 정보 서비스)에 웹 응용 프로그램 배포|[Deploying an ASP.NET Web Application to a Hosting Provider using Visual Studio or Visual Web Developer: Deploying to IIS as a Test Environment](http://go.microsoft.com/fwlink/?LinkId=266478)(Visual Studio 또는 Visual Web Developer를 사용하여 호스팅 제공업체에 ASP.NET 웹 응용 프로그램 배포: IIS에 테스트 환경으로 배포)|
 
-## <a name="running-visual-studio-as-an-administrator"></a>관리자로 Visual Studio 실행  
+## 관리자로 Visual Studio 실행
+<a id="running-visual-studio-as-an-administrator" class="xliff"></a>  
  IDE를 시작할 때마다 관리자 권한으로 Visual Studio를 실행하거나 응용 프로그램 바로 가기를 수정하여 항상 관리자 권한으로 실행할 수 있습니다. 자세한 내용은 Windows 도움말을 참조하십시오.  
 
-#### <a name="to-run-visual-studio-with-administrative-permissions-on-includewin8debuggerincludeswin8mdmd-includewin81debuggerincludeswin81mdmd-includewinserver8debuggerincludeswinserver8mdmd-or-includewinblueserver2ideincludeswinblueserver2mdmd"></a>[!INCLUDE[win8](../debugger/includes/win8_md.md)], [!INCLUDE[win81](../debugger/includes/win81_md.md)], [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] 또는 [!INCLUDE[winblue_server_2](../ide/includes/winblue_server_2_md.md)]에서 관리자 권한으로 Visual Studio를 실행하려면  
+#### [!INCLUDE[win8](../debugger/includes/win8_md.md)], [!INCLUDE[win81](../debugger/includes/win81_md.md)], [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] 또는 [!INCLUDE[winblue_server_2](../ide/includes/winblue_server_2_md.md)]에서 관리자 권한으로 Visual Studio를 실행하려면
+<a id="to-run-visual-studio-with-administrative-permissions-on-includewin8debuggerincludeswin8mdmd-includewin81debuggerincludeswin81mdmd-includewinserver8debuggerincludeswinserver8mdmd-or-includewinblueserver2ideincludeswinblueserver2mdmd" class="xliff"></a>  
 
 1.  **시작** 화면에서 **Visual Studio**를 입력합니다. 설치된 Visual Studio의 버전이 표시되어야 합니다.  
 
@@ -75,7 +79,8 @@ ms.lasthandoff: 04/05/2017
 
      Visual Studio가 시작되면 제목 표시줄의 제품 이름 뒤에 **(관리자)**가 나타납니다.  
 
-#### <a name="to-run-visual-studio-with-administrative-permissions-on-includewin7debuggerincludeswin7mdmd-or-includewinsvr08r2debuggerincludeswinsvr08r2mdmd"></a>[!INCLUDE[win7](../debugger/includes/win7_md.md)] 또는 [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)]에서 관리자 권한으로 Visual Studio를 실행하려면  
+#### [!INCLUDE[win7](../debugger/includes/win7_md.md)] 또는 [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)]에서 관리자 권한으로 Visual Studio를 실행하려면
+<a id="to-run-visual-studio-with-administrative-permissions-on-includewin7debuggerincludeswin7mdmd-or-includewinsvr08r2debuggerincludeswinsvr08r2mdmd" class="xliff"></a>  
 
 1.  **시작** 메뉴에서 **모든 프로그램**을 선택합니다.  
 
@@ -83,7 +88,8 @@ ms.lasthandoff: 04/05/2017
 
      Visual Studio가 시작되면 제목 표시줄의 제품 이름 뒤에 **(관리자)**가 나타납니다.  
 
-## <a name="see-also"></a>참고 항목  
+## 참고 항목
+<a id="see-also" class="xliff"></a>  
  [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [Visual Studio 설치](../install/install-visual-studio.md)
 

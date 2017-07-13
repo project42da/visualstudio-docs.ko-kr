@@ -39,28 +39,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 507ff049dae50698d86e1536ed21ab982da1af85
-ms.openlocfilehash: eeabf6db465f57ab373c592b01a682ed6442800f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
+ms.openlocfilehash: 60ca38639f6523cdbace4efa4aa48b48d5e9a886
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/23/2017
 
 ---
 
-# <a name="upgrade-dotfuscator-community-edition-ce"></a>Dotfuscator CE(Community Edition) 업그레이드
+# Dotfuscator CE(Community Edition) 업그레이드
+<a id="upgrade-dotfuscator-community-edition-ce" class="xliff"></a>
 
 Dotfuscator CE(Dotfuscator Community Edition)는 Microsoft Visual Studio를 사용하는 모든 개발자에게 즉시 다양한 응용 프로그램 보호 및 강화 기능을 제공합니다.
 그러나 Dotfuscator 버전을 업그레이드하는 사용자에게는 더 많은 기능이 제공됩니다.
 
-## <a name="registering-dotfuscator-ce"></a>Dotfuscator CE 등록
+## Dotfuscator CE 등록
+<a id="registering-dotfuscator-ce" class="xliff"></a>
 
 Dotfuscator CE의 등록된 사용자는 [명령줄 지원][cli]과 같은 추가 기능에 액세스할 수 있어 Dotfuscator CE를 자동화된 빌드 프로세스에 쉽게 통합할 수 있습니다.
 
 등록은 빠르고 간단하며 무료입니다.
 Dotfuscator CE를 등록하려면 [전체 Dotfuscator CE 사용자 가이드의 Getting Started(시작) 페이지에 있는 Registering Dotfuscator CE(Dotfuscator CE 등록) 섹션][register-ce]을 참조하세요.
 
-## <a name="dotfuscator-professional"></a>Dotfuscator Professional
+## Dotfuscator Professional
+<a id="dotfuscator-professional" class="xliff"></a>
 
-Dotfuscator Community Edition은 기본적인 보호를 제공하지만 ***PreEmptive Protection - Dotfuscator* Professional Edition**에는 향상된 난독 변환 및 보호 기능이 포함됩니다.
+Dotfuscator Community Edition은 기본적인 보호를 제공하지만 **_PreEmptive Protection - Dotfuscator_ Professional Edition**에는 향상된 난독 변환 및 보호 기능이 포함됩니다.
 여기에는 다음이 포함됩니다.
 
 * *지적 재산권 보호*
@@ -91,7 +95,8 @@ Dotfuscator Professional은 산업 표준 [.NET Obfuscator][net-obfuscator]이�
 Dotfuscator Professional의 고급 응용 프로그램 보호 기능에 대한 자세한 내용은 PreEmptive Solutions의 [Dotfuscator Overview(Dotfuscator 개요) 페이지][product-about]를 방문해서 [Community Edition과 비교][product-compare]해 보세요.
 [preemptive.com][eval]에서 요청 시 전체 기능이 지원되는 평가판을 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## 참고 항목
+<a id="see-also" class="xliff"></a>
 
 [전체 Dotfuscator CE 사용자 가이드의 이 항목][full]
 
@@ -112,7 +117,8 @@ Dotfuscator Professional의 고급 응용 프로그램 보호 기능에 대한 �
 [product-about]: https://www.preemptive.com/products/dotfuscator/overview
 [product-compare]: https://www.preemptive.com/products/dotfuscator/compare-editions
 
-[cli]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/intro_cli.html
-[register-ce]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/gui_getstarted.html#register
+[cli]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_cli.html
+[register-ce]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html#register
 
-[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/intro_upgrades.html
+[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_upgrades.html
+

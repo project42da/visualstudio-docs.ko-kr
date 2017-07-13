@@ -42,17 +42,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 50f1d083b54ecc8418cac66086b40de8e3c69b73
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: e2852ef4eb48247a97fe513efc7cdecb89ec619a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="web-browser-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 웹 브라우저
+# 옵션 대화 상자, 환경, 웹 브라우저
+<a id="web-browser-environment-options-dialog-box" class="xliff"></a>
 내부 웹 브라우저 및 Internet Explorer에 대한 옵션을 설정합니다. 이 대화 상자에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고, **환경** 폴더를 확장하고, **웹 브라우저**를 선택합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 도구 메뉴에서 설정 가져오기 및 내보내기를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 도구 메뉴에서 설정 가져오기 및 내보내기를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
 > [!IMPORTANT]
 >  웹에서 특정 파일이나 구성 요소를 열면 코드가 컴퓨터에서 실행될 수 있습니다.  
@@ -78,7 +80,8 @@ ms.lasthandoff: 02/22/2017
 > [!NOTE]
 >  다른 외부 웹 브라우저를 사용하여 Internet Explorer의 한 버전인 Visual Studio 내부 웹 브라우저를 바꾸려면 [브라우저 선택] 대화 상자를 사용합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## 참고 항목
+<a id="see-also" class="xliff"></a>  
  [옵션 대화 상자, 환경](../../ide/reference/environment-options-dialog-box.md)   
  [옵션 대화 상자, 환경, 일반](../../ide/reference/general-environment-options-dialog-box.md)   
  [HTML 디자이너](http://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)
