@@ -1,6 +1,6 @@
 ---
 title: Dotfuscator CE(Community Edition) | Microsoft Docs
-ms.date: 2017-05-10
+ms.date: 2017-06-22
 ms.prod: visual-studio-dev15
 ms.devlang: dotnet
 ms.technology:
@@ -33,21 +33,24 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 507ff049dae50698d86e1536ed21ab982da1af85
-ms.openlocfilehash: a4dd4e0f9a8f6c89452bc20e05139dfa5d062e0f
+ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
+ms.openlocfilehash: 15dd6127493b9977732fdb891a086f931e002459
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 
-# <a name="dotfuscator-community-edition-ce"></a>Dotfuscator CE(Community Edition)
+# Dotfuscator CE(Community Edition)
+<a id="dotfuscator-community-edition-ce" class="xliff"></a>
 
-*PreEmptive Protection – Dotfuscator*는 보안 소프트웨어 개발 수명 주기에 맞게 쉽게 조정되는 포괄적인 .NET 응용 프로그램 보호 기능을 제공합니다. 이 프로그램을 사용하여 데스크톱, 모바일, 서버 및 포함된 응용 프로그램을 강화, 보호 및 정리함으로써 거래 비밀 및 기타 IP(지적 재산권)를 보호하고, 불법 복제 및 위조를 줄이고, 변조 및 무단 디버깅으로부터 보호하는 데 도움을 얻을 수 있습니다.
+*PreEmptive Protection - Dotfuscator*는 보안 소프트웨어 개발 수명 주기에 맞도록 손쉽게 조정되는 포괄적인 .NET 응용 프로그램 보호 기능을 제공합니다.
+이 프로그램을 사용하여 데스크톱, 모바일, 서버 및 포함된 응용 프로그램을 강화, 보호 및 정리함으로써 거래 비밀 및 기타 IP(지적 재산권)를 보호하고, 불법 복제 및 위조를 줄이고, 변조 및 무단 디버깅으로부터 보호하는 데 도움을 얻을 수 있습니다.
 Dotfuscator는 추가적인 프로그래밍이나 소스 코드 액세스 없이도 컴파일된 어셈블리에 작동합니다.
 
 ![](media/header.svg)
 
-## <a name="why-protection-matters"></a>보호가 중요한 이유
+## 보호가 중요한 이유
+<a id="why-protection-matters" class="xliff"></a>
 
 **IP(지적 재산권)을 보호**하는 일은 매우 중요합니다.
 응용 프로그램의 코드에는 IP로 간주할 수 있는 디자인 및 구현 세부 정보가 포함되어 있습니다.
@@ -61,18 +64,20 @@ Dotfuscator는 응용 프로그램에 변조 및 제3자 디버깅을 비롯한 
 
 Dotfuscator를 보안 소프트웨어 개발 수명 주기에 적용하는 방법에 대한 자세한 내용은 PreEmptive Solutions의 [SDL 응용 프로그램 보호 페이지][sdl-protection]를 참조하세요.
 
-## <a name="about-dotfuscator-ce"></a>Dotfuscator CE 정보
+## Dotfuscator CE 정보
+<a id="about-dotfuscator-ce" class="xliff"></a>
 
-사용 중인 Microsoft Visual Studio 2017에는 Dotfuscator CE 라고도 하는 ***PreEmptive Protection - Dotfuscator* Community Edition**용 무료 라이선스가 포함되어 있습니다.
+Microsoft Visual Studio 2017의 복사본에는 Dotfuscator CE로도 알려진 ***PreEmptive Protection - Dotfuscator* Community Edition**의 복사본이 있으며, 개인 용도로 사용 시 무료로 제공됩니다.
 Visual Studio 2017에 포함된 Dotfuscator CE 버전을 설치하는 방법에 대한 지침은 [설치 페이지][install]를 참조하세요.
 
-Dotfuscator CE는 개발자, 설계자 및 테스터를 위한 광범위한 [소프트웨어 보호 및 보안 강화][software-protection] 서비스를 제공합니다. Dotfuscator CE에 포함된 [.NET Obfuscation][obfuscation] 및 기타 [응용 프로그램 보호] [app-protection] 기능의 예는 다음과 같습니다.
+Dotfuscator CE는 개발자, 설계자 및 테스터를 위한 광범위한 [소프트웨어 보호 및 보안 강화][software-protection] 서비스를 제공합니다.
+Dotfuscator CE에 포함된 [.NET Obfuscation][obfuscation] 및 기타 [응용 프로그램 보호] [app-protection] 기능의 예는 다음과 같습니다.
 
-* 식별자 *[이름 바꾸기][renaming] * - 컴파일된 어셈블리의 리버스 엔지니어링을 더 어렵게 만듭니다.
-* *[변조 방지][tamper] * - 변조된 응용 프로그램의 실행을 감지하고, 인시던트 경고를 전송하고, 변조된 세션을 종료합니다.
-* *[디버그 방지][debug] * - 실행 중인 응용 프로그램에 대한 디버거 연결을 감지하고, 인시던트 경고를 전송하고, 디버그된 세션을 종료합니다.
+* 식별자 *[이름 바꾸기][renaming]*  - 컴파일된 어셈블리의 리버스 엔지니어링을 더 어렵게 만듭니다.
+* *[변조 방지][tamper]*  - 변조된 응용 프로그램의 실행을 감지하고, 인시던트 경고를 전송하고, 변조된 세션을 종료합니다.
+* *[디버그 방지][debug]*  - 실행 중인 응용 프로그램에 대한 디버거 연결을 감지하고, 인시던트 경고를 전송하고, 디버그된 세션을 종료합니다.
 * *[응용 프로그램 만료 동작][shelflife]* - “수명 종료" 날짜를 인코딩하고, 만료 날짜 이후에 응용 프로그램이 실행될 경우 경고를 전송하고, 만료된 응용 프로그램 세션을 종료합니다.
-* *[예외 추적][exceptions] * - 응용 프로그램 내에서 발생하는 처리되지 않은 예외를 모니터링합니다.
+* *[예외 추적][exceptions]*  - 응용 프로그램 내에서 발생하는 처리되지 않은 예외를 모니터링합니다.
 * *[세션][sessions] 및 [기능][features] 사용 추적* - 실행된 응용 프로그램, 이러한 응용 프로그램의 버전 및 해당 응용 프로그램에서 사용된 기능을 확인합니다.
 
 이러한 기능과 이러한 기능이 응용 프로그램 보호 전략에 맞게 조정되는 방법에 대한 자세한 내용은 [기능 페이지][capabilities]를 참조하세요.
@@ -81,7 +86,8 @@ Dotfuscator CE는 통합된 기본 보호 기능을 제공합니다.
 Dotfuscator CE에 등록한 사용자와 전 세계에서 널리 사용되고 있는 [.NET Obfuscator][net-obfuscator]인 *PreEmptive Protection - Dotfuscator* Professional Edition 사용자는 더 많은 응용 프로그램 보호 기능을 사용할 수 있습니다.
 Dotfuscator를 강화하는 방법에 대한 자세한 내용은 [업그레이드 페이지][upgrades]를 참조하세요.
 
-## <a name="getting-started"></a>시작
+## 시작
+<a id="getting-started" class="xliff"></a>
 
 Visual Studio에서 Dotfuscator CE 사용을 시작하려면 **빠른 실행**(Ctrl + Q) 검색 창에 `dotfuscator`를 입력합니다.
 
@@ -90,7 +96,8 @@ Visual Studio에서 Dotfuscator CE 사용을 시작하려면 **빠른 실행**(C
 
 [preemptive.com의 Dotfuscator 다운로드 페이지][download]에서 **최신 버전**을 불러올 수도 있습니다.
 
-## <a name="full-documentation"></a>전체 설명서
+## 전체 설명서
+<a id="full-documentation" class="xliff"></a>
 
 이 페이지와 해당 하위 페이지에는 Dotfuscator CE 기능에 대한 자세한 개요와 [도구 설치 지침][install]이 제공되어 있습니다.
 
@@ -98,7 +105,7 @@ Visual Studio에서 Dotfuscator CE 사용을 시작하려면 **빠른 실행**(C
 
 <!-- Copyright © 2017 PreEmptive Solutions, LLC -->
 
-[assemblies]: https://docs.microsoft.com/en-us/dotnet/articles/standard/assembly-format
+[assemblies]: https://docs.microsoft.com/en-us/dotnet/standard/assembly-format
 [software-protection]: https://www.preemptive.com/software-protection
 [obfuscation]: https://www.preemptive.com/obfuscation
 [app-protection]: https://www.preemptive.com/application-protection
@@ -110,18 +117,18 @@ Visual Studio에서 Dotfuscator CE 사용을 시작하려면 **빠른 실행**(C
 [capabilities]: capabilities.md
 [upgrades]: upgrades.md
 
-[get-started]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/gui_getstarted.html
+[get-started]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html
 
-[renaming]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/obfuscation_renaming.html
+[renaming]: https://www.preemptive.com/dotfuscator/ce/docs/help/obfuscation_renaming.html
 
-[checks]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/checks_overview.html
-[tamper]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/checks_tamper.html
-[debug]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/checks_debug.html
-[shelflife]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/checks_shelflife.html
+[checks]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_overview.html
+[tamper]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_tamper.html
+[debug]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_debug.html
+[shelflife]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_shelflife.html
 
-[exceptions]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/analytics_exceptions.html
-[sessions]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/analytics_sessions.html
-[features]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/analytics_features.html
+[exceptions]: https://www.preemptive.com/dotfuscator/ce/docs/help/analytics_exceptions.html
+[sessions]: https://www.preemptive.com/dotfuscator/ce/docs/help/analytics_sessions.html
+[features]: https://www.preemptive.com/dotfuscator/ce/docs/help/analytics_features.html
 
-[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/index.html
+[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/index.html
 
