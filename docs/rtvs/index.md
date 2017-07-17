@@ -1,42 +1,30 @@
 ---
 title: R Tools for Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 5/1/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: hero-article
 ms.assetid: 11324501-ceb6-47a2-ae13-e9e992d3603e
 caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: e166fceac0f29b5ee0880d2542eedddc066fa9f1
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: 80a10c710aac8413bd59b53bb61de7a982c09952
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
-# <a name="working-with-r-in-visual-studio"></a>Visual Studio에서 R 작업
+# Visual Studio에서 R 작업
+<a id="working-with-r-in-visual-studio" class="xliff"></a>
 
 R은 통계 계산 및 그래픽을 위한 고도로 확장 가능한 언어 및 환경입니다. 이 프로그램은 GNU General Public License에 따라 무료로 배포되며, 강력한 커뮤니티 지원을 활용할 수 있고, 수학 기호 및 수식을 포함하는 게시 품질 도표를 생성하는 기능으로 잘 알려져 있습니다. [r project.org](https://www.r-project.org/about.html) 및 [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)(R 소개)에서 R에 대해 자세히 알아볼 수 있습니다.
 
@@ -47,12 +35,12 @@ Visual Studio에서 R을 사용해 보려면
 - [R Tools를 설치](installation.md)합니다.
 - [시작](getting-started-with-r.md) 가이드와 [샘플](getting-started-samples.md) 및 [도움말 보기](getting-started-help.md) 항목을 따라 작업합니다.
 
-그런 후 아래 링크에 따라 R 관련 기능과 Visual Studio 자체의 일반 기능에 대해 알아보세요.
+그런 후 링크에 따라 R 관련 기능과 Visual Studio 자체의 일반 기능에 대해 알아보세요.
 
 | 기능 | 설명 | 일반 Visual Studio 설명서 | 
 | --- | --- | --- |
 | [Visual Studio 프로젝트 시스템](projects.md) | 관련 파일을 편리한 구조로 구성하고 관리하며, R 코드, R 설명서, R Markdown, SQL 쿼리 및 저장 프로시저와 같은 항목에 대한 유용한 템플릿을 사용할 수 있습니다. 또한 [패키지 관리자](package-manager.md) 및 [SQL Server Integration](sql-server.md) 기능도 사용해볼 수 있습니다.  | [Visual Studio의 솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md) |
-| [작업 영역](workspaces.md) | RTVS는 로컬 및 원격 작업 영역에 바인딩되어 좀 더 작은 데이터 집합으로 로컬로 R 코드를 개발한 다음, 훨씬 더 큰 데이터 집합을 사용해서 보다 강력한 클라우드 기반 컴퓨터에서 코드를 쉽게 실행하고, 동료들과 공동으로 작업할 수 있도록 합니다. | 해당 없음 |
+| [작업 영역](workspaces.md) | RTVS는 로컬 및 원격 작업 영역에 바인딩되어 좀 더 작은 데이터 집합으로 로컬로 R 코드를 개발한 다음, 훨씬 더 큰 데이터 집합을 사용해서 더욱 강력한 클라우드 기반 컴퓨터에서 코드를 쉽게 실행할 수 있도록 합니다. | 해당 없음 |
 | [R Tools 옵션](options.md) | RTVS의 다양한 측면을 제어합니다. | [옵션 대화 상자](../ide/reference/options-dialog-box-visual-studio.md) |
 | [다양한 편집 기능, IntelliSense 및 코드 조각](code-editing.md) | 구문 색 지정, 모든 코드 및 라이브러리에 대한 [IntelliSense](code-intellisense.md), 코드 서식 지정, 시그니처 도움말, 정의로 이동, 모든 참조 찾기, [코드 조각](code-snippets.md) 등을 포함합니다. | [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md) |
 | [R Markdown](rmarkdown.md) | R Markdown 문서는 데이터 결과를 markdown 코드 블록 내에 통합된 R 코드와 공유하도록 도와줍니다. | 해당 없음 |
@@ -65,7 +53,8 @@ Visual Studio에서 R을 사용해 보려면
 
 > [!VIDEO https://www.youtube.com/embed/RcSDEfMgUvU]
 
-## <a name="frequently-asked-questions"></a>질문과 대답
+## 질문과 대답
+<a id="frequently-asked-questions" class="xliff"></a>
 
 **질문: RTVS가 Visual Studio Express Edition에서 작동하나요?**
 
@@ -91,7 +80,7 @@ Visual Studio에서 R을 사용해 보려면
 
 **질문: RTVS가 Visual Studio에 있기 때문에, C#, C++ 및 다른 Microsoft 언어와 함께 R을 쉽게 사용할 수 있나요?**
 
-대답: 아니요. RTVS는 R 코드를 개발하기 위한 도구이며, 표준 네이티브 R 인터프리터를 사용합니다. 현재 R 및 다른 언어 간의 상호 운용성에 대한 지원이 없습니다.
+대답: 아니요. RTVS는 R 코드를 개발하기 위한 도구이며, 표준 네이티브 R 인터프리터를 사용합니다. R과 다른 언어 간의 상호 운용성은 현재 지원되지 않습니다.
 
 **질문: 기능 X는 없지만 RStudio에 있습니다.**
 
@@ -103,7 +92,7 @@ Visual Studio에서 R을 사용해 보려면
 
 **질문: RTVS에 기고할 수 있나요?**
 
-대답: 물론입니다! 소스 코드는 [Github](https://github.com/microsoft/RTVS)에 제공됩니다. 문제 추적기를 사용해서 이미 제공된 파일에 대한 버그 및 설명을 제출하세요.
+대답: 물론입니다! 소스 코드는 [Github](https://github.com/microsoft/RTVS)에 제공됩니다. 문제 추적기를 사용해서 버그와 이미 제출된 버그에 대한 설명을 제출하세요.
 
 이 설명서에 기고하실 수도 있습니다. 페이지 오른쪽 위에 있는 **편집** 명령을 선택하기만 하면 됩니다. 문서에 대한 의견도 환영합니다. 이러한 의견은 페이지 아래쪽에서 추가할 수 있습니다.
 
@@ -111,9 +100,9 @@ Visual Studio에서 R을 사용해 보려면
 
 대답: 예, Visual Studio에 통합된 모든 소스 제어 시스템을 사용할 수 있습니다.
 
-**질문: Windows 또는 Visual Studio에서 미국 영어 로캘을 사용하고 있지 않습니다. 그래고 RTVS가 작동하나요?**
+**질문: RTVS는 영어가 아닌 로캘에서 작동하나요?**
 
-대답: 1.0 릴리스의 RTVS는 영어 전용입니다. 1.1 릴리스는 Visual Studio 자체가 사용하는 언어와 동일한 언어 집합으로 지역화될 예정입니다. 당분간은 [Visual Studio 2015용 언어 팩(영어)](https://www.microsoft.com/download/details.aspx?id=48157)을 사용하거나 Visual Studio 2017에서 설치 관리자를 실행하고 **언어 팩** 탭에서 영어를 선택합니다.
+대답: RTVS 1.0 릴리스는 영어 전용입니다. 1.1 릴리스는 Visual Studio 자체가 사용하는 언어와 동일한 언어 집합으로 지역화될 예정입니다. 당분간은 [Visual Studio 2015용 언어 팩(영어)](https://www.microsoft.com/download/details.aspx?id=48157)을 사용하거나 Visual Studio 2017에서 설치 관리자를 실행하고 **언어 팩** 탭에서 영어를 선택합니다.
 
 ![Visual Studio 2017에 대한 국가별 설정](media/FAQ-international-settings.png)
 
@@ -131,9 +120,10 @@ Visual Studio에서 R을 사용해 보려면
 
 **질문: 네트워크 공유에 내 Visual Studio 프로젝트를 저장할 수 있나요?**
 
-대답: 아니요, Visual Studio에서는 이러한 방식을 지원하지 않습니다.
+대답: 아니요, Visual Studio는 네트워크 공유에서 프로젝트 로드를 지원하지 않습니다.
 
-## <a name="send-us-your-feedback"></a>피드백을 보내주세요.
+## 피드백을 보내주세요.
+<a id="send-us-your-feedback" class="xliff"></a>
 
 1. **Github 문제**: RTVS 팀에 연락하는 가장 좋은 방법은 [GitHub에서 문제를 신고](https://github.com/Microsoft/RTVS/issues)하거나 **R Tools > 피드백** 메뉴를 사용하는 것입니다.
 
