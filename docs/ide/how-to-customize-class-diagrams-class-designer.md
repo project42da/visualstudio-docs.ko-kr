@@ -1,36 +1,53 @@
 ---
-title: "How to: Customize Class Diagrams (Class Designer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "class diagrams, customizing"
-  - "shapes, removing type from class diagrams"
-  - "type shapes, removing from class diagrams"
-  - "class diagrams, removing type shapes"
+title: "방법: 클래스 다이어그램 사용자 지정(클래스 디자이너) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- class diagrams, customizing
+- shapes, removing type from class diagrams
+- type shapes, removing from class diagrams
+- class diagrams, removing type shapes
 ms.assetid: e9030aea-c77d-4cc1-b8f6-b6ca469b692d
 caps.latest.revision: 29
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# How to: Customize Class Diagrams (Class Designer)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
+ms.openlocfilehash: af498b50a5ccde20d2f05a92e5431ff1f888cfae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/14/2017
 
-클래스 다이어그램에서 정보가 표시되는 방법을 변경할 수 있습니다.  디자인 화면의 전체 다이어그램 또는 개별 형식을 사용자 지정할 수 있습니다.  
+---
+# <a name="how-to-customize-class-diagrams-class-designer"></a>방법: 클래스 다이어그램 사용자 지정(클래스 디자이너)
+클래스 다이어그램에서 정보가 표시되는 방법을 변경할 수 있습니다. 디자인 화면의 전체 다이어그램 또는 개별 형식을 사용자 지정할 수 있습니다.  
   
- 예를 들어 다이어그램의 어디에서나 전체 클래스 다이어그램의 확대\/축소 수준을 조정하고, 개별 형식 멤버의 그룹화 및 정렬 방법을 변경하고, 관계를 숨기거나 표시하고, 개별 형식 또는 형식의 집합을 이동할 수 있습니다.  
+ 예를 들어 다이어그램의 어디에서나 전체 클래스 다이어그램의 확대/축소 수준을 조정하고, 개별 형식 멤버의 그룹화 및 정렬 방법을 변경하고, 관계를 숨기거나 표시하고, 개별 형식 또는 형식의 집합을 이동할 수 있습니다.  
   
 > [!NOTE]
 >  도형이 다이어그램에 나타나는 방식을 사용자 지정해도 다이어그램에 나타나는 형식에 대한 내부 코드가 변경되지 않습니다.  
   
- 클래스의 속성 섹션과 같이 형식 멤버가 포함된 섹션을 구획이라고 합니다.  개별 구획 및 형식 멤버를 숨기거나 표시할 수 있습니다.  
+ 클래스의 속성 섹션과 같이 형식 멤버가 포함된 섹션을 구획이라고 합니다. 개별 구획 및 형식 멤버를 숨기거나 표시할 수 있습니다.  
   
  **항목 내용**  
   
@@ -48,22 +65,22 @@ caps.handback.revision: 29
   
 -   [숨겨진 관계 표시](../ide/how-to-customize-class-diagrams-class-designer.md#DisplayAssociationAndInheritance)  
   
--   [클래스 다이어그램에서 모양 제거](../ide/how-to-customize-class-diagrams-class-designer.md#RemoveCodeAndShape)  
+-   [클래스 다이어그램에서 도형 제거](../ide/how-to-customize-class-diagrams-class-designer.md#RemoveCodeAndShape)  
   
--   [형식 모양과 해당 내부 코드 삭제](../ide/how-to-customize-class-diagrams-class-designer.md#DeleteTypeShapeAndCode)  
+-   [형식 도형 및 해당 내부 코드 삭제](../ide/how-to-customize-class-diagrams-class-designer.md#DeleteTypeShapeAndCode)  
   
-##  <a name="ZoomInOut"></a> 클래스 다이어그램 확대\/축소  
+##  <a name="ZoomInOut"></a> 클래스 다이어그램 확대/축소  
   
 1.  클래스 디자이너에서 클래스 다이어그램 파일을 열고 선택합니다.  
   
-2.  클래스 디자이너 도구 모음에서 **확대** 또는 **축소** 단추를 클릭하여 디자이너 화면의 확대\/축소 수준을 변경합니다.  
+2.  클래스 디자이너 도구 모음에서 **확대** 또는 **축소** 단추를 클릭하여 디자이너 화면의 확대/축소 수준을 변경합니다.  
   
      또는  
   
-     특정 확대\/축소 값을 지정합니다.  **확대\/축소** 드롭다운 목록을 사용하거나 유효한 확대\/축소 수준을 입력할 수 있습니다. 유효 범위는 10% \- 400%입니다.  
+     특정 확대/축소 값을 지정합니다. **확대/축소** 드롭다운 목록을 사용하거나 유효한 확대/축소 수준(유효 범위: 10%~400%)을 입력할 수 있습니다.  
   
     > [!NOTE]
-    >  확대\/축소 수준을 변경해도 클래스 다이어그램의 출력 배율에는 영향을 주지 않습니다.  
+    >  확대/축소 수준을 변경해도 클래스 다이어그램의 출력 배율에는 영향을 주지 않습니다.  
   
 ##  <a name="CustomizeGroupingSorting"></a> 형식 멤버의 그룹화 및 정렬 사용자 지정  
   
@@ -73,17 +90,17 @@ caps.handback.revision: 29
   
 3.  사용 가능한 옵션 중 하나를 선택합니다.  
   
-    1.  **종류별 그룹화**는 개별 형식 멤버를 속성, 메서드, 이벤트 및 필드의 그룹화된 목록으로 구분합니다.  개별 그룹은 엔터티 정의에 따라 달라집니다. 예를 들어 해당 클래스에 대해 정의된 이벤트가 없으면 클래스에 이벤트 그룹이 표시되지 않습니다.  
+    1.  **종류별 그룹화**는 개별 형식 멤버를 속성, 메서드, 이벤트 및 필드의 그룹화된 목록으로 구분합니다. 개별 그룹은 엔터티 정의에 따라 달라집니다. 예를 들어 해당 클래스에 대해 정의된 이벤트가 없으면 클래스에 이벤트 그룹이 표시되지 않습니다.  
   
-    2.  **액세스별 그룹화**는 멤버의 액세스 한정자를 기준으로 개별 형식 멤버를 그룹화된 목록으로 구분합니다.  예를 들어 Public과 Private로 구분합니다.  
+    2.  **액세스별 그룹화**는 멤버의 액세스 한정자를 기준으로 개별 형식 멤버를 그룹화된 목록으로 구분합니다. 예를 들어 Public과 Private로 구분합니다.  
   
-    3.  **사전순 정렬**을 선택하면 엔터티를 구성하는 항목이 사전순으로 나열된 단일 목록으로 표시됩니다.  이 목록은 오름차순으로 정렬됩니다.  
+    3.  **사전순 정렬**을 선택하면 엔터티를 구성하는 항목이 사전순으로 나열된 단일 목록으로 표시됩니다. 이 목록은 오름차순으로 정렬됩니다.  
   
 ##  <a name="HideCompartments"></a> 형식의 구획 숨기기  
   
 1.  클래스 디자이너에서 클래스 다이어그램 파일을 열고 선택합니다.  
   
-2.  사용자 지정할 형식의 멤버 범주를 마우스 오른쪽 단추로 클릭합니다. 예를 들어 클래스의 **메서드** 노드를 선택합니다.  
+2.  사용자 지정할 형식의 멤버 범주를 마우스 오른쪽 단추로 클릭합니다. 예를 들어, 클래스의 **메서드** 노드를 선택합니다.  
   
 3.  **구획 숨기기**를 클릭합니다.  
   
@@ -115,7 +132,7 @@ caps.handback.revision: 29
   
 2.  숨기려는 형식 연결 또는 형식 상속 선을 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  형식 연결 선에 대해 **숨기기**를 클릭하고 형식 상속 선에 대해 **형식 상속 선 숨기기**를 클릭합니다.  
+3.  형식 연결 선에 대해 **숨기기**를 클릭하고 형식 상속 선에 대해 **형식 상속 선 숨기기**.  
   
 4.  **모든 멤버 표시**를 클릭합니다.  
   
@@ -129,8 +146,8 @@ caps.handback.revision: 29
   
  형식 연결 선에 대해 **모든 멤버 표시**를 클릭하고 형식 상속 선에 대해 **기본 클래스 표시** 또는 **파생 클래스 표시**를 클릭합니다.  
   
-##  <a name="RemoveCodeAndShape"></a> 클래스 다이어그램에서 모양 제거  
- 형식의 내부 코드에 영향을 주지 않으면서도 클래스 다이어그램에서 형식 모양을 제거할 수 있습니다.  클래스 다이어그램에서 형식 모양을 제거하면 해당 다이어그램만 영향을 받습니다. 해당 형식을 정의하는 기본 코드와 해당 형식을 표시하는 다른 다이어그램은 영향을 받지 않습니다.  
+##  <a name="RemoveCodeAndShape"></a> 클래스 다이어그램에서 도형 제거  
+ 형식의 내부 코드에 영향을 주지 않으면서도 클래스 다이어그램에서 형식 모양을 제거할 수 있습니다. 클래스 다이어그램에서 형식 모양을 제거하면 해당 다이어그램만 영향을 받습니다. 해당 형식을 정의하는 기본 코드와 해당 형식을 표시하는 다른 다이어그램은 영향을 받지 않습니다.  
   
 1.  클래스 다이어그램에서 제거할 형식 모양을 선택합니다.  
   
@@ -138,7 +155,7 @@ caps.handback.revision: 29
   
      형식 모양과 해당 모양에 연결된 연결 선이나 상속 선이 다이어그램에 더 이상 표시되지 않습니다.  
   
-##  <a name="DeleteTypeShapeAndCode"></a> 형식 모양과 해당 내부 코드 삭제  
+##  <a name="DeleteTypeShapeAndCode"></a> 형식 도형 및 해당 내부 코드 삭제  
   
 1.  디자인 화면에서 모양을 마우스 오른쪽 단추로 클릭합니다.  
   
@@ -146,8 +163,8 @@ caps.handback.revision: 29
   
      모양이 다이어그램에서 제거되고 해당 기본 코드가 프로젝트에서 삭제됩니다.  
   
-## 참고 항목  
- [Working with Class Diagrams \(Class Designer\)](../ide/working-with-class-diagrams-class-designer.md)   
- [How to: Change Between Member Notation and Association Notation \(Class Designer\)](../ide/how-to-change-between-member-notation-and-association-notation-class-designer.md)   
- [How to: View Existing Types \(Class Designer\)](../ide/how-to-view-existing-types-class-designer.md)   
- [Viewing Types and Relationships \(Class Designer\)](../ide/viewing-types-and-relationships-class-designer.md)
+## <a name="see-also"></a>참고 항목  
+ [클래스 다이어그램 사용(클래스 디자이너)](../ide/working-with-class-diagrams-class-designer.md)   
+ [방법: 멤버 표기법과 연결 표기법 간 변경(클래스 디자이너)](../ide/how-to-change-between-member-notation-and-association-notation-class-designer.md)   
+ [방법: 기존 형식 보기(클래스 디자이너)](../ide/how-to-view-existing-types-class-designer.md)   
+ [형식 및 관계 보기(클래스 디자이너)](../ide/viewing-types-and-relationships-class-designer.md)

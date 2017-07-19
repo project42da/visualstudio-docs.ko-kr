@@ -1,52 +1,69 @@
 ---
-title: "How to: Change Between Member Notation and Association Notation (Class Designer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notation, member"
-  - "association notation"
-  - "member notation"
-  - "notation, association"
+title: "방법: 멤버 표기법과 연결 표기법 간 변경(클래스 디자이너) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- notation, member
+- association notation
+- member notation
+- notation, association
 ms.assetid: 65881c5a-d251-4a36-ad0d-73d088436092
 caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# How to: Change Between Member Notation and Association Notation (Class Designer)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
+ms.openlocfilehash: 30bacff7a117cd1e6bdf7a234652177cbc50b0f2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/14/2017
 
-클래스 디자이너에서 클래스 다이어그램이 두 형식 간의 연결 관계를 나타내는 방법을 멤버 표시에서 연결 표시로 또는 그 반대로 변경할 수 있습니다.  멤버를 연결 선으로 표시하면 형식의 연결 관계를 시각적으로 쉽게 확인할 수 있습니다.  
+---
+# <a name="how-to-change-between-member-notation-and-association-notation-class-designer"></a>방법: 멤버 표시와 연결 표시 간 변경(클래스 디자이너)
+클래스 디자이너에서 클래스 다이어그램이 두 형식 사이의 연결 관계를 나타내는 방법을 멤버 표기법에서 연결 표기법으로, 또는 그 반대로 변경할 수 있습니다. 형식 연결 선으로 표시된 멤버는 형식이 어떻게 관련되어 있는지 효과적으로 시각화하여 보여 주는 경우가 많습니다.  
   
 > [!NOTE]
->  연결 관계는 멤버 속성 또는 필드로 나타낼 수 있습니다.  멤버 표기법을 연결 표기법으로 변경하려면 한 형식이 다른 형식의 멤버를 포함해야 하고,  연결 표기법을 멤버 표기법으로 변경하려면 두 형식이 연결 선으로 연결되어 있어야 합니다.  자세한 내용은 [How to: Create Associations Between Types \(Class Designer\)](../ide/how-to-create-associations-between-types-class-designer.md)를 참조하십시오.  프로젝트에 여러 클래스 다이어그램이 포함되어 있는 경우 한 다이어그램에서 연결 관계를 표시하는 방법을 변경하면 해당 다이어그램에만 영향을 줍니다.  다른 다이어그램의 연결 관계 표시 방법을 변경하려면 해당 다이어그램을 열거나 표시한 후 다음 단계를 수행합니다.  
+>  연결 관계는 멤버 속성 또는 필드로 나타낼 수 있습니다. 멤버 표기법을 연결 표기법으로 변경하려면 한 형식에 다른 형식의 멤버가 있어야 합니다. 연결 표기법을 멤버 표기법으로 변경하려면 두 형식이 형식 연결 선으로 연결되어 있어야 합니다. 자세한 내용은 [방법: 형식 간의 연결 만들기(클래스 디자이너)](../ide/how-to-create-associations-between-types-class-designer.md)를 참조하세요. 프로젝트에 클래스 다이어그램이 여러 개 있는 경우 한 다이어그램에서 연결 관계 표시 방법을 변경하면 변경 내용이 해당 다이어그램에만 영향을 줍니다. 다른 다이어그램의 연결 관계 표시 방법을 변경하려면 해당 다이어그램을 열거나 표시하고 변경 단계를 수행합니다.  
   
-### 멤버 표기법에서 연결 표기법으로 변경하려면  
+### <a name="to-change-member-notation-to-association-notation"></a>멤버 표기법을 연결 표기법으로 변경하려면  
   
-1.  솔루션 탐색기의 프로젝트 노드에서 클래스 다이어그램 파일\(.cd\)을 엽니다.  
+1.  솔루션 탐색기의 프로젝트 노드에서 클래스 다이어그램(.cd) 파일을 엽니다.  
   
-2.  클래스 다이어그램의 형식 모양에서 해당 연결을 나타내는 필드나 멤버 속성을 마우스 오른쪽 단추로 클릭한 후에 **형식 연결로 표시**를 선택합니다.  
+2.  클래스 다이어그램의 형식 도형에서 해당 연결을 나타내는 멤버 속성 또는 필드를 마우스 오른쪽 단추로 클릭하고 **형식 연결로 표시**를 선택합니다.  
   
     > [!TIP]
-    >  형식 모양에 속성이나 필드가 보이지 않으면 모양의 구획이 축소된 것일 수도 있습니다.  형식 모양을 확장하려면 구획 이름을 두 번 클릭하거나 형식 모양을 마우스 오른쪽 단추로 클릭한 후에 **확장**을 선택합니다.  
+    >  형식 도형에 속성 또는 필드가 표시되지 않는 경우 도형의 구획이 축소된 상태일 수 있습니다. 형식 도형을 확장하려면 구획 이름을 두 번 클릭하거나 형식 도형을 마우스 오른쪽 단추로 클릭하고 **확장**을 선택합니다.  
   
-     멤버가 형식 모양의 구획에서 사라지고 두 형식을 연결하는 연결 선이 나타납니다.  속성이나 필드의 이름이 연결 선의 레이블이 됩니다.  
+     형식 도형의 구획에서 멤버가 사라지고 두 형식을 연결하는 형식 연결 선이 나타납니다. 형식 연결 선은 속성 또는 필드 이름으로 레이블이 지정됩니다.  
   
-### 연결 표기법을 멤버 표기법으로 변경하려면  
+### <a name="to-change-association-notation-to-member-notation"></a>연결 표기법을 멤버 표기법으로 변경하려면  
   
--   클래스 다이어그램에서 연결 선을 마우스 오른쪽 단추로 클릭한 후에 **속성으로 표시** 또는 **필드로 표시**를 선택합니다.  
+-   클래스 다이어그램에서 형식 연결 선을 마우스 오른쪽 단추로 클릭하고 **속성으로 표시** 또는 **필드로 표시**를 적절하게 선택합니다.  
   
-     연결 선이 사라지고 다이어그램에서 형식 모양의 해당 구획에 속성이 표시됩니다.  
+     형식 연결 선이 사라지고 다이어그램의 해당 형식 도형 내 적합한 구획에 속성이 표시됩니다.  
   
-## 참고 항목  
- [How to: Create Inheritance Between Types \(Class Designer\)](../ide/how-to-create-inheritance-between-types-class-designer.md)   
- [How to: View Inheritance Between Types \(Class Designer\)](../ide/how-to-view-inheritance-between-types-class-designer.md)   
- [Viewing Types and Relationships \(Class Designer\)](../ide/viewing-types-and-relationships-class-designer.md)   
- [How to: Visualize a Collection Association \(Class Designer\)](../ide/how-to-visualize-a-collection-association-class-designer.md)
+## <a name="see-also"></a>참고 항목  
+ [방법: 형식 간의 상속 만들기(클래스 디자이너)](../ide/how-to-create-inheritance-between-types-class-designer.md)   
+ [방법: 형식 간의 상속 보기(클래스 디자이너)](../ide/how-to-view-inheritance-between-types-class-designer.md)   
+ [형식 및 관계 보기(클래스 디자이너)](../ide/viewing-types-and-relationships-class-designer.md)   
+ [방법: 컬렉션 형식 연결 시각화(클래스 디자이너)](../ide/how-to-visualize-a-collection-association-class-designer.md)
