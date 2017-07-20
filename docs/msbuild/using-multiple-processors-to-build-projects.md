@@ -30,14 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 2d8309ead037097b8205245feabdb67c68d0d6b2
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="using-multiple-processors-to-build-projects"></a>다중 프로세서를 사용하여 프로젝트 빌드
-MSBuild에서는 다중 프로세서 또는 다중 핵심 프로세서가 있는 시스템을 사용할 수 있습니다. 사용 가능한 각 프로세서에 대해 별도 빌드 프로세스가 만들어집니다. 예를 들어 시스템에&4;개의 프로세서가 있는 경우 네 개의 빌드 프로세스가 만들어집니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 이러한 빌드를 동시에 처리할 수 있기 때문에 전체 빌드 시간이 감소합니다. 그러나 병렬 빌드에서는 빌드 프로세스가 발생하는 방법과 관련하여 몇 가지 사항이 변경되었습니다. 이 항목에서는 이러한 변경 내용에 대해 설명합니다.  
+MSBuild에서는 다중 프로세서 또는 다중 핵심 프로세서가 있는 시스템을 사용할 수 있습니다. 사용 가능한 각 프로세서에 대해 별도 빌드 프로세스가 만들어집니다. 예를 들어 시스템에 4개의 프로세서가 있는 경우 네 개의 빌드 프로세스가 만들어집니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 이러한 빌드를 동시에 처리할 수 있기 때문에 전체 빌드 시간이 감소합니다. 그러나 병렬 빌드에서는 빌드 프로세스가 발생하는 방법과 관련하여 몇 가지 사항이 변경되었습니다. 이 항목에서는 이러한 변경 내용에 대해 설명합니다.  
   
 ## <a name="project-to-project-references"></a>프로젝트 간 참조  
  [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)]는 병렬 빌드를 사용하여 프로젝트를 빌드하는 동안 P2P(프로젝트 간) 참조가 발생하면 해당 참조를 한 번만 빌드합니다. 두 프로젝트에 동일한 P2P 참조가 있는 경우 각 프로젝트에 대해 참조가 다시 빌드되지 않습니다. 대신 빌드 엔진은 의존하는 두 프로젝트 모두에 대해 동일한 P2P 참조를 반환합니다. 동일한 대상에 대한 세션의 후속 요청에 동일한 P2P 참조가 제공됩니다.  
@@ -54,7 +55,7 @@ MSBuild에서는 다중 프로세서 또는 다중 핵심 프로세서가 있는
 ## <a name="multi-process-execution"></a>다중 프로세스 실행  
  거의 모든 빌드 관련 작업을 수행할 때 경로 관련 오류를 방지하기 위해 빌드 프로세스 전체에서 현재 디렉터리가 일정하게 유지되어야 합니다. 따라서 여러 디렉터리가 만들어지는 결과를 가져오므로 프로젝트를 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]의 여러 다른 스레드에서 실행할 수 없습니다.  
   
- 이 문제를 방지하면서 여전히 다중 프로세서 빌드를 사용하기 위해 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서는 "프로세스 격리"를 사용합니다. 프로세스 격리를 사용하여 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 최대 `n`개의 프로세스를 만들 수 있습니다. 여기서 `n`은 시스템에서 사용할 수 있는 프로세서 수입니다. 예를 들어 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]가 두 개의 프로세서가 있는 시스템에서 솔루션을 빌드할 경우 빌드 프로세서가&2;개만 만들어집니다. 이러한 프로세스는 솔루션의 모든 프로젝트를 빌드하기 위해 다시 사용됩니다.  
+ 이 문제를 방지하면서 여전히 다중 프로세서 빌드를 사용하기 위해 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서는 "프로세스 격리"를 사용합니다. 프로세스 격리를 사용하여 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 최대 `n`개의 프로세스를 만들 수 있습니다. 여기서 `n`은 시스템에서 사용할 수 있는 프로세서 수입니다. 예를 들어 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]가 두 개의 프로세서가 있는 시스템에서 솔루션을 빌드할 경우 빌드 프로세서가 2개만 만들어집니다. 이러한 프로세스는 솔루션의 모든 프로젝트를 빌드하기 위해 다시 사용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [병렬로 여러 프로젝트 빌드](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)   

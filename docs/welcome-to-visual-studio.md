@@ -31,14 +31,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7ec312bf7c85759fef700f0746c0981f263d46e2
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 362a756e434f93eb39776c76382d059cc2744cae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="welcome-to-visual-studio-2017"></a>Visual Studio 2017 시작
-장치, 데스크톱 및 웹용으로 유용한 앱을 만드는 데 필요한 모든 기능을 갖춘 Visual Studio를 시작합니다. 이 버전에서는 IDE(통합 개발 환경) 하나에서 iOS, Android, Linux, Windows 및 기타 운영 체제용 코드를 작성할 수 있습니다. 유용한 대화형 코드 도움말(*IntelliSense*), 쉬운 코드 탐색 및 디버깅, 빠른 빌드 및 신속한 배포의 이점을 누려 보세요. Visual Studio를 사용하여 생산성을 높이고 혼자서나 대규모 팀에 속해서 작업을 손쉽게 수행할 수 있습니다.  
+웹과 클라우드에서 장치 또는 데스크톱 앱용으로 유용한 앱을 만드는 데 필요한 모든 기능을 갖춘 Visual Studio를 시작합니다. 이 버전에서는 IDE(통합 개발 환경) 하나에서 iOS, Android, Linux, Windows 및 기타 운영 체제용 코드를 작성할 수 있습니다. 유용한 대화형 코드 도움말(*IntelliSense*), 쉬운 코드 탐색 및 디버깅, 빠른 빌드 및 신속한 배포의 이점을 누려 보세요. Visual Studio를 사용하여 생산성을 높이고 혼자서나 대규모 팀에 속해서 작업을 손쉽게 수행할 수 있습니다.  
 
 > [!NOTE]
 >  [Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=834799)의 릴리스 정보를 확인하려면 링크를 클릭하세요.    
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/07/2017
 
  [Visual Studio 다운로드](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)에서 Visual Studio 2017을 다운로드하여 설치할 수 있습니다. 설치 프로세스에 대한 자세한 내용은 [Visual Studio 2017 설치](https://go.microsoft.com/fwlink/?linkid=833223)를 참조하세요. 지금 바로 새 프로젝트를 만들거나 코드 파일을 열고 코드 작성을 시작해 보세요. 먼저 만들려는 앱의 유형을 선택합니다. 도구에 보다 익숙해지기 위해 Visual Studio IDE를 [둘러볼](https://go.microsoft.com/fwlink/?linkid=833058) 수도 있습니다.
 
- [코드 갤러리](https://code.msdn.microsoft.com/) 를 탐색하여 더 신속하게 앱을 작성하는 데 도움이 되는 샘플을 찾아보는 것도 잊지 마세요. [Channel 9](https://channel9.msdn.com/VisualStudio) 및 [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!jobf=Developer&lang=1033)에서 제공되는 다양한 무료 Visual Studio 동영상을 시청해 보세요.
+ [코드 갤러리](https://code.msdn.microsoft.com/)를 탐색하여 더 신속하게 앱을 작성하는 데 도움이 되는 샘플을 찾아보는 것도 잊지 마세요. [Channel 9](https://channel9.msdn.com/VisualStudio) 및 [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!jobf=Developer&lang=1033)에서 제공되는 다양한 무료 Visual Studio 동영상을 시청해 보세요.
 
 ## <a name="build-cross-platform-apps-and-games"></a>플랫폼 간 앱 및 게임 제작  
  Visual Studio를 사용하여 Android, iOS, Linux, Windows 및 기타 장치용 앱과 게임을 빌드할 수 있습니다. [플랫폼 간 모바일 개발](cross-platform/cross-platform-mobile-development-in-visual-studio.md)에서 자세한 내용을 알아보세요.  유니버설 Windows 앱을 통해 여러 플랫폼 간에 코드를 활용할 수 있습니다. 자세한 내용은 [유니버설 Windows 앱](https://dev.windows.com/en-us/windows-apps)을 참조하세요.
@@ -90,7 +91,7 @@ Visual Studio를 설치할 때 선택적으로 **Azure 개발** 워크로드를 
  로컬 서버를 유지 관리하지 않고 클라우드에 코드를 저장하려면 [Visual Studio Team Services](https://www.visualstudio.com/team-services/)를 사용하고, 온-프레미스 서버를 사용하려면 [Team Foundation Server](https://www.visualstudio.com/tfs/)를 사용합니다. 코드 프로젝트를 만들 때마다 버전 제어에 추가하는 옵션이 있습니다. 요구 사항에 가장 적합한 버전 제어 시스템에 대해 알아보려면 [프로젝트에 적합한 버전 제어 선택](https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc)을 참조하세요.  
 
 ### <a name="build-your-app"></a>응용 프로그램 빌드  
- [로컬로 앱을 빌드](ide/compiling-and-building-in-visual-studio.md) 하고 올바르게 작동하는지 확인할 수 있습니다. 그런 다음 [디버깅 도구](debugger/debugging-in-visual-studio.md)를 사용하여 앱 관련 문제를 해결합니다. 또는 공유 빌드 서버나 클라우드에서 프로젝트를 빌드할 수 있습니다. 팀의 개발자들이 버전 제어에 체크 인한 코드를 빌드하도록 빌드 프로세스를 자동화합니다. 예를 들어 밤마다 또는 코드를 체크 인할 때마다 하나 이상의 프로젝트를 빌드할 수 있습니다. 자세한 내용은 [모든 플랫폼에서 연속 통합](https://www.visualstudio.com/en-us/docs/build/overview)을 참조하세요.
+ [로컬로 앱을 빌드](ide/compiling-and-building-in-visual-studio.md) 하고 올바르게 작동하는지 확인할 수 있습니다. 그런 다음 [디버깅 도구](debugger/debugging-in-visual-studio.md) 를 사용하여 앱 관련 문제를 해결합니다. 또는 공유 빌드 서버나 클라우드에서 프로젝트를 빌드할 수 있습니다. 팀의 개발자들이 버전 제어에 체크 인한 코드를 빌드하도록 빌드 프로세스를 자동화합니다. 예를 들어 밤마다 또는 코드를 체크 인할 때마다 하나 이상의 프로젝트를 빌드할 수 있습니다. 자세한 내용은 [모든 플랫폼에서 연속 통합](https://www.visualstudio.com/en-us/docs/build/overview)을 참조하세요.
 
 ### <a name="test-and-improve-your-app"></a>앱 테스트 및 개선  
 [단위 테스트를 만들어](test/unit-test-your-code.md) 앱의 품질을 개선할 수 있습니다. 이러한 테스트는 체크 인할 때마다 실행되거나 빌드의 일부로 실행될 수 있습니다.  
@@ -100,7 +101,7 @@ Visual Studio를 설치할 때 선택적으로 **Azure 개발** 워크로드를 
 메모리 및 CPU 사용량과 기타 응용 프로그램 수준 문제를 진단할 수 있습니다. 자세한 내용은 [프로파일링 도구](profiling/profiling-tools.md)를 참조하세요.
 
 ### <a name="deliver-your-teams-code-faster"></a>팀의 코드를 더 빠르게 제공  
- 팀 구성원 간의 장벽을 없애고 공동 작업을 개선합니다. 더 나아가 프로덕션까지의 각 개발 단계에 대한 앱의 릴리스를 자동화합니다. 라이브 상태일 때 앱의 성능 및 가용성을 모니터링합니다. 고객이 실제로 앱을 사용하고 있는 방식에 대한 실시간 사용 데이터를 수집합니다. 자세한 내용은 [DevOps 및 응용 프로그램 수명 주기 관리](https://www.visualstudio.com/en-us/docs/vsts-tfs-overview)를 참조하세요.  
+ 팀 구성원 간의 장벽을 없애고 공동 작업을 개선합니다. 더 나아가 프로덕션까지의 각 개발 단계에 대한 앱의 릴리스를 자동화합니다. 라이브 상태일 때 앱의 성능 및 가용성을 모니터링합니다. 고객이 실제로 앱을 사용하고 있는 방식에 대한 실시간 사용 데이터를 수집합니다. 자세한 내용은 [DevOps 및 응용 프로그램 수명 주기 관리](https://www.visualstudio.com/en-us/docs/vsts-tfs-overview) (영문)를 참조하세요.  
 
 ## <a name="whats-new"></a>새로운 기능  
 Visual Studio의 새로운 기능에 대해 알아봅니다.

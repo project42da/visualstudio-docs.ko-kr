@@ -38,9 +38,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: c4d93013218ace4039267bec73a2525df0c1b370
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/22/2017
 
 |요소|설명|  
 |-------------|-----------------|  
-|[Otherwise](../msbuild/otherwise-element-msbuild.md)|선택적 요소입니다.<br /><br /> 모든 `When` 요소의 조건이 `false`로 평가될 경우 평가할 코드 `PropertyGroup` 및 `ItemGroup` 요소의 블록을 지정합니다. `Choose` 요소에&0;개 이상의 `Otherwise` 요소가 있을 수 있으며 마지막 요소여야 합니다.|  
+|[Otherwise](../msbuild/otherwise-element-msbuild.md)|선택적 요소입니다.<br /><br /> 모든 `When` 요소의 조건이 `false`로 평가될 경우 평가할 코드 `PropertyGroup` 및 `ItemGroup` 요소의 블록을 지정합니다. `Choose` 요소에 0개 이상의 `Otherwise` 요소가 있을 수 있으며 마지막 요소여야 합니다.|  
 |[When](../msbuild/when-element-msbuild.md)|필수적 요소입니다.<br /><br /> `Choose` 요소에서 선택할 수 있는 가능한 코드 블록을 지정합니다. `Choose` 요소에는 `When` 요소가 하나 이상 있을 수 있습니다.|  
 
 ### <a name="parent-elements"></a>부모 요소  

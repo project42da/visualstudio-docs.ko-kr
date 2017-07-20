@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: af39a14f54ff5e68ff16b29833546f266f4be962
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -57,7 +58,7 @@ ms.lasthandoff: 02/22/2017
  응용 프로그램이 역할이나 프로필 서비스에 액세스할 때 서버 인증 쿠키가 만료된 경우 이전에 인증된 사용자를 자동으로 다시 인증할지 여부를 지정합니다. 쿠키가 만료된 후 응용 프로그램 서비스에 대한 액세스를 거부하고 명시적 재인증을 요구하려면 이 옵션을 선택합니다. 공용 위치에 배포된 응용 프로그램에 유용한 이 옵션을 선택하면 사용한 후에도 응용 프로그램을 계속 실행해 두는 사용자의 인증된 상태가 무기한으로 유지되지 않습니다. 기본적으로 이 옵션은 선택 취소되어 있습니다.  
   
  **역할 서비스 캐시 제한 시간**  
- 클라이언트 역할 공급자가 역할 서비스에 액세스하는 대신 캐시된 역할 값을 사용할 기간을 지정합니다. 이 시간 간격은 역할 업데이트 빈도가 높으면 작은 값으로 설정하고 빈도가 낮으면 큰 값으로 설정합니다. 기본값은&1;일입니다.  
+ 클라이언트 역할 공급자가 역할 서비스에 액세스하는 대신 캐시된 역할 값을 사용할 기간을 지정합니다. 이 시간 간격은 역할 업데이트 빈도가 높으면 작은 값으로 설정하고 빈도가 낮으면 큰 값으로 설정합니다. 기본값은 1일입니다.  
   
  <xref:System.Web.Security.RolePrincipal.IsInRole%2A> 메서드를 호출하면 역할 공급자가 캐시된 역할 값 또는 역할 서비스에 액세스합니다. 프로그래밍 방식으로 캐시를 지우고 이 메서드가 원격 서비스에 액세스하도록 강제 지정하려면 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> 메서드를 호출합니다.  
   

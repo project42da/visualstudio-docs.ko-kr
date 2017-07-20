@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 753a39940ba32052cff14460f007a8f8a2d191dd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0719aac1c8a0b59b34234aeeee8ec0a3ce418168
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI 자동화를 사용하여 코드 테스트
@@ -79,7 +80,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
     -   [디버깅](#debugging)  
   
--   [다음 단계](#VerifyCodeUsingCUITWhatsNext)  
+-   [새로운 기능](#VerifyCodeUsingCUITWhatsNext)  
   
 ##  <a name="VerifyingCodeUsingCUITCreate"></a> 코딩된 UI 테스트 만들기  
   
@@ -87,7 +88,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
      코딩된 UI 테스트는 코딩된 UI 테스트 프로젝트에 포함되어 있어야 합니다. 아직 코딩된 UI 테스트 프로젝트가 없으면 하나를 만듭니다. **솔루션 탐색기**의 솔루션 바로 가기 메뉴에서 **추가**, **새 프로젝트**를 차례로 선택하고 **Visual Basic** 또는 **Visual C#**을 선택합니다. 그런 다음 **테스트**, **C코딩된 UI 테스트**를 차례로선택합니다.  
   
-    -   *코딩된 UI 테스트**프로젝트 템플릿이 표시되지 않습니다.*  
+    -   ***코딩된 UI 테스트** 프로젝트 템플릿이 표시되지 않습니다.*  
   
          코딩된 UI 테스트를 지원하지 않는 Visual Studio 버전을 사용하는 중일 수 있습니다. 코딩된 UI 테스트를 만들려면 Visual Studio Enterprise를 사용해야 합니다.  
   
@@ -184,7 +185,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
 -   ![필수 구성 요소](../test/media/prereq.png "Prereq") [TestCleanup] 특성으로 식별되고 각 테스트 메서드 종료 시 코드를 실행하는 테스트 정리 메서드를 추가할 수 있습니다. 예를 들어 응용 프로그램을 닫는 메서드는 TestCleanup 메서드에서 호출될 수 있습니다.  
   
 ###  <a name="VerifyingCodeUsingCUITGenerateAssertions"></a> UI 컨트롤 속성의 유효성 검사  
- **코딩된 UI 테스트 빌더**를 사용해 테스트의 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>에 UI(사용자 인터페이스) 컨트롤을 추가하거나 UI 컨트롤에 어설션을 사용하는 유효성 검사 메서드에 대한 코드를 생성할 수 있습니다.   
+ **코딩된 UI 테스트 빌더**를 사용해 테스트의 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>에 UI(사용자 인터페이스) 컨트롤을 추가하거나 UI 컨트롤에 어설션을 사용하는 확인 메서드에 대한 코드를 생성할 수 있습니다.  
   
  UI 컨트롤을 위한 어설션을 생성하려면 코딩된 UI 테스트 빌더에서 **어설션 추가** 도구를 선택하여 올바른지 확인하려는 테스트 중인 응용 프로그램의 컨트롤로 끌어 옵니다. 컨트롤 주위에 상자가 생기면 마우스를 놓습니다. `UIMap.Designer.cs` 파일에 컨트롤 클래스 코드가 즉시 생성됩니다.  
   
@@ -381,7 +382,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
     public partial class UIMap // Same partial class  
     {  
       /// <summary>  
-      /// Add two numbers – parameterized version  
+      /// Add two numbers - parameterized version  
       /// </summary>  
       public void AddTwoNumbers(int firstNumber, int secondNumber)  
       { ...   // Code modified to use parameters.  
@@ -408,21 +409,21 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
  **UI 테스트 컨트롤의 작업 액세스**  
   
- UI 테스트 컨트롤에 대해 마우스 클릭 또는 키보드 작업과 같은 작업을 수행하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse> 및 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard> 클래스의 메서드를 사용합니다.  
+ 마우스 클릭 또는 키보드 작업과 같은 UI 테스트 컨트롤에 대한 작업을 수행하려면 다음과 같이 <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse> 및 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard> 클래스에서 메서드를 사용합니다.  
   
--   UI 테스트 컨트롤에 대해 마우스 클릭 등의 마우스 기반 작업을 수행하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click%2A>을 사용합니다.  
+-   UI 테스트 컨트롤에 대해 마우스 클릭과 같은 마우스 기반 작업을 수행하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click%2A>을 사용합니다.  
   
      `Mouse.Click(buttonCancel);`  
   
--   편집 컨트롤에 입력하는 등의 키보드 기반 작업을 수행하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A>를 사용합니다.  
+-   편집 컨트롤에 입력과 같은 키보드 기반 작업을 수행하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A>을 사용합니다.  
   
      `Keyboard.SendKeys(textBoxDestination, @"C:\Temp\Output.txt");`  
   
  **UI 테스트 컨트롤의 속성 액세스**  
   
- UI 컨트롤 관련 속성 값을 가져오고 설정하려는 경우 컨트롤 속성의 값을 직접 가져오거나 설정할 수도 있고, 가져오거나 설정하려는 특정 속성의 이름을 포함하여 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A?displayProperty=fullName> 및 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A?displayProperty=fullName> 메서드를 사용할 수도 있습니다.  
+ UI 컨트롤 관련 속성 값을 얻고 설정하기 위해 컨트롤의 속성 값을 직접 얻거나 설정할 수 있습니다. 또는 얻거나 설정하려는 특성 속성의 이름과 함께 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A?displayProperty=fullName> 및 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A?displayProperty=fullName> 메서드를 사용할 수 있습니다.  
   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>는 개체를 반환하며, 이 개체를 적절한 <xref:System.Type>에 캐스팅할 수 있습니다. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>는 속성의 값으로 개체를 허용합니다.  
+ <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>는 적절한 <xref:System.Type>으로 캐스팅할 수 있는 개체를 반환합니다. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>는 속성의 값에 대해 개체를 수락합니다.  
   
 ##### <a name="to-get-or-set-properties-from-ui-test-controls-directly"></a>UI 테스트 컨트롤에서 속성을 직접 얻거나 설정하려면  
   
@@ -435,11 +436,11 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
 ##### <a name="to-get-properties-from-ui-test-controls"></a>UI 테스트 컨트롤에서 속성을 얻으려면  
   
--   컨트롤에서 속성 값을 가져오려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>를 사용합니다.  
+-   컨트롤에서 속성 값을 얻으려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>를 사용합니다.  
   
--   가져올 컨트롤의 속성을 지정하려면 각 컨트롤에서 `PropertyNames` 클래스의 적절한 문자열을 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>에 대한 매개 변수로 사용합니다.  
+-   얻으려는 컨트롤의 속성을 지정하려면 각 컨트롤에 있는 `PropertyNames` 클래스의 적절한 문자열을 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>에 대한 매개 변수로 사용합니다.  
   
--   <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>는 적절한 데이터 형식을 반환하지만 이 반환 값은 <xref:System.Object>로 캐스팅됩니다. 반환 <xref:System.Object>는 적절한 형식으로 캐스팅해야 합니다.  
+-   <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>는 적절한 데이터 형식을 반환하지만 이 반환 값은 <xref:System.Object>로 캐스팅됩니다. 그런 다음 반환 <xref:System.Object>는 적절한 형식으로 캐스팅되어야 합니다.  
   
      예제:  
   
@@ -449,7 +450,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
 -   컨트롤에서 속성을 설정하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>를 사용합니다.  
   
--   설정할 컨트롤의 속성을 지정하려면 `PropertyNames` 클래스의 적절한 문자열을 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>에 대한 첫 번째 매개 변수로 사용하고 속성 값을 두 번째 매개 변수로 포함합니다.  
+-   설정할 컨트롤의 속성을 지정하려면 `PropertyNames` 클래스의 적절한 속성을 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>에 대한 첫 번째 매개 변수로 사용하고 속성 값은 두 번째 매개 변수로 사용합니다  
   
      예제:  
   
@@ -458,7 +459,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 ###  <a name="debugging"></a> 디버깅  
  코딩된 UI 테스트 로그를 사용하여 코딩된 UI 테스트를 분석할 수 있습니다. 코딩된 UI 테스트 로그는 코딩된 UI 테스트 실행에 대한 중요한 정보를 필터링하고 기록합니다. 로그 서식을 통해 문제를 신속하게 디버깅할 수 있습니다. 자세한 내용은 [코딩된 UI 테스트 로그를 사용하여 코딩된 UI 테스트 분석](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)을 참조하세요.  
   
-##  <a name="VerifyCodeUsingCUITWhatsNext"></a> 다음 단계  
+##  <a name="VerifyCodeUsingCUITWhatsNext"></a> 새로운 기능  
  **코딩된 UI 테스트 실행을 위한 추가 옵션:** 이 항목의 앞에서 설명한 것처럼 Visual Studio에서 직접 코딩된 UI 테스트를 실행할 수 있습니다. 또한 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 또는 [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]에서 자동화된 UI 테스트를 실행할 수 있습니다. 코딩된 UI 테스트가 자동화된 경우 다른 자동화된 테스트와 달리 코딩된 UI 테스트를 실행할 때는 테스트와 데스크톱 사이에 상호 작용이 필요합니다.  
   
 -   [방법: Microsoft Visual Studio에서 테스트 실행](http://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)  
@@ -486,14 +487,14 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 ## <a name="external-resources"></a>외부 리소스  
   
 ### <a name="guidance"></a>지침  
- [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 2장: 단위 테스트: 내부 테스트](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 2장: 유닛 테스트: 내부 테스트](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
- [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 5장: 시스템 테스트 자동화](http://go.microsoft.com/fwlink/?LinkID=255196)  
+ [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 – 5장: 시스템 테스트 자동화](http://go.microsoft.com/fwlink/?LinkID=255196)  
   
 ### <a name="faq"></a>FAQ  
  [코딩된 UI 테스트 FAQ - 1](http://go.microsoft.com/fwlink/?LinkID=230576)  
   
- [코딩된 UI 테스트 FAQ -&2;](http://go.microsoft.com/fwlink/?LinkID=230578)  
+ [코딩된 UI 테스트 FAQ - 2](http://go.microsoft.com/fwlink/?LinkID=230578)  
   
 ### <a name="forum"></a>포럼  
  [Visual Studio UI 자동화 테스트(CodedUI 포함)](http://go.microsoft.com/fwlink/?LinkID=224497)  

@@ -1,23 +1,43 @@
 ---
-title: "잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.threads.tools.gallery"
-helpviewer_keywords: 
-  - "동시성 시각화 도우미, 잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴"
+title: "잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.threads.tools.gallery
+helpviewer_keywords:
+- Concurrency Visualizer, common patterns for poorly-behaved multithreaded applications
 ms.assetid: 00d10629-e20f-4d6d-8643-c59a3879812e
 caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 930567937eea5afade80fa607d20fbe70c9526a9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴
 동시성 시각화 도우미를 사용하면 개발자는 다중 스레드 응용 프로그램의 동작을 시각화할 수 있습니다. 이 도구에는 잘못 동작하는 다중 스레드 응용 프로그램에 대한 일반적인 패턴의 갤러리가 포함되어 있습니다. 갤러리에는 각 패턴으로 표시되는 동작에 대한 설명, 해당 동작의 가능한 결과 및 그 동작을 해결하는 가장 일반적인 방법과 함께 도구를 통해 노출되는 일반적이고 인식 가능한 시각적 패턴이 포함되어 있습니다.  
@@ -45,7 +65,7 @@ caps.handback.revision: 12
 ## <a name="oversubscription"></a>초과 구독  
  ![초과 구독](../profiling/media/oversubscription.png "초과 구독")  
   
- 초과 구독이 발생하는 경우 프로세스의 활성 스레드 수가 시스템에서 사용 가능한 논리 코어의 수보다 큽니다. 위의 그림에서는 모든 활성 스레드의 상당한 선점 밴드와 함께 초과 구독의 결과를 보여 줍니다. 또한 범례를 보면 상당한 시간이 선점에 소요된 것(이 예제의&84;%)을 알 수 있습니다. 이는 프로세스에서 논리 코어 수보다 더 많은 동시 스레드를 실행하도록 시스템에 요청하는 것을 나타냅니다. 그러나 시스템의 다른 프로세스가 이 프로세스에 사용 가능한 것으로 간주된 리소스를 사용하는 것을 나타낼 수도 있습니다.  
+ 초과 구독이 발생하는 경우 프로세스의 활성 스레드 수가 시스템에서 사용 가능한 논리 코어의 수보다 큽니다. 위의 그림에서는 모든 활성 스레드의 상당한 선점 밴드와 함께 초과 구독의 결과를 보여 줍니다. 또한 범례를 보면 상당한 시간이 선점에 소요된 것(이 예제의 84%)을 알 수 있습니다. 이는 프로세스에서 논리 코어 수보다 더 많은 동시 스레드를 실행하도록 시스템에 요청하는 것을 나타냅니다. 그러나 시스템의 다른 프로세스가 이 프로세스에 사용 가능한 것으로 간주된 리소스를 사용하는 것을 나타낼 수도 있습니다.  
   
  이 문제를 평가할 때 다음 사항을 고려해야 합니다.  
   
@@ -65,8 +85,3 @@ caps.handback.revision: 12
   
 ## <a name="see-also"></a>참고 항목  
  [스레드 뷰](../profiling/threads-view-parallel-performance.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

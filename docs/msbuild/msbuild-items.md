@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: cba81e0eee6a0ce278c65e8952e75b23a6ebf3cc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 754cec0effaaa0cf68cf1a4bbc4d536dbdcf0298
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="msbuild-items"></a>MSBuild 항목
@@ -82,7 +83,7 @@ MSBuild 항목은 빌드 시스템에 대한 입력이며, 일반적으로 파�
 </ItemGroup>  
 ```  
   
- "file1.cs" 항목이 "file2.cs" 항목으로 바뀌지는 않으며, 대신 `Compile` 항목 종류의 값 목록에 파일 이름이 추가됩니다. 빌드의 평가 단계 중에는 항목 종류에서 항목을 제거할 수 없습니다.  
+ “file1.cs” 항목이 “file2.cs” 항목으로 바뀌지는 않으며, 대신 `Compile` 항목 종류의 값 목록에 파일 이름이 추가됩니다. 빌드의 평가 단계 중에는 항목 종류에서 항목을 제거할 수 없습니다.  
   
  다음 XML은 `Include` 특성 하나에서 두 파일을 모두 선언하여 같은 항목 종류를 만듭니다. 파일 이름은 세미콜론으로 구분됩니다.  
   

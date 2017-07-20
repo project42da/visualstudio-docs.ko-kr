@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 2eaf4aa44fdc1bec56bb513af54ea7db72dcf3db
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>방법: 데이터 기반 단위 테스트 만들기
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/04/2017
   
 1.  테스트 메서드에서 사용할 값이 포함된 데이터 소스를 만듭니다. 테스트를 실행할 컴퓨터에 등록된 모든 형식을 데이터 소스로 사용할 수 있습니다.  
   
-2.  private <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> 필드 및 public `TestContext` 속성을 test 클래스에 추가합니다.  
+2.  private <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> 필드 및 public `TestContext` 속성을 테스트 클래스에 추가합니다.  
   
 3.  단위 테스트 메서드를 만들고 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 특성을 메서드에 추가합니다.  
   

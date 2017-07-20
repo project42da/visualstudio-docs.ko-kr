@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
-ms.openlocfilehash: 08677472bc13d58d9ab0b42b856955f8434089e4
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e59263c352084107d9849ab656b8b7d034337c53
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 질문과 대답
@@ -199,7 +199,7 @@ Live Unit Testing은 원본 파일이 변경되었음을 감지할 때마다 빌
 
 **대답:**
 
-솔루션에서 모든 프로젝트가 아직 로드되지 않은 경우 Live Unit testing은 현재 Lightweight 솔루션 로드 기능과 호환되지 않습니다. 이러한 시나리오에서는 잘못된 검사 정보를 얻을 수 있습니다.
+솔루션에서 모든 프로젝트가 아직 로드되지 않은 경우 Live Unit Testing은 현재 Lightweight 솔루션 로드 기능과 호환되지 않습니다. 이러한 시나리오에서는 잘못된 검사 정보를 얻을 수 있습니다.
  
 ## <a name="why-does-live-unit-testing-does-not-capture-coverage-from-a-new-process-created-by-a-test"></a>Live Unit Testing이 테스트에서 만든 새 프로세스의 검사를 캡처하지 않는 이유는 무엇인가요?
  
@@ -207,7 +207,7 @@ Live Unit Testing은 원본 파일이 변경되었음을 감지할 때마다 빌
 
 Visual Studio 2017 릴리스에서 수정하지 못한 알려진 문제입니다. Visual Studio 2017의 후속 업데이트에서 수정해야 합니다. 
 
-## <a name="why-does-nothing-happen-after-i-include-or-exclude-tests-from-the-live-test-set"></a>라이브 테스트 집합에서 테스트를 포함하거나 제외한 후에 아무 것도 발생하지 않은 이유는 무엇인가요? 
+## <a name="why-does-nothing-happen-after-i-include-or-exclude-tests-from-the-live-test-set"></a>라이브 테스트 집합에서 테스트를 포함하거나 제외한 후에 아무것도 발생하지 않은 이유는 무엇인가요? 
 
 **대답:**
 

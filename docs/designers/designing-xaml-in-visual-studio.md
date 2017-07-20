@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: ab6e824d508a53cc294aa44527174da5c2249258
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e832941dd00fa81bea1566f17504fe7e27c41a48
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="designing-xaml-in-visual-studio"></a>Visual Studio에서 XAML 디자인
@@ -51,7 +52,7 @@ Visual Studio 및 Blend for Visual Studio는 XAML 기반 Windows 데스크톱, �
   
 -   **XAML IntelliSense:** 두 IDE는 모두 문 완성, 코드 주석 처리 및 형식 지정과 같은 일반적인 편집기 작업 지원, 리소스, 바인딩 및 코드 탐색을 포함하여 IntelliSense에서 기대하는 모든 일반적인 기능을 지원합니다.  
   
--   **기본 디버깅 기능:** 이제 코드에서 중단점을 설정하여 실행 중인 앱 디버그를 포함하여 Blend에서 디버그할 수 있습니다. Visual Studio와 일관된 디버깅 환경을 유지하기 위해 Blend for Visual Studio에는 Visual Studio의 디버깅 창과 도구 모음이 대부분 포함되어 있습니다. 진단 및 코드 분석과 같은 고급 디버깅 기능은 Visual Studio에서만 사용할 수 있습니다. [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)을 참조하세요.  
+-   **기본 디버깅 기능:** 이제 코드에서 중단점을 설정하여 실행 중인 앱 디버그를 포함하여 Blend에서 디버그할 수 있습니다. Visual Studio와 일관된 디버깅 환경을 유지하기 위해 Blend for Visual Studio에는 Visual Studio의 디버깅 창과 도구 모음이 대부분 포함되어 있습니다. 진단 및 코드 분석과 같은 고급 디버깅 기능은 Visual Studio에서만 사용할 수 있습니다. [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md)을 참조하세요.  
   
 -   **파일 다시 로드 환경:** Blend for Visual Studio 또는 Visual Studio 중 하나에서 XAML 파일을 편집한 후 다른 프로그램으로 전환할 때 편집된 파일이 자동으로 다시 로드되도록 할 수 있습니다. 워크플로 중단을 최소화하기 위해 이제 파일 다시 로드 대화 상자에서 파일 다시 로드 기본 설정을 지정할 수 있습니다.  
   

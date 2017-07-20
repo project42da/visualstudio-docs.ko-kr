@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a9c1338910364451577957da52f9f3aef518aa67
 ms.openlocfilehash: e8c9e615d8bf88a897add6b139d27c617fbec018
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 02/22/2017
 |`CustomErrorRegularExpression`|선택적 `String` 매개 변수입니다.<br /><br /> 도구 출력에서 오류 줄을 찾는 데 사용되는 정규식을 지정합니다. 예외적으로 형식이 지정된 출력을 생성하는 도구에 유용합니다.|  
 |`CustomWarningRegularExpression`|선택적 `String` 매개 변수입니다.<br /><br /> 도구 출력에서 경고 줄을 찾는 데 사용되는 정규식을 지정합니다. 예외적으로 형식이 지정된 출력을 생성하는 도구에 유용합니다.|  
 |`ExitCode`|선택적 `Int32` 읽기 전용 출력 매개 변수입니다.<br /><br /> 실행한 명령에서 제공하는 종료 코드를 지정합니다.|  
-|`IgnoreExitCode`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`이면 이 작업은 실행한 명령에서 제공하는 종료 코드를 무시합니다. 그렇지 않고 실행된 명령이&0;이 아닌 종료 코드를 반환하는 경우 이 작업은 `false`를 반환합니다.|  
+|`IgnoreExitCode`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`이면 이 작업은 실행한 명령에서 제공하는 종료 코드를 무시합니다. 그렇지 않고 실행된 명령이 0이 아닌 종료 코드를 반환하는 경우 이 작업은 `false`를 반환합니다.|  
 |`IgnoreStandardErrorWarningFormat`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `false`이면 표준 오류/경고 형식과 일치하는 줄을 출력에서 선택하고 오류/경고로 로깅합니다. `true`이면 이 동작을 사용하지 않도록 설정하세요. 기본값은 `false`입니다.|  
 |`Outputs`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 매개 변수입니다.<br /><br /> 작업의 출력 항목을 포함합니다. `Exec` 작업은 자체적으로 이를 설정하지 않습니다. 대신 마치 설정된 것처럼 사용자가 제공하여 나중에 프로젝트에서 사용되도록 할 수 있습니다.|  
 |`StdErrEncoding`|선택적 `String` 출력 매개 변수입니다.<br /><br /> 캡처된 작업 표준 오류 스트림의 인코딩을 지정합니다. 기본값은 현재 콘솔 출력 인코딩입니다.|  

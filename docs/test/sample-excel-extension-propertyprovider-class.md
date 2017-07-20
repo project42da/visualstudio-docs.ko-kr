@@ -27,17 +27,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 99397f8f0c6e0e261451cae642cf6e48fe5bba56
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-excel-extension-propertyprovider-class"></a>샘플 Excel 확장: PropertyProvider 클래스
 이 내부 클래스는 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> 클래스를 확장하며 UI(사용자 인터페이스) 테스트를 기록하고 확장하기 위한 속성 서비스를 [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 요소에 제공합니다.  
   
 ## <a name="getcontrolsupportlevel-method"></a>GetControlSupportLevel 메서드  
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetControlSupportLevel%2A> 메서드는 속성 공급자가 제공된 컨트롤에 대해 제공할 수 있는 지원 수준을 나타내는 숫자를 반환합니다. 반환된 값이 클수록 속성 공급자의 컨트롤 지원 가능 수준도 높아집니다. 이 경우 메서드는 제공된 컨트롤의 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IUITechnologyElement.TechnologyName%2A> 속성 값을 확인합니다. 값이 "Excel"이고 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IUITechnologyElement.ControlTypeName%2A>가 `CellElement`임을 나타내는 경우 메서드는 최고 값을 반환하고, 그렇지 않으면 지원이 제공되지 않음을 나타내는 0을 반환합니다.  
+ <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetControlSupportLevel%2A> 메서드는 속성 공급자가 제공된 컨트롤에 대해 제공할 수 있는 지원 수준을 나타내는 숫자를 반환합니다. 반환된 값이 클수록 속성 공급자의 컨트롤 지원 가능 수준도 높아집니다. 이 경우 메서드는 제공된 컨트롤의 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IUITechnologyElement.TechnologyName%2A> 속성 값을 확인합니다. 값이 “Excel”이고 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IUITechnologyElement.ControlTypeName%2A>가 `CellElement`임을 나타내는 경우 메서드는 최고 값을 반환하고, 그렇지 않으면 지원이 제공되지 않음을 나타내는 0을 반환합니다.  
   
 ## <a name="getpropertynames-method"></a>GetPropertyNames 메서드  
  Excel 셀 컨트롤의 지원되는 속성에 대한 속성 이름 및 속성 설명자 사전을 반환합니다.  

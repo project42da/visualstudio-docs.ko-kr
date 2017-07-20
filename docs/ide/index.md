@@ -126,8 +126,6 @@ Visual Studio IDE(통합 개발 환경)가 거의 모든 코드 언어를 사용
         </div>
         </a>
     </li>
-</ul>
-<ul class="panelContent cardsFTitle">    
     <li>
         <a href="https://mva.microsoft.com/product-training/visual-studio-courses">
         <div class="cardSize">

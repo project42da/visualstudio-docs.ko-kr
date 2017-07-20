@@ -50,7 +50,7 @@ Visual Studio의 배포를 자동화하는 데 사용되는 스크립트의 일�
  다음은 기본 위치에 설치한다고 가정할 경우 `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE` 제품 키를 사용하여 MPC가 08860인 Visual Studio 2017 Enterprise에 대한 라이선스를 적용하는 예제 명령줄입니다.
 
  ```cmd
- C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\StorePID.exe AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 08860
+ "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 08860
  ```
 
  다음 표에는 Visual Studio의 각 버전에 대한 MPC 코드가 나와 있습니다.

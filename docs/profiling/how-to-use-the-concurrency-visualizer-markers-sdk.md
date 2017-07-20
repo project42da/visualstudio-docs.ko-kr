@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1a51a8dbf28be35febf4a0954a997e542ffd0f09
 ms.openlocfilehash: a05e0509ec092f810e0990fbc838707d126595e1
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>방법: 동시성 시각화 도우미 표식 SDK 사용
@@ -69,7 +70,7 @@ ms.lasthandoff: 02/22/2017
   
     ```  
   
-4.  메뉴 모음에서 **분석**, **동시성 시각화 도우미**, **현재 프로젝트에서 시작**을 선택하여 앱을 실행하고 동시성 시각화를 표시합니다. 다음 그림은 동시성 시각화에 있는 범위&3;개 및 표식&3;개를 보여 줍니다.  
+4.  메뉴 모음에서 **분석**, **동시성 시각화 도우미**, **현재 프로젝트에서 시작**을 선택하여 앱을 실행하고 동시성 시각화를 표시합니다. 다음 그림은 동시성 시각화에 있는 범위 3개 및 표식 3개를 보여 줍니다.  
   
      ![3개 표식 및 경고가 있는 동시성 시각화](../profiling/media/cvmarkersnative.png "CvMarkersNative")  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 02/22/2017
   
      ![3개 표식 및 경고가 있는 동시성 시각화](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")  
   
-### <a name="to-use-visual-basic-or-c"></a>Visual Basic 또는 C를 사용하려면# #
+### <a name="to-use-visual-basic-or-c"></a>Visual Basic 또는 C#을 사용하려면 #
   
 1.  동시성 시각화 SDK 지원을 응용 프로그램에 추가합니다. 자세한 내용은 [동시성 시각화 SDK](../profiling/concurrency-visualizer-sdk.md)를 참조하세요.  
   
@@ -153,7 +154,7 @@ ms.lasthandoff: 02/22/2017
     alertSpan.Leave();  
     ```  
   
-4.  메뉴 모음에서 **분석**, **동시성 시각화 도우미**, **현재 프로젝트에서 시작**을 선택하여 앱을 실행하고 동시성 시각화를 표시합니다. 다음 그림은 동시성 시각화의 스레드 뷰에 있는 범위&3;개 및 표식&3;개를 보여 줍니다.  
+4.  메뉴 모음에서 **분석**, **동시성 시각화 도우미**, **현재 프로젝트에서 시작**을 선택하여 앱을 실행하고 동시성 시각화를 표시합니다. 다음 그림은 동시성 시각화의 스레드 뷰에 있는 범위 3개 및 표식 3개를 보여 줍니다.  
   
      ![표식 및 경고가 있는 동시성 시각화](../profiling/media/cvmarkersmanaged.png "CvMarkersManaged")  
   

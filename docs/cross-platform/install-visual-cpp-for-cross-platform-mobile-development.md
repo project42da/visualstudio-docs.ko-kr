@@ -30,21 +30,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d284309b0243f8d551d06c53d50d5df5de8f3f3c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Install Visual C++ for Cross-Platform Mobile Development
-[플랫폼 간 모바일 개발용 Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=536383) 는 Visual Studio 2015의 설치 가능한 구성 요소입니다. 플랫폼 간 Visual Studio 템플릿을 포함하며, 직접 찾아서 다운로드 및 구성하지 않고도 신속하게 시작할 수 있도록 플랫폼 간 도구 및 SDK를 설치합니다. Visual Studio에서 이러한 도구를 사용하여 플랫폼 간 프로젝트를 쉽게 만들고, 편집, 디버그 및 테스트할 수 있습니다. 이 항목에서는 Visual Studio를 사용하여 플랫폼 간 앱을 개발하는 데 필요한 도구 및 타사 소프트웨어를 설치하는 방법을 설명합니다. 구성 요소에 대한 개요는 [Visual C++ Cross-Platform Mobile](http://go.microsoft.com/fwlink/p/?LinkId=536387)(Visual C++ 플랫폼 간 모바일)을 참조하세요.  
+[플랫폼 간 모바일 개발용 Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=536383) 는 Visual Studio 2015의 설치 가능한 구성 요소입니다. 플랫폼 간 Visual Studio 템플릿을 포함하며, 직접 찾아서 다운로드 및 구성하지 않고도 신속하게 시작할 수 있도록 플랫폼 간 도구 및 SDK를 설치합니다. Visual Studio에서 이러한 도구를 사용하여 플랫폼 간 프로젝트를 쉽게 만들고, 편집, 디버그 및 테스트할 수 있습니다. 이 항목에서는 Visual Studio를 사용하여 플랫폼 간 앱을 개발하는 데 필요한 도구 및 타사 소프트웨어를 설치하는 방법을 설명합니다. 구성 요소의 개요는 [Visual C++ 플랫폼 간 모바일](http://go.microsoft.com/fwlink/p/?LinkId=536387)을 참조하세요.  
   
  [요구 사항](#Requirements)   
  [도구 다운로드](#GetTheTools)   
  [도구 설치](#InstallTheTools)   
- [iOS용 도구 설치](#InstallForiOS)   
+ [Install tools for iOS](#InstallForiOS)   
  [수동으로 종속성 설치 또는 업데이트](#ThirdParty)  
   
-##  <a name="a-namerequirementsa-requirements"></a><a name="Requirements"></a> 요구 사항  
+##  <a name="Requirements"></a> 요구 사항  
   
 -   설치 요구 사항은 [Visual Studio 2015 시스템 요구 사항](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs)을 참조하세요.  
   
@@ -59,10 +61,10 @@ ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
   
 -   iOS용 코드를 빌드하려면 Apple ID, iOS 개발자 프로그램 계정 및 OS X Mavericks 이상 버전에서 [Xcode 6](http://go.microsoft.com/fwlink/p/?LinkId=536387) 이상을 실행할 수 있는 Mac 컴퓨터가 필요합니다. 자세한 설치 단계는 [Install tools for iOS](#InstallForiOS)를 참조하세요.  
   
-##  <a name="a-namegetthetoolsa-get-the-tools"></a><a name="GetTheTools"></a> 도구 다운로드  
+##  <a name="GetTheTools"></a> 도구 다운로드  
  플랫폼 간 모바일 개발용 Visual C++는 Visual Studio Community, Professional 및 Enterprise 버전에 포함된 설치 가능한 구성 요소입니다. Visual Studio를 다운로드하려면 [Visual Studio 2015 Downloads](http://go.microsoft.com/fwlink/p/?linkid=517106)(Visual Studio 2015 다운로드) 페이지로 이동하여 Visual Studio 2015 업데이트 2 이상을 다운로드하세요.  
   
-##  <a name="a-nameinstallthetoolsa-install-the-tools"></a><a name="InstallTheTools"></a> 도구 설치  
+##  <a name="InstallTheTools"></a> 도구 설치  
  Visual Studio 2015 설치 관리자에는 플랫폼 간 모바일 개발용 Visual C++를 설치하는 옵션이 포함되어 있습니다. 이 옵션은 Visual Studio에 필요한 C++ 언어 도구, 템플릿 및 구성 요소, Android 빌드 및 디버깅에 필요한 GCC 및 Clang 도구 집합 및 iOS 개발을 위해 Mac과 통신하기 위한 구성 요소를 설치합니다. 또한 iOS 및 Android 앱 개발을 지원하는 데 필요한 모든 타사 도구 및 소프트웨어 개발 키트를 설치합니다. 이러한 타사 도구는 대부분 Android 플랫폼 지원에 필요한 오픈 소스 소프트웨어입니다.  
   
 -   Android NDK(네이티브 개발 키트)는 Android 플랫폼을 대상으로 하는 C++ 코드를 빌드하는 데 필요합니다.  
@@ -99,10 +101,10 @@ ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
   
 5.  Visual Studio를 엽니다. 처음으로 Visual Studio를 실행하는 경우 구성 및 로그인하는 데 약간의 시간이 걸릴 수 있습니다. Visual Studio가 준비되면 **도구** 메뉴에서 **확장 및 업데이트**, **업데이트**를 차례로 선택합니다. 플랫폼 간 모바일 개발용 Visual C++ 또는 Android용 Microsoft Visual Studio 에뮬레이터에 사용할 수 있는 Visual Studio 업데이트가 있는 경우 설치합니다.  
   
-##  <a name="a-nameinstallforiosa-install-tools-for-ios"></a><a name="InstallForiOS"></a> iOS용 도구 설치  
- 플랫폼 간 모바일 개발용 Visual C++를 사용하여 iOS 코드를 편집 및 디버그하고 iOS 시뮬레이터 또는 iOS 장치에 배포할 수 있지만 라이선스 제한으로 인해 Mac에서 원격으로 코드를 빌드해야 합니다. Visual Studio를 사용하여 iOS 앱을 빌드 및 실행하려면 Mac에서 원격 에이전트를 설치 및 구성해야 합니다. 자세한 설치 지침, 필수 조건 및 구성 옵션은 [iOS를 사용하여 빌드할 도구 설치 및 구성](../cross-platform/install-and-configure-tools-to-build-using-ios.md)을 참조하세요. iOS용으로 빌드하지 않는 경우에는 이 단계를 건너뛸 수 있습니다.  
+##  <a name="InstallForiOS"></a> Install tools for iOS  
+ 플랫폼 간 모바일 개발용 Visual C++를 사용하여 iOS 코드를 편집 및 디버그하고 iOS 시뮬레이터 또는 iOS 장치에 배포할 수 있지만 라이선스 제한으로 인해 Mac에서 원격으로 코드를 빌드해야 합니다. Visual Studio를 사용하여 iOS 앱을 빌드 및 실행하려면 Mac에서 원격 에이전트를 설치 및 구성해야 합니다. 자세한 설치 지침, 필수 조건 및 구성 옵션은 [Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)을 참조하세요. iOS용으로 빌드하지 않는 경우에는 이 단계를 건너뛸 수 있습니다.  
   
-##  <a name="a-namethirdpartya-install-or-update-dependencies-manually"></a><a name="ThirdParty"></a> 수동으로 종속성 설치 또는 업데이트  
+##  <a name="ThirdParty"></a> 수동으로 종속성 설치 또는 업데이트  
  Visual C++ 모바일 개발 옵션을 설치할 때 Visual Studio 설치 관리자를 사용하여 타사 종속성을 하나 이상 설치하지 않는 경우 나중에 [Install the tools](#InstallTheTools)의 단계를 사용하여 설치할 수 있습니다. Visual Studio와 독립적으로 설치하거나 업데이트할 수도 있습니다.  
   
 > [!CAUTION]
@@ -151,8 +153,3 @@ ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
 ## <a name="see-also"></a>참고 항목  
  [iOS를 사용하여 빌드할 도구 설치 및 구성](../cross-platform/install-and-configure-tools-to-build-using-ios.md)   
  [Visual C++ 플랫폼 간 모바일](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

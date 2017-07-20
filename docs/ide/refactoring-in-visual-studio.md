@@ -28,13 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 4d3dde251368507690faa54f94138872b16b9b44
-ms.openlocfilehash: cce6943062bd05c5141cd6edb54fb29cae608e2b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
+ms.openlocfilehash: 952414b5e6e683242a2e71bcba9c37471a6219bc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
-# <a name="refactoring-in-visual-studio"></a>Visual Studio에서 리팩터링
+# Visual Studio에서 리팩터링
+<a id="refactoring-in-visual-studio" class="xliff"></a>
 리팩터링은 동작을 변경하지 않으면서도 보다 간편하게 유지 관리하고 파악하며 확장할 수 있도록 코드를 수정하는 프로세스입니다. 공통된 몇 가지 *리팩터링*에는 다음과 같은 항목이 있습니다.  
   
 1.  긴 함수를 더 짧은 함수로 분리  
@@ -47,19 +49,24 @@ ms.lasthandoff: 02/22/2017
   
  리팩터링 논리는 언어 구문과 밀접하게 연관되어 있으므로 Visual Studio의 각 언어 서비스에서는 고유한 리팩터링 기능을 제공합니다. 자세한 내용은 다음 페이지를 참조하세요.  
   
-### <a name="refactoring-in-c"></a>C에서의 리팩터링# #
+### C#에서의 리팩터링
+<a id="refactoring-in-c" class="xliff"></a> #
  [리팩터링(C#)](../csharp-ide/refactoring-csharp.md)  
   
-### <a name="refactoring-in-visual-basic"></a>Visual Basic에서의 리팩터링  
+### Visual Basic에서의 리팩터링
+<a id="refactoring-in-visual-basic" class="xliff"></a>  
  [리팩터링(Visual Basic)](../vb-ide/refactoring-vb.md)  
   
-### <a name="refactoring-in-c"></a>C++에서의 리팩터링  
+### C++에서의 리팩터링
+<a id="refactoring-in-c" class="xliff"></a>  
  [코드 작성 및 리팩터링(C++)](/cpp/ide/writing-and-refactoring-code-cpp)  
   
-### <a name="refactoring-in-f"></a>F에서의 리팩터링# #
+### F#에서의 리팩터링
+<a id="refactoring-in-f" class="xliff"></a> #
  F#에 대한 리팩터링 지원은 타사 Visual Studio 확장인 [Visual F# Power Tools](https://visualstudiogallery.msdn.microsoft.com/136b942e-9f2c-4c0b-8bac-86d774189cff)에서 제공됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## 참고 항목
+<a id="see-also" class="xliff"></a>  
  [Visual Studio IDE](../ide/visual-studio-ide.md)   
  [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)  
  [변경 내용 미리 보기](../ide/preview-changes.md)

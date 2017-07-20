@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 5778e6b7c4a93c2d03ff00fcaaaf5a25807b0a00
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
+ms.openlocfilehash: 01dc224a571144744028e98153df1c525c461156
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="customizing-code-coverage-analysis"></a>코드 검사 분석 사용자 지정
@@ -154,7 +155,7 @@ ms.lasthandoff: 04/04/2017
 ### <a name="other-ways-to-include-or-exclude-elements"></a>요소를 포함 또는 제외하는 다른 방법  
  예제를 보려면 [이 항목의 끝 부분에 있는 샘플](#sample)을 참조하세요.  
   
--   `ModulePath` - 어셈블리 파일 경로로 지정한 어셈블리  
+-   `ModulePath` - 어셈블리 파일 경로로 지정한 어셈블리입니다.  
   
 -   `CompanyName` – 어셈블리를 회사 특성으로 일치시킵니다.  
   
@@ -164,7 +165,7 @@ ms.lasthandoff: 04/04/2017
   
 -   `Attribute` – 특정 특성이 연결된 요소에 일치시킵니다. 이름 끝의 "특성"을 포함하여 특성의 전체 이름을 지정합니다.  
   
--   `Function` – 정규화된 이름으로 절차, 함수 또는 메서드를 일치시킵니다.  
+-   `Function` – 절차, 함수 또는 메서드를 정규화된 이름으로 일치시킵니다.  
   
  **함수 이름 일치**  
   
@@ -284,7 +285,7 @@ Included items must then not match any entries in the exclude list to remain inc
             <!-- Match attributes on any code element: -->  
             <Attributes>  
               <Exclude>  
-                <!—Don't forget "Attribute" at the end of the name -->  
+                <!-- Don't forget "Attribute" at the end of the name -->  
                 <Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>  
                 <Attribute>^System\.Diagnostics\.DebuggerNonUserCodeAttribute$</Attribute>  
                 <Attribute>^System\.Runtime\.CompilerServices.CompilerGeneratedAttribute$</Attribute>  

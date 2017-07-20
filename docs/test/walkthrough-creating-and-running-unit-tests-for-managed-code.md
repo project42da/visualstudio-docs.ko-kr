@@ -33,9 +33,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: a00b80092a44190d626b93b0ecc5689bafd1a4e3
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -195,11 +196,11 @@ using BankAccountNS;
   
 1.  이 메서드는 대변 금액이 잔액보다 큰 경우 [ArgumentOutOfRangeException](assetId:///ArgumentOutOfRangeException?qualifyHint=False&autoUpgrade=True) 을 발생시킵니다.  
   
-2.  또한 대변 금액이&0;보다 작을 경우에도 `ArgumentOutOfRangeException` 을 발생시킵니다.  
+2.  또한 대변 금액이 0보다 작을 경우에도 `ArgumentOutOfRangeException` 을 발생시킵니다.  
   
 3.  1)과 2)의 검사가 충족될 경우 이 메서드는 계정 잔액에서 금액을 뺍니다.  
   
- 첫 번째 테스트에서는 유효 금액(계정 잔액보다 작고&0;보다 큰 값)이 계정으로부터 올바른 금액을 인출하는지 확인합니다.  
+ 첫 번째 테스트에서는 유효 금액(계정 잔액보다 작고 0보다 큰 값)이 계정으로부터 올바른 금액을 인출하는지 확인합니다.  
   
 #### <a name="to-create-a-test-method"></a>테스트 메서드를 만들려면  
   
@@ -253,7 +254,7 @@ using BankAccountNS;
 ##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> 코드를 수정하고 테스트 다시 실행  
  **테스트 결과 분석**  
   
- 테스트 결과에 실패를 설명하는 메시지가 포함됩니다. `AreEquals` 메서드의 경우 메시지에 예상 값(**Expected\<*XXX*>**매개 변수)과 실제 값(**Actual\<*YYY*>** 매개 변수)이 표시됩니다. 기초 잔액보다 줄어든 잔액을 예상했지만, 인출액만큼 늘어났습니다.  
+ 테스트 결과에 실패를 설명하는 메시지가 포함됩니다. `AreEquals` 메서드의 경우 메시지에 예상 값(**Expected\<*XXX*> **매개 변수)과 실제 값(**Actual\<*YYY*>** 매개 변수)이 표시됩니다. 기초 잔액보다 줄어든 잔액을 예상했지만, 인출액만큼 늘어났습니다.  
   
  다시 검사한 Debit 코드에 단위 테스트를 통해 버그를 찾는 데 성공한 것으로 나타납니다. 차감해야 할 경우 계정 잔액에 인출금이 추가됩니다.  
   
@@ -284,7 +285,7 @@ m_balance -= amount;
   
 1.  이 메서드는 대변 금액이 잔액보다 큰 경우 `ArgumentOutOfRangeException` 을 발생시킵니다.  
   
-2.  또한 대변 금액이&0;보다 작을 경우에도 `ArgumentOutOfRangeException` 을 발생시킵니다.  
+2.  또한 대변 금액이 0보다 작을 경우에도 `ArgumentOutOfRangeException` 을 발생시킵니다.  
   
  **테스트 메서드 만들기**  
   
@@ -309,7 +310,7 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
   
 ```  
   
- 여기서는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> 특성을 사용하여 올바른 예외가 throw되었음을 어설션합니다. `ArgumentOutOfRangeException` 을 throw되는 경우가 아니면 이 특성으로 인해 테스트에 실패합니다. 양수 및 음수 `debitAmount` 값을 모두 사용하여 테스트를 실행한 후 금액이&0;보다 작은 경우 제네릭 <xref:System.ApplicationException>을 throw하는 테스트를 위해 메서드를 일시적으로 수정하면 테스트가 올바르게 작동함을 알 수 있습니다. 인출한 금액이 잔액보다 많을 경우를 테스트하려면 다음을 수행해야 합니다.  
+ 여기서는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> 특성을 사용하여 올바른 예외가 throw되었음을 어설션합니다. `ArgumentOutOfRangeException` 을 throw되는 경우가 아니면 이 특성으로 인해 테스트에 실패합니다. 양수 및 음수 `debitAmount` 값을 모두 사용하여 테스트를 실행한 후 금액이 0보다 작은 경우 제네릭 <xref:System.ApplicationException>을 throw하는 테스트를 위해 메서드를 일시적으로 수정하면 테스트가 올바르게 작동함을 알 수 있습니다. 인출한 금액이 잔액보다 많을 경우를 테스트하려면 다음을 수행해야 합니다.  
   
 1.  `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`라는 새 테스트 메서드를 만듭니다.  
   
@@ -364,7 +365,7 @@ public const string DebitAmountLessThanZeroMessage = "Debit amount less than zer
   
  테스트 메서드에서 먼저 `ExpectedException` 특성을 제거합니다. 해당 위치에서 throw된 예외를 catch하고 올바른 조건 문에서 throw되었는지 확인합니다. 그러나 두 옵션 중 하나를 결정하여 나머지 조건을 확인해야 합니다. 예를 들어, `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` 메서드에서 다음 중 한 가지 작업을 수행할 수 있습니다.  
   
--   예외의 `ActualValue` 속성( `ArgumentOutOfRangeException` 생성자의 두 번째 매개 변수)이 기초 잔액보다 크다고 어셜션합니다. 이 옵션을 사용하려면 테스트 메서드의 `ActualValue` 변수에 대해 예외의 `beginningBalance` 속성을 테스트해야 하고, `ActualValue` 가&0;보다 큰지도 확인해야 합니다.  
+-   예외의 `ActualValue` 속성( `ArgumentOutOfRangeException` 생성자의 두 번째 매개 변수)이 기초 잔액보다 크다고 어셜션합니다. 이 옵션을 사용하려면 테스트 메서드의 `ActualValue` 변수에 대해 예외의 `beginningBalance` 속성을 테스트해야 하고, `ActualValue` 가 0보다 큰지도 확인해야 합니다.  
   
 -   메시지(생성자의 세 번째 매개 변수)에 `DebitAmountExceedsBalanceMessage` 가 `BankAccount` 클래스에 정의되어 있음을 어셜션합니다.  
   
@@ -402,7 +403,7 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
   
 2.  0보다 작은 `debitAmount` 를 사용할 경우 잘못된 오류 메시지가 반환되어 어설션이 실패합니다. 테스트 코드 경로 아래 메서드의 다른 지점에서 임시 `ArgumentOutOfRange` 예외를 유도하는 경우에도 어설션이 실패합니다. 이 점 역시 좋습니다.  
   
-3.  `debitAmount` 값이 유효하면(예: 잔액보다 작지만&0;보다 큼) 예외가 catch되지 않으므로 어설션이 절대로 catch되지 않습니다. 테스트 메서드를 통과합니다. 예외가 throw되지 않는 경우에도 테스트 메서드가 실패하지 않아야 하므로 이 방법은 좋지 않습니다.  
+3.  `debitAmount` 값이 유효하면(예: 잔액보다 작지만 0보다 큼) 예외가 catch되지 않으므로 어설션이 절대로 catch되지 않습니다. 테스트 메서드를 통과합니다. 예외가 throw되지 않는 경우에도 테스트 메서드가 실패하지 않아야 하므로 이 방법은 좋지 않습니다.  
   
  세 번째 사실은 테스트 메서드의 버그입니다. 여기서는 문제를 해결하기 위해 테스트 메서드 끝에 예외가 throw되지 않은 경우를 처리하도록 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> 어설션을 추가합니다.  
   

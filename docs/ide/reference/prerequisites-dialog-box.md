@@ -36,18 +36,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: b88c533d613d531a7dcc24e0610e2fb2a7a3d880
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
+ms.openlocfilehash: 5a8237e5c437878b22bd3c67a3a4ba2cdc3fa126
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="prerequisites-dialog-box"></a>Prerequisites Dialog Box
+# Prerequisites Dialog Box
+<a id="prerequisites-dialog-box" class="xliff"></a>
 이 대화 상자에서는 설치할 필수 구성 요소, 설치 방법 및 패키지 설치 순서를 지정합니다.  
   
  이 대화 상자에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드를 선택한 다음 **프로젝트** 메뉴에서 **속성**을 클릭합니다. **프로젝트 디자이너** 가 나타나면 **게시** 탭을 클릭합니다. **게시** 페이지에서 **필수 구성 요소**를 클릭합니다. 설치 프로젝트인 경우 **프로젝트** 메뉴에서 **속성**을 클릭합니다. **속성 페이지** 대화 상자가 표시되면 **필수 구성 요소**를 클릭합니다.  
   
-## <a name="uielement-list"></a>UI 요소 목록  
+## UI 요소 목록
+<a id="uielement-list" class="xliff"></a>  
   
 |요소|설명|  
 |-------------|-----------------|  
@@ -58,15 +61,16 @@ ms.lasthandoff: 04/05/2017
 |**내 응용 프로그램과 동일한 위치에서 필수 구성 요소 다운로드**|응용 프로그램과 동일한 위치에서 필수 구성 요소가 설치되도록 지정합니다. 이 옵션은 모든 필수 구성 요소 패키지를 게시 위치에 복사합니다. 이 옵션이 작동하려면 필수 구성 요소 패키지가 개발 컴퓨터에 있어야 합니다.|  
 |**다음 위치에서 필수 구성 요소 다운로드**|선택한 위치에서 필수 구성 요소가 설치되도록 지정합니다. **찾아보기** 단추를 사용하여 위치를 선택할 수 있습니다.|  
   
-## <a name="prerequisites-information"></a>필수 구성 요소 정보  
+## 필수 구성 요소 정보
+<a id="prerequisites-information" class="xliff"></a>  
  **필수 구성 요소** 대화 상자에 나타나는 필수 구성 요소는 다음 목록에 나와 있는 구성 요소와 다를 수도 있습니다. 대화 상자를 처음 열면 **필수 조건 대화 상자**에 나열된 필수 조건 패키지가 자동으로 설정됩니다. 이후에 프로젝트의 대상 프레임워크를 변경하는 경우에는 새 대상 프레임워크에 맞도록 필수 구성 요소를 수동으로 선택해야 합니다.  
   
 |요소|설명|  
 |-------------|-----------------|  
 |**.NET Framework 3.5 SP1**|이 패키지는 다음 항목을 설치합니다.<br /><br /> -   .NET Framework 버전 2.0, 3.0 및 3.5.<br />-   32비트(x86) 및 64비트(x64) 운영 체제에서 모든 .NET Framework 버전에 대한 지원.<br />-   패키지와 함께 설치된 각 .NET Framework 버전에 대한 언어 팩.<br />-   .NET Framework 2.0 및 3.0용 서비스 팩.<br /><br /> .NET Framework 3.0은 Windows Vista에 포함되고 .NET Framework 3.5는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에 포함됩니다. .NET Framework 3.5는 32비트 운영 체제용으로 컴파일되고 대상 프레임워크가 **.NET Framework 3.5**로 설정된 모든 Visual Basic 및 Visual C# 프로젝트와 64비트 운영 체제용으로 컴파일된 Visual Basic 및 Visual C# 프로젝트에 필요합니다. IA64는 지원되지 않습니다. Visual Basic 및 Visual C# 프로젝트는 기본적으로 모든 CPU 아키텍처에 대해 컴파일됩니다. 자세한 내용은 [Visual Studio 멀티 타기팅 개요](../../ide/visual-studio-multi-targeting-overview.md), [.NET Framework 재배포](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287) 및 [64비트 응용 프로그램의 필수 구성 요소 배포](../../deployment/deploying-prerequisites-for-64-bit-applications.md)를 참조하세요.<br /><br /> 이 항목은 기본적으로 선택됩니다.|  
-|**.NET Framework 3.5 SP1 Client Profile**|.NET Framework 4 Client Profile은 전체 .NET Framework 3.5 SP1에서 클라이언트 응용 프로그램을 대상으로 하는 하위 집합입니다. WPF(Windows Presentation Foundation), Windows Forms, WCF(Windows Communication Foundation) 및 ClickOnce 기능의 효율적인 하위 집합이 제공됩니다. 이를 통해 .NET Framework 4 Client Profile을 대상으로 하는 WPF, Windows Forms, WCF 및 콘솔 응용 프로그램을 빠르게 배포할 수 있습니다. 자세한 내용은 [.NET Framework Client Profile](http://msdn.microsoft.com/Library/f0219919-1f02-4588-8704-327a62fd91f1)을 참조하세요.|  
+|**.NET Framework 3.5 SP1 Client Profile**|.NET Framework 4 Client Profile은 전체 .NET Framework 3.5 SP1에서 클라이언트 응용 프로그램을 대상으로 하는 하위 집합입니다. WPF(Windows Presentation Foundation), Windows Forms, WCF(Windows Communication Foundation) 및 ClickOnce 기능의 효율적인 하위 집합이 제공됩니다. 이를 통해 .NET Framework 4 Client Profile을 대상으로 하는 WPF, Windows Forms, WCF 및 콘솔 응용 프로그램을 빠르게 배포할 수 있습니다. 자세한 내용은 [.NET Framework Client Profile](/dotnet/framework/deployment/client-profile)을 참조하세요.|  
 |**Microsoft .NET Framework 4(x86 및 x64)**|이 패키지는 x86 및 x64 플랫폼 모두에 .NET Framework 4를 설치합니다.<br /><br /> 자세한 내용은 [Visual Studio 멀티 타기팅 개요](../../ide/visual-studio-multi-targeting-overview.md), [.NET Framework 재배포](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287) 및 [64비트 응용 프로그램의 필수 구성 요소 배포](../../deployment/deploying-prerequisites-for-64-bit-applications.md)를 참조하세요.<br /><br /> 이 항목은 기본적으로 선택됩니다.|  
-|**Microsoft .NET Framework 4 Client Profile(x86 및 x64)**|.NET Framework 4 Client Profile은 전체 .NET Framework 4에서 클라이언트 응용 프로그램을 대상으로 하는 하위 집합입니다. WPF(Windows Presentation Foundation), Windows Forms, WCF(Windows Communication Foundation) 및 ClickOnce 기능의 효율적인 하위 집합이 제공됩니다. 이를 통해 .NET Framework 4 Client Profile을 대상으로 하는 WPF, Windows Forms 및 콘솔 응용 프로그램을 빠르게 배포할 수 있습니다. 자세한 내용은 [.NET Framework Client Profile](http://msdn.microsoft.com/Library/f0219919-1f02-4588-8704-327a62fd91f1)을 참조하세요.|  
+|**Microsoft .NET Framework 4 Client Profile(x86 및 x64)**|.NET Framework 4 Client Profile은 전체 .NET Framework 4에서 클라이언트 응용 프로그램을 대상으로 하는 하위 집합입니다. WPF(Windows Presentation Foundation), Windows Forms, WCF(Windows Communication Foundation) 및 ClickOnce 기능의 효율적인 하위 집합이 제공됩니다. 이를 통해 .NET Framework 4 Client Profile을 대상으로 하는 WPF, Windows Forms 및 콘솔 응용 프로그램을 빠르게 배포할 수 있습니다. 자세한 내용은 [.NET Framework Client Profile](/dotnet/framework/deployment/client-profile)을 참조하세요.|  
 |**Microsoft Office 2007 주 Interop 어셈블리**|이 패키지는 2007 Microsoft Office 제품에 주 Interop 어셈블리를 설치합니다. 주 Interop 어셈블리를 사용하면 관리 코드가 Microsoft Office 응용 프로그램의 COM 기반 개체 모델과 상호 작용할 수 있습니다. 자세한 내용은 [Office 주 Interop 어셈블리](/office-dev/office-dev/office-primary-interop-assemblies)를 참조하세요.|  
 |**Microsoft Visual Basic PowerPacks 버전 10.0**|PowerPacks는 Visual Basic 응용 프로그램을 개발하는 데 도움이 되는 추가 기능, 컨트롤, 구성 요소 및 도구의 모음입니다. 이 버전에는 Windows Form의 내용을 인쇄하는 데 사용할 수 있는 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소와 Visual Basic 6.0 Printer 코드를 수정하지 않고 실행하는 데 사용할 수 있는 프린터 호환성 라이브러리가 포함되어 있습니다.|  
 |**Microsoft Visual F# Runtime for .NET 2.0**|이 패키지는 기존의 개체 지향 및 명령적 방식(절차적) 프로그래밍과 함수형 프로그래밍에 대한 지원을 모두 제공하는 x86 및 x64 운영 체제용 Visual F# 런타임 라이브러리를 설치합니다. 응용 프로그램 또는 구성 요소가 Visual F# 및 .NET Framework 2.0, .NET Framework 3.0 또는 .NET Framework 3.5에서 작성된 경우 이 패키지를 설치해야 합니다.<br /><br /> 자세한 내용은 [F# Language Reference](http://msdn.microsoft.com/Library/16b706f8-b5f2-4ff7-b2c1-64df33cd6adf)(F# 언어 참조)를 참조하세요.|  
@@ -81,7 +85,8 @@ ms.lasthandoff: 04/05/2017
 |**Windows Installer 3.1**|이 패키지는 Windows Installer 설치 프로젝트를 설치할 수 있는 Microsoft Windows Installer 재배포 가능 패키지, 버전 3.1을 설치합니다. Windows Server 2003 SP1 이상에는 이 패키지가 미리 설치되어 있습니다.<br /><br /> 이 항목은 기본적으로 선택됩니다.|  
 |**Windows Installer 4.5**|이 패키지는 Windows Installer 설치 프로젝트를 설치할 수 있는 Microsoft Windows Installer 재배포 가능 패키지, 버전 4.5를 설치합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## 참고 항목
+<a id="see-also" class="xliff"></a>  
  [프로젝트 디자이너, 게시 페이지](../../ide/reference/publish-page-project-designer.md)   
  [응용 프로그램 배포 필수 구성 요소](../../deployment/application-deployment-prerequisites.md)   
  [.NET Framework 재배포](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287)   

@@ -39,10 +39,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 618aaec3a0ae735560d14bea43cc2b08bd9e5445
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 90fed413835f118e59bc32f0b94cb62a40baaca1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>유니버설 Windows 앱의 HTML UI 응답성 분석
@@ -79,11 +80,12 @@ ms.lasthandoff: 03/07/2017
   
          소스 코드에 액세스할 수 없을 때 이 옵션을 사용하여 컴퓨터에 설치한 앱의 성능을 분석할 수 있습니다. 사용자가 직접 개발하는 응용 프로그램을 제외한 모든 응용 프로그램의 성능을 분석하려는 경우에도 이 옵션이 유용할 수 있습니다.  
   
-3.  **사용 가능한 도구**에서 **HTML UI 응답성**을 선택한 다음 **시작**을 선택합니다.  
+3.  
+                **사용 가능한 도구**에서 **HTML UI 응답성**을 선택한 다음 **시작**을 선택합니다.  
   
 4.  UI 응답성 프로파일러를 시작할 때 사용자 계정 컨트롤 창이 표시되어 Visual Studio ETW Collector.exe를 실행할 수 있는 권한을 요청할 수 있습니다. **예**를 선택합니다.  
   
-     앱과 상호 작용하여 관련된 성능 시나리오를 테스트합니다. 자세한 워크플로는 [UI 응답성 격리](#Workflow) 및 [시각적 처리량 문제 격리](#IsolateVisualThroughput)를 참조하세요.  
+     앱과 상호 작용하여 관련된 성능 시나리오를 테스트합니다. 자세한 워크플로는 다음 항목을 참조하세요. [UI 응답성 문제 격리](#Workflow) 및 [Isolate a visual throughput problem](#IsolateVisualThroughput)등의 배포 대상을 선택합니다.  
   
 5.  Alt+Tab을 눌러 Visual Studio로 전환합니다.  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 03/07/2017
   
 3.  Visual Studio로 전환하고(Alt+Tab) 응용 프로그램을 중지합니다(Shift+F5).  
   
-4.  선택적으로 [분석을 위한 코드 표시](#ProfileMark)를 사용해서 사용자 표시를 코드에 추가합니다.  
+4.  선택적으로 [분석을 위한 코드 표시](#ProfileMark)등의 배포 대상을 선택합니다.  
   
     > [!TIP]
     >  사용자 표식을 사용하면 프로파일러 데이터를 보는 동안 응답성 문제를 식별하는 데 도움이 될 수 있습니다. 예를 들어 응답성 문제를 일으키는 코드 섹션의 시작 및 끝 부분에 사용자 표식을 추가할 수 있습니다.  
@@ -149,7 +151,7 @@ ms.lasthandoff: 03/07/2017
   
 13. 확대할 때는 CPU 사용률 또는 시각적 처리량 그래프의 한 부분을 선택합니다. 선택하면 프로파일러 아래쪽 창의 시간 표시 막대 정보 그래프가 선택한 기간에 대해서만 표시하도록 변경됩니다.  
   
-###  <a name="IsolateVisualThroughput"></a> 시각적 처리량 문제 격리  
+###  <a name="IsolateVisualThroughput"></a> Isolate a visual throughput problem  
  CPU 사용률이 과도한 기간은 프레임 속도가 낮거나 일관적이지 않을 수 있습니다. 리치 미디어 응용 프로그램 및 게임을 개발하는 경우 시각적 처리량 그래프는 CPU 사용률 그래프보다 중요한 데이터를 제공할 수 있습니다.  
   
  시각적 처리량 문제를 격리하려면 이전 섹션에 설명된 단계를 수행하지만 시각적 처리량 그래프를 주요 데이터 요소 중 하나로 사용합니다.  
@@ -169,7 +171,7 @@ if (performance && performance.mark) {
  사용자 표시 위에 마우스 포인터를 놓으면 이벤트에 대한 이 설명이 도구 설명으로 표시됩니다. 필요한 만큼 사용자 표식을 추가할 수 있습니다.  
   
 > [!NOTE]
-> Chrome 명령인  `console.timeStamp` 명령도 사용자 표식으로 표시됩니다.  
+> Chrome 명령인 `console.timeStamp`명령도 사용자 표식으로 표시됩니다.  
   
  다음 그림은 단일 사용자 표시 및 해당 도구 설명이 포함된 진단 눈금자를 나타냅니다.  
   
@@ -193,7 +195,7 @@ if (performance.mark && performance.measure) {
 ##  <a name="AnalyzeData"></a> 데이터 분석  
  다음 단원에서는 프로파일러에 표시되는 데이터를 해석하기 위한 정보를 제공합니다.  
   
-###  <a name="Ruler"></a> 진단 세션 시간 표시 막대 보기  
+###  <a name="Ruler"></a> 진단 세션 타임라인 보기  
  프로파일러 위쪽에 있는 눈금자는 프로파일링된 정보의 타임라인을 보여 줍니다. 이 타임라인은 CPU 사용률 그래프 및 시각적 처리량 그래프 모두에 적용됩니다.  
   
  여러 가지 응용 프로그램 수명 주기 이벤트에 대해 표시되는 도구 설명이 포함된 진단 세션 타임라인의 모양은 다음과 같습니다.  
@@ -204,7 +206,7 @@ if (performance.mark && performance.measure) {
   
  응용 프로그램 수명 주기 이벤트는 다이아몬드 기호로 표시됩니다. 이는 DOM 이벤트로, 다음을 포함합니다.  
   
--   코드의 활성화된 이벤트 처리기에서 일반적으로 발생하는 `DOMContentLoaded` 및 `Load` 이벤트. 이벤트에 대한 도구 설명으로 특정 이벤트 및 해당 URL을 표시합니다.  
+-   코드의 활성화된 이벤트 처리기에서 일반적으로 발생하는`DOMContentLoaded` 및 `Load` events, which typically occur in the activated event h및ler in your code. 이벤트에 대한 도구 설명으로 특정 이벤트 및 해당 URL을 표시합니다.  
   
 -   다른 페이지를 탐색할 때 발생하는 탐색 이벤트. 이벤트에 대한 도구 설명으로 대상 페이지 URL을 표시합니다.  
   
@@ -253,7 +255,7 @@ if (performance.mark && performance.measure) {
   
 -   **확대** 단추를 선택하여 선택한 기간에 대해 보다 자세한 보기를 표시합니다.  
   
-###  <a name="TimelineDetails"></a> 시간 표시 막대 세부 정보 보기  
+###  <a name="TimelineDetails"></a> 타임라인 세부 정보 보기  
  타임라인 세부 정보 그래프는 UI 응답성 프로파일러의 하단 창에 표시됩니다. 여기에는 선택한 기간 중 CPU 시간 소비가 가장 높은 이벤트에 대한 순차적 및 계층적 정보가 제공됩니다. 이 그래프는 특정 이벤트를 트리거한 항목과 일부 이벤트에 대해 이벤트가 소스 코드로 다시 매핑되는 방법을 확인하는 데 도움이 됩니다. 또한 이 그래프로부터 화면에 시각적 개체 업데이트를 그리는 데 필요한 시간을 확인할 수도 있습니다.  
   
  이 그래프는 시각적 개체 업데이트를 느려지게 할 수 있는 UI 스레드 작업 및 백그라운드 스레드 작업을 보여 줍니다. 이 그래프에는 JavaScript JIT 작업, 비동기 GPU 작업, 호스트 프로세스 외부에서 수행된 작업(예: RuntimeBroker.exe 및 dwm.exe 작업) 또는 프로파일링에 대해 아직 계측되지 않은 Windows 런타임 영역의 작업(예: 디스크 I/O)은 표시되지 않습니다.  
@@ -292,7 +294,7 @@ if (performance.mark && performance.measure) {
     > [!TIP]
     >  시간 표시 막대 정보 그래프 및 **포괄 시간 요약** 을 통해 최적화할 영역을 식별할 수 있습니다. 이러한 뷰 중 하나에 작은 작업이 여러 개 표시되면 해당 이벤트를 최적화할 수 있습니다. 예를 들어 앱에서 DOM 요소를 자주 새로 고쳐서 레이아웃 및 HTML 구문 분석 이벤트가 많이 발생할 수 있습니다. 이 작업을 일괄 처리하여 성능을 최적화할 수 있습니다.  
   
-###  <a name="FilterTimelineDetails"></a> 시간 표시 막대 세부 정보 필터링  
+###  <a name="FilterTimelineDetails"></a> 타임라인 세부 정보 필터링  
  특정 이벤트의 상황에 맞는 메뉴에서 **이벤트 필터** 를 선택하여 타임 라인 세부 정보의 뷰를 특정 이벤트로 필터링할 수 있습니다. 이 옵션을 선택하면 타임라인 및 표 뷰가 선택된 이벤트로 범위가 정해집니다. CPU 사용률 그래프에서의 선택도 특정 이벤트로 범위가 정해집니다.  
   
  ![이벤트에 대한 시간 표시 막대 필터링](../profiling/media/js_htmlvizprofiler_filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")  
@@ -325,12 +327,12 @@ if (performance.mark && performance.measure) {
 ##  <a name="SaveSession"></a> 진단 세션 저장  
  Visual Studio에서 진단 세션과 연결된 탭을 닫을 때 이 세션을 저장할 수 있습니다. 저장된 세션은 나중에 다시 열 수 있습니다.  
   
-##  <a name="ProfilerEvents"></a> 프로파일러 이벤트 참조  
+##  <a name="ProfilerEvents"></a> Profiler event reference  
  UI 응답성 프로파일러에서 프로파일러 이벤트는 항목별로 분류되어 색이 지정됩니다. 다음은 이러한 이벤트 범주입니다.  
   
 -   **로드.** 앱이 처음 로드될 때 앱 리소스를 검색하고 HTML 및 CSS를 구문 분석하는 데 걸린 시간을 나타냅니다. 여기에는 네트워크 요청이 포함될 수 있습니다.  
   
--   **스크립팅.** JavaScript의 구문 분석 및 실행에 걸린 시간을 나타냅니다. 여기에는 DOM 이벤트, 타이머, 스크립트 평가 및 애니메이션 프레임 작업이 포함됩니다. 여기에는 사용자 코드와 라이브러리 코드가 모두 포함됩니다.  
+-   **스크립팅 중** JavaScript의 구문 분석 및 실행에 걸린 시간을 나타냅니다. 여기에는 DOM 이벤트, 타이머, 스크립트 평가 및 애니메이션 프레임 작업이 포함됩니다. 여기에는 사용자 코드와 라이브러리 코드가 모두 포함됩니다.  
   
 -   **GC.** 가비지 컬렉션에 걸린 시간을 나타냅니다.  
   

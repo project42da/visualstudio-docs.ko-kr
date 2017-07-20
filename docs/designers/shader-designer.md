@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ff6e473c6e5b2d7a24a4e906d2f592742e3c2d14
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: af7472d5152babe2088ae3cc49caaf718a539878
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="shader-designer"></a>셰이더 디자이너
@@ -144,8 +145,8 @@ ms.lasthandoff: 02/22/2017
   
 |매개 변수|속성|  
 |---------------|----------------|  
-|**질감 1** – **질감 8**|**Access**:                             모델 편집기에서 속성을 설정할 수 있도록 하려는 경우 **Public**으로 설정하고 그렇지 않으면 **Private**으로 설정합니다.<br /><br /> **Filename**: 이 질감 레지스터와 연결된 질감 파일의 전체 경로입니다.|  
-|**재질 주변**|**Access**:                             모델 편집기에서 속성을 설정할 수 있도록 하려는 경우 **Public**으로 설정하고 그렇지 않으면 **Private**으로 설정합니다.<br /><br /> **Value**: 간접(확산) 조명으로 인한 현재 픽셀의 확산 색입니다.|  
+|**질감 1** - **질감 8**|**Access**:                             모델 편집기에서 속성을 설정할 수 있도록 하려는 경우 **Public**으로 설정하고 그렇지 않으면 **Private**으로 설정합니다.<br /><br /> **Filename**: 이 질감 레지스터와 연결된 질감 파일의 전체 경로입니다.|  
+|**재질 주변**|**Access**:                             모델 편집기에서 속성을 설정할 수 있도록 하려는 경우 **Public**으로 설정하고 그렇지 않으면 **Private**으로 설정합니다.<br /><br /> **Value**: 간접(또는 확산) 조명으로 인한 현재 픽셀의 확산 색입니다.|  
 |**재질 확산**|**Access**: 모델 편집기에서 속성을 설정할 수 있도록 하려는 경우 **Public**으로 설정하고 그렇지 않으면 **Private**으로 설정합니다.<br /><br /> **Value**: 현재 픽셀이 직접 조명을 확산하는 방법을 설명하는 색입니다.|  
 |**재질 발광**|**Access**:                              모델 편집기에서 속성을 설정할 수 있도록 하려는 경우 **Public**으로 설정하고 그렇지 않으면 **Private**으로 설정합니다.<br /><br /> **Value**: 자체 제공 조명으로 인한 현재 픽셀의 색 기여도입니다.|  
 |**재질 반사**|**Access**:                              모델 편집기에서 속성을 설정할 수 있도록 하려는 경우 **Public**으로 설정하고 그렇지 않으면 **Private**으로 설정합니다.<br /><br /> **Value**: 현재 픽셀이 직접 조명을 반사하는 방법을 설명하는 색입니다.|  

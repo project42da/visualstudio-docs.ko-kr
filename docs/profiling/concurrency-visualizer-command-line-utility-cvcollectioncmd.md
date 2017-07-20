@@ -1,21 +1,41 @@
 ---
-title: "동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.performance.cvcollectioncmd"
+title: "동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd) | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.performance.cvcollectioncmd
 ms.assetid: 476601be-1608-4014-af15-5aba6ccbed1c
 caps.latest.revision: 21
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 21
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: da79533a7a40b6e1b79c66f023beba2c1162bd08
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd)
 동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd.exe)를 사용하면 명령줄에서 추적을 수집하여 Visual Studio용 동시성 시각화 도우미에서 확인할 수 있습니다. 이러한 도구는 Visual Studio가 설치되지 않은 컴퓨터에서도 사용할 수 있습니다.  
@@ -40,11 +60,11 @@ caps.handback.revision: 21
   
 |옵션|설명|매개 변수|반환 값|  
 |------------|-----------------|----------------|-------------------|  
-|Query|수집을 시작할 수 있는지 여부를 반환합니다.|없음|수집을 시작할 준비가 되면&0;입니다.<br /><br /> 수집이 이미 진행 중이면&1;입니다.<br /><br /> 수집이 진행되고 있지는 않지만 필수 [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) 세션 중 하나 이상이 이미 활성화되었으면&2;입니다.|  
-|Launch|동시성 시각화 도우미 아래에서 지정한 프로세스를 실행합니다.|실행 파일의 경로|실행에 성공한 경우&0;입니다.<br /><br /> 대상 응용 프로그램을 시작할 수 없어 실행에 실패한 경우&1;입니다.<br /><br /> CVCollectionCmd에 지정한 출력 디렉토리에 쓸 수 있는 충분한 권한이 없어 실행에 실패한 경우&13;입니다.|  
-|연결|시스템 차원에서 추적 수집을 시작합니다. 그렇지 않고 프로세스가 지정되어 있으면 해당 프로세스에 연결합니다.|없음|연결에 성공한 경우&0;입니다.<br /><br /> 지정한 프로세스가 잘못되었거나 모호해서 연결에 실패한 경우&1;입니다.<br /><br /> CVCollectionCmd에 지정한 출력 디렉토리에 쓸 수 있는 충분한 권한이 없어 연결에 실패한 경우&13;입니다.|  
-|Detach|수집을 중지합니다.|없음|분리에 성공한 경우&0;입니다.<br /><br /> 현재 수집이 진행되고 있지 않아 분리에 실패한 경우&1;입니다.<br /><br /> 수집을 중지할 수 없어 분리에 실패한 경우&2;입니다.|  
-|분석|지정한 추적을 분석합니다.|CVTrace 파일의 전체 경로입니다.|분석에 성공한 경우&0;입니다.<br /><br /> 지정한 추적이 시스템 차원이지만 대상 프로세스를 지정하지 않아 분석을 시작할 수 없는 경우&1;입니다.<br /><br /> 프로세스를 지정했으나 추적이 시스템 차원이 아니라서 분석을 시작할 수 없는 경우&2;입니다.<br /><br /> 지정한 프로세스가 잘못되어 분석에 실패한 경우&3;입니다.<br /><br /> 지정한 CVTrace 파일이 잘못되어 분석에 실패한 경우&4;입니다.|  
+|Query|수집을 시작할 수 있는지 여부를 반환합니다.|없음|수집을 시작할 준비가 되면 0입니다.<br /><br /> 수집이 이미 진행 중이면 1입니다.<br /><br /> 수집이 진행 중이 아니지만 필수 [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) 세션 중 하나 이상이 이미 활성화되었으면 2입니다.|  
+|Launch|Concurrency 시각화 도우미 아래에서 지정한 프로세스를 실행합니다.|실행 파일의 경로|실행에 성공한 경우 0입니다.<br /><br /> 대상 응용 프로그램을 시작할 수 없어 실행에 실패한 경우 1입니다.<br /><br /> CVCollectionCmd에 지정한 출력 디렉토리에 쓸 수 있는 충분한 권한이 없어 실행에 실패한 경우 13입니다.|  
+|연결|시스템 차원에서 추적 수집을 시작합니다. 그렇지 않고 프로세스가 지정되어 있으면 해당 프로세스에 연결합니다.|없음|연결에 성공한 경우 0입니다.<br /><br /> 지정한 프로세스가 잘못되었거나 모호해서 연결에 실패한 경우 1입니다.<br /><br /> CVCollectionCmd에 지정한 출력 디렉토리에 쓸 수 있는 충분한 권한이 없어 연결에 실패한 경우 13입니다.|  
+|Detach|수집을 중지합니다.|없음|분리에 성공한 경우 0입니다.<br /><br /> 현재 수집이 진행되고 있지 않아 분리에 실패한 경우 1입니다.<br /><br /> 수집을 중지할 수 없어 분리에 실패한 경우 2입니다.|  
+|분석|지정한 추적을 분석합니다.|CVTrace 파일의 전체 경로입니다.|분석에 성공한 경우 0입니다.<br /><br /> 지정한 추적이 시스템 차원이지만 대상 프로세스를 지정하지 않아 분석을 시작할 수 없는 경우 1입니다.<br /><br /> 프로세스를 지정했으나 추적이 시스템 차원이 아니라서 분석을 시작할 수 없는 경우 2입니다.<br /><br /> 지정한 프로세스가 잘못되어 분석에 실패한 경우 3입니다.<br /><br /> 지정한 CVTrace 파일이 잘못되어 분석에 실패한 경우 4입니다.|  
 |LaunchArgs|실행 가능한 대상 인수를 지정합니다. 이 옵션은 Launch 명령에만 적용됩니다.|응용 프로그램에 대한 명령줄 인수|없음|  
 |Outdir|추적 파일을 저장할 디렉터리를 지정합니다. Launch 및 Attach 명령에 적용됩니다.|디렉터리 경로 또는 상대 경로|없음|  
 |프로세스|Attach 명령이 실행되면 연결할 프로세스 또는 Analyze 명령이 실행되면 분석할 추적의 프로세스를 지정합니다. Attach 및 Analyze 명령에 적용됩니다.|프로세스의 PID 또는 이름|없음|  
@@ -69,7 +89,7 @@ caps.handback.revision: 21
 |IncludeEnvSymbolPath|환경 기호 경로(_NT_SYMBOL_PATH)를 사용할지 여부를 결정하는 값을 설정합니다.|-   True<br />-   False|  
 |DeleteEtlsAfterAnalysis|분석이 완료되면 ETL 파일을 삭제할지 여부를 결정하는 값을 설정합니다.|-   True<br />-   False|  
 |SymbolPath|기호 서버의 경로를 지정합니다. 자세한 내용은 [Microsoft 기호 서버를 사용하여 디버그 기호 파일 얻기](http://go.microsoft.com/fwlink/?LinkID=149389)를 참조하세요.|디렉터리 이름 또는 URL|  
-|Markers|표식 공급자 목록을 포함합니다.|MarkerProvider 요소를&0;개 이상 포함할 수 있습니다.|  
+|Markers|표식 공급자 목록을 포함합니다.|MarkerProvider 요소를 0개 이상 포함할 수 있습니다.|  
 |MarkerProvider|단일 표식 공급자를 지정합니다.|다음 요소를 포함해야 합니다.<br /><br /> -   Level<br />-   GUID<br />-   Name<br /><br /> 다음 요소를 포함할 수 있습니다.<br /><br /> -   Categories<br />-   IsEnabled|  
 |수준|MarkerProvider의 중요도 수준을 설정합니다.|-   Low<br />-   Normal<br />-   High<br />-   Critical<br />-   Everything|  
 |Guid|ETW 표식 공급자의 고유한 전역 식별자입니다.|GUID|  
@@ -86,9 +106,9 @@ caps.handback.revision: 21
 |KernelBufferSettings|커널 버퍼 설정 매개 변수 목록을 지정합니다.|다음 요소를 포함해야 합니다.<br /><br /> -   BufferFlushTimer<br />-   BufferSize<br />-   MinimumBuffers<br />-   MaximumBuffers|  
 |BufferFlushTimer|ETW 버퍼의 플러시 타이머를 지정합니다.|양의 정수|  
 |BufferSize|각 이벤트 추적 세션 버퍼에 할당된 메모리 양(킬로바이트)입니다.|0~1024의 숫자|  
-|MinimumBuffers|이벤트 추적 세션의 버퍼 풀에 할당된 최소 버퍼 수 입니다.|논리 코어 수의&2;배 이상인 양의 정수|  
+|MinimumBuffers|이벤트 추적 세션의 버퍼 풀에 할당된 최소 버퍼 수 입니다.|논리 코어 수의 2배 이상인 양의 정수|  
 |MaximumBuffers|이벤트 추적 세션의 버퍼 풀에 할당된 최대 버퍼 수 입니다.|MinimumBuffers 이상의 수|  
-|JustMyCode|내 코드만 디렉터리의 목록을 지정합니다.|MyCodeDirectory 요소&0;개 이상으로 구성된 목록|  
+|JustMyCode|내 코드만 디렉터리의 목록을 지정합니다.|MyCodeDirectory 요소 0개 이상으로 구성된 목록|  
 |MyCodeDirectory|코드가 포함된 디렉터리를 지정합니다.|절대 경로|  
   
 ### <a name="example"></a>예제  
@@ -150,8 +170,3 @@ caps.handback.revision: 21
 </LocalConfig>  
   
 ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

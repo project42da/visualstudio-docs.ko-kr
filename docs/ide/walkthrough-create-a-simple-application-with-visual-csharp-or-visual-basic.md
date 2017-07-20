@@ -28,9 +28,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 0a5c51b66cb7e5a88b9432c74432947ab94ae316
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -134,7 +135,7 @@ ms.lasthandoff: 02/22/2017
  MainWindow.xaml의 제목 표시줄에 이제 Greetings가 표시됩니다.  
   
 ### <a name="design-the-user-interface-ui"></a>사용자 인터페이스(UI) 디자인  
- 이 응용 프로그램에 TextBlock 컨트롤&1;개, RadioButton 컨트롤&2;개 및 Button 컨트롤&1;개 등 세 가지 유형의 컨트롤을 추가합니다.  
+ 이 응용 프로그램에 TextBlock 컨트롤 1개, RadioButton 컨트롤 2개 및 Button 컨트롤 1개 등 세 가지 유형의 컨트롤을 추가합니다.  
   
 ##### <a name="to-add-a-textblock-control"></a>TextBlock 컨트롤을 추가하려면  
   

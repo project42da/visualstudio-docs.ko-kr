@@ -26,16 +26,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 060dc127a1cc08dcf28a59feaa774b0094e42d56
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3be7ff30658fc7e0de4cf04cab71fdae44b1b15e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정
-코딩된 UI 테스트 재생 시 창이 나타나거나 진행률 표시줄이 사라지는 등의 특정 이벤트가 발생할 때까지 기다리도록 테스트에 지시할 수 있습니다. 이렇게 하려면 다음 표에 설명된 대로 적절한 UITestControl.WaitForControlXXX() 메서드를 사용합니다. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> 메서드를 사용하여 컨트롤을 사용하도록 설정할 때까지 기다리는 코딩된 UI 테스트에 대한 예제는 [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)를 참조하세요.  
+코딩된 UI 테스트 재생 시 창이 나타나거나 진행률 표시줄이 사라지는 등의 특정 이벤트가 발생할 때까지 기다리도록 테스트에 지시할 수 있습니다. 이렇게 하려면 다음 표에 설명된 대로 적절한 UITestControl.WaitForControlXXX() 메서드를 사용합니다. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> 메서드를 사용하여 컨트롤이 사용하도록 설정할 때까지 기다리는 코딩된 UI 테스트에 대한 예제는 [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)를 참조하세요.  
   
- **Requirements**  
+ **요구 사항**  
   
  Visual Studio Enterprise  
   
@@ -109,13 +110,13 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
   
  메서드는 대기에 성공하면 true를 반환하고 대기에 실패하면 false를 반환합니다.  
   
- 대기 작업에 대한 암시적 제한 시간은 <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyTimeout%2A> 속성에서 지정합니다. 이 속성의 기본값은 60000밀리초(1분)입니다.  
+ 대기 작업의 암시적 시간 제한은 <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyTimeout%2A> 속성으로 지정합니다. 이 속성의 기본값은 60000밀리초(1분)입니다.  
   
  메서드에 밀리초 단위의 명시적 시간 제한을 사용하는 오버로드가 있습니다. 그러나 대기 작업으로 인해 컨트롤을 암시적으로 검색하거나 응용 프로그램이 사용 중인 경우 실제 대기 시간은 지정된 시간 제한보다 길어질 수 있습니다.  
   
- 이전 함수는 강력하고 유연하지만 거의 모든 조건을 충족해야 합니다. 그러나 이러한 메서드가 요구를 충족하지 못하고 코드에서 <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> 또는 <xref:System.Threading.Thread.Sleep%2A>를 코딩해야 하는 경우 Thread.Sleep() API 대신 Playback.Wait()를 사용하는 것이 좋습니다. 그 이유는 다음과 같습니다.  
+ 이전 함수는 강력하고 유연하지만 거의 모든 조건을 충족해야 합니다. 그러나 이러한 메서드가 요구를 충족하지 못하고 코드에서 <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> 또는 <xref:System.Threading.Thread.Sleep%2A>을 코딩해야 하는 경우에는 Thread.Sleep() API 대신 Playback.Wait()를 사용하는 것이 좋습니다. 그 이유는 다음과 같습니다.  
   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> 속성을 사용하여 대기 기간을 수정할 수 있습니다. 기본적으로 이 변수는 1이지만 늘리거나 줄여 코드 전체에서 대기 시간을 변경할 수 있습니다. 예를 들어 느린 네트워크 또는 일부 다른 성능 저하 사례를 특별히 테스트하는 경우 한 위치(또는 구성 파일에서도 가능)에서 이 변수를 1.5로 변경하여 모든 위치에서 대기를 50% 더 추가할 수 있습니다.  
+ <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> 속성을 사용하여 절전 모드의 기간을 수정할 수 있습니다. 기본적으로 이 변수는 1이지만 늘리거나 줄여 코드 전체에서 대기 시간을 변경할 수 있습니다. 예를 들어 느린 네트워크 또는 일부 다른 성능 저하 사례를 특별히 테스트하는 경우 한 위치(또는 구성 파일에서도 가능)에서 이 변수를 1.5로 변경하여 모든 위치에서 대기를 50% 더 추가할 수 있습니다.  
   
  Playback.Wait()는 사용자 취소/분리 작업을 확인하는 동안 위의 계산 후 Thread.Sleep()을 for 루프의 더 작은 청크로 내부적으로 호출합니다. 즉, Playback.Wait()를 사용하면 대기가 끝나기 전에 재생을 취소할 수 있지만, 절전 모드에서는 취소할 수 없거나 예외를 throw합니다.  
   
@@ -124,7 +125,7 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
   
  **지침**  
   
- 자세한 내용은 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)(Visual Studio 2012를 사용한 연속 배달 테스트 – 5장: 시스템 테스트 자동화)를 참조하세요.  
+ 자세한 내용은 [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 – 5장: 시스템 테스트 자동화](http://go.microsoft.com/fwlink/?LinkID=255196)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   

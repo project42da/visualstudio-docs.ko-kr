@@ -1,21 +1,40 @@
 ---
 title: "연습: MSBuild 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, 자습서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, tutorial
 ms.assetid: b8a8b866-bb07-4abf-b9ec-0b40d281c310
 caps.latest.revision: 32
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 32
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
+ms.openlocfilehash: ecfd08a410983561f3c1e761eb25302b6d9281c4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="walkthrough-using-msbuild"></a>연습: MSBuild 사용
 MSBuild는 Microsoft 및 Visual Studio용 빌드 플랫폼입니다. 이 연습에서는 MSBuild의 구성 요소를 소개하고 MSBuild 프로젝트를 작성, 조작 및 디버깅하는 방법을 보여 줍니다. 학습 내용은 다음과 같습니다.  
@@ -263,7 +282,7 @@ $(PropertyName)
  MSBuild는 Configuration 속성을 생성하고 "Release" 값을 지정합니다.  
   
 ## <a name="special-characters"></a>특수 문자  
- MSBuild 프로젝트 파일에서 특정 문자는 특수한 의미로 사용됩니다. 이러한 문자의 예로는 세미콜론(;) 및 별표(*)를 들 수 있습니다. 프로젝트 파일에서 이러한 특수 문자를 리터럴로 사용하려면 %xx 구문을 사용하여 해당 문자를 지정해야 합니다. 여기서 xx는 문자의 ASCII&16;진수 값을 나타냅니다.  
+ MSBuild 프로젝트 파일에서 특정 문자는 특수한 의미로 사용됩니다. 이러한 문자의 예로는 세미콜론(;) 및 별표(*)를 들 수 있습니다. 프로젝트 파일에서 이러한 특수 문자를 리터럴로 사용하려면 %xx 구문을 사용하여 해당 문자를 지정해야 합니다. 여기서 xx는 문자의 ASCII 16진수 값을 나타냅니다.  
   
  특수 문자를 사용해 Configuration 속성값을 표시하도록 메시지 작업을 변경하면 해당 작업을 보다 쉽게 읽을 수 있습니다.  
   
@@ -578,8 +597,3 @@ $(PropertyName)
 ## <a name="see-also"></a>참고 항목
 [MSBuild 개요](../msbuild/msbuild.md)  
  [MSBuild 참조](../msbuild/msbuild-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

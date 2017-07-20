@@ -1,21 +1,40 @@
 ---
-title: "Blend for Visual Studio를 사용하여 UI 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Blend.Start.Dev12"
+title: "Blend for Visual Studio를 사용하여 UI 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Blend.Start.Dev12
 ms.assetid: efd12263-cc2d-4081-a2bb-9a2cc17c442c
 caps.latest.revision: 31
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f880816f383712f87624467c9ed3b45a1c2ccb8c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Blend for Visual Studio를 사용하여 UI 만들기
 Blend for Visual Studio를 사용하면 XAML 기반 Windows 데스크톱, 웹, [Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/jj683071.aspx) 및 [Windows 스토어](http://msdn.microsoft.com/library/windows/apps/jj129478.aspx) 앱을 디자인할 수 있습니다. Visual Studio와 같은 기본 XAML 디자인 환경을 제공하고, 애니메이션 및 동작과 같은 고급 작업에 대한 비주얼 디자이너를 추가합니다.  
@@ -37,7 +56,7 @@ Blend for Visual Studio를 사용하면 XAML 기반 Windows 데스크톱, 웹, [
   
 -   [속성 패널 둘러보기](#Properties)  
   
-##  <a name="a-nametoolsa-tour-of-the-tools-panel"></a><a name="Tools"></a> 도구 패널 둘러보기  
+##  <a name="Tools"></a> 도구 패널 둘러보기  
  Blend for Visual Studio에서 **도구** 패널을 사용하여 응용 프로그램의 개체를 만들고 수정할 수 있습니다. 도구를 선택한 다음 마우스로 아트보드에 그려 개체를 만들 수 있습니다.  
   
  ![도구 패널](../designers/media/blend5toolspanel.png "Blend5Toolspanel")  
@@ -53,7 +72,7 @@ Blend for Visual Studio를 사용하면 XAML 기반 Windows 데스크톱, 웹, [
   
  **짧은 비디오 보기:** ![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [도구 모음](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4).  
   
-##  <a name="a-nameassetsa-tour-of-the-assets-panel"></a><a name="Assets"></a> 자산 패널 둘러보기  
+##  <a name="Assets"></a> 자산 패널 둘러보기  
  Visual Studio의 **도구 상자**와 비슷한 **자산** 패널에서 모든 컨트롤을 찾을 수 있습니다. 컨트롤 외에도, 스타일, 미디어, 동작, 효과 등 무엇이든 **자산** 패널의 아트보드에 추가할 수 있습니다.  
   
  ![자산 패널](../designers/media/blend5_assets_panel.png "Blend5_Assets_panel")  
@@ -66,7 +85,7 @@ Blend for Visual Studio를 사용하면 XAML 기반 Windows 데스크톱, 웹, [
 |![](../designers/media/b1_4.png "B1_4")|**스타일** 리소스 사전에 포함된 모든 스타일을 표시합니다.|  
 |![](../designers/media/b1_5.png "B1_5")|**설명** 선택한 자산 범주 또는 하위 범주에 대한 설명을 표시합니다.|  
   
-##  <a name="a-nameobjectsa-tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a> 개체 및 타임라인 패널 둘러보기  
+##  <a name="Objects"></a> 개체 및 타임라인 패널 둘러보기  
  이 패널에서는 아트보드에서 개체를 구성하고 원하는 경우 개체에 애니메이션 효과를 적용할 수 있습니다.  
   
  ![애니메이션 모드의 개체 및 타임라인 패널](../designers/media/b5_object_timeline_animation.png "b5_object_timeline_animation")  
@@ -90,7 +109,7 @@ Blend for Visual Studio를 사용하면 XAML 기반 Windows 데스크톱, 웹, [
 |![](../designers/media/b1_15.png "B1_15")|**타임라인 확대/축소** 타임라인의 확대/축소 해상도를 설정합니다. 확대하면 애니메이션을 좀 더 자세하게 편집할 수 있고 축소하면 더 긴 시간 동안 발생하는 동작이 좀 더 간략하게 표시됩니다. 확대했지만 원하는 시점에 키 프레임을 설정할 수 없다면 맞춤 해상도가 충분히 높게 설정되어 있는지 확인하십시오.|  
 |![설명선 16](../designers/media/b5_label_16.png "b5_label_16")|**타임라인 합성 영역** 타임라인이 표시됩니다. 키 프레임을 직접 끌거나 바로 가기 메뉴를 사용하여 이동할 수 있습니다.|  
   
-##  <a name="a-namepropertiesa-tour-of-the-properties-panel"></a><a name="Properties"></a> 속성 패널 둘러보기  
+##  <a name="Properties"></a> 속성 패널 둘러보기  
  이 패널에서는 개체의 속성을 보고 수정할 수 있으며, 아트보드에서 직접 수정하도록 설정할 수도 있습니다. 이렇게 하면 속성 변경 내용이 **속성** 패널에 반영됩니다.  
   
  ![속성 패널](../designers/media/blend5_properties_panel.png "Blend5_properties_panel")  
@@ -113,7 +132,7 @@ Blend for Visual Studio를 사용하면 XAML 기반 Windows 데스크톱, 웹, [
 |![](../designers/media/b1_12.png "B1_12")|**RGB 색 공간** **R**, **G** 또는 **B**(빨강, 초록, 파랑) 숫자 편집기에 대한 값을 조정하여 색을 수정합니다.|  
 |![](../designers/media/b1_13.png "B1_13")|**알파 채널** **A** 옆의 숫자 편집기를 사용하여 알파 값을 수정합니다.|  
 |![](../designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe")|**색을 리소스로 변환** 선택한 색을 색 리소스로 변환합니다. 색 리소스는 색 리소스 탭을 클릭하면 사용할 수 있습니다.|  
-|![](../designers/media/b1_15.png "B1_15")|**16진수 값** 표시된 색의&16;진수 값을 표시합니다.|  
+|![](../designers/media/b1_15.png "B1_15")|**16진수 값** 표시된 색의 16진수 값을 표시합니다.|  
 |![설명선 16](../designers/media/b5_label_16.png "b5_label_16")|**그라데이션 슬라이더** 그라데이션 브러시를 선택한 경우에만 나타납니다.|  
 |![](../designers/media/d50027a1-6824-4ad8-8b4e-558b0756dcf8.png "d50027a1-6824-4ad8-8b4e-558b0756dcf8")|**고급 속성 표시** 자주 사용되지 않는 속성의 범주를 표시합니다.|  
   
@@ -124,8 +143,3 @@ Blend for Visual Studio를 사용하면 XAML 기반 Windows 데스크톱, 웹, [
  [개체에 애니메이션 적용](../designers/animate-objects-in-xaml-designer.md)   
  [도형 및 패스 그리기](../designers/draw-shapes-and-paths.md)   
  [Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](../designers/designing-xaml-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
