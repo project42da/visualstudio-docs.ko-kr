@@ -9,6 +9,7 @@
 ## [명령줄 매개 변수 예](command-line-parameter-examples.md)
 ## [Visual Studio의 네트워크 기반 설치 만들기](create-a-network-installation-of-visual-studio.md)
 ## [오프라인 환경에서 Visual Studio 설치에 대한 특별 고려 사항](install-visual-studio-in-offline-environment.md)
+## [방화벽 또는 프록시 서버 뒤에 Visual Studio 설치](install-visual-studio-behind-a-firewall-or-proxy-server.md)
 ## [지시 파일을 사용하여 Visual Studio 설치 자동화](automated-installation-with-response-file.md)
 ## [Visual Studio를 배포할 때 제품 키를 자동으로 적용](automatically-apply-product-keys-when-deploying-visual-studio.md)
 ## [Visual Studio의 엔터프라이즈 배포에 대한 기본값 설정](set-defaults-for-enterprise-deployments.md)
