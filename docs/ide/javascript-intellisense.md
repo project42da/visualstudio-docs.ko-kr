@@ -1,7 +1,7 @@
 ---
 title: "JavaScript IntelliSense | Microsoft 문서"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -51,8 +51,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/11/2017
 
 ---
-# JavaScript IntelliSense
-<a id="javascript-intellisense" class="xliff"></a>
+# <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]에서는 즉시 사용 가능한 강력한 JavaScript 편집 환경을 제공합니다. TypeScript 기반 언어 서비스로 제공되는 Visual Studio는 더 다양한 IntelliSense, 최신 JavaScript 기능 지원 및 정의로 이동, 리팩터링 등의 향상된 생산성 기능을 제공합니다.
 
 > [!NOTE]
@@ -60,8 +59,7 @@ ms.lasthandoff: 07/11/2017
 
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]의 일반 IntelliSense 기능에 대한 자세한 내용은 [IntelliSense 사용](../ide/using-intellisense.md)을 참조하세요. 
 
-## [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] JavaScript 언어 서비스의 새로운 기능
-<a id="whats-new-in-the-javascript-language-service-in-includevsdev15miscincludesvsdev15mdmd" class="xliff"></a>
+## <a name="whats-new-in-the-javascript-language-service-in-includevsdev15miscincludesvsdev15mdmd"></a>[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] JavaScript 언어 서비스의 새로운 기능
 
 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]의 JavaScript IntelliSense는 이제 매개 변수 및 멤버 목록에 대한 훨씬 더 많은 정보를 표시합니다.
 이 새로운 정보는 코드를 더 잘 이해하도록 내부에서 정적 분석으로 사용하는 TypeScript 언어 서비스를 통해 제공됩니다.
