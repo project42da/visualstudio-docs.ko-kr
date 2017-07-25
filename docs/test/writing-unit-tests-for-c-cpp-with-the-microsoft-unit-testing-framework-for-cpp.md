@@ -28,10 +28,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 203cc6111870cbf3342fd84c5931a0dadc2bdde0
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: c7d4f4f00d8d89b77f18b2a1b355a445c05dfb6b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>C++용 Microsoft 유닛 테스트 프레임워크를 사용하여 C/C++용 유닛 테스트 작성
@@ -414,6 +414,6 @@ Visual Studio에서는 C++로 작성된 관리되지 않는 코드에 대한 단
  [Microsoft.VisualStudio.TestTools.CppUnitTestFramework 사용](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)   
  [관리되는/관리되지 않는 코드 상호 운용성에 대한 개요](http://msdn.microsoft.com/library/ms973872.aspx)   
  [네이티브 코드 디버그](../debugger/debugging-native-code.md)   
- [연습: 동적 연결 라이브러리 만들기 및 사용(C++)](http://msdn.microsoft.com/Library/3ae94848-44e7-4955-bbad-7d40f493e941)   
+ [연습: 동적 연결 라이브러리 만들기 및 사용(C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)   
  [가져오기 및 내보내기](/cpp/build/importing-and-exporting)
 

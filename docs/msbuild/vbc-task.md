@@ -38,10 +38,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 699ad120c95500e04d238270b8ac282ad0a8d288
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: d376d2f99ccfddb2d96797fa2db0e1ef3872f34b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="vbc-task"></a>Vbc 작업
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/13/2017
 |`Imports`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 매개 변수입니다.<br /><br /> 지정된 항목 컬렉션에서 네임스페이스를 가져옵니다. 이 매개 변수는 vbc.exe 컴파일러의 [/imports](/dotnet/visual-basic/reference/command-line-compiler/imports) 스위치에 해당합니다.|  
 |`KeyContainer`|선택적 `String` 매개 변수입니다.<br /><br /> 암호화 키 컨테이너의 이름을 지정합니다. 이 매개 변수는 vbc.exe 컴파일러의 [/keycontainer](/dotnet/visual-basic/reference/command-line-compiler/keycontainer) 스위치에 해당합니다.|  
 |`KeyFile`|선택적 `String` 매개 변수입니다.<br /><br /> 암호화 키를 포함하는 파일 이름을 지정합니다. 자세한 내용은 [/keyfile](/dotnet/visual-basic/reference/command-line-compiler/keyfile)을 참조하세요.|  
-|`LangVersion`|선택적 [문자열](assetId:///String?qualifyHint=False&autoUpgrade=True) 매개 변수입니다.<br /><br /> 언어 버전으로 “9” 또는 “10”을 지정합니다.|  
+|`LangVersion`|선택적 <xref:System.String?displayProperty=fullName> 매개 변수입니다.<br /><br /> 언어 버전으로 “9” 또는 “10”을 지정합니다.|  
 |`LinkResources`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 매개 변수입니다.<br /><br /> 출력 파일에 .NET Framework 리소스에 대한 링크를 만듭니다. 리소스 파일은 출력 파일에 저장되지 않습니다. 이 매개 변수는 vbc.exe 컴파일러의 [/linkresource](/dotnet/visual-basic/reference/command-line-compiler/linkresource) 스위치에 해당합니다.|  
 |`MainEntryPoint`|선택적 `String` 매개 변수입니다.<br /><br /> `Sub Main` 프로시저가 포함된 클래스 또는 모듈을 지정합니다. 이 매개 변수는 vbc.exe 컴파일러의 [/main](/dotnet/visual-basic/reference/command-line-compiler/main) 스위치에 해당합니다.|  
 |`ModuleAssemblyName`|선택적 `String` 매개 변수입니다.<br /><br /> 이 모듈이 속한 어셈블리를 지정합니다.|  

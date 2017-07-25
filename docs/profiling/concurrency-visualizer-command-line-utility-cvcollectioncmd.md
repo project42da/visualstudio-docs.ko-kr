@@ -31,14 +31,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: da79533a7a40b6e1b79c66f023beba2c1162bd08
+ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
+ms.openlocfilehash: f219ae7937ea3810b58faa34f6320a627ede99ae
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd)
-동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd.exe)를 사용하면 명령줄에서 추적을 수집하여 Visual Studio용 동시성 시각화 도우미에서 확인할 수 있습니다. 이러한 도구는 Visual Studio가 설치되지 않은 컴퓨터에서도 사용할 수 있습니다.  
+동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd.exe)를 사용하면 명령줄에서 추적을 수집하여 Visual Studio용 동시성 시각화 도우미에서 확인할 수 있습니다. 이러한 도구는 Visual Studio가 설치되어 있지 않은 컴퓨터에서도 사용할 수 있습니다.  
   
 > [!NOTE]
 >  Visual Studio 2013부터 동시성 시각화 도우미는 선택적 확장입니다. (이전에는 Visual Studio에 포함되었습니다.) 다운로드 센터에서 [Visual Studio 2015용 동시성 시각화 수집 도구](http://www.microsoft.com/en-in/download/details.aspx?id=49103)를 다운로드할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/13/2017
   
 |옵션|설명|매개 변수|반환 값|  
 |------------|-----------------|----------------|-------------------|  
-|Query|수집을 시작할 수 있는지 여부를 반환합니다.|없음|수집을 시작할 준비가 되면 0입니다.<br /><br /> 수집이 이미 진행 중이면 1입니다.<br /><br /> 수집이 진행 중이 아니지만 필수 [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) 세션 중 하나 이상이 이미 활성화되었으면 2입니다.|  
+|Query|수집을 시작할 수 있는지 여부를 반환합니다.|없음|수집을 시작할 준비가 되면 0입니다.<br /><br /> 수집이 이미 진행 중이면 1입니다.<br /><br /> 수집이 진행 중이 아니지만 필수 [ETW](/dotnet/framework/wcf/samples/etw-tracing) 세션 중 하나 이상이 이미 활성화되었으면 2입니다.|  
 |Launch|Concurrency 시각화 도우미 아래에서 지정한 프로세스를 실행합니다.|실행 파일의 경로|실행에 성공한 경우 0입니다.<br /><br /> 대상 응용 프로그램을 시작할 수 없어 실행에 실패한 경우 1입니다.<br /><br /> CVCollectionCmd에 지정한 출력 디렉토리에 쓸 수 있는 충분한 권한이 없어 실행에 실패한 경우 13입니다.|  
 |연결|시스템 차원에서 추적 수집을 시작합니다. 그렇지 않고 프로세스가 지정되어 있으면 해당 프로세스에 연결합니다.|없음|연결에 성공한 경우 0입니다.<br /><br /> 지정한 프로세스가 잘못되었거나 모호해서 연결에 실패한 경우 1입니다.<br /><br /> CVCollectionCmd에 지정한 출력 디렉토리에 쓸 수 있는 충분한 권한이 없어 연결에 실패한 경우 13입니다.|  
 |Detach|수집을 중지합니다.|없음|분리에 성공한 경우 0입니다.<br /><br /> 현재 수집이 진행되고 있지 않아 분리에 실패한 경우 1입니다.<br /><br /> 수집을 중지할 수 없어 분리에 실패한 경우 2입니다.|  
@@ -170,3 +170,4 @@ ms.lasthandoff: 05/13/2017
 </LocalConfig>  
   
 ```
+

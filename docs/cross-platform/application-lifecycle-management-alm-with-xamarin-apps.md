@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 1464a7e654c68828e132e2d6973c9e558ebe23a5
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: e5ed1f9b6771b489218d2c6118454f1070535b6d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="application-lifecycle-management-alm-with-xamarin-apps"></a>ALM(Application Lifecycle Management) 및 Xamarin 앱
@@ -81,7 +81,7 @@ Xamarin을 통해 C#, .NET 및 Visual Studio를 사용하여 Android, iOS 및 Wi
 |-------------|----------------------------|-------------------------|  
 |[Team Foundation 버전 제어](http://msdn.microsoft.com/Library/1d629052-c65d-4c5d-81eb-eaa4413fe285) 또는 Visual Studio Team Services 사용|예||  
 |[Team Services에서 Git 시작하기](http://msdn.microsoft.com/Library/32f46ecd-1b03-4ef0-a9c4-8a120da2b03f)|예||  
-|[코드 분석/코드 품질 향상(참조, 제안된 변경 내용 등)](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)|예||  
+|[코드 품질 향상](/visualstudio/test/improve-code-quality)|예||  
 |[코드 변경 내용 및 기타 기록 찾기](../ide/find-code-changes-and-other-history-with-codelens.md)|예|런타임까지 구현이 확인되지 않는 플랫폼 특정 경계를 넘는 경우는 제외됩니다.|  
 |[코드 맵을 사용하여 응용 프로그램 디버그](../modeling/use-code-maps-to-debug-your-applications.md)|예||  
   
@@ -109,7 +109,7 @@ Xamarin을 통해 C#, .NET 및 Visual Studio를 사용하여 Android, iOS 및 Wi
 |[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)|Windows에만 해당|Visual Studio의 UI 테스트 레코더는 Windows 전용입니다. 모든 플랫폼에 대해서는 [Xamarin 테스트 레코더](https://www.xamarin.com/test-cloud/recorder)를 참조하세요.|  
   
 ## <a name="improve-code-quality"></a>코드 품질 향상  
- 참조 링크: **[코드 품질 향상](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
+ 참조 링크: **[코드 품질 향상](/visualstudio/test/improve-code-quality)**  
   
 |기능|Xamarin에서 지원 여부|추가 설명|  
 |-------------|----------------------------|-------------------------|  

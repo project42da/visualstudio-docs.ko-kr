@@ -28,10 +28,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: a2958c20bbfbd9f4f3d03946dbe230326894b1c1
+ms.sourcegitcommit: 795bf9746c4ae48ac04141a05ba56462ecb90482
+ms.openlocfilehash: 7b69cc5d96a1b51a3d58f688a53bb0156ec3b713
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="gpu-usage"></a>GPU 사용량
@@ -93,7 +93,7 @@ Visual Studio 성능 및 진단 허브의 GPU 사용량 도구를 사용하여 D
 
 <!-- VERSIONLESS -->
 ## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>GPUView 또는 Windows Performance Analyzer로 내보내기
-Visual Studio 2017부터 이 데이터는 진단 세션의 오른쪽 아래에 있는 **GpuView에서 열기** 또는 **WPA에서 열기** 링크를 클릭하여 [GPUView](https://msdn.microsoft.com/library/windows/desktop/ff570133(v=vs.85).aspx) 및 [Windows Performance Analyzer](https://msdn.microsoft.com/windows/hardware/commercialize/test/wpt/windows-performance-analyzer)로 열 수 있습니다.
+Visual Studio 2017부터 이 데이터는 진단 세션의 오른쪽 아래에 있는 **GpuView에서 열기** 또는 **WPA에서 열기** 링크를 클릭하여 [GPUView](/windows-hardware/drivers/display/using-gpuview) 및 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)로 열 수 있습니다.
 
 ![열기...](media/gfx_diag_open_in.png)
 <!-- /VERSIONLESS -->
@@ -170,5 +170,5 @@ Visual Studio 2017부터 이 데이터는 진단 세션의 오른쪽 아래에 �
 -   [Visual Studio의 GPU 사용량 도구(비디오)](http://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)  
 -   [Visual Studio 2013 업데이트 4 CTP1의 GPU 사용량 도구(블로그)](http://blogs.msdn.com/b/vcblog/archive/2014/09/05/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1.aspx)  
 -   [Visual Studio의 DirectX에 대한 GPU 사용량(블로그)](http://blogs.msdn.com/b/ianhu/archive/2014/12/16/gpu-usage-for-directx-in-visual-studio.aspx)
-- [GPUView](https://msdn.microsoft.com/library/windows/desktop/ff570133(v=vs.85).aspx) 
-- [Windows Performance Analyzer](https://msdn.microsoft.com/windows/hardware/commercialize/test/wpt/windows-performance-analyzer)
+- [GPUView](/windows-hardware/drivers/display/using-gpuview) 
+- [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
