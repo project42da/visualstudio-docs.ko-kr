@@ -27,9 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9226dacfa63287857c09e5c6945363ccafadc2c7
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: fa857220def2da9b05f1bbed70e906034727b8af
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="getting-started-with-debugging-in-visual-studio"></a>Visual Studio에서 디버깅 시작
@@ -37,7 +39,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 
  참고: 이 페이지의 아래쪽에 더 많은 고급 기능과 플랫폼 또는 기능별 항목의 링크가 있습니다.  
 
-## <a name="my-code-doesnt-work-help-me-visual-studio"></a>내 코드는 작동하지 않습니다. Visual Studio 도움말!  
+## <a name="my-code-doesnt-work-help-me-visual-studio"></a>내 코드가 작동하지 않습니다. Visual Studio 도움말!  
  지금까지 편집기를 살펴보고 일부 코드를 만들었습니다. 이제 해당 코드의 디버그를 시작하려고 합니다. Visual Studio에서는 대부분의 IDE와 마찬가지로 디버깅이 두 단계로 이루어집니다. 먼저 프로젝트 및 컴파일러 오류를 catch하고 해결하는 코드를 빌드한 다음 환경에서 해당 코드를 실행하여 런타임 및 동적 오류를 catch하고 해결합니다.  
 
 ### <a name="configuring-a-build"></a>빌드 구성  
@@ -77,7 +79,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 
  ![Visual Studio 출력 및 오류 목록](../ide/media/vs_ide_gs_debug_bad_build_error_list.PNG "Vs_ide_gs_debug_bad_build_error_list")  
 
- **오류 목록** 창에서 오류 코드 줄을 클릭하여 오류가 발생한 줄로 이동합니다. 또는 오른쪽 위에서 **빠른 실행** 표시줄을 클릭하고 "줄 번호"를 입력한 다음 Enter 키를 눌러 줄 번호를 설정합니다. 이는 줄 번호를 설정할 수 있는 **옵션** 창 항목에 액세스하는 가장 빠른 방법입니다. **빠른 실행** 표시줄을 사용하여 UI 클릭 수를 줄이는 방법을 알아봅니다.  
+ **오류 목록** 창에서 오류 코드 줄을 클릭하여 오류가 발생한 줄로 이동합니다. 또는 오른쪽 위에서 **빠른 실행** 표시줄을 클릭하고 “줄 번호”를 입력한 다음 Enter 키를 눌러 줄 번호를 설정합니다. 이는 줄 번호를 설정할 수 있는 **옵션** 창 항목에 액세스하는 가장 빠른 방법입니다. **빠른 실행** 표시줄을 사용하여 UI 클릭 수를 줄이는 방법을 알아봅니다.  
 
  ![줄 번호가 있는 Visual Studio 편집기](../ide/media/vs_ide_gs_debug_line_numbers.png "Vs_ide_gs_debug_line_numbers")  
 
@@ -85,7 +87,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 
  Ctrl+G를 사용하여 오류가 발생한 줄 번호로 빠르게 이동합니다.  
 
- 오류는 빨간색 "오류 표시선" 밑줄로 식별됩니다. 자세한 내용을 보려면 마우스를 위로 가져갑니다. 수정 작업에서 새 오류가 도입될 수도 있지만 수정하면 오류가 사라집니다. 이를 "재발"이라고 합니다.  
+ 오류는 빨강 “오류 표시선” 밑줄로 식별됩니다. 자세한 내용을 보려면 마우스를 위로 가져갑니다. 수정 작업에서 새 오류가 도입될 수도 있지만 수정하면 오류가 사라집니다. 이를 “재발”이라고 합니다.  
 
  ![Visual Studio 오류 가리키기](../ide/media/vs_ide_gs_debug_error_hover1.png "Vs_ide_gs_debug_error_hover1")  
 
@@ -103,7 +105,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
  또는 **오류 목록**의 **코드** 열에서 하이퍼링크로 연결된 오류 코드 값을 클릭할 수 있습니다. 이 경우 오류 코드에 대한 Bing 검색이 시작됩니다.  
 
 ### <a name="performing-static-code-analysis"></a>정적 코드 분석 수행  
- "정적 코드 분석"은 "코드 관리에서 런타임 오류 또는 문제를 일으킬 수 있는 일반적인 문제가 있는지 내 코드를 자동으로 검사"하는 유용한 방법입니다. 빌드할 수 없게 하는 명백한 오류를 정리하고 나면 항상 이 분석을 실행하고 시간을 할애하여 생성되는 경고도 해결합니다. 몇 가지 코드 스타일 기술을 배울 수 있을 뿐 아니라 잠재적인 문제를 줄일 수 있습니다.  
+ “정적 코드 분석”은 “코드 관리에서 런타임 오류 또는 문제를 일으킬 수 있는 일반적인 문제가 있는지 내 코드를 자동으로 검사”하는 유용한 방법입니다. 빌드할 수 없게 하는 명백한 오류를 정리하고 나면 항상 이 분석을 실행하고 시간을 할애하여 생성되는 경고도 해결합니다. 몇 가지 코드 스타일 기술을 배울 수 있을 뿐 아니라 잠재적인 문제를 줄일 수 있습니다.  
 
  Alt+F11을 누르거나 최상위 메뉴에서 **분석->솔루션에서 코드 분석 실행**을 선택하여 정적 코드 분석을 시작합니다. 코드가 많은 경우 이 작업은 시간이 걸릴 수 있습니다.  
 
@@ -158,7 +160,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 
  ![Visual Studio 중단점](../ide/media/vs_ide_gs_debug_breakpoint1.png "Vs_ide_gs_debug_breakpoint1")  
 
- 코드가 중단될 때 표시된 코드 줄은 아직 실행되지 않았습니다. 이때 중단점으로 표시된 코드 줄에 대한 명령을 실행하고 변경된 값을 검사하는 것이 좋습니다. 이를 "한 단계씩 코드 실행"이라고 합니다. 표시된 코드가 메서드 호출인 경우 F11 키를 눌러 한 단계씩 코드를 실행할 수 있습니다. F10 키를 눌러 코드 줄을 "프로시저 단위로 실행"할 수도 있습니다. 중단점 단계 동작에 대한 자세한 내용은 [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.  
+ 코드가 중단될 때 표시된 코드 줄은 아직 실행되지 않았습니다. 이때 중단점으로 표시된 코드 줄에 대한 명령을 실행하고 변경된 값을 검사하는 것이 좋습니다. 이를 “한 단계씩 코드 실행”이라고 합니다. 표시된 코드가 메서드 호출인 경우 F11 키를 눌러 한 단계씩 코드를 실행할 수 있습니다. F10 키를 눌러 코드 줄을 “프로시저 단위로 실행”할 수도 있습니다. 코드 한 단계 실행에 대한 자세한 내용은 [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.  
 
  중단점의 일반적인 용도는 다음과 같습니다.  
 
@@ -175,7 +177,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 ### <a name="setting-conditional-breakpoints"></a>조건부 중단점 설정  
  루프 또는 재귀에 중단점이 있는 경우 또는 자주 한 단계씩 실행하는 많은 중단점이 있는 경우 조건부 중단점을 사용하여 특정 조건이 충족되는 경우에만 코드가 일시 중단되도록 합니다. 그렇지 않으면 F11 키를 많이 누르게 됩니다.  
 
- 조건부 중단점을 설정하고 변수가 특정 값으로 설정된 경우 또는 특정 임계값을 초과할 경우 코드를 일시 중단하려면 여백을 클릭하여 중단점을 설정한 다음 나타나는 호버 메뉴에서 "코그"를 선택합니다.  
+ 조건부 중단점을 설정하고 변수가 특정 값으로 설정된 경우 또는 특정 임계값을 초과할 경우 코드를 일시 중단하려면 여백을 클릭하여 중단점을 설정한 다음 나타나는 가리킨 항목 메뉴에서 “코그”를 선택합니다.  
 
  ![Visual Studio 중단점 설정](../ide/media/vs_ide_gs_debug_breakpoint_settings.png "Vs_ide_gs_debug_breakpoint_settings")  
 
@@ -204,13 +206,8 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
  Visual Studio의 단위 테스트 및 단위 테스트를 통해 더 나은 품질의 코드를 만드는 방법에 대한 자세한 내용은 [단위 테스트 기본 사항](../test/unit-test-basics.md)을 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목  
- [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)   
+ [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)   
  [디버거 설정 및 준비](../debugger/debugger-settings-and-preparation.md)   
  [64비트 응용 프로그램 디버그](../debugger/debug-64-bit-applications.md)   
  [디버거 기본 사항](../debugger/debugger-basics.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
