@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b5b496e0de0a12c9f52c944ef9e768c82d9be783
-ms.openlocfilehash: 429d55b3d0050eb0743d4abf39c202ad1b8383b1
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 90e19f6e693733162065754b441fb213fd0bd9f8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>명령줄 매개 변수를 사용하여 Visual Studio 2017 설치
@@ -71,8 +71,8 @@ ms.lasthandoff: 05/08/2017
 | `--installPath <dir>` | 작업할 인스턴스에 대한 설치 디렉터리입니다. 설치 명령의 경우 이 디렉터리는 **선택 사항**이고 인스턴스가 설치될 위치입니다. 다른 명령의 경우 이 디렉터리는 **필수**이고 이전에 설치한 인스턴스가 설치된 위치입니다. |
 | `--addProductLang <language-locale>` | **선택 사항**: 설치 또는 수정 작업을 하는 동안 제품에 설치될 UI 언어 팩을 결정합니다. 여러 언어 팩을 추가하려면 명령줄에 여러 번 나타날 수 있습니다. 없는 경우 설치에 컴퓨터 로캘이 사용됩니다. 자세한 내용은 이 페이지의 [언어 로캘 목록](#list-of-language-locales) 섹션을 참조하세요.|
 | `--removeProductLang <language-locale>` | **선택 사항**: 설치 또는 수정 작업을 하는 동안 제품에서 제거할 UI 언어 팩을 결정합니다. 여러 언어 팩을 추가하려면 명령줄에 여러 번 나타날 수 있습니다. 자세한 내용은 이 페이지의 [언어 로캘 목록](#list-of-language-locales) 섹션을 참조하세요.|
-| `--add <one or more workload or component IDs>` | **선택 사항**: 추가할 하나 이상의 작업 또는 구성 요소 ID입니다. 아티팩트의 필수 구성 요소가 설치되지만 권장 또는 선택적 구성 요소는 설치되지 않습니다. `--includeRecommended` 및/또는 `--includeOptional`을 사용하여 추가 구성 요소를 전체적으로 제어할 수 있습니다. 더 세부적으로 제어하기 위해 `;includeRecommended` 또는 `;includeOptional`을 ID에 추가할 수 있습니다(예: `--add Workload1;includeRecommended` 또는 `--add Workload2;includeRecommended;includeOptional`). 자세한 내용은 [작업 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요.|
-| `--remove <one or more workload or component IDs>` | **선택 사항**: 제거할 하나 이상의 작업 또는 구성 요소 ID입니다. 자세한 내용은 [작업 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요.|
+| `--add <workload or component ID>` | **선택 사항**: 추가할 워크로드 또는 구성 요소 ID입니다. 아티팩트의 필수 구성 요소가 설치되지만 권장 또는 선택적 구성 요소는 설치되지 않습니다. `--includeRecommended` 및/또는 `--includeOptional`을 사용하여 추가 구성 요소를 전체적으로 제어할 수 있습니다. 더 세부적으로 제어하기 위해 `;includeRecommended` 또는 `;includeOptional`을 ID에 추가할 수 있습니다(예: `--add Workload1;includeRecommended` 또는 `--add Workload2;includeRecommended;includeOptional`). 자세한 내용은 [작업 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요. 필요에 따라 이 옵션을 반복할 수 있습니다.|
+| `--remove <workload or component ID>` | **선택 사항**: 제거할 워크로드 또는 구성 요소 ID입니다. 자세한 내용은 [작업 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요. 필요에 따라 이 옵션을 반복할 수 있습니다.|
 | `--in <path>` | **선택 사항**: 응답 파일의 URI 또는 경로입니다.  |
 | `--all` | **선택 사항**: 제품에 대한 모든 작업 및 구성 요소를 설치할지의 여부입니다. |
 | `--allWorkloads` | **선택 사항**: 모든 작업 및 관련 필수 구성 요소를 설치하고, 권장 또는 선택적 구성 요소는 설치하지 않습니다. |
