@@ -31,15 +31,16 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 15f7678c7d0cba1afaa71e0443efc756880d99cc
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 078619c93e18fd25dfbc728d75835f5af58988fe
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="get-started-with-visual-studio"></a>Visual Studio 시작
 
-Visual Studio는 앱을 개발하기 위한 강력한 도구입니다. 아직 수행하지 않은 경우 [Visual Studio](https://www.visualstudio.com/vs/)를 다운로드하여 설치합니다. Visual Studio를 다운로드하고 원하는 대로 구성하는 방법에 대한 자세한 내용은 동영상 [Visual Studio 시작 - IDE 설정](https://www.youtube.com/watch?v=xLCedknQkN0&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=1)을 참조하세요.
+Visual Studio는 앱을 개발하기 위한 강력한 도구입니다. 아직 수행하지 않은 경우 [Visual Studio](https://www.visualstudio.com/vs/)를 다운로드하여 설치합니다. Visual Studio를 다운로드하고 원하는 대로 구성하는 방법에 대한 자세한 내용은 비디오 [Getting Started with Visual Studio - Setting up your IDE](https://www.youtube.com/watch?v=xLCedknQkN0&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=1)(Visual Studio 시작 - IDE 설정)를 참조하세요.
 
 ## <a name="visual-studio-tour"></a>Visual Studio 둘러보기
 Visual Studio에는 총체적으로 통합 개발 환경, 즉 IDE라고 하는 도구 창, 메뉴 및 도구 모음 집합이 있습니다. Visual Studio IDE는 개발 작업을 수행하는 데 도움이 됩니다. 자주 사용할 가능성이 큰 IDE 항목의 간략한 개요는 다음과 같습니다.
@@ -55,7 +56,7 @@ Visual Studio에서 자주 사용되는 도구 중 하나이며, 여기서 코�
 
 ### <a name="solution-explorer"></a>솔루션 탐색기
 
-**솔루션 탐색기**라는 도구 창에 모든 코드 파일이 나열됩니다. 솔루션 탐색기에서 해당 파일을 솔루션 및 프로젝트로 그룹화하여 코드를 구성할 수 있습니다. 굵게 표시된 프로젝트는 *시작 프로젝트*라고 합니다. 솔루션을 시작할 때 실행되는 첫 번째 코드입니다. 시작 프로젝트를 변경할 수 있습니다. 자세한 내용은 동영상 [Visual Studio 시작 - IDE 문서 블록](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK)을 참조하세요.
+**솔루션 탐색기**라는 도구 창에 모든 코드 파일이 나열됩니다. 솔루션 탐색기에서 해당 파일을 솔루션 및 프로젝트로 그룹화하여 코드를 구성할 수 있습니다. 굵게 표시된 프로젝트는 *시작 프로젝트*라고 합니다. 솔루션을 시작할 때 실행되는 첫 번째 코드입니다. 시작 프로젝트를 변경할 수 있습니다. 자세한 내용은 비디오 [Getting Started with Visual Studio - Building blocks of the IDE](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK)(Visual Studio 시작 - IDE 문서 블록)를 참조하세요.
 
 ![솔루션 탐색기 축소 노드](../ide/media/VSIDE_SolutionExplorer2_callouts.png)
 
@@ -79,7 +80,7 @@ Visual Studio에서 자주 사용되는 도구 중 하나이며, 여기서 코�
 ### <a name="team-explorer"></a>팀 탐색기
 **팀 탐색기**에서 [Git](https://git-scm.com/), [TFVC(Team Foundation 버전 제어)](https://www.visualstudio.com/en-us/docs/tfvc/overview) 등의 리소스 제어 도구에 연결하여 코드를 로컬에 저장하거나 호스티드 서비스에서 다른 사용자와 공유할 수 있습니다. 작업 추적 등에 사용할 수도 있습니다.
 
-자세한 내용은 동영상 [Visual Studio 시작 - IDE의 문서 블록](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK) 및 [Visual Studio 시작 - 소스 제어에서 프로젝트 열기](https://www.youtube.com/watch?v=pc9vX_4RGV4&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=3)를 참조하세요.
+자세한 내용은 비디오 [Getting Started with Visual Studio - Building blocks of the IDE](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK)(Visual Studio 시작 - IDE의 문서 블록) 및 [Getting Started with Visual Studio - Opening a project from Source Control](https://www.youtube.com/watch?v=pc9vX_4RGV4&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=3)(Visual Studio 시작 - 소스 제어에서 프로젝트 열기)을 참조하세요.
 
 ![팀 탐색기](../ide/media/TeamExplorer.png)
 

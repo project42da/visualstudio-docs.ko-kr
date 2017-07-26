@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
-ms.openlocfilehash: f4ae98f4e9b7dbf4b1066120316ee5a167ae78f2
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e372d9d6d935ff40054b8ba3f7684bf5ea9c458
+ms.openlocfilehash: aa3d791afc574200157104145617ff6ad6139b68
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>Visual Studio에서 컴파일 및 빌드
@@ -51,7 +52,7 @@ Visual Studio를 사용하여 개발 주기 동안 잦은 간격으로 응용 �
 |Team Foundation Build 사용|-   빌드 프로세스를 자동화할 수 있습니다. 예를 들어 밤마다 또는 코드를 체크 인할 때마다 하나 이상의 프로젝트를 빌드할 수 있습니다. 개발 컴퓨터 대신 공유 빌드 서버에서 프로젝트를 빌드할 수도 있습니다.<br />-   빌드하려는 코드, 실행하려는 테스트 및 기타 공통 옵션을 빠르게 지정할 수 있습니다.<br />-   빌드 워크플로를 수정하고 필요에 따라 빌드 작업을 만들어 사용자 지정 수준이 높은 작업을 수행할 수 있습니다.|[응용 프로그램 빌드](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)|  
   
 ## <a name="building-from-the-ide"></a>IDE에서 빌드  
- 프로젝트를 만들면 기본 빌드 구성이 정의되고 빌드에 대한 컨텍스트를 제공하기 위해 솔루션 빌드 구성이 할당됩니다. 솔루션 구성은 솔루션의 프로젝트가 빌드 및 배포되는 방법을 정의합니다. 프로젝트 구성은 플랫폼 및 빌드 형식(예: 릴리스 Win32)에 대해 고유한 프로젝트 속성 집합입니다. 이러한 기본 구성을 편집하고 자신만의 구성을 만들 수 있습니다. 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7) 및 [NIB 방법: 프로젝트 속성 및 구성 설정 수정](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)을 참조하세요.  
+ 프로젝트를 만들면 기본 빌드 구성이 정의되고 빌드에 대한 컨텍스트를 제공하기 위해 솔루션 빌드 구성이 할당됩니다. 솔루션 구성은 솔루션의 프로젝트가 빌드 및 배포되는 방법을 정의합니다. 프로젝트 구성은 플랫폼 및 빌드 형식(예: 릴리스 Win32)에 대해 고유한 프로젝트 속성 집합입니다. 이러한 기본 구성을 편집하고 자신만의 구성을 만들 수 있습니다. 자세한 내용은 [프로젝트 및 솔루션 속성 관리](managing-project-and-solution-properties.md)를 참조하세요.  
   
  IDE 내에서 수행할 수 있는 추가 작업은 다음과 같습니다.  
   

@@ -1,34 +1,54 @@
 ---
-title: "Visual Studio에서 창 레이아웃 사용자 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/23/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.windows"
-  - "vs.environment"
-helpviewer_keywords: 
-  - "자동 숨기기 창"
-  - "사용자 지정 레이아웃"
-  - "사용자 지정 창 구성"
-  - "디버그 모드"
-  - "문서 창[Visual Studio]"
-  - "인터페이스 모드"
-  - "레이아웃[Visual Studio], 창 관리"
-  - "MDI, 창 인터페이스 모드"
-  - "여러 대의 모니터"
-  - "탭 문서 모드"
-  - "Visual Studio], 관리"
+title: "Visual Studio에서 창 레이아웃 사용자 지정 | Microsoft 문서"
+ms.custom: 
+ms.date: 01/23/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.windows
+- vs.environment
+helpviewer_keywords:
+- windows [Visual Studio], managing
+- custom window configurations
+- layout [Visual Studio], window management
+- document windows [Visual Studio]
+- interface modes
+- AutoHide windows
+- MDI, window interface modes
+- multiple monitors
+- Tabbed Document mode
+- debug mode
+- custom layouts
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
 caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 8ab795965dc205cd783f469d134d64fb2b5dacf6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/24/2017
+
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio에서 창 레이아웃 사용자 지정
 Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 다양한 개발 워크플로에 가장 적합한 창 레이아웃을 만들 수 있습니다. 레이아웃을 사용자 지정할 때 IDE에서는 레이아웃을 기억합니다. 예를 들어 **솔루션 탐색기** 의 도킹 위치를 변경한 후 Visual Studio를 닫고 다음에 다시 시작하면 다른 컴퓨터에서 작업하고 있는 경우에도 **솔루션 탐색기** 가 같은 위치에 도킹됩니다. 또한 사용자 지정 레이아웃에 이름을 지정하고 저장한 다음 단일 명령으로 레이아웃 간을 전환할 수 있습니다. 예를 들어 편집용 레이아웃과 디버그용 레이아웃을 만들고 **창 &#124; 창 레이아웃 적용** 메뉴 명령을 사용하여 레이아웃 간에 전환할 수 있습니다.  
@@ -53,7 +73,7 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
  도구 모음은 끌거나 **사용자 지정** 대화 상자를 사용하여 정렬할 수 있습니다. 도구 모음을 배치하고 사용자 지정하는 방법에 대한 자세한 내용은 [방법: 메뉴 및 도구 모음 사용자 지정](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)을 참조하세요.  
 
 ## <a name="arrange-and-dock-windows"></a>창 정렬 및 고정  
- 문서 창과 도구 창 모두 *도킹*될 수 있으므로 IDE 창 프레임 내에서 위치와 크기를 갖고 있거나 IDE와 독립적인 별도의 부동 창으로 표시됩니다. 도구 창은 IDE 프레임 내의 원하는 위치에 도킹될 수 있습니다. 일부 도구 창은 편집기 프레임에서 탭 창으로 도킹될 수 있습니다. 문서 창은 편집기 프레임 내에서 도킹될 수 있으며 탭 순서의 현재 위치에 고정될 수 있습니다. 여러 창을 도킹하여 IDE 위나 외부에서 함께 부동 창으로 표시할 수 있습니다. 또한 도구 창을 숨기거나 최소화할 수도 있습니다.  
+ 문서 창과 도구 창 모두 *도킹*될 수 있으므로 IDE 창 프레임 내에서 위치와 크기를 갖고 있거나 IDE와 독립적인 별도의 부동 창으로 표시됩니다. 도구 창은 IDE 프레임 내의 원하는 위치에 도킹될 수 있습니다. 일부 도구 창은 편집기 프레임에서 탭 창으로 도킹될 수 있습니다. 문서 창은 편집기 프레임 내에서 도킹될 수 있으며 탭 순서의 현재 위치에 고정될 수 있습니다. 여러 창을 도킹하여 IDE 위나 외부의 “래프트”에서 함께 부동 창으로 표시할 수 있습니다. 또한 도구 창을 숨기거나 최소화할 수도 있습니다.  
 
  다음과 같은 방법으로 창을 정렬할 수 있습니다.  
 
@@ -74,7 +94,7 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
  도구 및 문서 창은 끌거나, **창** 메뉴에서 명령을 사용하거나, 정렬할 창의 제목 표시줄을 마우스 오른쪽 단추로 클릭하여 정렬할 수 있습니다.  
 
 > [!NOTE]
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
 
 ### <a name="dock-windows"></a>창 도킹  
  도구 창의 제목 표시줄이나 문서 창의 탭을 클릭하고 끌면 안내 다이아몬드가 나타납니다. 끌기 작업 중에 마우스 커서가 다이아몬드의 화살표 중 하나 위에 있을 때 지금 마우스 단추를 놓으면 창이 도킹될 위치를 보여 주는 음영 영역이 나타납니다.  
@@ -103,13 +123,13 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
  ![자동 숨기기](../ide/media/vs2015_auto_hide.png "vs2017_auto_hide")  
 
 > [!NOTE]
->  자동 숨기기가 도구 창에서 개별적으로 작동하는지 아니면 도킹된 그룹으로 작동하는지를 설정하려면 **옵션** 대화 상자에서 **Auto Hide button affects active tool windows only(자동 숨기기 단추가 활성 도구 창에만 영향을 미침)** 을 선택하거나 선택 취소합니다. 자세한 내용은 [옵션 대화 상자, 환경, 일반](../ide/reference/general-environment-options-dialog-box.md)을 참조하세요.  
+>  자동 숨기기가 도구 창에서 개별적으로 작동하는지 아니면 도킹된 그룹으로 작동하는지를 설정하려면 **옵션** 대화 상자에서 **Auto Hide button affects active tool windows only(자동 숨기기 단추가 활성 도구 창에만 영향을 미침)** 을 선택하거나 선택 취소합니다. 자세한 내용은 [General, Environment, Options Dialog Box](../ide/reference/general-environment-options-dialog-box.md)을 참조하세요.  
 
 > [!NOTE]
 >  자동 숨기기를 사용하도록 설정된 도구 창은 포커스가 있을 때 일시적으로 표시될 수 있습니다. 창을 다시 숨기려면 현재 창 외부에서 항목을 선택합니다. 창이 포커스를 잃으면 다시 표시되지 않습니다.  
 
 ### <a name="specifying-a-second-monitor"></a>두 번째 모니터 지정  
- 모니터가 하나 더 있고 운영 체제에서 해당 모니터를 지원하는 경우 창을 표시하는 모니터를 선택할 수 있습니다. 여러 창을 다른 모니터에서 함께 그룹화할 수도 있습니다.  
+ 모니터가 하나 더 있고 운영 체제에서 해당 모니터를 지원하는 경우 창을 표시하는 모니터를 선택할 수 있습니다. 여러 창을 다른 모니터의 “래프트”에서 함께 그룹화할 수도 있습니다.  
 
 > [!TIP]
 >  **솔루션 탐색기** 의 인스턴스를 여러 개 만들고 다른 모니터로 이동할 수 있습니다. 창을 마우스 오른쪽 단추로 클릭하고 **새 솔루션 탐색기 뷰**를 선택합니다. Ctrl 키를 선택한 상태에서 두 번 클릭하여 모든 창을 원래 모니터로 되돌릴 수 있습니다.  
@@ -134,11 +154,11 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
 
 2.  모니터가 여러 개 있는 경우 **솔루션 탐색기** 창 및 **속성** 창을 두 번째 모니터로 가져옵니다. 단일 모니터 시스템의 경우 디자이너를 제외한 모든 창을 닫습니다.  
 
-3.  **Ctrl+Alt+X** 를 눌러 도구 상자를 표시합니다. 창이 고정되어 있는 경우 두 모니터 중 하나로 끌어서 배치하려는 위치에 부동 창으로 놓습니다.  
+3.  **Ctrl+Alt+X** 를 눌러 도구 상자를 표시합니다. 창이 도킹되어 있는 경우 두 모니터 중 하나로 끌어서 배치하려는 위치에 부동 창으로 놓습니다.  
 
 4.  F5 키를 눌러 Visual Studio를 디버깅 모드로 전환합니다. 자동, 호출 스택 및 출력 디버깅 창의 위치를 원하는 방식으로 조정합니다. 만들려는 레이아웃은 편집 모드와 디버깅 모드에 모두 적용됩니다.  
 
-5.  디버깅 모드와 편집 모드에서 레이아웃이 원하는 방식으로 배치되었으면 기본 메뉴에서 **창 > 창 레이아웃 저장**을 선택합니다. 이 레이아웃을 "Designer"라고 하겠습니다.  
+5.  디버깅 모드와 편집 모드에서 레이아웃이 원하는 방식으로 배치되었으면 기본 메뉴에서 **창 > 창 레이아웃 저장**을 선택합니다. 이 레이아웃을 “Designer”라고 하겠습니다.  
 
      새 레이아웃에는 예약된 목록 Ctrl+Alt+1...0에 있는 바로 가기 키가 지정됩니다.  
 
@@ -148,7 +168,7 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
 
 2.  솔루션 탐색기에서 새 프로젝트를 마우스 오른쪽 단추로 클릭하고 **개체 탐색기에서 보기**를 선택합니다. 테이블, 뷰 및 데이터베이스의 기타 개체에 액세스할 수 있는 **SQL Server 개체 탐색기** 창이 표시됩니다. 이 창을 부동 창으로 변경하거나 고정된 상태로 둘 수 있습니다. 다른 도구 창을 원하는 방식으로 조정합니다. 현실감을 높이기 위해 실제 데이터베이스를 추가할 수 있지만 이 연습에서 꼭 필요한 것은 아닙니다.  
 
-3.  원하는 방식으로 레이아웃이 만들어졌으면 기본 메뉴에서 **창 > 창 레이아웃 저장**을 선택합니다. 이 레이아웃을 "DB Project"라고 하겠습니다. 이 프로젝트의 경우 디버그 모드 레이아웃에 대해서는 신경 쓰지 않겠습니다.  
+3.  원하는 방식으로 레이아웃이 만들어졌으면 기본 메뉴에서 **창 > 창 레이아웃 저장**을 선택합니다. 이 레이아웃을 “DB Project”라고 하겠습니다. 이 프로젝트의 경우 디버그 모드 레이아웃에 대해서는 신경 쓰지 않겠습니다.  
 
 ##### <a name="switch-between-the-layouts"></a>레이아웃 간 전환  
 
@@ -175,9 +195,4 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
 ## <a name="related-topics"></a>관련 항목  
 
 [방법: IDE에서 이동](../ide/how-to-move-around-in-the-visual-studio-ide.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: edc126208bb401c8dba9a6be722cbd0dbda21caf
-ms.openlocfilehash: 720048b861bfb208489a62340efca28ae88d1951
+ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
+ms.openlocfilehash: 28c6a166a423b3341ae32676830861eaa78cb40d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/22/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
@@ -155,11 +155,11 @@ A에서 B로 이동하는 데 도움이 되는 탐색 환경을 새로 고쳐 �
 
 * **다음으로 이동**(Ctrl+F12) &ndash; 모든 베이스 형식 또는 멤버에서 다양한 구현으로 이동합니다.
 
-* **모두로 이동**(Ctrl+T 또는 Ctrl+,) &ndash; 모든 파일/형식/멤버/기호 선언으로 직접 이동합니다. 결과 목록을 필터링하거나 쿼리 구문을 사용할 수 있습니다(예: 파일의 경우 "f searchTerm", 형식의 경우 "t searchTerm").
+* **모두로 이동**(Ctrl+T 또는 Ctrl+,) &ndash; 모든 파일/형식/멤버/기호 선언으로 직접 이동합니다. 결과 목록을 필터링하거나 쿼리 구문을 사용할 수 있습니다(예: 파일의 경우 “f searchTerm”, 형식의 경우 “t searchTerm”).
 
  ![향상된 모두로 이동](../ide/media/vs2017ide-navigation-go-to.png "향상된 모두로 이동 기능의 예")
 
-* **모든 참조 찾기(Shift+F12)** &ndash; 구문 색 지정을 사용하면 프로젝트, 정의 및 경로의 조합에 따라 [모든 참조 찾기] 결과를 그룹화할 수 있습니다. 또한 결과를 "잠그면" 원래 결과를 잃지 않고 다른 참조를 계속 찾을 수 있습니다.
+* **모든 참조 찾기(Shift+F12)** &ndash; 구문 색 지정을 사용하면 프로젝트, 정의 및 경로의 조합에 따라 [모든 참조 찾기] 결과를 그룹화할 수 있습니다. 또한 결과를 “잠그면” 원래 결과를 잃지 않고 다른 참조를 계속 찾을 수 있습니다.
 
  ![새로운 모든 참조 찾기 도구](../ide/media/vs2017ide-find-all-references.png "새로운 모든 참조 찾기 도구의 예")
 
@@ -199,11 +199,11 @@ Visual Studio를 개선하는 방법을 제안하거나 문제를 보고하려�
  발생한 문제의 전반적인 영향을 메시지만으로 전달할 수 없는 경우도 있습니다. 시스템 중단, 충돌 또는 기타 성능 문제가 발생하는 경우 **문제 보고** 도구를 사용하여 쉽게 재현 단계 및 지원 파일(예: 스크린샷, 추적 및 힙 덤프 파일)을 공유할 수 있습니다. 이 도구를 사용하는 방법에 대한 자세한 내용은 [문제를 보고하는 방법](how-to-report-a-problem-with-visual-studio-2017.md) 페이지를 참조하세요.  
 
 ### <a name="track-your-issue-in-connect"></a>Connect에서 문제 추적  
- Visual Studio 피드백의 상태를 추적하려는 경우 [Connect](http://connect.microsoft.com/)로 이동하여 버그를 신고하세요. 버그를 신고한 후에는 Connect로 돌아와 상태를 추적할 수 있습니다.  
+ Visual Studio 피드백의 상태를 추적하려는 경우 [Connect](http://connect.microsoft.com/)로 이동하여 버그를 보고하세요. 버그를 신고한 후에는 Connect로 돌아와 상태를 추적할 수 있습니다.  
 
 ## <a name="see-also"></a>참고 항목  
 * [Visual C++의 새로운 기능](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
-* [C#의 새로운 기능](https://docs.microsoft.com/en-us/dotnet/articles/csharp/csharp-7)  
+* [C#의 새로운 기능](https://docs.microsoft.com/en-us/dotnet/csharp/csharp-7)  
 * [Team Foundation Server의 새로운 기능](https://www.visualstudio.com/en-us/docs/whats-new)
 * [Visual Studio 릴리스 정보](https://www.visualstudio.com/news/vs2015-vs)
 

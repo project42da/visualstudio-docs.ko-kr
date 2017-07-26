@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
 ms.openlocfilehash: 3d132b3500bebd4071e3391d30a3cf444136ddea
-ms.lasthandoff: 03/06/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="step-5-add-label-references"></a>5단계: 레이블 참조 추가
@@ -40,8 +41,7 @@ ms.lasthandoff: 03/06/2017
   
 1.  다음 코드를 사용하여 폼에 레이블 참조를 추가합니다.  
   
-     [!code-vb[VbExpressTutorial4Step5#5](../ide/codesnippet/VisualBasic/step-5-add-label-references_1.vb)]
-     [!code-cs[VbExpressTutorial4Step5#5](../ide/codesnippet/CSharp/step-5-add-label-references_1.cs)]  
+     [!code-vb[VbExpressTutorial4Step5#5](../ide/codesnippet/VisualBasic/step-5-add-label-references_1.vb)]  [!code-cs[VbExpressTutorial4Step5#5](../ide/codesnippet/CSharp/step-5-add-label-references_1.cs)]  
   
      이러한 참조 변수는 이전에 폼에 개체(예: `Timer` 개체, `List` 개체 및 `Random` 개체)를 추가할 때 사용한 문과 비슷합니다. 그러나 두 문 중 하나에 `new` 키워드가 사용되지 않았으므로 이러한 문을 통해 두 개의 추가 레이블 컨트롤이 폼에 나타나지 않습니다. `new` 키워드가 없으면 개체가 만들어지지 않습니다. 이 때문에 `firstClicked`와 `secondClicked`를 참조 변수라고 합니다. 참조 변수는 `Label` 개체를 추적 또는 참조만 합니다.  
   
@@ -49,8 +49,7 @@ ms.lasthandoff: 03/06/2017
   
 2.  `firstClicked` 참조 변수를 사용하도록 Click 이벤트 처리기를 수정합니다. `label_Click()` 이벤트 처리기 메서드의 마지막 문(`clickedLabel.ForeColor = Color.Black;`)을 제거하고 다음에 나오는 `if` 문으로 바꿉니다. (주석 및 전체 `if` 문을 포함해야 합니다.)  
   
-     [!code-vb[VbExpressTutorial4Step5#6](../ide/codesnippet/VisualBasic/step-5-add-label-references_2.vb)]
-     [!code-cs[VbExpressTutorial4Step5#6](../ide/codesnippet/CSharp/step-5-add-label-references_2.cs)]  
+     [!code-vb[VbExpressTutorial4Step5#6](../ide/codesnippet/VisualBasic/step-5-add-label-references_2.vb)]  [!code-cs[VbExpressTutorial4Step5#6](../ide/codesnippet/CSharp/step-5-add-label-references_2.cs)]  
   
 3.  프로그램을 저장하고 실행합니다. 레이블 컨트롤 중 하나를 선택하면 아이콘이 나타납니다.  
   

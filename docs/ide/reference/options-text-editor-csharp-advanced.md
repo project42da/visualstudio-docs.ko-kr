@@ -1,83 +1,100 @@
 ---
 title: "옵션, 텍스트 편집기, C#, 고급 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining"
-  - "VS.ToolsOptionsPages.Text_Editor.Visual_JSharp.Advanced"
-  - "VS.ToolsOptionsPages.Text_Editor.Visual_JSharp.Outlining"
-  - "VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced"
-helpviewer_keywords: 
-  - "XML 주석"
-  - "XML 문서, 생성"
-  - "개요 옵션[C#]"
-  - "개요 옵션[J#]"
-  - "XML 문서, 만들기"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
+- VS.ToolsOptionsPages.Text_Editor.Visual_JSharp.Advanced
+- VS.ToolsOptionsPages.Text_Editor.Visual_JSharp.Outlining
+- VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
+helpviewer_keywords:
+- XML comments
+- XML documentation, generating
+- outlining options [C#]
+- outlining options [J#]
+- XML documentation, creating
 ms.assetid: 947f9d9a-b0f3-408d-9866-d82895bcee31
 caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# 옵션, 텍스트 편집기, C#, 고급
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 61a061b6a58b18451fc53c8d53f77889cc1ea253
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/24/2017
 
-이 대화 상자를 사용하여 Visual C\#에 대한 편집기 서식, 코드 리팩터링 및 XML 문서 주석에 대한 설정을 수정할 수 있습니다.  이 대화 상자에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더, **C\#**을 차례로 확장한 다음 **고급**을 클릭합니다.  
+---
+# <a name="options-text-editor-c-advanced"></a>옵션, 텍스트 편집기, C#, 고급
+Visual C#의 편집기 서식, 코드 리팩터링 및 XML 문서 주석에 대한 설정을 수정하려면 이 대화 상자를 사용합니다. 이 대화 상자에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고, **텍스트 편집기** 폴더를 확장하고, **C#**을 확장하고, **고급**을 클릭합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## 개요  
+## <a name="outlining"></a>개요  
  개요 모드로 파일 열기  
- 이 옵션을 선택하면 자동으로 코드 파일이 요약되어 축소 가능한 코드 블록이 만들어집니다.  파일이 처음 열릴 때 \#regions 블록과 비활성 코드 블록이 축소됩니다.  
+ 이 옵션을 선택하면 축소 가능한 코드 블록을 만드는 코드 파일이 자동으로 요약됩니다. 파일이 처음 열리면 #regions 블록 및 비활성 코드 블록이 축소됩니다.  
   
-## 편집기 도움말  
+## <a name="editor-help"></a>편집기 도움말  
  편집기에서 오류에 밑줄 표시  
- 코드에서 빌드 오류를 식별합니다.  이 옵션을 선택하면 특정한 의미가 있는 색으로 물결선이 나타납니다.  
+ 코드에서 빌드 오류를 식별합니다. 이 옵션을 선택하면 물결선 밑줄이 특정 의미가 있는 색으로 표시됩니다.  
   
--   구문 분석 오류는 빨간색입니다.  
+-   구문 분석 오류는 빨강입니다.  
   
--   빌드 오류는 파란색입니다.  
+-   빌드 오류는 파랑입니다.  
   
 -   빌드 경고는 녹색입니다.  
   
--   잘못된 [편집하며 계속하기](../../debugger/edit-and-continue.md) 편집 내용은 자주색입니다.  
+-   잘못된 [편집하며 계속하기](../../debugger/edit-and-continue.md) 편집은 자주입니다.  
   
- 포인터를 밑줄이 있는 코드 세그먼트로 이동하면 오류에 대한 정보를 표시하는 도구 설명을 볼 수 있습니다.  
+ 밑줄 표시된 코드 세그먼트 위로 포인터를 이동하면 오류에 대한 정보가 있는 도구 설명이 표시됩니다.  
   
  라이브 의미 오류 표시  
- 특정 컴파일 오류의 경우 알 수 없는 형식을 선언 및 사용하거나 알 수 없는 속성을 참조하는 등 명시적 컴파일 없이 식별합니다.  
+ 알 수 없는 형식을 선언 및 사용하거나 알 수 없는 속성을 참조하는 것과 같이 명시적 컴파일 없이 특정 컴파일 오류를 식별합니다.  
   
- 커서 아래 기호에 대한 참조를 강조 표시  
- 커서가 기호 안에 위치해 있거나 기호를 클릭하면 코드 파일에 속한 해당 기호의 모든 인스턴스가 강조 표시됩니다.  
+ 커서 아래의 기호에 대한 참조 강조  
+ 기호 내부에 커서를 놓거나 기호를 클릭하면 코드 파일에 있는 해당 기호의 모든 인스턴스가 강조 표시됩니다.  
   
-## 리팩터링  
- 리팩터링의 결과 확인  
- 빌드 오류가 있는 코드를 리팩터링하려고 할 때나 리팩터링으로 인해 코드 참조가 원래 바인딩과 다른 것에 바인딩될 때 **확인 결과** 대화 상자를 표시합니다.  
+## <a name="refactoring"></a>리팩터링  
+ 리팩터링 결과 확인  
+ 빌드 오류가 포함된 코드를 리팩터링하려고 할 경우 또는 리팩터링으로 인해 코드 참조가 원래 바인딩과 다른 항목에 바인딩될 경우 **확인 결과** 대화 상자를 표시합니다.  
   
  컴파일러에서 생성한 참조가 있는 멤버에 대해 경고  
- 컴파일러에서 생성한 참조와 동일한 이름이 있는 멤버를 리팩터링하려고 하면 경고 대화 상자가 표시됩니다.  
+ 컴파일러에서 생성한 참조와 같은 이름을 가진 멤버를 리팩터링하려는 경우 경고 대화 상자를 표시합니다.  
   
-## XML 문서 주석  
- \/\/\/에 대해 XML 문서 주석 생성  
- 이 옵션을 선택하면 사용자가 주석 시작을 나타내는 \/\/\/를 입력한 후 XML 문서 주석에 대해 자동으로 \<summary\> 시작 및 끝 태그가 삽입됩니다.  XML 문서에 대한 자세한 내용은 [XML 문서 주석](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)을 참조하십시오.  
+## <a name="xml-documentation-comments"></a>XML 문서 주석  
+ ///에 대해 XML 문서 주석 생성  
+ 이 옵션을 선택하면 /// 주석 도입부를 입력한 후 XML 문서 주석에 대한 \<summary> 시작 및 끝 태그가 자동으로 삽입됩니다. XML 문서에 대한 자세한 내용은 [XML 문서 주석](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)을 참조하세요.  
   
-## 인터페이스 구현  
- \#region으로 생성된 코드 감싸기  
- 인터페이스 구현 또는 명시적으로 인터페이스 구현을 사용하는 경우 메서드 주변에 \#region \<*interface name*\> 멤버를 삽입합니다.  
+## <a name="implement-interface"></a>인터페이스 구현  
+ #region으로 생성된 코드 감싸기  
+ 인터페이스 구현 또는 명시적으로 인터페이스 구현이 사용될 경우 메서드 주위에 #region \<*interface name*> 멤버를 삽입합니다.  
   
-## Using 구성  
- using 정렬 시 'System' 지시문 먼저 배치  
- 이 옵션을 선택하면 다른 using 지시문 전에 `System` using 지시문이 나타납니다.  자세한 내용은 [Using 정렬](../../misc/sort-usings.md)을 참조하십시오.  
+## <a name="organize-usings"></a>Using 구성  
+ using 정렬 시 ‘System’ 지시문 먼저 배치  
+ 이 옵션을 선택하면 `System` using 지시문이 다른 using 지시문 앞에 표시됩니다. 자세한 내용은 [Visual C# IntelliSense](../../ide/visual-csharp-intellisense.md#automatic-code-generation)에서 using 구성을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 문서 주석](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   
  [언어별 편집기 옵션 설정](../../ide/reference/setting-language-specific-editor-options.md)   
- [Visual C\# IntelliSense](../../ide/visual-csharp-intellisense.md)
+ [Visual C# IntelliSense](../../ide/visual-csharp-intellisense.md)

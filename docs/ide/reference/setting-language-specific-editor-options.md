@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: fb24d1c3e48b1125e025b89fe25cfb362ced11be
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: ab506c0d3bdf9a03ee2212d6e4767d8443c604e5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="setting-language-specific-editor-options"></a>언어별 편집기 옵션 설정
@@ -72,5 +73,5 @@ ms.lasthandoff: 02/22/2017
  [편집기 사용자 지정](../../ide/customizing-the-editor.md)  
  기본 설정을 지정할 수 있는 편집기의 여러 측면을 설명하는 항목에 대한 링크를 제공합니다.  
   
- [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+ [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)  
  IDE(통합 개발 환경)의 설정, 키 바인딩 및 다른 기능을 사용자 지정하는 방법을 설명하는 항목에 대한 링크를 제공합니다.

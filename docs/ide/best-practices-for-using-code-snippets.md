@@ -30,17 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 954bd5e0ba38d7a538700cba175933cc8303c863
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 165fe357bd9849ca2588542614449558eae52740
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practices-for-using-code-snippets"></a>코드 조각을 사용하는 방법에 대한 유용한 정보
 코드 조각의 코드에는 작업을 수행하는 가장 기본적인 방법만 표시됩니다. 대부분 응용 프로그램에서는 응용 프로그램에 맞게 코드를 수정해야 합니다.  
   
 ## <a name="handling-exceptions"></a>예외 처리  
- 일반적으로 코드 조각 Try…Catch 블록은 모든 예외를 catch 및 다시 throw합니다. 이는 프로젝트에 적합한 선택이 아닐 수 있습니다. 각 예외에 대한 여러 가지 응답 방법이 있습니다. 예를 들어 [방법: try/catch를 사용하여 예외 처리(C# 프로그래밍 가이드)](http://msdn.microsoft.com/Library/ca8e3773-980e-4767-8633-7408540e9818) 및 [Try...Catch...Finally 문 ](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)을 참조하세요.  
+ 일반적으로 코드 조각 Try...Catch 블록은 모든 예외를 catch 및 다시 throw합니다. 이는 프로젝트에 적합한 선택이 아닐 수 있습니다. 각 예외에 대한 여러 가지 응답 방법이 있습니다. 예를 들어 [방법: try/catch를 사용하여 예외 처리(C# 프로그래밍 가이드)](/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch) 및 [Try...Catch...Finally 문 ](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)을 참조하세요.  
   
 ## <a name="file-locations"></a>파일 위치  
  응용 프로그램에 맞게 파일 위치를 조정할 경우 다음을 고려해야 합니다.  

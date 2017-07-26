@@ -28,13 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: c0966f42efc54452d0f7cd11e19c6f82f7686474
-ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 65b94b58da1e06febb1c189ddff85f792fef1737
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="getting-started-with-c-in-visual-studio"></a>Visual Studio에서 C++ 시작
-이 연습을 완료하면 Visual Studio를 사용하여 응용 프로그램을 개발할 때 사용할 수 있는 여러 도구 및 대화 상자에 익숙해집니다. 간단한 "Hello, World" 스타일 응용 프로그램을 만들면서 IDE(통합 개발 환경)에서 작업하는 방법을 배워 보겠습니다.  
+이 연습을 완료하면 Visual Studio를 사용하여 응용 프로그램을 개발할 때 사용할 수 있는 여러 도구 및 대화 상자에 익숙해집니다. 간단한 “Hello, World” 스타일 응용 프로그램을 만들면서 IDE(통합 개발 환경)에서 작업하는 방법을 배워 보겠습니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
@@ -48,8 +50,8 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
  [앱 릴리스 버전 빌드](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_BuildRelease)  
   
-##  <a name="a-namebkmkconfigurea-sign-in-to-visual-studio"></a><a name="BKMK_Configure"></a> Visual Studio에 로그인  
- Visual Studio를 처음 시작하는 경우 Live 또는 Outlook 같은 Microsoft 계정을 사용하여 로그인할 수 있는 옵션이 제공됩니다. 로그인하면 모든 장치 간에 설정을 동기화할 수 있습니다. 자세한 내용은 [Visual Studio에 로그인](../ide/signing-in-to-visual-studio.md)을 참조하세요.  
+##  <a name="BKMK_Configure"></a> Visual Studio에 로그인  
+ Visual Studio를 처음 시작하는 경우 Live 또는 Outlook 같은 Microsoft 계정을 사용하여 로그인할 수 있는 옵션이 제공됩니다. 로그인하면 모든 장치 간에 설정을 동기화할 수 있습니다. 자세한 내용은 [Signing in to Visual Studio](../ide/signing-in-to-visual-studio.md)을 참조하세요.  
   
  그림 1: Visual Studio IDE  
   
@@ -57,7 +59,7 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
  Visual Studio를 열면 IDE의 세 가지 기본 부분인 도구 창, 메뉴 및 도구 모음, 주 창 공간을 확인할 수 있습니다. **빠른 실행**, 메뉴 모음 및 상단의 표준 도구 모음이 포함된 도구 창은 앱 창 왼쪽과 오른쪽에 도킹되어 있습니다. 응용 프로그램 창의 가운데에는 **시작 페이지**가 있습니다. 솔루션 또는 프로젝트를 열면 편집기와 디자이너가 이 공간에 나타납니다. 응용 프로그램을 개발할 때 이 중앙 영역에서 대부분의 시간을 보냅니다.  
   
-##  <a name="a-namebkmkcreateappa-create-a-simple-application"></a><a name="BKMK_CreateApp"></a> 간단한 응용 프로그램 만들기  
+##  <a name="BKMK_CreateApp"></a> 간단한 응용 프로그램 만들기  
  Visual Studio에서 앱을 만들 때 먼저 프로젝트와 솔루션을 만들어야 합니다. 이 예제에서는 Windows 콘솔 응용 프로그램을 만듭니다.  
   
 #### <a name="to-create-a-console-app"></a>콘솔 앱을 만들려면  
@@ -81,10 +83,10 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
  ![솔루션 탐색기의 솔루션 파일](../ide/media/c--ide_solutioncontents.png "C++IDE_SolutionContents")  
   
-##  <a name="a-namebkmkaddcodea-add-code-to-the-application"></a><a name="BKMK_AddCode"></a> 응용 프로그램에 코드 추가  
+##  <a name="BKMK_AddCode"></a> 응용 프로그램에 코드 추가  
  다음으로 콘솔 창에 "Hello"를 표시하는 코드를 추가합니다.  
   
-#### <a name="to-display-hello-in-the-console-window"></a>콘솔 창에 "Hello"를 표시하려면  
+#### <a name="to-display-hello-in-the-console-window"></a>콘솔 창에 “Hello”를 표시하려면  
   
 1.  GreetingsConsoleApp.cpp 파일에서 `return 0;` 줄 앞에 빈 줄을 입력하고 다음 코드를 입력합니다.  
   
@@ -107,7 +109,7 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
     using namespace std;  
     ```  
   
-     코드를 입력하면 입력한 문자에 대한 추천 단어를 표시하는 상자가 나타나는 것을 확인할 수 있습니다. 이 상자는 C++ IntelliSense의 일부로, 클래스 또는 인터페이스 멤버 및 매개 변수 정보의 나열을 비롯한 코딩 프롬프트를 제공합니다. 또한 미리 정의된 코드 블록인 코드 조각을 사용할 수도 있습니다. 자세한 내용은 [IntelliSense 사용](../ide/using-intellisense.md) 및 [코드 조각](../ide/code-snippets.md)을 참조하세요.  
+     코드를 입력하면 입력한 문자에 대한 추천 단어를 표시하는 상자가 나타나는 것을 확인할 수 있습니다. 이 상자는 C++ IntelliSense의 일부로, 클래스 또는 인터페이스 멤버 및 매개 변수 정보의 나열을 비롯한 코딩 프롬프트를 제공합니다. 또한 미리 정의된 코드 블록인 코드 조각을 사용할 수도 있습니다. 자세한 내용은 [Using IntelliSense](../ide/using-intellisense.md) 및 [Code Snippets](../ide/code-snippets.md)을 참조하세요.  
   
      `cout` 아래의 빨간색 물결선은 오류를 해결하면 사라집니다.  
   
@@ -115,7 +117,7 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
      ![cout 오류 수정 코드](../ide/media/c--ide_coutfix.png "C++IDE_CoutFix")  
   
-##  <a name="a-namebkmkdebugtesta-debug-and-test-the-application"></a><a name="BKMK_DebugTest"></a> 응용 프로그램 디버그 및 테스트  
+##  <a name="BKMK_DebugTest"></a> 응용 프로그램 디버그 및 테스트  
  GreetingsConsoleApp을 디버그하여 단어 "Hello"가 콘솔 창에 표시되는지 여부를 확인할 수 있습니다.  
   
 #### <a name="to-debug-the-application"></a>응용 프로그램을 디버그하려면  
@@ -144,7 +146,7 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
  자세한 내용은 [콘솔 프로젝트](../debugger/debugging-preparation-console-projects.md)를 참조하세요.  
   
-##  <a name="a-namebkmkbuildreleasea-build-a-release-version-of-the-app"></a><a name="BKMK_BuildRelease"></a> 앱 릴리스 버전 빌드  
+##  <a name="BKMK_BuildRelease"></a> 앱 릴리스 버전 빌드  
  모든 것이 작동하는 것을 확인했으므로 응용 프로그램의 릴리스 빌드를 준비할 수 있습니다.  
   
 #### <a name="to-clean-the-solution-files-and-build-a-release-version"></a>솔루션 파일을 정리하고 릴리스 버전을 빌드하려면  
@@ -169,8 +171,3 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
  [Visual Studio 생산성 팁](../ide/productivity-tips-for-visual-studio.md)   
  [Visual Studio 샘플](../ide/visual-studio-samples.md)   
  [Visual Studio에서 개발 시작](../ide/get-started-developing-with-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

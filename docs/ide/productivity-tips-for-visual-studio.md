@@ -28,10 +28,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 5b845b8be2d60e1a32cc570fd59ae94f2063c116
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: cc0ac8b3418c725579b25712e14c373028fca339
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio 생산성 팁
@@ -140,7 +140,7 @@ ms.lasthandoff: 02/22/2017
 ##  <a name="BKMK_Debugging"></a> 코드 디버그  
  디버깅은 시간이 오래 걸릴 수 있지만 다음 팁을 참고하여 처리 시간을 줄일 수 있습니다.  
   
--   **여러 브라우저에서 같은 페이지, 응용 프로그램 또는 사이트 테스트** 코드를 디버그할 때 **브라우저 선택** 대화 상자를 열지 않고도 [페이지 검사기(Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209) 등의 설치된 웹 브라우저 간에 쉽게 전환할 수 있습니다. **디버깅 시작** 단추 옆의 **표준** 도구 모음에 있는 **디버그 대상** 목록을 사용하여 디버그하거나 페이지를 보는 데 사용하는 브라우저를 신속하게 확인할 수 있습니다.  
+-   **여러 브라우저에서 같은 페이지, 응용 프로그램 또는 사이트 테스트** 코드를 디버그할 때 **브라우저 선택** 대화 상자를 열지 않고도 [페이지 검사기(Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209) 등의 설치된 웹 브라우저 간에 쉽게 전환할 수 있습니다. **디버깅 시작** 단추 옆에 있는 **표준** 도구 모음에서 **디버그 대상** 목록을 사용하여 디버그 또는 보기 페이지로 사용 중인 브라우저를 빠르게 확인할 수 있습니다.  
   
      ![웹 브라우저 디버그 옵션 선택](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")  
   
@@ -167,11 +167,11 @@ ms.lasthandoff: 02/22/2017
   
      파일을 고정하려면 해당 파일의 탭을 선택하고 **고정 상태 설정/해제** 단추를 선택합니다.  
   
--   **문서 및 창을 다른 모니터로 이동** 응용 프로그램을 개발할 때 모니터를 2개 이상 사용하는 경우 편집기에서 연 파일을 다른 모니터로 이동하면 응용 프로그램 부분별로 쉽게 작업할 수 있습니다. 디버거 창 같은 도구 창을 다른 모니터로 이동하고 도킹 문서와 도구 창을 함께 탭하여 “rafts”를 만들 수도 있습니다. 자세한 내용은 [방법: 창 정렬 및 고정](../misc/how-to-arrange-and-dock-windows.md)을 참조하세요.  
+-   **문서 및 창을 다른 모니터로 이동** 응용 프로그램을 개발할 때 모니터를 2개 이상 사용하는 경우 편집기에서 연 파일을 다른 모니터로 이동하면 응용 프로그램 부분별로 쉽게 작업할 수 있습니다. 디버거 창 같은 도구 창을 다른 모니터로 이동하고 도킹 문서와 도구 창을 함께 탭하여 “래프트”를 만들 수도 있습니다. 자세한 내용은 [Visual Studio에서 창 레이아웃 사용자 지정](../ide/customizing-window-layouts-in-visual-studio.md)을 참조하세요.  
   
      **솔루션 탐색기**의 다른 인스턴스를 만들고 다른 모니터로 이동하여 파일을 더욱 쉽게 관리할 수도 있습니다. **솔루션 탐색기**의 다른 인스턴스를 만들려면 **솔루션 탐색기**에서 바로 가기 메뉴를 열고 **새 솔루션 탐색기 뷰**를 선택합니다.  
   
--   **Visual Studio에 표시되는 글꼴 사용자 지정** IDE에서 텍스트에 사용되는 글꼴 서체, 크기 및 색을 변경할 수 있습니다. 예를 들어, 편집기의 특정 코드 요소의 색과 도구 창 또는 IDE 전체에서 글꼴을 사용자 지정할 수 있습니다. 자세한 내용은 [방법: 글꼴 및 색 변경](../ide/how-to-change-fonts-and-colors-in-visual-studio.md) 및 [방법: 편집기에서 글꼴 및 색 변경](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)을 참조하세요.  
+-   **Visual Studio에 표시되는 글꼴 사용자 지정** IDE에서 텍스트에 사용되는 글꼴, 글꼴 크기 및 글꼴 색을 변경할 수 있습니다. 예를 들어, 편집기의 특정 코드 요소의 색과 도구 창 또는 IDE 전체에서 글꼴을 사용자 지정할 수 있습니다. 자세한 내용은 [방법: 글꼴 및 색 변경](../ide/how-to-change-fonts-and-colors-in-visual-studio.md) 및 [방법: 편집기에서 글꼴 및 색 변경](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [자주 사용되는 명령의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)   

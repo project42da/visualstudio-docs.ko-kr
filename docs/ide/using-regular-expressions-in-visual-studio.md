@@ -38,14 +38,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 6d7266c35746fa4413ffd4ce058b1acbe9229af2
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 541b728d006f85fc550c5ddad2a7cd74190c244a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio에서 정규식 사용
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 .NET Framework 정규식을 사용하여 텍스트를 찾고 바꿉니다. .NET 정규식에 대한 자세한 내용은 [.NET Framework 정규식](http://msdn.microsoft.com/Library/521b3f6d-f869-42e1-93e5-158c54a6895d)을 참조하세요.  
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 .NET Framework 정규식을 사용하여 텍스트를 찾고 바꿉니다. .NET 정규식에 대한 자세한 내용은 [.NET Framework 정규식](/dotnet/standard/base-types/regular-expressions)을 참조하세요.  
   
  Visual Studio 2012 이전의 Visual Studio에서는 찾기 및 바꾸기 창에서 사용자 지정 정규식 구문을 사용했습니다. 더 일반적으로 사용되는 일부 사용자 지정 정규식 기호를 .NET 버전으로 변환하는 방법에 대한 자세한 내용은 [Visual Studio Regular Expression Conversions](https://msdn.microsoft.com/en-us/library/2k3te2cs\(v=vs.110\).aspx)(Visual Studio 정규식 변환)를 참조하세요.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/22/2017
 >  Windows 운영 체제에서 대부분 줄은 “\r\n”(캐리지 리턴 뒤에 줄 바꿈)으로 끝납니다. 이들 문자는 표시되지 않지만 편집기에 있고 .NET 정규식 서비스에 전달됩니다.  
   
 > [!TIP]
->  바꾸기 패턴에서 사용되는 정규식에 대한 자세한 내용은 [정규식의 대체](http://msdn.microsoft.com/Library/d1f52431-1c7d-4dc6-8792-6b988256892e)를 참조하세요. 번호가 있는 캡처 그룹을 사용하려는 경우 번호가 있는 그룹을 지정하려면 `$1` 구문을 사용하고 특정 그룹을 지정하려면 `(x)` 구문을 사용합니다. 예를 들어 그룹화된 정규식 `(\d)([a-z])`는 문자열 **1a 2b 3c 4d**에서 일치 항목 4개를 찾습니다. 바꾸기 문자열 `z$1`은 해당 문자열을 **z1 z2 z3 z4**로 변환합니다.  
+>  바꾸기 패턴에서 사용되는 정규식에 대한 자세한 내용은 [정규식의 대체](/dotnet/standard/base-types/substitutions-in-regular-expressions)를 참조하세요. 번호가 있는 캡처 그룹을 사용하려는 경우 번호가 있는 그룹을 지정하려면 `$1` 구문을 사용하고 특정 그룹을 지정하려면 `(x)` 구문을 사용합니다. 예를 들어 그룹화된 정규식 `(\d)([a-z])`는 문자열 **1a 2b 3c 4d**에서 일치 항목 4개를 찾습니다. 바꾸기 문자열 `z$1`은 해당 문자열을 **z1 z2 z3 z4**로 변환합니다.  
   
 ## <a name="regular-expressions-in-visual-studio"></a>Visual Studio의 정규식  
  다음은 몇 가지 예입니다.  

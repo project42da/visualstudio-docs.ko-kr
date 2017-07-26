@@ -1,19 +1,39 @@
 ---
-title: "10단계: 추가 단추 및 확인란의 코드 작성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "10단계: 추가 단추 및 확인란의 코드 작성 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 185cf370-ab39-4ac0-b6bc-601d5b95a4a2
 caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 19
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: d89b7cf0a81ed9987f8a09fb6e3139deb13f579e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
+
 ---
 # <a name="step-10-write-code-for-additional-buttons-and-a-check-box"></a>10단계: 추가 단추 및 확인란의 코드 작성
 이제 다른 네 메서드를 완료할 준비가 되었습니다. 지금 이 코드를 복사하여 붙여넣을 수도 있지만 이 자습서의 내용을 최대한 학습하려면 이 코드를 입력하고 IntelliSense를 사용합니다.  
@@ -29,16 +49,10 @@ caps.handback.revision: 19
   
 -   다음 코드를 Form1 코드 파일(Form1.cs 또는 Form1.vb)에 추가합니다. Visual Basic 코드를 보려면 **VB** 탭을 선택합니다.  
   
-     [!code-vb[VbExpressTutorial1Step9_10#2](../ide/codesnippet/VisualBasic/step-10-write-code-for-additional-buttons-and-a-check-box_1.vb)]
-     [!code-cs[VbExpressTutorial1Step9_10#2](../ide/codesnippet/CSharp/step-10-write-code-for-additional-buttons-and-a-check-box_1.cs)]  
+     [!code-vb[VbExpressTutorial1Step9_10#2](../ide/codesnippet/VisualBasic/step-10-write-code-for-additional-buttons-and-a-check-box_1.vb)]  [!code-cs[VbExpressTutorial1Step9_10#2](../ide/codesnippet/CSharp/step-10-write-code-for-additional-buttons-and-a-check-box_1.cs)]  
   
 ### <a name="to-continue-or-review"></a>계속하거나 검토하려면  
   
 -   다음 자습서 단계로 이동하려면 [11단계: 프로그램 실행 및 기타 기능 사용](../ide/step-11-run-your-program-and-try-other-features.md)을 참조하세요.  
   
 -   이전 자습서 단계로 돌아가려면 [9단계: 코드 검토, 주석 처리 및 테스트](../ide/step-9-review-comment-and-test-your-code.md)를 참조하세요.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

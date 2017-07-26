@@ -42,17 +42,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: ce6f346f77217e61d93879118610934422cdc642
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: f43b470f07e8b90c62d17c7905ad458a22d41ff1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Visual Studio에서 프로젝트 및 솔루션 빌드 및 정리
 이 항목의 절차에 따라 솔루션에 포함된 프로젝트 또는 프로젝트 항목의 전체 또는 일부를 빌드, 다시 빌드 또는 정리할 수 있습니다. 단계별 자습서는 [연습: 응용 프로그램 빌드](../ide/walkthrough-building-an-application.md)를 참조하세요.  
   
 > [!NOTE]
->  사용 중인 Visual Studio 버전의 UI는 활성 설정에 따라 이 항목의 설명과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴를 열고 **설정 가져오기 및 내보내기**를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  사용 중인 Visual Studio 버전의 UI는 활성 설정에 따라 이 항목의 설명과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴를 열고 **설정 가져오기 및 내보내기**를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
 ### <a name="to-build-rebuild-or-clean-an-entire-solution"></a>전체 솔루션을 빌드, 다시 빌드 또는 정리하려면  
   

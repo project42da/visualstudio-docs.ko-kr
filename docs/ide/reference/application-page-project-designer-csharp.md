@@ -1,25 +1,45 @@
 ---
-title: "프로젝트 디자이너, 응용 프로그램 페이지(C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cs.ProjectPropertiesApplicationWPF"
-  - "cs.ProjectPropertiesApplication"
-helpviewer_keywords: 
-  - "프로젝트 디자이너, 응용 프로그램 페이지"
-  - "프로젝트 디자이너의 응용 프로그램 페이지"
+title: "프로젝트 디자이너, 응용 프로그램 페이지(C#) | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cs.ProjectPropertiesApplicationWPF
+- cs.ProjectPropertiesApplication
+helpviewer_keywords:
+- Project Designer, Application page
+- Application page in Project Designer
 ms.assetid: f13701a8-4e2e-4474-9d60-bb43decbe0c1
 caps.latest.revision: 56
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 56
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: 3f0056a62dc11c5584e38e9912ccd94f5b9e9b0e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/26/2017
+
 ---
 # <a name="application-page-project-designer-c"></a>프로젝트 디자이너, 응용 프로그램 페이지(C#)
 **프로젝트 디자이너**의 **응용 프로그램** 페이지를 사용하여 프로젝트의 응용 프로그램 설정과 속성을 지정할 수 있습니다.  
@@ -32,14 +52,14 @@ caps.handback.revision: 56
  다음 옵션을 사용하여 응용 프로그램에 대한 일반 설정을 구성할 수 있습니다.  
   
  **어셈블리 이름**  
- 어셈블리 매니페스트를 보유할 출력 파일의 이름을 지정합니다. 이 속성을 변경하면 **출력 이름** 속성도 변경됩니다. [/out(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option)을 사용하여 명령줄에서 이 변경을 수행할 수도 있습니다. 이 속성을 프로그래밍 방식으로 액세스하려면 <xref:VSLangProj.ProjectProperties.AssemblyName%2A>를 참조하세요.  
+ 어셈블리 매니페스트를 보유할 출력 파일의 이름을 지정합니다. 이 속성을 변경하면 **출력 이름** 속성도 변경됩니다. [/out(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option)을 사용하여 명령줄에서 이 변경을 수행할 수도 있습니다. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.AssemblyName%2A>을 참조하세요.  
   
  **기본 네임스페이스**  
  프로젝트에 추가된 파일에 대한 기본 네임스페이스를 지정합니다.  
   
  코드에서 네임스페이스를 만드는 방법에 대한 자세한 내용은 [네임스페이스](/dotnet/csharp/language-reference/keywords/namespace)를 참조하세요.  
   
- 이 속성을 프로그래밍 방식으로 액세스하려면 <xref:VSLangProj.ProjectProperties.RootNamespace%2A>를 참조하세요.  
+ 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.RootNamespace%2A>를 참조하세요.  
   
  **대상 프레임워크**  
  응용 프로그램의 대상 .NET Framework 버전을 지정합니다. 이 옵션은 컴퓨터에 설치된 .NET Framework 버전에 따라 다른 값을 가질 수 있습니다.  
@@ -56,12 +76,12 @@ caps.handback.revision: 56
   
  웹 응용 프로그램 프로젝트의 경우 **클래스 라이브러리**를 지정해야 합니다.  
   
- **WinMD 파일** 옵션을 지정하는 경우 유형을 Windows 런타임 프로그래밍 언어로 프로젝션할 수 있습니다. 프로젝트의 출력을 WinMD 파일로 패키징하면 여러 언어로 응용 프로그램을 코딩한 후 모두 동일한 언어로 작성한 것처럼 코드가 상호 운용되도록 할 수 있습니다. [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] 앱을 포함하여 Windows 런타임 라이브러리를 대상으로 하는 솔루션에 대해 이 옵션을 사용할 수 있습니다. 자세한 내용은[C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](http://go.microsoft.com/fwlink/?LinkId=231895)를 참조하세요.  
+ **WinMD 파일** 옵션을 지정하는 경우 유형을 Windows 런타임 프로그래밍 언어로 프로젝션할 수 있습니다. 프로젝트의 출력을 WinMD 파일로 패키징하면 여러 언어로 응용 프로그램을 코딩한 후 모두 동일한 언어로 작성한 것처럼 코드가 상호 운용되도록 할 수 있습니다. [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] 앱을 포함하여 Windows 런타임 라이브러리를 대상으로 하는 솔루션에 대해 이 옵션을 사용할 수 있습니다. 자세한 내용은[C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)를 참조하세요.  
   
 > [!NOTE]
 >  Windows 런타임은 어떤 언어에서 사용하든 네이티브 개체로 나타나도록 유형을 프로젝션할 수 있습니다. 예를 들어 Windows 런타임과 상호 작용하는 JavaScript 응용 프로그램에서는 JavaScript 개체 집합으로 사용되고, C# 응용 프로그램에서는 라이브러리가 .NET 개체 컬렉션으로 사용됩니다. 프로젝트의 출력을 WinMD 파일로 패키징하면 Windows 런타임에서 사용되는 것과 동일한 기술을 이용할 수 있습니다.  
   
- **응용 프로그램 종류** 속성에 대한 자세한 내용은 [/target(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option)을 참조하세요. 이 속성을 프로그래밍 방식으로 액세스하는 방법에 대한 자세한 내용은 <xref:VSLangProj.ProjectProperties.OutputType%2A>를 참조하세요.  
+ **응용 프로그램 종류** 속성에 대한 자세한 내용은 [/target(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option)을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하는 방법에 대한 자세한 내용은 <xref:VSLangProj.ProjectProperties.OutputType%2A>을 참조하세요.  
   
  **어셈블리 정보**  
  이 단추를 클릭하면 [어셈블리 정보 대화 상자](../../ide/reference/assembly-information-dialog-box.md)가 표시됩니다.  
@@ -71,7 +91,7 @@ caps.handback.revision: 56
   
  기본적으로, WPF 브라우저 응용 프로그램 프로젝트에서 이 옵션은 **(설정 안 함)**입니다. 다른 옵션은 *Projectname*.App입니다. 이러한 종류의 프로젝트에서는 응용 프로그램을 시작할 때 UI 리소스를 로드하도록 시작 URI를 설정해야 합니다. 이렇게 하려면 프로젝트에서 Application.xaml 파일을 열고 `StartupUri` 속성을 프로젝트의 .xaml 파일(예: Window1.xaml)로 설정합니다. 허용되는 루트 요소 목록은 <xref:System.Windows.Application.StartupUri%2A>를 참조하세요. 또한 프로젝트의 클래스에서 `public static void Main()` 메서드를 정의해야 합니다. 이 클래스는 **시작 개체** 목록에 *ProjectName.ClassName*으로 나타납니다. 그런 다음 클래스를 시작 개체로 선택할 수 있습니다.  
   
- 자세한 내용은 [/main(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option)을 참조하세요. 이 속성을 프로그래밍 방식으로 액세스하려면 <xref:VSLangProj.ProjectProperties.StartupObject%2A>를 참조하세요.  
+ 자세한 내용은 [/main(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option)을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.StartupObject%2A>를 참조하세요.  
   
 ## <a name="resources"></a>리소스  
  다음 옵션을 사용하여 응용 프로그램에 대한 일반 설정을 구성할 수 있습니다.  
@@ -80,9 +100,9 @@ caps.handback.revision: 56
  기본적으로 이 라디오 단추는 선택되며 **아이콘** 및 **매니페스트** 옵션이 사용됩니다. 이렇게 하면 사용자 고유의 아이콘을 선택하거나 다른 매니페스트 생성 옵션을 선택할 수 있습니다. 프로젝트에 대한 리소스 파일을 제공하지 않는 경우 이 라디오 단추를 선택된 상태로 둡니다.  
   
  **아이콘**  
- 프로그램 아이콘으로 사용할 .ico 파일을 설정합니다. 줄임표(...) 단추를 클릭하여 기존 그래픽을 찾거나 원하는 파일의 이름을 입력합니다. 자세한 내용은 [/win32icon(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)을 참조하세요. 이 속성을 프로그래밍 방식으로 액세스하려면 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>를 참조하세요.  
+ 프로그램 아이콘으로 사용할 .ico 파일을 설정합니다. 줄임표(...) 단추를 클릭하여 기존 그래픽을 찾거나 원하는 파일의 이름을 입력합니다. 자세한 내용은 [/win32icon(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>을 참조하세요.  
   
- **매니페스트**  
+ **Manifest**  
  Windows Vista에서 UAC(사용자 계정 컨트롤)로 응용 프로그램을 실행하는 경우 매니페스트 생성 옵션을 선택합니다. 이 옵션은 다음 값을 가질 수 있습니다.  
   
 -   **기본 설정으로 구성된 매니페스트 포함** Windows Vista에서 Visual Studio가 작동하는 일반적인 방식(`requestedExecutionLevel`을 `AsInvoker`로 지정하여 응용 프로그램의 실행 파일에 보안 정보 포함)을 지원합니다. 기본 옵션입니다.  
@@ -99,8 +119,3 @@ caps.handback.revision: 56
 ## <a name="see-also"></a>참고 항목  
 [응용 프로그램 속성 관리](../../ide/application-properties.md)  
  [Office 솔루션에서 코드 작성](/office-dev/office-dev/writing-code-in-office-solutions)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

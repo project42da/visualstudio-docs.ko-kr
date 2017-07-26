@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 2587e4a10a4caa1192a0efc31448078db553dfb4
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: dc9e7534160b244850a94285587eab56d7805c10
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>연습: 여러 컴퓨터 빌드 환경 만들기
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/05/2017
   
 ||  
 |-|  
-|고지 사항<br /><br /> 이 문서는 "있는 그대로" 제공됩니다. 개괄된 단계는 테스트를 거친 것이지만 모든 구성을 완전히 테스트할 수는 없습니다. Microsoft는 습득하는 추가 정보가 있을 경우 해당 정보로 이 문서를 최신 상태로 유지할 계획입니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여 이 설명서에 제공된 정보와 견해는 예고 없이 변경될 수 있습니다. Microsoft는 여기에 제공된 정보에 대해 어떠한 명시적 또는 묵시적 보증도 하지 않습니다. 정보의 사용으로 발생하는 위험은 귀하의 책임입니다.<br /><br /> 이 문서는 귀하에게 Microsoft 제품의 어떠한 지적 재산에 대한 법적 권리도 부여하지 않습니다. 귀하는 참조를 위해 내부적으로 이 문서를 복사하고 사용할 수 있습니다.<br /><br /> 귀하에게는 이 문서와 관련하여 Microsoft에 제안, 의견 또는 기타 피드백("피드백")을 제공해야 할 의무가 없습니다. 그러나 귀하가 자발적으로 제공하는 피드백은 Microsoft 제품 및 관련 사양이나 기타 설명서("Microsoft 제공 사항"으로 통칭)에 사용될 수 있으며, 이러한 제공 사항은 다른 타사가 자체 제품을 개발하는 데 사용할 수 있습니다. 이에 따라 귀하가 이 문서의 임의 버전이나 이 문서가 적용되는 Microsoft 제공 사항에 대한 피드백을 Microsoft에 제공할 경우 귀하는 (a) Microsoft가 귀하의 피드백을 임의의 Microsoft 제공 사항에서 자유롭게 사용, 재현, 사용 허가, 배포 및 기타 방식으로 상품화할 수 있다는 사실에 동의하게 됩니다. (b) 또한 귀하는 다른 제품이 귀하의 피드백을 포함하는 Microsoft 제품의 특정 부분을 사용하거나 해당 부분과 상호 작용하는 데 필요한 특허권만 요금 없이 타사에 부여하며, (c) (i) 특허권, 저작권 또는 타사의 기타 지적 재산권 청구/권리가 적용된다고 믿을 근거가 있거나 (ii) 피드백을 포함하거나 피드백에서 파생되는 MS 제공 사항 또는 기타 Microsoft 지적 재산을 타사에 사용 허가하거나 기타 방식으로 타사와 공유하게 만드는 사용 약관이 적용되는 피드백을 Microsoft에 제공하지 않습니다.|  
+|고지 사항<br /><br /> 이 문서는 “있는 그대로” 제공됩니다. 개괄된 단계는 테스트를 거친 것이지만 모든 구성을 완전히 테스트할 수는 없습니다. Microsoft는 습득하는 추가 정보가 있을 경우 해당 정보로 이 문서를 최신 상태로 유지할 계획입니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여 이 설명서에 제공된 정보와 견해는 예고 없이 변경될 수 있습니다. Microsoft는 여기에 제공된 정보에 대해 어떠한 명시적 또는 묵시적 보증도 하지 않습니다. 정보의 사용으로 발생하는 위험은 귀하의 책임입니다.<br /><br /> 이 문서는 귀하에게 Microsoft 제품의 어떠한 지적 재산에 대한 법적 권리도 부여하지 않습니다. 귀하는 참조를 위해 내부적으로 이 문서를 복사하고 사용할 수 있습니다.<br /><br /> 귀하에게는 이 문서와 관련하여 Microsoft에 제안, 의견 또는 기타 피드백("피드백")을 제공해야 할 의무가 없습니다. 그러나 귀하가 자발적으로 제공하는 피드백은 Microsoft 제품 및 관련 사양이나 기타 설명서("Microsoft 제공 사항"으로 통칭)에 사용될 수 있으며, 이러한 제공 사항은 다른 타사가 자체 제품을 개발하는 데 사용할 수 있습니다. 이에 따라 귀하가 이 문서의 임의 버전이나 이 문서가 적용되는 Microsoft 제공 사항에 대한 피드백을 Microsoft에 제공할 경우 귀하는 (a) Microsoft가 귀하의 피드백을 임의의 Microsoft 제공 사항에서 자유롭게 사용, 재현, 사용 허가, 배포 및 기타 방식으로 상품화할 수 있다는 사실에 동의하게 됩니다. (b) 또한 귀하는 다른 제품이 귀하의 피드백을 포함하는 Microsoft 제품의 특정 부분을 사용하거나 해당 부분과 상호 작용하는 데 필요한 특허권만 요금 없이 타사에 부여하며, (c) (i) 특허권, 저작권 또는 타사의 기타 지적 재산권 청구/권리가 적용된다고 믿을 근거가 있거나 (ii) 피드백을 포함하거나 피드백에서 파생되는 MS 제공 사항 또는 기타 Microsoft 지적 재산을 타사에 사용 허가하거나 기타 방식으로 타사와 공유하게 만드는 사용 약관이 적용되는 피드백을 Microsoft에 제공하지 않습니다.|  
   
  이 연습은 명령줄에서 MSBuild를 실행하고 Team Foundation Build를 사용하여 다음 운영 체제에 대해 검증되었습니다.  
   
@@ -242,7 +243,7 @@ ms.lasthandoff: 04/05/2017
     >   
     >  또한 호스트 컴퓨터에서 사용하고 있는 것과 다른 드라이브 문자를 빌드 컴퓨터에서 사용하고 있는 경우 레지스트리 항목의 값이 일치하도록 변경해야 합니다.  
   
-2.  빌드 컴퓨터에서 다음 레지스트리 항목을 만듭니다. 이러한 항목은 모두 문자열(레지스트리에서 종류="REG_SZ")입니다. 다음 항목의 값을 호스트 컴퓨터에 있는 유사 항목의 값과 동일하게 설정합니다.  
+2.  빌드 컴퓨터에서 다음 레지스트리 항목을 만듭니다. 이러한 항목은 모두 문자열(레지스트리에서 종류=“REG_SZ”)입니다. 다음 항목의 값을 호스트 컴퓨터에 있는 유사 항목의 값과 동일하게 설정합니다.  
   
     -   %RegistryRoot%\\.NETFramework\v4.0.30319\AssemblyFoldersEx\VCMSBuild Public Assemblies@(Default)  
   
@@ -389,7 +390,7 @@ ms.lasthandoff: 04/05/2017
   
          다음으로 변경:  
   
-         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll”  
+         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll".  
   
          첫 번째 이름 지정 방식에서는 어셈블리가 GAC화되어야 합니다.  
   
@@ -399,7 +400,7 @@ ms.lasthandoff: 04/05/2017
   
          다음으로 변경:  
   
-         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll”  
+         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll".  
   
 4.  .props 파일(예: Partner.AutoImports.props)을 만들어 프로젝트가 포함된 폴더의 루트에 넣습니다. 이 파일은 다양한 리소스를 찾기 위해 MSBuild에 사용되는 변수를 설정하는 데 사용됩니다. 이 파일로 변수를 설정하지 않으면 레지스트리 값을 사용하는 다른 .props 파일 및 .targets 파일로 변수가 설정됩니다. 레지스트리 값을 설정하지 않을 것이기 때문에 이러한 변수가 비게 되고 빌드가 실패합니다. 대신 Partner.AutoImports.props에 다음을 추가합니다.  
   
@@ -424,7 +425,7 @@ ms.lasthandoff: 04/05/2017
     </Project>  
     ```  
   
-5.  각 프로젝트 파일의 맨 위에서 `<Project Default Targets…>` 줄 다음에 아래 줄을 추가합니다.  
+5.  각 프로젝트 파일의 맨 위에서 `<Project Default Targets...>` 줄 다음에 아래 줄을 추가합니다.  
   
     ```  
     <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Partner.AutoImports.props))\Partner.AutoImports.props"/>  

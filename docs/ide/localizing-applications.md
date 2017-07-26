@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 47cc71da3637ae7f3bdb7ff4b09451a87d546bff
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e165ec6487a17819313dacd819ca1147b9953339
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="localizing-applications"></a>응용 프로그램 지역화
@@ -59,7 +60,7 @@ ms.lasthandoff: 02/22/2017
  [.NET Framework 기반의 국가별 응용 프로그램 소개](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)  
  Visual Basic 또는 Visual C#을 사용하여 국제 시장용 소프트웨어를 개발하는 방법에 대한 개념을 설명합니다.  
   
- [Windows Forms 전역화](http://msdn.microsoft.com/Library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5)  
+ [Windows Forms 전역화](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  여러 문화권을 지원하는 Windows 응용 프로그램을 만드는 방법에 대한 페이지의 링크를 제공합니다.  
   
  [전역화 및 지역화](http://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d)  
