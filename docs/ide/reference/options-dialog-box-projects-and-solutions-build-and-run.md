@@ -21,10 +21,10 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
-ms.openlocfilehash: 974a032e57397592b7c09bffe28c55cb02c01a0a
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: 8e5165b4b17195e5f9172dd25962c9486a7aeeeb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
@@ -61,5 +61,5 @@ F5 키 또는 **디버그 > 시작** 명령으로 프로젝트 실행 시 기본
 
 ## <a name="see-also"></a>참고 항목  
 -[컴파일 및 빌드](../../ide/compiling-and-building-in-visual-studio.md)
-- [옵션 대화 상자, 프로젝트 및 솔루션](../../ide/projects-and-solutions-options-dialog-box.md)
-- [옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)
+- [옵션 대화 상자, 프로젝트 및 솔루션](projects-and-solutions-options-dialog-box.md)
+- [옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트](options-dialog-box-projects-and-solutions-web-projects.md)
