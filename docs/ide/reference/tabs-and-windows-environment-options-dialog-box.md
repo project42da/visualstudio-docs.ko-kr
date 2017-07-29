@@ -1,26 +1,43 @@
 ---
 title: "옵션 대화 상자, 환경, 탭 및 창 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Environment.TabsAndWindows"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Environment.TabsAndWindows
 ms.assetid: f5167564-0a4e-4f98-9580-fc6cb7d9dd8d
 caps.latest.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# 옵션 대화 상자, 환경, 탭 및 창
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: fccca9619f887ecd61a32bd9b3a2a48b1608a18e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/24/2017
 
-이 페이지를 사용하면 편집기 창에서 탭 창이 작동하는 방식 및 도구 창이 작동하는 방식에 대한 옵션을 설정할 수 있습니다.  자세한 내용은 [방법: 창 정렬 및 도킹](../../misc/how-to-arrange-and-dock-windows.md)을 참조하세요.  
+---
+# <a name="tabs-and-windows-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 탭 및 창
+이 페이지를 사용하면 편집기 창에서 탭 창이 작동하는 방식 및 도구 창이 작동하는 방식에 대한 옵션을 설정할 수 있습니다. 자세한 내용은 [Visual Studio에서 창 레이아웃 사용자 지정](../../ide/customizing-window-layouts-in-visual-studio.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [옵션 대화 상자, 환경](../../ide/reference/environment-options-dialog-box.md)

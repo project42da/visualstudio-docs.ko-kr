@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 83fbf12dce91f79d537b574ea9903af5d6e61d1f
-ms.openlocfilehash: 0cc24f68ddef374f539c299d87cede8a13fac1a2
-ms.lasthandoff: 02/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 795bf9746c4ae48ac04141a05ba56462ecb90482
+ms.openlocfilehash: afc044be4d63b7a292a6d94e360366913bd28883
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/23/2017
 
 ---
 
 # <a name="custom-native-etw-heap-events"></a>사용자 지정 네이티브 ETW 힙 이벤트
 
-Visual Studio에는 네이티브 메모리 프로파일러를 비롯한 다양한 [프로파일링 및 진단 도구](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)가 포함되어 있습니다.  이 프로파일러는 힙 공급자에서 [ETW 이벤트](https://msdn.microsoft.com/en-us/library/windows/desktop/aa363668(v=vs.85).aspx)를 후크하고 메모리 할당 및 사용 방법을 분석합니다.  기본적으로 이 도구는 표준 Windows 힙에서 만든 할당만 분석할 수 있으므로 이 네이티브 힙 외부의 할당은 표시되지 않습니다.
+Visual Studio에는 네이티브 메모리 프로파일러를 비롯한 다양한 [프로파일링 및 진단 도구](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)가 포함되어 있습니다.  이 프로파일러는 힙 공급자에서 [ETW 이벤트](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-)를 후크하고 메모리 할당 및 사용 방법을 분석합니다.  기본적으로 이 도구는 표준 Windows 힙에서 만든 할당만 분석할 수 있으므로 이 네이티브 힙 외부의 할당은 표시되지 않습니다.
 
 사용자 지정 힙을 사용하여 표준 힙에서 할당 오버헤드를 방지할 수도 있습니다.  예를 들어 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)를 사용하여 앱 또는 게임을 시작할 때 대용량 메모리를 할당한 다음 해당 목록에서 자체 블록을 관리할 수 있습니다.  이 시나리오에서 메모리 프로파일러 도구는 초기 할당만 표시하고, 메모리 청크 내부에서 수행되는 사용자 지정 관리는 표시하지 않습니다.  사용자 지정 네이티브 힙 ETW 공급자를 사용하여 표준 힙 외부에서 수행하는 모든 할당을 도구에 알릴 수 있습니다.
 

@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: e2d04ac6463143efacf4fe4967d9e555aed84d05
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: c435bb9e490e9a3c59de78f383632552c0ca4641
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="troubleshooting-code-coverage"></a>코드 검사 문제 해결
@@ -106,7 +106,7 @@ Visual Studio의 코드 검사 분석 도구는 네이티브 및 관리되는 �
  어셈블리가 네이티브 이미지 캐시에서 로드되지 않았는지 확인합니다.  
   
  설명  
- 성능 상의 이유로 네이티브 이미지 어셈블리는 분석되지 않습니다. 자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](http://msdn.microsoft.com/Library/44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66)를 참조하세요.  
+ 성능 상의 이유로 네이티브 이미지 어셈블리는 분석되지 않습니다. 자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](/dotnet/framework/tools/ngen-exe-native-image-generator)를 참조하세요.  
   
  해결  
  어셈블리의 MSIL 버전을 사용합니다. NGen으로 처리하지 않습니다.  

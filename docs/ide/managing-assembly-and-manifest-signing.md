@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: a990441ed4ef551a0fc6defcda45d51ff0c0d209
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: b42679476f9e1da034011eb7e9b81250c0c81a1e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>어셈블리 및 매니페스트 서명 관리
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/05/2017
   
  이미 만든 키를 가리킬 수도 있습니다. 키 만들기에 대한 자세한 내용은 [방법: 공개/개인 키 쌍 만들기](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)를 참조하세요.  
   
- 공개 키에만 액세스할 수 있는 경우 서명 연기를 사용하여 키 할당을 지연시킬 수 있습니다. **서명만 연기** 확인란을 선택하여 서명 연기를 사용하도록 설정합니다. 지연 서명된 프로젝트가 실행되지 않고 이 프로젝트를 디버그할 수 없습니다. 그러나 [Sn.exe(강력한 이름 도구)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)를 `-Vr` 옵션과 함께 사용하여 개발 중에 확인을 건너뛸 수 있습니다.  
+ 공개 키에만 액세스할 수 있는 경우 서명 연기를 사용하여 키 할당을 지연시킬 수 있습니다. **서명만 연기** 확인란을 선택하여 서명 연기를 사용하도록 설정합니다. 지연 서명된 프로젝트가 실행되지 않고 이 프로젝트를 디버그할 수 없습니다. 그러나 [Sn.exe(강력한 이름 도구)](/dotnet/framework/tools/sn-exe-strong-name-tool)를 `-Vr` 옵션과 함께 사용하여 개발 중에 확인을 건너뛸 수 있습니다.  
   
  매니페스트 서명에 대한 자세한 내용은 [방법: 응용 프로그램 및 배포 매니페스트 서명](../ide/how-to-sign-application-and-deployment-manifests.md)을 참조하세요.  
   

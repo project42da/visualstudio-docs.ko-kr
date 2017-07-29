@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a116306cdd3fc0cd636077bf2a0d6bc87b49e96b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e13a7e293038cf3a9b085d14e428767c561e5e3e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="vsinstr-warnings"></a>VSInstr 경고
@@ -45,7 +46,7 @@ ms.lasthandoff: 02/22/2017
 |경고 번호|설명|  
 |--------------------|-----------------|  
 |**VSP2000**|내부 오류입니다. 이 실행 파일에 대한 모듈 파일 이름을 가져올 수 없습니다.|  
-|**VSP2001**|\<assembly name>은 강력한 이름의 어셈블리입니다. 다시 서명해야 실행할 수 있습니다.<br /><br /> 이 경고는 서명된 어셈블리를 계측하는 경우에 발생합니다. sn.exe 도구를 사용하여 이진 파일에 다시 서명하거나 강력한 이름 요구를 일시적으로 해제할 수 있습니다. 자세한 내용은 [Sn.exe(강력한 이름 도구)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)를 참조하세요.|  
+|**VSP2001**|\<assembly name>은 강력한 이름의 어셈블리입니다. 다시 서명해야 실행할 수 있습니다.<br /><br /> 이 경고는 서명된 어셈블리를 계측하는 경우에 발생합니다. sn.exe 도구를 사용하여 이진 파일에 다시 서명하거나 강력한 이름 요구를 일시적으로 해제할 수 있습니다. 자세한 내용은 [Sn.exe(강력한 이름 도구)](/dotnet/framework/tools/sn-exe-strong-name-tool)를 참조하세요.|  
 |**VSP2002**|\<filename> 파일에서 \<funcname> 함수를 찾을 수 없습니다.<br /><br /> 이 경고는 지정한 파일에는 함수를 찾을 수 없는 경우에 발생합니다.|  
 |**VSP2003**|\<filename> 파일에서 \<funcname> 함수로의 크로스 점프를 찾을 수 없습니다.<br /><br /> 이 경고는 VSInstr이 크로스 점프를 무효화할 수 없는 경우에 발생합니다. 크로스 점프는 코드 최적화를 위해 사용됩니다.|  
 |**VSP2004**|\<funcname> 함수가 EXCLUDE 명령줄 스위치를 통해 제외되었지만 이 함수에 크로스 점프가 들어 있으므로 필요합니다.<br /><br /> 이 경고는 함수가 EXCLUDE 옵션을 사용하여 제외되었으나 계측 프로세스 중에 필요한 경우에 발생합니다. 프로파일러에는 필요한 기능을 자동으로 포함합니다.|  

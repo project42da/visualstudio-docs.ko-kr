@@ -1,19 +1,39 @@
 ---
-title: "Visual Studio 잠금을 해제하는 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/23/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visual Studio 잠금을 해제하는 방법 | Microsoft 문서"
+ms.custom: 
+ms.date: 01/23/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
 caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 4a1e79dbceb4c0cfd02dab4b3132190e44ac3273
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="how-to-unlock-visual-studio"></a>Visual Studio 잠금을 해제하는 방법
 최대 30일 동안 무료로 Visual Studio 평가판을 사용할 수 있습니다. IDE에 로그인하면 90일 평가판 사용 기간을 연장할 수 있습니다. Visual Studio를 계속 사용하려면 다음과 같은 방법으로 IDE를 잠금 해제할 수 있습니다.  
@@ -25,7 +45,7 @@ caps.handback.revision: 8
 ## <a name="to-unlock-visual-studio-using-an-online-subscription"></a>온라인 구독을 사용하여 Visual Studio의 잠금을 해제하려면  
  Microsoft 계정이나 회사 또는 학교 계정과 연결된 MSDN 또는 Visual Studio 온라인 구독을 사용하여 Visual Studio를 잠금 해제하려면:  
   
-1.  IDE 오른쪽 위의 “로그인” 단추를 클릭하거나 파일 &gt; 계정 설정을 선택하여 계정 설정 대화 상자를 열고 “로그인" 단추를 클릭합니다.  
+1.  IDE 오른쪽 위의 “로그인” 단추를 클릭하거나 [파일] > [계정 설정]을 선택하여 [계정 설정] 대화 상자를 열고 “로그인” 단추를 클릭합니다.  
   
 2.  Microsoft 계정이나 회사 또는 학교 계정에 대한 자격 증명을 입력합니다. Visual Studio에서 해당 계정과 연결된 MSDN 구독 또는 Visual Studio Team Services 구독을 찾습니다.  
   
@@ -34,7 +54,7 @@ caps.handback.revision: 8
   
 ## <a name="to-unlock-visual-studio-with-a-product-key"></a>제품 키를 사용하여 Visual Studio의 잠금을 해제하려면  
   
-1.  **파일 > 계정 설정**을 선택하여 계정 설정 대화 상자를 열고 "**제품 키가 있는 라이선스**" 링크를 클릭합니다.  
+1.  **파일 > 계정 설정**을 선택하여 [계정 설정] 대화 상자를 열고 “**제품 키가 있는 라이선스**” 링크를 클릭합니다.  
   
 2.  제공된 입력란에 제품 키를 입력합니다.  
   
@@ -66,13 +86,8 @@ caps.handback.revision: 8
   
 1.  구독을 갱신합니다. 사용 중인 라이선스에 대한 자세한 정보를 보려면 파일 > 계정 설정 대화 상자로 이동하고 대화 상자의 오른쪽에 있는 라이선스 정보를 살펴봅니다.  
   
-2.  다른 계정에 연결된 다른 구독이 있는 경우 "계정 추가..." 링크를 클릭하여 파일 > 계정 설정 대화 상자의 왼쪽에 있는 모든 계정 목록에 해당 계정을 추가합니다.  
+2.  다른 계정에 연결된 다른 구독이 있는 경우 “계정 추가” 링크를 클릭하여 [파일] > [계정 설정] 대화 상자의 왼쪽에 있는 모든 계정 목록에 해당 계정을 추가합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio에 로그인](../ide/signing-in-to-visual-studio.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

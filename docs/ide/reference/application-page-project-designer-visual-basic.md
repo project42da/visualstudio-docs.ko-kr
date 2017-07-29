@@ -1,25 +1,45 @@
 ---
-title: "Application Page, Project Designer (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ProjectPropertiesApplicationWPF"
-  - "vb.ProjectPropertiesApplication"
-helpviewer_keywords: 
-  - "프로젝트 디자이너, 응용 프로그램 페이지"
-  - "프로젝트 디자이너의 응용 프로그램 페이지"
+title: "프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic) | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vb.ProjectPropertiesApplicationWPF
+- vb.ProjectPropertiesApplication
+helpviewer_keywords:
+- Project Designer, Application page
+- Application page in Project Designer
 ms.assetid: 8cec9fea-cd92-47ff-88dd-7c928f0b4a74
 caps.latest.revision: 64
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 64
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: 4be8a1f36d81e2cb36d9daab9817f04d18ecb94a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/26/2017
+
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
 프로젝트 디자이너의 **응용 프로그램** 페이지를 사용하여 프로젝트의 응용 프로그램 설정과 속성을 지정할 수 있습니다.  
@@ -32,7 +52,7 @@ caps.handback.revision: 64
  다음 옵션을 사용하여 응용 프로그램에 대한 일반 설정을 구성할 수 있습니다.  
   
  **어셈블리 이름**  
- 어셈블리 매니페스트가 포함될 출력 파일의 이름을 지정합니다. 이 속성을 변경하면 **출력 이름** 속성도 변경됩니다. [/out(Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out)을 사용하여 명령 프롬프트에서 변경할 수도 있습니다. 이 속성을 프로그래밍 방식으로 액세스하는 방법에 대한 자세한 내용은 <xref:VSLangProj.ProjectProperties.AssemblyName%2A>를 참조하세요.  
+ 어셈블리 매니페스트가 포함될 출력 파일의 이름을 지정합니다. 이 속성을 변경하면 **출력 이름** 속성도 변경됩니다. [/out(Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out)을 사용하여 명령 프롬프트에서 변경할 수도 있습니다. 프로그래밍 방식으로 이 속성에 액세스하는 방법에 대한 자세한 내용은 <xref:VSLangProj.ProjectProperties.AssemblyName%2A>을 참조하세요.  
   
  **루트 네임스페이스**  
  프로젝트의 모든 파일에 대한 기본 네임스페이스를 지정합니다. 예를 들어 **루트 네임스페이스**를 `Project1`로 설정하고 코드의 네임스페이스 외부에 `Class1`이 있는 경우 해당 네임스페이스는 `Project1.Class1`입니다. 코드의 `Order` 네임스페이스에 `Class2`가 있는 경우 해당 네임스페이스는 `Project1.Order.Class2`입니다.  
@@ -46,7 +66,7 @@ caps.handback.revision: 64
   
  루트 네임스페이스 속성에 대한 자세한 내용은 [/rootnamespace](/dotnet/visual-basic/reference/command-line-compiler/rootnamespace)를 참조하세요.  
   
- 이 속성을 프로그래밍 방식으로 액세스하는 방법에 대한 자세한 내용은 <xref:VSLangProj.ProjectProperties.RootNamespace%2A>를 참조하세요.  
+ 프로그래밍 방식으로 이 속성에 액세스하는 방법에 대한 자세한 내용은 <xref:VSLangProj.ProjectProperties.RootNamespace%2A>를 참조하세요.  
   
  **대상 프레임워크(모든 구성)**  
  응용 프로그램의 대상 .NET Framework 버전을 지정합니다. 이 옵션은 컴퓨터에 설치된 .NET Framework 버전에 따라 다른 값을 가질 수 있습니다.  
@@ -63,26 +83,26 @@ caps.handback.revision: 64
   
  웹 응용 프로그램 프로젝트의 경우 **클래스 라이브러리**를 지정해야 합니다.  
   
- **WinMD 파일** 옵션을 지정하는 경우 유형을 Windows 런타임 프로그래밍 언어로 프로젝션할 수 있습니다. 프로젝트의 출력을 WinMD 파일로 패키징하면 여러 언어로 응용 프로그램을 코딩한 후 모두 동일한 언어로 작성한 것처럼 코드가 상호 운용되도록 할 수 있습니다. [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] 앱을 포함하여 Windows 런타임 라이브러리를 대상으로 하는 솔루션에 대해 **WinMD 파일** 옵션을 사용할 수 있습니다. 자세한 내용은[C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](http://go.microsoft.com/fwlink/?LinkId=231895)를 참조하세요.  
+ **WinMD 파일** 옵션을 지정하는 경우 유형을 Windows 런타임 프로그래밍 언어로 프로젝션할 수 있습니다. 프로젝트의 출력을 WinMD 파일로 패키징하면 여러 언어로 응용 프로그램을 코딩한 후 모두 동일한 언어로 작성한 것처럼 코드가 상호 운용되도록 할 수 있습니다. [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] 앱을 포함하여 Windows 런타임 라이브러리를 대상으로 하는 솔루션에 대해 **WinMD 파일** 옵션을 사용할 수 있습니다. 자세한 내용은[C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)를 참조하세요.  
   
 > [!NOTE]
 >  Windows 런타임은 어떤 언어에서 사용하든 네이티브 개체로 나타나도록 유형을 프로젝션할 수 있습니다. 예를 들어 Windows 런타임과 상호 작용하는 JavaScript 응용 프로그램에서는 JavaScript 개체 집합으로 사용되고, C# 응용 프로그램에서는 라이브러리가 .NET 개체 컬렉션으로 사용됩니다. 프로젝트의 출력을 WinMD 파일로 패키징하면 Windows 런타임에서 사용되는 것과 동일한 기술을 이용할 수 있습니다.  
   
- **응용 프로그램 종류** 속성에 대한 자세한 내용은 [/target(Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target)을 참조하세요. 해당 속성을 프로그래밍 방식으로 액세스하는 방법에 대한 자세한 내용은 <xref:VSLangProj.ProjectProperties.OutputType%2A>를 참조하세요.  
+ **응용 프로그램 종류** 속성에 대한 자세한 내용은 [/target(Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target)을 참조하세요. 프로그래밍 방식으로 해당 속성에 액세스하는 방법에 대한 자세한 내용은 <xref:VSLangProj.ProjectProperties.OutputType%2A>을 참조하세요.  
   
  **아이콘**  
- 프로그램 아이콘으로 사용할 .ico 파일을 설정합니다. **\<찾아보기...>**를 선택하여 기존 그래픽을 찾습니다. 자세한 내용은 [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon)(또는 [/win32icon(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option))을 참조하세요. 이 속성을 프로그래밍 방식으로 액세스하려면 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>를 참조하세요.  
+ 프로그램 아이콘으로 사용할 .ico 파일을 설정합니다. **\<찾아보기...>**를 선택하여 기존 그래픽을 찾습니다. 자세한 내용은 [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon)(또는 [/win32icon(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option))을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>을 참조하세요.  
   
  **시작 폼/시작 개체/시작 URI**  
  응용 프로그램의 시작 폼 또는 진입점을 지정합니다.  
   
  **응용 프로그램 프레임워크 사용**이 선택된 경우(기본값), 이 목록에 **시작 폼**이라는 제목이 지정되고, 응용 프로그램 프레임워크에서 개체가 아니라 시작 폼만 지원하기 때문에 폼만 표시됩니다.  
   
- 프로젝트가 WPF 브라우저 응용 프로그램인 경우 이 목록에 **시작 URI**라는 제목이 지정되고 기본값은 **Page1.xaml**입니다. **시작 URI** 목록을 사용하면 응용 프로그램이 시작 시 표시하는 사용자 인터페이스 리소스(XAML 요소)를 지정할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.StartupUri%2A>를 참조하세요.  
+ 프로젝트가 WPF 브라우저 응용 프로그램인 경우 이 목록에 **시작 URI**라는 제목이 지정되고 기본값은 **Page1.xaml**입니다. **시작 URI** 목록을 사용하면 응용 프로그램이 시작 시 표시하는 사용자 인터페이스 리소스(XAML 요소)를 지정할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.StartupUri%2A>을 참조하십시오.  
   
  **응용 프로그램 프레임워크 사용**의 선택이 취소된 경우 이 목록은 **시작 개체**가 되고 `Sub Main`을 포함하는 폼과 클래스 또는 모듈을 둘 다 표시합니다.  
   
- **시작 개체**는 응용 프로그램 로드 시 호출할 진입점을 정의합니다. 일반적으로 응용 프로그램의 기본 폼이나 응용 프로그램 시작 시 실행되어야 하는 `Sub Main` 프로시저로 설정됩니다. 클래스 라이브러리에 진입점이 없기 때문에 이 속성의 유일한 옵션은 **(없음)**입니다. 자세한 내용은 [/main](/dotnet/visual-basic/reference/command-line-compiler/main)을 참조하세요. 이 속성을 프로그래밍 방식으로 액세스하려면 <xref:VSLangProj.ProjectProperties.StartupObject%2A>를 참조하세요.  
+ **시작 개체**는 응용 프로그램 로드 시 호출할 진입점을 정의합니다. 일반적으로 응용 프로그램의 기본 폼이나 응용 프로그램 시작 시 실행되어야 하는 `Sub Main` 프로시저로 설정됩니다. 클래스 라이브러리에 진입점이 없기 때문에 이 속성의 유일한 옵션은 **(없음)**입니다. 자세한 내용은 [/main](/dotnet/visual-basic/reference/command-line-compiler/main)을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.StartupObject%2A>를 참조하세요.  
   
  **어셈블리 정보**  
  이 단추를 클릭하면 [어셈블리 정보 대화 상자](../../ide/reference/assembly-information-dialog-box.md)가 표시됩니다.  
@@ -139,13 +159,13 @@ caps.handback.revision: 64
  **종료 모드**  
  이 속성은 Windows Presentation Foundation 응용 프로그램에만 적용됩니다.  
   
- <xref:System.Windows.Application.Shutdown%2A>를 명시적으로 호출할 때 응용 프로그램이 종료되도록 지정하려면 **명시적으로 종료할 때**를 선택합니다.  
+ <xref:System.Windows.Application.Shutdown%2A>을 명시적으로 호출할 때 응용 프로그램이 종료되도록 지정하려면 **명시적으로 종료할 때**를 선택합니다.  
   
- 마지막 창을 닫을 때 또는 <xref:System.Windows.Application.Shutdown%2A>를 명시적으로 호출할 때 응용 프로그램이 종료되도록 지정하려면 **마지막 창을 닫을 때**를 선택합니다. 이것이 기본 설정입니다.  
+ 마지막 창을 닫을 때 또는 <xref:System.Windows.Application.Shutdown%2A>을 명시적으로 호출할 때 응용 프로그램이 종료되도록 지정하려면 **마지막 창을 닫을 때**를 선택합니다. 이것이 기본 설정입니다.  
   
- 주 창을 닫을 때 또는 <xref:System.Windows.Application.Shutdown%2A>를 명시적으로 호출할 때 응용 프로그램이 종료되도록 지정하려면 **주 창을 닫을 때**를 선택합니다.  
+ 주 창을 닫을 때 또는 <xref:System.Windows.Application.Shutdown%2A>을 명시적으로 호출할 때 응용 프로그램이 종료되도록 지정하려면 **주 창을 닫을 때**를 선택합니다.  
   
- 이 설정을 사용하는 방법에 대한 자세한 내용은 <xref:System.Windows.Application.Shutdown%2A>를 참조하세요.  
+ 이 설정을 사용하는 방법에 대한 자세한 내용은 <xref:System.Windows.Application.Shutdown%2A>을 참조하세요.  
   
  **XAML 편집**  
  XAML 편집기에서 응용 프로그램 정의 파일(Application.xaml)을 열고 수정하려면 이 단추를 클릭합니다. 이 단추를 클릭하면 응용 프로그램 정의 노드에서 Application.xaml이 열립니다. 리소스 정의 등의 특정 작업을 수행하려면 이 파일을 편집해야 할 수도 있습니다. 응용 프로그램 정의 파일이 없는 경우 프로젝트 디자이너에서 새로 만듭니다.  
@@ -158,8 +178,3 @@ caps.handback.revision: 64
 ## <a name="see-also"></a>참고 항목  
 [응용 프로그램 속성 관리](../../ide/application-properties.md)
  [Office 솔루션에서 코드 작성](/office-dev/office-dev/writing-code-in-office-solutions)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

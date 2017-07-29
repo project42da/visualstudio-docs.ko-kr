@@ -1,45 +1,62 @@
 ---
-title: "방법: IDE 내게 필요한 옵션 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "내게 필요한 옵션[Visual Studio]"
+title: "방법: IDE 접근성 옵션 설정 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
 caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# 방법: IDE 내게 필요한 옵션 설정
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: e55dee12df295fe794cad089a84897e36a90a1c8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/24/2017
 
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에는 시력이 약한 사용자가 쉽게 읽거나 손놀림이 자유롭지 못한 사용자가 쉽게 쓸 수 있게 하는 기능이 포함되어 있습니다.  이러한 기능에는 편집기에서 텍스트의 크기와 색을 변경하거나, 도구 모음에 있는 단추와 텍스트의 크기를 변경하거나, 메서드 및 매개 변수를 자동으로 완성시켜 주는 기능 등이 있습니다.  
+---
+# <a name="how-to-set-ide-accessibility-options"></a>방법: IDE 내게 필요한 옵션 설정
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에는 시각 장애인의 읽기와 손 장애인의 쓰기를 도와주는 기능이 포함되어 있습니다. 또한, 편집기에서 텍스트 크기와 색을 변경하고, 도구 모음에서 텍스트와 단추의 크기를 변경하고, 메서드와 매개 변수를 자동 완성하는 등의 다양한 기능이 제공됩니다.  
   
- 또한 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서는 많이 사용하는 키보드 문자를 사용하기 쉬운 위치에 배열한 드보락\(Dvorak\) 키보드 배열을 지원합니다.  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에 제공되는 기본 바로 가기 키를 사용자 지정할 수도 있습니다.  자세한 내용은 [바로 가기 키 식별 및 사용자 지정](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)을 참조하십시오.  
+ 또한 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서는 가장 자주 입력되는 문자의 접근성을 높이는 Dvorak 키보드 레이아웃을 지원합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서 제공되는 기본 바로 가기 키를 사용자 지정할 수도 있습니다. 자세한 내용은 [바로 가기 키 식별 및 사용자 지정](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)을 참조하세요.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## 편집기, 대화 상자 및 도구 창  
- 기본적으로, 대화 상자 및 도구 창에 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 는 운영 체제와 동일한 글꼴 크기 및 색을 사용 합니다.  IDE, 대화 상자, 도구 모음 및 도구 창 프레임의 색 설정에 따라 색 구성표: 밝거나 어둡게 합니다.  현재 색 테마를 변경할 수 있는 [옵션 대화 상자, 환경, 일반](../../ide/reference/general-environment-options-dialog-box.md).  
+## <a name="editors-dialogs-and-tool-windows"></a>편집기, 대화 상자 및 도구 창  
+ 기본적으로 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]의 대화 상자와 도구 창에서는 운영 체제와 같은 글꼴 크기 및 색을 사용합니다. IDE, 대화 상자, 도구 모음 및 도구 창의 프레임에 대한 색 설정은 색 테마인 밝은 테마 또는 어두운 테마에 따라 결정됩니다. [옵션 대화 상자, 환경, 일반](../../ide/reference/general-environment-options-dialog-box.md)에서 현재 색 테마를 변경할 수 있습니다.  
   
- 편집기의 코드 뷰에서 팝업 창을 표시할 수도 있습니다.  이러한 창 수 매개 변수가 현재 개체에 사용할 수 있는 멤버 함수나 문을 완성 하 라는 메시지가.  이러한 windows 입력 하는 데 문제가 있는 경우에 유용 합니다.  그러나 일부 사용자에 게 문제가 될 수 있는 코드 편집기에서 포커스가 있는 간섭이 발생 합니다.  이 창을 열기 옵션 대화 상자에서 선택을 취소 하 여 해제  **구성원 자동 목록** 및  **매개 변수 정보** 에  **텍스트 편집기**,  **모든 언어**,  **일반** 페이지에서  **옵션** 대화 상자.  자세한 내용은 [How to: Set General Editor Options](http://msdn.microsoft.com/ko-kr/704e4a7b-2162-4bed-8a47-f4f6ffec98c2)을 참조하십시오.  
+ 편집기의 코드 보기에서 팝업 창을 표시할 수도 있습니다. 이러한 창에는 현재 개체의 사용 가능한 멤버 함수나 문을 완성하기 위한 매개 변수가 표시될 수 있습니다. 입력이 어려울 경우 이러한 창이 유용할 수 있습니다. 그러나 이러한 창은 코드 편집기에 집중하는 데 방해가 되어 일부 사용자에게 문제가 될 수 있습니다. [옵션] 대화 상자를 열고 **옵션** 대화 상자의 **텍스트 편집기**, **모든 언어**, **일반** 페이지에서 **멤버 목록 자동 표시** 및 **매개 변수 정보**를 선택 취소하여 이러한 창을 끌 수 있습니다. 자세한 내용은 [방법: 일반 편집기 옵션 설정](http://msdn.microsoft.com/en-us/704e4a7b-2162-4bed-8a47-f4f6ffec98c2)을 참조하세요.  
   
- 통합 개발 환경\(IDE\)에서 사용자의 작업 방식에 적합하게 창을 재배열할 수 있습니다.  도킹 부동 또는 숨기기 각 도구 창 자동으로 숨기기 수 있습니다.  
+ 자신의 작업 방식에 가장 적합하게 IDE(통합 개발 환경)에서 창을 다시 정렬할 수 있습니다. 각 도구 창을 도킹 또는 고정 해제하거나, 숨기거나, 자동으로 숨길 수 있습니다.  
   
- 창 레이아웃을 변경 하는 방법에 대 한 자세한 내용은 참조 [창 레이아웃 사용자 지정](../../ide/customizing-window-layouts-in-visual-studio.md).  
+ 창 레이아웃을 변경하는 방법에 대한 자세한 내용은 [창 레이아웃 사용자 지정](../../ide/customizing-window-layouts-in-visual-studio.md)을 참조하세요.  
   
-### 텍스트 크기 변경  
- **도구** 대화 상자에 있는 **환경** 옵션의 **글꼴 및 색** 창에서 **명령** 창, **직접 실행** 창 및 **출력** 창과 같은 텍스트 기반 도구 창의 설정을 변경할 수 있습니다.  **설정 표시** 드롭다운 목록에서 **\[모든 텍스트 도구 창\]**을 선택하면 기본 설정이 **항목 전경**과 **항목 배경** 드롭다운 목록에 **기본값**으로 표시됩니다.  편집기에 텍스트가 표시되는 방식을 조절하는 설정도 변경할 수 있습니다.  
+### <a name="changing-the-size-of-text"></a>텍스트 크기 변경  
+ **도구** 대화 상자, **환경** 옵션의 **글꼴 및 색** 창에서 **명령** 창, **직접 실행** 창 및 **출력** 창과 같은 텍스트 기반 도구 창에 대한 설정을 변경할 수 있습니다. **[모든 텍스트 도구 창]**이 **설정 표시** 드롭다운 목록에서 선택되면 기본 설정은 **항목 전경** 및 **항목 배경** 드롭다운 목록에 **기본값**으로 나열됩니다. 텍스트가 편집기에 표시되는 방식에 대한 설정을 변경할 수도 있습니다.  
   
-##### 텍스트 기반 도구 창과 편집기의 텍스트 크기를 변경하려면  
+##### <a name="to-change-the-size-of-text-in-text-based-tool-windows-and-editors"></a>텍스트 기반 도구 창 및 편집기에서 텍스트 크기를 변경하려면  
   
 1.  **도구** 메뉴에서 **옵션**을 선택합니다.  
   
@@ -47,32 +64,32 @@ caps.handback.revision: 21
   
 3.  **설정 표시** 드롭다운 메뉴에서 옵션을 선택합니다.  
   
-     편집기의 텍스트 글꼴 크기를 변경하려면 **텍스트 편집기**를 선택합니다.  
+     편집기에서 텍스트의 글꼴 크기를 변경하려면 **텍스트 편집기**를 선택합니다.  
   
-     텍스트 기반 도구 창의 텍스트 글꼴 크기를 변경하려면 **\[모든 텍스트 도구 창\]**을 선택합니다.  
+     텍스트 기반 도구 창에서 텍스트의 글꼴 크기를 변경하려면 **[모든 텍스트 도구 창]**을 선택합니다.  
   
-     편집기의 도구 설명 텍스트에 대한 글꼴 크기를 변경하려면 **편집기 도구 설명**을 선택합니다.  
+     편집기에서 도구 설명 텍스트의 글꼴 크기를 변경하려면 **편집기 도구 설명**을 선택합니다.  
   
-     문 완성 팝업의 텍스트 글꼴 크기를 변경하려면 **문 완성**을 선택합니다.  
+     문 완성 팝업에서 텍스트의 글꼴 크기를 변경하려면 **문 완성**을 선택합니다.  
   
 4.  **표시 항목**에서 **일반 텍스트**를 선택합니다.  
   
-5.  **글꼴**에서 새 글꼴 유형을 선택합니다.  
+5.  **글꼴**에서 새 글꼴 종류를 선택합니다.  
   
 6.  **크기**에서 새 글꼴 크기를 선택합니다.  
   
     > [!NOTE]
-    >  텍스트 기반 도구 창과 편집기의 텍스트 크기를 다시 설정하려면 **기본값 사용**을 선택합니다.  
+    >  텍스트 기반 도구 창 및 편집기의 텍스트 크기를 다시 설정하려면 **기본값 사용**을 선택합니다.  
   
 7.  **확인**을 선택합니다.  
   
-### IDE에서 사용 되는 색 변경  
- 편집기의 텍스트, 여백 표시, 공백 및 코드 요소의 기본 색을 변경하도록 선택할 수도 있습니다.  
+### <a name="changing-the-colors-used-in-the-ide"></a>IDE에서 사용되는 색 변경  
+ 편집기에서 텍스트, 여백 표시기, 공백 및 코드 요소의 기본색을 변경할 수도 있습니다.  
   
 > [!NOTE]
->  운영 체제의 모든 응용 프로그램 창에 고대비 색을 사용하려면 왼쪽 **Alt\+**왼쪽 **Shift\+Print Screen**을 누릅니다.  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]가 열려 있는 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 닫았다 다시 열어야 고대비 색이 완전히 적용됩니다.  
+>  운영 체제의 모든 응용 프로그램 창에 고대비 색을 사용하려면 왼쪽 **ALT+**왼쪽 **SHIFT+PRINT SCREEN**을 누릅니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]가 열릴 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 닫았다 열면 고대비 색이 완전히 구현됩니다.  
   
-##### 편집기의 항목 색을 변경하려면  
+##### <a name="to-change-the-color-of-items-in-the-editor"></a>편집기에서 항목의 색을 변경하려면  
   
 1.  **도구** 메뉴에서 **옵션**을 선택합니다.  
   
@@ -80,22 +97,22 @@ caps.handback.revision: 21
   
 3.  **설정 표시**에서 **텍스트 편집기**를 선택합니다.  
   
-4.  **표시 항목**에서 **일반 텍스트**, **표시기 여백**, **공백 표시**, **HTML 특성 이름** 또는 **XML 특성** 등과 같이 표시를 변경할 항목을 선택합니다.  
+4.  **표시 항목**에서 변경해야 하는 표시가 포함된 항목을 선택합니다(예: **일반 텍스트**, **표시기 여백**, **공백 표시**, **HTML 특성 이름** 또는 **XML 특성**).  
   
-5.  **항목 전경**, **항목 배경** 및 **굵게** 옵션 중에서 표시 설정을 선택합니다.  
+5.  **항목 전경**, **항목 배경** 및 **굵게** 옵션에서 표시 설정을 선택합니다.  
   
 6.  **확인**을 선택합니다.  
   
-## 도구 모음  
- 도구 모음 사용 및 액세스 가능성을 높이기 위해 도구 모음 단추에 텍스트를 추가할 수 있습니다.  
+## <a name="toolbars"></a>도구 모음  
+ 도구 모음의 사용 가능성과 접근성을 개선하기 위해 도구 모음 단추에 텍스트를 추가할 수 있습니다.  
   
-#### 도구 모음 단추에 텍스트를 할당하려면  
+#### <a name="to-assign-text-to-toolbar-buttons"></a>도구 모음 단추에 텍스트를 할당하려면  
   
 1.  **도구** 메뉴에서 **사용자 지정**을 선택합니다.  
   
 2.  **사용자 지정** 대화 상자에서 **명령** 탭을 선택합니다.  
   
-3.  **도구 모음**을 선택한 다음 텍스트를 표시할 단추가 들어 있는 도구 모음 이름을 선택합니다.  
+3.  **도구 모음**을 선택하고 텍스트를 표시할 단추가 포함된 도구 모음 이름을 선택합니다.  
   
 4.  목록에서 변경할 명령을 선택합니다.  
   
@@ -103,12 +120,12 @@ caps.handback.revision: 21
   
 6.  **이미지 및 텍스트**를 선택합니다.  
   
-#### 단추에 표시되는 텍스트를 수정하려면  
+#### <a name="to-modify-the-buttons-displayed-text"></a>단추의 표시된 텍스트를 수정하려면  
   
-1.  다시 **선택 사항 수정**을 선택합니다.  
+1.  **선택 사항 수정**을 다시 선택합니다.  
   
-2.  인접 한  **이름**를 삽입 선택한 단추의 새 캡션을 제공 합니다.  
+2.  **이름** 옆의 삽입은 선택된 단추에 대한 새 캡션을 제공합니다.  
   
-## 참고 항목  
- [Visual Studio의 내게 필요한 옵션](../../ide/reference/accessibility-features-of-visual-studio.md)   
- [내게 필요한 옵션을 제공하는 응용 프로그램 설계를 위한 리소스](../../ide/reference/resources-for-designing-accessible-applications.md)
+## <a name="see-also"></a>참고 항목  
+ [Visual Studio의 접근성 기능](../../ide/reference/accessibility-features-of-visual-studio.md)   
+ [접근성을 제공하는 응용 프로그램 설계를 위한 리소스](../../ide/reference/resources-for-designing-accessible-applications.md)

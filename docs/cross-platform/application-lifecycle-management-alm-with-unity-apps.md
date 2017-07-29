@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7e95cec543216f13de06d2c2b86bc08040d1a7fb
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: de365cf073ed234ece1d9af56232a29b7ef8eec4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>ALM(Application Lifecycle Management) 및 Unity 앱
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/13/2017
 |-------------|--------------------------|-------------------------|  
 |[Team Foundation 버전 제어](http://msdn.microsoft.com/Library/1d629052-c65d-4c5d-81eb-eaa4413fe285) 또는 Visual Studio Team Services 사용|예|Unity 프로젝트는 단순히 다른 프로젝트와 마찬가지로 버전 제어 시스템에 배치할 수 있는 파일 모음이지만, 특별히 고려해야 하는 몇 가지 사항을 뒤에서 설명합니다.|  
 |[Team Services에서 Git 시작하기](http://msdn.microsoft.com/Library/32f46ecd-1b03-4ef0-a9c4-8a120da2b03f)|예|표 뒤에 나오는 설명을 참조하세요.|  
-|[코드 분석/코드 품질 향상(참조, 제안된 변경 내용 등)](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)|예||  
+|[코드 품질 향상](/visualstudio/test/improve-code-quality)|예||  
 |[코드 변경 내용 및 기타 기록 찾기](../ide/find-code-changes-and-other-history-with-codelens.md)|예||  
 |[코드 맵을 사용하여 응용 프로그램 디버그](../modeling/use-code-maps-to-debug-your-applications.md)|예||  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 05/13/2017
 |[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)|아니요|코딩된 UI 테스트는 앱 UI의 읽을 수 있는 컨트롤을 사용합니다. Unity 앱은 본질적으로 그래픽이므로 코딩된 UI 테스트 도구에서 콘텐츠를 읽을 수 없습니다.|  
   
 ## <a name="improve-code-quality"></a>코드 품질 향상  
- 참조 링크: **[코드 품질 향상](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
+ 참조 링크: **[코드 품질 향상](/visualstudio/test/improve-code-quality)**  
   
 |기능|Unity에서 지원 여부|추가 설명|  
 |-------------|--------------------------|-------------------------|  

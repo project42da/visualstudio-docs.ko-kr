@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 4669932307d37593154e337265288919a1042f37
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e4abacb0286de16c148076572e73043daed4d567
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="signing-page-project-designer"></a>프로젝트 디자이너, 서명 페이지
@@ -83,7 +84,7 @@ ms.lasthandoff: 02/22/2017
  **어셈블리 서명** 확인란  
  어셈블리에 서명하고 강력한 이름 키 파일을 만들려면 이 확인란을 선택합니다. **프로젝트 디자이너**를 사용하여 어셈블리에 서명하는 방법에 대한 자세한 내용은 [방법: 어셈블리 서명(Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)을 참조하세요.  
   
- 이 옵션은 [!INCLUDE[winsdklong](../../deployment/includes/winsdklong_md.md)]에서 제공된 Al.exe 도구를 사용하여 어셈블리에 서명합니다. Al.exe에 대한 자세한 내용은 [방법: 강력한 이름으로 어셈블리 서명](http://msdn.microsoft.com/Library/2c30799a-a826-46b4-a25d-c584027a6c67)을 참조하세요.  
+ 이 옵션은 [!INCLUDE[winsdklong](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)에서 제공된 Al.exe 도구를 사용하여 어셈블리에 서명합니다.  
   
  **강력한 이름 키 파일 선택** 목록  
  어셈블리 서명에 사용되는 신규 또는 기존 강력한 이름 키 파일을 지정할 수 있습니다. **\<찾아보기...>**를 선택하여 기존 키 파일을 선택합니다.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 02/22/2017
  **서명만 연기** 확인란  
  서명 연기를 사용하려면 이 확인란을 선택합니다.  
   
- 지연 서명된 프로젝트가 실행되지 않고 디버그될 수 없습니다. 그러나 [Sn.exe(강력한 이름 도구)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)를 `-Vr` 옵션과 함께 사용하여 개발 중에 확인을 건너뛸 수 있습니다.  
+ 지연 서명된 프로젝트가 실행되지 않고 디버그될 수 없습니다. 그러나 [Sn.exe(강력한 이름 도구)](/dotnet/framework/tools/sn-exe-strong-name-tool)를 `-Vr` 옵션과 함께 사용하여 개발 중에 확인을 건너뛸 수 있습니다.  
   
 > [!NOTE]
 >  어셈블리에 서명할 때 항상 개인 키에 액세스할 수 있는 것은 아닙니다. 예를 들어 조직에 개발자가 일상적으로 액세스할 수 없는 엄격하게 보호된 키 쌍이 있을 수 있습니다. 공개 키를 사용할 수 있지만 개인 키에 대한 액세스는 몇몇 개인으로 제한됩니다. 이 경우 *지연* 또는 *일부 서명*을 통해 공개 키를 제공하여 어셈블리가 전달될 때까지 개인 키 추가를 연기할 수 있습니다.  
@@ -109,5 +110,5 @@ ms.lasthandoff: 02/22/2017
  [관리되는 응용 프로그램의 강력한 이름 서명](http://msdn.microsoft.com/en-us/5fef3490-c519-4363-94fd-8b1ad260dab5)   
  [방법: 응용 프로그램 및 배포 매니페스트 서명](../../ide/how-to-sign-application-and-deployment-manifests.md)   
  [방법: 어셈블리 서명(Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)   
- [방법: 강력한 이름으로 어셈블리 서명](http://msdn.microsoft.com/Library/2c30799a-a826-46b4-a25d-c584027a6c67)   
+ [방법: 강력한 이름으로 어셈블리 서명](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)   
  [강력한 이름의 어셈블리](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)

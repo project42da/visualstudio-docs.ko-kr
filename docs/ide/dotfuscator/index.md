@@ -40,8 +40,7 @@ ms.lasthandoff: 06/23/2017
 
 ---
 
-# Dotfuscator CE(Community Edition)
-<a id="dotfuscator-community-edition-ce" class="xliff"></a>
+# <a name="dotfuscator-community-edition-ce"></a>Dotfuscator CE(Community Edition)
 
 *PreEmptive Protection - Dotfuscator*는 보안 소프트웨어 개발 수명 주기에 맞도록 손쉽게 조정되는 포괄적인 .NET 응용 프로그램 보호 기능을 제공합니다.
 이 프로그램을 사용하여 데스크톱, 모바일, 서버 및 포함된 응용 프로그램을 강화, 보호 및 정리함으로써 거래 비밀 및 기타 IP(지적 재산권)를 보호하고, 불법 복제 및 위조를 줄이고, 변조 및 무단 디버깅으로부터 보호하는 데 도움을 얻을 수 있습니다.
@@ -49,8 +48,7 @@ Dotfuscator는 추가적인 프로그래밍이나 소스 코드 액세스 없이
 
 ![](media/header.svg)
 
-## 보호가 중요한 이유
-<a id="why-protection-matters" class="xliff"></a>
+## <a name="why-protection-matters"></a>보호가 중요한 이유
 
 **IP(지적 재산권)을 보호**하는 일은 매우 중요합니다.
 응용 프로그램의 코드에는 IP로 간주할 수 있는 디자인 및 구현 세부 정보가 포함되어 있습니다.
@@ -64,8 +62,7 @@ Dotfuscator는 응용 프로그램에 변조 및 제3자 디버깅을 비롯한 
 
 Dotfuscator를 보안 소프트웨어 개발 수명 주기에 적용하는 방법에 대한 자세한 내용은 PreEmptive Solutions의 [SDL 응용 프로그램 보호 페이지][sdl-protection]를 참조하세요.
 
-## Dotfuscator CE 정보
-<a id="about-dotfuscator-ce" class="xliff"></a>
+## <a name="about-dotfuscator-ce"></a>Dotfuscator CE 정보
 
 Microsoft Visual Studio 2017의 복사본에는 Dotfuscator CE로도 알려진 ***PreEmptive Protection - Dotfuscator* Community Edition**의 복사본이 있으며, 개인 용도로 사용 시 무료로 제공됩니다.
 Visual Studio 2017에 포함된 Dotfuscator CE 버전을 설치하는 방법에 대한 지침은 [설치 페이지][install]를 참조하세요.
@@ -86,8 +83,7 @@ Dotfuscator CE는 통합된 기본 보호 기능을 제공합니다.
 Dotfuscator CE에 등록한 사용자와 전 세계에서 널리 사용되고 있는 [.NET Obfuscator][net-obfuscator]인 *PreEmptive Protection - Dotfuscator* Professional Edition 사용자는 더 많은 응용 프로그램 보호 기능을 사용할 수 있습니다.
 Dotfuscator를 강화하는 방법에 대한 자세한 내용은 [업그레이드 페이지][upgrades]를 참조하세요.
 
-## 시작
-<a id="getting-started" class="xliff"></a>
+## <a name="getting-started"></a>시작
 
 Visual Studio에서 Dotfuscator CE 사용을 시작하려면 **빠른 실행**(Ctrl + Q) 검색 창에 `dotfuscator`를 입력합니다.
 
@@ -96,8 +92,7 @@ Visual Studio에서 Dotfuscator CE 사용을 시작하려면 **빠른 실행**(C
 
 [preemptive.com의 Dotfuscator 다운로드 페이지][download]에서 **최신 버전**을 불러올 수도 있습니다.
 
-## 전체 설명서
-<a id="full-documentation" class="xliff"></a>
+## <a name="full-documentation"></a>전체 설명서
 
 이 페이지와 해당 하위 페이지에는 Dotfuscator CE 기능에 대한 자세한 개요와 [도구 설치 지침][install]이 제공되어 있습니다.
 

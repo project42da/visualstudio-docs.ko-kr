@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9b29250916c91c98176585bbdb8c5a4018dbd6c7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: 3524c21503d0432d509c607ea157f3fe675b443d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="how-to-create-item-templates"></a>방법: 항목 템플릿 만들기
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/22/2017
 
  마법사에서 기본 템플릿 만들기에 대한 많은 작업을 수행하지만 대부분의 경우 템플릿을 내보낸 후 .vstemplate 파일을 수동으로 수정해야 합니다. 예를 들어 항목을 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱 프로젝트의 **새 항목 추가** 대화 상자에 표시하려면 몇 가지 추가 단계를 수행해야 합니다. 이 항목의 [두 번째 절차](../ide/how-to-create-item-templates.md#modify_template)에 따라 해당 작업을 수행할 수 있습니다.  
 
- Office, 대시보드 또는 웹과 같은 특정 프로젝트 하위 유형에만 템플릿이 표시되도록 지정하려면 [이 섹션](../ide/how-to-create-multi-file-item-templates.md#enable_templates)을 참조하세요.  
+ Office, 대시보드 또는 웹과 같은 특정 프로젝트 하위 유형에만 템플릿이 표시되도록 지정하려면 [이 섹션](#enable_templates)을 참조하세요.  
 
  경우에 따라 항목 템플릿을 처음부터 수동으로 만들어야 하거나 만들 수 있습니다. [세 번째 절차](../ide/how-to-create-item-templates.md#create_template)에서는 이 작업 방법을 보여 줍니다.  
 
@@ -80,11 +81,13 @@ ms.lasthandoff: 02/22/2017
 
 3.  Visual Studio에서 .vstemplate 파일을 엽니다.  
 
-4.  Windows 8.1 저장소 C# 프로젝트의 경우 .vstemplate 파일에 다음 XML을 열고 닫는 `<TemplateData>` 태그(`<TemplateGroupID>WinRT-Managed</TemplateGroupID>`)로 묶어 추가합니다.  
+4.  유니버설 Windows C# 프로젝트의 경우 .vstemplate 파일에서 XML `<TemplateID>Microsoft.CSharp.Class</TemplateID>`를 여는 `<TemplateData>` 태그 내에 추가합니다. 
 
-     C++ Windows 8.1 스토어 프로젝트에서는 `WinRT-Native-6.3` 값을 사용합니다. Windows 10 및 기타 프로젝트 유형의 경우 [TemplateGroupID 요소(Visual Studio 템플릿)](../extensibility/templategroupid-element-visual-studio-templates.md)를 참조하세요.  
+    Windows 8.1 저장소 C# 프로젝트의 경우 .vstemplate 파일에 다음 XML을 열고 닫는 `<TemplateData>` 태그(`<TemplateGroupID>WinRT-Managed</TemplateGroupID>`)로 묶어 추가합니다.  
 
-     다음 예제에서는 XML `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` 행이 추가된 이후 .vstemplate 파일의 전체 내용을 보여 줍니다. 이 예제는 C# 프로젝트에만 적용됩니다. <ProjectTpe> 및 \< [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> 요소를 수정하여 다른 언어 및 프로젝트 유형을 지정할 수 있습니다.  
+    C++ Windows 8.1 스토어 프로젝트에서는 `WinRT-Native-6.3` 값을 사용합니다. Windows 10 및 기타 프로젝트 유형의 경우 [TemplateGroupID 요소(Visual Studio 템플릿)](../extensibility/templategroupid-element-visual-studio-templates.md)를 참조하세요.  
+
+    다음 예제에서는 XML `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` 행이 추가된 이후 .vstemplate 파일의 전체 내용을 보여 줍니다. 이 예제는 C# 프로젝트에만 적용됩니다. <ProjectTpe> 및 \< [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> 요소를 수정하여 다른 언어 및 프로젝트 유형을 지정할 수 있습니다.  
 
     ```xml  
     <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">  
@@ -116,8 +119,9 @@ ms.lasthandoff: 02/22/2017
  이제 **새 항목 추가** 대화 상자에서 이 템플릿을 기반으로 한 항목을 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 프로젝트에 추가할 수 있습니다.  
 
  매개 변수 이름에 대한 자세한 내용은 [템플릿 매개 변수](../ide/template-parameters.md)를 참조하세요.  
-
-### <a name="to-enable-templates-for-specific-project-sub-types"></a>특정 프로젝트 하위 유형에 템플릿을 사용하도록 설정하려면  
+  
+ 
+### <a name="enable_templates"></a> 특정 프로젝트 하위 형식에 템플릿을 사용하도록 설정하려면  
 
 1.  개발 환경에서는 특정 프로젝트에 대해 프로젝트 항목을 항목 추가 대화 상자에서 사용할 수 있도록 할 수 있습니다. 이 절차를 사용하여 Windows, 웹, Office 또는 데이터베이스 프로젝트에 대해 사용할 수 있는 사용자 지정 항목을 만들 수 있습니다.  
 

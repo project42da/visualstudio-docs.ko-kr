@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: dcabdd5ca1381ec15e66637a35044c456411c8c7
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 29aa9de1c8fcba0c51a05751666d2931aa68aaa4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="concurrency-visualizer-markers"></a>동시성 시각화 도우미 표식
@@ -62,11 +63,11 @@ ms.lasthandoff: 04/05/2017
   
 -   [동시성 시각화 도우미 SDK](../profiling/concurrency-visualizer-sdk.md)  
   
--   [TPL(작업 병렬 라이브러리)](http://msdn.microsoft.com/Library/b8f99f43-9104-45fd-9bff-385a20488a23)  
+-   [TPL(작업 병렬 라이브러리)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)  
   
--   [데이터 흐름](http://msdn.microsoft.com/Library/643575d0-d26d-4c35-8de7-a9c403e97dd6)  
+-   [데이터 흐름](/dotnet/standard/parallel-programming/dataflow-task-parallel-library)  
   
--   [PLINQ(병렬 LINQ)](http://msdn.microsoft.com/Library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)  
+-   [PLINQ(병렬 LINQ)](/dotnet/standard/parallel-programming/parallel-linq-plinq)  
   
 -   [동시성 런타임](/cpp/parallel/concrt/concurrency-runtime)  
   

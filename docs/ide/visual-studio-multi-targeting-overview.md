@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 1a1b6d341325477c39ea3cb1faee029f78069325
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
+ms.openlocfilehash: 93e0c6676d48a0164dcf3b184bcb886934372787
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio 다중 대상 지정 개요
@@ -84,16 +85,15 @@ ms.lasthandoff: 02/22/2017
  .NET Framework 버전을 대상으로 지정하려면 먼저 적절한 어셈블리 참조를 설치해야 합니다. .NET Framework 버전 2.0, 3.0 및 3.5에 대한 어셈블리 참조는 [Microsoft Download Center, Microsoft Visual Studio](http://go.microsoft.com/fwlink/?LinkId=227602)(Microsoft 다운로드 센터, Microsoft Visual Studio) 웹 사이트에서 다운로드할 수 있는 .NET Framework 3.5 SP1에 포함됩니다. .NET Framework 3.5 Client Profile, .NET Framework 4, .NET Framework 4 Client Profile 및 Silverlight에 대한 어셈블리 참조는 [Visual Studio Downloads](http://go.microsoft.com/fwlink/?LinkId=179687)(Visual Studio 다운로드) 웹 사이트에서도 다운로드할 수 있습니다.  
   
 > [!NOTE]
->  .NET Framework Client Profile은 라이브러리 및 기능의 제한된 집합을 제공하는 .NET Framework의 하위 집합입니다. Client Profile에 대한 자세한 내용은 [.NET Framework Client Profile](http://msdn.microsoft.com/Library/f0219919-1f02-4588-8704-327a62fd91f1)을 참조하세요.  
+>  .NET Framework Client Profile은 라이브러리 및 기능의 제한된 집합을 제공하는 .NET Framework의 하위 집합입니다. Client Profile에 대한 자세한 내용은 [.NET Framework Client Profile](/dotnet/framework/deployment/client-profile)을 참조하세요.  
   
- **참조 추가** 대화 상자에서는 실수로 프로젝트에 추가될 수 없도록 대상 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 관련이 없는 시스템 어셈블리가 사용되지 않습니다. 시스템 어셈블리는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 포함된 .dll 파일입니다. 대상 버전 이후의 프레임워크 버전에 속한 참조는 확인되지 않고 이런 참조에 따라 결정되는 컨트롤을 추가할 수 없습니다. 해당 참조를 사용하도록 설정하려면 프로젝트의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 대상을 참조가 포함된 대상으로 다시 설정합니다.  자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.  
+ **참조 추가** 대화 상자에서는 실수로 프로젝트에 추가될 수 없도록 대상 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 관련이 없는 시스템 어셈블리가 사용되지 않습니다. 시스템 어셈블리는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 포함된 .dll 파일입니다. 대상 버전 이후의 프레임워크 버전에 속한 참조는 확인되지 않고 이런 참조에 따라 결정되는 컨트롤을 추가할 수 없습니다. 해당 참조를 사용하도록 설정하려면 프로젝트의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 대상을 참조가 포함된 대상으로 다시 설정합니다.  자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.  
   
  어셈블리 참조에 대한 자세한 내용은 [디자인 타임에 어셈블리 확인](../msbuild/resolving-assemblies-at-design-time.md)을 참조하세요.  
   
 ## <a name="enabling-linq"></a>LINQ 사용  
- .NET Framework 3.5 이상을 대상으로 지정하면 System.Core에 대한 참조 및 System.Linq에 대한 프로젝트 수준 가져오기(Visual Basic에서만)가 자동으로 추가됩니다. LINQ 기능을 사용하려면 Option Infer도 켜야 합니다(Visual Basic에서만). 대상을 이전 .NET Framework 버전으로 변경하면 참조 및 가져오기가 자동으로 제거됩니다. 자세한 내용은 [방법: LINQ 프로젝트 만들기](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md)를 참조하세요.  
+ .NET Framework 3.5 이상을 대상으로 지정하면 System.Core에 대한 참조 및 System.Linq에 대한 프로젝트 수준 가져오기(Visual Basic에서만)가 자동으로 추가됩니다. LINQ 기능을 사용하려면 Option Infer도 켜야 합니다(Visual Basic에서만). 대상을 이전 .NET Framework 버전으로 변경하면 참조 및 가져오기가 자동으로 제거됩니다. 자세한 내용은 [LINQ 작업](/dotnet/csharp/tutorials/working-with-linq)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [멀티 타기팅](../msbuild/msbuild-multitargeting-overview.md)   
- [ASP.NET 웹 프로젝트에 대한 .NET Framework 멀티 타기팅](http://msdn.microsoft.com/Library/8b8145a9-62f6-4fc4-8a83-47b0487cbe76)   
  [Platform compatibility and system requirements](http://www.microsoft.com/visualstudio/eng/products/compatibility)(플랫폼 호환성 및 시스템 요구 사항)

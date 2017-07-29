@@ -37,14 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 7a92736406aedb3706f5101af3e10ec8bb5d3fe4
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e1e6b68c59aa10204bd985b9bf8d17e8256936d5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="registerassembly-task"></a>RegisterAssembly 작업
-지정된 어셈블리 내의 메타데이터를 읽고 필요한 엔트리를 레지스트리에 추가할 수 있습니다. 이렇게 하면 COM 클라이언트에서 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 클래스를 투명하게 만들 수 있습니다. 이 작업의 동작은 [Regasm.exe(어셈블리 등록 도구)](http://msdn.microsoft.com/Library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)의 동작과 비슷하지만 같지는 않습니다.  
+지정된 어셈블리 내의 메타데이터를 읽고 필요한 엔트리를 레지스트리에 추가할 수 있습니다. 이렇게 하면 COM 클라이언트에서 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 클래스를 투명하게 만들 수 있습니다. 이 작업의 동작은 [Regasm.exe(어셈블리 등록 도구)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)의 동작과 비슷하지만 같지는 않습니다.  
   
 ## <a name="parameters"></a>매개 변수  
  다음 표에서는 `RegisterAssembly` 작업의 매개 변수에 대해 설명합니다.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 02/22/2017
 |`TypeLibFiles`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 매개 변수입니다.<br /><br /> 지정된 어셈블리에서 생성할 형식 라이브러리를 지정합니다. 생성된 형식 라이브러리에는 어셈블리 내에 정의된 액세스 가능 형식에 대한 정의가 들어 있습니다. 형식 라이브러리는 다음 조건 중 하나가 충족되는 경우에만 생성됩니다.<br /><br /> - 해당 이름의 형식 라이브러리가 해당 위치에 존재하지 않습니다.<br />- 형식 라이브러리는 존재하지만 전달되는 어셈블리보다 오래된 것입니다.<br /><br /> 형식 라이브러리가 전달되는 어셈블리보다 최신인 경우 새 형식 라이브러리가 만들어지지 않으며 어셈블리는 계속 등록됩니다.<br /><br /> 이 매개 변수를 지정하는 경우 `Assemblies` 매개 변수와 동일한 수의 항목이 포함되어야 하며, 그러지 않으면 작업이 실패합니다. 입력을 지정하지 않으면 작업은 기본적으로 어셈블리의 이름이 되며 항목의 확장명을 .tlb로 변경합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 작업은 위에 나와 있는 매개 변수 외에 <xref:Microsoft.Build.Tasks.TaskExtension> 클래스의 매개 변수를 상속합니다. 이 클래스는 <xref:Microsoft.Build.Utilities.Task> 클래스에서 매개 변수를 상속합니다. 이러한 추가 매개 변수 및 해당 설명이 포함된 목록은 [TaskExtension 기본 클래스](../msbuild/taskextension-base-class.md)를 참조하세요.  
+ 이 작업은 위에 나와 있는 매개 변수 외에 <xref:Microsoft.Build.Utilities.Task> 클래스에서 직접 상속하는 <xref:Microsoft.Build.Tasks.TaskExtension> 클래스의 매개 변수도 상속합니다. 이러한 추가 매개 변수 및 해당 설명이 포함된 목록은 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `RegisterAssembly` 작업을 사용하여 `MyAssemblies` 항목 컬렉션으로 지정된 어셈블리를 등록합니다.  

@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 4f237be3ffdfe2bca52e885822a9fbfbbf97ba6a
-ms.openlocfilehash: 738e8c25509253872274a49303b2b02a8f7ba1a6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: dc4bcdcc11e357979641268ae77a8e39f8408f7a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="walkthrough-building-an-application"></a>연습: 응용 프로그램 빌드
@@ -237,13 +238,13 @@ ms.lasthandoff: 02/22/2017
      예를 들어 \\\myserver\builds를 지정할 수 있습니다.  
   
     > [!IMPORTANT]
-    >  지정한 네트워크 공유가 신뢰할 수 있는 위치가 아님을 알리는 메시지 상자가 나타날 수 있습니다. 지정한 위치를 신뢰하는 경우 메시지 상자에서 **확인** 단추를 선택합니다.  
+    >  지정한 네트워크 공유가 신뢰할 수 있는 위치가 아님을 경고하는 메시지 상자가 나타날 수 있습니다. 지정한 위치를 신뢰하는 경우 메시지 상자에서 **확인** 단추를 선택합니다.  
   
 6.  응용 프로그램을 빌드합니다.  
   
      ![빌드 메뉴의 솔루션 빌드 명령](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
   
-#### <a name="to-specify-a-release-build-for-visual-c"></a>Visual C에 대한 릴리스 빌드를 지정하려면# #
+#### <a name="to-specify-a-release-build-for-visual-c"></a>Visual C#에 대한 릴리스 빌드를 지정하려면 #
   
 1.  **프로젝트 디자이너**를 엽니다.  
   
@@ -260,7 +261,7 @@ ms.lasthandoff: 02/22/2017
      예를 들어 \\\myserver\builds를 지정할 수 있습니다.  
   
     > [!IMPORTANT]
-    >  지정한 네트워크 공유가 신뢰할 수 있는 위치가 아님을 알리는 메시지 상자가 나타날 수 있습니다. 지정한 위치를 신뢰하는 경우 메시지 상자에서 **확인** 단추를 선택합니다.  
+    >  지정한 네트워크 공유가 신뢰할 수 있는 위치가 아님을 경고하는 메시지 상자가 나타날 수 있습니다. 지정한 위치를 신뢰하는 경우 메시지 상자에서 **확인** 단추를 선택합니다.  
   
 6.  응용 프로그램을 빌드합니다.  
   
@@ -271,7 +272,7 @@ ms.lasthandoff: 02/22/2017
  축하합니다. 이 연습을 완료했습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [연습: 프로젝트 빌드(C++)](http://msdn.microsoft.com/Library/d459bc03-88ef-48d0-9f9a-82d17f0b6a4d)   
+ [연습: 프로젝트 빌드(C++)](/cpp/ide/walkthrough-building-a-project-cpp)   
  [ASP.NET 웹 응용 프로그램 프로젝트 미리 컴파일 개요](http://msdn.microsoft.com/en-us/b940abbd-178d-4570-b441-52914fa7b887)   
  [연습: MSBuild 사용](../msbuild/walkthrough-using-msbuild.md)
 

@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: 3aa97878f868f59d0e5dbdb6eb1eac7268e9efd3
-ms.lasthandoff: 04/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b430c85c7ef2979a9052685529cace6879432b96
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
 
 ---
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/06/2017
 
 1.  컴퓨터에서 Visual Studio 설치 관리자를 찾습니다.  
 
-     예를 들어 Windows 10 1주년 업데이트를 실행하는 컴퓨터에서 **시작**을 클릭한 다음 **V** 문자로 스크롤하면 **Visual Studio 설치 관리자**를 찾을 수 있습니다.  
+     예를 들어 Windows 10 1주년 업데이트를 실행하는 컴퓨터에서 **시작**을 선택한 다음 **V** 문자로 스크롤하면 **Visual Studio 설치 관리자**를 찾을 수 있습니다.  
 
      ![Visual Studio 설치 관리자](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio 설치 관리자 찾기")
 

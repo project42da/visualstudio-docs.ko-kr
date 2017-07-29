@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: f0c10c20b96ebbbaaad4047349d7586b584b8b57
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 641697cabee22a86e3b5ee7a360cbea154ead486
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="how-to-build-a-project-that-has-resources"></a>방법: 리소스를 사용하는 프로젝트 빌드
@@ -57,7 +58,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 `Output` 요소를 사용하여 `GenerateResource` 작업의 `OutputResources` 특성에 컴파일된 리소스 파일 `alpha.resources` 및 `beta.resources`가 포함되고 이러한 두 파일이 `Resources` 항목 목록 내에 배치되도록 지정하는 방법을 보여 줍니다. 이러한 .resources 파일을 같은 이름의 항목 모음으로 식별하면 해당 파일을 [Csc](../msbuild/csc-task.md) 작업 등의 다른 작업에 대한 입력으로 쉽게 사용할 수 있습니다.  
   
- 이 작업은 [Resgen.exe](http://msdn.microsoft.com/Library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)에 **/compile** 스위치를 사용하는 것과 같습니다.  
+ 이 작업은 [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)에 **/compile** 스위치를 사용하는 것과 같습니다.  
   
  `Resgen.exe /compile alpha.resx,alpha.resources /compile beta.txt,beta.resources`  
   
@@ -98,4 +99,4 @@ ms.lasthandoff: 02/22/2017
 [MSBuild](../msbuild/msbuild.md)  
  [GenerateResource 작업](../msbuild/generateresource-task.md)   
  [Csc 작업](../msbuild/csc-task.md)   
- [Resgen.exe(리소스 파일 생성기)](http://msdn.microsoft.com/Library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)
+ [Resgen.exe(리소스 파일 생성기)](/dotnet/framework/tools/resgen-exe-resource-file-generator)

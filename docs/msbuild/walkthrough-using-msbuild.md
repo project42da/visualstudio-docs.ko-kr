@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: ecfd08a410983561f3c1e761eb25302b6d9281c4
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 34c78f4573bc2b11e738c3722cefaa8e294287b5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="walkthrough-using-msbuild"></a>연습: MSBuild 사용
@@ -455,7 +455,7 @@ $(PropertyName)
 1.  코드 편집기에서 메시지 작업을 다음 줄로 바꿉니다.  
   
     ```xml  
-    <Message Text="Compile item type contains @(XFiles)" />  
+    <Message Text="XFiles item type contains @(XFiles)" />  
     ```  
   
 2.  Import 요소 바로 뒤에 다음 항목 그룹을 추가합니다.  
@@ -477,7 +477,7 @@ $(PropertyName)
 5.  출력을 검사합니다. 다음 줄이 표시됩니다.  
   
     ```  
-    Compile item type contains Form1.cs;Program.cs;Properties/Resources.resx  
+    XFiles item type contains Form1.cs;Program.cs;Properties/Resources.resx  
     ```  
   
 ## <a name="item-metadata"></a>항목 메타데이터  
@@ -597,3 +597,4 @@ $(PropertyName)
 ## <a name="see-also"></a>참고 항목
 [MSBuild 개요](../msbuild/msbuild.md)  
  [MSBuild 참조](../msbuild/msbuild-reference.md)
+

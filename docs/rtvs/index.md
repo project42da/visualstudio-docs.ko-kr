@@ -23,8 +23,7 @@ ms.lasthandoff: 07/12/2017
 
 ---
 
-# Visual Studio에서 R 작업
-<a id="working-with-r-in-visual-studio" class="xliff"></a>
+# <a name="working-with-r-in-visual-studio"></a>Visual Studio에서 R 작업
 
 R은 통계 계산 및 그래픽을 위한 고도로 확장 가능한 언어 및 환경입니다. 이 프로그램은 GNU General Public License에 따라 무료로 배포되며, 강력한 커뮤니티 지원을 활용할 수 있고, 수학 기호 및 수식을 포함하는 게시 품질 도표를 생성하는 기능으로 잘 알려져 있습니다. [r project.org](https://www.r-project.org/about.html) 및 [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)(R 소개)에서 R에 대해 자세히 알아볼 수 있습니다.
 
@@ -53,8 +52,7 @@ Visual Studio에서 R을 사용해 보려면
 
 > [!VIDEO https://www.youtube.com/embed/RcSDEfMgUvU]
 
-## 질문과 대답
-<a id="frequently-asked-questions" class="xliff"></a>
+## <a name="frequently-asked-questions"></a>질문과 대답
 
 **질문: RTVS가 Visual Studio Express Edition에서 작동하나요?**
 
@@ -122,8 +120,7 @@ Visual Studio에서 R을 사용해 보려면
 
 대답: 아니요, Visual Studio는 네트워크 공유에서 프로젝트 로드를 지원하지 않습니다.
 
-## 피드백을 보내주세요.
-<a id="send-us-your-feedback" class="xliff"></a>
+## <a name="send-us-your-feedback"></a>피드백을 보내주세요.
 
 1. **Github 문제**: RTVS 팀에 연락하는 가장 좋은 방법은 [GitHub에서 문제를 신고](https://github.com/Microsoft/RTVS/issues)하거나 **R Tools > 피드백** 메뉴를 사용하는 것입니다.
 

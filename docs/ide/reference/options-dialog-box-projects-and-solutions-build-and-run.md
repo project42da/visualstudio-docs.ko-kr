@@ -1,80 +1,65 @@
 ---
 title: "옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Projects.Build_and_Run"
-  - "VS.ToolsOptionsPag.Projects.Build_and_Run"
-helpviewer_keywords: 
-  - "빌드[Visual Studio], 설정"
-  - "동작 실행"
-  - "디버거, 실행 옵션"
+ms.custom: 
+ms.date: 7/14/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Projects.Build_and_Run
+- VS.ToolsOptionsPag.Projects.Build_and_Run
+helpviewer_keywords:
+- builds [Visual Studio], setting up
+- run actions
+- debugger, run options
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
 caps.latest.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# 옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: 8e5165b4b17195e5f9172dd25962c9486a7aeeeb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/26/2017
 
-이 대화 상자에서 동시에 빌드할 수 있는 Visual C\+\+ 또는 Visual C\# 프로젝트의 최대 개수, 특정 기본 빌드 동작 및 일부 빌드 로그 설정을 지정할 수 있습니다.  **옵션** 대화 상자를 열려면 메뉴 모음에서 **도구**, **옵션**을 차례로 선택합니다.  이 옵션 집합에 액세스하려면 **프로젝트 및 솔루션**을 확장하고 **빌드 및 실행**을 선택합니다.  
+---
+
+# <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행
+
+이 대화 상자에서 동시에 빌드할 수 있는 Visual C++ 또는 Visual C# 프로젝트의 최대 개수, 특정 기본 빌드 동작 및 일부 빌드 로그 설정을 지정할 수 있습니다. 이러한 옵션에 액세스하려면 **도구 > 옵션**을 선택하고 **프로젝트 및 솔루션**을 확장한 후 **빌드 및 실행**을 선택합니다.
   
-## UI 요소 목록  
- **최대 병렬 프로젝트 빌드 수**  
- 동시에 빌드할 수 있는 Visual C\+\+ 및 Visual C\# 프로젝트의 최대 개수를 지정합니다.  빌드 프로세스를 최적화하기 위해 최대 병렬 프로젝트 빌드 수는 자동으로 컴퓨터의 CPU 수로 설정됩니다.  최대값은 32입니다.  
-  
- **실행할 때 시작 프로젝트와 종속성만 빌드**  
- F5 키를 선택할 때 이 확인란이 선택된 경우 시작 프로젝트 및 해당 종속성만 빌드됩니다. 메뉴 모음에서 **디버그**, **시작**을 차례로 선택하거나 메뉴 모음에서 **빌드**, **빌드**를 차례로 선택합니다.  F5 키를 선택할 때 이 확인란이 선택 취소된 경우 모든 프로젝트, 종속성 및 솔루션 파일이 빌드됩니다. 메뉴 모음에서 **디버그**, **시작**을 차례로 선택하거나 메뉴 모음에서 **빌드**, **빌드**를 차례로 선택합니다.  기본적으로 이 옵션은 선택 취소되어 있습니다.  
-  
- **실행 시 프로젝트가 만료된 경우**  
- > [!NOTE]
->  이 목록은 [!INCLUDE[vcprvc](../../debugger/includes/vcprvc_md.md)] 프로젝트에만 적용됩니다.  
-  
- 기본적으로 F5 키를 선택하거나 메뉴 모음에서 **디버그**, **시작**을 차례로 선택할 때 프로젝트 구성이 오래된 경우 메시지가 나타납니다.  프로젝트를 빌드할지 여부 및 메시지를 표시할지 여부를 지정할 수 있습니다.  이 옵션을 사용하여 메시지의 표시 여부 및 메시지를 표시하지 않는 경우의 빌드 동작을 지정합니다.  
-  
- **항상 빌드**  
- 메시지 상자가 표시되지 않고 구성이 오래된 경우에도 프로젝트가 빌드됩니다.  이 옵션은 메시지에서 **이 대화 상자를 다시 표시 안 함** 확인란을 선택한 후 **예** 단추를 선택하는 경우에 설정됩니다.  
-  
- **빌드 안 함**  
- 메시지 상자가 표시되지 않고 프로젝트가 빌드되지 않습니다.  이 옵션은 메시지에서 **이 대화 상자를 다시 표시 안 함** 확인란을 선택한 후 **아니요** 단추를 선택하는 경우에 설정됩니다.  
-  
- **빌드 여부 묻기**  
- 프로젝트 구성이 오래될 때마다 메시지 상자를 표시합니다.  
-  
- **실행 시 빌드 또는 배포 오류가 발생한 경우**  
- **빌드** 메뉴에서 빌드를 시작할 때 빌드 오류가 발생하는 경우 메시지가 표시됩니다.  응용 프로그램을 시작하여 계속할지 여부 및 빌드 오류가 발생할 때마다 메시지를 표시할지 여부를 지정할 수 있습니다.  이 옵션을 사용하여 메시지의 표시 여부 및 메시지를 표시하지 않는 경우의 동작을 지정합니다.  
-  
-> [!NOTE]
->  이 옵션은 [!INCLUDE[vcprvc](../../debugger/includes/vcprvc_md.md)] 프로젝트에만 적용됩니다.  
-  
- **시작 여부 묻기**  
- 빌드 오류가 발생할 때마다 메시지 상자를 표시합니다.  
-  
- **시작하지 않음**  
- 메시지 상자가 표시되지 않고 응용 프로그램이 시작되지 않습니다.  이 옵션은 메시지 상자에서 **이 대화 상자를 다시 표시 안 함** 확인란을 선택한 후 **아니요** 단추를 선택하는 경우에 설정됩니다.  
-  
- **이전 버전 시작**  
- 메시지 상자가 표시되지 않고 응용 프로그램의 새로 빌드된 버전이 시작되지 않습니다.  이 옵션은 메시지 상자에서 **이 대화 상자를 다시 표시 안 함** 확인란을 선택한 후 **예** 단추를 선택하는 경우에 설정됩니다.  
-  
- **새 솔루션에 대해 현재 선택한 프로젝트를 시작 프로젝트로 사용**  
- 이 확인란이 선택된 경우 새 솔루션이 현재 선택한 프로젝트를 시작 프로젝트로 사용합니다.  
-  
- **MSBuild 프로젝트 빌드 출력의 자세한 정도**  
- 빌드에 대한 **출력** 창에 표시되는 정보의 양을 결정합니다.  
-  
- **MSBuild 프로젝트 빌드 로그 파일의 자세한 정도**  
- > [!NOTE]
->  이 옵션은 Visual C\+\+ 프로젝트에만 적용됩니다.  
-  
- \\...  \\*ProjectName*\\Debug\\*ProjectName*.log에 있는 빌드 로그 파일에 기록되는 정보의 양을 결정합니다.  
-  
-## 참고 항목  
- [Visual Studio에서 응용 프로그램　빌드](../../ide/compiling-and-building-in-visual-studio.md)
+**최대 병렬 프로젝트 빌드 수**  
+동시에 빌드할 수 있는 Visual C++ 및 Visual C# 프로젝트의 최대 개수를 지정합니다. 빌드 프로세스를 최적화하기 위해 최대 병렬 프로젝트 빌드 수는 자동으로 컴퓨터의 CPU 수로 설정됩니다. 최대값은 32입니다.  
+
+**실행할 때 시작 프로젝트와 종속성만 빌드**  
+F5 키를 사용하고 **디버그 > 시작** 메뉴 명령 또는 **빌드** 메뉴의 해당 명령을 선택할 때 시작 프로젝트와 종속성만 빌드합니다. 선택하지 않으면 모든 프로젝트와 종속성이 빌드됩니다. 
+
+**실행 시 프로젝트가 만료된 경우**  
+*[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 프로젝트에만 적용됩니다.*
+
+F5 키 또는 **디버그 > 시작** 명령으로 프로젝트 실행 시 기본 설정인 **빌드 여부 묻기**에서 프로젝트 구성이 만료되었는지를 묻는 메시지를 표시합니다. 실행될 때마다 프로젝트를 빌드하려면 **항상 빌드**를 선택합니다. 프로젝트를 실행할 때 모든 자동 빌드를 표시하지 않으려면 **빌드 안 함**을 선택합니다.
+
+**실행 시 빌드 또는 배포 오류가 발생한 경우**  
+*[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 프로젝트에만 적용됩니다.*
+
+F5 키 또는 **디버그 > 시작** 명령으로 프로젝트 실행 시 기본 설정인 **시작 여부 묻기**에서 빌드에 실패한 경우에도 프로젝트를 실행할지를 묻는 메시지를 표시합니다. 마지막으로 성공한 빌드를 자동으로 시작하려면 **이전 버전 시작** 을 선택합니다. 그러면 실행 중인 코드와 소스 코드 간에 불일치가 발생할 수 있습니다. 메시지를 표시하지 않으려면 **시작하지 않음**을 선택합니다.
+
+**새 솔루션에 대해 현재 선택한 프로젝트를 시작 프로젝트로 사용**  
+이 옵션을 설정하면 새 솔루션에서 현재 선택한 프로젝트를 시작 프로젝트로 사용합니다.  
+
+**MSBuild 프로젝트 빌드 출력의 자세한 정도**  
+빌드에 대한 **출력** 창에 표시되는 정보의 양을 결정합니다.  
+
+**MSBuild 프로젝트 빌드 로그 파일의 자세한 정도**  
+*[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 프로젝트에만 적용됩니다.*
+
+\\...\\*ProjectName*\Debug\\*ProjectName*.log에 있는 빌드 로그 파일에 작성되는 정보의 양을 결정합니다.  
+
+## <a name="see-also"></a>참고 항목  
+-[컴파일 및 빌드](../../ide/compiling-and-building-in-visual-studio.md)
+- [옵션 대화 상자, 프로젝트 및 솔루션](projects-and-solutions-options-dialog-box.md)
+- [옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트](options-dialog-box-projects-and-solutions-web-projects.md)

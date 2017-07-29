@@ -32,25 +32,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 293d694cfff4c375b342d8322483c84fbbeb446c
-ms.openlocfilehash: d6ffa77642cb03bbea777e5caf23913d1ba3386e
-ms.lasthandoff: 04/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
+ms.openlocfilehash: 3fc2e9c086d6cdd71577fccd33652cfc14a3ee6e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/08/2017
 
 ---
 
 # <a name="visual-studio-2017-workload-and-component-ids"></a>Visual Studio 2017 작업 및 구성 요소 ID
 다음 페이지에는 명령줄을 사용하여 Visual Studio를 설치하거나 VSIX 매니페스트에 종속성을 지정하는 데 필요한 작업 및 구성 요소 ID가 나열되어 있습니다.
 
-* [Visual Studio Enterprise 2017](workload-component-id-vs-enterprise.md)
-* [Visual Studio Professional 2017](workload-component-id-vs-professional.md)
-* [Visual Studio Community 2017](workload-component-id-vs-community.md)
-* [Visual Studio Team Explorer 2017](workload-component-id-vs-team-explorer.md)
-* [Visual Studio Build Tools 2017](workload-component-id-vs-build-tools.md)
-* [Visual Studio Test Agent 2017](workload-component-id-vs-test-agent.md)
-* [Visual Studio Test Controller 2017](workload-component-id-vs-test-controller.md)
-* [Visual Studio Test Professional 2017](workload-component-id-vs-test-professional.md)
-* [Visual Studio Feedback Client 2017](workload-component-id-vs-feedback-client.md)
+| **버전** | **ID** | **설명** |
+| ----------- | ------ | --------------- |
+| [Visual&nbsp;Studio Enterprise&nbsp;2017](workload-component-id-vs-enterprise.md) | Microsoft.VisualStudio.Product.Enterprise | 모든 규모의 팀에서 생산성과 조정을 구현하기 위한 Microsoft DevOps 솔루션 |
+| [Visual&nbsp;Studio Professional&nbsp;2017](workload-component-id-vs-professional.md) | Microsoft.VisualStudio.Product.Professional | 소규모 팀을 위한 전문적인 개발자 도구 및 서비스 |
+| [Visual&nbsp;Studio Community&nbsp;2017](workload-component-id-vs-community.md) | Microsoft.VisualStudio.Product.Community | 학생, 오픈 소스 및 개인 개발자를 위한 모든 기능을 갖춘 무료 IDE |
+| [Visual&nbsp;Studio Team&nbsp;Explorer&nbsp;2017](workload-component-id-vs-team-explorer.md) | Microsoft.VisualStudio.Product.TeamExplorer | Visual Studio 개발자 도구 집합 없이 Team Foundation Server 및 Visual Studio Team Services와 상호 작용 |
+| [Visual&nbsp;Studio Build&nbsp;Tools&nbsp;2017](workload-component-id-vs-build-tools.md) | Microsoft.VisualStudio.Product.BuildTools | Visual Studio Build Tools를 사용하면 Visual Studio IDE 없이도 네이티브 및 관리되는 MSBuild 기반 응용 프로그램을 빌드할 수 있습니다. Visual C++ 컴파일러 및 라이브러리, ATL, MFC, C++/CLI 지원 등을 설치하는 옵션이 있습니다. |
+| [Visual&nbsp;Studio Test&nbsp;Agent&nbsp;2017](workload-component-id-vs-test-agent.md)  | Microsoft.VisualStudio.Product.TestAgent | 자동화된 테스트 및 부하 테스트를 원격으로 실행하도록 지원 |
+| [Visual&nbsp;Studio Test&nbsp;Controller 2017 ](workload-component-id-vs-test-controller.md) | Microsoft.VisualStudio.Product.TestController | 자동화된 테스트를 여러 컴퓨터에 배포 |
+| [Visual&nbsp;Studio Test&nbsp;Professional&nbsp;2017](workload-component-id-vs-test-professional.md) | Microsoft.VisualStudio.Product.TestProfessional | Visual Studio Test Professional 2017 |
+| [Visual&nbsp;Studio Feedback&nbsp;Client&nbsp;2017](workload-component-id-vs-feedback-client.md) | Microsoft.VisualStudio.Product.FeedbackClient | Visual Studio Feedback Client 2017 |
 
 이러한 목록을 사용하는 방법에 대한 자세한 내용은 [명령줄 매개 변수를 사용하여 Visual Studio 2017 설치](use-command-line-parameters-to-install-visual-studio.md) 페이지 및 [방법: 확장성 프로젝트를 Visual Studio 2017로 마이그레이션](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) 페이지를 참조하세요.
 

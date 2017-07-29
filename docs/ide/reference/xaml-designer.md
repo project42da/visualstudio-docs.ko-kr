@@ -29,17 +29,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: d23a47b708754248cd5c3fb8d86510a0c96491fa
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: bda254d18dc391f3c10e3544ee09fd09171d0938
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="xaml-designer-options-page"></a>XAML 디자이너 옵션 페이지
 **XAML 디자이너** 옵션 페이지를 사용하여 XAML 문서에서 요소와 특성의 서식을 설정하는 방법을 지정합니다. 이 페이지를 열려면 **도구** 메뉴를 선택한 다음 **옵션**을 선택합니다. **XAML 디자이너** 속성 페이지에 액세스하려면 **XAML 디자이너** 노드를 선택합니다. XAML 디자이너에 대한 설정은 문서를 열 때 적용됩니다. 따라서 설정을 변경하는 경우 변경 내용을 보려면 Visual Studio를 닫았다가 다시 열어야 합니다.
 
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
 
 ## <a name="enable-xaml-designer"></a>XAML 디자이너 사용
 선택된 경우 이 설정은 XAML 디자이너를 사용할 수 있게 합니다. XAML 디자이너는 XAML 문서를 편집할 수 있는 시각적 작업 영역을 제공합니다. 리소스용 IntelliSense, 데이터 바인딩 같은 Visual Studio의 특정 기능을 사용하려면 XAML 디자이너가 필요합니다.
@@ -116,7 +117,7 @@ ms.lasthandoff: 03/07/2017
 |**확대/축소 임계값**|**효과 렌더링** 확인란이 선택된 경우 효과가 렌더링되는 확대/축소 비율을 지정합니다. 이 설정을 초과하여 확대/축소하면 XAML 디자이너에서 효과가 더 이상 렌더링되지 않습니다.|  
 
 ## <a name="see-also"></a>참고 항목  
- [WPF의 XAML](http://msdn.microsoft.com/Library/5d858575-a83b-42df-ad3f-047ed2d6e3c8)   
+ [WPF의 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)   
  [방법: XAML 뷰 설정 변경](http://msdn.microsoft.com/en-us/aee87c79-ca01-4f84-8fb7-a9e47048ee47)   
  [XAML 및 코드 연습](http://msdn.microsoft.com/en-us/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)
 

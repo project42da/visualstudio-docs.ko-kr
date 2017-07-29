@@ -1,19 +1,39 @@
 ---
-title: "Visual Studio에 로그인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/23/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visual Studio에 로그인 | Microsoft 문서"
+ms.custom: 
+ms.date: 01/23/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 caps.latest.revision: 30
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 28
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8b1f56944190c60795d5bbd726388309caca7070
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio에 로그인
 IDE에 로그인하여 개인 설정 계정을 설정하면 Visual Studio의 개발 환경을 자신에게 맞게 설정하고 최적화할 수 있습니다.  
@@ -29,7 +49,7 @@ IDE에 로그인하여 개인 설정 계정을 설정하면 Visual Studio의 개
 
 -   **Visual Studio Community 버전 잠금 해제** - 평가 기간을 30일로 제한하지 않습니다.  
 
--   **Visual Studio 평가 기간 연장** – 평가 기간을 30일로 제한하지 않고 추가로 90일동안 Visual Studio Professional 또는 Visual Studio Enterprise를 사용할 수 있습니다.  
+-   **Visual Studio 평가 기간 연장** – 평가 기간을 30일로 제한하지 않고 추가로 90일 동안 Visual Studio Professional 또는 Visual Studio Enterprise를 사용할 수 있습니다.  
 
 -   **MSDN 또는 VSO 구독과 연결된 계정을 사용하는 경우 Visual Studio 잠금 해제**- [Visual Studio 잠금을 해제하는 방법](../ide/how-to-unlock-visual-studio.md)을 참조하세요.  
 
@@ -58,9 +78,4 @@ IDE에 로그인하여 개인 설정 계정을 설정하면 Visual Studio의 개
 4.  원하는 설정을 변경합니다.  
 
 5.  완료되면 **변경 내용 저장** 단추를 선택합니다.
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

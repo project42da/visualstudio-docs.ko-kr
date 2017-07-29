@@ -1,6 +1,6 @@
 ---
 title: "설치 문제 해결 | Microsoft Docs"
-description: '{{PLACEHOLDER}}'
+description: "때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치 또는 업그레이드에 실패할 경우 이 페이지가 도움이 될 수 있습니다."
 ms.date: 04/14/2017
 ms.reviewer: 
 ms.suite: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: d8125873ab5a92d9af26c556cb2f953a606c28d9
+ms.sourcegitcommit: d9de84bed187c62962a76424aabdc5f355dff4dc
+ms.openlocfilehash: e6c301a7b784c5966d4f7216e67067ef6ce3ed70
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 05/15/2017
 
 ---
-# <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-failures"></a>Visual Studio 2017 설치 및 업그레이드 실패 문제 해결
+# <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-issues"></a>Visual Studio 2017 설치 및 업그레이드 문제 해결
 
 ## <a name="symptoms"></a>증상
 Microsoft Visual Studio 2017을 설치 또는 업데이트할 때 작업이 실패합니다.
@@ -58,7 +58,7 @@ Visual Studio 설치 관리자 부트스트래퍼는 나머지 Visual Studio 설
 2. Visual Studio 설치 관리자 디렉터리를 삭제합니다. 일반적으로 디렉터리는 C:\Program Files (x86)\Microsoft Visual Studio\Installer입니다.
 3. Visual Studio 설치 관리자 부트스트래퍼를 실행합니다. Downloads 폴더에서 ```vs_[Visual Studio edition]__*.exe``` 패턴을 따르는 파일 이름을 사용하는 부트스트래퍼를 찾을 수 있습니다. 해당 응용 프로그램을 찾을 수 없으면 [Visual Studio Downloads](https://www.visualstudio.com/downloads/)(Visual Studio 다운로드) 페이지로 이동하고 해당 버전의 Visual Studio에 대한 **download**(다운로드)를 클릭하여 부트스트래퍼를 다운로드할 수 있습니다. 이 실행 파일을 실행하여 설치 메타데이터를 다시 설정합니다.
 4. Visual Studio를 다시 설치하거나 업데이트해 보세요. 설치 관리자가 계속 실패하면 바로 아래 4단계로 이동합니다.
-<br/>**참고:** 이 단계에서는 Visual Studio 설치 관리자 파일을 다시 설치하고 설치 메타데이터를 다시 설정합니다. 
+<br/>**참고:** 이 단계에서는 Visual Studio 설치 관리자 파일을 다시 설치하고 설치 메타데이터를 다시 설정합니다.
 
 ### <a name="step-4---report-a-problem"></a>4단계 - 문제 보고
 경우에 따라 손상된 파일에 관련된 문제인 경우 문제를 사례별로 확인해야 할 수 있습니다.
@@ -92,6 +92,4 @@ Visual Studio 설치 관리자 부트스트래퍼는 나머지 Visual Studio 설
 | ----------- | ---------------------- | -------- |
 | 사용자에게 파일에 액세스할 수 있는 권한이 없습니다. | 권한(ACL) | 오프라인 설치를 공유하기 *전에* 먼저 다른 사용자에게 읽기 액세스 권한을 부여하도록 권한(ACL)을 조정해야 합니다. |
 | 새 작업, 구성 요소 또는 언어가 설치되지 않습니다.  | `--layout`  | 부분 레이아웃에서 설치하고 이전 레이아웃에서 사용할 수 없는 작업, 구성 요소 또는 언어를 선택하는 경우 인터넷에 액세스할 수 있는지 확인합니다. |
-
-
 
