@@ -102,7 +102,7 @@ Visual Studio에서 R을 사용해 보려면
 
 대답: RTVS 1.0 릴리스는 영어 전용입니다. 1.1 릴리스는 Visual Studio 자체가 사용하는 언어와 동일한 언어 집합으로 지역화될 예정입니다. 당분간은 [Visual Studio 2015용 언어 팩(영어)](https://www.microsoft.com/download/details.aspx?id=48157)을 사용하거나 Visual Studio 2017에서 설치 관리자를 실행하고 **언어 팩** 탭에서 영어를 선택합니다.
 
-![Visual Studio 2017에 대한 국가별 설정](media/FAQ-international-settings.png)
+![Visual Studio 2017에 대한 국가별 설정](~/docs/rtvs/media/FAQ-international-settings.png)
 
 **질문: RTVS가 32비트 버전의 R에서 작동하나요?**
 

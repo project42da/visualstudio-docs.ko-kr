@@ -32,7 +32,7 @@ manager: "douge"
 ## 사용되는 개체 및 인터페이스  
  바로 활성화를 만드는 데 사용되는 개체는 다음 그림에 나와 있습니다.  
   
- ![내부 활성화 편집기](../misc/media/vsinplaceactivationeditor.png "vsInPlaceActivationEditor")  
+ ![내부 활성화 편집기](~/docs/extensibility/media/vsinplaceactivationeditor.gif "vsInPlaceActivationEditor")  
 바로 활성화 편집기  
   
 > [!NOTE]

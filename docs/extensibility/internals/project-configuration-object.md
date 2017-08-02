@@ -22,7 +22,7 @@ caps.handback.revision: 11
 
 프로젝트 구성 개체 관리를 UI에 구성 정보를 표시 합니다.  
   
- ![Visual Studio 프로젝트 구성](../../extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")  
+ ![Visual Studio 프로젝트 구성](~/docs/extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")  
 프로젝트 구성 속성 페이지  
   
  프로젝트 구성 공급자 프로젝트 구성을 관리합니다. 환경 및 다른 패키지를 프로젝트의 구성에 대 한 정보를 검색, 프로젝트 구성 공급자 개체에 연결 된 인터페이스를 호출 하 고에 대 한 액세스 권한을 얻으려고 합니다.  

@@ -56,7 +56,7 @@ JavaScript 명시적 변수 선언에 대 한 입력을 허용 하지 않습니�
   
  **완료 옵션을 식별할 수 없는 개체에 대 한**  
   
- ![식별자에 대한 JavaScript IntelliSense](../ide/media/js_intellisense_identifiers.png "js\_intellisense\_identifiers")  
+ ![식별자에 대한 JavaScript IntelliSense](~/docs/ide/media/js_intellisense_identifiers.png "js\_intellisense\_identifiers")  
   
  XML 문서 주석 또는 JavaScript IntelliSense 확장성 기능을 사용 하 여 완성 목록 개체에 대해 재정의할 수 있습니다.  이러한 기능을 사용 하면 그렇지 않으면 사용할 수 없을 때 IntelliSense의 상세한 정보 및 형식 정보를 제공할 수 있습니다.  자세한 내용은 [JavaScript IntelliSense 확장](../ide/extending-javascript-intellisense.md) 및 [방법: JavaScript XML 문서 주석 만들기](../ide/create-xml-documentation-comments-for-javascript-intellisense.md)을 참조하십시오.  
   

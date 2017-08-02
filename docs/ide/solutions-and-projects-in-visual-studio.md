@@ -91,7 +91,7 @@ Visual Studio에서 앱, 응용 프로그램, 웹 사이트, 웹앱, 스크립�
 
  다음 다이어그램은 프로젝트와 솔루션 및 프로젝트와 솔루션에 논리적으로 포함된 항목 간의 관계를 보여줍니다.  
 
- ![Visual Studio 프로젝트 및 솔루션](../ide/media/vside-project-diagram.png)  
+ ![Visual Studio 프로젝트 및 솔루션](~/docs/ide/media/vside-project-diagram.png)  
 
  사용자 지정 프로젝트 및 항목 템플릿을 만들 수도 있습니다. 자세한 내용은 [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)를 참조하세요.  
 
@@ -101,7 +101,7 @@ Visual Studio에서 앱, 응용 프로그램, 웹 사이트, 웹앱, 스크립�
 ## <a name="managing-projects-in-solution-explorer"></a>솔루션 탐색기에서 프로젝트 관리  
  새 프로젝트를 만든 후에 **솔루션 탐색기** 를 사용하여 프로젝트와 솔루션 및 연결된 항목을 보고 관리합니다. 다음 그림은 두 프로젝트가 포함되어 있으며, C# 솔루션을 사용하는 솔루션 탐색기를 보여 줍니다.  
 
- ![솔루션 탐색기](../ide/media/vs2015_solution_explorer.png "vs2015_solution_explorer")  
+ ![솔루션 탐색기](~/docs/ide/media/vs2015_solution_explorer.png "vs2015_solution_explorer")  
 
 ## <a name="in-this-section"></a>단원 내용  
 

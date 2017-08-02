@@ -29,7 +29,7 @@ caps.handback.revision: 44
 # DOM 탐색기를 사용하여 CSS 스타일 디버그
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Windows 스토어 앱, Windows Phone 스토어 앱 및 Visual Studio Tools for Apache Cordova를 사용하여 만든 앱을 디버그할 때 선택한 DOM 요소 및 해당 요소의 자식 요소에 대한 CSS 규칙을 보고 변경할 수 있습니다.  
   
@@ -47,7 +47,7 @@ caps.handback.revision: 44
 -   디버깅 세션 중 변경한 CSS 스타일을 식별하고 추적하려면 **변경 내용** 탭\(Windows 스토어 앱 및 Windows Phone 스토어 앱에만 해당\)을 사용합니다.  
   
 > [!TIP]
->  **스타일** 및 **계산됨** 탭에서 변경한 스타일은 영구적이지 않습니다. 이 변경 내용은 디버깅을 중지하면 손실됩니다. 소스 코드를 변경한 후 디버거를 중지했다가 다시 시작하지 않고 페이지를 다시 로드하려면 **디버그** 도구 모음에 있는 ![Windows 앱 새로 고침 단추](../debugger/media/js_refresh.png "JS\_Refresh") 단추\(**Windows 앱 새로 고침**\)\(Windows 스토어 및 Windows Phone 스토어 앱만 해당\)를 사용하여 앱을 새로 고칩니다. 자세한 내용은 [앱 새로 고침\(JavaScript\)](../debugger/refresh-an-app-javascript.md)을 참조하세요.  
+>  **스타일** 및 **계산됨** 탭에서 변경한 스타일은 영구적이지 않습니다. 이 변경 내용은 디버깅을 중지하면 손실됩니다. 소스 코드를 변경한 후 디버거를 중지했다가 다시 시작하지 않고 페이지를 다시 로드하려면 **디버그** 도구 모음에 있는 ![Windows 앱 새로 고침 단추](~/docs/debugger/media/js_refresh.png "JS\_Refresh") 단추\(**Windows 앱 새로 고침**\)\(Windows 스토어 및 Windows Phone 스토어 앱만 해당\)를 사용하여 앱을 새로 고칩니다. 자세한 내용은 [앱 새로 고침\(JavaScript\)](../debugger/refresh-an-app-javascript.md)을 참조하세요.  
   
 ## CSS 규칙 수정 예제  
  이 예제에서는 CSS 규칙을 검사하고 스타일 문제를 디버깅하는 방법을 보여 줍니다. 이 예제에서는 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 분할 앱 템플릿에서 그룹 제목을 표시하는 데 사용되는 글꼴의 색을 변경하려고 합니다.  
@@ -140,7 +140,7 @@ caps.handback.revision: 44
   
 15. 키보드를 사용하여 이 값을 수정합니다.`rgb(255, 255, 0, 0.87)`로 변경한 다음 Enter 키를 누릅니다. 시뮬레이터에서 항목 제목의 색이 모두 노란색으로 변경됩니다.  
   
-16. 소스 CSS 파일을 변경하려면 **스타일** 탭에서 **items.css** 링크를 클릭합니다. 그러면 items.css가 열리고, 여기에서 앱 코드의 `color` 스타일 값을 변경할 수 있습니다. 디버거를 중지한 후 다시 시작하지 않고 앱을 새로 고치려면 **디버그** 도구 모음에서 ![Windows 앱 새로 고침 단추](../debugger/media/js_refresh.png "JS\_Refresh")\(**Windows 앱 새로 고침**\) 단추를 클릭합니다.  
+16. 소스 CSS 파일을 변경하려면 **스타일** 탭에서 **items.css** 링크를 클릭합니다. 그러면 items.css가 열리고, 여기에서 앱 코드의 `color` 스타일 값을 변경할 수 있습니다. 디버거를 중지한 후 다시 시작하지 않고 앱을 새로 고치려면 **디버그** 도구 모음에서 ![Windows 앱 새로 고침 단추](~/docs/debugger/media/js_refresh.png "JS\_Refresh")\(**Windows 앱 새로 고침**\) 단추를 클릭합니다.  
   
 ## 참고 항목  
  [퀵 스타트: HTML 및 CSS 디버그](../debugger/quickstart-debug-html-and-css.md)   

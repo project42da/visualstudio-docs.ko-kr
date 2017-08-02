@@ -25,7 +25,7 @@ caps.handback.revision: 19
   
  코드 창을 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> 텍스트 뷰 및 개체에 있는 장식이 있는 개체입니다. 언어 서비스를 만들 때 코드 창 핵심 프로그램 인스턴스화하는 동안 편집기를 연결할 수는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> 코드 창에는 다음 그림에 표시 됩니다로 합니다.  
   
- ![CodeWindow 그래픽](../extensibility/media/vscodewindow.png "vscodewindow")  
+ ![CodeWindow 그래픽](~/docs/extensibility/media/vscodewindow.gif "vscodewindow")  
 코드 창  
   
  언어 서비스 코드 창 관리자를 구현 하 고 드롭다운 막대와 같은 도구 영역을 관리 합니다. 호출 하 여 코드 창에서 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A> 코드 창 초기화 하는 동안 메서드. 이 호출 되 면 드롭다운 막대 또는 단추 표시줄에서 언어 서비스 추가할 수 \(<xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>\)의 코드 창입니다.  

@@ -59,7 +59,7 @@ ms.lasthandoff: 04/04/2017
 ###  <a name="UsingHTML5ControlsCodedUITestsAudio"></a> 오디오 컨트롤  
  **오디오 컨트롤:** HTML5 오디오 컨트롤에 대한 작업은 올바르게 기록되고 재생됩니다.  
   
- ![HTML5 오디오 컨트롤](../test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
+ ![HTML5 오디오 컨트롤](~/docs/test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
   
 |작업|기록 중|생성된 코드|  
 |------------|---------------|--------------------|  
@@ -102,7 +102,7 @@ string Volume
 ###  <a name="UsingHTML5ControlsCodedUITestsVideo"></a> 비디오 컨트롤  
  **비디오 컨트롤:** HTML5 비디오 컨트롤에 대한 작업은 올바르게 기록되고 재생됩니다.  
   
- ![HTML5 비디오 컨트롤](../test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
+ ![HTML5 비디오 컨트롤](~/docs/test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
   
 |작업|기록 중|생성된 코드|  
 |------------|---------------|--------------------|  
@@ -132,7 +132,7 @@ string VideoWidth
 ###  <a name="UsingHTML5ControlsCodedUITestsSlider"></a> 슬라이더  
  **슬라이더 컨트롤:** HTML5 슬라이더 컨트롤에 대한 작업은 올바르게 기록되고 재생됩니다.  
   
- ![HTML5 슬라이더 컨트롤](../test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
+ ![HTML5 슬라이더 컨트롤](~/docs/test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
   
 |작업|기록 중|생성된 코드|  
 |------------|---------------|--------------------|  
@@ -152,7 +152,7 @@ string ValueAsNumber
 ###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar  
  **ProgreesBar 컨트롤:** ProgressBar는 상호 작용할 수 없는 컨트롤입니다. 이 컨트롤의 `Value` 및 `Max` 속성에 어설션을 추가할 수 있습니다.  
   
- ![HTML5 ProgressBar 컨트롤](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
+ ![HTML5 ProgressBar 컨트롤](~/docs/test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
   
 ## <a name="see-also"></a>참고 항목  
  [HTML 요소](http://go.microsoft.com/fwlink/?LinkID=232441)   

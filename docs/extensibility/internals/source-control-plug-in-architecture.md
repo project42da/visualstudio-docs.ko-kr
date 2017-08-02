@@ -29,7 +29,7 @@ caps.handback.revision: 24
 ## 구성 요소  
  원본 컨트롤 어댑터 패키지 다이어그램에서은 소스 제어 작업에는 소스 제어 플러그 인을 지원 되는 함수 호출에 대 한 사용자의 요청으로 변환 하는 IDE의 구성 요소입니다.  이렇게 하려면 소스 제어 플러그 인 및 IDE IDE와 플러그인 사이의 정보를 앞뒤로 전달 하는 효과적인 대화가 있어야 합니다.  이 대화 상자에 모두 동일한 언어를 사용 해야 합니다.  소스 제어 플러그 인이이 문서에 설명 된 API이이 교환에 대 한 일반적인 용어입니다.  
   
- ![소스 코드 컨트롤 아키텍처 다이어그램](../../extensibility/internals/media/vs_sccsdk_plug_in_arch.png "vs\_sccsdk\_plug\_in\_arch")  
+ ![소스 코드 컨트롤 아키텍처 다이어그램](~/docs/extensibility/internals/media/vs_sccsdk_plug_in_arch.gif "vs\_sccsdk\_plug\_in\_arch")  
 VS와 소스 제어 플러그 인을 보여 주는 아키텍처 다이어그램  
   
  아키텍처 다이어그램에 표시 된 대로 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 사용자의 프로젝트 작업 및 관련된 부품, 편집기와 솔루션 탐색기 같은 셸을 VS 셸 다이어그램에서 지정 된 레이블 호스팅합니다.  원본 컨트롤 어댑터 패키지 IDE에서 소스 제어 플러그 인 사이의 상호 작용을 처리합니다.  컨트롤 어댑터 소스 패키지 자체 소스 컨트롤 UI를 제공합니다.  이 시작 하 고 소스 제어 작업의 범위를 정의 하는 사용자와 상호 작용 하는 최상위 UI입니다.  

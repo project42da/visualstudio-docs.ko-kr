@@ -35,7 +35,7 @@ caps.handback.revision: 18
   
  다음 그림은 기본 인터페이스와 서비스, 일반적인 프로젝트 구현을 작성 하는 개체를 보여 줍니다.  응용 프로그램 도우미, HierUtil7, 기본 객체 및 기타 프로그래밍의 기본 구성 요소를 만드는 데 사용할 수 있습니다.  HierUtil7 응용 프로그램 도우미에 대 한 자세한 내용은 참조 하십시오. [Not in Build: Using HierUtil7 Project Classes to Implement a Project Type \(C\+\+\)](http://msdn.microsoft.com/ko-kr/a5c16a09-94a2-46ef-87b5-35b815e2f346).  
   
- ![Visual Studio 프로젝트 모델 그래픽](../../extensibility/internals/media/vsprojectmodel.png "vsProjectModel")  
+ ![Visual Studio 프로젝트 모델 그래픽](~/docs/extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
 프로젝트 모델  
   
  인터페이스 및 이전 다이어그램에서 나열 된 서비스 및 다이어그램에 포함 되지 않은 다른 선택적 인터페이스에 대 한 자세한 내용은 참조 하십시오. [프로젝트 모델에 대 한 핵심 구성 요소](../../extensibility/internals/project-model-core-components.md).  

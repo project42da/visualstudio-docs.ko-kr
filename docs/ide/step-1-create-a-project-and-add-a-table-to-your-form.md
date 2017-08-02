@@ -102,7 +102,7 @@ ms.lasthandoff: 05/13/2017
   
      이제 폼이 배치됩니다. 이 폼은 다음 그림과 같습니다.  
   
-     ![초기 일치 게임 폼](../ide/media/express_tut4step1.png "Express_Tut4Step1")  
+     ![초기 일치 게임 폼](~/docs/ide/media/express_tut4step1.png "Express_Tut4Step1")  
 초기 일치 게임 폼  
   
 ### <a name="to-continue-or-review"></a>계속하거나 검토하려면  

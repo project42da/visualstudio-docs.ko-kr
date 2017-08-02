@@ -51,12 +51,12 @@ caps.handback.revision: 25
   
      이 자습서의 앞부분에서 "randomizer"로 이름을 지정한 `Random` 클래스의 `Next()` 메서드를 여러 가지 방법으로 호출할 수 있습니다.  여러 가지 방법으로 호출할 수 있는 메서드를 오버로드된 메서드라고 하며, IntelliSense를 사용하여 이를 탐색해 볼 수 있습니다.  `Next()` 메서드에 대한 IntelliSense 창의 도구 설명을 다시 살펴봅니다.  
   
-     ![Intellisense 창 도구 설명](../ide/media/express_overloads.png "Express\_Overloads")  
+     ![Intellisense 창 도구 설명](~/docs/ide/media/express_overloads.png "Express\_Overloads")  
 Intellisense 창 도구 설명  
   
      도구 설명에 **\(\+2개 오버로드\)**가 표시되며, 이는 `Next()` 메서드를 두 가지 다른 방법으로 호출할 수 있음을 나타냅니다.  오버로드에는 저마다 다른 개수와 형식의 인수가 포함되어 있으므로 작동 방식도 서로 조금씩 다릅니다.  예를 들어 메서드는 단일 정수 인수를 사용하지만 메서드 오버로드 중 하나는 정수 하나와 문자열 하나를 사용할 수 있습니다.  수행하려는 작업을 기반으로 올바른 오버로드를 선택합니다.  `StartTheQuiz()` 메서드에 코드를 추가할 때 `randomizer.Next(`를 입력하는 즉시 Intellisense 창에 추가 정보가 나타납니다.  다음 그림과 같이 위쪽 화살표 키와 아래쪽 화살표 키를 선택하여 오버로드를 순환할 수 있습니다.  
   
-     ![IntelliSense의 Next&#40;&#41; 메서드 오버로드](../ide/media/express_nextoverload.png "Express\_NextOverload")  
+     ![IntelliSense의 Next&#40;&#41; 메서드 오버로드](~/docs/ide/media/express_nextoverload.png "Express\_NextOverload")  
 IntelliSense에 표시된 Next\(\) 메서드의 오버로드  
   
      이 경우 최소값 및 최대값을 지정할 수 있도록 마지막 오버로드를 선택하는 것이 좋습니다.  

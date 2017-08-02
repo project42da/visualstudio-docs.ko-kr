@@ -60,7 +60,7 @@ Visual Studio 프로젝트에는 사용하는 프로그램에 대한 별도의 �
   
 2.  도구 모음의 **솔루션 구성** 목록 상자에서 **디버그** 또는 **릴리스**를 선택합니다.  
   
-     ![도구 모음 빌드 구성](../debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
+     ![도구 모음 빌드 구성](~/docs/debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
   
      이 도구 모음은 Express Edition에서 사용할 수 없습니다.  **솔루션 빌드 F6** 및 **디버깅 시작 F5** 메뉴 항목을 사용하여 구성을 선택할 수 있습니다.  
   

@@ -65,7 +65,7 @@ caps.handback.revision: 22
   
 1.  앞에서 만든 프로젝트에서 매핑된 폴더를 선택합니다.  
   
-2.  **속성** 창에서 **Deployment location** 속성에 있는 줄임표 \(![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.png "ASP.NET 모바일 디자이너 줄임표")\) 버튼을 선택합니다.  
+2.  **속성** 창에서 **Deployment location** 속성에 있는 줄임표 \(![ASP.NET 모바일 디자이너 줄임표](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\) 버튼을 선택합니다.  
   
 3.  **SharePoint 매핑된 폴더 추가** 대화 상자에서 매핑된 폴더가 가리킬 폴더를 찾습니다.  
   

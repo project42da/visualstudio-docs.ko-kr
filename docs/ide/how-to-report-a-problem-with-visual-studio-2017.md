@@ -34,7 +34,7 @@ Visual Studio에서 문제가 발생하는 경우 Microsoft에서 문제를 진�
   1. 다음 스크린샷과 같이 도구 왼쪽에 있는 **로그인**을 클릭합니다.
   2. 화면의 지침에 따라 로그인합니다.
 
-  ![문제 보고를 위한 로그인](../ide/media/vs2017-report-a-problem-sign-in.png "문제 보고를 위한 로그인")
+  ![문제 보고를 위한 로그인](~/docs/ide/media/vs2017-report-a-problem-sign-in.png "문제 보고를 위한 로그인")
 
 
 ## <a name="search-and-vote-for-similar-problems"></a>유사한 문제 검색 및 투표  
@@ -43,7 +43,7 @@ Visual Studio에서 문제가 발생하는 경우 Microsoft에서 문제를 진�
 1.  문제를 검색하고 다른 사용자가 이미 보고했는지 확인합니다.
 2.  다른 사용자가 이미 보고한 경우 "투표"하여 알려 주시기 바랍니다.  
 
-  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](../ide/media/vs2017-report-a-problem-search-and-vote.png "유사한 문제 검색 및 투표")
+  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](~/docs/ide/media/vs2017-report-a-problem-search-and-vote.png "유사한 문제 검색 및 투표")
 
 
 ## <a name="report-a-new-problem"></a>새 문제 보고

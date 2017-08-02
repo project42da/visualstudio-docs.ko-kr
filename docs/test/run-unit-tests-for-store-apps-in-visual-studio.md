@@ -70,7 +70,7 @@ ms.lasthandoff: 02/22/2017
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> 테스트 탐색기에서 테스트 실행  
  테스트 프로젝트를 빌드하면 테스트가 테스트 탐색기에 나타납니다. 테스트 탐색기가 표시되지 않는 경우 Visual Studio 메뉴에서 **테스트** 를 선택하고 **Windows**를 선택한 다음 **테스트 탐색기**를 선택합니다.  
   
- ![단위 테스트 탐색기](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![단위 테스트 탐색기](~/docs/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  테스트를 실행하고 작성하고 다시 실행하면 테스트 탐색기는 **실패한 테스트**, **통과한 테스트**, **건너뛴 테스트** 및 **실행하지 않은 테스트**의 기본 그룹에 결과를 표시합니다. 테스트 탐색기의 테스트 그룹화 방식을 변경할 수 있습니다.  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 02/22/2017
   
 |||  
 |-|-|  
-|![테스트 탐색기 그룹 단추](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|테스트를 실행하는 데 걸리는 시간을 기준으로 테스트를 그룹화하려면 **그룹화 방법** 목록을 열고 **기간**을 선택합니다. **테스트 결과**를 선택하여 원래 그룹화로 전환합니다.|  
+|![테스트 탐색기 그룹 단추](~/docs/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|테스트를 실행하는 데 걸리는 시간을 기준으로 테스트를 그룹화하려면 **그룹화 방법** 목록을 열고 **기간**을 선택합니다. **테스트 결과**를 선택하여 원래 그룹화로 전환합니다.|  
   
 ###  <a name="BKMK_Searching_and_filtering_the_test_list"></a> 테스트 목록 검색 및 필터링  
  테스트 수가 많은 경우 테스트 탐색기 검색 상자에 입력하여 지정된 문자열로 목록을 필터링할 수 있습니다. 검색 문자열을 입력하기 전에 필터 목록에서 선택하여 특정 형식의 문자열로 필터를 제한할 수 있습니다.  

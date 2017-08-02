@@ -37,7 +37,7 @@ caps.handback.revision: 53
   
 -   [런타임에 VSTO 추가 기능에서 컨트롤 추가](#runtimeaddin)  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: 런타임에 문서 화면에 컨트롤 추가](http://go.microsoft.com/fwlink/?LinkId=132782)\(영문\)를 참조하세요.  
+ ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: 런타임에 문서 화면에 컨트롤 추가](http://go.microsoft.com/fwlink/?LinkId=132782)\(영문\)를 참조하세요.  
   
 ##  <a name="designtime"></a> 디자인 타임에 컨트롤 추가  
  디자인 타임에 문서 수준 프로젝트의 문서에 Windows Forms 컨트롤을 추가하는 여러 가지 방법이 있습니다.  

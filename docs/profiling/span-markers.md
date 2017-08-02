@@ -52,7 +52,7 @@ ms.lasthandoff: 05/13/2017
 ## <a name="span-aggregation-markers"></a>범위 집계 표식  
  일부 경우에는 동시성 시각화 도우미에서 범위 표식이 너무 가깝게 표시되어 개별적으로 그리기 어려울 수 있습니다. 이 경우에는 내부 범위를 나타내는 회색 *범위 집계 표식*이 표시됩니다. 이러한 아이콘 중 하나에 포인터를 놓으면 안에 있는 범위 수가 도구 설명에 표시됩니다. 범위를 보려면 확대하십시오. 끝까지 확대해도 범위 집계 표식이 보이면 [표식 보고서](../profiling/markers-report.md)에서 내부 범위 표식을 볼 수 있습니다. 다음 그림은 범위 집계 표식을 보여줍니다.  
   
- ![Concurrency 시각화의 집계 범위 표식](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate")  
+ ![Concurrency 시각화의 집계 범위 표식](~/docs/profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate")  
 범위 집계 표식  
   
 ## <a name="see-also"></a>참고 항목  

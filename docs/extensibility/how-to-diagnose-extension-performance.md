@@ -41,7 +41,7 @@ ms.lasthandoff: 02/22/2017
 
 이 영향을 이해 하는 사용자를 위해 느린 확장의 사용자에 게 Visual Studio의 새로운 기능을 추가 했습니다. Visual Studio 솔루션 부하 또는 시작 저하 하는 새 확장을 감지 하면 사용자가 새 "Visual Studio 성능 관리" 대화 상자를 가리키는 IDE에 알림이 표시 됩니다. 이 대화 상자를 이전에 검색 된 확장을 찾아보려면 도움말 메뉴에서 항상 액세스할 수 있습니다.
 
-![Visual Studio 성능 관리](media/manage-performance.png)
+![Visual Studio 성능 관리](~/docs/extensibility/media/manage-performance.png)
 
 이 문서는 확장 영향을 계산 하는 방식을 어떻게 분석할 수 있습니다 로컬로 확장 확장에 영향을 미치는 성능으로 표시 될 수 있는지 테스트를 설명 하 여 확장을 쉽게를 목표로 합니다.
 
@@ -143,7 +143,7 @@ private void DoMoreWork()
 
 Visual Studio 환경에 설치 된 확장으로 설정한 후 PerfView를 열고 "수집" 메뉴에서 수집 대화 상자를 열고 시작 추적을 기록할 수 있습니다.
 
-![perfview 수집 메뉴](media/perfview-collect-menu.png)
+![perfview 수집 메뉴](~/docs/extensibility/media/perfview-collect-menu.png)
 
 기본 옵션 CPU 사용에 대 한 호출 스택을 제공 하 되지만 차단 시간에도 관심이 있기 때문에 활성화 해야 "스레드 시간" 스택. 설정을 준비가 되 면 "컬렉션 시작"을 클릭할 수 있으며 녹음/녹화 시작 되 면 Visual Studio를 시작 수 있습니다.
 
@@ -155,7 +155,7 @@ Visual Studio 환경에 설치 된 확장으로 설정한 후 PerfView를 열고
 
 이 예제의 목적에 관심이 있습니다 주로 "스레드 시간 스택" 보기 "[고급] 그룹" 아래에서 찾을 수 있습니다. 이 보기에는 CPU 시간 및 디스크 IO 또는 핸들 대기와 같은 차단 된 시간을 포함 하는 메서드에서 스레드에서 소요 된 총 시간을 표시 됩니다.
 
- ![스레드 시간 스택](media/perfview-thread-time-stacks.png)
+ ![스레드 시간 스택](~/docs/extensibility/media/perfview-thread-time-stacks.png)
 
  "시간 스택 스레드" 보기를 여는 동안 분석을 시작 하는 "devenv" 프로세스를 선택 해야 합니다.
 
@@ -170,11 +170,11 @@ PerfView를 자세히 분석에 대 한 자체 도움말 메뉴에서 시간 스
 
 1. System.IO 클래스를 사용 하는 IO: 이러한 프레임의 포괄적 비용 추적에 매우 많은 비용이 소요 아닐 수 있습니다는 문제의 잠재적인 원인을 이후 파일 IO 속도 차이 시스템 마다 다릅니다.
 
-  ![시스템 io 프레임](media/perfview-system-io-frames.png)
+  ![시스템 io 프레임](~/docs/extensibility/media/perfview-system-io-frames.png)
 
 2. 다른 비동기 작업에서 대기 하는 호출 차단:이 경우 포괄 시간은 비동기 작업의 완료에 주 스레드가 차단 되는 시간을 나타냅니다.
 
-  ![차단 호출 프레임](media/perfview-blocking-call-frames.png)
+  ![차단 호출 프레임](~/docs/extensibility/media/perfview-blocking-call-frames.png)
 
 영향을 확인 하는 데 유용 합니다 추적에는 다른 보기 중 하나는 "이미지 부하 스택" 됩니다. "시간 스택 스레드" 보기에 적용 될 때 동일한 필터를 적용할 수 있으며 자동 로드 패키지에서 실행 되는 코드 때문에 로드 된 모든 어셈블리를 찾을 수 있습니다.
 

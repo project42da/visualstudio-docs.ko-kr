@@ -101,7 +101,7 @@ Android용 Visual Studio 에뮬레이터는 Windows 8 이상 버전의 가상화
   
  RAM 및 Windows에 대한 요구 사항을 확인하려면 제어판에서 시스템 및 보안을 선택한 다음 시스템을 선택합니다.  
   
- ![시스템 요구 사항 확인](../cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")  
+ ![시스템 요구 사항 확인](~/docs/cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")  
   
 ##  <a name="Network"></a> 네트워크 요구 사항  
  네트워크는 다음 요구 사항을 충족해야 합니다.  
@@ -147,7 +147,7 @@ Android용 Visual Studio 에뮬레이터는 Windows 8 이상 버전의 가상화
 > [!IMPORTANT]
 >  그룹에 참여한 후에는 로그오프하거나 다시 부팅하여 변경 내용을 적용합니다.  
   
- ![Hyper&#45;V 관리자 보안 그룹 가입](../cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")  
+ ![Hyper&#45;V 관리자 보안 그룹 가입](~/docs/cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")  
   
  자신을 수동으로 그룹에 추가하려면 로컬 사용자 및 그룹 스냅인을 엽니다. 자세한 내용은 [그룹에 사용자 계정 추가](http://windows.microsoft.com/en-us/windows/add-user-account-to-group#1TC=windows-7)를 참조하세요. (이 Windows 7 항목은 Windows 8에도 적용됩니다.)  
   

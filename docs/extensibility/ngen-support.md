@@ -45,7 +45,7 @@ Visual Studio 2017 및 새 VSIX v3 (버전 3) 확장 매니페스트에서 형�
 
 어셈블리가 "ngen" 순서로 VSIX "인스턴스별 컴퓨터별" 설치 되어야 합니다. Extension.vsixmanifest 디자이너에서 "모든 사용자" 확인란을 선택 하 여이 사용할 수 있습니다.
 
-![모든 사용자를 확인 합니다.](media/check-all-users.png)
+![모든 사용자를 확인 합니다.](~/docs/extensibility/media/check-all-users.png)
 
 ## <a name="how-to-enable-ngen"></a>Ngen을 사용 하는 방법
 
@@ -60,7 +60,7 @@ Visual Studio 2017 및 새 VSIX v3 (버전 3) 확장 매니페스트에서 형�
 
 여기에 살펴보겠습니다는 **속성** 작업에서 창:
 
-![속성에서 ngen](media/ngen-in-properties.png)
+![속성에서 ngen](~/docs/extensibility/media/ngen-in-properties.png)
 
 메타 데이터는 VSIX 프로젝트의.csproj 파일 내에서 프로젝트 참조에 추가 됩니다.
 

@@ -32,7 +32,7 @@ caps.handback.revision: 46
   
  다음 예제에서는 Excel용 문서 수준 사용자 지정에서 사용자 지정 속성을 추가하고 값을 할당하는 방법을 보여 줍니다.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Microsoft Word에서 사용자 지정 문서 속성 액세스 및 조작](http://go.microsoft.com/fwlink/?LinkId=136772)을 참조하세요.  
+ ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Microsoft Word에서 사용자 지정 문서 속성 액세스 및 조작](http://go.microsoft.com/fwlink/?LinkId=136772)을 참조하세요.  
   
 ## 예제  
  [!code-csharp[Trin_VstcoreProgramming#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgramming/CS/ThisWorkbook.cs#6)]

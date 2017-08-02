@@ -275,15 +275,15 @@ caps.handback.revision: 37
   
 6.  **속성** 창에서 **CorrelationToken** 속성에 대해 *taskToken*의 속성 값을 입력합니다.  
   
-7.  **CorrelationToken** 속성 옆에 있는 더하기 기호\(![TreeView 더하기 기호](../sharepoint/media/plus.png "TreeView 더하기 기호")\)를 선택하여 이 속성을 확장합니다.  
+7.  **CorrelationToken** 속성 옆에 있는 더하기 기호\(![TreeView 더하기 기호](~/docs/sharepoint/media/plus.gif "TreeView 더하기 기호")\)를 선택하여 이 속성을 확장합니다.  
   
 8.  **OwnerActivityName** 하위 속성의 드롭 다운 화살표를 선택 하고 *Workflow1* 값을 설정합니다.  
   
-9. **TaskId** 속성을 선택한 다음 줄임표 \(![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.png "ASP.NET 모바일 디자이너 줄임표")\) 버튼을 선택하여 **바인딩 속성** 대화 상자를 표시합니다.  
+9. **TaskId** 속성을 선택한 다음 줄임표 \(![ASP.NET 모바일 디자이너 줄임표](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\) 버튼을 선택하여 **바인딩 속성** 대화 상자를 표시합니다.  
   
 10. **새 멤버에 바인딩** 탭에서 **필드 만들기** 옵션 버튼을 선택한 다음 **확인** 버튼을 선택합니다.  
   
-11. **TaskProperties** 속성을 선택한 다음 줄임표 \(![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.png "ASP.NET 모바일 디자이너 줄임표")\) 버y튼을 선택하여 **바인딩 속성** 대화 상자를 표시합니다.  
+11. **TaskProperties** 속성을 선택한 다음 줄임표 \(![ASP.NET 모바일 디자이너 줄임표](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\) 버y튼을 선택하여 **바인딩 속성** 대화 상자를 표시합니다.  
   
 12. **새 멤버에 바인딩** 탭에서 **필드 만들기** 옵션 버튼을 선택한 다음 **확인** 버튼을 선택합니다.  
   
@@ -363,7 +363,7 @@ caps.handback.revision: 37
   
 5.  **속성** 창에서 **조건** 속성의 드롭다운 화살표를 선택한 다음 *Code Condition* 값을 설정합니다.  
   
-6.  **조건** 속성 옆에 있는 더하기 기호\(![TreeView 더하기 기호](../sharepoint/media/plus.png "TreeView 더하기 기호")\)를 선택하여 이 속성을 확장하고 해당 값을 *checkApprovalNeeded*로 설정합니다.  
+6.  **조건** 속성 옆에 있는 더하기 기호\(![TreeView 더하기 기호](~/docs/sharepoint/media/plus.gif "TreeView 더하기 기호")\)를 선택하여 이 속성을 확장하고 해당 값을 *checkApprovalNeeded*로 설정합니다.  
   
 7.  Workflow Designer에서 **logToHistoryListActivity1** 작업의 바로 가기 메뉴를 연 다음, **핸들러 생성**을 선택하여 `MethodInvoking` 이벤트에 대한 빈 메서드를 생성합니다.  
   

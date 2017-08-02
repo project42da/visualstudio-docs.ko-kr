@@ -136,11 +136,11 @@ ms.lasthandoff: 02/22/2017
   
      기본적으로 맵에는 고유한 코드만 나타납니다. 외부 코드를 보려면에서 켜거나는 **호출 스택** 창:  
   
-     ![호출 스택 창을 사용 하 여 외부 코드 표시](../debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")  
+     ![호출 스택 창을 사용 하 여 외부 코드 표시](~/docs/debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")  
   
      설정 또는 해제 **내 코드만 사용** Visual studio 디버깅 옵션:  
   
-     ![옵션 대화 상자를 사용 하 여 외부 코드 표시](../debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")  
+     ![옵션 대화 상자를 사용 하 여 외부 코드 표시](~/docs/debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")  
   
 -   **맵을 변경 영향이 코드 있습니까?**  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 02/22/2017
   
 -   **맵에 새 호출 스택이 자동으로 추가 되지 않게 하려면 어떻게 해야 합니까?**  
   
-     선택 ![단추-코드에 표시 호출 스택을 자동으로 매핑할](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon") 매핑 도구 모음입니다. 키를 눌러 현재 호출 스택을 맵에 수동으로 추가 하려면 **Ctrl** + **Shift** + **`**합니다.  
+     선택 ![단추-코드에 표시 호출 스택을 자동으로 매핑할](~/docs/debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon") 매핑 도구 모음입니다. 키를 눌러 현재 호출 스택을 맵에 수동으로 추가 하려면 **Ctrl** + **Shift** + **`**합니다.  
   
      디버깅하는 동안 맵은 기존 호출 스택을 맵에 계속해서 강조표시를 합니다.  
   

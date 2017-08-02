@@ -56,11 +56,11 @@ manager: "ghogen"
 ##  <a name="BKMK_Overview"></a> 소스 코드에서 함수 중단점 설정  
  소스 코드 파일의 왼쪽 여백을 클릭하거나 코드 줄에 커서를 놓고 F9 키를 눌러 소스 코드에 함수 중단점을 설정합니다. 중단점이 왼쪽 여백에 빨간 점으로 나타나고 코드 줄도 색이 지정됩니다.  
   
- ![중단점 설정](../debugger/media/basicbreakpoint.png "BasicBreakpoint")  
+ ![중단점 설정](~/docs/debugger/media/basicbreakpoint.png "BasicBreakpoint")  
   
  디버거에서 이 코드를 실행하면 중단점이 적중될 때마다 해당 줄의 코드가 실행되기 전에 실행이 중지됩니다. 소스 코드에서 해당 줄이 노란색으로 표시됩니다.  
   
- ![중단점 실행 중지됨](../debugger/media/breakpointexecution.png "BreakpointExecution")  
+ ![중단점 실행 중지됨](~/docs/debugger/media/breakpointexecution.png "BreakpointExecution")  
   
  이때 `testInt`의 값은 여전히 1입니다.  
   

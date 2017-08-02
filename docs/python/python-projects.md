@@ -42,7 +42,7 @@ ms.lasthandoff: 05/09/2017
 
 또한 프로젝트는 항상 Visual Studio *솔루션* 내에서 관리되므로 서로를 참조할 수 있는 프로젝트를 여러 개 포함할 수 있습니다. 예를 들어, Python 프로젝트는 확장 모듈용 C++ 프로젝트를 참조할 수 있으며 따라서 Python 프로젝트 디버깅을 시작할 때 Visual Studio에서 자동으로 C++ 프로젝트를 빌드합니다(필요한 경우). (일반적인 설명은 [Visual Studio의 솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)를 참조하세요.)
 
-![솔루션 탐색기에서 Python 프로젝트](media/projects-solution-explorer.png)
+![솔루션 탐색기에서 Python 프로젝트](~/docs/python/media/projects-solution-explorer.png)
 
 Visual Studio는 기존 폴더 트리에서 프로젝트를 만드는 템플릿과 깨끗하고 빈 프로젝트를 만드는 템플릿을 비롯하여 다양한 응용 프로그램 구조를 신속하게 설정할 수 있도록 해주는 다양한 Python 프로젝트 템플릿을 제공합니다. 인덱스는 아래 [프로젝트 템플릿](#project-templates)을 참조하세요.
 
@@ -79,14 +79,14 @@ Visual Studio에서 Python 프로젝트에 대한 소개는 [Python 도구 시�
 
 새 프로젝트는 항상 기본 글로벌 Python 환경과 연결됩니다. 프로젝트를 다른 환경(가상 환경 포함)과 연결하려면 프로젝트의 **Python 환경** 노드를 마우스 오른쪽 단추로 클릭하고 **Python 환경 추가/제거**를 선택하고 원하는 항목을 선택합니다. 활성 상태의 환경을 변경하려면 원하는 환경을 마우스 오른쪽 단추로 클릭하고 아래 표시된 것처럼 **Activate Environment**(환경 활성화)를 선택합니다. 자세한 내용은 [Python 환경](python-environments.md#project-specific-environments)을 참조하세요.
 
-![Python 프로젝트에 대한 환경 활성화](media/projects-activate-environment.png)
+![Python 프로젝트에 대한 환경 활성화](~/docs/python/media/projects-activate-environment.png)
 
 <a name="project-types"</a>
 ## <a name="project-templates"></a>프로젝트 템플릿
 
 Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 등 Python 프로젝트를 설정하는 다양한 방법을 제공합니다. 템플릿을 사용하려면 **파일 > 새로 만들기 > 프로젝트...** 메뉴 명령을 선택하거나 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트...**를 선택합니다. 두 방법 모두 아래 **새 프로젝트** 대화 상자가 표시됩니다. Python 관련 템플릿을 보려면 "Python"을 검색하거나 **템플릿 > 다른 언어 > Python** 노드를 선택합니다.
 
-![Python 템플릿이 있는 새 프로젝트 대화 상자](media/projects-new-project-dialog.png)
+![Python 템플릿이 있는 새 프로젝트 대화 상자](~/docs/python/media/projects-new-project-dialog.png)
 
 다음 표에서는 Visual Studio 2017에서 사용 가능한 템플릿을 요약하여 보여 줍니다(일부 템플릿만 이전 모든 버전에서 사용 가능).
 
@@ -109,21 +109,21 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 1. **파일 > 새로 만들기 > 프로젝트...** 메뉴를 선택한 후 **From Existing Python Code**(기존 Python 코드에서) 템플릿을 선택합니다.
 1. 다음 대화 상자에서 기존 코드에 대한 경로, 파일 형식에 대한 필터, 프로젝트에 필요한 검색 경로를 설정한 후 **다음**을 선택합니다.
 
-    ![기존 코드의 새 프로젝트, 1단계](media/projects-from-existing-1.png)
+    ![기존 코드의 새 프로젝트, 1단계](~/docs/python/media/projects-from-existing-1.png)
 
 1. 프로젝트 및 시작 파일에 대한 환경을 선택한 후 **다음**을 누릅니다. (대화 상자에 폴더 트리 루트에 있는 파일만 표시됩니다. 원하는 파일이 하위 폴더에 있는 경우 시작 파일을 비워 두고 솔루션 탐색기에서 나중에 설정합니다.)
 
-    ![기존 코드의 새 프로젝트, 2단계](media/projects-from-existing-2.png)
+    ![기존 코드의 새 프로젝트, 2단계](~/docs/python/media/projects-from-existing-2.png)
 
 1. 프로젝트 파일을 저장할 위치를 선택합니다(이렇게 할 경우 원본 소스 파일이 이동하거나 복사되지 않으므로 복사하려면 템플릿을 사용하기 전에 하나 만들어야 합니다). 이 대화 상자에서 가상 환경의 자동 검색을 포함하고 다양한 웹 프레임워크에 대한 프로젝트를 사용자 지정할 수도 있습니다.
 
-    ![기존 코드의 새 프로젝트, 3단계](media/projects-from-existing-3.png)
+    ![기존 코드의 새 프로젝트, 3단계](~/docs/python/media/projects-from-existing-3.png)
 
 1.  **마침**을 선택하면 Visual Studio가 프로젝트를 만들고 솔루션 탐색기에서 프로젝트가 열립니다. .pyproj 파일을 다른 위치로 이동하려면 솔루션 탐색기에서 선택하고 **파일 > 다른 이름으로 저장**을 선택합니다. 그러면 프로젝트에서 파일 참조가 업데이트되지만 코드 파일은 이동하지 않습니다.
 
 ## <a name="linked-files"></a>연결된 파일
 
-연결된 파일은 프로젝트로 가져온 파일이지만 일반적으로 응용 프로그램의 프로젝트 폴더 외부에 상주합니다. 솔루션 탐색기에 오버레이드된 바로 가기 아이콘이 있는 일반 파일로 나타납니다. ![연결된 파일 아이콘](media/projects-linked-file-icon.png)
+연결된 파일은 프로젝트로 가져온 파일이지만 일반적으로 응용 프로그램의 프로젝트 폴더 외부에 상주합니다. 솔루션 탐색기에 오버레이드된 바로 가기 아이콘이 있는 일반 파일로 나타납니다. ![연결된 파일 아이콘](~/docs/python/media/projects-linked-file-icon.png)
 
 연결된 파일은 일반 `<Compile Include="...">` 요소를 사용하여 `.pyproj` 파일에 지정됩니다. 디렉터리 구조 외부에 상대 경로를 사용하는 경우 암시적으로 연결된 파일일 수 있습니다. 또는 솔루션 탐색기 내에서 경로를 지정하여 명시적인 연결 파일일 수 있습니다.
 
@@ -154,7 +154,7 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 
 Visual Studio 프로젝트는 프로젝트 및 확장에 참조 추가를 지원하며 이 내용은 솔루션 탐색기의 **참조** 노드 아래 나타납니다.
 
-![Python 프로젝트에서 확장 참조](media/projects-extension-references.png)
+![Python 프로젝트에서 확장 참조](~/docs/python/media/projects-extension-references.png)
 
 일반적으로 확장 참조는 프로젝트 간의 종속성을 나타내며 디자인 타임에 IntelliSense를 제공하거나 컴파일 타임에 링크를 제공하는 데 사용됩니다. Python 프로젝트는 유사한 방식으로 참조를 사용하지만, Python의 동적 특성으로 인해 주로 디자인 타임에 향상된 IntelliSense를 제공하는 데 사용됩니다. 또한 추가 종속성을 설치하기 위해 Microsoft Azure에 배포하는 데도 사용할 수 있습니다.
 
@@ -176,4 +176,4 @@ IronPython의 참조는 `clr.AddReference('AssemblyName')` 호출이 발생할 �
 
 WebPI 피드를 통해 추가 구성 요소를 설치할 수 있는 Microsoft Azure Cloud Service에 배포할 WebPI 제품 항목에 대한 참조를 추가할 수 있습니다. 기본적으로 표시된 피드는 Python에 국한되며 Django, CPython 및 기타 핵심 구성 요소를 포함합니다. 아래 표시된 것처럼 사용자 고유의 피드를 선택할 수도 있습니다. Microsoft Azure에 게시할 때 설치 작업은 참조된 모든 제품을 설치합니다.
 
-![WebPI 참조](media/projects-webPI-components.png)
+![WebPI 참조](~/docs/python/media/projects-webPI-components.png)

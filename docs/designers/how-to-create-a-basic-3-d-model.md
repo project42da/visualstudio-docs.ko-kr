@@ -37,7 +37,7 @@ caps.handback.revision: 18
   
  작업을 마치면, 작성된 모델은 다음과 비슷합니다.  
   
- ![완료된 간이형 집 모델](../designers/media/gfx_model_demo_house_final.png "gfx\_model\_demo\_house\_final")  
+ ![완료된 간이형 집 모델](~/docs/designers/media/gfx_model_demo_house_final.png "gfx\_model\_demo\_house\_final")  
   
  시작하기 전에 **속성** 창과 **도구상자** 가 표시되는지 확인하십시오.  
   
@@ -51,27 +51,27 @@ caps.handback.revision: 18
   
 4.  큐브의 위를 세분화 합니다.  표면 선택 모드에서, 큐브는 두 번 정품 인증을 선택하고, 맨 윗면을 선택 하려면 큐브를 선택 합니다.  모델 편집기 도구 모음에서, **표면 분할**을 선택합니다.  동일 크기의 4개의 파티션으로 분할하는 큐브의 맨 위에 새 정점을 추가 합니다.  
   
-     ![정육면체의 위쪽이 나뉨](../designers/media/gfx_model_demo_house_subdiv.png "gfx\_model\_demo\_house\_subdiv")  
+     ![정육면체의 위쪽이 나뉨](~/docs/designers/media/gfx_model_demo_house_subdiv.png "gfx\_model\_demo\_house\_subdiv")  
   
 5.  큐브의 두 인접 한 면을 돌출시킵니다\-예를 들어, 전면 및 좌우 큐브입니다.  얼굴 선택 모드에서 큐브 선택 활성화 한 다음 한쪽 큐브를 한 번 선택 합니다.  컨트롤 키를 누르고 유지합니다, 처음 선택한 면의 인접한 큐브의 다른 면을 선택합니다, 그리고 모델 편집기 도구상자에서 **표면 돌출**을 선택합니다.  
   
-     ![정육면체의 양쪽 면이 돌출됨](../designers/media/gfx_model_demo_house_extrude.png "gfx\_model\_demo\_house\_extrude")  
+     ![정육면체의 양쪽 면이 돌출됨](~/docs/designers/media/gfx_model_demo_house_extrude.png "gfx\_model\_demo\_house\_extrude")  
   
 6.  돌출 중 하나를 확장 합니다.  돌출된 면중 하나를 선택합니다, 그때 모델 편집기 도구상자에서, **변환** 도구상자를 선택하고 돌출로서 동일한 방향으로 변환 조작자를 이동합니다.  
   
-     ![정육면체의 한쪽 면이 더 돌출됨](../designers/media/gfx_model_demo_house_extend.png "gfx\_model\_demo\_house\_extend")  
+     ![정육면체의 한쪽 면이 더 돌출됨](~/docs/designers/media/gfx_model_demo_house_extend.png "gfx\_model\_demo\_house\_extend")  
   
 7.  모델은 삼각 측정 해야 합니다.  **고급** 도구 모음에서 **스크립트**, **도구**, 삼각 측량을 선택합니다.  
   
 8.  집의 지붕 만들기  모델 편집기 도구상자에서 **가장자리 선택** 을 선택함으로써 가장자리 선택 모드를 전환하고 그때 큐브를 활성화하기를 선택합니다.  컨트롤 키를 누르고 여기에 표시 되는 모서리를 선택 합니다.  
   
-     ![지붕 끝을 형성할 가장자리](../designers/media/gfx_model_demo_house_edges.png "gfx\_model\_demo\_house\_edges")  
+     ![지붕 끝을 형성할 가장자리](~/docs/designers/media/gfx_model_demo_house_edges.png "gfx\_model\_demo\_house\_edges")  
   
      모델 편집기 도구 모음에서 가장자리를 선택하면 선택 된 **변환** 도구를 변환 조작자 만드는 집의 지붕 위쪽으로 이동 합니다.  
   
  완료된 간이형 집 모델  다음은 최종 모델을 다시 납작한 음영을 적용합니다.  
   
- ![완료된 간이형 집 모델](../designers/media/gfx_model_demo_house_final.png "gfx\_model\_demo\_house\_final")  
+ ![완료된 간이형 집 모델](~/docs/designers/media/gfx_model_demo_house_final.png "gfx\_model\_demo\_house\_final")  
   
  다음 단계로, 셰이더가 3 차원 모델에 적용할 수 있습니다.  자세한 내용은 [방법: 3차원 모델에 셰이더 적용](../designers/how-to-apply-a-shader-to-a-3-d-model.md)를 참조하십시오.  
   

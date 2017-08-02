@@ -109,7 +109,7 @@ static void Main(string[] args) { int a, b, c, d; a = 1; b = 2; c = 3; d = 4; in
 ## 디버그 위치 도구 모음  
  **디버그 위치** 도구 모음을 사용하여 원하는 함수, 스레드 또는 프로세스를 선택할 수 있습니다. 중단점을 설정하고 디버깅을 시작합니다. 이 도구 모음이 표시되지 않으면 도구 모음 영역의 빈 부분을 클릭하여 사용하도록 설정할 수 있습니다. 도구 모음 목록이 표시되면 **디버그 위치**를 선택합니다. 중단점이 적중되면 실행이 중지되고 디버그 위치 도구 모음이 표시될 수 있으며, 다음 그래픽의 맨 아래쪽 행입니다.  
   
- ![DebugLocationToolbar](../debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")  
+ ![DebugLocationToolbar](~/docs/debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")  
   
  **호출 스택** 창, **스레드** 창 또는 **프로세스** 창에서 요소를 두 번 클릭하여 컨텍스트를 다른 함수 호출, 스레드 또는 프로세스로 변경할 수도 있습니다.  
   

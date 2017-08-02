@@ -87,19 +87,19 @@ caps.handback.revision: 42
     > [!NOTE]  
     >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다.  자세한 내용은 [방법: 리본 메뉴에 개발 도구 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)를 참조하세요.  
   
-6.  **컨트롤** 그룹에서 **텍스트** 단추 ![PlainTextContentControl](../vsto/media/plaintextcontrol.png "PlainTextContentControl")를 클릭하여 첫 번째 셀에 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>을 추가합니다.  
+6.  **컨트롤** 그룹에서 **텍스트** 단추 ![PlainTextContentControl](~/docs/vsto/media/plaintextcontrol.gif "PlainTextContentControl")를 클릭하여 첫 번째 셀에 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>을 추가합니다.  
   
 7.  두 번째 열의 두 번째 셀을 클릭합니다\(**Hire Date** 옆\).  
   
-8.  **컨트롤** 그룹에서 **날짜 선택** 단추 ![DatePickerContentControl](../vsto/media/datepicker.png "DatePickerContentControl")를 클릭하여 두 번째 셀에 <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>을 추가합니다.  
+8.  **컨트롤** 그룹에서 **날짜 선택** 단추 ![DatePickerContentControl](~/docs/vsto/media/datepicker.gif "DatePickerContentControl")를 클릭하여 두 번째 셀에 <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>을 추가합니다.  
   
 9. 두 번째 열의 세 번째 셀을 클릭합니다\(**Title** 옆\).  
   
-10. **컨트롤** 그룹에서 **콤보 상자** 단추 ![ComboBoxContentControl](../vsto/media/combobox.png "ComboBoxContentControl")를 클릭하여 세 번째 셀에 <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>을 추가합니다.  
+10. **컨트롤** 그룹에서 **콤보 상자** 단추 ![ComboBoxContentControl](~/docs/vsto/media/combobox.gif "ComboBoxContentControl")를 클릭하여 세 번째 셀에 <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>을 추가합니다.  
   
 11. 두 번째 열의 마지막 셀을 클릭합니다\(**Picture** 옆\).  
   
-12. **컨트롤** 그룹에서 **그림 콘텐츠 컨트롤** 단추 ![PictureContentControl](../vsto/media/pictcontentcontrol.png "PictureContentControl")를 클릭하여 마지막 셀에 <xref:Microsoft.Office.Tools.Word.PictureContentControl>을 추가합니다.  
+12. **컨트롤** 그룹에서 **그림 콘텐츠 컨트롤** 단추 ![PictureContentControl](~/docs/vsto/media/pictcontentcontrol.gif "PictureContentControl")를 클릭하여 마지막 셀에 <xref:Microsoft.Office.Tools.Word.PictureContentControl>을 추가합니다.  
   
 ## 사용자 의견 표 만들기  
  사용자가 의견 정보를 입력할 수 있는 세 가지 형식의 콘텐츠 컨트롤을 포함하는 표를 만듭니다.  
@@ -124,15 +124,15 @@ caps.handback.revision: 42
   
 6.  리본에서 **개발자** 탭을 클릭합니다.  
   
-7.  **컨트롤** 그룹에서 **텍스트** 단추 ![PlainTextContentControl](../vsto/media/plaintextcontrol.png "PlainTextContentControl")를 클릭하여 첫 번째 셀에 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>을 추가합니다.  
+7.  **컨트롤** 그룹에서 **텍스트** 단추 ![PlainTextContentControl](~/docs/vsto/media/plaintextcontrol.gif "PlainTextContentControl")를 클릭하여 첫 번째 셀에 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>을 추가합니다.  
   
 8.  두 번째 열의 두 번째 셀을 클릭합니다\(**Satisfaction Rating** 옆\).  
   
-9. **컨트롤** 그룹에서 **드롭다운 목록** 단추 ![DropDownListContentControl](../vsto/media/dropdownlist.png "DropDownListContentControl")를 클릭하여 두 번째 셀에 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl>을 추가합니다.  
+9. **컨트롤** 그룹에서 **드롭다운 목록** 단추 ![DropDownListContentControl](~/docs/vsto/media/dropdownlist.gif "DropDownListContentControl")를 클릭하여 두 번째 셀에 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl>을 추가합니다.  
   
 10. 두 번째 열의 마지막 셀을 클릭합니다\(**Comments** 옆\).  
   
-11. **컨트롤** 그룹에서 **서식 있는 텍스트** 단추 ![RichTextContentControl](../vsto/media/richtextcontrol.png "RichTextContentControl")를 클릭하여 마지막 셀에 <xref:Microsoft.Office.Tools.Word.RichTextContentControl>을 추가합니다.  
+11. **컨트롤** 그룹에서 **서식 있는 텍스트** 단추 ![RichTextContentControl](~/docs/vsto/media/richtextcontrol.gif "RichTextContentControl")를 클릭하여 마지막 셀에 <xref:Microsoft.Office.Tools.Word.RichTextContentControl>을 추가합니다.  
   
 ## 프로그래밍 방식으로 콤보 상자 및 드롭다운 목록 채우기  
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]의 **속성** 창을 사용하여 디자인 타임에 콘텐츠 컨트롤을 초기화할 수 있습니다.  런타임에 초기화할 수도 있으며, 이 경우 초기 상태를 동적으로 설정할 수 있습니다.  이 연습에서는 이러한 개체의 작동 방식을 확인할 수 있도록 코드를 사용하여 런타임에 <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> 및 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl>의 항목을 채웁니다.  

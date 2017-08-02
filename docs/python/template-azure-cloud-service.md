@@ -48,11 +48,11 @@ Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작
 1. Cloud Service 템플릿을 사용하는 데 필요한 [Visual Studio용 Azure .NET SDK](https://www.visualstudio.com/vs/azure-tools/)를 설치합니다.
 1. Visual Studio에서 **파일 > 새로 만들기 > 프로젝트...**를 선택한 후 "Azure Python"을 검색하고 목록에서 **Azure Cloud Service**를 선택합니다.
 
-    ![Python용 Azure 클라우드 프로젝트 템플릿](media/template-azure-cloud-project.png)
+    ![Python용 Azure 클라우드 프로젝트 템플릿](~/docs/python/media/template-azure-cloud-project.png)
 
 1. 포함할 역할을 하나 이상 선택합니다. 클라우드 프로젝트는 서로 다른 언어로 작성된 역할을 결합할 수 있으므로 가장 적합한 언어로 응용 프로그램의 각 부분을 쉽게 작성할 수 있습니다. 이 대화 상자를 완료한 후 프로젝트에 새 역할을 추가하려면 솔루션 탐색기에서 **역할**을 마우스 오른쪽 단추로 클릭하고 **추가** 아래 항목 중 하나를 선택합니다.
 
-    ![Azure Cloud 프로젝트 템플릿에서 역할 추가](media/template-azure-cloud-service-project-wizard.png)
+    ![Azure Cloud 프로젝트 템플릿에서 역할 추가](~/docs/python/media/template-azure-cloud-service-project-wizard.png)
 
 1. 개별 역할 프로젝트가 만들어지면 Django, Bottle 또는 Flask 프레임워크 중 하나를 사용하는 역할을 선택한 경우 이에 대한 추가 Python 패키지를 설치하라는 메시지가 표시될 수 있습니다.
 
@@ -60,7 +60,7 @@ Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작
 
 1. 프로젝트의 `bin` 폴더에는 Python, 프로젝트의 [requirements.txt](#dependencies) 파일 설치 및 IIS 설정(필요한 경우)을 포함하여 원격 가상 컴퓨터를 구성하는 데 사용되는 하나 또는 두 개의 PowerShell 스크립트도 포함되어 있습니다. 대부분의 일반적인 옵션은 다른 방법으로 관리할 수 있지만 배포에 따라 원하는 대로 이러한 파일을 편집할 수 있습니다(아래 [역할 배포 구성 ](#configuring-role-deployment) 참조). 옵션을 사용할 수 없는 경우 레거시 구성 스크립트가 대신 사용되므로 이러한 파일은 제거하지 않는 것이 좋습니다.
 
-    ![작업자 역할 지원 파일](media/template-azure-cloud-service-worker-role-support-files.png)
+    ![작업자 역할 지원 파일](~/docs/python/media/template-azure-cloud-service-worker-role-support-files.png)
 
     이러한 구성 스크립트를 새 프로젝트에 추가하려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 선택하고 **웹 역할 지원 파일** 또는 **작업자 역할 지원 파일**을 선택합니다.
    

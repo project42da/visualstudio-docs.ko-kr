@@ -66,7 +66,7 @@ Visual Studio **에너지 소비** 프로파일러를 사용하면 자체 배터
 ##  <a name="BKMK_Identify_scenarios_with_user_marks"></a> 사용자 표시로 시나리오 식별  
  프로파일링 데이터에 *사용자 표시* 를 추가하여 타임라인 눈금자의 영역을 식별할 수 있습니다.  
   
- ![시간 표시 막대의 사용자 표시](../profiling/media/profilers_usermarktimeline.png "PROFILERS_UserMarkTimeline")  
+ ![시간 표시 막대의 사용자 표시](~/docs/profiling/media/profilers_usermarktimeline.png "PROFILERS_UserMarkTimeline")  
   
  이 표시는 메서드 실행 시 타임라인에 주황색 삼각형으로 표시됩니다. 이 표시를 마우스로 가리키면 메시지와 시간이 도구 설명으로 표시됩니다. 두 개 이상의 사용자 표시가 서로 가까이 있으면 표시가 병합되고 도구 설명 데이터가 결합됩니다. 타임라인을 확대하면 표시가 분리되어 표시됩니다.  
   
@@ -117,7 +117,7 @@ if (performance && performance.mark) {
   
 4.  프로파일링을 중지하려면 Visual Studio로 다시 전환하고(Alt + Tab) 진단 허브 페이지에서 **수집 중지** 를 선택합니다.  
   
-     ![데이터 수집 중지](../profiling/media/xamlprof_stopcollection.png "XAMLProf_StopCollection")  
+     ![데이터 수집 중지](~/docs/profiling/media/xamlprof_stopcollection.png "XAMLProf_StopCollection")  
   
      Visual Studio에서 수집된 데이터를 분석하고 결과를 표시합니다.  
   
@@ -141,12 +141,12 @@ if (performance && performance.mark) {
   
 |||  
 |-|-|  
-|![1단계](../profiling/media/procguid_1.png "ProcGuid_1")|보고서 파일의 이름은 Report*YYYYMMDD-HHMM*.diagsession입니다. 보고서를 저장할 경우 이름을 변경할 수 있습니다.|  
-|![2단계](../profiling/media/procguid_2.png "ProcGuid_2")|타임라인에는 프로파일링 세션 길이, 응용 프로그램 수명 주기 시작 이벤트 및 사용자 표시가 표시됩니다.|  
-|![3단계](../profiling/media/procguid_3.png "ProcGuid_3")|파란색 막대를 끌어 타임라인의 부분의 선택하여 보고서를 타임라인의 일부분으로 제한할 수 있습니다.|  
-|![4단계](../profiling/media/procguid_4.png "ProcGuid_4")|**전원 사용** 그래프는 프로파일링 세션 동안 장치 리소스로 발생하는 전원 출력의 변화를 나타내는 다중선형 차트입니다. 에너지 소비 프로파일러는 CPU, 네트워크 작업 및 화면 디스플레이에서 사용하는 전력을 추적합니다.|  
-|![5단계](../profiling/media/procguid_6.png "ProcGuid_6")|**리소스(설정/해제)**  그래프는 네트워크 에너지 소비에 대한 자세한 정보를 제공합니다. **네트워크** 표시줄은 네트워크 연결이 열려 있던 시간을 나타냅니다. **데이터 전송** 하위 막대는 앱에서 네트워크를 통해 데이터를 수신하거나 송신하는 시간을 나타냅니다.|  
-|![6단계](../profiling/media/procguid_6a.png "ProcGuid_6a")|**에너지 사용 요약** 에서는 선택한 타임라인에서 CPU, 네트워크 작업 및 화면 디스플레이 사용에 비례하는 총 에너지양을 보여 줍니다.|  
+|![1단계](~/docs/profiling/media/procguid_1.png "ProcGuid_1")|보고서 파일의 이름은 Report*YYYYMMDD-HHMM*.diagsession입니다. 보고서를 저장할 경우 이름을 변경할 수 있습니다.|  
+|![2단계](~/docs/profiling/media/procguid_2.png "ProcGuid_2")|타임라인에는 프로파일링 세션 길이, 응용 프로그램 수명 주기 시작 이벤트 및 사용자 표시가 표시됩니다.|  
+|![3단계](~/docs/profiling/media/procguid_3.png "ProcGuid_3")|파란색 막대를 끌어 타임라인의 부분의 선택하여 보고서를 타임라인의 일부분으로 제한할 수 있습니다.|  
+|![4단계](~/docs/profiling/media/procguid_4.png "ProcGuid_4")|**전원 사용** 그래프는 프로파일링 세션 동안 장치 리소스로 발생하는 전원 출력의 변화를 나타내는 다중선형 차트입니다. 에너지 소비 프로파일러는 CPU, 네트워크 작업 및 화면 디스플레이에서 사용하는 전력을 추적합니다.|  
+|![5단계](~/docs/profiling/media/procguid_6.png "ProcGuid_6")|**리소스(설정/해제)**  그래프는 네트워크 에너지 소비에 대한 자세한 정보를 제공합니다. **네트워크** 표시줄은 네트워크 연결이 열려 있던 시간을 나타냅니다. **데이터 전송** 하위 막대는 앱에서 네트워크를 통해 데이터를 수신하거나 송신하는 시간을 나타냅니다.|  
+|![6단계](~/docs/profiling/media/procguid_6a.png "ProcGuid_6a")|**에너지 사용 요약** 에서는 선택한 타임라인에서 CPU, 네트워크 작업 및 화면 디스플레이 사용에 비례하는 총 에너지양을 보여 줍니다.|  
   
  **에너지 프로필 데이터를 분석하려면**  
   

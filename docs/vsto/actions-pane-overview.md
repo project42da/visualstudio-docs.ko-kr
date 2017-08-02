@@ -34,7 +34,7 @@ caps.handback.revision: 100
 > [!NOTE]  
 >  작업 창은 사용자 지정 작업창과 다릅니다.  사용자 지정 작업창은 특정 문서가 아니라 응용 프로그램과 연결됩니다.  VSTO 추가 기능에서 일부 Microsoft Office 응용 프로그램에 대한 사용자 지정 작업창을 만들 수 있습니다.  자세한 내용은 [사용자 지정 작업 창](../vsto/custom-task-panes.md)를 참조하세요.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: Excel 작업 창 내에서 WPF 컨트롤 사용](http://go.microsoft.com/fwlink/?LinkId=132763)\(영문\)을 참조하세요.  
+ ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: Excel 작업 창 내에서 WPF 컨트롤 사용](http://go.microsoft.com/fwlink/?LinkId=132763)\(영문\)을 참조하세요.  
   
 ## 작업 창 표시  
  작업 창은 <xref:Microsoft.Office.Tools.ActionsPane> 클래스로 표현됩니다.  문서 수준 프로젝트를 만드는 경우 프로젝트에서 `ThisWorkbook`\(Excel용\) 또는 `ThisDocument`\(Word용\) 클래스의 `ActionsPane` 필드를 통해 코드에서 이 클래스의 인스턴스를 사용할 수 있습니다.  작업 창을 표시하려면 `ActionsPane` 필드의 <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> 속성에 Windows Forms 컨트롤을 추가합니다.  다음 코드 예제에서는 `actions`라는 컨트롤을 작업 창에 추가합니다.  

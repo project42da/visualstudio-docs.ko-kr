@@ -50,7 +50,7 @@ Public Class Automobile Public Property Engine As EngineInfo End Class Public Cl
   
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ##  <a name="BKMK_Common_causes_of_NullReferenceExceptions"></a> NullReferenceException이 발생하는 일반적인 원인  
  임의의 참조 형식 변수는 null일 수 있습니다. 지역 변수, 클래스 속성, 메서드 매개 변수 및 메서드 반환 값에는 모두 null 참조가 포함될 수 있습니다. 이러한 변수의 속성이나 메서드가 null일 때 이를 호출하면 NullReferenceException이 발생합니다. 구체적인 사례는 다음과 같습니다.  
@@ -88,9 +88,9 @@ public void NullReferencFromUninitializedLocalVariable() { EngineInfo engine; Co
 Public Sub NullReferencFromUninitializedLocalVariable() Dim engine As EngineInfo Console.WriteLine(engine.ToString()) End Sub  
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_A_property_or_field_is_null"></a> 속성이나 필드가 null임  
  클래스의 필드 및 속성은 클래스가 만들어질 때 해당 [기본값](../Topic/Data%20Member%20Default%20Values.md)으로 자동으로 초기화됩니다. 참조 형식의 기본값은 `null`\(Visual Basic의 경우 `Nothing`\)입니다. 필드나 속성의 값이 null일 때 부모 클래스의 필드나 속성에서 멤버 메서드를 호출하면 NullReferenceException이 발생합니다.  
@@ -105,9 +105,9 @@ public void NullReferenceFromProperty() { var car = new Automobile(); Console.Wr
 Public Sub NullReferenceFromProperty() Dim car = New Automobile() Console.WriteLine(car.Engine.ToString()) End Sub  
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_A_method_parameter_is_null"></a> 메서드 매개 변수가 null임  
  참조 형식인 메서드 매개 변수는 `null`\(Visual Basic의 경우 `Nothing`\)일 수 있습니다. null인 매개 변수 값에 대한 멤버 메서드나 속성을 호출하면 NullReferenceException이 발생합니다.  
@@ -123,9 +123,9 @@ public void BadEngineInfoPassedToMethod() { EngineInfo eng = null; NullReference
 Public Sub BadParameterPassedToMethod() As EngineInfo Dim eng As EngineInfo = Nothing NullReferenceFromMethodParameter(eng) End Sub Public Sub NullReferenceFromMethodParameter(engine As EngineInfo) Console.WriteLine(engine.ToString()) End Sub  
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_The_return_value_of_a_method_is_null"></a> 메서드 반환 값이 null임  
  참조 형식을 반환하는 메서드가 `null`\(Visual Basic의 경우 `Nothing`\)을 반환할 수 있습니다. 반환된 참조 형식의 속성이나 메서드를 호출할 경우 참조가 null이면 NullReferenceException이 발생합니다.  
@@ -141,9 +141,9 @@ Public Function BadGetEngineInfo() As EngineInfo Dim engine As EngineInfo = Noth
   
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_An_object_in_a_collection_or_array_is_null"></a> 컬렉션이나 배열의 개체가 null임  
  참조 형식의 목록이나 배열에는 null 항목이 포함될 수 있습니다. null인 목록 항목에 대한 메서드나 속성을 호출하면 NullReferenceException이 발생합니다.  
@@ -158,9 +158,9 @@ public Automobile[] BadGetCarList() { var autos = new Automobile[10]; for (int i
 Public Function BadGetCarList() As Automobile() Dim autos = New Automobile(10) {} For i As Integer = 0 To 9 If i <> 6 Then autos(i) = New Automobile() End If Next Return autos End Function Public Sub NullReferenceFromListItem() Dim cars = BadGetCarList() For Each car As Automobile In cars Console.WriteLine(car.ToString()) Next End Sub  
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_An_object_is_not_created_because_of_a_condition"></a> 조건으로 인해 개체가 만들어지지 않음  
  참조 형식이 조건부 블록에서 초기화되는 경우 조건이 false이면 개체가 만들어지지 않습니다.  
@@ -175,9 +175,9 @@ public bool DetermineTheCondition() { return false; } public void NullReferenceF
 Public Function DetermineTheCondition() As Boolean Return False End Function Public Sub NullReferenceFromConditionalCreation() Dim engine As EngineInfo = Nothing Dim condition = DetermineTheCondition() If condition Then engine = New EngineInfo() engine.Power = "Diesel" engine.Size = 2.4 End If Console.WriteLine(engine.Size) End Sub  
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ### 메서드에 전달된 개체의 속성이 null로 설정됨  
  C\#의 `ref` 또는 `out` 키워드를 사용하거나 Visual Basic의 `ByRef` 키워드를 사용하지 않고, 값을 통해 개체를 메서드에 매개 변수로 전달하는 경우 메서드는 매개 변수의 메모리 위치\(매개 변수가 가리키는 위치\)를 변경할 수 없지만 개체의 속성을 변경할 수는 있습니다.  
@@ -193,9 +193,9 @@ public void BadSwapCarEngine(Automobile car) { car.Engine = null; } public void 
 Public Sub BadSwapCarEngine(car As Automobile) car.Engine = Nothing End Sub Public Sub NullPropertyReferenceFromPassToMethod() Dim car As New Automobile() car.Engine = New EngineInfo("GAS", 1.5) BadSwapCarEngine(car) Console.WriteLine(car.Engine.ToString()) End Sub  
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_An_object_passed_by_reference_to_a_method_is_set_to_null"></a> 참조를 통해 메서드에 전달된 개체가 null로 설정됨  
  C\#의 `ref` 또는 `out` 키워드를 사용하거나 Visual Basic의 `ByRef` 키워드를 사용하여, 참조를 통해 참조 형식을 메서드에 매개 변수로 전달하는 경우 매개 변수가 가리키는 메모리 위치를 변경할 수 있습니다.  
@@ -213,9 +213,9 @@ Public Sub BadSwapEngineByRef(ByRef engine As EngineInfo) engine = Nothing End S
   
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException이 발생하는 일반적인 원인](#BKMK_Common_causes_of_NullReferenceExceptions)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ##  <a name="BKMK_Find_the_source_of_a_null_reference_exception_during_development"></a> 개발 시 null 참조 예외 소스 찾기  
  [데이터 팁, 지역 창 및 조사식 창을 사용하여 변수 값 확인](#BKMK_Use_data_tips_the_Locals_window_and_watch_windows_to_see_variables_values)  
@@ -232,23 +232,23 @@ Public Sub BadSwapEngineByRef(ByRef engine As EngineInfo) engine = Nothing End S
   
 -   [조사식 창](../debugger/watch-and-quickwatch-windows.md)을 사용하면 코드를 단계별로 실행함에 따라 변수가 어떻게 변경되는지 확인할 수 있습니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [개발 시 null 참조 예외 소스 찾기](#BKMK_Find_the_source_of_a_null_reference_exception_during_development)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [개발 시 null 참조 예외 소스 찾기](#BKMK_Find_the_source_of_a_null_reference_exception_during_development)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_Walk_the_call_stack_to_find_where_a_type_reference_is_not_initialized_or_set_to_null_"></a> 호출 스택을 검색하여 참조 변수가 초기화되지 않았거나 null로 설정된 위치 찾기  
  Visual Studio [호출 스택 창](../debugger/how-to-use-the-call-stack-window.md)에는 디버거가 예외나 중단점에서 중지되었을 때 완료되지 않은 메서드의 이름이 나열됩니다.**호출 스택** 창에서 이름을 선택한 다음 **프레임으로 전환**을 선택하여 메서드의 실행 컨텍스트를 변경하고 해당 변수를 검사할 수 있습니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [개발 시 null 참조 예외 소스 찾기](#BKMK_Find_the_source_of_a_null_reference_exception_during_development)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [개발 시 null 참조 예외 소스 찾기](#BKMK_Find_the_source_of_a_null_reference_exception_during_development)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_Set_conditional_breakpoints_to_stop_debugging_when_an_object_is_null_Nothing_in_Visual_Basic_"></a> 개체가 null\(Visual Basic의 경우 Nothing\)이면 디버깅을 중지하도록 조건부 중단점 설정  
  [조건부 중단점](http://msdn.microsoft.com/library/5557y8b4.aspx#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)을 설정하여 변수가 null이면 중단할 수 있습니다. 조건부 중단점은 컬렉션의 항목이 간헐적으로만 null인 경우와 같이 null 참조가 자주 발생하지 않는 경우에 유용합니다. 조건부 중단점의 또 다른 이점으로는 특정 처리 루틴에 대한 커밋 전에 문제를 디버깅할 수 있다는 점입니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [개발 시 null 참조 예외 소스 찾기](#BKMK_Find_the_source_of_a_null_reference_exception_during_development)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [개발 시 null 참조 예외 소스 찾기](#BKMK_Find_the_source_of_a_null_reference_exception_during_development)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ##  <a name="BKMK_Avoid_NullReferenceExceptions"></a> NullReferenceException 방지  
  [Debug.Assert를 사용하여 고정 확인](#BKMK_Use_Debug_Assert_to_confirm_an_invariant)  
@@ -270,9 +270,9 @@ private void TheOnlyCallerOfMakeEngineFaster() { var engine = new EngineInfo(); 
 Public Sub TheOnlyCallerOfMakeEngineFaster() Dim engine As New EngineInfo engine.Power = "GAS" engine.Size = 1.5 MakeEngineFaster(engine) End Sub Private Sub MakeEngineFaster(engine As EngineInfo) System.Diagnostics.Debug.Assert(engine IsNot Nothing, "Assert: engine IsNot Nothing") engine.Size = engine.Size * 2 Console.WriteLine("The engine is twice as fast") End Sub Public Sub BadNewCallerOfMakeEngineFaster() Dim engine As EngineInfo = Nothing MakeEngineFaster(engine) End Sub  
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException 방지](#BKMK_Avoid_NullReferenceExceptions)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [NullReferenceException 방지](#BKMK_Avoid_NullReferenceExceptions)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_Fully_initialize_reference_types"></a> 참조 형식을 완전히 초기화  
  참조 형식을 가능한 만들자마자 완전히 초기화하여 대부분의 NullReferenceException을 방지할 수 있습니다.  
@@ -328,9 +328,9 @@ public EngineInfo BadGetEngineInfo() { EngineInfo engine = null; return engine; 
 public EngineInfo BadGetEngineInfo() { EngineInfo engine = null; return engine; } Public Sub CheckForNullReferenceFromMethodReturnValue() Dim engine = BadGetEngineInfo() If (engine IsNot Nothing) Then ' modify the info engine.Power = "DIESEL" engine.Size = 2.4 Else ' report the error Console.WriteLine("BadGetEngineInfo returned Nothing") End If End Sub  
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [릴리스 코드에서 발생된 NullReferenceException 처리](#BKMK_Handle_NullReferenceExceptions_in_release_code)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [릴리스 코드에서 발생된 NullReferenceException 처리](#BKMK_Handle_NullReferenceExceptions_in_release_code)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ###  <a name="BKMK_Use_try_catch_finally_Try_Catch_Finally_in_Visual_Basic_to_handle_the_exception"></a> try–catch–finally\(Visual Basic의 경우 Try–Catch–Finally\)를 사용하여 예외 처리  
  기본 제공 예외 처리 구문\(C\#의 경우 [try, catch, finally](/dotnet/csharp/language-reference/keywords/exception-handling-statements), Visual Basic의 경우 [Try, Catch, Finally](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)\)을 사용할 경우, 개체가 null이 아님을 검사하는 방법에 비해 NullReferenceExceptions를 처리하기 위한 더 많은 옵션이 제공됩니다.  
@@ -347,9 +347,9 @@ Public Sub RarelyBadSwapCarEngine(car As Automobile) If (New Random()).Next = 42
   
 ```  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [릴리스 코드에서 발생된 NullReferenceException 처리](#BKMK_Handle_NullReferenceExceptions_in_release_code)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [릴리스 코드에서 발생된 NullReferenceException 처리](#BKMK_Handle_NullReferenceExceptions_in_release_code)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)  
   
 ## 관련 문서  
  [예외 디자인 지침\(.NET Framework 디자인 지침\)](http://msdn.microsoft.com/library/ms229014)  
@@ -382,4 +382,4 @@ Public Sub RarelyBadSwapCarEngine(car As Automobile) If (New Random()).Next = 42
   
  [네트워크 앱\(XAML\)\(Windows\)에서 발생된 예외 처리](http://msdn.microsoft.com/library/Dn263240)  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [이 문서의 섹션](#BKMK_Contents)

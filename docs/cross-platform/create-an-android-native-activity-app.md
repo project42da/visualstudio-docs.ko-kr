@@ -93,7 +93,7 @@ ms.lasthandoff: 05/13/2017
   
      다음은 Visual Studio Emulator for Android에서 기본 앱이 나타나는 모양입니다.  
   
-     ![앱을 실행하는 에뮬레이터](../cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD_Emulator_Running_App")  
+     ![앱을 실행하는 에뮬레이터](~/docs/cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD_Emulator_Running_App")  
   
      에뮬레이터가 시작됩니다. 코드를 로드하고 배포하는 데 몇 초 정도 걸릴 수 있습니다. 앱이 시작되면 중단점을 설정하고 디버거를 사용하여 코드를 단계별로 실행하고 지역을 검토하고 값을 조사할 수 있습니다.  
   

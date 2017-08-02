@@ -25,7 +25,7 @@ caps.handback.revision: 3
 ## 기록 디버깅을 사용하는 이유  
  버그를 찾는 중단점을 설정하는 것은 적중하느냐 누락하느냐의 문제입니다.  코드에서 버그가 있을 것으로 의심되는 위치 가까이에 중단점을 설정하면 디버거에서 응용 프로그램을 실행할 때 중단점이 적중될 것으로 기대할 수 있고, 이에 따라 실행이 중단된 위치가 버그 소스를 노출할 수 있습니다.  그러지 않은 경우에는 코드 내의 다른 위치에 중단점을 설정한 후 디버거를 다시 실행해야 합니다. 즉, 문제를 발견할 때까지 테스트 단계를 반복적으로 실행하게 됩니다.  
   
- ![중단점 설정](../debugger/media/breakpointprocesa.png "BreakpointProcesa")  
+ ![중단점 설정](~/docs/debugger/media/breakpointprocesa.png "BreakpointProcesa")  
   
  IntelliTrace와 기록 디버깅을 사용하면 중단점을 설정하고 디버깅을 다시 시작하고 테스트 단계를 반복할 필요 없이 응용 프로그램 내부를 이동하면서 상태\(호출 스택 및 지역 변수\)를 검사할 수 있습니다.  이렇게 하면 특히 버그가 테스트 시나리오의 깊은 수준에 있어서 실행하는 데 오래 걸리는 경우 많은 시간을 절약할 수 있습니다.  
   
@@ -71,7 +71,7 @@ private static int AddInt(int add)
   
 4.  **진단 도구** 창을 엽니다\(**디버그 \/ 진단 도구 표시**\).  코드 창이 다음과 같이 나타납니다.  
   
-     ![중단점의 코드 창](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")  
+     ![중단점의 코드 창](~/docs/debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")  
   
 5.  중단점 바로 위 왼쪽 여백 옆에 이중 화살표가 표시됩니다.  이 영역은 탐색 여백이라고 하며 기록 디버깅에 사용됩니다.  화살표를 클릭합니다.  
   
@@ -79,7 +79,7 @@ private static int AddInt(int add)
   
      이제 코드 창의 모양은 다음과 같습니다.  
   
-     ![기록 디버깅 모드의 코드 창](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
+     ![기록 디버깅 모드의 코드 창](~/docs/debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
   
 6.  이제 `AddAll()` 메서드를 단계별로 실행할 수 있습니다\(**F11** 키 또는 탐색 여백의 **한 단계씩 코드 실행** 단추\).  앞으로 이동합니다\(**F10** 또는 탐색 여백의 **다음 호출로 이동**\).  분홍색 줄이 `j = AddInt(j);` 줄에 표시됩니다.  이 경우에는 **F10** 키를 사용해도 다음 코드 줄로 진행하지 않습니다.  대신, 다음 함수 호출로 이동합니다.  기록 디버깅은 여러 호출을 탐색하며 함수 호출이 포함되지 않은 코드 줄을 건너뜁니다.  
   

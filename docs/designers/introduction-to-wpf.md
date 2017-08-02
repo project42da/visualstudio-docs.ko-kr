@@ -38,7 +38,7 @@ ms.lasthandoff: 07/19/2017
 # <a name="introduction-to-wpf"></a>WPF 소개
 WPF(Windows Presentation Foundation)를 사용하면 시각적으로 뛰어난 사용자 환경을 통해 Windows용 데스크톱 클라이언트 응용 프로그램을 만들 수 있습니다.  
   
- ![Contoso Healthcare UI 샘플](../designers/media/wpfintrofigure24.png "WPFIntroFigure24")  
+ ![Contoso Healthcare UI 샘플](~/docs/designers/media/wpfintrofigure24.png "WPFIntroFigure24")  
   
  WPF의 핵심은 최신 그래픽 하드웨어를 활용하도록 작성된 해상도 독립적인 벡터 기반 렌더링 엔진입니다. WPF는 XAML(Extensible Application Markup Language), 컨트롤, 데이터 바인딩, 레이아웃, 2차원 및 3차원 그래픽, 애니메이션, 스타일, 템플릿, 문서, 미디어, 텍스트 및 입력 체계를 포함하는 포괄적인 응용 프로그램 개발 기능을 사용하여 핵심을 확장합니다. WPF는 .NET Framework에 포함되어 있으므로 .NET Framework 클래스 라이브러리의 다른 요소를 통합하는 응용 프로그램을 빌드할 수 있습니다.  
   
@@ -81,7 +81,7 @@ WPF(Windows Presentation Foundation)를 사용하면 시각적으로 뛰어난 �
   
  다음 그림은 이전 예제에서 XAML로 정의된 UI(사용자 인터페이스)를 보여 줍니다.  
   
- ![단추가 있는 창](../designers/media/wpfintrofigure10.png "WPFIntroFigure10")  
+ ![단추가 있는 창](~/docs/designers/media/wpfintrofigure10.png "WPFIntroFigure10")  
   
  XAML은 XML 기반이기 때문에 XAML로 작성한 UI는 [요소 트리](https://msdn.microsoft.com/en-us/library/ms753391\(v=vs.100\).aspx)라고 하는 중첩된 요소 계층 구조로 어셈블됩니다. 요소 트리는 UI를 만들고 관리하는 논리적이고 직관적인 방법을 제공합니다.  
   
@@ -158,7 +158,7 @@ End Namespace
   
  다음 그림은 단추를 클릭할 때의 결과를 보여 줍니다.  
   
- ![MessageBox](../designers/media/wpfintrofigure25.png "WPFIntroFigure25")  
+ ![MessageBox](~/docs/designers/media/wpfintrofigure25.png "WPFIntroFigure25")  
   
 ##  <a name="Controls"></a> 컨트롤  
  응용 프로그램 모델에서 제공하는 사용자 환경은 생성된 컨트롤입니다. WPF에서 "컨트롤"은 창이나 페이지에서 호스트되고 사용자 인터페이스가 있으며 일부 동작을 구현하는 WPF 클래스의 한 범주에 적용되는 포괄적인 용어입니다.  
@@ -229,7 +229,7 @@ End Namespace
   
  다음 그림에서는 이전 예제의 XAML 태그 결과를 보여 줍니다.  
   
- ![DockPanel 페이지](../designers/media/wpfintrofigure11.png "WPFIntroFigure11")  
+ ![DockPanel 페이지](~/docs/designers/media/wpfintrofigure11.png "WPFIntroFigure11")  
   
 ##  <a name="Data_Binding"></a> 데이터 바인딩  
  대부분의 응용 프로그램은 데이터를 보고 편집할 수 있는 수단을 사용자에게 제공하기 위해 생성됩니다. WPF 응용 프로그램의 경우 데이터를 저장 및 액세스하는 작업이 SQL Server 및 ADO .NET과 같은 기술에 의해 이미 제공됩니다. 데이터에 액세스하고 응용 프로그램의 관리되는 개체에 로드한 후 WPF 응용 프로그램에 대한 힘든 작업이 시작됩니다. 기본적으로 다음 두 가지가 포함됩니다.  
@@ -276,7 +276,7 @@ End Namespace
 ### <a name="2-d-shapes"></a>2차원 도형  
  WPF는 다음 그림에 표시된 사각형 및 타원과 같은 일반적인 벡터 기반의 2차원 도형 라이브러리를 제공합니다.  
   
- ![타원 및 사각형](../designers/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
+ ![타원 및 사각형](~/docs/designers/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
  도형의 흥미로운 기능은 표시에 사용되는 것뿐 아니라 키보드 및 마우스 입력을 비롯하여 컨트롤에서 기대하는 기능을 대부분 구현한다는 것입니다. 다음 예제에서는 <xref:System.Windows.Shapes.Ellipse>의 <xref:System.Windows.UIElement.MouseUp> 이벤트가 처리되는 과정을 보여 줍니다.  
   
@@ -287,7 +287,7 @@ End Namespace
   
  다음 그림은 위의 코드에서 생성되는 내용을 보여 줍니다.  
   
- !["you clicked the ellipse&#33;" 텍스트가 있는 창](../designers/media/wpfintrofigure12.png "WPFIntroFigure12")  
+ !["you clicked the ellipse&#33;" 텍스트가 있는 창](~/docs/designers/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
  자세한 내용은 [WPF에서 Shape 및 기본 그리기 개요](https://msdn.microsoft.com/en-us/library/ms747393\(v=vs.100\).aspx)를 참조하세요.  
   
@@ -298,28 +298,28 @@ End Namespace
   
  <xref:System.Windows.Media.Geometry> 개체는 자르기, 적중 테스트 및 2차원 그래픽 데이터 렌더링에 사용할 수 있습니다.  
   
- ![Path의 다양한 용도](../designers/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
+ ![Path의 다양한 용도](~/docs/designers/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
  자세한 내용은 [기하 도형 개요](https://msdn.microsoft.com/en-us/library/ms751808\(v=vs.100\).aspx)를 참조하세요.  
   
 ### <a name="2-d-effects"></a>2차원 효과  
  WPF 2차원 기능의 하위 집합에는 그라데이션, 비트맵, 그리기, 비디오로 그리기, 회전, 크기 조정 및 기울이기와 같은 시각 효과가 포함됩니다. 브러시를 통해 이러한 모든 효과를 얻을 수 있습니다. 다음 그림에서는 몇 가지 예를 보여 줍니다.  
   
- ![여러 브러시의 설명](../designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
+ ![여러 브러시의 설명](~/docs/designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
  자세한 내용은 [WPF 브러시 개요](https://msdn.microsoft.com/en-us/library/aa970904\(v=vs.100\).aspx)를 참조하세요.  
   
 ### <a name="3-d-rendering"></a>3차원 렌더링  
  WPF에는 더 흥미로운 사용자 인터페이스를 만들 수 있도록 2차원 그래픽을 통합하는 3차원 렌더링 기능도 포함되어 있습니다. 예를 들어 다음 그림에서는 3차원 도형에 렌더링된 2차원 이미지를 보여 줍니다.  
   
- ![Visual3D 샘플 스크린샷](../designers/media/wpfintrofigure13.png "WPFIntroFigure13")  
+ ![Visual3D 샘플 스크린샷](~/docs/designers/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
  자세한 내용은 [3차원 그래픽 개요](https://msdn.microsoft.com/en-us/library/ms747437\(v=vs.100\).aspx)를 참조하세요.  
   
 ##  <a name="Animation"></a> 애니메이션  
  WPF 애니메이션 지원을 사용하면 컨트롤이 커지거나, 흔들리거나, 회전하거나, 사라지도록 하여 흥미로운 페이지 전환 등을 만들 수 있습니다. 사용자 지정 클래스를 비롯한 대부분의 WPF 클래스에 애니메이션 효과를 줄 수 있습니다. 다음 그림에서는 간단한 애니메이션의 작동을 보여 줍니다.  
   
- ![애니메이션 효과가 적용된 큐브의 이미지](../designers/media/wpfintrofigure7.png "WPFIntroFigure7")  
+ ![애니메이션 효과가 적용된 큐브의 이미지](~/docs/designers/media/wpfintrofigure7.png "WPFIntroFigure7")  
   
  자세한 내용은 [애니메이션 개요](https://msdn.microsoft.com/en-us/library/ms752312\(v=vs.100\).aspx)를 참조하세요.  
   
@@ -329,7 +329,7 @@ End Namespace
 ### <a name="images"></a>이미지  
  이미지는 대부분의 응용 프로그램에서 공통적으로 사용되며 WPF는 이미지를 사용하는 여러 방법을 제공합니다. 다음 그림에서는 미리 보기 이미지를 포함하는 목록 상자가 있는 사용자 인터페이스를 보여 줍니다. 미리 보기를 선택하면 이미지가 전체 크기로 표시됩니다.  
   
- ![축소판 이미지 및 전체 크기 이미지](../designers/media/wpfintrofigure8.PNG "WPFIntroFigure8")  
+ ![축소판 이미지 및 전체 크기 이미지](~/docs/designers/media/wpfintrofigure8.PNG "WPFIntroFigure8")  
   
  자세한 내용은 [이미징 개요](https://msdn.microsoft.com/en-us/library/ms748873\(v=vs.100\).aspx)를 참조하세요.  
   
@@ -340,7 +340,7 @@ End Namespace
   
  다음 그림의 창에서는 <xref:System.Windows.Controls.MediaElement> 컨트롤의 작동을 보여 줍니다.  
   
- ![오디오와 비디오가 있는 MediaElement 컨트롤](../designers/media/wpfintrofigure1.png "WPFIntroFigure1")  
+ ![오디오와 비디오가 있는 MediaElement 컨트롤](~/docs/designers/media/wpfintrofigure1.png "WPFIntroFigure1")  
   
  자세한 내용은 [WPF 그래픽, 애니메이션 및 미디어 개요](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)를 참조하세요.  
   
@@ -359,7 +359,7 @@ End Namespace
   
  텍스트와 그래픽 통합의 데모로, 다음 그림에서는 텍스트 장식의 응용을 보여 줍니다.  
   
- ![다양한 텍스트 장식이 적용된 텍스트](../designers/media/wpfintrofigure23.png "WPFIntroFigure23")  
+ ![다양한 텍스트 장식이 적용된 텍스트](~/docs/designers/media/wpfintrofigure23.png "WPFIntroFigure23")  
   
  자세한 내용은 [Windows Presentation Foundation의 입력 체계](https://msdn.microsoft.com/en-us/library/ms742190\(v=vs.100\).aspx)를 참조하세요.  
   
@@ -379,7 +379,7 @@ End Namespace
   
  다음 그림에서는 결과를 보여 줍니다.  
   
- ![텍스트가 포함된 TextBox 컨트롤](../designers/media/wpfintrofigure21.png "WPFIntroFigure21")  
+ ![텍스트가 포함된 TextBox 컨트롤](~/docs/designers/media/wpfintrofigure21.png "WPFIntroFigure21")  
   
  그러나 다른 컨트롤은 다양한 콘텐츠 형식의 여러 항목을 포함할 수 있습니다. <xref:System.Windows.Controls.ContentControl.Content%2A> 속성으로 지정된 <xref:System.Windows.Controls.Button>의 콘텐츠에는 레이아웃 컨트롤, 텍스트, 이미지 및 도형을 포함하여 다양한 항목이 포함될 수 있습니다. 다음 예제에서는 <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Border> 및 <xref:System.Windows.Controls.MediaElement>를 포함하는 콘텐츠가 있는 <xref:System.Windows.Controls.Button>을 보여 줍니다.  
   
@@ -389,7 +389,7 @@ End Namespace
   
  다음 그림에서는 이 단추의 콘텐츠를 보여 줍니다.  
   
- ![여러 형식의 콘텐츠가 포함된 단추](../designers/media/wpfintrofigure22.png "WPFIntroFigure22")  
+ ![여러 형식의 콘텐츠가 포함된 단추](~/docs/designers/media/wpfintrofigure22.png "WPFIntroFigure22")  
   
  다양한 컨트롤에서 지원하는 콘텐츠 종류에 대한 자세한 내용은 [WPF 콘텐츠 모델](https://msdn.microsoft.com/en-us/library/bb613548\(v=vs.100\).aspx)을 참조하세요.  
   
@@ -410,12 +410,12 @@ End Namespace
   
  이 예제에서는 기본 단추 사용자 인터페이스가 진한 파란색 테두리가 있는 <xref:System.Windows.Shapes.Ellipse>로 대체되고 <xref:System.Windows.Media.RadialGradientBrush>를 사용하여 채워집니다. <xref:System.Windows.Controls.ContentPresenter> 컨트롤은 <xref:System.Windows.Controls.Button>의 콘텐츠인 "Click Me!"를 표시합니다. <xref:System.Windows.Controls.Button> 을 클릭하면 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트가 <xref:System.Windows.Controls.Button> 컨트롤의 기본 동작의 일부로 여전히 발생합니다. 결과는 다음 그림에 나와 있습니다.  
   
- ![타원형 단추 및 두 번째 창](../designers/media/wpfintrofigure2.png "WPFIntroFigure2")  
+ ![타원형 단추 및 두 번째 창](~/docs/designers/media/wpfintrofigure2.png "WPFIntroFigure2")  
   
 ### <a name="data-templates"></a>데이터 템플릿  
  컨트롤 템플릿을 사용하면 컨트롤의 모양을 지정할 수 있는 반면 데이터 템플릿을 사용하면 컨트롤 콘텐츠의 모양을 지정할 수 있습니다. 데이터 템플릿은 바인딩된 데이터가 표시되는 방식을 개선하는 데 자주 사용됩니다. 다음 그림은 각 작업에 이름, 설명 및 우선 순위가 있는 `Task` 개체의 컬렉션에 바인딩된 <xref:System.Windows.Controls.ListBox>의 기본 모양을 보여 줍니다.  
   
- ![기본 모양의 목록 상자](../designers/media/wpfintrofigure18.png "WPFIntroFigure18")  
+ ![기본 모양의 목록 상자](~/docs/designers/media/wpfintrofigure18.png "WPFIntroFigure18")  
   
  기본 모양은 <xref:System.Windows.Controls.ListBox>에서 예상되는 모양입니다. 그러나 각 작업의 기본 모양은 작업 이름만 포함합니다. 작업 이름, 설명 및 우선 순위를 표시하려면 <xref:System.Windows.Controls.ListBox> 을 사용하여 <xref:System.Windows.DataTemplate>컨트롤의 바인딩된 목록 항목에 대한 기본 모양을 변경해야 합니다. 다음 XAML은 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 특성을 사용하여 각 작업에 적용되는 이러한 <xref:System.Windows.DataTemplate>을 정의합니다.  
   
@@ -426,7 +426,7 @@ End Namespace
   
  다음 그림에서는 이 코드의 영향을 보여 줍니다.  
   
- ![데이터 템플릿을 사용하는 목록 상자](../designers/media/wpfintrofigure19.png "WPFIntroFigure19")  
+ ![데이터 템플릿을 사용하는 목록 상자](~/docs/designers/media/wpfintrofigure19.png "WPFIntroFigure19")  
   
  <xref:System.Windows.Controls.ListBox>의 동작과 전반적인 모양은 유지되고 목록 상자에 표시되는 콘텐츠의 모양만 변경되었습니다.  
   
@@ -442,7 +442,7 @@ End Namespace
   
  이 스타일은 모든 <xref:System.Windows.Controls.Button> 컨트롤을 대상으로 하기 때문에 다음 그림과 같이 창에 있는 모든 단추에 스타일이 자동으로 적용됩니다.  
   
- ![두 개의 주황색 단추](../designers/media/wpfintrofigure20.png "WPFIntroFigure20")  
+ ![두 개의 주황색 단추](~/docs/designers/media/wpfintrofigure20.png "WPFIntroFigure20")  
   
  자세한 내용은 [스타일 지정 및 템플릿](https://msdn.microsoft.com/en-us/library/ms745683\(v=vs.100\).aspx)을 참조하세요.  
   
@@ -507,7 +507,7 @@ End Namespace
   
  다음 그림에서는 <xref:System.Windows.Window>에 호스트된 `NumericUpDown` 컨트롤을 보여 줍니다.  
   
- ![사용자 지정 UserControl](../designers/media/wpfintrofigure3.png "WPFIntroFigure3")  
+ ![사용자 지정 UserControl](~/docs/designers/media/wpfintrofigure3.png "WPFIntroFigure3")  
   
  사용자 지정 컨트롤에 대한 자세한 내용은 [컨트롤 제작 개요](https://msdn.microsoft.com/en-us/library/ms745025\(v=vs.100\).aspx)를 참조하세요.  
   

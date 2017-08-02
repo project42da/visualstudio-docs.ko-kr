@@ -84,11 +84,11 @@ static void Main(string[] args) { int a, b, c; a = 1; b = 2; c = 0; for (int i =
   
  예를 들어 이전 섹션에 나열된 코드가 있는 경우 다음과 같이 세 가지 값의 평균을 구할 수 있습니다.  
   
- ![WatchExpression](../debugger/media/watchexpression.png "WatchExpression")  
+ ![WatchExpression](~/docs/debugger/media/watchexpression.png "WatchExpression")  
   
  일반적으로 **조사식** 창에서 식을 계산하는 규칙은 코딩 언어에서 식을 계산하는 규칙과 동일합니다. 식에 구문 오류가 있으면 코드 편집기에 표시되는 것과 동일한 컴파일러 오류를 예상할 수 있습니다. 예를 들면 다음과 같습니다.  
   
- ![WatchExpressionError](../debugger/media/watchexpressionerror.png "WatchExpressionError")  
+ ![WatchExpressionError](~/docs/debugger/media/watchexpressionerror.png "WatchExpressionError")  
   
 ##  <a name="bkmk_refreshWatch"></a> 만료된 조사식 값 새로 고침  
  특정 상황에서는 **조사식** 창에서 식을 계산할 때 새로 고침 아이콘\(두 화살표가 있는 원 또는 두 물결선이 있는 원\)이 표시될 수도 있습니다.  예를 들어 속성 확인이 꺼져 있고\(**도구 \/ 옵션 \/ 디버깅 \/ 속성 확인 및 기타 암시적 함수 호출 사용**\) 다음 코드가 있는 경우입니다.  

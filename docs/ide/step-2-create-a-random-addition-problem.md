@@ -59,7 +59,7 @@ caps.handback.revision: 27
   
      코드에서 randomizer 뒤에 점\(.\)을 입력하면 IntelliSense 창이 열리고 호출 가능한 `Random` 개체의 모든 메서드가 표시됩니다.  Intellisense에 나열되는 `Next()` 메서드를 예로 들면 다음과 같습니다.  
   
-     ![Next 메서드](../ide/media/express_randomwhite.png "Express\_RandomWhite")  
+     ![Next 메서드](~/docs/ide/media/express_randomwhite.png "Express\_RandomWhite")  
 Next 메서드  
   
      개체 뒤에 점을 입력하면 IntelliSense에 속성, 메서드, 이벤트 등 개체의 멤버 목록이 표시됩니다.  

@@ -29,7 +29,7 @@ JavaScript IntelliSense의 확장성 기능에서 타사 라이브러리의 Java
   
  JavaScript 언어 서비스 프로젝트에 추가 하는 JavaScript 라이브러리를 제 3 자에 대 한 IntelliSense 기능을 제공 합니다.  대부분의 라이브러리에 대 한 문 완성 언어 서비스에서 자동으로 제공 됩니다.  다음 그림에서는 문 완성을 보여 줍니다.  
   
- ![문 완성 예제](../ide/media/js_intellisense_completion.png "js\_intellisense\_completion")  
+ ![문 완성 예제](~/docs/ide/media/js_intellisense_completion.png "js\_intellisense\_completion")  
   
  라이브러리 설명 변수, 함수 및 개체의 표준 JavaScript 주석 태그에 포함 되어 있는 경우 \(\/ \/\)를 자동으로 완성 목록에서 요소의 오른쪽에 나타나는 또는 함수 호출에 괄호를 입력 하면 팝업 상자에 설명이 포함 된 정보를 제공 하는 IntelliSense 확장성 기능에서 기본적으로 장점입니다.  팝업 상자에 주석을 멤버의 설명에 포함 되어 있습니다.  다음 예제에 대 한 완성 목록 팝업 상자를 보여 줍니다.  
   
@@ -315,7 +315,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 5.  Appcode.js에 다음 코드를 입력 합니다.  입력할 때 IntelliSense 요약 정보로 표시 되는 확장의 표준 주석을 볼 수 있습니다.  
   
-     ![intellisense.annotate의 사용을 보여 주는 예](../ide/media/js_intellisense_annotations.png "js\_intellisense\_annotations")  
+     ![intellisense.annotate의 사용을 보여 주는 예](~/docs/ide/media/js_intellisense_annotations.png "js\_intellisense\_annotations")  
   
 ###  <a name="Logging"></a> 출력 창에 메시지 보내기  
  다음은 출력 창에 메시지를 보내는 방법을 보여 줍니다.  IntelliSense 확장을 디버깅 하는 데 도움이 되는 메시지를 보낼 수 있습니다.  
@@ -488,7 +488,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 4.  Appcode.js에 다음 코드를 입력 합니다.  입력할 때 C\#에서 사용 되는 네임 스페이스에 대 한 아이콘 "에 {}" 변경 된 것을 볼 수 있습니다.  
   
-     ![문자 모양 속성의 사용을 보여 주는 예](../ide/media/js_intellisense_glyph_namespace.png "js\_intellisense\_glyph\_namespace")  
+     ![문자 모양 속성의 사용을 보여 주는 예](~/docs/ide/media/js_intellisense_glyph_namespace.png "js\_intellisense\_glyph\_namespace")  
   
 5.  Appcode.js에 다음 코드를 입력 합니다.  입력할 때 새 열거형 아이콘에 Enum1 구성원 및 SomeClass1 구성원에 대해 새 클래스 아이콘을 볼 수 있습니다.  
   
@@ -530,7 +530,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 3.  Appcode.js에 다음 코드를 입력 합니다.  래핑된 함수, 즉 호출 되지 않으므로 대신 IntelliSense 식별자 목록이 표시 되는 `throttled` 함수는 결과 반환 하지 않습니다.  
   
-     ![IntelliSense 결과를 재정의하는 예](../ide/media/js_intellisense_override.png "js\_intellisense\_override")  
+     ![IntelliSense 결과를 재정의하는 예](~/docs/ide/media/js_intellisense_override.png "js\_intellisense\_override")  
   
 4.  Examplelib.intellisense.js에 다음 코드를 추가 합니다.  IntelliSense는 래핑된 함수에 대해 표시 되는 것이 디자인 타임 동작을 예상 대로 변경 됩니다.  
   
@@ -543,7 +543,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 5.  Appcode.js에서 이전에 입력 한 동일한 코드를 입력 하 여 결과 테스트 합니다.  이 이번에 IntelliSense는 원하는 정보를 제공합니다.  
   
-     ![IntelliSense 결과를 재정의하는 예](../ide/media/js_intellisense_override_fixed.png "js\_intellisense\_override\_fixed")  
+     ![IntelliSense 결과를 재정의하는 예](~/docs/ide/media/js_intellisense_override_fixed.png "js\_intellisense\_override\_fixed")  
   
 ## 참고 항목  
  [JavaScript IntelliSense](../ide/javascript-intellisense.md)   

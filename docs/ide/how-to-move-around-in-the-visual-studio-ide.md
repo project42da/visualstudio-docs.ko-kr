@@ -70,7 +70,7 @@ IDE(통합 개발 환경)는 기본 설정이나 프로젝트 요구 사항에 �
   
  **IDE 탐색기**는 Windows 응용 프로그램 전환기와 매우 유사하게 작동합니다. IDE 탐색기는 메뉴에서 사용할 수 없으며 바로 가기 키를 사용해서만 액세스할 수 있습니다. 두 명령 중 하나를 사용하여 **IDE 탐색기**(아래 참조)에 액세스하고 순환하려는 순서에 따라 파일 전체를 순환할 수 있습니다.  
   
- ![Visual Studio IDE 탐색기](../ide/media/vs2015_ide_navigator.png "VS2015_IDE_Navigator")  
+ ![Visual Studio IDE 탐색기](~/docs/ide/media/vs2015_ide_navigator.png "VS2015_IDE_Navigator")  
   
  `Window.PreviousDocumentWindowNav`는 가장 최근에 액세스한 파일을 이동할 수 있도록 하고 `Window.NextDocumentWindowNav`는 역순으로 이동할 수 있도록 합니다. 일반 개발 설정은 Ctrl+Shift+Tab을 `Window.PreviousDocumentWindowNav`에 할당하고 Ctrl+Tab을 `Window.NextDocumentWindowNav`에 할당합니다.  
   

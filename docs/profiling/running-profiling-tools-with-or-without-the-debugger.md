@@ -63,11 +63,11 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
  이제 이벤트 목록의 모든 위치에서 특정 문자열을 찾을 수 있도록 창에 검색 상자가 있습니다. 예를 들어 다음 그림에서는 4개의 이벤트와 일치한 "설치" 문자열에 대한 검색 결과를 보여 줍니다.  
   
- ![DiagnosticsEventSearch](../profiling/media/diagnosticseventsearch.png "DiagnosticsEventSearch")  
+ ![DiagnosticsEventSearch](~/docs/profiling/media/diagnosticseventsearch.png "DiagnosticsEventSearch")  
   
  창에서 보기 내부 및 외부 이벤트를 필터링할 수도 있습니다. **필터** 드롭다운에서 특정 이벤트 범주를 선택하거나 선택 취소할 수 있습니다. 범주 이름은 접두사 이름과 동일합니다.  
   
- ![DiagnosticEventFilter](../profiling/media/diagnosticeventfilter.png "DiagnosticEventFilter")  
+ ![DiagnosticEventFilter](~/docs/profiling/media/diagnosticeventfilter.png "DiagnosticEventFilter")  
   
  자세한 내용은 [진단 도구 창의 이벤트 탭 검색 및 필터링](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/12/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window.aspx)을 참조하세요.  
   
@@ -80,7 +80,7 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
 3.  진단 시작 페이지에서, 세션에서 실행할 하나 이상의 도구를 선택합니다. 프로젝트 형식, 운영 체제 및 프로그래밍 언어에 적용되는 도구만 표시됩니다. 진단 도구를 선택하면 같은 진단 세션에서 실행할 수 없는 도구 선택을 사용할 수 없게 설정됩니다. C# Windows 유니버설 앱의 경우 선택 항목이 다음과 같이 표시될 수 있습니다.  
   
-     ![진단 도구 선택](../profiling/media/diag_selecttool.png "DIAG_SelectTool")  
+     ![진단 도구 선택](~/docs/profiling/media/diag_selecttool.png "DIAG_SelectTool")  
   
 4.  진단 세션을 시작하려면 **시작**을 클릭합니다.  
   
@@ -88,7 +88,7 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
      세션을 실행하는 동안 일부 도구는 진단 도구 시작 페이지에 실시간 데이터의 그래프를 표시합니다.  
   
-     ![성능 및 진단 페이지에서 데이터 수집](../profiling/media/pdhub_collectdata.png "PDHUB_CollectData")  
+     ![성능 및 진단 페이지에서 데이터 수집](~/docs/profiling/media/pdhub_collectdata.png "PDHUB_CollectData")  
   
 6.  진단 세션을 종료하려면 **컬렉션 중지**를 클릭합니다.  
   
@@ -96,32 +96,32 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
  진단 도구 시작 페이지의 최근에 열어 본 목록에서 저장된 진단 세션 파일을 열 수도 있습니다.  
   
- ![저장된 진단 세션 파일 열기](../profiling/media/pdhub_openexistingdiagsession.png "PDHUB_OpenExistingDiagSession")  
+ ![저장된 진단 세션 파일 열기](~/docs/profiling/media/pdhub_openexistingdiagsession.png "PDHUB_OpenExistingDiagSession")  
   
 ## <a name="the-profiling-report"></a>프로파일링 보고서  
- ![진단 도구 보고서](../profiling/media/diag_report.png "DIAG_Report")  
+ ![진단 도구 보고서](~/docs/profiling/media/diag_report.png "DIAG_Report")  
   
 |||  
 |-|-|  
-|![1단계](../profiling/media/procguid_1.png "ProcGuid_1")|타임라인에는 프로파일링 세션 길이, 응용 프로그램 수명 주기 시작 이벤트 및 사용자 표시가 표시됩니다.|  
-|![2단계](../profiling/media/procguid_2.png "ProcGuid_2")|파란색 막대를 끌어 타임라인의 부분의 선택하여 보고서를 타임라인의 일부분으로 제한할 수 있습니다.|  
-|![3단계](../profiling/media/procguid_3.png "ProcGuid_3")|도구는 하나 이상의 마스터 그래프를 표시합니다. 진단 세션이 여러 가지 도구로 만들어질 경우 모든 마스터 그래프가 표시됩니다.|  
-|![4단계](../profiling/media/procguid_4.png "ProcGuid_4")|개별 그래프를 축소 또는 확장할 수 있습니다.|  
-|![5단계](../profiling/media/procguid_6.png "ProcGuid_6")|데이터에 여러 도구의 정보가 포함되어 있으면 도구에 대한 세부 정보는 탭 아래에 수집됩니다.|  
-|![6단계](../profiling/media/procguid_6a.png "ProcGuid_6a")|도구에는 세부 정보 뷰가 하나 이상 있을 수 있습니다. 뷰는 타임라인의 선택된 부분으로 필터링됩니다.|  
+|![1단계](~/docs/profiling/media/procguid_1.png "ProcGuid_1")|타임라인에는 프로파일링 세션 길이, 응용 프로그램 수명 주기 시작 이벤트 및 사용자 표시가 표시됩니다.|  
+|![2단계](~/docs/profiling/media/procguid_2.png "ProcGuid_2")|파란색 막대를 끌어 타임라인의 부분의 선택하여 보고서를 타임라인의 일부분으로 제한할 수 있습니다.|  
+|![3단계](~/docs/profiling/media/procguid_3.png "ProcGuid_3")|도구는 하나 이상의 마스터 그래프를 표시합니다. 진단 세션이 여러 가지 도구로 만들어질 경우 모든 마스터 그래프가 표시됩니다.|  
+|![4단계](~/docs/profiling/media/procguid_4.png "ProcGuid_4")|개별 그래프를 축소 또는 확장할 수 있습니다.|  
+|![5단계](~/docs/profiling/media/procguid_6.png "ProcGuid_6")|데이터에 여러 도구의 정보가 포함되어 있으면 도구에 대한 세부 정보는 탭 아래에 수집됩니다.|  
+|![6단계](~/docs/profiling/media/procguid_6a.png "ProcGuid_6a")|도구에는 세부 정보 뷰가 하나 이상 있을 수 있습니다. 뷰는 타임라인의 선택된 부분으로 필터링됩니다.|  
   
 ## <a name="setting-the-analysis-target-to-another-device"></a>다른 장치로 분석 대상 설정  
  Visual Studio 프로젝트에서 앱을 시작할 수 있는 것 외에, 다른 대상에서 진단 세션을 실행할 수도 있습니다. 예를 들어 Windows 앱 스토어에서 설치된 앱 버전의 성능 문제를 진단할 수 있습니다.  
   
- ![진단 도구 분석 대상 선택](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  
+ ![진단 도구 분석 대상 선택](~/docs/profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  
   
  장치에 이미 설치된 앱을 시작하거나 이미 실행 중인 일부 앱에 진단 도구를 연결할 수 있습니다. **실행 중인 응용 프로그램** 또는 **설치된 응용 프로그램**을 선택하면 지정된 배포 대상에서 앱을 검색하는 목록에서 앱을 선택하는 것입니다.  
   
- ![진단을 위해 실행 중이거나 설치된 응용 프로그램 선택](../profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")  
+ ![진단을 위해 실행 중이거나 설치된 응용 프로그램 선택](~/docs/profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")  
   
  **Internet Explorer**를 선택하면 URL을 지정하고 휴대폰 배포 대상을 변경할 수 있습니다.  
   
- ![Internet Explorer에 표시할 URL 지정](../profiling/media/pdhub_choosephoneanalysistarget.png "PDHUB_ChoosePhoneAnalysisTarget")  
+ ![Internet Explorer에 표시할 URL 지정](~/docs/profiling/media/pdhub_choosephoneanalysistarget.png "PDHUB_ChoosePhoneAnalysisTarget")  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
  원격 PC 또는 태블릿에서 진단 세션을 실행하려면 원격 대상에 Visual Studio 원격 도구가 설치되어 있고 실행 중이어야 합니다. 데스크톱 앱의 경우 [원격 디버깅](../debugger/remote-debugging.md)을 참조하세요.  Windows 유니버설 앱의 경우 [원격 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md)을 참조하세요.  

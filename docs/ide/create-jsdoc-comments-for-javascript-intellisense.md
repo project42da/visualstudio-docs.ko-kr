@@ -52,7 +52,7 @@ function getArea(radius) {
   
  앞의 예제에서 IntelliSense는 `getArea`에 대한 여는 괄호를 입력할 때 설명, 매개 변수 및 반환 정보를 표시합니다.  
   
- ![함수에 대한 IntelliSense 정보](../ide/media/js_intellisense_jsdoc_comments.png "JS\_IntelliSense\_JSDoc\_Comments")  
+ ![함수에 대한 IntelliSense 정보](~/docs/ide/media/js_intellisense_jsdoc_comments.png "JS\_IntelliSense\_JSDoc\_Comments")  
   
  다음 예제에서는 @property 태그와 함께 @typedef 태그를 사용하는 방법을 보여 줍니다.  
   

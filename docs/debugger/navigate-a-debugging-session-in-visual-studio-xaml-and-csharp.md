@@ -67,7 +67,7 @@ caps.handback.revision: 18
   
  **중단점을 설정합니다.** MainPage 생성자의 `methodTrack = "Main Page";` 문에서 중단점을 설정합니다. 소스 코드 편집기의 음영 처리된 여백에서 줄을 선택합니다\(키보드: 줄에 커서를 놓고 F9 키 선택\).  
   
- ![한 단계씩 코드 실행](../debugger/media/dbg_basics_stepinto.png "DBG\_Basics\_StepInto")  
+ ![한 단계씩 코드 실행](~/docs/debugger/media/dbg_basics_stepinto.png "DBG\_Basics\_StepInto")  
   
  여백에 중단점 아이콘이 나타납니다.  
   
@@ -75,13 +75,13 @@ caps.handback.revision: 18
   
  앱이 실행되기 시작하고 중단점을 설정한 문 바로 앞에서 실행을 일시 중단합니다. 여백에 있는 현재 줄 아이콘은 위치를 식별하고 현재 문이 강조 표시됩니다.  
   
- ![중단점 설정](../debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
+ ![중단점 설정](~/docs/debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
   
  이제 앱의 실행을 제어하고 프로그램 문을 단계별로 실행하면서 프로그램 상태를 검사할 수 있습니다.  
   
  **메서드를 한 단계씩 코드 실행합니다. 디버그** 메뉴에서 **한 단계씩 코드 실행**을 선택합니다\(키보드: F11\).  
   
- ![현재 줄](../debugger/media/dbg_basics_currentline.png "DBG\_Basics\_CurrentLine")  
+ ![현재 줄](~/docs/debugger/media/dbg_basics_currentline.png "DBG\_Basics\_CurrentLine")  
   
  디버거가 Example1 메서드를 호출하는 다음 줄로 이동합니다. 한 단계씩 코드 실행을 다시 선택합니다. 디버거가 Example1 메서드의 진입점으로 이동합니다. 이는 메서드가 호출 스택에 로드되었으며 로컬 변수에 대한 메모리가 할당되었음을 나타냅니다.  
   
@@ -95,7 +95,7 @@ caps.handback.revision: 18
   
  **데이터 팁에서 변수 값을 검사합니다.** 변수 이름 위로 마우스를 이동하면 변수의 이름, 값 및 형식이 데이터 팁에 표시됩니다.  
   
- ![디버거 데이터 팁](../debugger/media/dbg_basics_datatip.png "DBG\_Basics\_DataTip")  
+ ![디버거 데이터 팁](~/docs/debugger/media/dbg_basics_datatip.png "DBG\_Basics\_DataTip")  
   
  변수 `a` 위로 마우스를 이동합니다. 이름, 값 및 데이터 형식을 확인합니다. 변수 `methodTrack` 위로 마우스를 이동합니다. 이름, 값 및 데이터 형식을 다시 확인합니다.  
   
@@ -127,7 +127,7 @@ caps.handback.revision: 18
   
  **MainPage 생성자에서 Example2 메서드를 호출합니다.** MainPage 생성자를 편집하고 `methodTrack = String.Empty;` 다음 줄을 `Example2();`로 바꿉니다.  
   
- ![Demo 메서드에서 Example2 메서드 호출](../debugger/media/dbg_basics_callexample2.png "DBG\_Basics\_CallExample2")  
+ ![Demo 메서드에서 Example2 메서드 호출](~/docs/debugger/media/dbg_basics_callexample2.png "DBG\_Basics\_CallExample2")  
   
  **중단점까지 실행합니다. 디버그** 메뉴에서 **디버깅 시작**을 선택하여 디버그 세션을 시작합니다\(키보드: F5\). 디버거는 중단점에서 실행을 일시 중단합니다.  
   
@@ -135,7 +135,7 @@ caps.handback.revision: 18
   
  **Example2 및 Example2\_A를 한 단계씩 코드 실행합니다.** F11 키를 선택하여  Example 2 메서드를 한 단계씩 코드 실행합니다.`int x = Example2_A();` 줄에 도달할 때까지 Example2 문을 계속 한 단계씩 코드 실행합니다. 다시 이 줄을 한 단계씩 코드 실행하여 Example2\_A의 진입점으로 이동합니다. Example2로 돌아갈 때까지 Example2\_A의 각 문을 계속 한 단계씩 코드 실행합니다.  
   
- ![Example2](../debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
+ ![Example2](~/docs/debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
   
  **함수를 프로시저 단위로 실행합니다.** Example2의 다음 줄 `int y = Example2_A();`는 기본적으로 이전 줄과 동일합니다. 이 줄을 안전하게 프로시저 단위로 실행합니다. F10 키를 선택하여 Example2의 다시 계속에서 Example2\_A의 이 두번째 호출로 이동합니다. F10 키를 선택하여 이 메서드를 프로시저 단위로 실행합니다.`methodTrack` 문자열은 Example2\_A 메서드가 두 번 실행되었음을 나타냅니다. 또한 디버거가 바로 다음 줄로 이동하는 것을 확인할 수 있습니다. 디버거가 Example2가 다시 시작되는 지점에서 실행을 일시 중단하지 않습니다.  
   
@@ -155,7 +155,7 @@ caps.handback.revision: 18
   
  **MainPage 생성자에서 Example3 메서드를 호출합니다.** MainPage 생성자를 편집하고 `methodTrack = String.Empty;` 다음 줄을 `Example3();` 줄로 바꿉니다.  
   
- ![Demo 메서드에서 Example3 메서드 호출](../debugger/media/dbg_basics_callexample3.png "DBG\_Basics\_CallExample3")  
+ ![Demo 메서드에서 Example3 메서드 호출](~/docs/debugger/media/dbg_basics_callexample3.png "DBG\_Basics\_CallExample3")  
   
  **중단점까지 실행합니다. 디버그** 메뉴에서 **디버깅 시작**을 선택하여 디버그 세션을 시작합니다\(키보드: F5\). 디버거가 MainPage 메서드의 중단점에서 실행을 일시 중단합니다.  
   
@@ -167,7 +167,7 @@ caps.handback.revision: 18
   
  조건부 중단점 아이콘은 해당 흰색 십자 표시로 식별할 수 있습니다.  
   
- ![조건부 중단점](../debugger/media/dbg_basics_conditionalbreakpoint.png "DBG\_Basics\_ConditionalBreakpoint")  
+ ![조건부 중단점](~/docs/debugger/media/dbg_basics_conditionalbreakpoint.png "DBG\_Basics\_ConditionalBreakpoint")  
   
  **중단점까지 실행합니다.** 디버그 메뉴에서 계속을 선택합니다\(키보드: F5\). 지역 창에서 `i`의 현재 값이 500인지 확인합니다.`s` 변수가 한 줄로 표시되고 창보다 훨씬 깁니다.  
   
@@ -191,7 +191,7 @@ caps.handback.revision: 18
   
  **MainPage 생성자에서 Example4 메서드를 호출합니다.** MainPage\(\) 생성자를 편집하고 `methodTrack = String.Empty;` 다음 줄을 `Example4();` 줄로 바꿉니다.  
   
- ![Demo 메서드에서 Example4 호출](../debugger/media/dbg_basics_callexample4.png "DBG\_Basics\_CallExample4")  
+ ![Demo 메서드에서 Example4 호출](~/docs/debugger/media/dbg_basics_callexample4.png "DBG\_Basics\_CallExample4")  
   
  **예외까지 실행합니다. 디버그** 메뉴에서 **디버깅 시작**을 선택하여 디버그 세션을 시작합니다\(키보드: F5\). F5 키를 다시 눌러 실행을 다시 시작합니다. 디버거가 Example4 메서드의 예외에서 실행을 일시 중단하고 예외 대화 상자를 표시합니다.  
   

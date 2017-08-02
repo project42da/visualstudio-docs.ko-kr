@@ -44,7 +44,7 @@ RTVS(Visual Studio용 R 도구)의 최신 버전은 **1.0.30321.1407**(권장)�
 
 Visual Studio에서 **도움말 > 정보**로 이동하고 **Visual Studio용 R 도구** 항목까지 아래로 스크롤하여 버전을 확인할 수 있습니다.
 
-![Visual Studio(VS2017)에서 RTVS 버전 검사](media/current-version.png)
+![Visual Studio(VS2017)에서 RTVS 버전 검사](~/docs/rtvs/media/current-version.png)
 
 Visual Studio 및 Windows 요구 사항은 [설치](installation.md)를 참조하세요.
 

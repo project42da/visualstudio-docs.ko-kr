@@ -105,13 +105,13 @@ ms.lasthandoff: 05/30/2017
   
 3.  **새 솔루션 구성** 대화 상자에서 새 구성의 이름을 `Test`로 지정하고, 기존 디버그 구성에서 설정을 복사하고, **확인** 단추를 선택합니다.  
   
-     ![새 솔루션 구성 대화 상자](../ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
+     ![새 솔루션 구성 대화 상자](~/docs/ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
   
 4.  **활성 솔루션 플랫폼** 목록에서 **새로 만들기**를 선택합니다.  
   
 5.  **새 솔루션 플랫폼** 대화 상자에서 **x64**를 선택하지만 x86 플랫폼에서 설정을 복사하지 않습니다.  
   
-     ![새 솔루션 플랫폼 대화 상자](../ide/media/buildwalk_newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
+     ![새 솔루션 플랫폼 대화 상자](~/docs/ide/media/buildwalk_newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
   
 6.  **확인** 단추를 선택합니다.  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 05/30/2017
   
  그림 1: Visual Basic 경고  
   
- ![출력 창(Visual Basic)](../ide/media/buildwalk_vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")  
+ ![출력 창(Visual Basic)](~/docs/ide/media/buildwalk_vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")  
   
  그림 2: Visual C# 경고  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 05/30/2017
   
  **출력** 창에는 빌드에 대한 요약 정보만 표시됩니다.  
   
- ![출력 창, Visual Basic 빌드 경고](../ide/media/buildwalk_visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")  
+ ![출력 창, Visual Basic 빌드 경고](~/docs/ide/media/buildwalk_visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")  
   
  자세한 내용은 [방법: 컴파일러 경고 표시 안 함](../ide/how-to-suppress-compiler-warnings.md)을 참조하세요.  
   

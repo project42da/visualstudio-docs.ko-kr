@@ -59,7 +59,7 @@ caps.handback.revision: 58
   
 -   Microsoft [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] 또는 Microsoft Outlook 2010  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Outlook에서 작업창 사용](http://go.microsoft.com/fwlink/?LinkID=130309)을 참조하세요.  
+ ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Outlook에서 작업창 사용](http://go.microsoft.com/fwlink/?LinkID=130309)을 참조하세요.  
   
 ## 프로젝트 만들기  
  사용자 지정 작업창은 VSTO 추가 기능에서 구현됩니다. 우선 Outlook용 VSTO 추가 기능 프로젝트를 만들어야 합니다.  

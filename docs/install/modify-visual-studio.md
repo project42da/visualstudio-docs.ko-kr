@@ -52,18 +52,18 @@ ms.lasthandoff: 05/13/2017
 
      예를 들어 Windows 10 1주년 업데이트를 실행하는 컴퓨터에서 **시작**을 선택한 다음 **V** 문자로 스크롤하면 **Visual Studio 설치 관리자**를 찾을 수 있습니다.  
 
-     ![Visual Studio 설치 관리자](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio 설치 관리자 찾기")
+     ![Visual Studio 설치 관리자](~/docs/install/media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio 설치 관리자 찾기")
 
      >[!NOTE]
      일부 컴퓨터에서는 Visual Studio 설치 관리자가 **Microsoft Visual Studio 설치 관리자**로 문자 **“M”** 아래에 나열될 수 있습니다.
 
 2.  설치 관리자를 클릭하거나 탭한 다음 **수정**을 선택합니다.  
 
-     ![Visual Studio 실행 또는 수정](media/vs2017-modify.PNG "Visual Studio 2017 수정")  
+     ![Visual Studio 실행 또는 수정](~/docs/install/media/vs2017-modify.PNG "Visual Studio 2017 수정")  
 
 3.  **작업** 화면에서 설치하거나 제거할 작업을 선택하거나 선택 취소합니다.  
 
-    ![Visual Studio 2017 설치 대화 상자](media/vs2017-modify-workloads.PNG "Visual Studio 2017에서 작업 선택")
+    ![Visual Studio 2017 설치 대화 상자](~/docs/install/media/vs2017-modify-workloads.PNG "Visual Studio 2017에서 작업 선택")
 
 4. **수정**을 다시 클릭하거나 탭합니다.  
 

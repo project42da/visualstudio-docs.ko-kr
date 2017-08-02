@@ -29,7 +29,7 @@ caps.handback.revision: 29
   
  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서 제공되는 RemoveCustomization 메서드 중 하나를 사용하여 사용자 지정 어셈블리를 제거할 수 있습니다.  사용하는 메서드는 Word 문서 또는 Excel 통합 문서가 열려 있는 동안 사용자 지정의 코드를 실행하여 런타임에 사용자 지정을 제거할지, 아니면 닫혀 있는 문서나 Microsoft Office가 설치되지 않은 서버에 있는 문서에서 사용자 지정을 제거할지에 따라 달라집니다.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Attach or Detach a VSTO Assembly from a Word Document?](http://go.microsoft.com/fwlink/?LinkId=136782)를 참조하십시오.  
+ ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Attach or Detach a VSTO Assembly from a Word Document?](http://go.microsoft.com/fwlink/?LinkId=136782)를 참조하십시오.  
   
 ### 런타임에 사용자 지정 어셈블리를 제거하려면  
   

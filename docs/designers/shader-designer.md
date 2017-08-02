@@ -79,7 +79,7 @@ ms.lasthandoff: 05/13/2017
   
  **셰이더 디자이너 모드** 도구 모음은 다음과 같습니다.  
   
- ![셰이더 디자이너 모달 도구 모음](../designers/media/digit-dsd-modal-toolbar.png "Digit-DSD-Modal-Toolbar")  
+ ![셰이더 디자이너 모달 도구 모음](~/docs/designers/media/digit-dsd-modal-toolbar.png "Digit-DSD-Modal-Toolbar")  
   
  아래 표에서는 왼쪽에서 오른쪽으로 나타나는 순서에 따라 나열된 **셰이더 디자이너 모드** 도구 모음에 있는 항목을 설명합니다.  
   

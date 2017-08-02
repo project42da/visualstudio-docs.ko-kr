@@ -38,7 +38,7 @@ caps.handback.revision: 26
   
  다음 그림은 간단한 모델 도메인별 DSL에 보여 줍니다.  
   
- ![Tudor 패밀리 트리 모델](../modeling/media/tudor_familytreemodel.png "Tudor\_FamilyTreeModel")  
+ ![Tudor 패밀리 트리 모델](~/docs/modeling/media/tudor_familytreemodel.png "Tudor\_FamilyTreeModel")  
   
 ## Dsl로 수행할 수 있는 작업  
  DSL의 일반적인 응용 프로그램 프로그램 코드 또는 기타 항목을 생성 하는 것입니다.  DSL 사용자 정의할 때 정의할 수 있습니다  *텍스트 템플릿* 는 DSL 모델을 읽고 텍스트 파일을 생성 합니다.  

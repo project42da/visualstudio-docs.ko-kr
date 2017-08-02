@@ -46,14 +46,14 @@ SharePoint 응용 프로그램에 코딩된 UI 테스트를 포함하면 해당 
   
  **참고**  
   
--   ![필수 구성 요소](../test/media/prereq.png "Prereq") SharePoint 응용 프로그램에 대한 코딩된 UI 테스트는 SharePoint 2010에서만 지원됩니다.  
+-   ![필수 구성 요소](~/docs/test/media/prereq.png "Prereq") SharePoint 응용 프로그램에 대한 코딩된 UI 테스트는 SharePoint 2010에서만 지원됩니다.  
   
--   ![필수 구성 요소](../test/media/prereq.png "Prereq") SharePoint 응용 프로그램에서 Visio 및 PowerPoint 2010 컨트롤은 지원되지 않습니다.  
+-   ![필수 구성 요소](~/docs/test/media/prereq.png "Prereq") SharePoint 응용 프로그램에서 Visio 및 PowerPoint 2010 컨트롤은 지원되지 않습니다.  
   
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>SharePoint 응용 프로그램에 대해 코딩된 UI 테스트 만들기  
  SharePoint 2010 응용 프로그램에 대한[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) 는 다른 유형의 응용 프로그램에 대해 테스트 만들기와 동일합니다. 기록 및 재생은 웹 편집 인터페이스의 모든 컨트롤에 대해 지원됩니다. 범주 및 웹 파트 선택 인터페이스는 모두 표준 웹 컨트롤입니다.  
   
- ![SharePoint 웹 파트](../test/media/cuit_sharepoint.png "CUIT_SharePoint")  
+ ![SharePoint 웹 파트](~/docs/test/media/cuit_sharepoint.png "CUIT_SharePoint")  
   
 > [!NOTE]
 >  작업을 기록하는 경우 코드를 생성하기 전에 작업의 유효성을 검사합니다. 마우스를 위로 가져가는 것과 관련해서는 몇 가지 동작이 있으므로 기본적으로 설정됩니다. 코딩된 UI 테스트에서 중복된 위로 가져가기는 제거할 때 주의가 필요합니다. 이렇게 하려면 테스트에 대한 코드를 편집하거나 [코딩된 UI 테스트 편집기](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)를 사용합니다.  

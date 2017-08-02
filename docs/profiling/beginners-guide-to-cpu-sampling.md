@@ -90,7 +90,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
   
  그림에서 번호가 매겨진 각 영역은 절차의 단계와 관련되어 있습니다.  
   
- ![샘플링을 위한 요약 보고서 뷰](../profiling/media/summary_sampling.png "Summary_Sampling")  
+ ![샘플링을 위한 요약 보고서 뷰](~/docs/profiling/media/summary_sampling.png "Summary_Sampling")  
   
 #### <a name="to-analyze-sampling-data"></a>샘플링 데이터를 분석하려면  
   

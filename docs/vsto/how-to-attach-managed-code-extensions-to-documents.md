@@ -32,7 +32,7 @@ caps.handback.revision: 32
 > [!NOTE]  
 >  코드에서 컨트롤을 지정된 문서에 없는 것으로 예상하는 경우 사용자 지정이 로드되지 않습니다.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Attach or Detach a VSTO Assembly from a Word Document?](http://go.microsoft.com/fwlink/?LinkId=136782)를 참조하십시오.  
+ ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Attach or Detach a VSTO Assembly from a Word Document?](http://go.microsoft.com/fwlink/?LinkId=136782)를 참조하십시오.  
   
 ### 문서에 관리 코드 확장을 연결하려면  
   

@@ -194,7 +194,7 @@ caps.handback.revision: 34
   
     1.  **솔루션 탐색기**에서 **SPD 워크플로 TestFT** 노드를 선택합니다.  
   
-    2.  **대상 목록** 속성과 같은 목록 속성 옆에 있는 줄임표 \(![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.png "ASP.NET 모바일 디자이너 줄임표")\) 버튼을 선택합니다.  
+    2.  **대상 목록** 속성과 같은 목록 속성 옆에 있는 줄임표 \(![ASP.NET 모바일 디자이너 줄임표](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\) 버튼을 선택합니다.  
   
     3.  SharePoint 사용자 지정 마법사에서 누락 된 값을 입력 한 다음, **완료** 버튼을 선택합니다.  
   

@@ -46,7 +46,7 @@ ms.lasthandoff: 05/13/2017
   
 4.  [작업 필터를 구현하여 의도 인식 작업을 지원](../test/enable-coded-ui-testing-of-your-controls.md#intentawareactions)  
   
- ![CUIT&#95;Full](../test/media/cuit_full.png "CUIT_Full")  
+ ![CUIT&#95;Full](~/docs/test/media/cuit_full.png "CUIT_Full")  
   
 ##  <a name="recordandplayback"></a> 접근성을 구현하여 기록 및 재생, 속성 유효성 검사를 지원  
  코딩된 UI 테스트 빌더는 기록 중 발견된 컨트롤에 대한 정보를 캡처하고 해당 세션을 재생하기 위한 코드를 생성합니다. 컨트롤이 액세스 가능성을 지원하지 않을 경우, 코딩된 UI 테스트 빌더는 화면 좌표를 사용하여 작업(예: 마우스 클릭)을 캡처합니다. 테스트를 재생하면 생성된 코드가 동일 화면 좌표에서 이러한 마우스 클릭을 실행합니다. 테스트를 재생할 때 컨트롤이 화면의 다른 위치에 표시되면 생성된 코드가 컨트롤에 대해 해당 작업을 수행하는 데 실패합니다. 다른 화면 구성 또는 다른 환경에서 테스트를 재생하거나 UI 레이아웃이 변경된 다음에 재생할 경우에는 작업이 실패할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/13/2017
 ### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>Windows Forms 컨트롤의 기록 및 재생, 속성 유효성 검사 및 탐색을 지원하려면  
  다음 절차의 개요 및 <xref:System.Windows.Forms.AccessibleObject>의 자세한 설명에 따라 컨트롤에 대해 액세스 가능성을 구현합니다.  
   
- ![CUIT&#95;Accessible](../test/media/cuit_accessible.png "CUIT_Accessible")  
+ ![CUIT&#95;Accessible](~/docs/test/media/cuit_accessible.png "CUIT_Accessible")  
   
 1.  <xref:System.Windows.Forms.Control.ControlAccessibleObject>에서 파생되는 클래스를 구현하고 클래스의 개체를 반환하도록 <xref:System.Windows.Forms.Control.AccessibilityObject%2A> 속성을 재정의합니다.  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 05/13/2017
  ![CUIT&#95;CustomProps](../test/media/cuit_customprops.png "CUIT_CustomProps")  
   
 ### <a name="to-support-custom-property-validation"></a>사용자 지정 속성의 유효성 검사를 지원하려면  
- ![CUIT&#95;Props](../test/media/cuit_props.png "CUIT_Props")  
+ ![CUIT&#95;Props](~/docs/test/media/cuit_props.png "CUIT_Props")  
   
 1.  Curve Legend 액세스 가능한 개체의 <xref:System.Windows.Forms.AccessibleObject.Description%2A> 속성을 재정의해서 기본 설명(다중 속성을 구현하는 경우에는 여러 설명)과는 세미콜론(;)으로 구분된 설명 문자열에 다양한 속성 값을 전달합니다.  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 05/13/2017
   
 <CodeContentPlaceHolder>11</CodeContentPlaceHolder>  
 ### <a name="to-add-a-specialized-class-to-access-your-control"></a>컨트롤에 액세스하는 특수화 클래스를 추가하려면  
- ![CUIT&#95;CodeGen](../test/media/cuit_codegen.png "CUIT_CodeGen")  
+ ![CUIT&#95;CodeGen](~/docs/test/media/cuit_codegen.png "CUIT_CodeGen")  
   
 1.  <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinControl>에서 파생된 클래스를 구현하고 생성자의 검색 속성 컬렉션에 이 컨트롤의 형식을 추가합니다.  
   
@@ -195,7 +195,7 @@ ms.lasthandoff: 05/13/2017
  Visual Studio는 테스트를 기록할 때 각 마우스 및 키보드 이벤트를 캡처합니다. 하지만 일부 경우에는 너무 많은 마우스 및 키보드 이벤트가 포함됨에 따라 작업의 목적이 손실될 수 있습니다. 예를 들어 컨트롤에 자동 완성이 지원될 경우 동일한 마우스 및 키보드 이벤트 집합으로도 다른 환경에서는 테스트를 재생할 때 다른 값이 발생할 수 있습니다. 일련의 키보드 및 마우스 이벤트를 단일 작업으로 대체하는 작업 필터 플러그인을 추가할 수 있습니다. 이 방식을 사용하면 특정 값을 선택하는 일련의 마우스 및 키보드 이벤트를 해당 값을 설정하는 단일 작업으로 대체할 수 있습니다. 이렇게 하면 각 환경 간에 달라지는 자동 완성 기능으로부터 코딩된 UI 테스트를 보호할 수 있습니다.  
   
 ### <a name="to-support-intent-aware-actions"></a>의도 인식 작업을 지원하려면  
- ![CUIT&#95;Actions](../test/media/cuit_actions.png "CUIT_Actions")  
+ ![CUIT&#95;Actions](~/docs/test/media/cuit_actions.png "CUIT_Actions")  
   
 1.  <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.ApplyTimeout%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Category%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Enabled%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.FilterType%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Group%2A> 및 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Name%2A> 속성을 재정의하여 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter>에서 파생된 작업 필터 클래스를 구현합니다.  
   

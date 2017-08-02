@@ -23,7 +23,7 @@ caps.handback.revision: 43
 # 원격 컴퓨터에서 Windows 스토어 앱 실행
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows에만 적용](../debugger/media/windows_only_content.png "windows\_only\_content")  
+![Windows에만 적용](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Visual Studio 원격 도구 앱을 사용하면 한 장치에서 실행되는 Windows 스토어 앱을 Visual Studio를 실행하는 다른 컴퓨터에서 실행, 디버깅, 프로파일링 및 테스트할 수 있습니다. Visual Studio 컴퓨터에서 터치, 지리적 위치, 실제 방향 등 Windows 스토어 앱과 관련된 기능을 지원하지 않는 경우 원격 장치에서 특히 더 효과적으로 실행할 수 있습니다. 이 항목에서는 원격 세션을 구성하고 시작하는 절차에 대해 설명합니다.  
   

@@ -34,7 +34,7 @@ caps.handback.revision: 25
   
 3.  리본 디자이너를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **속성** 창에서 **Tabs** 속성을 선택하고 줄임표 단추\(![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.png "ASP.NET 모바일 디자이너 줄임표")\)를 클릭합니다.  
+4.  **속성** 창에서 **Tabs** 속성을 선택하고 줄임표 단추\(![ASP.NET 모바일 디자이너 줄임표](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\)를 클릭합니다.  
   
      **탭 컬렉션 편집기**가 나타납니다.  
   

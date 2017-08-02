@@ -67,11 +67,11 @@ Azure App Service에서 Azure 구독이 필요 없이 임시 사이트를 만들
 
 1. 외부 패키지를 설치하라는 메시지가 표시되면 **가상 환경에 설치**를 선택합니다. 대화 상자 맨 아래에 있는 **필수 패키지 표시** 컨트롤이 설치할 패키지를 표시합니다.
 
-  ![필수 패키지 설치](media/tutorials-common-external-packages.png)
+  ![필수 패키지 설치](~/docs/python/media/tutorials-common-external-packages.png)
 
 1. 가상 환경에 기본 설정된 기본 해석기(예: **Python 2.7** 또는 **Python 3.4**)를 선택하고 **만들기**를 클릭합니다.
 
-  ![프로젝트를 만들 경우 가상 환경 추가](media/tutorials-common-add-virtual-environment.png)
+  ![프로젝트를 만들 경우 가상 환경 추가](~/docs/python/media/tutorials-common-add-virtual-environment.png)
 
 1. 프로젝트를 만들면 **디버그 > 디버깅 시작**을 선택하거나 F5 키를 눌러서 로컬로 테스트합니다. 기본적으로 응용 프로그램은 구성이 필요하지 않은 메모리 내 리포지토리를 사용합니다. 웹 서버가 중지되면 모든 데이터가 손실됩니다.
 
@@ -85,7 +85,7 @@ Azure App Service에서 Azure 구독이 필요 없이 임시 사이트를 만들
 
 1. **게시** 대화 상자에서 **Microsoft Azure App Service**를 선택합니다.
 
-  ![Azure에 게시 1단계](media/tutorials-common-publish-1.png)
+  ![Azure에 게시 1단계](~/docs/python/media/tutorials-common-publish-1.png)
 
 1. 대상을 선택합니다.
 
@@ -94,7 +94,7 @@ Azure App Service에서 Azure 구독이 필요 없이 임시 사이트를 만들
 
 1. App Service 세부 정보는 아래에서 **게시** 대화 상자의 **연결** 탭에 표시됩니다.
 
-  ![Azure에 게시 2단계](media/tutorials-common-publish-2.png)
+  ![Azure에 게시 2단계](~/docs/python/media/tutorials-common-publish-2.png)
 
 1. 추가 설정을 검토하는 데 필요하면 **다음 >**을 선택합니다. [Azure에서 Python 코드를 원격으로 디버그](debugging-azure-remote.md)하려는 경우 **구성**을 **디버그**로 설정해야 합니다.
 1. **게시**를 선택합니다. 응용 프로그램을 Azure에 배포하면 해당 사이트에서 기본 브라우저가 열립니다. 

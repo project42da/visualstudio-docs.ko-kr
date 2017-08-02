@@ -120,7 +120,7 @@ Visual Studio 프로파일링 도구는 성능 데이터를 수집하는데 사�
 ##  <a name="tier_interaction"></a> 계층 상호 작용  
  계층 상호 작용 프로파일링에서는 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 페이지 또는 기타 응용 프로그램과 [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] 데이터베이스 간의 동기 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] 호출에 대한 정보를 프로파일링 데이터 파일에 추가합니다.  이 데이터에는 호출 수 및 시간과 최대 시간 및 최소 시간이 포함됩니다.  계층 상호 작용 데이터는 샘플링, 계측, .NET 메모리 또는 동시성 방법으로 수집되는 프로파일링 데이터에 추가할 수 있습니다.  
   
- ![계층 상호 작용 프로파일링 데이터](../profiling/media/tierinteraction_profilingtools.png "TierInteraction\_ProfilingTools")  
+ ![계층 상호 작용 프로파일링 데이터](~/docs/profiling/media/tierinteraction_profilingtools.png "TierInteraction\_ProfilingTools")  
 프로파일링 도구에서 수집된 계층 상호 작용 데이터  
   
  [계층 상호 작용 데이터 수집](../profiling/collecting-tier-interaction-data.md)  

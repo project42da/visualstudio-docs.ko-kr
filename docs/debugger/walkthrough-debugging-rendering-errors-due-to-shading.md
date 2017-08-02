@@ -34,7 +34,7 @@ manager: "ghogen"
   
  이 시나리오에서 사용자는 최근에 앱에 개체를 추가했으며 개체를 변환하고 고유한 모양을 부여하기 위해 새 꼭지점 및 픽셀 셰이더도 함께 추가했습니다. 테스트하는 동안 앱을 실행하는 경우 개체가 검은색으로 렌더링됩니다. 그래픽 진단을 사용하여 앱을 디버그할 수 있도록 그래픽 로그 문제를 포착합니다. 이 문제는 앱에서 다음과 같이 보입니다.  
   
- ![개체가 잘못된 색으로 렌더링되었습니다.](../debugger/media/gfx_diag_demo_render_error_shader_problem.png "gfx\_diag\_demo\_render\_error\_shader\_problem")  
+ ![개체가 잘못된 색으로 렌더링되었습니다.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_problem.png "gfx\_diag\_demo\_render\_error\_shader\_problem")  
   
 ## 조사  
  그래픽 진단 도구를 사용하면 그래픽 로그 문서를 로드하여 테스트 중에 캡처한 프레임을 검사할 수 있습니다.  
@@ -73,7 +73,7 @@ manager: "ghogen"
   
 3.  `input.color`에 포인터를 놓습니다. 해당 값은 완전히 불투명한 검정색입니다\(0, 0, 0, 1\).  
   
-     !["input"의 "color" 멤버가 검은색입니다.](../debugger/media/gfx_diag_demo_render_error_shader_step_5.png "gfx\_diag\_demo\_render\_error\_shader\_step\_5")  
+     !["input"의 "color" 멤버가 검은색입니다.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_5.png "gfx\_diag\_demo\_render\_error\_shader\_step\_5")  
   
      이 시나리오에서 검사를 통해 잘못된 색상은 수행할 픽셀 셰이더에 대한 올바른 색상 정보를 제공하지 않는 꼭짓점 셰이더의 결과일 수 있음을 알 수 있습니다.  
   
@@ -87,7 +87,7 @@ manager: "ghogen"
   
 3.  색상 멤버가 입력 구조에서 복사되지 않았음을 확인합니다.`output.color` 값이 `output` 구조가 반환되기 직전에 완전히 불투명한 검정색으로 설정되어 있으므로 `output`의 값이 이전 줄에서 올바르게 초기화되지 않았음을 확인하는 것이 좋습니다.`output.color`의 값을 살펴보는 동안 `output.color`를 검정색으로 설정하는 줄에 도달할 때까지 꼭짓점 셰이더를 단계별로 수행합니다.`output.color` 값이 검정색으로 설정될 때까지 초기화되지 않음을 확인합니다. 이렇게 하면 `output.color`를 검정색으로 설정하는 코드 줄을 삭제하기 보다는 수정해야 함을 확인할 수 있습니다.  
   
-     !["output.color"의 값이 검은색입니다.](../debugger/media/gfx_diag_demo_render_error_shader_step_7.png "gfx\_diag\_demo\_render\_error\_shader\_step\_7")  
+     !["output.color"의 값이 검은색입니다.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_7.png "gfx\_diag\_demo\_render\_error\_shader\_step\_7")  
   
  렌더링 문제의 원인이 꼭짓점 셰이더가 픽셀 셰이더에 올바른 색상 값을 제공하지 않기 때문이라고 판단했다면 이 정보를 사용하여 문제를 해결할 수 있습니다. 이 시나리오에서는 꼭짓점 셰이더에서 다음 코드를 변경하여 문제를 해결할 수 있습니다.  
   
@@ -103,8 +103,8 @@ output.color = input.color;
   
  이 코드는 수정하지 않은 상태로 개체의 꼭지점에서 들어온 꼭지점 색상을 통과시키며, 좀 더 복잡한 꼭지점 셰이더는 색상을 통과시키기 전에 수정할 수 있습니다. 수정된 꼭지점 셰이더 코드는 다음과 같습니다.  
   
- ![수정된 꼭짓점 셰이더 코드입니다.](../debugger/media/gfx_diag_demo_render_error_shader_step_8.png "gfx\_diag\_demo\_render\_error\_shader\_step\_8")  
+ ![수정된 꼭짓점 셰이더 코드입니다.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_8.png "gfx\_diag\_demo\_render\_error\_shader\_step\_8")  
   
  코드를 수정한 후 다시 빌드하고 앱을 다시 실행하여 렌더링 문제가 해결되었는지 검색합니다.  
   
- ![개체가 올바른 색으로 렌더링되었습니다.](../debugger/media/gfx_diag_demo_render_error_shader_resolution.png "gfx\_diag\_demo\_render\_error\_shader\_resolution")
+ ![개체가 올바른 색으로 렌더링되었습니다.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_resolution.png "gfx\_diag\_demo\_render\_error\_shader\_resolution")

@@ -51,7 +51,7 @@ Visual Studio는 소스 코드 생성을 지원하여 실제 작업에 집중할
 
 <a name="#quick-actions"></a>
 ## <a name="quick-actions"></a>빠른 작업
-빠른 작업을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다.  이러한 작업은 전구 아이콘 ![작은 전구 아이콘](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Ctrl+.**를 눌러 적용할 수 있습니다.
+빠른 작업을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다.  이러한 작업은 전구 아이콘 ![작은 전구 아이콘](~/docs/ide/media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Ctrl+.**를 눌러 적용할 수 있습니다.
 
 * [빠른 작업](quick-actions.md)
 * [코드 스타일 및 빠른 작업](code-styles-and-quick-actions.md)

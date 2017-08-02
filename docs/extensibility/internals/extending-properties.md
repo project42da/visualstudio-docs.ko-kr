@@ -39,7 +39,7 @@ ms.lasthandoff: 02/22/2017
   
  **속성** F4 키를 눌러 키보드에서 하거나 선택 하 여 열 수 있는 창 **속성 창** 에 **보기** 메뉴, 보기 및 편집 구성 독립적, 디자인 타임 속성 및 선택 된 개체의 이벤트를 사용 합니다. 솔루션 및 프로젝트와 연관 되는 구성에 종속 된 속성에 표시 됩니다 [속성 페이지](../../extensibility/internals/property-pages.md)합니다. 자세한 내용은 참조 [NIB: 프로젝트 속성](http://msdn.microsoft.com/en-us/fb126574-24ad-4c96-9b2b-6e1f3879ba50), [관리 구성 옵션](../../extensibility/internals/managing-configuration-options.md), 및 [프로젝트의 NIB: 항목 관리](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)합니다.  
   
- ![속성 창 개요](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
+ ![속성 창 개요](~/docs/extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
 속성 창  
   
  이 섹션의 개별 영역에 관련 된 자세한 정보를 제공 된 **속성** 창 및 구현 해야 하는 인터페이스와 창을 채울를 호출 합니다.  

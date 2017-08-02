@@ -29,7 +29,7 @@ caps.handback.revision: 7
 # 퀵 스타트: 콘솔을 사용하여 Debug JavaScript 디버그
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  JavaScript 콘솔 창에서 JavaScript를 사용하여 빌드된 스토어 앱을 조작하고 디버그할 수 있습니다. 이러한 기능은 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱, Windows Phone 스토어 앱 및 Visual Studio Tools for Apache Cordova를 사용하여 만든 앱에 대해 지원됩니다. 콘솔 명령 참조는 [JavaScript 콘솔 명령](../debugger/javascript-console-commands.md)을 참조하세요.  
   

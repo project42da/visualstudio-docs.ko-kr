@@ -44,7 +44,7 @@ Cookiecutter에는 Python 3.3 이상(32비트 또는 64비트) 또는 Anaconda 3
 
 설치되면 **보기 > Cookicutter 탐색기**를 선택하여 다음 창을 엽니다.
 
-![Cookiecutter 주 창](media/cookiecutter-overview.png)
+![Cookiecutter 주 창](~/docs/python/media/cookiecutter-overview.png)
 
 ## <a name="cookiecutter-workflow"></a>Cookiecutter 워크플로
 
@@ -76,7 +76,7 @@ Cookiecutter 홈페이지에는 선택하여 다음과 같은 그룹으로 구�
 
 템플릿을 로컬로 설치하면 Cookiecutter에서 옵션 페이지를 표시합니다. 이 페이지에서 Cookiecutter를 통해 다른 옵션과 함께 파일을 생성하려는 위치를 지정할 수 있습니다.
 
-![Cookiecutter 옵션 페이지](media/cookiecutter-template-options.png)
+![Cookiecutter 옵션 페이지](~/docs/python/media/cookiecutter-template-options.png)
 
 각 Cookiecutter 템플릿마다 고유한 옵션 집합을 정의하고 각 옵션에 대해 기본값(각 입력 필드에 제안된 텍스트로 표시됨)을 지정합니다. 기본값은 종종 다른 옵션을 사용하는 동적 값인 경우 코드 조각일 수 있습니다. 
 
@@ -90,13 +90,13 @@ Cookiecutter 홈페이지에는 선택하여 다음과 같은 그룹으로 구�
 
 파일이 성공적으로 만들어졌으면 Cookiecutter의 **솔루션 탐색기**에서 파일을 여는 옵션을 제공합니다.
 
-![솔루션 탐색기 명령을 보여 주는 Cookiecutter](media/cookiecutter-files-created.png)
+![솔루션 탐색기 명령을 보여 주는 Cookiecutter](~/docs/python/media/cookiecutter-files-created.png)
 
 ## <a name="cookiecutter-options"></a>Cookiecutter 옵션
 
 Cookiecutter 옵션은 **도구 > 옵션 > Cookiecutter**를 통해 사용할 수 있습니다.
 
-![Cookiecutter 옵션](media/cookiecutter-tools-options.png)
+![Cookiecutter 옵션](~/docs/python/media/cookiecutter-tools-options.png)
 
 | 옵션 | 설명 |
 | --- | --- |

@@ -142,7 +142,7 @@ Visual Studio에서 모델을 사용하여 시스템, 응용 프로그램 또는
   
 |**범주**|**링크**|  
 |------------------|---------------|  
-|**비디오**|![비디오에 링크](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 방법 비디오: 만들기 및 사용 하 여 UML 모델 및 다이어그램 (Visual Studio 2010 Ultimate) 하는 방법](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![비디오에 링크](../data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Visual Studio 2010을 사용한 UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![비디오에 링크](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 어떻게 할까요? 시리즈: UML 도구 및 확장성 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|  
+|**비디오**|![비디오에 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo") [MSDN 방법 비디오: 만들기 및 사용 하 여 UML 모델 및 다이어그램 (Visual Studio 2010 Ultimate) 하는 방법](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Visual Studio 2010을 사용한 UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo") [MSDN 어떻게 할까요? 시리즈: UML 도구 및 확장성 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|  
 |**포럼**|-   [Visual Studio Visualization / 모델링 도구](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio Visualization / 모델링 SDK (DSL 도구)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
 |**블로그**|[Visual Studio ALM + Team Foundation Server 블로그](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**기술 문서 및 저널**|[MSDN 아키텍처 센터](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio 아키텍처 도구 사용 지침](../modeling/visual-studio-architecture-tooling-guidance.md)|  

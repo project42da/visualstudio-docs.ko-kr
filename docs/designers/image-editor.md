@@ -93,7 +93,7 @@ caps.handback.revision: 45
   
  다음은 **이미지 편집기 모드** 도구 모음입니다.  
   
- ![이미지 편집기 모달 도구 모음.](../designers/media/digit-tre-modal-toolbar.png "Digit\-TRE\-Modal\-Toolbar")  
+ ![이미지 편집기 모달 도구 모음.](~/docs/designers/media/digit-tre-modal-toolbar.png "Digit\-TRE\-Modal\-Toolbar")  
   
  이 표에서는 왼쪽에서 오른쪽으로 나타나는 순서에 따라 나열된 **이미지 편집기 모드** 도구 모음에 있는 항목을 설명합니다.  
   
@@ -117,7 +117,7 @@ caps.handback.revision: 45
   
  다음은 **이미지 편집기** 도구 모음입니다.  
   
- ![이미지 편집기 도구 모음](../designers/media/digit-tre-toolbar.png "Digit\-TRE\-Toolbar")  
+ ![이미지 편집기 도구 모음](~/docs/designers/media/digit-tre-toolbar.png "Digit\-TRE\-Toolbar")  
   
  다음 표에서는 위쪽에서 아래쪽으로 나타나는 순서에 따라 나열된 **이미지 편집기** 도구 모음에 있는 항목을 설명합니다.  
   

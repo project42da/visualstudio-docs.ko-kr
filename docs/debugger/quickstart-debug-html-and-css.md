@@ -30,7 +30,7 @@ caps.handback.revision: 101
 # 퀵 스타트: HTML 및 CSS 디버그
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  JavaScript 앱의 경우 Visual Studio에서 Internet Explorer 및 Visual Studio 개발자에게 익숙한 기능이 포함된 포괄적인 디버깅 환경을 제공합니다. 이러한 기능은 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], Windows Phone 스토어 앱 및 Visual Studio Tools for Apache Cordova를 사용하여 만든 앱에 대해 지원됩니다.  
   
@@ -108,7 +108,7 @@ caps.handback.revision: 101
   
      다음 그림에는 Phone 에뮬레이터에서 이 응용 프로그램을 실행할 때 화면에서 확인하려는 내용이 나와 있습니다\(시뮬레이터에서도 비슷하게 보임\). 하지만 응용 프로그램을 이 상태로 만들려면 먼저 여러 가지 버그를 수정해야 합니다.  
   
-     ![예상 결과를 표시하는 FlipView 응용 프로그램](../debugger/media/js_dom_appfixed.png "JS\_DOM\_AppFixed")  
+     ![예상 결과를 표시하는 FlipView 응용 프로그램](~/docs/debugger/media/js_dom_appfixed.png "JS\_DOM\_AppFixed")  
   
 7.  **디버그** 도구 모음의 **디버깅 시작** 옆에 있는 드롭다운 목록에서 **시뮬레이터** 또는 **에뮬레이터 8.1 WVGA 4인치 512MB**를 선택합니다.  
   
@@ -193,7 +193,7 @@ caps.handback.revision: 101
   
 2.  default.html을 열고 `"fView"` DIV 요소의 높이와 너비를 100%로 변경하여 소스 코드를 수정합니다.  
   
-3.  디버그 도구 모음에서 **Windows 앱 새로 고침** 단추를 선택하거나 F4 키를 누릅니다. 단추는 ![Windows 앱 새로 고침 단추](../debugger/media/js_refresh.png "JS\_Refresh")과 같습니다.  
+3.  디버그 도구 모음에서 **Windows 앱 새로 고침** 단추를 선택하거나 F4 키를 누릅니다. 단추는 ![Windows 앱 새로 고침 단추](~/docs/debugger/media/js_refresh.png "JS\_Refresh")과 같습니다.  
   
      응용 프로그램 페이지가 다시 로드되고 시뮬레이터 또는 Phone 에뮬레이터가 전경으로 돌아갑니다.  
   
@@ -216,7 +216,7 @@ caps.handback.revision: 101
   
  **요소 선택**을 선택하기 전에 **웹 페이지 하이라이트 표시** 단추를 설정\/해제하여 실행 중인 앱의 요소를 강조 표시할 것인지 지정할 수 있습니다. 다음 그림에서는 이 단추를 보여 줍니다. 강조 표시는 기본적으로 표시됩니다.  
   
- ![웹 페이지 하이라이트 표시 단추](../debugger/media/js_dom_display_highlights_button.png "JS\_DOM\_Display\_Highlights\_Button")  
+ ![웹 페이지 하이라이트 표시 단추](~/docs/debugger/media/js_dom_display_highlights_button.png "JS\_DOM\_Display\_Highlights\_Button")  
   
  요소를 강조 표시할 경우 시뮬레이터에서 마우스로 가리키는 요소가 강조 표시됩니다. 하이라이트된 요소의 색은 DOM 탐색기의 **레이아웃** 탭에 나타나는 상자 모델과 일치합니다.  
   

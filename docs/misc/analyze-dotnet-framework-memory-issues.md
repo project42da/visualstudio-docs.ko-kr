@@ -44,7 +44,7 @@ manager: "douge"
   
  각 응용 프로그램의 경우 GC는 응용 프로그램에서 참조하는 개체를 추적하는 참조 트리를 유지 관리합니다.  *참조 트리*에는 전역 개체 및 정적 개체를 포함한 루트 집합뿐만 아니라 관련 스레드 스택 및 동적으로 인스턴스화된 개체도 있습니다.  개체에 자신에 대한 참조가 있는 부모 개체가 하나 이상 있는 경우 해당 개체는 루트로 지정됩니다.  GC는 응용 프로그램에 있는 다른 개체 또는 변수가 해당 개체를 참조하지 않는 경우에만 해당 개체의 메모리를 회수할 수 있습니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Identify_a_memory_issue_in_an_app"></a> 앱의 메모리 문제 식별  
  메모리 문제의 가장 눈에 띄는 증상은 앱의 성능으로 특히 시간에 따라 성능이 저하되는 경우입니다.  앱 실행 중 다른 앱의 성능 저하 역시 메모리 문제를 나타낼 수 있습니다.  메모리 문제가 의심되는 경우 작업 관리자 또는 [Windows 성능 모니터](http://technet.microsoft.com/library/cc749249.aspx)와 같은 도구를 사용하여 더 자세히 조사하세요.  예를 들어 메모리 누수의 가능한 원인으로 설명할 수 없는 메모리의 총 크기 증가를 찾습니다.  
@@ -73,7 +73,7 @@ manager: "douge"
   
  앱의 메모리 사용 증가를 분석하려면 앱의 단일 인스턴스에서 덤프 파일 두 개를 수집합니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Analyze_memory_use"></a> 메모리 사용 분석  
  [개체 목록 필터링](#BKMK_Filter_the_list_of_objects) **&#124;** [단일 스냅숏에서 메모리 데이터 분석](#BKMK_Analyze_memory_data_in_from_a_single_snapshot) **&#124;** [두 메모리 스냅숏 비교](#BKMK_Compare_two_memory_snapshots)  
@@ -88,7 +88,7 @@ manager: "douge"
   
  메모리 분석기에서는 디버그 세션을 시작하여 파일을 분석하고 힙 보기 페이지에 결과를 표시합니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ###  <a name="BKMK_Filter_the_list_of_objects"></a> 개체 목록 필터링  
  기본적으로 메모리 분석기는 메모리 스냅숏에서 개체 목록을 필터링하여 사용자 코드인 형식 및 인스턴스만 표시하고 총 포함 크기가 총 힙 크기의 임계값 비율을 초과하는 형식만 표시합니다.  이러한 옵션은 다음와 같은 **보기 설정** 목록에서 변경할 수 있습니다.  
@@ -100,14 +100,14 @@ manager: "douge"
   
  또한 **검색** 상자에 문자열을 입력하여 형식 목록을 필터링할 수도 있습니다.  목록에는 이름에 문자열이 포함된 형식만 표시됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ###  <a name="BKMK_Analyze_memory_data_in_from_a_single_snapshot"></a> 단일 스냅숏에서 메모리 데이터 분석  
  Visual Studio는 새 디버깅 세션을 시작하여 파일을 분석하고 힙 보기 창에 메모리 데이터를 표시합니다.  
   
  ![개체 형식 목록](../misc/media/dbg_mma_objecttypelist.png "DBG\_MMA\_ObjectTypeList")  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 #### 개체 형식 테이블  
  상단 테이블에는 메모리에 저장된 개체 형식이 나열됩니다.  
@@ -118,7 +118,7 @@ manager: "douge"
   
 -   **포함 크기\(바이트\)**에는 참조되는 개체의 크기가 포함됩니다.  
   
- **개체 형식** 열에서 인스턴스 아이콘\(![개체 형식 열의 인스턴스 아이콘](../misc/media/dbg_mma_instancesicon.png "DBG\_MMA\_InstancesIcon")\)을 선택하여 해당 형식의 인스턴스 목록을 볼 수 있습니다.  
+ **개체 형식** 열에서 인스턴스 아이콘\(![개체 형식 열의 인스턴스 아이콘](~/docs/profiling/media/dbg_mma_instancesicon.png "DBG\_MMA\_InstancesIcon")\)을 선택하여 해당 형식의 인스턴스 목록을 볼 수 있습니다.  
   
 #### 인스턴스 테이블  
  ![인스턴스 테이블](../misc/media/dbg_mma_instancestable.png "DBG\_MMA\_InstancesTable")  
@@ -181,7 +181,7 @@ manager: "douge"
   
  또한 **참조 개수 차이** 열도 **루트 경로** 테이블에 추가됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ## 참고 항목  
  [VS ALM TFS 블로그: Visual Studio 2013을 사용하여 프로덕션에서 .NET 메모리 문제 진단](http://blogs.msdn.com/b/visualstudioalm/archive/2013/06/20/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production.aspx)   

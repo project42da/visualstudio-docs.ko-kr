@@ -24,20 +24,20 @@ caps.handback.revision: 9
   
  다음 그림은 **위로 이동**이라고 하는 스토리보드를 보여 줍니다. 타임라인에는 사각형의 X 및 Y 위치를 표시하는 키 프레임이 포함됩니다. 이 애니메이션을 실행하면 사각형이 특정 위치에서 다른 위치로 부드럽게 이동합니다.  
   
- ![](../designers/media/982f031a-74a3-414a-abc2-a0f41a741075.png "982f031a\-74a3\-414a\-abc2\-a0f41a741075")  
+ ![](~/docs/designers/media/982f031a-74a3-414a-abc2-a0f41a741075.png "982f031a\-74a3\-414a\-abc2\-a0f41a741075")  
   
  다음 비디오를 시청하여 애니메이션을 만드는 방법을 배워봅니다.  
   
 |짧은 비디오 보기:|비디오 내용|  
 |----------------|------------|  
-|![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [타임라인 만들기](http://www.popscreen.com/v/6A4eF/Microsoft-Expression-Blend-Creating-Timelines)|타임라인을 만들고 타임라인에서 개체 작업을 수행합니다.|  
-|![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [키 프레임 추가 및 애니메이션 반복](http://www.popscreen.com/v/6A4fi/Microsoft-Expression-Blend-Adding-Keyframes-and-Repeating-an-Animation)|키 프레임을 추가하고 각 키 프레임에서 속성을 설정합니다. 그런 다음 애니메이션을 실행하고 애니메이션 간 부드럽게 전환되는 개체를 확인합니다.|  
-|![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [대화형 작업을 위한 이벤트 트리거 추가](http://www.popscreen.com/v/6A4e4/Microsoft-Expression-Blend-Adding-Event-Triggers-for-Interactivity)|이벤트가 발생할 때 애니메이션을 시작합니다. 예를 들어 창이 로드되면 애니메이션을 시작합니다.|  
-|![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [색 애니메이션](http://www.popscreen.com/v/6A4gv/Microsoft-Expression-Blend-Animating-Colors)|애니메이션을 사용하여 개체의 색을 변경합니다.|  
-|![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [이동 패스 만들기 및 수정](http://www.popscreen.com/v/6A4fX/Microsoft-Expression-Blend-Creating-and-Modifying-Motion-Paths)|패스를 따라 개체에 애니메이션 효과를 적용합니다.|  
-|![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [키프레임 감속\/가속](http://www.popscreen.com/v/6A4dM/Microsoft-Expression-Blend-Easing-Keyframes)|애니메이션 시작 부분\(*가속*\)이나 끝 부분\(*감속*\)에서 애니메이션 속도를 높이거나 낮춥니다.|  
-|![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [단추 애니메이션](http://www.popscreen.com/v/6A4fK/Microsoft-Expression-Blend-Animating-a-Button)|사용자가 단추를 가리킬 때 단추에 표시되는 흥미로운 효과를 만듭니다.|  
-|![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [애니메이션 만들기 및 감속\/가속 작업](https://www.youtube.com/watch?v=mAJXYrwxGYo)|사용자가 계산기의 이미지에 있는 단추를 누를 때 나타나는 효과에 애니메이션 효과를 적용합니다.|  
+|![설치된 기능 구성](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [타임라인 만들기](http://www.popscreen.com/v/6A4eF/Microsoft-Expression-Blend-Creating-Timelines)|타임라인을 만들고 타임라인에서 개체 작업을 수행합니다.|  
+|![설치된 기능 구성](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [키 프레임 추가 및 애니메이션 반복](http://www.popscreen.com/v/6A4fi/Microsoft-Expression-Blend-Adding-Keyframes-and-Repeating-an-Animation)|키 프레임을 추가하고 각 키 프레임에서 속성을 설정합니다. 그런 다음 애니메이션을 실행하고 애니메이션 간 부드럽게 전환되는 개체를 확인합니다.|  
+|![설치된 기능 구성](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [대화형 작업을 위한 이벤트 트리거 추가](http://www.popscreen.com/v/6A4e4/Microsoft-Expression-Blend-Adding-Event-Triggers-for-Interactivity)|이벤트가 발생할 때 애니메이션을 시작합니다. 예를 들어 창이 로드되면 애니메이션을 시작합니다.|  
+|![설치된 기능 구성](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [색 애니메이션](http://www.popscreen.com/v/6A4gv/Microsoft-Expression-Blend-Animating-Colors)|애니메이션을 사용하여 개체의 색을 변경합니다.|  
+|![설치된 기능 구성](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [이동 패스 만들기 및 수정](http://www.popscreen.com/v/6A4fX/Microsoft-Expression-Blend-Creating-and-Modifying-Motion-Paths)|패스를 따라 개체에 애니메이션 효과를 적용합니다.|  
+|![설치된 기능 구성](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [키프레임 감속\/가속](http://www.popscreen.com/v/6A4dM/Microsoft-Expression-Blend-Easing-Keyframes)|애니메이션 시작 부분\(*가속*\)이나 끝 부분\(*감속*\)에서 애니메이션 속도를 높이거나 낮춥니다.|  
+|![설치된 기능 구성](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [단추 애니메이션](http://www.popscreen.com/v/6A4fK/Microsoft-Expression-Blend-Animating-a-Button)|사용자가 단추를 가리킬 때 단추에 표시되는 흥미로운 효과를 만듭니다.|  
+|![설치된 기능 구성](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [애니메이션 만들기 및 감속\/가속 작업](https://www.youtube.com/watch?v=mAJXYrwxGYo)|사용자가 계산기의 이미지에 있는 단추를 누를 때 나타나는 효과에 애니메이션 효과를 적용합니다.|  
   
 ## 참고 항목  
  [Blend for Visual Studio를 사용하여 UI 만들기](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

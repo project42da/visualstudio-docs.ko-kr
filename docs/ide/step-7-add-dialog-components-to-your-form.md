@@ -22,7 +22,7 @@ caps.handback.revision: 15
   
  구성 요소는 몇 가지 점에서 컨트롤과 비슷합니다.  도구 상자를 사용하여 구성 요소를 폼에 추가하고 **속성** 창을 사용하여 구성 요소의 속성을 설정합니다.  그러나 컨트롤과 달리 구성 요소를 폼에 추가할 때는 실제로 폼에 표시되는 항목이 추가되지 않습니다.  대신 코드를 사용하여 트리거할 수 있는 특정 동작이 제공됩니다.  예를 들어 **파일 열기** 대화 상자를 여는 것은 바로 구성 요소입니다.  
   
- ![비디오에 링크](../data-tools/media/playvideo.png "PlayVideo") 이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 \- 비디오 3](http://go.microsoft.com/fwlink/?LinkId=205213) 또는 [자습서 1: C\#에서 사진 뷰어 만들기 \- 비디오 3](http://go.microsoft.com/fwlink/?LinkId=205202)을 참조하십시오.  이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다.  그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
+ ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo") 이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 \- 비디오 3](http://go.microsoft.com/fwlink/?LinkId=205213) 또는 [자습서 1: C\#에서 사진 뷰어 만들기 \- 비디오 3](http://go.microsoft.com/fwlink/?LinkId=205202)을 참조하십시오.  이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다.  그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
   
 ### 폼에 대화 상자 구성 요소를 추가하려면  
   

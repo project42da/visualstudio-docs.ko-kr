@@ -99,7 +99,7 @@ ms.lasthandoff: 05/30/2017
   
      **빠른 실행** 상자에 **새 프로젝트** 를 입력해도 같은 작업이 수행됩니다.  
   
-     ![빠른 실행 상자에서 새 프로젝트 지정](../ide/media/exploreide-quicklaunchnewprojectsmall.png "ExploreIDE-QuickLaunchNewProjectsmall")  
+     ![빠른 실행 상자에서 새 프로젝트 지정](~/docs/ide/media/exploreide-quicklaunchnewprojectsmall.png "ExploreIDE-QuickLaunchNewProjectsmall")  
   
 2.  예를 들어 왼쪽 창에서 **설치됨**, **템플릿**, **Visual C#**, **Windows**를 차례로 선택한 다음 가운데 창에서 WPF 응용 프로그램을 선택하여 Visual Basic 또는 Visual C# WPF 응용 프로그램 템플릿을 선택합니다.  새 프로젝트 대화 상자 아래쪽의 프로젝트 이름을 HelloWPFApp으로 지정합니다.  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 05/30/2017
   
  그림 5: 프로젝트 항목  
   
- ![HelloWPFApp 파일이 로드된 솔루션 탐색기](../ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
+ ![HelloWPFApp 파일이 로드된 솔루션 탐색기](~/docs/ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
   
  프로젝트를 만든 후 사용자 지정할 수 있습니다. **보기** 메뉴에 있는 **속성** 창을 사용하여 프로젝트 항목, 컨트롤 및 응용 프로그램의 기타 항목에 대한 옵션을 표시하고 변경할 수 있습니다. 프로젝트 속성 및 속성 페이지를 사용하여 프로젝트 및 솔루션의 옵션을 표시하고 변경할 수 있습니다.  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 05/30/2017
   
 1.  다음 절차에서 MainWindow에 보다 구체적인 이름을 지정하겠습니다. **솔루션 탐색기**에서 MainWindow.xaml을 선택합니다. **속성** 창이 표시되어야 하지만 표시되지 않는 경우 **보기** 메뉴 및 **속성 창** 항목을 선택합니다. **파일 이름** 속성을 `Greetings.xaml`로 변경합니다.  
   
-     ![파일 이름이 강조 표시된 속성 창](../ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")  
+     ![파일 이름이 강조 표시된 속성 창](~/docs/ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")  
   
      **솔루션 탐색기** 에는 파일의 이름이 지금은 Greetings.xaml로 표시되고, 노드에 포커스를 두고 오른쪽 화살표 키를 눌러 MainWindow.xaml 노드를 확장하면 이제 MainWindow.xaml.vb 또는 MainWindow.xaml.cs의 이름이 Greetings.xaml.vb 또는 Greetings.xaml.cs로 된 것을 알 수 있습니다. 이 코드 파일은 .xaml 파일과 서로 밀접하게 관련되어 있음을 나타내기 위해 이 파일 노드 아래에 중첩됩니다.  
   
@@ -274,7 +274,7 @@ ms.lasthandoff: 05/30/2017
   
 1.  **디버그**를 선택한 다음 **디버깅 시작**을 선택하여 디버거를 시작합니다.  
   
-     ![디버그 메뉴의 디버깅 시작 명령](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
+     ![디버그 메뉴의 디버깅 시작 명령](~/docs/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
   
      IOException이 발생했음을 나타내는 다음과 같은 대화 상자가 나타납니다. ‘mainwindow.xaml’ 리소스가 없습니다.  
   
@@ -340,7 +340,7 @@ ms.lasthandoff: 05/30/2017
   
 2.  도구 모음에서 드롭다운 컨트롤(현재 “디버그”로 표시)을 사용하여 HelloWPFApp의 빌드 구성을 **디버그**에서 **릴리스**로 변경합니다.  
   
-     ![릴리스가 선택된 표준 도구 모음](../ide/media/exploreide-releaseversion.png "ExploreIDE-ReleaseVersion")  
+     ![릴리스가 선택된 표준 도구 모음](~/docs/ide/media/exploreide-releaseversion.png "ExploreIDE-ReleaseVersion")  
   
 3.  **빌드**를 선택한 다음 **솔루션 빌드** 를 선택하거나 F6 키를 눌러 솔루션을 빌드합니다.  
   

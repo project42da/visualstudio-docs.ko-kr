@@ -46,13 +46,13 @@ Visual Studio는 기호가 필요한 경우(일반적으로 혼합 모드 디버
 - **기호 설정 대화 상자 열기**는 **디버깅 > 기호** 탭에 대한 **옵션** 대화 상자를 엽니다.
 - **인터프리터용 기호 다운로드**는 이 현재 설명서 페이지를 엽니다. 이 경우 **도구 > 옵션**을 선택하고 **디버깅 > 기호** 탭으로 이동하여 계속합니다.
 
-    ![혼합 모드 디버거 기호 프롬프트](media/mixed-mode-debugging-symbols-required.png)
+    ![혼합 모드 디버거 기호 프롬프트](~/docs/python/media/mixed-mode-debugging-symbols-required.png)
 
 ## <a name="downloading-symbols"></a>기호 다운로드
 
 - Python 3.5 이상: Python 설치 관리자를 통해 디버그 기호를 가져옵니다. **사용자 지정 설치**를 선택하고 **다음**을 선택하여 **고급 옵션**으로 이동한 다음, **디버깅 기호 다운로드** 및 **디버그 버전의 이진 파일 다운로드** 상자를 선택합니다.
 
-    ![디버그 기호를 포함한 Python 3.x 설치 관리자](media/mixed-mode-debugging-symbols-installer35.png)
+    ![디버그 기호를 포함한 Python 3.x 설치 관리자](~/docs/python/media/mixed-mode-debugging-symbols-installer35.png)
 
     기호 파일(`.pdb`)은 루트 설치 폴더에 있습니다(개별 모듈에 대한 기호 파일도 `DLLs` 폴더에 있음). 따라서 Visual Studio는 자동으로 해당 기호 파일을 찾으므로 추가 단계가 필요하지 않습니다.
 
@@ -71,7 +71,7 @@ Visual Studio는 기호가 필요한 경우(일반적으로 혼합 모드 디버
     
 1. 도구 모음에서 [추가] 단추를 선택하고(아래에 설명되어 있음) 다운로드한 기호를 확장한 폴더(`python.pdb`가 있는 위치, 예: 아래에 표시된 `c:\python34\Symbols`)를 입력하고 **확인**을 선택합니다. 
 
-    ![혼합 모드 디버거 기호 옵션](media/mixed-mode-debugging-symbols.png)
+    ![혼합 모드 디버거 기호 옵션](~/docs/python/media/mixed-mode-debugging-symbols.png)
 
 1. 디버깅 세션 중에 Visual Studio에서 Python 인터프리터의 소스 파일 위치를 묻는 메시지를 표시할 수 있습니다. 이를 다운로드한 경우(예: [python.org/downloads](https://www.python.org/downloads)에서) 물론 해당 위치도 가리킬 수 있습니다.
 

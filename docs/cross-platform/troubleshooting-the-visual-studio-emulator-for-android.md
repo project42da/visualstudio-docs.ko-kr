@@ -227,11 +227,11 @@ ms.lasthandoff: 05/13/2017
   
     2.  vEthernet(내부 이더넷 포트 Windows Phone 에뮬레이터 내부 스위치) 어댑터에 대해 상황에 맞는 메뉴에서 **속성** 을 선택합니다.  
   
-         ![Hyper&#45;V에서 사용되는 가상 어댑터](../cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")  
+         ![Hyper&#45;V에서 사용되는 가상 어댑터](~/docs/cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")  
   
          어댑터 속성은 다음과 같습니다.  
   
-         ![가상 어댑터 속성](../cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")  
+         ![가상 어댑터 속성](~/docs/cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")  
   
     3.  이 어댑터에 대해 **이 연결에 다음 항목 사용** 에서 선택해야 하는 유일한 항목은 다음과 같습니다.  
   
@@ -259,7 +259,7 @@ ms.lasthandoff: 05/13/2017
   
     -   Hyper-V를 열고 가상 스위치 관리자로 이동합니다. "Windows Phone 에뮬레이터 내부 스위치"라는 가상 스위치를 만들고 해당 연결 형식을 **내부 네트워크**로 설정합니다.  
   
-         ![가상 스위치 관리자](../cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")  
+         ![가상 스위치 관리자](~/docs/cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")  
   
      이제 에뮬레이터를 시작합니다. 에뮬레이터가 작동됩니다.  
   

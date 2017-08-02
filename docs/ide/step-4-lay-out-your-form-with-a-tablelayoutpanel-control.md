@@ -37,7 +37,7 @@ ms.lasthandoff: 05/13/2017
 # <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>4단계: TableLayoutPanel 컨트롤을 사용하여 폼 레이아웃
 이 단계에서는 폼에 `TableLayoutPanel` 컨트롤을 추가합니다. TableLayoutPanel을 사용하여 나중에 추가하는 폼에서 컨트롤을 적절히 맞출 수 있습니다.  
   
- ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo")이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 - 비디오 2](http://go.microsoft.com/fwlink/?LinkId=205211) 또는 [자습서 1: C#에서 사진 뷰어 만들기 - 비디오 2](http://go.microsoft.com/fwlink/?LinkId=205200)를 참조하세요. 이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다. 그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
+ ![비디오 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo")이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 - 비디오 2](http://go.microsoft.com/fwlink/?LinkId=205211) 또는 [자습서 1: C#에서 사진 뷰어 만들기 - 비디오 2](http://go.microsoft.com/fwlink/?LinkId=205200)를 참조하세요. 이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다. 그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
   
 ### <a name="to-lay-out-your-form-with-a-tablelayoutpanel-control"></a>TableLayoutPanel 컨트롤을 사용하여 폼을 레이아웃하려면  
   
@@ -58,7 +58,7 @@ TableLayoutPanel 컨트롤
   
      도구 상자 탭을 선택할 때 도구 상자가 폼에 맞게 확대되는 방식과 도구 상자 바깥쪽 아무 곳이나 선택한 후 도구 상자가 닫히는 방식을 살펴봅니다. 이 기능이 IDE 자동 숨기기 기능입니다. 창의 오른쪽 위 모퉁이에 있는 압정 아이콘을 선택하여 해당 창에서 자동 숨기기 기능을 사용하거나 사용하지 않도록 설정하고 창을 현재 위치에 고정할 수 있습니다. 압정 아이콘은 다음과 같습니다.  
   
-     ![압정 아이콘](../ide/media/express_pushpintoolbox.png "Express_PushpinToolbox")  
+     ![압정 아이콘](~/docs/ide/media/express_pushpintoolbox.png "Express_PushpinToolbox")  
 압정 아이콘  
   
 4.  **TableLayoutPanel**을 선택하여 이 컨트롤이 선택된 상태가 되도록 합니다. 다음 그림과 같이 **속성** 창의 맨 위에 있는 드롭다운 목록에서 선택된 컨트롤을 확인할 수 있습니다.  
@@ -82,14 +82,14 @@ Fill이 선택된 속성 창
   
 8.  현재 TableLayoutPanel에는 크기가 같은 행과 열이 각각 두 개씩 있는데, 위쪽 행과 오른쪽 열의 크기를 훨씬 더 크게 만들어야 합니다. Windows Forms 디자이너에서 TableLayoutPanel을 선택합니다. 오른쪽 위 모퉁이에 다음과 같은 작은 검정색 삼각형 단추가 있습니다.  
   
-     ![삼각형 단추](../ide/media/express_iconblacktriangle.gif "Express_IconBlackTriangle")  
+     ![삼각형 단추](~/docs/ide/media/express_iconblacktriangle.gif "Express_IconBlackTriangle")  
 삼각형 단추  
   
      이 단추는 이 컨트롤에 해당 속성을 자동으로 설정하는 데 도움이 되는 작업이 포함되어 있음을 나타냅니다.  
   
 9. 삼각형을 선택하여 다음 그림과 같이 컨트롤의 작업 목록을 표시합니다.  
   
-     ![TableLayoutPanel 작업](../ide/media/express_tablepanel.png "Express_TablePanel")  
+     ![TableLayoutPanel 작업](~/docs/ide/media/express_tablepanel.png "Express_TablePanel")  
 TableLayoutPanel 작업  
   
 10. **행 및 열 편집** 작업을 선택하여 **열 및 행 스타일** 창을 표시합니다. **Column1**을 선택한 다음 **백분율** 단추가 선택되어 있는지 확인하고 **백분율** 상자에 `15`를 입력하여 크기를 15%로 설정합니다. 이 컨트롤이 이 자습서의 뒷부분에서 사용할 `NumericUpDown` 컨트롤입니다. **Column2**를 선택하고 크기를 85%로 설정합니다. 창이 닫히므로 아직 **확인** 단추는 선택하지 않습니다. 실수로 창을 닫은 경우 작업 목록을 사용하여 다시 열 수 있습니다.  

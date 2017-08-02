@@ -33,7 +33,7 @@ manager: "ghogen"
   
  Visual Studio 2015 설치 환경은 필요한 부분만 설치할 수 있도록 구성 요소화되어 있습니다. 따라서 .NET 또는 웹 개발과 관련된 많은 일반적인 시나리오에 맞게 빠른 설치가 가능합니다. 플랫폼 간 모바일 개발과 같은 다른 형식의 개발을 수행하는 경우나 C\+\+ 또는 F\#으로 작업하는 경우에는 **사용자 지정** 설치를 선택한 후 구성 요소와 선택적으로 필요한 타사 SDK를 선택합니다. 사용자 지정 구성 요소를 나중에 설치할 수도 있습니다. 예를 들어 기본 설치를 선택하는 경우 새 C\+\+ 프로젝트를 만들려고 하면 C\+\+ 개발 도구를 다운로드하라는 메시지가 표시됩니다.  
   
- ![Visual Studio 2015 설정 대화 상자](../ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
+ ![Visual Studio 2015 설정 대화 상자](~/docs/ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
   
 ## 여러 계정에 로그인  
  Visual Studio 2015에서는 단순화된 새로운 로그인 환경을 통해 Visual Studio 계정이 여러 개인 경우에도 온라인 리소스에 간편하게 액세스할 수 있습니다. Visual Studio에 로그인하면 컴퓨터의 Visual Studio 2015 및 Blend의 모든 인스턴스에 자동으로 로그인됩니다. 자동으로 로그인되면 설정 로밍이 자동으로 시작됩니다. Visual Studio 2015에서는 기능 간에 계정이 공유되므로 적절한 토큰이 있는 동안에는 **팀 탐색기**에서 Visual Studio Team Services 계정에 액세스하고 서버 탐색기에서 Microsoft Azure 구독의 리소스와 웹 사이트에 액세스할 수 있습니다. 또한 Application Insights 프로젝트의 새 프로젝트 대화 상자에 Azure 리소스가 표시되는 것은 물론, 새 **연결된 서비스 추가** 대화 상자에는 Azure 모바일, Azure 저장소, [Microsoft Office 365](http://msdn.microsoft.com/office/aa905340.aspx) 및 [Saleforce.com developer](https://developer.salesforce.com/) 계정도 표시됩니다.  
@@ -64,7 +64,7 @@ manager: "ghogen"
 ### Windows 10 장치용 유니버설 Windows 앱  
  유니버설 Windows 플랫폼과 단일 Windows 코어를 사용하여 휴대폰에서 데스크톱에 이르는 모든 Windows 10 장치에서 동일한 앱을 실행할 수 있습니다. Visual Studio 2015 및 유니버설 Windows 앱 개발 도구를 사용하여 이러한 유니버설 Windows 앱을 만듭니다.  
   
- ![유니버설 Windows 플랫폼](../cross-platform/media/uwp_coreextensions.png "UWP\_CoreExtensions")  
+ ![유니버설 Windows 플랫폼](~/docs/cross-platform/media/uwp_coreextensions.png "UWP\_CoreExtensions")  
   
  Windows 10 Phone, Windows 10 데스크톱 또는 Xbox에서 이 앱을 실행합니다. 동일한 앱 패키지입니다. Windows 10 단일 통합 코어가 도입되면서 하나의 앱 패키지를 모든 플랫폼에서 실행할 수 있습니다. 일부 플랫폼에는 플랫폼 특정 동작을 활용하기 위해 앱에 추가할 수 있는 확장 SDK가 있습니다. 예를 들어 모바일용 SDK 확장은 Windows Phone에서 뒤로 단추를 누르는 동작을 처리합니다. 프로젝트에서 확장 SDK를 참조하는 경우 런타임 검사를 추가하여 해당 플랫폼에서 SDK를 사용할 수 있는지 테스트하면 됩니다. 이런 방식으로 각 플랫폼에 동일한 앱 패키지를 사용할 수 있습니다.  
   
@@ -95,7 +95,7 @@ manager: "ghogen"
 ## 장치 미리 보기 메뉴 모음  
  유니버설 Windows 플랫폼 프로젝트에서 장치 미리 보기 메뉴 모음을 사용하면 XAML기반 UI가 다양한 화면 크기에서 렌더링되는 방식을 볼 수 있습니다.  
   
- ![장치 미리 보기 메뉴](../ide/media/vs2015_device_preview.png "vs2015\_device\_preview")  
+ ![장치 미리 보기 메뉴](~/docs/ide/media/vs2015_device_preview.png "vs2015\_device\_preview")  
   
 ## Visual Studio 그래픽 진단  
  Visual Studio 2013 버전부터 Visual Studio 그래픽 진단에 프레임 분석, Windows Phone 지원, 셰이더 편집 및 적용, 명령줄 캡처 도구와 같은 다양한 새 기능이 추가되었습니다. 또한 DirectX12 앱 디버그를 위한 지원도 추가되었습니다. 자세한 내용은 [Visual Studio 그래픽 진단](../debugger/visual-studio-graphics-diagnostics.md)을 참조하세요.  
@@ -113,7 +113,7 @@ manager: "ghogen"
   
  새 서비스는 지속적으로 추가될 예정이며 마법사의 "새 서비스 찾기 링크"를 클릭하여 검색할 수 있습니다.  
   
- ![연결된 서비스 추가 대화 상자](../ide/media/vs2015_addconnectedservicedialog.png "VS2015\_AddConnectedServiceDialog")  
+ ![연결된 서비스 추가 대화 상자](~/docs/ide/media/vs2015_addconnectedservicedialog.png "VS2015\_AddConnectedServiceDialog")  
   
 ## UI 설계  
  XAML 사용자 인터페이스를 설계하기 위한 Blend 환경이 크게 향상되었습니다. Blend는 보다 직관적인 UI, IntelliSense가 포함된 보다 강력한 XAML 편집 기능, 보다 향상된 Visual Studio 통합을 제공하도록 완전히 다시 설계되었습니다. 자세한 내용은 [Designing XAML in Visual Studio and Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md)을 참조하세요.  
@@ -168,7 +168,7 @@ manager: "ghogen"
 ### 고해상도 이미지 및 터치 조작 지원  
  Visual Studio IDE는 밀도가 높은 표시 부분\(메뉴, 상황에 맞는 메뉴, 도구 창 명령 모음과 같은 영역, 솔루션 탐색기의 일부 프로젝트\)에서 고해상도 이미지를 제공합니다. 또한 Visual Studio 코드 편집기 창의 터치 스크린에서 길게 누르기, 손가락 모으기, 누르기 등과 같은 제스처를 사용하여 확대\/축소, 스크롤, 텍스트 선택, 상황에 맞는 메뉴 호출 등을 수행할 수 있습니다.  
   
- ![편집기의 터치 지원](../ide/media/vs2015_touchsupport.png "VS2015\_TouchSupport")  
+ ![편집기의 터치 지원](~/docs/ide/media/vs2015_touchsupport.png "VS2015\_TouchSupport")  
   
 ### 사용자 지정 레이아웃  
  사용자 지정 창 레이아웃을 만들고 저장하고 로밍할 수 있습니다. 예를 들어 데스크톱 컴퓨터에서 사용할 한 개의 선호하는 레이아웃을 정의하고, 랩톱 또는 작은 화면 장치에서 사용할 다른 레이아웃을 정의할 수 있습니다. 또는 UI 프로젝트에서 사용할 한 개의 레이아웃과 데이터베이스 프로젝트에서 사용할 또 다른 레이아웃을 정의할 수 있습니다. 키 바인딩을 사용하여 레이아웃 간에 빠르게 전환할 수 있습니다. 이러한 레이아웃은 로그인 시 Visual Studio의 모든 인스턴스에서 사용할 수 있습니다. 자세한 내용은 [사용자 지정 창 레이아웃 만들기](../misc/create-custom-window-layouts.md)를 참조하세요.  
@@ -189,7 +189,7 @@ manager: "ghogen"
   
 -   코드를 변경한 사용자를 보여 주는 그래프를 확인합니다. 이는 팀의 변경 내용에서 패턴을 찾고 해당 영향을 평가하는 데 도움이 될 수 있습니다.  
   
-     ![CodeLens: 코드 변경 내용 기록을 그래프로 보기](../ide/media/codelens.png "CodeLens")  
+     ![CodeLens: 코드 변경 내용 기록을 그래프로 보기](~/docs/ide/media/codelens.png "CodeLens")  
   
 -   코드가 마지막으로 변경된 시기를 쉽게 확인합니다.  
   
@@ -204,7 +204,7 @@ manager: "ghogen"
   
  이 릴리스에서는 그룹 선택, 편집, 관리 및 그룹 콘텐츠 레이아웃 변경 등과 관련된 여러 섹션으로 명령을 그룹화하여 코드 포인트 및 링크에 대한 바로 가기 메뉴를 훨씬 더 쉽게 사용할 수 있도록 만들었습니다. 테스트 프로젝트는 다른 프로젝트와 다른 스타일로 표시되며, 맵의 요소에 대한 아이콘이 더 적절한 버전으로 업데이트되었습니다.  
   
- ![선택한 항목을 새 코드 맵에 표시](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
+ ![선택한 항목을 새 코드 맵에 표시](~/docs/ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
   
  기타 기능 향상은 다음과 같습니다.  
   

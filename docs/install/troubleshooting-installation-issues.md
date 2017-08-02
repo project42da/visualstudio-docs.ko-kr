@@ -65,9 +65,9 @@ Visual Studio 설치 관리자 부트스트래퍼는 나머지 Visual Studio 설
 
 1. [Microsoft Visual Studio 및 .NET Framework 로그 수집 도구](https://www.microsoft.com/en-us/download/details.aspx?id=12493)를 다운로드하고 실행합니다. 이 도구는 Visual Studio, .NET Framework 및 SQL Server 설치에 대한 사용 가능한 설치 로그를 수집하여 컴파일합니다.
 2. Visual Studio 설치 관리자를 열고 **문제 보고**를 클릭하여 Visual Studio 피드백 도구를 엽니다.
-![[피드백 제공] 단추를 탭하여 피드백 도구를 열 수 있음](media/report-a-problem.png)
+![[피드백 제공] 단추를 탭하여 피드백 도구를 열 수 있음](~/docs/install/media/report-a-problem.png)
 3. 문제 보고서의 제목을 지정하고 관련 세부 정보를 제공합니다. **다음**을 클릭하여 **첨부 파일** 섹션으로 이동하고 생성된 로그 파일을 첨부합니다. 일반적으로 파일은 %TEMP%\vslogs.zip에 있습니다.
-![[새로운 문제 보고] 단추를 탭하여 단계 진행](media/problem-report-details.png)
+![[새로운 문제 보고] 단추를 탭하여 단계 진행](~/docs/install/media/problem-report-details.png)
 4. **다음**을 클릭하여 문제 보고서를 검토하고 **제출**을 클릭합니다.
 
 ### <a name="step-5---run-installcleanupexe-to-clean-up-installation-files"></a>5단계 - InstallCleanup.exe를 실행하여 설치 파일 정리

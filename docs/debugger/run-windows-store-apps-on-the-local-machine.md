@@ -23,7 +23,7 @@ caps.handback.revision: 15
 # 로컬 컴퓨터에서 Windows 스토어 앱 실행
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows에만 적용](../debugger/media/windows_only_content.png "windows\_only\_content")  
+![Windows에만 적용](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Windows 스토어 앱에 대한 성능 분석을 디버깅, 테스트 또는 실행하려면 Visual Studio를 호스트하는 동일한 컴퓨터에서 앱을 실행하면 됩니다.  장치의 디스플레이에서 터치 기능을 사용할 수 있으면 앱의 전체 기능을 실행할 수 있습니다. 그렇지 않으면 마우스 및 키보드 제스처만 사용할 수 있습니다.  
   

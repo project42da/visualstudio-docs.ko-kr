@@ -40,11 +40,11 @@ Visual Studio에서 지역화된 리소스(각 문화권에 적절한 문자열 
   
  리소스를 저장하는 가장 좋은 방법은 가급적 일반화하는 것입니다. 즉, 지역화된 문자열, 이미지 등을 가능하면 특정 문화권이 아니라 중립 문화권에 대한 리소스 파일에 저장합니다. 예를 들어 프랑스어(벨기에)("fr-BE") 문화권에 대한 리소스가 있고 그 바로 위의 리소스가 영어로 된 대체 리소스인 경우 다른 사람이 프랑스어(캐나다) 문화권용으로 구성된 시스템에서 사용자의 응용 프로그램을 사용하려고 하면 문제가 발생할 수 있습니다. 즉, 시스템에서는 "fr-CA"에 대한 위성 어셈블리를 찾다가 못 찾은 경우 프랑스 리소스를 로드하는 대신 대체 리소스(영어)가 포함된 주 어셈블리를 로드합니다. 다음 그림에서는 이 바람직하지 않은 시나리오를 보여 줍니다.  
   
- ![특정 리소스 전용](../ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
+ ![특정 리소스 전용](~/docs/ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
   
  가능한 한 많은 리소스를 "fr" 문화권에 대한 중립 리소스 파일에 두는 권장 사례를 따를 경우 프랑스어(캐나다) 사용자는 "fr-BE" 문화권용으로 표시된 리소스를 볼 수 없지만 문자열을 프랑스어로 표시할 수는 있습니다. 다음 상황에서는 이 기본 시나리오를 보여 줍니다.  
   
- ![NeutralSpecificResources 그래픽](../ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
+ ![NeutralSpecificResources 그래픽](~/docs/ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
   
 ## <a name="see-also"></a>참고 항목  
  [지역화를 위한 중립 리소스 언어](../ide/neutral-resources-languages-for-localization.md)   

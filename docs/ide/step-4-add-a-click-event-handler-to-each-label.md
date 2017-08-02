@@ -36,7 +36,7 @@ caps.handback.revision: 20
   
 3.  **속성** 창의 도구 모음에서 **이벤트** 단추를 선택하여 **속성** 창의 **이벤트** 페이지를 표시합니다.  다음 그림과 같이 **Click** 이벤트 위치까지 아래로 스크롤한 후 상자에 label\_Click을 입력합니다.  
   
-     ![Click 이벤트가 표시된 속성 창](../ide/media/express_labelclick.png "Express\_labelClick")  
+     ![Click 이벤트가 표시된 속성 창](~/docs/ide/media/express_labelclick.png "Express\_labelClick")  
 Click 이벤트가 표시된 속성 창  
   
 4.  Enter 키를 선택합니다.  IDE에서 `label_Click()`이라는 Click 이벤트 처리기를 코드에 추가하고 폼의 각 레이블에 후크합니다.  

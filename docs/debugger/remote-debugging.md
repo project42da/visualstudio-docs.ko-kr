@@ -92,7 +92,7 @@ manager: "ghogen"
   
 6.  구성이 완료되면 원격 디버거 창이 나타납니다.  
   
-     ![RemoteDebuggerWindow](../debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")  
+     ![RemoteDebuggerWindow](~/docs/debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")  
   
  창에서 **파일 \/ 종료**를 클릭하여 원격 디버거를 중지할 수 있습니다.**시작** 메뉴 또는 명령줄에서 다시 시작할 수 있습니다.  
   

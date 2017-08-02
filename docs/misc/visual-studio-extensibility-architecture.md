@@ -23,7 +23,7 @@ manager: "douge"
 ## 확장 아키텍처  
  다음 그림과 해당 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장성 아키텍처입니다.  참고 소프트웨어 응용 프로그램의 개념이 없습니다.  대신 IDE 호스트 소프트웨어 구성 요소를 응용 프로그램 기능을 제공 하는 Vspackages를 호출 합니다.  결과적으로이 기능을 IDE에서 서비스를 공유 합니다.  Vspackages가 및 기타 Vspackages를 사용 하는 서비스를 제공 합니다.  표준 IDE 또한 광범위 한 서비스를 제공 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>, IDE 창 작업 기능을 제공 합니다.  
   
- ![환경 아키텍처 그래픽](../extensibility/internals/media/environment.png "environment")  
+ ![환경 아키텍처 그래픽](~/docs/extensibility/internals/media/environment.gif "environment")  
 Visual Studio 아키텍처의 일반화 된 보기  
   
  양방향 VSPackages 및 서비스 사이의 관계 됩니다.  VSPackages 다른 사용자가 제공 하는 서비스를 사용 하지만 또한를 사용 하 여 자체 서비스 제공할 수 있는 <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService> 인터페이스입니다.  이 서비스 기반 아키텍처는 서비스 작업을 수행 하는 관련된 인터페이스의 그룹인 Microsoft ActiveX 디자이너 구현 중 증가 합니다.  엄격한 COM 관점에서 보면 모든 인터페이스가 특정 서비스의 단일 COM 클래스에서 구현 되어야 합니다.  

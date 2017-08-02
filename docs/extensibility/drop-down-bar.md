@@ -24,7 +24,7 @@ caps.handback.revision: 12
 ## 드롭다운 도구 모음 인터페이스  
  [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)], 예를 들어, 목록에 대 한 드롭다운 도구 모음에 있는 [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] 항목 및 [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] 항목 멤버 함수, 다음 그림에 나와 있는 것 처럼.  
   
- ![드롭다운 표시줄](../extensibility/media/vsdropdown_bar.png "vsDropdown\_bar")  
+ ![드롭다운 표시줄](~/docs/extensibility/media/vsdropdown_bar.gif "vsDropdown\_bar")  
 드롭다운 도구 모음  
   
  드롭 다운 막대를 구현 하는 경우 기본 중요성의 4 개의 인터페이스입니다.  

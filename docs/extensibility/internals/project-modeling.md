@@ -49,7 +49,7 @@ Projects
   
  프로젝트 자동화 다음 다이어그램에서의 경로 다음과 같습니다.  
   
- ![Visual Studio 프로젝트 개체](../../extensibility/internals/media/projectobjects.png "ProjectObjects")  
+ ![Visual Studio 프로젝트 개체](~/docs/extensibility/internals/media/projectobjects.gif "ProjectObjects")  
 자동화 프로젝트  
   
  구현 하지 않는 경우는 `Project` 개체에서 환경 일반 계속 반환 `Project` 프로젝트 이름을 포함 하는 개체입니다.  

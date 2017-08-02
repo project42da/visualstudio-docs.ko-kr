@@ -124,7 +124,7 @@ ms.lasthandoff: 05/13/2017
   
 -   디버거를 시작합니다.  
   
-     ![디버그 메뉴의 디버깅 시작 명령](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
+     ![디버그 메뉴의 디버깅 시작 명령](~/docs/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
   
      디버거가 시작되고 코드가 실행됩니다. 콘솔 창(명령 프롬프트외 비슷한 별도의 창)이 몇 초간 나타나지만 디버거에서 실행이 중지되면 바로 닫힙니다. 텍스트를 보려면 중단점을 설정하여 프로그램 실행을 중지해야 합니다.  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 05/13/2017
   
 2.  GreetingsConsoleApp의 빌드 구성을 **디버그** 에서 **릴리스**로 변경합니다.  
   
-     ![응용 프로그램 릴리스 버전 빌드](../ide/media/c--ide_changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
+     ![응용 프로그램 릴리스 버전 빌드](~/docs/ide/media/c--ide_changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
   
 3.  솔루션을 빌드합니다.  
   

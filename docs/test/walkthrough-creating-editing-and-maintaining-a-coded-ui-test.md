@@ -71,7 +71,7 @@ ms.lasthandoff: 05/13/2017
   
 12. Checkbox 컨트롤을 선택합니다. 속성 창에서 **Name** 속성을 \<이름 없음>에서 checkBox1로 변경하고 **IsEnabled** 속성을 선택 취소합니다.  
   
-     ![간단한 WPF 응용 프로그램](../test/media/codedui_wpfapp.png "CodedUI_WPFApp")  
+     ![간단한 WPF 응용 프로그램](~/docs/test/media/codedui_wpfapp.png "CodedUI_WPFApp")  
   
 13. 단추 컨트롤을 두 번 클릭하여 Click 이벤트 처리기를 추가합니다.  
   
@@ -163,11 +163,11 @@ ms.lasthandoff: 05/13/2017
   
 8.  UIMap – 코딩된 UI 테스트 빌더에서 **기록 시작**을 선택합니다.  
   
-     ![기록 시작](../test/media/cuit_builder_record.png "CUIT_Builder_Record")  
+     ![기록 시작](~/docs/test/media/cuit_builder_record.png "CUIT_Builder_Record")  
   
      필요한 경우, 예를 들어 들어오는 메일을 처리해야 하는 경우 기록을 일시 중지할 수 있습니다.  
   
-     ![기록 일시 중지](../test/media/cuit_.png "CUIT_")  
+     ![기록 일시 중지](~/docs/test/media/cuit_.png "CUIT_")  
   
     > [!WARNING]
     >  데스크톱에서 수행된 모든 작업이 기록됩니다. 기록에 중요한 데이터가 포함될 수 있는 작업을 수행하는 경우에는 기록을 일시 중지합니다.  
@@ -385,11 +385,11 @@ ms.lasthandoff: 05/13/2017
 ## <a name="external-resources"></a>외부 리소스  
   
 ### <a name="videos"></a>비디오  
- ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
+ ![비디오 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
   
- ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
+ ![비디오 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
   
- ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
+ ![비디오 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
   
 ### <a name="hands-on-lab"></a>실습  
  [MSDN 가상 랩: Visual Studio 2010을 사용하여 코딩된 UI 테스트 만들기 소개](http://go.microsoft.com/fwlink/?LinkID=22508)  

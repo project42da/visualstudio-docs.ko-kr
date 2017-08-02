@@ -66,7 +66,7 @@ NuGet을 업데이트 하려면 Microsoft.VSSDK.BuildTools 참조 합니다.
 * Microsoft.VSSDK.BuildTools (최신 버전)를 선택 합니다.
 * 키를 눌러 **업데이트**합니다.
 
-![VSSDK 빌드 도구](media/vssdk-build-tools.png)
+![VSSDK 빌드 도구](~/docs/extensibility/media/vssdk-build-tools.png)
 
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>VSIX 확장 매니페스트를 변경
 
@@ -103,18 +103,18 @@ NuGet을 업데이트 하려면 Microsoft.VSSDK.BuildTools 참조 합니다.
 * [디자인] source.extension.vsixmanifest 파일을 엽니다.
 * 선택 **필수 구성 요소** 탭 및 키를 눌러 **새로** 단추입니다.
 
-  ![VSIX 매니페스트 디자이너](media/vsix-manifest-designer.png)
+  ![VSIX 매니페스트 디자이너](~/docs/extensibility/media/vsix-manifest-designer.png)
 
 * **추가 새 필수 구성 요소** 창이 열립니다.
 
-  ![vsix 필수 구성 요소를 추가 합니다.](media/add-vsix-prerequisite.png)
+  ![vsix 필수 구성 요소를 추가 합니다.](~/docs/extensibility/media/add-vsix-prerequisite.png)
 
 * 에 대 한 드롭다운 목록에서 클릭 **이름** 하 고 원하는 필수 구성 요소를 선택 합니다.
 * 필요한 경우에 버전을 업데이트 합니다.
 
   >참고: 버전 필드는 최대 범위에 걸쳐 (포함 하지 않음)와 현재 설치 된 구성 요소를 미리 채울 수는 구성 요소의 다음 주 버전입니다.
 
-  ![roslyn 필수 구성 요소를 추가 합니다.](media/add-roslyn-prerequisite.png)
+  ![roslyn 필수 구성 요소를 추가 합니다.](~/docs/extensibility/media/add-roslyn-prerequisite.png)
 
 * Press **OK**.
 
@@ -133,7 +133,7 @@ Visual Studio의 실험적 인스턴스에서 확장 프로그램을 디버깅 �
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe
 ```
 
-![시작 외부 프로그램](media/start-external-program.png)
+![시작 외부 프로그램](~/docs/extensibility/media/start-external-program.png)
 
 >**참고:** 디버그 시작 작업은 일반적으로에 저장 되는. csproj.user 파일입니다. 이 파일은 일반적으로.gitignore 파일에 포함 되어 있으며, 따라서 일반적으로 함께 저장 되지 않습니다 소스 제어 하고자 하는 경우 다른 프로젝트 파일. 따라서 솔루션에 소스 제어에서 새가 가져오는 경우 되었을 프로젝트 시작 작업에 대 한 설정 값을 갖습니다. 새 VSIX 프로젝트를 Visual Studio 2017를 사용 하 여 만든 것을. 현재 Visual Studio 설치 디렉터리를 가리키는 기본값을 사용 하 여 만든 csproj.user 파일입니다. 그러나 VSIX v2 확장을 마이그레이션하는 경우 가능성이 하에서. csproj.user 파일에는 이전 Visual Studio 버전의 설치 디렉터리에 대 한 참조가 포함 됩니다. 값을 설정 **디버그** > **시작 작업** 확장 프로그램을 디버깅 하려고 할 때 실행 하는 올바른 Visual Studio 실험적 인스턴스를 허용 합니다.
 
@@ -158,7 +158,7 @@ VSIX 필요한 모든 필수 구성 요소가 설치 된 컴퓨터에서 성공�
 
 * Visual Studio 2017에
 
-![Visual Studio 2017에서 VSIX 설치 관리자](media/vsixinstaller-vs-2017.png)
+![Visual Studio 2017에서 VSIX 설치 관리자](~/docs/extensibility/media/vsixinstaller-vs-2017.png)
 
 * 선택 사항: 이전 버전의 Visual Studio를 확인 합니다.
   * 이전 버전과 호환성을 증명합니다.
@@ -169,7 +169,7 @@ VSIX 필요한 모든 필수 구성 요소가 설치 된 컴퓨터에서 성공�
 
 Visual Studio 최근에 열려 있으면 다음과 같은 대화 상자가 나타날 수 있습니다.
 
-![프로세스를 실행 하는 vs](media/vs-running-processes.png)
+![프로세스를 실행 하는 vs](~/docs/extensibility/media/vs-running-processes.png)
 
 프로세스 종료를 표시 될 때까지 기다리거나 작업을 수동으로 종료 합니다. 나열 된 이름 또는 PID 괄호 안에 나열 된 프로세스를 찾을 수 있습니다.
 
@@ -181,7 +181,7 @@ Visual Studio 최근에 열려 있으면 다음과 같은 대화 상자가 나�
 * 설치가 누락 된 구성 요소/s를 식별 하는 VSIXInstaller 시 필수 구성 요소로 나열 하는지 확인 합니다.
 * 참고: 모든 필수 구성 요소 확장으로 설치 해야 할 경우 권한 상승이 필요한 됩니다 있습니다.
 
-![vsixinstaller 누락 된 필수 구성 요소](media/vsixinstaller-missing-prerequisite.png)
+![vsixinstaller 누락 된 필수 구성 요소](~/docs/extensibility/media/vsixinstaller-missing-prerequisite.png)
 
 ## <a name="deciding-on-components"></a>구성 요소 결정
 

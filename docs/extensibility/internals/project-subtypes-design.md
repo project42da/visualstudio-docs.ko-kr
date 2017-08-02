@@ -52,7 +52,7 @@ caps.handback.revision: 32
   
  다음 그림에서는 도식을 다중 프로젝트 하위 집계를 보여 줍니다.  
   
- ![Visual Studio 다중 수준 projectflavor 그래픽](../../extensibility/internals/media/vs_multilevelprojectflavor.gif "VS\_MultilevelProjectFlavor")  
+ ![Visual Studio 다중 수준 projectflavor 그래픽](~/docs/extensibility/internals/media/vs_multilevelprojectflavor.gif "VS\_MultilevelProjectFlavor")  
 여러 수준의 프로젝트 하위 유형  
   
  다중 프로젝트 하위 집계 프로젝트 하위 형식으로 집계 하 고가 고급 프로젝트 하위 형식에 따라 추가로 집계는 기본 프로젝트를 세 가지 수준에서 구성 됩니다.  그림 일부 지원의 일부로 서 제공 하는 인터페이스에 중점을 두고는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 하위 형식 아키텍처 프로젝트입니다.  
@@ -62,7 +62,7 @@ caps.handback.revision: 32
   
  다음 그림은 프로젝트 구성 찾아보기 개체 자동화 extender 구현에 프로젝트 하위 형식에서 사용 되는 기본 프로젝트 시스템을 확장할 수 특히, 주로 설명 합니다.  
   
- ![VS 프로젝트 버전 자동 Extender 그래픽](../../extensibility/internals/media/vs_projectflavorautoextender.png "VS\_ProjectFlavorAutoExtender")  
+ ![VS 프로젝트 버전 자동 Extender 그래픽](~/docs/extensibility/internals/media/vs_projectflavorautoextender.gif "VS\_ProjectFlavorAutoExtender")  
 프로젝트 하위 자동화 Extender입니다.  
   
  하위 프로젝트의 자동화 개체 모델을 확장 하 여 기본 프로젝트 시스템 추가로 확장할 수 있습니다.  이러한 DTE 자동화 개체의 일부로 정의 되 고 프로젝트 개체를 확장 하는 데 사용 됩니다는 `ProjectItem` 개체 및 해당 `Configuration` 개체입니다.  자세한 내용은 [기본 프로젝트의 개체 모델 확장](../../extensibility/internals/extending-the-object-model-of-the-base-project.md)을 참조하십시오.  

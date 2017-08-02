@@ -58,7 +58,7 @@ Visual Studio **네트워크** 진단 도구는 [Windows.Web.Http API](https://m
   
  보고서 창의 모습은 다음과 같아야 합니다.  
   
- ![네트워크 창](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
+ ![네트워크 창](~/docs/profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
   
 ## <a name="analyzing-data"></a>데이터 분석  
  앱이 실행되는 동안 또는 앱을 닫은 후에도, 요약 보기에 표시된 네트워크 작업 중에서 선택하여 캡처된 HTTP 트래픽을 분석할 수 있습니다.  

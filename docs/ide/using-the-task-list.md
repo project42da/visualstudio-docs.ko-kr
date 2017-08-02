@@ -97,7 +97,7 @@ caps.handback.revision: 29
   
      [옵션 대화 상자, 환경, 작업 목록](../ide/reference/task-list-environment-options-dialog-box.md)가 표시됩니다.  
   
-     ![Visual Studio 작업 목록](../ide/media/vs2015_task_list_options.png "vs2015\_task\_list\_options")  
+     ![Visual Studio 작업 목록](~/docs/ide/media/vs2015_task_list_options.png "vs2015\_task\_list\_options")  
   
 3.  **토큰** 범주에서 **이름** 텍스트 상자에 토큰 이름\(예: “BUG”\)을 입력합니다.  
   

@@ -31,7 +31,7 @@ caps.handback.revision: 13
   
  기본 언어 서비스는 다음 그림에 나와 있습니다.  
   
- ![언어 서비스 모델 그래픽](../extensibility/media/vslanguageservicemodel.png "vsLanguageServiceModel")  
+ ![언어 서비스 모델 그래픽](~/docs/extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
 코어 편집기와 언어 서비스 개체  
   
  코어 편집기 문서의 데이터 개체에서 텍스트 버퍼 라고 하며 표시 됩니다 있는 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> 개체입니다.  문서 보기 개체 텍스트 뷰에서 호출 되 고 표시 됩니다 있는 <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> 개체입니다.  이러한 두 개체는 서로 코어 편집기의 통합 된 보기를 제공 하는 언어 서비스를 통해 작동 합니다.  텍스트 버퍼 및 텍스트 보기 표시 합니다 문서 창에서 코드 창이 호출 됩니다.  코드 창의 문서 코드 창 관리자가 관리 합니다.  
