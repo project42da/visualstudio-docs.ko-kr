@@ -43,7 +43,7 @@ caps.handback.revision: 14
   
  다음은 구현 하는 언어 서비스에 대 한 컨텍스트를 제공 하는 어떻게 하는 방법을 보여 줍니다 `IVsLanguageContextProvider`.  
   
- ![LangServiceImplementation2 그래픽](../extensibility/media/vslanguageservice2.png "vsLanguageService2")  
+ ![LangServiceImplementation2 그래픽](~/extensibility/media/vslanguageservice2.gif "vsLanguageService2")  
 컨텍스트는 언어 서비스에 대 한  
   
  다이어그램에서 볼 수 있듯이 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 핵심 텍스트 편집기에 연결 하는 컨텍스트 모음에 있습니다.  이 컨텍스트 모음에 세 가지 별도 하위 컨텍스트로 가방 가리킵니다: 텍스트 표식, 기본 편집기 및 언어 서비스입니다.  언어 서비스 및 텍스트 마커 하위 컨텍스트로 가방 특성 및 키워드의 언어 서비스에 대 한 경우를 포함를 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider> 인터페이스를 구현 및 텍스트 마커 경우는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider> 인터페이스가 구현 됩니다.  이러한 인터페이스를 구현 하지 않는 경우 다음 편집기 컨텍스트 키워드 기본 편집기 하위 컨텍스트로 가방에서 커서 위치를 제공 합니다.  

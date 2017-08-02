@@ -36,7 +36,7 @@ caps.handback.revision: 14
   
 2.  **솔루션 탐색기**에서 SharePoint 프로젝트 노드의 항목을 클릭합니다.  
   
-3.  **속성** 창에서 **프로젝트 출력 참조** 속성을 선택한 다음 그 옆의 줄임표\(![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.png "ASP.NET 모바일 디자이너 줄임표")\) 버튼을 선택합니다.  
+3.  **속성** 창에서 **프로젝트 출력 참조** 속성을 선택한 다음 그 옆의 줄임표\(![ASP.NET 모바일 디자이너 줄임표](~/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\) 버튼을 선택합니다.  
   
 4.  **프로젝트 출력 참조** 대화 상자에서 **추가** 버튼을 선택합니다.  
   

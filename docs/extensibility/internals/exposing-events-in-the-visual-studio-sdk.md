@@ -61,7 +61,7 @@ caps.handback.revision: 16
   
  이벤트 개체는 자동화 소비자에 의해 요청 된 경우 메서드를 지 원하는 VSPackage 모든 이벤트에 대 한 루트 개체를 만듭니다. 환경에서 적절 한 호출 `get_` 이 개체 메서드를 호출 합니다. 예를 들어 경우 `DTE.Events.AutomationProjectsEvents` 호출 되는 `get_AutomationProjectsEvents` 루트 개체에는 메서드가 호출 됩니다.  
   
- ![Visual Studio 프로젝트 이벤트](../../extensibility/internals/media/projectevents.png "ProjectEvents")  
+ ![Visual Studio 프로젝트 이벤트](~/extensibility/internals/media/projectevents.gif "ProjectEvents")  
 이벤트에 대 한 자동화 모델  
   
  클래스 `CProjectEventsContainer` BscProjectsEvents에 대 한 소스 개체를 나타내는 반면 `CProjectItemsEventsContainer` BscProjectItemsEvents에 대 한 원본 개체를 나타냅니다.  

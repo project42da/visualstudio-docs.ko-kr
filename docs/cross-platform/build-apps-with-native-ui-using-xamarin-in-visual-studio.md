@@ -38,7 +38,7 @@ ms.lasthandoff: 05/13/2017
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio에서 Xamarin을 사용하여 네이티브 UI로 앱 빌드
 [설정 및 설치](../cross-platform/setup-and-install.md) 및 [Xamarin 환경 확인](../cross-platform/verify-your-xamarin-environment.md)의 단계를 완료했으면 이 연습 과정을 통해 네이티브 UI 레이어로 기본 Xamarin 앱을 빌드하는 방법을 확인합니다(아래 참조). 네이티브 UI에서는 공유 코드가 PCL(이식 가능한 클래스 라이브러리)에 상주하며 개별 플랫폼 프로젝트가 UI 정의를 포함합니다.  
   
- ![Android 및 Windows Phone의 Xamarin 앱](../cross-platform/media/cross-plat-xamarin-build-1.png "Cross-Plat Xamarin Build 1")  
+ ![Android 및 Windows Phone의 Xamarin 앱](~/cross-platform/media/cross-plat-xamarin-build-1.png "Cross-Plat Xamarin Build 1")  
   
  앱을 빌드하려면 다음 작업을 수행합니다.  
   
@@ -468,7 +468,7 @@ ms.lasthandoff: 05/13/2017
   
 13. 파일을 저장하고 **디자인** 보기로 전환합니다. UI가 다음과 같아야 합니다.  
   
-     ![Android 앱용 UI](../cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
+     ![Android 앱용 UI](~/cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
   
 14. **MainActivity.cs**를 열고 *OnCreate* 메서드에서 앞서 제거된 기본 단추를 참조하는 줄을 삭제합니다. 완료했을 때 코드는 다음과 같습니다.  
   
@@ -597,13 +597,13 @@ ms.lasthandoff: 05/13/2017
   
  디자인 보기에서 UI가 다음과 같아야 합니다.  
   
- ![Windows Phone 앱 UI](../cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
+ ![Windows Phone 앱 UI](~/cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
   
 ### <a name="consume-your-shared-code"></a>공유 코드 사용  
   
 1.  디자이너에서 **날씨 검색** 단추를 선택합니다.  
   
-2.  **속성** 창에서 이벤트 처리기 단추(![Visual Studio 이벤트 처리기 아이콘](../cross-platform/media/blend_vs_eventhandlers_icon.png "blend_VS_EventHandlers_icon"))를 선택합니다.  
+2.  **속성** 창에서 이벤트 처리기 단추(![Visual Studio 이벤트 처리기 아이콘](~/cross-platform/media/blend_vs_eventhandlers_icon.png "blend_VS_EventHandlers_icon"))를 선택합니다.  
   
      이 아이콘은 **속성** 창의 위 모퉁이에 표시됩니다.  
   

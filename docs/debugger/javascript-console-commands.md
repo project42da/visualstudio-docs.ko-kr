@@ -28,7 +28,7 @@ manager: "ghogen"
 # JavaScript Console commands
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  명령을 사용하여 Visual Studio의 JavaScript 콘솔 창에서 메시지를 보내고 다른 작업을 수행할 수 있습니다. 해당 창을 사용 하는 방법을 보여 주는 예제를 보려면 [퀵 스타트: JavaScript 디버깅](../debugger/quickstart-debug-javascript-using-the-console.md)합니다. 이 항목의 내용은 Windows 스토어 앱, Windows Phone 스토어 앱 및 Visual Studio Tools for Apache Cordova를 사용하여 만든 앱에 적용됩니다. Cordova 앱에서 지원되는 콘솔 명령에 대한 자세한 내용은 [Debug Your App](../Topic/Debug%20Your%20App%20Built%20with%20Visual%20Studio%20Tools%20for%20Apache%20Cordova.md)를 참조하세요. Internet Explorer F12 도구에서 콘솔을 사용하는 방법에 대한 자세한 내용은 [이 항목](http://msdn.microsoft.com/library/ie/dn255006.aspx)을 참조하세요.  
   

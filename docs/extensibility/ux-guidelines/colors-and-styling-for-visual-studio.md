@@ -301,7 +301,7 @@ UI, 색 집합을 제한이 적용 될 때 *"일반" 테마에 있던 것 미묘
   
 파란색 테마의 편집기 화면의 예:  
   
-![파란색 테마의 편집기](../../extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />파란색 테마의 편집기
+![파란색 테마의 편집기](~/extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />파란색 테마의 편집기
   
 ![고대비 #1 테마의 편집기](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303-d_EditorHC1")<br />고대비 #1 테마의 편집기
   
@@ -725,11 +725,11 @@ Visual Studio 호스트 트리거 플러그 인 테마 변경 내용을 때 최�
   
 **색 테마:**  
   
-![색 테마 변경](../../extensibility/ux-guidelines/media/0305-a_colortheme.png "0305-a_ColorTheme")<br />색 테마 변경  
+![색 테마 변경](~/extensibility/ux-guidelines/media/0305-a_colortheme.png "0305-a_ColorTheme")<br />색 테마 변경  
   
 **환경 테마:**  
   
-![환경 테마 변경](../../extensibility/ux-guidelines/media/0305-b_environmenttheme.png "0305-b_EnvironmentTheme")<br />환경 테마 변경  
+![환경 테마 변경](~/extensibility/ux-guidelines/media/0305-b_environmenttheme.png "0305-b_EnvironmentTheme")<br />환경 테마 변경  
   
 **운영 체제 테마** (경우에 변경 하 고 고대비에서):  
   

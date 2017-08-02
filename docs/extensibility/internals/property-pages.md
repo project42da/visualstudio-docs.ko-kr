@@ -32,7 +32,7 @@ caps.handback.revision: 12
   
  두 가지 유형의  **프로젝트속성 페이지** 대화 상자에서 사용할 수 있는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  Visual Basic 프로젝트의 첫 번째에서 예를 들어, 속성 페이지 필드 형식을 사용 하 여 다음 스크린샷에서 볼 수 있는 것 처럼 표시 됩니다.  둘째, 나중에이 섹션에서이 속성 페이지 호스트 속성 표의 속성 창에서 찾을 수와 마찬가지로 표시.  
   
- ![Visual Basic 속성 페이지](../../extensibility/internals/media/vsvbproppages.png "vsVBPropPages")  
+ ![Visual Basic 속성 페이지](~/extensibility/internals/media/vsvbproppages.gif "vsVBPropPages")  
 프로젝트 속성 페이지 대화 상자와 필드 형식 및 트리 구조  
   
  속성 페이지 대화 상자에서 트리 구조를 사용 하 여 기본 제공 되지 않습니다 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>.  에 의해 전달 된 수준 이름 기반 환경에서의 <xref:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages> 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage> 인터페이스를 빌드할 때.  
@@ -57,7 +57,7 @@ caps.handback.revision: 12
   
  속성 페이지의 두 번째 종류 샘플 호스트에서 다음 스크린 샷에서 처럼 속성 모눈의 폼을 표시.  
   
- ![VC 속성 페이지](../../extensibility/internals/media/vsvcproppages.gif "vsVCPropPages")  
+ ![VC 속성 페이지](~/extensibility/internals/media/vsvcproppages.gif "vsVCPropPages")  
 속성 표 형태 창에 속성 페이지 대화 상자  
   
  인터페이스 `IVSMDPropertyBrowser` 및 `IVSMDPropertyGrid` \(vsmanaged.h에서 선언\) 만들고 속성 표 창 또는 대화 상자를 채우는 데 사용 됩니다.  

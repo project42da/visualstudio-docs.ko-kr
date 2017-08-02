@@ -61,7 +61,7 @@ ms.lasthandoff: 05/26/2017
 
  가장 중요한 변화는 Visual Studio를 설치할 때 볼 수 있는 새로운 설치 환경입니다. **작업** 탭에는 일반 프레임워크, 언어 및 플랫폼을 나타내도록 그룹화된 설치 옵션이 표시됩니다. .NET 데스크톱 개발에서 Windows, Linux 및 iOS의 C++ 응용 프로그램 개발에 이르기까지 모든 작업을 포함합니다.   
 
- ![Visual Studio 2017 설치 대화 상자](../install/media/vs2017-workloads.PNG "Visual Studio 2017 설치 화면")
+ ![Visual Studio 2017 설치 대화 상자](~/install/media/vs2017-workloads.PNG "Visual Studio 2017 설치 화면")
 
 필요한 작업을 선택하고, 필요할 때 변경합니다.
 
@@ -75,12 +75,12 @@ ms.lasthandoff: 05/26/2017
 ### <a name="decrease-solution-load-time"></a>솔루션 로드 시간 감소
 많은 수의 프로젝트가 포함된 솔루션에서 작업한다고 해서 한 번에 모든 파일이나 프로젝트로 작업해야 하는 것은 아닙니다. 이제 Visual Studio에서 모든 프로젝트가 로드되기를 기다리지 않고 편집 및 디버그할 수 있습니다. 관리되는 프로젝트에서 이 작업을 시도해보려면 도구-> 옵션-> 프로젝트 및 솔루션에서 **경량 솔루션 로드**를 켭니다.
 
-  ![Visual Studio 2017의 옵션 대화 상자](../ide/media/vs2017ide-LightweightSolutionLoad.PNG "Visual Studio 2017 - 옵션 대화 상자 - 경량 솔루션 로드")
+  ![Visual Studio 2017의 옵션 대화 상자](~/ide/media/vs2017ide-LightweightSolutionLoad.PNG "Visual Studio 2017 - 옵션 대화 상자 - 경량 솔루션 로드")
 
 ### <a name="faster-on-demand-loading-of-extensions"></a>요청 시 더 빠르게 확장 로드
 Visual Studio는 IDE 시작이 아닌 요청 시에 로드되도록 확장을 전환하고 있습니다(타사 확장과도 작업). 어떤 확장이 시작, 솔루션 로드 및 입력 성능에 영향을 주는지 궁금하세요? 이 정보는 도움말-> Visual Studio 성능 관리에서 확인할 수 있습니다.
 
-  ![Visual Studio 2017의 옵션 대화 상자](../ide/media/vs2017ide-manage-vs-perf.png "Visual Studio 도움말 대화 상자 - 성능 관리")
+  ![Visual Studio 2017의 옵션 대화 상자](~/ide/media/vs2017ide-manage-vs-perf.png "Visual Studio 도움말 대화 상자 - 성능 관리")
 
 ## <a name="productivity-improvements"></a>생산성 향상
 
@@ -94,18 +94,18 @@ Visual Studio에 로그인할 때 즐겨찾는 확장으로 각 개발 환경을
 
 Visual Studio의 확장 목록을 보려면 도구 > 확장 및 업데이트를 클릭한 다음 로밍 중인 확장 관리자를 클릭합니다.
 
-![Visual Studio 2017 - 확장 및 업데이트 대화 상자](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - 도구 > 확장 및 업데이트 대화 상자")
+![Visual Studio 2017 - 확장 및 업데이트 대화 상자](~/ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - 도구 > 확장 및 업데이트 대화 상자")
 
 로밍 중인 확장 관리자는 설치하는 모든 확장을 추적하지만 로밍 목록에 추가할 확장을 선택할 수 있습니다.
 
-![Visual Studio 2017 - 확장 및 업데이트 대화 상자](../ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - 로밍 중인 확장 관리자")
+![Visual Studio 2017 - 확장 및 업데이트 대화 상자](~/ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - 로밍 중인 확장 관리자")
 
 로밍 중인 확장 관리자를 사용하는 경우 3개의 아이콘 형식이 목록에 표시됩니다.
-* ![로밍 아이콘](../ide/media/vs2017ide-roamedicon.png "로밍 아이콘") ***로밍***: 이 로밍 목록에 포함되어 있지만, 컴퓨터에 설치되지 않은 확장입니다.
+* ![로밍 아이콘](~/ide/media/vs2017ide-roamedicon.png "로밍 아이콘") ***로밍***: 이 로밍 목록에 포함되어 있지만, 컴퓨터에 설치되지 않은 확장입니다.
   **다운로드** 단추를 사용하여 이러한 확장을 설치할 수 있습니다.
-* ![로밍 및 설치 아이콘](../ide/media/vs2017ide-roamedinstalledicon.png "로밍 및 설치 아이콘") ***로밍 및 설치***: 이 로밍 목록에 포함되어 있고, 개발 환경에 설치된 모든 확장입니다.
+* ![로밍 및 설치 아이콘](~/ide/media/vs2017ide-roamedinstalledicon.png "로밍 및 설치 아이콘") ***로밍 및 설치***: 이 로밍 목록에 포함되어 있고, 개발 환경에 설치된 모든 확장입니다.
   로밍하지 않도록 결정하는 경우 **로밍 중지** 단추를 사용하여 이러한 확장을 제거할 수 있습니다.
-* ![설치 아이콘](../ide/media/vs2017ide-installedicon.png "설치 아이콘") ***설치***: 이 환경에 설치되어 있지만 로밍 목록에 포함되지 않은 모든 확장입니다.
+* ![설치 아이콘](~/ide/media/vs2017ide-installedicon.png "설치 아이콘") ***설치***: 이 환경에 설치되어 있지만 로밍 목록에 포함되지 않은 모든 확장입니다.
   **로밍 시작** 단추를 사용하여 로밍 목록에 확장을 추가할 수 있습니다.
 
 로그인한 상태에서 다운로드하는 모든 확장은 **로밍 및 설치**로 목록에 추가되며, 모든 컴퓨터에서 액세스할 수 있는 로밍 목록의 일부가 됩니다.
@@ -116,13 +116,13 @@ Visual Studio의 확장 목록을 보려면 도구 > 확장 및 업데이트를 
 
 오류 목록에 오류가 표시되고, 텍스트 편집기의 물결선은 정확한 위반 위치를 보여 줍니다. 이제 원치 않는 종속성이 늘어날 가능성이 줄었습니다.
 
-![라이브 아키텍처 유효성 검사](../ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "라이브 아키텍처 종속성 유효성 검사")
+![라이브 아키텍처 유효성 검사](~/ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "라이브 아키텍처 종속성 유효성 검사")
 
 #### <a name="live-unit-testing"></a>Live Unit Testing:
 
 Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 동안 편집기에 라이브 단위 테스트 결과와 코드 검사를 제공합니다. .NET Framework용 C# 및 Visual Basic 프로젝트에서 작동하고, MSTest, xUnit, NUnit의 세 가지 테스트 프레임워크를 지원합니다.
 
-![라이브 단위 테스트](../ide/media/lut-codewindow.png "Visual Studio Enterprise 버전에 있는 새 라이브 단위 테스트 기능의 예")
+![라이브 단위 테스트](~/ide/media/lut-codewindow.png "Visual Studio Enterprise 버전에 있는 새 라이브 단위 테스트 기능의 예")
 
 자세한 내용은 [Visual Studio 2017 Enterprise의 Live Unit Testing](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/) 블로그 게시물을 참조하세요.
 
@@ -143,12 +143,12 @@ Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
 #### <a name="interact-with-git"></a>Git과 상호 작용:
 Visual Studio에서 프로젝트로 작업할 때 코드를 설정하고 빠르게 커밋하여 Git 서비스에 게시할 수 있습니다. 또한 IDE의 오른쪽 아래 모서리에 있는 단추의 메뉴 클릭을 사용하여 Git 리포지토리를 관리할 수도 있습니다.
 
-![Visual Studio 2017과 Git 대화 상자의 상호 작용](../ide/media/vsIDE-GitInteraction.png "Visual Studio IDE의 Git 도구")
+![Visual Studio 2017과 Git 대화 상자의 상호 작용](~/ide/media/vsIDE-GitInteraction.png "Visual Studio IDE의 Git 도구")
 
 #### <a name="view-and-navigate-code-with-structure-visualizer"></a>구조 시각화 도우미를 사용하여 코드 보기 및 탐색:
 구조 시각화 도우미는 코드에 구조 안내선(들여쓰기 안내선이라고도 함)을 그립니다. 이 안내선을 사용하면 언제든지 스크롤하지 않고도 어떤 코드 블록을 시각화하고 검색할 수 있습니다. 선 위로 마우스를 가리키면 해당 블록과 그 부모를 열어서 볼 수 있는 도구 설명이 표시됩니다. TextMate 문법 검사뿐만 아니라 C#, Visual Basic 및 XAML을 통해 지원되는 모든 언어에서 사용할 수 있습니다.
 
-![Visual Studio 2017 구조 시각화 도우미](../ide/media/vsIDE-StructureVisualizer.png "Visual Studio의 구조 시각화 도우미")
+![Visual Studio 2017 구조 시각화 도우미](~/ide/media/vsIDE-StructureVisualizer.png "Visual Studio의 구조 시각화 도우미")
 
 #### <a name="experience-improved-navigation-controls"></a>향상된 컨트롤 탐색 환경:
 A에서 B로 이동하는 데 도움이 되는 탐색 환경을 새로 고쳐 자신감 있게 더욱 집중할 수 있게 했습니다.
@@ -157,11 +157,11 @@ A에서 B로 이동하는 데 도움이 되는 탐색 환경을 새로 고쳐 �
 
 * **모두로 이동**(Ctrl+T 또는 Ctrl+,) &ndash; 모든 파일/형식/멤버/기호 선언으로 직접 이동합니다. 결과 목록을 필터링하거나 쿼리 구문을 사용할 수 있습니다(예: 파일의 경우 “f searchTerm”, 형식의 경우 “t searchTerm”).
 
- ![향상된 모두로 이동](../ide/media/vs2017ide-navigation-go-to.png "향상된 모두로 이동 기능의 예")
+ ![향상된 모두로 이동](~/ide/media/vs2017ide-navigation-go-to.png "향상된 모두로 이동 기능의 예")
 
 * **모든 참조 찾기(Shift+F12)** &ndash; 구문 색 지정을 사용하면 프로젝트, 정의 및 경로의 조합에 따라 [모든 참조 찾기] 결과를 그룹화할 수 있습니다. 또한 결과를 “잠그면” 원래 결과를 잃지 않고 다른 참조를 계속 찾을 수 있습니다.
 
- ![새로운 모든 참조 찾기 도구](../ide/media/vs2017ide-find-all-references.png "새로운 모든 참조 찾기 도구의 예")
+ ![새로운 모든 참조 찾기 도구](~/ide/media/vs2017ide-find-all-references.png "새로운 모든 참조 찾기 도구의 예")
 
 * **들여쓰기 안내선** &ndash; 회색 세로 점선은 코드에서 랜드마크로 작용하여 보기의 프레임 내에서 컨텍스트를 제공합니다. 이러한 기능은 인기 있는 생산성 파워 도구에서 인식할 수 있습니다.
 
@@ -180,13 +180,13 @@ Visual Studio에서 C++ 핵심 지침을 배포하고, C++11 및 C++ 기능에 �
 
 이제 원하는 줄에서 중지하도록 중단점을 설정하지 않고도 디버깅 중에 더 쉽게 건너뛸 수 있습니다. 디버거에서 멈췄을 때 마우스가 있는 코드 줄 옆에 나타나는 아이콘을 클릭하면 됩니다. 코드가 실행되어 다음에 코드 경로에서 이 줄에 도달하면 해당 줄에서 중지됩니다.
 
-![Visual Studio 2017 디버그 - 실행하려면 클릭](../ide/media/vs2017ide-RunToClick.png "Visual Studio 디버깅 및 진단의 실행하려면 클릭")
+![Visual Studio 2017 디버그 - 실행하려면 클릭](~/ide/media/vs2017ide-RunToClick.png "Visual Studio 디버깅 및 진단의 실행하려면 클릭")
 
 #### <a name="the-new-exception-helper"></a>새 예외 도우미:
 
 새 예외 도우미를 사용하면 예외 정보를 한눈에 볼 수 있습니다. 정보는 내부 예외에 즉시 액세스할 수 있는 간결한 양식으로 제공됩니다. NullReferenceException을 진단할 때 예외 도우미 내부에서 null인 항목을 빠르게 확인할 수 있습니다.
 
-![Visual Studio의 새 예외 도우미 대화 상자](../ide/media/vs2017ide-ExceptionHelper.png "새 예외 도우미 대화 상자")
+![Visual Studio의 새 예외 도우미 대화 상자](~/ide/media/vs2017ide-ExceptionHelper.png "새 예외 도우미 대화 상자")
 
 자세한 내용은 [Using the New Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/)(Visual Studio에서 새 예외 도우미 사용) 블로그 게시물을 참조하세요.
 

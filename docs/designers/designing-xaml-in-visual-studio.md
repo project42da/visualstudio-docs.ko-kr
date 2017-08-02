@@ -48,7 +48,7 @@ Visual Studio 및 Blend for Visual Studio는 XAML 기반 Windows 데스크톱, �
   
 -   **일관된 사용자 인터페이스:** 익숙한 Visual Studio 사용자 인터페이스 컨텍스트 내에서 응용 프로그램을 디자인하여 IDE 간 전환을 더 즐겁고 생산적인 경험으로 만들 수 있습니다. Blend for Visual Studio는 콘텐츠와 사용자 인터페이스 간의 대비를 향상시켜 디자인하는 콘텐츠에 집중할 수 있게 해주는 Visual Studio 어두운 테마를 사용합니다. [XAML 디자이너를 사용하여 UI 만들기](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)를 참조하세요.  
   
-     ![Blend for Visual Studio IDE](../designers/media/blendide.png "BlendIDE")  
+     ![Blend for Visual Studio IDE](~/designers/media/blendide.png "BlendIDE")  
   
 -   **XAML IntelliSense:** 두 IDE는 모두 문 완성, 코드 주석 처리 및 형식 지정과 같은 일반적인 편집기 작업 지원, 리소스, 바인딩 및 코드 탐색을 포함하여 IntelliSense에서 기대하는 모든 일반적인 기능을 지원합니다.  
   

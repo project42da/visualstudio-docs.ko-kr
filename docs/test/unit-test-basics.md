@@ -237,7 +237,7 @@ public void My_Test ()
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> 테스트 탐색기에서 테스트 실행  
  테스트 프로젝트를 빌드하면 테스트가 테스트 탐색기에 나타납니다. 테스트 탐색기가 표시되지 않는 경우 Visual Studio 메뉴에서 **테스트** 를 선택하고 **Windows**를 선택한 다음 **테스트 탐색기**를 선택합니다.  
   
- ![단위 테스트 탐색기](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![단위 테스트 탐색기](~/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  테스트를 실행, 작성 및 다시 실행할 때 테스트 탐색기의 기본 보기에는 **실패한 테스트**, **통과한 테스트**, **건너뛴 테스트** 및 **실행하지 않은 테스트**그룹으로 결과를 표시합니다. 그룹 제목을 선택하면 해당 그룹의 모든 테스트를 표시하는 보기를 열 수 있습니다.  
   
@@ -268,7 +268,7 @@ public void My_Test ()
   
 |||  
 |-|-|  
-|![테스트 탐색기 그룹 단추](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|범주에 따라 테스트를 그룹화하려면 **그룹화 방법** 단추를 선택합니다.|  
+|![테스트 탐색기 그룹 단추](~/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|범주에 따라 테스트를 그룹화하려면 **그룹화 방법** 단추를 선택합니다.|  
   
  자세한 내용은 [테스트 탐색기를 사용하여 단위 테스트 실행](../test/run-unit-tests-with-test-explorer.md)을 참조하세요.  
   

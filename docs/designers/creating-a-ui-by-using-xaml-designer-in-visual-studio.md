@@ -82,7 +82,7 @@ Visual Studio의 XAML 디자이너는 XAML 기반 Windows 스토어, Windows Pho
   
  디자인 뷰에서 다음과 같이 화면의 왼쪽 아래 영역에서 추가 아트보드 명령을 사용할 수 있습니다.  
   
- ![디자인 뷰 명령](../designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
+ ![디자인 뷰 명령](~/designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
   
  이러한 명령은 이 도구 모음에서 사용할 수 있습니다.  
   

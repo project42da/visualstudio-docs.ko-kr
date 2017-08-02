@@ -45,7 +45,7 @@ ms.lasthandoff: 05/12/2017
  
 **R 도구 > 옵션** 메뉴를 통해 액세스하거나 **도구 > 옵션**을 통해 **R 도구**로 스크롤하여 설정에 액세스합니다.
  
-  ![R 도구의 [옵션] 대화 상자](media/options-dialog.png)
+  ![R 도구의 [옵션] 대화 상자](~/rtvs/media/options-dialog.png)
 
 다음 섹션에서는 이 페이지에서 제공되는 다양한 옵션을 설명합니다.
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/12/2017
 
 데이터 과학자의 필요에 맞게 최적화된 레이아웃으로 Visual Studio IDE를 구성하는 특수 메뉴 항목 **R 도구 > 데이터 과학 설정**도 있습니다. 특히 이 옵션을 선택하면 [대화형](interactive-repl.md), [변수 탐색기](variable-explorer.md) 및 [작업 영역](workspaces.md) 창이 열립니다.
 
-![Visual Studio의 데이터 과학자 창 레이아웃](media/installation-data-scientist-layout-result.png)
+![Visual Studio의 데이터 과학자 창 레이아웃](~/rtvs/media/installation-data-scientist-layout-result.png)
 
 > [!Important]      
 > 나중에 다른 Visual Studio 설정으로 되돌리려면 먼저 **도구 > 설정 가져오기 및 내보내기** 명령을 사용하여 **선택한 환경 설정 내보내기**를 선택하고 파일 이름을 지정합니다. 해당 설정을 복원하려면 같은 명령을 사용하고 **선택한 환경 설정 가져오기**를 선택합니다. 데이터 과학자 레이아웃을 변경한 후 나중에 다시 해당 레이아웃으로 돌아가려는 경우에도 **데이터 과학 설정** 명령을 직접 사용하는 대신 같은 명령을 사용할 수 있습니다.

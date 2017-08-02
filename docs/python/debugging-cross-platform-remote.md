@@ -119,7 +119,7 @@ Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내�
 
 1. Enter 키를 눌러 해당 컴퓨터에서 사용할 수 있는 ptvsd 프로세스의 목록을 채웁니다.
 
-    ![연결 대상 입력 및 프로세스 나열](media/remote-debugging-qualifier.png)
+    ![연결 대상 입력 및 프로세스 나열](~/python/media/remote-debugging-qualifier.png)
 
     이 목록을 채운 후 원격 컴퓨터에서 다른 프로그램을 시작하게 되는 경우 **새로 고침** 단추를 선택합니다.
 
@@ -127,7 +127,7 @@ Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내�
 
 1. 그러면 스크립트가 원격 컴퓨터에서 계속 실행되는 동안 Visual Studio에서 디버깅 모드로 전환하여 모든 일반적인 [디버깅](debugging.md) 기능을 제공합니다. 예를 들어 `if guess < number:` 줄에 중단점을 설정한 다음 원격 컴퓨터로 전환하고 다른 guess를 입력합니다. 이렇게 하고 나면 로컬 컴퓨터의 Visual Studio가 해당 중단점에서 중지하고 로컬 변수 등을 보여 줍니다.
 
-    ![적중된 중단점](media/remote-debugging-breakpoint-hit.png)
+    ![적중된 중단점](~/python/media/remote-debugging-breakpoint-hit.png)
 
 1. 디버깅을 중지하면 Visual Studio는 원격 컴퓨터에서 계속 실행되는 프로그램에서 분리됩니다. 또한 ptvsd는 계속 디버거 연결을 수신 대기하므로 언제든지 프로세스에 다시 연결할 수 있습니다.
 
@@ -183,7 +183,7 @@ Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내�
 
 1. 앞에서 설명한 대로 Visual Studio에서 연결 프로세스를 반복하고 이제 **연결 대상**(또는 **한정자**)에 대한 프로토콜로 `tcps://`를 사용합니다.
 
-    ![SSL로 원격 디버깅 전송 선택](media/remote-debugging-qualifier-ssl.png)
+    ![SSL로 원격 디버깅 전송 선택](~/python/media/remote-debugging-qualifier-ssl.png)
 
 ### <a name="warnings"></a>경고
 
@@ -191,11 +191,11 @@ Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내�
 
 1. 아래의 “원격 인증서를 신뢰할 수 없습니다.” 경고가 표시되는 경우 신뢰할 수 있는 루트 CA에 인증서를 제대로 추가하지 않았음을 의미합니다. 해당 단계를 확인하고 다시 시도합니다.
 
-    ![SSL 인증서를 신뢰할 수 있습니다. 경고](media/remote-debugging-ssl-warning.png)
+    ![SSL 인증서를 신뢰할 수 있습니다. 경고](~/python/media/remote-debugging-ssl-warning.png)
 
 1. 아래의 “원격 인증서 이름이 호스트 이름과 일치하지 않습니다.” 경고가 표시되는 경우 인증서를 만들 때 **일반 이름**으로 올바른 호스트 이름 또는 IP 주소를 사용하지 않았음을 의미합니다.
 
-    ![SSL 인증서 호스트 이름 경고](media/remote-debugging-ssl-warning2.png)
+    ![SSL 인증서 호스트 이름 경고](~/python/media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
 > 현재는 이러한 경고를 무시할 경우 Visual Studio 2017의 작동이 중단됩니다. 연결하기 전에 모든 문제를 해결해야 합니다.

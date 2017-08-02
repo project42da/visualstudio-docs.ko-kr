@@ -57,14 +57,14 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
 1. Visual Studio 설치 관리자에서 **웹 및 클라우드 > Python 개발** 워크로드를 선택합니다.
 
-    ![Visual Studio 설치 관리자의 Python 개발 작업](media/installation-python-workload.png)
+    ![Visual Studio 설치 관리자의 Python 개발 작업](~/python/media/installation-python-workload.png)
 
     > [!Note]
     > Python은 **데이터 과학 및 분석 응용 프로그램** 워크로드에도 포함됩니다.
 
 1. 설치 관리자의 오른쪽에서 포함하고자 하는 Python 인터프리터 및 기타 관련 도구를 선택합니다. 예를 들어 Python용 C++ 확장을 개발하려는 경우 **Python 네이티브 개발 도구** 옵션을 포함합니다.
 
-    ![Visual Studio 설치 관리자의 Python 개발 옵션](media/installation-python-options.png)
+    ![Visual Studio 설치 관리자의 Python 개발 옵션](~/python/media/installation-python-options.png)
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 
@@ -74,7 +74,7 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
 1. **프로그래밍 언어 > Visual Studio용 Python 도구**를 선택한 후 **다음**을 선택합니다.
 
-    ![Visual Studio 2015 설치 관리자의 PTVS 옵션](media/installation-vs2015.png)    
+    ![Visual Studio 2015 설치 관리자의 PTVS 옵션](~/python/media/installation-vs2015.png)    
 
 1. Visual Studio 설치가 완료되면 [원하는 Python 인터프리터를 설치](python-environments.md#selecting-and-installing-python-interpreters)합니다.
 

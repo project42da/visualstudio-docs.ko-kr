@@ -74,7 +74,7 @@ Visual Studio가 업데이트를 검색하는 위치 및 사용자가 업데이�
  8. 새로운 설치를 통해 레이아웃에서 직접 Visual Studio의 업데이트된 버전이 자동으로 설치됩니다.
 
 ## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Visual Studio IDE에서 알림 제어
-위의 설명 대로 Visual Studio에서는 설치가 시작된 위치(예: 네트워크 공유 또는 인터넷)를 확인하여 사용 가능한 업데이트가 있는지 확인합니다. 사용 가능한 업데이트가 있을 경우 기본적으로 Visual Studio에서는 창의 오른쪽 위에 알림 플래그를 표시하여 사용자에게 알립니다. ![업데이트 알림 플래그](media/notification-flag.png)
+위의 설명 대로 Visual Studio에서는 설치가 시작된 위치(예: 네트워크 공유 또는 인터넷)를 확인하여 사용 가능한 업데이트가 있는지 확인합니다. 사용 가능한 업데이트가 있을 경우 기본적으로 Visual Studio에서는 창의 오른쪽 위에 알림 플래그를 표시하여 사용자에게 알립니다. ![업데이트 알림 플래그](~/install/media/notification-flag.png)
 
 최종 사용자에게 업데이트에 대해 알리지 않으려는 경우(예: 중앙 소프트웨어 배포 메커니즘을 통해 업데이트를 제공하는 경우) 이러한 알림을 사용하지 않도록 설정할 수 있습니다.
 

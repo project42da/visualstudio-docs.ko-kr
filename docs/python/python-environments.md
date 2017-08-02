@@ -84,18 +84,18 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 1. **보기> Other Windows(다른 창) > Python 환경** 메뉴 명령을 선택합니다.
 1. 솔루션 탐색기에서 **Python 환경**을 마우스 오른쪽 단추로 클릭하고 **View All Python Environments(모든 Python 환경 보기)**를 선택합니다.
 
-    ![솔루션 탐색기에서 모든 환경 명령 보기](media/environments-view-all.png)
+    ![솔루션 탐색기에서 모든 환경 명령 보기](~/python/media/environments-view-all.png)
     
 두 경우 모두 Python 환경 창은 솔루션 탐색기의 형제 탭으로 나타납니다.
 
-![Python 환경 창](media/environments-default-view.png)
+![Python 환경 창](~/python/media/environments-default-view.png)
 
 위의 예에는 Python 3.4(32비트 CPython)가 IronPython 2.7 32비트 및 64비트 버전과 함께 설치되어 있습니다. 이 경우 굵게 표시된 기본 환경은 Python 3.4이며 모든 새로운 프로젝트에 사용됩니다. 목록에 환경이 표시되지 않는 경우 Visual Studio 2015 또는 이전 버전에 Visual Studio용 Python 도구를 설치했으나 Python 인터프리터를 설치하지 않은 것입니다(위의 [Python 인터프리터 선택 및 설치](#selecting-and-installing-python-interpreters) 참조). 
 
 > [!Tip]
 > 위에 표시된 것처럼 **Python 환경* 창이 좁으면 환경이 맨 위에 나열되고 아래에 다양한 탭이 표시됩니다. 하지만 창을 충분히 확장하면 넓은 보기가 표시되어 작업하기가 더 편리할 수 있습니다.
 >
-> ![Python 환경 창 확장된 보기](media/environments-expanded-view.png)
+> ![Python 환경 창 확장된 보기](~/python/media/environments-expanded-view.png)
 
 > [!Note]
 > Visual Studio에서는 system-site-packages 옵션을 적용하지만 Visual Studio 내에 이를 변경하는 방법은 제공하지 않습니다.
@@ -106,7 +106,7 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 
 1. 환경 창에서 **+ 사용자 지정...**을 선택하면 새 환경이 생성되고 아래 설명된 [**구성** 탭](#configure-tab)이 열립니다.
 
-    ![새 사용자 지정 환경의 기본 보기](media/environments-custom-1.png)
+    ![새 사용자 지정 환경의 기본 보기](~/python/media/environments-custom-1.png)
 
 1. **설명** 필드에 환경에 대한 이름을 입력합니다.
 1. **접두사 경로** 필드에 인터프리터의 경로를 입력하거나 찾습니다.
@@ -118,7 +118,7 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 
 기본값으로 설정, 해당 환경에서 [대화형(REPL) Windows](interactive-repl.md) 열기, 대화 상자로 이동하여 대화형 Windows 구성(**도구 > 옵션** 메뉴 명령, **Python 도구 > 대화형 Windows** 및 환경 이름 선택과 동일)과 같은 환경에 대한 기본 정보 및 명령을 제공합니다.
 
-![Python 환경 개요 탭](media/environments-overview-tab.png)
+![Python 환경 개요 탭](~/python/media/environments-overview-tab.png)
 
 > [!Note]
 > 활성 환경을 변경하면 IntelliSense 데이터베이스가 로드되는 동안 Visual Studio가 잠시 응답하지 않을 수 있습니다. 많은 패키지가 있는 환경에서는 더 오랫동안 응답하지 않을 수 있습니다.
@@ -127,7 +127,7 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 
 표시된 경우, 아래 표에 설명된 세부 정보를 포함합니다. 이 탭이 없는 경우 Visual Studio에서 모든 세부 정보를 자동으로 관리하는 것입니다.
 
-![Python 환경 구성 탭](media/environments-configure-tab.png)
+![Python 환경 구성 탭](~/python/media/environments-configure-tab.png)
 
 | 필드 | 설명 |
 | --- | --- |
@@ -144,13 +144,13 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 
 환경에 설치된 패키지를 관리하여 종속성을 비롯한 새 패키지를 검색 및 설치할 수 있습니다. 검색을 수행하면 현재 설치된 패키지를 필터링할 뿐만 아니라 [PyPI](https://pypi.python.org)를 검색할 수 있습니다. 검색 상자에 `--user` 또는 `--no-deps` 등의 플래그를 포함하여 `pip install` 명령을 직접 입력할 수도 있습니다.
 
-![Python 환경 pip 탭](media/environments-pip-tab.png)
+![Python 환경 pip 탭](~/python/media/environments-pip-tab.png)
 
 ### <a name="intellisense-tab"></a>IntelliSense 탭
 
 IntelliSense 완성 데이터베이스의 현재 상태를 보여 줍니다.
 
-![Python 환경 IntelliSense 탭](media/environments-intellisense-tab.png)
+![Python 환경 IntelliSense 탭](~/python/media/environments-intellisense-tab.png)
 
 데이터베이스에는 모든 환경의 라이브러리에 대한 메타데이터가 포함되며 IntelliSense 속도가 향상되고 메모리 사용량이 줄어듭니다. Visual Studio에서 새 환경을 검색하거나 사용자가 환경을 추가하면 라이브러리 소스 파일을 분석하여 데이터베이스 컴파일을 자동으로 시작합니다. 이 프로세스는 설치된 항목에 따라 1분에서 1시간 또는 그 이상이 소요될 수 있습니다. (예를 들어 Anaconda에는 많은 라이브러리가 함께 제공되며 데이터베이스를 컴파일하는 데 다소 시간이 소요됩니다.) 완료되면 자세한 IntelliSense를 얻게 되며 더 많은 라이브러리를 설치할 때까지 데이터베이스를 다시 새로 고치지 않아도 됩니다(**DB 새로 고침** 단추 사용).
 
@@ -174,11 +174,11 @@ Visual Studio는 실행, 디버깅, 구문 검사, 가져오기 및 멤버 완�
 
 **Python 환경**을 마우스 오른쪽 단추로 클릭하고 **Add/Remove Python Environments...**(Python 환경 추가/제거...)를 선택하여 모든 글로벌 환경을 프로젝트 환경으로 추가할 수 있습니다. 표시된 목록에서 사용자 프로젝트에 사용 가능한 환경을 선택하거나 선택 취소할 수 있습니다.
 
-![Python 환경 추가/제거 대화 상자](media/environments-add-remove.png)
+![Python 환경 추가/제거 대화 상자](~/python/media/environments-add-remove.png)
 
 솔루션 탐색기에서 환경을 확장하여 설치된 패키지를 표시할 수도 있습니다(환경이 활성 상태일 때 가져와 코드에서 사용할 수 있음).
 
-![솔루션 탐색기에서 환경에 대한 Python 패키지](media/environments-installed-packages.png)
+![솔루션 탐색기에서 환경에 대한 Python 패키지](~/python/media/environments-installed-packages.png)
 
 새 패키지를 설치하려면 환경을 마우스 오른쪽 단추로 클릭하고 **Python 패키지 설치...**를 선택하고 원하는 패키지 이름을 입력합니다. 패키지(및 종속성)은 [Python 패키지 인덱스(PyPI)](https://pypi.python.org/pypi)에서 다운로드하며 여기에서 사용 가능한 패키지의 검색도 가능합니다. Visual Studio의 상태 표시줄 및 출력 창에 설치에 대한 정보가 표시됩니다. 패키지를 제거하려면 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다.
 
@@ -199,7 +199,7 @@ Visual Studio는 실행, 디버깅, 구문 검사, 가져오기 및 멤버 완�
 
 1. 솔루션 탐색기에서 **Python 환경**을 마우스 오른쪽 단추로 클릭하고 **Add Virtual Environment...**(가상 환경 추가...)를 선택하면 다음이 표시됩니다.
 
-    ![가상 환경 만들기](media/environments-add-virtual-1.png)
+    ![가상 환경 만들기](~/python/media/environments-add-virtual-1.png)
 
 1. 프로젝트 경로에 가상 환경을 만들 이름을 지정하고 다른 위치에 만들려면 전체 경로를 지정합니다. (다른 도구와 최대 호환성을 보장하려면 이름에 문자와 숫자만 사용하세요.)
 
@@ -207,7 +207,7 @@ Visual Studio는 실행, 디버깅, 구문 검사, 가져오기 및 멤버 완�
 
     제공된 경로가 기존 가상 환경인 경우 기본 인터프리터가 검색되고 만들기 단추가 **추가**로 변경됩니다.
 
-    ![기존 환경 추가](media/environments-add-virtual-2.png)
+    ![기존 환경 추가](~/python/media/environments-add-virtual-2.png)
 
 솔루션 탐색기에서 **Python 환경**을 마우스 오른쪽 단추로 클릭하거나 **기존 가상 환경 추가...**를 선택하여 기존 가상 환경을 추가할 수도 있습니다. Visual Studio는 환경의 `lib` 디렉터리에서 `orig-prefix.txt` 파일을 사용하여 기본 인터프리터를 검색합니다.
 
@@ -223,11 +223,11 @@ Visual Studio는 실행, 디버깅, 구문 검사, 가져오기 및 멤버 완�
 
 - `requirements.txt`가 포함된 프로젝트를 로드하고 해당 파일에 나열된 모든 패키지를 설치하려는 경우 프로젝트를 마우스 오른쪽 단추로 클릭하고 **requirements.txt에서 설치**를 선택합니다.
 
-    ![requirements.txt에서 설치](media/environments-requirements-txt-install.png)
+    ![requirements.txt에서 설치](~/python/media/environments-requirements-txt-install.png)
 
 - 프로젝트에 필요한 모든 패키지가 설치되었으면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **requirements.txt 생성**을 선택하여 필요한 파일을 만듭니다. 파일이 이미 있는 경우 업데이트 방법을 묻는 메시지가 표시됩니다.
 
-    ![requirements.txt 옵션 업데이트](media/environments-requirements-txt-replace.png)
+    ![requirements.txt 옵션 업데이트](~/python/media/environments-requirements-txt-replace.png)
 
     - **전체 파일 바꾸기**는 존재하는 모든 항목, 주석 및 옵션이 제거됩니다.
     - **기존 항목 새로 고침**은 패키지 요구 사항을 검색하고 버전 지정자를 현재 설치된 버전에 맞게 업데이트합니다.
@@ -237,7 +237,7 @@ Visual Studio는 실행, 디버깅, 구문 검사, 가져오기 및 멤버 완�
 
 새 가상 환경을 추가할 때 ` requirements.txt` 파일이 존재하면 **가상 환경 추가** 대화 상자에 패키지를 자동으로 설치하는 옵션이 표시되어 다른 컴퓨터에서 환경을 쉽게 다시 만들 수 있습니다.
 
-![requirements.txt로 가상 환경 만들기](media/environments-requirements-txt.png)
+![requirements.txt로 가상 환경 만들기](~/python/media/environments-requirements-txt.png)
 
 pip로 패키지를 설치할 수 없고 `requirements.txt` 파일에 나타나는 경우 전체 설치에 실패합니다. 이 경우 이 패키지를 제외하도록 수동으로 파일을 편집하거나 패키지의 설치 가능한 버전을 참조하도록 [pip의 옵션](http://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format)을 사용합니다. 예를 들어 [`pip wheel`](http://pip.readthedocs.org/en/latest/reference/pip_wheel.html)을 사용하여 종속성을 컴파일하고 `--find-links <path>` 옵션을 사용자의 `requirements.txt`에 추가하는 것이 좋습니다.
 

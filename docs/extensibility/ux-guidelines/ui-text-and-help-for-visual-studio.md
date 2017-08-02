@@ -65,7 +65,7 @@ caps.handback.revision: 2
   
  **Visual Studio의 추가 텍스트**  
   
- ![Supplemental text in Visual Studio](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601\-c\_SupplementalText2")  
+ ![Supplemental text in Visual Studio](~/extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601\-c\_SupplementalText2")  
   
  **Visual Studio의 추가 텍스트**  
   
@@ -108,7 +108,7 @@ caps.handback.revision: 2
   
 -   대화 상자를 시작 하는 경우 타원에 대 한 표준을 유지: 탐색, 타원 필요한 추가 UI 작업에 대 한 줄임표 없습니다.  
   
-     ![Help link in Visual Studio](../../extensibility/ux-guidelines/media/0601-e_helplink.png "0601\-e\_HelpLink")  
+     ![Help link in Visual Studio](~/extensibility/ux-guidelines/media/0601-e_helplink.png "0601\-e\_HelpLink")  
   
      **줄임표 \(...\) 도움말 링크 작업 추가 UI에서는 나타냅니다.**  
   
@@ -260,7 +260,7 @@ caps.handback.revision: 2
   
 |양호|잘못 되었습니다.|  
 |--------|---------------|  
-|"는 번호로 전화를 걸는 서비스에서 더 이상. 번호를 확인 하 고 다시 전화 하거나 하십시오 연산자에 대 한 0 다이얼. "|-   "\(449\) 오류: 잘못 된 수"<br />-   "이 처리 되지 않은 예외 오류가 나타냅니다 작업이 성공적으로 완료 되었음을."<br /><br /> ![Bad error message in Visual Studio](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602\-a\_ErrorDialog")|  
+|"는 번호로 전화를 걸는 서비스에서 더 이상. 번호를 확인 하 고 다시 전화 하거나 하십시오 연산자에 대 한 0 다이얼. "|-   "\(449\) 오류: 잘못 된 수"<br />-   "이 처리 되지 않은 예외 오류가 나타냅니다 작업이 성공적으로 완료 되었음을."<br /><br /> ![Bad error message in Visual Studio](~/extensibility/ux-guidelines/media/0602-a_errordialog.png "0602\-a\_ErrorDialog")|  
   
 ## 도움말 액세스  
   

@@ -35,7 +35,7 @@ caps.handback.revision: 22
   
 3.  `List` 개체를 추가하는 경우 **IntelliSense** 창이 열리는 것을 확인할 수 있습니다.  다음은 Visual C\# 예제이지만 Visual Basic에서 목록을 추가할 때에도 이와 비슷한 텍스트가 나타납니다.  
   
-     ![Click 이벤트가 표시된 속성 창](../ide/media/express_listintellisense.png "Express\_ListIntellisense")  
+     ![Click 이벤트가 표시된 속성 창](~/ide/media/express_listintellisense.png "Express\_ListIntellisense")  
 IntelliSense 창  
   
     > [!NOTE]

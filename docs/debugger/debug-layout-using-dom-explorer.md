@@ -27,7 +27,7 @@ caps.handback.revision: 33
 # DOM 탐색기를 사용하여 레이아웃 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  DOM 탐색기의 **레이아웃** 탭에는 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱, Windows Phone 스토어 앱 또는 Visual Studio Tools for Apache Cordova를 사용하여 만든 앱에서 선택한 요소에 대한 [CSS 상자 모델](http://go.microsoft.com/fwlink/?LinkID=238778)을 보여 줍니다. 상자 모델의 이 시각적 표현을 사용하여 요소의 모양을 좌우하는 레이아웃 관련 값을 식별하고 수정할 수 있습니다.  
   

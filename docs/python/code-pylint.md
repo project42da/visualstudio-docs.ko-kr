@@ -41,13 +41,13 @@ Python 코드의 오류를 검사하고 적절한 Python 코딩 패턴을 권장
 
 [솔루션 탐색기]에서 Python 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Python > PyLint 실행...**을 차례로 선택합니다.
 
-![Python 프로젝트의 상황에 맞는 메뉴에 있는 PyLint 명령](media/code-pylint-command.png)
+![Python 프로젝트의 상황에 맞는 메뉴에 있는 PyLint 명령](~/python/media/code-pylint-command.png)
 
 이 명령을 사용하면 필요한 경우 활성 환경에 PyLint를 설치하라는 메시지가 표시됩니다.
 
 [오류 목록] 창에 PyLint 경고 및 오류가 표시됩니다.
 
-![PyLint 오류 목록](media/code-pylint-error-list.png)
+![PyLint 오류 목록](~/python/media/code-pylint-error-list.png)
 
 오류를 두 번 클릭하면 문제가 발생한 원본 코드로 직접 이동합니다.
 

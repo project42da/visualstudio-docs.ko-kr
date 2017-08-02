@@ -28,7 +28,7 @@ caps.handback.revision: 41
 # Outlook에 대해 리본 메뉴 사용자 지정
   Microsoft Office Outlook에서 리본을 사용자 지정할 경우 응용 프로그램에서 사용자 지정 리본이 나타나는 위치를 고려해야 합니다.  Outlook에서 리본은 사용자가 메일 메시지 만들기 등의 특정 작업을 수행할 때 열리는 창과 기본 응용 프로그램 UI\(사용자 인터페이스\)에 표시됩니다.  이러한 응용 프로그램 창의 이름을 검사기라고 합니다.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: 리본 디자이너를 사용하여 Excel의 리본 사용자 지정](http://go.microsoft.com/fwlink/?LinkID=130312)\(영문\)을 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: 리본 디자이너를 사용하여 Excel의 리본 사용자 지정](http://go.microsoft.com/fwlink/?LinkID=130312)\(영문\)을 참조하세요.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   

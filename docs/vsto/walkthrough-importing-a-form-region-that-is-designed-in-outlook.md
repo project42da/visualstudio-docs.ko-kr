@@ -47,7 +47,7 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Visual Studio 2008을 사용하여 Outlook 양식 영역 만들기](http://go.microsoft.com/fwlink/?LinkID=130305)을 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Visual Studio 2008을 사용하여 Outlook 양식 영역 만들기](http://go.microsoft.com/fwlink/?LinkID=130305)을 참조하세요.  
   
 ## Outlook에서 양식 영역 디자이너를 사용하여 양식 영역 디자인  
  이 단계에서는 Outlook에서 양식 영역을 디자인합니다. 그런 다음 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]로 가져올 수 있도록 찾기 쉬운 위치에 양식 영역을 저장합니다.  

@@ -48,35 +48,35 @@ ms.lasthandoff: 03/01/2017
 
 이렇게 하면 기본적으로 IDE의 오른쪽 위에 작은 창이 표시됩니다.
 
-![전체로 이동](media/gotoall.png)
+![전체로 이동](~/ide/media/gotoall.png)
 
 여기서 진행하는 방법에는 여러 가지가 있습니다.
 * 접두사 없이 텍스트를 입력하여 텍스트 상자 아래에서 선택한 [필터 아이콘](#filtered-searches)을 사용해서 검색합니다.
 * [접두사](#filtered-searches) 뒤에 검색할 텍스트를 입력합니다.
 * 물음표(?)를 입력하여 추가 도움말을 확인합니다.
-  ![전체로 이동 도움말](media/gotoall_help.png)
+  ![전체로 이동 도움말](~/ide/media/gotoall_help.png)
 
 ### <a name="filtered-searches"></a>필터링된 검색
 검색 범위를 특정 형식으로 좁히려면 입력 시 접두사를 사용하거나, 아래와 같이 검색 창 아래에 표시되는 아이콘을 사용합니다.
 
 접두사 | 아이콘 | 바로 가기 | 설명
 :----: | ---- | -------- | ---
-#      | ![기호 아이콘](media/gotoall_symbolicon.png) | Ctrl+1, Ctrl+S | 일치하는 기호를 찾습니다.
-f      | ![파일 아이콘](media/gotoall_fileicon.png)     | Ctrl+1, Ctrl+F | 일치하는 파일 이름을 찾습니다.
-분      | ![멤버 아이콘](media/gotoall_membericon.png) | Ctrl+1, Ctrl+M | 일치하는 멤버를 찾습니다.
-t      | ![형식 아이콘](media/gotoall_typeicon.png)     | Ctrl+1, Ctrl+T | 일치하는 형식을 찾습니다.
-:      | ![줄 아이콘](media/gotoall_lineicon.png)     | Ctrl+G         | 입력한 줄 번호로 이동합니다.
+#      | ![기호 아이콘](~/ide/media/gotoall_symbolicon.png) | Ctrl+1, Ctrl+S | 일치하는 기호를 찾습니다.
+f      | ![파일 아이콘](~/ide/media/gotoall_fileicon.png)     | Ctrl+1, Ctrl+F | 일치하는 파일 이름을 찾습니다.
+분      | ![멤버 아이콘](~/ide/media/gotoall_membericon.png) | Ctrl+1, Ctrl+M | 일치하는 멤버를 찾습니다.
+t      | ![형식 아이콘](~/ide/media/gotoall_typeicon.png)     | Ctrl+1, Ctrl+T | 일치하는 형식을 찾습니다.
+:      | ![줄 아이콘](~/ide/media/gotoall_lineicon.png)     | Ctrl+G         | 입력한 줄 번호로 이동합니다.
 
 ### <a name="search-locations"></a>검색 위치
 검색 범위를 특정 위치로 좁히려면 두 개의 문서 아이콘을 사용합니다.
 
 아이콘 | 설명
 ---- | ---
-![현재 문서](media/gotoall_currentdocument.png) | 현재 문서에서만 검색합니다.
-![외부 문서](media/gotoall_external.png) | 프로젝트/솔루션에 있는 문서와 외부 문서를 검색합니다.
+![현재 문서](~/ide/media/gotoall_currentdocument.png) | 현재 문서에서만 검색합니다.
+![외부 문서](~/ide/media/gotoall_external.png) | 프로젝트/솔루션에 있는 문서와 외부 문서를 검색합니다.
 
 ### <a name="settings"></a>설정
-오른쪽 아래에 있는 기어 아이콘 ![기어 아이콘](media/gotoall_gear.png) 을 클릭하면 이 기능의 작동 방식을 변경할 수 있습니다.
+오른쪽 아래에 있는 기어 아이콘 ![기어 아이콘](~/ide/media/gotoall_gear.png) 을 클릭하면 이 기능의 작동 방식을 변경할 수 있습니다.
 
 설정 | 설명
 ------- | ---

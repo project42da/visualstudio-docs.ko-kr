@@ -23,7 +23,7 @@ caps.handback.revision: 13
 # HTML, CSS 및 JavaScript 샘플 코드 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  이 항목의 코드는 다음 항목에 대한 샘플 파일입니다. [퀵 스타트: HTML 및 CSS 디버그](../debugger/quickstart-debug-html-and-css.md).  QuickStart에서 의도적으로 제공되는 오류는 이 버전의 코드에서 수정됩니다.  
   

@@ -47,7 +47,7 @@ manager: "ghogen"
 ##  <a name="custom"></a> 기본 설치 및 사용자 지정 설치  
  Visual Studio 2015를 설치할 때 매일 사용하는 구성 요소를 포함하거나 제외할 수 있습니다. 즉, 기본 설치가 사용자 지정 설치보다 더 작고 더 빠르게 설치되는 경우가 많습니다. 이전 버전에서는 기본적으로 설치된 많은 구성 요소가 이제는 이 버전에서 명시적으로 선택해야 하는 사용자 지정 구성 요소로 간주된다는 의미이기도 합니다.  
   
- ![Visual Studio 2015 설정 대화 상자](../ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
+ ![Visual Studio 2015 설정 대화 상자](~/ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
   
  사용자 지정 구성 요소에는 Visual C\+\+, Visual F\#, SQL Server Data Tools, 플랫폼 간 모바일 도구 및 SDK, 타사 SDK 및 확장이 있습니다. 초기 설치 작업 동안 선택하지 않는 경우 나중에 사용자 지정 구성 요소 중에서 설치할 수 있습니다.  
   

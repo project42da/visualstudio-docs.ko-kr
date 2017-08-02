@@ -27,7 +27,7 @@ manager: "ghogen"
 # DOM 이벤트 수신기 보기
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  DOM 탐색기의 **이벤트** 탭에는 DOM 요소와 연결된 이벤트가 표시됩니다. **이벤트** 탭에 있는 각각의 최상위 노드는 활성 구독자가 있는 이벤트를 나타냅니다. 최상위 노드에는 특정 이벤트에 대해 등록된 이벤트 수신기를 나타내는 하위 노드가 포함되어 있습니다. 이벤트를 수신기를 볼 수 있을뿐 아니라 이 탭을 사용하여 JavaScript 코드에서 이벤트 수신기 위치를 탐색할 수도 있습니다. 이 항목의 내용은 HTML 및 JavaScript로 작성된 스토어 앱에 적용됩니다.  
   
@@ -71,7 +71,7 @@ manager: "ghogen"
   
 11. DOM 계층 구조에서 부모 요소에 대한 이벤트 수신기를 신속하게 식별하려면 DOM 탐색기의 맨 아래 있는 계층 구조 목록에서 부모 요소를 선택합니다.  
   
-     ![DOM 계층에서 상위 요소 선택](../debugger/media/js_dom_breadcrumbs.png "JS\_DOM\_Breadcrumbs")  
+     ![DOM 계층에서 상위 요소 선택](~/debugger/media/js_dom_breadcrumbs.png "JS\_DOM\_Breadcrumbs")  
   
      **이벤트** 탭에는 계층 구조 목록에서 선택한 모든 요소의 이벤트 수신기가 표시됩니다.  
   

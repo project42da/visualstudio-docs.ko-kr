@@ -30,7 +30,7 @@ caps.handback.revision: 38
   
  다음 예제에서는 디자이너를 사용하여 문서 수준 프로젝트에서 데이터 바인딩된 컨트롤을 추가하는 방법을 보여 줍니다.  런타임에 응용 프로그램 수준 프로젝트에서 데이터 바인딩된 컨트롤을 추가하는 방법에 대한 예제는 [연습: VSTO 추가 기능 프로젝트의 복합 데이터 바인딩](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)를 참조하십시오.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Transfer Data Into an Excel Worksheet?](http://go.microsoft.com/fwlink/?LinkID=130277) 및[How Do I: Consume Database Data in Excel?](http://go.microsoft.com/fwlink/?LinkID=130287)을 참조하십시오.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Transfer Data Into an Excel Worksheet?](http://go.microsoft.com/fwlink/?LinkID=130277) 및[How Do I: Consume Database Data in Excel?](http://go.microsoft.com/fwlink/?LinkID=130287)을 참조하십시오.  
   
 ## 디자인 타임에 워크시트에 데이터 바인딩된 컨트롤 추가  
   

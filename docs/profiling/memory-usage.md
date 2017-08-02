@@ -70,24 +70,24 @@ ms.lasthandoff: 05/13/2017
 
 4.  도구 모음의 **도구 선택** 설정에서 **메모리 사용량**을 선택합니다.
 
-     ![진단 도구 표시](../profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
+     ![진단 도구 표시](~/profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
 
 5.  **디버그/디버깅 시작**을 클릭합니다(또는 도구 모음에서 **시작** 또는 **F5** 누름).
 
      앱 로드가 완료되면 진단 도구의 요약 보기가 나타납니다.
 
-     ![진단 도구 요약 탭](../profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
+     ![진단 도구 요약 탭](~/profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
 
      > [!NOTE]
      >  메모리 데이터를 수집할 경우 네이티브 또는 혼합 모드 앱의 디버깅 성능에 영향을 줄 수 있으므로 메모리 스냅숏은 기본적으로 사용되지 않습니다. 네이티브 또는 혼합 모드 앱에서 스냅숏을 사용하도록 설정하려면 디버깅 세션을 시작합니다(바로 가기 키: **F5** 키). **진단 도구** 창이 나타나면 [메모리 사용량] 탭을 선택한 다음 **힙 프로파일링**을 선택합니다.  
      >   
-     >  ![스냅숏 사용](../profiling/media/dbgdiag_mem_mixedtoolbar_enablesnapshot.png "DBGDIAG_MEM_MixedToolbar_EnableSnapshot")  
+     >  ![스냅숏 사용](~/profiling/media/dbgdiag_mem_mixedtoolbar_enablesnapshot.png "DBGDIAG_MEM_MixedToolbar_EnableSnapshot")  
      >   
      >  디버깅을 중지(바로 가기 키: **Shift + F5**)하고 다시 시작합니다.  
 
 6.  디버깅 세션의 시작 부분에 스냅숏을 만들려면 **메모리 사용량** 요약 도구 모음에서 **스냅숏 만들기**를 선택합니다. (이는 여기에 중단점을 설정하는 데도 도움이 될 수 있습니다.)
 
-    ![스냅숏 만들기](../profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot") 
+    ![스냅숏 만들기](~/profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot") 
      
      > [!TIP]
      >  메모리 비교 기준을 만들려면 디버깅 세션을 시작할 때 스냅숏을 만드는 것이 좋습니다.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 05/13/2017
 ## <a name="analyze-memory-usage-data"></a>메모리 사용량 데이터 분석
 메모리 사용량 요약 테이블의 행에는 디버깅 세션 중에 만든 스냅숏이 나열되고 더 자세한 보기에 대한 링크가 제공됩니다.
 
-![메모리 요약 테이블](../profiling/media/dbgdiag_mem_summarytable.png "DBGDIAG_MEM_SummaryTable")
+![메모리 요약 테이블](~/profiling/media/dbgdiag_mem_summarytable.png "DBGDIAG_MEM_SummaryTable")
 
  열의 이름은 프로젝트 속성에서 선택한 디버깅 모드(.NET, 네이티브 또는 혼합(.NET 및 네이티브))에 따라 달라집니다.  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/13/2017
 
 메모리 사용량을 분석하려면 메모리 사용량에 대한 자세한 보고서를 여는 다음 링크 중 하나를 클릭합니다.  
 
--   현재 스냅숏과 이전 스냅숏 간의 차이 정보를 보려면 행의 왼쪽에 있는 변경 링크(![메모리 사용량 증가](../profiling/media/prof-tour-mem-usage-up-arrow.png "메모리 사용량 증가"))를 선택합니다. 빨간색 화살표는 메모리 사용량 증가를 나타내고 녹색 화살표는 감소를 나타냅니다.
+-   현재 스냅숏과 이전 스냅숏 간의 차이 정보를 보려면 행의 왼쪽에 있는 변경 링크(![메모리 사용량 증가](~/profiling/media/prof-tour-mem-usage-up-arrow.png "메모리 사용량 증가"))를 선택합니다. 빨간색 화살표는 메모리 사용량 증가를 나타내고 녹색 화살표는 감소를 나타냅니다.
 
     > [!TIP]
     >  메모리 문제를 더 빠르게 확인하기 위해 차이 보고서는 전체 수에서 가장 많이 증가한 개체 형식(**개체(차이)** 열의 변경 링크 클릭) 또는 전체 힙 크기에서 가장 많이 증가한 개체 형식(**힙 크기(차이)** 열의 변경 링크 클릭)별로 정렬됩니다.
@@ -139,7 +139,7 @@ ms.lasthandoff: 05/13/2017
   
  ![관리되는 참조 형식 보고서 뷰](../profiling/media/dbgdiag_mem_managedtypesreport_referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")  
   
- 위쪽 창에서 선택한 형식의 인스턴스를 표시하려면 ![인스턴스 아이콘](../profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") 아이콘을 선택합니다.  
+ 위쪽 창에서 선택한 형식의 인스턴스를 표시하려면 ![인스턴스 아이콘](~/profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") 아이콘을 선택합니다.  
   
  ![인스턴스 뷰](../profiling/media/dbgdiag_mem_managedtypesreport_instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 05/13/2017
   
  **형식 뷰** 에는 스냅숏의 형식 수와 크기가 표시됩니다.  
   
--   선택한 형식의 인스턴스 아이콘(![개체 형식 열의 인스턴스 아이콘](../profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon"))을 선택하여 스냅숏에서 선택한 형식의 개체에 대한 정보를 표시합니다.  
+-   선택한 형식의 인스턴스 아이콘(![개체 형식 열의 인스턴스 아이콘](~/profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon"))을 선택하여 스냅숏에서 선택한 형식의 개체에 대한 정보를 표시합니다.  
   
      **인스턴스** 뷰에는 선택한 형식의 각 인스턴스가 표시됩니다. 인스턴스를 선택하면 **할당 호출 스택** 창에 인스턴스를 만든 호출 스택이 표시됩니다.  
   
@@ -170,7 +170,7 @@ ms.lasthandoff: 05/13/2017
   
 -   관리되는 보고서 또는 네이티브 보고서의 **비교 대상** 목록에서 스냅숏을 선택합니다.  
   
-     ![비교 목록에서 스냅숏 선택](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
+     ![비교 목록에서 스냅숏 선택](~/profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
  변경 보고서는 기본 스냅숏 값과 비교 스냅숏 간의 차이를 표시하는 열( **(차이)**로 표시됨)을 기본 보고서에 추가합니다. 네이티브 형식 뷰 차이 보고서가 표시되는 모양은 다음과 같습니다.  
   

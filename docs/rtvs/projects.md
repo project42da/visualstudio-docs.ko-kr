@@ -49,11 +49,11 @@ R 프로젝트(`.rxproj` 파일)는 프로젝트와 관련된 모든 소스 및 
 1. **파일 > 새로 만들기 > 프로젝트...**를 선택합니다. (Ctrl+Shift+N)
 1. **템플릿 > R** 아래에서 “R 프로젝트”를 선택하고, 프로젝트의 이름과 위치를 입력한 후 **확인**을 선택합니다.
 
-    ![Visual Studio의 R(VS2017의 RTVS)에 대한 새 프로젝트 대화 상자](media/getting-started-01-new-project.png)
+    ![Visual Studio의 R(VS2017의 RTVS)에 대한 새 프로젝트 대화 상자](~/rtvs/media/getting-started-01-new-project.png)
 
 이 대화 상자에서는 편집기에서 빈 `script.R` 파일이 열려 있는 프로젝트를 만듭니다. **솔루션 탐색기**에서는 프로젝트의 두 가지 기타 파일을 확인할 수 있습니다.
 
-![템플릿에서 생성된 R 프로젝트의 콘텐츠](media/projects-template-results.png)
+![템플릿에서 생성된 R 프로젝트의 콘텐츠](~/rtvs/media/projects-template-results.png)
 
 [R 대화형](interactive-repl.md) 창에 입력한 명령에 관계없이 `.Rhistory` 레코드. **R 도구 > Windows > 기록** 명령을 사용하여 전용 기록 창을 열 수 있고 해당 창에는 기록 콘텐츠를 지울 수 있는 도구 모음 단추와 상황에 맞는 메뉴 항목이 있습니다.
 
@@ -133,7 +133,7 @@ Visual Studio 솔루션은 관련 프로젝트를 하나의 논리적 위치에�
 
 아래 예제에서 솔루션에는 R과 Azure Machine Learning을 사용하여 빌드된 모델이 포함된 R 프로젝트, Python/scikit-learn 프로젝트, 계산 집약적인 작업에 대한 모듈이 포함된 C++ 프로젝트, 데이터 관리에 대한 SQL 프로젝트 및 결과를 게시하는 웹 사이트에 대한 Python/Bottle 프로젝트가 포함됩니다.
 
-![솔루션의 여러 관련 프로젝트를 보여 주는 Visual Studio 솔루션 탐색기](media/projects-polyglot.png)
+![솔루션의 여러 관련 프로젝트를 보여 주는 Visual Studio 솔루션 탐색기](~/rtvs/media/projects-polyglot.png)
 
 굵게 강조 표시된 프로젝트는 솔루션에 대한 “시작” 프로젝트입니다. 변경하려면 다른 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 

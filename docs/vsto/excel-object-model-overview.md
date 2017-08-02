@@ -47,7 +47,7 @@ caps.handback.revision: 65
   
  이 항목에서는 Excel 개체 모델에 대한 간략한 개요를 제공합니다.  전체 Excel 개체 모델에 대해 자세히 알아볼 수 있는 리소스는 [Excel 개체 모델 설명서 사용](#ExcelOMDocumentation)을 참조하세요.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 비디오 데모는 [방법: Excel 2007 추가 기능에서 이벤트 처리기 사용](http://go.microsoft.com/fwlink/?LinkID=130291) 및 [방법: Excel에서 도형을 사용하여 거품형 차트 만들기](http://go.microsoft.com/fwlink/?LinkID=130313)를 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모는 [방법: Excel 2007 추가 기능에서 이벤트 처리기 사용](http://go.microsoft.com/fwlink/?LinkID=130291) 및 [방법: Excel에서 도형을 사용하여 거품형 차트 만들기](http://go.microsoft.com/fwlink/?LinkID=130313)를 참조하세요.  
   
 ## Excel 프로젝트의 개체 액세스  
  Excel에 대한 새 VSTO 추가 기능 프로젝트를 만들면 Visual Studio에서 자동으로 ThisAddIn.vb 또는 ThisAddIn.cs 코드 파일을 만듭니다.  `Me.Application` 또는 `this.Application`을 사용하여 응용 프로그램 개체에 액세스할 수 있습니다.  

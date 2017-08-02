@@ -40,32 +40,32 @@ Visual Studio 2015에서 IntelliSense는 프로젝트의 파일과 단일 코드
 ## <a name="intellisense-features-in-c"></a>C++의 IntelliSense 기능  
  IntelliSense는 코딩을 보다 편리하게 하는 기능 집합에 지정된 이름입니다. 사람마다 편리성에 대한 생각이 다르기 때문에 거의 모든 IntelliSense 기능은 **텍스트 편집기, C/C++, 고급** 속성 페이지에서 사용하거나 사용하지 않도록 설정할 수 있습니다.  
   
- ![도구, 옵션, 텍스트 편집기, C&#47;C&#43;&#43;, 고급](../ide/media/sintellisensecpptoolsoptions.PNG "sIntelliSenseCppToolsOptions")  
+ ![도구, 옵션, 텍스트 편집기, C&#47;C&#43;&#43;, 고급](~/ide/media/sintellisensecpptoolsoptions.PNG "sIntelliSenseCppToolsOptions")  
   
  다음 이미지에 표시된 메뉴 항목 및 바로 가기 키를 사용하여 IntelliSense에 액세스할 수 있습니다.  
   
- ![Visual C&#43;&#43; IntelliSense 메뉴](../ide/media/vs2015_cpp_intellisense_menu.png "vs2015_cpp_intellisense_menu")  
+ ![Visual C&#43;&#43; IntelliSense 메뉴](~/ide/media/vs2015_cpp_intellisense_menu.png "vs2015_cpp_intellisense_menu")  
   
 ### <a name="statement-completion-and-member-list"></a>문 완성 및 멤버 목록  
  키워드, 형식, 함수, 변수 이름 또는 컴파일러에서 인식하는 기타 프로그램 요소의 입력을 시작하면 편집기에서 단어 완성 기능을 제공합니다.  
   
  아이콘 목록과 해당 의미는 [클래스 뷰 및 개체 브라우저 아이콘](../ide/class-view-and-object-browser-icons.md)을 참조하세요.  
   
- ![Visual C&#43;&#43; 단어 자동 완성 창](../ide/media/vs2015_cpp_complete_word.png "vs2015_cpp_complete_word")  
+ ![Visual C&#43;&#43; 단어 자동 완성 창](~/ide/media/vs2015_cpp_complete_word.png "vs2015_cpp_complete_word")  
   
  멤버 목록을 처음 호출하는 경우 현재 컨텍스트에서 액세스할 수 있는 멤버만 표시됩니다. 그 후에 **Ctrl+J**를 사용하면 접근성과 관계없이 모든 멤버가 표시됩니다. 세 번째로 호출하면 보다 광범위한 프로그램 요소 목록이 표시됩니다. **C/C++ 일반 옵션** 페이지에서 문 완성을 끌 수 있습니다.  
   
- ![Visual C&#43;&#43; 멤버 목록](../ide/media/vs2015_cpp_list_members.png "vs2015_cpp_list_members")  
+ ![Visual C&#43;&#43; 멤버 목록](~/ide/media/vs2015_cpp_list_members.png "vs2015_cpp_list_members")  
   
 ### <a name="parameter-help"></a>매개 변수 도움말  
  클래스 템플릿 변수 선언에서 함수 호출을 여는 중괄호 또는 꺾쇠 괄호를 입력하면 편집기에서 함수 또는 생성자의 각 오버로드에 대한 매개 변수 형식이 포함된 작은 창을 표시합니다. 커서 위치에 따라 "현재" 매개 변수가 굵게 표시됩니다. **C/C++ 일반 옵션** 페이지에서 문 완성을 끌 수 있습니다.  
   
- ![Visual C&#43;&#43; 매개 변수 도움말](../ide/media/vs_2015_cpp_param_help.png "vs_2015_cpp_param_help")  
+ ![Visual C&#43;&#43; 매개 변수 도움말](~/ide/media/vs_2015_cpp_param_help.png "vs_2015_cpp_param_help")  
   
 ### <a name="quick-info"></a>요약 정보  
  변수 위에 마우스 커서를 놓으면 형식 정보 및 형식이 정의된 헤더를 표시하는 작은 창이 인라인으로 나타납니다. 함수 호출을 마우스로 가리키면 함수의 서명이 표시됩니다. **텍스트 편집기, C/C++, 고급** 페이지에서 요약 정보를 끌 수 있습니다.  
   
- ![Visual C&#43;&#43; 요약 정보](../ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")  
+ ![Visual C&#43;&#43; 요약 정보](~/ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")  
   
 ## <a name="error-squiggles"></a>오류 표시선  
  프로그램 요소(변수, 키워드, 중괄호, 형식 이름 등) 아래의 표시선은 코드의 오류 또는 잠재적 오류를 알립니다. 녹색 표시선은 정방향 선언을 작성할 때 나타나며, 여전히 구현을 작성해야 함을 알립니다. 현재 활성화되지 않은 코드에 오류가 있는 경우, 예를 들어 Windows 컨텍스트에서 작업하는데 Android 컨텍스트에서 오류가 발생하는 내용을 입력하는 경우 공유 프로젝트에 자주색 표시선이 나타납니다. 빨간색 표시선은 처리해야 하는 활성 코드의 컴파일러 오류 또는 경고를 나타냅니다.  
@@ -80,7 +80,7 @@ Visual Studio 2015에서 IntelliSense는 프로젝트의 파일과 단일 코드
   
  다음은 Android 및 iOS를 위해 빌드하도록 구성된 OpenGLES 응용 프로그램입니다. 다음 그림은 편집 중인 공유 코드를 보여 줍니다. 첫 번째 이미지에서는 Android가 활성 프로젝트입니다.  
   
- ![Android 프로젝트는 활성 프로젝트입니다.](../ide/media/intellisensecppcrossplatform.png "IntelliSenseCppCrossPlatform")  
+ ![Android 프로젝트는 활성 프로젝트입니다.](~/ide/media/intellisensecppcrossplatform.png "IntelliSenseCppCrossPlatform")  
   
  다음 사항을 참고하십시오.  
   
@@ -92,7 +92,7 @@ Visual Studio 2015에서 IntelliSense는 프로젝트의 파일과 단일 코드
   
  이제, 활성 프로젝트를 iOS.StaticLibrary로 변경하고 물결 기호 변경 방법에 대해 살펴보겠습니다.  
   
- ![iOS가 활성 프로젝트로 선택됩니다.](../ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")  
+ ![iOS가 활성 프로젝트로 선택됩니다.](~/ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")  
   
  다음 사항을 참고하십시오.  
   

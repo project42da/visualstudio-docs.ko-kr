@@ -328,7 +328,7 @@ UI 무슨 상황이, 나타납니다 갑자기 사용자에 게 어떠한 정보
 #### <a name="x-y-position-change"></a>X, Y 위치 변경  
 UI 요소에는이 패턴을 사용의 X 또는 Y 위치 또는 둘 다 변경합니다.  
   
-![X, Y 위치 변경 애니메이션](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />X, Y 위치 변경 애니메이션  
+![X, Y 위치 변경 애니메이션](~/extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />X, Y 위치 변경 애니메이션  
   
 ##### <a name="correct-usage"></a>올바른 사용  
 UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메이션 효과 준된 전환으로 합니다.  
@@ -351,7 +351,7 @@ UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메
 #### <a name="rotate"></a>회전  
 이 패턴으로 UI 요소를 회전합니다.  
   
-![UI 요소 회전 애니메이션](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />UI 요소 회전 애니메이션  
+![UI 요소 회전 애니메이션](~/extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />UI 요소 회전 애니메이션  
   
 ##### <a name="correct-usage"></a>올바른 사용  
 비활성화 상태 회전 진행률 표시기에 대해서만입니다.  

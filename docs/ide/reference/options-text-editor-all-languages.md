@@ -79,7 +79,7 @@ ms.lasthandoff: 05/24/2017
  자동 줄 바꿈 시각 문자 표시  
  이 옵션을 선택하면 긴 줄이 다음 줄로 줄 바꿈되는 위치에 줄 바꿈 화살표 표시기가 표시됩니다.  
   
- ![LineBreakSymbol 스크린샷](../../ide/reference/media/linebreak.gif "linebreak")  
+ ![LineBreakSymbol 스크린샷](~/ide/reference/media/linebreak.gif "linebreak")  
   
  이러한 표시기를 표시하지 않으려면 이 옵션의 선택을 취소합니다.  
   

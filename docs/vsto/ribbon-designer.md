@@ -51,7 +51,7 @@ caps.handback.revision: 78
 > [!NOTE]  
 >  리본 디자이너를 사용하여 수행할 수 없는 작업도 몇 가지 있습니다.  이러한 작업에 대한 자세한 내용과 이러한 작업을 수행하는 방법은 [리본 개요](../vsto/ribbon-overview.md)을 참조하십시오.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Use the Ribbon Designer to Customize the Ribbon in Outlook?](http://go.microsoft.com/fwlink/?LinkID=130312)을 참조하십시오.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Use the Ribbon Designer to Customize the Ribbon in Outlook?](http://go.microsoft.com/fwlink/?LinkID=130312)을 참조하십시오.  
   
 ## 프로젝트에 리본\(비주얼 디자이너\) 항목 추가  
  리본 디자이너를 사용하려면 프로젝트에 새 **리본\(비주얼 디자이너\)** 항목을 추가합니다.  자세한 내용은 [방법: 리본 메뉴 사용자 지정 시작](../vsto/how-to-get-started-customizing-the-ribbon.md)을 참조하십시오.  
@@ -109,7 +109,7 @@ caps.handback.revision: 78
   
 -   **탭 컬렉션 편집기**를 열고 **추가**를 클릭합니다.  
   
-     **탭 컬렉션 편집기**를 열려면 **속성** 창에서 **Tabs** 속성을 선택하고 줄임표 단추 ![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.png "ASP.NET 모바일 디자이너 줄임표")를 클릭합니다.  
+     **탭 컬렉션 편집기**를 열려면 **속성** 창에서 **Tabs** 속성을 선택하고 줄임표 단추 ![ASP.NET 모바일 디자이너 줄임표](~/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")를 클릭합니다.  
   
  탭을 추가한 후 컨트롤을 포함할 그룹을 추가할 수 있습니다.  
   

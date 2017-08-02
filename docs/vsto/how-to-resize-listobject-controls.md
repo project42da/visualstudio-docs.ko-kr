@@ -39,7 +39,7 @@ caps.handback.revision: 46
   
  <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤에 대한 자세한 내용은 [ListObject 컨트롤](../vsto/listobject-control.md)을 참조하세요.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: 런타임에 데이터 바인딩된 목록 개체에 열 추가](http://go.microsoft.com/fwlink/?LinkID=130318)를 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: 런타임에 데이터 바인딩된 목록 개체에 열 추가](http://go.microsoft.com/fwlink/?LinkID=130318)를 참조하세요.  
   
 ##  <a name="designtime"></a> 디자인 타임에 ListObject 컨트롤 크기 조정  
  목록 크기를 조정하려면 크기 조정 핸들 중 하나를 클릭하여 끌거나 **목록 크기 조정** 대화 상자에서 크기를 재정의합니다.  

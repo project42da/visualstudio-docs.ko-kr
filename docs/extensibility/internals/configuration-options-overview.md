@@ -49,7 +49,7 @@ caps.handback.revision: 10
   
  다음 다이어그램을 지 원하는 솔루션 및 프로젝트 구성을 인터페이스는 구현 하는 방법을 보여 줍니다.  
   
- ![구성 인터페이스 그래픽](../../extensibility/internals/media/vsconfiginterfaces.png "vsConfigInterfaces")  
+ ![구성 인터페이스 그래픽](~/extensibility/internals/media/vsconfiginterfaces.gif "vsConfigInterfaces")  
 구성 인터페이스  
   
  이전 다이어그램에 관련 된 참고 사항:  

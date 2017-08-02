@@ -23,7 +23,7 @@ caps.handback.revision: 14
 # Visual Studio에서 Windows 스토어 앱 배포
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows에만 적용](../debugger/media/windows_only_content.png "windows\_only\_content")  
+![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Visual Studio 배포 기능은 대상 장치에서 Visual Studio로 만든 Windows 스토어 앱을 빌드 및 등록합니다. 정확히 앱이 등록되는 방법은 대상 장치가 로컬 장치인지 원격 장치인지에 따라 달라집니다.  
   

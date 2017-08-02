@@ -75,7 +75,7 @@ Visual Studio 2017를 다운로드하면 새로운 경량 설치 관리자를 �
 
 2.  Microsoft [사용 약관](https://www.visualstudio.com/license-terms/) 및 Microsoft [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=824704)에 동의하도록 요청하는 메시지가 표시됩니다. **계속**을 클릭합니다.  
 
-   ![사용 조건 및 개인정보처리방침](media/vs2017-privacy-and-license-terms.PNG "Microsoft 사용 조건 및 개인정보처리방침")  
+   ![사용 조건 및 개인정보처리방침](~/install/media/vs2017-privacy-and-license-terms.PNG "Microsoft 사용 조건 및 개인정보처리방침")  
 
 설치 진행률을 보여 주는 여러 가지 상태 화면이 표시됩니다. 설치 관리자가 설치를 완료하면 원하는 기능 집합(또는 작업)을 선택해야 합니다.
 
@@ -86,7 +86,7 @@ Visual Studio 2017를 다운로드하면 새로운 경량 설치 관리자를 �
 
 1.  **Visual Studio 설치** 화면에서 원하는 작업을 찾습니다.  
 
-  ![Visual Studio 2017 설치 대화 상자](media/vs2017-workloads.PNG "Visual Studio 작업 설치")
+  ![Visual Studio 2017 설치 대화 상자](~/install/media/vs2017-workloads.PNG "Visual Studio 작업 설치")
 
      예를 들어 .NET 데스크톱 개발 작업을 선택합니다. 20개가 넘는 언어에 대한 기본 코드 편집 기능, 프로젝트 없이도 폴더에서 코드를 열어 편집할 수 있는 기능 및 통합 소스 코드 제어 기능이 포함된 기본 핵심 편집기가 제공됩니다.  
 
@@ -100,13 +100,13 @@ Visual Studio 2017를 다운로드하면 새로운 경량 설치 관리자를 �
 
 편리한 작업 기능을 사용하여 Visual Studio 설치를 사용자 지정하지 않으려는 경우 Visual Studio 설치 관리자에서 **개별 구성 요소** 옵션을 클릭하고 원하는 구성 요소를 선택한 다음 프롬프트를 따릅니다.
 
-  ![Visual Studio 2017 - 개별 구성 요소 설치](media/vs2017-components.PNG "Visual Studio 개별 구성 요소 설치")
+  ![Visual Studio 2017 - 개별 구성 요소 설치](~/install/media/vs2017-components.PNG "Visual Studio 개별 구성 요소 설치")
 
 ## <a name="install-language-packs"></a>언어 팩 설치
 
 선택한 언어로 Visual Studio 2017을 설치하려면 Visual Studio 설치 관리자에서 **언어 팩** 옵션을 클릭하고 프롬프트를 따릅니다.
 
-  ![Visual Studio 2017 - 언어 팩 설치](media/vs2017-languages.PNG "Visual Studio 언어 팩 설치")
+  ![Visual Studio 2017 - 언어 팩 설치](~/install/media/vs2017-languages.PNG "Visual Studio 언어 팩 설치")
 
 ### <a name="change-the-installer-language"></a>설치 관리자 언어 변경
 

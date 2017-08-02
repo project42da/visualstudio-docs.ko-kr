@@ -124,7 +124,7 @@ caps.handback.revision: 6
 ####  <a name="a-namebkmknotificationbubblesa-notification-bubbles"></a><a name="BKMK_NotificationBubbles"></a> 알림 풍선  
  정보는 편집기/디자이너 내에서 또는 Windows 알림 영역의 일부로 알림 풍선 나타날 수 있습니다. 사용자에 게 이러한 거품 나중에 확인할 수 있는 문제는 중요 하지 않은 알림에 유용 합니다. 거품은 사용자를 즉시 해결 해야 하는 중요 한 정보에 대 한 적합 하지 않습니다. 알림 풍선을 사용 하 여 Visual Studio에서 수행을 하는 경우에 따라는 [알림 풍선에 대 한 Windows 바탕 화면 지침](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742472\(v=vs.85\).aspx)합니다.  
   
- ![알림 거품형](../../extensibility/ux-guidelines/media/0901-07_notificationbubbles.png "0901-07_NotificationBubbles")  
+ ![알림 거품형](~/extensibility/ux-guidelines/media/0901-07_notificationbubbles.png "0901-07_NotificationBubbles")  
   
  **Visual Studio에 사용 되는 Windows 알림 영역에서 알림 거품형**  
   
@@ -175,14 +175,14 @@ caps.handback.revision: 6
 #### <a name="progress-bars"></a>진행률 표시줄  
   
 ##### <a name="indeterminate"></a>비활성화 상태  
- ![비활성화 상태의 진행률 표시줄](../../extensibility/ux-guidelines/media/0901-04_indeterminate.png "0901-04_Indeterminate")  
+ ![비활성화 상태의 진행률 표시줄](~/extensibility/ux-guidelines/media/0901-04_indeterminate.png "0901-04_Indeterminate")  
   
  **비활성화 상태의 진행률 표시줄**  
   
  "비활성화"는 작업의 전반적인 진행 상황을 의미 하거나 프로세스를 확인할 수 없습니다. 바인딩되지 않은 기간을 필요로 하는 작업에 대 한 비활성화 상태의 진행률 표시줄을 사용 하 여 또는 알 수 없는 개체 수를 액세스 하는 합니다. 대 한 텍스트 설명을 사용 하 여 일어나는 함께 제공 합니다. 경계 시간 기반 작업에 부여할 시간 제한을 사용 합니다. 비활성화 상태의 진행률 표시줄 표시 진행 상황을 않지만 없는 다른 정보를 제공 하 여 애니메이션을 사용 합니다. 가능한 정확도 만으로는 부족 기반 부정형 진행률 표시줄을 선택 하지 마십시오.  
   
 ##### <a name="determinate"></a>비활성화 상태  
- ![활성화 상태의 진행률 표시줄](../../extensibility/ux-guidelines/media/0901-05_determinate.png "0901-05_Determinate")  
+ ![활성화 상태의 진행률 표시줄](~/extensibility/ux-guidelines/media/0901-05_determinate.png "0901-05_Determinate")  
   
  **활성화 상태의 진행률 표시줄**  
   
@@ -262,7 +262,7 @@ caps.handback.revision: 6
 ##### <a name="dialogs"></a>대화 상자  
  대화 상자에 진행률 로더 유형이 포함 될 수 있습니다. 진행률 표시기 수 메시징 쌍을 이루는 뿐만 수 여러 수준의 세부적인 나타내며, 하위 프로세스 진행률 표시와 결합 합니다.  
   
- ![여러 진행률 표시기 유형이 있는 대화 상자](../../extensibility/ux-guidelines/media/0903-11_dialog.png "0903-11_Dialog")  
+ ![여러 진행률 표시기 유형이 있는 대화 상자](~/extensibility/ux-guidelines/media/0903-11_dialog.png "0903-11_Dialog")  
   
  **동시 프로세스 및 여러 진행률 표시기 유형이 있는 visual Studio 대화 상자**  
   
@@ -273,7 +273,7 @@ caps.handback.revision: 6
 ##### <a name="document-well"></a>잘 문서화  
  잘 문서 컨트롤과 조합 하 여 여러 진행률 로더 유형을 표시할 수 있습니다.  
   
- ![문서의 진행률 메시징](../../extensibility/ux-guidelines/media/0903-13_documentwell.png "0903-13_DocumentWell")  
+ ![문서의 진행률 메시징](~/extensibility/ux-guidelines/media/0903-13_documentwell.png "0903-13_DocumentWell")  
   
  **도구 모음 아래 비활성화 상태의 진행률 표시줄**  
   
@@ -361,7 +361,7 @@ public InfoBarModel(string text, IEnumerable<IVsInfoBarActionItem> actionItems, 
   
  하이퍼링크, 단추, 아이콘와 일부 텍스트는 InfoBarModel를 만드는 예제는 다음과 같습니다.  
   
- ![하이퍼링크가 포함된 정보 표시줄](../../extensibility/ux-guidelines/media/0904-02_infobarhyperlink.png "0904-02_InfobarHyperlink")  
+ ![하이퍼링크가 포함된 정보 표시줄](~/extensibility/ux-guidelines/media/0904-02_infobarhyperlink.png "0904-02_InfobarHyperlink")  
   
 ```  
 var infoBar = new InfoBarModel(  

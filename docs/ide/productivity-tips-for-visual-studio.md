@@ -142,7 +142,7 @@ ms.lasthandoff: 05/24/2017
   
 -   **여러 브라우저에서 같은 페이지, 응용 프로그램 또는 사이트 테스트** 코드를 디버그할 때 **브라우저 선택** 대화 상자를 열지 않고도 [페이지 검사기(Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209) 등의 설치된 웹 브라우저 간에 쉽게 전환할 수 있습니다. **디버깅 시작** 단추 옆에 있는 **표준** 도구 모음에서 **디버그 대상** 목록을 사용하여 디버그 또는 보기 페이지로 사용 중인 브라우저를 빠르게 확인할 수 있습니다.  
   
-     ![웹 브라우저 디버그 옵션 선택](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")  
+     ![웹 브라우저 디버그 옵션 선택](~/ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")  
   
 -   **임시 중단점 설정** 코드의 현재 줄에 임시 중단점을 만들고 디버거를 동시에 시작할 수 있습니다. 해당 코드 줄에 도달하면 디버거 중단 모드가 시작됩니다. 자세한 내용은 [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.  
   

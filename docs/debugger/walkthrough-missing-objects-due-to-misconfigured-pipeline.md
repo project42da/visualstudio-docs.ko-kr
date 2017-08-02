@@ -36,7 +36,7 @@ manager: "ghogen"
   
  이 시나리오에서는 테스트를 위해 앱을 실행할 때 배경은 예상대로 렌더링되지만 개체 중 하나가 나타나지 않습니다. 그래픽 진단을 사용하여 앱을 디버그할 수 있도록 그래픽 로그 문제를 포착합니다. 이 문제는 앱에서 다음과 같이 보입니다.  
   
- ![개체를 볼 수 없음](../debugger/media/gfx_diag_demo_misconfigured_pipeline_problem.png "gfx\_diag\_demo\_misconfigured\_pipeline\_problem")  
+ ![개체를 볼 수 없음](~/debugger/graphics/media/gfx_diag_demo_misconfigured_pipeline_problem.png "gfx\_diag\_demo\_misconfigured\_pipeline\_problem")  
   
 ## 조사  
  그래픽 진단 도구를 사용하면 그래픽 로그 문서를 로드하여 테스트 중에 캡처한 프레임을 검사할 수 있습니다.  
@@ -100,7 +100,7 @@ manager: "ghogen"
   
  문제를 해결하려면 `ID3D11DeviceContext::PSSetShader` API 호출의 첫 번째 매개 변수를 사용하여 올바른 픽셀 셰이더를 할당합니다.  
   
- ![수정된 C&#43;&#43; 소스 코드](../debugger/media/gfx_diag_demo_misconfigured_pipeline_step_6.png "gfx\_diag\_demo\_misconfigured\_pipeline\_step\_6")  
+ ![수정된 C&#43;&#43; 소스 코드](~/debugger/graphics/media/gfx_diag_demo_misconfigured_pipeline_step_6.png "gfx\_diag\_demo\_misconfigured\_pipeline\_step\_6")  
   
  코드를 수정한 후 다시 빌드하고 앱을 다시 실행하여 렌더링 문제가 해결되었는지 확인할 수 있습니다.  
   

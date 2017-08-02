@@ -21,7 +21,7 @@ caps.handback.revision: 16
 
 단순화 된 포함 사용 편집기에 해당 문서의 뷰 개체 \(즉, 대 한 수의 자식\) 부모로 지정 되 면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 는 인터페이스를 구현 하는 창 명령을 처리 합니다.  단순화 된 포함 편집기 활성 컨트롤을 호스팅할 수 없습니다.  편집기 단순화 포함을 만드는 데 사용 되는 개체는 다음 그림에 표시 됩니다.  
   
- ![간단한 포함 편집기 그래픽](../extensibility/media/vssimplifiedembeddingeditor.png "vsSimplifiedEmbeddingEditor")  
+ ![간단한 포함 편집기 그래픽](~/extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
 편집기로 단순화 포함  
   
 > [!NOTE]

@@ -63,7 +63,7 @@ Visual Studio Test Professional 및 SQL Server Management Studio와 같은 다�
 1. Visual Studio 설치 관리자를 실행합니다.
 2. **데이터 과학 및 분석 응용 프로그램** 워크로드를 선택합니다.
 
-    ![VS2017의 데이터 과학 및 분석 응용 프로그램 워크로드](media/installation-data-science-workload.png)
+    ![VS2017의 데이터 과학 및 분석 응용 프로그램 워크로드](~/rtvs/media/installation-data-science-workload.png)
 
 3. 동일한 워크로드 이름 아래에서 오른쪽의 추가 옵션을 설정합니다. 기본적으로 이 워크로드에는 F# 및 Python 지원이 포함됩니다. R의 경우 최소한 **R 언어 지원**, **R 개발에 대한 런타임 지원** 및 **Microsoft R Client**를 선택해야 합니다.
 

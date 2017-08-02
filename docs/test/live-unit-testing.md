@@ -76,7 +76,7 @@ Live Unit Testing은 다음 테이블에 나열된 세 가지 인기 있는 단�
 
 최상위 Visual Studio 메뉴에서 **도구**, **옵션**을 선택하고 **옵션** 대화 상자의 왼쪽 창에서 **Live Unit Testing**을 선택하여 Live Unit Testing을 구성할 수 있습니다. 다음 그림에서는 대화 상자에서 사용할 수 있는 Live Unit Testing 구성 옵션을 표시합니다.
 
-  ![이미지](./media/lut-options.png)
+  ![이미지](~/test/media/lut-options.png)
 
 구성 가능한 옵션은 다음과 같습니다.
 
@@ -105,21 +105,21 @@ Live Unit Testing에서 파일에 자세한 MSBuild 로그 메시지를 캡처�
 
 Live Unit Testing은 일단 활성화되면 Visual Studio 편집기에서 코드 줄 각각을 업데이트하여 작성한 코드에 단위 테스트가 적용되는지 및 적용된 테스트에 통과하는지 여부를 표시합니다.  다음 그림에서는 테스트를 통과하거나 실패한 코드 줄뿐만 아니라 테스트가 적용되지 않은 코드 줄을 보여 줍니다. 녹색 “✓”으로 데코레이트된 줄은 테스트를 통과한 경우에만 적용됩니다. 빨간색 “🞩”으로 데코레이트된 줄은 하나 이상의 테스트에 실패한 경우 적용됩니다. 파란색 “”으로 데코레이트된 줄은 테스트되지 않은 경우에 적용됩니다.
 
-  ![이미지](./media/lut-codewindow.png)
+  ![이미지](~/ide/media/lut-codewindow.png)
 
 코드 편집기에서 코드를 수정하면 즉시 Live Unit Testing 검사 시각화가 업데이트됩니다. 편집 내용을 처리하는 동안 다음 그림과 같이 통과, 실패 아래에 적용된 기호가 아닌 라운드 타이머를 추가하여 데이터가 최신 상태가 아님을 나타내도록 시각화가 변경됩니다.
 
-  ![이미지](./media/lut-codeupdating.png)
+  ![이미지](~/test/media/lut-codeupdating.png)
  
 ## <a name="getting-information-on-successful-or-failed-tests"></a>성공하거나 실패한 테스트에 대한 정보 가져오기
 
 코드 창에서 성공하거나 실패한 기호를 마우스로 가리키면 해당 줄에 도달한 테스트 수를 확인할 수 있습니다. 기호를 클릭하면 다음 그림에서처럼 개별 테스트의 상태를 볼 수 있습니다.
  
-  ![이미지](./media/lut-failedinfo.png) 
+  ![이미지](~/test/media/lut-failedinfo.png) 
 
 도구 설명에서 실패한 테스트를 마우스로 가리키면 아래 이미지에 표시된 대로 확장되어 오류에 대한 추가 정보를 제공합니다. 도구 설명에서 실패한 테스트를 클릭하면 해당 테스트로 이동할 수 있습니다.
 
-  ![이미지](./media/lut-failedmsg.png) 
+  ![이미지](~/test/media/lut-failedmsg.png) 
 
 ## <a name="diagnosing-and-correcting-test-failures"></a>테스트 오류 진단 및 수정
 

@@ -36,7 +36,7 @@ caps.handback.revision: 69
   
  Windows Forms와 호스트 컨트롤 모두 데이터 집합 및 데이터 테이블 같은 데이터 원본에 대해 *단순 데이터 바인딩*과 *복합 데이터 바인딩*을 둘 다 지원하는 Windows Forms 데이터 바인딩 모델을 사용합니다. Windows Forms에서 데이터 바인딩 모델에 대한 전체 정보는 [데이터 바인딩 및 Windows Forms](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27)를 참조하세요.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Excel에서 데이터베이스 데이터 사용](http://go.microsoft.com/fwlink/?LinkID=130287)을 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Excel에서 데이터베이스 데이터 사용](http://go.microsoft.com/fwlink/?LinkID=130287)을 참조하세요.  
   
 ## 단순 데이터 바인딩  
  단순 데이터 바인딩은 컨트롤 속성이 데이터 테이블의 값 등 단일 데이터 요소에 바인딩될 때 존재합니다. 예를 들어 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤은 데이터 집합의 필드로 바인딩될 수 있는 <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> 속성을 가집니다. 데이터 집합의 필드가 변경되면 명명된 범위의 값도 변경됩니다.<xref:Microsoft.Office.Tools.Word.XMLNodes> 컨트롤을 제외한 모든 호스트 컨트롤은 단일 데이터 바인딩을 지원합니다.<xref:Microsoft.Office.Tools.Word.XMLNodes> 컨트롤은 컬렉션이므로 데이터 바인딩을 지원하지 않습니다.  

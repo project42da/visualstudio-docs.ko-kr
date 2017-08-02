@@ -24,7 +24,7 @@ caps.handback.revision: 15
 ## 1 및 2 차원 좌표계  
  1 차원 좌표 위치에서 첫 번째 문자는 문자 위치 147 같은 버퍼를 기반으로 합니다.  사용은 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> 버퍼에서를 1 차원 위치에 액세스할 수 있는 인터페이스입니다.  2 차원 좌표계는 줄 고 인덱스 쌍을 기반으로 합니다.  예를 들어, 문자 버퍼 43 5 43 줄 해당 줄에서 첫 번째 문자의 오른쪽 5 개 문자를 수 있습니다.  2 차원 위치를 사용 하 여 버퍼에 액세스를 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> 인터페이스입니다.  모두는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> 및 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> 인터페이스는 텍스트 버퍼 개체에 의해 구현 됩니다 \(<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>\)를 사용 하 여 액세스할 수 있습니다 `QueryInterface`.  다음은 이러한 기능 및 기타 주요 인터페이스 표시 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>.  
   
- ![텍스트 버퍼 개체](../extensibility/media/vstextbuffer.png "vsTextBuffer")  
+ ![텍스트 버퍼 개체](~/extensibility/media/vstextbuffer.gif "vsTextBuffer")  
 텍스트 버퍼 개체  
   
  텍스트 버퍼에서 두 좌표계를 작동 하지만 2 차원 좌표를 사용 하도록 최적화 되었습니다.  1 차원 좌표 시스템 성능 오버 헤드를 만들 수 있습니다.  따라서 가능 하면 2 차원 좌표 시스템을 사용 합니다.  

@@ -74,7 +74,7 @@ ms.lasthandoff: 02/22/2017
   
  이 모델은이 DSL의 인스턴스:  
   
- ![Tudor 패밀리 트리 모델](../modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
+ ![Tudor 패밀리 트리 모델](~/modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
   
 ### <a name="references-and-namespaces"></a>참조 및 네임 스페이스  
  이 항목의 코드를 실행 하려면 다음이 참조 해야 합니다.  

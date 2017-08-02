@@ -91,7 +91,7 @@ caps.handback.revision: 36
   
  다음은 **모델 편집기** 도구 모음입니다.  
   
- ![모델 뷰어 도구 모음](../designers/media/digit-mre-toolbar.png "Digit\-MRE\-Toolbar")  
+ ![모델 뷰어 도구 모음](~/designers/media/digit-mre-toolbar.png "Digit\-MRE\-Toolbar")  
   
  다음 표에서는 위쪽에서 아래쪽으로 나타나는 순서에 따라 나열된 **모델 편집기** 도구 모음에 있는 항목을 설명합니다.  
   

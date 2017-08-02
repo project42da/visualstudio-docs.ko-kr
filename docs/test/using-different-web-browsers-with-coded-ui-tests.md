@@ -117,17 +117,17 @@ ms.lasthandoff: 05/13/2017
  *그 외 무엇을 알아야 하나요?*  
  **참고**  
   
--   ![필수 조건](../test/media/prereq.png "필수 조건") Apple Safari 웹 브라우저는 지원되지 않습니다.  
+-   ![필수 조건](~/test/media/prereq.png "필수 조건") Apple Safari 웹 브라우저는 지원되지 않습니다.  
   
--   ![필수 조건](../test/media/prereq.png "필수 조건") 웹 브라우저를 시작하는 작업은 코딩된 UI 테스트에 포함되어야 합니다.  
+-   ![필수 조건](~/test/media/prereq.png "필수 조건") 웹 브라우저를 시작하는 작업은 코딩된 UI 테스트에 포함되어야 합니다.  
   
      웹 브라우저가 이미 열려 있는 상태에서는 Internet Explorer를 사용하지 않는 이상 단계를 실행하려고 해도 재생이 실패합니다. 따라서 코딩된 UI 테스트에 웹 브라우저 시작을 포함하는 것이 좋습니다.  
   
--   ![필수 조건](../test/media/prereq.png "필수 조건") 최대화, 최소화, 복원 등의 브라우저별 기본 UI 작업은 자동화할 수 없습니다.  
+-   ![필수 조건](~/test/media/prereq.png "필수 조건") 최대화, 최소화, 복원 등의 브라우저별 기본 UI 작업은 자동화할 수 없습니다.  
   
  **팁**  
   
--   ![팁](../test/media/tip.png "팁") 출력을 구성하여 코딩된 UI 로그에 스크린 샷을 포함할 수 있습니다. 이렇게 하려면 QTAgent32.exe.config 파일에 일부 구성 설정을 설정해야 합니다. 기본적으로 이 파일은 다음 디렉터리에 설치됩니다.  
+-   ![팁](~/test/media/tip.png "팁") 출력을 구성하여 코딩된 UI 로그에 스크린 샷을 포함할 수 있습니다. 이렇게 하려면 QTAgent32.exe.config 파일에 일부 구성 설정을 설정해야 합니다. 기본적으로 이 파일은 다음 디렉터리에 설치됩니다.  
   
      **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**  
   

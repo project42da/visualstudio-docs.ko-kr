@@ -40,7 +40,7 @@ caps.handback.revision: 25
   
  현재 패키지는 소스 제어 패키지는 때 반면, 소스 제어 스텁 직접 패키지를 사용 하 여 통신의 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 소스 제어 패키지를 인터페이스입니다.  소스 제어 패키지를 호스팅 자체 소스 제어 UI에 대 한 책임이 있습니다.  
   
- ![소스 컨트롤 아키텍처 그래픽](../../extensibility/internals/media/vsipsccarch.png "VSIPSCCArch")  
+ ![소스 컨트롤 아키텍처 그래픽](~/extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")  
   
  소스 제어 패키지, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 소스 제어 코드 또는 통합을 위한 API를 제공 하지 않습니다.  이에 설명 된 방법을 사용 대비 [소스 제어 플러그 인 만들기](../../extensibility/internals/creating-a-source-control-plug-in.md) 소스 제어 플러그 인 있는 강성 세트 하 고 콜백 함수를 구현 합니다.  
   

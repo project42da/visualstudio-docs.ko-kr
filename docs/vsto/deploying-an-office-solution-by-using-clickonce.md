@@ -128,7 +128,7 @@ caps.handback.revision: 58
   
      다음 그림에서는 Outlook VSTO 추가 기능용 게시 폴더의 구조를 보여 줍니다.  
   
-     ![게시 폴더 구조](../vsto/media/publishfolderstructure.png "게시 폴더 구조")  
+     ![게시 폴더 구조](~/vsto/media/publishfolderstructure.png "게시 폴더 구조")  
   
     > [!NOTE]  
     >  ClickOnce에서는 안전하지 않은 확장명 때문에 IIS\(인터넷 정보 서비스\)의 보안 설치에서 파일을 차단하지 않도록 어셈블리에 .deploy 확장명이 추가됩니다.  사용자가 솔루션을 설치하면 .deploy 확장명이 제거됩니다.  
@@ -451,7 +451,7 @@ caps.handback.revision: 58
   
      다음 그림에서는 이 예제의 게시 폴더 구조를 보여 줍니다.  
   
-     ![게시 폴더 구조](../vsto/media/publishfolderstructure.png "게시 폴더 구조")  
+     ![게시 폴더 구조](~/vsto/media/publishfolderstructure.png "게시 폴더 구조")  
   
      다음에 사용자가 응용 프로그램 또는 사용자 지정 문서를 열면 배포 매니페스트 변경 사항이 검색됩니다.  이전 버전의 Office 솔루션은 ClickOnce 캐시에서 실행됩니다.  
   

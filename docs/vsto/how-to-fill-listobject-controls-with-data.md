@@ -31,7 +31,7 @@ caps.handback.revision: 26
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Excel에서 SharePoint 목록에 연결된 목록 만들기](http://go.microsoft.com/fwlink/?LinkID=130263)를 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Excel에서 SharePoint 목록에 연결된 목록 만들기](http://go.microsoft.com/fwlink/?LinkID=130263)를 참조하세요.  
   
 ### ListObject 컨트롤에 데이터를 바인딩하려면  
   

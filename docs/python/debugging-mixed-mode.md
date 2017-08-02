@@ -40,7 +40,7 @@ ms.lasthandoff: 05/23/2017
 
 대부분의 일반 Python 디버거는 Python 코드만 디버그할 수 있습니다. 그러나 실제로 Python은 고성능 또는 플랫폼 API를 직접 호출하는 기능이 필요한 C 또는 C++와 함께 사용됩니다. 예제는 [Python용 C++ 확장 만들기](cpp-and-python.md)를 참조하세요. Python 프로젝트가 로드될 경우 Visual Studio는 결합된 호출 스택, Python과 네이티브 코드 간 단계별 실행 기능, 두 가지 코드 형식의 중단점 및 네이티브 프레임에서 개체의 Python 표현과 Python 프레임에서 개체의 네이티브 표현을 볼 수 있는 기능을 통해 Python과 네이티브 C/C++를 위한 통합된 동시 혼합 모드 디버깅을 제공합니다.
 
-![혼합 모드 디버깅](media/mixed-mode-debugging.png) 
+![혼합 모드 디버깅](~/python/media/mixed-mode-debugging.png) 
 
 Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 방법에 대한 소개는 [자세히 알아보기: 네이티브 모듈 만들기](https://youtu.be/D9RlT06a1EI)(youtube.com, 9분 9초)를 참조하세요.
 
@@ -53,14 +53,14 @@ Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 
 
 1. [솔루션 탐색기]에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**, **디버그** 탭을 차례로 선택한 다음 **네이티브 코드 디버깅 사용** 옵션을 설정합니다. 이렇게 하면 모든 디버깅 세션에서 혼합 모드를 사용할 수 있습니다.
 
-    ![네이티브 코드 디버깅 사용](media/mixed-mode-debugging-enable-native.png)
+    ![네이티브 코드 디버깅 사용](~/python/media/mixed-mode-debugging-enable-native.png)
 
     > [!Tip]    
     > 네이티브 코드 디버깅을 사용하면 프로그램이 완료되었을 때 일반적인 “계속하려면 아무 키나 누르세요.” 일시 중지를 제공하지 않고 Python 출력 창이 바로 사라질 수 있습니다. 강제로 일시 중지하려면 네이티브 코드 디버깅을 사용할 때 **디버그** 탭의 **실행 > 인터프리터 인수** 필드에 `-i` 옵션을 추가합니다. 이렇게 하면 코드가 완료된 후 Python 인터프리터가 대화형 모드로 전환되며, 이때 Ctrl+Z, Enter 키를 눌러 종료할 때까지 대기합니다.
 
 1. 혼합 모드 디버거를 기존 프로세스에 연결하는 경우(**디버그 > 프로세스에 연결...**), **선택...** 단추를 선택하여 **코드 형식 선택** 대화 상자를 열고, **다음 코드 형식 디버깅** 옵션을 설정하고, 목록에서 **네이티브** 및 **Python**을 모두 선택합니다.
 
-    ![네이티브 및 Python 코드 형식 선택](media/mixed-mode-debugging-code-type.png)
+    ![네이티브 및 Python 코드 형식 선택](~/python/media/mixed-mode-debugging-code-type.png)
 
     코드 형식 설정은 영구적이므로 나중에 다른 프로세스에 연결할 때 혼합 모드 디버깅을 사용하지 않으려면 이 단계를 반복하고 Python 코드 형식을 선택 취소해야 합니다.
 
@@ -75,7 +75,7 @@ Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 
 >
 > 이 경우 디버깅 없이 C++ 프로젝트를 시작하고(**디버그 > 디버그하지 않고 시작** 또는 Ctrl+F5) **디버그 > 프로세스에 연결...**을 사용합니다. 대화 상자가 나타나면 해당하는 프로세스를 선택하고, **선택...** 단추를 사용하여 **코드 형식 선택** 대화 상자를 엽니다. 여기서 아래 표시된 대로 Python을 선택할 수 있습니다. **확인**을 선택하여 이 대화 상자를 닫고 **연결**을 선택하여 디버거를 시작합니다. 디버거를 연결하기 전에 디버그할 Python을 호출하지 않도록 C++ 앱에서 적합한 일시 중지 또는 지연을 도입해야 할 수 있습니다.
 >
-> ![디버거 연결 시 디버깅 형식으로 Python 선택](media/mixed-mode-debugging-attach-type.png)
+> ![디버거 연결 시 디버깅 형식으로 Python 선택](~/python/media/mixed-mode-debugging-attach-type.png)
 
 ## <a name="mixed-mode-specific-features"></a>혼합 모드의 특정 기능
 
@@ -88,7 +88,7 @@ Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 
 
 [호출 스택] 창에는 네이티브 프레임과 Python 스택 프레임 사이에 표시된 전환으로 두 프레임이 모두 인터리브되어 있습니다.
 
-![결합된 호출 스택](media/mixed-mode-debugging-call-stack.png)
+![결합된 호출 스택](~/python/media/mixed-mode-debugging-call-stack.png)
 
 > [!Note]
 > **도구 > 옵션 > 디버깅 > 일반 > 내 코드만 사용** 옵션이 설정된 경우 전환은 전환 방향을 지정하지 않고 "[외부 코드]"로 표시됩니다.
@@ -103,11 +103,11 @@ Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 
 
 네이티브(C 또는 C++) 프레임이 활성 상태이면 디버거 [지역] 창에 지역 변수가 표시됩니다. 네이티브 Python 확장 모듈에서 이러한 지역 변수 중 다수는 `PyObject` 형식(`_object`에 대한 형식 정의임)이거나 몇 가지 다른 기본 Python 형식(아래 목록 참조)입니다. 혼합 모드 디버깅에서 이러한 값은 "Python 보기"라는 레이블이 지정된 추가 자식 노드를 나타냅니다. 이 노드가 확장되면 동일한 개체를 참조하는 지역 변수가 Python 프레임워크에 있었던 경우에 표시한 것과 동일한 변수의 Python 표현을 보여 줍니다. 이 노드의 자식 항목은 편집할 수 있습니다.
 
-![Python 보기](media/mixed-mode-debugging-python-view.png)
+![Python 보기](~/python/media/mixed-mode-debugging-python-view.png)
 
 이 기능을 사용하지 않도록 설정하려면 [지역] 창에서 아무 곳이나 마우스 오른쪽 단추를 클릭하고 **Python > Python 보기 노드 표시** 메뉴 옵션을 토글합니다.
 
-![Python 보기를 사용하도록 설정](media/mixed-mode-debugging-enable-python-view.png)
+![Python 보기를 사용하도록 설정](~/python/media/mixed-mode-debugging-enable-python-view.png)
 
 "[Python 보기]" 노드를 보여 주는 C 형식(사용 가능한 경우):
 
@@ -137,11 +137,11 @@ Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 
 
 이전 섹션과 마찬가지로 Python 프레임이 활성 상태로 있을 때 [지역] 창에서 네이티브 값에 대해 "[C++ 보기]"를 사용하도록 설정할 수 있습니다. 이 기능은 기본적으로 사용되지 않으므로 [지역] 창을 마우스 오른쪽 단추로 클릭하고 **Python > C++ 보기 노드 표시** 메뉴 옵션을 토글하여 사용하도록 설정합니다.
 
-![C++ 보기를 사용하도록 설정](media/mixed-mode-debugging-enable-cpp-view.png)
+![C++ 보기를 사용하도록 설정](~/python/media/mixed-mode-debugging-enable-cpp-view.png)
 
 "[C++ 보기]" 노드는 네이티브 프레임에서 표시하는 것과 동일한 값에 대한 기본 C/C++ 구조의 표현을 제공합니다. 예를 들어 이 노드는 Python 정수(Long)에 대해 `_longobject`(형식 정의가 `PyLongObject`임)의 인스턴스를 보여 주며, 사용자가 직접 작성한 네이티브 클래스의 형식을 추론하려고 합니다. 이 노드의 자식 항목은 편집할 수 있습니다.
 
-![C++ 보기](media/mixed-mode-debugging-cpp-view.png)
+![C++ 보기](~/python/media/mixed-mode-debugging-cpp-view.png)
 
 개체의 자식 필드가 `PyObject` 형식이거나 지원되는 다른 형식 중 하나인 경우 "[Python 보기]" 표현 노드(사용 가능한 경우)를 사용하므로 링크가 Python에 직접 제공되지 않는 개체 그래프를 탐색할 수 있습니다.
 

@@ -53,7 +53,7 @@ Visual Studio에서는 소프트웨어와 사용자 요구 사항 및 시스템 
   
 |**범주**|**링크**|  
 |------------------|---------------|  
-|**비디오**|![비디오에 링크](../data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Doug 7: 코드 이해 및 Visual Studio 2010과 시스템 디자인](http://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![비디오에 링크](../data-tools/media/playvideo.gif "PlayVideo") [Channel 9: 종속성 다이어그램을 사용 하 여 응용 프로그램 구성](http://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![비디오에 링크](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 어떻게 할까요? 시리즈: 종속성 다이어그램을 사용 하 여 코드 유효성을 검사 하는 방법](http://go.microsoft.com/fwlink/?LinkID=214405)|  
+|**비디오**|![비디오에 링크](~/data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Doug 7: 코드 이해 및 Visual Studio 2010과 시스템 디자인](http://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![비디오에 링크](~/data-tools/media/playvideo.gif "PlayVideo") [Channel 9: 종속성 다이어그램을 사용 하 여 응용 프로그램 구성](http://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![비디오에 링크](~/data-tools/media/playvideo.gif "PlayVideo") [MSDN 어떻게 할까요? 시리즈: 종속성 다이어그램을 사용 하 여 코드 유효성을 검사 하는 방법](http://go.microsoft.com/fwlink/?LinkID=214405)|  
 |**포럼**|-   [Visual Studio Visualization / 모델링 도구](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio Visualization / 모델링 SDK (DSL 도구)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
 |**블로그**|-   [Visual Studio ALM + Team Foundation Server 블로그](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**기술 문서 및 저널**|[MSDN 아키텍처 센터](http://go.microsoft.com/fwlink/?LinkId=201343)|  

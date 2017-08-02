@@ -139,7 +139,7 @@ caps.handback.revision: 51
   
 -   [Word, InfoPath 및 PowerPoint](#WordAndInfoPath)  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: Word VSTO 추가 기능에서 작업창 관리](http://go.microsoft.com/fwlink/?LinkId=136781)\(영문\)를 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: Word VSTO 추가 기능에서 작업창 관리](http://go.microsoft.com/fwlink/?LinkId=136781)\(영문\)를 참조하세요.  
   
 ##  <a name="Outlook"></a> Outlook  
  Outlook에 대한 사용자 지정 작업창을 만드는 경우 사용자 지정 작업창이 특정 탐색기 또는 검사기 창에 연결됩니다.  탐색기는 폴더 내용을 표시하는 창이고, 검사기는 메일 메시지 또는 작업과 같은 항목을 표시하는 창입니다.  

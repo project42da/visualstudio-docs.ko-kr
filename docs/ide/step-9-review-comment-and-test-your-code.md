@@ -44,7 +44,7 @@ caps.handback.revision: 29
   
      문은 특정 작업을 수행하도록 프로그램에 지시합니다.  Visual C\#에서는 문이 항상 세미콜론으로 끝나고,  Visual Basic에서는 줄의 끝이 문의 끝입니다. Visual Basic에서는 세미콜론이 필요하지 않습니다. 위의 문은 사용자가 **OpenFileDialog** 구성 요소를 사용하여 선택한 파일을 로드하도록 `PictureBox` 컨트롤에 지시합니다.  
   
- ![비디오에 링크](../data-tools/media/playvideo.png "PlayVideo") 이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 \- 비디오 5](http://go.microsoft.com/fwlink/?LinkId=205216) 또는 [자습서 1: C\#에서 사진 뷰어 만들기 \- 비디오 5](http://go.microsoft.com/fwlink/?LinkId=205206)를 참조하십시오.  이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다.  그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "PlayVideo") 이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 \- 비디오 5](http://go.microsoft.com/fwlink/?LinkId=205216) 또는 [자습서 1: C\#에서 사진 뷰어 만들기 \- 비디오 5](http://go.microsoft.com/fwlink/?LinkId=205206)를 참조하십시오.  이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다.  그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
   
 ### 주석을 추가하려면  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 29
   
 2.  프로그램을 실행하기 전에 다음과 같은 **모두 저장** 도구 모음 단추를 선택하여 프로그램을 저장합니다.  
   
-     ![모두 저장 도구 모음 단추](../ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
+     ![모두 저장 도구 모음 단추](~/ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
 모두 저장 단추  
   
      또는 메뉴 모음에서 **파일**, **모두 저장**을 차례로 선택하여 프로그램을 저장합니다.  프로그램은 초기에 자주 저장하는 것이 좋습니다.  

@@ -96,7 +96,7 @@ caps.handback.revision: 87
   
  아래에는 VSTO 추가 기능을 통해 수행할 수 있는 작업의 예가 나와 있습니다. 이 VSTO 추가 기능은 PowerPoint에 리본 메뉴 컨트롤, 사용자 지정 작업창 및 대화 상자를 추가합니다.  
   
- ![PowerPoint 추가 기능 솔루션](../vsto/media/powerpointaddin.png "PowerPoint 추가 기능 솔루션")  
+ ![PowerPoint 추가 기능 솔루션](~/vsto/media/powerpointaddin.png "PowerPoint 추가 기능 솔루션")  
   
  **자세히**  
   

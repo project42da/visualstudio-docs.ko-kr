@@ -147,7 +147,7 @@ Visual Studio에는 관리되는 [!INCLUDE[win8_appname_long](../debugger/includ
     >   
     >  또한 **선택한 테스트 디버그**, **테스트 열기**를 선택하고 **속성** 옵션을 사용할 수 있습니다.  
     >   
-    >  ![단위 테스트 탐색기 &#45; 단위 테스트 컨텍스트 메뉴](../test/media/unit_test_win8_unittestexplorer_contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")  
+    >  ![단위 테스트 탐색기 &#45; 단위 테스트 컨텍스트 메뉴](~/test/media/unit_test_win8_unittestexplorer_contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")  
   
      단위 테스트가 실행됩니다. 완료되면, 테스트 탐색기는 테스트 상태와 경과된 시간을 표시하고 소스에 대한 링크를 제공합니다.  
   

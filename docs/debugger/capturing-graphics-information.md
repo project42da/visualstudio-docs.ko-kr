@@ -38,7 +38,7 @@ Visual Studio Graphics Analyzer를 사용하여 렌더링 문제 및 성능 문�
   
 #### 프레임을 캡처하려면  
   
--   Visual Studio의 **그래픽** 도구 모음에서 **프레임 캡처** 단추 ![그래픽 캡처 단추 아이콘](../debugger/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")를 선택합니다.  
+-   Visual Studio의 **그래픽** 도구 모음에서 **프레임 캡처** 단추 ![그래픽 캡처 단추 아이콘](~/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")를 선택합니다.  
   
 -   키보드에서 Print Screen 키를 누릅니다.  
   

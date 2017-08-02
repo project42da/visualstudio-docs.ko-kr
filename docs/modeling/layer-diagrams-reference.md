@@ -64,7 +64,7 @@ Visual Studio에서 사용할 수는 *종속성 다이어그램* 시스템의 �
  이 항목 종속성 다이어그램에서 사용할 수 있는 요소에 설명 합니다. 자세한 내용은 만들기 및 종속성 다이어그램을 그릴를 참조 하는 방법에 대 한 [종속성 다이어그램: 지침](../modeling/layer-diagrams-guidelines.md)합니다. 레이어 링 패턴에 대 한 자세한 내용은 참조는 [패턴 < / 사례 사이트](http://go.microsoft.com/fwlink/?LinkId=145794)합니다.  
   
 ## <a name="reading-dependency-diagrams"></a>종속성 다이어그램 읽기  
- ![종속성 다이어그램의 요소를](../modeling/media/uml_layerrefreading.png "UML_LayerRefReading")  
+ ![종속성 다이어그램의 요소를](~/modeling/media/uml_layerrefreading.png "UML_LayerRefReading")  
   
  다음 표에서 종속성 다이어그램에서 사용할 수 있는 요소에 설명 합니다.  
   

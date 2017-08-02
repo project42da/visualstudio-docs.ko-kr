@@ -28,7 +28,7 @@ caps.handback.revision: 20
 # 앱 새로 고침(JavaScript)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  디버깅하는 동안 코드를 변경한 다음 **디버그** 도구 모음에서 **Windows 응용 프로그램 새로 고침** 단추를 선택하여 JavaScript를 사용하여 스토어 앱을 새로 고칠 수 있습니다.  이 단추를 선택하면 디버거를 중지하여 다시 시작하지 않고 응용 프로그램을 다시 로드합니다.  새로 고침 기능을 사용하면 HTML, CSS 및 JavaScript 코드를 수정하고 결과를 빠르게 확인할 수 있습니다.  이 기능은 Windows 스토어 및 Windows Phone 스토어 앱에서 모두 지원됩니다.  
   
@@ -77,7 +77,7 @@ caps.handback.revision: 20
     Hello!  
     ```  
   
-7.  **Windows 앱 새로 고침** 단추\(![Windows 앱 새로 고침 단추](../debugger/media/js_refresh.png "JS\_Refresh")\)를 클릭합니다.  또는 F4 키를 누릅니다.  
+7.  **Windows 앱 새로 고침** 단추\(![Windows 앱 새로 고침 단추](~/debugger/media/js_refresh.png "JS\_Refresh")\)를 클릭합니다.  또는 F4 키를 누릅니다.  
   
 8.  응용 프로그램으로 전환합니다.  디버거를 다시 시작하지 않아도 응용 프로그램이 다시 로드되고 새 페이지 제목이 표시됩니다.  
   

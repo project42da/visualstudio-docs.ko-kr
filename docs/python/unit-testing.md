@@ -67,11 +67,11 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 1. 테스트 탐색기는 테스트에 대한 프로젝트를 검색하고 아래와 같이 표시합니다. 테스트를 두 번 클릭하면 해당 소스 파일이 열립니다.
 
-    ![기본 test_A를 보여 주는 테스트 탐색기](media/unit-test-A.png)
+    ![기본 test_A를 보여 주는 테스트 탐색기](~/python/media/unit-test-A.png)
 
 1. 프로젝트에 더 많은 테스트를 추가함에 따라 도구 모음의 그룹화 방법 메뉴를 사용하여 테스트 탐색기에서 보기를 구성할 수 있습니다.
 
-    ![테스트 탐색기 그룹화 방법 도구 모음 메뉴](media/unit-test-group-menu.png)
+    ![테스트 탐색기 그룹화 방법 도구 모음 메뉴](~/python/media/unit-test-group-menu.png)
 
 1. 또한 검색 필드에 텍스트를 입력하여 이름별로 테스트를 필터링할 수도 있습니다.
 
@@ -89,13 +89,13 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 - 성공한 테스트에는 녹색 릭과 테스트를 실행하는 데 소요된 시간이 표시됩니다.
 
-    ![test_A 성공 상태](media/unit-test-A-pass.png)
+    ![test_A 성공 상태](~/python/media/unit-test-A-pass.png)
 
 - 실패한 테스트에는 빨간색 십자 표시와 콘솔 출력 및 테스트 실행의 `unittest` 출력을 보여 주는 **출력** 링크가 표시됩니다.
 
-    ![test_A 실패 상태](media/unit-test-A-fail.png)
+    ![test_A 실패 상태](~/python/media/unit-test-A-fail.png)
 
-    ![test_A 실패 및 이유](media/unit-test-A-fail-reason.png)
+    ![test_A 실패 및 이유](~/python/media/unit-test-A-fail-reason.png)
 
 ## <a name="debugging-tests"></a>디버깅 테스트
 
@@ -103,7 +103,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 디버깅을 시작하려면 코드에 초기 중단점을 설정한 후 테스트 탐색기에서 테스트(또는 선택)를 마우스 오른쪽 단추로 클릭하고 **선택한 테스트 디버그**를 선택합니다. Visual Studio가 응용 프로그램 코드처럼 Python 디버거를 시작합니다.
 
-![테스트 디버깅](media/unit-test-debugging.png)
+![테스트 디버깅](~/python/media/unit-test-debugging.png)
 
 Visual Studio 버전에 따라 **선택한 테스트에 대한 코드 검사 분석** 및 **테스트 프로파일링** 명령도 사용할 수 있습니다([기능 매트릭스](python-in-visual-studio.md#features-matrix) 참조).
 

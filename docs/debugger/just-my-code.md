@@ -49,7 +49,7 @@ manager: "ghogen"
 > [!NOTE]
 >  **외부 코드 표시** 설정은 현재 사용자의 프로파일러에 저장됩니다.  이 사용자가 여는 모든 언어의 프로젝트에 모두 적용됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK__NET_Framework_Just_My_Code"></a> .NET framework 내 코드만  
  [사용자 코드 및 사용자가 작성하지 않은 코드](#BKMK_NET_User_and_non_user_code) **&#124;** [단계별 실행 동작](#BKMK_NET_Stepping_behavior) **&#124;** [기본 중단점 동작](#BKMK_NET_Breakpoint_behavior) **&#124;** [예외 동작](#BKMK_NET_Exception_behavior)  
@@ -71,24 +71,24 @@ manager: "ghogen"
   
  다른 모든 코드는 사용자 코드로 간주됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [.NET framework 내 코드만](#BKMK__NET_Framework_Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [.NET framework 내 코드만](#BKMK__NET_Framework_Just_My_Code)  
   
 ###  <a name="BKMK_NET_Stepping_behavior"></a> 단계별 실행 동작  
  사용자가 작성하지 않은 코드를 **한 단계씩 실행**\(바로 가기 키: F11\)하는 경우 디버거가 프로시저 단위로 다음 사용자 문을 실행합니다.  **프로시저 나가기**\(바로 가기 키: Shift\+F11\)를 선택하는 경우 디버거가 사용자 코드의 다음 줄을 실행합니다.  사용자 코드가 없는 경우 앱이 종료되거나, 중단점이 적중되거나, 예외가 발생할 때까지 실행이 계속됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [.NET framework 내 코드만](#BKMK__NET_Framework_Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [.NET framework 내 코드만](#BKMK__NET_Framework_Just_My_Code)  
   
 ###  <a name="BKMK_NET_Breakpoint_behavior"></a> 기본 중단점 동작  
  내 코드만 옵션을 사용하는 경우 **모두 중단**\(바로 가기 키: Ctrl\+Alt\+Break\)을 선택하여 표시할 사용자 코드가 없는 위치에서 실행을 중지할 수 있습니다.  이 경우 소스 없음 창이 표시됩니다.  단계별 실행 명령을 선택하면 디버거에서 사용자 코드의 다음 줄로 이동합니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [.NET framework 내 코드만](#BKMK__NET_Framework_Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [.NET framework 내 코드만](#BKMK__NET_Framework_Just_My_Code)  
   
 ###  <a name="BKMK_NET_Exception_behavior"></a> 예외 동작  
  사용자가 작성하지 않은 코드에서 처리되지 않은 예외가 발생할 경우 디버거는 예외가 생성된 사용자 코드의 줄에서 중단됩니다.  
   
  예외에 대해 첫째 예외가 설정된 경우 사용자 코드 줄이 녹색으로 강조 표시됩니다.  호출 스택에 **\[외부 코드\]** 레이블이 있는 주석이 추가된 프레임이 표시됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [.NET framework 내 코드만](#BKMK__NET_Framework_Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [.NET framework 내 코드만](#BKMK__NET_Framework_Just_My_Code)  
   
 ##  <a name="BKMK_C___Just_My_Code"></a> C\+\+ 내 코드만  
  [사용자 코드 및 사용자가 작성하지 않은 코드](#BKMK_CPP_User_and_non_user_code) **&#124;** [단계별 실행 동작](#BKMK_CPP_Stepping_behavior) **&#124;** [예외 동작](#BKMK_CPP_Exception_behavior) **&#124;** [단계별 실행 동작 사용자 지정](#BKMK_CPP_Customize_stepping_behavior) **&#124;** [호출 스택 동작 사용자 지정](#BKMK_CPP_Customize_call_stack_behavior)  
@@ -112,19 +112,19 @@ manager: "ghogen"
   
  고유한 `.natstepfilter` 및 `.natjmc`를 만들어 `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`의 단계별 실행 및 호출 스택 창 동작을 사용자 지정할 수 있습니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Stepping_behavior"></a> 단계별 실행 동작  
  사용자 코드에서 사용자가 작성하지 않은 코드를 **한 단계씩 실행**\(바로 가기 키: F11\) 디버거가 프로시저 단위로 사용자 코드의 다음 줄을 실행합니다.  **프로시저 나가기**\(바로 가기 키: Shift\+F11\)를 선택하는 경우 디버거가 사용자 코드의 다음 줄을 실행합니다.  사용자 코드가 없는 경우 앱이 종료되거나, 중단점이 적중되거나, 예외가 발생할 때까지 실행이 계속됩니다.  
   
  사용자가 작성하지 않은 코드에서 디버거가 중단된 경우\(예를 들어 모두 중단 명령이 사용자가 작성하지 않은 코드에서 중지된 경우\) 사용자가 작성하지 않은 코드에서 단계별 실행이 계속됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Exception_behavior"></a> 예외 동작  
  디버거가 예외를 적중한 경우 사용자 코드에 있든, 사용자가 작성하지 않은 코드에 있든 관계없이 예외에서 중지됩니다.  **예외** 대화 상자에서 **사용자가 처리하지 않은** 옵션은 무시됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Customize_stepping_behavior"></a> 단계별 실행 동작 사용자 지정  
  `*.natstepfilter`  파일에 사용자가 작성하지 않은 코드로 나열하여 프로시저 단위로 실행할 함수를 지정할 수 있습니다.  
@@ -158,7 +158,7 @@ manager: "ghogen"
 |`Module`|선택 사항입니다.  함수를 포함하는 모듈의 전체 경로를 지정하는 ECMA 262 형식의 정규식입니다.  일치 항목 찾기에서는 대\/소문자를 구분하지 않습니다.|  
 |`Action`|필수.  대\/소문자를 구분하는 다음 값 중 하나입니다.<br /><br /> -   `NoStepInto`  \- 일치하는 함수를 프로시저 단위로 실행하도록 디버거에 지시합니다.<br />-   `StepInto`  \- 일치하는 함수를 한 단계씩 실행하고 일치하는 함수에 대한 다른 `NoStepInto`를 재정의하도록 디버거에 지시합니다.|  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> 호출 스택 동작 사용자 지정  
  `*.natjmc`  파일에 지정하여 호출 스택에서 사용자가 작성하지 않은 코드로 처리할 모듈, 소스 파일 및 함수를 지정할 수 있습니다.  
@@ -210,7 +210,7 @@ manager: "ghogen"
 |`Module`|선택 사항입니다.  함수를 포함하는 모듈의 이름 또는 전체 경로입니다.  이 특성을 사용하여 동일한 이름을 가진 함수를 구분할 수 있습니다.|  
 |`ExceptionImplementation`|`true` 로 설정된 경우 이 함수 대신 예외를 발생시킨 함수가 호출 스택에 표시됩니다.|  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [C++ 내 코드만](#BKMK_C___Just_My_Code)  
   
 ##  <a name="BKMK_JavaScript_Just_My_Code"></a> JavaScript 내 코드만  
  [사용자 코드 및 사용자가 작성하지 않은 코드](#BKMK_JS_User_and_non_user_code) **&#124;** [단계별 실행 동작](#BKMK_JS_Stepping_behavior) **&#124;** [기본 중단점 동작](#BKMK_JS_Breakpoint_behavior) **&#124;** [예외 동작](#BKMK_JS_Exception_behavior) **&#124;** [내 코드만 사용자 지정](#BKMK_JS_Customize_Just_My_Code)  
@@ -242,7 +242,7 @@ manager: "ghogen"
   
  기타 모든 코드는 **MyCode**로 분류됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Stepping_behavior"></a> 단계별 실행 동작  
   
@@ -254,7 +254,7 @@ manager: "ghogen"
   
 -   **프로시저 나가기**\(바로 가기 키: Shift\+F11\)는 사용자 코드의 다음 줄에서 중지됩니다.  사용자 코드가 없는 경우 앱이 종료되거나, 중단점이 적중되거나, 예외가 발생할 때까지 실행이 계속됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Breakpoint_behavior"></a> 기본 중단점 동작  
   
@@ -266,7 +266,7 @@ manager: "ghogen"
   
     -   **UnrelatedCode** 코드에서 발견되면 디버거가 중지되지 않습니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Exception_behavior"></a> 예외 동작  
  처리되지 않는 예외가  
@@ -281,7 +281,7 @@ manager: "ghogen"
   
 -   예외가 처리되지 않았으면 디버거가 중단됩니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Customize_Just_My_Code"></a> 내 코드만 사용자 지정  
  단일 Visual Studio 프로젝트에 대해 사용자 코드 및 사용자가 작성하지 않은 코드를 분류하려면 프로젝트의 루트 폴더에 `mycode.json`이라는 .json 파일을 추가합니다.  
@@ -352,4 +352,4 @@ manager: "ghogen"
   
  URL 또는 파일 문자열에는 0개 이상의 문자와 일치하는 `*` 문자가 하나 이상 포함될 수 있습니다.  `*`는 `.*` 정규식과 동일합니다.  
   
- ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents) **&#124;** [JavaScript 내 코드만](#BKMK_JavaScript_Just_My_Code)

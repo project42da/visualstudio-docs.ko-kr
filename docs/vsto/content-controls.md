@@ -58,7 +58,7 @@ caps.handback.revision: 64
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모를 보려면 [Visual Studio Tools for Office System\(3.0\)을 사용하여 Word 2007 콘텐츠 컨트롤에 데이터 바인딩](http://go.microsoft.com/fwlink/?LinkId=136785)\(영문\)을 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모를 보려면 [Visual Studio Tools for Office System\(3.0\)을 사용하여 Word 2007 콘텐츠 컨트롤에 데이터 바인딩](http://go.microsoft.com/fwlink/?LinkId=136785)\(영문\)을 참조하세요.  
   
 ## 콘텐츠 컨트롤 개요  
  콘텐츠 컨트롤은 사용자 입력 및 인쇄 둘 다에 최적화된 UI를 제공합니다.  문서에 콘텐츠 컨트롤을 추가하는 경우 컨트롤은 테두리, 제목 및 사용자에게 지침을 제공할 수 있는 임시 텍스트로 식별됩니다.  컨트롤의 테두리와 제목은 인쇄 버전의 문서에 표시되지 않습니다.  

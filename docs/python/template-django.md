@@ -44,22 +44,22 @@ Visual Studio는 Django 프로젝트용 전체 IntelliSense를 제공합니다.
 
 - 템플릿에 전달된 컨텍스트 변수:
 
-    ![컨텍스트 변수에 대한 IntelliSense](media/template-django-intellisense.png)
+    ![컨텍스트 변수에 대한 IntelliSense](~/python/media/template-django-intellisense.png)
 
 - 기본 제공 및 사용자 정의 항목에 대한 태깅 및 필터링
 
-    ![태그 및 필터에 대한 IntelliSense](media/template-django-intellisense-filter.png)
+    ![태그 및 필터에 대한 IntelliSense](~/python/media/template-django-intellisense-filter.png)
 
 - 포함된 CSS 및 JavaScript에 대한 구문 색 지정:
 
-    ![CSS IntelliSense](media/template-django-intellisense-css.png)
+    ![CSS IntelliSense](~/python/media/template-django-intellisense-css.png)
 
-    ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
+    ![JavaScript IntelliSense](~/python/media/template-django-intellisense-js.png)
 
 
 Visual Studio에서는 Django 프로젝트에 대해 전체 [디버깅 지원](debugging.md)도 제공합니다. 
 
-![중단점](media/template-django-debugging.png)
+![중단점](~/python/media/template-django-debugging.png)
 
 ## <a name="django-management-console"></a>Django 관리 콘솔
 
@@ -67,16 +67,16 @@ Django 관리 콘솔은 **프로젝트** 메뉴에서 다양한 명령을 통해
 
 - **Django Shell 열기...**: 모델을 조작할 수 있는 응용 프로그램 컨텍스트에서 셸을 엽니다.
 
-    ![콘솔](media/template-django-console-shell.png)
+    ![콘솔](~/python/media/template-django-console-shell.png)
 
 - **Django Sync DB**: 대화식 창에서 `manage.py syncdb`를 실행합니다.
 
-    ![콘솔](media/template-django-console-sync-db.png)
+    ![콘솔](~/python/media/template-django-console-sync-db.png)
 
 - **Collect Static**: `manage.py collectstatic --noinput`을 실행하여 `settings.py`의 `STATIC_ROOT`에 지정된 경로에 모든 정적 파일을 복사합니다. [Microsoft Azure에 게시](template-web.md#publishing-to-azure-app-service)할 때 정적 파일은 게시 작업의 일부로 자동으로 수집됩니다.
 
-    ![콘솔](media/template-django-console-collect-static.png)
+    ![콘솔](~/python/media/template-django-console-collect-static.png)
 
 - **Validate**: `manage.py validate`를 실행하여 `settings.py`의 `INSTALLED_APPS`에 지정된 설치된 모델에서 모든 유효성 검사 오류를 보고합니다.
 
-    ![콘솔](media/template-django-console-validate.png)
+    ![콘솔](~/python/media/template-django-console-validate.png)

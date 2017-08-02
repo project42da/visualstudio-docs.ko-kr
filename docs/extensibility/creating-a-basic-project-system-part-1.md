@@ -75,7 +75,7 @@ Visual Studio에서 프로젝트는 개발자가 소스 코드 파일 및 기타
   
 3.  구별 되는 아이콘을 확인 합니다. 이 아이콘에 표시 됩니다는 **새 프로젝트** 자습서의 뒷부분에 나오는 대화 상자입니다.  
   
-     ![간단한 프로젝트 아이콘](../extensibility/media/simpleprojicon.png "SimpleProjIcon")  
+     ![간단한 프로젝트 아이콘](~/extensibility/media/simpleprojicon.png "SimpleProjIcon")  
   
 4.  아이콘을 저장 하 고 아이콘 편집기를 닫습니다.  
   
@@ -471,7 +471,7 @@ Visual Studio에서 프로젝트는 개발자가 소스 코드 파일 및 기타
   
 2.  에 **속성** windows, 16 x 16 픽셀에 비트맵을 줄입니다. 구별 되는 비트맵을 확인 합니다.  
   
-     ![간단한 프로젝트 명령](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
+     ![간단한 프로젝트 명령](~/extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
   
 3.  에 **속성** 창에서 변경 된 **빌드 작업** 비트맵의 **포함 리소스**합니다.  
   
@@ -546,7 +546,7 @@ Visual Studio에서 프로젝트는 개발자가 소스 코드 파일 및 기타
   
 2.  새로 만든 프로젝트에서 프로젝트 노드 아이콘으로 SimpleProjectNode.bmp 사용 되도록를 확인 합니다.  
   
-     ![간단한 프로젝트 새 프로젝트 노드](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
+     ![간단한 프로젝트 새 프로젝트 노드](~/extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
   
 3.  코드 편집기에서 Program.cs를 엽니다. 다음 코드와 같은 소스 코드를 표시 되어야 합니다.  
   
@@ -649,6 +649,6 @@ Visual Studio에서 프로젝트는 개발자가 소스 코드 파일 및 기타
   
 6.  프로젝트 디버깅을 시작 합니다. 새 프로젝트를 컴파일, 실행 및 "VSX Hello\!"을 표시 콘솔 창에서.  
   
-     ![간단한 프로젝트 명령](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
+     ![간단한 프로젝트 명령](~/extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
   
  지금까지 관리 되는 기본 프로젝트 시스템을 구현 했습니다.

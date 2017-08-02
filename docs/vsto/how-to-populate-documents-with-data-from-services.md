@@ -30,7 +30,7 @@ caps.handback.revision: 39
   
  다음 예제에서는 디자인 타임에 문서에 데이터 바인딩된 컨트롤을 추가하는 방법을 보여 줍니다. 런타임에 VSTO 추가 기능에서 데이터 바인딩된 컨트롤을 추가하는 방법의 예제를 보려면 [연습: VSTO 추가 기능 프로젝트의 서비스에서 데이터 바인딩](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)를 참조하세요.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련된 동영상 데모는 [어떻게 할까요?: Microsoft Excel에서 웹 서비스 조작](http://go.microsoft.com/fwlink/?LinkID=130284)을 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모는 [어떻게 할까요?: Microsoft Excel에서 웹 서비스 조작](http://go.microsoft.com/fwlink/?LinkID=130284)을 참조하세요.  
   
 ### 문서 수준 프로젝트를 웹 서비스의 데이터로 채우려면  
   

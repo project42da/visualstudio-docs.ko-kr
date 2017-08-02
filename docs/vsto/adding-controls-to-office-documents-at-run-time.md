@@ -44,7 +44,7 @@ caps.handback.revision: 101
   
 -   [문서에 Windows Forms 컨트롤 추가](#WindowsForms)  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: 런타임에 문서 화면에 컨트롤 추가](http://go.microsoft.com/fwlink/?LinkId=132782)\(영문\)를 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모를 보려면 [어떻게 할까요?: 런타임에 문서 화면에 컨트롤 추가](http://go.microsoft.com/fwlink/?LinkId=132782)\(영문\)를 참조하세요.  
   
 ##  <a name="ControlsCollection"></a> 컨트롤 컬렉션을 사용하여 런타임에 컨트롤 관리  
  런타임에 컨트롤을 추가하거나, 가져오거나, 제거하려면 <xref:Microsoft.Office.Tools.Excel.ControlCollection> 및 <xref:Microsoft.Office.Tools.Word.ControlCollection> 개체의 도우미 메서드를 사용합니다.  

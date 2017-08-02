@@ -86,7 +86,7 @@ ms.lasthandoff: 02/22/2017
   
  아래 그림에 스레드 뷰가 나와 있습니다.  
   
- ![스레드 뷰](../profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
+ ![스레드 뷰](~/profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
 스레드 뷰  
   
  초기에는 스레드가 만들어진 순서로 정렬되므로 주 응용 프로그램 스레드가 맨 먼저 표시됩니다. 뷰의 왼쪽 위에 있는 정렬 옵션을 사용하여 실행 작업이 가장 많이 수행된 순서대로 스레드를 정렬하는 등 다른 기준에 따라 스레드를 정렬할 수 있습니다.  

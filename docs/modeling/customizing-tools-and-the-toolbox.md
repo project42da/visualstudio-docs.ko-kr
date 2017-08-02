@@ -201,17 +201,17 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
  **중첩된 된 구성 요소에서 OutPort로 들어오는 연결**  
   
- ![연결 작성기](../modeling/media/connectionbuilder_3.png "ConnectionBuilder_3")  
+ ![연결 작성기](~/modeling/media/connectionbuilder_3.png "ConnectionBuilder_3")  
   
  따라서 중첩된 구성 요소에서 OutPort로의 연결이 가능하도록 지정할 수 있습니다. 설정 하면 이러한 연결을 지정 하려면 **Custom Accept** 에 **InPort** 소스 역할을 하는 형식 및 **OutPort** 형식을 대상 역할로 **DSL 정보** 다음 그림과 같이 창:  
   
  **DSL 탐색기의 링크 연결 지시문**  
   
- ![연결 작성기 이미지](../modeling/media/connectionbuilder_4a.png "ConnectionBuilder_4a")  
+ ![연결 작성기 이미지](~/modeling/media/connectionbuilder_4a.png "ConnectionBuilder_4a")  
   
  **링크 연결 지시문 DSL 세부 정보 창에서**  
   
- ![](../modeling/media/connectionbuilder_4b.png "ConnectionBuilder_4b")  
+ ![](~/modeling/media/connectionbuilder_4b.png "ConnectionBuilder_4b")  
   
  그런 다음 ConnectionBuilder 클래스에서 메서드를 입력해야 합니다.  
   

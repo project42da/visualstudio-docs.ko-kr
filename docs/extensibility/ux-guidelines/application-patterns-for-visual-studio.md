@@ -88,7 +88,7 @@ Visual Studio 도구 창은 일부 (예: 자동 숨기기 기능) 사용자 활�
   
 -   **탭된 문서** 도구 창을 문서 내에서 잘 도킹 될 수 있습니다. 이것은 허용의 프레임 가장자리에 도킹 된 것 보다 더 많은 부동산 해야 하는 개체 브라우저와 같은 큰 도구 창, 적합 합니다.  
   
-![Visual Studio의 도구 창 상태](../../extensibility/ux-guidelines/media/0702-01_toolwindowstates.png "0702-01_ToolWindowStates")<br />Visual Studio의 도구 창 상태
+![Visual Studio의 도구 창 상태](~/extensibility/ux-guidelines/media/0702-01_toolwindowstates.png "0702-01_ToolWindowStates")<br />Visual Studio의 도구 창 상태
   
 #### <a name="single-instance-and-multi-instance"></a>단일 인스턴스 및 다중 인스턴스  
 도구 창에는 단일 인스턴스 또는 다중 인스턴스입니다. 다중 인스턴스 도구 창 않을 수도 있습니다 하는 동안 일부 단일 인스턴스 도구 창은 현재 문서 창에 연결 수 있습니다. 다중 인스턴스 도구 창에 응답의 **창 &gt; 새 창** 명령을 실행 하 여 창의 새 인스턴스를 만들어야 합니다. 다음 그림에서는 창의 인스턴스 활성화 된 경우 새 창 명령을 사용 하도록 설정 하는 도구 창이 수행 합니다.  
@@ -339,7 +339,7 @@ Specialty "서명" 대화 상자는 테마를 적용할 수 있습니다. 테마
   
 **도구 &gt; 옵션** 대화 상자는 포함 된 트리를 사용 하 여 계층화 된 대화 상자:  
   
-![도구 > 옵션은 Visual Studio의 계층화 된 대화의 예입니다.](../../extensibility/ux-guidelines/media/0704-02_toolsoptions.png "0704-02_ToolsOptions")<br />도구 > 옵션은 Visual Studio의 계층화 된 대화의 예입니다.
+![도구 > 옵션은 Visual Studio의 계층화 된 대화의 예입니다.](~/extensibility/ux-guidelines/media/0704-02_toolsoptions.png "0704-02_ToolsOptions")<br />도구 > 옵션은 Visual Studio의 계층화 된 대화의 예입니다.
   
 ####  <a name="BKMK_Wizards"></a>마법사  
 마법사는 논리는 일련의 단계를 통해 사용자는 작업의 완료에 전송 하는 데 유용 합니다. 여러 선택 항목 순차적 패널에 제공 되 고 사용자는 다음 단계로 진행 하기 전에 각 단계를 계속 해야 합니다. 충분 한 기본값 사용을 한 번의 **마침** 단추를 사용할 수 있습니다.  

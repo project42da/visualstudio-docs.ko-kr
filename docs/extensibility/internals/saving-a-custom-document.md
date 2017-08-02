@@ -23,7 +23,7 @@ caps.handback.revision: 12
 
 환경 핸들은 **Save**, **Save As**, 및 **Save All** 명령입니다.  사용자를 클릭할 때  **저장**,  **다른 이름으로 저장**,  **또는 모두 저장** 에 있는  **파일** 메뉴 또는 발생 결과 모두 저장에서 다음 프로세스 솔루션을 닫습니다.  
   
- ![고객 편집기 저장](../../extensibility/internals/media/private.gif "Private")  
+ ![고객 편집기 저장](~/extensibility/internals/media/private.gif "Private")  
 저장, 다른 이름으로 저장 및 처리에 대 한 사용자 지정 편집기 모두 저장 명령  
   
  다음 단계에서는이 프로세스를 자세히 설명 합니다.  

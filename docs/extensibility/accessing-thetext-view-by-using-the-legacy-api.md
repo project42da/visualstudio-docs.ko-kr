@@ -24,7 +24,7 @@ caps.handback.revision: 15
 ## 텍스트 뷰 개체  
  각 보기는 고유한 텍스트 버퍼를 연결 된 및 버퍼에 있는 데이터의 보기입니다.  다음 다이어그램으로 표시 되며 텍스트 뷰 개체의 핵심 인터페이스를 보여 줍니다. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>.  
   
- ![Visual Studio 텍스트 뷰 개체](../extensibility/media/vstextview.png "vstextview")  
+ ![Visual Studio 텍스트 뷰 개체](~/extensibility/media/vstextview.gif "vstextview")  
 텍스트 뷰 개체  
   
  보기 버퍼에 텍스트를 표시 하는 방법입니다.  보기에서 보이는 텍스트 버퍼에서는 정확 하 게 표현 되지 않도록 줄 바꿈 및 개요와 같은 기능이 포함 되어 있습니다.  

@@ -52,7 +52,7 @@ Visual Studio의 Python 지원 기능에는 Azure 클라우드 서비스와 Bott
 
 1. Python 템플릿은 왼쪽의 **템플릿 > 다른 언어 > Python**으로 이동하거나 간단히 "Python"을 검색하면 찾을 수 있습니다.
 
-    ![Python 프로젝트가 표시된 새 프로젝트 대화 상자](media/getting-started-new-project.png)
+    ![Python 프로젝트가 표시된 새 프로젝트 대화 상자](~/python/media/getting-started-new-project.png)
 
 1. "Python 응용 프로그램" 템플릿을 선택하고 프로젝트 폴더를 지정하고 **확인**을 선택합니다. (지금 바로 프로젝트의 로컬 리포지토리를 만들려는 경우 **소스 제어에 추가** 옵션도 선택하세요).
 
@@ -61,11 +61,11 @@ Visual Studio의 Python 지원 기능에는 Azure 클라우드 서비스와 Bott
 
 1. 몇 분 후에 Visual Studio 솔루션 탐색기 창에 프로젝트가 열린 것을 볼 수 있습니다. 여기서 프로젝트의 파일 및 폴더를 찾아보고 환경을 관리할 수 있습니다.
 
-    ![Python 프로젝트와 솔루션 탐색기](media/getting-started-solution-explorer-1.png)
+    ![Python 프로젝트와 솔루션 탐색기](~/python/media/getting-started-solution-explorer-1.png)
 
 1. **Python 환경** 노드를 확장하면 어떤 Python 인터프리터가 이 프로젝트의 현재 기본값인지 볼 수 있습니다. 또한 해당 인터프리터 노드를 확장하면 해당 환경에서 사용할 수 있는 라이브러리의 목록도 볼 수 있습니다.
 
-    ![Python 환경을 보여 주는 솔루션 탐색기](media/getting-started-solution-explorer-2.png)
+    ![Python 환경을 보여 주는 솔루션 탐색기](~/python/media/getting-started-solution-explorer-2.png)
 
 1. Visual Studio 2015 또는 이전 버전을 사용 중인 경우에는 기본적으로 설치된 Python 인터프리터가 없을 것입니다. 이 프로세스에 대한 자세한 내용은 [Python 인터프리터 선택 및 설치](python-environments.md#selecting-and-installing-python-interpreters)를 참조하세요.
 
@@ -82,11 +82,11 @@ Visual Studio의 Python 지원 기능에는 Azure 클라우드 서비스와 Bott
 
 1. `print("Hello world")`를 입력하기 시작하면 Visual Studio IntelliSense가 입력 도중에 자동 완성 옵션을 어떻게 표시하는지 알 수 있습니다. 드롭다운 목록에서 윤곽선이 있는 옵션은 Tab 키를 누르면 사용되는 기본 완성입니다. 이는 더 긴 문이나 식별자가 포함된 경우에 매우 유용합니다.
 
-    ![IntelliSense 자동 완성 팝업](media/getting-started-coding-1.png)
+    ![IntelliSense 자동 완성 팝업](~/python/media/getting-started-coding-1.png)
 
 1. IntelliSense는 사용자가 사용하는 문, 호출하는 함수 등에 따라 다른 정보를 표시합니다. `print` 함수는 `(`를 입력하여 호출하면 함수 사용법에 대한 전체 정보를 팝업 창에 표시하고, 사용자가 입력해야 하는 현재 인수를 굵게 표시해 주기까지 합니다(여기에 표시된 **value**).
 
-    ![IntelliSense 함수 자동 완성 팝업](media/getting-started-coding-2.png)
+    ![IntelliSense 함수 자동 완성 팝업](~/python/media/getting-started-coding-2.png)
 
 1. 다음과 일치하도록 문을 완성하세요.
 
@@ -96,28 +96,28 @@ Visual Studio의 Python 지원 기능에는 Azure 클라우드 서비스와 Bott
 
 1. 코드를 실행하려면 아래에 표시된 도구 모음에서 **시작** 단추를 선택하고 F5 키를 누르거나 **디버그 > 디버깅 시작** 메뉴 항목을 선택합니다.
 
-    ![디버그 도구 모음의 시작 단추](media/getting-started-coding-3.png)
+    ![디버그 도구 모음의 시작 단추](~/python/media/getting-started-coding-3.png)
 
     > [!Note]
     > Visual Studio 2015 및 이전 버전에서 인터프리터가 없다는 메시지가 표시될 경우 기본적으로 인터프리터가 설치되어 있지 않은 것이므로 [Python 인터프리터 선택 및 설치](python-environments.md#selecting-and-installing-python-interpreters)를 참조하세요.
 
 1. Visual Studio에서 프로젝트의 기본 환경을 사용하여 코드를 실행하고 명령 창에 결과를 표시합니다. 키를 눌러 해당 창을 닫고 디버깅 세션을 종료합니다.
 
-    ![디버그 도구 모음의 시작 단추](media/getting-started-coding-4.png)
+    ![디버그 도구 모음의 시작 단추](~/python/media/getting-started-coding-4.png)
 
 1. IntelliSense는 문과 함수 외에 `import` 문 완성 기능도 제공합니다. 이 기능을 사용하면 사용자 환경에서 사용할 수 있는 모듈과 해당 모듈에서 사용할 수 있는 멤버를 손쉽게 확인할 수 있습니다. 편집기에서 `print` 줄을 삭제하고 `import` 입력을 시작합니다. 모듈 목록이 표시되는 것을 볼 수 있습니다.
 
-    ![import 문에 사용할 수 있는 모듈을 보여 주는 IntellSense](media/getting-started-coding-5.png)
+    ![import 문에 사용할 수 있는 모듈을 보여 주는 IntellSense](~/python/media/getting-started-coding-5.png)
 
 1. `sys`를 입력하거나 선택하여 줄을 완성합니다.
 
 1. 다음 줄에 `from`을 입력하면 모듈 목록을 다시 볼 수 있습니다.
 
-    ![from 문에 사용할 수 있는 모듈을 보여 주는 IntellSense](media/getting-started-coding-6.png)
+    ![from 문에 사용할 수 있는 모듈을 보여 주는 IntellSense](~/python/media/getting-started-coding-6.png)
 
 1. `math`를 선택하거나 입력한 후 계속해서 공백과 `import`를 입력하면 모듈 멤버가 표시됩니다.
 
-    ![모듈 멤버를 보여 주는 IntellSense](media/getting-started-coding-7.png)
+    ![모듈 멤버를 보여 주는 IntellSense](~/python/media/getting-started-coding-7.png)
 
 1. `sin`, `cos` 및 `radians` 멤버를 가져오고 각각에 사용 가능한 자동 완성을 확인하여 완료합니다. 완료되면 코드가 다음과 같이 표시됩니다.
 
@@ -145,15 +145,15 @@ Python용 Visual Studio 대화형 창은 일반적인 편집-빌드-디버그 �
 
 1. Visual Studio 주 메뉴에서 **보기 > 다른 창 > Python 대화형 창**을 선택하여 대화형 창을 엽니다. 이 창은 일반적인 >>> Python REPL 프롬프트와 함께 열립니다. 툴바의 드롭다운 메뉴를 사용하여 언제든지 환경을 변경할 수 있습니다.
 
-    ![Python 대화형 창](media/getting-started-interactive-1.png)
+    ![Python 대화형 창](~/python/media/getting-started-interactive-1.png)
 
 1. 몇 가지 문(예: `print("hello")`) 및 식(예: `123/567`)을 입력하여 즉각적인 결과를 확인하세요.
 
-    ![Python 대화형 창의 즉각적인 결과](media/getting-started-interactive-2.png)
+    ![Python 대화형 창의 즉각적인 결과](~/python/media/getting-started-interactive-2.png)
 
 1. 함수 정의와 같이 여러 줄로 된 문을 작성하기 시작하면 대화형 창에 명령줄 REPL과 달리 연속되는 줄을 위해 자동 들여쓰기를 제공하는 ... 프롬프트가 표시됩니다.
 
-    ![연속 문을 지원하는 Python 대화형 창](media/getting-started-interactive-3.png)
+    ![연속 문을 지원하는 Python 대화형 창](~/python/media/getting-started-interactive-3.png)
 
 1. 대화형 창에서는 사용자가 입력한 모든 내용의 전체 기록을 제공하고 여러 줄 기록 항목으로 명령줄 REPL을 개선합니다. 예를 들어 함수 줄을 줄별로 다시 만들지 않고 위에서 설명한 `f` 함수의 전체 정의를 단일 단위로 손쉽게 회수하고 이름을 손쉽게 `make_double`로 변경할 수 있습니다.
 
@@ -166,7 +166,7 @@ Python용 Visual Studio 대화형 창은 일반적인 편집-빌드-디버그 �
 
 1. hello.py의 모든 코드(`import` 문 포함)를 선택하고 마우스 오른쪽 단추를 클릭한 후 **Interactive로 보내기**(Ctrl+Enter)를 선택합니다. 시스템에서 코드를 대화형 창에 즉시 붙여 넣고 실행합니다. 코드는 함수를 정의하므로 해당 함수를 여러 번 호출하여 신속하게 테스트할 수 있습니다.
 
-    ![대화형 창에 코드 보내기](media/getting-started-interactive-4.png)
+    ![대화형 창에 코드 보내기](~/python/media/getting-started-interactive-4.png)
 
 1. **Interactive로 보내기**를 사용하면 여러 줄의 코드(예: 온라인에서 발견한 코드)를 직접 작성할 필요 없이 대화형 창에 효과적으로 붙여 넣을 수 있습니다. 예를 들어 아래 코드를 복사하고 하면 대화형 창에 붙여 넣으면(Ctrl+V) 아무 일도 일어나지 않습니다. 하지만 편집기에 붙여 넣고 선택한 후 **Interactive로 보내기** 명령을 사용하면 코드가 실행되는 것을 볼 수 있습니다.
 
@@ -176,13 +176,13 @@ Python용 Visual Studio 대화형 창은 일반적인 편집-빌드-디버그 �
       print(s) 
   ```
 
-    ![Interactive로 보내기를 사용하여 여러 줄의 코드 붙여넣기](media/getting-started-interactive-5.png)
+    ![Interactive로 보내기를 사용하여 여러 줄의 코드 붙여넣기](~/python/media/getting-started-interactive-5.png)
 
 1. 다시 말하지만 함수 정의는 REPL 기록에 단일 단위로 존재하기 때문에 손쉽게 다시 돌아가서 원하는 부분을 변경한 후 함수를 다시 테스트할 수 있습니다.
 
 1. 작성된 코드에 만족할 경우 대화형 창에서 해당 코드를 선택하고 마우스 오른쪽 단추를 클릭하고 **코드 복사**를 선택한 후 편집기에 붙여 넣을 수 있습니다. **코드 복사** 명령의 특별한 기능은 모든 출력과 >>> 및 ... 프롬프트 텍스트를 자동으로 생략한다는 점입니다. 예를 들어 아래에 표시된 선택 영역에 이 명령을 사용하는 경우:
 
-  ![대화형 창 코드 복사 명령](media/getting-started-interactive-6.png)
+  ![대화형 창 코드 복사 명령](~/python/media/getting-started-interactive-6.png)
 
   다음에만 붙여 넣습니다.
 
@@ -236,17 +236,17 @@ Visual Studio는 프로젝트 관리, 풍부한 편집 환경 제공 및 대화�
 
 1. `main` 함수의 첫 번째 줄 옆에 있는 왼쪽 회색 여백을 클릭하거나 해당 줄에 캐럿을 추가하고 *디버그 > 중단점 설정/해제** 명령(F9)을 사용하여 해당 줄에 중단점을 설정하세요. 회색 여백에 (아래에 파란색 화살표로 표시된) 중단점을 나타내는 빨간 점이 표시됩니다.
 
-    ![중단점 설정](media/getting-started-debugging-1.png)
+    ![중단점 설정](~/python/media/getting-started-debugging-1.png)
 
 1. 디버거를 다시 시작하면 해당 중단점이 있는 줄에서 코드 실행이 중지되는 것을 볼 수 있습니다. 여기서 호출 스택을 보고 지역 창의 지역 변수를 살펴볼 수 있습니다.
 
-    ![Python의 중단점 UI 환경](media/getting-started-debugging-2.png)
+    ![Python의 중단점 UI 환경](~/python/media/getting-started-debugging-2.png)
 
 1. F10 키, **디버그 > 프로시저 단위 실행** 명령 또는 프로시저 단위 실행 툴바 단추를 사용하여 `for` 루프의 몇 가지 반복을 한 줄씩 단계별로 실행합니다. 그러면 디버거가 `make_dot_string`에 대한 각 호출을 실행하지만 해당 함수 내에서 중단되지 않습니다(중단점을 설정하지 않은 경우).
 
 1. 툴바에 표시되는 단계별 실행 단추 세 개(아래에 표시)는 왼쪽부터 오른쪽의 순서로 한 단계씩 코드 실행, 프로시저 단위 실행 및 프로시저 나가기입니다.
 
-    ![단계별 실행 툴바 단추](media/getting-started-debugging-3.png)
+    ![단계별 실행 툴바 단추](~/python/media/getting-started-debugging-3.png)
 
 1. 한 단계씩 코드 실행(F11)을 사용하면 `make_dot_string`이 한 단계씩 실행됩니다. `for` 루프에서 해당 함수로 한 단계씩 실행되는 것을 볼 수 있습니다. 다시 단계별로 실행하면 `for` 루프로 돌아가지만 함수에 추가 줄이 있다면 하나씩 단계별로 실행하는 것이 좋습니다. 함수 내에 나머지 함수 줄을 실행한 후 호출 코드로 돌아가려면 프로시저 나가기(Shift+F11)를 사용합니다.
 
@@ -254,7 +254,7 @@ Visual Studio는 프로젝트 관리, 풍부한 편집 환경 제공 및 대화�
 
 1. 수백 개의 루프 반복을 단계별로 실행하는 작업은 지루할 수 있으므로 이전에 설정된 중단점에 조건을 추가하여 `i` 값이 특정 값(예: 1600)을 초과할 경우에만 중단되도록 할 수 있습니다. 이렇게 하려면 빨간색 중단점을 마우스 오른쪽 단추로 클릭하고 **조건...**을 선택합니다. 표시되는 중단점 설정 창에서 `i > 1600`을 식으로 입력하고 **닫기**를 선택합니다. 이제 F5 키를 눌러 계속하면 프로그램이 잠시 실행된 후 다시 중단되는 것을 볼 수 있습니다. 
 
-    ![중단점 조건 설정](media/getting-started-debugging-4.png)
+    ![중단점 조건 설정](~/python/media/getting-started-debugging-4.png)
 
 1. 프로그램을 완료하려면 중단점을 다시 설정/해제하고 F5 키를 누르면 됩니다. 디버깅이 완료되면 Visual Studio가 편집 모드로 돌아갑니다.
 

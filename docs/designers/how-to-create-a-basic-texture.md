@@ -37,7 +37,7 @@ caps.handback.revision: 15
   
  다음 단계는 "동그라미" 대상을 나타내는 텍스처를 만드는 방법을 보여 줍니다. 완료되면 텍스쳐가 다음 그림과 같아야 합니다.  질감의 투명도를 보다 잘 보여 주기 위해, 이미지 편집기는 녹색을 사용하여 표시하고, 바둑판 패턴을 표시하여 확인합니다.  
   
- ![녹색으로 표시된 투명도가 있는 "Bullseye" 대상](../designers/media/digit-bullseye-texture-in-editor.png "Digit\-Bullseye\-Texture\-In\-Editor")  
+ ![녹색으로 표시된 투명도가 있는 "Bullseye" 대상](~/designers/media/digit-bullseye-texture-in-editor.png "Digit\-Bullseye\-Texture\-In\-Editor")  
   
  시작하기 전에 **속성** 창과 도구 상자가 표시되는지 확인하십시오.  사용 하는 **속성** 창으로 이미지 크기 설정하고, 도구 속성을 변경하고 작업 하는 동안 색상을 지정할 수 있습니다.  
   
@@ -85,7 +85,7 @@ caps.handback.revision: 15
   
  전체 "bullseye" 대상 질감을 완료합니다.  투명도를 사용하여 표시 된 최종 이미지는 다음과 같습니다.  
   
- ![전체 "bullseye" 대상 질감](../designers/media/gfx_image_demo_bullseye.png "gfx\_image\_demo\_bullseye")  
+ ![전체 "bullseye" 대상 질감](~/designers/media/gfx_image_demo_bullseye.png "gfx\_image\_demo\_bullseye")  
   
  다음 단계로, 이 텍스처의 밉 레벨을 생성할 수 있습니다.  자세한 내용은 [방법: MIP 수준 만들기 및 수정](../designers/how-to-create-and-modify-mip-levels.md)를 참조하십시오.  
   

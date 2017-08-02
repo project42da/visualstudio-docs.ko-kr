@@ -300,11 +300,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ### <a name="testing-the-environment-font"></a>테스트 환경 글꼴  
  UI 환경 글꼴을 사용 하 고 크기 설정을 적용 되도록 열고 **도구 > 옵션 > 환경 > 글꼴 및 색** "환경 글꼴" 아래에서 선택 하 고는 "설정 표시:" 드롭 다운 메뉴.  
   
- ![도구에서 글꼴 및 색 설정을 &gt; 옵션 대화 상자](../../extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />도구에서 글꼴 및 색 설정을 &gt; 옵션 대화 상자
+ ![도구에서 글꼴 및 색 설정을 &gt; 옵션 대화 상자](~/extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />도구에서 글꼴 및 색 설정을 &gt; 옵션 대화 상자
   
  기본값 보다 매우 다른 글꼴을 설정 합니다. 명확 하 게 하는 UI를 업데이트 하지 않습니다, serif (예: "Times New Roman")와 글꼴을 선택 하 고 매우 큰 크기를 설정 합니다. 그런 다음 테스트 환경에 반영 하기 위해 UI. 라이선스 대화 상자를 사용 하는 예제는 다음과 같습니다.  
   
- ![환경 글꼴을 고려 하지 않는 UI 텍스트의 예](../../extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />환경 글꼴을 고려 하지 않는 UI 텍스트의 예
+ ![환경 글꼴을 고려 하지 않는 UI 텍스트의 예](~/extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />환경 글꼴을 고려 하지 않는 UI 텍스트의 예
   
  이 경우 "사용자 정보" 및 "제품 정보" 글꼴을 유지 하지 됩니다. 명시적 글꼴 검토 사양의 일부분으로 지정 하지 않으면 버그 수 없지만 일부 경우에는 명시적 디자인 선택 수 있습니다.  
   
@@ -443,7 +443,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**사용법:**<br /><br /> -Section 머리글 문서에 잘 UI<br />-보고서<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 14pt 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![155% 환경 글꼴 제목의 예](../../extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
+|**사용법:**<br /><br /> -Section 머리글 문서에 잘 UI<br />-보고서<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 14pt 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![155% 환경 글꼴 제목의 예](~/extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
   
 #### <a name="133-environment-font"></a>133% 환경 글꼴  
   

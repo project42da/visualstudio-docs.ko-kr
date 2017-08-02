@@ -40,7 +40,7 @@ ms.lasthandoff: 05/12/2017
 
 RTVS(Visual Studio용 R 도구)를 설치해 주셔서 감사합니다. 확인해 보고 아래 [리소스](#resources) 아래의 링크를 사용하여 어떻게 생각하는지 알려 주세요.
 
-![RTVS 스크린샷](media/installer-screenshot.png)
+![RTVS 스크린샷](~/rtvs/media/installer-screenshot.png)
 
 ## <a name="resources"></a>리소스
 

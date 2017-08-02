@@ -29,7 +29,7 @@ caps.handback.revision: 10
 ## 확장 및 Visual Studio에서 업데이트에 개인 갤러리를 추가합니다.  
  에 추가할 수 개인 갤러리를 사용할 수 있는 **확장 및 업데이트** Visual Studio에서.  
   
- ![확장 관리자 추가 대화 상자](../extensibility/media/em_adddialog.png "EM\_AddDialog")  
+ ![확장 관리자 추가 대화 상자](~/extensibility/media/em_adddialog.png "EM\_AddDialog")  
   
 #### 확장 및 업데이트에는 개인 갤러리를 추가 하려면  
   
@@ -67,7 +67,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 ## 개인 갤러리에서 확장을 설치합니다.  
  검색 하 고에서 개인 갤러리에서 Visual Studio 확장을 설치할 수 **확장 및 업데이트**합니다. 다음 단계 라는 개인 갤러리를 사용 하 여 `My Gallery`합니다.  
   
- ![전용 갤러리를 설치하는 확장 관리자](../extensibility/media/em_.png "EM\_")  
+ ![전용 갤러리를 설치하는 확장 관리자](~/extensibility/media/em_.png "EM\_")  
   
 #### 검색 하 고 개인 갤러리에서 확장을 설치 합니다.  
   
@@ -80,7 +80,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 ## 개인 갤러리에서 확장을 업데이트합니다.  
  새 버전의 Visual Studio 확장은 개인 갤러리에 게시 된, 설치 된 확장 업데이트할 수 있습니다. 다음 단계 라는 개인 갤러리를 사용 하 여 `My Repository`합니다.  
   
- ![확장 관리자 전용 갤러리 업데이트](../extensibility/media/em_update.png "EM\_Update")  
+ ![확장 관리자 전용 갤러리 업데이트](~/extensibility/media/em_update.png "EM\_Update")  
   
 #### 개인 갤러리에서 설치 된 확장을 업데이트 하려면  
   

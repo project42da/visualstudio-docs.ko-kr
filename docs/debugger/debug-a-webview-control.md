@@ -23,7 +23,7 @@ caps.handback.revision: 10
 # WebView 컨트롤 디버깅
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Windows 런타임 앱에서 `WebView` 컨트롤을 조사 및 디버깅하려면 앱 시작 시 스크립트 디버거를 연결하도록 Visual Studio를 구성하면 됩니다.  Visual Studio 2013 업데이트 2부터 디버거를 사용하여 다음의 두 가지 방법으로 `WebView` 컨트롤과 상호 작용할 수 있습니다.  
   

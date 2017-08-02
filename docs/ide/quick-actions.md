@@ -40,7 +40,7 @@ ms.lasthandoff: 05/26/2017
 # 빠른 작업
 <a id="quick-actions" class="xliff"></a>
 
-[빠른 작업](refactoring-code-generation-quick-actions.md#quick-actions)을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다.  특별히 C#이나 Visual Basic에 적용되는 많은 빠른 작업이 있지만 일부는 C# 및 Visual Basic 프로젝트 모두에 적용되기도 합니다.  이러한 작업은 전구 아이콘 ![작은 전구 아이콘](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Ctrl+.**를 눌러 적용할 수 있습니다.
+[빠른 작업](refactoring-code-generation-quick-actions.md#quick-actions)을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다.  특별히 C#이나 Visual Basic에 적용되는 많은 빠른 작업이 있지만 일부는 C# 및 Visual Basic 프로젝트 모두에 적용되기도 합니다.  이러한 작업은 전구 아이콘 ![작은 전구 아이콘](~/ide/media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Ctrl+.**를 눌러 적용할 수 있습니다.
 
 빨간색 오류 표시선이 나타나는 경우 전구가 표시되며 Visual Studio에서는 문제 해결 방법에 대한 제안이 나타납니다. 예를 들어 빨간색 오류 표시선으로 나타난 오류가 있는 경우 해당 오류에 대한 해결 방법을 사용할 수 있을 때 전구가 나타납니다. 어떤 언어든지 타사에서 SDK에 포함하는 방식 등을 통해 사용자 지정 진단 및 제안을 제공할 수 있으며 Visual Studio 전구는 이러한 규칙을 기반으로 켜집니다.  
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/26/2017
 
 2. **Ctrl +** 줄의 임의 위치를 눌러 전구를 호출하고 잠재적 해결 방법 목록으로 바로 이동합니다.  
 
-   ![마우스로 가리킨 전구](../ide/media/vs2015_lightbulb_hover.png "VS2017_LightBulb_Hover")  
+   ![마우스로 가리킨 전구](~/ide/media/vs2015_lightbulb_hover.png "VS2017_LightBulb_Hover")  
 
 ### 잠재적 해결 방법을 보려면
 <a id="to-see-potential-fixes" class="xliff"></a>  
@@ -357,47 +357,47 @@ Dim s As String = $"My string with {num} in the middle"
 <a id="remove-merge-conflict-markers" class="xliff"></a>
 이러한 빠른 작업을 통해 충돌 코드 및 표식을 제거하는 “변경을 적용”하여 병합 충돌을 해결할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
 
-![리팩터링 - 병합 충돌 해결](../ide/media/vside-refactoring-merge-conflicts.png)
+![리팩터링 - 병합 충돌 해결](~/ide/media/vside-refactoring-merge-conflicts.png)
 
 ### 매개 변수에 대한 null 검사 추가
 <a id="add-null-checks-for-parameters" class="xliff"></a>
 빠른 작업을 통해 매개 변수가 null인지 알려주는 검사를 코드에 추가할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
 
-![리팩터링 - null 검사 추가](../ide/media/vside-refactoring-nullcheck.png)
+![리팩터링 - null 검사 추가](~/ide/media/vside-refactoring-nullcheck.png)
 
 ### 생성자 생성기 기능 향상
 <a id="constructor-generator-improvements" class="xliff"></a>
 생성자를 만들 경우 이 빠른 작업을 통해 생성할 속성 또는 필드를 선택할 수 있고 빈 본문에서 생성자를 생성할 수도 있습니다. 빠른 작업을 사용하여 호출 사이트에서 기존 생성자에 매개 변수를 추가할 수도 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
 
-![리팩터링 - 생성자 생성](../ide/media/vside-refactoring-constructors.png)
+![리팩터링 - 생성자 생성](~/ide/media/vside-refactoring-constructors.png)
 
 ### 사용하지 않는 변수 제거
 <a id="remove-unused-variables" class="xliff"></a>
 이 빠른 작업을 통해 코드에서 사용된 적이 없고 사용되지 않는 변수를 제거할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
 
-![리팩터링 - 사용하지 않는 변수](../ide/media/vside-refactoring-unusedvars.png)
+![리팩터링 - 사용하지 않는 변수](~/ide/media/vside-refactoring-unusedvars.png)
 
 ### 재정의 생성
 <a id="generate-overrides" class="xliff"></a>
 이 빠른 작업을 통해 클래스 또는 구조체의 빈 줄에서 재정의를 만들 수 있습니다. **Pick Members**(멤버 선택) 대화 상자에서 재정의할 멤버를 선택할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
 
-![리팩터링 - 재정의](../ide/media/vside-refactoring-overrides.png)
+![리팩터링 - 재정의](~/ide/media/vside-refactoring-overrides.png)
 
-![리팩터링 - 재정의 대화 상자](../ide/media/vside-refactoring-overrides-dialog.png)
+![리팩터링 - 재정의 대화 상자](~/ide/media/vside-refactoring-overrides-dialog.png)
 
 ### 숫자 리터럴에 대한 기본 변경
 <a id="change-base-for-numeric-literals" class="xliff"></a>
 이 빠른 작업을 통해 기본 숫자 시스템 간에 숫자 리터럴을 변환할 수 있습니다. 예를 들어 숫자를 16진수 또는 이진 형식으로 변경할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
 
-![리팩터링 - 기본 변경](../ide/media/vside-refactoring-changebase1.png)
+![리팩터링 - 기본 변경](~/ide/media/vside-refactoring-changebase1.png)
 
-![리팩터링 - 기본 변경](../ide/media/vside-refactoring-changebase2.png)
+![리팩터링 - 기본 변경](~/ide/media/vside-refactoring-changebase2.png)
 
 ### 자릿수 구분 기호를 리터럴로 삽입
 <a id="insert-digit-separators-into-literals" class="xliff"></a>
 이 빠른 작업을 통해 구분 기호 문자를 리터럴 값으로 추가할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
 
-![리팩터링 - 자릿수 구분 기호 변경](../ide/media/vside-refactoring-separators.png)
+![리팩터링 - 자릿수 구분 기호 변경](~/ide/media/vside-refactoring-separators.png)
 
 ### **if** 구문을 **switch**로 변환
 <a id="convert-if-construct-to-switch" class="xliff"></a>

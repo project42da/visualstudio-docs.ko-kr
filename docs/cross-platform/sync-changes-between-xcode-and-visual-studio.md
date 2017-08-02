@@ -36,7 +36,7 @@ ms.openlocfilehash: 0bb84ea6c47764aa0429fdebf160dae0fd47e570
 ### <a name="open-in-xcode"></a>XCode에서 열기  
  Visual Studio에서 XCode에서 프로젝트를 열려면 **원격 컴퓨터** 하위 메뉴에서 **XCode에서 열기**를 선택하여 쌍으로 연결된 원격 컴퓨터에서 선택한 프로젝트를 엽니다. vcremote 서버를 사용하여 Mac에서 XCode를 열고 프로젝트의 복사본이 포함되어 있는 Mac에 생성된 임시 디렉터리로 이동합니다. Visual Studio에서 프로젝트에 사용되는 임시 디렉터리를 보여 주는 팝업 대화 상자가 표시됩니다. 원격 컴퓨터에서 수행하는 작업은 Visual Studio의 **출력** 창에도 표시됩니다. 이러한 작업을 확인하려면 **출력** 창 위쪽의 **출력 보기 선택** 드롭다운에서 **Visual C++ 원격 컴퓨터**를 선택해야 할 수 있습니다.  
   
- ![원격 컴퓨터 작업이 표시되는 출력 창](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
+ ![원격 컴퓨터 작업이 표시되는 출력 창](~/cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
   
  Mac에서는 모든 XCode 도구를 사용하여 코드/리소스, 스토리보드 및 작업을 편집할 수 있습니다. Visual Studio에서 iOS 응용 프로그램 프로젝트에는 원격 컴퓨터에서 변경을 수행했을 수 있음을 나타내기 위해 "XCode에서 열림" 주석이 표시됩니다. 편집이 완료되면 원격에서 끌어오기 또는 원격에서 증분 끌어오기 명령을 사용하여 변경 내용을 Visual Studio 프로젝트로 다시 복사할 수 있습니다.  
   

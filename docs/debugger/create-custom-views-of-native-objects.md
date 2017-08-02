@@ -111,7 +111,7 @@ Visual Studio Natvis 프레임워크를 사용하면 Visual Studio에서 **조�
   
  `DisplayString` 및 `ArrayItems` 요소는 기본 뷰와 simple 뷰에서 사용되는 반면 `[size]` 및 `[capacity]` 항목은 simple 뷰에서 제외됩니다.**,view** 형식 지정자를 사용하여 대체 뷰를 지정할 수 있습니다.**조사식** 창에서 **vec,view\(simple\)**로 simple 뷰를 지정합니다.  
   
- ![단순 보기의 조사식 창](../debugger/media/watch-simpleview.png "Watch\-SimpleView")  
+ ![단순 보기의 조사식 창](~/debugger/media/watch-simpleview.png "Watch\-SimpleView")  
   
 ##  <a name="BKMK_Diagnosing_Natvis_errors"></a> Natvis 오류 진단  
  구문 분석 오류 문제 해결에 Natvis 진단을 사용할 수 있습니다. 시각화 항목에서 오류가 발생하면 디버거는 오류를 무시하고 형식을 원시 형식으로 표시하거나 적합한 다른 시각화를 선택합니다. 특정 시각화 항목이 무시된 이유를 파악하고 발생한 기본 오류를 확인하려면 Natvis 진단 **도구 \/ 옵션 \/ 디버깅 \/ 출력 창 \/ Natvis 진단 메시지\(C\+\+만 해당\)** 옵션을 켜면 됩니다. 오류가 **출력** 창에 표시됩니다.  

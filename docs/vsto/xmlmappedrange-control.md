@@ -28,7 +28,7 @@ caps.handback.revision: 39
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Use XML Mapping in Excel?](http://go.microsoft.com/fwlink/?LinkID=130288)을 참조하십시오.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Use XML Mapping in Excel?](http://go.microsoft.com/fwlink/?LinkID=130288)을 참조하십시오.  
   
 ## 컨트롤에 데이터 바인딩  
  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤은 단일 데이터 필드에 대한 바인딩\(단순 데이터 바인딩\)을 지원합니다.  <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤은 복합 데이터 바인딩을 지원할 수 있으며 반복되는 스키마 요소를 셀에 매핑하는 경우 자동으로 작성됩니다.  자세한 내용은 [ListObject 컨트롤](../vsto/listobject-control.md)을 참조하십시오.  

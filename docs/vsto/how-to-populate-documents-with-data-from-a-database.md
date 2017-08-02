@@ -31,7 +31,7 @@ caps.handback.revision: 47
   
  다음 예제에서는 디자이너를 사용하여 문서 수준 프로젝트에 데이터 바인딩된 컨트롤을 추가하는 방법을 보여 줍니다.  런타임에 VSTO 추가 기능 프로젝트에서 데이터 바인딩된 컨트롤을 추가하는 방법의 예를 보려면 [연습: VSTO 추가 기능 프로젝트의 단순 데이터 바인딩](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)를 참조하세요.  
   
- ![비디오에 링크](../vsto/media/playvideo.png "비디오에 링크") 관련 동영상 데모를 보려면 [Visual Studio Tools for Office System\(3.0\)을 사용하여 Word 2007 콘텐츠 컨트롤에 데이터 바인딩](http://go.microsoft.com/fwlink/?LinkId=136785)\(영문\)을 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모를 보려면 [Visual Studio Tools for Office System\(3.0\)을 사용하여 Word 2007 콘텐츠 컨트롤에 데이터 바인딩](http://go.microsoft.com/fwlink/?LinkId=136785)\(영문\)을 참조하세요.  
   
 ## 디자인 타임에 문서에 컨트롤 추가  
   

@@ -42,7 +42,7 @@ ms.lasthandoff: 04/05/2017
 ## <a name="extensibility-architecture"></a>확장성 아키텍처  
  다음 그림은 Visual Studio 확장성 아키텍처를 보여 줍니다. Vspackage는 서비스로 IDE 간에 공유 되는 응용 프로그램 기능을 제공 합니다. 표준 IDE에서는 다양 한 범위의 서비스와 같은 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>, IDE 창 관리 기능에 대 한 액세스를 제공 하는.</xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>  
   
- ![환경 아키텍처 그래픽](../../extensibility/internals/media/environment.gif "environment")  
+ ![환경 아키텍처 그래픽](~/extensibility/internals/media/environment.gif "environment")  
 Visual Studio 아키텍처의 일반화 된 보기  
   
 ## <a name="vspackages"></a>VSPackages  
@@ -75,7 +75,7 @@ Visual Studio 아키텍처의 일반화 된 보기
   
  여러 도구 창이 포함 된 Visual Studio의 다음 그림을 고려 합니다.  
   
- ![스크린 샷](../../extensibility/internals/media/t1gui.png "T1gui")  
+ ![스크린 샷](~/extensibility/internals/media/t1gui.png "T1gui")  
   
  일부 도구 창은 함께 솔루션 탐색기 도구 창을 표시 하 고 다른 도구 창을 숨깁니다 하지만 탭을 클릭 하 여 사용할 수 있도록 하는 단일 창에 도킹 됩니다. 그림에는 나와 다른 두 개의 도구 창에는 **오류 목록** 및 **출력** 함께 단일 창에서 도킹 창.  
   

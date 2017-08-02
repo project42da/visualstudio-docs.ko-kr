@@ -42,11 +42,11 @@ CPython 기반 인터프리터를 사용하는 경우 Visual Studio는 Python �
 
 프로파일링은 **분석 > Python 프로파일링 시작** 메뉴 명령을 통해 시작하여 구성 대화 상자를 열 수 있습니다.
 
-![프로파일링 구성 대화 상자](media/profiling-start.png)
+![프로파일링 구성 대화 상자](~/python/media/profiling-start.png)
 
 **확인**을 선택하면 프로파일러가 실행되고 응용 프로그램에서 소요된 시간을 탐색할 수 있는 성능 보고서를 엽니다.
 
-![프로파일링 성능 보고서](media/profiling-results.png)
+![프로파일링 성능 보고서](~/python/media/profiling-results.png)
 
 개요는 다음을 참조하세요.
 

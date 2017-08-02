@@ -42,7 +42,7 @@ Visual Studio 디버거 *PerfTips* 및 디버거 통합 **진단 도구** 는 �
 ## <a name="perftips"></a>PerfTips  
  디버거가 중단점 또는 단계별 실행 작업에서 실행을 중지하는 경우 중단점과 이전 중단점 사이의 경과 시간이 편집기 창에 팁으로 표시됩니다. 자세한 내용은 [성능 팁: Visual Studio를 사용하여 디버그하는 동안 성능 정보 요약](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx)을 참조하세요.  
   
- ![PerfTip](../profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")  
+ ![PerfTip](~/profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")  
   
 ## <a name="diagnostics-tools-window"></a>진단 도구 창  
  중단점 및 관련된 타이밍 데이터가 진단 도구 창에 기록됩니다.  

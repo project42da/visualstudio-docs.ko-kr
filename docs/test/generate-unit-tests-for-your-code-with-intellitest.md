@@ -92,7 +92,7 @@ IntelliTest는 .NET 코드를 탐색하여 테스트 데이터 및 단위 테스
   
      경고를 보고 수행할 작업을 결정합니다.  
   
-     ![경고 보기](../test/media/pexviewwarning.png "PEXViewWarning")  
+     ![경고 보기](~/test/media/pexviewwarning.png "PEXViewWarning")  
   
 2.  코드를 검토하고 테스트할 내용을 파악했으면 경고를 수정하여 인터페이스를 테스트하는 데 사용할 클래스를 선택할 수 있습니다.  
   

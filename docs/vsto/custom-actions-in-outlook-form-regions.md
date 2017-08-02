@@ -30,7 +30,7 @@ caps.handback.revision: 22
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
 ## 양식 영역에 사용자 지정 작업 추가  
- 양식 영역에 사용자 지정 작업을 추가하려면 **사용자 지정 작업** 대화 상자를 사용합니다.  열 수는  **사용자 지정 작업** 대화 상자에서  **솔루션 탐색기** 확장의  **매니페스트** 노드를 선택 하는  **CustomActions** 속성 및 다음 줄임표 단추를 클릭 하 \(![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.png "ASP.NET 모바일 디자이너 줄임표")\).  
+ 양식 영역에 사용자 지정 작업을 추가하려면 **사용자 지정 작업** 대화 상자를 사용합니다.  열 수는  **사용자 지정 작업** 대화 상자에서  **솔루션 탐색기** 확장의  **매니페스트** 노드를 선택 하는  **CustomActions** 속성 및 다음 줄임표 단추를 클릭 하 \(![ASP.NET 모바일 디자이너 줄임표](~/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\).  
   
  **사용자 지정 작업** 대화 상자를 사용하여 *대상 양식*을 지정할 수 있습니다.  대상 양식은 사용자가 사용자 지정 작업을 실행할 때 나타나는 양식입니다.  
   
