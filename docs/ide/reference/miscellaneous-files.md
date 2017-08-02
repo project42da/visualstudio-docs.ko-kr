@@ -34,7 +34,7 @@ caps.handback.revision: 11
   
  컨테이너와는 별도로 파일을 여는 것은 여러 가지 이유로 유용합니다.  프로젝트 기반 솔루션을 개발하는 동안 볼 수 있기를 원하지만 솔루션 개발에는 포함되지 않는 파일이 있을 수 있습니다.  일반적인 예제로는 개발 메모 또는 지침, 데이터베이스 스키마 및 코드 클립을 들 수 있습니다.  또한 독립 실행형 파일을 만들 수도 있습니다.  
   
- ![솔루션 프로젝트](~/docs/ide/reference/media/projects_solutions_misc.gif "Projects\_Solutions\_Misc")  
+ ![솔루션 프로젝트](~/ide/reference/media/projects_solutions_misc.gif "Projects\_Solutions\_Misc")  
   
  기타 파일 폴더 옵션이 활성화되면 솔루션 탐색기에는 파일에 대한 기타 파일 폴더가 표시될 수 있습니다.  이 옵션은 [옵션 대화 상자, 환경, 문서](../../ide/reference/documents-environment-options-dialog-box.md)에서 설정될 수 있습니다.  관련 옵션이 활성화되지 않으면 기타 파일이 닫힌 후에 파일은 특정 솔루션이나 프로젝트와 연관되지 않습니다.  
   

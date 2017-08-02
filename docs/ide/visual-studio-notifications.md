@@ -44,7 +44,7 @@ Visual Studio에는 다음과 같이 다양한 이벤트를 알리는 알림 시
   
  항상 알림을 무시하도록 선택한 경우 Visual Studio에서 알림 표시를 중지합니다. [알림, 환경, 옵션 대화 상자](../ide/reference/notifications-environment-options-dialog-box.md)에서 무시된 알림 목록을 다시 설정할 수 있습니다.  
   
- ![Visual Studio 알림 아이콘](~/docs/ide/media/vs2015_notificationicon.png "vs2015_NotificationIcon")  
+ ![Visual Studio 알림 아이콘](~/ide/media/vs2015_notificationicon.png "vs2015_NotificationIcon")  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio IDE](../ide/visual-studio-ide.md)

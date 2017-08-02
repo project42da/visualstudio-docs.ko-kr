@@ -42,13 +42,13 @@ Visual Studio에서 Python 지원에는 Bottle, Django 및 Flask와 같은 프�
 
 각 템플릿(as accessed through **파일 > 새로 만들기 > 프로젝트...**를 통해 액세스됨)은 임의로 선택된 로컬 포트로 웹 서버를 시작하며 디버깅 시 기본 브라우저를 열고 [Microsoft Azure](http://www.azure.com)로 직접 게시를 허용합니다. 템플릿은 Bottle, Flask 및 Django용으로 제공되고 Pyramid와 같은 다른 프레임워크에 대해 일반 "웹 프로젝트" 템플릿을 사용할 수 있습니다.
 
-![새 웹 프로젝트 템플릿](~/docs/python/media/template-web-new-project.png)
+![새 웹 프로젝트 템플릿](~/python/media/template-web-new-project.png)
 
 Bottle, Flask 및 Django의 각 템플릿은 몇 가지 페이지 및 정적 파일이 있는 시작 사이트를 포함합니다. 이 코드를 통해 서버를 로컬(일부 설정을 해당 환경에서 가져와야 함)에서 충분히 실행하고 디버깅하며 Microsoft Azure에 배포([WSGI 앱](http://www.python.org/dev/peps/pep-3333/) 개체에 제공해야 함)할 수 있습니다.
 
 프레임워크별 템플릿에서 프로젝트를 만들 때 pip를 사용하여 필요한 패키지를 설치할 수 있는 대화 상자가 나타납니다. 웹 프로젝트에 대해 [가상 환경](python-environments.md#virtual-environments)을 사용하여 웹 사이트를 게시할 때 올바른 종속성이 포함되도록 하는 것이 좋습니다.
 
-![프로젝트 템플릿에 대해 필요한 패키지를 설치하는 대화 상자](~/docs/python/media/template-web-requirements-txt-wizard.png)
+![프로젝트 템플릿에 대해 필요한 패키지를 설치하는 대화 상자](~/python/media/template-web-requirements-txt-wizard.png)
 
 Microsoft Azure App Service에 배포할 때는 [사이트 확장](https://aka.ms/PythonOnAppService)으로 Python 버전을 선택하고 패키지를 수동으로 설치해야 합니다. 또한 Azure App Service는 Visual Studio에서 배포할 때 `requirements.txt` 파일에서 패키지를 자동으로 설치하지 **않으므로** [aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService)의 구성 세부 정보를 따릅니다.
 
@@ -62,7 +62,7 @@ Python 웹 프로젝트에 대한 소개는 [PTVS 시작 6부: 웹 사이트](ht
 
 디버깅을 위해 웹 프로젝트가 시작되면 Visual Studio는 로컬에서 웹 서버를 시작하고 해당 주소 및 포트에 기본 브라우저를 엽니다. 추가 옵션을 지정하려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**를 선택하고 **웹 시작 관리자** 탭을 선택합니다.
 
-  ![일반 웹 템플릿에 대한 웹 시작 관리자 속성](~/docs/python/media/template-web-launcher-properties.png)
+  ![일반 웹 템플릿에 대한 웹 시작 관리자 속성](~/python/media/template-web-launcher-properties.png)
 
 **디버그** 그룹에서:
 
@@ -124,7 +124,7 @@ Pyramid 앱은 현재 `pcreate` 명령줄 도구를 사용하여 최적으로 �
 
 Azure App Service에 게시하는 기본적인 두 가지 방법이 있습니다. 첫째, [Azure 설명서](http://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/)에 설명된 대로 소스 제어에서 배포를 다른 언어와 동일한 방식으로 사용할 수 있습니다. Visual Studio에서 직접 게시하려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
 
-![프로젝트의 상황에 맞는 메뉴에서 게시 명령](~/docs/python/media/template-web-publish-command.png)
+![프로젝트의 상황에 맞는 메뉴에서 게시 명령](~/python/media/template-web-publish-command.png)
 
 명령을 선택하면 마법사가 웹 사이트 만들기 또는 게시 설정 가져오기, 수정된 파일 미리 보기 및 원격 서버에 게시 과정을 안내합니다.
 
@@ -134,7 +134,7 @@ App Service에 Python을 설치하려면 [사이트 확장](http://www.siteexten
 
 사이트 확장은 App Service에 대한 **개발 도구 > 확장** 블레이드를 사용하고 **추가**를 선택한 후 목록을 스크롤하여 Python에 대한 항목을 찾아 [Azure Portal](https://portal.azure.com/)을 통해 배포할 수 있습니다.
 
-![Azure Portal에서 사이트 확장 추가](~/docs/python/media/template-web-site-extensions.png)
+![Azure Portal에서 사이트 확장 추가](~/python/media/template-web-site-extensions.png)
 
 JSON 배포 템플릿을 사용하는 경우 사이트 리소스로 사이트 확장을 지정할 수 있습니다.
 
@@ -173,7 +173,7 @@ c:\Python27\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
 
 Azure App Service에 배포하면 사이트가 Microsoft IIS 뒤에서 실행됩니다. 사이트가 IIS와 함께 작동하도록 하려면 최소한 `web.config` 파일을 추가해야 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 ** 추가 > 새 항목... "(아래 대화 상자 참조)을 선택하면 사용할 수 있는 일반적인 배포 대상에 제공되는 템플릿이 있으며 이 템플릿을 다른 용도로 쉽게 수정할 수 있습니다. 사용 가능한 구성 설정에 대한 자세한 내용은 [IIS 구성 참조](https://www.iis.net/configreference)를 참조하세요.
 
-![Azure 항목 템플릿](~/docs/python/media/template-web-azure-items.png)
+![Azure 항목 템플릿](~/python/media/template-web-azure-items.png)
 
 사용 가능한 항목은 다음과 같습니다.
 
@@ -186,9 +186,9 @@ Azure App Service에 배포하면 사이트가 Microsoft IIS 뒤에서 실행됩
 
 프로젝트에 디버깅 `web.config` 템플릿을 추가하고 Python 원격 디버깅을 사용하려는 경우 "디버그" 구성에서 사이트를 게시해야 합니다. 이 설정은 현재 활성 솔루션 구성과 별개이며 항상 기본값은 "릴리스"입니다. 이를 변경하려면 게시 마법사에서 **설정** 탭을 열고 **구성** 콤보 상자를 사용합니다(Azure Web Apps를 만들고 배포하는 방법에 대한 자세한 내용은 [Azure 설명서](https://azure.microsoft.com/develop/python/) 참조).
 
-![게시 구성 변경](~/docs/python/media/template-web-publish-config.png)
+![게시 구성 변경](~/python/media/template-web-publish-config.png)
 
 **Microsoft Azure Cloud Service 프로젝트로 변환** 명령(아래 이미지)은 Cloud Service 프로젝트를 솔루션에 추가합니다. 이 프로젝트에는 사용되는 가상 컴퓨터 및 서비스에 대한 배포 설정 및 구성이 포함됩니다. Cloud Service에 배포하려면 클라우드 프로젝트에서 **게시** 명령을 사용해야 하며 Python 프로젝트의 **게시** 명령은 웹 사이트에 계속 배포합니다. 자세한 내용은 [Azure Cloud Service 프로젝트](template-azure-cloud-service.md)를 참조하세요.
 
-![Microsoft Azure Cloud Service 프로젝트 명령으로 변환](~/docs/python/media/template-web-convert-menu.png)
+![Microsoft Azure Cloud Service 프로젝트 명령으로 변환](~/python/media/template-web-convert-menu.png)
 

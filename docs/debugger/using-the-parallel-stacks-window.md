@@ -54,9 +54,9 @@ manager: "ghogen"
 |||  
 |-|-|  
 |아이콘|설명|  
-|![병렬 스택 노란색 화살표](~/docs/debugger/media/icon_parallelyellowarrow.gif "Icon\_ParallelYellowArrow")|메서드 컨텍스트에 현재 스레드의 활성 스택 프레임이 포함되어 있음을 나타냅니다.|  
-|![병렬 스택 스레드 아이콘](~/docs/debugger/media/icon_parallelthreads.gif "Icon\_ParallelThreads")|메서드 컨텍스트에 현재 스레드가 아닌 스레드의 활성 스택 프레임이 포함되어 있음을 나타냅니다.|  
-|![병렬 스택 녹색 화살표](~/docs/debugger/media/icon_parallelgreenarrow.gif "Icon\_ParallelGreenArrow")|메서드 컨텍스트에 현재 스택 프레임이 포함되어 있음을 나타냅니다.  메서드 이름이 나타나는 모든 노드에서 메서드 이름이 굵게 표시됩니다.|  
+|![병렬 스택 노란색 화살표](~/debugger/media/icon_parallelyellowarrow.gif "Icon\_ParallelYellowArrow")|메서드 컨텍스트에 현재 스레드의 활성 스택 프레임이 포함되어 있음을 나타냅니다.|  
+|![병렬 스택 스레드 아이콘](~/debugger/media/icon_parallelthreads.gif "Icon\_ParallelThreads")|메서드 컨텍스트에 현재 스레드가 아닌 스레드의 활성 스택 프레임이 포함되어 있음을 나타냅니다.|  
+|![병렬 스택 녹색 화살표](~/debugger/media/icon_parallelgreenarrow.gif "Icon\_ParallelGreenArrow")|메서드 컨텍스트에 현재 스택 프레임이 포함되어 있음을 나타냅니다.  메서드 이름이 나타나는 모든 노드에서 메서드 이름이 굵게 표시됩니다.|  
   
 ## 도구 모음 컨트롤  
  다음 그림과 표에서는 병렬 스택 도구 모음에서 사용할 수 있는 컨트롤에 대해 설명합니다.  

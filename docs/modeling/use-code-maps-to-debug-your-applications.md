@@ -69,7 +69,7 @@ caps.handback.revision: 49
   
  ![코드 맵 &#45; 모든 참조 찾기](../modeling/media/codemapstoryboardpaint6.png "CodeMapStoryboardPaint6")  
   
- ![코드 편집기에서 코드 맵 열기](~/docs/modeling/media/codemapstoryboardpaint6a.PNG "CodeMapStoryboardPaint6A")  
+ ![코드 편집기에서 코드 맵 열기](~/modeling/media/codemapstoryboardpaint6a.PNG "CodeMapStoryboardPaint6A")  
   
 > [!NOTE]
 >  Windows Phone 또는 Windows 스토어와 같은 여러 앱에 공유되는 프로젝트에서 항목을 추가할 경우 해당 항목은 항상 현재 활성화된 앱 프로젝트와 함께 맵에 나타납니다.  따라서 컨텍스트를 다른 앱 프로젝트로 변경하는 경우 맵의 컨텍스트도 공유 프로젝트에서 새로 추가된 항목에 대해 변경됩니다.  맵의 항목에 수행하는 작업은 동일한 컨텍스트를 공유하는 항목에만 적용됩니다.  

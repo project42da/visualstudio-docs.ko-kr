@@ -25,7 +25,7 @@ caps.handback.revision: 22
 ## Colorizer 모델  
  언어 서비스 구현에서 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> 다음 편집기에서 사용 되는 인터페이스입니다.  이 구현 언어 서비스에서 별도 개체는 다음 그림에 표시 된 대로입니다.  
   
- ![SVC 색 지정기 그래픽](~/docs/extensibility/internals/media/figlgsvccolorizer.gif "FigLgSvcColorizer")  
+ ![SVC 색 지정기 그래픽](~/extensibility/internals/media/figlgsvccolorizer.gif "FigLgSvcColorizer")  
 간단한 colorizer 모델  
   
 > [!NOTE]

@@ -41,7 +41,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="objects-in-the-automation-model"></a>자동화 모델의 개체  
  공용 환경의 주요 측면을 제어 하는 개체의 관련 된 그룹의 자동화 모델 구성 됩니다. 다음은 다양 한 자동화 모델을 구성 하는 개체를 보여 주는 다이어그램입니다.  
   
- ![Visual Studio 자동화 개체 차트](~/docs/extensibility/internals/media/vsvisualstudioautomationobjectchart.gif "vsVisualStudioAutomationObjectChart")  
+ ![Visual Studio 자동화 개체 차트](~/extensibility/internals/media/vsvisualstudioautomationobjectchart.gif "vsVisualStudioAutomationObjectChart")  
 Visual Studio 자동화 개체  
   
  자세한 내용은 참조 [Visual Studio 환경 확장](http://msdn.microsoft.com/Library/4173a963-7ac7-4966-9bb7-e28a9d9f6792)합니다.  

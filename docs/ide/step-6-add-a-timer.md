@@ -41,7 +41,7 @@ ms.lasthandoff: 05/13/2017
   
 1.  Windows Forms 디자이너의 도구 상자에서 **구성 요소** 범주의 **Timer**를 선택한 다음 Enter 키를 선택하거나 타이머를 두 번 클릭하여 타이머 컨트롤을 폼에 추가합니다. **Timer1**이라고 하는 타이머의 아이콘이 다음 그림과 같이 폼 아래 공간에 나타납니다.  
   
-     ![Timer](~/docs/ide/media/express_timer.png "Express_Timer")  
+     ![Timer](~/ide/media/express_timer.png "Express_Timer")  
 Timer  
   
     > [!NOTE]

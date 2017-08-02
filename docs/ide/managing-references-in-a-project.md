@@ -53,7 +53,7 @@ ms.lasthandoff: 03/31/2017
 
  참조를 추가하려면 솔루션 탐색기에서 참조 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 자세한 내용은 [방법: 참조 관리자를 사용하여 참조 추가 또는 제거](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)를 참조하세요.  
 
- ![Visual C&#43;&#43;에서 참조 추가](~/docs/ide/media/vs2015_cpp_add_reference.png "vs2015_cpp_add_reference")  
+ ![Visual C&#43;&#43;에서 참조 추가](~/ide/media/vs2015_cpp_add_reference.png "vs2015_cpp_add_reference")  
 
  다음 형식의 구성 요소/서비스에 대한 참조를 만들 수 있습니다.  
 

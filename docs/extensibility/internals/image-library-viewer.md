@@ -199,7 +199,7 @@ Visual Studio 이미지 라이브러리 뷰어 도구를 로드 하 고 이미�
   
  각 이미지 원본에 대해 표시 되는 정보 테마가 지원 될 수 있는지를 표시 하도록 배경의 종류를 포함 하거나 고대비에는 사용할 수 있는 크기를 지원 또는 크기 중립적 인지 하 고 이미지는 네이티브 어셈블리에서 제공 하는 여부.  
   
- ![이미지 라이브러리 뷰어 Can 테마](~/docs/extensibility/internals/media/image-library-viewer-can-theme.png "Image Library Viewer Can Theme")  
+ ![이미지 라이브러리 뷰어 Can 테마](~/extensibility/internals/media/image-library-viewer-can-theme.png "Image Library Viewer Can Theme")  
   
  이미지 매니페스트 유효성을 검사할 때 매니페스트 및 DLL의 실제 위치에 이미지를 배포 하는 것이 좋습니다. 상대 경로로 올바르게 작동 하는지 및 이미지 라이브러리를 찾을 하 고 매니페스트 및 DLL 이미지를 불러올 수를 확인 합니다.  
   

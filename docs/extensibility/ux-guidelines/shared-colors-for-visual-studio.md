@@ -55,7 +55,7 @@ ms.lasthandoff: 05/04/2017
 
 ### <a name="button-controls"></a>단추 컨트롤
 
-![단추 컨트롤 검토](~/docs/extensibility/ux-guidelines/media/0303-155_buttoncontrolredline.png "0303 155_ButtonControlRedline")
+![단추 컨트롤 검토](~/extensibility/ux-guidelines/media/0303-155_buttoncontrolredline.png "0303 155_ButtonControlRedline")
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |
@@ -63,7 +63,7 @@ ms.lasthandoff: 05/04/2017
 
 **Button: 표준 상태**
 
-![표준 단추](~/docs/extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03.Button.Standard")<br />표준 단추
+![표준 단추](~/extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03.Button.Standard")<br />표준 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/04/2017
 
 **Button: 기본 상태**
 
-![기본 단추](~/docs/extensibility/ux-guidelines/media/03.03.Button.Default.png "03.03.Button.Default")<br />기본 단추
+![기본 단추](~/extensibility/ux-guidelines/media/03.03.Button.Default.png "03.03.Button.Default")<br />기본 단추
 
 | 요소 | 토큰 이름: Category.color | 
 | --- | --- | 
@@ -81,7 +81,7 @@ ms.lasthandoff: 05/04/2017
 
 **Button: 사용할 수 없는 상태**  
 
-![비활성화 된 단추](~/docs/extensibility/ux-guidelines/media/03.03.Button.Disabled.png "03.03.Button.Disabled")<br />비활성화 된 단추  
+![비활성화 된 단추](~/extensibility/ux-guidelines/media/03.03.Button.Disabled.png "03.03.Button.Disabled")<br />비활성화 된 단추  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -90,7 +90,7 @@ ms.lasthandoff: 05/04/2017
 
 **Button: 가리키기 상태**  
 
-![단추 가리키기](~/docs/extensibility/ux-guidelines/media/03.03.Button.hover.png "03.03.Button.hover")<br />단추 가리키기  
+![단추 가리키기](~/extensibility/ux-guidelines/media/03.03.Button.hover.png "03.03.Button.hover")<br />단추 가리키기  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -99,7 +99,7 @@ ms.lasthandoff: 05/04/2017
 
 **Button: 누른된 상태**  
 
-![누른된 단추](~/docs/extensibility/ux-guidelines/media/03.03.Button.Pressed.png "03.03.Button.Pressed")<br />누른된 단추  
+![누른된 단추](~/extensibility/ux-guidelines/media/03.03.Button.Pressed.png "03.03.Button.Pressed")<br />누른된 단추  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/04/2017
 
 **포커스가 있는 상태 단추:**  
 
-![포커스가 있는 단추](~/docs/extensibility/ux-guidelines/media/03.03.Button.Focused.png "03.03.Button.Focused")<br />포커스가 있는 단추  
+![포커스가 있는 단추](~/extensibility/ux-guidelines/media/03.03.Button.Focused.png "03.03.Button.Focused")<br />포커스가 있는 단추  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/04/2017
 | 단추 테두리 | `CommonControls.ButtonBorderFocused` |
 
 ### <a name="check-box-controls"></a>확인란 컨트롤  
-![확인란 (검토)](~/docs/extensibility/ux-guidelines/media/0303-161_checkboxredline.png "0303-161_CheckboxRedline")<br />확인란 (검토)  
+![확인란 (검토)](~/extensibility/ux-guidelines/media/0303-161_checkboxredline.png "0303-161_CheckboxRedline")<br />확인란 (검토)  
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |
@@ -187,7 +187,7 @@ ms.lasthandoff: 05/04/2017
 
 **드롭다운 및 콤보 상자: 기본 상태**  
 
-![기본 드롭다운/콤보 상자](~/docs/extensibility/ux-guidelines/media/0303-168_dropdowncombobox.png "0303-168_DropDownComboBox")<br />기본 드롭다운/콤보 상자
+![기본 드롭다운/콤보 상자](~/extensibility/ux-guidelines/media/0303-168_dropdowncombobox.png "0303-168_DropDownComboBox")<br />기본 드롭다운/콤보 상자
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -200,7 +200,7 @@ ms.lasthandoff: 05/04/2017
 
 **드롭다운 및 콤보 상자: 사용 안 함 상태**  
 
-![드롭다운/콤보 상자 사용 안 함된](~/docs/extensibility/ux-guidelines/media/0303-169_dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")<br />드롭다운/콤보 상자 사용 안 함된
+![드롭다운/콤보 상자 사용 안 함된](~/extensibility/ux-guidelines/media/0303-169_dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")<br />드롭다운/콤보 상자 사용 안 함된
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -239,7 +239,7 @@ ms.lasthandoff: 05/04/2017
 
 **드롭다운 및 콤보 상자 목록 항목 보기: 누른 상태**  
 
- ![드롭다운/콤보 상자 누름 목록 항목 보기](~/docs/extensibility/ux-guidelines/media/0303-174_dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")<br />드롭다운/콤보 상자 누름 목록 항목 보기  
+ ![드롭다운/콤보 상자 누름 목록 항목 보기](~/extensibility/ux-guidelines/media/0303-174_dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")<br />드롭다운/콤보 상자 누름 목록 항목 보기  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -272,7 +272,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="tabular-data-grid-controls"></a>표 형식 데이터(그리드) 컨트롤  
 표 형식 데이터 컨트롤은 그리드 컨트롤이라고도 하며, 여러 열에 많은 양의 데이터를 표시하는 데 사용할 수 있는 Visual Studio의 공용 컨트롤입니다. 표준 표 형식 데이터 컨트롤은 오류 목록 도구 창, IntelliTrace 보고서, 메모리 힙 보기 등 Visual Studio 내의 여러 위치에서 찾을 수 있습니다. 항상 제공된 표준 표 형식 데이터 컨트롤을 사용합니다. 드물긴 하지만 표준 표 형식 데이터 컨트롤에 액세스할 수 없는 경우도 있습니다. 이러한 경우 다음 토큰 이름을 사용하여 Visual Studio의 다른 표 형식 데이터 컨트롤과 UI의 일관성을 유지합니다.  
 
-![테이블 형식 데이터/그리드 컨트롤 (검토)](~/docs/extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")<br />테이블 형식 데이터/그리드 컨트롤 (검토)
+![테이블 형식 데이터/그리드 컨트롤 (검토)](~/extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")<br />테이블 형식 데이터/그리드 컨트롤 (검토)
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |
@@ -340,7 +340,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="instructional-text"></a>사용 안내 텍스트
 사용 안내 텍스트 한 두드러진 주 설명은 대화 또는 문서 페이지에서 수행할 작업을 제공 합니다.
 
-![기본 사용 안내 텍스트](~/docs/extensibility/ux-guidelines/media/0303_InstructionalText.png "0303_InstructionalText.png")<br />기본 사용 안내 텍스트
+![기본 사용 안내 텍스트](~/extensibility/ux-guidelines/media/0303_InstructionalText.png "0303_InstructionalText.png")<br />기본 사용 안내 텍스트
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -349,7 +349,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="secondary-instructional-text"></a>보조 사용 안내 텍스트
 많은 텍스트 및 컨트롤의 문서 페이지를 사용 안내 텍스트는 다른 색 값을 사용합니다. 가장 중요 한 정보를 전달 하 고 전반적인 밀도 UI 요소에 대 한 취약성을 줄일 수 있습니다. (참고 항목에서 아래 섹션에 설명 텍스트입니다.)
 
-![보조 사용 안내 텍스트](~/docs/extensibility/ux-guidelines/media/0303_SecondaryInstructionalText.png "0303_SecondaryInstructionalText.png")<br />보조 사용 안내 텍스트
+![보조 사용 안내 텍스트](~/extensibility/ux-guidelines/media/0303_SecondaryInstructionalText.png "0303_SecondaryInstructionalText.png")<br />보조 사용 안내 텍스트
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -360,7 +360,7 @@ ms.lasthandoff: 05/04/2017
 
 **기본 힌트 텍스트**
 
-![기본 힌트 텍스트](~/docs/extensibility/ux-guidelines/media/0303_HintText.png "0303_HintText.png")<br />기본 힌트 텍스트
+![기본 힌트 텍스트](~/extensibility/ux-guidelines/media/0303_HintText.png "0303_HintText.png")<br />기본 힌트 텍스트
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -368,7 +368,7 @@ ms.lasthandoff: 05/04/2017
 
 **필요한 힌트 텍스트**
 
-![필요한 힌트 텍스트](~/docs/extensibility/ux-guidelines/media/0303_RequiredHintText.png "0303_RequiredHintText.png")<br />필요한 힌트 텍스트
+![필요한 힌트 텍스트](~/extensibility/ux-guidelines/media/0303_RequiredHintText.png "0303_RequiredHintText.png")<br />필요한 힌트 텍스트
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -379,7 +379,7 @@ ms.lasthandoff: 05/04/2017
 
 > 참조 [검색 상자](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_SearchBoxes) 검색 제어와 관련 된 다른 색 토큰에 대 한 합니다.
 
-![검색 상자 컨트롤 텍스트](~/docs/extensibility/ux-guidelines/media/0303_SearchBoxControl.png "0303_SearchBoxControl.png")<br />검색 상자 컨트롤 텍스트
+![검색 상자 컨트롤 텍스트](~/extensibility/ux-guidelines/media/0303_SearchBoxControl.png "0303_SearchBoxControl.png")<br />검색 상자 컨트롤 텍스트
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -420,7 +420,7 @@ ms.lasthandoff: 05/04/2017
 
 **하이퍼링크: 사용할 수 없는 상태**
 
-![하이퍼링크 사용 안 함된](~/docs/extensibility/ux-guidelines/media/0303-137_hyperlinkdisabled.png "0303-137_HyperlinkDisabled")<br />하이퍼링크 사용 안 함된  
+![하이퍼링크 사용 안 함된](~/extensibility/ux-guidelines/media/0303-137_hyperlinkdisabled.png "0303-137_HyperlinkDisabled")<br />하이퍼링크 사용 안 함된  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -429,7 +429,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="infobars"></a>정보 표시줄  
 정보 표시줄은 지정된 컨텍스트에 대한 자세한 정보를 제공하는 데 사용되며, 항상 문서 창이나 도구 창의 맨 위에 나타납니다.  
 
-![정보 표시줄 (검토)](~/docs/extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303-138_InfobarRedline")<br />정보 표시줄 (검토)
+![정보 표시줄 (검토)](~/extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303-138_InfobarRedline")<br />정보 표시줄 (검토)
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |
@@ -437,7 +437,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄: 기본 상태**
 
-![기본 정보 표시줄](~/docs/extensibility/ux-guidelines/media/0303-139_infobar.png "0303-139_Infobar")<br />기본 정보 표시줄
+![기본 정보 표시줄](~/extensibility/ux-guidelines/media/0303-139_infobar.png "0303-139_Infobar")<br />기본 정보 표시줄
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -447,7 +447,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 닫기 (&times;) 단추: 기본 상태**
 
-![기본 정보 표시줄 닫기 (&times;) 단추](~/docs/extensibility/ux-guidelines/media/0303_InfobarCloseDefault.png "0303_InfobarCloseDefault.png")<br />기본 정보 표시줄 닫기 (&times;) 단추
+![기본 정보 표시줄 닫기 (&times;) 단추](~/extensibility/ux-guidelines/media/0303_InfobarCloseDefault.png "0303_InfobarCloseDefault.png")<br />기본 정보 표시줄 닫기 (&times;) 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -457,7 +457,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 닫기 (&times;) 단추: 상태 마우스를 가져가고**
 
-![정보 표시줄 닫기 (&times;) 단추 가리키기](~/docs/extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />정보 표시줄 닫기 (&times;) 단추 가리키기
+![정보 표시줄 닫기 (&times;) 단추 가리키기](~/extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />정보 표시줄 닫기 (&times;) 단추 가리키기
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -467,7 +467,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 닫기 (&times;) 단추: 누른 상태**
 
-![정보 표시줄 닫기 누름 (&times;) 단추](~/docs/extensibility/ux-guidelines/media/0303_InfobarClosePressed.png "0303_InfobarClosePressed.png")<br />정보 표시줄 닫기 누름 (&times;) 단추
+![정보 표시줄 닫기 누름 (&times;) 단추](~/extensibility/ux-guidelines/media/0303_InfobarClosePressed.png "0303_InfobarClosePressed.png")<br />정보 표시줄 닫기 누름 (&times;) 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -477,7 +477,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 하이퍼링크 단추: 기본 상태**
 
-![기본 정보 표시줄 하이퍼링크 단추](~/docs/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />기본 정보 표시줄 하이퍼링크 단추
+![기본 정보 표시줄 하이퍼링크 단추](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />기본 정보 표시줄 하이퍼링크 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -485,7 +485,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 하이퍼링크 단추: 상태 마우스를 가져가고**
 
-![정보 표시줄 하이퍼링크 단추 가리키기](~/docs/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonHover.png "0303_InfobarHyperlinkButtonHover.png")<br />정보 표시줄 하이퍼링크 단추 가리키기
+![정보 표시줄 하이퍼링크 단추 가리키기](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonHover.png "0303_InfobarHyperlinkButtonHover.png")<br />정보 표시줄 하이퍼링크 단추 가리키기
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -493,7 +493,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 하이퍼링크 단추: 누른 상태**
 
-![하이퍼링크 단추 누름된 정보 표시줄](~/docs/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />하이퍼링크 단추 누름된 정보 표시줄
+![하이퍼링크 단추 누름된 정보 표시줄](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />하이퍼링크 단추 누름된 정보 표시줄
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -501,7 +501,7 @@ ms.lasthandoff: 05/04/2017
 
 **(문장) 내에서 인라인 하이퍼링크 정보 표시줄: 기본 상태**
 
-![기본 인라인 정보 표시줄 하이퍼링크 단추](~/docs/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />기본 인라인 정보 표시줄 하이퍼링크 단추
+![기본 인라인 정보 표시줄 하이퍼링크 단추](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />기본 인라인 정보 표시줄 하이퍼링크 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -509,7 +509,7 @@ ms.lasthandoff: 05/04/2017
 
 **(문장) 내에서 인라인 하이퍼링크 정보 표시줄: 상태 마우스를 가져가고**
 
-![정보 표시줄 인라인 하이퍼링크 단추 가리키기](~/docs/extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlineHover.png "0303_InfobarHyperlinkInlineHover.png")<br />정보 표시줄 인라인 하이퍼링크 단추 가리키기
+![정보 표시줄 인라인 하이퍼링크 단추 가리키기](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlineHover.png "0303_InfobarHyperlinkInlineHover.png")<br />정보 표시줄 인라인 하이퍼링크 단추 가리키기
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -517,7 +517,7 @@ ms.lasthandoff: 05/04/2017
 
 **(문장) 내에서 인라인 하이퍼링크 정보 표시줄: 누른 상태**
 
-![정보 표시줄 인라인 하이퍼링크 단추 누름](~/docs/extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlinePressed.png "0303_InfobarHyperlinkInlinePressed.png")<br />정보 표시줄 인라인 하이퍼링크 단추 누름
+![정보 표시줄 인라인 하이퍼링크 단추 누름](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlinePressed.png "0303_InfobarHyperlinkInlinePressed.png")<br />정보 표시줄 인라인 하이퍼링크 단추 누름
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -525,7 +525,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 단추: 기본 상태**
 
-![기본 정보 표시줄 단추](~/docs/extensibility/ux-guidelines/media/0303_InfobarButtonDefault.png "0303_InfobarButtonDefault.png")<br />기본 정보 표시줄 단추
+![기본 정보 표시줄 단추](~/extensibility/ux-guidelines/media/0303_InfobarButtonDefault.png "0303_InfobarButtonDefault.png")<br />기본 정보 표시줄 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -535,7 +535,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 단추: 상태 마우스를 가져가고**
 
-![정보 표시줄 단추 가리키기](~/docs/extensibility/ux-guidelines/media/0303_InfobarButtonHover.png "0303_InfobarButtonHover.png")<br />정보 표시줄 단추 가리키기
+![정보 표시줄 단추 가리키기](~/extensibility/ux-guidelines/media/0303_InfobarButtonHover.png "0303_InfobarButtonHover.png")<br />정보 표시줄 단추 가리키기
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -545,7 +545,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 단추: 누른 상태**
 
-![누른된 정보 표시줄 단추](~/docs/extensibility/ux-guidelines/media/0303_InfobarButtonPressed.png "0303_InfobarButtonPressed.png")<br />누른된 정보 표시줄 단추
+![누른된 정보 표시줄 단추](~/extensibility/ux-guidelines/media/0303_InfobarButtonPressed.png "0303_InfobarButtonPressed.png")<br />누른된 정보 표시줄 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -555,7 +555,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 단추: 사용 안 함 상태**
 
-![비활성화 된 정보 표시줄 단추](~/docs/extensibility/ux-guidelines/media/0303_InfobarButtonDisabled.png "0303_InfobarButtonDisabled.png")<br />비활성화 된 정보 표시줄 단추
+![비활성화 된 정보 표시줄 단추](~/extensibility/ux-guidelines/media/0303_InfobarButtonDisabled.png "0303_InfobarButtonDisabled.png")<br />비활성화 된 정보 표시줄 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -565,7 +565,7 @@ ms.lasthandoff: 05/04/2017
 
 **정보 표시줄 단추: 상태 포커스 있음**
 
-![포커스가 지정 된 정보 표시줄 단추](~/docs/extensibility/ux-guidelines/media/0303_InfobarButtonFocus.png "0303_InfobarButtonFocus.png")<br />포커스가 지정 된 정보 표시줄 단추
+![포커스가 지정 된 정보 표시줄 단추](~/extensibility/ux-guidelines/media/0303_InfobarButtonFocus.png "0303_InfobarButtonFocus.png")<br />포커스가 지정 된 정보 표시줄 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -576,7 +576,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="scroll-bars"></a>스크롤 막대  
 스크롤 막대는 Visual Studio 환경에서 스타일이 지정 및 테마를 적용할 필요가 없습니다. 그러나 UI는 항상 Visual Studio 환경의이 부분과 일관 된 표시 되도록 스크롤 막대에 사용 된 색을 활용 하려면 수도 있습니다.  
 
-![스크롤 막대 (검토)](~/docs/extensibility/ux-guidelines/media/0303-140_scrollbarredline.png "0303-140_ScrollbarRedline")<br />스크롤 막대 (검토)
+![스크롤 막대 (검토)](~/extensibility/ux-guidelines/media/0303-140_scrollbarredline.png "0303-140_ScrollbarRedline")<br />스크롤 막대 (검토)
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |
@@ -611,7 +611,7 @@ ms.lasthandoff: 05/04/2017
 
 **스크롤 막대 화살표: 기본 상태**  
 
-![기본 스크롤 막대 화살표](~/docs/extensibility/ux-guidelines/media/0303-142_scrollbararrow.png "0303-142_ScrollbarArrow")<br />기본 스크롤 막대 화살표
+![기본 스크롤 막대 화살표](~/extensibility/ux-guidelines/media/0303-142_scrollbararrow.png "0303-142_ScrollbarArrow")<br />기본 스크롤 막대 화살표
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -680,7 +680,7 @@ ms.lasthandoff: 05/04/2017
 
 **포커스가 없는, 비활성 검색어 입력된 필드**
 
-![포커스가 없는, 비활성 검색어 입력된 필드](~/docs/extensibility/ux-guidelines/media/0303-114-1_searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br />포커스가 없는, 비활성 검색어 입력된 필드  
+![포커스가 없는, 비활성 검색어 입력된 필드](~/extensibility/ux-guidelines/media/0303-114-1_searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br />포커스가 없는, 비활성 검색어 입력된 필드  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -767,7 +767,7 @@ ms.lasthandoff: 05/04/2017
 
 **포커스가 없는 검색 드롭다운 단추**
 
-![포커스가 없는 검색 드롭다운 단추](~/docs/extensibility/ux-guidelines/media/0303-116_searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br />포커스가 없는 검색 드롭다운 단추
+![포커스가 없는 검색 드롭다운 단추](~/extensibility/ux-guidelines/media/0303-116_searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br />포커스가 없는 검색 드롭다운 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -836,7 +836,7 @@ ms.lasthandoff: 05/04/2017
 
 ![검색 확인란](../../extensibility/ux-guidelines/media/0303-126_searchcheckbox.png "0303-126_SearchCheckbox")<br />기본 검색 옵션 (확인란)  
 
-![검색 옵션](~/docs/extensibility/ux-guidelines/media/0303-127_searchoptions.png "0303-127_SearchOptions")<br />기본 검색 옵션 (링크)  
+![검색 옵션](~/extensibility/ux-guidelines/media/0303-127_searchoptions.png "0303-127_SearchOptions")<br />기본 검색 옵션 (링크)  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -861,7 +861,7 @@ ms.lasthandoff: 05/04/2017
 
 **검색 옵션: 누른 상태**  
 
-![검색 옵션 (확인란) 누름](~/docs/extensibility/ux-guidelines/media/0303-131_searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br />검색 옵션 (확인란) 누름   
+![검색 옵션 (확인란) 누름](~/extensibility/ux-guidelines/media/0303-131_searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br />검색 옵션 (확인란) 누름   
 
 ![검색 옵션 (링크) 누름](../../extensibility/ux-guidelines/media/0303-132_searchoptionspressed.png "0303-132_SearchOptionsPressed")<br />검색 옵션 (링크) 누름  
 
@@ -895,7 +895,7 @@ ms.lasthandoff: 05/04/2017
 
 **트리 뷰 항목: 상태 마우스를 가져가고**
 
-![트리 뷰 항목 가리키기](~/docs/extensibility/ux-guidelines/media/0303-149_treeviewhover.png "0303-149_TreeViewHover")<br />트리 뷰 항목 가리키기
+![트리 뷰 항목 가리키기](~/extensibility/ux-guidelines/media/0303-149_treeviewhover.png "0303-149_TreeViewHover")<br />트리 뷰 항목 가리키기
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -939,7 +939,7 @@ ms.lasthandoff: 05/04/2017
 
 **트리 뷰 항목: 가져갈 선택한 상태 포커스 있음**
 
-![선택 및 포커스가 있는 트리 뷰 항목 가리키기](~/docs/extensibility/ux-guidelines/media/0303-153_treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br />선택 및 포커스가 있는 트리 뷰 항목 가리키기  
+![선택 및 포커스가 있는 트리 뷰 항목 가리키기](~/extensibility/ux-guidelines/media/0303-153_treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br />선택 및 포커스가 있는 트리 뷰 항목 가리키기  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -950,7 +950,7 @@ ms.lasthandoff: 05/04/2017
 
 **트리 뷰 항목: 컨텍스트를 가리키면, 선택 및 포커스가 없는 상태**
 
-![선택한 포커스가 없는 트리 뷰 항목 가리키기](~/docs/extensibility/ux-guidelines/media/0303-154_treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br />선택한 포커스가 없는 트리 뷰 항목 가리키기  
+![선택한 포커스가 없는 트리 뷰 항목 가리키기](~/extensibility/ux-guidelines/media/0303-154_treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br />선택한 포커스가 없는 트리 뷰 항목 가리키기  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -988,7 +988,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="command-shelf"></a>명령 선반  
 명령 선반 배경에는 두 가지 토큰 이름 집합이 사용되며, 각각 메뉴 모음이 있는 위치와 명령 모음이 있는 위치에 사용됩니다. 개별 명령 모음 그룹에는 자체 배경색 값이 있으며, "명령 모음" 섹션에서 자세히 설명합니다. 메뉴 모음 및 명령 모음 텍스트는 각각 메뉴 및 명령 모음 섹션에서 설명합니다.  
 
-![Visual Studio 명령 선반 (검토)](~/docs/extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303-188_CommandShelfRedline")<br />Visual Studio 명령 선반 (검토)  
+![Visual Studio 명령 선반 (검토)](~/extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303-188_CommandShelfRedline")<br />Visual Studio 명령 선반 (검토)  
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |
@@ -1128,7 +1128,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="menu-items"></a>메뉴 항목
 개별 메뉴 항목은 메뉴 텍스트와 선택적 아이콘, 확인란 또는 하위 메뉴 문자 모양으로 구성됩니다. 마우스로 가리키면 해당 배경색과 텍스트 색이 바뀝니다. 이 색 토큰은 배경/전경 쌍입니다.  
 
-![메뉴 항목 검토](~/docs/extensibility/ux-guidelines/media/0303-009_menuitemredline.png "0303 009_MenuItemRedline")  
+![메뉴 항목 검토](~/extensibility/ux-guidelines/media/0303-009_menuitemredline.png "0303 009_MenuItemRedline")  
 
 | 사용 함 | 사용 하지 마십시오.  |
 |---|---|
@@ -1137,7 +1137,7 @@ ms.lasthandoff: 05/04/2017
 
 **메뉴 항목: 기본 상태**
 
-![기본 메뉴 항목](~/docs/extensibility/ux-guidelines/media/0303-010_menudefault.png "0303-010_MenuDefault")<br />기본 메뉴 항목  
+![기본 메뉴 항목](~/extensibility/ux-guidelines/media/0303-010_menudefault.png "0303-010_MenuDefault")<br />기본 메뉴 항목  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1153,7 +1153,7 @@ ms.lasthandoff: 05/04/2017
 
 ![메뉴 확인 됨](../../extensibility/ux-guidelines/media/0303-011_menuchecked.png "0303-011_MenuChecked")<br />확인 된 메뉴 항목
 
-![메뉴 선택 됨](~/docs/extensibility/ux-guidelines/media/0303-012_menuselected.png "0303-012_MenuSelected")<br />선택한 메뉴 항목    
+![메뉴 선택 됨](~/extensibility/ux-guidelines/media/0303-012_menuselected.png "0303-012_MenuSelected")<br />선택한 메뉴 항목    
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1238,7 +1238,7 @@ ms.lasthandoff: 05/04/2017
 
 **명령 아이콘: 기본 상태**  
 
-![명령 아이콘 기본값](~/docs/extensibility/ux-guidelines/media/0303-023_commandicondefault.png "0303-023_CommandIconDefault")<br />명령 아이콘 기본값
+![명령 아이콘 기본값](~/extensibility/ux-guidelines/media/0303-023_commandicondefault.png "0303-023_CommandIconDefault")<br />명령 아이콘 기본값
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1310,7 +1310,7 @@ ms.lasthandoff: 05/04/2017
 
 **명령 모음에서 콤보 상자 입력된 필드: 기본 상태**
 
-![명령 모음에서 콤보 상자 입력된 필드](~/docs/extensibility/ux-guidelines/media/0303-030_comboboxinputfield.png "0303-030_ComboBoxInputField")<br />명령 모음에서 콤보 상자 입력된 필드  
+![명령 모음에서 콤보 상자 입력된 필드](~/extensibility/ux-guidelines/media/0303-030_comboboxinputfield.png "0303-030_ComboBoxInputField")<br />명령 모음에서 콤보 상자 입력된 필드  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1330,7 +1330,7 @@ ms.lasthandoff: 05/04/2017
 
 **명령 모음 드롭 다운 목록: 기본 상태**
 
-![명령 모음 드롭 다운 목록](~/docs/extensibility/ux-guidelines/media/0303-032_comboboxdropdownlist.png "0303-032_ComboBoxDropdownList")<br />명령 모음 드롭 다운 목록
+![명령 모음 드롭 다운 목록](~/extensibility/ux-guidelines/media/0303-032_comboboxdropdownlist.png "0303-032_ComboBoxDropdownList")<br />명령 모음 드롭 다운 목록
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1484,7 +1484,7 @@ ms.lasthandoff: 05/04/2017
 
 **명령 모음 드롭 다운 단추: 상태 마우스를 가져가고**  
 
-![명령 모음 드롭 다운 단추 가리키기](~/docs/extensibility/ux-guidelines/media/0303-047_dropdownbuttonhover.png "0303-047_DropdownButtonHover")<br />명령 모음 드롭 다운 단추 가리키기  
+![명령 모음 드롭 다운 단추 가리키기](~/extensibility/ux-guidelines/media/0303-047_dropdownbuttonhover.png "0303-047_DropdownButtonHover")<br />명령 모음 드롭 다운 단추 가리키기  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1667,7 +1667,7 @@ Visual Studio 환경에서 제공 하는 때문에 문서 창을 복제할 않�
 
 **부동 문서 창 프레임 집중 된: 기본 상태**
 
-![에서는 기본 부동 문서 창 프레임](~/docs/extensibility/ux-guidelines/media/0303-067_framefocused.png "0303-067_FrameFocused")<br />에서는 기본 부동 문서 창 프레임
+![에서는 기본 부동 문서 창 프레임](~/extensibility/ux-guidelines/media/0303-067_framefocused.png "0303-067_FrameFocused")<br />에서는 기본 부동 문서 창 프레임
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1735,7 +1735,7 @@ Visual Studio 환경에서 제공 하는 때문에 문서 창을 복제할 않�
 
 -   백그라운드 탭은 현재 선택한 탭이 아닌 모든 문서 탭입니다. 클릭하면 선택한 탭이 되며 다음 토큰 이름에서 모든 배경, 테두리 및 텍스트 색을 가져옵니다.  
 
-![열린 문서 탭 (검토)](~/docs/extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")<br />열린 문서 탭 (검토)
+![열린 문서 탭 (검토)](~/extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")<br />열린 문서 탭 (검토)
 
 | 사용 함  | 사용 하지 마십시오. |
 | --- | --- |
@@ -1807,7 +1807,7 @@ Visual Studio 환경에서 제공 하는 때문에 문서 창을 복제할 않�
 
 **포커스가 없는, 선택한 미리 보기 탭**  
 
-![포커스가 없는, 선택한 미리 보기 탭](~/docs/extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br />포커스가 없는, 선택한 미리 보기 탭
+![포커스가 없는, 선택한 미리 보기 탭](~/extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br />포커스가 없는, 선택한 미리 보기 탭
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1879,7 +1879,7 @@ Visual Studio 환경에서 제공 하는 때문에 문서 창을 복제할 않�
 ### <a name="tagging"></a>태깅  
 Visual Studio는 사용자가 추적을 위해 검색 가능한 키워드를 선언할 수 있는 태깅을 지원합니다. 예를 들어 프로젝트 관리자와 개발자는 TFS(Team Foundation Server)를 사용하여 작업 항목에 태깅할 수 있습니다. 아래 표에서는 태그 자체와 가리키기 및 선택한 상태에서 표시되는 "닫기 아이콘" 문자 모양에 대한 색 이름을 제공합니다.  
 
-![Visual Studio에서 태깅 (검토)](~/docs/extensibility/ux-guidelines/media/0303-176_taggingredline.png "0303-176_TaggingRedline")<br />Visual Studio에서 태깅 (검토)  
+![Visual Studio에서 태깅 (검토)](~/extensibility/ux-guidelines/media/0303-176_taggingredline.png "0303-176_TaggingRedline")<br />Visual Studio에서 태깅 (검토)  
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |
@@ -1889,7 +1889,7 @@ Visual Studio는 사용자가 추적을 위해 검색 가능한 키워드를 선
 
 **태그: 기본 상태**
 
-![기본 태그](~/docs/extensibility/ux-guidelines/media/0303-177_tag.png "0303-177_Tag")<br />기본 태그
+![기본 태그](~/extensibility/ux-guidelines/media/0303-177_tag.png "0303-177_Tag")<br />기본 태그
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |  
@@ -1916,7 +1916,7 @@ Visual Studio는 사용자가 추적을 위해 검색 가능한 키워드를 선
 
 **태그: 선택 된 상태**
 
-![선택한 태그](~/docs/extensibility/ux-guidelines/media/0303-180_tagselected.png "0303-180_TagSelected")<br />선택한 태그  
+![선택한 태그](~/extensibility/ux-guidelines/media/0303-180_tagselected.png "0303-180_TagSelected")<br />선택한 태그  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1946,7 +1946,7 @@ Visual Studio는 사용자가 추적을 위해 검색 가능한 키워드를 선
 
 **닫기 (&times;) 태그 문자 모양: 누른 상태**
 
-![닫기 누름 (&times;) 태그 문자 모양](~/docs/extensibility/ux-guidelines/media/0303-183_tagglyphpressed.png "0303-183_TagGlyphPressed")<br />닫기 누름 (&times;) 태그 문자 모양
+![닫기 누름 (&times;) 태그 문자 모양](~/extensibility/ux-guidelines/media/0303-183_tagglyphpressed.png "0303-183_TagGlyphPressed")<br />닫기 누름 (&times;) 태그 문자 모양
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -2032,7 +2032,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 ### <a name="toolbox-like-windows"></a>도구 상자와 비슷한 창
 도구 상자에는 Visual Studio에서 가장 자주 사용 되는 공통 도구 창 중 하나입니다. 기본적으로 특수 테마와 스타일이 적용 된 트리 컨트롤입니다.  
 
-![도구 상자와 비슷한 창 (검토)](~/docs/extensibility/ux-guidelines/media/0303-189_toolboxredline.png "0303-189_ToolboxRedline")<br />도구 상자와 비슷한 창 (검토)
+![도구 상자와 비슷한 창 (검토)](~/extensibility/ux-guidelines/media/0303-189_toolboxredline.png "0303-189_ToolboxRedline")<br />도구 상자와 비슷한 창 (검토)
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |
@@ -2079,7 +2079,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 
 ![선택한, 포커스가 없는 도구 상자 부모 노드](../../extensibility/ux-guidelines/media/0303-195_toolboxparentnodeunfocused.png "0303-195_ToolboxParentNodeUnfocused")<br />선택한, 포커스가 없는 도구 상자 부모 노드  
 
-![선택한, 포커스가 없는 도구 상자 자식 노드](~/docs/extensibility/ux-guidelines/media/0303-196_toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br />선택한, 포커스가 없는 도구 상자 자식 노드  
+![선택한, 포커스가 없는 도구 상자 자식 노드](~/extensibility/ux-guidelines/media/0303-196_toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br />선택한, 포커스가 없는 도구 상자 자식 노드  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -2110,7 +2110,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 
 **포커스가 없는 제목 표시줄**  
 
-![포커스가 없는 제목 표시줄](~/docs/extensibility/ux-guidelines/media/0303-094_titlebarunfocused.png "0303-094_TitleBarUnfocused")<br />포커스가 없는 제목 표시줄
+![포커스가 없는 제목 표시줄](~/extensibility/ux-guidelines/media/0303-094_titlebarunfocused.png "0303-094_TitleBarUnfocused")<br />포커스가 없는 제목 표시줄
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -2120,7 +2120,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 | 끌기 핸들 | `Environment.TitleBarDragHandle` |
 
 #### <a name="tool-window-title-bar-buttons"></a>도구 창 제목 표시줄 단추  
-![제목 표시줄 단추 (검토)](~/docs/extensibility/ux-guidelines/media/0303-095_titlebarbuttonredline.png "0303-095_TitleBarButtonRedline")<br />제목 표시줄 단추 (검토)  
+![제목 표시줄 단추 (검토)](~/extensibility/ux-guidelines/media/0303-095_titlebarbuttonredline.png "0303-095_TitleBarButtonRedline")<br />제목 표시줄 단추 (검토)  
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |
@@ -2139,7 +2139,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 
 **포커스가 없는 제목 표시줄 단추: 기본 상태**
 
-![기본적으로 포커스가 없는 제목 표시줄 단추](~/docs/extensibility/ux-guidelines/media/0303-097_titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br />기본적으로 포커스가 없는 제목 표시줄 단추    
+![기본적으로 포커스가 없는 제목 표시줄 단추](~/extensibility/ux-guidelines/media/0303-097_titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br />기본적으로 포커스가 없는 제목 표시줄 단추    
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -2206,7 +2206,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 
 **선택한 포커스가 없는 도구 창 탭**  
 
-![선택한 포커스가 없는 도구 창 탭](~/docs/extensibility/ux-guidelines/media/0303-104_toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br />선택한 포커스가 없는 도구 창 탭
+![선택한 포커스가 없는 도구 창 탭](~/extensibility/ux-guidelines/media/0303-104_toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br />선택한 포커스가 없는 도구 창 탭
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -2216,7 +2216,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 
 **백그라운드 도구 창 탭: 기본 상태**
 
-![기본 백그라운드 도구 창 탭](~/docs/extensibility/ux-guidelines/media/0303-105_toolwindowbackgroundtab.png "0303-105_ToolWindowBackgroundTab")<br />기본 백그라운드 도구 창 탭  
+![기본 백그라운드 도구 창 탭](~/extensibility/ux-guidelines/media/0303-105_toolwindowbackgroundtab.png "0303-105_ToolWindowBackgroundTab")<br />기본 백그라운드 도구 창 탭  
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -2236,7 +2236,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 
 ### <a name="auto-hide-tabs"></a>자동 숨기기 탭  
 
-![자동 숨기기 탭 (검토)](~/docs/extensibility/ux-guidelines/media/0303-107_autohideredline.png "0303 107_AutoHideRedline")자동 숨기기 탭 (검토)
+![자동 숨기기 탭 (검토)](~/extensibility/ux-guidelines/media/0303-107_autohideredline.png "0303 107_AutoHideRedline")자동 숨기기 탭 (검토)
 
 | 사용 함 | 사용 하지 마십시오. |
 | --- | --- |

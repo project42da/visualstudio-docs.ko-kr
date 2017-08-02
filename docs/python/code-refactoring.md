@@ -50,11 +50,11 @@ Visual Studio는 Python 소스 코드를 자동으로 변환하고 정리하는 
 1. 이름을 바꿀 식별자를 마우스 오른쪽 단추로 클릭하여 **이름 바꾸기**를 선택하거나, 해당 식별자에 캐럿을 배치하여 **편집 > 리팩터링 > 이름 바꾸기...** 메뉴 명령을 선택하거나 F2 키를 누릅니다.
 1. **이름 바꾸기** 대화 상자가 표시되면 식별자의 새 이름을 입력하고 **확인**을 선택합니다.
 
-  ![새 식별자 이름에 대한 프롬프트 이름 바꾸기](~/docs/python/media/code-refactor-rename-1.png)
+  ![새 식별자 이름에 대한 프롬프트 이름 바꾸기](~/python/media/code-refactor-rename-1.png)
 
 1. 다음 대화 상자에서 이름 바꾸기를 적용할 코드의 파일과 인스턴스를 선택합니다. 특정 인스턴스를 선택하여 해당 변경 내용을 미리 봅니다.
 
-  ![대화 상자의 이름을 변경하여 변경 내용을 적용할 위치 선택](~/docs/python/media/code-refactor-rename-2.png)
+  ![대화 상자의 이름을 변경하여 변경 내용을 적용할 위치 선택](~/python/media/code-refactor-rename-2.png)
 
 1. **적용**을 선택하여 원본 코드 파일을 변경합니다. 이는 실행 취소할 수 있는 작업입니다.
 
@@ -64,21 +64,21 @@ Visual Studio는 Python 소스 코드를 자동으로 변환하고 정리하는 
 1. **편집 > 리팩터링 > 메서드 추출...** 메뉴 명령을 선택하거나 Ctrl+R, M을 입력합니다.
 1. 표시되는 대화 상자에서 새 메서드 이름을 입력하고 추출할 위치를 지정한 다음 클로저 변수를 선택합니다. 클로저로 선택되지 않은 변수는 메서드 인수로 변환됩니다.
 
-  ![메서드 추출 대화 상자](~/docs/python/media/code-refactor-extract-method-1.png)
+  ![메서드 추출 대화 상자](~/python/media/code-refactor-extract-method-1.png)
 
 1. **확인**을 선택하고, 이에 따라 코드가 수정됩니다.
 
-  ![메서드 추출 결과](~/docs/python/media/code-refactor-extract-method-2.png)
+  ![메서드 추출 결과](~/python/media/code-refactor-extract-method-2.png)
 
 ## <a name="add-import"></a>가져오기 추가
 
 형식 정보가 없는 식별자에 캐럿을 배치하면 Visual Studio에서 명령에 필요한 `import` 또는 `from ... import` 문을 추가하는 스마트 태그(코드 왼쪽의 전구 모양 아이콘)를 제공합니다.
 
-![가져오기 스마트 태그 추가](~/docs/python/media/code-refactor-add-import-1.png)
+![가져오기 스마트 태그 추가](~/python/media/code-refactor-add-import-1.png)
 
 `import` 완성은 현재 프로젝트와 표준 라이브러리의 최상위 패키지와 모듈에 대해 제공됩니다. `from ... import` 완성은 하위 모듈과 하위 패키지뿐만 아니라 모듈 멤버에도 제공됩니다. 여기에는 함수, 클래스 또는 내보낸 데이터가 포함됩니다. 두 옵션 중 하나를 선택하면 다른 가져오기 후에 문을 파일의 맨 위에 추가하거나 동일한 모듈을 이미 가져온 경우 기존 `from ... import` 문에 해당 문을 추가합니다.
 
-![가져오기 추가 결과](~/docs/python/media/code-refactor-add-import-2.png)
+![가져오기 추가 결과](~/python/media/code-refactor-add-import-2.png)
 
 Visual Studio는 모듈에서 실제로 정의되지 않은 멤버(예: 다른 모듈로 가져온 모듈)를 필터링하려고 하지만 가져오기를 수행하는 모듈의 하위 노드는 아닙니다. 예를 들어 많은 모듈에서 `from xyz import sys` 대신 `import sys`를 사용하므로 해당 모듈에 `sys`를 제외하는 `__all__` 멤버가 없더라도 다른 모듈에서 `sys` 가져오기 완성이 표시되지 않습니다.
 
@@ -93,10 +93,10 @@ Visual Studio는 모듈에서 실제로 정의되지 않은 멤버(예: 다른 �
 
 편집기의 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **모든 범위** 또는 **현재 범위**에서 제거할 수 있는 옵션을 제공하는 **가져오기 제거**를 선택합니다.
 
-![가져오기 제거 메뉴](~/docs/python/media/code-refactor-remove-imports-1.png)
+![가져오기 제거 메뉴](~/python/media/code-refactor-remove-imports-1.png)
 
 그러면 Visual Studio에서 코드를 적절하게 변경합니다.
 
-![가져오기 제거 결과](~/docs/python/media/code-refactor-remove-imports-2.png)
+![가져오기 제거 결과](~/python/media/code-refactor-remove-imports-2.png)
 
 Visual Studio는 제어 흐름을 설명하지 않습니다. `import` 문 앞에 이름을 사용하면 이름이 실제로 사용된 것처럼 처리됩니다. 또한 Visual Studio는 `from ... import *` 문뿐만 아니라 모든 `from __future__` 가져오기, 즉 클래스 정의 내에서 수행되는 가져오기도 무시합니다.

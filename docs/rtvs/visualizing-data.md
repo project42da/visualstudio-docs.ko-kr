@@ -41,7 +41,7 @@ ms.lasthandoff: 05/12/2017
 
 그리기는 데이터 과학자 워크플로의 주요 부분입니다. RTVS(Visual Studio용 R 도구)에서 모든 그리기 작업은 이 주요 작업을 통해 생산성을 향상하도록 디자인된 하나 이상의 플롯 창을 중심으로 수행됩니다.
 
-![영웅 이미지 그리기](~/docs/rtvs/media/plotting-hero-image.png)
+![영웅 이미지 그리기](~/rtvs/media/plotting-hero-image.png)
 
 항목 내용:
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/12/2017
 
 플롯 창에는 일련의 플롯이 포함됩니다. 여기서 각 플롯은 `plot` 명령으로 생성됩니다. 예를 들어 `plot(1:100)`를 사용하면 새 플롯 창이 만들어집니다(없는 경우).
 
-![1:100 선형 플롯](~/docs/rtvs/media/plotting-1-to-100.png)
+![1:100 선형 플롯](~/rtvs/media/plotting-1-to-100.png)
 
 기술적으로 말하면 R `plot` 명령은 R 그래픽 장치에 대한 출력을 렌더링하고, 플롯 창에서는 R 그래픽 장치의 콘텐츠를 렌더링합니다. 이런 이유로 각 플롯 창에는 장치 번호가 지정됩니다.
 
@@ -76,16 +76,16 @@ ms.lasthandoff: 05/12/2017
 
 | 단추 | 명령 | 설명 | 
 | --- | --- | --- |
-| ![새 플롯 창 단추](~/docs/rtvs/media/plotting-toolbar-01-new-plot-window.png) | 새 플롯 창 | 자체 기록이 포함된 별도의 플롯 창을 만듭니다. [여러 플롯 창](#multiple-plot-windows)을 참조하세요. |
-| ![플롯 창 활성화 단추](~/docs/rtvs/media/plotting-toolbar-02-activate-plot-window.png) | 플롯 창 활성화 | 현재 플롯 창을 활성 창으로 설정하므로 후속 `plot` 명령은 해당 창으로 렌더링됩니다. [여러 플롯 창](#multiple-plot-windows)을 참조하세요. [여러 플롯 창](#multiple-plot-windows)을 참조하세요. |
-| ![플롯 기록 창 단추](~/docs/rtvs/media/plotting-toolbar-03-plot-history.png) | 플롯 기록 창 | 기록의 모든 플롯이 미리 보기로 표시되는 창을 엽니다. [플롯 기록](#plot-history)을 참조하세요. |
-| ![플롯 기록 단추](~/docs/rtvs/media/plotting-toolbar-04-plot-history-arrows.png) | 이전/다음 플롯 |  기록에서 이전 또는 다음 플롯으로 이동합니다. Ctrl+Alt+F11(이전) 및 Ctrl+Alt+F12(다음)를 사용하여 기록을 탐색할 수도 있습니다. [플롯 기록](#plot-history)을 참조하세요. |
-| ![이미지로 저장 단추](~/docs/rtvs/media/plotting-toolbar-05-save-as-image.png)| 이미지로 저장 | 파일 이름을 입력하라는 메시지를 표시하고 현재 플롯(창 콘텐츠, 창 크기)을 이미지 파일에 저장합니다. 사용 가능한 형식은 `.png`, `.jpg`, `.bmp` 및 `.tif`입니다. |
-| ![PDF로 저장 단추](~/docs/rtvs/media/plotting-toolbar-06-save-as-pdf.png)| PDF로 저장 | 현재 창 크기를 사용하여 현재 플롯을 PDF 파일로 저장합니다. PDF 크기를 조정하면 플롯이 다시 렌더링됩니다. |
-| ![비트맵으로 복사 단추](~/docs/rtvs/media/plotting-toolbar-07-copy-as-bitmap.png)| 비트맵으로 복사 | 현재 창 크기를 사용하여 플롯을 클립보드에 래스터 비트맵으로 복사합니다. | 
-| ![메타파일로 복사 단추](~/docs/rtvs/media/plotting-toolbar-08-copy-as-metafile.png)| 메타파일로 복사 | 플롯을 클립보드에 [Windows 메타파일](https://en.wikipedia.org/wiki/Windows_Metafile)(Wikipedia)로 복사합니다. | 
-| ![플롯 제거 단추](~/docs/rtvs/media/plotting-toolbar-09-remove-plot.png)| 플롯 제거 | 기록에서 현재 플롯을 제거합니다. |
-| ![모든 플롯 지우기 단추](~/docs/rtvs/media/plotting-toolbar-10-clear-all-plots.png) | 모든 플롯 지우기 | 기록에서 모든 플롯을 제거합니다(확인 메시지 표시). |
+| ![새 플롯 창 단추](~/rtvs/media/plotting-toolbar-01-new-plot-window.png) | 새 플롯 창 | 자체 기록이 포함된 별도의 플롯 창을 만듭니다. [여러 플롯 창](#multiple-plot-windows)을 참조하세요. |
+| ![플롯 창 활성화 단추](~/rtvs/media/plotting-toolbar-02-activate-plot-window.png) | 플롯 창 활성화 | 현재 플롯 창을 활성 창으로 설정하므로 후속 `plot` 명령은 해당 창으로 렌더링됩니다. [여러 플롯 창](#multiple-plot-windows)을 참조하세요. [여러 플롯 창](#multiple-plot-windows)을 참조하세요. |
+| ![플롯 기록 창 단추](~/rtvs/media/plotting-toolbar-03-plot-history.png) | 플롯 기록 창 | 기록의 모든 플롯이 미리 보기로 표시되는 창을 엽니다. [플롯 기록](#plot-history)을 참조하세요. |
+| ![플롯 기록 단추](~/rtvs/media/plotting-toolbar-04-plot-history-arrows.png) | 이전/다음 플롯 |  기록에서 이전 또는 다음 플롯으로 이동합니다. Ctrl+Alt+F11(이전) 및 Ctrl+Alt+F12(다음)를 사용하여 기록을 탐색할 수도 있습니다. [플롯 기록](#plot-history)을 참조하세요. |
+| ![이미지로 저장 단추](~/rtvs/media/plotting-toolbar-05-save-as-image.png)| 이미지로 저장 | 파일 이름을 입력하라는 메시지를 표시하고 현재 플롯(창 콘텐츠, 창 크기)을 이미지 파일에 저장합니다. 사용 가능한 형식은 `.png`, `.jpg`, `.bmp` 및 `.tif`입니다. |
+| ![PDF로 저장 단추](~/rtvs/media/plotting-toolbar-06-save-as-pdf.png)| PDF로 저장 | 현재 창 크기를 사용하여 현재 플롯을 PDF 파일로 저장합니다. PDF 크기를 조정하면 플롯이 다시 렌더링됩니다. |
+| ![비트맵으로 복사 단추](~/rtvs/media/plotting-toolbar-07-copy-as-bitmap.png)| 비트맵으로 복사 | 현재 창 크기를 사용하여 플롯을 클립보드에 래스터 비트맵으로 복사합니다. | 
+| ![메타파일로 복사 단추](~/rtvs/media/plotting-toolbar-08-copy-as-metafile.png)| 메타파일로 복사 | 플롯을 클립보드에 [Windows 메타파일](https://en.wikipedia.org/wiki/Windows_Metafile)(Wikipedia)로 복사합니다. | 
+| ![플롯 제거 단추](~/rtvs/media/plotting-toolbar-09-remove-plot.png)| 플롯 제거 | 기록에서 현재 플롯을 제거합니다. |
+| ![모든 플롯 지우기 단추](~/rtvs/media/plotting-toolbar-10-clear-all-plots.png) | 모든 플롯 지우기 | 기록에서 모든 플롯을 제거합니다(확인 메시지 표시). |
 
 ## <a name="multiple-plot-windows"></a>여러 플롯 창
 
@@ -104,7 +104,7 @@ ms.lasthandoff: 05/12/2017
 전체 플롯 컬렉션을 확인하려면 도구 모음 단추 또는 **R 도구 > 플롯 > 플롯 기록 창**을 사용하여 플롯 기록 창을 엽니다.
 그러면 해당 창에 표시된 플롯의 미리 보기 목록이 플롯 창(또는 장치)별로 그룹화되어 표시됩니다. 도구 모음에서 확대/축소 단추를 사용하여 미리 보기 크기를 변경할 수 있습니다.
 
-![플롯 기록 창](~/docs/rtvs/media/plotting-plot-history-window.png)
+![플롯 기록 창](~/rtvs/media/plotting-plot-history-window.png)
 
 플롯을 연결된 창에서 열려면 해당 플롯을 두 번 클릭하여 선택하고 **플롯 표시** 도구 모음 단추를 선택하거나, 마우스 오른쪽 단추를 클릭하고 **플롯 표시**를 선택합니다. 개별 플롯을 선택하고 마우스 오른쪽 단추 클릭 상황에 맞는 메뉴 또는 **편집** 메뉴에서 복사, 잘라내기 또는 삭제할 수도 있습니다.
 

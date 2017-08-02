@@ -38,7 +38,7 @@ caps.handback.revision: 26
   
  아래 다이어그램에서는 라이브러리와 Visual Studio 개체 관리자 사이의 요청\/데이터 교환 프로세스의 주요 요소를 포함합니다.  다이어그램에 인터페이스를 관리 코드 응용 프로그램의 일부입니다.  
   
- ![라이브러리와 개체 관리자 간의 데이터 흐름](~/docs/extensibility/internals/media/callbrowserdiagram.gif "CallBrowserDiagram")  
+ ![라이브러리와 개체 관리자 간의 데이터 흐름](~/extensibility/internals/media/callbrowserdiagram.gif "CallBrowserDiagram")  
   
  기호 목록 Visual Studio 개체 관리자에 게 제공 하려면 먼저 라이브러리 Visual Studio 개체 관리자를 호출 하 여 등록 해야는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> 메서드가 있습니다.  라이브러리 등록 되 면 Visual Studio 개체 관리자 라이브러리의 기능에 대 한 특정 정보를 요청 합니다.  예를 들어 라이브러리 플래그를 요청 하 고 범주를 호출 하 여 지원 되는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetLibFlags2%2A> 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetSupportedCategoryFields2%2A> 방법입니다.  도구 중 하나이 라이브러리에서 데이터를 요청 하는 경우 일부 지점에서 개체 관리자 기호 목록의 최상위를 호출 하 여 요청을 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetList2%2A> 방법입니다.  응답, 라이브러리 기호 목록 제조 및 Visual Studio 개체 관리자를 통해 노출의 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> 인터페이스입니다.  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 개체 관리자를 호출 하 여 목록에 있는 항목 수를 결정을 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetItemCount%2A> 메서드.  모든 다음 요청 목록에 지정 된 항목에 관련 된 및 각 요청에서 항목 인덱스 번호를 제공 합니다.  Visual Studio 개체 관리자를 호출 하 여 형식, 액세스 가능성, 및 항목의 다른 속성에 있는 정보를 수집 하는 진행 되는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetCategoryField2%2A> 메서드.  
   

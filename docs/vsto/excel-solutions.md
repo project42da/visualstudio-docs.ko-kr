@@ -74,7 +74,7 @@ caps.handback.revision: 30
   
  VSTO 추가 기능이 작동하는 방법에 대한 일반적인 내용은 [VSTO 추가 기능의 아키텍처](../vsto/architecture-of-vsto-add-ins.md)를 참조하세요.  
   
- ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Excel 추가 기능에서 PowerPoint 자동화](http://go.microsoft.com/fwlink/?LinkID=130300)를 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Excel 추가 기능에서 PowerPoint 자동화](http://go.microsoft.com/fwlink/?LinkID=130300)를 참조하세요.  
   
 ### Excel 추가 기능 프로그래밍 모델  
  Excel VSTO 추가 기능 프로젝트를 만드는 경우 Visual Studio는 솔루션의 기초가 되는 `ThisAddIn`이라는 클래스를 생성합니다. 이 클래스는 코드를 작성하기 위한 시작점을 제공하고 VSTO 추가 기능에 Excel의 개체 모델도 노출합니다.  

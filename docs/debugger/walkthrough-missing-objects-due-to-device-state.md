@@ -107,4 +107,4 @@ manager: "ghogen"
   
  렌더링 문제의 원인이 잘못 구성된 깊이 함수라는 사실을 확인한 후에는 이 정보와 코드에 대한 지식을 함께 사용하여 깊이 함수가 잘못 설정된 위치를 찾아 문제를 해결할 수 있습니다. 코드에 친숙하지 않은 경우에는 디버깅 중에 수집한 단서를 사용하여 문제를 검색할 수 있습니다. 예를 들어 이 시나리오에서는 **깊이 스텐실 설명**을 사용하여 코드에서 "depth" 또는 "GREATER"와 같은 단어를 찾을 수 있습니다. 코드를 수정한 후 다시 빌드하고 앱을 다시 실행하여 렌더링 문제가 해결되었는지 검색합니다.  
   
- ![문제가 수정되기 후의 응용 프로그램](~/docs/debugger/graphics/media/vsg_walkthru1_finalview.png "vsg\_walkthru1\_finalview")
+ ![문제가 수정되기 후의 응용 프로그램](~/debugger/graphics/media/vsg_walkthru1_finalview.png "vsg\_walkthru1\_finalview")

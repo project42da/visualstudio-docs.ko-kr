@@ -63,7 +63,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 
 4.  도구 모음의 **도구 선택** 설정을 사용하여 **CPU 사용량**을 표시할지, [메모리 사용량](../profiling/Memory-Usage.md)을 표시할지, 아니면 둘 다 표시할지를 선택할 수 있습니다. Visual Studio Enterprise를 실행 중인 경우 **도구/옵션/IntelliTrace**에서 IntelliTrace를 사용하거나 사용하지 않도록 설정할 수도 있습니다.
 
-     ![진단 도구 표시](~/docs/profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
+     ![진단 도구 표시](~/profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
 
      주로 CPU 사용률을 살펴볼 것이므로 **CPU 사용량**을 사용하도록 설정했는지(기본적으로 사용됨) 확인하세요.
 
@@ -71,7 +71,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 
      앱 로드가 완료되면 진단 도구의 요약 보기가 나타납니다.
 
-     ![진단 도구 요약 탭](~/docs/profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
+     ![진단 도구 요약 탭](~/profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
 
      이벤트에 대한 자세한 내용은 [진단 도구 창의 이벤트 탭 검색 및 필터링](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/12/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window.aspx)을 참조하세요.
 
@@ -79,7 +79,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 
 7.  디버거가 일시 중지된 동안 CPU 사용량 데이터 수집을 사용하도록 설정한 다음 **CPU 사용량** 탭을 엽니다.
 
-     ![진단 도구에서 CPU 프로파일링을 사용하도록 설정](~/docs/profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
+     ![진단 도구에서 CPU 프로파일링을 사용하도록 설정](~/profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
 
      **CPU 프로파일링 사용**을 선택하면 Visual Studio는 함수 및 함수 실행에 걸리는 시간의 기록을 시작합니다. 응용 프로그램이 중단점에서 멈추면 이렇게 수집된 데이터만 볼 수 있습니다.
 
@@ -89,15 +89,15 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 
 9.  CPU 타임라인에서 분석하고자 하는 영역을 선택합니다(프로파일링 데이터를 표시하는 영역이어야 함).
 
-     ![시간 세그먼트를 선택하는 진단 도구](~/docs/profiling/media/DiagToolsSelectTimeSegment.png "DiagToolsSelectTimeSegment")
+     ![시간 세그먼트를 선택하는 진단 도구](~/profiling/media/DiagToolsSelectTimeSegment.png "DiagToolsSelectTimeSegment")
 
      프로파일러는 스레드 데이터 준비를 시작합니다. 끝날 때까지 기다립니다.
 
-     ![스레드를 준비하는 진단 도구](~/docs/profiling/media/DiagToolsPreparingThreads.png "DiagToolsPreparingThreads")
+     ![스레드를 준비하는 진단 도구](~/profiling/media/DiagToolsPreparingThreads.png "DiagToolsPreparingThreads")
   
      CPU 사용량 도구는 **CPU 사용량** 탭에 보고서를 표시합니다.
   
-     ![진단 도구 CPU 사용량 탭](~/docs/profiling/media/DiagToolsCPUUsageTab.png "DiagToolsCPUUsageTab")
+     ![진단 도구 CPU 사용량 탭](~/profiling/media/DiagToolsCPUUsageTab.png "DiagToolsCPUUsageTab")
 
      이 시점에서 데이터 분석을 시작할 수 있습니다.
 
@@ -107,7 +107,7 @@ CPU 사용량 아래의 함수 목록을 검사하고, 가장 많은 작업을 �
 
 1. 함수 목록에서 가장 많은 작업을 수행하는 함수를 검사합니다.
 
-    ![진단 도구 CPU 사용량 함수 목록](~/docs/profiling/media/DiagToolsCPUUsageFunctionList.png "DiagToolsCPUUsageFunctionList")
+    ![진단 도구 CPU 사용량 함수 목록](~/profiling/media/DiagToolsCPUUsageFunctionList.png "DiagToolsCPUUsageFunctionList")
 
     > [!TIP]
     > 함수는 가장 많은 작업을 수행하는 것부터 나열됩니다(호출 순서가 아님). 따라서 가장 오래 실행된 함수를 빠르게 식별할 수 있습니다.
@@ -116,7 +116,7 @@ CPU 사용량 아래의 함수 목록을 검사하고, 가장 많은 작업을 �
 
     함수를 두 번 클릭하면 **호출자/호출 수신자** 뷰가 왼쪽 창에 열립니다. 
 
-    ![진단 도구 호출자 호출 수신자 뷰](~/docs/profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
+    ![진단 도구 호출자 호출 수신자 뷰](~/profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
 
     이 뷰에서는 선택한 함수가 제목 및 **현재 함수** 상자에 표시됩니다(이 예제의 경우 GetNumber). 현재 함수를 호출한 함수는 **호출 함수** 아래 왼쪽에 표시되고, 현재 함수에 의해 호출된 함수는 오른쪽의 **호출된 함수** 상자에 표시됩니다. 두 상자 중 하나를 선택하여 현재 함수를 변경할 수 있습니다.
 
@@ -131,7 +131,7 @@ CPU 사용량 아래의 함수 목록을 검사하고, 가장 많은 작업을 �
  
     그림에서 번호가 매겨진 각 영역은 절차의 단계와 관련되어 있습니다.
   
-    ![진단 도구 호출 트리](~/docs/profiling/media/DiagToolsCallTree.png "DiagToolsCallTree")
+    ![진단 도구 호출 트리](~/profiling/media/DiagToolsCallTree.png "DiagToolsCallTree")
   
 |||
 |-|-|
@@ -154,7 +154,7 @@ CPU 사용량 아래의 함수 목록을 검사하고, 가장 많은 작업을 �
   
 외부 코드의 호출 경로를 보려면 **필터 뷰** 목록에서 **외부 코드 표시**를 선택한 다음 **적용**을 선택합니다.  
   
-![필터 뷰 선택 후 외부 코드 표시](~/docs/profiling/media/DiagToolsShowExternalCode.png "DiagToolsShowExternalCode")  
+![필터 뷰 선택 후 외부 코드 표시](~/profiling/media/DiagToolsShowExternalCode.png "DiagToolsShowExternalCode")  
   
 여러 외부 코드 호출 체인은 깊이 중첩되어 있으므로 함수 이름 열의 너비가 컴퓨터 모니터의 거의 최대 화면 너비를 초과할 수 있습니다. 이런 경우 함수 이름은 다음과 같이 **[…]**로 표시됩니다.
   

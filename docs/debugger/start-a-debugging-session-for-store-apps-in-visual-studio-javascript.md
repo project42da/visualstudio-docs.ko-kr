@@ -26,7 +26,7 @@ caps.handback.revision: 24
 # Visual Studio에서 스토어 앱에 대한 디버깅 세션 시작(JavaScript)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  이 항목에서는 JavaScript 및 HTML5로 작성된 Windows 스토어 앱에 대한 디버깅 세션을 시작하는 방법을 설명합니다. 키를 한 번 입력하여 디버깅을 시작할 수도 있고, 특정 시나리오에 대한 디버깅 세션을 구성하여 앱을 시작할 수도 있습니다.  
   
@@ -67,7 +67,7 @@ caps.handback.revision: 24
 -   [디버거 연결](#BKMK_Attach_the_debugger)  
   
 ##  <a name="BKMK_The_easy_way_to_start_debugging"></a> 디버깅을 쉽게 시작하는 방법  
- ![Windows에만 적용](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
 1.  Visual Studio에서 앱 솔루션을 엽니다.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 24
   
 3.  F5 키를 누릅니다.  
   
- ![Windows Phone에만 적용](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Windows Phone에만 적용](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Visual Studio가 디버거가 연결된 앱을 빌드하고 시작합니다. 중단점에 도달하거나 수동으로 실행을 일시 중단하거나 처리되지 않은 예외가 발생하거나 응용 프로그램이 끝날 때까지 계속해서 실행됩니다. 자세한 내용은 [퀵 스타트: HTML 및 CSS 디버그](../debugger/quickstart-debug-html-and-css.md)을 참조하세요.  
   
@@ -97,7 +97,7 @@ caps.handback.revision: 24
 ###  <a name="BKMK_Choose_the_deployment_target"></a> 배포 대상 선택  
  Visual Studio 컴퓨터, 로컬 컴퓨터의 Visual Studio 시뮬레이터 또는 원격 컴퓨터에서 앱을 배포하고 디버깅할 수 있습니다. 프로젝트의 **디버깅** 속성 페이지에 있는 **실행할 디버거** 목록에서 대상을 선택합니다.  
   
- ![Windows에만 적용](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Windows 스토어 앱의 경우 **대상 장치** 목록에서 다음 옵션 중 하나를 선택합니다.  
   
@@ -118,7 +118,7 @@ caps.handback.revision: 24
     > [!NOTE]
     >  원격 디버거 연결 선택 대화 상자에는 로컬 서브넷에 있는 컴퓨터와 이더넷 케이블을 통해 Visual Studio 컴퓨터에 직접 연결되어 있는 컴퓨터가 표시됩니다. 다른 컴퓨터를 지정하려면 **컴퓨터 이름** 상자에 이름을 입력합니다.  
   
- ![Windows Phone에만 적용](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Windows Phone에만 적용](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Windows 스토어 Phone 앱의 경우 **대상 장치** 목록에서 에뮬레이터 중 하나를 선택하거나 **장치**를 선택합니다.  
   
@@ -145,7 +145,7 @@ caps.handback.revision: 24
 -   앱을 즉시 시작하려면 **예**를 선택합니다.  
   
 ###  <a name="BKMK__Optional__Disable_network_loopbacks"></a> \(선택 사항\) 네트워크 루프백 비활성화  
- ![Windows에만 적용](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  보안상의 이유로 일반적인 방식으로 설치된 Windows 스토어 앱은 앱이 설치된 장치에 대한 네트워크 호출을 수행할 수 없습니다. 기본적으로 Visual Studio를 배포하면 배포된 응용 프로그램에 대한 이 규칙의 예외가 만들어 집니다. 이 예외로 인해 사용자는 단일 컴퓨터에서 통신 프로시저를 테스트할 수 있습니다. 앱을 Windows 스토어에 제출하기 전에 제외 없이 앱을 테스트해야 합니다.  
   

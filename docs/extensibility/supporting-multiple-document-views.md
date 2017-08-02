@@ -35,7 +35,7 @@ caps.handback.revision: 25
 ## 문서 데이터가 있는지 여부를 결정 합니다. 이미 열려  
  통합된 개발 환경 \(IDE\)에서 실행 중인 문서 테이블 \(RDT\) 데이터 문서에 대해 이미 다음 다이어그램에서와 같이 열려 있는지 여부를 추적 하는 데 도움이 됩니다.  
   
- ![DocDataView 그래픽](~/docs/extensibility/media/docdataview.gif "Docdataview")  
+ ![DocDataView 그래픽](~/extensibility/media/docdataview.gif "Docdataview")  
 여러 보기  
   
  기본적으로 각 보기 \(문서 보기 개체\)는 자체 창 프레임에 포함 된 \(<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>\).  이미 설명한 것 처럼, 문서 데이터가 여러 뷰를 표시할 수 있습니다.  이 기능을 사용 하려면 Visual Studio RDT 의심 문서 편집기에 열려 있는지 확인 하는 검사 합니다.  IDE 호출 하는 경우 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> 편집기를 만들려면에서 NULL이 아닌 값이 반환의 `punkDocDataExisting` 매개 변수를 나타내는 문서가 이미 다른 편집기에 열려 있습니다.  RDT 함수 참조 하십시오 방법에 대 한 자세한 내용은 [실행 중인 Document 테이블](../extensibility/internals/running-document-table.md).  

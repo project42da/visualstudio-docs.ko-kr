@@ -34,7 +34,7 @@ caps.handback.revision: 58
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
- ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Outlook을 사용하여 사용자 지정 작업 보고서 만들기](http://go.microsoft.com/fwlink/?LinkID=130315)를 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Outlook을 사용하여 사용자 지정 작업 보고서 만들기](http://go.microsoft.com/fwlink/?LinkID=130315)를 참조하세요.  
   
 ## Outlook 프로젝트의 개체 액세스  
  Outlook은 조작할 수 많은 개체를 제공합니다. 개체 모델을 효과적으로 사용하려면 다음과 같은 최상위 개체를 잘 알고 있어야 합니다.  

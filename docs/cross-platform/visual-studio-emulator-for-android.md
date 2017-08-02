@@ -100,7 +100,7 @@ Android용 Visual Studio 에뮬레이터는 Android 장치를 에뮬레이트하
   
  Visual Studio 2015에서는 에뮬레이터 관리자를 사용하여 장치 프로필을 설치, 제거, 시작할 수 있습니다. **도구**를 선택한 후 **Visual Studio Emulator for Android**를 선택하여 에뮬레이터 관리자에 액세스합니다.  
   
- ![Visual Studio Emulator for Android 관리자](~/docs/cross-platform/media/android_emu_manager.png "Android_Emu_Manager")  
+ ![Visual Studio Emulator for Android 관리자](~/cross-platform/media/android_emu_manager.png "Android_Emu_Manager")  
   
  기본적으로 KitKat 및 롤리팝 휴대폰(5") 및 태블릿(7") 구성에 해당하는 사전 설치 장치 프로필 4가지가 제공되며 이는 흰색 텍스트와 아이콘으로 표시됩니다. 목록에 있는 다른 프로필은 **프로필 설치** 단추를 선택하여 설치가 완료되기 전까지 회색으로 나타납니다. API 수준을 기준으로 목록을 필터링하고 프로필 오른쪽 아래에 있는 세부 정보 화살표를 클릭하여 전체 구성 정보를 볼 수 있습니다.  
   

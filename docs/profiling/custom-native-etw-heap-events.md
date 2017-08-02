@@ -67,7 +67,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 
 사용자 지정 힙을 추적하지 않는 [메모리 사용량](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) 도구에서 만든 스냅숏에는 단일 8192바이트 할당만 표시되고, 풀에서 만든 사용자 지정 할당은 표시되지 않습니다.
 
-![Windows 힙 할당](~/docs/profiling/media/heap-example-windows-heap.png)
+![Windows 힙 할당](~/profiling/media/heap-example-windows-heap.png)
 
 다음 단계를 수행하여 동일한 도구로 사용자 지정 힙의 메모리 사용량을 추적할 수 있습니다.
 
@@ -158,17 +158,17 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 ## <a name="tracking-memory-usage"></a>메모리 사용량 추적
 이제 이러한 호출을 적절히 배치하여 Visual Studio의 표준 **메모리 사용량** 도구를 통해 사용자 지정 힙 사용량을 추적할 수 있습니다.  이 도구를 사용하는 방법에 대한 자세한 내용은 [메모리 사용량](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) 설명서를 참조하세요. 스냅숏을 사용하여 힙 프로파일링을 설정해야 합니다. 그러지 않으면 표시된 사용자 지정 힙 사용량이 나타나지 않습니다. 
 
-![힙 프로파일링 사용](~/docs/profiling/media/heap-enable-heap.png)
+![힙 프로파일링 사용](~/profiling/media/heap-enable-heap.png)
 
 사용자 지정 힙 추적을 보려면 **스냅숏** 창의 오른쪽 위에 있는 **힙** 드롭다운을 사용하여 뷰를 *NT 힙*에서 앞에서 이름을 지정한 사용자 힙으로 변경합니다.
 
-![힙 선택](~/docs/profiling/media/heap-example-custom-heap.png)
+![힙 선택](~/profiling/media/heap-example-custom-heap.png)
 
 위의 코드 예제를 참조하여 `MemoryPool`에서 `VSHeapTracker::CHeapTracker` 개체를 만들고 자체 `allocate` 메서드로 `AllocateEvent` 메서드를 호출하면 사용자 지정 할당 결과를 확인할 수 있습니다. 모두 `Foo` 형식이고 총 24바이트인 세 개의 인스턴스가 표시됩니다.
 
 기본 *NT 힙* 힙의 모양은 이전과 동일하지만 `CHeapTracker` 개체가 추가되었습니다.
 
-![추적기가 있는 NT 힙](~/docs/profiling/media/heap-example-windows-heap.png)
+![추적기가 있는 NT 힙](~/profiling/media/heap-example-windows-heap.png)
 
 표준 Windows 힙과 마찬가지로 이 도구를 사용하여 스냅숏을 비교하고 사용자 지정 힙의 누수 및 손상을 확인할 수도 있습니다. 자세한 내용은 기본 [메모리 사용량](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) 설명서를 참조하세요.
 

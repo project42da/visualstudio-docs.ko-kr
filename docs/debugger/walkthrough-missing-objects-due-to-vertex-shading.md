@@ -36,7 +36,7 @@ manager: "ghogen"
   
  이 시나리오에서는 테스트를 위해 앱을 실행할 때 배경은 예상대로 렌더링되지만 개체 중 하나가 나타나지 않습니다. 그래픽 진단을 사용하여 앱을 디버그할 수 있도록 그래픽 로그 문제를 포착합니다. 이 문제는 앱에서 다음과 같이 보입니다.  
   
- ![개체를 볼 수 없습니다.](~/docs/debugger/graphics/media/gfx_diag_demo_missing_object_shader_problem.png "gfx\_diag\_demo\_missing\_object\_shader\_problem")  
+ ![개체를 볼 수 없습니다.](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_problem.png "gfx\_diag\_demo\_missing\_object\_shader\_problem")  
   
 ## 조사  
  그래픽 진단 도구를 사용하면 그래픽 로그 파일을 로드하여 테스트 중에 캡처한 프레임을 검사할 수 있습니다.  
@@ -80,19 +80,19 @@ manager: "ghogen"
   
 3.  `output`이 처음 수정되면 멤버 `worldPos`가 기록됩니다.  
   
-     !["output.worldPos" 값이 적절한 것으로 보임](~/docs/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_4.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_4")  
+     !["output.worldPos" 값이 적절한 것으로 보임](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_4.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_4")  
   
      해당 값에 문제가 없어 보이므로 `output`을 수정하는 다음 줄까지 코드를 계속 단계별로 진행합니다.  
   
 4.  `output`이 수정되는 다음 번에 멤버 `pos`가 기록됩니다.  
   
-     !["output.pos" 값이 0이 됨](~/docs/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_5.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_5")  
+     !["output.pos" 값이 0이 됨](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_5.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_5")  
   
      이번에는 `pos` 멤버의 값\(모두 0\)에 문제가 있어 보입니다. 다음으로 `output.pos`가 어떻게 모두 0 값을 갖게 되었는지 확인하려 합니다.  
   
 5.  `output.pos`는 `temp`라는 변수에서 해당 값을 가져옵니다. 이전 줄에서 `temp` 값은 이전 값을 `projection`이라는 상수와 곱한 결과임을 알 수 있습니다.`temp`의 의심스러운 값이 이러한 곱하기의 결과인지 의심하게 됩니다.`projection`에 포인터를 두면 해당 값 역시 모두 0임을 알 수 있습니다.  
   
-     ![프로젝션 매트릭스에 잘못된 변형이 포함되어 있음](~/docs/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_6.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_6")  
+     ![프로젝션 매트릭스에 잘못된 변형이 포함되어 있음](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_6.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_6")  
   
      이 시나리오에서는 검사를 진행하면 `temp`의 의심스러운 값이 `projection`에 의한 곱하기의 결과일 가능성이 크고, `projection`이 투영 행렬을 포함해야 하는 상수이므로 모두 0이면 안 된다는 것을 알게 됩니다.  
   
@@ -104,7 +104,7 @@ manager: "ghogen"
   
 2.  호출 스택에서 앱의 소스 코드까지 이동합니다.**그래픽 이벤트 호출 스택** 창에서 최상위 호출을 선택하여 상수 버퍼가 채워지는지 확인합니다. 그러지 않으면 채워진 위치를 찾을 때까지 호출 스택 위로 이동합니다. 이 시나리오에서는 `UpdateSubresource` Direct3D API를 사용하여 `MarbleMaze::Render`라는 함수의 호출 스택까지 상수 버퍼가 채워지고 해당 값이 `m_marbleConstantBufferData`라는 상수 버퍼 개체에서 온 값이라는 것을 확인할 수 있습니다.  
   
-     ![개체의 상수 버퍼를 설정하는 코드](~/docs/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_7.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_7")  
+     ![개체의 상수 버퍼를 설정하는 코드](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_7.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_7")  
   
     > [!TIP]
     >  앱을 동시에 디버깅하는 경우 이 위치에 중단점을 설정할 수 있으며 다음 프레임이 렌더링될 때 중단됩니다.`m_marbleConstantBufferData`의 멤버를 검사하여 상수 버퍼가 채워질 때 `projection` 멤버의 값이 모두 0으로 설정되어 있는지 확인할 수 있습니다.  
@@ -119,12 +119,12 @@ manager: "ghogen"
   
  `m_marbleConstantBufferData.projection`이 설정된 위치를 찾은 후에 주변 소스 코드를 검사하여 잘못된 값의 출처를 확인할 수 있습니다. 이 시나리오에서 `m_marbleConstantBufferData.projection` 값은 다음 줄에서 `m_camera->GetProjection(&projection);` 코드가 제공하는 값으로 초기화되기 전에 `projection`이라는 로컬 변수로 설정되어 있음을 확인했습니다.  
   
- ![구슬 프로젝션이 초기화 전에 설정됨](~/docs/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_9.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_9")  
+ ![구슬 프로젝션이 초기화 전에 설정됨](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_9.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_9")  
   
  이 문제를 해결하려면 `m_marbleConstantBufferData.projection` 값을 설정하는 코드 줄을 `projection` 로컬 변수 값을 초기화하는 줄 다음으로 이동합니다.  
   
- ![수정된 C&#43;&#43; 소스 코드](~/docs/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_10.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_10")  
+ ![수정된 C&#43;&#43; 소스 코드](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_10.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_10")  
   
  .코드를 수정한 후 다시 빌드하고 앱을 다시 실행하여 렌더링 문제가 해결되었는지 확인할 수 있습니다.  
   
- ![이제 개체가 표시됩니다.](~/docs/debugger/graphics/media/gfx_diag_demo_missing_object_shader_resolution.png "gfx\_diag\_demo\_missing\_object\_shader\_resolution")
+ ![이제 개체가 표시됩니다.](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_resolution.png "gfx\_diag\_demo\_missing\_object\_shader\_resolution")

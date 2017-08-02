@@ -134,7 +134,7 @@ namespace Simple
   
  결과 Windows 응용 프로그램 폴더 구조는 다음과 같습니다.  
   
- ![SimpleSolution](~/docs/extensibility/internals/media/simplesolution.png "SimpleSolution")  
+ ![SimpleSolution](~/extensibility/internals/media/simplesolution.png "SimpleSolution")  
   
  첫 번째이자 유일한 \<프로젝트 > 태그에 서식 파일 읽기:  
   

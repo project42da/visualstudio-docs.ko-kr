@@ -37,7 +37,7 @@ caps.handback.revision: 29
 ## 새 프로젝트 대화 상자  
  새 프로젝트에 대 한 프로젝트 형식을 선택 하면 모든 것을 시작 합니다. 클릭 하 여 시작 하겠습니다 **새 프로젝트** 에 **파일** 메뉴.**새 프로젝트** 대화 상자가 나타나면 다음과 같이 결과 보기:  
   
- ![새 프로젝트 대화 상자](~/docs/extensibility/internals/media/newproject.gif "NewProject")  
+ ![새 프로젝트 대화 상자](~/extensibility/internals/media/newproject.gif "NewProject")  
   
  자세히 살펴보겠습니다.**프로젝트 형식** 트리에 나열 다양 한 프로젝트 형식을 만들 수 있습니다. 같은 프로젝트 형식을 선택 하면 **Visual C\# Windows**, 를 시작 하기 위한 응용 프로그램 템플릿 목록이 표시 됩니다.**Visual Studio 설치 되어 있는 템플릿** Visual Studio가 설치 되어 있고 컴퓨터의 모든 사용자에 게 사용할 수 있습니다. 만들거나 수집 하는 새 템플릿을 추가할 수 **내 템플릿** 에 사용할 수 있습니다.  
   
@@ -107,11 +107,11 @@ devenv /installvstemplates
   
  C\# 개발자 설정 사용 하 여 Visual studio는 **프로젝트 형식** 트리 모습은 다음과 같습니다.  
   
- ![프로젝트 형식](~/docs/extensibility/internals/media/projecttypes.png "ProjectTypes")  
+ ![프로젝트 형식](~/extensibility/internals/media/projecttypes.png "ProjectTypes")  
   
  해당 ProjectTemplates 폴더는 다음과 같습니다.  
   
- ![프로젝트 템플릿](~/docs/extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
+ ![프로젝트 템플릿](~/extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
   
  때는 **새 프로젝트** 대화 상자가 열리고 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ProjectTemplates 폴더를 트래버스하 고에서 해당 구조를 다시 만드는 **프로젝트 형식** 일부 변경 내용으로 트리:  
   
@@ -209,7 +209,7 @@ devenv /installvstemplates
   
 1.  열기는 **새 프로젝트** 대화 상자를 확장 하 고는 **Visual C\#** 프로젝트 노드.  
   
- ![MyProjectNode](~/docs/extensibility/internals/media/myprojectnode.png "MyProjectNode")  
+ ![MyProjectNode](~/extensibility/internals/media/myprojectnode.png "MyProjectNode")  
   
  **MyProjectNode** Windows 노드 바로 아래 Visual C\#의 자식 노드로 나타납니다.  
   

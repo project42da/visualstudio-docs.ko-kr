@@ -34,7 +34,7 @@ caps.handback.revision: 10
   
  그룹에 의미 있는 가리키도록 패키징 바로 가기를 수 있는 키 출력이 있을 수도 있습니다. 그룹의 크기에 대 한 어떠한가 정도 하지를 만들어야 하므로 모든 그룹에 지정된 된 구성 비어 있을 수 있습니다. 모든 구성에서 각 그룹의 크기 \(출력 수\)는 동일한 구성에 다른 그룹의 크기와에서 다를 수 있습니다. 또한 다른 구성에서 동일한 그룹의 크기와에서 다른 수 있습니다.  
   
- ![출력 그룹 그래픽](~/docs/extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")  
+ ![출력 그룹 그래픽](~/extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")  
 출력 그룹  
   
  주된 용도 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> 인터페이스 빌드, 배포 및 관리 개체의 디버깅 및 허용 프로젝트 출력 그룹에 자유에 대 한 액세스를 제공 하는 것입니다. 이 인터페이스의 사용에 자세한 내용은 참조 [프로젝트 구성 개체](../../extensibility/internals/project-configuration-object.md)합니다.  

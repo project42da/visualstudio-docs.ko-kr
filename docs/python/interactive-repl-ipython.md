@@ -58,17 +58,17 @@ IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고�
 
 1. 모든 항목이 제대로 구성되었다면 다음과 같은 출력이 나타납니다.
 
-    ![IPython 구성 출력 ](~/docs/python/media/ipython-repl-01.png)
+    ![IPython 구성 출력 ](~/python/media/ipython-repl-01.png)
 
 1. Visual Studio를 열고 Python 환경 창(**보기 > 다른 창 > Python 환경**)으로 전환하고 Python 환경을 선택합니다.
 1. **pip** 탭을 확인하여 `IPython` 및 `matplotlib`가 나열되어 있는지 확인합니다. 그렇지 않은 경우 여기에서 설치하세요.
 1. **개요** 탭을 선택하고 **대화형 옵션 구성**을 선택하고 **대화형 모드**를 IPython으로 설정하고 **확인**을 선택합니다.
 
-    ![대화형 모드를 IPython으로 설정](~/docs/python/media/ipython-repl-02.png)
+    ![대화형 모드를 IPython으로 설정](~/python/media/ipython-repl-02.png)
 
 1. **대화형 창 열기**를 선택하여 PyLab을 지원하는 IPython 모드에서 대화형 창을 표시합니다. 대화형 모드를 방금 변경한 경우 창을 다시 설정해야 할 수 있습니다.
 
-    ![IPython 모드의 대화형 창](~/docs/python/media/ipython-repl-03.png)
+    ![IPython 모드의 대화형 창](~/python/media/ipython-repl-03.png)
 
 1. 다음 코드를 입력합니다.
 
@@ -80,7 +80,7 @@ IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고�
 
 1. 마지막 줄을 입력한 후 원할 경우 인라인 그래프(오른쪽 아래 모서리에서 끌어서 크기를 조정할 수 있음)가 표시되어야 합니다.
 
-    ![대화형 창의 인라인 그래프](~/docs/python/media/ipython-repl-04.png)
+    ![대화형 창의 인라인 그래프](~/python/media/ipython-repl-04.png)
 
 1. REPL을 입력하는 대신 편집기에서 코드를 작성하고 선택한 후 마우스 오른쪽 단추를 클릭하고 **Interactive로 보내기** 명령(Ctrl+E, E)을 선택할 수 있습니다. 아래 코드를 편집기에 붙여 넣고 Ctrl+A로 선택한 후 대화형 창으로 보내 보세요. (Visual Studio는 대화형 창으로 코드를 보낼 때 사용자에게 중간 또는 부분 그래프가 표시되지 않도록 한 단위로 보냅니다.)
 
@@ -105,15 +105,15 @@ IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고�
     plt.show()
     ```
 
-    ![편집기에서 대화형 창으로 코드 보내기](~/docs/python/media/ipython-repl-05.png)
+    ![편집기에서 대화형 창으로 코드 보내기](~/python/media/ipython-repl-05.png)
 
 1. 대화형 창 외부에서 그래프를 보려면 **디버그 > 디버깅하지 않고 시작** 명령을 사용하는 대신 코드를 실행합니다.
     
 1. IPython에는 시스템 셸로 이스케이프, 변수 대체, 캡처 출력과 같은 여러 가지 유용한 기능이 있습니다. 자세한 내용은 IPython 참조 가이드를 참조하세요.
 
-    ![시스템 셸로 이스케이프](~/docs/python/media/ipython-repl-06.png)
+    ![시스템 셸로 이스케이프](~/python/media/ipython-repl-06.png)
 
 1. 모든 OS에서 모든 브라우저를 캔버스로 사용할 수 있는 "전자 필기장" 모드에서 IPython을 사용할 수도 있습니다. 백 엔드 IPython 엔진은 컴퓨터의 로컬에 있거나 원격 위치에 있을 수 있습니다. Azure에는 [Windows 또는 Linux VM에서 IPython](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-jupyter-notebook)을 실행하기 위한 지원 기능이 있습니다. [Azure 전자 필기장 미리 보기](https://notebooks.azure.com)에서 Azure에 서비스로 제공되는 무료 Jupyter 노트도 확인해 보세요.
 
-    ![IPython 전자 필기장 모드](~/docs/python/media/ipython-repl-07.png)
+    ![IPython 전자 필기장 모드](~/python/media/ipython-repl-07.png)
 

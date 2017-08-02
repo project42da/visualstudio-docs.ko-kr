@@ -39,7 +39,7 @@ ms.lasthandoff: 06/30/2017
 ## <a name="what-can-you-do-with-the-visual-studio-ide"></a>Visual Studio IDE로 수행할 수 있는 작업
 Android 휴대폰용 앱을 만들고 싶은가요? 예, 그렇게 할 수 있습니다. C++를 사용하여 첨단 게임을 만드는 방법은 어떤가요? 원하는 만큼 아주 많이 만들 수 있습니다. Visual Studio는 웹 사이트, 게임, 데스크톱 앱, 모바일 앱, Office용 앱 등을 만드는 데 도움이 되는 템플릿을 제공합니다.
 
-![Visual Studio 프로젝트](~/docs/ide/media/VSIDE_Tour_Projects_List.png)
+![Visual Studio 프로젝트](~/ide/media/VSIDE_Tour_Projects_List.png)
 
 또는 거의 모든 곳에서 얻을 수 있는 거의 모든 코드를 열어서 작업할 수 있습니다. 좋아하는 GitHub 프로젝트를 볼 수 있을까요? 리포지토리를 복제하고, Visual Studio에서 열어, 코딩을 시작만 하면 됩니다!
 
@@ -57,7 +57,7 @@ Visual Studio는 Microsoft Azure에서 구동하는 클라우드 지원 응용 �
 ### <a name="write-code-in-a-world-class-editing-environment"></a>세계적 수준의 편집 환경에서 코드 작성
 Visual Studio를 사용하면 구문 색 지정, 문 완성, IntelliSense(선택한 코드 요소의 팝업 설명), 코드 개요, 디버깅을 위한 중단점 설정 등과 같은 기능을 통해 코드를 쉽고 빠르게 작성할 수 있습니다.
 
-![JavaScript 코드 예제](~/docs/ide/media/vside_tour_javascript_example.gif)
+![JavaScript 코드 예제](~/ide/media/vside_tour_javascript_example.gif)
 
 자세한 내용은 [코드 및 텍스트 편집기에서 코드 작성](https://docs.microsoft.com/visualstudio/ide/writing-code-in-the-code-and-text-editor)을 참조하세요.
 
@@ -69,7 +69,7 @@ Visual Studio는 더 많은 작업을 수행하는 데 도움을 줄 수 있습�
 
 이제 Visual Studio는 그 어느 때보다도 가벼워졌습니다! 새로운 모듈식 설치 관리자를 사용하면 선호하는 프로그래밍 언어 또는 플랫폼에 필요한 기능 그룹인 *작업*을 선택하여 설치할 수 있습니다. 이 전략을 통해 Visual Studio 설치에 필요한 공간을 이전보다 더 작게 유지할 수 있습니다. 즉 Visual Studio를 설치하고 업데이트하는 속도가 매우 빨라집니다.
 
-![Visual Studio 설치 관리자](~/docs/ide/media/vside_tour_install_dialog.png)
+![Visual Studio 설치 관리자](~/ide/media/vside_tour_install_dialog.png)
 
 향상된 설치 성능 외에도 Visual Studio 2017에서 전반적인 IDE 시작 및 솔루션 로드 시간을 향상시키기 위해 많은 개선이 이루어졌습니다. 예를 들어 **도구**, **옵션**, **프로젝트 및 솔루션**의 주 메뉴에 있는 새로운 경량 솔루션 로드 기능을 선택하면 더 큰 솔루션을 더 빨리 로드할 수 있습니다. 시스템에 Visual Studio를 설치하는 방법에 대한 자세한 내용은 [Visual Studio 2017 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio)를 참조하세요.
 
@@ -83,25 +83,25 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 1. Visual Studio를 엽니다. 메뉴에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다. 기본 프로젝트 값을 사용합니다.
 
-  ![스크린샷](~/docs/ide/media/VSIDE_Tour_NewProject1.png)
+  ![스크린샷](~/ide/media/VSIDE_Tour_NewProject1.png)
 
   대신 시작 페이지를 사용하여 새 프로젝트를 만들 수 있습니다. 자세한 내용은 [새롭게 디자인된 시작 페이지(블로그)의 장점 활용](https://blogs.msdn.microsoft.com/visualstudio/2016/11/29/harness-the-power-of-the-redesigned-start-page/)을 참조하세요.
 
 1. **새 프로젝트** 대화 상자에는 여러 프로젝트 템플릿이 표시됩니다. **Visual C#**에서 **Windows 유니버설** 범주를 선택하고, **비어 있는 앱(유니버설 Windows)** 템플릿을 선택한 다음, **확인** 단추를 선택합니다.
 
-  ![스크린샷](~/docs/ide/media/VSIDE_Tour_NewProject2.png)
+  ![스크린샷](~/ide/media/VSIDE_Tour_NewProject2.png)
 
   이렇게 하면 Visual C# 및 XAML을 프로그래밍 언어로 사용하여 비어 있는 새 유니버설 Windows 앱 프로젝트를 만듭니다. Visual Studio에서 사용자의 프로젝트를 설정하는 동안 잠시 기다려주세요. 정보를 요청하는 메시지가 표시되는 경우 이때는 기본값을 그대로 사용합니다.
 
 1. 잠시 후 다음 스크린샷과 비슷하게 표시됩니다. 프로젝트 파일이 [솔루션 탐색기]라는 창의 오른쪽에 나열되어 있습니다.
 
-  ![스크린샷](~/docs/ide/media/VSIDE_Tour_NewProject3.png)
+  ![스크린샷](~/ide/media/VSIDE_Tour_NewProject3.png)
 
 1. [솔루션 탐색기]에서 MainPage.xaml 파일 옆에 있는 작은 검은색 삼각형을 선택하여 확장하면 그 아래에 MainPage.xaml.cs 파일이 표시됩니다. 이 파일(C# 코드 포함)을 선택하여 엽니다.
 
   MainPage.xaml.cs의 C# 코드는 화면 왼쪽의 코드 편집기에 표시됩니다. 코드 구문은 지정된 색으로 자동으로 표시되어 다양한 유형의 코드(예: 문 또는 주석)를 나타냅니다. 또한 코드에서 작은 세로 파선은 서로 일치하는 중괄호를 나타내며, 줄 번호는 나중에 코드를 찾는 데 도움이 됩니다. 작은 상자 안에 있는 빼기 기호를 선택하여 코드를 축소하거나 확장할 수 있습니다. 이 코드 개요 기능을 사용하면 필요 없는 코드를 숨길 수 있으므로 화면 상의 혼란을 최소화할 수 있습니다.
 
-  ![](~/docs/ide/media/VSIDE_Tour_NewProject3a.png)
+  ![](~/ide/media/VSIDE_Tour_NewProject3a.png)
 
   다른 메뉴와 도구 창을 사용할 수 있지만 지금은 넘어가겠습니다.
 
@@ -111,29 +111,29 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 1. **공용 XAML 컨트롤** 섹션을 확장한 다음 Button 컨트롤을 양식 중간 부분으로 끌어갑니다. 정확한 위치는 중요하지 않습니다.
 
-  ![스크린샷](~/docs/ide/media/VSIDE_Tour_Toolbox.png)
+  ![스크린샷](~/ide/media/VSIDE_Tour_Toolbox.png)
 
   완료되면 다음과 비슷하게 표시됩니다.
 
-  ![스크린샷](~/docs/ide/media/VSIDE_Tour_XAMLButton.png)
+  ![스크린샷](~/ide/media/VSIDE_Tour_XAMLButton.png)
 
   단추는 디자이너에 있으며, 강조 표시된 기본 코드가 디자이너의 XAML 코드에 자동으로 추가됩니다.
 
 1. 일부 XAML 코드를 변경해 보겠습니다. 단추 코드의 텍스트를 `Button`에서 `Hello!`로 바꿉니다.
 
-  ![스크린샷](~/docs/ide/media/VSIDE_Tour_XAMLButton2.png)
+  ![스크린샷](~/ide/media/VSIDE_Tour_XAMLButton2.png)
 
-1. 이제 앱을 시작합니다. 이 작업을 수행하려면 도구 모음에서 **시작**(![시작 단추](~/docs/ide/media/VSIDE_StartButton.png)) 단추를 선택하거나, F5 키를 선택하거나, 메뉴에서 **디버그**, **디버깅 시작**을 차례로 선택합니다.
+1. 이제 앱을 시작합니다. 이 작업을 수행하려면 도구 모음에서 **시작**(![시작 단추](~/ide/media/VSIDE_StartButton.png)) 단추를 선택하거나, F5 키를 선택하거나, 메뉴에서 **디버그**, **디버깅 시작**을 차례로 선택합니다.
 
-  ![스크린샷](~/docs/ide/media/VSIDE_Tour_RunButton.png)
+  ![스크린샷](~/ide/media/VSIDE_Tour_RunButton.png)
 
   앱에서 빌드 프로세스를 시작하고 상태 메시지가 [출력] 창에 표시됩니다. 잠시 후에 해당 단추가 있는 양식이 표시됩니다. 이제 실행 중인 앱이 있습니다!
 
-  ![스크린샷](~/docs/ide/media/VSIDE_Tour_RunProject.png)
+  ![스크린샷](~/ide/media/VSIDE_Tour_RunProject.png)
 
   물론, 지금 당장은 아니지만, 원하는 경우 나중에 더 많은 기능을 추가할 수 있습니다.
 
-1. 프로그램 실행이 완료되면 도구 모음에서 [중지](![중지 단추](~/docs/ide/media/VSIDE_StopButton.png))를 선택하여 중지합니다.
+1. 프로그램 실행이 완료되면 도구 모음에서 [중지](![중지 단추](~/ide/media/VSIDE_StopButton.png))를 선택하여 중지합니다.
 
 지금까지 수행한 작업을 정리해 보겠습니다. Visual Studio에서 새로운 C# Windows 유니버설 프로젝트를 만들고, 코드를 보고, 컨트롤을 디자이너에 추가하고, 일부 XAML 코드를 변경한 다음, 프로젝트를 실행했습니다. 여기서는 이 예제의 프로세스가 간소화되었지만, 자신의 앱을 개발할 때 사용할 Visual Studio IDE의 몇 가지 일반적인 부분을 보여 주었습니다. 이 예제에 대한 자세한 내용은 ["Hello, world" 앱 만들기(XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)을 참조하세요.
 
@@ -141,7 +141,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 ## <a name="debug-test-and-improve-your-code"></a>코드 디버그, 테스트 및 향상
 항상 완벽하게 실행되는 것은 없습니다. 코드를 작성할 때 이를 실행하고 버그와 성능을 테스트해야 합니다. Visual Studio의 최신 디버깅 시스템을 사용하면 원격 장치 또는 에뮬레이터(예: Android 또는 Windows Phone 장치용 에뮬레이터)에서 실행 중인 로컬 프로젝트의 코드를 디버그할 수 있습니다. 한 번에 문 하나씩 코드를 단계별로 실행하고 진행에 따라 변수를 검사하고, 다중 스레드 응용 프로그램을 단계별로 실행하고, 지정된 조건이 true일 때만 적중되는 중단점을 설정할 수 있습니다. 코드 실행 등과 같은 변수 값을 모니터링할 수 있습니다. 이러한 값을 모두 코드 편집기 자체에서 관리할 수 있으므로 코드를 떠날 필요가 없습니다.
 
-![디버깅](~/docs/ide/media/VSIDE_Tour_Debugging.png)
+![디버깅](~/ide/media/VSIDE_Tour_Debugging.png)
 
 테스트를 위해 Visual Studio는 단위 테스트, IntelliTest, 부하 및 성능 테스트 등을 제공합니다. Visual Studio 디버깅 프로세스에 대한 자세한 내용은 [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)를 참조하세요. 테스트에 대한 자세한 내용은 [테스트 도구](https://www.visualstudio.com/vs/testing-tools/)를 참조하세요. 앱 성능 향상에 대한 자세한 내용은 [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)를 참조하세요.
 
@@ -162,11 +162,11 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 - [빠른 실행](https://docs.microsoft.com/en-us/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) 검색 상자는 Visual Studio에서 필요한 항목을 빠르게 찾을 수 있는 좋은 방법입니다. 찾으려는 항목의 이름을 입력하기만 하면 Visual Studio에서 원하는 곳으로 정확하게 안내하는 옵션을 제공합니다. [빠른 실행]은 작업 또는 개별 구성 요소에 대한 Visual Studio 설치 관리자를 시작하는 링크도 표시합니다.
 
-  ![빠른 실행 검색 상자](~/docs/ide/media/VSIDE_Tour_QuickLaunch.png)
+  ![빠른 실행 검색 상자](~/ide/media/VSIDE_Tour_QuickLaunch.png)
 
 -  [리팩터링](../ide/refactoring-in-visual-studio.md)에는 변수의 지능형 이름 바꾸기, 선택한 코드 줄을 별도 함수로 이동, 코드를 다른 위치로 이동, 함수 매개 변수 다시 정렬 등의 작업이 포함되어 있습니다.
 
- ![리팩터링](~/docs/ide/media/VSIDE_refactor.png)  
+ ![리팩터링](~/ide/media/VSIDE_refactor.png)  
 
 -  **IntelliSense** 는 편집기에서 직접 코드에 대한 형식 정보를 표시하고 경우에 따라 약간의 코드를 자동으로 작성하는 인기 있는 기능 집합에 대한 포괄적인 용어입니다. IntelliSense는 별도의 도움말 창에서 형식 정보를 조회할 필요가 없도록 기본 설명서를 편집기에 인라인으로 포함하는 것과 같습니다. IntelliSense 기능은 언어에 따라 달라집니다. 자세한 내용은 [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md), [Visual C++ IntelliSense](../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../ide/javascript-intellisense.md), [Visual Basic-Specific IntelliSense](../ide/visual-basic-specific-intellisense.md)를 참조하세요. 다음 그림에서는 일부 IntelliSense 기능의 작동을 보여 줍니다.  
 
@@ -174,11 +174,11 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 -  **오류 표시선**은 물결 모양의 빨간색 밑줄이며, 입력할 때 코드의 오류 또는 잠재적인 문제를 실시간으로 알려줍니다. 이렇게 하면 컴파일 또는 런타임 중에 오류를 발견할 때까지 기다리지 않고 바로 수정할 수 있습니다. 오류 표시선 위로 마우스를 가져가면 오류에 대한 추가 정보가 표시됩니다. 오류를 수정하는 방법에 대한 제안 사항과 함께 전구가 왼쪽 여백에 나타날 수도 있습니다. 자세한 내용은 [Perform quick actions with light bulbs](../ide/perform-quick-actions-with-light-bulbs.md)을 참조하세요.  
 
- ![오류 표시선](~/docs/ide/media/vs2017_squiggle.png)  
+ ![오류 표시선](~/ide/media/vs2017_squiggle.png)  
 
 -  텍스트 편집기의 상황에 맞는 메뉴에서 [호출 계층 구조](../ide/reference/call-hierarchy.md) 창을 열어 캐럿(삽입 지점) 아래에서 호출하는 메서드와 이 메서드로 호출되는 메서드를 표시할 수 있습니다.
 
- ![호출 계층 구조 창](~/docs/ide/media/VSIDE_call_hierarchy.png)
+ ![호출 계층 구조 창](~/ide/media/VSIDE_call_hierarchy.png)
 
 -  [코드 렌즈](../ide/find-code-changes-and-other-history-with-codelens.md)를 사용하면 편집기 내에서 코드 참조, 코드 변경 내용, 연결된 버그, 작업 항목, 코드 검토 및 단위 테스트를 확인할 수 있습니다.
 
@@ -186,11 +186,11 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 -  [정의 보기](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md) 창은 현재 컨텍스트를 벗어나지 않고 메서드 또는 형식 정의를 인라인으로 표시합니다.  
 
- ![정의 보기](~/docs/ide/media/VSIDE_peek_definition.png)
+ ![정의 보기](~/ide/media/VSIDE_peek_definition.png)
 
 -  **정의로 이동** 상황에 맞는 메뉴 옵션은 함수 또는 개체가 정의된 위치로 바로 이동합니다. 편집기에서 마우스 오른쪽 단추를 클릭하면 다른 탐색 명령도 사용할 수 있습니다.
 
- ![정의로 이동](~/docs/ide/media/VSIDE_go_to_definition.png)
+ ![정의로 이동](~/ide/media/VSIDE_go_to_definition.png)
 
 - 관련 도구인 [개체 브라우저](http://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)를 사용하면 시스템의 .NET 또는 Windows 런타임 어셈블리를 검사하여 포함된 형식과 해당 형식에 속한 멤버(속성, 메서드, 이벤트)를 확인할 수 있습니다.
 
@@ -206,7 +206,7 @@ TFS(Team Foundation Server)는 Visual Studio용 응용 프로그램 수명 주�
 네트워크에 Visual Studio Team Services 계정 또는 Team Foundation Server가 있는 경우 Visual Studio의 [팀 탐색기] 창을 통해 연결합니다. 이 창에서 코드를 소스 제어에 체크 인 또는 체크 아웃하고, 작업 항목을 관리하고, 빌드를 시작하고, 단체 방 및 작업 영역에 액세스할 수 있습니다. **빠른 실행** 상자나 **보기, 팀 탐색기** 또는 **팀, 연결 관리**의 주 메뉴에서 [팀 탐색기]를 열 수 있습니다.
 다음 이미지는 VSTS에서 호스트되는 솔루션에 대한 팀 탐색기 창을 보여 줍니다.
 
-![Visual Studio 팀 탐색기](~/docs/ide/media/vs2017_teamexplorer.png)  
+![Visual Studio 팀 탐색기](~/ide/media/vs2017_teamexplorer.png)  
 
 Visual Studio Team Services에 대한 자세한 내용은 [Visual Studio Team Services](https://www.visualstudio.com/team-services/)를 참조하세요. Team Foundation Server에 대한 자세한 내용은 [Team Foundation Server](https://www.visualstudio.com/products/tfs-overview-vs)를 참조하세요.
 
@@ -214,13 +214,13 @@ Visual Studio Team Services에 대한 자세한 내용은 [Visual Studio Team Se
 ## <a name="connect-to-services-databases-and-cloud-based-resources"></a>서비스, 데이터베이스 및 클라우드 기반 리소스에 연결
 클라우드는 오늘날의 온라인 환경에서 매우 중요하며, Visual Studio는 이를 활용하는 방법을 제공합니다. 예를 들어 [연결된 서비스] 기능을 사용하면 앱을 서비스에 연결할 수 있습니다. 무엇보다도 사용자의 앱에서 Azure 저장소에 데이터를 저장하는 데 이 기능을 사용할 수 있습니다.
 
-![연결된 서비스](~/docs/ide/media/VSIDE_Tour_Connected_Services.png)
+![연결된 서비스](~/ide/media/VSIDE_Tour_Connected_Services.png)
 
 **연결된 서비스** 페이지에서 서비스를 선택하면, [연결된 서비스 마법사]가 시작되어 프로젝트를 구성하고 필요한 NuGet 패키지를 다운로드하여 서비스에 대한 코딩을 시작할 수 있습니다.
 
 [클라우드 탐색기](https://azure.microsoft.com/documentation/articles/vs-azure-tools-resources-managing-with-cloud-explorer/)를 사용하여 Visual Studio 내에서 Azure 기반 클라우드 리소스를 보고 관리할 수 있습니다. [클라우드 탐색기]에서는 로그인한 Azure 구독으로 관리되는 모든 계정의 Azure 리소스를 보여 줍니다. Visual Studio 설치 관리자에서 Azure 개발 작업을 선택하여 [클라우드 탐색기]를 가져올 수 있습니다.
 
-![클라우드 탐색기](~/docs/ide/media/VSIDE_CloudExplorer.png)
+![클라우드 탐색기](~/ide/media/VSIDE_CloudExplorer.png)
 
 **서버 탐색기**를 사용하면 Azure, Salesforce.com, Office 365 및 웹 사이트에서 SQL Server 인스턴스와 자산을 찾아보고 관리할 수 있습니다. [서버 탐색기]를 열려면 주 메뉴에서 **보기**, **서버 탐색기**를 차례로 선택합니다. 서버 탐색기 사용에 대한 자세한 내용은 [새 연결 추가](https://docs.microsoft.com/visualstudio/data-tools/add-new-connections)를 참조하세요.
 

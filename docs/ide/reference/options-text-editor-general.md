@@ -98,7 +98,7 @@ ms.lasthandoff: 05/24/2017
   
 |선택 영역 여백 켜기|선택 영역 여백 끄기|  
 |-------------------------|--------------------------|  
-|![HTMLpageSelectionMarginOn 스크린샷](~/docs/ide/reference/media/vxselmaron.gif "vxSelmaron")|![HTMLpageSelectionMarginOff 스크린샷](~/docs/ide/reference/media/vxselmaroff.gif "vxSelmaroff")|  
+|![HTMLpageSelectionMarginOn 스크린샷](~/ide/reference/media/vxselmaron.gif "vxSelmaron")|![HTMLpageSelectionMarginOff 스크린샷](~/ide/reference/media/vxselmaroff.gif "vxSelmaroff")|  
   
  표시기 여백  
  이 옵션을 선택하면 편집기 텍스트 영역의 왼쪽 가장자리 외부에 세로 여백이 표시됩니다. 이 여백을 클릭하면 텍스트에 관련된 아이콘 및 도구 설명이 나타납니다. 예를 들어 중단점 또는 작업 목록 바로 가기가 표시기 여백에 나타납니다. 표시기 여백 정보는 인쇄되지 않습니다.  

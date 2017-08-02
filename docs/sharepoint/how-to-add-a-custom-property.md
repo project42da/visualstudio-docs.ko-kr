@@ -37,7 +37,7 @@ caps.handback.revision: 9
   
 2.  메뉴 모음에서 **보기**, **속성 창**을 선택합니다.  
   
-3.  **속성** 창에서 **사용자 지정 속성** 속성을 선택하고 줄임표 버튼\(![ASP.NET 모바일 디자이너 줄임표](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\)을 선택합니다.  
+3.  **속성** 창에서 **사용자 지정 속성** 속성을 선택하고 줄임표 버튼\(![ASP.NET 모바일 디자이너 줄임표](~/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\)을 선택합니다.  
   
      **속성 편집기** 대화 상자가 나타납니다.  
   

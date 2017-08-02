@@ -58,7 +58,7 @@ IntelliSense는 멤버 목록, 매개 변수 정보, 요약 정보 및 단어 �
   
  굵게 표시된 매개 변수는 함수를 입력할 때 필요한 다음 매개 변수를 나타냅니다.  오버로드된 함수의 경우 위쪽 화살표와 아래쪽 화살표를 사용하여 함수 오버로드에 대한 대체 매개 변수 정보를 볼 수 있습니다.  
   
- ![매개 변수 정보](~/docs/ide/media/vs2015_param_info.png "VS2015\_param\_Info")  
+ ![매개 변수 정보](~/ide/media/vs2015_param_info.png "VS2015\_param\_Info")  
   
  XML 문서 주석을 사용하여 함수와 매개 변수에 주석을 달 경우 주석은 매개 변수 정보로 표시됩니다.  자세한 내용은 [XML 코드 주석 제공](../ide/supplying-xml-code-comments.md)을 참조하세요.  
   
@@ -67,11 +67,11 @@ IntelliSense는 멤버 목록, 매개 변수 정보, 요약 정보 및 단어 �
 ## 요약 정보  
  요약 정보는 코드의 식별자에 대한 전체 선언을 표시합니다.  
   
- ![Visual Studio 요약 정보](~/docs/ide/media/vs2015_quick_info.png "VS2015\_Quick\_info")  
+ ![Visual Studio 요약 정보](~/ide/media/vs2015_quick_info.png "VS2015\_Quick\_info")  
   
  **멤버 목록** 상자에서 멤버를 선택해도 요약 정보가 나타납니다.  
   
- ![C&#35; 코드 파일의 매개 변수 정보](~/docs/ide/media/vs2015_paraminfo.png "VS2015\_ParamInfo")  
+ ![C&#35; 코드 파일의 매개 변수 정보](~/ide/media/vs2015_paraminfo.png "VS2015\_ParamInfo")  
   
  **편집\/IntelliSense\/요약 정보**를 클릭하거나 Ctrl\+I를 누르거나 편집기 도구 모음에서 **요약 정보** 단추를 클릭하여 요약 정보를 수동으로 호출할 수 있습니다.  
   

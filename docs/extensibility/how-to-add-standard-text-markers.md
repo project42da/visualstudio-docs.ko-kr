@@ -39,7 +39,7 @@ caps.handback.revision: 10
   
      예를 들어, 특정 중단점 명령을 상황에 맞는 메뉴를 포함  **중단점 제거** 통해  **새 중단점**, 표시에서 다음 스크린 샷에서 처럼.  
   
-     ![마커 상황에 맞는 메뉴](~/docs/extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
+     ![마커 상황에 맞는 메뉴](~/extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
   
 2.  사용자 지정 명령 이름을 나타내는 텍스트를 다시 전달 합니다.  예를 들어,  **중단점 제거** 환경이 이미이 제공 하지 않는 경우 사용자 지정 명령을 수 있습니다.  또한 다시 전달 된\-끄기 토글 명령이 지원 되는 사용 및 설정 여부 및\/또는.  환경이이 정보를 사용 하 여 사용자 지정 명령 올바른 방법으로 상황에 맞는 메뉴를 표시 합니다.  
   

@@ -169,7 +169,7 @@ ms.lasthandoff: 05/04/2017
   
 2.  개념 항목에 대 한 링크에 대 한 적절 한 텍스트 않습니다 "자세히". 사용자의 목표는 하지 자세한 내용, 원하는 결과 이해 하는 것입니다.  
   
- ![색 서비스를 무시 하 고 "자세히" 하이퍼링크에 대 한 사용 하 여 Visual Studio 안티패턴 됩니다.](~/docs/extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />색 서비스를 무시 하 고 "자세히" 하이퍼링크에 대 한 사용 하 여 Visual Studio 안티패턴 됩니다.  
+ ![색 서비스를 무시 하 고 "자세히" 하이퍼링크에 대 한 사용 하 여 Visual Studio 안티패턴 됩니다.](~/extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />색 서비스를 무시 하 고 "자세히" 하이퍼링크에 대 한 사용 하 여 Visual Studio 안티패턴 됩니다.  
   
  **향상 된 솔루션:** 링크를 클릭 하 여 사용자가 대하여 질문 합니다.  
   

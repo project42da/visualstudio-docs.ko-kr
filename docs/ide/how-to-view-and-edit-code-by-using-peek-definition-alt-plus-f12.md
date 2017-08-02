@@ -50,7 +50,7 @@ ms.lasthandoff: 05/13/2017
   
      이 그림은 `Print()`라는 메서드에 대한 **정의 피킹(Peeking)** 창을 보여 줍니다.  
   
-     ![Peek 창](~/docs/ide/media/peekwindow.png "PeekWindow")  
+     ![Peek 창](~/ide/media/peekwindow.png "PeekWindow")  
   
      정의 창은 원본 파일에서 아래에 표시된 `printer.Print("Hello World!")` 줄로 나타납니다. 창에 기존 파일의 코드를 전부 숨기지 않습니다. `printer.Print("Hello World!")` 호출 뒤에 나오는 줄은 정의 창 아래에 나타납니다.  
   
@@ -64,13 +64,13 @@ ms.lasthandoff: 05/13/2017
   
 -   이미 **정의 피킹(Peeking)** 창이 열려 있는 경우 해당 창에 있는 코드에서 **정의 피킹(Peeking)**을 다시 호출할 수 있습니다. 다른 정의 창이 열립니다. 일련의 breadcrumb 점은 정의 창 사이를 탐색하는 데 사용할 수 있는 정의 창 탭 옆에 나타납니다. 각 점의 도구 설명에는 점이 나타내는 파일 이름 및 정의 파일의 경로가 나와 있습니다.  
   
-     ![Peek 창 내부의 Peek 창](~/docs/ide/media/peekwithinpeek.png "PeekWithinPeek")  
+     ![Peek 창 내부의 Peek 창](~/ide/media/peekwithinpeek.png "PeekWithinPeek")  
   
 #### <a name="to-use-peek-definition-with-multiple-results"></a>여러 결과에서 정의 피킹(Peeking)을 사용하려면  
   
 -   둘 이상의 정의가 있는 코드에서 **정의 피킹(Peeking)**을 사용하는 경우(예: 부분 클래스) 결과 목록이 코드 정의 보기 오른쪽에 나타납니다. 목록에서 결과를 선택하여 해당 정의를 표시할 수 있습니다.  
   
-     ![여러 결과의 Peek 창](~/docs/ide/media/peekmultiple.png "PeekMultiple")  
+     ![여러 결과의 Peek 창](~/ide/media/peekmultiple.png "PeekMultiple")  
   
 #### <a name="to-edit-inside-the-peek-definition-window"></a>정의 피킹(Peeking) 창 내에서 편집하려면  
   

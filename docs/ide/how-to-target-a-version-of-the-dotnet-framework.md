@@ -78,7 +78,7 @@ ms.lasthandoff: 05/30/2017
   
 1.  **솔루션 탐색기**에서 변경하려는 프로젝트의 바로 가기 메뉴를 연 후 **속성**을 선택합니다.  
   
-     ![Visual Studio 솔루션 탐색기 속성](~/docs/ide/media/vs_slnexplorer_properties.png "vs_slnExplorer_Properties")  
+     ![Visual Studio 솔루션 탐색기 속성](~/ide/media/vs_slnexplorer_properties.png "vs_slnExplorer_Properties")  
   
     > [!IMPORTANT]
     >  C++ 프로젝트의 대상 버전을 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)을 참조하세요.  

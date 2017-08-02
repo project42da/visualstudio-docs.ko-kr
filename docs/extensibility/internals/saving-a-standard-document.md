@@ -23,7 +23,7 @@ caps.handback.revision: 8
 
 환경 저장, 다른 이름으로 저장 및 모두 저장 명령을 처리합니다.  사용자가 선택할 때  **저장**,  **다른 이름으로 저장**, 또는  **모두 저장** 에서  **파일** 메뉴 또는 있는 솔루션을 닫고는  **모두 저장**, 다음과 같은 프로세스가 발생 합니다.  
   
- ![표준 편집기](~/docs/extensibility/internals/media/public.gif "Public")  
+ ![표준 편집기](~/extensibility/internals/media/public.gif "Public")  
 저장, 다른 이름으로 저장 및 처리에 대 한 표준 편집기 모두 저장 명령  
   
  다음 단계에서는이 프로세스를 자세히 설명 합니다.  

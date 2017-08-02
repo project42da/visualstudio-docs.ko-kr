@@ -51,7 +51,7 @@ EditorConfig 파일의 설정을 사용하면 사용 중인 IDE 편집기에 관
 ## <a name="override-editorconfig-settings"></a>EditorConfig 설정 재정의
 파일 계층 구조의 폴더에 .editorconfig 파일을 추가하는 경우 해당 설정이 이 수준과 그 아래에 있는 모든 파일에 적용됩니다. 특정 프로젝트 또는 코드베이스에 대해 EditorConfig 설정을 재정의하고 최상위 .editorconfig 파일과 다른 값이나 재정의 값을 사용하려는 경우 변경할 수준에 .editorconfig 파일을 추가하면 됩니다.
 
-![EditorConfig 계층 구조](~/docs/ide/media/vside_editorconfig_hierarchy.png)
+![EditorConfig 계층 구조](~/ide/media/vside_editorconfig_hierarchy.png)
 
 새 .editorconfig 파일 설정은 해당 수준과 모든 하위 파일에 적용됩니다.
 
@@ -70,19 +70,19 @@ EditorConfig 설정은 XML을 제외하고 Visual Studio가 지원하는 모든 
 ## <a name="example"></a>예제
 다음은 .editorconfig 파일을 프로젝트에 추가하기 전과 이후 C# 코드 조각의 들여쓰기 상태를 보여 주는 예제입니다. Visual Studio 텍스트 편집기에 대한 **옵션** 대화 상자의 **탭** 설정은 코드에서 Tab 키를 누를 때 공백 문자를 생성하도록 설정되었습니다.
 
-![텍스트 편집기 탭 설정](~/docs/ide/media/vside_editorconfig_tabsetting.png)
+![텍스트 편집기 탭 설정](~/ide/media/vside_editorconfig_tabsetting.png)
 
 예상대로 다음 줄에서 Tab 키를 누르면 공백 문자 4개가 추가되어 줄이 들여쓰기됩니다.
 
-![EditorConfig를 사용하기 전의 코드](~/docs/ide/media/vside_editorconfig_before.png)
+![EditorConfig를 사용하기 전의 코드](~/ide/media/vside_editorconfig_before.png)
 
 .editorconfig라는 새 파일에 다음 코드를 추가한 후 프로젝트에 추가합니다. `[*.cs]` 설정은 이 변경 내용이 이 프로젝트의 .cs 파일에만 적용됨을 의미합니다.
 
-![.editorconfig 파일이 프로젝트에 추가됨](~/docs/ide/media/vside_editorconfig_addconfig.png)
+![.editorconfig 파일이 프로젝트에 추가됨](~/ide/media/vside_editorconfig_addconfig.png)
 
 이제 Tab 키를 누르면 공백 대신 탭 문자가 추가됩니다.
 
-![Tab 키를 누르면 탭 문자가 추가됨](~/docs/ide/media/vside_editorconfig_tab.png)
+![Tab 키를 누르면 탭 문자가 추가됨](~/ide/media/vside_editorconfig_tab.png)
 
 > [!NOTE]
 >  프로젝트 또는 코드베이스에 .editorconfig 파일을 추가해도 기존 스타일이 새 스타일로 변환되지는 않습니다. 새로 추가한 줄에만 적용됩니다. 프로젝트 또는 코드베이스에서 .editorconfig 파일을 제거하는 경우 편집기 설정에 대한 코드 파일을 다시 로드하여 전역 설정으로 되돌려야 합니다. .editorconfig 파일에 오류가 있으면 Visual studio의 오류 창에 모두 보고됩니다.

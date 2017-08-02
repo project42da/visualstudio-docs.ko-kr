@@ -28,7 +28,7 @@ caps.handback.revision: 17
   
  **찾기\/명령** 입력란은 최근에 입력된 20개의 항목을 유지하며 이들 항목을 드롭다운 목록에 표시합니다.  화살표 키를 선택 하 여 목록을 탐색할 수 있습니다.  
   
- ![찾기&#47;명령 상자](~/docs/ide/media/findcommandbox.png "FindCommandBox")  
+ ![찾기&#47;명령 상자](~/ide/media/findcommandbox.png "FindCommandBox")  
 찾기\/명령 입력란  
   
 ## 텍스트 검색  

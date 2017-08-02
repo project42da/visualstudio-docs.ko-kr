@@ -32,7 +32,7 @@ manager: "ghogen"
 ## 시나리오  
  이 시나리오에서는 DirectCompute를 사용하여 시뮬레이션 업데이트에서 컴퓨팅 성능이 가장 많이 필요한 부분을 수행하는 유체 역학 시뮬레이션을 작성했습니다.  앱이 실행되면 데이터 집합 및 UI가 제대로 렌더링되는 것으로 보이지만 시뮬레이션은 예상대로 작동하지 않습니다.  그래픽 진단을 사용하여 앱을 디버그할 수 있도록 그래픽 로그 문제를 포착할 수 있습니다.  이 문제는 앱에서 다음과 같이 보입니다.  
   
- ![시뮬레이트된 fluid가 제대로 작동하지 않습니다.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx\_diag\_demo\_compute\_shader\_fluid\_problem")  
+ ![시뮬레이트된 fluid가 제대로 작동하지 않습니다.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx\_diag\_demo\_compute\_shader\_fluid\_problem")  
   
  그래픽 로그의 그래픽 문제를 포착하는 방법에 대한 자세한 내용은 [그래픽 정보 캡처](../debugger/capturing-graphics-information.md)를 참조하세요.  
   
@@ -89,7 +89,7 @@ manager: "ghogen"
   
 3.  계산 셰이더 소스 코드에서 통합 단계를 검토하여 오류의 원인을 찾습니다.  그래픽 진단을 HLSL 계산 셰이더 코드를 디버그할 때는 코드를 단계별로 실행하고 조사식 창과 같은 다른 익숙한 디버깅 도구를 사용할 수 있습니다.  이 시나리오에서는 통합 단계를 수행하는 계산 셰이더에서 오류가 없는 것으로 확인됩니다.  
   
-     ![IntegrateCS 계산 셰이더를 디버그합니다.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_7")  
+     ![IntegrateCS 계산 셰이더를 디버그합니다.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_7")  
   
 4.  계산 셰이더 디버깅을 중지하려면 **디버그** 도구 모음에서 **디버깅 중지**를 선택합니다\(키보드에서 Shift\+F5 누름\).  
   
@@ -101,12 +101,12 @@ manager: "ghogen"
   
 6.  계산 셰이더 소스 코드를 검토하여 힘 계산 단계가 있는지 확인합니다.  이 시나리오에서는 여기가 오류의 원인이라는 것이 확인됩니다.  
   
-     ![ForceCS&#95;Simple 계산 셰이더를 디버그합니다.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_9")  
+     ![ForceCS&#95;Simple 계산 셰이더를 디버그합니다.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_9")  
   
  오류의 위치를 확인한 후에는 디버깅을 중지하고 상호 작용하는 입자 간의 거리를 올바르게 계산하도록 계산 셰이더 소스 코드를 수정할 수 있습니다.  이 시나리오에서는 줄 `float2 diff = N_position + P_position;`을 `float2 diff = N_position - P_position;`으로 변경하면 됩니다.  
   
- ![수정된 계산 셰이더 코드입니다.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_10")  
+ ![수정된 계산 셰이더 코드입니다.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_10")  
   
  이 시나리오에서는 런타임에 계산 셰이더가 컴파일되기 때문에 변경한 후에 앱을 다시 시작하기만 하면 시뮬레이션에 미치는 영향을 확인할 수 있습니다.  앱을 다시 빌드할 필요가 없습니다.  앱을 실행하면 이제 시뮬레이션이 올바르게 동작하는 것이 확인됩니다.  
   
- ![시뮬레이트된 fluid가 올바르게 작동합니다.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_resolution.png "gfx\_diag\_demo\_compute\_shader\_fluid\_resolution")
+ ![시뮬레이트된 fluid가 올바르게 작동합니다.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_resolution.png "gfx\_diag\_demo\_compute\_shader\_fluid\_resolution")

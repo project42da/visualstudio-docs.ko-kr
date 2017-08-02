@@ -37,7 +37,7 @@ caps.handback.revision: 30
   
  다음 다이어그램의 Visual Studio 디버거에서 이러한 요소 간의 관계를 보여 줍니다.  
   
- ![구성 요소 디버깅 개요](~/docs/extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
+ ![구성 요소 디버깅 개요](~/extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
   
 ## 단원 내용  
  [패키지를 디버그 합니다.](../../extensibility/debugger/debug-package.md)  

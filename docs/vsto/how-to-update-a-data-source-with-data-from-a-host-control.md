@@ -78,7 +78,7 @@ caps.handback.revision: 52
   
 3.  **속성** 창에서 **\(DataBindings\)** 속성을 확장합니다.  
   
-4.  **\(고급\)** 속성 옆에 있는 줄임표 단추\(![VisualStudioEllipsesButton 스크린 샷](~/docs/vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton 스크린 샷")\)를 클릭합니다.  
+4.  **\(고급\)** 속성 옆에 있는 줄임표 단추\(![VisualStudioEllipsesButton 스크린 샷](~/vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton 스크린 샷")\)를 클릭합니다.  
   
 5.  **서식 지정 및 고급 바인딩** 대화 상자에서 **데이터 원본 업데이트 모드** 드롭다운 목록을 클릭하고 다음 값 중 하나를 선택합니다.  
   

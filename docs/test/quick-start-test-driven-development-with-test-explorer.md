@@ -46,7 +46,7 @@ ms.lasthandoff: 05/13/2017
 -   필요한 모든 정보를 하나의 창에서 확인합니다.  
   
 ## <a name="using-test-explorer"></a>테스트 탐색기 사용  
- ![모든 실행 단추를 표시하는 단위 테스트 탐색기](~/docs/test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
+ ![모든 실행 단추를 표시하는 단위 테스트 탐색기](~/test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
   
 #### <a name="to-run-unit-tests-by-using-test-explorer"></a>테스트 탐색기를 사용하여 단위 테스트를 실행하려면  
   

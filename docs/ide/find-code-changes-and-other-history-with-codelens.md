@@ -64,7 +64,7 @@ ms.lasthandoff: 05/13/2017
   
  참조 코드를 보려면 참조 상단으로 마우스를 이동합니다.  
   
- ![CodeLens &#45; 참조 피킹(Peeking)](~/docs/ide/media/codelensviewreferencespeekreference.png "CodeLensViewReferencesPeekReference")  
+ ![CodeLens &#45; 참조 피킹(Peeking)](~/ide/media/codelensviewreferencespeekreference.png "CodeLensViewReferencesPeekReference")  
   
  참조가 포함된 파일을 열려면 참조를 두 번 클릭합니다.  
   
@@ -85,34 +85,34 @@ ms.lasthandoff: 05/13/2017
   
  TFVC(Team Foundation 버전 제어) 또는 Git로 저장된 Visual C# .NET 또는 Visual Basic .NET 코드의 경우 클래스 및 메서드 수준에서 CodeLens 세부 정보를 가져옵니다(*code-element-level* 지표). Git 리포지토리가 TfGit에서 호스트되는 경우 TFS 작업 항목에 대한 링크도 가져올 수 있습니다.  
   
- ![코드 요소 수준 지표](~/docs/ide/media/codelenselementlevelindicators.png "CodeLensElementLevelIndicators")  
+ ![코드 요소 수준 지표](~/ide/media/codelenselementlevelindicators.png "CodeLensElementLevelIndicators")  
   
  Visual Studio 편집기에서 열 수 있는 기타 모든 파일 형식의 경우 창 맨 아래의 한 지점에서(*파일-수준* 지표) 전체 파일에 대한 CodeLens 세부 정보를 가져옵니다.  
   
- ![파일 수준 CodeLens 지표](~/docs/ide/media/almcodelensfilelevelindicators.png "ALMCodeLensFileLevelIndicators")  
+ ![파일 수준 CodeLens 지표](~/ide/media/almcodelensfilelevelindicators.png "ALMCodeLensFileLevelIndicators")  
   
  키보드를 사용하여 지표를 선택하려면 **ALT** 키를 길게 눌러 관련 숫자 키를 표시합니다.  
   
- ![Alt 키를 눌러 키보드 액세스 번호 보기](~/docs/ide/media/codelensaltkeyindicators.png "CodeLensAltKeyIndicators")  
+ ![Alt 키를 눌러 키보드 액세스 번호 보기](~/ide/media/codelensaltkeyindicators.png "CodeLensAltKeyIndicators")  
   
 ### <a name="find-changes-in-your-code"></a>코드에서 변경 내용 찾기  
  코드-요소-수준 지표에서 C# 또는 Visual Basic 코드를 변경한 사람 및 변경 내용을 찾습니다. Team Foundation Server 또는 Visual Studio Team Services에서 TFVC(Team Foundation 버전 제어)를 사용하는 경우에 표시됩니다.  
   
- ![CodeLens: TFVC에서 코드에 대한 변경 기록 가져오기](~/docs/ide/media/codelenscodechanges.png "CodeLensCodeChanges")  
+ ![CodeLens: TFVC에서 코드에 대한 변경 기록 가져오기](~/ide/media/codelenscodechanges.png "CodeLensCodeChanges")  
   
  기본 기간은 지난 12 개월입니다. 코드가 Team Foundation Server에 저장되는 경우 [TFSConfig 명령](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62) 을 [CodeIndex 명령](../ide/codeindex-command.md) 및 **/indexHistoryPeriod** 플래그와 함께 실행하여 변경할 수 있습니다.  
   
  1년 이상 전의 변경 내용을 포함하여 모든 변경 내용에 대한 자세한 기록을 보려면 **모든 파일 변경 내용 표시**를 선택합니다.  
   
- ![모든 코드 변경 내용 표시](~/docs/ide/media/codelensshowsallchanges.png "CodeLensShowsAllChanges")  
+ ![모든 코드 변경 내용 표시](~/ide/media/codelensshowsallchanges.png "CodeLensShowsAllChanges")  
   
  그러면 변경 집합에 대한 기록 창이 열립니다.  
   
- ![모든 코드 변경 내용에 대한 기록 창](~/docs/ide/media/codelenscodechangeshistory.png "CodeLensCodeChangesHistory")  
+ ![모든 코드 변경 내용에 대한 기록 창](~/ide/media/codelenscodechangeshistory.png "CodeLensCodeChangesHistory")  
   
  파일이 Git 리포지토리에 있고 코드-요소-수준 변경 지표를 선택하는 경우에 표시됩니다.  
   
- ![CodeLens: GIT에서 코드에 대한 변경 기록 가져오기](~/docs/ide/media/codelenscodechangesgit.png "CodeLensCodeChangesGit")  
+ ![CodeLens: GIT에서 코드에 대한 변경 기록 가져오기](~/ide/media/codelenscodechangesgit.png "CodeLensCodeChangesGit")  
   
  창 맨 아래의 파일-수준 지표에서 전체 파일(C# 및 Visual Basic 파일 제외)에 대한 변경 내용을 찾습니다.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 05/13/2017
   
  시간별로 코드를 변경한 사용자를 확인할 수도 있습니다. 이는 팀의 변경 내용에서 패턴을 찾고 해당 영향을 평가하는 데 도움이 될 수 있습니다.  
   
- ![CodeLens: 코드 변경 내용 기록을 그래프로 보기](~/docs/ide/media/codelens.png "CodeLens")  
+ ![CodeLens: 코드 변경 내용 기록을 그래프로 보기](~/ide/media/codelens.png "CodeLens")  
   
 #### <a name="find-changes-in-your-current-branch"></a>현재 분기에서 변경 내용 찾기  
  안정적인 코드를 깰 위험을 줄이기 위해 팀에 여러 분기(Main 분기 및 자식 개발 분기)가 있다고 가정합니다.  
@@ -139,7 +139,7 @@ ms.lasthandoff: 05/13/2017
  ![CodeLens: 코드가 분기된 시기 찾기](../ide/media/codelensfirstbranchscreenshot.png "CodeLensFirstBranchScreenshot")  
   
 #### <a name="find-incoming-changes-from-other-branches"></a>다른 분기에서 들어오는 변경 내용 찾기  
- ![CodeLens: 다른 분기에서의 코드 변경 내용 찾기](~/docs/ide/media/codelensbranchchangecheckinconceptual.png "CodeLensBranchChangeCheckinConceptual")  
+ ![CodeLens: 다른 분기에서의 코드 변경 내용 찾기](~/ide/media/codelensbranchchangecheckinconceptual.png "CodeLensBranchChangeCheckinConceptual")  
   
  ...다음 Dev 분기의 버그 수정과 같이 변경된 내용을 찾습니다.  
   
@@ -167,14 +167,14 @@ ms.lasthandoff: 05/13/2017
   
 |**아이콘**|**변경 내용이 발생한 위치**|  
 |--------------|-----------------------------------------|  
-|![CodeLens: 현재 분기에서 변경 아이콘](~/docs/ide/media/codelensbranchcurrenticon.png "CodeLensBranchCurrentIcon")|현재 분기|  
-|![CodeLens &#45; 부모 분기에서 변경 아이콘](~/docs/ide/media/codelensbranchparenticon.png "CodeLensBranchParentIcon")|부모 분기|  
-|![CodeLens: 하위 분기에서 변경 아이콘](~/docs/ide/media/codelensbranchchildicon.png "CodeLensBranchChildIcon")|자식 분기|  
-|![CodeLens &#45; 피어 분기에서 변경 아이콘](~/docs/ide/media/codelensbranchpeericon.png "CodeLensBranchPeerIcon")|피어 분기|  
-|![CodeLens &#45; 더 먼 분기에서 변경 아이콘](~/docs/ide/media/codelensbranchfurtherawayicon.png "CodeLensBranchFurtherAwayIcon")|부모, 자식 또는 피어보다 더 먼 분기|  
-|![CodeLens: 상위에서 병합 아이콘](~/docs/ide/media/codelensbranchmergefromparenticon.png "CodeLensBranchMergeFromParentIcon")|부모 분기에서 자식 분기로 병합|  
-|![CodeLens: 하위 분기에서 병합 아이콘](~/docs/ide/media/codelensbranchmergefromchildicon.png "CodeLensBranchMergeFromChildIcon")|자식 분기에서 부모 분기로 병합|  
-|![CodeLens: 관련 없는 분기에서 병합 아이콘](~/docs/ide/media/codelensbranchmergefromunrelatedicon.png "CodeLensBranchMergeFromUnrelatedIcon")|관련 없는 분기에서 병합(기본 파일이 없는 병합)|  
+|![CodeLens: 현재 분기에서 변경 아이콘](~/ide/media/codelensbranchcurrenticon.png "CodeLensBranchCurrentIcon")|현재 분기|  
+|![CodeLens &#45; 부모 분기에서 변경 아이콘](~/ide/media/codelensbranchparenticon.png "CodeLensBranchParentIcon")|부모 분기|  
+|![CodeLens: 하위 분기에서 변경 아이콘](~/ide/media/codelensbranchchildicon.png "CodeLensBranchChildIcon")|자식 분기|  
+|![CodeLens &#45; 피어 분기에서 변경 아이콘](~/ide/media/codelensbranchpeericon.png "CodeLensBranchPeerIcon")|피어 분기|  
+|![CodeLens &#45; 더 먼 분기에서 변경 아이콘](~/ide/media/codelensbranchfurtherawayicon.png "CodeLensBranchFurtherAwayIcon")|부모, 자식 또는 피어보다 더 먼 분기|  
+|![CodeLens: 상위에서 병합 아이콘](~/ide/media/codelensbranchmergefromparenticon.png "CodeLensBranchMergeFromParentIcon")|부모 분기에서 자식 분기로 병합|  
+|![CodeLens: 하위 분기에서 병합 아이콘](~/ide/media/codelensbranchmergefromchildicon.png "CodeLensBranchMergeFromChildIcon")|자식 분기에서 부모 분기로 병합|  
+|![CodeLens: 관련 없는 분기에서 병합 아이콘](~/ide/media/codelensbranchmergefromunrelatedicon.png "CodeLensBranchMergeFromUnrelatedIcon")|관련 없는 분기에서 병합(기본 파일이 없는 병합)|  
   
 ### <a name="find-linked-work-items"></a>링크된 작업 항목 찾기  
  ![CodeLens &#45; 특정 코드에 대한 작업 항목 찾기](../ide/media/codelensworkitems.png "CodeLensWorkItems")  
@@ -186,11 +186,11 @@ ms.lasthandoff: 05/13/2017
  ![CodeLens &#45; 변경 집합에 연결된 버그 찾기](../ide/media/codelensbugschangesets.png "CodeLensBugsChangesets")  
   
 ### <a name="contact-the-owner-of-an-item"></a>항목 소유자에게 문의  
- ![항목 소유자에게 문의](~/docs/ide/media/codelenscontactitemowner.png "CodeLensContactItemOwner")  
+ ![항목 소유자에게 문의](~/ide/media/codelenscontactitemowner.png "CodeLensContactItemOwner")  
   
  연락처 옵션을 보려면 항목에 대한 바로 가기 메뉴를 엽니다. Lync 또는 비즈니스용 Skype를 설치한 경우 이러한 옵션이 표시됩니다.  
   
- ![항목에 대한 연락처 옵션](~/docs/ide/media/codelensitemcontactmenu.png "CodeLensItemContactMenu")  
+ ![항목에 대한 연락처 옵션](~/ide/media/codelensitemcontactmenu.png "CodeLensItemContactMenu")  
   
 ##  <a name="FindRunUnitTests"></a> 코드에 대한 단위 테스트 찾기  
  테스트 탐색기를 열지 않고 코드에 대한 단위 테스트 관련 추가 정보를 확인할 수 있습니다. 필요한 사항:  
@@ -207,7 +207,7 @@ ms.lasthandoff: 05/13/2017
   
      ![CodeLens &#45; 코드 편집기에서 테스트 상태 선택](../ide/media/codelenschoosetestindicator.png "CodeLensChooseTestIndicator")  
   
-3.  ![CodeLens &#45; 아직 실행하지 않은 단위 테스트 경고](~/docs/ide/media/codelenstestwarningicon.png "CodeLensTestWarningIcon") 경고 아이콘이 표시되는 경우 테스트를 실행합니다.  
+3.  ![CodeLens &#45; 아직 실행하지 않은 단위 테스트 경고](~/ide/media/codelenstestwarningicon.png "CodeLensTestWarningIcon") 경고 아이콘이 표시되는 경우 테스트를 실행합니다.  
   
      ![CodeLens &#45; 아직 실행하지 않은 단위 테스트 보기](../ide/media/codelenstestsnotyetrun.png "CodeLensTestsNotYetRun")  
   
@@ -215,7 +215,7 @@ ms.lasthandoff: 05/13/2017
   
      ![CodeLens &#45; 단위 테스트 정의로 이동](../ide/media/codelensunittestdefinition.png "CodeLensUnitTestDefinition")  
   
-5.  테스트 결과를 검토합니다. 테스트 상태 지표(![CodeLens &#45; 단위 테스트 실패 아이콘](~/docs/ide/media/codelenstestfailedicon.png "CodeLensTestFailedIcon") 또는 ![CodeLens &#45; 단위 테스트 성공 아이콘](~/docs/ide/media/codelenstestpassedicon.png "CodeLensTestPassedIcon"))를 선택하거나 **Alt+1**을 누릅니다.  
+5.  테스트 결과를 검토합니다. 테스트 상태 지표(![CodeLens &#45; 단위 테스트 실패 아이콘](~/ide/media/codelenstestfailedicon.png "CodeLensTestFailedIcon") 또는 ![CodeLens &#45; 단위 테스트 성공 아이콘](~/ide/media/codelenstestpassedicon.png "CodeLensTestPassedIcon"))를 선택하거나 **Alt+1**을 누릅니다.  
   
      ![CodeLens &#45; 단위 테스트 결과 확인](../ide/media/codelensunittestresult.png "CodeLensUnitTestResult")  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 05/13/2017
   
  편집기 창의 맨 아래에 있는 펼침 단추 아이콘을 사용하여 CodeLens 파일 수준 표시기를 켜거나 끕니다.  
   
- ![파일 수준 지표 설정 및 해제](~/docs/ide/media/codelensfilelevelonandoff.png "CodeLensFileLevelOnAndOff")  
+ ![파일 수준 지표 설정 및 해제](~/ide/media/codelensfilelevelonandoff.png "CodeLensFileLevelOnAndOff")  
   
 ###  <a name="NoIndicators"></a> Q: CodeLens는 어디에 있나요?  
  **A:** CodeLens는 메서드, 클래스, 인덱서 및 속성 수준에서 Visual C# .NET 및 Visual Basic .NET 코드에 표시됩니다. CodeLens는 기타 모든 형식의 파일에 대해 파일 수준에서 표시됩니다.  
@@ -277,11 +277,11 @@ ms.lasthandoff: 05/13/2017
 4.  **Tab** 을 눌러 **설정 표시** 목록으로 이동한 다음 **아래쪽 화살표** 를 눌러 **CodeLens**를 선택합니다.  
   
 ### <a name="q-can-i-move-the-codelens-heads-up-display"></a>Q: CodeLens 헤드업 표시를 이동할 수 있습니까?  
- **A:** 예, ![CodeLens &#45; 창으로 도킹](~/docs/ide/media/codelensdockwindow.png "CodeLensDockWindow")을 선택하여 CodeLens를 창으로 도킹합니다.  
+ **A:** 예, ![CodeLens &#45; 창으로 도킹](~/ide/media/codelensdockwindow.png "CodeLensDockWindow")을 선택하여 CodeLens를 창으로 도킹합니다.  
   
- ![CodeLens 지표 창 도킹](~/docs/ide/media/codelensselectdockwindow.png "CodeLensSelectDockWindow")  
+ ![CodeLens 지표 창 도킹](~/ide/media/codelensselectdockwindow.png "CodeLensSelectDockWindow")  
   
- ![도킹된 CodeLens 참조 창](~/docs/ide/media/codelensreferencesdockedwindow.png "CodeLensReferencesDockedWindow")  
+ ![도킹된 CodeLens 참조 창](~/ide/media/codelensreferencesdockedwindow.png "CodeLensReferencesDockedWindow")  
   
 ### <a name="q-how-do-i-refresh-the-indicators"></a>Q: 지표를 새로 고치려면 어떻게 합니까?  
  **A:** 지표에 따라 다릅니다.  

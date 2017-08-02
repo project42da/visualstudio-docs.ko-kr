@@ -32,7 +32,7 @@ Visual Studio 편집기에서 다양한 컴퓨터 언어 읽기 및 탐색을 �
 ## <a name="syntax-colorization-statement-completion-and-navigate-to-support"></a>구문 색 지정, 문 완성 및 탐색 지원  
  구문 색 지정, 문 완성, 탐색 등의 Visual Studio 편집기 기능은 쉽게 코드를 읽고 만들고 편집하는 데 도움이 됩니다. 다음 스크린샷은 Visual Studio에서 Perl 스크립트를 편집하는 예를 보여 줍니다. 구문에 자동으로 색이 지정됩니다. 예를 들어 코드의 주석은 녹색, 코드는 검은색, 경로는 빨간색, 문은 파란색으로 표시됩니다. Visual Studio 편집기는 지원하는 모든 언어에 자동으로 구문 색 지정을 적용합니다. 또한 알려진 언어 키워드 또는 개체를 입력하기 시작하면 문 완성 기능을 통해 가능한 문 및 개체 목록이 표시됩니다. 문 완성 기능은 보다 빠르고 쉽게 코드를 만드는 데 도움이 됩니다.  
   
- ![Perl 스크립트의 구문 색 지정](~/docs/ide/media/vside_perledit.png "VSIDE_PerlEdit")  
+ ![Perl 스크립트의 구문 색 지정](~/ide/media/vside_perledit.png "VSIDE_PerlEdit")  
   
  Visual Studio는 현재 [TextMate 문법](https://manual.macromates.com/en/language_grammars)을 사용하여 다음 언어에 대해 구문 색 지정 및 기본 문 완성을 지원합니다. 자주 사용하는 언어가 표에 없는 경우 걱정하지 마세요. 직접 추가할 수 있습니다.  
   

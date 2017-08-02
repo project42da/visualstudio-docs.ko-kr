@@ -47,7 +47,7 @@ static void Main(string[] args)
   
  중단점을 설정한 다음 미리 단계별로 실행하면 콘솔 창을 보기에 충분한 시간 동안 실행을 중지할 수 있습니다.  중단점을 설정하려면 커서를 `Console.WriteLine` 줄에 놓고 **디버그 \/ 새 중단점 \/ 함수 중단점**을 클릭하거나 같은 줄에서 왼쪽 여백을 클릭하면 됩니다.  중단점은 다음과 같은 모습입니다.  
   
- ![중단점 설정](~/docs/debugger/media/getstartedbreakpoint.png "GetStartedBreakpoint")  
+ ![중단점 설정](~/debugger/media/getstartedbreakpoint.png "GetStartedBreakpoint")  
   
  중단점에 대한 자세한 내용은 [중단점 사용](../debugger/using-breakpoints.md)을 참조하세요.  
   
@@ -55,7 +55,7 @@ static void Main(string[] args)
   
  이제 변수 값을 살펴보겠습니다.  코드 창 바로 아래에 **자동**, **지역** 및 **조사식** 창이 표시됩니다.  이러한 창에는 실행 당시의 변수에 대한 현재 값이 표시됩니다.  **자동** 및 **지역** 창에는 값이 **10**인 testInt가 표시됩니다.  
   
- ![디버그할 때의 자동 창](~/docs/debugger/media/getstartedwindows.png "GetStartedWindows")  
+ ![디버그할 때의 자동 창](~/debugger/media/getstartedwindows.png "GetStartedWindows")  
   
  **자동** 및 **지역** 창에 대한 자세한 내용은 [변수 창](../Topic/Variable%20Windows.md)을 참조하세요.  
   
@@ -79,7 +79,7 @@ private static void Method1()
   
  Main 메서드에서 `Method1();` 호출에 중단점을 설정하고 디버그를 시작합니다.  실행이 중단되면 **디버그 \/ 한 단계씩 코드 실행**\(또는 도구 모음에서 **한 단계씩 코드 실행**, 또는 **F11** 사용\)을 클릭합니다.  Method1\(\)의 첫 번째 중괄호에서 실행이 다시 중단됩니다.  
   
- ![한 단계씩 코드 실행](~/docs/debugger/media/getstartedstepinto.png "GetStartedStepInto")  
+ ![한 단계씩 코드 실행](~/debugger/media/getstartedstepinto.png "GetStartedStepInto")  
   
  디버그를 중지했다가 다시 시작하고, 실행이 중단점에서 중단되면 **디버그\/ 프로시저 단위 실행**\(또는 도구 모음에서 **프로시저 단위 실행**, 또는 **F10** 사용\)을 클릭합니다.  실행이 `Console.WriteLine("end");`에서 다시 중단됩니다.  
   

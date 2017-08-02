@@ -43,19 +43,19 @@ Microsoft는 기능을 확장하고 고객이 보고한 문제를 해결하기 �
 ## <a name="update-by-using-the-notifications-hub"></a>알림 허브를 사용하여 업데이트
 1. 업데이트가 있으면 Visual Studio에 알림 플래그가 표시됩니다.
 
-  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/docs/install/media/notification-flag.png "Visual Studio의 알림 플래그")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/install/media/notification-flag.png "Visual Studio의 알림 플래그")
 
   알림 플래그를 클릭하거나 눌러 **알림** 허브를 엽니다.
 
-  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/docs/install/media/notifications-hub.png "Visual Studio의 알림 허브")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/install/media/notifications-hub.png "Visual Studio의 알림 허브")
 
 2. **“Visual Studio 업데이트” 사용 가능**을 클릭하여 **확장 및 업데이트** 대화 상자를 엽니다.
 
-  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/docs/install/media/notifications-hub-select.png "Visual Studio의 알림 허브")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/install/media/notifications-hub-select.png "Visual Studio의 알림 허브")
 
 3. **확장 및 업데이트** 대화 상자에서 **업데이트** 단추를 클릭하거나 탭합니다.
 
-  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/docs/install/media/notifications-extensions-and-updates.png "Visual Studio의 확장 및 업데이트 대화 상자")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/install/media/notifications-extensions-and-updates.png "Visual Studio의 확장 및 업데이트 대화 상자")
 
 ## <a name="update-by-using-the-visual-studio-installer"></a>Visual Studio 설치 관리자를 사용하여 업데이트
 1.    설치 관리자를 엽니다. 계속하기 전에 설치 관리자를 업데이트해야 할 수 있습니다. 이러한 경우라면 업데이트하라는 메시지가 나타납니다.
@@ -68,7 +68,7 @@ Microsoft는 기능을 확장하고 고객이 보고한 문제를 해결하기 �
 
   **업데이트** 단추를 클릭하거나 눌러 업데이트를 설치합니다.
 
-     ![Visual Studio 설치 관리자를 사용하여 Visual Studio 2017 업데이트](~/docs/install/media/update-visual-studio.png "Visual Studio 설치 관리자를 사용하여 Visual Studio 2017 업데이트")
+     ![Visual Studio 설치 관리자를 사용하여 Visual Studio 2017 업데이트](~/install/media/update-visual-studio.png "Visual Studio 설치 관리자를 사용하여 Visual Studio 2017 업데이트")
 
 ## <a name="get-support"></a>지원 받기
 때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 실패 문제 해결](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) 기술 자료 문서에서 문제 해결 팁을 참조하세요.

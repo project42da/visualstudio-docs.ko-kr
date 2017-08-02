@@ -31,7 +31,7 @@ caps.handback.revision: 11
   
  사용자가 선택 하는 경우는 **다중 선택** 항목 환경 구성 드롭다운 목록에서 사용 가능한 구성 목록을 제공 하는 대화 상자를 표시 합니다.  
   
- ![여러 구성](~/docs/extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
+ ![여러 구성](~/extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
 여러 구성  
   
  이 대화 상자에서 사용자가 하나 또는 여러 개의 구성을 선택할 수 있습니다. 선택 하면 속성 페이지 대화 상자에 표시 되는 속성 값 선택한 구성에 대 한 값의 교집합을 반영 합니다.  
@@ -40,7 +40,7 @@ caps.handback.revision: 11
   
  프로젝트 종속성 및 빌드 순서는 독립 솔루션 구성: 즉,만 설정할 수 있습니다 모든 솔루션에서 프로젝트에 대해 하나의 종속성 트리를 구성 합니다. 솔루션 또는 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 하나를 선택 하는 **프로젝트 종속성** 또는 **프로젝트 빌드 순서** 열립니다 옵션은 **프로젝트 종속성** 대화 상자입니다. 열 수도 있습니다는 **프로젝트** 메뉴.  
   
- ![프로젝트 종속성](~/docs/extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
+ ![프로젝트 종속성](~/extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
 프로젝트 종속성  
   
  프로젝트 종속성 프로젝트 빌드 순서를 결정 합니다. 대화 상자에서 빌드 순서 탭을 사용 하 여 솔루션 내의 프로젝트 빌드는 및의 종속 관계 탭을 사용 하 여 빌드 순서를 수정 하 여 정확한 순서를 확인 합니다.  

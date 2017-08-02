@@ -398,10 +398,10 @@ caps.handback.revision: 8
 |-----------|----------------|--------------------|  
 |**선택 되지 않음**|Shared|![기본 단추 상태](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713-10_DefaultState")||  
 |**기본 선택**|Resizable|![크기 조정 핸들을 사용한 기본 선택](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713-11_PrimaryResize")|![사용한 기본 선택 핸들 및 #40 크기 조정, 확대/축소 됨 (& a) #41;](../../extensibility/ux-guidelines/media/0713-12_primaryresizezoom.png "0713-12_PrimaryResizeZoom")|  
-|**기본 선택**|크기를 조정할 수 없습니다|![크기 조정 핸들을 사용하지 않는 기본 선택](~/docs/extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713-13_PrimaryNoResize")|![사용 하지 않는 기본 선택 핸들 및 #40 크기 조정, 확대/축소 됨 (& a) #41;](../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713-14_PrimaryNoResizeZoom")|  
+|**기본 선택**|크기를 조정할 수 없습니다|![크기 조정 핸들을 사용하지 않는 기본 선택](~/extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713-13_PrimaryNoResize")|![사용 하지 않는 기본 선택 핸들 및 #40 크기 조정, 확대/축소 됨 (& a) #41;](../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713-14_PrimaryNoResizeZoom")|  
 |**기본 선택**|잠금|![기본 선택 항목 잠김](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713-15_PrimaryLocked")|![기본 선택 항목 잠김 &#40; 확대/축소 됨 (& a) #41;](../../extensibility/ux-guidelines/media/0713-16_primarylockedzoom.png "0713-16_PrimaryLockedZoom")|  
-|**보조 선택**|Resizable|![크기 조정 핸들을 사용한 보조 선택](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713-17_SecondaryResize")|![사용한 보조 선택 핸들 및 #40 크기 조정, 확대/축소 됨 (& a) #41;](~/docs/extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713-18_SecondaryResizeZoom")|  
-|**보조 선택**|크기를 조정할 수 없습니다|![크기 조정 핸들을 사용하지 않는 보조 선택](~/docs/extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713-19_SecondaryNoResize")|![크기 조정 및 #40; 없이 보조 선택 확대/축소 됨 (& a) #41;](~/docs/extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713-20_SecondaryNoResizeZoom")|  
+|**보조 선택**|Resizable|![크기 조정 핸들을 사용한 보조 선택](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713-17_SecondaryResize")|![사용한 보조 선택 핸들 및 #40 크기 조정, 확대/축소 됨 (& a) #41;](~/extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713-18_SecondaryResizeZoom")|  
+|**보조 선택**|크기를 조정할 수 없습니다|![크기 조정 핸들을 사용하지 않는 보조 선택](~/extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713-19_SecondaryNoResize")|![크기 조정 및 #40; 없이 보조 선택 확대/축소 됨 (& a) #41;](~/extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713-20_SecondaryNoResizeZoom")|  
 |**보조 선택**|잠금|![보조 선택 항목 잠김](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713-21_SecondaryLocked")|![보조 선택 항목 잠김 &#40; 확대/축소 됨 (& a) #41;](../../extensibility/ux-guidelines/media/0713-22_secondarylockedzoom.png "0713-22_SecondaryLockedZoom")|  
 |**UI 활성**|Shared|![UI 활성 상태](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713-23_UIActive")|![UI 활성 상태 &#40; 확대/축소 됨 (& a) #41;](../../extensibility/ux-guidelines/media/0713-24_uiactivezoom.png "0713-24_UIActiveZoom")|  
   
@@ -410,7 +410,7 @@ caps.handback.revision: 8
 #### <a name="tree-view"></a>트리 뷰  
  트리 뷰에서 선택으로 간단한 강조 표시 됩니다. 사용자가 노드 이름이 나 노드 아이콘으로 노드가 선택 됩니다. 삼각가 중 노드의 왼쪽 문자 모양이 확장 또는 트리 컨트롤 계약 되지만 예외적으로 사용자의 선택에 영향을 주지 않습니다: 부모에 하나씩 선택 시 해당 노드의 자식에 대해 항목을 선택 하면 부모 노드를 축소 합니다.  
   
- ![Visual Studio에서의 일반적인 트리 뷰](~/docs/extensibility/ux-guidelines/media/0713-25_treeview.png "0713-25_TreeView")  
+ ![Visual Studio에서의 일반적인 트리 뷰](~/extensibility/ux-guidelines/media/0713-25_treeview.png "0713-25_TreeView")  
   
  **Visual Studio에서의 일반적인 트리 뷰**  
   

@@ -24,7 +24,7 @@ manager: "ghogen"
 # 에뮬레이터에서 Windows Phone 앱 실행
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows Phone에만 적용](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
+![Windows Phone에만 적용](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Windows Phone 에뮬레이터는 Windows Phone을 시뮬레이트하는 데스크톱 응용 프로그램입니다. 이 에뮬레이터는 실제 장치 없이 컴퓨터에서 Windows Phone 앱을 디버깅 및 테스트할 수 있는 가상화된 환경을 제공합니다. 일반적인 터치 및 회전 이벤트를 시뮬레이트하고 에뮬레이트하려는 실제 화면 크기와 해상도를 선택할 수 있습니다. 일반적으로 사용되는 여러 기능\(예: 위치, 네트워킹, 알림, 센서, 가속도계 및 선택적 SD 카드\)을 테스트할 수도 있습니다.  
   
@@ -78,7 +78,7 @@ manager: "ghogen"
   
 2.  **표준** 도구 모음에서 에뮬레이터 옵션 중 하나를 선택합니다.  
   
-     ![Windows Phone 에뮬레이터 이미지의 목록](~/docs/debugger/media/wp_emulator_list.png "WP\_Emulator\_list")  
+     ![Windows Phone 에뮬레이터 이미지의 목록](~/debugger/media/wp_emulator_list.png "WP\_Emulator\_list")  
   
 3.  디버깅하여 앱을 배포하고 실행하려면 **디버그** 메뉴에서 **디버깅 시작**을 클릭하거나 F5 키를 누릅니다.  
   
@@ -132,9 +132,9 @@ manager: "ghogen"
   
 |도구 모음 단추|구성 옵션|  
 |--------------|-----------|  
-|![Windows Phone 에뮬레이터 도구 모음의 입력 옵션](~/docs/debugger/media/wp_emulator_.png "WP\_Emulator\_")|**단일 지점 또는 다중 지점 입력 구성**<br /><br /> 다중 지점 입력을 사용하도록 설정하면 마우스 오른쪽 단추를 클릭하여 화면을 터치하지 않고도 터치 포인트를 이동할 수 있습니다. 그런 다음 마우스 왼쪽 단추를 클릭하여 두 터치 포인트를 동시에 이동할 수 있습니다.|  
-|![Windows Phone 에뮬레이터 도구 모음의 방향](~/docs/debugger/media/wp_emulator_rotation.png "WP\_Emulator\_rotation")|**에뮬레이터의 방향 구성**<br /><br /> Windows Phone 에뮬레이터에서 방향을 세로, 가로 왼쪽 또는 가로 오른쪽 중에 하나로 변경할 수 있습니다. 방향을 변경해도 에뮬레이터의 크기는 변경되지 않습니다.<br /><br /> 방향을 변경하려면 **왼쪽으로 회전** 단추 또는 **오른쪽으로 회전** 단추를 클릭합니다.|  
-|![Windows Phone 에뮬레이터 도구 모음의 크기 옵션](~/docs/debugger/media/wp_emulator_size.png "WP\_Emulator\_size")|**에뮬레이터의 크기 구성**<br /><br /> 호스트 컴퓨터 화면에서 에뮬레이터의 크기를 변경할 수 있습니다. 에뮬레이터의 DPI\(인치당 도트 수\)는 확대\/축소 값에 상관없이 호스트 모니터 DPI를 기반으로 합니다.<br /><br /> -   에뮬레이터를 화면에 맞추려면 **화면에 맞추기** 단추를 클릭합니다.<br />-   확대\/축소 설정을 변경하려면 **확대\/축소** 단추를 클릭합니다. **확대\/축소** 대화 상자가 열립니다. **확대\/축소** 대화 상자에 33~100의 확대\/축소 값을 입력합니다.|  
+|![Windows Phone 에뮬레이터 도구 모음의 입력 옵션](~/debugger/media/wp_emulator_.png "WP\_Emulator\_")|**단일 지점 또는 다중 지점 입력 구성**<br /><br /> 다중 지점 입력을 사용하도록 설정하면 마우스 오른쪽 단추를 클릭하여 화면을 터치하지 않고도 터치 포인트를 이동할 수 있습니다. 그런 다음 마우스 왼쪽 단추를 클릭하여 두 터치 포인트를 동시에 이동할 수 있습니다.|  
+|![Windows Phone 에뮬레이터 도구 모음의 방향](~/debugger/media/wp_emulator_rotation.png "WP\_Emulator\_rotation")|**에뮬레이터의 방향 구성**<br /><br /> Windows Phone 에뮬레이터에서 방향을 세로, 가로 왼쪽 또는 가로 오른쪽 중에 하나로 변경할 수 있습니다. 방향을 변경해도 에뮬레이터의 크기는 변경되지 않습니다.<br /><br /> 방향을 변경하려면 **왼쪽으로 회전** 단추 또는 **오른쪽으로 회전** 단추를 클릭합니다.|  
+|![Windows Phone 에뮬레이터 도구 모음의 크기 옵션](~/debugger/media/wp_emulator_size.png "WP\_Emulator\_size")|**에뮬레이터의 크기 구성**<br /><br /> 호스트 컴퓨터 화면에서 에뮬레이터의 크기를 변경할 수 있습니다. 에뮬레이터의 DPI\(인치당 도트 수\)는 확대\/축소 값에 상관없이 호스트 모니터 DPI를 기반으로 합니다.<br /><br /> -   에뮬레이터를 화면에 맞추려면 **화면에 맞추기** 단추를 클릭합니다.<br />-   확대\/축소 설정을 변경하려면 **확대\/축소** 단추를 클릭합니다. **확대\/축소** 대화 상자가 열립니다. **확대\/축소** 대화 상자에 33~100의 확대\/축소 값을 입력합니다.|  
   
 ##  <a name="BKMK_buttons"></a> 에뮬레이터에서 시뮬레이트된 하드웨어 단추 사용  
  에뮬레이터 화면의 오른쪽에 있는 시뮬레이트된 하드웨어 단추를 사용하여 휴대폰의 하드웨어 단추 사용을 시뮬레이트합니다.  
@@ -153,7 +153,7 @@ manager: "ghogen"
   
 3.  오른쪽 이미지에는 **볼륨 크게** 단추를 눌러 볼륨을 높인 후 에뮬레이터 화면이 나와 있습니다.  
   
- ![Windows Phone 에뮬레이터의 단추](~/docs/debugger/media/wp_emulator_buttons.png "WP\_Emulator\_buttons")  
+ ![Windows Phone 에뮬레이터의 단추](~/debugger/media/wp_emulator_buttons.png "WP\_Emulator\_buttons")  
   
 ##  <a name="BKMK_tasks_kbd"></a> 에뮬레이터에서 컴퓨터 키보드 사용  
  에뮬레이터는 개발 컴퓨터의 하드웨어 키보드를 Windows Phone의 키보드로 매핑하는 기능을 지원합니다. 키 동작은 Windows Phone 장치와 동일합니다.  
@@ -218,12 +218,12 @@ manager: "ghogen"
   
  원래 에뮬레이터 이미지는 **검사점** 목록에서 항상 첫 번째 항목으로 나타나고 변경하거나 삭제할 수 없습니다. 그러나 다른 스냅숏을 기본 에뮬레이터 이미지로 선택할 수 있습니다.  
   
- ![Windows Phone 에뮬레이터의 체크포인트 탭](~/docs/debugger/media/wp_emulator_checkpoints.png "WP\_Emulator\_checkpoints")  
+ ![Windows Phone 에뮬레이터의 체크포인트 탭](~/debugger/media/wp_emulator_checkpoints.png "WP\_Emulator\_checkpoints")  
   
 ##  <a name="BKMK_tasks_shot"></a> 에뮬레이터에서 스크린 샷 캡처  
  추가 도구 창에서 스크린 샷 도구를 사용하여 Windows Phone 앱의 스크린 샷을 만들 수 있습니다. 이 도구는 실행 중인 에뮬레이터의 해상도와 일치하는 PNG 파일을 만듭니다.  
   
- ![Windows Phone 에뮬레이터의 스크린 샷](~/docs/debugger/media/wp_emulator_screenshots.png "WP\_Emulator\_screenshots")  
+ ![Windows Phone 에뮬레이터의 스크린 샷](~/debugger/media/wp_emulator_screenshots.png "WP\_Emulator\_screenshots")  
   
 #### 기본 제공 에뮬레이터 스크린 샷 도구를 사용하여 앱 스크린 샷을 만들려면  
   

@@ -79,11 +79,11 @@ private void button_Click(object sender, RoutedEventArgs e)
   
  창이 표시되면 **항목 추가** 단추를 몇 번 클릭합니다.  다음과 같이 표시되어야 합니다.  
   
- ![앱의 주 창](~/docs/debugger/media/livevisualtree-app.png "LiveVIsualTree\-App")  
+ ![앱의 주 창](~/debugger/media/livevisualtree-app.png "LiveVIsualTree\-App")  
   
  이제 **라이브 시각적 트리** 창\(**디버그 \/ 창 \/ 라이브 시각적 트리** 또는 IDE의 왼쪽을 따라 찾기\)을 엽니다.  이 창과 **라이브 속성** 창을 나란히 볼 수 있도록 이 창을 도킹 위치에서 벗어나도록 끕니다.  **라이브 시각적 트리** 창에서 **ContentPresenter** 노드를 확장합니다.  단추와 목록 상자에 대한 노드가 있어야 합니다.  목록 상자와 **ScrollContentPresenter**및**ItemsPresenter**를 차례로 확장하여 목록 상자 항목을 찾습니다.  창이 다음과 같이 표시되어야 합니다.  
   
- ![라이브 표시 트리의 Listboxitem](~/docs/debugger/media/livevisualtree-listboxitems.png "LiveVisualTree\-ListBoxItems")  
+ ![라이브 표시 트리의 Listboxitem](~/debugger/media/livevisualtree-listboxitems.png "LiveVisualTree\-ListBoxItems")  
   
  응용 프로그램 창으로 다시 이동하고 더 많은 항목을 추가합니다.  더 많은 목록 상자 항목이 **라이브 시각적 트리**에 나타나야 합니다.  
   
@@ -95,7 +95,7 @@ private void button_Click(object sender, RoutedEventArgs e)
   
  **실행 중인 응용 프로그램에 레이아웃 표시기 표시**.  선택 사용 단추 바로 오른쪽에 있는 단추를 선택하면 이 모드를 사용할 수 있습니다.  **레이아웃 표시기 표시**를 켜면 응용 프로그램 창에 선택한 개체의 범위를 따라 가로 및 세로줄이 표시됩니다. 따라서 여백을 표시하는 사각형뿐만 아니라 어떤 항목이 정렬되는지 확인할 수 있습니다.  예를 들어 **선택 사용** 및 **레이아웃 표시**를 모두 켜고 응용 프로그램에서 **항목 추가** 텍스트 블록을 선택합니다.  **라이브 시각적 트리**에 텍스트 블록 노드가 표시되고 **라이브 속성 뷰어**에 텍스트 블록 속성이 표시되어야 합니다. 또한 텍스트 블록의 범위에는 가로 및 세로줄이 표시되어야 합니다.  
   
- ![DisplayLayout의 LivePropertyViewer](~/docs/debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer\-DisplayLayout")  
+ ![DisplayLayout의 LivePropertyViewer](~/debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer\-DisplayLayout")  
   
  **선택 미리 보기**.  라이브 시각적 트리 도구 모음의 왼쪽에서 세 번째 단추를 선택하면 이 모드를 사용할 수 있습니다.  이 모드에서는 응용 프로그램의 소스 코드에 액세스할 수 있는 경우 요소가 선언된 XAML을 보여 줍니다.  **선택 사용** 및 **선택 미리 보기**를 선택한 다음 테스트 응용 프로그램에서 단추를 선택합니다.  Visual Studio에서 MainWindow.xaml 파일이 열리고 커서가 단추가 정의된 줄에 위치합니다.  
   

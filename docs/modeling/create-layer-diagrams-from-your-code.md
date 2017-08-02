@@ -39,7 +39,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="create-dependency-diagrams-from-your-code"></a>코드에서 종속성 다이어그램 만들기
 소프트웨어 시스템의 상위 수준인 논리적 아키텍처를 시각화 하려면 만들기를 *종속성 다이어그램* Visual Studio에서. 코드가 디자인과 일치 하려면 종속성 다이어그램을 사용 하 여 코드의 유효성을 검사 합니다. Visual C#.NET 및 Visual Basic.NET 프로젝트에 대 한 종속성 다이어그램을 만들 수 있습니다. 이 기능을 지 원하는 Visual Studio의 버전을 확인 하려면 참조 [아키텍처 및 모델링 도구에 대 한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)  
   
- ![종속성 다이어그램을 만드는](~/docs/modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")  
+ ![종속성 다이어그램을 만드는](~/modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")  
   
  종속성 다이어그램 라는 논리적, 추상 그룹으로 Visual Studio 솔루션 항목을 구성할 수 있습니다 *레이어*합니다. 레이어를 사용하여 이러한 아티팩트가 수행하는 주요 작업 또는 시스템의 주요 구성 요소를 설명할 수 있습니다. 각 레이어에는 보다 세부적인 작업을 나타내는 다른 레이어가 포함될 수 있습니다. 의도 한 또는 기존 지정할 수도 있습니다 *종속성* 레이어 간의 합니다. 이와 같이 화살표로 나타내는 종속성은 다른 레이어가 나타내는 기능을 어느 레이어가 사용할 수 있는지 또는 현재 어느 레이어가 사용하고 있는지를 표시합니다. 코드의 아키텍처 제어를 유지하려면 다이어그램에서 의도한 종속성을 표시한 다음 해당 다이어그램에 대해 코드 유효성을 검사합니다.  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/22/2017
 
 7. 현재 응용 프로그램 아키텍처를 보여 줍니다. 결정 되도록 아키텍처 및 종속성 다이어그램을 적절 하 게 수정 합니다.
 
-![종속성 다이어그램에서 코드 맵을 생성](~/docs/modeling/media/dependency-validation-01.png)
+![종속성 다이어그램에서 코드 맵을 생성](~/modeling/media/dependency-validation-01.png)
   
 ##  <a name="a-namecreatelayersa-create-layers-from-artifacts"></a><a name="CreateLayers"></a>아티팩트에서 레이어 만들기  
  프로젝트, 코드 파일, 네임스페이스, 클래스, 메서드 등 Visual Studio 솔루션 항목에서 레이어를 만들 수 있습니다. 이렇게 하면 레이어와 항목 간에 링크가 자동으로 만들어지고 레이어 유효성 검사 프로세스에 포함됩니다.  

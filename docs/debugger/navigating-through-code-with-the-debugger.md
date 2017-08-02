@@ -77,7 +77,7 @@ manager: "ghogen"
   
      코드에 간단한 중단점을 설정하려면 Visual Studio 편집기에서 소스 파일을 엽니다. 중단하려는 코드 줄에 커서를 설정한 다음 상황에 맞는 메뉴에서 **중단점**, **중단점 삽입**을 선택합니다\(키보드: **F9**\). 디버거는 해당 줄이 실행되기 바로 전에 실행을 중단합니다.  
   
-     ![중단점 설정](~/docs/debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
+     ![중단점 설정](~/debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
   
      Visual Studio에서 중단점은 조건부 중단점 및 추적점과 같은 다양한 추가 기능을 제공합니다.[중단점 사용](../debugger/using-breakpoints.md)을 참조하세요.  
   
@@ -121,7 +121,7 @@ manager: "ghogen"
 ##  <a name="BKMK_Set_the_next_statement_to_execute"></a> 다음에 실행할 문 설정  
  디버거를 중단한 후 실행 지점을 이동하여 다음에 실행할 코드의 문을 설정할 수 있습니다. 소스 또는 디스어셈블리 창의 여백에 있는 노란색 화살표는 다음에 실행할 문의 위치를 나타냅니다. 코드의 일부를 건너뛰거나 이전에 실행한 줄로 돌아가려면 이 화살표를 이동합니다. 알려진 버그를 포함하는 코드 섹션을 건너뛰려는 경우 등에 이 방법을 사용할 수 있습니다.  
   
- ![Example2](~/docs/debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
+ ![Example2](~/debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
   
  다음에 실행할 문을 설정하려면 다음 절차 중 하나를 사용합니다.  
   

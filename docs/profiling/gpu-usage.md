@@ -39,7 +39,7 @@ Visual Studio 성능 및 진단 허브의 GPU 사용량 도구를 사용하여 D
   
  다음은 **GPU 사용량 보고서** 창입니다.  
   
- ![CPU 및 GPU 타임라인을 사용한 GPU 사용량 보고서](~/docs/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
+ ![CPU 및 GPU 타임라인을 사용한 GPU 사용량 보고서](~/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
   
 ## <a name="requirements"></a>요구 사항  
  그래픽 진단 요구 사항 외에 GPU 사용량 도구를 사용하기 위한 요구 사항은 다음과 같습니다.  
@@ -60,7 +60,7 @@ Visual Studio 성능 및 진단 허브의 GPU 사용량 도구를 사용하여 D
   
 2.  성능 및 진단 허브에서 **GPU 사용량** 옆에 있는 상자를 선택합니다. 선택적으로 사용하려는 다른 도구 옆에 있는 확인란을 선택합니다. 다수의 성능 및 진단 도구를 동시에 실행하여 앱 성능을 보다 자세히 확인할 수 있습니다.  
   
-     ![사용하려는 진단 도구를 선택합니다.](~/docs/profiling/media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")  
+     ![사용하려는 진단 도구를 선택합니다.](~/profiling/media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")  
   
     > [!NOTE]
     >  일부 성능 및 진단 도구는 동시에 사용할 수 없습니다.  
@@ -79,15 +79,15 @@ Visual Studio 성능 및 진단 허브의 GPU 사용량 도구를 사용하여 D
   
 1.  진단 세션 창 아랫부분에서 **컬렉션 중지** 링크를 선택하거나 왼쪽 위 모서리에 있는 **중지**를 누릅니다.  
   
-     ![GPU 및 CPU 타이밍 정보를 수집합니다.](~/docs/profiling/media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")  
+     ![GPU 및 CPU 타이밍 정보를 수집합니다.](~/profiling/media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")  
   
 2.  보고서의 윗부분에서 조사하려는 문제가 표시된 그래프의 섹션을 선택합니다. 최대 3초 길이까지 선택할 수 있습니다. 이보다 긴 섹션은 끝에서 앞쪽으로 잘립니다.  
   
-     ![이후 컬렉션, 세부 사항을 볼 범위 선택](~/docs/profiling/media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")  
+     ![이후 컬렉션, 세부 사항을 볼 범위 선택](~/profiling/media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")  
   
 3.  보고서 아래 부분에 있는 **해당 범위의 GPU 사용량을 자세히 보려면 여기를 클릭...** 메시지에서 **자세히 보기** 링크를 선택하여 선택 항목의 자세한 타임라인을 봅니다.  
   
-     ![범위가 선택된 이후 컬렉션](~/docs/profiling/media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")  
+     ![범위가 선택된 이후 컬렉션](~/profiling/media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")  
   
  이렇게 하면 보고서가 포함된 새 탭 문서가 열립니다. GPU 사용량 보고서를 사용하면 CPU에서 그래픽 이벤트가 시작된 시간, 이벤트가 GPU에 도착한 시간, 이를 GPU가 실행하는 데 걸린 시간 등을 확인할 수 있습니다. 이러한 정보는 병목 현상 및 코드 병렬 처리를 개선해야 할 부분 등을 식별하는 데 도움이 됩니다.  
 
@@ -95,7 +95,7 @@ Visual Studio 성능 및 진단 허브의 GPU 사용량 도구를 사용하여 D
 ## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>GPUView 또는 Windows Performance Analyzer로 내보내기
 Visual Studio 2017부터 이 데이터는 진단 세션의 오른쪽 아래에 있는 **GpuView에서 열기** 또는 **WPA에서 열기** 링크를 클릭하여 [GPUView](/windows-hardware/drivers/display/using-gpuview) 및 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)로 열 수 있습니다.
 
-![열기...](~/docs/profiling/media/gfx_diag_open_in.png)
+![열기...](~/profiling/media/gfx_diag_open_in.png)
 <!-- /VERSIONLESS -->
 
 ## <a name="using-the-gpu-usage-report"></a>GPU 사용량 보고서 사용  
@@ -105,7 +105,7 @@ Visual Studio 2017부터 이 데이터는 진단 세션의 오른쪽 아래에 �
   
  다음은 **GPU 사용량 보고서** 창입니다.  
   
- ![CPU 및 GPU 타임라인을 사용한 GPU 사용량 보고서](~/docs/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
+ ![CPU 및 GPU 타임라인을 사용한 GPU 사용량 보고서](~/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
   
  보고서의 하단에서 이벤트 중 하나를 선택하면 관련 타임라인에서 해당 이벤트에 표식이 배치됩니다. 일반적으로 CPU 스레드에서 API 호출을 나타내는 이벤트가 하나 표시되고, GPU 타임라인 중 하나에 GPU가 작업을 완료한 때를 나타내는 다른 이벤트가 표시됩니다. 마찬가지로, 타임라인에서 이벤트 중 하나를 선택하면 보고서 하단에서 해당 이벤트가 강조 표시됩니다. 보고서 상단에 있는 타임라인을 축소하면 가장 많은 시간이 소요되는 이벤트만 표시됩니다. 기간이 더 짧은 이벤트를 보려면 Ctrl 키를 누른 채로 포인팅 장치의 휠을 움직이거나 상단 패널의 왼쪽 아래 모서리에 있는 크기 조정 컨트롤을 사용하여 타임라인을 확대합니다. 타임라인 패널의 콘텐츠를 끌어 기록된 이벤트를 이동할 수도 있습니다.  
   
@@ -146,7 +146,7 @@ Visual Studio 2017부터 이 데이터는 진단 세션의 오른쪽 아래에 �
   
 3.  **일반** 속성 페이지의 **GPU 프로파일링 구성** 아래에서 **앱 시작 시 프로파일링 시작** 확인란의 선택을 취소하여 프로파일링을 연기합니다.  
   
-     ![GPU 사용량 수집이 시작되면 구성](~/docs/profiling/media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")  
+     ![GPU 사용량 수집이 시작되면 구성](~/profiling/media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")  
   
 > [!IMPORTANT]
 >  현재 Direct3D 12 앱에 대해서는 프로파일링 연기가 지원되지 않습니다.  

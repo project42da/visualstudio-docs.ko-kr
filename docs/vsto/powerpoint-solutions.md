@@ -33,7 +33,7 @@ caps.handback.revision: 41
   
  [!INCLUDE[appliesto_pptallapp](../vsto/includes/appliesto-pptallapp-md.md)]  
   
- ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Microsoft PowerPoint용 추가 기능 만들기](http://go.microsoft.com/fwlink/?LinkId=132767)를 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Microsoft PowerPoint용 추가 기능 만들기](http://go.microsoft.com/fwlink/?LinkId=132767)를 참조하세요.  
   
 ## PowerPoint 개체 모델을 사용하여 PowerPoint 자동화  
  PowerPoint 개체 모델은 PowerPoint 자동화에 사용할 수 있는 다양한 형식을 노출합니다. 이러한 형식을 사용하여 일반적인 작업을 수행하는 코드를 작성할 수 있습니다.  

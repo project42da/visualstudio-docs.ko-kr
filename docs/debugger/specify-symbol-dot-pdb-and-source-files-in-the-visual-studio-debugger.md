@@ -65,7 +65,7 @@ manager: "ghogen"
   
      ![도구 &#45; 옵션 &#45; 디버깅 &#45; 기호 페이지](../debugger/media/dbg_tools_options_symbols.png "DBG\_Tools\_Options\_Symbols")  
   
-2.  폴더 ![도구&#47; 옵션&#47; 디버깅&#47;기호 폴더 아이콘](~/docs/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") 아이콘을 선택합니다. 편집 가능한 텍스트가 **기호 파일\(.pdb\) 위치** 상자에 나타납니다.  
+2.  폴더 ![도구&#47; 옵션&#47; 디버깅&#47;기호 폴더 아이콘](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") 아이콘을 선택합니다. 편집 가능한 텍스트가 **기호 파일\(.pdb\) 위치** 상자에 나타납니다.  
   
 3.  기호 서버 또는 기호 위치에 대한 URL 또는 디렉터리 경로를 입력합니다. 문 완성 기능으로 올바른 형식을 찾을 수 있습니다.  
   
@@ -214,7 +214,7 @@ manager: "ghogen"
   
 2.  **공용 속성** 노드에서 **소스 파일 디버그**를 선택합니다.  
   
-3.  폴더 ![도구&#47; 옵션&#47; 디버깅&#47;기호 폴더 아이콘](~/docs/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") 아이콘을 클릭합니다. 편집 가능한 텍스트가 **소스 코드가 포함되어 있는 디렉터리** 목록에 나타납니다.  
+3.  폴더 ![도구&#47; 옵션&#47; 디버깅&#47;기호 폴더 아이콘](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") 아이콘을 클릭합니다. 편집 가능한 텍스트가 **소스 코드가 포함되어 있는 디렉터리** 목록에 나타납니다.  
   
 4.  검색할 경로를 추가합니다.  
   

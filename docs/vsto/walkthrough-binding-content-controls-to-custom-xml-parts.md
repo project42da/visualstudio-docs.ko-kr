@@ -89,15 +89,15 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다.  자세한 내용은 [방법: 리본 메뉴에 개발 도구 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)를 참조하세요.  
   
-6.  **컨트롤** 그룹에서 **텍스트** 단추 ![PlainTextContentControl](~/docs/vsto/media/plaintextcontrol.gif "PlainTextContentControl")를 선택하여 첫 번째 셀에 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>을 추가합니다.  
+6.  **컨트롤** 그룹에서 **텍스트** 단추 ![PlainTextContentControl](~/vsto/media/plaintextcontrol.gif "PlainTextContentControl")를 선택하여 첫 번째 셀에 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>을 추가합니다.  
   
 7.  테이블의 두 번째 열에서 두 번째 행을 선택합니다\(**Hire Date** 옆\).  
   
-8.  **컨트롤** 그룹에서 **날짜 선택** 단추 ![DatePickerContentControl](~/docs/vsto/media/datepicker.gif "DatePickerContentControl")를 선택하여 두 번째 셀에 <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>을 추가합니다.  
+8.  **컨트롤** 그룹에서 **날짜 선택** 단추 ![DatePickerContentControl](~/vsto/media/datepicker.gif "DatePickerContentControl")를 선택하여 두 번째 셀에 <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>을 추가합니다.  
   
 9. 테이블의 두 번째 열에서 세 번째 행을 선택합니다\(**Title** 옆\).  
   
-10. **컨트롤** 그룹에서 **드롭다운 목록** 단추 ![DropDownListContentControl](~/docs/vsto/media/dropdownlist.gif "DropDownListContentControl")를 선택하여 마지막 셀에 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl>을 추가합니다.  
+10. **컨트롤** 그룹에서 **드롭다운 목록** 단추 ![DropDownListContentControl](~/vsto/media/dropdownlist.gif "DropDownListContentControl")를 선택하여 마지막 셀에 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl>을 추가합니다.  
   
  이 프로젝트에 대한 전체 사용자 인터페이스입니다.  지금 프로젝트를 실행하는 경우 첫 번째 행에 텍스트를 입력하고 두 번째 행에서 날짜를 선택할 수 있습니다.  다음 단계는 XML 파일의 문서에 표시하려는 데이터를 연결하는 것입니다.  
   

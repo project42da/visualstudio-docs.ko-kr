@@ -143,7 +143,7 @@ caps.handback.revision: 2
   
  **그림 08.01\-h: 테마가 지정 된 대화 상자**  
   
- ![Themed dialog dimensions](~/docs/extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801\-i\_ThemedDialogDimensions")  
+ ![Themed dialog dimensions](~/extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801\-i\_ThemedDialogDimensions")  
   
  **그림 08.01 i: 테마가 지정 된 대화 상자\-차원**  
   
@@ -151,7 +151,7 @@ caps.handback.revision: 2
   
  **그림 08.01 j: 테마가 지정 된 대화 상자\-글꼴**  
   
- ![Themed dialog colors](~/docs/extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801\-k\_ThemedDialogColors")  
+ ![Themed dialog colors](~/extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801\-k\_ThemedDialogColors")  
   
  **그림 08.01\-k: 테마가 지정 된 대화 상자 색**  
   

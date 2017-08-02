@@ -136,7 +136,7 @@ public void ... (...)
     if (element != null) ... }}  
 ```  
   
- ![각 ilayerelement에 대해 ishape 표시 됩니다. ] (~/docs/modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
+ ![각 ilayerelement에 대해 ishape 표시 됩니다. ] (~/modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
   
  <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>및 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>UML 모델을 표시 하는 데 사용 되기도 합니다.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram></xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> 자세한 내용은 참조 [UML 모델 다이어그램에 표시](../modeling/display-a-uml-model-on-diagrams.md)합니다.  
   

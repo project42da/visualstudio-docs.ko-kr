@@ -85,7 +85,7 @@ manager: "ghogen"
   
 1.  **중단점을 설정합니다.** `app.start()` 호출 직후에 발생되는 `callTrack = "module function";` 문에서 중단점을 설정합니다. 소스 코드 편집기의 음영 처리된 여백에서 줄을 선택합니다\(키보드: 줄에 커서를 놓고 **F9** 키 선택\).  
   
-     ![example1에 중단점 설정](~/docs/debugger/media/dbg_jsnav_example1_breakpoint.png "DBG\_JSNAV\_example1\_breakpoint")  
+     ![example1에 중단점 설정](~/debugger/media/dbg_jsnav_example1_breakpoint.png "DBG\_JSNAV\_example1\_breakpoint")  
   
      여백에 중단점 아이콘이 나타납니다.  
   
@@ -93,13 +93,13 @@ manager: "ghogen"
   
      앱이 실행되기 시작하고 중단점을 설정한 문 바로 앞에서 실행을 일시 중단합니다. 여백에 있는 현재 줄 아이콘은 위치를 식별하고 현재 문이 강조 표시됩니다.  
   
-     ![중단점까지 실행](~/docs/debugger/media/dbg_jsnav_example1_run_to_breakpoint.png "DBG\_JSNAV\_example1\_run\_to\_breakpoint")  
+     ![중단점까지 실행](~/debugger/media/dbg_jsnav_example1_run_to_breakpoint.png "DBG\_JSNAV\_example1\_run\_to\_breakpoint")  
   
      이제 앱의 실행을 제어하고 프로그램 문을 단계별로 실행하면서 프로그램 상태를 검사할 수 있습니다.  
   
 3.  **함수를 한 단계씩 코드 실행합니다. 디버그** 메뉴에서 **한 단계씩 코드 실행**을 선택합니다\(키보드: **F11**\).  
   
-     ![특정 코드 줄 한 단계씩 코드 실행](~/docs/debugger/media/dbg_jsnav_example1_step_into.png "DBG\_JSNAV\_example1\_step\_into")  
+     ![특정 코드 줄 한 단계씩 코드 실행](~/debugger/media/dbg_jsnav_example1_step_into.png "DBG\_JSNAV\_example1\_step\_into")  
   
      디버거가 `example1` 함수를 호출하는 다음 줄로 이동합니다.**한 단계씩 코드 실행**을 다시 선택합니다. 디버거가 `example1` 함수의 첫 번째 코드 줄로 이동합니다. 강조 표시된 줄은 실행되지 않았지만 함수가 호출 스택에 로드되고 지역 변수에 대한 메모리가 할당되었습니다.  
   
@@ -113,7 +113,7 @@ manager: "ghogen"
   
 5.  **데이터 팁에서 변수 값을 확인합니다.** 끝내기 점에 도달할 때까지 `example1` 문의 한 단계씩 코드 실행을 계속합니다. 디버거는 함수의 닫는 중괄호를 강조 표시합니다. 변수 이름에서 마우스를 일시 중지하면 변수의 이름과 값이 데이터 팁에 표시됩니다.  
   
-     ![데이터 팁의 변수 값 보기](~/docs/debugger/media/dbg_jsnav_data_tip.png "DBG\_JSNAV\_data\_tip")  
+     ![데이터 팁의 변수 값 보기](~/debugger/media/dbg_jsnav_data_tip.png "DBG\_JSNAV\_data\_tip")  
   
 6.  **CallTrack 변수에 대한 조사식을 추가합니다.** `callTrack` 변수는 빠른 시작 전체에서 예제의 호출된 함수를 표시하는 데 사용됩니다. 변수의 값을 더 쉽게 확인하려면 조사식 창에 추가합니다. 편집기에서 변수 이름을 선택한 다음 바로 가기 메뉴에서 **조사식 추가**를 선택합니다.  
   
@@ -139,7 +139,7 @@ manager: "ghogen"
   
 1.  **모듈 함수에서 example2 함수를 호출합니다.** `module` 함수를 편집하고 `var callTrack = "module function"` 다음 줄을 `example2();` 줄로 바꿉니다.  
   
-     ![example2 함수 호출](~/docs/debugger/media/dbg_jsnav_example2.png "DBG\_JSNAV\_example2")  
+     ![example2 함수 호출](~/debugger/media/dbg_jsnav_example2.png "DBG\_JSNAV\_example2")  
   
 2.  **중단점까지 실행합니다. 디버그** 메뉴에서 **디버깅 시작**을 선택하여 디버그 세션을 시작합니다\(키보드: F5\). 디버거는 중단점에서 실행을 일시 중단합니다.  
   
@@ -147,7 +147,7 @@ manager: "ghogen"
   
 4.  **example2 및 example2\_a를 한 단계씩 코드 실행합니다. F11** 키를 선택하여 `example2` 함수를 한 단계씩 코드 실행합니다.`var x = example2_a();` 줄에 도달할 때까지 `example2` 문을 계속 한 단계씩 코드 실행합니다. 다시 이 줄을 한 단계씩 코드 실행하여 `example2_a`의 진입점으로 이동합니다.`example2`로 돌아갈 때까지 `example2_a`의 각 문을 계속 한 단계씩 코드 실행합니다.  
   
-     ![함수 프로시저 단위 실행](~/docs/debugger/media/dbg_jsnav_example2_a.png "DBG\_JSNAV\_example2\_a")  
+     ![함수 프로시저 단위 실행](~/debugger/media/dbg_jsnav_example2_a.png "DBG\_JSNAV\_example2\_a")  
   
 5.  **함수를 프로시저 단위로 실행합니다.** `example2`의 다음 줄 `var y = example2_a();`는 기본적으로 이전 줄과 동일합니다. 이 줄을 안전하게 프로시저 단위로 실행합니다.**F10** 키를 선택하여 `example2`의 다시 계속에서 `example2_a`의 이 두 번째 호출로 이동합니다.`callTrack` 문자열은 `example2_a` 함수가 두 번 실행되었음을 나타냅니다.  
   
@@ -167,7 +167,7 @@ manager: "ghogen"
   
 1.  **모듈 함수에서 example3 함수를 호출합니다.** `module` 함수를 편집하고 `var callTrack = "module function";` 다음 줄을 `example3();` 줄로 바꿉니다.  
   
-     ![example3 호출](~/docs/debugger/media/dbg_jsnav_example3.png "DBG\_JSNAV\_example3")  
+     ![example3 호출](~/debugger/media/dbg_jsnav_example3.png "DBG\_JSNAV\_example3")  
   
 2.  **중단점까지 실행합니다. 디버그** 메뉴에서 **디버깅 시작**\(키보드: **F5**\)을 선택하여 디버그 세션을 시작합니다. 디버거가 `module` 함수의 중단점에서 실행을 일시 중단합니다.  
   
@@ -177,7 +177,7 @@ manager: "ghogen"
   
      **조건** 확인란을 선택한 다음 텍스트 상자에 `i == 500;`을 입력합니다.**참인 경우** 옵션을 선택하고 **확인**을 선택합니다. 중단점을 사용하면 `for` 루프의 500번째 반복에서 값을 확인할 수 있습니다. 조건부 중단점 아이콘은 해당 흰색 십자 표시로 식별할 수 있습니다.  
   
-     ![조건부 중단점 아이콘](~/docs/debugger/media/dbg_jsnav_breakpoint_condition_icon.png "DBG\_JSNAV\_Breakpoint\_Condition\_icon")  
+     ![조건부 중단점 아이콘](~/debugger/media/dbg_jsnav_breakpoint_condition_icon.png "DBG\_JSNAV\_Breakpoint\_Condition\_icon")  
   
 5.  **중단점까지 실행합니다. 디버그** 메뉴에서 **계속**\(키보드: **F5**\)을 선택합니다.`i`에서 일시 중지하여 `i`의 현재 값이 500인지 확인합니다. 또한 `s` 변수는 한 줄로 표시되고 데이터 팁 창보다 훨씬 더 깁니다.  
   
@@ -211,7 +211,7 @@ manager: "ghogen"
   
 1.  **배열 개체를 모듈 함수에 추가합니다.** `module` 함수를 편집하고 `var callTrack = "module function"` 다음 줄을 `var myArray = new Array(1, 2, 3);` 줄로 바꿉니다.  
   
-     ![myArray 정의](~/docs/debugger/media/dbg_jsnav_myarray.png "DBG\_JSNAV\_myArray")  
+     ![myArray 정의](~/debugger/media/dbg_jsnav_myarray.png "DBG\_JSNAV\_myArray")  
   
 2.  **중단점까지 실행합니다. 디버그** 메뉴에서 **디버깅 시작**\(키보드: **F5**\)을 선택하여 디버그 세션을 시작합니다. 디버거는 중단점에서 실행을 일시 중단합니다. 줄을 한 단계씩 코드 실행합니다.  
   
@@ -248,7 +248,7 @@ manager: "ghogen"
   
 1.  **모듈 함수에서 example4 함수를 호출합니다.** `module` 함수를 편집하고 `var callTrack = "module function"` 다음 줄을 `example4()` 줄로 바꿉니다.  
   
-     ![example4 호출](~/docs/debugger/media/dbg_jsnav_example4.png "DBG\_JSNAV\_example4")  
+     ![example4 호출](~/debugger/media/dbg_jsnav_example4.png "DBG\_JSNAV\_example4")  
   
 2.  **중단점까지 실행합니다. 디버그** 메뉴에서 **디버깅 시작**\(키보드: **F5**\)을 선택하여 디버그 세션을 시작합니다. 디버거는 중단점에서 실행을 일시 중단합니다.  
   
@@ -284,7 +284,7 @@ manager: "ghogen"
   
 1.  **모듈 함수에서 example5 함수를 호출합니다.** `module` 함수를 편집하고 `var callTrack = "module function";` 다음 줄을 `example5();` 줄로 바꿉니다.  
   
-     ![example5 호출](~/docs/debugger/media/dbg_jsnav_example5.png "DBG\_JSNAV\_example5")  
+     ![example5 호출](~/debugger/media/dbg_jsnav_example5.png "DBG\_JSNAV\_example5")  
   
 2.  **중단점까지 실행합니다. 디버그** 메뉴에서 **디버깅 시작**\(키보드: **F5**\)을 선택하여 디버그 세션을 시작합니다. 디버거가 모듈 함수의 중단점에서 실행을 일시 중단합니다.  
   

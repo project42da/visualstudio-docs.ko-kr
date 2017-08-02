@@ -57,15 +57,15 @@ RTVS(Visual Studio용 R 도구)에서는 모든 기능과 확장 사용 기능�
 
 문자열, 주석 및 키워드 등 코드의 여러 부분을 색 지정할 뿐 아니라 RTVS는 주석에서 링크를 강조하고 사용하도록 설정합니다.
 
-![R 코드에 대한 구문 색 지정](~/docs/rtvs/media/editing-syntax-colors.png)
+![R 코드에 대한 구문 색 지정](~/rtvs/media/editing-syntax-colors.png)
 
 글꼴 및 특정 강조 색을 사용자 지정하려면 **도구 > 옵션** 명령을 선택하고, **환경 > 글꼴 및 색**으로 이동하고 나서, **항목 표시:** 상자에서 R 관련 항목에 대한 설정을 변경합니다.
 
-![R 코드에 대한 글꼴 및 색 옵션](~/docs/rtvs/media/editing-syntax-colors-options.png)
+![R 코드에 대한 글꼴 및 색 옵션](~/rtvs/media/editing-syntax-colors-options.png)
 
 Visual Studio에서는 편집기에 있는 구문 오류에 밑줄을 추가합니다.
 
-![R 코드의 구문 오류 강조 표시](~/docs/rtvs/media/editing-syntax-error.png)
+![R 코드의 구문 오류 강조 표시](~/rtvs/media/editing-syntax-error.png)
 
 이 동작을 변경하려면 [편집기 옵션](#editor-options)에서 **고급 > 구문 검사** 설정을 참조하세요.
 
@@ -73,11 +73,11 @@ Visual Studio에서는 편집기에 있는 구문 오류에 밑줄을 추가합�
 
 코드를 입력할 때 RTVS에서는 [IntelliSense](code-intellisense.md) 페이지에 설명된 대로 자동 완성을 제공합니다. 또한 중괄호 및 괄호 완성과 같은 자동 서식 지정이 수행됩니다. 
 
-![인라인 서식 지정 애니메이션](~/docs/rtvs/media/editing-inline-formatting.gif)
+![인라인 서식 지정 애니메이션](~/rtvs/media/editing-inline-formatting.gif)
 
 많은 매개 변수가 포함된 함수 호출을 입력할 경우 일반적으로 코드를 더 쉽게 읽을 수 있도록 매개 변수를 정렬해야 합니다. RTVS에서는 매개 변수에 대해 설정한 들여쓰기를 기억하고 이후 줄에 해당 들여쓰기를 자동으로 적용합니다.
 
-![자동 들여쓰기 애니메이션](~/docs/rtvs/media/editing-auto-indentation.gif)
+![자동 들여쓰기 애니메이션](~/rtvs/media/editing-auto-indentation.gif)
 
 이 동작을 변경하려면 **탭** 그룹에 대한 아래 [편집기 옵션](#editor-options)을 참조하세요.
 
@@ -85,7 +85,7 @@ Visual Studio에서는 편집기에 있는 구문 오류에 밑줄을 추가합�
 
 고유한 영역을 만들려면 원하는 코드를 `---`로 끝나는 주석으로 둘러쌉니다. 코드 왼쪽의 작은 +/- 컨트롤을 통해 영역을 펼치거나 접을 수 있습니다.
 
-![주석으로 접을 수 있는 영역 만들기](~/docs/rtvs/media/editing-collapsible-regions.gif)
+![주석으로 접을 수 있는 영역 만들기](~/rtvs/media/editing-collapsible-regions.gif)
  
 Tab 키를 누르면 Visual Studio에서는 기본적으로 공백을 삽입합니다. [옵션, 텍스트 편집기, 탭](../ide/reference/options-text-editor-all-languages.md)의 설명대로 이 동작을 다시 변경할 수 있습니다.
 
@@ -99,7 +99,7 @@ Tab 키를 누르면 Visual Studio에서는 기본적으로 공백을 삽입합�
 
 마우스 오른쪽 단추 클릭 메뉴 또는 Alt+F12를 통해 호출된 **정의 피킹**은 함수의 소스 코드가 포함된 스크롤 가능한 읽기 전용 영역을 함수 호출 아래에 삽입합니다.
 
-![정의 피킹 애니메이션](~/docs/rtvs/media/editing-peek-definition.gif)
+![정의 피킹 애니메이션](~/rtvs/media/editing-peek-definition.gif)
 
 ## <a name="sending-code-to-the-interactive-window"></a>대화형 창에 코드 보내기
 
@@ -131,7 +131,7 @@ f <- function(a) { return(a + 1) }
 
 RTVS에서는 함수의 매개 변수 이름을 사용하여 [Roxygen](http://roxygen.org/) 주석을 생성할 수 있는 바로 가기를 제공합니다. 함수 정의 위의 빈 줄에 `###`을 입력하면 됩니다.
 
-![Roxygen 주석 삽입 애니메이션](~/docs/rtvs/media/editing-roxygen-comments.gif)
+![Roxygen 주석 삽입 애니메이션](~/rtvs/media/editing-roxygen-comments.gif)
 
 ## <a name="editor-options"></a>편집기 옵션
 

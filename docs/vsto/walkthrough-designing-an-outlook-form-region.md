@@ -48,7 +48,7 @@ caps.handback.revision: 40
   
 -   [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] 또는 [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]  
   
- ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 이 항목의 동영상 버전은 [동영상 방법: Outlook 양식 영역 디자인](http://go.microsoft.com/fwlink/?LinkID=140824)\(영문\)을 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 이 항목의 동영상 버전은 [동영상 방법: Outlook 양식 영역 디자인](http://go.microsoft.com/fwlink/?LinkID=140824)\(영문\)을 참조하세요.  
   
 ## 새 Outlook VSTO 추가 기능 프로젝트 만들기  
  먼저 기본 VSTO 추가 기능 프로젝트를 만듭니다.  

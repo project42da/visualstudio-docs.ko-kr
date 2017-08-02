@@ -32,7 +32,7 @@ caps.handback.revision: 20
   
  다음 개념도 모델의 기본적인 언어 서비스를 보여 줍니다.  
   
- ![언어 서비스 모델 그래픽](~/docs/extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
+ ![언어 서비스 모델 그래픽](~/extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
 기본 언어 서비스 모델  
   
  문서 창의 호스트는  *문서 보기*  편집기를이 경우에는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 코어 편집기입니다.  편집기에서 문서 보기 및 텍스트 버퍼의 소유입니다.  이러한 개체 작업 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 라고 하는 특수 문서 창을  *코드 창*.  코드 창에 포함 되어 있는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> 작성 및 IDE에서 제어 하는 개체입니다.  

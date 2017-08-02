@@ -32,11 +32,11 @@ ms.lasthandoff: 02/22/2017
   
 1.  **파일** 메뉴에서 **새로 만들기**, **가져오기**, **XCode에서 가져오기**를 선택합니다. 그러면 **XCode에서 가져오기** 마법사 대화 상자가 시작됩니다.  
   
-     ![가져올 XCode 대상 프로젝트 선택](~/docs/cross-platform/media/cppmdd_u2_importxcode_choose.PNG "CPPMDD_U2_ImportXCode_Choose")  
+     ![가져올 XCode 대상 프로젝트 선택](~/cross-platform/media/cppmdd_u2_importxcode_choose.PNG "CPPMDD_U2_ImportXCode_Choose")  
   
 2.  **프로젝트 선택** 창에서 [찾아보기] 단추를 선택하여 XCode.pbxproj 파일을 선택합니다. **XCode 프로젝트 파일 선택** 대화 상자에서 프로젝트 파일로 이동한 다음 **열기**를 선택합니다.  
   
-     ![Xcode 프로젝트 파일 선택 대화 상자에서 프로젝트 파일 선택](~/docs/cross-platform/media/cppmdd_u2_importxcode_browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
+     ![Xcode 프로젝트 파일 선택 대화 상자에서 프로젝트 파일 선택](~/cross-platform/media/cppmdd_u2_importxcode_browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
   
      XCode에서 가져오기 마법사에서 **다음**을 선택합니다.  
   

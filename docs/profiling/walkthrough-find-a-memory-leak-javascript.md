@@ -43,7 +43,7 @@ ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="walkthrough-find-a-memory-leak-javascript"></a>연습: 메모리 누수 찾기(JavaScript)
-![Windows 및 Windows Phone에 적용됨](~/docs/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+![Windows 및 Windows Phone에 적용됨](~/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  이 연습에서는 JavaScript 메모리 분석기를 사용하여 간단한 메모리 문제를 식별하고 수정하는 과정을 안내합니다. JavaScript 메모리 분석기는 JavaScript를 사용하여 Windows용으로 작성된 Visual Studio for Windows 스토어 앱에서 사용할 수 있습니다. 이 시나리오에서는 DOM 요소를 만들어질 때와 같은 속도로 삭제하지 않고 메모리에 잘못 유지하는 앱을 만듭니다.  
   
@@ -228,7 +228,7 @@ ms.lasthandoff: 02/22/2017
   
 15. 다음과 같이 개체 트리의 맨위에 있는 HTMLDivElement 개체를 엽니다.  
   
-     ![힙의 개체 개수 차이 뷰](~/docs/profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
+     ![힙의 개체 개수 차이 뷰](~/profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
   
      이 뷰에서는 다음과 같이 메모리 누수에 대한 유용한 정보를 보여 줍니다.  
   

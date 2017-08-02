@@ -55,7 +55,7 @@ manager: "ghogen"
   
  덤프는 개발자가 액세스할 수 없는 컴퓨터에서 발생하는 문제를 디버깅하는 데 주로 사용됩니다.  예를 들어 고객이 경험한 충돌 또는 중단 문제를 사용자 컴퓨터에서 재현할 수 없는 경우 고객의 컴퓨터에 있는 덤프 파일을 사용할 수 있습니다.  또한 테스터가 충돌 또는 중단 데이터를 저장하기 위해 덤프를 만들 수도 있으며, 이 경우 테스트 컴퓨터에서 더 많은 테스트를 수행할 수 있습니다.  Visual Studio 디버거는 관리 코드 또는 네이티브 코드에 대한 덤프 파일을 저장할 수 있습니다.  디버거는 *미니덤프* 형식으로 파일을 저장하는 Visual Studio나 다른 프로그램에서 만들어진 덤프 파일을 로드할 수 있습니다.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Dump_files__with_or_without_heaps"></a> 힙을 포함하거나 포함하지 않는 덤프 파일  
  힙 정보를 포함하거나 포함하지 않고 덤프 파일을 만들 수 있습니다.  
@@ -64,7 +64,7 @@ manager: "ghogen"
   
 -   **힙을 포함하지 않는 덤프 파일**은 힙 정보를 포함하는 덤프보다 훨씬 작습니다.  그러나 디버거는 기호 정보를 찾기 위해 응용 프로그램 이진 파일을 로드해야 합니다.  이 이진 파일은 덤프가 만들어졌을 때 사용된 이진 파일과 정확히 일치해야 합니다.  스택 변수의 값만 힙 데이터를 포함하지 않는 덤프 파일에 저장됩니다.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Requirements_and_limitations"></a> 요구 사항 및 제한 사항  
   
@@ -82,7 +82,7 @@ manager: "ghogen"
   
 -   Visual Studio에서 [SOS.dll\(SOS 디버깅 확장\)](../Topic/SOS.dll%20\(SOS%20Debugging%20Extension\).md)로 디버그하려면 WDK\(Windows 드라이버 키트\)의 일부인 Windows용 디버깅 도구를 설치해야 합니다.  [Windows 8.1 Preview: 키트, 비트 및 도구 다운로드](http://msdn.microsoft.com/library/windows/hardware/bg127147.aspx)를 참조하세요.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Create_a_dump_file"></a> 덤프 파일 만들기  
  Visual Studio에서 덤프 파일을 만들려면  
@@ -93,7 +93,7 @@ manager: "ghogen"
   
  또한 Windows 미니덤프 형식을 지원하는 프로그램으로 덤프 파일을 만들 수도 있습니다.  예를 들어 [Windows Sysinternals](http://technet.microsoft.com/sysinternals/default)에 있는 **Procdump** 명령줄 유틸리티는 트리거에 따라서나 요청 시에 프로세스 크래시 덤프 파일을 만들 수 있습니다.  기타 도구를 사용하여 덤프 파일을 만드는 방법에 대한 자세한 내용은 이 항목의 [요구 사항 및 제한 사항](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations)을 참조하십시오.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Open_a_dump_file"></a> 덤프 파일 열기  
   
@@ -136,7 +136,7 @@ manager: "ghogen"
   
  Visual Studio에서는 덤프의 모듈을 디버깅하는 데 필요한 파일을 찾을 수 없는 경우 적절한 페이지\(**이진 파일 없음**, **기호 없음** 또는 **소스 없음**\)를 표시합니다.  이러한 페이지에서는 문제의 원인에 대한 자세한 정보를 제공하고 파일의 올바른 위치를 식별하는 데 도움이 되는 작업 링크를 제공합니다.  [기호 파일\(.pdb\) 및 원본 파일 지정](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)를 참조하세요.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ## 참고 항목  
  [Just\-In\-Time 디버깅](../debugger/just-in-time-debugging-in-visual-studio.md)   

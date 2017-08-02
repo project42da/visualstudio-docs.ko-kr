@@ -32,11 +32,11 @@ caps.handback.revision: 5
   
      문자열을 검색한 후 스크롤 막대가 표시되는 모양은 다음과 같습니다.  문자열의 모든 인스턴스가 표시되는지 확인합니다.  
   
-     ![문자열을 찾은 후 스크롤 막대](~/docs/ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")  
+     ![문자열을 찾은 후 스크롤 막대](~/ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")  
   
      문자열의 모든 인스턴스를 바꾼 후 스크롤 막대는 다음과 같습니다.  작업으로 인해 일부 문제가 발생했음을 즉시 확인할 수 있습니다.  
   
-     ![오류가 있는 문자열을 바꾼 후 스크롤 막대](~/docs/ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")  
+     ![오류가 있는 문자열을 바꾼 후 스크롤 막대](~/ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")  
   
 ### 스크롤 막대의 디스플레이 모드를 설정하려면  
   
@@ -46,10 +46,10 @@ caps.handback.revision: 5
   
      지도 모드가 설정되고 너비가 보통으로 설정된 경우 검색 예제가 표시되는 모양은 다음과 같습니다.  
   
-     ![맵 모드의 스크롤 막대](~/docs/ide/media/enhancedscrollbar.png "EnhancedScrollbar")  
+     ![맵 모드의 스크롤 막대](~/ide/media/enhancedscrollbar.png "EnhancedScrollbar")  
   
 2.  지도 모드에서 스크롤 막대 위\/아래로 커서를 이동할 때 코드 미리 보기를 사용하도록 설정하려면 **미리 보기 도구 설명 표시** 옵션을 선택합니다.  표시되는 모양은 다음과 같습니다.  
   
-     ![도구 설명이 있는 스크롤 막대](~/docs/ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")  
+     ![도구 설명이 있는 스크롤 막대](~/ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")  
   
      지도 모드 스크롤 동작 및 미리 보기 도구 설명을 유지하지만 소스 코드 개요를 표시하지 않으려는 경우 **소스 개요**를 **해제**로 설정할 수 있습니다.

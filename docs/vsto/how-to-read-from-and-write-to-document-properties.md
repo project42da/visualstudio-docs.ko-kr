@@ -27,7 +27,7 @@ caps.handback.revision: 53
 # 방법: 문서 속성에서 읽기 및 문서 속성에 쓰기
   문서와 함께 문서 속성을 저장할 수 있습니다. Office 응용 프로그램은 작성자, 제목 및 주제와 같은 다양한 기본 제공 속성을 제공합니다. 이 항목에서는 Microsoft Office Excel 및 Microsoft Office Word에서 문서 속성을 설정하는 방법을 보여 줍니다.  
   
- ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Microsoft Word에서 사용자 지정 문서 속성 액세스 및 조작](http://go.microsoft.com/fwlink/?LinkId=136772)을 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Microsoft Word에서 사용자 지정 문서 속성 액세스 및 조작](http://go.microsoft.com/fwlink/?LinkId=136772)을 참조하세요.  
   
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]  
   

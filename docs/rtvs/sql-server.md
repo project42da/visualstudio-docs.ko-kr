@@ -56,15 +56,15 @@ RTVS에서는 R 제품에 SQL 쿼리를 추가하는 기능을 지원하므로 �
 
 SQL 쿼리 파일을 추가하려면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 항목...**을 선택하고, **SQL 쿼리** 파일 형식을 선택합니다.
 
-![프로젝트에 SQL 쿼리 항목 추가](~/docs/rtvs/media/sql-add-item.png)
+![프로젝트에 SQL 쿼리 항목 추가](~/rtvs/media/sql-add-item.png)
 
 이 작업을 수행하면 전체 SQL용 IntelliSense 및 쿼리 실행 기능을 제공하는 Visual Studio의 Transact-SQL 편집기에서 파일이 열립니다. 이러한 기능이 작동하려면 편집기 도구 모음에서 [연결] 단추를 사용하거나 간단히 쿼리를 실행하여(Ctrl+Shift+E, 선택에서도 작동함) 데이터베이스에 연결해야 합니다. 어느 방법을 사용해도 연결 대화 상자가 표시됩니다.
 
-![SQL 연결 대화 상자](~/docs/rtvs/media/sql-connection-dialog.png)
+![SQL 연결 대화 상자](~/rtvs/media/sql-connection-dialog.png)
 
 연결이 설정되면 쿼리를 실행하고 결과를 확인할 수 있습니다.
 
-![SQL 창 쿼리 결과](~/docs/rtvs/media/sql-query-results.png)
+![SQL 창 쿼리 결과](~/rtvs/media/sql-query-results.png)
 
 Transact-SQL 편집기에서는 쿼리에 대한 실행 계획 보기, 쿼리 디버거와 같은 다양한 기타 기능을 지원합니다. Transact-SQL 편집기 내에서 사용할 수 있는 많은 기타 기능도 있습니다. 자세한 내용은 [Transact-SQL 편집기를 사용하여 스크립트 편집 및 실행](https://msdn.microsoft.com/library/hh272706.aspx)을 참조하세요.
 
@@ -86,11 +86,11 @@ RTVS는 다음 섹션의 설명대로 SQL 및 R 코드를 단일 SQL 문으로 �
 
 1. **R 도구 > 데이터 > 데이터베이스 연결 추가**를 선택하면 **연결 속성** 대화 상자가 표시되고 여기에서 데이터 소스의 이름(이 경우 SQL Server), 서버 이름, 인증 모드 및 데이터베이스 이름을 지정합니다. **연결 테스트**를 선택하여 대화 상자를 닫기 전에 입력을 확인할 수 있습니다.
  
-    ![SQL 연결 대화 상자](~/docs/rtvs/media/sql-connection-string-dialog.png)
+    ![SQL 연결 대화 상자](~/rtvs/media/sql-connection-string-dialog.png)
 
 1. 올바른 연결과 함께 **확인**을 선택하면 새 `settings.R` 파일에 `dbConnection`라는 연결 문자열이 생성됩니다. RTVS에서 이 파일이 자동으로 제공(실행)되므로 R 스크립트에서 연결을 즉시 사용할 수 있습니다.
 
-![SQL Settings.R 파일](~/docs/rtvs/media/sql-settings-dot-r.png)
+![SQL Settings.R 파일](~/rtvs/media/sql-settings-dot-r.png)
 
 ### <a name="write-and-test-a-sql-stored-procedure"></a>SQL 저장 프로시저 작성 및 테스트
 
@@ -98,7 +98,7 @@ RTVS는 다음 섹션의 설명대로 SQL 및 R 코드를 단일 SQL 문으로 �
  
 RTVS에서는 저장 프로시저용 파일 3개인 R 코드용 `.R` 파일, SQL 코드용 `.Query.sql` 파일 및 두 파일을 결합하는 `.Template.sql` 파일을 만듭니다. 뒤의 두 파일은 솔루션 탐색기에 `.R` 파일의 자식으로 표시됩니다.
 
-![SQL 저장 프로시저(R 사용)의 솔루션 탐색기 확장 보기](~/docs/rtvs/media/sql-solution-explorer-expanded.png)
+![SQL 저장 프로시저(R 사용)의 솔루션 탐색기 확장 보기](~/rtvs/media/sql-solution-explorer-expanded.png)
 
 `StoredProcedure.R`(이 예제의 경우)에서 R 코드를 작성합니다. 기본 콘텐츠는 다음과 같습니다.
 
@@ -126,7 +126,7 @@ OutputDataSet <- InputDataSet
 
 SQL 코드에 만족할 경우 `.sql` 파일을 `.R` 파일에 대해 열린 편집기로 끌어 놓으면 `StoredProcedure.R`에서 SQL 코드를 R 코드와 쉽게 통합할 수 있습니다. 아래 이미지에서는 `StoredProcedure.Query.sql`을 `sqlQuery(channel, )`의 쉼표 뒤 지점으로 끌었습니다.
 
-![SQL 파일을 R 문자열 값으로 읽기](~/docs/rtvs/media/sql-reference-sql-file-from-r.png)
+![SQL 파일을 R 문자열 값으로 읽기](~/rtvs/media/sql-reference-sql-file-from-r.png)
 
 여기에서 볼 수 있듯이 이 간단한 단계에서는 자동으로 R 코드를 생성하여 `.sql` 파일을 열고, 콘텐츠를 문자열로 읽고, 문자열을 RODBC 패키지에 전달하여 SQL Sever로 보냅니다.
 
@@ -167,7 +167,7 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 1. **R 도구 > 데이터 > 옵션과 함께 게시...** 메뉴 명령을 선택합니다.
 1. 표시된 대화 상자에서 **게시 위치:**를 **데이터베이스**로 변경하고, 대상을 지정하고, **게시**를 선택하면 RTVS가 저장 프로시저를 빌드하고 게시합니다.
 
-    ![저장 프로시저 게시 대화 상자](~/docs/rtvs/media/sql-publish-with-options.png)
+    ![저장 프로시저 게시 대화 상자](~/rtvs/media/sql-publish-with-options.png)
 
 1. 프로젝트에 모든 저장 프로시저를 게시하는 데는 **R 도구 > 데이터 > 저장 프로시저 게시** 명령을 사용할 수 있습니다. 이 명령은 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭할 때도 제공됩니다.
 

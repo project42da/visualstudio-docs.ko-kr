@@ -24,7 +24,7 @@ caps.handback.revision: 16
 ## 소스 제어 통합  
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]소스 제어 통합 옵션 두 가지를 지원합니다.  모든 버전의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 여전히 플러그 인에서 소스 제어 플러그 인 \(이전에 MSSCCI API로 라고도 함\), Visual Studio 소스 제어 사용자 인터페이스 \(UI\)를 사용 하는 동안 기본 소스 제어 기능을 제공 하는 API 기반으로 통합할 수 있습니다.  소스 제어 VSPackage, 반면, 새, 깊은 통합을 제공 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 경로 높은 수준의 세련미와 자율성의 소스 제어 모델에서 요청 하는 소스 제어 통합에 적합 합니다.  
   
- ![소스 제어 개요](~/docs/extensibility/internals/media/sourcectnrloverview.gif "SourceCtnrlOverview")  
+ ![소스 제어 개요](~/extensibility/internals/media/sourcectnrloverview.gif "SourceCtnrlOverview")  
   
 ## 소스 제어 플러그 인  
  Visual Studio 모든 버전이 소스 제어 플러그 인 API 사양 버전 1.2 통합 경로 지원합니다.  소스 제어 플러그 인 구현에서 설명 하는 대로 소스 제어 통합 및 등록에 대 한 소스 제어 플러그 인 API 함수를 구현 하는 DLL 씁니다 [소스 제어 플러그 인 만들기](../../extensibility/internals/creating-a-source-control-plug-in.md).  통합 개발 환경 \(IDE\)이 접근이 방식에서 사용 하는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 체크 인, 체크 아웃, 도구\/옵션 속성 페이지, 도구 모음 및 소스 제어 문자 모양을 같은 대화 상자에 대 한 UI입니다.  엄격 하 게 유지 하는 소스 제어 플러그 인 API는 Visual Studio 하 고, 사용자는 문제 없이 입장에 쉽게 통합 산정.  따라서 대부분의 기능 및 API에 자세히 설명 된 콜백 소스 제어 플러그 인을 구현 해야 합니다.  

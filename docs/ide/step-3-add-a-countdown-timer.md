@@ -115,7 +115,7 @@ ms.lasthandoff: 05/13/2017
   
      타이머가 카운트다운을 시작합니다. 시간이 다 되면 퀴즈가 종료되고 답이 표시됩니다. 다음 그림에서는 진행 중인 퀴즈를 보여 줍니다.  
   
-     ![진행 중인 수학 퀴즈](~/docs/ide/media/express_addcountdown.png "Express_AddCountdown")  
+     ![진행 중인 수학 퀴즈](~/ide/media/express_addcountdown.png "Express_AddCountdown")  
 진행 중인 수학 퀴즈  
   
 ### <a name="to-continue-or-review"></a>계속하거나 검토하려면  

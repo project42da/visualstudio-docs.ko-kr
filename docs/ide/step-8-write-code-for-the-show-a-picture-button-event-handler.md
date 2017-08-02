@@ -43,7 +43,7 @@ ms.lasthandoff: 05/13/2017
   
  IDE에는 코드 작성에 유용한 IntelliSense라는 강력한 도구가 있습니다. 코드 입력을 시작하면 입력한 부분 단어에 대한 완성 단어를 제시하는 상자가 IDE에서 열립니다. IntelliSense는 사용자가 다음에 할 일을 판단하며 목록에서 사용자가 마지막으로 선택한 항목으로 자동으로 이동합니다. 위쪽 또는 아래쪽 화살표를 사용하여 목록에서 이동하거나 문자를 계속 입력하여 선택 범위를 좁힐 수 있습니다. 원하는 선택 항목이 있으면 Tab 키를 선택해서 항목을 선택합니다. 원하는 항목이 없는 경우 제시되는 항목을 무시할 수도 있습니다.  
   
- ![비디오 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo")이 항목의 비디오 버전을 보려면 [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 4](http://go.microsoft.com/fwlink/?LinkId=205215)(자습서 1: Visual Basic에서 사진 뷰어 만들기 - 비디오 4) 또는 [Tutorial 1: Create a Picture Viewer in C# - Video 4](http://go.microsoft.com/fwlink/?LinkId=205203)(자습서 1: C#에서 사진 뷰어 만들기 - 비디오 4)를 참조하세요. 이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다. 그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
+ ![비디오 링크](~/data-tools/media/playvideo.gif "PlayVideo")이 항목의 비디오 버전을 보려면 [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 4](http://go.microsoft.com/fwlink/?LinkId=205215)(자습서 1: Visual Basic에서 사진 뷰어 만들기 - 비디오 4) 또는 [Tutorial 1: Create a Picture Viewer in C# - Video 4](http://go.microsoft.com/fwlink/?LinkId=205203)(자습서 1: C#에서 사진 뷰어 만들기 - 비디오 4)를 참조하세요. 이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다. 그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
   
 ### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>그림 표시 단추 이벤트 처리기를 위한 코드를 작성하려면  
   
@@ -56,7 +56,7 @@ Visual C# 코드가 사용된 IntelliSense
   
 3.  **IntelliSense** 창에 단어 **if**가 강조 표시됩니다. 강조 표시되지 않을 경우 소문자 `f`를 입력하면 강조 표시됩니다. **IntelliSense** 창 옆에 작은 *도구 설명* 상자가 설명 **if 문용 코드 조각**과 함께 나타납니다. Visual Basic의 도구 설명에도 코드 조각임이 표시되지만 표현은 약간 다릅니다. 해당 코드 조각을 사용해야 하므로 Tab 키를 선택해서 **if**를 코드에 삽입합니다. 그런 다음 **if** 코드 조각을 사용하려면 Tab 키를 다시 선택합니다. 다른 곳을 선택하여 **IntelliSense** 창이 사라진 경우 백스페이스로 **i**를 지우고 다시 입력하면 **IntelliSense** 창이 다시 열립니다.  
   
-     ![Visual C&#35; 코드](~/docs/ide/media/express_highlighttrue.png "Express_HighlightTrue")  
+     ![Visual C&#35; 코드](~/ide/media/express_highlighttrue.png "Express_HighlightTrue")  
 Visual C# 코드  
   
 4.  다음으로, IntelliSense를 사용하여 코드를 더 입력하면 **파일 열기** 대화 상자가 열립니다. 사용자가 **확인** 단추를 선택하면 PictureBox에서 사용자가 선택한 파일을 로드합니다. 다음 단계에서는 코드를 입력하는 방법을 보여 줍니다. 단계 수는 많지만 키 입력은 몇 번뿐입니다.  
@@ -72,13 +72,13 @@ Visual C# 코드
         > [!NOTE]
         >  **IntelliSense** 창에는 속성과 메서드가 모두 표시될 수 있습니다. 표시되는 항목을 확인하려면 **IntelliSense** 창의 각 항목 왼쪽에 있는 아이콘을 봅니다. 각 메서드 옆에는 벽돌 그림이, 각 속성 옆에는 렌치(또는 스패너) 그림이 표시됩니다. 또한 각 이벤트 옆에는 번개 모양 아이콘이 표시됩니다. 이러한 그림은 다음과 같습니다.  
   
-         ![메서드 아이콘](~/docs/ide/media/express_iconmethod.png "Express_IconMethod")  
+         ![메서드 아이콘](~/ide/media/express_iconmethod.png "Express_IconMethod")  
 메서드 아이콘  
   
-         ![속성 아이콘](~/docs/ide/media/express_iconproperty.png "Express_IconProperty")  
+         ![속성 아이콘](~/ide/media/express_iconproperty.png "Express_IconProperty")  
 속성 아이콘  
   
-         ![이벤트 아이콘](~/docs/ide/media/express_iconevent.png "Express_IconEvent")  
+         ![이벤트 아이콘](~/ide/media/express_iconevent.png "Express_IconEvent")  
 이벤트 아이콘  
   
     4.  `ShowDialog` 입력을 시작합니다(IntelliSense에서 대문자 표시는 중요하지 않음). `ShowDialog()` 메서드에서 **파일 열기** 대화 상자를 표시합니다. 창에서 **ShowDialog**가 강조 표시된 후 Tab 키를 선택합니다. “ShowDialog”를 강조 표시하고 F1 키를 선택하여 도움말을 표시할 수도 있습니다.  

@@ -108,11 +108,11 @@ Visual C# IntelliSense는 편집기에서 코딩할 때와 [직접 실행 모드
   
  using 추가 작업을 시작하려면 확인할 수 없는 형식 참조에 커서를 놓습니다. 예를 들어 콘솔 응용 프로그램을 만들고 `XmlTextReader`를 `Main` 메서드 본문에 추가하면 스마트 태그는 확인할 수 없는 형식 참조로 나타나므로 `XmlTextReader`의 맨 오른쪽 아래에 표시됩니다.  
   
- ![스마트 태그 이미지 사용 추가](~/docs/ide/media/addusesmart.gif "AddUseSmart")  
+ ![스마트 태그 이미지 사용 추가](~/ide/media/addusesmart.gif "AddUseSmart")  
   
  **IntelliSense** 메뉴나 상황에 맞는 메뉴의 **해결** 하위 메뉴에서 using 추가를 선택하여 호출하거나 스마트 태그를 통해 using 추가를 호출할 수 있습니다. 스마트 태그는 커서가 바인딩되지 않은 형식에 있거나 인접할 때만 표시됩니다.  
   
- ![using 추가, 스마트 태그 확장한 이미지](~/docs/ide/media/addusesmartexp.gif "AddUseSmartExp")  
+ ![using 추가, 스마트 태그 확장한 이미지](~/ide/media/addusesmartexp.gif "AddUseSmartExp")  
   
 ### <a name="organize-usings"></a>using 구성  
  **Using 구성** 옵션은 소스 코드의 동작을 변경하지 않고 `using` 및 `extern` 선언을 정렬하고 제거합니다. 시간이 지나면서 구성되지 않고 불필요한 `using` 지시문 때문에 소스 파일이 커지고 읽기 어려워집니다. **Using 구성** 옵션은 사용되지 않은 `using` 지시문을 제거하여 소스 코드를 압축하고 정렬을 통해 가독성을 높입니다.  

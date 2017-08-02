@@ -49,14 +49,14 @@ caps.handback.revision: 16
   
 2.  **디버깅**, **일반** 페이지에서 **한 프로세스가 중단될 때 모든 프로세스 중단** 확인란의 선택을 취소합니다.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Find_the_source_and_symbol___pdb__files"></a> 소스 및 기호\(.pdb\) 파일 찾기  
  프로세스의 소스 코드를 탐색하려면 디버거가 프로세스의 소스 파일과 기호 파일에 액세스할 수 있어야 합니다.  [기호 파일\(.pdb\) 및 원본 파일 지정](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)를 참조하십시오.  
   
  프로세스의 파일에 액세스할 수 없는 경우 디스어셈블리 창을 사용하여 탐색할 수 있습니다.  [방법: 디스어셈블리 창 사용](../debugger/how-to-use-the-disassembly-window.md)을 참조하십시오.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger"></a> VS 솔루션의 여러 프로세스 시작, 프로세스에 연결, 디버거에서 자동으로 프로세스 시작  
   
@@ -81,9 +81,9 @@ caps.handback.revision: 16
 ####  <a name="BKMK_Start_a_specific_project_in_a_solution"></a> 솔루션의 특정 프로젝트 시작  
  기본 시작 프로젝트를 변경하지 않고 솔루션의 프로젝트를 시작하려면 솔루션 탐색기에서 프로젝트를 선택한 다음 상황에 맞는 메뉴에서 **디버그**를 선택합니다.  그런 다음 **새 인스턴스 시작** 또는 **새 인스턴스 한 단계씩 코드 실행**을 선택할 수 있습니다.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [VS 솔루션의 여러 프로세스 시작, 프로세스에 연결, 디버거에서 자동으로 프로세스 시작](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [VS 솔루션의 여러 프로세스 시작, 프로세스에 연결, 디버거에서 자동으로 프로세스 시작](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ####  <a name="BKMK_Start_multiple_projects_in_a_solution"></a> 솔루션의 여러 프로젝트 시작  
   
@@ -93,9 +93,9 @@ caps.handback.revision: 16
   
 3.  변경하려는 각 프로젝트에 대해 **시작**, **디버깅하지 않고 시작** 또는 **없음**을 선택합니다.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [VS 솔루션의 여러 프로세스 시작, 프로세스에 연결, 디버거에서 자동으로 프로세스 시작](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [VS 솔루션의 여러 프로세스 시작, 프로세스에 연결, 디버거에서 자동으로 프로세스 시작](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ###  <a name="BKMK_Attach_to_a_process"></a> 프로세스에 연결  
  디버거는 원격 장치에서 실행되는 프로그램을 비롯하여 Visual Studio 외부의 프로세스에서 실행되는 프로그램에 *연결*될 수도 있습니다.  일단 프로그램에 연결되면 디버거 실행 명령을 사용하고 프로그램 상태를 검사하는 등의 작업을 수행할 수 있습니다.  디버그 정보를 사용하여 프로그램을 빌드했는지 여부, 프로그램의 소스 코드에 액세스할 수 있는지 여부 및 공용 언어 런타임 JIT 컴파일러가 디버그 정보를 추적하고 있는지 여부에 따라 프로그램 검사 기능이 제한될 수 있습니다.  
@@ -108,7 +108,7 @@ caps.handback.revision: 16
   
  ![프로세스에 연결 대화 상자](../debugger/media/dbg_attachtoprocessdlg.png "DBG\_AttachToProcessDlg")  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ###  <a name="BKMK_Automatically_start_an_process_in_the_debugger"></a> 디버거에서 자동으로 프로세스 시작  
  경우에 따라 다른 프로세스에서 시작된 프로그램의 시작 코드를 디버깅해야 할 수도 있습니다.  서비스 및 사용자 지정 설치 작업을 예로 들 수 있습니다.  이러한 시나리오에서는 응용 프로그램을 시작할 때 디버거를 시작하고 자동으로 연결할 수 있습니다.  
@@ -133,7 +133,7 @@ caps.handback.revision: 16
   
  ![regedit.exe의 자동 디버거 시작 항목](../debugger/media/dbg_execution_automaticstart_result.png "DBG\_Execution\_AutomaticStart\_Result")  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Switch_processes__break_and_continue_execution__step_through_source"></a> 프로세스 전환, 실행 중단 및 계속 실행, 소스 단계별 실행  
   
@@ -158,9 +158,9 @@ caps.handback.revision: 16
   
  프로젝트로 전환하면 해당 프로젝트가 디버깅 목적의 현재 프로세스로 설정됩니다.  사용자에게 표시되는 모든 디버거 창은 현재 프로세스의 상태를 보여 주며, 모든 단계별 실행 명령은 현재 프로세스에만 영향을 미칩니다.  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [프로세스 전환, 실행 중단 및 계속 실행, 소스 단계별 실행](../debugger/debug-multiple-processes.md#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [프로세스 전환, 실행 중단 및 계속 실행, 소스 단계별 실행](../debugger/debug-multiple-processes.md#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ###  <a name="BKMK_Break__step__and_continue_commands"></a> 명령 중단, 단계별 실행 및 계속 실행  
   
@@ -179,9 +179,9 @@ caps.handback.revision: 16
 |**프로세스** 창 상황에 맞는 메뉴:<br /><br /> -   **프로세스 중단**|N\/A|선택한 프로세스가 중단됩니다.<br /><br /> 다른 프로세스가 기존 상태\(일시 중단됨 또는 실행 중\)를 유지합니다.|  
 |**프로세스** 창 상황에 맞는 메뉴:<br /><br /> -   **프로세스 계속**|N\/A|선택한 프로세스가 다시 시작됩니다.<br /><br /> 다른 프로세스가 기존 상태\(일시 중단됨 또는 실행 중\)를 유지합니다.|  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [프로세스 전환, 실행 중단 및 계속 실행, 소스 단계별 실행](../debugger/debug-multiple-processes.md#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [프로세스 전환, 실행 중단 및 계속 실행, 소스 단계별 실행](../debugger/debug-multiple-processes.md#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ##  <a name="BKMK_Stop_debugging__terminate_or_detach_from_processes"></a> 디버깅 중지, 프로세스 종료 또는 프로세스에서 분리  
   
@@ -214,9 +214,9 @@ caps.handback.revision: 16
 |**프로세스** 창 상황에 맞는 메뉴:<br /><br /> -   **프로세스 종료**|선택한 프로세스가 종료됩니다.<br /><br /> 다른 프로세스가 기존 상태\(일시 중단됨 또는 실행 중\)를 유지합니다.|  
 |**프로세스** 창 상황에 맞는 메뉴:<br /><br /> -   **디버깅 중지 시 분리**|선택한 프로세스에 대한 **디버그**, **디버깅 중지**의 동작을 전환합니다.<br /><br /> -   선택됨: 디버거가 프로세스에서 분리됩니다.<br />-   선택 취소됨: 프로세스가 종료됩니다.|  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [디버깅 중지, 프로세스 종료 또는 프로세스에서 분리](../debugger/debug-multiple-processes.md#BKMK_Stop_debugging__terminate_or_detach_from_processes)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [디버깅 중지, 프로세스 종료 또는 프로세스에서 분리](../debugger/debug-multiple-processes.md#BKMK_Stop_debugging__terminate_or_detach_from_processes)  
   
- ![맨 위로 이동](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
+ ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [콘텐츠](#BKMK_Contents)  
   
 ## 참고 항목  
  [기호 파일\(.pdb\) 및 원본 파일 지정](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   

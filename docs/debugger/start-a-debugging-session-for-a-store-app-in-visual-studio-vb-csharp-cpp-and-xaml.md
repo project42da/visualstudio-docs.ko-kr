@@ -44,7 +44,7 @@ manager: "ghogen"
 # Visual Studio에서 스토어 앱의 디버깅 세션 시작(VB, C#, C++ 및 XAML)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  이 항목에서는 XAML과 Visual C\+\+, Visual C\# 또는 Visual Basic으로 작성된 스토어 앱에서 디버깅 세션을 시작하는 방법을 설명합니다. 응용 프로그램 디버깅에는 디버깅 세션 구성과 응용 프로그램 시작 방법 선택이 모두 포함됩니다.  
   
@@ -104,11 +104,11 @@ manager: "ghogen"
   
     -   Visual C\# 및 Visual Basic 응용 프로그램의 경우 **디버그**를 선택합니다.  
   
-         ![C&#35;&#47;VB 프로젝트 디버그 속성 페이지](~/docs/debugger/media/dbg_csvb_debugpropertypage.png "DBG\_CsVb\_DebugPropertyPage")  
+         ![C&#35;&#47;VB 프로젝트 디버그 속성 페이지](~/debugger/media/dbg_csvb_debugpropertypage.png "DBG\_CsVb\_DebugPropertyPage")  
   
     -   Visual C\+\+ 응용 프로그램의 경우 **구성 속성** 노드를 확장한 다음 **디버깅**을 선택합니다.  
   
-         ![C&#43;&#43; Windows 스토어 앱 디버깅 속성 페이지](~/docs/debugger/media/dbg_cpp_debugpropertypage.png "DBG\_CPP\_DebugPropertyPage")  
+         ![C&#43;&#43; Windows 스토어 앱 디버깅 속성 페이지](~/debugger/media/dbg_cpp_debugpropertypage.png "DBG\_CPP\_DebugPropertyPage")  
   
 ###  <a name="BKMK_Choose_the_build_configuration_options"></a> 빌드 구성 옵션 선택  
   
@@ -117,7 +117,7 @@ manager: "ghogen"
 2.  **플랫폼** 목록에서 빌드할 대상 플랫폼을 선택합니다. 대부분의 경우 **Any CPU**\(Visual C\+\+에서는 **All Platforms**\)를 선택하는 것이 가장 좋습니다.  
   
 ###  <a name="BKMK_Choose_the_deployment_target"></a> 배포 대상 선택  
- ![Windows에만 적용](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Visual Studio 컴퓨터, 로컬 컴퓨터의 Visual Studio 시뮬레이터 또는 원격 장치에서 Windows 스토어 앱을 배포하고 디버깅할 수 있습니다.  
   
@@ -154,7 +154,7 @@ manager: "ghogen"
     > [!NOTE]
     >  **원격 디버거 연결 선택** 대화 상자에는 로컬 서브넷에 있는 컴퓨터와 이더넷 케이블을 통해 Visual Studio 컴퓨터에 직접 연결되어 있는 컴퓨터가 표시됩니다. 다른 컴퓨터를 지정하려면 **컴퓨터 이름** 상자에 이름을 입력합니다.  
   
- ![Windows Phone에만 적용](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Windows Phone에만 적용](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  장치 또는 Visual Studio 휴대폰 에뮬레이터 중 하나에서 Windows Phone 스토어 앱을 배포하고 디버깅할 수 있습니다.**대상 장치** 목록에서 장치 또는 에뮬레이터를 선택합니다.  
   
@@ -177,7 +177,7 @@ manager: "ghogen"
 |**혼합\(관리\/네이티브\)**|응용 프로그램에서 네이티브 C\/C\+\+ 코드 및 관리 코드를 디버깅합니다. JavaScript 코드는 무시됩니다.|  
 |**GPU 전용**|GPU\(그래픽 처리 장치\)에서 실행되는 네이티브 C\+\+ 코드를 디버깅합니다.|  
   
- ![Windows Phone에만 적용](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Windows Phone에만 적용](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Windows 스토어 Phone 앱의 경우 **백그라운드 작업 프로세스**에서 백그라운드 프로세스에 사용할 디버거를 선택할 수 있습니다.  
   
@@ -191,7 +191,7 @@ manager: "ghogen"
 -   Visual C\+\+ 응용 프로그램의 경우 **디버깅** 속성 페이지의 **응용 프로그램 시작** 목록에서 **예**를 선택합니다.  
   
 ###  <a name="BKMK__Optional__Disable_network_loopbacks"></a> \(선택 사항\) 네트워크 루프백 비활성화  
- ![Windows에만 적용](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  보안상의 이유로 일반적인 방식으로 설치된 Windows 스토어 앱은 앱이 설치된 장치에 대한 네트워크 호출을 수행할 수 없습니다. 기본적으로 Visual Studio를 배포하면 배포된 응용 프로그램에 대한 이 규칙의 예외가 만들어 집니다. 이 예외로 인해 사용자는 단일 컴퓨터에서 통신 프로시저를 테스트할 수 있습니다. 응용 프로그램을 Windows 스토어에 제출하기 전에 이 예외 없이 응용 프로그램을 테스트해야 합니다.  
   
@@ -205,7 +205,7 @@ manager: "ghogen"
  Visual C\# 또는 Visual Basic 응용 프로그램의 설치 및 초기 구성에서 문제를 진단하려면 **디버그** 속성 페이지에서 **패키지 제거 후 다시 설치**를 선택하여 디버깅을 시작할 때 원래 설치를 다시 만듭니다. 이 옵션은 Visual C\+\+ 프로젝트에는 사용할 수 없습니다.  
   
 ###  <a name="BKMK__Optional__Disable_authentication_requirement_to_start_the_remote_debugger"></a> \(선택 사항\) 원격 디버거 시작을 위한 인증 요구 비활성화  
- ![Windows에만 적용](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  기본적으로 원격 디버거를 시작하려면 자격 증명을 제공해야 합니다.  
   

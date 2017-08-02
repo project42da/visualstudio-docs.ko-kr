@@ -49,7 +49,7 @@ manager: "ghogen"
   
 -   데이터 테이블을 채우는 코드를 작성합니다.  
   
- ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo") 이 항목의 비디오 버전은 [방법 안내 비디오: N 계층 데이터 응용 프로그램 만들기](http://go.microsoft.com/fwlink/?LinkId=115188)를 참조하세요.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "PlayVideo") 이 항목의 비디오 버전은 [방법 안내 비디오: N 계층 데이터 응용 프로그램 만들기](http://go.microsoft.com/fwlink/?LinkId=115188)를 참조하세요.  
   
 ## 사전 요구 사항  
  이 연습을 완료하려면 다음 사항이 필요합니다.  

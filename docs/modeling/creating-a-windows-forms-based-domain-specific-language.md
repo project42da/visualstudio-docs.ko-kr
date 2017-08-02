@@ -20,7 +20,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows Forms 기반 도메인별 언어 만들기
 Windows Forms를 사용 하 여 DSL 다이어그램을 사용 하는 대신 도메인별 언어 (DSL) 모델의 상태를 표시 합니다. 이 항목에서는 DSL에 Windows Form을 바인딩를 사용 하 여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK.  
   
- ![DSL-Wpf-2](~/docs/modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL-Wpf-2](~/modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
 Windows 폼 UI를 모델 탐색기에 표시 된 DSL 인스턴스.  
   
 ## <a name="creating-a-windows-forms-dsl"></a>Windows Forms DSL 만들기  
@@ -71,7 +71,7 @@ Windows 폼 UI를 모델 탐색기에 표시 된 DSL 인스턴스.
 ## <a name="updating-the-dsl-definition"></a>DSL 정의 업데이트합니다.  
  다음 DSL 정의이 연습에서 사용 됩니다.  
   
- ![DSL-Wpf-1](~/docs/modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
+ ![DSL-Wpf-1](~/modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
   
 #### <a name="to-update-the-dsl-definition"></a>DSL 정의 업데이트 하려면  
   
@@ -130,7 +130,7 @@ Windows 폼 UI를 모델 탐색기에 표시 된 DSL 인스턴스.
   
      모델 클래스의 관계와 속성은 데이터 소스 창에 나타납니다.  
   
-     ![DslWpf&3;](~/docs/modeling/media/dslwpf-3.png "DslWpf-3")  
+     ![DslWpf&3;](~/modeling/media/dslwpf-3.png "DslWpf-3")  
   
 #### <a name="to-connect-your-model-to-a-form"></a>폼에 모델에 연결 하려면  
   
@@ -175,7 +175,7 @@ Windows 폼 UI를 모델 탐색기에 표시 된 DSL 인스턴스.
   
 -   사용자가 행을 선택 하면 속성 창 데이터 표 행으로 하는 대신 해당 모델 요소의 속성을 표시, 되도록 조정 합니다.  
   
- ![DslWpf4](~/docs/modeling/media/dslwpf4.png "DslWpf4")  
+ ![DslWpf4](~/modeling/media/dslwpf4.png "DslWpf4")  
 데이터 원본 및 뷰 간 링크의 스키마입니다.  
   
 #### <a name="to-complete-the-bindings-to-the-dsl"></a>DSL에 대 한 바인딩을 완료 하려면  
@@ -305,7 +305,7 @@ Windows 폼 UI를 모델 탐색기에 표시 된 DSL 인스턴스.
   
      데이터 그리드 보기의 요소 이름을 편집할 수 있습니다. 여기에서 삭제할 수 있습니다.  
   
- ![DSL-Wpf-2](~/docs/modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL-Wpf-2](~/modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
   
 ### <a name="about-the-code-to-add-an-element"></a>요소를 추가 하는 코드에 대 한  
  새 요소 단추에 대 한 다음 대체 코드는 약간 더 간단 합니다.  

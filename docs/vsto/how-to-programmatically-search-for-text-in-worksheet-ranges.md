@@ -33,7 +33,7 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> 메서드를 사용할 때 검색 범위의 끝에 도달하면 검색 범위의 시작 부분으로 돌아와 검색 작업이 이어집니다.  따라서 검색 작업이 무한 루프에 빠지지 않도록 코드를 작성해야 합니다.  다음 샘플 프로시저에서는 이 문제를 처리하기 위해 <xref:Microsoft.Office.Interop.Excel.Range.Address%2A> 속성을 사용하는 한 가지 방법을 보여 줍니다.  
   
- ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Use the Find Method in an Excel Add\-in?](http://go.microsoft.com/fwlink/?LinkID=130294)을 참조하십시오.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Use the Find Method in an Excel Add\-in?](http://go.microsoft.com/fwlink/?LinkID=130294)을 참조하십시오.  
   
 ### 워크시트 범위에서 텍스트를 검색하려면  
   

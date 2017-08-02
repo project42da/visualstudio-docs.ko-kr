@@ -39,7 +39,7 @@ ms.lasthandoff: 04/10/2017
 
 Visual Studio는 각 Python 환경에 대화형 읽기-평가-인쇄 루프(REPL) 창을 제공하여 명령줄에서 `python.exe`와 관련한 REPL을 개선합니다. 대화형 창(**보기 > 다른 창 > &lt;환경&gt; 대화형** 창 메뉴 명령으로 열 수 있음)을 사용하면 임의의 Python 코드를 입력하고 즉각적인 결과를 확인할 수 있어 API와 관련된 내용을 배우고 실험하는 데 도움이 되고, 프로젝트에 포함할 작업 코드를 대화형으로 개발할 수 있습니다.
 
-![Python 대화형 창](~/docs/python/media/interactive-window.png)
+![Python 대화형 창](~/python/media/interactive-window.png)
 
 Visual Studio에는 선택 가능한 다양한 Python REPL 모드가 있습니다.
 
@@ -62,15 +62,15 @@ Python 대화형 창에 대한 소개는 [Visual Studio에서 Python 시작, 5�
 
 첫째, Python 환경 창(**보기 > 다른 창 > Python 환경** 또는 Ctrl+K, Ctrl+`)으로 전환하고 선택한 환경에서 **대화형 창 열기** 명령 또는 단추를 선택합니다.
 
-![Python 환경 창의 대화형 창 링크](~/docs/python/media/interactive-window-opening.png)
+![Python 환경 창의 대화형 창 링크](~/python/media/interactive-window-opening.png)
 
 둘째, **보기 > 다른 창**에는 각 사용자 환경에 대한 **대화형** 명령이 있으며, 일반적으로 메뉴의 아래쪽 근처에 표시됩니다.
 
-![보기 > 다른 창의 대화형 창 메뉴 항목](~/docs/python/media/interactive-window-menu.png)
+![보기 > 다른 창의 대화형 창 메뉴 항목](~/python/media/interactive-window-menu.png)
 
 셋째, **디버그 > Python 대화형 창에서 [프로젝트 | 파일] 실행** 메뉴 명령(Shift+Alt+F5)을 선택하여 프로젝트의 시작 파일 또는 독립 실행형 파일에서 대화형 창을 열 수 있습니다.
 
-![Python 대화형 창에서 프로젝트 실행 메뉴](~/docs/python/media/interactive-execute-project.png)
+![Python 대화형 창에서 프로젝트 실행 메뉴](~/python/media/interactive-execute-project.png)
 
 마지막으로, 파일의 코드를 선택하고 아래에 설명된 [대화형 명령으로 코드 보내기](#send-code-to-interactive-command) 명령을 사용할 수 있습니다.
 
@@ -88,7 +88,7 @@ Python 환경 창의 **대화형 창 구성** 또는 **도구 > 옵션 > Python 
 
 대화형 창이 열리면 `>>>` 프롬프트에서 코드를 한 줄씩 입력하기 시작할 수 있습니다. 대화형 창은 사용자가 각 줄을 입력할 때 해당 줄을 실행합니다. 여기에는 모듈을 가져오고 변수를 정의하는 등의 과정이 포함됩니다. 아래 그림에 표시된 처음 두 줄에서 이를 확인할 수 있습니다.
 
-![Python 대화형 창](~/docs/python/media/interactive-window.png)
+![Python 대화형 창](~/python/media/interactive-window.png)
 
 `for` 문처럼 문이 콜론으로 끝나는 경우는 예외입니다. 대화형 창은 추가적인 코드 줄이 있어야 코드 블록을 제대로 실행할 수 있다는 것을 알고 있기 때문입니다. 이 경우 위의 그림에서 네 번째 및 다섯 번째 줄에 표시된 것처럼 줄 프롬프트가 `...`로 바뀌는데, 블록에 추가 줄을 입력해야 한다는 의미입니다. 빈 줄에서 Enter 키를 누르면 대화형 창이 블록을 닫고 인터프리터에서 실행합니다.
 
@@ -116,20 +116,20 @@ MEF(.NET용 Managed Extensibility Framework)를 통해 명령을 확장할 수�
 
 기본적으로 프로젝트의 대화형 창은 명령 프롬프트에서 실행한 것처럼 프로젝트의 시작 파일로 범위가 지정됩니다. 독립 실행형 파일의 경우 해당 파일로 범위가 지정됩니다. 그러나 REPL 세션 중에 언제든지 대화형 창 맨 위에 있는 드롭다운 메뉴를 사용하여 범위를 변경할 수 있습니다.
 
-![대화형 창 범위](~/docs/python/media/interactive-scopes.png)
+![대화형 창 범위](~/python/media/interactive-scopes.png)
 
 `import os`를 입력하는 등의 방법으로 모듈을 가져오면 드롭다운에 해당 모듈의 모든 범위로 전환하는 옵션이 표시됩니다. 또한 대화형 창에 새 범위를 나타내는 메시지도 표시되므로 세션 중에 특정 상대에 도달하는 방법을 추적할 수 있습니다.
 
 범위에 `dir()`을 입력하면 함수 이름, 클래스 및 변수 등 해당 범위에서 유효한 식별자가 표시됩니다. 예를 들어 `$mod importlib` 뒤에 `dir()`을 사용하면 다음이 표시됩니다.
 
-![importlib 범위의 대화형 창](~/docs/python/media/interactive-importlib-scope.png)
+![importlib 범위의 대화형 창](~/python/media/interactive-importlib-scope.png)
 
 <a name="sending-code-to-interactive"</a>
 ## <a name="send-code-to-interactive-command"></a>대화형 명령으로 코드 보내기
 
 대화형 창 내에서 직접 작업할 수 있을 뿐만 아니라 편집기에서 코드를 선택하고 마우스 오른쪽 단추를 클릭하고 **Interactive로 보내기**를 선택할 수 있습니다.
 
-![Interactive로 보내기 메뉴 명령](~/docs/python/media/interactive-send-to.png)
+![Interactive로 보내기 메뉴 명령](~/python/media/interactive-send-to.png)
 
 코드 개발 중 테스트를 포함하여 반복적이거나 발전적인 코드 개발에 유용합니다. 예를 들어 대화형 창에 코드 조각을 보내고 출력을 확인한 후 위쪽 화살표를 눌러 코드를 다시 표시하고 수정하고 Ctrl+Enter를 눌러 빠르게 테스트할 수 있습니다. (입력의 끝에서 Enter 키를 누르면 코드가 실행되지만 입력 중에 Enter 키를 누르면 줄 바꿈이 삽입됩니다.) 원하는 코드를 만들었으면 프로젝트 파일에 다시 쉽게 복사할 수 있습니다.
 

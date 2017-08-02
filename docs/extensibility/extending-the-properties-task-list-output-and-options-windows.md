@@ -48,7 +48,7 @@ Visual Studio에서 모든 도구 창의 액세스할 수 있습니다. 이 연�
   
 3.  끌기는 **TextBox**,  **단추**, 및 **ListBox** 캔버스에 있습니다. 동일한 수준에는 텍스트 상자와 단추 및 목록 상자 채우기 아래 그림에서와 같이, 아래 창이의 나머지 있도록 요소를 정렬 합니다.  
   
-     ![완료된 도구 창](~/docs/extensibility/media/t5-toolwindow.png "T5\-ToolWindow")  
+     ![완료된 도구 창](~/extensibility/media/t5-toolwindow.png "T5\-ToolWindow")  
   
 4.  XAML 창에서 단추 찾아서 콘텐츠 속성을 설정 **추가**합니다. 단추 컨트롤에 단추 이벤트 처리기를 추가 하 여 다시 연결을 `Click="button1_Click"` 특성입니다. 캔버스 블록은 다음과 같아야 합니다.  
   
@@ -136,7 +136,7 @@ Visual Studio에서 모든 도구 창의 액세스할 수 있습니다. 이 연�
   
      사용자가 옵션 페이지를 열면 다음 그림과 비슷해야 합니다.  
   
-     ![옵션 페이지](~/docs/extensibility/media/t5optionspage.gif "T5OptionsPage")  
+     ![옵션 페이지](~/extensibility/media/t5optionspage.gif "T5OptionsPage")  
   
      범주를 확인 **ToDo** 및 하위 범주 **일반**합니다.  
   
@@ -149,7 +149,7 @@ Visual Studio에서 모든 도구 창의 액세스할 수 있습니다. 이 연�
   
      데이터에 사용할 수 있도록 하는 **속성** 두 가지 특별 한 특성이 있는 공용 속성으로 데이터를 바꿀 창 `Description` 및 `Category`합니다.`Description` 맨 아래에 표시 되는 텍스트는 **속성** 창입니다.`Category` 여기서 속성이 표시 되는 시기를 결정는 **속성** 창에 표시 되는 **항목별** 보기. 다음 그림에는 **속성** 창에 내용이 **항목별** 보기는 **이름** 속성에는 **ToDo 필드** 범주를 선택 하 고, 및에 대 한 설명을 **이름** 속성 창의 맨 아래에 표시 됩니다.  
   
-     ![속성 창](~/docs/extensibility/media/t5properties.png "T5Properties")  
+     ![속성 창](~/extensibility/media/t5properties.png "T5Properties")  
   
 2.  다음 코드를 추가 문을 TodoItem.cs 파일을 사용 합니다.  
   

@@ -70,7 +70,7 @@ RTVS를 사용하려면 원격 서버와의 모든 통신이 HTTP를 통해 수�
 
 이 이유로 RTVS는 자체 서명된 인증서로 서버에 연결할 때 항상 다음 경고를 표시합니다.
 
-![자체 서명된 인증서 경고 대화 상자](~/docs/rtvs/media/workspaces-remote-self-signed-certificate-warning.png)
+![자체 서명된 인증서 경고 대화 상자](~/rtvs/media/workspaces-remote-self-signed-certificate-warning.png)
 
 자체 서명된 인증서를 발급하려면:
 
@@ -93,7 +93,7 @@ RTVS를 사용하려면 원격 서버와의 모든 통신이 HTTP를 통해 수�
 
 원격 컴퓨터에서 인증서를 설치하려면 명령 프롬프트에서 `certlm.msc`(인증서 관리자)를 실행합니다. **개인** 폴더를 마우스 오른쪽 단추로 클릭하고 **모든 작업 > 가져오기** 명령을 선택합니다.
 
-![인증서 가져오기 명령](~/docs/rtvs/media/workspaces-remote-certificate-import.png)
+![인증서 가져오기 명령](~/rtvs/media/workspaces-remote-certificate-import.png)
 
 
 ### <a name="granting-permissions-to-read-the-ssl-certificates-private-key"></a>SSL 인증서의 개인 키를 읽을 권한 부여
@@ -105,7 +105,7 @@ RTVS를 사용하려면 원격 서버와의 모든 통신이 HTTP를 통해 수�
 1. 인증서를 마우스 오른쪽 단추로 클릭하고 [모든 작업]에서 [개인 키 관리] 명령을 선택합니다.
 1. 대화 상자가 나타나면 **추가**를 선택하고 계정 이름으로 `NETWORK SERVICE`를 입력합니다.
 
-    ![개인 키 관리 대화 상자에서 NETWORK_SERVICE 추가](~/docs/rtvs/media/workspaces-remote-manage-private-key-dialog.png)
+    ![개인 키 관리 대화 상자에서 NETWORK_SERVICE 추가](~/rtvs/media/workspaces-remote-manage-private-key-dialog.png)
 
 1. **확인**을 두 번 선택하여 대화 상자를 닫고 변경 내용을 커밋합니다.
 

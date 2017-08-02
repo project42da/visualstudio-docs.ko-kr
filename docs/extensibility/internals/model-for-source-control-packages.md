@@ -21,7 +21,7 @@ caps.handback.revision: 13
 
 다음 모델의 원본 컨트롤 구현 예를 나타냅니다.  모델에서 구현 해야 하는 인터페이스와 호출 해야 하는 환경 서비스를 참조 하십시오.  모든 서비스와 마찬가지로 실제로 서비스를 통해 얻은 특정 인터페이스의 메서드를 호출 합니다.  소스 제어를 수행 하는 방법를 참조 하십시오 쉽게 하는 클래스의 이름은 식별 합니다.  
   
- ![SCC&#95;TUP 예제](~/docs/extensibility/internals/media/scc_tup.gif "SCC\_TUP")  
+ ![SCC&#95;TUP 예제](~/extensibility/internals/media/scc_tup.gif "SCC\_TUP")  
 원본 컨트롤 프로젝트 예제  
   
 ## 인터페이스  

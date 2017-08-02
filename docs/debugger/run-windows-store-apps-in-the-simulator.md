@@ -42,9 +42,9 @@ Windows 스토어 앱에 대한 Visual Studio 시뮬레이터는 Windows 스토�
 ##  <a name="BKMK_Choose_an_interaction_mode"></a> 상호 작용 모드 선택  
  다음 조작 모드를 선택할 수 있습니다.  
   
--   ![마우스 모드 단추](~/docs/debugger/media/simulator_mousemodebtn.png "SIMULATOR\_MouseModeBtn") 마우스 모드: 조작 모드를 마우스 제스처로 설정합니다. 마우스 제스처에는 클릭, 두 번 클릭 및 끌기가 포함됩니다.  
+-   ![마우스 모드 단추](~/debugger/media/simulator_mousemodebtn.png "SIMULATOR\_MouseModeBtn") 마우스 모드: 조작 모드를 마우스 제스처로 설정합니다. 마우스 제스처에는 클릭, 두 번 클릭 및 끌기가 포함됩니다.  
   
--   ![터치 에뮬레이션 시작 단추](~/docs/debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR\_StartTouchEmulationBtn") 터치 에뮬레이션 시작: 조작 모드를 한 손가락 터치 제스처로 설정합니다. 한 손가락 이벤트에는 누르기, 끌기 및 넘기기가 포함됩니다.  
+-   ![터치 에뮬레이션 시작 단추](~/debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR\_StartTouchEmulationBtn") 터치 에뮬레이션 시작: 조작 모드를 한 손가락 터치 제스처로 설정합니다. 한 손가락 이벤트에는 누르기, 끌기 및 넘기기가 포함됩니다.  
   
      ![Simulator one finger target](../debugger/media/simulator_onefinger.png "SIMULATOR\_OneFinger") 단일 대상 아이콘은 시뮬레이터에 있는 이벤트의 위치를 나타냅니다. 마우스를 사용하여 포인터를 배치할 수 있습니다.  
   
@@ -108,7 +108,7 @@ Windows 스토어 앱에 대한 Visual Studio 시뮬레이터는 Windows 스토�
   
 -   스크린샷이 있는 위치를 설정하려면 **스크린샷 설정** 단추를 선택하고 바로 가기 메뉴에서 위치를 선택합니다.  
   
-     ![스크린샷 설정 상황에 맞는 메뉴](~/docs/debugger/media/simulator_screenshotsettingscntxmnu.png "SIMULATOR\_ScreenShotSettingsCntxMnu")  
+     ![스크린샷 설정 상황에 맞는 메뉴](~/debugger/media/simulator_screenshotsettingscntxmnu.png "SIMULATOR\_ScreenShotSettingsCntxMnu")  
   
 ##  <a name="BKMK_Simulate_network_connection_properties"></a> 네트워크 연결 속성 시뮬레이트  
  앱 사용자가 네트워크 연결 비용이나 데이터 계획 상태 변경을 지속적으로 인지하고, 지정된 데이터 전송 제한의 로밍 또는 초과로 인한 추가 비용이 발생하지 않도록 앱에서 이 정보를 사용하여 요금제 네트워크 연결 비용을 관리할 수 있습니다.[Windows.Networking.Connectivity](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.aspx) API를 통해 서명된 [NetworkStatusChanged](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) 및 [TriggerType](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx) 이벤트에 응답할 수 있습니다.[빠른 시작: 데이터 통신 연결 네트워크 비용 제약 조건의 관리](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)을 참조하세요.  

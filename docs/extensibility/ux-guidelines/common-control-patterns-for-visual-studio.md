@@ -104,7 +104,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="layout"></a>레이아웃  
 콤보 상자 및 드롭다운에 표시 된 창의 너비를 적합 하지 나 임의로 경로 같은 긴 필드의 길이 일치 하는 내용에 맞게 크기가 조정 해야 합니다.  
   
-![: 잘못 된 드롭 다운 너비에 비해 너무 길면 표시 되는 콘텐츠.](~/docs/extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707-03_IncorrectDropDownLayout")<br />: 잘못 된 드롭 다운 너비에 비해 너무 길면 표시 되는 콘텐츠.
+![: 잘못 된 드롭 다운 너비에 비해 너무 길면 표시 되는 콘텐츠.](~/extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707-03_IncorrectDropDownLayout")<br />: 잘못 된 드롭 다운 너비에 비해 너무 길면 표시 되는 콘텐츠.
   
 ![올바른: 드롭 다운 번역 성장을 허용 하기 있지만 긴 하지 불필요 하 게 조정 됩니다.](../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707-04_CorrectDropDownLayout")<br />올바른: 드롭 다운 번역 성장을 허용 하기 있지만 긴 하지 불필요 하 게 조정 됩니다. 
   
@@ -160,11 +160,11 @@ ms.lasthandoff: 05/04/2017
 
 정적 텍스트 경우에는 포함 하지 않고 대화 상자에서 자체에 충돌 하지 않는 그룹화 될 수 있습니다. 상자에 추가 줄은 반드시 필요한 경우를 결정 합니다. 예는 아래와 같이 표시 되는 그룹 선으로 만든 섹션 아래의 디렉터리 경로.  
 
-![텍스트 컨트롤에 정적 텍스트 정보](~/docs/extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />텍스트 컨트롤에 정적 텍스트 정보
+![텍스트 컨트롤에 정적 텍스트 정보](~/extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />텍스트 컨트롤에 정적 텍스트 정보
 
 여기서 다른 그룹화 된 영역에 존재 하 고 정보에 포함 되는 가독성을 위해 도움이 될 대화 상자에서 섹션 수 숨기 거 나 표시 시기 및 (에서 같이 **속성 창** 설명 창) 또는 유사한 UI와 일치를 정적 텍스트 상자 안에 배치 합니다. 이 그룹 상자 단일 규칙은 이어야 하며 색으로 지정 된는 `ButtonShadow`:
 
-![속성 창에서 정적 텍스트](~/docs/extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />속성 창에서 정적 텍스트
+![속성 창에서 정적 텍스트](~/extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />속성 창에서 정적 텍스트
 
 ### <a name="read-only-text-box"></a>읽기 전용 텍스트 상자
 
@@ -172,7 +172,7 @@ ms.lasthandoff: 05/04/2017
 
 텍스트 상자가 활성화 될 수 사용자 선택을 확인/취소 확인란 또는 라디오 단추를 선택/선택 취소 하 같은 연결된 된 컨트롤을 변경 하는 경우 (편집). 예를 들어,는 **도구 &gt; 옵션** 아래 표시 된 페이지는 **홈 페이지** 때 텍스트 상자가 활성화 되는 **기본값 사용** 확인란이 선택 되어 있습니다.
 
-![읽기 전용 텍스트 상자에는 비활성 및 활성 상태](~/docs/extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />읽기 전용 텍스트 상자에는 비활성 및 활성 상태
+![읽기 전용 텍스트 상자에는 비활성 및 활성 상태](~/extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />읽기 전용 텍스트 상자에는 비활성 및 활성 상태
 
 ### <a name="using-text-in-dialogs"></a>대화 상자에서 텍스트를 사용 하 여
 
@@ -219,7 +219,7 @@ ms.lasthandoff: 05/04/2017
 
 -   워터 마크를 가운데 맞춤 또는 왼쪽 맞춤 수 있습니다. 맞춤을 내릴 때 표준 디자인 규칙을 적용 합니다. 배경에 워터 마크를 선택할 수 없습니다.
 
-![워터 마크 텍스트 예](~/docs/extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />워터 마크 텍스트 예
+![워터 마크 텍스트 예](~/extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />워터 마크 텍스트 예
 
 ### <a name="context-specific-dynamic-text"></a>상황에 맞는 (동적) 텍스트
 
@@ -319,12 +319,12 @@ Visual Studio에서 대부분의 단추 유틸리티 대화 상자에 나타나�
 | 함수 | 단추 |  
 | --- | --- |  
 | 추가 | ![그래픽 "추가" 단추](../../extensibility/ux-guidelines/media/070703-08_buttonadd.png "070703 08_ButtonAdd") |
-| 제거 | ![그래픽 "제거" 단추](~/docs/extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
+| 제거 | ![그래픽 "제거" 단추](~/extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
 | 모두 추가 | ![그래픽 "모두 추가" 단추](../../extensibility/ux-guidelines/media/070703-10_buttonaddall.png "070703 10_ButtonAddAll") |
 | 모두 제거 | ![그래픽 "모두 제거" 단추](../../extensibility/ux-guidelines/media/070703-11_buttonremoveall.png "070703 11_ButtonRemoveAll") |
 | 위로 이동 | ![그래픽 "위로 이동" 단추](../../extensibility/ux-guidelines/media/070703-12_buttonmoveup.png "070703 12_ButtonMoveUp") |
-| 아래로 이동 | ![그래픽 "아래로 이동" 단추](~/docs/extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
-| 삭제 | ![그래픽 "삭제" 단추](~/docs/extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
+| 아래로 이동 | ![그래픽 "아래로 이동" 단추](~/extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
+| 삭제 | ![그래픽 "삭제" 단추](~/extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
   
 ##### <a name="sizing-and-spacing"></a>크기 조정 및 간격  
 짧은 버전의 경우와 동일 하 게 그래픽 단추는 크기 조정 된 **[찾아보기...]**  단추 (26 x 23 픽셀):  
@@ -371,7 +371,7 @@ Visual Studio에서 대부분의 단추 유틸리티 대화 상자에 나타나�
 #### <a name="scroll-bars"></a>스크롤 막대  
 스크롤 막대를 콘텐츠 트리 뷰 컨트롤 내에 맞으면에 항상 숨깁니다. 사용할 수 있기 스크롤 막대의 스크롤 가능한 창에서 숨김 또는 반투명 하 게 될 및 트리 뷰를 포함 하 여 창에 포커스가 있을 때 나타나거나 트리의 hover에 따라 자체를 표시 합니다.  
   
-![트리 뷰 컨트롤의 한계를 초과 하 게 내용이 되므로 두 세로 및 가로 스크롤 막대가 표시 됩니다.](~/docs/extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705-4_Scrollbars")<br />트리 뷰 컨트롤의 한계를 초과 하 게 내용이 되므로 두 세로 및 가로 스크롤 막대가 표시 됩니다.
+![트리 뷰 컨트롤의 한계를 초과 하 게 내용이 되므로 두 세로 및 가로 스크롤 막대가 표시 됩니다.](~/extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705-4_Scrollbars")<br />트리 뷰 컨트롤의 한계를 초과 하 게 내용이 되므로 두 세로 및 가로 스크롤 막대가 표시 됩니다.
   
 ###  <a name="BKMK_TreeViewInteractions"></a>트리 뷰 상호 작용  
   

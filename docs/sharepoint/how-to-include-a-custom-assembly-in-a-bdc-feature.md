@@ -37,7 +37,7 @@ caps.handback.revision: 16
   
 2.  **보기** 메뉴에서 **속성 창**을 클릭합니다.  
   
-3.  **속성** 창에서 **어셈블리** 속성을 선택하고 줄임표 단추\(![ASP.NET 모바일 디자이너 줄임표](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\)를 선택합니다.  
+3.  **속성** 창에서 **어셈블리** 속성을 선택하고 줄임표 단추\(![ASP.NET 모바일 디자이너 줄임표](~/sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")\)를 선택합니다.  
   
      **참조된 어셈블리를 LobSystem에 할당** 대화 상자가 나타납니다.  
   

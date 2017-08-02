@@ -257,7 +257,7 @@ ms.lasthandoff: 05/13/2017
   
      다음 그림에서는 탐색 창 단추가 포함된 응용 프로그램을 보여 줍니다.  
   
-     ![ExpenseIt 샘플 스크린샷](~/docs/designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
+     ![ExpenseIt 샘플 스크린샷](~/designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
   
 6.  디자인 모드로 돌아가려면 응용 프로그램을 닫습니다.  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 05/13/2017
   
 3.  응용 프로그램을 빌드 및 실행합니다. 다음 그림은 이 절차에서 XAML로 생성된 컨트롤의 런타임 모양을 보여 줍니다.  
   
-     ![ExpenseIt 샘플 스크린샷](~/docs/designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+     ![ExpenseIt 샘플 스크린샷](~/designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
 4.  디자인 모드로 돌아가려면 응용 프로그램을 닫습니다.  
   

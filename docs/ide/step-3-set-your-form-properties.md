@@ -20,7 +20,7 @@ caps.handback.revision: 18
 
 이제 **속성** 창을 사용하여 폼의 모양을 변경합니다.  
   
- ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo") 이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 \- 비디오 1](http://go.microsoft.com/fwlink/?LinkId=205209) 또는 [자습서 1: C\#에서 사진 뷰어 만들기 \- 비디오 1](http://go.microsoft.com/fwlink/?LinkId=205199)을 참조하십시오.  이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다.  그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "PlayVideo") 이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 \- 비디오 1](http://go.microsoft.com/fwlink/?LinkId=205209) 또는 [자습서 1: C\#에서 사진 뷰어 만들기 \- 비디오 1](http://go.microsoft.com/fwlink/?LinkId=205199)을 참조하십시오.  이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다.  그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
   
 ### 폼 속성을 설정하려면  
   
@@ -41,7 +41,7 @@ caps.handback.revision: 18
   
 4.  Windows Forms 디자이너로 돌아갑니다.  폼의 오른쪽 아래에 있는 흰색의 작은 사각형인 끌기 핸들을 선택합니다. 끌기 핸들은 다음과 같이 생겼습니다.  
   
-     ![끌기 핸들](~/docs/ide/media/express_bottomrt_drag.png "Express\_BottomRT\_Drag")  
+     ![끌기 핸들](~/ide/media/express_bottomrt_drag.png "Express\_BottomRT\_Drag")  
 끌기 핸들  
   
      핸들을 끌어 폼의 너비와 높이를 늘립니다.  

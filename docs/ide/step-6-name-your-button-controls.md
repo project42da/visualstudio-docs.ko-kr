@@ -43,7 +43,7 @@ ms.lasthandoff: 05/19/2017
   
  그러나 단추의 경우 IDE에 의해 **button1**, **button2**, **button3**및 **button4**로 이름이 지정된 네 개가 폼에 있는데, 현재 이름만으로 어떤 단추가 **닫기** 단추이고 어떤 단추가 **그림 표시** 단추인지 알 수 없습니다. 따라서 보다 자세한 정보를 주는 단추 컨트롤의 이름을 지정하는 것이 좋습니다.  
   
- ![비디오 링크](~/docs/data-tools/media/playvideo.gif "PlayVideo")이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 - 비디오 3](http://go.microsoft.com/fwlink/?LinkId=205213) 또는 [자습서 1: C#에서 사진 뷰어 만들기 - 비디오 3](http://go.microsoft.com/fwlink/?LinkId=205202)을 참조하세요. 이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다. 그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
+ ![비디오 링크](~/data-tools/media/playvideo.gif "PlayVideo")이 항목의 비디오 버전을 보려면 [자습서 1: Visual Basic에서 사진 뷰어 만들기 - 비디오 3](http://go.microsoft.com/fwlink/?LinkId=205213) 또는 [자습서 1: C#에서 사진 뷰어 만들기 - 비디오 3](http://go.microsoft.com/fwlink/?LinkId=205202)을 참조하세요. 이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다. 그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다.  
   
 ### <a name="to-name-your-button-controls"></a>단추 컨트롤의 이름을 지정하려면  
   
@@ -59,7 +59,7 @@ closeButton 이름이 있는 속성 창
   
 3.  폼에서 **그림 표시** 단추를 두 번 클릭합니다. 대신 폼에서 **그림 표시** 단추를 선택한 다음 Enter 키를 선택해도 됩니다. 이렇게 하면 IDE에서 주 창에 **Form1.cs** (Visual Basic을 사용하는 경우**Form1.vb** )라는 탭이 추가로 열립니다. 이 탭에서는 다음 그림에 표시된 것처럼 폼 이면의 코드 파일을 보여 줍니다.  
   
-     ![Visual C&#35; 코드가 사용된 Form1.cs 탭](~/docs/ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
+     ![Visual C&#35; 코드가 사용된 Form1.cs 탭](~/ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
 Visual C# 코드가 사용된 Form1.cs 탭  
   
 4.  다음 코드 부분을 중점적으로 살펴봅니다. (Visual Basic을 사용하는 경우 아래의 **VB** 탭을 선택하여 코드의 Visual Basic 버전을 봅니다.)  

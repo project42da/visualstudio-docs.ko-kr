@@ -49,13 +49,13 @@ Visual Studio 2017 및 VSIX v3부터 (버전 3), 확장 폴더 외부 확장 자
 
 이 디렉터리에 설치를 지원 하려면 VSIX "인스턴스별 컴퓨터별" 설치 되어야 합니다. Extension.vsixmanifest 디자이너에서 "모든 사용자" 확인란을 선택 하 여이 사용할 수 있습니다.
 
-![모든 사용자를 확인 합니다.](~/docs/extensibility/media/check-all-users.png)
+![모든 사용자를 확인 합니다.](~/extensibility/media/check-all-users.png)
 
 ## <a name="how-to-set-the-installroot"></a>InstallRoot를 설정 하는 방법
 
 설치 디렉터리를 설정 하려면 사용할 수는 **속성** Visual Studio의 창. 예를 들어, 설정할 수는 `InstallRoot` 위의 위치 중 하나에 대 한 프로젝트의 속성:
 
-![설치 루트 속성](~/docs/extensibility/media/install-root-properties.png)
+![설치 루트 속성](~/extensibility/media/install-root-properties.png)
 
 일부 메타 데이터에 해당 요소에 추가 됩니다 `ProjectReference` VSIX 프로젝트의.csproj 파일 안에 속성:
 
@@ -73,7 +73,7 @@ Visual Studio 2017 및 VSIX v3부터 (버전 3), 확장 폴더 외부 확장 자
 
 아래에 있는 하위 경로를 설치 하려는 `InstallRoot`를 설정 하 여 수행할 수는 `VsixSubPath` 속성 처럼는 `InstallRoot` 속성입니다. 예를 들어, 우리의 프로젝트 참조를 설치 하는 출력 원하는 ' [installdir]\MSBuild\MyCompany\MySDK\1.0'. 속성 디자이너와이 작업을 쉽게 수행할 수 있습니다.
 
-![집합의 하위 경로](~/docs/extensibility/media/set-subpath.png)
+![집합의 하위 경로](~/extensibility/media/set-subpath.png)
 
 해당.csproj 변경 내용을 다음과 같이 표시 됩니다.
 

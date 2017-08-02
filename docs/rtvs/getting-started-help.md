@@ -41,7 +41,7 @@ ms.lasthandoff: 05/12/2017
 
 R에 대한 도움말은 Visual Studio의 대화형 창에 직접 통합됩니다. `?mtcars` 등의 `?` 명령을 사용할 때마다 R 설명서의 도움말이 Visual Studio 창에 나타납니다.
 
-![Visual Studio의 도움말 창](~/docs/rtvs/media/help-window.png)
+![Visual Studio의 도움말 창](~/rtvs/media/help-window.png)
 
 > [!Tip]
 > Visual Studio의 모든 다른 항목처럼 [도움말] 창을 원하는 대로 정렬 및 고정할 수 있습니다. [Visual Studio에서 창 레이아웃 사용자 지정](../ide/customizing-window-layouts-in-visual-studio.md)을 참조하세요.
@@ -54,11 +54,11 @@ R에 대한 도움말은 Visual Studio의 대화형 창에 직접 통합됩니�
 ??"Motor Trend"
 ```
 
-![도움말 검색 결과](~/docs/rtvs/media/help-search1.png)
+![도움말 검색 결과](~/rtvs/media/help-search1.png)
 
 [도움말] 창에는 R 설명서에서 직접 추가 검색을 수행하는 데 사용되는 검색 입력 필드도 있습니다.
 
-![입력 필드를 사용한 도움말 검색 결과](~/docs/rtvs/media/help-search2.png)
+![입력 필드를 사용한 도움말 검색 결과](~/rtvs/media/help-search2.png)
 
 ## <a name="integrated-help-lookup"></a>통합 도움말 조회
 
@@ -67,7 +67,7 @@ R에 대한 도움말은 Visual Studio의 대화형 창에 직접 통합됩니�
 - 자동 완성 작업 중에 F1 키를 누르면 부분 문자열과 일치하는 도움말 결과 목록이 생성됩니다.
 - 검색어(예: 함수)를 마우스 오른쪽 단추로 클릭하고 **도움말** 명령을 선택하거나, F1 키를 눌러 해당 함수에 대한 도움말을 엽니다. 선택에 대한 **도움말**을 호출할 수도 있습니다.
 
-    ![마우스 오른쪽 단추 클릭 상황에 맞는 메뉴를 통해 도움말 호출](~/docs/rtvs/media/help-right-click.png)
+    ![마우스 오른쪽 단추 클릭 상황에 맞는 메뉴를 통해 도움말 호출](~/rtvs/media/help-right-click.png)
 
 > [!Tip]
 > 통합 도움말을 브라우저에서 열려면 **R 도구 > 옵션**을 선택하고 **F1 웹 브라우저**를 `External`로 설정합니다. [옵션](options.md)을 참조하세요.
@@ -76,8 +76,8 @@ R에 대한 도움말은 Visual Studio의 대화형 창에 직접 통합됩니�
 
 R 설명서를 검색할 뿐 아니라 개발자는 코드를 작성하는 동안 종종 StackOverflow를 검색합니다. RTVS에서는 이 프로세스도 간소화합니다. 용어 또는 선택을 마우스 오른쪽 단추로 클릭하고 **웹에서 검색** 명령을 선택하거나 Ctrl+F1을 누르면 Visual Studio 창(또는 **F1 웹 브라우저** 옵션을 변경한 경우 브라우저)이 열리고 기본적으로 범위가 StackOverflow로 지정된 해당 용어의 검색 결과가 표시됩니다.
 
-![Visual Studio의 웹 검색 결과](~/docs/rtvs/media/help-web-search-results.png)
+![Visual Studio의 웹 검색 결과](~/rtvs/media/help-web-search-results.png)
 
 **R 도구 > 옵션 > F1 웹 검색 문자열** 옵션을 통해 추가된 문자열 `R site:stackoverflow`를 변경할 수 있습니다.
 
-![F1 웹 검색 문자열 옵션 변경](~/docs/rtvs/media/options-dialog.png)
+![F1 웹 검색 문자열 옵션 변경](~/rtvs/media/options-dialog.png)

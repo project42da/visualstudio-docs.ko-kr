@@ -50,7 +50,7 @@ ms.lasthandoff: 07/21/2017
 ### <a name="update-stale-licenses"></a>부실 라이선스 업데이트  
  Visual Studio에서 라이선스가 부실해졌다는 메시지 "라이선스가 부실해졌으므로 업데이트해야 합니다."가 표시될 수 있습니다.
   
- ![Visual Studio 부실 라이선스 메시지](~/docs/ide/media/vs2017_stale-license.png)  
+ ![Visual Studio 부실 라이선스 메시지](~/ide/media/vs2017_stale-license.png)  
   
  이 메시지는 구독이 여전히 유효할 수 있지만 Visual Studio에서 구독을 최신으로 유지하는 데 사용하는 라이선스 토큰이 새로 고쳐지지 않았으므로 다음 이유 중 하나로 인해 부실해졌음을 나타냅니다.  
   

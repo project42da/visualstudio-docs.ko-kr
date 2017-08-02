@@ -48,7 +48,7 @@ manager: "ghogen"
   
 #### 그래픽 정보를 캡처하려면  
   
--   그래픽 진단 도구 모음에서 **캡처** 단추를 선택합니다.![그래픽 캡처 단추 아이콘](~/docs/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
+-   그래픽 진단 도구 모음에서 **캡처** 단추를 선택합니다.![그래픽 캡처 단추 아이콘](~/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
   
      또는  
   

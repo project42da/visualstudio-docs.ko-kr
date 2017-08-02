@@ -38,7 +38,7 @@ caps.handback.revision: 46
   
 -   [호스트 항목 클래스에 있지 않은 코드 노출](#NonHostItem)  
   
- ![비디오에 링크](~/docs/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Call VSTO Code from VBA?](http://go.microsoft.com/fwlink/?LinkId=136757)를 참조하십시오.  
+ ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Call VSTO Code from VBA?](http://go.microsoft.com/fwlink/?LinkId=136757)를 참조하십시오.  
   
 ##  <a name="HostItemCode"></a> 호스트 항목 클래스에 있는 코드 노출  
  VBA 코드에서 호스트 항목 클래스에 있는 Visual Basic 코드를 호출할 수 있도록 하려면 호스트 항목의 **EnableVbaCallers** 속성을 **True**로 설정합니다.  

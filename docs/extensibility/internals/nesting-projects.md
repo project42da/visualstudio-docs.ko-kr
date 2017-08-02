@@ -31,7 +31,7 @@ VS 패키지를 사용 하는 엔터프라이즈 응용 프로그램 개발자�
  C\# Example.Nested 프로젝트 샘플에서 중첩된 프로젝트의 예를 찾을 수 있습니다.  
   
 ## 중첩된 프로젝트 예제  
- ![중첩 프로젝트 솔루션](~/docs/extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")  
+ ![중첩 프로젝트 솔루션](~/extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")  
 중첩된 프로젝트 예제  
   
 ## 참고 항목  

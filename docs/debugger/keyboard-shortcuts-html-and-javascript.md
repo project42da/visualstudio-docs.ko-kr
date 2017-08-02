@@ -23,7 +23,7 @@ caps.handback.revision: 5
 # 바로 가기 키(HTML 및 JavaScript)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows 및 Windows Phone에 적용](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  HTML 및 JavaScript를 사용하는 스토어 앱을 디버깅하기 위한 Visual Studio의 바로 가기 키입니다.  
   

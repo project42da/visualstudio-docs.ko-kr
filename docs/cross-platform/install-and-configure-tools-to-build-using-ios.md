@@ -127,7 +127,7 @@ ms.lasthandoff: 05/13/2017
   
  에이전트를 처음 시작할 때 및 새 클라이언트 인증서를 만들 때마다 호스트 이름, 포트, PIN을 비롯해 Visual Studio에서 에이전트를 구성하는 데 필요한 정보가 표시됩니다.  
   
- ![vcremote를 사용하여 보안 PIN 생성](~/docs/cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
+ ![vcremote를 사용하여 보안 PIN 생성](~/cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
   
  Visual Studio에서 호스트 이름을 사용하여 원격 에이전트를 구성하려는 경우 Windows에서 호스트 이름으로 Mac을 ping하여 원격 에이전트에 연결할 수 있는지 확인합니다. 그렇지 않은 경우 대신 IP 주소를 사용해야 할 수도 있습니다.  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 05/13/2017
   
 7.  **연결**을 선택하여 연결을 사용하도록 설정합니다.  
   
-     ![iOS 빌드에 대한 vcremote 연결 구성](~/docs/cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
+     ![iOS 빌드에 대한 vcremote 연결 구성](~/cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
   
      호스트 이름 또는 포트를 변경할 때까지 연결이 유지됩니다. **옵션** 대화 상자에서 호스트 이름 또는 포트를 변경하는 경우 변경 내용을 취소하려면 **되돌리기** 단추를 선택하여 이전 연결로 되돌립니다.  
   

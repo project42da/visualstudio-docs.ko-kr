@@ -73,10 +73,10 @@ ms.lasthandoff: 05/24/2017
   
 3.  `TestMethod1()` 메서드를 찾아서 이름을 `DefaultAutomobileIsInitializedCorrectly()`로 바꿉니다. 이 메서드 내에서 다음 그림과 같이 `Automobile`이라는 클래스의 새 인스턴스를 만듭니다. 컴파일 시간 오류를 나타내는 물결선이 표시되고 스마트 태그가 형식 이름 아래에 나타납니다. 스마트 태그의 정확한 위치는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 또는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]를 사용하는지에 따라 달라집니다.  
   
-     ![Visual Basic의 스마트 태그 밑줄](~/docs/ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
+     ![Visual Basic의 스마트 태그 밑줄](~/ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
 Visual Basic  
   
-     ![C&#35;의 스마트 태그 밑줄](~/docs/ide/media/genclass_underline.png "GenClass_Underline")  
+     ![C&#35;의 스마트 태그 밑줄](~/ide/media/genclass_underline.png "GenClass_Underline")  
 Visual C#  
   
 4.  스마트 태그를 마우스 포인터로 가리켜 `Automobile` 이라는 형식이 아직 정의되지 않았다는 오류 메시지를 표시합니다. 스마트 태그를 클릭하거나 Ctrl+. (Ctrl+마침표)를 눌러 다음 그림과 같이 사용법에서 생성 바로 가기 메뉴를 엽니다.  
@@ -112,10 +112,10 @@ Visual C#
   
      다음 그림에서는 스마트 태그 바로 가기 메뉴를 보여 줍니다.  
   
-     ![Visual Basic의 속성 생성 상황에 맞는 메뉴](~/docs/ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
+     ![Visual Basic의 속성 생성 상황에 맞는 메뉴](~/ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
 Visual Basic  
   
-     ![C&#35;의 속성 생성 상황에 맞는 메뉴](~/docs/ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
+     ![C&#35;의 속성 생성 상황에 맞는 메뉴](~/ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
 Visual C#  
   
 ### <a name="to-locate-the-source-code"></a>소스 코드를 찾으려면  
@@ -161,7 +161,7 @@ Visual C#
   
      다음 그림에는 **테스트 결과** 창이 나와 있습니다.  
   
-     ![실패한 테스트 결과](~/docs/ide/media/testsfailed.png "TestsFailed")  
+     ![실패한 테스트 결과](~/ide/media/testsfailed.png "TestsFailed")  
 테스트 결과 창  
   
 2.  **테스트 결과** 창에서 각 테스트 결과 행을 두 번 클릭하면 각 테스트 실패 위치로 이동할 수 있습니다.  

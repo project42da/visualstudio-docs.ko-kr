@@ -48,7 +48,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
  다음 그림과 같이 일반적인 개발 경험은 처음에는 간단하게 응용 프로그램을 빌드하고(F5) UI 컨트롤을 클릭해 보면서 제대로 작동하는지 확인하는 것으로 시작할 수 있습니다. 그런 다음 코딩된 테스트를 만들기로 결정할 수 있습니다. 그러면 응용 프로그램을 계속해서 수동으로 테스트할 필요가 없습니다. 응용 프로그램에서 테스트 중인 특정 기능에 따라 기능 테스트 또는 UI 수준에서 테스트를 포함하거나 포함하지 않을 수 있는 통합 테스트에 대한 코드를 작성할 수 있습니다. 일부 비즈니스 논리에 직접 액세스하려는 경우 단위 테스트를 코딩할 수 있습니다. 그러나 특정 상황에서는 응용 프로그램의 다양한 UI 컨트롤 테스트를 포함하는 것이 유용할 수 있습니다. 코딩된 UI 테스트는 초기 (F5) 시나리오를 자동화하여 코드 변경(code churn)이 응용 프로그램의 기능에 영향을 미치지 않는지 확인할 수 있습니다.  
   
- ![응용 프로그램 개발 중 테스트](~/docs/test/media/cuit_overview.png "CUIT_Overview")  
+ ![응용 프로그램 개발 중 테스트](~/test/media/cuit_overview.png "CUIT_Overview")  
   
  코딩된 UI 테스트는 만들기 쉽습니다. CUIT 테스트 빌더가 백그라운드에서 실행되는 동안 테스트를 수동으로 간단하게 수행할 수 있습니다. 또한 특정 필드에 나타나야 하는 값을 지정할 수도 있습니다. CUIT 테스트 빌더는 사용자의 작업을 기록하고 이러한 작업으로부터 코드를 생성합니다. 테스트를 만든 후 작업 시퀀스를 수정할 수 있는 특수 편집기에서 테스트를 편집할 수 있습니다.  
   
@@ -96,15 +96,15 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
      코딩된 UI 프로젝트를 방금 만든 경우 첫 번째 CUIT 파일이 자동으로 추가됩니다. 다른 테스트 파일을 추가하려면 코딩된 UI 테스트 프로젝트의 바로 가기 메뉴를 열고 **추가**를 가리킨 다음 **코딩된 UI 테스트**를 선택합니다.  
   
-     ![코딩된 UI 테스트 만들기](~/docs/test/media/codedui_create.png "CodedUI_Create")  
+     ![코딩된 UI 테스트 만들기](~/test/media/codedui_create.png "CodedUI_Create")  
   
      **코딩된 UI 테스트에 대한 코드 생성** 대화 상자에서 **작업 기록, UI 맵 편집 또는 어설션 추가**를 선택합니다.  
   
-     ![기록 작업 선택](~/docs/test/media/codedui_codegendialogb.png "CodedUI_CodeGenDialogB")  
+     ![기록 작업 선택](~/test/media/codedui_codegendialogb.png "CodedUI_CodeGenDialogB")  
   
      코딩된 UI 테스트 빌더가 나타나고 Visual Studio가 최소화됩니다.  
   
-     ![코딩된 UI 테스트 빌더](~/docs/test/media/codedui_testbuilder.png "CodedUI_TestBuilder")  
+     ![코딩된 UI 테스트 빌더](~/test/media/codedui_testbuilder.png "CodedUI_TestBuilder")  
   
 3.  **작업 시퀀스를 기록합니다**.  
   
@@ -127,7 +127,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
      어설션 창을 닫고 **코드 생성**을 선택합니다.  
   
-     ![코딩된 UI 테스트 대상 요소](~/docs/test/media/codedui_1.png "CodedUI_1")  
+     ![코딩된 UI 테스트 대상 요소](~/test/media/codedui_1.png "CodedUI_1")  
   
     > [!TIP]
     >  작업 기록과 값 확인을 번갈아 가며 수행합니다. 작업 또는 확인의 각 시퀀스 종료 시 코드를 생성합니다. 필요한 경우 나중에 새 작업 및 확인을 삽입할 수 있습니다.  
@@ -161,7 +161,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
      UIMap.uitest를 엽니다. 이 파일은 코딩된 UI 테스트 편집기에서 열리며 기록한 작업의 모든 시퀀스와 어설션을 이 편집기에서 편집할 수 있습니다.  
   
-     ![코딩된 UI 테스트 편집기](~/docs/test/media/cuit_editor_edit.png "CUIT_Editor_edit")  
+     ![코딩된 UI 테스트 편집기](~/test/media/cuit_editor_edit.png "CUIT_Editor_edit")  
   
      자세한 내용은 [코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)을 참조하세요.  
   
@@ -176,26 +176,26 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
 ###  <a name="starting"></a> 테스트 대상 응용 프로그램 시작 및 중지  
  *각 테스트마다 응용 프로그램, 브라우저 또는 데이터베이스를 별도로 시작했다가 중지하고 싶지 않습니다. 어떻게 하면 이러한 문제를 피할 수 있나요?*  
   
--   ![필수 구성 요소](~/docs/test/media/prereq.png "Prereq") 테스트 중인 응용 프로그램 시작 작업을 기록하지 않으려는 경우 **기록** 아이콘을 선택하기 전에 응용 프로그램을 시작해야 합니다.  
+-   ![필수 구성 요소](~/test/media/prereq.png "Prereq") 테스트 중인 응용 프로그램 시작 작업을 기록하지 않으려는 경우 **기록** 아이콘을 선택하기 전에 응용 프로그램을 시작해야 합니다.  
   
--   ![필수 구성 요소](~/docs/test/media/prereq.png "Prereq")테스트 종료 시 테스트를 실행하는 프로세스가 종료됩니다. 테스트에서 응용 프로그램을 시작했다면 일반적으로 해당 응용 프로그램이 닫힙니다.  테스트 종료 시에도 응용 프로그램을 닫지 않으려면 솔루션에 .runsettings 파일을 추가하고 `KeepExecutorAliveAfterLegacyRun` 옵션을 사용해야 합니다. 자세한 내용은 [.runsettings 파일을 사용하여 단위 테스트 구성](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)을 참조하세요.  
+-   ![필수 구성 요소](~/test/media/prereq.png "Prereq")테스트 종료 시 테스트를 실행하는 프로세스가 종료됩니다. 테스트에서 응용 프로그램을 시작했다면 일반적으로 해당 응용 프로그램이 닫힙니다.  테스트 종료 시에도 응용 프로그램을 닫지 않으려면 솔루션에 .runsettings 파일을 추가하고 `KeepExecutorAliveAfterLegacyRun` 옵션을 사용해야 합니다. 자세한 내용은 [.runsettings 파일을 사용하여 단위 테스트 구성](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)을 참조하세요.  
   
--   ![필수 구성 요소](~/docs/test/media/prereq.png "Prereq") [TestInitialize] 특성으로 식별되고 각 테스트 메서드 시작 시 코드를 실행하는 테스트 초기화 메서드를 추가할 수 있습니다. 예를 들어 TestInitialize 메서드에서 응용 프로그램을 시작할 수 있습니다.  
+-   ![필수 구성 요소](~/test/media/prereq.png "Prereq") [TestInitialize] 특성으로 식별되고 각 테스트 메서드 시작 시 코드를 실행하는 테스트 초기화 메서드를 추가할 수 있습니다. 예를 들어 TestInitialize 메서드에서 응용 프로그램을 시작할 수 있습니다.  
   
--   ![필수 구성 요소](~/docs/test/media/prereq.png "Prereq") [TestCleanup] 특성으로 식별되고 각 테스트 메서드 종료 시 코드를 실행하는 테스트 정리 메서드를 추가할 수 있습니다. 예를 들어 응용 프로그램을 닫는 메서드는 TestCleanup 메서드에서 호출될 수 있습니다.  
+-   ![필수 구성 요소](~/test/media/prereq.png "Prereq") [TestCleanup] 특성으로 식별되고 각 테스트 메서드 종료 시 코드를 실행하는 테스트 정리 메서드를 추가할 수 있습니다. 예를 들어 응용 프로그램을 닫는 메서드는 TestCleanup 메서드에서 호출될 수 있습니다.  
   
 ###  <a name="VerifyingCodeUsingCUITGenerateAssertions"></a> UI 컨트롤 속성의 유효성 검사  
  **코딩된 UI 테스트 빌더**를 사용해 테스트의 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>에 UI(사용자 인터페이스) 컨트롤을 추가하거나 UI 컨트롤에 어설션을 사용하는 확인 메서드에 대한 코드를 생성할 수 있습니다.  
   
  UI 컨트롤을 위한 어설션을 생성하려면 코딩된 UI 테스트 빌더에서 **어설션 추가** 도구를 선택하여 올바른지 확인하려는 테스트 중인 응용 프로그램의 컨트롤로 끌어 옵니다. 컨트롤 주위에 상자가 생기면 마우스를 놓습니다. `UIMap.Designer.cs` 파일에 컨트롤 클래스 코드가 즉시 생성됩니다.  
   
- ![코딩된 UI 테스트 대상 요소](~/docs/test/media/codedui_1.png "CodedUI_1")  
+ ![코딩된 UI 테스트 대상 요소](~/test/media/codedui_1.png "CodedUI_1")  
   
  이제 이 컨트롤의 속성이 **어설션 추가** 대화 상자에 나열됩니다.  
   
  특정 컨트롤로 이동하는 또 다른 방법은 화살표**(<<)**를 선택하여 **UI 컨트롤 맵**의 보기를 확장하는 것입니다. 부모, 형제 또는 자식 컨트롤을 찾으려면 맵에서 아무 곳이나 클릭한 다음 화살표 키를 사용해 트리 주위를 이동할 수 있습니다.  
   
- ![코딩된 UI 테스트 속성](~/docs/test/media/codedui_2.png "CodedUI_2")  
+ ![코딩된 UI 테스트 속성](~/test/media/codedui_2.png "CodedUI_2")  
   
 -   *응용 프로그램에서 컨트롤을 선택하면 아무런 속성도 표시되지 않거나 UI 컨트롤 맵에 컨트롤이 표시되지 않습니다.*  
   
@@ -203,7 +203,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
  다음으로, 확인하려는 UI 컨트롤의 속성 바로 가기 메뉴를 열고 **어설션 추가**를 가리킵니다. **어설션 추가** 대화 상자에서 어설션의 **비교 연산자**(예: <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A>)를 선택하고 **비교 값**에 어설션 값을 입력합니다.  
   
- ![코딩된 UI 테스트 어설션](~/docs/test/media/codedui_3.png "CodedUI_3")  
+ ![코딩된 UI 테스트 어설션](~/test/media/codedui_3.png "CodedUI_3")  
   
  테스트에 필요한 어설션을 모두 추가했으면 **확인**을 선택합니다.  
   
@@ -224,7 +224,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
 -   UI 맵(UIMap.uitest)에 `AssertForAddTwoNumbers` 메서드를 추가합니다. 이 파일은 어설션을 편집할 수 있는 코딩된 UI 테스트 편집기에서 열립니다.  
   
-     ![코딩된 UI 테스트 편집기를 사용하여 어설션 편집](~/docs/test/media/cuit_editor_assert.png "CUIT_Editor_assert")  
+     ![코딩된 UI 테스트 편집기를 사용하여 어설션 편집](~/test/media/cuit_editor_assert.png "CUIT_Editor_assert")  
   
      자세한 내용은 [코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)을 참조하세요.  
   
@@ -242,7 +242,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
  경우에 따라 [컨트롤을 추가하고 해당 컨트롤의 속성에 대한 유효성 검사를 수행](#VerifyingCodeUsingCUITGenerateAssertions)할 때 키보드를 사용해야 할 수 있습니다. 예를 들어 상황에 맞는 메뉴 컨트롤을 사용하는 코딩된 UI 테스트를 기록하려는 경우 코딩된 UI 테스트 빌더에서 어설션 추가 메뉴를 선택하려고 하면 컨트롤의 메뉴 항목 목록이 포커스를 잃고 사라질 수 있습니다. 이러한 현상은 아래 그림에서도 확인할 수 있습니다. 여기서 어설션 추가 도구로 Internet Explorer의 상황에 맞는 메뉴를 선택하려고 하면 이 메뉴가 포커스를 잃고 사라집니다.  
   
- ![CodedUITest&#95;SelectControlKeyboard](~/docs/test/media/codeduitest_selectcontrolkeyboard.png "CodedUITest_SelectControlKeyboard")  
+ ![CodedUITest&#95;SelectControlKeyboard](~/test/media/codeduitest_selectcontrolkeyboard.png "CodedUITest_SelectControlKeyboard")  
   
  키보드를 사용하여 UI 컨트롤을 선택하려면 해당 컨트롤 위에 마우스를 올려 둡니다. 그런 다음 **Ctrl** 키와 **I** 키를 동시에 누르고 있습니다. 키를 놓습니다. 코딩된 UT 테스트 빌더가 컨트롤을 기록합니다.  
   
@@ -256,7 +256,7 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
   
  코딩된 UI 테스트를 수행하는 경우 컨트롤을 마우스로 가리킵니다. 그런 다음 키보드에서 Shift+R을 누른 채 Ctrl 키를 누르고 있습니다. 키를 놓습니다. 코딩된 UT 테스트 빌더가 마우스로 가리키기 이벤트를 기록합니다.  
   
- ![CodedUI&#95;Hover](~/docs/test/media/codedui_hover.png "CodedUI_Hover")  
+ ![CodedUI&#95;Hover](~/test/media/codedui_hover.png "CodedUI_Hover")  
   
  테스트 메서드를 생성한 후 다음 예제와 유사한 코드가 UIMap.Desinger.cs 파일에 추가됩니다.  
   

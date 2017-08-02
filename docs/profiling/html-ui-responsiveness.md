@@ -318,7 +318,7 @@ if (performance.mark && performance.measure) {
 ###  <a name="GroupFrames"></a> 프레임별 이벤트 그룹화  
  타임라인 세부 정보 보기에서 개별 프레임에 나타나는 이벤트를 그룹화할 수 있습니다. 이러한 프레임 이벤트는 도구로 생성된 이벤트이며, paint 이벤트 간에 발생하는 모든 UI 스레드 작업의 최상위 이벤트 컨테이너를 나타냅니다. 이 뷰를 사용하도록 설정하려면 **프레임별 최상위 이벤트 그룹화**를 선택합니다.  
   
- ![프레임별로 최상위 이벤트 그룹화](~/docs/profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
+ ![프레임별로 최상위 이벤트 그룹화](~/profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
   
  프레임별로 이벤트를 그룹화하는 경우 타임라인 세부 정보 보기의 최상위 이벤트는 각각 프레임을 나타냅니다.  
   
