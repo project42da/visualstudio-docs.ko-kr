@@ -30,9 +30,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
 ms.openlocfilehash: 24bd28ad78f1cd3a21167215ed8348dc79edce6b
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/05/2017
 
 ---
@@ -48,7 +49,7 @@ VSPackage는 상태 변수를 사용자가 유지 되는 그룹인 하나 이상
      단일 VSPackage 몇 가지 사용자 지정 설정 지점의 지 원하는 경우 각 사용자 지정 설정 지점 별도 클래스에서 구현 되 고 각 <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>클래스</xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> 의 고유 인스턴스 등록 따라서 클래스를 구현 하는 설정이 여러 개 설정 범주를 지원할 수 있습니다.  
   
 ## <a name="custom-settings-point-registry-entry-details"></a>사용자 지정 설정 지점 레지스트리 항목 세부 정보  
- 다음 위치에 레지스트리 항목에 사용자 지정 설정 지점을 생성 됩니다: HKLM\Software\Microsoft\VisualStudio\\*\<버전 >*\UserSettings\\`<CSPName>`여기서 `<CSPName>` 의 이름인 사용자 지정 설정 지점 VSPackage 지원 및 *\<버전 >* 의 버전이 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]8.0 예를 들어, 합니다.  
+ 다음 위치에 레지스트리 항목에 사용자 지정 설정 지점을 생성 됩니다: HKLM\Software\Microsoft\VisualStudio\\*\<버전 >*\UserSettings\\`<CSPName>`여기서 `<CSPName>` 의 이름인 사용자 지정 설정 지점 VSPackage 지원 및  *\<버전 >* 의 버전이 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]8.0 예를 들어, 합니다.  
   
 > [!NOTE]
 >  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio의 루트 경로\\*\<버전 >* 대체로 재정의할 수 있습니다 때 루트는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE)에서 초기화 됩니다. 자세한 내용은 참조 [명령줄 스위치](../../extensibility/command-line-switches-visual-studio-sdk.md)합니다.  
