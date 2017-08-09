@@ -18,10 +18,10 @@ manager: ghogen
 f1_keywords:
 - vs.performancecenter
 ms.translationtype: HT
-ms.sourcegitcommit: c3521e1de25854db012cb91bbe09d9463ecb42c7
-ms.openlocfilehash: af1ff0dbeeb30e6b3169c6a94dab8da50085bf20
+ms.sourcegitcommit: 3037d92e9de377ab4b306a5a0e164e29fa6659e7
+ms.openlocfilehash: 5448253ae93b82a2631e6c48495a31d2724ed0b7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
@@ -34,7 +34,7 @@ Visual Studio 2017에서는 시작 시간이 늘어나지 않도록 요청 시 �
 
 Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를 초래하는 확장이나 도구 창을 알려주는 팝업 메시지가 나타납니다. 이 메시지에는 **Visual Studio 성능 관리** 대화 상자에 대한 링크도 제공됩니다. 이 대화 상자는 **도움말 > Visual Studio 성능 관리** 메뉴 명령을 사용해서 열 수도 있습니다.
 
-![Visual Studio 성능 관리에 '... 확장으로 인해 Visual Studio가 느려집니다'라는 팝업이 나타납니다.](~/ide/media/vside_perfdialog_popup.PNG)
+![Visual Studio 성능 관리에 '... 확장으로 인해 Visual Studio가 느려집니다'라는 팝업이 나타납니다.](../ide/media/vside_perfdialog_popup.png)
 
 이 대화 상자에는 시작 성능에 영향을 미치는 확장 및 도구 창이 나열됩니다. 이 대화 상자에서 확장 및 도구 창 설정을 변경하여 시작 성능을 향상할 수 있습니다.
 
@@ -42,7 +42,7 @@ Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를
 
 확장으로 인해 Visual Studio 시작 속도가 느려지는 경우 확장 형식 중 하나를 선택하면 **Visual Studio 성능 관리** 대화 상자에 해당 확장이 나타납니다. 이 대화 상자에는 시작 시, 솔루션 로딩 시 및 편집기에서 입력 시 성능에 영향을 미치는 확장이 표시됩니다.
 
-![Visual Studio 성능 관리 - 확장 보기](~/ide/media/vside_perfdialog_extensions.PNG)
+![Visual Studio 성능 관리 - 확장 보기](../ide/media/vside_perfdialog_extensions.png)
 
 시작, 솔루션 로드 또는 입력 시간에 대한 영향이 지나치게 높은 경우, **사용 안 함** 단추를 선택하여 해당 시나리오에 대한 확장을 사용하지 않도록 설정합니다. 확장 관리자 또는 Visual Studio 성능 관리 대화 상자를 통해 이후 세션에 확장을 언제든 다시 사용할 수 있습니다.
 
@@ -53,7 +53,7 @@ Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를
 - **시작 시 창 표시 안 함:** 이전 세션에서 열려 있는 경우에도 Visual Studio를 열 때 지정한 도구 창이 항상 닫힙니다. 적절한 메뉴에서 도구 창을 열 수 있습니다.
 - **시작 시 창 자동 숨기기:** 도구 창이 이전 세션에서 열려 있는 경우 이 옵션은 시작 시 도구 창의 그룹이 축소되어 도구 창이 초기화되지 않도록 합니다. 도구 창을 자주 사용하는 경우 도구 창을 여전히 사용할 수 있지만 더 이상 Visual Studio 시작 시간을 지연시키지 않으므로 이 옵션을 선택하는 것이 좋습니다.
 
-![Visual Studio 성능 관리 - 도구 창 보기](~/ide/media/vside_perfdialog_toolwindows.PNG)
+![Visual Studio 성능 관리 - 도구 창 보기](../ide/media/vside_perfdialog_toolwindows.png)
 
 언제든지 이 대화 상자로 돌아와서 지정된 모든 도구 창에 대한 설정을 변경할 수 있습니다.
 
@@ -69,7 +69,7 @@ Visual Studio 2017에서는 IDE에서 큰 솔루션을 로드하는 데 필요�
 
 모든 프로젝트 및 솔루션에 대한 경량 솔루션 로드 설정을 변경하려면 **도구 > 옵션 > 프로젝트 및 솔루션**으로 이동하여 다음 세 가지 로드 옵션 중 하나를 선택합니다.
 
-![옵션 대화 상자, 도구](~/ide/media/VSIDE_LightweightSolutionLoad.png)
+![옵션 대화 상자, 도구](../ide/media/VSIDE_LightweightSolutionLoad.png)
 
 - **Visual Studio에서 내 솔루션에 적합한 설정을 선택할 수 있도록 허용**: 솔루션이 열릴 때 Visual Studio에서 각 솔루션을 분석하여 경량 솔루션 로드를 적용할지 여부를 결정합니다. 
 - **사용:** IDE 차원의 설정과 관계없이 이 솔루션에 경량 솔루션 로드를 사용하도록 설정합니다.
@@ -77,7 +77,7 @@ Visual Studio 2017에서는 IDE에서 큰 솔루션을 로드하는 데 필요�
 
 개별 솔루션에 대해 경량 솔루션 로드를 사용하려면 솔루션 탐색기에서 최상위 솔루션 노드를 선택합니다. **속성** 창에서 **경량 로드** 속성에 대해 **기본**, **사용** 또는 **사용 안 함**을 선택합니다.
 
-![솔루션 탐색기](~/ide/media/VSIDE_LSL Solution Setting.png)
+![솔루션 탐색기](../ide/media/VSIDE_LSL Solution Setting.png)
 
 솔루션 탐색기에서 최상위 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **경량 솔루션 로드 사용**(현재 기능을 사용하지 않는 경우) 또는 **경량 솔루션 로드 사용 안 함**(현재 기능을 사용하는 경우)을 선택할 수도 있습니다.
 
@@ -87,7 +87,7 @@ Visual Studio 2017에서는 IDE에서 큰 솔루션을 로드하는 데 필요�
 
 Visual Studio 2017에서 큰 솔루션을 여는 경우 경량 솔루션 로드를 사용하라는 팝업 메시지가 표시될 수 있습니다. 많은 C#, VB 또는 C++ 프로젝트가 포함된 솔루션의 경우에만 메시지가 나타납니다. **사용**을 선택하면 해당 솔루션에 대해서만 경량 솔루션 로드가 활성화됩니다. IDE 차원의 설정은 변경되지 않습니다.
 
-![팝업 창](~/ide/media/VSIDE_LSL Popup.png)
+![팝업 창](../ide/media/VSIDE_LSL Popup.png)
 
 나중에 솔루션의 **속성** 창에서 경량 솔루션 로드를 사용하지 않도록 설정할 수 있습니다.
 
