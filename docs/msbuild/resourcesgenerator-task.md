@@ -36,14 +36,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: a698aec32ff5ec093fe2cff2dc0533f6e364be21
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 5e42fbb9fa38ff8f90b09f9b5d06d0da2ecba3f2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="resourcesgenerator-task"></a>ResourcesGenerator 작업
-<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> 작업은 하나 이상의 리소스(이진 형식 및 기타 확장 형식의 .jpg,.ico,.bmp, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)])를 .resources 파일에 포함합니다.  
+<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> 작업은 하나 이상의 리소스(.jpg, .ico, .bmp, 이진 형식의 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 및 기타 확장 형식)를 .resources 파일에 포함합니다.  
   
 ## <a name="task-parameters"></a>작업 매개 변수  
   
@@ -75,4 +76,4 @@ ms.lasthandoff: 02/22/2017
  [작업 참조](../msbuild/wpf-msbuild-task-reference.md)   
  [MSBuild 참조](../msbuild/msbuild-reference.md)   
  [작업 참조](../msbuild/msbuild-task-reference.md)   
- [WPF 응용 프로그램 빌드(WPF)](http://msdn.microsoft.com/Library/a58696fd-bdad-4b55-9759-136dfdf8b91c)
+ [WPF 응용 프로그램 빌드(WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

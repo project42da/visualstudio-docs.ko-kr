@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 5a16c3321222c57f68409e4c2c414cb73e24f258
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: ce1b1f255fb3a276a17fa6c5248c475a9967579e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="wpf-data-binding-with-linq-to-xml-overview"></a>LINQ to XML로 WPF 데이터 바인딩 개요
@@ -53,11 +54,11 @@ ms.lasthandoff: 02/22/2017
 |구성 요소|설명|  
 |---------------|-----------------|  
 |바인딩 대상|데이터 소스와 연결할 UI 요소입니다. WPF의 시각적 요소는 <xref:System.Windows.UIElement> 클래스에서 파생됩니다.|  
-|대상 속성|데이터 바인딩 원본의 값을 반영하는 바인딩 대상의 *종속성 속성*입니다. 종속성 속성은 <xref:System.Windows.UIElement>가 파생되는 <xref:System.Windows.DependencyObject> 클래스에서 직접 지원됩니다.|  
+|대상 속성|데이터 바인딩 원본의 값을 반영하는 바인딩 대상의 *종속성 속성*입니다. 종속성 속성은 <xref:System.Windows.DependencyObject>가 파생되는 <xref:System.Windows.UIElement> 클래스에서 직접 지원합니다.|  
 |바인딩 원본|표시하기 위해 UI 요소에 제공되는 하나 이상의 값에 대한 원본 개체입니다. WPF는 CLR 개체, ADO.NET 데이터 개체, XML 데이터(XPath 또는 LINQ to XML 쿼리의 데이터) 또는 다른 <xref:System.Windows.DependencyObject>를 바인딩 원본으로 자동으로 지원합니다.|  
 |원본 경로|바인딩될 값이나 값의 집합으로 확인되는 바인딩 원본의 속성입니다.|  
   
- 종속성 속성은 UI 요소의 동적으로 계산된 속성을 나타내는 WPF에 특정한 개념입니다. 예를 들어, 종속성 속성에는 기본값이나 부모 요소에서 제공하는 값이 있는 경우가 많습니다. 이러한 특수 속성은 표준 속성의 경우처럼 필드가 아니라 <xref:System.Windows.DependencyProperty> 클래스의 인스턴스로 지원됩니다. 자세한 내용은 [종속성 속성 개요](http://msdn.microsoft.com/Library/d119d00c-3afb-48d6-87a0-c4da4f83dee5)를 참조하세요.  
+ 종속성 속성은 UI 요소의 동적으로 계산된 속성을 나타내는 WPF에 특정한 개념입니다. 예를 들어, 종속성 속성에는 기본값이나 부모 요소에서 제공하는 값이 있는 경우가 많습니다. 이러한 특수 속성은 표준 속성의 경우처럼 필드가 아니라 <xref:System.Windows.DependencyProperty> 클래스의 인스턴스로 지원됩니다. 자세한 내용은 [종속성 속성 개요](/dotnet/framework/wpf/advanced/dependency-properties-overview)를 참조하세요.  
   
 ### <a name="dynamic-data-binding-in-wpf"></a>WPF의 동적 데이터 바인딩  
  기본적으로 데이터 바인딩은 대상 UI 요소가 초기화될 때만 발생합니다. 이를 *일회성* 바인딩이라고 합니다. 일회성 바인딩은 대부분의 목적에 충분하지만 일반적으로 데이터 바인딩 솔루션에서는 변경 내용이 다음 중 하나를 사용하여 런타임에 동적으로 전파되어야 합니다.  
@@ -66,9 +67,9 @@ ms.lasthandoff: 02/22/2017
   
 -   *양방향* 바인딩에서는 원본의 변경 내용이 대상에 자동으로 전파되고 대상의 변경 내용이 원본에 자동으로 전파됩니다.  
   
- 단방향 또는 양방향 바인딩이 발생하려면 원본에서 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하거나 지원되는 각 속성의 *PropertyNameChanged* 패턴을 사용하는 등의 방법으로 변경 알림 메커니즘을 구현해야 합니다.  
+ 단방향 또는 양방향 바인딩이 발생하려면 소스에서 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하거나 지원되는 각 속성의 *PropertyNameChanged* 패턴을 사용하는 등의 방법으로 변경 알림 메커니즘을 구현해야 합니다.  
   
- WPF의 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩(WPF)](http://msdn.microsoft.com/Library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e)을 참조하세요.  
+ WPF의 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩(WPF)](/dotnet/framework/wpf/data/data-binding-wpf)을 참조하세요.  
   
 ## <a name="dynamic-properties-in-linq-to-xml-classes"></a>LINQ to XML 클래스의 동적 속성  
  대부분의 LINQ to XML 클래스는 적절한 WPF 동적 데이터 소스로 적합하지 않습니다. 가장 유용한 정보 중 일부는 속성이 아니라 메서드를 통해서만 사용할 수 있으며 이러한 클래스의 속성은 변경 알림을 구현하지 않습니다. WPF 데이터 바인딩을 지원하기 위해 LINQ to XML에서는 *동적 속성*의 집합을 노출합니다.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 02/22/2017
 >  <xref:System.Xml.Linq> 네임스페이스의 다양한 클래스에 있는 표준 public 속성 중 상당수를 일회성 데이터 바인딩에 사용할 수 있습니다. 그러나 이 체계에서 원본이나 대상은 동적으로 업데이트되지 않습니다.  
   
 ### <a name="accessing-dynamic-properties"></a>동적 속성 액세스  
- <xref:System.Xml.Linq.XAttribute> 및 <xref:System.Xml.Linq.XElement> 클래스의 동적 속성은 표준 속성처럼 액세스할 수 없습니다. 예를 들어, C#과 같은 CLR 규격 언어에서 동적 속성에는 다음과 같은 특징이 있습니다.  
+ <xref:System.Xml.Linq.XAttribute> 및 <xref:System.Xml.Linq.XElement> 클래스의 동적 속성에는 표준 속성의 경우처럼 액세스할 수 없습니다. 예를 들어, C#과 같은 CLR 규격 언어에서 동적 속성에는 다음과 같은 특징이 있습니다.  
   
 -   컴파일 타임에 직접 액세스할 수 없습니다. 동적 속성은 컴파일러와 Visual Studio IntelliSense에 표시되지 않습니다.  
   
@@ -106,6 +107,6 @@ ms.lasthandoff: 02/22/2017
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML로 WPF 데이터 바인딩](../designers/wpf-data-binding-with-linq-to-xml.md)   
  [LINQ to XML 동적 속성](../designers/linq-to-xml-dynamic-properties.md)   
- [WPF의 XAML](http://msdn.microsoft.com/Library/5d858575-a83b-42df-ad3f-047ed2d6e3c8)   
- [데이터 바인딩(WPF)](http://msdn.microsoft.com/Library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e)   
+ [WPF의 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)   
+ [데이터 바인딩(WPF)](/dotnet/framework/wpf/data/data-binding-wpf)   
  [워크플로 마크업 사용](http://go.microsoft.com/fwlink/?LinkId=98685)

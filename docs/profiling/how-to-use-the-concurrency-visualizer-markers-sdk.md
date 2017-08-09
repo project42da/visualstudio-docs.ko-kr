@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1a51a8dbf28be35febf4a0954a997e542ffd0f09
-ms.openlocfilehash: a05e0509ec092f810e0990fbc838707d126595e1
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: d705cd8146a0ccb43be54e2d825387699e157379
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>방법: 동시성 시각화 도우미 표식 SDK 사용
@@ -113,7 +113,7 @@ ms.lasthandoff: 05/19/2017
     using Microsoft.ConcurrencyVisualizer.Instrumentation;  
     ```  
   
-3.  기본 표식 시리즈에서 세 개의 범위를 만들고 플래그, 메시지 및 경고를 하나씩 각 범위에 씁니다. static [EnterSpan](assetId:///EnterSpan?qualifyHint=False&autoUpgrade=True) 메서드를 호출하여 <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> 개체를 만듭니다. 기본 시리즈에 쓰려면 <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers> 클래스의 static 쓰기 메서드를 사용합니다.  
+3.  기본 표식 시리즈에서 세 개의 범위를 만들고 플래그, 메시지 및 경고를 하나씩 각 범위에 씁니다. 정적 `EnterSpan` 메서드를 호출하여 <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> 개체를 만듭니다. 기본 시리즈에 쓰려면 <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers> 클래스의 static 쓰기 메서드를 사용합니다.  
   
     ```VB  
   

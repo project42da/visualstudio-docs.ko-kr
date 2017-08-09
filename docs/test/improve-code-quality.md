@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: fbc3a182d2c3dbceaa17685f649ea73a3e73ed85
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: db500747061b436db2a0897e5b43a1cae4a3acae
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="improve-code-quality"></a>코드 품질 향상
@@ -54,8 +54,8 @@ ms.lasthandoff: 05/13/2017
 |[관리 코드의 복잡성 및 유지 관리 용이성 측정](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|코드 메트릭은 개발자가 개발 중인 코드에 대해 더 정확히 파악할 수 있도록 하는 소프트웨어 측정 방법입니다. 메트릭에는 함수 및 클래스에 대한 유지 관리 인덱스, 함수의 순환 복잡성(Cyclomatic Complexity), 클래스의 상속 깊이, 클래스 간의 결합 양을 포함합니다.|  
   
 ## <a name="related-scenarios"></a>관련 시나리오  
- [애플리케이션 수명 주기 관리에 Visual Studio 및 Team Foundation Server 도입](assetId:///7ae9182f-4762-4bd3-b238-39ce987932e5)  
- Visual Studio Team Foundation에 익숙하지 않은 경우 팀 개발 환경에서 이 제품을 사용하여 생산성을 높이고 응용 프로그램 개발 시 발생할 수 있는 위험을 줄이는 방법에 대해 알아보십시오.  
+ [DevOps overview for Team Services and TFS](https://www.visualstudio.com/docs/devops-alm-overview)(Team Services 및 TFS에 대한 DevOps 개요)  
+ Visual Studio Team Foundation 및 Visual Studio Team Services에 익숙하지 않은 경우 팀 개발 환경에서 이 제품을 사용하여 생산성을 높이고 응용 프로그램 개발 시 발생할 수 있는 위험을 줄이는 방법에 대해 알아보세요.  
   
  [아키텍처 분석 및 모델링](../modeling/analyze-and-model-your-architecture.md)  
  [!INCLUDE[vsPreExt](../test/includes/vspreext_md.md)]을 사용하여 소프트웨어를 디자인하는 데 따르는 어려움과 복잡성을 관리할 수 있습니다. [!INCLUDE[vsPreShort](../test/includes/vspreshort_md.md)]에서는 응용 프로그램을 현재 상태 및 사용자가 원하는 상태로 시각적으로 모델링할 수 있습니다. 응용 프로그램의 논리 모델을 실제 모델에 매핑하는 동시에 시각화할 수 있도록 다이어그램을 만들고 유지 관리할 수 있습니다. 이렇게 하면 "디자인 중"인 소프트웨어에 대해 변경, 유효성 검사 및 분석을 수행할 수 있습니다.  

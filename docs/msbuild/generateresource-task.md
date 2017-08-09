@@ -37,14 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 88f783331de62539614ea6d175039ccb5bf1b767
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: 029b5627cf8f7213dfe3bab233db01fe27aa6c49
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="generateresource-task"></a>GenerateResource 작업
-.txt 및 .rest(XML 기반 리소스 형식) 파일과 런타임 이진 실행 파일에 포함되거나 위성 어셈블리로 컴파일할 수 있는 공용 언어 런타임 이진 .resources 파일 간을 변환합니다. 이 작업은 일반적으로 .txt 또는 .resx 파일을 .resource 파일로 변환하는 데 사용됩니다. `GenerateResource` 작업은 [resgen.exe](http://msdn.microsoft.com/Library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)와 기능적으로 비슷합니다.  
+.txt 및 .rest(XML 기반 리소스 형식) 파일과 런타임 이진 실행 파일에 포함되거나 위성 어셈블리로 컴파일할 수 있는 공용 언어 런타임 이진 .resources 파일 간을 변환합니다. 이 작업은 일반적으로 .txt 또는 .resx 파일을 .resource 파일로 변환하는 데 사용됩니다. `GenerateResource` 작업은 [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)와 기능적으로 비슷합니다.  
   
 ## <a name="parameters"></a>매개 변수  
  다음 표에서는 `GenerateResource` 작업의 매개 변수에 대해 설명합니다.  
@@ -71,17 +72,17 @@ ms.lasthandoff: 02/22/2017
 |`StronglyTypedNamespace`|선택적 `String` 매개 변수입니다.<br /><br /> 강력한 형식의 리소스에 대해 생성된 클래스 소스에 사용할 네임스페이스를 지정합니다. 이 매개 변수를 지정하지 않으면 모든 강력한 형식의 리소스는 전역 네임스페이스에 있습니다.|  
 |`TLogReadFiles`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 읽기 전용 매개 변수입니다.<br /><br /> 읽기 추적 로그를 나타내는 항목의 배열을 가져옵니다.|  
 |`TLogWriteFiles`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 읽기 전용 매개 변수입니다.<br /><br /> 쓰기 추적 로그를 나타내는 항목의 배열을 가져옵니다.|  
-|`ToolArchitecture`|선택적 [문자열](assetId:///String?qualifyHint=False&autoUpgrade=True) 매개 변수입니다.<br /><br /> Tracker.exe를 ResGen.exe를 생성하는 데 사용해야 하는지 여부를 결정하는 데 사용됩니다.<br /><br /> <xref:Microsoft.Build.Utilities.ExecutableType> 열거형의 멤버로 구문 분석할 수 있어야 합니다. `String.Empty`이면 추론을 사용하여 기본 아키텍처를 결정합니다. Microsoft.Build.Utilities.ExecutableType 열거형의 멤버로 구문 분석할 수 있어야 합니다.|  
-|`TrackerFrameworkPath`|선택적 assetId:///String?qualifyHint=False&autoUpgrade=True 매개 변수입니다.<br /><br /> FileTracker.dll을 포함하는 적절한 .NET Framework 위치의 경로를 지정합니다.<br /><br /> 설정되면 사용자가 전달하는 FileTracker.dll의 비트가 사용하려는 ResGen.exe의 비트와 일치하는지 확인해야 합니다. 설정되지 않으면 작업이 현재 .NET Framework 버전에 따라 적절한 위치를 결정합니다.|  
-|`TrackerLogDirectory`|선택적 assetId:///String?qualifyHint=False&autoUpgrade=True 매개 변수입니다.<br /><br /> 이 작업 실행 시 발생하는 추적 로그를 추가할 중간 디렉터리를 지정합니다.|  
-|`TrackerSdkPath`|선택적 assetId:///String?qualifyHint=False&autoUpgrade=True 매개 변수입니다.<br /><br /> Tracker.exe를 포함하는 적절한 Windows SDK의 경로를 지정합니다.<br /><br /> 설정되면 사용자가 전달하는 Tracker.exe의 비트가 사용하려는 ResGen.exe의 비트와 일치하는지 확인해야 합니다. 설정되지 않으면 작업이 현재 Windows SDK에 따라 적절한 위치를 결정합니다.|  
-|`TrackFileAccess`|선택적 [Boolean](assetId:///Boolean?qualifyHint=False&autoUpgrade=True) 매개 변수입니다.<br /><br /> true이면 입력 파일의 디렉터리가 상대 파일 경로를 확인하는 데 사용됩니다.|  
+|`ToolArchitecture`|선택적 <xref:System.String?displayProperty=fullName> 매개 변수입니다.<br /><br /> Tracker.exe를 ResGen.exe를 생성하는 데 사용해야 하는지 여부를 결정하는 데 사용됩니다.<br /><br /> <xref:Microsoft.Build.Utilities.ExecutableType> 열거형의 멤버로 구문 분석할 수 있어야 합니다. `String.Empty`이면 추론을 사용하여 기본 아키텍처를 결정합니다. Microsoft.Build.Utilities.ExecutableType 열거형의 멤버로 구문 분석할 수 있어야 합니다.|  
+|`TrackerFrameworkPath`|선택적 `String` 매개 변수입니다.<br /><br /> FileTracker.dll을 포함하는 적절한 .NET Framework 위치의 경로를 지정합니다.<br /><br /> 설정되면 사용자가 전달하는 FileTracker.dll의 비트가 사용하려는 ResGen.exe의 비트와 일치하는지 확인해야 합니다. 설정되지 않으면 작업이 현재 .NET Framework 버전에 따라 적절한 위치를 결정합니다.|  
+|`TrackerLogDirectory`|선택적 `String` 매개 변수입니다.<br /><br /> 이 작업 실행 시 발생하는 추적 로그를 추가할 중간 디렉터리를 지정합니다.|  
+|`TrackerSdkPath`|선택적 `String` 매개 변수입니다.<br /><br /> Tracker.exe를 포함하는 적절한 Windows SDK의 경로를 지정합니다.<br /><br /> 설정되면 사용자가 전달하는 Tracker.exe의 비트가 사용하려는 ResGen.exe의 비트와 일치하는지 확인해야 합니다. 설정되지 않으면 작업이 현재 Windows SDK에 따라 적절한 위치를 결정합니다.|  
+|`TrackFileAccess`|선택적 <xref:System.Boolean> 매개 변수입니다.<br /><br /> true이면 입력 파일의 디렉터리가 상대 파일 경로를 확인하는 데 사용됩니다.|  
 |`UseSourcePath`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`이면 입력 파일의 디렉터리가 상대 파일 경로를 확인하는 데 사용되도록 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  .resx 파일에는 다른 리소스 파일에 대한 링크가 포함될 수 있으므로 .resx 및 .resource 파일 타임스탬프를 비교하는 것만으로는 출력이 최신인지 확인할 수 없습니다. 대신 `GenerateResource` 작업은 .resx 파일에 있는 링크를 따라 이동하여 연결된 파일의 타임스탬프도 확인합니다. 즉, `GenerateResource` 작업을 포함하는 `Inputs` 및 `Outputs` 특성은 일반적으로 사용하지 않아야 합니다. 실제로 실행되어야 할 때 건너뛸 수 있기 때문입니다.  
   
- 이 작업은 위에 나와 있는 매개 변수 외에 <xref:Microsoft.Build.Tasks.TaskExtension> 클래스의 매개 변수를 상속합니다. 이 클래스는 <xref:Microsoft.Build.Utilities.Task> 클래스에서 매개 변수를 상속합니다. 이러한 추가 매개 변수 및 해당 설명이 포함된 목록은 [TaskExtension 기본 클래스](../msbuild/taskextension-base-class.md)를 참조하세요.  
+ 이 작업은 위에 나와 있는 매개 변수 외에 <xref:Microsoft.Build.Tasks.TaskExtension> 클래스에서 직접 상속하는 <xref:Microsoft.Build.Utilities.Task> 클래스의 매개 변수도 상속합니다. 이러한 추가 매개 변수 및 해당 설명이 포함된 목록은 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)를 참조하세요.  
   
  MSBuild 4.0을 사용하여 .NET 3.5 프로젝트를 대상으로 지정하면 x86 리소스에 대해 빌드가 실패할 수 있습니다. 이 문제를 해결하려면 대상을 AnyCPU 어셈블리로 빌드할 수 있습니다.  
   

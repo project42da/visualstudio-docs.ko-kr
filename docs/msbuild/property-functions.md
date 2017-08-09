@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
-ms.openlocfilehash: f351952a256679ec2d6c9dc2daa5288ca7214ad0
-ms.lasthandoff: 03/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: c52ed7c7e6de33d10d2a653a1072766aa9fb8023
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="property-functions"></a>속성 함수
@@ -98,6 +99,10 @@ ms.lasthandoff: 03/01/2017
 -   System.IO.Path  
 
 -   System.Math  
+
+-   System.Runtime.InteropServices.OSPlatform
+
+-   System.Runtime.InteropServices.RuntimeInformation
 
 -   System.UInt16  
 
@@ -195,13 +200,22 @@ ms.lasthandoff: 03/01/2017
 |int BitwiseAnd(int first, int second)|first와 second에 대해 비트 `AND`를 수행합니다(first & second).|  
 |int BitwiseXor(int first, int second)|first와 second에 대해 비트 `XOR`를 수행합니다(first ^ second).|  
 |int BitwiseNot(int first)|비트 `NOT`을 수행합니다(~first).|  
+|bool IsOsPlatform(string platformString)|현재 OS 플랫폼이 `platformString`인지 여부를 지정합니다. `platformString`은 `OSPlatform`의 멤버여야 합니다.|
+|bool IsOSUnixLike|현재 OS가 Unix 시스템인 경우 True입니다.|
+|string NormalizePath(params string[] path)|제공된 경로의 정규화된 전체 경로를 가져오고 해당 경로에 현재 운영 체제에 대한 정확한 디렉터리 구분 문자가 있는지 확인합니다.|
+|string NormalizeDirectory(params string[] path)|제공된 디렉터리의 정규화된 전체 경로를 가져오고 해당 경로에 현재 운영 체제에 대한 정확한 디렉터리 구분 문자와 후행 슬래시가 있는지 확인합니다.|
+|string EnsureTrailingSlash(string path)|제공된 경로에 후행 슬래시가 없으면 후행 슬래시를 추가합니다. 경로가 빈 문자열이면 수정하지 않습니다.|
+|string GetPathOfFileAbove(string file, string startingDirectory)|현재 빌드 파일의 위치 또는 `startingDirectory`(지정된 경우)를 기준으로 파일을 검색합니다.|
+|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|지정된 디렉터리 또는 해당 디렉터리 위 디렉터리 구조의 위치에서 파일을 찾습니다.|
+|string MakeRelative(string basePath, string path)|`path`를 `basePath`의 상대 경로로 설정합니다. `basePath`는 절대 디렉터리여야 합니다. 상대 경로로 설정할 수 없는 `path`는 반환된 축자입니다. `Uri.MakeRelativeUri`와 비슷합니다.|
+|string ValueOrDefault(string conditionValue, string defaultValue)|‘conditionValue’ 매개 변수가 비어 있는 경우에만 ‘defaultValue’ 매개 변수로 문자열을 반환하고, 비어 있지 않으면 conditionValue 값을 반환합니다.|
 
 ##  <a name="nested-property-functions"></a>중첩 속성 함수  
  다음 예제에서 보여 주는 것처럼, 보다 복잡한 함수를 형성하기 위해 속성 함수를 결합할 수 있습니다.  
 
  `$([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))`  
 
- 이 예제에서는 `tempFile` 경로에 의해 지정된 파일의 <xref:System.IO.FileAttributes>`Archive` 비트 값(32 또는 0)을 반환합니다. 열거형 데이터 값은 속성 함수 내에 이름으로 나타날 수 없습니다. 대신 숫자 값(32)을 사용해야 합니다.  
+ 이 예제에서는 <xref:System.IO.FileAttributes> 경로에 의해 지정된 파일의 `Archive``tempFile` 비트 값(32 또는 0)을 반환합니다. 열거형 데이터 값은 속성 함수 내에 이름으로 나타날 수 없습니다. 대신 숫자 값(32)을 사용해야 합니다.  
 
  메타데이터도 중첩 속성 함수에 나타날 수 있습니다. 자세한 내용은 [일괄 처리](../msbuild/msbuild-batching.md)를 참조하세요.  
 

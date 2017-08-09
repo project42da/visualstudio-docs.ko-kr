@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b699132bf1a31d3ef9dc3ba5af3f99c22890c632
+ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
+ms.openlocfilehash: 0a939044b9806236cf55333c30bce24ae0fdb28a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 
@@ -39,10 +39,9 @@ ms.lasthandoff: 05/13/2017
 응용 프로그램을 개발할 때 Live Unit Testing은 자동으로 백그라운드에서 영향을 받는 단위 테스트를 실행하고 Visual Studio IDE에서 실시간으로 결과 및 코드 검사 라이브를 표시합니다. 코드를 수정할 때 Live Unit Testing은 변경 내용이 기존 테스트에 영향을 주는 방법 및 추가한 새 코드를 하나 이상의 기존 테스트에서 검사할지 여부에 대한 피드백을 제공합니다. 그러면 버그를 수정하거나 새로운 기능을 추가할 경우에 사용자가 단위 테스트를 작성하도록 알려 줄 수 있습니다.
 
 > [!NOTE]
-> Visual Studio 2017의 엔터프라이즈 버전에서 .NET Framework를 대상으로 하는 C# 및 Visual Basic 프로젝트에 Live Unit Testing을 사용할 수 있습니다. 현재 .NET Core에서 사용할 수 없습니다.
+> Visual Studio 2017 Enterprise Edition에서 .NET Core 또는 .NET Framework를 대상으로 하는 C# 및 Visual Basic 프로젝트에 Live Unit Testing을 사용할 수 있습니다.
 
 ## <a name="supported-test-frameworks"></a>지원되는 테스트 프레임워크
-
 Live Unit Testing은 다음 테이블에 나열된 세 가지 인기 있는 단위 테스트 프레임워크를 사용합니다. 해당 어댑터와 프레임워크를 지원하는 최소 버전은 테이블에 나열됩니다. 단위 테스트 프레임워크는 NuGet.org에서 모두 사용할 수 있습니다.
  
 <table> 
@@ -63,8 +62,8 @@ Live Unit Testing은 다음 테이블에 나열된 세 가지 인기 있는 단�
 </tr>
 <tr>
    <td>MSTest</td>
-   <td>MSTest.TestAdapter 1.1.4-미리 보기</td>
-   <td>MSTest.TestFramework 1.0.5-미리 보기</td>
+   <td>MSTest.TestAdapter 1.1.11</td>
+   <td>MSTest.TestFramework 1.1.11</td>
 </tr>
 </table>
 
@@ -72,11 +71,11 @@ Live Unit Testing은 다음 테이블에 나열된 세 가지 인기 있는 단�
 
 경우에 따라 Live Unit Testing이 작동하기 위해 솔루션의 프로젝트에서 참조하는 NuGet 패키지를 명시적으로 복원해야 합니다. 이렇게 하려면 솔루션의 명시적 빌드를 수행합니다(최상위 Visual Studio 메뉴에서 **빌드**, **솔루션 다시 빌드**를 선택). 또는 Living Unit Testing을 활성화하기 전에 솔루션에서 패키지를 복원합니다(솔루션을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 복원**을 선택). 
 
-#    <a name="configuring-live-unit-testing"></a>Live Unit Testing 구성
+#   <a name="configuring-live-unit-testing"></a>Live Unit Testing 구성
 
 최상위 Visual Studio 메뉴에서 **도구**, **옵션**을 선택하고 **옵션** 대화 상자의 왼쪽 창에서 **Live Unit Testing**을 선택하여 Live Unit Testing을 구성할 수 있습니다. 다음 그림에서는 대화 상자에서 사용할 수 있는 Live Unit Testing 구성 옵션을 표시합니다.
 
-  ![이미지](~/test/media/lut-options.png)
+  ![이미지](./media/lut-options.png)
 
 구성 가능한 옵션은 다음과 같습니다.
 
@@ -101,25 +100,25 @@ Live Unit Testing에서 파일에 자세한 MSBuild 로그 메시지를 캡처�
 - **중지**는 Live Unit Testing을 완전히 중지합니다. Live Unit Testing은 수집된 모든 데이터를 삭제합니다.
 - **다시 시작**은 **Live Unit Testing** 메뉴에서 **시작**을 선택한 다음 **중지**를 선택하는 것과 동일합니다.
 
-##    <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>입력할 때 편집기에서 검사 시각화 보기
+##  <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>입력할 때 편집기에서 검사 시각화 보기
 
-Live Unit Testing은 일단 활성화되면 Visual Studio 편집기에서 코드 줄 각각을 업데이트하여 작성한 코드에 단위 테스트가 적용되는지 및 적용된 테스트에 통과하는지 여부를 표시합니다.  다음 그림에서는 테스트를 통과하거나 실패한 코드 줄뿐만 아니라 테스트가 적용되지 않은 코드 줄을 보여 줍니다. 녹색 “✓”으로 데코레이트된 줄은 테스트를 통과한 경우에만 적용됩니다. 빨간색 “🞩”으로 데코레이트된 줄은 하나 이상의 테스트에 실패한 경우 적용됩니다. 파란색 “”으로 데코레이트된 줄은 테스트되지 않은 경우에 적용됩니다.
+Live Unit Testing은 일단 활성화되면 Visual Studio 편집기에서 코드 줄 각각을 업데이트하여 작성한 코드에 단위 테스트가 적용되는지 및 적용된 테스트에 통과하는지 여부를 표시합니다.  다음 그림에서는 테스트를 통과하거나 실패한 코드 줄뿐만 아니라 테스트가 적용되지 않은 코드 줄을 보여 줍니다. 녹색 “✓”으로 데코레이팅된 줄은 테스트를 통과한 경우에만 적용됩니다. 빨간색 “🞩”으로 데코레이팅된 줄은 하나 이상의 테스트에 실패한 경우 적용됩니다. 파란색 “”으로 데코레이팅된 줄은 테스트되지 않은 경우에 적용됩니다.
 
-  ![이미지](~/ide/media/lut-codewindow.png)
+  ![이미지](./media/lut-codewindow.png)
 
 코드 편집기에서 코드를 수정하면 즉시 Live Unit Testing 검사 시각화가 업데이트됩니다. 편집 내용을 처리하는 동안 다음 그림과 같이 통과, 실패 아래에 적용된 기호가 아닌 라운드 타이머를 추가하여 데이터가 최신 상태가 아님을 나타내도록 시각화가 변경됩니다.
 
-  ![이미지](~/test/media/lut-codeupdating.png)
+  ![이미지](./media/lut-codeupdating.png)
  
 ## <a name="getting-information-on-successful-or-failed-tests"></a>성공하거나 실패한 테스트에 대한 정보 가져오기
 
 코드 창에서 성공하거나 실패한 기호를 마우스로 가리키면 해당 줄에 도달한 테스트 수를 확인할 수 있습니다. 기호를 클릭하면 다음 그림에서처럼 개별 테스트의 상태를 볼 수 있습니다.
  
-  ![이미지](~/test/media/lut-failedinfo.png) 
+  ![이미지](./media/lut-failedinfo.png) 
 
 도구 설명에서 실패한 테스트를 마우스로 가리키면 아래 이미지에 표시된 대로 확장되어 오류에 대한 추가 정보를 제공합니다. 도구 설명에서 실패한 테스트를 클릭하면 해당 테스트로 이동할 수 있습니다.
 
-  ![이미지](~/test/media/lut-failedmsg.png) 
+  ![이미지](./media/lut-failedmsg.png) 
 
 ## <a name="diagnosing-and-correcting-test-failures"></a>테스트 오류 진단 및 수정
 
@@ -143,8 +142,8 @@ Live Unit Testing은 일단 활성화되면 Visual Studio 편집기에서 코드
 
 예를 들어 수백 개의 테스트 프로젝트를 포함한 솔루션을 구현하는 경우 Live Unit Testing에 참여할 테스트 프로젝트의 대상 집합을 선택할 수 있습니다. 단위 테스트에서 개별 프로젝트를 선택하려면 Live Unit Testing을 시작한 후에 다음을 수행합니다.
 
-1.    Solution Explorer에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **라이브 테스트**, **제외**를 선택하여 전체 솔루션을 제외합니다.
-2.    테스트에 포함하려는 테스트 프로젝트 각각을 마우스 오른쪽 단추로 클릭하고 **라이브 테스트**, **포함**을 선택합니다.
+1.  Solution Explorer에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **라이브 테스트**, **제외**를 선택하여 전체 솔루션을 제외합니다.
+2.  테스트에 포함하려는 테스트 프로젝트 각각을 마우스 오른쪽 단추로 클릭하고 **라이브 테스트**, **포함**을 선택합니다.
  
 코드 편집기 창을 사용하여 개별 테스트 메서드를 포함하거나 제외합니다. 코드 편집기 창에서 테스트 메서드의 서명을 마우스 오른쪽 단추로 클릭하고 **라이브 테스트**, **포함** 또는 **라이브 테스트**, **제외**를 선택합니다. 
 

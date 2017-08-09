@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 79d77230e46bade8e89d4503dbf95b1f1831e464
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 44e9d5e7af0994c494522a043c74046c6667abeb
+ms.openlocfilehash: 3b7d14a96683da16d1c7e6bae6a5226bfbaaa616
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="msbuild"></a>MSBuild
@@ -152,7 +153,7 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
 ###  <a name="BKMK_Tasks"></a> 작업  
  작업은 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트에서 빌드 작업을 수행하는 데 사용하는 실행 코드 단위입니다. 예를 들어, 작업은 입력 파일을 컴파일하거나 외부 도구를 실행할 수 있습니다. 작업은 다시 사용할 수 있으며 다른 개발자가 다른 프로젝트에서 작업을 공유할 수 있습니다.  
   
- 작업의 실행 논리는 관리 코드로 작성되며 [UsingTask](../msbuild/usingtask-element-msbuild.md) 요소를 사용하여 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에 매핑됩니다. <xref:Microsoft.Build.Framework.ITask> 인터페이스를 구현하는 관리되는 형식을 작성하여 작업을 직접 작성할 수 있습니다. 작업을 작성하는 방법에 대한 자세한 내용은 [작업 작성](../msbuild/task-writing.md)을 참조하세요.  
+ 작업의 실행 논리는 관리 코드로 작성되며 [UsingTask](../msbuild/usingtask-element-msbuild.md) 요소를 사용하여 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에 매핑됩니다. <xref:Microsoft.Build.Framework.ITask> 인터페이스를 구현하는 관리되는 형식을 만들어 자체의 작업을 작성할 수 있습니다. 작업을 작성하는 방법에 대한 자세한 내용은 [작업 작성](../msbuild/task-writing.md)을 참조하세요.  
   
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에는 요구 사항에 맞게 수정할 수 있는 일반 작업이 포함되어 있습니다.  예를 들어 파일을 복사하는 [Copy](../msbuild/copy-task.md), 디렉터리를 만드는 [MakeDir](../msbuild/makedir-task.md), Visual C# 소스 코드 파일을 컴파일하는 [Csc](../msbuild/csc-task.md) 등이 있습니다. 사용할 수 있는 작업 및 사용법 정보에 대한 전체 목록은 [작업 참조](../msbuild/msbuild-task-reference.md)를 참조하세요.  
   
@@ -224,5 +225,6 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
  [MSBuild 참조](../msbuild/msbuild-reference.md)  
  참조 정보를 포함하는 항목에 대한 링크입니다.  
   
- 용어  
+ [용어집](msbuild-glossary.md)
  일반적인 MSBuild 용어를 정의합니다.
+

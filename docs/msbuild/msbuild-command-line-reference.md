@@ -37,10 +37,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 47596188b7e415840ee45a97aff2076bd4d887bd
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: e55b81428aa7d54d8383955c67e206df919bb1d1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild 명령줄 참조
@@ -69,7 +69,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |/noautoresponse|/noautorsp|MSBuild.rsp 파일을 자동으로 포함하지 않도록 합니다.|  
 |/nodeReuse:`value`|/nr:`value`|MSBuild 노드를 다시 사용하거나 다시 사용하지 않도록 설정합니다. 다음 값을 지정할 수 있습니다.<br /><br /> -   **True**. 노드는 후속 빌드에 사용될 수 있도록 빌드가 완료된 후에도 남습니다(기본값).<br />-   **False**. 빌드가 완료된 후에는 노드가 남지 않습니다.<br /><br /> 노드는 실행되고 있는 프로젝트에 해당됩니다. **/maxcpucount** 스위치를 포함하는 경우는 여러 노드가 동시에 실행될 수 있습니다.|  
 |/nologo||시작 배너 또는 저작권 메시지를 표시하지 않습니다.|  
-|/preprocess[:`filepath`]|/pp[:`filepath`]|가져올 모든 파일을 인라인하고 해당 경계를 표시하여 집계된 단일 프로젝트 파일을 만듭니다. 이 스위치를 사용하여 가져올 파일, 파일을 가져올 위치 및 빌드에 사용할 파일을 보다 쉽게 확인할 수 있습니다. 이 스위치를 사용하면 프로젝트가 빌드되지 않습니다.<br /><br /> `filepath`를 지정하는 경우 집계된 프로젝트 파일은 파일에 출력됩니다. 그렇지 않은 경우 출력이 콘솔 창에 나타납니다.<br /><br /> `Import` 요소를 사용하여 프로젝트 파일을 다른 프로젝트 파일에 삽입하는 방법에 대한 자세한 내용은 [Import 요소(MSBuild)](../msbuild/import-element-msbuild.md) 및 [방법: 여러 프로젝트 파일에서 동일한 대상 사용](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)을 참조하세요.|  
+|<a name="preprocess"></a> /preprocess[:`filepath`]|/pp[:`filepath`]|가져올 모든 파일을 인라인하고 해당 경계를 표시하여 집계된 단일 프로젝트 파일을 만듭니다. 이 스위치를 사용하여 가져올 파일, 파일을 가져올 위치 및 빌드에 사용할 파일을 보다 쉽게 확인할 수 있습니다. 이 스위치를 사용하면 프로젝트가 빌드되지 않습니다.<br /><br /> `filepath`를 지정하는 경우 집계된 프로젝트 파일은 파일에 출력됩니다. 그렇지 않은 경우 출력이 콘솔 창에 나타납니다.<br /><br /> `Import` 요소를 사용하여 프로젝트 파일을 다른 프로젝트 파일에 삽입하는 방법에 대한 자세한 내용은 [Import 요소(MSBuild)](../msbuild/import-element-msbuild.md) 및 [방법: 여러 프로젝트 파일에서 동일한 대상 사용](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)을 참조하세요.|  
 |/property:`name`=`value`|/p:`name`=`value`|지정된 프로젝트 수준 속성을 설정하거나 재정의합니다. 여기서 `name`은 속성 이름이고 `value`는 속성 값입니다. 각 속성을 개별적으로 지정하거나 다음 예제에서와 같이 세미콜론 또는 쉼표를 사용하여 여러 속성을 구분합니다.<br /><br /> `/property:WarningLevel=2;OutDir=bin\Debug`|  
 |/target:`targets`|/t:`targets`|프로젝트에서 지정된 대상을 빌드합니다. 각 대상을 개별적으로 지정하거나 다음 예제에서와 같이 세미콜론 또는 쉼표를 사용하여 여러 대상을 구분합니다.<br /><br /> `/target:Resources;Compile`<br /><br /> 이 스위치를 사용하여 대상을 지정하는 경우 프로젝트 파일의 `DefaultTargets` 특성에서 다른 대상 대신 이 대상이 실행됩니다. 자세한 내용은 [대상 빌드 순서](../msbuild/target-build-order.md) 및 [방법: 먼저 빌드할 대상 지정](../msbuild/how-to-specify-which-target-to-build-first.md)을 참조하세요.<br /><br /> 대상은 작업 그룹입니다. 자세한 내용은 [대상](../msbuild/msbuild-targets.md)을 참조하세요.|  
 |/toolsversion:`version`|/tv:`version`|다음 예제에서와 같이 프로젝트 빌드에 사용할 도구 집합 버전을 지정합니다. `/toolsversion:3.5`<br /><br /> 이 스위치를 사용하면 프로젝트를 빌드하고 [프로젝트 요소(MSBuild)](../msbuild/project-element-msbuild.md)에 지정된 버전과 다른 버전을 지정할 수 있습니다. 자세한 내용은 [ToolsVersion 설정 재정의](../msbuild/overriding-toolsversion-settings.md)를 참조하세요.<br /><br /> MSBuild 4.5의 경우 `version`에 대해 2.0, 3.5 및 4.0 값을 지정할 수 있습니다. 4.0을 지정하는 경우 `VisualStudioVersion` 빌드 속성은 사용할 하위 도구 집합을 지정합니다. 자세한 내용은의 [MSBuild 도구 집합(ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)의 하위 도구 집합 섹션을 참조하세요.<br /><br /> 도구 집합은 응용 프로그램을 빌드하는 데 사용되는 작업, 대상 및 도구로 구성됩니다. 도구에는 csc.exe 및 vbc.exe와 같은 컴파일러가 포함됩니다. 도구 집합에 대한 자세한 내용은 [도구 집합(ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md), [표준 및 사용자 지정 도구 집합 구성](../msbuild/standard-and-custom-toolset-configurations.md) 및 [멀티 타기팅](../msbuild/msbuild-multitargeting-overview.md)을 참조하세요. **참고:** 도구 집합 버전은 프로젝트가 실행되도록 빌드되는 .NET Framework 버전에 해당하는 대상 프레임워크 버전과는 다릅니다. 자세한 내용은 [대상 프레임 워크 및 대상 플랫폼](../msbuild/msbuild-target-framework-and-target-platform.md)을 참조하세요.|  
@@ -107,3 +107,4 @@ msbuild SlnFolders.sln /t:NotInSolutionfolder:Rebuild;NewFolder\InSolutionFolder
 ## <a name="see-also"></a>참고 항목  
  [MSBuild 참조](../msbuild/msbuild-reference.md)   
  [일반적인 MSBuild 프로젝트 속성](../msbuild/common-msbuild-project-properties.md)
+

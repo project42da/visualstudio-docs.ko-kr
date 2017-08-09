@@ -34,10 +34,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a00b80092a44190d626b93b0ecc5689bafd1a4e3
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: 8b60481a9895e818773273cecbf89212f557d620
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>연습: 관리 코드에 대한 단위 테스트 만들기 및 실행
@@ -85,7 +85,7 @@ ms.lasthandoff: 02/22/2017
   
 4.  응용 프로그램 형식 목록에서 **클래스 라이브러리**를 클릭합니다.  
   
-5.  **이름** 상자에 `Bank`를 입력한 다음 **확인**을 클릭합니다.  
+5.  In the **이름** 상자에 `Bank` 를 가리킨 다음 **확인**을 참조하세요.  
   
     > [!NOTE]
     >  "Bank"라는 이름이 이미 사용되고 있으면 프로젝트에 대해 다른 이름을 선택합니다.  
@@ -125,7 +125,7 @@ public void Debit(double amount)
 ```  
   
 ##  <a name="BKMK_Create_a_unit_test_project"></a> 단위 테스트 프로젝트 만들기  
- **필수 조건**: [연습 준비](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)절차의 단계를 따릅니다.  
+ **필수 조건**: [Prepare the walkthrough](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)절차의 단계를 따릅니다.  
   
 #### <a name="to-create-a-unit-test-project"></a>단위 테스트 프로젝트를 만들려면  
   
@@ -194,7 +194,7 @@ using BankAccountNS;
   
  테스트 중인 메서드를 분석한 결과, 세 가지 이상의 동작을 확인하기로 결정했습니다.  
   
-1.  이 메서드는 대변 금액이 잔액보다 큰 경우 [ArgumentOutOfRangeException](assetId:///ArgumentOutOfRangeException?qualifyHint=False&autoUpgrade=True) 을 발생시킵니다.  
+1.  이 메서드는 대변 금액이 잔액보다 큰 경우 <xref:System.ArgumentOutOfRangeException> 을 발생시킵니다.  
   
 2.  또한 대변 금액이 0보다 작을 경우에도 `ArgumentOutOfRangeException` 을 발생시킵니다.  
   
@@ -228,7 +228,7 @@ using BankAccountNS;
     }  
     ```  
   
- 이 메서드는 상당히 간단합니다. 기초 잔액으로 새 `BankAccount` 개체를 만든 다음 유효한 금액을 인출합니다. 여기서는 관리 코드용 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> 메서드에 대해 Microsoft 단위 테스트 프레임워크를 사용하여 마감 잔액이 기대한 것과 같은지 확인합니다.  
+ 이 메서드는 상당히 간단합니다. 기초 잔액으로 새 `BankAccount` 개체를 만든 다음 유효한 금액을 인출합니다. 관리 코드 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> 메서드에 Microsoft 단위 테스트 프레임워크를 사용하여 마감 잔액이 기대한 것과 같은지 확인합니다.  
   
 ###  <a name="BKMK_Test_method_requirements"></a> 테스트 메서드 요구 사항  
  테스트 메서드는 다음 요구 사항을 충족해야 합니다.  
@@ -310,7 +310,7 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
   
 ```  
   
- 여기서는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> 특성을 사용하여 올바른 예외가 throw되었음을 어설션합니다. `ArgumentOutOfRangeException` 을 throw되는 경우가 아니면 이 특성으로 인해 테스트에 실패합니다. 양수 및 음수 `debitAmount` 값을 모두 사용하여 테스트를 실행한 후 금액이 0보다 작은 경우 제네릭 <xref:System.ApplicationException>을 throw하는 테스트를 위해 메서드를 일시적으로 수정하면 테스트가 올바르게 작동함을 알 수 있습니다. 인출한 금액이 잔액보다 많을 경우를 테스트하려면 다음을 수행해야 합니다.  
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> 특성을 사용하여 올바른 예외가 throw되었음을 어설션합니다. `ArgumentOutOfRangeException` 을 throw되는 경우가 아니면 이 특성으로 인해 테스트에 실패합니다. 양수 및 음수 `debitAmount` 값을 모두 사용하여 테스트를 실행한 후 금액이 0보다 작은 경우 제네릭 <xref:System.ApplicationException> 을 throw하는 테스트를 위해 메서드를 일시적으로 수정하면 테스트가 올바르게 작동함을 알 수 있습니다. 인출한 금액이 잔액보다 많을 경우를 테스트하려면 다음을 수행해야 합니다.  
   
 1.  `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`라는 새 테스트 메서드를 만듭니다.  
   
@@ -332,7 +332,7 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
 throw new ArgumentOutOfRangeException("amount");  
 ```  
   
- MSDN 라이브러리를 검색하면 많은 정보를 제공하는 생성자가 있음을 알 수 있습니다. <xref:System.ArgumentOutOfRangeException.%23ctor%2A>`(String, Object, String)`에는 인수 이름, 인수 값 및 사용자 정의 메시지가 포함됩니다. 이 생성자를 사용하도록 테스트 중인 메서드를 리팩터링할 수 있습니다. 더 좋은 점은 공개적으로 사용할 수 있는 형식 멤버를 사용하여 오류를 지정할 수 있다는 점입니다.  
+ MSDN 라이브러리를 검색하면 많은 정보를 제공하는 생성자가 있음을 알 수 있습니다. <xref:System.ArgumentOutOfRangeException.%23ctor%2A>`(String, Object, String)` 에는 인수 이름, 인수 값 및 사용자 정의 메시지가 포함됩니다. 이 생성자를 사용하도록 테스트 중인 메서드를 리팩터링할 수 있습니다. 더 좋은 점은 공개적으로 사용할 수 있는 형식 멤버를 사용하여 오류를 지정할 수 있다는 점입니다.  
   
  **테스트 중인 코드 리팩터링**  
   
@@ -369,7 +369,7 @@ public const string DebitAmountLessThanZeroMessage = "Debit amount less than zer
   
 -   메시지(생성자의 세 번째 매개 변수)에 `DebitAmountExceedsBalanceMessage` 가 `BankAccount` 클래스에 정의되어 있음을 어셜션합니다.  
   
- Microsoft 단위 테스트 프레임워크의 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> 메서드를 사용하면 첫 번째 옵션에 필요한 계산을 수행하지 않고도 두 번째 옵션을 확인할 수 있습니다.  
+ Microsoft 단위 테스트 프레임워크에서 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> 메서드를 사용하면 첫 번째 옵션에서 필요한 계산 없이도 두 번째 옵션을 확인할 수 있습니다.  
   
  `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` 를 수정하는 두 번째 시도의 예를 들면 다음과 같습니다.  
   

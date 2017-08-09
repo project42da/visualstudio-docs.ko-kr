@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 17fd26b26e25c31772adf4b8629852256317968c
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: 6a45db14ee055c4fbdf738cf36df503a4a1fffd0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild 도구 집합(ToolsVersion)
@@ -68,9 +68,9 @@ MSBuild는 응용 프로그램을 빌드하기 위한 작업, 대상 및 도구�
   
  `ToolsVersion` 특성은 프로젝트 마이그레이션에도 사용됩니다. 예를 들어, Visual Studio 2010에서 Visual Studio 2008 프로젝트를 열면 프로젝트 파일이 ToolsVersion=“4.0”을 포함하도록 업데이트됩니다. 그런 다음 Visual Studio 2008에서 해당 프로젝트를 열려고 하면 업그레이드된 `ToolsVersion`이 인식되지 않으므로 이 특성이 여전히 3.5로 설정된 것처럼 프로젝트가 빌드됩니다.  
   
- Visual Studio 2010과 Visual Studio 2012는 ToolsVersion 4.0을 사용합니다. Visual Studio 2013은 ToolsVersion 12.0을 사용합니다. 많은 경우에 Visual Studio의 세 버전 모두에서 프로젝트를 수정하지 않고 열 수 있습니다. Visual Studio는 항상 올바른 도구 집합을 사용하지만 사용된 버전이 프로젝트 파일의 버전과 일치하지 않을 경우 알림이 표시됩니다. 도구 집합은 대부분의 경우에 호환되므로 거의 모든 경우에 이 경고는 심각하지 않습니다.  
+ Visual Studio 2010과 Visual Studio 2012는 ToolsVersion 4.0을 사용합니다. Visual Studio 2013은 ToolsVersion 12.0을 사용합니다. Visual Studio 2015는 ToolsVersion 14.0을 사용하고 Visual Studio 2017은 ToolsVersion 15.0을 사용합니다. 많은 경우에 Visual Studio의 여러 버전에서 프로젝트를 수정하지 않고 열 수 있습니다. Visual Studio는 항상 올바른 도구 집합을 사용하지만 사용된 버전이 프로젝트 파일의 버전과 일치하지 않을 경우 알림이 표시됩니다. 도구 집합은 대부분의 경우에 호환되므로 거의 모든 경우에 이 경고는 심각하지 않습니다.  
   
- 이 항목의 뒷부분에 설명되어 있는 하위 도구 집합을 통해 MSBuild는 빌드가 실행되는 컨텍스트를 기반으로 사용할 도구 집합을 자동으로 전환할 수 있습니다. 예를 들어, MSBuild는 Visual Studio 2012에서 실행될 때 Visual Studio 2010에서 실행될 때보다 최신 도구 집합을 사용하며 사용자가 명시적으로 프로젝트 파일을 변경할 필요가 없습니다. 자세한 내용은 [사용자 지정 프로젝트의 버전 인식 설정](../misc/making-custom-projects-version-aware.md)을 참조하세요.  
+ 이 항목의 뒷부분에 설명되어 있는 하위 도구 집합을 통해 MSBuild는 빌드가 실행되는 컨텍스트를 기반으로 사용할 도구 집합을 자동으로 전환할 수 있습니다. 예를 들어, MSBuild는 Visual Studio 2012에서 실행될 때 Visual Studio 2010에서 실행될 때보다 최신 도구 집합을 사용하며 사용자가 명시적으로 프로젝트 파일을 변경할 필요가 없습니다.  
   
 ## <a name="toolset-implementation"></a>도구 집합 구현  
  도구 집합을 구성하는 다양한 도구, 대상 및 작업의 경로를 선택하여 도구 집합을 구현합니다. MSBuild가 정의하는 도구 집합의 도구는 다음 소스에서 가져옵니다.  
@@ -134,3 +134,4 @@ MSBuild는 응용 프로그램을 빌드하기 위한 작업, 대상 및 도구�
 ## <a name="see-also"></a>참고 항목  
  [표준 및 사용자 지정 도구 집합 구성](../msbuild/standard-and-custom-toolset-configurations.md)   
  [멀티 타기팅](../msbuild/msbuild-multitargeting-overview.md)
+
