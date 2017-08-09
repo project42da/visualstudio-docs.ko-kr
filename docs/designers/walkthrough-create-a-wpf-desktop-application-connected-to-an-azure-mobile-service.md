@@ -13,26 +13,11 @@ caps.latest.revision: 7
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7716a0e9249c67760ae7b31160dcae89b77b9ca7
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: b42e50dcfc4820b750c04085f1e881ee25f786f9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>연습: Azure 모바일 서비스에 연결된 WPF 데스크톱 응용 프로그램 만들기
@@ -41,7 +26,7 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
 ##  <a name="Requirements"></a> 필수 조건  
  이 연습을 완료하려면 다음이 필요합니다.  
   
--   Visual Studio 2015 – WPF 개발을 지원하는 버전.  
+-   Visual Studio 2017 또는 WPF 개발을 지원하는 모든 버전.  
   
 -   활성 Microsoft Azure 계정.  
   
@@ -581,8 +566,8 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
 ## <a name="next-steps"></a>다음 단계  
  Azure 백 엔드를 사용한 WPF 데스크톱 응용 프로그램의 매우 간단한 예제를 완료했습니다. 물론, 실제 응용 프로그램은 훨씬 더 복잡할 수 있지만 동일한 기본 개념이 적용됩니다. [.NET Framework의 WPF](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)를 참조하세요.  
   
- 색, 모양, 그래픽 및 심지어 애니메이션을 추가하여 사용자 인터페이스를 보다 매력적으로 만들 수 있습니다. [Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](../designers/designing-xaml-in-visual-studio.md)을 참조하세요.  
-  
+ 색, 모양, 그래픽 및 심지어 애니메이션을 추가하여 사용자 인터페이스를 보다 매력적으로 만들 수 있습니다. [Visual Studio에서 XAML 디자이너를 사용하여 UI 만들기](creating-a-ui-by-using-xaml-designer-in-visual-studio.md) 및 [Blend for Visual Studio를 사용하여 UI 만들기](creating-a-ui-by-using-blend-for-visual-studio.md)를 참조하세요. 도구 비교를 보려면 [Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](../designers/designing-xaml-in-visual-studio.md)을 참조하세요.  
+
  Azure 모바일 서비스를 사용하여 기존 SQL 데이터베이스 또는 다른 데이터 원본에 연결할 수 있습니다. [모바일 서비스 설명서](http://azure.microsoft.com/en-us/services/app-service/mobile/)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

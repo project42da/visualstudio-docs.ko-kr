@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio의 Python용 CookieCutter 확장 | Microsoft Docs"
 ms.custom: 
-ms.date: 5/8/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 783da5fd-726c-4716-994e-aa04d6b75896
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: 44aa74104cbb27de62fe739dbdd8f269fbf42c53
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 6db7e2efc54414dcb72899ab3238a9b7a0390921
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -40,15 +27,15 @@ ms.lasthandoff: 05/09/2017
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/)는 템플릿을 검색하고, 템플릿 옵션을 입력하며, 프로젝트와 파일을 만들 수 있는 그래픽 사용자 인터페이스를 제공합니다. Visual Studio 2017에 포함되어 있으며, 이전 버전의 Visual Studio에서는 개별적으로 설치할 수 있습니다.
 
-Cookiecutter에는 Python 3.3 이상(32비트 또는 64비트) 또는 Anaconda 3 4.2 이상(32비트 또는 64비트)이 필요합니다. 적합한 Python 인터프리터를 사용할 수 없으면 Visual Studio에서 경고를 표시합니다. Visual Studio를 실행하는 중에 Python 인터프리터를 설치하는 경우 Cookiecutter 도구 모음에서 [홈] 단추를 클릭하여 새로 설치된 인터프리터를 검색합니다.
+Cookiecutter에는 Python 3.3 이상(32비트 또는 64비트) 또는 Anaconda 3 4.2 이상(32비트 또는 64비트)이 필요합니다. 적합한 Python 인터프리터를 사용할 수 없는 경우 Visual Studio에서 경고가 표시됩니다. Visual Studio를 실행하는 중에 Python 인터프리터를 설치하는 경우 Cookiecutter 도구 모음에서 [홈] 단추를 클릭하여 새로 설치된 인터프리터를 검색합니다.
 
-설치되면 **보기 > Cookicutter 탐색기**를 선택하여 다음 창을 엽니다.
+설치되면 **보기 > Cookiecutter 탐색기**를 선택하여 다음 창을 엽니다.
 
-![Cookiecutter 주 창](~/python/media/cookiecutter-overview.png)
+![Cookiecutter 주 창](media/cookiecutter-overview.png)
 
 ## <a name="cookiecutter-workflow"></a>Cookiecutter 워크플로
 
-Cookiecutter 작업은 다음 섹션에서 설명한 대로 템플릿을 검색하여 선택하고, 로컬 컴퓨터에 복제하고, 옵션을 설정한 다음, 해당 템플릿에서 코드를 만드는 프로세스입니다.
+Cookiecutter 작업은 다음 섹션에서 설명한 대로 템플릿을 검색하여 선택하고, 로컬 컴퓨터에 복제하고, 옵션을 설정한 다음 해당 템플릿에서 코드를 만드는 프로세스입니다.
 
 ### <a name="browsing-templates"></a>템플릿 찾아보기
 
@@ -76,27 +63,27 @@ Cookiecutter 홈페이지에는 선택하여 다음과 같은 그룹으로 구�
 
 템플릿을 로컬로 설치하면 Cookiecutter에서 옵션 페이지를 표시합니다. 이 페이지에서 Cookiecutter를 통해 다른 옵션과 함께 파일을 생성하려는 위치를 지정할 수 있습니다.
 
-![Cookiecutter 옵션 페이지](~/python/media/cookiecutter-template-options.png)
+![Cookiecutter 옵션 페이지](media/cookiecutter-template-options.png)
 
 각 Cookiecutter 템플릿마다 고유한 옵션 집합을 정의하고 각 옵션에 대해 기본값(각 입력 필드에 제안된 텍스트로 표시됨)을 지정합니다. 기본값은 종종 다른 옵션을 사용하는 동적 값인 경우 코드 조각일 수 있습니다. 
 
-사용자 구성 파일을 사용하여 특정 옵션에 대한 기본값을 사용자 지정할 수 있습니다. Cookiecutter 확장에서 사용자 구성 파일을 감지하면 템플릿의 기본값을 사용자 구성 파일의 기본값으로 덮어씁니다. 여기에 대해서는 Cookiecutter 설명서의 [사용자 구성](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html)(영문) 섹션에서 설명합니다.
+사용자 구성 파일을 사용하여 특정 옵션에 대한 기본값을 사용자 지정할 수 있습니다. Cookiecutter 확장에서 사용자 구성 파일을 감지하면 템플릿의 기본값을 사용자 구성 파일의 기본값으로 덮어씁니다. 이 동작에 대해서는 Cookiecutter 설명서의 [User Config](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html)(사용자 구성) 섹션에서 설명합니다.
 
 템플릿에서 코드 생성 후 실행할 특정 Visual Studio 작업을 지정하면 이러한 작업을 건너뛰도록 선택할 수 있는 **완성 시 추가 작업 실행** 추가 옵션이 표시됩니다. 가장 일반적으로 사용되는 작업은 웹 브라우저를 열고, 편집기에서 파일을 열고, 종속성을 설치하는 등입니다.
 
 ### <a name="create"></a>만들기
 
-옵션을 설정했으면 **만들기**를 선택하여 코드를 생성합니다. 출력 폴더가 비어 있지 않으면 경고가 표시됩니다. 템플릿의 출력에 익숙하고 파일 덮어쓰기에 신경 쓰지 않는다면 경고를 해제할 수 있습니다. 그렇지 않으면 **취소**를 선택하고, 빈 출력 폴더를 지정한 다음, 이 출력 폴더에 만든 파일을 수동으로 복사합니다.
+옵션을 설정했으면 **만들기**를 선택하여 코드를 생성합니다(출력 폴더가 비어 있지 않은 경우 경고가 표시됨). 템플릿의 출력에 익숙하고 파일 덮어쓰기에 신경 쓰지 않는다면 경고를 해제할 수 있습니다. 그렇지 않으면 **취소**를 선택하고, 빈 출력 폴더를 지정한 다음, 이 출력 폴더에 만든 파일을 수동으로 복사합니다.
 
 파일이 성공적으로 만들어졌으면 Cookiecutter의 **솔루션 탐색기**에서 파일을 여는 옵션을 제공합니다.
 
-![솔루션 탐색기 명령을 보여 주는 Cookiecutter](~/python/media/cookiecutter-files-created.png)
+![솔루션 탐색기 명령을 보여 주는 Cookiecutter](media/cookiecutter-files-created.png)
 
 ## <a name="cookiecutter-options"></a>Cookiecutter 옵션
 
 Cookiecutter 옵션은 **도구 > 옵션 > Cookiecutter**를 통해 사용할 수 있습니다.
 
-![Cookiecutter 옵션](~/python/media/cookiecutter-tools-options.png)
+![Cookiecutter 옵션](media/cookiecutter-tools-options.png)
 
 | 옵션 | 설명 |
 | --- | --- |
@@ -112,12 +99,12 @@ Cookiecutter 템플릿 작성의 기본 사항은 [Cookiecutter 설명서](https
 - 문자열: 변수 이름의 레이블, 값 입력을 위한 텍스트 상자 및 기본값을 보여 주는 워터마크입니다. 텍스트 상자의 도구 설명에는 기본값이 표시됩니다.
 - 목록: 변수 이름의 레이블 및 값 선택을 위한 콤보 상자입니다. 콤보 상자의 도구 설명에는 기본값이 표시됩니다.
 
-Visual Studio 관련의 `cookiecutter.json` 파일에 추가 메타데이터를 지정하여 향상시킬 수 있습니다(Cookiecutter CLI에서는 무시됨). 모든 속성은 선택적입니다.
+Visual Studio와 관련된 `cookiecutter.json` 파일에 추가 메타데이터를 지정하여 이 렌더링에서 향상할 수 있습니다(Cookiecutter CLI에서는 무시됨). 모든 속성은 선택적입니다.
 
 | 속성 | 설명 |
 | --- | --- |
 | 레이블 | 변수 이름 대신 변수의 편집기 위에 표시되는 항목을 지정합니다. |
-| 설명 | 편집 컨트롤에 표시되는 도구 설명에 해당 변수의 기본값 대신 해당 설명이 표시되도록 지정합니다. |
+| 설명 | 해당 변수의 기본값 대신 편집 컨트롤에 표시되는 도구 설명을 지정합니다. |
 | URL | URL을 표시하는 도구 설명을 사용하여 레이블을 하이퍼링크로 변경합니다. 하이퍼링크를 클릭하면 사용자의 기본 브라우저를 해당 URL로 엽니다. |
 | 선택기 | 변수에 대한 편집기의 사용자 지정을 허용합니다. 현재 지원되는 선택기는 다음과 같습니다.<ul><li>`string`: 문자열에 대한 기본 표준 텍스트 상자입니다.</li><li>`list`: 목록에 대한 기본 표준 콤보 상자입니다.</li><li>`yesno`: 문자열에 대해 `y`와 `n` 중에서 선택하는 콤보 상자입니다.</li><li>`odbcConnection`: 데이터베이스 연결 대화 상자를 호출하는 "..." 단추가 있는 텍스트 상자입니다.</li></ul> |
 
@@ -154,7 +141,7 @@ Cookiecutter에는 *생성 후 후크*라는 기능이 있으므로 파일을 �
 
 예를 들어 Visual Studio 편집기 또는 웹 브라우저에서 파일을 열거나, 가상 환경을 만들고 패키지 요구 사항을 설치하도록 사용자에게 요청하는 Visual Studio UI를 트리거할 수 있습니다.
 
-이러한 시나리오를 허용하기 위해 Visual Studio에서는 사용자가 [솔루션 탐색기]에서 생성된 파일을 열거나 파일이 기존 프로젝트에 추가된 후에 실행할 명령을 설명하는 확장 메타데이터를 `cookiecutter.json`에서 찾습니다. (여기서 다시 한 번, 사용자가 템플릿 옵션에서 **완성 시 추가 작업 실행**을 선택 취소하여 작업 실행을 건너뛰도록 선택할 수 있습니다.)
+이러한 시나리오를 허용하기 위해 Visual Studio에서는 사용자가 [솔루션 탐색기]에서 생성된 파일을 열거나 파일이 기존 프로젝트에 추가된 후에 실행할 명령을 설명하는 확장 메타데이터를 `cookiecutter.json`에서 찾습니다. (사용자는 다시 한번 템플릿 옵션에서 **완성 시 추가 작업 실행**을 선택 취소하여 작업 실행을 옵트아웃(opt out)할 수 있습니다.)
 
 예제:
 
@@ -189,7 +176,7 @@ Cookiecutter에는 *생성 후 후크*라는 기능이 있으므로 파일을 �
 ]
 ```
 
-여러 인수에 대해서는 배열을 사용합니다. 스위치의 경우 스위치와 해당 값을 적절한 인용 부호로 묶은 별도의 인수로 분할합니다. 예:
+여러 인수에 대해서는 배열을 사용합니다. 스위치의 경우 스위치와 해당 값을 별도의 인수로 분할하고 적절한 따옴표로 묶습니다. 예:
 
 ```json
 "_visual_studio_post_cmds": [
@@ -206,17 +193,17 @@ Cookiecutter에는 *생성 후 후크*라는 기능이 있으므로 파일을 �
 
 인수는 다른 Cookiecutter 변수를 참조할 수 있습니다. 위의 예제에서 내부 `_output_folder_path` 변수는 생성된 파일의 절대 경로를 구성하는 데 사용됩니다.
 
-`Python.InstallProjectRequirements` 명령은 기존 프로젝트에 파일을 추가할 때만 작동합니다. 이는 [솔루션 탐색기]에서 Python 프로젝트로 처리되고, [솔루션 탐색기] - [폴더 보기]에서 메시지를 받을 프로젝트가 없기 때문입니다. 이 제한은 향후 릴리스에서 해결하겠습니다(일반적으로 더 나은 폴더 보기 지원).
+`Python.InstallProjectRequirements` 명령은 기존 프로젝트에 파일을 추가할 때만 작동합니다. 이 제한은 명령이 솔루션 탐색기에서 Python 프로젝트로 처리되고, 솔루션 탐색기 - 폴더 보기에서 메시지를 받을 프로젝트가 없기 때문에 발생합니다. 향후 릴리스에서는 이 제한 사항을 해결하고 전반적으로 더 나은 폴더 보기를 지원하겠습니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
 ### <a name="error-loading-template"></a>템플릿 로드 중 오류
 
-일부 템플릿에서 부울과 같은 잘못된 `cookiecutter.json` 데이터 형식을 사용할 수도 있습니다. 이 경우 템플릿 작성자에게 보고해야 합니다. 템플릿 정보 창에서 **문제** 링크를 클릭합니다.
+일부 템플릿에서 부울과 같은 잘못된 `cookiecutter.json` 데이터 형식을 사용할 수도 있습니다. 템플릿 정보 창에서 **문제** 링크를 선택하여 이러한 인스턴스를 템플릿 작성자에게 보고합니다.
 
 ### <a name="hook-script-failed"></a>후크 스크립트 실패
 
-일부 템플릿에서 Cookiecutter UI와 호환되지 않는 생성 후 스크립트를 사용할 수도 있습니다. 예를 들어 터미널 콘솔을 사용하지 않기 때문에 사용자에게 입력을 쿼리하는 스크립트가 실패합니다.
+일부 템플릿에서 Cookiecutter UI와 호환되지 않는 생성 후 스크립트를 사용할 수도 있습니다. 예를 들어 터미널 콘솔을 사용하지 않기 때문에 사용자에게 입력을 쿼리하는 스크립트는 실패합니다.
 
 ### <a name="hook-script-not-supported-on-windows"></a>Windows에서 지원하지 않는 후크 스크립트
 
@@ -237,7 +224,7 @@ Cookiecutter에는 *생성 후 후크*라는 기능이 있으므로 파일을 �
 실행 실패:
 
 - **iknite/cookiecutter-ansible-role**(사후 후크 스크립트에 콘솔 입력 필요)
-- **benregn/cookiecutter-django-ansible**(jinja 오류)
+- **benregn/cookiecutter-django-ansible**(Jinja 오류)
 
 bash 사용(치명적이지 않음):
 

@@ -26,11 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: e59263c352084107d9849ab656b8b7d034337c53
+ms.translationtype: HT
+ms.sourcegitcommit: 359e1eb5df8f19774d352ace631802367b6dd8c9
+ms.openlocfilehash: 2a58b84403189d824494af85bc732a1b8cf3d0b6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 질문과 대답
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/13/2017
 
 **대답:**
 
-현재 Live Unit Testing은 .NET Core와 호환되지 않습니다. 나중에 이 지원을 추가하려고 합니다. 
+예. Live Unit Testing은 .NET Core 및 .NET Framework와 호환됩니다. 최근에 Visual Studio 2017 버전 15.3 미리 보기에서 .NET Core 지원이 추가되었습니다. 
 
 ## <a name="why-doesnt-live-unit-testing-work-when-i-turn-it-on"></a>Live Unit Testing을 설정해도 작동하지 않는 이유는 무엇인가요? 
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/13/2017
 
 - 솔루션의 프로젝트에서 참조하는 NuGet 패키지가 복원되지 않은 경우 Live Unit Testing은 작동하지 않습니다. Live Unit Testing을 설정하기 전에 솔루션을 명시적으로 빌드하거나 솔루션의 NuGet 패키지를 복원하면 이 문제가 해결되어야 합니다. 
 
-- 프로젝트에서 MSTest 기반 테스트를 사용하는 경우 `Microsoft.VisualStudio.QualityTools.UnitTestFramework`에 대한 참조를 제거하고 최신 MSTest NuGet 패키지, `MSTest.TestAdapter`(1.1.4-미리 보기의 최소 버전 필요) 및 `MSTest.TestFramework`(1.0.5-미리 보기의 최소 버전 필요)에 대한 참조를 추가해야 합니다. 자세한 내용은 [Visual Studio 2017 Enterprise Edition에서 Live Unit Testing 사용](live-unit-testing.md#supported-test-frameworks) 항목의 "지원되는 테스트 프레임워크" 섹션을 참조하세요.
+- 프로젝트에서 MSTest 기반 테스트를 사용하는 경우 `Microsoft.VisualStudio.QualityTools.UnitTestFramework`에 대한 참조를 제거하고 최신 MSTest NuGet 패키지, `MSTest.TestAdapter`(1.1.11의 최소 버전 필요) 및 `MSTest.TestFramework`(1.1.11의 최소 버전 필요)에 대한 참조를 추가해야 합니다. 자세한 내용은 [Visual Studio 2017 Enterprise Edition에서 Live Unit Testing 사용](live-unit-testing.md#supported-test-frameworks) 항목의 "지원되는 테스트 프레임워크" 섹션을 참조하세요.
  
 - 솔루션에 있는 하나 이상의 프로젝트에는 NuGet 참조 또는 xUnit, NUnit 또는 MSTest 테스트 프레임워크에 대한 직접 참조가 있어야 합니다. 이 프로젝트도 해당하는 Visual Studio 테스트 어댑터 NuGet 패키지를 참조해야 합니다. Visual Studio 테스트 어댑터는 `.runsettings` 파일을 통해 참조될 수도 있습니다. `.runsettings` 파일에는 다음과 같은 항목이 있어야 합니다. 
 
@@ -239,3 +239,4 @@ Live Unit Testing이 작동하는 어셈블리가 어떤 이유로든 계측되�
 
 [유닛 테스트](live-unit-testing.md)
  
+

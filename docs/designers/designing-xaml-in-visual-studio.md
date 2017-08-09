@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 XAML 디자인 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 7/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,31 +13,23 @@ caps.latest.revision: 4
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: e832941dd00fa81bea1566f17504fe7e27c41a48
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 535cd67469897e84a749e3e1c58c2695ddddd006
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="designing-xaml-in-visual-studio"></a>Visual Studio에서 XAML 디자인
-Visual Studio 및 Blend for Visual Studio는 XAML 기반 Windows 데스크톱, 웹, [Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/jj683071.aspx)및 [Windows 스토어](http://msdn.microsoft.com/library/windows/apps/jj129478.aspx) 앱을 위한 정교한 사용자 인터페이스 및 풍부한 미디어 환경을 빌드할 수 있게 해주는 시각적 도구를 제공합니다. 둘 다 디자인 및 도구 창의 공통 집합과 XAML 편집기를 공유하지만 Blend for Visual Studio에서는 애니메이션 및 동작과 같은 고급 작업을 위한 추가 디자인 도구를 제공합니다.  
+
+Visual Studio 및 Blend for Visual Studio는 다양한 앱 유형에 XAML을 사용하여 유용한 사용자 인터페이스 및 풍부한 미디어 환경을 빌드할 수 있게 해주는 시각적 도구를 제공합니다. 두 도구는 시각적 XAML 편집기를 비롯한 공통 기능 집합을 공유하지만 Blend for Visual Studio에서는 애니메이션 및 동작과 같은 고급 작업을 위한 추가 디자인 도구를 제공합니다.  
   
+앱을 디자인하는 과정은 선택한 도구 및 대상 플랫폼에 따라 달라집니다. 현재 항목에서는 Visual Studio 및 Blend for Visual Studio의 XAML 디자인 도구를 비교합니다. 도구를 사용하는 방법에 대한 자세한 연습은 다음 항목을 참조하세요.
+
+- [Visual Studio에서 XAML 디자이너를 사용하여 UI 만들기](creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
+- [Blend for Visual Studio를 사용하여 UI 만들기](creating-a-ui-by-using-blend-for-visual-studio.md)
+- [Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기](create-modern-desktop-applications-with-windows-presentation-foundation.md)
+
 ## <a name="choosing-the-right-tool"></a>적합한 도구 선택  
  선택하는 디자인 도구는 대체로 사용자 역량에 따라 달라집니다. 코드를 지향하는 경우 Visual Studio에서 XAML 코드를 작성하여 고급 디자인 작업을 수행할 수 있습니다. 디자인을 지향하는 경우 Blend for Visual Studio를 사용하여 코드를 작성하지 않고 고급 작업을 수행할 수 있습니다.  
   
@@ -48,7 +40,7 @@ Visual Studio 및 Blend for Visual Studio는 XAML 기반 Windows 데스크톱, �
   
 -   **일관된 사용자 인터페이스:** 익숙한 Visual Studio 사용자 인터페이스 컨텍스트 내에서 응용 프로그램을 디자인하여 IDE 간 전환을 더 즐겁고 생산적인 경험으로 만들 수 있습니다. Blend for Visual Studio는 콘텐츠와 사용자 인터페이스 간의 대비를 향상시켜 디자인하는 콘텐츠에 집중할 수 있게 해주는 Visual Studio 어두운 테마를 사용합니다. [XAML 디자이너를 사용하여 UI 만들기](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)를 참조하세요.  
   
-     ![Blend for Visual Studio IDE](~/designers/media/blendide.png "BlendIDE")  
+     ![Blend for Visual Studio IDE](../designers/media/blendide.png "BlendIDE")  
   
 -   **XAML IntelliSense:** 두 IDE는 모두 문 완성, 코드 주석 처리 및 형식 지정과 같은 일반적인 편집기 작업 지원, 리소스, 바인딩 및 코드 탐색을 포함하여 IntelliSense에서 기대하는 모든 일반적인 기능을 지원합니다.  
   
@@ -58,7 +50,7 @@ Visual Studio 및 Blend for Visual Studio는 XAML 기반 Windows 데스크톱, �
   
      ![파일 재로드 경험](../designers/media/blendfilereload.png "BlendFileReload")  
   
--   **동기화된 레이아웃 및 설정:** 사용자 지정 레이아웃을 통해 도구 창 레이아웃 사용자 지정을 저장하고 적용할 수 있습니다. 동일한 Microsoft 계정으로 로그인하면 Visual Studio에서 Visual Studio 및 Blend for Visual Studio 둘 다에 대한 이러한 사용자 지정과 기본 설정을 컴퓨터 간에 동기화합니다. [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+-   **동기화된 레이아웃 및 설정:** 사용자 지정 레이아웃을 통해 도구 창 레이아웃 사용자 지정을 저장하고 적용할 수 있습니다. 동일한 Microsoft 계정으로 로그인하면 Visual Studio에서 Visual Studio 및 Blend for Visual Studio 둘 다에 대한 이러한 사용자 지정과 기본 설정을 컴퓨터 간에 동기화합니다. [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
 -   **공통 솔루션 탐색기:** 솔루션 탐색기를 통해 프로젝트 및 해당 파일을 구조적으로 보고 연결된 명령에 쉽게 액세스할 수 있습니다. 솔루션 탐색기를 사용하면 대규모 엔터프라이즈 프로젝트 작업이 훨씬 용이해집니다. [솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)를 참조하세요.  
   

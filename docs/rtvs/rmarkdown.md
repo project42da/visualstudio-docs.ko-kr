@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio용 R 도구를 사용한 R Markdown | Microsoft Docs"
 ms.custom: 
-ms.date: 4/28/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3ac955b2-b6e1-4d32-b1a4-2882c93311fc
@@ -14,38 +15,24 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: 972abfcfda570d66b1b15b25b16e68157fc73b81
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: b29ae0240a29616edcdf2ae0dced7a9fca0f9584
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
 # <a name="creating-r-markdown-documents"></a>R Markdown 문서 만들기
 
-R Markdown([rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/) 참조)은 R의 분석을 고품질 문서, 보고서, 프레젠테이션 및 대시보드로 전환하는 문서 형식입니다.
+[R Markdown](https://rmarkdown.rstudio.com/)은 R의 분석을 고품질 문서, 보고서, 프레젠테이션 및 대시보드로 전환하는 문서 형식입니다.
 
-Visual Studio용 R 도구는 R Markdown 항목 템플릿, 편집기 지원(편집기 내에 R 코드용 IntelliSense 포함) 및 파일 생성 기능을 제공합니다.
+RTVS(Visual Studio용 R 도구)는 R Markdown 항목 템플릿, 편집기 지원(편집기 내에 R 코드용 IntelliSense 포함) 및 파일 생성 기능을 제공합니다.
 
 R Markdown을 사용하려면:
 
 1. Visual Studio를 닫습니다.
-1. (한 번만) [pandoc.org](http://pandoc.org/installing.html)에서 pandoc을 설치합니다.
+1. (한 번만 실행) [pandoc.org](http://pandoc.org/installing.html)에서 `pandoc`를 설치합니다.
 1. Visual Studio를 다시 시작합니다(pandoc 설치를 선택해야 함).
 1. `knitr` 및 `rmarkdown` 패키지를 설치합니다([대화형 창](interactive-repl.md)에서 수행할 수 있음).
 

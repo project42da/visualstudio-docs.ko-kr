@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: ddd52c1af0a164235de2e5055896e020dc8715c3
+ms.translationtype: HT
+ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
+ms.openlocfilehash: 251b00c479c3853ba4fc00521f3e4cac74a93d27
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 07/13/2017
 
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU 샘플링 초보자를 위한 지침
@@ -90,7 +90,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
   
  그림에서 번호가 매겨진 각 영역은 절차의 단계와 관련되어 있습니다.  
   
- ![샘플링을 위한 요약 보고서 뷰](~/profiling/media/summary_sampling.png "Summary_Sampling")  
+ ![샘플링을 위한 요약 보고서 뷰](../profiling/media/summary_sampling.png "Summary_Sampling")  
   
 #### <a name="to-analyze-sampling-data"></a>샘플링 데이터를 분석하려면  
   
@@ -139,9 +139,9 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
   
 4.  세션을 다시 실행하면 **성능 탐색기**에서 해당 세션에 대한 **보고서** 폴더에 다른 데이터 파일이 추가됩니다. 원본 및 새 프로파일링 데이터를 둘 다 선택하고 선택 영역을 마우스 오른쪽 단추로 클릭한 후 **성능 보고서 비교**를 클릭합니다.  
   
-     새 보고서 창이 열리고 비교 결과가 표시됩니다. 비교 보기를 사용하는 방법에 대한 자세한 내용은 [방법: 성능 데이터 파일 비교](../profiling/how-to-compare-performance-data-files.md)를 참조하세요.  
+     새 보고서 창이 열리고 비교 결과가 표시됩니다. 비교 보기를 사용하는 방법에 대한 자세한 내용은 [방법: 성능 데이터 파일 비교](../profiling/how-to-compare-performance-data-files.md)를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목  
  [성능 탐색기](../profiling/performance-explorer.md)   
  [시작](../profiling/getting-started-with-performance-tools.md)   
- [개요](../profiling/overviews-performance-tools.md)
+ [개요](../profiling/overviews-performance-tools.md) [Visual Studio의 프로파일링](../profiling/index.md) [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)

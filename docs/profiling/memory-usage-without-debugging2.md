@@ -34,10 +34,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: baf1e18c56587b071aaa25fd522e3aa1b27a0b30
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: caa4a551c437a6d0479ff1a6fdd5526c6837721a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="memory-usage-without-the-debugger"></a>디버거 없이 메모리 사용
@@ -98,10 +98,10 @@ ms.lasthandoff: 05/13/2017
   
 |||  
 |-|-|  
-|![1단계](~/profiling/media/procguid_1.png "ProcGuid_1")|링크 텍스트는 스냅숏을 만들 때 메모리의 총 바이트 수를 보여 줍니다.<br /><br /> 이 링크를 선택하면 유형 인스턴스의 총 크기별로 정렬된 스냅숏 정보 보고서가 표시됩니다.|  
-|![2단계](~/profiling/media/procguid_2.png "ProcGuid_2")|링크 텍스트는 스냅숏을 만들었을 때의 총 메모리 개체 수를 보여 줍니다.<br /><br /> 이 링크를 선택하면 유형 인스턴스의 개수별로 정렬된 스냅숏 정보 보고서가 표시됩니다.|  
-|![3단계](~/profiling/media/procguid_3.png "ProcGuid_3")|링크 텍스트는 현재 이 스냅숏의 총 메모리 개체 크기와 이전 스냅숏의 총 크기 간의 차이를 보여 줍니다.<br /><br /> 이 스냅숏의 메모리 크기가 이전 스냅숏보다 크면 링크 텍스트는 양수이고 작으면 음수입니다. 링크 텍스트 **기본**은 이 스냅숏이 진단 세션의 첫 번째 스냅숏임을 나타냅니다. **차이 없음**은 차이가 0임을 나타냅니다.<br /><br /> 이 링크를 선택하면 유형 인스턴스의 총 크기 차이별로 정렬된 스냅숏 차이 보고서가 표시됩니다.|  
-|![4단계](~/profiling/media/procguid_4.png "ProcGuid_4")|링크 텍스트는 이 스냅숏의 총 메모리 개체 수와 이전 스냅숏의 개체 수 간의 차이를 보여 줍니다.<br /><br /> 이 링크를 선택하면 유형 인스턴스의 총 개수 차이별로 정렬된 스냅숏 차이 보고서가 표시됩니다.|  
+|![1단계](../profiling/media/procguid_1.png "ProcGuid_1")|링크 텍스트는 스냅숏을 만들 때 메모리의 총 바이트 수를 보여 줍니다.<br /><br /> 이 링크를 선택하면 유형 인스턴스의 총 크기별로 정렬된 스냅숏 정보 보고서가 표시됩니다.|  
+|![2단계](../profiling/media/procguid_2.png "ProcGuid_2")|링크 텍스트는 스냅숏을 만들었을 때의 총 메모리 개체 수를 보여 줍니다.<br /><br /> 이 링크를 선택하면 유형 인스턴스의 개수별로 정렬된 스냅숏 정보 보고서가 표시됩니다.|  
+|![3단계](../profiling/media/procguid_3.png "ProcGuid_3")|링크 텍스트는 현재 이 스냅숏의 총 메모리 개체 크기와 이전 스냅숏의 총 크기 간의 차이를 보여 줍니다.<br /><br /> 이 스냅숏의 메모리 크기가 이전 스냅숏보다 크면 링크 텍스트는 양수이고 작으면 음수입니다. 링크 텍스트 **기본**은 이 스냅숏이 진단 세션의 첫 번째 스냅숏임을 나타냅니다. **차이 없음**은 차이가 0임을 나타냅니다.<br /><br /> 이 링크를 선택하면 유형 인스턴스의 총 크기 차이별로 정렬된 스냅숏 차이 보고서가 표시됩니다.|  
+|![4단계](../profiling/media/procguid_4.png "ProcGuid_4")|링크 텍스트는 이 스냅숏의 총 메모리 개체 수와 이전 스냅숏의 개체 수 간의 차이를 보여 줍니다.<br /><br /> 이 링크를 선택하면 유형 인스턴스의 총 개수 차이별로 정렬된 스냅숏 차이 보고서가 표시됩니다.|  
   
 ##  <a name="BKMK_Snapshot_reports"></a> 스냅숏 보고서  
  ![메모리 사용량 스냅숏 보고서](../profiling/media/memuse_snapshotreport_all.png "MEMUSE_SnapshotReport_All")  
@@ -220,7 +220,5 @@ ms.lasthandoff: 05/13/2017
 |**포함 크기(바이트)**|개체에 포함된 개체의 크기를 비롯한 기본 스냅숏의 개체 크기입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [JavaScript 메모리](../profiling/javascript-memory.md)
- [프로파일링 도구](../profiling/profiling-tools.md)
- [C++, C# 및 Visual Basic으로 작성한 Windows 스토어 앱의 성능 모범 사례](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
+ [JavaScript 메모리](../profiling/javascript-memory.md)[Visual Studio의 프로파일링](../profiling/index.md)[프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)[C++, C# 및 Visual Basic으로 작성한 Windows 스토어 앱의 성능 모범 사례](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
  [Diagnosing memory issues with the new Memory Usage Tool in Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=394706)(Visual Studio에서 새 메모리 사용량 도구로 메모리 문제 진단)
