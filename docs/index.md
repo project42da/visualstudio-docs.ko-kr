@@ -3,11 +3,11 @@ layout: HubPage
 hide_bc: true
 title: "Visual Studio 설명서"
 description: "Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 개발하는 방법에 대해 알아봅니다."
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 601cfd86b10f6194d817fc02e6ea0087608fd0ff
-ms.openlocfilehash: ec537370a7bc42a6d93ac377b9cd280733da6799
+ms.translationtype: HT
+ms.sourcegitcommit: df126a2964f2d60ecdd5d33bc68efb041bfe9878
+ms.openlocfilehash: 305044ddc8b5b117b6a7eff30b50834d966a3d7b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 <div id="main" class="v2">
@@ -307,7 +307,7 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET용 모바일 개발</h3>
+                                                    <h3>.NET을 사용한 모바일 개발</h3>
                                                     <p>Xamarin을 사용하여 iOS, Android 또는 Windows용 플랫폼 간 응용 프로그램을 빌드합니다.</p>
                                                 </div>
                                             </div>
