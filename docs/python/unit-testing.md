@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 04937d3cd1a16e0be90305221850e691c8d18c50
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: b68dc3d2fb7877349fc319ce5ea6e799f80c1dbf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
@@ -37,7 +37,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 1. Visual Studio에 로드된 [Python 프로젝트](python-projects.md)를 열고 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 선택한 후 **Python 단위 테스트**, **추가**를 선택합니다.
 
-1. 직접 스크립트를 실행하는 경우 이 작업은 `test1.py file with code that imports the standard `unittest` module, derives a test class from `unittest.TestCase`, and invokes `unittest.main()`을 만듭니다.
+1. 이 작업은 표준 `unittest` 모듈을 가져오고 `unittest.TestCase`에서 테스트 클래스를 파생하며 스크립트를 직접 실행하는 경우 `unittest.main()`을 호출하는 코드가 있는 `test1.py` 파일을 만듭니다.
 
   ```python
   import unittest

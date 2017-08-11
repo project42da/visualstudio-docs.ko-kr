@@ -37,11 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
-ms.openlocfilehash: 029b5627cf8f7213dfe3bab233db01fe27aa6c49
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: d1e2efc557f90d01a955710d53a1f2724b5f5f7d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/03/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="generateresource-task"></a>GenerateResource 작업
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/03/2017
 |`ExecuteAsTool`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`이면 해당 대상 프레임워크 out-of-proc에서 tlbimp.exe 및 aximp.exe를 실행하여 필요한 래퍼 어셈블리를 생성합니다. 이 매개 변수는 `ResolveComReferences`의 멀티 타기팅을 허용합니다.|  
 |`FilesWritten`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 매개 변수입니다.<br /><br /> 디스크에 기록된 모든 파일의 이름을 포함합니다. 여기에는 캐시 파일(있는 경우)이 포함됩니다. 이 매개 변수는 Clean 구현에 유용합니다.|  
 |`MinimalRebuildFromTracking`|선택적 `Boolean` 매개 변수입니다.<br /><br /> 추적된 증분 빌드가 사용될지 여부를 지정하는 스위치를 가져오거나 설정합니다. `true`이면 증분 빌드가 켜지고 그렇지 않으면 다시 빌드가 강제로 실행됩니다.|  
-|`NeverLockTypeAssemblies`|선택적 `Boolean` 매개 변수입니다.<br /><br /> .resources 파일과 같은 생성된 파일의 이름을 지정합니다. 이름을 지정하지 않는 경우 일치하는 입력 파일의 이름이 사용되고, 만들어진 .resources 파일이 입력 파일을 포함하는 디렉터리에 배치됩니다.|  
+|`NeverLockTypeAssemblies`|선택적 `Boolean` 매개 변수입니다.<br /><br /> 리소스(.resx) 파일(true)을 평가하는 데 새 [AppDomain](https://docs.microsoft.com/dotnet/api/system.appdomain)을 만들지 아니면 리소스 파일이 사용자의 어셈블리(false)를 참조할 때만 새 [AppDomain](https://docs.microsoft.com/dotnet/api/system.appdomain)을 만들지 여부를 지정하는 부울 값을 가져오거나 설정합니다.|  
 |`OutputResources`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 매개 변수입니다.<br /><br /> .resources 파일과 같은 생성된 파일의 이름을 지정합니다. 이름을 지정하지 않는 경우 일치하는 입력 파일의 이름이 사용되고, 만들어진 .resources 파일이 입력 파일을 포함하는 디렉터리에 배치됩니다.|  
 |`PublicClass`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`이면 강력한 형식의 리소스 클래스를 공용 클래스로 만듭니다.|  
 |`References`|선택적 `String[]` 매개 변수입니다.<br /><br /> .resx 파일에서 형식을 로드할 참조입니다. Resx 파일 데이터 요소는 .NET 형식일 수 있습니다. .resx 파일이 읽힐 때 이 항목이 확인되어야 합니다. 일반적으로 표준 형식 로드 규칙을 사용하여 확인됩니다. `References`에 어셈블리를 제공하는 경우 우선적으로 적용됩니다.<br /><br /> 강력한 형식의 리소스에는 이 매개 변수가 필요하지 않습니다.|  
@@ -112,3 +112,4 @@ ms.lasthandoff: 06/03/2017
 ## <a name="see-also"></a>참고 항목  
  [작업](../msbuild/msbuild-tasks.md)   
  [작업 참조](../msbuild/msbuild-task-reference.md)
+

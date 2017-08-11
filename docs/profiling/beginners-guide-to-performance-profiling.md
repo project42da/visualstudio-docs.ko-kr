@@ -35,10 +35,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
-ms.openlocfilehash: 6e4094925eec3e4a8768219180e75fa9d1f1fa03
+ms.sourcegitcommit: 14c21f67beb92d3b13a5c54c755ccb846d116a9c
+ms.openlocfilehash: aaa19a3a818c3fa3196d79959ee30c5eae4c1b5f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="beginners-guide-to-performance-profiling"></a>초보자를 위한 성능 프로파일링 지침
@@ -48,7 +48,9 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 
 진단 허브에서는 진단 세션을 실행하고 관리할 수 있는 여러 가지 다른 옵션을 제공합니다. **CPU 사용량**으로 필요한 데이터를 얻지 못할 경우 [다른 프로파일링 도구](../profiling/Profiling-Tools.md)로 유용한 다른 종류의 정보를 얻을 수 있습니다. 많은 경우 메모리, UI 렌더링 또는 네트워크 요청 시간 등 CPU가 아닌 곳에서 응용 프로그램의 성능 병목 현상이 발생할 수 있습니다. 진단 허브는 이러한 종류의 데이터를 기록 및 분석하기 위한 다른 여러 옵션을 제공합니다.
 
-CPU 사용량 분석 방법 및 메모리 사용량 분석 방법을 보여 주는 [진단 도구 사용에 대한 비디오를 시청](#video)할 수도 있습니다.
+|         |         |
+|---------|---------|
+| ![비디오 보기](../install/media/video-icon.png "WatchVideo") | CPU 사용량 분석 방법 및 메모리 사용량 분석 방법을 보여 주는 [진단 도구 사용에 대한 비디오를 시청](#video)합니다. |
 
 이 항목에서는 일반적인 디버깅 워크플로에서의 CPU 사용량 분석에 대해 설명합니다. 디버거를 연결하지 않고 또는 실행 중인 앱을 대상으로 지정하여 CPU 사용량을 분석할 수도 있습니다. 자세한 내용은 [디버그하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)을 참조하세요.
   

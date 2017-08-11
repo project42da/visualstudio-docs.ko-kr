@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Emulator for Android | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 07f3e972f06707f21543b5a70c9712d9706a3980
+ms.translationtype: HT
+ms.sourcegitcommit: fd35d38110fdd82d8748a57701d15dcc1933053e
+ms.openlocfilehash: 9a0dc7e7d771fa13300c8287096e330633461400
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="visual-studio-emulator-for-android"></a>Android용 Visual Studio 에뮬레이터
@@ -39,23 +39,10 @@ Android용 Visual Studio 에뮬레이터는 Android 장치를 에뮬레이트하
   
  Android용 Visual Studio 에뮬레이터는 실제 장치와 비슷한 성능을 제공하도록 설계되었습니다. 하지만 앱을 게시하기 전에 물리적 장치에서 앱을 테스트하는 것이 좋습니다.  
   
- Android 플랫폼, 화면 해상도 및 Android용 Visual Studio 에뮬레이터에서 지원되는 다른 하드웨어 속성 각각에 대해 고유한 장치 프로필에서 앱을 테스트할 수 있습니다.  
-  
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
-  
--   [설치 및 제거](#Installing)  
-  
--   [시스템 요구 사항 및 이전 버전과의 호환성](#Requirements)  
-  
--   [Visual Studio Emulator for Android의 네트워킹](#Networking)  
-  
--   [Visual Studio Emulator for Android 구성](#Configuring)  
-  
--   [에뮬레이터에서 테스트할 수 있는 기능](#FeaturesTest)  
-  
--   [에뮬레이터에서 테스트할 수 없는 기능](#FeaturesNonTest)  
-  
--   [지원 리소스](#Support)  
+ Android 플랫폼, 화면 해상도 및 Android용 Visual Studio 에뮬레이터에서 지원되는 다른 하드웨어 속성 각각에 대해 고유한 장치 프로필에서 앱을 테스트할 수 있습니다.
+
+> [!NOTE]
+> Google Android 에뮬레이터는 Visual Studio Apache Cordova용 도구에서 사용하는 것이 좋습니다. 자세한 내용은 [Android에서 Apache Cordova 앱 실행](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator)을 참조하세요.
   
 ##  <a name="Installing"></a> 설치 및 제거  
  설치  
@@ -100,7 +87,7 @@ Android용 Visual Studio 에뮬레이터는 Android 장치를 에뮬레이트하
   
  Visual Studio 2015에서는 에뮬레이터 관리자를 사용하여 장치 프로필을 설치, 제거, 시작할 수 있습니다. **도구**를 선택한 후 **Visual Studio Emulator for Android**를 선택하여 에뮬레이터 관리자에 액세스합니다.  
   
- ![Visual Studio Emulator for Android 관리자](~/cross-platform/media/android_emu_manager.png "Android_Emu_Manager")  
+ ![Visual Studio Emulator for Android 관리자](../cross-platform/media/android_emu_manager.png "Android_Emu_Manager")  
   
  기본적으로 KitKat 및 롤리팝 휴대폰(5") 및 태블릿(7") 구성에 해당하는 사전 설치 장치 프로필 4가지가 제공되며 이는 흰색 텍스트와 아이콘으로 표시됩니다. 목록에 있는 다른 프로필은 **프로필 설치** 단추를 선택하여 설치가 완료되기 전까지 회색으로 나타납니다. API 수준을 기준으로 목록을 필터링하고 프로필 오른쪽 아래에 있는 세부 정보 화살표를 클릭하여 전체 구성 정보를 볼 수 있습니다.  
   

@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 5b509a46dd3dbee3a45ab2eac57242636beee17b
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 56fccdd5e103cf29c8ea4a93ab80de7187275642
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -176,7 +176,7 @@ Azure Portal을 통해 Kudu 콘솔을 사용하는 대신 `https://yoursite.scm.
 }
 ```
 
-명령 및 인증에 대한 자세한 내용은 [Kudu 설명서](https://github.com/projectkudu/kudu/wiki/REST-API)를 참조하세요. Azure CLI에서 [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles)을 사용하여 자격 증명을 확인할 수도 있습니다. Kudu 명령 게시를 위한 도우미 라이브러리도 GitHub(https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)에서 사용할 수 있습니다.
+명령 및 인증에 대한 자세한 내용은 [Kudu 설명서](https://github.com/projectkudu/kudu/wiki/REST-API)를 참조하세요. Azure CLI에서 [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles)을 사용하여 자격 증명을 확인할 수도 있습니다. Kudu 명령을 게시하는 도우미 라이브러리도 [GitHub에서 사용할 수 있습니다](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).
 
 
 ### <a name="copying-libraries-into-app-source-code"></a>앱 소스 코드에 라이브러리 복사
@@ -188,3 +188,4 @@ Azure Portal을 통해 Kudu 콘솔을 사용하는 대신 `https://yoursite.scm.
 ### <a name="avoiding-virtual-environments"></a>가상 환경 방지
 
 로컬에서 가상 환경을 사용할 경우 사이트에 필요한 종속성을 완전히 이해하는 데 도움이 되지만 App Service에서 가상 환경을 사용하는 것은 권장되지 않습니다. 대신, 기본 Python 폴더에 라이브러리를 설치하고 앱과 함께 배포하여 종속성 충돌을 방지합니다.
+

@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/14/2017
+ms.date: 7/24/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -24,10 +24,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
-ms.openlocfilehash: 922bec8857910ae4fa1497137eb2e3d70ee133c7
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: 8124ac4629b337faeb88ce40b1e162d7ce012e7f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
@@ -67,7 +67,8 @@ ms.lasthandoff: 07/17/2017
 | SharePoint 2010 | Visual Studio 2017을 사용하여 SharePoint 솔루션 프로젝트를 열면 SharePoint 2013 또는 SharePoint 2016으로 업그레이드됩니다. 업그레이드를 위해서는 “.NET 데스크톱 개발” 워크로드가 Visual Studio 2017에 설치되어 있어야 합니다.<br/><br/>SharePoint 프로젝트를 업그레이드하는 방법에 대한 자세한 내용은 [SharePoint 2013으로 업그레이드](https://technet.microsoft.com/library/cc303420.aspx), [SharePoint Server 2013에서 워크플로 업데이트](https://technet.microsoft.com/library/dn133867.aspx) 및 [데이터베이스 연결 업그레이드를 위해 SharePoint Server 2016 팜 만들기](https://technet.microsoft.com/library/cc263026(v=office.16).aspx)를 참조하세요. |
 | SharePoint 2016 | Office 개발자 도구 미리 보기 2에서 만든 SharePoint 추가 기능 프로젝트를 Visual Studio 2017에서 열 수 없습니다. 이 문제를 해결하려면 `.csproj` 또는 `.vbproj` 파일에 있는 `MinimumVisualStudioVersion`을 12.0로 업데이트하고 `MinimumOfficeToolsVersion`를 12.2로 업데이트해야 합니다. |
 | Silverlight | Silverlight 프로젝트는 Visual Studio 2017에서 지원되지 않습니다. Silverlight 응용 프로그램을 유지하려면 Visual Studio 2015를 계속 사용합니다. |
-| SQL Server Reporting Services, SQL Server Analysis Services(SSDT, SSAS, MSAS, SSDT) | 이러한 프로젝트 형식에 대한 지원은 Visual Studio 갤러리의 [Microsoft Analysis Servides Modeling Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) 및 [Microsoft Report Projects for Visual Studio](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)라는 두 개의 확장을 통해 제공됩니다. |
+| SQL Server Reporting Services 및 SQL Server Analysis Services(SSRS, SSDT, SSAS, MSAS) | 이러한 프로젝트 형식에 대한 지원은 Visual Studio Gallery에서 [Microsoft Analysis Services Modeling Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) 및 [Microsoft Reporting Services Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)라는 두 개의 확장을 통해 제공됩니다. SSDT는 Visual Studio 2017에서 데이터 저장 및 처리 워크로드를 지원합니다. |
+| SSIS(SQL Server Integration Services) | 지원을 Visual Studio 2017에 아직 사용할 수 없습니다. 이 내용은 [SQL Server Integration Services 블로그](https://blogs.msdn.microsoft.com/ssis/)에 공지됩니다. SSIS에 대한 현재 권장 사항은 Visual Studio 2015를 계속 사용하는 것입니다. |
 | Visual C++ | Visual Studio 2017를 사용하여 Visual Studio 2015에서 만든 솔루션 및 프로젝트를 그대로 열 수 있지만, 더 이전 버전의 Visual Studio에서 만든 프로젝트의 경우 Visual Studio 2017에서 빌드하려면 프로젝트를 업그레이드하거나 최신 도구 집합으로 대상을 변경해야 합니다. 자세한 내용은 [Visual C++ 포팅 및 업그레이드 가이드](https://docs.microsoft.com/cpp/porting/visual-cpp-porting-and-upgrading-guide)를 참조하세요. |
 | Visual Studio 확장성/VSIX | MinimumVersion 14.0 이하의 프로젝트는 업데이트를 통해 MinimumVersion 15.0으로 선언됩니다. 그러면 이전 버전의 Visual Studio에서 프로젝트를 열 수 없습니다. 이전 버전에서 프로젝트를 열 수 있도록 허용하려면 MinimumVersion을 `$(VisualStudioVersion)`(으)로 설정합니다. [방법: Visual Studio 2017로 확장성 프로젝트 마이그레이션](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)을 참조하세요. |
 | Visual Studio Lab Management | Microsoft Test Manager 또는 Visual Studio 2010 SP1 이상을 사용하여 이러한 버전에서 만든 환경을 열 수 있습니다. 그러나 Visual Studio 2010 SP1의 경우 환경을 만들기 전에 Microsoft Test Manager 버전이 Team Foundation Server 버전과 일치해야 합니다. |

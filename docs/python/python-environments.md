@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 Python 환경 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 7/25/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: f73c0c7c40d1edd18cccb1ba69424c4e34472c33
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: fa8a7616fe88f024ab299e5d115b66f8656e7cb3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
@@ -52,7 +52,7 @@ Visual Studio에서 Python을 통해 여러 Python 환경을 간편하게 관리
 
 ## <a name="selecting-and-installing-python-interpreters"></a>Python 인터프리터 선택 및 설치
 
-Visual Studio 2017을 제외하고, Python 지원에는 Python 인터프리터가 함께 제공되지 않으므로 코드를 실행하려면 다음 중 하나를 설치해야 합니다. 일반적으로 Visual Studio는 새로 설치된 인터프리터를 자동으로 검색하고 이에 대한 환경을 설정합니다. 그렇지 않은 경우 아래 [기존 인터프리터에 대한 환경 만들기](#creating-an-environment-for-an-existing-interpreter)를 참조하세요.
+Visual Studio 2017을 제외하고, Python 지원에는 Python 인터프리터가 함께 제공되지 않으므로 코드를 실행하려면 다음 중 하나를 설치해야 합니다. 일반적으로 Visual Studio는 새로 설치된 인터프리터를 자동으로 검색하고 이에 대한 환경을 설정합니다. 설치된 환경을 감지하는 경우 [기존 인터프리터에 대한 환경 만들기](#creating-an-environment-for-an-existing-interpreter)를 참조하세요.
 
 | 인터프리터 | 설명 | 
 | --- | --- | 
@@ -89,7 +89,7 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 
 ### <a name="creating-an-environment-for-an-existing-interpreter"></a>기존 인터프리터에 대한 환경 만들기
 
-일반적으로 Visual Studio는 레지스트리를 검사하여 설치된 Python 인터프리터를 찾지만 인터프리터가 비표준 방식으로 설치된 경우에는 찾을 수 없습니다. 이 경우 다음과 같이 Visual Studio에서 인터프리터를 직접 가리키도록 할 수 있습니다.
+Visual Studio는 레지스트리를 확인하여 정상적으로 설치된 Python 인터프리터를 찾습니다([PEP 514 - Windows 레지스트리의 Python 등록](https://www.python.org/dev/peps/pep-0514/) 수행). 그러나 인터프리터가 비표준 방식으로 설치된 경우 Visual Studio는 해당 인터프리터를 찾을 수 없습니다. 이 경우 다음과 같이 Visual Studio에서 인터프리터를 직접 가리키도록 할 수 있습니다.
 
 1. 환경 창에서 **+ 사용자 지정...**을 선택하면 새 환경이 생성되고 아래 설명된 [**구성** 탭](#configure-tab)이 열립니다.
 
@@ -99,7 +99,15 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 1. **접두사 경로** 필드에 인터프리터의 경로를 입력하거나 찾습니다.
 1. **자동 검색**을 선택하여 Visual Studio에서 나머지 필드를 완성하도록 하거나 수동으로 작성합니다.
 1. **적용**을 선택하여 환경을 저장합니다.
-1. 환경을 제거해야 하는 경우 **구성** 탭에서 **제거** 명령을 선택합니다.
+1. 환경을 제거해야 하는 경우 **구성** 탭에서 **제거** 명령을 선택합니다. 자동 감지 환경에서는 이 옵션을 제공하지 않습니다. 자세한 내용은 다음 섹션을 참조하세요.
+
+### <a name="moving-an-existing-interpreter"></a>기존 인터프리터 이동
+
+파일 시스템에서 새 위치로 기존 인터프리터를 이동하는 경우 Visual Studio는 변경 내용을 자동으로 검색하지 않습니다. 수동 단계는 환경 창에서 목록을 업데이트해야 합니다.
+
+- 원래 해당 인터프리터에 환경을 만든 경우 새 위치를 가리키도록 해당 환경을 편집합니다.
+
+- 원래 환경을 자동으로 검색한 경우 Visual Studio에서 검사하는 레지스트리 항목을 만든 고유한 설치 프로그램을 사용하여 컴퓨터에 설치합니다. 이 경우에 먼저 Python 인터프리터를 원래 위치로 복원합니다. 설치 관리자를 사용하여 제거합니다. 그러면 레지스트리 항목을 정리합니다. 그런 다음 원하는 위치에 인터프리터를 다시 설치합니다. Visual Studio를 다시 시작하면 자동으로 새 위치를 검색합니다. 이 프로세스는 설치 관리자의 다른 부작용이 적절히 적용되도록 됩니다.
 
 ### <a name="overview-tab"></a>개요 탭
 
