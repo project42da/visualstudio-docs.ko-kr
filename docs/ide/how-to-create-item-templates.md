@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 3524c21503d0432d509c607ea157f3fe675b443d
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 60732a1fbe7379b43d2856a62d5cd459165dd9a3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="how-to-create-item-templates"></a>방법: 항목 템플릿 만들기
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/31/2017
 
 3.  매개 변수를 대체해야 하는 위치를 나타내도록 코드 파일을 수정합니다. 자세한 내용은 [방법: 템플릿 매개 변수 대체](../ide/how-to-substitute-parameters-in-a-template.md)를 참조하세요.  
 
-4.  **파일** 메뉴에서 **템플릿 내보내기**를 클릭합니다.  
+4.  **프로젝트** 메뉴에서 **템플릿 내보내기**를 클릭합니다.  
 
 5.  **항목 템플릿**을 클릭하고 항목을 포함하는 프로젝트를 선택한 후 **다음**을 클릭합니다.  
 
@@ -166,7 +166,7 @@ ms.lasthandoff: 05/31/2017
 
 2.  템플릿으로 저장할 준비가 될 때까지 프로젝트 항목을 수정합니다.  
 
-3.  해당되는 경우 매개 변수를 대체해야 하는 위치를 나타내도록 코드 파일을 수정합니다. 매개 변수 대체에 대한 자세한 내용은 방법: 템플릿 매개 변수 대체를 참조하세요.  
+3.  해당되는 경우 매개 변수를 대체해야 하는 위치를 나타내도록 코드 파일을 수정합니다. 매개 변수 대체에 대한 자세한 내용은 [방법: 템플릿에서 매개 변수 대체](../ide/how-to-substitute-parameters-in-a-template.md)를 참조하세요.
 
 4.  XML 파일을 만들고 .vstemplate 파일 확장명을 사용하여 새 항목 템플릿과 같은 디렉터리에 저장합니다.  
 

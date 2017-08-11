@@ -32,16 +32,16 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
-ms.openlocfilehash: 3fc2e9c086d6cdd71577fccd33652cfc14a3ee6e
+ms.translationtype: HT
+ms.sourcegitcommit: c3fea7195cd41a48654ea4356ef67627ddcc25dc
+ms.openlocfilehash: 2c288a22c46a21b998bcc5aecf3c0a20f46e06c0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
 # <a name="visual-studio-2017-workload-and-component-ids"></a>Visual Studio 2017 작업 및 구성 요소 ID
-다음 페이지에는 명령줄을 사용하여 Visual Studio를 설치하거나 VSIX 매니페스트에 종속성을 지정하는 데 필요한 작업 및 구성 요소 ID가 나열되어 있습니다.
+명령줄을 사용하여 Visual Studio를 설치하거나 VSIX 매니페스트에 종속성으로 지정하는 데 필요하고 사용 가능한 워크로드 및 구성 요소 ID를 확인하려면 아래에서 버전 이름을 클릭합니다.
 
 | **버전** | **ID** | **설명** |
 | ----------- | ------ | --------------- |

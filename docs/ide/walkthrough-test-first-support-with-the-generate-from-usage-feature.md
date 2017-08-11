@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: b5c18e7d208879498c1923403ec1bd213adffb5a
+ms.translationtype: HT
+ms.sourcegitcommit: f0576ce6dd78fe1328bcea3ab9a27507ddc0f2c0
+ms.openlocfilehash: 4811dda912f20272733a4d878fc8c607eb2573fc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 # <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>연습: 관례에서 생성 기능을 통한 테스트 우선 지원
@@ -60,7 +60,21 @@ ms.lasthandoff: 05/24/2017
      ![새 테스트 프로젝트 대화 상자](../ide/media/newproject_test.png "NewProject_Test")  
 새 프로젝트 대화 상자  
   
-4.  **확인** 을 클릭하여 **새 프로젝트** 대화 상자를 닫습니다. 이제 테스트 작성을 시작할 준비가 되었습니다.  
+4.  **확인** 을 클릭하여 **새 프로젝트** 대화 상자를 닫습니다.
+
+5.  클래스 프로젝트의 **솔루션 탐색기**에서 **참조** 항목을 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.
+
+6.  **참조 관리자** 대화 상자에서 **프로젝트**를 선택한 다음 단위 테스트 프로젝트를 선택합니다.
+
+7.  **확인**을 클릭하여 **참조 관리자** 대화 상자를 닫습니다.
+
+8.  **Class1** 파일의 기존 **using** 문의 끝에 있는 테스트 프로젝트에 **using** 문을 추가합니다.
+
+    * Visual Basic에서 `Using UnitTestProject1`을 추가합니다.
+    
+    * C#에서 `using UnitTestProject1;`을 추가합니다.
+    
+9.  솔루션을 저장합니다. 이제 테스트 작성을 시작할 준비가 되었습니다.  
   
 ### <a name="to-generate-a-new-class-from-a-unit-test"></a>단위 테스트에서 새 클래스를 생성하려면  
   
@@ -73,10 +87,10 @@ ms.lasthandoff: 05/24/2017
   
 3.  `TestMethod1()` 메서드를 찾아서 이름을 `DefaultAutomobileIsInitializedCorrectly()`로 바꿉니다. 이 메서드 내에서 다음 그림과 같이 `Automobile`이라는 클래스의 새 인스턴스를 만듭니다. 컴파일 시간 오류를 나타내는 물결선이 표시되고 스마트 태그가 형식 이름 아래에 나타납니다. 스마트 태그의 정확한 위치는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 또는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]를 사용하는지에 따라 달라집니다.  
   
-     ![Visual Basic의 스마트 태그 밑줄](~/ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
+     ![Visual Basic의 스마트 태그 밑줄](../ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
 Visual Basic  
   
-     ![C&#35;의 스마트 태그 밑줄](~/ide/media/genclass_underline.png "GenClass_Underline")  
+     ![C&#35;의 스마트 태그 밑줄](../ide/media/genclass_underline.png "GenClass_Underline")  
 Visual C#  
   
 4.  스마트 태그를 마우스 포인터로 가리켜 `Automobile` 이라는 형식이 아직 정의되지 않았다는 오류 메시지를 표시합니다. 스마트 태그를 클릭하거나 Ctrl+. (Ctrl+마침표)를 눌러 다음 그림과 같이 사용법에서 생성 바로 가기 메뉴를 엽니다.  
@@ -112,10 +126,10 @@ Visual C#
   
      다음 그림에서는 스마트 태그 바로 가기 메뉴를 보여 줍니다.  
   
-     ![Visual Basic의 속성 생성 상황에 맞는 메뉴](~/ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
+     ![Visual Basic의 속성 생성 상황에 맞는 메뉴](../ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
 Visual Basic  
   
-     ![C&#35;의 속성 생성 상황에 맞는 메뉴](~/ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
+     ![C&#35;의 속성 생성 상황에 맞는 메뉴](../ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
 Visual C#  
   
 ### <a name="to-locate-the-source-code"></a>소스 코드를 찾으려면  
@@ -161,7 +175,7 @@ Visual C#
   
      다음 그림에는 **테스트 결과** 창이 나와 있습니다.  
   
-     ![실패한 테스트 결과](~/ide/media/testsfailed.png "TestsFailed")  
+     ![실패한 테스트 결과](../ide/media/testsfailed.png "TestsFailed")  
 테스트 결과 창  
   
 2.  **테스트 결과** 창에서 각 테스트 결과 행을 두 번 클릭하면 각 테스트 실패 위치로 이동할 수 있습니다.  
@@ -180,7 +194,7 @@ Visual C#
   
 1.  **테스트** 메뉴에서 **실행**을 가리킨 다음 **솔루션의 모든 테스트**를 클릭합니다. 이번에는 테스트가 성공합니다. 다음 그림에는 **테스트 결과** 창이 나와 있습니다.  
   
-     ![성공한 테스트 결과](../ide/media/testspassed.png "TestsPassed")  
+     ![통과한 테스트 결과](../ide/media/testspassed.png "TestsPassed")  
 테스트 결과 창  
   
 ## <a name="see-also"></a>참고 항목  
