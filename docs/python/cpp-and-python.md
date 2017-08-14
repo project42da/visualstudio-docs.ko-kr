@@ -148,7 +148,7 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
         return (1 + pow(e, (-2 * x))) / (2 * pow(e, -x));
     }
 
-    double tanh(x) {
+    double tanh(double x) {
         return sinh(x) / cosh(x);
     }
     ```
@@ -163,7 +163,7 @@ C++ DLL을 Python용 확장으로 만들려면 내보낸 메서드를 Python 형
 1. C++ 파일의 맨 위에 `Python.h`를 포함합니다.
 
     ```cpp
-    include <Python.h>
+    #include <Python.h>
     ```
 
 1. Python 형식을 허용하고 반환하도록 `tanh` 메서드를 수정합니다.
