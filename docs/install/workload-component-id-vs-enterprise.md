@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 05/10/2017
+ms.date: 08/09/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 25704ab33e59ccea06d2234e3761b3a05106fcdd
+ms.translationtype: HT
+ms.sourcegitcommit: f23906933add1f4706d8786b2950fb3b5d2e6781
+ms.openlocfilehash: aa13502c48937ec10e88ea175df2e15e97a8bcaf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -54,6 +54,7 @@ VSIX 매니페스트에 종속성을 설정하는 경우 구성 요소 ID만 지
 
 
 이러한 ID를 사용하는 방법에 대한 자세한 내용은 [명령줄 매개 변수를 사용하여 Visual Studio 2017 설치](use-command-line-parameters-to-install-visual-studio.md) 페이지를 참조하세요. 다른 제품의 작업 및 구성 요소 ID 목록은 [Visual Studio 2017 작업 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요.
+
 
 ## <a name="visual-studio-core-editor-included-with-visual-studio-enterprise-2017"></a>Visual Studio 핵심 편집기(Visual Studio Enterprise 2017에 포함)
 
@@ -101,7 +102,7 @@ Microsoft.Net.Component.4.5.2.TargetingPack | .NET Framework 4.5.2 타기팅 팩
 Microsoft.Net.Component.4.5.TargetingPack | .NET Framework 4.5 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 타기팅 팩 | 15.0.26208.0 | 권장
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 개발 도구 | 15.0.26208.0 | 권장
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 개발 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 15.0.26323.1 | 권장
 Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure 작성 도구 | 15.0.26419.1 | 권장
 Microsoft.VisualStudio.Component.Azure.Compute.Emulator | Azure 계산 에뮬레이터 | 15.0.26419.1 | 권장
@@ -167,7 +168,7 @@ Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 타기팅 팩
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 개발 도구 | 15.0.26208.0 | 권장
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 개발 도구 | 15.0.26208.0 | 권장
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 개발 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 15.0.26323.1 | 권장
 Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure 작성 도구 | 15.0.26419.1 | 권장
 Microsoft.VisualStudio.Component.Azure.ClientLibs | .NET용 Azure 라이브러리 | 15.0.26208.0 | 권장
@@ -275,7 +276,7 @@ Microsoft.Net.Component.4.5.2.TargetingPack | .NET Framework 4.5.2 타기팅 팩
 Microsoft.Net.Component.4.5.TargetingPack | .NET Framework 4.5 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 타기팅 팩 | 15.0.26208.0 | 권장
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 개발 도구 | 15.0.26208.0 | 권장
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 개발 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.CoreEditor | Visual Studio 핵심 편집기 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.DiagnosticTools | 프로파일링 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.EntityFramework | Entity Framework 6 도구 | 15.0.26208.0 | 권장
@@ -416,7 +417,7 @@ Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 타기팅 팩
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 타기팅 팩 | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 타기팅 팩 | 15.0.26208.0 | Optional
 Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 개발 도구 | 15.0.26208.0 | Optional
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 개발 도구 | 15.0.26208.0 | Optional
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 개발 도구 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# 및 Visual Basic Roslyn 컴파일러 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# 및 Visual Basic | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK(10.0.10240.0) | 15.0.26208.0 | Optional
@@ -594,7 +595,7 @@ Microsoft.VisualStudio.Component.WebDeploy | 웹 배포 | 15.0.26208.0 | 필수
 Microsoft.Net.Component.4.5.1.TargetingPack | .NET Framework 4.5.1 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 타기팅 팩 | 15.0.26208.0 | 권장
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 타기팅 팩 | 15.0.26208.0 | 권장
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 개발 도구 | 15.0.26208.0 | 권장
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 개발 도구 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.CloudExplorer | 클라우드 탐색기 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.CoreEditor | Visual Studio 핵심 편집기 | 15.0.26208.0 | 권장
 Microsoft.VisualStudio.Component.DiagnosticTools | 프로파일링 도구 | 15.0.26208.0 | 권장
@@ -623,7 +624,7 @@ Microsoft.VisualStudio.Web.Mvc4.ComponentGroup | ASP.NET MVC 4 | 15.0.26208.0 | 
 
 **ID:** Microsoft.VisualStudio.Workload.Node
 
-**설명:** 비동기 이벤트 구동 JavaScript 런타임인 Node.js를 사용하여 확장 가능한 네트워크 응용 프로그램을 빌드합니다.
+**설명:** 비동기 이벤트 구동 JavaScript 런타임인 Node.js를 사용하여 확장 가능한 네트워크 응용 프로그램을 빌드합니다. 
 
 ### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
 
@@ -736,7 +737,7 @@ Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 타기팅 팩
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 타기팅 팩 | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 타기팅 팩 | 15.0.26208.0 | Optional
 Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 개발 도구 | 15.0.26208.0 | Optional
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 개발 도구 | 15.0.26208.0 | Optional
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 개발 도구 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.AppInsights.Tools | 개발자 분석 도구 | 15.0.26323.1 | 선택적
 Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure 작성 도구 | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.Component.Azure.ClientLibs | .NET용 Azure 라이브러리 | 15.0.26208.0 | 선택적
@@ -909,6 +910,8 @@ Microsoft.VisualStudio.Component.SQL.CLR | SQL Server용 CLR 데이터 형식 | 
 Microsoft.VisualStudio.Component.VisualStudioData | 데이터 원본 및 서비스 참조 | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP용 Windows 10 SDK(10.0.15063.0): C#, VB, JS | 15.0.26419.1 | 선택적
 Microsoft.VisualStudio.ComponentGroup.UWP.Cordova | Cordova용 유니버설 Windows 플랫폼 도구 | 15.0.26403.0 | Optional
+
+
 ## <a name="unaffiliated-components"></a>독립적 구성 요소
 
 이러한 구성 요소는 작업에 포함되지 않지만 개별 구성 요소로 선택할 수 있습니다.
@@ -929,6 +932,7 @@ Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft Test
 Microsoft.VisualStudio.Component.TestTools.WebLoadTest | 웹 성능 및 부하 테스트 도구 | 15.0.26208.0
 Microsoft.VisualStudio.Component.TypeScript.2.0 | TypeScript 2.0 SDK | 15.0.26208.0
 Microsoft.VisualStudio.Component.TypeScript.2.1 | TypeScript 2.1 SDK | 15.0.26208.0
+
 
 ## <a name="see-also"></a>참고 항목
 
