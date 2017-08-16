@@ -13,6 +13,7 @@
 ## [외부 도구 관리](managing-external-tools.md)
 ## [Visual Studio의 동기화된 설정](synchronized-settings-in-visual-studio.md)
 # [Visual Studio 시작 시간 최적화](optimize-visual-studio-startup-time.md)
+# [Visual Studio 성능 팁과 요령](visual-studio-performance-tips-and-tricks.md)
 # [방법: Visual Studio IDE에서 이동](how-to-move-around-in-the-visual-studio-ide.md)
 # [Visual Studio에서 개발 시작](get-started-developing-with-visual-studio.md)
 ## [Visual C# 및 Visual Basic 시작](getting-started-with-visual-csharp-and-visual-basic.md)
