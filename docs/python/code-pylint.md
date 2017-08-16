@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: cd841938f160420934941a5166184f79aca82be7
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: 4b22d434b99bdd2648408b9191c5f050589883ae
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -40,7 +40,7 @@ Python 코드의 오류를 검사하고 적절한 Python 코딩 패턴을 권장
 오류를 두 번 클릭하면 문제가 발생한 소스 코드로 직접 이동합니다.
 
 > [!Tip]
-> 모든 PyLint 출력 메시지에 대한 자세한 목록은 [PyLint 기능 참조](https://pylint.readthedocs.io/en/latest/reference_guide/features.html)(영문)를 참조하세요.
+> 모든 PyLint 출력 메시지에 대한 자세한 목록은 [PyLint 기능 참조](https://pylint.readthedocs.io/en/latest/technical_reference/features.html)(영문)를 참조하세요.
 
 ## <a name="setting-pylint-command-line-options"></a>PyLint 명령줄 옵션 설정
 
@@ -59,3 +59,4 @@ PyLint 설명서의 [명령줄 옵션](https://pylint.readthedocs.io/en/latest/u
 1. 편집을 위해 작업할 수 있는 다양한 설정이 포함된 파일을 엽니다. 경고를 사용하지 않도록 설정하려면 `[MESSAGES CONTROL]` 섹션을 찾은 다음 해당 섹션에서 `disable` 설정을 찾습니다. 특정 메시지의 긴 문자열이 표시되며, 원하는 경고를 추가할 수 있습니다. 이 예제에서는 `,missing-docstring`을 추가합니다(쉼표로 구분된 기호 포함).
 
 1. `.pylintrc` 파일을 저장하고 PyLint를 다시 실행하여 해당 경고가 표시되지 않는지 확인합니다.
+
