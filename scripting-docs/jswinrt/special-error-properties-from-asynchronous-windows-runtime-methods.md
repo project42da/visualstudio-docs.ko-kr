@@ -1,33 +1,38 @@
 ---
 title: "비동기 Windows 런타임 메서드의 특수한 오류 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- javascript
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45155584-06d8-4e7f-93a6-8564a93f643d
 caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 2
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 120d8f699c8bedd0fe5762300203c5d5ec18e73e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/11/2017
+
 ---
-# 비동기 Windows 런타임 메서드의 특수한 오류 속성
-콜 스택의 깊은 곳에서 오류가 throw될 수 있기 때문에 JavaScript에서 비동기 Windows 런타임 메서드를 디버깅하는 것은 어렵습니다.  JavaScript `Error` 개체는 응용 프로그램이 디버깅 모드에서 실행될 때 비동기 Windows 런타임 메서드에서 오류가 throw될 경우에만 나타나는 추가 속성이 있습니다.  
+# <a name="special-error-properties-from-asynchronous-windows-runtime-methods"></a>비동기 Windows 런타임 메서드의 특수한 오류 속성
+호출 스택의 하위 위치에서 오류가 발생할 수 있으므로 JavaScript에서 비동기 Windows 런타임 메서드를 디버그하기가 어려울 수 있습니다. JavaScript `Error` 개체에는 앱을 디버그 모드에서 실행할 때 비동기 Windows 런타임 메서드에서 오류가 발생할 때만 표시되는 추가 속성이 있습니다.  
   
-## 특수 오류 속성  
- 디버그 모드에서 실패한 Windows 런타임 비동기 작업으로 발생한 오류 개체에는 다음과 같은 특수 속성이 있습니다.  
+## <a name="special-error-properties"></a>특수 오류 속성  
+ 디버그 모드에서 실패한 Windows 런타임 비동기 작업으로 인해 발생한 오류 개체에는 다음 특수 속성이 있습니다.  
   
--   `asyncOpSource`\(개체\) 오류가 발생한 호출의 원래 위치 정보를 가져옵니다.  `asyncOpSource.originatingCall`\(문자열\) 속성은 사용자 코드에서 비동기 작업이 발생한 위치를 표시합니다.  
+-   `asyncOpSource`(개체) 오류를 생성한 호출이 이루어진 원본 위치에 대한 정보를 가져옵니다. `asyncOpSource.originatingCall` 속성(문자열)은 비동기 작업을 시작한 사용자 코드의 위치를 표시합니다.  
   
--   asyncOpType\(문자열\)은 오류가 발생한 비동기 작업 형식의 이름을 가져옵니다.  
+-   asyncOpType(문자열)은 오류를 발생시키는 비동기 작업 유형의 이름을 가져옵니다.  
   
- 비동기 작업이 포함된 오류에 대한 자세한 내용은 다음을 참조하십시오.  
+ 비동기 작업 오류에 대한 자세한 내용은 다음을 참조하세요.  
   
--   [How to handle errors with promises](http://msdn.microsoft.com/ko-kr/01d5a901-c4ea-46f6-8005-6d39c32203eb)  
+-   [프라미스로 오류를 처리하는 방법](https://msdn.microsoft.com/en-us/library/windows/apps/hh700337.aspx)  
   
--   [Windows 런타임 오류 문제 해결](http://msdn.microsoft.com/ko-kr/1ef7d7df-82ac-441d-8ad0-54ab1318de64)
+-   [Windows 런타임 오류 문제 해결](http://msdn.microsoft.com/en-us/1ef7d7df-82ac-441d-8ad0-54ab1318de64)

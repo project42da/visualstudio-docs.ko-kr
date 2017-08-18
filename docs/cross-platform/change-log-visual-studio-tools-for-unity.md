@@ -1,5 +1,5 @@
 ---
-title: "변경 로그(Visual Studio Tools for Unity) | Microsoft 문서"
+title: "변경 로그(Visual Studio Tools for Unity) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,23 +28,100 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7aa8de1116409f30cf1a0cd2fd689c03c2242724
+ms.translationtype: HT
+ms.sourcegitcommit: cd8418f782f800390d166403374ecb879970dbc3
+ms.openlocfilehash: 92304c73b1a098c32a74011956dadd8097b8329d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>변경 로그(Visual Studio Tools for Unity)
 Visual Studio Tools for Unity에 대한 변경 로그입니다.  
 
+## <a name="3400"></a>3.4.0.0
+ 릴리스됨 2017-08-22
+
+### <a name="new-features"></a>새 기능  
+
+-   **Project Generation:**  
+
+    -   assembly.json 컴파일 단위 지원이 추가되었습니다.
+
+    -   프로젝트 폴더에 Unity 어셈블리 복사가 중지되었습니다.
+    
+-   **디버거:**  
+
+    -   새 Unity 런타임에서 다음 문을 설정하는 지원이 추가되었습니다.
+    
+    -   새 Unity 런타임에서 10진수 형식 지원이 추가되었습니다.
+    
+    -   암시적/명시적 변환에 대한 지원이 추가되었습니다.
+    
+### <a name="bug-fixes"></a>버그 수정  
+  
+-   **평가:**  
+
+    -   암시적 크기의 배열 만들기를 수정했습니다.
+    
+    -   로컬로 컴파일러가 생성한 항목을 수정했습니다.
+   
+-   **Project Generation:**  
+   
+    -   4.6 API 수준의 Microsoft.CSharp에 대한 참조가 수정되었습니다.
+   
+## <a name="3300"></a>3.3.0.0
+ 릴리스됨 2017-08-14
+
+### <a name="new-features"></a>새 기능  
+  
+-   **평가:**  
+
+    -   새 Unity 런타임에서 구조체를 작성하기 위한 지원이 추가되었습니다.
+    
+    -   포인터에 대한 최소 지원이 추가되었습니다.
+    
+### <a name="bug-fixes"></a>버그 수정  
+  
+-   **평가:**  
+
+    -   기본 형식의 메서드 호출을 수정했습니다.
+    
+    -   BeforeFieldInit로 표시된 형식의 필드 평가를 수정했습니다.
+    
+    -   이항 연산자(빼기)로 지원되지 않는 호출을 수정했습니다.
+    
+    -   Visual Studio 조사식에 항목을 추가할 때의 문제를 해결했습니다.
+
+-   **Project Generation:**  
+
+    -   mcs.rsp 파일을 사용한 어셈블리 이름 참조를 수정했습니다.
+    
+    -   API 수준을 사용한 정의를 수정했습니다.    
+
+## <a name="3200"></a>3.2.0.0
+ 릴리스됨 2017-05-10
+
+### <a name="new-features"></a>새 기능  
+  
+-   **설치 프로그램:**  
+   
+    -   MEF 캐시 정리 지원이 추가되었습니다.
+   
+### <a name="bug-fixes"></a>버그 수정  
+  
+-   **코드 편집기:**  
+
+    -   사용자 지정 특성으로 분류/완료를 수정했습니다.
+
+    -   Unify 메시지로 깜박임을 수정했습니다.
+    
 ## <a name="3100"></a>3.1.0.0
  릴리스됨 2017-04-07
 
 ### <a name="new-features"></a>새 기능  
   
 -   **디버거:**  
-
+   
     -   새로운 Unity 런타임에 대한 지원(.NET 4.6/C# 6 호환성 포함)이 추가되었습니다.
         
 -   **프로젝트 생성:**  
@@ -60,28 +137,28 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 ### <a name="bug-fixes"></a>버그 수정  
   
 -   **코드 편집기:**  
-
+   
     -   자동 완성을 사용하여 메서드를 편집한 후 캐럿 위치가 수정되었습니다.
-  
+   
 -   **프로젝트 생성:**  
-  
+   
     -   어셈블리 버전 후 처리가 제거되었습니다.
-
+   
 ## <a name="3001"></a>3.0.0.1
  릴리스됨 2017-03-07
 
 ### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>이 버전에는 2.8.x 시리즈에서 도입된 새로운 모든 기능 및 버그 수정이 포함되었습니다.
 
-## <a name="282-30-preview-3"></a>2.8.2(3.0 Preview 3)
+## <a name="2820---30-preview-3"></a>2.8.2.0 - 3.0 Preview 3
  릴리스됨 2017-01-25
    
 ### <a name="bug-fixes"></a>버그 수정  
-
+   
 -   **프로젝트 생성:**  
   
     -   먼저 이진 DLL로, 그다음에는 프로젝트 참조로 두 번 참조되는 플러그 인 프로젝트의 경우 회귀가 수정되었습니다.
-
-## <a name="281-30-preview-2"></a>2.8.1(3.0 Preview 2)
+   
+## <a name="2810---30-preview-2"></a>2.8.1.0 - 3.0 Preview 2
  릴리스됨 2017-01-23
    
 ### <a name="bug-fixes"></a>버그 수정  
@@ -108,7 +185,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
     
     -   원격 Unity 설명서를 대상으로 하는 https로 전환되었습니다.
 
-## <a name="28-30-preview"></a>2.8(3.0 Preview)
+## <a name="2800---30-preview"></a>2.8.0.0 - 3.0 Preview
  릴리스됨 2016-11-17
 
 ### <a name="new-features"></a>새 기능  
@@ -175,7 +252,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
     
     -   웹에서 인코드된 파일 이름으로 스크립트를 컴파일할 때 컴파일을 막는 버그가 수정되었습니다.
 
-## <a name="23"></a>2.3  
+## <a name="2300"></a>2.3.0.0  
  릴리스됨 2016-07-14  
   
 ### <a name="new-features"></a>새 기능  
@@ -187,13 +264,13 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
     -   생성된 프로젝트 속성을 수정할 수 있도록 허용하는 옵션이 추가되었습니다.  
   
 -   **디버거:**  
-  
+   
     -   텍스트, XML, HTML 및 JSON 문자열 시각화 도우미가 추가되었습니다.  
-  
+   
 -   **마법사:**  
-  
+   
     -   누락된 MonoBehavior가 추가되었습니다.  
-  
+   
 ### <a name="bug-fixes"></a>버그 수정  
   
 -   **일반:**  
@@ -210,7 +287,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
     -   여러 식 계산 문제가 수정되었습니다.  
   
-## <a name="22"></a>2.2  
+## <a name="2200"></a>2.2.0.0  
  릴리스됨 2016-02-04  
   
 ### <a name="new-features"></a>새 기능  
@@ -248,16 +325,16 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
     -   디버깅할 때 Visual Studio가 중단되는 문제가 해결되었습니다.  
   
 -   **UI:**  
-  
+   
     -   [Tabs Studio](https://tabsstudio.com/) Visual Studio 확장과의 비호환성 문제가 해결되었습니다.  
-  
--   **설치 관리자:**  
+   
+-   **설치 프로그램:**  
   
     -   HKLM 레지스트리 항목을 만들어 VSTU의 시스템 전체 설치(모든 사용자에 대한 설치)를 지원합니다.  
   
     -   동일한 버전의 VSTU가 여러 다른 버전의 Visual Studio에 대해 설치될 때 나타나는 VSTU 제거 문제가 해결되었습니다. 예를 들어, VSTU **2015** 2.1.0.0 및 VSTU **2013** 2.1.0.0이 모두 설치된 경우가 여기에 해당합니다.  
   
-## <a name="21"></a>2.1  
+## <a name="2100"></a>2.1.0.0  
  릴리스됨 2015-09-08  
   
 ### <a name="new-features"></a>새 기능  
@@ -278,7 +355,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   Visual Studio 2015의 적중 횟수 중단점을 수정했습니다.  
   
-## <a name="20"></a>2.0  
+## <a name="2000"></a>2.0.0.0  
  릴리스됨 2015-07-20  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -299,7 +376,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
     -   C# 프로젝트에 포함할 파일을 지정할 때 확장 필터의 * 와일드카드에 대한 지원이 추가되었습니다.  
   
--   **Visual Studio 통합:**  
+-   **Visual Studio 통합**  
   
     -   Productivity Power Tools와의 호환성 문제를 수정했습니다.  
   
@@ -313,7 +390,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
     -   빈 배열 검사를 수정했습니다.  
   
-## <a name="199-20-preview-2"></a>1.9.9(2.0 Preview 2)
+## <a name="1990---20-preview-2"></a>1.9.9.0 - 2.0 Preview 2
  릴리스됨 2015-04-02  
   
 ### <a name="new-features"></a>새 기능  
@@ -348,7 +425,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
     -   디버거 조사식 창에서 사용되지 않는 멤버를 필터링합니다.  
   
--   **설치 관리자:**  
+-   **설치 프로그램:**  
   
     -   최적화된 Visual Studio Tools for Unity 확장 등록입니다.  
   
@@ -402,7 +479,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   **UI:** 상황에 맞는 메뉴 및 아이콘에 대한 Visual Studio 테마를 지원합니다.  
   
-## <a name="198-20-preview"></a>1.9.8(2.0 Preview)
+## <a name="1980---20-preview"></a>1.9.8.0 - 2.0 Preview
  릴리스됨 2014-11-12  
   
 ### <a name="new-features"></a>새 기능  
@@ -441,7 +518,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   필요 없는 경우 로그 콜백을 등록하지 않습니다.  
   
-## <a name="192"></a>1.9.2  
+## <a name="1920"></a>1.9.2.0  
  릴리스됨 2014-10-09  
   
 ### <a name="new-features"></a>새 기능  
@@ -464,7 +541,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   확장 필터가 비어 있을 때 프로젝트 파일에 모든 자산이 포함되는 버그를 수정합니다.  
   
-## <a name="191"></a>1.9.1  
+## <a name="1910"></a>1.9.1.0  
  릴리스됨 2014-09-22  
   
 ### <a name="new-features"></a>새 기능  
@@ -509,7 +586,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   Unity의 64비트 버전에서 VSTU로 개방 스크립트 문제를 수정합니다.  
   
-## <a name="19"></a>1.9  
+## <a name="1900"></a>1.9.0.0  
  릴리스됨 2014-07-29  
   
 ### <a name="new-features"></a>새 기능  
@@ -557,7 +634,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 > [!IMPORTANT]
 >  Unity 에코시스템에서 널리 사용되는 C# 언어 - 새로운 샘플 자산은 C#으로 되어 있으며 Unity 설명서는 C#이 기본값으로 설정됩니다. C# 환경에 초점을 맞추기 위해 UnityScript 및 Boo에 대한 기본 지원을 제거했습니다. 결과적으로 VSTU 솔루션은 이제 C# 전용이며 훨씬 빠르게 로드됩니다.  
   
-## <a name="182"></a>1.8.2  
+## <a name="1820"></a>1.8.2.0  
  릴리스됨 2014-01-07  
   
 ### <a name="new-features"></a>새 기능  
@@ -584,7 +661,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   동기화되지 않은 경우 버전 특정 어셈블리를 생성할 때 Unity의 충돌을 방지합니다.  
   
-## <a name="181"></a>1.8.1  
+## <a name="1810"></a>1.8.1.0  
  릴리스됨 2013-11-21  
   
 ### <a name="new-features"></a>새 기능  
@@ -617,7 +694,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   Unity에서 스크립트를 열 때 Unity 4.2 이상의 ALT+TAB 순서를 혼동하지 않도록 수정했습니다.  
   
-## <a name="180"></a>1.8.0  
+## <a name="1800"></a>1.8.0.0  
  릴리스됨 2013-09-24  
   
 ### <a name="new-features"></a>새 기능  
@@ -658,7 +735,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   로컬 뷰에서 변동되는 부울 값 문제를 수정했습니다.  
   
-## <a name="122"></a>1.2.2  
+## <a name="1220"></a>1.2.2.0  
  릴리스됨 2013-07-09  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -681,7 +758,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   Unity 4.2 베타 어셈블리의 처리 문제를 수정했습니다.  
   
-## <a name="121"></a>1.2.1  
+## <a name="1210"></a>1.2.1.0  
  릴리스됨 2013-04-09  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -694,7 +771,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   일부 외부 DLL에서 중단점의 바인딩 문제를 수정했습니다.  
   
-## <a name="12"></a>1.2  
+## <a name="1200"></a>1.2.0.0  
  릴리스됨 2013-03-25  
   
 ### <a name="new-features"></a>새 기능  
@@ -761,10 +838,10 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   버그 UVS-11 수정: 코루틴의 로컬 문제  
   
-## <a name="11---beta-release"></a>1.1 - 베타 릴리스  
+## <a name="1100---beta-release"></a>1.1.0.0 - 베타 릴리스  
  릴리스됨 2014-10-09  
   
-## <a name="1013"></a>1.0.13  
+## <a name="10130"></a>1.0.13.0  
  릴리스됨 2013-01-21  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -787,7 +864,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   Unity에서 UnityVS로 전송한 긴 메시지의 처리 문제를 수정했습니다. 이전에 긴 메시지는 UnityVS의 메시징 부분과 충돌할 수 있었습니다. 결과적으로 UnityVS가 Unity에서 파일을 열지 않는 경우가 있었습니다.  
   
-## <a name="1012"></a>1.0.12  
+## <a name="10120"></a>1.0.12.0  
  릴리스됨 2013-01-03  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -806,7 +883,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   사용자 코드가 로그 콜백 처리기에 관여할 수 없는 API 결함을 수정했습니다.  
   
-## <a name="1011"></a>1.0.11  
+## <a name="10110"></a>1.0.11.0  
  릴리스됨 2012-11-28  
   
 ### <a name="new-features"></a>새 기능  
@@ -819,9 +896,9 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   정보 콘솔 메시지를 구문 분석하여 오류 목록 클릭 시 기호로 된 첫 번째 stackframe으로 안내합니다.  
   
--   [API](../cross-platform/customize-project-files-created-by-vstu.md)를 추가하여 사용자가 프로젝트 생성에 참여할 수 있도록 합니다.  
+-   [API](../cross-platform/customize-project-files-created-by-vstu.md) 를 추가하여 사용자가 프로젝트 생성에 참여할 수 있도록 합니다.  
   
--   [API](../cross-platform/share-the-unity-log-callback-with-vstu.md)를 추가하여 사용자가 LogCallback에 참여할 수 있도록 합니다.  
+-   [API](../cross-platform/share-the-unity-log-callback-with-vstu.md) 를 추가하여 사용자가 LogCallback에 참여할 수 있도록 합니다.  
   
 ### <a name="bug-fixes"></a>버그 수정  
   
@@ -837,7 +914,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   Visual Studio의 상태 표시줄에서 아이콘을 넣을 수 없는 경우의 충돌 문제를 수정했습니다.  
   
-## <a name="1010"></a>1.0.10  
+## <a name="10100"></a>1.0.10.0  
  릴리스됨 2012-10-09  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -850,7 +927,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   파일 잠금이나 Unity 빌드 프로세스 혼동이 발생하지 않도록 Unity에서 어셈블리를 검색하는 방법을 수정했습니다.  
   
-## <a name="109"></a>1.0.9  
+## <a name="1090"></a>1.0.9.0  
  릴리스됨 2012-10-03  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -869,7 +946,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   버그 UVS-21 수정: Unity Math API에 대한 메서드 호출을 계산할 때의 잘못된 포인터 문제  
   
-## <a name="108"></a>1.0.8  
+## <a name="1080"></a>1.0.8.0  
  릴리스됨 2012-09-26  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -880,7 +957,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   UnityVS를 Visual Studio 2010에 등록하는 방법을 수정했습니다.  
   
-## <a name="107"></a>1.0.7  
+## <a name="1070"></a>1.0.7.0  
  릴리스됨 2012-09-14  
   
 ### <a name="new-features"></a>새 기능  
@@ -896,10 +973,10 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 > [!IMPORTANT]
 >  Visual Studio 2012 지원으로 인해 일부 파일의 이름을 바꾸고 다른 위치로 이동했습니다. Unity를 가져오기 위한 UnityVS 패키지는 이제 Visual Studio 2010 및 Visual Studio 2012에 대해 각각 UnityVS 2010 또는 UnityVS 2012로 명명되었습니다. 이 버전에서는 UnityVS 프로젝트 파일을 다시 생성해야 합니다.  
   
-## <a name="106---internal-build"></a>1.0.6 - 내부 빌드  
+## <a name="1060---internal-build"></a>1.0.6.0 - 내부 빌드  
  릴리스됨 2012-09-12  
   
-## <a name="105"></a>1.0.5  
+## <a name="1050"></a>1.0.5.0  
  릴리스됨 2012-09-10  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -908,7 +985,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   Unity를 자산 서버에 연결했을 때 Unity 인스턴스 검색 문제를 수정했습니다. 이 버그로 인해 Unity에서 파일을 열지 못하고 Visual Studio 디버거에 자동으로 연결하지 못했습니다.  
   
-## <a name="104"></a>1.0.4  
+## <a name="1040"></a>1.0.4.0  
  릴리스됨 2012-09-05  
   
 ### <a name="new-features"></a>새 기능  
@@ -921,7 +998,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   Unity 내에서 메서드 또는 속성이 발생시킨 예외로 인한 디버그 도중 UnityVS가 충돌하는 문제를 수정했습니다.  
   
-## <a name="103"></a>1.0.3  
+## <a name="1030"></a>1.0.3.0 
  릴리스됨 2012-09-04  
   
 ### <a name="new-features"></a>새 기능  
@@ -936,7 +1013,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   사용자 지정 상태 표시줄로 인한 임의 VS 충돌 문제를 수정했습니다.  
   
-## <a name="102"></a>1.0.2  
+## <a name="1020"></a>1.0.2.0  
  릴리스됨 2012-08-30  
   
 ### <a name="bug-fixes"></a>버그 수정  
@@ -947,7 +1024,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   Unity 4 b7이 포함된 Unity에서 스크립팅 어셈블리를 검색하는 방법에 대한 버그를 수정했습니다.  
   
-## <a name="101"></a>1.0.1  
+## <a name="1010"></a>1.0.1.0  
  릴리스됨 2012-08-28  
   
 ### <a name="new-features"></a>새 기능  
@@ -964,6 +1041,6 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 -   UnityScript 및 Boo의 자산 폴더 내부 dll에 대한 완료를 수정했습니다.  
   
-## <a name="10---initial-release"></a>1.0 - 초기 릴리스  
+## <a name="1000---initial-release"></a>1.0.0.0 - 초기 릴리스  
  릴리스됨 2012-08-22
 

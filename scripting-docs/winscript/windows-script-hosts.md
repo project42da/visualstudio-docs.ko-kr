@@ -1,40 +1,45 @@
 ---
 title: "Windows 스크립트 호스트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows 스크립트 호스트, 호스트 구현"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Script Host, implementing hosts
 ms.assetid: 9d5f6471-b318-40f3-be01-d9cd0b1cdd47
 caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: 41fa898c7f0d62cd35cc1cb1c7b35eb2651c8bb6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/11/2017
+
 ---
-# Windows 스크립트 호스트
-Microsoft Windows 스크립트 호스트를 구현 하는 경우 스크립팅 엔진에만 호출 하는 가정할 수 있는 [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) 인터페이스의 기본 스레드 컨텍스트에서 호스트에서 다음을 수행 하는 경우:  
+# <a name="windows-script-hosts"></a>Windows 스크립트 호스트
+Microsoft Windows 스크립트 호스트를 구현할 때, 호스트에서 다음을 수행하는 경우에 한해 스크립팅 엔진이 기본 스레드의 컨텍스트에서 [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) 인터페이스만 호출한다고 간주해도 됩니다.  
   
--   기본 스레드 \(메시지 루프를 포함 하는 일반적으로 스레드\)을 선택 합니다.  
+-   기본 스레드를 선택합니다(일반적으로 메시지 루프를 포함하는 스레드).  
   
--   스크립팅 엔진을에서 기본 스레드를 인스턴스화합니다.  
+-   기본 스레드에서 스크립팅 엔진을 인스턴스화합니다.  
   
--   호출의 경우와 마찬가지로, 특별히 허용 하는 경우를 제외 하 고 엔진 메서드에서 기본 스레드를 스크립팅 [IActiveScript::InterruptScriptThread](../winscript/reference/iactivescript-interruptscriptthread.md) 및 [IActiveScript::Clone](../winscript/reference/iactivescript-clone.md).  
+-   [IActiveScript::InterruptScriptThread](../winscript/reference/iactivescript-interruptscriptthread.md) 및 [IActiveScript::Clone](../winscript/reference/iactivescript-clone.md)의 경우와 같이 특별히 허용된 경우를 제외하고 기본 스레드에서만 스크립팅 엔진 메서드를 호출합니다.  
   
--   스크립팅 엔진의 디스패치 개체에는 기본 스레드에서만 호출합니다.  
+-   기본 스레드에서만 스크립팅 엔진의 디스패치 개체를 호출합니다.  
   
--   창 핸들을 제공 하지 않으면 메시지 루프의 기본 스레드에서 실행 되도록 보장 합니다.  
+-   창 핸들이 제공되는 경우 메시지 루프가 기본 스레드에서 실행되는지 확인합니다.  
   
--   호스트의 개체 개체에서에서 기본 스레드 소스 이벤트만 모델이 있습니다.  
+-   호스트 개체의 개체가 기본 스레드의 소스 이벤트만 모델링하는지 확인합니다.  
   
- 이러한 규칙은 모든 호스트가 단일 스레드 자동으로 나옵니다.  위에서 설명한 제한 모델 의도적으로 걸린된 스크립트를 호출 하 여 중단 하는 호스트가 있는 활보 하 고 [IActiveScript::InterruptScriptThread](../winscript/reference/iactivescript-interruptscriptthread.md) \(CTRL \+ BREAK 처리기 또는 같은 시작\) 하 여 다른 스레드에서 또는 스크립트를 사용 하 여 새 스레드를 복제 하려면 [IActiveScript::Clone](../winscript/reference/iactivescript-clone.md).  
+ 이러한 규칙 다음에는 단일 스레드 호스트가 자동으로 옵니다. 위에 설명한 제한된 모델은 적당히 느슨하도록 의도되었으므로 호스트가 다른 스레드(CTRL+BREAK 처리기 등으로 시작)에서 [IActiveScript::InterruptScriptThread](../winscript/reference/iactivescript-interruptscriptthread.md)를 호출하여 중단 스크립트를 중단하거나 [IActiveScript::Clone](../winscript/reference/iactivescript-clone.md)을 사용하여 새 스레드에 스크립트를 복제할 수 있습니다.  
   
-## 설명  
- 있는 자유 스레드된 구현 하도록 선택 하는 호스트에 이러한 제한 사항을 적용 [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) 인터페이스 및 자유 스레드 개체 모델입니다.  이러한 호스트를 사용할 수 있는 [IActiveScript](../winscript/reference/iactivescript.md) 제한 없이 모든 스레드에서 인터페이스.  
+## <a name="remarks"></a>설명  
+ 이러한 제한 사항은 자유 스레드 [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) 인터페이스와 자유 스레드 개체 모델을 구현하도록 선택하는 호스트에 적용되지 않습니다. 이러한 호스트에서는 제한 없이 모든 스레드의 [IActiveScript](../winscript/reference/iactivescript.md) 인터페이스를 사용할 수 있습니다.  
   
-## 참고 항목  
- [\<PAVE OVER\> Microsoft Windows 스크립트 인터페이스 \- 소개](http://msdn.microsoft.com/library/3d10169f-2984-49ef-90c6-dd89c97f1dd6)
+## <a name="see-also"></a>참고 항목  
+ [Windows 스크립트 인터페이스](../winscript/windows-script-interfaces.md)

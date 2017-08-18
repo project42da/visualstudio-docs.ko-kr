@@ -1,23 +1,30 @@
 ---
 title: "참조(JavaScript 런타임) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 0bfe50da-fd79-4e00-9458-bc667769b415
 caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 29eb97427c2c5a29ee9a66e8e2a85953fd797efd
+ms.openlocfilehash: 90b22d51a79bbf6252781a49e2ac6b1749d3674f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/11/2017
+
 ---
-# 참조(JavaScript 런타임)
-JavaScript 런타임\(JsRT\) API를 사용하면 Windows에서 실행되는 데스크톱 및 서버 쪽 응용 프로그램에 스크립팅 기능을 추가할 수 있습니다.  
+# <a name="reference-javascript-runtime"></a>참조(JavaScript 런타임)
+JavaScript 런타임(JsRT) API를 사용하면 Windows에서 실행되는 데스크톱 및 서버 쪽 응용 프로그램에 스크립팅 기능을 추가할 수 있습니다.  
   
-## 단원 내용  
+ 응용 프로그램에 [ChakraCore](https://github.com/Microsoft/ChakraCore)를 포함하려는 경우 대신 JSRT 참조를 위한 [ChakraCore Wiki](http://aka.ms/corejsrtref)를 참조하세요.  
+  
+## <a name="in-this-section"></a>단원 내용  
  JsRT 호스팅을 지원하는 형식 정의, 상수 및 열거형은 아래에서 설명합니다.  
   
 -   [JavaScript 런타임 Typedef, 상수 및 열거형](../chakra-hosting/javascript-runtime-typedefs-constants-and-enumerations.md)  
@@ -254,6 +261,6 @@ JavaScript 런타임\(JsRT\) API를 사용하면 Windows에서 실행되는 데�
   
 -   [JsVariantToValue 함수](../chakra-hosting/jsvarianttovalue-function.md)  
   
-## 참고 항목  
- [JavaScript 런타임 호스팅](../chakra-hosting/hosting-the-javascript-runtime.md)   
- [JavaScript 런타임 호스팅](../chakra-hosting/javascript-runtime-hosting.md)
+## <a name="see-also"></a>참고 항목  
+ [JavaScript 런타임 호스트](../chakra-hosting/hosting-the-javascript-runtime.md)   
+ [JavaScript 런타임 호스트](../chakra-hosting/javascript-runtime-hosting.md)
