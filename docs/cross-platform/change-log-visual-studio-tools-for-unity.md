@@ -29,45 +29,23 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: cd8418f782f800390d166403374ecb879970dbc3
-ms.openlocfilehash: 92304c73b1a098c32a74011956dadd8097b8329d
+ms.sourcegitcommit: a2cfae1be1415a2d770d1467a09f207f73eafd05
+ms.openlocfilehash: 5b872f1d28c132fe2910bed16882ba6fb01e6782
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>변경 로그(Visual Studio Tools for Unity)
 Visual Studio Tools for Unity에 대한 변경 로그입니다.  
 
-## <a name="3400"></a>3.4.0.0
- 릴리스됨 2017-08-22
+## <a name="3302"></a>3.3.0.2
+ 릴리스됨 2017-08-15
 
-### <a name="new-features"></a>새 기능  
-
--   **Project Generation:**  
-
-    -   assembly.json 컴파일 단위 지원이 추가되었습니다.
-
-    -   프로젝트 폴더에 Unity 어셈블리 복사가 중지되었습니다.
-    
--   **디버거:**  
-
-    -   새 Unity 런타임에서 다음 문을 설정하는 지원이 추가되었습니다.
-    
-    -   새 Unity 런타임에서 10진수 형식 지원이 추가되었습니다.
-    
-    -   암시적/명시적 변환에 대한 지원이 추가되었습니다.
-    
 ### <a name="bug-fixes"></a>버그 수정  
   
--   **평가:**  
-
-    -   암시적 크기의 배열 만들기를 수정했습니다.
-    
-    -   로컬로 컴파일러가 생성한 항목을 수정했습니다.
+-   **프로젝트 생성:**  
    
--   **Project Generation:**  
-   
-    -   4.6 API 수준의 Microsoft.CSharp에 대한 참조가 수정되었습니다.
+    -   Unity 5.5 및 이전 버전에서 Visual Studio 솔루션 생성을 수정합니다.
    
 ## <a name="3300"></a>3.3.0.0
  릴리스됨 2017-08-14
