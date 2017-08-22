@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 223750aef8d997c6ae017f49ea0a9522bdba72bc
-ms.openlocfilehash: c5687a3971d4b670e73e55294e6dfd0c7c3f91d0
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: 71a0fadaefad47b16182f1166968207a26cc1d40
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -1077,7 +1077,7 @@ csharp_indent_labels = one_less
 csharp_space_after_cast = true
 ``` 
 
-### <a name="space_control_flow">제어 흐름 문의 키워드 뒤에 공백</a>
+### <a name="space_control_flow"> 제어 흐름 문의 키워드 뒤에 공백 </a>
 | **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_after_keywords_in_control_flow_statements` |  C#  | true | Visual Studio 2017 v. 15.3  |
