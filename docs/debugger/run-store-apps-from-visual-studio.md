@@ -1,38 +1,56 @@
 ---
-title: "Visual Studio에서 스토어 앱 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Run Store apps from Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 98358355-e5e6-47e9-a4b6-cd559208e43c
 caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Visual Studio에서 스토어 앱 실행
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pt-br
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 0e2ce46d4d7038d5c23610aa12bcb9cc47c7a735
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-스토어 앱은 광범위한 장치에서 실행되고, Visual Studio에서는 이러한 앱을 실행하고 앱과 상호 작용할 수 있는 다양한 방법을 제공합니다.  "F5" 기능이 향상되어 개발하는 동안 앱을 쉽게 디버깅하고 프로파일링 및 테스트할 수 있게 되었습니다.  
+---
+# <a name="run-store-apps-from-visual-studio"></a>Run Store apps from Visual Studio
+Store apps run on a broad range of devices, and Visual Studio provides you with a number of ways to run and interact with those apps. The "F5" experience is enhanced to make it easy to debug, profile, and test apps during development.  
   
- ![디버깅 시작 및 대상 선택](../debugger/media/vsrun_dropdownlist.png "VSRUN\_DropDownList")  
+ ![Start debugging and select target](../debugger/media/vsrun_dropdownlist.png "VSRUN_DropDownList")  
   
-## 단원 내용  
+## <a name="in-this-section"></a>In this section  
   
 |||  
 |-|-|  
-|[로컬 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-the-local-machine.md)|Visual Studio 장치에서 Windows 스토어 앱을 실행합니다.|  
-|[시뮬레이터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-in-the-simulator.md)|터치 및 방향과 같은 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 기능을 시뮬레이트하는 Windows 스토어 앱을 데스크톱에서 실행합니다.|  
-|[원격 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md)|네트워크나 이더넷 케이블을 통해 직접 Visual Studio 컴퓨터에 연결된 장치에서 Windows 스토어 앱을 배포하여 실행합니다.|  
-|[에뮬레이터에서 Windows Phone 앱 실행](../debugger/run-windows-phone-apps-in-the-emulator.md)|데스크톱 창에서 Windows Phone을 시뮬레이트하는 Windows 스토어 앱을 실행합니다.|  
-|[Visual Studio에서 Windows 스토어 앱 배포](../debugger/deploy-windows-store-apps-from-visual-studio.md)|장치에서 애드혹 테스트를 진행하려면 Windows 스토어 앱을 배포하여 등록합니다.|
+|[Run Windows Store apps on the local machine](../debugger/run-windows-store-apps-on-the-local-machine.md)|Run your Windows Store app on the Visual Studio device.|  
+|[Run Windows Store apps in the simulator](../debugger/run-windows-store-apps-in-the-simulator.md)|Run your Windows Store app in a desktop window that simulates [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] functionality such as touch and orientation.|  
+|[Run Windows Store apps on a remote machine](../debugger/run-windows-store-apps-on-a-remote-machine.md)|Deploy and run your Windows Store app on a device that is connected to the Visual Studio machine over a network or directly through an Ethernet cable.|  
+|[Run Windows Phone apps in the emulator](../debugger/run-windows-phone-apps-in-the-emulator.md)|Run your Windows Store app in a desktop window that simulates a Windows Phone.|  
+|[Deploy Windows Store apps from Visual Studio](../debugger/deploy-windows-store-apps-from-visual-studio.md)|Deploy and register your Windows Store app on a device for ad-hoc testing.|

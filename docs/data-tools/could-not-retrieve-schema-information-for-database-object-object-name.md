@@ -1,27 +1,46 @@
 ---
-title: "데이터베이스 개체 &lt;object name&gt;의 스키마 정보를 검색할 수 없습니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Could not retrieve schema information for database object &lt;object name&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a1c8f833-c918-4a86-9679-d2a791f938a9
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 78c409016c5526fc1fb1f9870a2da45c3a0aae93
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
+
 ---
-# 데이터베이스 개체 &lt;object name&gt;의 스키마 정보를 검색할 수 없습니다.
-이 메시지는 일반적으로 **서버 탐색기\/데이터베이스 탐색기**에서 개체를 클립보드에 복사하고 데이터베이스에서 삭제한 다음 디자이너에 붙여넣은 경우에 나타납니다.즉, 데이터베이스 개체가 더 이상 존재하지 않으므로 이 메시지가 나타납니다.  
+# <a name="could-not-retrieve-schema-information-for-database-object-object-name"></a>Could not retrieve schema information for database object \<object name>
+This message typically appears when an object in **Server Explorer/Database Explorer** is copied to the clipboard, deleted from the database, and then pasted onto the designer. Because the database object no longer exists, this message appears.  
   
-### 이 오류를 해결하려면  
+### <a name="to-correct-this-error"></a>To correct this error  
   
--   **확인**을 클릭하여 대화 상자를 닫습니다.  
+-   Click **OK** to dismiss the dialog box.  
   
-## 참고 항목  
- [O\/R 디자이너 개요](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio1.md)   
- [연습: LINQ to SQL 클래스 만들기\(O\/R 디자이너\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)

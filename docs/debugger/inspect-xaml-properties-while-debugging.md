@@ -1,52 +1,64 @@
 ---
-title: "디버그하는 동안 XAML 속성 검사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Inspect XAML properties while debugging | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
 caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# 디버그하는 동안 XAML 속성 검사
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 24dc103b195fbf0110a6c760beb9eb8e3ce305ba
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-**라이브 시각적 트리** 및 **라이브 속성 탐색기**를 사용하여 실행 중인 XAML 코드를 실시간으로 볼 수 있습니다.  이러한 도구는 실행 중인 XAML 응용 프로그램의 UI 요소에 대한 트리 뷰를 제공하고 선택한 UI 요소의 런타임 속성을 보여 줍니다.  
+---
+# <a name="inspect-xaml-properties-while-debugging"></a>Inspect XAML properties while debugging
+You can get a real-time view of your running XAML code with the **Live Visual Tree** and the **Live Property Explorer**. These tools give you a tree view of the UI elements of your running XAML application, and show you the runtime properties of any UI element you select.  
   
- 다음 구성에서 이러한 도구를 사용할 수 있습니다.  
+ You can use these tools in the following configurations:  
   
-|앱 유형|운영 체제 및 도구|  
-|----------|----------------|  
-|Windows Presentation Foundation\(4.0 이상\) 응용 프로그램|Windows 7 이상|  
-|Windows 스토어 및 Windows Phone 8.1 앱|Windows 10 이상, [Windows 10 SDK](https://dev.windows.com/en-us/downloads/windows-10-sdk)|  
-|유니버설 Windows 앱|Windows 10 이상, [Windows 10 SDK](https://dev.windows.com/en-us/downloads/windows-10-sdk)|  
+|Type of App|Operating System and Tools|  
+|-----------------|--------------------------------|  
+|Windows Presentation Foundation (4.0 and above) applications|Windows 7 and above|  
+|Windows Store and Windows Phone 8.1 apps|Windows 10 and above, with the [Windows 10 SDK](https://dev.windows.com/en-us/downloads/windows-10-sdk)|  
+|Universal Windows apps|Windows 10 and above, with the [Windows 10 SDK](https://dev.windows.com/en-us/downloads/windows-10-sdk)|  
   
-## 라이브 시각적 트리의 요소 보기  
- 목록 보기 및 단추가 있는 매우 간단한 WPF 응용 프로그램을 시작하겠습니다.  단추를 클릭할 때마다 다른 항목이 목록에 추가됩니다.  짝수 번호 항목은 회색으로 표시되고 홀수 번호 항목은 노란색으로 표시됩니다.  
+## <a name="looking-at-elements-in-the-live-visual-tree"></a>Looking at Elements in the Live Visual Tree  
+ Let's get started with a very simple WPF application that has a list view and a button. Every time you click the button, another item is added to the list. Even-numbered items are colored gray, and odd-numbered items are colored yellow.  
   
- 새 C\# WPF 응용 프로그램을 만듭니다\(파일 \/ 새로 만들기 \/ 프로젝트를 선택한 다음 C\#을 선택하고 WPF 응용 프로그램 찾기\).  TestXAML로 이름을 지정합니다.  
+ Create a new C# WPF application (File > New > Project, then select C# and find WPF Application). Name it **TestXAML**.  
   
- 다음과 같이 MainWindow.xaml을 변경합니다.  
+ Change MainWindow.xaml to the following:  
   
 ```xaml  
-<Window x:Class="WpfApplication1.MainWindow"  
+<Window x:Class="TestXAML.MainWindow"  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
-    xmlns:local="clr-namespace:WpfApplication1"  
+    xmlns:local="clr-namespace:TestXAML"  
     mc:Ignorable="d"  
      Title="MainWindow" Height="350" Width="525">  
     <Grid>  
@@ -56,9 +68,11 @@ caps.handback.revision: 3
 </Window>  
 ```  
   
- MainWindow.xaml.cs 파일에 다음 명령 처리기를 추가합니다.  
+ Add the following command handler to the MainWindow.xaml.cs file:  
   
-```c#  
+```C# 
+int count;
+
 private void button_Click(object sender, RoutedEventArgs e)  
 {  
     ListBoxItem item = new ListBoxItem();  
@@ -75,37 +89,37 @@ private void button_Click(object sender, RoutedEventArgs e)
 }  
 ```  
   
- 프로젝트를 빌드하고 디버깅을 시작합니다.  \(빌드 구성은 릴리스가 아닌 디버그여야 합니다.  빌드 구성에 대한 자세한 내용은 [빌드 구성 이해](../ide/understanding-build-configurations.md)를 참조하세요.\)  
+ Build the project and start debugging. (The build configuration must be Debug, not Release. For more information about build configurations, see [Understanding Build Configurations](../ide/understanding-build-configurations.md).)  
   
- 창이 표시되면 **항목 추가** 단추를 몇 번 클릭합니다.  다음과 같이 표시되어야 합니다.  
+ When the window comes up, click the **Add Item** button a couple of times. You should see something like this:  
   
- ![앱의 주 창](~/debugger/media/livevisualtree-app.png "LiveVIsualTree\-App")  
+ ![Main window of the app](../debugger/media/livevisualtree-app.png "LiveVIsualTree-App")  
   
- 이제 **라이브 시각적 트리** 창\(**디버그 \/ 창 \/ 라이브 시각적 트리** 또는 IDE의 왼쪽을 따라 찾기\)을 엽니다.  이 창과 **라이브 속성** 창을 나란히 볼 수 있도록 이 창을 도킹 위치에서 벗어나도록 끕니다.  **라이브 시각적 트리** 창에서 **ContentPresenter** 노드를 확장합니다.  단추와 목록 상자에 대한 노드가 있어야 합니다.  목록 상자와 **ScrollContentPresenter**및**ItemsPresenter**를 차례로 확장하여 목록 상자 항목을 찾습니다.  창이 다음과 같이 표시되어야 합니다.  
+ Now open the **Live Visual Tree** window (**Debug > Windows > Live Visual Tree**, or find it along the left side of the IDE). Drag it away from its docking position so we can look at this window and the **Live Properties** window side by side. In the **Live Visual Tree** window, expand the **ContentPresenter** node. It should contain nodes for the button and the list box. Expand the list box (and then the **ScrollContentPresenter** and the **ItemsPresenter**) to find the list box items. The window should look like this:  
   
- ![라이브 표시 트리의 Listboxitem](~/debugger/media/livevisualtree-listboxitems.png "LiveVisualTree\-ListBoxItems")  
+ ![ListBoxItems in the Live Visual Tree](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree-ListBoxItems")  
   
- 응용 프로그램 창으로 다시 이동하고 더 많은 항목을 추가합니다.  더 많은 목록 상자 항목이 **라이브 시각적 트리**에 나타나야 합니다.  
+ Go back to the application window and add a few more items. You should see more list box items appear in the **Live Visual Tree**.  
   
- 이제 목록 상자 항목 중 하나의 속성을 살펴보겠습니다.  **라이브 시각적 트리**의 첫 번째 목록 상자 항목을 선택하고 도구 모음에서 **속성 표시** 아이콘을 클릭합니다.  **라이브 속성 탐색기**가 표시됩니다.  **콘텐츠** 필드는 "Item1"이고 **배경** 필드는 **\#FFFFFFE0**\(연한 노랑\)입니다.  **라이브 시각적 트리**로 돌아가서 두 번째 목록 상자 항목을 선택합니다.  **라이브 속성 탐색기**에서 **콘텐츠** 필드는 "Item2"로, **배경** 필드는**\#FFD3D3D3**\(밝은 회색\)으로 표시되어야 합니다.  
+ Now let's look at the properties of one of the list box items. Select the first list box item in the **Live Visual Tree** and click the **Show Properties** icon on the toolbar. The **Live Property Explorer** should appear. Note that the **Content** field is "Item1", and the **Background** field is **#FFFFFFE0** (light yellow). Go back to the **Live Visual Tree** and select the second list box item. The **Live Property Explorer** should show that the **Content** field is "Item2", and the **Background** field is **#FFD3D3D3** (light gray).  
   
- XAML의 실제 구조에는 직접적으로 관련이 없는 많은 요소가 있습니다. 코드를 잘 모르면 트리에서 필요한 항목을 찾기가 어려울 수 있습니다.  따라서 **라이브 시각적 트리**에는 검사하려는 요소를 찾는 데 도움이 되는 응용 프로그램 UI를 사용할 수 있는 몇 가지 방법이 있습니다.  
+ The actual structure of the XAML has a lot of elements that you're probably not directly interested in, and if you don't know the code well you might have a hard time navigating the tree to find what you're looking for. So the **Live Visual Tree** has a couple of ways that let you use the application's UI to help you find the element you want to examine.  
   
- **실행 중인 응용 프로그램에서 선택 사용**.  **라이브 시각적 트리** 도구 모음의 가장 왼쪽에 있는 단추를 선택하면 이 모드를 사용할 수 있습니다.  이 모드를 켜면 응용 프로그램에서 UI 요소를 선택할 수 있고 **라이브 시각적 트리**\(및 **라이브 속성 뷰어**\)가 이 요소 및 해당 속성에 해당하는 트리에 노드를 표시하도록 자동으로 업데이트됩니다.  
+ **Enable selection in the running application**. You can enable this mode when you select the leftmost button on the **Live Visual Tree** toolbar. With this mode on, you can select a UI element in the application, and the **Live Visual Tree** (and the **Live Property Viewer**) automatically updates to show the node in the tree corresponding to that element, and its properties.  
   
- **실행 중인 응용 프로그램에 레이아웃 표시기 표시**.  선택 사용 단추 바로 오른쪽에 있는 단추를 선택하면 이 모드를 사용할 수 있습니다.  **레이아웃 표시기 표시**를 켜면 응용 프로그램 창에 선택한 개체의 범위를 따라 가로 및 세로줄이 표시됩니다. 따라서 여백을 표시하는 사각형뿐만 아니라 어떤 항목이 정렬되는지 확인할 수 있습니다.  예를 들어 **선택 사용** 및 **레이아웃 표시**를 모두 켜고 응용 프로그램에서 **항목 추가** 텍스트 블록을 선택합니다.  **라이브 시각적 트리**에 텍스트 블록 노드가 표시되고 **라이브 속성 뷰어**에 텍스트 블록 속성이 표시되어야 합니다. 또한 텍스트 블록의 범위에는 가로 및 세로줄이 표시되어야 합니다.  
+ **Display layout adorners in the running application**. You can enable this mode when you select the button that is immediately to the right of the Enable selection button. When **Display layout adorners** is on, it causes the application window to show horizontal and vertical lines along the bounds of the selected object so you can see what it aligns to, as well as rectangles showing the margins. For example, turn both **Enable selection** and **Display layout** on, and select the **Add Item** text block in the application. You should see the text block node in the **Live Visual Tree** and the text block properties in the **Live Property Viewer**, as well as the horizontal and vertical lines on the bounds of the text block.  
   
- ![DisplayLayout의 LivePropertyViewer](~/debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer\-DisplayLayout")  
+ ![LivePropertyViewer in DisplayLayout](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")  
   
- **선택 미리 보기**.  라이브 시각적 트리 도구 모음의 왼쪽에서 세 번째 단추를 선택하면 이 모드를 사용할 수 있습니다.  이 모드에서는 응용 프로그램의 소스 코드에 액세스할 수 있는 경우 요소가 선언된 XAML을 보여 줍니다.  **선택 사용** 및 **선택 미리 보기**를 선택한 다음 테스트 응용 프로그램에서 단추를 선택합니다.  Visual Studio에서 MainWindow.xaml 파일이 열리고 커서가 단추가 정의된 줄에 위치합니다.  
+ **Preview Selection**. You can enable this mode by selecting the third button from the left on the Live Visual Tree toolbar. This mode shows the XAML where the element was declared, if you have access to the source code of the application. Select **Enable selection** and **Preview selection**, and then you select the button in our test application. The MainWindow.xaml file opens in Visual Studio and the cursor is placed on the line where the button is defined.  
   
-## 응용 프로그램이 실행 중인 상태에서 XAML 도구를 사용  
- 소스 코드가 없는 경우 이러한 XAML 도구를 사용할 수 있습니다.  실행 중인 XAML 응용 프로그램에 연결하면 해당 응용 프로그램의 UI 요소에서도 **라이브 시각적 트리**를 사용할 수 있습니다.  다음은 이전에 사용한 동일한 WPF 테스트 응용 프로그램을 사용하는 예제입니다.  
+## <a name="using-xaml-tools-with-running-applications"></a>Using XAML tools with running applications  
+ You can use these XAML tools even when you don't have the source code. When you attach to a running XAML application, you can use the **Live Visual Tree** on the UI elements of that application too. Here's an example, using the same WPF test application we used before.  
   
-1.  릴리스 구성의 TestXaml 응용 프로그램을 시작합니다.  **디버그** 구성으로 실행 중인 프로세스에는 연결할 수 없습니다.  
+1.  Start the **TestXaml** application in the Release configuration. You cannot attach to a process that is running in a **Debug** configuration.  
   
-2.  Visual Studio의 두 번째 인스턴스를 열고 **디버그 \/ 프로세스에 연결**을 클릭합니다.  사용 가능한 프로세스 목록에서 **TestXaml.exe**를 찾고 **연결**을 클릭합니다.  
+2.  Open a second instance of Visual Studio and click **Debug > Attach to Process**. Find **TestXaml.exe** in the list of available processes, and click **Attach**.  
   
-3.  응용 프로그램이 실행되기 시작합니다.  
+3.  The application starts running.  
   
-4.  Visual Studio의 두 번째 인스턴스에서 **라이브 시각적 트리**\(**디버그 \/ 창 \/ 라이브 시각적 트리**\)를 엽니다.  TestXaml UI 요소가 표시되어야 하고 응용 프로그램을 직접 디버그하는 동안 했던 것처럼 해당 요소를 조작할 수 있어야 합니다.
+4.  In the second instance of Visual Studio, open the **Live Visual Tree** (**Debug > Windows > Live Visual Tree**). You should see the **TestXaml** UI elements, and you should be able to manipulate them as you did while debugging the application directly.

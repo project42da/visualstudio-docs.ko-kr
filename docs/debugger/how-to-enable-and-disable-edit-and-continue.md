@@ -1,59 +1,85 @@
 ---
-title: "방법: 편집하며 계속하기 설정/해제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "/INCREMENTAL 링커 옵션"
-  - "코드 변경 내용 적용 명령"
-  - "중단 모드, 코드 변경 내용 적용"
-  - "코드 변경 내용, 중단 모드에서 적용"
-  - "편집하며 계속하기, 코드 변경 내용 적용"
-  - "편집하며 계속하기, 비활성화"
-  - "편집하며 계속하기, 사용"
-  - "이동 명령"
-  - "INCREMENTAL 링커 옵션"
-  - "단계 명령"
+title: 'How to: Enable and Disable Edit and Continue (C#, VB, C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- /INCREMENTAL linker option
+- Apply Code Changes command
+- Edit and Continue, disabling
+- code changes, applying in break mode
+- INCREMENTAL linker option
+- Edit and Continue, enabling
+- break mode, applying code changes
+- Edit and Continue, applying code changes
+- Step command
+- Go command
 ms.assetid: fd961a1c-76fa-420d-ad8f-c1a6c003b0db
 caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 방법: 편집하며 계속하기 설정/해제
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: e47cf3946f303bde8274006c092562d1883fd422
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-편집하며 계속하기는 디자인 타임에 **옵션** 대화 상자에서 사용하거나 사용하지 않도록 설정할 수 있습니다.  디버깅 중에는 이 설정을 변경할 수 없습니다.  
+---
+# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>How to: Enable and Disable Edit and Continue (C#, VB, C++)
+You can disable or enable Edit and Continue in the **Options** dialog box at design time. You cannot change this setting while you are debugging.  
   
- 편집하며 계속하기는 디버그 빌드에서만 작동합니다.  네이티브 C\+\+의 경우 편집하며 계속하기를 실행하려면 \/INCREMENTAL 옵션을 사용해야 합니다.  
+Edit and Continue works only in debug builds. For native C++, Edit and Continue requires using the /INCREMENTAL option. For more information about feature requirements in C++, see this [blog post](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/) and [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md).
   
-## 절차  
+#### <a name="to-enabledisable-edit-and-continue"></a>To enable/disable Edit and Continue  
   
-#### 편집하며 계속하기를 사용하거나 사용하지 않도록 설정하려면  
+1.  If you are in a debugging session, stop debugging (**Shift + F5**).
+
+2.  Open debugging options page (**Tools > Options > Debugging**).
   
-1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
+3.  Select **General**, and scroll down to **Edit and Continue** category (right pane).  
   
-2.  **옵션** 대화 상자에서 **디버깅** 노드를 열고 **편집하며 계속하기** 범주를 선택합니다.  
-  
-3.  이 기능을 사용하도록 설정하려면 **편집하며 계속하기 사용** 확인란을 선택합니다.  이 기능을 사용하지 않도록 설정하려면 이 확인란의 선택을 취소합니다.  
+4.  To enable, select the **Enable Edit and Continue** check box. To disable, clear the check box.  
   
     > [!NOTE]
-    >  IntelliTrace를 사용하도록 설정되어 있고 IntelliTrace 이벤트 및 호출 정보를 모두 수집하는 경우 편집하며 계속하기를 사용하지 않도록 설정됩니다.  자세한 내용은 [디버깅 정보를 수집하도록 IntelliTrace 구성](http://msdn.microsoft.com/ko-kr/7657ecab-e07e-4b1b-872d-f05d966be37e)을 참조하십시오.  
+    >  If IntelliTrace is enabled and you collect both IntelliTrace events and call information, Edit and Continue is disabled. For more information, see [IntelliTrace](../debugger/intellitrace.md).
+
+5. (C++) To enable, select **Enable Native Edit and Continue**. To disable, clear the check box.
+
+6. (C++) Set additional options for native code.
+
+    - **Apply changes on continue (Native only)**  
+        Visual Studio automatically compiles and applies any outstanding code changes you have made when continuing the process from a break state. If not selected, you can choose to apply changes using the "Apply Code Changes" item under the Debug menu.  
   
-4.  **확인**을 클릭합니다.  
+    - **Warn about stale code (Native only)**  
+        Get warnings about stale code. 
   
-## 참고 항목  
- [편집하며 계속하기](../debugger/edit-and-continue.md)   
- [옵션 대화 상자, 디버깅, 편집하며 계속하기](../Topic/Edit%20and%20Continue,%20Debugging,%20Options%20Dialog%20Box.md)
+7.  Click **OK**.    
+  
+## <a name="see-also"></a>See Also  
+ [Edit and Continue](../debugger/edit-and-continue.md)

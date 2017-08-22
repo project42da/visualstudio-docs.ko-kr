@@ -1,51 +1,68 @@
 ---
-title: "WCF 디버깅의 제한 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "디버깅, WCF"
-  - "WCF, 디버깅 제한 사항"
+title: Limitations on WCF Debugging | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging, WCF
+- WCF, debugging limitations
 ms.assetid: 8e0333c4-1ddc-4abe-8f1c-d19bf6a2a07a
 caps.latest.revision: 30
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# WCF 디버깅의 제한 사항
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 02e261c06d065eec1c93159f39103d9281cef3b9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-다음 세 가지 방법으로 WCF 서비스의 디버깅을 시작할 수 있습니다.  
+---
+# <a name="limitations-on-wcf-debugging"></a>Limitations on WCF Debugging
+There are three ways that you can begin debugging a WCF service:  
   
--   서비스를 호출하는 클라이언트 프로세스를 디버깅합니다.  디버거가 서비스를 한 단계씩 실행합니다.  서비스가 클라이언트 응용 프로그램과 같은 솔루션에 있지 않아도 됩니다.  
+-   You are debugging a client process that calls a service. The debugger steps into the service. The service does not have to be in the same solution as your client application.  
   
--   서비스를 요청하는 클라이언트 프로세스를 디버깅합니다.  서비스가 솔루션의 일부여야 합니다.  
+-   You are debugging a client process that makes a request to a service. The service must be part of your solution.  
   
--   **프로세스에 연결**을 사용하여 현재 실행 중인 서비스에 연결합니다.  디버깅이 서비스 내에서 시작됩니다.  
+-   You use **Attach to Process** to attach to a service that is currently running. Debugging begins inside the service.  
   
- 이 항목에서는 이러한 시나리오에 적용되는 제한 사항에 대해 설명합니다.  
+ This topic describes limitations on these scenarios.  
   
-## 서비스를 한 단계씩 실행하는 경우의 제한 사항  
- 디버깅할 클라이언트 응용 프로그램에서 서비스를 한 단계씩 실행하려면 다음 조건이 충족되어야 합니다.  
+## <a name="limitations-on-stepping-into-a-service"></a>Limitations on Stepping Into a Service  
+ To step into a service from a client applications that you are debugging, the following conditions must be met:  
   
--   클라이언트에서 동기 클라이언트 개체를 사용하여 서비스를 호출해야 합니다.  
+-   The client must call the service by using a synchronous client object.  
   
--   계약 작업은 단방향일 수 없습니다.  
+-   The contract operation cannot be one-way.  
   
--   서버가 비동기 상태인 경우 서비스 내에서 코드를 실행하는 동안 전체 호출 스택을 볼 수 없습니다.  
+-   If the server is asynchronous, you cannot view the full call stack while you are executing code inside the service.  
   
--   app.config 또는 Web.config 파일에서 다음 코드를 사용하여 디버깅을 사용하도록 설정해야 합니다.  
+-   Debugging must be enabled with the following code in the app.config or Web.config file:  
   
     ```  
     <system.web>  
@@ -53,21 +70,21 @@ caps.handback.revision: 30
     </system.web>  
     ```  
   
-     이 코드는 한 번만 추가하면 됩니다.  **프로세스에 연결**을 사용하여 .config 파일을 편집하거나 서비스에 연결하여 이 코드를 추가할 수 있습니다.  서비스에서 **프로세스에 연결**을 사용하면 디버그 코드가 .config 파일에 자동으로 추가됩니다.  그러면 .config 파일을 편집할 필요 없이 서비스를 디버깅하고 한 단계씩 실행할 수 있습니다.  
+     This code only has to be added one time. You can add this code by editing the .config file or by attaching to the service by using **Attach to Process**. When you use **Attach to Process** on a service, the debug code is automatically added to the .config file. After that, you can debug and step into the service without having to edit the .config file.  
   
-## 서비스를 나가는 경우의 제한 사항  
- 서비스에서 나가서 클라이언트로 돌아오는 경우에도 위에서 설명한 서비스를 한 단계씩 실행할 때와 동일한 제한 사항이 적용됩니다.  또한 이 경우에는 디버거가 클라이언트에 연결되어야 합니다.  클라이언트를 디버깅하고 서비스를 한 단계씩 실행하는 경우 디버거는 서비스에 연결된 상태로 유지됩니다.  이는 **디버깅 시작**을 사용하여 클라이언트를 시작했는지, 아니면 **프로세스에 연결**을 사용하여 클라이언트에 연결했는지에 관계없이 적용됩니다.  서비스에 연결하여 디버깅을 시작한 경우에는 디버거는 아직 클라이언트에 연결되지 않은 상태입니다.  이 경우 서비스에서 나가서 클라이언트로 돌아가려면 먼저 **프로세스에 연결**을 사용하여 클라이언트에 수동으로 연결해야 합니다.  
+## <a name="limitations-on-stepping-out-of-a-service"></a>Limitations on Stepping Out of a Service  
+ Stepping out of a service and back to the client has the same limitations described for stepping into a service. In addition, the debugger must be attached to the client. If you are debugging a client and step into a service, the debugger remains attached to the service. This is true whether you started the client by using **Start Debugging** or attached to the client by using **Attach to Process**. If you began debugging by attaching to the service, the debugger is not yet attached to the client. In that case, if you have to step out of the service and back to the client, you must first use **Attach to Process** to attach to the client manually.  
   
-## 서비스에 자동으로 연결하는 경우의 제한 사항  
- 서비스에 자동으로 연결할 때는 다음과 같은 제한 사항이 적용됩니다.  
+## <a name="limitations-on-automatic-attach-to-a-service"></a>Limitations on Automatic Attach to a Service  
+ Automatically attaching to a service has the following limitations:  
   
--   서비스가 디버깅하는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션의 일부여야 합니다.  
+-   The service must be part of the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution you are debugging.  
   
--   서비스가 호스팅되어야 합니다.  서비스가 웹 사이트 프로젝트\(파일 시스템 및 HTTP\), 웹 응용 프로그램 프로젝트\(파일 시스템 및 HTTP\) 또는 WCF 서비스 라이브러리 프로젝트의 일부일 수 있습니다.  WCF 서비스 라이브러리 프로젝트는 서비스 라이브러리 또는 워크플로 서비스 라이브러리일 수 있습니다.  
+-   The service must be hosted. It may be part of a Web Site Project (File System and HTTP), Web Application Project (File System and HTTP), or WCF Service Library project. WCF Service Library projects can be either Service Libraries or Workflow Service Libraries.  
   
--   서비스가 WCF 클라이언트에서 호출되어야 합니다.  
+-   The service must be invoked from a WCF client.  
   
--   app.config 또는 Web.config 파일에서 다음 코드를 사용하여 디버깅을 사용하도록 설정해야 합니다.  
+-   Debugging must be enabled with the following code in the app.config or Web.config file:  
   
     ```  
     <system.web>  
@@ -75,12 +92,12 @@ caps.handback.revision: 30
     <system.web>  
     ```  
   
-## 자체 호스팅  
- *자체 호스팅 서비스*는 IIS, WCF 서비스 호스트 또는 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Development Server 내에서 실행되지 않는 WCF 서비스입니다.  자체 호스팅 서비스를 디버깅하는 방법에 대한 자세한 내용은 [방법: 자체 호스팅 WCF 서비스 디버깅](../debugger/how-to-debug-a-self-hosted-wcf-service.md)을 참조하십시오.  
+## <a name="self-hosting"></a>Self-Hosting  
+ A *self-hosted service* is a WCF service that does not run inside IIS, the WCF Service Host, or the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Development Server. For information about how to debug a self-hosted service, see [How to: Debug a Self-Hosted WCF Service](../debugger/how-to-debug-a-self-hosted-wcf-service.md).  
   
-## 자체 호스팅  
- [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 또는 3.5 응용 프로그램을 디버깅할 수 있으려면 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]을 설치하기 전에 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 또는 3.5를 설치해야 합니다.  [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]이 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 또는 3.5 이전에 설치된 경우 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 또는 3.5 응용 프로그램을 디버깅하려고 하면 오류가 발생합니다.  오류 메시지는 "서버에 대해 자동으로 한 단계씩 코드를 실행할 수 없습니다."입니다. 이 문제를 해결하려면 Windows **제어판**, **프로그램 및 기능**을 사용하여 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 설치를 복구합니다.  
+## <a name="self-hosting"></a>Self-Hosting  
+ To enable debugging of [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 or 3.5 applications, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 or 3.5 must be installed before [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] is installed. If [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] is installed before [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 or 3.5, an error occurs when you try to debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 or 3.5 application. The error message is, "Unable to Automatically Step Into the Server." To fix this problem, use the Windows **Control Panel** > **Programs and Features** to repair your [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] installation.  
   
-## 참고 항목  
- [WCF 서비스 디버깅](../debugger/debugging-wcf-services.md)   
- [방법: 자체 호스팅 WCF 서비스 디버깅](../debugger/how-to-debug-a-self-hosted-wcf-service.md)
+## <a name="see-also"></a>See Also  
+ [Debugging WCF Services](../debugger/debugging-wcf-services.md)   
+ [How to: Debug a Self-Hosted WCF Service](../debugger/how-to-debug-a-self-hosted-wcf-service.md)

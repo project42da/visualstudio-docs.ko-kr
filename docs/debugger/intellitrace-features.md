@@ -1,117 +1,137 @@
 ---
-title: "IntelliTrace 기능 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "디버깅[Visual Studio ALM], IntelliTrace"
-  - "디버깅[Visual Studio ALM], 실행 기록 기록"
-  - "IntelliTrace, 이벤트로 디버깅"
-  - "IntelliTrace, 이벤트 및 호출 정보로 디버깅"
-  - "IntelliTrace, 비활성화"
-  - "IntelliTrace, 사용"
-  - "IntelliTrace, 이벤트 및 호출 기록 탐색"
-  - "IntelliTrace, 실행 기록 기록"
-  - "IntelliTrace, 세션 저장"
-  - "IntelliTrace, 디버깅 시작"
-  - "IntelliTrace, 해제"
-  - "IntelliTrace, 설정"
+title: IntelliTrace Features | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IntelliTrace, debugging with events
+- IntelliTrace, recording execution history
+- debugging [Visual Studio ALM], recording execution history
+- IntelliTrace, turn off
+- IntelliTrace, navigating event and call history
+- IntelliTrace, saving your session
+- IntelliTrace, enabling
+- IntelliTrace, start debugging
+- IntelliTrace, debugging with events and call information
+- IntelliTrace, disabling
+- IntelliTrace, turn on
+- debugging [Visual Studio ALM], IntelliTrace
 ms.assetid: 5ccc059c-6097-46b4-9d4b-34236c02d549
 caps.latest.revision: 67
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 67
----
-# IntelliTrace 기능
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 5ea933bbd72e720c56ddf74490c77298133a1305
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-IntelliTrace를 사용하여 응용 프로그램의 이벤트 및 메서드 호출을 기록하고 실행 중 다양한 지점에서 상태\(호출 스택 및 지역 변수 값\)를 검사할 수 있습니다.  평소와 같이 디버깅을 시작하면 됩니다. IntelliTrace가 기본적으로 설정되어 있으므로 **이벤트** 탭 아래의 새로운 **진단 도구** 창에서 IntelliTrace가 기록하는 정보가 표시됩니다.  이벤트를 선택하고 **기록 디버깅 활성화**를 클릭하면 호출 스택 및 이 이벤트에 대해 기록된 지역 변수를 볼 수 있습니다.  
+---
+# <a name="intellitrace-features"></a>IntelliTrace Features
+You can use IntelliTrace to record events and method calls your application, which allows you to examine its state (call stack and local variable values) at different points in the execution. Just start debugging as usual - IntelliTrace is turned on by default, and you can see the information IntelliTrace is recording in the new **Diagnostic Tools** window under the **Events** tab. Select an event and click **Activate Historical Debugging** to see the call stack and locals recorded for this event.  
   
- 단계별 설명을 보려면 [연습: IntelliTrace 사용](../debugger/walkthrough-using-intellitrace.md)을 참조하세요.  
+ For a step-by-step description, see [Walkthrough: Using IntelliTrace](../debugger/walkthrough-using-intellitrace.md).  
   
- IntelliTrace는 Visual Studio Enterprise Edition에서 사용할 수 있으며 Visual Studio Professional 또는 Community Edition에서는 사용할 수 없습니다.  
+ IntelliTrace is available in Visual Studio Enterprise edition, but not in the Visual Studio Professional or Community editions.  
   
- IntelliTrace가 설정되어 있는지 확인하려면 **도구 \/ 옵션 \/ IntelliTrace** 옵션 페이지를 엽니다.  **IntelliTrace 사용**은 기본적으로 선택되어 있어야 합니다.  
+ To confirm that IntelliTrace is turned on, open the **Tools > Options > IntelliTrace** options page. **Enable IntelliTrace** should be checked by default.  
   
 > [!NOTE]
->  **IntelliTrace** 옵션 페이지에 있는 모든 설정의 범위는 개별 프로젝트나 솔루션이 아니라 Visual Studio 전체입니다.  이 설정에서 변경된 내용은 Visual Studio의 모든 인스턴스, 모든 디버깅 세션 및 모든 프로젝트나 솔루션에 적용됩니다.  
+>  The scope of all settings on the **IntelliTrace** options page is Visual Studio as a whole, not individual projects or solutions. A change in these settings applies to all instances of Visual Studio, all debugging sessions and all projects or solutions.  
   
-##  <a name="ChooseEvents"></a> IntelliTrace에서 기록하는 이벤트 선택  
- 특정 IntelliTrace 이벤트에 대한 기록을 설정하거나 해제할 수 있습니다.  
+##  <a name="ChooseEvents"></a> Choose the events that IntelliTrace records  
+ You can turn on or off recording for specific IntelliTrace events.  
   
- 디버그 중이면 디버깅을 중지합니다.  **도구 \/ 옵션 \/ IntelliTrace \/ IntelliTrace 이벤트**로 이동합니다.  IntelliTrace에서 기록하도록 지정할 이벤트를 선택합니다.  
+ If you're debugging, stop debugging. Go to **Tools > Options > IntelliTrace > IntelliTrace Events**. Choose the events you want IntelliTrace to record.  
   
-##  <a name="GoingFurther"></a> IntelliTrace 이벤트 및 호출 정보 수집  
- 이 기능은 기본적으로 사용하도록 설정되어 있지 않지만, IntelliTrace는 이벤트와 함께 메서드 호출을 기록할 수 있습니다.  메서드 호출 수집을 사용하도록 설정하려면 **도구 \/ 옵션 \/ IntelliTrace \/ 일반**으로 이동하고 **IntelliTrace 이벤트 및 호출 정보**를 선택합니다.  
+##  <a name="GoingFurther"></a> Collect IntelliTrace events and call information  
+ This isn't enabled by default, but IntelliTrace can record method calls along with events. To enable collection of method calls go to **Tools > Options > IntelliTrace > General**, and select **IntelliTrace events and call information**.
+
+> [!NOTE]
+> Call information is not currently available for ASP.NET Core apps. 
   
- 이렇게 하면 호출 스택 이력을 참조하고 코드에서 호출을 통해 앞뒤로 이동할 수 있습니다.  IntelliTrace는 메서드 이름, 메서드 시작\/종료 지점, 특정 매개 변수 값, 반환 값 등의 데이터를 기록합니다.  
+ This lets you see the call stack history and step backward and forward through calls in your code. IntelliTrace records data such as method names, method entry and exit points, and certain parameter values and return values.  
   
 > [!TIP]
->  이 옵션은 상당한 오버헤드를 추가하기 때문에 기본적으로 사용하도록 설정되어 있지 않습니다.  IntelliTrace는 응용 프로그램에서 발생하는 모든 메서드 호출을 가로채야 할 뿐만 아니라 이를 화면에 표시하거나 디스크에 보관하기 위해서는 훨씬 더 큰 데이터 집합을 처리해야 합니다.  
+>  This option is not enabled by default because it adds considerable overhead. Not only does IntelliTrace have to intercept every method call your application makes, but it also has to deal with a much larger set of data when it comes to showing it on the screen or persisting it to disk.  
 >   
->  IntelliTrace가 기록하는 이벤트의 목록을 제한하고 수집하는 모듈 수를 최소한으로 유지하면 성능 오버헤드를 줄일 수 있습니다.  자세한 내용은 [IntelliTrace에서 기록하는 호출 정보의 양 제어](../debugger/intellitrace-features.md#ControlCallData)를 참조하세요.  
+>  You can reduce the performance overhead by restricting the list of events that IntelliTrace records and by keeping the number of modules you are collecting to a minimum. For more information, see [Control how much call information IntelliTrace records](../debugger/intellitrace-features.md#ControlCallData).  
   
-### 탐색 여백 사용  
- 코드 창의 왼쪽에 표시되는 탐색 여백을 사용할 수 있습니다.  탐색 여백 보이지 않으면 **도구 \/ 옵션 \/ IntelliTrace \/ 고급**으로 이동하고 **디버그 모드에서 탐색 여백 표시**를 선택합니다.  
+### <a name="using-the-navigation-gutter"></a>Using the navigation gutter  
+ You can use the navigation gutter that appears to the left of the code window. If you don't see the navigation gutter, go to **Tools > Options > IntelliTrace > Advanced**, and select **Display the navigation gutter while in debug mode**.  
   
- 탐색 여백을 사용하면 기록 디버깅 모드에서 앞이나 뒤로 이동하며 메서드 호출 및 이벤트를 탐색할 수 있습니다.  기록 디버깅에 대한 자세한 내용은 [기록 디버깅](../debugger/historical-debugging.md)을 참조하세요.  다음과 같은 명령이 있습니다.  
+ The navigation gutter allows you to move forwards and backwards through method calls and events in historical debugging mode. For more information about historical debugging, see [Historical Debugging](../debugger/historical-debugging.md). It has a number of commands:  
   
 |||  
 |-|-|  
-|**여기에 디버거 컨텍스트 설정**|디버깅 컨텍스트를 표시되는 호출 기간으로 설정합니다.<br /><br /> 이 아이콘은 현재 호출 스택에만 나타납니다.|  
-|**호출 사이트로 돌아가기**|포인터와 디버깅 컨텍스트를 현재 함수가 호출된 지점으로 다시 이동합니다.<br /><br /> 라이브 디버깅 모드에 있는 경우 이 명령은 기록 디버깅을 설정합니다.  원래 실행이 중단되었던 지점으로 다시 이동하면 기록 디버깅이 해제되고 라이브 디버깅이 설정됩니다.|  
-|**이전 호출 또는 IntelliTrace 이벤트로 이동**|포인터와 디버깅 컨텍스트를 이전 호출 또는 이벤트 지점으로 다시 이동합니다.<br /><br /> 라이브 디버깅 모드에 있는 경우 이 명령은 기록 디버깅을 설정합니다.|  
-|**들어가기**|현재 선택한 함수를 한 단계씩 실행합니다.<br /><br /> 이 명령은 기록 디버깅 모드에 있는 경우에만 사용할 수 있습니다.|  
-|**다음 호출 또는 IntelliTrace 이벤트로 이동**|포인터와 디버깅 컨텍스트를 IntelliTrace 데이터가 있는 다음 호출 또는 이벤트로 이동합니다.<br /><br /> 이 명령은 기록 디버깅 모드에 있는 경우에만 사용할 수 있습니다.|  
-|**라이브 모드로 이동**|라이브 디버깅 모드로 돌아갑니다.|  
+|**Set Debugger Context Here**|Set the debugging context to the call timeframe where it appears.<br /><br /> This icon appears only on the current call stack.|  
+|**Return to Call Site**|Move the pointer and debugging context back to where the current function was called.<br /><br /> If you are in Live Debugging mode, this command turns Historical Debugging on. If you navigate back to the original execution break, Historical Debugging is turned off and Live Debugging is turned on.|  
+|**Go to Previous Call or IntelliTrace Event**|Move the pointer and debugging context back to the previous call or event.<br /><br /> If you are in Live Debugging mode, this command turns on Historical Debugging.|  
+|**Step In**|Step into the currently selected function.<br /><br /> This command is available only when you are in Historical Debugging mode.|  
+|**Go to Next Call or IntelliTrace Event**|Move the pointer and debugging context to the next call or event for which IntelliTrace data exists.<br /><br /> This command is available only when you are in Historical Debugging mode.|  
+|**Go to Live Mode**|Return to Live Debugging mode.|  
   
-### IntelliTrace에서 줄 또는 메서드 검색  
- 메서드 호출 정보가 사용하도록 설정된 경우에만 메서드를 검색할 수 있습니다.  특정 줄 또는 메서드에 대해 IntelliTrace 기록을 검색할 수 있습니다.  디버거 실행이 중단된 동안 함수 본문 내부를 마우스 오른쪽 단추로 클릭하여 상황에 맞는 메뉴를 표시하거나 **IntelliTrace에서 이 줄 검색** 또는 **IntelliTrace에서 이 메서드 검색**을 클릭합니다.  
+### <a name="search-for-a-line-or-method-in-intellitrace"></a>Search for a line or method in IntelliTrace  
+ You can search methods only when method call information has been enabled. You can search IntelliTrace history for a specific line or method. While debugger execution is halted, right-click inside the body of the function to see the context menu, and click either **Search For This LIne In IntelliTrace** or **Search For This Method In IntelliTrace**.  
   
-###  <a name="ControlCallData"></a> IntelliTrace에서 기록하는 호출 정보의 양 제어  
- 기본적으로 IntelliTrace는 솔루션에 사용되는 모든 모듈에 대한 정보를 기록합니다.  IntelliTrace에서 관심 있는 모듈에 대한 호출 정보만 기록하게 설정할 수 있습니다.  **도구 \/ 옵션 \/ IntelliTrace \/ 모듈**에서 IntelliTrace에 포함할 모듈이나 IntelliTrace에서 제외할 모듈을 지정할 수 있습니다.  IntelliTrace는 지정한 모듈에서 발생하는 이벤트만 수집하며 관심 있는 모듈 내에서 발생한 메서드 호출만 수집합니다.  
+###  <a name="ControlCallData"></a> Control how much call information IntelliTrace records  
+ By default IntelliTrace records information for all the modules used by your solution. You can set IntelliTrace to record call information only for the modules that interest you. In **Tools > Options > IntelliTrace > Modules**, You can specify the modules to include or the modules to exclude from IntelliTrace. IntelliTrace will collect only the events that originated from the modules you have specified, and the method calls that happened within the modules you are interested in.  
   
- 여러 모듈을 추가하려면 문자열의 시작이나 끝 부분에 와일드카드 문자 \*를 사용합니다.  모듈 이름에는 어셈블리 이름이 아닌 파일 이름을 사용합니다.  파일 경로는 사용할 수 없습니다.  
+ To add multiple modules, use the wildcard character * at the start or the end of the string. For module names, use file names, not assembly names. File paths are not accepted.  
   
- 모듈의 수를 최소로 유지합니다.  그러면 수집할 데이터의 양이 적기 때문에 성능이 높아집니다.  또한 검토할 데이터가 적기 때문에 UI의 노이즈가 줄어듭니다.  
+ Try to keep the number of modules to a minimum. You get better performance because there is less data to be collected. You also get less noise in the UI because there is less data to go through.  
   
-##  <a name="SaveSession"></a> 파일에 IntelliTrace 데이터 저장  
- 디버그하는 동안 응용 프로그램이 중단 상태일 때 **디버그 \/ IntelliTrace \/ IntelliTrace 세션 저장**으로 이동하여 IntelliTrace에서 수집된 데이터를 저장할 수 있습니다.  응용 프로그램이 계속 실행 중이거나 디버깅을 중지한 경우에는 해당 메뉴 항목이 비활성화되어 IntelliTrace에서 수집된 데이터를 저장할 수 없게 됩니다.  
+##  <a name="SaveSession"></a> Saving IntelliTrace data to file  
+ You can save the data that IntelliTrace has collected going to **Debug > IntelliTrace > Save IntelliTrace Session** while you are debugging and the application is in a break state. The menu item is disabled and you will not be able to save the data IntelliTrace has collected if the application is still running or if you have stopped debugging.  
   
- **도구 \/ 옵션 \/ IntelliTrace \/ 고급**으로 이동하고 **이 디렉터리에 IntelliTrace 기록 저장**을 선택하여 자동으로 파일에 저장하도록 IntelliTrace를 구성할 수 있습니다.  생성된 파일에 대해 집합 크기를 구성할 수도 있습니다. 그러면 공간이 부족할 때 IntelliTrace가 오래된 데이터를 덮어씁니다.  Visual Studio는 자동으로 저장되고 Visual Studio 호스팅 프로세스\(vshost.exe\)가 켜져 있는 경우 각 IntelliTrace 세션에 대해 두 개의 파일을 만듭니다.  
+ You can configure IntelliTrace to automatically save to a file by going to **Tools > Options > IntelliTrace > Advanced** and selecting **Store IntelliTrace recordings in this directory**. You can also configure a set size for the generated file, which causes IntelliTrace to write over older data when it runs out of space. Visual Studio creates two files for each IntelliTrace session when they are saved automatically and the Visual Studio hosting process (vshost.exe) is turned on.  
   
 > [!TIP]
->  디스크 공간을 절약하려면 더 이상 필요하지 않을 경우 자동 파일 저장을 끕니다.  기존 파일은 삭제되지 않습니다.  필요에 따라 언제든지 상황에 맞는 메뉴를 사용하여 파일에 저장할 수 있습니다.  
+>  To save disk space, turn off saving files automatically when you don't need them anymore. Any existing files will not be deleted. You can always save to file on demand from the context menu.  
   
- IntelliTrace 데이터를 파일에 저장하면 IntelliTrace가 수집한 프로세스별로 .itrace 파일이 하나씩 생깁니다.  그러면 **파일 \/ 열기 \/ 파일**로 이동한 후 파일 열기 대화 상자에서 .itrace 파일을 선택하여 Visual Studio에서 .itrace 파일을 열 수 있습니다.  자세한 내용은 [저장된 IntelliTrace 데이터를 사용하여 응용 프로그램 디버깅](../debugger/using-saved-intellitrace-data.md)을 참조하세요.  
+ When you save IntelliTrace data to file, you get one .itrace file for each process that IntelliTrace collected from. You can then open the .itrace file in Visual Studio by going to **File > Open > File** and selecting the .itrace file from the Open File dialog. For more information, see [Using saved IntelliTrace data](../debugger/using-saved-intellitrace-data.md).  
   
-## 블로그  
- [Visual Studio Enterprise 2015의 IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/intellitrace-in-visual-studio-ultimate-2015.aspx)\(영문\)  
+## <a name="blogs"></a>Blogs  
+ [IntelliTrace in Visual Studio Enterprise 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/intellitrace-in-visual-studio-ultimate-2015.aspx)  
   
- [Visual Studio Enterprise 2015의 IntelliTrace를 사용한 라이브 디버깅 연습\(텍스트 편집기\)](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor.aspx)\(영문\)  
+ [Walkthrough of Live Debugging using IntelliTrace in Visual Studio 2015 (Text Editor)](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor.aspx)  
   
- [Visual Studio 2015의 IntelliTrace를 사용한 라이브 디버깅 연습\(소셜 클럽\)](http://blogs.msdn.com/b/visualstudioalm/archive/2000/1/1/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club.aspx)\(영문\)  
+ [Walkthrough of Live Debugging using IntelliTrace in Visual Studio 2015 (Social Club)](http://blogs.msdn.com/b/visualstudioalm/archive/2000/1/1/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club.aspx)  
   
- [Visual Studio Enterprise 2015의 IntelliTrace에서 연결 지원](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach.aspx)\(영문\)  
+ [IntelliTrace in Visual Studio Enterprise 2015 now supports attach!](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach.aspx)  
   
- [IntelliTrace 독립 실행형 수집기를 사용하여 Windows 서비스에서 데이터 수집](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector.aspx)\(영문\)  
+ [Collect data from a windows service using the IntelliTrace Standalone Collector](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector.aspx)  
   
- [IntelliTrace 수집 계획 편집](http://blogs.msdn.com/b/visualstudioalm/archive/2015/03/09/editing-the-intellitrace-collection-plan.aspx)\(영문\)  
+ [Editing the IntelliTrace collection plan](http://blogs.msdn.com/b/visualstudioalm/archive/2015/03/09/editing-the-intellitrace-collection-plan.aspx)  
   
- [IntelliTrace를 사용한 사용자 지정 TraceSource 및 디버깅](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/17/custom-tracesource-and-debugging-using-intellitrace.aspx)\(영문\)  
+ [Custom TraceSource and debugging using IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/17/custom-tracesource-and-debugging-using-intellitrace.aspx)  
   
- [IntelliTrace 독립 실행형 수집기 및 Active Directory 계정으로 실행되는 응용 프로그램 풀](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/22/intellitrace-standalone-collector-and-application-pools-running-under-active-directory-accounts.aspx)\(영문\)  
+ [IntelliTrace Standalone Collector and Application Pools running under Active Directory accounts](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/22/intellitrace-standalone-collector-and-application-pools-running-under-active-directory-accounts.aspx)  
   
-## 포럼  
+## <a name="forums"></a>Forums  
  [Visual Studio Debugger](http://go.microsoft.com/fwlink/?LinkId=262263)  
   
-## 비디오  
- [IntelliTrace 경험](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)\(영문\)  
+## <a name="videos"></a>Videos  
+ [IntelliTrace Experience](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)  
   
- [Microsoft Visual Studio Ultimate 2015의 IntelliTrace를 사용한 기록 디버깅](https://channel9.msdn.com/events/Ignite/2015/BRK3716)\(영문\)
+ [Historical Debugging with IntelliTrace in Microsoft Visual Studio Ultimate 2015](https://channel9.msdn.com/events/Ignite/2015/BRK3716)

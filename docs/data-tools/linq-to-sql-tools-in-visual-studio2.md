@@ -1,117 +1,134 @@
 ---
-title: "LINQ to SQL 도구 Visual Studio2에서 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: LINQ to SQL Tools in Visual Studio2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45e477c0-5c6b-41f9-b2d0-2808fb4f6537
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 38892e37b048f93ed9382a470ea7834d6a105cf0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
+
 ---
-# LINQ to SQL 도구 Visual Studio에서
-LINQ to SQL에는 첫 번째 개체-관계형 매핑 기술은 Microsoft에서 출시 했습니다. 기본 시나리오에서 잘 작동 하 고 계속 Visual Studio에서 지원 하지만 더 이상 현재 개발 중인 쉽습니다. LINQ to SQL은 이미 사용 하는 레거시 응용 프로그램을 유지 관리할 때 또는 SQL Server를 사용 하는 다중 테이블 매핑할 필요가 없는 간단한 응용 프로그램에서 사용 합니다. 일반적으로 새 응용 프로그램 개체 관계형 매퍼 레이어 필요할 때 Entity Framework를 사용 해야 합니다.  
+# <a name="linq-to-sql-tools-in-visual-studio"></a>LINQ to SQL Tools in Visual Studio
+LINQ to SQL was the first object-relational mapping technology released by Microsoft. It works well in basic scenarios and continues to be supported in Visual Studio, but it is no longer under active development. Use LINQ to SQL when maintaining a legacy application that is already using it, or in simple applications that use SQL Server and do not require multi-table mapping. In general, new applications should use the Entity Framework when an object-relational mapper layer is required.  
   
- Visual Studio에서 만들면 LINQ to SQL 클래스를 사용 하 여 SQL 테이블을 나타내는 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]합니다.  
+ In Visual Studio, you create LINQ to SQL classes that represent SQL tables by using the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
- 
-          [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]의 디자인 화면은 두 영역으로 구분되어 있습니다. 왼쪽에는 엔터티 창이, 오른쪽에는 메서드 창이 표시됩니다. 엔터티 창은 엔터티 클래스, 연결 및 상속 계층을 표시하는 기본 디자인 화면입니다. 메서드 창에는 표시 하는 디자인 화면에서 <xref:System.Data.Linq.DataContext> 저장된 프로시저 및 함수에 매핑되는 방법입니다.  
+ The [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] has two distinct areas on its design surface: the entities pane on the left, and the methods pane on the right. The entities pane is the main design surface that displays the entity classes, associations, and inheritance hierarchies. The methods pane is the design surface that displays the <xref:System.Data.Linq.DataContext> methods that are mapped to stored procedures and functions.  
   
-  [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] ([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)])을 만들기 위한 시각적 디자인 화면을 제공 [LINQ to SQL](../Topic/LINQ%20to%20SQL.md) 엔터티 클래스와 데이터베이스의 개체를 기반으로 하는 연결 (관계). 즉, [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]는 데이터베이스의 개체에 매핑되는 응용 프로그램의 개체 모델을 만드는 데 사용되며 또한 강력한 형식의 생성 <xref:System.Data.Linq.DataContext> 엔터티 클래스와 데이터베이스 간에 데이터를 주고받는 데 사용 됩니다.  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 또한 저장된 프로시저를 매핑하는 기능을 제공 하 고 함수를 <xref:System.Data.Linq.DataContext> 데이터를 반환 하 고 엔터티 클래스를 채우기 위한 메서드. 마지막으로 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서는 엔터티 클래스 간의 상속 관계를 디자인하는 기능을 제공합니다.  
+ The [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] ([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]) provides a visual design surface for creating [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) entity classes and associations (relationships) that are based on objects in a database. In other words, the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] is used to create an object model in an application that maps to objects in a database. It also generates a strongly-typed <xref:System.Data.Linq.DataContext> that is used to send and receive data between the entity classes and the database. The [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] also provides functionality to map stored procedures and functions to <xref:System.Data.Linq.DataContext> methods for returning data and populating entity classes. Finally, the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] provides the ability to design inheritance relationships between entity classes.  
   
-## <a name="opening-the-or-designer"></a>O/R 디자이너 열기  
- LINQ to SQL 엔터티 모델 프로젝트를 추가 하려면 선택 **프로젝트 &#124; 새 항목 추가** 선택  **LINQ to SQL 클래스** 프로젝트 항목의 목록에서:  
+## <a name="opening-the-or-designer"></a>Opening the O/R Designer  
+ To add a LINQ to SQL entity model to your project, choose **Project > Add New Item** and then choose  **LINQ to SQL Classes** from the list of project items:  
   
- ![LINQ to SQL 클래스](../data-tools/media/raddata-linq-to-sql-classes.png "raddata LINQ to SQL Classes")  
+ ![LINQ to SQL Classes](../data-tools/media/raddata-linq-to-sql-classes.png "raddata LINQ to SQL Classes")  
   
- Visual Studio는.dbml 파일을 만들고 솔루션에 추가 합니다. 이것은 XML 매핑 파일 및 해당 관련된 코드 파일입니다.  
+ Visual Studio creates a .dbml file and adds it to your solution. This is the XML mapping file and its related code files.  
   
- ![LINQ to SQL 클래스 솔루션 탐색기에서](../data-tools/media/raddata-linq-to-sql-classes-in-solution-explorer.png "raddata LINQ to SQL classes in Solution Explorer")  
+ ![LINQ to SQL classes in Solution Explorer](../data-tools/media/raddata-linq-to-sql-classes-in-solution-explorer.png "raddata LINQ to SQL classes in Solution Explorer")  
   
- .Dbml 파일을 선택 하면 Visual Studio에서는 O/R 디자이너 화면에 시각적으로 모델을 만들 수 있도록 합니다. 다음 그림에서는 서버 탐색기에서 끌어 놓았을 Northwind Customers 및 Orders 테이블 후 디자이너를 보여 줍니다. 테이블 간의 관계를 note 합니다.  
+ When you select the .dbml file, Visual Studio shows the O/R designer surface that enables you to visually create the model. The following illustration shows the designer after the Northwind Customers and Orders tables have been dragged from Server Explorer. Note the relationship between the tables.  
   
- ![LINQ to SQL 디자이너](../data-tools/media/raddata-linq-to-sql-designer.png "raddata LINQ to SQL Designer")  
+ ![LINQ to SQL Designer](../data-tools/media/raddata-linq-to-sql-designer.png "raddata LINQ to SQL Designer")  
   
 > [!IMPORTANT]
->  
-          [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]는 일대일 매핑 관계만 지원하는 단순 개체 관계형 매퍼입니다. 즉, 엔터티 클래스는 데이터베이스 테이블 또는 뷰와 1:1 매핑 관계만 갖습니다. 엔터티 클래스를 조인 된 테이블에 매핑하는 등의 복잡 한 매핑은 지원 되지 않습니다. 복잡 한 매핑에 대 한 Entity Framework를 사용 합니다. 또한 이 디자이너는 단방향 코드 생성기입니다. 이는 디자이너 화면에서 변경한 내용만이 코드 파일에 반영된다는 의미입니다. 코드 파일에 수동으로 변경한 내용은 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에 반영되지 않습니다. 코드 파일에서 수동으로 변경한 모든 내용은 디자이너를 저장하고 코드를 다시 생성할 때 덮어쓰여집니다. 에 의해 생성 된 클래스를 확장 하 고 사용자 코드를 추가 하는 방법에 대 한 내용은 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], 참조 [하는 방법: O/R 디자이너에서 코드 생성 확장](../Topic/How%20to:%20Extend%20Code%20Generated%20by%20the%20O-R%20Designer.md)합니다.  
+>  The [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] is a simple object relational mapper because it supports only 1:1 mapping relationships. In other words, an entity class can have only a 1:1 mapping relationship with a database table or view. Complex mapping, such as mapping an entity class to a joined table, is not supported; use the Entity Framework for complex mapping. Additionally, the designer is a one-way code generator. This means that only changes that you make to the designer surface are reflected in the code file. Manual changes to the code file are not reflected in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. Any changes that you make manually in the code file are overwritten when the designer is saved and code is regenerated. For information about how to add user code and extend the classes generated by the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], see [How to: Extend Code Generated by the O/R Designer](../data-tools/how-to-extend-code-generated-by-the-o-r-designer.md).  
   
-## <a name="creating-and-configuring-the-datacontext"></a>DataContext 만들기 및 구성  
- 추가한 후는 **LINQ to SQL 클래스** 열기 및 프로젝트에 항목은 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], 빈 디자인 화면에는 빈 나타냅니다 <xref:System.Data.Linq.DataContext> 구성할 준비가 됩니다.  <xref:System.Data.Linq.DataContext> 디자인 화면으로 끌어 온 첫째 항목에서 제공 하는 연결 정보로 구성 됩니다. 따라서는 <xref:System.Data.Linq.DataContext> 디자인 화면에 놓여진 첫째 항목에서 연결 정보를 사용 하 여 구성 됩니다. 에 대 한 자세한 내용은 <xref:System.Data.Linq.DataContext> 클래스 참조 [DataContext 메서드 (O/R 디자이너)](../data-tools/datacontext-methods-o-r-designer.md)합니다.  
+## <a name="creating-and-configuring-the-datacontext"></a>Creating and Configuring the DataContext  
+ After you add a **LINQ to SQL Classes** item to a project and open the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], the empty design surface represents an empty <xref:System.Data.Linq.DataContext> ready to be configured. the <xref:System.Data.Linq.DataContext> is configured with connection information provided by the first item that is dragged onto the design surface.. Therefore, the <xref:System.Data.Linq.DataContext> is configured by using connection information from the first item dropped onto the design surface. For more information about the <xref:System.Data.Linq.DataContext> class see, [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).  
   
-## <a name="creating-entity-classes-that-map-to-database-tables-and-views"></a>데이터베이스 테이블 및 뷰에 매핑된 엔터티 클래스 만들기  
- 데이터베이스 테이블 및 뷰를 끌어 테이블 및 뷰에 매핑된 엔터티 클래스를 만들 수 있습니다 **서버 탐색기**/**데이터베이스 탐색기** 에 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]합니다. 이전 섹션에 표시 된 대로 <xref:System.Data.Linq.DataContext> 디자인 화면으로 끌어 온 첫째 항목에서 제공 된 연결 정보로 구성 되어 있습니다. 다른 연결을 사용 하는 후속 항목에 추가 됩니다는 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], 에 대 한 연결을 변경할 수는 <xref:System.Data.Linq.DataContext>합니다. 자세한 내용은 참조 [하는 방법: 만들기 LINQ to SQL 클래스 테이블 및 뷰 (O/R 디자이너)에 매핑된](../Topic/How%20to:%20Create%20LINQ%20to%20SQL%20classes%20mapped%20to%20tables%20and%20views%20\(O-R%20Designer\).md)합니다.  
+## <a name="creating-entity-classes-that-map-to-database-tables-and-views"></a>Creating Entity Classes That Map to Database Tables and Views  
+ You can create entity classes mapped to tables and views by dragging database tables and views from **Server Explorer**/**Database Explorer** onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. As indicated in the previous section the <xref:System.Data.Linq.DataContext> is configured with connection information provided by the first item that is dragged onto the design surface. If a subsequent item that uses a different connection is added to the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], you can change the connection for the <xref:System.Data.Linq.DataContext>. For more information, see [How to: Create LINQ to SQL classes mapped to tables and views (O/R Designer)](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).  
   
-## <a name="creating-datacontext-methods-that-call-stored-procedures-and-functions"></a>저장 프로시저 및 함수를 호출하는 DataContext 메서드 만들기  
- 만들 수 있습니다 <xref:System.Data.Linq.DataContext> 메서드를 호출 하는 (매핑됩니다) 저장 프로시저 및 함수에서 끌어서 **서버 탐색기**/**데이터베이스 탐색기** 에 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]합니다. 저장된 프로시저 및 함수에 추가 되는 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 의 메서드로 <xref:System.Data.Linq.DataContext>합니다.  
+## <a name="creating-datacontext-methods-that-call-stored-procedures-and-functions"></a>Creating DataContext Methods That Call Stored Procedures and Functions  
+ You can create <xref:System.Data.Linq.DataContext> methods that call (are mapped to) stored procedures and functions by dragging them from **Server Explorer**/**Database Explorer** onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. Stored procedures and functions are added to the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] as methods of the <xref:System.Data.Linq.DataContext>.  
   
 > [!NOTE]
->  저장된 프로시저 및 함수를 끌어 오면 **서버 탐색기**/**데이터베이스 탐색기** 에 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], 생성 된 반환 형식이 <xref:System.Data.Linq.DataContext> 메서드 항목을 놓는 위치에 따라 달라 집니다. 자세한 내용은 참조 [DataContext 메서드 (O/R 디자이너)](../data-tools/datacontext-methods-o-r-designer.md)합니다.  
+>  When you drag stored procedures and functions from **Server Explorer**/**Database Explorer** onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], the return type of the generated <xref:System.Data.Linq.DataContext> method differs depending on where you drop the item. For more information, see [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).  
   
-## <a name="configuring-a-datacontext-to-use-stored-procedures-to-save-data-between-entity-classes-and-a-database"></a>저장 프로시저를 사용하여 엔터티 클래스와 데이터베이스 간의 데이터를 저장하도록 DataContext 구성  
- 앞서 설명한 것 처럼 만들 수 있습니다 <xref:System.Data.Linq.DataContext> 저장된 프로시저 및 함수를 호출 하는 메서드입니다. 또한 삽입, 업데이트 및 삭제를 수행하는 기본 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 런타임 동작에 사용될 수 있는 저장 프로시저를 지정할 수 있습니다. 자세한 내용은 참조 [하는 방법: 저장된 프로시저를 할당 업데이트, 삽입 및 삭제 (O/R 디자이너)를 수행](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)합니다.  
+## <a name="configuring-a-datacontext-to-use-stored-procedures-to-save-data-between-entity-classes-and-a-database"></a>Configuring a DataContext to Use Stored Procedures to Save Data Between Entity Classes and a Database  
+ As stated earlier, you can create <xref:System.Data.Linq.DataContext> methods that call stored procedures and functions. Additionally, you can also assign stored procedures that can be used for the default [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] runtime behavior that performs Inserts, Updates, and Deletes. For more information, see [How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).  
   
-## <a name="inheritance-and-the-or-designer"></a>상속 및 O/R 디자이너  
- 다른 개체와 마찬가지로 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 클래스도 상속을 사용할 수 있고 다른 클래스에서 파생될 수 있습니다. 데이터베이스에서 상속 관계는 여러 가지 방법으로 만들어집니다. [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]는 관계형 시스템에서 주로 구현되는 단일 테이블 상속 개념을 지원합니다. 자세한 내용은 참조 [하는 방법: O/R 디자이너를 사용 하 여 상속 구성](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)합니다.  
+## <a name="inheritance-and-the-or-designer"></a>Inheritance and the O/R Designer  
+ Like other objects, [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] classes can use inheritance and be derived from other classes. In a database, inheritance relationships are created in several ways. The [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] supports the concept of single-table inheritance as it is often implemented in relational systems. For more information, see [How to: Configure inheritance by using the O/R Designer](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md).  
   
-## <a name="linq-to-sql-queries"></a>LINQ to SQL 쿼리  
- 만든 엔터티 클래스는 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 사용 하도록 설계 된 [LINQ (Language-Integrated Query)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)합니다. 자세한 내용은 참조 [하는 방법: 정보 쿼리](../Topic/How%20to:%20Query%20for%20Information.md)합니다.  
+## <a name="linq-to-sql-queries"></a>LINQ to SQL Queries  
+ The entity classes created by the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] are designed for use with [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d). For more information, see [How to: Query for Information](/dotnet/framework/data/adonet/sql/linq/how-to-query-for-information).  
   
-## <a name="separating-the-generated-datacontext-and-entity-class-code-into-different-namespaces"></a>생성된 DataContext와 엔터티 클래스 코드를 별도의 네임스페이스로 분리  
-  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 제공는 **컨텍스트 네임 스페이스** 및 **엔터티 네임 스페이스** 속성에는 <xref:System.Data.Linq.DataContext>합니다. 이러한 속성 결정 네임 스페이스는 <xref:System.Data.Linq.DataContext> 에 엔터티 클래스 코드가 생성 됩니다. 기본적으로 이러한 속성은 빈 및 <xref:System.Data.Linq.DataContext> 및 엔터티 클래스는 응용 프로그램의 네임 스페이스에 생성 됩니다. 에 값을 입력 하는 응용 프로그램의 네임 스페이스 이외의 네임 스페이스에 코드를 생성 하는 **컨텍스트 네임 스페이스** 및/또는 **엔터티 네임 스페이스** 속성입니다.  
+## <a name="separating-the-generated-datacontext-and-entity-class-code-into-different-namespaces"></a>Separating the Generated DataContext and Entity Class Code into Different Namespaces  
+ The [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] provides the **Context Namespace** and **Entity Namespace** properties on the <xref:System.Data.Linq.DataContext>. These properties determine what namespace the <xref:System.Data.Linq.DataContext> and entity class code is generated into. By default, these properties are empty and the <xref:System.Data.Linq.DataContext> and entity classes are generated into the application's namespace. To generate the code into a namespace other than the application's namespace, enter a value into the **Context Namespace** and/or **Entity Namespace** properties.  
   
-## <a name="in-this-section"></a>단원 내용  
- [DataContext 메서드 (O/R 디자이너)](../data-tools/datacontext-methods-o-r-designer.md)  
- 파악할 <xref:System.Data.Linq.DataContext> 메서드 및를 만드는 방법.  
+## <a name="in-this-section"></a>In this section  
+ [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)  
+ Explains what <xref:System.Data.Linq.DataContext> methods are and how to create them.  
   
- [데이터 클래스 상속 (O/R 디자이너)](../data-tools/data-class-inheritance-o-r-designer.md)  
- 단일 테이블 상속의 개념과 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서의 구현 방법에 대해 설명합니다.  
+ [Data class inheritance (O/R Designer)](../data-tools/data-class-inheritance-o-r-designer.md)  
+ Describes the concept of single-table inheritance and how it is implemented in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
- [방법: LINQ to SQL 클래스 테이블 및 뷰 (O/R 디자이너)에 매핑된 만들기](../Topic/How%20to:%20Create%20LINQ%20to%20SQL%20classes%20mapped%20to%20tables%20and%20views%20\(O-R%20Designer\).md)  
- 데이터베이스에서 테이블 및 뷰에 매핑되는 엔터티 클래스를 만드는 방법에 대해 설명합니다.  
+ [How to: Create LINQ to SQL classes mapped to tables and views (O/R Designer)](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)  
+ Describes how to create entity classes that are mapped to tables and views in a database.  
   
- [방법: LINQ to SQL 클래스 (O/R 디자이너) 사이 연결 (관계) 만들기](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)  
- [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 엔터티 클래스 간의 관계를 만드는 방법에 대해 설명합니다.  
+ [How to: Create an association (relationship) between LINQ to SQL classes (O/R Designer)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)  
+ Describes how to create a relationship between [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] entity classes.  
   
- [방법: 저장된 프로시저 및 함수 (O/R 디자이너)에 매핑된 DataContext 메서드 만들기](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)  
- 만드는 방법을 설명 <xref:System.Data.Linq.DataContext> 호출 될 때 저장된 프로시저 또는 함수를 실행 하는 방법입니다.  
+ [How to: Create DataContext methods mapped to stored procedures and functions (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)  
+ Describes how to create <xref:System.Data.Linq.DataContext> methods that run stored procedures or functions when they are called.  
   
- [방법: 저장된 프로시저를 할당 업데이트, 삽입 및 삭제 (O/R 디자이너)를 수행 합니다.](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)  
- 구성 하는 방법에 설명는 <xref:System.Data.Linq.DataContext> 클래스 다시 엔터티에서 데이터를 저장할 때 저장된 프로시저를 사용 하는 데이터베이스에 있습니다.  
+ [How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)  
+ Describes how to configure a <xref:System.Data.Linq.DataContext> to use stored procedures when saving data from entity classes back to a database.  
   
- [방법: DataContext 메서드 (O/R 디자이너)의 반환 형식 변경](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)  
- 반환 형식을 설정 하는 방법에 설명 된 <xref:System.Data.Linq.DataContext> 메서드를 엔터티 클래스의 형식 또는 O/R 디자이너에서 만든 자동 생성 된 형식 이어야 합니다.  
+ [How to: Change the return type of a DataContext method (O/R Designer)](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)  
+ Describes how to set the return type of a <xref:System.Data.Linq.DataContext> method to be the type of an entity class or an auto-generated type created by the O/R Designer.  
   
- [방법: 엔터티 클래스에 유효성 검사 추가](../data-tools/how-to-add-validation-to-entity-classes.md)  
- 속성 변경 및 엔터티 클래스 업데이트 동안 코드를 추가할 수 있도록 해주는 부분 메서드(Partial Method)를 생성하는 방법에 대해 설명합니다.  
+ [How to: Add validation to entity classes](../data-tools/how-to-add-validation-to-entity-classes.md)  
+ Describes how to generate partial methods that enable the addition of code during property changes and entity class updates.  
   
- [방법: 복수형 설정 및 해제 (O/R 디자이너)](../data-tools/how-to-turn-pluralization-on-and-off-o-r-designer.md)  
- [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에 추가된 클래스의 자동 이름 바꾸기를 설정하고 해제하는 방법에 대해 설명합니다.  
+ [How to: Turn pluralization on and off (O/R Designer)](../data-tools/how-to-turn-pluralization-on-and-off-o-r-designer.md)  
+ Describes how to turn on and off the automatic renaming of classes that are added to the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
- [방법: O/R 디자이너를 사용 하 여 상속 구성](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)  
- [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 단일 테이블 상속을 사용하여 엔터티 클래스를 구성하는 방법에 대해 설명합니다.  
+ [How to: Configure inheritance by using the O/R Designer](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)  
+ Describes how to configure entity classes using single-table inheritance with the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
- [방법: O/R 디자이너에서 생성 된 코드 확장](../Topic/How%20to:%20Extend%20Code%20Generated%20by%20the%20O-R%20Designer.md)  
- O/R 디자이너에 있는 개체를 변경함으로써 코드가 다시 생성될 때 덮어쓰여지지 않을 코드를 추가하는 방법과 위치에 대해 설명합니다.  
+ [How to: Extend Code Generated by the O/R Designer](../data-tools/how-to-extend-code-generated-by-the-o-r-designer.md)  
+ Describes how and where to add code that will not be overwritten when changes to objects on the O/R Designer regenerate code.  
   
- [연습: 단일 테이블 상속 (O/R 디자이너)를 사용 하 여 LINQ to SQL 클래스 만들기](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)  
- [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 단일 테이블 상속을 사용하여 엔터티 클래스를 구성하는 단계별 지침을 제공합니다.  
+ [Walkthrough: Creating LINQ to SQL Classes by Using Single-Table Inheritance (O/R Designer)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)  
+ Provides step-by-step instructions for configuring entity classes using single-table inheritance with the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
- [연습: 사용자 삽입 지정을 업데이트 하 고, 엔터티 클래스의 동작을 삭제 합니다.](../data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md)  
- 구성에 대 한 단계별 지침을 제공는 <xref:System.Data.Linq.DataContext> 클래스 다시 엔터티에서 데이터를 저장할 때 저장된 프로시저를 사용 하는 데이터베이스에 있습니다.  
+ [Walkthrough: Customizing the insert, update, and delete behavior of entity classes](../data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md)  
+ Provides step-by-step instructions for configuring a <xref:System.Data.Linq.DataContext> to use stored procedures when saving data from entity classes back to a database.  
   
-## <a name="reference-content"></a>참조 콘텐츠  
+## <a name="reference-content"></a>Reference content  
  <xref:System.Linq>  
   
  <xref:System.Data.Linq>  
   
-## <a name="see-also"></a>참고 항목  
- [.NET 용 visual Studio 데이터 도구](../data-tools/visual-studio-data-tools-for-dotnet.md)   
- [질문과 대답](../Topic/Frequently%20Asked%20Questions.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Visual Studio data tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)   
+ [Frequently Asked Questions](/dotnet/framework/data/adonet/sql/linq/frequently-asked-questions)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
+ [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)

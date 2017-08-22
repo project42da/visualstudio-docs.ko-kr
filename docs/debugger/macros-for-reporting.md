@@ -1,46 +1,62 @@
 ---
-title: "보고서 매크로 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.macros"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "_RPTFn 매크로"
-  - "_RPTn 매크로"
-  - "CRT, 매크로 보고"
-  - "디버깅[CRT], 매크로 보고"
-  - "매크로, CRT 보고 매크로"
-  - "매크로, 디버깅"
+title: Macros for Reporting | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.macros
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- macros, CRT reporting macros
+- macros, debugging with
+- _RPTFn macro
+- CRT, reporting macros
+- debugging [CRT], reporting macros
+- _RPTn macro
 ms.assetid: f2085314-a3a8-4caf-a5a4-2af9ad5aad05
 caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 보고서 매크로
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: edb8feb8c8389936cc6e5b9f4da997d063eb5d47
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-CRTDBG.H에 정의된 **\_RPTn**과 **\_RPTFn** 매크로를 `printf` 문 대신 사용하여 디버깅할 수 있습니다.  **\_DEBUG**가 정의되지 않으면 이 매크로는 자동으로 릴리스 빌드에서 사라지므로 **\#ifdef**로 둘러쌀 필요가 없습니다.  
+---
+# <a name="macros-for-reporting"></a>Macros for Reporting
+You can use the **_RPTn**, and **_RPTFn** macros, defined in CRTDBG.H, to replace the use of `printf` statements for debugging. These macros automatically disappear in your release build when **_DEBUG** is not defined, so there is no need to enclose them in **#ifdef**s.  
   
-|매크로|설명|  
-|---------|--------|  
-|**\_RPT0**, **\_RPT1**, **\_RPT2**, **\_RPT3**, **\_RPT4**|메시지 문자열과 0을 네 개의 인수로 출력합니다.  \_RPT1부터 **\_RPT4**까지에서는 메시지 문자열이 인수에 대해 printf 스타일의 서식 문자열로 사용됩니다.|  
-|**\_RPTF0**, **\_RPTF1**, **,\_RPTF2**, **\_RPTF4**|**\_RPTn**과 같지만 이러한 매크로는 해당 매크로가 있는 파일 이름과 줄 번호도 출력합니다.|  
+|Macro|Description|  
+|-----------|-----------------|  
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|Outputs a message string and zero to four arguments. For _RPT1 through **_RPT4**, the message string serves as a printf-style formatting string for the arguments.|  
+|**_RPTF0**, **_RPTF1**, **,_RPTF2**, **_RPTF4**|Same as **_RPTn**, but these macros also output the file name and line number where the macro is located.|  
   
- 다음 예제를 참조하십시오.  
+ Consider the following example:  
   
 ```  
 #ifdef _DEBUG  
@@ -51,13 +67,13 @@ CRTDBG.H에 정의된 **\_RPTn**과 **\_RPTFn** 매크로를 `printf` 문 대신
 #endif  
 ```  
   
- 이 코드는 `someVar`과 `otherVar`의 값을 **stdout**으로 출력합니다.  다음 `_RPTF2` 호출을 사용하여 동일한 값과 파일 이름, 줄 번호를 보고할 수 있습니다.  
+ This code outputs the values of `someVar` and `otherVar` to **stdout**. You can use the following call to `_RPTF2` to report these same values and, additionally, the file name and line number:  
   
 ```  
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );  
 ```  
   
- 특정 응용 프로그램에서 C 런타임 라이브러리와 함께 제공된 매크로가 없다는 디버그 보고가 필요할 경우, 필요에 맞게 특별히 디자인된 매크로를 작성할 수 있습니다.  예를 들어, 헤더 파일 중 하나에서 다음과 같은 코드를 포함하여 **ALERT\_IF2** 매크로를 정의할 수 있습니다.  
+ If you find that a particular application needs debug reporting that the macros supplied with the C run-time library do not provide, you can write a macro designed specifically to fit your own requirements. In one of your header files, for example, you could include code like the following to define a macro called **ALERT_IF2**:  
   
 ```  
 #ifndef _DEBUG                  /* For RELEASE builds */  
@@ -73,14 +89,14 @@ if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d,
 #endif  
 ```  
   
- **ALERT\_IF2**를 한 번만 호출하면 이 항목의 처음에서 **printf** 코드의 모든 기능을 실행할 수 있습니다.  
+ One call to **ALERT_IF2** could perform all the functions of the **printf** code at the start of this topic:  
   
 ```  
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),   
 someVar=%d, otherVar=%d.\n", someVar, otherVar );  
 ```  
   
- 사용자 지정 매크로를 보다 편리하게 변경하여 여러 대상에 다소간의 정보를 보고할 수 있기 때문에, 디버깅이 필요할 때 특히 유용한 방법입니다.  
+ Because a custom macro can easily be changed to report more or less information to different destinations (depending on what is more convenient), this approach can be particularly useful as your debugging requirements evolve.  
   
-## 참고 항목  
- [CRT 디버깅 기술](../debugger/crt-debugging-techniques.md)
+## <a name="see-also"></a>See Also  
+ [CRT Debugging Techniques](../debugger/crt-debugging-techniques.md)

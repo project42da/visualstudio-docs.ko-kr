@@ -1,152 +1,148 @@
 ---
-title: "DLL 프로젝트 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "DLL 디버깅"
-  - "서식 파일, DLL 디버깅"
-  - "DLL, 디버깅"
-  - "디버깅[Visual Studio], DLL"
+title: Debugging DLL projects | Microsoft Docs
+ms.custom: 
+ms.date: 05/23/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging DLLs
+- templates, debugging DLLs
+- DLLs, debugging
+- debugging [Visual Studio], DLLs
 ms.assetid: 433cab30-d191-460b-96f7-90d2530ca243
 caps.latest.revision: 38
-caps.handback.revision: 38
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# DLL 프로젝트 디버깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: cee800302a1018b7d364f301bf5756e23d4c39e2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-DLL을 만드는 템플릿은 다음과 같습니다.  
+---
+# <a name="debugging-dll-projects-from-visual-studio"></a>Debugging DLL projects from Visual Studio
+The following Visual Studio templates create DLLs:  
   
--   \(C\+\+, C\# 및 Visual Basic\): 클래스 라이브러리  
+-   (C++, C#, and Visual Basic) Class Library   
+
+-   (C++): Win32 Console DLL project
   
--   \(C\+\+, C\# 및 Visual Basic\): Windows Forms 컨트롤 라이브러리  
+     For more information, see [MFC Debugging Techniques](../debugger/mfc-debugging-techniques.md).
+
+-   (C++, C#, and Visual Basic): Windows Forms Control Library
   
-     Windows 컨트롤 라이브러리는 클래스 라이브러리 프로젝트와 비슷한 방법으로 디버깅할 수 있습니다. 대부분의 경우에 다른 프로젝트에서 Windows 컨트롤을 호출하게 됩니다. 따라서 호출하는 프로젝트를 디버깅할 때 Windows 컨트롤의 코드를 단계별로 실행하고, 중단점을 설정하고, 다른 디버깅 작업을 수행할 수 있습니다. 자세한 내용은 [Windows Forms 컨트롤](../Topic/Windows%20Forms%20Controls.md)을 참조하십시오.  
+     Debugging a Windows Forms Control Library is similar to debugging a Class Library project. In most cases, you will call the Windows control from another project. When you debug the calling project, you can step into the code of your Windows control, set breakpoints, and perform other debugging operations. For more information, see [Windows Forms Controls](/dotnet/framework/winforms/controls/index).  
+
   
--   \(C\# 및 Visual Basic\): 웹 컨트롤 라이브러리  
+##  <a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a> Building a debug version  
+ No matter how you start debugging, make sure that you build the Debug version of the DLL first and make sure that the Debug version is in the location where the application expects to find it. This may seem obvious, but if you forget this step, the application might find a different version of the DLL and load it. The program will then continue to run, while you wonder why your breakpoint was never hit. When you are debugging, you can verify which DLLs your program has loaded by opening the debugger's **Modules** window. The **Modules** window lists each DLL or EXE loaded in the process you are debugging. For more information, see [How to: Use the Modules Window](../debugger/how-to-use-the-modules-window.md).  
+ For the debugger to attach to code written in C++, the code must emit `DebuggableAttribute`. You can add this to your code automatically by linking with the [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) linker option.  
   
-     자세한 내용은 [웹 컨트롤 라이브러리\(관리 코드\)](../debugger/web-control-library-managed-code.md)을 참조하십시오.  
+##  <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a> Mixed-Mode debugging  
+ The calling application that calls your DLL can be written in managed code or native code. If your managed DLL is called by native code and you want to debug both, managed and native debuggers must both be enabled. You can select this in the **\<Project> Property Pages** dialog box or window. How you do this depends on whether you start debugging from the DLL project or the calling application project. For more information, see [How to: Debug in Mixed Mode](../debugger/how-to-debug-in-mixed-mode.md).  
   
--   \(C\+\+\): MFC ActiveX 컨트롤 및 MFC 스마트 장치 ActiveX 컨트롤  
+##  <a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a> Changing default configurations  
+ When you create a console application project with the project template, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automatically creates required settings for the Debug and Release configurations. If necessary, you can change those settings. For more information, see [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md), [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md), [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md), and [How to: Set Debug and Release Configurations](../debugger/how-to-set-debug-and-release-configurations.md).  
   
-     ActiveX 컨트롤은 인터넷을 통해 클라이언트 컴퓨터에 다운로드하여 웹 페이지에 표시 및 활성화할 수 있는 컨트롤입니다.  
+##  <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> Ways to debug the DLL  
+ Each of the projects in this section creates a DLL. You cannot run a DLL directly; it must be called by an application, usually an EXE. For more information, see [Creating and Managing Visual C++ Projects](/cpp/ide/creating-and-managing-visual-cpp-projects). The calling application might fit any one of the following criteria:  
   
-     독립적으로 실행할 수 없고 HTML 웹 페이지에 포함되어야 한다는 점에서 ActiveX 컨트롤을 디버깅하는 방식은 다른 종류의 컨트롤을 디버깅하는 방식과 비슷합니다. 자세한 내용은 [방법: ActiveX 컨트롤 디버깅](../debugger/how-to-debug-an-activex-control.md)을 참조하십시오.  
+-   An application built in another project in the same [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution that contains the class library.  
   
--   \(C\+\+\): MFC 스마트 장치 DLL  
+-   An existing application already deployed on a test or production computer.  
   
-     자세한 내용은 [MFC 디버깅 기술](../debugger/mfc-debugging-techniques.md)을 참조하세요.  
+-   Located on the Web and accessed through a URL.  
   
- 이 단원에서는 다음 항목에 대한 정보도 제공합니다.  
+-   A Web application that contains a Web page which embeds the DLL.  
   
--   [방법: DLL 프로젝트에서 디버깅](../debugger/how-to-debug-from-a-dll-project.md)  
+###  <a name="vxtskdebuggingdllprojectsthecallingapplication"></a> Debugging the calling application  
+To debug a DLL, start by debugging the calling application, typically either an EXE or a Web application. There are several ways to debug it.  
   
--   [방법: 혼합 모드에서 디버깅](../debugger/how-to-debug-in-mixed-mode.md)  
+-   If you have a project for the calling application, you can open that project and start execution from the **Debug** menu. For more information, see [Getting started with the debugger](../debugger/getting-started-with-the-debugger.md).  
   
- 이 항목의 다음 단원에서는 클래스 라이브러리에 대한 디버깅을 준비하는 방법에 대해 설명합니다.  
+-   If the calling application is an existing program already deployed on a test or production computer and is already running you can attach to it. Use this method if the DLL is a control hosted by Internet Explorer, or a control on a Web page. For more information, see [How to: Attach to a Running Process](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
--   [디버그 버전 빌드](#vxtskdebuggingdllprojectsbuildingadebugversion)  
+-   You can debug it from the DLL project. For more information, see [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md).  
   
--   [혼합 모드 디버깅](#vxtskdebuggingdllprojectsmixedmodedebugging)  
+-   You can debug it from the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [Immediate window](#vxtskdebuggingdllprojectstheimmediatewindow). In this case, the **Immediate** window plays the role of the application.  
   
--   [기본 구성 변경](#vxtskdebuggingdllprojectschangingdefaultconfigurations)  
+Before you start debugging the calling application, you will usually want to set a breakpoint in the class library. For more information, see [Using Breakpoints](../debugger/using-breakpoints.md). When the breakpoint is hit, you can step through the code, observing the action at each line, until you isolate the problem. For more information, see [Navigate code in the debugger](../debugger/navigating-through-code-with-the-debugger.md).
   
--   [DLL 디버깅 방법](#vxtskdebuggingdllprojectswaystodebugthedll)  
+###  <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> The Immediate Window  
+ You can evaluate functions or methods in the DLL without having a calling application. You do design-time debugging and you use the **Immediate** window. To debug in this manner, do the follow these steps while the DLL project is open:  
   
--   [호출 응용 프로그램](#vxtskdebuggingdllprojectsthecallingapplication)  
+1.  Open the Debugger **Immediate** window.  
   
--   [웹 페이지의 컨트롤](#vxtskdebuggingdllprojectscontrolsonawebpage)  
-  
--   [직접 실행 창](#vxtskdebuggingdllprojectstheimmediatewindow)  
-  
-##  <a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a> 디버그 버전 빌드  
- 어떤 방법으로 디버깅을 시작하든지 먼저 DLL의 디버그 버전을 빌드하여 응용 프로그램에서 검색할 위치에 저장해야 합니다. 만약 이 단계를 생략하면 응용 프로그램에서는 다른 DLL 버전을 찾아서 로드할 수 있습니다. 그러면 프로그램은 계속 실행되지만 중단점에는 도달하지 않습니다. 디버깅 작업을 수행할 때 디버거의 **모듈** 창을 열어 프로그램에서 로드한 DLL을 확인할 수 있습니다.**모듈** 창에는 디버깅 중인 프로세스에서 로드한 각 DLL 또는 EXE가 표시됩니다. 자세한 내용은 [방법: 모듈 창 사용](../debugger/how-to-use-the-modules-window.md)을 참조하십시오.  
-  
- 디버거에서 C\+\+로 작성된 코드에 연결하려면 코드에서 `DebuggableAttribute`를 내보내야 합니다. 이 특성은 [\/ASSEMBLYDEBUG](/visual-cpp/build/reference/assemblydebug-add-debuggableattribute) 링커 옵션으로 링크하여 자동으로 코드에 추가할 수 있습니다.  
-  
-##  <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a> 혼합 모드 디버깅  
- DLL을 호출하는 호출 응용 프로그램은 관리 코드로 작성될 수도 있고 네이티브 코드로 작성될 수도 있습니다. 네이티브 코드가 관리되는 DLL을 호출하고 두 코드를 모두 디버깅해야 하는 경우에는 관리되는 디버거와 네이티브 디버거를 모두 활성화해야 합니다.**\<Project\>속성 페이지** 대화 상자 또는 창에서 이를 선택할 수 있습니다. 이를 수행하는 방법은 DLL 프로젝트에서 디버깅을 시작하는지 아니면 호출 응용 프로그램 프로젝트에서 디버깅을 시작하는지에 따라 달라집니다. 자세한 내용은 [방법: 혼합 모드에서 디버깅](../debugger/how-to-debug-in-mixed-mode.md)을 참조하십시오.  
-  
-##  <a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a> 기본 구성 변경  
- 프로젝트 템플릿을 사용하여 콘솔 응용 프로그램 프로젝트를 만들면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 디버그 및 릴리스 구성에 필요한 설정을 자동으로 만듭니다. 필요하면 이 설정을 변경할 수 있습니다. 자세한 내용은 다음을 참조하세요.[C\+\+ 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-a-cpp-debug-configuration.md), [C\# 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-csharp-debug-configurations.md), [Visual Basic 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) 및 [방법: 디버그 및 릴리스 구성 설정](../debugger/how-to-set-debug-and-release-configurations.md).  
-  
-##  <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> DLL 디버깅 방법  
- 이 단원의 각 프로젝트에서는 DLL을 만듭니다. DLL은 직접 실행할 수 없습니다. DLL은 일반적으로 EXE와 같은 응용 프로그램에서 호출해야 합니다. 자세한 내용은 [Visual C\+\+ 프로젝트 만들기 및 관리](/visual-cpp/ide/creating-and-managing-visual-cpp-projects)을 참조하세요. 호출 응용 프로그램은 다음 기준 중 하나에 부합해야 합니다.  
-  
--   동일한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션에서 클래스 라이브러리를 포함한 다른 프로젝트에 내장된 응용 프로그램  
-  
--   테스트 컴퓨터나 프로덕션 컴퓨터에 이미 배포된 기존 응용 프로그램  
-  
--   웹에 설치되어 URL을 통해 액세스할 수 있는 응용 프로그램  
-  
--   DLL을 포함하는 웹 페이지가 들어 있는 웹 응용 프로그램  
-  
-###  <a name="vxtskdebuggingdllprojectsthecallingapplication"></a> 호출 응용 프로그램 디버깅  
- DLL을 디버깅하려면 호출 응용 프로그램 디버깅을 먼저 시작해야 합니다. 호출 응용 프로그램은 일반적으로 EXE 또는 웹 응용 프로그램입니다. 이를 디버깅하는 데는 여러 가지 방법이 있습니다.  
-  
--   호출 응용 프로그램에 대한 프로젝트가 있으면 이 프로젝트를 열고 **디버그** 메뉴에서 실행 파일을 시작할 수 있습니다. 자세한 내용은 [How to: Start Execution](http://msdn.microsoft.com/ko-kr/b0fe0ce5-900e-421f-a4c6-aa44ddae453c)을 참조하세요.  
-  
--   호출 응용 프로그램이 테스트 컴퓨터나 프로덕션 컴퓨터에 이미 배포되어 실행되고 있는 기존의 프로그램인 경우 이 응용 프로그램에 연결할 수 있습니다. DLL이 Internet Explorer로 호스팅된 컨트롤이거나 웹 페이지의 컨트롤인 경우 이 방법을 사용합니다. 자세한 내용은 [How to: Attach to a Running Process](http://msdn.microsoft.com/ko-kr/636d0a52-4bfd-48d2-89ad-d7b9ca4dc4f4)을 참조하십시오.  
-  
--   DLL 프로젝트에서 이를 디버깅할 수 있습니다. 자세한 내용은 [방법: DLL 프로젝트에서 디버깅](../debugger/how-to-debug-from-a-dll-project.md)을 참조하세요.  
-  
--   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **직접 실행** 창에서 이를 디버깅할 수 있습니다. 이 경우 **직접 실행** 창은 응용 프로그램 역할을 수행합니다.  
-  
- 호출 응용 프로그램에 대한 디버깅을 시작하기 전에, 일반적으로 클래스 라이브러리에 중단점을 설정합니다. 자세한 내용은 [Breakpoints and Tracepoints](http://msdn.microsoft.com/ko-kr/fe4eedc1-71aa-4928-962f-0912c334d583)을 참조하세요. 중단점에 도달하면 각 줄의 작업을 확인하면서 코드를 단계별로 실행하여 문제를 해결할 수 있습니다. 자세한 내용은 [Code Stepping Overview](http://msdn.microsoft.com/ko-kr/8791dac9-64d1-4bb9-b59e-8d59af1833f9)을 참조하십시오.  
-  
-###  <a name="vxtskdebuggingdllprojectscontrolsonawebpage"></a> 웹 페이지의 컨트롤  
- 웹 페이지 컨트롤을 디버깅하려면 컨트롤을 포함하는 페이지가 없는 경우 컨트롤을 포함하는 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 페이지를 만듭니다. 그런 다음 컨트롤 코드 및 웹 페이지 코드에 중단점을 배치합니다. 중단점을 설정한 후 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 웹 페이지를 호출합니다.  
-  
- 호출 응용 프로그램에 대한 디버깅을 시작하기 전에, 일반적으로 DLL에 중단점을 설정합니다. 중단점에 도달하면 각 줄의 작업을 확인하면서 코드를 단계별로 실행하여 문제를 해결할 수 있습니다. 자세한 내용은 [Breakpoints and Tracepoints](http://msdn.microsoft.com/ko-kr/fe4eedc1-71aa-4928-962f-0912c334d583)을 참조하세요.  
-  
-###  <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> 직접 실행 창  
- 호출 응용 프로그램을 사용하지 않고도 DLL의 함수 및 메서드를 실행할 수 있습니다. 디자인 타임 디버깅을 수행하고 **직접 실행** 창을 사용할 수 있습니다. 이러한 방식으로 디버깅하려면 DLL 프로젝트가 열려 있는 상태에서 다음 단계를 수행합니다.  
-  
-1.  디버거 **직접 실행** 창을 엽니다.  
-  
-2.  `Test` 클래스의 `Class1`라는 메서드를 테스트하려면 직접 실행 창에 다음 C\# 코드를 입력하여 `Class1` 형식의 개체를 인스턴스화합니다. 구문을 적절하게 변경하면 이 관리 코드는 Visual Basic 및 C\+\+에서 작동합니다.  
+2.  To test a method named `Test` in class `Class1`, instantiate an object of type `Class1` by typing the following C# code in the Immediate window. This managed code works for Visual Basic and C++, with appropriate syntax changes:  
   
     ```  
     Class1 obj = new Class1();  
     ```  
   
-     C\#에서 모든 이름은 정규화되어야 합니다. 또한 모든 메서드나 변수는 디버깅 세션의 현재 범위와 컨텍스트에 있어야 합니다.  
+     In C#, all names must be fully qualified. In addition, any methods or variables must be in the current scope and context of the debugging session.  
   
-3.  `Test`에서 `int` 매개 변수 하나를 사용하는 것으로 가정하고 **직접 실행** 창을 사용하여 `Test`를 실행합니다.  
+3.  Assuming that `Test` takes one `int` parameter, evaluate `Test` using the **Immediate** window:  
   
     ```  
     ?obj.Test(10)  
     ```  
   
-     **직접 실행** 창에 결과가 출력됩니다.  
+     The result will be printed in the **Immediate** window.  
   
-4.  `Test` 내에 중단점을 배치한 다음 함수를 다시 실행하여 이 메서드를 계속 디버깅할 수 있습니다.  
+4.  You can continue to debug `Test` by placing a breakpoint inside it and then evaluating the function again:  
   
     ```  
     ?obj.Test(10);  
     ```  
   
-     중단점에 도달하면 `Test`를 단계별로 실행할 수 있습니다.`Test` 실행을 마치면 디버거가 디자인 모드로 되돌아갑니다.  
+     The breakpoint will be hit and you will be able to step through `Test`. After execution has left `Test`, the Debugger will be back in Design mode.
+
+## <a name="vxtskdebuggingdllprojectsexternal"></a> Debug an external DLL from a C++ project
+
+If you are debugging a DLL external to your project, the debugging features available (such as stepping through code) will depend on the [debug configuration of the DLL](#vxtskdebuggingdllprojectsbuildingadebugversion) when it was built and whether the [.pdb file](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) and other required files for the DLL are available.
+
+Your project needs to be able to find the DLL and the .pdb file used for debugging. You can create a custom build task to copy these files to the **\<project folder>\Debug** output folder, or you can copy the files into the output folder manually.
+
+You can easily set locations of header files and *.lib files in the Property Pages (right-click the C++ project and choose **View Properties**, and then choose **All Configurations**) without the need to copy them into your output folder:
+
+- C/C++ folder (General category) - Specify the folder containing header files in the **Additional Include Directories** field.
+- Linker folder (General category) - Specify the folder containing the .lib file in the **Additional Libraries Directories** field. 
+- Linker folder (Input category) - Specify the full path and filename for the .lib file in the **Additional Dependencies** field.
+
+When the configuration is correct, you can debug by starting execution from the **Debug** menu.
+
+For more information on project settings, see [Property Pages (Visual C++)](/cpp/ide/property-pages-visual-cpp).
   
-## 참고 항목  
- [관리 코드 디버깅](../debugger/debugging-managed-code.md)   
- [Visual C\+\+ 프로젝트 형식](../debugger/debugging-preparation-visual-cpp-project-types.md)   
- [C\#, F\# 및 Visual Basic 프로젝트 형식](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
- [C\+\+ 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [C\# 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Visual Basic 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [디버거 보안](../debugger/debugger-security.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Managed Code](../debugger/debugging-managed-code.md)   
+ [Visual C++ Project Types](../debugger/debugging-preparation-visual-cpp-project-types.md)   
+ [C#, F#, and Visual Basic Project Types](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
+ [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
+ [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [Debugger Security](../debugger/debugger-security.md)

@@ -1,81 +1,99 @@
 ---
-title: "디버거를 사용한 예외 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.exceptions"
-  - "vs.debug.exceptions.find"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "공용 언어 런타임, 예외"
-  - "디버거, 런타임 오류"
-  - "디버깅[Visual Studio], 예외 처리"
-  - "오류 처리"
-  - "오류[디버거]"
-  - "예외 처리, 디버깅 중"
-  - "예외, 디버깅"
-  - "예외, Win32"
-  - "네이티브 런타임 검사"
-  - "On Error 방식 오류 처리기"
-  - "런타임, 예외"
-  - "런타임 오류"
-  - "런타임 오류, 디버깅"
-  - "Win32, 예외"
+title: Manage exceptions with the Visual Studio debugger | Microsoft Docs
+ms.custom: 
+ms.date: 04/05/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.exceptions
+- vs.debug.exceptions.find
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- run-time errors
+- exception handling, during debugging
+- errors [debugger]
+- debugger, runtime errors
+- On Error-style error handlers
+- exceptions, Win32
+- run-time errors, debugging
+- Win32, exceptions
+- run time, exceptions
+- error handling
+- debugging [Visual Studio], exception handling
+- common language runtime, exceptions
+- native run-time checks
+- exceptions, debugging
 ms.assetid: 43a77fa8-37d0-4c98-a334-0134dbca4ece
 caps.latest.revision: 35
-caps.handback.revision: 35
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 디버거를 사용한 예외 관리
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 3bc9b2136518d46060e81fd1c5ff150f53e969d8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-예외는 프로그램이 실행되는 동안 발생하는 오류 상태를 나타냅니다. 가장 중요한 예외에 응답하는 처리기를 제공할 수 있고 제공해야 하지만, 확인하려는 예외에 대해 디버거가 중단되도록 설정하는 방법을 알아야 합니다.  
+---
+# <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Manage exceptions with the debugger in Visual Studio
+
+An exception is an indication of an error state that occurs while a program is being executed. You can tell the debugger which exceptions (or sets of exceptions) to break on, and at which point you want the debugger to break (when the debugger breaks, it shows you where the exception was thrown). You can also add or delete exceptions. With a solution open in Visual Studio, use **Debug > Windows > Exception Settings** to open the **Exception Settings** window. 
+
+You can and should provide handlers that respond to the most important exceptions, but it's important to know how to configure the debugger to always break execution for some exceptions.
   
- 예외가 발생하면 디버거가 예외 메시지를 출력 창에 씁니다. 다음과 같은 경우에 실행이 중단될 수 있습니다.  
+When an exception occurs, the debugger writes an exception message to the Output window. It may break execution in the following cases:  
   
--   예외가 발생했으며 처리되지 않은 경우  
+-   When an exception is thrown and is not handled.  
   
--   예외가 발생하면 즉시 처리기가 호출되기 전에 실행이 중단되도록 디버거가 설정된 경우  
+-   When the debugger is configured to break execution before any handler is invoked.  
   
--   [내 코드만](../debugger/just-my-code.md)을 설정했으며, 사용자 코드에서 처리되지 않은 예외가 발견되면 중단되도록 디버거가 설정된 경우  
+-   If you have set [Just My Code](../debugger/just-my-code.md), and the debugger is configured to break on any exception that is not handled in user code.  
   
 > [!NOTE]
->  ASP.NET에는 브라우저에 오류 페이지를 표시하는 최상위 예외 처리기가 있습니다.**내 코드만**이 설정되지 않은 경우에는 실행이 중단되지 않습니다. 예제를 보려면 아래의 [사용자가 처리하지 않은 예외에 대해 계속하도록 디버거 설정](../debugger/managing-exceptions-with-the-debugger.md#BKMK_UserUnhandled)를 참조하세요.  
+>  ASP.NET has a top-level exception handler that shows error pages in a browser. It does not break execution unless **Just My Code** is turned on. For an example, see [Setting the debugger to continue on user-unhandled exceptions](../debugger/managing-exceptions-with-the-debugger.md#BKMK_UserUnhandled) below.  
   
 > [!NOTE]
->  Visual Basic 응용 프로그램에서 디버거는 모든 오류를 예외로 관리합니다. 이는 On Error 스타일의 오류 처리기를 사용하는 경우에도 마찬가지입니다.  
+>  In a Visual Basic application, the debugger manages all errors as exceptions, even if you use On Error-style error handlers.    
   
-## 예외 설정 창을 사용한 예외 관리  
- **예외 설정** 창을 사용하여 디버거가 중단되도록 할 예외\(또는 예외 집합\) 및 실행 중단시킬 지점을 설정할 수 있습니다. 예외를 추가 또는 삭제하거나 실행 중단을 일으킬 예외를 지정할 수 있습니다. 솔루션이 열려 있을 때 **디버그 \/ Windows \/ 예외 설정**을 클릭하여 이 창을 엽니다.  
+## <a name="tell-the-debugger-to-break-when-an-exception-is-thrown"></a>Tell the debugger to break when an exception is thrown  
+The debugger can break execution at the point where an exception is thrown, giving you a chance to examine the exception before a handler is invoked.  
   
- **예외 설정** 도구 모음에 있는 **검색** 창을 사용하여 특정 예외를 찾거나 검색을 사용하여 특정 네임스페이스\(예: **System.IO**\)를 필터링할 수 있습니다.  
+In the **Exception Settings** window (**Debug > Windows > Exception Settings**), expand the node for a category of exceptions (for example, **Common Language Runtime Exceptions**, meaning .NET exceptions), and select the check box for a specific exception within that category (for example **System.AccessViolationException**). You can also select an entire category of exceptions.  
   
-### 예외가 발생하면 중단하도록 디버거 설정  
- 디버거는 예외가 발생한 지점에서 실행을 중단하여 처리기가 호출되기 전에 예외를 검사할 수 있도록 기회를 제공합니다.  
+![Checked AccessViolationException](../debugger/media/exceptionsettingscheckaccess.png "ExceptionSettingsCheckAccess")  
+
+> [!TIP]
+> You can find specific exceptions by using the **Search** window in the **Exception Settings** toolbar, or use search to filter for specific namespaces (for example **System.IO**).
   
- **예외 설정** 창에서 예외 범주\(예: .NET 예외를 의미하는 **공용 언어 런타임 예외**\)에 대한 노드를 확장하고 해당 범주 내의 특정 예외\(예: **System.AccessViolationException**\)에 대한 확인란을 선택합니다. 전체 예외 범주를 선택할 수도 있습니다.  
+If you select an exception in the **Exception Settings** window, debugger execution will break wherever the exception is thrown, regardless of whether it is handled or unhandled. At this point the exception is called a first chance exception. For example, here are a couple of scenarios:  
   
- ![확인된 AccessViolationException](../debugger/media/exceptionsettingscheckaccess.png "ExceptionSettingsCheckAccess")  
+*  In the following C# console application, the Main method throws an **AccessViolationException** inside a `try/catch` block:  
   
- 주어진 예외를 선택하는 경우, 이 예외가 발생할 때마다 예외가 처리되었는지 여부에 관계없이 디버거 실행이 중단됩니다. 여기서 이 예외를 첫째 예외라고 합니다. 예를 들어 다음은 몇 가지 시나리오입니다.  
-  
-1.  다음 C\# 콘솔 응용 프로그램에서 Main 메서드는 `try/catch` 블록 내부에서 **AccessViolationException** 예외를 발생시킵니다.  
-  
-    ```c#  
+    ```CSharp  
     static void Main(string[] args)  
     {  
         try  
@@ -91,18 +109,18 @@ manager: "ghogen"
     }  
     ```  
   
-     **예외 설정**에서 **AccessViolationException**을 선택한 이 코드를 디버거에서 실행하면 `throw` 줄에서 실행이 중단됩니다. 그런 다음 실행을 계속할 수 있습니다. 콘솔에 다음 두 줄이 모두 표시됩니다.  
+     If you have **AccessViolationException** checked in **Exception Settings**, when you run this code in the debugger execution will break on the `throw` line. You can then continue execution. The console should display both lines:  
   
     ```  
     caught exception  
     goodbye  
     ```  
   
-     그러나 `here` 줄은 표시되지 않습니다.  
+     but it does not display the `here` line.  
   
-2.  C\# 콘솔 응용 프로그램은 예외를 발생시키고 처리하는 메서드, 동일한 예외를 발생시키고 처리하지 않는 메서드 등 두 개의 메서드를 가진 클래스를 사용하여 클래스 라이브러리를 참조합니다.  
+*  A C# console application references a class library with a class that has two methods, a method that throws an exception and handles it and a second method that throws the same exception and doesn't handle it:  
   
-    ```vb  
+    ```c# 
     public class Class1  
     {  
         public void ThrowHandledException()  
@@ -124,9 +142,9 @@ manager: "ghogen"
     }  
     ```  
   
-     다음은 콘솔 응용 프로그램의 Main\(\) 메서드입니다.  
+     Here's the Main() method of the console application:  
   
-    ```c#  
+    ```CSharp  
     static void Main(string[] args)  
     {  
         Class1 class1 = new Class1();  
@@ -135,40 +153,40 @@ manager: "ghogen"
     }  
     ```  
   
-     **예외 설정**에서 **AccessViolationException**을 선택한 경우 이 코드를 디버거에서 실행하면 **ThrowHandledException\(\)** 및 **ThrowUnhandledException\(\)**의 `throw` 줄에서 실행이 중단됩니다.  
+     If you have **AccessViolationException** checked in **Exception Settings**, when you run this code in the debugger execution will break on the `throw` line in both **ThrowHandledException()** and **ThrowUnhandledException()**.  
   
- 예외 설정을 기본값으로 복원하려는 경우에는 도구 모음에서 **복원** 단추를 클릭하면 됩니다.  
+ If you would like to restore the exception settings to the defaults, you can click the **Restore** button on the toolbar:  
   
- ![예외 설정에서 기본값 복원](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
+ ![Restore defaults in Exception Settings](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
   
-###  <a name="BKMK_UserUnhandled"></a> 사용자가 처리하지 않은 예외에 대해 계속하도록 디버거 설정  
- [내 코드만](../debugger/just-my-code.md) 옵션을 사용하여 .NET 또는 JavaScript 코드를 디버그하는 경우 사용자 코드에서 처리되지 않았지만 다른 위치에서는 처리된 예외가 발견되면 실행을 중단하지 않도록 디버거에 지시할 수 있습니다.  
+##  <a name="BKMK_UserUnhandled"></a> Tell the debugger to continue on user-unhandled exceptions  
+ If you are debugging .NET or JavaScript code with [Just My Code](../debugger/just-my-code.md), you can tell the debugger not to break on exceptions that are not handled in user code but are handled somewhere else.  
   
-1.  **예외 설정** 창에서 창 내부를 마우스 오른쪽 단추로 클릭한 다음 **열 표시**를 선택하여 상황에 맞는 메뉴를 엽니다. \(**내 코드만**을 해제한 경우에는 이 명령이 표시되지 않습니다.\)  
+1.  In the **Exception Settings** window, open the context menu by right-clicking in window and then selecting **Show Columns**. (If you have turned off **Just My Code**, you will not see this command.)  
   
-2.  **추가 작업**이라는 또 하나의 열이 표시됩니다. 이 열에는 특정 예외에 대해 **사용자 코드에서 처리되지 않은 경우 계속**이 표시됩니다. 이는 예외가 사용자 코드에서 처리되지 않았지만 외부 코드에서는 처리된 경우 디버거가 중단되지 않음을 의미합니다.  
+2.  You should see a second column named **Additional Actions**. This column displays **Continue when unhandled by user code** on specific exceptions, meaning that the debugger does not break if that exception is not handled in user code but is handled in external code.  
   
-3.  특정 예외에 대해서나\(예외를 선택하고 마우스 오른쪽 단추를 클릭한 후 **사용자 코드에서 처리되지 않은 경우 계속** 선택\/선택 취소\) 전체 예외 범주\(예: 모든 공용 언어 런타임 예외\)에 대해 이 설정을 변경할 수 있습니다.  
+3.  You can change this setting either for a particular exception (select the exception, right-click, and select/deselect **Continue when Unhandled in User Code**) or for an entire category of exceptions (for example, all the Common Language Runtime exceptions).  
   
- 예를 들어 ASP.NET 웹 응용 프로그램은 예외를 HTTP 500 상태 코드\([ASP.NET API의 예외 처리](http://www.asp.net/web-api/overview/error-handling/exception-handling)\)로 변환하여 예외를 처리하며, 이에 따라 예외의 소스를 확인하는 데 도움이 되지 않을 수도 있습니다. 아래 예제에서는 사용자 코드가 <xref:System.FormatException>을 발생시키는 `String.Format()`을 호출합니다. 다음과 같이 실행이 중단됩니다.  
+ For example, ASP.NET web applications handle exceptions by converting them to an HTTP 500 status code ([Exception Handling in ASP.NET API](http://www.asp.net/web-api/overview/error-handling/exception-handling)), which may not help you to determine the source of the exception. In the example below, the user code makes a call to `String.Format()` that throws a <xref:System.FormatException>. Execution breaks as follows:  
   
- ![사용자가 처리하지 않은 예외에서 중단](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
+ ![breaks on user&#45;unhanlded exception](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
   
-### 예외 추가 및 삭제  
- 예외를 추가하거나 삭제할 수 있습니다. 어느 범주에서나 어떤 형식의 예외든 삭제할 수 있습니다. 예외를 선택하고 **예외 설정** 도구 모음에서 **삭제** 단추\(빼기 기호\)를 클릭하거나 예외를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **삭제**를 선택하면 됩니다. 예외를 삭제하는 것은 예외를 선택 취소하는 것과 같은 효과를 가집니다. 즉, 해당 예외가 발생해도 디버거가 실행을 중단하지 않습니다.  
+## <a name="add-and-delete-exceptions"></a>Add and delete exceptions  
+ You can add and delete exceptions. You can delete any type of exception from any category by selecting the exception and clicking the **Delete** button (the minus sign) on the **Exception Settings** toolbar, or right-clicking the exception and selecting **Delete** from the context menu. Deleting an exception has the same effect as having the exception unchecked, which is that the debugger will not break when it is thrown.  
   
- 예외를 추가하려면 **예외 설정** 창에서 예외 범주 중 하나\(예: **공용 언어 런타임**\)를 선택하고 **추가** 단추를 클릭합니다. 예외의 이름을 입력합니다\(예:**System.UriTemplateMatchException**\). 예외가 목록에 추가되고\(사전순\) 자동으로 선택됩니다.  
+ To add an exception: in the **Exception Settings** window, select one of the exception categories (for example, **Common Language Runtime**) and click the **Add** button. Type the name of the exception (for example. **System.UriTemplateMatchException**). The exception is added to the list (in alphabetical order), and is automatically checked.  
   
- GPU 메모리 액세스 예외, JavaScript 런타임 예외 또는 Win32 예외 범주에 예외를 추가하려는 경우에는 설명과 함께 오류 코드를 포함해야 합니다.  
+ If you want to add an exception to the GPU Memory Access Exceptions, JavaScript Runtime Exceptions, or Win32 Exceptions categories, you need to include the error code as well as the description.  
   
 > [!TIP]
->  맞춤법 검사를 수행합니다.**예외 설정** 창에서는 추가된 예외가 있는지 검사하지 않습니다. 따라서 **Sytem.UriTemplateMatchException**을 입력하면 해당 예외에 대한 항목\(**System.UriTemplateMatchException**에 대한 항목이 아님\)을 얻게 됩니다.  
+>  Check your spelling! The **Exception Settings** window doesn't check for the existence of an added exception. So if you type **Sytem.UriTemplateMatchException**, you'll get an entry for that exception (and not for **System.UriTemplateMatchException**).  
   
- 예외 설정은 솔루션의 .suo파일에 유지되므로 특정 솔루션에 적용됩니다. 특정 예외 설정을 여러 솔루션에서 다시 사용할 수 없습니다. 추가된 예외만 유지되고, 삭제된 예외는 유지되지 않습니다. 다시 말해서, 예외를 추가한 후 솔루션을 닫았다가 다시 열면 예외가 그대로 유지됩니다. 그러나 예외를 삭제한 후 솔루션을 닫았다가 다시 열면 예외가 다시 나타나지 않습니다.  
+ Exception settings are persisted in the solution's .suo file, so they apply to a particular solution. You can't reuse specific exception settings across solutions. At this point, only added exceptions are persisted; deleted exceptions are not. In other words, you can add an exception, close and reopen the solution, and the exception will still be there. But if you delete an exception and close/reopen the solution, the exception will reappear.  
   
- **예외 설정** 창은 C\#의 일반적인 예외 형식을 지원하지만 Visual Basic의 일반 예외 형식은 지원하지 않습니다.`MyNamespace.GenericException<T>`와 같은 예외에서 실행을 중단하려면 **MyNamespace.GenericException\`1**과 같은 예외를 추가해야 합니다. 즉, 다음과 같은 예외를 만든 경우  
+ The **Exception Settings** window supports generic exception types in C# but not in Visual Basic. To break on exceptions like `MyNamespace.GenericException<T>`, you must add the exception as **MyNamespace.GenericException`1**. That is, if you have created an exception like this:  
   
-```c#  
+```CSharp  
 public class GenericException<T> : Exception  
 {  
     public GenericException() : base("This is a generic exception.")  
@@ -177,14 +195,24 @@ public class GenericException<T> : Exception
 }  
 ```  
   
- **예외 설정**에 다음과 같이 예외를 추가할 수 있습니다.  
+ You can add the exception to **Exception Settings** like this:  
   
- ![일반 예외 추가](../debugger/media/addgenericexception.png "AddGenericException")  
+ ![adding generic exception](../debugger/media/addgenericexception.png "AddGenericException")  
+
+## <a name="add-conditions-to-an-exception"></a>Add conditions to an exception
+
+You can set conditions on exceptions in the **Exception Settings** dialog box. Currently supported conditions include the module name(s) to include or exclude for the exception. By setting module names as conditions, you can choose to break for the exception only on particular code modules, or you can avoid breaking on particular modules.
+
+> [!NOTE]
+> Adding conditions to an exception is new in [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
+
+To add conditional exceptions, choose the **Edit condition** icon in the Exception Settings dialog box or right-click the exception and choose **Edit Conditions**.
+
+![Conditions on an Exception](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
   
-## 참고 항목  
- [예외 후 실행 계속](../debugger/continuing-execution-after-an-exception.md)   
- [방법: 예외 발생 후 시스템 코드 검사](../debugger/how-to-examine-system-code-after-an-exception.md)   
- [방법: 네이티브 런타임 검사 기능 사용](../debugger/how-to-use-native-run-time-checks.md)   
- [C 런타임 라이브러리 없이 런타임 검사 사용](../debugger/using-run-time-checks-without-the-c-run-time-library.md)   
- [Exception Assistant](../Topic/Exception%20Assistant.md)   
- [디버거 기본 사항](../debugger/debugger-basics.md)
+## <a name="see-also"></a>See Also  
+ [Continuing Execution After an Exception](../debugger/continuing-execution-after-an-exception.md)   
+ [How to: Examine System Code After an Exception](../debugger/how-to-examine-system-code-after-an-exception.md)   
+ [How to: Use Native Run-Time Checks](../debugger/how-to-use-native-run-time-checks.md)   
+ [Using Run-Time Checks Without the C Run-Time Library](../debugger/using-run-time-checks-without-the-c-run-time-library.md)   
+ [Debugger Basics](../debugger/debugger-basics.md)

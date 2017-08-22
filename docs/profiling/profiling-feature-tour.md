@@ -1,5 +1,5 @@
 ---
-title: "프로파일링 기능 둘러보기 | Microsoft 문서"
+title: Profiling Feature Tour | Microsoft Docs
 ms.custom: H1HackMay2017
 ms.date: 05/18/2017
 ms.reviewer: 
@@ -30,155 +30,155 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
-ms.openlocfilehash: a219a09f96b34a434a3bf1103e560104c294eb96
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: b4f4e312fb7717edfe950cf6977279a1bd67a458
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 08/22/2017
 
 ---
-# <a name="feature-tour-of-profiling-in-visual-studio"></a>Visual Studio의 프로파일링 기능 둘러보기
+# <a name="profiling-feature-tour"></a>Profiling Feature Tour
 
-Visual Studio에서는 앱의 유형에 따라 다른 성능 문제를 진단할 수 있는 다양한 프로파일링 도구를 제공합니다.
+Visual Studio provides a variety of profiling tools to help you diagnose different kinds of performance issues depending on your app type.
 
-디버깅 세션 중에 액세스할 수 있는 프로파일링 도구는 [진단 도구] 창에 제공됩니다. 끄지 않았다면 [진단 도구] 창이 자동으로 나타납니다. 창을 표시하려면 **디버그/Windows/진단 도구 표시**를 클릭합니다. 창이 열리면 데이터를 수집할 도구를 선택할 수 있습니다.
+The profiling tools that you can access during a debugging session are available in the Diagnostic Tools window. The Diagnostic Tools window appears automatically unless you have turned it off. To bring up the window, click **Debug / Windows / Show Diagnostic Tools**. With the window open, you can select tools for which you want to collect data.
 
-![진단 도구 창](~/profiling/media/prof-tour-diagnostic-tools.png "진단 도구")
+![Diagnostic Tools window](../profiling/media/prof-tour-diagnostic-tools.png "Diagnostic Tools")
 
-디버그하는 동안 **진단 도구** 창을 사용하여 CPU 및 메모리 사용을 분석하고 성능 관련 정보를 보여주는 이벤트를 확인할 수 있습니다.
+While you are debugging, you can use the **Diagnostic Tools** window to analyze CPU and memory usage, and you can view events that show performance-related information.
 
-![진단 도구 요약 뷰](~/profiling/media/prof-tour-cpu-and-memory-graph.gif "진단 도구 요약")
+![Diagnostic Tools Summary view](../profiling/media/prof-tour-cpu-and-memory-graph.gif "Diagnostic Tools Summary")
 
-기본적으로 **진단 도구** 창을 사용하여 앱을 프로파일링하지만 앱에 대한 post-mortem 분석을 대신 수행할 수도 있습니다. 다른 방법에 대한 자세한 내용은 [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)을 참조하세요.
+The **Diagnostic Tools** window is often the preferred way to profile apps, but you can also do a post-mortem analysis of your app instead. If you want more information on different approaches, see [Running Profiling Tools With or Without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-## <a name="analyze-cpu-usage"></a>CPU 사용 분석
+## <a name="analyze-cpu-usage"></a>Analyze CPU Usage
 
-CPU 사용 도구를 사용하여 앱의 성능을 분석하는 것이 좋습니다. 이 도구는 앱에서 사용 중인 CPU 리소스에 대해 자세히 알려줍니다. CPU 사용 도구에 대한 세부 연습은 [초보자를 위한 성능 프로파일링 지침](../profiling/beginners-guide-to-performance-profiling.md)을 참조하세요.
+The CPU Usage tool is a good place to start analyzing your app's performance. It will tell you more about CPU resources that your app is consuming. For a more detailed walkthrough of the CPU Usage tool, see [Beginner's Guide to Performance Profiling](../profiling/beginners-guide-to-performance-profiling.md).
 
-진단 도구의 **요약** 보기에서 **CPU 프로파일링 사용**을 선택합니다(디버깅 세션에 있어야 함).
+From the **Summary** view of the Diagnostic Tools, choose **Enable CPU Profiling** (you must be in a debugging session).
 
-![진단 도구에서 CPU 사용량 사용](~/profiling/media/prof-tour-enable-cpu-profiling.png "진단 도구 CPU 사용량 사용")
+![Enable CPU usage in the Diagnostic Tools](../profiling/media/prof-tour-enable-cpu-profiling.png "Diagnostic Tools Enable CPU Usage")
 
-도구를 가장 효율적으로 사용하려면 코드에 두 개의 중단점을 설정합니다(함수 또는 분석할 코드 영역의 시작 부분과 끝에 각각 하나씩). 두 번째 중단점에서 일시 중지된 경우에 프로파일링 데이터를 검토하세요.
+To use the tool most effectively, set two breakpoints in your code, one at the beginning and one at the end of the function or the region of code you want to analyze. Examine the profiling data when you are paused at the second breakpoint.
 
-**CPU 사용량** 보기에는 함수 목록이 오래 실행된 순으로 표시됩니다. 즉, 가장 오래 실행 중인 함수가 맨 위에 표시됩니다. 이 목록에서 성능 병목 현상이 발생 중인 함수를 알 수 있습니다.
+The **CPU Usage** view shows you a list of functions ordered by longest running, with the longest running function at the top. This can help guide you to functions where performance bottlenecks are happening.
 
-![진단 도구 CPU 사용량 뷰](~/profiling/media/prof-tour-cpu-usage.png "진단 도구 CPU 사용량")
+![Diagnostic Tools CPU Usage view](../profiling/media/prof-tour-cpu-usage.png "Diagnostic Tools CPU Usage")
 
-원하는 함수를 두 번 클릭하면 세 개의 창으로 구분된 세부 “나비” 뷰가 표시되고, 창의 가운데에는 선택된 함수, 왼쪽에는 호출 중인 함수, 오른쪽에는 호출된 함수가 표시됩니다. **함수 본문** 섹션에는 또한 호출 함수 및 호출된 함수에 사용된 시간을 제외하고 함수 본문에 사용된 총 시간(및 시간의 백분율)이 표시됩니다. 이 데이터를 사용하여 함수 자체에 성능 병목 현상이 있는지 여부를 평가할 수 있습니다.
+Double-click on a function that you are interested in, and you will see a more detailed three-pane "butterfly" view, with the selected function in the middle of the window, the calling function on the left, and called functions on the right. The **Function Body** section shows the total amount of time (and the percentage of time) spent in the function body excluding time spent in calling and called functions. This data can help you evaluate whether the function itself is a performance bottleneck.
 
-![진단 도구 호출자 호출 수신자 "나비" 뷰](~/profiling/media/prof-tour-cpu-usage-caller-callee.png "진단 도구 호출자 호출 수신자 뷰")
+![Diagnostic Tools caller callee "butterfly" view](../profiling/media/prof-tour-cpu-usage-caller-callee.png "Diagnostic Tools Caller Callee View")
 
-## <a name="analyze-memory-usage"></a>메모리 사용 분석
+## <a name="analyze-memory-usage"></a>Analyze Memory Usage
 
-또한 [진단 도구] 창을 사용하여 앱의 메모리 사용량을 평가할 수 있습니다. 예를 들어 힙에 있는 개체의 수와 크기를 확인할 수 있습니다. 메모리 분석에 대한 자세한 지침은 [메모리 사용량](../profiling/memory-usage.md)을 참조하세요.
+The Diagnostic Tools window also allows you to evaluate memory usage in your app. For example, you can look at the number and size of objects on the heap. For more detailed instructions to analyze memory, see [Analyze Memory Usage](../profiling/memory-usage.md).
 
-메모리 사용량을 분석하려면 디버그하는 동안 메모리 스냅숏을 하나 이상 만들어야 합니다. 메모리를 분석하는 가장 좋은 방법은 스냅숏을 두 개(의심되는 메모리 문제가 발생하기 직전과 직후) 만드는 것입니다. 그런 다음 두 스냅숏의 차이점을 보고 변경 내용을 정확히 확인할 수 있습니다.
+To analyze memory usage, you need to take at least one memory snapshot while you are debugging. Often, the best way to analyze memory is to take two snapshots; the first right before a suspected memory issue, and the second snapshot right after a suspected memory issue occurs. Then you can view a diff of the two snapshots and see exactly what changed.
 
-![진단 도구에서 스냅숏 만들기](~/profiling/media/prof-tour-take-snapshots.gif "진단 도구 스냅숏 만들기")
+![Take a snapshot in the Diagnostic Tools](../profiling/media/prof-tour-take-snapshots.gif "Diagnostic Tools Take Snapshots")
 
-화살표 링크 중 하나를 선택하면 힙의 차이 뷰(빨간색 위쪽 화살표 ![메모리 사용량 증가](~/profiling/media/prof-tour-mem-usage-up-arrow.png "메모리 사용량 증가")는 증가하는 개체 수(왼쪽)와 증가하는 힙 크기(오른쪽) 표시)가 제공됩니다. 오른쪽 링크를 클릭하면 힙 크기가 가장 많이 증가한 개체순으로 차이 힙 뷰가 표시됩니다. 여기서 메모리 문제를 파악할 수 있습니다. 예를 들어 아래 그림에서 `ClassHandlersStore` 개체에 사용된 바이트 수가 두 번째 스냅숏에서 3,492바이트 증가했습니다.
+When you select one of the arrow links, you are given a differential view of the heap (a red up arrow ![Memory Usage Increase](../profiling/media/prof-tour-mem-usage-up-arrow.png "Memory Usage Increase") shows an increasing object count (left) or an increasing heap size (right)). If you click the right link, you get a differential heap view ordered by objects that increased the most in heap size. This can help you pinpoint memory problems. For example, in the illustration below, the bytes used by `ClassHandlersStore` objects increased by 3,492 bytes in the second snapshot.
 
-![진단 도구 힙 차이 뷰](~/profiling/media/prof-tour-mem-usage-diff-heap.png "진단 도구 힙 차이 뷰")
+![Diagnostic Tools heap diff view](../profiling/media/prof-tour-mem-usage-diff-heap.png "Diagnostic Tools Heap Diff view")
 
-대신에 **메모리 사용량** 뷰의 왼쪽 링크를 클릭하면 힙 뷰가 개체 수를 기준으로 구성됩니다. 즉, 숫자가 가장 많이 증가한 특정 유형의 개체가 맨 위에 표시됩니다(**개수 차이** 열을 기준으로 정렬됨).
+If you click the link on the left instead in the **Memory Usage** view, the heap view is organized by object count; the objects of a particular type that increased the most in number are shown at the top (sorted by **Count Diff** column).
 
-## <a name="examine-performance-events"></a>성능 이벤트 검사
+## <a name="examine-performance-events"></a>Examine Performance Events
 
-진단 도구의 **이벤트** 뷰에는 디버그 중에 발생하는 다른 이벤트(예: 중단점 설정, 코드 단계별 실행 작업)가 표시됩니다. 이벤트 기간(디버거가 마지막으로 일시 중지되거나 앱이 시작된 시점부터 측정)과 같은 정보를 확인할 수 있습니다. 예를 들어 (F10, F11) 코드를 단계별로 실행할 경우 **이벤트** 뷰에 앱 런타임 기간(이전 단계 작업부터 현재 단계까지)이 표시됩니다.
+The **Events** view in the Diagnostic Tools shows you different events that occur while you are debugging, such as the setting of a breakpoint or a code stepping operation. You can check information such as the duration of the event (measured from when the debugger was last paused, or when the app started). For example, if you step through code (F10, F11), the **Events** view shows you the app runtime duration from the previous step operation to the current step.
 
-![진단 도구 이벤트 뷰](~/profiling/media/prof-tour-events.png "도구 진단 이벤트 뷰")
+![Diagnostic Tools Events view](../profiling/media/prof-tour-events.png "Diagnostic Tools View Events")
 
  > [!NOTE]
- > Visual Studio Enterprise를 사용하는 경우 이 탭에 [IntelliTrace 이벤트](../debugger/intellitrace.md)가 표시될 수도 있습니다.
+ > If you have Visual Studio Enterprise, you can also see [IntelliTrace events](../debugger/intellitrace.md) in this tab.
 
-동일한 이벤트가 코드 편집기에도 PerfTips로 표시됩니다.
+The same events also show up in the code editor, which you can view as PerfTips.
 
-![프로파일링 둘러보기 PerfTips](~/profiling/media/prof-tour-perf-tips.png "프로파일링 둘러보기 PerfTips")
+![Profiling Tour PerfTips](../profiling/media/prof-tour-perf-tips.png "Profiling Tour PerfTips")
 
-## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>UI 성능 및 접근성 이벤트 검사(UWP)
+## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>Examine UI Performance and Accessibility Events (UWP)
 
-UWP 앱의 [진단 도구] 창에서 **UI 분석**을 사용하도록 설정할 수 있습니다. 이 도구는 디버그하는 동안 일반 성능 또는 접근성 문제를 검색하여 **이벤트** 뷰에 표시합니다. 이벤트 설명에는 문제를 해결하는 데 유용한 정보가 제공됩니다.
+In your UWP apps, you can enable **UI Analysis** in the Diagnostic Tools window. The tool searches for common performance or accessibility issues and displays them in the **Events** view while you are debugging. The event descriptions provide information that can help resolve issues.
 
-![진단 도구에서 UI 분석 이벤트 보기](~/profiling/media/prof-tour-ui-analysis.png "진단 도구 UI 분석 이벤트 보기")
+![View UI Analysis events in the Diagnostic Tools](../profiling/media/prof-tour-ui-analysis.png "Diagnostic Tools View UI Analysis Events")
 
-## <a name="profile-release-builds-without-the-debugger"></a>디버거 없이 릴리스 빌드 프로파일링
+## <a name="profile-release-builds-without-the-debugger"></a>Profile Release Builds without the Debugger
 
-CPU 사용량 및 메모리 사용량과 같은 프로파일링 도구를 디버거와 함께 사용하거나(이전 섹션 참조) 성능 프로파일러를 통해 프로파일링 도구를 실행하여 **릴리스** 빌드에 대한 분석을 제공할 수 있습니다. 성능 프로파일러에서 앱이 실행 중인 동안 진단 정보를 수집한 다음 앱이 중지된 이후에 수집된 정보를 검사할 수 있습니다. 다른 방법에 대한 자세한 내용을 보려면 [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)을 참조하세요.
+Profiling tools like CPU Usage and Memory Usage can be used with the debugger (see earlier sections), or you can run profiling tools using the Performance Profiler, which is intended to provide analysis for **Release** builds. In the Performance Profiler, you can collect diagnostic info while the app is running, and then examine the collected information after the app is stopped. For more information on these different approaches, see [Running Profiling Tools With or Without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-![성능 프로파일러](~/profiling/media/prof-tour-performance-profiler.png "성능 프로파일러")
+![Performance Profiler](../profiling/media/prof-tour-performance-profiler.png "Performance Profiler")
 
-**디버그/성능 프로파일러**를 선택하여 성능 프로파일러를 엽니다.
+Open the Performance Profiler by choosing **Debug / Performance Profiler**.
 
-창에서 여러 프로파일링 도구를 선택할 수 있는 경우도 있습니다. CPU 사용량과 같은 도구는 분석에 유용한 보조 데이터를 제공할 수 있습니다.
+The window will allow you to select multiple profiling tools in some scenarios. Tools such as CPU Usage may provide complementary data that you can use to help in your analysis.
 
-## <a name="analyze-resource-consumption-xaml"></a>리소스 사용 분석(XAML)
+## <a name="analyze-resource-consumption-xaml"></a>Analyze Resource Consumption (XAML)
 
-XAML 앱(예: Windows 데스크톱 WPF 앱 및 Windows 스토어 앱)에서 응용 프로그램 타임라인 도구를 사용하여 리소스 소비를 분석할 수 있습니다. 예를 들어 응용 프로그램 UI 프레임(레이아웃 및 렌더링)을 준비하고, 네트워크 및 디스크 요청을 처리하여, 응용 프로그램 시작, 페이지 로드 및 창 크기 조정과 같은 시나리오에서 응용 프로그램이 보낸 시간을 분석할 수 있습니다. 이 도구를 사용하려면 성능 프로파일러에서 **응용 프로그램 타임라인**을 선택한 다음 **시작**을 선택합니다. 앱에서 리소스 소비 문제가 의심되는 시나리오를 확인한 다음 **컬렉션 중지**를 선택하여 보고서를 생성합니다.
+In XAML apps, such as Windows desktop WPF apps and Windows Store apps, you can analyze resource consumption using the Application Timeline tool. For example, you can analyze the time spent by your application preparing UI frames (layout and render), servicing network and disk requests, and in scenarios like application startup, page load, and Window resize. To use the tool, choose **Application Timeline** in the Performance Profiler, and then choose **Start**. In your app, go through the scenario with a suspected resource consumption issue, and then choose **Stop collection** to generate the report.
 
-**시각적 처리량** 그래프에서 낮은 framerate는 앱을 실행할 때 표시되는 시각적 문제에 해당할 수 있습니다. 마찬가지로 **UI 스레드 사용률** 그래프에서 높은 숫자는 UI 응답성 문제에 해당할 수 있습니다. 보고서에서 성능 문제가 의심되는 기간을 선택한 다음 타임라인 세부 정보 뷰(아래쪽 창)에서 세부 UI 스레드 활동을 검사할 수 있습니다.
+Low framerates in the **Visual throughput** graph may correspond to visual problems that you see when running your app. Similarly, high numbers in the **UI thread utilization** graph may also correspond to UI responsiveness issues. In the report, you can select a time period with a suspected performance issue, and then examine the detailed UI thread activities in the Timeline details view (lower pane).
 
-![응용 프로그램 타임라인 프로파일링](~/profiling/media/prof-tour-application-timeline.gif "프로파일링 둘러보기 응용 프로그램 타임라인")
+![Application Timeline profiling tool](../profiling/media/prof-tour-application-timeline.gif "Profiling Tour Application Timeline")
 
-타임라인 세부 정보 뷰에서 활동 유형 또는 포함된 UI 요소와 활동 기간 등과 같은 정보를 확인할 수 있습니다. 예를 들어 그림에서 표 형태 컨트롤에 대한 **레이아웃** 이벤트는 57.53ms 걸렸습니다.
+In the Timeline details view, you can find information such as the type of activitiy (or the UI element involved) along with the duration of the activity. For example, in the illustration, a **Layout** event for a Grid control takes 57.53 ms.
 
-자세한 내용은 [응용 프로그램 타임라인](../profiling/application-timeline.md)을 참조하세요.
+For more information, see [Application Timeline](../profiling/application-timeline.md).
 
-## <a name="analyze-gpu-usage-direct3d"></a>GPU 사용량 분석(Direct3D)
+## <a name="analyze-gpu-usage-direct3d"></a>Analyze GPU Usage (Direct3D)
 
-Direct3D 앱(Direct3D 구성 요소가 C++에 있어야 함)에서 GPU에 대한 활동을 검사하고 성능 문제를 분석할 수 있습니다. 자세한 내용은 [GPU 사용량](../debugger/gpu-usage.md)을 참조하세요. 이 도구를 사용하려면 성능 프로파일러에서 **GPU 사용량**을 선택한 다음 **시작**을 선택합니다. 앱에서 프로파일링에 관심 있는 시나리오를 확인한 다음 **컬렉션 중지**를 선택하여 보고서를 생성합니다.
+In Direct3D apps (Direct3D components must be in C++), you can examine activity on the GPU and analyze performance issues. For more information, see [GPU Usage](../debugger/gpu-usage.md). To use the tool, choose **GPU Usage** in the Performance Profiler, and then choose **Start**. In your app, go through the scenario that you're interested in profiling, and then choose **Stop collection** to generate a report.
 
-그래프에서 기간을 선택하고 **자세히 보기**를 선택하면 상세 보기가 아래쪽 창에 나타납니다. 상세 보기에서 각 CPU 및 GPU에서 얼마나 많은 활동이 발생하는지를 확인할 수 있습니다. 맨 아래 창에서 이벤트를 선택하면 타임라인에 팝업이 표시됩니다. 예를 들어 **현재** 이벤트를 선택하면 **현재** 호출 팝업이 표시됩니다. 연한 회색 Vsync 세로줄을 참조로 사용하여 특정 **현재** 호출에 Vsync가 누락되었는지 여부를 확인할 수 있습니다. 앱이 60 FPS를 꾸준히 적중하려면 두 Vsyncs마다 하나의 **현재** 호출이 있어야 합니다.
+When you select a time period in the graphs and choose **view details**, a detailed view appears in the lower pane. In the detailed view, you can examine how much activity is happening on each CPU and GPU. Select events in the lowest pane to get popups in the timeline. For example, select the **Present** event to view **Present** call popups. (The light gray vertical Vsync lines can be used as a reference to understand whether certain **Present** calls missed Vsync. There must be one **Present** call between every two Vsyncs in order for the app to steadily hit 60 FPS.)
 
-![GPU 사용량 프로파일링 도구](~/profiling/media/prof-tour-gpu-usage.png "GPU 사용량 진단")
+![GPU Usage profiling tool](../profiling/media/prof-tour-gpu-usage.png "Diag GPU Usage")
 
-또한 그래프를 사용하여 CPU 바인딩 또는 GPU 바인딩 성능 병목 현상이 있는지 여부를 확인할 수 있습니다.
+You can also use the graphs to determine whether there are CPU bound or GPU bound performance bottlenecks.
 
-## <a name="analyze-performance-javascript"></a>성능 분석(JavaScript)
+## <a name="analyze-performance-javascript"></a>Analyze Performance (JavaScript)
 
-Windows 유니버설 HTML 앱의 경우 JavaScript 메모리 도구 및 HTML UI 응답성 도구를 사용할 수 있습니다.
+For Windows Universal HTML apps, you can use the JavaScript Memory tool and the HTML UI Responsiveness tool.
 
-JavaScript 메모리 도구는 다른 앱 유형에 사용할 수 있는 메모리 사용량 도구와 비슷합니다. 이 도구를 사용하여 앱에서 메모리 사용량을 확인하고 메모리 누수를 파악할 수 있습니다. 도구에 대한 자세한 내용은 [JavaScript 메모리](../profiling/javascript-memory.md)를 참조하세요.
+The JavaScript Memory tool is similar to the Memory Usage tool available for other app types. You can use this tool to understand memory usage and find memory leaks in your app. For more details about the tool, see [JavaScript Memory](../profiling/javascript-memory.md).
 
-![JavaScript 메모리 프로파일링 도구](../profiling/media/diagjsmemory.png "DiagJSMemory")
+![JavaScript Memory profiling tool](../profiling/media/diagjsmemory.png "DiagJSMemory")
 
-Windows 유니버설 HTML 앱에서 UI 응답성, 느린 로드 시간 및 느린 시각적 업데이트를 진단하려면 HTML UI 응답성 도구를 사용합니다. 사용량은 다른 앱 유형의 응용 프로그램 타임라인 도구와 비슷합니다. 자세한 내용은 [HTML UI 응답성](../profiling/html-ui-responsiveness.md)을 참조하세요.
+To diagnose UI responsiveness, slow loading time, and slow visual updates in Windows Universal HTML apps, use the HTML UI Responsiveness tool. Usage is similar to the Application Timeline tool for other app types. For more information, see [HTML UI responsiveness](../profiling/html-ui-responsiveness.md).
 
-![HTML UI 응답성 프로파일링 도구](../profiling/media/diaghtmlresp.png "DiagHTMLResp")
+![HTML UI Responsiveness profiling tool](../profiling/media/diaghtmlresp.png "DiagHTMLResp")
 
-## <a name="analyze-network-usage-uwp"></a>네트워크 사용량 분석(UWP)
+## <a name="analyze-network-usage-uwp"></a>Analyze Network Usage (UWP)
 
-UWP 앱에서 `Windows.Web.Http` API를 사용하여 수행된 네트워크 작업을 분석할 수 있습니다. 이 도구를 사용하면 액세스 및 인증 문제, 잘못된 캐시 사용, 나쁜 표시 및 다운로드 성능 등과 같은 문제를 해결할 수 있습니다. 이 도구를 사용하려면 성능 프로파일러에서 **네트워크**를 선택한 다음 **시작**을 선택합니다. 앱에서 `Windows.Web.Http`를 사용하는 시나리오를 확인한 다음 **컬렉션 중지**를 선택하여 보고서를 생성합니다.
+In UWP apps, you can analyze network operations performed using the `Windows.Web.Http` API.This tool may help you to resolve issues like access and authentication problems, incorrect cache-use, and poor display and download performance. To use the tool, choose **Network** in the Performance Profiler, and then choose **Start**. In your app, go through the scenario that uses `Windows.Web.Http`, and then choose **Stop collection** to generate the report.
 
-![네트워크 사용량 프로파일링 도구](~/profiling/media/prof-tour-network-usage.png "네트워크 사용량 진단")
+![Network Usage profiling tool](../profiling/media/prof-tour-network-usage.png "Diag Network Usage")
 
-요약 뷰에서 작업을 선택하여 세부 정보를 확인할 수 있습니다.
+Select an operation in the summary view to view more details.
 
-![네트워크 사용량 도구의 세부 정보](~/profiling/media/prof-tour-network-usage-details.png "네트워크 사용량 세부 정보 진단")
+![Detailed information in the Network Usage tool](../profiling/media/prof-tour-network-usage-details.png "Diag Network Usage Details")
 
-자세한 내용은 [네트워크 사용량](../profiling/network-usage.md)을 참조하세요.
+For more information, see [Network Usage](../profiling/network-usage.md).
 
-## <a name="analyze-performance-legacy-tools"></a>성능 분석(레거시 도구)
+## <a name="analyze-performance-legacy-tools"></a>Analyze Performance (Legacy Tools)
 
-CPU 사용량 또는 메모리 사용량 도구에 현재 표시되지 않는 계측과 같은 기능이 필요하고 데스크톱 또는 ASP.NET 앱을 실행 중인 경우 성능 탐색기를 사용하여 프로파일링할 수 있습니다. (UWP 앱에서 지원되지 않음). 자세한 내용은 [성능 탐색기](../profiling/performance-explorer.md)를 참조하세요.
+If you need features such as instrumentation that are not currently present in CPU Usage or Memory Usage tools, and you are running desktop or ASP.NET apps, you can use the Performance Explorer for profiling. (Not supported in UWP apps). For more info, see [Performance Explorer](../profiling/performance-explorer.md)
 
-![성능 탐색기 도구](~/profiling/media/prof-tour-performance-explorer.png "성능 탐색기")
+![Performance Explorer tool](../profiling/media/prof-tour-performance-explorer.png "Performance Explorer")
 
-## <a name="which-tool-should-i-use"></a>사용해야 하는 도구  
-다음 테이블에는 Visual Studio가 제안하는 다양한 도구 및 그와 함께 사용할 수 있는 다양한 프로젝트 형식이 나열되어 있습니다.
+## <a name="which-tool-should-i-use"></a>Which Tool Should I Use?  
+Here is a table that lists the different tools Visual Studio offers and the different project types you can use them with:
   
-|성능 도구|Windows 바탕 화면|Windows 유니버설/스토어|ASP.NET/ASP.NET Core|  
+|Performance Tool|Windows desktop|Windows Universal/Store|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
-|[메모리 사용](../profiling/memory-usage.md)|예|예|예|  
-|[CPU 사용량](../profiling/cpu-usage.md)|예|예|예|  
-|[GPU 사용량](../debugger/gpu-usage.md)|예|예|no|  
-|[응용 프로그램 타임라인](../profiling/application-timeline.md)|예|예|no|  
-|[PerfTips](../profiling/perftips.md)|예|XAML은 예, HTML은 no|예|  
-|[성능 탐색기](../profiling/performance-explorer.md)|예|no|예(ASP.NET Core의 경우 아니요)|  
-|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise만 해당|.NET Enterprise만 해당|.NET Enterprise만 해당|
-|[네트워크 사용량](../profiling/network-usage.md)|no|예|no| 
-|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|HTML은 예, XAML은 no|no|  
-|[JavaScript 메모리](../profiling/javascript-memory.md)|no|HTML은 예, XAML은 no|no|  
+|[Memory Usage](../profiling/memory-usage.md)|yes|yes|yes|  
+|[CPU Usage](../profiling/cpu-usage.md)|yes|yes|yes|  
+|[GPU Usage](../debugger/gpu-usage.md)|yes|yes|no|  
+|[Application Timeline](../profiling/application-timeline.md)|yes|yes|no|  
+|[PerfTips](../profiling/perftips.md)|yes|yes for XAML, no for HTML|yes|  
+|[Performance Explorer](../profiling/performance-explorer.md)|yes|no|yes (no for ASP.NET Core)|  
+|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise only|.NET Enterprise only|.NET Enterprise only|
+|[Network Usage](../profiling/network-usage.md)|no|yes|no| 
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|yes for HTML, no for XAML|no|  
+|[JavaScript Memory](../profiling/javascript-memory.md)|no|yes for HTML, no for XAML|no|  
 
-## <a name="see-also"></a>참고 항목  
- [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md)

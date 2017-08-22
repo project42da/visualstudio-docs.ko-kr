@@ -1,58 +1,53 @@
----
-title: "방법: 웹 응용 프로그램 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
+-- title: "How to: Debug Web Applications | Microsoft Docs" ms.custom: "" ms.date: "11/04/2016" ms.reviewer: "" ms.suite: "" ms.technology: 
+  - "vs-ide-debug" ms.tgt_pltfrm: "" ms.topic: "article" dev_langs: 
   - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ASP.NET Web Forms, 디버깅"
-  - "ASP.NET, 웹 응용 프로그램 디버깅"
-  - "ASP.NET 웹 응용 프로그램 디버깅, 개발 중"
-  - "웹 서비스, 디버깅"
-ms.assetid: 6440d12e-6b29-42c5-a958-99aeaaff480f
-caps.latest.revision: 37
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 37
+  - "VB"
+  - "FSharp"
+  - "C++" helpviewer_keywords: 
+  - "Web services, debugging"
+  - "ASP.NET Web Forms, debugging"
+  - "ASP.NET, debugging Web applications"
+  - "debugging ASP.NET Web applications, during development" ms.assetid: 6440d12e-6b29-42c5-a958-99aeaaff480f caps.latest.revision: 37 author: "mikejo5000" ms.author: "mikejo" manager: "ghogen" translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# 방법: 웹 응용 프로그램 디버깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 웹 응용 프로그램을 개발하는 기본 기술입니다.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 디버거에서는 로컬 컴퓨터 또는 원격 서버에서 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램을 디버깅하는 강력한 도구를 제공합니다.  이 항목에서는 개발 중에 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 프로젝트를 디버깅하는 방법에 대해 설명합니다.  이미 프로덕션 서버에 배포된 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램을 디버깅하는 방법에 대한 자세한 내용은 [배포된 웹 응용 프로그램 디버깅](../debugger/debugging-deployed-web-applications.md)을 참조하십시오.  
+# <a name="how-to-debug-web-applications"></a>How to: Debug Web Applications
+[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] is the primary technology for developing Web applications in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger provides powerful tools for debugging [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web applications locally or on a remote server. This topic describes how to debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] project during development. For information about how to debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web application already deployed on a production server, see [Debugging Deployed Web Applications](../debugger/debugging-deployed-web-applications.md).  
   
- [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 응용 프로그램을 디버깅하려면  
+ To debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application:  
   
--   필요한 권한이 있어야 합니다.  자세한 내용은 [시스템 요구 사항](../debugger/aspnet-debugging-system-requirements.md)을 참조하십시오.  
+-   You must have required permissions. For more information, see [System Requirements](../debugger/aspnet-debugging-system-requirements.md).  
   
--   [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 디버깅이 **프로젝트 속성**에서 활성화되어 있어야 합니다.  
+-   [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] debugging must be enabled in **Project Properties**.  
   
--   응용 프로그램의 구성 파일\(Web.config\)이 디버그 모드로 설정되어 있어야 합니다.  디버그 모드를 설정하면 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]에서 동적으로 생성된 파일에 대한 기호를 만들고 디버거가 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 응용 프로그램에 연결할 수 있도록 합니다.  웹 프로젝트 템플릿에서 프로젝트를 만든 경우 디버깅을 시작하면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]가 이를 자동으로 설정합니다.  
+-   The configuration file of your application (Web.config) must be set to debug mode. Debug mode causes [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] to generate symbols for dynamically generated files and enables the debugger to attach to the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sets this automatically when you start to debug, if you created your project from the Web projects template.  
   
--   자세한 내용은 [방법: ASP.NET 응용 프로그램에 디버깅 사용](../debugger/how-to-enable-debugging-for-aspnet-applications.md)을 참조하십시오.  
+-   For more information, see [How to: Enable Debugging for ASP.NET Applications](../debugger/how-to-enable-debugging-for-aspnet-applications.md).  
   
-### 개발하는 동안 웹 응용 프로그램을 디버깅하려면  
+### <a name="to-debug-a-web-application-during-development"></a>To debug a Web application during development  
   
-1.  **디버그** 메뉴에서 **시작**을 클릭하여 웹 응용 프로그램 디버깅을 시작합니다.  
+1.  On the **Debug** menu, click **Start** to begin debugging the Web application.  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 웹 응용 프로그램 프로젝트를 빌드하고 필요한 경우 이 응용 프로그램을 배포한 다음, 사용자가 로컬로 디버깅하는 경우 ASP.NET Development Server를 시작하고 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 작업자 프로세스에 연결합니다.  
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] builds the Web application project, deploys the application if necessary, starts the ASP.NET Development Server if you are debugging locally, and attaches to the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] worker process.  
   
-2.  다른 응용 프로그램을 디버깅할 때처럼 디버거를 사용하여 중단점을 설정하거나 지우고 단계별로 실행하며 기타 디버깅 작업을 수행합니다.  
+2.  Use the Debugger to set and clear breakpoints, step, and perform other debugging operations, as you would for any application.  
   
-     자세한 내용은 [디버거 기본 사항](../debugger/debugger-basics.md)을 참조하십시오.  
+     For more information, see [Debugger Basics](../debugger/debugger-basics.md).  
   
-3.  디버깅 세션을 종료하려면 **디버그** 메뉴에서 **디버깅 중지**를 클릭하거나 Internet Explorer의 **파일** 메뉴에서 **닫기**를 클릭합니다.  
+3.  On the **Debug** menu, click **Stop Debugging** to end the debugging session or on the **File** menu in Internet Explorer, click **Close**.  
   
-## 참고 항목  
- [웹 응용 프로그램 및 스크립트 디버깅](../debugger/debugging-web-applications-and-script.md)   
- [ASP.NET 및 AJAX 응용 프로그램 디버깅](../debugger/debugging-aspnet-and-ajax-applications.md)   
- [방법: ASP.NET 응용 프로그램에 디버깅 사용](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Web Applications and Script](../debugger/debugging-web-applications-and-script.md)   
+ [Debugging ASP.NET and AJAX Applications](../debugger/debugging-aspnet-and-ajax-applications.md)   
+ [How to: Enable Debugging for ASP.NET Applications](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

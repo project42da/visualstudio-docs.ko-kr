@@ -1,264 +1,282 @@
 ---
-title: "Visual Studio에서 스토어 앱에 대한 디버깅 세션 시작(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.installedapppackagelauncher"
-  - "vs.debug.error.wwahost_scriptdebuggingdisabled"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Start a debugging session for Store Apps in Visual Studio (JavaScript) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.installedapppackagelauncher
+- vs.debug.error.wwahost_scriptdebuggingdisabled
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: fb91203f-2cf4-44d3-8ed9-93bc5aaa50b8
 caps.latest.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# Visual Studio에서 스토어 앱에 대한 디버깅 세션 시작(JavaScript)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pt-br
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 5a1e75fb305a98ee46f76c0403774535278b53e2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+---
+# <a name="start-a-debugging-session-for-store-apps-in-visual-studio-javascript"></a>Start a debugging session for Store Apps in Visual Studio (JavaScript)
+![Applies to Windows and Windows Phone](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- 이 항목에서는 JavaScript 및 HTML5로 작성된 Windows 스토어 앱에 대한 디버깅 세션을 시작하는 방법을 설명합니다. 키를 한 번 입력하여 디버깅을 시작할 수도 있고, 특정 시나리오에 대한 디버깅 세션을 구성하여 앱을 시작할 수도 있습니다.  
+ This topic describes how to start a debugging session for Windows Store apps written in JavaScript and HTML5. You can start debugging with a single keystroke, or you can configure the debugging session for specific scenarios and then choose the way to start the app.  
   
 > [!NOTE]
->  XAML 및 Visual C\#, Visual C\+\+ 또는 Visual Basic으로 작성된 앱의 경우 [디버그 세션 시작\(VB, C\#, C\+\+ 및 XAML\)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)을 참조하세요.  
+>  For apps written in XAML and Visual C#, Visual C++, or Visual Basic, see [Start a debug session (VB, C#, C++ and XAML)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)  
   
-##  <a name="BKMK_In_this_topic"></a> 항목 내용  
- [항목 내용](#BKMK_In_this_topic)  
+##  <a name="BKMK_In_this_topic"></a> In this topic  
+ [In this topic](#BKMK_In_this_topic)  
   
- [디버깅을 쉽게 시작하는 방법](#BKMK_The_easy_way_to_start_debugging)  
+ [The easy way to start debugging](#BKMK_The_easy_way_to_start_debugging)  
   
- [디버깅 세션 구성](#BKMK_Configure_the_debugging_session)  
+ [Configure the debugging session](#BKMK_Configure_the_debugging_session)  
   
--   [프로젝트에 대한 디버깅 속성 페이지 열기](#BKMK_Open_the_debugging_property_page_for_the_project)  
+-   [Open the debugging property page for the project](#BKMK_Open_the_debugging_property_page_for_the_project)  
   
--   [빌드 구성 옵션 선택](#BKMK_Choose_the_build_configuration_options)  
+-   [Choose the build configuration options](#BKMK_Choose_the_build_configuration_options)  
   
--   [배포 대상 선택](#BKMK_Choose_the_deployment_target)  
+-   [Choose the deployment target](#BKMK_Choose_the_deployment_target)  
   
--   [사용할 디버거 선택](#BKMK_Choose_the_debugger_to_use)  
+-   [Choose the debugger to use](#BKMK_Choose_the_debugger_to_use)  
   
--   [(선택 사항) 디버그 세션에서 앱 시작 지연](#BKMK__Optional__Delay_starting_app_in_the_debug_session)  
+-   [(Optional) Delay starting the app in the debug session](#BKMK__Optional__Delay_starting_app_in_the_debug_session)  
   
--   [(선택 사항) 네트워크 루프백 비활성화](#BKMK__Optional__Disable_network_loopbacks)  
+-   [(Optional) Disable network loopbacks](#BKMK__Optional__Disable_network_loopbacks)  
   
- [디버깅 세션을 시작합니다.](#BKMK_Start_the_debugging_session)  
+ [Start the debugging session](#BKMK_Start_the_debugging_session)  
   
--   [디버깅 시작(F5)](#BKMK_Start_debugging__F5_)  
+-   [Start debugging (F5)](#BKMK_Start_debugging__F5_)  
   
--   [디버깅을 시작하되F5) 응용 프로그램 시작 지연](#BKMK_Start_debugging__F5__but_delay_the_app_start)  
+-   [Start debugging (F5) but delay the app start](#BKMK_Start_debugging__F5__but_delay_the_app_start)  
   
- [디버거에서 설치된 응용 프로그램 시작](#BKMK_Start_an_installed_app_in_the_debugger)  
+ [Start an installed app in the debugger](#BKMK_Start_an_installed_app_in_the_debugger)  
   
- [실행 중인 응용 프로그램에 디버거 연결](#BKMK_Attach_the_debugger_to_a_running_app_)  
+ [Attach the debugger to a running app](#BKMK_Attach_the_debugger_to_a_running_app_)  
   
--   [응용 프로그램이 디버그 모드에서 실행되도록 설정](#BKMK_Set_the_app_to_run_in_debug_mode)  
+-   [Set the app to run in debug mode](#BKMK_Set_the_app_to_run_in_debug_mode)  
   
--   [디버거 연결](#BKMK_Attach_the_debugger)  
+-   [Attach the debugger](#BKMK_Attach_the_debugger)  
   
-##  <a name="BKMK_The_easy_way_to_start_debugging"></a> 디버깅을 쉽게 시작하는 방법  
- ![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
+##  <a name="BKMK_The_easy_way_to_start_debugging"></a> The easy way to start debugging  
+ ![Applies to Windows only](../debugger/media/windows_only_content.png "windows_only_content")  
   
-1.  Visual Studio에서 앱 솔루션을 엽니다.  
+1.  Open the app solution in Visual Studio.  
   
-2.  솔루션에 Windows 스토어 및 Windows 스토어 Phone 앱의 프로젝트가 모두 포함된 경우 디버깅하려는 프로젝트가 시작 프로젝트인지 확인합니다. 솔루션 탐색기에서 프로젝트를 선택한 다음 컨텍스트 메뉴에서 **시작 프로젝트로 설정**을 선택합니다.  
+2.  If the solution contains projects for both Windows Store and Windows Store Phone apps, make sure that the project you want to debug is the start-up project. In Solution Explore, select the project and then choose **Set as StartUp Project** from the context menu.  
   
-3.  F5 키를 누릅니다.  
+3.  Press F5.  
   
- ![Windows Phone에만 적용](~/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Applies to Windows Phone only](../debugger/media/phone_only_content.png "phone_only_content")  
   
- Visual Studio가 디버거가 연결된 앱을 빌드하고 시작합니다. 중단점에 도달하거나 수동으로 실행을 일시 중단하거나 처리되지 않은 예외가 발생하거나 응용 프로그램이 끝날 때까지 계속해서 실행됩니다. 자세한 내용은 [퀵 스타트: HTML 및 CSS 디버그](../debugger/quickstart-debug-html-and-css.md)을 참조하세요.  
+ Visual Studio builds and starts the app with the debugger attached. Execution continues until a breakpoint is reached, you manually suspend execution, an unhandled exception occurs, or the app ends. For more information, see [Quickstart: Debug HTML and CSS](../debugger/quickstart-debug-html-and-css.md).  
   
-##  <a name="BKMK_Configure_the_debugging_session"></a> 디버깅 세션 구성  
- 스크립트가 컴파일되지 않았으므로 빌드 구성 및 플랫폼 설정이 적용되지 않습니다. C\+\+ 또는 관리되는 구성 요소를 디버깅하는 경우 **구성**을 **디버그**로 설정하고 **구성** 대화 상자에서 대상 플랫폼을 선택합니다.  
+##  <a name="BKMK_Configure_the_debugging_session"></a> Configure the debugging session  
+ Because script is not compiled, the build configuration and platform settings don't apply. If you are debugging a C++ or managed component, set the **Configuration** to **Debug** and choose your target platform from the **Configuration** dialog.  
   
-###  <a name="BKMK_Open_the_debugging_property_page_for_the_project"></a> 프로젝트에 대한 디버깅 속성 페이지 열기  
+###  <a name="BKMK_Open_the_debugging_property_page_for_the_project"></a> Open the debugging property page for the project  
   
-1.  솔루션 탐색기에서 프로젝트를 선택합니다. 바로 가기 메뉴에서 **속성**을 선택합니다.  
+1.  In Solution Explorer, select the project. On the shortcut menu, choose **Properties**.  
   
-2.  **구성 속성** 노드를 확장한 다음 **디버깅**을 선택합니다.  
+2.  Expand the **Configuration Properties**  node and then choose **Debugging**.  
   
-###  <a name="BKMK_Choose_the_build_configuration_options"></a> 빌드 구성 옵션 선택  
+###  <a name="BKMK_Choose_the_build_configuration_options"></a> Choose the build configuration options  
   
-1.  **구성** 목록에서 **디버그** 또는 **\(활성\) 디버그**를 선택합니다.  
+1.  From the **Configuration** list, choose **Debug** or **(Active) Debug**.  
   
-2.  **플랫폼** 목록에서 빌드할 대상 플랫폼을 선택합니다. 대부분의 경우 **모든 CPU**를 선택하는 것이 가장 좋습니다.  
+2.  From the **Platform** list choose the target platform to build for. In most cases, **Any CPU** is the best choice.  
   
-###  <a name="BKMK_Choose_the_deployment_target"></a> 배포 대상 선택  
- Visual Studio 컴퓨터, 로컬 컴퓨터의 Visual Studio 시뮬레이터 또는 원격 컴퓨터에서 앱을 배포하고 디버깅할 수 있습니다. 프로젝트의 **디버깅** 속성 페이지에 있는 **실행할 디버거** 목록에서 대상을 선택합니다.  
+###  <a name="BKMK_Choose_the_deployment_target"></a> Choose the deployment target  
+ You can deploy and debug an app on the Visual Studio machine, in the Visual Studio simulator on the local machine, or on a remote machine. You choose the target from the **Debugger to launch** list on the **Debugging** property page for the project.  
   
- ![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Applies to Windows only](../debugger/media/windows_only_content.png "windows_only_content")  
   
- Windows 스토어 앱의 경우 **대상 장치** 목록에서 다음 옵션 중 하나를 선택합니다.  
+ For a Windows Store app, choose one of these options from the **Target device** list:  
   
 |||  
 |-|-|  
-|**로컬 컴퓨터**|로컬 컴퓨터의 현재 세션에서 앱을 디버깅합니다. [로컬 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-the-local-machine.md)을 참조하세요.|  
-|**시뮬레이터**|[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱에 대한 Visual Studio 시뮬레이터에서 앱을 디버깅합니다. 시뮬레이터는 로컬 컴퓨터에서 사용할 수 없는 터치 제스처 및 장치 회전과 같은 장치 기능을 디버깅할 수 있도록 하는 데스크톱 창입니다. [시뮬레이터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-in-the-simulator.md)을 참조하세요.|  
-|**원격 컴퓨터**|인트라넷을 통해 로컬 컴퓨터에 연결되거나 이더넷 케이블을 사용하여 직접 연결된 장치에서 앱을 디버깅합니다. 원격으로 디버깅하려면 Visual Studio 원격 도구가 원격 장치에 설치되어 실행되고 있어야 합니다. [원격 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md)을 참조하세요.|  
+|**Local Machine**|Debug the app in the current session on your local machine. See [Run Windows Store apps on the local machine](../debugger/run-windows-store-apps-on-the-local-machine.md).|  
+|**Simulator**|Debug the app in the Visual Studio simulator for [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] apps. The simulator is a Desktop window that enables you to debug device functionality—such as touch gestures and device rotation—that are not available on the local machine. See [Run Windows Store apps in the simulator](../debugger/run-windows-store-apps-in-the-simulator.md).|  
+|**Remote Machine**|Debug the app on a device that is connected to the local machine over an intranet or directly connected by using an Ethernet cable. To debug remotely, the Visual Studio Remote Tools must be installed and running on the remote device. See [Run Windows Store apps on a remote machine](../debugger/run-windows-store-apps-on-a-remote-machine.md).|  
   
- **원격 컴퓨터**를 선택하는 경우 다음 방법 중 하나를 사용하여 원격 컴퓨터의 이름 또는 IP 주소를 지정합니다.  
+ If you choose **Remote Machine**, specify the name or IP address of the remote machine in one of these ways:  
   
--   **컴퓨터 이름** 상자에 원격 컴퓨터의 이름 또는 IP 주소를 입력합니다.  
+-   Enter the name or IP address of the remote machine in the **Machine Name** box.  
   
--   **컴퓨터 이름** 상자에서 아래쪽 화살표를 선택하고 **\<찾기...\>**를 선택합니다. 그런 다음 **원격 디버거 연결 선택** 대화 상자에서 원격 컴퓨터를 선택합니다.  
+-   Choose the down arrow in the **Machine Name** box and choose **\<Locate...>**. Then choose the remote machine from **Select Remote Debugger Connection** dialog box.  
   
-     ![원격 디버거 연결 선택](../debugger/media/vsrun_pro_selectremotedebuggerdlg.png "VSRUN\_PRO\_SelectRemoteDebuggerDlg")  
+     ![Select Remote Debugger Connection](../debugger/media/vsrun_pro_selectremotedebuggerdlg.png "VSRUN_PRO_SelectRemoteDebuggerDlg")  
   
     > [!NOTE]
-    >  원격 디버거 연결 선택 대화 상자에는 로컬 서브넷에 있는 컴퓨터와 이더넷 케이블을 통해 Visual Studio 컴퓨터에 직접 연결되어 있는 컴퓨터가 표시됩니다. 다른 컴퓨터를 지정하려면 **컴퓨터 이름** 상자에 이름을 입력합니다.  
+    >  The Select Remote Debugger Connection dialog box displays machines that are on the local sub-net and machines that are directly connected to the Visual Studio machine by an Ethernet cable. To specify another machine, enter the name in the **Machine Name** box.  
   
- ![Windows Phone에만 적용](~/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Applies to Windows Phone only](../debugger/media/phone_only_content.png "phone_only_content")  
   
- Windows 스토어 Phone 앱의 경우 **대상 장치** 목록에서 에뮬레이터 중 하나를 선택하거나 **장치**를 선택합니다.  
+ For a Windows Store Phone app, choose **Device** or one of the emulators from the **Target device** list.  
   
-###  <a name="BKMK_Choose_the_debugger_to_use"></a> 사용할 디버거 선택  
- 기본적으로 앱에서 디버거는 JavaScript 코드에 연결됩니다. JavaScript 코드 대신 기본 C\+\+ 및 앱 구성 요소의 관리되는 코드를 디버깅하도록 선택할 수 있습니다. 앱 프로젝트의 **디버깅** 속성 페이지에 있는 **디버거 형식** 목록에서 디버깅할 코드를 지정합니다.  
+###  <a name="BKMK_Choose_the_debugger_to_use"></a> Choose the debugger to use  
+ By default, the debugger attaches to the JavaScript code in your app. You can choose to debug the native C++ and managed code of components of your app instead of the JavaScript code. You specify the code to debug in the **Debugger Type** list on the **Debugging** property page of the app project.  
   
- **디버거 형식** 목록에서 다음 디버거 중 하나를 선택합니다.  
+ Choose one of these debuggers from the **Debugger Type** list:  
   
 |||  
 |-|-|  
-|**스크립트만**|앱에서 JavaScript 코드를 디버깅합니다. 관리 코드와 네이티브 코드는 무시됩니다.|  
-|**네이티브 전용**|앱에서 네이티브 C\/C\+\+ 코드를 디버깅합니다. 관리 코드와 JavaScript 코드는 무시됩니다.|  
-|**스크립트가 포함된 네이티브 코드**|앱에서 네이티브 C\+\+ 코드 및 JavaScript 코드를 디버깅합니다.|  
-|**관리 전용**|앱에서 관리 코드를 디버깅합니다. JavaScript 코드와 네이티브 C\/C\+\+ 코드는 무시됩니다.|  
-|**혼합\(관리\/네이티브\)**|앱에서 네이티브 C\/C\+\+ 코드 및 관리 코드를 디버깅합니다. JavaScript 코드는 무시됩니다.|  
+|**Script Only**|Debug JavaScript code in your app. Managed code and native code are ignored.|  
+|**Native Only**|Debug native C/C++ code in your app. Managed code and JavaScript code are ignored.|  
+|**Native with Script**|Debug native C++ code and JavaScript code in your app.|  
+|**Managed Only**|Debug managed code in your app. JavaScript code and native C/C++ code are ignored.|  
+|**Mixed (Managed and Native)**|Debug native C/C++ code and managed code in your app. JavaScript code is ignored.|  
   
-###  <a name="BKMK__Optional__Delay_starting_app_in_the_debug_session"></a> \(선택 사항\) 디버그 세션에서 앱 시작 지연  
- 기본적으로 디버깅을 시작하면 바로 앱이 시작됩니다. 디버그 세션을 시작하되 응용 프로그램 시작을 지연할 수도 있습니다. 앱이 시작 메뉴 또는 활성화 계약에서 시작되거나, 다른 프로세스 또는 메서드에서 시작되는 경우 디버거에서 앱이 시작됩니다. 또한 지연된 시작 기능을 사용하여 앱이 실행되지 않은 경우 앱에서 발생시키려는 백그라운드 이벤트를 디버깅할 수 있습니다.  
+###  <a name="BKMK__Optional__Delay_starting_app_in_the_debug_session"></a> (Optional) Delay starting the app in the debug session  
+ By default, Visual Studio immediately starts the app when you start debugging. You can also start a debug session but delay the start of your app. The app is launched in the debugger when it is launched from the Start menu or by an activation contract, or when it is started by another process or method. You can also use delayed start to debug background events in your app that you want to occur when the app is not running.  
   
- 앱 프로젝트의 **디버깅** 속성 페이지에 있는 **응용 프로그램 시작** 목록에서 앱 시작을 지연할지를 지정합니다. 다음 옵션 중 하나를 선택합니다.  
+ You specify whether to delay the launch of your app in the **Launch Application** list on the **Debugging** property page of the app project. Choose one of these options:  
   
--   앱 시작을 지연시키려면 **아니요**를 선택합니다.  
+-   Choose **No** to delay the launch of your app.  
   
--   앱을 즉시 시작하려면 **예**를 선택합니다.  
+-   Choose **Yes** to launch the app immediately.  
   
-###  <a name="BKMK__Optional__Disable_network_loopbacks"></a> \(선택 사항\) 네트워크 루프백 비활성화  
- ![Windows에만 적용](~/debugger/media/windows_only_content.png "windows\_only\_content")  
+###  <a name="BKMK__Optional__Disable_network_loopbacks"></a> (Optional) Disable network loopbacks  
+ ![Applies to Windows only](../debugger/media/windows_only_content.png "windows_only_content")  
   
- 보안상의 이유로 일반적인 방식으로 설치된 Windows 스토어 앱은 앱이 설치된 장치에 대한 네트워크 호출을 수행할 수 없습니다. 기본적으로 Visual Studio를 배포하면 배포된 응용 프로그램에 대한 이 규칙의 예외가 만들어 집니다. 이 예외로 인해 사용자는 단일 컴퓨터에서 통신 프로시저를 테스트할 수 있습니다. 앱을 Windows 스토어에 제출하기 전에 제외 없이 앱을 테스트해야 합니다.  
+ For security reasons, a Windows Store app that is installed in the standard manner is not allowed to make network calls to the device it is installed on. By default, Visual Studio deployment creates an exemption from this rule for the deployed app. This exemption allows you to test communication procedures on a single machine. Before you submit your app to the Windows Store, you should test your app without the exemption.  
   
- 네트워크 루프백 제외를 제거하려면 **디버깅** 속성 페이지의 **네트워크 루프백 허용** 목록에서 **아니요**를 선택합니다.  
+ To remove the network loopback exemption, choose **No** from the **Allow Network Loopback** list on the **Debugging** property page.  
   
-##  <a name="BKMK_Start_the_debugging_session"></a> 디버깅 세션을 시작합니다.  
+##  <a name="BKMK_Start_the_debugging_session"></a> Start the debugging session  
   
-###  <a name="BKMK_Start_debugging__F5_"></a> 디버깅 시작\(F5\)  
- **디버그** 메뉴에서 **디버깅 시작**\(키보드: F5\)을 선택하면 디버거가 연결된 앱이 시작됩니다. 중단점에 도달하거나 수동으로 실행을 일시 중단하거나 처리되지 않은 예외가 발생하거나 앱이 끝날 때까지 계속해서 실행됩니다.  
+###  <a name="BKMK_Start_debugging__F5_"></a> Start debugging (F5)  
+ When you choose **Start Debugging** on the **Debug** menu (Keyboard: F5), Visual Studio launches the app with the debugger attached. Execution continues until a breakpoint is reached, you manually suspend execution, an unhandled exception occurs, or the app ends.  
   
-###  <a name="BKMK_Start_debugging__F5__but_delay_the_app_start"></a> 디버깅을 시작하되F5\) 응용 프로그램 시작 지연  
- 디버그 모드에서 실행되도록 앱을 설정할 수 있지만 디버거가 아닌 방법으로 앱을 시작할 수 있습니다. 예를 들어 시작 메뉴에서 앱 시작을 디버깅하거나 앱을 시작하지 않고 앱에서 백그라운드 프로세스를 디버깅할 수 있습니다. 앱 시작을 지연하려면 다음을 수행합니다.  
+###  <a name="BKMK_Start_debugging__F5__but_delay_the_app_start"></a> Start debugging (F5) but delay the app start  
+ You can set the app to run in debug mode, but let it be started by a method other than the debugger. For example, you might want to debug the launch of your app from the Start menu, or to debug a background process in the app without starting the app.To delay the app start, do this:  
   
-1.  앱 프로젝트 속성의 **디버그** 페이지에 있는 **응용 프로그램 시작** 목록에서 **아니요**를 선택합니다.  
+1.  On the **Debug** page of the app project properties, choose **No** from the **Launch Application** list.  
   
-2.  **디버그** 메뉴에서 **디버깅 시작**\(키보드: F5\)을 선택합니다.  
+2.  Choose **Start Debugging** on the **Debug** menu (Keyboard: F5).  
   
-3.  시작 메뉴, 실행 계약 또는 다른 프로시저를 통해 앱을 시작합니다.  
+3.  Start your app from the Start menu, an execution contract, or by another procedure.  
   
- 디버그 모드에서 앱이 시작됩니다. 중단점에 도달하거나 수동으로 실행을 일시 중단하거나 처리되지 않은 예외가 발생하거나 앱이 끝날 때까지 계속해서 실행됩니다.  
+ The app starts in debug mode. Execution continues until a breakpoint is reached, you manually suspend execution, an unhandled exception occurs, or the app ends.  
   
- 백그라운드 작업 디버깅에 대한 자세한 내용은 [Windows 스토어에 대한 일시 중단, 다시 시작 및 백그라운드 이벤트 트리거](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)을 참조하세요.  
+ . For more information about debugging background tasks, see [Trigger suspend, resume, and background events for Windows Store)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md).  
   
-##  <a name="BKMK_Start_an_installed_app_in_the_debugger"></a> 디버거에서 설치된 응용 프로그램 시작  
- F5 키를 사용하여 디버깅을 시작할 때 Visual Studio에서는 앱을 빌드 및 배포하고 디버그 모드에서 실행되도록 앱을 설정한 다음 앱을 시작합니다. 장치에 이미 설치된 응용 프로그램을 시작하려면 설치된 응용 프로그램 패키지 디버그 대화 상자를 사용합니다. 이 절차는 Windows 스토어에서 설치된 응용 프로그램을 디버깅해야 하는 경우나 응용 프로그램의 소스 파일은 있지만 응용 프로그램에 대한 Visual Studio 프로젝트가 없는 경우에 유용합니다. 예를 들어 Visual Studio 프로젝트 또는 솔루션을 사용하지 않는 사용자 지정 빌드 시스템이 있을 수 있습니다.  
+##  <a name="BKMK_Start_an_installed_app_in_the_debugger"></a> Start an installed app in the debugger  
+ When you start debugging by using F5, Visual Studio builds and deploys the app, sets the app to run in debug mode, and then starts it. To start an app that is already installed on a device, use the Debug Installed App Package dialog box. This procedure is useful when you need to debug an app that was installed from the Windows store, or when you have the source files for the app, but you do not have a Visual Studio project for the app. For example, you might have a custom build system that does not use Visual Studio projects or solutions.  
   
- 앱은 로컬 장치에 설치하거나 원격 장치에 설치할 수 있습니다. 응용 프로그램을 즉시 시작하거나 시작 메뉴나 활성화 계약 등의 다른 프로세스나 방법으로 시작될 때 디버거에서 실행되도록 응용 프로그램을 설정할 수 있습니다. 응용 프로그램을 시작하지 않고 백그라운드 프로세스를 디버깅하려는 경우에도 디버그 모드에서 실행되도록 응용 프로그램을 설정할 수 있습니다. 자세한 내용은 [Windows 스토어에 대한 일시 중단, 다시 시작 및 백그라운드 이벤트 트리거](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)을 참조하세요.  
+ The app can be installed on the local device, or it can be on a remote device.  You can start the app immediately, or you can set it to run in the debugger when it is started by another process or method, such as from the Start menu or by an activation contract, You can also set the app to run in debug mode when you want to debug a background process without starting the app. For more information, see [Trigger suspend, resume, and background events for Windows Store)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md).  
   
- 설치된 앱을 디버그 모드에서 실행되도록 설정하려면 다음을 수행하세요.  
+ To set an installed app to run in debug mode, do this:  
   
 > [!NOTE]
->  이 절차를 시작할 때 앱이 실행되고 있지 않아야 합니다.  
+>  The app must not be running when you start this procedure.  
   
-1.  **디버그** 메뉴에서 **설치된 앱 패키지 디버그**를 선택합니다.  
+1.  On the **Debug** menu, choose **Debug Installed App Package**.  
   
-2.  목록에서 다음 옵션 중 하나를 선택합니다.  
+2.  Choose one of the following options from the list:  
   
     |||  
     |-|-|  
-    |**로컬 컴퓨터**|로컬 컴퓨터의 현재 세션에서 앱을 디버깅합니다. [로컬 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-the-local-machine.md)을 참조하세요.|  
-    |**시뮬레이터**|[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱에 대한 Visual Studio 시뮬레이터에서 앱을 디버깅합니다. 시뮬레이터는 로컬 컴퓨터에서 사용할 수 없는 터치 제스처 및 장치 회전과 같은 장치 기능을 디버깅할 수 있도록 하는 데스크톱 창입니다. [시뮬레이터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-in-the-simulator.md)을 참조하세요.|  
-    |**원격 컴퓨터**|인트라넷을 통해 로컬 컴퓨터에 연결되거나 이더넷 케이블을 사용하여 직접 연결된 장치에서 앱을 디버깅합니다. 원격으로 디버깅하려면 Visual Studio 원격 도구가 원격 장치에 설치되어 실행되고 있어야 합니다. [원격 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md)을 참조하세요.|  
+    |**Local Machine**|Debug the app in the current session on your local machine. See [Run Windows Store apps on the local machine](../debugger/run-windows-store-apps-on-the-local-machine.md).|  
+    |**Simulator**|Debug the app in the Visual Studio simulator for [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] apps. The simulator is a Desktop window that enables you to debug device functionality—such as touch gestures and device rotation—that are not available on the local machine. See [Run Windows Store apps in the simulator](../debugger/run-windows-store-apps-in-the-simulator.md).|  
+    |**Remote Machine**|Debug the app on a device that is connected to the local machine over an intranet or directly connected by using an Ethernet cable. To debug remotely, the Visual Studio Remote Tools must be installed and running on the remote device. See [Run Windows Store apps on a remote machine](../debugger/run-windows-store-apps-on-a-remote-machine.md).|  
   
-3.  **설치된 앱 패키지** 목록에서 앱을 선택합니다.  
+3.  Choose the app from the **Installed App Packages** list.  
   
-4.  **다음 코드 형식 디버깅** 목록에서 사용할 디버그 엔진을 선택합니다.  
+4.  Choose the debug engine to use from the **Debug this code type** list.  
   
-5.  \(선택 사항\). 다른 방법으로 시작될 때 앱을 디버깅하거나 백그라운드 프로세스를 디버깅하려면 **시작하지 않음\(시작 시 코드 디버그\)**을 택합니다.  
+5.  (Optional). Choose **Do not launch, but debug my code when it starts** to debug the app when it is started by some other method, or to debug a background process.  
   
- **시작**을 클릭하면 앱이 시작되거나 디버그 모드로 실행되도록 설정됩니다.  
+ When you click **Start**, the app is launched or is set to run in debug mode.  
   
-##  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a> 실행 중인 응용 프로그램에 디버거 연결  
- [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]앱에 디버거를 연결하려면 디버깅 가능 패키지 관리자를 사용하여 앱이 디버그 모드로 실행되도록 설정합니다. 디버깅 가능 패키지 관리자는 Visual Studio 원격 도구와 함께 설치됩니다.  
+##  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a> Attach the debugger to a running app  
+ To attach the debugger to a [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] app, you must use the Debuggable Package Manager to set the app to run in debug mode. The Debuggable Package Manager is installed with the Visual Studio Remote Tools.  
   
- 앱에 디버거를 연결하는 기능은 Windows 스토어에서 설치된 앱처럼 이미 설치된 앱을 디버깅해야 하는 경우에 유용합니다. 응용 프로그램의 소스 파일은 있지만 응용 프로그램에 대한 Visual Studio 프로젝트가 없는 경우 연결해야 합니다. 예를 들어 Visual Studio 프로젝트 또는 솔루션을 사용하지 않는 사용자 지정 빌드 시스템이 있을 수 있습니다.  
+ Attaching the debugger to an app is useful when you need to debug an already-installed app, such as an app that was installed from the Windows store. Attaching is required when you have the source files for the app, but you do not have a Visual Studio project for the app. For example, you might have a custom build system that does not use Visual Studio projects or solutions.  
   
- 앱에 연결하려면  
+ To attach to an app:  
   
-1.  앱이 디버그 모드로 실행되도록 설정합니다. 이 작업은 앱이 실행되고 있지 않을 때 수행해야 합니다.  
+1.  Set the app to run in debug mode. This must be done when the app is not running.  
   
-2.  앱을 시작합니다. 시작 메뉴, 실행 계약 또는 일부 다른 메서드를 통해 앱을 시작할 수 있습니다.  
+2.  Start the app. You can start the app from the Start menu, an execution contract, or some other method.  
   
-3.  실행 중인 앱에 디버거를 연결합니다.  
+3.  Attach the debugger to the running app.  
   
-###  <a name="BKMK_Set_the_app_to_run_in_debug_mode"></a> 응용 프로그램이 디버그 모드에서 실행되도록 설정  
+###  <a name="BKMK_Set_the_app_to_run_in_debug_mode"></a> Set the app to run in debug mode  
   
-1.  앱이 설치된 장치에 Visual Studio 원격 도구를 설치합니다. [원격 도구 설치](http://msdn.microsoft.com/library/windows/apps/hh441469.aspx#BKMK_Installing_the_Remote_Tools)를 참조하세요.  
+1.  Install the Visual Studio Remote Tools on the device where the app is installed. See [Installing the remote tools](http://msdn.microsoft.com/library/windows/apps/hh441469.aspx#BKMK_Installing_the_Remote_Tools).  
   
-2.  시작 메뉴에서 `Debuggable Package Manager`를 검색한 다음 시작합니다.  
+2.  On the Start menu, search for `Debuggable Package Manager` and then start it.  
   
-     AppxDebug cmdlet에 맞게 올바르게 구성된 PowerShell 창이 나타납니다.  
+     A PowerShell window properly configured for the AppxDebug cmdlet appears.  
   
-3.  앱의 디버깅을 사용하도록 설정하려면 앱의 PackageFullName 식별자를 지정해야 합니다. PackageFullName이 포함되어 있는 모든 앱의 목록을 보려면 PowerShell 프롬프트에서 `Get-AppxPackage`를 입력합니다.  
+3.  To enable debugging of an app, you must specify the PackageFullName identifier of the app. To view a list all apps that includes the PackageFullName, type `Get-AppxPackage` at the PowerShell prompt.  
   
-4.  PowerShell 프롬프트에서 `Enable-AppxDebug` *PackageFullName*을 입력합니다. 여기서 *PackageFullName*은 앱의 PackageFullName 식별자입니다.  
+4.  At the PowerShell prompt, enter `Enable-AppxDebug` *PackageFullName* where *PackageFullName* is the PackageFullName identifier of the app.  
   
-###  <a name="BKMK_Attach_the_debugger"></a> 디버거 연결  
+###  <a name="BKMK_Attach_the_debugger"></a> Attach the debugger  
   
 > [!TIP]
->  JavaScript 앱은 wwahost.exe 프로세스의 인스턴스에서 실행됩니다. 앱에 연결할 때 다른 JavaScript 앱이 실행 중인 경우 해당 앱이 실행 중인 wwahost.exe의 숫자 PID\(프로세스 ID\)를 알아야 합니다.  
+>  JavaScript apps run in an instance of the wwahost.exe process. If other JavaScript apps are running when you attach to the app, you will need to know the numeric process id (PID) of the wwahost.exe that the app is running in.  
 >   
->  이러한 상황을 처리하는 가장 쉬운 방법은 다른 JavaScript 앱을 모두 닫는 것입니다. 그러지 않으면 앱을 시작하기 전에 Windows 작업 관리자를 열고 wwahost.exe 프로세스의 ID를 메모해 두면 됩니다. **사용 가능한 프로세스** 대화 상자에서 연결할 프로세스를 지정할 때 앱의 wwahost.exe ID는 기록한 ID와 다릅니다.  
+>  The easiest way to deal with this situation is to close all of the other JavaScript apps. Otherwise, you can open Windows Task Manager before you start the app and note the ids of the wwahost.exe processes. When you specify the process to attach to in the **Available Processes**  dialog box, the wwahost.exe of the app will have an id that is different than the ones that you have noted.  
   
- 디버거를 연결하려면  
+ To attach the debugger:  
   
-1.  **디버그** 메뉴에서 **프로세스에 연결**을 선택합니다.  
+1.  On the **Debug** menu, choose **Attach to Process**.  
   
-     **프로세스에 연결** 대화 상자가 나타납니다.  
+     The **Attach to Process** dialog box appears.  
   
-2.  원격 장치의 앱에 연결하려면 **한정자** 상자에 원격 장치를 지정합니다. 다음과 같은 작업을 수행할 수 있습니다.  
+2.  To attach to an app on a remote device, specify the remote device in the **Qualifier** box. You can:  
   
-    -   **한정자** 상자에 이름을 입력합니다.  
+    -   Enter the name in the **Qualifier** box.  
   
-    -   **한정자** 상자에서 아래쪽 화살표를 선택한 다음 앞에서 연결한 장치의 목록에서 장치를 선택합니다.  
+    -   Choose the down-arrow in the **Qualifier** box and choose the device from a list of devices that you have attached to before.  
   
-    -   **찾기**를 선택하여 로컬 서브넷의 장치 목록에서 장치를 선택합니다.  
+    -   Choose **Find** to choose the device from a list of devices on your local subnet.  
   
-3.  **연결 대상** 상자에서 디버깅할 코드의 형식을 지정합니다.  
+3.  Specify the type of code that you want to debug in the **Attach to** box.  
   
-     **선택**을 선택하고 다음 중 하나를 수행합니다.  
+     Choose **Select** and then do one of the following:  
   
-    -   **디버깅할 코드 형식을 자동으로 결정**을 선택합니다.  
+    -   Choose **Automatically determine the type of code to debug**.  
   
-    -   **다음 코드 형식 디버깅**을 선택한 다음 목록에서 하나 이상의 형식을 선택합니다.  
+    -   Choose **Debug these code types** and then choose one or more types from the list.  
   
-4.  **사용 가능한 프로세스** 목록에서 해당 **wwahost.exe** 프로세스를 선택합니다. **제목** 열을 사용하여 앱을 식별합니다.  
+4.  In the **Available Processes**  list, choose the appropriate **wwahost.exe** process. Use the **Title** column to identify your app.  
   
-5.  **연결**을 선택합니다.  
+5.  Choose **Attach**.  
   
- 프로세스에 디버거가 연결됩니다. 중단점에 도달하거나 수동으로 실행을 일시 중단하거나 처리되지 않은 예외가 발생하거나 앱이 끝날 때까지 계속해서 실행됩니다.  
+ Visual Studio attaches the debugger to the process. Execution continues until a breakpoint is reached, you manually suspend execution, an unhandled exception occurs, or the app ends.  
   
-## 참고 항목  
- [디버그 세션에서 실행 제어\(JavaScript\)](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md)   
- [퀵 스타트: HTML 및 CSS 디버그](../debugger/quickstart-debug-html-and-css.md)   
- [Windows 스토어에 대한 일시 중단, 다시 시작 및 백그라운드 이벤트 트리거](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)   
- [Visual Studio에서 앱 디버깅](../debugger/debug-store-apps-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Control execution in a debug session (JavaScript)](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md)   
+ [Quickstart: Debug HTML and CSS](../debugger/quickstart-debug-html-and-css.md)   
+ [Trigger suspend, resume, and background events for Windows Store)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)   
+ [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)

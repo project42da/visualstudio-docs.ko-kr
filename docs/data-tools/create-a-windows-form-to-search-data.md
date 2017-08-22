@@ -1,123 +1,140 @@
 ---
-title: "연습: 데이터 검색을 위한 Windows Form 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "데이터[Visual Studio], 쿼리에 매개 변수 사용"
-  - "데이터[Visual Studio], 검색"
-  - "매개 변수, 필터링된 데이터 표시"
-  - "Windows Forms, 데이터 표시"
-  - "Windows Forms, 데이터 검색"
+title: Create a Windows Form to search data | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- Windows Forms, searching data
+- Windows Forms, displaying data
+- parameters, displaying filtered data
+- data [Visual Studio], paramaterizing queries
+- data [Visual Studio], searching
 ms.assetid: 65ca79a9-7458-466c-af55-978cd24c549e
 caps.latest.revision: 28
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: f89cd3db830dfc3e2a2825044bac1eb4fece75da
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
+
 ---
-# 연습: 데이터 검색을 위한 Windows Form 만들기
-일반적인 응용 프로그램 시나리오에서는 선택한 데이터를 폼에 표시합니다.  특정 고객의 주문이나 특정 주문의 정보를 표시하려는 경우를 예로 들 수 있습니다.  이 시나리오에서는 사용자가 폼에 정보를 입력하면 해당 사용자의 입력을 매개 변수로 사용하여 쿼리가 실행됩니다. 즉 매개 변수가 있는 쿼리를 기준으로 데이터가 선택됩니다.  쿼리는 사용자가 입력한 기준을 만족하는 데이터만 반환합니다.  이 연습에서는 특정 구\/군\/시의 고객을 반환하는 쿼리를 만들고 사용자 인터페이스를 수정하여, 사용자가 구\/군\/시 이름을 입력한 후 단추를 눌러 쿼리를 실행할 수 있도록 하는 방법을 보여줍니다.  
+# <a name="create-a-windows-form-to-search-data"></a>Create a Windows Form to search data
+A common application scenario is to display selected data on a form. For example, you might want to display the orders for a specific customer or the details of a specific order. In this scenario, a user enters information into a form, and then a query is executed with the user's input as a parameter; that is, the data is selected based on a parameterized query. The query returns only the data that satisfies the criteria entered by the user. This walkthrough shows how to create a query that returns customers in a specific city, and modify the user interface so that users can enter a city's name and press a button to execute the query.  
   
- 매개 변수가 있는 쿼리를 사용하면 데이터베이스가 레코드를 빠르게 필터링하도록 함으로써 응용 프로그램의 효율성을 높일 수 있습니다.  반면 전체 데이터베이스 테이블을 요청하여 네트워크를 통해 전송한 다음 응용 프로그램 논리를 사용하여 원하는 레코드를 찾는 경우 응용 프로그램의 속도와 효율성이 떨어질 수 있습니다.  
+ Using parameterized queries helps make your application efficient by letting the database do the work it is best at — quickly filtering records. In contrast, if you request an entire database table, transfer it over the network, and then use application logic to find the records you want, your application can become slow and inefficient.  
   
- [검색 조건 작성기 대화 상자](../Topic/Search%20Criteria%20Builder%20Dialog%20Box.md)를 사용하면 모든 TableAdapter와 컨트롤에 매개 변수가 있는 쿼리를 추가하여 매개 변수 값을 수락하고 쿼리를 실행하도록 할 수 있습니다.  **데이터** 메뉴 또는 TableAdapter 스마트 태그에서 **쿼리 추가** 명령을 선택하여 대화 상자를 엽니다.  
+ You can add parameterized queries to any TableAdapter (and controls to accept parameter values and execute the query), using the **Search Criteria Builder** dialog box. Open the dialog box by selecting the **Add Query** command on the **Data** menu (or on any TableAdapter smart tag).  
   
- 이 연습에서 설명하는 작업은 다음과 같습니다.  
+ Tasks illustrated in this walkthrough include:  
   
--   새 **Windows 응용 프로그램** 프로젝트를 만듭니다.  
+-   Creating a new Windows Forms Application project.  
   
--   [데이터 소스 구성 마법사](../data-tools/media/data-source-configuration-wizard.png)를 사용하여 응용 프로그램의 데이터 소스를 만들고 구성합니다.  
+-   Creating and configuring the data source in your application with the **Data Source Configuration** wizard.  
   
--   [데이터 소스 창](../Topic/Data%20Sources%20Window.md)에서 항목의 삭제 형식을 설정합니다.  자세한 내용은 [데이터 소스 창에서 끌어올 때 만들 컨트롤 설정](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)을 참조하십시오.  
+-   Setting the drop type of the items in the **Data Sources**window.  
   
--   **데이터 소스** 창에서 폼으로 항목을 끌어 데이터를 표시하는 컨트롤을 만듭니다.  
+-   Creating controls that display data by dragging items from the **Data Sources** window onto a form.  
   
--   폼에 데이터를 표시하기 위한 컨트롤을 추가합니다.  
+-   Adding controls to display the data on the form.  
   
--   [검색 조건 작성기 대화 상자](../Topic/Search%20Criteria%20Builder%20Dialog%20Box.md)에서 필요한 작업을 완료합니다.  
+-   Completing the **Search Criteria Builder** dialog box.  
   
--   폼에 매개 변수를 입력하고 매개 변수가 있는 쿼리를 실행합니다.  
+-   Entering parameters into the form and executing the parameterized query.  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 사항이 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ In order to complete this walkthrough, you need:  
   
--   Northwind 샘플 데이터베이스에 대한 액세스.  자세한 내용은 [방법: 샘플 데이터베이스 설치](../data-tools/how-to-install-sample-databases.md)을 참조하십시오.  
+-   Access to the Northwind sample database.  
   
-## Windows 응용 프로그램 만들기  
- 첫 번째 단계에서는 **Windows 응용 프로그램**을 만듭니다.  이 단계에서는 프로젝트에 반드시 이름을 할당하지 않아도 됩니다. 그러나 이 연습에서는 프로젝트를 나중에 저장할 예정이므로 이름을 지정합니다.  
+## <a name="create-the-windows-application"></a>Create the Windows Application  
+ The first step is to create a **Windows Application**. Assigning a name to the project is optional at this step, but you'll give it a name here because you'll save it later.  
   
-#### 새 Windows 응용 프로그램 프로젝트를 만들려면  
+#### <a name="to-create-the-new-windows-application-project"></a>To create the new Windows Application project  
   
-1.  **파일** 메뉴에서 새 프로젝트를 만듭니다.  
+1.  From the **File** menu, create a new project.  
   
-2.  프로젝트 이름을 `WindowsSearchForm`로 지정합니다.  
+2.  Name the project `WindowsSearchForm`.  
   
-3.  **Windows 응용 프로그램**을 선택하고 **확인**을 클릭합니다.  자세한 내용은 [클라이언트 응용 프로그램](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)을 참조하십시오.  
+3.  Select **Windows Application** and click **OK**.  
   
-     **WindowsSearchForm** 프로젝트가 만들어져 **솔루션 탐색기**에 추가됩니다.  
+     The **WindowsSearchForm** project is created and added to **Solution Explorer**.  
   
-## 데이터 소스 만들기  
- 이 단계에서는 **데이터 소스 구성 마법사**를 사용하여 데이터베이스에서 데이터 소스를 만듭니다.  연결을 만들려면 Northwind 샘플 데이터베이스에 액세스해야 합니다.  Northwind 샘플 데이터베이스를 설정하는 방법에 대한 자세한 내용은 [방법: 샘플 데이터베이스 설치](../data-tools/how-to-install-sample-databases.md)를 참조하세요.  
+## <a name="create-the-data-source"></a>Create the data source  
+ This step creates a data source from a database using the **Data Source Configuration** wizard. You must have access to the Northwind sample database to create the connection. For information on setting up the Northwind sample database, see [Install SQL Server sample databases](../data-tools/install-sql-server-sample-databases.md).  
   
-#### 데이터 소스를 만들려면  
+#### <a name="to-create-the-data-source"></a>To create the data source  
   
-1.  **데이터** 메뉴에서 **데이터 소스 표시**를 클릭합니다.  
+1.  On the **Data** menu, click **Show Data Sources**.  
   
-2.  **데이터 소스** 창에서 **새 데이터 소스 추가**를 선택하여 **데이터 소스 구성 마법사**를 시작합니다.  
+2.  In the **Data Sources** window, select **Add New Data Source** to start the **Data Source Configuration** wizard.  
   
-3.  **데이터 소스 형식 선택** 페이지에서 **데이터베이스**를 선택하고 **다음**을 클릭합니다.  
+3.  Select **Database** on the **Choose a Data Source Type** page, and then click **Next**.  
   
-4.  **데이터 연결 선택** 페이지에서 다음 중 한 가지를 수행합니다.  
+4.  On the **Choose your Data Connection** page do one of the following:  
   
-    -   Northwind 샘플 데이터베이스에 대한 데이터 연결이 드롭다운 목록에 표시되면 해당 연결을 선택합니다.  
+    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
   
-         또는  
+    -   Select **New Connection** to launch the **Add/Modify Connection** dialog box.  
   
-    -   **새 연결**을 선택하여 **연결 추가\/수정** 대화 상자를 시작합니다.  
+5.  If your database requires a password, select the option to include sensitive data, and then click **Next**.  
   
-5.  데이터베이스에 암호가 필요하면 중요한 데이터를 포함하는 옵션을 선택하고 **다음**을 클릭합니다.  
+6.  On the **Save connection string to the Application Configuration file** page, click **Next**.  
   
-6.  **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 **다음**을 클릭합니다.  
+7.  On the **Choose your Database Objects** page, expand the **Tables** node.  
   
-7.  **데이터베이스 개체 선택** 페이지에서 **테이블** 노드를 확장합니다.  
+8.  Select the **Customers** table, and then click **Finish**.  
   
-8.  **Customers** 테이블을 선택하고 **마침**을 클릭합니다.  
+     The **NorthwindDataSet** is added to your project, and the **Customers** table appears in the **Data Sources** window.  
   
-     **NorthwindDataSet**가 프로젝트에 추가되고 **Customers** 테이블이 **데이터 소스** 창에 나타납니다.  
+## <a name="create-the-form"></a>Create the form  
+ You can create the data-bound controls by dragging items from the **Data Sources** window onto your form.  
   
-## 폼 만들기  
- **데이터 소스** 창에서 폼으로 항목을 끌어 데이터 바인딩된 컨트롤을 만들 수 있습니다.  
+#### <a name="to-create-data-bound-controls-on-the-form"></a>To create data-bound controls on the form  
   
-#### 폼에서 데이터 바인딩된 컨트롤을 만들려면  
+1.  Expand the **Customers** node in the **Data Sources** window.  
   
-1.  **데이터 소스** 창에서 **Customers** 노드를 확장합니다.  
+2.  Drag the **Customers** node from the **Data Sources** window to your form.  
   
-2.  **Customers** 노드를 **데이터 소스** 창에서 폼으로 끌어 옵니다.  
+     A <xref:System.Windows.Forms.DataGridView> and a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records appear on the form. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
   
-     <xref:System.Windows.Forms.DataGridView>와 레코드 탐색에 사용되는 도구 스트립\(<xref:System.Windows.Forms.BindingNavigator>\)이 폼에 나타납니다.  [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), [CustomersTableAdapter](../data-tools/tableadapter-overview.md), <xref:System.Windows.Forms.BindingSource> 및 <xref:System.Windows.Forms.BindingNavigator>가 구성 요소 트레이에 나타납니다.  
+## <a name="add-parameterization-search-functionality-to-the-query"></a>Add parameterization (search functionality) to the query  
+ You can add a WHERE clause to the original query using the **Search Criteria Builder** dialog box.  
   
-## 쿼리에 매개 변수화\(검색 기능\) 추가  
- [검색 조건 작성기 대화 상자](../Topic/Search%20Criteria%20Builder%20Dialog%20Box.md)를 사용하여 원래 쿼리에 WHERE 절을 추가할 수 있습니다.  
+#### <a name="to-create-a-parameterized-query-and-controls-to-enter-the-parameters"></a>To create a parameterized query and controls to enter the parameters  
   
-#### 매개 변수가 있는 쿼리와 컨트롤을 만들어 매개 변수를 입력하려면  
+1.  Select the <xref:System.Windows.Forms.DataGridView> control, and then choose **Add Query** on the **Data** menu.  
   
-1.  <xref:System.Windows.Forms.DataGridView> 컨트롤을 선택하고 **데이터** 메뉴에서 **쿼리 추가**를 선택합니다.  
+2.  Type `FillByCity` in the **New query name** area on the **Search Criteria Builder** dialog box.  
   
-2.  [검색 조건 작성기 대화 상자](../Topic/Search%20Criteria%20Builder%20Dialog%20Box.md)의 **새 쿼리 이름** 영역에 `FillByCity`를 입력합니다.  
+3.  Add `WHERE City = @City` to the query in the **Query Text** area.  
   
-3.  쿼리의 **쿼리 텍스트** 영역에 `WHERE City = @City`를 추가합니다.  
-  
-     이 쿼리는 다음과 같아야 합니다.  
+     The query should be similar to the following:  
   
      `SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax`  
   
@@ -126,34 +143,29 @@ manager: "ghogen"
      `WHERE City = @City`  
   
     > [!NOTE]
-    >  Access 및 OleDb 데이터 소스는 물음표 '?'를 사용하여 매개 변수를 표기하므로 WHERE 절은 `WHERE City = ?`와 같습니다.  
+    >  Access and OLE DB data sources use the question mark ('?') to denote parameters, so the WHERE clause would look like this: `WHERE City = ?`.  
   
-4.  **확인**을 클릭하여 **검색 조건 작성기** 대화 상자를 닫습니다.  
+4.  Click **OK** to close the **Search Criteria Builder** dialog box.  
   
-     **FillByCityToolStrip**이 폼에 추가됩니다.  
+     A **FillByCityToolStrip** is added to the form.  
   
-## 응용 프로그램 테스트  
- 응용 프로그램을 실행하면 매개 변수를 입력으로 사용할 수 있는 폼이 열립니다.  
+## <a name="testing-the-application"></a>Testing the application  
+ Running the application opens your form ready to take the parameter as input.  
   
-#### 응용 프로그램을 테스트하려면  
+#### <a name="to-test-the-application"></a>To test the application  
   
-1.  F5 키를 눌러 응용 프로그램을 실행합니다.  
+1.  Press F5 to run the application.  
   
-2.  **City** 텍스트 상자에 London을 입력하고 **FillByCity**를 클릭합니다.  
+2.  Type **London** into the **City** text box, and then click **FillByCity**.  
   
-     데이터 표가 매개 변수화 기준을 충족하는 고객으로 채워집니다.  이 예에서 데이터 표에는 **City** 열의 값이 **London**인 고객만 표시됩니다.  
+     The data grid is populated with customers that meet the criteria. In this example, the data grid only displays customers that have a value of **London** in their **City** column.  
   
-## 다음 단계  
- 응용 프로그램 요구 사항에 따라 매개 변수가 있는 폼을 만든 후 몇 단계를 더 수행해야 할 수도 있습니다.  이 연습에서 보완할 수 있는 사항은 다음과 같습니다.  
+## <a name="next-steps"></a>Next Steps  
+ Depending on your application requirements, there are several steps you may want to perform after creating a parameterized form. Some enhancements you could make to this walkthrough include:  
   
--   관련 데이터를 표시하는 컨트롤을 추가합니다.  자세한 내용은 [방법: Windows Forms 응용 프로그램에서 관련 데이터 표시](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md)을 참조하십시오.  
+-   Adding controls that display related data. For more information, see [Relationships in Datasets](relationships-in-datasets.md).  
   
--   데이터 집합을 편집하여 데이터베이스 개체를 추가하거나 편집합니다.  자세한 내용은 [방법: 데이터 집합 편집](../Topic/How%20to:%20Edit%20a%20Dataset.md)을 참조하십시오.  
+-   Editing the dataset to add or remove database objects. For more information, see [Create and configure datasets](../data-tools/create-and-configure-datasets-in-visual-studio.md).  
   
-## 참고 항목  
- [데이터 연습](../Topic/Data%20Walkthroughs.md)   
- [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [데이터 소스 개요](../data-tools/add-new-data-sources.md)   
- [TableAdapter 개요](../data-tools/tableadapter-overview.md)   
- [BindingSource 구성 요소 개요](../Topic/BindingSource%20Component%20Overview.md)   
- [BindingNavigator 컨트롤 개요](../Topic/BindingNavigator%20Control%20Overview%20\(Windows%20Forms\).md)
+## <a name="see-also"></a>See Also  
+ [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

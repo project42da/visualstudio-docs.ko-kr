@@ -1,145 +1,161 @@
 ---
-title: "방법: 호출 스택 창 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.callstack"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "SQL"
-  - "aspx"
-helpviewer_keywords: 
-  - "스레딩[Visual Studio], 호출 표시"
-  - "함수[디버거], 호출 스택의 코드 보기"
-  - "디스어셈블리 코드"
-  - "중단점, 호출 스택 창"
-  - "디버깅[Visual Studio], 다른 스택 프레임으로 전환"
-  - "디버깅[Visual Studio], 호출 스택 창"
-  - "호출 스택 창, 호출 스택에 있는 함수의 소스 코드 보기"
-  - "스택, 스택 프레임 전환"
-  - "호출 스택 창, 호출 스택에 있는 함수의 디스어셈블리 코드 보기"
+title: View the call stack in the Visual Studio debugger | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/06/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.callstack
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+- SQL
+- aspx
+helpviewer_keywords:
+- threading [Visual Studio], displaying calls to or from
+- functions [debugger], viewing code on call stack
+- disassembly code
+- breakpoints, Call Stack window
+- debugging [Visual Studio], switching to another stack frame
+- debugging [Visual Studio], Call Stack window
+- Call Stack window, viewing source code for functions on the call stack
+- stack, switching stack frames
+- Call Stack window, viewing disassembly code for functions on the call stack
 ms.assetid: 5154a2a1-4729-4dbb-b675-db611a72a731
 caps.latest.revision: 40
-caps.handback.revision: 38
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 방법: 호출 스택 창 사용
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 83977d96d8e8503565f811608089279cfbef5d05
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-**호출 스택** 창에서 현재 스택에 있는 함수 또는 프로시저 호출을 볼 수 있습니다.  
+---
+# <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-visual-studio-debugger"></a>View the call stack and use the Call Stack Window in the Visual Studio debugger
+
+By using the **Call Stack** window, you can view the function or procedure calls that are currently on the stack. The **Call Stack** window shows the order in which methods and functions are getting called. The call stack is a good way to examine and understand the execution flow of an app.
   
- **호출 스택** 창에는 각 함수의 이름과 함수 작성에 사용된 프로그래밍 언어가 표시됩니다.  함수 또는 프로시저 이름 다음에는 모듈 이름, 줄 번호 및 매개 변수의 이름, 형식, 값 등의 선택적 정보가 표시될 수 있습니다.  이러한 선택적 정보의 표시 여부를 선택할 수 있습니다.  
+When [debugging symbols](#bkmk_symbols) are not available for part of a call stack, the **Call Stack** window might not be able to display correct information for that part of the call stack. If that occurs, the following notation appears:  
   
- 노란색 화살표는 현재 실행 포인터가 있는 스택 프레임을 나타냅니다.  기본적으로 이는 소스, **디스어셈블리**, **지역**, **조사식** 및 **자동** 창에 해당 정보가 표시되는 프레임입니다.  컨텍스트를 스택의 다른 프레임으로 변경하려면 **호출 스택** 창을 사용합니다.  
-  
- 호출 스택의 일부에 대해 디버깅 기호를 사용할 수 없는 경우 **호출 스택** 창에는 호출 스택의 해당 부분에 대한 올바른 정보가 표시되지 않을 수 있습니다.  다음과 같이 출력됩니다.  
-  
- \[아래 프레임은 올바르지 않거나 누락되었거나 name.dll에 대해 로드된 기호가 없음\]  
-  
- 관리 코드에서는 기본적으로 **호출 스택** 창에서 사용자가 작성하지 않은 코드에 대한 정보가 숨겨집니다.  숨겨진 정보 대신 다음과 같이 출력됩니다.  
-  
- **\[\<External Code\>\]**  
-  
- 사용자가 작성하지 않은 코드는 "내 코드"가 아닌 모든 코드를 의미합니다. 바로 가기 메뉴를 사용하여 사용자가 작성하지 않은 코드에 대한 호출 스택 정보를 표시하도록 선택할 수 있습니다.  
-  
- 바로 가기 메뉴를 사용하면 스레드 간의 호출 표시 여부를 선택할 수 있습니다.  
-  
+`[Frames below may be incorrect and/or missing, no symbols loaded for name.dll]`
+
+>  [!NOTE]
+> The **Call Stack** window is similar to the Debug perspective in some IDEs like Eclipse. 
+
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 실제 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  The dialog boxes and menu commands you see might differ from those described here, depending on your active settings or edition. To change your settings, select **Import and Export Settings** on the **Tools** menu.  See [Personalizing the IDE](../ide/personalizing-the-visual-studio-ide.md)
   
-### 중단 모드 또는 실행 모드에서 호출 스택 창을 표시하려면  
+## <a name="view-the-call-stack-while-in-the-debugger"></a>View the call stack while in the debugger 
   
--   **디버그** 메뉴에서 **창**을 선택한 다음 **호출 스택**을 클릭합니다.  
+-   While debugging, in the **Debug** menu, select **Windows > Call Stack**.
+
+ ![Call Stack Window](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
+
+A yellow arrow identifies the stack frame where the execution pointer is currently located. By default, this is the stack frame whose information appears in the source, **Locals**, **Autos**, **Watch**, and **Disassembly** windows. If you want to change the debugger context to another frame on the stack, you can do that by [switching to another stack frame](#bkmk_switch).   
   
-### 표시된 선택적 정보를 변경하려면  
+## <a name="display-non-user-code-in-the-call-stack-window"></a>Display non-user code in the Call Stack window  
   
--   **호출 스택** 창을 마우스 오른쪽 단추로 클릭하고 **\<***the information that you want***\> 표시**를 설정하거나 해제합니다.  
+-   Right-click the **Call Stack** window and select **Show External Code**.
+
+Non-user code is any code that is not shown when [Just My Code](../debugger/just-my-code.md) is enabled. In managed code, non-user code frames are hidden by default. The following notation appears instead of the non-user code frames:  
   
-### 사용자가 작성하지 않은 코드 프레임을 호출 스택 창에 표시하려면  
+**[\<External Code>]**  
   
--   **호출 스택** 창에서 마우스 오른쪽 단추를 클릭하고 **외부 코드 표시**를 선택합니다.  
+## <a name="bkmk_switch"></a> Switch to another stack frame (change the debugger context)
   
-### 다른 스택 프레임으로 전환하려면  
+1.  In the **Call Stack** window, right-click the stack frame whose code and data that you want to view.
+
+    Or, you can double-click a frame in the **Call Stack** window to switch to the selected frame. 
   
-1.  **호출 스택** 창에서, 보려는 코드와 데이터가 포함된 프레임을 마우스 오른쪽 단추로 클릭합니다.  
+2.  Select **Switch to Frame**.  
   
-2.  **프레임으로 전환**을 선택합니다.  
+     A green arrow with a curly tail appears next to the stack frame you selected. The execution pointer remains in the original frame, which is still marked with the yellow arrow. If you select **Step** or **Continue** from the **Debug** menu, execution will continue in the original frame, not the frame you selected.  
   
-     선택한 프레임 옆에 끝이 굽은 녹색 화살표가 나타납니다.  실행 포인터는 여전히 노란색 화살표로 표시되어 있는 원래 프레임에 그대로 있습니다.  **디버그** 메뉴에서 **한 단계씩 코드 실행** 또는 **계속**을 선택하면 선택한 프레임이 아닌 원래 프레임에서 실행이 계속됩니다.  
+## <a name="view-the-source-code-for-a-function-on-the-call-stack"></a>View the source code for a function on the call stack  
   
-### 다른 스레드에서의 호출 또는 다른 스레드로의 호출을 표시하려면  
+-   In the **Call Stack** window, right-click the function whose source code you want to see and select **Go To Source Code**.
+
+## <a name="run-to-a-specific-function-from-the-call-stack-window"></a>Run to a specific function from the Call Stack window  
   
--   **호출 스택** 창을 마우스 오른쪽 단추로 클릭하고 **다른 스레드로 호출\/다른 스레드에서 호출 포함**을 선택합니다.  
+-  In the **Call Stack** window, select the function, right-click and  choose **Run to Cursor**.  
   
-### 호출 스택에 있는 함수의 소스 코드를 보려면  
+## <a name="set-a-breakpoint-on-the-exit-point-of-a-function-call"></a>Set a breakpoint on the exit point of a function call  
   
--   **호출 스택** 창에서 소스 코드를 보려는 함수를 마우스 오른쪽 단추로 클릭하고 **소스 코드로 이동**을 선택합니다.  
+-   See [Set a breakpoint at a call stack function](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_in_the_call_stack_window).
+
+## <a name="display-calls-to-or-from-another-thread"></a>Display calls to or from another thread  
   
-### 호출 스택을 시각적으로 추적하려면  
+-   Right-click the **Call Stack** window and select **Include Calls To/From Other Threads**.   
   
-1.  **호출 스택** 창에서 바로 가기 메뉴를 엽니다.  **코드 맵에 호출 스택 표시**를 선택합니다. \(키보드: **Ctrl**\+**Shift**\+**\`**\)  
+## <a name="visually-trace-the-call-stack"></a>Visually trace the call stack  
+
+If you are using Visual Studio Enterprise (only), you can view code maps for the call stack while debugging.
+
+- In the **Call Stack** window, open the shortcut menu. Choose **Show Call Stack on Code Map**. (Keyboard: **CTRL** + **SHIFT** + **`**)  
   
-     [디버깅하는 동안 호출 스택의 맵 메서드](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)을 참조하십시오.  
+    For detailed information, see [Map methods on the call stack while debugging](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
+
+![Show Call Stack on Code Map](../debugger/media/dbg_basics_show_call_stack_on_code_map.gif "ShowCallStackOnCodeMap")
   
-### 호출 스택에 있는 함수의 디스어셈블리 코드를 보려면  
+## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack"></a>View the disassembly code for a function on the call stack  
   
--   **호출 스택** 창에서 디스어셈블리 코드를 보려는 함수를 마우스 오른쪽 단추로 클릭하고 **디스어셈블리로 이동**을 선택합니다.  
+-   In the **Call Stack** window, right-click the function whose disassembly code you want to see and select **Go To Disassembly**.    
+
+## <a name="change-the-optional-information-displayed"></a>Change the optional information displayed  
   
-### 호출 스택 창에서 특정 함수까지 실행하려면  
+-   Right-click the **Call Stack** window and set or clear **Show \<***the information that you want***>**.  
   
--   [지정된 위치 또는 함수까지 실행](../debugger/navigating-through-code-with-the-debugger.md#BKMK_Run_to_a_specified_location_or_function)을 참조하십시오.  
+## <a name="bkmk_symbols"></a> Load Symbols for a module
+In the **Call Stack** window, you can load debugging symbols for code that does not currently have symbols loaded. These symbols can be .NET Framework or system symbols downloaded from the Microsoft public symbol servers or symbols in a symbol path on the computer that you are debugging.  
   
-### 함수 호출의 종료 지점에 중단점을 설정하려면  
+See [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
--   [소스 줄, 어셈블리 명령 또는 호출 스택 함수에 중단점 설정](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_at_a_source_line__assembly_instruction__or_call_stack_function_)을 참조하십시오.  
+### <a name="to-load-symbols"></a>To load symbols  
   
-### 모듈의 기호를 로드하려면  
+1.  In the **Call Stack** window, right-click the stack frame for which symbols are not loaded. The frame will be dimmed.  
   
--   **호출 스택** 창에서 기호를 다시 로드하려는 모듈이 표시된 프레임을 마우스 오른쪽 단추로 클릭하고 **기호 로드**를 선택합니다.  
+2.  Point to **Load Symbols** and then click **Microsoft Symbol Servers** (if available) or browse to the symbol path.  
   
-## 기호 로드  
- **호출 스택** 창에서 현재 기호가 로드되어 있지 않은 코드에 대한 디버깅 기호를 로드할 수 있습니다.  이러한 기호는 Microsoft 공용 기호 서버에서 다운로드한 .NET Framework 또는 시스템 기호일 수도 있고 디버깅 중인 컴퓨터의 기호 경로에 있는 기호일 수도 있습니다.  
+### <a name="to-set-the-symbol-path"></a>To set the symbol path  
   
- [기호 파일\(.pdb\) 및 원본 파일 지정](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)을 참조하십시오.  
+1.  In the **Call Stack** window, choose **Symbol Settings** from the shortcut menu.  
   
-#### 기호를 로드하려면  
+     The **Options** dialog box opens and the **Symbols** page is displayed.  
   
-1.  **호출 스택** 창에서 기호가 로드되지 않은 프레임을 마우스 오른쪽 단추로 클릭합니다.  프레임이 흐리게 표시됩니다.  
+2.  Click **Symbol Settings**.  
   
-2.  **다음에서 기호 로드**를 가리킨 다음 **Microsoft 공용 기호 서버** 또는 **기호 경로**를 클릭합니다.  
+3.  In the **Options** dialog box, click the Folder icon.  
   
-#### 기호 경로를 설정하려면  
+     In the **Symbol file (.pdb) locations** box, a cursor appears.  
   
-1.  **호출 스택** 창의 바로 가기 메뉴에서 **기호 설정**을 선택합니다.  
+4.  Type a directory pathname to the symbol location on the computer that you are debugging. For local and remote debugging, this is a path on your local computer.
   
-     **옵션** 대화 상자가 열리고 **기호** 페이지가 표시됩니다.  
+5.  Click **OK** to close the **Options** dialog box.  
   
-2.  **기호 설정**을 클릭합니다.  
-  
-3.  **옵션** 대화 상자에서 폴더 아이콘을 클릭합니다.  
-  
-     **기호 파일\(.pdb\) 위치** 상자에 커서가 표시됩니다.  
-  
-4.  디버깅 중인 컴퓨터의 기호 위치에 대한 디렉터리 경로 이름을 입력합니다.  로컬 디버깅인 경우 이 컴퓨터는 로컬 컴퓨터이고  원격 디버깅인 경우 이 컴퓨터는 원격 컴퓨터입니다.  
-  
-5.  **확인**을 클릭하여 **옵션** 대화 상자를 닫습니다.  
-  
-## 참고 항목  
- [호출 스택 창의 혼합 코드 및 누락된 정보](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)   
- [방법: 디버거 창의 숫자 형식 변경](../Topic/How%20to:%20Change%20the%20Numeric%20Format%20of%20Debugger%20Windows.md)   
- [디버거에서 데이터 보기](../debugger/viewing-data-in-the-debugger.md)   
- [기호 파일\(.pdb\) 및 원본 파일 지정](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
- [중단점 사용](../debugger/using-breakpoints.md)
+## <a name="see-also"></a>See Also  
+ [Mixed Code and Missing Information in the Call Stack Window](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md) [Viewing Data in the Debugger](../debugger/viewing-data-in-the-debugger.md)   
+ [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+ [Using Breakpoints](../debugger/using-breakpoints.md)

@@ -1,75 +1,106 @@
 ---
-title: "방법: DLL 프로젝트에서 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "디버깅[Visual Studio], DLL"
-  - "DLL 디버깅"
-  - "DLL 프로젝트, 디버깅"
-  - "DLL, 프로젝트 디버깅"
+title: 'How to: Debug from a DLL Project | Microsoft Docs'
+ms.custom: 
+ms.date: 05/24/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- DLL projects, debugging
+- debugging DLLs
+- DLLs, debugging projects
+- debugging [Visual Studio], DLLs
 ms.assetid: 40a94339-d3f7-4ab9-b8a1-b8cf82942f44
 caps.latest.revision: 30
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# 방법: DLL 프로젝트에서 디버깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 62f65784f36031eb754252f385f7c78c821fc5ec
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-DLL 프로젝트 디버깅을 시작하려면 프로젝트 속성에서 호출 응용 프로그램을 지정해야 합니다.  C\+\+ 속성 페이지의 레이아웃과 콘텐츠는 C\# 및 Visual Basic 속성 페이지와 다릅니다.  
+---
+# <a name="how-to-debug-from-a-dll-project-in-visual-studio"></a>How to: Debug from a DLL Project in Visual Studio
+One way to debug a DLL project is to specify the calling application in the project properties of the DLL project and then you can start debugging from the DLL project itself. For this method to work, the application must call the DLL, and the DLL must be in the location where the application expects to find it (otherwise, the application might find a different version of the DLL and load that instead, and it won't hit your breakpoints). For other methods of debugging DLLs, see [Debugging DLL Projects](../debugger/debugging-dll-projects.md).
   
- 네이티브 코드를 사용하여 관리되는 DLL을 호출하고 네이티브 코드와 관리되는 DLL을 모두 디버그하려는 경우 프로젝트 속성에서 이를 지정할 수 있습니다.  자세한 내용은 [방법: 혼합 모드에서 디버깅](../debugger/how-to-debug-in-mixed-mode.md)을 참조하세요.  
+If a managed DLL is called by native code and you want to debug both, you can specify this in the project properties. For more information, see [How to: Debug in Mixed Mode](../debugger/how-to-debug-in-mixed-mode.md).   
+
+The C++ property pages differ in layout and content from the C# and Visual Basic property pages. 
   
-> [!NOTE]
->  Visual Studio Express Edition에서 외부 호출 응용 프로그램을 지정할 수 없습니다.  대신 실행 가능한 프로젝트를 솔루션에 추가하여 시작 프로젝트로 설정하고 실행 가능한 프로젝트에서 DLL의 메서드를 호출해야 합니다.  
+### <a name="to-specify-the-calling-application-in-a-c-project"></a>To specify the calling application in a C++ project  
   
-### C\+\+ 프로젝트에서 호출 응용 프로그램을 지정하려면  
+1.  Right-click the project node in the **Solution Explorer** and select **Properties**.  
   
-1.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  **디버그** 탭으로 이동합니다.  
+2.  Make sure that the **Configuration** field at the top of the window is set to **Debug**. 
+
+    A **Debug** configuration is required for this method. 
   
-2.  창의 맨 위에 있는 **구성** 필드가 **디버그**로 설정되어 있는지 확인합니다.  
+3.  Go to **Configuration Properties > Debugging**.  
   
-3.  **구성 속성\/디버깅**으로 이동합니다.  
+4.  In the **Debugger to launch** list, choose **Local Windows Debugger** or **Remote Windows Debugger**.  
   
-4.  **실행할 디버거** 목록에서 **로컬 Windows 디버거** 또는 **원격 Windows 디버거**를 선택합니다.  
+5.  In the **Command** or **Remote Command** box, add the fully-qualified path name of the calling application (such as an .exe file).
+
+    ![Debugging Properties Window](../debugger/media/dbg-debugging-properties-dll.png "DebuggingPropertiesWindow")  
   
-5.  **명령** 또는 **원격 명령** 상자에서 응용 프로그램의 정규화된 경로 이름을 추가합니다.  
+6.  Add any necessary program arguments to the **Command Arguments** box.  
   
-6.  필요한 프로그램 인수를 **명령 인수** 상자에 추가합니다.  
+### <a name="to-specify-the-calling-application-in-a-c-or-visual-basic-project"></a>To specify the calling application in a C# or Visual Basic project  
   
-### C\# 또는 Visual Basic 프로젝트에서 호출 응용 프로그램을 지정하려면  
+1.  Right-click the project node in the **Solution Explorer** and select **Properties**, and then select the **Debug** tab.
+
+2.  Make sure that the **Configuration** field at the top of the window is set to **Debug**.
+
+3.  (.NET Framework) Select **Start external program**, and add the fully-qualified path name of the calling application.
+
+4.  (.NET Core) Select **Executable** from the **Launch** list, and then add the fully-qualified path name of the calling application in the **Executable** field. 
   
-1.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  **디버그** 탭으로 이동합니다.  
+     If you need to add the external program's command line arguments, add them in the **Command line arguments** (or **Application arguments**) field.
+
+    ![Debugging Properties Window](../debugger/media/dbg-debugging-properties-dll-csharp.png "DebuggingPropertiesWindow") 
+
+5.  If you need to, you can also call an application as a URL. (You might want to do this if you are debugging a managed DLL used by a local ASP.NET application.)  
   
-     **시작 외부 프로그램**을 선택하고 실행할 프로그램의 정규화된 경로 이름을 추가합니다.  
+     Under **Start Action**, select the **Start browser with URL:** radio button and fill in the URL.
   
-     외부 프로그램의 명령줄 인수를 추가해야 하는 경우 **명령줄 인수** 필드에 해당 인수를 추가합니다.  
+### <a name="to-start-debugging-from-the-dll-project"></a>To start debugging from the DLL project  
   
-2.  응용 프로그램을 URL로 호출할 수도 있습니다.  로컬 ASP.NET 응용 프로그램에 사용되는 관리되는 DLL을 디버그하는 경우에도 이 작업을 수행할 수 있습니다.  
+1.  Set breakpoints in the DLL project. 
+
+2.  Right-click the DLL project and choose **Set as Startup Project**. 
+
+    (Also, make sure that the **Solutions Configuration** field is still set to **Debug**.)   
   
-     **시작 작업**에서 **다음 URL로 브라우저 시작:** 라디오 단추를 선택하고 URL을 입력합니다.  
+3.  Start debugging (press F5, click the green arrow, or click **Debug > Start Debugging**).
+
+    You will hit the breakpoints in your DLL. If you aren't able to hit the breakpoints, make sure that your DLL output (by default, the **project\Debug** folder) is in a location that the calling application expects to find it.
   
-### DLL 프로젝트에서 디버깅을 시작하려면  
-  
-1.  필요한 중단점을 설정합니다.  
-  
-2.  F5 키를 누르거나, 녹색 화살표를 클릭하거나, **디버그\/디버깅 시작**을 클릭하여 디버깅을 시작합니다.  
-  
-## 참고 항목  
- [DLL 프로젝트 디버깅](../debugger/debugging-dll-projects.md)   
- [C\# 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Visual Basic 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [C\+\+ 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-a-cpp-debug-configuration.md)
+## <a name="see-also"></a>See Also  
+ [Debugging DLL Projects](../debugger/debugging-dll-projects.md)   
+ [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md)

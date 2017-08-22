@@ -1,53 +1,70 @@
 ---
-title: "디버거 창 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
+title: Debugger Windows in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 디버거 창
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 35524e297af4ad2c0427d65da490cd46b2f4c197
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-프로그램을 디버그하는 동안 대부분의 디버거 창을 열 수 있습니다. 디버거 창의 목록을 보려면 중단점을 설정하고 디버깅을 시작합니다. 중단점을 적중하고 실행이 중지되면 **디버그 \/ Windows**를 클릭합니다.  
+---
+# <a name="learn-about-debugger-windows-in-visual-studio"></a>Learn about Debugger Windows in Visual Studio
+You can open most debugger windows while you are debugging your program. To see a list of debugger windows, set a breakpoint and start debugging. When you hit the breakpoint and execution stops, click **Debug > Windows**.  
   
 ||||  
 |-|-|-|  
-|**창**|**바로 가기 키**|**항목 참조**|  
-|중단점|Ctrl\+Alt\+B|[중단점 사용](../debugger/using-breakpoints.md)|  
-|예외 설정|Ctrl\+Alt\+E|[디버거를 사용한 예외 관리](../debugger/managing-exceptions-with-the-debugger.md)|  
-|출력|Ctrl\+Alt\+O|[출력 창](../ide/reference/output-window.md)|  
-|GPU 스레드|\-|[방법: GPU 스레드 창 사용](../debugger/how-to-use-the-gpu-threads-window.md)|  
-|작업|Ctrl\+Shift\+D, K|[작업 창 사용](../debugger/using-the-tasks-window.md)|  
-|병렬 스택|Ctrl\+Shift\+D, S|[병렬 스택 창 사용](../debugger/using-the-parallel-stacks-window.md)|  
-|병렬 조사식|Ctrl\+Shift\+D, \(1, 2, 3, 4\)|[병렬 스택 창 사용](../debugger/using-the-parallel-stacks-window.md)|  
-|조사식|Ctrl\+Alt\+W, \(1, 2, 3, 4\)|[조사식 및 간략한 조사식 창](../debugger/watch-and-quickwatch-windows.md)|  
-|간략한 조사식|Shift\+F9|[조사식 및 간략한 조사식 창](../debugger/watch-and-quickwatch-windows.md)|  
-|자동|Ctrl\+Alt\+V, A|[변수 창](../Topic/Variable%20Windows.md)|  
-|로컬|Ctrl\+Alt\+V, L|[변수 창](../Topic/Variable%20Windows.md)|  
-|직접 실행|Ctrl\+Alt\+I|[직접 실행 창](../ide/reference/immediate-window.md)|  
-|Python 대화형 디버그|Shift\+Alt\+I|[PTVS 시작: 대화형 Python](../python/getting-started-with-ptvs-interactive-python.md)|  
-|JavaScript 콘솔|Ctrl\+Alt\+V, C|[퀵 스타트: JavaScript 디버그](../debugger/quickstart-debug-javascript-using-the-console.md)|  
-|DOM 탐색기|Ctrl\+Alt\+V, D|[DOM 탐색기를 사용하여 레이아웃 디버깅](../debugger/debug-layout-using-dom-explorer.md)|  
-|라이브 시각적 트리|\-|[디버그하는 동안 XAML 속성 검사](../debugger/inspect-xaml-properties-while-debugging.md)|  
-|라이브 속성 탐색기|\-|[디버그하는 동안 XAML 속성 검사](../debugger/inspect-xaml-properties-while-debugging.md)|  
-|호출 스택|Ctrl\+Alt\+C|[방법: 호출 스택 창 사용](../debugger/how-to-use-the-call-stack-window.md)|  
-|스레드|Ctrl\+Alt\+H|[방법: 스레드 창 사용](../debugger/how-to-use-the-threads-window.md)|  
-|모듈|Ctrl\+Alt\+U|[방법: 모듈 창 사용](../debugger/how-to-use-the-modules-window.md)|  
-|프로세스|Ctrl\+Alt\+Z|[스레드 및 프로세스 디버깅](../debugger/debug-threads-and-processes.md)|  
-|메모리|Ctrl\+Alt\+M, \(1, 2, 3, 4\)|[메모리 창](../debugger/memory-windows.md)|  
-|디스어셈블리|Ctrl\+Alt\+D|[방법: 디스어셈블리 창 사용](../debugger/how-to-use-the-disassembly-window.md)|  
-|레지스터|Ctrl\+Alt\+G|[방법: 레지스터 창 사용](../debugger/how-to-use-the-registers-window.md)|  
+|**Window**|**Hotkey**|**See Topic**|  
+|Breakpoints|CTRL+ALT+B|[Use Breakpoints](../debugger/using-breakpoints.md)|  
+|Exception Settings|CTRL+ALT+E|[Manage Exceptions with the Debugger](../debugger/managing-exceptions-with-the-debugger.md)|  
+|Output|CTRL+ALT+O|[Output Window](../ide/reference/output-window.md)|    
+|Watch|CTRL+ALT+W, (1, 2, 3, 4)|[Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md)|  
+|QuickWatch|SHIFT+F9|[Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md)|  
+|Autos|CTRL+ALT+V, A|[Autos and Locals Windows](../debugger/autos-and-locals-windows.md)|  
+|Locals|CTRL+ALT+V, L|[Autos and Locals Windows](../debugger/autos-and-locals-windows.md)|  
+|Call Stacks|CTRL+ALT+C|[How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md)|
+|Immediate|CTRL+ALT+I|[Immediate Window](../ide/reference/immediate-window.md)|     
+|Parallel Stacks|CTR:+SHIFT+D, S|[Using the Parallel Stacks Window](../debugger/using-the-parallel-stacks-window.md)|  
+|Parallel Watch|CTR:+SHIFT+D, (1, 2, 3, 4)|[Get started Debugging Multithreaded Applications](../debugger/get-started-debugging-multithreaded-apps.md)|
+|Threads|CTRL+ALT+H|[Debug using the Threads Window](../debugger/how-to-use-the-threads-window.md)|  
+|Modules|CTRL+ALT+U|[How to: Use the Modules Window](../debugger/how-to-use-the-modules-window.md)| 
+|GPU Threads|-|[How to: Use the GPU Threads Window](../debugger/how-to-use-the-gpu-threads-window.md)|  
+|Tasks|CTR:+SHIFT+D, K|[Using the Tasks Window](../debugger/using-the-tasks-window.md)| 
+|Python Debug Interactive|SHIFT+ALT+I|[Getting Started with PTVS: Interactive Python](../python/getting-started-with-ptvs-interactive-python.md)|  
+|JavaScript Console|CTRL+ALT+V, C|[QuickStart: Debug JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)|  
+|DOM Explorer|CTRL+ALT+V, D|[Debug layout using DOM Explorer](../debugger/debug-layout-using-dom-explorer.md)|  
+|Live Visual Tree|-|[Inspect XAML properties while debugging](../debugger/inspect-xaml-properties-while-debugging.md)|  
+|Live Property Explorer|-|[Inspect XAML properties while debugging](../debugger/inspect-xaml-properties-while-debugging.md)|   
+|Processes|CTRL+ALT+Z|[Debug Threads and Processes](../debugger/debug-threads-and-processes.md)|  
+|Memory|CTRL+ALT+M, (1, 2, 3, 4)|[Memory Windows](../debugger/memory-windows.md)|  
+|Disassembly|CTRL+ALT+D|[How to: Use the Disassembly Window](../debugger/how-to-use-the-disassembly-window.md)|  
+|Registers|CTRL+ALT+G|[How to: Use the Registers Window](../debugger/how-to-use-the-registers-window.md)|  
   
-## 참고 항목  
- [디버거 기본 사항](../debugger/debugger-basics.md)
+## <a name="see-also"></a>See Also  
+ [Debugger Basics](../debugger/debugger-basics.md)

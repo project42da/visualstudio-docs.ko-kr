@@ -1,51 +1,70 @@
 ---
-title: "방법: 엔터티 클래스에 유효성 검사 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'How to: Add validation to entity classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 61107da9-7fa3-4dba-b101-ae46536f52c4
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 25df2b3849a0cb18ec15a0fde2798e36c829a8da
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
+
 ---
-# 방법: 엔터티 클래스에 유효성 검사 추가
-엔터티 클래스 *유효성 검사*는 데이터 개체에 입력된 값이 개체의 스키마 제약 조건과 응용 프로그램에 대해 설정된 규칙을 따르는지 확인하는 과정입니다.업데이트를 내부 데이터베이스에 보내기 전에 데이터의 유효성을 검사하면 오류를 줄일 수 있습니다.또한 응용 프로그램과 데이터베이스 간에 발생할 수 있는 잠재적 라운드트립 횟수를 줄일 수 있습니다.  
+# <a name="how-to-add-validation-to-entity-classes"></a>How to: Add validation to entity classes
+*Validating* entity classes is the process of confirming that the values entered into data objects comply with the constraints in an object's schema, and also to the rules established for the application. Validating data before you send updates to the underlying database is a good practice that reduces errors. It also reduces the potential number of round trips between an application and the database.  
   
- [O\/R 디자이너\(개체 관계형 디자이너\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)에서는 전체 엔터티를 삽입, 업데이트 및 삭제하는 동안 그리고 각 열을 변경하는 도중과 각 열을 변경한 후에 실행되는 디자이너에서 생성한 코드를 확장할 수 있는 부분 메서드\(Partial Method\)를 제공합니다.  
+ The [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) provides partial methods that enable users to extend the designer-generated code that runs during Inserts, Updates, and Deletes of complete entities, and also during and after individual column changes.  
   
 > [!NOTE]
->  이 항목에서는 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]를 사용하여 엔터티 클래스에 유효성 검사를 추가하는 기본 단계를 설명합니다.특정 엔터티 클래스를 참조하지 않고 이 일반 단계를 따르는 것이 어려울 수 있으므로 실제 데이터를 사용하는 연습이 제공되었습니다.[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]를 사용하여 유효성 검사를 구성하는 자세한 단계별 지침은 [연습: 엔터티 클래스에 유효성 검사 추가](../Topic/Walkthrough:%20Adding%20Validation%20to%20Entity%20Classes.md)를 참조하십시오.  
+>  This topic provides the basic steps for adding validation to entity classes by using the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. Because it might be difficult to follow these generic steps without referring to a specific entity class, a walkthrough that uses actual data has been provided.  
   
-## 변경 내용에 대한 유효성 검사를 특정 열의 값에 추가  
- 이 절차는 열의 값이 변경될 때 데이터의 유효성을 검사하는 방법을 보여 줍니다.유효성 검사는 사용자 인터페이스 대신 클래스 정의 내에서 수행되기 때문에 값에 대한 유효성 검사가 실패하면 예외가 throw됩니다.응용 프로그램에서 열 값을 변경하려고 하는 코드에 대한 오류 처리를 구현하십시오.  
+## <a name="adding-validation-for-changes-to-the-value-in-a-specific-column"></a>Adding Validation for Changes to the Value in a Specific Column  
+ This procedure shows how to validate data when the value in a column changes. Because the validation is performed inside the class definition (instead of in the user interface) an exception is thrown if the value causes validation to fail. Implement error handling for the code in your application that attempts to change the column values.  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### 열의 값을 변경하는 동안 데이터의 유효성을 검사하려면  
+#### <a name="to-validate-data-during-a-columns-value-change"></a>To validate data during a column's value change  
   
-1.  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 새 LINQ to SQL 클래스 파일\(**.dbml** 파일\)을 열거나 만듭니다.**솔루션 탐색기**에서 **.dbml** 파일을 두 번 클릭합니다.  
+1.  Open or create a new LINQ to SQL Classes file (**.dbml** file) in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. (Double-click the **.dbml** file in **Solution Explorer**.)  
   
-2.  O\/R 디자이너에서 유효성 검사를 추가할 클래스를 마우스 오른쪽 단추로 클릭한 다음 **코드 보기**를 클릭합니다.  
+2.  In the O/R Designer, right-click the class for which you want to add validation and then click **View Code**.  
   
-     선택한 엔터티 클래스의 partial 클래스와 함께 코드 편집기가 열립니다.  
+     The Code Editor opens with a partial class for the selected entity class.  
   
-3.  커서를 partial 클래스에 놓습니다.  
+3.  Place the cursor in the partial class.  
   
-4.  Visual Basic 프로젝트의 경우  
+4.  For Visual Basic projects:  
   
-    1.  **메서드 이름** 목록을 확장합니다.  
+    1.  Expand the **Method Name** list.  
   
-    2.  유효성 검사를 추가할 열에 대해 **On***COLUMNNAME***Changing** 메서드를 찾습니다.  
+    2.  Locate the **On*COLUMNNAME*Changing** method for the column you want to add validation to.  
   
-    3.  `On` *COLUMNNAME* `Changing` 메서드가 partial 클래스에 추가됩니다.  
+    3.  An `On`*COLUMNNAME*`Changing` method is added to the partial class.  
   
-    4.  다음 코드를 추가하여 입력된 값을 먼저 확인한 다음 열에 입력된 값이 응용 프로그램에서 허용되는지 확인합니다.다음 `value` 인수는 제안된 값을 포함하고 있으므로 이를 유효한 값으로 확인하는 논리를 추가합니다.  
+    4.  Add the following code to first verify that a value has been entered and then to ensure that the value entered for the column is acceptable for your application. The `value` argument contains the proposed value, so add logic to confirm that it is a valid value:  
   
         ```vb#  
         If value.HasValue Then  
@@ -56,11 +75,11 @@ manager: "ghogen"
         End If  
         ```  
   
-     C\# 프로젝트의 경우  
+     For C# projects:  
   
-    1.  C\# 프로젝트는 이벤트 처리기를 자동으로 생성하지 않기 때문에 IntelliSense를 사용하여 열 변경 부분 메서드를 만들 수 있습니다.  
+    1.  Because C# projects do not automatically generate the event handlers, you can use IntelliSense to create the column-changing partial methods.  
   
-         `partial`을 입력한 다음 사용 가능한 부분 메서드에 액세스하기 위한 공간을 입력합니다.유효성 검사를 추가할 열에 대해 열 변경 메서드를 클릭합니다.다음 코드는 열 변경 부분 메서드를 선택할 때 생성된 코드와 비슷합니다.  
+         Type `partial` and then a space to access the list of available partial methods. Click the column-changing method for the column you want to add validation for. The following code resembles code that is generated when you select a column-changing partial method:  
   
         ```c#  
         partial void OnCOLUMNNAMEChanging(COLUMNDATATYPE value)  
@@ -70,31 +89,31 @@ manager: "ghogen"
   
         ```  
   
-## 업데이트에 대한 유효성 검사를 엔터티 클래스에 추가  
- 변경하는 동안 값을 검사하는 작업 이외에도 전체 엔터티 클래스에 대해 업데이트를 시도할 때 데이터의 유효성을 검사할 수도 있습니다.비즈니스 규칙에서 여러 열의 값에 대한 비교를 요구하는 경우 업데이트를 시도하는 동안 유효성 검사가 해당 작업을 수행합니다.다음 절차는 전체 엔터티 클래스를 업데이트하려고 할 때 유효성을 검사하는 방법을 보여 줍니다.  
+## <a name="adding-validation-for-updates-to-an-entity-class"></a>Adding Validation for Updates to an Entity Class  
+ In addition to checking values during changes, you can also validate data when an attempt is made to update a complete entity class. Validation during an attempted update enables you to compare values in multiple columns if business rules require this. The following procedure shows how to validate when an attempt is made to update a complete entity class.  
   
 > [!NOTE]
->  전체 엔터티 클래스 업데이트에 대한 유효성 검사 코드는 특정 엔터티 클래스의 partial 클래스가 아니라 partial <xref:System.Data.Linq.DataContext> 클래스에서 실행됩니다.  
+>  Validation code for updates to complete entity classes is executed in the partial <xref:System.Data.Linq.DataContext> class (instead of in the partial class of a specific entity class).  
   
-#### 엔터티 클래스를 업데이트하는 동안 데이터의 유효성을 검사하려면  
+#### <a name="to-validate-data-during-an-update-to-an-entity-class"></a>To validate data during an update to an entity class  
   
-1.  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 새 LINQ to SQL 클래스 파일\(**.dbml** 파일\)을 열거나 만듭니다.**솔루션 탐색기**에서 **.dbml** 파일을 두 번 클릭합니다.  
+1.  Open or create a new LINQ to SQL Classes file (**.dbml** file) in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. (Double-click the **.dbml** file in **Solution Explorer**.)  
   
-2.  O\/R 디자이너에서 마우스 오른쪽 단추로 빈 영역을 클릭하고 **코드 보기**를 클릭합니다.  
+2.  Right-click an empty area on the O/R Designer and click **View Code**.  
   
-     `DataContext`의 partial 클래스와 함께 코드 편집기가 열립니다.  
+     The Code Editor opens with a partial class for the `DataContext`.  
   
-3.  커서를 `DataContext`의 partial 클래스에 놓습니다.  
+3.  Place the cursor in the partial class for the `DataContext`.  
   
-4.  Visual Basic 프로젝트의 경우  
+4.  For Visual Basic projects:  
   
-    1.  **메서드 이름** 목록을 확장합니다.  
+    1.  Expand the **Method Name** list.  
   
-    2.  **업데이트** *ENTITYCLASSNAME*를 클릭합니다.  
+    2.  Click **Update***ENTITYCLASSNAME*.  
   
-    3.  `Update` *ENTITYCLASSNAME* 메서드가 partial 클래스에 추가됩니다.  
+    3.  An `Update`*ENTITYCLASSNAME* method is added to the partial class.  
   
-    4.  다음 코드에 표시된 것과 같은 `instance` 인수를 사용하여 개별 열 값에 액세스합니다.  
+    4.  Access individual column values by using the `instance` argument, as shown in the following code:  
   
         ```vb#  
         If (instance.COLUMNNAME = x) And (instance.COLUMNNAME = y) Then  
@@ -103,11 +122,11 @@ manager: "ghogen"
         End If  
         ```  
   
-     C\# 프로젝트의 경우  
+     For C# projects:  
   
-    1.  C\# 프로젝트는 이벤트 처리기를 자동으로 생성하지 않기 때문에 IntelliSense를 사용하여 부분 `Update`*CLASSNAME* 메서드를 만들 수 있습니다.  
+    1.  Because C# projects do not automatically generate the event handlers, you can use IntelliSense to create the partial `Update`*CLASSNAME* method.  
   
-    2.  `partial`을 입력한 다음 사용 가능한 부분 메서드에 액세스하기 위한 공간을 입력합니다.유효성 검사를 추가할 클래스에 대해 업데이트 메서드를 클릭합니다.다음 코드는 `Update`*CLASSNAME* 부분 메서드를 선택할 때 생성된 코드와 비슷합니다.  
+    2.  Type `partial` and then a space to access the list of available partial methods. Click the update method for the class you want to add validation for. The following code resembles code that is generated when you select an `Update`*CLASSNAME* partial method:  
   
         ```c#  
         partial void UpdateCLASSNAME(CLASSNAME instance)  
@@ -120,7 +139,7 @@ manager: "ghogen"
         }  
         ```  
   
-## 참고 항목  
- [O\/R 디자이너\(개체 관계형 디자이너\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [데이터 유효성 검사](../Topic/Validating%20Data.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
+ [Validating Data](validate-data-in-datasets.md)

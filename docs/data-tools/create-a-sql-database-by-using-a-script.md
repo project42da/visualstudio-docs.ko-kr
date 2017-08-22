@@ -1,53 +1,72 @@
 ---
-title: "연습: 작은 샘플 데이터베이스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
+title: Create a SQL database by using a script | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
 ms.assetid: 36f913c0-f5a7-4831-83a0-baba721ac95c
 caps.latest.revision: 14
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 6871f54959652787dfc115f8360e67aa4c8ddf33
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
+
 ---
-# 연습: 작은 샘플 데이터베이스 만들기
-연습을 통해서 Visual Studio를 사용하여 [연습: ADO.NET을 사용하여 간단한 데이터 응용 프로그램 만들기](../data-tools/create-a-simple-data-application-by-using-adonet.md) 샘플 코드를 포함하는 소형 데이터베이스를 만들 수 있습니다.  
+# <a name="create-a-sql-database-by-using-a-script"></a>Create a SQL database by using a script
+In this walkthrough, you use Visual Studio to create a small database that contains the sample code for [Create a simple data application by using ADO.NET](../data-tools/create-a-simple-data-application-by-using-adonet.md).  
   
- **항목 내용**  
+ **In this topic**  
   
--   [데이터베이스 스키마가 포함된 스크립트 만들기](../data-tools/create-a-sql-database-by-using-a-script.md#CreateScript)  
+-   [Create a script that contains a database schema](../data-tools/create-a-sql-database-by-using-a-script.md#CreateScript)  
   
--   [데이터베이스 프로젝트 만들기 및 스키마 가져오기](../data-tools/create-a-sql-database-by-using-a-script.md#CreateProject)  
+-   [Create a database project and import a schema](../data-tools/create-a-sql-database-by-using-a-script.md#CreateProject)  
   
--   [데이터베이스 배포](../data-tools/create-a-sql-database-by-using-a-script.md#DeployDatabase)  
+-   [Deploy the database](../data-tools/create-a-sql-database-by-using-a-script.md#DeployDatabase)  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]이 설치되어 있어야 합니다.  또한 데이터베이스를 만들고 배포할 권한이 있는 데이터베이스 서버 또는 LocalDB 데이터베이스에 연결할 수 있어야 합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ To complete this walkthrough, you must have SQL Server Express LocalDB, or another SQL database, installed.  
   
-##  <a name="CreateScript"></a> 데이터베이스 스키마가 포함된 스크립트 만들기  
+##  <a name="CreateScript"></a> Create a script that contains a database schema  
   
-#### 스키마를 가져올 수 있는 원본 스크립트를 만들려면  
+#### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>To create a script from which you can import a schema  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 메뉴 모음에서 **파일**, **새로 만들기**, **파일**을 선택합니다.  
+1.  In [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], on the menu bar, select **File** > **New** > **File**.  
   
-     **새 파일** 대화 상자가 나타납니다.  
+     The **New File** dialog box appears.  
   
-2.  **범주** 목록에서 **일반**을 선택합니다.  
+2.  In the **Categories** list, select **General**.  
   
-3.  **템플릿** 목록에서 **SQL 파일**을 선택한 다음 **열기** 단추를 선택합니다.  
+3.  In the **Templates** list, select **Sql File**, and then select the **Open** button.  
   
-     Transact\-SQL 편집기가 열립니다.  
+     The Transact-SQL editor opens.  
   
-4.  다음 Transact\-SQL 코드를 복사하여 Transact\-SQL 편집기에 붙여넣습니다.  
+4.  Copy the following Transact-SQL code, and then paste it into the Transact-SQL editor.  
   
     ```  
     PRINT N'Creating Sales...';  
@@ -209,62 +228,62 @@ manager: "ghogen"
     GO  
     ```  
   
-5.  메뉴 모음에서 **파일**, **다른 이름으로 SqlQuery\_1.sql 저장**을 선택합니다.  
+5.  On the menu bar, select **File** > **Save SqlQuery_1.sql As...**.  
   
-     **다른 이름으로 파일 저장** 대화 상자가 나타납니다.  
+     The **Save File As** dialog box appears.  
   
-6.  **파일 이름** 상자에 `SampleImportScript.sql`을 입력하고 파일을 저장할 위치를 기록한 다음 **저장** 단추를 선택합니다.  
+6.  In the **File Name** box, enter `SampleImportScript.sql`, note the location where you'll save the file, and then select the **Save** button.  
   
-7.  메뉴 모음에서 **파일**, **솔루션 닫기**를 선택합니다.  
+7.  On the menu bar, select **File** > **Close Solution**.  
   
-     다음에는 데이터베이스 프로젝트를 만들고 앞에서 만든 스크립트에서 스키마를 가져옵니다.  
+     Next, create a database project, and then import the schema from the script that you've created.  
   
-##  <a name="CreateProject"></a> 데이터베이스 프로젝트 만들기 및 스키마 가져오기  
+##  <a name="CreateProject"></a> Create a database project and import a schema  
   
-#### 데이터베이스 프로젝트를 만들려면  
+#### <a name="to-create-a-database-project"></a>To create a database project  
   
-1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다.  
+1.  On the menu bar, select **File** > **New** > **Project**.  
   
-     **새 프로젝트** 대화 상자가 나타납니다.  
+     The **New Project** dialog box appears.  
   
-2.  **설치됨**에서 **템플릿** 노드를 확장하고 **다른 언어** 노드를 확장하고, **SQL Server** 범주를 선택한 후 **SQL Server 데이터베이스 프로젝트** 템플릿을 선택합니다.  
+2.  Under **Installed**, expand the **Templates** node, expand the **Other Languages** node, select the **SQL Server** category, and then select the **SQL Server Database Project** template.  
   
     > [!NOTE]
-    >  **다른 언어** 노드는 설치된 Visual Studio 중 일부에 나타나지 않습니다.  
+    >  The **Other Languages** node doesn't appear in all installations of Visual Studio.  
   
-3.  **이름** 상자에 `Small Database`를 입력합니다.  
+3.  In the **Name** box, enter `Small Database`.  
   
-4.  **솔루션용 디렉터리 만들기** 확인란이 아직 선택되어 있지 않은 경우 선택합니다.  
+4.  Select the **Create directory for solution** check box if it isn't already selected.  
   
-5.  **소스 제어에 추가** 확인란이 아직 선택 취소되어 있지 않은 경우 선택 취소하고 **확인** 단추를 선택합니다.  
+5.  Clear the **Add to source control** check box if it isn't already cleared, and then select the **OK** button.  
   
-     데이터베이스 프로젝트가 만들어지고 **솔루션 탐색기**에 나타납니다.  
+     The database project is created and appears in **Solution Explorer**.  
   
-     다음에는 스크립트에서 데이터베이스 스키마를 가져옵니다.  
+     Next, import the database schema from the script.  
   
-#### 스크립트에서 데이터베이스 스키마를 가져오려면  
+#### <a name="to-import-a-database-schema-from-a-script"></a>To import a database schema from a script  
   
-1.  메뉴 모음에서 **프로젝트**, **가져오기**, **스크립트**를 선택합니다.  
+1.  On the menu bar, select **Project** > **Import** > **Script**.  
   
-2.  시작합니다. 페이지에서 텍스트를 검토한 후 **다음** 단추를 선택합니다.  
+2.  On the **Welcome** page, review the text, and then select the **Next** button.  
   
-3.  **단일 파일** 옵션 단추를 누른 다음 **찾아보기** 단추를 선택합니다.  
+3.  Select the **Single File** option button, and then select the **Browse** button.  
   
-     **SQL 스크립트 가져오기** 대화 상자가 나타납니다.  
+     The **Import SQL Script** dialog box appears.  
   
-4.  SampleImportScript.sql을 저장한 폴더를 열고 해당 파일을 선택한 다음 **열기** 단추를 선택합니다.  
+4.  Open the folder where you saved the SampleImportScript.sql file, select the file, and then select the **Open** button.  
   
-5.  **마침** 단추를 선택하여 **SQL 스크립트 가져오기** 대화 상자를 닫습니다.  
+5.  Select the **Finish** button to close the **Import SQL Script** dialog box.  
   
-     스크립트를 가져온 다음 해당 스크립트가 정의하는 개체가 데이터베이스 프로젝트에 추가됩니다.  
+     The script is imported, and the objects that the script defines are added to your database project.  
   
-6.  요약을 검토한 후 **마침** 단추를 선택하여 **SQL 스크립트 파일 가져오기** 대화 상자를 닫습니다.  
+6.  Review the summary, and then click the **Finish** button to close the **Import SQL Script File** dialog box.  
   
-7.  **솔루션 탐색기**에서 프로젝트의 Sales, Scripts 및 Security 폴더를 확장한 후 .sql 파일이 포함되어 있는지 확인합니다.  
+7.  In **Solution Explorer**, expand the Sales, Scripts, and Security folders of your project, and verify that they contain .sql files.  
   
-8.  **SQL Server 개체 탐색기**의 **프로젝트** 노드에 데이터베이스가 나타나는지 확인하십시오.  
+8.  In **SQL Server Object Explorer**, verify that the database appears under the **Projects** node.  
   
-     이 시점에는 데이터베이스에 테이블, 저장 프로시저와 같은 시스템 개체만 포함되어 있습니다.  데이터베이스를 배포한 후에는 스크립트를 정의하는 사용자 테이블과 저장 프로시저가 포함됩니다.  
+     At this point, the database contains only system objects, such as tables and stored procedures. After you deploy the database, it will contain the user tables and stored procedures that the scripts define.  
   
-##  <a name="DeployDatabase"></a> 데이터베이스 배포  
- F5 키를 선택하면 기본적으로 LocalDB 데이터베이스에 데이터베이스를 배포 또는 게시합니다.  프로젝트의 속성 페이지를 열고, **디버그** 탭을 선택한 후 연결 문자열을 변경하여 데이터베이스를 다른 위치에 배포할 수 있습니다.
+##  <a name="DeployDatabase"></a> Deploy the database  
+ When you press the **F5** key, you deploy (or publish) the database to a LocalDB database by default. You can deploy the database to a different location by opening the properties page for the project, selecting the **Debug** tab, and then changing the connection string.

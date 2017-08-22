@@ -1,142 +1,166 @@
 ---
-title: "연습: ADO.NET을 사용하여 간단한 데이터 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
+title: Create a simple data application by using ADO.NET | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
 ms.assetid: 2222841f-e443-4a3d-8c70-4506aa905193
 caps.latest.revision: 42
-caps.handback.revision: 30
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 5638a26829f0d8d0c6b24281d4c8ab57f180242c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
+
 ---
-# 연습: ADO.NET을 사용하여 간단한 데이터 응용 프로그램 만들기
-데이터베이스의 데이터를 조작하는 응용 프로그램을 만들면 연결 문자열 정의, 데이터 삽입 및 저장 프로시저 실행과 같은 기본 작업을 수행합니다.  이 항목에서는 Visual C\# 또는 Visual Basic 및 ADO.NET을 사용하여 간단한 Windows Forms 응용 프로그램에서 데이터베이스와 상호 작용하는 방법을 배울 수 있습니다.  
+# <a name="create-a-simple-data-application-by-using-adonet"></a>Create a simple data application by using ADO.NET
+When you create an application that manipulates data in a database, you perform basic tasks such defining connection strings, inserting data, and running stored procedures. By following this topic, you can discover how to interact with a database from within a simple Windows Forms "forms over data" application by using Visual C# or Visual Basic and ADO.NET.  All .NET data technologies—including datasets, LINQ to SQL, and Entity Framework—ultimately perform steps that are very similar to those shown in this article.  
+  
+ This article demonstrates a simple way to get data out of a database in a very fast manner. If your application needs to modify data in non-trivial ways and update the database, you should consider using Entity Framework and using data binding to automatically sync user interface controls to changes in the underlying data.  
   
 > [!IMPORTANT]
->  코드를 간단히 유지하기 위해 프로덕션에 사용하는 예외 처리는 포함되어 있지 않습니다.  
+>  To keep the code simple, it doesn't include production-ready exception handling.  
   
- **항목 내용**  
+ **In this topic**  
   
--   [샘플 데이터베이스 설정](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_setupthesampledatabase)  
+-   [Set up the sample database](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_setupthesampledatabase)  
   
--   [폼 만들기 및 컨트롤 추가](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_createtheformsandaddcontrols)  
+-   [Create the forms and add controls](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_createtheformsandaddcontrols)  
   
--   [연결 문자열 저장](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_storetheconnectionstring)  
+-   [Store the connection string](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_storetheconnectionstring)  
   
--   [연결 문자열 검색](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_retrievetheconnectionstring)  
+-   [Retrieve the connection string](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_retrievetheconnectionstring)  
   
--   [폼에 대한 코드 작성](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_writethecodefortheforms)  
+-   [Write the code for the forms](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_writethecodefortheforms)  
   
--   [응용 프로그램 테스트](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_testyourapplication)  
+-   [Test your application](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_testyourapplication)  
   
-## 사전 요구 사항  
- 응용 프로그램을 만들려면 다음이 필요 합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ To create the application, you'll need:  
   
--   Visual Studio 2012 업데이트 1 또는 [!INCLUDE[vs_dev12](../data-tools/includes/vs_dev12_md.md)]  
+-   Visual Studio Community Edition.  
   
--   SQL Server 2012 Express LocalDB  
+-   SQL Server Express LocalDB.  
   
--   [연습: 작은 샘플 데이터베이스 만들기](../data-tools/create-a-sql-database-by-using-a-script.md)의 단계에 따라 만드는 작은 샘플 데이터베이스입니다.  
+-   The small sample database that you create by following the steps in [Create a SQL database by using a script](../data-tools/create-a-sql-database-by-using-a-script.md).  
   
--   데이터베이스에 대해 설정한 연결 문자열입니다.  **SQL Server 개체 탐색기**를 열고 데이터베이스에 대한 바로 가기 메뉴를 열어 **속성**을 선택한 다음, **연결 문자열** 속성으로 스크롤하면 이 값을 찾을 수 있습니다.  
+-   The connection string for the database after you set it up. You can find this value by opening **SQL Server Object Explorer**, opening the shortcut menu for the database, selecting **Properties**, and then scrolling to the **ConnectionString**  property.  
   
- 이 항목에서는 사용자가 Visual Studio IDE의 기본 기능에 익숙하고 Windows Forms 응용 프로그램 작성, 프로젝트에 폼 추가, 폼에 단추 및 기타 컨트롤 배치, 이러한 컨트롤의 속성 설정 및 간단한 이벤트 코드 작성을 수행할 수 있다고 가정합니다.  이러한 작업에 익숙하지 않으면 이 항목을 시작하기 전에 [Visual C\# 및 Visual Basic 시작](../ide/getting-started-with-visual-csharp-and-visual-basic.md)를 완료하는 것이 좋습니다.  
+ This topic assumes that you're familiar with the basic functionality of the Visual Studio IDE and can create a Windows Forms application, add forms to that project, put buttons and other controls on those forms, set properties of those controls, and code simple events. If you aren't comfortable with these tasks, we suggest that you complete the [Getting Started with Visual C# and Visual Basic](../ide/getting-started-with-visual-csharp-and-visual-basic.md) before you start this topic.  
   
-##  <a name="BKMK_setupthesampledatabase"></a> 샘플 데이터베이스 설정  
- 이 연습의 샘플 데이터베이스는 고객 및 주문 테이블로 구성되어 있습니다.  테이블에는 처음에 데이터가 없지만 사용자가 만드는 응용 프로그램을 실행할 때 데이터가 추가됩니다.  데이터베이스에는 5개의 간단한 저장 프로시저도 있습니다.  [연습: 작은 샘플 데이터베이스 만들기](../data-tools/create-a-sql-database-by-using-a-script.md)에는 테이블, 기본 및 외래 키, 제약 조건 및 저장 프로시저를 만드는 Transact\-SQL 스크립트가 들어 있습니다.  
+##  <a name="BKMK_setupthesampledatabase"></a> Set up the sample database  
+ The sample database for this walkthrough consists of the Customer and Orders tables. The tables contain no data initially, but you'll add data when you run the application that you'll create. The database also has five simple stored procedures. [Create a SQL database by using a script](../data-tools/create-a-sql-database-by-using-a-script.md) contains a Transact-SQL script that creates the tables, the primary and foreign keys, the constraints, and the stored procedures.  
   
-##  <a name="BKMK_createtheformsandaddcontrols"></a> 폼 만들기 및 컨트롤 추가  
+##  <a name="BKMK_createtheformsandaddcontrols"></a> Create the forms and add controls  
   
-1.  Windows Forms 응용 프로그램의 프로젝트를 만든 다음 이름을 `SimpleDataApp`으로 지정합니다.  
+1.  Create a project for a Windows Forms application, and then name it SimpleDataApp.  
   
-     Visual Studio에서 프로젝트와 Form1이라는 빈 Windows 폼을 포함한 여러 파일을 만듭니다.  
+     Visual Studio creates the project and several files, including an empty Windows form that's named Form1.  
   
-2.  프로젝트에 두 개의 Windows 폼을 추가하여 총 세 개의 폼을 만들고 다음 이름을 지정합니다.  
+2.  Add two Windows forms to your project so that it has three forms, and then give them the following names:  
   
-    -   탐색  
+    -   Navigation  
   
     -   NewCustomer  
   
     -   FillOrCancel  
   
-3.  각 폼에 대해 다음 그림에 나오는 텍스트 상자, 단추 및 기타 컨트롤을 추가합니다.  각 컨트롤에 대해 테이블이 설명하는 속성을 설정합니다.  
+3.  For each form, add the text boxes, buttons, and other controls that appear in the following illustrations. For each control, set the properties that the tables describe.  
   
     > [!NOTE]
-    >  그룹 상자 및 레이블 컨트롤도 선명성을 더해 주지만 코드에서는 사용하지 않습니다.  
+    >  The group box and the label controls add clarity but aren't used in the code.  
   
- **Navigation 폼**  
+ **Navigation form**  
   
- ![검색 대화 상자](../data-tools/media/simpleappnav.png "SimpleAppNav")  
+ ![Navigation dialog box](../data-tools/media/simpleappnav.png "SimpleAppNav")  
   
-|Navigation 폼 컨트롤|속성|  
-|----------------------|--------|  
-|단추|Name \= btnGoToAdd|  
-|단추|Name \= btnGoToFillOrCancel|  
-|단추|Name \= btnExit|  
+|Controls for the Navigation form|Properties|  
+|--------------------------------------|----------------|  
+|Button|Name = btnGoToAdd|  
+|Button|Name = btnGoToFillOrCancel|  
+|Button|Name = btnExit|  
   
- **NewCustomer 폼**  
+ **NewCustomer form**  
   
- ![새 고객을 추가하고 주문하기](../data-tools/media/simpleappnewcust.png "SimpleAppNewCust")  
+ ![Add  a new customer and place an order](../data-tools/media/simpleappnewcust.png "SimpleAppNewCust")  
   
-|NewCustomer 폼 컨트롤|속성|  
-|-----------------------|--------|  
-|TextBox|Name \= txtCustomerName|  
-|TextBox|Name \= txtCustomerID<br /><br /> Readonly \= True|  
-|단추|Name \= btnCreateAccount|  
-|NumericUpdown|DecimalPlaces \= 0<br /><br /> Maximum \= 5000<br /><br /> Name \= numOrderAmount|  
-|DateTimePicker|Format \= Short<br /><br /> Name \= dtpOrderDate|  
-|단추|Name \= btnPlaceOrder|  
-|단추|Name \= btnAddAnotherAccount|  
-|단추|Name \= btnAddFinish|  
+|Controls for the NewCustomer form|Properties|  
+|---------------------------------------|----------------|  
+|TextBox|Name = txtCustomerName|  
+|TextBox|Name = txtCustomerID<br /><br /> Readonly = True|  
+|Button|Name = btnCreateAccount|  
+|NumericUpdown|DecimalPlaces = 0<br /><br /> Maximum = 5000<br /><br /> Name = numOrderAmount|  
+|DateTimePicker|Format = Short<br /><br /> Name = dtpOrderDate|  
+|Button|Name = btnPlaceOrder|  
+|Button|Name = btnAddAnotherAccount|  
+|Button|Name = btnAddFinish|  
   
- **FillOrCancel 폼**  
+ **FillOrCancel form**  
   
- ![주문 입력 또는 취소](../data-tools/media/simpleappcancelfill.png "SimpleAppCancelFill")  
+ ![fill or cancel orders](../data-tools/media/simpleappcancelfill.png "SimpleAppCancelFill")  
   
-|FillOrCancel 폼 컨트롤|속성|  
-|------------------------|--------|  
-|TextBox|Name \= txtOrderID|  
-|단추|Name \= btnFindByOrderID|  
-|DateTimePicker|Format \= Short<br /><br /> Name \= dtpFillDate|  
-|DataGridView|Name \= dgvCustomerOrders<br /><br /> Readonly \= True<br /><br /> RowHeadersVisible \= False|  
-|단추|Name \= btnCancelOrder|  
-|단추|Name \= btnFillOrder|  
-|단추|Name \= btnFinishUpdates|  
+|Controls for the FillOrCancel form|Properties|  
+|----------------------------------------|----------------|  
+|TextBox|Name = txtOrderID|  
+|Button|Name = btnFindByOrderID|  
+|DateTimePicker|Format = Short<br /><br /> Name = dtpFillDate|  
+|DataGridView|Name = dgvCustomerOrders<br /><br /> Readonly = True<br /><br /> RowHeadersVisible = False|  
+|Button|Name = btnCancelOrder|  
+|Button|Name = btnFillOrder|  
+|Button|Name = btnFinishUpdates|  
   
-##  <a name="BKMK_storetheconnectionstring"></a> 연결 문자열 저장  
- 응용 프로그램이 데이터베이스에 대한 연결을 열려면 응용 프로그램에는 연결 문자열에 액세스할 수 있어야 합니다.  각 폼에 문자열을 수동으로 입력하지 못하도록 하려면 프로젝트의 앱 구성 파일에 문자열을 저장하고, 응용 프로그램의 아무 폼에서나 호출되었을 때 이 문자열을 반환하는 메서드를 만듭니다.  
+##  <a name="BKMK_storetheconnectionstring"></a> Store the connection string  
+ When your application tries to open a connection to the database, your application must have access to the connection string. To avoid entering the string manually on each form, store the string in the App config file in your project, and create a method that returns the string when the method is called from any form in your application.  
   
-1.  프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
+ You can find the connection string in **SQL Server Object Explorer** by right-clicking the database, selecting **Properties**, and then finding the ConnectionString property. Use Ctrl+A to select the string.  
   
-2.  **속성** 창의 왼쪽 창에서 **설정** 탭을 선택합니다.  
+1.  In **Solution Explorer**, select the **Properties** node under the project, and then select **Settings.settings**.  
   
-3.  **이름** 열에 `connString`을 입력합니다.  
+2.  In the **Name** column, enter `connString`.  
   
-4.  **유형** 목록에서 **\(연결 문자열\)**을 선택합니다.  
+3.  In the **Type** list, select **(Connection String)**.  
   
-5.  **범위** 목록에서 **응용 프로그램**을 선택합니다.  
+4.  In the **Scope** list, select **Application**.  
   
-6.  **값** 열에서 연결 문자열을 입력하고 변경 내용을 저장합니다.  
+5.  In the **Value** column, enter your connection string (without any outside quotes), and then save your changes.  
   
-##  <a name="BKMK_retrievetheconnectionstring"></a> 연결 문자열 검색  
+> [!NOTE]
+>  In a real application, you should store the connection string securely, as described in [Connection Strings and Configuration Files](/dotnet/framework/data/adonet/connection-strings-and-configuration-files).  
   
-1.  메뉴 모음에서 **프로젝트**, **참조 추가**를 선택한 후 System.Configuration.dll에 참조를 추가합니다.  
+##  <a name="BKMK_retrievetheconnectionstring"></a> Retrieve the connection string  
   
-2.  메뉴 표시줄에서 **프로젝트**, **클래스 추가**를 선택하면 클래스 파일이 프로젝트에 추가하고 나서 파일 `유틸리티`를 지정합니다.  
+1.  On the menu bar, select **Project** > **Add Reference**, and then add a reference to System.Configuration.dll.  
   
-     Visual Studio에서 파일을 만들어 **솔루션 탐색기**에 표시합니다.  
+2.  On the menu bar, select **Project** > **Add Class** to add a class file to your project, and then name the file `Utility`.  
   
-3.  유틸리티 파일에서 자리 표시자 코드를 다음 코드로 바꿉니다.  코드 섹션을 식별하는 번호가 매겨진 주석\(Util\- 접두사 포함\)을 주목하세요.  코드 아래 표에 요점이 요약되어 있습니다.  
+     Visual Studio creates the file and displays it in **Solution Explorer**.  
+  
+3.  In the Utility file, replace the placeholder code with the following code. Notice the numbered comments (prefixed with Util-) that identify sections of the code. The table that follows the code calls out key points.  
   
     ```c#  
     using System;  
@@ -204,28 +228,28 @@ manager: "ghogen"
     End Namespace  
     ```  
   
-    |주석|설명|  
-    |--------|--------|  
-    |Util\-1|System.Configuration 네임스페이스를 추가합니다.|  
-    |Util\-2|`returnValue` 변수를 정의하고 `null`\(C\#\) 또는 `Nothing`\(Visual Basic\)으로 초기화합니다.|  
-    |Util\-3|**속성** 창에서 연결 문자열 이름으로 `connString`을 입력한 경우에도 코드에 `"SimpleDataApp.Properties.Settings.connString"`\(C\#\) 또는 `"SimpleDataApp.My.MySettings.connString"`\(Visual Basic\)을 지정해야 합니다.|  
+    |Comment|Description|  
+    |-------------|-----------------|  
+    |Util-1|Add the `System.Configuration` namespace.|  
+    |Util-2|Define a variable, `returnValue`, and initialize it to `null` (C#) or `Nothing` (Visual Basic).|  
+    |Util-3|Even though you entered `connString` as the name of the connection string in the **Properties** window, you must specify `"SimpleDataApp.Properties.Settings.connString"` (C#) or `"SimpleDataApp.My.MySettings.connString"` (Visual Basic) in the code.|  
   
-##  <a name="BKMK_writethecodefortheforms"></a> 폼에 대한 코드 작성  
- 이 섹션에서는 각 폼에서 수행되는 작업에 대한 간단한 개요를 포함하며, 폼을 만드는 코드를 보여 줍니다.  번호가 매겨진 주석은 해당 코드 섹션을 식별합니다.  
+##  <a name="BKMK_writethecodefortheforms"></a> Write the code for the forms  
+ This section contains brief overviews of what each form does and shows the code that creates the forms. Numbered comments identify sections of the code.  
   
-### Navigation 폼  
- 응용 프로그램을 실행하면 Navigation 폼이 열립니다.  **계정 추가** 단추는 NewCustomer 폼을 엽니다.  **주문 이행 또는 취소** 단추를 누르면 FillOrCancel 폼이 열립니다.  **끝내기** 단추를 클릭하면 응용 프로그램이 닫힙니다.  
+### <a name="navigation-form"></a>Navigation form  
+ The Navigation form opens when you run the application. The **Add an account** button opens the NewCustomer form. The **Fill or cancel orders** button opens the FillOrCancel form. The **Exit** button closes the application.  
   
-#### Navigation 폼을 시작 폼으로 만들기  
- C\#을 사용하는 경우 **솔루션 탐색기**에서 Program.cs를 연 후 `Application.Run` 줄을 `Application.Run(new Navigation());`으로 변경합니다.  
+#### <a name="make-the-navigation-form-the-startup-form"></a>Make the Navigation form the startup form  
+ If you're using C#, in **Solution Explorer**, open Program.cs, and then change the `Application.Run` line to this: `Application.Run(new Navigation());`  
   
- Visual Basic을 사용하는 경우 **솔루션 탐색기**에서 **속성** 창을 열고, **응용 프로그램** 탭을 선택한 후 **시작 폼** 목록에서 SimpleDataApp.Navigation을 선택합니다.  
+ If you're using Visual Basic, in **Solution Explorer**, open the **Properties** window, select the **Application** tab, and then select **SimpleDataApp.Navigation** in the **Startup form** list.  
   
-#### 이벤트 처리기 만들기  
- 폼의 세 단추에 대해 빈 Click 이벤트 처리기를 만듭니다.  [방법: Windows Forms 디자이너에서 기본 이벤트 처리기 만들기](http://msdn.microsoft.com/ko-kr/757bcc16-1dc2-4d68-b115-ac0f53f05c8d)를 참조하세요.  
+#### <a name="create-event-handlers"></a>Create event handlers  
+ Double-click the three buttons on the form to create empty event-handler methods.  
   
-#### 탐색 코드 만들기  
- Navigation 폼에서 기존 코드를 다음 코드로 바꿉니다.  
+#### <a name="create-code-for-navigation"></a>Create code for Navigation  
+ In the Navigation form, replace the existing code with the following code.  
   
 ```c#  
 using System;  
@@ -309,14 +333,14 @@ End Namespace
   
 ```  
   
-### NewCustomer 폼  
- 고객 이름을 입력한 후 **계정 만들기** 단추를 선택하면 NewCustomer 폼은 고객 계정을 만들고 SQL Server는 ID 값을 새 계정 번호로 반환합니다.  그런 다음 새 계정에 대해 금액과 주문 날짜를 지정하고 **주문** 단추를 선택하여 주문합니다.  
+### <a name="newcustomer-form"></a>NewCustomer form  
+ When you enter a customer name and then select the **Create Account** button, the NewCustomer form creates a customer account, and SQL Server returns an IDENTITY value as the new account number. You then place an order for the new account by specifying an amount and an order date and selecting the **Place Order** button.  
   
-#### 이벤트 처리기 만들기  
- 폼의 각 단추에 대해 빈 Click 이벤트 처리기를 만듭니다.  
+#### <a name="create-event-handlers"></a>Create event handlers  
+ Create an empty Click event handler for each button on the form.  
   
-#### NewCustomer 코드 만들기  
- NewCustomer 폼에 다음 코드를 추가합니다.  코드 뒤의 번호가 매겨진 주석과 테이블을 사용하여 각 코드 블록을 단계별로 실행합니다.  
+#### <a name="create-code-for-newcustomer"></a>Create code for NewCustomer  
+ Add the following code to the NewCustomer form. Step through each code block by using the numbered comments and the table after the code.  
   
 ```c#  
 using System;  
@@ -437,15 +461,15 @@ namespace SimpleDataApp
                 cmdNewOrder.Parameters.Add(new SqlParameter("@Amount", SqlDbType.Int));  
                 cmdNewOrder.Parameters["@Amount"].Value = numOrderAmount.Value;  
   
-                //NC-23 @Status. For a new order, the status is always O (open)  
+                //NC-23 @Status. For a new order, the status is always O (open).  
                 cmdNewOrder.Parameters.Add(new SqlParameter("@Status", SqlDbType.Char, 1));  
                 cmdNewOrder.Parameters["@Status"].Value = "O";  
   
-                //NC-24 Add return value for stored procedure, which is the orderID.  
+                //NC-24 Add return value for stored procedure, which is orderID.  
                 cmdNewOrder.Parameters.Add(new SqlParameter("@RC", SqlDbType.Int));  
                 cmdNewOrder.Parameters["@RC"].Direction = ParameterDirection.ReturnValue;  
   
-                //try – catch - finally  
+                //try-catch-finally  
                 try  
                 {  
                     //Open connection.  
@@ -494,13 +518,13 @@ namespace SimpleDataApp
             }  
         }  
   
-        //NC-27 Reset the form for another new account  
+        //NC-27 Reset the form for another new account.  
         private void btnAddAnotherAccount_Click(object sender, EventArgs e)  
         {  
             this.ClearForm();  
         }  
   
-        //NC-28 Clear values from controls  
+        //NC-28 Clear values from controls.  
         private void ClearForm()  
         {  
             txtCustomerName.Clear();  
@@ -632,11 +656,11 @@ Namespace SimpleDataApp
                 cmdNewOrder.Parameters.Add(New SqlParameter("@Status", SqlDbType.[Char], 1))  
                 cmdNewOrder.Parameters("@Status").Value = "O"  
   
-                ' NC-24 add return value for stored procedure, which is the orderID  
+                ' NC-24 Add return value for stored procedure, which is orderID.  
                 cmdNewOrder.Parameters.Add(New SqlParameter("@RC", SqlDbType.Int))  
                 cmdNewOrder.Parameters("@RC").Direction = ParameterDirection.ReturnValue  
   
-                ' try – catch - finally  
+                ' try-catch-finally  
                 Try  
                     ' Open connection.  
                     conn.Open()  
@@ -650,7 +674,7 @@ Namespace SimpleDataApp
   
                 Catch  
                     ' A simple catch.  
-                    MessageBox.Show("Order could not not be placed.")  
+                    MessageBox.Show("Order could  not be placed.")  
   
                 Finally  
                     ' Close connection.  
@@ -667,7 +691,7 @@ Namespace SimpleDataApp
                 MessageBox.Show("Please create customer account before placing order.")  
                 Return False  
   
-                ' Verify that Amount isn't 0   
+                ' Verify that Amount isn't 0.   
             ElseIf (numOrderAmount.Value < 1) Then  
   
                 MessageBox.Show("Please specify an order amount.")  
@@ -701,40 +725,40 @@ Namespace SimpleDataApp
 End Namespace  
 ```  
   
-|주석|설명|  
-|--------|--------|  
-|NC\-1|네임스페이스 목록에 System.Data.SqlClient 및 System.Configuration을 추가합니다.|  
-|NC\-2|나중에 사용할 `parsedCustomerID` 및 `orderID` 변수를 선언합니다.|  
-|NC\-3|`GetConnectionString` 메서드를 호출하여 응용 프로그램 구성 파일에서 연결 문자열을 가져오고 `connstr` 문자열 변수에 값을 저장합니다.|  
-|NC\-4|`btnCreateAccount` 단추에 대한 클릭 이벤트 처리기에 코드를 추가합니다.|  
-|NC\-5|고객 이름이 있는 경우에만 `uspNewCustomer`가 실행되도록 Click 이벤트 코드 주변의 `isCustomerName`에 대한 호출을 래핑합니다.|  
-|NC\-6|`SqlConnection` 개체\(`conn`\)를 만들어 `connstr`의 연결 문자열에 전달합니다.|  
-|NC\-7|`SqlCommand` 개체\(`cmdNewCustomer`\)를 만듭니다.<br /><br /> -   실행할 저장 프로시저로 `Sales.uspNewCustomer`를 지정합니다.<br />-   `CommandType` 속성을 사용하여 명령이 저장 프로시저임을 지정합니다.|  
-|NC\-8|저장 프로시저에서 `@CustomerName` 입력 매개 변수를 추가합니다.<br /><br /> -   `Parameters` 컬렉션에 매개 변수를 추가합니다.<br />-   매개 변수 형식을 nvarchar\(40\)으로 지정하려면 SqlDbType 열거형을 사용합니다.<br />-   `txtCustomerName.Text`를 소스로 지정합니다.|  
-|NC\-9|저장 프로시저에서 출력 매개 변수를 추가합니다.<br /><br /> -   `Parameters` 컬렉션에 매개 변수를 추가합니다.<br />-   `ParameterDirection.Output`을 사용하여 매개 변수를 출력으로 식별합니다.|  
-|NC\-10|Try – Catch – Finally 블록을 추가하여 연결을 열고, 저장 프로시저를 실행하고, 예외를 처리한 다음, 연결을 닫습니다.|  
-|NC\-11|NC\-6에서 만든 연결\(`conn`\)을 엽니다.|  
-|NC\-12|`cmdNewCustomer`의 `ExecuteNonQuery` 메서드를 사용하여 `Sales.uspNewCustomer` 저장 프로시저를 실행합니다. 이 저장 프로시저는 쿼리가 아닌 `INSERT` 문을 실행합니다.|  
-|NC\-13|데이터베이스에서 IDENTITY 값으로 `@CustomerID` 값이 반환됩니다.  정수이므로 문자열로 변환해야 고객 ID 텍스트 상자에 표시됩니다.<br /><br /> -   NC\-2에서 `parsedCustomerID`를 선언했습니다.<br />-   나중에 사용할 수 있도록 `@CustomerID` 값을 `parsedCustomerID`에 저장합니다.<br />-   반환된 고객 ID를 문자열로 변환하여 `txtCustomerID.Text`에 삽입합니다.|  
-|NC\-14|이 샘플에서는 간단한 비프로덕션 품질의 catch 절을 추가합니다.|  
-|NC\-15|연결을 사용한 후에는 반드시 닫아야 연결 풀로 해제됩니다.  [SQL Server 연결 풀링\(ADO.NET\)](http://msdn.microsoft.com/library/8xx3tyca\(l=en-us,v=VS.110\).aspx)을 참조하세요.|  
-|NC\-16|고객 이름이 있는지 확인하는 메서드를 정의합니다.<br /><br /> -   텍스트 상자가 비어 있는 경우 계정을 만드는 데 이름이 필요하므로 메시지가 표시되고 `false`가 반환됩니다.<br />-   텍스트 상자가 비어 있지 않은 경우 `true`를 반환합니다.|  
-|NC\-17|`btnPlaceOrder` 단추에 대한 클릭 이벤트 처리기에 코드를 추가합니다.|  
-|NC\-18|필수 입력이 없는 경우 `uspPlaceNewOrder`가 실행되지 않도록 `btnPlaceOrder_Click` 이벤트 코드 주변의 `isPlaceOrderReady`에 대한 호출을 래핑합니다.|  
-|NC\-19~NC\-25|이러한 코드 섹션은 `btnCreateAccount_Click` 이벤트 처리기에 추가한 코드와 유사합니다.<br /><br /> -   NC\-19.  `SqlCommand` 개체인 `cmdNewOrder`를 만들고 `Sales.uspPlaceOrder`를 저장 프로시저로 지정합니다.<br />-   NC\-20~NC\-23은 저장 프로시저의 입력 매개 변수입니다.<br />-   NC\-24.  `@RC`에는 데이터베이스에서 생성된 주문 ID인 반환 값이 포함됩니다.  이 매개 변수의 방향은 `ReturnValue`로 지정됩니다.<br />-   NC\-25.  NC\-2에서 선언한 `orderID` 변수에 주문 ID 값을 저장하고 값을 메시지 상자에 표시합니다.|  
-|NC\-26|고객 ID가 있는지와 금액이 `numOrderAmount`에 지정되었는지 확인할 수 있는 메서드를 정의합니다.|  
-|NC\-27|`btnAddAnotherAccount` 클릭 이벤트 처리기에서 `ClearForm` 메서드를 호출합니다.|  
-|NC\-28|다른 고객을 추가하려면 폼에서 값을 지우는 `ClearForm` 메서드를 만듭니다.|  
-|NC29|NewCustomer 폼을 닫고 탐색 폼으로 포커스를 되돌립니다.|  
+|Comment|Description|  
+|-------------|-----------------|  
+|NC-1|Add `System.Data.SqlClient` and `System.Configuration` to the list of namespaces.|  
+|NC-2|Declare the `parsedCustomerID` and `orderID` variables, which you'll use later.|  
+|NC-3|Call the `GetConnectionString` method to get the connection string from the App config file, and store the value in the `connstr` string variable.|  
+|NC-4|Add code to the Click event handler for the `btnCreateAccount` button.|  
+|NC-5|Wrap the call to `isCustomerName` around the Click event code so that `uspNewCustomer` runs only if a customer name is present.|  
+|NC-6|Create a `SqlConnection` object (`conn`), and pass in the connection string in `connstr`.|  
+|NC-7|Create a `SqlCommand` object, `cmdNewCustomer`.<br /><br /> -   Specify `Sales.uspNewCustomer` as the stored procedure to run.<br />-   Use the `CommandType` property to specify that the command is a stored procedure.|  
+|NC-8|Add the `@CustomerName` input parameter from the stored procedure.<br /><br /> -   Add the parameter to the `Parameters` collection.<br />-   Use the `SqlDbType` enumeration to specify the parameter type as nvarchar(40).<br />-   Specify `txtCustomerName.Text` as the source.|  
+|NC-9|Add the output parameter from the stored procedure.<br /><br /> -   Add the parameter to the `Parameters` collection.<br />-   Use `ParameterDirection.Output` to identify the parameter as output.|  
+|NC-10|Add a Try-Catch-Finally block to open the connection, run the stored procedure, handle exceptions, and then close the connection.|  
+|NC-11|Open the connection (`conn`) that you created at NC-6.|  
+|NC-12|Use the `ExecuteNonQuery` method for  `cmdNewCustomer` to run the `Sales.uspNewCustomer` stored procedure. This stored procedure runs an `INSERT` statement, not a query.|  
+|NC-13|The `@CustomerID` value is returned as an IDENTITY value from the database. Because it's an integer, you'll have to convert it to a string to display it in the **Customer ID** text box.<br /><br /> -   You declared `parsedCustomerID` at NC-2.<br />-   Store the `@CustomerID` value in `parsedCustomerID` for later use.<br />-   Convert the returned customer ID to a string, and insert it into `txtCustomerID.Text`.|  
+|NC-14|For this sample, add a simple (not production-quality) catch clause.|  
+|NC-15|Always close a connection after you finish using it, so that it can be released to the connection pool. See [SQL Server Connection Pooling (ADO.NET)](http://msdn.microsoft.com/library/8xx3tyca\(l=en-us,v=VS.110\).aspx).|  
+|NC-16|Define a method to verify that a customer name is present.<br /><br /> -   If the text box is empty, display a message and return `false`, because a name is required to create the account.<br />-   If the text box isn't empty, return `true`.|  
+|NC-17|Add code to the Click event handler for the `btnPlaceOrder` button.|  
+|NC-18|Wrap the call to `isPlaceOrderReady` around the `btnPlaceOrder_Click` event code so that `uspPlaceNewOrder` doesn't run if required input isn't present.|  
+|NC-19 through NC-25|These sections of code resemble the code that you added for the `btnCreateAccount_Click` event handler.<br /><br /> -   NC-19. Create the `SqlCommand` object, `cmdNewOrder`, and specify `Sales.uspPlaceOrder` as the stored procedure.<br />-   NC-20 through NC-23 are the input parameters for the stored procedure.<br />-   NC-24. `@RC` will contain a return value that's the generated order ID from the database. This parameter's direction is specified as `ReturnValue`.<br />-   NC-25. Store the value of order ID in the `orderID` variable that you declared at NC-2, and display the value in a message box.|  
+|NC-26|Define a method to verify that a customer ID exists and that an amount has been specified in `numOrderAmount`.|  
+|NC-27|Call the `ClearForm` method in the `btnAddAnotherAccount` Click event handler.|  
+|NC-28|Create the `ClearForm` method to clear values from the form if you want to add another customer.|  
+|NC29|Close the NewCustomer form, and return focus to the Navigation form.|  
   
-### FillOrCancel 폼  
- FillorCancel 폼은 주문 ID를 입력하고 **주문 찾기** 단추를 선택하면 주문을 반환하는 쿼리를 실행합니다.  반환되는 행은 읽기 전용 데이터 표에 표시됩니다.  **주문 취소** 단추를 선택할 경우 주문을 취소됨\(X\)으로 표시하거나 **주문 이행** 단추를 선택할 경우 주문을 이행됨\(F\)으로 표시할 수 있습니다.  **주문 이행** 단추를 다시 선택하면 업데이트된 행이 나타납니다.  
+### <a name="fillorcancel-form"></a>FillOrCancel form  
+ The FillOrCancel form runs a query to return an order when you enter an order ID and select the **Find Order** button. The returned row appears in a read-only data grid. You can mark the order as canceled (X) if you select the **Cancel Order** button, or you can mark the order as filled (F) if you select the **Fill Order** button. If you select the **Find Order** button again, the updated row appears.  
   
-#### 이벤트 처리기 만들기  
- 폼의 네 단추에 대해 빈 Click 이벤트 처리기를 만듭니다.  
+#### <a name="create-event-handlers"></a>Create event handlers  
+ Create empty Click event handlers for the four buttons on the form.  
   
-#### FillOrCancel 코드 만들기  
- FillOrCancel 폼에 다음 코드를 추가합니다.  코드 뒤의 번호가 매겨진 주석과 테이블을 사용하여 코드 블록을 단계별로 실행합니다.  
+#### <a name="create-code-for-fillorcancel"></a>Create code for FillOrCancel  
+ Add the following code to the FillOrCancel form. Step through the code blocks by using the numbered comments and the table that follows the code.  
   
 ```c#  
 using System;  
@@ -769,7 +793,7 @@ namespace SimpleDataApp
         //FC-4 Find an order.  
         private void btnFindByOrderID_Click(object sender, EventArgs e)  
         {  
-            //FC-5 Prepare the connection and the command  
+            //FC-5 Prepare the connection and the command.  
             if (isOrderID())  
             {  
                 //Create the connection.  
@@ -785,7 +809,7 @@ namespace SimpleDataApp
                 cmdOrderID.Parameters.Add(new SqlParameter("@orderID", SqlDbType.Int));  
                 cmdOrderID.Parameters["@orderID"].Value = parsedOrderID;  
   
-                //try – catch - finally  
+                //try-catch-finally  
                 try  
                 {  
                     //FC-6 Run the command and display the results.  
@@ -801,7 +825,7 @@ namespace SimpleDataApp
                     //Load the data from SqlDataReader into the data table.  
                     dataTable.Load(rdr);  
   
-                    //Display the data from the datatable in the datagridview.  
+                    //Display the data from the data table in the data grid view.  
                     this.dgvCustomerOrders.DataSource = dataTable;  
   
                     //Close the SqlDataReader.  
@@ -879,7 +903,7 @@ namespace SimpleDataApp
                 cmdFillOrder.Parameters.Add(new SqlParameter("@FilledDate", SqlDbType.DateTime, 8));  
                 cmdFillOrder.Parameters["@FilledDate"].Value = dtpFillDate.Value;  
   
-                //try – catch - finally  
+                //try-catch-finally  
                 try  
                 {  
                     //Open the connection.  
@@ -955,10 +979,10 @@ Imports System.Configuration
 Namespace SimpleDataApp  
     Partial Public Class FillOrCancel  
         Inherits Form  
-        ' FC-2 Storage for OrderID  
+        ' FC-2 Storage for OrderID.  
         Private parsedOrderID As Integer  
   
-        ' FC-3 Specify a connection string  
+        ' FC-3 Specify a connection string.  
         Private connstr As String = SimpleDataApp.Utility.GetConnectionString()  
   
         Public Sub New()  
@@ -996,10 +1020,10 @@ Namespace SimpleDataApp
                     ' Create a data table to hold the retrieved data.  
                     Dim dataTable As New DataTable()  
   
-                    ' Load the data from the SqlDataReader into the data table.  
+                    ' Load the data from SqlDataReader into the data table.  
                     dataTable.Load(rdr)  
   
-                    ' Display the data from the data table in the datagridview.  
+                    ' Display the data from the data table in the data grid view.  
                     Me.dgvCustomerOrders.DataSource = dataTable  
   
                     ' Close the SqlDataReader.  
@@ -1118,17 +1142,17 @@ Namespace SimpleDataApp
 End Namespace  
 ```  
   
-|주석|설명|  
-|--------|--------|  
-|FC\-1|네임스페이스 목록에 System.Data.SqlClient, System.Configuration 및 System.Text.RegularExpressions를 추가합니다.|  
-|FC\-2|`parsedOrderID` 변수를 선언합니다.|  
-|FC\-3|`GetConnectionString` 메서드를 호출하여 응용 프로그램 구성 파일에서 연결 문자열을 가져오고 `connstr` 문자열 변수에 값을 저장합니다.|  
-|FC\-4|`btnFindOrderByID`에 대한 Click 이벤트 처리기에 추가합니다.|  
-|FC\-5|익숙해 보이시나요?  SQL 문 또는 저장 프로시저를 실행하기 전에 다음 작업을 수행해야 합니다.<br /><br /> -   SqlConnection 개체를 만듭니다.<br />-   SQL 문을 정의하거나 저장 프로시저의 이름을 지정합니다.  이 경우 `SELECT` 문을 실행합니다.<br />-   `SqlCommand` 개체를 만듭니다.<br />-   SQL 문 또는 저장 프로시저의 매개 변수를 정의합니다.|  
-|FC\-6|이 코드는 `SqlDataReader` 및 `DataTable`을 사용하여 쿼리 결과를 검색 및 표시합니다.<br /><br /> -   연결을 엽니다.<br />-   `cmdOrderID`의 `ExecuteReader` 메서드를 실행하여 SqlDataReader `rdr`을 만듭니다.<br />-   `DataTable` 개체를 만들어 검색된 데이터를 저장합니다.<br />-   `SqlDataReader`에서 `DataTable` 개체로 데이터를 로드합니다.<br />-   `DataTable`을 DataGridView에 대한 `DataSource`로 지정하여 DataGridView에 데이터를 표시합니다.<br />-   SqlDataReader를 닫습니다.|  
-|FC\-7|`btnCancelOrder`에 대한 Click 이벤트 처리기에 추가합니다.  이 코드는 `Sales.uspCancelOrder` 저장 프로시저를 실행합니다.|  
-|FC\-8|`btnFillOrder`에 대한 Click 이벤트 처리기에 추가합니다.  이 코드는 `Sales.uspFillOrder` 저장 프로시저를 실행합니다.|  
-|FC\-9|`OrderID`가 `SqlCommand` 개체의 매개 변수로 전송될 준비가 되었는지 확인하는 메서드를 만듭니다.<br /><br /> -   `txtOrderID`에 ID를 입력했는지 확인합니다.<br />-   `Regex.IsMatch`를 사용하여 정수가 아닌 문자에 대한 간단한 검사를 정의합니다.<br />-   FC\-2에서 `parsedOrderID` 변수를 선언했습니다.<br />-   입력이 올바른 경우 텍스트를 정수로 변환하고, 값을 `parsedOrderID` 변수에 저장합니다.<br />-   `isOrderID` 메서드를 `btnFindByOrderID`, `btnCancelOrder` 및 `btnFillOrder` 클릭 이벤트 처리기를 중심으로 래핑합니다.|  
+|Comment|Description|  
+|-------------|-----------------|  
+|FC-1|Add `System.Data.SqlClient`, `System.Configuration`, and `System.Text.RegularExpressions` to the list of namespaces.|  
+|FC-2|Declare the `parsedOrderID` variable.|  
+|FC-3|Call the `GetConnectionString` method to get the connection string from the App config file, and store the value in the `connstr` string variable.|  
+|FC-4|Add code to the Click event handler for `btnFindOrderByID`.|  
+|FC-5|These tasks are required before you try to run an SQL statement or a stored procedure.<br /><br /> -   Create a `SqlConnection` object.<br />-   Define the SQL statement or specify the name of the stored procedure. (In this case, you'll run a `SELECT` statement.)<br />-   Create a `SqlCommand` object.<br />-   Define any parameters for the SQL statement or stored procedure.|  
+|FC-6|This code uses `SqlDataReader` and `DataTable` to retrieve and display the query result.<br /><br /> -   Open the connection.<br />-   Create a `SqlDataReader` object, `rdr`, by running  the `ExecuteReader` method for `cmdOrderID`.<br />-   Create a `DataTable` object to hold the retrieved data.<br />-   Load the data from the `SqlDataReader` object into the `DataTable` object.<br />-   Display the data in the data grid view by specifying `DataTable` as `DataSource` for the data grid view.<br />-   Close `SqlDataReader`.|  
+|FC-7|Add code to the Click event handler for `btnCancelOrder`. This code runs the `Sales.uspCancelOrder` stored procedure.|  
+|FC-8|Add code to the Click event handler for `btnFillOrder`. This code runs the `Sales.uspFillOrder` stored procedure.|  
+|FC-9|Create a method to verify that `OrderID` is ready to submit as a parameter to the `SqlCommand` object.<br /><br /> -   Make sure that an ID has been entered in `txtOrderID`.<br />-   Use `Regex.IsMatch` to define a simple check for non-integer characters.<br />-   You declared the `parsedOrderID` variable at FC-2.<br />-   If the input is valid, convert the text to an integer, and store the value in the `parsedOrderID` variable.<br />-   Wrap the `isOrderID` method around the `btnFindByOrderID`, `btnCancelOrder`, and `btnFillOrder` Click event handlers.|  
   
-##  <a name="BKMK_testyourapplication"></a> 응용 프로그램 테스트  
- 각 Click 이벤트 처리기를 코딩하고 코딩을 마친 후 F5 키를 선택하여 응용 프로그램을 빌드하고 테스트합니다.
+##  <a name="BKMK_testyourapplication"></a> Test your application  
+ Select the F5 key to build and test your application after you code each Click event handler, and then after you finish coding.

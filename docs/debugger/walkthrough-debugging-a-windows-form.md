@@ -1,106 +1,98 @@
 ---
-title: "연습: Windows Form 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "프로세스에 연결 대화 상자"
-  - "프로세스에 연결 대화 상자, 연습"
-  - "디버거, 프로그램에 연결"
-  - "디버깅[Visual Studio], 연습"
-  - "디버깅[Visual Studio], Windows Forms"
-  - "관리 코드 디버깅, Windows Forms"
-  - "Windows Forms 디버깅, 연습"
-  - "Windows Forms, 디버깅"
+title: 'Walkthrough: Debugging a Windows Form | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging [Visual Studio], walkthroughs
+- debugging managed code, Windows Forms
+- debugging [Visual Studio], Windows Forms
+- Attach to Process dialog box
+- debugger, attaching to programs
+- Attach to Process dialog box, walkthroughs
+- Windows Forms, debugging
+- debugging Windows Forms, walkthroughs
 ms.assetid: 529db1e2-d9ea-482a-b6a0-7c543d17f114
 caps.latest.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# 연습: Windows Form 디버깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d0addd573d5c339abc6714b63db6a779af72f5cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-Windows Form은 가장 일반적인 형태의 관리되는 응용 프로그램 중 하나입니다.  Windows Form은 표준 Windows 응용 프로그램을 만듭니다.  Visual Basic, C\# 또는 C\+\+를 사용하여 이 연습을 진행할 수 있습니다.  
+---
+# <a name="walkthrough-debugging-a-windows-form"></a>Walkthrough: Debugging a Windows Form
+A Windows Form is one of the most common managed applications. A Windows Form creates a standard Windows application. You can complete this walkthrough using Visual Basic, C#, or C++.  
   
- 먼저 열려 있는 솔루션을 모두 닫아야 합니다.  
+ First, you must close any open solutions.  
   
-### 이 연습을 준비하려면  
+### <a name="to-prepare-for-this-walkthrough"></a>To prepare for this walkthrough  
   
--   열려 있는 솔루션이 있으면 닫습니다. **파일** 메뉴에서 **솔루션 닫기**를 선택합니다.  
+-   If you already have an open solution open, close it. (On the **File** menu, select **Close Solution**.)  
   
-## 새 Windows Form 만들기  
- 그런 다음 새 Windows Form을 만듭니다.  
+## <a name="create-a-new-windows-form"></a>Create a New Windows Form  
+ Next, you will create a new Windows Form.  
   
-#### 이 연습에 사용할 Windows Form을 만들려면  
+#### <a name="to-create-the-windows-form-for-this-walkthrough"></a>To create the Windows form for this walkthrough  
   
-1.  **파일** 메뉴에서 **새로 만들기**를 선택한 다음 **프로젝트**를 클릭합니다.  
+1.  On the **File** menu, choose **New** and click **Project**.  
   
-     **새 프로젝트** 대화 상자가 나타납니다.  
+     The **New Project** dialog box appears.  
   
-2.  프로젝트 형식 창에서 **Visual Basic**, **Visual C\#** 또는 **Visual C\+\+** 노드를 엽니다.  
+2.  In the Project Types pane, open the **Visual Basic**, **Visual C#**, or **Visual C++** node, then  
   
-    1.  Visual Basic 또는 Visual C\#의 경우 **Windows** 노드를 선택한 다음 **템플릿** 창에서 **Windows Form 응용 프로그램**을 선택합니다.  
+    1.  For Visual Basic or Visual C#, select the **Windows** node, then select **Windows Form Application** in the **Templates** pane.  
   
-    2.  Visual C\+\+의 경우 **CLR** 노드를 선택한 다음 **템플릿** 창에서 **Windows Form 응용 프로그램**을 선택합니다.  
+    2.  For Visual C++, select the **CLR** node, then select **Windows Form Application** in the **Templates** pane..  
   
-3.  **템플릿** 창에서 **Windows 응용 프로그램**을 선택합니다.  
+3.  In the **Templates** pane, select **Windows Application**.  
   
-4.  **이름** 상자에 프로젝트의 고유 이름\(예: Walkthrough\_SimpleDebug\)을 입력합니다.  
+4.  In the **Name** box, give the project a unique name (for example, Walkthrough_SimpleDebug).  
   
-5.  **확인**을 클릭합니다.  
+5.  Click **OK**.  
   
-     새 프로젝트가 만들어지고 Windows Forms 디자이너에 새 폼이 표시됩니다.  자세한 내용은 [Windows Forms 디자이너](http://msdn.microsoft.com/ko-kr/3c3d61f8-f36c-4d41-b9c3-398376fabb15)를 참조하십시오.  
+     Visual Studio creates a new project and displays a new form in the Windows Forms designer. For more information, see [Windows Forms Designer](http://msdn.microsoft.com/en-us/3c3d61f8-f36c-4d41-b9c3-398376fabb15).  
   
-6.  **보기** 메뉴에서 **도구 상자**를 선택합니다.  
+6.  On the **View** menu, select **Toolbox**.  
   
-     도구 상자가 열립니다.  자세한 내용은 [도구 상자](../ide/reference/toolbox.md)를 참조하십시오.  
+     The Toolbox opens. For more information, see [Toolbox](../ide/reference/toolbox.md).  
   
-7.  도구 상자에서 **Button** 컨트롤을 클릭한 다음 폼 디자인 표면으로 끕니다.  단추를 폼 위에 놓습니다.  
+7.  In the Toolbox, click on the **Button** control and drag the control to the Form design surface. Drop the button on the form.  
   
-8.  도구 상자에서 **TextBox** 컨트롤을 클릭한 다음 폼 디자인 표면으로 끕니다.  **TextBox**를 폼 위에 놓습니다.  
+8.  In the Toolbox, click on the **TextBox** control and drag the control to the Form design surface. Drop the **TextBox** on the form.  
   
-9. 폼 디자인 표면에서 단추를 두 번 클릭합니다.  
+9. On the form design surface, double-click the button.  
   
-     그러면 코드 페이지로 이동합니다.  커서는 `button1_Click`에 있어야 합니다.  
+     This takes you to the code page. The cursor should be in `button1_Click`.  
   
-10. `button1_Click` 함수에 다음 코드를 추가합니다.  
-  
-    ```  
-    ' Visual Basic  
-    textBox1.Text = "Button was clicked!"  
-  
-    // C#  
-    textBox1.Text = "Button was clicked!";  
-  
-    // C++  
-    textBox1->Text = "Button was clicked!";  
-    ```  
-  
-11. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
-  
-     프로젝트가 오류 없이 빌드되어야 합니다.  
-  
-## 폼 디버깅  
- 이제 디버깅을 시작할 수 있습니다.  
-  
-#### 이 연습에 사용하기 위해 만든 Windows Form을 디버깅하려면  
-  
-1.  소스 창에서, 텍스트를 추가한 줄의 왼쪽 여백을 클릭합니다.  
+10. In the function `button1_Click`., add the following code:  
   
     ```  
     ' Visual Basic  
@@ -113,55 +105,77 @@ Windows Form은 가장 일반적인 형태의 관리되는 응용 프로그램 �
     textBox1->Text = "Button was clicked!";  
     ```  
   
-     빨간 점이 나타나며 해당 줄의 텍스트가 빨간색으로 강조 표시됩니다.  빨간 점은 중단점을 나타냅니다.  자세한 내용은 [중단점](http://msdn.microsoft.com/ko-kr/fe4eedc1-71aa-4928-962f-0912c334d583)을 참조하십시오.  디버거에서 응용 프로그램을 실행하면 코드가 적중되는 위치에서 디버거가 실행을 중단합니다.  그런 다음 응용 프로그램의 상태를 보고 디버깅할 수 있습니다.  
+11. On the **Build** menu, select **Build Solution**.  
+  
+     The project should build with no errors.  
+  
+## <a name="debug-your-form"></a>Debug Your Form  
+ Now, you are ready to begin debugging.  
+  
+#### <a name="to-debug-the-windows-form-created-for-this-walkthrough"></a>To debug the Windows Form created for this walkthrough  
+  
+1.  In the source window, click the left margin on the same line as the text you added:  
+  
+    ```  
+    ' Visual Basic  
+    textBox1.Text = "Button was clicked!"  
+  
+    // C#  
+    textBox1.Text = "Button was clicked!";  
+  
+    // C++  
+    textBox1->Text = "Button was clicked!";  
+    ```  
+  
+     A red dot appears and the text on the line is highlighted in red. The red dot represents a breakpoint. For more information, see [Breakpoints](http://msdn.microsoft.com/en-us/fe4eedc1-71aa-4928-962f-0912c334d583). When you run the application under the debugger, the debugger will break execution at that location when the code is hit. You can then view the state of your application and debug it.  
   
     > [!NOTE]
-    >  코드 줄을 마우스 오른쪽 단추로 클릭하고 **중단점**을 가리킨 다음 **중단점 삽입**을 클릭하여 해당 줄에 중단점을 추가합니다.  
+    >  You can also right-click any line of code, point to **Breakpoint**, and then click **Insert Breakpoint** to add a breakpoint on that line.  
   
-2.  **디버그** 메뉴에서 **시작**을 선택합니다.  
+2.  ON the **Debug** menu, choose **Start**.  
   
-     Windows Form이 실행되기 시작합니다.  
+     The Windows Form starts running.  
   
-3.  Windows Form에서, 추가한 단추를 클릭합니다.  
+3.  On the Windows Form, click the button you added.  
   
-     Visual Studio의 경우, 코드 페이지에서 중단점을 설정한 줄로 이동합니다.  이 줄은 노란색으로 강조 표시되어 있어야 합니다.  이제 응용 프로그램의 변수를 보고 해당 응용 프로그램의 실행을 제어할 수 있습니다.  응용 프로그램이 실행을 중지하고 사용자의 동작을 기다립니다.  
+     In Visual Studio, this takes you to the line where you set your breakpoint on the code page. This line should be highlighted in yellow. You can now view the variables in your application and control its execution. Your application has now stopped executing, waiting for an action from you.  
   
-4.  **디버그** 메뉴에서 **창**, **조사식**, **조사식1**을 차례로 선택합니다.  
+4.  On the **Debug** menu, choose **Windows**, then **Watch**, and click **Watch1**.  
   
-5.  **조사식1** 창에서 빈 행을 클릭합니다.  **이름** 열에 `textBox1.Text`\(Visual Basic, Visual C\# 또는 J\#을 사용하는 경우\) 또는 `textBox1->Text`\(C\+\+를 사용하는 경우\)를 입력한 다음 Enter 키를 누릅니다.  
+5.  In the **Watch1** window, click on a blank row. In the **Name** column, type `textBox1.Text` (if you are using Visual Basic, Visual C#, or J#) or `textBox1->Text` (if you are using C++), then press ENTER.  
   
-     **조사식1** 창에 다음과 같이 이 변수의 값이 인용 부호 안에 표시됩니다.  
+     The **Watch1** window shows the value of this variable in quotation marks as:  
   
     ```  
     ""  
     ```  
   
-6.  **디버그** 메뉴에서 **한 단계씩 코드 실행**을 선택합니다.  
+6.  On the **Debug** menu, choose **Step Into**.  
   
-     **조사식1** 창에서 textBox1.Text 값이 다음과 같이 변경됩니다.  
+     The value of textBox1.Text changes in the **Watch1** window to:  
   
     ```  
     Button was clicked!  
     ```  
   
-7.  **디버그** 메뉴에서 **계속**을 선택하여 프로그램 디버깅을 다시 시작합니다.  
+7.  On the **Debug** menu, choose **Continue** to resume debugging your program.  
   
-8.  Windows Form에서 단추를 다시 클릭합니다.  
+8.  On the Windows Form, click the button again.  
   
-     Visual Studio가 다시 실행을 중단합니다.  
+     Visual Studio breaks execution again.  
   
-9. 중단점을 나타내는 빨간색 점을 클릭합니다.  
+9. Click on the red dot that represents the breakpoint.  
   
-     그러면 코드에서 중단점이 제거됩니다.  
+     This removes the breakpoint from your code.  
   
-10. **디버그** 메뉴에서 **디버깅 중지**를 선택합니다.  
+10. On the **Debug** menu, choose **Stop Debugging**.  
   
-## Windows Form 응용 프로그램에 연결하여 디버깅 수행  
- [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]에서는 실행 중인 프로세스에 디버거를 연결할 수 있습니다.  Express 버전을 사용하는 경우에는 이 기능이 지원되지 않습니다.  
+## <a name="attach-to-your-windows-form-application-for-debugging"></a>Attach to Your Windows Form Application for Debugging  
+ In [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)], you can attach the debugger to a running process. If you are using an Express Edition, this feature is not supported.  
   
-#### Windows Form 응용 프로그램에 연결하여 디버깅을 수행하려면  
+#### <a name="to-attach-to-the-windows-form-application-for-debugging"></a>To attach to the Windows Form Application for debugging  
   
-1.  위에서 만든 프로젝트에서 왼쪽 여백을 클릭하여 다음 코드가 추가된 줄에서 중단점을 다시 한 번 설정합니다.  
+1.  In the project you created above, click in the left margin to once again set a breakpoint at the line you added:  
   
     ```  
     ' Visual Basic  
@@ -174,22 +188,22 @@ Windows Form은 가장 일반적인 형태의 관리되는 응용 프로그램 �
     textBox1->Text = "Button was clicked!";  
     ```  
   
-2.  **디버그** 메뉴에서 **디버깅하지 않고 시작**을 선택합니다.  
+2.  On the **Debug** menu, select **Start Without Debugging**.  
   
-     실행 파일을 두 번 클릭했을 때처럼 Windows Form이 Windows에서 실행되기 시작합니다.  디버거는 연결되지 않습니다.  
+     The Windows Form starts running under Windows, just as if you had double-clicked its executable. The debugger is not attached.  
   
-3.  **디버그** 메뉴에서 **프로세스에 연결**을 선택합니다. 이 명령은 **도구** 메뉴에서도 사용할 수 있습니다.  
+3.  On the **Debug** menu, select **Attach to Process**. (This command is also available on the **Tools** menu.)  
   
-     **프로세스에 연결** 대화 상자가 나타납니다.  
+     The **Attach to Process** dialog box appears.  
   
-4.  **사용 가능한 프로세스** 창의 **프로세스** 열에서 프로세스 이름\(Walkthrough\_SimpleDebug.exe\)을 찾아 클릭합니다.  
+4.  In the **Available Processes** pane, find the process name (Walkthrough_SimpleDebug.exe) in the **Process** column and click it.  
   
-5.  **연결** 단추를 클릭합니다.  
+5.  Click the **Attach** button.  
   
-6.  Windows Form에서 한 단추만 클릭합니다.  
+6.  In your Windows Form, click the one and only button.  
   
-     디버거가 중단점에서 Windows Form의 실행을 중단합니다.  
+     The debugger breaks execution of the Windows Form at the breakpoint.  
   
-## 참고 항목  
- [관리 코드 디버깅](../debugger/debugging-managed-code.md)   
- [디버거 보안](../debugger/debugger-security.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Managed Code](../debugger/debugging-managed-code.md)   
+ [Debugger Security](../debugger/debugger-security.md)

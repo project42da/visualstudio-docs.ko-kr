@@ -1,5 +1,5 @@
 ---
-title: "방법: 웹 사이트에 대한 성능 데이터 수집 | Microsoft Docs"
+title: 'How to: Collect Performance Data for a Web Site | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,88 +38,90 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 9f0e4f1541de074e02c2a74e3ba2605232a53a09
-ms.lasthandoff: 03/07/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 7fe6230d86e79b6540b35d358ac9af2a3b4760a7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
 ---
-# <a name="how-to-collect-performance-data-for-a-web-site"></a>방법: 웹 사이트에 대한 성능 데이터 수집
-[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램에 대한 성능 데이터를 수집하려면 **성능 마법사**를 사용할 수 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에 열려 있는 웹 응용 프로그램을 프로파일링하거나, 로컬 컴퓨터에 있고 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE에 열려 있지 않은 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 사이트를 프로파일링할 수 있습니다.  
+# <a name="how-to-collect-performance-data-for-a-web-site"></a>How to: Collect Performance Data for a Web Site
+You can use the **Performance Wizard** to collect performance data for an [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web application. You can profile a Web application that is open in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or you can profile an [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web site that is located on your local computer and not open in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE.  
   
 > [!NOTE]
->  **성능 마법사** 에서는 계층 상호 작용(TIP) 데이터, JScript 성능 데이터 또는 둘 모두를 수집된 프로파일링 데이터에 추가할 수 있습니다. TIP 옵션은 서버 쪽 프로세스에서 데이터를 수집합니다. JScript 프로파일링은 로컬 또는 원격 웹 사이트에서 실행 중인 스크립트에서 데이터를 수집합니다. 대부분의 경우 옵션을 하나만 선택해야 합니다.  
+>  The **Performance Wizard** enables you to add tier interaction (TIP) data, JScript performance data, or both to the collected profiling data. The TIP option collects data from server-side processes. The JScript profiling collects data from scripts that are running on a local or  remote Web site. In most cases, you should choose only one of the options.  
   
- 관리자가 사용 가능하도록 설정한 사용자 액세스 권한 설정에 따라 개별 사용자는 ASP.NET 프로세스를 호스트하는 컴퓨터에서 프로파일러 세션을 만들 수 있는 보안 권한을 갖거나 갖지 못할 수 있습니다. 다음 예제에서는 사용자 간에 가능한 차이점을 보여 줍니다.  
+ Depending on User Access Permissions settings that an administrator has made available, an individual user might or might not have security permission to create a profiler session on the computer that hosts the ASP.NET process. The following examples illustrate possible differences among users:  
   
--   관리자가 드라이버 및 서비스를 시작하도록 설정한 경우 일부 사용자는 고급 프로파일링 기능에 액세스할 수 있습니다.  
+-   Some users might access advanced profiling features when the Administrator has set the driver and service to start.  
   
--   도메인 사용자는 샘플 프로파일링에만 액세스가 가능할 수 있습니다.  
+-   Domain users might access sample profiling only.  
   
--   일부 사용자는 다른 모든 사용자에 대한 프로파일링에 액세스하지 못할 수 있습니다.  
+-   Some users might deny access to profiling to all other users.  
   
- 자세한 내용은 [프로파일링 및 Windows Vista 보안](../profiling/profiling-and-windows-vista-security.md) 및 [VSPerfCmd](../profiling/vsperfcmd.md)의 ADMIN 옵션을 참조하세요.  
+ For more information, see [Profiling and Windows Vista Security](../profiling/profiling-and-windows-vista-security.md) and the ADMIN options in [VSPerfCmd](../profiling/vsperfcmd.md).  
   
-### <a name="to-profile-a-web-site-project"></a>웹 사이트 프로젝트를 프로파일링하려면  
+### <a name="to-profile-a-web-site-project"></a>To profile a Web site project  
   
-1.  [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] 또는 [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)]에서 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 프로젝트를 엽니다.  
+1.  Open the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web project in [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] or [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)].  
   
-2.  **분석** 메뉴에서 **성능 프로파일러**를 선택하고 **성능 탐색기**를 선택한 다음 **시작**을 선택합니다.  
+2.  On the **Analyze** menu, select **Performance Profiler**, select **Performance Explorer**, and then select **Start**.  
   
-3.  마법사의 첫 번째 페이지에서 프로파일링 방법을 선택하고 **다음**을 클릭합니다. 프로파일링 방법에 대한 자세한 내용은 [성능 컬렉션 메서드 이해](../profiling/understanding-performance-collection-methods.md)를 참조하세요. 동시성 시각화 도우미 프로파일링 방법은 웹 응용 프로그램에 사용할 수 없습니다.  
+3.  On the first page of the wizard, select a profiling method, and then click **Next**. For more information about profiling methods, see [Understanding Performance Collection Methods](../profiling/understanding-performance-collection-methods.md). Note that the concurrency visualizer profiling method is not available for web applications.  
   
-4.  **다음 응용 프로그램 중 프로파일링할 대상을 선택하세요.** 드롭다운 목록에서 현재 프로젝트가 선택되어 있는지 확인하고 **다음**을 클릭합니다.  
+4.  In the **Which application would you like to target for profiling?** drop-down list, make sure that the current project is selected, and then click **Next**.  
   
-5.  마법사의 세 번째 페이지에서 TIP(계층 상호 작용 프로파일링) 데이터, 웹 페이지에서 실행 중인 JavaScript의 데이터 또는 둘 모두를 선택할 수 있습니다.  
+5.  On the third page of the wizard, you can choose to add tier interaction profiling (TIP) data, data from the JavaScript running in the Web pages, or both.  
   
-    -   계층 상호 작용을 수집하려면 **계층 상호 작용 프로파일링 사용** 확인란을 선택합니다.  
+    -   To collect tier interaction, select the **Enable Tier Interaction Profiling** check box.  
   
-    -   웹 페이지에서 실행 중인 JavaScript에서 데이터를 수집하려면 **JavaScript 프로파일링** 확인란을 선택합니다.  
+    -   To collect data from the JavaScript running in the Web pages, select the **Profile JavaScript** check box.  
   
-6.  **다음**을 클릭합니다.  
+6.  Click **Next**.  
   
-7.  마법사의 네 번째 페이지에서 **마침**을 클릭합니다.  
+7.  On the fourth page of the wizard, click **Finish**.  
   
-8.  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 응용 프로그램에 대해 성능 세션이 만들어지고 브라우저에서 웹 사이트가 시작됩니다. 프로파일링을 수행할 기능을 실행하고 브라우저를 닫습니다.  
+8.  A performance session is created for the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application, and the Web site is started in the browser. Exercise the functionality that you want to profile, and then close the browser.  
   
-     프로파일러는 데이터 파일을 생성하고 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 주 창에 데이터의 요약 보기를 표시합니다.  
+     The profiler generates the data file and displays the Summary view of the data in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] main window.  
   
-### <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Visual Studio에서 프로젝트를 열지 않고 웹 사이트를 프로파일링하려면  
+### <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>To profile a Web site without opening a project in Visual Studio  
   
-1.  [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] 또는 [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)]를 엽니다.  
+1.  Open [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] or [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)].  
   
-2.  **분석** 메뉴에서 **성능 프로파일러**를 선택하고 **성능 탐색기**를 선택한 다음 **시작**을 선택합니다.  
+2.  On the **Analyze** menu, select **Performance Profiler**, select **Performance Explorer**, and then select **Start**.  
   
-3.  마법사의 첫 번째 페이지에서 프로파일링 방법을 선택하고 **다음**을 클릭합니다. 자세한 내용은 [성능 컬렉션 메서드 이해](../profiling/understanding-performance-collection-methods.md)를 참조하세요.  
+3.  On the first page of the wizard, select a profiling method, and then click **Next**. For more information, see [Understanding Performance Collection Methods](../profiling/understanding-performance-collection-methods.md).  
   
-4.  마법사의 두 번째 페이지에서 **ASP.NET 또는 JavaScript 응용 프로그램 프로파일링** 옵션을 선택하고 **다음**을 클릭합니다.  
+4.  On the second page of the wizard, select the **Profile an ASP.NET or JavaScript application** option, and then click **Next**.  
   
-5.  마법사의 세 번째 페이지에서 **웹 응용 프로그램이 실행될 URL 또는 경로** 상자에 응용 프로그램 홈 페이지에 대한 URL을 입력하고 **다음**을 클릭합니다.  
+5.  In the **What URL or Path will run your web application** box on the third page of the wizard, enter the URL to the application home page, and then click **Next**.  
   
-    -   서버(IIS) 기반 웹 사이트에는 **http://localhost/MySite/default.aspx**같은 URL을 입력합니다. 이렇게 하면 MySite의 응용 프로그램 루트에서 로컬 컴퓨터의 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 응용 프로그램이 프로파일링되며, 해당 사이트의 default.aspx 페이지가 Internet Explorer에서 시작되어 세션이 시작됩니다.  
+    -   For a server (IIS) based Web site, type a URL such as **http://localhost/MySite/default.aspx**. This causes the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application on the local computer at the application root of MySite to be profiled, and the page default.aspx on that site to be started in Internet Explorer to start the session.  
   
-    -   파일 기반 웹 사이트에는 file///**c:\WebSites\MySite\default.aspx**같은 경로를 입력합니다. 이렇게 하면 c:\webSites\MySite에 있는 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 응용 프로그램이 프로파일링되고 http://localhost:nnnn/MySite/default.aspx 페이지가 Internet Explorer에서 시작되어 세션이 시작됩니다.  
+    -   For a file based Web site, type a path such as file///**c:\WebSites\MySite\default.aspx**. This causes the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application located at c:\webSites\MySite to be profiled and the page http://localhost:nnnn/MySite/default.aspx to be started in Internet Explorer to start the session.  
   
-    -   JavaScript 데이터를 수집할 외부 사이트에는 http://www.contoso.com 같은 URL을 입력합니다.  
+    -   For external sites that you wish to collect JavaScript data on, type the URL, for example http://www.contoso.com.  
   
-     자세한 내용은 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 대상 이진에 대한 속성 페이지를 참조하세요.  
+     For more information, view the property pages for an [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] target binary.  
   
-6.  마법사의 세 번째 페이지에서 TIP(계층 상호 작용 프로파일링) 데이터, 웹 페이지에서 실행 중인 JavaScript의 데이터 또는 둘 모두를 선택할 수 있습니다.  
+6.  On the third page of the wizard, you can choose to add tier interaction profiling (TIP) data, data from the JavaScript running in the Web pages, or both.  
   
-    -   계층 상호 작용을 수집하려면 **계층 상호 작용 프로파일링 사용** 확인란을 선택합니다.  
+    -   To collect tier interaction, select the **Enable Tier Interaction Profiling** check box.  
   
-    -   웹 페이지에서 실행 중인 JavaScript에서 데이터를 수집하려면 **JavaScript 프로파일링** 확인란을 선택합니다.  
+    -   To collect data from the JavaScript running in the Web pages, select the **Profile JavaScript** check box.  
   
-7.  **다음**을 클릭합니다.  
+7.  Click **Next**.  
   
-8.  마법사의 네 번째 페이지에서 **마침**을 클릭합니다.  
+8.  On the fourth page of the wizard, click **Finish**.  
   
-9. ASP.NET 앱에 대한 성능 세션이 만들어지고 브라우저에서 웹 사이트가 시작됩니다. 프로파일링을 수행할 기능을 실행하고 브라우저를 닫습니다.  
+9. A performance session is created for the ASP.NET application, and the Web site is started in the browser. Exercise the functionality that you want to profile, and then close the browser.  
   
-     프로파일러는 데이터 파일을 생성하고 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 주 창에 데이터의 요약 보기를 표시합니다.  
+     The profiler generates the data file and displays the Summary view of the data in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] main window.  
   
-## <a name="see-also"></a>참고 항목  
- [개요](../profiling/overviews-performance-tools.md)   
- [성능 세션 구성](../profiling/configuring-performance-sessions.md)   
- [계측 데이터 값 이해](../profiling/understanding-instrumentation-data-values.md)   
- [샘플링 데이터 값 이해](../profiling/understanding-sampling-data-values.md)
+## <a name="see-also"></a>See Also  
+ [Overviews](../profiling/overviews-performance-tools.md)   
+ [Configuring Performance Sessions](../profiling/configuring-performance-sessions.md)   
+ [Understanding Instrumentation Data Values](../profiling/understanding-instrumentation-data-values.md)   
+ [Understanding Sampling Data Values](../profiling/understanding-sampling-data-values.md)
+

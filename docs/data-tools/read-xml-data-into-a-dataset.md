@@ -1,76 +1,95 @@
 ---
-title: "연습: XML 데이터를 데이터 집합으로 읽어 오기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "데이터[Visual Studio], XML 파일 읽기"
-  - "데이터 액세스[Visual Studio], XML 데이터"
-  - "데이터 집합[Visual Basic], XML 데이터 읽기"
-  - "데이터 읽기, XML 파일"
-  - "파일 읽기, XML"
-  - "XML 읽기"
-  - "XML[Visual Studio], 읽기"
-  - "XML 문서, 읽기"
+title: Read XML data into a dataset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- reading XML
+- data access [Visual Studio], XML data
+- reading files, XML
+- data [Visual Studio], reading from XML files
+- reading data, XML files
+- XML [Visual Studio], reading
+- XML documents, reading
+- datasets [Visual Basic], reading XML data
 ms.assetid: fae72958-0893-47d6-b3dd-9d42418418e4
 caps.latest.revision: 18
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 09ace7a25c3dc68ef9c2d27269308573dced409c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
+
 ---
-# 연습: XML 데이터를 데이터 집합으로 읽어 오기
-ADO.NET에서는 간단하게 XML 데이터를 처리할 수 있는 방법을 제공합니다.  이 연습에서는 XML 데이터를 데이터 집합으로 로드하는 Windows 응용 프로그램을 만들어  데이터 집합을 <xref:System.Windows.Forms.DataGridView>에 표시합니다.  그리고 XML 파일 내용을 기반으로 하는 XML 스키마를 텍스트 상자에 표시합니다.  
+# <a name="read-xml-data-into-a-dataset"></a>Read XML data into a dataset
+ADO.NET provides simple methods for working with XML data. In this walkthrough, you  create a Windows application that  loads XML data into a dataset. The dataset is then displayed in a <xref:System.Windows.Forms.DataGridView> control. Finally, an XML schema based on the contents of the XML file is displayed in a text box.  
   
- 이 연습은 다음과 같은 다섯 개의 주요 단계로 구성됩니다.  
+ This walkthrough consists of five main steps:  
   
-1.  새 프로젝트를 만듭니다.  
+1.  Creating a new project  
   
-2.  데이터 집합으로 읽어 올 XML 파일을 만듭니다.  
+2.  Creating an XML file to be read into the dataset  
   
-3.  사용자 인터페이스를 만듭니다.  
+3.  Creating the user interface  
   
-4.  데이터 집합을 만들고 XML 파일을 읽은 다음 <xref:System.Windows.Forms.DataGridView> 컨트롤에 표시합니다.  
+4.  Creating the dataset, reading the XML file, and displaying it in a <xref:System.Windows.Forms.DataGridView> control  
   
-5.  XML 파일을 기반으로 하는 XML 스키마를 <xref:System.Windows.Forms.TextBox> 컨트롤에 표시하는 코드를 추가합니다.  
+5.  Adding code to display the XML schema based on the XML file in a <xref:System.Windows.Forms.TextBox> control  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or the edition you're using. To change your settings, on the **Tools** menu, select **Import and Export Settings**. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 새 프로젝트 만들기  
- 이 단계에서는 이 연습이 포함될 Visual Basic 또는 Visual C\# 프로젝트를 만듭니다.  
+## <a name="create-a-new-project"></a>Create a new project  
+ In this step, you  create a Visual Basic or Visual C# project that  contains this walkthrough.  
   
-#### 새 Windows 프로젝트를 만들려면  
+#### <a name="to-create-the-new-windows-project"></a>To create the new Windows project  
   
-1.  **파일** 메뉴에서 새 프로젝트를 만듭니다.  
+1.  On the **File** menu, create a new project.  
   
-2.  프로젝트 이름을 `ReadingXML`로 지정합니다.  
+2.  Name the project `ReadingXML`.  
   
-3.  **Windows 응용 프로그램**을 선택하고 **확인**을 클릭합니다.  자세한 내용은 [클라이언트 응용 프로그램](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)를 참조하십시오.  
+3.  Select **Windows Application**, and then select**OK**. For more information, see [Client Applications](/dotnet/framework/develop-client-apps).  
   
-     **ReadingXML** 프로젝트가 만들어져 솔루션 탐색기에 추가됩니다.  
+     The **ReadingXML** project is created and added to **Solution Explorer**.  
   
-## 데이터 집합으로 읽어 올 XML 파일 만들기  
- 이 연습에서는 데이터 집합으로 XML 데이터를 읽어 오는 데 초점을 맞추고 있으므로 XML 파일 내용을 제공합니다.  
+## <a name="generate-the-xml-file-to-be-read-into-the-dataset"></a>Generate the XML file to be read into the dataset  
+ Because this walkthrough focuses on reading XML data into a dataset, the contents of an XML file is provided.  
   
-#### 데이터 집합으로 읽어 올 XML 파일을 만들려면  
+#### <a name="to-create-the-xml-file-that-will-be-read-into-the-dataset"></a>To create the XML file that will be read into the dataset  
   
-1.  **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+1.  On the **Project** menu, select **Add New Item**.  
   
-2.  **XML 파일**을 선택하고 파일 이름을 `authors.xml`로 지정한 다음 **추가**를 클릭합니다.  
+2.  Select **XML File**, name the file `authors.xml`, and then select **Add**.  
   
-     XML 파일이 디자이너로 로드되어 편집할 수 있습니다.  
+     The XML file loads into the designer and is ready for edit.  
   
-3.  다음과 같은 코드를 XML 선언 아래의 편집기에 붙여넣습니다.  
+3.  Paste the following code into the editor below the XML declaration:  
   
     ```xml  
     <Authors_Table>  
@@ -132,117 +151,113 @@ ADO.NET에서는 간단하게 XML 데이터를 처리할 수 있는 방법을 �
     </Authors_Table>  
     ```  
   
-4.  **파일** 메뉴에서 **authors.xml 저장**을 가리킵니다.  
+4.  On the **File** menu, select **Save authors.xml**.  
   
-## 사용자 인터페이스 만들기  
- 이 응용 프로그램의 사용자 인터페이스는 다음과 같은 내용으로 구성됩니다.  
+## <a name="create-the-user-interface"></a>Create the user interface  
+ The user interface for this application consists of the following:  
   
--   XML 파일의 내용을 데이터로 표시할 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+-   A <xref:System.Windows.Forms.DataGridView> control that displays the contents of the XML file as data.  
   
--   XML 파일의 XML 스키마를 표시할 <xref:System.Windows.Forms.TextBox> 컨트롤  
+-   A <xref:System.Windows.Forms.TextBox> control that displays the XML schema for the XML file.  
   
--   <xref:System.Windows.Forms.Button> 컨트롤 두 개  
+-   Two <xref:System.Windows.Forms.Button> controls.  
   
-    -   첫 번째 단추는 XML 파일을 데이터 집합으로 읽어 들여 <xref:System.Windows.Forms.DataGridView> 컨트롤에 표시합니다.  
+    -   One button reads the XML file into the dataset and displays it in the <xref:System.Windows.Forms.DataGridView> control.  
   
-    -   두 번째 단추는 데이터 집합에서 스키마를 추출하여 <xref:System.IO.StringWriter>를 통해 <xref:System.Windows.Forms.TextBox> 컨트롤에 표시합니다.  
+    -   A second button extracts the schema from the dataset, and through a <xref:System.IO.StringWriter> displays it in the <xref:System.Windows.Forms.TextBox> control.  
   
-#### 컨트롤을 폼에 추가하려면  
+#### <a name="to-add-controls-to-the-form"></a>To add controls to the form  
   
-1.  디자인 뷰에서 `Form1`을 엽니다.  
+1.  Open `Form1` in design view.  
   
-2.  **도구 상자**에서 다음 컨트롤을 폼으로 끌어 옵니다.  
+2.  From the **Toolbox**, drag the following controls onto the form:  
   
-    -   <xref:System.Windows.Forms.DataGridView> 컨트롤 하나  
+    -   One <xref:System.Windows.Forms.DataGridView> control  
   
-    -   <xref:System.Windows.Forms.TextBox> 컨트롤 하나  
+    -   One <xref:System.Windows.Forms.TextBox> control  
   
-    -   <xref:System.Windows.Forms.Button> 컨트롤 두 개  
+    -   Two <xref:System.Windows.Forms.Button> controls  
   
-3.  다음 속성을 설정합니다.  
+3.  Set the following properties:  
   
-    |컨트롤|Property|설정|  
-    |---------|--------------|--------|  
+    |Control|Property|Setting|  
+    |-------------|--------------|-------------|  
     |`TextBox1`|**Multiline**|`true`|  
-    ||**ScrollBars**|**세로**|  
+    ||**ScrollBars**|**Vertical**|  
     |`Button1`|**Name**|`ReadXmlButton`|  
     ||**Text**|`Read XML`|  
     |`Button2`|**Name**|`ShowSchemaButton`|  
     ||**Text**|`Show Schema`|  
   
-## XML 데이터를 받을 데이터 집합 만들기  
- 이 절차에서는 `authors`라는 새 데이터 집합을 만듭니다.  데이터 집합에 대한 자세한 내용은 [Visual Studio에서 데이터 집합 작업](../data-tools/dataset-tools-in-visual-studio.md)를 참조하십시오.  
+## <a name="create-the-dataset-thatreceives-the-xml-data"></a>Create the dataset thatreceives the XML data  
+ In this step, you create a new dataset named `authors`. For more information about datasets, see [Dataset tools in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).  
   
-#### XML 데이터를 받을 새 데이터 집합을 만들려면  
+#### <a name="to-create-a-new-dataset-that--receives-the-xml-data"></a>To create a new dataset that  receives the XML data  
   
-1.  **솔루션 탐색기**에 **Form1**의 소스 파일이 선택된 상태에서 **솔루션 탐색기** 도구 모음에서 **디자이너 보기**를 클릭합니다.  
+1.  In **Solution Explorer**, select the source file for **Form1**, and then select the **View Designer** button on the **Solution Explorer** toolbar.  
   
-2.  [도구 상자, 데이터 탭](../ide/reference/toolbox-data-tab.md)에서 **데이터 집합**을 **Form1**로 끌어 옵니다.  
+2.  From the [Toolbox, Data Tab](../ide/reference/toolbox-data-tab.md), drag a **DataSet** onto **Form1**.  
   
-3.  선택  **형식화 되지 않은 데이터 집합** 에 있는  **데이터 집합 추가** 클릭 하 고 대화 상자를  **확인**.  
+3.  In the **Add Dataset** dialog box, select **Untyped dataset**, and then select **OK**.  
   
-     구성 요소 트레이에 **DataSet1**이 추가됩니다.  
+     **DataSet1** is added to the component tray.  
   
-4.  **속성** 창에서 **이름**과 <xref:System.Data.DataSet.DataSetName%2A> 속성을 `AuthorsDataSet`으로 설정합니다.  
+4.  In the **Properties** window, set the **Name** and <xref:System.Data.DataSet.DataSetName%2A> properties for`AuthorsDataSet`.  
   
-## XML을 데이터 집합으로 읽어 오기 위해 이벤트 처리기 만들기  
- **Read XML** 단추를 클릭하면 XML 파일을 데이터 집합으로 읽어 온 다음 데이터 집합에 바인딩하는 <xref:System.Windows.Forms.DataGridView> 컨트롤에 속성을 설정합니다.  
+## <a name="create-the-event-handler-to-read-the-xml-file-into-the-dataset"></a>Create the event handler to read the XML file into the dataset  
+ The **Read XML** button reads the XML file into the dataset. It then sets properties on the <xref:System.Windows.Forms.DataGridView> control that bind it to the dataset.  
   
-#### ReadXmlButton\_Click 이벤트 처리기에 코드를 추가하려면  
+#### <a name="to-add-code-to-the-readxmlbuttonclick-event-handler"></a>To add code to the ReadXmlButton_Click event handler  
   
-1.  **솔루션 탐색기**에서 **Form1**을 선택하고 **솔루션 탐색기** 도구 모음에서 **디자이너 보기** 단추를 클릭합니다.  
+1.  In **Solution Explorer**, select **Form1**,  and then select the **View Designer** button on the **Solution Explorer** toolbar.  
   
-2.  **Read XML** 단추를 두 번 클릭합니다.  
+2.  Select the **Read XML** button.  
   
-     **코드 편집기**가 `ReadXmlButton_Click` 이벤트 처리기에서 열립니다.  
+     The **Code Editor** opens at the `ReadXmlButton_Click` event handler.  
   
-3.  다음 코드를 `ReadXmlButton_Click` 이벤트 처리기에 입력합니다.  
+3.  Type the following code into the `ReadXmlButton_Click` event handler:  
   
-     [!code-cs[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_1.cs)]
-     [!code-vb[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_1.vb)]  
+     [!code-cs[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_1.cs)]  [!code-vb[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_1.vb)]  
   
-4.  `ReadXMLButton_Click` 이벤트 처리기 코드에서 `filepath =` 엔트리를 올바른 경로로 변경합니다.  
+4.  In the `ReadXMLButton_Click` event handler code, change the `filepath =` entry to the correct path.  
   
-## Textbox에 스키마를 표시하기 위해 이벤트 처리기 만들기  
- **Show Schema** 단추를 클릭하면 <xref:System.IO.StringWriter> 개체를 만들어 스키마로 채우고 <xref:System.Windows.Forms.TextBox>에 표시합니다.  
+## <a name="create-the-event-handler-to-display-the-schema-in-the-textbox"></a>Create the event handler to display the schema in the textbox  
+ The **Show Schema** button creates a <xref:System.IO.StringWriter> object that's filled with the schema and is displayed in the <xref:System.Windows.Forms.TextBox>control.  
   
-#### ShowSchemaButton\_Click 이벤트 처리기에 코드를 추가하려면  
+#### <a name="to-add-code-to-the-showschemabuttonclick-event-handler"></a>To add code to the ShowSchemaButton_Click event handler  
   
-1.  **솔루션 탐색기**에서 **Form1**을 선택한 다음 **디자이너 보기** 단추를 클릭합니다.  
+1.  In **Solution Explorer**, select **Form1**, and then select the **View Designer** button.  
   
-2.  **Show Schema** 단추를 두 번 클릭합니다.  
+2.  Select the **Show Schema** button.  
   
-     **코드 편집기**가 `ShowSchemaButton_Click` 이벤트 처리기에서 열립니다.  
+     The **Code Editor** opens at the `ShowSchemaButton_Click` event handler.  
   
-3.  다음 코드를 `ShowSchemaButton_Click` 이벤트 처리기에 입력합니다.  
+3.  Type the following code into the `ShowSchemaButton_Click` event handler.  
   
-     [!code-cs[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_2.cs)]
-     [!code-vb[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_2.vb)]  
+     [!code-cs[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_2.cs)]  [!code-vb[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_2.vb)]  
   
-## 테스트  
- 이제 폼을 테스트하여 예상한 대로 동작하는지 확인할 수 있습니다.  
+## <a name="test-the-form"></a>Test the form  
+ You can now test the form to make sure it behaves as expected.  
   
-#### 폼을 테스트하려면  
+#### <a name="to-test-the-form"></a>To test the form  
   
-1.  F5 키를 눌러 응용 프로그램을 실행합니다.  
+1.  Select **F5** to run the application.  
   
-2.  **Read XML** 단추를 클릭합니다.  
+2.  Select the **Read XML** button.  
   
-     DataGridView에 XML 파일 내용이 표시됩니다.  
+     The DataGridView displays the contents of the XML file.  
   
-3.  **Show Schema** 단추를 클릭합니다.  
+3.  Select the **Show Schema** button.  
   
-     텍스트 상자에 XML 파일의 XML 스키마가 표시됩니다.  
+     The text box displays the XML schema for the XML file.  
   
-## 다음 단계  
- 이 연습에서는 XML 파일의 내용을 기반으로 스키마를 만들고 XML 파일을 데이터 집합으로 읽어 들일 때의 기본 사항을 보여 줍니다.  이후에 수행할 수 있는 작업은 다음과 같습니다.  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough teaches you the basics of reading an XML file into a dataset, as well as creating a schema based on the contents of the XML file. Here are some tasks that you might do next:  
   
--   데이터 집합에서 데이터를 편집하여 XML 형식으로 다시 기록합니다.  자세한 내용은 <xref:System.Data.DataSet.WriteXml%2A>을 참조하십시오.  
+-   Edit the data in the dataset and write it back out as XML. For more information, see <xref:System.Data.DataSet.WriteXml%2A>.  
   
--   데이터 집합에서 데이터를 편집하여 데이터베이스에 기록합니다.  자세한 내용은 [데이터 저장](../data-tools/saving-data.md)을 참조하십시오.  
+-   Edit the data in the dataset and write it out to a database. For more information, see [Saving Data](../data-tools/saving-data.md).  
   
-## 참고 항목  
- [데이터 연습](../Topic/Data%20Walkthroughs.md)   
- [Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)   
- [데이터를 받기 위해 응용 프로그램 준비](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [Visual Studio의 XML 도구](../xml-tools/xml-tools-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)       
+ [XML Tools in Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)

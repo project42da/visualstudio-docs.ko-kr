@@ -1,175 +1,208 @@
 ---
-title: "디버거로 코드 탐색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
-f1_keywords: 
-  - "vs.debug.execution"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "디버깅[Visual Studio], 실행 제어"
-  - "실행, 디버거에서 제어"
-  - "단계별 실행"
+title: Navigate Code with the Debugger in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 02/07/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.execution
+helpviewer_keywords:
+- stepping
+- debugging [Visual Studio], execution control
+- execution, controlling in debugger
 ms.assetid: 759072ba-4aaa-447e-8e51-0dd1456fe896
 caps.latest.revision: 42
-caps.handback.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 디버거로 코드 탐색
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 7ccde2740ba5216ca8e2a6258c283f655da8b06f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-디버거에서 코드 사이를 이동하는 데는 여러 방법이 있습니다. 예를 들어 메서드를 단계별로 실행하거나 프로시저 단위로 실행하거나, 중단점 또는 지정 위치까지 실행하거나, 고유 코드로 디버깅을 제한할지 아니면 외부 코드를 디버그하는 기호를 포함할지를 지정할 수 있습니다.  
+---
+# <a name="navigate-code-with-the-visual-studio-debugger"></a>Navigate Code with the Visual Studio Debugger
+Get familiar with commands and shortcuts to navigate code in the debugger and that will make it faster and easier to find and resolve issues in your app. While you navigate code in the debugger, you can inspect the state of your app or learn more about its execution flow.  
   
-##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 한 단계씩 코드 실행, 프로시저 단위 실행 또는 프로시저 나가기  
- 가장 일반적인 디버깅 절차 중 하나는 *단계별 실행*입니다. 단계별 실행은 한 번에 한 줄씩 코드를 실행합니다. 중단점까지 디버거를 실행하는 등의 방법으로 실행을 중단한 경우 다음 세 가지 **디버그** 메뉴 명령을 사용하여 코드를 단계별로 실행할 수 있습니다.  
+## <a name="start-debugging"></a>Start debugging  
+ Often, you start a debugging session using **F5** (**Debug** > **Start Debugging**). This command starts your app with the debugger attached.  
   
-|메뉴 명령|바로 가기 키|설명|  
-|-----------|-------------|--------|  
-|**한 단계씩 코드 실행**|**F11**|코드 줄에 함수 호출이 포함되어 있는 경우 **한 단계씩 코드 실행**은 호출 자체만 실행한 다음 함수 안에 있는 코드의 첫째 줄에서 중단합니다. 그렇지 않은 경우에는 **한 단계씩 코드 실행**은 다음 문을 실행합니다.|  
-|**프로시저 단위 실행**|**F10**|코드 줄에 함수 호출이 포함된 경우 **프로시저 단위 실행**은 호출된 함수를 실행한 다음 호출하는 함수 내의 첫 번째 코드 줄에서 중단됩니다. 그렇지 않은 경우에는 **한 단계씩 코드 실행**은 다음 문을 실행합니다.|  
-|**프로시저 나가기**|**Shift\+F11**|**프로시저 나가기**는 함수가 반환될 때까지 코드 실행을 계속한 다음 호출 함수의 반환점에서 중단합니다.|  
+ The green arrow also starts the debugger (same as **F5**).  
   
--   중첩된 함수 호출인 경우 **한 단계씩 코드 실행** 명령은 가장 안쪽에 중첩된 함수를 한 단계씩 실행합니다.`Func1(Func2())`와 같은 호출에 **한 단계씩 코드 실행**을 사용하면 디버거에서 함수 `Func2`를 한 단계씩 실행합니다.  
+ ![DBG&#95;Basics&#95;Start&#95;Debugging](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
   
--   실제로 디버거는 실제 줄이 아닌 코드 문을 단계별로 실행합니다. 예를 들어 한 줄에 `if` 절을 작성할 수 있습니다.  
+ A few other ways that you can start the app with the debugger attached include **F11** ([step into code](#BKMK_Step_into__over__or_out_of_the_code)),  **F10** ([step over code](#BKMK_Step_over_Step_out)), or by using **Run to Cursor**.  See the other sections in this topic for info on what these options do.  
   
-    ```c#  
+ When you debug, the yellow line shows you the code that will execute next.  
+  
+ ![DBG&#95;Basics&#95;Break&#95;Mode](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
+  
+ While debugging, you can switch between commands like **F5**, **F11** and use other features described in this topic (like breakpoints) to quickly get to the code you want to look at.  
+  
+ Most debugger features, such as viewing variable values in the Locals window or evaluating expressions in the Watch window, are available only while the debugger is paused (also called *break mode*). When the debugger is paused, your app state is suspended while functions, variables, and objects remain in memory. While in break mode, you can examine the elements' positions and states to look for violations or bugs. For some project types, you can also make adjustments to the app while in break mode. To watch a video showing these features, see [Getting Started with the Debugger](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
+  
+##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a> Step into code, line by line  
+ To stop on each line of code (each statement) while debugging, use the **F11** keyboard shortcut (or **Debug** > **Step Into** on the menu).  
+  
+> [!TIP]
+>  As you execute each line of code, you can hover over variables to see their values, or use the [Locals](../debugger/autos-and-locals-windows.md) and [Watch](../debugger/autos-and-locals-windows.md) windows to watch their values change.  
+  
+ Here are some details about the behavior of **Step Into**:  
+  
+-   On a nested function call, **Step Into** steps into the most deeply nested function. If you use **Step Into** on a call like `Func1(Func2())`, the debugger steps into the function `Func2`.  
+  
+-   The debugger actually steps through code statements rather than physical lines. For example an `if` clause can be written on one line:  
+  
+    ```CSharp  
     int x = 42;  
     string s = "Not answered";  
     if( int x == 42) s = "Answered!";  
     ```  
   
-    ```vb  
-    Dim x As Integet = 42  
+    ```VB  
+    Dim x As Integer = 42  
     Dim s As String = "Not answered"  
     If x = 42 Then s = "Answered!"  
     ```  
   
-     이 줄을 한 단계씩 실행하면 디버거는 조건을 한 단계로 처리하고 결과를 다른 단계로 처리합니다\(이 예에서는 조건이 참임\).  
+     When you step into this line, the debugger treats the condition as one step and the consequence as another (In this example, the condition is true).  
   
- 함수를 한 단계씩 실행하는 동안 호출 스택을 시각적으로 추적하려면 [디버깅하는 동안 호출 스택의 맵 메서드](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)을 참조하세요.  
+ To visually trace the call stack while stepping into functions, see [Map methods on the call stack while debugging](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
   
-##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> 중단점 또는 모두 중단을 사용하여 코드 중단  
- VS 디버거를 사용하여 응용 프로그램을 디버깅할 때 응용 프로그램은 실행 중이거나 중단 모드에 있습니다.  
+##  <a name="BKMK_Step_over_Step_out"></a> Step through code, skipping functions  
+ When running code in the debugger, often you will realize that you don't need to see what happens in a particular function (you don't care about it or you know it works, like well-tested library code). Use these commands to skip through code (the functions still execute, of course, but the debugger skips over them).  
   
- 실행이 중단점에 도달하거나 예외가 발생하면 디버거에서 응용 프로그램 실행을 중단합니다. 언제든지 수동으로 실행을 중단할 수도 있습니다.  
+|Keyboard Command|Menu Command|Description|  
+|----------------------|------------------|-----------------|  
+|**F10**|**Step Over**|If the current line contains a function call, **Step Over** runs the code then suspends execution at the first line of code after the called function returns.|  
+|**Shift+F11**|**Step Out**|**Step Out** continues running code and suspends execution when the current function returns (the debugger skips through the current function).|  
   
- 중단점은 특정 위치에서 응용 프로그램 실행을 일시 중단하도록 디버거에 지시하는 신호입니다. 프로그램 실행이 중단점에서 중단되면 프로그램은 중단 모드에 있는 것입니다. 중단 모드가 시작되어도 프로그램 실행이 중지되거나 종료되지는 않으며, 언제라도 실행을 다시 시작할 수 있습니다.  
+> [!TIP]
+>  If you need to find the entry point in your app, start with **F10** or **F11**. These commands are often helpful when you are inspecting your app state or trying to find out more about its execution flow.  
   
- 지역 창에서 변수 값 보기 또는 조사식 창에서 식 계산과 같은 대부분의 디버거 기능은 중단 모드에서만 사용할 수 있습니다. 응용 프로그램의 모든 요소가 유지되지만\(예: 함수, 변수 및 개체가 메모리에 유지됨\) 이동과 작업은 일시 중단됩니다. 중단 모드에서는 요소의 위치와 상태를 검사하여 위반이나 버그를 찾아낼 수 있습니다. 중단 모드에 있는 동안 응용 프로그램을 조정할 수도 있습니다.  
+##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> Run to a specific location or function  
+ Often the preferred method of debugging code, these methods are useful when you know exactly what code you want to inspect, or at least you know where you want to start debugging.  
   
- 다양한 조건을 기준으로 실행을 일시 중단하도록 중단점을 구성할 수 있습니다.[중단점 사용](../debugger/using-breakpoints.md)을 참조하세요. 이 단원에서는 코드를 중단하는 두 가지 기본적인 방법을 설명합니다.  
+-   **Set breakpoints in the code**  
   
-1.  **코드에 중단점 설정**  
+     To set a simple breakpoint in your code, open the source file in the Visual Studio editor. Set the cursor at the line of code where you want to suspend execution, and then right-click in the code window to see the context menu and choose **Breakpoint > Insert Breakpoint** (or press **F9**). The debugger suspends execution right before the line is executed.  
   
-     코드에 간단한 중단점을 설정하려면 Visual Studio 편집기에서 소스 파일을 엽니다. 중단하려는 코드 줄에 커서를 설정한 다음 상황에 맞는 메뉴에서 **중단점**, **중단점 삽입**을 선택합니다\(키보드: **F9**\). 디버거는 해당 줄이 실행되기 바로 전에 실행을 중단합니다.  
+     ![Set a breakpoint](../debugger/media/dbg_basics_setbreakpoint.png "DBG_Basics_SetBreakpoint")  
   
-     ![중단점 설정](~/debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
+     Breakpoints in Visual Studio provide a rich set of additional functionality, such as conditional breakpoints and tracepoints. See [Using Breakpoints](../debugger/using-breakpoints.md).  
   
-     Visual Studio에서 중단점은 조건부 중단점 및 추적점과 같은 다양한 추가 기능을 제공합니다.[중단점 사용](../debugger/using-breakpoints.md)을 참조하세요.  
+-   **Run to the cursor location**  
   
-2.  **수동으로 코드 중단**  
+     To run to the cursor location, place the cursor on an executable line of code in a source window. On the editor's context menu (right-click in the editor), choose **Run to Cursor**. This is like setting a temporary breakpoint.
+
+-   **Run to Click** 
+
+    To run to a point in your code while paused in the debugger, select the **Run execution to here** green arrow icon (you see the icon while hovering over a line of code). This eliminates the need to set temporary breakpoints.
+
+    ![Debugger's Run to Click](../debugger/media/dbg-run-to-click.png "DbgRunToClick") 
+
+    > [!NOTE]
+    > **Run to Click** is new in [!include[vs_dev15](../misc/includes/vs_dev15_md.md)].
   
-     실행 중인 응용 프로그램의 사용 가능한 다음 코드 줄에서 중단하려면 **디버그**, **모두 중단**을 선택합니다\(키보드: **Ctrl\+Alt\+Break**\).  
+-   **Manually break into code**  
   
--   내 코드만 옵션을 사용하여 디버깅하는 경우 프로젝트의 다음 코드 줄에서 중단합니다.[단계별 코드 실행을 내 코드만으로 제한](#BKMK_Restrict_stepping_to_Just_My_Code)을 참조하세요.  
+     To break into the next available line of code in an executing app, choose **Debug**, **Break All** (keyboard: **Ctrl+Alt+Break**). 
   
--   여러 프로그램을 디버깅하는 경우 중단점 또는 모두 중단 명령은 기본적으로 디버깅 중인 모든 프로그램에 적용됩니다.[여러 프로세스의 실행 동작 구성](../debugger/debug-multiple-processes.md#BKMK_Configure_the_execution_behavior_of_multiple_processes)을 참조하세요.  
+     If you break while executing code without corresponding source or symbol (.pdb) files), the debugger displays a **Source Files Not Found** or a **Symbols Not Found** page that can help you find the appropriate files. See [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). If you can't access the supporting files, you can still debug the assembly instructions in the Disassembly window.  
   
--   해당 소스 또는 기호\(.pdb\) 파일 없이 코드를 실행하는 동안 중단하는 경우 디버거에서 적절한 파일을 찾는 데 도움이 될 수 있는 **소스 파일을 찾을 수 없음** 또는 **기호를 찾을 수 없음** 페이지가 표시됩니다.[기호 파일\(.pdb\) 및 원본 파일 지정](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)을 참조하세요.  
+-   **Run to a function on the call stack**  
   
-     지원 파일에 액세스할 수 없는 경우에도 디스어셈블리 창에서 어셈블리 명령을 디버깅할 수 있습니다.  
+     In the **Call Stack** window (available while debugging), select the function, right-click and  choose **Run to Cursor**. To visually trace the call stack, see [Map methods on the call stack while debugging](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
   
-##  <a name="BKMK_Run_to_a_specified_location_or_function"></a> 지정된 위치 또는 함수까지 실행  
- 코드의 특정 위치까지 실행한 다음 실행을 중단할 수도 있습니다. 중단하려는 위치에 중단점을 설정한 경우, 디버깅을 시작하지 않았으면 **디버그**, **디버깅 시작**을 선택하고 그렇지 않으면 **디버그**, **계속**을 선택합니다. 두 경우 모두 바로 가기 키는 **F5**입니다. 코드 실행의 다음 중단점에서 디버거가 중지됩니다. 원하는 중단점에 도달할 때까지 **디버그**, **계속**을 선택합니다.  
+-   **Run to a function specified by name**  
   
- 코드 편집기에서 커서를 놓은 위치까지 실행하거나 지정된 함수까지 실행할 수도 있습니다.  
+     You can tell the debugger to run your application until it reaches a specified function. You can specify the function by name or you can choose it from the call stack.  
   
- **커서 위치까지 실행**  
+     To specify a function by name, choose **Debug**, **New Breakpoint**, **Break at Function**, then enter the name of the function and other identifying information.  
   
- 커서 위치까지 실행하려면 소스 창에서 실행 가능한 코드 줄에 커서를 놓습니다. 편집기의 상황에 맞는 메뉴에서 **커서까지 실행**을 선택합니다.  
+     ![New Breakpoint dialog box](../debugger/media/dbg_execution_newbreakpoint.png "DBG_Execution_NewBreakpoint")  
   
- **호출 스택에 있는 함수까지 실행**  
+     If the function is overloaded or is in multiple namespace, you can choose the functions that you want in the **Choose Breakpoints** dialog box.  
   
- **호출 스택** 창에서 함수를 선택하고 상황에 맞는 메뉴에서 **커서까지 실행**을 선택합니다. 호출 스택을 시각적으로 추적하려면 [디버깅하는 동안 호출 스택의 맵 메서드](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)을 참조하세요.  
+     ![Choose Breakpoints dialog box](../debugger/media/dbg_execution_overloadedbreakpoints.png "DBG_Execution_OverloadedBreakpoints")  
   
- **이름으로 지정된 함수까지 실행**  
+##  <a name="BKMK_Set_the_next_statement_to_execute"></a> Move the pointer to change the execution flow  
+ While the debugger is paused, you can move the instruction pointer to set the next statement of code to be executed. A yellow arrowhead in the margin of a source or Disassembly window marks the location of the next statement to be executed. By moving this arrowhead, you can skip over a portion of code or return to a line previously executed. You can use this for situations such as skipping a section of code that contains a known bug.  
   
- 지정한 함수에 도달할 때까지 응용 프로그램을 실행하도록 디버거에 명령할 수 있습니다. 함수 이름을 지정하거나 호출 스택에서 함수를 선택할 수 있습니다.  
+ ![Moving the Pointer](../debugger/media/dbg_basics_example3.gif "DBG_Basics_Example3")
   
- 함수 이름을 지정하려면 **디버그**, **새 중단점**, **함수에서 중단**을 선택한 다음 함수의 이름과 기타 식별 정보를 입력합니다.  
+ To set the next statement to execute, use one of these procedures:  
   
- ![새 중단점 대화 상자](../debugger/media/dbg_execution_newbreakpoint.png "DBG\_Execution\_NewBreakpoint")  
+-   In a source window, drag the yellow arrowhead to a location where you want to set the next statement in the same source file  
   
- 함수가 오버로드되거나 여러 네임스페이스에 있는 경우 **중단점 선택** 대화 상자에서 원하는 함수를 선택할 수 있습니다.  
+-   In a source window, set the cursor on the line that you want to execute next, right-click and choose **Set Next Statement**.  
   
- ![중단점 선택 대화 상자](../debugger/media/dbg_execution_overloadedbreakpoints.png "DBG\_Execution\_OverloadedBreakpoints")  
-  
-##  <a name="BKMK_Set_the_next_statement_to_execute"></a> 다음에 실행할 문 설정  
- 디버거를 중단한 후 실행 지점을 이동하여 다음에 실행할 코드의 문을 설정할 수 있습니다. 소스 또는 디스어셈블리 창의 여백에 있는 노란색 화살표는 다음에 실행할 문의 위치를 나타냅니다. 코드의 일부를 건너뛰거나 이전에 실행한 줄로 돌아가려면 이 화살표를 이동합니다. 알려진 버그를 포함하는 코드 섹션을 건너뛰려는 경우 등에 이 방법을 사용할 수 있습니다.  
-  
- ![Example2](~/debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
-  
- 다음에 실행할 문을 설정하려면 다음 절차 중 하나를 사용합니다.  
-  
--   소스 창에서 노랑 화살표를 같은 소스 파일에서 다음 문을 설정할 위치로 끌어 놓습니다.  
-  
--   소스 창에서 다음에 실행할 줄에 커서를 설정하고 상황에 맞는 메뉴에서 **다음 문 설정**을 선택합니다.  
-  
--   디스어셈블리 창에서 다음에 실행할 어셈블리 명령에 커서를 설정하고 상황에 맞는 메뉴에서 **다음 문 설정**을 선택합니다.  
+-   In the Disassembly window, set the cursor on the assembly instruction that you want to execute next, right-click an and choose **Set Next Statement**.  
   
 > [!CAUTION]
->  다음 문을 설정하면 프로그램 카운터가 새 위치로 바로 이동하게 됩니다. 이 명령은 주의해서 사용해야 합니다.  
+>  Setting the next statement causes the program counter to jump directly to the new location. Use this command with caution:  
 >   
->  -   기존 실행 위치와 새 실행 위치 사이에서는 명령이 실행되지 않습니다.  
-> -   실행 위치를 뒤로 이동하면 그 사이에서 실행된 명령이 실행 취소되지 않습니다.  
-> -   다음 문을 다른 함수나 범위로 이동하면 호출 스택이 손상되어 런타임 오류나 예외가 발생할 수 있습니다. 다음 문을 다른 범위로 이동하려고 하면 디버거에서 대화 상자가 열리고 여기서 작업을 취소할 수 있습니다. Visual Basic의 경우 다음 문을 다른 범위나 함수로 이동할 수 없습니다.  
-> -   네이티브 C\+\+에서 런타임 검사를 활성화한 경우 다음 문을 설정하면 실행이 메서드의 끝에 도달할 때 예외가 throw될 수 있습니다.  
-> -   편집하며 계속하기를 활성화한 경우 편집하며 계속하기에서 즉시 다시 매핑할 수 없는 종류의 편집을 수행하면 **다음 문 설정**이 실패합니다. 예를 들어 catch 블록 내의 코드를 편집하면 이 문제가 발생합니다. 이 경우 작업이 지원되지 않음을 알리는 오류 메시지가 나타납니다.  
+>  -   Instructions between the old and new execution points are not executed.  
+> -   If you move the execution point backwards, intervening instructions are not undone.  
+> -   Moving the next statement to another function or scope usually results in call-stack corruption, causing a run-time error or exception. If you try moving the next statement to another scope, the debugger opens a dialog box with a warning and gives you a chance to cancel the operation. In Visual Basic, you cannot move the next statement to another scope or function.  
+> -   In native C++, if you have run-time checks enabled, setting the next statement can cause an exception to be thrown when execution reaches the end of the method.  
+> -   When Edit and Continue is enabled, **Set Next Statement** fails if you have made edits that Edit and Continue cannot remap immediately. This can occur, for example, if you have edited code inside a catch block. When this happens, you'll see an error message that tells you that the operation is not supported.  
   
 > [!NOTE]
->  관리 코드의 경우 다음과 같은 조건에서는 다음 문을 이동할 수 없습니다.  
+>  In managed code, you cannot move the next statement under the following conditions:  
 >   
->  -   다음 문이 현재 문과 다른 메서드에 있는 경우  
-> -   Just\-In\-Time 디버깅을 사용하여 디버깅을 시작한 경우  
-> -   호출 스택 해제를 진행 중인 경우  
-> -   System.StackOverflowException 또는 System.Threading.ThreadAbortException 예외가 throw된 경우  
+>  -   The next statement is in a different method than the current statement.  
+> -   Debugging was started by using Just-In-Time debugging.  
+> -   A callstack unwind is in progress.  
+> -   A System.StackOverflowException or System.Threading.ThreadAbortException exception has been thrown.  
   
- 응용 프로그램을 실행하는 동안에는 다음 문을 설정할 수 없습니다. 다음에 실행할 문을 설정하려면 디버거가 중단 모드에 있어야 합니다.  
+ You cannot set the next statement while your application is actively running. To set the next statement, the debugger must be in break mode.  
   
-##  <a name="BKMK_Restrict_stepping_to_Just_My_Code"></a> 단계별 코드 실행을 내 코드만으로 제한  
- 디버깅하는 동안 사용자가 작성한 코드만 확인하고 시스템 호출 등의 다른 코드는 무시할 수 있습니다. 이렇게 하려면 내 코드만 디버깅 옵션을 사용합니다. 내 코드만 옵션을 사용하면 사용자가 작성하지 않은 코드는 디버거 창에 표시되지 않도록 숨겨집니다. 단계별로 실행할 때 디버거에서는 사용자가 작성하지 않은 코드도 실행하지만 이 단계에서는 실행을 중단하지 않습니다.[내 코드만](../debugger/just-my-code.md)을 참조하세요.  
+## <a name="BKMK_Restrict_stepping_to_Just_My_Code"></a>Step into non-user code  
+ By default, the debugger tries to show you only your app code while debugging, which is determined by a debugger setting called *Just My Code*. (See [Just My Code](../debugger/just-my-code.md) to see how this works for different project types and languages and how you might customize the behavior.) However, sometimes while you are debugging, you might want to look at framework code, third-party library code, or calls to the operating system (system calls).  
+  
+ You can turn off Just My Code  by going to **Tools** > **Options** > **Debugging** and clear the **Enable Just My Code** checkbox.  
+  
+ When Just My Code is disabled, the debugger can step into non-user code and non-user code appears in the debugger windows.  
   
 > [!NOTE]
->  장치 프로젝트에 대해서는 내 코드만 옵션이 지원되지 않습니다.  
+>  Just My Code is not supported for device projects.  
   
-##  <a name="BKMK_Step_into_system_calls"></a> 한 단계씩 시스템 호출 실행  
- 시스템 코드에 대한 디버깅 기호를 로드했고 내 코드만이 설정되지 않은 경우 다른 모든 호출과 마찬가지로 시스템 호출을 한 단계씩 실행할 수 있습니다.  
+ **Step into system calls**  
   
- Microsoft 기호 파일에 액세스하려면 [기호 파일\(.pdb\) 및 원본 파일 지정](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) 항목의 [기호 서버를 사용하여 로컬 컴퓨터에 없는 기호 파일 찾기](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine)\(영문\)을 참조하세요.  
+ If you have loaded debugging symbols for system code and Just My Code is not enabled, you can step into a system call just as you can any other call.  
   
- 디버깅하는 동안 특정 시스템 구성 요소에 대한 기호를 로드하려면  
+ To access Microsoft symbol files, see [Use symbol servers to find symbol files not on your local machine](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine) in the [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) topic.  
   
-1.  모듈 창을 엽니다\(키보드: **Ctrl\+Alt\+U**\).  
+ To load symbols for a specific system component while you are debugging:  
   
-2.  기호를 로드하려는 모듈을 선택합니다.  
+1.  Open the Modules window (keyboard: **Ctrl + Alt + U**).  
   
-     **기호 상태** 열을 보면 기호가 로드된 모듈을 확인할 수 있습니다.  
+2.  Select the module that you want to load symbols for.  
   
-3.  상황에 맞는 메뉴에서 **기호 로드**를 선택합니다.  
+     You can tell which modules have symbols loaded by looking at the **Symbol Status** column.  
   
-##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> 한 단계씩 관리 코드의 속성 및 연산자 실행  
- 기본적으로 디버거는 관리 코드의 속성과 연산자를 건너뜁니다. 대부분의 경우 이렇게 하면 더 나은 디버깅 환경이 제공됩니다. 속성이나 연산자를 한 단계씩 실행하려면 **디버그**, **옵션 및 설정**을 선택합니다.**디버깅**, **일반** 페이지에서 **속성 및 연산자 건너뛰기\(관리 전용\)** 확인란의 선택을 취소합니다.
+3.  Choose **Load Symbols** on the context menu.  
+  
+##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> Step into properties and operators in managed code  
+ The debugger steps over properties and operators in managed code by default. In most cases, this provides a better debugging experience. To enable stepping into properties or operators, choose **Debug** > **Options**. On the **Debugging** > **General** page, clear the **Step over properties and operators (Managed only)** check box

@@ -1,125 +1,138 @@
 ---
-title: "메모리 창 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.memory"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "메모리 창"
-  - "문자열[Visual Studio], 보기"
-  - "디버거[Visual Studio], 메모리 창"
-  - "메모리[Visual Studio], 디버깅"
-  - "디버깅[Visual Studio], 메모리 창"
-  - "버퍼, 보기"
+title: View Memory for Variables in the Debugger | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.memory
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- Memory window
+- strings [Visual Studio], viewing
+- debugger [Visual Studio], Memory window
+- memory [Visual Studio], debugging
+- debugging [Visual Studio], Memory window
+- buffers, viewing
 ms.assetid: 7f7a0439-10e4-4966-bb2d-51f04cda4fe2
 caps.latest.revision: 32
-caps.handback.revision: 32
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 메모리 창
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 2b271eaf132aea65c1217d8b4f3bfef7e1e1ac0e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-**메모리** 창을 통해 응용 프로그램에서 사용되는 메모리 공간을 볼 수 있습니다.  **조사식** 창, **간략한 조사식** 대화 상자, **자동** 창 및 **지역** 창에서는 메모리의 특정 위치에 저장된 변수의 내용을 보여 주지만  **메모리** 창에서는 이러한 내용을 포괄적으로 보여 줍니다.  이 뷰는 다른 창들에는 잘 표시되지 않는 버퍼나 큰 문자열 등의 큰 데이터를 검사하는 데 편리합니다.  그러나 **메모리** 창이 데이터의 표시에만 한정되는 것은 아닙니다.  메모리 창에는 메모리 공간의 할당되지 않은 메모리에 데이터, 코드 또는 임의 가비지 비트 중 어떤 내용이 있든 관계없이 메모리 공간의 모든 내용이 표시됩니다.  
+---
+# <a name="use-the-memory-windows-in-the-visual-studio-debugger"></a>Use the Memory Windows in the Visual Studio Debugger
+The **Memory** window provides a view into the memory space that is used by your application. The **Watch** window, **QuickWatch** dialog box, **Autos** window, and **Locals** window show you the content of variables, which are stored at specific locations in memory. But the **Memory** window shows you the large-scale picture. This view can be convenient for examining large pieces of data (buffers or large strings, for example) that do not display well in the other windows. However, the **Memory** window is not limited to displaying data. It displays everything in the memory space, whether the content is data, code, or random bits of garbage in unassigned memory.  
   
- **메모리** 창은 **옵션** 대화 상자의 **디버깅** 노드에서 주소 수준 디버깅을 설정한 경우에만 사용할 수 있습니다.  메모리 개념을 인식하지 못하는 언어인 스크립트나 SQL에서는 **메모리** 창을 사용할 수 없습니다.  
+ The **Memory** window is available only if address-level debugging is enabled in the **Options** dialog box, **Debugging** node. The **Memory** window is not available for Script or SQL, which are languages that do not recognize the concept of memory.  
   
-## 메모리 창 열기  
+## <a name="opening-a-memory-window"></a>Opening a Memory Window  
   
-#### 메모리 창을 열려면  
+#### <a name="to-open-a-memory-window"></a>To open a Memory window  
   
-1.  디버그 모드에 있지 않다면 디버깅을 시작합니다.  
+1.  Start debugging, if you are not already in debug mode.  
   
-2.  **디버그** 메뉴에서 **창**을 가리킵니다.  그런 다음 **메모리**를 가리키고 **메모리 1**, **메모리 2**, **메모리 3** 또는 **메모리 4**를 클릭합니다. 낮은 버전의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에는 **메모리** 창이 하나만 있습니다.  이러한 버전을 사용 중인 경우에는 **메모리**를 클릭하면 됩니다.  
+2.  In the **Debug** menu, point to **Windows**. Then, point to **Memory** and then click **Memory 1**, **Memory 2**, **Memory 3**, or **Memory 4**. (Lower-level editions of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] have only a single **Memory** window. If you are using one of those editions, just click **Memory**.)  
   
-## 메모리 창의 페이징  
- **메모리** 창에는 일반적이지 않은 방식으로 작동하는 세로 스크롤 막대가 있습니다.  오늘날 사용되는 컴퓨터는 주소 공간이 매우 크므로 스크롤 막대의 엄지 단추를 임의의 위치로 드래그하면 현재 위치와 방향을 잃기 쉽습니다.  이러한 이유로 엄지 단추는 "스프링이 달려 있는 것처럼" 항상 스크롤 막대 중앙에 놓이게 됩니다.  네이티브 코드 응용 프로그램에서 페이지 위나 아래로는 이동할 수 있지만 자유롭게 스크롤할 수는 없습니다.  
+## <a name="paging-in-the-memory-window"></a>Paging in the Memory Window  
+ The **Memory** window has a vertical scrollbar that operates in a nonstandard manner. The address space of a modern computer is very large, and you could easily get lost by grabbing the scrollbar thumb and dragging it to a random location. For that reason, the thumb is "spring-loaded" and always remains in the center of the scrollbar. In native code applications, you can page up or down, but cannot scroll about freely.  
   
- 메모리 주소가 높을수록 창의 아래쪽에 나타납니다.  따라서 상위 주소를 확인하려면 위쪽이 아니라 아래쪽으로 스크롤합니다.  
+ Higher memory addresses appear at the bottom of the window. To view a higher address, scroll down, not up.  
   
-#### 메모리에서 페이지 위나 아래로 이동하려면  
+#### <a name="to-page-up-or-down-in-memory"></a>To page up or down in memory  
   
-1.  페이지 아래로 이동하려면\(상위 메모리 주소로 이동\) 세로 스크롤 막대의 엄지 단추 아래를 클릭합니다.  
+1.  To page down (move to a higher memory address), click under the thumb in the vertical scrollbar.  
   
-2.  페이지 위로 이동하려면\(하위 메모리 주소로 이동\) 세로 스크롤 막대의 엄지 단추 위쪽을 클릭합니다.  
+2.  To page up (move to a lower memory address), click above the thumb the vertical scrollbar.  
   
-## 메모리 위치 선택  
- 끌어서 놓기 작업을 사용하거나 **주소** 상자에서 값을 편집하면 메모리에서 선택한 위치로 즉시 이동할 수 있습니다.  **주소** 상자에서는 숫자 값뿐 아니라 주소를 계산하는 식도 지정할 수 있습니다.  기본적으로 **메모리** 창에서는 **주소** 식을 라이브 식으로 처리하므로 프로그램을 실행할 때 이 식이 다시 계산됩니다.  라이브 식을 사용하면 매우 편리합니다.  예를 들어 라이브 식을 사용하여 포인터가 있는 위치의 메모리를 확인할 수 있습니다.  
+## <a name="selecting-a-memory-location"></a>Selecting a Memory Location  
+ If you want to move instantly to a selected location in memory, you can do so by using a drag-and-drop operation or by editing the value in the **Address** box. The **Address** box accepts not only numeric values but also expressions that evaluate to addresses. By default, the **Memory** window treats an **Address** expression as a live expression, which is reevaluated as your program executes. Live expressions can be very useful. For example, you can use them to view the memory that is touched by a pointer.  
   
-#### 끌어서 놓기를 사용하여 메모리 위치를 선택하려면  
+#### <a name="to-select-a-memory-location-by-dragging-and-dropping"></a>To select a memory location by dragging and dropping  
   
-1.  임의의 창에서 메모리 주소가 포함된 메모리 주소 또는 포인터 변수를 선택합니다.  
+1.  In any window, select a memory address or pointer variable that contains a memory address.  
   
-2.  주소 또는 포인터를 **메모리** 창으로 끌어 옵니다.  
+2.  Drag the address or pointer to the **Memory** window.  
   
-#### 편집하여 메모리 위치를 선택하려면  
+#### <a name="to-select-a-memory-location-by-editing"></a>To select a memory location by editing  
   
-1.  **메모리** 창에서 **주소** 상자를 선택합니다.  
+1.  In the **Memory** window, select the **Address** box.  
   
-2.  확인하려는 주소를 입력하거나 붙여 넣은 다음 **Enter** 키를 누릅니다.  
+2.  Type or paste the address you want to see, and then press **ENTER**.  
   
-## 메모리 창의 정보 표시 방식 변경  
- **메모리** 창에 메모리 내용이 표시되는 방식을 사용자 지정할 수 있습니다.  기본적으로 메모리 내용은 16진수 형식의 1바이트 정수로 표시되고 열 수는 창의 현재 너비에 따라 자동으로 지정됩니다.  
+## <a name="changing-the-way-the-memory-window-displays-information"></a>Changing the Way the Memory Window Displays Information  
+ You can customize the way the **Memory** window shows memory contents. By default, memory contents appear as one-byte integers in hexadecimal format, and the number of columns is determined automatically by the current width of the window.  
   
-#### 메모리 내용의 형식을 변경하려면  
+#### <a name="to-change-the-format-of-the-memory-contents"></a>To change the format of the memory contents  
   
-1.  **메모리** 창을 마우스 오른쪽 단추로 클릭합니다.  
+1.  Right-click the **Memory** window.  
   
-2.  원하는 형식을 선택합니다.  
+2.  Choose the format that you want.  
   
-#### 메모리 창에 표시된 열 수를 변경하려면  
+#### <a name="to-change-the-number-of-columns-in-the-memory-window"></a>To change the number of columns in the Memory window  
   
-1.  **메모리** 창의 맨 위에 있는 도구 모음에서 **열** 목록을 찾습니다.  
+1.  In the toolbar at the top of the **Memory** window, locate the **Columns** list.  
   
-2.  **열** 목록에서 표시할 열 수를 선택하거나 **자동**을 선택하여 창 너비에 맞게 자동으로 조정합니다.  
+2.  In the **Columns** list, select the number of columns that you want to display or select **Auto** for automatic adjustment to fit the width of the window.  
   
- 프로그램이 실행될 때 **메모리** 창의 내용을 변경하지 않으려는 경우 라이브 식 계산을 해제할 수 있습니다.  
+ If you do not want the contents of the **Memory** window to change as your program executes, you can turn off live expression evaluation.  
   
-#### 라이브 계산을 설정\/해제하려면  
+#### <a name="to-toggle-live-evaluation"></a>To toggle live evaluation  
   
-1.  **메모리** 창을 마우스 오른쪽 단추로 클릭합니다.  
+1.  Right-click the **Memory** window.  
   
-2.  바로 가기 메뉴에서 **자동으로 다시 계산**을 클릭합니다.  
+2.  On the shortcut menu, click **Reevaluate Automatically**.  
   
-     라이브 계산이 설정되어 있는 경우 옵션이 선택된 상태이므로 옵션을 클릭하면 라이브 계산이 해제됩니다.  라이브 계산이 해제되어 있는 경우 옵션이 선택되지 않은 상태이므로 옵션을 클릭하면 라이브 계산이 설정됩니다.  
+     If live evaluation is on, the option will be selected, and clicking it turns off live evaluation. If live evaluation is off, the option is not selected, and clicking it turns on live evaluation.  
   
- **메모리** 창 맨 위에 있는 도구 모음을 숨기거나 표시할 수 있습니다.  도구 모음이 숨겨진 동안에는 주소 상자나 기타 도구에 액세스할 수 없습니다.  
+ You can hide or display the toolbar at the top of the **Memory** window. You will not have access to Address box or other tools as long as the toolbar is hidden.  
   
-#### 도구 모음을 설정\/해제하려면  
+#### <a name="to-toggle-the-toolbar"></a>To toggle the toolbar  
   
-1.  **메모리** 창을 마우스 오른쪽 단추로 클릭합니다.  
+1.  Right-click a **Memory** window.  
   
-2.  바로 가기 메뉴에서 **도구 모음 표시**를 클릭합니다.  
+2.  On the shortcut menu, click **Show Toolbar**.  
   
-     도구 모음의 이전 상태에 따라 도구 모음이 나타나거나 없어집니다.  
+     The toolbar appears or disappears, depending on its previous state.  
   
-## 포인터가 가리키는 메모리 표시  
- 네이티브 코드 응용 프로그램에서는 레지스터 이름을 라이브 식으로 사용할 수 있습니다.  예를 들어, 스택 포인터를 사용하여 스택을 따를 수 있습니다.  
+## <a name="following-a-pointer-through-memory"></a>Following a Pointer Through Memory  
+ In native code applications, you can use register names as live expressions. For example, you can use the stack pointer to follow the stack.  
   
-#### 포인터가 가리키는 메모리를 표시하려면  
+#### <a name="to-follow-a-pointer-through-memory"></a>To follow a pointer through memory  
   
-1.  **메모리** 창의 **주소** 상자에 포인터 식을 입력합니다.  포인터 변수는 현재 범위 안에 있어야 합니다.  사용하는 언어에 따라 포인터 변수를 역참조해야 할 수도 있습니다.  
+1.  In the **Memory** window **Address** box, type a pointer expression. The pointer variable must be in the current scope. Depending on the language, you might have to dereference it.  
   
-2.  **Enter** 키를 누릅니다.  
+2.  Press **ENTER**.  
   
-     **한 단계씩 코드 실행** 등의 실행 명령을 사용할 때 포인터가 변경되면 표시된 메모리 주소도 포인터가 가리키는 메모리 주소로 자동으로 변경됩니다.  
+     Now, when you use an execution command such as **Step**, the memory address that is displayed will automatically change as the pointer changes.  
   
-## 참고 항목  
- [디버거에서 데이터 보기](../debugger/viewing-data-in-the-debugger.md)
+## <a name="see-also"></a>See Also  
+ [Viewing Data in the Debugger](../debugger/viewing-data-in-the-debugger.md)
