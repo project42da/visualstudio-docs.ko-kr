@@ -18,15 +18,17 @@ manager: ghogen
 f1_keywords:
 - vs.performancecenter
 ms.translationtype: HT
-ms.sourcegitcommit: 3037d92e9de377ab4b306a5a0e164e29fa6659e7
-ms.openlocfilehash: 5448253ae93b82a2631e6c48495a31d2724ed0b7
+ms.sourcegitcommit: fe6d864baf518cba882cea8e985fdacbfdf5b8b2
+ms.openlocfilehash: f4e915655ffe11f28c071864cb2cbd68dc799881
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
 # <a name="optimize-visual-studio-startup-time"></a>Visual Studio 시작 시간 최적화
 이상적으로 Visual Studio는 항상 최대한 빨리 시작되어야 합니다. 그러나 시작 시 Visual Studio 확장 및 열린 도구 창이 자동으로 로드되기 때문에 시작 시간이 느려질 수 있습니다. **Visual Studio 성능 관리 창**에서 Visual Studio 시작 시간에 영향을 미치는 확장과 기능을 확인하고 이러한 확장과 기능의 로드 동작을 제어할 수 있습니다.
+
+성능 향상에 대한 더 일반적인 팁은 [Visual Studio 성능 팁과 요령](../ide/visual-studio-performance-tips-and-tricks.md)을 참조하세요.
 
 ## <a name="control-startup-behavior"></a>시작 동작 제어
 
@@ -34,7 +36,7 @@ Visual Studio 2017에서는 시작 시간이 늘어나지 않도록 요청 시 �
 
 Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를 초래하는 확장이나 도구 창을 알려주는 팝업 메시지가 나타납니다. 이 메시지에는 **Visual Studio 성능 관리** 대화 상자에 대한 링크도 제공됩니다. 이 대화 상자는 **도움말 > Visual Studio 성능 관리** 메뉴 명령을 사용해서 열 수도 있습니다.
 
-![Visual Studio 성능 관리에 '... 확장으로 인해 Visual Studio가 느려집니다'라는 팝업이 나타납니다.](../ide/media/vside_perfdialog_popup.png)
+![Visual Studio 성능 관리에 ‘... 확장으로 인해 Visual Studio가 느려집니다’라는 팝업이 나타납니다.](../ide/media/vside_perfdialog_popup.png)
 
 이 대화 상자에는 시작 성능에 영향을 미치는 확장 및 도구 창이 나열됩니다. 이 대화 상자에서 확장 및 도구 창 설정을 변경하여 시작 성능을 향상할 수 있습니다.
 
@@ -98,4 +100,7 @@ Visual Studio 2017에서 큰 솔루션을 여는 경우 경량 솔루션 로드�
 - 경량 솔루션 로드를 사용하는 경우 일부 타사 확장이 올바르게 동작하지 않을 수도 있습니다.
 - 디버깅을 시작할 때 로드되지 않은 프로젝트에서는 편집하며 계속하기 기능이 작동하지 않습니다. 이러한 프로젝트에 포함된 파일은 읽기 전용이며, 편집을 시도하는 경우 프로젝트가 로드되지 않았다는 오류가 보고됩니다.
 - 경량 솔루션 로드를 사용하도록 설정되었을 때 F# 프로젝트가 제대로 빌드되지 않고 GoTo에서 기호를 일부 사용하지 못할 수 있습니다.
+
+## <a name="see-also"></a>참고 항목
+[Visual Studio 성능 팁과 요령](../ide/visual-studio-performance-tips-and-tricks.md)
 

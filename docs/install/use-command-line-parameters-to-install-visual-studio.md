@@ -32,10 +32,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 90e19f6e693733162065754b441fb213fd0bd9f8
+ms.sourcegitcommit: 223750aef8d997c6ae017f49ea0a9522bdba72bc
+ms.openlocfilehash: 2b702407996fd104b62d9b8c6874d7914d7bd2e8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>명령줄 매개 변수를 사용하여 Visual Studio 2017 설치
@@ -95,7 +95,6 @@ ms.lasthandoff: 07/18/2017
 | `--includeRecommended` | **선택 사항**: 설치된 모든 작업에 대한 권장 구성 요소를 포함하지만, 선택적 구성 요소는 포함하지 않습니다. 워크로드는 `--allWorkloads` 또는 `--add`를 사용하여 지정됩니다. |
 | `--includeOptional` | **선택 사항**: 레이아웃에 포함되는 모든 워크로드에 대한 권장 *및* 선택적 명령을 포함합니다. 워크로드는 `--add`를 사용하여 지정됩니다.  |
 
-
 | **고급 설치 옵션** | **설명** |
 | ----------------------- | --------------- |
 | `--channelId <id>` | **선택 사항**: 설치할 인스턴스의 채널 ID입니다. 설치 명령에 필요하며, `--installPath`가 지정된 경우 다른 명령에서는 무시됩니다. |
@@ -107,6 +106,7 @@ ms.lasthandoff: 07/18/2017
 | `--locale <language-locale>` | **선택 사항**: 설치 관리자의 사용자 인터페이스 표시 언어를 변경합니다. 설정은 유지됩니다. 자세한 내용은 이 페이지의 [언어 로캘 목록](#list-of-language-locales) 섹션을 참조하세요.|
 | `--cache` | **15.2의 새로운 기능, 선택 사항**: 있는 경우 패키지가 이후 복구를 위해 설치된 후에도 유지됩니다. 이는 이후 설치, 복구 또는 수정에 사용할 전역 정책 설정을 재정의합니다. 기본 정책은 패키지를 캐시하는 것입니다. 제거 명령의 경우 무시됩니다. 자세한 내용은 [패키지 캐시를 사용하지 않도록 설정 또는 이동](disable-or-move-the-package-cache.md)하는 방법을 참조하세요. |
 | `--nocache` | **15.2의 새로운 기능, 선택 사항**: 있는 경우 패키지가 설치 또는 복구된 후에 삭제됩니다. 필요한 경우에만 다시 다운로드되고 사용한 후 다시 삭제됩니다. 이는 이후 설치, 복구 또는 수정에 사용할 전역 정책 설정을 재정의합니다. 기본 정책은 패키지를 캐시하는 것입니다. 제거 명령의 경우 무시됩니다. 자세한 내용은 [패키지 캐시를 사용하지 않도록 설정 또는 이동](disable-or-move-the-package-cache.md)하는 방법을 참조하세요. |
+| `--noUpdateInstaller` | **15.2의 새로운 기능, 선택 사항**: 있는 경우 quiet가 지정되었으면 설치 프로그램이 자기 자신을 업데이트하지 않습니다. quiet와 함께 noUpdateInstaller가 지정되었는데 설치 프로그램 업데이트가 필요한 경우 설치 프로그램에서 명령을 실패로 처리하고 0이 아닌 종료 코드를 반환합니다. |
 
 ## <a name="list-of-workload-ids-and-component-ids"></a>작업 ID 및 구성 요소 ID 목록
 Visual Studio 제품별로 정렬된 워크로드 및 구성 요소 ID 목록은 [Visual Studio 2017 워크로드 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요.
