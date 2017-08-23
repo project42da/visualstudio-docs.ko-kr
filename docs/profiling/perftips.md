@@ -28,11 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
-ms.openlocfilehash: 845811bb9ee9552f8fc66b2d2b4b24ecdb04baf0
+ms.translationtype: HT
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: b19a309f403daa0a3881ec154aa4cd3f5e4d97dc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="perftips"></a>PerfTips
@@ -46,7 +46,7 @@ Visual Studio 디버거 *PerfTips* 및 디버거 통합 **진단 도구** 는 �
  ![PerfTip](../profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")  
   
 ## <a name="diagnostics-tools-window"></a>진단 도구 창  
- 중단점 및 관련된 타이밍 데이터가 진단 도구 창에 기록됩니다.  
+ 중단점 및 관련된 타이밍 데이터가 [진단 도구] 창에 기록됩니다.  
   
  다음 그림은 Visual Studio 2015 업데이트 1의 진단 도구 창을 보여 줍니다.  
   
@@ -76,3 +76,4 @@ Visual Studio 디버거 *PerfTips* 및 디버거 통합 **진단 도구** 는 �
 
 ## <a name="see-also"></a>참고 항목
  [Visual Studio의 프로파일링](../profiling/index.md) [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)
+
