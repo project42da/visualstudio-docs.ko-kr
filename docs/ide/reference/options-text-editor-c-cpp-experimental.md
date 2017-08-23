@@ -1,7 +1,7 @@
 ---
 title: "옵션, 텍스트 편집기, C/C++, 실험적 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 08/02/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -30,11 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 77c4408fcd93a776468cf5fb23b3807a2b8d594d
+ms.translationtype: HT
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: 1677db7d5af93db8a378d598332e6a6d52f09bdd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="options-text-editor-cc-experimental"></a>옵션, 텍스트 편집기, C/C++, 실험적
@@ -48,9 +48,10 @@ ms.lasthandoff: 05/24/2017
 >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
 ## <a name="enable-predictive-intellisense"></a>예측 IntelliSense 사용
-예측 IntelliSense는 컨텍스트와 관련이 있는 결과만 표시되도록 IntelliSense 드롭다운 목록에 표시되는 결과의 수를 제한합니다. 예를 들어 <code>int x =</code>을 입력하고 IntelliSense 드롭다운을 호출하면 정수 또는 정수를 반환하는 함수만 표시됩니다. 예측 IntelliSense는 기본적으로 꺼져 있습니다.
+예측 IntelliSense는 컨텍스트와 관련이 있는 결과만 표시되도록 IntelliSense 드롭다운 목록에 표시되는 결과의 수를 제한합니다. 예를 들어 <code>int x =</code>를 입력하고 IntelliSense 드롭다운을 호출하면 정수 또는 정수를 반환하는 함수만 표시됩니다. 예측 IntelliSense는 기본적으로 꺼져 있습니다.
 
-## <a name="enable-faster-project-load"></a>빠른 프로젝트 로드 사용
+## <a name="enable-faster-project-load"></a>빠른 프로젝트 로드 사용 
+**Visual Studio 2017 버전 15.3 이상**: 이 기능은 이제 **프로젝트 캐싱 사용**이라고 하며 [VC++ 프로젝트 설정](vcpp-project-settings-projects-and-solutions-options-dialog-box.md) 속성 페이지로 이동되었습니다.
 이 옵션을 사용하면 다음에 프로젝트를 열 때 Visual Studio에서 프로젝트 데이터를 캐시할 수 있으며, 프로젝트 파일에서 다시 계산하지 않고 캐시한 데이터를 로드할 수 있습니다. 캐시한 데이터를 사용하면 프로젝트 로드 시간이 상당히 빨라집니다.  
 
 ## <a name="additional-features-in-the-visual-studio-gallery"></a>Visual Studio 갤러리의 추가 기능

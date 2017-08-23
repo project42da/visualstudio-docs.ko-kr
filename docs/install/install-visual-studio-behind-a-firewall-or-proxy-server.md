@@ -2,7 +2,7 @@
 title: "방화벽 또는 프록시 서버 뒤에 Visual Studio 설치 | Microsoft Docs"
 description: 
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 08/01/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: ddbbda1069749e2ce685507d55a070f1dec27c17
-ms.openlocfilehash: 48fd143f917d6e13c18f6913bea625b2e8cf5ce8
+ms.sourcegitcommit: f23906933add1f4706d8786b2950fb3b5d2e6781
+ms.openlocfilehash: 0803ea25bd8f45d79d618ff481094fb5786b1acb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="install-visual-studio-behind-a-firewall-or-proxy-server"></a>방화벽 또는 프록시 서버 뒤에 Visual Studio 설치
@@ -43,8 +43,13 @@ Visual Studio 설치 관리자는 다양한 도메인 및 해당 다운로드 �
 | dl.xamarin.com | 설치 패키지 다운로드 위치 |
 | visualstudiogallery.msdn.microsoft.com | Visual Studio 확장 다운로드 위치 |
 | www.visualstudio.com | 문서 위치 |
+| docs.microsoft.com | 문서 위치 |
 | msdn.microsoft.com | 문서 위치 |
 | www.microsoft.com | 문서 위치 |
+| *.windows.net | 로그인 위치 |
+| *.microsoftonline.com | 로그인 위치 |
+| *.live.com | 로그인 위치 |
+
 
 ## <a name="non-microsoft-domains"></a>타사 도메인
 | 도메인 | 이러한 워크로드 설치 |
