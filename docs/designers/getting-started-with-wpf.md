@@ -14,10 +14,10 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 1f384f593129c4a0e879762d6e2e7f5944171af6
+ms.sourcegitcommit: 0387b9a656f97d9354f95f121cad8422e93a69bc
+ms.openlocfilehash: b1d99a132c6e29239862e9bd7629eb47a679138f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="getting-started-with-wpf"></a>WPF 시작
@@ -31,10 +31,11 @@ WPF(Windows Presentation Foundation)는 데스크톱 클라이언트 응용 프�
 | XAML 디자인 도구 비교... |[Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](../designers/designing-xaml-in-visual-studio.md)|  
 |.NET을 처음 사용하세요?|[.NET Framework의 개요](https://msdn.microsoft.com/en-us/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [응용 프로그램 주요 사항](/dotnet/standard/application-essentials)<br /><br /> [Visual C# 및 Visual Basic 시작](../ide/getting-started-with-visual-csharp-and-visual-basic.md)|  
 |WPF에 대한 자세한 설명...|[WPF 소개](../designers/introduction-to-wpf.md)<br /><br /> [XAML 개요(WPF)](https://docs.microsoft.com/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br /> [컨트롤](https://docs.microsoft.com/dotnet/framework/wpf/controls/)<br /><br /> [데이터 바인딩 개요](https://docs.microsoft.com/dotnet/framework/wpf/data/data-binding-overview)<br /><br /> [LINQ to XML로 WPF 데이터 바인딩](../designers/wpf-data-binding-with-linq-to-xml.md)|  
-|Windows Forms 개발자인가요?|[Windows Forms 컨트롤 및 해당 WPF 컨트롤](https://docs.microsoft.com/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls).aspx)<br /><br /> [WPF 및 Windows Forms 상호 운용성에서 지원되는 시나리오](https://docs.microsoft.com/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|  
+|Windows Forms 개발자인가요?|[Windows Forms 컨트롤 및 해당 WPF 컨트롤](https://docs.microsoft.com/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br /> [WPF 및 Windows Forms 상호 운용성에서 지원되는 시나리오](https://docs.microsoft.com/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 라이브러리(WPF)](https://docs.microsoft.com/dotnet/framework/wpf/class-library-wpf)   
  [응용 프로그램 개발 개요](https://docs.microsoft.com/dotnet/framework/wpf/app-development/index)   
  [.NET 설명서 홈](https://docs.microsoft.com/dotnet/index)   
  [Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+
