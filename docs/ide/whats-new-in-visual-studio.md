@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio 2017의 새로운 기능 | Microsoft Docs"
+title: What's New in Visual Studio 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 04/06/2017
+ms.date: 08/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -15,195 +15,237 @@ ms.assetid: 7307e180-ba28-4774-8a43-cbb980085a71
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
-ms.openlocfilehash: 28c6a166a423b3341ae32676830861eaa78cb40d
+ms.translationtype: HT
+ms.sourcegitcommit: 3cd705d703b3d745c502290422e29b3c6da39ee5
+ms.openlocfilehash: 5bf00b7e5ed79f8679b837d0dcabf03550d2b849
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 08/22/2017
 
 ---
-# <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
-모든 개발, 앱 및 플랫폼에서 뛰어난 생산성을 제공합니다. Visual Studio 2017를 사용하여 Android, iOS, Windows, Linux, 웹 및 클라우드용 앱을 개발합니다. 빠르게 코딩하고, 간단하게 디버그 및 진단하고, 자주 테스트하며, 안심하고 릴리스하세요. 개발자 고유의 확장을 빌드하여 Visual Studio를 확장하고 사용자 지정할 수도 있습니다. 이 새로운 릴리스로 버전 제어를 사용하고, 민첩하게 대처하고, 효율적으로 공동 작업하세요.
+# <a name="what39s-new-in-visual-studio-2017"></a>What&#39;s New in Visual Studio 2017
+#### <a name="updated-for-the-153-release"></a>Updated for the 15.3 release
+Unparalleled productivity for any dev, any app, and any platform. Use Visual Studio 2017 to develop apps for Android, iOS, Windows, Linux, web, and cloud. Code fast, debug and diagnose with ease, test often, and release with confidence. You can also extend and customize Visual Studio by building your own extensions. Use version control, be agile, and collaborate efficiently with this release!
+
+Here is a high-level recap of the changes we've made:
+
+* **Redefined fundamentals**. A new setup experience means that you can install more quickly and install what you want when you need it. Whether you want to load large solutions and projects, or work on folders of code, or even a single file of code, Visual Studio starts faster. And, Visual Studio helps you stay focused on the big picture, especially for teams embracing DevOps.
+* **Performance and productivity**. We have focused on new and modern mobile, cloud, and desktop development capabilities. And, we've also improved the overall acquisition, performance, and general developer productivity experiences. Visual Studio starts faster, is more responsive, and uses less memory than before.
+* **Cloud app development with Azure**. A built-in suite of Azure tools enable you to easily create cloud-first apps powered by Microsoft Azure. Visual Studio makes it easy to configure, build, debug, package, and deploy apps and services on Azure.
+* **Mobile app development**. In Visual Studio 2017, you can innovate and get results fast with Xamarin, which unifies your multi-platform mobile requirements by using one core codebase and set of skills. Go mobile with your existing teams, technology investments, and C# code to deliver consumer-grade experiences ahead of schedule and under budget. Accelerate every step of the mobile lifecycle to deliver world-class consumer experiences or a portfolio of productivity apps to empower your workforce.
+* **Cross-platform development** Seamlessly deliver software to any targeted platform. Extend DevOps processes to SQL Server through Redgate Data Tools and safely automate database deployments from Visual Studio. Develop and release multiplatform games by using Visual Studio Tools for Unity. Or, use .NET Core to write apps and libraries that run unmodified across Windows, Linux, and macOS operating systems. (And new in 15.3: Get side-by-side support for .NET Core 2.0 SDKs.)
 
 > [!NOTE]
-> Visual Studio 2017의 새로운 기능에 대한 전체 목록은 [릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)를 참조하세요.
+> For a complete list of new features and functionality in Visual Studio 2017, see the [Release Notes](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes).
 
-변경 내용의 대략적인 요약은 다음과 같습니다.
+Here is more detailed information about some of the most notable improvements and new features in Visual Studio 2017.
 
-* **성능 및 생산성** 새롭고 최신의 모바일, 클라우드 및 데스크톱 개발 기능에 집중했을 뿐만 아니라 전반적인 취득, 성능 및 일반 개발자 생산성 환경도 향상되었습니다. Visual Studio는 더 빨리 시작하고, 더 빨리 응답하며, 이전보다 적은 메모리를 사용합니다.
-* **재정의된 기본 사항**. 새로운 설치 환경을 통해 더 빠르게 설치하고, 필요할 때 원하는 항목을 설치할 수 있습니다. Visual Studio는 대규모 솔루션과 프로젝트를 로드하거나 코드 폴더 또는 단일 코드 파일에서 작업하려는 경우 더 빠르게 시작합니다. 또한 Visual Studio를 사용하는 경우 특히 DevOps를 수용하는 팀에서 큰 그림에 계속 집중할 수 있습니다.
-* **Azure로 클라우드 앱 개발** 기본 제공 Azure 도구 모음을 통해 Microsoft Azure 기반의 클라우드 지원 앱을 쉽게 만들 수 있습니다. Visual Studio를 사용하면 Azure에서 직접 앱과 서비스를 쉽게 구성, 빌드, 디버그, 패키징 및 배포할 수 있습니다.
-* **모바일 앱 개발** Visual Studio 2017에서는 하나의 핵심 코드베이스와 기술 집합을 사용하여 다중 플랫폼 모바일 요구 사항을 통합하는 Xamarin에서 혁신적인 결과를 빠르게 얻을 수 있습니다. 기존 팀, 기술 투자 및 C# 코드와 더불어 모바일로 이동하여 예정보다 빨리 예산 수준 이하의 소비자급 환경을 제공합니다. 사용자의 역량을 강화할 수 있도록 모바일 수명 주기의 각 단계를 모두 가속화하여 세계 최고의 소비자 환경 또는 생산성 앱 포트폴리오를 제공합니다.
+## <a name="redefined-fundamentals"></a>Redefined fundamentals
+### <a name="a-new-setup-experience"></a>A new setup experience
 
-가장 두드러진 변화 중 몇 가지에 대한 자세한 내용은 다음과 같습니다.
+[Download Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) or [Check Visual Studio system requirements](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)
 
-## <a name="performance-improvements"></a>성능 향상
+ Visual Studio makes it easier and faster to install just the features you need, when you need them. And, it uninstalls cleanly, too.
 
-### <a name="a-new-setup-experience"></a>새로운 설치 환경  
-[Visual Studio 2017 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 또는 [Visual Studio 시스템 요구 사항 확인](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)
+ The most important change to note when you install Visual Studio is its new setup experience. On the **Workloads** tab, you'll see installation options that are grouped to represent common frameworks, languages, and platforms. It covers everything from .NET desktop development to C++ application development on Windows, Linux, and iOS.
 
- Visual Studio를 사용하면 필요할 때 필요한 기능만 쉽고 빠르게 설치할 수 있습니다. 또한 완전히 제거됩니다.
+Choose the workloads you need, and change them when you need to.
 
- 가장 중요한 변화는 Visual Studio를 설치할 때 볼 수 있는 새로운 설치 환경입니다. **작업** 탭에는 일반 프레임워크, 언어 및 플랫폼을 나타내도록 그룹화된 설치 옵션이 표시됩니다. .NET 데스크톱 개발에서 Windows, Linux 및 iOS의 C++ 응용 프로그램 개발에 이르기까지 모든 작업을 포함합니다.   
+ ![Visual Studio 2017 setup dialog](../install/media/install-visual-studio-enterprise.png "Visual Studio 2017 setup screen")
 
- ![Visual Studio 2017 설치 대화 상자](~/install/media/vs2017-workloads.PNG "Visual Studio 2017 설치 화면")
+Want to pick your own components instead of using workloads? Select the **Individual components** tab from the installer. Want to install Language Packs without also having to change the Windows language option? Choose the **Language packs** tab of the installer.  
 
-필요한 작업을 선택하고, 필요할 때 변경합니다.
+To learn more about the new installation experience, including step-by-step instructions that walk you through it, see our [Install Visual Studio](../install/install-visual-studio.md) page.
 
-작업을 사용하는 대신 사용자 고유의 구성 요소를 선택하고 싶으세요? 설치 관리자에서 **개별 구성 요소** 탭을 선택하면 됩니다. 또한 Windows 언어 옵션을 변경하지 않고도 언어 팩을 설치하고 싶으세요? 설치 관리자의 **언어 팩** 탭을 선택합니다.  
+## <a name="performance-and-productivity"></a>Performance and productivity
+### <a name="sign-in-across-multiple-accounts"></a>Sign in across multiple accounts  
+We've introduced a new identity service in Visual Studio that allows you to share user accounts across Team Explorer, Azure Tools, Windows Store publishing, and more.
 
-단계별 지침을 포함하여 새로운 설치 환경에 대한 자세한 내용은 [Visual Studio 설치](../install/install-visual-studio.md) 페이지를 참조하세요.
+You can stay signed in longer, too. Visual Studio won't ask you to sign in again every 12 hours. To learn more, see the [Fewer Visual Studio Sign-in Prompts](https://blogs.msdn.microsoft.com/visualstudio/2016/08/15/fewer-visual-studio-sign-in-prompts/) blog post.
 
-### <a name="start-visual-studio-faster"></a>더 빨리 Visual Studio 시작
-새로운 Visual Studio 성능 센터는 IDE 시작 시간을 최적화하는 데 유용합니다. 성능 센터에는 IDE 시작을 늦출 수 있는 모든 확장 및 도구 창이 나열됩니다. 성능 센터를 사용하여 확장 시작 시간 또는 시작 시 도구 창을 열지 여부를 결정하여 시작 성능을 개선할 수 있습니다.
+### <a name="start-visual-studio-faster"></a>Start Visual Studio faster
+The new Visual Studio Performance Center can help you optimize your IDE start-up time. The Performance Center lists all the extensions and tool windows that might slow down the IDE startup. You can use it to improve startup performance by determining when extensions start, or whether tool windows are open at startup.
 
-### <a name="decrease-solution-load-time"></a>솔루션 로드 시간 감소
-많은 수의 프로젝트가 포함된 솔루션에서 작업한다고 해서 한 번에 모든 파일이나 프로젝트로 작업해야 하는 것은 아닙니다. 이제 Visual Studio에서 모든 프로젝트가 로드되기를 기다리지 않고 편집 및 디버그할 수 있습니다. 관리되는 프로젝트에서 이 작업을 시도해보려면 도구-> 옵션-> 프로젝트 및 솔루션에서 **경량 솔루션 로드**를 켭니다.
+### <a name="decrease-solution-load-time"></a>Decrease solution load time
+Working on solutions that contain large numbers of projects doesn't mean you have to work with all the files or projects at one time. Now you can edit and debug without waiting for Visual Studio to load every project. To try this out with managed projects, turn on the  **Lightweight Solution load** from Tools -> Options -> Projects and Solutions.
 
-  ![Visual Studio 2017의 옵션 대화 상자](~/ide/media/vs2017ide-LightweightSolutionLoad.PNG "Visual Studio 2017 - 옵션 대화 상자 - 경량 솔루션 로드")
+  ![Options dialog box in Visual Studio 2017](../ide/media/vs2017ide-lightweight-solution-load.png "Visual Studio 2017 - Options dialog box - Lightweight solution load for all solutions")
 
-### <a name="faster-on-demand-loading-of-extensions"></a>요청 시 더 빠르게 확장 로드
-Visual Studio는 IDE 시작이 아닌 요청 시에 로드되도록 확장을 전환하고 있습니다(타사 확장과도 작업). 어떤 확장이 시작, 솔루션 로드 및 입력 성능에 영향을 주는지 궁금하세요? 이 정보는 도움말-> Visual Studio 성능 관리에서 확인할 수 있습니다.
+### <a name="faster-on-demand-loading-of-extensions"></a>Faster on-demand loading of extensions
+Visual Studio is moving its extensions (and working with third-party extensions too) so that they load on-demand, rather than at IDE startup. Curious about which extensions impact startup, solution load, and typing performance? You can see this information in Help -> Manage Visual Studio Performance.
 
-  ![Visual Studio 2017의 옵션 대화 상자](~/ide/media/vs2017ide-manage-vs-perf.png "Visual Studio 도움말 대화 상자 - 성능 관리")
+  ![Options dialog box in Visual Studio 2017](../ide/media/vs2017ide-manage-vs-perf.png "Visual Studio Help dialog box - Performance Management")
 
-## <a name="productivity-improvements"></a>생산성 향상
+#### <a name="manage-your-extensions-with-roaming-extensions-manager"></a>Manage your extensions with Roaming Extensions Manager
+It's easier to set up each development environment with your favorite extensions when you sign in to Visual Studio. The new Roaming Extension Manager keeps track of all your favorite extensions by creating a synchronized list in the cloud.  
 
-### <a name="sign-in-across-multiple-accounts"></a>여러 계정에 로그인  
-팀 탐색기, Azure 도구, Windows 스토어 게시 등에서 사용자 계정을 공유할 수 있는 새로운 ID 서비스를 Visual Studio에 도입했습니다.
+To see a list of your extensions in Visual Studio, click  Tools > Extensions & Updates, and then click the Roaming Extension Manager.
 
-더 오랫동안 로그인 상태를 유지할 수도 있습니다. Visual Studio에서 12시간마다 다시 로그인하라는 메시지가 표시하되 않습니다. 자세한 내용은 [Fewer Visual Studio Sign-in Prompts](https://blogs.msdn.microsoft.com/visualstudio/2016/08/15/fewer-visual-studio-sign-in-prompts/)(Visual Studio 로그인 프롬프트 횟수 감소) 블로그 게시물을 참조하세요.
+![Visual Studio 2017 - Extensions and Updates dialog](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - Tools > Extensions and Updates dialog")
 
-### <a name="manage-your-extensions-with-roaming-extensions-manager"></a>로밍 중인 확장 관리자를 사용하여 확장 관리
-Visual Studio에 로그인할 때 즐겨찾는 확장으로 각 개발 환경을 더 쉽게 설정할 수 있습니다. 새로운 [로밍 중인 확장 관리자]는 클라우드에 동기화된 목록을 만들어 즐겨찾는 확장을 모두 추적합니다.  
+The Roaming Extension Manager tracks all the extensions you install, but you can choose which ones you want to add to your Roaming list.
 
-Visual Studio의 확장 목록을 보려면 도구 > 확장 및 업데이트를 클릭한 다음 로밍 중인 확장 관리자를 클릭합니다.
+![Visual Studio 2017 - Extensions and Updates dialog](../ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - Roaming Extension Manager")
 
-![Visual Studio 2017 - 확장 및 업데이트 대화 상자](~/ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - 도구 > 확장 및 업데이트 대화 상자")
+When you use the Roaming Extension Manager, there are three icon types on your list:
+* ![Roamed icon](../ide/media/vs2017ide-roamedicon.png "Roamed Icon") ***Roamed***: An extension that is part of this Roaming List, but not installed on your machine.
+  (You can install these by using the **Download** button.)
+* ![Roamed & Installed icon](../ide/media/vs2017ide-roamedinstalledicon.png "Roamed & Installed Icon") ***Roamed & Installed***: All extensions that are part of this Roaming List and installed in your dev environment.
+  (If you decide you do not want to roam, you can remove these by using the **Stop Roaming** button.)
+* ![Installed icon](../ide/media/vs2017ide-installedicon.png "Installed Icon") ***Installed***: All extensions that are installed in this environment, but are not part of your Roaming List.
+  (You can add extensions to the Roaming List by using the **Start Roaming** button.)
 
-로밍 중인 확장 관리자는 설치하는 모든 확장을 추적하지만 로밍 목록에 추가할 확장을 선택할 수 있습니다.
+Any extension that you download while you are signed in is added to your list as **Roamed & Installed** and is part of your Roaming list, which gives you access to it from any machine.
 
-![Visual Studio 2017 - 확장 및 업데이트 대화 상자](~/ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - 로밍 중인 확장 관리자")
+### <a name="experience-live-architecture-dependency-validation-and-live-unit-testing"></a>Experience live architecture dependency validation and live unit testing
+As you type code in the text editor, Visual Studio notifies you in real time of architectural dependency rule violations by using Dependency Validation diagrams (a.k.a. Layer diagrams).
 
-로밍 중인 확장 관리자를 사용하는 경우 3개의 아이콘 형식이 목록에 표시됩니다.
-* ![로밍 아이콘](~/ide/media/vs2017ide-roamedicon.png "로밍 아이콘") ***로밍***: 이 로밍 목록에 포함되어 있지만, 컴퓨터에 설치되지 않은 확장입니다.
-  **다운로드** 단추를 사용하여 이러한 확장을 설치할 수 있습니다.
-* ![로밍 및 설치 아이콘](~/ide/media/vs2017ide-roamedinstalledicon.png "로밍 및 설치 아이콘") ***로밍 및 설치***: 이 로밍 목록에 포함되어 있고, 개발 환경에 설치된 모든 확장입니다.
-  로밍하지 않도록 결정하는 경우 **로밍 중지** 단추를 사용하여 이러한 확장을 제거할 수 있습니다.
-* ![설치 아이콘](~/ide/media/vs2017ide-installedicon.png "설치 아이콘") ***설치***: 이 환경에 설치되어 있지만 로밍 목록에 포함되지 않은 모든 확장입니다.
-  **로밍 시작** 단추를 사용하여 로밍 목록에 확장을 추가할 수 있습니다.
+Errors appear in the Error List and squiggles appear in the text editor showing you the precise location of the violation. You are now less likely to introduce unwanted dependencies.
 
-로그인한 상태에서 다운로드하는 모든 확장은 **로밍 및 설치**로 목록에 추가되며, 모든 컴퓨터에서 액세스할 수 있는 로밍 목록의 일부가 됩니다.
+![Live Architecture Validation](../ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "Live Architecture Dependency validation")
 
-### <a name="experience-live-architecture-dependency-validation-and-live-unit-testing"></a>라이브 아키텍처 종속성 유효성 검사 및 Live Unit Testing 경험
+#### <a name="live-unit-testing"></a>Live unit testing
+In Visual Studio Enterprise 2017, live unit testing gives you live unit test results and code coverage in the editor while you are coding. It works with C# and Visual Basic projects for both the .NET Framework and .NET Core, and it supports three test frameworks of MSTest, xUnit, and NUnit.
 
-이제 종속성 유효성 검사 다이어그램(레이어 다이어그램이라고도 함)을 사용하여 코드 편집기에서 코드를 입력하면 Visual Studio에서 아키텍처 종속성 규칙 위반을 실시간으로 알릴 수 있습니다.
+![Live Unit Testing](../ide/media/lut-codewindow.png "An example of our new Live Unit Testing feature in the Enterprise edition of Visual Studio")
 
-오류 목록에 오류가 표시되고, 텍스트 편집기의 물결선은 정확한 위반 위치를 보여 줍니다. 이제 원치 않는 종속성이 늘어날 가능성이 줄었습니다.
+For more information, see the [Live Unit Testing in Visual Studio 2017 Enterprise](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/) blog post.
 
-![라이브 아키텍처 유효성 검사](~/ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "라이브 아키텍처 종속성 유효성 검사")
+#### <a name="set-up-a-cicd-pipeline-to-run-automated-tests-efficiently"></a>Set up a CI/CD pipeline to run automated tests efficiently
+Automated testing is a key part of any DevOps pipeline. It allows you to consistently and reliably test and release your solution on much shorter cycles. CI/CD (Continuous Integration and Continuous Delivery) flows can help make the process more efficient.
 
-#### <a name="live-unit-testing"></a>Live Unit Testing:
+For more information about automated tests, see the [CI/CD pipeline for automated tests in DevOps](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/20/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently/) blog post.
 
-Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 동안 편집기에 라이브 단위 테스트 결과와 코드 검사를 제공합니다. .NET Framework용 C# 및 Visual Basic 프로젝트에서 작동하고, MSTest, xUnit, NUnit의 세 가지 테스트 프레임워크를 지원합니다.
+And, for more information about what's new in the [Continuous Delivery Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs extension, see the [Committing with Confidence: Commit Time Code Quality](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/) blog post.
 
-![라이브 단위 테스트](~/ide/media/lut-codewindow.png "Visual Studio Enterprise 버전에 있는 새 라이브 단위 테스트 기능의 예")
+### <a name="a-focus-on-accessibility"></a>A focus on accessibility
+In 15.3, we made over 1,700 targeted fixes to improve compatibility between Visual Studio and the assistive technologies that many of our customers use. There are dozens of scenarios that are more compatible with screen readers, high contrast themes, and other assistive technologies than ever before. The debugger, editor and shell have all gotten significant improvements, too.
 
-자세한 내용은 [Visual Studio 2017 Enterprise의 Live Unit Testing](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/) 블로그 게시물을 참조하세요.
+For more information, see the [Accessibility improvements in Visual Studio 2017 version 15.3](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/) blog post.
 
-### <a name="devops"></a>DevOps
-#### <a name="redgate-data-tools"></a>Redgate 데이터 도구:
-DevOps 기능을 SQL Server 데이터베이스 개발로 확장하기 위해 Visual Studio 2017의 다음 버전에서 Redgate 데이터 도구를 사용할 수 있습니다.
+### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE enhancements
+#### <a name="use-new-refactorings"></a>Use new refactorings
+In 15.3, we’ve added a handful of new refactorings, to include:
+*   Resolve merge conflict
+*   Add parameter (from CallSite)
+*   Generate overrides
+*   Add named argument
+*   Add null-check for parameters
+*   Insert digit-separators into literals
+*   Change base for numeric literals (for example, hex to binary)
+*   Convert if-to-switch
+*   Remove unused variable
 
-Visual Studio 2017 Enterprise에는 다음이 포함되어 있습니다.
-- [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs)는 마이그레이션 스크립트를 개발하고, 소스 제어를 사용하여 데이터베이스 변경 내용을 관리하고, SQL Server 데이터베이스 변경 내용을 응용 프로그램 변경 내용과 함께 자동으로 안전하게 배포하는 데 도움이 됩니다.
-- [Redgate SQL Prompt 코어](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs)는 지능형 코드 완성 기능을 통해 SQL을 더 빠르고 정확하게 작성하는 데 도움이 됩니다. SQL 프롬프트는 데이터베이스 및 시스템 개체, 키워드를 자동으로 완성하고 입력 시 열을 제안합니다. 모든 열 이름이나 별칭을 기억할 필요가 없으므로 코드가 더 깔끔해지고 오류가 줄어듭니다.
+For more information, see the [Refactoring, Code Generation, and Quick Actions in Visual Studio](refactoring-code-generation-quick-actions.md) page.
 
-Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
-- [Redgate SQL 검색](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs)은 여러 데이터베이스에서 SQL 조각 및 개체를 빠르게 찾을 수 있도록 하여 생산성을 높입니다.
 
-자세한 내용은 [Visual Studio 2017의 Redgate 데이터 도구](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/) 블로그 게시물을 참조하세요.
+#### <a name="interact-with-git"></a>Interact with Git
+When you are working with a project in Visual Studio, you can set up and quickly commit and publish your code to a Git service. You can also manage your Git repositories by using menu clicks from buttons in the bottom right-hand corner of the IDE.
 
-### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE 향상
-#### <a name="interact-with-git"></a>Git과 상호 작용:
-Visual Studio에서 프로젝트로 작업할 때 코드를 설정하고 빠르게 커밋하여 Git 서비스에 게시할 수 있습니다. 또한 IDE의 오른쪽 아래 모서리에 있는 단추의 메뉴 클릭을 사용하여 Git 리포지토리를 관리할 수도 있습니다.
+![Visual Studio 2017 interacts with the Git dialog](../ide/media/vsIDE-GitInteraction.png "Git tools in the Visual Studio IDE")
 
-![Visual Studio 2017과 Git 대화 상자의 상호 작용](~/ide/media/vsIDE-GitInteraction.png "Visual Studio IDE의 Git 도구")
+#### <a name="view-and-navigate-code-with-structure-visualizer"></a>View and navigate code with Structure Visualizer
+The Structure Visualizer draws structure guide lines (a.k.a. indent guides) on your code. You can use them to visualize and discover what block of code you're in at any time without having to scroll. Hovering on the lines shows you the tooltips that let you see the opening of that block and its parents. It's  available for all the languages supported via TextMate grammars as well as C#, Visual Basic, and XAML.
 
-#### <a name="view-and-navigate-code-with-structure-visualizer"></a>구조 시각화 도우미를 사용하여 코드 보기 및 탐색:
-구조 시각화 도우미는 코드에 구조 안내선(들여쓰기 안내선이라고도 함)을 그립니다. 이 안내선을 사용하면 언제든지 스크롤하지 않고도 어떤 코드 블록을 시각화하고 검색할 수 있습니다. 선 위로 마우스를 가리키면 해당 블록과 그 부모를 열어서 볼 수 있는 도구 설명이 표시됩니다. TextMate 문법 검사뿐만 아니라 C#, Visual Basic 및 XAML을 통해 지원되는 모든 언어에서 사용할 수 있습니다.
+![Visual Studio 2017 structure visualizer](../ide/media/vsIDE-StructureVisualizer.png "Structure visualizer in Visual Studio")
 
-![Visual Studio 2017 구조 시각화 도우미](~/ide/media/vsIDE-StructureVisualizer.png "Visual Studio의 구조 시각화 도우미")
+#### <a name="experience-improved-navigation-controls"></a>Experience improved navigation controls
+We've refreshed the navigation experience to help you get from A to B with greater confidence and fewer distractions.
 
-#### <a name="experience-improved-navigation-controls"></a>향상된 컨트롤 탐색 환경:
-A에서 B로 이동하는 데 도움이 되는 탐색 환경을 새로 고쳐 자신감 있게 더욱 집중할 수 있게 했습니다.
+* **Go To** (Ctrl+F12) &ndash; navigate from any base type or member to its various implementations.
 
-* **다음으로 이동**(Ctrl+F12) &ndash; 모든 베이스 형식 또는 멤버에서 다양한 구현으로 이동합니다.
+* **Go To All** (Ctrl+T or Ctrl+,) &ndash; navigate directly to any file/type/member/symbol declaration. You can filter your result list or use the query syntax (for example, "f searchTerm" for files, "t searchTerm" for types, etc.).
 
-* **모두로 이동**(Ctrl+T 또는 Ctrl+,) &ndash; 모든 파일/형식/멤버/기호 선언으로 직접 이동합니다. 결과 목록을 필터링하거나 쿼리 구문을 사용할 수 있습니다(예: 파일의 경우 “f searchTerm”, 형식의 경우 “t searchTerm”).
+ ![Improved Go To All](../ide/media/vs2017ide-navigation-go-to.png "Example of the improved Go To All feature")
 
- ![향상된 모두로 이동](~/ide/media/vs2017ide-navigation-go-to.png "향상된 모두로 이동 기능의 예")
+* **Find All References (Shift+F12)** &ndash; with syntax colorization, you can group Find All Reference results by a combination of project, definition, and path. You can also "lock" results so that you can continue to find other references without losing your original results.
 
-* **모든 참조 찾기(Shift+F12)** &ndash; 구문 색 지정을 사용하면 프로젝트, 정의 및 경로의 조합에 따라 [모든 참조 찾기] 결과를 그룹화할 수 있습니다. 또한 결과를 “잠그면” 원래 결과를 잃지 않고 다른 참조를 계속 찾을 수 있습니다.
+ ![New Find All References tool](../ide/media/vs2017ide-find-all-references.png "Example of the new Find All References tool")
 
- ![새로운 모든 참조 찾기 도구](~/ide/media/vs2017ide-find-all-references.png "새로운 모든 참조 찾기 도구의 예")
+* **Indent Guides** &ndash; dotted, gray vertical lines act as landmarks in code to provide context within your frame of view. You may recognize them from the popular Productivity Power Tools.
 
-* **들여쓰기 안내선** &ndash; 회색 세로 점선은 코드에서 랜드마크로 작용하여 보기의 프레임 내에서 컨텍스트를 제공합니다. 이러한 기능은 인기 있는 생산성 파워 도구에서 인식할 수 있습니다.
-
-새로운 생산성 기능에 대한 자세한 내용은 Mark Wilson-Thomas의 [Visual Studio 2017의 생산성](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/productivity-in-visual-studio-2017-rc/)(영문) 블로그 게시물을 참조하세요.
+For more information about our new productivity features, see the [Productivity in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/productivity-in-visual-studio-2017-rc/) blog post by Mark Wilson-Thomas.
 
 ### <a name="visual-c"></a>Visual C++
-Visual Studio에서 C++ 핵심 지침을 배포하고, C++11 및 C++ 기능에 대한 향상된 지원을 추가하여 컴파일러를 업데이트하고, C++ 라이브러리에서 기능을 추가 및 업데이트하는 등 Visual Studio에서 향상된 몇 가지 기능을 확인할 수 있습니다. C++ IDE, 설치 작업 등의 성능도 향상되었습니다.
+You'll see several improvements in Visual Studio, such as distributing C++ Core Guidelines with Visual Studio, updating the compiler by adding enhanced support for C++11 and C++ features, and adding and updating functionality in the C++ libraries. We've also improved the performance of the C++ IDE, installation workloads, and more.
 
-또한 많은 고객이 [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect")를 통해 제출한 컴파일러와 도구에서 발생된 250개 이상의 버그와 보고된 문제를 해결했습니다.
+As well, we've fixed over 250 bugs and reported issues in the compiler and tools, many submitted by customers through [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect").
 
-자세한 내용은 [Visual 2017의 Visual C++에 대한 새로운 기능](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio) 페이지를 참조하세요.  
+For complete details, see our [What's New for Visual C++ in Visual 2017](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio) page.  
 
-### <a name="debugging-and-diagnostics"></a>디버깅 및 진단
+### <a name="debugging-and-diagnostics"></a>Debugging and Diagnostics
+#### <a name="run-to-click"></a>Run to Click:
+Now, you can more easily skip ahead during debugging without setting a breakpoint to stop on the line you want. When you are stopped in the debugger, just click the icon that appears next to the line of code. Your code will run and stop on that line the next time it is hit in your code path.
 
-#### <a name="run-to-click"></a>실행하려면 클릭:
+![Visual Studio 2017 debug - Run To Click](../ide/media/vs2017ide-RunToClick.png "Run To Click in Visual Studio debug & diagnostics")
 
-이제 원하는 줄에서 중지하도록 중단점을 설정하지 않고도 디버깅 중에 더 쉽게 건너뛸 수 있습니다. 디버거에서 멈췄을 때 마우스가 있는 코드 줄 옆에 나타나는 아이콘을 클릭하면 됩니다. 코드가 실행되어 다음에 코드 경로에서 이 줄에 도달하면 해당 줄에서 중지됩니다.
+#### <a name="the-new-exception-helper"></a>The New Exception Helper:
+The new Exception Helper helps you view your exception information at-a-glance. The information is presented in a compact form with instant access to inner exceptions. When you diagnose a NullReferenceException, you can quickly see what was null right inside the Exception Helper.
 
-![Visual Studio 2017 디버그 - 실행하려면 클릭](~/ide/media/vs2017ide-RunToClick.png "Visual Studio 디버깅 및 진단의 실행하려면 클릭")
+![The New Exception Helper dialog in Visual Studio](../ide/media/vs2017ide-ExceptionHelper.png "The New Exception Helper dialog")
 
-#### <a name="the-new-exception-helper"></a>새 예외 도우미:
+For more information, see the [Using the New Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/) blog post.
 
-새 예외 도우미를 사용하면 예외 정보를 한눈에 볼 수 있습니다. 정보는 내부 예외에 즉시 액세스할 수 있는 간결한 양식으로 제공됩니다. NullReferenceException을 진단할 때 예외 도우미 내부에서 null인 항목을 빠르게 확인할 수 있습니다.
+## <a name="cloud-app-development-with-azure"></a>Cloud app development with Azure
+### <a name="azure-functions-tools"></a>Azure Functions Tools
+As part of the "Azure development" workload, we've included tools to help you develop Azure functions by using pre-compiled C# class libraries. Now you can build, run, and debug on your local development machine and then publish directly to Azure from Visual Studio.
 
-![Visual Studio의 새 예외 도우미 대화 상자](~/ide/media/vs2017ide-ExceptionHelper.png "새 예외 도우미 대화 상자")
+For more information, see the [Azure Functions Tools for Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-develop-vs) page.
 
-자세한 내용은 [Using the New Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/)(Visual Studio에서 새 예외 도우미 사용) 블로그 게시물을 참조하세요.
+## <a name="mobile-app-development"></a>Mobile app development
+### <a name="xamarin"></a>Xamarin
+As part of the "Mobile development with .NET" workload, developers familiar with C#, .NET, and Visual Studio can deliver native Android, iOS, and Windows apps by using Xamarin. Developers can enjoy the same the power and productivity when working with Xamarin for mobile apps, including remote debugging on Android, iOS, and Windows devices&mdash;without having to learn native coding languages like Objective-C or Java.
 
-## <a name="talk-to-us"></a>의견 보내기  
- 피드백을 보낼 때는 Visual Studio 팀에 피드백을 보내는 이유도 함께 알려 주세요. Microsoft는 고객 여러분의 피드백을 소중하게 생각하며, Microsoft에서 추진하는 업무에 큰 역할을 합니다.  
+For more information, see the [Visual Studio and Xamarin](../cross-platform/visual-studio-and-xamarin.md) page.
 
-Visual Studio를 개선하는 방법을 제안하거나 문제를 보고하려는 경우 자세한 내용은 [의견 보내기](../ide/talk-to-us.md) 페이지를 참조하세요.  
+### <a name="entitlements-editor"></a>Entitlements editor
+**New in 15.3**: For your iOS development needs, we've added a stand-alone Entitlements editor. It includes a user-friendly UI that can be easily browsed. To launch it, double-click your entitlements.plist file.
 
-### <a name="report-a-problem"></a>문제 보고  
- 발생한 문제의 전반적인 영향을 메시지만으로 전달할 수 없는 경우도 있습니다. 시스템 중단, 충돌 또는 기타 성능 문제가 발생하는 경우 **문제 보고** 도구를 사용하여 쉽게 재현 단계 및 지원 파일(예: 스크린샷, 추적 및 힙 덤프 파일)을 공유할 수 있습니다. 이 도구를 사용하는 방법에 대한 자세한 내용은 [문제를 보고하는 방법](how-to-report-a-problem-with-visual-studio-2017.md) 페이지를 참조하세요.  
+![Entitlement editor for Xamarin](../ide/media/xamarin-entitlements-editor.png "Entitlement editor for Xamarin")
 
-### <a name="track-your-issue-in-connect"></a>Connect에서 문제 추적  
- Visual Studio 피드백의 상태를 추적하려는 경우 [Connect](http://connect.microsoft.com/)로 이동하여 버그를 보고하세요. 버그를 신고한 후에는 Connect로 돌아와 상태를 추적할 수 있습니다.  
+## <a name="cross-platform-development"></a>Cross-platform development
+### <a name="redgate-data-tools"></a>Redgate Data Tools
+To extend DevOps capabilities to SQL Server database development, Redgate Data Tools are now available in the following editions of Visual Studio 2017.
 
-## <a name="see-also"></a>참고 항목  
-* [Visual C++의 새로운 기능](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
-* [C#의 새로운 기능](https://docs.microsoft.com/en-us/dotnet/csharp/csharp-7)  
-* [Team Foundation Server의 새로운 기능](https://www.visualstudio.com/en-us/docs/whats-new)
-* [Visual Studio 릴리스 정보](https://www.visualstudio.com/news/vs2015-vs)
+Included with Visual Studio 2017 Enterprise:
+- [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) helps you develop migration scripts, manage database changes using source control, and safely automate deployments of SQL Server database changes alongside applications changes.
+- [Redgate SQL Prompt Core](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) helps you write SQL more quickly and accurately with the help of intelligent code completion. SQL Prompt autocompletes database and system objects and keywords, and offers column suggestions as you type. This results in cleaner code and fewer errors because you don't have to remember every column name or alias.
+
+Included with all editions of Visual Studio 2017:
+- [Redgate SQL Search](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs) increases your productivity by helping you quickly find SQL fragments and objects across multiple databases.
+
+To learn more, see our [Redgate Data Tools in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/) blog post.
+
+### <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
+As part of the "Games development for Unity" workload, we've included tools to help you develop cross-platform to create 2D and 3D games and interactive content. Create once and publish to 21 platforms, including all mobile platforms, WebGL, Mac, PC and Linux desktop, web, or consoles by using Visual Studio 2017 and Unity 5.6.
+
+For more information, see the [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) page.
+
+### <a name="net-core"></a>.NET Core
+.NET Core is a general purpose, modular, cross-platform, and open source implementation of the .NET Standard and contains many of the same APIs as the .NET Framework.
+
+The .NET Core platform is made of several components, which include the managed compilers, the runtime, the base class libraries, and numerous application models, such as ASP.NET Core. .NET Core supports three main operating systems: Windows, Linux, and macOS. You can use .NET Core in device, cloud, and embedded/IoT scenarios.
+
+And, it now includes Docker support
+
+**New in 15.3**: Visual Studio 2017 version 15.3 supports .NET Core 2.0 development. (In 15.3, using .NET Core 2.0 requires downloading and installing the .NET Core 2.0 SDK separately.)
+
+For more information, see the [.NET Core Guide](https://docs.microsoft.com/dotnet/core/index) page.
+
+## <a name="talk-to-us"></a>Talk to us  
+ Why send feedback to the Visual Studio team? Because we take customer feedback seriously: It drives much what we do.
+
+If you want to make suggestion about how we can improve Visual Studio, or report a problem, please see the [Talk to Us](../ide/talk-to-us.md) page for more information.
+
+### <a name="report-a-problem"></a>Report a problem  
+ Sometimes, a message isn't enough to convey the full impact of a problem you've encountered. If you experience a hang, crash, or other performance issue, you can easily share repro steps and supporting files (such as screenshots and trace & heap dump files) with us by using the **Report a Problem** tool. For more information about how to use this tool, see the [How to Report a Problem](how-to-report-a-problem-with-visual-studio-2017.md) page.
+
+### <a name="track-your-issue-in-connect"></a>Track your issue in Connect  
+ If want to track the status of your Visual Studio feedback, go to [Connect](http://connect.microsoft.com/) and report the bug there. After you report it, you can return to Connect to track its status.
+
+## <a name="see-also"></a>See Also
+* [Visual Studio 2017 Release Notes](https://www.visualstudio.com/news/vs2015-vs)
+* [What's New in Visual C++](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
+* [What's New in C#](https://docs.microsoft.com/dotnet/csharp/csharp-7)  
+* [What's New for Team Foundation Server](https://www.visualstudio.com/docs/whats-new)
+* [What's New in Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 
