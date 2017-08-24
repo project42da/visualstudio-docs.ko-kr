@@ -1,52 +1,69 @@
 ---
-title: "IDebugBinder3::GetTypeArgumentCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBinder3::GetTypeArgumentCount"
-helpviewer_keywords: 
-  - "IDebugBinder3::GetTypeArgumentCount 메서드"
+title: IDebugBinder3::GetTypeArgumentCount | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBinder3::GetTypeArgumentCount
+helpviewer_keywords:
+- IDebugBinder3::GetTypeArgumentCount method
 ms.assetid: caf68de6-6f7c-4efd-b803-121347a5032e
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugBinder3::GetTypeArgumentCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1614c312c6aa307bd151cc76acbc843cd092a313
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는이 개체와 연관 된 인수 형식의 수를 반환 합니다.  
+---
+# <a name="idebugbinder3gettypeargumentcount"></a>IDebugBinder3::GetTypeArgumentCount
+This method returns the number of argument types associated with this object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetTypeArgumentCount(  
-   UINT* uCount  
+HRESULT GetTypeArgumentCount(  
+   UINT* uCount  
 );  
 ```  
   
-```c#  
-int GetTypeArgumentCount(  
-   out uint uCount  
+```cs  
+int GetTypeArgumentCount(  
+   out uint uCount  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `uCount`  
- \[out\] 이 개체와 연관 된 인수 형식의 수입니다.  
+ [out] Number of argument types associated with this object.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드에 의해 반환 되는 값을 사용 하 여 함께 사용할 배열을 할당할 수 있습니다 해당 [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md) 메서드가 있습니다.  
+## <a name="remarks"></a>Remarks  
+ The value returned by this method can be used to allocate an array for use with the [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)

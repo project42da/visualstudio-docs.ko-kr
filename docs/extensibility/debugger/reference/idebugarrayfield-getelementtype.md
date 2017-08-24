@@ -1,52 +1,69 @@
 ---
-title: "IDebugArrayField::GetElementType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugArrayField::GetElementType"
-helpviewer_keywords: 
-  - "IDebugArrayField::GetElementType 메서드"
+title: IDebugArrayField::GetElementType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugArrayField::GetElementType
+helpviewer_keywords:
+- IDebugArrayField::GetElementType method
 ms.assetid: c46bf625-0a48-4cbb-8f1f-286356f2c065
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugArrayField::GetElementType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 172a6d66cdf3b81d1712047950c4b8ec87fd6ff2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-요소 형식을에 배열에 가져옵니다.  
+---
+# <a name="idebugarrayfieldgetelementtype"></a>IDebugArrayField::GetElementType
+Gets the type of element in the array.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetElementType(   
-   IDebugField** ppType  
+HRESULT GetElementType(   
+   IDebugField** ppType  
 );  
 ```  
   
-```c#  
+```cs  
 int GetElementType(  
-   out IDebugField ppType  
+   out IDebugField ppType  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppType`  
- \[out\] 반환 된 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 형식의 요소를 설명 하는 개체입니다.  
+ [out] Returns an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object that describes the type of element.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md) 개체 가정 배열의 모든 요소가 같은 종류 인지.  
+## <a name="remarks"></a>Remarks  
+ The [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md) object assumes that all elements of the array are the same type.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

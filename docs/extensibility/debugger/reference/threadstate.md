@@ -1,77 +1,94 @@
 ---
-title: "THREADSTATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "THREADSTATE"
-helpviewer_keywords: 
-  - "THREADSTATE 열거형"
+title: THREADSTATE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- THREADSTATE
+helpviewer_keywords:
+- THREADSTATE enumeration
 ms.assetid: 62efdd7c-25b1-4fd3-9d06-ac1830a418a9
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# THREADSTATE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7953307ce0add0a15b229e041e531e2eb3264bcd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-스레드의 상태를 지정 합니다.  
+---
+# <a name="threadstate"></a>THREADSTATE
+Specifies the state of the thread.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_THREADSTATE {   
-   THREADSTATE_RUNNING = 0x0001,  
-   THREADSTATE_STOPPED = 0x0002,  
-   THREADSTATE_FRESH   = 0x0003,  
-   THREADSTATE_DEAD    = 0x0004,  
-   THREADSTATE_FROZEN  = 0x0005  
+enum enum_THREADSTATE {   
+   THREADSTATE_RUNNING = 0x0001,  
+   THREADSTATE_STOPPED = 0x0002,  
+   THREADSTATE_FRESH   = 0x0003,  
+   THREADSTATE_DEAD    = 0x0004,  
+   THREADSTATE_FROZEN  = 0x0005  
 };  
 typedef DWORD THREADSTATE;  
 ```  
   
-```c#  
-public enum enum_THREADSTATE {   
-   THREADSTATE_RUNNING = 0x0001,  
-   THREADSTATE_STOPPED = 0x0002,  
-   THREADSTATE_FRESH   = 0x0003,  
-   THREADSTATE_DEAD    = 0x0004,  
-   THREADSTATE_FROZEN  = 0x0005  
+```cs  
+public enum enum_THREADSTATE {   
+   THREADSTATE_RUNNING = 0x0001,  
+   THREADSTATE_STOPPED = 0x0002,  
+   THREADSTATE_FRESH   = 0x0003,  
+   THREADSTATE_DEAD    = 0x0004,  
+   THREADSTATE_FROZEN  = 0x0005  
 };  
 ```  
   
-## Members  
- THREADSTATE\_RUNNING  
- 스레드가 실행 중인지를 나타냅니다.  
+## <a name="members"></a>Members  
+ THREADSTATE_RUNNING  
+ Indicates that the thread is running.  
   
- THREADSTATE\_STOPPED  
- 중단점의 스레드가 중지 되었음을 나타냅니다.  
+ THREADSTATE_STOPPED  
+ Indicates that the thread is stopped because of a breakpoint.  
   
- THREADSTATE\_FRESH  
- 스레드 작성 된 있지만 코드가 아직 실행 되 고 있음을 나타냅니다.  
+ THREADSTATE_FRESH  
+ Indicates that the thread has been created, but is not yet running code.  
   
- THREADSTATE\_DEAD  
- 스레드가 비활성화 된 나타냅니다.  
+ THREADSTATE_DEAD  
+ Indicates that the thread is dead.  
   
- THREADSTATE\_FROZEN  
- 스레드가 고정 된 나타냅니다 \(를 실행 하지 않아도 수행할 수 있습니다\).  
+ THREADSTATE_FROZEN  
+ Indicates that the thread is frozen (no execution can be performed).  
   
-## 설명  
- 사용 되는 `dwThreadState` 필드는 [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) 구조입니다.  
+## <a name="remarks"></a>Remarks  
+ Used for the `dwThreadState` field of the [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) structure.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)

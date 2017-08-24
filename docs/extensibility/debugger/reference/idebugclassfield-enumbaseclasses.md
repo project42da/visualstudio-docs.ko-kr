@@ -1,51 +1,68 @@
 ---
-title: "IDebugClassField::EnumBaseClasses | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugClassField::EnumBaseClasses"
-helpviewer_keywords: 
-  - "IDebugClassField::EnumBaseClasses 메서드"
+title: IDebugClassField::EnumBaseClasses | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugClassField::EnumBaseClasses
+helpviewer_keywords:
+- IDebugClassField::EnumBaseClasses method
 ms.assetid: 78749674-ef75-46d3-a1f4-ff33afd90e32
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugClassField::EnumBaseClasses
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6fac1067c3ff609a41cc4ba693b9feaf81f166b1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 클래스의 기본 클래스에 대 한 열거자를 만듭니다.  
+---
+# <a name="idebugclassfieldenumbaseclasses"></a>IDebugClassField::EnumBaseClasses
+Creates an enumerator for the base classes of this class.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT EnumBaseClasses(   
-   IEnumDebugFields** ppEnum  
+HRESULT EnumBaseClasses(   
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
-```c#  
+```cs  
 int EnumBaseClasses(  
-   out IEnumDebugFields ppEnum  
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppEnum`  
- \[out\] 반환 된 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) 목록에 기본 클래스를 나타내는 개체입니다.  기본 클래스가 있는 경우 null 값을 반환 합니다.  
+ [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing the list of base classes. Returns a null value if there are no base classes.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 하 고 없음 기본 클래스 이면 S\_SH\_NO\_BASE\_CLASSES이 반환 \(와 `ppEnum` 매개 변수를 null 값으로 설정 됩니다\). 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK, returns S_SH_NO_BASE_CLASSES if there are no base classes (and the `ppEnum` parameter is set to a null value); otherwise, returns an error code.  
   
-## 설명  
- 열거자 개체의 기본 클래스 순서 대로 가장 즉시 \(또는 가장 많이 파생 된\) 기본 클래스는 대부분의 원격 기본 클래스를 지정 합니다.  예를 들어, c \+ \+ 클래스를 가정합니다.  
+## <a name="remarks"></a>Remarks  
+ The base classes in the enumerator object are specified in order of the most immediate (or most derived) base class to the most remote base class. For example, given the C++ classes:  
   
 ```  
 class Root { }  
@@ -54,8 +71,8 @@ class Level2 : Level1 { }
 class MyClass : Level2 { }  
 ```  
   
- 열거 된 순서 대로 기본 클래스를 반환 합니다 `Level2`, `Level1`, `Root`.  
+ The enumeration would return the base classes in the order `Level2`, `Level1`, `Root`.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

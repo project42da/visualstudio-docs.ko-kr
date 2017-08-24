@@ -1,91 +1,108 @@
 ---
-title: "IDebugPortEx2::LaunchSuspended | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortEx2::LaunchSuspended"
-helpviewer_keywords: 
-  - "IDebugPortEx2::LaunchSuspended"
+title: IDebugPortEx2::LaunchSuspended | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortEx2::LaunchSuspended
+helpviewer_keywords:
+- IDebugPortEx2::LaunchSuspended
 ms.assetid: 34b2cf99-2e52-4757-8969-1d12ac517ec0
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugPortEx2::LaunchSuspended
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2020dbb883f7de5efbbe7642bc0d07720a3dab3e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-실행 파일을 시작합니다.  
+---
+# <a name="idebugportex2launchsuspended"></a>IDebugPortEx2::LaunchSuspended
+Launches an executable file.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT LaunchSuspended(   
-   LPCOLESTR        pszExe,  
-   LPCOLESTR        pszArgs,  
-   LPCOLESTR        pszDir,  
-   BSTR             bstrEnv,  
-   DWORD            hStdInput,  
-   DWORD            hStdOutput,  
-   DWORD            hStdError,  
-   IDebugProcess2** ppPortProcess  
+HRESULT LaunchSuspended(   
+   LPCOLESTR        pszExe,  
+   LPCOLESTR        pszArgs,  
+   LPCOLESTR        pszDir,  
+   BSTR             bstrEnv,  
+   DWORD            hStdInput,  
+   DWORD            hStdOutput,  
+   DWORD            hStdError,  
+   IDebugProcess2** ppPortProcess  
 );  
 ```  
   
-```c#  
-int LaunchSuspended(   
-   string             pszExe,  
-   string             pszArgs,  
-   string             pszDir,  
-   string             bstrEnv,  
-   uint               hStdInput,  
-   uint               hStdOutput,  
-   uint               hStdError,  
-   out IDebugProcess2 ppPortProcess  
+```cs  
+int LaunchSuspended(   
+   string             pszExe,  
+   string             pszArgs,  
+   string             pszDir,  
+   string             bstrEnv,  
+   uint               hStdInput,  
+   uint               hStdOutput,  
+   uint               hStdError,  
+   out IDebugProcess2 ppPortProcess  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pszExe`  
- \[in\] 실행 될 실행 파일의 이름입니다.  이 전체 경로 또는 상대를 작업 디렉터리에 지정 된 수의 `pszDir` 매개 변수.  
+ [in] The name of the executable to be launched. This can be a full path or relative to the working directory specified in the `pszDir` parameter.  
   
  `pszArgs`  
- \[in\] 실행 파일에 전달할 인수입니다.  인수가 없으면 null 값을 수 있습니다.  
+ [in] The arguments to pass to the executable. May be a null value if there are no arguments.  
   
  `pszDir`  
- \[in\] 실행 파일에서 사용 되는 작업 디렉터리의 이름입니다.  필요한 작업 디렉터리가 없는 경우 null 값을 수 있습니다.  
+ [in] The name of the working directory used by the executable. May be a null value if no working directory is required.  
   
  `bstrEnv`  
- \[in\] 환경 블록의 null로 끝나는 문자열 뒤에 추가 NULL 종결자가 있습니다.  
+ [in] Environment block of null-terminated strings, followed by an additional NULL terminator.  
   
  `hStdInput`  
- \[in\] 하는 대체 입력된 스트림을 처리 합니다.  리디렉션이 필요 없는 경우 0 일 수 있습니다.  
+ [in] Handle to an alternate input stream. May be 0 if redirection is not required.  
   
  `hStdOutput`  
- \[in\] 대체 출력 스트림으로 처리 합니다.  리디렉션이 필요 없는 경우 0 일 수 있습니다.  
+ [in] Handle to an alternate output stream. May be 0 if redirection is not required.  
   
  `hStdError`  
- \[in\] 대체 오류 출력 스트림으로 처리 합니다.  리디렉션이 필요 없는 경우 0 일 수 있습니다.  
+ [in] Handle to an alternate error output stream. May be 0 if redirection is not required.  
   
  `ppPortProcess`  
- \[out\] 반환 된 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 시작된 된 프로세스를 나타내는 개체입니다.  
+ [out] Returns an [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) object that represents the launched process.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드는이 일시 중단 되므로 프로세스 및 코드를 실행 실행 됩니다.  [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) 메서드를 호출할 프로세스를 다시 시작 합니다.  
+## <a name="remarks"></a>Remarks  
+ This method should launch the process so that it is suspended and not running any code. The [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) method is called to resume the process.  
   
- 디버그 엔진을 또한 프로그램을 시작할 수 있습니다.  자세한 내용은 [프로그램 실행](../../../extensibility/debugger/launching-a-program.md)를 참조하십시오.  
+ A program can also be launched from a debug engine. For details, see [Launching a Program](../../../extensibility/debugger/launching-a-program.md).  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)   
- [프로그램 실행](../../../extensibility/debugger/launching-a-program.md)
+ [Launching a Program](../../../extensibility/debugger/launching-a-program.md)

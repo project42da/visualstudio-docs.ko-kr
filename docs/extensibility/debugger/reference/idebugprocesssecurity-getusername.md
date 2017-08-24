@@ -1,49 +1,66 @@
 ---
-title: "IDebugProcessSecurity::GetUserName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProcessSecurity::GetUserName"
+title: IDebugProcessSecurity::GetUserName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugProcessSecurity::GetUserName
 ms.assetid: c73c60ac-da6e-45ae-8f04-95353a24ca3e
 caps.latest.revision: 4
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# IDebugProcessSecurity::GetUserName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 58ca0ee663e65becbba943a96d24502ebdc7a008
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-사용자 이름을 포트 공급자에서 가져옵니다.  
+---
+# <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
+Gets the user name from the port supplier.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetUserName(  
-    BSTR *pbstrUserName  
+    BSTR *pbstrUserName  
 );  
 ```  
   
-```c#  
+```cs  
 int GetUserName (  
-    string pbstrUserName  
+    string pbstrUserName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pbstrUserName`  
- \[out\] 사용자 이름이 포함 된 문자열입니다.  
+ [out] A string containing the user name.  
   
-## 반환 값  
- 메서드가 성공 하면, 반환 `S_OK`.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns `S_OK`. Otherwise it returns an error code.  
   
-## 설명  
- `GetUserName`표시 되는 사용자 이름을 반환 하는  **사용자 이름** 의 열은  **프로세스에 연결** 대화 상자.  볼 수는  **프로세스에 연결** 대화 상자를 클릭  **프로세스에 연결** 에  **도구** 메뉴에는 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 \(IDE\)입니다.  
+## <a name="remarks"></a>Remarks  
+ `GetUserName` returns the user name that is displayed in the **User Name** column of the **Attach to Process** dialog box. To view the **Attach to Process** dialog box, click **Attach to Process** on the **Tools** menu in the [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] integrated development environment (IDE).  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

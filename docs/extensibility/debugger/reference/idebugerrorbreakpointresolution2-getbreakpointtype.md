@@ -1,54 +1,71 @@
 ---
-title: "IDebugErrorBreakpointResolution2::GetBreakpointType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugErrorBreakpointResolution2::GetBreakpointType"
-helpviewer_keywords: 
-  - "IDebugErrorBreakpointResolution2::GetBreakpointType"
+title: IDebugErrorBreakpointResolution2::GetBreakpointType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugErrorBreakpointResolution2::GetBreakpointType
+helpviewer_keywords:
+- IDebugErrorBreakpointResolution2::GetBreakpointType
 ms.assetid: 0bdb1152-4752-4464-ae7c-6d666dc293b7
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugErrorBreakpointResolution2::GetBreakpointType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 5353cfb55062a9abb1e5e79639c708029845dda0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-중단점 형식을 가져옵니다.  
+---
+# <a name="idebugerrorbreakpointresolution2getbreakpointtype"></a>IDebugErrorBreakpointResolution2::GetBreakpointType
+Gets the breakpoint type.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetBreakpointType(   
-   BP_TYPE* pBPType  
+HRESULT GetBreakpointType(   
+   BP_TYPE* pBPType  
 );  
 ```  
   
-```c#  
-int GetBreakpointType(   
-   out enum_BP_TYPE pBPType  
+```cs  
+int GetBreakpointType(   
+   out enum_BP_TYPE pBPType  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pBPType`  
- \[out\] 값을 반환의 [BP\_TYPE](../../../extensibility/debugger/reference/bp-type.md) 중단점의 종류에 설명 하는 열거형입니다.  
+ [out] Returns a value from the [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) enumeration that describes the type of breakpoint.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 따라서 중단점 오류 이벤트가 필요한 종류의 중단점을 바인딩할 수 없습니다이 메서드를 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ This method returns the type of the breakpoint that failed to bind, thus requiring an error breakpoint event.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CDebugErrorBreakpointResolution` 를 노출 하는 개체는 [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) 인터페이스입니다.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CDebugErrorBreakpointResolution` object that exposes the [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) interface.  
   
 ```  
 HRESULT CDebugErrorBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)    
@@ -81,6 +98,6 @@ HRESULT CDebugErrorBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)   
- [BP\_TYPE](../../../extensibility/debugger/reference/bp-type.md)
+ [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)

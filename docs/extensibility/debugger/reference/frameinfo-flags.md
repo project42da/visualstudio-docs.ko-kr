@@ -1,211 +1,228 @@
 ---
-title: "FRAMEINFO_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FRAMEINFO_FLAGS"
-helpviewer_keywords: 
-  - "FRAMEINFO_FLAGS 열거형"
+title: FRAMEINFO_FLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FRAMEINFO_FLAGS
+helpviewer_keywords:
+- FRAMEINFO_FLAGS enumeration
 ms.assetid: 41578062-8455-412a-9d8b-1e1e9dc8d52e
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# FRAMEINFO_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: a8f8dd9b923a06e8bb73e619ad9c7043f603ed3a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-스택 프레임 개체에 대 한 검색 정보를 지정 합니다.  
+---
+# <a name="frameinfoflags"></a>FRAMEINFO_FLAGS
+Specifies the information to retrieve about a stack frame object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_FRAMEINFO_FLAGS {  
-   FIF_FUNCNAME              = 0x00000001,  
-   FIF_RETURNTYPE            = 0x00000002,  
-   FIF_ARGS                  = 0x00000004,  
-   FIF_LANGUAGE              = 0x00000008,  
-   FIF_MODULE                = 0x00000010,  
-   FIF_STACKRANGE            = 0x00000020,  
-   FIF_FRAME                 = 0x00000040,  
-   FIF_DEBUGINFO             = 0x00000080,  
-   FIF_STALECODE             = 0x00000100,  
-   FIF_ANNOTATEDFRAME        = 0x00000200,  
-   FIF_DEBUG_MODULEP         = 0x00000400,  
-   FIF_FUNCNAME_FORMAT       = 0x00001000,  
-   FIF_FUNCNAME_RETURNTYPE   = 0x00002000,  
-   FIF_FUNCNAME_ARGS         = 0x00004000,  
-   FIF_FUNCNAME_LANGUAGE     = 0x00008000,  
-   FIF_FUNCNAME_MODULE       = 0x00010000,  
-   FIF_FUNCNAME_LINES        = 0x00020000,  
-   FIF_FUNCNAME_OFFSET       = 0x00040000,  
-   FIF_FUNCNAME_ARGS_TYPES   = 0x00100000,  
-   FIF_FUNCNAME_ARGS_NAMES   = 0x00200000,  
-   FIF_FUNCNAME_ARGS_VALUES  = 0x00400000,  
-   FIF_FUNCNAME_ARGS_ALL     = 0x00700000,  
-   FIF_ARGS_TYPES            = 0x01000000,  
-   FIF_ARGS_NAMES            = 0x02000000,  
-   FIF_ARGS_VALUES           = 0x04000000,  
-   FIF_ARGS_ALL              = 0x07000000,  
-   FIF_ARGS_NOFORMAT         = 0x08000000,  
-   FIF_ARGS_NO_FUNC_EVAL     = 0x10000000,  
-   FIF_FILTER_NON_USER_CODE  = 0x20000000,  
-   FIF_ARGS_NO_TOSTRING      = 0x40000000,  
-   FIF_DESIGN_TIME_EXPR_EVAL = 0x80000000  
+enum enum_FRAMEINFO_FLAGS {  
+   FIF_FUNCNAME              = 0x00000001,  
+   FIF_RETURNTYPE            = 0x00000002,  
+   FIF_ARGS                  = 0x00000004,  
+   FIF_LANGUAGE              = 0x00000008,  
+   FIF_MODULE                = 0x00000010,  
+   FIF_STACKRANGE            = 0x00000020,  
+   FIF_FRAME                 = 0x00000040,  
+   FIF_DEBUGINFO             = 0x00000080,  
+   FIF_STALECODE             = 0x00000100,  
+   FIF_ANNOTATEDFRAME        = 0x00000200,  
+   FIF_DEBUG_MODULEP         = 0x00000400,  
+   FIF_FUNCNAME_FORMAT       = 0x00001000,  
+   FIF_FUNCNAME_RETURNTYPE   = 0x00002000,  
+   FIF_FUNCNAME_ARGS         = 0x00004000,  
+   FIF_FUNCNAME_LANGUAGE     = 0x00008000,  
+   FIF_FUNCNAME_MODULE       = 0x00010000,  
+   FIF_FUNCNAME_LINES        = 0x00020000,  
+   FIF_FUNCNAME_OFFSET       = 0x00040000,  
+   FIF_FUNCNAME_ARGS_TYPES   = 0x00100000,  
+   FIF_FUNCNAME_ARGS_NAMES   = 0x00200000,  
+   FIF_FUNCNAME_ARGS_VALUES  = 0x00400000,  
+   FIF_FUNCNAME_ARGS_ALL     = 0x00700000,  
+   FIF_ARGS_TYPES            = 0x01000000,  
+   FIF_ARGS_NAMES            = 0x02000000,  
+   FIF_ARGS_VALUES           = 0x04000000,  
+   FIF_ARGS_ALL              = 0x07000000,  
+   FIF_ARGS_NOFORMAT         = 0x08000000,  
+   FIF_ARGS_NO_FUNC_EVAL     = 0x10000000,  
+   FIF_FILTER_NON_USER_CODE  = 0x20000000,  
+   FIF_ARGS_NO_TOSTRING      = 0x40000000,  
+   FIF_DESIGN_TIME_EXPR_EVAL = 0x80000000  
 };  
 typedef DWORD FRAMEINFO_FLAGS;  
 ```  
   
-```c#  
-public enum enum_FRAMEINFO_FLAGS {  
-   FIF_FUNCNAME              = 0x00000001,  
-   FIF_RETURNTYPE            = 0x00000002,  
-   FIF_ARGS                  = 0x00000004,  
-   FIF_LANGUAGE              = 0x00000008,  
-   FIF_MODULE                = 0x00000010,  
-   FIF_STACKRANGE            = 0x00000020,  
-   FIF_FRAME                 = 0x00000040,  
-   FIF_DEBUGINFO             = 0x00000080,  
-   FIF_STALECODE             = 0x00000100,  
-   FIF_ANNOTATEDFRAME        = 0x00000200,  
-   FIF_DEBUG_MODULEP         = 0x00000400,  
-   FIF_FUNCNAME_FORMAT       = 0x00001000,  
-   FIF_FUNCNAME_RETURNTYPE   = 0x00002000,  
-   FIF_FUNCNAME_ARGS         = 0x00004000,  
-   FIF_FUNCNAME_LANGUAGE     = 0x00008000,  
-   FIF_FUNCNAME_MODULE       = 0x00010000,  
-   FIF_FUNCNAME_LINES        = 0x00020000,  
-   FIF_FUNCNAME_OFFSET       = 0x00040000,  
-   FIF_FUNCNAME_ARGS_TYPES   = 0x00100000,  
-   FIF_FUNCNAME_ARGS_NAMES   = 0x00200000,  
-   FIF_FUNCNAME_ARGS_VALUES  = 0x00400000,  
-   FIF_FUNCNAME_ARGS_ALL     = 0x00700000,  
-   FIF_ARGS_TYPES            = 0x01000000,  
-   FIF_ARGS_NAMES            = 0x02000000,  
-   FIF_ARGS_VALUES           = 0x04000000,  
-   FIF_ARGS_ALL              = 0x07000000,  
-   FIF_ARGS_NOFORMAT         = 0x08000000,  
-   FIF_ARGS_NO_FUNC_EVAL     = 0x10000000,  
-   FIF_FILTER_NON_USER_CODE  = 0x20000000,  
-   FIF_ARGS_NO_TOSTRING      = 0x40000000,  
-   FIF_DESIGN_TIME_EXPR_EVAL = 0x80000000  
+```cs  
+public enum enum_FRAMEINFO_FLAGS {  
+   FIF_FUNCNAME              = 0x00000001,  
+   FIF_RETURNTYPE            = 0x00000002,  
+   FIF_ARGS                  = 0x00000004,  
+   FIF_LANGUAGE              = 0x00000008,  
+   FIF_MODULE                = 0x00000010,  
+   FIF_STACKRANGE            = 0x00000020,  
+   FIF_FRAME                 = 0x00000040,  
+   FIF_DEBUGINFO             = 0x00000080,  
+   FIF_STALECODE             = 0x00000100,  
+   FIF_ANNOTATEDFRAME        = 0x00000200,  
+   FIF_DEBUG_MODULEP         = 0x00000400,  
+   FIF_FUNCNAME_FORMAT       = 0x00001000,  
+   FIF_FUNCNAME_RETURNTYPE   = 0x00002000,  
+   FIF_FUNCNAME_ARGS         = 0x00004000,  
+   FIF_FUNCNAME_LANGUAGE     = 0x00008000,  
+   FIF_FUNCNAME_MODULE       = 0x00010000,  
+   FIF_FUNCNAME_LINES        = 0x00020000,  
+   FIF_FUNCNAME_OFFSET       = 0x00040000,  
+   FIF_FUNCNAME_ARGS_TYPES   = 0x00100000,  
+   FIF_FUNCNAME_ARGS_NAMES   = 0x00200000,  
+   FIF_FUNCNAME_ARGS_VALUES  = 0x00400000,  
+   FIF_FUNCNAME_ARGS_ALL     = 0x00700000,  
+   FIF_ARGS_TYPES            = 0x01000000,  
+   FIF_ARGS_NAMES            = 0x02000000,  
+   FIF_ARGS_VALUES           = 0x04000000,  
+   FIF_ARGS_ALL              = 0x07000000,  
+   FIF_ARGS_NOFORMAT         = 0x08000000,  
+   FIF_ARGS_NO_FUNC_EVAL     = 0x10000000,  
+   FIF_FILTER_NON_USER_CODE  = 0x20000000,  
+   FIF_ARGS_NO_TOSTRING      = 0x40000000,  
+   FIF_DESIGN_TIME_EXPR_EVAL = 0x80000000  
 };  
 ```  
   
-## Members  
- FIF\_FUNCNAME  
- 초기화\/사용의 `m_bstrFuncName` 필드입니다.  
+## <a name="members"></a>Members  
+ FIF_FUNCNAME  
+ Initialize/use the `m_bstrFuncName` field.  
   
- FIF\_RETURNTYPE  
- 초기화\/사용의 `m_bstrReturnType` 필드입니다.  
+ FIF_RETURNTYPE  
+ Initialize/use the `m_bstrReturnType` field.  
   
- FIF\_ARGS  
- 초기화\/사용의 `m_bstrArgs` 필드입니다.  
+ FIF_ARGS  
+ Initialize/use the `m_bstrArgs` field.  
   
- FIF\_LANGUAGE  
- 초기화\/사용의 `m_bstrLanguage` 필드입니다.  
+ FIF_LANGUAGE  
+ Initialize/use the `m_bstrLanguage` field.  
   
- FIF\_MODULE  
- 초기화\/사용의 `m_bstrModule` 필드입니다.  
+ FIF_MODULE  
+ Initialize/use the `m_bstrModule` field.  
   
- FIF\_STACKRANGE  
- 초기화\/사용의 `m_addrMin` 및 `m_addrMax` \(스택 범위\) 필드입니다.  
+ FIF_STACKRANGE  
+ Initialize/use the `m_addrMin` and `m_addrMax` (stack range) fields.  
   
- FIF\_FRAME  
- 초기화\/사용의 `m_pFrame` 필드입니다.  
+ FIF_FRAME  
+ Initialize/use the `m_pFrame` field.  
   
- FIF\_DEBUGINFO  
- 초기화\/사용의 `m_fHasDebugInfo` 필드입니다.  
+ FIF_DEBUGINFO  
+ Initialize/use the `m_fHasDebugInfo` field.  
   
- FIF\_STALECODE  
- 초기화\/사용의 `m_fStaleCode` 필드입니다.  
+ FIF_STALECODE  
+ Initialize/use the `m_fStaleCode` field.  
   
- FIF\_ANNOTATEDFRAME  
- 초기화\/사용의 `m_fAnnotatedFrame` 필드입니다.  
+ FIF_ANNOTATEDFRAME  
+ Initialize/use the `m_fAnnotatedFrame` field.  
   
- FIF\_DEBUG\_MODULEP  
- 초기화\/사용의 `m_pModule` 필드입니다.  
+ FIF_DEBUG_MODULEP  
+ Initialize/use the `m_pModule` field.  
   
- FIF\_FUNCNAME\_FORMAT  
- 함수 이름 형식을 지정합니다.  결과에 반환 되는 `m_bstrFunName` 필드 및 필드가 없습니다 채워진.  
+ FIF_FUNCNAME_FORMAT  
+ Formats the function name. The result is returned in the `m_bstrFunName` field and no other fields are filled out.  
   
- FIF\_FUNCNAME\_RETURNTYPE  
- 반환 형식에 추가 `m_bstrFuncName` 필드입니다.  
+ FIF_FUNCNAME_RETURNTYPE  
+ Adds the return type to the `m_bstrFuncName` field.  
   
- FIF\_FUNCNAME\_ARGS  
- 인수를 더는 `m_bstrFuncName` 필드입니다.  
+ FIF_FUNCNAME_ARGS  
+ Adds the arguments to the `m_bstrFuncName` field.  
   
- FIF\_FUNCNAME\_LANGUAGE  
- 추가 언어에 있는 `m_bstrFuncName` 필드.  
+ FIF_FUNCNAME_LANGUAGE  
+ Adds the language to the `m_bstrFuncName` field.  
   
- FIF\_FUNCNAME\_MODULE  
- 모듈 이름에 추가 `m_bstrFuncName` 필드입니다.  
+ FIF_FUNCNAME_MODULE  
+ Adds the module name to the `m_bstrFuncName` field.  
   
- FIF\_FUNCNAME\_LINES  
- 에 줄 수 추가 `m_bstrFuncName` 필드입니다.  
+ FIF_FUNCNAME_LINES  
+ Adds the number of lines to the `m_bstrFuncName` field.  
   
- FIF\_FUNCNAME\_OFFSET  
- 추가 `m_bstrFuncName` 경우에 줄의 시작 부분에서 바이트 오프셋 필드 `FIF_FUNCNAME_LINES` 지정 됩니다.  경우 `FIF_FUNCNAME_LINES` 지정 되지 않은 경우 또는 줄 번호를 사용할 수 없는 경우 함수의 시작부터 바이트 오프셋을 추가 합니다.  
+ FIF_FUNCNAME_OFFSET  
+ Adds to the `m_bstrFuncName` field the offset in bytes from the start of the line if `FIF_FUNCNAME_LINES` is specified. If `FIF_FUNCNAME_LINES` is not specified, or if line numbers are not available, adds the offset in bytes from the start of the function.  
   
- FIF\_FUNCNAME\_ARGS\_TYPES  
- 각 함수 인수에 유형을 추가 `m_bstrFuncName` 필드입니다.  
+ FIF_FUNCNAME_ARGS_TYPES  
+ Adds the type of each function argument to the `m_bstrFuncName` field.  
   
- FIF\_FUNCNAME\_ARGS\_NAMES  
- 각 함수 인수에 이름 추가 `m_bstrFuncName` 필드입니다.  
+ FIF_FUNCNAME_ARGS_NAMES  
+ Adds the name of each function argument to the `m_bstrFuncName` field.  
   
- FIF\_FUNCNAME\_ARGS\_VALUES  
- 각 함수 인수에 값을 추가 `m_bstrFuncName` 필드입니다.  
+ FIF_FUNCNAME_ARGS_VALUES  
+ Adds the value of each function argument to the `m_bstrFuncName` field.  
   
- FIF\_FUNCNAME\_ARGS\_ALL  
- 추가 형식, 이름 및 값에 대 한 모든 인수는 `m_bstrFuncName` 필드.  
+ FIF_FUNCNAME_ARGS_ALL  
+ Adds the type, name, and value of all arguments to the `m_bstrFuncName` field.  
   
- FIF\_ARGS\_TYPES  
- 인수 형식 가져와 서식이 지정 됩니다.  
+ FIF_ARGS_TYPES  
+ The argument types are retrieved and formatted.  
   
- FIF\_ARGS\_NAMES  
- 인수 이름은 검색 하며 포맷 합니다.  
+ FIF_ARGS_NAMES  
+ The argument names are retrieved and formatted.  
   
- FIF\_ARGS\_VALUES  
- 인수 값 검색 포맷 하 고 있습니다.  
+ FIF_ARGS_VALUES  
+ The argument values are retrieved and formatted.  
   
- FIF\_ARGS\_ALL  
- 검색 하 고 형식, 이름 및 값의 모든 인수 형식을 지정 합니다.  
+ FIF_ARGS_ALL  
+ Retrieve and format the type, name, and value of all arguments.  
   
- FIF\_ARGS\_NOFORMAT  
- 인수는 않습니다 포맷 된 지정 \(예를 들어 하지 않는 인수 목록 주위에 괄호를 추가 나 인수 사이의 구분 기호를 추가\).  
+ FIF_ARGS_NOFORMAT  
+ Specifies that the arguments are not be formatted (for example, do not add opening and closing parentheses around the argument list nor add a separator between arguments).  
   
- FIF\_ARGS\_NO\_FUNC\_EVAL  
- \(속성\) 함수 인수의 값을 검색할 때 사용할 수 없습니다 것을 지정 합니다.  
+ FIF_ARGS_NO_FUNC_EVAL  
+ Specifies that function (property) evaluation should not be used when retrieving argument values.  
   
- FIF\_FILTER\_NON\_USER\_CODE  
- 디버그 엔진 필터링 디버거용 코드 프레임 포함 되지 않은 것입니다.  
+ FIF_FILTER_NON_USER_CODE  
+ The debug engine is to filter non-user code frames so they are not included.  
   
- FIF\_ARGS\_NO\_TOSTRING  
- 허용 하지 않는 작업 `ToString()` 평가 또는 서식 함수 인수를 반환 하는 경우 작동 합니다.  
+ FIF_ARGS_NO_TOSTRING  
+ Do not allow `ToString()` function evaluation or formatting when returning function arguments.  
   
- FIF\_DESIGN\_TIME\_EXPR\_EVAL  
- 호스팅 프로세스 대신 호스트 응용 프로그램 도메인에서 프레임 정보를 얻을 수 있어야 합니다.  
+ FIF_DESIGN_TIME_EXPR_EVAL  
+ Frame information should be gotten from the hosted app-domain rather than the hosting process.  
   
-## 설명  
- 이러한 플래그를 전달의 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) 및 [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) 필드를 초기화 하는 나타내기 위해 메서드는 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 구조 또는 구조.  
+## <a name="remarks"></a>Remarks  
+ These flags are passed to the [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) and [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) methods to indicate which fields are to be initialized in the [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structure or structures.  
   
- 이러한 플래그 필드를 나타내는 데도 사용 됩니다 있는 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 구조는 유효 하 고 사용 하는 구조를 반환 하는 경우.  이 값이 비트와 함께 사용할 수 있습니다 `OR`.  
+ These flags are also used to indicate which fields of the [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structure are used and valid when the structure is returned. These values may be combined with a bitwise `OR`.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)   
  [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)

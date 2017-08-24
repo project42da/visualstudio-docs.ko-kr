@@ -1,76 +1,93 @@
 ---
-title: "IDebugFunctionObject::CreateArrayObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugFunctionObject::CreateArrayObject"
-helpviewer_keywords: 
-  - "IDebugFunctionObject::CreateArrayObject 메서드"
+title: IDebugFunctionObject::CreateArrayObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugFunctionObject::CreateArrayObject
+helpviewer_keywords:
+- IDebugFunctionObject::CreateArrayObject method
 ms.assetid: a380e53c-15f1-401f-927f-f366eea789e6
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugFunctionObject::CreateArrayObject
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8cca8cc0dd6cdd0ce6e8127f833eb04553f8949f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-배열 개체를 만듭니다.  이 배열의 기본 형식 중 하나를 포함 하거나 개체 인스턴스 값입니다.  
+---
+# <a name="idebugfunctionobjectcreatearrayobject"></a>IDebugFunctionObject::CreateArrayObject
+Creates an array object. This array can contain either primitive or object instance values.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT CreateArrayObject(   
-   OBJECT_TYPE    ot,  
-   IDebugField*   pClassField,  
-   DWORD          dwRank,  
-   DWORD          dwDims[],  
-   DWORD          dwLowBounds[],  
-   IDebugObject** ppObject  
+HRESULT CreateArrayObject(   
+   OBJECT_TYPE    ot,  
+   IDebugField*   pClassField,  
+   DWORD          dwRank,  
+   DWORD          dwDims[],  
+   DWORD          dwLowBounds[],  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```c#  
+```cs  
 int CreateArrayObject(  
-   enum_OBJECT_TYPE ot,   
-   IDebugField      pClassField,   
-   uint             dwRank,   
-   uint[]           dwDims,   
-   uint[]           dwLowBounds,   
-   out IDebugObject ppObject  
+   enum_OBJECT_TYPE ot,   
+   IDebugField      pClassField,   
+   uint             dwRank,   
+   uint[]           dwDims,   
+   uint[]           dwLowBounds,   
+   out IDebugObject ppObject  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ot`  
- \[in\] 값을 지정의 [OBJECT\_TYPE](../../../extensibility/debugger/reference/object-type.md) 새 배열 개체의 형식을 나타내는 열거형입니다.  
+ [in] Specifies a value from the [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) enumeration indicating the type of the new array object.  
   
  `pClassField`  
- \[in\] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 인스턴스 값 개체의 배열을 만드는 경우 개체의 클래스를 나타내는 개체입니다.  기본 개체의 배열을 만드는 경우이 매개 변수는 null 값입니다.  
+ [in] An [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object representing the class of an object, if creating an array of object instance values. If creating an array of primitive objects, this parameter is a null value.  
   
  `dwRank`  
- \[in\] 순위 또는 번호 배열입니다.  
+ [in] The rank or number of dimensions of the array.  
   
  `dwDims`  
- \[in\] 배열의 각 차원의 크기입니다.  
+ [in] The sizes of each dimension of the array.  
   
  `dwLowBounds`  
- \[in\] 각 치수의 원점 \(일반적으로 0 또는 1\).  
+ [in] The origin of each dimension (typically 0 or 1).  
   
  `ppObject`  
- \[out\] 반환 된 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 새로 만든된 배열을 나타내는 개체입니다.  실제로는 [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) 개체입니다.  
+ [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the newly created array. This is actually an [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) object.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 으로 표시 되며 함수는 배열 매개 변수를 나타내는 개체를 만드는 데이 메서드를 호출 하 여 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) 인터페이스입니다.  
+## <a name="remarks"></a>Remarks  
+ Call this method to create an object that represents an array parameter to the function which is represented by the [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

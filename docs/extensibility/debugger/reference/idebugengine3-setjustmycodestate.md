@@ -1,62 +1,79 @@
 ---
-title: "IDebugEngine3::SetJustMyCodeState | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine3::SetJustMyCodeState"
-helpviewer_keywords: 
-  - "IDebugEngine3::SetJustMyCodeState"
+title: IDebugEngine3::SetJustMyCodeState | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine3::SetJustMyCodeState
+helpviewer_keywords:
+- IDebugEngine3::SetJustMyCodeState
 ms.assetid: 8ec17fbf-df93-424a-b2ed-fd1e5ee51256
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugEngine3::SetJustMyCodeState
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2a3db3b4204b83f48b86d8ba581bcd8257b841cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는 디버그 엔진 JustMyCode 상태 정보에 대 한 알 수 있습니다.  
+---
+# <a name="idebugengine3setjustmycodestate"></a>IDebugEngine3::SetJustMyCodeState
+This method tells the debug engine about the JustMyCode state information.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT SetJustMyCodeState(  
-   BOOL           fUpdate,  
-   DWORD          dwModules,  
-   JMC_CODE_SPEC* rgJMCSpec  
+HRESULT SetJustMyCodeState(  
+   BOOL           fUpdate,  
+   DWORD          dwModules,  
+   JMC_CODE_SPEC* rgJMCSpec  
 );  
 ```  
   
-```c#  
+```cs  
 int SetJustMyCodeState(  
-   int             fUpdate,   
-   uint            dwModules,   
-   JMC_CODE_SPEC[] rgJMCSpec  
+   int             fUpdate,   
+   uint            dwModules,   
+   JMC_CODE_SPEC[] rgJMCSpec  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `fUpdate`  
- \[in\] 0이 아닌 \(`TRUE`\) 최신 정보를 업데이트 하려면 0 \(`FALSE`\) \(아무 것도 이전에 설정 무시\) 모든 정보를 다시 설정 합니다.  
+ [in] Nonzero (`TRUE`) to update current information, zero (`FALSE`) to reset all information (ignoring anything previously set).  
   
  `dwModules`  
- \[in\] 정보 구조에 수`rgJMCSpec.`  
+ [in] Number of information structures in `rgJMCSpec.`  
   
  `rgJMCSpec`  
- \[in\] 배열 [JMC\_CODE\_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) 구조를 사용 합니다.  
+ [in] Array of [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) structures to use.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns error code.  
   
-## 설명  
- JustMyCode 되어 사용자에 게 속한 코드만 디버깅 및 시스템 코드와 같은 모든 중간 코드를 무시 합니다. 개념\-소스 코드에 대 한 시스템 코드에서 사용할 수 있는 경우에.  
+## <a name="remarks"></a>Remarks  
+ JustMyCode is the concept of debugging only the code that belongs to a user and ignoring all intermediate code such as system code—even if source code is available for that system code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)   
- [JMC\_CODE\_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md)
+ [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md)

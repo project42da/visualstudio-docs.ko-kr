@@ -1,46 +1,63 @@
 ---
-title: "IDebugIDECallback::DisplayMessage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugIDECallback::DisplayMessage"
+title: IDebugIDECallback::DisplayMessage | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugIDECallback::DisplayMessage
 ms.assetid: c19b48ee-b370-4fce-91fe-f82bf1e63179
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugIDECallback::DisplayMessage
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f49cd40d8f936b316ee278efde198471c50ebc87
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-디버거의 출력 창에는 지정 된 메시지 문자열을 보냅니다.  
+---
+# <a name="idebugidecallbackdisplaymessage"></a>IDebugIDECallback::DisplayMessage
+Sends the specified message string to the debugger's output window.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT DisplayMessage (  
-   LPCOLESTR szMessage  
+   LPCOLESTR szMessage  
 );  
 ```  
   
-```c#  
+```cs  
 int DisplayMessage (  
-   string szMessage  
+   string szMessage  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `szMessage`  
- \[in\] 디버거의 출력 창에 표시 하는 메시지 문자열입니다.  
+ [in] Message string to display in the debugger's output window.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugIDECallback](../../../extensibility/debugger/reference/idebugidecallback.md)

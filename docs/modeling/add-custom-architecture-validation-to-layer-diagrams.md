@@ -1,5 +1,5 @@
 ---
-title: "종속성 다이어그램에 사용자 지정 아키텍처 유효성 검사 추가 | Microsoft 문서"
+title: Add custom architecture validation to dependency diagrams | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,117 +28,118 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: fd26c504273cae739ccbeef5e406891def732985
-ms.openlocfilehash: 16702d78769037b693ddfc0a36ac62453e9b7115
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d14346c73d5d8ba730ff080719e65c6f1d1f3f94
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>종속성 다이어그램에 사용자 지정 아키텍처 유효성 검사 추가
-Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델에 대 한 프로젝트의 소스 코드를 소스 코드 종속성 다이어그램의 종속성을 따르는지 확인할 수 있습니다. 표준 유효성 검사 알고리즘이 있지만 고유한 유효성 검사 확장을 정의할 수 있습니다.  
+# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Add custom architecture validation to dependency diagrams
+In Visual Studio, users can validate the source code in a project against a layer model so that they can verify that the source code conforms to the dependencies on a dependency diagram. There is a standard validation algorithm, but you can define your own validation extensions.  
   
- 사용자가 선택 하는 경우는 **아키텍처 유효성 검사** 표준 유효성 검사 메서드가 호출 되 면 뒤에 설치 된 모든 유효성 검사 확장이 종속성 다이어그램에 명령 합니다.  
+ When the user selects the **Validate Architecture** command on a dependency diagram, the standard validation method is invoked, followed by any validation extensions that have been installed.  
   
 > [!NOTE]
->  종속성 다이어그램에서 유효성 검사의 주요 목적은 솔루션의 다른 부분에 있는 프로그램 코드를 사용 하 여 다이어그램을 비교 하는 것입니다.  
+>  In a dependency diagram, the main purpose of validation is to compare the diagram with the program code in other parts of the solution.  
   
- 다른 Visual Studio 사용자에게 배포할 수 있는 VSIX(Visual Studio Integration Extension)로 레이어 유효성 검사 확장을 패키지할 수 있습니다. 한 VSIX에 단독으로 유효성 검사기를 배치하거나 다른 확장과 같은 VSIX에서 유효성 검사기를 결합할 수 있습니다. 다른 확장과 같은 프로젝트가 아니라 고유한 Visual Studio 프로젝트에서 유효성 검사기 코드를 작성해야 합니다.  
+ You can package your layer validation extension into a Visual Studio Integration Extension (VSIX), which you can distribute to other Visual Studio users. You can either place your validator in a VSIX by itself, or you can combine it in the same VSIX as other extensions. You should write the code of the validator in its own Visual Studio project, not in the same project as other extensions.  
   
 > [!WARNING]
->  유효성 검사 프로젝트를 만들고 나서 [예제 코드](#example) 를 이 항목의 끝에 복사하고 필요에 따라 편집합니다.  
+>  After you have created a validation project, copy the [example code](#example) at the end of this topic and then edit that to your own needs.  
   
-## <a name="requirements"></a>요구 사항  
- 참조 [요구 사항을](../modeling/extend-layer-diagrams.md#prereqs)합니다.  
+## <a name="requirements"></a>Requirements  
+ See [Requirements](../modeling/extend-layer-diagrams.md#prereqs).  
   
-## <a name="defining-a-layer-validator-in-a-new-vsix"></a>새 VSIX에서 레이어 유효성 검사기 정의  
- 유효성 검사기를 만드는 가장 빠른 방법은 프로젝트 템플릿을 사용하는 것입니다. 이 방법에서는 코드 및 VSIX 매니페스트를 동일한 프로젝트에 배치합니다.  
+## <a name="defining-a-layer-validator-in-a-new-vsix"></a>Defining a Layer Validator in a New VSIX  
+ The quickest method of creating a validator is to use the project template. This places the code and the VSIX manifest into the same project.  
   
-#### <a name="to-define-an-extension-by-using-a-project-template"></a>프로젝트 템플릿을 사용하여 확장을 정의하려면  
+#### <a name="to-define-an-extension-by-using-a-project-template"></a>To define an extension by using a project template  
   
-1.  **파일** 메뉴에서 **새 프로젝트** 명령을 사용하여 새 솔루션에서 프로젝트를 만듭니다.  
+1.  Create a project in a new solution, by using the **New Project** command on the **File** menu.  
   
-2.  **새 프로젝트** 대화 상자의 **모델링 프로젝트**아래에서 **레이어 디자이너 유효성 검사 확장**을 선택합니다.  
+2.  In the **New Project** dialog box, under **Modeling Projects**, select **Layer Designer Validation Extension**.  
   
-     템플릿에서 작은 예제가 포함된 프로젝트를 만듭니다.  
+     The template creates a project that contains a small example.  
   
     > [!WARNING]
-    >  Makethe 서식 파일을 제대로 작동 합니다.  
+    >  To makethe template work properly:  
     >   
-    >  -   `LogValidationError` 에 대한 호출을 편집하여 선택적 인수 `errorSourceNodes` 및 `errorTargetNodes`를 제거합니다.  
-    > -   사용자 지정 속성을 사용 하는 경우에 언급 된 업데이트를 적용 [종속성 다이어그램에 사용자 지정 속성 추가](../modeling/add-custom-properties-to-layer-diagrams.md)합니다.  
+    >  -   Edit calls to `LogValidationError` to remove the optional arguments `errorSourceNodes` and `errorTargetNodes`.  
+    > -   If you use custom properties, apply the update mentioned in [Add custom properties to dependency diagrams](../modeling/add-custom-properties-to-layer-diagrams.md).  
   
-3.  코드를 편집하여 유효성 검사를 정의합니다. 자세한 내용은 [프로그래밍 유효성 검사](#programming)를 참조하세요.  
+3.  Edit the code to define your validation. For more information, see [Programming Validation](#programming).  
   
-4.  확장을 테스트하려면 [레이어 유효성 검사 디버그](#debugging)를 참조하세요.  
+4.  To test the extension, see [Debugging Layer Validation](#debugging).  
   
     > [!NOTE]
-    >  메서드는 특정 상황에서만 호출되고 중단점은 자동으로 작동하지 않습니다. 자세한 내용은 [레이어 유효성 검사 디버그](#debugging)를 참조하세요.  
+    >  Your method will be called only in specific circumstances, and breakpoints will not work automatically. For more information, see [Debugging Layer Validation](#debugging).  
   
-5.  기본 인스턴스에서 확장을 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 검색 된 **.vsix** 파일에서 **bin\\\***. 설치할 컴퓨터로 파일을 복사하고 파일을 두 번 클릭합니다. 파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
+5.  To install the extension in the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or on another computer, find the **.vsix** file in **bin\\\***. Copy it to the computer where you want to install it, and then double-click it. To uninstall it, use **Extensions and Updates** on the **Tools** menu.  
   
-## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>개별 VSIX에 레이어 유효성 검사기 추가  
- 레이어 유효성 검사기, 명령 및 기타 확장이 포함된 하나의 VSIX를 만들려면 VSIX를 정의하는 프로젝트 하나와 처리기에 대한 개별 프로젝트를 만드는 것이 좋습니다. 
+## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>Adding a Layer Validator to a Separate VSIX  
+ If you want to create one VSIX that contains layer validators, commands, and other extensions, we recommend that you create one project to define the VSIX, and separate projects for the handlers. 
   
-#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>개별 VSIX에 레이어 유효성 검사를 추가하려면  
+#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>To add layer validation to a separate VSIX  
   
-1.  새 Visual Studio 솔루션이나 기존 솔루션에서 클래스 라이브러리 프로젝트를 만듭니다. **새 프로젝트** 대화 상자에서 **Visual C#** , **클래스 라이브러리**를 차례로 클릭합니다. 이 프로젝트에는 레이어 유효성 검사 클래스가 포함됩니다.  
+1.  Create a Class Library project in a new or existing Visual Studio solution. In the **New Project** dialog box, click **Visual C#** and then click **Class Library**. This project will contain the layer validation class.  
   
-2.  솔루션에서 VSIX 프로젝트를 식별하거나 만듭니다. VSIX 프로젝트에는 이름이 **source.extension.vsixmanifest**인 파일이 포함됩니다. VSIX 프로젝트에 추가하려면 다음 단계를 따릅니다.  
+2.  Identify or create a VSIX project in your solution. A VSIX project contains a file that is named **source.extension.vsixmanifest**. If you have to add a VSIX project, follow these steps:  
   
-    1.  **새 프로젝트** 대화 상자에서 **Visual C#**, **확장성**, **VSIX 프로젝트**를 선택합니다.  
+    1.  In the **New Project** dialog box, choose **Visual C#**, **Extensibility**, **VSIX Project**.  
   
-    2.  **솔루션 탐색기**의 VSIX 프로젝트 바로 가기 메뉴에서 **시작 프로젝트로 설정**을 선택합니다.  
+    2.  In **Solution Explorer**, on the shortcut menu of the VSIX project, **Set as Startup Project**.  
   
-3.  **source.extension.vsixmanifest**의 **자산**에서 레이어 유효성 검사 프로젝트를 MEF 구성 요소로 추가합니다.  
+3.  In **source.extension.vsixmanifest**, under **Assets**, add the layer validation project as a MEF component:  
   
-    1.  **새로 만들기**를 선택합니다.  
+    1.  Choose **New**.  
   
-    2.  **새 자산 추가** 대화 상자에서 다음을 설정합니다.  
+    2.  In the **Add New Asset** dialog box, set:  
   
-         **형식** = **Microsoft.VisualStudio.MefComponent**  
+         **Type** = **Microsoft.VisualStudio.MefComponent**  
   
-         **소스** = **현재 솔루션의 프로젝트**  
+         **Source** = **A project in current solution**  
   
-         **프로젝트** = *유효성 검사기 프로젝트*  
+         **Project** = *your validator project*  
   
-4.  또한 레이어 유효성 검사로 추가해야 합니다.  
+4.  You must also add it as a layer validation:  
   
-    1.  **새로 만들기**를 선택합니다.  
+    1.  Choose **New**.  
   
-    2.  **새 자산 추가** 대화 상자에서 다음을 설정합니다.  
+    2.  In the **Add New Asset** dialog box, set:  
   
-         **형식** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**합니다. 이는 드롭다운 목록의 옵션 중 하나가 아닙니다. 키보드에서 입력해야 합니다.  
+         **Type** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. This is not one of the options in the drop-down list. You must enter it from the keyboard.  
   
-         **소스** = **현재 솔루션의 프로젝트**  
+         **Source** = **A project in current solution**  
   
-         **프로젝트** = *유효성 검사기 프로젝트*  
+         **Project** = *your validator project*  
   
-5.  레이어 유효성 검사 프로젝트로 돌아가서 다음 프로젝트 참조를 추가합니다.  
+5.  Return to the layer validation project, and add the following project references:  
   
-    |**참조**|**이 기능을 수행할 수 있습니다.**|  
+    |**Reference**|**What this allows you to do**|  
     |-------------------|------------------------------------|  
-    |Microsoft.VisualStudio.GraphModel.dll|아키텍처 그래프 읽기|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|레이어와 연결된 코드 DOM 읽기|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|레이어 모델 읽기|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|모양 및 다이어그램을 읽고 업데이트합니다.|  
-    |System.ComponentModel.Composition|MEF(Managed Extensibility Framework)를 사용하여 유효성 검사 구성 요소를 정의합니다.|  
-    |Microsoft.VisualStudio.Modeling.Sdk.[version]|모델링 확장 정의|  
+    |Microsoft.VisualStudio.GraphModel.dll|Read the architecture graph|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Read the code DOM associated with layers|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Read the Layer model|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Read and update shapes and diagrams.|  
+    |System.ComponentModel.Composition|Define the validation component using Managed Extensibility Framework (MEF)|  
+    |Microsoft.VisualStudio.Modeling.Sdk.[version]|Define modeling extensions|  
   
-6.  이 항목의 끝에 있는 예제 코드를 유효성 검사기 라이브러리 프로젝트의 클래스 파일에 복사하여 유효성 검사에 대한 코드를 포함합니다. 자세한 내용은 [프로그래밍 유효성 검사](#programming)를 참조하세요.  
+6.  Copy the example code at the end of this topic into the class file in the validator library project to contain the code for your validation. For more information, see [Programming Validation](#programming).  
   
-7.  확장을 테스트하려면 [레이어 유효성 검사 디버그](#debugging)를 참조하세요.  
+7.  To test the extension, see [Debugging Layer Validation](#debugging).  
   
     > [!NOTE]
-    >  메서드는 특정 상황에서만 호출되고 중단점은 자동으로 작동하지 않습니다. 자세한 내용은 [레이어 유효성 검사 디버그](#debugging)를 참조하세요.  
+    >  Your method will be called only in specific circumstances, and breakpoints will not work automatically. For more information, see [Debugging Layer Validation](#debugging).  
   
-8.  기본 인스턴스에서 VSIX를 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 검색의 **.vsix** 파일에 **bin** VSIX 프로젝트 디렉터리. VSIX를 설치할 컴퓨터에 파일을 복사합니다. Windows 탐색기에서 VSIX 파일을 두 번 클릭합니다. (Windows 8의 파일 탐색기.)  
+8.  To install the VSIX in the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or on another computer, find the **.vsix** file in the **bin** directory of the VSIX project. Copy it to the computer where you want to install the VSIX. Double-click the VSIX file in Windows Explorer. (File Explorer in Windows 8.)  
   
-     파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
+     To uninstall it, use **Extensions and Updates** on the **Tools** menu.  
   
-##  <a name="a-nameprogramminga-programming-validation"></a><a name="programming"></a>프로그래밍 유효성 검사  
- 레이어 유효성 검사 확장을 정의하려면 다음 특징을 가진 클래스를 정의합니다.  
+##  <a name="programming"></a> Programming Validation  
+ To define a layer validation extension, you define a class that has the following characteristics:  
   
--   전체 선언 형식은 다음과 같습니다.  
+-   The overall form of the declaration is as follows:  
   
     ```  
   
@@ -158,31 +159,31 @@ Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델�
       } }  
     ```  
   
--   오류를 검색할 때 `LogValidationError()`를 사용하여 오류를 보고할 수 있습니다.  
+-   When you discover an error, you can report it by using `LogValidationError()`.  
   
     > [!WARNING]
-    >  `LogValidationError`의 선택적 매개 변수를 사용하지 마세요.  
+    >  Do not use the optional parameters of `LogValidationError`.  
   
- 사용자가 **아키텍처 유효성 검사** 메뉴 명령을 호출하면 레이어 런타임 시스템에서는 레이어 및 해당 아티팩트를 분석하여 그래프를 생성합니다. 그래프는 다음 네 파트로 구성됩니다.  
+ When the user invokes the **Validate Architecture** menu command, the layer runtime system analyses the layers and their artifacts to produce a graph. The graph has four parts:  
   
--   그래프에서 노드 및 링크로 표시되는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션의 레이어 모델.  
+-   The layer models of the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution that are represented as nodes and links in the graph.  
   
--   솔루션에 정의되고 노드로 표시되는 코드, 프로젝트 항목 및 기타 아티팩트와 분석 프로세스에서 검색되는 종속성을 나타내는 링크.  
+-   The code, project items, and other artifacts that are defined in the solution and represented as nodes, and links that represent the dependencies discovered by the analysis process.  
   
--   레이어 노드에서 코드 아티팩트 노드로 연결된 링크.  
+-   Links from the layer nodes to the code artifact nodes.  
   
--   유효성 검사기에서 검색된 오류를 나타내는 노드.  
+-   Nodes that represent errors discovered by the validator.  
   
- 그래프가 생성되면 표준 유효성 검사 메서드가 호출됩니다. 호출이 완료되면 모든 설치된 확장 유효성 검사 메서드가 지정되지 않은 순서로 호출됩니다. 그래프는 그래프를 검사하고 발견한 오류를 보고할 수 있는 각 `ValidateArchitecture` 메서드에 전달됩니다.  
+ When the graph has been constructed, the standard validation method is called. When this is complete, any installed extension validation methods are called in unspecified order. The graph is passed to each `ValidateArchitecture` method, which can scan the graph and report any errors that it finds.  
   
 > [!NOTE]
->  이것이 도메인별 언어에서 사용할 수 있는 유효성 검사 프로세스와 동일 합니다.  
+>  This is not the same as the validation process that can be used in domain-specific languages.  
   
- 유효성 검사 메서드가 유효성 검사 중인 레이어 모델 또는 코드를 변경하면 안 됩니다.  
+ Validation methods should not change the layer model or the code that is being validated.  
   
- 그래프 모델 <xref:Microsoft.VisualStudio.GraphModel>.</xref:Microsoft.VisualStudio.GraphModel> 에 정의 된 주체 클래스 <xref:Microsoft.VisualStudio.GraphModel.GraphNode>및 <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.</xref:Microsoft.VisualStudio.GraphModel.GraphLink> </xref:Microsoft.VisualStudio.GraphModel.GraphNode> 는  
+ The graph model is defined in <xref:Microsoft.VisualStudio.GraphModel>. Its principal classes are <xref:Microsoft.VisualStudio.GraphModel.GraphNode> and <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.  
   
- 각 노드와 각 링크에는 각 노드 및 링크가 나타내는 요소 또는 관계의 형식을 지정하는 범주가 하나 이상 있습니다. 일반적인 그래프의 노드에는 다음 범주가 있습니다.  
+ Each Node and each Link has one or more Categories which specify the type of element or relationship that it represents. The nodes of a typical graph have the following categories:  
   
 -   Dsl.LayerModel  
   
@@ -202,41 +203,38 @@ Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델�
   
 -   CodeSchema_Property  
   
- 코드에서 레이어에서 요소로 연결된 링크에는 “Represents” 범주가 있습니다.  
+ Links from layers to elements in the code have the category "Represents".  
   
-##  <a name="a-namedebugginga-debugging-validation"></a><a name="debugging"></a>유효성 검사 디버그  
- 레이어 유효성 검사 확장을 디버그하려면 Ctrl+F5를 누릅니다. 
-          [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 실험적 인스턴스가 열립니다. 이 인스턴스에서 레이어 모델을 열거나 만듭니다. 이 모델은 코드와 연결되어야 하고 종속성을 하나 이상 포함해야 합니다.  
+##  <a name="debugging"></a> Debugging Validation  
+ To debug your layer validation extension, press CTRL+F5. An experimental instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] opens. In this instance, open or create a layer model. This model must be associated with code, and must have at least one dependency.  
   
-### <a name="test-with-a-solution-that-contains-dependencies"></a>종속성이 포함된 솔루션으로 테스트  
- 다음 특징이 있어야 유효성 검사가 실행됩니다.  
+### <a name="test-with-a-solution-that-contains-dependencies"></a>Test with a Solution that contains Dependencies  
+ Validation is not executed unless the following characteristics are present:  
   
--   종속성 다이어그램에 종속성 링크가 하나 이상 있습니다.  
+-   There is at least one dependency link on the dependency diagram.  
   
--   모델에 코드 요소와 연결된 레이어가 있습니다.  
+-   There are layers in the model that are associated with code elements.  
   
- 
-          [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 실험적 인스턴스를 처음으로 시작하여 유효성 검사 확장을 테스트할 경우 이러한 특징이 포함된 솔루션을 열거나 만듭니다.  
+ The first time that you start an experimental instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] to test your validation extension, open or create a solution that has these characteristics.  
   
-### <a name="run-clean-solution-before-validate-architecture"></a>아키텍처 유효성 검사 전에 솔루션 정리 실행  
- 유효성 검사 코드를 업데이트할 때마다 유효성 검사 명령을 테스트하기 전에 실험적 솔루션에서 **빌드** 메뉴의 **솔루션 정리** 를 사용합니다. 유효성 검사의 결과가 캐시되므로 이 작업이 필요합니다. 테스트 종속성 다이어그램 또는 해당 코드를 업데이트 하지 않은 경우 유효성 검사 메서드가 실행 되지 않습니다.  
+### <a name="run-clean-solution-before-validate-architecture"></a>Run Clean Solution before Validate Architecture  
+ Whenever you update your validation code, use the **Clean Solution** command on the **Build** menu in the experimental solution, before you test the Validate command. This is necessary because the results of validation are cached. If you have not updated the test dependency diagram or its code, the validation methods will not be executed.  
   
-### <a name="launch-the-debugger-explicitly"></a>명시적으로 디버거 시작  
- 유효성 검사는 개별 프로세스로 실행됩니다. 따라서 유효성 검사 메서드의 중단점이 트리거되지 않습니다. 유효성 검사가 시작되었을 때 디버거를 프로세스에 명시적으로 연결해야 합니다.  
+### <a name="launch-the-debugger-explicitly"></a>Launch the Debugger Explicitly  
+ Validation runs in a separate process. Therefore, the breakpoints in your validation method will not be triggered. You must attach the debugger to the process explicitly when validation has started.  
   
- 유효성 검사 프로세스에 디버거를 연결하려면 유효성 검사 메서드의 시작 부분에 `System.Diagnostics.Debugger.Launch()` 에 대한 호출을 삽입합니다. 디버깅 대화 상자가 나타나면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 주 인스턴스를 선택합니다.  
+ To attach the debugger to the validation process, insert a call to `System.Diagnostics.Debugger.Launch()` at the start of your validation method. When the debugging dialog box appears, select the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
- 또는 `System.Windows.Forms.MessageBox.Show()`에 대한 호출을 삽입할 수 있습니다. 주 인스턴스로 이동 하는 메시지 상자가 나타나면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 및는 **디버그** 메뉴 클릭 **프로세스에 연결**합니다. 이름이 **Graphcmd.exe**인 프로세스를 선택합니다.  
+ Alternatively, you can insert a call to `System.Windows.Forms.MessageBox.Show()`. When the message box appears, go to the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] and on the **Debug** menu click **Attach to Process**. Select the process that is named **Graphcmd.exe**.  
   
- 항상 Crtl+F5(**디버깅하지 않고 시작**)를 눌러서 실험적 인스턴스를 시작합니다.  
+ Always start the experimental instance by pressing CTRL+F5 (**Start without Debugging**).  
   
-### <a name="deploying-a-validation-extension"></a>유효성 검사 확장 배포  
- 적합한 Visual Studio 버전이 설치된 컴퓨터에 유효성 검사 확장을 설치하려면 대상 컴퓨터에서 VSIX 파일을 엽니다. 
-          [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]가 설치된 컴퓨터에 설치하려면 VSIX 콘텐츠를 Extensions 폴더로 수동으로 추출해야 합니다. 자세한 내용은 참조 [레이어 모델 확장을 배포](../modeling/deploy-a-layer-model-extension.md)합니다.  
+### <a name="deploying-a-validation-extension"></a>Deploying a Validation Extension  
+ To install your validation extension on a computer on which a suitable version of Visual Studio is installed, open the VSIX file on the target computer. To install on a computer on which [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] is installed, you must manually extract the VSIX contents into an Extensions folder. For more information, see [Deploy a layer model extension](../modeling/deploy-a-layer-model-extension.md).  
   
-##  <a name="a-nameexamplea-example-code"></a><a name="example"></a>예제 코드  
+##  <a name="example"></a> Example code  
   
-```c#  
+```cs  
 using System;  
 using System.ComponentModel.Composition;  
 using System.Globalization;  
@@ -295,6 +293,6 @@ namespace Validator3
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [종속성 다이어그램을 확장 합니다.](../modeling/extend-layer-diagrams.md)
+## <a name="see-also"></a>See Also  
+ [Extend dependency diagrams](../modeling/extend-layer-diagrams.md)
 

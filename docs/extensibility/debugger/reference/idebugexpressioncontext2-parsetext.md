@@ -1,81 +1,98 @@
 ---
-title: "IDebugExpressionContext2::ParseText | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionContext2::ParseText"
-helpviewer_keywords: 
-  - "IDebugExpressionContext2::ParseText"
+title: IDebugExpressionContext2::ParseText | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExpressionContext2::ParseText
+helpviewer_keywords:
+- IDebugExpressionContext2::ParseText
 ms.assetid: f58575db-f926-4ac8-83ff-7b3b86ab61e2
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugExpressionContext2::ParseText
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 18715b31bef140b713406bc0636e73c4d779dd52
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-나중에 평가 대 한 텍스트 형식의 식을 구문 분석합니다.  
+---
+# <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
+Parses an expression in text form for later evaluation.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT ParseText(   
-   LPCOLESTR           pszCode,  
-   PARSEFLAGS          dwFlags,  
-   UINT                nRadix,  
-   IDebugExpression2** ppExpr,  
-   BSTR*               pbstrError,  
-   UINT*               pichError  
+HRESULT ParseText(   
+   LPCOLESTR           pszCode,  
+   PARSEFLAGS          dwFlags,  
+   UINT                nRadix,  
+   IDebugExpression2** ppExpr,  
+   BSTR*               pbstrError,  
+   UINT*               pichError  
 );  
 ```  
   
-```c#  
-int ParseText(   
-   string                pszCode,  
-   enum_PARSEFLAGS       dwFlags,  
-   uint                  nRadix,  
-   out IDebugExpression2 ppExpr,  
-   out string            pbstrError,  
-   out uint              pichError  
+```cs  
+int ParseText(   
+   string                pszCode,  
+   enum_PARSEFLAGS       dwFlags,  
+   uint                  nRadix,  
+   out IDebugExpression2 ppExpr,  
+   out string            pbstrError,  
+   out uint              pichError  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pszCode`  
- \[in\] 구문 분석할 식입니다.  
+ [in] The expression to be parsed.  
   
  `dwFlags`  
- \[in\] 플래그의 조합에서 [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) 구문 분석을 제어 하는 열거형입니다.  
+ [in] A combination of flags from the [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) enumeration that controls parsing.  
   
  `nRadix`  
- \[in\] 기 수 숫자 정보를 구문 분석에 사용 될 `pszCode`.  
+ [in] The radix to be used in parsing any numerical information in `pszCode`.  
   
  `ppExpr`  
- \[out\] 반환은 [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) 바인딩 및 평가 대 한 준비가 되어 구문 분석 된 식을 나타내는 개체입니다.  
+ [out] Returns the [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) object that represents the parsed expression, which is ready for binding and evaluation.  
   
  `pbstrError`  
- \[out\] 식에 오류가 포함 되어 있는 경우 오류 메시지를 반환 합니다.  
+ [out] Returns the error message if the expression contains an error.  
   
  `pichError`  
- \[out\] 문자 인덱스에서 오류를 반환 합니다. `pszCode` 식에 오류가 포함 되어 있습니다.  
+ [out] Returns the character index of the error in `pszCode` if the expression contains an error.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드를 호출 하면 디버그 엔진 \(DE\) 식을 구문 분석 하 고 정확성을 검증 해야 합니다.  `pbstrError` 및 `pichError` 매개 변수가 될 수 있습니다 작성 식이 잘못 된 경우.  
+## <a name="remarks"></a>Remarks  
+ When this method is called, a debug engine (DE) should parse the expression and validate it for correctness. The `pbstrError` and `pichError` parameters may be filled in if the expression is invalid.  
   
- Note 구문 분석만 있는 식이 계산 하도록 합니다.  나중에 호출 하는 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 또는 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 메서드는 구문 분석 된 식을 계산 합니다.  
+ Note that the expression is not evaluated, only parsed. A later call to the [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) or [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) methods evaluates the parsed expression.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CEnvBlock` 를 노출 하는 개체는 [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) 인터페이스입니다.  이 예제 식 환경 변수 이름으로 구문 분석 하 고이 변수에서 값을 검색 합니다.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CEnvBlock` object that exposes the [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) interface. This example considers the expression to be parsed as the name of an environment variable and retrieves the value from that variable.  
   
 ```cpp#  
 HRESULT CEnvBlock::ParseText(  
@@ -123,7 +140,7 @@ HRESULT CEnvBlock::ParseText(
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)   
  [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)   
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   

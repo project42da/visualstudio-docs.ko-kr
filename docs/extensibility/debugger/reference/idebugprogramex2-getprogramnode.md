@@ -1,49 +1,66 @@
 ---
-title: "IDebugProgramEx2::GetProgramNode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramEx2::Attach"
-helpviewer_keywords: 
-  - "IDebugProgramEx2::Attach"
+title: IDebugProgramEx2::GetProgramNode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramEx2::Attach
+helpviewer_keywords:
+- IDebugProgramEx2::Attach
 ms.assetid: 1545ffbf-1422-4b5d-9bb9-314ba8665041
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugProgramEx2::GetProgramNode
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 65e0fc13cb7f2ef152654f2a76f782a7bc2d9e79
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-프로그램과 연결 프로그램이 노드를 가져옵니다.  
+---
+# <a name="idebugprogramex2getprogramnode"></a>IDebugProgramEx2::GetProgramNode
+Gets the program node associated with a program.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetProgramNode(   
-   IDebugProgramNode2** ppProgramNode  
+HRESULT GetProgramNode(   
+   IDebugProgramNode2** ppProgramNode  
 );  
 ```  
   
-```c#  
-int GetProgramNode(   
-   out IDebugProgramNode2 ppProgramNode  
+```cs  
+int GetProgramNode(   
+   out IDebugProgramNode2 ppProgramNode  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppProgramNode`  
- \[out\] 반환 된 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 이 프로그램과 연관 된 프로그램 노드에서 나타내는 개체입니다.  
+ [out] Returns an [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) object that represents the program node associated with this program.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

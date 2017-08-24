@@ -1,69 +1,86 @@
 ---
-title: "IDebugProgram2::Step | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::Step"
-helpviewer_keywords: 
-  - "IDebugProgram2::Step"
+title: IDebugProgram2::Step | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgram2::Step
+helpviewer_keywords:
+- IDebugProgram2::Step
 ms.assetid: e4c2ffce-9810-4088-8162-eac9ef04f2a9
 caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# IDebugProgram2::Step
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 65a702ee46753be5a80cd0185ce5cdb2e83942c5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-한 단계를 수행합니다.  
+---
+# <a name="idebugprogram2step"></a>IDebugProgram2::Step
+Performs a step.  
   
 > [!NOTE]
->  이 메서드는 사용되지 않습니다.  대신 [단계](../../../extensibility/debugger/reference/idebugprocess3-step.md) 메서드를 사용하십시오.  
+>  This method is deprecated. Use the [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) method instead.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT Step(   
-   IDebugThread2*  pThread,  
-   STEPKIND        sk,  
-   STEPUNIT        step  
+HRESULT Step(   
+   IDebugThread2*  pThread,  
+   STEPKIND        sk,  
+   STEPUNIT        step  
 );  
 ```  
   
-```c#  
-int Step(   
-   IDebugThread2  pThread,  
-   enum_STEPKIND  sk,  
-   enum_STEPUNIT  step  
+```cs  
+int Step(   
+   IDebugThread2  pThread,  
+   enum_STEPKIND  sk,  
+   enum_STEPUNIT  step  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pThread`  
- \[in\] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) 실행 하는 스레드를 나타내는 개체입니다.  
+ [in] An [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread being stepped.  
   
  `sk`  
- \[in\] 값은 [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) 단계의 종류를 지정 하는 열거형입니다.  
+ [in] A value from the [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) enumeration that specifies the kind of step.  
   
  `step`  
- \[in\] 값은 [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) 단계 단위 \(예를 들어, 명령문 또는 명령\)를 지정 하는 열거형입니다.  
+ [in] A value from the [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) enumeration that specifies the unit of step (for example, by statement or instruction).  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 있는 경우 모든 스레드가 동기화 또는 스레드 간의 통신을 특정 스레드를 한 단계씩 실행 하는 경우 프로그램에 다른 스레드를 실행 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ In case there is any thread synchronization or communication between threads, other threads in the program should run when a particular thread is stepping.  
   
 > [!WARNING]
->  중지 이벤트 또는 즉시 \(동기\) 이벤트를 보내지 않습니다 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) 이 호출; 처리 하는 중 그렇지 않으면 디버거가 중단 될 수 있음  
+>  Do not send a stopping event or an immediate (synchronous) event to [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) while handling this call; otherwise the debugger may hang.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
- [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

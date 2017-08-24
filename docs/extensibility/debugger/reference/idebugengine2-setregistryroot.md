@@ -1,51 +1,68 @@
 ---
-title: "IDebugEngine2::SetRegistryRoot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2::SetRegistryRoot"
-helpviewer_keywords: 
-  - "IDebugEngine2::SetRegistryRoot"
+title: IDebugEngine2::SetRegistryRoot | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine2::SetRegistryRoot
+helpviewer_keywords:
+- IDebugEngine2::SetRegistryRoot
 ms.assetid: d0d81202-8a4a-4bc3-b297-30a047c5ec60
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugEngine2::SetRegistryRoot
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e6d541283d3655ec3a57f1aa549726d95d041df6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-디버그 엔진 \(DE\)에 사용할 레지스트리 루트를 설정합니다.  
+---
+# <a name="idebugengine2setregistryroot"></a>IDebugEngine2::SetRegistryRoot
+Sets the registry root for the debug engine (DE).  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetRegistryRoot(   
-   LPCOLESTR pszRegistryRoot  
+HRESULT SetRegistryRoot(   
+   LPCOLESTR pszRegistryRoot  
 );  
 ```  
   
-```c#  
-int SetRegistryRoot(   
-   string pszRegistryRoot  
+```cs  
+int SetRegistryRoot(   
+   string pszRegistryRoot  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pszRegistryRoot`  
- \[in\] 레지스트리 루트를 사용 합니다.  
+ [in] The registry root to use.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 방법을 수 있습니다 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 는 DE 레지스트리 설정; 얻을 수를 사용 해야 하는 대체 레지스트리 루트를 지정 합니다 예를 들어, "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\VisualStudio\\8.0Exp"입니다.  
+## <a name="remarks"></a>Remarks  
+ This method allows [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] to specify an alternate registry root that the DE should use to obtain registry settings; for example, "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp".  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

@@ -1,52 +1,69 @@
 ---
-title: "IDebugDocumentContext2::GetDocument | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentContext2::GetDocument"
-helpviewer_keywords: 
-  - "IDebugDocumentContext2::GetDocument"
+title: IDebugDocumentContext2::GetDocument | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentContext2::GetDocument
+helpviewer_keywords:
+- IDebugDocumentContext2::GetDocument
 ms.assetid: c6d46c5d-ade8-4dc8-9862-8fc7876658c4
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDocumentContext2::GetDocument
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: bf4e2eb4bd8f878c82ed83cf684f7b9b0f270abb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 문서의 컨텍스트에 포함 된 문서를 가져옵니다.  
+---
+# <a name="idebugdocumentcontext2getdocument"></a>IDebugDocumentContext2::GetDocument
+Gets the document that contains this document context.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetDocument(   
-   IDebugDocument2** ppDocument  
+HRESULT GetDocument(   
+   IDebugDocument2** ppDocument  
 );  
 ```  
   
-```c#  
-int GetDocument(   
-   out IDebugDocument2 ppDocument  
+```cs  
+int GetDocument(   
+   out IDebugDocument2 ppDocument  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppDocument`  
- \[out\] 반환 된 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) 이 문서 컨텍스트를 포함 하는 문서를 나타내는 개체입니다.  
+ [out] Returns an [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) object that represents the document that contains this document context.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드를 IDE에 직접 문서를 제공 합니다. 이러한 디버깅 엔진입니다.  그렇지 않은 경우이 메서드를 반환 합니다 `E_NOTIMPL`.  
+## <a name="remarks"></a>Remarks  
+ This method is for those debug engines that supply documents directly to the IDE. Otherwise, this method should return `E_NOTIMPL`.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

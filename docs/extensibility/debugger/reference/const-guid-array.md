@@ -1,65 +1,82 @@
 ---
-title: "CONST_GUID_ARRAY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CONST_GUID_ARRAY"
-helpviewer_keywords: 
-  - "CONST_GUID_ARRAY 구조"
+title: CONST_GUID_ARRAY | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CONST_GUID_ARRAY
+helpviewer_keywords:
+- CONST_GUID_ARRAY structure
 ms.assetid: bd55e7d8-372c-4c3e-9eed-28f6b415a5db
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# CONST_GUID_ARRAY
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6d819936facdd2f1c05af41b584d167aa39c7bd3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-목록을 저장 하는 구조 `GUID`s.  
+---
+# <a name="constguidarray"></a>CONST_GUID_ARRAY
+A structure that holds a list of `GUID`s.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-typedef struct tagCONST_GUID_ARRAY {  
-   DWORD       dwCount;  
-   CONST GUID* Members;  
-} CONST_GUID_ARRAY;  
+typedef struct tagCONST_GUID_ARRAY {  
+   DWORD       dwCount;  
+   CONST GUID* Members;  
+} CONST_GUID_ARRAY;  
 ```  
   
-```c#  
-public struct CONST_GUID_ARRAY {  
-   public uint   dwCount;  
-   public Guid[] Members;  
+```cs  
+public struct CONST_GUID_ARRAY {  
+   public uint   dwCount;  
+   public Guid[] Members;  
 }  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
  dwCount  
- 수의 `GUID`s에 있는 `Members` 배열.  
+ Number of `GUID`s in the `Members` array.  
   
  Members  
- 배열 `GUID`s.  
+ Array of `GUID`s.  
   
-## 설명  
- 이 구조체에 전달 된는 [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) 메서드를 반환 하 고는 [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) 및 [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) 메서드.  
+## <a name="remarks"></a>Remarks  
+ This structure is passed to the [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) method, and is returned from the [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) and [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) methods.  
   
- 이 구조체의 인스턴스 소유자 할당 된 메모리를 확보 하는 일을 담당 합니다.  
+ The owner of an instance of this structure is responsible for freeing any memory allocated.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)   
  [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)   
  [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)

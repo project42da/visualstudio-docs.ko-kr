@@ -1,59 +1,76 @@
 ---
-title: "IEnumDebugPrograms2::Next | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugPrograms2::Next"
-helpviewer_keywords: 
-  - "IEnumDebugPrograms2::Next"
+title: IEnumDebugPrograms2::Next | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumDebugPrograms2::Next
+helpviewer_keywords:
+- IEnumDebugPrograms2::Next
 ms.assetid: 9120e263-e97c-4a40-ab2c-e9264ce3d6c4
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# IEnumDebugPrograms2::Next
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 49ec7a7e4076d6d784d72f7cd89c1a49b898153c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-열거형의 다음 집합의 요소를 반환합니다.  
+---
+# <a name="ienumdebugprograms2next"></a>IEnumDebugPrograms2::Next
+Returns the next set of elements from the enumeration.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Next(  
-   ULONG            celt,  
-   IDebugProgram2** rgelt,  
-   ULONG*           pceltFetched  
+   ULONG            celt,  
+   IDebugProgram2** rgelt,  
+   ULONG*           pceltFetched  
 );  
 ```  
   
-```c#  
+```cs  
 int Next(  
-   uint             celt,  
-   IDebugProgram2[] rgelt,  
-   ref uint         pceltFetched  
+   uint             celt,  
+   IDebugProgram2[] rgelt,  
+   ref uint         pceltFetched  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `celt`  
- \[in\] 검색할 요소의 수입니다.  도의 최대 크기를 지정은 `rgelt` 배열입니다.  
+ [in] The number of elements to retrieve. Also specifies the maximum size of the `rgelt` array.  
   
  `rgelt`  
- \[in, out\] 배열 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 요소를 채울 수 있도록 합니다.  
+ [in, out] Array of [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) elements to be filled in.  
   
  `pceltFetched`  
- \[out\] 실제로 반환 된 요소 수를 반환 합니다. `rgelt`.  
+ [out] Returns the number of elements actually returned in `rgelt`.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`.  반환 `S_FALSE` 미만인 경우 요청 된 수의 요소를 반환할 수 없습니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`. Returns `S_FALSE` if fewer than the requested number of elements could be returned; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

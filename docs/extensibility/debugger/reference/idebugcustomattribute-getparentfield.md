@@ -1,52 +1,69 @@
 ---
-title: "IDebugCustomAttribute::GetParentField | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttribute::GetParentField"
-helpviewer_keywords: 
-  - "IDebugCustomAttribute::GetParentField"
+title: IDebugCustomAttribute::GetParentField | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCustomAttribute::GetParentField
+helpviewer_keywords:
+- IDebugCustomAttribute::GetParentField
 ms.assetid: bcdfdf37-bfcf-4988-a7b8-4c731d0af1b0
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugCustomAttribute::GetParentField
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 382eadb5d43161b537731d78df91d8d32ea9a10f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-사용자 지정 특성에 연결 된 필드를 가져옵니다.  
+---
+# <a name="idebugcustomattributegetparentfield"></a>IDebugCustomAttribute::GetParentField
+Gets the field to which the custom attribute is attached.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetParentField(   
-   IDebugField** ppField  
+HRESULT GetParentField(   
+   IDebugField** ppField  
 );  
 ```  
   
-```c#  
+```cs  
 int GetParentField(  
-   out IDebugField ppField  
+   out IDebugField ppField  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppField`  
- \[out\] 반환은 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 사용자 지정 특성 첨부 된 필드를 나타내는 개체입니다.  
+ [out] Returns the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object that represents the field to which the custom attribute is attached.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 호출 하는 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) 메서드에서 반환 되는 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 어떤 종류의 부모 필드를 결정 하는 개체입니다.  
+## <a name="remarks"></a>Remarks  
+ Call the [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) method on the returned [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object to determine what kind of field the parent is.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

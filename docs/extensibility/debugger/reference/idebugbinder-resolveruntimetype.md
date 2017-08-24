@@ -1,58 +1,75 @@
 ---
-title: "IDebugBinder::ResolveRuntimeType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBinder::ResolveRuntimeType"
-helpviewer_keywords: 
-  - "IDebugBinder::ResolveRuntimeType 메서드"
+title: IDebugBinder::ResolveRuntimeType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBinder::ResolveRuntimeType
+helpviewer_keywords:
+- IDebugBinder::ResolveRuntimeType method
 ms.assetid: 6456ab3e-1c03-4f3c-91f9-16797ab7f5e7
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugBinder::ResolveRuntimeType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0b14c39a8f254342122e77c3f29fc1c454b377ab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는 개체의 런타임 형식을 확인합니다.  
+---
+# <a name="idebugbinderresolveruntimetype"></a>IDebugBinder::ResolveRuntimeType
+This method determines the run-time type of an object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT ResolveRuntimeType(   
-   IDebugObject* pObject,  
-   IDebugField** ppResolved  
+HRESULT ResolveRuntimeType(   
+   IDebugObject* pObject,  
+   IDebugField** ppResolved  
 );  
 ```  
   
-```c#  
+```cs  
 int ResolveRuntimeType(  
-   IDebugObject     pObject,   
-   out IDebugField  ppResolved  
+   IDebugObject     pObject,   
+   out IDebugField  ppResolved  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pObject`  
- \[in\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 확인 되어야 합니다.  
+ [in] The [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) to be resolved.  
   
  `ppResolved`  
- \[out\] 이름으로 개체의 형식을 반환 된 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
+ [out] Returns the type of the object as an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 개체의 런타임 형식은 항상 컴파일 타임에 알 수 없습니다.  예를 들어, 다형성을 사용 하 여 인수를 함수에 단추 클래스와 같은 기본 클래스를 전달할 수 있습니다.  실제 인수 라디오 단추 클래스와 같은 파생된 클래스 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ The run-time type of an object is not always known at compile time. For example, using polymorphism, an argument can be passed to a function as its base class, such as a button class. The actual argument might be a derived class, such as a radio button class.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

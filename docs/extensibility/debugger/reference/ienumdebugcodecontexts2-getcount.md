@@ -1,51 +1,68 @@
 ---
-title: "IEnumDebugCodeContexts2::GetCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugCodeContexts2::GetCount"
-helpviewer_keywords: 
-  - "IEnumDebugCodeContexts2::GetCount"
+title: IEnumDebugCodeContexts2::GetCount | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumDebugCodeContexts2::GetCount
+helpviewer_keywords:
+- IEnumDebugCodeContexts2::GetCount
 ms.assetid: 74c52fcf-688c-40df-9acd-29b3b84e6216
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IEnumDebugCodeContexts2::GetCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 01f99b518debc712dfe8f8b5f9cfc8ba535db8ba
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-열거형의 요소 수를 반환합니다.  
+---
+# <a name="ienumdebugcodecontexts2getcount"></a>IEnumDebugCodeContexts2::GetCount
+Returns the number of elements in the enumeration.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetCount(  
-   ULONG* pcelt  
+   ULONG* pcelt  
 );  
 ```  
   
-```c#  
+```cs  
 int GetCount(  
-   out uint pcelt  
+   out uint pcelt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pcelt`  
- \[out\] 열거형의 요소 수를 반환합니다.  
+ [out] Returns the number of elements in the enumeration.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드를 사용할 수 없습니다. 지정만 일반적인 COM 열거형 인터페이스는 `Next`, `Clone`, `Skip`, 및 `Reset` 메서드 구현 해야.  
+## <a name="remarks"></a>Remarks  
+ This method is not part of the customary COM enumeration interface which specifies that only the `Next`, `Clone`, `Skip`, and `Reset` methods need to be implemented.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

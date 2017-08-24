@@ -1,72 +1,89 @@
 ---
-title: "dwTYPE_KIND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "dwTYPE_KIND"
-helpviewer_keywords: 
-  - "dwTYPE_KIND 열거형"
+title: dwTYPE_KIND | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- dwTYPE_KIND
+helpviewer_keywords:
+- dwTYPE_KIND enumeration
 ms.assetid: 6ff56b0f-c502-4e6c-9829-bfa05361b783
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# dwTYPE_KIND
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e399026aea64c5e2f01bb66f0827fa4c24d89f58
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-형식을 해석 하는 방법을 지정 된 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 개체입니다.  
+---
+# <a name="dwtypekind"></a>dwTYPE_KIND
+Specifies how to interpret the type of an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_dwTYPE_KIND {  
-   TYPE_KIND_METADATA = 0x0001,  
-   TYPE_KIND_PDB      = 0x0002,  
-   TYPE_KIND_BUILT    = 0x0003,  
+   TYPE_KIND_METADATA = 0x0001,  
+   TYPE_KIND_PDB      = 0x0002,  
+   TYPE_KIND_BUILT    = 0x0003,  
 };  
   
 typedef DWORD dwTYPE_KIND;  
 ```  
   
-```c#  
+```cs  
 public enum enum_dwTYPE_KIND {  
-   TYPE_KIND_METADATA = 0x0001,  
-   TYPE_KIND_PDB      = 0x0002,  
-   TYPE_KIND_BUILT    = 0x0003,  
+   TYPE_KIND_METADATA = 0x0001,  
+   TYPE_KIND_PDB      = 0x0002,  
+   TYPE_KIND_BUILT    = 0x0003,  
 };  
 ```  
   
-#### 매개 변수  
- TYPE\_KIND\_METADATA  
- [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md) Union으로 해석 해야는 [METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md) 구조입니다.  
+#### <a name="parameters"></a>Parameters  
+ TYPE_KIND_METADATA  
+ The [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) union should be interpreted as a [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) structure.  
   
- TYPE\_KIND\_PDB  
- `TYPE_INFO` Union으로 해석 해야는 [PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md) 구조입니다.  
+ TYPE_KIND_PDB  
+ The `TYPE_INFO` union should be interpreted as a [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) structure.  
   
- TYPE\_KIND\_BUILT  
- `TYPE_INFO` Union으로 해석 해야는 [BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md) 구조입니다.  
+ TYPE_KIND_BUILT  
+ The `TYPE_INFO` union should be interpreted as a [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) structure.  
   
-## 설명  
- 이 열거형의 값을 표시를 `dwKind` 필드는 [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md) 구조와 해석 하는 방법을 결정 하는 데 사용 됩니다는 `type` 공용 구조체 멤버.  `TYPE_INFO` 구조를 호출 하 여 반환 되는 [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) 메서드.  
+## <a name="remarks"></a>Remarks  
+ The values of this enumeration appear in the `dwKind` field of the [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) structure and are used to determine how to interpret the `type` union member. The `TYPE_INFO` structure is returned by a call to the [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) method.  
   
-## 요구 사항  
- 헤더: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)   
  [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)   
- [METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md)   
- [PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md)   
- [BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md)
+ [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)   
+ [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)   
+ [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)

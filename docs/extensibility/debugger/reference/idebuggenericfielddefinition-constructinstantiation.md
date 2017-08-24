@@ -1,60 +1,77 @@
 ---
-title: "IDebugGenericFieldDefinition::ConstructInstantiation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ConstructInstantiation"
-  - "IDebugGenericFieldDefinition::ConstructInstantiation"
+title: IDebugGenericFieldDefinition::ConstructInstantiation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ConstructInstantiation
+- IDebugGenericFieldDefinition::ConstructInstantiation
 ms.assetid: ef8ae261-a98b-4dc2-93b3-7c5191818ba2
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugGenericFieldDefinition::ConstructInstantiation
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ba5b7fc4f1ba4cf73fbd7c4425bfdd65dadf2c41
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-형식 인수의 배열을 지정 하 여 필드 인스턴스를 생성 합니다.  
+---
+# <a name="idebuggenericfielddefinitionconstructinstantiation"></a>IDebugGenericFieldDefinition::ConstructInstantiation
+Constructs a field instance given an array of type arguments.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT ConstructInstantiation(  
-   ULONG32       cArgs,  
-   IDebugField** ppArgs,  
-   IDebugField** ppConstructedField  
+   ULONG32       cArgs,  
+   IDebugField** ppArgs,  
+   IDebugField** ppConstructedField  
 );  
 ```  
   
-```c#  
+```cs  
 int ConstructInstantiation(  
-   uint            cArgs,  
-   IDebugField[]   ppArgs,  
-   out IDebugField ppConstructedField  
+   uint            cArgs,  
+   IDebugField[]   ppArgs,  
+   out IDebugField ppConstructedField  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `cArgs`  
- \[in\] 인수 개수는 `ppArgs` 배열입니다.  
+ [in] Number of arguments in the `ppArgs` array.  
   
  `ppArgs`  
- \[in\] 형식 인수가 들어 있는 배열입니다.  형식 인수 \(비 제네릭 또는 완전히 인스턴스화된 제네릭\) 닫힌된 형식 이어야 합니다.  
+ [in] Array that contains the type arguments. The type arguments must be closed types (non-generic or fully instantiated generics).  
   
  `ppConstructedField`  
- \[out\] 반환은 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 의 새 필드를 나타내는 인터페이스입니다.  
+ [out] Returns the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface that represents the new field.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 제약 조건이 검사 되지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ Constraints are not checked.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

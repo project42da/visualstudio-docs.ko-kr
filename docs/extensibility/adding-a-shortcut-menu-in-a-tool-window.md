@@ -1,5 +1,5 @@
 ---
-title: "도구 창에서 바로 가기 메뉴를 추가 합니다. | Microsoft 문서"
+title: Adding a Shortcut Menu in a Tool Window | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,32 +31,33 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: ab921bec73528be7207baebdf9cb31885e2253fd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d9fb26e32802c28da38ad4d2617280b1ec5aefa3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="adding-a-shortcut-menu-in-a-tool-window"></a>도구 창의 바로 가기 메뉴를 추가합니다.
-이 연습에서는 도구 창의 바로 가기 메뉴를 넣습니다. 바로 가기 메뉴에는 단추, 텍스트 상자 또는 창 배경 단추로 클릭할 때 표시 되는 메뉴가입니다. 바로 가기 메뉴의 명령을 다른 메뉴나 도구 모음에서 명령으로 동일 하 게 작동 합니다. 바로 가기 메뉴를 지원 하기 위해.vsct 파일에 지정 하 고 마우스 오른쪽 단추로 클릭에 대 한 응답에 표시 합니다.  
+# <a name="adding-a-shortcut-menu-in-a-tool-window"></a>Adding a Shortcut Menu in a Tool Window
+This walkthrough puts a shortcut menu in a tool window. A shortcut menu is a menu that appears when a user right-clicks a button, text box, or window background. Commands on a shortcut menu behave the same as commands on other menus or toolbars. To support a shortcut menu, specify it in the .vsct file and display it in response to the right-click of the mouse.  
   
- <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>.</xref:Microsoft.VisualStudio.Shell.ToolWindowPane> 에서 상속 되는 사용자 지정 도구 창 클래스에는 WPF 사용자 정의 컨트롤의 도구 창으로 구성 됩니다.  
+ A tool window consists of a WPF user control in a custom tool window class that inherits from <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>.  
   
- 이 연습에서는.vsct 파일에서 메뉴 항목을 선언 하 고 관리 하는 패키지 프레임 워크를 사용 하 여 도구 창을 정의 하는 클래스에 구현 하 여 Visual Studio 메뉴, 바로 가기 메뉴를 만드는 방법을 보여 줍니다. 이 방법을 사용 하면 Visual Studio 명령, UI 요소 및 자동화 개체 모델에 대 한 액세스를 용이해 집니다.  
+ This walkthrough shows how to create a shortcut menu as a Visual Studio menu, by declaring menu items in the .vsct file, and then using the Managed Package Framework to implement them in the class that defines the tool window. This approach facilitates access to Visual Studio commands, UI elements, and the Automation object model.  
   
- 또는 바로 가기 메뉴에 Visual Studio 기능을 액세스 하지 않는 경우 사용할 수 있습니다는 <xref:System.Windows.FrameworkElement.ContextMenu%2A>사용자 정의 컨트롤에 있는 XAML 요소의 속성입니다.</xref:System.Windows.FrameworkElement.ContextMenu%2A> 자세한 내용은 참조 [ContextMenu](http://msdn.microsoft.com/Library/2f40b2bb-b702-4706-9fc4-10bcfd7cc35d)합니다.  
+ Alternatively, if your shortcut menu will not access Visual Studio functionality, you can use the <xref:System.Windows.FrameworkElement.ContextMenu%2A> property of a XAML element in the user control. For more information, see [ContextMenu](/dotnet/framework/wpf/controls/contextmenu).  
   
-## <a name="prerequisites"></a>필수 구성 요소  
- Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-the-tool-window-shortcut-menu-package"></a>도구 창 바로 가기 메뉴 패키지 만들기  
+## <a name="creating-the-tool-window-shortcut-menu-package"></a>Creating the Tool Window Shortcut Menu Package  
   
-1.  라는 VSIX 프로젝트를 만듭니다 `TWShortcutMenu` 라는 도구 창 서식 파일을 추가 하 고 **ShortCutMenu** 에 있습니다. 도구 창을 만드는 방법에 대 한 자세한 내용은 참조 [확장 도구 창 만들기](../extensibility/creating-an-extension-with-a-tool-window.md)합니다.  
+1.  Create a VSIX project named `TWShortcutMenu` and add a tool window template named **ShortCutMenu** to it. For more information about creating a tool window, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## <a name="specifying-the-shortcut-menu"></a>바로 가기 메뉴를 지정합니다.  
- 이 연습에 나와 있는 것 사용자 수와 같은 바로 가기 메뉴 도구 창 배경을 채우는 데 사용 되는 색의 목록에서 선택 합니다.  
+## <a name="specifying-the-shortcut-menu"></a>Specifying the Shortcut Menu  
+ A shortcut menu such as the one shown in this walkthrough lets the user select from a list of colors that are used to fill the background of the tool window.  
   
-1.  ShortcutMenuPackage.vsct, guidShortcutMenuPackageCmdSet, 라는 GuidSymbol 요소에서 찾아 바로 가기 메뉴, 바로 가기 메뉴 그룹 및 메뉴 옵션을 선언 합니다. GuidSymbol 요소는 이제 다음과 같이 표시 됩니다.  
+1.  In ShortcutMenuPackage.vsct, find in the GuidSymbol element named guidShortcutMenuPackageCmdSet, and declare the shortcut menu, shortcut menu group, and menu options. The GuidSymbol element should now look like this:  
   
     ```xml  
     <GuidSymbol name="guidShortcutMenuPackageCmdSet" value="{00000000-0000-0000-0000-0000}"> // your GUID here  
@@ -69,7 +70,7 @@ ms.lasthandoff: 02/22/2017
     </GuidSymbol>  
     ```  
   
-2.  단추 요소 바로 앞 메뉴 요소를 만들고에 바로 가기 메뉴를 정의 합니다.  
+2.  Just before the Buttons element, create a Menus element and then define the shortcut menu in it.  
   
     ```vb  
     <Menus>  
@@ -82,9 +83,9 @@ ms.lasthandoff: 02/22/2017
     </Menus>  
     ```  
   
-     바로 가기 메뉴는 메뉴 또는 도구 모음에 대 한 부분이 아니기 때문에 부모가 없는지 않습니다.  
+     A shortcut menu does not have a parent because it is not part of a menu or toolbar.  
   
-3.  그룹 요소 바로 가기 메뉴 항목을 포함 하는 그룹 요소를 생성 하 고 바로 가기 메뉴 그룹 연결 합니다.  
+3.  Create a Groups element with a Group element that contains the shortcut menu items, and associate the group with the shortcut menu.  
   
     ```xml  
     <Groups>  
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/22/2017
     </Groups>  
     ```  
   
-4.  단추 요소에 바로 가기 메뉴에 표시 되는 각 명령을 정의 합니다. 단추 요소는 다음과 같습니다.  
+4.  In the Buttons element, define the individual commands that will appear on the shortcut menu. The Buttons element should look like this:  
   
     ```xml  
     <Buttons>  
@@ -129,9 +130,9 @@ ms.lasthandoff: 02/22/2017
     </Buttons>  
     ```  
   
-5.  ShortcutMenuPackageGuids.cs, GUID, 바로 가기 메뉴 및 메뉴 항목을 설정 하는 명령에 대 한 정의 추가 합니다.  
+5.  In ShortcutMenuPackageGuids.cs, add the definitions for the command set GUID, the shortcut menu, and the menu items.  
   
-    ```c#  
+    ```cs  
     public const string guidShortcutMenuPackageCmdSet = "00000000-0000-0000-0000-00000000"; // your GUID will differ  
     public const int ColorMenu = 0x1000;  
     public const int cmdidRed = 0x102;  
@@ -139,23 +140,23 @@ ms.lasthandoff: 02/22/2017
     public const int cmdidBlue = 0x104;  
     ```  
   
-     이들은 ShortcutMenuPackage.vsct 파일의 Symbols 섹션에 정의 된 동일한 명령 Id입니다. 컨텍스트 그룹이 포함 되지 않습니다 여기.vsct 파일에만 필요 하므로.  
+     These are the same command IDs that are defined in the Symbols section of the ShortcutMenuPackage.vsct file. The context group is not included here because it is required only in the .vsct file.  
   
-## <a name="implementing-the-shortcut-menu"></a>바로 가기 메뉴를 구현합니다.  
- 이 섹션에는 바로 가기 메뉴 및 명령을 구현합니다.  
+## <a name="implementing-the-shortcut-menu"></a>Implementing the Shortcut Menu  
+ This section implements the shortcut menu and its commands.  
   
-1.  ShortcutMenu.cs, 도구 창 메뉴 명령 서비스를 가져올 수 있지만 포함 된 컨트롤 수 없습니다. 다음 단계에는 메뉴 명령 서비스를 사용자 정의 컨트롤에 사용할 수 있도록 하는 방법을 보여 줍니다.  
+1.  In ShortcutMenu.cs, the tool window can get the menu command service, but the control it contains cannot. The following steps show how to make the menu command service available to the user control.  
   
-2.  ShortcutMenu.cs에서 다음 추가 문을 사용 하 여:  
+2.  In ShortcutMenu.cs, add the following using statements:  
   
-    ```c#  
+    ```cs  
     using Microsoft.VisualStudio.Shell;  
     using System.ComponentModel.Design;  
     ```  
   
-3.  메뉴 명령 서비스를 가져오고 메뉴 명령 서비스는 따라 비춰지는 전달 컨트롤을 추가 하는 도구 창 initialize () 메서드를 재정의 합니다.  
+3.  Override the tool window's Initialize() method to get the menu command service and add the control, passing the menu command service to the contructor:  
   
-    ```c#  
+    ```cs  
     protected override void Initialize()  
     {  
         commandService = (OleMenuCommandService)GetService(typeof(IMenuCommandService));  
@@ -163,9 +164,9 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-4.  ShortcutMenu 도구 창 생성자에서 컨트롤을 추가 하는 줄을 제거 합니다. 생성자는 이제 다음과 같이 표시 됩니다.  
+4.  In the ShortcutMenu tool window constructor, remove the line that adds the control. The constructor should now look like this:  
   
-    ```c#  
+    ```cs  
     public ShortcutMenu() : base(null)  
     {  
         this.Caption = "ShortcutMenu";  
@@ -174,9 +175,9 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-5.  ShortcutMenuControl.xaml.cs, 메뉴 명령 서비스에 대 한 private 필드를 추가 하 고 컨트롤 생성자 메뉴 명령 서비스를 변경 합니다. 다음 메뉴 명령 서비스를 사용 하 여 상황에 맞는 메뉴 명령을 추가할 수 있습니다. ShortcutMenuControl 생성자는 이제 다음 코드 처럼 보여야 합니다. 명령 처리기는 나중에 정의 됩니다.  
+5.  In ShortcutMenuControl.xaml.cs, add a private field for the menu command service and change the control constructor to take the menu command service. Then use the menu command service to add the context menu commands. The ShortcutMenuControl constructor should now look like the following code. The command handler will be defined later.  
   
-    ```c#  
+    ```cs  
     public ShortcutMenuControl(OleMenuCommandService service)  
     {  
         this.InitializeComponent();  
@@ -200,7 +201,7 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-6.  ShortcutMenuControl.xaml, 추가 된 <xref:System.Windows.UIElement.MouseRightButtonDown>최상위 수준에 대 한 이벤트 <xref:System.Windows.Controls.UserControl>요소.</xref:System.Windows.Controls.UserControl> </xref:System.Windows.UIElement.MouseRightButtonDown> XAML 파일이 이제 다음과 같습니다.  
+6.  In ShortcutMenuControl.xaml, add a <xref:System.Windows.UIElement.MouseRightButtonDown> event to the top level <xref:System.Windows.Controls.UserControl> element. The XAML file should now look like this:  
   
     ```vb  
     <UserControl x:Class="TWShortcutMenu.ShortcutMenuControl"  
@@ -222,18 +223,18 @@ ms.lasthandoff: 02/22/2017
     </UserControl>  
     ```  
   
-7.  ShortcutMenuControl.xaml.cs, 이벤트 처리기에 대 한 스텁을 추가 합니다.  
+7.  In ShortcutMenuControl.xaml.cs, add a stub for the event handler.  
   
-    ```c#  
+    ```cs  
     private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)  
     {  
     . . .  
     }  
     ```  
   
-8.  다음 코드를 추가 문을 사용 하 여 동일한 파일에 있습니다.  
+8.  Add the following using statements to the same file:  
   
-    ```c#  
+    ```cs  
     using Microsoft.VisualStudio.Shell;  
     using System.ComponentModel.Design;  
     using System;  
@@ -241,9 +242,9 @@ ms.lasthandoff: 02/22/2017
     using System.Windows.Media;  
     ```  
   
-9. 구현 된 `MyToolWindowMouseRightButtonDown` 다음과 같이 이벤트로 합니다.  
+9. Implement the `MyToolWindowMouseRightButtonDown` event as follows.  
   
-    ```c#  
+    ```cs  
     private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)  
     {  
         if (null != commandService)  
@@ -257,11 +258,11 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-     그렇기 때문에 한 <xref:System.ComponentModel.Design.CommandID>바로 가기 메뉴에 대 한 개체의 마우스 클릭의 위치를 식별 하 고 사용 하 여 해당 위치에 바로 가기 메뉴를 엽니다는 <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService.ShowContextMenu%2A>메서드.</xref:Microsoft.VisualStudio.Shell.OleMenuCommandService.ShowContextMenu%2A> </xref:System.ComponentModel.Design.CommandID>  
+     This creates a <xref:System.ComponentModel.Design.CommandID> object for the shortcut menu, identifies the location of the mouse click, and opens the shortcut menu in that location by using the <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService.ShowContextMenu%2A> method.  
   
-10. 명령 처리기를 구현 합니다.  
+10. Implement the command handler.  
   
-    ```c#  
+    ```cs  
     private void ChangeColor(object sender, EventArgs e)  
     {  
         var mc = sender as MenuCommand;  
@@ -281,18 +282,18 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-     단 하나의 메서드를 식별 하 여 모든 메뉴 항목에 대 한 이벤트를 처리 하는 경우에 <xref:System.ComponentModel.Design.CommandID>하 고 그에 따라 배경색을 설정 합니다.</xref:System.ComponentModel.Design.CommandID> 메뉴 항목에는 관련 되지 않은 명령을 포함 되어 있던을 하는 경우 각 명령에 대 한 별도 이벤트 처리기를 만들어졌을 것입니다.  
+     In this case, just one method handles events for all of the menu items by identifying the <xref:System.ComponentModel.Design.CommandID> and setting the background color accordingly. If the menu items had contained unrelated commands, you would have created a separate event handler for each command.  
   
-## <a name="testing-the-tool-window-features"></a>테스트 도구 창 기능  
+## <a name="testing-the-tool-window-features"></a>Testing the Tool Window Features  
   
-1.  프로젝트를 빌드하고 디버깅을 시작합니다. 실험적 인스턴스가 표시 됩니다.  
+1.  Build the project and start debugging. The experimental instance appears.  
   
-2.  실험적 인스턴스를 클릭 **보기 / 다른 창**를 클릭 하 고 **ShortcutMenu**합니다. 이렇게 하면 도구 창을 표시 되어야 합니다.  
+2.  In the experimental instance, click **View / Other Windows**, and then click **ShortcutMenu**. Doing this should display your tool window.  
   
-3.  도구 창의 본문을 마우스 오른쪽 단추로 클릭 합니다. 색 목록이 있는 바로 가기 메뉴를 표시 합니다.  
+3.  Right-click in the body of the tool window. A shortcut menu that has a list of colors should be displayed.  
   
-4.  바로 가기 메뉴에서 색을 클릭 합니다. 도구 창 배경 색을 선택 된 색으로 변경 되어야 합니다.  
+4.  Click a color on the shortcut menu. The tool window background color should be changed to the selected color.  
   
-## <a name="see-also"></a>참고 항목  
- [명령, 메뉴 및 도구 모음](../extensibility/internals/commands-menus-and-toolbars.md)   
- [사용 하 고 서비스를 제공 합니다.](../extensibility/using-and-providing-services.md)
+## <a name="see-also"></a>See Also  
+ [Commands, Menus, and Toolbars](../extensibility/internals/commands-menus-and-toolbars.md)   
+ [Using and Providing Services](../extensibility/using-and-providing-services.md)

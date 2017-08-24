@@ -1,140 +1,157 @@
 ---
-title: "EXCEPTION_STATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EXCEPTION_STATE"
-helpviewer_keywords: 
-  - "EXCEPTION_STATE 열거형"
+title: EXCEPTION_STATE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- EXCEPTION_STATE
+helpviewer_keywords:
+- EXCEPTION_STATE enumeration
 ms.assetid: 597f4f4c-9b70-485c-b5dc-3c2e3aecc664
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# EXCEPTION_STATE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 32c278218eb5001e370f45e870c06093acfd6d04
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-예외 상태를 지정합니다.  
+---
+# <a name="exceptionstate"></a>EXCEPTION_STATE
+Specifies the exception state.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_EXCEPTION_STATE {   
-   EXCEPTION_NONE                          = 0x0000,  
-   EXCEPTION_STOP_FIRST_CHANCE             = 0x0001,  
-   EXCEPTION_STOP_SECOND_CHANCE            = 0x0002,  
-   EXCEPTION_STOP_USER_FIRST_CHANCE        = 0x0010,  
-   EXCEPTION_STOP_USER_UNCAUGHT            = 0x0020,  
-   EXCEPTION_STOP_ALL                      = 0x00FF,  
-   EXCEPTION_CANNOT_BE_CONTINUED           = 0x0100,  
+enum enum_EXCEPTION_STATE {   
+   EXCEPTION_NONE                          = 0x0000,  
+   EXCEPTION_STOP_FIRST_CHANCE             = 0x0001,  
+   EXCEPTION_STOP_SECOND_CHANCE            = 0x0002,  
+   EXCEPTION_STOP_USER_FIRST_CHANCE        = 0x0010,  
+   EXCEPTION_STOP_USER_UNCAUGHT            = 0x0020,  
+   EXCEPTION_STOP_ALL                      = 0x00FF,  
+   EXCEPTION_CANNOT_BE_CONTINUED           = 0x0100,  
   
-   // These are for exception types only  
-   EXCEPTION_CODE_SUPPORTED                = 0x1000,  
-   EXCEPTION_CODE_DISPLAY_IN_HEX           = 0x2000,  
-   EXCEPTION_JUST_MY_CODE_SUPPORTED        = 0x4000,  
-   EXCEPTION_MANAGED_DEBUG_ASSISTANT       = 0x8000,  
+   // These are for exception types only  
+   EXCEPTION_CODE_SUPPORTED                = 0x1000,  
+   EXCEPTION_CODE_DISPLAY_IN_HEX           = 0x2000,  
+   EXCEPTION_JUST_MY_CODE_SUPPORTED        = 0x4000,  
+   EXCEPTION_MANAGED_DEBUG_ASSISTANT       = 0x8000,  
   
-   // These are no longer used  
-   EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT      = 0x0004,  
-   EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT     = 0x0008,  
-   EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT = 0x0040,  
-   EXCEPTION_STOP_USER_UNCAUGHT_USE_PARENT     = 0x0080,  
+   // These are no longer used  
+   EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT      = 0x0004,  
+   EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT     = 0x0008,  
+   EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT = 0x0040,  
+   EXCEPTION_STOP_USER_UNCAUGHT_USE_PARENT     = 0x0080,  
 };  
 typedef DWORD EXCEPTION_STATE;  
 ```  
   
-```c#  
-public enum enum_EXCEPTION_STATE {   
-   EXCEPTION_NONE                          = 0x0000,  
-   EXCEPTION_STOP_FIRST_CHANCE             = 0x0001,  
-   EXCEPTION_STOP_SECOND_CHANCE            = 0x0002,  
-   EXCEPTION_STOP_USER_FIRST_CHANCE        = 0x0010,  
-   EXCEPTION_STOP_USER_UNCAUGHT            = 0x0020,  
-   EXCEPTION_STOP_ALL                      = 0x00FF,  
-   EXCEPTION_CANNOT_BE_CONTINUED           = 0x0100,  
+```cs  
+public enum enum_EXCEPTION_STATE {   
+   EXCEPTION_NONE                          = 0x0000,  
+   EXCEPTION_STOP_FIRST_CHANCE             = 0x0001,  
+   EXCEPTION_STOP_SECOND_CHANCE            = 0x0002,  
+   EXCEPTION_STOP_USER_FIRST_CHANCE        = 0x0010,  
+   EXCEPTION_STOP_USER_UNCAUGHT            = 0x0020,  
+   EXCEPTION_STOP_ALL                      = 0x00FF,  
+   EXCEPTION_CANNOT_BE_CONTINUED           = 0x0100,  
   
-   // These are for exception types only  
-   EXCEPTION_CODE_SUPPORTED                = 0x1000,  
-   EXCEPTION_CODE_DISPLAY_IN_HEX           = 0x2000,  
-   EXCEPTION_JUST_MY_CODE_SUPPORTED        = 0x4000,  
-   EXCEPTION_MANAGED_DEBUG_ASSISTANT       = 0x8000,  
+   // These are for exception types only  
+   EXCEPTION_CODE_SUPPORTED                = 0x1000,  
+   EXCEPTION_CODE_DISPLAY_IN_HEX           = 0x2000,  
+   EXCEPTION_JUST_MY_CODE_SUPPORTED        = 0x4000,  
+   EXCEPTION_MANAGED_DEBUG_ASSISTANT       = 0x8000,  
   
-   // These are no longer used  
-   EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT      = 0x0004,  
-   EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT     = 0x0008,  
-   EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT = 0x0040,  
-   EXCEPTION_STOP_USER_UNCAUGHT_USE_PARENT     = 0x0080,  
+   // These are no longer used  
+   EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT      = 0x0004,  
+   EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT     = 0x0008,  
+   EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT = 0x0040,  
+   EXCEPTION_STOP_USER_UNCAUGHT_USE_PARENT     = 0x0080,  
 };  
 ```  
   
-## Members  
- EXCEPTION\_NONE  
- 예외에서 중지 하지 마십시오.  
+## <a name="members"></a>Members  
+ EXCEPTION_NONE  
+ Do not stop at the exception.  
   
- EXCEPTION\_STOP\_FIRST\_CHANCE  
- 첫 번째 예외 발사 중지 합니다.  예외 이벤트를 설명 하는 경우이 플래그는 예외 이벤트 첫 번째 예외 이벤트입니다.  
+ EXCEPTION_STOP_FIRST_CHANCE  
+ Stop at first firing of exception. When describing an exception event, this flag indicates that the exception event is a first-chance exception event.  
   
- EXCEPTION\_STOP\_SECOND\_CHANCE  
- 두 번째 예외 발사 중지 합니다.  예외 이벤트를 설명 하는 경우 예외 이벤트가 두 번째 예외 이벤트입니다.  
+ EXCEPTION_STOP_SECOND_CHANCE  
+ Stop at second firing of exception. When describing an exception event, indicates that the exception event is a second-chance exception event.  
   
- EXCEPTION\_STOP\_USER\_FIRST\_CHANCE  
- 첫 번째 사용자 모드 예외 발사 중지 합니다.  예외 이벤트를 설명 하는 경우 예외 이벤트 첫째 사용자 예외 이벤트입니다.  
+ EXCEPTION_STOP_USER_FIRST_CHANCE  
+ Stop at first firing of a user mode exception. When describing an exception event, indicates that the exception event is a first-chance user exception event.  
   
- EXCEPTION\_STOP\_USER\_UNCAUGHT  
- 사용자 모드 예외를 catch 하지 중지 합니다.  예외 이벤트를 설명 하는 경우 예외 이벤트는 catch 되지 않은 사용자 모드 예외 이벤트입니다.  
+ EXCEPTION_STOP_USER_UNCAUGHT  
+ Stop when a user mode exception is not caught. When describing an exception event, indicates that the exception event is an uncaught user mode exception event.  
   
- EXCEPTION\_STOP\_ALL  
- 모든 예외에서 중단 합니다.  예외 이벤트를 설명 하는 경우 사용지 않습니다.  
+ EXCEPTION_STOP_ALL  
+ Stop on any exception. Not used when describing an exception event.  
   
- EXCEPTION\_CANNOT\_BE\_CONTINUED  
- 예외 이벤트를 설명 하는 경우 예외를 계속할 수 없습니다 나타냅니다.  
+ EXCEPTION_CANNOT_BE_CONTINUED  
+ When describing an exception event, indicates that the exception cannot be continued from.  
   
- EXCEPTION\_CODE\_SUPPORTED  
- 예외를 지 원하는 코드가 있음을 나타냅니다.  사용 하는 예외를 표시 하는  
+ EXCEPTION_CODE_SUPPORTED  
+ Indicates that the exception has code supporting it. Used in displaying an exception  
   
- EXCEPTION\_CODE\_DISPLAY\_IN\_HEX  
- 예외 코드를 16 진수로 표시 되어야 함을 나타냅니다.  예외를 표시 하는 사용 합니다.  
+ EXCEPTION_CODE_DISPLAY_IN_HEX  
+ Indicates that the exception code should be displayed in hexadecimal. Used in displaying an exception.  
   
- EXCEPTION\_JUST\_MY\_CODE\_SUPPORTED  
- 예외 코드 Justmycode를 지원함을 나타냅니다.  예외를 표시 하는 사용 합니다.  
+ EXCEPTION_JUST_MY_CODE_SUPPORTED  
+ Indicates that the exception code supports JustMyCode. Used in displaying an exception.  
   
- EXCEPTION\_MANAGED\_DEBUG\_ASSISTANT  
- 관리 코드 디버거에 예외를 처리 해야 합니다 나타냅니다.  그렇지 않으면 기본 디버거 설정의 예외를 처리 합니다.  이 전달 되는 [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) 메서드 사용 안은 [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md) 구조입니다.  
+ EXCEPTION_MANAGED_DEBUG_ASSISTANT  
+ Indicates that the managed code debugger should handle exceptions. If not set, the default debugger handles the exceptions. This is passed to the [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) method and not used in the [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure.  
   
- EXCEPTION\_STOP\_FIRST\_CHANCE\_USE\_PARENT  
- 사용 되지 않음, 사용 하지 마십시오.  
+ EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT  
+ OBSOLETE, DO NOT USE.  
   
- EXCEPTION\_STOP\_SECOND\_CHANCE\_USE\_PARENT  
- 사용 되지 않음, 사용 하지 마십시오.  
+ EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT  
+ OBSOLETE, DO NOT USE.  
   
- EXCEPTION\_STOP\_USER\_FIRST\_CHANCE\_USE\_PARENT  
- 사용 되지 않음, 사용 하지 마십시오.  
+ EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT  
+ OBSOLETE, DO NOT USE.  
   
- EXCEPTION\_STOP\_USER\_SECOND\_CHANCE\_USE\_PARENT  
- 사용 되지 않음, 사용 하지 마십시오.  
+ EXCEPTION_STOP_USER_SECOND_CHANCE_USE_PARENT  
+ OBSOLETE, DO NOT USE.  
   
-## 설명  
- 사용 되는 `dwState` 의 구성원은 [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md) 예외 및 대해 수행할 수 있는 상태를 나타내는 구조.  
+## <a name="remarks"></a>Remarks  
+ Used as the `dwState` member of the [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure to indicate the state of the exception and what can be done about it.  
   
- 이러한 값도 전달의 [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) 메서드 상태는 모든 예외를 설정 합니다.  
+ These values are also passed to the [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) method to set the state of all exceptions.  
   
- 비트 OR로 이러한 플래그를 조합할 수 있습니다.  
+ These flags may be combined with a bitwise OR.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)   
  [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)

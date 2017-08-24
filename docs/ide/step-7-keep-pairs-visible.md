@@ -1,65 +1,81 @@
 ---
-title: "7단계: 쌍 표시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Step 7: Keep Pairs Visible | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 42e1d08c-7b2e-4efd-9f47-85d6206afe35
 caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# 7단계: 쌍 표시
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c4509686b578b68a2313819aef8700c94e4db87a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-플레이어가 서로 일치하지 않는 아이콘 쌍을 선택하는 경우 게임이 제대로 실행됩니다.  그러나 일치하는 쌍을 선택할 경우에는 어떻게 되는지 고려해야 합니다.  타이머를 설정\(`Start()` 메서드 사용\)하여 아이콘이 사라지게 하는 대신 `firstClicked` 및 `secondClicked` 참조 변수를 사용하여 선택한 두 레이블의 색을 다시 설정하는 것이 아니라 레이블을 더 이상 추적하지 않도록 게임 자체를 다시 설정해야 합니다.  
+---
+# <a name="step-7-keep-pairs-visible"></a>Step 7: Keep Pairs Visible
+The game works well, as long as the player only chooses pairs of icons that don't match. But consider what should happen when the player chooses a matching pair. Instead of making the icons disappear by turning on the timer (using the `Start()` method), the game should reset itself so that it's no longer keeping track of any labels using the `firstClicked` and `secondClicked` reference variables, without resetting the colors for the two labels that were chosen.  
   
-### 쌍을 표시하려면  
+### <a name="to-keep-pairs-visible"></a>To keep pairs visible  
   
-1.  타이머를 시작하는 문 바로 위의 거의 코드 끝부분에서 `label_Click()` 이벤트 처리기 메서드에 다음 `if` 문을 추가합니다.  프로그램에 추가하는 동안 코드를 자세히 검토하고  코드가 어떻게 실행되는지 살펴보십시오.  
+1.  Add the following `if` statement to the `label_Click()` event handler method, near the end of the code just above the statement where you start the timer. Take a close look at the code while adding it to the program. Consider how the code works.  
   
-     [!code-cs[VbExpressTutorial4Step7#9](../ide/codesnippet/CSharp/step-7-keep-pairs-visible_1.cs)]
-     [!code-vb[VbExpressTutorial4Step7#9](../ide/codesnippet/VisualBasic/step-7-keep-pairs-visible_1.vb)]  
+     [!code-cs[VbExpressTutorial4Step7#9](../ide/codesnippet/CSharp/step-7-keep-pairs-visible_1.cs)]  [!code-vb[VbExpressTutorial4Step7#9](../ide/codesnippet/VisualBasic/step-7-keep-pairs-visible_1.vb)]  
   
-     방금 추가한 `if` 문의 첫 번째 줄은 플레이어가 선택하는 첫 번째 레이블의 아이콘이 두 번째 레이블의 아이콘과 같은지 여부를 검사합니다.  두 아이콘이 일치하는 경우 중괄호 사이의 세 문\(C\#의 경우\) 또는 `if` 문 내의 세 문\(Visual Basic의 경우\)이 실행됩니다.  처음 두 문은 `firstClicked` 및 `secondClicked` 참조 변수를 다시 설정하여 레이블을 더 이상 추적하지 않도록 합니다. 타이머의 Tick 이벤트 처리기에서 이러한 두 문을 인식할 수 있습니다. 세 번째 문은 프로그램에서 메서드의 나머지 문을 실행하지 않고 건너뛰도록 지시하는 `return` 문입니다.  
+     The first line of the `if` statement you just added checks whether the icon in the first label that the player chooses is the same as the icon in the second label. If the icons are identical, the program executes the three statements between the curly braces in C# or the three statements within the `if` statement in Visual Basic. The first two statements reset the `firstClicked` and `secondClicked` reference variables so that they no longer keep track of any of the labels. (You may recognize those two statements from the timer's Tick event handler.) The third statement is a `return` statement, which tells the program to skip the rest of the statements in the method without executing them.  
   
-     Visual C\# 프로그래밍의 경우 코드 일부에서는 단일 등호\(`=`\)가 사용되고 다른 문에서는 이중 등호\(`==`\)가 사용되는 것을 알 수 있습니다.  일부 상황에서는 `=`가 사용되지만 다른 상황에서는 `==`가 사용되는 이유를 알아야 합니다.  
+     If programming in Visual C#, you may have noticed that some of the code uses a single equal sign (`=`), while other statements use two equal signs (`==`). Consider why `=` is used in some places but `==` is used in other places.  
   
-     다음은 이러한 차이를 보여 주는 좋은 예제입니다.  `if` 문에서 괄호 사이의 코드를 주의 깊게 살펴보십시오.  
+     This is a good example that shows the difference. Take a careful look at the code between the parentheses in the `if` statement.  
   
-    ```vb#  
+    ```vb  
     firstClicked.Text = secondClicked.Text  
     ```  
   
-    ```c#  
+    ```cs  
     firstClicked.Text == secondClicked.Text  
     ```  
   
-     그런 다음 `if` 문 뒤에 나오는 코드 블록에서 첫 번째 문을 검토하십시오.  
+     Then look closely at the first statement in the block of code after the `if` statement.  
   
-    ```vb#  
+    ```vb  
     firstClicked = Nothing  
     ```  
   
-    ```c#  
+    ```cs  
     firstClicked = null;  
     ```  
   
-     이러한 두 문 중 첫 번째 문은 두 아이콘이 같은지 여부를 검사합니다.  두 값이 비교되므로 Visual C\# 프로그램에서 `==` 같음 연산자를 사용합니다.  두 번째 문은 실제로 값을 변경\(*할당*\)하고 `firstClicked` 참조 변수를 `null`로 설정하여 다시 설정합니다.  이 때문에 `=` 할당 연산자가 대신 사용됩니다.  Visual C\#에서는 `=` 기호를 사용하여 값을 설정하고 `==` 기호를 사용하여 값을 비교합니다.  Visual Basic에서는 변수 할당과 비교에 둘 다 `=` 기호를 사용합니다.  
+     The first of those two statements checks whether two icons are the same. Because two values are being compared, the Visual C# program uses the `==` equality operator. The second statement actually changes the value (called *assignment*), setting the `firstClicked` reference variable equal to `null` to reset it. That's why it uses the `=` assignment operator instead. Visual C# uses `=` to set values, and `==` to compare them. Visual Basic uses `=` for both variable assignment and comparison.  
   
-2.  프로그램을 저장하고 실행한 뒤 폼에서 아이콘 선택을 시작합니다.  일치하지 않는 쌍을 선택하면 타이머의 Tick 이벤트가 트리거되고 두 아이콘이 모두 사라집니다.  일치하는 쌍을 선택할 경우에는 새 `if` 문이 실행되고 return 문은 메서드가 타이머를 시작하는 코드를 건너뛰게 하므로 다음 그림과 같이 아이콘이 계속 표시됩니다.  
+2.  Save and run the program, and then start choosing icons on the form. If you choose a pair that doesn't match, the timer's Tick event triggers, and both icons disappear. If you choose a matching pair, the new `if` statement executes, and the return statement causes the method to skip the code that starts the timer, so the icons stay visible, as shown in the following picture.  
   
-     ![이 자습서에서 만드는 게임](../ide/media/express_finishedgame.png "Express\_FinishedGame")  
-아이콘 쌍이 표시된 일치 게임  
+     ![Game that you create in this tutorial](../ide/media/express_finishedgame.png "Express_FinishedGame")  
+Matching game with visible icon pairs  
   
-### 계속하거나 검토하려면  
+### <a name="to-continue-or-review"></a>To continue or review  
   
--   다음 자습서 단계로 이동하려면 [8단계: 게임 플레이어가 이겼는지 여부를 확인하는 메서드 추가](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)를 참조하십시오.  
+-   To go to the next tutorial step, see [Step 8: Add a Method to Verify Whether the Player Won](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md).  
   
--   이전 자습서 단계로 돌아가려면 [6단계: 타이머 추가](../ide/step-6-add-a-timer.md)를 참조하십시오.
+-   To return to the previous tutorial step, see [Step 6: Add a Timer](../ide/step-6-add-a-timer.md).

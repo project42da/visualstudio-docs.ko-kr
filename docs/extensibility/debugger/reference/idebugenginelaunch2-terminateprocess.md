@@ -1,53 +1,70 @@
 ---
-title: "IDebugEngineLaunch2::TerminateProcess | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngineLaunch2::TerminateProcess"
-helpviewer_keywords: 
-  - "IDebugEngineLaunch2::TerminateProcess"
+title: IDebugEngineLaunch2::TerminateProcess | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngineLaunch2::TerminateProcess
+helpviewer_keywords:
+- IDebugEngineLaunch2::TerminateProcess
 ms.assetid: f7039e7f-5f57-4222-9ad2-11a66b2da6e0
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugEngineLaunch2::TerminateProcess
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 157016b5bcd0a1cd69d43660cd7bebf0cd8a1433
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-프로세스를 종료합니다.  
+---
+# <a name="idebugenginelaunch2terminateprocess"></a>IDebugEngineLaunch2::TerminateProcess
+Terminates a process.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT TerminateProcess (   
-   IDebugProcess2* pProcess  
+HRESULT TerminateProcess (   
+   IDebugProcess2* pProcess  
 );  
 ```  
   
-```c#  
-int TerminateProcess (   
-   IDebugProcess2 pProcess  
+```cs  
+int TerminateProcess (   
+   IDebugProcess2 pProcess  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pProcess`  
- \[in\] [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) 를 종료 하는 프로세스를 나타내는 개체입니다.  
+ [in] An [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) object that represents the process to be terminated.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns an error code.  
   
-## 설명  
- 호출 하는 [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) 메서드에이 메서드를 호출 하기 전에.  
+## <a name="remarks"></a>Remarks  
+ Call the [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) method before calling this method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)

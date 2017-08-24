@@ -1,51 +1,68 @@
 ---
-title: "IEnumDebugCustomAttributes::GetCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumCustomAttributes::GetCount"
-helpviewer_keywords: 
-  - "IEnumDebugCustomAttributes::GetCount"
+title: IEnumDebugCustomAttributes::GetCount | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumCustomAttributes::GetCount
+helpviewer_keywords:
+- IEnumDebugCustomAttributes::GetCount
 ms.assetid: fafe826f-4ebf-4572-b2a3-d5dd2916c12f
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IEnumDebugCustomAttributes::GetCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 852cc1b95e9633106ce3afe963e85892ecf89dfb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-사용자 지정 특성의 수를의 열거자를 가져옵니다.  
+---
+# <a name="ienumdebugcustomattributesgetcount"></a>IEnumDebugCustomAttributes::GetCount
+Gets the number of custom attributes in an enumerator.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetCount(   
-   ULONG* pcelt  
+HRESULT GetCount(   
+   ULONG* pcelt  
 );  
 ```  
   
-```c#  
+```cs  
 int GetCount(  
-   out uint pcelt  
+   out uint pcelt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pcelt`  
- \[out\] 열거형의 요소 수를 반환합니다.  
+ [out] Returns the number of elements in the enumeration.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드만을 지정 하는 관습 COM 열거형 인터페이스의 일부가 아닌 `Next`, `Clone`, `Skip`, 및 `Reset` 를 구현 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ This method is not part of the customary COM enumeration interface which specifies that only `Next`, `Clone`, `Skip`, and `Reset` need to be implemented.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

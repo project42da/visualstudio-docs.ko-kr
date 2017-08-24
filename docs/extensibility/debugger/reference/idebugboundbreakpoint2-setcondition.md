@@ -1,54 +1,71 @@
 ---
-title: "IDebugBoundBreakpoint2::SetCondition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBoundBreakpoint2::SetCondition"
-helpviewer_keywords: 
-  - "SetCondition 메서드"
-  - "IDebugBoundBreakpoint2::SetCondition 메서드"
+title: IDebugBoundBreakpoint2::SetCondition | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBoundBreakpoint2::SetCondition
+helpviewer_keywords:
+- SetCondition method
+- IDebugBoundBreakpoint2::SetCondition method
 ms.assetid: 5d366876-efed-43d0-8ea1-dfdb009cbfac
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugBoundBreakpoint2::SetCondition
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c887a860eb5257c5c3c3d2873657684b92932c81
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-설정 하거나이 바인딩된 중단점에 연관 된 상태를 변경 합니다.  
+---
+# <a name="idebugboundbreakpoint2setcondition"></a>IDebugBoundBreakpoint2::SetCondition
+Sets or changes the condition associated with this bound breakpoint.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetCondition(   
-   BP_CONDITION bpCondition  
+HRESULT SetCondition(   
+   BP_CONDITION bpCondition  
 );  
 ```  
   
-```c#  
-int SetCondition(   
-   enum_BP_CONDITION bpCondition  
+```cs  
+int SetCondition(   
+   enum_BP_CONDITION bpCondition  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `bpCondition`  
- \[in\] 값은 [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) 조건에 설명 하는 열거형입니다.  
+ [in] A value from the [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) enumeration that describes the condition.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_BP_DELETED` 바인딩된 중단점 개체의 상태를 설정는 경우 `BPS_DELETED` \(일부는 [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md) 열거형\).  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the state of the bound breakpoint object is set to `BPS_DELETED` (part of the [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeration).  
   
-## 설명  
- 이 중단점에 이전에 연결 된 모든 조건이 손실 됩니다.  
+## <a name="remarks"></a>Remarks  
+ Any condition that was previously associated with this breakpoint is lost.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
- [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)   
- [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md)
+ [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)   
+ [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

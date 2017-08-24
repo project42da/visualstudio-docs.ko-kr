@@ -1,49 +1,66 @@
 ---
-title: "IDebugProperty2::GetReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty2::GetReference"
-helpviewer_keywords: 
-  - "IDebugProperty2::GetReference 메서드"
+title: IDebugProperty2::GetReference | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProperty2::GetReference
+helpviewer_keywords:
+- IDebugProperty2::GetReference method
 ms.assetid: 2fa97d9b-c3d7-478e-ba5a-a933f40a0103
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugProperty2::GetReference
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 74e80c0c77fbe95327d222d60c598ca45f058ec4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-속성 값에 대 한 참조를 반환합니다.  
+---
+# <a name="idebugproperty2getreference"></a>IDebugProperty2::GetReference
+Returns a reference to the property's value.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetReference(  
-   IDebugReference2** ppReference  
+   IDebugReference2** ppReference  
 );  
 ```  
   
-```c#  
+```cs  
 int GetReference(  
-   out IDebugReference2 ppReference  
+   out IDebugReference2 ppReference  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppRererence`  
- \[out\] 반환 된 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) 속성의 값에 대 한 참조를 나타내는 개체입니다.  
+ [out] Returns an [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object representing a reference to the property's value.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드는 일반적으로 반환 `E_NOTIMPL` 또는 `E_GETREFERENCE_NO_REFERENCE`.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code, typically `E_NOTIMPL` or `E_GETREFERENCE_NO_REFERENCE`.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

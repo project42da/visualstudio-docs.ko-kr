@@ -1,57 +1,74 @@
 ---
-title: "IDebugModOpt::GetModOpts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugModOpt::GetModOpts"
-  - "GetModOpts"
+title: IDebugModOpt::GetModOpts | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugModOpt::GetModOpts
+- GetModOpts
 ms.assetid: cb513fa9-d521-4a65-b968-f55f53a368df
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugModOpt::GetModOpts
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 03aaacda22c16e926c06dfec99a41c3f9c45f137
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-선택적 한정자의 목록을 검색합니다.  
+---
+# <a name="idebugmodoptgetmodopts"></a>IDebugModOpt::GetModOpts
+Retrieves a list of optional modifiers.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetModOpts(  
-   ULONG  celt,  
-   BSTR*  rgelt,  
-   ULONG* pceltFetched  
+   ULONG  celt,  
+   BSTR*  rgelt,  
+   ULONG* pceltFetched  
 );  
 ```  
   
-```c#  
+```cs  
 int GetModOpts(  
-   uint         celt,  
-   out string[] rgelt,  
-   ref uint     pceltFetched  
+   uint         celt,  
+   out string[] rgelt,  
+   ref uint     pceltFetched  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `celt`  
- \[in\] 반환할 요소 수입니다.  
+ [in] Number of elements to be returned.  
   
  `rgelt`  
- \[out\] 옵션이 들어 있는 배열을 반환 합니다.  
+ [out] Returns an array that contains the options.  
   
  `pceltFetched`  
- \[in, out\] 개수에서 반환 되는 요소는 `rgelt` 배열입니다.  
+ [in, out] Number of elements returned in the `rgelt` array.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)

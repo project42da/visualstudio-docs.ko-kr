@@ -1,56 +1,73 @@
 ---
-title: "IDebugFunctionObject::CreateStringObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugFunctionObject::CreateStringObject"
-helpviewer_keywords: 
-  - "IDebugFunctionObject::CreateStringObject 메서드"
+title: IDebugFunctionObject::CreateStringObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugFunctionObject::CreateStringObject
+helpviewer_keywords:
+- IDebugFunctionObject::CreateStringObject method
 ms.assetid: fd6070ab-07d4-4ea1-8d71-b16592d6f1a7
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugFunctionObject::CreateStringObject
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 187ede6aa896abe58f006bd02a33f8201af9d9fa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-문자열 개체를 만듭니다.  
+---
+# <a name="idebugfunctionobjectcreatestringobject"></a>IDebugFunctionObject::CreateStringObject
+Creates a string object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT CreateStringObject(   
-   LPCOLESTR      pcstrString,  
-   IDebugObject** ppObject  
+HRESULT CreateStringObject(   
+   LPCOLESTR      pcstrString,  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```c#  
+```cs  
 int CreateStringObject(  
-   string      pcstrString,   
-   out IDebugObject ppOjbect  
+   string      pcstrString,   
+   out IDebugObject ppOjbect  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pcstrString`  
- \[in\] String 개체의 문자열 값입니다.  
+ [in] The string value for the string object.  
   
  `ppObject`  
- \[out\] 반환 된 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 새로 만든된 string 개체를 나타내는 개체입니다.  
+ [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object that represents the newly created string object.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 으로 표시 되며 함수에 매개 변수를 포함 하는 문자열을 나타내는 개체를 만드는 데이 메서드를 호출 하 여 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) 인터페이스입니다.  
+## <a name="remarks"></a>Remarks  
+ Call this method to create an object that represents a string that is a parameter to the function which is represented by the [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

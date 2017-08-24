@@ -1,52 +1,69 @@
 ---
-title: "IDebugObject2::GetAlias | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject2::GetAlias"
-helpviewer_keywords: 
-  - "IDebugObject2::GetAlias 메서드"
+title: IDebugObject2::GetAlias | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject2::GetAlias
+helpviewer_keywords:
+- IDebugObject2::GetAlias method
 ms.assetid: aa6824d5-c932-42ba-8713-950e7d1fb42f
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugObject2::GetAlias
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 5119711d8479004f706c15b009d8780d55d4c857
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 개체와 관련 된 별칭을 가져옵니다.  
+---
+# <a name="idebugobject2getalias"></a>IDebugObject2::GetAlias
+Gets the alias associated with this object, if any.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetAlias(  
-   IDebugAlias** ppAlias  
+HRESULT GetAlias(  
+   IDebugAlias** ppAlias  
 );  
 ```  
   
-```c#  
-int GetAlias(  
-   out IDebugAlias ppAlias  
+```cs  
+int GetAlias(  
+   out IDebugAlias ppAlias  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppAlias`  
- \[out\] 반환 된 [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) 개체 별칭 개체입니다. 그렇지 않으면 null 값을 반환 합니다.  
+ [out] Returns an [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) object representing the alias for this object; otherwise, returns a null value.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 별칭 개체에 대 한 호출로 만들어진의 [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) 메서드가 있습니다.  
+## <a name="remarks"></a>Remarks  
+ An alias for an object is created with a call to the [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

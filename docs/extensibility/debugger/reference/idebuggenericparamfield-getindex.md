@@ -1,52 +1,69 @@
 ---
-title: "IDebugGenericParamField::GetIndex | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugGenericParamField::GetIndex"
+title: IDebugGenericParamField::GetIndex | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugGenericParamField::GetIndex
 ms.assetid: 8e0bdb26-1247-44d9-8d80-ec6e35187fb4
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugGenericParamField::GetIndex
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 9a084b982226a65ca58c5d9b4841dc6e034960b6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 제네릭 매개 변수의 인덱스를 검색합니다.  
+---
+# <a name="idebuggenericparamfieldgetindex"></a>IDebugGenericParamField::GetIndex
+Retrieves the index of this generic parameter.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetIndex(  
-   DWORD* pIndex  
+   DWORD* pIndex  
 );  
 ```  
   
-```c#  
+```cs  
 int GetIndex(  
-   out uint pIndex  
+   out uint pIndex  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pIndex`  
- \[out\] 인덱스 값이 제네릭 매개 변수입니다.  
+ [out] Index value of this generic parameter.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 예를 들어, Dictionary\(K,V\), K 0 인덱스에서 인덱스 1 V입니다.  
+## <a name="remarks"></a>Remarks  
+ For example, for Dictionary(K,V), K is index 0, V is index 1.  
   
-## 예제  
- 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CDebugGenericParamFieldType** 를 노출 하는 개체는 [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) 인터페이스.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugGenericParamFieldType** object that exposes the [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
   
 ```cpp#  
 HRESULT CDebugGenericParamFieldType::GetIndex(DWORD* pIndex)  
@@ -66,5 +83,5 @@ Error:
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

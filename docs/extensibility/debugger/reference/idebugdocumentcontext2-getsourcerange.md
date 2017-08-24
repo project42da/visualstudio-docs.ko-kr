@@ -1,60 +1,77 @@
 ---
-title: "IDebugDocumentContext2::GetSourceRange | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentContext2::GetSourceRange"
-helpviewer_keywords: 
-  - "IDebugDocumentContext2::GetSourceRange"
+title: IDebugDocumentContext2::GetSourceRange | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentContext2::GetSourceRange
+helpviewer_keywords:
+- IDebugDocumentContext2::GetSourceRange
 ms.assetid: 5903c75e-5390-4d13-9314-1ee276255313
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDocumentContext2::GetSourceRange
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ae59dab54351e01e20afdc401bb8a374bf3069f1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-문서에는 소스 코드 범위를 가져옵니다.  
+---
+# <a name="idebugdocumentcontext2getsourcerange"></a>IDebugDocumentContext2::GetSourceRange
+Gets the source code range of this document context.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetSourceRange(   
-   TEXT_POSITION* pBegPosition,  
-   TEXT_POSITION* pEndPosition  
+HRESULT GetSourceRange(   
+   TEXT_POSITION* pBegPosition,  
+   TEXT_POSITION* pEndPosition  
 );  
 ```  
   
-```c#  
-int GetSourceRange(   
-   TEXT_POSITION[] pBegPosition,  
-   TEXT_POSITION[] pEndPosition  
+```cs  
+int GetSourceRange(   
+   TEXT_POSITION[] pBegPosition,  
+   TEXT_POSITION[] pEndPosition  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pBegPosition`  
- \[in, out\] A [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) 구조는 시작 위치를 사용 하 여 채워집니다.  이 정보가 필요 하지 않으면이 인수는 null 값으로 설정 합니다.  
+ [in, out] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that is filled in with the starting position. Set this argument to a null value if this information is not needed.  
   
  `pEndPosition`  
- \[in, out\] A [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) 사용 하 여 끝 위치를 입력 하는 구조입니다.  이 정보가 필요 하지 않으면이 인수는 null 값으로 설정 합니다.  
+ [in, out] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that is filled in with the ending position. Set this argument to a null value if this information is not needed.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 원본 범위의 현재 방금 코드 멤버는 이전 문 뒤에 문이 뒤에서 소스 코드의 전체 범위가입니다.  원본 범위의 소스 문에서 디스어셈블리 창에서 코드에 주석을 포함 한 혼합 하는 데 일반적으로 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ A source range is the entire range of source code, from the current statement back to just after the previous statement that contributed code. The source range is typically used for mixing source statements, including comments, with code in the disassembly window.  
   
- 단순히이 문서의 컨텍스트에 포함 된 코드 문에 대 한 범위를 가져오려면 호출을 [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) 메서드.  
+ To get the range for just the code statements contained within this document context, call the [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
  [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)   
- [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md)
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

@@ -1,43 +1,60 @@
 ---
-title: "Reorder Parameters Refactoring (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.csharp.refactoring.reorder"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "refactoring [C#], Reorder Parameters"
-  - "Reorder Parameters refactoring [C#]"
+redirect_url: /visualstudio/csharp-ide/refactoring/change-method-signature
+title: Reorder Parameters Refactoring (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.csharp.refactoring.reorder
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- refactoring [C#], Reorder Parameters
+- Reorder Parameters refactoring [C#]
 ms.assetid: 4dabf21a-a9f0-41e9-b11b-55760cf2bd90
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
----
-# Reorder Parameters Refactoring (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BillWagner
+ms.author: wiwagn
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: bf433e4bf8d32c39511bf043414a55ccb1a9d5bd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-`Reorder Parameters`는 메서드, 인덱스 및 대리자에 대한 매개 변수의 순서를 변경하는 간편한 방법을 제공하는 Visual C\# 리팩터링 작업입니다.  `Reorder Parameters`가 선언을 변경하면 멤버가 호출되는 모든 곳에서 매개 변수는 새 순서를 반영하도록 다시 정렬됩니다.  
+---
+# <a name="reorder-parameters-refactoring-c"></a>Reorder Parameters Refactoring (C#)
+`Reorder Parameters` is a Visual C# refactoring operation that provides an easy way to change the order of the parameters for methods, indexers, and delegates. `Reorder Parameters` changes the declaration, and at any locations where the member is called, the parameters are rearranged to reflect the new order.  
   
- `Reorder Parameters` 작업을 수행하려면 커서를 메서드, 인덱서 또는 대리자 위나 바로 다음에 놓습니다.  커서가 해당 위치에 있을 때 바로 가기 키를 누르거나 바로 가기 메뉴에서 명령을 선택하여 `Reorder Parameters` 작업을 호출합니다.  
+ To perform the `Reorder Parameters` operation, put the cursor on or next to a method, indexer, or delegate. When the cursor is in position, invoke the `Reorder Parameters` operation by pressing the keyboard shortcut, or by clicking the command from the shortcut menu.  
   
 > [!NOTE]
->  확장 메서드에서 첫 번째 매개 변수를 다시 정렬할 수 없습니다.  
+>  You cannot reorder the first parameter in an extension method.  
   
-### 매개 변수를 다시 정렬하려면  
+### <a name="to-reorder-parameters"></a>To reorder parameters  
   
-1.  `ReorderParameters`라는 클래스 라이브러리를 만든 다음 `Class1`을 다음 예제 코드로 바꿉니다.  
+1.  Create a class library named `ReorderParameters`, and then replace `Class1` with the following example code.  
   
-    ```c#  
+    ```cs  
     class ProtoClassA  
     {  
         // Invoke on 'MethodB'.  
@@ -56,26 +73,26 @@ manager: "wpickett"
     }  
     ```  
   
-2.  커서를 메서드 선언이나 메서드 호출에 있는 `MethodB`에 놓습니다.  
+2.  Place the cursor on `MethodB`, either in the method declaration or the method call.  
   
-3.  **리팩터링** 메뉴에서 **매개 변수 다시 정렬**을 클릭합니다.  
+3.  On the **Refactor** menu, click **Reorder Parameters**.  
   
-     **매개 변수 다시 정렬** 대화 상자가 표시됩니다.  
+     The **Reorder Parameters** dialog box appears.  
   
-4.  **매개 변수 다시 정렬** 대화 상자의 **매개 변수** 목록에서 `int i`를 선택한 다음 아래쪽 화살표를 클릭합니다.  
+4.  In the **Reorder Parameters** dialog box, select `int i` in the **Parameters** list, and then click the down button.  
   
-     **매개 변수** 목록에서 `bool b` 다음에 `int i`를 끌어 올 수도 있습니다.  
+     Alternatively, you can drag `int i` after `bool b` in the **Parameters** list.  
   
-5.  **매개 변수 다시 정렬** 대화 상자에서 **확인**을 클릭합니다.  
+5.  In the **Reorder Parameters** dialog box, click **OK**.  
   
-     **매개 변수 다시 정렬** 대화 상자에서 **참조 변경 내용 미리 보기** 옵션이 선택되었으면 **변경 내용 미리 보기 \- 매개 변수 다시 정렬** 대화 상자가 나타납니다.  시그니처와 메서드 호출 모두에 있는 `MethodB`의 매개 변수 목록에서 변경 내용을 미리 볼 수 있습니다.  
+     If the **Preview reference changes** option is selected in the **Reorder Parameters** dialog box, the **Preview Changes - Reorder Parameters** dialog box will appear. It provides a preview of the changes in the parameter list for `MethodB` in both the signature and the method call.  
   
-    1.  **변경 내용 미리 보기 — 매개 변수 다시 정렬** 대화 상자가 나타나면 **적용**을 클릭합니다.  
+    1.  If the **Preview Changes - Reorder Parameters** dialog box appears, click **Apply**.  
   
-         이 예제에서는 `MethodB`에 대한 메서드 선언과 모든 메서드 호출 사이트가 업데이트됩니다.  
+         In this example, the method declaration and all the method call sites for `MethodB` are updated.  
   
-## 설명  
- 메서드 선언이나 메서드 호출에서 매개 변수를 다시 정렬할 수 있습니다.  커서를 메서드나 대리자 선언 위나 바로 다음에 놓고 본문에 놓지는 마십시오.  
+## <a name="remarks"></a>Remarks  
+ You can reorder parameters from a method declaration or a method call. Position the cursor on or next to the method or delegate declaration but not in the body.  
   
-## 참고 항목  
- [Refactoring \(C\#\)](../csharp-ide/refactoring-csharp.md)
+## <a name="see-also"></a>See Also  
+ [Refactoring (C#)](refactoring-csharp.md)

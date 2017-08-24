@@ -1,63 +1,80 @@
 ---
-title: "IDebugMemoryBytes2::WriteAt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMemoryBytes2::WriteAt"
-helpviewer_keywords: 
-  - "IDebugMemoryBytes2::WriteAt 메서드"
-  - "WriteAt 메서드"
+title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugMemoryBytes2::WriteAt
+helpviewer_keywords:
+- IDebugMemoryBytes2::WriteAt method
+- WriteAt method
 ms.assetid: 61cc3704-47fa-4d9b-aa62-bb4585ac8fb1
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# IDebugMemoryBytes2::WriteAt
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 4b6066de1c205e7df469c2c4f016e533ae9fd01a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-지정 된 번호는 지정 된 주소에서 시작 하는 메모리의 바이트를 씁니다.  
+---
+# <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
+Writes the specified number of bytes of memory, starting at the specified address.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT WriteAt(   
-   IDebugMemoryContext2* pStartContext,  
-   DWORD                 dwCount,  
-   BYTE*                 rgbMemory  
+HRESULT WriteAt(   
+   IDebugMemoryContext2* pStartContext,  
+   DWORD                 dwCount,  
+   BYTE*                 rgbMemory  
 );  
 ```  
   
-```c#  
+```cs  
 int WriteAt(  
-   IDebugMemoryContext2 pStartContext,  
-   uint                 dwCount,  
-   byte[]               rgbMemory  
+   IDebugMemoryContext2 pStartContext,  
+   uint                 dwCount,  
+   byte[]               rgbMemory  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pStartContext`  
- \[in\] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 바이트 쓰기 시작할 위치를 지정 하는 개체입니다.  
+ [in] The [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object that specifies where to start writing bytes.  
   
  `dwCount`  
- \[in\] 쓸 바이트 수입니다.  
+ [in] The number of bytes to write.  
   
  `rgbMemory`  
- \[in\] 쓸 바이트 수입니다.  이 배열에는 최소한으로 간주 됩니다 `dwCount` 의 크기 \(바이트\)입니다.  
+ [in] The bytes to write. This array is assumed to be at least `dwCount` bytes in size.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 모든 바이트를 쓸 수 또는 오류 코드를 반환 하는 경우 \(일반적으로 `E_FAIL`\).  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns `S_FALSE` if not all bytes could be written or returns an error code (typically `E_FAIL`).  
   
-## 설명  
- 시작 주소 이것에 나타내는 메모리 창 내에서 없는 경우 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) 개체, 없음 쓰기 발생 하 고 오류 코드를 `E_FAIL` 반환 됩니다\-작성할 양을 메모리 공간에 겹치는 경우에.  
+## <a name="remarks"></a>Remarks  
+ If the starting address is not within the memory window represented by this [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) object, no writing occurs and an error code of `E_FAIL` is returned — even if the amount to write overlaps into the memory space.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

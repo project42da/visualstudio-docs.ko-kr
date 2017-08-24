@@ -1,54 +1,71 @@
 ---
-title: "IDebugThread2::GetThreadId | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugThread2::GetThreadId"
-helpviewer_keywords: 
-  - "IDebugThread2::GetThreadId"
+title: IDebugThread2::GetThreadId | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugThread2::GetThreadId
+helpviewer_keywords:
+- IDebugThread2::GetThreadId
 ms.assetid: db8b1c07-6b86-47f9-b292-bac19c276d36
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugThread2::GetThreadId
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ef87feadee26a8e4611526691a85c8f9c68d830a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-시스템 스레드 식별자를 가져옵니다.  
+---
+# <a name="idebugthread2getthreadid"></a>IDebugThread2::GetThreadId
+Gets the system thread identifier.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetThreadId (   
-   DWORD* pdwThreadId  
+HRESULT GetThreadId (   
+   DWORD* pdwThreadId  
 );  
 ```  
   
-```c#  
-int GetThreadId (   
-   out uint pdwThreadId  
+```cs  
+int GetThreadId (   
+   out uint pdwThreadId  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pdwThreadId`  
- \[out\] 시스템 스레드 식별자를 반환합니다.  
+ [out] Returns the system thread identifier.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 스레드 ID는 사용 하 여 다른 프로세스에서 모든 스레드 간의 스레드를 식별 합니다.  
+## <a name="remarks"></a>Remarks  
+ A thread ID is used to identify a thread among all other threads in a process.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CProgram` 를 구현 하는 개체는 [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) 인터페이스입니다.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CProgram` object that implements the [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) interface.  
   
 ```cpp#  
 HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {     
@@ -57,5 +74,5 @@ HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

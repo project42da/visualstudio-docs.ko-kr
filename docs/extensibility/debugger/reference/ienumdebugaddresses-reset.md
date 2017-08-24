@@ -1,47 +1,64 @@
 ---
-title: "IEnumDebugAddresses::Reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugAddresses::Reset"
-helpviewer_keywords: 
-  - "IEnumDebugAddresses::Reset 메서드"
+title: IEnumDebugAddresses::Reset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumDebugAddresses::Reset
+helpviewer_keywords:
+- IEnumDebugAddresses::Reset method
 ms.assetid: 3a9d7f20-5bc6-4e13-8e91-5af4092e092f
 caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# IEnumDebugAddresses::Reset
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2390ca1e6db27158a72924c62170662a20d758db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는 첫 번째 요소에 열거형을 다시 설정합니다.  
+---
+# <a name="ienumdebugaddressesreset"></a>IEnumDebugAddresses::Reset
+This method resets the enumeration to the first element.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Reset(void);  
 ```  
   
-```c#  
+```cs  
 int Reset();  
 ```  
   
-#### 매개 변수  
- 없음  
+#### <a name="parameters"></a>Parameters  
+ None  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드 호출 후 다음 호출을 [다음](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md) 열거형의 첫 번째 요소를 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ After this method is called, the next call to [Next](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md) returns the first element of the enumeration.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)   
- [다음](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)
+ [Next](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)

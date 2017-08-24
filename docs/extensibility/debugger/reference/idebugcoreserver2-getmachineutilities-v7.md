@@ -1,54 +1,71 @@
 ---
-title: "IDebugCoreServer2::GetMachineUtilities_V7 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCoreServer2::GetMachineUtilities_V7"
-helpviewer_keywords: 
-  - "IDebugCoreServer2::GetMachineUtilities_V7"
+title: IDebugCoreServer2::GetMachineUtilities_V7 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCoreServer2::GetMachineUtilities_V7
+helpviewer_keywords:
+- IDebugCoreServer2::GetMachineUtilities_V7
 ms.assetid: 64c1f08f-853b-4498-9810-29791581ef2f
 caps.latest.revision: 17
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# IDebugCoreServer2::GetMachineUtilities_V7
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8c579ac58640b19c0988a61d2711dff52b659699
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는 서버에 대 한 시스템 유틸리티를 가져옵니다.  
+---
+# <a name="idebugcoreserver2getmachineutilitiesv7"></a>IDebugCoreServer2::GetMachineUtilities_V7
+This method gets the machine utilities for a server.  
   
 > [!NOTE]
->  이 메서드는 사용 되지 않습니다: 사용 하지 마십시오 \([!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 항상 반환 `E_NOTIMPL` 이 메서드를 호출 하는 경우\).  이 역사적인 이유로 유지 됩니다.  
+>  This method is obsolete: do not use ([!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] always returns `E_NOTIMPL` if this method is called). It is retained for historical reasons.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetMachineUtilities_V7(  
-   IDebugMDMUtil2_V7** ppUtil  
+HRESULT GetMachineUtilities_V7(  
+   IDebugMDMUtil2_V7** ppUtil  
 );  
 ```  
   
-```c#  
-int GetMachineUtilities_V7(  
-   out IDebugMDMUtil2_V7 ppUtil  
+```cs  
+int GetMachineUtilities_V7(  
+   out IDebugMDMUtil2_V7 ppUtil  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppUtil`  
- \[out\] 반환 된 `IDebugMDMUtil2_V7` 시스템 정보 유틸리티를 나타내는 인터페이스입니다.  
+ [out] Returns an `IDebugMDMUtil2_V7` interface that represents the machine utilities information.  
   
-## 반환 값  
- 항상 반환 `E_NOTIMPL`에서 메서드가 구현 되지 않았음을 나타내는.  
+## <a name="return-value"></a>Return Value  
+ Always returns `E_NOTIMPL`, indicating that the method is not implemented.  
   
-## 설명  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]항상 반환 `E_NOTIMPL` 이 메서드를 호출 하면 됩니다.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] always returns `E_NOTIMPL` if this method is called.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

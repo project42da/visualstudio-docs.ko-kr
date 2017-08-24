@@ -1,49 +1,66 @@
 ---
-title: "IDebugFunctionPosition2::GetOffset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugFunctionPosition2::GetOffset"
-helpviewer_keywords: 
-  - "IDebugFunctionPosition2::GetOffset"
+title: IDebugFunctionPosition2::GetOffset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugFunctionPosition2::GetOffset
+helpviewer_keywords:
+- IDebugFunctionPosition2::GetOffset
 ms.assetid: 60943782-aec7-4be2-b222-1984ed53a543
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# IDebugFunctionPosition2::GetOffset
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 35a4824e1059c29f360b0ca8b3249ed84f49f9f1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-소스 문서에서의 함수 위치를 검색합니다.  
+---
+# <a name="idebugfunctionposition2getoffset"></a>IDebugFunctionPosition2::GetOffset
+Retrieves the position of the function in the source document.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetOffset(   
-   TEXT_POSITION* pPosition  
+HRESULT GetOffset(   
+   TEXT_POSITION* pPosition  
 );  
 ```  
   
-```c#  
+```cs  
 int GetOffset(  
-   TEXT_POSITION[] pPosition  
+   TEXT_POSITION[] pPosition  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pPosition`  
- \[in, out\] A [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) 문서에서 위치를 함수를 사용 하 여 입력 되는 구조입니다.  
+ [in, out] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that is filled in with the position of the function in a document.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)   
- [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md)
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

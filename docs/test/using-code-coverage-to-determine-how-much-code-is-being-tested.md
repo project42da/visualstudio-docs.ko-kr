@@ -1,5 +1,5 @@
 ---
-title: "코드 검사를 사용하여 테스트할 코드 범위 결정 | Microsoft Docs"
+title: Using Code Coverage to Determine How Much Code is being Tested | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,93 +28,93 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 90d4fec70dd131289f37d35f896d87c6e0843e83
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7948545809a2f2069afefcb5e53be07c1daec239
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>코드 검사를 사용하여 테스트할 코드 범위 결정
-프로젝트의 코드 중 유닛 테스트와 같은 코딩된 테스트를 사용하여 실제로 테스트할 부분을 결정하려면 Visual Studio의 코드 검사 기능을 사용합니다. 버그로부터 효과적으로 보호하려면 코드의 상당한 부분을 실행 또는 '검사'해야 합니다.  
+# <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>Using Code Coverage to Determine How Much Code is being Tested
+To determine what proportion of your project's code is actually being tested by coded tests such as unit tests, you can use the code coverage feature of Visual Studio. To guard effectively against bugs, your tests should exercise or 'cover' a large proportion of your code.  
   
- 코드 검사 분석은 관리되는(CLI) 코드와 관리되지 않은(네이티브) 코드에 적용할 수 있습니다.  
+ Code coverage analysis can be applied to both managed (CLI) and unmanaged (native) code.  
   
- 테스트 탐색기를 사용하여 테스트 메서드를 실행하는 경우 코드 검사는 선택 사항입니다. 결과 테이블에는 각 어셈블리, 클래스 및 메서드에서 실행되는 코드의 백분율이 표시됩니다. 또한 소스 편집기에는 테스트된 코드가 표시됩니다.  
+ Code coverage is an option when you run test methods using Test Explorer. The results table shows the percentage of the code that was run in each assembly, class, and method. In addition, the source editor shows you which code has been tested.  
   
- ![색 지정이 사용된 코드 검사 결과](../test/media/codecoverage1.png "CodeCoverage1")  
+ ![Code coverage results with coloring](../test/media/codecoverage1.png "CodeCoverage1")  
   
  **Requirements**  
   
 -   Visual Studio Enterprise  
   
-### <a name="to-analyze-code-coverage-on-unit-tests-in-test-explorer"></a>테스트 탐색기의 단위 테스트에서 코드 검사를 분석하려면  
+### <a name="to-analyze-code-coverage-on-unit-tests-in-test-explorer"></a>To analyze code coverage on unit tests in Test Explorer  
   
-1.  **테스트** 메뉴에서 **코드 검사 분석**을 선택합니다.  
+1.  On the **Test** menu, choose **Analyze Code Coverage**.  
   
-2.  실행된 줄을 확인하려면 ![코드 검사 강조 표시 아이콘](~/test/media/codecoverage-showcoloringicon.png "CodeCoverage ShowColoringIcon")**코드 검사 강조 표시**을 선택합니다.  
+2.  To see which lines have been run, choose ![Show Code Coverage Coloring Icon](../test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon")**Show Code Coverage Coloring**.  
   
-     색을 변경하거나 굵게 표시하려면 **도구**, **옵션**, **환경**, **글꼴 및 색**, **설정 표시: 텍스트 편집기**를 선택합니다. **표시 항목**에서 검사 항목을 조정합니다.  
+     To alter the colors, or to use bold face, choose **Tools**, **Options**, **Environment**, **Fonts and Colors**, **Show settings for: Text Editor**. Under **Display Items**, adjust the Coverage items.  
   
-3.  결과에 검사가 낮게 표시되는 경우, 코드에서 실행되지 않은 부분을 확인한 다음 검사할 추가 테스트를 작성합니다. 개발 팀을 일반적으로 약 80%의 코드 검사를 목표로 합니다. 경우에 따라 더 낮은 검사도 허용됩니다. 예를 들어, 일부 코드가 표준 템플릿에서 생성된 경우 낮은 검사가 허용됩니다.  
+3.  If the results show low coverage, investigate which parts of the code are not being exercised, and write more tests to cover them. Development teams typically aim for about 80% code coverage. In some situations, lower coverage is acceptable. For example, lower coverage is acceptable where some code is generated from a standard template.  
   
 > [!TIP]
->  정확한 결과를 얻으려면  
+>  To get accurate results:  
 >   
->  -   컴파일러 최적화가 해제되었는지 확인하세요.  
+>  -   Make sure that compiler optimization is turned off.  
 >   
->      관리되지 않은(네이티브) 코드를 사용하는 경우 디버그 빌드를 사용합니다.  
-> -   각 어셈블리에 대해 .pdb(기호) 파일을 생성하고 있는지 확인합니다.  
+>      If you are working with unmanaged (native) code, use a debug build.  
+> -   Make sure that you are generating .pdb (symbol) files for each assembly.  
 >   
->  예상한 결과를 얻지 못한 경우 [코드 검사 문제 해결](../test/troubleshooting-code-coverage.md)을 참조하세요. 입니다. 코드를 업데이트한 후 반드시 코드 검사를 다시 실행하세요. 검사 결과 및 코드 강조는 코드를 수정한 후 또는 테스트를 실행한 경우 자동으로 업데이트되지 않습니다.  
+>  If you don't get the results you expect, see [Troubleshooting Code Coverage](../test/troubleshooting-code-coverage.md). . Don't forget to run code coverage again after updating your code. Coverage results and code coloring are not automatically updated after you modify your code or when you run tests.  
   
-## <a name="reporting-in-blocks-or-lines"></a>블록 또는 줄에 보고  
- 코드 검사는 *블록*으로 계산됩니다. 블록은 진입점 및 진출점이 정확히 하나씩인 코드입니다.  테스트 실행 중 프로그램의 제어 흐름이 블록을 통과할 경우 해당 블록은 검사된 것으로 계산됩니다. 블록이 사용된 횟수는 결과에 영향을 아무 영향을 미치지 않습니다.  
+## <a name="reporting-in-blocks-or-lines"></a>Reporting in blocks or lines  
+ Code coverage is counted in *blocks*. A block is a piece of code with exactly one entry and exit point.  If the program's control flow passes through a block during a test run, that block is counted as covered. The number of times the block is used has no effect on the result.  
   
- 또한 표 머리글에서 **열 추가/제거**를 선택하여 결과를 줄 단위로 표시할 수 있습니다. 테스트 실행이 모든 코드 블록을 임의의 코드 줄에서 실행한 경우 하나의 줄로 계산됩니다. 한 줄에 실행된 일부 코드 블록과 실행되지 않은 일부 코드 블록이 포함된 경우 해당 줄은 부분적 줄로 계산됩니다.  
+ You can also have the results displayed in terms of lines by choosing **Add/Remove Columns** in the table header. If the test run exercised all the code blocks in any line of code, it is counted as one line. Where a line contains some code blocks that were exercised and some that were not, that is counted as a partial line.  
   
- 일부 사용자는 백분율이 소스 코드에 표시되는 조각 크기와 더 가깝기 때문에 줄 수를 더 선호합니다. 긴 계산 블록은 여러 줄을 차지하는 경우에도 단일 블록으로 계산됩니다.  
+ Some users prefer a count of lines because the percentages correspond more closely to the size of the fragments that you see in the source code. A long block of calculation would count as a single block even if it occupies many lines.  
   
-## <a name="managing-code-coverage-results"></a>코드 검사 결과 관리  
- 일반적으로 코드 검사 결과 창에는 가장 최근 실행 결과가 표시됩니다. 결과는 테스트 데이터를 변경할 경우 또는 매번 테스트의 일부만 실행할 경우 달라집니다.  
+## <a name="managing-code-coverage-results"></a>Managing code coverage results  
+ The Code Coverage Results window usually shows the result of the most recent run. The results will vary if you change your test data, or if you run only some of your tests each time.  
   
- 코드 검사 창은 이전 결과 또는 다른 컴퓨터에서 얻은 결과를 보는 데에도 사용할 수 있습니다.  
+ The code coverage window can also be used to view previous results, or results obtained on other computers.  
   
- 여러 실행(예: 다른 테스트 데이터를 사용하는 실행)의 결과를 병합할 수 있습니다.  
+ You can merge the results of several runs, for example from runs that use different test data.  
   
--   **이전 결과 집합을 보려면** 드롭다운 메뉴에서 선택합니다. 이 메뉴에는 새 솔루션을 열 때 삭제되는 임시 목록이 표시됩니다.  
+-   **To view a previous set of results**, select it from the drop-down menu. The menu shows a temporary list that is cleared when you open a new solution.  
   
--   **이전 세션의 결과를 보려면** **코드 검사 결과 가져오기**를 선택한 다음 솔루션에서 TestResults 폴더를 탐색하고 .coverage 파일을 가져옵니다.  
+-   **To view results from a previous session**, choose **Import Code Coverage Results**, navigate to the TestResults folder in your solution, and import a .coverage file.  
   
-     .coverage 파일이 생성된 이후 소스 코드가 변경된 경우 검사 강조가 잘못될 수 있습니다.  
+     The coverage coloring might be incorrect if the source code has changed since the .coverage file was generated.  
   
--   **결과를 텍스트 형식으로 읽으려면** **코드 검사 결과 내보내기**를 선택합니다. 그러면 다른 도구로 처리하거나 메일로 쉽게 전송할 수 있는 읽기 가능한 .coveragexm 파일이 생성됩니다.  
+-   **To make results readable as text**, choose **Export Code Coverage Results**. This generates a readable .coveragexml file which you could process with other tools or send easily in mail.  
   
--   **결과를 다른 사람에게 전송하려면** .coverage 파일 또는 내보낸 .coveragexml 파일을 전송합니다. 그런 다음 수신자는 파일을 가져올 수 있습니다. 동일한 버전의 소스 코드가 있으면 검사 강조를 볼 수 있습니다.  
+-   **To send results to someone else**, send either a .coverage file or an exported .coveragexml file. They can then import the file. If they have the same version of the source code, they can see coverage coloring.  
   
-## <a name="merging-results-from-different-runs"></a>다른 실행에서 결과 병합  
- 테스트 데이터에 따라 코드에 다른 블록이 사용되는 경우가 있습니다. 따라서 여러 테스트 실행에서 결과를 결합할 수 있습니다.  
+## <a name="merging-results-from-different-runs"></a>Merging results from different runs  
+ In some situations, different blocks in your code will be used depending on the test data. Therefore, you might want to combine the results from different test runs.  
   
- 예를 들어, 입력 "2"로 테스트를 실행할 경우를 가정하면 특정 함수의 50%만 검사됩니다. 입력 "-2"로 다시 테스트를 실행하면 검사 강조 보기에서 함수의 나머지 50%가 검사된 것을 확인할 수 있습니다. 이제 두 테스트 실행의 결과를 병합하면 보고서와 검사 강조 보기에 함수의 100%가 검사된 것으로 나타납니다.  
+ For example, suppose that when you run a test with input "2", you find that 50% of a particular function is covered. When you run the test a second time with the input "-2" you see in the coverage coloring view that the other 50% of the function is covered. Now you merge the results from the two test runs, and the report and coverage coloring view show that 100% of the function was covered.  
   
- ![코드 검사 창의 병합 단추 아이콘](~/test/media/codecoverage-mergeicon.png "CodeCoverage MergeIcon")**코드 검사 결과 병합**을 사용하여 이 작업을 수행합니다. 최근의 실행 또는 가져온 결과의 조합을 선택할 수 있습니다. 내보낸 결과를 결합하려면 내보낸 결과를 가져와야 합니다.  
+ Use ![Icon for Merge button in Code Coverage window](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**Merge Code Coverage Results** to do this. You can choose any combination of recent runs or imported results. If you want to combine exported results, you must import them first.  
   
- 병합 작업 결과를 저장하려면 **코드 검사 결과 내보내기**를 사용합니다.  
+ Use **Export Code Coverage Results** to save the results of a merge operation.  
   
-### <a name="limitations-in-merging"></a>병합 제한 사항  
+### <a name="limitations-in-merging"></a>Limitations in merging  
   
--   다른 코드 버전의 검사 데이터를 병합하는 경우 결과가 별도로 표시되지만 결합되지 않습니다. 완전히 결합된 결과를 얻으려면 동일한 빌드의 코드를 사용하고 테스트 데이터만 변경하세요.  
+-   If you merge coverage data from different versions of the code, the results are shown separately, but they are not combined. To get fully combined results, use the same build of the code, changing only the test data.  
   
--   내보낸 다음 가져온 결과 파일을 병합할 경우 결과를 블록 단위가 아닌 줄 단위로만 볼 수 있습니다. 줄 데이터를 보려면 **열 추가/제거** 명령을 사용합니다.  
+-   If you merge a results file that has been exported and then imported, you can only view the results by lines, not by blocks. Use the **Add/Remove Columns** command to show the line data.  
   
--   ASP.NET 프로젝트 테스트의 결과를 병합할 경우 별도 테스트의 결과가 표시되지만 결합되지는 않습니다. 이는 ASP.NET 아티팩트 자체에만 적용되며, 다른 어셈블리의 결과는 결합됩니다.  
+-   If you merge results from tests of an ASP.NET project, the results for the separate tests are displayed, but not combined. This applies only to the ASP.NET artifacts themselves: results for any other assemblies will be combined.  
   
-## <a name="excluding-elements-from-the-code-coverage-results"></a>코드 검사 결과에서 요소 제외  
- 코드가 텍스트 템플릿에서 생성된 경우와 같이 검사 점수에서 코드의 특정 요소를 제외하려는 경우가 있습니다. `System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage` 특성을 class, struct, method, property, property setter 또는 getter, event 코드 요소에 임의로 추가할 수 있습니다. 클래스를 제외할 경우 해당 파생 클래스는 제외되지 않습니다.  
+## <a name="excluding-elements-from-the-code-coverage-results"></a>Excluding elements from the code coverage results  
+ You might want to exclude specific elements in your code from the coverage scores, for example if the code is generated from a text template. Add the attribute `System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage` to any of the following code elements: class, struct, method, property, property setter or getter, event. Note that excluding a class does not exclude its derived classes.  
   
- 예:  
+ For example:  
   
-```c#  
+```cs  
   
 using System.Diagnostics.CodeAnalysis;   
 ...  
@@ -146,7 +146,7 @@ class ExampleClass2 { ... }
   
 ```  
   
-```vb#  
+```vb  
 Imports System.Diagnostics.CodeAnalysis  
   
 Class ExampleClass1          
@@ -207,8 +207,8 @@ public ref class ExampleClass2
   
 ```  
   
-### <a name="excluding-elements-in-native-c-code"></a>네이티브 C++ 코드에서 요소 제외  
- C++ 코드에서 관리되지 않는(네이티브) 요소를 제외하려면  
+### <a name="excluding-elements-in-native-c-code"></a>Excluding elements in Native C++ code  
+ To exclude unmanaged (native) elements in C++ code:  
   
 ```cpp  
   
@@ -235,72 +235,72 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
   
 ```  
   
- 다음과 같은 매크로를 사용합니다.  
+ Use the following macros:  
   
  `ExcludeFromCodeCoverage(` *ExclusionName* `, L"` *FunctionName* `");`  
   
  `ExcludeSourceFromCodeCoverage(` *ExclusionName* `, L"` *SourceFilePath* `");`  
   
--   *ExclusionName*은 임의의 고유한 이름입니다.  
+-   *ExclusionName* is any unique name.  
   
--   *FunctionName*은 정규화된 함수 이름입니다. 와일드 카드를 포함할 수 있습니다. 예를 들어, 클래스의 모든 함수를 제외하려면 `MyNamespace::MyClass::*`를 씁니다.  
+-   *FunctionName* is a fully qualified function name. It may contain wildcards. For example, to exclude all the functions of a class, write `MyNamespace::MyClass::*`  
   
--   *SourceFilePath*는 .cpp 파일의 로컬 또는 UNC 경로입니다. 와일드 카드를 포함할 수 있습니다. 다음 예제는 특정 디렉터리에서 모든 파일을 제외합니다. `\\MyComputer\Source\UnitTests\*.cpp`  
+-   *SourceFilePath* is the local or UNC path of a .cpp file. It may contain wildcards. The following example excludes all files in a particular directory: `\\MyComputer\Source\UnitTests\*.cpp`  
   
 -   `#include <CodeCoverage\CodeCoverage.h>`  
   
--   임의의 네임스페이스 또는 클래스 안이 아닌 전역 네임스페이스에 제외 매크로에 대한 호출을 추가합니다.  
+-   Place calls to the exclusion macros in the global namespace, not within any namespace or class.  
   
--   단위 테스트 코드 파일 또는 응용 프로그램 코드 파일에 제외를 추가할 수 있습니다.  
+-   You can place the exclusions either in the unit test code file or the application code file.  
   
--   제외는 컴파일러 옵션을 설정하거나 `#pragma managed(off)`를 사용하여 관리되지 않는(네이티브) 코드로 컴파일해야 합니다.  
+-   The exclusions must be compiled as unmanaged (native) code, either by setting the compiler option or by using `#pragma managed(off)`.  
   
 > [!NOTE]
->  C++/CLI 코드에서 함수를 제외하려면 함수에 `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` 특성을 적용합니다. C#의 경우에도 동일합니다.  
+>  To exclude functions in C++/CLI code, apply the attribute `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` to the function. This is the same as for C#.  
   
-### <a name="including-or-excluding-additional-elements"></a>추가 요소 포함 또는 제외  
- 코드 검사 분석은 로드되어 있고 .pdb 파일을 .dll 또는 .exe 파일과 같은 디렉터리에서 사용할 수 있는 어셈블리에서만 수행할 수 있습니다. 따라서 경우에 따라 적절한 .pdb 파일의 사본을 가져와서 포함된 어셈블리 집합을 확장할 수 있습니다.  
+### <a name="including-or-excluding-additional-elements"></a>Including or excluding additional elements  
+ Code coverage analysis is performed only on assemblies that are loaded and for which a .pdb file is available in the same directory as the .dll or .exe file. Therefore in some circumstances, you can extend the set of assemblies that is included by getting copies of the appropriate .pdb files.  
   
- .runsettings 파일을 작성하면 코드 검사 분석에 대해 선택되는 어셈블리와 요소를 더 자세히 제어할 수 있습니다. 예를 들어, 클래스에 특성을 추가하지 않고도 특정 종류의 어셈블리를 제외할 수 있습니다. 자세한 내용은 [코드 검사 분석 사용자 지정](../test/customizing-code-coverage-analysis.md)을 참조하세요.  
+ You can exercise more control over which assemblies and elements are selected for code coverage analysis by writing a .runsettings file. For example, you can exclude assemblies of particular kinds without having to add attributes to their classes. For more information, see [Customizing Code Coverage Analysis](../test/customizing-code-coverage-analysis.md).  
   
-## <a name="analyzing-code-coverage-in-the-build-service"></a>빌드 서비스에서 코드 검사 분석  
- 코드에 체크 인하면 테스트가 다른 팀원의 나머지 모든 테스트와 함께 빌드 서버에서 실행됩니다. (아직 설정하지 않은 경우 [빌드 프로세스에서 테스트 실행](http://msdn.microsoft.com/Library/d05743a1-c5cf-447e-bed9-bed3cb595e38)을 참조하세요.) 빌드 서비스에서 코드 검사를 분석하면 전체 프로젝트에 대한 최신 검사 정보를 전체적으로 파악할 수 있습니다. 또한 일반적으로 개발 컴퓨터에서 실행하지 않는 자동화된 시스템 테스트와 기타 코딩된 테스트도 포함됩니다.  
+## <a name="analyzing-code-coverage-in-the-build-service"></a>Analyzing code coverage in the build service  
+ When you check in your code, your tests will run on the build server, along with all the other tests from other team members. (If you haven't already set this up, see [Run tests in your build process](http://msdn.microsoft.com/Library/d05743a1-c5cf-447e-bed9-bed3cb595e38).) It's useful to analyze code coverage on the build service, because that gives the most up-to-date and comprehensive picture of coverage in the whole project. It will also include automated system tests and other coded tests that you don't usually run on the development machines.  
   
-1.  팀 탐색기에서 **빌드**를 연 다음 빌드 정의를 추가하거나 편집합니다.  
+1.  In Team Explorer, open **Builds**, and then add or edit a build definition.  
   
-2.  **프로세스** 페이지에서 **자동화된 테스트**, **테스트 소스**, **실행 설정**을 확장합니다. **실행 설정 파일 형식**을 **코드 검사 사용**으로 설정합니다.  
+2.  On the **Process** page, expand **Automated Tests**, **Test Source**, **Run Settings**. Set **Type of Run Settings File** to **Code Coverage Enabled**.  
   
-     테스트 소스 정의가 두 개 이상일 경우 각각에 대해 이 단계를 반복합니다.  
+     If you have more than one Test Source definition, repeat this step for each one.  
   
-    -   *하지만 **실행 설정 파일 형식**이라는 필드는 없습니다.*  
+    -   *But there is no field named **Type of Run Settings File**.*  
   
-         **자동화된 테스트**에서 **테스트 어셈블리**를 선택한 다음 줄임표 단추 **[...]**를 선택합니다. **테스트 실행 추가/편집** 대화 상자의 **Test Runner**에서 **Visual Studio Test Runner**를 선택합니다.  
+         Under **Automated Tests**, select **Test Assembly** and choose the ellipsis button **[...]** at the end of the line. In the **Add/Edit Test Run** dialog box, under **Test Runner**, choose **Visual Studio Test Runner**.  
   
- ![코드 검사를 위한 빌드 정의 설정 중](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")  
+ ![Setting the build definition for code coverage](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")  
   
- 빌드 실행 후 코드 검사 결과가 테스트 실행에 첨부되고 빌드 요약에 나타납니다.  
+ After the build runs, the code coverage results are attached to the test run and appear in the build summary.  
   
-## <a name="analyzing-code-coverage-in-a-command-line"></a>명령줄에서 코드 검사 분석  
- 명령줄에서 테스트를 실행하려면 vstest.console.exe를 사용합니다. 코드 검사는 이 유틸리티의 선택 사항입니다. 자세한 내용은 [MSTest.exe 명령줄 옵션](/devops-test-docs/test/vstest-console-exe-command-line-options)을 참조하세요.  
+## <a name="analyzing-code-coverage-in-a-command-line"></a>Analyzing Code Coverage in a Command Line  
+ To run tests from the command line, use vstest.console.exe. Code coverage is an option of this utility. For more information, see [VSTest.Console.exe command-line options](/devops-test-docs/test/vstest-console-exe-command-line-options).  
   
-1.  Visual Studio 개발자 명령 프롬프트를 시작합니다.  
+1.  Launch the Visual Studio Developer Command Prompt:  
   
-     Windows의 **시작** 메뉴에서 **모든 프로그램**, **Microsoft Visual Studio**, **Visual Studio Tools**, **개발자 명령 프롬프트**를 차례로 선택합니다.  
+     On the Windows **Start** menu, choose **All Programs**, **Microsoft Visual Studio**, **Visual Studio Tools**, **Developer Command Prompt**.  
   
-2.  실행:  
+2.  Run:  
   
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`  
   
-## <a name="troubleshooting"></a>문제 해결  
- 코드 검사 결과가 표시되지 않으면 [코드 검사 문제 해결](../test/troubleshooting-code-coverage.md)을 참조하세요.  
+## <a name="troubleshooting"></a>Troubleshooting  
+ If you do not see code coverage results, see  [Troubleshooting Code Coverage](../test/troubleshooting-code-coverage.md).  
   
-## <a name="external-resources"></a>외부 리소스  
+## <a name="external-resources"></a>External resources  
   
-### <a name="guidance"></a>지침  
- [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 2장: 유닛 테스트: 내부 테스트](http://go.microsoft.com/fwlink/?LinkID=255188)  
+### <a name="guidance"></a>Guidance  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>참고 항목  
- [코드 검사 분석 사용자 지정](../test/customizing-code-coverage-analysis.md)   
- [코드 검사 문제 해결](../test/troubleshooting-code-coverage.md)   
- [코드 단위 테스트](../test/unit-test-your-code.md)
+## <a name="see-also"></a>See Also  
+ [Customizing Code Coverage Analysis](../test/customizing-code-coverage-analysis.md)   
+ [Troubleshooting Code Coverage](../test/troubleshooting-code-coverage.md)   
+ [Unit Test Your Code](../test/unit-test-your-code.md)
 

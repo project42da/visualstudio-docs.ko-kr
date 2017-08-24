@@ -1,88 +1,105 @@
 ---
-title: "EncUnavailableReason | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EncUnavailableReason"
-helpviewer_keywords: 
-  - "EncUnavailableReason 열거형"
+title: EncUnavailableReason | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- EncUnavailableReason
+helpviewer_keywords:
+- EncUnavailableReason enumeration
 ms.assetid: c10aa4c0-d7e0-4de1-b8ff-7e050985eb12
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# EncUnavailableReason
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8c9f25370aefdf68a97fcb0ab4af6acf3fd6eafe
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-`This is for internal use only!`나타내는 이유는  **편집 하며 계속 하기** 를 사용할 수 없습니다.  
+---
+# <a name="encunavailablereason"></a>EncUnavailableReason
+`This is for internal use only!` Represents the reasons that **Edit and Continue** is not available.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum tagEncUnavailableReason {  
-   ENCUN_NONE,  
-   ENCUN_INTEROP,  
-   ENCUN_SQLCLR,  
-   ENCUN_MINIDUMP,  
-   ENCUN_EMBEDDED,  
-   ENCUN_ATTACH,  
-   ENCUN_WIN64  
+enum tagEncUnavailableReason {  
+   ENCUN_NONE,  
+   ENCUN_INTEROP,  
+   ENCUN_SQLCLR,  
+   ENCUN_MINIDUMP,  
+   ENCUN_EMBEDDED,  
+   ENCUN_ATTACH,  
+   ENCUN_WIN64  
 };  
-typedef enum tagEncUnavailableReason EncUnavailableReason;  
+typedef enum tagEncUnavailableReason EncUnavailableReason;  
 ```  
   
-```c#  
-public enum EncUnavailableReason {  
-   ENCUN_NONE,  
-   ENCUN_INTEROP,  
-   ENCUN_SQLCLR,  
-   ENCUN_MINIDUMP,  
-   ENCUN_EMBEDDED,  
-   ENCUN_ATTACH,  
-   ENCUN_WIN64  
+```cs  
+public enum EncUnavailableReason {  
+   ENCUN_NONE,  
+   ENCUN_INTEROP,  
+   ENCUN_SQLCLR,  
+   ENCUN_MINIDUMP,  
+   ENCUN_EMBEDDED,  
+   ENCUN_ATTACH,  
+   ENCUN_WIN64  
 };  
 ```  
   
-#### 매개 변수  
- ENCUN\_NONE  
- 편집 하며 계속 하기 없는 사용할 수 없는 특정 이유입니다.  
+#### <a name="parameters"></a>Parameters  
+ ENCUN_NONE  
+ No specific reason why Edit and Continue is not available.  
   
- ENCUN\_INTEROP  
- 편집 하며 계속 하기 사용할 수 없습니다 동안 InterOp 호출이 있습니다.  
+ ENCUN_INTEROP  
+ Edit and Continue is not available during an InterOp call.  
   
- ENCUN\_SQLCLR  
- 편집 하며 계속 하기 수 없습니다 사용할 수 있는 공용 언어 런타임 \(CLR\)을 사용 하 여 SQL 프로시저 호출 동안.  
+ ENCUN_SQLCLR  
+ Edit and Continue is not available during an SQL procedure call that uses the Common Language Runtime (CLR).  
   
- ENCUN\_MINIDUMP  
- 편집 하며 계속 하기 사용할 수 없습니다 미니 덤프를 생성을 처리 하는 동안.  
+ ENCUN_MINIDUMP  
+ Edit and Continue is not available while processing a mini-dump.  
   
- ENCUN\_EMBEDDED  
- 편집 하며 계속 하기 사용할 수 없습니다 포함 된 코드를 처리 하는 동안.  
+ ENCUN_EMBEDDED  
+ Edit and Continue is not available when processing embedded code.  
   
- ENCUN\_ATTACH  
- 편집 하며 계속 되어 사용할 수 없는 세션에 연결 되어 있기 때문에 시작 되지 않습니다 디버거에 의해.  
+ ENCUN_ATTACH  
+ Edit and Continue is not available because the session was attached to, not launched by, the debugger.  
   
- ENCUN\_WIN64  
- 편집 하며 계속 하기 사용할 수 없습니다 Windows 64 비트 코드를 처리 하는 동안.  
+ ENCUN_WIN64  
+ Edit and Continue is not available while processing 64-bit Windows code.  
   
-## 설명  
- 이 열거형은 하입니다 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) 및 [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) 사용자 지정 포트 공급자가 구현 된 메서드를 반환 합니다 항상 `E_NOTIMPL`.  
+## <a name="remarks"></a>Remarks  
+ This enumeration is for internal use only by [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]. The [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) and [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) methods as implemented by a custom port supplier should always return `E_NOTIMPL`.  
   
-## 요구 사항  
- 헤더: msdbg.idl  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.idl  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)   
  [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)

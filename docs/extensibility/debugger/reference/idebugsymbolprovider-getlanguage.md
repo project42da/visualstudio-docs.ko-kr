@@ -1,62 +1,79 @@
 ---
-title: "IDebugSymbolProvider::GetLanguage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugSymbolProvider::GetLanguage"
-helpviewer_keywords: 
-  - "IDebugSymbolProvider::GetLanguage 메서드"
+title: IDebugSymbolProvider::GetLanguage | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugSymbolProvider::GetLanguage
+helpviewer_keywords:
+- IDebugSymbolProvider::GetLanguage method
 ms.assetid: e4142183-3d8b-418f-907f-4ee4c753d8ce
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugSymbolProvider::GetLanguage
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 46b08682c513694cb66be1cc9a2e2cd8e3b987a4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드 코드 디버그 주소에 사용 된 언어를 가져옵니다.  
+---
+# <a name="idebugsymbolprovidergetlanguage"></a>IDebugSymbolProvider::GetLanguage
+This method gets the language that was used to compile the code at the debug address.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetLanguage(   
-   IDebugAddress* pAddress,  
-   GUID*          pguidLanguage,  
-   GUID*          pguidLanguageVendor  
+HRESULT GetLanguage(   
+   IDebugAddress* pAddress,  
+   GUID*          pguidLanguage,  
+   GUID*          pguidLanguageVendor  
 );  
 ```  
   
-```c#  
+```cs  
 int GetLanguage(  
-   IDebugAddress pAddress,   
-   out Guid      pguidLanguage,   
-   out Guid      pguidLanguageVendor  
+   IDebugAddress pAddress,   
+   out Guid      pguidLanguage,   
+   out Guid      pguidLanguageVendor  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pAddress`  
- \[in\] Address 개체를 표시 하는 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 인터페이스입니다.  
+ [in] An address object represented by an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
  `pguidLanguage`  
- \[out\] 반환 된 `GUID` 는 언어를 지정 합니다.  
+ [out] Returns a `GUID` that specifies the language.  
   
  `pguidLanguageVendor`  
- \[out\] 반환 된 `GUID` 해당 언어 공급 업체를 지정 합니다.  
+ [out] Returns a `GUID` that specifies the language vendor.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 디버그 엔진 올바른 식 계산기를 선택 하는 데 필요한 정보를 얻기 위해이 메서드를 호출 합니다.  
+## <a name="remarks"></a>Remarks  
+ The debug engine calls this method to obtain the information it needs to select the correct expression evaluator.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

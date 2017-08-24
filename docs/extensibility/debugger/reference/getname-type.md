@@ -1,89 +1,106 @@
 ---
-title: "GETNAME_TYPE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GETNAME_TYPE"
-helpviewer_keywords: 
-  - "GETNAME_TYPE 열거형"
+title: GETNAME_TYPE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GETNAME_TYPE
+helpviewer_keywords:
+- GETNAME_TYPE enumeration
 ms.assetid: 2f9f1679-e9e8-4c9c-ac90-aa07bfe69914
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# GETNAME_TYPE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 19809c56d244d3fb74628042f9bfb9be5b53a088
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-검색할 파일 이름 형식을 지정 합니다.  
+---
+# <a name="getnametype"></a>GETNAME_TYPE
+Specifies the name type of files to retrieve.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_GETNAME_TYPE {   
-   GN_NAME         = 0,  
-   GN_FILENAME     = 1,  
-   GN_BASENAME     = 2,  
-   GN_MONIKERNAME  = 3,  
-   GN_URL          = 4,  
-   GN_TITLE        = 5,  
-   GN_STARTPAGEURL = 6  
+enum enum_GETNAME_TYPE {   
+   GN_NAME         = 0,  
+   GN_FILENAME     = 1,  
+   GN_BASENAME     = 2,  
+   GN_MONIKERNAME  = 3,  
+   GN_URL          = 4,  
+   GN_TITLE        = 5,  
+   GN_STARTPAGEURL = 6  
 };  
 typedef DWORD GETNAME_TYPE;  
 ```  
   
-```c#  
-public enum enum_GETNAME_TYPE {   
-   GN_NAME         = 0,  
-   GN_FILENAME     = 1,  
-   GN_BASENAME     = 2,  
-   GN_MONIKERNAME  = 3,  
-   GN_URL          = 4,  
-   GN_TITLE        = 5,  
-   GN_STARTPAGEURL = 6  
+```cs  
+public enum enum_GETNAME_TYPE {   
+   GN_NAME         = 0,  
+   GN_FILENAME     = 1,  
+   GN_BASENAME     = 2,  
+   GN_MONIKERNAME  = 3,  
+   GN_URL          = 4,  
+   GN_TITLE        = 5,  
+   GN_STARTPAGEURL = 6  
 };  
 ```  
   
-## Members  
- GN\_NAME  
- 문서 또는 상황에 맞는 이름을 지정합니다.  
+## <a name="members"></a>Members  
+ GN_NAME  
+ Specifies a friendly name of the document or context.  
   
- GN\_FILENAME  
- 문서 또는 컨텍스트에서의 전체 경로 지정합니다.  
+ GN_FILENAME  
+ Specifies the full path of the document or context.  
   
- GN\_BASENAME  
- 문서 또는 컨텍스트의 전체 경로 대신 기본 파일 이름을 지정합니다.  
+ GN_BASENAME  
+ Specifies a base file name instead of a full path of the document or context.  
   
- GN\_MONIKERNAME  
- 문서 또는 상황에 맞는 고유한 이름을 모니커 형식으로 지정합니다.  
+ GN_MONIKERNAME  
+ Specifies a unique name of the document or context in the form of a moniker.  
   
- GN\_URL  
- 문서 또는 컨텍스트는 URL 이름을 지정합니다.  
+ GN_URL  
+ Specifies a URL name of the document or context.  
   
- GN\_TITLE  
- 있는 경우 문서의 제목을 지정 합니다.  
+ GN_TITLE  
+ Specifies a title of the document, if one exists.  
   
- GN\_STARTPAGEURL  
- 프로세스에 대 한 시작 페이지 URL을 가져옵니다.  
+ GN_STARTPAGEURL  
+ Gets the starting page URL for processes.  
   
-## 설명  
- 이러한 값을 매개 변수로 전달 되는 [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md), 및 [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) 종류를 반환 하려면 name 속성을 지정 하는 방법입니다.  
+## <a name="remarks"></a>Remarks  
+ These values are passed as parameters to the [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md), and [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) methods to specify what kind of name to return.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)   
  [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)   
  [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)

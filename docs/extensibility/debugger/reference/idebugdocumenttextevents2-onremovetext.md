@@ -1,54 +1,71 @@
 ---
-title: "IDebugDocumentTextEvents2::onRemoveText | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentTextEvents2::OnRemoveText"
-helpviewer_keywords: 
-  - "IDebugDocumentTextEvents2::onRemoveText"
+title: IDebugDocumentTextEvents2::onRemoveText | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentTextEvents2::OnRemoveText
+helpviewer_keywords:
+- IDebugDocumentTextEvents2::onRemoveText
 ms.assetid: 1ebeabb2-52a1-4ccc-83cd-9ae7c3541783
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDocumentTextEvents2::onRemoveText
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: cd660feeb57b6e01a65ae078c23856f1ee257b50
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-디버그 패키지 텍스트를 문서에서 제거 되었음을 알립니다.  
+---
+# <a name="idebugdocumenttextevents2onremovetext"></a>IDebugDocumentTextEvents2::onRemoveText
+Notifies the debug package that text has been removed from the document.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT onRemoveText(   
-   TEXT_POSITION pos,  
-   DWORD         dwNumToRemove  
+HRESULT onRemoveText(   
+   TEXT_POSITION pos,  
+   DWORD         dwNumToRemove  
 );  
 ```  
   
-```c#  
-int onRemoveText(   
-   enum_TEXT_POSITION pos,  
-   uint               dwNumToRemove  
+```cs  
+int onRemoveText(   
+   enum_TEXT_POSITION pos,  
+   uint               dwNumToRemove  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pos`  
- \[in\] A [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) 구조를 나타내는 텍스트를 제거 했습니다.  
+ [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that indicates where the text was removed.  
   
  `dwNumToRemove`  
- \[in\] 제거 된 텍스트의 문자 수를 지정 합니다.  
+ [in] Specifies the number of characters of text that were removed.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   
- [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md)
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

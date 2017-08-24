@@ -1,66 +1,83 @@
 ---
-title: "IDebugFunctionObject2::Evaluate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugFunctionObject2::Evaluate"
+title: IDebugFunctionObject2::Evaluate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugFunctionObject2::Evaluate
 ms.assetid: bc54c652-904b-4297-a6db-faa329684881
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugFunctionObject2::Evaluate
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: a00543427c753a6ff114d9b1188666980f7b17ab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-함수를 호출 하 고 결과 값을 개체로 반환 합니다.  
+---
+# <a name="idebugfunctionobject2evaluate"></a>IDebugFunctionObject2::Evaluate
+Calls the function and returns the resulting value as an object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Evaluate (  
-   IDebugObject** ppParams,  
-   DWORD          dwParams,  
-   DWORD          dwEvalFlags,  
-   DWORD          dwTimeout,  
-   IDebugObject** ppResult  
+   IDebugObject** ppParams,  
+   DWORD          dwParams,  
+   DWORD          dwEvalFlags,  
+   DWORD          dwTimeout,  
+   IDebugObject** ppResult  
 );  
 ```  
   
-```c#  
+```cs  
 int Evaluate (  
-   IDebugObject     ppParams,  
-   uint             dwParams,  
-   uint             dwEvalFlags,  
-   uint             dwTimeout,  
-   out IDebugObject ppResult  
+   IDebugObject     ppParams,  
+   uint             dwParams,  
+   uint             dwEvalFlags,  
+   uint             dwTimeout,  
+   out IDebugObject ppResult  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppParams`  
- \[in\] 배열 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 입력된 매개 변수를 나타내는 개체입니다.  이러한 매개 변수를이 인터페이스의 작성 방법 중 하나를 사용 하 여 만들어졌습니다.  
+ [in] An array of [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objects that represents the input parameters. Each of these parameters was created by using one of the Create methods in this interface.  
   
  `dwParams`  
- \[in\] 수의 매개 변수는 `ppParams` 배열입니다.  
+ [in] The number of parameters in the `ppParams` array.  
   
  `dwEvalFlags`  
- \[in\] 플래그의 조합에서 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 평가 수행 하는 방법을 지정 하는 열거형입니다.  
+ [in] A combination of flags from the [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeration that specify how the evaluation is to be performed.  
   
  `dwTimeout`  
- \[in\] 이 메서드에서 반환 하기 전에 대기할 시간 \(밀리초\), 최대 시간을 지정 합니다.  사용  **무한** 무제한으로 대기 합니다.  
+ [in] Specifies the maximum time, in milliseconds, to wait before returning from this method. Use **INFINITE** to wait indefinitely.  
   
  `ppResult`  
- \[out\] 반환 된  **IDebugObject** 는 함수 개체의 값을 나타냅니다.  
+ [out] Returns an **IDebugObject** that represents the value of the function as an object.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

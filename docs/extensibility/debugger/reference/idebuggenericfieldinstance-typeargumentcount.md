@@ -1,28 +1,45 @@
 ---
-title: "IDebugGenericFieldInstance::TypeArgumentCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TypeArgumentCount"
-  - "IDebugGenericFieldInstance::TypeArgumentCount"
+title: IDebugGenericFieldInstance::TypeArgumentCount | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TypeArgumentCount
+- IDebugGenericFieldInstance::TypeArgumentCount
 ms.assetid: e662c5ea-a5c1-478e-a268-5980dadffcd1
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugGenericFieldInstance::TypeArgumentCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 05a73eaa509f2d15d3c51cb1816e11f1cac52635
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 인스턴스에 대 한 매개 변수 인수 유형 수를 반환합니다.  
+---
+# <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
+Returns the number of type parameter arguments for this instance.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT TypeArgumentCount(  
@@ -30,21 +47,21 @@ HRESULT TypeArgumentCount(
 );  
 ```  
   
-```c#  
+```cs  
 int TypeArgumentCount(  
    ref uint pcArgs  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pcArgs`  
- [에서, out] 이 인스턴스에 대 한 형식 매개 변수 인수의 수입니다.  
+ [in, out] Number of type parameter arguments for this instance.  
   
-## <a name="return-value"></a>반환 값  
- 성공 하면 반환 `S_OK`고, 그렇지 않으면 오류 코드가 반환 됩니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>주의  
- 예를 들어 경우 목록 \< int>, 이 메서드는 1을 반환 하며, 목록 \< int, float2 >이 메서드는 2를 반환 합니다. 이 메서드는 형식 인수가 있을 경우 0을 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ For example, if List\<int>, this method returns 1, and, if List\<int,float2> this method returns 2. This method returns 0 if there are no type arguments.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

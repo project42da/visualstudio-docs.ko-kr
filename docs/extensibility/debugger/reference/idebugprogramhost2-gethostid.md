@@ -1,49 +1,66 @@
 ---
-title: "IDebugProgramHost2::GetHostId | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramHost2::GetHostId"
-helpviewer_keywords: 
-  - "IDebugProgramHost2::GetHostId"
+title: IDebugProgramHost2::GetHostId | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramHost2::GetHostId
+helpviewer_keywords:
+- IDebugProgramHost2::GetHostId
 ms.assetid: 7702e221-feb1-446b-a224-cb46c420987e
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugProgramHost2::GetHostId
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 96a8cf49873114757e8619c4729d37e1a4c7ea47
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 프로그램을 호스팅하는 프로세스의 프로세스 식별자를 가져옵니다.  
+---
+# <a name="idebugprogramhost2gethostid"></a>IDebugProgramHost2::GetHostId
+Gets the process identifier of the process hosting this program.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetHostId(   
-   AD_PROCESS_ID* pdwId  
+HRESULT GetHostId(   
+   AD_PROCESS_ID* pdwId  
 );  
 ```  
   
-```c#  
-int GetHostId(   
-   AD_PROCESS_ID[] pdwId  
+```cs  
+int GetHostId(   
+   AD_PROCESS_ID[] pdwId  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pdwId`  
- \[in, out\] [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) 구조는 프로세스 식별자 정보로 채워집니다.  
+ [in, out] An [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure that is filled in with the process identifier information.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)   
- [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md)
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

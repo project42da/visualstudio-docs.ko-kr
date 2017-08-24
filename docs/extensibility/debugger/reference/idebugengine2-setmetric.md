@@ -1,57 +1,74 @@
 ---
-title: "IDebugEngine2::SetMetric | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2:::SetMetric"
-helpviewer_keywords: 
-  - "IDebugEngine2:::SetMetric"
+title: IDebugEngine2::SetMetric | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine2:::SetMetric
+helpviewer_keywords:
+- IDebugEngine2:::SetMetric
 ms.assetid: dcda4972-c32e-4693-a0e1-25d5c58b9782
 caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# IDebugEngine2::SetMetric
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b7e1090e5e345ca969294efea6a002ff84052351
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는 미터법으로 알려진 레지스트리 값을 설정 합니다.  
+---
+# <a name="idebugengine2setmetric"></a>IDebugEngine2::SetMetric
+This method sets a registry value known as a metric.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetMetric(  
-   LPCOLESTR pszMetric,  
-   VARIANT   varValue  
+HRESULT SetMetric(  
+   LPCOLESTR pszMetric,  
+   VARIANT   varValue  
 );  
 ```  
   
-```c#  
+```cs  
 int SetMetric(  
-   string pszMetric,  
-   object varValue  
+   string pszMetric,  
+   object varValue  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pszMetric`  
- \[in\] 메트릭 이름입니다.  
+ [in] The metric name.  
   
  `varValue`  
- \[in\] 메트릭 값을 지정합니다.  
+ [in] Specifies the metric value.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 메트릭은 디버그 엔진의 동작을 변경할 수 또는 지원 되는 기능을 알리기 위해 사용 되는 레지스트리 값입니다.  이 메서드를 호출 하는 적절 한 형식으로 전달할 수 있는 [디버깅을 위한 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 함수를 `SetMetric`.  
+## <a name="remarks"></a>Remarks  
+ A metric is a registry value used to change a debug engine's behavior or to advertise supported functionality. This method can forward the call to the appropriate form of the [SDK Helpers for Debugging](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) function, `SetMetric`.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
- [디버깅을 위한 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+ [SDK Helpers for Debugging](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

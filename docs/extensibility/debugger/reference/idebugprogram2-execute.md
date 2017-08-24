@@ -1,53 +1,70 @@
 ---
-title: "IDebugProgram2::Execute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::Execute"
-helpviewer_keywords: 
-  - "IDebugProgram2::Execute"
+title: IDebugProgram2::Execute | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgram2::Execute
+helpviewer_keywords:
+- IDebugProgram2::Execute
 ms.assetid: f7205ce8-0ac6-4fcd-b6ec-b720b4fcaccf
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugProgram2::Execute
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ce6daa3dc94821aef99f728cccfe40e7f6b0cab2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 프로그램이 중지 된 상태에서 실행이 계속 됩니다.  모든 이전 실행 상태 \(단계\)와 같은 선택을 취소, 다시 실행 프로그램을 시작 하 고.  
+---
+# <a name="idebugprogram2execute"></a>IDebugProgram2::Execute
+Continues running this program from a stopped state. Any previous execution state (such as a step) is cleared, and the program starts executing again.  
   
 > [!NOTE]
->  이 메서드는 사용되지 않습니다.  대신 [실행](../../../extensibility/debugger/reference/idebugprocess3-execute.md) 메서드를 사용하십시오.  
+>  This method is deprecated. Use the [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md) method instead.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Execute(  
-   void  
+   void  
 );  
 ```  
   
-```c#  
+```cs  
 int Execute();  
 ```  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 사용자 실행이 중지 된 상태에서 다른 프로그램의 스레드를 시작 하는 경우이 메서드는이 프로그램에 호출 됩니다.  사용자가 선택 하는 경우에이 메서드가 호출 되는  **시작** 명령에서  **디버그** ide에서 메뉴입니다.  이 메서드의 구현을 호출으로 같은 간단한 것일 수도 있는 [다시 시작](../../../extensibility/debugger/reference/idebugthread2-resume.md) 프로그램에서 현재 스레드의 메서드.  
+## <a name="remarks"></a>Remarks  
+ When the user starts execution from a stopped state in some other program's thread, this method is called on this program. This method is also called when the user selects the **Start** command from the **Debug** menu in the IDE. The implementation of this method may be as simple as calling the [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) method on the current thread in the program.  
   
 > [!WARNING]
->  중지 이벤트 또는 즉시 \(동기\) 이벤트를 보내지 않습니다 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) 이 호출; 처리 하는 중 그렇지 않으면 디버거가 중단 될 수 있음  
+>  Do not send a stopping event or an immediate (synchronous) event to [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) while handling this call; otherwise the debugger may hang.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
- [다시 시작](../../../extensibility/debugger/reference/idebugthread2-resume.md)
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
+ [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)

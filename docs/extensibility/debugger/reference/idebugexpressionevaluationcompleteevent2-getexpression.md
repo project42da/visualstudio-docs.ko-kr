@@ -1,53 +1,70 @@
 ---
-title: "IDebugExpressionEvaluationCompleteEvent2::GetExpression | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionEvaluationCompleteEvent2::GetExpression"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluationCompleteEvent2::GetExpression"
+title: IDebugExpressionEvaluationCompleteEvent2::GetExpression | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExpressionEvaluationCompleteEvent2::GetExpression
+helpviewer_keywords:
+- IDebugExpressionEvaluationCompleteEvent2::GetExpression
 ms.assetid: faf6b2dd-2afd-4852-b21c-7e8d3130e141
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugExpressionEvaluationCompleteEvent2::GetExpression
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d08e9f449a51b730199495ad0759e4a9a7735de2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-원래 식을 가져옵니다.  
+---
+# <a name="idebugexpressionevaluationcompleteevent2getexpression"></a>IDebugExpressionEvaluationCompleteEvent2::GetExpression
+Gets the original expression.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetExpression(   
-   IDebugExpression2** ppExpr  
+HRESULT GetExpression(   
+   IDebugExpression2** ppExpr  
 );  
 ```  
   
-```c#  
-int GetExpression(   
-   out IDebugExpression2 ppExpr  
+```cs  
+int GetExpression(   
+   out IDebugExpression2 ppExpr  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppExpr`  
- \[out\] 반환 된 [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) 구문 분석 된 식을 나타내는 개체입니다.  
+ [out] Returns an [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) object that represents the expression that was parsed.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드를 호출 하 여 만들어진 개체를 반환의 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 메서드가 있습니다.  
+## <a name="remarks"></a>Remarks  
+ This method returns the object that was created in a call to the [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)   
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)

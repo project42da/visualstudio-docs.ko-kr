@@ -1,72 +1,88 @@
 ---
-title: "L2DBForm.xaml.cs 소스 코드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: L2DBForm.xaml.cs Source Code | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5a40dad3-6763-4576-b3ad-874df3f2c8d9
 caps.latest.revision: 2
-caps.handback.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# L2DBForm.xaml.cs 소스 코드
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0bab369eedbba9a56ec440cf1286fc64cfab6221
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 항목에는 L2DBForm.xaml.cs 파일의 C\# 소스 코드에 대한 내용과 설명이 포함되어 있습니다.이 파일에 포함된 L2XDBForm partial 클래스는 데이터 멤버와 `OnRemove` 및 `OnAddBook` 단추 클릭 이벤트 처리기라는 세 가지 논리 섹션으로 나뉠 수 있습니다.  
+---
+# <a name="l2dbformxamlcs-source-code"></a>L2DBForm.xaml.cs Source Code
+This topic contains the contents and description of the C# source code in the file L2DBForm.xaml.cs. The L2XDBForm partial class contained in this file can be divided into three logical sections: data members and the `OnRemove` and `OnAddBook` button click event handlers.  
   
-## 데이터 멤버  
- 두 private 데이터 멤버는 이 클래스를 L2DBForm.xaml에 사용되는 창 리소스와 연결하는 데 사용됩니다.  
+## <a name="data-members"></a>Data Members  
+ Two private data members are used to associate this class to the window resources used in L2DBForm.xaml.  
   
--   네임스페이스 변수 `myBooks`는 `"http://www.mybooks.com"`으로 초기화됩니다.  
+-   The namespace variable `myBooks` is initialized to `"http://www.mybooks.com"`.  
   
--   `bookList` 멤버는 다음 줄을 사용하여 생성자에서 L2DBForm.xaml의 CDATA 문자열로 초기화됩니다.  
+-   The member `bookList` is initialized in the constructor to the CDATA string in L2DBForm.xaml with the following line:  
   
     ```  
     bookList = (XElement)((ObjectDataProvider)Resources["LoadedBooks"]).Data;  
     ```  
   
-## OnAddBook 이벤트 처리기  
- 이 메서드에는 다음 세 가지 문이 포함되어 있습니다.  
+## <a name="onaddbook-event-handler"></a>OnAddBook Event Handler  
+ This method contains the following three statements:  
   
--   첫 번째 조건 문은 입력 유효성 검사에 사용됩니다.  
+-   The first conditional statement is used for input validation.  
   
--   두 번째 문은 사용자가 **Add New Book** UI\(사용자 인터페이스\) 섹션에서 입력한 문자열 값에서 새 <xref:System.Xml.Linq.XElement>를 만듭니다.  
+-   The second statement creates a new <xref:System.Xml.Linq.XElement> from the string values the user entered in the **Add New Book** user interface (UI) section.  
   
--   마지막 문은 새 책 요소를 L2DBForm.xaml의 데이터 공급자에 추가합니다.이렇게 하면 동적 데이터 바인딩을 통해 이 새 항목으로 UI가 자동으로 업데이트되므로 사용자가 추가로 코드를 제공할 필요가 없습니다.  
+-   The last statement adds this new book element to the data provider in L2DBForm.xaml. Consequently, dynamic data binding will automatically update the UI with this new item; no extra user-supplied code is required.  
   
-## OnRemove 이벤트 처리기  
- `OnRemove` 처리기는 두 가지 이유 때문에 `OnAddBook` 처리기보다 복잡합니다.첫째로, 원시 XML에는 유지된 공백이 포함되어 있기 때문에 일치하는 줄 바꿈도 책 항목과 함께 제거되어야 합니다.둘째로, 편리함을 위해 원하는 항목에 있던 선택 표시가 목록의 이전 항목으로 다시 설정됩니다.  
+## <a name="onremove-event-handler"></a>OnRemove Event Handler  
+ The `OnRemove` handler is more complicated than the `OnAddBook` handler for two reasons. First, because the raw XML contains preserved white space, matching newlines must also be removed with the book entry. Second, as a convenience, the selection, which was on the deleted item, is reset to the previous one in the list.  
   
- 그러나 선택된 책 항목을 제거하는 핵심 작업은 다음 두 문으로만 수행됩니다.  
+ However the core work of removing the selected book item is accomplished by only two statements:  
   
--   먼저 목록 상자에서 현재 선택된 항목과 연결된 책 요소가 검색됩니다.  
+-   First, the book element associated with the currently selected item in the list box is retrieved:  
   
     ```  
     XElement selBook = (XElement)lbBooks.SelectedItem;   
     ```  
   
--   그런 다음 이 요소가 데이터 공급자에서 삭제됩니다.  
+-   Then, this element is deleted from the data provider:  
   
     ```  
     selBook.Remove();  
     ```  
   
- 동적 데이터 바인딩을 통해 프로그램의 UI가 자동으로 업데이트됩니다.  
+ Again, dynamic data binding assures that the program's UI is automatically updated.  
   
-## 예제  
+## <a name="example"></a>Example  
   
-### 설명  
+### <a name="description"></a>Description  
   
-### 코드  
+### <a name="code"></a>Code  
   
-```c#  
+```cs  
 using System;  
 using System.Linq;  
 using System.Collections;  
@@ -134,9 +150,9 @@ namespace LinqToXmlDataBinding {
   
 ```  
   
-### 설명  
- 이러한 처리기와 관련된 XAML 소스는 [L2DBForm.xaml 원본 코드](../designers/l2dbform-xaml-source-code.md)를 참조하십시오.  
+### <a name="comments"></a>Comments  
+ For the associated XAML source for these handlers, see [L2DBForm.xaml Source Code](../designers/l2dbform-xaml-source-code.md).  
   
-## 참고 항목  
- [연습: LinqToXmlDataBinding 예제](../designers/walkthrough-linqtoxmldatabinding-example.md)   
- [L2DBForm.xaml 원본 코드](../designers/l2dbform-xaml-source-code.md)
+## <a name="see-also"></a>See Also  
+ [Walkthrough: LinqToXmlDataBinding Example](../designers/walkthrough-linqtoxmldatabinding-example.md)   
+ [L2DBForm.xaml Source Code](../designers/l2dbform-xaml-source-code.md)

@@ -1,51 +1,68 @@
 ---
-title: "IDebugExpressionEvaluator::SetLocale | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionEvaluator::SetLocale"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluator::SetLocale 메서드"
+title: IDebugExpressionEvaluator::SetLocale | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExpressionEvaluator::SetLocale
+helpviewer_keywords:
+- IDebugExpressionEvaluator::SetLocale method
 ms.assetid: d3d2027d-74e2-4ae6-bcc7-59d12f873b7c
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugExpressionEvaluator::SetLocale
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 5ff05b8bd13d5420db663c6e8581804ed4430ddc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 방법을 볼 수 있는 결과 만드는 데 사용 하는 언어를 설정 합니다.  
+---
+# <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
+This method sets the language to use to create printable results.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetLocale(   
-   WORD wLangID  
+HRESULT SetLocale(   
+   WORD wLangID  
 );  
 ```  
   
-```c#  
+```cs  
 int SetLocale(  
-   ushort wLangID  
+   ushort wLangID  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `wLangID`  
- \[in\] 언어 식별자입니다.  
+ [in] The language identifier.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- EE를 즉석에서 언어를 전환할 수 있어야 하므로 식 계산기 \(EE\) 로드 되는 동안이 메서드를 여러 번 호출할 수 있습니다.  EE이이 로케일을 사용 하 여 해당 언어로 오류 메시지 및 문자열을 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ This method may be called many times while the expression evaluator (EE) is loaded, so the EE must be able to switch languages on the fly. The EE uses this locale to return error messages and strings in the appropriate language.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

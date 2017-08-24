@@ -1,66 +1,83 @@
 ---
-title: "IDebugCustomAttributeQuery2::GetCustomAttributeByName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttributeQuery2::GetCustomAttributeByName"
-helpviewer_keywords: 
-  - "IDebugCustomAttributeQuery2::GetCustomAttributeByName"
+title: IDebugCustomAttributeQuery2::GetCustomAttributeByName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCustomAttributeQuery2::GetCustomAttributeByName
+helpviewer_keywords:
+- IDebugCustomAttributeQuery2::GetCustomAttributeByName
 ms.assetid: 7428dfeb-8929-41b2-9b99-cb343a86c02d
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugCustomAttributeQuery2::GetCustomAttributeByName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 4416a16018ee07116b8fb5259b240f5aa413c6c9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-사용자 지정 특성의 이름을 지정 하는 사용자 지정 특성 바이트를 가져옵니다.  
+---
+# <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
+Obtains the custom attributes bytes given the name of the custom attribute.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetCustomAttributeByName(   
-   LPCOLESTR pszCustomAttributeName,  
-   BYTE*     ppBlob,  
-   DWORD*    pdwLen  
+HRESULT GetCustomAttributeByName(   
+   LPCOLESTR pszCustomAttributeName,  
+   BYTE*     ppBlob,  
+   DWORD*    pdwLen  
 );  
 ```  
   
-```c#  
+```cs  
 int GetCustomAttributeByName(  
-   [In] string        pszCustomAttributeName,   
-   [In, Out] byte[]   ppBlob,   
-   [In, Out] ref uint pdwLen  
+   [In] string        pszCustomAttributeName,   
+   [In, Out] byte[]   ppBlob,   
+   [In, Out] ref uint pdwLen  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pszCustomAttributeName`  
- \[in\] 검색할 사용자 지정 특성의 이름을 포함 하는 문자열입니다.  
+ [in] A string containing the name of the custom attribute to look for.  
   
  `ppBlob`  
- \[in, out\] 사용 하 여 사용자 지정 특성 바이트를 포함 하는 배열입니다.  
+ [in, out] An array that is filled in with the custom attribute bytes.  
   
  `pdwLen`  
- \[in, out\] 최대 바이트 수를 반환 하려면 지정은 `ppBlob` 배열 및 배열에 실제로 쓴 바이트 수를 반환 합니다.  
+ [in, out] Specifies the maximum number of bytes to return in the `ppBlob` array and returns the number of bytes actually written to the array.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 하거나 사용자 지정 특성이 없으면 S\_FALSE를 반환 합니다.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK or returns S_FALSE if the custom attribute does not exist. Otherwise, returns an error code.  
   
-## 설명  
- 설정에서 `ppBlob` 바이트 사용 가능한 특성을 매개 변수에 null 값의 개수를 반환 합니다.  다음 배열 할당 하 고 해당 배열에 대 한 전달의 `ppBlob` 매개 변수.  
+## <a name="remarks"></a>Remarks  
+ Set the `ppBlob` parameter to a null value to return the number of attributes bytes available. Then allocate an array and pass that array in for the `ppBlob` parameter.  
   
- 원시 데이터를의 사용자 지정 특성 특성 바이트를 나타냅니다.  
+ The attribute bytes represent the raw data of the custom attribute.  
   
- 경우는 `ppBlob` 및 `pdwLen` 매개 변수를 null 값으로 설정 됩니다, 단지 사용자 지정 특성이 있는지 여부를 확인 하려면이 메서드를 사용할 수 있습니다.  그러나, 보다 쉽게 대신, 호출 하는 것은 [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) 메서드.  
+ If the `ppBlob` and `pdwLen` parameters are set to a null value, this method can be used to determine if the custom attribute merely exists. An easier alternative, however, is to call the [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   
  [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)

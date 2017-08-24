@@ -1,53 +1,70 @@
 ---
-title: "IDebugClassField::GetDefaultIndexer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugClassField::GetDefaultIndexer"
-helpviewer_keywords: 
-  - "IDebugClassField::GetDefaultIndexer 메서드"
+title: IDebugClassField::GetDefaultIndexer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugClassField::GetDefaultIndexer
+helpviewer_keywords:
+- IDebugClassField::GetDefaultIndexer method
 ms.assetid: 47ce4f45-3816-4b40-909c-5032d0692d75
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugClassField::GetDefaultIndexer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: a8d3b414ef3f6bb8b52ddd9519901a7202b707f7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-기본 인덱서 이름을 가져옵니다.  
+---
+# <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
+Gets the name of the default indexer.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetDefaultIndexer(   
-   BSTR* pbstrIndexer  
+HRESULT GetDefaultIndexer(   
+   BSTR* pbstrIndexer  
 );  
 ```  
   
-```c#  
+```cs  
 int GetDefaultIndexer(  
-   out string pbstrIndexer  
+   out string pbstrIndexer  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pbstrIndexer`  
- \[out\] 기본 인덱서 이름을 포함 하는 문자열을 반환 합니다.  
+ [out] Returns a string containing the name of the default indexer.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 또는 없음 기본 인덱서 없으면 S\_FALSE를 반환 합니다.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK or returns S_FALSE if there is no default indexer. Otherwise, returns an error code.  
   
-## 설명  
- 클래스의 기본 인덱서 속성으로 표시 되는 `Default` 속성을 배열에 액세스 합니다.  이 특정 한입니다 [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)].  예를 들어 선언 된 기본 인덱서 [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ The default indexer of a class is the property that is marked as the `Default` property for array accesses. This is specific to [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]. Here is an example of a default indexer declared in [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] and how it is used.  
   
-```vb#  
+```vb  
 Imports System.Collections;  
   
 Public Class Class1  
@@ -77,5 +94,5 @@ Function GetItem(Index as Integer) as Integer
 End Function  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

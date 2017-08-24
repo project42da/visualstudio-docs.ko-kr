@@ -1,72 +1,89 @@
 ---
-title: "BP_UNBOUND_REASON | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_UNBOUND_REASON"
-helpviewer_keywords: 
-  - "BP_UNBOUND_REASON 열거형"
+title: BP_UNBOUND_REASON | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BP_UNBOUND_REASON
+helpviewer_keywords:
+- BP_UNBOUND_REASON enumeration
 ms.assetid: 939b6f9c-113b-471d-9f30-b03871af6285
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# BP_UNBOUND_REASON
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6c3663e6c37a77634473e0a552c80401b964ea06
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-중단점을 바운드 된 이유를 설명 합니다.  
+---
+# <a name="bpunboundreason"></a>BP_UNBOUND_REASON
+Gives the reason a breakpoint was unbound.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_BP_UNBOUND_REASON {   
-   BPUR_UNKNOWN           = 0x0000,  
-   BPUR_CODE_UNLOADED     = 0x0002,  
-   BPUR_BREAKPOINT_REBIND = 0x0003,  
-   BPUR_BREAKPOINT_ERROR  = 0x0004  
+enum enum_BP_UNBOUND_REASON {   
+   BPUR_UNKNOWN           = 0x0000,  
+   BPUR_CODE_UNLOADED     = 0x0002,  
+   BPUR_BREAKPOINT_REBIND = 0x0003,  
+   BPUR_BREAKPOINT_ERROR  = 0x0004  
 };  
 typedef DWORD BP_UNBOUND_REASON;  
 ```  
   
-```c#  
-public enum enum_BP_UNBOUND_REASON {   
-   BPUR_UNKNOWN           = 0x0000,  
-   BPUR_CODE_UNLOADED     = 0x0002,  
-   BPUR_BREAKPOINT_REBIND = 0x0003,  
-   BPUR_BREAKPOINT_ERROR  = 0x0004  
+```cs  
+public enum enum_BP_UNBOUND_REASON {   
+   BPUR_UNKNOWN           = 0x0000,  
+   BPUR_CODE_UNLOADED     = 0x0002,  
+   BPUR_BREAKPOINT_REBIND = 0x0003,  
+   BPUR_BREAKPOINT_ERROR  = 0x0004  
 };  
 ```  
   
-## Members  
- BPUR\_UNKNOWN  
- 그 이유를 알 수 없습니다.  
+## <a name="members"></a>Members  
+ BPUR_UNKNOWN  
+ The reason is unknown.  
   
- BPUR\_CODE\_UNLOADED  
- 중단점이 포함 된 코드는 로드 되지 않은 상태입니다.  
+ BPUR_CODE_UNLOADED  
+ The code that contains the breakpoint has been unloaded.  
   
- BPUR\_BREAKPOINT\_REBIND  
- 다른 위치에 중단점이 다시 바인딩되지 되었습니다.  편집 후 발생 하 고 중단점을 이동할 때 또는 파일을 더 이상 사용할 수 있는 경로 중단점이 바인딩되는 경우 작업을 계속 없습니다.  
+ BPUR_BREAKPOINT_REBIND  
+ The breakpoint has been rebound to a different location. This can happen after Edit and Continue operations when the breakpoint moves, or when the breakpoint is bound to a file with a path that is no longer valid.  
   
- BPUR\_ BREAKPOINT\_ERROR  
- 중단점 오류에 연결 된 후에 결정 됩니다.  해당 조건이 더 이상 유효 하지 관리 되는 중단점을 발생 합니다.  
+ BPUR_ BREAKPOINT_ERROR  
+ The breakpoint is determined to be in error after it is bound. This happens to managed breakpoints whose conditions are no longer valid.  
   
-## 설명  
- 반환 되는 [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) 방법입니다.  
+## <a name="remarks"></a>Remarks  
+ Returned by the [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) method.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)

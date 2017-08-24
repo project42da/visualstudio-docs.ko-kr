@@ -1,5 +1,5 @@
 ---
-title: "코딩된 UI 테스트를 사용하여 SharePoint 2010 응용 프로그램 테스트 | Microsoft Docs"
+title: Testing SharePoint 2010 Applications with Coded UI Tests | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,68 +27,68 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7ab8ce7199fec306a0f50344619200266a2261b8
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0c3ac35e15aa486c19e5e27688742c55f8286b8d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>코딩된 UI 테스트를 사용하여 SharePoint 2010 응용 프로그램 테스트
-SharePoint 응용 프로그램에 코딩된 UI 테스트를 포함하면 해당 UI 컨트롤을 포함해서 전체 응용 프로그램이 올바르게 작동하는지 확인할 수 있습니다. 코딩된 UI 테스트는 또한 사용자 인터페이스에서 값 및 논리의 유효성을 검사할 수 있습니다.  
+# <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Testing SharePoint 2010 Applications with Coded UI Tests
+Including coded UI tests in a SharePoint application lets you verify that the whole application, including its UI controls, is functioning correctly. Coded UI tests can also validate values and logic in the user interface.  
   
- **요구 사항**  
+ **Requirements**  
   
 -   Visual Studio Enterprise  
   
-## <a name="what-else-should-i-know-about-coded-ui-tests"></a>코딩된 UI 테스트에 대해 그 밖에 알아야 할 내용  
- 코딩된 UI 테스트를 사용할 때의 이점에 대한 자세한 내용은 [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md) 및 [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5 Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)(Visual Studio 2012를 사용한 지속적인 업데이트 테스트 – 5장 시스템 테스트 자동화)를 참조하세요.  
+## <a name="what-else-should-i-know-about-coded-ui-tests"></a>What else should I know about coded UI tests?  
+ To learn more about the benefits of using coded UI tests, see [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md) and [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5 Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196).  
   
- **참고**  
+ **Notes**  
   
--   ![필수 구성 요소](~/test/media/prereq.png "Prereq") SharePoint 응용 프로그램에 대한 코딩된 UI 테스트는 SharePoint 2010에서만 지원됩니다.  
+-   ![Prerequsite](../test/media/prereq.png "Prereq") Coded UI tests for SharePoint applications are supported only with SharePoint 2010.  
   
--   ![필수 구성 요소](~/test/media/prereq.png "Prereq") SharePoint 응용 프로그램에서 Visio 및 PowerPoint 2010 컨트롤은 지원되지 않습니다.  
+-   ![Prerequsite](../test/media/prereq.png "Prereq") Support for Visio and PowerPoint 2010 controls in your SharePoint application is not supported.  
   
-## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>SharePoint 응용 프로그램에 대해 코딩된 UI 테스트 만들기  
- SharePoint 2010 응용 프로그램에 대한[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) 는 다른 유형의 응용 프로그램에 대해 테스트 만들기와 동일합니다. 기록 및 재생은 웹 편집 인터페이스의 모든 컨트롤에 대해 지원됩니다. 범주 및 웹 파트 선택 인터페이스는 모두 표준 웹 컨트롤입니다.  
+## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>Creating a coded UI test for your SharePoint app  
+ [Creating coded UI tests](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) for your SharePoint 2010 applications is the same as creating tests for other types of applications. Record and Playback is supported for all controls on the Web Editing interface. The interface for selecting categories and web parts are all standard web controls.  
   
- ![SharePoint 웹 파트](~/test/media/cuit_sharepoint.png "CUIT_SharePoint")  
+ ![SharePoint web parts](../test/media/cuit_sharepoint.png "CUIT_SharePoint")  
   
 > [!NOTE]
->  작업을 기록하는 경우 코드를 생성하기 전에 작업의 유효성을 검사합니다. 마우스를 위로 가져가는 것과 관련해서는 몇 가지 동작이 있으므로 기본적으로 설정됩니다. 코딩된 UI 테스트에서 중복된 위로 가져가기는 제거할 때 주의가 필요합니다. 이렇게 하려면 테스트에 대한 코드를 편집하거나 [코딩된 UI 테스트 편집기](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)를 사용합니다.  
+>  If you are recording action, validate the actions before generating code. Since there are several behaviors associated with Mouse hover, it is on by default. Be careful to remove redundant hovers from your coded UI tests. You can do this by editing the code for the test, or by using the [Coded UI Test Editor](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md).  
   
-## <a name="including-testing-of-office-2010-controls-within-your-sharepoint-app"></a>SharePoint 응용 프로그램 내에 Office 2010 컨트롤 테스트 포함  
- SharePoint 응용 프로그램에서 일부 Office 2010 웹 파트에 대해 자동화를 설정하려면 코드를 약간 수정해야 합니다.  
-  
-> [!WARNING]
->  Visio 및 PowerPoint 2010 컨트롤은 지원되지 않습니다.  
-  
-### <a name="excel-2010-cell-controls"></a>Excel 2010 셀 컨트롤  
- Excel 셀 컨트롤을 포함하려면 코딩된 UI 테스트의 코드에서 일부 항목을 변경해야 합니다.  
+## <a name="including-testing-of-office-2010-controls-within-your-sharepoint-app"></a>Including testing of Office 2010 controls within your SharePoint app  
+ To enable automation for some office 2010 web parts in your SharePoint app, you have to make some minor code modifications.  
   
 > [!WARNING]
->  화살표 작업 후 Excel 셀에 텍스트를 입력하는 작업은 올바르게 기록되지 않습니다. 마우스를 사용해서 셀을 선택하세요.  
+>  Support for Visio and PowerPoint 2010 controls is not supported.  
   
- 빈 셀에 대한 작업을 기록할 때는 셀을 두 번 클릭하고 텍스트 설정 작업을 수행하여 코드를 수정해야 합니다. 셀을 클릭하고 키보드 작업을 수행하면 셀 내에서 `textarea` 가 활성화되기 때문에 이 작업이 필요합니다. 빈 셀에서 단순히 `setvalue` 를 기록하면 셀을 클릭할 때까지 제공되지 않은 `editbox` 가 검색됩니다. 예:  
+### <a name="excel-2010-cell-controls"></a>Excel 2010 cell controls  
+ To include Excel cell controls, you must make some changes in the coded UI test's code.  
   
-```c#  
+> [!WARNING]
+>  Entering text in any Excel cell, followed by an arrow key action, does not record correctly. Use the mouse to select cells.  
+  
+ If you are recording actions on an empty cell, you must modify the code by double clicking on the cell and then performing a set text operation. This is needed because a click on the cell, followed by any keyboard action activates the `textarea` within the cell. Simply recording a `setvalue` on the empty cell would search for the `editbox` which is not present until the cell has been clicked. For example:  
+  
+```cs  
 Mouse.DoubliClick(uiItemCell,new Point(31,14));  
 uiGridKeyboardInputEdit.Text=value;  
 ```  
   
- 비어 있지 않은 셀에서 작업을 기록할 때는 셀에 텍스트를 입력하는 순간 셀의 자식으로 새로운 \<div> 컨트롤이 추가되기 때문에 기록이 조금 더 복잡해집니다. 새로운 \<div> 컨트롤에는 사용자가 방금 입력한 텍스트가 포함됩니다. 레코더는 새로운 \<div> 컨트롤에서 작업을 기록해야 하지만 테스트를 입력할 때까지는 새로운 \<div> 컨트롤이 존재하지 않기 때문에 그렇게 할 수 없습니다. 이 문제를 해결하기 위해서는 다음과 같이 코드를 직접 변경해야 합니다.  
+ If you are recording actions on a non-empty cell, then recording gets a little more complicated, because the moment you add text to a cell, a new \<div> control is added as a child of the cell. The new \<div> control contains the text that you just entered. The recorder needs to record actions on the new \<div> control; however, it can't because the new \<div> control does not exist until after the test is entered. You must manually make the following code changes to accommodate this issue.  
   
-1.  셀 초기화로 이동하고 `RowIndex` 및 `ColumnIndex` 를 주 속성으로 지정합니다.  
+1.  Go to cell initialization and make `RowIndex` and `ColumnIndex` primary properties:  
   
-    ```c#  
+    ```cs  
     this.mUIItemCell.SearchProperties[HtmlCell.PropertyNames. RowIndex] = "3";   
     this.mUIItemCell.SearchProperties[HtmlCell.PropertyNames. ColumnIndex] = "3";  
     ```  
   
-2.  셀의 `HtmlDiv` 자식을 찾습니다.  
+2.  Find the `HtmlDiv` child of the cell:  
   
-    ```c#  
+    ```cs  
     private UITestControl getControlToDoubleClick(HtmlCell cell)   
     {   
          if (String.IsNullOrEmpty(cell.InnerText)) return cell;   
@@ -102,69 +102,69 @@ uiGridKeyboardInputEdit.Text=value;
   
     ```  
   
-3.  `HtmlDiv`에서 마우스 두 번 클릭 작업에 대한 코드를 추가합니다.  
+3.  Add code for a mouse double-click action on `HtmlDiv`:  
   
-    ```c#  
+    ```cs  
     Mouse.DoubleClick(uIItemPane, new Point(31, 14)); )  
     ```  
   
-4.  `TextArea`에서 텍스트를 설정하는 코드를 추가합니다.  
+4.  Add code to set text on `TextArea`:  
   
-    ```c#  
+    ```cs  
     uIGridKeyboardInputEdit.Text = value; }  
     ```  
   
-## <a name="enabling-coded-ui-testing-of-silverlight-web-parts-in-your-sharepoint-2010-app"></a>SharePoint 2010 응용 프로그램에서 Silverlight 웹 파트의 코딩된 UI 테스트 사용  
- Visual Studio 2012 이상에서는 Silverlight 테스트가 지원되지 않습니다. 그러나 SharePoint 2010 앱에서 Silverlight 웹 파트를 테스트하려면 Visual Studio 갤러리에서 별도의 Silverlight 플러그 인을 설치할 수 있습니다.  
+## <a name="enabling-coded-ui-testing-of-silverlight-web-parts-in-your-sharepoint-2010-app"></a>Enabling coded UI testing of Silverlight web parts in your SharePoint 2010 app  
+ Silverlight testing isn't supported in Visual Studio 2012 and later. But, if you want to test the Silverlight web parts in your SharePoint 2010 app, you can install a separate Silverlight plug-in from the Visual Studio Gallery.  
   
-#### <a name="setting-up-your-machine"></a>컴퓨터 설정  
+#### <a name="setting-up-your-machine"></a>Setting up your machine  
   
-1.  Visual Studio 2012.1 이상이 설치되어 있는지 확인합니다.  
+1.  Make sure that you have Visual Studio 2012.1 or later installed.  
   
-2.  [Silverlight용 Microsoft Visual Studio UI 테스트 플러그인](http://visualstudiogallery.msdn.microsoft.com/28312a61-9451-451a-990c-c9929b751eb4)을 설치합니다.  
+2.  Install the [Microsoft Visual Studio UI Test Plugin for Silverlight](http://visualstudiogallery.msdn.microsoft.com/28312a61-9451-451a-990c-c9929b751eb4).  
   
-3.  [Fiddler](http://www.fiddler2.com/fiddler2/)를 설치합니다. 이 도구는 단순히 HTTP 트래픽을 캡처하고 기록하는 도구입니다.  
+3.  Install [Fiddler](http://www.fiddler2.com/fiddler2/). This is simply a tool that captures and logs the HTTP traffic.  
   
-4.  [fiddlerXap 프로젝트](http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-components-postattachments/00-10-36-48-70/FiddlerXapProxy.zip)를 다운로드합니다. 파일의 압축을 풀고, 빌드하고, “CopySLHelper.bat” 스크립트를 실행하여 Fiddler 도구를 사용할 때 Silverlight 웹 파트를 테스트하는 데 필요한 도우미 DLL을 설치합니다.  
+4.  Download the [fiddlerXap project](http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-components-postattachments/00-10-36-48-70/FiddlerXapProxy.zip). Unzip it, build it, and run the "CopySLHelper.bat" script to install the helper DLL that is required to test Silverlight web parts when you use the Fiddler tool.  
   
- 컴퓨터를 설정한 후 Silverlight 웹 파트에서 SharePoint 2010 응용 프로그램 테스트를 시작하려면 다음 단계를 수행합니다.  
+ After setting up your machine, to start testing your SharePoint 2010 app with Silverlight web parts, follow these steps:  
   
-#### <a name="testing-silverlight-web-parts"></a>Silverlight 웹 파트 테스트  
+#### <a name="testing-silverlight-web-parts"></a>Testing Silverlight web parts  
   
-1.  Fiddler를 시작합니다.  
+1.  Start Fiddler.  
   
-2.  브라우저 캐시를 지웁니다. Silverlight UI 자동화 도우미 DLL을 포함하는 XAP 파일은 일반적으로 캐시에 저장되기 때문에 이 과정이 필요합니다. 브라우저 캐시를 지울 수 있도록 수정된 XAP 파일이 선택되었는지 확인해야 합니다.  
+2.  Clear the browser cache. This is necessary because the XAP file, which contains the Silverlight UI Automation Helper DLL, is typically cached. We have to make sure that the modified XAP file is picked up, so we clear the browser cache.  
   
-3.  웹 페이지를 엽니다.  
+3.  Open the web page.  
   
-4.  레코더를 시작하고 일반 웹 응용 프로그램 테스트와 마찬가지로 코드를 생성합니다.  
+4.  Start the recorder and generate code like you would for a regular web application testing.  
   
-5.  생성된 코드가 Microsoft.VisualStudio.TestTools.UITest.Extension.Silverlight.dll을 참조하는지 확인해야 합니다.  
+5.  You should confirm that the generated code references the Microsoft.VisualStudio.TestTools.UITest.Extension.Silverlight.dll.  
   
-     자세한 내용은 [Visual Studio 2012에서 SharePoint 2010 UI 테스트](http://blogs.msdn.com/b/visualstudioalm/archive/2012/11/01/ui-testing-sharepoint-2010-with-visual-studio-2012.aspx)를 참조하세요.  
+     For more information, see [UI Testing SharePoint 2010 with Visual Studio 2012](http://blogs.msdn.com/b/visualstudioalm/archive/2012/11/01/ui-testing-sharepoint-2010-with-visual-studio-2012.aspx)  
   
-## <a name="external-resources"></a>외부 리소스  
+## <a name="external-resources"></a>External resources  
   
-### <a name="blogs"></a>블로그  
- [Visual Studio 2012에서 SharePoint 2010 UI 테스트](http://blogs.msdn.com/b/visualstudioalm/archive/2012/11/01/ui-testing-sharepoint-2010-with-visual-studio-2012.aspx)  
+### <a name="blogs"></a>Blogs  
+ [UI Testing SharePoint 2010 with Visual Studio 2012](http://blogs.msdn.com/b/visualstudioalm/archive/2012/11/01/ui-testing-sharepoint-2010-with-visual-studio-2012.aspx)  
   
- [코딩된 UI 테스트에서 Silverlight 컨트롤에 대한 검색 논리 이해](http://blogs.msdn.com/b/tapas_sahoos_blog/archive/2010/11/16/understanding-the-search-logic-for-silverlight-controls-in-coded-ui-test.aspx)  
+ [Understanding the Search logic for Silverlight controls in Coded UI Test](http://blogs.msdn.com/b/tapas_sahoos_blog/archive/2010/11/16/understanding-the-search-logic-for-silverlight-controls-in-coded-ui-test.aspx)  
   
- [Silverlight 컨트롤의 속성 페치](http://blogs.msdn.com/b/tapas_sahoos_blog/archive/2010/11/16/fetching-property-of-a-silverlight-control.aspx)  
+ [Fetching Property of a Silverlight control](http://blogs.msdn.com/b/tapas_sahoos_blog/archive/2010/11/16/fetching-property-of-a-silverlight-control.aspx)  
   
- [코딩된 UI 테스트에 대한 콘텐츠 인덱스](http://blogs.msdn.com/b/mathew_aniyan/archive/2010/02/11/content-index-for-coded-ui-test.aspx)  
+ [Content Index for Coded UI Test](http://blogs.msdn.com/b/mathew_aniyan/archive/2010/02/11/content-index-for-coded-ui-test.aspx)  
   
-### <a name="guidance"></a>지침  
- [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5 Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)(Visual Studio 2012를 사용한 지속적인 업데이트 테스트 - 5장 시스템 테스트 자동화)  
+### <a name="guidance"></a>Guidance  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5 Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)  
   
-### <a name="forum"></a>포럼  
- [Visual Studio ALM + Team Foundation Server 블로그](http://go.microsoft.com/fwlink/?LinkID=254496)  
+### <a name="forum"></a>Forum  
+ [Visual Studio ALM + Team Foundation Server Blog](http://go.microsoft.com/fwlink/?LinkID=254496)  
   
-## <a name="see-also"></a>참고 항목  
- [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
- [SharePoint 2010 및 2013 응용 프로그램 웹 성능 및 부하 테스트](/devops-test-docs/test/web-performance-and-load-testing-sharepoint-2010-and-2013-applications)   
- [SharePoint 솔루션 만들기](/office-dev/office-dev/create-sharepoint-solutions)   
- [SharePoint 코드 확인 및 디버그](/office-dev/office-dev/verifying-and-debugging-sharepoint-code)   
- [SharePoint 솔루션 빌드 및 디버깅](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)   
- [SharePoint 응용 프로그램 성능 프로파일링](/office-dev/office-dev/profiling-the-performance-of-sharepoint-applications)
+## <a name="see-also"></a>See Also  
+ [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)   
+ [Web performance and load testing SharePoint 2010 and 2013 applications](/devops-test-docs/test/web-performance-and-load-testing-sharepoint-2010-and-2013-applications)   
+ [Create SharePoint Solutions](/office-dev/office-dev/create-sharepoint-solutions)   
+ [Verifying and Debugging SharePoint Code](/office-dev/office-dev/verifying-and-debugging-sharepoint-code)   
+ [Building and Debugging SharePoint Solutions](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)   
+ [Profiling the Performance of SharePoint Applications](/office-dev/office-dev/profiling-the-performance-of-sharepoint-applications)
 

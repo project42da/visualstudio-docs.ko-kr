@@ -1,73 +1,90 @@
 ---
-title: "BP_TYPE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_TYPE"
-helpviewer_keywords: 
-  - "BP_TYPE 열거형"
+title: BP_TYPE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BP_TYPE
+helpviewer_keywords:
+- BP_TYPE enumeration
 ms.assetid: ef07191e-7966-43ab-96fb-1a0b1db3115d
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# BP_TYPE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 708a933944a081a8a49b329eed7a8d2984ad85c3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-중단점이 코드 위치에, 데이터 위치, 인지 또는 다른 형식의 중단점 지를 지정 합니다.  
+---
+# <a name="bptype"></a>BP_TYPE
+Specifies whether the breakpoint is at a code location, is a data location, or is another type of breakpoint.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_BP_TYPE {   
-   BPT_NONE    = 0x0000,  
-   BPT_CODE    = 0x0001,  
-   BPT_DATA    = 0x0002,  
-   BPT_SPECIAL = 0x0003  
+enum enum_BP_TYPE {   
+   BPT_NONE    = 0x0000,  
+   BPT_CODE    = 0x0001,  
+   BPT_DATA    = 0x0002,  
+   BPT_SPECIAL = 0x0003  
 };  
 typedef DWORD BP_TYPE;  
 ```  
   
-```c#  
-public enum enum_BP_TYPE {   
-   BPT_NONE    = 0x0000,  
-   BPT_CODE    = 0x0001,  
-   BPT_DATA    = 0x0002,  
-   BPT_SPECIAL = 0x0003  
+```cs  
+public enum enum_BP_TYPE {   
+   BPT_NONE    = 0x0000,  
+   BPT_CODE    = 0x0001,  
+   BPT_DATA    = 0x0002,  
+   BPT_SPECIAL = 0x0003  
 };  
 ```  
   
-## Members  
- BPT\_NONE  
- 중단점 형식이 지정합니다.  
+## <a name="members"></a>Members  
+ BPT_NONE  
+ Specifies no breakpoint type.  
   
- BPT\_CODE  
- 코드에 중단점을 지정합니다.  
+ BPT_CODE  
+ Specifies a code breakpoint.  
   
- BPT\_DATA  
- 데이터 중단점을 지정합니다.  
+ BPT_DATA  
+ Specifies a data breakpoint.  
   
- BPT\_SPECIAL  
- 코드나 데이터 형식이 되는 중단점을 지정 합니다.  이 종류 되지 않으며 사용 하지 않아야 합니다.  
+ BPT_SPECIAL  
+ Specifies a breakpoint that is neither a code nor a data type. This type is deprecated and should not be used.  
   
-## 설명  
- 매개 변수로 전달 되는 [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) 및 [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md) 방법.  
+## <a name="remarks"></a>Remarks  
+ Passed as a parameter to the [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) and [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md) methods.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)   
  [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)

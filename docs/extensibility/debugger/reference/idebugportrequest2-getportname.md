@@ -1,51 +1,68 @@
 ---
-title: "IDebugPortRequest2::GetPortName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortRequest2::GetPortName"
-helpviewer_keywords: 
-  - "IDebugPortRequest2::GetPortName"
+title: IDebugPortRequest2::GetPortName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortRequest2::GetPortName
+helpviewer_keywords:
+- IDebugPortRequest2::GetPortName
 ms.assetid: 53e2a3a4-bb34-4a02-a983-6bd84ea70587
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugPortRequest2::GetPortName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 54d218b4a706cdbfe918ebf3e50197e9131ea537
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-포트의 이름을 가져옵니다.  
+---
+# <a name="idebugportrequest2getportname"></a>IDebugPortRequest2::GetPortName
+Gets the name of the port.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetPortName(   
-   BSTR* pbstrPortName  
+HRESULT GetPortName(   
+   BSTR* pbstrPortName  
 );  
 ```  
   
-```c#  
-int GetPortName(   
-   out string pbstrPortName  
+```cs  
+int GetPortName(   
+   out string pbstrPortName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pbstrPortName`  
- \[out\] 포트의 이름을 반환합니다.  
+ [out] Returns the name of the port.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) 인터페이스 일반적으로 전달 된 디버그 패키지 \(클라이언트\)에서 연결을 얻을 수 있는 포트 공급자에 \(서버\)를 포트에 있습니다.  디버그 패키지 및 포트 공급자 모두를 인식 하는 포트에 대 한 항목입니다.  간단한 문자열을 포트 설명할 수 있는 경우 다음 해당 `IDebugPortRequest2::GetPortName` 메서드는 연결을 만드는 데 충분 한 정보가 없습니다.  그렇지 않으면 추가 인터페이스 서버 사용 하 여 얻을 수 있습니다 클라이언트가 제공할 수 있는 `IDebugPortRequest2::QueryInterface`.  
+## <a name="remarks"></a>Remarks  
+ The [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) interface is usually passed from a debug package (the client) to a port supplier (the server) to obtain a connection to a port. Both the debug package and the port supplier are aware of the possible choices for the port. If a simple string can describe the port, then the `IDebugPortRequest2::GetPortName` method has enough information to make the connection. Otherwise, additional interfaces can be provided by the client, which can be obtained by the server using `IDebugPortRequest2::QueryInterface`.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)

@@ -1,56 +1,73 @@
 ---
-title: "IDebugObject::GetValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::GetValue"
-helpviewer_keywords: 
-  - "IDebugObject::GetValue 메서드"
+title: IDebugObject::GetValue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject::GetValue
+helpviewer_keywords:
+- IDebugObject::GetValue method
 ms.assetid: eec6051e-8ecb-49fa-bdd4-dd786f211692
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugObject::GetValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 62f05a24d81c4abb7e4ef8bbf25ccf3d58ea710d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-개체의 값을으로 연속 된 일련의 바이트를 가져옵니다.  
+---
+# <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
+Gets the value of the object as a consecutive series of bytes.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetValue(   
-   BYTE* pValue,  
-   UINT  nSize  
+HRESULT GetValue(   
+   BYTE* pValue,  
+   UINT  nSize  
 );  
 ```  
   
-```c#  
+```cs  
 int GetValue(  
-   ref byte[] pValue,   
-   uint nSize  
+   ref byte[] pValue,   
+   uint nSize  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pValue`  
- \[in, out\] 인접 한 여러 개체의 값을 나타내는 바이트 수를 사용 하 여 채워지는 배열입니다.  
+ [in, out] An array that is filled in with a consecutive series of bytes representing the value of the object.  
   
  `nSize`  
- \[in\] 반입 하는 바이트의 최대 수입니다.  
+ [in] The maximum number of bytes to fetch.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 호출 하 여 가져올 수 있습니다 값 바이트의 총 수는 [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) 방법입니다.  
+## <a name="remarks"></a>Remarks  
+ Get the total number of value bytes that can be fetched by calling the [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -1,54 +1,71 @@
 ---
-title: "IDebugCoreServer2::GetPortSupplier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCoreServer2::GetPortSupplier"
-helpviewer_keywords: 
-  - "IDebugCoreServer2::GetPortSupplier"
+title: IDebugCoreServer2::GetPortSupplier | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCoreServer2::GetPortSupplier
+helpviewer_keywords:
+- IDebugCoreServer2::GetPortSupplier
 ms.assetid: acf181d4-ef42-4aa5-86f9-95fd5467ea31
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugCoreServer2::GetPortSupplier
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 342cbbd543ce6357ccfbddba067dd62239222846
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-특정 포트 공급자를 검색합니다.  
+---
+# <a name="idebugcoreserver2getportsupplier"></a>IDebugCoreServer2::GetPortSupplier
+Retrieves a specific port supplier.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetPortSupplier(   
-   REFGUID               guidPortSupplier,  
-   IDebugPortSupplier2** ppPortSupplier  
+HRESULT GetPortSupplier(   
+   REFGUID               guidPortSupplier,  
+   IDebugPortSupplier2** ppPortSupplier  
 );  
 ```  
   
-```c#  
-int GetPortSupplier(   
-   ref Guid                guidPortSupplier,  
-   out IDebugPortSupplier2 ppPortSupplier  
+```cs  
+int GetPortSupplier(   
+   ref Guid                guidPortSupplier,  
+   out IDebugPortSupplier2 ppPortSupplier  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `guidPortSupplier`  
- \[in\] 검색할 포트 공급자의 GUID입니다.  
+ [in] GUID of the port supplier to be retrieved.  
   
  `ppPortSupplier`  
- \[out\] 반환 된 [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) 원하는 포트 공급자를 나타내는 개체입니다.  
+ [out] Returns an [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) object representing the desired port supplier.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)   
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

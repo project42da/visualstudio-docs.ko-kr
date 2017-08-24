@@ -1,51 +1,68 @@
 ---
-title: "IDebugBreakpointRequest2::GetLocationType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBreakpointRequest2::GetLocationType"
-helpviewer_keywords: 
-  - "IDebugBreakpointRequest2::GetLocationType"
+title: IDebugBreakpointRequest2::GetLocationType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBreakpointRequest2::GetLocationType
+helpviewer_keywords:
+- IDebugBreakpointRequest2::GetLocationType
 ms.assetid: b6d14c59-d3aa-48ff-8278-f6b5bba9c2f3
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugBreakpointRequest2::GetLocationType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 05b4b02995c1003c4d53b7d099cd8e9a21f11710
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 중단점 요청은 중단점 위치 형식을 가져옵니다.  
+---
+# <a name="idebugbreakpointrequest2getlocationtype"></a>IDebugBreakpointRequest2::GetLocationType
+Gets the breakpoint location type of this breakpoint request.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetLocationType(   
-   BP_LOCATION_TYPE* pBPLocationType  
+HRESULT GetLocationType(   
+   BP_LOCATION_TYPE* pBPLocationType  
 );  
 ```  
   
-```c#  
-int GetLocationType(   
-   out enum_BP_LOCATION_TYPE pBPLocationType  
+```cs  
+int GetLocationType(   
+   out enum_BP_LOCATION_TYPE pBPLocationType  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pBPLocationType`  
- \[out\] 값의 반환은 [BP\_LOCATION\_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) 위치 중단점 요청을 설명 하는 열거형입니다.  
+ [out] Returns a value from the [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) enumeration that describes the location of this breakpoint request.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_FAIL` 경우는 `bpLocation` 필드에 연결 된 [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 구조가 잘못 되었습니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_FAIL` if the `bpLocation` field in the associated [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) structure is not valid.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CDebugBreakpointRequest` 를 노출 하는 개체는[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) 인터페이스입니다.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CDebugBreakpointRequest` object that exposes the[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) interface.  
   
 ```  
 HRESULT CDebugBreakpointRequest::GetLocationType(BP_LOCATION_TYPE* pBPLocationType)    
@@ -78,8 +95,8 @@ HRESULT CDebugBreakpointRequest::GetLocationType(BP_LOCATION_TYPE* pBPLocationTy
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)   
- [BP\_LOCATION\_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)   
- [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
- [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
+ [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)   
+ [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
+ [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)

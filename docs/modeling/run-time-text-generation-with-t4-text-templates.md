@@ -1,31 +1,48 @@
 ---
-title: "T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전처리 텍스트 템플릿 프로젝트 항목"
-  - "텍스트 템플릿, 런타임에 파일 생성"
-  - "텍스트 템플릿, TransformText() 메서드"
-  - "TextTemplatingFilePreprocessor 사용자 지정 도구"
+title: Run-Time Text Generation with T4 Text Templates | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Preprocessed Text Template project item
+- TextTemplatingFilePreprocessor custom tool
+- text templates, TransformText() method
+- text templates, generating files at run time
 ms.assetid: 79b4b3c6-a9a7-4446-b6fd-e2388fc6b05f
 caps.latest.revision: 22
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 22
----
-# T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: alancameronwills
+ms.author: awills
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7396ea74f72c7407d41f396c6b9a713faf8826c0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-하면 텍스트 문자열에서 런타임에 응용 프로그램에서 사용 하 여 생성할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 런타임 텍스트 템플릿.  응용 프로그램을 실행하는 컴퓨터에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]가 없어도 됩니다.  컴파일 타임에 템플릿을 런타임에 실행 되는 코드를 생성 하므로 런타임 템플릿 "전처리 텍스트 템플릿" 라고도 합니다.  
+---
+# <a name="run-time-text-generation-with-t4-text-templates"></a>Run-Time Text Generation with T4 Text Templates
+You can generate text strings in your application at run time by using [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] runtime text templates. The computer where the application executes does not have to have [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Runtime templates are sometimes called "preprocessed text templates" because at compile time, the template generates code that is executed at run time.  
   
- 각 템플릿에는 생성된 문자열에 나타날 텍스트와 프로그램 코드의 조각이 혼합되어 있습니다.  프로그램 조각은 문자열의 변수 부분에 대한 값을 제공하며 조건적 부분과 반복되는 부분도 제어합니다.  
+ Each template is a mixture of the text as it will appear in the generated string, and fragments of program code. The program fragments supply values for the variable parts of the string, and also control conditional and repeated parts.  
   
- 예를 들어 HTML 보고서를 만드는 응용 프로그램에서 다음 템플릿을 사용할 수 있습니다.  
+ For example, the following template could be used in an application that creates an HTML report.  
   
 ```  
 <#@ template language="C#" #>  
@@ -42,26 +59,26 @@ This report is Company Confidential.
 </body></html>  
 ```  
   
- 템플릿은 변수 부분이 프로그램 코드로 대체된 HTML 페이지입니다.  HTML 페이지의 정적 프로토타입을 작성하여 해당 페이지의 디자인을 시작할 수 있습니다.  그런 다음 테이블 및 기타 변수 부분을 각각의 경우마다 달라지는 콘텐츠를 생성하는 프로그램 코드로 바꿀 수 있습니다.  
+ Notice that the template is an HTML page in which the variable parts have been replaced with program code. You could begin the design of such a page by writing a static prototype of the HTML page. You could then replace the table and other variable parts with program code that generates the content that varies from one occasion to the next.  
   
- 응용 프로그램에서 템플릿을 사용하면 출력의 최종 형식을 일련의 긴 쓰기 문에서 확인하는 것보다 더 쉽게 확인할 수 있습니다.  더 쉽고 안정적으로 출력 형식을 변경할 수 있습니다.  
+ Using a template in your application makes it is easier to see the final form of the output than you could in, for example, a long series of write statements. Making changes to the form of the output is easier and more reliable.  
   
-## 응용 프로그램에서 런타임 텍스트 템플릿 만들기  
+## <a name="creating-a-run-time-text-template-in-any-application"></a>Creating a Run-Time Text Template in any Application  
   
-#### 런타임 텍스트 템플릿을 만들려면  
+#### <a name="to-create-a-run-time-text-template"></a>To create a run-time text template  
   
-1.  솔루션 탐색기에서 프로젝트의 바로 가기 메뉴에서 선택  **추가**에서  **새 항목**.  
+1.  In Solution Explorer, on the shortcut menu of your project, choose **Add**, **New Item**.  
   
-2.  에  **새 항목 추가** 선택 대화 상자에서  **런타임 텍스트 서식 파일**.  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서는 **Common Items\\General** 아래에서 확인합니다.  
+2.  In the **Add New Item** dialog box, select **Runtime Text Template**. (In [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] look under **Common Items\General**.)  
   
-3.  템플릿 파일의 이름을 입력합니다.  
+3.  Type a name for your template file.  
   
     > [!NOTE]
-    >  템플릿 파일 이름은 생성된 코드에서 클래스 이름으로 사용되므로  공백이나 문장 부호를 포함해서는 안 됩니다.  
+    >  The template file name will be used as a class name in the generated code. Therefore, it should not have spaces or punctuation.  
   
-4.  선택  **추가**.  
+4.  Choose **Add**.  
   
-     확장명이 **.tt**인 새 파일이 만들어집니다.  이 파일의 **사용자 지정 도구** 속성이 **TextTemplatingFilePreprocessor**로 설정됩니다.  다음 줄이 포함:  
+     A new file is created that has extension **.tt**. Its **Custom Tool** property is set to **TextTemplatingFilePreprocessor**. It contains the following lines:  
   
     ```  
     <#@ template language="C#" #>  
@@ -71,37 +88,37 @@ This report is Company Confidential.
     <#@ import namespace="System.Collections.Generic" #>  
     ```  
   
-## 기존 파일을 런타임 템플릿으로 변환  
- 템플릿을 만드는 좋은 방법은 기존 출력 예제를 변환하는 것입니다.  예를 들어, 응용 프로그램에서 HTML 파일을 생성할 경우 일반 HTML 파일을 만들어 시작할 수 있습니다.  파일이 올바르게 작동하고 파일의 모양이 올바른지 확인한 다음  파일을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트에 포함하고 템플릿으로 변환합니다.  
+## <a name="converting-an-existing-file-to-a-run-time-template"></a>Converting an Existing File to a Run-Time Template  
+ A good way to create a template is to convert an existing example of the output. For example, if your application will generate HTML files, you can start by creating a plain HTML file. Make sure that it works correctly and that its appearance is correct. Then include it into your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project and convert it to a template.  
   
-#### 기존 텍스트 파일을 런타임 템플릿으로 변환하려면  
+#### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>To convert an existing text file to a run-time template  
   
-1.  파일을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트에 포함합니다.  솔루션 탐색기에서 프로젝트의 바로 가기 메뉴에서 선택  **추가**에서  **기존 항목**.  
+1.  Include the file into your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project. In Solution Explorer, on the shortcut menu of the project, choose **Add**, **Existing Item**.  
   
-2.  파일의 **사용자 지정 도구** 속성을 **TextTemplatingFilePreprocessor**로 설정합니다.  솔루션 탐색기에서 해당 파일의 바로 가기 메뉴에서 선택  **속성이**.  
+2.  Set the file's **Custom Tools** property to **TextTemplatingFilePreprocessor**. In Solution Explorer, on the shortcut menu of the file, choose **Properties**.  
   
     > [!NOTE]
-    >  이 속성이 이미 설정되어 있는 경우 **TextTemplatingFileGenerator**가 아니라 **TextTemplatingFilePreprocessor**인지 확인합니다.  이 현상은 확장명이 이미 **.tt**인 파일을 포함하는 경우 발생할 수 있습니다.  
+    >  If the property is already set, make sure that it is **TextTemplatingFilePreprocessor** and not **TextTemplatingFileGenerator**. This can happen if you include a file that already has the extension **.tt**.  
   
-3.  파일 확장명을 **.tt**로 변경합니다.  이는 선택적 단계이지만 잘못된 편집기에서 파일을 여는 것을 방지하는 데 도움이 됩니다.  
+3.  Change the file name extension to **.tt**. Although this step is optional, it helps you avoid opening the file in an incorrect editor.  
   
-4.  파일 이름의 주 부분에서 공백이나 문장 부호를 모두 제거합니다.  예를 들어, "My Web Page.tt"는 잘못되었지만 "MyWebPage.tt"는 올바릅니다.  파일 이름은 생성된 코드에서 클래스 이름으로 사용됩니다.  
+4.  Remove any spaces or punctuation from the main part of the file name. For example "My Web Page.tt" would be incorrect, but "MyWebPage.tt" is correct. The file name will be used as a class name in the generated code.  
   
-5.  파일의 시작 부분에 다음 코드를 삽입합니다.  Visual Basic 프로젝트에서 작업하는 경우에는 "C\#"을 "VB"로 바꿉니다.  
+5.  Insert the following line at the beginning of the file. If you are working in a Visual Basic project, replace "C#" with "VB".  
   
      `<#@ template language="C#" #>`  
   
-## 런타임 템플릿의 콘텐츠  
+## <a name="the-content-of-the-run-time-template"></a>The Content of the Run-Time Template  
   
-### 템플릿 지시문  
- 템플릿의 첫 줄을 다음과 같이 파일을 만들 당시와 동일하게 유지합니다.  
+### <a name="template-directive"></a>Template directive  
+ Keep the first line of the template as it was when you created the file:  
   
  `<#@ template language="C#" #>`  
   
- language 매개 변수는 프로젝트의 언어에 따라 달라집니다.  
+ The language parameter will depend on the language of your project.  
   
-### 일반 콘텐츠  
- 응용 프로그램에서 생성하도록 할 텍스트를 포함하도록 **.tt** 파일을 편집합니다.  예를 들면 다음과 같습니다.  
+### <a name="plain-content"></a>Plain content  
+ Edit the **.tt** file to contain the text that you want your application to generate. For example:  
   
 ```  
 <html><body>  
@@ -111,10 +128,10 @@ This report is Company Confidential.
 </body></html>  
 ```  
   
-### 포함된 프로그램 코드  
- `<#`과 `#>` 사이에 프로그램 코드를 삽입할 수 있습니다.  예를 들면 다음과 같습니다.  
+### <a name="embedded-program-code"></a>Embedded program code  
+ You can insert program code between `<#` and `#>`. For example:  
   
-```c#  
+```cs  
 <table>  
     <# for (int i = 1; i <= 10; i++)  
        { #>  
@@ -124,7 +141,7 @@ This report is Company Confidential.
  </table>  
 ```  
   
-```vb#  
+```vb  
 <table>  
 <#  
     For i As Integer = 1 To 10  
@@ -138,54 +155,54 @@ This report is Company Confidential.
   
 ```  
   
- 문은 `<# ... #>` 사이에 삽입되고 식은 `<#= ... #>` 사이에 삽입됩니다.  자세한 내용은 [T4 텍스트 템플릿 쓰기](../modeling/writing-a-t4-text-template.md)을 참조하십시오.  
+ Notice that statements are inserted between `<# ... #>` and expressions are inserted between `<#= ... #>`. For more information, see [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md).  
   
-## 템플릿 사용  
+## <a name="using-the-template"></a>Using the Template  
   
-### 템플릿에서 빌드된 코드  
- **.tt** 파일을 저장할 때마다 보조 **.cs** 또는 **.vb** 파일이 생성됩니다.  솔루션 탐색기에서 이 파일을 보려면 **.tt** 파일 노드를 확장합니다.  Visual Basic 프로젝트에서는 솔루션 탐색기 도구 모음에서 **모든 파일 표시**를 클릭한 후 노드를 확장할 수 있습니다.  
+### <a name="the-code-built-from-the-template"></a>The code built from the template  
+ Whenever you save the **.tt** file, a subsidiary **.cs** or **.vb** file will be generated. To see this file in Solution Explorer, expand the **.tt** file node. In a Visual Basic project, you will be able to expand the node after you click **Show All Files** in the Solution Explorer toolbar.  
   
- 이 보조 파일에는 `TransformText()`라는 메서드가 포함된 partial 클래스가 들어 있습니다.  응용 프로그램에서 이 메서드를 호출할 수 있습니다.  
+ Notice that this subsidiary file contains a partial class that contains a method called `TransformText()`. You can call this method from your application.  
   
-### 런타임에 텍스트 생성  
- 응용 프로그램 코드에서 다음과 같은 호출을 사용하여 템플릿의 내용을 생성할 수 있습니다.  
+### <a name="generating-text-at-run-time"></a>Generating text at run time  
+ In your application code, you can generate the content of your template using a call like this:  
   
-```c#  
+```cs  
 MyWebPage page = new MyWebPage();  
 String pageContent = page.TransformText();  
 System.IO.File.WriteAllText("outputPage.html", pageContent);  
   
 ```  
   
-```vb#  
+```vb  
 Dim page = New My.Templates.MyWebPage  
 Dim pageContent = page.TransformText()  
 System.IO.File.WriteAllText("outputPage.html", pageContent)  
   
 ```  
   
- 생성된 클래스를 특정 네임스페이스에 두려면 텍스트 템플릿 파일의 **사용자 지정 도구 네임스페이스** 속성을 설정합니다.  
+ To place the generated class in a particular namespace, set the **Custom Tool Namespace** property of the text template file.  
   
-### 런타임 텍스트 템플릿 디버깅  
- 디버깅 하 고 런타임 텍스트 서식 파일 같은 방식으로 일반 코드를 테스트 합니다.  
+### <a name="debugging-runtime-text-templates"></a>Debugging Runtime Text Templates  
+ Debug and test runtime text templates in the same way as ordinary code.  
   
- 텍스트 서식 파일에는 중단점을 설정할 수 있습니다.  디버깅 모드에서 Visual Studio 응용 프로그램을 시작 하는 경우, 코드를 단계별로 실행 하 고 일반적인 방법으로 조사식 식 평가 수 있습니다.  
+ You can set a breakpoint in a text template. If you start the application in debugging mode from Visual Studio, you can step through the code and evaluate watch expressions in the usual way.  
   
-### 생성자에 매개 변수 전달  
- 일반적으로 템플릿에서는 응용 프로그램의 다른 부분에서 데이터를 가져와야 합니다.  이 작업을 쉽게 수행하기 위해 템플릿에서 빌드된 코드는 partial 클래스입니다.  프로젝트의 다른 파일에 동일한 클래스의 또 다른 부분을 만들 수 있습니다.  이 파일에는 템플릿에 포함된 코드와 응용 프로그램의 나머지 부분에서 액세스할 수 있는 매개 변수, 속성 및 함수와 함께 생성자가 포함될 수 있습니다.  
+### <a name="passing-parameters-in-the-constructor"></a>Passing parameters in the constructor  
+ Usually a template must import some data from other parts of the application. To make this easy, the code built by the template is a partial class. You can create another part of the same class in another file in your project. That file can include a constructor with parameters, properties and functions that can accessed both by the code that is embedded in the template, and by the rest of the application.  
   
- 예를 들어, 별도의 파일 **MyWebPageCode.cs**를 만들 수 있습니다.  
+ For example, you could create a separate file **MyWebPageCode.cs**:  
   
-```c#  
+```cs  
 partial class MyWebPage  
 {  
     private MyData m_data;  
     public MyWebPage(MyData data) { this.m_data = data; }}  
 ```  
   
- 템플릿 파일 **MyWebPage.tt**에서 다음 코드를 작성할 수 있습니다.  
+ In your template file **MyWebPage.tt**, you could write:  
   
-```c#  
+```cs  
 <h2>Sales figures</h2>  
 <table>  
 <# foreach (MyDataItem item in m_data.Items)   
@@ -198,19 +215,19 @@ partial class MyWebPage
 </table>  
 ```  
   
- 응용 프로그램에서 이 템플릿을 사용하려면  
+ To use this template in the application:  
   
-```c#  
+```cs  
 MyData data = ...;  
 MyWebPage page = new MyWebPage(data);  
 String pageContent = page.TransformText();  
 System.IO.File.WriteAllText("outputPage.html", pageContent);  
 ```  
   
-#### Visual Basic의 생성자 매개 변수  
- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서는 **MyWebPageCode.vb**라는 별도의 파일에 다음 내용이 포함되어 있습니다.  
+#### <a name="constructor-parameters-in-visual-basic"></a>Constructor parameters in Visual Basic  
+ In [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], the separate file **MyWebPageCode.vb** contains:  
   
-```vb#  
+```vb  
 Namespace My.Templates  
   Partial Public Class MyWebPage  
     Private m_data As MyData  
@@ -221,9 +238,9 @@ Namespace My.Templates
 End Namespace  
 ```  
   
- 템플릿 파일에는 다음 내용이 포함되어 있습니다.  
+ The template file could contain:  
   
-```vb#  
+```vb  
 <#@ template language="VB" #>  
 <html><body>  
 <h1>Sales for January</h2>  
@@ -242,9 +259,9 @@ This report is Company Confidential.
   
 ```  
   
- 그리고 다음과 같이 생성자에 매개 변수를 전달하여 템플릿이 호출됩니다.  
+ And the template would be invoked by passing the parameter in the constructor:  
   
-```vb#  
+```vb  
 Dim data = New My.Templates.MyData  
     ' Add data values here ....  
 Dim page = New My.Templates.MyWebPage(data)  
@@ -253,55 +270,55 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
   
 ```  
   
-#### 템플릿 속성에 데이터 전달  
- 데이터를 템플릿에 전달하는 다른 방법은 공용 속성을 partial 클래스 정의의 템플릿 클래스에 추가하는 것입니다.  응용 프로그램에서 `TransformText()`를 호출하기 전에 속성을 설정할 수 있습니다.  
+#### <a name="passing-data-in-template-properties"></a>Passing data in template properties  
+ An alternative method of passing data to the template is to add public properties to the template class in a partial class definition. Your application can set the properties before invoking `TransformText()`.  
   
- 부분 정의의 템플릿 클래스에 필드를 추가할 수도 있습니다.  이렇게 하면 템플릿을 연속으로 실행하는 사이에 데이터를 전달할 수 있습니다.  
+ You can also add fields to your template class in a partial definition. This would enable you to pass data between successive executions of the template.  
   
-### 코드에 partial 클래스 사용  
- 대부분의 개발자는 템플릿에서 큰 코드 본문을 작성하지 않는 쪽을 선호합니다.  대신 템플릿 파일과 이름이 동일한 partial 클래스에 메서드를 정의합니다.  템플릿에서 해당 메서드를 호출합니다.  이런 방식으로 템플릿에서 대상 출력 문자열이 어떻게 표시될지 분명하게 보여 줍니다.  결과 모양에 대한 논의를 표시되는 데이터를 만드는 논리와 분리할 수 있습니다.  
+### <a name="use-partial-classes-for-code"></a>Use partial classes for code  
+ Many developers prefer to avoid writing large bodies of code in templates. Instead, define methods in a partial class that has the same name as the template file. Call those methods from the template. In this way, the template shows you more clearly what the target output string will look like. Discussions about the appearance of the result can be separated from the logic of creating the data that it displays.  
   
-### 어셈블리 및 참조  
- 템플릿 코드에서 .NET 어셈블리나 **System.Xml.dll** 등의 다른 어셈블리를 참조하도록 하려면 프로젝트의 **참조**에 일반적인 방식으로 어셈블리를 추가해야 합니다.  
+### <a name="assemblies-and-references"></a>Assemblies and references  
+ If you want your template code to reference a .NET or other assembly such as **System.Xml.dll**, you should add it to your project's **References** in the usual manner.  
   
- `using` 문과 동일한 방식으로 네임스페이스를 가져오려면 `import` 지시문을 사용하여 가져올 수 있습니다.  
+ If you want to import a namespace in the same way as a `using` statement, you can do this with the `import` directive:  
   
 ```  
 <#@ import namespace="System.Xml" #>  
 ```  
   
- 이러한 지시문은 파일의 시작 부분에서 `<#@template` 지시문 바로 뒤에 배치되어야 합니다.  
+ These directives must be placed at the beginning of the file, immediately after the `<#@template` directive.  
   
-### 공유 콘텐츠  
- 몇몇 템플릿에서 공유되는 텍스트가 있는 경우 이 텍스트를 별도의 파일에 두고 이 텍스트가 나타나야 하는 각 파일에 포함할 수 있습니다.  
+### <a name="shared-content"></a>Shared content  
+ If you have text that is shared between several templates, you can place it in a separate file and include it in each file in which it should appear:  
   
 ```  
 <#@include file="CommonHeader.txt" #>  
 ```  
   
- 포함된 콘텐츠에는 프로그램 코드와 일반 텍스트가 혼합되어 있을 수 있으며 다른 include 지시문 및 다른 지시문이 포함될 수 있습니다.  
+ The included content can contain any mixture of program code and plain text, and it can contain other include directives and other directives.  
   
- include 지시문은 템플릿 파일이나 포함된 파일의 텍스트 내의 어느 곳에서든 사용할 수 있습니다.  
+ The include directive can be used anywhere within the text of a template file or an included file.  
   
-### 런타임 텍스트 템플릿 간 상속  
- 기본 클래스 템플릿\(추상 클래스 템플릿일 수 있음\)을 작성하여 런타임 템플릿 간에 콘텐츠를 공유할 수 있습니다.  사용의 `inherits` 매개 변수는 `<@#template#>` 다른 런타임 템플릿 클래스를 참조 하는 지시문입니다.  
+### <a name="inheritance-between-run-time-text-templates"></a>Inheritance between Run-Time Text Templates  
+ You can share content between run-time templates by writing a base class template, which can be abstract. Use the `inherits` parameter of the `<@#template#>` directive to reference another runtime template class.  
   
-#### 상속 패턴: 기본 메서드의 조각  
- 다음에 나오는 예제에 사용되는 패턴에서 다음과 같은 사항을 확인합니다.  
+#### <a name="inheritance-pattern-fragments-in-base-methods"></a>Inheritance pattern: Fragments in Base Methods  
+ In the pattern used in the example that follows, notice the following points:  
   
--   기본 클래스 `SharedFragments`는 클래스 기능 블록 `<#+ ... #>` 내에 메서드를 정의합니다.  
+-   The base class `SharedFragments` defines methods within class feature blocks `<#+ ... #>`.  
   
--   기본 클래스에는 일반 텍스트가 포함되어 있지 않습니다.  대신 기본 클래스의 모든 텍스트 블록이 클래스 기능 메서드 내부에서 사용됩니다.  
+-   The base class contains no free text. Instead, all its text blocks occur inside the class feature methods.  
   
--   파생 클래스는 `SharedFragments`에 정의된 메서드를 호출합니다.  
+-   The derived class invokes the methods defined in `SharedFragments`.  
   
--   응용 프로그램은 파생 클래스의 `TextTransform()` 메서드를 호출하지만 기본 클래스 `SharedFragments`를 변환하지 않습니다.  
+-   The application calls the `TextTransform()` method of the derived class, but does not transform the base class `SharedFragments`.  
   
--   런타임 텍스트 템플릿을 기본 클래스와 파생 클래스는: 즉,에서  **사용자 지정 도구** 속성을 설정  **TextTemplatingFilePreprocessor**.  
+-   Both the base and derived classes are runtime text templates: that is, the **Custom Tool** property is set to **TextTemplatingFilePreprocessor**.  
   
  **SharedFragments.tt:**  
   
-```c#  
+```cs  
 <#@ template language="C#" #>  
 <#+  
 protected void SharedText(int n)  
@@ -317,7 +334,7 @@ protected void SharedText(int n)
   
  **MyTextTemplate1.tt:**  
   
-```c#  
+```cs  
 <#@ template language="C#" inherits="SharedFragments" #>  
 begin 1  
    <# SharedText(2); #>  
@@ -327,14 +344,14 @@ end 1
   
  **MyProgram.cs:**  
   
-```c#  
+```cs  
 ...   
 MyTextTemplate1 t1  = new MyTextTemplate1();  
 string result = t1.TransformText();  
 Console.WriteLine(result);  
 ```  
   
- **결과 출력:**  
+ **The resulting output:**  
   
 ```  
 begin 1  
@@ -342,12 +359,12 @@ begin 1
 end 1  
 ```  
   
-#### 상속 패턴: 기본 본문의 텍스트  
- 템플릿 상속을 사용하는 이 다른 방법에서는 대량의 텍스트가 기본 템플릿에 정의됩니다.  파생 템플릿에서는 기본 콘텐츠에 맞는 데이터 및 텍스트 조각을 제공합니다.  
+#### <a name="inheritance-pattern-text-in-base-body"></a>Inheritance Pattern: Text in Base Body  
+ In this alternative approach to using template inheritance, the bulk of the text is defined in the base template. The derived templates provide data and text fragments that fit into the base content.  
   
  **AbstractBaseTemplate1.tt:**  
   
-```c#  
+```cs  
 <#@ template language="C#" #>  
   
 Here is the description for this derived template:  
@@ -371,7 +388,7 @@ End of common template.
   
  **DerivedTemplate1.tt:**  
   
-```c#  
+```cs  
 <#@ template language="C#" inherits="AbstractBaseTemplate1" #>  
 <#   
   // Set the base template properties:  
@@ -396,16 +413,16 @@ protected override void SpecificFragment(int n)
   
 ```  
   
- **응용 프로그램 코드:**  
+ **Application code:**  
   
-```c#  
+```cs  
 ...   
 DerivedTemplate1 t1 = new DerivedTemplate1();  
 string result = t1.TransformText();  
 Console.WriteLine(result);  
 ```  
   
- **결과 출력:**  
+ **Resulting output:**  
   
 ```  
 Here is the description for this derived template:  
@@ -417,12 +434,12 @@ End of common template.
 End material for DerivedTemplate1.  
 ```  
   
-## 관련 항목  
- 디자인 타임 템플릿: 템플릿을 사용하여 응용 프로그램의 일부가 되는 코드를 생성하려면 [T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성](../modeling/design-time-code-generation-by-using-t4-text-templates.md)을 참조하십시오.  
+## <a name="related-topics"></a>Related Topics  
+ Design Time Templates: If you want to use a template to generate code that becomes part of your application, see [Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md).  
   
- 컴파일 타임에 템플릿과 해당 콘텐츠 위치 결정 됩니다 모든 응용 프로그램에서 런타임 서식 파일을 사용할 수 있습니다.  그러나 런타임에 변경되는 템플릿에서 텍스트를 생성하는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension을 작성하려면 [VS 확장에서 텍스트 변환 호출](../modeling/invoking-text-transformation-in-a-vs-extension.md)을 참조하십시오.  
+ Runtime templates can be used in any application where the templates and their content are determined at compile time. But if you want to write a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extension that generates text from templates that change at run time, see [Invoking Text Transformation in a VS Extension](../modeling/invoking-text-transformation-in-a-vs-extension.md).  
   
-## 참고 항목  
- [코드 생성 및 T4 텍스트 템플릿](../modeling/code-generation-and-t4-text-templates.md)   
- [T4 텍스트 템플릿 쓰기](../modeling/writing-a-t4-text-template.md)   
- [이해 T4: 텍스트 템플릿 Oleg 동기화가 전처리](http://www.olegsych.com/2009/09/t4-preprocessed-text-templates/)
+## <a name="see-also"></a>See Also  
+ [Code Generation and T4 Text Templates](../modeling/code-generation-and-t4-text-templates.md)   
+ [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md)   
+ [Understanding T4: Preprocessed Text Templates by Oleg Sych](http://www.olegsych.com/2009/09/t4-preprocessed-text-templates/)

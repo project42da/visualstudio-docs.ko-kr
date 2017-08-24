@@ -1,72 +1,89 @@
 ---
-title: "METADATA_ADDRESS_RETVAL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "METADATA_ADDRESS_RETVAL"
-helpviewer_keywords: 
-  - "METADATA_ADDRESS_RETVAL 구조"
+title: METADATA_ADDRESS_RETVAL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- METADATA_ADDRESS_RETVAL
+helpviewer_keywords:
+- METADATA_ADDRESS_RETVAL structure
 ms.assetid: 5b0ec0fb-84b3-4ce7-8e24-becf3d881d7d
 caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# METADATA_ADDRESS_RETVAL
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 16002fe5b37c20797d74b0cd8e33cb99fbff2686
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 구조는 메서드 또는 함수에서 반환 값을 나타냅니다.  
+---
+# <a name="metadataaddressretval"></a>METADATA_ADDRESS_RETVAL
+This structure represents a return value from a method or function.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_RETVAL {  
-   _mdToken tokMethod;  
-   DWORD    dwCorType;  
-   DWORD    dwSigSize;  
-   BYTE     rgSig[10];  
+   _mdToken tokMethod;  
+   DWORD    dwCorType;  
+   DWORD    dwSigSize;  
+   BYTE     rgSig[10];  
 } METADATA_ADDRESS_RETVAL;  
 ```  
   
-```c#  
+```cs  
 public struct METADATA_ADDRESS_RETVAL {  
-   public int    tokMethod;  
-   public uint   dwCorType;  
-   public uint   dwSigSize;  
-   public byte[] rgSig;  
+   public int    tokMethod;  
+   public uint   dwCorType;  
+   public uint   dwSigSize;  
+   public byte[] rgSig;  
 }  
 ```  
   
-## 용어  
+## <a name="terms"></a>Terms  
  tokMethod  
- 메서드의 반환 값이에 대 한 ID입니다.  
+ The ID of the method this return value is for.  
   
  dwCorType  
- 반환 값의 기본 형식입니다. 이 값은에서 값의 `CorElementType` 열거형에 정의 된는 [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK corhdr.h 파일입니다.  
+ The base type of return value. This is a value from the `CorElementType` enumeration defined in the [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK corhdr.h file.  
   
  dwSigSize  
- 반환 값 서명의 크기 \(저장 된 대로 `rgSig`\).  
+ The size of the return value signature (as stored in `rgSig`).  
   
  rgSig  
- 바이트 배열을 반환 값의 시그니처를 형성 합니다.  
+ An array of bytes forming the signature of the return value.  
   
-## 설명  
- 이 구조에는 공용 구조체의 일부인는 [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 때 구조는 `dwKind` 필드는 `DEBUG_ADDRESS_UNION` 구조로 설정 된 `ADDRESS_KIND_RETVAL` \(의 값은 [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md) 열거형\)입니다.  
+## <a name="remarks"></a>Remarks  
+ This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_RETVAL` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
   
-## 요구 사항  
- 헤더: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
- [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md)
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
+ [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

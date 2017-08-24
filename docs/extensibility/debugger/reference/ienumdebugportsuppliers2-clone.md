@@ -1,51 +1,68 @@
 ---
-title: "IEnumDebugPortSuppliers2::Clone | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugPortSuppliers2::Clone"
-helpviewer_keywords: 
-  - "IEnumDebugPortSuppliers2::Clone"
+title: IEnumDebugPortSuppliers2::Clone | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumDebugPortSuppliers2::Clone
+helpviewer_keywords:
+- IEnumDebugPortSuppliers2::Clone
 ms.assetid: 98b9914d-4f32-44da-b422-68830bce44b4
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IEnumDebugPortSuppliers2::Clone
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 56e5d671f60a1560c86662d19cde4e3cdb7d4663
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-현재 열거를 별도 개체로 복사본을 반환 합니다.  
+---
+# <a name="ienumdebugportsuppliers2clone"></a>IEnumDebugPortSuppliers2::Clone
+Returns a copy of the current enumeration as a separate object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Clone(  
-   IEnumDebugPortSuppliers2** ppEnum  
+   IEnumDebugPortSuppliers2** ppEnum  
 );  
 ```  
   
-```c#  
+```cs  
 int Clone(  
-   out IEnumDebugPortSuppliers2 ppEnum  
+   out IEnumDebugPortSuppliers2 ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppEnum`  
- \[out\] 이 열거형에서 별도 개체로 복사본을 반환 합니다.  
+ [out] Returns a copy of this enumeration as a separate object.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 열거형의 복사본은 원본과 동일한 상태가이 메서드가 호출 될 때 있습니다.  그러나 복사본과 원본의 상태는 별도 및 개별적으로 변경할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ The copy of the enumeration has the same state as the original at the time this method is called. However, the copy's and the original's states are separate and can be changed individually.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)

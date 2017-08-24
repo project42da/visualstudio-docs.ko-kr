@@ -1,65 +1,82 @@
 ---
-title: "IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugDocumentChecksum2::GetChecksumAndAlgorithmI"
-  - "GetChecksumAndAlgorithmI"
+title: IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugDocumentChecksum2::GetChecksumAndAlgorithmI
+- GetChecksumAndAlgorithmI
 ms.assetid: 25efef99-0ef3-4332-a752-607605fc6e67
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugDocumentChecksum2::GetChecksumAndAlgorithmId
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 26191dce0d929893bd929c7cc5cdf44d2c7e0b38
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-최대 바이트 수를 지정 된 문서 체크섬 및 알고리즘 식별자를 검색 합니다.  
+---
+# <a name="idebugdocumentchecksum2getchecksumandalgorithmid"></a>IDebugDocumentChecksum2::GetChecksumAndAlgorithmId
+Retrieves the document checksum and algorithm identifier given the maximum number of bytes to use.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetChecksumAndAlgorithmId(   
-   GUID  *pRetVal,  
-   ULONG cMaxBytes,  
-   BYTE  *pChecksum,  
-   ULONG *pcNumBytes  
+   GUID  *pRetVal,  
+   ULONG cMaxBytes,  
+   BYTE  *pChecksum,  
+   ULONG *pcNumBytes  
 );  
 ```  
   
-```c#  
+```cs  
 public int GetChecksumAndAlgorithmId(   
-   out Guid pRetVal,  
-   uint     cMaxBytes,  
-   out byte pChecksum,  
-   out uint pcNumBytes  
+   out Guid pRetVal,  
+   uint     cMaxBytes,  
+   out byte pChecksum,  
+   out uint pcNumBytes  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pRetVal`  
- \[out\] 체크섬 알고리즘에 대 한 고유 식별자입니다.  
+ [out] Unique identifier for the checksum algorithm.  
   
  `cMaxBytes`  
- \[in\] 최대 바이트에 체크섬을 사용할 수 있습니다.  
+ [in] Maximum number of bytes to be used for the checksum.  
   
  `pChecksum`  
- \[out\] 체크섬 값입니다.  
+ [out] Value of the checksum.  
   
  `pcNumBytes`  
- \[out\] 실제 검사 값을 사용 하는 바이트 수입니다.  
+ [out] Actual number of bytes used for the checksum.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 예제  
- 다음 예제에서는 체크섬 및 문서에 대 한 알고리즘에이 메서드를 사용 합니다.  
+## <a name="example"></a>Example  
+ The following example uses this method to get the checksum and algorithm for a document.  
   
 ```cpp#  
 HRESULT CDebugCodeContext::GetDocumentChecksumAndAlgorithmId(GUID *pguidAlgorithm, BYTE **ppChecksum, ULONG *pcNumBytes)  
@@ -124,5 +141,5 @@ HRESULT CDebugCodeContext::GetDocumentChecksumAndAlgorithmId(GUID *pguidAlgorith
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentChecksum2](../../../extensibility/debugger/reference/idebugdocumentchecksum2.md)

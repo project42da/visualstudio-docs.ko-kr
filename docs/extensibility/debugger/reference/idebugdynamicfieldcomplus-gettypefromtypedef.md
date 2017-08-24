@@ -1,62 +1,79 @@
 ---
-title: "IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetTypeFromTypeDef"
-  - "IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef"
+title: IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetTypeFromTypeDef
+- IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
 ms.assetid: 7f6cd3d3-f4da-4893-be91-8dd104be8010
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f26fb8adaa2745321dbd648823a3fceea40b408d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-해당 토큰이 제공 하는 형식을 검색 합니다.  
+---
+# <a name="idebugdynamicfieldcomplusgettypefromtypedef"></a>IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
+Retrieves a type given its token.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetTypeFromTypeDef(  
-   ULONG32       ulAppDomainID,  
-   GUID          guidModule,  
-   _mdToken      tokClass,  
-   IDebugField** ppType  
+   ULONG32       ulAppDomainID,  
+   GUID          guidModule,  
+   _mdToken      tokClass,  
+   IDebugField** ppType  
 );  
 ```  
   
-```c#  
+```cs  
 int GetTypeFromTypeDef(  
-   uint            ulAppDomainID,  
-   Guid            guidModule,  
-   int             tokClass,  
-   out IDebugField ppType  
+   uint            ulAppDomainID,  
+   Guid            guidModule,  
+   int             tokClass,  
+   out IDebugField ppType  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- \[in\] 응용 프로그램 도메인의 식별자입니다.  
+ [in] Identifier of the application domain.  
   
  `guidModule`  
- \[in\] 모듈의 고유 식별자입니다.  
+ [in] Unique identifier of the module.  
   
  `tokClass`  
- \[in\] 토큰은 형식을 나타냅니다.  
+ [in] Token that represents the type.  
   
  `ppType`  
- \[out\] 반환 된 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 형식을 포함 하는 개체입니다.  
+ [out] Returns an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object that contains the type.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)

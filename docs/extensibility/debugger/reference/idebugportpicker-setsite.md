@@ -1,49 +1,66 @@
 ---
-title: "IDebugPortPicker::SetSite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugPortPicker::SetSite"
+title: IDebugPortPicker::SetSite | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugPortPicker::SetSite
 ms.assetid: 7319e187-adfe-4b3f-aec9-521356fb5a8a
 caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# IDebugPortPicker::SetSite
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e9b83b5b507b266c860777007e79670d6beebfb9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-서비스 공급자를 설정합니다.  
+---
+# <a name="idebugportpickersetsite"></a>IDebugPortPicker::SetSite
+Sets the service provider.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT SetSite(  
-   IServiceProvider * pSP  
+   IServiceProvider * pSP  
 );  
 ```  
   
-```c#  
+```cs  
 public int SetSite(  
-   IServiceProvider pSP  
+   IServiceProvider pSP  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pSP`  
- \[in\] 서비스 공급자의 인터페이스에 대 한 참조입니다.  
+ [in] Reference to the interface of the service provider.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 다른 메서드가 호출 되기 전에이 메서드를 호출 합니다.  
+## <a name="remarks"></a>Remarks  
+ This method will be called before any other methods are called.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

@@ -1,52 +1,69 @@
 ---
-title: "IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie"
-helpviewer_keywords: 
-  - "IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie"
+title: IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
+helpviewer_keywords:
+- IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
 ms.assetid: 07b20866-e598-4783-9ecc-6aa8625c8804
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 04c6586dd35cb8a740b906679901c281e03fb21f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-차단된 예외 처리가 완료 될 때 호출 됩니다.  
+---
+# <a name="idebuginterceptexceptioncompleteevent2getinterceptcookie"></a>IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
+Called when the processing of an intercepted exception has completed.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetInterceptCookie(  
-   UINT64* pqwCookie  
+   UINT64* pqwCookie  
 );  
 ```  
   
-```c#  
+```cs  
 int GetInterceptCookie(  
-   out ulong pqwCookie  
+   out ulong pqwCookie  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pqwCookie`  
- \[out\] 차단 된 예외와 관련 된 고유 값입니다.  
+ [out] Unique value that is associated with the exception that was intercepted.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns error code.  
   
-## 설명  
- 후는 [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) 메서드를 처리 하는 차단 완료 했습니다,이 전송의 [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) 이벤트입니다.  처리기를 사용할 수 있습니다의 `GetInterceptCookie` 예외와 연결 된 고유 값을 검색 하는 방법 \(전달 된 값은 `InterceptCurrentException` 메서드\).  
+## <a name="remarks"></a>Remarks  
+ After the [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) method has completed handling of an intercepted exception, it sends the [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) event. The handler can use the `GetInterceptCookie` method to retrieve the unique value associated with the exception (the same value passed to the `InterceptCurrentException` method).  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)   
  [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)

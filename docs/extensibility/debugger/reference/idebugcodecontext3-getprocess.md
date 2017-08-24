@@ -1,49 +1,66 @@
 ---
-title: "IDebugCodeContext3::GetProcess | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugCodeContext3::GetProcess"
+title: IDebugCodeContext3::GetProcess | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugCodeContext3::GetProcess
 ms.assetid: e082e494-2255-4d9d-a5a9-6dadd904bea8
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugCodeContext3::GetProcess
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 16cdc07635aa778f6372bba3fa6066568ea038b8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-디버그 프로세스를 인터페이스에 대 한 참조를 검색합니다.  
+---
+# <a name="idebugcodecontext3getprocess"></a>IDebugCodeContext3::GetProcess
+Retrieves a reference to the interface of the debug process.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetProcess(   
-   IDebugProcess2 **ppProcess  
+   IDebugProcess2 **ppProcess  
 );  
 ```  
   
-```c#  
+```cs  
 public int GetProcess(   
-   out IDebugProcess2 ppProcess  
+   out IDebugProcess2 ppProcess  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppProcess`  
- \[out\] 디버그 프로세스 인터페이스에 대 한 참조입니다.  
+ [out] Reference to the debug process interface.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 예제  
- 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CDebugCodeContext** 를 노출 하는 개체는 [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) 인터페이스.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugCodeContext** object that exposes the [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) interface.  
   
 ```cpp#  
 HRESULT CDebugCodeContext::GetProcess(IDebugProcess2** ppProcess)  
@@ -65,5 +82,5 @@ Error:
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCodeContext3](../../../extensibility/debugger/reference/idebugcodecontext3.md)

@@ -1,86 +1,103 @@
 ---
-title: "IDebugProgramProvider2::WatchForProviderEvents | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramProvider2::WatchForProviderEvents"
-helpviewer_keywords: 
-  - "IDebugProgramProvider2::WatchForProviderEvents"
+title: IDebugProgramProvider2::WatchForProviderEvents | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramProvider2::WatchForProviderEvents
+helpviewer_keywords:
+- IDebugProgramProvider2::WatchForProviderEvents
 ms.assetid: 2eb93653-b5fb-45b6-b136-56008c5d25ef
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# IDebugProgramProvider2::WatchForProviderEvents
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 980c5a8626c7694c69086e7589c9da509669189f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-프로세스를 포트 이벤트에 알 수 있습니다.  
+---
+# <a name="idebugprogramprovider2watchforproviderevents"></a>IDebugProgramProvider2::WatchForProviderEvents
+Allows the process to be notified of port events.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT WatchForProviderEvents(  
-   PROVIDER_FLAGS       Flags,  
-   IDebugDefaultPort2*  pPort,  
-   AD_PROCESS_ID        processId,  
-   CONST_GUID_ARRAY     EngineFilter,  
-   REFGUID              guidLaunchingEngine,  
-   IDebugPortNotify2*   pEventCallback  
+HRESULT WatchForProviderEvents(  
+   PROVIDER_FLAGS       Flags,  
+   IDebugDefaultPort2*  pPort,  
+   AD_PROCESS_ID        processId,  
+   CONST_GUID_ARRAY     EngineFilter,  
+   REFGUID              guidLaunchingEngine,  
+   IDebugPortNotify2*   pEventCallback  
 );  
 ```  
   
-```c#  
-int WatchForProviderEvents(  
-   enum_PROVIDER_FLAGS   Flags,  
-   IDebugDefaultPort2    pPort,  
-   AD_PROCESS_ID         ProcessId,  
-   CONST_GUID_ARRAY      EngineFilter,  
-   ref Guid              guidLaunchingEngine,  
-   IDebugPortNotify2     pEventCallback  
+```cs  
+int WatchForProviderEvents(  
+   enum_PROVIDER_FLAGS   Flags,  
+   IDebugDefaultPort2    pPort,  
+   AD_PROCESS_ID         ProcessId,  
+   CONST_GUID_ARRAY      EngineFilter,  
+   ref Guid              guidLaunchingEngine,  
+   IDebugPortNotify2     pEventCallback  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Flags`  
- \[in\] 플래그의 조합에서 [PROVIDER\_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) 열거형입니다.  다음 플래그는이 호출에 대 한 일반적인 있습니다.  
+ [in] A combination of flags from the [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) enumeration. The following flags are typical for this call:  
   
-|플래그|설명|  
-|---------|--------|  
-|`PFLAG_REMOTE_PORT`|호출자가 원격 컴퓨터에서 실행 중입니다.|  
-|`PFLAG_DEBUGGEE`|호출자를 현재 디버깅 되 고 있습니다 \(마샬링 정보를 각 노드에 대 한 반환\).|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|호출자가 연결 하지만 여 디버거를 시작할 수 없습니다.|  
-|`PFLAG_REASON_WATCH`|호출자가 이벤트를 조사 하려고 합니다.  이 플래그를 설정 하지 않은 경우.  콜백 이벤트를 제거 하 고 호출자에 게는 더 이상 알림을 수신 합니다.|  
+|Flag|Description|  
+|----------|-----------------|  
+|`PFLAG_REMOTE_PORT`|Caller is running on remote machine.|  
+|`PFLAG_DEBUGGEE`|Caller is currently being debugged (additional information about marshalling is returned for each node).|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Caller was attached to but not launched by the debugger.|  
+|`PFLAG_REASON_WATCH`|Caller wants to watch for events. If this flag is not set. then the callback event is removed and the caller no longer receives notifications.|  
   
  `pPort`  
- \[in\] 호출 프로세스가 포트에서 실행 됩니다.  
+ [in] The port the calling process is running on.  
   
  `processId`  
- \[in\] [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) 구조를 프로그램에 포함 되어 있는 프로세스의 ID를 보유 합니다.  
+ [in] An [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure holding the ID of the process that contains the program in question.  
   
  `EngineFilter`  
- \[in\] 배열 디버깅 엔진 프로세스와 연결 된 Guid입니다.  
+ [in] An array of GUIDs of debug engines associated with the process.  
   
  `guidLaunchingEngine`  
- \[in\] \(있는 경우\)이이 프로세스를 시작 하는 디버그 엔진의 GUID입니다.  
+ [in] GUID of the debug engine that launched this process (if any).  
   
  `pEventCallback`  
- \[in\] [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) 이벤트 알림을 받는 개체입니다.  
+ [in] An [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) object that receives the event notifications.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 호출자가이 메서드에 대 한 이전 호출에 설정 된 이벤트 처리기를 제거 하려는 경우 호출자가 해제 되지만 처음에는 같이 동일한 매개 변수 전달의 `PFLAG_REASON_WATCH` 플래그입니다.  
+## <a name="remarks"></a>Remarks  
+ When a caller wants to remove an event handler that was established with a previous call to this method, the caller passes the same parameters as it did the first time but leaves off the `PFLAG_REASON_WATCH` flag.  
   
-## 예제  
- 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CDebugEngine** 를 노출 하는 개체는 [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) 인터페이스.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugEngine** object that exposes the [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) interface.  
   
 ```cpp#  
 STDMETHODIMP CDebugEngine::WatchForProviderEvents(  
@@ -208,10 +225,10 @@ STDMETHODIMP CDebugEngine::WatchForProviderEvents(
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   
- [PROVIDER\_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
- [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md)   
- [CONST\_GUID\_ARRAY](../../../extensibility/debugger/reference/const-guid-array.md)   
+ [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)   
+ [CONST_GUID_ARRAY](../../../extensibility/debugger/reference/const-guid-array.md)   
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)   
  [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)

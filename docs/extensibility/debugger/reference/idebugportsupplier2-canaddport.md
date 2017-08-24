@@ -1,46 +1,63 @@
 ---
-title: "IDebugPortSupplier2::CanAddPort | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortSupplier2::CanAddPort"
-helpviewer_keywords: 
-  - "IDebugPortSupplier2::CanAddPort"
+title: IDebugPortSupplier2::CanAddPort | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortSupplier2::CanAddPort
+helpviewer_keywords:
+- IDebugPortSupplier2::CanAddPort
 ms.assetid: 41f69e0a-e82c-473d-8b7a-0c40fc5730fc
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugPortSupplier2::CanAddPort
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6b9e9de90ec43cbbb7a284dc3e79f14fbd87fbc9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-포트 공급자 새 포트를 추가 하는 방법을 확인 합니다.  
+---
+# <a name="idebugportsupplier2canaddport"></a>IDebugPortSupplier2::CanAddPort
+Verifies that a port supplier can add new ports.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT CanAddPort(   
-   void   
+HRESULT CanAddPort(   
+   void   
 );  
 ```  
   
-```c#  
+```cs  
 int CanAddPort();  
 ```  
   
-## 반환 값  
- 포트를 추가할 수 있는 경우 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 포트가이 포트 공급자를 추가할 수 있습니다 나타낼 수 있습니다.  
+## <a name="return-value"></a>Return Value  
+ If the port can be added, returns `S_OK`; otherwise, returns `S_FALSE` to indicate no ports can be added to this port supplier.  
   
-## 설명  
- 호출 하기 전에이 메서드를 호출 하 여 [포트 추가](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) 메서드를 추가 하는 시간이 많이 걸리는 작업이 될 수 있습니다 뿐만 아니라 포트 두 번째 방법은 만들어지기 때문입니다.  
+## <a name="remarks"></a>Remarks  
+ Call this method before calling the [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) method since the latter method creates the port as well as adding it, which could be a time-consuming operation.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
- [포트 추가](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)
+ [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)

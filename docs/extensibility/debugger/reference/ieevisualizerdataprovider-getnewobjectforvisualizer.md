@@ -1,52 +1,69 @@
 ---
-title: "IEEVisualizerDataProvider::GetNewObjectForVisualizer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEEVisualizerDataProvider::GetNewObjectForVisualizer"
-helpviewer_keywords: 
-  - "IEEVisualizerDataProvider::GetNewObjectForVisualizer 메서드"
+title: IEEVisualizerDataProvider::GetNewObjectForVisualizer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEEVisualizerDataProvider::GetNewObjectForVisualizer
+helpviewer_keywords:
+- IEEVisualizerDataProvider::GetNewObjectForVisualizer method
 ms.assetid: a898d549-4898-4fde-aad1-e8bb89129652
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IEEVisualizerDataProvider::GetNewObjectForVisualizer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 715b363ddfd2f5415d5ff91e4c4c1ead34555019
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는 시각화 도우미에 대 한 새 개체를 가져옵니다.  이 메서드가 항상 기존 개체에서 개체를 새로 만듭니다.  
+---
+# <a name="ieevisualizerdataprovidergetnewobjectforvisualizer"></a>IEEVisualizerDataProvider::GetNewObjectForVisualizer
+This method gets a new object for the visualizer. This method will always create a new object from the existing object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetNewObjectForVisualizer(  
-   IDebugObject** ppObject  
+HRESULT GetNewObjectForVisualizer(  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```c#  
-int GetNewObjectForVisualizer(  
-   out IDebugObject ppObject  
+```cs  
+int GetNewObjectForVisualizer(  
+   out IDebugObject ppObject  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppObject`  
- \[out\] 새 개체입니다.  
+ [out] The new object.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- `This method`현재 나타내는 되 고 새 개체와 결과 반환 하는 개체를 다시 평가 합니다.  평가 결과로 기존 개체를 업데이트 합니다.  
+## <a name="remarks"></a>Remarks  
+ `This method` re-evaluates the object it currently represents and returns the result as a new object. The existing object will be updated as a result of the evaluation.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

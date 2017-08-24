@@ -1,52 +1,69 @@
 ---
-title: "IEEVisualizerService::GetCustomViewerCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEEVisualizerService::GetCustomViewerCount"
-helpviewer_keywords: 
-  - "IEEVisualizerService::GetCustomViewerCount 메서드"
+title: IEEVisualizerService::GetCustomViewerCount | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEEVisualizerService::GetCustomViewerCount
+helpviewer_keywords:
+- IEEVisualizerService::GetCustomViewerCount method
 ms.assetid: f7b095c2-e538-4352-8cad-d4c6d4f6bdbc
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IEEVisualizerService::GetCustomViewerCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d886dea403579642fad27b751edc12a266d8ebc6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드가이 서비스에서 사용할 수 있는 형식 시각화 도우미의 수를 가져옵니다.  
+---
+# <a name="ieevisualizerservicegetcustomviewercount"></a>IEEVisualizerService::GetCustomViewerCount
+This method gets the number of type visualizers available from this service.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetCustomViewerCount(  
-   ULONG* pcelt  
+HRESULT GetCustomViewerCount(  
+   ULONG* pcelt  
 );  
 ```  
   
-```c#  
-int GetCustomViewerCount(  
-   out uint pcelt  
+```cs  
+int GetCustomViewerCount(  
+   out uint pcelt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pcelt`  
- \[out\] 형식 시각화 도우미를 사용할 수를 반환합니다.  
+ [out] Returns the number of type visualizers available.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)형식을 시각화 도우미에 대 한 요청 지원이 메서드에 전달합니다.  
+## <a name="remarks"></a>Remarks  
+ [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) passes the request to this method in its support for type visualizers.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   
  [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)

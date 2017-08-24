@@ -1,61 +1,78 @@
 ---
-title: "IDebugProgramEngines2::EnumPossibleEngines | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramEngines2::EnumPossibleEngines"
-helpviewer_keywords: 
-  - "IDebugProgramEngines2::EnumPossibleEngines"
+title: IDebugProgramEngines2::EnumPossibleEngines | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramEngines2::EnumPossibleEngines
+helpviewer_keywords:
+- IDebugProgramEngines2::EnumPossibleEngines
 ms.assetid: 993d70a4-f6a5-4e47-a603-0b162b9fde00
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugProgramEngines2::EnumPossibleEngines
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b021edcf63afc852a3e8a007085e06292c49aee0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 프로그램을 디버깅할 수 있는 모든 가능한 디버그 엔진 \(DE\)에 대 한 Guid를 반환 합니다.  
+---
+# <a name="idebugprogramengines2enumpossibleengines"></a>IDebugProgramEngines2::EnumPossibleEngines
+Returns the GUIDs for all the possible debug engines (DE) that can debug this program.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT EnumPossibleEngines(   
-   DWORD  celtBuffer,  
-   GUID*  rgguidEngines,  
-   DWORD* pceltEngines  
+HRESULT EnumPossibleEngines(   
+   DWORD  celtBuffer,  
+   GUID*  rgguidEngines,  
+   DWORD* pceltEngines  
 );  
 ```  
   
-```c#  
-int EnumPossibleEngines(   
-   uint      celtBuffer,  
-   GUID[]    rgguidEngines,  
-   ref DWORD pceltEngines  
+```cs  
+int EnumPossibleEngines(   
+   uint      celtBuffer,  
+   GUID[]    rgguidEngines,  
+   ref DWORD pceltEngines  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `celtBuffer`  
- \[in\] 수 반환 합니다 DE Guid입니다.  이의 최대 크기를 지정 합니다는 `rgguidEngines` 배열입니다.  
+ [in] The number of DE GUIDs to return. This also specifies the maximum size of the `rgguidEngines` array.  
   
  `rgguidEngines`  
- \[in, out\] DE에서 Guid의 배열입니다.  
+ [in, out] An array of DE GUIDs to be filled in.  
   
  `pceltEngines`  
- \[out\] 실제 수를 반환 하는 DE Guid를 반환 합니다.  
+ [out] Returns the actual number of DE GUIDs that are returned.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  \[C \+ \+\] 반환 `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` 또는 \[C\#\] 0x8007007A 버퍼가 충분히 큰 경우입니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns [C++] `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` or [C#] 0x8007007A if the buffer is not large enough.  
   
-## 설명  
- 엔진 있을 수를 확인 하려면이 메서드를 한 번 호출을 `celtBuffer` 매개 변수를 0으로 설정 하는 `rgguidEngines` 매개 변수 값이 null로 설정 합니다.  이 반환 `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` \(0x8007007A\) C\#에 대 한 및 해당 `pceltEngines` 매개 변수를 필요한 버퍼 크기를 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ In order to determine how many engines there are, call this method once with the `celtBuffer` parameter set to 0 and the `rgguidEngines` parameter set to a null value. This returns `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` (0x8007007A for C#), and the `pceltEngines` parameter returns the necessary size of the buffer.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)

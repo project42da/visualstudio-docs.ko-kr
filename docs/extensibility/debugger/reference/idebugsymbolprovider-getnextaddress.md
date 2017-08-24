@@ -1,58 +1,75 @@
 ---
-title: "IDebugSymbolProvider::GetNextAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugSymbolProvider::GetNextAddress"
-helpviewer_keywords: 
-  - "IDebugSymbolProvider::GetNextAddress 메서드"
+title: IDebugSymbolProvider::GetNextAddress | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugSymbolProvider::GetNextAddress
+helpviewer_keywords:
+- IDebugSymbolProvider::GetNextAddress method
 ms.assetid: 704eeb94-cb13-49d1-82b6-7d83ed0f19c0
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugSymbolProvider::GetNextAddress
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 3f5821f39a29d41cd56ac73d6f5b0be48ae8f2a2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-메서드는 지정 된 디버그 주소 뒤에 오는 디버그 주소를 가져옵니다.  
+---
+# <a name="idebugsymbolprovidergetnextaddress"></a>IDebugSymbolProvider::GetNextAddress
+Gets the debug address that follows a given debug address in a method.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetNextAddress(   
-   IDebugAddress*  pAddress,  
-   BOOL            fStatementOnly,  
-   IDebugAddress** ppAddress  
+HRESULT GetNextAddress(   
+   IDebugAddress*  pAddress,  
+   BOOL            fStatementOnly,  
+   IDebugAddress** ppAddress  
 );  
 ```  
   
-```c#  
-int GetNextAddress(   
-   IDebugAddress     pAddress,  
-   bool              fStatementOnly,  
-   out IDebugAddress ppAddress  
+```cs  
+int GetNextAddress(   
+   IDebugAddress     pAddress,  
+   bool              fStatementOnly,  
+   out IDebugAddress ppAddress  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pAddress`  
- \[in\] 디버그 주소를 지정 합니다.  
+ [in] Given debug address.  
   
  `fStatementOnly`  
- \[in\] TRUE 이면 디버그 주소 단일 문으로 제한 됩니다.  
+ [in] If TRUE, limits the debug addresses to a single statement.  
   
  `ppAddress`  
- \[out\] 다음 디버그 주소를 반환합니다.  
+ [out] Returns the next debug address.  
   
-## 반환 값  
- 올바른 반환 `HRESULT`, 일반적으로 S\_OK입니다.  
+## <a name="return-value"></a>Return Value  
+ Returns a valid `HRESULT`, typically S_OK.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

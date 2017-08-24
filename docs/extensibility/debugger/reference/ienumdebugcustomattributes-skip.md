@@ -1,51 +1,68 @@
 ---
-title: "IEnumDebugCustomAttributes::Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumCustomAttributes::Skip"
-helpviewer_keywords: 
-  - "IEnumDebugCustomAttributes::Skip"
+title: IEnumDebugCustomAttributes::Skip | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumCustomAttributes::Skip
+helpviewer_keywords:
+- IEnumDebugCustomAttributes::Skip
 ms.assetid: 54c72e23-cd4c-4746-935c-abea8057dd1b
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IEnumDebugCustomAttributes::Skip
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ac69fd4ed9e8fd027ea52dd8658347eeb09d1e26
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-사용자 지정 특성은 열거 시퀀스에서 지정한 개수의 건너뜁니다.  
+---
+# <a name="ienumdebugcustomattributesskip"></a>IEnumDebugCustomAttributes::Skip
+Skips a specified number of custom attributes in an enumeration sequence.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT Skip (   
-   ULONG celt  
+HRESULT Skip (   
+   ULONG celt  
 );  
 ```  
   
-```c#  
+```cs  
 int Skip(  
-   uint celt  
+   uint celt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `celt`  
- \[in\] 건너뛸 요소의 수입니다.  
+ [in] Number of elements to skip.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`.  반환 `S_FALSE` 경우 `celt` 나머지 요소; 개수 보다 큽니다 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`. Returns `S_FALSE` if `celt` is greater than the number of remaining elements; otherwise, returns an error code.  
   
-## 설명  
- 경우 `celt` 숫자 보다 큰 값을 지정 합니다. 나머지 요소를 열거형을 끝으로 설정 됩니다 및 `S_FALSE` 이 반환 됩니다.  
+## <a name="remarks"></a>Remarks  
+ If `celt` specifies a value greater than the number of remaining elements, the enumeration is set to the end and `S_FALSE` is returned.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

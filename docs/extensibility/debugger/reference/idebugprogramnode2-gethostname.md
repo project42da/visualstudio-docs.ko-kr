@@ -1,56 +1,73 @@
 ---
-title: "IDebugProgramNode2::GetHostName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramNode2::GetHostName"
-helpviewer_keywords: 
-  - "IDebugProgramNode2::GetHostName"
+title: IDebugProgramNode2::GetHostName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramNode2::GetHostName
+helpviewer_keywords:
+- IDebugProgramNode2::GetHostName
 ms.assetid: 16aad1ff-ad34-4394-a2e4-5621374a7729
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugProgramNode2::GetHostName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 9fd423654c40e2e8851311ebe585644fc6516898
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-프로그램을 호스팅하는 프로세스의 이름을 가져옵니다.  
+---
+# <a name="idebugprogramnode2gethostname"></a>IDebugProgramNode2::GetHostName
+Gets the name of the process hosting the program.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetHostName (   
-   GETHOSTNAME_TYPE dwHostNameType,  
-   BSTR*            pbstrHostName  
+HRESULT GetHostName (   
+   GETHOSTNAME_TYPE dwHostNameType,  
+   BSTR*            pbstrHostName  
 );  
 ```  
   
-```c#  
-int GetHostName (   
-   enum_GETHOSTNAME_TYPE dwHostNameType,  
-   out string            pbstrHostName  
+```cs  
+int GetHostName (   
+   enum_GETHOSTNAME_TYPE dwHostNameType,  
+   out string            pbstrHostName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dwHostNameType`  
- \[in\] 값은 [GETHOSTNAME\_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) 종류를 반환 하려면 name 속성을 지정 하는 열거형입니다.  
+ [in] A value from the [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) enumeration that specifies the type of name to return.  
   
  `pbstrHostName`  
- \[out\] 호스팅 프로세스의 이름을 반환합니다.  
+ [out] Returns the name of the hosting process.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CProgram` 를 노출 하는 개체는 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 인터페이스입니다.  이 무시 됩니다의 `dwHostNameType` 매개 변수는 기본 모듈의 파일 경로 이름에서 가져오는 프로그램 이름을 반환 하 고 있습니다.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CProgram` object that exposes the [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) interface. This example ignores the `dwHostNameType` parameter and returns only the name of the program as taken from the base name of the module's file path.  
   
 ```cpp#  
 HRESULT CProgram::GetHostName(DWORD dwHostNameType, BSTR* pbstrHostName) {    
@@ -94,7 +111,7 @@ HRESULT CProgram::GetHostName(DWORD dwHostNameType, BSTR* pbstrHostName) {
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
- [GETHOSTNAME\_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)   
+ [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

@@ -1,54 +1,71 @@
 ---
-title: "IDebugBreakpointChecksumRequest2::GetChecksum | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugBreakpointChecksumRequest2::GetChecksum"
+title: IDebugBreakpointChecksumRequest2::GetChecksum | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugBreakpointChecksumRequest2::GetChecksum
 ms.assetid: ec434882-e5c0-4d76-a58b-22c260d8626e
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugBreakpointChecksumRequest2::GetChecksum
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 03eb6226f92f0dc724b8d05decf885e194719cc4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-문서 검사를 사용 하는 체크섬 알고리즘의 고유 식별자를 제공 중단점 요청에 대 한 검색 합니다.  
+---
+# <a name="idebugbreakpointchecksumrequest2getchecksum"></a>IDebugBreakpointChecksumRequest2::GetChecksum
+Retrieves the document checksum for a breakpoint request given the unique identifier of the checksum algorithm to use.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetChecksum(   
-   REFGUID        guidAlgorithm,  
-   CHECKSUM_DATA *pChecksumData  
+   REFGUID        guidAlgorithm,  
+   CHECKSUM_DATA *pChecksumData  
 );  
 ```  
   
-```c#  
+```cs  
 public int GetChecksum(   
-   ref Guid               guidAlgorithm,  
-   out enum_CHECKSUM_DATA pChecksumData  
+   ref Guid               guidAlgorithm,  
+   out enum_CHECKSUM_DATA pChecksumData  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `guidAlgorithm`  
- \[in\] 체크섬 알고리즘의 고유한 식별자입니다.  
+ [in] Unique identifier of the checksum algorithm.  
   
  `pChecksumData`  
- \[out\] 문서의 체크섬 중단점 요청 합니다.  
+ [out] Document checksum for the breakpoint request.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 예제  
- 다음 예제에서는 체크섬 약 바인딩되어 있는 경우 문서의 UI에서 일치 하는지를 검사 하는 함수를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows a function that checks whether the checksum of a document, which is about to be bound, matches one from the UI.  
   
 ```cpp#  
 bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCodeContext *pContext)  
@@ -102,5 +119,5 @@ bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCo
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugBreakpointChecksumRequest2](../../../extensibility/debugger/reference/idebugbreakpointchecksumrequest2.md)

@@ -1,55 +1,72 @@
 ---
-title: "IDebugCoreServer3::GetServerName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCoreServer3::GetServerName"
-helpviewer_keywords: 
-  - "IDebugCoreServer3::GetServerName"
+title: IDebugCoreServer3::GetServerName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCoreServer3::GetServerName
+helpviewer_keywords:
+- IDebugCoreServer3::GetServerName
 ms.assetid: 0fc3fcf5-d6a3-4a00-bf14-458b8645714e
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugCoreServer3::GetServerName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c24e3a6a0f7fb9906a9798bd82c064f82c302b89
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-서버 이름을 검색합니다.  
+---
+# <a name="idebugcoreserver3getservername"></a>IDebugCoreServer3::GetServerName
+Retrieves the name of the server.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetServerName(  
-   BSTR* pbstrName  
+HRESULT GetServerName(  
+   BSTR* pbstrName  
 );  
 ```  
   
-```c#  
-int GetServerName(  
-   out string pbstrName  
+```cs  
+int GetServerName(  
+   out string pbstrName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pbstrName`  
- \[out\] 서버 이름을 반환합니다.  
+ [out] Returns the name of the server.  
   
 > [!NOTE]
->  호출자에 게 문자열을 확보 하는 일을 담당 합니다.  
+>  The caller is responsible for freeing the string.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns error code.  
   
-## 설명  
- 친숙 한 서버 이름을 호출 하 여 [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) 메서드.  
+## <a name="remarks"></a>Remarks  
+ For a friendly server name, call the [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)

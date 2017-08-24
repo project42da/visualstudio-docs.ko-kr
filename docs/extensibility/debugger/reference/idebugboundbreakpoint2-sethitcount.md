@@ -1,55 +1,72 @@
 ---
-title: "IDebugBoundBreakpoint2::SetHitCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBoundBreakpoint2::SetHitCount"
-helpviewer_keywords: 
-  - "SetHitCount 메서드"
-  - "IDebugBoundBreakpoint2::SetHitCount 메서드"
+title: IDebugBoundBreakpoint2::SetHitCount | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBoundBreakpoint2::SetHitCount
+helpviewer_keywords:
+- SetHitCount method
+- IDebugBoundBreakpoint2::SetHitCount method
 ms.assetid: 8145d875-26b1-4049-a2a2-e7d3d7f4735f
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugBoundBreakpoint2::SetHitCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8dc4e687079e368d0771f6b159caa660cd348b2c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-바인딩된 중단점에 적중된 횟수를 설정합니다.  
+---
+# <a name="idebugboundbreakpoint2sethitcount"></a>IDebugBoundBreakpoint2::SetHitCount
+Sets the hit count for the bound breakpoint.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetHitCount(   
-   DWORD dwHitCount  
+HRESULT SetHitCount(   
+   DWORD dwHitCount  
 );  
 ```  
   
-```c#  
-int SetHitCount(   
-   uint dwHitCount  
+```cs  
+int SetHitCount(   
+   uint dwHitCount  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dwHitCount`  
- \[in\] 설정 하려면 적중된 횟수입니다.  
+ [in] The hit count to set.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_BP_DELETED` 바인딩된 중단점 개체의 상태를 설정는 경우 `BPS_DELETED` \(일부는 [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md) 열거형\).  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the state of the bound breakpoint object is set to `BPS_DELETED` (part of the [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeration).  
   
-## 설명  
- 적중된 횟수를 현재 실행 하는 세션 동안이 중단점이 발생 시 횟수입니다.  
+## <a name="remarks"></a>Remarks  
+ The hit count is the number of times this breakpoint has fired during the current run of the session.  
   
- 일반적으로이 메서드는 디버그 엔진에서이 중단점이 현재 적중된 횟수를 업데이트 하 여 호출 됩니다.  
+ This method is typically called by the debug engine to update the current hit count on this breakpoint.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
- [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md)
+ [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

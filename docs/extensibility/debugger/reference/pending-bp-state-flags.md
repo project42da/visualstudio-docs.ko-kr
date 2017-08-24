@@ -1,62 +1,79 @@
 ---
-title: "PENDING_BP_STATE_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PENDING_BP_STATE_FLAGS"
-helpviewer_keywords: 
-  - "PENDING_BP_STATE_FLAGS 열거형"
+title: PENDING_BP_STATE_FLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PENDING_BP_STATE_FLAGS
+helpviewer_keywords:
+- PENDING_BP_STATE_FLAGS enumeration
 ms.assetid: 85522449-3fd8-4da5-b0fe-a43160e0c33b
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# PENDING_BP_STATE_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: db6b76953b0ed0e2349c4e25c41e7fa6d66ad9d8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-보류 중단점 상태 플래그를 지정합니다.  
+---
+# <a name="pendingbpstateflags"></a>PENDING_BP_STATE_FLAGS
+Specifies the pending breakpoint state flags.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_PENDING_BP_STATE_FLAGS {   
-   PBPSF_NONE        = 0x0000,  
-   PBPSF_VIRTUALIZED = 0x0001  
+enum enum_PENDING_BP_STATE_FLAGS {   
+   PBPSF_NONE        = 0x0000,  
+   PBPSF_VIRTUALIZED = 0x0001  
 };  
 typedef DWORD PENDING_BP_STATE_FLAGS;  
 ```  
   
-```c#  
-public enum enum_PENDING_BP_STATE_FLAGS {   
-   PBPSF_NONE        = 0x0000,  
-   PBPSF_VIRTUALIZED = 0x0001  
+```cs  
+public enum enum_PENDING_BP_STATE_FLAGS {   
+   PBPSF_NONE        = 0x0000,  
+   PBPSF_VIRTUALIZED = 0x0001  
 };  
 ```  
   
-## Members  
- PBPSF\_NONE  
- 자리 표시자입니다.  
+## <a name="members"></a>Members  
+ PBPSF_NONE  
+ Placeholder.  
   
- PBPSF\_VIRTUALIZED  
- 가상 중단점 보류, 새로운 코드 로드 될 때마다 바인딩되어 있는 하나를 지정 합니다.  
+ PBPSF_VIRTUALIZED  
+ Specifies a virtualized pending breakpoint, one that is to be bound every time new code is loaded.  
   
-## 설명  
- 사용 되는 `flags` 의 멤버는 [PENDING\_BP\_STATE\_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) 구조.  
+## <a name="remarks"></a>Remarks  
+ Used for the `flags` member of the [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) structure.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [PENDING\_BP\_STATE\_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

@@ -1,89 +1,106 @@
 ---
-title: "CONTEXT_INFO_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CONTEXT_INFO_FIELDS"
-helpviewer_keywords: 
-  - "CONTEXT_INFO_FIELDS 열거형"
+title: CONTEXT_INFO_FIELDS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CONTEXT_INFO_FIELDS
+helpviewer_keywords:
+- CONTEXT_INFO_FIELDS enumeration
 ms.assetid: ef436bd3-738e-47e8-828c-8febce752439
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# CONTEXT_INFO_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 4a186079efac648a07b82a73633ed3655c8971fc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-검색할 메모리에 대 한 컨텍스트 정보를 지정 합니다.  
+---
+# <a name="contextinfofields"></a>CONTEXT_INFO_FIELDS
+Specifies what information to retrieve about a memory context.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_CONTEXT_INFO_FIELDS {   
-   CIF_MODULEURL =       0x00000001,  
-   CIF_FUNCTION =        0x00000002,  
-   CIF_FUNCTIONOFFSET =  0x00000004,  
-   CIF_ADDRESS =         0x00000008,  
-   CIF_ADDRESSOFFSET =   0x00000010,  
-   CIF_ADDRESSABSOLUTE = 0x00000020,  
-   CIF_ALLFIELDS =       0x0000003f  
+enum enum_CONTEXT_INFO_FIELDS {   
+   CIF_MODULEURL =       0x00000001,  
+   CIF_FUNCTION =        0x00000002,  
+   CIF_FUNCTIONOFFSET =  0x00000004,  
+   CIF_ADDRESS =         0x00000008,  
+   CIF_ADDRESSOFFSET =   0x00000010,  
+   CIF_ADDRESSABSOLUTE = 0x00000020,  
+   CIF_ALLFIELDS =       0x0000003f  
 };  
 typedef DWORD CONTEXT_INFO_FIELDS;  
 ```  
   
-```c#  
+```cs  
 public enum enum_CONTEXT_INFO_FIELDS {  
-   CIF_MODULEURL =       0x00000001,  
-   CIF_FUNCTION =        0x00000002,  
-   CIF_FUNCTIONOFFSET =  0x00000004,  
-   CIF_ADDRESS =         0x00000008,  
-   CIF_ADDRESSOFFSET =   0x00000010,  
-   CIF_ADDRESSABSOLUTE = 0x00000020,  
-   CIF_ALLFIELDS =       0x0000003f  
+   CIF_MODULEURL =       0x00000001,  
+   CIF_FUNCTION =        0x00000002,  
+   CIF_FUNCTIONOFFSET =  0x00000004,  
+   CIF_ADDRESS =         0x00000008,  
+   CIF_ADDRESSOFFSET =   0x00000010,  
+   CIF_ADDRESSABSOLUTE = 0x00000020,  
+   CIF_ALLFIELDS =       0x0000003f  
 };  
 ```  
   
-## Members  
- CIF\_MODULEURL  
- 초기화\/사용의 `bstrModuleUrl` 필드는 [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md) 구조입니다.  
+## <a name="members"></a>Members  
+ CIF_MODULEURL  
+ Initialize/use the `bstrModuleUrl` field of the [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) structure.  
   
- CIF\_FUNCTION  
- 초기화\/사용의 `bstrFunction` 필드는 `CONTEXT_INFO` 구조입니다.  
+ CIF_FUNCTION  
+ Initialize/use the `bstrFunction` field of the `CONTEXT_INFO` structure.  
   
- CIF\_FUNCTIONOFFSET  
- 초기화\/사용의 `posFunctionOffset` 필드는 `CONTEXT_INFO` 구조입니다.  
+ CIF_FUNCTIONOFFSET  
+ Initialize/use the `posFunctionOffset` field of the `CONTEXT_INFO` structure.  
   
- CIF\_ADDRESS  
- 초기화\/사용의 `bstrAddress` 필드는 `CONTEXT_INFO` 구조입니다.  
+ CIF_ADDRESS  
+ Initialize/use the `bstrAddress` field of the `CONTEXT_INFO` structure.  
   
- CIF\_ADDRESSOFFSET  
- 초기화\/사용의 `bstrAddressOffset` 필드는 `CONTEXT_INFO` 구조입니다.  
+ CIF_ADDRESSOFFSET  
+ Initialize/use the `bstrAddressOffset` field of the `CONTEXT_INFO` structure.  
   
- CIF\_ALLFIELDS  
- 초기화\/사용의 모든 필드는 `CONTEXT_INFO` 구조입니다.  
+ CIF_ALLFIELDS  
+ Initialize/use all fields of the `CONTEXT_INFO` structure.  
   
-## 설명  
- 이러한 값을 매개 변수로 전달 되는 [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) 필드의 나타내도록 메서드는 [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md) 구조에 있는 초기화 합니다.  
+## <a name="remarks"></a>Remarks  
+ These values are passed a parameter to the [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) method to indicate which fields of the [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) structure are to be initialized.  
   
- 이러한 플래그 필드를 나타내는 데도 사용 됩니다 있는 `CONTEXT_INFO` 구조는 유효 하 고 사용 하는 구조를 반환 하는 경우.  
+ These flags are also used to indicate which fields of the `CONTEXT_INFO` structure are used and valid when the structure is returned.  
   
- 비트 OR로 이러한 값을 조합할 수 있습니다.  
+ These values may be combined with a bitwise OR.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)

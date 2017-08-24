@@ -1,52 +1,69 @@
 ---
-title: "IDebugObject2::GetField | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject2::GetField"
-helpviewer_keywords: 
-  - "IDebugObject2::GetField 메서드"
+title: IDebugObject2::GetField | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject2::GetField
+helpviewer_keywords:
+- IDebugObject2::GetField method
 ms.assetid: add6a6b5-e752-47dd-9613-29206ea809b0
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugObject2::GetField
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b50a5165a037890abf2d098b8bbfd6bfe86d46f3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 개체의 형식을 가져옵니다.  
+---
+# <a name="idebugobject2getfield"></a>IDebugObject2::GetField
+Gets the type of this object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetField(  
- IDebugField** ppField  
+HRESULT GetField(  
+ IDebugField** ppField  
 );  
 ```  
   
-```c#  
-int GetField(  
-   out IDebugField ppField  
+```cs  
+int GetField(  
+   out IDebugField ppField  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppField`  
- \[out\] 반환 된 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) null 값이 없으면 개체입니다.  
+ [out] Returns an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object if not a null value.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 필드 개체의 형식을 설명 합니다.  
+## <a name="remarks"></a>Remarks  
+ A field describes the type of the object.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

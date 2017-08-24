@@ -1,27 +1,44 @@
 ---
-title: "DisplayKind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DisplayKind 열거형"
+title: DisplayKind | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DisplayKind enumeration
 ms.assetid: 940968c5-6065-4bda-8ee6-c31597db4d71
 caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# DisplayKind
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 50b3c5f36aab03db18a974fe6fd3a7258ee4d0c7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-열거를 사용 하는 정보 종류를 나타내는 유효한 값은 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 개체 및 사용자에 게 표시 합니다.  
+---
+# <a name="displaykind"></a>DisplayKind
+Enumerates the valid values that represent the kinds of information to take from an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object and display to the user.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_DisplayKind  
@@ -33,7 +50,7 @@ enum enum_DisplayKind
 typedef DWORD DisplayKind;  
 ```  
   
-```c#  
+```cs  
 public enum enum_DisplayKind  
 {  
    DisplayKind_Value = 0x1,  
@@ -42,23 +59,23 @@ public enum enum_DisplayKind
 };  
 ```  
   
-#### 매개 변수  
- DisplayKind\_Value  
- 필드의 값입니다.  
+#### <a name="parameters"></a>Parameters  
+ DisplayKind_Value  
+ Value of the field.  
   
- DisplayKind\_Name  
- 필드의 이름입니다.  
+ DisplayKind_Name  
+ Name of the field.  
   
- DisplayKind\_Type  
- 필드의 형식입니다.  
+ DisplayKind_Type  
+ Type of field.  
   
-## 요구 사항  
- 헤더: Ee.h  
+## <a name="requirements"></a>Requirements  
+ Header: Ee.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetValueDisplayStringCount](../../../extensibility/debugger/reference/ieevisualizerservice-getvaluedisplaystringcount.md)

@@ -1,86 +1,103 @@
 ---
-title: "CONNECTION_PROTOCOL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CONNECTION_PROTOCOL"
-helpviewer_keywords: 
-  - "CONNECTION_PROTOCOL 열거형"
+title: CONNECTION_PROTOCOL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CONNECTION_PROTOCOL
+helpviewer_keywords:
+- CONNECTION_PROTOCOL enumeration
 ms.assetid: 99df5865-8b36-486d-9f4c-d10ae2bc688a
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 56b90ac83640e839b2cdccd74c63090b5c17c913
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
+
 ---
 # CONNECTION_PROTOCOL
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-디버그 패키지 \(DE\) 디버그 서버 사이의 통신에 사용 되는 프로토콜을 나타냅니다.  
+Indicates the protocol being used to communicate between a debug server and the debug package (DE).  
   
-## 구문  
+## Syntax  
   
 ```cpp  
-typedef enum tagCONNECTION_PROTOCOL {  
-   CONNECTION_NONE    = 0,  
-   CONNECTION_UNKNOWN = 1,  
-   CONNECTION_LOCAL   = 2,  
-   CONNECTION_PIPE    = 3,  
-   CONNECTION_TCPIP   = 4,  
-   CONNECTION_HTTP    = 5,  
-   CONNECTION_OTHER   = 6  
-} CONNECTION_PROTOCOL;  
+typedef enum tagCONNECTION_PROTOCOL {  
+   CONNECTION_NONE    = 0,  
+   CONNECTION_UNKNOWN = 1,  
+   CONNECTION_LOCAL   = 2,  
+   CONNECTION_PIPE    = 3,  
+   CONNECTION_TCPIP   = 4,  
+   CONNECTION_HTTP    = 5,  
+   CONNECTION_OTHER   = 6  
+} CONNECTION_PROTOCOL;  
 ```  
   
-```c#  
-public enum CONNECTION_PROTOCOL {  
-   CONNECTION_NONE    = 0,  
-   CONNECTION_UNKNOWN = 1,  
-   CONNECTION_LOCAL   = 2,  
-   CONNECTION_PIPE    = 3,  
-   CONNECTION_TCPIP   = 4,  
-   CONNECTION_HTTP    = 5,  
-   CONNECTION_OTHER   = 6  
+```cs  
+public enum CONNECTION_PROTOCOL {  
+   CONNECTION_NONE    = 0,  
+   CONNECTION_UNKNOWN = 1,  
+   CONNECTION_LOCAL   = 2,  
+   CONNECTION_PIPE    = 3,  
+   CONNECTION_TCPIP   = 4,  
+   CONNECTION_HTTP    = 5,  
+   CONNECTION_OTHER   = 6  
 };  
 ```  
   
-#### 매개 변수  
- CONNECTION\_NONE  
- 서버에 연결 되지 않았습니다.  
+#### Parameters  
+ CONNECTION_NONE  
+ No connection has been made to a server.  
   
- CONNECTION\_UNKNOWN  
- 연결 된 내용이 들어 있지만 알 수 없는 형식입니다.  
+ CONNECTION_UNKNOWN  
+ A connection has been made, but it is of an unknown type.  
   
- CONNECTION\_LOCAL  
- 연결 하는 로컬 서버입니다.  
+ CONNECTION_LOCAL  
+ Connection is to a local server.  
   
- CONNECTION\_PIPE  
- 연결을 통해 명명 된 파이프입니다.  
+ CONNECTION_PIPE  
+ Connection is through a named pipe.  
   
- CONNECTION\_TCPIP  
- TCP\/IP 연결을 사용합니다.  
+ CONNECTION_TCPIP  
+ Connection uses TCP/IP.  
   
- CONNECTION\_HTTP  
- 연결 HTTP \(웹 서버를 통해\)를 사용합니다.  
+ CONNECTION_HTTP  
+ Connection uses HTTP (through a Web server).  
   
- CONNECTION\_OTHER  
- 다른 유형의 연결 설정 되었습니다 \(이 값이 현재 사용 되지 않습니다\).  
+ CONNECTION_OTHER  
+ Some other type of connection has been established (this value is not currently used).  
   
-## 설명  
- 이러한 값에서 반환 되는 [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) 메서드.  
+## Remarks  
+ These values are returned from the [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) method.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)

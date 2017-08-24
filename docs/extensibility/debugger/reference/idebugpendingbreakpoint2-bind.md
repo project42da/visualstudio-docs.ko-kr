@@ -1,50 +1,67 @@
 ---
-title: "IDebugPendingBreakpoint2::Bind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPendingBreakpoint2::Bind"
-helpviewer_keywords: 
-  - "Bind 메서드"
-  - "IDebugPendingBreakpoint2::Bind 메서드"
+title: IDebugPendingBreakpoint2::Bind | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPendingBreakpoint2::Bind
+helpviewer_keywords:
+- Bind method
+- IDebugPendingBreakpoint2::Bind method
 ms.assetid: 46e3f307-219d-40cd-a929-d41399c60ecf
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugPendingBreakpoint2::Bind
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 622e0708130da9a2fbaba10557e245c6079dff8e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 보류 중단점에 하나 이상의 코드 위치에 바인딩합니다.  
+---
+# <a name="idebugpendingbreakpoint2bind"></a>IDebugPendingBreakpoint2::Bind
+Binds this pending breakpoint to one or more code locations.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT Bind(   
-   void   
+HRESULT Bind(   
+   void   
 );  
 ```  
   
-```c#  
+```cs  
 int Bind();  
 ```  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_BP_DELETED` 중단점 삭제 된 경우입니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the breakpoint has been deleted.  
   
-## 설명  
- 이 메서드를 호출 하면 디버그 엔진 \(DE\) 일치 하는 모든 코드 위치를이 보류 중단점을 바인딩할 시도 합니다.  
+## <a name="remarks"></a>Remarks  
+ When this method is called, a debug engine (DE) should attempt to bind this pending breakpoint to all code locations that match.  
   
- 이 메서드에서 반환 된 후 필요한 호출자 호출 하려면 보류 중단점이 바인딩 되었음을 나타내거나 간주 하기 전에 오류가 발생 나타내는 이벤트를 대기 하는 [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) 또는 [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).methods는 각각 모든 오류 또는 중단점을 열거 합니다.  
+ After this method returns, the caller needs to wait for events indicating that the pending breakpoint has bound or is in error before assuming that calls to the [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) or [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).methods will enumerate all bound or error breakpoints, respectively.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)   
  [IDebugBreakpointErrorEvent2](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)   

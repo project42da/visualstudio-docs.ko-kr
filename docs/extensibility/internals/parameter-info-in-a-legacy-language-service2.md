@@ -1,52 +1,69 @@
 ---
-title: "레거시 언어 Service2의 매개 변수 정보 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IntelliSense, 매개 변수 정보 도구 설명"
-  - "언어 서비스 [관리 되는 패키지 프레임 워크] IntelliSense 매개 변수 정보"
-  - "언어 서비스 [관리 되는 패키지 프레임 워크]에서 지 원하는 매개 변수 정보 (IntelliSense)"
+title: Parameter Info in a Legacy Language Service2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IntelliSense, Parameter Info tool tip
+- language services [managed package framework], IntelliSense Parameter Info
+- Parameter Info (IntelliSense), supporting in language services [managed package framework]
 ms.assetid: a117365d-320d-4bb5-b61d-3e6457b8f6bc
 caps.latest.revision: 23
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# 레거시 언어 서비스의 매개 변수 정보
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c4e2a27dd32a0a6b840b0edc29ef375928cf0989
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-IntelliSense 매개 변수 정보는 사용자가 매개 변수 목록 메서드 시그니처를 표시 하는 도구 설명이 메서드 매개 변수 목록에 대 한 문자 \(일반적으로 여는 괄호\)를 시작 합니다. 각 매개 변수를 입력 하 고 매개 변수 구분 기호 \(쉼표\)를 입력, 도구 설명에 표시할 굵게 표시 된 다음 매개 변수를 표시 하도록 업데이트 됩니다.  
+---
+# <a name="parameter-info-in-a-legacy-language-service"></a>Parameter Info in a Legacy Language Service
+IntelliSense Parameter Info is a tooltip that displays the signature of a method when the user types the parameter list start character (typically an open parenthesis) for the method parameter list. As each parameter is entered and the parameter separator (typically a comma) is typed, the tooltip is updated to show the next parameter in bold.  
   
- 매개 변수 정보 도구 설명 관리 하기 위한 지원을 제공 하는 관리 되는 패키지 \(MPF\) 프레임 워크 클래스. 매개 변수를 매개 변수 다음에 시작한 매개 변수 끝 문자 이므로 메서드 서명과 연결 된 매개 변수 목록을 제공 해야 파서가 감지 해야 합니다.  
+ The managed package framework (MPF) classes provide support for managing the Parameter Info tooltip. The parser must detect parameter start, parameter next, and parameter end characters, and it must supply a list of the method signatures and their associated parameters.  
   
- 레거시 언어 서비스는 VSPackage의 일부로 구현 되는 하지만 MEF 확장을 사용 하는 언어 서비스 기능을 구현 하는 새로운 방법입니다. 자세한 내용을 참조 하십시오 [편집기 및 언어 서비스 확장](../../extensibility/extending-the-editor-and-language-services.md)합니다.  
-  
-> [!NOTE]
->  새 편집기 API를 최대한 빨리 사용을 시작 하는 것이 좋습니다. 이 언어 서비스의 성능을 향상 하 고 새로운 편집기 기능을 이용할 수 있도록 합니다.  
-  
-## 구현  
- 트리거 값을 설정 해야 하는 파서는 <xref:Microsoft.VisualStudio.Package.TokenTriggers> 매개 변수 목록 시작 문자 \(대개는 괄호\)를 발견 하면 설정 됩니다. 설정 해야는 <xref:Microsoft.VisualStudio.Package.TokenTriggers> 매개 변수 구분 기호 \(쉼표 종종\)를 발견 하면 발생 합니다. 그러면 업데이트를 굵게 표시 된 다음 매개 변수를 표시 합니다. 매개 변수 정보 도구 설명 합니다. 파서는 트리거 값을 설정 해야 <xref:Microsoft.VisualStudio.Package.TokenTriggers> 때 경우 매개 변수 목록 끝 문자 \(종종 닫는 괄호\)를 찾습니다.  
-  
- <xref:Microsoft.VisualStudio.Package.TokenTriggers> 트리거 값에 대 한 호출을 시작는 <xref:Microsoft.VisualStudio.Package.Source.MethodTip%2A> 메서드를 호출 하는 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 의 구문 분석 이유인 메서드 파서 <xref:Microsoft.VisualStudio.Package.ParseReason>합니다. 에 메서드 서명을 일치 하는 목록을 반환 파서는 매개 변수 목록에는 문자 시작 전에 식별자가 인식 된 메서드 이름에서 결정 된 <xref:Microsoft.VisualStudio.Package.AuthoringScope> 개체입니다. 메서드 시그니처의 모든 발견 된 경우 목록에서 첫 번째 서명을 사용 하 여 매개 변수 정보 도구 설명 표시 됩니다. 이 도구 설명 서명의 더은 입력으로 업데이트 됩니다. 매개 변수 목록 끝 문자를 입력할 때 매개 변수 정보 도구 설명에 표시할 보기에서 제거 됩니다.  
+ Legacy language services are implemented as part of a VSPackage, but the newer way to implement language service features is to use MEF extensions. To find out more, see [Extending the Editor and Language Services](../../extensibility/extending-the-editor-and-language-services.md).  
   
 > [!NOTE]
->  매개 변수 정보 도구 설명 하는 올바른 형식의 위해이 속성에서 재정의 해야는 <xref:Microsoft.VisualStudio.Package.Methods> 적절 한 문자를 제공 하는 클래스입니다. 기본 <xref:Microsoft.VisualStudio.Package.Methods> 클래스 가정 하는 C\#\-스타일 메서드 시그니처입니다. 참조는 <xref:Microsoft.VisualStudio.Package.Methods> 수 수행 방법에 대 한 세부 정보에 대 한 클래스입니다.  
+>  We recommend that you begin to use the new editor API as soon as possible. This will improve the performance of your language service and let you take advantage of new editor features.  
   
-## 매개 변수 정보에 대 한 지원을 사용 하도록 설정  
- 를 지원 하기 위해 매개 변수 정보 도구 설명 설정 해야는 `ShowCompletion` 라는 매개 변수는 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 를 `true`합니다. 언어 서비스에서이 레지스트리 항목의 값을 읽고는 <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> 속성입니다.  
+## <a name="implementation"></a>Implementation  
+ The parser should set the trigger value <xref:Microsoft.VisualStudio.Package.TokenTriggers> is set when it finds a parameter list start character (often an open parenthesis). It should set a <xref:Microsoft.VisualStudio.Package.TokenTriggers> trigger when it finds a parameter separator (often a comma). This causes a Parameter Info tooltip to be updated and show the next parameter in bold. The parser should set the trigger value <xref:Microsoft.VisualStudio.Package.TokenTriggers> when if finds the parameter list end character (often a close parenthesis).  
   
- 또한는 <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ParameterInformation%2A> 속성으로 설정 되어 있어야 `true` 매개 변수 정보 도구 설명으로 표시 됩니다.  
+ The <xref:Microsoft.VisualStudio.Package.TokenTriggers> trigger value initiates a call to the <xref:Microsoft.VisualStudio.Package.Source.MethodTip%2A> method, which in turn calls the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method parser with a parse reason of <xref:Microsoft.VisualStudio.Package.ParseReason>. If the parser determines that the identifier before the parameter list start character is a recognized method name, it returns a list of matching method signatures in the <xref:Microsoft.VisualStudio.Package.AuthoringScope> object. If any method signatures were found, the Parameter Info tooltip is displayed with the first signature in the list. This tooltip is then updated as more of the signature is typed. When the parameter list end character is typed, the Parameter Info tooltip is removed from view.  
   
-### 예제  
- 매개 변수 목록 문자를 검색 하 고 적절 한 트리거를 설정 하는 간단한 예는 다음과 같습니다. 이 예는 설명 목적 으로만 제공 됩니다. 스캐너는 메서드가 포함 되어 있음을 가정 `GetNextToken` 식별 하 고 텍스트 줄에서 토큰을 반환 합니다. 예제 코드는 단순히 적합 한 종류의 문자가 발견 될 때마다 트리거를 설정 합니다.  
+> [!NOTE]
+>  To ensure that the Parameter Info tooltip is properly formatted, you must override the properties on the <xref:Microsoft.VisualStudio.Package.Methods> class to supply the appropriate characters. The base <xref:Microsoft.VisualStudio.Package.Methods> class assumes a C#-style method signature. See the <xref:Microsoft.VisualStudio.Package.Methods> class for details on how this can be done.  
   
-```c#  
+## <a name="enabling-support-for-the-parameter-info"></a>Enabling Support for the Parameter Info  
+ To support Parameter Info tooltips, you must set the `ShowCompletion` named parameter of the <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> to `true`. The language service reads the value of this registry entry from the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> property.  
+  
+ In addition, the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ParameterInformation%2A> property must be set to `true` for the Parameter Info tooltip to be shown.  
+  
+### <a name="example"></a>Example  
+ Here is a simplified example of detecting the parameter list characters and setting the appropriate triggers. This example is for illustrative purposes only. It assumes that your scanner contains a method `GetNextToken` that identifies and returns tokens from a line of text. The example code simply sets the triggers whenever it sees the right kind of character.  
+  
+```cs  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -92,17 +109,17 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## 파서에서 매개 변수 정보 도구 설명 지원  
- <xref:Microsoft.VisualStudio.Package.Source> 클래스의 내용에 대 한 몇 가지 가정을 <xref:Microsoft.VisualStudio.Package.AuthoringScope> 및 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 클래스가 때 매개 변수 정보 도구 설명에 표시 되 고 업데이트 합니다.  
+## <a name="supporting-the-parameter-info-tooltip-in-the-parser"></a>Supporting the Parameter Info ToolTip in the Parser  
+ The <xref:Microsoft.VisualStudio.Package.Source> class makes some assumptions about the contents of the <xref:Microsoft.VisualStudio.Package.AuthoringScope> and <xref:Microsoft.VisualStudio.Package.AuthoringSink> classes when the Parameter Info tooltip is displayed and updated.  
   
--   파서는 제공할지 <xref:Microsoft.VisualStudio.Package.ParseReason> 매개 변수 목록 시작 문자를 입력 하는 경우.  
+-   The parser is given <xref:Microsoft.VisualStudio.Package.ParseReason> when the parameter list start character is typed.  
   
--   지정 된 위치는 <xref:Microsoft.VisualStudio.Package.ParseRequest> 개체는 매개 변수 목록에는 문자 시작 직후입니다. 파서는 수집 하 여 이동 하 고 사용 중인 버전에서 목록에 저장 하는에서 사용할 수 있는 모든 메서드 선언의 서명에 <xref:Microsoft.VisualStudio.Package.AuthoringScope> 개체입니다. 이 목록은 메서드 이름, 메서드 형식 \(또는 반환 형식\) 및 가능한 매개 변수 목록이 있습니다. 이 목록은 메서드 서명이 나 서명에 매개 변수 정보 도구 설명에 표시할 나중에 검색 됩니다.  
+-   The location given in the <xref:Microsoft.VisualStudio.Package.ParseRequest> object is immediately after the parameter list start character. The parser must collect the signatures of all method declarations available at that position and store them in a list in your version of the <xref:Microsoft.VisualStudio.Package.AuthoringScope> object. This list includes the method name, method type (or return type), and a list of possible parameters. This list is later searched for the method signature or signatures to display in the Parameter Info tooltip.  
   
- 파서는 지정한 줄 다음 구문 분석 해야는 <xref:Microsoft.VisualStudio.Package.ParseRequest> 사용자 얼마나 진행 뿐만 아니라 입력 되는 메서드의 이름을 수집 하는 개체는 매개 변수를 입력 합니다. 메서드의 이름을 전달 하 여 이렇게는 <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> 메서드를는 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 개체와 다음 호출의 <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A> 메서드 매개 변수 목록 시작 문자는 구문 분석 호출는 <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A> 메서드는 매개 변수 목록 다음 문자를 구문 분석할 때 마지막으로 호출 하는 <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A> 메서드는 매개 변수 목록 끝 문자를 구문 분석할 때. 이러한 메서드 호출의 결과에서 사용 되는 <xref:Microsoft.VisualStudio.Package.Source> 매개 변수 정보 도구 설명에 적절 하 게 업데이트 하는 클래스입니다.  
+ The parser must then parse the line specified by the <xref:Microsoft.VisualStudio.Package.ParseRequest> object to gather the name of the method being entered as well as how far along the user is in typing parameters. This is accomplished by passing the name of the method to the <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> method on the <xref:Microsoft.VisualStudio.Package.AuthoringSink> object and then calling the <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A> method when the parameter list start character is parsed, calling the <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A> method when the parameter list next character is parsed, and finally calling the <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A> method when the parameter list end character is parsed. The results of these method calls are used by the <xref:Microsoft.VisualStudio.Package.Source> class to update the Parameter Info tooltip appropriately.  
   
-### 예제  
- 사용자가 입력 하는 텍스트의 줄은 다음과 같습니다. 선 아래 숫자 파서에서 \(구문 분석 이동 합니다. 왼쪽에서 오른쪽으로 가정\) 행에 해당 위치에 있는 단계를 수행 하는 것을 나타냅니다. 여기 가정 하는 줄 앞에 나오는 모든 이미 구문 분석 되었습니다 "testfunc" 메서드 시그니처를 포함 하는 메서드 서명에 대입니다.  
+### <a name="example"></a>Example  
+ Here is a line of text the user might enter. The numbers below the line indicate which step is taken by the parser at that position in the line (assuming parsing moves left to right). The assumption here is that everything before the line has already been parsed for method signatures, including the "testfunc" method signature.  
   
 ```  
 testfunc("a string",3);  
@@ -110,12 +127,12 @@ testfunc("a string",3);
      12          3 4  
 ```  
   
- 파서를 사용 하는 단계는 다음과 같습니다.  
+ The steps that the parser takes are outlined below:  
   
-1.  파서를 호출 하 여 <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> "testfunc" 텍스트와 함께 합니다.  
+1.  The parser calls <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> with the text "testfunc".  
   
-2.  파서를 호출 하 여 <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A>합니다.  
+2.  The parser calls <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A>.  
   
-3.  파서를 호출 하 여 <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A>합니다.  
+3.  The parser calls <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A>.  
   
-4.  파서를 호출 하 여 <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A>합니다.
+4.  The parser calls <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A>.

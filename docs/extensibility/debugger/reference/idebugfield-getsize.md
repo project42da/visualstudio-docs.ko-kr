@@ -1,51 +1,68 @@
 ---
-title: "IDebugField::GetSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugField::GetSize"
-helpviewer_keywords: 
-  - "IDebugField::GetSize 메서드"
+title: IDebugField::GetSize | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugField::GetSize
+helpviewer_keywords:
+- IDebugField::GetSize method
 ms.assetid: 73329924-3751-4f44-af54-5986b7943374
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugField::GetSize
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 53ae9005d8e20253956e23d978e4472467d4ba36
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는 바이트에서 필드의 크기를 가져옵니다.  
+---
+# <a name="idebugfieldgetsize"></a>IDebugField::GetSize
+This method gets the size of a field, in bytes.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetSize(   
-   DWORD* pdwSize  
+HRESULT GetSize(   
+   DWORD* pdwSize  
 );  
 ```  
   
-```c#  
+```cs  
 int GetSize(  
-   out uint pdwSize  
+   out uint pdwSize  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pdwSize`  
- \[out\] 크기를 반환 합니다.  
+ [out] Returns the size.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 모든 필드를 사용 하 고 모든 형식의 크기를 경우.  예를 들어, 형식 바이트 필드 크기는 1 바이트 있습니다.  
+## <a name="remarks"></a>Remarks  
+ All fields have a type and all types have a size. For example, a field with a type of byte has a size of 1 byte.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

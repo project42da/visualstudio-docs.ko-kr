@@ -1,52 +1,69 @@
 ---
-title: "IDebugPointerField::GetDereferencedField | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPointerField::GetDereferencedField"
-helpviewer_keywords: 
-  - "IDebugPointerField::GetDereferencedField 메서드"
+title: IDebugPointerField::GetDereferencedField | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPointerField::GetDereferencedField
+helpviewer_keywords:
+- IDebugPointerField::GetDereferencedField method
 ms.assetid: 8de988ab-cd79-4287-be72-3c900f2fe407
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugPointerField::GetDereferencedField
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 5085440e2a3bfc90629d405a0532d05c06b59b87
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는 가리키는 포인터가 개체가 개체의 형식을 반환 합니다.  
+---
+# <a name="idebugpointerfieldgetdereferencedfield"></a>IDebugPointerField::GetDereferencedField
+This method returns the type of object to which this pointer object points.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetDereferencedField(  
-   IDebugField** ppField  
+   IDebugField** ppField  
 );  
 ```  
   
-```c#  
+```cs  
 int GetDereferencedField(  
-   out IDebugField ppField  
+   out IDebugField ppField  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppField`  
- \[out\] 반환 된 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 대상 개체 형식을 설명 하는.  
+ [out] Returns an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) describing the type of target object.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 예를 들어, if는 [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md) 개체에 정수를 가리키는 있는 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 이 메서드의 반환 형식은 해당 정수 형식에 설명 합니다.  
+## <a name="remarks"></a>Remarks  
+ If, for example, the [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md) object points to an integer, the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) type returned by this method describes that integer type.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

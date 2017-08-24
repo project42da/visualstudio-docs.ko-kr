@@ -1,51 +1,68 @@
 ---
-title: "IDebugArrayObject::GetRank | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugArrayObject::GetRank"
-helpviewer_keywords: 
-  - "IDebugArrayObject::GetRank 메서드"
+title: IDebugArrayObject::GetRank | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugArrayObject::GetRank
+helpviewer_keywords:
+- IDebugArrayObject::GetRank method
 ms.assetid: 9948551a-e334-4ff6-979c-08dab633b9b6
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugArrayObject::GetRank
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 3dae21cf4d4129773afc1078bfa388804d5aa2a1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-차수를 배열의 차원 수를 가져옵니다.  
+---
+# <a name="idebugarrayobjectgetrank"></a>IDebugArrayObject::GetRank
+Gets the rank of the array, that is, the number of dimensions.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetRank(   
-   DWORD* pdwRank  
+HRESULT GetRank(   
+   DWORD* pdwRank  
 );  
 ```  
   
-```c#  
+```cs  
 int GetRank(  
-   out uint pdwRank  
+   out uint pdwRank  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pdwRank`  
- \[out\] 순위를 반환 합니다.  
+ [out] Returns the rank.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 사용은 [GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md) 메서드는 array 개체의 각 차원 크기를 검색할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Use the [GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md) method to retrieve the size of each dimension of the array object.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

@@ -1,53 +1,70 @@
 ---
-title: "IDebugDisassemblyStream2::GetCurrentLocation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDisassemblyStream2::GetCurrentLocation"
-helpviewer_keywords: 
-  - "IDebugDisassemblyStream2::GetCurrentLocation"
+title: IDebugDisassemblyStream2::GetCurrentLocation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDisassemblyStream2::GetCurrentLocation
+helpviewer_keywords:
+- IDebugDisassemblyStream2::GetCurrentLocation
 ms.assetid: 512302f1-12b1-4107-8a6e-c5bc878ce1c3
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDisassemblyStream2::GetCurrentLocation
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f0ee8b8f7cbec2b795e7e144c8b0396ef9ff7488
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-코드의 현재 위치를 나타내는 코드 위치 식별자를 반환 합니다.  
+---
+# <a name="idebugdisassemblystream2getcurrentlocation"></a>IDebugDisassemblyStream2::GetCurrentLocation
+Returns a code location identifier that represents the current code location.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetCurrentLocation(   
-   UINT64* puCodeLocationId  
+HRESULT GetCurrentLocation(   
+   UINT64* puCodeLocationId  
 );  
 ```  
   
-```c#  
-int GetCurrentLocation(   
-   out ulong puCodeLocationId  
+```cs  
+int GetCurrentLocation(   
+   out ulong puCodeLocationId  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `puCodeLocationId`  
- \[out\] 코드 위치 식별자를 반환합니다.  비고 섹션을 참고 하십시오를 [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) 메서드에 대 한 코드 위치 식별자에 대 한 설명입니다.  
+ [out] Returns the code location identifier. See the Remarks section for the [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) method for a description of a code location identifier.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 코드 위치 식별자 코드 컨텍스트를 호출 하 여 변환할 수 있는 [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) 메서드가 있습니다.  
+## <a name="remarks"></a>Remarks  
+ The code location identifier can be converted to a code context by calling the [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
  [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)   
  [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md)

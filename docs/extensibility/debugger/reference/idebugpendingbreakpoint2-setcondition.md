@@ -1,53 +1,70 @@
 ---
-title: "IDebugPendingBreakpoint2::SetCondition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPendingBreakpoint2::SetCondition"
-helpviewer_keywords: 
-  - "SetCondition 메서드"
-  - "IDebugPendingBreakpoint2::SetCondition 메서드"
+title: IDebugPendingBreakpoint2::SetCondition | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPendingBreakpoint2::SetCondition
+helpviewer_keywords:
+- SetCondition method
+- IDebugPendingBreakpoint2::SetCondition method
 ms.assetid: 0534224f-654f-4862-bc4d-a9a81a5f8899
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugPendingBreakpoint2::SetCondition
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 54347da59033c5902a4c8b106a7eb6df3a78cc52
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-설정 하거나 보류 중단점에 연관 된 상태를 변경 합니다.  
+---
+# <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
+Sets or changes the condition associated with the pending breakpoint.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetCondition(   
-   BP_CONDITION bpCondition  
+HRESULT SetCondition(   
+   BP_CONDITION bpCondition  
 );  
 ```  
   
-```c#  
-int SetCondition(   
-   BP_CONDITION bpCondition  
+```cs  
+int SetCondition(   
+   BP_CONDITION bpCondition  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `bpCondition`  
- \[in\] A [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) 구조를 설정 하는 조건을 지정 합니다.  
+ [in] A [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) structure that specifies the condition to set.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 보류 중단점에 이전에 연결 된 모든 조건이 손실 됩니다.  이 보류 중단점이 바인딩된 중단점을 모두 자신의 조건에 지정 된 값으로 설정 하기 위해 호출 되는 `bpCondition` 매개 변수.  
+## <a name="remarks"></a>Remarks  
+ Any condition that was previously associated with the pending breakpoint is lost. All breakpoints bound from this pending breakpoint are called to set their condition to the value specified in the `bpCondition` parameter.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
- [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)
+ [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)

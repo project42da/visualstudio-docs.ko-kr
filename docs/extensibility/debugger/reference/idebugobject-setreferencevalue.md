@@ -1,52 +1,69 @@
 ---
-title: "IDebugObject::SetReferenceValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::SetReferenceValue"
-helpviewer_keywords: 
-  - "IDebugObject::SetReferenceValue 메서드"
+title: IDebugObject::SetReferenceValue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject::SetReferenceValue
+helpviewer_keywords:
+- IDebugObject::SetReferenceValue method
 ms.assetid: 08c78a4e-98eb-41cb-8b75-02a6a43d49f7
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugObject::SetReferenceValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: af5fde3a9f694d11b28ab90b9c3aab665685b6ee
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 개체의 참조 값을 설정합니다.  
+---
+# <a name="idebugobjectsetreferencevalue"></a>IDebugObject::SetReferenceValue
+Sets the reference value of this object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetReferenceValue(   
-   IDebugObject* pObject  
+HRESULT SetReferenceValue(   
+   IDebugObject* pObject  
 );  
 ```  
   
-```c#  
+```cs  
 int SetReferenceValue(  
-   [In] IDebugObject pObject  
+   [In] IDebugObject pObject  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pObject`  
- \[in\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 새 참조 값을 나타내는 개체입니다.  
+ [in] An [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the new reference value.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드는이 있습니다 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 개체 지정 된 개체의 값에 대 한 참조는 `pObject` 떨어져 모든 이전 참조를 throw 하는 매개 변수입니다.  참고가 `IDebugObject` 개체 참조 형식이 이미 있어야 합니다.  
+## <a name="remarks"></a>Remarks  
+ This method makes this [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object a reference to the value of the object given in the `pObject` parameter, throwing away any previous reference. Note that this `IDebugObject` object must already be a reference type.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)

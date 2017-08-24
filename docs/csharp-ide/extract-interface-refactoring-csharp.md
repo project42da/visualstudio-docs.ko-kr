@@ -1,42 +1,57 @@
 ---
-title: "Extract Interface Refactoring (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.csharp.refactoring.extractinterface"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "refactoring [C#], Extract Interface"
-  - "Extract Interface refactoring operation [C#]"
+redirect_url: /visualstudio/csharp-ide/refactoring/extract-interface
+title: Extract Interface Refactoring (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- refactoring [C#], Extract Interface
+- Extract Interface refactoring operation [C#]
 ms.assetid: 7d0aa225-3b33-4331-9652-5a67cac6f3d0
 caps.latest.revision: 25
-caps.handback.revision: 25
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
----
-# Extract Interface Refactoring (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BillWagner
+ms.author: wiwagn
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: da62fb0666914563d36c7f5feb568d23b0d104ca
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-인터페이스 추출은 기존 클래스, 구조체 또는 인터페이스에서 발생한 멤버를 사용하여 새 인터페이스를 간편하게 만드는 방법을 제공하는 리팩터링 작업입니다.  
+---
+# <a name="extract-interface-refactoring-c"></a>Extract Interface Refactoring (C#)
+Extract Interface is a refactoring operation that provides an easy way to create a new interface with members that originate from an existing class, struct, or interface.  
   
- 여러 클라이언트에서 클래스, 구조체 또는 인터페이스에 있는 멤버의 동일한 하위 집합을 사용하거나 여러 클래스, 구조체 또는 인터페이스가 공통으로 멤버의 하위 집합을 가지는 경우 멤버의 하위 집합을 인터페이스로 구현하면 유용할 수 있습니다.  인터페이스 사용에 대한 자세한 내용은 [인터페이스](/dotnet/csharp/programming-guide/interfaces/index)를 참조하십시오.  
+ When several clients use the same subset of members from a class, struct, or interface, or when multiple classes, structs, or interfaces have a subset of members in common, it can be useful to embody the subset of members in an interface. For more information about using interfaces, see [Interfaces](/dotnet/csharp/programming-guide/interfaces/index).  
   
- 인터페이스 추출은 새 파일에 인터페이스를 생성하고 커서를 새 파일의 시작 부분에 둡니다.  **인터페이스 추출** 대화 상자를 사용하여 새 인터페이스로 추출할 멤버, 새 인터페이스 이름 및 생성되는 파일의 이름을 지정할 수 있습니다.  
+ Extract Interface generates an interface in a new file and positions the cursor at the beginning of the new file. You can specify which members to extract into the new interface, the name of the new interface, and the name of the generated file using the **Extract Interface** dialog box.  
   
-### 인터페이스 추출을 사용하려면  
+### <a name="to-use-extract-interface"></a>To use Extract Interface  
   
-1.  `ExtractInterface`라는 콘솔 응용 프로그램을 만들고 `Program`을 다음 코드로 바꿉니다.  
+1.  Create a console application named `ExtractInterface`, and then replace `Program` with the following code  
   
-    ```c#  
+    ```cs  
     // Invoke Extract Interface on ProtoA.  
     // Note:  the extracted interface will be created in a new file.  
     class ProtoA  
@@ -45,21 +60,21 @@ manager: "wpickett"
     }  
     ```  
   
-2.  커서를 `MethodB`에 놓고 **리팩터링** 메뉴에서 **인터페이스 추출**을 클릭합니다.  
+2.  With the cursor positioned in `MethodB`, and click **Extract Interface** on the **Refactor** menu.  
   
-     **인터페이스 추출** 대화 상자가 나타납니다.  
+     The **Extract Interface** dialog box appears.  
   
-     바로 가기 키 Ctrl\+R, I를 입력해도 **인터페이스 추출** 대화 상자가 표시됩니다.  
+     You can also type the keyboard shortcut CTRL+R, I to display the **Extract Interface** dialog box.  
   
-     마우스 오른쪽 단추로 클릭하고 **리팩터링**을 가리킨 다음 **인터페이스 추출**을 클릭하여 **인터페이스 추출** 대화 상자를 표시할 수도 있습니다.  
+     You can also right-click the mouse, point to **Refactor**, and then click **Extract Interface** to display the **Extract Interface** dialog box.  
   
-3.  **모두 선택**을 클릭합니다.  
+3.  Click **Select All**.  
   
-4.  **확인**을 클릭합니다.  
+4.  Click **OK**.  
   
-     IProtoA.cs라는 새 파일과 다음 코드가 표시됩니다.  
+     You see the new file, IProtoA.cs, and the following code:  
   
-    ```c#  
+    ```cs  
     using System;  
     namespace TopThreeRefactorings  
     {  
@@ -70,10 +85,10 @@ manager: "wpickett"
     }  
     ```  
   
-## 설명  
- 추출할 멤버를 포함하는 클래스, 구조체 또는 인터페이스에 커서가 있을 때만 이 기능에 액세스할 수 있습니다.  커서가 이 위치에 있을 때 인터페이스 추출 리팩터링 작업을 호출합니다.  
+## <a name="remarks"></a>Remarks  
+ This feature is only accessible when the cursor is positioned in the class, struct, or interface that contains the members that you would like to extract. When the cursor is in this position, invoke the Extract Interface refactoring operation.  
   
- 클래스 또는 구조체에 대해 인터페이스 추출을 호출하면 기본 및 인터페이스 목록이 새 인터페이스 이름을 포함하도록 수정됩니다.  인터페이스에 대해 인터페이스 추출을 호출하면 기본 및 인터페이스 목록은 수정되지 않습니다.  
+ When you invoke extract interface on a class or on a struct, the bases and interfaces list is modified to include the new interface name. When you invoke extract interface on an interface, the bases and interfaces list is not modified.  
   
-## 참고 항목  
- [Refactoring \(C\#\)](../csharp-ide/refactoring-csharp.md)
+## <a name="see-also"></a>See Also  
+ [Refactoring (C#)](refactoring-csharp.md)

@@ -1,52 +1,69 @@
 ---
-title: "IDebugThread2::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugThread2::GetName"
-helpviewer_keywords: 
-  - "IDebugThread2::GetName"
+title: IDebugThread2::GetName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugThread2::GetName
+helpviewer_keywords:
+- IDebugThread2::GetName
 ms.assetid: eec54b8f-4a0e-4919-b0f9-81d4bd1e0b6f
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugThread2::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 80f030fda01fc5451960dda0bce5a9926080cecf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-스레드 이름을 가져옵니다.  
+---
+# <a name="idebugthread2getname"></a>IDebugThread2::GetName
+Gets the name of a thread.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetName (   
-   BSTR* pbstrName  
+HRESULT GetName (   
+   BSTR* pbstrName  
 );  
 ```  
   
-```c#  
-int GetName (   
-   out string pbstrName  
+```cs  
+int GetName (   
+   out string pbstrName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pbstrName`  
- \[out\] 스레드의 이름을 반환합니다.  
+ [out] Returns the name of the thread.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 검색된 이름 항상 표시 될 수 있는 이름입니다. 하 고 스레드가이 이름을 설명 합니다.  스레드 이름 지원 스레드에 명명 하거나 디버그 엔진에서 파생 된 이름을 수 있습니다 런타임 아키텍처에서 파생 될 수 있습니다.  또는 스레드의 이름을 호출 하 여 설정의 [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md) 메서드가 있습니다.  
+## <a name="remarks"></a>Remarks  
+ The retrieved name is always a name that can be displayed and this name describes the thread. The thread name might be derived from a run-time architecture that supports named threads, or it might be a name derived from the debug engine. Alternatively, the name of the thread can be set by a call to the [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)

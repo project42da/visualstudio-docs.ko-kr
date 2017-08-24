@@ -1,47 +1,64 @@
 ---
-title: "IDebugEngine3::LoadSymbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine3::LoadSymbols"
-helpviewer_keywords: 
-  - "IDebugEngine3::LoadSymbols"
+title: IDebugEngine3::LoadSymbols | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine3::LoadSymbols
+helpviewer_keywords:
+- IDebugEngine3::LoadSymbols
 ms.assetid: c846a440-1d91-4d48-b8f1-82e902ae152b
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugEngine3::LoadSymbols
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 88dd6c3aa2fa7df4b6dd57f3c77a72db0b635d39
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 디버깅 엔진에서 디버깅 되 고 모든 모듈에 대해 로드 \(필요\)에 따라 기호입니다.  
+---
+# <a name="idebugengine3loadsymbols"></a>IDebugEngine3::LoadSymbols
+Loads (as necessary) symbols for all modules being debugged by this debugging engine.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT LoadSymbols();  
 ```  
   
-```c#  
+```cs  
 int LoadSymbols();  
 ```  
   
-#### 매개 변수  
- 없음  
+#### <a name="parameters"></a>Parameters  
+ None.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise returns error code.  
   
-## 설명  
- 이 디버깅 엔진에 의해 참조 되는 모든 모듈에 대해 디버깅 기호를 로드 합니다.  만 이미 로드 되지 않은 경우 기호 로드 됩니다.  기호 검색 경로 호출 하 여 설정에 [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md).  
+## <a name="remarks"></a>Remarks  
+ This loads debugging symbols for all modules referenced by this debugging engine. The symbols are loaded only if they have not already been loaded. Symbols are searched on the paths set by a call to [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md).  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)   
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

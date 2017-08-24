@@ -30,17 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: f92dc8a17024e9189255156e1e23dabb1ab5ba62
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 404334708e3f3b36b779724b90a35b72111a16a7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/05/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="fieldkind"></a>FIELD_KIND
-에 포함 된 필드의 종류를 지정 된 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 개체입니다.  
+Specifies the kind of field contained in an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_FIELD_KIND {   
@@ -91,7 +91,7 @@ enum enum_FIELD_KIND {
 typedef DWORD FIELD_KIND;  
 ```  
   
-```c#  
+```cs  
 public enum enum_FIELD_KIND {  
    FIELD_KIND_NONE       = 0x00000000,  
   
@@ -139,120 +139,120 @@ public enum enum_FIELD_KIND {
 };  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
  FIELD_KIND_TYPE  
- 필드 형식에만 임을 나타냅니다.  
+ Indicates that the field is a type only.  
   
  FIELD_KIND_SYMBOL  
- 필드 형식, 이름 및 기타 정보에 대 한 기호를 나타냅니다.  
+ Indicates that the field is a symbol, with type, name, and other information.  
   
  FIELD_TYPE_PRIMITIVE  
- 기본 데이터 형식을 필드 임을 나타냅니다.  
+ Indicates that the field is a primitive data type.  
   
  FIELD_TYPE_STRUCT  
- 필드는 구조체 임을 나타냅니다.  
+ Indicates that the field is a structure.  
   
  FIELD_TYPE_CLASS  
- 필드는 클래스 임을 나타냅니다.  
+ Indicates that the field is a class.  
   
  FIELD_TYPE_INTERFACE  
- 인터페이스 필드 임을 나타냅니다.  
+ Indicates that the field is an interface.  
   
  FIELD_TYPE_UNION  
- 공용 구조체 필드 임을 나타냅니다.  
+ Indicates that the field is a union.  
   
  FIELD_TYPE_ARRAY  
- 배열 필드 임을 나타냅니다.  
+ Indicates that the field is an array.  
   
  FIELD_TYPE_METHOD  
- 메서드는 필드 임을 나타냅니다.  
+ Indicates that the field is a method.  
   
  FIELD_TYPE_BLOCK  
- 필드는 블록 임을 나타냅니다.  
+ Indicates that the field is a block.  
   
  FIELD_TYPE_POINTER  
- 필드에 대 한 포인터 임을 나타냅니다.  
+ Indicates that the field is a pointer.  
   
  FIELD_TYPE_ENUM  
- 열거형된 데이터 형식의 필드 임을 나타냅니다.  
+ Indicates that the field is an enumerated data type.  
   
  FIELD_TYPE_LABEL  
- 레이블 필드 임을 나타냅니다.  
+ Indicates that the field is a label.  
   
  FIELD_TYPE_TYPEDEF  
- 필드는 typedef 임을 나타냅니다.  
+ Indicates that the field is a typedef.  
   
  FIELD_TYPE_BITFIELD  
- 필드가 비트 필드 임을 나타냅니다.  
+ Indicates that the field is a bitfield.  
   
  FIELD_TYPE_NAMESPACE  
- 필드는 네임 스페이스 임을 나타냅니다.  
+ Indicates that the field is a namespace.  
   
  FIELD_TYPE_MODULE  
- 필드는 모듈을 나타냅니다.  
+ Indicates that the field is a module.  
   
  FIELD_TYPE_DYNAMIC  
- 동적 필드 임을 나타냅니다.  
+ Indicates that the field is dynamic.  
   
  FIELD_TYPE_PROP  
- 속성 필드 임을 나타냅니다.  
+ Indicates that the field is a property.  
   
  FIELD_TYPE_INNERCLASS  
- 필드는 내부 클래스를 나타냅니다.  
+ Indicates that the field is an inner class.  
   
  FIELD_TYPE_REFERENCE  
- 필드에 대 한 참조 임을 나타냅니다.  
+ Indicates that the field is a reference.  
   
  FIELD_TYPE_EXTENDED  
- 나중에 사용하기 위해 예약되어 있습니다.  
+ Reserved for future use.  
   
  FIELD_SYM_MEMBER  
- 필드 멤버 임을 나타냅니다.  
+ Indicates that the field is a member.  
   
  FIELD_SYM_LOCAL  
- 로컬 필드 임을 나타냅니다.  
+ Indicates that the field is local.  
   
  FIELD_SYM_PARAMETER  
- 필드는 매개 변수를 나타냅니다.  
+ Indicates that the field is a parameter.  
   
  FIELD_SYM_THIS  
- 필드에 "this"이 포인터 임을 나타냅니다.  
+ Indicates that the field is the "this" pointer.  
   
  FIELD_SYM_GLOBAL  
- 전역 필드 임을 나타냅니다.  
+ Indicates that the field is global.  
   
  FIELD_SYM_PROP_GETTER  
- 필드 속성을 검색을 나타냅니다.  
+ Indicates that the field retrieves properties.  
   
  FIELD_SYM_PROP_SETTER  
- 필드 속성을 설정 함을 나타냅니다.  
+ Indicates that the field sets properties.  
   
  FIELD_SYM_EXTENDED  
- 나중에 사용하기 위해 예약되어 있습니다.  
+ Reserved for future use.  
   
  FIELD_KIND_MASK  
- 필드 종류에 대 한 마스크를 나타냅니다.  
+ Indicates a mask for field kinds.  
   
  FIELD_TYPE_MASK  
- 필드 형식에 대 한 마스크를 나타냅니다.  
+ Indicates a mask for field types.  
   
  FIELD_SYM_MASK  
- 기호 정보에 대 한 마스크를 나타냅니다.  
+ Indicates a mask for symbol information.  
   
-## <a name="remarks"></a>주의  
- 에 대 한 호출에서 반환 되는 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) 메서드.  
+## <a name="remarks"></a>Remarks  
+ Returned from a call to the [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) method.  
   
- 필드의 종류에 따라 [QueryInterface](/cpp/atl/queryinterface) 에서 호출할 수는 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 인터페이스의 보다 구체적인 형태에 대 한 인터페이스입니다. 예를 들어 경우 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) 반환 `FIELD_TYPE_METHOD`를 호출할 수 있습니다 `QueryInterface` I에`DebugField` 가져올 수는 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) 인터페이스입니다.  
+ Depending on the kind of field, [QueryInterface](/cpp/atl/queryinterface) can be called on the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface for a more specific form of interface. For example, if [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) returns `FIELD_TYPE_METHOD`, you can then call `QueryInterface` on I`DebugField` to obtain the [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) interface.  
   
-## <a name="requirements"></a>요구 사항  
- 헤더: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
  [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

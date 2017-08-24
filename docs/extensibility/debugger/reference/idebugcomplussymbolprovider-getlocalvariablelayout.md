@@ -1,70 +1,87 @@
 ---
-title: "IDebugComPlusSymbolProvider::GetLocalVariablelayout | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetLocalVariablelayout"
-  - "IDebugComPlusSymbolProvider::GetLocalVariablelayout"
+title: IDebugComPlusSymbolProvider::GetLocalVariablelayout | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetLocalVariablelayout
+- IDebugComPlusSymbolProvider::GetLocalVariablelayout
 ms.assetid: b7328d85-e5e9-4d9f-bcd1-e7711fd33878
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugComPlusSymbolProvider::GetLocalVariablelayout
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 878a964a45f99e47150325592d993bdb65d50d9a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-레이아웃의 지역 변수를 메서드 집합을 검색합니다.  
+---
+# <a name="idebugcomplussymbolprovidergetlocalvariablelayout"></a>IDebugComPlusSymbolProvider::GetLocalVariablelayout
+Retrieves the layout of local variables for a set of methods.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetLocalVariablelayout(  
-   ULONG32   ulAppDomainID,  
-   GUID      guidModule,  
-   ULONG32   cMethods,  
-   _mdToken  rgMethodTokens[],  
-   IStream** pStreamLayout  
+   ULONG32   ulAppDomainID,  
+   GUID      guidModule,  
+   ULONG32   cMethods,  
+   _mdToken  rgMethodTokens[],  
+   IStream** pStreamLayout  
 );  
 ```  
   
-```c#  
+```cs  
 int GetLocalVariablelayout(  
-   uint        ulAppDomainID,  
-   Guid        guidModule,  
-   uint        cMethods,  
-   int[]       rgMethodTokens,  
-   out IStream pStreamLayout  
+   uint        ulAppDomainID,  
+   Guid        guidModule,  
+   uint        cMethods,  
+   int[]       rgMethodTokens,  
+   out IStream pStreamLayout  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- \[in\] 응용 프로그램 도메인의 식별자입니다.  
+ [in] Identifier of the application domain.  
   
  `guidModule`  
- \[in\] 모듈의 고유 식별자입니다.  
+ [in] Unique identifier of the module.  
   
  `cMethods`  
- \[in\] 많은 메서드 토큰에 `rgMethodTokens` 배열입니다.  
+ [in] Number of method tokens in the `rgMethodTokens` array.  
   
  `rgMethodTokens`  
- \[in\] 메서드 토큰의 배열입니다.  
+ [in] Array of method tokens.  
   
  `pStreamLayout`  
- \[out\] 변수 레이아웃이 포함 하는 텍스트 스트림.  
+ [out] A text stream that contains the variable layout.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 예제  
- 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CDebugSymbolProvider** 를 노출 하는 개체는 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) 인터페이스.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetLocalVariablelayout(  
@@ -111,5 +128,5 @@ HRESULT CDebugSymbolProvider::GetLocalVariablelayout(
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

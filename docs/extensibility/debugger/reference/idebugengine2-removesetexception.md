@@ -1,54 +1,71 @@
 ---
-title: "IDebugEngine2::RemoveSetException | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2::RemoveSetException"
-helpviewer_keywords: 
-  - "IDebugEngine2::RemoveSetException"
+title: IDebugEngine2::RemoveSetException | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine2::RemoveSetException
+helpviewer_keywords:
+- IDebugEngine2::RemoveSetException
 ms.assetid: bdd25097-0e9d-4218-b417-0497ea48d2e8
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugEngine2::RemoveSetException
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1bcdd1c268a8c696db3565f3ac824982ed64c6ce
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-더 이상 디버그 엔진에서 처리 하므로 지정 된 예외를 제거 합니다.  
+---
+# <a name="idebugengine2removesetexception"></a>IDebugEngine2::RemoveSetException
+Removes the specified exception so it is no longer handled by the debug engine.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT RemoveSetException(   
-   EXCEPTION_INFO* pException  
+HRESULT RemoveSetException(   
+   EXCEPTION_INFO* pException  
 );  
 ```  
   
-```c#  
-int RemoveSetException(   
-   EXCEPTION_INFO[] pException  
+```cs  
+int RemoveSetException(   
+   EXCEPTION_INFO[] pException  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pException`  
- \[in\] [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md) 구조를 제거 하는 예외에 설명 합니다.  
+ [in] An [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure that describes the exception to be removed.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 예외를 제거 하 고 이전에 호출 하 여 설정 되어 있어야 해당 [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) 메서드.  
+## <a name="remarks"></a>Remarks  
+ The exception being removed must have been previously set by an earlier call to the [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) method.  
   
- 모든 집합 예외를 한 번에 제거 하려면 호출을 [RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md) 메서드.  
+ To remove all set exceptions at once, call the [RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
- [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md)
+ [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)

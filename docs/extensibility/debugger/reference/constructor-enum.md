@@ -1,66 +1,83 @@
 ---
-title: "CONSTRUCTOR_ENUM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CONSTRUCTOR_ENUM"
-helpviewer_keywords: 
-  - "CONSTRUCTOR_ENUM 열거형"
+title: CONSTRUCTOR_ENUM | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CONSTRUCTOR_ENUM
+helpviewer_keywords:
+- CONSTRUCTOR_ENUM enumeration
 ms.assetid: 6d335b2c-66bc-460c-a4a6-4f3f1b697c2c
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# CONSTRUCTOR_ENUM
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 3e5ea6b486d267dc9330e576eab6a73f644226cd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-생성자의 다양 한 종류를 선택합니다.  
+---
+# <a name="constructorenum"></a>CONSTRUCTOR_ENUM
+Selects different types of constructors.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-typedef enum ConstructorMatchOptions {   
-   crAll       = 0,  
-   crNonStatic = 1,  
-   crStatic    = 2  
+typedef enum ConstructorMatchOptions {   
+   crAll       = 0,  
+   crNonStatic = 1,  
+   crStatic    = 2  
 } CONSTRUCTOR_ENUM;  
 ```  
   
-```c#  
-public enum ConstructorMatchOptions {   
-   crAll       = 0,  
-   crNonStatic = 1,  
-   crStatic    = 2  
+```cs  
+public enum ConstructorMatchOptions {   
+   crAll       = 0,  
+   crNonStatic = 1,  
+   crStatic    = 2  
 };  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
  crAll  
- 모든 생성자를 선택합니다.  
+ Selects all constructors.  
   
  crNonStatic  
- 정적이 아닌 생성자가 선택 됩니다.  
+ Selects non-static constructors.  
   
  crStatic  
- 정적 생성자를 선택합니다.  
+ Selects static constructors.  
   
-## 설명  
- 인수로 전달 되는 [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) 방법입니다.  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) method.  
   
-## 요구 사항  
- 헤더: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)

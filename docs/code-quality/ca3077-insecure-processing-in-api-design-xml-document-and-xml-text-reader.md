@@ -1,54 +1,72 @@
 ---
-title: "CA3077: API 디자인, XML 문서 및 XML 텍스트 판독기의 안전하지 않은 처리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'CA3077: Insecure Processing in API Design, XML Document and XML Text Reader | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f33771b-f3c8-4c02-bef6-f581b623c303
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA3077: API 디자인, XML 문서 및 XML 텍스트 판독기의 안전하지 않은 처리
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 79fcb3bd6c6453eec03f489fc92646463cdb80ff
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
+---
+# <a name="ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader"></a>CA3077: Insecure Processing in API Design, XML Document and XML Text Reader
 |||  
 |-|-|  
 |TypeName|InsecureDTDProcessingInAPIDesign|  
 |CheckId|CA3077|  
-|범주|Microsoft.Security|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Security|  
+|Breaking Change|Non Breaking|  
   
-## 원인  
- XMLDocument 및 XMLTextReader에서 파생된 API를 디자인할 경우 <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>에 주의해야 합니다.  외부 엔터티 소스를 참조하거나 확인할 때 안전하지 않은 DTDProcessing 인스턴스를 사용하거나 XML에서 안전하지 않은 값을 설정하면 정보가 공개될 수 있습니다.  
+## <a name="cause"></a>Cause  
+ When designing an API derived from XMLDocument and XMLTextReader, be mindful of <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>.  Using insecure DTDProcessing instances when referencing or resolving external entity sources or setting insecure values in the XML may lead to information disclosure.  
   
-## 규칙 설명  
- [DTD\(문서 종류 정의\)](https://msdn.microsoft.com/en-us/library/aa468547.aspx)는 XML 파서가 [W3C\(World Wide Web Consortium\) XML\(Extensible Markup Language\) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/)에 정의된 대로 문서의 유효성을 확인할 수 있는 두 가지 방법 중 하나입니다. 이 규칙은 신뢰할 수 없는 데이터가 허용되는 속성 및 인스턴스를 찾아 [DoS\(서비스 거부\)](../Topic/Denial%20of%20Service.md) 공격을 야기할 수 있는 잠재적인 [정보 공개](../Topic/Information%20Disclosure.md) 위협을 개발자에게 경고합니다. 다음 경우에 이 규칙이 트리거됩니다.  
+## <a name="rule-description"></a>Rule Description  
+ A [Document Type Definition (DTD)](https://msdn.microsoft.com/en-us/library/aa468547.aspx) is one of two ways an XML parser can determine the validity of a document, as defined by the  [World Wide Web Consortium (W3C) Extensible Markup Language (XML) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/). This rule seeks properties and instances where untrusted data is accepted to warn developers about potential [Information Disclosure](/dotnet/framework/wcf/feature-details/information-disclosure) threats, which may lead to [Denial of Service (DoS)](/dotnet/framework/wcf/feature-details/denial-of-service) attacks. This rule triggers when:  
   
--   <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XmlTextReader> 클래스는 DTD 처리를 위해 기본 해결 프로그램 값을 사용합니다.  
+-   <xref:System.Xml.XmlDocument> or <xref:System.Xml.XmlTextReader> classes use default resolver values for DTD processing    .  
   
--   XmlDocument 또는 XmlTextReader 파생 클래스에 대해 정의된 생성자가 없거나 <xref:System.Xml.XmlResolver>에 대해 보안 값이 사용되지 않습니다.  
+-   No constructor is defined for the XmlDocument or XmlTextReader derived classes or no secure value is used for <xref:System.Xml.XmlResolver>.  
   
-## 위반 문제를 해결하는 방법  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
   
--   모든 XmlTextReader 예외를 catch하고 적절히 처리하여 경로 정보가 공개되지 않도록 합니다.  
+-   Catch and process all XmlTextReader exceptions properly to avoid path information disclosure    .  
   
--   XmlResolver 대신 <xref:System.Xml.XmlSecureResolver>를 사용하여  XmlTextReader에서 액세스할 수 있는 리소스를 제한할 수 있습니다.  
+-   Use <xref:System.Xml.XmlSecureResolver>instead of XmlResolver to restrict the resources the XmlTextReader can  access.  
   
-## 경고를 표시하지 않는 경우  
- 입력 출처를 신뢰할 수 있는지 확신할 수 없으면 이 경고의 규칙이 표시되지 않도록 설정하지 않도록 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Unless you're sure that the input is known to be from a trusted source, do not suppress a rule from this warning.  
   
-## 의사 코드 예제  
+## <a name="pseudo-code-examples"></a>Pseudo-code Examples  
   
-### 위반  
+### <a name="violation"></a>Violation  
   
-```c#  
+```cs  
 using System;   
 using System.Xml;   
   
@@ -68,9 +86,9 @@ namespace TestNamespace
 }  
 ```  
   
-### 솔루션  
+### <a name="solution"></a>Solution  
   
-```c#  
+```cs  
 using System;   
 using System.Xml;   
   

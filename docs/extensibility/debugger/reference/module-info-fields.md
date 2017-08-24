@@ -1,122 +1,139 @@
 ---
-title: "MODULE_INFO_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MODULE_INFO_FIELDS"
-helpviewer_keywords: 
-  - "MODULE_INFO_FIELDS 열거형"
+title: MODULE_INFO_FIELDS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MODULE_INFO_FIELDS
+helpviewer_keywords:
+- MODULE_INFO_FIELDS enumeration
 ms.assetid: 8bed85f4-235f-4192-b58f-5fad7a4d7a78
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MODULE_INFO_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 10412354e5cdad73b43d432026ce02add56bcab5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-디버그 모듈 정보에 대 한 플래그를 지정합니다.  
+---
+# <a name="moduleinfofields"></a>MODULE_INFO_FIELDS
+Specifies the flags for the debug module information.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_MODULE_INFO_FIELDS {   
-   MIF_NONE              = 0x0000,  
-   MIF_NAME              = 0x0001,  
-   MIF_URL               = 0x0002,  
-   MIF_VERSION           = 0x0004,  
-   MIF_DEBUGMESSAGE      = 0x0008,  
-   MIF_LOADADDRESS       = 0x0010,  
-   MIF_PREFFEREDADDRESS  = 0x0020,  
-   MIF_SIZE              = 0x0040,  
-   MIF_LOADORDER         = 0x0080,  
-   MIF_TIMESTAMP         = 0x0100,  
-   MIF_URLSYMBOLLOCATION = 0x0200,  
-   MIF_FLAGS             = 0x0400,  
-   MIF_ALLFIELDS         = 0x07ff  
+enum enum_MODULE_INFO_FIELDS {   
+   MIF_NONE              = 0x0000,  
+   MIF_NAME              = 0x0001,  
+   MIF_URL               = 0x0002,  
+   MIF_VERSION           = 0x0004,  
+   MIF_DEBUGMESSAGE      = 0x0008,  
+   MIF_LOADADDRESS       = 0x0010,  
+   MIF_PREFFEREDADDRESS  = 0x0020,  
+   MIF_SIZE              = 0x0040,  
+   MIF_LOADORDER         = 0x0080,  
+   MIF_TIMESTAMP         = 0x0100,  
+   MIF_URLSYMBOLLOCATION = 0x0200,  
+   MIF_FLAGS             = 0x0400,  
+   MIF_ALLFIELDS         = 0x07ff  
 };  
 typedef DWORD MODULE_INFO_FIELDS;  
 ```  
   
-```c#  
-public enum enum_MODULE_INFO_FIELDS {   
-   MIF_NONE              = 0x0000,  
-   MIF_NAME              = 0x0001,  
-   MIF_URL               = 0x0002,  
-   MIF_VERSION           = 0x0004,  
-   MIF_DEBUGMESSAGE      = 0x0008,  
-   MIF_LOADADDRESS       = 0x0010,  
-   MIF_PREFFEREDADDRESS  = 0x0020,  
-   MIF_SIZE              = 0x0040,  
-   MIF_LOADORDER         = 0x0080,  
-   MIF_TIMESTAMP         = 0x0100,  
-   MIF_URLSYMBOLLOCATION = 0x0200,  
-   MIF_FLAGS             = 0x0400,  
-   MIF_ALLFIELDS         = 0x07ff  
+```cs  
+public enum enum_MODULE_INFO_FIELDS {   
+   MIF_NONE              = 0x0000,  
+   MIF_NAME              = 0x0001,  
+   MIF_URL               = 0x0002,  
+   MIF_VERSION           = 0x0004,  
+   MIF_DEBUGMESSAGE      = 0x0008,  
+   MIF_LOADADDRESS       = 0x0010,  
+   MIF_PREFFEREDADDRESS  = 0x0020,  
+   MIF_SIZE              = 0x0040,  
+   MIF_LOADORDER         = 0x0080,  
+   MIF_TIMESTAMP         = 0x0100,  
+   MIF_URLSYMBOLLOCATION = 0x0200,  
+   MIF_FLAGS             = 0x0400,  
+   MIF_ALLFIELDS         = 0x07ff  
 };  
 ```  
   
-## Members  
- MIF\_NONE  
- 기본 초기화 필드 구조에서에 사용 합니다.  
+## <a name="members"></a>Members  
+ MIF_NONE  
+ Initialize/use none of the fields in the structure.  
   
- MIF\_NAME  
- 초기화\/사용의 `m_bstrName` 필드에 [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md) 구조입니다.  
+ MIF_NAME  
+ Initialize/use the `m_bstrName` field in the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure.  
   
- MIF\_URL  
- 초기화\/사용의 `m_bstrUrl` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_URL  
+ Initialize/use the `m_bstrUrl` field in the `MODULE_INFO` structure.  
   
- MIF\_VERSION  
- 초기화\/사용의 `m_bstrVersion` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_VERSION  
+ Initialize/use the `m_bstrVersion` field in the `MODULE_INFO` structure.  
   
- MIF\_DEBUGMESSAGE  
- 초기화\/사용의 `m_bstrDebugMessage` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_DEBUGMESSAGE  
+ Initialize/use the `m_bstrDebugMessage` field in the `MODULE_INFO` structure.  
   
- MIF\_LOADADDRESS  
- 초기화\/사용의 `m_addrLoadAddress` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_LOADADDRESS  
+ Initialize/use the `m_addrLoadAddress` field in the `MODULE_INFO` structure.  
   
- MIF\_PREFFEREDADDRESS  
- 초기화\/사용의 `m_addrPreferredLoadAddress` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_PREFFEREDADDRESS  
+ Initialize/use the `m_addrPreferredLoadAddress` field in the `MODULE_INFO` structure.  
   
- MIF\_SIZE  
- 초기화\/사용의 `m_dwSize` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_SIZE  
+ Initialize/use the `m_dwSize` field in the `MODULE_INFO` structure.  
   
- MIF\_LOADORDER  
- 초기화\/사용의 `m_dwLoadOrder` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_LOADORDER  
+ Initialize/use the `m_dwLoadOrder` field in the `MODULE_INFO` structure.  
   
- MIF\_TIMESTAMP  
- 초기화\/사용의 `m_TimeStamp` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_TIMESTAMP  
+ Initialize/use the `m_TimeStamp` field in the `MODULE_INFO` structure.  
   
- MIF\_URLSYMBOLLOCATION  
- 초기화\/사용의 `m_bstrUrlSymbolLocation` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_URLSYMBOLLOCATION  
+ Initialize/use the `m_bstrUrlSymbolLocation` field in the `MODULE_INFO` structure.  
   
- MIF\_FLAGS  
- 초기화\/사용의 `m_dwModuleFlags` 필드에 `MODULE_INFO` 구조입니다.  
+ MIF_FLAGS  
+ Initialize/use the `m_dwModuleFlags` field in the `MODULE_INFO` structure.  
   
- MIF\_ALLFIELDS  
- 기본 초기화 필드의 사용은 `MODULE_INFO` 구조.  
+ MIF_ALLFIELDS  
+ Initialize/use all of the fields in the `MODULE_INFO` structure.  
   
-## 설명  
- 이러한 값을 인수로 전달 되는 [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) 필드의 나타내도록 메서드는 [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md) 구조에 있는 초기화.  
+## <a name="remarks"></a>Remarks  
+ These values are passed as an argument to the [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) method to indicate which fields of the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure are to be initialized.  
   
- 이러한 값에도 사용 됩니다에서 `MODULE_INFO` 구조 필드 사용 되는 및 잘못 된 것을 나타냅니다.  
+ These values are also used in the `MODULE_INFO` structure to indicate which fields are used and valid.  
   
- 이러한 플래그의 비트와 함께 사용할 수 있습니다 `OR`.  
+ These flags may be combined with a bitwise `OR`.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

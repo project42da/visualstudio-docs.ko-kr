@@ -1,71 +1,88 @@
 ---
-title: "IDebugProperty2::SetValueAsReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty2::SetValueAsReference"
-helpviewer_keywords: 
-  - "IDebugProperty2::SetValueAsReference 메서드"
+title: IDebugProperty2::SetValueAsReference | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProperty2::SetValueAsReference
+helpviewer_keywords:
+- IDebugProperty2::SetValueAsReference method
 ms.assetid: 341b1b89-4ab8-4e1c-abe2-fb955df5c6b0
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugProperty2::SetValueAsReference
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 68f0165f1b6998dc118c6279cba5d9666ea820c2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 속성의 값을 지정한 참조의 값으로 설정 합니다.  
+---
+# <a name="idebugproperty2setvalueasreference"></a>IDebugProperty2::SetValueAsReference
+Sets the value of this property to the value of the given reference.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT SetValueAsReference(  
-   IDebugReference2** rgpArgs,  
-   DWORD              dwArgCount,  
-   IDebugReference2*  pValue,  
-   DWORD              dwTimeout  
+   IDebugReference2** rgpArgs,  
+   DWORD              dwArgCount,  
+   IDebugReference2*  pValue,  
+   DWORD              dwTimeout  
 );  
 ```  
   
-```c#  
+```cs  
 int SetValueAsReference(  
-   IDebugReference2[] rgpArgs,  
-   uint               dwArgCount,  
-   IDebugReference2   pValue,  
-   uint               dwTimeout  
+   IDebugReference2[] rgpArgs,  
+   uint               dwArgCount,  
+   IDebugReference2   pValue,  
+   uint               dwTimeout  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `rgpArgs`  
- \[in\] 관리 되는 코드 속성 setter에 전달할 인수 배열입니다.  속성 setter는 인수를 사용 하지 않는 경우 또는이 경우 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 와 같은 속성 setter에 개체를 참조 하지 않습니다 `rgpArgs` null 값 이어야 합니다.  이 매개 변수는 일반적으로 null 값입니다.  
+ [in] An array of arguments to pass to the managed code property setter. If the property setter does not take arguments or if this [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object does not refer to such a property setter, `rgpArgs` should be a null value. This parameter is typically a null value.  
   
  `dwArgCount`  
- \[in\] 인수 개수는 `rgpArgs` 배열입니다.  
+ [in] The number of arguments in the `rgpArgs` array.  
   
  `pValue`  
- \[in\] 참조 형식으로 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) 개체를 사용 하 여이 속성을 설정 하는 값입니다.  
+ [in] A reference, in the form of an [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object, to the value to use to set this property.  
   
  `dwTimeout`  
- \[in\] 시간 값을 밀리초 단위로 설정 하는 데 있습니다.  기본값은입니다 `INFINITE`.  이 모든 가능한 평가 소요 기간을 영향을 줍니다.  
+ [in] How long to take to set the value, in milliseconds. A typical value is `INFINITE`. This affects the length of time that any possible evaluation can take.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 다음 중 하나 일반적으로 오류 코드를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns an error code, typically one of the following:  
   
-|오류|설명|  
-|--------|--------|  
-|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|값에 대 한 참조를 설정할 수 없습니다.|  
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|이 속성에는 메서드를 참조 하는 대로 값을 설정할 수 없습니다.|  
-|`E_SETVALUE_VALUE_IS_READONLY`|값은 읽기 전용 이며 설정할 수 없습니다.|  
-|`E_NOTIMPL`|메서드가 구현되지 않았습니다.|  
+|Error|Description|  
+|-----------|-----------------|  
+|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|Setting the value from a reference is not supported.|  
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|The value cannot be set, as this property refers to a method.|  
+|`E_SETVALUE_VALUE_IS_READONLY`|The value is read-only and cannot be set.|  
+|`E_NOTIMPL`|The method is not implemented.|  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

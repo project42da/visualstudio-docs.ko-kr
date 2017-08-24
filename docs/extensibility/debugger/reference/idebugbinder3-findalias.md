@@ -1,57 +1,74 @@
 ---
-title: "IDebugBinder3::FindAlias | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBinder3::FindAlias"
-helpviewer_keywords: 
-  - "IDebugBinder3::FindAlias 메서드"
+title: IDebugBinder3::FindAlias | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBinder3::FindAlias
+helpviewer_keywords:
+- IDebugBinder3::FindAlias method
 ms.assetid: b8333701-2718-4983-8513-0875fb7cb730
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugBinder3::FindAlias
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b4820228074cb4860480e447b836c59e9bbc427c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 메서드는 이름이 지정 된 별칭을 찾습니다.  이 프로그램의 모든 별칭을 검색 합니다.  
+---
+# <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
+This method locates an alias, given a name. This will search all aliases in the program.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT FindAlias(  
-   LPCOLESTR     pcstrName,  
-   IDebugAlias** ppAlias  
+HRESULT FindAlias(  
+   LPCOLESTR     pcstrName,  
+   IDebugAlias** ppAlias  
 );  
 ```  
   
-```c#  
-int FindAlias(  
-   string          pcstrName,  
-   out IDebugAlias ppAlias  
+```cs  
+int FindAlias(  
+   string          pcstrName,  
+   out IDebugAlias ppAlias  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pcstrName`  
- \[in\] 찾기 위해 별칭의 이름입니다.  
+ [in] Name of alias to find.  
   
  `ppAlias`  
- \[out\] 별칭 \(있는 경우\)를 표시 하는 [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) 인터페이스입니다.  
+ [out] Alias found (if any) represented by the [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) interface.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` \(별칭이 없는 경우\) 또는 오류 코드입니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns `S_FALSE` (if alias is not found) or an error code.  
   
-## 설명  
- 이 메서드를 호출 하기 전에 null 대상 개체 초기화. 그런 다음 나중에 별칭을 찾을 수 있는지 여부를 확인 하려면 null 값을 테스트 합니다.  
+## <a name="remarks"></a>Remarks  
+ This method initializes the destination object to null before calling; then it tests for a null value afterward to determine whether or not the alias was found.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

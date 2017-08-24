@@ -1,51 +1,68 @@
 ---
-title: "IDebugCustomAttribute::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttribute::GetName"
-helpviewer_keywords: 
-  - "IDebugCustomAttribute::GetName"
+title: IDebugCustomAttribute::GetName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCustomAttribute::GetName
+helpviewer_keywords:
+- IDebugCustomAttribute::GetName
 ms.assetid: ba509cc5-5816-4925-a094-4c72d88c360c
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugCustomAttribute::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c06fe0979f2f95ad10d61787ffa3bdee45926555
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-사용자 지정 특성의 이름을 가져옵니다.  
+---
+# <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
+Gets the name of the custom attribute.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetName(   
-   BSTR* bstrName  
+HRESULT GetName(   
+   BSTR* bstrName  
 );  
 ```  
   
-```c#  
+```cs  
 int GetName(  
-   out string bstrName  
+   out string bstrName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `bstrName`  
- \[out\] 사용자 지정 특성의 이름이 들어 있는 문자열을 반환 합니다.  
+ [out] Returns a string containing the name of the custom attribute.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드에서 반환 된 명명 된 특성을 선언 하는 데 사용 되는 클래스의 이름에 해당 합니다.  C\#는 "Attribute" 접미사를 선언에 사용 하는 경우 사용자 지정 특성 이름에서 삭제 하도록 허용 하는이 정확 하 게 사용자 지정 특성 클래스의 이름에 해당 합니다.  
+## <a name="remarks"></a>Remarks  
+ The named returned by this method corresponds to the name of the class used to declare the attribute. This may not exactly correspond to the name of the custom attribute class itself as C# allows the "Attribute" suffix to be dropped from a custom attribute name when it is used in a declaration.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

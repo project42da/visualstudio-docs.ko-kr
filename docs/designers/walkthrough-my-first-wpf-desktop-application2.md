@@ -1,5 +1,5 @@
 ---
-title: "연습: 내 첫 번째 WPF 데스크톱 응용 프로그램2 | Microsoft Docs"
+title: 'Walkthrough: My First WPF Desktop Application2 | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,57 +28,57 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 6045516b1be3ed5a603751e71a720090a5e0fe50
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1496b93aafc43793b2b0c97d24ba0dbb0666fa2f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
-<a name="introduction"></a> 이 연습에서는 WPF(Windows Presentation Foundation) 개발에 대해 소개합니다. XAML 태그, 코드 숨김, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩, 스타일 등 대부분의 WPF 데스크톱 응용 프로그램에 공통된 요소를 포함하는 기본 응용 프로그램을 만듭니다.  
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>Walkthrough: My First WPF Desktop Application
+<a name="introduction"></a> This walkthrough provides an introduction to Windows Presentation Foundation (WPF) development. You'll create a basic application that includes the elements that are common to most WPF desktop applications: XAML markup, code-behind, application definitions, controls, layout, data binding, and styles.  
   
-##  <a name="Create_The_Application_Code_Files"></a> 응용 프로그램 프로젝트 만들기  
- 이 섹션에서는 프로젝트와 주 창 또는 폼을 포함하는 응용 프로그램 인프라를 만듭니다.  
+##  <a name="Create_The_Application_Code_Files"></a> Creating the Application Project  
+ In this section, you'll create the application infrastructure, which includes the project and a main window or form.  
   
-#### <a name="to-create-the-project"></a>프로젝트를 만들려면  
+#### <a name="to-create-the-project"></a>To create the project  
   
-1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
+1.  On the menu bar, choose **File**, **New**, **Project**.  
   
-2.  **새 프로젝트** 대화 상자에서 **Visual C#** 또는 **Visual Basic** 노드를 확장하고 **Windows** 노드를 선택한 다음 **Windows** 노드를 확장하고 **클래식 바탕 화면** 노드를 선택합니다.  
+2.  In the **New Project** dialog, expand either the **Visual C#** or **Visual Basic** node and choose the **Windows** node, and then expand the **Windows** node and choose the **Classic Desktop** node.  
   
-3.  템플릿 목록에서 **WPF 응용 프로그램** 템플릿을 선택합니다.  
+3.  In the template list, choose the **WPF Application** template.  
   
-4.  **이름** 텍스트 상자에 `ExpenseIt`를 입력하고 **확인** 단추를 선택합니다.  
+4.  In the **Name** textbox enter `ExpenseIt`, and then choose the **OK** button.  
   
-     프로젝트가 생성되고 프로젝트 파일이 **솔루션 탐색기**에 추가된 다음 **MainWindow.xaml** 이라는 기본 응용 프로그램 창에 대한 디자이너가 표시됩니다.  
+     The project is created and the project files are added to **Solution Explorer**, and the designer for the default application window named **MainWindow.xaml** is displayed.  
   
-#### <a name="to-modify-the-main-window"></a>주 창을 수정하려면  
+#### <a name="to-modify-the-main-window"></a>To modify the main window  
   
-1.  디자이너에서 활성 디자이너 탭이 아닌 경우 **MainWindow.xaml** 탭을 선택합니다.  
+1.  In the designer, choose the **MainWindow.xaml** tab if it isn't already the active designer tab.  
   
-2.  C#을 사용하는 경우 `<Window x:Class="ExpenseIt.MainWindow"` 줄을 찾아서 `<NavigationWindow x:Class="ExpenseIt.MainWindow"`로 바꿉니다.  
+2.  If you're using C#, find the line `<Window x:Class="ExpenseIt.MainWindow"` and replace it with `<NavigationWindow x:Class="ExpenseIt.MainWindow"`.  
   
-     Visual Basic을 사용하는 경우 `<Window x:Class=" MainWindow"` 줄을 찾아서 `<NavigationWindow x:Class="MainWindow"`로 바꿉니다.  
+     If you're using Visual Basic, find the line `<Window x:Class=" MainWindow"` and replace it with `<NavigationWindow x:Class="MainWindow"`.  
   
-     `<Window` 태그를 `<NavigationWindow`로 변경하는 경우 Intellisense가 자동으로 닫는 태그를 `</NavigationWindow>` 로 변경합니다.  
+     Notice that when you change the `<Window` tag to `<NavigationWindow`, Intellisense automatically changes the closing tag to `</NavigationWindow>` as well.  
   
     > [!NOTE]
-    >  태그를 변경한 후 **오류 목록** 창이 열려 있으면 여러 오류가 표시될 수도 있습니다. 다음 몇 단계의 변경 작업을 수행하면 이러한 오류가 사라집니다.  
+    >  After changing the tag, if the **Error List** window is open you may notice several errors. Don't worry, the changes you make in the next few steps will make these go away.  
   
-3.  `<Grid>` 및 `</Grid>` 태그를 선택하고 삭제합니다.  
+3.  Choose the `<Grid>` and `</Grid>` tags and delete them.  
   
-     **NavigationWindow**는 **Grid**와 같은 기타 UI 요소를 포함할 수 없습니다.  
+     A **NavigationWindow** can't contain other UI elements such as a **Grid**.  
   
-4.  **속성** 창에서 **일반** 범주 노드를 확장하고 **Title** 속성을 선택한 다음 `ExpenseIt` 를 입력하고 **Enter** 키를 누릅니다.  
+4.  In the **Properties** window, expand the **Common** category node and choose the **Title** property, and then enter `ExpenseIt` and press the **Enter** key.  
   
-     XAML 창의 **Title** 요소가 새 값과 일치하도록 변경됩니다. XAML 창 또는 **속성** 창에서 XAML 속성을 수정할 수 있으며 변경 내용이 동기화됩니다.  
+     Notice that the **Title** element in the XAML window changes to match the new value. You can modify XAML properties in either the XAML window or the **Properties** window, and the changes are synchronized.  
   
-5.  XAML 창에서 **Height** 요소의 값을 `375`로 설정하고 **Width** 속성의 값을 `500`를 차례로 선택합니다.  
+5.  In the XAML window, set the value of the **Height** element to `375`, and set the value of the **Width** property to `500`.  
   
-     이러한 요소는 **속성** 창의 **레이아웃** 범주에 있는 **Height** 및 **Width** 속성에 해당합니다.  
+     These elements correspond to the **Height** and **Width** properties, found in the **Layout** category in the **Properties** window.  
   
-     이제 C#에서 **MainWindow.xaml** 파일이 다음과 같이 표시됩니다.  
+     Your **MainWindow.xaml** file should now look like this in C#:  
   
     ```xaml  
     <NavigationWindow x:Class="ExpenseIt.MainWindow"  
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/13/2017
     </NavigationWindow>  
     ```  
   
-     또는 Visual Basic에서 다음과 같이 표시됩니다.  
+     Or like this in Visual Basic:  
   
     ```xaml  
     <NavigationWindow x:Class="MainWindow"  
@@ -108,30 +108,30 @@ ms.lasthandoff: 05/13/2017
     </NavigationWindow>  
     ```  
   
-#### <a name="to-modify-the-code-behind-file-c"></a>코드 숨김 파일을 수정하려면(C#)  
+#### <a name="to-modify-the-code-behind-file-c"></a>To modify the code-behind file (C#)  
   
-1.  **솔루션 탐색기**에서 **MainWindow.xaml** 노드를 확장하고 **MainWindow.xaml.cs** 파일을 엽니다.  
+1.  In **Solution Explorer**, expand the **MainWindow.xaml** node and open the **MainWindow.xaml.cs** file.  
   
-2.  `public partial class MainWindow : Window` 줄을 찾아서 `public partial class MainWindow : NavigationWindow`로 바꿉니다.  
+2.  Find the line `public partial class MainWindow : Window` and replace it with `public partial class MainWindow : NavigationWindow`.  
   
-     이렇게 하면 `MainWindow` 클래스가 `NavigationWindow`에서 파생되도록 변경됩니다. Visual Basic에서는 XAML에서 창을 변경할 때 이 작업이 자동으로 수행되므로 코드를 변경해야 합니다.  
+     This changes the `MainWindow` class to derive from `NavigationWindow`. In Visual Basic, this happens automatically when you change the window in XAML, so no code changes are necessary.  
   
-##  <a name="add_files_to_the_application"></a> 응용 프로그램에 파일 추가  
- 이 섹션에서는 응용 프로그램에 두 페이지와 이미지를 추가합니다.  
+##  <a name="add_files_to_the_application"></a> Adding Files to the Application  
+ In this section, you'll add two pages and an image to the application.  
   
-#### <a name="to-add-a-home-screen"></a>홈 화면을 추가하려면  
+#### <a name="to-add-a-home-screen"></a>To add a home screen  
   
-1.  **솔루션 탐색기**에서 **ExpenseIt** 노드의 바로 가기 메뉴를 열고 **추가**, **페이지**를 선택합니다.  
+1.  In **Solution Explorer**, open the shortcut menu for the **ExpenseIt** node and choose **Add**, **Page**.  
   
-2.  **새 항목 추가** 대화 상자에서 **이름** 텍스트 상자를 선택하고 `ExpenseItHome`를 입력하고 **추가** 단추를 선택합니다.  
+2.  In the **Add New Item** dialog, choose the **Name** text box and enter `ExpenseItHome`, and then choose the **Add** button.  
   
-     이 페이지는 응용 프로그램을 시작할 때 표시되는 첫 번째 창입니다.  
+     This page is the first window that is displayed when the application is launched.  
   
-3.  디자이너에서 활성 디자이너 탭이 아닌 경우 **ExpenseItHome.xaml** 탭을 선택합니다.  
+3.  In the designer, choose the **ExpenseItHome.xaml** tab if it isn't already the active designer tab.  
   
-4.  `<Title>` 요소를 선택하고 제목을 **ExpenseIt – Home**으로 변경합니다.  
+4.  Choose the `<Title>` element and change the title to **ExpenseIt - Home**.  
   
-     이제 C#에서 **ExpenseItHome.xaml** 파일이 다음과 같이 표시됩니다.  
+     Your **ExpenseItHome.xaml** file should now look like this in C#:  
   
     ```xaml  
     <Page x:Class="ExpenseIt.ExpenseItHome"  
@@ -150,7 +150,7 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-     또는 Visual Basic에서 다음과 같이 표시됩니다.  
+     Or like this in Visual Basic:  
   
     ```xaml  
     <Page x:Class="ExpenseItHome"  
@@ -168,11 +168,11 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-5.  디자이너에서 **MainWindow.xaml** 탭을 선택합니다.  
+5.  In the designer, choose the **MainWindow.xaml** tab.  
   
-6.  줄 `Title="ExpenseIt" Height="375" Width="500">` 요소를 찾아서 `Source="ExpenseItHome.xaml"` 속성을 추가합니다.  
+6.  Find the line `Title="ExpenseIt" Height="375" Width="500">` element and add a `Source="ExpenseItHome.xaml"` property.  
   
-     이렇게 하면 **ExpenseItHome.xaml** 이 응용 프로그램을 시작할 때 열리는 첫 페이지로 설정됩니다. 이제 C#에서 **MainWindow.xaml** 파일이 다음과 같이 표시됩니다.  
+     This sets **ExpenseItHome.xaml** to be the first page opened when the application starts. Your **MainWindow.xaml** file should now look like this in C#:  
   
     ```xaml  
     <NavigationWindow x:Class="ExpenseIt.MainWindow"  
@@ -187,7 +187,7 @@ ms.lasthandoff: 05/13/2017
     </NavigationWindow>  
     ```  
   
-     또는 Visual Basic에서 다음과 같이 표시됩니다.  
+     Or like this in Visual Basic:  
   
     ```xaml  
     NavigationWindow x:Class="MainWindow"  
@@ -202,21 +202,21 @@ ms.lasthandoff: 05/13/2017
     </NavigationWindow>  
     ```  
   
-     앞에서 설정한 속성과 마찬가지로 `Source` 속성 **창의** 기타 **범주에서** 속성을 설정했을 수 있습니다.  
+     As with the properties that you set earlier, you could have set the `Source` property in the **Miscellaneous** category of the **Properties** window.  
   
-#### <a name="to-add-a-details-window"></a>세부 정보 창을 추가하려면  
+#### <a name="to-add-a-details-window"></a>To add a details window  
   
-1.  **솔루션 탐색기**에서 **ExpenseIt** 노드의 바로 가기 메뉴를 열고 **추가**, **페이지**를 선택합니다.  
+1.  In **Solution Explorer**, open the shortcut menu for the **ExpenseIt** node and choose **Add**, **Page**.  
   
-2.  **새 항목 추가** 대화 상자에서 **이름** 텍스트 상자를 선택하고 `ExpenseReportPage`를 입력하고 **추가** 단추를 선택합니다.  
+2.  In the **Add New Item** dialog, choose the **Name** text box and enter `ExpenseReportPage`, and then choose the **Add** button.  
   
-     이 창에는 개별 경비 보고서가 표시됩니다.  
+     This window will display an individual expense report.  
   
-3.  디자이너에서 활성 디자이너 탭이 아닌 경우 **ExpenseReportPage.xaml** 탭을 선택합니다.  
+3.  In the designer, choose the **ExpenseReportPage.xaml** tab if it isn't already the active designer tab.  
   
-4.  `<Title>` 요소를 선택하고 제목을 **ExpenseIt – View Expense**로 변경합니다.  
+4.  Choose the `<Title>` element and change the title to **ExpenseIt - View Expense**.  
   
-     이제 C#에서 ExpenseReportPage.xaml 파일이 다음과 같이 표시됩니다.  
+     Your ExpenseReportPage.xaml file should now look like this in C#:  
   
     ```xaml  
     Page x:Class="ExpenseIt.ExpenseReportPage"  
@@ -235,7 +235,7 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-     또는 Visual Basic에서 다음과 같이 표시됩니다.  
+     Or like this in Visual Basic:  
   
     ```xaml  
     <Page x:Class="ExpenseReportPage"  
@@ -253,26 +253,26 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-5.  메뉴 모음에서 **디버그**, **디버깅 시작** 을 선택하거나 F5 키를 눌러 응용 프로그램을 실행합니다.  
+5.  On the menu bar, choose **Debug**, **Start Debugging** (or press F5) to run the application.  
   
-     다음 그림에서는 탐색 창 단추가 포함된 응용 프로그램을 보여 줍니다.  
+     The following illustration shows the application with the navigation window buttons.  
   
-     ![ExpenseIt 샘플 스크린샷](~/designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
+     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
   
-6.  디자인 모드로 돌아가려면 응용 프로그램을 닫습니다.  
+6.  Close the application to return to design mode.  
   
-##  <a name="Add_Layout"></a> 사용자 인터페이스 만들기  
- 레이아웃은 요소를 배치하는 순서가 지정된 방법을 제공하며 폼의 크기를 조정할 때 해당 요소의 크기와 위치도 관리합니다. 이 섹션에서는 3개의 행이 있는 단일 열 그리드를 만듭니다. 두 페이지에 컨트롤을 추가하고, 일부 코드를 추가하고, 마지막으로 컨트롤에 대해 재사용 가능한 스타일을 정의합니다.  
+##  <a name="Add_Layout"></a> Creating the User Interface  
+ Layout provides an ordered way to place elements, and also manages the size and position of those elements when a form is resized. In this section, you'll create a single-column grid with three rows. You'll add controls to the two pages, add some code, and finally define reusable styles for the controls.  
   
-#### <a name="to-create-the-layout"></a>레이아웃을 만들려면  
+#### <a name="to-create-the-layout"></a>To create the layout  
   
-1.  **ExpenseItHome.xaml** 을 열고 `<Grid>` 요소를 선택합니다.  
+1.  Open **ExpenseItHome.xaml** and choose the `<Grid>` element.  
   
-2.  **속성** 창에서 **Height** 범주 노드를 확장하고 **여백** 값을 왼쪽, 오른쪽, 위쪽 및 아래쪽 여백에 해당하는 `10`, `10`, `0`및 `10`으로 설정합니다.  
+2.  In the **Properties** window, expand the **Layout** category node and set the **Margin** values to `10`, `10`, `0`, and `10`, which corresponds to left, right, top and bottom margins.  
   
-     `Margin="10,0,10,10"` 요소가 XAML의 `<Grid>` 요소에 추가됩니다. **속성** 창이 아니라 XAML 코드에서 직접 이러한 값을 입력하여 동일한 결과를 얻을 수도 있습니다.  
+     The element `Margin="10,0,10,10"` is added to the `<Grid>` element in the XAML. Once again, you could have entered these values directly in the XAML code instead of in the **Properties** window with the same result.  
   
-3.  다음 XAML 코드를 `Grid` 요소에 추가하여 행 및 열 정의를 만듭니다.  
+3.  Add the following XAML code to the `Grid` element to create the row and column definitions:  
   
     ```xaml  
     <Grid.ColumnDefinitions>  
@@ -285,11 +285,11 @@ ms.lasthandoff: 05/13/2017
     </Grid.RowDefinitions>  
     ```  
   
-#### <a name="to-add-controls"></a>컨트롤을 추가하려면  
+#### <a name="to-add-controls"></a>To add controls  
   
-1.  **ExpenseItHome.xaml**을 엽니다.  
+1.  Open **ExpenseItHome.xaml**.  
   
-2.  다음 XAML 코드를 `</Grid>` 태그 바로 위에 추가하여 `Border`, `ListBox` 및 `Button` 컨트롤을 만듭니다.  
+2.  Add the following XAML code just above the `</Grid>` tag to create the `Border`, `ListBox` and `Button` controls.  
   
     ```xaml  
     <!-- People list -->  
@@ -309,31 +309,31 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     컨트롤이 디자인 창에 나타납니다. 또한 **도구 상자** 창에서 디자인 창으로 끌고 **속성** 창에서 해당 속성을 설정하여 컨트롤을 만들었을 수도 있습니다.  
+     Notice that the controls appear in the design window. You could also have created the controls by dragging them from the **Toolbox** window onto the design window and setting their properties in the **Properties** window.  
   
-3.  응용 프로그램을 빌드 및 실행합니다. 다음 그림은 이 절차에서 XAML로 생성된 컨트롤의 런타임 모양을 보여 줍니다.  
+3.  Build and run the application. The following illustration shows the run time appearance of the controls that are created by the XAML in this procedure.  
   
-     ![ExpenseIt 샘플 스크린샷](~/designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
-4.  디자인 모드로 돌아가려면 응용 프로그램을 닫습니다.  
+4.  Close the application to return to design mode.  
   
-#### <a name="to-add-a-background-image"></a>배경 이미지를 추가하려면  
+#### <a name="to-add-a-background-image"></a>To add a background image  
   
-1.  다음 이미지를 선택하여 `watermark.png`로 저장합니다.  
+1.  Choose the following image and save it as `watermark.png`.  
   
-     ![연습용 워터마크 이미지](../designers/media/wpf_watermark.png "WPF_watermark")  
-  
-    > [!NOTE]
-    >  이미지를 직접 만들어 `watermark.png`로 저장할 수도 있습니다.  
-  
-2.  **솔루션 탐색기**에서 **ExpenseIt** 노드의 바로 가기 메뉴를 열고 **추가**, **기존 항목**을 선택합니다.  
-  
-3.  **기존 항목 추가** 대화 상자에서 방금 추가한 **watermark.png** 이미지를 찾아서 선택한 다음 **추가** 단추를 선택합니다.  
+     ![Watermark image for walkthrough](../designers/media/wpf_watermark.png "WPF_watermark")  
   
     > [!NOTE]
-    >  **파일 형식** 목록을 확장하고 **이미지 파일**을 선택해야 할 수도 있습니다.  
+    >  Alternatively you can create your own image and save it as `watermark.png`.  
   
-4.  **ExpenseItHome.xaml** 파일을 열고 다음 XAML 코드를 `</Grid>` 태그 바로 위에 추가하여 배경 이미지를 만듭니다.  
+2.  In **Solution Explorer**, open the shortcut menu for the **ExpenseIt** node and choose **Add**, **Existing Item**.  
+  
+3.  In the **Add Existing Item** dialog, find the **watermark.png** image that you just added, choose it and then choose the **Add** button.  
+  
+    > [!NOTE]
+    >  You may need to expand the **File Types** list and choose **Image Files**.  
+  
+4.  Open the **ExpenseItHome.xaml** file and add the following XAML code just above the `</Grid>` tag to create a background image:  
   
     ```xaml  
     <Grid.Background>  
@@ -342,37 +342,37 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-#### <a name="to-add-a-title"></a>제목을 추가하려면  
+#### <a name="to-add-a-title"></a>To add a title  
   
-1.  **ExpenseItHome.xaml**을 엽니다.  
+1.  Open **ExpenseItHome.xaml**.  
   
-2.  `<Grid.ColumnDefinitions>` 줄을 찾은 다음 바로 아래에 다음을 추가합니다.  
+2.  Find the line `<Grid.ColumnDefinitions>` and add the following just below it:  
   
     ```xaml  
     <ColumnDefinition Width="230" />  
   
     ```  
   
-     이렇게 하면 다른 열의 왼쪽에 고정 너비가 230픽셀인 열이 추가로 만들어집니다.  
+     This creates an additional column to the left of the other columns with a fixed width of 230 pixels.  
   
-3.  `<Grid.RowDefinitions>` 줄을 찾은 다음 바로 아래에 다음을 추가합니다.  
+3.  Find the line `<Grid.RowDefinitions>` and add the following just below it:  
   
     ```xaml  
     <RowDefinition />  
   
     ```  
   
-     이렇게 하면 그리드의 맨 위에 행이 추가됩니다.  
+     This adds a row to the top of the grid.  
   
-4.  `Grid.Column` 값을 1로 설정하여 컨트롤을 두 번째 열로 이동합니다. 각 `Grid.Row` 값을 1씩 증가하여 각 컨트롤을 한 행 아래로 이동합니다.  
+4.  Move the controls to the second column by setting the `Grid.Column` value to 1. Move each control down a row, by increasing each `Grid.Row` value by 1.  
   
-    1.  `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">`줄을 찾습니다. `Grid.Column="0"` 을 `Grid.Column="1"` 로 변경하고 `Grid.Row="0"` 을 `Grid.Row="1"`로 변경합니다.  
+    1.  Find the line `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">`. Change `Grid.Column="0"` to `Grid.Column="1"` and change `Grid.Row="0"` to `Grid.Row="1"`.  
   
-    2.  `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"`줄을 찾습니다. `Grid.Column="0"` 을 `Grid.Column="1"` 로 변경하고 `Grid.Row="1"` 을 `Grid.Row="2"`로 변경합니다.  
+    2.  Find the line `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"`. Change `Grid.Column="0"` to `Grid.Column="1"` and change `Grid.Row="1"` to `Grid.Row="2"`.  
   
-    3.  `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"`줄을 찾습니다. `Grid.Column="0"` 을 `Grid.Column="1"` 로 변경하고 `Grid.Row="2"` 을 `Grid.Row="3"`로 변경합니다.  
+    3.  Find the line `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"`. Change `Grid.Column="0"` to `Grid.Column="1"` and change `Grid.Row="2"` to `Grid.Row="3"`.  
   
-5.  `<Border` 요소 바로 앞에 다음 XAML 코드를 추가하여 제목을 표시합니다.  
+5.  Just before the `<Border` element add the following XAML code to display the title:  
   
     ```xaml  
     <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS"   
@@ -382,7 +382,7 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     이제 C#에서 **ExpenseItHome.xaml** 의 내용이 다음과 같이 표시됩니다.  
+     The contents of **ExpenseItHome.xaml** should now look like this in C#:  
   
     ```xaml  
     <Page x:Class="ExpenseIt.ExpenseItHome"  
@@ -430,7 +430,7 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-     또는 Visual Basic에서 다음과 같이 표시됩니다.  
+     Or like this in Visual Basic:  
   
     ```xaml  
     <Page x:Class="ExpenseItHome"  
@@ -478,17 +478,17 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-6.  이때 응용 프로그램을 빌드 및 실행하는 경우 다음 그림과 같이 표시되어야 합니다.  
+6.  If you build and run the application at this point, it should look like the following illustration:  
   
-     ![ExpenseIt 샘플 스크린샷](../designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
-#### <a name="to-add-code-to-the-button"></a>단추에 코드를 추가하려면  
+#### <a name="to-add-code-to-the-button"></a>To add code to the button  
   
-1.  **ExpenseItHome.xaml**을 엽니다.  
+1.  Open **ExpenseItHome.xaml**.  
   
-2.  `<Button` 요소를 선택하고 다음 XAML 코드를 **HorizontalAlignment = "Right"** 요소 바로 뒤에 추가합니다. `Click="Button_Click"`.  
+2.  Chose the `<Button` element and add the following XAML code immediately after the **HorizontalAlignment="Right"** element: `Click="Button_Click"`.  
   
-     이렇게 하면 단추의 `Click` 이벤트에 대한 이벤트 처리기가 추가됩니다. 이제 **<Button** 요소 코드가 다음과 같이 표시됩니다.  
+     This adds an event handler for the button's `Click` event. The **<Button** element code should now look like this:  
   
     ```  
     <!-- View report button -->  
@@ -496,11 +496,11 @@ ms.lasthandoff: 05/13/2017
     Height="25" HorizontalAlignment="Right" Click="Button_Click">View</Button>  
     ```  
   
-3.  **ExpenseItHome.xaml.cs** 또는 **ExpenseItHome.xaml.vb** 파일을 엽니다.  
+3.  Open the **ExpenseItHome.xaml.cs** or **ExpenseItHome.xaml.vb** file.  
   
-4.  `ExpenseItHome` 클래스에 다음 코드를 추가합니다.  
+4.  Add the following code to the `ExpenseItHome` class:  
   
-    ```c#  
+    ```cs  
     private void Button_Click(object sender, RoutedEventArgs e)  
     {  
         // View Expense Report  
@@ -518,15 +518,15 @@ ms.lasthandoff: 05/13/2017
     End Sub  
     ```  
   
-     이 이벤트 처리기는 단추를 클릭할 때 경비 보고서 페이지를 엽니다.  
+     This event handler opens the Expense Report Page when the button is clicked.  
   
-#### <a name="to-create-the-ui-for-the-report-page"></a>보고서 페이지에 대한 UI를 만들려면  
+#### <a name="to-create-the-ui-for-the-report-page"></a>To create the UI for the report page  
   
-1.  **ExpenseReportPage.xaml**을 엽니다.  
+1.  Open **ExpenseReportPage.xaml**.  
   
-     이 페이지는 홈 페이지에서 선택된 사용자에 대한 경비 보고서를 표시합니다.  
+     This page will display the expense report for the person that is selected on the Home page.  
   
-2.  다음 XAML 코드를 `<Grid>` 및 `</Grid>` 태그 사이에 추가합니다.  
+2.  Add the following XAML code between the `<Grid>` and `</Grid>` tags:  
   
     ```xaml  
     <Grid.Background>  
@@ -590,23 +590,23 @@ ms.lasthandoff: 05/13/2017
     </Grid>  
     ```  
   
-     이 UI는 홈 페이지에 대해 만들어진 UI와 유사하지만 보고서 데이터가 **DataGrid** 컨트롤에 표시됩니다.  
+     This UI is similar to the UI created for the home page, but the report data is displayed in a **DataGrid** control.  
   
-3.  응용 프로그램을 빌드 및 실행합니다.  
+3.  Build and run the application.  
   
-4.  **보기** 단추를 선택합니다.  
+4.  Choose the **View** button.  
   
-     경비 보고서 페이지가 나타납니다.  
+     The expense report page appears.  
   
-     다음 그림에서는 경비 보고서 페이지를 보여 줍니다. 뒤로 탐색 단추를 사용할 수 있습니다.  
+     The following illustration shows the Expense Report Page. Notice that the back navigation button is enabled.  
   
-     ![ExpenseIt 샘플 스크린샷](../designers/media/gettingstartedfigure4.png "GettingStartedFigure4")  
+     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure4.png "GettingStartedFigure4")  
   
-#### <a name="to-style-controls"></a>컨트롤의 스타일을 지정하려면  
+#### <a name="to-style-controls"></a>To style controls  
   
-1.  **App.xaml** 파일(C#) 또는 **Application.xaml** 파일(Visual Basic)을 엽니다.  
+1.  Open the **App.xaml** file (C#) or **Application.xaml** file (Visual Basic).  
   
-2.  다음 XAML을 `<Application.Resources>` 및 `</Application.Resources>` 태그 사이에 추가합니다.  
+2.  Add the following XAML between the `<Application.Resources>` and `</Application.Resources>` tags:  
   
     ```xaml  
     <!-- Header text style -->  
@@ -657,21 +657,21 @@ ms.lasthandoff: 05/13/2017
     </Style>  
     ```  
   
-     이 XAML은 다음 스타일을 추가합니다.  
+     This XAML adds the following styles:  
   
-    -   `headerTextStyle`: 페이지 제목 `Label`의 형식을 지정합니다.  
+    -   `headerTextStyle`: To format the page title `Label`.  
   
-    -   `labelStyle`: `Label` 컨트롤의 형식을 지정합니다.  
+    -   `labelStyle`: To format the `Label` controls.  
   
-    -   `columnHeaderStyle`: `DataGridColumnHeader`의 형식을 지정합니다.  
+    -   `columnHeaderStyle`: To format the `DataGridColumnHeader`.  
   
-    -   `listHeaderStyle`: 목록 헤더 `Border` 컨트롤의 형식을 지정합니다.  
+    -   `listHeaderStyle`: To format the list header `Border` controls.  
   
-    -   `listHeaderTextStyle`: 목록 헤더 **Label**의 형식을 지정합니다.  
+    -   `listHeaderTextStyle`: To format the list header **Label**.  
   
-    -   `buttonStyle`: `Button` ExpenseItHome.xaml **pppage에 있는** 의 형식을 지정합니다.  
+    -   `buttonStyle`: To format the `Button` on the **ExpenseItHome.xaml** pppage.  
   
-3.  **ExpenseItHome.xaml** 을 열고 `<Grid>` 및 `</Grid>` 요소 사이에 있는 모든 내용을 다음 XAML로 바꿉니다.  
+3.  Open **ExpenseItHome.xaml** and replace everything between the `<Grid>` and `</Grid>` elements with the following XAML  
   
     ```xaml  
     <Grid.ColumnDefinitions>  
@@ -706,9 +706,9 @@ ms.lasthandoff: 05/13/2017
             </Grid.Background>  
     ```  
   
-     스타일을 적용하면 각 컨트롤의 모양을 정의하는 `VerticalAlignment` 및 `FontFamily` 와 같은 속성이 제거되고 바뀝니다.  
+     The properties such as `VerticalAlignment` and `FontFamily` that define the look of each control are removed and replaced by applying the styles.  
   
-4.  **ExpenseReportPage.xaml** 을 열고 `<Grid>` 및 최종 `</Grid>` 요소 사이에 있는 모든 내용을 다음 XAML로 바꿉니다.  
+4.  Open **ExpenseReportPage.xaml** and replace everything between the `<Grid>` and final `</Grid>` elements with the following XAML  
   
     ```xaml  
     <Grid.Background>  
@@ -764,16 +764,16 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     이렇게 하면 `<Label>` 및 `<Border>` 요소에 스타일이 추가됩니다.  
+     This adds styles to the `<Label>` and `<Border>` elements.  
   
-## <a name="connecting-to-data"></a>데이터에 연결  
- 이 섹션에서는 데이터 공급자 및 데이터 템플릿을 만들고 컨트롤을 연결하여 데이터를 표시합니다.  
+## <a name="connecting-to-data"></a>Connecting to Data  
+ In this section, you'll create a data provider and a data template, and then connect the controls to display the data.  
   
-#### <a name="to-bind-data-to-a-control"></a>데이터를 컨트롤에 바인딩하려면  
+#### <a name="to-bind-data-to-a-control"></a>To bind data to a control  
   
-1.  **ExpenseItHome.xaml** 을 열고 `<Grid>` 요소를 선택합니다.  
+1.  Open **ExpenseItHome.xaml** and choose the `<Grid>` element..  
   
-2.  다음 XAML 코드를 추가합니다.  
+2.  Add the following XAML code:  
   
     ```xaml  
   
@@ -806,9 +806,9 @@ ms.lasthandoff: 05/13/2017
     </Grid.Resources>  
     ```  
   
-     이 코드에서는 각 사용자에 대한 데이터를 포함하는 `XmlDataProvider` 클래스를 만듭니다. 일반적으로 파일로 로드되지만 편의상 데이터가 인라인으로 추가됩니다.  
+     This code creates an `XmlDataProvider` class that contains the data for each person. Normally this would be loaded as a file, but for simplicity the data is added inline.  
   
-3.  `<Grid.Resources>` 요소 내에 다음 XAML 코드를 추가합니다.  
+3.  Inside the `<Grid.Resources>` element, add the following XAML code:  
   
     ```xaml  
     <!-- Name item template -->  
@@ -817,9 +817,9 @@ ms.lasthandoff: 05/13/2017
     </DataTemplate>  
     ```  
   
-     이렇게 하면 `Data Template` ListBox **에 데이터를 표시하는 방법을 정의하는**이 추가됩니다.  
+     This adds a `Data Template` which defines how to display the data in the **ListBox**.  
   
-4.  기존 `<ListBox>` 요소를 다음 XAML로 바꿉니다.  
+4.  Replace the existing `<ListBox>` element with the following XAML.  
   
     ```xaml  
     <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2"   
@@ -828,15 +828,15 @@ ms.lasthandoff: 05/13/2017
     </ListBox>  
     ```  
   
-     이렇게 하면 `ItemsSource` 의 `ListBox` 속성이 데이터 원본에 바인딩되고 데이터 템플릿이 `ItemTemplate`으로 적용됩니다.  
+     This code binds the `ItemsSource` property of the `ListBox` to the data source and applies the data template as the `ItemTemplate`.  
   
-#### <a name="to-connect-data-to-controls"></a>데이터를 컨트롤에 연결하려면  
+#### <a name="to-connect-data-to-controls"></a>To connect data to controls  
   
-1.  **ExpenseReportPage.xaml.vb** 또는 **ExpenseReportPage.xaml.cs**를 엽니다.  
+1.  Open **ExpenseReportPage.xaml.vb** or **ExpenseReportPage.xaml.cs**.  
   
-2.  C#에서 다음 생성자를 **ExpenseReportPage** 클래스에 추가하거나 Visual Basic에서 기존 클래스를 다음으로 바꿉니다.  
+2.  In C#, add the following constructor to the **ExpenseReportPage** class, or in Visual Basic replace the existing class with the following:  
   
-    ```c#  
+    ```cs  
     // Custom constructor to pass expense report data  
         public ExpenseReportPage(object data):this()  
         {  
@@ -862,13 +862,13 @@ ms.lasthandoff: 05/13/2017
     End Class  
     ```  
   
-     이 생성자는 데이터 개체를 매개 변수로 사용합니다. 이 경우 데이터 개체에 선택한 사용자의 이름이 포함됩니다.  
+     This constructor takes a data object as a parameter. In this case the data object will contain the name of the selected person.  
   
-3.  **ExpenseItHome.xaml.vb** 또는 **ExpenseItHome.xaml.cs**를 엽니다.  
+3.  Open **ExpenseItHome.xaml.vb** or **ExpenseItHome.xaml.cs**.  
   
-4.  `Click` 이벤트 처리기 코드를 다음으로 바꿉니다.  
+4.  Replace the `Click` event handler code with the following:  
   
-    ```c#  
+    ```cs  
     private void Button_Click(object sender, RoutedEventArgs e)  
     {  
         // View Expense Report  
@@ -886,13 +886,13 @@ ms.lasthandoff: 05/13/2017
     End Sub  
     ```  
   
-     이 코드는 새 생성자를 호출합니다.  
+     This code calls the new constructor.  
   
-#### <a name="to-update-the-ui-with-data-templates"></a>데이터 템플릿을 사용하여 UI를 업데이트하려면  
+#### <a name="to-update-the-ui-with-data-templates"></a>To update the UI with data templates  
   
-1.  **ExpenseReportPage.xaml**을 엽니다.  
+1.  Open **ExpenseReportPage.xaml**.  
   
-2.  **이름** 및 **Department**`<StackPanel` 요소에 대한 XAML 코드를 다음으로 바꿉니다.  
+2.  Replace the XAML code for the **Name** and **Department**`<StackPanel` elements with the following:  
   
     ```xaml  
     <!-- Name -->  
@@ -909,9 +909,9 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     이렇게 하면 **Label** 컨트롤이 해당 데이터 원본 속성에 바인딩됩니다.  
+     This binds the **Label** controls to the appropriate data source properties.  
   
-3.  `<Grid>` 요소 내에 다음 XAML 코드를 추가합니다.  
+3.  Add the following XAML code inside the `<Grid>` element:  
   
     ```xaml  
     <!--Templates to display expense report data-->  
@@ -928,9 +928,9 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     이렇게 하면 경비 보고서 데이터를 표시하는 방법이 정의됩니다.  
+     This defines how to display the expense report data.  
   
-4.  `<DataGrid>` 요소를 다음으로 바꿉니다.  
+4.  Replace the `<DataGrid>` element with the following:  
   
     ```xaml  
     <!-- Expense type and Amount table -->  
@@ -944,54 +944,54 @@ ms.lasthandoff: 05/13/2017
     </DataGrid>  
     ```  
   
-     이렇게 하면 **ItemSource** 가 추가되고 비용 항목에 대한 바인딩이 정의됩니다.  
+     This adds an **ItemSource** and defines the bindings for the expense items.  
   
-5.  응용 프로그램을 빌드 및 실행합니다.  
+5.  Build and run the application.  
   
-6.  사용자를 선택한 다음 **보기** 단추를 선택합니다.  
+6.  Choose a person and then choose the **View** button.  
   
-     다음 그림에서는 컨트롤, 레이아웃, 스타일, 데이터 바인딩 및 데이터 템플릿이 적용된 ExpenseIt 응용 프로그램의 페이지를 둘 다 보여 줍니다.  
+     The following illustration shows both pages of the ExpenseIt application with controls, layout, styles, data binding, and data templates applied.  
   
-     ![ExpenseIt 샘플 스크린샷](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")  
+     ![ExpenseIt sample screen shots](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")  
   
-##  <a name="Best_Practices"></a> 모범 사례  
- 이 샘플은 WPF의 기본 사항을 보여 주므로 응용 프로그램 개발 모범 사례를 따르지 않습니다. WPF 및 .NET Framework 응용 프로그램 개발 모범 사례에 대한 자세한 내용은 다음 항목을 적절하게 참조하세요.  
+##  <a name="Best_Practices"></a> Best Practices  
+ This sample demonstrates the basics of WPF and, consequently, does not follow application development best practices. For comprehensive coverage of WPF and .NET Framework application development best practices, see the following topics as appropriate:  
   
--   접근성 - [접근성에 대한 유용한 정보](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)  
+-   Accessibility - [Accessibility Best Practices](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)  
   
--   보안 - [Windows Presentation Foundation 보안](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
+-   Security - [Windows Presentation Foundation Security](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
   
--   지역화 - [WPF 전역화 및 지역화 개요](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
+-   Localization - [WPF Globalization and Localization Overview](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
   
--   성능 - [WPF 응용 프로그램 성능 최적화](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
+-   Performance - [Optimizing WPF Application Performance](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
   
-##  <a name="Whats_Next"></a> 새로운 기능  
- 이제 WPF를 사용하여 데스크톱 응용 프로그램을 만들기 위한 다양한 기술을 사용할 수 있습니다. 데이터 바인딩된 WPF 응용 프로그램의 구성 요소에 대해 기본적인 내용을 이해하고 있을 것입니다. 이 항목은 전체 목록이 아니며 이 항목에 설명된 기술 외의 가능성을 스스로 발견할 수도 있습니다.  
+##  <a name="Whats_Next"></a> What's Next  
+ You now have a number of techniques at your disposal for creating a desktop application by using WPF. You should now have a basic understanding of the building blocks of a data-bound WPF application. This topic is by no means exhaustive, but hopefully you also now have a sense of some of the possibilities you might discover on your own beyond the techniques in this topic.  
   
- WPF 아키텍처 및 프로그래밍 모델에 대한 자세한 내용은 다음 항목을 참조하세요.  
+ For more information about the WPF architecture and programming models, see the following topics:  
   
--   [WPF 아키텍처](https://msdn.microsoft.com/en-us/library/ms750441\(v=vs.100\).aspx)  
+-   [WPF Architecture](https://msdn.microsoft.com/en-us/library/ms750441\(v=vs.100\).aspx)  
   
--   [XAML 개요](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)  
+-   [XAML Overview](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)  
   
--   [종속성 속성 개요](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx)  
+-   [Dependency Properties Overview](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx)  
   
--   [레이아웃 시스템](https://msdn.microsoft.com/en-us/library/ms745058\(v=vs.100\).aspx)  
+-   [Layout System](https://msdn.microsoft.com/en-us/library/ms745058\(v=vs.100\).aspx)  
   
--   [스타일 및 템플릿](https://msdn.microsoft.com/en-us/library/bb613570\(v=vs.100\).aspx)  
+-   [Styles and Templates](https://msdn.microsoft.com/en-us/library/bb613570\(v=vs.100\).aspx)  
   
- 응용 프로그램을 만드는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.  
+ For more information about creating applications, see the following topics:  
   
--   [응용 프로그램 개발 개요](https://msdn.microsoft.com/en-us/library/bb613549\(v=vs.100\).aspx)  
+-   [Application Development Overview](https://msdn.microsoft.com/en-us/library/bb613549\(v=vs.100\).aspx)  
   
--   [컨트롤 개요](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)  
+-   [Controls Overview](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)  
   
--   [데이터 바인딩 개요](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)  
+-   [Data Binding Overview](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)  
   
--   [WPF 그래픽, 애니메이션 및 미디어 개요](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)  
+-   [WPF Graphics, Animation, and Media Overview](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)  
   
--   [WPF의 문서](https://msdn.microsoft.com/en-us/library/ms748388\(v=vs.100\).aspx)  
+-   [Documents in WPF](https://msdn.microsoft.com/en-us/library/ms748388\(v=vs.100\).aspx)  
   
-## <a name="see-also"></a>참고 항목  
- [연습: Azure 모바일 서비스에 연결된 WPF 데스크톱 응용 프로그램 만들기](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   
- [Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Create a WPF Desktop Application connected to an Azure Mobile Service](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   
+ [Create Modern Desktop Applications with Windows Presentation Foundation](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

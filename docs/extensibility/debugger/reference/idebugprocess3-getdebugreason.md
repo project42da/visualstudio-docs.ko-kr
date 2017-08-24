@@ -1,49 +1,66 @@
 ---
-title: "IDebugProcess3::GetDebugReason | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess3::GetDebugReason"
-helpviewer_keywords: 
-  - "IDebugProcess3::GetDebugReason"
+title: IDebugProcess3::GetDebugReason | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProcess3::GetDebugReason
+helpviewer_keywords:
+- IDebugProcess3::GetDebugReason
 ms.assetid: f23fbabc-8b18-4278-bebf-4cdc7091513c
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugProcess3::GetDebugReason
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1f56dd1560045143d155825978eb152906accdf1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-때문 프로세스 디버깅을 위해 시작 된 것이 반환 됩니다.  
+---
+# <a name="idebugprocess3getdebugreason"></a>IDebugProcess3::GetDebugReason
+This method returns the reason that the process was launched for debugging.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetDebugReason(  
-   DEBUG_REASON* pReason  
+HRESULT GetDebugReason(  
+   DEBUG_REASON* pReason  
 );  
 ```  
   
-```c#  
+```cs  
 int GetDebugReason(  
-   out enum_DEBUG_REASON pReason  
+   out enum_DEBUG_REASON pReason  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pReason`  
- \[out\] 반환 값에서의 [DEBUG\_REASON](../../../extensibility/debugger/reference/debug-reason.md) 열거형입니다.  
+ [out] Returns a value from the [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) enumeration.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
- [DEBUG\_REASON](../../../extensibility/debugger/reference/debug-reason.md)
+ [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md)

@@ -1,5 +1,5 @@
 ---
-title: "테스트를 위해 Windows 스토어 컨트롤에 대한 고유 자동화 속성 설정 | Microsoft Docs"
+title: Set a Unique Automation Property for Windows Store Controls for Testing | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,92 +26,92 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b95ff54bded55d16391f57ee53b8a95ca99ca867
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 35a107effb59e8ce74d5ff658d60364a1b0e08f2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>테스트를 위해 Windows 스토어 컨트롤에 대한 고유 자동화 속성 설정
-XAML 기반 Windows 스토어 응용 프로그램용 코딩된 UI 테스트를 실행하려는 경우 각 컨트롤을 식별하는 고유한 자동화 속성이 있어야 합니다.  
+# <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>Set a Unique Automation Property for Windows Store Controls for Testing
+If you want to run coded UI tests for your XAML-based Windows Store application, you must have a unique automation property that identifies each control.  
   
- 응용 프로그램에서 XAML 컨트롤의 형식에 따라 고유한 자동화 속성을 할당할 수 있습니다. 다음과 같은 상황에서 이 고유한 자동화 속성을 할당하는 방법은 다음과 같습니다.  
+ You can assign a unique automation property based on the type of XAML control in your application. Here's how to assign this unique automation property in the following situations:  
   
--   [컨트롤의 정적 XAML 정의](#UniquePropertyWindowsStoreControlsStaticXAML)  
+-   [Static XAML definition of controls](#UniquePropertyWindowsStoreControlsStaticXAML)  
   
--   [Visual Studio 또는 Blend for Visual Studio를 사용하여 고유한 자동화 속성 할당](#UniquePropertyWindowsStoreControlsExpressionBlend)  
+-   [Assign unique automation properties using Visual Studio or Blend for Visual Studio](#UniquePropertyWindowsStoreControlsExpressionBlend)  
   
--   [DataTemplate 사용](#UniquePropertyWindowsStoreControlsDataTemplate)  
+-   [Use a DataTemplate](#UniquePropertyWindowsStoreControlsDataTemplate)  
   
--   [컨트롤 템플릿 사용](#UniquePropertyWindowsStoreControlsControlTemplate)  
+-   [Use a control template](#UniquePropertyWindowsStoreControlsControlTemplate)  
   
--   [동적 컨트롤](#UniquePropertyWindowsStoreControlsDynamicControls)  
+-   [Dynamic controls](#UniquePropertyWindowsStoreControlsDynamicControls)  
   
-## <a name="use-methods-to-assign-a-unique-automation-property"></a>메서드를 사용하여 고유한 자동화 속성 할당  
+## <a name="use-methods-to-assign-a-unique-automation-property"></a>Use methods to assign a unique automation property  
   
-###  <a name="UniquePropertyWindowsStoreControlsStaticXAML"></a> 정적 XAML 정의  
- XAML 파일에 정의된 컨트롤에 대한 고유 자동화 속성을 지정하려면 AutomationProperties.AutomationId 또는 AutomationProperties.Name을 다음 예제와 같이 암시적 또는 명시적으로 설정할 수 있습니다. 이러한 값 중 하나를 설정하면 코딩된 UI 테스트 또는 작업 기록을 만들 때 컨트롤을 식별하는 데 사용할 수 있는 고유한 자동화 속성을 컨트롤에 부여하게 됩니다.  
+###  <a name="UniquePropertyWindowsStoreControlsStaticXAML"></a> Static XAML definition  
+ To specify a unique automation property for a control that is defined in your XAML file, you can set the AutomationProperties.AutomationId or AutomationProperties.Name implicitly or explicitly, as shown in the following examples. Setting either of these values gives the control a unique automation property that can be used to identify the control when you create a coded UI test or action recording.  
   
- **속성을 암시적으로 설정**  
+ **Set the property implicitly**  
   
- XAML에서 컨트롤에 대한 이름 속성을 사용하여 AutomationProperties.AutomationId를 **ButtonX**로 설정합니다.  
+ Set the AutomationProperties.AutomationId to **ButtonX** using the Name property in the XAML for the control.  
   
 ```xaml  
 <Button Name="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />  
   
 ```  
   
- XAML에서 컨트롤에 대한 콘텐츠 속성을 사용하여 AutomationProperties.Name을 **ButtonY**로 설정합니다.  
+ Set the AutomationProperties.Name to **ButtonY** using the Content property in the XAML for the control.  
   
 ```xaml  
 <Button Content="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />  
   
 ```  
   
- **속성을 명시적으로 설정**  
+ **Set the property explicitly**  
   
- XAML에서 컨트롤에 대해 명시적으로 AutomationProperties.AutomationId를 **ButtonX**로 설정합니다.  
+ Set the AutomationProperties.AutomationId to **ButtonX** explicitly in the XAML for the control.  
   
 ```xaml  
 <Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />  
   
 ```  
   
- XAML에서 컨트롤에 대해 명시적으로 AutomationProperties.Name을 **ButtonY**로 설정합니다.  
+ Set the AutomationProperties.Name to **ButtonY** explicitly in the XAML for the control.  
   
 ```  
 <Button AutomationProperties.Name="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />  
 ```  
   
-###  <a name="UniquePropertyWindowsStoreControlsExpressionBlend"></a> Visual Studio 또는 Blend for Visual Studio를 사용하여 고유한 자동화 속성 할당  
- Visual Studio 또는 Blend for Visual Studio를 사용하여 단추, 목록 상자, 콤보 상자, 텍스트 상자와 같은 대화형 요소에 고유한 이름을 할당할 수 있습니다. 이렇게 하면 AutomationProperties.Name에 대한 고유한 값을 컨트롤에 부여하게 됩니다.  
+###  <a name="UniquePropertyWindowsStoreControlsExpressionBlend"></a> Assign unique automation properties using Visual Studio or Blend for Visual Studio  
+ You can use Visual Studio or Blend for Visual Studio to assign unique names to interactive elements such as buttons, list boxes, combo boxes and text boxes. This gives the control a unique value for AutomationProperties.Name.  
   
- **Visual Studio:** **도구** 메뉴에서 **옵션**을 가리킨 다음 **텍스트 편집기**, **XAML** 및 **기타**를 차례대로 선택합니다.  
+ **Visual Studio:** On the **Tools** menu, point to **Options** and then choose **Text Editor**, then **XAML**, and finally **Miscellaneous**.  
   
- **생성 시 대화형 요소에 자동으로 이름 지정**을 선택한 다음 **확인**을 선택합니다.  
+ Select **Automatically name interactive elements on creation** and then choose **OK**.  
   
- ![XAML 기타 옵션](../test/media/cuit_windowsstoreapp_b.png "CUIT_WindowsStoreApp_B")  
+ ![XAML Miscellaneous options](../test/media/cuit_windowsstoreapp_b.png "CUIT_WindowsStoreApp_B")  
   
- **Blend for Visual Studio:** 다음 방법 중 하나를 사용하여 Blend for Visual Studio에서 이 작업을 수행할 수 있습니다.  
+ **Blend for Visual Studio:** Use one of the following methods to do this from Blend for Visual Studio.  
   
 > [!NOTE]
->  XAML을 사용하여 정적으로 만든 컨트롤에 대해서는 이 방법만 사용할 수 있습니다.  
+>  You can only use this method for controls that are created statically using XAML.  
   
- **기존 컨트롤에 고유한 이름을 지정하려면**  
+ **To give a unique name to existing controls**  
   
- **도구** 메뉴에서 다음과 같이 **대화형 요소 이름 지정**을 선택합니다.  
+ On the **Tools** menu, choose **Name Interactive Elements**, as shown here:  
   
- ![도구 메뉴에서 대화형 요소 이름 지정 선택](../test/media/cuit_windowsstoreproperty_blend_1.png "CUIT_WindowsStoreProperty_Blend_1")  
+ ![Choose Name Interactive Elements from Tools menu](../test/media/cuit_windowsstoreproperty_blend_1.png "CUIT_WindowsStoreProperty_Blend_1")  
   
- **만드는 컨트롤에 자동으로 고유한 이름을 지정하려면**  
+ **To automatically give a unique name to controls that you create**  
   
- **도구** 메뉴에서 **옵션**을 선택한 다음 **프로젝트**를 선택합니다. 다음과 같이 **생성 시 대화형 요소에 자동으로 이름 지정**을 선택한 다음 **확인**을 선택합니다.  
+ On the **Tools** menu, point to **Options**, and then choose **Project**. Select **Automatically name interactive elements on creation** and then choose **OK**, as shown here:  
   
- ![대화형 요소 이름을 지정하도록 프로젝트 설정](../test/media/cuit_windowsstoreproeprty_blend_2.png "CUIT_WindowsStoreProeprty_Blend_2")  
+ ![Set project to name interactive elements](../test/media/cuit_windowsstoreproeprty_blend_2.png "CUIT_WindowsStoreProeprty_Blend_2")  
   
-###  <a name="UniquePropertyWindowsStoreControlsDataTemplate"></a> 데이터 템플릿 사용  
- 다음 XAML을 사용하면 ItemTemplate을 사용하여 간단한 템플릿을 정의하고 목록 상자의 값을 변수에 바인딩할 수 있습니다.  
+###  <a name="UniquePropertyWindowsStoreControlsDataTemplate"></a> Use a data template  
+ You can define a simple template using ItemTemplate to bind the values in a list box to variables using the following XAML.  
   
 ```xaml  
   
@@ -127,7 +127,7 @@ XAML 기반 Windows 스토어 응용 프로그램용 코딩된 UI 테스트를 �
 </ListBox>  
 ```  
   
- 또한 다음 XAML을 사용하면 템플릿을 ItemContainerStyle과 함께 사용하여 값을 변수에 바인딩할 수도 있습니다.  
+ You can also use a template with ItemContainerStyle to bind the values to variables by using the following XAML.  
   
 ```xaml  
   
@@ -149,10 +149,10 @@ XAML 기반 Windows 스토어 응용 프로그램용 코딩된 UI 테스트를 �
   
 ```  
   
- 그런 다음에는 이 예제 모두에 대해 다음 코드를 사용하여 ItemSource의 ToString() 메서드를 재정의해야 합니다. 이 코드는 AutomationProperties.Name 값이 설정되었고 고유한 값임을 확인합니다. 이는 바인딩을 사용하여 각 데이터가 바인딩된 목록 항목에 대해서는 고유한 자동화 속성을 설정할 수 없기 때문입니다. 이 경우에는 Automation Properties.Name에 대해 고유한 값을 설정하는 것으로 충분합니다.  
+ For both of these examples, you must then override the ToString() method of ItemSource, as shown using the following code. This code makes sure that the AutomationProperties.Name value is set and is unique, because you cannot set a unique automation property for each data bound list item using binding. Setting a unique value for the Automation Properties.Name is sufficient in this case.  
   
 > [!NOTE]
->  이 방법을 사용하면 바인딩을 통해 Employee 클래스의 문자열에 목록 항목의 내부 콘텐츠가 설정될 수도 있습니다. 예제에서와 같이 각 목록 항목 안에 있는 단추 컨트롤에는 직원 ID인 고유한 자동화 ID가 할당됩니다.  
+>  Using this approach, the inner contents of the list item can also be set to a string in the Employee class through binding. As shown in the example, the button control inside each list item is assigned a unique automation id which is the Employee ID.  
   
 ```  
   
@@ -173,8 +173,8 @@ public override string ToString()
   
 ```  
   
-###  <a name="UniquePropertyWindowsStoreControlsControlTemplate"></a> 컨트롤 템플릿 사용  
- 컨트롤 템플릿을 사용하여 특정 형식의 각 인스턴스가 코드에서 정의될 때 고유한 자동화 속성을 획득하도록 할 수 있습니다. 컨트롤 인스턴스에서 AutomationProperty가 고유한 ID에 바인딩되도록 템플릿을 만들어야 합니다. 다음 XAML은 컨트롤 템플릿을 사용하여 이 바인딩을 만드는 방법 한 가지를 보여 줍니다.  
+###  <a name="UniquePropertyWindowsStoreControlsControlTemplate"></a> Use a control template  
+ You can use a control template so that each instance of a specific type obtains a unique automation property when it is defined in the code. You must create the template so that the AutomationProperty binds to a unique ID in the control instance. The following XAML demonstrates one approach to create this binding with a control template.  
   
 ```xaml  
   
@@ -193,7 +193,7 @@ public override string ToString()
   
 ```  
   
- 이 컨트롤 템플릿을 사용하여 단추의 두 인스턴스를 정의할 때 다음 XAML과 같이 템플릿의 컨트롤에 대한 고유한 콘텐츠 문자열에 자동화 ID가 설정됩니다.  
+ When you define two instances of a button using this control template, the automation id is set to the unique content string for the controls in the template, as shown in the following XAML.  
   
 ```xaml  
   
@@ -201,10 +201,10 @@ public override string ToString()
 <Button Content="Button2" Style="{StaticResource MyButton}" Width="140"/>  
 ```  
   
-###  <a name="UniquePropertyWindowsStoreControlsDynamicControls"></a> 동적 컨트롤  
- 사용자 코드에서 동적으로 생성되었으며 XAML 파일에서는 정적으로 또는 템플릿을 통해 생성되지 않은 컨트롤이 있으면 컨트롤의 콘텐츠 또는 이름 속성을 설정해야 합니다. 이렇게 하면 각 동적 컨트롤은 고유한 자동화 속성을 갖게 됩니다. 예를 들어 목록 항목을 선택하면 표시되어야 하는 확인란이 있는 경우 다음과 같이 이러한 속성을 설정할 수 있습니다.  
+###  <a name="UniquePropertyWindowsStoreControlsDynamicControls"></a> Dynamic controls  
+ If you have controls that are created dynamically from your code and not created statically or through templates in XAML files, you must set the Content or Name properties for the control. This makes sure that each dynamic control has a unique automation property. For example, if you have a check box that must be displayed when you select a list item, you can set these properties, as shown here:  
   
-```c#  
+```cs  
   
 private void CreateCheckBox(string txt, StackPanel panel)  
    {  
@@ -218,6 +218,6 @@ private void CreateCheckBox(string txt, StackPanel panel)
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [코딩된 UI 테스트를 사용하여 Windows UWP 및 8.1 스토어 앱 테스트](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)
+## <a name="see-also"></a>See Also  
+ [Test Windows UWP and 8.1 Store Apps with Coded UI Tests](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)
 

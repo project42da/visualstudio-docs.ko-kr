@@ -1,56 +1,73 @@
 ---
-title: "IDebugFunctionObject::CreatePrimitiveObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugFunctionObject::CreatePrimitiveObject"
-helpviewer_keywords: 
-  - "IDebugFunctionObject::CreatePrimitiveObject 메서드"
+title: IDebugFunctionObject::CreatePrimitiveObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugFunctionObject::CreatePrimitiveObject
+helpviewer_keywords:
+- IDebugFunctionObject::CreatePrimitiveObject method
 ms.assetid: 6e9dc8b6-b4e1-4abf-b6e0-e885910775bc
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugFunctionObject::CreatePrimitiveObject
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: bdf5619331cad76a80866fcd279c56e614ee2174
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-예: 단순 정수 기본 데이터 개체를 만듭니다.  
+---
+# <a name="idebugfunctionobjectcreateprimitiveobject"></a>IDebugFunctionObject::CreatePrimitiveObject
+Creates a primitive data object, such as a simple integer.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT CreatePrimitiveObject(   
-   OBJECT_TYPE    ot,  
-   IDebugObject** ppObject  
+HRESULT CreatePrimitiveObject(   
+   OBJECT_TYPE    ot,  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```c#  
+```cs  
 int CreatePrimitiveObject(  
-   enum_OBJECT_TYPE ot,   
-   out IDebugObject ppObject  
+   enum_OBJECT_TYPE ot,   
+   out IDebugObject ppObject  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ot`  
- \[in\] 값은 [OBJECT\_TYPE](../../../extensibility/debugger/reference/object-type.md) 만들려면 기본 형식을 나타내는 열거형입니다.  
+ [in] A value from the [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) enumeration representing the type of primitive to create.  
   
  `ppObject`  
- \[out\] 반환 된 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) , 새로 만들어진된 개체를 나타내는.  
+ [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) representing the newly created object.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 기본으로 표시 되는 함수에 매개 변수 개체를 나타내는 개체를 만드는 데이 메서드를 호출 하 여 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) 인터페이스입니다.  예를 들어, 식 문자열 "myString\(5\)" 이면이 메서드 5 정수를 나타내는 개체를 만드는 데 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ Call this method to create an object that represents a primitive object that is a parameter to the function which is represented by the [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface. For example, if the expression string is "myString(5)", this method would be used to create an object representing the integer 5.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

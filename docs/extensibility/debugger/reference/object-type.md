@@ -1,128 +1,145 @@
 ---
-title: "OBJECT_TYPE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OBJECT_TYPE"
-helpviewer_keywords: 
-  - "OBJECT_TYPE 열거형"
+title: OBJECT_TYPE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OBJECT_TYPE
+helpviewer_keywords:
+- OBJECT_TYPE enumeration
 ms.assetid: c4d246f9-8a98-44ec-b2bb-ff5c684f668e
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# OBJECT_TYPE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7e9fbbe8b4263143e235a2db6f7117d7bc36fafe
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-식 계산기에서 개체의 형식을 지정합니다.  
+---
+# <a name="objecttype"></a>OBJECT_TYPE
+Specifies the type of an object from the expression evaluator.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_OBJECT_TYPE {   
-   OBJECT_TYPE_BOOLEAN = 0x0,  
-   OBJECT_TYPE_CHAR    = 0x1,  
-   OBJECT_TYPE_I1      = 0x2,  
-   OBJECT_TYPE_U1      = 0x3,  
-   OBJECT_TYPE_I2      = 0x4,  
-   OBJECT_TYPE_U2      = 0x5,  
-   OBJECT_TYPE_I4      = 0x6,  
-   OBJECT_TYPE_U4      = 0x7,  
-   OBJECT_TYPE_I8      = 0x8,  
-   OBJECT_TYPE_U8      = 0x9,  
-   OBJECT_TYPE_R4      = 0xa,  
-   OBJECT_TYPE_R8      = 0xb,  
-   OBJECT_TYPE_OBJECT  = 0xc,  
-   OBJECT_TYPE_NULL    = 0xd,  
-   OBJECT_TYPE_CLASS   = 0xe  
+enum enum_OBJECT_TYPE {   
+   OBJECT_TYPE_BOOLEAN = 0x0,  
+   OBJECT_TYPE_CHAR    = 0x1,  
+   OBJECT_TYPE_I1      = 0x2,  
+   OBJECT_TYPE_U1      = 0x3,  
+   OBJECT_TYPE_I2      = 0x4,  
+   OBJECT_TYPE_U2      = 0x5,  
+   OBJECT_TYPE_I4      = 0x6,  
+   OBJECT_TYPE_U4      = 0x7,  
+   OBJECT_TYPE_I8      = 0x8,  
+   OBJECT_TYPE_U8      = 0x9,  
+   OBJECT_TYPE_R4      = 0xa,  
+   OBJECT_TYPE_R8      = 0xb,  
+   OBJECT_TYPE_OBJECT  = 0xc,  
+   OBJECT_TYPE_NULL    = 0xd,  
+   OBJECT_TYPE_CLASS   = 0xe  
 };  
 typedef DWORD OBJECT_TYPE;  
 ```  
   
-```c#  
-public enum enum_OBJECT_TYPE {   
-   OBJECT_TYPE_BOOLEAN = 0x0,  
-   OBJECT_TYPE_CHAR    = 0x1,  
-   OBJECT_TYPE_I1      = 0x2,  
-   OBJECT_TYPE_U1      = 0x3,  
-   OBJECT_TYPE_I2      = 0x4,  
-   OBJECT_TYPE_U2      = 0x5,  
-   OBJECT_TYPE_I4      = 0x6,  
-   OBJECT_TYPE_U4      = 0x7,  
-   OBJECT_TYPE_I8      = 0x8,  
-   OBJECT_TYPE_U8      = 0x9,  
-   OBJECT_TYPE_R4      = 0xa,  
-   OBJECT_TYPE_R8      = 0xb,  
-   OBJECT_TYPE_OBJECT  = 0xc,  
-   OBJECT_TYPE_NULL    = 0xd,  
-   OBJECT_TYPE_CLASS   = 0xe  
+```cs  
+public enum enum_OBJECT_TYPE {   
+   OBJECT_TYPE_BOOLEAN = 0x0,  
+   OBJECT_TYPE_CHAR    = 0x1,  
+   OBJECT_TYPE_I1      = 0x2,  
+   OBJECT_TYPE_U1      = 0x3,  
+   OBJECT_TYPE_I2      = 0x4,  
+   OBJECT_TYPE_U2      = 0x5,  
+   OBJECT_TYPE_I4      = 0x6,  
+   OBJECT_TYPE_U4      = 0x7,  
+   OBJECT_TYPE_I8      = 0x8,  
+   OBJECT_TYPE_U8      = 0x9,  
+   OBJECT_TYPE_R4      = 0xa,  
+   OBJECT_TYPE_R8      = 0xb,  
+   OBJECT_TYPE_OBJECT  = 0xc,  
+   OBJECT_TYPE_NULL    = 0xd,  
+   OBJECT_TYPE_CLASS   = 0xe  
 };  
 ```  
   
-## Members  
- OBJECT\_TYPE\_BOOLEAN  
- Boolean 개체입니다.  
+## <a name="members"></a>Members  
+ OBJECT_TYPE_BOOLEAN  
+ Indicates that the object is a Boolean.  
   
- OBJECT\_TYPE\_CHAR  
- 개체의 문자입니다.  
+ OBJECT_TYPE_CHAR  
+ Indicates that the object is a character.  
   
- OBJECT\_TYPE\_I1  
- 1 바이트 부호 있는 정수 개체입니다.  
+ OBJECT_TYPE_I1  
+ Indicates that the object is a one-byte signed integer.  
   
- OBJECT\_TYPE\_U1  
- 1 바이트 부호 없는 정수 개체입니다.  
+ OBJECT_TYPE_U1  
+ Indicates that the object is a one-byte unsigned integer.  
   
- OBJECT\_TYPE\_I2  
- 2 바이트 부호 있는 정수 개체입니다.  
+ OBJECT_TYPE_I2  
+ Indicates that the object is a two-byte signed integer.  
   
- OBJECT\_TYPE\_U2  
- 2 바이트 부호 없는 정수 개체입니다.  
+ OBJECT_TYPE_U2  
+ Indicates that the object is a two-byte unsigned integer.  
   
- OBJECT\_TYPE\_I4  
- 4 바이트 부호 있는 정수 개체입니다.  
+ OBJECT_TYPE_I4  
+ Indicates that the object is a four-byte signed integer.  
   
- OBJECT\_TYPE\_U4  
- 4 바이트 부호 없는 정수 개체입니다.  
+ OBJECT_TYPE_U4  
+ Indicates that the object is a four-byte unsigned integer.  
   
- OBJECT\_TYPE\_I8  
- 개체는 8 바이트 부호 있는 정수입니다.  
+ OBJECT_TYPE_I8  
+ Indicates that the object is an eight-byte signed integer.  
   
- OBJECT\_TYPE\_U8  
- 개체는 8 바이트 부호 없는 정수입니다.  
+ OBJECT_TYPE_U8  
+ Indicates that the object is an eight-byte unsigned integer.  
   
- OBJECT\_TYPE\_R4  
- 4 바이트 부동 소수점 숫자 개체입니다.  
+ OBJECT_TYPE_R4  
+ Indicates that the object is a four-byte floating-point number.  
   
- OBJECT\_TYPE\_R8  
- 개체는 8 바이트 부동 소수점 수입니다.  
+ OBJECT_TYPE_R8  
+ Indicates that the object is an eight-byte floating-point number.  
   
- OBJECT\_TYPE\_OBJECT  
- 개체는 개체입니다.  
+ OBJECT_TYPE_OBJECT  
+ Indicates that the object is an object.  
   
- OBJECT\_TYPE\_NULL  
- 개체가 NULL입니다.  
+ OBJECT_TYPE_NULL  
+ Indicates that the object is NULL.  
   
- OBJECT\_TYPE\_CLASS  
- 개체 클래스입니다.  
+ OBJECT_TYPE_CLASS  
+ Indicates that the object is a class.  
   
-## 설명  
- 인수로 전달 되는 [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) 및 [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) 방법입니다.  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) and [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) methods.  
   
-## 요구 사항  
- 헤더: ee.h  
+## <a name="requirements"></a>Requirements  
+ Header: ee.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md)   
  [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)

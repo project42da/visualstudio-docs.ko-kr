@@ -1,52 +1,69 @@
 ---
-title: "IDebugTypeFieldBuilder::CreatePointerToType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CreatePointerToType"
-  - "IDebugTypeFieldBuilder::CreatePointerToType"
+title: IDebugTypeFieldBuilder::CreatePointerToType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CreatePointerToType
+- IDebugTypeFieldBuilder::CreatePointerToType
 ms.assetid: 73966e8a-b643-43e0-9b4e-0aa4b402ebbe
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugTypeFieldBuilder::CreatePointerToType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6e94403936170daa401a20e924a5e241f8b037db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-지정 된 형식에 대 한 포인터를 만듭니다.  
+---
+# <a name="idebugtypefieldbuildercreatepointertotype"></a>IDebugTypeFieldBuilder::CreatePointerToType
+Creates a pointer to the specified type.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT CreatePointerToType(  
-   IDebugField*  pTypeField,  
-   IDebugField** pPtrToTypeField  
+   IDebugField*  pTypeField,  
+   IDebugField** pPtrToTypeField  
 );  
 ```  
   
-```c#  
+```cs  
 int CreatePointerToType(  
-   IDebugField     pTypeField,  
-   out IDebugField pPtrToTypeField  
+   IDebugField     pTypeField,  
+   out IDebugField pPtrToTypeField  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pTypeField`  
- \[in\] 가리키도록 형식입니다.  으로 표시 되는 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 인터페이스입니다.  
+ [in] Type to point to. It is represented by the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface.  
   
  `pPtrToTypeField`  
- \[out\] 새가 표시 되는 포인터를 반환 합니다.  **IDebugField** 개체입니다.  
+ [out] Returns the pointer represented by a new **IDebugField** object.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md)

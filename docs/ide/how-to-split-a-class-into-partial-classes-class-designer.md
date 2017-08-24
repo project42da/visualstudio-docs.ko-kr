@@ -1,5 +1,5 @@
 ---
-title: "방법: 클래스를 Partial 클래스로 분할(클래스 디자이너) | Microsoft Docs"
+title: 'How to: Split a Class into Partial Classes (Class Designer) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,32 +31,32 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
-ms.openlocfilehash: 9d74565f8e7e5b89e1716e9e2d88e2e18e077124
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c2497ca7503b5334fd3e45cf3f1655ebad9a043f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>방법: 클래스를 부분 클래스로 분할(클래스 디자이너)
-Visual Basic의 `Partial` 키워드 또는 Visual C#의 `partial` 키워드를 사용하여 여러 선언에서 클래스 또는 구조체의 선언을 나눌 수 있습니다. 원하는 만큼 다양한 소스 파일 또는 하나의 소스 파일에서 원하는 개수만큼 partial 선언을 사용할 수 있습니다. 그러나 모든 선언이 동일한 어셈블리와 동일한 네임스페이스에 있어야 합니다.  
+# <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>How to: Split a Class into Partial Classes (Class Designer)
+You can divide the declaration of a class or structure among several declarations by using the `Partial` keyword in Visual Basic or the `partial` keyword in Visual C#. You can use as many partial declarations as you want, in as many different source files as you want, or in one source file. However, all the declarations must be in the same assembly and the same namespace.  
   
- Partial 클래스는 여러 상황에서 유용합니다. 예를 들어, 대규모 프로젝트에서 작업하는 경우 하나의 클래스를 둘 이상의 파일에 나누면 둘 이상의 프로그래머가 동시에 작업할 수 있습니다. Visual Studio에서 생성된 코드로 작업하는 경우 소스 파일을 다시 만들 필요 없이 클래스를 변경할 수 있습니다. Visual Studio에서 생성된 코드의 예로는 Windows Forms 및 웹 서비스 래퍼 코드가 있습니다. 따라서 Visual Studio에서 만든 파일을 수정하지 않고도 자동 생성된 클래스를 사용하는 코드를 만들 수 있습니다.  
+ Partial classes are useful in several situations. For example, when you are working on large projects, separating a class into more than one file enables more than one programmer to work on it at the same time. When you are working with code that Visual Studio generates, you can change the class without having to re-create the source file. (Examples of code that Visual Studio generates include Windows Forms and Web Service wrapper code.) You can thus create code that uses auto-generated classes without having to modify the file that Visual Studio creates.  
   
- partial 메서드는 두 가지 종류가 있습니다. Visual C#에서는 선언(declaring) 및 구현(implementing), Visual Basic에서는 선언(declaration) 및 구현(implementation)이라고 합니다.  
+ There are two kinds of partial methods. In Visual C#, they are called declaring and implementing; in Visual Basic, they are called declaration and implementation.  
   
- 클래스 디자이너에서는 partial 클래스 및 메서드를 지원합니다. 클래스 다이어그램의 형식 도형은 partial 클래스의 단일 선언 위치를 가리킵니다. partial 클래스가 여러 파일에 정의된 경우 **속성** 창에서 **새 멤버 위치** 속성을 설정하여 클래스 디자이너가 사용할 선언 위치를 지정할 수 있습니다. 즉, 클래스 도형을 두 번 클릭하면 클래스 디자이너가 **새 멤버 위치** 속성으로 식별된 클래스 선언이 있는 소스 파일로 이동합니다. 클래스 도형에서 partial 메서드를 두 번 클릭하면 클래스 디자이너가 partial 메서드 선언으로 이동합니다. 또한, **속성** 창의 **파일 이름** 속성이 선언 위치를 가리킵니다. partial 클래스의 경우 **파일 이름**은 해당 클래스의 선언 및 구현 코드가 포함된 파일을 모두 나열합니다. 그러나 partial 메서드의 경우에는 **파일 이름**이 partial 메서드 선언이 포함된 파일만 나열합니다.  
+ Class Designer supports partial classes and methods. The type shape in the class diagram refers to a single declaration location for the partial class. If the partial class is defined in multiple files, you can specify which declaration location Class Designer will use by setting the **New Member Location** property in the **Properties** window. That is, when you double-click a class shape, Class Designer goes to the source file that contains the class declaration identified by the **New Member Location** property. When you double-click a partial method in a class shape, Class Designer goes to the partial method declaration. Also, in the **Properties** window, the **File Name** property refers to the declaration location. For partial classes, **File Name** lists all of the files that contain declaration and implementation code for that class. However, for partial methods, **File Name** lists only the file that contains the partial method declaration.  
   
- 다음 예제에서는 클래스 `Employee`의 정의를 두 개의 선언으로 분할합니다(여기서 각 선언은 서로 다른 프로시저를 정의함). 이 예제에서 두 개의 partial 정의는 하나의 소스 파일에 있거나 두 개의 서로 다른 소스 파일에 있을 수 있습니다.  
+ The following examples split the definition of class `Employee` into two declarations, each of which defines a different procedure. The two partial definitions in the examples could be in one source file or in two different source files.  
   
 > [!NOTE]
->  Visual Basic에서는 partial 클래스 정의를 사용하여 Visual Studio 생성 코드와 사용자 작성 코드를 구분합니다. 코드는 별도의 소스 파일로 구분됩니다. 예를 들어, **Windows Form 디자이너**에서는 `Form`과 같은 컨트롤에 대해 partial 클래스를 정의합니다. 이런 컨트롤에서 생성된 코드를 수정해서는 안 됩니다.  
+>  Visual Basic uses partial-class definitions to separate Visual Studio—generated code from user-authored code. The code is separated into discrete source files. For example, the **Windows Form Designer** defines partial classes for controls such as `Form`. You should not modify the generated code in these controls.  
   
- Visual Basic의 부분 형식(Partial Type)에 대한 자세한 내용은 [Partial](/dotnet/visual-basic/language-reference/modifiers/partial)을 참조하세요.  
+ For more information about partial types in Visual Basic, see [Partial](/dotnet/visual-basic/language-reference/modifiers/partial).  
   
-## <a name="example"></a>예제  
- Visual Basic의 클래스 정의를 분할하려면 다음 예제와 같이 `Partial` 키워드를 사용합니다.  
+## <a name="example"></a>Example  
+ To split a class definition in Visual Basic, use the `Partial` keyword, as shown in the following example.  
   
-```vb#  
+```vb  
 ' First part of class definition.  
 Partial Public Class Employee  
     Public Sub CalculateWorkHours()  
@@ -70,10 +70,10 @@ Partial Public Class Employee
 End Class  
 ```  
   
-## <a name="example"></a>예제  
- Visual C#에서 클래스 정의를 분할하려면 다음 예제와 같이 `partial` 키워드를 사용합니다.  
+## <a name="example"></a>Example  
+ To split a class definition in Visual C#, use the `partial` keyword, as shown in the following example.  
   
-```c#  
+```cs  
 // First part of class definition.  
 public partial class Employee  
 {  
@@ -91,8 +91,8 @@ public partial class Employee
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Partial 클래스 및 메서드](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)   
- [partial(형식)](/dotnet/csharp/language-reference/keywords/partial-type)   
- [partial(메서드)(C# 참조)](/dotnet/csharp/language-reference/keywords/partial-method)   
- [부분](/dotnet/visual-basic/language-reference/modifiers/partial)
+## <a name="see-also"></a>See Also  
+ [Partial Classes and Methods](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)   
+ [partial (Type)](/dotnet/csharp/language-reference/keywords/partial-type)   
+ [partial (Method) (C# Reference)](/dotnet/csharp/language-reference/keywords/partial-method)   
+ [Partial](/dotnet/visual-basic/language-reference/modifiers/partial)

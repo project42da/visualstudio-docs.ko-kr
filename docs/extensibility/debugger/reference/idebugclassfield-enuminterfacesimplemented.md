@@ -1,52 +1,69 @@
 ---
-title: "IDebugClassField::EnumInterfacesImplemented | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugClassField::EnumInterfacesImplemented"
-helpviewer_keywords: 
-  - "IDebugClassField::EnumInterfacesImplemented 메서드"
+title: IDebugClassField::EnumInterfacesImplemented | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugClassField::EnumInterfacesImplemented
+helpviewer_keywords:
+- IDebugClassField::EnumInterfacesImplemented method
 ms.assetid: e5523e45-d350-491e-a92c-fe0ca97d2052
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugClassField::EnumInterfacesImplemented
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e1e234620f89bf397eb7ec8470c57ecead52d48a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 클래스에 의해 구현 된 인터페이스에 대 한 열거자를 만듭니다.  
+---
+# <a name="idebugclassfieldenuminterfacesimplemented"></a>IDebugClassField::EnumInterfacesImplemented
+Creates an enumerator for the interfaces implemented by this class.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT EnumInterfacesImplemented(   
-   IEnumDebugFields** ppEnum  
+HRESULT EnumInterfacesImplemented(   
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
-```c#  
+```cs  
 int EnumInterfacesImplemented(  
-   out IEnumDebugFields ppEnum  
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppEnum`  
- \[out\] 반환 된 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) 목록에 구현 되는 인터페이스를 나타내는 개체입니다.  인터페이스가 있을 경우 null 값을 반환 합니다.  
+ [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing the list of interfaces implemented. Returns a null value if there are no interfaces.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 하거나이 클래스에서 구현 된 인터페이스가 없으면 S\_FALSE를 반환 합니다.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK or returns S_FALSE if there are no interfaces implemented on this class. Otherwise, returns an error code.  
   
-## 설명  
- 각 요소는 열거형은 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) 인터페이스를 설명 하는 개체입니다.  관리 되지 않는 참고 [!INCLUDE[vcprvc](../../../debugger/includes/vcprvc_md.md)] 코드 사용 하지 않는 인터페이스 분리 된 개체로이 메서드가 관리 되지 않는 대 한 null 값을 항상 반환 하므로 [!INCLUDE[vcprvc](../../../debugger/includes/vcprvc_md.md)] 코드입니다.  
+## <a name="remarks"></a>Remarks  
+ Each element of the enumeration is an [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) object describing an interface. Note that unmanaged [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] code does not use interfaces as a discrete entity so this method always returns a null value for unmanaged [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

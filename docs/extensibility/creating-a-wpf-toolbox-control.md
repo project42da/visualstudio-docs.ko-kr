@@ -1,49 +1,66 @@
 ---
-title: "WPF 도구 상자 컨트롤 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "도구 상자 컨트롤"
-  - "도구 상자"
-  - "wpf"
+title: Creating a WPF Toolbox Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbox control
+- toolbox
+- wpf
 ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
 caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# WPF 도구 상자 컨트롤 만들기
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: a0329dad42090d207aa3a8f9d778cf73bcc53f01
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-WPF \(Windows Presentation Framework\) 도구 상자 컨트롤 템플릿을 사용 하는 자동으로 추가 하는 WPF 컨트롤을 만들 수는 **도구 상자** 확장이 설치 되는 경우. 이 항목에서는 서식 파일을 만드는 데는 **도구 상자** 제어를 다른 사용자에 게 배포할 수 있습니다.  
+---
+# <a name="creating-a-wpf-toolbox-control"></a>Creating a WPF Toolbox Control
+The WPF (Windows Presentation Framework) Toolbox Control template lets you create WPF controls that are automatically added to the **Toolbox** when the extension is installed. This topic shows how to use the template to create a **Toolbox** control that you can distribute to other users.  
   
- Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)을 참조하십시오.  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## WPF 도구 상자 컨트롤 만들기  
+## <a name="creating-a-wpf-toolbox-control"></a>Creating a WPF Toolbox Control  
   
-#### WPF 도구 상자 컨트롤 확장 만들기  
+#### <a name="create-an-extension-with-a-wpf-toolbox-control"></a>Create an Extension with a WPF Toolbox Control  
   
-1.  라는 VSIX 프로젝트를 `MyToolboxControl`합니다. VSIX 프로젝트 템플릿을 찾을 수는 **새 프로젝트** 대화 상자의 **Visual C\# \/ 확장성**합니다.  
+1.  Create a VSIX project named `MyToolboxControl`. You can find the VSIX project template in the **New Project** dialog under **Visual C# / Extensibility**.  
   
-2.  프로젝트를 열면 추가 **WPF 도구 상자 컨트롤** 라는 항목 템플릿을 `MyToolboxControl`합니다. 에 **솔루션 탐색기**, 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 \/ 새 항목**합니다. 에 **새 항목 추가** 대화 상자에서 이동 **Visual C\# \/ 확장성** 선택한 **WPF 도구 상자 컨트롤**합니다. 에 **이름** 창의 맨 아래에 필드, 명령 파일 이름을 `MyToolboxControl.cs`합니다.  
+2.  When the project opens, add a **WPF Toolbox Control** item template named `MyToolboxControl`. In the **Solution Explorer**, right-click the project node and select **Add / New Item**. In the **Add New Item** dialog, go to **Visual C# / Extensibility** and select **WPF Toolbox Control**. In the **Name** field at the bottom of the window, change the command file name to `MyToolboxControl.cs`.  
   
-     솔루션에는 이제 사용자 정의 컨트롤을 포함 한 `ProvideToolboxControlAttribute`<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> 컨트롤을 추가 하는 **도구 상자**, 및 **Microsoft.VisualStudio.ToolboxControl** 배포용 VSIX 매니페스트의 자산 항목이 있습니다.  
+     The solution now contains a user control, a `ProvideToolboxControlAttribute`<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> that adds the control to the **Toolbox**, and a **Microsoft.VisualStudio.ToolboxControl** Asset entry in the VSIX manifest for  deployment.  
   
-#### UI 컨트롤을 만들려면  
+#### <a name="to-create-the-control-ui"></a>To create the control UI  
   
-1.  MyToolboxControl.xaml 디자이너에서 엽니다.  
+1.  Open MyToolboxControl.xaml in the designer.  
   
-     디자이너에 <xref:System.Windows.Controls.Button> 컨트롤이 포함된 <xref:System.Windows.Controls.Grid> 컨트롤이 표시됩니다.  
+     The designer shows a <xref:System.Windows.Controls.Grid> control that contains a <xref:System.Windows.Controls.Button> control.  
   
-2.  모눈 레이아웃을 정렬 합니다. 선택 하는 경우는 <xref:System.Windows.Controls.Grid> 제어, 파란색 컨트롤 막대는 눈금의 위쪽 및 왼쪽 가장자리에 표시 합니다. 막대를 클릭 하 여 표에 행 및 열을 추가할 수 있습니다.  
+2.  Arrange the grid layout. When you select the <xref:System.Windows.Controls.Grid> control, blue control bars appear on the top and left edges of the grid. You can add rows and columns to the grid by clicking the bars.  
   
-3.  눈금에 자식 컨트롤을 추가 합니다. 끌어 자식 컨트롤을 배치할 수는 **도구 상자** 설정 하거나, 모눈의 섹션에 해당 `Grid.Row` 및 `Grid.Column` XAML의 특성입니다. 다음 예제에서는 행의 두 번째 단추와 눈금의 맨 위 행의 레이블 두 개를 추가합니다.  
+3.  Add child controls to the grid. You can position a child control by dragging it from the **Toolbox** to a section of the grid, or by setting its `Grid.Row` and `Grid.Column` attributes in the XAML. The following example adds two labels on the top row of the grid and a button on the second row.  
   
     ```xaml  
     <Grid>  
@@ -53,18 +70,18 @@ WPF \(Windows Presentation Framework\) 도구 상자 컨트롤 템플릿을 사�
     </Grid>  
     ```  
   
-## 컨트롤 이름 바꾸기  
- 기본적으로 컨트롤에 표시 됩니다는 **도구 상자** 으로 **MyToolboxControl** 이라는 그룹에 **MyToolboxControl.MyToolboxControl**합니다. MyToolboxControl.xaml.cs 파일에서 이러한 이름을 변경할 수 있습니다.  
+## <a name="renaming-the-control"></a>Renaming the control  
+ By default, your control will appear in the **Toolbox** as **MyToolboxControl** in a group named **MyToolboxControl.MyToolboxControl**. You can change these names in the MyToolboxControl.xaml.cs file.  
   
-1.  MyToolboxControl.xaml.cs 코드 뷰에서 엽니다.  
+1.  Open MyToolboxControl.xaml.cs in the code view.  
   
-2.  MyToolboxControl 클래스를 찾아 이름을 TestControl로 변경 합니다. \(이 작업을 수행 하는 가장 빠른 방법은 되는 클래스의 이름을 바꾸려면 다음 선택 **이름 바꾸기** 상황에 맞는 메뉴에서 단계를 완료 합니다. \(에 대 한 자세한 내용은 **이름 바꾸기** 명령을 참조 하십시오. [이름 바꾸기 리팩터링\(C\#\)](../csharp-ide/rename-refactoring-csharp.md).\)  
+2.  Find the MyToolboxControl class and rename it to TestControl. (The fastest way to do this is to rename the class, then select **Rename** from the context menu and complete the steps. (For more information about the **Rename** command, see [Rename Refactoring (C#)](../csharp-ide/rename-refactoring-csharp.md).)  
   
-3.  이동 된 `ProvideToolboxControl` 특성 및 첫 번째 매개 변수의 값을 변경 **테스트**. 에 컨트롤을 포함할 그룹의 이름에서 **도구 상자**합니다.  
+3.  Go to the `ProvideToolboxControl` attribute and change the value of the first parameter to **Test**. This is the name of the group that will contain the control in the **Toolbox**.  
   
-     결과 코드는 다음과 같아야 합니다.  
+     The resulting code should look like this:  
   
-    ```c#  
+    ```cs  
     [ProvideToolboxControl("Test", true)]  
     public partial class TestControl : UserControl  
     {  
@@ -75,27 +92,27 @@ WPF \(Windows Presentation Framework\) 도구 상자 컨트롤 템플릿을 사�
     }  
     ```  
   
-## 빌드, 테스트 및 배포  
- 컨트롤에서 설치 프로젝트를 디버깅할 때 찾아야는 **도구 상자** Visual Studio의 실험적 인스턴스.  
+## <a name="building-testing-and-deployment"></a>Building, Testing, and Deployment  
+ When you debug the project, you should find the control installed in the **Toolbox** of the experimental instance of Visual Studio.  
   
-#### 컨트롤을 빌드하고 테스트하려면  
+#### <a name="to-build-and-test-the-control"></a>To build and test the control  
   
-1.  프로젝트를 빌드하고 디버깅을 시작 합니다.  
+1.  Rebuild the project and start debugging.  
   
-2.  Visual Studio의 새 인스턴스에서 WPF 응용 프로그램 프로젝트를 만듭니다. XAML 디자이너 열려 있는지 확인 합니다.  
+2.  In the new instance of Visual Studio, create a WPF Application project. Make sure the XAML Designer is open.  
   
-3.  **도구 상자**에서 컨트롤을 찾아 디자인 화면으로 끕니다.  
+3.  Find your control in the **Toolbox** and drag it to the design surface.  
   
-4.  WPF 응용 프로그램 디버깅을 시작 합니다.  
+4.  Start debugging the WPF application.  
   
-5.  컨트롤이 표시 되 고 있는지 확인 합니다.  
+5.  Verify that your control appears.  
   
-#### 컨트롤을 배포하려면  
+#### <a name="to-deploy-the-control"></a>To deploy the control  
   
-1.  테스트 프로젝트를 빌드한 후에 프로젝트의 \\bin\\debug\\ 폴더에서.vsix 파일을 찾을 수 있습니다.  
+1.  After you build the tested project, you can find the .vsix file in the \bin\debug\ folder of the project.  
   
-2.  .Vsix 파일을 두 번 클릭 하 고 설치 절차를 수행 하 여 로컬 컴퓨터에 설치할 수 있습니다. 컨트롤을 제거 하려면로 이동 **도구 \/ 확장 및 업데이트** 하 고 컨트롤 확장을 찾은 다음 클릭 **제거**합니다.  
+2.  You can install it on a local computer by double-clicking the .vsix file and following the installation procedure. To uninstall the control, go to **Tools / Extensions and Updates** and look for the control extension, then click **Uninstall**.  
   
-3.  네트워크 또는 웹 사이트에 .vsix 파일을 업로드합니다.  
+3.  Upload the .vsix file to a network or to a Web site.  
   
-     파일을 업로드 하는 경우는 [Visual Studio 갤러리](http://go.microsoft.com/fwlink/?LinkID=123847) 웹 사이트를 다른 사용자가 사용할 수 **도구 \/ 확장 및 업데이트** Visual studio를 온라인으로 컨트롤을 찾아 설치 합니다.
+     If you upload the file to the [Visual Studio Gallery](http://go.microsoft.com/fwlink/?LinkID=123847) Web site, other users can use **Tools / Extensions and Updates** in Visual Studio to find the control online and install it.

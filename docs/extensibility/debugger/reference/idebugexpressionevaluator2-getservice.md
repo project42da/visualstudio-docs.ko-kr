@@ -1,55 +1,72 @@
 ---
-title: "IDebugExpressionEvaluator2::GetService | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluator2::GetService"
-  - "GetService"
+title: IDebugExpressionEvaluator2::GetService | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugExpressionEvaluator2::GetService
+- GetService
 ms.assetid: f8988a9e-9d18-42af-84a7-55f41e9adf63
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugExpressionEvaluator2::GetService
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 00e201b6ccdd3a0277c4a26deb0b25970fc19d82
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-고유 식별자를 제공 하는 서비스 개체를 검색 합니다.  
+---
+# <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
+Retrieves a service object given its unique identifier.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetService (  
-   GUID        uid,  
-   IUnknown ** ppService  
+   GUID        uid,  
+   IUnknown ** ppService  
 );  
 ```  
   
-```c#  
+```cs  
 int GetService (  
-   Guid       uid,  
-   out object ppService  
+   Guid       uid,  
+   out object ppService  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `uid`  
- \[in\] 검색할 서비스의 고유 식별자입니다.  
+ [in] Unique identifier of the service to retrieve.  
   
  `ppService`  
- \[out\] 서비스를 나타내는 개체를 반환 합니다.  
+ [out] Returns an object that represents the service.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 다른 식 계산기에서 서비스를 가져오는 데는 타사 식 계산기가 사용할 수 있습니다.  예를 들어, 기본 식 계산기에서 시각화 도우미 서비스에 대 한 인터페이스를 가져오려면이 메서드를 사용 수 있습니다.  제 3의 식 계산기가이 인터페이스를 구현 해야 하는 흔하지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ This can be consumed by a third-party expression evaluator to obtain services from another expression evaluator. For example, this method could be used to obtain the interface for the visualizer service from the default expression evaluator. Third-party expression evaluators are unlikely to need to implement this interface.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

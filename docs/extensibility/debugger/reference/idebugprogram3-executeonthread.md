@@ -1,57 +1,74 @@
 ---
-title: "IDebugProgram3::ExecuteOnThread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProgram3::ExecuteOnThread"
+title: IDebugProgram3::ExecuteOnThread | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugProgram3::ExecuteOnThread
 ms.assetid: 2f5211e3-7a3f-47bf-9595-dfc8b4895d0d
 caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# IDebugProgram3::ExecuteOnThread
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2266e39c3a2791b8acf31300af8da2eb49dee727
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-디버거에서 프로그램을 실행합니다.  프로그램을 실행 하는 동안 사용자는 스레드를 보는 디버거 정보를 제공 하는 스레드가 반환 됩니다.  
+---
+# <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
+Executes the debugger program. The thread is returned to give the debugger information on which thread the user is viewing when executing the program.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT ExecuteOnThread(  
-   [in] IDebugThread2* pThread)  
+   [in] IDebugThread2* pThread)  
 ```  
   
-```c#  
+```cs  
 int ExecuteOnThread(  
-   IDebugThread2 pThread  
+   IDebugThread2 pThread  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pThread`  
- \[in\] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) 개체입니다.  
+ [in] An [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 디버거 실행 중지 후 다시 시작 하는 세 가지 방법이 있습니다.  
+## <a name="remarks"></a>Remarks  
+ There are three different ways that a debugger can resume execution after stopping:  
   
--   실행 합니다: 모든 이전 단계를 취소 하 고에 다음 중단점까지 실행 합니다.  
+-   Execute: Cancel any previous step, and run until the next breakpoint and so on.  
   
--   단계: 모든 이전 단계를 취소 하 고 새 단계가 완료 될 때까지 실행 됩니다.  
+-   Step: Cancel any old step, and run until the new step completes.  
   
--   계속: 다시 실행 하 고 이전 단계를 활성 상태로 둡니다.  
+-   Continue: Run again, and leave any old step active.  
   
- 스레드에 전달 `ExecuteOnThread` 는 취소 하려면 단계를 결정할 때 유용 합니다.  실행 실행 하는 스레드를 모르는 경우 모든 단계를 취소 합니다.  스레드 정보를 단계에서 활성 스레드를 취소 하려면 필요 합니다.  
+ The thread passed to `ExecuteOnThread` is useful when deciding which step to cancel. If you do not know the thread, running execute cancels all steps. With knowledge of the thread, you only need to cancel the step on the active thread.  
   
-## 참고 항목  
- [실행](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
+## <a name="see-also"></a>See Also  
+ [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
  [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

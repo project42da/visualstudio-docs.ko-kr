@@ -1,55 +1,72 @@
 ---
-title: "IDebugProgramPublisher2::PublishProgramNode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramPublisher2::PublishProgramNode"
-helpviewer_keywords: 
-  - "IDebugProgramPublisher2::PublishProgramNode"
+title: IDebugProgramPublisher2::PublishProgramNode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramPublisher2::PublishProgramNode
+helpviewer_keywords:
+- IDebugProgramPublisher2::PublishProgramNode
 ms.assetid: d4b72e04-f726-46cf-8e56-5203ff205b12
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugProgramPublisher2::PublishProgramNode
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 65e2718d9401a797f437708bf2bf8a6677cde800
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-노드 프로그램 디버그 매니저를 \(SDM\) 디버깅 엔진 \(DEs\) 사용 및 세션에서 사용할 수 있습니다.  
+---
+# <a name="idebugprogrampublisher2publishprogramnode"></a>IDebugProgramPublisher2::PublishProgramNode
+Makes a program node available for use by debug engines (DEs) and the session debug manager (SDM).  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT PublishProgramNode(  
-   IDebugProgramNode2 *pProgramNode  
+HRESULT PublishProgramNode(  
+   IDebugProgramNode2 *pProgramNode  
 );  
 ```  
   
-```c#  
-int PublishProgramNode(  
-   IDebugProgramNode2 pProgramNode  
+```cs  
+int PublishProgramNode(  
+   IDebugProgramNode2 pProgramNode  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pProgramNode`  
- \[in\] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 사용할 수 있도록 프로그램 노드에서 나타내는 개체입니다.  
+ [in] An [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) object that represents the program node to make available.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 방법을 선택 하 여 디버깅을 시작 하기 전에 정보를 쿼리할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ This method allows programs to be queried for information before selecting and launching them for debugging.  
   
- 호출 프로그램이 노드 사용 가능성을 제거 하는 [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) 메서드.  
+ To remove a program node from availability, call the [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)

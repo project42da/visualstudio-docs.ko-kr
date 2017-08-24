@@ -1,99 +1,116 @@
 ---
-title: "T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "텍스트 템플릿 프로젝트 항목"
-  - "텍스트 템플릿, 데이터 소스 모델"
-  - "텍스트 템플릿, 응용 프로그램 코드 생성"
-  - "텍스트 템플릿, 시작"
-  - "텍스트 템플릿, 코드 생성 지침"
-  - "TextTemplatingFileGenerator 사용자 지정 도구"
-  - "모든 템플릿 변환"
+title: Design-Time Code Generation by using T4 Text Templates | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- text templates, guidelines for code generation
+- text templates, data source model
+- TextTemplatingFileGenerator custom tool
+- Transform All Templates
+- text templates, getting started
+- Text Template project item
+- text templates, generating code for your application
 ms.assetid: 2774b83d-1adb-4c66-a607-746e019b80c0
 caps.latest.revision: 38
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 38
----
-# T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: alancameronwills
+ms.author: awills
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 71c2b33190cfaf39da2806008ccd4d9626475253
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-디자인 타임 T4 텍스트 템플릿을 사용하면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트에서 프로그램 코드 및 기타 파일을 생성할 수 있습니다.  일반적으로는 *모델*의 데이터에 따라 생성되는 코드가 달라지도록 템플릿을 작성합니다.  모델은 응용 프로그램 요구 사항에 대한 주요 정보를 포함하는 파일 또는 데이터베이스입니다.  
+---
+# <a name="design-time-code-generation-by-using-t4-text-templates"></a>Design-Time Code Generation by using T4 Text Templates
+Design-time T4 text templates let you generate program code and other files in your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project. Typically, you write the templates so that they vary the code that they generate according to data from a *model*. A model is a file or database that contains key information about your application's requirements.  
   
- 워크플로를 테이블이나 다이어그램으로 정의하는 모델을 예로 들어 보겠습니다.  해당 모델에서 워크플로를 실행하는 소프트웨어를 생성할 수 있습니다.  사용자 요구 사항이 변경되면 사용자와 함께 새 워크플로에 대해 쉽게 논의할 수 있습니다.  워크플로에서 코드를 다시 생성하는 것이 코드를 직접 업데이트하는 것보다 안정적입니다.  
+ For example, you could have a model that defines a workflow, either as a table or a diagram. From the model, you can generate the software that executes the workflow. When your users' requirements change, it is easy to discuss the new workflow with the users. Regenerating the code from the workflow is more reliable than updating the code by hand.  
   
 > [!NOTE]
->  *모델*은 응용 프로그램의 특정 측면을 설명하는 데이터 소스로,  모든 형태와 종류의 파일 또는 데이터베이스일 수 있으며  UML 모델이나 DSL\(Domain\-Specific Language\) 모델 등의 특정 형태가 아니어도 됩니다.  일반적인 모델은 테이블 또는 XML 파일 형식입니다.  
+>  A *model* is a data source that describes a particular aspect of an application. It can be any form, in any kind of file or database. It does not have to be in any particular form, such as a UML model or Domain-Specific Language model. Typical models are in the form of tables or XML files.  
   
- 코드를 생성하는 방법에 대해서는 이미 잘 알고 계실 것입니다.  **.resx** 솔루션의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 파일에서 리소스를 정의하면 클래스 및 메서드 집합이 자동으로 생성됩니다.  리소스 파일로 리소스를 편집하는 것이 클래스와 메서드를 편집하는 것보다 훨씬 쉽고 안정적입니다.  텍스트 템플릿을 사용하면 직접 디자인한 소스에서 같은 방식으로 코드를 생성할 수 있습니다.  
+ You are probably already familiar with code generation. When you define resources in a **.resx** file in your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution, a set of classes and methods is generated automatically. The resources file makes it much easier and more reliable to edit the resources than it would be if you had to edit the classes and methods. With text templates, you can generate code in the same manner from a source of your own design.  
   
- 텍스트 템플릿에는 생성하려는 텍스트와 텍스트의 변수 부분을 생성하는 프로그램 코드가 혼합되어 있습니다.  프로그램 코드를 사용하면 생성된 텍스트의 일부분을 반복하거나 조건부로 생략할 수 있습니다.  생성된 텍스트 자체는 응용 프로그램 부분을 만드는 프로그램 코드일 수 있습니다.  
+ A text template contains a mixture of the text that you want to generate, and program code that generates variable parts of the text. The program code and allows you to repeat or conditionally omit parts of the generated text. The generated text can itself be program code that will form part of your application.  
   
-## 디자인 타임 T4 텍스트 템플릿 만들기  
+## <a name="creating-a-design-time-t4-text-template"></a>Creating a Design-Time T4 Text Template  
   
-#### Visual Studio에서 디자인 타임 T4 텍스트 템플릿을 만들려면  
+#### <a name="to-create-a-design-time-t4-template-in-visual-studio"></a>To create a design-time T4 template in Visual Studio  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트를 만들거나 기존 프로젝트를 엽니다.  
+1.  Create a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project, or open an existing one.  
   
-     예를 들어 **파일** 메뉴에서 **새로 만들기**, **프로젝트**를 선택합니다.  
+     For example, on the **File** menu, choose **New**, **Project**.  
   
-2.  텍스트 템플릿 파일을 프로젝트에 추가하고 .tt 확장명으로 이름을 지정합니다.  
+2.  Add a text template file to your project and give it a name that has the extension **.tt**.  
   
-     이렇게 하려면 **솔루션 탐색기**의 프로젝트에 대한 바로 가기 메뉴에서 **추가**, **새 항목**을 선택합니다.  **새 항목 추가** 대화 상자의 가운데 창에서 **텍스트 템플릿**을 선택합니다.  
+     To do this, in **Solution Explorer**, on the shortcut menu of your project, choose **Add**, **New Item**. In the **Add New Item** dialog box select **Text Template** from the middle pane.  
   
-     파일의 **사용자 지정 도구** 속성이 **TextTemplatingFileGenerator**인지 확인합니다.  
+     Notice that the **Custom Tool** property of the file is **TextTemplatingFileGenerator**.  
   
-3.  파일을 엽니다.  다음 지시문이 이미 포함되어 있습니다.  
+3.  Open the file. It will already contain the following directives:  
   
     ```  
     <#@ template hostspecific="false" language="C#" #>  
     <#@ output extension=".txt" #>  
     ```  
   
-     [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 프로젝트에 템플릿을 추가한 경우 언어 특성은 "`VB`"입니다.  
+     If you added the template to a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] project, the language attribute will be "`VB`".  
   
-4.  파일 끝에 원하는 텍스트를 추가합니다.  예를 들면 다음과 같습니다.  
+4.  Add some text at the end of the file. For example:  
   
     ```  
     Hello, world!  
     ```  
   
-5.  파일을 저장합니다.  
+5.  Save the file.  
   
-     템플릿을 실행할 것인지 확인하라는 **보안 경고** 메시지 상자가 표시될 수 있습니다.  **확인**을 클릭합니다.  
+     You might see a **Security Warning** message box that asks you to confirm that you want to run the template. Click **OK**.  
   
-6.  **솔루션 탐색기**에서 템플릿 파일 노드를 확장한 다음 확장명이 .txt인 파일을 찾습니다.  이 파일에 템플릿에서 생성된 텍스트가 포함되어 있습니다.  
+6.  In **Solution Explorer**, expand the template file node and you will find a file that has the extension **.txt**. The file contains the text generated from the template.  
   
     > [!NOTE]
-    >  Visual Basic 프로젝트의 경우 출력 파일을 보려면 **모든 파일 표시**를 클릭해야 합니다.  
+    >  If your project is a Visual Basic project, you must click **Show All Files** in order to see the output file.  
   
-### 코드 다시 생성  
- 다음과 같은 경우에는 템플릿이 실행되어 보조 파일이 생성됩니다.  
+### <a name="regenerating-the-code"></a>Regenerating the code  
+ A template will be executed, generating the subsidiary file, in any of the following cases:  
   
--   템플릿을 편집한 다음 다른 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 창으로 포커스를 변경하는 경우  
+-   Edit the template and then change focus to a different [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] window.  
   
--   템플릿을 저장하는 경우  
+-   Save the template.  
   
--   **빌드** 메뉴에서 **모든 템플릿 변환**을 클릭하는 경우.  이 경우 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션에서 모든 템플릿이 변환됩니다.  
+-   Click **Transform All Templates** in the **Build** menu. This will transform all the templates in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution.  
   
--   **솔루션 탐색기**의 임의 파일에 대한 바로 가기 메뉴에서 **사용자 지정 도구 실행**을 선택하는 경우.  선택한 일부 템플릿을 변환하려면 이 방법을 사용합니다.  
+-   In **Solution Explorer**, on the shortcut menu of any file, choose **Run Custom Tool**. Use this method to transform a selected subset of templates.  
   
- 템플릿이 읽는 데이터 파일이 변경되면 템플릿이 실행되도록 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트를 설정할 수도 있습니다.  자세한 내용은 [자동으로 코드 다시 생성](#Regenerating)을 참조하십시오.  
+ You can also set up a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project so that the templates are executed when the data files that they read have changed. For more information, see [Regenerating the code automatically](#Regenerating).  
   
-## 변수 텍스트 생성  
- 텍스트 템플릿에서는 프로그램 코드를 사용하여 생성된 파일 내용이 바뀌도록 할 수 있습니다.  
+## <a name="generating-variable-text"></a>Generating Variable Text  
+ Text templates let you use program code to vary the content of the generated file.  
   
-#### 프로그램 코드를 사용하여 텍스트를 생성하려면  
+#### <a name="to-generate-text-by-using-program-code"></a>To generate text by using program code  
   
-1.  `.tt` 파일의 내용을 다음과 같이 변경합니다.  
+1.  Change the content of the `.tt` file:  
   
-    ```c#  
+    ```cs  
     <#@ template hostspecific="false" language="C#" #>  
     <#@ output extension=".txt" #>  
     <#int top = 10;  
@@ -104,7 +121,7 @@ caps.handback.revision: 38
     <# } #>  
     ```  
   
-    ```vb#  
+    ```vb  
     <#@ template hostspecific="false" language="VB" #>  
     <#@ output extension=".txt" #>  
     <#Dim top As Integer = 10  
@@ -118,55 +135,55 @@ caps.handback.revision: 38
   
     ```  
   
-2.  .tt 파일을 저장하고 생성된 .txt 파일을 다시 검사합니다.  숫자 0에서 10까지를 각각 제곱한 값이 표시됩니다.  
+2.  Save the .tt file, and inspect the generated .txt file again. It lists the squares of the numbers from 0 to 10.  
   
- 위의 코드에서 문은 `<#...#>` 내에 포함되어 있으며 단일 식은 `<#=...#>` 내에 포함되어 있습니다.  자세한 내용은 [T4 텍스트 템플릿 쓰기](../modeling/writing-a-t4-text-template.md)을 참조하십시오.  
+ Notice that statements are enclosed within `<#...#>`, and single expressions within `<#=...#>`. For more information, see [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md).  
   
- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서 생성 코드를 작성하는 경우 `template` 지시문은 `language="VB"`를 포함해야 합니다.  기본값은 `"C#"`입니다.  
+ If you write the generating code in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], the `template` directive should contain `language="VB"`. `"C#"` is the default.  
   
-## 디자인 타임 T4 텍스트 템플릿 디버그  
- 텍스트 템플릿을 디버그하려면  
+## <a name="debugging-a-design-time-t4-text-template"></a>Debugging a Design-Time T4 Text Template  
+ To debug a text template:  
   
--   먼저 `debug="true"`를 `template` 지시문에 삽입합니다.  예:  
+-   Insert `debug="true"` into the `template` directive. For example:  
   
      `<#@ template debug="true" hostspecific="false" language="C#" #>`  
   
--   일반 코드에서와 같은 방식으로 템플릿에 중단점을 설정합니다.  
+-   Set breakpoints in the template, in the same way that you would for ordinary code.  
   
--   솔루션 탐색기의 텍스트 템플릿 파일 바로 가기 메뉴에서 **T4 템플릿 디버그**를 선택합니다.  
+-   Choose **Debug T4 Template** from the shortcut menu of the text template file in Solution Explorer.  
   
- 템플릿이 실행된 후 중단점에서 중지됩니다.  일반적인 방식으로 변수를 점검하고 코드를 단계별로 실행할 수 있습니다.  
+ The template will run and stop at the breakpoints. You can examine variables and step through the code in the usual way.  
   
 > [!TIP]
->  `debug="true"`를 사용하는 경우 생성된 코드에 줄 번호 매기기 지시문이 추가로 삽입되므로 해당 코드가 텍스트 템플릿에 보다 정확하게 매핑됩니다.  이 지시문이 없으면 중단점으로 인해 실행이 잘못된 상태로 중지될 수 있습니다.  
+>  `debug="true"` makes the generated code map more accurately to the text template, by inserting more line numbering directives into the generated code. If you leave it out, breakpoints might stop the run in the wrong state.  
 >   
->  디버그를 수행하지 않을 때도 템플릿 지시문에 절을 그대로 유지해도 됩니다.  이렇게 해도 성능은 아주 약간 낮아질 뿐입니다.  
+>  But you can leave the clause in the template directive even when you are not debugging. This causes only a very small drop in performance.  
   
-## 솔루션의 코드 또는 리소스 생성  
- 모델에 따라 달라지는 프로그램 파일을 생성할 수 있습니다.  모델은 데이터베이스, 구성 파일, UML 모델, DSL 모델, 기타 소스 등의 입력입니다.  일반적으로는 같은 모델에서 여러 프로그램 파일을 생성합니다.  이렇게 하려면 생성된 각 프로그램 파일에 대해 템플릿 파일을 만들고 모든 템플릿이 같은 모델을 읽도록 합니다.  
+## <a name="generating-code-or-resources-for-your-solution"></a>Generating Code or Resources for Your Solution  
+ You can generate program files that vary, depending on a model. A model is an input such as a database, configuration file, UML model, DSL model, or other source. You usually generate several program files are from the same model. To achieve this, you create a template file for each generated program file, and have all the templates read the same model.  
   
-#### 프로그램 코드 또는 리소스를 생성하려면  
+#### <a name="to-generate-program-code-or-resources"></a>To generate program code or resources  
   
-1.  .cs, .vb, .resx, .xml 등 적절한 형식의 파일을 생성하도록 출력 지시문을 변경합니다.  
+1.  Change the output directive to generate a file of the appropriate type, such as .cs, .vb, .resx, or .xml.  
   
-2.  필요한 솔루션 코드를 생성하는 코드를 삽입합니다.  예를 들어 클래스에서 3개 정수 필드 선언을 생성하려는 경우 다음 코드를 삽입합니다.  
+2.  Insert code that will generate the solution code that you require. For example, if you want to generate three integer field declarations in a class:  
   
-    ```c#  
+    ```cs  
   
-                      <#@ template debug="false" hostspecific="false" language="C#" #>  
+              <#@ template debug="false" hostspecific="false" language="C#" #>  
     <#@ output extension=".cs" #>  
     <# var properties = new string [] {"P1", "P2", "P3"}; #>  
     // This is generated code:  
     class MyGeneratedClass {  
     <# // This code runs in the text template:  
-      foreach (string propertyName in properties)   { #>  
+      foreach (string propertyName in properties)  { #>  
       // Generated code:  
       private int <#= propertyName #> = 0;  
     <# } #>  
     }  
     ```  
   
-    ```vb#  
+    ```vb  
     <#@ template debug="false" hostspecific="false" language="VB" #>  
     <#@ output extension=".cs" #>  
     <# Dim properties = {"P1", "P2", "P3"} #>  
@@ -182,7 +199,7 @@ caps.handback.revision: 38
   
     ```  
   
-3.  파일을 저장하고 다음 코드를 포함하는 생성된 파일을 검사합니다.  
+3.  Save the file and inspect the generated file, which now contains the following code:  
   
     ```  
     class MyGeneratedClass {  
@@ -192,26 +209,26 @@ caps.handback.revision: 38
     }  
     ```  
   
-### 생성 코드와 생성된 텍스트  
- 프로그램 코드를 생성할 때는 템플릿에서 실행되는 생성 코드와 그 결과로 생성된, 솔루션의 일부분이 되는 코드를 혼동하지 않아야 합니다.  이 두 코드의 언어는 달라도 됩니다.  
+### <a name="generating-code-and-generated-text"></a>Generating Code and Generated Text  
+ When you generate program code, it is most important to avoid confusing the generating code that executes in your template, and the resulting generated code that becomes part of your solution. The two languages do not have to be the same.  
   
- 위의 예에는 두 가지 버전이 있습니다.  그 중 한 버전에서는 생성 코드가 C\#이고  다른 버전에서는 생성 코드가 Visual Basic입니다.  그러나 두 언어에서 생성된 텍스트는 모두 C\# 클래스로 동일합니다.  
+ The previous example has two versions. In one version, the generating code is in C#. In the other version, the generating code is Visual Basic. But the text generated by both of them is the same, and it is a C# class.  
   
- 마찬가지로 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 템플릿을 사용하여 모든 언어에서 코드를 생성할 수도 있습니다.  생성된 텍스트는 특정 언어가 아니어도 되며 프로그램 코드일 필요도 없습니다.  
+ In the same way, you could use a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] template to generate code in any language. The generated text does not have to be in any particular language, and it does not have to be program code.  
   
-### 텍스트 템플릿 구조 지정  
- 실제 프로그래밍에서는 대개 템플릿 코드를 다음의 두 부분으로 구분합니다.  
+### <a name="structuring-text-templates"></a>Structuring text templates  
+ As a matter of good practice, we tend to separate the template code into two parts:  
   
--   변수에서 값은 설정하지만 텍스트 블록은 포함하지 않는 구성\(데이터 수집\) 부분.  위의 예에서 이 부분은 `properties` 초기화입니다.  
+-   A configuration or data-gathering part, which sets values in variables, but does not contain text blocks. In the previous example, this part is the initialization of `properties`.  
   
-     이 부분은 저장소 내 모델을 생성하며 일반적으로 모델 파일을 읽으므로 "모델" 섹션이라고 하는 경우도 있습니다.  
+     This is sometimes called the "model" section, because it constructs an in-store model, and typically reads a model file.  
   
--   변수의 값을 사용하는 텍스트 생성 부분. 위의 예에서는 `foreach(...){...}`에 해당합니다.  
+-   The text-generation part (`foreach(...){...}` in the example), which uses the values of the variables.  
   
- 코드를 반드시 이와 같이 분리해야 하는 것은 아니지만 이 스타일을 사용하면 텍스트를 포함하는 부분을 보다 단순하게 작성하여 템플릿을 더 쉽게 읽을 수 있습니다.  
+ This is not a necessary separation, but it is a style which makes it easier to read the template by reducing the complexity of the part that includes text.  
   
-## 파일 또는 기타 소스 읽기  
- 모델 파일이나 데이터베이스에 액세스하기 위해 템플릿 코드는 System.XML 등의 어셈블리를 사용할 수 있습니다.  이러한 어셈블리에 액세스하려면 다음과 같은 지시문을 삽입해야 합니다.  
+## <a name="reading-files-or-other-sources"></a>Reading files or other sources  
+ To access a model file or database, your template code can use assemblies such as System.XML. To gain access to these assemblies, you must insert directives such as these:  
   
 ```  
 <#@ assembly name="System.Xml.dll" #>  
@@ -219,36 +236,36 @@ caps.handback.revision: 38
 <#@ import namespace="System.IO" #>  
 ```  
   
- `assembly` 지시문은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트의 참조 섹션과 같은 방식으로 템플릿 코드에서 지정한 어셈블리를 사용할 수 있도록 합니다.  System.dll은 자동으로 참조되므로 해당 참조를 포함할 필요는 없습니다.  `import` 지시문을 사용하면 일반 프로그램 파일의 `using` 지시문과 같은 방식으로 정규화된 이름을 사용하지 않고도 형식을 사용할 수 있습니다.  
+ The `assembly` directive makes the specified assembly available to your template code, in the same manner as the References section of a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project. You do not need to include a reference to System.dll, which is referenced automatically. The `import` directive lets you use types without using their fully qualified names, in the same manner as the `using` directive in an ordinary program file.  
   
- 예를 들어 **System.IO**를 가져온 후 다음 코드를 작성할 수 있습니다.  
+ For example, after importing **System.IO**, you could write:  
   
-```c#  
+```cs  
   
-          <# var properties = File.ReadLines("C:\\propertyList.txt");#>  
+      <# var properties = File.ReadLines("C:\\propertyList.txt");#>  
 ...  
 <# foreach (string propertyName in properties) { #>  
 ...  
 ```  
   
-```vb#  
+```vb  
 <# For Each propertyName As String In   
              File.ReadLines("C:\\propertyList.txt")  
 #>  
   
 ```  
   
-### 상대 경로 이름을 사용하여 파일 열기  
- 텍스트 템플릿을 기준으로 하는 위치에서 파일을 로드하려는 경우 `this.Host.ResolvePath()`를 사용하면 됩니다.  this.Host를 사용하려면 `hostspecific="true"`에서 `template`를 설정해야 합니다.  
+### <a name="opening-a-file-with-a-relative-pathname"></a>Opening a file with a relative pathname  
+ To load a file from a location relative to the text template, you can use `this.Host.ResolvePath()`. To use this.Host, you must set `hostspecific="true"` in the `template`:  
   
 ```  
 <#@ template debug="false" hostspecific="true" language="C#" #>  
   
 ```  
   
- 그런 후에 다음과 같은 코드를 작성할 수 있습니다.  
+ Then you can write, for example:  
   
-```c#  
+```cs  
 <# string fileName = this.Host.ResolvePath("filename.txt");  
   string [] properties = File.ReadLines(filename);  
 #>  
@@ -258,7 +275,7 @@ caps.handback.revision: 38
   
 ```  
   
-```vb#  
+```vb  
 <# Dim fileName = Me.Host.ResolvePath("propertyList.txt")  
    Dim properties = File.ReadLines(filename)  
 #>  
@@ -269,12 +286,12 @@ caps.handback.revision: 38
   
 ```  
   
- 현재 템플릿 파일의 이름을 식별하는 `this.Host.TemplateFile`을 사용할 수도 있습니다.  
+ You can also use `this.Host.TemplateFile`, which identifies the name of the current template file.  
   
- 여기서 `this.Host`는 VB에서는 `Me.Host`이며, 해당 형식은 `Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost`와 같습니다.  
+ The type of `this.Host` (in VB, `Me.Host`) is `Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost`.  
   
-### [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 데이터 가져오기  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 제공되는 서비스를 사용하려면 `hostSpecific` 특성을 설정하고 `EnvDTE` 어셈블리를 로드합니다.  그런 다음 IServiceProvider.GetCOMService\(\)를 사용하여 DTE 및 기타 서비스에 액세스할 수 있습니다.  예를 들면 다음과 같습니다.  
+### <a name="getting-data-from-includevsprvscode-qualityincludesvsprvsmdmd"></a>Getting data from [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
+ To use services provided in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], set the `hostSpecific` attribute and load the `EnvDTE` assembly. You can then use IServiceProvider.GetCOMService() to access DTE and other services. For example:  
   
 ```scr  
 <#@ template hostspecific="true" language="C#" #>  
@@ -290,14 +307,18 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 ```  
   
 > [!TIP]
->  텍스트 템플릿은 자체 앱 도메인에서 실행되며 마샬링을 통해 서비스에 액세스합니다.  이 경우에는 GetCOMService\(\)가 GetService\(\)보다 안정적입니다.  
+>  A text template runs in its own app domain, and services are accessed by marshaling. In this circumstance, GetCOMService() is more reliable than GetService().  
   
-##  <a name="Regenerating"></a> 자동으로 코드 다시 생성  
- 일반적으로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션의 여러 파일은 입력 모델 하나를 사용하여 생성됩니다.  각 파일은 자체 템플릿에서 생성되지만 모든 템플릿은 같은 모델을 참조합니다.  
+##  <a name="Regenerating"></a> Regenerating the code automatically  
+ Typically, several files in a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution are generated with one input model. Each file is generated from its own template, but the templates all refer to the same model.  
   
- 소스 모델이 변경되면 솔루션에서 모든 템플릿을 다시 실행해야 합니다.  이 작업을 수동으로 수행하려면 **빌드** 메뉴에서 **모든 템플릿 변환**을 선택합니다.  
+ If the source model changes, you should re-run all the templates in the solution. To do this manually, choose **Transform All Templates** on the **Build** menu.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK를 설치한 경우 빌드를 수행할 때마다 모든 템플릿이 자동으로 변환되도록 지정할 수 있습니다.  이렇게 하려면 프로젝트 파일\(.csproj 또는 .vbproj\)을 텍스트 편집기에서 편집하여 파일 끝부분의 다른 `<import>` 문 뒤에 다음 줄을 추가합니다.  
+ If you have installed [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK, you can have all the templates transformed automatically whenever you perform a build. To do this, edit your project file (.csproj or .vbproj) in a text editor and add the following lines near the end of the file, after any other `<import>` statements:  
+
+
+[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
+
   
 ```  
 <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v11.0\TextTemplating\Microsoft.TextTemplating.targets" />  
@@ -307,65 +328,66 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 </PropertyGroup>  
 ```  
   
- 자세한 내용은 [빌드 프로세스의 코드 생성](../modeling/code-generation-in-a-build-process.md)을 참조하세요.  
+ For more information, see [Code Generation in a Build Process](../modeling/code-generation-in-a-build-process.md).  
   
-## 오류 보고  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 오류 창에 오류 및 경고 메시지를 표시하려는 경우 다음 메서드를 사용할 수 있습니다.  
+## <a name="error-reporting"></a>Error reporting  
+ To place error and warning messages in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] error window, you can use these methods:  
   
 ```  
 Error("An error message");  
 Warning("A warning message");  
 ```  
   
-##  <a name="Converting"></a> 기존 파일을 템플릿으로 변환  
- 템플릿의 유용한 특징 중 하나는 삽입된 일부 프로그램 코드와 함께, 템플릿에서 생성한 파일과 매우 비슷하다는 점입니다.  이로 인해 템플릿을 만드는 유용한 방법이 제공됩니다.  먼저 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 파일과 같은 일반 파일을 프로토타입으로 만든 다음 결과 파일을 각기 다르게 만드는 생성 코드를 점진적으로 추가합니다.  
+##  <a name="Converting"></a> Converting an existing file to a template  
+ A useful feature of templates is that they look very much like the files that they generate, together with some inserted program code. This suggests a useful method of creating a template. First create an ordinary file as a prototype, such as a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] file, and then gradually introduce generation code that varies the resulting file.  
   
-#### 기존 파일을 디자인 타임 템플릿으로 변환하려면  
+#### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>To convert an existing file to a design-time template  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 파일에 `.cs`, `.vb`, `.resx` 파일 등 생성하려는 파일 형식을 추가합니다.  
+1.  To your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project, add a file of the type that you want to generate, such as a `.cs`, `.vb`, or `.resx` file.  
   
-2.  새 파일을 테스트하여 작동하는지 확인합니다.  
+2.  Test the new file to make sure that it works.  
   
-3.  솔루션 탐색기에서 파일 이름 확장명을 **.tt**로 변경합니다.  
+3.  In Solution Explorer, change the file name extension to **.tt**.  
   
-4.  **.tt** 파일의 다음 속성을 확인합니다.  
+4.  Verify the following properties of the **.tt** file:  
   
     |||  
     |-|-|  
-    |**사용자 지정 도구 \=**|**TextTemplatingFileGenerator**|  
-    |**빌드 작업 \=**|**없음**|  
+    |**Custom Tool =**|**TextTemplatingFileGenerator**|  
+    |**Build Action =**|**None**|  
   
-5.  파일의 시작 부분에 다음 줄을 삽입합니다.  
+5.  Insert the following lines at the beginning of the file:  
   
     ```  
     <#@ template debug="false" hostspecific="false" language="C#" #>  
     <#@ output extension=".cs" #>  
     ```  
   
-     [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서 템플릿의 생성 코드를 작성하려면 `language` 특성을 `"VB"` 대신 `"C#"`로 설정합니다.  
+     If you want to write the generating code of your template in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], set the `language` attribute to `"VB"` instead of `"C#"`.  
   
-     `extension` 특성을 `.cs`, `.resx`, `.xml` 등 생성하려는 파일 형식의 파일 이름 확장명으로 설정합니다.  
+     Set the `extension` attribute to the file name extension for the type of file that you want to generate, for example `.cs`, `.resx`, or `.xml`.  
   
-6.  파일을 저장합니다.  
+6.  Save the file.  
   
-     지정한 확장명으로 보조 파일이 작성됩니다.  이 파일은 해당 파일 형식에 적절한 속성을 포함합니다.  예를 들어 .cs 파일의 **빌드 작업** 속성은 **컴파일**입니다.  
+     A subsidiary file is created, with the specified extension. Its properties are correct for the type of file. For example, the **Build Action** property of a .cs file would be **Compile**.  
   
-     생성된 파일의 내용이 원래 파일과 같은지 확인합니다.  
+     Verify that the generated file contains the same content as the original file.  
   
-7.  달라지도록 하려는 파일 부분을 확인합니다.  특정 상황에서만 표시되는 부분이나 반복되는 부분, 특정 값이 달라지는 부분을 예로 들 수 있습니다.  생성 코드를 삽입하고  파일을 저장한 다음 보조 파일이 올바르게 생성되는지 확인합니다.  이 단계를 반복합니다.  
+7.  Identify a part of the file that you want to vary. For example, a part that appears only under certain conditions, or a part that is repeated, or where the specific values vary. Insert generating code. Save the file and verify that the subsidiary file is correctly generated. Repeat this step.  
   
-## 코드 생성 지침  
- [T4 텍스트 템플릿 작성 지침](../modeling/guidelines-for-writing-t4-text-templates.md)을 참조하세요.  
+## <a name="guidelines-for-code-generation"></a>Guidelines for Code Generation  
+ Please see [Guidelines for Writing T4 Text Templates](../modeling/guidelines-for-writing-t4-text-templates.md).  
   
-## 다음 단계  
+## <a name="next-steps"></a>Next steps  
   
-|다음 단계|항목|  
-|-----------|--------|  
-|보조 함수, 포함된 파일 및 외부 데이터를 사용하는 코드로 고급 텍스트 템플릿을 작성하고 디버그합니다.|[T4 텍스트 템플릿 쓰기](../modeling/writing-a-t4-text-template.md)|  
-|런타임에 템플릿에서 문서를 생성합니다.|[T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성](../modeling/run-time-text-generation-with-t4-text-templates.md)|  
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 외부에서 텍스트 생성을 실행합니다.|[TextTransform 유틸리티 사용하여 파일 생성](../modeling/generating-files-with-the-texttransform-utility.md)|  
-|DSL\(Domain\-Specific Language\) 형식으로 데이터를 변환합니다.|[도메인별 언어에서 코드 생성](../modeling/generating-code-from-a-domain-specific-language.md)|  
-|고유한 데이터 소스를 변환하는 지시문 프로세서를 작성합니다.|[T4 텍스트 변환 사용자 지정](../modeling/customizing-t4-text-transformation.md)|  
+|Next step|Topic|  
+|---------------|-----------|  
+|Write and debug a more advanced text template, with code that uses auxiliary functions, included files, and external data.|[Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md)|  
+|Generate documents from templates at run time.|[Run-Time Text Generation with T4 Text Templates](../modeling/run-time-text-generation-with-t4-text-templates.md)|  
+|Run text generation outside [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Generating Files with the TextTransform Utility](../modeling/generating-files-with-the-texttransform-utility.md)|  
+|Transform your data in the form of a domain-specific language.|[Generating Code from a Domain-Specific Language](../modeling/generating-code-from-a-domain-specific-language.md)|  
+|Write directive processors to transform your own data sources.|[Customizing T4 Text Transformation](../modeling/customizing-t4-text-transformation.md)|  
   
-## 참고 항목  
- [T4 텍스트 템플릿 작성 지침](../modeling/guidelines-for-writing-t4-text-templates.md)
+## <a name="see-also"></a>See Also  
+ [Guidelines for Writing T4 Text Templates](../modeling/guidelines-for-writing-t4-text-templates.md)
+

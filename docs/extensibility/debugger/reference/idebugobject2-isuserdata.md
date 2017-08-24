@@ -1,51 +1,68 @@
 ---
-title: "IDebugObject2::IsUserData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject2::IsUserData"
-helpviewer_keywords: 
-  - "IDebugObject2::IsUserData 메서드"
+title: IDebugObject2::IsUserData | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject2::IsUserData
+helpviewer_keywords:
+- IDebugObject2::IsUserData method
 ms.assetid: 6ffa0d0e-f742-496d-acc7-db74c248bc45
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugObject2::IsUserData
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: cda2afbf35a0fc335f657265b9bed5c4272107e9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-사용자 데이터 개체를 나타내는지 여부를 확인 합니다.  
+---
+# <a name="idebugobject2isuserdata"></a>IDebugObject2::IsUserData
+Determines whether the object represents user data.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT IsUserData(  
-   BOOL* pfUser  
+HRESULT IsUserData(  
+   BOOL* pfUser  
 );  
 ```  
   
-```c#  
-int IsUserData(  
-   out int pfUser  
+```cs  
+int IsUserData(  
+   out int pfUser  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pfUser`  
- \[out\] 0이 아닌 반환 \(`TRUE`\) 사용자 데이터 개체를 나타내는 경우 0 \(`FALSE`\) 표시 되지 않는 경우.  
+ [out] Returns nonzero (`TRUE`) if the object represents user data; zero (`FALSE`) if it does not.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 사용자 데이터 JustMyCode \(사용자 코드와 스택 추적에 표시 되므로 모듈 표시 사용자 구성 가능 옵션\)로 지정 된 모듈의 일부인 개체입니다.  
+## <a name="remarks"></a>Remarks  
+ User data is any object that is part of a module designated as JustMyCode (a user-configurable option that marks a module as user code and therefore visible in a stack trace).  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

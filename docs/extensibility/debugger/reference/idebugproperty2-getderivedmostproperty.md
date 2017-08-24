@@ -1,51 +1,68 @@
 ---
-title: "IDebugProperty2::GetDerivedMostProperty | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty2::GetDerivedMostProperty"
-helpviewer_keywords: 
-  - "IDebugProperty2::GetDerivedMostProperty"
+title: IDebugProperty2::GetDerivedMostProperty | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProperty2::GetDerivedMostProperty
+helpviewer_keywords:
+- IDebugProperty2::GetDerivedMostProperty
 ms.assetid: cc86b461-62d1-4340-8209-c65037fd8b02
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugProperty2::GetDerivedMostProperty
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: a08f93904ba7c95fe68abbbe363a6254bbe2eb2c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-파생 된 대부분 속성을의 속성을 가져옵니다.  
+---
+# <a name="idebugproperty2getderivedmostproperty"></a>IDebugProperty2::GetDerivedMostProperty
+Gets the derived-most property of a property.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetDerivedMostProperty (   
-   IDebugProperty2** ppDerivedMost  
+HRESULT GetDerivedMostProperty (   
+   IDebugProperty2** ppDerivedMost  
 );  
 ```  
   
-```c#  
-int GetDerivedMostProperty (   
-   out IDebugProperty2 ppDerivedMost  
+```cs  
+int GetDerivedMostProperty (   
+   out IDebugProperty2 ppDerivedMost  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppDerivedMost`  
- \[out\] 반환 된 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 에서 대부분 파생 된 속성을 나타내는 개체입니다.  
+ [out] Returns an [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object that represents the derived-most property.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  반환 `S_GETDERIVEDMOST_NO_DERIVED_MOST` 없는 경우를 검색 하는 대부분 파생 된 속성입니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns error code. Returns `S_GETDERIVEDMOST_NO_DERIVED_MOST` if there is no derived-most property to retrieve.  
   
-## 설명  
- 예를 들어,이 속성을 구현 하는 개체에 설명 합니다. `ClassRoot` 하지만 실제로의 인스턴스화 하는 `ClassDerived` 에서 파생 됩니다 `ClassRoot`,이 메서드를 반환 합니다는 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 개체를 설명 하는 `ClassDerived` 개체.  
+## <a name="remarks"></a>Remarks  
+ For example, if this property describes an object that implements `ClassRoot` but which is actually an instantiation of `ClassDerived` that is derived from `ClassRoot`, then this method returns an [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object describing the `ClassDerived` object.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

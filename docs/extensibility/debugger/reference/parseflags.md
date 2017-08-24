@@ -1,68 +1,85 @@
 ---
-title: "PARSEFLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PARSEFLAGS"
-helpviewer_keywords: 
-  - "PARSEFLAGS 열거형"
+title: PARSEFLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PARSEFLAGS
+helpviewer_keywords:
+- PARSEFLAGS enumeration
 ms.assetid: 47943f0a-54cb-4493-a62e-5dba97bd4c35
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# PARSEFLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 29c065b446e5df3b10fb9a549854a737f50fe71a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-식을 구문 분석 하는 방법을 지정 합니다.  
+---
+# <a name="parseflags"></a>PARSEFLAGS
+Specifies how to parse an expression.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_PARSEFLAGS {   
-   PARSE_EXPRESSION            = 0x0001,  
-   PARSE_FUNCTION_AS_ADDRESS   = 0x0002,  
-   PARSE_DESIGN_TIME_EXPR_EVAL = 0x1000  
+enum enum_PARSEFLAGS {   
+   PARSE_EXPRESSION            = 0x0001,  
+   PARSE_FUNCTION_AS_ADDRESS   = 0x0002,  
+   PARSE_DESIGN_TIME_EXPR_EVAL = 0x1000  
 };  
 typedef DWORD PARSEFLAGS;  
 ```  
   
-```c#  
-public enum enum_PARSEFLAGS {   
-   PARSE_EXPRESSION            = 0x0001,  
-   PARSE_FUNCTION_AS_ADDRESS   = 0x0002,  
-   PARSE_DESIGN_TIME_EXPR_EVAL = 0x1000  
+```cs  
+public enum enum_PARSEFLAGS {   
+   PARSE_EXPRESSION            = 0x0001,  
+   PARSE_FUNCTION_AS_ADDRESS   = 0x0002,  
+   PARSE_DESIGN_TIME_EXPR_EVAL = 0x1000  
 };  
 ```  
   
-## Members  
- PARSE\_EXPRESSION  
- 식 문이 없음을 나타냅니다.  
+## <a name="members"></a>Members  
+ PARSE_EXPRESSION  
+ Indicates that the expression is not a statement.  
   
- PARSE\_FUNCTION\_AS\_ADDRESS  
- 식 수 구문 분석 및 나중에 평가 하는 주소입니다.  
+ PARSE_FUNCTION_AS_ADDRESS  
+ Indicates that the expression is to be parsed (and later evaluated) as an address.  
   
- PARSE\_DESIGN\_TIME\_EXPR\_EVAL  
- 디자인 타임에는 식 구문 분석 되는 나타냅니다 \(즉, 디자이너가 열려 있는 경우\).  
+ PARSE_DESIGN_TIME_EXPR_EVAL  
+ Indicates that the expression is being parsed during design time (that is, when a designer is open).  
   
-## 설명  
- 매개 변수로 전달 되는 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 및 [구문 분석](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) 방법.  
+## <a name="remarks"></a>Remarks  
+ Passed as a parameter to the [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) and [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) methods.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)   
- [구문 분석](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)
+ [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)

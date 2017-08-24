@@ -1,54 +1,71 @@
 ---
-title: "IDebugThread2::Suspend | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugThread2::Suspend"
-helpviewer_keywords: 
-  - "IDebugThread2::Suspend"
+title: IDebugThread2::Suspend | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugThread2::Suspend
+helpviewer_keywords:
+- IDebugThread2::Suspend
 ms.assetid: 1e20be85-aa12-48de-bb83-0bf0976e99ae
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugThread2::Suspend
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: fa16bfc901bd4d6a7a36467886cbfae046a5f9b6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-스레드를 일시 중단합니다.  
+---
+# <a name="idebugthread2suspend"></a>IDebugThread2::Suspend
+Suspends a thread.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT Suspend (   
-   DWORD *pdwSuspendCount  
+HRESULT Suspend (   
+   DWORD *pdwSuspendCount  
 );  
 ```  
   
-```c#  
-HRESULT Suspend (   
-   out uint pdwSuspendCount  
+```cs  
+HRESULT Suspend (   
+   out uint pdwSuspendCount  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pdwSuspendCount`  
- \[out\] 일시 중단 작업 후 일시 중단 계수를 반환합니다.  
+ [out] Returns the suspend count after the suspend operation.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드를 호출할 때마다 일시 중단 계수가 0 위에 증가합니다.  이 일시 중단 횟수가 표시 되는  **스레드에서** 디버그 창.  
+## <a name="remarks"></a>Remarks  
+ Each call to this method increments the suspend count above 0. This suspend count is displayed in the **Threads** debug window.  
   
- 각 호출에 대해이 메서드를 수 있어야 나중에 호출 하는 [다시 시작](../../../extensibility/debugger/reference/idebugthread2-resume.md) 메서드가 있습니다.  
+ For each call to this method, there must be a later call to the [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [다시 시작](../../../extensibility/debugger/reference/idebugthread2-resume.md)
+ [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)

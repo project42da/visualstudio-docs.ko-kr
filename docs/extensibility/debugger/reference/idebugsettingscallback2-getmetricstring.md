@@ -1,62 +1,79 @@
 ---
-title: "IDebugSettingsCallback2::GetMetricString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugSettingsCallback2::GetMetricString"
-  - "GetMetricString"
+title: IDebugSettingsCallback2::GetMetricString | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugSettingsCallback2::GetMetricString
+- GetMetricString
 ms.assetid: ecc875a2-8ac6-444c-a839-5191a780fd6b
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugSettingsCallback2::GetMetricString
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d37082925fdef5bd52af91acecec1ce8d58a0b2d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-지정 된 이름 메트릭 값 문자열을 검색 합니다.  
+---
+# <a name="idebugsettingscallback2getmetricstring"></a>IDebugSettingsCallback2::GetMetricString
+Retrieves the value string of the metric given its name.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetMetricString(  
-    LPCWSTR pszType,  
-    REFGUID guidSection,  
-    LPCWSTR pszMetric,  
-    BSTR*   pbstrValue  
+    LPCWSTR pszType,  
+    REFGUID guidSection,  
+    LPCWSTR pszMetric,  
+    BSTR*   pbstrValue  
 );  
 ```  
   
-```c#  
+```cs  
 private int GetMetricString(  
-    string     pszType,  
-    ref Guid   guidSection,  
-    string     pszMetric,  
-    out string pbstrValue  
+    string     pszType,  
+    ref Guid   guidSection,  
+    string     pszMetric,  
+    out string pbstrValue  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pszType`  
- \[in\] 메트릭 형식입니다.  
+ [in] Type of the metric.  
   
  `guidSection`  
- \[in\] 섹션의 고유 식별자입니다.  
+ [in] Unique identifier of the section.  
   
  `pszMetric`  
- \[in\] 메트릭의 이름입니다.  
+ [in] Name of the metric.  
   
  `pbstrValue`  
- \[out\] 메트릭 값 문자열을 반환합니다.  
+ [out] Returns the value string of the metric.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

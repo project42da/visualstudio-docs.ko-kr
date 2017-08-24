@@ -1,82 +1,99 @@
 ---
-title: "DEBUG_CUSTOM_VIEWER | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DEBUG_CUSTOM_VIEWER"
-helpviewer_keywords: 
-  - "DEBUG_CUSTOM_VIEWER 구조"
+title: DEBUG_CUSTOM_VIEWER | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DEBUG_CUSTOM_VIEWER
+helpviewer_keywords:
+- DEBUG_CUSTOM_VIEWER structure
 ms.assetid: 8e0ef3f0-0107-48e8-a037-6e52b4c4ed9d
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# DEBUG_CUSTOM_VIEWER
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2f7c7da1681375c2176ee484bc89b0f397bf95d8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-사용자 지정 뷰어를 식별 하는 구조 또는 시각화를 입력 합니다.  
+---
+# <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
+A structure that identifies a custom viewer or type visualizer.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-typedef struct tagDEBUG_CUSTOM_VIEWER {  
-   DWORD dwID;  
-   BSTR  bstrMenuName;  
-   BSTR  bstrDescription;  
-   GUID  guidLang;  
-   GUID  guidVendor;  
-   BSTR  bstrMetric;  
-} DEBUG_CUSTOM_VIEWER;  
+typedef struct tagDEBUG_CUSTOM_VIEWER {  
+   DWORD dwID;  
+   BSTR  bstrMenuName;  
+   BSTR  bstrDescription;  
+   GUID  guidLang;  
+   GUID  guidVendor;  
+   BSTR  bstrMetric;  
+} DEBUG_CUSTOM_VIEWER;  
 ```  
   
-```c#  
-public struct DEBUG_CUSTOM_VIEWER {  
-   public uint   dwID;  
-   public string bstrMenuName;  
-   public string bstrDescription;  
-   public Guid   guidLang;  
-   public Guid   guidVendor;  
-   public string bstrMetric;  
+```cs  
+public struct DEBUG_CUSTOM_VIEWER {  
+   public uint   dwID;  
+   public string bstrMenuName;  
+   public string bstrDescription;  
+   public Guid   guidLang;  
+   public Guid   guidVendor;  
+   public string bstrMetric;  
 };  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
  dwID  
- 여러 보는 사람이 나 하나에 의해 구현 되는 시각화 도우미를 구별 하기 위해 ID `GUID`.  
+ An ID to differentiate multiple viewers or visualizers implemented by one `GUID`.  
   
  bstrMenuName  
- 드롭다운 메뉴에 표시 될 텍스트입니다.  
+ The text that will appear in the drop-down menu.  
   
  bstrDescription  
- 형식 시각화 도우미 \(null 값 사용 되지 않는 경우 이어야 합니다\) 또는 사용자 지정 뷰어 설명입니다.  
+ A description of the custom viewer or type visualizer (must be a null value if not used).  
   
  guidLang  
- 언어 제공 식 계산기입니다.  
+ Language of the providing expression evaluator.  
   
  guidVendor  
- 공급 업체 제공 식 계산기입니다.  
+ Vendor of the providing expression evaluator.  
   
  bstrMetric  
- 미터법을 사용자 지정 뷰어 또는 형식 시각화 도우미 `CLSID` 에 저장 됩니다.  
+ Metric under which the custom viewer or type visualizer `CLSID` is stored.  
   
-## 설명  
- 호출 하 여이 구조체의 목록이 반환 됩니다 있는 [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) 메서드 \(및 더 나아가 [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) 메서드\).  
+## <a name="remarks"></a>Remarks  
+ A list of this structure is returned by a call to the [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) method (and, by extension, the [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) method).  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)   
  [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)

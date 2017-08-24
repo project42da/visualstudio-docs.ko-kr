@@ -1,58 +1,75 @@
 ---
-title: "IDebugDocumentText2::GetSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentText2::GetSize"
-helpviewer_keywords: 
-  - "IDebugDocumentText2::GetSize"
+title: IDebugDocumentText2::GetSize | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentText2::GetSize
+helpviewer_keywords:
+- IDebugDocumentText2::GetSize
 ms.assetid: bf515a8f-dcee-4004-8f81-543d547ceaae
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDocumentText2::GetSize
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 640e10cff94d598e91e2627b574e010d6cc1fcf7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 위치는 문서에서 텍스트의 크기를 검색합니다.  
+---
+# <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
+Retrieves the size of the text at this position in the document.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetSize(   
-   ULONG* pcNumLines,  
-   ULONG* pcNumChars  
+HRESULT GetSize(   
+   ULONG* pcNumLines,  
+   ULONG* pcNumChars  
 );  
 ```  
   
-```c#  
-int GetSize(   
-   ref uint pcNumLines,  
-   ref uint pcNumChars  
+```cs  
+int GetSize(   
+   ref uint pcNumLines,  
+   ref uint pcNumChars  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pcNumLines`  
- \[out\] 텍스트의 줄 수를 반환합니다.  
+ [out] Returns the number of lines of text.  
   
  `pcNumChars`  
- \[out\] 텍스트의 문자 수를 반환합니다.  
+ [out] Returns the number of characters of text.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- \[C \+ \+에만\] 특정 값이 필요 하면 매개 변수에 대해 NULL을 전달 합니다.  
+## <a name="remarks"></a>Remarks  
+ [C++ only] If a particular value is not desired, pass a NULL for the parameter.  
   
- \[C\#만\] 매개 변수를 모두 지정 해야 합니다.  
+ [C# only] Both parameters must be specified.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)

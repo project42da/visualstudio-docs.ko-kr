@@ -1,57 +1,74 @@
 ---
-title: "IDebugPendingBreakpoint2::EnumErrorBreakpoints | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPendingBreakpoint2::EnumErrorBreakpoints"
-helpviewer_keywords: 
-  - "IDebugPendingBreakpoint2::EnumErrorBreakpoints 메서드"
-  - "EnumErrorBreakpoints 메서드"
+title: IDebugPendingBreakpoint2::EnumErrorBreakpoints | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPendingBreakpoint2::EnumErrorBreakpoints
+helpviewer_keywords:
+- IDebugPendingBreakpoint2::EnumErrorBreakpoints method
+- EnumErrorBreakpoints method
 ms.assetid: 2f9a9720-c1ac-4430-8f28-200d85360452
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugPendingBreakpoint2::EnumErrorBreakpoints
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 4e95bd729f356cfd3ed7c1ddc8c93851ea7ab53b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-이 보류 중단점에서 발생 하는 모든 오류 중단점의 목록을 가져옵니다.  
+---
+# <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
+Gets a list of all error breakpoints that resulted from this pending breakpoint.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT EnumErrorBreakpoints(   
-   BP_ERROR_TYPE                 bpErrorType,  
-   IEnumDebugErrorBreakpoints2** ppEnum  
+HRESULT EnumErrorBreakpoints(   
+   BP_ERROR_TYPE                 bpErrorType,  
+   IEnumDebugErrorBreakpoints2** ppEnum  
 );  
 ```  
   
-```c#  
-int EnumErrorBreakpoints(   
-   enum_BP_ERROR_TYPE              bpErrorType,  
-   out IEnumDebugErrorBreakpoints2 ppEnum  
+```cs  
+int EnumErrorBreakpoints(   
+   enum_BP_ERROR_TYPE              bpErrorType,  
+   out IEnumDebugErrorBreakpoints2 ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `bpErrorType`  
- \[in\] 값 조합이 [BP\_ERROR\_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) 열거형은 열거 오류 유형을 선택 합니다.  
+ [in] A combination of values from the [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) enumeration that selects the type of errors to enumerate.  
   
  `ppEnum`  
- \[out\] 반환 된 [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) 목록을 포함 하는 개체 [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) 개체입니다.  
+ [out] Returns an [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) object that contains a list of [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) objects.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_BP_DELETED` 중단점 삭제 된 경우입니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the breakpoint has been deleted.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CPendingBreakpoint` 를 노출 하는 개체는 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 인터페이스입니다.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CPendingBreakpoint` object that exposes the [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface.  
   
 ```cpp#  
 HRESULT CPendingBreakpoint::EnumErrorBreakpoints(  
@@ -125,8 +142,8 @@ HRESULT CPendingBreakpoint::EnumErrorBreakpoints(
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
- [BP\_ERROR\_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)   
+ [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)   
  [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)   
  [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)

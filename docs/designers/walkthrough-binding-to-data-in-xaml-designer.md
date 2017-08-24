@@ -1,38 +1,55 @@
 ---
-title: "연습: XAML 디자이너의 데이터 바인딩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.XamlDesigner.DataBinding"
+title: 'Walkthrough: Binding to data in XAML Designer | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.XamlDesigner.DataBinding
 ms.assetid: 1a99aeae-c3ef-407d-ba79-b8055489a43d
 caps.latest.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# 연습: XAML 디자이너의 데이터 바인딩
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 93ed626061d46059ef31c677aeb35858e19a5f45
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-XAML 디자이너에서 아트보드와 속성 창을 사용하여 데이터 바인딩 속성을 설정할 수 있습니다.  이 연습의 예제에서는 데이터를 컨트롤에 바인딩하는 방법을 보여줍니다.  특히 이 연습에서는 `ItemCount`라는 [DependencyProperty](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.aspx)가 포함된 간단한 쇼핑 카트 클래스를 만든 다음 [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 컨트롤의 **TextBlock** 속성에 `ItemCount` 속성을 바인딩하는 방법을 보여주고 줍니다.  
+---
+# <a name="walkthrough-binding-to-data-in-xaml-designer"></a>Walkthrough: Binding to data in XAML Designer
+In XAML Designer, you can set data binding properties by using the artboard and the Properties window. The example in this walkthrough shows how to bind data to a control. Specifically, the walkthrough shows how to create a simple shopping cart class that has a [DependencyProperty](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.aspx) named `ItemCount`, and then bind the `ItemCount` property to the **Text** property of a [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) control.  
   
-### 데이터 원본으로 사용할 클래스를 만들려면  
+### <a name="to-create-a-class-to-use-as-a-data-source"></a>To create a class to use as a data source  
   
-1.  **파일** 메뉴에서 **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
+1.  On the **File** menu, choose **New**, **Project**.  
   
-2.  **새 프로젝트** 대화 상자에서 **Visual C\#** 또는 **Visual Basic** 노드를 선택하고 **Windows 바탕 화면** 노드를 확장한 다음 **WPF 응용 프로그램** 템플릿을 선택합니다.  
+2.  In the **New Project** dialog box, choose either the **Visual C#** or **Visual Basic** node, expand the **Windows Desktop** node, and then choose the **WPF Application** template.  
   
-3.  BindingTest 프로젝트 이름을 지정한 다음 **확인** 단추를 선택합니다.  
+3.  Name the project **BindingTest**, and then choose the **OK** button.  
   
-4.  MainWindow.xaml.cs\(또는 MainWindow.xaml.vb\) 파일을 열고 다음 코드를 추가합니다.  C\#에서 `BindingTest` 네임스페이스에\(파일의 마지막 닫는 괄호 앞에\) 코드를 추가합니다.  Visual Basic에서, 새 클래스를 추가합니다.  
+4.  Open the MainWindow.xaml.cs (or MainWindow.xaml.vb) file and add the following code. In C#, add the code in the `BindingTest` namespace (before the final closing parenthesis in the file). In Visual Basic, just add the new class.  
   
-    ```c#  
+    ```cs  
     public class ShoppingCart : DependencyObject  
     {  
         public int ItemCount  
@@ -65,38 +82,38 @@ XAML 디자이너에서 아트보드와 속성 창을 사용하여 데이터 바
     End Class  
     ```  
   
-     이 코드는 [PropertyMetadata](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata.aspx) 개체를 사용하여 기본 항목 수로 0의 값을 설정합니다.  
+     This code sets a value of 0 as the default item count by using the [PropertyMetadata](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata.aspx) object.  
   
-5.  **파일** 메뉴에서 **빌드**, **솔루션 빌드**를 차례로 선택합니다.  
+5.  On the **File** menu, choose **Build**, **Build Solution**.  
   
-### ItemCount 속성을 TextBlock 컨트롤에 바인딩하려면  
+### <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>To bind the ItemCount property to a TextBlock control  
   
-1.  솔루션 탐색기에서 MainWindow.xaml의 바로 가기 메뉴를 연 다음 **디자이너 보기**를 선택합니다.  
+1.  In Solution Explorer, open the shortcut menu for MainWindow.xaml and choose **View Designer**.  
   
-2.  도구 상자에서  [그리드](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) 컨트롤을 선택하고 폼에 추가합니다.  
+2.  In the Toolbox, choose a [Grid](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) control and add it to the form.  
   
-3.  `Grid`를 선택하고, 속성 창에서 **DataContext** 속성 옆에 있는 **새로 만들기** 단추를 선택합니다.  
+3.  With the `Grid` selected, in the Properties window, choose the **New** button next to the **DataContext** property.  
   
-4.  **개체 선택** 대화 상자에서, **모든 어셈블리 표시** 확인란을 선택 취소하고, **BindingTest** 네임스페이스에서 **ShoppingCart**를 선택한 다음 **확인** 단추를 선택합니다.  
+4.  In the **Select Object** dialog box, make sure that **Show all assemblies** checkbox is cleared, choose **ShoppingCart** under the **BindingTest** namespace, and then choose the **OK** button.  
   
-     다음 그림에서는 **ShoppingCart**가 선택된 **개체 선택** 대화 상자를 보여 줍니다.  
+     The following illustration shows the **Select Object** dialog box with **ShoppingCart** selected.  
   
-     ![개체 선택 대화 상자](../designers/media/blendselectobject.PNG "BlendSelectObject")  
+     ![The Select Object dialog box](../designers/media/blendselectobject.PNG "BlendSelectObject")  
   
-5.  **도구 상자**에서, `TextBlock` 컨트롤을 선택하여 폼에 추가합니다.  
+5.  In the **Toolbox**, choose a `TextBlock` control to add it to the form.  
   
-6.  `TextBlock` 컨트롤을 선택하고, 속성 창에서 **Text** 속성의 오른쪽에 속성 표식을 선택한 다음 **데이터 바인딩 만들기**를 선택합니다.  \(속성 표식은 작은 상자처럼 보입니다.\)  
+6.  With the `TextBlock` control selected, in the Properties window, choose the property marker to the right of the **Text** property, and then choose **Create Data Binding**. (The property marker looks like a small box.)  
   
-7.  데이터 바인딩 만들기 대화 상자의 **경로** 상자에서 **ItemCount: \(int32\)** 속성을 선택한 다음 **확인** 단추를 선택합니다.  
+7.  In the Create Data Binding dialog box, in the **Path** box, choose the **ItemCount : (int32)** property and then choose the **OK** button.  
   
-     다음 그림에서는 **ItemCount** 속성이 선택된 **데이터 바인딩 만들기** 대화 상자를 보여 줍니다.  
+     The following illustration shows the **Create Data Binding** dialog box with the **ItemCount** property selected.  
   
-     ![데이터 바인딩 만들기 대화 상자](../designers/media/xaml_create_data_binding.png "xaml\_create\_data\_binding")  
+     ![Create Data Binding dialog box](../designers/media/xaml_create_data_binding.png "xaml_create_data_binding")  
   
-8.  F5 키를 눌러 앱을 실행합니다.  
+8.  Press F5 to run the app.  
   
-     `TextBlock` 컨트롤은 0의 기본값을 텍스트로 표시해야 합니다.  
+     The `TextBlock` control should show the default value of 0 as text.  
   
-## 참고 항목  
- [XAML 디자이너를 사용하여 UI 만들기](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)   
- [NIB: Add Value Converter dialog box](http://msdn.microsoft.com/ko-kr/c5f3d110-a541-4b55-8bca-928f77778af8)
+## <a name="see-also"></a>See Also  
+ [Creating a UI by using XAML Designer](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)   
+ [NIB: Add Value Converter dialog box](http://msdn.microsoft.com/en-us/c5f3d110-a541-4b55-8bca-928f77778af8)

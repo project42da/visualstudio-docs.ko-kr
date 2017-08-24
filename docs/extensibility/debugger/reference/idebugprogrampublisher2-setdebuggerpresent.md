@@ -1,52 +1,69 @@
 ---
-title: "IDebugProgramPublisher2::SetDebuggerPresent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramPublisher2::SetDebuggerPresent"
-helpviewer_keywords: 
-  - "IDebugProgramPublisher2::SetDebuggerPresent"
+title: IDebugProgramPublisher2::SetDebuggerPresent | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramPublisher2::SetDebuggerPresent
+helpviewer_keywords:
+- IDebugProgramPublisher2::SetDebuggerPresent
 ms.assetid: c88c3ff4-3632-4199-b5de-83c6d21bcf75
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugProgramPublisher2::SetDebuggerPresent
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 64d0d5a682e1b3da3f02d8da72068cda7414e084
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-프로그램의 게시자는 디버거가 존재 하 고 실행 중인 있음을 알려줍니다.  
+---
+# <a name="idebugprogrampublisher2setdebuggerpresent"></a>IDebugProgramPublisher2::SetDebuggerPresent
+Tells the program publisher that a debugger is present and running.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT SetDebuggerPresent(  
-   BOOL fDebuggerPresent  
+HRESULT SetDebuggerPresent(  
+   BOOL fDebuggerPresent  
 );  
 ```  
   
-```c#  
-int SetDebuggerPresent(  
-   int fDebuggerPresent  
+```cs  
+int SetDebuggerPresent(  
+   int fDebuggerPresent  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `fDebuggerPresent`  
- \[in\] 0이 아닌 \(`TRUE`\) 디버거를 사용할 수 없는 경우에 0 \(`FALSE`\) 되지 않은 경우입니다.  
+ [in] Non-zero (`TRUE`) if a debugger is present, zero (`FALSE`) if it is not.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 디버거가 있는지 여부를 반환 하는 데이터에 반영 됩니다는 [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) 메서드: 여기에서 반환 되는 값 설정 되거나 이전 호출 하 여 해제를 `SetDebuggerPresent` 메서드.  
+## <a name="remarks"></a>Remarks  
+ The presence or absence of a debugger is reflected in the data returned from the [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) method: the value returned there is set or cleared by a prior call to the `SetDebuggerPresent` method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   
  [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)

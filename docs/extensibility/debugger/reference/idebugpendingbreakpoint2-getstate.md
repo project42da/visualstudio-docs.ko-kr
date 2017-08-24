@@ -1,50 +1,67 @@
 ---
-title: "IDebugPendingBreakpoint2::GetState | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPendingBreakpoint2::GetState"
-helpviewer_keywords: 
-  - "GetState 메서드"
-  - "IDebugPendingBreakpoint2::GetState 메서드"
+title: IDebugPendingBreakpoint2::GetState | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPendingBreakpoint2::GetState
+helpviewer_keywords:
+- GetState method
+- IDebugPendingBreakpoint2::GetState method
 ms.assetid: e88d543f-2e83-4ba7-86ca-f874e39955ff
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugPendingBreakpoint2::GetState
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 48ccac32df18ec3fd4718f868130762cce6a8642
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-보류 중단점의 상태를 가져옵니다.  
+---
+# <a name="idebugpendingbreakpoint2getstate"></a>IDebugPendingBreakpoint2::GetState
+Gets the state of the pending breakpoint.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetState(   
-   PENDING_BP_STATE_INFO* pState  
+HRESULT GetState(   
+   PENDING_BP_STATE_INFO* pState  
 );  
 ```  
   
-```c#  
-int GetState(   
-   PENDING_BP_STATE_INFO[] pState  
+```cs  
+int GetState(   
+   PENDING_BP_STATE_INFO[] pState  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pState`  
- \[in, out\] A [PENDING\_BP\_STATE\_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) 구조는이에 대 한 보류 중단점 사용 하 여 입력 됩니다.  
+ [in, out] A [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) structure that is filled in with a description of this pending breakpoint.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
- [PENDING\_BP\_STATE\_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)
+ [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)
