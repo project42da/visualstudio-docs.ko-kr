@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio의 R 도구 옵션 | Microsoft Docs"
 ms.custom: 
-ms.date: 4/26/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 f1_keywords:
 - vs.toolsoptionspages.r_tools
@@ -18,34 +19,19 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: 9b680c73d54c9809e3f4c46dc2841f1f320e4af9
+ms.translationtype: HT
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: a2f0421ff622483fb53795dac527bb8db3c689e2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 
 # <a name="r-tools-for-visual-studio-options"></a>Visual Studio용 R 도구 옵션
  
 **R 도구 > 옵션** 메뉴를 통해 액세스하거나 **도구 > 옵션**을 통해 **R 도구**로 스크롤하여 설정에 액세스합니다.
  
-  ![R 도구의 [옵션] 대화 상자](~/rtvs/media/options-dialog.png)
+  ![R 도구의 [옵션] 대화 상자](media/options-dialog.png)
 
 다음 섹션에서는 이 페이지에서 제공되는 다양한 옵션을 설명합니다.
 
@@ -54,16 +40,16 @@ ms.lasthandoff: 05/12/2017
 
 <a name="data-scientist-layout"</a>
 
-데이터 과학자의 필요에 맞게 최적화된 레이아웃으로 Visual Studio IDE를 구성하는 특수 메뉴 항목 **R 도구 > 데이터 과학 설정**도 있습니다. 특히 이 옵션을 선택하면 [대화형](interactive-repl.md), [변수 탐색기](variable-explorer.md) 및 [작업 영역](workspaces.md) 창이 열립니다.
+**R 도구 > 데이터 과학 설정** 메뉴 항목은 데이터 과학자의 필요에 맞게 최적화된 레이아웃으로 Visual Studio IDE도 구성합니다. 특히 이 옵션을 선택하면 [대화형](interactive-repl.md), [변수 탐색기](variable-explorer.md) 및 [작업 영역](workspaces.md) 창이 열립니다.
 
-![Visual Studio의 데이터 과학자 창 레이아웃](~/rtvs/media/installation-data-scientist-layout-result.png)
+![Visual Studio의 데이터 과학자 창 레이아웃](media/installation-data-scientist-layout-result.png)
 
 > [!Important]      
 > 나중에 다른 Visual Studio 설정으로 되돌리려면 먼저 **도구 > 설정 가져오기 및 내보내기** 명령을 사용하여 **선택한 환경 설정 내보내기**를 선택하고 파일 이름을 지정합니다. 해당 설정을 복원하려면 같은 명령을 사용하고 **선택한 환경 설정 가져오기**를 선택합니다. 데이터 과학자 레이아웃을 변경한 후 나중에 다시 해당 레이아웃으로 돌아가려는 경우에도 **데이터 과학 설정** 명령을 직접 사용하는 대신 같은 명령을 사용할 수 있습니다.
 
 ## <a name="debugging"></a>디버깅
 
-이러한 옵션은 [변수 탐색기](variable-explorer.md) 및 [조사식] 및 [지역] 같은 디버거 도구 창에서 값을 처리하는 방법을 제어합니다([디버깅](debugging.md) 참조).
+이러한 옵션은 [변수 탐색기](variable-explorer.md) 및 [조사식] 및 [지역] 같은 디버거 창에서 값을 처리하는 방법을 제어합니다([디버깅](debugging.md) 참조).
 
 | 옵션 | 기본값 | 설명 | 
 | --- | --- | --- |
@@ -88,8 +74,8 @@ ms.lasthandoff: 05/12/2017
 
 | 옵션 | 기본값 | 설명 | 
 | --- | --- | --- |
-| 항상 기록 저장 | `True` | RTVS가 프로젝트가 닫힐 때마다 작업 디렉터리의 `.RHistory` 파일에 명령 기록을 쓸지 제어합니다. 종료하기 전에 프로젝트를 저장하지 않은 경우에도 이 작업이 수행됩니다. |
-| 검색 필터 다시 설정 | `True` | [기록] 창에서 부분 문자열이 [R 기록] 대화 상자의 필터 용어와 일치하는 명령만 표시하도록 명령 기록을 필터링할 수 있는지 결정합니다. 이 설정에 따라 새 명령을 실행할 때마다 또는 새 프로젝트로 전환하여 다른 `.RHistory` 파일의 로드를 트리거할 때마다 기록 검색 필터를 다시 설정할지가 결정됩니다. 기본 설정 `True`는 필터 집합 관련 명령을 실행할 때 문제를 최소화하며 사용자는 방금 실행한 명령이 기록에 표시되지 않은 이유를 궁금해 합니다. |
+| 항상 기록 저장 | `True` | RTVS가 프로젝트가 닫힐 때마다 작업 디렉터리의 `.RHistory` 파일에 명령 기록을 쓸지 제어합니다. 종료하기 전에 프로젝트를 저장하지 않은 경우에도 기록 저장이 수행됩니다. |
+| 검색 필터 다시 설정 | `True` | [기록] 창에서 부분 문자열이 [R 기록] 대화 상자의 필터 용어와 일치하는 명령만 표시하도록 명령 기록을 필터링할 수 있는지 결정합니다. 이 설정에 따라 새 명령을 실행할 때마다 또는 새 프로젝트로 전환하여 다른 `.RHistory` 파일의 로드를 트리거할 때마다 기록 검색 필터를 다시 설정할지가 결정됩니다. 기본 설정 `True`는 필터 집합 관련 명령을 실행할 때 문제를 최소화하며 사용자는 방금 실행한 명령이 기록에 표시되지 않은 이유를 궁금해합니다. |
 | 여러 줄 선택 사용 | `True` | 한 번 클릭으로 기록에서 여러 줄 문을 선택할 수 있는지 지정합니다. 또한 줄이 아닌 문별로 대화형 창에서 위쪽/아래쪽 화살표 탐색을 사용하도록 설정합니다. |
 
 ## <a name="html"></a>HTML
@@ -115,7 +101,7 @@ ms.lasthandoff: 05/12/2017
 | 옵션 | 기본값 | 설명 | 
 | --- | --- | --- |
 | 코드 페이지 | `(OS Default)` | R에 대한 코드 페이지(로캘)를 설정합니다. 기본적으로 운영 체제의 기본 로캘을 사용합니다. | 
-| CRAN 미러 | `(Use .Rprofile)` | 패키지 설치에 대한 기본 CRAN 미러를 설정합니다. `Use .Rprofile`의 기본 설정은 CRAN Mirror 설정을 `.RProfile` 파일에 보존합니다. 드롭다운 목록에서 나열된 CRAN 미러 중 하나를 선택하여 이 설정을 재정의할 수 있습니다. |
+| CRAN 미러 | `(Use .Rprofile)` | 패키지 설치에 대한 기본 CRAN 미러를 설정합니다. `Use .Rprofile`의 기본 설정은 CRAN Mirror 설정을 `.RProfile` 파일에 보존합니다. |
 | 작업 디렉터리 | 사용자별 폴더 | Sets가 현재 작업 디렉터리이고 대개 프로젝트가 열릴 때마다 설정됩니다. |
 
 ## <a name="workspace"></a>작업 영역
@@ -127,3 +113,4 @@ ms.lasthandoff: 05/12/2017
 | 프로젝트가 닫히면 작업 영역 저장 | `No` | `Yes`로 설정하면 프로젝트가 닫힐 때 전역 환경을 `.RData` 파일에 저장할 수 있습니다. |
 | 작업 영역을 전환하기 전에 확인 대화 상자를 표시합니다. | `Yes` | `No`로 설정하면 작업 영역 간에 전환할 때 사용자에게 확인 메시지가 표시되지 않습니다. [작업 영역 간 전환](workspaces.md#switching-between-workspaces)을 참조하세요. |
  
+
