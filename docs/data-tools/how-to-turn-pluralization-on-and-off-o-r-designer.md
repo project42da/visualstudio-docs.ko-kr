@@ -1,43 +1,62 @@
 ---
-title: "방법: 복수 적용 설정 및 해제(O/R 디자이너) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'How to: Turn pluralization on and off (O-R Designer) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b693bc3-303a-40a9-97ee-9cef5ca3ae81
 caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6f0fe07b55ae0eeb57c0cc11fed047f31966cb6e
+ms.openlocfilehash: 6d920152eedc41e307fcba6dcf0d56cf9cf367d9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
+
 ---
-# 방법: 복수 적용 설정 및 해제(O/R 디자이너)
-기본적으로 이름이 s 또는 ies로 끝나는 데이터베이스 개체를 **서버 탐색기**\/**데이터베이스 탐색기**에서 [O\/R 디자이너\(개체 관계형 디자이너\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)로 끌면 생성된 엔터티 클래스의 이름이 복수형에서 단수형으로 변경됩니다.이렇게 하면 인스턴스화된 엔터티 클래스를 데이터의 단일 레코드에 매핑하는 것을 보다 정확하게 나타낼 수 있습니다.예를 들어 Customers 테이블을 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에 추가하면 단일 고객에 대한 데이터만 해당 클래스에 보유되므로 Customer라는 엔터티 클래스가 만들어집니다.  
+# <a name="how-to-turn-pluralization-on-and-off-or-designer"></a>How to: Turn pluralization on and off (O/R Designer)
+By default, when you drag database objects that have names ending in s or ies from **Server Explorer**/**Database Explorer** onto the [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md), the names of the generated entity classes are changed from plural to singular. This is done to more accurately represent the fact that the instantiated entity class maps to a single record of data. For example, adding a Customers table to the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] results in an entity class named Customer because the class will hold data for only a single customer.  
   
 > [!NOTE]
->  복수 적용은 기본적으로 Visual Studio 영어 버전에만 적용됩니다.  
+>  Pluralization is on by default only in the English-language version of Visual Studio.  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-### 복수 적용을 설정 및 해제하려면  
+### <a name="to-turn-pluralization-on-and-off"></a>To turn pluralization on and off  
   
-1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
+1.  On the **Tools** menu, click **Options**.  
   
-2.  **옵션** 대화 상자에서 **데이터베이스 도구**를 확장합니다.  
+2.  In the **Options** dialog box, expand **Database Tools**.  
   
 > [!NOTE]
->  **데이터베이스 도구** 노드가 표시되지 않은 경우에는 **모든 설정 표시**를 선택합니다.  
+>  Select **Show all settings** if the **Database Tools** node is not visible.  
   
-1.  **O\/R 디자이너**를 클릭합니다.  
+1.  Click **O/R Designer**.  
   
-2.  **복수 이름 적용**을 **Enabled** \= **False**로 설정하면 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 클래스 이름을 변경하지 못하도록 설정됩니다.  
+2.  Set **Pluralization of names** to **Enabled** = **False** to set the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] so that it does not change class names.  
   
-3.  **복수 이름 적용**을 **Enabled** \= **True**로 설정하면 복수 적용 규칙이 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에 추가된 개체의 클래스 이름에 적용됩니다.  
+3.  Set **Pluralization of names** to **Enabled** = **True** to apply pluralization rules to the class names of objects added to the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
-## 참고 항목  
- [O\/R 디자이너\(개체 관계형 디자이너\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
+ [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)
