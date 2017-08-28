@@ -1,67 +1,84 @@
 ---
-title: "IDebugCustomViewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomViewer"
-helpviewer_keywords: 
-  - "IDebugCustomViewer 인터페이스"
+title: IDebugCustomViewer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCustomViewer
+helpviewer_keywords:
+- IDebugCustomViewer interface
 ms.assetid: 7aca27d3-c7b8-470f-b42c-d1e9d9115edd
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# IDebugCustomViewer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 74fcd4f2c5ac72aeede1acd407f8bfb97f18932d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 인터페이스는 식 계산기를 \(EE\) 서식 필요에 속성 값을 표시할 수 있습니다.  
+---
+# <a name="idebugcustomviewer"></a>IDebugCustomViewer
+This interface enables an expression evaluator (EE) to display a property's value in whatever format is necessary.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugCustomViewer : IUknown  
 ```  
   
-## 구현자 참고 사항  
- EE 속성의 값을 사용자 지정 형식으로 표시 하기 위해이 인터페이스를 구현 합니다.  
+## <a name="notes-for-implementers"></a>Notes for Implementers  
+ An EE implements this interface to display a property's value in a custom format.  
   
-## 호출자에 대 한 참고 사항  
- COM의 호출 `CoCreateInstance` 함수는이 인터페이스를 인스턴스화합니다.  `CLSID` 전달 된 `CoCreateInstance` 레지스트리에서 가져옵니다.  호출을 [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) 레지스트리에서 위치를 가져옵니다.  참고 예제 뿐만 아니라 정보를 참조 하십시오.  
+## <a name="notes-for-callers"></a>Notes for Callers  
+ A call to COM's `CoCreateInstance` function instantiates this interface. The `CLSID` passed to `CoCreateInstance` is obtained from the registry. A call to [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) obtains the location in the registry. See Remarks for details as well as the Example.  
   
-## 메서드에서 Vtable 순서  
- 이 인터페이스에 다음 메서드를 구현합니다.  
+## <a name="methods-in-vtable-order"></a>Methods in Vtable Order  
+ This interface implements the following method:  
   
-|메서드|설명|  
-|---------|--------|  
-|[DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)|무엇이 든 지 주어진된 값을 표시 하지 않습니다.|  
+|Method|Description|  
+|------------|-----------------|  
+|[DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)|Does whatever is necessary to display a given value.|  
   
-## 설명  
- 일반적인 방법으로 속성 값을 표시할 수 없는 경우이 인터페이스를 사용\-예의 데이터 테이블 또는 다른 복잡 한 속성 형식입니다.  로 표현 하 여 사용자 지정 뷰어를 있는 `IDebugCustomViewer` 인터페이스를 EE에 관계 없이 특정 형식의 데이터를 표시 하는 외부 프로그램입니다 형식 시각화 도우미에서 다릅니다.  EE는 EE에 관련 된 사용자 지정 뷰어를 구현 합니다.  사용자 종류, 형식 시각화 도우미를 또는 사용자 지정 뷰어에서 수를 사용 하 여 시각화 도우미를 선택 합니다.  참조 하십시오 [시각화 및 데이터 보기](../../../extensibility/debugger/visualizing-and-viewing-data.md) 이 프로세스에 대 한 자세한 내용은.  
+## <a name="remarks"></a>Remarks  
+ This interface is used when a property's value cannot be displayed by normal means—for example, with a data table or another complex property type. A custom viewer, as represented by the `IDebugCustomViewer` interface, is different from a type visualizer, which is an external program for displaying data of a specific type regardless of the EE. The EE implements a custom viewer that is specific to that EE. A user selects which type of visualizer to use, be it a type visualizer or a custom viewer. See [Visualizing and Viewing Data](../../../extensibility/debugger/visualizing-and-viewing-data.md) for details on this process.  
   
- 사용자 지정 뷰어 같은 방법으로는 EE에 등록 되며 따라서 언어 GUID 및 공급 GUID가 필요 합니다.  EE에만 정확한 메트릭 \(또는 레지스트리 항목 이름\) 이라고 합니다.  이 메트릭을 반환 되는 [DEBUG\_CUSTOM\_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) 를 차례로 호출 하 여 반환 되는 구조를 [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md).  미터법에 저장 된 값이 있는 `CLSID` COM에 전달 된 `CoCreateInstance` 작동 \(예 참조\).  
+ A custom viewer is registered in the same way as an EE and, therefore, requires a language GUID and a vendor GUID. The exact metric (or registry entry name) is known only to the EE. This metric is returned in the [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) structure, which in turn is returned by a call to [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md). The value stored in the metric is the `CLSID` that is passed to COM's `CoCreateInstance` function (see the Example).  
   
- [디버깅을 위한 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 함수를 `SetEEMetric`를 사용 하 여 사용자 지정 뷰어를 등록할 수 있습니다.  "식 계산기" 레지스트리 섹션을 참조 하십시오. `Debugging SDK Helpers` 는 특정 레지스트리 키에 대 한 사용자 지정 뷰어를 해야 합니다.  여러 가지 미리 정의 된 메트릭을 계산 열에서 사용 되는 반면 사용자 지정 뷰어 \(는 EE의 구현 자가 정의 됩니다\) 한 메트릭을 해야 한다는 note입니다.  
+ The [SDK Helpers for Debugging](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) function, `SetEEMetric`, can be used to register a custom viewer. See the "Expression Evaluators" registry section of `Debugging SDK Helpers` for the specific registry keys that a custom viewer needs. Note that a custom viewer needs only one metric (which is defined by the EE's implementer) whereas an expression evaluator requires several predefined metrics.  
   
- 이후 데이터의 읽기 전용 보기 사용자 지정 뷰어를 일반적으로 제공는 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) 인터페이스를 제공 합니다 [DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md) 를 제외 하 고 해당 속성의 값을 문자열로 바꾸는 메서드가 없습니다.  임의의 데이터 블록을 변경할 수 EE에서 사용자 지정 인터페이스를 구현 하는 동일한 개체에 구현에서 `IDebugProperty3` 인터페이스입니다.  그런 다음이 사용자 지정 인터페이스는 임의의 블록의 데이터를 변경 하는 데 필요한 방법을 제공 합니다.  
+ Normally, a custom viewer provides a read-only view of the data, since the [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface supplied to [DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md) has no methods for changing the property's value except as a string. In order to support changing arbitrary blocks of data, the EE implements a custom interface on the same object that implements the `IDebugProperty3` interface. This custom interface would then provide the methods needed to change an arbitrary block of data.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 예제  
- 사용자 지정 뷰어는 해당 속성에 있는 경우 첫 번째 사용자 지정 뷰어 속성을 가져오는 방법을 보여 주는이 예제입니다.  
+## <a name="example"></a>Example  
+ This example shows how to get the first custom viewer from a property if that property has any custom viewers.  
   
-```cpp#  
+```cpp  
 IDebugCustomViewer *GetFirstCustomViewer(IDebugProperty2 *pProperty)  
 {  
     // This string is typically defined globally.  For this example, it  
@@ -105,8 +122,8 @@ IDebugCustomViewer *GetFirstCustomViewer(IDebugProperty2 *pProperty)
 }  
 ```  
   
-## 참고 항목  
- [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   
+## <a name="see-also"></a>See Also  
+ [Core Interfaces](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)   
- [디버깅을 위한 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
+ [SDK Helpers for Debugging](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

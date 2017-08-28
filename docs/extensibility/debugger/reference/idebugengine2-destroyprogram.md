@@ -1,55 +1,72 @@
 ---
-title: "IDebugEngine2::DestroyProgram | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2::DestroyProgram"
-helpviewer_keywords: 
-  - "IDebugEngine2::DestroyProgram"
+title: IDebugEngine2::DestroyProgram | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine2::DestroyProgram
+helpviewer_keywords:
+- IDebugEngine2::DestroyProgram
 ms.assetid: 0c9e2698-c70f-4770-a7bb-39650e9c3a1f
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugEngine2::DestroyProgram
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 09019a49385d5f35eb742b57bb2bd2e9382e0c4d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-예외적인 지정한 프로그램이 종료 되 고 프로그램에 대 한 모든 참조는 DE 정리 해야는 디버그 엔진 \(DE\)을 알리고 프로그램 보내기 이벤트를 파괴 합니다.  
+---
+# <a name="idebugengine2destroyprogram"></a>IDebugEngine2::DestroyProgram
+Informs a debug engine (DE) that the program specified has been atypically terminated and that the DE should clean up all references to the program and send a program destroy event.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT DestroyProgram(   
-   IDebugProgram2* pProgram  
+```cpp  
+HRESULT DestroyProgram(   
+   IDebugProgram2* pProgram  
 );  
 ```  
   
-```cpp#  
-int DestroyProgram(   
-   IDebugProgram2 pProgram  
+```cpp  
+int DestroyProgram(   
+   IDebugProgram2 pProgram  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pProgram`  
- \[in\] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 종료 되었습니다 예외적인 프로그램을 나타내는 개체입니다.  
+ [in] An [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object that represents the program that has been atypically terminated.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드를 호출한 후에 DE 이후에 전송 된 [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) 세션 디버그 매니저 \(SDM\) 이벤트를 다시.  
+## <a name="remarks"></a>Remarks  
+ After this method is called, the DE subsequently sends an [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) event back to the session debug manager (SDM).  
   
- 이 메서드가 구현 되지 않은 \(반환 `E_NOTIMPL`\)는 DE 디버깅 되는 프로그램은 동일한 프로세스에서 실행 하는 경우.  만 DE은 SDM와 동일한 프로세스에서 실행 되는 경우이 메서드는 구현 됩니다.  
+ This method is not implemented (returns `E_NOTIMPL`) if the DE runs in the same process as the program being debugged. This method is implemented only if the DE runs in the same process as the SDM.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

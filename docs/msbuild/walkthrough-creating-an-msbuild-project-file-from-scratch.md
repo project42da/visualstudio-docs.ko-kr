@@ -1,5 +1,5 @@
 ---
-title: "연습: 처음부터 새로 MSBuild 프로젝트 파일 만들기 | Microsoft Docs"
+title: 'Walkthrough: Creating an MSBuild Project File from Scratch | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,55 +29,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 8cc8cb349901c7a2b0c94875d29e602c33baa5bf
-ms.lasthandoff: 04/05/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 346c00891913ea2050f3e6790d738cccc5136c0a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>연습: 처음부터 새로 MSBuild 프로젝트 파일 만들기
-.NET Framework를 대상으로 하는 프로그래밍 언어는 MSBuild 프로젝트 파일을 사용하여 응용 프로그램 빌드 프로세스를 설명하고 제어합니다. Visual Studio를 사용하여 MSBuild 프로젝트 파일을 만들 때 적절한 XML이 파일에 자동으로 추가됩니다. 그러나 XML이 구성되는 방식과 이러한 방식을 변경하여 빌드를 제어할 수 있는 방법을 이해하는 것이 좋습니다.  
+# <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>Walkthrough: Creating an MSBuild Project File from Scratch
+Programming languages that target the .NET Framework use MSBuild project files to describe and control the application build process. When you use Visual Studio to create an MSBuild project file, the appropriate XML is added to the file automatically. However, you may find it helpful to understand how the XML is organized and how you can change it to control a build.  
   
- C++ 프로젝트용 프로젝트 파일을 만드는 방법에 대한 자세한 내용은 [MSBuild(Visual C++)](/cpp/build/msbuild-visual-cpp)를 참조하세요.  
+ For information about creating a project file for a C++ project, see [MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp).  
   
- 이 연습에서는 텍스트 편집기만을 사용하여 기본 프로젝트 파일을 증분 방식으로 만드는 방법을 보여 줍니다. 이 연습에서는 다음과 같은 단계를 따릅니다.  
+ This walkthrough shows how to create a basic project file incrementally, by using only a text editor. The walkthrough follows these steps:  
   
--   최소 응용 프로그램 소스 파일을 만듭니다.  
+-   Create a minimal application source file.  
   
--   최소 MSBuild 프로젝트 파일을 만듭니다.  
+-   Create a minimal MSBuild project file.  
   
--   MSBuild를 포함하도록 PATH 환경 변수를 확장합니다.  
+-   Extend the PATH environment variable to include MSBuild.  
   
--   프로젝트 파일을 사용하여 응용 프로그램을 빌드합니다.  
+-   Build the application by using the project file.  
   
--   빌드를 제어하기 위한 속성을 추가합니다.  
+-   Add properties to control the build.  
   
--   속성 값을 변경하여 빌드를 제어합니다.  
+-   Control the build by changing property values.  
   
--   빌드에 대상을 추가합니다.  
+-   Add targets to the build.  
   
--   대상을 지정하여 빌드를 제어합니다.  
+-   Control the build by specifying targets.  
   
--   증분 방식으로 빌드합니다.  
+-   Build incrementally.  
   
- 이 연습에서는 명령 프롬프트에서 프로젝트를 빌드하고 결과를 검토하는 방법을 보여 줍니다. MSBuild 및 명령 프롬프트에서 MSBuild를 실행하는 방법에 대한 자세한 내용은 [연습: MSBuild 사용](../msbuild/walkthrough-using-msbuild.md)을 참조하세요.  
+ This walkthrough shows how to build the project at the command prompt and examine the results. For more information about MSBuild and how to run MSBuild at the command prompt, see [Walkthrough: Using MSBuild](../msbuild/walkthrough-using-msbuild.md).  
   
- 연습을 완료하려면 .NET Framework(버전 2.0, 3.5, 4.0 또는 4.5)가 설치되어 있어야 합니다. .NET Framework에 연습에 필요한 MSBuild 및 Visual C# 컴파일러가 포함되어 있기 때문입니다.  
+ To complete the walkthrough, you must have the .NET Framework (version 2.0, 3.5, 4.0, or 4.5) installed because it includes MSBuild and the Visual C# compiler, which are required for the walkthrough.  
   
-## <a name="creating-a-minimal-application"></a>최소 응용 프로그램 만들기  
- 이 섹션에서는 텍스트 편집기를 사용하여 최소 Visual C# 응용 프로그램 소스 파일을 만드는 방법을 보여 줍니다.  
+## <a name="creating-a-minimal-application"></a>Creating a Minimal Application  
+ This section shows how to create a minimal Visual C# application source file by using a text editor.  
   
-#### <a name="to-create-the-minimal-application"></a>최소 응용 프로그램을 만들려면  
+#### <a name="to-create-the-minimal-application"></a>To create the minimal application  
   
-1.  명령 프롬프트에서 응용 프로그램을 만들려는 폴더로 이동합니다(예: \내 문서\ 또는 \바탕 화면\\).  
+1.  At the command prompt, browse to the folder where you want to create the application, for example, \My Documents\ or \Desktop\\.  
   
-2.  **md HelloWorld**를 입력하여 \HelloWorld\\라는 하위 폴더를 만듭니다.  
+2.  Type **md HelloWorld** to create a subfolder named \HelloWorld\\.  
   
-3.  **cd HelloWorld**를 입력하여 새 폴더로 변경합니다.  
+3.  Type **cd HelloWorld** to change to the new folder.  
   
-4.  메모장이나 다른 텍스트 편집기를 시작한 후 다음 코드를 입력합니다.  
+4.  Start Notepad or another text editor, and then type the following code.  
   
-    ```cs
+    ```csharp
     using System;  
   
     class HelloWorld  
@@ -93,39 +94,39 @@ ms.lasthandoff: 04/05/2017
     }  
     ```  
   
-5.  이 소스 코드 파일을 저장하고 이름을 Helloworld.cs로 지정합니다.  
+5.  Save this source code file and name it Helloworld.cs.  
   
-6.  명령 프롬프트에서 **csc helloworld.cs**를 입력하여 응용 프로그램을 빌드합니다.  
+6.  Build the application by typing **csc helloworld.cs** at the command prompt.  
   
-7.  명령 프롬프트에서 **helloworld**를 입력하여 응용 프로그램을 테스트합니다.  
+7.  Test the application by typing **helloworld** at the command prompt.  
   
-     **Hello, world!** 메시지가 표시됩니다.  
+     The **Hello, world!** message should be displayed.  
   
-8.  명령 프롬프트에서 **del helloworld.exe**를 입력하여 응용 프로그램을 삭제합니다.  
+8.  Delete the application by typing **del helloworld.exe** at the command prompt.  
   
-## <a name="creating-a-minimal-msbuild-project-file"></a>최소 MSBuild 프로젝트 파일 만들기  
- 최소 응용 프로그램 소스 파일이 있으므로 이제 최소 프로젝트 파일을 만들어 응용 프로그램을 빌드할 수 있습니다. 이 프로젝트 파일에는 다음 요소가 포함되어 있습니다.  
+## <a name="creating-a-minimal-msbuild-project-file"></a>Creating a Minimal MSBuild Project File  
+ Now that you have a minimal application source file, you can create a minimal project file to build the application. This project file contains the following elements:  
   
--   필수 루트 `Project` 노드  
+-   The required root `Project` node.  
   
--   항목 요소를 포함할 `ItemGroup` 노드  
+-   An `ItemGroup` node to contain item elements.  
   
--   응용 프로그램 소스 파일을 참조하는 항목 요소  
+-   An item element that refers to the application source file.  
   
--   응용 프로그램을 빌드하는 데 필요한 작업을 포함할 `Target` 노드  
+-   A `Target` node to contain tasks that are required to build the application.  
   
--   응용 프로그램을 빌드하기 위해 Visual C# 컴파일러를 시작하는 `Task` 요소  
+-   A `Task` element to start the Visual C# compiler to build the application.  
   
-#### <a name="to-create-a-minimal-msbuild-project-file"></a>최소 MSBuild 프로젝트 파일을 만들려면  
+#### <a name="to-create-a-minimal-msbuild-project-file"></a>To create a minimal MSBuild project file  
   
-1.  텍스트 편집기에서 기존 텍스트를 다음 두 줄을 사용하여 바꿉니다.  
+1.  In the text editor, replace the existing text by using these two lines:  
   
     ```xml  
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     </Project>  
     ```  
   
-2.  이 `ItemGroup` 노드를 `Project` 노드의 자식 요소로 삽입합니다.  
+2.  Insert this `ItemGroup` node as a child element of the `Project` node:  
   
     ```xml  
     <ItemGroup>  
@@ -133,24 +134,24 @@ ms.lasthandoff: 04/05/2017
     </ItemGroup>  
     ```  
   
-     이 `ItemGroup`은 이미 항목 요소를 포함하고 있습니다.  
+     Notice that this `ItemGroup` already contains an item element.  
   
-3.  `Target` 노드를 `Project` 노드의 자식 요소로 추가합니다. 노드의 이름을 `Build`로 지정합니다.  
+3.  Add a `Target` node as a child element of the `Project` node. Name the node `Build`.  
   
     ```xml  
     <Target Name="Build">  
     </Target>  
     ```  
   
-4.  이 작업 요소를 `Target` 노드의 자식 요소로 삽입합니다.  
+4.  Insert this task element as a child element of the `Target` node:  
   
     ```xml  
     <Csc Sources="@(Compile)"/>  
     ```  
   
-5.  이 프로젝트 파일을 저장하고 이름을 Helloworld.csproj로 지정합니다.  
+5.  Save this project file and name it Helloworld.csproj.  
   
- 최소 프로젝트 파일은 다음 코드와 유사합니다.  
+ Your minimal project file should resemble the following code:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -163,56 +164,56 @@ ms.lasthandoff: 04/05/2017
 </Project>  
 ```  
   
- Build 대상의 작업은 순차적으로 실행됩니다. 이 경우 Visual C# 컴파일러 `Csc` 작업이 유일한 작업입니다. 이 작업에는 컴파일할 소스 파일 목록이 필요하며, 이는 `Compile` 항목 값으로 제공됩니다. `Compile` 항목은 하나의 소스 파일 Helloworld.cs만 참조합니다.  
+ Tasks in the Build target are executed sequentially. In this case, the Visual C# compiler `Csc` task is the only task. It expects a list of source files to compile, and this is given by the value of the `Compile` item. The `Compile` item references just one source file, Helloworld.cs.  
   
 > [!NOTE]
->  다음과 같이 항목 요소에 별표 와일드카드 문자(*)를 사용하여 파일 이름 확장명이 .cs인 모든 파일을 참조할 수 있습니다.  
+>  In the item element, you can use the asterisk wildcard character (*) to reference all files that have the .cs file name extension, as follows:  
 >   
 >  `<Compile Include="*.cs" />`  
 >   
->  그러나 소스 파일이 추가되거나 삭제될 경우 디버깅 및 선택적 대상화가 어려워지므로 와일드카드 문자는 사용하지 않는 것이 좋습니다.  
+>  However, we do not recommend the use of wildcard characters because it makes debugging and selective targeting more difficult if source files are added or deleted.  
   
-## <a name="extending-the-path-to-include-msbuild"></a>MSBuild를 포함하도록 경로 확장  
- MSBuild에 액세스하려면 먼저 .NET Framework 폴더를 포함하도록 PATH 환경 변수를 확장해야 합니다.  
+## <a name="extending-the-path-to-include-msbuild"></a>Extending the Path to Include MSBuild  
+ Before you can access MSBuild, you must extend the PATH environment variable to include the .NET Framework folder.  
   
-#### <a name="to-add-msbuild-to-your-path"></a>경로에 MSBuild를 추가하려면  
+#### <a name="to-add-msbuild-to-your-path"></a>To add MSBuild to your path  
   
--   Visual Studio 2013부터 MSBuild 폴더(32비트 운영 체제의 경우 `%ProgramFiles%\MSBuild` 또는 64비트 운영 체제의 경우 `%ProgramFiles(x86)%\MSBuild`)에서 MSBuild.exe를 찾을 수 있습니다.  
+-   Starting in Visual Studio 2013, you can find MSBuild.exe in the MSBuild folder (`%ProgramFiles%\MSBuild` on a 32-bit operating system, or `%ProgramFiles(x86)%\MSBuild` on a 64-bit operating system).  
   
-     명령 프롬프트에 **set PATH=%PATH%;%ProgramFiles%\MSBuild** 또는 **set PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**를 입력합니다.  
+     At the command prompt, type **set PATH=%PATH%;%ProgramFiles%\MSBuild** or **set PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**.  
   
-     또는 Visual Studio가 설치되어 있는 경우 MSBuild 폴더를 포함하는 경로가 있는 **Visual Studio 명령 프롬프트**를 사용할 수 있습니다.  
+     Alternatively, if you have Visual Studio installed, you can use the **Visual Studio Command Prompt**, which has a path that includes the MSBuild folder.  
   
-## <a name="using-the-project-file-to-build-the-application"></a>프로젝트 파일을 사용하여 응용 프로그램 빌드  
- 이제 응용 프로그램을 빌드하기 위해 방금 만든 프로젝트 파일을 사용합니다.  
+## <a name="using-the-project-file-to-build-the-application"></a>Using the Project File to Build the Application  
+ Now, to build the application, use the project file that you just created.  
   
-#### <a name="to-build-the-application"></a>응용 프로그램을 빌드하려면  
+#### <a name="to-build-the-application"></a>To build the application  
   
-1.  명령 프롬프트에 **msbuild helloworld.csproj /t:Build**를 입력합니다.  
+1.  At the command prompt, type **msbuild helloworld.csproj /t:Build**.  
   
-     그러면 Helloworld 응용 프로그램을 만들기 위해 Visual C# 컴파일러를 호출하여 Helloworld 프로젝트 파일의 Build 대상이 빌드됩니다.  
+     This builds the Build target of the Helloworld project file by invoking the Visual C# compiler to create the Helloworld application.  
   
-2.  **helloworld**를 입력하여 응용 프로그램을 테스트합니다.  
+2.  Test the application by typing **helloworld**.  
   
-     **Hello, world!** 메시지가 표시됩니다.  
+     The **Hello, world!** message should be displayed.  
   
 > [!NOTE]
->  자세한 정도를 높여 빌드에 대한 자세한 정보를 볼 수 있습니다. 자세한 정도를 "자세히"로 설정하려면 명령 프롬프트에서 다음 명령 중 하나를 입력합니다.  
+>  You can see more details about the build by increasing the verbosity level. To set the verbosity level to "detailed", type either of these commands at the command prompt:  
 >   
 >  **msbuild helloworld.csproj /t:Build /verbosity:detailed**  
   
-## <a name="adding-build-properties"></a>빌드 속성 추가  
- 프로젝트 파일에 빌드 속성을 추가하여 빌드에 대한 제어를 강화할 수 있습니다. 이제 다음 속성을 추가합니다.  
+## <a name="adding-build-properties"></a>Adding Build Properties  
+ You can add build properties to the project file to further control the build. Now add these properties:  
   
--   응용 프로그램의 이름을 지정하기 위한 `AssemblyName` 속성  
+-   An `AssemblyName` property to specify the name of the application.  
   
--   응용 프로그램을 포함할 폴더를 지정하기 위한 `OutputPath` 속성  
+-   An `OutputPath` property to specify a folder to contain the application.  
   
-#### <a name="to-add-build-properties"></a>빌드 속성을 추가하려면  
+#### <a name="to-add-build-properties"></a>To add build properties  
   
-1.  명령 프롬프트에서 **del helloworld.exe**를 입력하여 기존 응용 프로그램을 삭제합니다.  
+1.  Delete the existing application by typing **del helloworld.exe** at the command prompt.  
   
-2.  프로젝트 파일에서 여는 `PropertyGroup` 요소 바로 뒤에 이 `Project` 요소를 삽입합니다.  
+2.  In the project file, insert this `PropertyGroup` element just after the opening `Project` element:  
   
     ```xml  
     <PropertyGroup>  
@@ -221,25 +222,25 @@ ms.lasthandoff: 04/05/2017
     </PropertyGroup>  
     ```  
   
-3.  이 작업을 `Csc` 작업 바로 앞의 Build 대상에 추가합니다.  
+3.  Add this task to the Build target, just before the `Csc` task:  
   
     ```xml  
     <MakeDir Directories="$(OutputPath)"      Condition="!Exists('$(OutputPath)')" />  
     ```  
   
-     `MakeDir` 작업이 `OutputPath` 속성에 의해 이름이 지정된 폴더를 만듭니다(현재 해당 이름의 폴더가 없는 경우).  
+     The `MakeDir` task creates a folder that is named by the `OutputPath` property, provided that no folder by that name currently exists.  
   
-4.  이 `OutputAssembly` 특성을 `Csc` 작업에 추가합니다.  
+4.  Add this `OutputAssembly` attribute to the `Csc` task:  
   
     ```xml  
     <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />  
     ```  
   
-     그러면 `AssemblyName` 속성에 의해 이름이 지정된 어셈블리를 생성하여 `OutputPath` 속성에 의해 이름이 지정된 폴더에 배치하라는 지시가 Visual C# 컴파일러에 전달됩니다.  
+     This instructs the Visual C# compiler to produce an assembly that is named by the `AssemblyName` property and to put it in the folder that is named by the `OutputPath` property.  
   
-5.  변경 내용을 저장합니다.  
+5.  Save your changes.  
   
- 이제 프로젝트 파일은 다음 코드와 유사합니다.  
+ Your project file should now resemble the following code:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -258,45 +259,45 @@ ms.lasthandoff: 04/05/2017
 ```  
   
 > [!NOTE]
->  `OutputPath` 요소에 백슬래시(\\) 경로 구분 기호를 지정할 때는 `Csc` 작업의 `OutputAssembly` 특성에 해당 기호를 추가하는 대신 폴더 이름의 끝에 기호를 추가하는 것이 좋습니다. 따라서  
+>  We recommend that you add the backslash (\\) path delimiter at the end of the folder name when you specify it in the `OutputPath` element, instead of adding it in the `OutputAssembly` attribute of the `Csc` task. Therefore,  
 >   
 >  `<OutputPath>Bin\</OutputPath>`  
 >   
 >  `OutputAssembly=="$(OutputPath)$(AssemblyName).exe" />`  
 >   
->  가 아래보다 좋습니다.  
+>  is better than  
 >   
 >  `<OutputPath>Bin</OutputPath>`  
 >   
 >  `OutputAssembly=="$(OutputPath)\$(AssemblyName).exe" />`  
   
-## <a name="testing-the-build-properties"></a>빌드 속성 테스트  
- 이제 출력 폴더 및 응용 프로그램 이름을 지정하기 위해 빌드 속성을 사용한 프로젝트 파일을 사용하여 응용 프로그램을 빌드할 수 있습니다.  
+## <a name="testing-the-build-properties"></a>Testing the Build Properties  
+ Now you can build the application by using the project file in which you used build properties to specify the output folder and application name.  
   
-#### <a name="to-test-the-build-properties"></a>빌드 속성을 테스트하려면  
+#### <a name="to-test-the-build-properties"></a>To test the build properties  
   
-1.  명령 프롬프트에 **msbuild helloworld.csproj /t:Build**를 입력합니다.  
+1.  At the command prompt, type **msbuild helloworld.csproj /t:Build**.  
   
-     그러면 \Bin\ 폴더가 만들어진 다음 Visual C# 컴파일러가 호출되어 MSBuildSample 응용 프로그램이 만들어져 \Bin\ 폴더에 배치됩니다.  
+     This creates the \Bin\ folder and then invokes the Visual C# compiler to create the MSBuildSample application and puts it in the \Bin\ folder.  
   
-2.  \Bin\ 폴더가 만들어져 MSBuildSample 응용 프로그램을 포함하고 있는지 확인하려면 **dir Bin**을 입력합니다.  
+2.  To verify that the \Bin\ folder has been created, and that it contains the MSBuildSample application, type **dir Bin**.  
   
-3.  **Bin\MSBuildSample**을 입력하여 응용 프로그램을 테스트합니다.  
+3.  Test the application by typing **Bin\MSBuildSample**.  
   
-     **Hello, world!** 메시지가 표시됩니다.  
+     The **Hello, world!** message should be displayed.  
   
-## <a name="adding-build-targets"></a>빌드 대상 추가  
- 이제 다음과 같이 프로젝트 파일에 대상을 두 개 더 추가합니다.  
+## <a name="adding-build-targets"></a>Adding Build Targets  
+ Next, add two more targets to the project file, as follows:  
   
--   이전 파일을 삭제하는 Clean 대상  
+-   A Clean target that deletes old files.  
   
--   `DependsOnTargets` 특성을 사용하여 Clean 작업이 Build 작업보다 먼저 실행되도록 하는 Rebuild 대상  
+-   A Rebuild target that uses the `DependsOnTargets` attribute to force the Clean task to run before the Build task.  
   
- 대상이 여러 개이므로 이제 Build 대상을 기본 대상으로 설정할 수 있습니다.  
+ Now that you have multiple targets, you can set the Build target as the default target.  
   
-#### <a name="to-add-build-targets"></a>빌드 대상을 추가하려면  
+#### <a name="to-add-build-targets"></a>To add build targets  
   
-1.  프로젝트 파일에서 이러한 두 대상을 Build 대상 바로 뒤에 추가합니다.  
+1.  In the project file, add these two targets just after the Build target:  
   
     ```xml  
     <Target Name="Clean" >  
@@ -305,17 +306,17 @@ ms.lasthandoff: 04/05/2017
     <Target Name="Rebuild" DependsOnTargets="Clean;Build" />  
     ```  
   
-     Clean 대상은 Delete 작업을 호출하여 응용 프로그램을 삭제합니다. Rebuild 대상은 Clean 대상과 Build 대상이 둘 다 실행될 때까지 실행되지 않습니다. Rebuild 대상에 작업이 없더라도 Rebuild 대상은 Clean 대상이 Build 대상보다 먼저 실행되도록 합니다.  
+     The Clean target invokes the Delete task to delete the application. The Rebuild target does not run until both the Clean target and the Build target have run. Although the Rebuild target has no tasks, it causes the Clean target to run before the Build target.  
   
-2.  이 `DefaultTargets` 특성을 여는 `Project` 요소에 추가합니다.  
+2.  Add this `DefaultTargets` attribute to the opening `Project` element:  
   
     ```xml  
     <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     ```  
   
-     그러면 Build 대상이 기본 대상으로 설정됩니다.  
+     This sets the Build target as the default target.  
   
- 이제 프로젝트 파일은 다음 코드와 유사합니다.  
+ Your project file should now resemble the following code:  
   
 ```xml  
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -337,59 +338,59 @@ ms.lasthandoff: 04/05/2017
 </Project>  
 ```  
   
-## <a name="testing-the-build-targets"></a>빌드 대상 테스트  
- 새 빌드 대상을 실행하여 프로젝트 파일의 이러한 기능을 테스트할 수 있습니다.  
+## <a name="testing-the-build-targets"></a>Testing the Build Targets  
+ You can exercise the new build targets to test these features of the project file:  
   
--   기본 빌드를 바인딩합니다.  
+-   Building the default build.  
   
--   명령 프롬프트에서 응용 프로그램 이름을 설정합니다.  
+-   Setting the application name at the command prompt.  
   
--   다른 응용 프로그램이 빌드되기 전에 응용 프로그램을 삭제합니다.  
+-   Deleting the application before another application is built.  
   
--   다른 응용 프로그램을 빌드하지 않고 응용 프로그램을 삭제합니다.  
+-   Deleting the application without building another application.  
   
-#### <a name="to-test-the-build-targets"></a>빌드 대상을 테스트하려면  
+#### <a name="to-test-the-build-targets"></a>To test the build targets  
   
-1.  명령 프롬프트에 **msbuild helloworld.csproj /p:AssemblyName=Greetings**를 입력합니다.  
+1.  At the command prompt, type **msbuild helloworld.csproj /p:AssemblyName=Greetings**.  
   
-     **/t** 스위치를 사용하여 대상을 명시적으로 설정하지 않았으므로 MSBuild가 기본 Build 대상을 실행합니다. **/p** 스위치는 `AssemblyName` 속성을 재정의하고 이 속성에 새 값 `Greetings`를 제공합니다. 따라서 새 응용 프로그램 Greetings.exe가 \Bin\ 폴더에 만들어집니다.  
+     Because you did not use the **/t** switch to explicitly set the target, MSBuild runs the default Build target. The **/p** switch overrides the `AssemblyName` property and gives it the new value, `Greetings`. This causes a new application, Greetings.exe, to be created in the \Bin\ folder.  
   
-2.  \Bin\ 폴더에 MSBuildSample 응용 프로그램과 새 Greetings 응용 프로그램이 둘 다 포함되어 있는지 확인하려면 **dir Bin**을 입력합니다.  
+2.  To verify that the \Bin\ folder contains both the MSBuildSample application and the new Greetings application, type **dir Bin**.  
   
-3.  **Bin\Greetings**를 입력하여 Greetings 응용 프로그램을 테스트합니다.  
+3.  Test the Greetings application by typing **Bin\Greetings**.  
   
-     **Hello, world!** 메시지가 표시됩니다.  
+     The **Hello, world!** message should be displayed.  
   
-4.  **msbuild helloworld.csproj /t:clean**을 입력하여 MSBuildSample 응용 프로그램을 삭제합니다.  
+4.  Delete the MSBuildSample application by typing **msbuild helloworld.csproj /t:clean**.  
   
-     그러면 Clean 작업이 실행되어 기본 `AssemblyName` 속성값 `MSBuildSample`이 포함되어 있는 응용 프로그램이 제거됩니다.  
+     This runs the Clean task to remove the application that has the default `AssemblyName` property value, `MSBuildSample`.  
   
-5.  **msbuild helloworld.csproj /t:clean /p:AssemblyName=Greetings**를 입력하여 Greetings 응용 프로그램을 삭제합니다.  
+5.  Delete the Greetings application by typing **msbuild helloworld.csproj /t:clean /p:AssemblyName=Greetings**.  
   
-     그러면 Clean 작업이 실행되어 지정된 **AssemblyName** 속성값 `Greetings`가 포함되어 있는 응용 프로그램이 제거됩니다.  
+     This runs the Clean task to remove the application that has the given **AssemblyName** property value, `Greetings`.  
   
-6.  이제 \Bin\ 폴더가 비어 있는지 확인하려면 **dir Bin**을 입력합니다.  
+6.  To verify that the \Bin\ folder is now empty, type **dir Bin**.  
   
-7.  **msbuild**를 입력합니다.  
+7.  Type **msbuild**.  
   
-     프로젝트 파일이 지정되어 있지 않더라도 현재 폴더에 프로젝트 파일이 하나뿐이므로 MSBuild는 helloworld.csproj 파일을 빌드합니다. 따라서 MSBuildSample 응용 프로그램이 \Bin\ 폴더에 만들어집니다.  
+     Although a project file is not specified, MSBuild builds the helloworld.csproj file because there is only one project file in the current folder. This causes the MSBuildSample application to be created in the \Bin\ folder.  
   
-     \Bin\ 폴더에 MSBuildSample 응용 프로그램이 포함되어 있는지 확인하려면 **dir Bin**을 입력합니다.  
+     To verify that the \Bin\ folder contains the MSBuildSample application, type **dir Bin**.  
   
-## <a name="building-incrementally"></a>증분 방식으로 빌드  
- 대상이 의존하는 소스 파일 또는 대상 파일이 변경된 경우에만 대상을 빌드하라고 MSBuild에 지시할 수 있습니다. MSBuild는 파일의 타임스탬프를 사용하여 파일이 변경되었는지 여부를 확인합니다.  
+## <a name="building-incrementally"></a>Building Incrementally  
+ You can tell MSBuild to build a target only if the source files or target files that the target depends on have changed. MSBuild uses the time stamp of a file to determine whether it has changed.  
   
-#### <a name="to-build-incrementally"></a>증분 방식으로 빌드하려면  
+#### <a name="to-build-incrementally"></a>To build incrementally  
   
-1.  프로젝트 파일에서 다음 특성을 여는 Build 대상에 추가합니다.  
+1.  In the project file, add these attributes to the opening Build target:  
   
     ```  
     Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe"  
     ```  
   
-     그러면 Build 대상이 `Compile` 항목 그룹에 지정된 입력 파일에 의존하고, 출력 대상이 응용 프로그램 파일이도록 지정됩니다.  
+     This specifies that the Build target depends on the input files that are specified in the `Compile` item group, and that the output target is the application file.  
   
-     결과 Build 대상은 다음 코드와 유사합니다.  
+     The resulting Build target should resemble the following code:  
   
     ```xml  
     <Target Name="Build" Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe">  
@@ -398,28 +399,28 @@ ms.lasthandoff: 04/05/2017
     </Target>  
     ```  
   
-2.  명령 프롬프트에서 **msbuild /v:d**를 입력하여 Build 대상을 테스트합니다.  
+2.  Test the Build target by typing **msbuild /v:d** at the command prompt.  
   
-     helloworld.csproj는 기본 프로젝트 파일이고, 해당 Build는 기본 대상이라는 사실을 기억하세요.  
+     Remember that helloworld.csproj is the default project file, and that Build is the default target.  
   
-     **/v:d** 스위치는 빌드 프로세스에 대한 자세한 설명을 지정합니다.  
+     The **/v:d** switch specifies a verbose description for the build process.  
   
-     다음과 같은 줄이 표시됩니다.  
+     These lines should be displayed:  
   
-     **해당 입력 파일과 비교하여 출력 파일이 모두 최신 파일이므로 "Build" 대상을 건너뜁니다.**  
+     **Skipping target "Build" because all output files are up-to-date with respect to the input files.**  
   
-     **입력 파일: HelloWorld.cs**  
+     **Input files: HelloWorld.cs**  
   
-     **출력 파일: BinMSBuildSample.exe**  
+     **Output files: BinMSBuildSample.exe**  
   
-     MSBuild는 응용 프로그램이 마지막으로 빌드된 이후로 변경된 소스 파일이 없으므로 Build 대상을 건너뜁니다.  
+     MSBuild skips the Build target because none of the source files have changed since the application was last built.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
-### <a name="description"></a>설명  
- 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 응용 프로그램을 컴파일하고 출력 파일 이름이 포함된 메시지를 기록하는 프로젝트 파일을 보여 줍니다.  
+### <a name="description"></a>Description  
+ The following example shows a project file that compiles a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] application and logs a message that contains the output file name.  
   
-### <a name="code"></a>코드  
+### <a name="code"></a>Code  
   
 ```xml
 <Project DefaultTargets = "Compile"  
@@ -452,14 +453,14 @@ ms.lasthandoff: 04/05/2017
 </Project>  
 ```  
   
-### <a name="comments"></a>설명  
+### <a name="comments"></a>Comments  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
-### <a name="description"></a>설명  
- 다음 예제에서는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 응용 프로그램을 컴파일하고 출력 파일 이름이 포함된 메시지를 기록하는 프로젝트 파일을 보여 줍니다.  
+### <a name="description"></a>Description  
+ The following example shows a project file that compiles a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] application and logs a message that contains the output file name.  
   
-### <a name="code"></a>코드  
+### <a name="code"></a>Code  
   
 ```xml  
 <Project DefaultTargets = "Compile"  
@@ -492,9 +493,9 @@ ms.lasthandoff: 04/05/2017
 </Project>  
 ```  
   
-## <a name="whats-next"></a>새로운 기능  
- Visual Studio는 이 연습에 표시된 작업의 많은 부분을 자동으로 수행할 수 있습니다. Visual Studio를 사용하여 MSBuild 프로젝트 파일을 만들고, 편집하고, 빌드하고, 테스트하는 방법에 대한 자세한 내용은 [연습: MSBuild 사용](../msbuild/walkthrough-using-msbuild.md)을 참조하세요.  
+## <a name="whats-next"></a>What's Next?  
+ Visual Studio can automatically do much of the work that is shown in this walkthrough. To learn how to use Visual Studio to create, edit, build, and test MSBuild project files, see [Walkthrough: Using MSBuild](../msbuild/walkthrough-using-msbuild.md).  
   
-## <a name="see-also"></a>참고 항목  
-[MSBuild 개요](../msbuild/msbuild.md)  
- [MSBuild 참조](../msbuild/msbuild-reference.md)
+## <a name="see-also"></a>See Also  
+[MSBuild Overview](../msbuild/msbuild.md)  
+ [MSBuild Reference](../msbuild/msbuild-reference.md)

@@ -1,98 +1,115 @@
 ---
-title: "SccAdd 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccAdd"
-helpviewer_keywords: 
-  - "SccAdd 함수"
+title: SccAdd Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccAdd
+helpviewer_keywords:
+- SccAdd function
 ms.assetid: 545268f3-8e83-446a-a398-1a9db9e866e8
 caps.latest.revision: 17
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# SccAdd 함수
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 25b3dbc61b4fb57471737e41d3904effa9ed87be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 함수는 소스 제어 시스템에 새 파일을 추가합니다.  
+---
+# <a name="sccadd-function"></a>SccAdd Function
+This function adds new files to the source control system.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccAdd(  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LONG      nFiles,  
-   LPCSTR*   lpFileNames,  
-   LPCSTR    lpComment,  
-   LONG*     pfOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LONG      nFiles,  
+   LPCSTR*   lpFileNames,  
+   LPCSTR    lpComment,  
+   LONG*     pfOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\] 소스 제어 플러그 인 컨텍스트 구조입니다.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- \[in\] 소스 제어 플러그 인을 제공 하는 모든 대화 상자에 대 한 부모로 사용할 수 있는 IDE 창 핸들입니다.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  nFiles  
- \[in\] 에 지정 된 대로 현재 프로젝트에 추가 하도록 선택한 파일의 수는 `lpFileNames` 배열입니다.  
+ [in] Number of files selected to be added to the current project as given in the `lpFileNames` array.  
   
  lpFileNames  
- \[in\] 추가할 파일의 정규화 된 로컬 이름 배열입니다.  
+ [in] Array of fully qualified local names of files to be added.  
   
  lpComment  
- \[in\] 모든 추가 파일에 적용 될 주석입니다.  
+ [in] The comment to be applied to all of the files being added.  
   
  pfOptions  
- \[in\] 파일 단위로에서 제공 하는 명령 플래그의 배열입니다.  
+ [in] Array of command flags, provided on a per-file basis.  
   
  pvOptions  
- \[in\] 소스 제어 플러그 인에 대 한 옵션입니다.  
+ [in] Source control plug-in-specific options.  
   
-## 반환 값  
- 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|값|설명|  
-|-------|--------|  
-|SCC\_OK|추가 작업이 완료 되었습니다.|  
-|SCC\_E\_FILEALREADYEXISTS|선택한 파일이 소스 제어에서 이미 있습니다.|  
-|SCC\_E\_TYPENOTSUPPORTED|형식 \(예: 이진\) 파일의 소스 제어 시스템에서 지원 되지 않습니다.|  
-|SCC\_E\_OPNOTSUPPORTED|소스 제어 시스템에서이 작업을 지원 하지 않습니다.|  
-|SCC\_E\_ACCESSFAILURE|소스 제어 시스템에 경합 또는 네트워크 문제 때문에 액세스할 수 없습니다. 다시 시도 사용 하는 것이 좋습니다.|  
-|SCC\_E\_NOTAUTHORIZED|사용자가이 작업을 수행할 수 없습니다.|  
-|SCC\_E\_NONSPECIFICERROR|알 수 없는 오류입니다. 추가 수행 되지 않습니다.|  
-|SCC\_I\_OPERATIONCANCELED|작업이 완료 되기 전에 취소 되었습니다.|  
-|SCC\_I\_RELOADFILE|파일이 나 프로젝트를 다시 로드 해야 합니다.|  
-|SCC\_E\_FILENOTEXIST|로컬 파일을 찾을 수 없습니다.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|The add operation was successful.|  
+|SCC_E_FILEALREADYEXISTS|The selected file is already under source control.|  
+|SCC_E_TYPENOTSUPPORTED|The type of the file (for example, binary) is not supported by the source control system.|  
+|SCC_E_OPNOTSUPPORTED|The source control system does not support this operation.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure; add not performed.|  
+|SCC_I_OPERATIONCANCELED|The operation was cancelled before completion.|  
+|SCC_I_RELOADFILE|A file or project needs to be reloaded.|  
+|SCC_E_FILENOTEXIST|Local file was not found.|  
   
-## 설명  
- 일반적인 `fOptions` 바뀝니다 여기 배열이 `pfOptions`, 하나로 `LONG` 파일당 사양 옵션입니다. 즉, 파일 형식 파일 다를 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ The usual `fOptions` are replaced here by an array, `pfOptions`, with one `LONG` option specification per file. This is because the file type may vary from file to file.  
   
 > [!NOTE]
->  모두 지정할 수 없는 `SCC_FILETYPE_TEXT` 및 `SCC_FILETYPE_BINARY` 하지만 동일한 파일에 대 한 옵션은 둘 다 지정할 수 있습니다. 둘 다 설정은 설정과 동일 `SCC_FILETYPE_AUTO`, 이 경우 소스 제어 플러그 인 autodetects 파일 형식입니다.  
+>  It is invalid to specify both `SCC_FILETYPE_TEXT` and `SCC_FILETYPE_BINARY` options for the same file, but it is valid to specify neither. Setting neither is the same as setting `SCC_FILETYPE_AUTO`, in which case the source control plug-in autodetects the file type.  
   
- 다음에 사용 된 플래그의 목록은 `pfOptions` 배열:  
+ Below is the list of flags used in the `pfOptions` array:  
   
-|옵션|값|의미|  
-|--------|-------|--------|  
-|SCC\_FILETYPE\_AUTO|0 x 00|소스 제어 플러그 인 파일 유형을 검색 해야 합니다.|  
-|SCC\_FILETYPE\_TEXT|0x01|ASCII 텍스트 파일을 나타냅니다.|  
-|SCC\_FILETYPE\_BINARY|0x02|ASCII 텍스트 이외에 다른 파일 형식을 나타냅니다.|  
-|SCC\_ADD\_STORELATEST|0 x 04|만 없습니다 델타 파일의 최신 복사본을 저장합니다.|  
-|SCC\_FILETYPE\_TEXT\_ANSI|0x08|ANSI 텍스트 파일을 처리합니다.|  
-|SCC\_FILETYPE\_UTF8|0x10|유니코드 텍스트 UTF8 형식에서으로 파일을 처리합니다.|  
-|SCC\_FILETYPE\_UTF16LE|0x20|Little Endian 형식으로 UTF16에서 유니코드 텍스트 파일을 처리합니다.|  
-|SCC\_FILETYPE\_UTF16BE|0x40|에서는 파일에 UTF16 Big Endian 유니코드 텍스트와 서식을 지정 합니다.|  
+|Option|Value|Meaning|  
+|------------|-----------|-------------|  
+|SCC_FILETYPE_AUTO|0x00|The source control plug-in should detect the file type.|  
+|SCC_FILETYPE_TEXT|0x01|Indicates an ASCII text file.|  
+|SCC_FILETYPE_BINARY|0x02|Indicates a file type other than ASCII text.|  
+|SCC_ADD_STORELATEST|0x04|Stores only the latest copy of the file, no deltas.|  
+|SCC_FILETYPE_TEXT_ANSI|0x08|Treats the file as ANSI text.|  
+|SCC_FILETYPE_UTF8|0x10|Treats the file as Unicode text in UTF8 format.|  
+|SCC_FILETYPE_UTF16LE|0x20|Treats the file as Unicode text in UTF16 Little Endian format.|  
+|SCC_FILETYPE_UTF16BE|0x40|Treats the file as Unicode text in UTF16 Big Endian format.|  
   
-## 참고 항목  
- [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)

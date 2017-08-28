@@ -1,79 +1,96 @@
 ---
-title: "IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetAddressesInModuleFromPosition"
-  - "IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition"
+title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetAddressesInModuleFromPosition
+- IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
 ms.assetid: f901c66e-f53c-4ea0-8004-d8fcbf46f916
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8f7e77903d98943b1f1d0d5b879656c67b1ac223
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-문서 위치를에 있는 지정 된 모듈의 디버그 주소 배열에 매핑합니다.  
+---
+# <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
+Maps a document position in the specified module to an array of debug addresses.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 [C++]  
 HRESULT GetAddressesInModuleFromPosition(  
-   ULONG32                  ulAppDomainID,  
-   GUID                     guidModule,  
-   IDebugDocumentPosition2* pDocPos,  
-   BOOL                     fStatmentOnly,  
-   IEnumDebugAddresses**    ppEnumBegAddresses,  
-   IEnumDebugAddresses**    ppEnumEndAddresses  
+   ULONG32                  ulAppDomainID,  
+   GUID                     guidModule,  
+   IDebugDocumentPosition2* pDocPos,  
+   BOOL                     fStatmentOnly,  
+   IEnumDebugAddresses**    ppEnumBegAddresses,  
+   IEnumDebugAddresses**    ppEnumEndAddresses  
 );  
 ```  
   
 ```  
 [C#]  
 int GetAddressesInModuleFromPosition(  
-   uint                    ulAppDomainID,  
-   Guid                    guidModule,  
-   IDebugDocumentPosition2 pDocPos,  
-   bool                    fStatmentOnly,  
-   out IEnumDebugAddresses ppEnumBegAddresses,  
-   out IEnumDebugAddresses ppEnumEndAddresses  
+   uint                    ulAppDomainID,  
+   Guid                    guidModule,  
+   IDebugDocumentPosition2 pDocPos,  
+   bool                    fStatmentOnly,  
+   out IEnumDebugAddresses ppEnumBegAddresses,  
+   out IEnumDebugAddresses ppEnumEndAddresses  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- \[in\] 응용 프로그램 도메인 식별자입니다.  
+ [in] Application domain identifier.  
   
  `guidModule`  
- \[in\] 모듈의 고유 식별자입니다.  
+ [in] Unique identifier of the module.  
   
  `pDocPos`  
- \[in\] 문서 위치입니다.  
+ [in] The document position.  
   
  `fStatmentOnly`  
- \[in\] 경우 `TRUE`, 디버그 주소 단일 문으로 제한 됩니다.  
+ [in] If `TRUE`, limits the debug addresses to a single statement.  
   
  `ppEnumBegAddresses`  
- \[out\] 이 문 또는 선으로 연결 된 디버그 시작 주소에 대 한 열거자를 반환 합니다.  
+ [out] Returns an enumerator for the starting debug addresses that are associated with this statement or line.  
   
  `ppEnumEndAddresses`  
- \[out\] 이 문 또는 선으로 연결 된 디버그 끝 주소에 대 한 열거자를 반환 합니다.  
+ [out] Returns an enumerator for the ending debug addresses that are associated with this statement or line.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 예제  
- 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CDebugSymbolProvider** 를 노출 하는 개체는 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) 인터페이스.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::GetAddressesInModuleFromPosition(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -222,5 +239,5 @@ Error:
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

@@ -1,64 +1,81 @@
 ---
-title: "IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetAttributedClassesForLanguage"
-  - "IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage"
+title: IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetAttributedClassesForLanguage
+- IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
 ms.assetid: e5b1b8b6-52a6-4ade-9a36-644abfa9f4b2
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0868998a43c48bc985c4801deddcf089c73f01bf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-지정한 프로그래밍 언어로 구현 된 클래스에 지정 된 특성을 검색 합니다.  
+---
+# <a name="idebugcomplussymbolprovidergetattributedclassesforlanguage"></a>IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
+Retrieves the classes with the specified attribute that are implemented in the specified programming language.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 [C++]  
 HRESULT GetAttributedClassesForLanguage (  
-   GUID               guidLanguage,  
-   LPOLESTR           pstrAttribute,  
-   IEnumDebugFields** ppEnum  
+   GUID               guidLanguage,  
+   LPOLESTR           pstrAttribute,  
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
 ```  
 [C#]  
 int GetAttributedClassesForLanguage (  
-   Guid                 guidLanguage,  
-   string               pstrAttribute,  
-   out IEnumDebugFields ppEnum  
+   Guid                 guidLanguage,  
+   string               pstrAttribute,  
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `guidLanguage`  
- \[in\] 언어에 대 한 고유 식별자입니다.  
+ [in] Unique identifier for the language.  
   
  `pstrAttribute`  
- \[in\] 특성 문자열입니다.  
+ [in] The attribute string.  
   
  `ppEnum`  
- \[out\] 특성 클래스의 열거형을 반환 합니다.  
+ [out] Returns an enumeration of the attribute classes.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 예제  
- 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CDebugSymbolProvider** 를 노출 하는 개체는 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) 인터페이스.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::GetAttributedClassesForLanguage(  
     GUID guidLanguage,  
     __in_z LPOLESTR pstrAttribute,  
@@ -186,5 +203,5 @@ Error:
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
