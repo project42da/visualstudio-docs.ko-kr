@@ -1,11 +1,11 @@
 ---
-title: "Visual Studio Feedback Client 2017 작업 및 구성 요소 ID | Microsoft Docs"
-description: "Visual Studio 작업 및 구성 요소 ID를 사용하여 Visual Studio Team Services 또는 Team Foundation Server에 대한 풍부한 피드백을 제공할 수 있습니다."
+title: Visual Studio Feedback Client 2017 workload and component IDs | Microsoft Docs
+description: Use Visual Studio workload and component IDs to provide rich feedback for Visual Studio Team Services or Team Foundation Server
 keywords: 
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 08/09/2017
+ms.date: 08/30/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -31,52 +31,52 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 5d9a1cd072ce56e0695240febdaff6fe6aa3f12f
+ms.translationtype: HT
+ms.sourcegitcommit: 96018963278cd1d53b226473baade41da1e98111
+ms.openlocfilehash: 9bc2b7440f61e4940b4ef0b1396724a716f34e84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 
-# <a name="visual-studio-feedback-client-2017-component-directory"></a>Visual Studio Feedback Client 2017 구성 요소 디렉터리
+# <a name="visual-studio-feedback-client-2017-component-directory"></a>Visual Studio Feedback Client 2017 component directory
 
-이 페이지의 표에는 명령줄을 사용하여 Visual Studio를 설치하는 데 사용할 수 있는 ID가 나열되어 있습니다. Visual Studio에 대한 업데이트를 릴리스할 때 추가 구성 요소가 추가될 것입니다.
+The tables on this page list the IDs that you can use to install Visual Studio by using the command line. Note that we will add additional components as we release updates to Visual Studio.
 
-또한 이 페이지에 대해 다음 사항에 유의하세요.
+Also note the following about the page:
 
-* 각 작업에는 고유한 섹션 및 작업 ID와 해당 작업에 사용할 수 있는 구성 요소 표가 있습니다.
-* 기본적으로 **필수** 구성 요소는 작업을 설치할 때 설치됩니다. 원하는 경우 **권장** 및 **선택적** 구성 요소를 설치할 수도 있습니다.
-* 작업과 관련이 없는 추가 구성 요소를 나열하는 섹션도 추가했습니다.
+* Each workload has its own section, followed by the workload ID and a table of the components that are available for the workload.
+* By default, the **Required** components will be installed when you install the workload. If you choose to, you can also install the **Recommended** and **Optional** components.
+* We've also added a section that lists the additional components that are not affiliated with any workload.
 
-이러한 ID를 사용하는 방법에 대한 자세한 내용은 [명령줄 매개 변수를 사용하여 Visual Studio 2017 설치](use-command-line-parameters-to-install-visual-studio.md) 페이지를 참조하세요. 다른 제품의 작업 및 구성 요소 ID 목록은 [Visual Studio 2017 작업 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요.
+For more information about how to use these IDs, see [Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) page. And, for a list of workload and component IDs for other products, see [Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md) page.
 
 ## <a name="feedback-client"></a>Feedback Client
 
 **ID:** Microsoft.VisualStudio.Workload.FeedbackClient
 
-**설명:** 피드백 클라이언트를 사용하면 이해 관계자가 Visual Studio Team Services 또는 Team Foundation Server에 대한 풍부한 피드백을 제공할 수 있습니다.
+**Description:** Feedback client allows Stakeholders to provide rich feedback for Visual Studio Team Services or Team Foundation Server.
 
-### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
+### <a name="components-included-by-this-workload"></a>Components included by this workload
 
-구성 요소 ID | 이름 | 버전 | 종속성 유형
+Component ID | Name | Version | Dependency type
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26208.0 | 필수
+Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26711.1 | Required
 
-## <a name="unaffiliated-components"></a>독립적 구성 요소
+## <a name="unaffiliated-components"></a>Unaffiliated components
 
-이러한 구성 요소는 작업에 포함되지 않지만 개별 구성 요소로 선택할 수 있습니다.
+These are components that are not included with any workload, but may be selected as an individual component.
 
-구성 요소 ID | 이름 | 버전
+Component ID | Name | Version
 --- | --- | ---
-해당 없음 | 해당 없음 | 해당 없음
+n/a | n/a | n/a
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>See also
 
-* [Visual Studio 작업 및 구성 요소 ID](workload-and-component-ids.md)
-* [Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
-* [명령줄 매개 변수를 사용하여 Visual Studio 설치](use-command-line-parameters-to-install-visual-studio.md)
-  * [명령줄 매개 변수 예](command-line-parameter-examples.md)
-* [Visual Studio의 오프라인 설치 만들기](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio workload and component IDs](workload-and-component-ids.md)
+* [Visual Studio administrator guide](visual-studio-administrator-guide.md)
+* [Use command-line parameters to install Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+  * [Command-line parameter examples](command-line-parameter-examples.md)
+* [Create an offline installation of Visual Studio](create-an-offline-installation-of-visual-studio.md)
 
