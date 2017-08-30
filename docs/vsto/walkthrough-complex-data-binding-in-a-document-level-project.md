@@ -1,233 +1,236 @@
 ---
-title: "연습: 문서 수준 프로젝트의 복합 데이터 바인딩"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "복합 데이터[Visual Studio에서 Office 개발]"
-  - "데이터[Visual Studio에서 Office 개발], 데이터 바인딩"
-  - "데이터 바인딩[Visual Studio에서 Office 개발], 여러 열"
-  - "여러 열 데이터 바인딩[Visual Studio에서 Office 개발]"
+title: 'Walkthrough: Complex Data Binding in a Document-Level Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Office development in Visual Studio], binding data
+- complex data [Office development in Visual Studio]
+- multiple column data binding [Office development in Visual Studio]
+- data binding [Office development in Visual Studio], multiple columns
 ms.assetid: 32ffad3d-fba4-476a-99b8-ef440434f4e1
 caps.latest.revision: 50
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 49
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: eabb6c71606a980cb0056bd844e93cde6c3a746e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 문서 수준 프로젝트의 복합 데이터 바인딩
-  이 연습에서는 문서 수준 프로젝트의 복합 데이터 바인딩에 대한 기본적인 사항을 보여 줍니다.  Microsoft Office Excel 워크시트의 여러 셀을 Northwind SQL Server 데이터베이스의 필드에 바인딩할 수 있습니다.  
+# <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>Walkthrough: Complex Data Binding in a Document-Level Project
+  This walkthrough demonstrates the basics of complex data binding in a document-level project. You can bind multiple cells in a Microsoft Office Excel worksheet to fields in the Northwind SQL Server database.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   통합 문서 프로젝트에 데이터 추가  
+-   Adding a data source to your workbook project.  
   
--   워크시트에 데이터 바인딩된 컨트롤 추가  
+-   Adding data-bound controls to a worksheet.  
   
--   데이터 변경 내용을 데이터베이스에 다시 저장  
+-   Saving data changes back to the database.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] 또는 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
--   Northwind SQL Server 샘플 데이터베이스가 있는 서버에 액세스할 수 있어야 합니다.  
+-   Access to a server with the Northwind SQL Server sample database.  
   
--   SQL Server 데이터베이스에서 읽고 쓰기 위한 권한이 있어야 합니다.  
+-   Permissions to read from and write to the SQL Server database.  
   
-## 새 프로젝트 만들기  
- 첫 번째 단계는 Excel 통합 문서 프로젝트 만들기입니다.  
+## <a name="creating-a-new-project"></a>Creating a New Project  
+ The first step is to create an Excel workbook project.  
   
-#### 새 프로젝트를 만들려면  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  **My Complex Data Binding**이라는 이름의 Excel 통합 문서 프로젝트를 만듭니다.  마법사에서 **새 문서 만들기**를 선택합니다.  
+1.  Create an Excel workbook project with the name **My Complex Data Binding**. In the wizard, select **Create a new document**.  
   
-     자세한 내용은 [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하십시오.  
+     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Visual Studio의 디자이너에 새 Excel 통합 문서가 열리고 My Complex Data Binding 프로젝트가 **솔루션 탐색기**에 추가됩니다.  
+     Visual Studio opens the new Excel workbook in the designer and adds the **My Complex Data Binding** project to **Solution Explorer**.  
   
-## 데이터 소스 만들기  
- **데이터 소스** 창을 사용하여 형식화된 데이터 집합을 프로젝트에 추가합니다.  
+## <a name="creating-the-data-source"></a>Creating the Data Source  
+ Use the **Data Sources** window to add a typed dataset to your project.  
   
-#### 데이터 소스 만들기  
+#### <a name="to-create-the-data-source"></a>To create the data source  
   
-1.  경우는  **데이터 원본** 창이 표시 되지 않는,이, 메뉴 표시줄에서 선택 표시  **보기**,  **기타 Windows**,  **데이터 원본**.  
+1.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
   
-2.  선택  **새 데이터 소스 추가** 시작 하는  **데이터 소스 구성 마법사**.  
+2.  Choose **Add New Data Source** to start the **Data Source Configuration Wizard**.  
   
-3.  **데이터베이스**를 선택하고 **다음**을 클릭합니다.  
+3.  Select **Database** and then click **Next**.  
   
-4.  Northwind 샘플 SQL Server 데이터베이스에 대한 데이터 연결을 선택하거나 **새 연결** 단추를 사용하여 새 연결을 추가합니다.  
+4.  Select a data connection to the Northwind sample SQL Server database, or add a new connection by using the **New Connection** button.  
   
-5.  연결을 선택하거나 만든 후 **다음**을 클릭합니다.  
+5.  After a connection has been selected or created, click **Next**.  
   
-6.  연결을 저장하는 옵션이 선택되어 있는 경우 선택을 취소하고 **다음**을 클릭합니다.  
+6.  Clear the option to save the connection if it is selected, and then click **Next**.  
   
-7.  **데이터베이스 개체** 창에서 **테이블** 노드를 확장합니다.  
+7.  Expand the **Tables** node in the **Database objects** window.  
   
-8.  **Employees** 테이블 옆에 있는 확인란을 선택합니다.  
+8.  Select the check box next to the **Employees** table.  
   
-9. **마침**을 클릭합니다.  
+9. Click **Finish**.  
   
- 마법사에서 **Employees** 테이블이 **데이터 소스** 창에 추가됩니다.  **솔루션 탐색기**에 표시되는 프로젝트에 형식화된 데이터 집합도 추가됩니다.  
+ The wizard adds the **Employees** table to the **Data Sources** window. It also adds a typed dataset to your project that is visible in **Solution Explorer**.  
   
-## 워크시트에 컨트롤 추가  
- 통합 문서가 열리면 워크시트에 **Employees** 테이블이 표시됩니다.  사용자는 데이터를 변경하고 단추를 클릭하여 해당 변경 내용을 다시 데이터베이스에 다시 저장할 수 있습니다.  
+## <a name="adding-controls-to-the-worksheet"></a>Adding Controls to the Worksheet  
+ A worksheet will display the **Employees** table when the workbook is opened. Users will be able to make changes to the data and then save those changes back to the database by clicking a button.  
   
- 워크시트를 테이블에 자동으로 바인딩하려면 **데이터 소스** 창에서 워크시트에 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤을 추가합니다.  사용자가 변경 내용을 저장할 수 있도록 하려면 **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 추가합니다.  
+ To bind the worksheet to the table automatically, you can add a <xref:Microsoft.Office.Tools.Excel.ListObject> control to the worksheet from the **Data Sources** window. To give the user the option to save changes, add a <xref:System.Windows.Forms.Button> control from the **Toolbox**.  
   
-#### 목록 개체를 추가하려면  
+#### <a name="to-add-a-list-object"></a>To add a list object  
   
-1.  확인은  **내 복잡 한 데이터 Binding.xlsx** 통합 문서가 Visual Studio 디자이너에 열려 있는와  **Sheet1** 표시 합니다.  
+1.  Verify that the **My Complex Data Binding.xlsx** workbook is open in the Visual Studio designer, with **Sheet1** displayed.  
   
-2.  **데이터 소스** 창을 열고 **Employees** 노드를 선택합니다.  
+2.  Open the **Data Sources** window and select the **Employees** node.  
   
-3.  드롭다운 화살표가 나타나면 이 화살표를 클릭합니다.  
+3.  Click the drop-down arrow that appears.  
   
-4.  드롭다운 목록에서 **ListObject**를 선택합니다.  
+4.  Select **ListObject** in the drop-down list.  
   
-5.  **Employees** 테이블을 **A6** 셀에 끌어 놓습니다.  
+5.  Drag the **Employees** table to cell **A6**.  
   
-     `EmployeesListObject`라는 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤이 셀 **A6**에 작성됩니다.  이와 함께 `EmployeesBindingSource`라는 <xref:System.Windows.Forms.BindingSource>, 테이블 어댑터 및 <xref:System.Data.DataSet> 인스턴스가 프로젝트에 추가됩니다.  컨트롤이 <xref:System.Windows.Forms.BindingSource>에 바인딩되고, 이는 다시 <xref:System.Data.DataSet> 인스턴스에 바인딩됩니다.  
+     A <xref:Microsoft.Office.Tools.Excel.ListObject> control named `EmployeesListObject` is created in cell **A6**. At the same time, a <xref:System.Windows.Forms.BindingSource> named `EmployeesBindingSource`, a table adapter, and a <xref:System.Data.DataSet> instance are added to the project. The control is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the <xref:System.Data.DataSet> instance.  
   
-#### 단추를 추가하려면  
+#### <a name="to-add-a-button"></a>To add a button  
   
-1.  **도구 상자**의 **공용 컨트롤** 탭에서 <xref:System.Windows.Forms.Button> 컨트롤을 워크시트의 셀 **A4**에 추가합니다.  
+1.  From the **Common Controls** tab of the **Toolbox**, add a <xref:System.Windows.Forms.Button> control to cell **A4** of the worksheet.  
   
- 다음 단계에서는 워크시트가 열릴 때 단추에 텍스트를 추가합니다.  
+ The next step is to add text to the button when the worksheet opens.  
   
-## 컨트롤 초기화  
- <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> 이벤트 처리기에서 단추에 텍스트를 추가합니다.  
+## <a name="initializing-the-control"></a>Initializing the Control  
+ Add text to the button in the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event handler.  
   
-#### 컨트롤을 초기화하려면  
+#### <a name="to-initialize-the-control"></a>To initialize the control  
   
-1.  **솔루션 탐색기**에서 마우스 오른쪽 단추로 **Sheet1.vb** 또는 **Sheet1.cs**를 클릭한 다음 바로 가기 메뉴에서 **코드 보기**를 클릭합니다.  
+1.  In **Solution Explorer**, right-click **Sheet1.vb** or **Sheet1.cs**, and then click **View Code** on the shortcut menu.  
   
-2.  `Sheet1_Startup` 메서드에 다음 코드를 추가하여 `button`의 텍스트를 설정합니다.  
+2.  Add the following code to the `Sheet1_Startup` method to set the text for the b`utton`.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#8](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet3.cs#8)]
-     [!code-vb[Trin_VstcoreDataExcel#8](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet3.vb#8)]  
+     [!code-csharp[Trin_VstcoreDataExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#8)]  [!code-vb[Trin_VstcoreDataExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#8)]  
   
-3.  C\#의 경우에만 <xref:System.Windows.Forms.Control.Click> 이벤트에 대한 이벤트 처리기를 `Sheet1_Startup` 메서드에 추가합니다.  
+3.  For C# only, add an event handler for the <xref:System.Windows.Forms.Control.Click> event to the `Sheet1_Startup` method.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#9](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet3.cs#9)]  
+     [!code-csharp[Trin_VstcoreDataExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#9)]  
   
- 이제 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트를 처리할 코드를 추가합니다.  
+ Now add code to handle the <xref:System.Windows.Forms.Control.Click> event of the button.  
   
-## 데이터베이스에 변경 내용 저장  
- 데이터에 대한 모든 변경 내용은 이를 데이터베이스에 다시 명시적으로 저장하지 않는 한 로컬 데이터 집합에만 적용됩니다.  
+## <a name="saving-changes-to-the-database"></a>Saving Changes to the Database  
+ Any changes have been made to the data exist only in the local dataset until they are explicitly saved back to the database.  
   
-#### 데이터베이스에 변경 내용을 저장하려면  
+#### <a name="to-save-changes-to-the-database"></a>To save changes to the database  
   
-1.  `button`의 <xref:System.Windows.Forms.Control.Click> 이벤트에 대한 이벤트 처리기를 추가하고 다음 코드를 추가하여 데이터 집합의 모든 변경 내용을 데이터베이스에 다시 커밋할 수 있도록 합니다.  
+1.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of the b`utton`, and add the following code to commit all changes that have been made in the dataset back to the database.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet3.cs#10)]
-     [!code-vb[Trin_VstcoreDataExcel#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet3.vb#10)]  
+     [!code-csharp[Trin_VstcoreDataExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#10)]  [!code-vb[Trin_VstcoreDataExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#10)]  
   
-## 응용 프로그램 테스트  
- 이제 통합 문서를 테스트하여 데이터가 예상대로 표시되는지 확인하고 목록 개체에서 데이터를 조작 가능한지 확인할 수 있습니다.  
+## <a name="testing-the-application"></a>Testing the Application  
+ Now you can test your workbook to verify that the data appears as expected, and that you can manipulate the data in the list object.  
   
-#### 데이터 바인딩을 테스트하려면  
+#### <a name="to-test-the-data-binding"></a>To test the data binding  
   
--   F5 키를 누릅니다.  
+-   Press F5.  
   
-     통합 문서를 열 때 **Employees** 테이블의 데이터로 목록 개체가 채워지는지 확인합니다.  
+     Verify that when the workbook opens, the list object is filled with data from the **Employees** table.  
   
-#### 데이터를 수정하려면  
+#### <a name="to-modify-data"></a>To modify data  
   
-1.  셀 **B7**을 클릭합니다. 이 셀에는 **Davolio**라는 이름이 들어 있어야 합니다.  
+1.  Click cell **B7**, which should contain the name **Davolio**.  
   
-2.  Anderson이라는 이름을 입력한 다음 Enter 키를 누릅니다.  
+2.  Type the name **Anderson**, and then press ENTER.  
   
-#### 열 머리글을 수정하려면  
+#### <a name="to-modify-a-column-header"></a>To modify a column header  
   
-1.  **LastName**이라는 열 머리글이 들어 있는 셀을 클릭합니다.  
+1.  Click the cell that contains the column header **LastName**.  
   
-2.  두 단어 사이에 공백을 추가하여 Last Name을 입력한 다음 Enter 키를 누릅니다.  
+2.  Type **Last Name**, including a space between the two words, and then press ENTER.  
   
-#### 데이터를 저장하려면  
+#### <a name="to-save-data"></a>To save data  
   
-1.  워크시트에서 **저장**을 클릭합니다.  
+1.  Click **Save** on the worksheet.  
   
-2.  Excel을 종료합니다.  변경 내용을 저장할지 묻는 메시지가 나타나면 **아니요**를 클릭합니다.  
+2.  Exit Excel. Click **No** when prompted to save the changes you made.  
   
-3.  F5 키를 눌러 프로젝트를 다시 실행합니다.  
+3.  Press F5 to run the project again.  
   
-     목록 개체가 **Employees** 테이블의 데이터로 채워집니다.  
+     The list object is filled with data from the **Employees** table.  
   
-4.  셀 **B7**의 이름이 여전히 Anderson인 것을 확인할 수 있습니다. 이 이름은 이전에 변경하여 데이터베이스에 다시 저장한 데이터입니다.  열 머리글은 단어 사이에 공백이 없는 원래 형태인 **LastName**으로 다시 변경되었습니다. 열 머리글은 데이터베이스에 바인딩되어 있지 않고 워크시트에 대한 변경 내용을 저장하지 않았기 때문입니다.  
+4.  Notice that the name in cell **B7** is still **Anderson**, which is the data change that you made and saved back to the database. The column header **LastName** has changed back to its original form with no space, because the column header is not bound to the database and you did not save the changes you made to the worksheet.  
   
-#### 새 행을 추가하려면  
+#### <a name="to-add-new-rows"></a>To add new rows  
   
-1.  목록 개체 안의 셀을 선택합니다.  
+1.  Select a cell inside the list object.  
   
-     목록 아래쪽에 새 행이 나타나고 새 행의 첫 번째 셀에 별표\(**\***\)가 표시됩니다.  
+     A new row appears at the bottom of the list, with an asterisk (**\***) in the first cell of the new row.  
   
-2.  빈 행에 다음 정보를 입력합니다.  
+2.  Add the following information in the empty row.  
   
-    |EmployeeID|LastName|FirstName|제목|  
-    |----------------|--------------|---------------|--------|  
+    |EmployeeID|LastName|FirstName|Title|  
+    |----------------|--------------|---------------|-----------|  
     |10|Ito|Shu|Sales Manager|  
   
-#### 행을 삭제하려면  
+#### <a name="to-delete-rows"></a>To delete rows  
   
--   워크시트의 가장 왼쪽에 있는 번호 16\(16행\)을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
+-   Right-click the number 16 (row 16) on the far left side of the worksheet, and then click **Delete**.  
   
-#### 목록의 행을 정렬하려면  
+#### <a name="to-sort-the-rows-in-the-list"></a>To sort the rows in the List  
   
-1.  목록 안의 셀을 선택합니다.  
+1.  Select a cell inside the list.  
   
-     각 열 머리글에 화살표 단추가 나타납니다.  
+     Arrow buttons appear in each column header.  
   
-2.  **Last Name** 열 머리글의 화살표 단추를 클릭합니다.  
+2.  Click the arrow button in the **Last Name** column header.  
   
-3.  **오름차순 정렬**을 클릭합니다.  
+3.  Click **Sort Ascending**.  
   
-     각 행이 성을 기준으로 알파벳 순서에 따라 정렬됩니다.  
+     The rows are sorted alphabetically by last names.  
   
-#### 정보를 필터링하려면  
+#### <a name="to-filter-information"></a>To filter information  
   
-1.  목록 안의 셀을 선택합니다.  
+1.  Select a cell inside the list.  
   
-2.  **Title** 열 머리글의 화살표 단추를 클릭합니다.  
+2.  Click the arrow button in the **Title** column header.  
   
-3.  **Sales Representative**를 클릭합니다.  
+3.  Click **Sales Representative**.  
   
-     **Title** 열에 **Sales Representative**가 있는 행만 목록에 표시됩니다.  
+     The list shows only those rows that have **Sales Representative** in the **Title** column.  
   
-4.  **Title** 열 머리글의 화살표 단추를 다시 클릭합니다.  
+4.  Click the arrow button in the **Title** column header again.  
   
-5.  **\(모두\)**를 클릭합니다.  
+5.  Click **(All)**.  
   
-     필터링이 제거되고 모든 행이 나타납니다.  
+     Filtering is removed and all the rows appear.  
   
-## 다음 단계  
- 이 연습에서는 데이터베이스의 테이블을 목록 개체에 바인딩하는 기본적인 방법을 보여 줍니다.  다음에 수행할 수 있는 작업은 다음과 같습니다.  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough shows the basics of binding a table in a database to a list object. Here are some tasks that might come next:  
   
--   오프라인으로 사용할 수 있도록 데이터를 캐시합니다.  자세한 내용은 [방법: 오프라인이나 서버에서 사용할 데이터 캐싱](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)을 참조하십시오.  
+-   Cache the data so that it can be used offline. For more information, see [How to: Cache Data for Use Offline or on a Server](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).  
   
--   솔루션을 배포합니다.  자세한 내용은 [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)을 참조하십시오.  
+-   Deploy the solution. For more information, see [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
   
--   필드와 테이블 사이에 마스터\/세부 항목 관계를 만듭니다.  자세한 내용은 [연습: 캐시된 데이터 집합을 사용하여 마스터-세부 관계 만들기](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)을 참조하십시오.  
+-   Create a master/detail relation between a field and a table. For more information, see [Walkthrough: Creating a Master Detail Relation Using a Cached Dataset](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md).  
   
-## 참고 항목  
- [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [Office 솔루션의 데이터](../vsto/data-in-office-solutions.md)   
- [연습: 문서 수준 프로젝트의 단순 데이터 바인딩](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  
+## <a name="see-also"></a>See Also  
+ [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [Data in Office Solutions](../vsto/data-in-office-solutions.md)   
+ [Walkthrough: Simple Data Binding in a Document-Level Project](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  
   
   

@@ -1,63 +1,66 @@
 ---
-title: "방법: 프로그래밍 방식으로 코드에서 워크시트 범위 참조"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Excel[Visual Studio에서 Office 개발], 워크시트 범위 참조"
-  - "범위, 참조"
-  - "워크시트 범위 참조"
-  - "워크시트, 범위 참조"
+title: 'How to: Programmatically Refer to Worksheet Ranges in Code | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ranges, referring to
+- worksheets, referring to ranges
+- referring to worksheet ranges
+- Excel [Office development in Visual Studio], referring to worksheet ranges
 ms.assetid: 113633b8-426a-4d02-b6b8-d459d1f110ea
 caps.latest.revision: 46
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 46
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 1ae11cd66e5e916ca4e95c740d811b4b42d684f1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 코드에서 워크시트 범위 참조
-  <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤이나 네이티브 Excel 범위 개체의 콘텐츠는 비슷한 프로세스를 사용하여 참조할 수 있습니다.  
+# <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>How to: Programmatically Refer to Worksheet Ranges in Code
+  You use a similar process to refer to the contents of a <xref:Microsoft.Office.Tools.Excel.NamedRange> control or a native Excel range object.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## NamedRange 컨트롤 사용  
- 다음 예제에서는 워크시트에 <xref:Microsoft.Office.Tools.Excel.NamedRange>를 추가한 다음 해당 범위의 셀에 텍스트를 추가합니다.  
+## <a name="using-a-namedrange-control"></a>Using a NamedRange Control  
+ The following example adds a <xref:Microsoft.Office.Tools.Excel.NamedRange> to a worksheet and then adds text to the cell in the range.  
   
-#### NamedRange 컨트롤을 참조하려면  
+#### <a name="to-refer-to-a-namedrange-control"></a>To refer to a NamedRange control  
   
-1.  <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤의 <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> 속성에 문자열을 할당합니다.  이 코드는 `ThisWorkbook` 클래스가 아닌 시트 클래스에 배치해야 합니다.  
+1.  Assign a string to the <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> property of the <xref:Microsoft.Office.Tools.Excel.NamedRange> control. This code must be placed in a sheet class, not in the `ThisWorkbook` class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#46](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#46)]
-     [!code-vb[Trin_VstcoreExcelAutomation#46](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#46)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#46)]  [!code-vb[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#46)]  
   
-## 네이티브 Excel 범위 사용  
- 다음 예제에서는 워크시트에 네이티브 Excel 범위를 추가한 다음 해당 범위의 셀에 텍스트를 추가합니다.  
+## <a name="using-native-excel-ranges"></a>Using Native Excel Ranges  
+ The following example adds a native Excel range to a worksheet and then adds text to the cell in the range.  
   
-#### 네이티브 범위 개체를 참조하려면  
+#### <a name="to-refer-to-a-native-range-object"></a>To refer to a native range object  
   
-1.  범위의 <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> 속성에 문자열을 할당합니다.  
+1.  Assign a string to the <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> property of the range.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#47](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#47)]
-     [!code-vb[Trin_VstcoreExcelAutomation#47](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#47)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#47)]  [!code-vb[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#47)]  
   
-## 참고 항목  
- [범위 작업](../vsto/working-with-ranges.md)   
- [방법: 프로그래밍 방식으로 워크시트에서 맞춤법 검사](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)   
- [방법: 프로그래밍 방식으로 통합 문서에서 일정 범위에 스타일 적용](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
- [방법: 프로그래밍 방식으로 증분 변경되는 데이터를 사용한 범위 자동 입력](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)   
- [방법: 프로그래밍 방식으로 워크시트 범위에서 텍스트 검색](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)   
- [NamedRange 컨트롤](../vsto/namedrange-control.md)   
- [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
- [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Ranges](../vsto/working-with-ranges.md)   
+ [How to: Programmatically Check Spelling in Worksheets](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)   
+ [How to: Programmatically Apply Styles to Ranges in Workbooks](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
+ [How to: Programmatically Automatically Fill Ranges with Incrementally Changing Data](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)   
+ [How to: Programmatically Search for Text in Worksheet Ranges](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

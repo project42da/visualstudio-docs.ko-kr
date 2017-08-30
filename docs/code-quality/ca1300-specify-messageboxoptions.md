@@ -1,55 +1,71 @@
 ---
-title: "CA1300: MessageBoxOptions를 지정하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SpecifyMessageBoxOptions"
-  - "CA1300"
-helpviewer_keywords: 
-  - "SpecifyMessageBoxOptions"
-  - "CA1300"
+title: 'CA1300: Specify MessageBoxOptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SpecifyMessageBoxOptions
+- CA1300
+helpviewer_keywords:
+- SpecifyMessageBoxOptions
+- CA1300
 ms.assetid: 9357a724-026e-4a3d-a03a-f14635064ec6
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1300: MessageBoxOptions를 지정하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 7d4799fa48ea21c98603ce9aee5de1353618960c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1300-specify-messageboxoptions"></a>CA1300: Specify MessageBoxOptions
 |||  
 |-|-|  
 |TypeName|SpecifyMessageBoxOptions|  
 |CheckId|CA1300|  
-|범주|Microsoft.Globalization|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Globalization|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- 메서드가 <xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName> 인수를 사용하지 않는 <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> 메서드의 오버로드를 호출합니다.  
+## <a name="cause"></a>Cause  
+ A method calls an overload of the <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> method that does not take a <xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName> argument.  
   
-## 규칙 설명  
- 오른쪽에서 왼쪽으로 읽기 순서를 사용하는 문화권에 대해 메시지 상자를 올바로 표시하려면 <xref:System.Windows.Forms.MessageBoxOptions> 열거형의 <xref:System.Windows.Forms.MessageBoxOptions> 및 <xref:System.Windows.Forms.MessageBoxOptions> 멤버를 <xref:System.Windows.Forms.MessageBox.Show%2A> 메서드로 전달해야 합니다.  오른쪽에서 왼쪽으로 읽기 순서를 사용할지 여부를 결정하려면 포함하는 컨트롤의 <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName> 속성을 검사하십시오.  
+## <a name="rule-description"></a>Rule Description  
+ To display a message box correctly for cultures that use a right-to-left reading order, the <xref:System.Windows.Forms.MessageBoxOptions> and <xref:System.Windows.Forms.MessageBoxOptions> members of the <xref:System.Windows.Forms.MessageBoxOptions> enumeration must be passed to the <xref:System.Windows.Forms.MessageBox.Show%2A> method. Examine the <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName> property of the containing control to determine whether to use a right-to-left reading order.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 <xref:System.Windows.Forms.MessageBoxOptions> 인수를 사용하는 <xref:System.Windows.Forms.MessageBox.Show%2A> 메서드의 오버로드를 호출합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, call an overload of the <xref:System.Windows.Forms.MessageBox.Show%2A> method that takes a <xref:System.Windows.Forms.MessageBoxOptions> argument.  
   
-## 경고를 표시하지 않는 경우  
- 오른쪽에서 왼쪽으로 읽기 순서를 사용하는 문화권에 대해 코드 라이브러리가 지역화되지 않을 경우에는 이 규칙에서 경고를 표시하지 않아도 안전합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule when the code library will not be localized for a culture that uses a right-to-left reading order.  
   
-## 예제  
- 다음 예제에서는 문화권의 읽기 순서에 적합한 옵션이 있는 메시지 상자를 표시하는 메서드를 보여 줍니다.  예제를 빌드하려면 리소스 파일이 필요합니다. 리소스 파일은 표시되지 않습니다.  예제에 있는 주석을 따라 리소스 파일 없이 예제를 빌드하고 오른쪽에서 왼쪽 기능을 테스트합니다.  
+## <a name="example"></a>Example  
+ The following example shows a method that displays a message box that has options that are appropriate for the reading order of the culture. A resource file, which is not shown, is required to build the example. Follow the comments in the example to build the example without a resource file and to test the right-to-left feature.  
   
- [!code-vb[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/VisualBasic/ca1300-specify-messageboxoptions_1.vb)]
- [!code-cs[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/CSharp/ca1300-specify-messageboxoptions_1.cs)]  
+ [!code-vb[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/VisualBasic/ca1300-specify-messageboxoptions_1.vb)] [!code-csharp[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/CSharp/ca1300-specify-messageboxoptions_1.cs)]  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  <xref:System.Resources.ResourceManager?displayProperty=fullName>   
- [데스크톱 응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)
+ [Resources in Desktop Apps](/dotnet/framework/resources/index)

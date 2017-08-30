@@ -1,115 +1,115 @@
 ---
-title: "방법: 콘텐츠 컨트롤을 사용하여 문서 부분 보호"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "콘텐츠 컨트롤[Visual Studio에서 Office 개발], 문서 보호"
-  - "문서 보호[Visual Studio에서 Office 개발]"
-  - "GroupContentControl"
-  - "부분 문서 보호[Visual Studio에서 Office 개발]"
-  - "제한된 권한[Visual Studio에서 Office 개발]"
-  - "Word[Visual Studio에서 Office 개발], 부분 문서 보호"
-  - "Word[Visual Studio에서 Office 개발], 제한된 권한"
+title: 'How to: Protect Parts of Documents by Using Content Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- restricted permissions [Office development in Visual Studio]
+- partial document protection [Office development in Visual Studio]
+- content controls [Office development in Visual Studio], protecting documents
+- Word [Office development in Visual Studio], partial document protection
+- document protection [Office development in Visual Studio]
+- Word [Office development in Visual Studio], restricted permissions
+- GroupContentControl
 ms.assetid: 50d7286a-7746-446f-8eef-06ceeadc94d0
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: e12f7b04a28ddfe5bd8a312d08a82e290bb0a9ce
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 콘텐츠 컨트롤을 사용하여 문서 부분 보호
-  문서의 일부를 보호하는 경우 사용자가 문서의 해당 부분에서 내용을 변경하거나 삭제할 수 없습니다.  콘텐츠 컨트롤을 사용하여 Microsoft Office Word 문서 부분을 보호할 수 있는 여러 가지 방법이 있습니다.  
+# <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>How to: Protect Parts of Documents by Using Content Controls
+  When you protect part of a document, you prevent users from changing or deleting the content in that part of the document. There are several ways you can protect parts of a Microsoft Office Word document by using content controls:  
   
--   콘텐츠 컨트롤을 보호할 수 있습니다.  
+-   You can protect a content control.  
   
--   콘텐츠 컨트롤에 없는 문서 부분을 보호할 수 있습니다.  
+-   You can protect a part of a document that is not in a content control.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-##  <a name="EditDeleteControl"></a> 콘텐츠 컨트롤 보호  
- 디자인 타임 또는 런타임에 문서 수준 프로젝트에서 컨트롤의 속성을 설정하여 사용자가 콘텐츠 컨트롤을 편집하거나 삭제하는 것을 방지할 수 있습니다.  
+##  <a name="EditDeleteControl"></a> Protecting a Content Control  
+ You can prevent users from editing or deleting a content control by setting properties of the control in a document-level project at design time or at run time.  
   
- VSTO 추가 기능 프로젝트를 사용하여 런타임에 문서에 추가하는 콘텐츠 컨트롤을 보호할 수도 있습니다.  자세한 내용은 [방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)를 참조하세요.  
+ You can also protect content controls that you add to a document at run time by using a VSTO Add-in project. For more information, see [How to: Add Content Controls to Word Documents](../vsto/how-to-add-content-controls-to-word-documents.md).  
   
-#### 디자인 타임에 콘텐츠 컨트롤을 보호하려면  
+#### <a name="to-protect-a-content-control-at-design-time"></a>To protect a content control at design time  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너에 호스트된 문서에서 보호하려는 콘텐츠 컨트롤을 선택합니다.  
+1.  In the document that is hosted in the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer, select the content control that you want to protect.  
   
-2.  **속성** 창에서 다음 속성 중 하나 또는 둘 다를 설정합니다.  
+2.  In the **Properties** window, set one or both of the following properties:  
   
-    -   사용자가 컨트롤을 편집하지 못하도록 차단하려면 **LockContents**를 **True**로 설정합니다.  
+    -   To prevent users from editing the control, set **LockContents** to **True**.  
   
-    -   사용자가 컨트롤을 삭제하지 못하도록 차단하려면 **LockContentControl**을 **True**로 설정합니다.  
+    -   To prevent users from deleting the control, set **LockContentControl** to **True**.  
   
-3.  **확인**을 클릭합니다.  
+3.  Click **OK**.  
   
-#### 런타임에 콘텐츠 컨트롤을 보호하려면  
+#### <a name="to-protect-a-content-control-at-run-time"></a>To protect a content control at run time  
   
-1.  사용자가 컨트롤을 편집하지 못하도록 차단하려면 콘텐츠 컨트롤의 `LockContents` 속성을 **true**로 설정하고, 사용자가 컨트롤을 삭제하지 못하도록 차단하려면 `LockContentControl` 속성을 **true**로 설정합니다.  
+1.  Set the `LockContents` property of the content control to **true** to prevent users from editing the control, and set the `LockContentControl` property to **true** to prevent users from deleting the control.  
   
-     다음 코드 예제에서는 문서 수준 프로젝트에서 두 가지 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 개체의 <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> 및 <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> 속성을 사용하는 방법을 보여 줍니다.  이 코드를 실행하려면 프로젝트의 `ThisDocument` 클래스에 코드를 추가하고 `ThisDocument_Startup` 이벤트 처리기에서 `AddProtectedContentControls` 메서드를 호출합니다.  
+     The following code example demonstrates using the <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> and <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> properties of two different <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objects in a document-level project. To run this code, add the code to the `ThisDocument` class in your project, and call the `AddProtectedContentControls` method from the `ThisDocument_Startup` event handler.  
   
-     [!code-csharp[Trin_ContentControlHowToProtect#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlHowToProtect/CS/ThisDocument.cs#2)]
-     [!code-vb[Trin_ContentControlHowToProtect#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlHowToProtect/VB/ThisDocument.vb#2)]  
+     [!code-csharp[Trin_ContentControlHowToProtect#2](../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs#2)]  [!code-vb[Trin_ContentControlHowToProtect#2](../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb#2)]  
   
-     다음 코드 예제에서는 VSTO 추가 기능 프로젝트에서 두 가지 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 개체의 <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> 및 <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> 속성을 사용하는 방법을 보여 줍니다.  이 코드를 실행하려면 프로젝트의 `ThisAddIn` 클래스에 코드를 추가하고 `ThisAddIn_Startup` 이벤트 처리기에서 `AddProtectedContentControls` 메서드를 호출합니다.  
+     The following code example demonstrates using the <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> and <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> properties of two different <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objects in a VSTO Add-in project. To run this code, add the code to the `ThisAddIn` class in your project, and call the `AddProtectedContentControls` method from the `ThisAddIn_Startup` event handler.  
   
-     [!code-csharp[Trin_WordAddInDynamicControls#14](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordAddInDynamicControls/CS/ThisAddIn.cs#14)]
-     [!code-vb[Trin_WordAddInDynamicControls#14](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordAddInDynamicControls/VB/ThisAddIn.vb#14)]  
+     [!code-vb[Trin_WordAddInDynamicControls#14](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#14)]  [!code-csharp[Trin_WordAddInDynamicControls#14](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#14)]  
   
-## 콘텐츠 컨트롤에 없는 문서 부분 보호  
- <xref:Microsoft.Office.Tools.Word.GroupContentControl>에 영역을 배치하여 사용자가 문서 영역을 변경하는 것을 방지할 수 있습니다.  이는 다음과 같은 시나리오에서 유용합니다.  
+## <a name="protecting-a-part-of-a-document-that-is-not-in-a-content-control"></a>Protecting a Part of a Document That Is Not in a Content Control  
+ You can prevent users from changing an area of a document by putting the area in a <xref:Microsoft.Office.Tools.Word.GroupContentControl>. This is useful in the following scenarios:  
   
--   콘텐츠 컨트롤을 포함하지 않는 영역을 보호하려고 합니다.  
+-   You want to protect an area that does not contain content controls.  
   
--   이미 콘텐츠 컨트롤을 포함하는 영역을 보호하려고 하지만 텍스트 또는 보호하려는 기타 항목이 콘텐츠 컨트롤에 없습니다.  
+-   You want to protect an area that already contains content controls, but the text or other items that you want to protect are not in the content controls.  
   
 > [!NOTE]  
->  포함된 콘텐츠 컨트롤을 포함하는 <xref:Microsoft.Office.Tools.Word.GroupContentControl>을 만드는 경우 포함된 콘텐츠 컨트롤은 자동으로 보호되지 않습니다.  사용자가 포함된 콘텐츠 컨트롤을 편집하지 못하도록 차단하려면 컨트롤의 **LockContents** 속성을 사용합니다.  
+>  If you create a <xref:Microsoft.Office.Tools.Word.GroupContentControl> that contains embedded content controls, the embedded content controls are not automatically protected. To prevent users from editing an embedded content control, use the **LockContents** property of the control.  
   
-#### 디자인 타임에 문서 영역을 보호하려면  
+#### <a name="to-protect-an-area-of-a-document-at-design-time"></a>To protect an area of a document at design time  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너에 호스트된 문서에서 보호하려는 영역을 선택합니다.  
+1.  In the document that is hosted in the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer, select the area that you want to protect.  
   
-2.  리본에서 **개발자** 탭을 클릭합니다.  
+2.  On the Ribbon, click the **Developer** tab.  
   
     > [!NOTE]  
-    >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다.  자세한 내용은 [방법: 리본 메뉴에 개발 도구 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)를 참조하세요.  
+    >  If the **Developer** tab is not visible, you must first show it. For more information, see [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
   
-3.  **컨트롤** 그룹에서 **그룹** 드롭다운 단추를 클릭한 다음 **그룹**을 클릭합니다.  
+3.  In the **Controls** group, click the **Group** drop-down button, and then click **Group**.  
   
-     보호된 영역을 포함하는 <xref:Microsoft.Office.Tools.Word.GroupContentControl>이 프로젝트의 `ThisDocument` 클래스에 자동으로 생성됩니다.  그룹 컨트롤을 나타내는 테두리는 디자인 타임에만 표시되고 런타임에는 표시되는 테두리가 없습니다.  
+     A <xref:Microsoft.Office.Tools.Word.GroupContentControl> that contains the protected region is automatically generated in the `ThisDocument` class in your project. A border that represents the group control is visible at design time, but there is no visible border at run time.  
   
-#### 런타임에 문서 영역을 보호하려면  
+#### <a name="to-protect-an-area-of-a-document-at-run-time"></a>To protect an area of a document at run time  
   
-1.  보호하려는 영역을 프로그래밍 방식으로 선택하고 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddGroupContentControl%2A> 메서드를 호출하여 <xref:Microsoft.Office.Tools.Word.GroupContentControl>을 만듭니다.  
+1.  Programmatically select the area that you want to protect, and then call the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddGroupContentControl%2A> method to create a <xref:Microsoft.Office.Tools.Word.GroupContentControl>.  
   
-     문서 수준 프로젝트에 대한 다음 코드 예제에서는 문서의 첫 단락에 텍스트를 추가하고, 첫 단락을 선택한 다음 <xref:Microsoft.Office.Tools.Word.GroupContentControl>을 인스턴스화합니다.  이 코드를 실행하려면 프로젝트의 `ThisDocument` 클래스에 코드를 추가하고 `ThisDocument_Startup` 이벤트 처리기에서 `ProtectFirstParagraph` 메서드를 호출합니다.  
+     The following code example for a document-level project adds text to the first paragraph in the document, selects the first paragraph, and then instantiates a <xref:Microsoft.Office.Tools.Word.GroupContentControl>. To run this code, add the code to the `ThisDocument` class in your project, and call the `ProtectFirstParagraph` method from the `ThisDocument_Startup` event handler.  
   
-     [!code-csharp[Trin_ContentControlHowToProtect#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlHowToProtect/CS/ThisDocument.cs#1)]
-     [!code-vb[Trin_ContentControlHowToProtect#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlHowToProtect/VB/ThisDocument.vb#1)]  
+     [!code-csharp[Trin_ContentControlHowToProtect#1](../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs#1)]  [!code-vb[Trin_ContentControlHowToProtect#1](../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb#1)]  
   
-     VSTO 추가 기능 프로젝트에 대한 다음 코드 예제에서는 활성 문서의 첫 단락에 텍스트를 추가하고, 첫 단락을 선택한 다음 <xref:Microsoft.Office.Tools.Word.GroupContentControl>을 인스턴스화합니다.  이 코드를 실행하려면 프로젝트의 `ThisAddIn` 클래스에 코드를 추가하고 `ThisAddIn_Startup` 이벤트 처리기에서 `ProtectFirstParagraph` 메서드를 호출합니다.  
+     The following code example for a VSTO Add-in project adds text to the first paragraph in the active document, selects the first paragraph, and then instantiates a <xref:Microsoft.Office.Tools.Word.GroupContentControl>. To run this code, add the code to the `ThisAddIn` class in your project, and call the `ProtectFirstParagraph` method from the `ThisAddIn_Startup` event handler.  
   
-     [!code-csharp[Trin_WordAddInDynamicControls#15](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordAddInDynamicControls/CS/ThisAddIn.cs#15)]
-     [!code-vb[Trin_WordAddInDynamicControls#15](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordAddInDynamicControls/VB/ThisAddIn.vb#15)]  
+     [!code-vb[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#15)]  [!code-csharp[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#15)]  
   
-## 참고 항목  
- [확장된 개체를 사용하여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
- [콘텐츠 컨트롤](../vsto/content-controls.md)   
- [방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)   
- [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
- [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)  
-  
-  
+## <a name="see-also"></a>See Also  
+ [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md)   
+ [Content Controls](../vsto/content-controls.md)   
+ [How to: Add Content Controls to Word Documents](../vsto/how-to-add-content-controls-to-word-documents.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)  
+   

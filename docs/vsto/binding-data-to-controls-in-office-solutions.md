@@ -1,114 +1,117 @@
 ---
-title: "Office 솔루션의 컨트롤에 데이터 바인딩"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Office 문서[Visual Studio에서 Office 개발], 데이터 연결"
-  - "데이터, 데이터 바인딩"
-  - "데이터 바인딩(data binding)"
-  - "데이터 바인딩, Office 솔루션"
-  - "데이터 바인딩, 컨트롤"
-  - "Office 응용 프로그램[Visual Studio에서 Office 개발], 데이터 바인딩"
-  - "컨트롤, 데이터 바인딩"
+title: Binding Data to Controls in Office Solutions | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office documents [Office development in Visual Studio], connecting to data
+- data, data binding
+- data binding
+- data binding, Office solutions
+- data binding, controls
+- Office applications [Office development in Visual Studio], data binding
+- controls, data binding
 ms.assetid: b6faaed7-df9b-4d78-9863-e515cd5c7ed9
 caps.latest.revision: 70
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 69
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 665747b872ecaa847ee60f693c2e5f3750d4072a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# Office 솔루션의 컨트롤에 데이터 바인딩
-  컨트롤이 자동으로 데이터를 표시할 수 있도록 Windows Forms 컨트롤 및 Microsoft Office Word 문서 또는 Microsoft Office Excel 워크시트의 *호스트 컨트롤*을 데이터 원본에 바인딩할 수 있습니다. 응용 프로그램 수준과 문서 수준 프로젝트 둘 다 데이터를 컨트롤에 바인딩할 수 있습니다.  
+# <a name="binding-data-to-controls-in-office-solutions"></a>Binding Data to Controls in Office Solutions
+  You can bind Windows Forms controls and *host controls* on a Microsoft Office Word document or Microsoft Office Excel worksheet to a data source so the controls automatically display the data. You can bind data to controls in both application-level and document-level projects.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- 호스트 컨트롤은 Word의 콘텐츠 컨트롤 및 Excel의 명명된 범위와 같이 Word 및 Excel 개체 모델에 있는 개체를 확장합니다. 자세한 내용은 [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)을 참조하십시오.  
+ Host controls extend objects that are in the Word and Excel object models, such as content controls in Word and named ranges in Excel. For more information, see [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md).  
   
- Windows Forms와 호스트 컨트롤 모두 데이터 집합 및 데이터 테이블 같은 데이터 원본에 대해 *단순 데이터 바인딩*과 *복합 데이터 바인딩*을 둘 다 지원하는 Windows Forms 데이터 바인딩 모델을 사용합니다. Windows Forms에서 데이터 바인딩 모델에 대한 전체 정보는 [데이터 바인딩 및 Windows Forms](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27)를 참조하세요.  
+ Both Windows Forms and host controls use the Windows Forms data binding model, which supports both *simple data binding* and *complex data binding* to data sources such as datasets and data tables. For complete information about the data binding model in Windows Forms, see [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms).  
   
- ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Excel에서 데이터베이스 데이터 사용](http://go.microsoft.com/fwlink/?LinkID=130287)을 참조하세요.  
+ ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Consume Database Data in Excel?](http://go.microsoft.com/fwlink/?LinkID=130287).  
   
-## 단순 데이터 바인딩  
- 단순 데이터 바인딩은 컨트롤 속성이 데이터 테이블의 값 등 단일 데이터 요소에 바인딩될 때 존재합니다. 예를 들어 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤은 데이터 집합의 필드로 바인딩될 수 있는 <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> 속성을 가집니다. 데이터 집합의 필드가 변경되면 명명된 범위의 값도 변경됩니다.<xref:Microsoft.Office.Tools.Word.XMLNodes> 컨트롤을 제외한 모든 호스트 컨트롤은 단일 데이터 바인딩을 지원합니다.<xref:Microsoft.Office.Tools.Word.XMLNodes> 컨트롤은 컬렉션이므로 데이터 바인딩을 지원하지 않습니다.  
+## <a name="simple-data-binding"></a>Simple Data Binding  
+ Simple data binding exists when a control property is bound to a single data element, such as a value in a data table. For example, the <xref:Microsoft.Office.Tools.Excel.NamedRange> control has a <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> property that can be bound to a field in a dataset. When the field in the dataset changes, the value in the named range also changes. All host controls, except for the <xref:Microsoft.Office.Tools.Word.XMLNodes> control, support simple data binding. The <xref:Microsoft.Office.Tools.Word.XMLNodes> control is a collection, and therefore it does not support data binding.  
   
- 호스트 컨트롤에 대한 단순 데이터 바인딩을 수행하려면 <xref:System.Windows.Forms.Binding>을 해당 컨트롤의 DataBindings 속성에 추가합니다.<xref:System.Windows.Forms.Binding> 개체는 컨트롤의 속성 값과 데이터 요소 값 사이의 단순 바인딩을 나타냅니다.  
+ To perform simple data binding to a host control, add a <xref:System.Windows.Forms.Binding> to the DataBindings property of the control. A <xref:System.Windows.Forms.Binding> object represents the simple binding between a property value of the control and the value of a data element.  
   
- 다음 예제에서는 문서 수준 프로젝트에서 <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> 속성을 데이터 요소에 바인딩하는 방법에 대해 설명합니다.  
+ The following example demonstrates how to bind the <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> property to a data element in a document-level project.  
   
- [!code-csharp[Trin_BindableComponent#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_BindableComponent/CS/Sheet1.cs#4)]
- [!code-vb[Trin_BindableComponent#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_BindableComponent/VB/Sheet1.vb#4)]  
+ [!code-vb[Trin_BindableComponent#4](../vsto/codesnippet/VisualBasic/Trin_BindableComponent/Sheet1.vb#4)] [!code-csharp[Trin_BindableComponent#4](../vsto/codesnippet/CSharp/Trin_BindableComponent/Sheet1.cs#4)]  
   
- 단순 데이터 바인딩을 설명하는 연습은 [연습: 문서 수준 프로젝트의 단순 데이터 바인딩](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)\(문서 수준 프로젝트\) 및 [연습: VSTO 추가 기능 프로젝트의 단순 데이터 바인딩](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)\(VSTO 추가 기능 프로젝트\)를 참조하세요.  
+ For walkthroughs that demonstrates simple data binding, see [Walkthrough: Simple Data Binding in a Document-Level Project](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) for a document-level project and [Walkthrough: Simple Data Binding in VSTO add-in Project](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) for an VSTO Add-in project.  
   
-## 복합 데이터 바인딩  
- 복합 데이터 바인딩은 컨트롤 속성이 데이터 테이블의 여러 열과 같이 둘 이상의 데이터 요소에 바인딩될 때 존재합니다. Excel용 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤은 복합 데이터 바인딩을 지원하는 유일한 호스트 컨트롤입니다. 또한 <xref:System.Windows.Forms.DataGridView> 컨트롤 같이 복합 데이터 바인딩을 지원하는 많은 Windows Forms 컨트롤이 있을 수 있습니다.  
+## <a name="complex-data-binding"></a>Complex Data Binding  
+ Complex data binding exists when a control property is bound to more than one data element, such as multiple columns in a data table. The <xref:Microsoft.Office.Tools.Excel.ListObject> control for Excel is the only host control that supports complex data binding. There are also many Windows Forms controls that support complex data binding, such as the <xref:System.Windows.Forms.DataGridView> control.  
   
- 복합 데이터 바인딩을 수행하려면 컨트롤의 DataSource 속성을 복합 데이터 바인딩에서 지원되는 데이터 원본 개체로 설정합니다. 예를 들어 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤의 <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> 속성은 데이터 테이블의 여러 열에 바인딩될 수 있습니다. 데이터 테이블의 모든 데이터는 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤에 나타나며 데이터 테이블의 데이터가 변경되면 <xref:Microsoft.Office.Tools.Excel.ListObject> 역시 변경됩니다. 복합 데이터 바인딩에 사용할 수 있는 데이터 원본 목록은 [Windows Forms에서 지원하는 데이터 소스](http://msdn.microsoft.com/library/3d2c43f6-462b-4d35-9c86-13e9afe012e1)을 참조하세요.  
+ To perform complex data binding, set the DataSource property of the control to a data source object that is supported by complex data binding. For example, the <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> property of the <xref:Microsoft.Office.Tools.Excel.ListObject> control can be bound to multiple columns in a data table. All of the data in the data table appears in the <xref:Microsoft.Office.Tools.Excel.ListObject> control, and as the data in the data table changes, the <xref:Microsoft.Office.Tools.Excel.ListObject> also changes. For a list of the data sources that you can use for complex data binding, see [Data Sources Supported by Windows Forms](/dotnet/framework/winforms/data-sources-supported-by-windows-forms).  
   
- 다음 코드 예제는 두 개의 <xref:System.Data.DataTable> 개체를 사용하여 <xref:System.Data.DataSet>를 만들고 테이블 중 하나를 데이터로 채웁니다. 그런 다음 코드가 <xref:Microsoft.Office.Tools.Excel.ListObject>를 데이터가 포함된 테이블에 바인딩합니다. 이 예제는 Excel 문서 수준 프로젝트에 대한 것입니다.  
+ The following code example creates a <xref:System.Data.DataSet> with two <xref:System.Data.DataTable> objects and populates one of the tables with data. The code then binds the <xref:Microsoft.Office.Tools.Excel.ListObject> to the table that contains data. This example is for an Excel document-level project.  
   
- [!code-csharp[Trin_ExcelListObject#18](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#18)]
- [!code-vb[Trin_ExcelListObject#18](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#18)]  
+ [!code-csharp[Trin_ExcelListObject#18](../vsto/codesnippet/CSharp/Trin_ExcelListObject/Trin_ExcelListObject.cs#18)] [!code-vb[Trin_ExcelListObject#18](../vsto/codesnippet/VisualBasic/Trin_ExcelListObject/Sheet1.vb#18)]  
   
- 복합 데이터 바인딩을 설명하는 연습은 [연습: 문서 수준 프로젝트의 복합 데이터 바인딩](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)\(문서 수준 프로젝트\) 및 [연습: VSTO 추가 기능 프로젝트의 복합 데이터 바인딩](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)\(VSTO 추가 기능 프로젝트\)를 참조하세요.  
+ For walkthroughs that demonstrate complex data binding, see [Walkthrough: Complex Data Binding in a Document-Level Project](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) for a document-level project and [Walkthrough: Complex Data Binding in VSTO add-in Project](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) for an VSTO Add-in project.  
   
-## 문서 및 통합 문서에서 데이터 표시  
- 문서 수준 프로젝트에서 **데이터 원본** 창을 사용하여 데이터 바인딩된 컨트롤을 문서 또는 통합 문서에 쉽게 추가할 수 있으며 같은 방식으로 Windows Forms에도 사용할 수 있습니다.**데이터 원본** 창을 사용하는 방법에 대한 자세한 내용은 [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../Topic/Binding%20Windows%20Forms%20controls%20to%20data%20in%20Visual%20Studio.md) 및 [데이터 소스 창](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)을 참조하세요.  
+## <a name="displaying-data-in-documents-and-workbooks"></a>Displaying Data in Documents and Workbooks  
+ In document-level projects, you can use the **Data Sources** window to add data-bound controls to your documents or workbooks easily, the same way you use it for Windows Forms. For more information about using the **Data Sources** window, see [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) and [Add new data sources](../data-tools/add-new-data-sources.md).  
   
-### 데이터 원본 창에서 컨트롤 끌기  
- 개체를 **데이터 원본** 창에서 끌어 문서에 놓으면 컨트롤이 만들어집니다. 만들어진 컨트롤의 유형은 데이터의 단일 열 또는 여러 열을 바인딩하는지 여부에 따라 달라집니다.  
+### <a name="dragging-controls-from-the-data-sources-window"></a>Dragging Controls from the Data Sources Window  
+ A control is created on the document when you drag an object onto it from the **Data Sources** window. The type of control that is created depends on whether you are binding a single column of data or multiple columns of data.  
   
- Excel의 경우 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤이 각 개별 필드의 워크시트에서 만들어지며 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤이 여러 열과 행을 포함하는 각 데이터 범위에 대해 만들어집니다.**데이터 원본** 창에서 테이블 또는 필드를 선택한 다음 드롭다운 목록에서 다른 컨트롤을 선택하여 이 기본값을 변경할 수 있습니다.  
+ For Excel, a <xref:Microsoft.Office.Tools.Excel.NamedRange> control is created on the worksheet for each individual field, and a <xref:Microsoft.Office.Tools.Excel.ListObject> control is created for each data range that includes multiple rows and columns. You can change this default by selecting the table or field in the **Data Sources** window and then choosing a different control from the drop-down list.  
   
- <xref:Microsoft.Office.Tools.Word.ContentControl> 컨트롤이 문서에 추가됩니다. 콘텐츠 컨트롤의 형식은 선택한 필드의 데이터 형식에 따라 달라집니다.  
+ A <xref:Microsoft.Office.Tools.Word.ContentControl> control is added to documents. The type of content control depends on the data type of the field that you selected.  
   
-### 디자인 타임에 문서 수준 프로젝트에서 데이터 바인딩  
- 다음 항목은 디자인 타임에 데이터를 바인딩하는 예제를 보여 줍니다.  
+### <a name="binding-data-in-document-level-projects-at-design-time"></a>Binding Data in Document-Level Projects at Design Time  
+ The following topics show examples of binding data at design time:  
   
--   [방법: 데이터베이스의 데이터로 워크시트 채우기](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)  
+-   [How to: Populate Worksheets with Data from a Database](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)  
   
--   [방법: 데이터베이스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-a-database.md)  
+-   [How to: Populate Documents with Data from a Database](../vsto/how-to-populate-documents-with-data-from-a-database.md)  
   
--   [방법: 개체의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-objects.md)  
+-   [How to: Populate Documents with Data from Objects](../vsto/how-to-populate-documents-with-data-from-objects.md)  
   
--   [방법: 서비스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-services.md)  
+-   [How to: Populate Documents with Data from Services](../vsto/how-to-populate-documents-with-data-from-services.md)  
   
--   [방법: 워크시트에서 데이터베이스 레코드 스크롤](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)  
+-   [How to: Scroll Through Database Records in a Worksheet](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)  
   
-### VSTO 추가 기능 프로젝트에서 데이터 바인딩  
- VSTO 추가 기능 프로젝트에서는 런타임에만 컨트롤을 추가할 수 있습니다. 다음 항목에서 런타임에 데이터를 바인딩하는 예제를 보여 줍니다.  
+### <a name="binding-data-in-vsto-add-in-projects"></a>Binding Data in VSTO Add-in projects  
+ In VSTO Add-in projects, you can add controls only at run time. The following topics show examples of binding data at run time:  
   
--   [연습: VSTO 추가 기능 프로젝트의 단순 데이터 바인딩](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)  
+-   [Walkthrough: Simple Data Binding in VSTO add-in Project](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)  
   
--   [연습: VSTO 추가 기능 프로젝트의 복합 데이터 바인딩](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)  
+-   [Walkthrough: Complex Data Binding in VSTO add-in Project](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)  
   
-## 호스트 컨트롤에 바인딩되는 데이터 업데이트  
- 데이터 원본과 호스트 컨트롤 간의 데이터 바인딩은 양방향 데이터 업데이트를 포함합니다. 단순 데이터 바인딩에서 데이터 원본을 변경하면 호스트 컨트롤에 자동으로 반영되지만 호스트 컨트롤을 변경하면 데이터 원본을 업데이트하기 위해 명시적 호출이 필요합니다. 그 이유는 다른 데이터 바인딩 필드가 함께 변경되지 않으면 한 데이터 바인딩 필드의 변경 내용이 적용되지 않는 경우가 있기 때문입니다. 예를 들어 한 필드는 기간이고 다른 한 필드는 경험한 햇수를 나타내는 두 개의 필드가 있을 수 있습니다. 경험은 기간을 초과할 수 없습니다. 사용자가 기간을 50에서 25로 업데이트하고 경험을 30에서 10으로 업데이트하려면 이 두 필드를 동시에 변경해야 합니다. 이 문제를 해결하기 위해, 코드로 업데이트를 명시적으로 보내야만 단일 데이터 바인딩을 사용하는 필드가 업데이트됩니다.  
+## <a name="updating-data-that-is-bound-to-host-controls"></a>Updating Data That Is Bound to Host Controls  
+ Data binding between a data source and a host control involves a two-way data update. In simple data binding, changes in the data source are reflected automatically in the host control, but changes in the host control require an explicit call to update the data source. The reason is that in some cases, changes in one data-bound field are not accepted unless they are accompanied by changes in another data-bound field. For example, you might have two fields, one for age and one for years of experience. Experience cannot exceed age. A user cannot update the age from 50 to 25 and then the experience from 30 to 10 unless he or she makes the changes at the same time. To solve this problem, fields with simple data binding are not updated until the updates are explicitly sent by code.  
   
- 솔루션이 다음 중 하나를 사용하는 경우, 단순 데이터 바인딩을 사용하는 호스트 컨트롤에서 데이터 원본을 업데이트하려면 메모리 내 데이터 원본\(<xref:System.Data.DataSet> 또는 <xref:System.Data.DataTable>\) 및 백 엔드 데이터베이스로 업데이트를 보내야 합니다.  
+ To update a data source from host controls that enable simple data binding, you must send updates to the in-memory data source (such as a <xref:System.Data.DataSet> or <xref:System.Data.DataTable>) and to the back-end database, if your solution uses one.  
   
- <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤을 사용해 복합 데이터 바인딩을 수행하는 경우는 메모리 내 데이터 원본을 명시적으로 업데이트 할 필요가 없습니다. 이 경우 추가 코드 없이 변경 내용을 자동으로 메모리 내 데이터 원본으로 보냅니다.  
+ You do not need to explicitly update the in-memory data source when you perform complex data binding using the <xref:Microsoft.Office.Tools.Excel.ListObject> control. In that case, changes are automatically sent to the in-memory data source without additional code.  
   
- 자세한 내용은 [방법: Host 컨트롤의 데이터로 데이터 원본 업데이트](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)을 참조하세요.  
+ For more information, see [How to: Update a Data Source with Data from a Host Control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).  
   
-## 참고 항목  
- [어떻게 할까요?: Excel에서 데이터베이스 데이터 사용](http://go.microsoft.com/fwlink/?LinkID=130287)   
- [데이터 바인딩 및 Windows Forms](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27)   
- [방법: Windows Form에 단순 바인딩된 컨트롤 만들기](http://msdn.microsoft.com/library/3bcaded8-0f1a-4cc0-8830-f59be253bf4e)   
- [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../Topic/Binding%20Windows%20Forms%20controls%20to%20data%20in%20Visual%20Studio.md)   
- [데이터 집합에 데이터 저장](../Topic/Saving%20data%20back%20to%20the%20database.md)   
- [방법: TableAdapter를 사용하여 데이터 업데이트](../data-tools/update-data-by-using-a-tableadapter.md)   
- [데이터 캐싱](../vsto/caching-data.md)   
- [Office 솔루션의 데이터](../vsto/data-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [How Do I: Consume Database Data in Excel?](http://go.microsoft.com/fwlink/?LinkID=130287)   
+ [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)   
+ [How to: Create a Simple-Bound Control on a Windows Form](/dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form)   
+ [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [Save data back to the database](../data-tools/save-data-back-to-the-database.md)    
+ [Update data by using a TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md)    
+ [Caching Data](../vsto/caching-data.md)   
+ [Data in Office Solutions](../vsto/data-in-office-solutions.md)  
   
   

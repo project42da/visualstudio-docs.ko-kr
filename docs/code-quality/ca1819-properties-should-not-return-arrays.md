@@ -1,95 +1,108 @@
 ---
-title: "CA1819: 속성은 배열을 반환해서는 안 됩니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PropertiesShouldNotReturnArrays"
-  - "CA1819"
-helpviewer_keywords: 
-  - "PropertiesShouldNotReturnArrays"
-  - "CA1819"
+title: 'CA1819: Properties should not return arrays | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PropertiesShouldNotReturnArrays
+- CA1819
+helpviewer_keywords:
+- PropertiesShouldNotReturnArrays
+- CA1819
 ms.assetid: 85fcf312-57f8-438a-8b10-34441fe0bdeb
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 22
----
-# CA1819: 속성은 배열을 반환해서는 안 됩니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: c8e145afcff87a0ac3250509758762db3d6e2de7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1819-properties-should-not-return-arrays"></a>CA1819: Properties should not return arrays
 |||  
 |-|-|  
 |TypeName|PropertiesShouldNotReturnArrays|  
 |CheckId|CA1819|  
-|범주|Microsoft.Performance|  
-|변경 수준|주요 변경|  
+|Category|Microsoft.Performance|  
+|Breaking Change|Breaking|  
   
-## 원인  
- public 형식의 public 또는 protected 속성이 배열을 반환합니다.  
+## <a name="cause"></a>Cause  
+ A public or protected property in a public type returns an array.  
   
-## 규칙 설명  
- 속성에서 반환된 배열은 속성이 읽기 전용이더라도 쓰기 금지되지 않습니다.  배열을 무단으로 변경하지 못하도록 하려면 속성에서 배열의 복사본을 반환해야 합니다.  일반적으로 사용자는 이러한 속성을 호출할 경우 성능에 부정적인 영향을 준다는 것을 인식하지 못합니다.  특히 속성을 인덱싱된 속성으로 사용하면 성능이 더 나빠집니다.  
+## <a name="rule-description"></a>Rule Description  
+ Arrays returned by properties are not write-protected, even if the property is read-only. To keep the array tamper-proof, the property must return a copy of the array. Typically, users will not understand the adverse performance implications of calling such a property. Specifically, they might use the property as an indexed property.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 속성을 메서드로 만들거나 속성에서 컬렉션을 반환하도록 변경합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, either make the property a method or change the property to return a collection.  
   
-## 경고를 표시하지 않는 경우  
- 특성은 배열을 반환하는 속성을 포함할 수 있지만 컬렉션을 반환하는 속성은 포함할 수 없습니다.  [System.Attribute](assetId:///System.Attribute?qualifyHint=False&autoUpgrade=True) 클래스로부터 파생된 특성의 속성에 대해 발생한 경고를 표시하지 않을 수 있습니다.  그렇지 않으면 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Attributes can contain properties that return arrays, but cannot contain properties that return collections. You can suppress a warning that is raised for a property of an attribute that is derived from the <xref:System.Attribute> class. Otherwise, do not suppress a warning from this rule.  
   
-## 규칙 위반 예  
+## <a name="example-violation"></a>Example Violation  
   
-### 설명  
- 다음 예제에서는 이 규칙을 위반하는 속성을 보여 줍니다.  
+### <a name="description"></a>Description  
+ The following example shows a property that violates this rule.  
   
-### 코드  
- [!code-cs[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_1.cs)]
- [!code-vb[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_1.vb)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_1.cs)] [!code-vb[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_1.vb)]  
   
-### 설명  
- 이 규칙 위반 문제를 해결하려면 속성을 메서드로 만들거나 속성에서 배열 대신 컬렉션을 반환하도록 변경합니다.  
+### <a name="comments"></a>Comments  
+ To fix a violation of this rule, either make the property a method or change the property to return a collection instead of an array.  
   
-## 속성을 메서드로 변경하는 예제  
+## <a name="change-the-property-to-a-method-example"></a>Change the Property to a Method Example  
   
-### 설명  
- 다음 예제에서는 속성을 메서드로 변경하여 위반 문제를 해결합니다.  
+### <a name="description"></a>Description  
+ The following example fixes the violation by changing the property to a method.  
   
-### 코드  
- [!code-vb[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_2.vb)]
- [!code-cs[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_2.cs)]  
+### <a name="code"></a>Code  
+ [!code-vb[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_2.vb)] [!code-csharp[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_2.cs)]  
   
-## 컬렉션 반환 예제  
+## <a name="return-a-collection-example"></a>Return a Collection Example  
   
-### 설명  
- 다음 예제에서는 속성에서 컬렉션을 반환하도록 변경하여 위반 문제를 해결합니다.  
+### <a name="description"></a>Description  
+ The following example fixes the violation by changing the property to return a  
   
- <xref:System.Collection.ObjectModel.ReadOnlyCollection?displayProperty=fullName>.  
+ <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>.  
   
-### 코드  
- [!code-cs[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_3.cs)]
- [!code-vb[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_3.vb)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_3.cs)] [!code-vb[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_3.vb)]  
   
-## 사용자가 속성을 수정할 수 있도록 허용  
+## <a name="allowing-users-to-modify-a-property"></a>Allowing Users to Modify a Property  
   
-### 설명  
- 클래스 소비자가 속성을 수정할 수 있도록 허용할 수 있습니다.  다음 예제에서는 이 규칙을 위반하는 읽기\/쓰기 속성을 보여 줍니다.  
+### <a name="description"></a>Description  
+ You might want to allow the consumer of the class to modify a property. The following example shows a read/write property that violates this rule.  
   
-### 코드  
- [!code-cs[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_4.cs)]
- [!code-vb[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_4.vb)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_4.cs)] [!code-vb[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_4.vb)]  
   
-### 설명  
- 다음 예제에서는 속성에서 <xref:System.Collection.ObjectModel.Collection?displayProperty=fullName>을 반환하도록 변경하여 위반 문제를 해결합니다.  
+### <a name="comments"></a>Comments  
+ The following example fixes the violation by changing the property to return a <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>.  
   
-### 코드  
- [!code-vb[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_5.vb)]
- [!code-cs[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_5.cs)]  
+### <a name="code"></a>Code  
+ [!code-vb[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_5.vb)] [!code-csharp[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_5.cs)]  
   
-## 관련 규칙  
- [CA1024: 적합한 속성을 사용하십시오.](../code-quality/ca1024-use-properties-where-appropriate.md)
+## <a name="related-rules"></a>Related Rules  
+ [CA1024: Use properties where appropriate](../code-quality/ca1024-use-properties-where-appropriate.md)

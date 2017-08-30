@@ -1,45 +1,50 @@
 ---
-title: "방법: 프로그래밍 방식으로 Outlook에서 항목 이동"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Outlook 폴더[Visual Studio에서 Office 개발], 항목 이동"
+title: 'How to: Programmatically Move Items in Outlook | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Outlook folders [Office development in Visual Studio], moving items
 ms.assetid: ac524f2e-a3e8-496d-bd5a-714799be44ab
 caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d7cf56d5e351d045f213a254474e5c24bcd9e206
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 Outlook에서 항목 이동
-  이 예제에서는 **받은 편지함**에 있는 읽지 않은 전자 메일 메시지를 **Test** 폴더로 이동합니다.  `Subject` 필드에 단어 **Test**가 있는 메시지만 이동합니다.  
+# <a name="how-to-programmatically-move-items-in-outlook"></a>How to: Programmatically Move Items in Outlook
+  This example moves unread e-mail messages from the **Inbox** to a folder named **Test**. The example only moves messages that have the word **Test** in the `Subject` field.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## 예제  
- [!code-csharp[Trin_OL_MoveItems#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_OL_MoveItems/CS/thisaddin.cs#1)]  
+## <a name="example"></a>Example  
+ [!code-csharp[Trin_OL_MoveItems#1](../vsto/codesnippet/CSharp/Trin_OL_MoveItems/thisaddin.cs#1)]  
   
-## 코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This example requires:  
   
--   **Test**라는 Outlook 메일 폴더  
+-   An Outlook mail folder named **Test**.  
   
--   `Subject` 필드에 단어 **Test**가 있는 도착한 전자 메일 메시지  
+-   An e-mail message that arrives with the word **Test** in the `Subject` field.  
   
-## 참고 항목  
- [폴더 사용](../vsto/working-with-folders.md)   
- [방법: 프로그래밍 방식으로 이름으로 폴더 검색](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
- [방법: 프로그래밍 방식으로 특정 폴더 내용 검색](../vsto/how-to-programmatically-search-within-a-specific-folder.md)   
- [방법: 프로그래밍 방식으로 전자 메일 메시지를 받은 경우 작업 수행](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Folders](../vsto/working-with-folders.md)   
+ [How to: Programmatically Retrieve a Folder by Name](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
+ [How to: Programmatically Search Within a Specific Folder](../vsto/how-to-programmatically-search-within-a-specific-folder.md)   
+ [How to: Programmatically Perform Actions When an E-Mail Message Is Received](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
   
   

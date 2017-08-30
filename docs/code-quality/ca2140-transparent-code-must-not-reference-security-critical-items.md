@@ -1,78 +1,95 @@
 ---
-title: "CA2140: 투명 코드는 보안에 중요한 항목을 참조해서는 안 됩니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2129"
-  - "SecurityTransparentCodeShouldNotReferenceNonpublicSecurityCriticalCode"
-  - "CA2140"
-helpviewer_keywords: 
-  - "CA2129"
-  - "CA2140"
-  - "SecurityTransparentCodeShouldNotReferenceNonpublicSecurityCriticalCode"
+title: 'CA2140: Transparent code must not reference security critical items | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2129
+- SecurityTransparentCodeShouldNotReferenceNonpublicSecurityCriticalCode
+- CA2140
+helpviewer_keywords:
+- CA2140
+- SecurityTransparentCodeShouldNotReferenceNonpublicSecurityCriticalCode
+- CA2129
 ms.assetid: 251a12da-0557-47f5-a4f7-0229d590ae7b
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
----
-# CA2140: 투명 코드는 보안에 중요한 항목을 참조해서는 안 됩니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6cb8758ba9aa3408b40f7a468523c52925faf78d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2140-transparent-code-must-not-reference-security-critical-items"></a>CA2140: Transparent code must not reference security critical items
 |||  
 |-|-|  
 |TypeName|TransparentMethodsMustNotReferenceCriticalCode|  
 |CheckId|CA2140|  
-|범주|Microsoft.Security|  
-|변경 수준|주요 변경|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## 원인  
- 투명 메서드:  
+## <a name="cause"></a>Cause  
+ A transparent method:  
   
--   보안에 중요한 보안 예외 형식을 처리합니다.  
+-   handles a security critical security exception type  
   
--   보안에 중요한 형식으로 표시된 매개 변수가 있습니다.  
+-   has a parameter that is marked as a security critical type  
   
--   보안에 중요한 제약 조건이 있는 제네릭 매개 변수가 있습니다.  
+-   has a generic parameter with a security critical constraints  
   
--   보안에 중요한 형식의 지역 변수가 있습니다.  
+-   has a local variable of a security critical type  
   
--   보안에 중요한 것으로 표시된 형식을 참조합니다.  
+-   references a type that is marked as security critical  
   
--   보안에 중요한 것으로 표시된 메서드 호출  
+-   calls a method that is marked as security critical  
   
--   보안에 중요한 것으로 표시된 필드를 참조합니다.  
+-   references a field that is marked as security critical  
   
--   보안에 중요한 것으로 표시된 형식을 반환합니다.  
+-   returns a type that is marked as security critical  
   
-## 규칙 설명  
- <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시된 코드 요소는 보안에 중요합니다.  투명 메서드는 보안에 중요한 요소를 사용할 수 없습니다.  투명 형식이 보안에 중요한 형식을 사용하려고 시도하는 경우 <xref:System.TypeAccessException>, <xref:System.MethodAccessException> 또는 <xref:System.FieldAccessException>이 발생합니다.  
+## <a name="rule-description"></a>Rule Description  
+ A code element that is marked with the <xref:System.Security.SecurityCriticalAttribute> attribute is security critical. A transparent method cannot use a security critical element. If a transparent type attempts to use a security critical type a <xref:System.TypeAccessException>, <xref:System.MethodAccessException> , or <xref:System.FieldAccessException> is raised.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙의 위반 문제를 해결하려면 다음 중 하나를 실행하십시오.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, do one of the following:  
   
--   보안에 중요한 코드를 사용하는 코드 요소를 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시합니다.  
+-   Mark the code element that uses the security critical code with the <xref:System.Security.SecurityCriticalAttribute> attribute  
   
-     \- 또는 \-  
+     \- or -  
   
--   보안에 중요한 것으로 표시된 코드 요소에서 <xref:System.Security.SecurityCriticalAttribute> 특성을 제거하고 <xref:System.Security.SecuritySafeCriticalAttribute> 또는 <xref:System.Security.SecurityTransparentAttribute> 특성으로 표시합니다.  
+-   Remove the <xref:System.Security.SecurityCriticalAttribute> attribute from the code elements that are marked as security critical and instead mark them with the <xref:System.Security.SecuritySafeCriticalAttribute> or <xref:System.Security.SecurityTransparentAttribute> attribute.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 예제  
- 다음 예제에서는 투명 메서드는 보안에 중요한 제네릭 컬렉션, 보안 중요 필드 및 보안 중요 메서드를 참조하려고 시도합니다.  
+## <a name="example"></a>Example  
+ In the following examples, a transparent method attempts to reference a security critical generic collection, a security critical field, and a security critical method.  
   
- [!code-cs[FxCop.Security.CA2140.TransparentMethodsMustNotReferenceCriticalCode#1](../code-quality/codesnippet/CSharp/ca2140-transparent-code-must-not-reference-security-critical-items_1.cs)]  
+ [!code-csharp[FxCop.Security.CA2140.TransparentMethodsMustNotReferenceCriticalCode#1](../code-quality/codesnippet/CSharp/ca2140-transparent-code-must-not-reference-security-critical-items_1.cs)]  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  <xref:System.Security.SecurityTransparentAttribute>   
  <xref:System.Security.SecurityCriticalAttribute>   
  <xref:System.Security.SecurityTransparentAttribute>   

@@ -1,171 +1,173 @@
 ---
-title: "연습: CheckBox 컨트롤을 사용하여 워크시트 서식 변경"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "컨트롤[Visual Studio에서 Office 개발], 워크시트에 추가"
-  - "워크시트, 관리되는 컨트롤을 사용하여 서식 변경"
-  - "워크시트, check box 컨트롤"
+title: 'Walkthrough: Changing Worksheet Formatting Using CheckBox Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- worksheets, changing formatting using managed controls
+- worksheets, check box controls
+- controls [Office development in Visual Studio], adding to worksheets
 ms.assetid: 4be79613-50a0-428e-9816-aadbc098272a
 caps.latest.revision: 70
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 69
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6afc0a002671d0a5ae91908e5b0ed3b100c36c54
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: CheckBox 컨트롤을 사용하여 워크시트 서식 변경
-  이 연습에서는 Microsoft Office Excel 워크시트에서 확인란을 사용하여 서식을 변경하는 기본 방법을 보여 줍니다.  Visual Studio의 Office 개발 도구를 사용하여 코드를 만들어 프로젝트에 추가합니다.  결과를 완성된 샘플로 보려면 [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)의 Excel 컨트롤 샘플을 참조하십시오.  
+# <a name="walkthrough-changing-worksheet-formatting-using-checkbox-controls"></a>Walkthrough: Changing Worksheet Formatting Using CheckBox Controls
+  This walkthrough shows the basics of using check boxes on a Microsoft Office Excel worksheet to change formatting. You will use Office development tools in Visual Studio to create and add code to your project. To see the result as a completed sample, see the Excel Controls Sample at [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md).  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- 이 연습을 통해 다음과 같은 작업 방법을 배웁니다.  
+ During this walkthrough, you will learn how to:  
   
--   워크시트에 텍스트 및 컨트롤 추가  
+-   Add text and controls to a worksheet.  
   
--   옵션을 선택할 때 텍스트 서식 지정  
+-   Format the text when an option is selected.  
   
--   프로젝트 테스트  
+-   Test your project.  
   
 > [!NOTE]  
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다.  설치한 Visual Studio 버전과 사용하는 설정에 따라 이러한 요소가 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] 또는 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
-## 프로젝트 만들기  
- 이 단계에서는 Visual Studio를 사용하여 Excel 통합 문서 프로젝트를 만듭니다.  
+## <a name="creating-the-project"></a>Creating the Project  
+ In this step, you will create an Excel Workbook project by using Visual Studio.  
   
-#### 새 프로젝트를 만들려면  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  My Excel Formatting이라는 Excel 통합 문서 프로젝트를 만듭니다.  **새 문서 만들기**가 선택되어 있는지 확인합니다.  자세한 내용은 [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하십시오.  
+1.  Create an Excel Workbook project with the name **My Excel Formatting**. Make sure that **Create a new document** is selected. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Visual Studio의 디자이너에 새 Excel 통합 문서가 열리고 **My Excel Formatting** 프로젝트가 **솔루션 탐색기**에 추가됩니다.  
+     Visual Studio opens the new Excel workbook in the designer and adds the **My Excel Formatting** project to **Solution Explorer**.  
   
-## 워크시트에 텍스트 및 컨트롤 추가  
- 이 연습에서는 세 <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> 컨트롤과 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤의 일부 텍스트가 필요합니다.  
+## <a name="adding-text-and-controls-to-the-worksheet"></a>Adding Text and Controls to the Worksheet  
+ For this walkthrough, you will need three <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> controls and some text in a <xref:Microsoft.Office.Tools.Excel.NamedRange> control.  
   
-#### 확인란 세 개를 추가하려면  
+#### <a name="to-add-three-check-boxes"></a>To add three check boxes  
   
-1.  Visual Studio 디자이너에 통합 문서가 열려 있고 `Sheet1`이 표시되어 있는지 확인합니다.  
+1.  Verify that the workbook is open in the Visual Studio designer and that `Sheet1` is open.  
   
-2.  **도구 상자**의 **공용 컨트롤** 탭에서 <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> 컨트롤을 **Sheet1**의 **B2** 셀이나 이 셀 근처에 끌어 놓습니다.  
+2.  From the **Common Controls** tab of the **Toolbox**, drag a <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> control to or near cell **B2** in **Sheet1**.  
   
-3.  **보기** 메뉴에서 **속성** 창을 선택합니다.  
+3.  From the **View** menu, select **Properties** window.  
   
-4.  **속성** 창의 개체 이름 목록 상자에 **Checkbox1**이 표시되어 있는지 확인하고 다음 속성을 변경합니다.  
+4.  Be sure that **Checkbox1** is visible in the object name list box of the **Properties** window, and change the following properties:  
   
-    |속성|값|  
-    |--------|-------|  
-    |**이름**|**applyBoldFont**|  
-    |**텍스트**|굵게|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**applyBoldFont**|  
+    |**Text**|**Bold**|  
   
-5.  두 번째 확인란을 **B4** 셀이나 이 셀 근처에 끌어 놓고 다음 속성을 변경합니다.  
+5.  Drag a second check box on or near cell **B4** and change the following properties:  
   
-    |속성|값|  
-    |--------|-------|  
-    |**이름**|**applyItalicFont**|  
-    |**텍스트**|기울임꼴|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**applyItalicFont**|  
+    |**Text**|**Italic**|  
   
-6.  세 번째 확인란을 **B6** 셀이나 이 셀 근처에 끌어 놓고 다음 속성을 변경합니다.  
+6.  Drag a third check box on or near cell **B6** and change the following properties:  
   
-    |속성|값|  
-    |--------|-------|  
-    |**이름**|**applyUnderlineFont**|  
-    |**텍스트**|Underline|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**applyUnderlineFont**|  
+    |**Text**|**Underline**|  
   
-7.  Ctrl 키를 누른 채로 확인란 컨트롤 세 개를 모두 선택합니다.  
+7.  Select all three check box controls while holding the CTRL key.  
   
-8.  Excel에서 서식 탭의 정렬 그룹에서 클릭  **맞춤**를 클릭 하 고 다음을 클릭  **왼쪽 맞춤**.  
+8.  In the Arrange Group of the Format tab in Excel, click **Align**, and then click **Align Left**.  
   
-     세 개의 확인란 컨트롤에서 선택한 첫 번째 컨트롤의 위치를 왼쪽에 맞춥니다.  
+     The three check box controls are aligned on the left side, at the position of the first control you selected.  
   
-     이제 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 워크시트에 끌어 놓습니다.  
+     Next, you will drag a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to the worksheet.  
   
     > [!NOTE]  
-    >  **이름** 상자에 **textFont**를 입력하여 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 추가할 수도 있습니다.  
+    >  You can also add the <xref:Microsoft.Office.Tools.Excel.NamedRange> control by typing **textFont** into the **Name** box.  
   
-#### NamedRange 컨트롤에 텍스트를 추가하려면  
+#### <a name="to-add-text-to-a-namedrange-control"></a>To add text to a NamedRange control  
   
-1.  도구 상자의 **Excel 컨트롤** 탭에서 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 **B9** 셀로 끌어 놓습니다.  
+1.  From the **Excel Controls** tab of the toolbox, drag a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to cell **B9**.  
   
-2.  편집할 수 있는 텍스트 상자에 **$B$9**가 표시되어 있고 **B9** 셀이 선택되어 있는지 확인합니다.  **B9** 셀이 선택되어 있지 않으면 이 셀을 클릭하여 선택합니다.  
+2.  Verify that **$B$9** appears in the editable text box, and that cell **B9** is selected. If it is not, click cell **B9** to select it.  
   
-3.  **확인**을 클릭합니다.  
+3.  Click **OK**.  
   
-4.  **B9** 셀이 `NamedRange1`이라는 범위가 됩니다.  
+4.  Cell **B9** becomes a range named `NamedRange1`.  
   
-     워크시트에 시각적으로 표시되지는 않지만 **B9** 셀을 선택하면 워크시트의 왼쪽 바로 위에 있는 **이름 상자**에 `NamedRange1`이 나타납니다.  
+     There is no visible indication on the worksheet, but `NamedRange1` appears in the **Name box** (just above the worksheet on the left side) when cell **B9** is selected.  
   
-5.  **속성** 창의 개체 이름 목록 상자에 **NamedRange1**이 표시되어 있는지 확인하고 다음 속성을 변경합니다.  
+5.  Be sure that **NamedRange1** is visible in the object name list box of the **Properties** window, and change the following properties:  
   
-    |속성|값|  
-    |--------|-------|  
-    |**이름**|**textFont**|  
-    |**Value2**|이 텍스트의 서식을 변경하려면 확인란을 클릭하십시오.|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**textFont**|  
+    |**Value2**|**Click a check box to change the formatting of this text.**|  
   
- 이제 옵션을 선택할 때 텍스트의 서식을 지정하기 위한 코드를 작성합니다.  
+ Next, write the code to format the text when an option is selected.  
   
-## 옵션을 선택할 때 텍스트 서식 지정  
- 이 단원에서는 사용자가 서식 지정 옵션을 선택할 때 워크시트의 텍스트 서식이 변경되도록 코드를 작성합니다.  
+## <a name="formatting-the-text-when-an-option-is-selected"></a>Formatting the Text When an Option is Selected  
+ In this section, you will write code so that when the user selects a formatting option, the format of the text in the worksheet is changed.  
   
-#### 확인란을 선택한 경우 서식을 변경하려면  
+#### <a name="to-change-formatting-when-a-check-box-is-selected"></a>To change formatting when a check box is selected  
   
-1.  마우스 오른쪽 단추로 **Sheet1**을 클릭한 다음 바로 가기 메뉴에서 **코드 보기**를 클릭합니다.  
+1.  Right-click **Sheet1**, and then click **View Code** on the shortcut menu.  
   
-2.  `applyBoldFont` 확인란의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 다음 코드를 추가합니다.  
+2.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyBoldFont` check box:  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#7](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#7)]
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#7](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/VB/Sheet1.vb#7)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#7](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#7)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#7)]  
   
-3.  `applyItalicFont` 확인란의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 다음 코드를 추가합니다.  
+3.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyItalicFont` check box:  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#8](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#8)]
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#8](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/VB/Sheet1.vb#8)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#8](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#8)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#8)]  
   
-4.  `applyUnderlineFont` 확인란의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 다음 코드를 추가합니다.  
+4.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyUnderlineFont` check box:  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#9](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#9)]
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#9](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/VB/Sheet1.vb#9)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#9](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#9)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#9)]  
   
-5.  C\#의 경우 아래와 같이 <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> 이벤트에 확인란에 대한 이벤트 처리기를 추가해야 합니다.  이벤트 처리기를 만드는 방법에 대한 자세한 내용은 [방법: Office 프로젝트에서 이벤트 처리기 만들기](../vsto/how-to-create-event-handlers-in-office-projects.md)를 참조하십시오.  
+5.  In C#, you must add event handlers for the check boxes to the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event as shown below. For information on creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#10)]  
+     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#10)]  
   
-## 응용 프로그램 테스트  
- 이제 통합 문서를 테스트하여 확인란을 선택하거나 해제할 때 텍스트의 서식이 올바르게 지정되는지 확인할 수 있습니다.  
+## <a name="testing-the-application"></a>Testing the Application  
+ You can now test your workbook to make sure that the text is formatted correctly when you select or clear a check box.  
   
-#### 통합 문서를 테스트하려면  
+#### <a name="to-test-your-workbook"></a>To test your workbook  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  Press F5 to run your project.  
   
-2.  확인란을 선택하거나 해제합니다.  
+2.  Select or clear a check box.  
   
-3.  텍스트의 서식이 올바르게 지정되는지 확인합니다.  
+3.  Confirm that the text is formatted correctly.  
   
-## 다음 단계  
- 이 연습에서는 Excel 워크시트에서 확인란을 사용하고 텍스트의 서식을 지정하는 기본적인 방법을 보여 줍니다.  이후에 수행할 수 있는 작업은 다음과 같습니다.  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough shows the basics of using check boxes and formatting text on Excel worksheets. Here are some tasks that might come next:  
   
--   프로젝트를 배포합니다.  자세한 내용은 [ClickOnce를 사용하여 Office 솔루션 배포](../vsto/deploying-an-office-solution-by-using-clickonce.md)을 참조하십시오.  
+-   Deploying the project. For more information, see [Deploying an Office Solution by Using ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).  
   
--   단추를 사용하여 텍스트 상자를 채웁니다.  자세한 내용은 [연습: 워크시트에서 단추를 사용하여 텍스트 상자에 텍스트 표시](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)을 참조하십시오.  
+-   Using a button to populate a text box. For more information, see [Walkthrough: Displaying Text in a Text Box in a Worksheet Using a Button](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md).  
   
-## 참고 항목  
- [Excel을 사용한 연습](../vsto/walkthroughs-using-excel.md)   
- [NamedRange 컨트롤](../vsto/namedrange-control.md)   
- [Office 문서에서 Windows Forms 컨트롤에 대한 제한 사항](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
+## <a name="see-also"></a>See Also  
+ [Walkthroughs Using Excel](../vsto/walkthroughs-using-excel.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [Limitations of Windows Forms Controls on Office Documents](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
   
   

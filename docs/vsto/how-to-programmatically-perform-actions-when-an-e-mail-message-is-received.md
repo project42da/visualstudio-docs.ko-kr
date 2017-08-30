@@ -1,41 +1,45 @@
 ---
-title: "방법: 프로그래밍 방식으로 전자 메일 메시지를 받은 경우 작업 수행"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Outlook[Visual Studio에서 Office 개발], 메일을 받을 때의 작업"
-  - "NewMail 이벤트"
-  - "메일 항목[Visual Studio에서 Office 개발], 사용자 지정 작업"
-  - "메일[Visual Studio에서 Office 개발], 사용자 지정 작업"
+title: 'How to: Programmatically Perform Actions When an E-Mail Message Is Received | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Outlook [Office development in Visual Studio], actions when e-mail is received
+- NewMail event
+- mail items [Office development in Visual Studio], custom actions
+- e-mail [Office development in Visual Studio], custom actions
 ms.assetid: cdd34fe4-e3d5-405a-a0ae-1e87216fe09c
 caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 26
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a726865b8e00709ac662a2e3905321f2845e663e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 전자 메일 메시지를 받은 경우 작업 수행
-  이 예제에서는 사용자가 메일 메시지를 받을 때 사용자 지정 작업을 수행합니다.  
+# <a name="how-to-programmatically-perform-actions-when-an-e-mail-message-is-received"></a>How to: Programmatically Perform Actions When an E-Mail Message Is Received
+  This example performs custom actions when the user receives an e-mail message.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## 예제  
- [!code-csharp[Trin_Outlook_RL_PerformActions#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Outlook_RL_PerformActions/CS/thisaddin.cs#1)]
- [!code-vb[Trin_Outlook_RL_PerformActions#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Outlook_RL_PerformActions/VB/thisaddin.vb#1)]  
+## <a name="example"></a>Example  
+ [!code-vb[Trin_Outlook_RL_PerformActions#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_PerformActions/thisaddin.vb#1)] [!code-csharp[Trin_Outlook_RL_PerformActions#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_PerformActions/thisaddin.cs#1)]  
   
-## 참고 항목  
- [방법: Office 프로젝트에서 이벤트 처리기 만들기](../vsto/how-to-create-event-handlers-in-office-projects.md)   
- [메일 항목 작업](../vsto/working-with-mail-items.md)   
- [VSTO 추가 기능 프로그래밍 시작](../vsto/getting-started-programming-vsto-add-ins.md)  
+## <a name="see-also"></a>See Also  
+ [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md)   
+ [Working with Mail Items](../vsto/working-with-mail-items.md)   
+ [Getting Started Programming VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md)  
   
   

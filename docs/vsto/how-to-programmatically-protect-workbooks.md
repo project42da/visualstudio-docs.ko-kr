@@ -1,76 +1,77 @@
 ---
-title: "방법: 프로그래밍 방식으로 통합 문서 보호"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "문서 보호, 통합 문서에 추가"
-  - "문서 보호, 통합 문서에서 제거"
-  - "문서[Visual Studio에서 Office 개발], 문서 보호"
-  - "통합 문서, 암호"
-  - "통합 문서, 보호"
-  - "통합 문서, 보호 해제"
+title: 'How to: Programmatically Protect Workbooks | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- workbooks, passwords
+- documents [Office development in Visual Studio], document protection
+- workbooks, unprotecting
+- document protection, removing from workbooks
+- document protection, adding to workbooks
+- workbooks, protecting
 ms.assetid: 553c67b9-e2a4-46b6-878c-5b4b4efa4589
 caps.latest.revision: 43
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 42
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 26ff26cffc717891c405b580602bae016fdd6399
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 통합 문서 보호
-  사용자가 워크시트를 추가 또는 삭제하지 못하도록 Microsoft Office Excel 통합 문서를 보호하거나 프로그래밍 방식으로 통합 문서의 보호를 해제할 수도 있습니다.  선택적으로 암호를 지정할 수 있고 사용자가 시트를 옮기지 못하도록 통합 문서의 구조를 보호할지 여부 및 통합 문서의 창을 보호할지 여부를 지정할 수 있습니다.  
+# <a name="how-to-programmatically-protect-workbooks"></a>How to: Programmatically Protect Workbooks
+  You can protect a Microsoft Office Excel workbook so that users cannot add or delete worksheets, and also unprotect the workbook programmatically. You can optionally specify a password, indicate whether you want the structure protected (so users cannot move sheets around), and indicate whether you want the workbook's windows protected.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- 통합 문서를 보호해도 사용자는 계속하여 셀을 편집할 수 있습니다.  데이터를 보호하려면 워크시트를 보호해야 합니다.  자세한 내용은 [방법: 프로그래밍 방식으로 워크시트 보호](../vsto/how-to-programmatically-protect-worksheets.md)을 참조하십시오.  
+ Protecting a workbook does not stop users from editing cells. To protect the data, you must protect the worksheets. For more information, see [How to: Programmatically Protect Worksheets](../vsto/how-to-programmatically-protect-worksheets.md).  
   
- 다음 코드 예제에서는 사용자로부터 제공받은 암호가 포함된 변수를 사용합니다.  
+ The following code examples use a variable to contain a password that is obtained from the user.  
   
-## 문서 수준 사용자 지정의 일부인 통합 문서 보호  
+## <a name="protecting-a-workbook-that-is-part-of-a-document-level-customization"></a>Protecting a Workbook That Is Part of a Document-Level Customization  
   
-#### 통합 문서를 보호하려면  
+#### <a name="to-protect-a-workbook"></a>To protect a workbook  
   
-1.  통합 문서의 <xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> 메서드를 호출하고 암호를 지정합니다.  다음 코드 예제를 사용하려면 시트 클래스가 아닌 `ThisWorkbook` 클래스에서 이 코드 예제를 실행하십시오.  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> method of the workbook and include a password. To use the following code example, run it in the `ThisWorkbook` class, not in a sheet class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/ThisWorkbook.cs#10)]
-     [!code-vb[Trin_VstcoreExcelAutomation#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/ThisWorkbook.vb#10)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#10](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#10)]  [!code-vb[Trin_VstcoreExcelAutomation#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#10)]  
   
-#### 통합 문서 보호를 해제하려면  
+#### <a name="to-unprotect-a-workbook"></a>To unprotect a workbook  
   
-1.  <xref:Microsoft.Office.Tools.Excel.Workbook.Unprotect%2A> 메서드를 호출하고 필요한 경우 암호를 전달합니다.  다음 코드 예제를 사용하려면 시트 클래스가 아닌 `ThisWorkbook` 클래스에서 이 코드 예제를 실행하십시오.  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.Workbook.Unprotect%2A> method, passing a password if it is required. To use the following code example, run it in the `ThisWorkbook` class, not in a sheet class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#11](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/ThisWorkbook.cs#11)]
-     [!code-vb[Trin_VstcoreExcelAutomation#11](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/ThisWorkbook.vb#11)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#11](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#11)]  [!code-vb[Trin_VstcoreExcelAutomation#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#11)]  
   
-## 응용 프로그램 수준 추가 기능을 사용하여 통합 문서 보호  
+## <a name="protecting-a-workbook-by-using-an-application-level-add-in"></a>Protecting a Workbook by Using an Application-Level Add-In  
   
-#### 통합 문서를 보호하려면  
+#### <a name="to-protect-a-workbook"></a>To protect a workbook  
   
-1.  통합 문서의 <xref:Microsoft.Office.Interop.Excel._Workbook.Protect%2A> 메서드를 호출하고 암호를 지정합니다.  이 코드 예제에서는 활성 통합 문서를 사용합니다.  이 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 이 코드를 실행하십시오.  
+1.  Call the <xref:Microsoft.Office.Interop.Excel._Workbook.Protect%2A> method of the workbook and include a password. This code example uses the active workbook. To use this example, run the code from the `ThisAddIn` class in your project.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#6)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#6](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#6)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#6](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#6)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#6](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#6)]  
   
-#### 통합 문서 보호를 해제하려면  
+#### <a name="to-unprotect-a-workbook"></a>To unprotect a workbook  
   
-1.  활성 통합 문서의 <xref:Microsoft.Office.Interop.Excel._Workbook.Unprotect%2A> 메서드를 호출하고 필요한 경우 암호를 전달합니다.  이 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 이 코드를 실행하십시오.  
+1.  Call the <xref:Microsoft.Office.Interop.Excel._Workbook.Unprotect%2A> method of the active workbook, passing a password if it is required. To use this example, run the code from the `ThisAddIn` class in your project.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#7](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#7)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#7](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#7)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#7](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#7)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#7](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#7)]  
   
-## 참고 항목  
- [통합 문서 사용](../vsto/working-with-workbooks.md)   
- [방법: 프로그래밍 방식으로 워크시트 보호](../vsto/how-to-programmatically-protect-worksheets.md)   
- [방법: 프로그래밍 방식으로 워크시트 숨기기](../vsto/how-to-programmatically-hide-worksheets.md)   
- [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Workbooks](../vsto/working-with-workbooks.md)   
+ [How to: Programmatically Protect Worksheets](../vsto/how-to-programmatically-protect-worksheets.md)   
+ [How to: Programmatically Hide Worksheets](../vsto/how-to-programmatically-hide-worksheets.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

@@ -1,41 +1,45 @@
 ---
-title: "방법: 프로그래밍 방식으로 문서에서 맞춤법 검사"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "문서[Visual Studio에서 Office 개발], 맞춤법 검사"
-  - "맞춤법 검사기, 문서"
+title: 'How to: Programmatically Check Spelling in Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- documents [Office development in Visual Studio], checking spelling
+- spelling checker, documents
 ms.assetid: 5bbe3a8d-fc65-4f57-bd63-5bb549dbc4bd
 caps.latest.revision: 24
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 24
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 99897abad06494e64a5e6f885d7e3107908bc5ce
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 문서에서 맞춤법 검사
-  문서에서 맞춤법을 검사하려면 <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> 메서드를 사용합니다.  이 메서드는 제공된 매개 변수의 맞춤법이 정확한지 여부를 나타내는 부울 값을 반환합니다.  
+# <a name="how-to-programmatically-check-spelling-in-documents"></a>How to: Programmatically Check Spelling in Documents
+  To check the spelling in a document, use the <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> method. This method returns a Boolean value that indicates whether the supplied parameter is spelled correctly.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-### 맞춤법을 검사하고 결과를 메시지 상자에 표시하려면  
+### <a name="to-check-spelling-and-display-results-in-a-message-box"></a>To check spelling and display results in a message box  
   
-1.  <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> 메서드를 호출하고 맞춤법 오류를 검사할 텍스트의 범위를 전달합니다.  이 코드 예제를 사용하려면 프로젝트의 `ThisDocument` 또는 `ThisAddIn` 클래스에서 이 코드를 실행하십시오.  
+1.  Call the <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> method and pass it a range of text to check for spelling errors. To use this code example, run it from the `ThisDocument` or `ThisAddIn` class in your project.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#113](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#113)]
-     [!code-vb[Trin_VstcoreWordAutomation#113](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#113)]  
+     [!code-vb[Trin_VstcoreWordAutomation#113](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#113)]  [!code-csharp[Trin_VstcoreWordAutomation#113](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#113)]  
   
-## 참고 항목  
- [방법: 프로그래밍 방식으로 문서의 범위 정의 및 선택](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
- [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [How to: Programmatically Define and Select Ranges in Documents](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

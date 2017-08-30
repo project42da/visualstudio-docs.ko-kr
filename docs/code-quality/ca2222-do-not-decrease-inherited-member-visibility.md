@@ -1,50 +1,66 @@
 ---
-title: "CA2222: 상속된 멤버 노출 수준을 낮추지 마십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DoNotDecreaseInheritedMemberVisibility"
-  - "CA2222"
-helpviewer_keywords: 
-  - "CA2222"
-  - "DoNotDecreaseInheritedMemberVisibility"
+title: 'CA2222: Do not decrease inherited member visibility | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DoNotDecreaseInheritedMemberVisibility
+- CA2222
+helpviewer_keywords:
+- DoNotDecreaseInheritedMemberVisibility
+- CA2222
 ms.assetid: 066c8675-381f-43cc-956c-d757cc494028
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 14
----
-# CA2222: 상속된 멤버 노출 수준을 낮추지 마십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d4ab56a1963c0b6129aff83088b08104ccbe5437
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2222-do-not-decrease-inherited-member-visibility"></a>CA2222: Do not decrease inherited member visibility
 |||  
 |-|-|  
 |TypeName|DoNotDecreaseInheritedMemberVisibility|  
 |CheckId|CA2222|  
-|범주|Microsoft.Usage|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## 원인  
- unsealed 형식의 private 메서드에 기본 형식에서 선언된 public 메서드와 동일한 시그너처가 있습니다.  private 메서드가 final이 아닙니다.  
+## <a name="cause"></a>Cause  
+ A private method in an unsealed type has a signature that is identical to a public method declared in a base type. The private method is not final.  
   
-## 규칙 설명  
- 상속된 멤버에 대한 액세스 한정자는 변경하면 안 됩니다.  상속된 멤버를 private으로 변경하더라도 호출자가 메서드의 기본 클래스 구현에 액세스하는 것을 막을 수 없습니다.  멤버가 private이고 형식이 unsealed인 경우 상속 형식은 상속 계층 구조에 있는 메서드의 마지막 public 구현을 호출할 수 있습니다.  액세스 한정자를 변경해야 하는 경우에는 메서드 재정의를 방지하기 위해 메서드를 final로 표시하거나 해당 형식을 sealed로 지정해야 합니다.  
+## <a name="rule-description"></a>Rule Description  
+ You should not change the access modifier for inherited members. Changing an inherited member to private does not prevent callers from accessing the base class implementation of the method. If the member is made private and the type is unsealed, inheriting types can call the last public implementation of the method in the inheritance hierarchy. If you must change the access modifier, either the method should be marked final or its type should be sealed to prevent the method from being overridden.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 액세스 한정자를 private이 아닌 액세스 한정자로 변경합니다.  또는 프로그래밍 언어에서 지원하는 경우 메서드를 final로 지정합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, change the access to be non-private. Alternatively, if your programming language supports it, you can make the method final.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 예제  
- 다음 예제에서는 이 규칙을 위반하는 형식을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows a type that violates this rule.  
   
- [!code-vb[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/VisualBasic/ca2222-do-not-decrease-inherited-member-visibility_1.vb)]
- [!code-cs[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/CSharp/ca2222-do-not-decrease-inherited-member-visibility_1.cs)]
+ [!code-vb[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/VisualBasic/ca2222-do-not-decrease-inherited-member-visibility_1.vb)] [!code-csharp[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/CSharp/ca2222-do-not-decrease-inherited-member-visibility_1.cs)]

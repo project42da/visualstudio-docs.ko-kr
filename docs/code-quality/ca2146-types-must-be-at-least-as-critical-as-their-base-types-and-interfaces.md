@@ -1,43 +1,60 @@
 ---
-title: "CA2146: 형식은 최소한 기본 형식 및 인터페이스만큼 중요해야 합니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2146"
+title: 'CA2146: Types must be at least as critical as their base types and interfaces | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2146
 ms.assetid: 241fb784-1f6b-46e5-8ceb-c438e341d38e
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 11
----
-# CA2146: 형식은 최소한 기본 형식 및 인터페이스만큼 중요해야 합니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: ee68c96bff15b6abb238221d43e6c0dfdff32c4f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces"></a>CA2146: Types must be at least as critical as their base types and interfaces
 |||  
 |-|-|  
 |TypeName|TypesMustBeAtLeastAsCriticalAsBaseTypes|  
 |CheckId|CA2146|  
-|범주|Microsoft.Security|  
-|변경 수준|주요 변경|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## 원인  
- 투명 형식은 <xref:System.Security.SecuritySafeCriticalAttribute> 또는 <xref:System.Security.SecurityCriticalAttribute>로 표시된 형식 또는 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시된 형식에서 파생된 <xref:System.Security.SecuritySafeCriticalAttribute> 특성으로 표시된 형식에서 파생됩니다.  
+## <a name="cause"></a>Cause  
+ A transparent type is derived from a type that is marked with the <xref:System.Security.SecuritySafeCriticalAttribute> or the <xref:System.Security.SecurityCriticalAttribute>, or a type that is marked with the <xref:System.Security.SecuritySafeCriticalAttribute> attribute is derived from a type that is marked with the <xref:System.Security.SecurityCriticalAttribute> attribute.  
   
-## 규칙 설명  
- 이 규칙은 파생 형식에 기본 형식 또는 구현된 인터페이스만큼 중요하지 않은 보안 투명성 특성이 있을 때 적용됩니다.  중요한 기본 형식에서 파생되거나 중요한 인터페이스를 구현할 수 있는 것은 중요한 형식뿐이고, 안전에 중요한 기본 형식에서 파생되거나 안전에 중요한 인터페이스를 구현할 수 있는 것은 중요하거나 안전에 중요한 형식뿐입니다.  수준 2 투명성에서 이 규칙 위반은 파생된 형식에 대한 <xref:System.TypeLoadException>에서 발생합니다.  
+## <a name="rule-description"></a>Rule Description  
+ This rule fires when a derived type has a security transparency attribute that is not as critical as its base type or implemented interface. Only critical types can derive from critical base types or implement critical interfaces, and only critical or safe-critical types can derive from safe-critical base types or implement safe-critical interfaces. Violations of this rule in level 2 transparency result in a <xref:System.TypeLoadException> for the derived type.  
   
-## 위반 문제를 해결하는 방법  
- 이 위반 문제를 해결하려면 파생되거나 구현 중인 형식을 최소한 기본 형식 또는 인터페이스만큼 중요한 투명도 특성으로 표시하십시오.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix this violation, mark the derived or implementing type with a transparency attribute that is at least as critical as the base type or interface.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 예제  
- [!code-cs[FxCop.Security.CA2146.TypesMustBeAtLeastAsCriticalAsBaseTypes#1](../code-quality/codesnippet/CSharp/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces_1.cs)]
+## <a name="example"></a>Example  
+ [!code-csharp[FxCop.Security.CA2146.TypesMustBeAtLeastAsCriticalAsBaseTypes#1](../code-quality/codesnippet/CSharp/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces_1.cs)]

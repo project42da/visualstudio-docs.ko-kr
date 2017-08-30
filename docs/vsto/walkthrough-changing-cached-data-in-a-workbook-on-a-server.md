@@ -1,317 +1,318 @@
 ---
-title: "연습: 서버의 통합 문서에서 캐시된 데이터 변경"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "데이터[Visual Studio에서 Office 개발], 서버에서 액세스"
-  - "데이터 집합[Visual Studio에서 Office 개발], 서버에서 액세스"
-  - "문서[Visual Studio에서 Office 개발], 서버 쪽 데이터 액세스"
-  - "서버 쪽 데이터 액세스[Visual Studio에서 Office 개발]"
-  - "통합 문서[Visual Studio에서 Office 개발], 서버 데이터 변경"
+title: 'Walkthrough: Changing Cached Data in a Workbook on a Server | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- workbooks [Office development in Visual Studio], changing server data
+- datasets [Office development in Visual Studio], accessing on server
+- server-side data access [Office development in Visual Studio]
+- data [Office development in Visual Studio], accessing on server
+- documents [Office development in Visual Studio], server-side data access
 ms.assetid: 69e13de3-9286-40cc-8c4b-1727caf761bf
 caps.latest.revision: 38
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 37
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 435753ced2e0d1dcce9a6f5a1429de55f48ad0aa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 서버의 통합 문서에서 캐시된 데이터 변경
-  이 연습에서는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스를 사용하여 Microsoft Office Excel을 시작하지 않고도 Excel 통합 문서에 캐시된 데이터 집합을 수정하는 방법을 보여 주고,  
+# <a name="walkthrough-changing-cached-data-in-a-workbook-on-a-server"></a>Walkthrough: Changing Cached Data in a Workbook on a Server
+  This walkthrough demonstrates how to modify a dataset that is cached in a Microsoft Office Excel workbook without starting Excel by using the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   AdventureWorksLT 데이터베이스에서 가져온 데이터를 포함하는 데이터 집합 정의  
+-   Defining a dataset that contains data from the AdventureWorksLT database.  
   
--   Excel 통합 문서 프로젝트 및 콘솔 응용 프로그램 프로젝트에서 데이터 집합 인스턴스 만들기  
+-   Creating instances of the dataset in an Excel workbook project and a console application project.  
   
--   통합 문서의 데이터 집합에 바인딩된 <xref:Microsoft.Office.Tools.Excel.ListObject> 만들기 및 통합 문서가 열릴 때 <xref:Microsoft.Office.Tools.Excel.ListObject>에 데이터 채우기  
+-   Creating a <xref:Microsoft.Office.Tools.Excel.ListObject> that is bound to the dataset in the workbook, and populating the <xref:Microsoft.Office.Tools.Excel.ListObject> with data when the workbook is opened.  
   
--   데이터 캐시에 통합 문서의 데이터 집합 추가  
+-   Adding the dataset in the workbook to the data cache.  
   
--   콘솔 응용 프로그램에서 코드를 실행하여 Excel을 시작하지 않고 캐시된 데이터 집합의 데이터 열 수정  
+-   Modifying a column of data in the cached dataset by running code in the console application, without starting Excel.  
   
- 이 연습에서는 개발 컴퓨터에서 코드를 실행하는 것으로 가정하지만 연습에서 소개하는 코드를 Excel이 설치되지 않은 서버에서 사용할 수도 있습니다.  
+ Although this walkthrough assumes that you are running the code on your development computer, the code demonstrated by this walkthrough can be used on a server that does not have Excel installed.  
   
 > [!NOTE]  
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다.  설치한 Visual Studio 버전과 사용하는 설정에 따라 이러한 요소가 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
--   AdventureWorksLT 샘플 데이터베이스가 연결되어 있는 Microsoft SQL Server 또는 Microsoft SQL Server Express의 실행 중인 인스턴스에 대한 액세스 권한.  AdventureWorksLT 데이터베이스는 [CodePlex 웹 사이트](http://go.microsoft.com/fwlink/?linkid=87843)에서 다운로드할 수 있습니다.  데이터베이스 연결에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+-   Access to a running instance of Microsoft SQL Server or Microsoft SQL Server Express that has the AdventureWorksLT sample database attached to it. You can download the AdventureWorksLT database from the [CodePlex Web site](http://go.microsoft.com/fwlink/?linkid=87843). For more information about attaching a database, see the following topics:  
   
-    -   SQL Server Management Studio 또는 SQL Server Management Studio Express를 사용하여 데이터베이스를 연결하려면 [방법: 데이터베이스 연결\(SQL Server Management Studio\)](http://msdn.microsoft.com/ko-kr/b4efb0ae-cfe6-4d81-a4b4-6e4916885caa)을 참조하십시오.  
+    -   To attach a database by using SQL Server Management Studio or SQL Server Management Studio Express, see [How to: Attach a Database (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/b4efb0ae-cfe6-4d81-a4b4-6e4916885caa).  
   
-    -   명령줄을 사용하여 데이터베이스를 연결하려면 [방법: SQL Server Express에 데이터베이스 파일 첨부](http://msdn.microsoft.com/ko-kr/0f8e42b5-7a8c-4c30-8c98-7d2bdc8dcc68)를 참조하십시오.  
+    -   To attach a database by using the command line, see [How to: Attach a Database File to SQL Server Express](http://msdn.microsoft.com/en-us/0f8e42b5-7a8c-4c30-8c98-7d2bdc8dcc68).  
   
-## 데이터 집합을 정의하는 클래스 라이브러리 프로젝트 만들기  
- Excel 통합 문서 프로젝트와 콘솔 응용 프로그램에서 같은 데이터 집합을 사용하려면 두 프로젝트에서 모두 참조되는 별도의 어셈블리에 데이터 집합을 정의해야 합니다.  이 연습에서는 클래스 라이브러리 프로젝트에서 데이터 집합을 정의합니다.  
+## <a name="creating-a-class-library-project-that-defines-a-dataset"></a>Creating a Class Library Project That Defines a Dataset  
+ To use the same dataset in an Excel workbook project and a console application, you must define the dataset in a separate assembly that is referenced by both of these projects. For this walkthrough, define the dataset in a class library project.  
   
-#### 클래스 라이브러리 프로젝트를 만들려면  
+#### <a name="to-create-the-class-library-project"></a>To create the class library project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+2.  On the **File** menu, point to **New**, and then click **Project**.  
   
-3.  템플릿 창에서 **Visual C\#** 또는 **Visual Basic**을 확장한 다음 **창**을 클릭합니다.  
+3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then click **Windows**.  
   
-4.  프로젝트 템플릿 목록에서 **클래스 라이브러리**를 선택합니다.  
+4.  In the list of project templates, select **Class Library**.  
   
-5.  **이름** 상자에 **AdventureWorksDataSet**을 입력합니다.  
+5.  In the **Name** box, type **AdventureWorksDataSet**.  
   
-6.  **찾아보기**를 클릭하여 %UserProfile%\\My Documents\(Windows XP 또는 이전 버전의 경우\) 또는 %UserProfile%\\Documents\(Windows Vista의 경우\) 폴더로 이동한 다음 **폴더 선택**을 클릭합니다.  
+6.  Click **Browse**, navigate to your %UserProfile%\My Documents (for Windows XP and earlier) or %UserProfile%\Documents (for Windows Vista) folder, and then click **Select Folder**.  
   
-7.  **새 프로젝트** 대화 상자에서 **솔루션용 디렉터리 만들기** 확인란이 선택되어 있지 않은지 확인합니다.  
+7.  In the **New Project** dialog box, ensure that the **Create directory for solution** check box is not selected.  
   
-8.  **확인**을 클릭합니다.  
+8.  Click **OK**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 **솔루션 탐색기**에 **AdventureWorksDataSet** 프로젝트가 추가되고 **Class1.cs** 또는 **Class1.vb** 코드 파일이 열립니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **AdventureWorksDataSet** project to **Solution Explorer** and opens the **Class1.cs** or **Class1.vb** code file.  
   
-9. **솔루션 탐색기**에서 **Class1.cs** 또는 **Class1.vb**를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  이 연습에서는 이러한 파일이 필요하지 않습니다.  
+9. In **Solution Explorer**, right-click **Class1.cs** or **Class1.vb**, and then click **Delete**. You do not need this file for this walkthrough.  
   
-## 클래스 라이브러리 프로젝트에서 데이터 집합 정의  
- SQL Server 2005의 AdventureWorksLT 데이터베이스에서 가져온 데이터를 포함하는 형식화된 데이터 집합을 정의합니다.  이 연습의 뒷부분에서는 Excel 통합 문서 프로젝트와 콘솔 응용 프로그램 프로젝트에서 이 데이터 집합을 참조하게 됩니다.  
+## <a name="defining-a-dataset-in-the-class-library-project"></a>Defining a Dataset in the Class Library Project  
+ Define a typed dataset that contains data from the AdventureWorksLT database for SQL Server 2005. Later in this walkthrough, you will reference this dataset from an Excel workbook project and a console application project.  
   
- 이 데이터 집합은 AdventureWorksLT 데이터베이스의 Product 테이블에 있는 데이터를 나타내는 *형식화된 데이터 집합*입니다.  형식화된 데이터 집합에 대한 자세한 내용은 [Visual Studio에서 데이터 집합 작업](../data-tools/dataset-tools-in-visual-studio.md)를 참조하십시오.  
+ The dataset is a *typed dataset* that represents the data in the Product table of the AdventureWorksLT database. For more information about typed datasets, see [Dataset tools in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
-#### 클래스 라이브러리 프로젝트에서 형식화된 데이터 집합을 정의하려면  
+#### <a name="to-define-a-typed-dataset-in-the-class-library-project"></a>To define a typed dataset in the class library project  
   
-1.  **솔루션 탐색기**에서 **AdventureWorksDataSet** 프로젝트를 클릭합니다.  
+1.  In **Solution Explorer**, click the **AdventureWorksDataSet** project.  
   
-2.  경우는  **데이터 원본** 창이 표시 되지 않는,이, 메뉴 표시줄에서 선택 표시  **보기**,  **기타 Windows**,  **데이터 원본**.  
+2.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
   
-3.  선택  **새 데이터 소스 추가** 시작 하는  **데이터 소스 구성 마법사**.  
+3.  Choose **Add New Data Source** to start the **Data Source Configuration Wizard**.  
   
-4.  **데이터베이스**를 클릭하고 **다음**을 클릭합니다.  
+4.  Click **Database**, and then click **Next**.  
   
-5.  AdventureWorksLT 데이터베이스에 대한 기존 연결이 있으면 해당 연결을 선택하고 **다음**을 클릭합니다.  
+5.  If you have an existing connection to the AdventureWorksLT database, choose this connection and click **Next**.  
   
-     그렇지 않으면 **새 연결**을 클릭하고 **연결 추가** 대화 상자에서 새 연결을 만듭니다.  자세한 내용은 [방법: 데이터베이스의 데이터에 연결](~/data-tools/how-to-connect-to-data-in-a-database.md)을 참조하십시오.  
+     Otherwise, click **New Connection**, and use the **Add Connection** dialog box to create the new connection. For more information, see [Add new connections](../data-tools/add-new-connections.md).  
   
-6.  **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 **다음**을 클릭합니다.  
+6.  In the **Save the Connection String to the Application Configuration File** page, click **Next**.  
   
-7.  **데이터베이스 개체 선택** 페이지에서 **테이블**을 확장한 다음 **Product \(SalesLT\)**를 선택합니다.  
+7.  In the **Choose Your Database Objects** page, expand **Tables** and select **Product (SalesLT)**.  
   
-8.  **마침**을 클릭합니다.  
+8.  Click **Finish**.  
   
-     **AdventureWorksDataSet** 프로젝트에 AdventureWorksLTDataSet.xsd 파일이 추가됩니다.  이 파일은 다음 항목을 정의합니다.  
+     The AdventureWorksLTDataSet.xsd file is added to the **AdventureWorksDataSet** project. This file defines the following items:  
   
-    -   이름이 `AdventureWorksLTDataSet`인 형식화된 데이터 집합.  이 데이터 집합은 AdventureWorksLT 데이터베이스의 Product 테이블에 있는 콘텐츠를 나타냅니다.  
+    -   A typed dataset named `AdventureWorksLTDataSet`. This dataset represents the contents of the Product table in the AdventureWorksLT database.  
   
-    -   이름이 `ProductTableAdapter`인 TableAdapter.  이 TableAdapter는 `AdventureWorksLTDataSet`에서 데이터를 읽고 쓰는 데 사용할 수 있습니다.  자세한 내용은 [TableAdapter 개요](/visual-studio/data-tools/tableadapter-overview)을 참조하십시오.  
+    -   A TableAdapter named `ProductTableAdapter`. This TableAdapter can be used to read and write data in the `AdventureWorksLTDataSet`. For more information, see [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).  
   
-     이 연습의 뒷부분에서 이들 개체를 모두 사용하게 됩니다.  
+     You will use both of these objects later in this walkthrough.  
   
-9. **솔루션 탐색기**에서 **AdventureWorksDataSet**을 마우스 오른쪽 단추로 클릭하고 **빌드**를 클릭합니다.  
+9. In **Solution Explorer**, right-click **AdventureWorksDataSet** and click **Build**.  
   
-     프로젝트가 오류 없이 빌드되는지 확인합니다.  
+     Verify that the project builds without errors.  
   
-## Excel 통합 문서 프로젝트 만들기  
- 데이터에 대한 인터페이스를 구현하는 Excel 통합 문서 프로젝트를 만듭니다.  이 연습의 뒷부분에서 데이터를 표시하는 <xref:Microsoft.Office.Tools.Excel.ListObject>를 만들고 통합 문서의 데이터 캐시에 데이터 집합의 인스턴스를 추가하게 됩니다.  
+## <a name="creating-an-excel-workbook-project"></a>Creating an Excel Workbook Project  
+ Create an Excel workbook project for the interface to the data. Later in this walkthrough, you will create a <xref:Microsoft.Office.Tools.Excel.ListObject> that displays the data, and you will add an instance of the dataset to the data cache in the workbook.  
   
-#### Excel 통합 문서 프로젝트를 만들려면  
+#### <a name="to-create-the-excel-workbook-project"></a>To create the Excel workbook project  
   
-1.  **솔루션 탐색기**에서 **AdventureWorksDataSet** 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **새 프로젝트**를 클릭합니다.  
+1.  In **Solution Explorer**, right-click the **AdventureWorksDataSet** solution, point to **Add**, and then click **New Project**.  
   
-2.  템플릿 창에서 **Visual C\#** 또는 **Visual Basic**을 확장한 다음 **Office**를 확장합니다.  
+2.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office**.  
   
-3.  아래 확장 된  **Office** 노드를 선택 된  **2010** 노드.  
+3.  Under the expanded **Office** node, select the **2010** node.  
   
-4.  프로젝트 템플릿 목록에서 Excel 통합 문서 프로젝트를 선택합니다.  
+4.  In the list of project templates, select the Excel Workbook project.  
   
-5.  **이름** 상자에 **AdventureWorksReport**를 입력합니다.  위치를 수정하지 마십시오.  
+5.  In the **Name** box, type **AdventureWorksReport**. Do not modify the location.  
   
-6.  **확인**을 클릭합니다.  
+6.  Click **OK**.  
   
-     **Visual Studio Tools for Office 프로젝트 마법사**가 열립니다.  
+     The **Visual Studio Tools for Office Project Wizard** opens.  
   
-7.  **새 문서 만들기**를 선택하고 **확인**을 클릭합니다.  
+7.  Ensure that **Create a new document** is selected, and click **OK**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]의 디자이너에서 **AdventureWorksReport** 통합 문서가 열리고 **솔루션 탐색기**에 **AdventureWorksReport** 프로젝트가 추가됩니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] opens the **AdventureWorksReport** workbook in the designer and adds the **AdventureWorksReport** project to **Solution Explorer**.  
   
-## Excel 통합 문서 프로젝트의 데이터 소스에 데이터 집합 추가  
- Excel 통합 문서에 데이터 집합을 표시하려면 먼저 Excel 통합 문서 프로젝트의 데이터 소스에 데이터 집합을 추가해야 합니다.  
+## <a name="adding-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Adding the Dataset to Data Sources in the Excel Workbook Project  
+ Before you can display the dataset in the Excel workbook, you must first add the dataset to data sources in the Excel workbook project.  
   
-#### Excel 통합 문서 프로젝트의 데이터 소스에 데이터 집합을 추가하려면  
+#### <a name="to-add-the-dataset-to-the-data-sources-in-the-excel-workbook-project"></a>To add the dataset to the data sources in the Excel workbook project  
   
-1.  **솔루션 탐색기**의 **AdventureWorksReport** 프로젝트에서 **Sheet1.cs** 또는 **Sheet1.vb**를 두 번 클릭합니다.  
+1.  In **Solution Explorer**, double-click **Sheet1.cs** or **Sheet1.vb** under the **AdventureWorksReport** project.  
   
-     통합 문서가 디자이너에서 열립니다.  
+     The workbook opens in the designer.  
   
-2.  **데이터** 메뉴에서 **새 데이터 소스 추가**를 클릭합니다.  
+2.  On the **Data** menu, click **Add New Data Source**.  
   
-     **데이터 소스 구성 마법사**가 열립니다.  
+     The **Data Source Configuration Wizard** opens.  
   
-3.  **개체**를 클릭하고 **다음**을 클릭합니다.  
+3.  Click **Object**, and then click **Next**.  
   
-4.  **바인딩할 개체 선택** 페이지에서 **참조 추가**를 클릭합니다.  
+4.  In the **Select the Object You Wish to Bind to** page, click **Add Reference**.  
   
-5.  **프로젝트** 탭에서 **AdventureWorksDataSet**을 클릭한 다음 **확인**을 클릭합니다.  
+5.  On the **Projects** tab, click **AdventureWorksDataSet** and then click **OK**.  
   
-6.  **AdventureWorksDataSet** 어셈블리의 **AdventureWorksDataSet** 네임스페이스에서 **AdventureWorksLTDataSet**을 클릭한 다음 **마침**을 클릭합니다.  
+6.  Under the **AdventureWorksDataSet** namespace of the **AdventureWorksDataSet** assembly, click **AdventureWorksLTDataSet** and then click **Finish**.  
   
-     **데이터 소스** 창이 열리고 데이터 소스 목록에 **AdventureWorksLTDataSet**이 추가됩니다.  
+     The **Data Sources** window opens, and **AdventureWorksLTDataSet** is added to the list of data sources.  
   
-## 데이터 집합의 인스턴스에 바인딩된 ListObject 만들기  
- 통합 문서에서 데이터 집합을 표시하려면 해당 데이터 집합의 인스턴스에 바인딩된 <xref:Microsoft.Office.Tools.Excel.ListObject>를 만듭니다.  컨트롤을 데이터에 바인딩하는 방법에 대한 자세한 내용은 [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)을 참조하십시오.  
+## <a name="creating-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>Creating a ListObject That Is Bound to an Instance of the Dataset  
+ To display the dataset in the workbook, create a <xref:Microsoft.Office.Tools.Excel.ListObject> that is bound to an instance of the dataset. For more information about binding controls to data, see [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md).  
   
-#### 데이터 집합의 인스턴스에 바인딩된 ListObject를 만들려면  
+#### <a name="to-create-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>To create a ListObject that is bound to an instance of the dataset  
   
-1.  **데이터 소스** 창의 **AdventureWorksDataSet**에서 **AdventureWorksLTDataSet** 노드를 확장합니다.  
+1.  In the **Data Sources** window, expand the **AdventureWorksLTDataSet** node under **AdventureWorksDataSet**.  
   
-2.  **Product** 노드를 선택하면 나타나는 드롭다운 화살표를 클릭하고 드롭다운 목록에서 **ListObject**를 선택합니다.  
+2.  Select the **Product** node, click the drop-down arrow that appears, and select **ListObject** in the drop-down list.  
   
-     드롭다운 화살표가 표시되지 않으면 디자이너에 통합 문서가 열려 있는지 확인합니다.  
+     If the drop-down arrow does not appear, confirm that the workbook is open in the designer.  
   
-3.  **Product** 테이블을 A1 셀에 끌어 놓습니다.  
+3.  Drag the **Product** table to cell A1.  
   
-     `productListObject`라는 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤이 워크시트에 A1 셀부터 만들어집니다.  이와 함께 `adventureWorksLTDataSet`이라는 데이터 집합 개체와 `productBindingSource`라는 <xref:System.Windows.Forms.BindingSource>가 프로젝트에 추가됩니다.  <xref:Microsoft.Office.Tools.Excel.ListObject>가 <xref:System.Windows.Forms.BindingSource>에 바인딩되고, 이는 다시 데이터 집합 개체에 바인딩됩니다.  
+     A <xref:Microsoft.Office.Tools.Excel.ListObject> control named `productListObject` is created on the worksheet, starting in cell A1. At the same time, a dataset object named `adventureWorksLTDataSet` and a <xref:System.Windows.Forms.BindingSource> named `productBindingSource` are added to the project. The <xref:Microsoft.Office.Tools.Excel.ListObject> is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the dataset object.  
   
-## 데이터 캐시에 데이터 집합 추가  
- Excel 통합 문서 프로젝트의 외부에 있는 코드에서 통합 문서의 데이터 집합에 액세스할 수 있도록 하려면 데이터 집합을 데이터 캐시에 추가해야 합니다.  데이터 캐시에 대한 자세한 내용은 [문서 수준 사용자 지정의 캐시된 데이터](../vsto/cached-data-in-document-level-customizations.md) 및 [데이터 캐싱](../vsto/caching-data.md)을 참조하십시오.  
+## <a name="adding-the-dataset-to-the-data-cache"></a>Adding the Dataset to the Data Cache  
+ To enable code outside the Excel workbook project to access the dataset in the workbook, you must add the dataset to the data cache. For more information about the data cache, see [Cached Data in Document-Level Customizations](../vsto/cached-data-in-document-level-customizations.md) and [Caching Data](../vsto/caching-data.md).  
   
-#### 데이터 캐시에 데이터 집합을 추가하려면  
+#### <a name="to-add-the-dataset-to-the-data-cache"></a>To add the dataset to the data cache  
   
-1.  디자이너에서 **adventureWorksLTDataSet**을 클릭합니다.  
+1.  In the designer, click **adventureWorksLTDataSet**.  
   
-2.  **속성** 창에서 **Modifiers** 속성을 **Public**으로 설정합니다.  
+2.  In the **Properties** window, set the **Modifiers** property to **Public**.  
   
-3.  **CacheInDocument** 속성을 **True**로 설정합니다.  
+3.  Set the **CacheInDocument** property to **True**.  
   
-## 통합 문서의 데이터 집합 초기화  
- 콘솔 응용 프로그램을 사용하여 캐시된 데이터 집합에서 데이터를 검색하려면 먼저 캐시된 데이터 집합에 데이터를 채워야 합니다.  
+## <a name="initializing-the-dataset-in-the-workbook"></a>Initializing the Dataset in the Workbook  
+ Before you can retrieve the data from the cached dataset by using the console application, you must first populate the cached dataset with data.  
   
-#### 통합 문서의 데이터 집합을 초기화하려면  
+#### <a name="to-initialize-the-dataset-in-the-workbook"></a>To initialize the dataset in the workbook  
   
-1.  **솔루션 탐색기**에서 **Sheet1.cs** 또는 **Sheet1.vb** 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 클릭합니다.  
+1.  In **Solution Explorer**, right-click the **Sheet1.cs** or **Sheet1.vb** file and click **View Code**.  
   
-2.  `Sheet1_Startup` 이벤트 처리기를 다음 코드로 바꿉니다.  이 코드에서는 캐시된 데이터 집합이 현재 비어 있는 경우 **AdventureWorksDataSet** 프로젝트에 정의된 `ProductTableAdapter` 클래스의 인스턴스를 사용하여  에 이 데이터 집합에 데이터를 채웁니다.  
+2.  Replace the `Sheet1_Startup` event handler with the following code. This code uses an instance of the `ProductTableAdapter` class that is defined in the **AdventureWorksDataSet** project to fill the cached dataset with data, if it is currently empty.  
   
-     [!code-csharp[Trin_CachedDataWalkthroughs#8](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CachedDataWalkthroughs/CS/AdventureWorksReport/Sheet1.cs#8)]
-     [!code-vb[Trin_CachedDataWalkthroughs#8](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_CachedDataWalkthroughs/VB/AdventureWorksReport/Sheet1.vb#8)]  
+     [!code-csharp[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs#8)]  [!code-vb[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb#8)]  
   
-## 검사점  
- Excel 통합 문서 프로젝트를 빌드한 후 실행하여 오류 없이 컴파일 및 실행되는지 확인합니다.  또한 이 작업을 통해 캐시된 데이터 집합을 채우고 통합 문서에 데이터를 저장합니다.  
+## <a name="checkpoint"></a>Checkpoint  
+ Build and run the Excel workbook project to ensure that it compiles and runs without errors. This operation also fills the cached dataset and saves the data in the workbook.  
   
-#### 프로젝트를 빌드하여 실행하려면  
+#### <a name="to-build-and-run-the-project"></a>To build and run the project  
   
-1.  **솔루션 탐색기**에서 **AdventureWorksReport** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **디버그**를 선택한 다음 **새 인스턴스 시작**을 클릭합니다.  
+1.  In **Solution Explorer**, right-click the **AdventureWorksReport** project, choose **Debug**, and then click **Start new instance**.  
   
-     프로젝트가 빌드되고 Excel에서 통합 문서가 열립니다.  다음을 확인합니다.  
+     The project is built, and the workbook opens in Excel. Verify the following:  
   
-    -   <xref:Microsoft.Office.Tools.Excel.ListObject>에 데이터가 채워져 있는지 확인합니다.  
+    -   The <xref:Microsoft.Office.Tools.Excel.ListObject> fills with data.  
   
-    -   <xref:Microsoft.Office.Tools.Excel.ListObject>의 첫 번째 행에 대한 **ListPrice** 열의 값이 1431.5인지 확인합니다.  이 연습의 뒷부분에서는 콘솔 응용 프로그램을 사용하여 **ListPrice** 열의 값을 수정하게 됩니다.  
+    -   The value in the **ListPrice** column for the first row of the <xref:Microsoft.Office.Tools.Excel.ListObject> is 1431.5. Later in this walkthrough, you will use a console application to modify the values in the **ListPrice** column.  
   
-2.  통합 문서를 저장합니다.  파일 이름이나 통합 문서의 위치를 수정하지 마십시오.  
+2.  Save the workbook. Do not modify the file name or the location of the workbook.  
   
-3.  Excel을 닫습니다.  
+3.  Close Excel.  
   
-## 콘솔 응용 프로그램 프로젝트 만들기  
- 통합 문서의 캐시된 데이터 집합에 있는 데이터를 수정하는 데 사용할 콘솔 응용 프로그램 프로젝트를 만듭니다.  
+## <a name="creating-a-console-application-project"></a>Creating a Console Application Project  
+ Create a console application project to use to modify data in the cached dataset in the workbook.  
   
-#### 콘솔 응용 프로그램 프로젝트를 만들려면  
+#### <a name="to-create-the-console-application-project"></a>To create the console application project  
   
-1.  **솔루션 탐색기**에서 **AdventureWorksDataSet** 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **새 프로젝트**를 클릭합니다.  
+1.  In **Solution Explorer**, right-click the **AdventureWorksDataSet** solution, point to **Add**, and then click **New Project**.  
   
-2.  **프로젝트 형식** 창에서 **Visual C\#** 또는 **Visual Basic**을 확장한 다음 **Windows**를 클릭합니다.  
+2.  In the **Project Types** pane, expand **Visual C#** or **Visual Basic**, and then click **Windows**.  
   
-3.  **템플릿** 창에서 **콘솔 응용 프로그램**을 선택합니다.  
+3.  In the **Templates** pane, select **Console Application**.  
   
-4.  **이름** 상자에 **DataWriter**를 입력합니다.  위치를 수정하지 마십시오.  
+4.  In the **Name** box, type **DataWriter**. Do not modify the location.  
   
-5.  **확인**을 클릭합니다.  
+5.  Click **OK**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 **솔루션 탐색기**에 **DataWriter** 프로젝트가 추가되고 **Program.cs** 또는 **Module1.vb** 코드 파일이 열립니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **DataWriter** project to **Solution Explorer** and opens the **Program.cs** or **Module1.vb** code file.  
   
-## 콘솔 응용 프로그램을 사용하여 캐시된 데이터 집합의 데이터 변경  
- 콘솔 응용 프로그램에서 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스를 사용하여 데이터를 로컬 `AdventureWorksLTDataSet` 개체로 읽어 들이고 이 데이터를 수정한 다음 다시 캐시된 데이터 집합에 저장합니다.  
+## <a name="changing-data-in-the-cached-dataset-by-using-the-console-application"></a>Changing Data in the Cached Dataset by Using the Console Application  
+ Use the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class in the console application to read the data into a local `AdventureWorksLTDataSet` object, modify this data, and then save it back to the cached dataset.  
   
-#### 캐시된 데이터 집합의 데이터를 변경하려면  
+#### <a name="to-change-data-in-the-cached-dataset"></a>To change data in the cached dataset  
   
-1.  **솔루션 탐색기**에서 **DataWriter** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.  
+1.  In **Solution Explorer**, right-click the **DataWriter** project and click **Add Reference**.  
   
-2.  에  **.NET** 탭에서 Microsoft.visualstudio.tools.applications를 선택 합니다.  
+2.  On the **.NET** tab, select Microsoft.VisualStudio.Tools.Applications.  
   
-3.  **확인**을 클릭합니다.  
+3.  Click **OK**.  
   
-4.  **솔루션 탐색기**에서 **DataWriter** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.  
+4.  In **Solution Explorer**, right-click the **DataWriter** project and click **Add Reference**.  
   
-5.  **프로젝트** 탭에서 **AdventureWorksDataSet**을 선택하고 **확인**을 클릭합니다.  
+5.  On the **Projects** tab, select **AdventureWorksDataSet**, and click **OK**.  
   
-6.  코드 편집기에서 Program.cs 또는 Module1.vb 파일을 엽니다.  
+6.  Open the Program.cs or Module1.vb file in the Code Editor.  
   
-7.  코드 파일의 맨 위에 다음 **using**\(C\#의 경우\) 또는 **Imports**\(Visual Basic의 경우\) 문을 추가합니다.  
+7.  Add the following **using** (for C#) or **Imports** (for Visual Basic) statement to the top of the code file.  
   
-     [!code-csharp[Trin_CachedDataWalkthroughs#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CachedDataWalkthroughs/CS/DataWriter/Program.cs#1)]
-     [!code-vb[Trin_CachedDataWalkthroughs#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_CachedDataWalkthroughs/VB/DataWriter/Module1.vb#1)]  
+     [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]  [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]  
   
-8.  `Main` 메서드에 다음 코드를 추가합니다.  이 코드는 다음 개체를 선언합니다.  
+8.  Add the following code to the `Main` method. This code declares the following objects:  
   
-    -   **AdventureWorksDataSet** 프로젝트에 정의된 `AdventureWorksLTDataSet` 형식의 인스턴스  
+    -   An instance of the `AdventureWorksLTDataSet` type that is defined in the **AdventureWorksDataSet** project.  
   
-    -   **AdventureWorksReport** 프로젝트의 빌드 폴더에 있는 AdventureWorksReport 통합 문서의 경로  
+    -   The path to the AdventureWorksReport workbook in the build folder of the **AdventureWorksReport** project.  
   
-    -   통합 문서의 데이터 캐시에 액세스하는 데 사용할 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 개체  
+    -   A <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> object to use to access the data cache in the workbook.  
   
         > [!NOTE]  
-        >  다음 코드에서는 파일 확장명이 .xlsx인 통합 문서를 사용한다고 가정합니다.  프로젝트의 통합 문서가 다른 파일 확장명을 사용하는 경우에는 경로를 필요한 대로 수정하십시오.  
+        >  The following code assumes that you are using a workbook that has the .xlsx file extension. If the workbook in your project has a different file extension, modify the path as necessary.  
   
-     [!code-csharp[Trin_CachedDataWalkthroughs#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CachedDataWalkthroughs/CS/DataWriter/Program.cs#6)]
-     [!code-vb[Trin_CachedDataWalkthroughs#6](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_CachedDataWalkthroughs/VB/DataWriter/Module1.vb#6)]  
+     [!code-csharp[Trin_CachedDataWalkthroughs#6](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#6)] [!code-vb[Trin_CachedDataWalkthroughs#6](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#6)]  
   
-9. 이전 단계에서 추가한 코드 뒤에 있는 `Main` 메서드에 다음 코드를 추가합니다.  이 코드는 다음 작업을 수행합니다.  
+9. Add the following code to the `Main` method, after the code you added in the previous step. This code performs the following tasks:  
   
-    -   <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스의 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> 속성을 사용하여 통합 문서에서 캐시된 데이터 집합에 액세스합니다.  
+    -   It uses the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> property of the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class to access the cached dataset in the workbook.  
   
-    -   캐시된 데이터 집합의 데이터를 로컬 데이터 집합으로 읽어 들입니다.  
+    -   It reads the data from the cached dataset into the local dataset.  
   
-    -   데이터 집합의 Product 테이블에 있는 각 제품의 `ListPrice` 값을 변경합니다.  
+    -   It changes the `ListPrice` value of each product in the Product table of the dataset.  
   
-    -   캐시된 데이터 집합의 변경 내용을 통합 문서에 저장합니다.  
+    -   It saves the changes to the cached dataset in the workbook.  
   
-     [!code-csharp[Trin_CachedDataWalkthroughs#7](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CachedDataWalkthroughs/CS/DataWriter/Program.cs#7)]
-     [!code-vb[Trin_CachedDataWalkthroughs#7](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_CachedDataWalkthroughs/VB/DataWriter/Module1.vb#7)]  
+     [!code-csharp[Trin_CachedDataWalkthroughs#7](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#7)] [!code-vb[Trin_CachedDataWalkthroughs#7](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#7)]  
   
-10. **솔루션 탐색기**에서 **DataWriter** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **디버그**를 가리킨 다음 **새 인스턴스 시작**을 클릭합니다.  
+10. In **Solution Explorer**, right-click the **DataWriter** project, point to **Debug**, and then click **Start new instance**.  
   
-     콘솔 응용 프로그램에서는 캐시된 데이터 집합을 로컬 데이터 집합으로 읽어 들이고 로컬 데이터 집합에서 제품 가격을 수정하고 새 값을 캐시된 데이터 집합에 저장하는 동안 메시지를 표시합니다.  Enter 키를 눌러 응용 프로그램을 닫습니다.  
+     The console application displays messages while it reads the cached dataset into the local dataset, modifies the product prices in the local dataset, and saves the new values to the cached dataset. Press ENTER to close the application.  
   
-## 통합 문서 테스트  
- 이제 통합 문서를 열면 캐시된 데이터 집합의 `ListPrice` 데이터 열에서 변경한 내용이 <xref:Microsoft.Office.Tools.Excel.ListObject>에 표시됩니다.  
+## <a name="testing-the-workbook"></a>Testing the Workbook  
+ When you open the workbook, the <xref:Microsoft.Office.Tools.Excel.ListObject> now displays the changes you made to the `ListPrice` column of data in the cached dataset.  
   
-#### 통합 문서를 테스트하려면  
+#### <a name="to-test-the-workbook"></a>To test the workbook  
   
-1.  Visual Studio 디자이너에서 AdventureWorksReport 통합 문서가 아직 열려 있으면 이 통합 문서를 닫습니다.  
+1.  Close the AdventureWorksReport workbook in the Visual Studio designer, if it is still open.  
   
-2.  **AdventureWorksReport** 프로젝트의 빌드 폴더에 있는 AdventureWorksReport 통합 문서를 엽니다.  기본적으로 빌드 폴더는 다음 중 한 위치에 있습니다.  
+2.  Open the AdventureWorksReport workbook that is in the build folder of the **AdventureWorksReport** project. By default, the build folder is in one of the following locations:  
   
-    -   %UserProfile%\\My Documents\\AdventureWorksReport\\bin\\Debug\(Windows XP 또는 이전 버전의 경우\)  
+    -   %UserProfile%\My Documents\AdventureWorksReport\bin\Debug (for Windows XP and earlier)  
   
-    -   %UserProfile%\\Documents\\AdventureWorksReport\\bin\\Debug\(Windows Vista의 경우\)  
+    -   %UserProfile%\Documents\AdventureWorksReport\bin\Debug (for Windows Vista)  
   
-3.  <xref:Microsoft.Office.Tools.Excel.ListObject>의 첫 번째 행에 대한 **ListPrice** 열의 값이 1574.65인지 확인합니다.  
+3.  Verify that the value in the **ListPrice** column for the first row of the <xref:Microsoft.Office.Tools.Excel.ListObject> is now 1574.65.  
   
-4.  통합 문서를 닫습니다.  
+4.  Close the workbook.  
   
-## 참고 항목  
- [연습: 서버의 통합 문서에 데이터 삽입](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)   
- [Windows Forms 응용 프로그램에서 데이터에 연결](/visual-studio/data-tools/connecting-to-data-in-windows-forms-applications)  
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Inserting Data into a Workbook on a Server](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)   
+ [Connecting to Data in Windows Forms Applications](/visualstudio/data-tools/connecting-to-data-in-windows-forms-applications)  
   
   

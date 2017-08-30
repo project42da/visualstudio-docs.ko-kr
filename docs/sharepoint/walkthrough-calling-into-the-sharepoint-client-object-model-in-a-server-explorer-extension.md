@@ -1,119 +1,124 @@
 ---
-title: "Walkthrough: Calling into the SharePoint Client Object Model in a Server Explorer Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint development in Visual Studio, client object model"
-  - "SharePoint commands [SharePoint development in Visual Studio]"
+title: 'Walkthrough: Calling into the SharePoint Client Object Model in a Server Explorer Extension | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, client object model
+- SharePoint commands [SharePoint development in Visual Studio]
 ms.assetid: 897d3798-42c1-4fff-b280-8b84b53d80c6
 caps.latest.revision: 100
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 96
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4270879f39fe0c5bae41c7810f23f948355c6218
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# Walkthrough: Calling into the SharePoint Client Object Model in a Server Explorer Extension
-  이 연습에서는 **서버 탐색기**의 **SharePoint 연결** 노드용 확장에서 SharePoint 클라이언트 개체 모델을 호출하는 방법을 보여 줍니다.  SharePoint 클라이언트 개체 모델을 사용 하는 방법에 대 한 자세한 내용은 [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
+# <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>Walkthrough: Calling into the SharePoint Client Object Model in a Server Explorer Extension
+  This walkthrough demonstrates how to call the SharePoint client object model from an extension for the **SharePoint Connections** node in **Server Explorer**. For more information about how to use the SharePoint client object model, see [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough demonstrates the following tasks:  
   
--   다음과 같은 방법으로 **서버 탐색기**의 **SharePoint 연결** 노드를 확장하는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 확장 만들기  
+-   Creating a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] extension that extends the **SharePoint Connections** node of **Server Explorer** in the following ways:  
   
-    -   확장명 추가 된  **웹 파트 갤러리** 노드 아래에서 각 SharePoint 사이트 노드의  **서버 탐색기**.  새 노드에는 사이트에서 웹 파트 갤러리의 각 웹 파트를 나타내는 자식 노드가 포함됩니다.  
+    -   The extension adds a **Web Part Gallery** node under each SharePoint site node in **Server Explorer**. This new node contains child nodes that represent each Web Part in the Web Part gallery on the site.  
   
-    -   확장 웹 파트 인스턴스를 나타내는 노드의 새 형식을 정의 합니다.  새 노드 형식은 새 **웹 파트 갤러리** 노드 아래에 있는 자식 노드의 기반이 됩니다.  에 정보를 표시 하는 새 웹 파트 노드 형식이 있는  **속성** 노드를 나타내는 웹 파트에 대 한 창.  
+    -   The extension defines a new type of node that represents a Web Part instance. This new node type is the basis for the child nodes under the new **Web Part Gallery** node. The new Web Part node type displays information in the **Properties** window about the Web Part that the node represents.  
   
--   확장을 배포하기 위한 VSIX\(Visual Studio Extension\) 패키지 빌드  
+-   Building a Visual Studio Extension (VSIX) package to deploy the extension.  
   
--   확장 디버깅 및 테스트  
+-   Debugging and testing the extension.  
   
 > [!NOTE]  
->  이 연습에서 만드는 확장에서 만드는 확장과 비슷합니다 [Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).  이 연습에서는 SharePoint 서버 개체 모델을 사용 하지만이 연습에서는 클라이언트 개체 모델을 사용 하 여 동일한 작업을 수행.  
+>  The extension that you create in this walkthrough resembles the extension that you create in [Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md). That walkthrough uses the SharePoint server object model, but this walkthrough accomplishes the same tasks by using the client object model.  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 개발 컴퓨터에 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components on the development computer to complete this walkthrough:  
   
--   지원 되는 버전의 Windows, SharePoint 및 Visual Studio.  자세한 내용은 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)을 참조하십시오.  
+-   Supported editions of Windows, SharePoint, and Visual Studio. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio SDK입니다.  이 연습에서는 SDK의 **VSIX 프로젝트** 템플릿을 사용하여 확장을 배포하기 위한 VSIX 패키지를 만듭니다.  자세한 내용은 [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)을 참조하십시오.  
+-   The Visual Studio SDK. This walkthrough uses the **VSIX Project** template in the SDK to create a VSIX package to deploy the extension. For more information, see [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).  
   
- 다음 개념을 알고 있으면 연습을 완료하는 데 도움이 되지만 반드시 필요하지는 않습니다.  
+ Knowledge of the following concepts is helpful, but not required, to complete the walkthrough:  
   
--   SharePoint 클라이언트 개체 모델 사용.  자세한 내용은 [Managed Client Object Model](http://go.microsoft.com/fwlink/?LinkId=177797)을 참조하십시오.  
+-   Using the SharePoint client object model. For more information, see [Managed Client Object Model](http://go.microsoft.com/fwlink/?LinkId=177797).  
   
--   Sharepoint에서 웹 파트입니다.  자세한 내용은 [Web Parts Overview](http://go.microsoft.com/fwlink/?LinkId=177803)를 참조하십시오.  
+-   Web parts in SharePoint. For more information, see [Web Parts Overview](http://go.microsoft.com/fwlink/?LinkId=177803).  
   
-## 프로젝트 만들기  
- 이 연습을 완료하려면 두 프로젝트를 만들어야 합니다.  
+## <a name="creating-the-projects"></a>Creating the Projects  
+ To complete this walkthrough, you must create two projects:  
   
--   VSIX 패키지를 만들어 **서버 탐색기** 확장을 배포하기 위한 VSIX 프로젝트입니다.  
+-   A VSIX project to create the VSIX package to deploy the **Server Explorer** extension.  
   
--   **서버 탐색기** 확장을 구현하는 클래스 라이브러리 프로젝트입니다.  
+-   A class library project that implements the **Server Explorer** extension.  
   
- 먼저 프로젝트를 만들어 연습을 시작합니다.  
+ Start the walkthrough by creating the projects.  
   
-#### VSIX 프로젝트를 만들려면  
+#### <a name="to-create-the-vsix-project"></a>To create the VSIX project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다.  
+2.  On the menu bar, choose **File**, **New**, **Project**.  
   
-3.  에  **새 프로젝트** 대화 상자에서 확장 된  **C\#** 또는  **Visual Basic** 노드를 다음 선택  **확장성**.  
-  
-    > [!NOTE]  
-    >  **확장성** 노드인 Visual Studio SDK를 설치한 경우에 사용할 수 있습니다.  자세한 내용은 이 항목의 앞부분에 나오는 사전 요구 사항 단원을 참조하십시오.  
-  
-4.  대화 상자의 맨 위에 있는 선택  **.NET Framework 4.5** .NET Framework 버전의 목록에서입니다.  
-  
-     SharePoint 도구 확장 기능은이 버전의.NET Framework 해야합니다.  
-  
-5.  선택 된  **VSIX 프로젝트** 템플릿.  
-  
-6.  에  **이름** 상자에 입력  **WebPartNode**, 다음 선택은  **확인** 단추입니다.  
-  
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 **솔루션 탐색기**에 **WebPartNode** 프로젝트를 추가합니다.  
-  
-#### 확장 프로젝트를 만들려면  
-  
-1.  **솔루션 탐색기**, 솔루션 노드 바로 가기 메뉴를 열고  **추가**, 다음 선택  **새 프로젝트**.  
+3.  In the **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, and then choose **Extensibility**.  
   
     > [!NOTE]  
-    >  Visual Basic 프로젝트에서는 [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ko-kr/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)에서 **솔루션 항상 표시** 확인란을 선택한 경우에만 **솔루션 탐색기**에 솔루션 노드가 표시됩니다.  
+    >  The **Extensibility** node is available only if you install the Visual Studio SDK. For more information, see the prerequisites section earlier in this topic.  
   
-2.  에  **새 프로젝트** 대화 상자에서 확장 된  **C\#** 또는  **Visual Basic** 노드를 다음 선택  **Windows**.  
+4.  At the top of the dialog box, choose **.NET Framework 4.5** in the list of versions of the .NET Framework.  
   
-3.  대화 상자의 맨 위에 있는 선택  **.NET Framework 4.5** .NET Framework 버전의 목록에서입니다.  
+     SharePoint tool extensions require features in this version of the .NET Framework.  
   
-4.  프로젝트 템플릿 목록에서 선택  **클래스 라이브러리**.  
+5.  Choose the **VSIX Project** template.  
   
-5.  에  **이름** 상자에 입력  **WebPartNodeExtension**, 다음 선택은  **확인** 단추입니다.  
+6.  In the **Name** box, type **WebPartNode**, and then choose the **OK** button.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 솔루션에 **WebPartNodeExtension** 프로젝트를 추가하고 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **WebPartNode** project to **Solution Explorer**.  
   
-6.  프로젝트에서 Class1 코드 파일을 삭제합니다.  
+#### <a name="to-create-the-extension-project"></a>To create the extension project  
   
-## 확장 프로젝트 구성  
- 확장을 만드는 코드를 작성 하기 전에 코드 파일과 어셈블리 참조를 프로젝트에 추가 해야 하며 기본 네임 스페이스를 업데이트 해야 합니다.  
+1.  In **Solution Explorer**, open the shortcut menu for the solution node, choose **Add**, and then choose **New Project**.  
   
-#### 프로젝트를 구성하려면  
+    > [!NOTE]  
+    >  In Visual Basic projects, the solution node appears in **Solution Explorer** only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-1.  에  **WebPartNodeExtension** 프로젝트, SiteNodeExtension 및 WebPartNodeTypeProvider 라는 두 개의 코드 파일을 추가 합니다.  
+2.  In the  **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, and then choose **Windows**.  
   
-2.  WebPartNodeExtension 프로젝트에 대 한 바로 가기 메뉴를 열고 선택  **참조 추가**.  
+3.  At the top of the dialog box, choose **.NET Framework 4.5** in the list of versions of the .NET Framework.  
   
-3.  에  **참조 관리자 – WebPartNodeExtension** 대화 상자에서 선택 된  **프레임 워크** 노드를 선택한 다음 선택 확인란 System.ComponentModel.Composition 및 System.Windows.Forms 어셈블리에 대 한.  
+4.  In the list of project templates, choose **Class Library**.  
   
-4.  선택은  **확장** 노드를 각각 다음 어셈블리에 대 한 확인란을 선택 하 고 선택은  **확인** 단추:  
+5.  In the **Name** box, enter **WebPartNodeExtension**, and then choose the **OK** button.  
+  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **WebPartNodeExtension** project to the solution and opens the default Class1 code file.  
+  
+6.  Delete the Class1 code file from the project.  
+  
+## <a name="configuring-the-extension-project"></a>Configuring the Extension Project  
+ Before you write code to create the extension, you must add code files and assembly references to your project, and you must update the default namespace.  
+  
+#### <a name="to-configure-the-project"></a>To configure the project  
+  
+1.  In the **WebPartNodeExtension** project, add two code files that are named SiteNodeExtension and WebPartNodeTypeProvider.  
+  
+2.  Open the shortcut menu for the WebPartNodeExtension project, and then choose **Add Reference**.  
+  
+3.  In the **Reference Manager - WebPartNodeExtension** dialog box, choose the **Framework** node, and then select the check boxes for the  System.ComponentModel.Composition and System.Windows.Forms assemblies.  
+  
+4.  Choose the **Extensions** node, select the check box for each of the following assemblies, and then choose the **OK** button:  
   
     -   Microsoft.SharePoint.Client  
   
@@ -121,174 +126,172 @@ caps.handback.revision: 96
   
     -   Microsoft.VisualStudio.SharePoint  
   
-5.  바로 가기 메뉴를 열고를  **WebPartNodeExtension** 프로젝트를 하 고 선택  **속성**.  
+5.  Open the shortcut menu for the **WebPartNodeExtension** project, and then choose **Properties**.  
   
-     **프로젝트 디자이너**가 열립니다.  
+     The **Project Designer** opens.  
   
-6.  선택 된  **응용 프로그램** 탭입니다.  
+6.  Choose the **Application** tab.  
   
-7.  에 있는  **기본 네임 스페이스** 상자 \(C\#\) 또는  **루트 네임 스페이스** \(Visual Basic\) 상자에 입력  **ServerExplorer.SharePointConnections.WebPartNode**.  
+7.  In the **Default namespace** box (C#) or **Root namespace** box (Visual Basic), enter **ServerExplorer.SharePointConnections.WebPartNode**.  
   
-## 새 노드의 아이콘 만들기  
- 두 개의 아이콘을 만들는  **서버 탐색기** 확장: 아이콘에 새  **웹 파트 갤러리** 노드와 각 자식 웹 파트 노드 아래에 대 한 다른 아이콘은  **웹 파트 갤러리** 노드.  이 연습의 뒷부분에서 이러한 아이콘을 노드에 연결 하는 코드를 작성 합니다.  
+## <a name="creating-icons-for-the-new-nodes"></a>Creating Icons for the New Nodes  
+ Create two icons for the **Server Explorer** extension: an icon for the new **Web Part Gallery** node and another icon for each child Web Part node under the **Web Part Gallery** node. Later in this walkthrough, you'll write code that associates these icons with the nodes.  
   
-#### 노드의 아이콘을 만들려면  
+#### <a name="to-create-icons-for-the-nodes"></a>To create icons for the nodes  
   
-1.  에  **프로젝트 디자이너** WebPartNodeExtension 프로젝트에 대 한 선택은  **리소스** 탭.  
+1.  In the **Project Designer** for the WebPartNodeExtension project, choose the **Resources** tab.  
   
-2.  링크 선택  **이 프로젝트에는 기본 리소스 파일이 없습니다. 기본 리소스 파일을 만들려면 여기를 클릭하십시오.**를 클릭합니다.  
+2.  Choose the link **This project does not contain a default resources file. Click here to create one.**  
   
-     Visual Studio 리소스 파일을 만들고 디자이너에서 열립니다.  
+     Visual Studio creates a resource file and opens it in the designer.  
   
-3.  디자이너의 위쪽에 있는 화살표를 선택한는  **리소스 추가** 메뉴에서 명령을 클릭 한 다음 선택  **새 아이콘 추가**.  
+3.  At the top of the designer, choose the arrow on the **Add Resource** menu command, and then choose **Add New Icon**.  
   
-4.  입력  **WebPartsNode** 새 아이콘에 대 한 이름을 지정 하 고 다음 선택은  **추가** 단추.  
+4.  Enter **WebPartsNode** for the new icon name, and then choose the **Add** button.  
   
-     새 아이콘이 **이미지 편집기**에서 열립니다.  
+     The new icon opens in the **Image Editor**.  
   
-5.  디자인을 쉽게 인식할 수 있도록 16x16 버전의 아이콘 편집 합니다.  
+5.  Edit the 16x16 version of the icon so that it has a design that you can easily recognize.  
   
-6.  32X32 버전의 아이콘, 바로 가기 메뉴를 열고 선택  **이미지 형식 삭제**.  
+6.  Open the shortcut menu for the 32x32 version of the icon, and then choose **Delete Image Type**.  
   
-7.  3 단계에서 두 번째 아이콘은 프로젝트 리소스에 추가 하려면 7 단계를 반복 하 고이 아이콘 이름을  **WebPart**.  
+7.  Repeat steps 3 through 7 to add a second icon to the project resources, and name this icon **WebPart**.  
   
-8.  **솔루션 탐색기**에서  **리소스** 폴더에는  **WebPartNodeExtension** 프로젝트를 선택  **WebPartsNode.ico**.  
+8.  In **Solution Explorer**, in the **Resources** folder for the **WebPartNodeExtension** project, choose **WebPartsNode.ico**.  
   
-9. 에  **속성** 창이 열리고는  **빌드 작업** 선택한 다음 선택  **포함 리소스**.  
+9. In the **Properties** window, open the **Build Action** list, and then choose **Embedded Resource**.  
   
-10. **WebPart.ico**에 대해 마지막 두 단계를 반복합니다.  
+10. Repeat the last two steps for **WebPart.ico**.  
   
-## 서버 탐색기에 웹 파트 갤러리 노드 추가  
- 각 SharePoint 사이트 노드에 새 **웹 파트 갤러리** 노드를 추가하는 클래스를 만듭니다.  새 코드를 추가하기 위해 클래스에서 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> 인터페이스를 구현합니다.  노드에 새 자식 노드 추가 등 **서버 탐색기**에서 기존 노드의 동작을 확장하려는 경우 이 인터페이스를 구현합니다.  
+## <a name="adding-the-web-part-gallery-node-to-server-explorer"></a>Adding the Web Part Gallery Node to Server Explorer  
+ Create a class that adds the new **Web Part Gallery** node to each SharePoint site node. To add the new node, the class implements the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> interface. Implement this interface whenever you want to extend the behavior of an existing node in **Server Explorer**, such as adding a new child node to a node.  
   
-#### 서버 탐색기에 웹 파트 갤러리 노드를 추가하려면  
+#### <a name="to-add-the-web-part-gallery-node-to-server-explorer"></a>To add the Web Part Gallery node to Server Explorer  
   
-1.  다음 코드를 붙여 넣습니다는  **SiteNodeExtension** 코드 파일에는  **WebPartNodeExtension** 프로젝트입니다.  
-  
-    > [!NOTE]  
-    >  이 코드를 추가한 후 프로젝트에 컴파일 오류가 발생 해야 합니다.  이러한 오류는 이후 단계에서 코드를 추가하면 사라집니다.  
-  
-     [!code-csharp[SPExtensibility.SPExplorer.WebPartNode#1](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.spexplorer.webpartnode/cs/webpartnodeextension/sitenodeextension.cs#1)]
-     [!code-vb[SPExtensibility.SPExplorer.WebPartNode#1](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.spexplorer.webpartnode/vb/webpartnodeextension/sitenodeextension.vb#1)]  
-  
-## 웹 파트를 나타내는 노드 형식 정의  
- 웹 파트를 나타내는 새 노드 형식을 정의하는 클래스를 만듭니다.  Visual Studio 새 노드 형식을 사용 하 여 아래에서 자식 노드를 표시 하는  **웹 파트 갤러리** 노드.  이러한 각 자식 노드는 SharePoint 사이트에서 하나의 웹 파트를 나타냅니다.  
-  
- 새 노드 형식을 정의하기 위해 클래스에서 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> 인터페이스를 구현합니다.  **서버 탐색기**에서 새 노드 형식을 정의하려는 경우 이 인터페이스를 구현합니다.  
-  
-#### 웹 파트 노드 형식을 정의하려면  
-  
-1.  다음 코드를 붙여 넣습니다는  **WebPartNodeTypeProvider** 코드 파일에는  **WebPartNodeExtension** 프로젝트입니다.  
-  
-     [!code-csharp[SPExtensibility.SPExplorer.WebPartNode#2](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.spexplorer.webpartnode/cs/webpartnodeextension/webpartnodetypeprovider.cs#2)]
-     [!code-vb[SPExtensibility.SPExplorer.WebPartNode#2](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.spexplorer.webpartnode/vb/webpartnodeextension/webpartnodetypeprovider.vb#2)]  
-  
-## 검사점  
- 이 연습의 이전 단계를 통해 **웹 파트 갤러리** 노드를 위한 모든 코드가 프로젝트에 포함되었습니다.  빌드는  **WebPartNodeExtension** 프로젝트를 오류 없이 컴파일되는지 확인 합니다.  
-  
-#### 프로젝트를 빌드하려면  
-  
-1.  **솔루션 탐색기**, 바로 가기 메뉴를 열고는  **WebPartNodeExtension** 프로젝트를 하 고 선택  **빌드**.  
-  
-## 확장을 배포하기 위한 VSIX 패키지 만들기  
- 확장을 배포하려면 솔루션에서 VSIX 프로젝트를 사용하여 VSIX 패키지를 만듭니다.  먼저, 프로젝트에 포함 되어 있는 source.extension.vsixmanifest 파일을 수정 하 여 VSIX 패키지를 구성 합니다.  다음 솔루션을 구축 하 여 VSIX 패키지를 만듭니다.  
-  
-#### VSIX 패키지를 구성하려면  
-  
-1.  **솔루션 탐색기**에서  **WebPartNode** 열린 프로젝트  **source.extension.vsixmanifest** 파일이 매니페스트 편집기에서.  
-  
-     Source.extension.vsixmanifest 파일이 모든 VSIX 패키지를 요구 하는 extension.vsixmanifest 파일에 대 한 기반이 됩니다.  이 파일에 대한 자세한 내용은 [VSIX 확장 스키마 참조](http://msdn.microsoft.com/ko-kr/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)를 참조하십시오.  
-  
-2.  에 있는  **제품명** 상자에 입력  **서버 탐색기에 웹 파트 갤러리 노드**.  
-  
-3.  에 있는  **작성자** 상자에 입력  **Contoso**.  
-  
-4.  에 있는  **설명** 상자에 입력  **에 서버 탐색기에서의 SharePoint 연결 노드에 사용자 지정 웹 파트 갤러리 노드 추가**.  
-  
-5.  에  **자산** 탭 편집기의 선택은  **New** 단추.  
-  
-6.  에  **추가 새 자산** 대화 상자에  **유형** 목록에서 선택  **Microsoft.VisualStudio.MefComponent**.  
+1.  Paste the following code into the **SiteNodeExtension** code file for the **WebPartNodeExtension** project.  
   
     > [!NOTE]  
-    >  이 값은 extension.vsixmanifest 파일의 `MefComponent` 요소에 해당합니다.  이 요소는 VSIX 패키지의 확장 어셈블리 이름을 지정합니다.  자세한 내용은 [NIB: MEFComponent Element \(VSX Schema\)](http://msdn.microsoft.com/ko-kr/8a813141-8b73-44c9-b80b-ca85bbac9551)을 참조하십시오.  
+    >  After you add this code, the project will have some compile errors. These errors will go away when you add code in later steps.  
   
-7.  에 있는  **원본** 목록에서 선택  **현재 솔루션의 프로젝트에**.  
+     [!code-csharp[SPExtensibility.SPExplorer.WebPartNode#1](../sharepoint/codesnippet/CSharp/webpartnode/webpartnodeextension/sitenodeextension.cs#1)]  [!code-vb[SPExtensibility.SPExplorer.WebPartNode#1](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnode.webpartnode/webpartnodeextension/sitenodeextension.vb#1)]  
   
-8.  에  **프로젝트** 목록에서 선택  **WebPartNodeExtension**, 다음 선택은  **확인** 단추입니다.  
+## <a name="defining-a-node-type-that-represents-a-web-part"></a>Defining a Node Type that Represents a Web Part  
+ Create a class that defines a new type of node that represents a Web Part. Visual Studio uses this new node type to display child nodes under the **Web Part Gallery** node. Each of these child nodes represents a single Web Part on the SharePoint site.  
   
-9. 메뉴 표시줄에서 선택  **빌드**,  **솔루션 빌드**, 및 다음 솔루션이 오류 없이 컴파일되는지 확인 합니다.  
+ To define the new node type, the class implements the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> interface. Implement this interface whenever you want to define a new type of node in **Server Explorer**.  
   
-10. WebPartNode 프로젝트의 빌드 출력 폴더에 이제 WebPartNode.vsix 파일이 들어 있는지 확인 합니다.  
+#### <a name="to-define-the-web-part-node-type"></a>To define the Web Part node type  
   
-     기본적으로 빌드 출력 경로는 프로젝트 파일이 포함된 폴더 아래에 있는 ..  \\bin\\Debug 폴더입니다.  
+1.  Paste the following code into the **WebPartNodeTypeProvider** code file for the **WebPartNodeExtension** project.  
   
-## 확장 테스트  
- 이제 **서버 갤러리**에서 새 **웹 파트 갤러리** 노드를 테스트할 준비가 되었습니다.  Visual Studio 실험적 인스턴스에서 확장 프로젝트를 디버깅 하려면 먼저 시작 합니다.  새를 사용  **웹 파트** Visual Studio 실험적 인스턴스에서 노드.  
+     [!code-csharp[SPExtensibility.SPExplorer.WebPartNode#2](../sharepoint/codesnippet/CSharp/webpartnode/webpartnodeextension/webpartnodetypeprovider.cs#2)]  [!code-vb[SPExtensibility.SPExplorer.WebPartNode#2](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnode.webpartnode/webpartnodeextension/webpartnodetypeprovider.vb#2)]  
   
-#### 확장 디버깅을 시작하려면  
+## <a name="checkpoint"></a>Checkpoint  
+ At this point in the walkthrough, all the code for the **Web Part Gallery** node is now in the project. Build the **WebPartNodeExtension** project to make sure that it compiles without errors.  
   
-1.  Visual Studio 관리자 자격 증명으로 다시 시작 하 고 다음 열에서  **WebPartNode** 솔루션입니다.  
+#### <a name="to-build-the-project"></a>To build the project  
   
-2.  WebPartNodeExtension 프로젝트를 엽니다의  **SiteNodeExtension** 파일, 코드 및 중단점을 추가 하는 코드 첫 줄에는 `NodeChildrenRequested` 및 `CreateWebPartNodes` 메서드.  
+1.  In **Solution Explorer**, open the shortcut menu for the **WebPartNodeExtension** project, and then choose **Build**.  
   
-3.  F5 키를 선택하여 디버깅을 시작합니다.  
+## <a name="creating-a-vsix-package-to-deploy-the-extension"></a>Creating a VSIX Package to Deploy the Extension  
+ To deploy the extension, use the VSIX project in your solution to create a VSIX package. First, configure the VSIX package by modifying the source.extension.vsixmanifest file that's included in the project. Then create the VSIX package by building the solution.  
   
-     Visual Studio 서버 explorer\\1.0에 대해 %UserProfile%\\AppData\\Local\\Microsoft\\VisualStudio\\11.0Exp\\Extensions\\Contoso\\Web 파트 갤러리 노드를 확장 하 여 확장을 설치 하 고 Visual Studio 실험 인스턴스를 시작 합니다.  프로젝트 항목에 Visual Studio이 인스턴스를 테스트 합니다.  
+#### <a name="to-configure-the-vsix-package"></a>To configure the VSIX package  
   
-#### 확장을 테스트하려면  
+1.  In **Solution Explorer**, in the **WebPartNode** project, open **source.extension.vsixmanifest** file in the manifest editor.  
   
-1.  Visual Studio 실험적 인스턴스에서 메뉴 표시줄에서 선택  **보기**,  **서버 탐색기**.  
+     The source.extension.vsixmanifest file is the basis for the extension.vsixmanifest file that all VSIX packages require. For more information about this file, see [VSIX Extension Schema 1.0 Reference](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).  
   
-2.  테스트에 사용할 SharePoint 사이트가 **서버 탐색기**의 **SharePoint 연결** 노드 아래에 표시되는지 확인합니다.  나열 되어 있지 않으면 다음과 같이 하십시오.  
+2.  In the **Product Name** box, enter **Web Part Gallery Node for Server Explorer**.  
   
-    1.  바로 가기 메뉴를 열고  **SharePoint 연결**, 다음 선택  **연결 추가**.  
+3.  In the **Author** box, enter **Contoso**.  
   
-    2.  에 있는  **SharePoint 연결 추가** 대화 상자에서 적용할 연결, 및 다음 선택 하려면 SharePoint 사이트에 대 한 URL을 입력의  **확인** 단추.  
+4.  In the **Description** box, enter **Adds a custom Web Part Gallery node to the SharePoint Connections node in Server Explorer**.  
   
-         개발 컴퓨터의 SharePoint 사이트를 지정하려면 **http:\/\/localhost**를 입력합니다.  
+5.  On the **Assets** tab of the editor, choose the **New** button.  
   
-3.  사이트의 URL을 표시 하 고 사이트 연결 노드를 확장 한 다음 자식 사이트 노드를 확장 합니다 \(예를 들어,  **팀 사이트**\).  
+6.  In the **Add New Asset** dialog box, in the **Type** list, choose **Microsoft.VisualStudio.MefComponent**.  
   
-4.  코드 Visual Studio 인스턴스를 이전에 설정한 중단점에서 중지 하는지 확인은 `NodeChildrenRequested` 메서드를 다음 프로젝트에 디버깅을 계속 하려면 F5 키를 선택 합니다.  
+    > [!NOTE]  
+    >  This value corresponds to the `MefComponent` element in the extension.vsixmanifest file. This element specifies the name of an extension assembly in the VSIX package. For more information, see [NIB: MEFComponent Element (VSX Schema)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551).  
   
-5.  Visual Studio 실험적 인스턴스에서 확장을  **웹 파트 갤러리** 노드가 최상위 사이트 노드 아래에 나타납니다.  
+7.  In the **Source** list, choose **A project in current solution**.  
   
-6.  코드 Visual Studio 인스턴스를 이전에 설정한 중단점에서 중지 하는지 확인은 `CreateWebPartNodes` 메서드를 다음 프로젝트에 디버깅을 계속 하려면 F5 키를 선택 합니다.  
+8.  In the **Project** list, choose **WebPartNodeExtension**, and then choose the **OK** button.  
   
-7.  실험 모드의 Visual Studio 인스턴스에서 연결된 사이트의 모든 웹 파트가 **서버 탐색기**의 **웹 파트 갤러리** 노드 아래에 표시되는지 확인합니다.  
+9. On the menu bar, choose **Build**, **Build Solution**, and then make sure that the solution compiles without errors.  
   
-8.  웹 파트에 대 한 바로 가기 메뉴를 열고 선택  **속성이**.  
+10. Make sure that the build output folder for the WebPartNode project now contains the WebPartNode.vsix file.  
   
-9. 에  **속성** 창에서 웹 파트에 대 한 세부 정보가 표시 되는지 확인 하십시오.  
+     By default, the build output folder is the ..\bin\Debug folder under the folder that contains your project file.  
   
-10. **서버 탐색기**, 바로 가기 메뉴에서 동일한 웹 파트를 열고 선택  **메시지 표시**.  
+## <a name="testing-the-extension"></a>Testing the Extension  
+ You are now ready to test the new **Web Part Gallery** node in **Server Explorer**. First, start to debug the extension project in an experimental instance of Visual Studio. Then use the new **Web Parts** node in the experimental instance of Visual Studio.  
   
-     나타나는 메시지 상자에서 선택 된  **확인** 단추입니다.  
+#### <a name="to-start-debugging-the-extension"></a>To start debugging the extension  
   
-## Visual Studio에서 확장 제거  
- 확장 테스트를 마친 후 Visual Studio 제거 합니다.  
+1.  Restart Visual Studio with administrative credentials, and then open the **WebPartNode** solution.  
   
-#### 확장을 제거하려면  
+2.  In the WebPartNodeExtension project, open the **SiteNodeExtension** code file, and then add a breakpoint to the first lines of code in the `NodeChildrenRequested` and `CreateWebPartNodes` methods.  
   
-1.  Visual Studio 실험적 인스턴스에서 메뉴 표시줄에서 선택  **도구**,  **확장 및 업데이트**.  
+3.  Choose the F5 key to start debugging.  
   
-     **확장 및 업데이트** 대화 상자가 열립니다.  
+     Visual Studio installs the extension to %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Web Part Gallery Node Extension for Server Explorer\1.0 and starts an experimental instance of Visual Studio. You'll test the project item in this instance of Visual Studio.  
   
-2.  확장명 목록에서 선택한  **서버 탐색기에 웹 파트 갤러리 노드**, 다음 선택은  **제거** 단추입니다.  
+#### <a name="to-test-the-extension"></a>To test the extension  
   
-3.  나타나는 대화 상자에서 선택 된  **예** 단추입니다.  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **View**, **Server Explorer**.  
   
-4.  선택은  **이제 다시** 단추 제거를 완료 합니다.  
+2.  Verify that the SharePoint site that you want to use for testing appears under the **SharePoint Connections** node in **Server Explorer**. If it's not listed, follow these steps:  
   
-     프로젝트 항목도 제거됩니다.  
+    1.  Open the shortcut menu for **SharePoint Connections**, and then choose **Add Connection**.  
   
-5.  Visual Studio \(Visual Studio WebPartNode 솔루션에 열려 있는 인스턴스 및 실험적 인스턴스\)을 모두 닫습니다.  
+    2.  In the **Add SharePoint Connection** dialog box, enter the URL for the SharePoint site to which you want to connect, and then choose the **OK** button.  
   
-## 참고 항목  
+         To specify the SharePoint site on your development computer, type **http://localhost**.  
+  
+3.  Expand the site connection node (which displays the URL of your site), and then expand a child site node (for example, **Team Site**).  
+  
+4.  Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `NodeChildrenRequested` method, and then choose the F5 key to continue to debug the project.  
+  
+5.  In the experimental instance of Visual Studio, expand the **Web Part Gallery** node, which appears under the top-level site node.  
+  
+6.  Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `CreateWebPartNodes` method, and then choose the F5 key to continue to debug the project.  
+  
+7.  In the experimental instance of Visual Studio, verify that all the Web Parts on the connected site appear under the **Web Part Gallery** node in **Server Explorer**.  
+  
+8.  Open the shortcut menu for a Web Part, and then choose **Properties**.  
+  
+9. In the **Properties** window, verify that details about the Web Part appear.  
+  
+10. In **Server Explorer**, open the shortcut menu for the same Web Part, and then choose **Display Message**.  
+  
+     In the message box that appears, choose the **OK** button.  
+  
+## <a name="uninstalling-the-extension-from-visual-studio"></a>Uninstalling the Extension from Visual Studio  
+ After you finish testing the extension, uninstall it from Visual Studio.  
+  
+#### <a name="to-uninstall-the-extension"></a>To uninstall the extension  
+  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **Tools**, **Extensions and Updates**.  
+  
+     The **Extensions and Updates** dialog box opens.  
+  
+2.  In the list of extensions, choose **Web Part Gallery Node for Server Explorer**, and then choose the **Uninstall** button.  
+  
+3.  In the dialog box that appears, choose the **Yes** button.  
+  
+4.  Choose the **Restart Now** button to complete the uninstallation.  
+  
+     The project item is also uninstalled.  
+  
+5.  Close both instances of Visual Studio (the experimental instance and the instance of Visual Studio in which the WebPartNode solution is open).  
+  
+## <a name="see-also"></a>See Also  
  [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)   
- [Image Editor for Icons](/visual-cpp/windows/image-editor-for-icons)   
- [Creating an Icon or Other Image &#40;Image Editor for Icons&#41;](/visual-cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
+ [Image Editor for Icons](/cpp/windows/image-editor-for-icons)   
+ [Creating an Icon or Other Image &#40;Image Editor for Icons&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
   
   

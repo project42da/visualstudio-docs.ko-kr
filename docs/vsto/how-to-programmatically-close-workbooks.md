@@ -1,65 +1,67 @@
 ---
-title: "방법: 프로그래밍 방식으로 통합 문서 닫기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "통합 문서, 닫기"
-  - "Excel[Visual Studio에서 Office 개발], 통합 문서 닫기"
+title: 'How to: Programmatically Close Workbooks | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- workbooks, closing
+- Excel [Office development in Visual Studio], closing workbooks
 ms.assetid: 50709caf-2ad8-4843-987c-9a34c8c1e4fe
 caps.latest.revision: 52
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 51
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4a769a2c60fba5e66091ecbfe731319da779e26a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 통합 문서 닫기
-  활성 통합 문서를 닫거나 닫을 통합 문서를 지정할 수 있습니다.  
+# <a name="how-to-programmatically-close-workbooks"></a>How to: Programmatically Close Workbooks
+  You can close the active workbook or you can specify a workbook to close.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## 활성 통합 문서 닫기  
- 활성 통합 문서를 닫는 절차에는 문서 수준 사용자 지정 및 VSTO 추가 기능에 대해 각각 하나씩, 두 가지가 있습니다.  
+## <a name="closing-the-active-workbook"></a>Closing the Active Workbook  
+ There are two procedures for closing the active workbook: one for document-level customizations and one for VSTO Add-ins.  
   
-#### 문서 수준 사용자 지정에서 활성 통합 문서를 닫으려면  
+#### <a name="to-close-the-active-workbook-in-a-document-level-customization"></a>To close the active workbook in a document-level customization  
   
-1.  <xref:Microsoft.Office.Tools.Excel.Workbook.Close%2A> 메서드를 호출하여 사용자 지정과 연결된 통합 문서를 닫습니다. 다음 코드 예제를 사용하려면 Excel용 문서 수준 프로젝트의 `Sheet1` 클래스에서 실행합니다.  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.Workbook.Close%2A> method to close the workbook associated with the customization. To use the following code example, run it in the `Sheet1` class in a document-level project for Excel.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#3)]
-     [!code-vb[Trin_VstcoreExcelAutomation#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#3)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#3](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#3)]  [!code-vb[Trin_VstcoreExcelAutomation#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#3)]  
   
-#### VSTO 추가 기능에서 활성 통합 문서를 닫으려면  
+#### <a name="to-close-the-active-workbook-in-a-vsto-add-in"></a>To close the active workbook in a VSTO Add-in  
   
-1.  <xref:Microsoft.Office.Interop.Excel._Workbook.Close%2A> 메서드를 호출하여 활성 통합 문서를 닫습니다. 다음 코드 예제를 사용하려면 Excel용 VSTO 추가 기능 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
+1.  Call the <xref:Microsoft.Office.Interop.Excel._Workbook.Close%2A> method to close the active workbook. To use the following code example, run it in the `ThisAddIn` class in an VSTO Add-in project for Excel.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#1)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#1)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#1](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#1)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#1](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#1)]  
   
-## 이름으로 지정한 통합 문서 닫기  
- 이름으로 지정한 통합 문서를 닫는 방법은 VSTO 추가 기능과 문서 수준 사용자 지정에서 동일합니다.  
+## <a name="closing-a-workbook-that-you-specify-by-name"></a>Closing a Workbook That You Specify By Name  
+ The way that you close a workbook that you specify by name is the same for VSTO Add-ins and document-level customizations.  
   
-#### 이름으로 지정한 통합 문서를 닫으려면  
+#### <a name="to-close-a-workbook-that-you-specify-by-name"></a>To close a workbook that you specify by name  
   
-1.  <xref:Microsoft.Office.Interop.Excel.Workbooks> 컬렉션에 대한 인수로 통합 문서 이름을 지정합니다. 다음 코드 예제에서는 **NewWorkbook**이라는 통합 문서가 Excel에서 열려 있다고 가정합니다.  
+1.  Specify the workbook name as an argument to the <xref:Microsoft.Office.Interop.Excel.Workbooks> collection. The following code example assumes that a workbook named **NewWorkbook** is open in Excel.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#2)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#2)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#2](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#2)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#2](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#2)]  
   
-## 참고 항목  
- [통합 문서 사용](../vsto/working-with-workbooks.md)   
- [방법: 프로그래밍 방식으로 통합 문서 저장](../vsto/how-to-programmatically-save-workbooks.md)   
- [방법: 프로그래밍 방식으로 통합 문서 열기](../vsto/how-to-programmatically-open-workbooks.md)   
- [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)   
- [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Workbooks](../vsto/working-with-workbooks.md)   
+ [How to: Programmatically Save Workbooks](../vsto/how-to-programmatically-save-workbooks.md)   
+ [How to: Programmatically Open Workbooks](../vsto/how-to-programmatically-open-workbooks.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)  
   
   

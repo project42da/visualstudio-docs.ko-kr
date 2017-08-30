@@ -1,72 +1,76 @@
 ---
-title: "InfoPath에 대해 리본 메뉴 사용자 지정"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "InfoPath[Visual Studio에서 Office 개발], 리본"
-  - "리본[Visual Studio에서 Office 개발], InfoPath"
+title: Customizing a Ribbon for InfoPath | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- InfoPath [Office development in Visual Studio], Ribbon
+- Ribbon [Office development in Visual Studio], InfoPath
 ms.assetid: 498c6457-679a-46f2-939f-c0597a17b7ec
 caps.latest.revision: 19
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 18
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: befccdbf740c8ff166cb9d57e1998b07a1c24619
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# InfoPath에 대해 리본 메뉴 사용자 지정
-  Microsoft Office InfoPath에서 리본을 사용자 지정할 경우 응용 프로그램에서 사용자 지정 리본이 나타나는 위치를 고려해야 합니다.[!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]에서는 다음 세 가지 유형의 InfoPath 응용 프로그램 창에서 리본을 표시할 수 있습니다.  
+# <a name="customizing-a-ribbon-for-infopath"></a>Customizing a Ribbon for InfoPath
+  When you customize the Ribbon in Microsoft Office InfoPath, you must consider where your custom Ribbon will appear in the application. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] can display the Ribbon in the following three types of InfoPath application windows:  
   
--   디자인 모드에서 열린 양식 템플릿을 표시하는 창입니다.  
+-   Windows that display a form template that is opened in design mode.  
   
--   양식 템플릿에 기반을 둔 양식을 표시하는 창입니다.  
+-   Windows that display a form that is based on a form template.  
   
--   인쇄 미리 보기 창입니다.  
+-   The Print Preview window.  
   
- **적용 대상:** 이 항목의 정보는 InfoPath 2010의 VSTO 추가 기능 프로젝트에 적용됩니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
+ **Applies to:** The information in this topic applies to VSTO Add-in projects for InfoPath 2010. For more information, see [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md).  
   
- 사용자와 디자이너는 디자이너 모드에서 양식 템플릿을 열고 템플릿의 모양과 레이아웃을 수정합니다. 사용자는 양식 템플릿에 기반을 둔 양식을 열고 콘텐츠를 추가합니다.  
+ Users and designers open a form template in design mode to modify the appearance and layout of the template. Users open forms that are based in a form template to add content.  
   
- 인쇄 미리 보기 창을 통해 디자이너와 사용자는 양식이나 양식 템플릿을 인쇄하기 전에 해당 페이지를 미리 볼 수 있습니다.  
+ The Print Preview window enables designers and users to preview the pages of a form or form template before they print them.  
   
 > [!NOTE]  
->  인쇄 미리 보기 창에는 **추가 기능** 탭이 나타나지 않습니다. 인쇄 미리 보기 창에 사용자 지정 탭을 표시하려면 탭의 **OfficeId** 속성을 **TabAddIns**로 설정하지 않았는지 확인합니다.  
+>  The **AddIns** tab does not appear in the Print Preview window. If you want a custom tab to appear in the Print Preview window, make sure that the **OfficeId** property of the tab is not set to **TabAddIns**.  
   
- 리본을 표시할 각 창의 리본 형식을 지정해야 합니다.  
+ You must specify the Ribbon type of each window in which you want your Ribbon to appear.  
   
-## 리본 디자이너에서 리본 형식 지정  
- **리본\(비주얼 디자이너\)** 항목을 사용할 경우 **속성** 창에서 리본의 **RibbonType** 속성을 클릭하고 다음 표에 설명된 리본 ID를 선택합니다.  
+## <a name="specifying-the-ribbon-type-in-the-ribbon-designer"></a>Specifying the Ribbon Type in the Ribbon Designer  
+ If you are using the **Ribbon (Visual Designer)** item, click the **RibbonType** property of the Ribbon in the **Properties** window, and then select any of the Ribbon ID's described in the following table.  
   
-|리본 ID|프로젝트를 실행할 때 리본이 표시되는 창입니다.|  
-|-----------|--------------------------------|  
-|**Microsoft.InfoPath.Designer**|디자인 모드에서 열린 양식 템플릿을 표시하는 창입니다.|  
-|**Microsoft.InfoPath.Editor**|양식 템플릿에 기반을 둔 양식을 표시하는 창입니다.|  
-|**Microsoft.InfoPath.PrintPreview**|인쇄 미리 보기 창입니다.|  
+|Ribbon ID|Window in which the Ribbon will appear when you run the project|  
+|---------------|---------------------------------------------------------------------|  
+|**Microsoft.InfoPath.Designer**|Windows that display a form template that is opened in design mode.|  
+|**Microsoft.InfoPath.Editor**|Windows that display a form that is based on a form template.|  
+|**Microsoft.InfoPath.PrintPreview**|The Print Preview window.|  
   
- 프로젝트에 리본을 두 개 이상 추가할 수 있습니다. 리본 두 개 이상이 리본 ID를 공유하면 프로젝트의 `ThisAddin` 클래스에서 런타임에 표시할 CreateRibbonExtensibilityObject 메서드를 재정의합니다. 자세한 내용은 [리본 개요](../vsto/ribbon-overview.md)을 참조하세요.  
+ You can add more than one Ribbon to a project. If more than one Ribbon share a Ribbon ID, override the CreateRibbonExtensibilityObject method in the `ThisAddin` class of your project to specify which Ribbon to display at run time. For more information, see [Ribbon Overview](../vsto/ribbon-overview.md).  
   
-## 리본 XML을 사용하여 리본 형식 지정  
- **리본\(XML\)** 항목을 사용할 경우 <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> 메서드에서 *ribbonID* 매개 변수 값을 확인하고 해당하는 리본을 반환합니다.  
+## <a name="specifying-the-ribbon-type-by-using-ribbon-xml"></a>Specifying the Ribbon Type by Using Ribbon XML  
+ If you are using the **Ribbon (XML)** item, check the value of the *ribbonID* parameter in the <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> method and return the appropriate Ribbon.  
   
- <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> 메서드는 Visual Studio를 통해 리본 코드 파일에서 자동으로 생성됩니다.*ribbonID* 매개 변수는 열려 있는 InfoPath 창의 형식을 식별하는 문자열입니다.  
+ The <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> method is automatically generated by Visual Studio in the Ribbon code file. The *ribbonID* parameter is a string that identifies the type of InfoPath window that is opening.  
   
- 다음 코드 예제에서는 디자인 모드에서 양식 템플릿을 표시하는 창에만 사용자 지정 리본을 표시하는 방법을 보여 줍니다. 표시할 리본은 Ribbon 클래스에서 생성되는 `GetResourceText()` 메서드에서 지정합니다. Ribbon 클래스에 대한 자세한 내용은 [리본 XML](../vsto/ribbon-xml.md)을 참조하세요.  
+ The following code example demonstrates how to display a custom Ribbon only in a window that displays a form template in design mode. The Ribbon to display is specified in the `GetResourceText()` method, which is generated in the Ribbon class. For more information about the Ribbon class, see [Ribbon XML](../vsto/ribbon-xml.md).  
   
- [!code-csharp[Trin_RibbonInfoPathBasic#1](../snippets/csharp/VS_Snippets_OfficeSP/trin_ribboninfopathbasic/cs/ribbon.cs#1)]
- [!code-vb[Trin_RibbonInfoPathBasic#1](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_ribboninfopathbasic/vb/ribbon.vb#1)]  
+ [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)] [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]  
   
-## 참고 항목  
- [런타임에 리본 메뉴에 액세스](../vsto/accessing-the-ribbon-at-run-time.md)   
- [리본 개요](../vsto/ribbon-overview.md)   
- [리본 디자이너](../vsto/ribbon-designer.md)   
- [리본 XML](../vsto/ribbon-xml.md)  
+## <a name="see-also"></a>See Also  
+ [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
+ [Ribbon Overview](../vsto/ribbon-overview.md)   
+ [Ribbon Designer](../vsto/ribbon-designer.md)   
+ [Ribbon XML](../vsto/ribbon-xml.md)  
   
   

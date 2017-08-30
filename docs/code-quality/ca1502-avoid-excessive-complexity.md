@@ -1,95 +1,105 @@
 ---
-title: "CA1502: 지나치게 복잡하게 만들지 마십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AvoidExcessiveComplexity"
-  - "CA1502"
-helpviewer_keywords: 
-  - "CA1502"
-  - "AvoidExcessiveComplexity"
+title: 'CA1502: Avoid excessive complexity | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AvoidExcessiveComplexity
+- CA1502
+helpviewer_keywords:
+- CA1502
+- AvoidExcessiveComplexity
 ms.assetid: d735454b-2f8f-47ce-907d-f7a5a5391221
 caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 30
----
-# CA1502: 지나치게 복잡하게 만들지 마십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: c04ac5e357556722770067fb61378580173f3462
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Avoid excessive complexity
 |||  
 |-|-|  
 |TypeName|AvoidExcessiveComplexity|  
 |CheckId|CA1502|  
-|범주|Microsoft.Maintainability|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Maintainability|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- 메서드가 과도한 순환 복잡성을 갖습니다.  
+## <a name="cause"></a>Cause  
+ A method has an excessive cyclomatic complexity.  
   
-## 규칙 설명  
- *순환 복잡성\(cyclomatic complexity\)*은 메서드를 통과하는 선형 독립 경로의 수를 측정하며 조건부 분기의 수와 복잡성에 의해 결정됩니다.  낮은 순환 복잡성은 대개 쉽게 이해하고 테스트하고 유지 관리할 수 있는 메서드를 나타냅니다.  순환 복잡성은 메서드의 제어 흐름 그래프에서 계산되며 다음과 같이 지정됩니다.  
+## <a name="rule-description"></a>Rule Description  
+ *Cyclomatic complexity* measures the number of linearly independent paths through the method, which is determined by the number and complexity of conditional branches. A low cyclomatic complexity generally indicates a method that is easy to understand, test, and maintain. The cyclomatic complexity is calculated from a control flow graph of the method and is given as follows:  
   
- 순환 복잡성 \= 에지\(edge\) 수 \- 노드 수 \+ 1  
+ cyclomatic complexity = the number of edges - the number of nodes + 1  
   
- 여기서 노드는 논리 분기점을 나타내고 에지\(edge\)는 노드 사이의 선을 나타냅니다.  
+ where a node represents a logic branch point and an edge represents a line between nodes.  
   
- 순환 복잡성이 25를 넘으면 규칙이 위반을 보고합니다.  
+ The rule reports a violation when the cyclomatic complexity is more than 25.  
   
- 코드 메트릭에 대한 자세한내용은 [관리 코드의 복잡성 및 유지 관리 용이성 측정](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)를 참조하십시오.  
+ You can learn more about code metrics at [Measuring Complexity and Maintainability of Managed Code](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md),  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 메서드를 리팩터링하여 순환 복잡성을 줄입니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, refactor the method to reduce its cyclomatic complexity.  
   
-## 경고를 표시하지 않는 경우  
- 복잡성을 쉽게 줄일 수 없고 메서드가 이해하고 테스트하고 유지 관리하기 쉬우면 이 규칙에서 경고를 표시하지 않아도 안전합니다.  특히 `switch`\([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서는 `Select`\) 문이 많이 포함된 메서드는 제외할 수 있습니다.  코드 리팩터링으로 유지 관리의 이점을 얻는 것보다는 개발 주기의 뒷부분에서 코드 베이스가 불안정하게 되거나 이전에 제공된 코드에서 런타임 동작이 예기치 않게 변경되지 않도록 하는 것이 더 중요합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule if the complexity cannot easily be reduced and the method is easy to understand, test, and maintain. In particular, a method that contains a large `switch` (`Select` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) statement is a candidate for exclusion. The risk of destabilizing the code base late in the development cycle or introducing an unexpected change in runtime behavior in previously shipped code might outweigh the maintainability benefits of refactoring the code.  
   
-## 순환 복잡성을 계산하는 방법  
- 순환 복잡성은 다음 항목에 1을 더하여 계산됩니다.  
+## <a name="how-cyclomatic-complexity-is-calculated"></a>How Cyclomatic Complexity is Calculated  
+ The cyclomatic complexity is calculated by adding 1 to the following:  
   
--   분기 수\(`if`, `while` 및 `do` 등\)  
+-   Number of branches (such as `if`, `while`, and `do`)  
   
--   `switch`에서 `case` 문의 수  
+-   Number of `case` statements in a `switch`  
   
- 다음 예제에서는 다양한 순환 복잡성이 포함된 메서드를 보여 줍니다.  
+ The following examples show methods that have varying cyclomatic complexities.  
   
-## 예제  
- **순환 복잡성 1**  
+## <a name="example"></a>Example  
+ **Cyclomatic Complexity of 1**  
   
- [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_1.cpp)]
- [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_1.vb)]
- [!code-cs[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_1.cs)]  
+ [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_1.cpp)] [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_1.vb)] [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_1.cs)]  
   
-## 예제  
- **순환 복잡성 2**  
+## <a name="example"></a>Example  
+ **Cyclomatic Complexity of 2**  
   
- [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_2.cpp)]
- [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_2.vb)]
- [!code-cs[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_2.cs)]  
+ [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_2.cpp)] [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_2.vb)] [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_2.cs)]  
   
-## 예제  
- **순환 복잡성 3**  
+## <a name="example"></a>Example  
+ **Cyclomatic Complexity of 3**  
   
- [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_3.cpp)]
- [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_3.vb)]
- [!code-cs[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_3.cs)]  
+ [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_3.cpp)] [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_3.vb)] [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_3.cs)]  
   
-## 예제  
- **순환 복잡성 8**  
+## <a name="example"></a>Example  
+ **Cyclomatic Complexity of 8**  
   
- [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_4.cpp)]
- [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_4.vb)]
- [!code-cs[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_4.cs)]  
+ [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_4.cpp)] [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_4.vb)] [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_4.cs)]  
   
-## 관련 규칙  
- [CA1501: 상속성을 너무 많이 사용하지 마십시오.](../code-quality/ca1501-avoid-excessive-inheritance.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1501: Avoid excessive inheritance](../code-quality/ca1501-avoid-excessive-inheritance.md)  
   
-## 참고 항목  
- [관리 코드의 복잡성 및 유지 관리 용이성 측정](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
+## <a name="see-also"></a>See Also  
+ [Measuring Complexity and Maintainability of Managed Code](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

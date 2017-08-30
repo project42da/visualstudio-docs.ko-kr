@@ -1,54 +1,72 @@
 ---
-title: "CA1306: 데이터 형식에 맞는 로캘을 설정하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1306"
-  - "SetLocaleForDataTypes"
-helpviewer_keywords: 
-  - "CA1306"
-  - "SetLocaleForDataTypes"
+title: 'CA1306: Set locale for data types | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1306
+- SetLocaleForDataTypes
+helpviewer_keywords:
+- CA1306
+- SetLocaleForDataTypes
 ms.assetid: 104297b2-5806-4de0-a8d9-c589380a796c
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
----
-# CA1306: 데이터 형식에 맞는 로캘을 설정하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 80905172a6a64af9056945935562f7d6b3bb778b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1306-set-locale-for-data-types"></a>CA1306: Set locale for data types
 |||  
 |-|-|  
 |TypeName|SetLocaleForDataTypes|  
 |CheckId|CA1306|  
-|범주|Microsoft.Globalization|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Globalization|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- 메서드 또는 생성자에서 하나 이상의 <xref:System.Data.DataTable?displayProperty=fullName> 또는 <xref:System.Data.DataSet?displayProperty=fullName> 인스턴스를 만들고 로캘 속성\(<xref:System.Data.DataTable.Locale%2A?displayProperty=fullName> 또는 <xref:System.Data.DataSet.Locale%2A?displayProperty=fullName>\)을 명시적으로 설정하지 않았습니다.  
+## <a name="cause"></a>Cause  
+ A method or constructor created one or more <xref:System.Data.DataTable?displayProperty=fullName> or <xref:System.Data.DataSet?displayProperty=fullName> instances and did not explicitly set the locale property (<xref:System.Data.DataTable.Locale%2A?displayProperty=fullName> or <xref:System.Data.DataSet.Locale%2A?displayProperty=fullName>).  
   
-## 규칙 설명  
- 로캘은 숫자 값에 사용되는 서식, 통화 기호 및 정렬 순서 등과 같은 데이터의 문화권별 표현 요소를 결정합니다.  <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet>을 만들 때는 로캘을 명시적으로 설정해야 합니다.  기본적으로 이러한 형식의 로캘은 현재 문화권입니다.  데이터베이스나 파일에 저장되어 있고 전역 공유되는 데이터의 경우 로캘은 일반적으로 고정 문화권\(<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>\)로 설정해야 합니다.  데이터가 여러 문화권 간에 공유되는 경우 기본 로캘을 사용하면 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet>의 내용이 잘못 표시되거나 해석될 수 있습니다.  
+## <a name="rule-description"></a>Rule Description  
+ The locale determines culture-specific presentation elements for data, such as formatting used for numeric values, currency symbols, and sort order. When you create a <xref:System.Data.DataTable> or <xref:System.Data.DataSet>, you should set the locale explicitly. By default, the locale for these types is the current culture. For data that is stored in a database or file and is shared globally, the locale should ordinarily be set to the invariant culture (<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>). When data is shared across cultures, using the default locale can cause the contents of the <xref:System.Data.DataTable> or <xref:System.Data.DataSet> to be presented or interpreted incorrectly.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet>의 로캘을 명시적으로 설정합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, explicitly set the locale for the <xref:System.Data.DataTable> or <xref:System.Data.DataSet>.  
   
-## 경고를 표시하지 않는 경우  
- 라이브러리나 응용 프로그램이 제한된 지역의 사용자를 대상으로 하는 경우, 데이터가 공유되지 않는 경우, 지원되는 모든 시나리오에서 기본 설정으로 원하는 동작을 수행할 수 있는 경우에는 이 규칙에서 경고를 표시하지 않아도 안전합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule when the library or application is for a limited local audience, the data is not shared, or the default setting yields the desired behavior in all supported scenarios.  
   
-## 예제  
- 다음 예제에서는 두 개의 <xref:System.Data.DataTable> 인스턴스를 만듭니다.  
+## <a name="example"></a>Example  
+ The following example creates two <xref:System.Data.DataTable> instances.  
   
- [!code-cs[FxCop.Globalization.DataTable#1](../code-quality/codesnippet/CSharp/ca1306-set-locale-for-data-types_1.cs)]  
+ [!code-csharp[FxCop.Globalization.DataTable#1](../code-quality/codesnippet/CSharp/ca1306-set-locale-for-data-types_1.cs)]  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  <xref:System.Data.DataTable?displayProperty=fullName>   
  <xref:System.Data.DataSet?displayProperty=fullName>   
  <xref:System.Globalization.CultureInfo?displayProperty=fullName>   

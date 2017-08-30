@@ -1,53 +1,69 @@
 ---
-title: "CA2134: 메서드는 기본 메서드를 재정의할 때 일관성 있는 방식을 유지해야 합니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2134"
+title: 'CA2134: Methods must keep consistent transparency when overriding base methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2134
 ms.assetid: 3b17e487-0326-442e-90e1-dc0ba9cdd3f2
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2134: 메서드는 기본 메서드를 재정의할 때 일관성 있는 방식을 유지해야 합니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d4ef9c4baadcdc6c26906664b24827948de1c5c9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods"></a>CA2134: Methods must keep consistent transparency when overriding base methods
 |||  
 |-|-|  
 |TypeName|MethodsMustOverrideWithConsistentTransparency|  
 |CheckId|CA2134|  
-|범주|Microsoft.Security|  
-|변경 수준|주요 변경|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## 원인  
- 이 규칙은 <xref:System.Security.SecurityCriticalAttribute>로 표시된 메서드가 투명하거나 <xref:System.Security.SecuritySafeCriticalAttribute>로 표시된 메서드를 재정의할 때 실행됩니다.  또한 규칙은 투명하거나 <xref:System.Security.SecuritySafeCriticalAttribute>로 표시된 메서드가 <xref:System.Security.SecurityCriticalAttribute>로 표시된 메서드를 재정의할 때 실행됩니다.  
+## <a name="cause"></a>Cause  
+ This rule fires when a method marked with the <xref:System.Security.SecurityCriticalAttribute> overrides a method that is transparent or marked with the <xref:System.Security.SecuritySafeCriticalAttribute>. The rule also fires when a method that is transparent or marked with the <xref:System.Security.SecuritySafeCriticalAttribute> overrides a method that is marked with a <xref:System.Security.SecurityCriticalAttribute>.  
   
- 이 규칙은 가상 메서드를 재정의하거나 인터페이스를 구현할 때 적용됩니다.  
+ The rule is applied when overriding a virtual method or implementing an interface.  
   
-## 규칙 설명  
- 이 규칙은 상속 체인으로 메서드의 보안 액세스 가능성을 변경하려는 시도가 있을 때 실행됩니다.  예를 들어, 기본 클래스의 가상 메서드가 투명 또는 안전한 중요한 경우 파생된 클래스는 투명 또는 안전에 중요한 메서드로 재정의해야 합니다.  반대로, 가상 보안이 중요한 경우 파생된 클래스는 보안 중요 메서드로 재정의해야 합니다.  인터페이스 메서드를 구현하는 데 동일한 규칙이 적용됩니다.  
+## <a name="rule-description"></a>Rule Description  
+ This rule fires on attempts to change the security accessibility of a method further up the inheritance chain. For example, if a virtual method in a base class is transparent or safe-critical, then the derived class must override it with a transparent or safe-critical method. Conversely, if the virtual is security critical, the derived class must override it with a security critical method. The same rule applies for implementing interface methods.  
   
- 코드가 런타임 대신 JIT 컴파일될 때 투명성 규칙이 적용되므로 투명도 계산은 동적 형식 정보를 갖지 않습니다.  따라서 투명도 계산의 결과는 동적 형식에 관계 없이 JIT 컴파일되는 정적 형식에서만 확인할 수 있어야 합니다.  
+ Transparency rules are enforced when the code is JIT compiled instead of at runtime, so that the transparency calculation does not have dynamic type information. Therefore, the result of the transparency calculation must be able to be determined solely from the static types being JIT-compiled, regardless of the dynamic type.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙의 위반 문제를 해결하려면 가상 메서드를 재정의하거나 인터페이스를 구현하는 메서드의 투명성을 가상 또는 인터페이스 메서드의 투명도에 일치하도록 변경하십시오.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, change the transparency of the method that is overriding a virtual method or implementing an interface to match the transparency of the virtual or interface method.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  이 규칙 위반은 수준 2 투명성을 사용하는 어셈블리에 대해 런타임 <xref:System.TypeLoadException>에서 발생합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress warnings from this rule. Violations of this rule will result in a runtime <xref:System.TypeLoadException> for assemblies that use level 2 transparency.  
   
-## 예제  
+## <a name="examples"></a>Examples  
   
-### 코드  
- [!code-cs[FxCop.Security.CA2134.MethodsMustOverrideWithConsistentTransparency#1](../code-quality/codesnippet/CSharp/ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods_1.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Security.CA2134.MethodsMustOverrideWithConsistentTransparency#1](../code-quality/codesnippet/CSharp/ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods_1.cs)]  
   
-## 참고 항목  
- [보안 투명 코드, 수준 2](../Topic/Security-Transparent%20Code,%20Level%202.md)
+## <a name="see-also"></a>See Also  
+ [Security-Transparent Code, Level 2](http://msdn.microsoft.com/Library/4d05610a-0da6-4f08-acea-d54c9d6143c0)

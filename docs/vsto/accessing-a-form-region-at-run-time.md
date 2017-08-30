@@ -1,89 +1,91 @@
 ---
-title: "런타임에 양식 영역 액세스"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "검사기[Visual Studio에서 Office 개발]"
-  - "탐색기[Visual Studio에서 Office 개발]"
-  - "양식 영역[Visual Studio에서 Office 개발], 런타임에 액세스"
+title: Accessing a Form Region at Run Time | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Inspectors [Office development in Visual Studio]
+- Explorers [Office development in Visual Studio]
+- form regions [Office development in Visual Studio], accessing at run time
 ms.assetid: 58eaa9e0-acba-4a13-a6dd-b7e37a38156e
 caps.latest.revision: 23
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 22
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6a250045c350587b2e6ebaed5bba842aba0d357d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 런타임에 양식 영역 액세스
+# <a name="accessing-a-form-region-at-run-time"></a>Accessing a Form Region at Run Time
   
   
-|적용 대상|  
-|-----------|  
-|이 항목의 정보는 다음 프로젝트 형식 및 Microsoft Office 버전에만 적용됩니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.<br /><br /> **프로젝트 형식**<br /><br /> -   VSTO 추가 기능 프로젝트<br /><br /> **Microsoft Office 버전**<br /><br /> -   [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]|  
+|Applies to|  
+|----------------|  
+|The information in this topic applies only to the following project types and versions of Microsoft Office. For more information, see [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md).<br /><br /> **Project type**<br /><br /> -   VSTO Add-in projects<br /><br /> **Microsoft Office version**<br /><br /> -   [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]|  
   
- `Globals` 클래스를 사용하여 Outlook 프로젝트의 어디에서나 양식 영역에 액세스할 수 있습니다.`Globals` 클래스에 대한 자세한 내용은 [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)를 참조하세요.  
+ Use the `Globals` class to access form regions from anywhere within your Outlook project. For more information about the `Globals` class, see [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md).  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## 특정 Outlook 검사기 창에 나타나는 양식 영역 액세스  
- 특정 Outlook 검사기에 나타나는 모든 양식 영역에 액세스하려면 `Globals` 클래스의 `FormRegions` 속성을 호출하고 검사기를 나타내는 <xref:Microsoft.Office.Interop.Outlook.Inspector> 개체를 전달합니다.  
+## <a name="accessing-form-regions-that-appear-in-a-specific-outlook-inspector-window"></a>Accessing Form Regions That Appear in a Specific Outlook Inspector Window  
+ To access all form regions that appear in a specific Outlook Inspector, call the `FormRegions` property of the `Globals` class and pass in an <xref:Microsoft.Office.Interop.Outlook.Inspector> object that represents the Inspector.  
   
- 다음 예제에서는 현재 포커스가 있는 검사기에 나타나는 양식 영역 컬렉션을 가져옵니다. 이 예제에서는 `formRegion1`이라는 컬렉션의 양식 영역에 액세스하고 텍스트 상자에 나타나는 텍스트를 `Hello World`로 설정합니다.  
+ The following example gets the collection of form regions that appear in the Inspector that currently has focus. This example then accesses a form region in the collection named `formRegion1` and sets the text that appears in a text box to `Hello World`.  
   
- [!code-csharp[Trin_Outlook_FR_Access#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Outlook_FR_Access/CS/ThisAddIn.cs#2)]
- [!code-vb[Trin_Outlook_FR_Access#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Outlook_FR_Access/VB/ThisAddIn.vb#2)]  
+ [!code-vb[Trin_Outlook_FR_Access#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#2)] [!code-csharp[Trin_Outlook_FR_Access#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#2)]  
   
-## 특정 Outlook 탐색기 창에 나타나는 양식 영역 액세스  
- 특정 Outlook 탐색기에 나타나는 모든 양식 영역에 액세스하려면 `Globals` 클래스의 `FormRegions` 속성을 호출하고 탐색기를 나타내는 <xref:Microsoft.Office.Interop.Outlook.Explorer> 개체를 전달합니다.  
+## <a name="accessing-form-regions-that-appear-in-a-specific-outlook-explorer-window"></a>Accessing Form Regions That Appear in a Specific Outlook Explorer Window  
+ To access all form regions that appear in a specific Outlook Explorer, call the `FormRegions` property of the `Globals` class and pass in an <xref:Microsoft.Office.Interop.Outlook.Explorer> object that represents the Explorer.  
   
- 다음 예제에서는 현재 포커스가 있는 탐색기에 나타나는 양식 영역 컬렉션을 가져옵니다. 이 예제에서는 `formRegion1`이라는 컬렉션의 양식 영역에 액세스하고 텍스트 상자에 나타나는 텍스트를 `Hello World`로 설정합니다.  
+ The following example gets the collection of form regions that appear in the Explorer that currently has focus. This example then accesses a form region in the collection named `formRegion1` and sets the text that appears in a text box to `Hello World`.  
   
- [!code-csharp[Trin_Outlook_FR_Access#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Outlook_FR_Access/CS/ThisAddIn.cs#3)]
- [!code-vb[Trin_Outlook_FR_Access#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Outlook_FR_Access/VB/ThisAddIn.vb#3)]  
+ [!code-vb[Trin_Outlook_FR_Access#3](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#3)] [!code-csharp[Trin_Outlook_FR_Access#3](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#3)]  
   
-## 모든 양식 영역 액세스  
- 모든 탐색기 및 모든 검사기에 나타나는 모든 양식 영역에 액세스하려면 `Globals` 클래스의 `FormRegions` 속성을 호출합니다.  
+## <a name="accessing-all-form-regions"></a>Accessing All Form Regions  
+ To access all form regions that appear in all Explorers and all Inspectors, call the `FormRegions` property of the `Globals` class.  
   
- 다음 예제에서는 모든 탐색기 및 모든 검사기에 나타나는 양식 영역 컬렉션을 가져옵니다. 그런 다음 `formRegion1`이라는 양식 영역에 액세스하고 텍스트 상자에 나타나는 텍스트를 `Hello World`로 설정합니다.  
+ The following example gets the collection of form regions that appear in all Explorers and all Inspectors. This example then accesses a form region named `formRegion1` and sets the text that appears in a text box to `Hello World`.  
   
- [!code-csharp[Trin_Outlook_FR_Access#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Outlook_FR_Access/CS/ThisAddIn.cs#1)]
- [!code-vb[Trin_Outlook_FR_Access#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Outlook_FR_Access/VB/ThisAddIn.vb#1)]  
+ [!code-vb[Trin_Outlook_FR_Access#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#1)] [!code-csharp[Trin_Outlook_FR_Access#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#1)]  
   
-## 양식 영역의 컨트롤 액세스  
- `Globals` 클래스를 사용하여 양식 영역의 컨트롤에 액세스하려면 컨트롤에서 양식 영역 코드 파일 외부의 코드에 액세스할 수 있도록 만들어야 합니다.  
+## <a name="accessing-controls-on-a-form-region"></a>Accessing Controls on a Form Region  
+ To access controls on a form region by using the `Globals` class, you must make the controls accessible to code outside of the form region code file.  
   
-### 양식 영역 디자이너에서 디자인되는 양식 영역  
- C\#의 경우 액세스하려는 각 컨트롤의 한정자를 변경합니다. 이렇게 하려면 양식 영역 디자이너에서 각 컨트롤을 선택하고 **Modifiers** 속성을 **Internal**로 변경하거나 **속성** 창에서 **public**으로 변경합니다. 예를 들어 `textBox1`의 **Modifier** 속성을 **Internal**로 변경한 경우 `Globals.FormRegions.FormRegion1.textBox1`을 입력하여 `textBox1`에 액세스할 수 있습니다.  
+### <a name="form-regions-designed-in-the-form-region-designer"></a>Form Regions Designed in the Form Region Designer  
+ For C#, change the modifier of each control that you want to access. To do this, select each control in the form region designer and change the **Modifiers** property to **Internal** or **public** in the **Properties** window. For example, if you change the **Modifier** property of `textBox1` to **Internal**, you can access `textBox1` by typing `Globals.FormRegions.FormRegion1.textBox1`.  
   
- Visual Basic의 경우 한정자를 변경할 필요가 없습니다.  
+ For Visual Basic, you do not need to change the modifier.  
   
-### 가져온 양식 영역  
- Outlook에서 디자인된 양식 영역을 가져올 때 양식 영역에 있는 각 컨트롤의 액세스 한정자가 private으로 설정됩니다. 양식 영역 디자이너를 사용하여 가져온 양식 영역을 수정할 수 없으므로 **속성** 창에서 컨트롤의 한정자를 변경할 수 없습니다.  
+### <a name="imported-form-regions"></a>Imported Form Regions  
+ When you import a form region that was designed in Outlook, the access modifier of each control on the form region becomes private. Because you cannot use the form region designer to modify an imported form region, there is no way to change the modifier of a control in the **Properties** window.  
   
- 양식 영역 코드 파일 외부에서 컨트롤에 액세스할 수 있게 하려면 양식 영역 코드 파일 내에서 해당 컨트롤을 반환하도록 속성을 만듭니다.  
+ To enable access to a control from outside the form region code file, create a property in the form region code file to return that control.  
   
- C\#에서 속성을 만드는 방법에 대한 자세한 내용은 [방법: 읽기&#47;쓰기 속성 선언 및 사용&#40;C&#35; 프로그래밍 가이드&#41;](http://msdn.microsoft.com/library/a4962fef-af7e-4c4b-a929-4ae4d646ab8a)을 참조하세요.  
+ For more information about how to create properties in C#, see [How to: Declare and Use Read Write Properties &#40;C&#35; Programming Guide&#41;](/dotnet/csharp/programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties).  
   
- Visual Basic에서 속성을 만드는 방법에 대한 자세한 내용은 [빌드에 없음: 방법: 클래스에 필드 및 속성 추가](http://msdn.microsoft.com/ko-kr/ae53f61b-3abc-413e-8931-703c5f5e8fc2)를 참조하세요.  
+ For more information about how to create properties in Visual Basic, see [How to: Create a Property (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/procedures/how-to-create-a-property).  
   
-## 참고 항목  
- [Outlook 양식 영역 만들기 지침](../vsto/guidelines-for-creating-outlook-form-regions.md)   
- [연습: Outlook 양식 영역 디자인](../vsto/walkthrough-designing-an-outlook-form-region.md)   
- [방법: Outlook 추가 기능 프로젝트에 양식 영역 추가](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)   
- [Outlook 양식 영역의 사용자 지정 작업](../vsto/custom-actions-in-outlook-form-regions.md)   
- [Outlook 메시지 클래스에 양식 영역 연결](../vsto/associating-a-form-region-with-an-outlook-message-class.md)   
- [연습: Outlook에서 디자인한 양식 영역 가져오기](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)   
- [방법: Outlook에서 양식 영역 표시하지 않기](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)   
- [Outlook 양식 영역 만들기](../vsto/creating-outlook-form-regions.md)   
- [런타임에 리본 메뉴에 액세스](../vsto/accessing-the-ribbon-at-run-time.md)  
+## <a name="see-also"></a>See Also  
+ [Guidelines for Creating Outlook Form Regions](../vsto/guidelines-for-creating-outlook-form-regions.md)   
+ [Walkthrough: Designing an Outlook Form Region](../vsto/walkthrough-designing-an-outlook-form-region.md)   
+ [How to: Add a Form Region to an Outlook Add-in Project](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)   
+ [Custom Actions in Outlook Form Regions](../vsto/custom-actions-in-outlook-form-regions.md)   
+ [Associating a Form Region with an Outlook Message Class](../vsto/associating-a-form-region-with-an-outlook-message-class.md)   
+ [Walkthrough: Importing a Form Region That Is Designed in Outlook](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)   
+ [How to: Prevent Outlook from Displaying a Form Region](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)   
+ [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md)   
+ [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)  
   
   

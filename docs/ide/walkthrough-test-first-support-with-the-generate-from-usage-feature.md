@@ -1,5 +1,5 @@
 ---
-title: "연습: 관례에서 생성 기능을 통한 테스트 우선 지원 | Microsoft 문서"
+title: 'Walkthrough: Test-First Support with the Generate From Usage Feature | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,173 +32,173 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: f0576ce6dd78fe1328bcea3ab9a27507ddc0f2c0
-ms.openlocfilehash: 4811dda912f20272733a4d878fc8c607eb2573fc
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0b7928304417df3a5b5a067720c91aedd46a457f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>연습: 관례에서 생성 기능을 통한 테스트 우선 지원
-이 항목에서는 테스트 우선 개발을 지원하는 [관례에서 생성](../ide/visual-csharp-intellisense.md#generate-from-usage) 기능을 사용하는 방법을 보여 줍니다.  
+# <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>Walkthrough: Test-First Support with the Generate From Usage Feature
+This topic demonstrates how to use the [Generate From Usage](../ide/visual-csharp-intellisense.md#generate-from-usage) feature, which supports test-first development.  
   
- *테스트 우선 개발* 은 먼저 제품 사양에 따라 단위 테스트를 작성한 다음 테스트에 성공하는 데 필요한 소스 코드를 작성하는 소프트웨어 디자인 방식입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 는 정의하기 전에 테스트 사례에서 처음 참조할 때 소스 코드에서 새 형식과 멤버를 생성하여 테스트 우선 개발을 지원합니다.  
+ *Test-first development* is an approach to software design in which you first write unit tests based on product specifications, and then write the source code that is required to make the tests succeed. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] supports test-first development by generating new types and members in the source code when you first reference them in your test cases, before they are defined.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 는 워크플로를 중단을 최소화하면서 새 형식과 멤버를 생성합니다. 코드에서 현재 위치를 벗어나지 않고 형식, 메서드, 속성, 필드 또는 생성자에 대한 스텁을 만들 수 있습니다. 형식 생성 옵션을 지정할 수 있는 대화 상자를 여는 경우 대화 상자를 닫으면 포커스가 즉시 현재 열린 파일로 돌아갑니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] generates the new types and members with minimal interruption to your workflow. You can create stubs for types, methods, properties, fields, or constructors without leaving your current location in code. When you open a dialog box to specify options for type generation, the focus returns immediately to the current open file when the dialog box closes.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]와 통합된 테스트 프레임워크와 함께 사용법에서 생성 기능을 사용할 수 있습니다. 이 항목에서는 Microsoft 단위 테스트 프레임워크를 보여 줍니다.  
+ The Generate From Usage feature can be used with test frameworks that integrate with [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. In this topic, the Microsoft Unit Testing Framework is demonstrated.  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-### <a name="to-create-a-windows-class-library-project-and-a-test-project"></a>Windows 클래스 라이브러리 프로젝트 및 테스트 프로젝트를 만들려면  
+### <a name="to-create-a-windows-class-library-project-and-a-test-project"></a>To create a Windows Class Library project and a Test project  
   
-1.  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 또는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서 새 Windows 클래스 라이브러리 프로젝트를 만듭니다. 사용하는 언어에 따라 이름을 `GFUDemo_VB` 또는 `GFUDemo_CS`로 지정합니다.  
+1.  In [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] or [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], create a new Windows Class Library project. Name it `GFUDemo_VB` or `GFUDemo_CS`, depending on which language you are using.  
   
-2.  **솔루션 탐색기**에서 맨 위의 솔루션 아이콘을 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **새 프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자의 왼쪽 **프로젝트 형식** 창에서 **테스트**를 클릭합니다.  
+2.  In **Solution Explorer**, right-click the solution icon at the top, point to **Add**, and then click **New Project**. In the **New Project** dialog box, in the **Project Types** pane on the left, click **Test**.  
   
-3.  **템플릿** 창에서 **단위 테스트 프로젝트** 를 클릭하고 기본 이름인 UnitTestProject1을 적용합니다. 다음 그림에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]에 표시되는 경우의 대화 상자를 보여 줍니다. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서도 대화 상자가 유사하게 표시됩니다.  
+3.  In the **Templates** pane, click **Unit Test Project** and accept the default name of UnitTestProject1. The following illustration shows the dialog box when it appears in [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]. In [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], the dialog box looks similar.  
   
-     ![새 테스트 프로젝트 대화 상자](../ide/media/newproject_test.png "NewProject_Test")  
-새 프로젝트 대화 상자  
+     ![New Test Project dialog](../ide/media/newproject_test.png "NewProject_Test")  
+New Project dialog box  
   
-4.  **확인** 을 클릭하여 **새 프로젝트** 대화 상자를 닫습니다.
+4.  Click **OK** to close the **New Project** dialog box.
 
-5.  클래스 프로젝트의 **솔루션 탐색기**에서 **참조** 항목을 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.
+5.  In your class project, in **Solution Explorer**, right-click the **References** entry and click **Add Reference**.
 
-6.  **참조 관리자** 대화 상자에서 **프로젝트**를 선택한 다음 단위 테스트 프로젝트를 선택합니다.
+6.  In the **Reference Manager** dialog box, select **Projects** and then select your unit test project.
 
-7.  **확인**을 클릭하여 **참조 관리자** 대화 상자를 닫습니다.
+7.  Click **OK** to close the **Reference Manager** dialog box.
 
-8.  **Class1** 파일의 기존 **using** 문의 끝에 있는 테스트 프로젝트에 **using** 문을 추가합니다.
+8.  In the **Class1** file, immediately after the last of the existing **using** statements, add a **using** statement for the test project:
 
-    * Visual Basic에서 `Using UnitTestProject1`을 추가합니다.
+    * In Visual Basic, add `Using UnitTestProject1`
     
-    * C#에서 `using UnitTestProject1;`을 추가합니다.
+    * In C#, add `using UnitTestProject1;`
     
-9.  솔루션을 저장합니다. 이제 테스트 작성을 시작할 준비가 되었습니다.  
+9.  Save your solution. You are now ready to begin writing tests.  
   
-### <a name="to-generate-a-new-class-from-a-unit-test"></a>단위 테스트에서 새 클래스를 생성하려면  
+### <a name="to-generate-a-new-class-from-a-unit-test"></a>To generate a new class from a unit test  
   
-1.  테스트 프로젝트에는 UnitTest1이라는 파일이 포함되어 있습니다. **솔루션 탐색기** 에서 이 파일을 두 번 클릭하여 코드 편집기에서 엽니다. 테스트 클래스 및 테스트 메서드가 생성되었습니다.  
+1.  The test project contains a file that is named UnitTest1. Double-click this file in **Solution Explorer** to open it in the Code Editor. A test class and test method have been generated.  
   
-2.  `UnitTest1` 클래스에 대한 선언을 찾아서 이름을 `AutomobileTest`로 바꿉니다. C#에서 `UnitTest1()` 생성자가 있는 경우 이름을 `AutomobileTest()`로 바꿉니다.  
+2.  Locate the declaration for class `UnitTest1` and rename it to `AutomobileTest`. In C#, if a `UnitTest1()` constructor is present, rename it to `AutomobileTest()`.  
   
     > [!NOTE]
-    >  이제 IntelliSense는 IntelliSense 문 완성을 위해 *완성 모드* 및 *제안 모드*라는 두 가지 대안을 제공합니다. 클래스 및 멤버를 정의하기 전에 사용하는 경우에는 제안 모드를 사용합니다. IntelliSense 창이 열려 있으면 Ctrl+Alt+스페이스바를 눌러 완성 모드와 제안 모드 간을 전환할 수 있습니다. 자세한 내용은 [Using IntelliSense](../ide/using-intellisense.md) 를 참조하세요. 제안 모드는 다음 단계에서 `Automobile` 을 입력할 때 도움이 됩니다.  
+    >  IntelliSense now provides two alternatives for IntelliSense statement completion: *completion mode* and *suggestion mode*. Use suggestion mode for situations in which classes and members are used before they are defined. When an IntelliSense window is open, you can press CTRL+ALT+SPACEBAR to toggle between completion mode and suggestion mode. See [Using IntelliSense](../ide/using-intellisense.md) for more information. Suggestion mode will help when you are typing `Automobile` in the next step.  
   
-3.  `TestMethod1()` 메서드를 찾아서 이름을 `DefaultAutomobileIsInitializedCorrectly()`로 바꿉니다. 이 메서드 내에서 다음 그림과 같이 `Automobile`이라는 클래스의 새 인스턴스를 만듭니다. 컴파일 시간 오류를 나타내는 물결선이 표시되고 스마트 태그가 형식 이름 아래에 나타납니다. 스마트 태그의 정확한 위치는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 또는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]를 사용하는지에 따라 달라집니다.  
+3.  Locate the `TestMethod1()` method and rename it to `DefaultAutomobileIsInitializedCorrectly()`. Inside this method, create a new instance of a class named `Automobile`, as shown in the following illustrations. A wavy underline appears, which indicates a compile-time error, and a smart tag appears under the type name. The exact location of the smart tag varies, depending on whether you are using [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] or [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)].  
   
-     ![Visual Basic의 스마트 태그 밑줄](../ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
+     ![Smart Tag Underline in Visual Basic](../ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
 Visual Basic  
   
-     ![C&#35;의 스마트 태그 밑줄](../ide/media/genclass_underline.png "GenClass_Underline")  
+     ![Smart Tag Underline in  C&#35;](../ide/media/genclass_underline.png "GenClass_Underline")  
 Visual C#  
   
-4.  스마트 태그를 마우스 포인터로 가리켜 `Automobile` 이라는 형식이 아직 정의되지 않았다는 오류 메시지를 표시합니다. 스마트 태그를 클릭하거나 Ctrl+. (Ctrl+마침표)를 눌러 다음 그림과 같이 사용법에서 생성 바로 가기 메뉴를 엽니다.  
+4.  Rest the mouse pointer over the smart tag to see an error message that states that no type named `Automobile` is defined yet. Click the smart tag or press CTRL+. (CTRL+period) to open the Generate From Usage shortcut menu, as shown in the following illustrations.  
   
-     ![Visual Basic의 스마트 태그 상황에 맞는 메뉴](../ide/media/genclass_smartvb.png "GenClass_SmartVB")  
+     ![Smart Tag Context Menu in Visual Basic](../ide/media/genclass_smartvb.png "GenClass_SmartVB")  
 Visual Basic  
   
-     ![C&#35;의 스마트 태그 상황에 맞는 메뉴](../ide/media/genclass_smartcs.png "GenClass_SmartCS")  
+     ![Smart Tag Context Menu in C&#35;](../ide/media/genclass_smartcs.png "GenClass_SmartCS")  
 Visual C#  
   
-5.  이제 두 가지 선택 옵션이 있습니다. **'Automobile 클래스' 생성** 을 클릭하여 테스트 프로젝트에서 새 파일을 만들고 `Automobile`이라는 빈 클래스로 채울 수 있습니다. 이렇게 하면 현재 프로젝트에 기본 액세스 한정자가 있는 새 파일에서 새 클래스를 빠르게 만들 수 있습니다. **새 형식 생성** 을 클릭하여 **새 형식 생성** 대화 상자를 열 수도 있습니다. 기존 파일에 클래스를 넣고 다른 프로젝트에 파일을 추가하는 옵션이 제공됩니다.  
+5.  Now you have two choices. You could click **Generate 'Class Automobile'** to create a new file in your test project and populate it with an empty class named `Automobile`. This is a quick way to create a new class in a new file that has default access modifiers in the current project. You can also click **Generate new type** to open the **Generate New Type** dialog box. This provides options that include putting the class in an existing file and adding the file to another project.  
   
-     **새 형식 생성** 을 클릭하여 다음 그림과 같이 **새 형식 생성** 대화 상자를 엽니다. **프로젝트** 목록에서 **GFUDemo_VB** 또는 **GFUDemo_CS** 를 클릭하여 테스트 프로젝트 대신 소스 코드 프로젝트에 파일을 추가하도록 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에 지시합니다.  
+     Click **Generate new type** to open the **Generate New Type** dialog box, which is shown in the following illustration. In the **Project** list, click **GFUDemo_VB** or **GFUDemo_CS** to instruct [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] to add the file to the source code project instead of the test project.  
   
-     ![새 형식 생성 대화 상자](../ide/media/genotherdialog.png "GenOtherDialog")  
-새 형식 생성 대화 상자  
+     ![Generate New Type dialog box](../ide/media/genotherdialog.png "GenOtherDialog")  
+Generate New Type dialog box  
   
-6.  **확인** 을 클릭하여 대화 상자를 닫고 새 파일을 만듭니다.  
+6.  Click **OK** to close the dialog box and create the new file.  
   
-7.  **솔루션 탐색기**의 GFUDemo_VB 또는 GFUDemo_CS 프로젝트 노드 아래에서 새 Automobile.vb 또는 Automobile.cs 파일이 있는지 확인합니다. 코드 편집기에서 포커스는 여전히 `AutomobileTest.DefaultAutomobileIsInitializedCorrectly`에 있습니다. 사용 중단을 최소화하여 테스트를 계속 작성할 수 있습니다.  
+7.  In **Solution Explorer**, look under the GFUDemo_VB or GFUDemo_CS project node to verify that the new Automobile.vb or Automobile.cs file is there. In the Code Editor, the focus is still in `AutomobileTest.DefaultAutomobileIsInitializedCorrectly`. You can continue to write your test with a minimum of interruption.  
   
-### <a name="to-generate-a-property-stub"></a>속성 스텁을 생성하려면  
+### <a name="to-generate-a-property-stub"></a>To generate a property stub  
   
-1.  제품 사양에 따라 `Automobile` 클래스에 `Model` 및 `TopSpeed`라는 두 개의 공용 속성이 있다고 가정합니다. 이러한 속성은 기본값 `"Not specified"` 및 `-1` 을 사용하여 기본 생성자에서 초기화되어야 합니다. 다음 단위 테스트는 기본 생성자가 속성을 올바른 기본값으로 설정하는지 확인합니다.  
+1.  Assume that the product specification states that the `Automobile` class has two public properties named `Model` and `TopSpeed`. These properties must be initialized with default values of `"Not specified"` and `-1` by the default constructor. The following unit test will verify that the default constructor sets the properties to their correct default values.  
   
-     `DefaultAutomobileIsInitializedCorrectly`에 다음 코드 줄을 추가합니다.  
+     Add the following line of code to `DefaultAutomobileIsInitializedCorrectly`.  
   
-     [!code-cs[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]  [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]  
+     [!code-csharp[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]  [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]  
   
-     코드에서 두 개의 정의되지 않은 `Automobile`속성을 참조하기 때문에 스마트 태그가 나타납니다. `Model` 에 대한 스마트 태그를 클릭한 다음 **속성 스텁 생성**을 클릭합니다. `TopSpeed` 속성에 대한 속성 스텁도 생성합니다.  
+     Because the code references two undefined properties on `Automobile`, a smart tag appears. Click the smart tag for `Model` and then click **Generate property stub**. Generate a property stub for the `TopSpeed` property also.  
   
-     `Automobile` 클래스에서 새 속성의 형식이 컨텍스트에서 올바르게 유추됩니다.  
+     In the `Automobile` class, the types of the new properties are correctly inferred from the context.  
   
-     다음 그림에서는 스마트 태그 바로 가기 메뉴를 보여 줍니다.  
+     The following illustration shows the smart tag shortcut menu.  
   
-     ![Visual Basic의 속성 생성 상황에 맞는 메뉴](../ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
+     ![Generate Property context menu in Visual Basic](../ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
 Visual Basic  
   
-     ![C&#35;의 속성 생성 상황에 맞는 메뉴](../ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
+     ![Generate Property context menu in C&#35;](../ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
 Visual C#  
   
-### <a name="to-locate-the-source-code"></a>소스 코드를 찾으려면  
+### <a name="to-locate-the-source-code"></a>To locate the source code  
   
-1.  새 속성을 생성된 것을 확인할 수 있도록 **탐색** 기능을 사용하여 Automobile.cs 또는 Automobile.vb 소스 코드 파일을 탐색합니다.  
+1.  Use the **Navigate To** feature to navigate to the Automobile.cs or Automobile.vb source code file so that you can verify that the new properties have been generated.  
   
-     **탐색** 기능을 사용하면 형식 이름 또는 이름의 일부와 같은 텍스트 문자열을 빠르게 입력하고 결과 목록에서 요소를 클릭하여 원하는 위치로 이동할 수 있습니다.  
+     The **Navigate To** feature enables you to quickly enter a text string, such as a type name or part of a name, and go to the desired location by clicking the element in the result list.  
   
-     코드 편집기 내부를 클릭하고 Ctrl+,(Ctrl+쉼표)를 눌러 **탐색** 대화 상자를 엽니다. 텍스트 상자에 `automobile`을 입력합니다. 목록에서 **Automobile** 클래스를 클릭한 다음 **확인**을 클릭합니다.  
+     Open the **Navigate To** dialog box by clicking in the Code Editor and pressing CTRL+, (CTRL+comma). In the text box, type `automobile`. Click the **Automobile** class in the list, and then click **OK**.  
   
-     다음 그림에는 **탐색** 창이 나와 있습니다.  
+     The **Navigate To** window is shown in the following illustration.  
   
-     ![탐색 대화 상자](../ide/media/navigate_2.png "Navigate_2")  
-탐색 창  
+     ![Navigate To dialog](../ide/media/navigate_2.png "Navigate_2")  
+Navigate To window  
   
-### <a name="to-generate-a-stub-for-a-new-constructor"></a>새로운 생성자에 대한 스텁을 생성하려면  
+### <a name="to-generate-a-stub-for-a-new-constructor"></a>To generate a stub for a new constructor  
   
-1.  이 테스트 메서드에서는 지정한 값을 사용하도록 `Model` 및 `TopSpeed` 속성을 초기화하는 생성자 스텁을 생성합니다. 나중에 더 많은 코드를 추가하여 테스트를 완료합니다. 다음과 같은 추가 테스트 메서드를 `AutomobileTest` 클래스에 추가합니다.  
+1.  In this test method, you will generate a constructor stub that will initialize the `Model` and `TopSpeed` properties to have values that you specify. Later, you will add more code to complete the test. Add the following additional test method to your `AutomobileTest` class.  
   
-     [!code-cs[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]  [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]  
+     [!code-csharp[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]  [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]  
   
-2.  새 클래스 생성자에서 스마트 태그를 클릭한 다음 **생성자 스텁 생성**을 클릭합니다. `Automobile` 클래스 파일에서 새로운 생성자가 생성자 호출에 사용되는 지역 변수의 이름을 검사하고 `Automobile` 클래스에서 동일한 이름을 가진 속성을 찾고 `Model` 및 `TopSpeed` 속성에 인수 값을 저장하는 코드를 생성자 본문에 제공한 것을 확인합니다. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서는 새로운 생성자의 `_model` 및 `_topSpeed` 필드가 `Model` 및 `TopSpeed` 속성에 대해 암시적으로 정의된 백업 필드입니다.  
+2.  Click the smart tag under the new class constructor and then click **Generate constructor stub**. In the `Automobile` class file, notice that the new constructor has examined the names of the local variables that are used in the constructor call, found properties that have the same names in the `Automobile` class, and supplied code in the constructor body to store the argument values in the `Model` and `TopSpeed` properties. (In [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], the `_model` and `_topSpeed` fields in the new constructor are the implicitly defined backing fields for the `Model` and `TopSpeed` properties.)  
   
-3.  새로운 생성자를 생성하면 `DefaultAutomobileIsInitializedCorrectly`의 기본 생성자 호출 아래에 물결선이 표시됩니다. `Automobile` 클래스에 인수를 사용하지 않는 생성자가 없다는 오류 메시지가 나타납니다. 매개 변수가 없는 명시적 기본 생성자를 생성하려면 스마트 태그를 클릭한 다음 **생성자 스텁 생성**을 클릭합니다.  
+3.  After you generate the new constructor, a wavy underline appears under the call to the default constructor in `DefaultAutomobileIsInitializedCorrectly`. The error message states that the `Automobile` class has no constructor that takes zero arguments. To generate an explicit default constructor that does not have parameters, click the smart tag and then click **Generate constructor stub**.  
   
-### <a name="to-generate-a-stub-for-a-method"></a>메서드에 대한 스텁을 생성하려면  
+### <a name="to-generate-a-stub-for-a-method"></a>To generate a stub for a method  
   
-1.  `Automobile` 및 `Model` 속성이 기본값이 아닌 다른 값으로 설정된 경우 사양에 따라 새 `TopSpeed` 을 실행 중 상태로 전환할 수 있다고 가정합니다. `AutomobileWithModelNameCanStart` 메서드에 다음 줄을 추가합니다.  
+1.  Assume that the specification states that a new `Automobile` can be put into a Running state if its `Model` and `TopSpeed` properties are set to something other than the default values. Add the following lines to the `AutomobileWithModelNameCanStart` method.  
   
-     [!code-cs[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]  [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]  
+     [!code-csharp[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]  [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]  
   
-2.  `myAuto.Start` 메서드 호출에 대한 스마트 태그를 클릭한 다음 **메서드 스텁 생성**을 클릭합니다.  
+2.  Click the smart tag for the `myAuto.Start` method call and then click **Generate method stub**.  
   
-3.  `IsRunning` 속성에 대한 스마트 태그를 클릭한 다음 **속성 스텁 생성**을 클릭합니다. 이제 `Automobile` 클래스에 다음 코드가 포함됩니다.  
+3.  Click the smart tag for the `IsRunning` property and then click **Generate property stub**. The `Automobile` class now contains the following code.  
   
-     [!code-cs[VbTDDWalkthrough#4](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.cs)]  [!code-vb[VbTDDWalkthrough#4](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.vb)]  
+     [!code-csharp[VbTDDWalkthrough#4](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.cs)]  [!code-vb[VbTDDWalkthrough#4](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.vb)]  
   
-### <a name="to-run-the-tests"></a>테스트를 실행하려면  
+### <a name="to-run-the-tests"></a>To run the tests  
   
-1.  **단위 테스트** 메뉴에서 **단위 테스트 실행**을 가리킨 다음 **모든 테스트**를 클릭합니다. 이 명령은 현재 솔루션에 대해 작성된 모든 테스트 프레임워크의 모든 테스트를 실행합니다.  
+1.  On the **Unit Test** menu, point to **Run Unit Tests**, and then click **All Tests**. This command runs all tests in all test frameworks that are written for the current solution.  
   
-     이 경우 두 가지 테스트가 있으며 둘 다 예상대로 실패합니다. `DefaultAutomobileIsInitializedCorrectly` 테스트는 `Assert.IsTrue` 조건이 `False`를 반환하기 때문에 실패합니다. `AutomobileWithModelNameCanStart` 테스트는 `Start` 클래스의 `Automobile` 메서드에서 예외가 발생하기 때문에 실패합니다.  
+     In this case, there are two tests, and they both fail, as expected. The `DefaultAutomobileIsInitializedCorrectly` test fails because the `Assert.IsTrue` condition returns `False`. The `AutomobileWithModelNameCanStart` test fails because the `Start` method in the `Automobile` class throws an exception.  
   
-     다음 그림에는 **테스트 결과** 창이 나와 있습니다.  
+     The **Test Results** window is shown in the following illustration.  
   
-     ![실패한 테스트 결과](../ide/media/testsfailed.png "TestsFailed")  
-테스트 결과 창  
+     ![Test results that failed](../ide/media/testsfailed.png "TestsFailed")  
+Test Results window  
   
-2.  **테스트 결과** 창에서 각 테스트 결과 행을 두 번 클릭하면 각 테스트 실패 위치로 이동할 수 있습니다.  
+2.  In the **Test Results** window, double-click on each test result row to go to the location of each test failure.  
   
-### <a name="to-implement-the-source-code"></a>소스 코드를 구현하려면  
+### <a name="to-implement-the-source-code"></a>To implement the source code  
   
-1.  `Model`, `TopSpeed` 및 `IsRunning` 속성이 모두 올바른 기본값인 `"Not specified"`, `-1`및 `True` (`true`)로 초기화되도록 기본 생성자에 다음 코드를 추가합니다.  
+1.  Add the following code to the default constructor so that the `Model`, `TopSpeed` and `IsRunning` properties are all initialized to their correct default values of `"Not specified"`, `-1`, and `True` (`true`).  
   
-     [!code-cs[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]  [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]  
+     [!code-csharp[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]  [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]  
   
-2.  `Start` 메서드를 호출할 경우 `IsRunning` 또는 `Model` 속성이 기본값 이외의 값으로 설정된 경우에만 `TopSpeed` 플래그를 true로 설정해야 합니다. 메서드 본문에서 `NotImplementedException` 을 제거하고 다음 코드를 추가합니다.  
+2.  When the `Start` method is called, it should set the `IsRunning` flag to true only if the `Model` or `TopSpeed` properties are set to something other than their default value. Remove the `NotImplementedException` from the method body and add the following code.  
   
-     [!code-cs[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]  [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]  
+     [!code-csharp[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]  [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]  
   
-### <a name="to-run-the-tests-again"></a>테스트를 다시 실행하려면  
+### <a name="to-run-the-tests-again"></a>To run the tests again  
   
-1.  **테스트** 메뉴에서 **실행**을 가리킨 다음 **솔루션의 모든 테스트**를 클릭합니다. 이번에는 테스트가 성공합니다. 다음 그림에는 **테스트 결과** 창이 나와 있습니다.  
+1.  On the **Test** menu, point to **Run**, and then click **All Tests in Solution**. This time the tests pass. The **Test Results** window is shown in the following illustration.  
   
-     ![통과한 테스트 결과](../ide/media/testspassed.png "TestsPassed")  
-테스트 결과 창  
+     ![Test results that passed](../ide/media/testspassed.png "TestsPassed")  
+Test Results window  
   
-## <a name="see-also"></a>참고 항목  
- [관례에서 생성](../ide/visual-csharp-intellisense.md#generate-from-usage)   
- [코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)   
- [IntelliSense 사용](../ide/using-intellisense.md)   
- [코드 단위 테스트](../test/unit-test-your-code.md)
+## <a name="see-also"></a>See Also  
+ [Generate From Usage](../ide/visual-csharp-intellisense.md#generate-from-usage)   
+ [Writing Code](../ide/writing-code-in-the-code-and-text-editor.md)   
+ [Using IntelliSense](../ide/using-intellisense.md)   
+ [Unit Test Your Code](../test/unit-test-your-code.md)

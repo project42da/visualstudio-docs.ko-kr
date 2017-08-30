@@ -1,96 +1,109 @@
 ---
-title: "연습: 텍스트 뷰를 사용자 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "편집기 [Visual Studio SDK] 새-보기를 사용자 지정"
+title: 'Walkthrough: Customizing the Text View | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- editors [Visual Studio SDK], new - customizing the view
 ms.assetid: 32d32ac8-22ff-4de7-af69-bd46ec4ad9bf
 caps.latest.revision: 22
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# 연습: 텍스트 뷰를 사용자 지정
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 3e70313d662d54b48823500a054b5aaa2a9401ae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-해당 편집기 형식 맵에서 다음과 같은 속성을 수정 하 여 텍스트 뷰를 사용자 지정할 수 있습니다.  
+---
+# <a name="walkthrough-customizing-the-text-view"></a>Walkthrough: Customizing the Text View
+You can customize a text view by modifying any of the following properties in its editor-format map:  
   
--   표시기 여백  
+-   Indicator margin  
   
--   삽입 캐럿  
+-   Insertion caret  
   
--   캐럿 덮어쓰기  
+-   Overwrite caret  
   
--   선택 된 텍스트  
+-   Selected text  
   
--   선택한 비활성 텍스트 \(즉, 선택한 텍스트에 포커스가 있는\)  
+-   Inactive selected text (that is, selected text that has lost focus)  
   
--   공백 표시  
+-   Visible whitespace  
   
-## 사전 요구 사항  
- 이 연습을 수행 하려면 Visual Studio SDK를 설치 해야 합니다. 자세한 내용은 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)을 참조하십시오.  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## MEF 프로젝트 만들기  
+## <a name="creating-a-mef-project"></a>Creating a MEF Project  
   
-1.  C\# VSIX 프로젝트를 만듭니다. \(에 **새 프로젝트** 대화 상자에서 **Visual C\# \/ 확장성**, 다음 **VSIX 프로젝트**.\) 솔루션의 이름을 `ViewPropertyTest`합니다.  
+1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `ViewPropertyTest`.  
   
-2.  편집기 분류자 항목 템플릿을 프로젝트에 추가 합니다. 자세한 내용은 [편집기 항목 템플릿을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-an-editor-item-template.md)을 참조하세요.  
+2.  Add an Editor Classifier item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-3.  기존 클래스 파일을 삭제 합니다.  
+3.  Delete the existing class files.  
   
-## 콘텐츠 형식 정의  
+## <a name="defining-the-content-type"></a>Defining the Content Type  
   
-1.  클래스 파일을 추가 하 고 이름을 `ViewPropertyModifier`합니다.  
+1.  Add a class file and name it `ViewPropertyModifier`.  
   
-2.  다음 코드를 추가 `using` 지시문:  
+2.  Add the following `using` directives:  
   
-     [!code-cs[VSSDKViewPropertyTest#1](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_1.cs)]
-     [!code-vb[VSSDKViewPropertyTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_1.vb)]  
+     [!code-csharp[VSSDKViewPropertyTest#1](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_1.cs)]  [!code-vb[VSSDKViewPropertyTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_1.vb)]  
   
-3.  이라는 클래스를 선언 `TestViewCreationListener` 에서 상속 되는 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>합니다. 이 클래스는 다음과 같은 특성을 내보냅니다.  
+3.  Declare a class named `TestViewCreationListener` that inherits from <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>. Export this class with the following attributes:  
   
-    -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> 이 수신기가 적용 되는 콘텐츠의 형식을 지정 합니다.  
+    -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> to specify the type of content to which this listener applies.  
   
-    -   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> 이 수신기의 역할을 지정 합니다.  
+    -   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> to specify the role of this listener.  
   
-     [!code-cs[VSSDKViewPropertyTest#2](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs)]
-     [!code-vb[VSSDKViewPropertyTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]  
+     [!code-csharp[VSSDKViewPropertyTest#2](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs)] [!code-vb[VSSDKViewPropertyTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]  
   
-4.  이 클래스에서 가져오는 <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>합니다.  
+4.  In this class, import the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>.  
   
-     [!code-cs[VSSDKViewPropertyTest#3](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_3.cs)]
-     [!code-vb[VSSDKViewPropertyTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_3.vb)]  
+     [!code-csharp[VSSDKViewPropertyTest#3](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_3.cs)]  [!code-vb[VSSDKViewPropertyTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_3.vb)]  
   
-## 보기 속성 변경  
+## <a name="changing-the-view-properties"></a>Changing the View Properties  
   
-1.  구현 된 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> 메서드 보기 속성 보기를 열 때 변경 됩니다. 변경 하 고을 찾으려면 먼저는 <xref:System.Windows.ResourceDictionary> 찾으려는 보기의 측면에 해당 하는 합니다. 리소스 사전에서 해당 속성을 변경 하 고 속성을 설정 합니다. 에 대 한 호출을 일괄 처리는 <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A> 메서드를 호출 하 여는 <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A> 메서드는 속성을 설정 하기 전에 다음의 <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A> 속성을 설정한 후 합니다.  
+1.  Implement the <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> method so that the view properties are changed when the view is opened. To make the change, first find the <xref:System.Windows.ResourceDictionary> that corresponds to the aspect of the view you want to find. Then change the appropriate property in the resource dictionary and set the properties. Batch the calls to the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A> method by calling the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A> method before you set the properties and then the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A> after you set the properties.  
   
-     [!code-cs[VSSDKViewPropertyTest#4](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_4.cs)]
-     [!code-vb[VSSDKViewPropertyTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_4.vb)]  
+     [!code-csharp[VSSDKViewPropertyTest#4](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_4.cs)]  [!code-vb[VSSDKViewPropertyTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_4.vb)]  
   
-## 빌드 및 코드를 테스트 합니다.  
+## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
   
-1.  솔루션을 빌드합니다.  
+1.  Build the solution.  
   
-     디버거에서이 프로젝트를 실행 하면 Visual Studio의 두 번째 인스턴스가 인스턴스화됩니다.  
+     When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
   
-2.  텍스트 파일을 만들고 일부 텍스트를 입력 합니다.  
+2.  Create a text file and type some text.  
   
-    -   삽입 캐럿 자홍 고 덮어쓰기 캐럿 옥색 이어야 합니다.  
+    -   The insertion caret should be magenta and the overwrite caret should be turquoise.  
   
-    -   표시기 여백 \(텍스트 뷰 왼쪽\)에 빛 해야 녹색입니다.  
+    -   The indicator margin (to the left of the text view) should be light green.  
   
-3.  방금 입력 한 텍스트를 선택 합니다. 선택한 텍스트의 색 빛 있어야 분홍색 합니다.  
+3.  Select the text you just typed. The color of the selected text should be light pink.  
   
-4.  텍스트를 선택한 상태에서 텍스트 창 외부 아무 곳 이나 클릭 합니다. 선택한 텍스트의 색을 진한 분홍색 있어야 합니다.  
+4.  While the text is selected, click anywhere outside the text window. The color of the selected text should be dark pink.  
   
-5.  공백 표시를 설정 합니다. \(에 **편집** 메뉴에서 **고급** 클릭 하 고 **공백 보기**\). 일부 탭 텍스트에 입력 합니다. 빨간색 화살표는 탭을 나타내는 표시 되어야 합니다.  
+5.  Turn on visible whitespace. (On the **Edit** menu, point to **Advanced** and then click **View White Space**). Type some tabs in the text. Red arrows that represent the tabs should be displayed.  
   
-## 참고 항목  
- [언어 서비스 및 편집기 확장 지점](../extensibility/language-service-and-editor-extension-points.md)
+## <a name="see-also"></a>See Also  
+ [Language Service and Editor Extension Points](../extensibility/language-service-and-editor-extension-points.md)

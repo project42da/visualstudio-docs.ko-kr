@@ -1,126 +1,130 @@
 ---
-title: "연습: 기능 이벤트 수신자 추가"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio에서 SharePoint 개발, 고급 패키징 도구"
-  - "Visual Studio에서 SharePoint 개발, 이벤트 수신자"
-  - "Visual Studio에서 SharePoint 개발, 기능 이벤트 수신자"
+title: 'Walkthrough: Add Feature Event Receivers | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, advanced packaging tools
+- SharePoint development in Visual Studio, event receivers
+- SharePoint development in Visual Studio, feature event receivers
 ms.assetid: fbd44c33-2c27-4d57-abca-21cddc16fbc3
 caps.latest.revision: 24
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 23
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 5509743aa0d815bb2b3a7eece6c5822ac189ed14
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 기능 이벤트 수신자 추가
-  기능 이벤트 수신자는 다음과 같은 기능 관련 이벤트 중 하나가 SharePoint에서 발생할 때 실행되는 메서드입니다.  
+# <a name="walkthrough-add-feature-event-receivers"></a>Walkthrough: Add Feature Event Receivers
+  Feature event receivers are methods that execute when one of the following feature-related events occurs in SharePoint:  
   
--   기능이 설치된 경우  
+-   A feature is installed.  
   
--   기능이 활성화된 경우  
+-   A feature is activated.  
   
--   기능이 비활성화된 경우  
+-   A feature is deactivated.  
   
--   기능이 제거된 경우  
+-   A feature is removed.  
   
- 이 연습에서는 SharePoint 프로젝트의 기능에 이벤트 수신자를 추가하는 방법을 보여 줍니다.  다음과 같은 작업을 보여 줍니다.  
+ This walkthrough demonstrates how to add an event receiver to a feature in a SharePoint project. It demonstrates the following tasks:  
   
--   기능 이벤트 수신자가 포함된 빈 프로젝트 만들기  
+-   Creating an empty project with a feature event receiver.  
   
--   **FeatureDeactivating** 메서드 처리  
+-   Handling the **FeatureDeactivating** method.  
   
--   SharePoint 프로젝트 개체 모델을 사용하여 알림 목록에 알림 추가  
+-   Using the SharePoint project object model to add an announcement to the Announcements list.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   지원되는 Microsoft Windows 및 SharePoint 버전.  자세한 내용은 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)을 참조하십시오.  
+-   Supported editions of Microsoft Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio  
+-   Visual Studio.  
   
-## 기능 이벤트 수신자 프로젝트 만들기  
- 먼저 기능 이벤트 수신자가 포함될 프로젝트를 만듭니다.  
+## <a name="creating-a-feature-event-receiver-project"></a>Creating a Feature Event Receiver Project  
+ First, create a project to contain the feature event receiver.  
   
-#### 기능 이벤트 수신자가 포함된 프로젝트를 만들려면  
+#### <a name="to-create-a-project-with-a-feature-event-receiver"></a>To create a project with a feature event receiver  
   
-1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다.  
+1.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-2.  **Visual C\#** 또는 **Visual Basic** 아래의 **SharePoint** 노드를 확장한 다음 **2010** 을 선택합니다.  
+2.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-3.  **템플릿** 창에서 **SharePoint 2010 프로젝트** 템플릿을 선택합니다.  
+3.  In the **Templates** pane, choose the **SharePoint 2010 Project** template.  
   
-     기능 이벤트 수신자에는 프로젝트 템플릿이 없으므로 이 프로젝트 형식이 사용됩니다.  
+     You use this project type for feature event receivers because they have no project template.  
   
-4.  **이름** 상자에 FeatureEvtTest를 입력한 다음 **확인** 버튼을 선택하여 **SharePoint 사용자 지정 마법사**를 표시합니다.  
+4.  In the **Name** box, enter **FeatureEvtTest**, and then choose the **OK** button to display the **SharePoint Customization Wizard**.  
   
-5.  **디버깅에 사용할 사이트 및 보안 수준 지정** 페이지에서 새 사용자 지정 필드 항목을 추가할 SharePoint 서버 사이트의 URL을 입력하거나 기본 위치\(http:\/\/\<*system name*\>\/\)를 사용합니다.  
+5.  On the **Specify the site and security level for debugging** page, enter the URL for the SharePoint server site to which you want to add the new custom field item, or use the default location (http://\<*system name*>/).  
   
-6.  **이 SharePoint 솔루션의 신뢰 수준을 선택하십시오.** 섹션에서 **팜 솔루션으로 배포** 옵션 단추를 선택합니다.  
+6.  In the **What is the trust level for this SharePoint solution?** section, choose the **Deploy as a farm solution** option button.  
   
-     샌드박스가 적용된 솔루션과 팜 솔루션 비교에 대한 자세한 내용은 [샌드박스가 적용된 솔루션 고려 사항](../sharepoint/sandboxed-solution-considerations.md)을 참조하십시오.  
+     For more information about sandboxed solutions versus farm solutions, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  **완료** 버튼을 선택한 다음 **기능** 노드 밑에 Feature1 라는 기능이 나타나는지 확인합니다.  
+7.  Choose the **Finish** button, and then notice that a feature that's named Feature1 appears under the **Features** node.  
   
-## 기능에 이벤트 수신자 추가  
- 다음으로, 기능에 이벤트 수신자를 추가하고 기능이 비활성화될 때 실행되는 코드를 추가합니다.  
+## <a name="adding-an-event-receiver-to-the-feature"></a>Adding an Event Receiver to the Feature  
+ Next, add an event receiver to the feature and add code that executes when the feature is deactivated.  
   
-#### 기능에 이벤트 수신자를 추가하려면  
+#### <a name="to-add-an-event-receiver-to-the-feature"></a>To add an event receiver to the feature  
   
-1.  기능 노드의 바로 가기 메뉴를 열고 **기능 추가** 를 선택하여 기능을 생성합니다.  
+1.  Open the shortcut menu for the Features node, and then choose **Add Feature** to create a feature.  
   
-2.  **기능** 노드 아래의 **Feature1** 에 대한 바로 가기 메뉴를 연 다음, **이벤트 수신자 추가** 를 선택하여 기능에 이벤트 수신자를 추가합니다.  
+2.  Under the **Features** node, open the shortcut menu for **Feature1**, and then choose **Add Event Receiver** to add an event receiver to the feature.  
   
-     Feature1 아래에 코드 파일이 추가됩니다.  이 경우 프로젝트의 개발 언어에 따라 파일 이름이 Feature1.EventReceiver.cs 또는 Feature1.EventReceiver.vb로 지정됩니다.  
+     This adds a code file under Feature1. In this case, it is named either Feature1.EventReceiver.cs or Feature1.EventReceiver.vb, depending on your project's development language.  
   
-3.  프로젝트가 [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)]로 작성 된 경우, \(아직 없을 경우\) 이벤트 수신자의 맨 앞에 다음 코드를 추가 합니다.  
+3.  If your project is written in [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)], add the following code at the top of the event receiver if it is not already there:  
   
-     [!code-csharp[SP_FeatureEvt#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_featureevt/cs/features/feature1/feature1.eventreceiver.cs#1)]  
+     [!code-csharp[SP_FeatureEvt#1](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#1)]  
   
-4.  이벤트 수신자 클래스에는 이벤트로 작동하는 주석 처리된 여러개의 메서드가 포함되어 있습니다.  **FeatureDeactivating** 메서드를 다음 코드로 바꿉니다.  
+4.  The event receiver class contains several commented-out methods that act as events. Replace the **FeatureDeactivating** method with the following:  
   
-     [!code-csharp[SP_FeatureEvt#2](../snippets/csharp/VS_Snippets_OfficeSP/sp_featureevt/cs/features/feature1/feature1.eventreceiver.cs#2)]
-     [!code-vb[SP_FeatureEvt#2](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_featureevt/vb/features/feature1/feature1.eventreceiver.vb#2)]  
+     [!code-vb[SP_FeatureEvt#2](../sharepoint/codesnippet/VisualBasic/featureevt2vb/features/feature1/feature1.eventreceiver.vb#2)]  [!code-csharp[SP_FeatureEvt#2](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#2)]  
   
-## 기능 이벤트 수신자 테스트  
- 다음으로, **FeatureDeactivating** 메서드가 SharePoint 알림 목록에 알림을 출력하는지 여부를 테스트하는 기능을 비활성화합니다.  
+## <a name="testing-the-feature-event-receiver"></a>Testing the Feature Event Receiver  
+ Next, deactivate the feature to test whether the **FeatureDeactivating** method outputs an announcement to the SharePoint Announcements list.  
   
-#### 기능 이벤트 수신자를 테스트하려면  
+#### <a name="to-test-the-feature-event-receiver"></a>To test the feature event receiver  
   
-1.  프로젝트의 **활성 배포 구성** 속성의 값을 **활성화 없음**으로 설정합니다.  
+1.  Set the value of the project's **Active Deployment Configuration** property to **No Activation**.  
   
-     이 속성을 설정하면 기능이 SharePoint에서 활성화되지 않으며 기능 이벤트 수신자를 디버깅할 수 있습니다.  자세한 내용은 [SharePoint 솔루션 디버깅](../sharepoint/debugging-sharepoint-solutions.md)을 참조하십시오.  
+     Setting this property prevents the feature from activating in SharePoint and lets you debug feature event receivers. For more information, see [Debugging SharePoint Solutions](../sharepoint/debugging-sharepoint-solutions.md).  
   
-2.  **F5** 키를 눌러 프로젝트를 실행하고 SharePoint에 배포합니다.  
+2.  Choose the **F5** key to run the project and deploy it to SharePoint.  
   
-3.  SharePoint 웹 페이지의 맨 위에서 **사이트 작업** 메뉴를 선택한 다음 **사이트 설정**을 선택합니다.  
+3.  At the top of the SharePoint Web page, open the **Site Actions** menu, and then choose **Site Settings**.  
   
-4.  **사이트 설정** 페이지의 **사이트 작업** 섹션에서 **사이트 기능 관리** 링크를 선택합니다.  
+4.  Under the **Site Actions** section of the **Site Settings** page, choose the **Manage site features** link.  
   
-5.  **사이트 기능** 페이지에서 **FeatureEvtTest Feature1** 기능 옆에 있는 **활성화** 단추를 선택합니다.  
+5.  On the **Features** page, choose the **Activate** button next to the **FeatureEvtTest Feature1** Feature.  
   
-6.  **기능** 페이지에서 **FeatureEvtTest Feature1** 기능 옆에 있는 **비활성화** 버튼을 선택한 다음, **이 기능을 비활성화** 확인 링크를 선택하여 기능을 비활성화 합니다.  
+6.  On the **Features** page, choose the **Deactivate** button next to the **FeatureEvtTest Feature1** Feature, and then choose the **Deactivate this feature** confirmation link to deactivate the Feature.  
   
-7.  **홈** 버튼을 선택합니다.  
+7.  Choose the **Home** button.  
   
-     기능이 비활성화된 후 **알림** 목록에 알림이 표시되는 것을 확인합니다.  
+     Notice that an announcement appears in the **Announcements** list after the feature is deactivated.  
   
-## 참고 항목  
- [방법: 이벤트 수신자 만들기](../sharepoint/how-to-create-an-event-receiver.md)   
+## <a name="see-also"></a>See Also  
+ [How to: Create an Event Receiver](../sharepoint/how-to-create-an-event-receiver.md)   
  [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
   
   

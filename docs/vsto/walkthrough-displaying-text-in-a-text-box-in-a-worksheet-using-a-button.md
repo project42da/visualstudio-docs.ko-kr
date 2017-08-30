@@ -1,120 +1,124 @@
 ---
-title: "연습: 워크시트에서 단추를 사용하여 텍스트 상자에 텍스트 표시"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "텍스트[Visual Studio에서 Office 개발], 워크시트 표시"
-  - "텍스트[Visual Studio에서 Office 개발], 텍스트 상자"
-  - "텍스트 상자, 워크시트에 텍스트 표시"
-  - "워크시트, 텍스트 표시"
+title: 'Walkthrough: Displaying Text in a Text Box in a Worksheet Using a Button | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- text [Office development in Visual Studio], displaying worksheets
+- worksheets, displaying text
+- text boxes, displaying text in worksheets
+- text [Office development in Visual Studio], text boxes
 ms.assetid: 59b73159-aab7-4f61-9ace-1723c18d78d6
 caps.latest.revision: 56
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 55
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 18f5bccd1e9ee54ac759e8815ed71c87e4a06eb7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 워크시트에서 단추를 사용하여 텍스트 상자에 텍스트 표시
-  이 연습에서는 Visual Studio의 Office 개발 도구를 사용하여 Excel 프로젝트를 만드는 방법과 Microsoft Office Excel 워크시트에서 단추와 텍스트 상자를 사용하는 기본적인 방법을 보여 줍니다.  결과를 완성된 샘플로 보려면 [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)의 Excel 컨트롤 샘플을 참조하십시오.  
+# <a name="walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button"></a>Walkthrough: Displaying Text in a Text Box in a Worksheet Using a Button
+  This walkthrough shows the basics of using buttons and text boxes on Microsoft Office Excel worksheets, and how to create Excel projects using Office development tools in Visual Studio. To see the result as a completed sample, see the Excel Controls Sample at [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md).  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- 이 연습을 통해 다음과 같은 작업 방법을 배웁니다.  
+ During this walkthrough, you will learn how to:  
   
--   워크시트에 컨트롤 추가  
+-   Add controls to a worksheet.  
   
--   단추를 클릭할 때 텍스트 상자 채우기  
+-   Populate a text box when a button is clicked.  
   
--   프로젝트 테스트  
+-   Test your project.  
   
 > [!NOTE]  
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다.  설치한 Visual Studio 버전과 사용하는 설정에 따라 이러한 요소가 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] 또는 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
-## 프로젝트 만들기  
- 이 단계에서는 Visual Studio를 사용하여 Excel 통합 문서 프로젝트를 만듭니다.  
+## <a name="creating-the-project"></a>Creating the Project  
+ In this step, you will create an Excel Workbook project using Visual Studio.  
   
-#### 새 프로젝트를 만들려면  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  My Excel Button이라는 Excel 통합 문서 프로젝트를 만듭니다.  **새 문서 만들기**가 선택되어 있는지 확인합니다.  자세한 내용은 [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하십시오.  
+1.  Create an Excel Workbook project with the name **My Excel Button**. Make sure that **Create a new document** is selected. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Visual Studio의 디자이너에 새 Excel 통합 문서가 열리고 **My Excel Button** 프로젝트가 **솔루션 탐색기**에 추가됩니다.  
+     Visual Studio opens the new Excel workbook in the designer and adds the **My Excel Button** project to **Solution Explorer**.  
   
-## 워크시트에 컨트롤 추가  
- 이 연습에서는 첫 번째 워크시트에 단추와 텍스트 상자가 있어야 합니다.  
+## <a name="adding-controls-to-the-worksheet"></a>Adding Controls to the Worksheet  
+ For this walkthrough, you will need a button and a text box on the first worksheet.  
   
-#### 단추 및 텍스트 상자를 추가하려면  
+#### <a name="to-add-a-button-and-a-text-box"></a>To add a button and a text box  
   
-1.  확인은  **My Excel Button.xlsx** 통합 문서가 Visual Studio 디자이너에 열려 있는와 `Sheet1` 표시 합니다.  
+1.  Verify that the **My Excel Button.xlsx** workbook is open in the Visual Studio designer, with `Sheet1` displayed.  
   
-2.  도구 상자의 **공용 컨트롤** 탭에서 <xref:Microsoft.Office.Tools.Excel.Controls.TextBox>를 `Sheet1`에 끌어 놓습니다.  
+2.  From the **Common Controls** tab of the Toolbox, drag a <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> to `Sheet1`.  
   
-3.  **보기** 메뉴에서 **속성 창**을 선택합니다.  
+3.  From the **View** menu, select **Properties Window**.  
   
-4.  **속성** 창 드롭다운 상자에 **TextBox1**이 표시되어 있는지 확인하고 텍스트 상자의 **Name** 속성을 **displayText**로 변경합니다.  
+4.  Be sure that **TextBox1** is visible in the **Properties** window drop-down box and change the **Name** property of the text box to **displayText**.  
   
-5.  **Button** 컨트롤을 `Sheet1`에 끌어 놓고 다음 속성을 변경합니다.  
+5.  Drag a **Button** control onto `Sheet1` and change the following properties:  
   
-    |속성|값|  
-    |--------|-------|  
-    |**이름**|**insertText**|  
-    |**텍스트**|텍스트 삽입|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**insertText**|  
+    |**Text**|**Insert Text**|  
   
- 이제 단추를 클릭할 때 실행할 코드를 작성합니다.  
+ Now write the code to run when the button is clicked.  
   
-## 단추를 클릭할 때 텍스트 상자 채우기  
- 사용자가 단추를 클릭할 때마다  **Hello World\!** 텍스트 상자에 추가 됩니다.  
+## <a name="populating-the-text-box-when-the-button-is-clicked"></a>Populating the Text Box when the Button is Clicked  
+ Each time the user clicks the button, **Hello World!** is appended to the text box.  
   
-#### 단추를 클릭할 때 텍스트 상자에 내용을 표시하려면  
+#### <a name="to-write-to-the-text-box-when-the-button-is-clicked"></a>To write to the text box when the button is clicked  
   
-1.  **솔루션 탐색기**에서 마우스 오른쪽 단추로 **Sheet1**을 클릭한 다음 바로 가기 메뉴에서 **코드 보기**를 클릭합니다.  
+1.  In **Solution Explorer**, right-click **Sheet1**, and then click **View Code** on the shortcut menu.  
   
-2.  단추의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 다음 코드를 추가합니다.  
+2.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the button:  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#11](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#11)]
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#11](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/VB/Sheet1.vb#11)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#11](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#11)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#11)]  
   
-3.  C\#의 경우 아래와 같이 <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> 이벤트에 이벤트 처리기를 추가해야 합니다.  이벤트 처리기를 만드는 방법에 대한 자세한 내용은 [방법: Office 프로젝트에서 이벤트 처리기 만들기](../vsto/how-to-create-event-handlers-in-office-projects.md)를 참조하십시오.  
+3.  In C#, you must add an event handler to the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event as shown below. For information on creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#12](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#12)]  
+     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#12](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#12)]  
   
-## 응용 프로그램 테스트  
- 이제 통합 문서 있는지를 테스트할 수 있습니다 메시지  **Hello World\!** 단추를 클릭 하면 텍스트 상자에 나타납니다.  
+## <a name="testing-the-application"></a>Testing the Application  
+ You can now test your workbook to make sure that the message **Hello World!** appears in the text box when you click the button.  
   
-#### 통합 문서를 테스트하려면  
+#### <a name="to-test-your-workbook"></a>To test your workbook  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  Press F5 to run your project.  
   
-2.  단추를 클릭합니다.  
+2.  Click the button.  
   
-3.  확인  **Hello World\!** 텍스트 상자에 나타납니다.  
+3.  Confirm that **Hello World!** appears in the text box.  
   
-## 다음 단계  
- 이 연습에서는 Excel 워크시트에서 단추와 텍스트 상자를 사용하는 기본적인 방법을 보여 줍니다.  다음에 수행할 수 있는 작업은 다음과 같습니다.  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough shows the basics of using buttons and text boxes on Excel worksheets. Here are some tasks that might come next:  
   
--   프로젝트를 배포합니다.  자세한 내용은 [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)을 참조하십시오.  
+-   Deploying the project. For more information, see [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
   
--   확인란을 사용하여 서식을 변경합니다.  자세한 내용은 [연습: CheckBox 컨트롤을 사용하여 워크시트 서식 변경](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)을 참조하십시오.  
+-   Using check boxes to change formatting. For more information, see [Walkthrough: Changing Worksheet Formatting Using CheckBox Controls](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md).  
   
-## 참고 항목  
- [방법: Office 문서에 Windows Forms 컨트롤 추가](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
- [Excel을 사용한 연습](../vsto/walkthroughs-using-excel.md)   
- [Office 문서에서 Windows Forms 컨트롤에 대한 제한 사항](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
+## <a name="see-also"></a>See Also  
+ [How to: Add Windows Forms Controls to Office Documents](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
+ [Walkthroughs Using Excel](../vsto/walkthroughs-using-excel.md)   
+ [Limitations of Windows Forms Controls on Office Documents](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
   
   

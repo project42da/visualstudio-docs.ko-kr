@@ -1,46 +1,63 @@
 ---
-title: "CA2133: 대리인은 투명도가 일관된 메서드에 바인딩해야 합니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2133"
+title: 'CA2133: Delegates must bind to methods with consistent transparency | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2133
 ms.assetid: a09672e2-63cb-4abd-9e8f-dff515e101ce
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 11
----
-# CA2133: 대리인은 투명도가 일관된 메서드에 바인딩해야 합니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 473dbf2d6373c59c693a91db804897bfe73b5300
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133: Delegates must bind to methods with consistent transparency
 |||  
 |-|-|  
 |TypeName|DelegatesMustBindWithConsistentTransparency|  
 |CheckId|CA2133|  
-|범주|Microsoft.Security|  
-|변경 수준|주요 변경|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
 > [!NOTE]
->  이 경고는 CoreCLR\(Silverlight 웹 응용 프로그램에 특정한 CLR 버전\)을 실행하는 코드에만 적용됩니다.  
+>  This warning is only applied to code that is running the CoreCLR (the version of the CLR that is specific to Silverlight Web applications).  
   
-## 원인  
- 이 경고는 <xref:System.Security.SecurityCriticalAttribute>로 표시된 대리자를 투명하거나 <xref:System.Security.SecuritySafeCriticalAttribute>로 표시된 메서드에 바인딩하는 메서드에서 실행됩니다.  또한 투명하거나 안전에 중요한 대리자를 중요한 메서드에 바인딩하는 메서드에서도 이 경고가 발생합니다.  
+## <a name="cause"></a>Cause  
+ This warning fires on a method that binds a delegate that is marked with the <xref:System.Security.SecurityCriticalAttribute> to a method that is transparent or that is marked with the <xref:System.Security.SecuritySafeCriticalAttribute>. The warning also fires a method that binds a delegate that is transparent or safe-critical to a critical method.  
   
-## 규칙 설명  
- 바인딩되는 대리자 형식 및 메서드는 투명도가 일관성이 있어야 합니다.  투명하고 보안에 중요한 대리자는 투명하거나 보안에 중요한 다른 메서드에만 바인딩할 수 있습니다.  마찬가지로 중요한 대리자는 중요한 메서드에만 바인딩할 수 있습니다.  이러한 바인딩 규칙은 대리자를 통해 메서드를 호출할 수 있는 코드만 같은 메서드를 직접 호출할 수 있는지 확인합니다.  예를 들어, 바인딩 규칙은 투명 코드가 투명한 대리자를 통해 직접 중요한 코드를 호출하는 것을 방지합니다.  
+## <a name="rule-description"></a>Rule Description  
+ Delegate types and the methods that they bind to must have consistent transparency. Transparent and safe-critical delegates may only bind to other transparent or safe-critical methods. Similarly, critical delegates may only bind to critical methods. These binding rules ensure that the only code that can invoke a method via a delegate could have also invoked the same method directly. For example, binding rules prevent transparent code from calling critical code directly via a transparent delegate.  
   
-## 위반 문제를 해결하는 방법  
- 이 경고 위반 문제를 해결하려면 둘의 투명도가 동등해지도록 대리자 또는 메서드의 투명도를 변경하십시오.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this warning, change the transparency of the delegate or of the method that it binds so that the transparency of the two are equivalent.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-### 코드  
- [!code-cs[FxCop.Security.CA2133.DelegatesMustBindWithConsistentTransparency#1](../code-quality/codesnippet/CSharp/ca2133-delegates-must-bind-to-methods-with-consistent-transparency_1.cs)]
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Security.CA2133.DelegatesMustBindWithConsistentTransparency#1](../code-quality/codesnippet/CSharp/ca2133-delegates-must-bind-to-methods-with-consistent-transparency_1.cs)]

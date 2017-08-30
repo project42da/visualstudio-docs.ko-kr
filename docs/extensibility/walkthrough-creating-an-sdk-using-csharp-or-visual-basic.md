@@ -1,5 +1,5 @@
 ---
-title: "연습: C# 또는 Visual Basic을 사용 하 여 SDK 만들기 | Microsoft 문서"
+title: 'Walkthrough: Creating an SDK using C# or Visual Basic | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,79 +26,79 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c43f3022ba53e67ff510ed63aa419c9f23964a58
-ms.openlocfilehash: ce17214ec4bfc49f82ee537d6dee13a471a36ca2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d40de5bedbb0e77aee2a0dbed34f8dc22d3835c9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="walkthrough-creating-an-sdk-using-c-or-visual-basic"></a>연습: C# 또는 Visual Basic을 사용 하 여 SDK 만들기
-이 연습에서는 Visual C#을 사용 하 여 간단한 수학 라이브러리 SDK를 만들고 다음 Visual Studio 확장 (VSIX)으로 SDK 패키지 하는 방법에 알아봅니다. 다음 절차를 완료 합니다.  
+# <a name="walkthrough-creating-an-sdk-using-c-or-visual-basic"></a>Walkthrough: Creating an SDK using C# or Visual Basic
+In this walkthrough, you'll learn how to create a simple Math Library SDK by using Visual C# and then package the SDK as a Visual Studio Extension (VSIX). You'll complete the following procedures:  
   
--   [SimpleMath Windows 런타임 구성 요소를 만들려면](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createClassLibrary)  
+-   [To create the SimpleMath Windows Runtime component](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createClassLibrary)  
   
--   [SimpleMathVSIX 확장 프로젝트를 만들려면](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createVSIX)  
+-   [To create the SimpleMathVSIX extension project](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createVSIX)  
   
--   [클래스 라이브러리를 사용 하는 샘플 응용 프로그램을 만들려면](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createSample)  
+-   [To create a sample app that uses the class library](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createSample)  
   
-## <a name="prerequisites"></a>필수 구성 요소  
- 이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ To follow this walkthrough, you must install the Visual Studio SDK. For more information, see [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
-##  <a name="a-namecreateclasslibrarya-to-create-the-simplemath-windows-runtime-component"></a><a name="createClassLibrary"></a>SimpleMath Windows 런타임 구성 요소를 만들려면  
+##  <a name="createClassLibrary"></a> To create the SimpleMath Windows Runtime component  
   
-1.  메뉴 모음에서 **파일**, **새로**, **새 프로젝트**합니다.  
+1.  On the menu bar, choose **File**, **New**, **New Project**.  
   
-2.  템플릿 목록에서 확장 **Visual C#** 또는 **Visual Basic**, 선택 된 **Windows 스토어** 노드를 선택한 다음는 **Windows 런타임 구성 요소** 서식 파일.  
+2.  In the list of templates, expand **Visual C#** or **Visual Basic**, choose the **Windows Store** node, and then choose the **Windows Runtime Component** template.  
   
-3.  에 **이름** 상자를 지정 **SimpleMath**, 선택한 다음는 **확인** 단추입니다.  
+3.  In the **Name** box, specify **SimpleMath**, and then choose the **OK** button.  
   
-4.  **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **SimpleMath** 프로젝트 노드를 선택한 다음 **속성**합니다.  
+4.  In **Solution Explorer**, open the shortcut menu for the **SimpleMath** project node, and then choose **Properties**.  
   
-5.  이름 바꾸기 **Class1.cs** 를 **Arithmetic.cs** 하 고 다음 코드와 일치 하도록 업데이트 합니다.  
+5.  Rename **Class1.cs** to **Arithmetic.cs** and update it to match the following code:  
   
-     [!code-cs[#3 CreatingAnSDKUsingWinRT](../extensibility/codesnippet/CSharp/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.cs) ] 
-     [!code-vb [CreatingAnSDKUsingWinRT&#3;](../extensibility/codesnippet/VisualBasic/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.vb)]  
+     [!code-csharp[CreatingAnSDKUsingWinRT#3](../extensibility/codesnippet/CSharp/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.cs)]  [!code-vb[CreatingAnSDKUsingWinRT#3](../extensibility/codesnippet/VisualBasic/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.vb)]  
   
-6.  **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **솔루션 'SimpleMath'** 노드를 선택한 다음 **Configuration Manager**합니다.  
+6.  In **Solution Explorer**, open the shortcut menu for the **Solution 'SimpleMath'** node, and then choose **Configuration Manager**.  
   
-     **Configuration Manager** 대화 상자가 열립니다.  
+     The **Configuration Manager** dialog box opens.  
   
-7.  에 **활성 솔루션 구성** 목록에서 선택 **릴리스**합니다.  
+7.  In the **Active solution configuration** list, choose **Release**.  
   
-8.  에 **구성** 열 되어 있는지 확인 **SimpleMath** 행으로 설정 되어 **릴리스**, 선택한 다음는 **닫기** 변경 내용을 적용 하려면 단추입니다.  
+8.  In the **Configuration** column, verify that **SimpleMath** row is set to **Release**, and then choose the **Close** button to accept the change.  
   
     > [!IMPORTANT]
-    >  SimpleMath 구성 요소에 대 한 SDK에는 하나의 구성만 포함 됩니다. 이 구성은 릴리스 빌드에 속해야 합니다. 또는 구성 요소를 사용 하는 앱에 대 한 인증을 전달 하지는[!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]합니다.  
+    >  The SDK for the SimpleMath component includes only one configuration. This configuration must be the release build, or apps that use the component won't pass certification for the[!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)].  
   
-9. **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **SimpleMath** 프로젝트 노드를 선택한 다음 **빌드**합니다.  
+9. In **Solution Explorer**, open the shortcut menu for the **SimpleMath** project node, and then choose **Build**.  
   
-##  <a name="a-namecreatevsixa-to-create-the-simplemathvsix-extension-project"></a><a name="createVSIX"></a>SimpleMathVSIX 확장 프로젝트를 만들려면  
+##  <a name="createVSIX"></a> To create the SimpleMathVSIX extension project  
   
-1.  에 대 한 바로 가기 메뉴는 **솔루션 'SimpleMath'** 노드를 선택 **추가**, **새 프로젝트**합니다.  
+1.  On the shortcut menu for the **Solution 'SimpleMath'** node, choose **Add**, **New Project**.  
   
-2.  템플릿 목록에서 확장 **Visual C#** 또는 **Visual Basic**, 선택 된 **확장성** 노드를 선택한 다음는 **VSIX 프로젝트** 서식 파일.  
+2.  In the list of templates, expand **Visual C#** or **Visual Basic**, choose the **Extensibility** node, and then choose the **VSIX Project** template.  
   
-3.  에 **이름** 상자를 지정 **SimpleMathVSIX**, 선택한 다음는 **확인** 단추입니다.  
+3.  In the **Name** box, specify **SimpleMathVSIX**, and then choose the **OK** button.  
   
-4.  **솔루션 탐색기**, 선택 된 **source.extension.vsixmanifest** 항목입니다.  
+4.  In **Solution Explorer**, choose the **source.extension.vsixmanifest** item.  
   
-5.  메뉴 모음에서 **보기**, **코드**를 차례로 선택합니다.  
+5.  On the menu bar, choose **View**, **Code**.  
   
-6.  기존 XML에 다음 XML을 바꿉니다.  
+6.  Replace the existing XML with the following XML:  
   
-     [!code-xml[CreatingAnSDKUsingWinRT #&1;](../extensibility/codesnippet/XML/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_2.xml)]
+     [!code-xml[CreatingAnSDKUsingWinRT#1](../extensibility/codesnippet/XML/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_2.xml)]
   
-7.  **솔루션 탐색기**, 선택 된 **SimpleMathVSIX** 프로젝트입니다.  
+7.  In **Solution Explorer**, choose the **SimpleMathVSIX** project.  
   
-8.  메뉴 모음에서 **프로젝트**, **새 항목 추가**합니다.  
+8.  On the menu bar, choose **Project**, **Add New Item**.  
   
-9. 목록에서 **공통 항목**, 확장 **데이터**를 선택한 다음 **XML 파일**합니다.  
+9. In the list of **Common Items**, expand **Data**, and then choose **XML File**.  
   
-10. 에 **이름** 상자를 지정 `SDKManifest.xml`, 선택한 다음는 **추가** 단추입니다.  
+10. In the **Name** box, specify `SDKManifest.xml`, and then choose the **Add** button.  
   
-11. **솔루션 탐색기**, 바로 가기 메뉴를 열고 `SDKManifest.xml`, 선택 **속성**, 다음의 값을 변경 하 고는 **Include in VSIX** 속성을 **True**합니다.  
+11. In **Solution Explorer**, open the shortcut menu for `SDKManifest.xml`, choose **Properties**, and then change the value of the **Include in VSIX** property to **True**.  
   
-12. 파일의 내용을 다음 XML로 바꿉니다.  
+12. Replace the contents of the file with the following XML:  
 
     **C#**
     ```xml
@@ -124,74 +124,74 @@ ms.lasthandoff: 02/22/2017
     </FileList>
     ```  
   
-13. **솔루션 탐색기**에 대 한 바로 가기 메뉴를 열고는 **SimpleMathVSIX** 프로젝트 **추가**, 선택한 다음 **새 폴더**합니다.  
+13. In **Solution Explorer**, open the shortcut menu for the **SimpleMathVSIX** project, choose **Add**, and then choose **New Folder**.  
   
-14. 폴더를 이름 `references`합니다.  
+14. Rename the folder to `references`.  
   
-15. 에 대 한 바로 가기 메뉴를 열고는 **참조** 폴더를 선택 **추가**를 선택한 다음 **새 폴더**합니다.  
+15. Open the shortcut menu for the **References** folder, choose **Add**, and then choose **New Folder**.  
   
-16. 하위 폴더 이름 바꾸기 `commonconfiguration`, 하위 폴더를 만들고 하위 폴더의 이름을 `neutral`합니다.  
+16. Rename the subfolder to `commonconfiguration`, create a subfolder within it, and name the subfolder `neutral`.  
   
-17. 이 시간에 첫 번째 폴더의 이름을 바꾼 이전 네 단계를 반복 `redist`합니다.  
+17. Repeat the previous four steps, this time renaming the first folder to `redist`.  
   
-     이제 프로젝트에는 다음 폴더 구조가 들어 있습니다.  
+     The project now contains the following folder structure:  
   
     ```
     references\commonconfiguration\neutral  
     redist\commonconfiguration\neutral  
     ```  
   
-18. **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **SimpleMath** 프로젝트를 선택한 다음 **파일 탐색기에서 폴더 열기**합니다.  
+18. In **Solution Explorer**, open the shortcut menu for the **SimpleMath** project, and then choose **Open Folder in File Explorer**.  
   
-19. **파일 탐색기**bin\Release 폴더로 이동, SimpleMath.winmd 파일에 대 한 바로 가기 메뉴를 열고 다음 선택 **복사**합니다.  
+19. In **File Explorer**, navigate to the bin\Release folder, open the shortcut menu for the SimpleMath.winmd file, and then choose **Copy**.  
   
-20. **솔루션 탐색기**, references\commonconfiguration\neutral 폴더로 파일을 붙여는 **SimpleMathVSIX** 프로젝트입니다.  
+20. In **Solution Explorer**, paste the file into the references\commonconfiguration\neutral folder in the **SimpleMathVSIX** project.  
   
-21. SimpleMath.pri 파일에서 redist\commonconfiguration\neutral 폴더에 붙여 넣는 이전 단계를 반복는 **SimpleMathVSIX** 프로젝트입니다.  
+21. Repeat the previous step, pasting the SimpleMath.pri file into the redist\commonconfiguration\neutral folder in the **SimpleMathVSIX** project.  
   
-22. **솔루션 탐색기**, 선택 **SimpleMath.winmd**합니다.  
+22. In **Solution Explorer**, choose **SimpleMath.winmd**.  
   
-23. 메뉴 모음에서 **보기**, **속성** (키보드: F4 키를 선택).  
+23. On the menu bar, choose **View**, **Properties** (Keyboard: Choose the F4 key).  
   
-24. 에 **속성** 창에서 변경은 **빌드 작업** 속성을 **콘텐츠**, 바꾼 다음는 **Include in VSIX** 속성을 **True**합니다.  
+24. In the **Properties** window, change the **Build Action** property to **Content**, and then change the **Include in VSIX** property to **True**.  
   
-25. **솔루션 탐색기**,이 프로세스를 반복 **SimpleMath.pri**합니다.  
+25. In **Solution Explorer**, repeat this process for **SimpleMath.pri**.  
   
-26. **솔루션 탐색기**, 선택 된 **SimpleMathVSIX** 프로젝트입니다.  
+26. In **Solution Explorer**, choose the **SimpleMathVSIX** project.  
   
-27. 메뉴 모음에서 **빌드**, **빌드 SimpleMathVSIX**합니다.  
+27. On the menu bar, choose **Build**, **Build SimpleMathVSIX**.  
   
-28. **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **SimpleMathVSIX** 프로젝트를 선택한 다음 **파일 탐색기에서 폴더 열기**합니다.  
+28. In **Solution Explorer**, open the shortcut menu for the **SimpleMathVSIX** project, and then choose **Open Folder in File Explorer**.  
   
-29. **파일 탐색기**\bin\Release 폴더를 탐색 하 고 한 다음 SimpleMathVSIX.vsix 설치를 실행 합니다.  
+29. In **File Explorer**, navigate to \bin\Release folder, and then run SimpleMathVSIX.vsix to install it.  
   
-30. 선택 된 **설치** 단추 하 고 설치 완료를 위해 될 때까지 기다린 다음 Visual Studio를 다시 시작 합니다.  
+30. Choose the **Install** button, wait for the installation to finish, and then restart Visual Studio.  
   
-##  <a name="a-namecreatesamplea-to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a>클래스 라이브러리를 사용 하는 샘플 응용 프로그램을 만들려면  
+##  <a name="createSample"></a> To create a sample app that uses the class library  
   
-1.  메뉴 모음에서 **파일**, **새로**, **새 프로젝트**합니다.  
+1.  On the menu bar, choose **File**, **New**, **New Project**.  
   
-2.  템플릿 목록에서 확장 **Visual C#** 또는 **Visual Basic**를 선택한 다음는 **Windows 스토어** 노드.  
+2.  In the list of templates, expand **Visual C#** or **Visual Basic**, and then choose the **Windows Store** node.  
   
-3.  선택은 **비어 있는 앱** 서식 파일을 프로젝트의 이름 **ArithmeticUI**, 선택한 다음는 **확인** 단추입니다.  
+3.  Choose the **Blank App** template, name the project **ArithmeticUI**, and then choose the **OK** button.  
   
-4.  **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **ArithmeticUI** 프로젝트를 선택한 다음 **추가**, **참조**합니다.  
+4.  In **Solution Explorer**, open the shortcut menu for the **ArithmeticUI** project, and then choose **Add**, **Reference**.  
   
-5.  참조 형식의 목록에서 확장 **Windows**를 선택한 다음 **확장**합니다.  
+5.  In the list of reference types, expand **Windows**, and then choose **Extensions**.  
   
-6.  세부 정보 창에서 선택 된 **간단한 수학 SDK** 확장 합니다.  
+6.  In the details pane, choose the **Simple Math SDK** extension.  
   
-     SDK에 대 한 추가 정보가 나타납니다. 선택할 수는 **추가 정보** 이 연습의 앞부분에서 SDKManifest.xml 파일에 지정 된 대로 http://www.msdn.microsoft.com를 열려면 링크를 합니다.  
+     Additional information about your SDK appears. You can choose the **More Information** link to open http://www.msdn.microsoft.com, as you specified in the SDKManifest.xml file earlier in this walkthrough.  
   
-7.  에 **참조 관리자** 대화 상자는 **간단한 수학 SDK** 확인란을 선택한 다음는 **확인** 단추입니다.  
+7.  In the **Reference Manager** dialog box, select the **Simple Math SDK** check box, and then choose the **OK** button.  
   
-8.  메뉴 모음에서 **보기**, **개체 브라우저**합니다.  
+8.  On the menu bar, choose **View**, **Object Browser**.  
   
-9. 에 **찾아보기** 목록에서 선택 **간단한 수학**합니다.  
+9. In the **Browse** list, choose **Simple Math**.  
   
-     이제는 SDK의 기능을 탐색할 수 있습니다.  
+     You can now explore what's in the SDK.  
   
-10. **솔루션 탐색기**MainPage.xaml을 열고 그 내용을 다음 XAML을 바꿉니다.  
+10. In **Solution Explorer**, open MainPage.xaml, and replace its contents with the following XAML:  
 
     **C#**
     ```xml
@@ -243,20 +243,19 @@ ms.lasthandoff: 02/22/2017
     </Page>
     ```
   
-11. MainPage.xaml.cs에서 다음 코드와 일치 하도록 업데이트 합니다.  
+11. Update MainPage.xaml.cs to match the following code:  
   
-     [!code-cs[#2 CreatingAnSDKUsingWinRTDemoApp](../extensibility/codesnippet/CSharp/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_5.cs) ] 
-     [!code-vb [CreatingAnSDKUsingWinRTDemoApp&#2;](../extensibility/codesnippet/VisualBasic/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_5.vb)]  
+     [!code-csharp[CreatingAnSDKUsingWinRTDemoApp#2](../extensibility/codesnippet/CSharp/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_5.cs)]  [!code-vb[CreatingAnSDKUsingWinRTDemoApp#2](../extensibility/codesnippet/VisualBasic/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_5.vb)]  
   
-12. 앱을 실행 하려면 F5 키를 선택 합니다.  
+12. Choose the F5 key to run the app.  
   
-13. 앱에서 모두 두 숫자를 입력 하는 작업을 선택한 다음 선택 된 ** = ** 단추입니다.  
+13. In the app, enter any two numbers, choose an operation, and then choose the **=** button.  
   
-     올바른 결과가 나타납니다.  
+     The correct result appears.  
   
- 성공적으로 만들어졌으며 확장 SDK를 사용 합니다.  
+ You have successfully created and used an Extension SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [연습: c + +를 사용 하 여 SDK 만들기](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
- [연습: JavaScript를 사용 하 여 SDK 만들기](http://msdn.microsoft.com/en-us/6195ff56-4a27-45fc-bd29-4b0451225f4b)   
- [소프트웨어 개발 키트 만들기](../extensibility/creating-a-software-development-kit.md)
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Creating an SDK using C++](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
+ [Walkthrough: Creating an SDK using JavaScript](http://msdn.microsoft.com/en-us/6195ff56-4a27-45fc-bd29-4b0451225f4b)   
+ [Creating a Software Development Kit](../extensibility/creating-a-software-development-kit.md)

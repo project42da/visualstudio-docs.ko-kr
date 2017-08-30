@@ -1,56 +1,72 @@
 ---
-title: "CA2230: 가변 인수로 params를 사용하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UseParamsForVariableArguments"
-  - "CA2230"
-helpviewer_keywords: 
-  - "CA2230"
-  - "UseParamsForVariableArguments"
+title: 'CA2230: Use params for variable arguments | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UseParamsForVariableArguments
+- CA2230
+helpviewer_keywords:
+- CA2230
+- UseParamsForVariableArguments
 ms.assetid: bf98b733-4855-4110-9f16-eba5a9e79421
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2230: 가변 인수로 params를 사용하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 8e7037e7b642aa36bb1a351113e7d09dc1ea2537
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: Use params for variable arguments
 |||  
 |-|-|  
 |TypeName|UseParamsForVariableArguments|  
 |CheckId|CA2230|  
-|범주|Microsoft.Usage|  
-|변경 수준|주요 변경|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Breaking|  
   
-## 원인  
- public 또는 protected 형식에 `VarArgs` 호출 규칙을 사용하는 public 또는 protected 메서드가 들어 있습니다.  
+## <a name="cause"></a>Cause  
+ A public or protected type contains a public or protected method that uses the `VarArgs` calling convention.  
   
-## 규칙 설명  
- `VarArgs` 호출 규칙은 매개 변수 개수가 가변적인 특정 메서드 정의에 사용됩니다.  `VarArgs` 호출 규칙을 사용하는 메서드는 CLS\(공용 언어 사양\) 규격이 아니며 프로그래밍 언어에 따라 액세스하지 못할 수도 있습니다.  
+## <a name="rule-description"></a>Rule Description  
+ The `VarArgs` calling convention is used with certain method definitions that take a variable number of parameters. A method using the `VarArgs` calling convention is not Common Language Specification (CLS) compliant and might not be accessible across programming languages.  
   
- C\#에서는 메서드의 매개 변수 목록이 `__arglist` 키워드로 끝날 경우 `VarArgs` 호출 규칙이 사용됩니다.  Visual Basic에서는 `VarArgs` 호출 규칙을 지원하지 않으며 Visual C\+\+에서는 줄임표\(`...`\) 표기법을 사용하는 비관리 코드에서만 이 호출 규칙을 사용할 수 있습니다.  
+ In C#, the `VarArgs` calling convention is used when a method's parameter list ends with the `__arglist` keyword. Visual Basic does not support the `VarArgs` calling convention, and Visual C++  allows its use only in unmanaged code that uses the ellipse `...` notation.  
   
-## 위반 문제를 해결하는 방법  
- C\#에서 이 규칙의 위반 문제를 해결하려면 `__arglist` 대신 [params](/dotnet/csharp/language-reference/keywords/params) 키워드를 사용합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule in C#, use the [params](/dotnet/csharp/language-reference/keywords/params) keyword instead of `__arglist`.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 예제  
- 다음 예제에서는 두 가지 메서드 즉, 규칙을 위반하는 메서드와 규칙을 만족하는 메서드를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows two methods, one that violates the rule and one that satisfies the rule.  
   
- [!code-cs[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]  
+ [!code-csharp[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  <xref:System.Reflection.CallingConventions?displayProperty=fullName>   
- [언어 독립성 및 언어 독립적 구성 요소](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md)
+ [Language Independence and Language-Independent Components](http://msdn.microsoft.com/Library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

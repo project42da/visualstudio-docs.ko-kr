@@ -1,46 +1,50 @@
 ---
-title: "방법: 프로그래밍 방식으로 현재 Outlook 항목 확인"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "전자 메일[Visual Studio에서 Office 개발], 현재 항목"
-  - "메일 항목[Visual Studio에서 Office 개발], 현재"
-  - "Outlook[Visual Studio에서 Office 개발], 현재 항목"
-  - "SelectionChange 이벤트"
+title: 'How to: Programmatically Determine the Current Outlook Item | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- mail items [Office development in Visual Studio], current
+- e-mail [Office development in Visual Studio], current item
+- SelectionChange event
+- Outlook [Office development in Visual Studio], current item
 ms.assetid: b4fb5ccd-b297-463e-9208-1fec42482531
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 3ec47d93f44b08f957edda6abb5644fd38aac15d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 현재 Outlook 항목 확인
-  이 예제에서는 Explorer.SelectionChange 이벤트를 사용하여 현재 폴더의 이름과 선택한 항목에 대한 일부 정보를 표시합니다.  그런 다음 선택한 항목을 표시합니다.  
+# <a name="how-to-programmatically-determine-the-current-outlook-item"></a>How to: Programmatically Determine the Current Outlook Item
+  This example uses the Explorer.SelectionChange event to display the name of the current folder and some information about the selected item. The code then displays the selected item.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## 예제  
- [!code-csharp[Trin_OL_CurrentItem#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_OL_CurrentItem/CS/thisaddin.cs#1)]
- [!code-vb[Trin_OL_CurrentItem#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_OL_CurrentItem/VB/thisaddin.vb#1)]  
+## <a name="example"></a>Example  
+ [!code-vb[Trin_OL_CurrentItem#1](../vsto/codesnippet/VisualBasic/Trin_OL_CurrentItem/thisaddin.vb#1)] [!code-csharp[Trin_OL_CurrentItem#1](../vsto/codesnippet/CSharp/Trin_OL_CurrentItem/thisaddin.cs#1)]  
   
-## 코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This example requires:  
   
--   Microsoft Office Outlook의 약속, 연락처 및 전자 메일 항목  
+-   Appointment, contact, and e-mail items in Microsoft Office Outlook.  
   
-## 참고 항목  
- [Outlook 개체 모델 개요](../vsto/outlook-object-model-overview.md)   
- [방법: 프로그래밍 방식으로 이름으로 폴더 검색](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
- [방법: 프로그래밍 방식으로 특정 연락처 검색](../vsto/how-to-programmatically-search-for-a-specific-contact.md)  
+## <a name="see-also"></a>See Also  
+ [Outlook Object Model Overview](../vsto/outlook-object-model-overview.md)   
+ [How to: Programmatically Retrieve a Folder by Name](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
+ [How to: Programmatically Search for a Specific Contact](../vsto/how-to-programmatically-search-for-a-specific-contact.md)  
   
   

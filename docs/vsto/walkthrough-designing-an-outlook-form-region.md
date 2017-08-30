@@ -1,185 +1,188 @@
 ---
-title: "연습: Outlook 양식 영역 디자인"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "양식 영역[Visual Studio에서 Office 개발], 만들기"
+title: 'Walkthrough: Designing an Outlook Form Region | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- form regions [Office development in Visual Studio], creating
 ms.assetid: b033fc06-cdeb-4d7f-804b-86d15bfa022a
 caps.latest.revision: 41
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 40
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: e75921b287578f25ed0c112e859129941f21c0f7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: Outlook 양식 영역 디자인
-  사용자 지정 양식 영역은 표준 또는 사용자 지정 Microsoft Office Outlook 양식을 확장합니다.  이 연습에서는 연락처 항목의 검사기 창에 새 페이지로 표시되는 사용자 지정 양식 영역을 디자인합니다.  이 양식 영역은 Windows Live 로컬 검색 웹 사이트에 주소 정보를 전송하여 연락처에 대해 나열된 각 주소의 지도를 표시합니다.  양식 영역에 대한 자세한 내용은 [Outlook 양식 영역 만들기](../vsto/creating-outlook-form-regions.md)를 참조하세요.  
+# <a name="walkthrough-designing-an-outlook-form-region"></a>Walkthrough: Designing an Outlook Form Region
+  Custom form regions extend standard or custom Microsoft Office Outlook forms. In this walkthrough, you will design a custom form region that appears as a new page in the Inspector window of a contact item. This form region displays a map of each address that is listed for the contact, by sending the address information to the Windows Live Local Search Web site. For information about form regions, see [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md).  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   새 Outlook VSTO 추가 기능 프로젝트 만들기  
+-   Creating a new Outlook VSTO Add-in project.  
   
--   VSTO 추가 기능 프로젝트에 양식 영역 추가  
+-   Adding a form region to the VSTO Add-in project.  
   
--   양식 영역의 레이아웃 디자인  
+-   Designing the layout of the form region.  
   
--   양식 영역의 동작 사용자 지정  
+-   Customizing the behavior of the form region.  
   
--   Outlook 양식 영역 테스트  
+-   Testing the Outlook form region.  
   
 > [!NOTE]  
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다.  이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] 또는 [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]  
+-   [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] or [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)].  
   
- ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 이 항목의 동영상 버전은 [동영상 방법: Outlook 양식 영역 디자인](http://go.microsoft.com/fwlink/?LinkID=140824)\(영문\)을 참조하세요.  
+ ![link to video](../vsto/media/playvideo.gif "link to video") For a video version of this topic, see [Video How to: Designing an Outlook Form Region](http://go.microsoft.com/fwlink/?LinkID=140824).  
   
-## 새 Outlook VSTO 추가 기능 프로젝트 만들기  
- 먼저 기본 VSTO 추가 기능 프로젝트를 만듭니다.  
+## <a name="creating-a-new-outlook-vsto-add-in-project"></a>Creating a New Outlook VSTO Add-in Project  
+ First create a basic VSTO Add-in project.  
   
-#### 새 Outlook VSTO 추가 기능 프로젝트를 만들려면  
+#### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>To create a new Outlook VSTO Add-in project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 이름이 MapItAddIn인 Outlook VSTO 추가 기능 프로젝트를 만듭니다.  
+1.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], create an Outlook VSTO Add-in project with the name **MapItAddIn**.  
   
-2.  **새 프로젝트** 대화 상자에서 **솔루션용 디렉터리 만들기**를 선택합니다.  
+2.  In the **New Project** dialog box, select **Create directory for solution**.  
   
-3.  임의 디렉터리에 프로젝트를 저장합니다.  
+3.  Save the project to any directory.  
   
-     자세한 내용은 [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)를 참조하세요.  
+     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-## Outlook VSTO 추가 기능 프로젝트에 양식 영역 추가  
- Outlook VSTO 추가 기능 솔루션에는 하나 이상의 Outlook 양식 영역 항목이 포함될 수 있습니다.  **새 Outlook 양식 영역** 마법사를 사용하여 프로젝트에 양식 영역 항목을 추가합니다.  
+## <a name="adding-a-form-region-to-the-outlook-vsto-add-in-project"></a>Adding a Form Region to the Outlook VSTO Add-in Project  
+ An Outlook VSTO Add-in solution can contain one or more Outlook form region items. Add a form region item to your project by using the **New Outlook Form Region** wizard.  
   
-#### Outlook VSTO 추가 기능 프로젝트에 양식 영역을 추가하려면  
+#### <a name="to-add-a-form-region-to-the-outlook-vsto-add-in-project"></a>To add a form region to the Outlook VSTO Add-in project  
   
-1.  **솔루션 탐색기**에서 **MapItAddIn** 프로젝트를 선택합니다.  
+1.  In **Solution Explorer**, select the **MapItAddIn** project.  
   
-2.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
+2.  On the **Project** menu, click **Add New Item**.  
   
-3.  **새 항목 추가** 대화 상자에서 **Outlook 양식 영역**을 선택하고 파일 이름을 MapIt로 지정한 다음 **추가**를 클릭합니다.  
+3.  In the **Add New Item** dialog box, select **Outlook Form Region**, name the file **MapIt**, and then click **Add**.  
   
-     **새Outlook 양식 영역** 마법사가 시작됩니다.  
+     The **NewOutlook Form Region** wizard starts.  
   
-4.  **양식 영역을 만드는 방법 선택** 페이지에서 **새 양식 영역 디자인**을 클릭한 후 **다음**을 클릭합니다.  
+4.  On the **Select how you want to create the form region** page, click **Design a new form region**, and then click **Next**.  
   
-5.  **만들 양식 영역 형식 선택** 페이지에서 **별도**를 클릭한 후 **다음**을 클릭합니다.  
+5.  On the **Select the type of form region you want to create** page, click **Separate**, and then click **Next**.  
   
-     *별도* 양식 영역은 Outlook 양식에 새 페이지를 추가합니다.  양식 영역 형식에 대한 자세한 내용은 [Outlook 양식 영역 만들기](../vsto/creating-outlook-form-regions.md)를 참조하세요.  
+     A *separate* form region adds a new page to an Outlook form. For more information about form region types, see [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md).  
   
-6.  **설명 텍스트를 입력하고 디스플레이 기본 설정을 선택하세요.** 페이지의 **이름** 상자에 **Map It**을 입력합니다.  
+6.  On the **Supply descriptive text and select your display preferences** page, type **Map It** in the **Name** box.  
   
-     이 이름은 연락처 항목이 열려 있을 때 검사기 창의 리본 메뉴에 나타납니다.  
+     This name appears on the Ribbon of the Inspector window when the contact item is open.  
   
-7.  **작성 모드의 검사기** 및 **읽기 모드의 검사기**를 선택하고 **다음**을 클릭합니다.  
+7.  Select **Inspectors that are in compose mode** and **Inspectors that are in read mode**, and then click **Next**.  
   
-8.  **이 양식 영역을 표시할 메시지 클래스를 지정하세요.** 페이지에서 **메일 메시지**를 선택 취소하고 **연락처**를 선택한 다음 **마침**을 클릭합니다.  
+8.  On the **Identify the message classes that will display this form region** page, clear **Mail Message**, select **Contact**, and then click **Finish**.  
   
-     MapIt.cs 또는 MapIt.vb 파일이 프로젝트에 추가됩니다.  
+     A MapIt.cs or MapIt.vb file is added to your project.  
   
-## 양식 영역의 레이아웃 디자인  
- *양식 영역 디자이너*를 사용하여 시각적으로 양식 영역을 개발합니다.  관리되는 컨트롤을 양식 영역 디자이너 화면으로 끌 수 있습니다.  디자이너 및 **속성** 창을 사용하여 컨트롤 레이아웃 및 모양을 조정합니다.  
+## <a name="designing-the-layout-of-the-form-region"></a>Designing the Layout of the Form Region  
+ Develop form regions visually by using the *form region designer*. You can drag managed controls to the form region designer surface. Use the designer and the **Properties** window to adjust control layout and appearance.  
   
-#### 양식 영역의 레이아웃을 디자인하려면  
+#### <a name="to-design-the-layout-of-the-form-region"></a>To design the layout of the form region  
   
-1.  **솔루션 탐색기**에서 **MapItAddIn** 프로젝트를 확장하고 MapIt.cs 또는 MapIt.vb를 두 번 클릭하여 양식 영역 디자이너를 엽니다.  
+1.  In **Solution Explorer**, expand the **MapItAddIn** project, and then double-click MapIt.cs or MapIt.vb to open the Form Region Designer.  
   
-2.  디자이너를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  Right-click the designer, and then click **Properties**.  
   
-3.  **속성** 창에서 **크기**를 664, 469로 설정합니다.  
+3.  In the **Properties** window, set **Size** to **664, 469**.  
   
-     이렇게 하면 양식 영역이 지도를 표시할 수 있을 만큼 커집니다.  
+     This ensures that the form region will be large enough to display a map.  
   
-4.  **보기** 메뉴에서 **도구 상자**를 클릭합니다.  
+4.  On the **View** menu, click **Toolbox**.  
   
-5.  **도구 상자**의 **공용 컨트롤** 탭에서 양식 영역에 **WebBrowser**를 추가합니다.  
+5.  From the **Common Controls** tab of the **Toolbox**, add a **WebBrowser** to the form region.  
   
-     **WebBrowser**에 연락처에 대해 나열된 각 주소의 지도가 표시됩니다.  
+     The **WebBrowser** will display a map of each address that is listed for the contact.  
   
-## 양식 영역의 동작 사용자 지정  
- 양식 영역 이벤트 처리기에 코드를 추가하여 런타임에 양식 영역이 동작하는 방식을 사용자 지정합니다.  이 양식 영역에 대해 코드에서 Outlook 항목의 속성을 검사하고 Map It 양식 영역을 표시할지 여부를 확인합니다.  양식 영역을 표시하는 경우 코드에서 Windows Live 로컬 검색으로 이동하고 Outlook 연락처 항목에 나열된 각 주소의 지도를 로드합니다.  
+## <a name="customizing-the-behavior-of-the-form-region"></a>Customizing the Behavior of the Form Region  
+ Add code to form region event handlers to customize the way a form region behaves at run time. For this form region, the code examines the properties of an Outlook item and determines whether to display the Map It form region. If it displays the form region, the code navigates to Windows Live Local Search and loads a map of each address listed in the Outlook contact item.  
   
-#### 양식 영역의 동작을 사용자 지정하려면  
+#### <a name="to-customize-the-behavior-of-the-form-region"></a>To customize the behavior of the form region  
   
-1.  **솔루션 탐색기**에서 MapIt.cs 또는 MapIt.vb를 마우스 오른쪽 단추로 클릭한 다음 **코드 보기**를 클릭합니다.  
+1.  In **Solution Explorer**, right click MapIt.cs or MapIt.vb, and then click **View Code**.  
   
-     MapIt.cs 또는 MapIt.vb가 코드 편집기에서 열립니다.  
+     MapIt.cs or MapIt.vb opens in the Code Editor.  
   
-2.  **양식 영역 팩터리** 코드 영역을 확장합니다.  
+2.  Expand the **Form Region Factory** code region.  
   
-     `MapItFactory`라는 양식 영역 팩터리 클래스가 노출됩니다.  
+     The form region factory class named `MapItFactory` is exposed.  
   
-3.  다음 코드를 `MapItFactory_FormRegionInitializing` 이벤트 처리기에 추가합니다.  이 이벤트 처리기는 사용자가 연락처 항목을 열 때 호출됩니다.  다음 코드는 연락처 항목에 주소가 포함되어 있는지 여부를 확인합니다.  연락처 항목에 주소가 포함되어 있지 않으면 이 코드에서 <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> 클래스의 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 **true**로 설정하며 양식 영역이 표시되지 않습니다.  그렇지 않은 경우 VSTO 추가 기능에서 <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> 이벤트가 발생하고 양식 영역이 표시됩니다.  
+3.  Add the following code to the `MapItFactory_FormRegionInitializing` event handler. This event handler is called when the user opens a contact item. The following code determines whether the contact item contains an address. If the contact item does not contain an address, this code sets the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property of the <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> class to **true** and the form region is not displayed. Otherwise, the VSTO Add-in raises the <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> event and displays the form region.  
   
-     [!code-csharp[Trin_Outlook_FR_Separate#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Outlook_FR_Separate/CS/MapIt.cs#1)]
-     [!code-vb[Trin_Outlook_FR_Separate#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Outlook_FR_Separate/VB/MapIt.vb#1)]  
+     [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]  [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]  
   
-4.  다음 코드를 <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> 이벤트 처리기에 추가합니다.  이 코드는 다음 작업을 수행합니다.  
+4.  Add the following code to the <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> event handler. This code performs the following tasks:  
   
-    -   연락처 항목의 각 주소를 연결하고 URL 문자열을 만듭니다.  
+    -   Concatenates each address in the contact item and creates a URL string.  
   
-    -   <xref:System.Windows.Forms.WebBrowser> 개체의 <xref:System.Windows.Forms.WebBrowser.Navigate%2A> 메서드를 호출하고 URL 문자열을 매개 변수로 전달합니다.  
+    -   Calls the <xref:System.Windows.Forms.WebBrowser.Navigate%2A> method of the <xref:System.Windows.Forms.WebBrowser> object and passes the URL string as a parameter.  
   
-     로컬 검색 웹 사이트가 Map It 양식 영역에 나타나고 각 주소를 스크래치 패드에 표시합니다.  
+     The Local Search Web site appears in the Map It form region and presents each address in the scratch pad.  
   
-     [!code-csharp[Trin_Outlook_FR_Separate#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Outlook_FR_Separate/CS/MapIt.cs#2)]
-     [!code-vb[Trin_Outlook_FR_Separate#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Outlook_FR_Separate/VB/MapIt.vb#2)]  
+     [!code-csharp[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#2)] [!code-vb[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#2)]  
   
-## Outlook 양식 영역 테스트  
- 프로젝트를 실행하면 Visual Studio에서 Outlook을 엽니다.  연락처 항목을 열어 Map It 양식 영역을 표시합니다.  Map It 양식 영역은 주소가 포함된 연락처 항목의 양식에 페이지로 표시됩니다.  
+## <a name="testing-the-outlook-form-region"></a>Testing the Outlook Form Region  
+ When you run the project, Visual Studio opens Outlook. Open a contact item to view the Map It form region. The Map It form region appears as a page in the form of any contact item that contains an address.  
   
-#### Map It 양식 영역을 테스트하려면  
+#### <a name="to-test-the-map-it-form-region"></a>To test the Map It form region  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  Press F5 to run the project.  
   
-     Outlook이 열립니다.  
+     Outlook opens.  
   
-2.  Outlook의 **홈** 탭에서 **새 항목**을 클릭한 다음 **연락처**를 클릭합니다.  
+2.  In Outlook, on the **Home** tab, click **New Items**, and then click **Contact**.  
   
-3.  연락처 양식에서 **Ann Beebe**를 연락처 이름으로 입력하고 다음 세 개의 주소를 지정합니다.  
+3.  In the contact form, type **Ann Beebe** as the contact name, and then specify the following three addresses.  
   
-    |주소 형식|주소|  
-    |-----------|--------|  
-    |**비즈니스**|4567 Main St.  Buffalo, NY|  
-    |**홈**|1234 North St.  Buffalo, NY|  
-    |**기타**|3456 Main St.  Seattle, WA|  
+    |Address Type|Address|  
+    |------------------|-------------|  
+    |**Business**|**4567 Main St. Buffalo, NY**|  
+    |**Home**|**1234 North St. Buffalo, NY**|  
+    |**Other**|**3456 Main St. Seattle, WA**|  
   
-4.  연락처 항목을 저장하고 닫습니다.  
+4.  Save and close the contact item.  
   
-5.  **Ann Beebe** 연락처 항목을 다시 엽니다.  
+5.  Re-open the **Ann Beebe** contact item.  
   
-6.  항목 리본 메뉴의 **표시** 그룹에서 **Map It**을 클릭하여 Map It 양식 영역을 엽니다.  
+6.  In the **Show** group of the item's Ribbon, click **Map It** to open the Map It form region.  
   
-     Map It 양식 영역이 나타나고 로컬 검색 웹 사이트를 표시합니다.  **비즈니스**, **홈** 및 **기타** 주소가 스크래치 패드에 나타납니다.  스크래치 패드에서 매핑할 주소를 선택합니다.  
+     The Map It form region appears, and displays the Local Search Web site. The **Business**, **Home**, and **Other** addresses appear in the scratch pad. In the scratch pad, select an address that you want to map.  
   
-## 다음 단계  
- 다음 항목에서 Outlook 응용 프로그램의 UI를 사용자 지정하는 방법에 대해 자세히 알아볼 수 있습니다.  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to customize the UI of an Outlook application from these topics:  
   
--   Outlook 항목의 리본 메뉴를 사용자 지정하는 방법에 대해 알아보려면 [Outlook에 대해 리본 메뉴 사용자 지정](../vsto/customizing-a-ribbon-for-outlook.md)을 참조하세요.  
+-   To learn about how to customize the Ribbon of an Outlook item, see [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md).  
   
-## 참고 항목  
- [런타임에 양식 영역 액세스](../vsto/accessing-a-form-region-at-run-time.md)   
- [Outlook 양식 영역 만들기](../vsto/creating-outlook-form-regions.md)   
- [Outlook 양식 영역 만들기 지침](../vsto/guidelines-for-creating-outlook-form-regions.md)   
- [연습: Outlook에서 디자인한 양식 영역 가져오기](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)   
- [방법: Outlook 추가 기능 프로젝트에 양식 영역 추가](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)   
- [Outlook 메시지 클래스에 양식 영역 연결](../vsto/associating-a-form-region-with-an-outlook-message-class.md)   
- [Outlook 양식 영역의 사용자 지정 작업](../vsto/custom-actions-in-outlook-form-regions.md)   
- [방법: Outlook에서 양식 영역 표시하지 않기](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)  
+## <a name="see-also"></a>See Also  
+ [Accessing a Form Region at Run Time](../vsto/accessing-a-form-region-at-run-time.md)   
+ [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md)   
+ [Guidelines for Creating Outlook Form Regions](../vsto/guidelines-for-creating-outlook-form-regions.md)   
+ [Walkthrough: Importing a Form Region That Is Designed in Outlook](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)   
+ [How to: Add a Form Region to an Outlook Add-in Project](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)   
+ [Associating a Form Region with an Outlook Message Class](../vsto/associating-a-form-region-with-an-outlook-message-class.md)   
+ [Custom Actions in Outlook Form Regions](../vsto/custom-actions-in-outlook-form-regions.md)   
+ [How to: Prevent Outlook from Displaying a Form Region](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)  
   
   

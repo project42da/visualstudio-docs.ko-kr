@@ -1,233 +1,233 @@
 ---
-title: "연습: SharePoint를 위한 웹 파트 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "웹 파트[Visual Studio에서 SharePoint 개발], 만들기"
-  - "웹 파트[Visual Studio에서 SharePoint 개발], 디자인"
-  - "웹 파트[Visual Studio에서 SharePoint 개발], 개발"
+title: 'Walkthrough: Creating a Web Part for SharePoint | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Web Parts [SharePoint development in Visual Studio], developing
+- Web Parts [SharePoint development in Visual Studio], creating
+- Web Parts [SharePoint development in Visual Studio], designing
 ms.assetid: 51fb5bdd-b99c-4716-83bc-e66a5da15169
 caps.latest.revision: 34
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: f2d3c5ecf34ccbe92ad5303ee8439b68bec26adb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: SharePoint를 위한 웹 파트 만들기
-  웹 파트를 추가하면 사용자가 SharePoint 사이트 페이지의 콘텐츠, 모양 및 동작을 브라우저에서 직접 수정할 수 있습니다.  이 연습에서는 Visual Studio 2010에서 **웹 파트** 항목 템플릿을 사용하여 웹 파트를 만드는 방법을 보여 줍니다.  
+# <a name="walkthrough-creating-a-web-part-for-sharepoint"></a>Walkthrough: Creating a Web Part for SharePoint
+  Web Parts enable users to directly modify the content, appearance, and behavior of SharePoint site pages by using a browser. This walkthrough shows you how to create a Web Part by using the **Web Part** item template in Visual Studio 2010.  
   
- 이 웹 파트는 직원을 데이터 표에 표시합니다.  사용자는 직원 데이터가 들어 있는 파일의 위치를 지정할 수 있으며  직원 중 관리자만 목록에 나타나도록 데이터 표를 필터링할 수도 있습니다.  
+ The Web Part displays employees in a data grid. The user specifies the location of the file that contains the employee data. The user can also filter the data grid so that employees who are managers appear in the list only.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   Visual Studio **웹 파트** 항목 템플릿을 사용하여 웹 파트 만들기  
+-   Creating a Web Part by using the Visual Studio **Web Part** item template.  
   
--   웹 파트 사용자가 설정할 수 있는 속성 만들기.  이 속성은 직원 데이터 파일의 위치를 지정합니다.  
+-   Creating a property that can be set by the user of the Web Part. This property specifies the location of the employee data file.  
   
--   웹 파트 컨트롤 컬렉션에 컨트롤을 추가하여 웹 파트에서 콘텐츠 렌더링  
+-   Rendering content in a Web Part by adding controls to the Web Part controls collection.  
   
--   렌더링된 웹 파트의 동사 메뉴에 나타나는 새 *동사* 메뉴 항목 만들기.  사용자는 동사를 사용하여 웹 파트에 나타나는 데이터를 수정할 수 있습니다.  
+-   Creating a new menu item, referred to as a *verb,* that appears in the verbs menu of the rendered Web part. Verbs enable the user to modify the data that appears in the Web Part.  
   
--   SharePoint에서 웹 파트 테스트  
+-   Testing the Web Part in SharePoint.  
   
     > [!NOTE]  
-    >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다.  설치한 Visual Studio 버전과 사용하는 설정에 따라 이러한 요소가 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+    >  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   지원되는 Microsoft Windows 및 SharePoint 버전.  자세한 내용은 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)을 참조하십시오.  
+-   Supported editions of Microsoft Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vs_pro_current_short](../sharepoint/includes/vs-pro-current-short-md.md)] 또는 Visual Studio ALM\(Application Lifecycle Management\)의 버전  
+-   [!INCLUDE[vs_pro_current_short](../sharepoint/includes/vs-pro-current-short-md.md)] or an edition of Visual Studio Application Lifecycle Management (ALM).  
   
-## 빈 SharePoint 프로젝트 만들기  
- 먼저 빈 SharePoint 프로젝트를 만듭니다.  나중에 **웹 파트** 항목 템플릿을 사용하여 이 프로젝트에 웹 파트를 추가합니다.  
+## <a name="creating-an-empty-sharepoint-project"></a>Creating an Empty SharePoint Project  
+ First, create a Empty SharePoint project. Later, you will add a Web Part to the project by using the **Web Part** item template.  
   
-#### 빈 SharePoint 프로젝트를 만들려면  
+#### <a name="to-create-an-empty-sharepoint-project"></a>To create an Empty SharePoint Project  
   
-1.  **관리자 권한으로 실행** 옵션을 사용하여 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] by using the **Run as Administrator** option.  
   
-2.  메뉴 모음에서 **파일**, **New**, **프로젝트** 선택합니다.  
+2.  On the men bar, choose **File**, **New**, **Project**.  
   
-3.  **새 프로젝트** 대화 상자에서 사용할 언어 아래의 **SharePoint** 노드를 확장한 다음 **2010** 노드를 선택합니다.  
+3.  In the **New Project** dialog box, expand the **SharePoint** node under the language that you want to use, and then choose the **2010** node.  
   
-4.  **템플릿** 창에서 **SharePoint 2010 프로젝트** 항목을 선택한 다음 **확인** 단추를 클릭합니다.  
+4.  In the **Templates** pane, choose **SharePoint 2010 Project**, and then choose the **OK** button.  
   
-     **SharePoint 사용자 지정 마법사**가 나타납니다.  이 마법사를 사용하면 프로젝트를 디버깅하는 데 사용할 사이트와 솔루션의 신뢰 수준을 선택할 수 있습니다.  
+     The **SharePoint Customization Wizard** appears. This wizard enables you to select the site that you will use to debug the project and the trust level of the solution.  
   
-5.  **팜 솔루션으로 배포** 옵션 단추를 선택한 다음 **마침** 단추를 선택하여 기본 로컬 SharePoint 사이트를 사용합니다.  
+5.  Choose the **Deploy as a farm solution** option button, and then choose the **Finish** button to accept the default local SharePoint site.  
   
-## 프로젝트에 웹 파트 추가  
- 프로젝트에 **웹 파트** 항목을 추가합니다.  **웹 파트** 항목을 추가하면 웹 파트 코드 파일도 추가됩니다.  나중에 웹 파트의 콘텐츠를 렌더링하는 코드를 이 웹 파트 코드 파일에 추가합니다.  
+## <a name="adding-a-web-part-to-the-project"></a>Adding a Web Part to the Project  
+ Add a **Web Part** item to the project. The **Web Part** item adds the Web Part code file. Later, you will add code to the Web Part code file to render the contents of the Web Part.  
   
-#### 프로젝트에 웹 파트를 추가하려면  
+#### <a name="to-add-a-web-part-to-the-project"></a>To add a Web Part to the Project  
   
-1.  메뉴 모음에서 **프로젝트**, **새 항목 추가**를 선택합니다.  
+1.  On the menu bar, choose **Project**, **Add New Item**.  
   
-2.  **새 항목 추가** 대화 상자의 **설치된 템플릿** 창에서 **SharePoint** 노드를 확장한 다음 **2010** 을 클릭합니다.  
+2.  In the **Add New Item** dialog box, in the **Installed Templates** pane, expand the **SharePoint** node, and then choose the **2010** node.  
   
-3.  SharePoint 템플릿 목록에서, **웹 파트** 템플릿을 선택한 다음 **확인** 단추를 클릭합니다.  
+3.  In the list of SharePoint templates, choose the **Web Part** template, and then choose the **Add** button.  
   
-     **솔루션 탐색기**에 해당 **웹 파트** 항목이 표시됩니다.  
+     The **Web Part** item appears in **Solution Explorer**.  
   
-## 웹 파트에서 콘텐츠 렌더링  
- 웹 파트에 표시할 컨트롤을 웹 파트 클래스의 컨트롤 컬렉션에 추가하는 방법으로 컨트롤을 지정할 수 있습니다.  
+## <a name="rendering-content-in-the-web-part"></a>Rendering Content in the Web Part  
+ You can specify which controls you want to appear in the Web Part by adding them to the controls collection of the Web Part class.  
   
-#### 웹 파트에서 콘텐츠를 렌더링하려면  
+#### <a name="to-render-content-in-the-web-part"></a>To render content in the Web Part  
   
-1.  **솔루션 탐색기**에서 WebPart1.vb\(Visual Basic\) 또는 WebPart1.cs\(C\#\)를 엽니다.  
+1.  In **Solution Explorer**, open WebPart1.vb (in Visual Basic) or WebPart1.cs (in C#).  
   
-     코드 편집기에서 웹 파트 코드 파일이 열립니다.  
+     The Web Part code file opens in Code Editor.  
   
-2.  웹 파트 코드 파일의 맨 위에 다음 문을 추가합니다.  
+2.  Add the following statements to the top of the Web Part code file.  
   
-     [!code-csharp[SP_WebPart#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_webpart/cs/webpart1/webpart1.cs#1)]
-     [!code-vb[SP_WebPart#1](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_webpart/vb/webpart1/webpart1.vb#1)]  
+     [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]  [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]  
   
-3.  `WebPart1` 클래스에 다음 코드를 추가합니다.  이 코드는 다음 필드를 선언합니다.  
+3.  Add the following code to the `WebPart1` class. This code declares the following fields:  
   
-    -   웹 파트에서 직원을 표시하기 위한 데이터 표  
+    -   A data grid to display employees in the Web Part.  
   
-    -   데이터 표를 필터링하는 데 사용되는 컨트롤에 표시되는 텍스트  
+    -   Text that appears on the control that is used to filter the data grid.  
   
-    -   데이터 표에 데이터를 표시할 수 없는 경우 오류를 보여 주는 레이블  
+    -   A label that displays an error if the data grid is unable to display data.  
   
-    -   직원 데이터 파일의 경로가 들어 있는 문자열  
+    -   A string that contains the path of the employee data file.  
   
-     [!code-csharp[SP_WebPart#2](../snippets/csharp/VS_Snippets_OfficeSP/sp_webpart/cs/webpart1/webpart1.cs#2)]
-     [!code-vb[SP_WebPart#2](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_webpart/vb/webpart1/webpart1.vb#2)]  
+     [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)] [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]  
   
-4.  `WebPart1` 클래스에 다음 코드를 추가합니다.  이 코드는 웹 파트에 `DataFilePath`라는 사용자 지정 속성을 추가합니다.  사용자 지정 속성은 사용자가 SharePoint에서 설정할 수 있는 속성입니다.  이 속성은 데이터 표를 채우는 데 사용되는 XML 데이터 파일의 위치를 가져오거나 설정합니다.  
+4.  Add the following code to the `WebPart1` class. This code adds a custom property named `DataFilePath` to the Web Part. A custom property is a property that can be set in SharePoint by the user. This property gets and sets the location of a XML data file that is used to populate the data grid.  
   
-     [!code-csharp[SP_WebPart#3](../snippets/csharp/VS_Snippets_OfficeSP/sp_webpart/cs/webpart1/webpart1.cs#3)]
-     [!code-vb[SP_WebPart#3](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_webpart/vb/webpart1/webpart1.vb#3)]  
+     [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]  [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]  
   
-5.  `CreateChildControls` 메서드를 다음 코드로 바꿉니다.  이 코드는 다음 작업을 수행합니다.  
+5.  Replace the `CreateChildControls` method with the following code. This code performs the following tasks:  
   
-    -   이전 단계에서 선언한 데이터 표와 레이블을 추가합니다.  
+    -   Adds the data grid and label that you declared in the previous step.  
   
-    -   데이터 표를 직원 데이터가 들어 있는 XML 파일에 바인딩합니다.  
+    -   Binds the data grid to an XML file that contains employee data.  
   
-     [!code-csharp[SP_WebPart#4](../snippets/csharp/VS_Snippets_OfficeSP/sp_webpart/cs/webpart1/webpart1.cs#4)]
-     [!code-vb[SP_WebPart#4](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_webpart/vb/webpart1/webpart1.vb#4)]  
+     [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)] [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]  
   
-6.  `WebPart1` 클래스에 다음 메서드를 추가합니다.  이 코드는 다음 작업을 수행합니다.  
+6.  Add the following method to the `WebPart1` class. This code performs the following tasks:  
   
-    -   렌더링된 웹 파트의 웹 파트 동사 메뉴에 표시되는 동사를 만듭니다.  
+    -   Creates a verb that appears in the Web Part verbs menu of the rendered Web part.  
   
-    -   사용자가 동사 메뉴의 동사를 선택할 때 발생하는 이벤트를 처리합니다.  이 코드는 데이터 표에 표시되는 직원 목록을 필터링합니다.  
+    -   Handles the event that is raised when the user chooses the verb in the verbs menu. This code filters the list of employees that appears in the data grid.  
   
-     [!code-csharp[SP_WebPart#5](../snippets/csharp/VS_Snippets_OfficeSP/sp_webpart/cs/webpart1/webpart1.cs#5)]
-     [!code-vb[SP_WebPart#5](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_webpart/vb/webpart1/webpart1.vb#5)]  
+     [!code-csharp[SP_WebPart#5](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#5)] [!code-vb[SP_WebPart#5](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#5)]  
   
-## 웹 파트 테스트  
- 프로젝트를 실행하면 SharePoint 사이트가 열립니다.  웹 파트는 SharePoint의 웹 파트 갤러리에 자동으로 추가됩니다.  모든 웹 파트 페이지에 웹 파트를 추가할 수 있습니다.  
+## <a name="testing-the-web-part"></a>Testing the Web Part  
+ When you run the project, the SharePoint site opens. The Web Part is automatically added to the Web Part Gallery in SharePoint. You can add the Web Part to any Web Part page.  
   
-#### 웹 파트를 테스트하려면  
+#### <a name="to-test-the-web-part"></a>To test the Web Part  
   
-1.  다음 XML을 메모장 파일에 붙여넣습니다.  이 XML 파일에는 웹 파트에 표시되는 샘플 데이터가 들어 있습니다.  
+1.  Paste the following XML into a Notepad file. This XML file contains the sample data that will appear in the Web Part.  
   
     ```  
-  
-    <employees xmlns="http://schemas.microsoft.com/vsto/samples">  
-       <employee>  
-           <name>David Hamilton</name>  
-           <hireDate>2001-05-11</hireDate>  
-           <title>Sales Associate</title>  
-       </employee>  
-       <employee>  
-           <name>Karina Leal</name>  
-           <hireDate>1999-04-01</hireDate>  
-           <title>Manager</title>  
-       </employee>  
-       <employee>  
-           <name>Nancy Davolio</name>  
-           <hireDate>1992-05-01</hireDate>  
-           <title>Sales Associate</title>  
-       </employee>  
-       <employee>  
-           <name>Steven Buchanan</name>  
-           <hireDate>1955-03-04</hireDate>  
-           <title>Manager</title>  
-       </employee>  
-       <employee>  
-           <name>Suyama Michael</name>  
-           <hireDate>1963-07-02</hireDate>  
-           <title>Sales Associate</title>  
-       </employee>  
-    </employees>  
+    <?xml version="1.0" encoding="utf-8" ?>  
+        <employees xmlns="http://schemas.microsoft.com/vsto/samples">  
+           <employee>  
+               <name>David Hamilton</name>  
+               <hireDate>2001-05-11</hireDate>  
+               <title>Sales Associate</title>  
+           </employee>  
+           <employee>  
+               <name>Karina Leal</name>  
+               <hireDate>1999-04-01</hireDate>  
+               <title>Manager</title>  
+           </employee>  
+           <employee>  
+               <name>Nancy Davolio</name>  
+               <hireDate>1992-05-01</hireDate>  
+               <title>Sales Associate</title>  
+           </employee>  
+           <employee>  
+               <name>Steven Buchanan</name>  
+               <hireDate>1955-03-04</hireDate>  
+               <title>Manager</title>  
+           </employee>  
+           <employee>  
+               <name>Suyama Michael</name>  
+               <hireDate>1963-07-02</hireDate>  
+               <title>Sales Associate</title>  
+           </employee>  
+        </employees>  
     ```  
   
-2.  메모장의 메뉴 모음에서 **파일**, **저장**을 차례로 선택합니다.  
+2.  In Notepad, on the menu bar, choose **File**, **Save As**.  
   
-3.  **다른 이름으로 저장** 대화 상자의 **파일 형식** 목록에서 **모든 파일**을 선택합니다.  
+3.  In the **Save As** dialog box, in the **Save as type** list, choose **All Files**.  
   
-4.  **파일 이름** 상자에 data.xml을 입력합니다.  
+4.  In the **File name** box, enter **data.xml**.  
   
-5.  **폴더 찾아보기** 단추를 사용하여 폴더를 선택한 다음 **저장** 버튼을 클릭합니다.  
+5.  Choose any folder by using the **Browse Folders** button, and then choose the **Save** button.  
   
-6.  Visual Studio에서 **F5** 키를 누릅니다.  
+6.  In Visual Studio, choose the **F5** key.  
   
-     SharePoint 사이트가 열립니다.  
+     The SharePoint site opens.  
   
-7.  **사이트 작업** 메뉴에서 **기타 옵션**을 선택합니다.  
+7.  On the **Site Actions** menu, choose **More Options**.  
   
-8.  **만들기** 페이지에서 **웹 파트 페이지** 형식을 선택한 다음 **만들기** 단추를 클릭합니다.  
+8.  In the **Create** page, choose the **Web Part Page** type, then choose the **Create** button.  
   
-9. **새 웹 파트 페이지** 페이지에서 페이지 이름으로 **SampleWebPartPage.aspx**를 지정한 다음 **만들기** 버튼을 클릭합니다.  
+9. In the **New Web Part Page** page, name the page **SampleWebPartPage.aspx**, and then choose the **Create** button.  
   
-     웹 파트 페이지가 표시됩니다.  
+     The Web Part page appears.  
   
-10. 웹 파트 페이지의 아무 영역이나 선택합니다.  
+10. Select any zone on the Web Part page.  
   
-11. 페이지 위쪽에서 **삽입** 탭을 선택한 다음 **웹 파트** 버튼을 클릭합니다.  
+11. At the top of the page, choose the **Insert** tab, and then choose the **Web Part** button.  
   
-12. **범주** 창에서 **사용자 지정** 폴더를 선택하고 **WebPart1** 웹 파트를 선택한 다음 **추가** 버튼을 클릭합니다.  
+12. In the **Categories** pane, choose the **Custom** folder, choose the **WebPart1** Web Part, and then choose the **Add** button.  
   
-     페이지에 웹 파트 페이지가 표시됩니다.  
+     The Web Part appears on the page.  
   
-## 사용자 지정 속성 테스트  
- 웹 파트에 표시되는 데이터 표를 채우려면 각 직원에 대한 정보가 들어 있는 XML 파일의 경로를 지정합니다.  
+## <a name="testing-the-custom-property"></a>Testing the Custom Property  
+ To populate the data grid that appears in the Web Part, specify the path of the XML file that contains data about each employee.  
   
-#### 사용자 지정 속성을 테스트하려면  
+#### <a name="to-test-the-custom-property"></a>To test the custom property  
   
-1.  웹 파트의 오른쪽에 나타나는 화살표를 누른 다음 표시된 메뉴에서 **웹 파트 편집** 을 선택합니다.  
+1.  Choose the arrow that appears on the right side of the Web Part, and then choose **Edit Web Part** from the menu that appears.  
   
-     웹 파트의 속성이 포함된 창이 페이지 오른쪽에 표시됩니다.  
+     A pane that contains properties for the Web Part appears on the right side of the page.  
   
-2.  창에서 **기타** 노드를 확장하고 이전에 만든 XML 파일의 경로를 입력한 다음 **적용**, **확인** 버튼을 차례로 클릭합니다.  
+2.  In the pane, expand the **Miscellaneous** node, enter the path of the XML file that you created earlier, choose the **Apply** button, and then choose the **OK** button.  
   
-     직원 목록이 웹 파트에 표시되는지 확인합니다.  
+     Verify that a list of employees appears in the Web Part.  
   
-## 웹 파트 동사 테스트  
- 웹 파트 동사 메뉴에 표시되는 항목을 클릭하여 관리자가 아닌 직원을 표시하고 숨깁니다.  
+## <a name="testing-the-web-part-verb"></a>Testing the Web Part Verb  
+ Show and hide employees that are not managers by clicking an item that appears in the Web Part verbs menu.  
   
-#### 웹 파트 동사를 테스트하려면  
+#### <a name="to-test-the-web-part-verb"></a>To test the Web Part verb  
   
-1.  웹 파트의 오른쪽에 나타나는 화살표를 누른 다음 표시된 메뉴에서 **관리자에게만 보여주기** 을 선택합니다.  
+1.  Choose the arrow that appears on the right side of the Web Part, and then choose **Show Managers Only** from the menu that appears.  
   
-     관리자에 해당하는 직원만 웹 파트에 표시됩니다.  
+     Only employees who are managers appear in the Web Part.  
   
-2.  화살표를 다시 선택한 다음 표시된 메뉴에서 **모든 직원 표시** 를 선택합니다.  
+2.  Choose the arrow again, and then choose **Show All Employees** from the menu that appears.  
   
-     모든 직원이 웹 파트에 표시됩니다.  
+     All employees appear in the Web Part.  
   
-## 참고 항목  
- [SharePoint를 위한 웹 파트 만들기](../sharepoint/creating-web-parts-for-sharepoint.md)   
- [방법: SharePoint 웹 파트 만들기](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
- [방법: 디자이너를 사용하여 SharePoint 웹 파트 만들기](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
- [연습: 디자이너를 사용하여 SharePoint를 위한 웹 파트 만들기](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)  
+## <a name="see-also"></a>See Also  
+ [Creating Web Parts for SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)   
+ [How to: Create a SharePoint Web Part](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
+ [How to: Create a SharePoint Web Part by Using a Designer](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
+ [Walkthrough: Creating a Web Part for SharePoint by Using a Designer](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)  
   
   

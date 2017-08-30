@@ -1,64 +1,80 @@
 ---
-title: "CA2108: 값 형식에서 선언적 보안을 검토하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ReviewDeclarativeSecurityOnValueTypes"
-  - "CA2108"
-helpviewer_keywords: 
-  - "CA2108"
-  - "ReviewDeclarativeSecurityOnValueTypes"
+title: 'CA2108: Review declarative security on value types | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ReviewDeclarativeSecurityOnValueTypes
+- CA2108
+helpviewer_keywords:
+- ReviewDeclarativeSecurityOnValueTypes
+- CA2108
 ms.assetid: d62bffdd-3826-4d52-a708-1c646c5d48c2
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2108: 값 형식에서 선언적 보안을 검토하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a4aa6fa02329c6d82800f3a45f8002bf8a4f10e7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Review declarative security on value types
 |||  
 |-|-|  
 |TypeName|ReviewDeclarativeSecurityOnValueTypes|  
 |CheckId|CA2108|  
-|범주|Microsoft.Security|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Security|  
+|Breaking Change|Non Breaking|  
   
-## 원인  
- public 또는 protected 값 형식이 [데이터 및 모델링](../Topic/Data%20and%20Modeling%20in%20the%20.NET%20Framework.md) 또는 [링크 요청](../Topic/Link%20Demands.md)에 의해 보안됩니다.  
+## <a name="cause"></a>Cause  
+ A public or protected value type is secured by a [Data and Modeling](/dotnet/framework/data/index) or [Link Demands](/dotnet/framework/misc/link-demands).  
   
-## 규칙 설명  
- 값 형식은 다른 생성자가 실행되기 전에 해당 기본 생성자에서 할당하고 초기화합니다.  값 형식이 Demand 또는 LinkDemand에 의해 보안되고 호출자에게 보안 검사를 만족하는 권한이 없으면 기본 생성자 이외의 모든 생성자가 실패하고 보안 예외가 throw됩니다.  값 형식은 할당 취소되지 않고 기본 생성자에서 설정한 상태로 유지됩니다.  값 형식의 인스턴스를 전달하는 호출자에게 인스턴스를 만들거나 인스턴스에 액세스할 수 있는 권한이 있으리라고 가정하지 마십시오.  
+## <a name="rule-description"></a>Rule Description  
+ Value types are allocated and initialized by their default constructors before other constructors execute. If a value type is secured by a Demand or LinkDemand, and the caller does not have permissions that satisfy the security check, any constructor other than the default will fail, and a security exception will be thrown. The value type is not deallocated; it is left in the state set by its default constructor. Do not assume that a caller that passes an instance of the value type has permission to create or access the instance.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 형식에서 보안 검사를 제거하고 대신 메서드 수준의 보안 검사를 사용해야 합니다.  이러한 방식으로 위반 문제를 해결해도 적합하지 않은 권한을 갖는 호출자가 값 형식의 인스턴스를 얻는 것을 막을 수는 없습니다.  기본 상태에서 값 형식의 인스턴스가 중요한 정보를 노출하지 않는지, 그리고 악용될 소지가 없는지 확인해야 합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ You cannot fix a violation of this rule unless you remove the security check from the type, and use method level security checks in its place. Note that fixing the violation in this manner will not prevent callers with inadequate permissions from obtaining instances of the value type. You must ensure that an instance of the value type, in its default state, does not expose sensitive information, and cannot be used in a harmful manner.  
   
-## 경고를 표시하지 않는 경우  
- 모든 호출자가 보안에 위협을 가하지 않고 기본 상태에서 값 형식의 인스턴스를 얻을 수 있으면 이 규칙에서 경고를 표시하지 않을 수 있습니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ You can suppress a warning from this rule if any caller can obtain instances of the value type in its default state without posing a threat to security.  
   
-## 예제  
- 다음 예제에서는 이 규칙을 위반하는 값 형식이 들어 있는 라이브러리를 보여 줍니다.  `StructureManager` 형식에서는 값 형식의 인스턴스를 전달하는 호출자가 인스턴스를 만들고 인스턴스에 액세스할 수 있는 권한이 있다고 가정합니다.  
+## <a name="example"></a>Example  
+ The following example shows a library containing a value type that violates this rule. Note that the `StructureManager` type assumes that a caller that passes an instance of the value type has permission to create or access the instance.  
   
- [!code-cs[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]  
+ [!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]  
   
-## 예제  
- 다음 응용 프로그램에서는 라이브러리의 약점을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following application demonstrates the library's weakness.  
   
- [!code-cs[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]  
+ [!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]  
   
- 이 예제의 결과는 다음과 같습니다.  
+ This example produces the following output.  
   
-  **구조체 사용자 지정 생성자: 요청에 실패했습니다.**  
-**새 값 SecuredTypeStructure 100 100**  
-**새 값 SecuredTypeStructure 200 200**   
-## 참고 항목  
- [링크 요청](../Topic/Link%20Demands.md)   
- [데이터 및 모델링](../Topic/Data%20and%20Modeling%20in%20the%20.NET%20Framework.md)
+ **Structure custom constructor: Request failed.**  
+**New values SecuredTypeStructure 100 100**  
+**New values SecuredTypeStructure 200 200**   
+## <a name="see-also"></a>See Also  
+ [Link Demands](/dotnet/framework/misc/link-demands)   
+ [Data and Modeling](/dotnet/framework/data/index)

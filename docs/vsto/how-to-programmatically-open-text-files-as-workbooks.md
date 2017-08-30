@@ -1,50 +1,54 @@
 ---
-title: "방법: 프로그래밍 방식으로 통합 문서로 텍스트 파일 열기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "텍스트[Visual Studio에서 Office 개발], 텍스트 파일"
-  - "텍스트 파일, 통합 문서로 열기"
-  - "통합 문서, 텍스트 파일 열기"
+title: 'How to: Programmatically Open Text Files as Workbooks | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- workbooks, opening text files as
+- text [Office development in Visual Studio], text files
+- text files, opening as workbooks
 ms.assetid: 056ae3d0-7fe7-4c28-a2a5-5a948baee0e6
 caps.latest.revision: 47
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 46
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 9966164165f768f438516ba9df993c09a6197b5b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 통합 문서로 텍스트 파일 열기
-  텍스트 파일을 통합 문서로 열 수 있습니다.  열고자 하는 텍스트 파일의 이름을 전달해야 합니다.  구문 분석을 시작할 행 번호나 파일의 데이터에 대한 열 형식 등과 같은 여러 가지 선택적 매개 변수를 지정할 수 있습니다.  
+# <a name="how-to-programmatically-open-text-files-as-workbooks"></a>How to: Programmatically Open Text Files as Workbooks
+  You can open a text file as a workbook. You must pass in the name of the text file you want to open. You can specify several optional parameters, such as which row number to start parsing on and the column format of the data in the file.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## 예제  
- [!code-csharp[Trin_VstcoreExcelAutomation#80](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#80)]
- [!code-vb[Trin_VstcoreExcelAutomation#80](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#80)]  
+## <a name="example"></a>Example  
+ [!code-csharp[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#80)] [!code-vb[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#80)]  
   
-## 코드 컴파일  
- 이 예제를 실행하려면 다음 구성 요소가 준비되어 있어야 합니다.  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This example requires the following components:  
   
--   적어도 세 줄의 텍스트가 포함된 `Test.txt`라는 쉼표로 구분된 텍스트 파일이 있어야 합니다.  
+-   A comma-delimited text file named `Test.txt` that contains at least three lines of text.  
   
--   `Test.txt` 텍스트 파일이 C 드라이브에 저장되어 있어야 합니다.  
+-   The text file `Test.txt` to be stored on drive C.  
   
-## 참고 항목  
- [통합 문서 사용](../vsto/working-with-workbooks.md)   
- [방법: 프로그래밍 방식으로 통합 문서 열기](../vsto/how-to-programmatically-open-workbooks.md)   
- [방법: 프로그래밍 방식으로 새 통합 문서 만들기](../vsto/how-to-programmatically-create-new-workbooks.md)   
- [방법: 프로그래밍 방식으로 통합 문서 저장](../vsto/how-to-programmatically-save-workbooks.md)   
- [방법: 프로그래밍 방식으로 통합 문서 닫기](../vsto/how-to-programmatically-close-workbooks.md)   
- [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Workbooks](../vsto/working-with-workbooks.md)   
+ [How to: Programmatically Open Workbooks](../vsto/how-to-programmatically-open-workbooks.md)   
+ [How to: Programmatically Create New Workbooks](../vsto/how-to-programmatically-create-new-workbooks.md)   
+ [How to: Programmatically Save Workbooks](../vsto/how-to-programmatically-save-workbooks.md)   
+ [How to: Programmatically Close Workbooks](../vsto/how-to-programmatically-close-workbooks.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

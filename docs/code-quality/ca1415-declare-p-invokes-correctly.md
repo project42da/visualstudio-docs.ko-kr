@@ -1,53 +1,70 @@
 ---
-title: "CA1415: P/Invoke를 올바르게 선언하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1415"
-  - "DeclarePInvokesCorrectly"
-helpviewer_keywords: 
-  - "CA1415"
-  - "DeclarePInvokesCorrectly"
+title: 'CA1415: Declare P-Invokes correctly | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1415
+- DeclarePInvokesCorrectly
+helpviewer_keywords:
+- CA1415
+- DeclarePInvokesCorrectly
 ms.assetid: 42a90796-0264-4460-bf97-2fb4a093dfdc
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1415: P/Invoke를 올바르게 선언하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 2e19d4a786bb58ac6fac55ebcb977be8c330a081
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1415-declare-pinvokes-correctly"></a>CA1415: Declare P/Invokes correctly
 |||  
 |-|-|  
 |TypeName|DeclarePInvokesCorrectly|  
 |CheckId|CA1415|  
-|범주|Microsoft.Interoperability|  
-|변경 수준|주요 변경 아님 \- 매개 변수를 선언하는 P\/Invoke를 어셈블리 외부에서 볼 수 없는 경우  주요 변경 \- 매개 변수를 선언하는 P\/Invoke를 어셈블리 외부에서 볼 수 있는 경우|  
+|Category|Microsoft.Interoperability|  
+|Breaking Change|Non-breaking - If the P/Invoke that declares the parameter cannot be seen outside the assembly. Breaking - If the P/Invoke that declares the parameter can be seen outside the assembly.|  
   
-## 원인  
- 플랫폼 호출 메서드가 잘못 선언되었습니다.  
+## <a name="cause"></a>Cause  
+ A platform invoke method is incorrectly declared.  
   
-## 규칙 설명  
- 플랫폼 호출 메서드가 비관리 코드에 액세스하고 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 `Declare` 키워드 또는 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>를 사용하여 선언되었습니다.  현재 이 규칙에서는 OVERLAPPED 구조체 매개 변수에 대한 포인터가 있는 Win32 함수를 대상으로 하는 플랫폼 호출 메서드 선언을 찾는데 해당 관리 매개 변수가 <xref:System.Threading.NativeOverlapped?displayProperty=fullName> 구조체에 대한 포인터가 아닙니다.  
+## <a name="rule-description"></a>Rule Description  
+ A platform invoke method accesses unmanaged code and is defined by using the `Declare` keyword in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] or the <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>. Currently, this rule looks for platform invoke method declarations that target Win32 functions that have a pointer to an OVERLAPPED structure parameter and the corresponding managed parameter is not a pointer to a <xref:System.Threading.NativeOverlapped?displayProperty=fullName> structure.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 플랫폼 호출 메서드를 올바르게 선언합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, correctly declare the platform invoke method.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 예제  
- 다음 예제에서는 이 규칙을 위반하는 플랫폼 호출 메서드와 이 규칙을 충족하는 플랫폼 호출 메서드를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows platform invoke methods that violate the rule and satisfy the rule.  
   
- [!code-cs[FxCop.Interoperability.DeclarePInvokes#1](../code-quality/codesnippet/CSharp/ca1415-declare-p-invokes-correctly_1.cs)]  
+ [!code-csharp[FxCop.Interoperability.DeclarePInvokes#1](../code-quality/codesnippet/CSharp/ca1415-declare-p-invokes-correctly_1.cs)]  
   
-## 참고 항목  
- [비관리 코드와의 상호 운용](../Topic/Interoperating%20with%20Unmanaged%20Code.md)
+## <a name="see-also"></a>See Also  
+ [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)

@@ -1,54 +1,59 @@
 ---
-title: "리본 개체 모델 개요"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "리본[Visual Studio에서 Office 개발], 개체 모델"
+title: Ribbon Object Model Overview | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Ribbon [Office development in Visual Studio], object model
 ms.assetid: cae24f66-e980-41ee-a915-d4c8e03efbc1
 caps.latest.revision: 75
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 74
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6c00bd822f9b719027967d00313c0102bf0197e2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 리본 개체 모델 개요
-  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 를 가져오고 런타임에 리본 컨트롤의 속성을 설정 하는 데 사용할 수 있는 강력한 형식의 개체 모델을 노출 합니다.  예를 들어 메뉴 컨트롤을 동적으로 채우거나, 컨트롤을 상황에 따라 표시하고 숨길 수 있습니다.  Office 응용 프로그램에 리본 메뉴가 로드 되기 전에만 있지만 리본, 탭, 그룹 및 컨트롤 또한 추가할 수 있습니다.  자세한 내용은 [읽기 전용이 되는 속성 설정](#SettingReadOnlyProperties)을 참조하십시오.  
+# <a name="ribbon-object-model-overview"></a>Ribbon Object Model Overview
+  The [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] exposes a strongly typed object model that you can use to get and set the properties of ribbon controls at run time. For example, you can dynamically populate menu controls, or show and hide controls contextually. You can also add tabs, groups, and controls to a ribbon, but only before the ribbon is loaded by the Office application. For information, see [Setting Properties That Become Read-Only](#SettingReadOnlyProperties).  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
- 이 리본 개체 모델은 주로 [리본 클래스](#RibbonClass), [리본 이벤트](#RibbonEvents) 및 [리본 컨트롤 클래스](#RibbonControlClasses)로 구성됩니다.  
+ This Ribbon object model consists mainly of the [Ribbon Class](#RibbonClass), [Ribbon Events](#RibbonEvents), and [Ribbon Control Classes](#RibbonControlClasses).  
   
-##  <a name="RibbonClass"></a> 리본 클래스  
- 추가 새  **리본 \(비주얼 디자이너\)** 추가 하는 Visual Studio 프로젝트에 항목을 **Ribbon** 클래스를 프로젝트에.  **Ribbon** 클래스는 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> 클래스에서 상속합니다.  
+##  <a name="RibbonClass"></a> Ribbon Class  
+ When you add a new **Ribbon (Visual Designer)** item to a project, Visual Studio adds a **Ribbon** class to your project. The **Ribbon** class inherits from the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> class.  
   
- 이 클래스는 리본 코드 파일과 리본 디자이너 코드 파일로 나뉘는 partial 클래스로 나타납니다.  
+ This class appears as a partial class that is split between the Ribbon code file and the Ribbon Designer code file.  
   
-##  <a name="RibbonEvents"></a> 리본 이벤트  
- **Ribbon** 클래스는 다음과 같은 세 가지 이벤트를 포함 합니다.  
+##  <a name="RibbonEvents"></a> Ribbon Events  
+ The **Ribbon** class contains the following three events:  
   
-|Event|설명|  
-|-----------|--------|  
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>|Office 응용 프로그램의 리본 사용자 지정이 로드 될 때 발생 합니다.  <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load> 이벤트 처리기는 리본 코드 파일에 자동으로 추가 됩니다.  이 이벤트 처리기를 사용 하 여 리본을 로드할 때 사용자 지정 코드를 실행 하려면.|  
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>|리본을 로드할 때 리본 사용자 지정의 이미지를 캐시할 수 있습니다.  이 이벤트 처리기에서 리본 이미지를 캐시 하는 코드를 작성 하는 경우 약간의 성능 향상을 얻을 수 있습니다.  자세한 내용은 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>을 참조하십시오.|  
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Close>|리본 인스턴스가 닫힐 때 발생 합니다.|  
+|Event|Description|  
+|-----------|-----------------|  
+|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>|Raised when the Office application loads the ribbon customization. The <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load> event handler is automatically added to the ribbon code file. Use this event handler to run custom code when the ribbon loads.|  
+|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>|Enables you to cache images in the ribbon customization when the ribbon loads. You can get a slight performance gain if you write code to cache the ribbon images in this event handler. For more information, see <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>.|  
+|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Close>|Raised when the ribbon instance closes.|  
   
-##  <a name="RibbonControlClasses"></a> 리본 컨트롤  
- <xref:Microsoft.Office.Tools.Ribbon> 네임스페이스에는 **도구 상자**의 **Office 리본 컨트롤** 그룹에 표시되는 각 컨트롤에 대한 형식이 포함되어 있습니다.  
+##  <a name="RibbonControlClasses"></a> Ribbon Controls  
+ The <xref:Microsoft.Office.Tools.Ribbon> namespace contains a type for each control that you see in the **Office Ribbon Controls** group of the **Toolbox**.  
   
- 다음 표에서 형식 각각에 대 한 `Ribbon` 제어 합니다.  각 컨트롤에 대한 설명은 [리본 개요](../vsto/ribbon-overview.md)을 참조하십시오.  
+ The following table shows the type for each `Ribbon` control. For a description of each control, see [Ribbon Overview](../vsto/ribbon-overview.md).  
   
-|컨트롤 이름|클래스 이름|  
-|------------|------------|  
+|Control name|Class name|  
+|------------------|----------------|  
 |**Box**|<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>|  
 |**Button**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>|  
 |**ButtonGroup**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>|  
@@ -57,85 +62,83 @@ caps.handback.revision: 74
 |**DropDown**|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>|  
 |**EditBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|  
 |**Gallery**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
-|**그룹화**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|  
-|**레이블**|<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>|  
-|**메뉴**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|  
+|**Group**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|  
+|**Label**|<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>|  
+|**Menu**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|  
 |**Separator**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>|  
 |**SplitButton**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|  
 |**Tab**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|  
 |**ToggleButton**|<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|  
   
- <xref:Microsoft.Office.Tools.Ribbon> 네임스페이스에서는 이러한 형식에 대해 "Ribbon" 접두사를 사용하여 <xref:System.Windows.Forms> 네임스페이스에 있는 컨트롤 클래스와의 이름 충돌을 방지합니다.  
+ The <xref:Microsoft.Office.Tools.Ribbon> namespace uses the "Ribbon" prefix for these types to avoid a name collision with the names of control classes in the <xref:System.Windows.Forms> namespace.  
   
- 리본 디자이너에 컨트롤을 추가하면 리본 디자이너에서 해당 컨트롤에 대한 클래스를 리본 디자이너 코드 파일의 필드로 선언합니다.  
+ When you add a control to the Ribbon Designer, the Ribbon Designer declares the class for that control as a field in the Ribbon Designer code file.  
   
-### 리본 컨트롤의 속성을 사용한 일반적인 작업  
- 각 `Ribbon` 컨트롤에는 컨트롤에 레이블을 할당 하거나 컨트롤 숨기기 및 표시와 같은 다양 한 작업을 수행 하는 데 사용할 수 있는 속성이 포함 됩니다.  
+### <a name="common-tasks-using-the-properties-of-ribbon-controls"></a>Common Tasks Using the Properties of Ribbon Controls  
+ Each `Ribbon` control contains properties that you can use to perform various tasks, such as assigning a label to a control, or hiding and showing controls.  
   
- 경우에 따라서는 속성 리본 메뉴를 로드 한 후 또는 동적 메뉴에 컨트롤이 추가 된 후 읽기 전용으로 설정 됩니다.  자세한 내용은 [읽기 전용이 되는 속성 설정](#SettingReadOnlyProperties)을 참조하십시오.  
+ In some cases, properties become read-only after the ribbon loads or after a control is added to a dynamic menu. For more information, see [Setting Properties that Become Read-Only](#SettingReadOnlyProperties).  
   
- 다음 표에서 몇 가지를 사용 하 여 수행할 수 있는 작업 `Ribbon` 속성을 제어 합니다.  
+ The following table describes some of the tasks that you can perform by using `Ribbon` control properties.  
   
-|작업|작업 방법|  
-|--------|-----------|  
-|컨트롤을 숨기거나 표시합니다.|Visible 속성을 사용합니다.|  
-|컨트롤을 활성화하거나 비활성화합니다.|Enabled 속성을 사용합니다.|  
-|컨트롤 크기를 설정합니다.|ControlSize 속성을 사용합니다.|  
-|컨트롤에 나타나는 이미지를 가져옵니다.|Image 속성을 사용합니다.|  
-|컨트롤의 레이블을 변경합니다.|Label 속성을 사용합니다.|  
-|컨트롤에 사용자 정의 데이터를 추가합니다.|Tag 속성을 사용합니다.|  
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 또는<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton> 컨트롤의 항목을 가져옵니다.|Items 속성을 사용합니다.|  
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> 또는 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 컨트롤에 항목을 추가합니다.|Items 속성을 사용합니다.|  
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>에 컨트롤을 추가합니다.|Items 속성을 사용합니다.<br /><br /> 컨트롤을 추가 하는 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> 설정 해야 Office 응용 프로그램에 리본 메뉴가 로드 된 후의 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> 속성을 **true** Office 응용 프로그램에 리본 메뉴가 로드 되기 전에.  자세한 내용은 [읽기 전용이 되는 속성 설정](#SettingReadOnlyProperties)을 참조하십시오.|  
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>,<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> 또는 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>의 선택된 항목을 가져옵니다.|SelectedItem 속성을 사용합니다.  <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>의 경우 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A> 속성을 사용합니다.|  
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>의 그룹을 가져옵니다.|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab.Groups%2A> 속성을 사용합니다.|  
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>에 나타나는 행 및 열의 수를 지정합니다.|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> 및 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> 속성을 사용합니다.|  
+|For this task:|Do this:|  
+|--------------------|--------------|  
+|Hide or show a control.|Use the Visible property.|  
+|Enable or disable a control.|Use the Enabled property.|  
+|Set the size of a control.|Use the ControlSize property.|  
+|Get the image that appears on a control.|Use the Image property.|  
+|Change the label of a control.|Use the Label property.|  
+|Add user-defined data to a control.|Use the Tag property.|  
+|Get the items in a <xref:Microsoft.Office.Tools.Ribbon.RibbonBox>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>, or<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton> control.|Use the Items property.|  
+|Add items to a <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> control.|Use the Items property.|  
+|Add controls to a <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>.|Use the Items property.<br /><br /> To add controls to the <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> after the ribbon is loaded into the Office application, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> property to **true** before the ribbon is loaded into the Office application. For information, see [Setting Properties That Become Read-Only](#SettingReadOnlyProperties).|  
+|Get the selected item of a <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>,<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>.|Use the SelectedItem property. For a <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>, use the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A> property.|  
+|Get the groups on a <xref:Microsoft.Office.Tools.Ribbon.RibbonTab>.|Use the <xref:Microsoft.Office.Tools.Ribbon.RibbonTab.Groups%2A> property.|  
+|Specify the number of rows and columns that appear in a <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>.|Use the <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> and <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> properties.|  
   
-##  <a name="SettingReadOnlyProperties"></a> 읽기 전용이 되는 속성 설정  
- 일부 속성은 리본 메뉴가 로드 되기 전에만 설정할 수 있습니다.  이러한 속성은 다음 세 위치에서 설정할 수 있습니다.  
+##  <a name="SettingReadOnlyProperties"></a> Setting Properties That Become Read-Only  
+ Some properties can only be set before the ribbon loads. There are three places to set these properties:  
   
--   Visual Studio **속성** 창  
+-   In the Visual Studio **Properties** window.  
   
--   생성자에서에서 **Ribbon** 클래스입니다.  
+-   In the constructor of the **Ribbon** class.  
   
--   프로젝트에 사용된 `ThisAddin`, `ThisWorkbook` 또는 `ThisDocument` 클래스의 CreateRibbonExtensibilityObject 메서드  
+-   In the CreateRibbonExtensibilityObject method of the `ThisAddin`, `ThisWorkbook`, or `ThisDocument` class of your project.  
   
- 동적 메뉴는 몇 가지 예외를 제공합니다.  새 컨트롤을 만들 해당 속성을 설정 및 다음 런타임에 리본 메뉴가 로드 된 후에 동적 메뉴에 추가할 수 있습니다.  
+ Dynamic menus provide some exceptions. You can create new controls, set their properties, and then add them to a dynamic menu at run time, even after the ribbon that contains the menu is loaded.  
   
- 동적 메뉴에 추가하는 컨트롤의 속성은 아무 때나 설정할 수 있습니다.  
+ Properties of controls that you add to a dynamic menu can be set at any time.  
   
- 자세한 내용은 [읽기 전용이 되는 속성 설정](#ReadOnlyProperties)을 참조하십시오.  
+ For more information, see [Properties that Become Read-Only](#ReadOnlyProperties).  
   
-### 리본의 생성자에서 속성 설정  
- 속성을 설정할 수 있는 `Ribbon` 컨트롤의 생성자에는 **Ribbon** 클래스.  이 코드는 `InitializeComponent` 메서드를 호출한 후에 나타나야 합니다.  다음 예제에서는 현재 시간이 태평양 표준시\(UTC\-8\) 17:00 이후인 경우에 그룹에 새 단추를 추가합니다.  
+### <a name="setting-properties-in-the-constructor-of-the-ribbon"></a>Setting Properties in the Constructor of the Ribbon  
+ You can set the properties of a `Ribbon` control in the constructor of the **Ribbon** class. This code must appear after the call to the `InitializeComponent` method. The following example adds a new button to a group if the current time is 17:00 Pacific Time (UTC-8) or later.  
   
- 다음 코드를 추가합니다.  
+ Add the following code.  
   
- [!code-csharp[Trin_Ribbon_ObjectModel#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/Ribbon1.Designer.cs#1)]
- [!code-vb[Trin_Ribbon_ObjectModel#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/Ribbon1.Designer.vb#1)]  
+ [!code-csharp[Trin_Ribbon_ObjectModel#1](../vsto/codesnippet/CSharp/trin_ribbon_objectmodel_dotnet4/Ribbon1.Designer.cs#1)] [!code-vb[Trin_Ribbon_ObjectModel#1](../vsto/codesnippet/VisualBasic/trin_ribbon_objectmodel_dotnet4/Ribbon1.Designer.vb#1)]  
   
- C\# Visual Studio 2008에서 업그레이드 하는 프로젝트를 생성자에서 리본 코드 파일에 표시 됩니다.  
+ In Visual C# projects that you upgraded from Visual Studio 2008, the constructor appears in the ribbon code file.  
   
- C\#에서 만든 프로젝트 또는 Visual Basic 프로젝트에서 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)], 생성자 리본 디자이너 코드 파일에 표시 됩니다.  이 파일의 이름은 *YourRibbonItem*.Designer.cs 또는 *YourRibbonItem*.Designer.vb입니다.  Visual Basic 프로젝트에서 이 파일을 보려면 먼저 솔루션 탐색기에서 **모든 파일 표시** 단추를 클릭해야 합니다.  
+ In Visual Basic projects, or in Visual C# projects that you created in [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)], the constructor appears in the Ribbon Designer code file. This file is named *YourRibbonItem*.Designer.cs or *YourRibbonItem*.Designer.vb. To see this file in Visual Basic projects, you must first click the **Show All Files** button in Solution Explorer.  
   
-### CreateRibbonExtensibilityObject 메서드에서 속성 설정  
- 속성을 설정할 수는 `Ribbon` 재정의 하는 경우 컨트롤의 CreateRibbonExtensibilityObject 메서드에서 `ThisAddin`, `ThisWorkbook`, 또는 `ThisDocument` 프로젝트의 클래스.  CreateRibbonExtensibilityObject 메서드에 대한 자세한 내용은 [리본 개요](../vsto/ribbon-overview.md)을 참조하십시오.  
+### <a name="setting-properties-in-the-createribbonextensibilityobject-method"></a>Setting Properties in the CreateRibbonExtensibilityObject Method  
+ You can set the properties of a `Ribbon` control when you override the CreateRibbonExtensibilityObject method in the `ThisAddin`, `ThisWorkbook`, or `ThisDocument` class of your project. For more information about the CreateRibbonExtensibilityObject method, see [Ribbon Overview](../vsto/ribbon-overview.md).  
   
- 리본 속성을 설정 하는 예제는 CreateRibbonExtensibilityObject 메서드는 `ThisWorkbook` Excel 통합 문서 프로젝트의 클래스입니다.  
+ The following example sets ribbon properties in the CreateRibbonExtensibilityObject method of the `ThisWorkbook` class of an Excel workbook project.  
   
- 다음 코드를 추가합니다.  
+ Add the following code.  
   
- [!code-csharp[Trin_Ribbon_ObjectModel#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/ThisWorkbook.cs#2)]
- [!code-vb[Trin_Ribbon_ObjectModel#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/ThisWorkbook.vb#2)]  
+ [!code-vb[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/VisualBasic/trin_ribbon_objectmodel_dotnet4/ThisWorkbook.vb#2)] [!code-csharp[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/CSharp/trin_ribbon_objectmodel_dotnet4/ThisWorkbook.cs#2)]  
   
-###  <a name="ReadOnlyProperties"></a> 읽기 전용이 되는 속성  
- 다음 표에서는 리본 메뉴가 로드되기 전에만 설정할 수 있는 속성을 보여 줍니다.  
+###  <a name="ReadOnlyProperties"></a> Properties That Become Read-Only  
+ The following table shows properties that can only be set before the Ribbon loads.  
   
 > [!NOTE]  
->  동적 메뉴의 컨트롤 속성은 아무 때나 설정할 수 있습니다.  이러한 경우 다음 표의 내용이 적용되지 않습니다.  
+>  You can set the properties of controls on dynamic menus at any time. This table does not apply in that case.  
   
-|속성|리본 컨트롤 클래스|  
-|--------|----------------|  
+|Property|Ribbon control class|  
+|--------------|--------------------------|  
 |**BoxStyle**|<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>|  
 |**ButtonType**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|  
 |**ColumnCount**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
@@ -143,12 +146,12 @@ caps.handback.revision: 74
 |**DialogLauncher**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|  
 |**Dynamic**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|  
 |**Global**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|  
-|**그룹**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|  
+|**Groups**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|  
 |**ImageName**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|  
 |**ItemSize**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|  
 |**MaxLength**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|  
-|**이름**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|  
-|**위치**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonTab><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|  
+|**Name**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|  
+|**Position**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonTab><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|  
 |**RibbonType**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|  
 |**RowCount**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
 |**ShowItemImage**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
@@ -156,47 +159,47 @@ caps.handback.revision: 74
 |**ShowItemSelection**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
 |**SizeString**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|  
 |**StartFromScratch**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|  
-|**탭**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|  
-|**제목**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>|  
+|**Tabs**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|  
+|**Title**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>|  
   
-### Outlook 검사기에 나타나는 리본 메뉴의 속성 설정  
- 리본 메뉴의 새 인스턴스를 열면 검사기 리본 메뉴 표시 될 때마다 만들어집니다.  그러나 리본 메뉴의 첫 번째 인스턴스가 만들어지기 전에만 위의 표에 나열 된 속성을 설정할 수 있습니다.  후 첫 번째 인스턴스를 만들 이러한 속성이 읽기 전용이 되므로 첫 번째 인스턴스가 Outlook에서 리본 메뉴를 로드 하는 XML 파일을 정의 합니다.  
+### <a name="setting-properties-for-ribbons-that-appear-in-outlook-inspectors"></a>Setting Properties for Ribbons that Appear in Outlook Inspectors  
+ A new instance of the ribbon is created each time a user opens an Inspector in which the ribbon appears. However, you can set the properties listed in the table above only before the first instance of the ribbon is created. After the first instance is created, these properties become read-only because the first instance defines the XML file that Outlook uses to load the ribbon.  
   
- 리본 메뉴의 다른 인스턴스가 만들어질 때 이러한 속성을 다른 값으로 설정 하는 조건부 논리를 사용 하는 경우이 코드는 효과가 없습니다.  
+ If you have conditional logic that sets any of these properties to a different value when other instances of the ribbon are created, this code will have no effect.  
   
 > [!NOTE]  
->  하는  **이름** Outlook 리본 메뉴에 추가한 각 컨트롤에 대해 속성을 설정 합니다.  런타임에 Outlook 리본 메뉴에 컨트롤을 추가 하면 코드에서이 속성을 설정 해야 있습니다.  디자인 타임에 Outlook 리본 메뉴에 컨트롤을 추가 하면 Name 속성이 자동으로 설정 됩니다.  
+>  Ensure that the **Name** property is set for each control that you add to an Outlook ribbon. If you add a control to an Outlook ribbon at run time, you must set this property in your code. If you add a control to an Outlook ribbon at design time, the Name property is set automatically.  
   
-## 리본 컨트롤 이벤트  
- 각 컨트롤 클래스에는 하나 이상의 이벤트가 포함되어 있습니다.  다음 표에서는 이러한 이벤트를 설명합니다.  
+## <a name="ribbon-control-events"></a>Ribbon Control Events  
+ Each control class contains one or more events. The following table describes these events.  
   
-|Event|설명|  
-|-----------|--------|  
-|Click|컨트롤을 클릭하면 발생합니다.|  
-|TextChanged|입력란 또는 콤보 상자의 텍스트가 변경되면 발생합니다.|  
-|ItemsLoading|Office에서 컨트롤의 Items 컬렉션이 필요한 경우에 발생합니다.  코드를 통해 컨트롤의 속성이 변경될 때까지 Office에서 Items 컬렉션을 캐시하거나 사용자가 직접 <xref:Microsoft.Office.Core.IRibbonUI.InvalidateControl%2A> 메서드를 호출할 수 있습니다.|  
-|ButtonClick|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 또는 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>의 단추를 클릭하면 발생합니다.|  
-|SelectionChanged|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> 또는 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>의 선택 영역이 변경되면 발생합니다.|  
-|DialogLauncherClick|그룹의 오른쪽 아래에 있는 대화 상자 표시 아이콘을 클릭하면 발생합니다.|  
+|Event|Description|  
+|-----------|-----------------|  
+|Click|Occurs when a control is clicked.|  
+|TextChanged|Occurs when the text of an edit box or combo box is changed.|  
+|ItemsLoading|Occurs when the Items collection of the control is requested by Office. Office caches the Items collection until your code changes the properties of the control, or you call the <xref:Microsoft.Office.Core.IRibbonUI.InvalidateControl%2A> method.|  
+|ButtonClick|Occurs when a button in a <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> or <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> is clicked.|  
+|SelectionChanged|Occurs when the selection in a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> or <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> changes.|  
+|DialogLauncherClick|Occurs when the dialog launcher icon in the lower-right corner of a group is clicked.|  
   
- 이러한 이벤트에 대한 이벤트 처리기에는 다음 두 개의 매개 변수가 사용됩니다.  
+ The event handlers for these events have the following two parameters.  
   
-|Parameter|설명|  
-|---------------|--------|  
-|*sender*|이벤트를 발생시킨 컨트롤을 나타내는 <xref:System.Object>입니다.|  
-|*e*|<xref:Microsoft.Office.Core.IRibbonControl>이 들어 있는 <xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventArgs>입니다.  이 컨트롤은 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서 제공하는 리본 개체 모델에서 사용할 수 없는 속성에 액세스하는 데 사용합니다.|  
+|Parameter|Description|  
+|---------------|-----------------|  
+|*sender*|An <xref:System.Object> that represents the control that raised the event.|  
+|*e*|A <xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventArgs> that contains a <xref:Microsoft.Office.Core.IRibbonControl>. Use this control to access any property that is not available in the Ribbon object model provided by the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].|  
   
-## 참고 항목  
- [런타임에 리본 메뉴에 액세스](../vsto/accessing-the-ribbon-at-run-time.md)   
- [리본 개요](../vsto/ribbon-overview.md)   
- [방법: 리본 메뉴 사용자 지정 시작](../vsto/how-to-get-started-customizing-the-ribbon.md)   
- [리본 디자이너](../vsto/ribbon-designer.md)   
- [연습: 리본 디자이너를 사용하여 사용자 지정 탭 만들기](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
- [연습: 런타임에 리본 메뉴의 컨트롤 업데이트](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)   
- [Outlook에 대해 리본 메뉴 사용자 지정](../vsto/customizing-a-ribbon-for-outlook.md)   
- [방법: 기본 제공 탭 사용자 지정](../vsto/how-to-customize-a-built-in-tab.md)   
- [방법: Backstage 보기에 컨트롤 추가](../vsto/how-to-add-controls-to-the-backstage-view.md)   
- [방법: 리본 디자이너에서 리본 XML로 리본 메뉴 내보내기](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)   
- [방법: 추가 기능 사용자 인터페이스 오류 표시](../vsto/how-to-show-add-in-user-interface-errors.md)  
+## <a name="see-also"></a>See Also  
+ [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
+ [Ribbon Overview](../vsto/ribbon-overview.md)   
+ [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md)   
+ [Ribbon Designer](../vsto/ribbon-designer.md)   
+ [Walkthrough: Creating a Custom Tab by Using the Ribbon Designer](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
+ [Walkthrough: Updating the Controls on a Ribbon at Run Time](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)   
+ [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md)   
+ [How to: Customize a Built-in Tab](../vsto/how-to-customize-a-built-in-tab.md)   
+ [How to: Add Controls to the Backstage View](../vsto/how-to-add-controls-to-the-backstage-view.md)   
+ [How to: Export a Ribbon from the Ribbon Designer to Ribbon XML](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)   
+ [How to: Show Add-in User Interface Errors](../vsto/how-to-show-add-in-user-interface-errors.md)  
   
   

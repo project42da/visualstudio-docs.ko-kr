@@ -1,101 +1,114 @@
 ---
-title: "2단계: 난수 더하기 문제 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Step 2: Create a Random Addition Problem | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6461c4cf-f2aa-4bf5-91ed-06820a4f893d
 caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# 2단계: 난수 더하기 문제 만들기
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 800b113b78da57b4bd0a3a760c884b96c9b138c2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-이 자습서의 2단계에서는 난수 기반 수학 문제를 추가하여 퀴즈를 좀 더 어렵게 만듭니다.  문제를 채우고 카운트다운 타이머를 시작하는 `StartTheQuiz()`라는 메서드도 추가합니다.  이 자습서의 뒷부분에서는 빼기, 곱하기 및 나누기 문제를 추가합니다.  
+---
+# <a name="step-2-create-a-random-addition-problem"></a>Step 2: Create a Random Addition Problem
+In the second part of this tutorial, you make the quiz challenging by adding math problems that are based on random numbers. You also create a method that's named `StartTheQuiz()` and that fills in the problems and starts the countdown timer. Later in this tutorial, you'll add the subtraction, multiplication, and division problems.  
   
 > [!NOTE]
->  이 항목은 기본 코딩 개념에 대해 설명하는 자습서 시리즈의 일부입니다.  자습서에 대한 개요는 [자습서 2: 시간이 지정된 수학 퀴즈 만들기](../ide/tutorial-2-create-a-timed-math-quiz.md)를 참조하십시오.  
+>  This topic is part of a tutorial series about basic coding concepts. For an overview of the tutorial, see [Tutorial 2: Create a Timed Math Quiz](../ide/tutorial-2-create-a-timed-math-quiz.md).  
   
-### 난수 더하기 문제를 만들려면  
+### <a name="to-create-a-random-addition-problem"></a>To create a random addition problem  
   
-1.  폼 디자이너에서 폼\(Form1\)을 선택합니다.  
+1.  In the form designer, choose the form (Form1).  
   
-2.  메뉴 모음에서 **보기**, **코드**를 차례로 선택합니다.  
+2.  On the menu bar, choose **View**, **Code**.  
   
-     폼의 숨김 코드를 볼 수 있도록 사용 중인 프로그래밍 언어에 따라 Form1.cs 또는 Form1.vb가 표시됩니다.  
+     Form1.cs or Form1.vb appears, depending on the programming language that you're using, so that you can view the code behind the form.  
   
-3.  코드 위쪽에 다음과 같은 `new` 문을 추가하여 `Random` 개체를 만듭니다.  
+3.  Create a `Random` object by adding a `new` statement near the top of the code, like the following.  
   
-     [!code-cs[VbExpressTutorial3Step2#1](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_1.cs)]
-     [!code-vb[VbExpressTutorial3Step2#1](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_1.vb)]  
+     [!code-csharp[VbExpressTutorial3Step2#1](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_1.cs)]  [!code-vb[VbExpressTutorial3Step2#1](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_1.vb)]  
   
-     `Random` 개체가 폼에 추가되고 이름이 **randomizer**로 지정되었습니다.  
+     You've added a `Random` object to your form and named the object **randomizer**.  
   
-     `Random`을 개체라고 합니다.  이전에 한 번쯤 들어보았을 개체의 프로그래밍적 의미에 대해서는 다음 자습서에서 자세히 설명합니다.  지금은 `new` 문을 사용하여 개체라고 하는 단추, 레이블, 패널, OpenFileDialogs, ColorDialogs, SoundPlayers, Randoms, 폼 등의 항목을 만들 수 있다는 점만 기억하면 됩니다.  프로그램을 실행하면 폼이 시작되고 폼의 숨김 코드가 `Random` 개체를 만들어 이름을 **randomizer**로 지정합니다.  
+     `Random` is known as an object. You've probably heard that word before, and you learn more about what it means for programming in the next tutorial. For now, just remember that you can use `new` statements to create buttons, labels, panels, OpenFileDialogs, ColorDialogs, SoundPlayers, Randoms, and even forms, and those items are referred to as objects. When you run your program, the form is started, and the code behind it creates a `Random` object and names it **randomizer**.  
   
-     이제 곧 답을 확인하는 메서드를 빌드하게 되므로 퀴즈에서는 각 문제에 대해 생성하는 난수를 저장할 변수를 사용해야 합니다.  [Variables](/dotnet/visual-basic/programming-guide/language-features/variables/index) 또는 [형식](/dotnet/csharp/programming-guide/types/index)을 참조하십시오.  변수를 적절히 사용하려면 변수를 선언해야 합니다. 즉, 변수의 이름과 데이터 형식을 나열해야 합니다.  
+     Soon you'll build a method to check the answers, so your quiz must use variables to store the random numbers that it generates for each problem. See [Variables](/dotnet/visual-basic/programming-guide/language-features/variables/index) or [Types](/dotnet/csharp/programming-guide/types/index). To properly use variables, you must declare them, which means listing their names and data types.  
   
-4.  폼에 두 개의 정수 변수를 추가하고 이름을 **addend1** 및 **addend2**로 지정합니다.  
-  
-    > [!NOTE]
-    >  정수 변수를 C\#에서는 int라고 하고 Visual Basic에서는 Integer라고 합니다.  이러한 종류의 변수는 \-2147483648에서 2147483647 사이의 소수가 아닌 양의 정수 또는 음의 정수만 저장할 수 있습니다.  
-  
-     다음 코드에서처럼 `Random` 개체를 추가할 때와 비슷한 구문을 사용하여 정수 변수를 추가할 수 있습니다.  
-  
-     [!code-cs[VbExpressTutorial3Step2#2](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_2.cs)]
-     [!code-vb[VbExpressTutorial3Step2#2](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_2.vb)]  
-  
-5.  `Random` 개체의 `Next()` 메서드를 사용하여 레이블에 난수를 표시하는 `StartTheQuiz()`라는 메서드를 추가합니다.  `StartTheQuiz()`는 모든 문제를 채우고 타이머를 시작합니다. 주석을 추가하십시오.  함수는 다음과 같습니다.  
-  
-     [!code-cs[VbExpressTutorial3Step2#3](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_3.cs)]
-     [!code-vb[VbExpressTutorial3Step2#3](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_3.vb)]  
-  
-     코드에서 randomizer 뒤에 점\(.\)을 입력하면 IntelliSense 창이 열리고 호출 가능한 `Random` 개체의 모든 메서드가 표시됩니다.  Intellisense에 나열되는 `Next()` 메서드를 예로 들면 다음과 같습니다.  
-  
-     ![Next 메서드](~/ide/media/express_randomwhite.png "Express\_RandomWhite")  
-Next 메서드  
-  
-     개체 뒤에 점을 입력하면 IntelliSense에 속성, 메서드, 이벤트 등 개체의 멤버 목록이 표시됩니다.  
+4.  Add two integer variables to the form, and name them **addend1** and **addend2**.  
   
     > [!NOTE]
-    >  `randomizer.Next(50)`를 호출할 때처럼 `Next()` 메서드를 `Random` 개체와 함께 사용하는 경우 50 미만\(0에서 49 사이\)의 난수가 반환됩니다.  이 예제에서는 `randomizer.Next(51)`가 호출되었습니다.  50이 아니라 51이 사용된 이유는 두 난수를 더해 0에서 100 사이의 답이 나오도록 하기 위해서입니다.  `Next()` 메서드에 50을 전달하면 0에서 49 사이의 숫자가 선택되므로 가능한 가장 큰 답은 100이 아니라 98입니다.  이 메서드의 처음 두 문을 실행하고 나면 두 개의 정수 변수인 `addend1`과 `addend2`에 각각 0에서 50 사이의 난수 값이 들어갑니다.  이 스크린 샷에는 Visual C\# 코드가 나와 있지만 Visual Basic에서도 IntelliSense가 동일하게 작동합니다.  
+    >  An integer variable is known as an int in C# or an Integer in Visual Basic. This kind of variable stores a positive or negative number from -2147483648 through 2147483647 and can store only whole numbers, not decimals.  
   
-     이러한 문을 자세히 살펴봅니다.  
+     You use a similar syntax to add an integer variable as you did to add the `Random` object, as the following code shows.  
   
-     [!code-cs[VbExpressTutorial3Step2#18](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_4.cs)]
-     [!code-vb[VbExpressTutorial3Step2#18](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_4.vb)]  
+     [!code-csharp[VbExpressTutorial3Step2#2](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_2.cs)]  [!code-vb[VbExpressTutorial3Step2#2](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_2.vb)]  
   
-     이러한 문은 **plusLeftLabel**과 **plusRightLabel**의 **Text** 속성을 설정하여 레이블에서 두 개의 난수를 표시하도록 합니다.  정수의 `ToString()` 메서드를 사용하여 숫자를 텍스트로 변환해야 합니다. 프로그래밍에서 문자열은 텍스트를 의미합니다.  레이블 컨트롤에는 숫자가 아니라 텍스트만 표시됩니다.  
+5.  Add a method that's named `StartTheQuiz()` and that uses the `Random` object's `Next()` method to show the random numbers in the labels. `StartTheQuiz()` will eventually fill in all of the problems and then start the timer, so add a comment. The function should look like the following.  
   
-6.  디자인 창에서 **시작** 단추를 두 번 클릭하거나, 이 단추를 선택한 후 Enter 키를 선택합니다.  
+     [!code-csharp[VbExpressTutorial3Step2#3](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_3.cs)]  [!code-vb[VbExpressTutorial3Step2#3](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_3.vb)]  
   
-     퀴즈를 푸는 사람이 이 단추를 선택하면 퀴즈가 시작되어야 합니다. 이 동작을 구현하기 위해 방금 전에 Click 이벤트 처리기를 추가했습니다.  
+     Notice that when you enter the dot (.) after **randomizer** in the code, an IntelliSense window opens and shows you all of the `Random` object's methods that you can call. For example, Intellisense lists the `Next()` method, as follows.  
   
-7.  다음 두 문을 추가합니다.  
+     ![Next method](../ide/media/express_randomwhite.png "Express_RandomWhite")  
+Next method  
   
-     [!code-cs[VbExpressTutorial3Step2#4](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_5.cs)]
-     [!code-vb[VbExpressTutorial3Step2#4](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_5.vb)]  
+     When you enter a dot after an object, IntelliSense shows a list of the object's members, such as properties, methods, and events.  
   
-     첫 번째 문은 새 `StartTheQuiz()` 메서드를 호출합니다.  두 번째 문은 **startButton** 컨트롤의 **Enabled** 속성을 **False**로 설정하여 퀴즈를 푸는 사람이 퀴즈를 푸는 동안 이 단추를 선택할 수 없도록 합니다.  
+    > [!NOTE]
+    >  When you use the `Next()` method with the `Random` object, such as when you call `randomizer.Next(50)`, you get a random number that's less than 50 (from 0 through 49). In this example, you called `randomizer.Next(51)`. You used 51 and not 50 so that the two random numbers will add up to an answer that's from 0 through 100. If you pass 50 to the `Next()` method, it chooses a number from 0 through 49, so the highest possible answer is 98, not 100. After the first two statements in the method run, each of the two integer variables, `addend1` and `addend2`, hold a random number from 0 through 50. This screenshot shows Visual C# code, but IntelliSense works the same way for Visual Basic.  
   
-8.  코드를 저장하고 실행한 다음 **시작** 단추를 선택합니다.  
+     Take a closer look at these statements.  
   
-     다음 그림과 같이 난수 더하기 문제가 나타납니다.  
+     [!code-csharp[VbExpressTutorial3Step2#18](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_4.cs)]  [!code-vb[VbExpressTutorial3Step2#18](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_4.vb)]  
   
-     ![임의의 덧셈 문제](../ide/media/express_additionproblem.png "Express\_AdditionProblem")  
-난수 더하기 문제  
+     The statements set the **Text** properties of **plusLeftLabel** and **plusRightLabel** so that they display the two random numbers. You must use the integer's `ToString()` method to convert the numbers to text. (In programming, string means text. Label controls display only text, not numbers.  
   
-     자습서의 다음 단계에서는 합계를 추가합니다.  
+6.  In the design window, either double-click the **Start** button, or choose it and then choose the Enter key.  
   
-### 계속하거나 검토하려면  
+     When a quiz taker chooses this button, the quiz should start, and you've just added a Click event handler to implement that behavior.  
   
--   다음 자습서 단계로 이동하려면 [3단계: 카운트다운 타이머 추가](../ide/step-3-add-a-countdown-timer.md)를 참조하십시오.  
+7.  Add the following two statements.  
   
--   이전 자습서 단계로 돌아가려면 [1단계: 프로젝트 만들기 및 폼에 레이블 추가](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)를 참조하십시오.
+     [!code-csharp[VbExpressTutorial3Step2#4](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_5.cs)]  [!code-vb[VbExpressTutorial3Step2#4](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_5.vb)]  
+  
+     The first statement calls the new `StartTheQuiz()` method. The second statement sets the **Enabled** property of the **startButton** control to **False** so that the quiz taker can't choose the button during a quiz.  
+  
+8.  Save your code, run it, and then choose the **Start** button.  
+  
+     A random addition problem appears, as the following illustration shows.  
+  
+     ![Random addition problem](../ide/media/express_additionproblem.png "Express_AdditionProblem")  
+Random addition problem  
+  
+     In the next step of the tutorial, you'll add the sum.  
+  
+### <a name="to-continue-or-review"></a>To continue or review  
+  
+-   To go to the next tutorial step, see [Step 3: Add a Countdown Timer](../ide/step-3-add-a-countdown-timer.md).  
+  
+-   To return to the previous tutorial step, see [Step 1: Create a Project and Add Labels to Your Form](../ide/step-1-create-a-project-and-add-labels-to-your-form.md).

@@ -1,78 +1,92 @@
 ---
-title: "CA1816: GC.SuppressFinalize를 올바르게 호출하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1816"
-  - "DisposeMethodsShouldCallSuppressFinalize"
-helpviewer_keywords: 
-  - "CA1816"
-  - "DisposeMethodsShouldCallSuppressFinalize"
+title: 'CA1816: Call GC.SuppressFinalize correctly | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1816
+- DisposeMethodsShouldCallSuppressFinalize
+helpviewer_keywords:
+- DisposeMethodsShouldCallSuppressFinalize
+- CA1816
 ms.assetid: 47915fbb-103f-4333-b157-1da16bf49660
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1816: GC.SuppressFinalize를 올바르게 호출하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 43f0cf6749b6ad7a329f814aa9fbb19658912af9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1816-call-gcsuppressfinalize-correctly"></a>CA1816: Call GC.SuppressFinalize correctly
 |||  
 |-|-|  
 |TypeName|CallGCSuppressFinalizeCorrectly|  
 |CheckId|CA1816|  
-|범주|Microsoft.  용도|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft. Usage|  
+|Breaking Change|Non Breaking|  
   
-## 원인  
+## <a name="cause"></a>Cause  
   
--   <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>를 구현하는 메서드에서 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>를 호출하지 않습니다.  
+-   A method that is an implementation of <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> does not call <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
   
--   <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>를 구현하지 않는 메서드에서 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>를 호출합니다.  
+-   A method that is not an implementation of <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> calls <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
   
--   메서드에서 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>를 호출하면서 이것\(Visual Basic의 경우 Me\)이 아닌 다른 개체를 전달합니다.  
+-   A method calls <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> and passes something other than this (Me in Visual Basic).  
   
-## 규칙 설명  
- <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 메서드를 사용하면 개체가 가비지 수집 대상이 되기 전에 언제든지 리소스를 해제할 수 있습니다.  <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 메서드를 호출하면 개체의 리소스가 해제됩니다.  따라서 반드시 종료할 필요가 없습니다.  <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>에서는 가비지 수집기가 개체의 종료자를 호출하지 않도록 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>를 호출해야 합니다.  
+## <a name="rule-description"></a>Rule Description  
+ The <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> method lets users release resources at any time before the object becoming available for garbage collection. If the <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> method is called, it frees resources of the object. This makes finalization unnecessary. <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> should call <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> so the garbage collector does not call the finalizer of the object.  
   
- 종료자가 있는 파생 형식에서 [System.IDisposable](assetId:///System.IDisposable?qualifyHint=True&autoUpgrade=False)을 다시 구현하여 호출할 필요가 없게 하려면 종료자가 없는 봉인되지 않은 형식에서도 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>를 호출해야 합니다.  
+ To prevent derived types with finalizers from having to re-implement <xref:System.IDisposable> and to call it, unsealed types without finalizers should still call <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 다음을 수행합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule:  
   
- <xref:System.IDisposable.Dispose%2A>를 구현하는 메서드인 경우 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>에 대한 호출을 추가합니다.  
+ If the method is an implementation of <xref:System.IDisposable.Dispose%2A>, add a call to <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
   
- <xref:System.IDisposable.Dispose%2A>를 구현하는 메서드가 아닌 경우 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>에 대한 호출을 제거하거나 형식의 <xref:System.IDisposable.Dispose%2A> 구현으로 옮깁니다.  
+ If the method is not an implementation of <xref:System.IDisposable.Dispose%2A>, either remove the call to <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> or move it to the type's <xref:System.IDisposable.Dispose%2A> implementation.  
   
- <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>에 대한 모든 호출을 이곳으로 전달하도록 변경합니다\(Visual Basic의 경우 Me\).  
+ Change all calls to <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> to pass this (Me in Visual Basic).  
   
-## 경고를 표시하지 않는 경우  
- 의도적으로 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>를 사용하여 다른 개체의 수명을 제어하는 경우에만 이 규칙에 따른 경고를 표시하지 마십시오.  <xref:System.IDisposable.Dispose%2A>의 구현에서 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>를 호출하지 않는 경우에는 이 규칙에 따른 경고를 표시해야 합니다.  이러한 경우 종료를 억제하지 않으면 성능이 저하되고 다른 이점도 없습니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Only suppress a warning from this rule if you are deliberating using <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> to control the lifetime of other objects. Do not suppress a warning from this rule if an implementation of <xref:System.IDisposable.Dispose%2A> does not call <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>. In this situation, failing to suppress finalization degrades performance and provide no benefits.  
   
-## 예제  
- 다음 예제에서는 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>를 올바르지 않게 호출하는 메서드를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows a method that incorrectly calls <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
   
- [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_1.vb)]
- [!code-cs[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/CSharp/ca1816-call-gc-suppressfinalize-correctly_1.cs)]  
+ [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_1.vb)] [!code-csharp[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/CSharp/ca1816-call-gc-suppressfinalize-correctly_1.cs)]  
   
-## 예제  
- 다음 예제에서는 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>를 올바르게 호출하는 메서드를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows a method that correctly calls <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
   
- [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_2.vb)]
- [!code-cs[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../code-quality/codesnippet/CSharp/ca1816-call-gc-suppressfinalize-correctly_2.cs)]  
+ [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_2.vb)] [!code-csharp[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../code-quality/codesnippet/CSharp/ca1816-call-gc-suppressfinalize-correctly_2.cs)]  
   
-## 관련 규칙  
- [CA2215: Dispose 메서드는 기본 클래스 Dispose를 호출해야 합니다.](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA2215: Dispose methods should call base class dispose](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)  
   
- [CA2216: 삭제 가능한 형식은 종료자를 선언해야 합니다.](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
+ [CA2216: Disposable types should declare finalizer](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
   
-## 참고 항목  
- [삭제 패턴](../Topic/Dispose%20Pattern.md)
+## <a name="see-also"></a>See Also  
+ [Dispose Pattern](/dotnet/standard/design-guidelines/dispose-pattern)

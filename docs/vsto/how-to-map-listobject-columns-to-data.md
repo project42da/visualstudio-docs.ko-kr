@@ -1,72 +1,73 @@
 ---
-title: "방법: 데이터에 ListObject 열 매핑"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "데이터[Visual Studio에서 Office 개발], ListObject 열에 매핑"
-  - "ListObject 컨트롤, 데이터 매핑"
+title: 'How to: Map ListObject Columns to Data | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Office development in Visual Studio], mapping to ListObject column
+- ListObject control, mapping data
 ms.assetid: 2108d0c3-d595-410e-a0ae-3dd53bf6bcc7
 caps.latest.revision: 36
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 35
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 1e9e9fd50f37332b91721856e698a690e4ea45a4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 데이터에 ListObject 열 매핑
-  <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤을 <xref:System.Data.DataTable>에 바인딩할 때 목록에 있는 모든 열이 표시되는 것을 원하지 않거나 데이터에 바인딩되지 않은 특정 열이 있을 수 있습니다.<xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> 메서드를 호출할 때 <xref:Microsoft.Office.Tools.Excel.ListObject>에 나타내려는 열을 매핑할 수 있습니다.  
+# <a name="how-to-map-listobject-columns-to-data"></a>How to: Map ListObject Columns to Data
+  When you bind a <xref:Microsoft.Office.Tools.Excel.ListObject> control to a <xref:System.Data.DataTable>, you might not want to display all the columns in a list, or you might have certain columns that are not bound to data. You can map which columns you want to appear in the <xref:Microsoft.Office.Tools.Excel.ListObject> when you call the <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> method.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 동영상 데모는 [어떻게 할까요?: Excel에서 SharePoint 목록에 연결된 목록 만들기](http://go.microsoft.com/fwlink/?LinkID=130263)를 참조하세요.  
+ ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Create a List in Excel that is Connected to a SharePoint List?](http://go.microsoft.com/fwlink/?LinkID=130263).  
   
-## 열 매핑  
+## <a name="mapping-columns"></a>Mapping Columns  
   
-#### 데이터 테이블을 목록의 열에 매핑하려면  
+#### <a name="to-map-a-data-table-to-columns-in-a-list"></a>To map a data table to columns in a list  
   
-1.  클래스 수준에서 <xref:System.Data.DataTable>을 만듭니다.  
+1.  Create the <xref:System.Data.DataTable> at the class level.  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#16](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet3.cs#16)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#16](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/VB/Sheet3.vb#16)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#16](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#16)]  [!code-vb[Trin_VstcoreHostControlsExcel#16](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#16)]  
   
-2.  `Sheet1` 클래스\(문서 수준 프로젝트\) 또는 `ThisAddIn` 클래스\(VSTO 추가 기능 프로젝트\)의 `Startup` 이벤트 처리기에서 샘플 열과 데이터를 추가합니다.  
+2.  Add sample columns and data in the `Startup` event handler of the `Sheet1` class (in a document-level project) or `ThisAddIn` class (in an VSTO Add-in project).  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#17](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet3.cs#17)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#17](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/VB/Sheet3.vb#17)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#17)]  [!code-vb[Trin_VstcoreHostControlsExcel#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#17)]  
   
-3.  <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> 메서드를 호출하고 표시할 순서대로 열 이름을 전달합니다. 목록 개체는 새로 만들어진 <xref:System.Data.DataTable>에 바인딩되지만 목록 개체의 열 순서는 <xref:System.Data.DataTable>에 나타나는 순서와 다릅니다.  
+3.  Call the <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> method and pass in the column names in the order they should appear. The list object will be bound to the newly-created <xref:System.Data.DataTable>, but the order of the columns in the list object will differ from the order they appear in the <xref:System.Data.DataTable>.  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#18](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet3.cs#18)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#18](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/VB/Sheet3.vb#18)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#18)]  [!code-vb[Trin_VstcoreHostControlsExcel#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#18)]  
   
-## 매핑되지 않은 열 지정  
- <xref:System.Data.DataTable>에 열을 매핑할 때 빈 문자열을 전달하여 특정 열이 데이터에 바인딩되지 않도록 지정할 수도 있습니다. 데이터에 바인딩되지 않은 새 열은 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤에 추가됩니다.  
+## <a name="specifying-unmapped-columns"></a>Specifying Unmapped Columns  
+ When you map columns to a <xref:System.Data.DataTable>, you can also specify that certain columns should not be bound to data by passing in an empty string. A new column that is not bound to data is then added to the <xref:Microsoft.Office.Tools.Excel.ListObject> control.  
   
-#### ListObject 열을 매핑할 때 매핑되지 않은 열을 지정하려면  
+#### <a name="to-specify-an-unmapped-column-when-mapping-listobject-columns"></a>To specify an unmapped column when mapping ListObject columns  
   
-1.  <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> 메서드를 호출하고 표시할 순서대로 열 이름을 전달합니다. 빈 문자열을 사용하여 매핑되지 않은 열이 추가될 위치를 지정합니다. 이 경우 직책 열과 성 열 사이입니다.  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> method and pass in the column names in the order they should appear. Use an empty string to indicate where an unmapped column is added; in this case, between the title column and the last name column.  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#19](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet3.cs#19)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#19](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/VB/Sheet3.vb#19)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#19](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#19)]  [!code-vb[Trin_VstcoreHostControlsExcel#19](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#19)]  
   
-## 코드 컴파일  
- 이 코드 예제에서는 이 코드가 표시되는 워크시트에 `list1`이라는 기존 <xref:Microsoft.Office.Tools.Excel.ListObject>가 있는 것으로 간주합니다.  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This code example assumes you have an existing <xref:Microsoft.Office.Tools.Excel.ListObject> named `list1` on the worksheet in which this code appears.  
   
-## 참고 항목  
- [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
- [Office 문서의 컨트롤](../vsto/controls-on-office-documents.md)   
- [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [방법: ListObject 컨트롤을 데이터로 채우기](../vsto/how-to-fill-listobject-controls-with-data.md)   
- [확장된 개체를 사용하여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
- [ListObject 컨트롤](../vsto/listobject-control.md)  
+## <a name="see-also"></a>See Also  
+ [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
+ [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
+ [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)   
+ [How to: Fill ListObject Controls with Data](../vsto/how-to-fill-listobject-controls-with-data.md)   
+ [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
+ [ListObject Control](../vsto/listobject-control.md)  
   
   

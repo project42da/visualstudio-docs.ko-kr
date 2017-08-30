@@ -1,51 +1,69 @@
 ---
-title: "CA2101: P/Invoke 문자열 인수에 대해 마샬링을 지정하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SpecifyMarshalingForPInvokeStringArguments"
-  - "CA2101"
-helpviewer_keywords: 
-  - "CA2101"
-  - "SpecifyMarshalingForPInvokeStringArguments"
+title: 'CA2101: Specify marshaling for P-Invoke string arguments | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SpecifyMarshalingForPInvokeStringArguments
+- CA2101
+helpviewer_keywords:
+- CA2101
+- SpecifyMarshalingForPInvokeStringArguments
 ms.assetid: 9d1abfc3-d320-41e0-9f6e-60cefe6ffe1b
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 19
----
-# CA2101: P/Invoke 문자열 인수에 대해 마샬링을 지정하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 536195a8bd2a3d92e2fb5f784e29d01d9393e580
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2101-specify-marshaling-for-pinvoke-string-arguments"></a>CA2101: Specify marshaling for P/Invoke string arguments
 |||  
 |-|-|  
 |TypeName|SpecifyMarshalingForPInvokeStringArguments|  
 |CheckId|CA2101|  
-|범주|Microsoft.Globalization|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Globalization|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- 플랫폼 호출 멤버가 부분 신뢰 호출자를 허용하고, 문자열 매개 변수를 사용하고, 문자열을 명시적으로 마샬링하지 않습니다.  
+## <a name="cause"></a>Cause  
+ A platform invoke member allows for partially trusted callers, has a string parameter, and does not explicitly marshal the string.  
   
-## 규칙 설명  
- 유니코드를 ANSI로 변환할 경우 모든 유니코드 문자를 특정 ANSI 코드 페이지에 표시할 수 없는 경우가 있습니다.  *BestFitMapping*에서는 표시할 수 없는 문자를 대체하여 이 문제를 해결하려고 합니다.  이 기능을 사용하면 선택되는 문자를 제어할 수 없으므로 보안 문제가 발생할 수 있습니다.  예를 들어, 악의적인 코드에서 고의적으로 특정 코드 페이지에서 찾을 수 없는 문자를 포함하는 유니코드 문자열을 만들어 '..' 또는 '\/' 같은 파일 시스템 특수 문자로 변환되도록 할 수 있습니다.  또한 보안 검사에서는 문자열을 ANSI로 변환하기 전에 특수 문자가 자주 나타나는지를 확인합니다.  
+## <a name="rule-description"></a>Rule Description  
+ When you convert from Unicode to ANSI, it is possible that not all Unicode characters can be represented in a specific ANSI code page. *Best-fit mapping* tries to solve this problem by substituting a character for the character that cannot be represented. The use of this feature can cause a potential security vulnerability because you cannot control the character that is chosen. For example, malicious code could intentionally create a Unicode string that contains characters that are not found in a particular code page, which are converted to file system special characters such as '..' or '/'. Note also that security checks for special characters frequently occur before the string is converted to ANSI.  
   
- BestFitMapping은 WChar에서 MByte로의 관리되지 않는 변환에 사용되는 기본값입니다.  BestFitMapping을 사용하지 않도록 명시적으로 설정하지 않으면 이 문제 때문에 코드에 악용 가능한 보안 문제가 포함될 수 있습니다.  
+ Best-fit mapping is the default for the unmanaged conversion, WChar to MByte. Unless you explicitly disable best-fit mapping, your code might contain an exploitable security vulnerability because of this issue.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 문자열 데이터 형식을 명시적으로 마샬링합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, explicitly marshal string data types.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 예제  
- 다음 예제에서는 이 규칙을 위반하는 메서드를 보여 주고 위반 문제를 해결하는 방법을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows a method that violates this rule, and then shows how to fix the violation.  
   
- [!code-cs[FxCop.Security.PinvokeAnsiUnicode#1](../code-quality/codesnippet/CSharp/ca2101-specify-marshaling-for-p-invoke-string-arguments_1.cs)]
+ [!code-csharp[FxCop.Security.PinvokeAnsiUnicode#1](../code-quality/codesnippet/CSharp/ca2101-specify-marshaling-for-p-invoke-string-arguments_1.cs)]
