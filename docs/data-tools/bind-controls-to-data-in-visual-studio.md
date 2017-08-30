@@ -1,84 +1,85 @@
 ---
-title: "Visual Studio에서 데이터에 컨트롤 바인딩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "데이터 소스 창"
-  - "데이터 소스, 데이터 표시"
-  - "데이터, 표시"
-  - "데이터 표시"
+title: Bind controls to data in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data, displaying
+- data sources, displaying data
+- Data Sources window
+- dislaying data
 ms.assetid: be8b6623-86a6-493e-ab7a-050de4661fd6
 caps.latest.revision: 40
-caps.handback.revision: 29
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: 4fb96e17c66df4b09d0cefb98f52c78f524af2ae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# Visual Studio에서 데이터에 컨트롤 바인딩
-데이터를 컨트롤에 바인딩하여 응용 프로그램 사용자에게 데이터를 표시할 수 있습니다.  데이터 바인딩된 컨트롤은 Visual Studio의 **데이터 소스** 창에서 디자이너 화면으로 항목을 끌어 만들 수 있습니다.  
+# <a name="bind-controls-to-data-in-visual-studio"></a>Bind controls to data in Visual Studio
+You can display data to users of your application by binding data to controls. You can create these data-bound controls by dragging items from the **Data Sources** window onto a design surface or controls on a surface  in Visual Studio.  
   
- 이 항목에서는 데이터 바인딩된 컨트롤을 만드는 데 사용할 수 있는 데이터 소스에 대해 설명합니다.  또한 데이터 바인딩과 관련된 일반적인 작업에 대해서도 설명합니다.  데이터 바인딩된 컨트롤을 만드는 방법에 대한 보다 자세한 내용은 [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md), [Visual Studio에서 데이터에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) 및 [Visual Studio에서 데이터에 Silverlight 컨트롤 바인딩](../Topic/Binding%20Silverlight%20Controls%20to%20Data%20in%20Visual%20Studio.md)을 참조하십시오.  
+ This topic describes the data sources you can use to create data-bound controls. It also describes some of the general tasks involved in data binding. For more specific details about how to create data-bound controls, see [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) and [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
   
-## 데이터 소스  
- 데이터 소스는 응용 프로그램에서 사용 가능한 데이터를 가리킵니다.  데이터 소스는 데이터베이스, 서비스 또는 개체로부터 만들 수 있습니다.  자세한 내용은 [데이터 소스 개요](../data-tools/add-new-data-sources.md)을 참조하십시오.  
+## <a name="data-sources"></a>Data sources  
+ In the context of data binding, a data source represents the data in memory that can be bound to your user interface. In practical terms, a data source can be an Entity Framework class, a dataset, a service endpoint that is encapsulated in a .NET proxy object, a LINQ to SQL class, or any .NET object or collection. Some data sources enable you to create data-bound controls by dragging items from the **Data Sources** window, while other data sources do not. The following table shows which data sources are supported.  
   
- 일부 데이터 소스의 경우 **데이터 소스** 창에서 항목을 끌어 데이터 바인딩된 컨트롤을 만들 수 있게 허용하지만 모든 데이터 소스가 그러한 것은 아닙니다.  다음 표에서는 어떠한 데이터 소스가 지원되는지 보여 줍니다.  
+|Data source|Drag-and-drop support in **the Windows Forms Designer**|Drag-and-drop support in **the WPF Designer**|Drag-and-drop support in **the Silverlight Designer**|  
+|-----------------|---------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------|  
+|Dataset|Yes|Yes|No|  
+|Entity Data Model|Yes<sup>1</sup>|Yes|Yes|  
+|LINQ to SQL classes|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
+|Services (including [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], WCF services, and web services)|Yes|Yes|Yes|  
+|Object|Yes|Yes|Yes|  
+|SharePoint|Yes|Yes|Yes|  
   
-|데이터 소스|**Windows Forms 디자이너**에서의 끌어서 놓기 지원|**WPF Designer**에서의 끌어서 놓기 지원|**Silverlight 디자이너**에서의 끌어서 놓기 지원|  
-|------------|-----------------------------------------|-----------------------------------|---------------------------------------|  
-|데이터 집합|예|예|아니요|  
-|엔터티 데이터 모델|아니요<sup>1</sup>|예|예|  
-|LINQ to SQL 클래스|아니요<sup>2</sup>|아니요<sup>2</sup>|아니요<sup>2</sup>|  
-|[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], WCF 서비스, 웹 서비스 등의 서비스|예|예|예|  
-|Object|예|예|예|  
-|SharePoint|예|예|예|  
+ 1. Generate the model using the **Entity Data Model** wizard, then drag those objects to the designer.  
   
- 1.  **Windows Forms 디자이너**가 열려 있는 경우 **데이터 소스** 창의 항목은 읽기 전용이며 디자이너로 끌어 올 수 없습니다.  그러나 이 경우에도 엔터티 데이터 모델에 기반하는 개체 데이터 소스를 새로 추가한 후 해당 개체를 디자이너로 끌어 오면 데이터 바인딩된 컨트롤을 만들 수 있습니다.  
+ 2. LINQ to SQL classes do not appear in the **Data Sources** window. However, you can add a new object data source that is based on LINQ to SQL classes, and then drag those objects to the designer to create data-bound controls. For more information, see [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).  
   
- 2.  LINQ to SQL 클래스는 **데이터 소스** 창에 표시되지 않습니다.  그러나 LINQ to SQL 클래스에 기반하는 개체 데이터 소스를 새로 만든 다음 해당 개체를 디자이너로 끌어 와 데이터 바인딩된 컨트롤을 만들 수는 있습니다.  자세한 내용은 [연습: LINQ to SQL 클래스 만들기\(O\/R 디자이너\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)을 참조하십시오.  
+## <a name="data-sources-window"></a>Data Sources window  
+ Data sources are available to your project as items in the **Data Sources** window. This window is visible, or is accessible from the **View** menu, when a form design surface is the active window in your project. You can drag items from this window to create controls that are bound to the underlying data, and you can also configure the data sources by right-clicking.  
   
-## 데이터 소스 창  
- 데이터 소스는 프로젝트에서 **데이터 소스** 창의 항목으로 사용할 수 있습니다.  이 창의 항목을 끌어 오면 내부 데이터에 바인딩되는 컨트롤을 만들 수 있습니다.  자세한 내용은 [데이터 소스 창](../Topic/Data%20Sources%20Window.md)을 참조하십시오.  
+ ![Data Sources window](../data-tools/media/raddata-data-sources-window.png "raddata Data Sources window")  
   
- **데이터 소스** 창에 표시되는 각 데이터 형식의 경우 디자이너로 항목을 끌 때 기본 컨트롤이 만들어집니다.  이와 같이 만들어지는 컨트롤은 **데이터 소스** 창에서 항목을 끌어 오기 전에 변경할 수 있습니다.  자세한 내용은 [데이터 소스 창에서 끌어올 때 만들 컨트롤 설정](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)을 참조하십시오.  
+ For each data type that appears in the **Data Sources** window, a default control is created when you drag the item to the designer. Before you drag an item from the **Data Sources** window, you can change the control that will be created. For more information, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
   
-## 컨트롤을 데이터에 바인딩하는 것과 관련된 작업  
- 다음 표에서는 컨트롤을 데이터에 바인딩할 때 수행하는 가장 일반적인 작업 중 일부를 보여 줍니다.  
+## <a name="tasks-involved-in-binding-controls-to-data"></a>Tasks involved in binding controls to data  
+ The following table lists some of the most common tasks you perform to bind controls to data.  
   
-|Task|추가 정보|  
-|----------|-----------|  
-|**데이터 소스** 창을 엽니다.|[방법: 데이터 소스 창 열기](../data-tools/how-to-open-the-data-sources-window.md)|  
-|프로젝트에 데이터 소스를 추가합니다.|[방법: 데이터베이스의 데이터에 연결](../data-tools/how-to-connect-to-data-in-a-database.md)<br /><br /> [방법: 개체의 데이터에 연결](../Topic/How%20to:%20Connect%20to%20Data%20in%20Objects.md)<br /><br /> [방법: 서비스의 데이터에 연결](../data-tools/how-to-connect-to-data-in-a-service.md)|  
-|**데이터 소스** 창의 항목을 디자이너로 항목을 끌 때 만들어지는 컨트롤을 설정합니다.|[데이터 소스 창에서 끌어올 때 만들 컨트롤 설정](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|  
-|**데이터 소스** 창의 항목과 연결되는 컨트롤 목록을 수정합니다.|[데이터 소스 창에 사용자 지정 컨트롤 추가](../data-tools/add-custom-controls-to-the-data-sources-window.md)|  
-|데이터 바인딩된 컨트롤을 만듭니다.|[Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Visual Studio에서 데이터에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)<br /><br /> [Visual Studio에서 데이터에 Silverlight 컨트롤 바인딩](../Topic/Binding%20Silverlight%20Controls%20to%20Data%20in%20Visual%20Studio.md)|  
+|Task|More information|  
+|----------|----------------------|  
+|Open the **Data Sources** window.|Open a design surface in the editor and choose **View** > **Data Sources**.|  
+|Add a data source to your project.|[Add new data sources](../data-tools/add-new-data-sources.md)|  
+|Set the control that is created when you drag an item from the **Data Sources** window to the designer.|[Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|  
+|Modify the list of controls that are associated with items in the **Data Sources** window.|[Add custom controls to the Data Sources window](../data-tools/add-custom-controls-to-the-data-sources-window.md)|  
+|Create data-bound controls.|[Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)|  
+|Bind to an object or collection.|[Bind objects in Visual Studio](../data-tools/bind-objects-in-visual-studio.md)|  
+|Filter data that appears in the UI.|[Filter and sort data in a Windows Forms application](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|  
+|Customize captions for controls.|[Customize how Visual Studio creates captions for data-bound controls](../data-tools/customize-how-visual-studio-creates-captions-for-data-bound-controls.md)|  
   
- 데이터에 바인딩된 컨트롤을 만든 후 다음 작업 중 하나를 수행할 수 있습니다.  
-  
-|Task|자세한 내용|  
-|----------|------------|  
-|내부 데이터 소스의 데이터 편집|[응용 프로그램에서 데이터 편집](../data-tools/editing-data-in-your-application.md)|  
-|데이터에 대한 변경 내용 확인|[데이터 유효성 검사](../Topic/Validating%20Data.md)|  
-|업데이트된 데이터를 다시 데이터베이스에 저장|[데이터 저장](../data-tools/saving-data.md)|  
-  
-## 참고 항목  
- [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio에서 데이터에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   
- [Visual Studio에서 데이터에 Silverlight 컨트롤 바인딩](../Topic/Binding%20Silverlight%20Controls%20to%20Data%20in%20Visual%20Studio.md)   
- [방법: 데이터베이스의 그림에 컨트롤 바인딩](../data-tools/bind-controls-to-pictures-from-a-database.md)   
- [Visual Studio의 데이터 응용 프로그램 개요](../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Visual Studio에서 데이터에 연결](../data-tools/connecting-to-data-in-visual-studio.md)   
- [응용 프로그램에서 데이터 편집](../data-tools/editing-data-in-your-application.md)   
- [데이터 유효성 검사](../Topic/Validating%20Data.md)   
- [데이터 저장](../data-tools/saving-data.md)   
- [Visual Studio에서 데이터 소스 작업을 위한 도구](../Topic/Tools%20for%20Working%20with%20Data%20Sources%20in%20Visual%20Studio.md)
+## <a name="see-also"></a>See Also  
+ [Visual Studio data tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)   
+ [Windows Forms Data Binding](/dotnet/framework/winforms/windows-forms-data-binding)

@@ -1,42 +1,46 @@
 ---
-title: "방법: 프로그래밍 방식으로 Outlook 전자 메일 항목에 파일 첨부"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "첨부 파일[Visual Studio에서 Office 개발]"
-  - "전자 메일[Visual Studio에서 Office 개발], 첨부 파일"
-  - "메일 항목[Visual Studio에서 Office 개발], 첨부 파일"
-  - "Outlook[Visual Studio에서 Office 개발], 첨부 파일"
+title: 'How to: Programmatically Attach Files to Outlook E-Mail Items | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Outlook [Office development in Visual Studio], attachments
+- e-mail [Office development in Visual Studio], attachments
+- mail items [Office development in Visual Studio], attachments
+- attachments [Office development in Visual Studio]
 ms.assetid: 9bccf6f9-3c63-4d23-8f44-f7a608a43613
 caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: 8d04f2e092e60c9c9f8d4380ceaa18c1f07ad777
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 Outlook 전자 메일 항목에 파일 첨부
-  이 예제에서는 새 메일 항목에 파일을 첨부하고 Armando Pinto에게 보냅니다.  예제에서는 Armando Pinto라는 사람이 받는 사람으로 존재한다고 가정합니다.  
+# <a name="how-to-programmatically-attach-files-to-outlook-e-mail-items"></a>How to: Programmatically Attach Files to Outlook E-Mail Items
+  This example attaches a file to a new mail item and sends it to Armando Pinto. The example assumes a person named Armando Pinto exists as the recipient.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## 예제  
- [!code-csharp[Trin_Outlook_RL_AttachFiles#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Outlook_RL_AttachFiles/CS/thisaddin.cs#1)]
- [!code-vb[Trin_Outlook_RL_AttachFiles#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Outlook_RL_AttachFiles/VB/thisaddin.vb#1)]  
+## <a name="example"></a>Example  
+ [!code-cs[Trin_Outlook_RL_AttachFiles#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_AttachFiles/thisaddin.cs#1)] [!code-vb[Trin_Outlook_RL_AttachFiles#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_AttachFiles/thisaddin.vb#1)]  
   
-## 참고 항목  
- [메일 항목 작업](../vsto/working-with-mail-items.md)   
- [방법: 프로그래밍 방식으로 전자 메일 보내기](../vsto/how-to-programmatically-send-e-mail-programmatically.md)   
- [방법: 프로그래밍 방식으로 Outlook 전자 메일 항목의 첨부 파일 저장](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)   
- [방법: 프로그래밍 방식으로 전자 메일 항목 만들기](../vsto/how-to-programmatically-create-an-e-mail-item.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Mail Items](../vsto/working-with-mail-items.md)   
+ [How to: Programmatically Send E-Mail](../vsto/how-to-programmatically-send-e-mail-programmatically.md)   
+ [How to: Programmatically Save Attachments from Outlook E-Mail Items](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)   
+ [How to: Programmatically Create an E-Mail Item](../vsto/how-to-programmatically-create-an-e-mail-item.md)  
   
   

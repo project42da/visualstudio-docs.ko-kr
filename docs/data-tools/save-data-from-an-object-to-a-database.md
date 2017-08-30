@@ -1,90 +1,93 @@
 ---
-title: "방법: 개체에서 데이터베이스로 데이터 저장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "데이터[Visual Studio], 저장"
-  - "데이터 액세스[Visual Studio], 개체"
-  - "데이터 저장"
+title: Save data from an object to a database | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Visual Studio], saving
+- data access [Visual Studio], objects
+- saving data
 ms.assetid: efd6135a-40cf-4b0d-8f8b-41a5aaea7057
 caps.latest.revision: 9
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: 9f01b3090c8bc7779609c583fcb01d0c07908ce4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 개체에서 데이터베이스로 데이터 저장
-개체에서 TableAdapter의 DBDirect 메서드\(예: `TableAdapter.Insert`\) 중 하나로 값을 전달하여 개체의 데이터를 데이터베이스에 저장할 수 있습니다.  자세한 내용은 [TableAdapter 개요](../data-tools/tableadapter-overview.md)를 참조하십시오.  
+# <a name="save-data-from-an-object-to-a-database"></a>Save data from an object to a database
+You can save data in objects to a database by passing the values from your object to one of the TableAdapter's DBDirect methods (for example, `TableAdapter.Insert`). For more information, see [TableAdapter](../data-tools/create-and-configure-tableadapters.md).  
   
- 개체 컬렉션의 데이터를 저장하려면 개체 컬렉션을 순환 검색하고\(예: for\-next 루프\) TableAdapter의 DBDirect 메서드 중 하나를 사용하여 각 개체의 값을 데이터베이스로 보냅니다.  
+ To save data from a collection of objects, loop through the collection of objects (for example, a for-next loop), and send the values for each object to the database by using one of the TableAdapter's DBDirect methods.  
   
- 기본적으로 DBDirect 메서드는 데이터베이스에 대해 직접 실행할 수 있는 TableAdapter에서 만들어집니다.  이러한 메서드는 직접 호출될 수 있으며 업데이트를 데이터베이스로 보내기 위해 변경 내용을 조정하는 <xref:System.Data.DataSet> 또는 <xref:System.Data.DataTable> 개체를 필요로 하지 않습니다.  
+ By default, DBDirect methods are created on a TableAdapter that can be run directly against the database. These methods can be called directly and don't require <xref:System.Data.DataSet> or <xref:System.Data.DataTable> objects to reconcile changes in order to send updates to a database.  
   
 > [!NOTE]
->  TableAdapter를 구성할 때 주 쿼리에서는 DBDirect 메서드를 만들 수 있는 충분한 정보를 제공해야 합니다.  예를 들어, TableAdapter가 정의된 기본 키 열이 없는 테이블의 데이터를 쿼리하도록 구성되어 있는 경우 DBDirect 메서드는 생성되지 않습니다.  
+>  When you're configuring a TableAdapter, the main query must provide enough information  for the DBDirect methods to be created. For example, if a TableAdapter is configured to query data from a table that does not have a primary key column defined, it does not generate DBDirect methods.  
   
-|TableAdapter DBDirect 메서드|설명|  
-|-------------------------------|--------|  
-|`TableAdapter.Insert`|데이터베이스에 새 레코드를 추가하여 개별 열 값을 메서드 매개 변수로 전달할 수 있습니다.|  
-|`TableAdapter.Update`|데이터베이스의 기존 레코드를 업데이트합니다.  `Update` 메서드는 원래 열 값과 새 열 값을 메서드 매개 변수로 사용합니다.  원래 값은 원래 레코드를 찾는 데 사용되고 새 값은 해당 레코드를 업데이트하는 데 사용됩니다.<br /><br /> 또한 `TableAdapter.Update` 메서드를 사용하면 <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow> 또는 <xref:System.Data.DataRow>의 배열을 메서드 매개 변수로 사용하여 데이터 집합의 변경 내용을 다시 데이터베이스에 적용할 수도 있습니다.|  
-|`TableAdapter.Delete`|매서드 매개 변수로 전달된 원래 열 값을 기반으로 데이터베이스에서 기존 레코드를 삭제합니다.|  
+|TableAdapter DBDirect method|Description|  
+|----------------------------------|-----------------|  
+|`TableAdapter.Insert`|Adds new records to a database and enables you to pass in individual column values as method parameters.|  
+|`TableAdapter.Update`|Updates existing records in a database. The `Update` method takes original and new column values as method parameters. The original values are used to locate the original record, and the new values are used to update that record.<br /><br /> The `TableAdapter.Update` method is also used to reconcile changes in a dataset back to the database by taking a <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow>, or an array of <xref:System.Data.DataRow>s as method parameters.|  
+|`TableAdapter.Delete`|Deletes existing records from the database based on the original column values passed in as method parameters.|  
   
-### 개체의 새 레코드를 데이터베이스에 저장하려면  
+### <a name="to-save-new-records-from-an-object-to-a-database"></a>To save new records from an object to a database  
   
--   값을 `TableAdapter.Insert` 메서드에 전달하여 레코드를 만듭니다.  
+-   Create the records by passing the values to the `TableAdapter.Insert` method.  
   
-     다음 예제에서는 `currentCustomer` 개체의 값을 `TableAdapter.Insert` 메서드에 전달하여 `Customers` 테이블에 새 고객 레코드를 만듭니다.  
+     The following example creates a new customer record in the `Customers` table by passing the values in the `currentCustomer` object to the `TableAdapter.Insert` method.  
   
-     [!code-cs[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_1.cs)]
-     [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_1.vb)]  
+     [!code-cs[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_1.cs)]  [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_1.vb)]  
   
-### 개체의 기존 레코드를 데이터베이스로 업데이트하려면  
+### <a name="to-update-existing-records-from-an-object-to-a-database"></a>To update existing records from an object to a database  
   
--   `TableAdapter.Update` 메서드를 호출하고 레코드를 업데이트할 새 값과 해당 레코드를 찾을 원래 값을 전달하여 레코드를 수정합니다.  
-  
-    > [!NOTE]
-    >  개체는 `Update` 메서드에 전달할 수 있도록 원래 값을 유지해야 합니다.  이 예제에서는 `orig` 접두사가 있는 속성을 사용하여 원래 값을 저장합니다.  
-  
-     다음 예제에서는 `Customer` 개체의 새 값과 원래 값을 `TableAdapter.Update` 메서드에 전달하여 `Customers` 테이블의 기존 레코드를 업데이트합니다.  
-  
-     [!code-cs[VbRaddataSaving#24](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_2.cs)]
-     [!code-vb[VbRaddataSaving#24](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_2.vb)]  
-  
-### 데이터베이스에서 기존 레코드를 삭제하려면  
-  
--   `TableAdapter.Delete` 메서드를 호출하고 레코드를 찾을 원래 값을 전달하여 해당 레코드를 삭제합니다.  
+-   Modify the records by calling the `TableAdapter.Update` method, passing in the new values to update the record, and passing in the original values to locate the record.  
   
     > [!NOTE]
-    >  개체는 `Delete` 메서드에 전달할 수 있도록 원래 값을 유지해야 합니다.  이 예제에서는 `orig` 접두사가 있는 속성을 사용하여 원래 값을 저장합니다.  
+    >  Your object needs to maintain the original values in order to pass them to the `Update` method. This example uses properties with an `orig` prefix to store the original values.  
   
-     다음 예제에서는 `Customer` 개체의 원래 값을 `TableAdapter.Delete` 메서드에 전달하여 `Customers` 테이블에서 레코드를 삭제합니다.  
+     The following example updates an existing record in the `Customers` table by passing the new and original values in the `Customer` object to the `TableAdapter.Update` method.  
   
-     [!code-cs[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]
-     [!code-vb[VbRaddataSaving#25](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_3.vb)]  
+     [!code-cs[VbRaddataSaving#24](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_2.cs)]  [!code-vb[VbRaddataSaving#24](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_2.vb)]  
   
-## .NET Framework 보안  
- 데이터베이스의 테이블에서 선택한 INSERT, UPDATE 또는 DELETE 작업을 수행할 수 있는 권한이 있어야 합니다.  
+### <a name="to-delete-existing-records-from-a-database"></a>To delete existing records from a database  
   
-## 참고 항목  
- [Visual Studio에서 개체 바인딩](../data-tools/bind-objects-in-visual-studio.md)   
- [방법: 개체의 데이터에 연결](../Topic/How%20to:%20Connect%20to%20Data%20in%20Objects.md)   
- [연습: 개체의 데이터에 연결\(Windows Forms\)](../Topic/Walkthrough:%20Connecting%20to%20Data%20in%20Objects%20\(Windows%20Forms\).md)   
- [방법: TableAdapter를 사용하여 데이터베이스에 직접 액세스](../data-tools/directly-access-the-database-with-a-tableadapter.md)   
- [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio에서 데이터에 연결](../data-tools/connecting-to-data-in-visual-studio.md)   
- [데이터를 받기 위해 응용 프로그램 준비](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [데이터를 응용 프로그램으로 페치](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [응용 프로그램에서 데이터 편집](../data-tools/editing-data-in-your-application.md)   
- [데이터 유효성 검사](../Topic/Validating%20Data.md)   
- [데이터 저장](../data-tools/saving-data.md)
+-   Delete the records by calling the `TableAdapter.Delete` method and passing in the original values to locate the record.  
+  
+    > [!NOTE]
+    >  Your object needs to maintain the original values in order to pass them to the `Delete` method. This example uses properties with an `orig` prefix to store the original values.  
+  
+     The following example deletes a record from the `Customers` table by passing the original values in the `Customer` object to the `TableAdapter.Delete` method.  
+  
+     [!code-cs[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]  [!code-vb[VbRaddataSaving#25](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_3.vb)]  
+  
+## <a name="net-framework-security"></a>.NET Framework Security  
+ You must have permission to perform the selected INSERT, UPDATE, or DELETE on the table in the database.  
+  
+## <a name="see-also"></a>See Also  
+ [Save data back to the database](../data-tools/save-data-back-to-the-database.md)
