@@ -1,5 +1,5 @@
 ---
-title: "코드 조각 (레거시) 설치 목록 가져오기 | Microsoft 문서"
+title: Getting a List of Installed Code Snippets (Legacy) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,24 +30,25 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: d5bc147592bfc36247c35f23ac2885055d096af3
-ms.openlocfilehash: d49d5eb1a6a2e045d477dd03fba9372123cae83a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 50d5343d98bba8df79628d9bfdfa838aea9e27d8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>연습: 설치 된 코드 조각 (레거시 구현)의 목록 가져오기
-코드 조각을 사용 하는 메뉴 명령 (설치 된 코드 조각 중에서 선택할 수 있음) 또는 소스 버퍼에 삽입할 수 있는 코드의 일부는 IntelliSense 완성 목록에서 코드 조각 바로 가기를 선택 합니다.  
+# <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>Walkthrough: Getting a List of Installed Code Snippets (Legacy Implementation)
+A code snippet is a piece of code that can be inserted into the source buffer either with a menu command (which allows choosing among a list of installed code snippets) or by selecting a snippet shortcut from an IntelliSense completion list.  
   
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A>메서드 GUID는 특정 언어에 대 한 모든 코드 조각을 가져옵니다.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> 이러한 조각에 대 한 바로 가기는 IntelliSense 완성 목록에 삽입할 수 있습니다.  
+ The <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> method gets all code snippets for a specific language GUID. The shortcuts for those snippets can be inserted into an IntelliSense completion list.  
   
- 참조 [레거시 언어 서비스의 코드 조각에 대 한 지원을](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) 코드 조각 관리 되는 패키지 프레임 워크 (MPF) 언어 서비스의 구현에 대 한 세부 정보에 대 한 합니다.  
+ See [Support for Code Snippets in a Legacy Language Service](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) for details about implementing code snippets in a managed package framework (MPF) language service.  
   
-### <a name="to-retrieve-a-list-of-code-snippets"></a>코드 조각 목록을 검색 하려면  
+### <a name="to-retrieve-a-list-of-code-snippets"></a>To retrieve a list of code snippets  
   
-1.  다음 코드에는 지정된 된 언어에 대 한 코드 조각 목록을 가져오는 방법을 보여 줍니다. 결과의 배열에 저장 됩니다 <xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion>구조.</xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion> 이 메서드는 정적 사용 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>메서드를는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager>에서 인터페이스는 <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>서비스.</xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> </xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> </xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> 그러나 사용할 수도 있습니다 VSPackage 및 호출에 지정 된 서비스 공급자는 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>메서드.</xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>  
+1.  The following code shows how to get a list of code snippets for a given language. The results are stored in an array of <xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion> structures. This method uses the static <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> method to get the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> interface from the <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> service. However, you can also use the service provider given to your VSPackage and call the <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> method.  
   
-    ```c#  
+    ```csharp  
     using System;  
     using System.Collections;  
     using System.Runtime.InteropServices;  
@@ -118,14 +119,14 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-### <a name="to-call-the-getsnippets-method"></a>GetSnippets 메서드를 호출 하려면  
+### <a name="to-call-the-getsnippets-method"></a>To call the GetSnippets method  
   
-1.  다음 메서드를 호출 하는 방법을 보여 줍니다는 `GetSnippets` 메서드에 구문 분석 작업의 완료에 있습니다. <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A>구문 분석 작업 하는 이유 <xref:Microsoft.VisualStudio.Package.ParseReason>.</xref:Microsoft.VisualStudio.Package.ParseReason> 로 시작 된 후 메서드가 호출 됩니다</xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A>  
+1.  The following method shows how to call the `GetSnippets` method at the completion of a parsing operation. The <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A> method is called after a parsing operation that was started with the reason <xref:Microsoft.VisualStudio.Package.ParseReason>.  
   
 > [!NOTE]
->  `expansionsList` listis 성능상의 이유로 캐시를 배열 합니다. 언어 서비스가 중지 되 고 다시 로드 될 때까지 목록에 조각에 대 한 변경 내용이 반영 되지 않습니다 (중지 및 다시 시작 하 여 예를 들어 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).  
+>  The `expansionsList` array listis cached for performance reasons. Changes to the snippets are not reflected in the list until the language service is stopped and reloaded (for example, by stopping and restarting [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).  
   
-```c#  
+```csharp  
 class TestLanguageService : LanguageService  
 {  
     private ArrayList expansionsList;  
@@ -142,15 +143,15 @@ class TestLanguageService : LanguageService
 }  
 ```  
   
-### <a name="to-use-the-snippet-information"></a>코드 조각 정보를 사용 하려면  
+### <a name="to-use-the-snippet-information"></a>To use the snippet information  
   
-1.  다음 코드를 반환 하는 코드 조각 정보를 사용 하는 방법을 보여 줍니다는 `GetSnippets` 메서드. `AddSnippets` 파서 코드 조각 목록을 채우는 데 사용 되는 모든 구문 분석 원인에 대 한 응답에서에서 메서드를 호출 합니다. 이 수행한 후 처음으로 전체 구문 분석 한 것입니다.  
+1.  The following code shows how to use the snippet information returned by the `GetSnippets` method. The `AddSnippets` method is called from the parser in response to any parse reason that is used to populate a list of code snippets. This should take place after the full parse has been done for the first time.  
   
-     `AddDeclaration` 메서드는 나중에 완성 목록에 표시 되는 선언의 목록을 작성 합니다.  
+     The `AddDeclaration` method builds a list of declarations that is later displayed in a completion list.  
   
-     `TestDeclaration` 클래스 선언의 형식을 비롯 하 여 완성 목록에 표시 될 수 있는 모든 정보를 포함 합니다.  
+     The `TestDeclaration` class contains all the information that can be displayed in a completion list as well as the type of declaration.  
   
-    ```c#  
+    ```csharp  
     class TestAuthoringScope : AuthoringScope  
     {  
         public void AddDeclarations(TestDeclaration declaration)  
@@ -193,5 +194,5 @@ class TestLanguageService : LanguageService
   
     ```  
   
-## <a name="see-also"></a>참고 항목  
- [레거시 언어 서비스의 코드 조각에 대 한 지원](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)
+## <a name="see-also"></a>See Also  
+ [Support for Code Snippets in a Legacy Language Service](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)

@@ -1,63 +1,79 @@
 ---
-title: "CA1408: AutoDual ClassInterfaceType을 사용하지 마십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DoNotUseAutoDualClassInterfaceType"
-  - "CA1408"
-helpviewer_keywords: 
-  - "CA1408"
-  - "DoNotUseAutoDualClassInterfaceType"
+title: 'CA1408: Do not use AutoDual ClassInterfaceType | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DoNotUseAutoDualClassInterfaceType
+- CA1408
+helpviewer_keywords:
+- CA1408
+- DoNotUseAutoDualClassInterfaceType
 ms.assetid: 60ca5e02-3c51-42dd-942b-4f950eecfa0f
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1408: AutoDual ClassInterfaceType을 사용하지 마십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 2cceb66b5687cd06d2455396bc875bf11ea80208
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408: Do not use AutoDual ClassInterfaceType
 |||  
 |-|-|  
 |TypeName|DoNotUseAutoDualClassInterfaceType|  
 |CheckId|CA1408|  
-|범주|Microsoft.Interoperability|  
-|변경 수준|주요 변경|  
+|Category|Microsoft.Interoperability|  
+|Breaking Change|Breaking|  
   
-## 원인  
- COM\(Component Object Model\) 노출 형식은 <xref:System.Runtime.InteropServices.ClassInterfaceType>의 `AutoDual` 값으로 설정한 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 특성으로 표시되어 있습니다.  
+## <a name="cause"></a>Cause  
+ A Component Object Model (COM) visible type is marked with the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute set to the `AutoDual` value of <xref:System.Runtime.InteropServices.ClassInterfaceType>.  
   
-## 규칙 설명  
- 이중 인터페이스를 사용하는 형식에서는 클라이언트가 특정 인터페이스 레이아웃에 바인딩할 수 있습니다.  이후 버전에서 해당 형식이나 기본 형식의 레이아웃이 변경되면 인터페이스에 바인딩된 COM 클라이언트의 바인딩이 해제될 수 있습니다.  기본적으로 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 특성이 지정되어 있지 않으면 디스패치 전용 인터페이스가 사용됩니다.  
+## <a name="rule-description"></a>Rule Description  
+ Types that use a dual interface enable clients to bind to a specific interface layout. Any changes in a future version to the layout of the type or any base types will break COM clients that bind to the interface. By default, if the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute is not specified, a dispatch-only interface is used.  
   
- 따로 표시되지 않은 경우 제네릭이 아닌 모든 public 형식은 COM에서 볼 수 있으며 public이 아닌 모든 제네릭 형식은 COM에서 볼 수 없습니다.  
+ Unless marked otherwise, all public nongeneric types are visible to COM; all nonpublic and generic types are invisible to COM.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 특성의 값을 <xref:System.Runtime.InteropServices.ClassInterfaceType>의 `None` 값으로 변경하고 인터페이스를 명시적으로 정의합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, change the value of the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute to the `None` value of <xref:System.Runtime.InteropServices.ClassInterfaceType> and explicitly define the interface.  
   
-## 경고를 표시하지 않는 경우  
- 해당 형식과 기본 형식의 레이아웃이 이후 버전에서 확실하게 변경되지 않을 경우에만 이 규칙에서 경고를 표시하지 마십시오.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule unless it is certain that the layout of the type and its base types will not change in a future version.  
   
-## 예제  
- 다음 예제에서는 이 규칙을 위반하는 클래스와 명시적 인터페이스를 사용하도록 클래스를 다시 선언하는 방법을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows a class that violates the rule and a re-declaration of the class to use an explicit interface.  
   
- [!code-cs[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/CSharp/ca1408-do-not-use-autodual-classinterfacetype_1.cs)]
- [!code-vb[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/VisualBasic/ca1408-do-not-use-autodual-classinterfacetype_1.vb)]  
+ [!code-csharp[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/CSharp/ca1408-do-not-use-autodual-classinterfacetype_1.cs)] [!code-vb[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/VisualBasic/ca1408-do-not-use-autodual-classinterfacetype_1.vb)]  
   
-## 관련 규칙  
- [CA1403: 자동 레이아웃 형식은 COM 노출이면 안 됩니다.](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1403: Auto layout types should not be COM visible](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)  
   
- [CA1412: ComSource 인터페이스를 IDispatch로 표시하십시오.](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)  
+ [CA1412: Mark ComSource Interfaces as IDispatch](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)  
   
-## 참고 항목  
- [Introducing the Class Interface](http://msdn.microsoft.com/ko-kr/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [상호 운용할 .NET 형식의 정규화](../Topic/Qualifying%20.NET%20Types%20for%20Interoperation.md)   
- [비관리 코드와의 상호 운용](../Topic/Interoperating%20with%20Unmanaged%20Code.md)
+## <a name="see-also"></a>See Also  
+ [Introducing the Class Interface](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
+ [Qualifying .NET Types for Interoperation](/dotnet/framework/interop/qualifying-net-types-for-interoperation)   
+ [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)

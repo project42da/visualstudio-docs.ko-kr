@@ -1,57 +1,74 @@
 ---
-title: "IDebugComPlusSymbolProvider::AreSymbolsLoaded | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AreSymbolsLoaded"
-  - "IDebugComPlusSymbolProvider::AreSymbolsLoaded"
+title: IDebugComPlusSymbolProvider::AreSymbolsLoaded | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AreSymbolsLoaded
+- IDebugComPlusSymbolProvider::AreSymbolsLoaded
 ms.assetid: bbf8707d-f89c-4177-b019-d519f1ec6f4a
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugComPlusSymbolProvider::AreSymbolsLoaded
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 065a32112c65e9730c5c492e954de5c1415ad3b5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-응용 프로그램 도메인 식별자를 지정 합니다. 지정 된 모듈에 대해 디버그 기호가 로드 되었는지 확인 합니다.  
+---
+# <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
+Determines if the debug symbols are loaded for the specified module given the application domain identifier.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT AreSymbolsLoaded (  
-   ULONG32 ulAppDomainID,  
-   GUID    guidModule  
+   ULONG32 ulAppDomainID,  
+   GUID    guidModule  
 );  
 ```  
   
-```c#  
+```csharp  
 int AreSymbolsLoaded (  
-   uint ulAppDomainID,  
-   Guid guidModule  
+   uint ulAppDomainID,  
+   Guid guidModule  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- \[in\] 응용 프로그램 도메인 식별자입니다.  
+ [in] Identifier for the application domain.  
   
  `guidModule`  
- \[in\] 모듈에 대 한 고유 식별자입니다.  
+ [in] Unique identifier for the module.  
   
-## 반환 값  
- 디버그 기호가 로드 되지 않으면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE`.  
+## <a name="return-value"></a>Return Value  
+ If the debug symbols are loaded, returns `S_OK`; otherwise, returns `S_FALSE`.  
   
-## 예제  
- 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CDebugSymbolProvider** 를 노출 하는 개체는 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) 인터페이스.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::AreSymbolsLoaded(  
     ULONG32 ulAppDomainID,  
     GUID guidModule  
@@ -71,5 +88,5 @@ Error:
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

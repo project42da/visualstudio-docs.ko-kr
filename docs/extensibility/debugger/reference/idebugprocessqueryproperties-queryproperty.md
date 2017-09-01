@@ -1,58 +1,75 @@
 ---
-title: "IDebugProcessQueryProperties::QueryProperty | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProcessQueryProperties::QueryProperty"
+title: IDebugProcessQueryProperties::QueryProperty | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugProcessQueryProperties::QueryProperty
 ms.assetid: 9a91707d-a590-44ef-b122-69d9816a7a79
 caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# IDebugProcessQueryProperties::QueryProperty
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8fc463cddeb679d0b5212178b98f91bc7deb57e3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 메서드는 디버깅 프로세스의 지정 된 속성 값에 대 한 쿼리.  
+---
+# <a name="idebugprocessquerypropertiesqueryproperty"></a>IDebugProcessQueryProperties::QueryProperty
+This method queries for a specified property value of the debugging process.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT QueryProperty(  
-   PROCESS_PROPERTY_TYPE  dwPropType,  
-   VARIANT               *pvarPropValue);  
+   PROCESS_PROPERTY_TYPE  dwPropType,  
+   VARIANT               *pvarPropValue);  
 ```  
   
-```c#  
+```csharp  
 int QueryProperty(  
-   enum_PROCESS_PROPERTY_TYPE dwPropType,  
-   out object                 pvarPropValue);  
+   enum_PROCESS_PROPERTY_TYPE dwPropType,  
+   out object                 pvarPropValue);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dwPropType`  
- \[in\] 쿼리 속성을 정의 합니다.  값은 다음과 같습니다.  
+ [in] Definition of the property queried. The values are:  
   
--   PROCESS\_PROPERTY\_COMMAND\_LINE \= 1  
+-   PROCESS_PROPERTY_COMMAND_LINE = 1  
   
--   PROCESS\_PROPERTY\_CURRENT\_DIRECTORY \= 2  
+-   PROCESS_PROPERTY_CURRENT_DIRECTORY = 2  
   
--   PROCESS\_PROPERTY\_ENVIRONMENT\_VARIABLES \= 3  
+-   PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3  
   
  `pvarPropValue`  
- \[out\] 이 속성의 값입니다.  
+ [out] The value of the property.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드는 거의 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ This method is seldom used.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

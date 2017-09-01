@@ -1,133 +1,137 @@
 ---
-title: "연습: 사용자 지정 사이트 워크플로 작업 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "사용자 지정 워크플로 활동[Visual Studio에서 SharePoint 개발]"
-  - "Visual Studio에서 SharePoint 개발, 사용자 지정 워크플로 활동"
-  - "Visual Studio에서 SharePoint 개발, 사이트 워크플로"
-  - "사이트 워크플로[Visual Studio에서 SharePoint 개발]"
-  - "워크플로 활동[Visual Studio에서 SharePoint 개발]"
+title: 'Walkthrough: Create a Custom Site Workflow Activity | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- custom workflow activities [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, custom workflow activities
+- site workflows [SharePoint development in Visual Studio]
+- workflow activities [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, site workflows
 ms.assetid: 8219a779-c27b-4186-92c9-5bda03328aa9
 caps.latest.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 19
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 794ffdffb96c7b0914c283f13ec8ca7014f425b0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 사용자 지정 사이트 워크플로 작업 만들기
-  이 연습에서는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 사용하여 사이트 수준 워크플로에 대한 사용자 지정 작업을 만드는 방법을 보여 줍니다. 사이트 수준 워크플로는 사이트의 목록뿐 아니라 전체 사이트에 적용됩니다. 사용자 지정 작업은 백업 알림 목록을 만든 다음 알림 목록의 내용을 백업에 복사합니다.  
+# <a name="walkthrough-create-a-custom-site-workflow-activity"></a>Walkthrough: Create a Custom Site Workflow Activity
+  This walkthrough demonstrates how to create a custom activity for a site-level workflow using [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. (Site-level workflows apply to the whole site, not just a list on the site.) The custom activity creates a backup Announcements list and then copies the contents of the Announcements list into it.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough demonstrates the following tasks:  
   
--   사이트 수준 워크플로 만들기  
+-   Creating a site-level workflow.  
   
--   사용자 지정 워크플로 작업 만들기  
+-   Creating a custom workflow activity.  
   
--   SharePoint 목록 만들기 및 삭제  
+-   Creating and deleting a SharePoint list.  
   
--   한 목록에서 다른 목록으로 항목 복사  
+-   Copying items from one list to another.  
   
--   빠른 실행 모음에 목록 표시  
+-   Displaying a list on the QuickLaunch bar.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   지원되는 [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] 및 SharePoint 버전.  자세한 내용은 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)을 참조하십시오.  
+-   Supported editions of [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio  
+-   Visual Studio.  
   
-## 사이트 워크플로 사용자 지정 작업 프로젝트 만들기  
- 먼저 사용자 지정 워크플로 작업을 포함하고 테스트할 프로젝트를 만듭니다.  
+## <a name="creating-a-site-workflow-custom-activity-project"></a>Creating a Site Workflow Custom Activity Project  
+ First, create a project to hold and test the custom workflow activity.  
   
-#### 사이트 워크플로 사용자 지정 작업 프로젝트를 만들려면  
+#### <a name="to-create-a-site-workflow-custom-activity-project"></a>To create a site workflow custom activity project  
   
-1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다.  
+1.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-2.  **Visual C\#** 또는 **Visual Basic** 아래의 **SharePoint** 노드를 확장한 다음 **2010** 을 선택합니다.  
+2.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-3.  **템플릿** 창에서 **SharePoint 2010 프로젝트** 템플릿을 선택합니다.  
+3.  In the **Templates** pane, choose the **SharePoint 2010 Project** template.  
   
-4.  **이름** 상자에 AnnouncementBackup을 입력한 후 **확인** 버튼을 선택합니다.  
+4.  In the **Name** box, enter **AnnouncementBackup**, and then choose the **OK** button.  
   
-     **SharePoint 사용자 지정 마법사**가 나타납니다.  
+     The **SharePoint Customization Wizard** appears.  
   
-5.  **사이트 지정 및 디버깅에 대한 보안 수준** 페이지에서 **팜 솔루션으로 배포** 옵션 버튼을 선택한 다음 **마침** 버튼을 선택하여 신뢰 수준 및 기본 사이트를 수락합니다.  
+5.  On the **Specify the site and security level for debugging** page, choose the **Deploy as a farm solution** option button, and then choose the **Finish** button to accept the trust level and default site.  
   
-     이 단계에서는 솔루션의 신뢰 수준을 팜 솔루션으로 설정합니다. 이 옵션은 워크플로 프로젝트에 사용할 수 있는 유일한 옵션입니다.  
+     This step sets the trust level for the solution as farm solution, the only available option for workflow projects.  
   
-6.  **솔루션 탐색기**에서 프로젝트 노드를 선택한 다음 메뉴 모음에서 **프로젝트**, **화면 추가**를 선택합니다.  
+6.  In **Solution Explorer**, choose the project node, and then, on the menu bar, choose **Project**, **Add New Item**.  
   
-7.  **Visual C\#** 또는 **Visual Basic** 아래의 **SharePoint** 노드를 확장한 다음 **2010** 노드를 선택합니다.  
+7.  Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** node.  
   
-8.  **템플릿** 창에서 **순차 워크플로 \(팜 솔루션에서만\)** 템플릿을 선택한 후 **추가** 버튼을 선택합니다.  
+8.  In the **Templates** pane, choose the **Sequential Workflow (Farm Solution only)** template, and then choose the **Add** button.  
   
-     **SharePoint 사용자 지정 마법사**가 나타납니다.  
+     The **SharePoint Customization Wizard** appears.  
   
-9. **디버깅에 사용할 워크플로 이름 지정** 페이지에서 기본 이름\(AnnouncementBackup \- Workflow1\)을 적용합니다.  워크플로 템플릿 형식을 **사이트 워크플로**로 변경하고 **다음** 버튼을 선택합니다.  
+9. On the **Specify the workflow name for debugging** page, accept the default name (AnnouncementBackup - Workflow1). Change the workflow template type to **Site Workflow**, and then choose the **Next** button.  
   
-10. **마침** 버튼을 선택하여 나머지 기본 설정을 적용합니다.  
+10. Choose the **Finish** button to accept the remaining default settings.  
   
-## 사용자 지정 워크플로 작업 클래스 추가  
- 다음으로, 사용자 지정 워크플로 작업에 대한 코드를 포함하기 위해 프로젝트에 클래스를 추가합니다.  
+## <a name="adding-a-custom-workflow-activity-class"></a>Adding a Custom Workflow Activity Class  
+ Next, add a class to the project to contain the code for the custom workflow activity.  
   
-#### 사용자 지정 워크플로 작업 클래스를 추가하려면  
+#### <a name="to-add-a-custom-workflow-activity-class"></a>To add a custom workflow activity class  
   
-1.  메뉴 모음에서 **프로젝트**, **새 항목 추가**를 선택하여 **새 항목 추가** 대화 상자를 표시합니다.  
+1.  On the menu bar, choose **Project**, **Add New Item** to display the **Add New Item** dialog box.  
   
-2.  **설치된 템플릿** 트리 뷰에서 **코드** 노드를 선택한 다음 프로젝트 항목 템플릿 목록에서 **클래스** 템플릿을 선택합니다.  기본 이름인 Class1을 사용합니다.  **추가** 단추를 선택합니다.  
+2.  In the **Installed Templates** tree view, choose the **Code** node, and then choose the **Class** template in the list of project item templates. Use the default name Class1. Choose the **Add** button.  
   
-3.  Class1의 모든 코드를 다음 코드로 바꿉니다.  
+3.  Replace all of the code in Class1 with the following:  
   
-     [!code-csharp[SP_AnnBackup#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_annbackup/cs/class1.cs#1)]
-     [!code-vb[SP_AnnBackup#1](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_annbackup/vb/class1.vb#1)]  
+     [!code-csharp[SP_AnnBackup#1](../sharepoint/codesnippet/CSharp/announcementbackup/class1.cs#1)]  [!code-vb[SP_AnnBackup#1](../sharepoint/codesnippet/VisualBasic/announcementbackupvb/class1.vb#1)]  
   
-4.  프로젝트를 저장한 다음, 메뉴 모음에서 **빌드**, **솔루션 빌드**를 선택합니다.  
+4.  Save the project, and then, on the menu bar, choose **Build**, **Build Solution**.  
   
-     Class1 은 **AnnouncementBackup 구성 요소** 탭의 **도구 상자** 에서 사용자 지정 작업으로 표시됩니다.  
+     Class1 appears as a custom action in the **Toolbox** on the **AnnouncementBackup Components** tab.  
   
-## 사이트 워크플로에 사용자 지정 작업 추가  
- 다음으로, 사용자 지정 코드를 포함하기 위해 워크플로에 작업을 추가합니다.  
+## <a name="adding-the-custom-activity-to-the-site-workflow"></a>Adding the Custom Activity to the Site Workflow  
+ Next, add an activity to the Workflow to contain the custom code.  
   
-#### 사이트 워크플로에 사용자 지정 작업을 추가하려면  
+#### <a name="to-add-a-custom-activity-to-the-site-workflow"></a>To add a custom activity to the site Workflow  
   
-1.  Workflow Designer의 디자인 뷰에서 Workflow1을 엽니다.  
+1.  Open Workflow1 in the workflow designer in design view.  
   
-2.  **도구 상자** 에서 Class1를 끌어와 `onWorkflowActivated1` 아래에 나타나도록 하거나, 또는 Class1에 대한 바로 가기 메뉴에서 **복사** 를 선택하고, `onWorkflowActivated1` 활동 아래의 줄에 대한 바로 가기 메뉴를 연 다음 **붙여넣기** 를 선택합니다.  
+2.  Drag Class1 from the **Toolbox** so that it appears under the `onWorkflowActivated1` activity, or open the shortcut menu for Class1, choose **Copy**, open the shortcut menu for the line under the `onWorkflowActivated1` activity, and then choose **Paste**.  
   
-3.  프로젝트를 저장합니다.  
+3.  Save the project.  
   
-## 사이트 워크플로 사용자 지정 작업 테스트  
- 그 다음, 프로젝트를 실행하고 사이트 워크플로를 시작합니다.  사용자 지정 작업은 백업 알림 목록을 만든 다음 현재 알림 목록의 내용을 백업에 복사합니다.  코드에서 백업 목록을 만들기 전에 이미 있는지 여부를 확인합니다.  백업 목록이 이미 있으면 삭제됩니다.  또한 코드에서 SharePoint 사이트의 빠른 실행 모음에 있는 새 목록에 링크를 추가합니다.  
+## <a name="testing-the-site-workflow-custom-activity"></a>Testing the Site Workflow Custom Activity  
+ Next, run the project and start the site workflow. The custom activity creates a backup Announcements list and copies the contents from the current Announcements list into it. The code also checks whether a backup list already exists before creating one. If a backup list already exists, it is deleted. The code also adds a link to the new list on the SharePoint site's QuickLaunch bar.  
   
-#### 사이트 워크플로 사용자 지정 작업을 테스트하려면  
+#### <a name="to-test-the-site-workflow-custom-activity"></a>To test the site workflow custom activity  
   
-1.  F5 키를 눌러 프로젝트를 실행하고 SharePoint에 배포합니다.  
+1.  Choose the F5 key to run the project and deploy it to SharePoint.  
   
-2.  빠른 실행 모음에서 **목록** 링크를 선택하여 SharePoint 사이트에서 사용 가능한 모든 목록을 표시합니다.  **알림**이라는 하나의 알림 목록만 있습니다.  
+2.  On the QuickLaunch bar, choose the **Lists** link to display all of the lists that are available in the SharePoint site. Notice there is only one list for announcements named **Announcements**.  
   
-3.  SharePoint 웹 페이지의 맨 위에 있는 **사이트 워크플로** 링크를 선택합니다.  
+3.  At the top of the SharePoint webpage, choose the **Site Workflows** link.  
   
-4.  새 워크플로 시작 섹션 아래에서 **AnnouncementBackup \- Workflow1** 링크를 선택합니다.  이렇게 하면 사이트 워크플로가 시작되고 사용자 지정 작업의 코드가 실행됩니다.  
+4.  Under the Start a New Workflow section, choose the **AnnouncementBackup - Workflow1** link. This starts the site workflow and runs the code in the custom action.  
   
-5.  빠른 실행 표시줄에서 **알림 백업** 링크를 선택합니다.  **알림** 목록에 포함된 모든 알림이 새 목록에 복사되었습니다.  
+5.  On the QuickLaunch bar, choose the **Announcements Backup** link. Notice that all of the announcements that are contained in the **Announcements** list have been copied to this new list.  
   
-## 참고 항목  
- [방법: 이벤트 수신자 만들기](../sharepoint/how-to-create-an-event-receiver.md)   
+## <a name="see-also"></a>See Also  
+ [How to: Create an Event Receiver](../sharepoint/how-to-create-an-event-receiver.md)   
  [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
   
   

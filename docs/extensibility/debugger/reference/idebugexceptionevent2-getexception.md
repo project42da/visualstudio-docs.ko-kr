@@ -1,54 +1,71 @@
 ---
-title: "IDebugExceptionEvent2::GetException | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExceptionEvent2::GetException"
-helpviewer_keywords: 
-  - "IDebugExceptionEvent2::GetException"
+title: IDebugExceptionEvent2::GetException | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExceptionEvent2::GetException
+helpviewer_keywords:
+- IDebugExceptionEvent2::GetException
 ms.assetid: 7c98f41d-322b-4e72-a514-cbd4823eb70d
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugExceptionEvent2::GetException
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5ae6c92b103ce5d37a24425ec080e651a70dece4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 이벤트가 발생 하는 예외에 대 한 자세한 설명을 가져옵니다.  
+---
+# <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
+Gets a detailed description of the exception that fired this event.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetException(   
-   EXCEPTION_INFO* pExceptionInfo  
+```cpp  
+HRESULT GetException(   
+   EXCEPTION_INFO* pExceptionInfo  
 );  
 ```  
   
-```c#  
-int GetException(   
-   EXCEPTION_INFO[] pExceptionInfo  
+```csharp  
+int GetException(   
+   EXCEPTION_INFO[] pExceptionInfo  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pExceptionInfo`  
- \[in, out\] [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md) 구조는 예외에 대 한 설명으로 채웁니다.  
+ [in, out] An [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure that is filled in with the description of the exception.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- \[C \+ \+에만\] 호출자가 임의의 문자열을 확보에 대 한 책임을 지지는 [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md) 구조 및 해제는 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 구조에 있는 개체입니다.  
+## <a name="remarks"></a>Remarks  
+ [C++ only] The caller is responsible for freeing any strings in the [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure as well as releasing the [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object in the structure.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
- [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md)   
+ [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

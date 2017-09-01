@@ -1,55 +1,72 @@
 ---
-title: "IDebugCanStopEvent2::GetReason | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCanStopEvent2::GetReason"
-helpviewer_keywords: 
-  - "IDebugCanStopEvent2::GetReason"
+title: IDebugCanStopEvent2::GetReason | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCanStopEvent2::GetReason
+helpviewer_keywords:
+- IDebugCanStopEvent2::GetReason
 ms.assetid: f5de31ca-7b8d-4029-9cf9-ba860ac66af6
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugCanStopEvent2::GetReason
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b5d4c50b407406ea9a5d878decf859b8ab70863d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-디버그 엔진 \(DE\)를 중지 하려고 할 이유는 이유를 가져옵니다.  
+---
+# <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
+Gets the reason why the debug engine (DE) wants to stop.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetReason(   
-   CANSTOP_REASON* pcr  
+```cpp  
+HRESULT GetReason(   
+   CANSTOP_REASON* pcr  
 );  
 ```  
   
-```c#  
-int GetReason(   
-   out enum_CANSTOP_REASON pcr  
+```csharp  
+int GetReason(   
+   out enum_CANSTOP_REASON pcr  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pcr`  
- \[out\] 반환 값에서는 [CANSTOP\_REASON](../../../extensibility/debugger/reference/canstop-reason.md) 이 이벤트에 대 한 이유를 설명 하는 열거형입니다.  
+ [out] Returns a value from the [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md) enumeration that describes the reason for this event.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 일반적으로이 메서드가 호출 됩니다는 [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) 호출자가 0이 아닌 값을 전달할 것인지 여부를 결정할 수 있도록 하는 메서드 \(`TRUE`\)에 `IDebugCanStopEvent2::CanStop` 메서드.  
+## <a name="remarks"></a>Remarks  
+ This method is typically called before the [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) method so the caller can determine whether to pass non-zero (`TRUE`) to the `IDebugCanStopEvent2::CanStop` method.  
   
- 수 있습니다 중지 사유 `CANSTOP_ENTRYPOINT`는 DE은 진입점에 도달 하거나 `CANSTOP_STEPIN`, 함수에는 DE은 거두었습니다.  
+ The reason for stopping can be either `CANSTOP_ENTRYPOINT`, which means the DE has reached an entry point, or `CANSTOP_STEPIN`, which means the DE has stepped into a function.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   
- [CANSTOP\_REASON](../../../extensibility/debugger/reference/canstop-reason.md)   
+ [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md)   
  [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)

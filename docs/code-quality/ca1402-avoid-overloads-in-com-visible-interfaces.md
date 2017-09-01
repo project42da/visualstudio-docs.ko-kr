@@ -1,42 +1,59 @@
 ---
-title: "CA1402: COM 노출 인터페이스에서 오버로드를 사용하지 마십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AvoidOverloadsInComVisibleInterfaces"
-  - "CA1402"
-helpviewer_keywords: 
-  - "AvoidOverloadsInComVisibleInterfaces"
-  - "CA1402"
+title: 'CA1402: Avoid overloads in COM visible interfaces | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AvoidOverloadsInComVisibleInterfaces
+- CA1402
+helpviewer_keywords:
+- AvoidOverloadsInComVisibleInterfaces
+- CA1402
 ms.assetid: 2724c1f9-d5d3-4704-b124-21c4d398e5df
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1402: COM 노출 인터페이스에서 오버로드를 사용하지 마십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 59c167ccc0b33dade808b3537443de0c2ac18b82
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402: Avoid overloads in COM visible interfaces
 |||  
 |-|-|  
 |TypeName|AvoidOverloadsInComVisibleInterfaces|  
 |CheckId|CA1402|  
-|범주|Microsoft.Interoperability|  
-|변경 수준|주요 변경|  
+|Category|Microsoft.Interoperability|  
+|Breaking Change|Breaking|  
   
-## 원인  
- COM\(Component Object Model\) 노출 인터페이스는 오버로드된 메서드를 선언합니다.  
+## <a name="cause"></a>Cause  
+ A Component Object Model (COM) visible interface declares overloaded methods.  
   
-## 규칙 설명  
- 오버로드된 메서드가 COM 클라이언트에 노출되면 첫 번째 메서드 오버로드만 이름이 유지됩니다.  이후의 오버로드는 이름에 밑줄 문자 '\_'와 오버로드 선언 순서에 해당하는 정수가 추가되어 고유한 이름이 지정됩니다.  예를 들어, 다음 메서드를 확인해 보십시오.  
+## <a name="rule-description"></a>Rule Description  
+ When overloaded methods are exposed to COM clients, only the first method overload retains its name. Subsequent overloads are uniquely renamed by appending to the name an underscore character '_' and an integer that corresponds to the order of declaration of the overload. For example, consider the following methods.  
   
 ```  
 void SomeMethod(int valueOne);  
@@ -44,7 +61,7 @@ void SomeMethod(int valueOne, int valueTwo, int valueThree);
 void SomeMethod(int valueOne, int valueTwo);  
 ```  
   
- 이러한 메서드는 COM 클라이언트에 다음과 같이 노출됩니다.  
+ These methods are exposed to COM clients as the following.  
   
 ```  
 void SomeMethod(int valueOne);  
@@ -52,27 +69,26 @@ void SomeMethod_2(int valueOne, int valueTwo, int valueThree);
 void SomeMethod_3(int valueOne, int valueTwo);  
 ```  
   
- Visual Basic 6 COM 클라이언트는 이름에 밑줄이 있는 인터페이스 메서드를 구현할 수 없습니다.  
+ Visual Basic 6 COM clients cannot implement interface methods by using an underscore in the name.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 오버로드된 메서드의 이름을 고유한 이름으로 바꿉니다.  또는 액세스 가능성을 `internal`\([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 경우 `Friend`\)로 변경하거나 `false`로 설정된 <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> 특성을 적용하여 COM에서 인터페이스를 볼 수 없도록 만듭니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, rename the overloaded methods so that the names are unique. Alternatively, make the interface invisible to COM by changing the accessibility to `internal` (`Friend` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) or by applying the <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> attribute set to `false`.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 예제  
- 다음 예제에서는 규칙을 위반하는 인터페이스와 규칙을 충족하는 인터페이스를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows an interface that violates the rule and an interface that satisfies the rule.  
   
- [!code-vb[FxCop.Interoperability.OverloadsInterface#1](../code-quality/codesnippet/VisualBasic/ca1402-avoid-overloads-in-com-visible-interfaces_1.vb)]
- [!code-cs[FxCop.Interoperability.OverloadsInterface#1](../code-quality/codesnippet/CSharp/ca1402-avoid-overloads-in-com-visible-interfaces_1.cs)]  
+ [!code-vb[FxCop.Interoperability.OverloadsInterface#1](../code-quality/codesnippet/VisualBasic/ca1402-avoid-overloads-in-com-visible-interfaces_1.vb)] [!code-csharp[FxCop.Interoperability.OverloadsInterface#1](../code-quality/codesnippet/CSharp/ca1402-avoid-overloads-in-com-visible-interfaces_1.cs)]  
   
-## 관련 규칙  
- [CA1413: ComVisible 값 형식에 public이 아닌 필드를 사용하지 마십시오.](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1413: Avoid non-public fields in COM visible value types](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)  
   
- [CA1407: COM 노출 형식에 정적 멤버를 사용하지 마십시오.](../Topic/CA1407:%20Avoid%20static%20members%20in%20COM%20visible%20types.md)  
+ [CA1407: Avoid static members in COM visible types](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)  
   
- [CA1017: ComVisibleAttribute로 어셈블리 표시](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)  
+ [CA1017: Mark assemblies with ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)  
   
-## 참고 항목  
- [비관리 코드와의 상호 운용](../Topic/Interoperating%20with%20Unmanaged%20Code.md)   
+## <a name="see-also"></a>See Also  
+ [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)   
  [Long Data Type](/dotnet/visual-basic/language-reference/data-types/long-data-type)

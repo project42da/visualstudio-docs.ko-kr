@@ -1,204 +1,209 @@
 ---
-title: "연습: 비즈니스 데이터를 사용하여 SharePoint에 외부 목록 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Business Data Connectivity 서비스[Visual Studio에서 SharePoint 개발], 웹 파트의 비즈니스 데이터"
-  - "BDC[Visual Studio에서 SharePoint 개발], 외부 목록"
-  - "Business Data Connectivity 서비스[Visual Studio에서 SharePoint 개발], SharePoint 목록의 비즈니스 데이터"
-  - "BDC[Visual Studio에서 SharePoint 개발], SharePoint 목록의 비즈니스 데이터"
-  - "BDC[Visual Studio에서 SharePoint 개발], 웹 파트의 비즈니스 데이터"
-  - "BDC[Visual Studio에서 SharePoint 개발], 엔터티 지원 목록"
-  - "Business Data Connectivity 서비스[Visual Studio에서 SharePoint 개발], 엔터티 백업 목록"
-  - "Business Data Connectivity 서비스[Visual Studio에서 SharePoint 개발], 외부 목록"
+title: 'Walkthrough: Creating an External List in SharePoint by Using Business Data | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Business Data Connectivity service [SharePoint development in Visual Studio], business data in a Web Part
+- BDC [SharePoint development in Visual Studio], external list
+- Business Data Connectivity service [SharePoint development in Visual Studio], business data in a SharePoint list
+- BDC [SharePoint development in Visual Studio], business data in a SharePoint list
+- BDC [SharePoint development in Visual Studio], business data in a Web Part
+- BDC [SharePoint development in Visual Studio], entity backed list
+- Business Data Connectivity service [SharePoint development in Visual Studio], entity backed list
+- Business Data Connectivity service [SharePoint development in Visual Studio], external list
 ms.assetid: 046cf234-705a-4a6f-91f8-c5c569ae0dd0
 caps.latest.revision: 38
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 37
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a83672695efad46c8205c056f35b841878fc0698
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 비즈니스 데이터를 사용하여 SharePoint에 외부 목록 만들기
-  BDC\(비즈니스 데이터 연결\) 서비스는 SharePoint에서 백 엔드 서버 응용 프로그램, 웹 서비스 및 데이터베이스의 비즈니스 데이터를 표시할 수 있게 해 줍니다.  
+# <a name="walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data"></a>Walkthrough: Creating an External List in SharePoint by Using Business Data
+  The Business Data Connectivity (BDC) service enables SharePoint to display business data from back-end server applications, Web services, and databases.  
   
- 이 연습에서는 샘플 데이터베이스의 연락처 정보를 반환하는 BDC 서비스 모델을 만드는 방법을 보여 줍니다.  그 다음에는 이 모델을 사용하여 SharePoint에 외부 목록을 만듭니다.  
+ This walkthrough shows you how to create a model for the BDC service that returns information about contacts in a sample database. You will then create an external list in SharePoint by using this model.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   프로젝트 만들기  
+-   Creating a project.  
   
--   모델에 엔터티 추가  
+-   Adding an entity to the model.  
   
--   Finder 메서드 추가  
+-   Adding a finder method.  
   
--   SpecificFinder 메서드 추가  
+-   Adding a specific finder method.  
   
--   프로젝트 테스트  
+-   Testing the project.  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   지원되는 Windows 및 SharePoint 버전.  자세한 내용은 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)을 참조하십시오.  
+-   Supported editions of Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)], [!INCLUDE[vsUltLong](../sharepoint/includes/vsultlong-md.md)] 또는 [!INCLUDE[vsPreLong](../sharepoint/includes/vsprelong-md.md)].  
+-   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)], [!INCLUDE[vsUltLong](../sharepoint/includes/vsultlong-md.md)], or [!INCLUDE[vsPreLong](../sharepoint/includes/vsprelong-md.md)].  
   
--   AdventureWorks 샘플 데이터베이스에 액세스할 수 있는 권한.  AdventureWorks 데이터베이스를 설치하는 방법에 대한 자세한 내용은 [SQL Server 샘플 데이터베이스](http://go.microsoft.com/fwlink/?LinkID=117483) 를 참조하십시오.  
+-   Access to the AdventureWorks sample database. For more information about how to install the AdventureWorks database, see [SQL Server Sample Databases](http://go.microsoft.com/fwlink/?LinkID=117483).  
   
-## BDC 모델이 포함된 프로젝트 만들기  
+## <a name="creating-a-project-that-contains-a-bdc-model"></a>Creating a Project that Contains a BDC Model  
   
-#### BDC 모델이 포함된 프로젝트를 만들려면  
+#### <a name="to-create-a-project-that-contains-a-bdc-model"></a>To create a project that contains a BDC model  
   
-1.  Visual Studio 메뉴 모음을 열고, **파일**에서 **새로 만들기**로 들어가서 **프로젝트**를 선택해 줍니다.  
+1.  On the menu bar in Visual Studio, choose **File**, **New**, **Project**.  
   
-     **새 프로젝트** 대화 상자가 열립니다.  
+     The **New Project** dialog box opens.  
   
-2.  **Visual C\#** 또는 **Visual Basic** 에서 **SharePoint** 노드를 확장한 다음 **2010** 항목을 선택합니다.  
+2.  Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** item.  
   
-3.  **템플릿** 창에서 **SharePoint 2010 프로젝트** 를 선택하고, 프로젝트 이름을 AdventureWorksTest로 입력한 다음, **OK** 버튼을 선택합니다.  
+3.  In the **Templates** pane, choose **SharePoint 2010 Project**, name the project **AdventureWorksTest**, and then choose the **OK** button.  
   
-     **SharePoint 사용자 지정 마법사**가 나타납니다.  이 마법사를 사용하면 프로젝트를 디버깅하는 데 사용할 사이트와 솔루션의 신뢰 수준을 지정할 수 있습니다.  
+     The **SharePoint Customization Wizard** appears. In this wizard, you can specify the site that you'll use to debug the project and set the trust level of the solution.  
   
-4.  **팜 솔루션으로 배포** 옵션 버튼을 선택하여 신뢰 수준을 설정합니다.  
+4.  Choose the **Deploy as a farm solution** option button to set the trust level.  
   
-5.  **마침** 단추를 선택하여 기본 로컬 SharePoint 사이트를 수락합니다.  
+5.  Choose the **Finish** button to accept the default local SharePoint site.  
   
-6.  **솔루션 탐색기**에서 SharePoint 프로젝트 노드를 선택합니다.  
+6.  In **Solution Explorer**, choose the SharePoint project node.  
   
-7.  메뉴 모음에서 **프로젝트**, **새 항목 추가**를 선택합니다.  
+7.  On the menu bar, choose **Project**, **Add New Item**.  
   
-     **새 항목 추가** 대화 상자가 열립니다.  
+     The **Add New Item** dialog box opens.  
   
-8.  **템플릿** 창에서 **비즈니스 데이터 연결 모델 \(팜 솔루션만\)** 을 선택하고, 프로젝트 이름을 AdventureWorksContacts 로 입력한 다음, **추가** 버튼을 선택합니다.  
+8.  In the **Templates** pane, choose **Business Data Connectivity Model (Farm Solution Only)**, name the project **AdventureWorksContacts**, and then choose the **Add** button.  
   
-## 프로젝트에 데이터 액세스 클래스 추가  
+## <a name="adding-data-access-classes-to-the-project"></a>Adding Data Access Classes to the Project  
   
-#### 프로젝트에 데이터 액세스 클래스를 추가하려면  
+#### <a name="to-add-data-access-classes-to-the-project"></a>To add data access classes to the project  
   
-1.  메뉴 모음에서 **도구**, **데이터베이스에 연결** 을 선택합니다.  
+1.  On the menu bar, choose **Tools**, **Connect to Database**.  
   
-     **연결 추가** 대화 상자가 열립니다.  
+     The **Add Connection** dialog box opens.  
   
-2.  SQL Server AdventureWorks 샘플 데이터베이스에 대한 연결을 추가합니다.  
+2.  Add a connection to the SQL Server AdventureWorks sample database.  
   
-     자세한 내용은 [Add\/Modify Connection \(Microsoft SQL Server\)](http://msdn.microsoft.com/ko-kr/fa400910-26c3-4df7-b9d1-115e688b4ea3)을 참조하십시오.  
+     For more information, see [Add/Modify Connection (Microsoft SQL Server)](http://msdn.microsoft.com/en-us/fa400910-26c3-4df7-b9d1-115e688b4ea3).  
   
-3.  **솔루션 탐색기**에서 프로젝트 노드를 선택합니다.  
+3.  In **Solution Explorer**, choose the project node.  
   
-4.  메뉴 모음에서 **프로젝트**, **새 항목 추가**를 선택합니다.  
+4.  On the menu bar, choose **Project**, **Add New Item**.  
   
-5.  **설치된 템플릿** 창에서 **데이터** 노드를 선택합니다.  
+5.  In the **Installed Templates** pane, choose the **Data** node.  
   
-6.  **템플릿** 창에서 **LINQ to SQL 클래스**를 선택합니다.  
+6.  In the **Templates** pane, choose **LINQ to SQL Classes**.  
   
-7.  **이름** 상자에서, AdventureWorks를 명시한 다음, **추가** 버튼을 선택합니다.  
+7.  In the **Name** box, specify **AdventureWorks**, and then choose the **Add** button.  
   
-     .dbml 파일이 프로젝트에 추가되고 O\/R 디자이너\(개체 관계형 디자이너\)가 열립니다.  
+     A .dbml file is added to the project, and the Object Relational Designer (O/R Designer) opens.  
   
-8.  메뉴 모음에서 **보기**, **서버 탐색기**를 선택합니다.  
+8.  On the menu bar, choose **View**, **Server Explorer**.  
   
-9. **서버 탐색기**에서 AdventureWorks 샘플 데이터베이스를 나타내는 노드를 확장한 다음 **테이블** 노드를 확장합니다.  
+9. In **Server Explorer**, expand the node that represents the AdventureWorks sample database, and then expand the **Tables** node.  
   
-10. **Contact \(Person\)** 테이블을 O\/R 디자이너에 추가합니다.  
+10. Add the **Contact (Person)** table onto the O/R Designer.  
   
-     엔터티 클래스가 만들어져 디자인 화면에 표시됩니다.  이 엔터티 클래스에는 Contact \(Person\) 테이블의 열에 매핑되는 속성이 있습니다.  
+     An entity class is created and appears on the design surface. The entity class has properties that map to the columns in the Contact (Person) table.  
   
-## BDC 모델에서 기본 엔터티 제거  
- **비즈니스 데이터 연결 모델** 프로젝트는 모델에 Entity1이라는 기본 엔터티를 추가합니다.  이 엔터티를 제거합니다.  나중에 새 엔터티를 추가합니다.  비어 있는 모델로 시작하면 연습을 완료하는 데 필요한 단계가 줄어듭니다.  
+## <a name="removing-the-default-entity-from-the-bdc-model"></a>Removing the Default Entity from the BDC Model  
+ The **Business Data Connectivity Model** project adds a default entity named Entity1 to the model. Remove this entity. Later, you will add a new entity. Starting with an empty model reduces the number of steps required to complete the walkthrough.  
   
-#### 모델에서 기본 엔터티를 제거하려면  
+#### <a name="to-remove-the-default-entity-from-the-model"></a>To remove the default entity from the model  
   
-1.  **솔루션 탐색기**에서 **BdcModel1** 노드를 확장한 다음 BdcModel1.bdcm 파일을 엽니다.  
+1.  In **Solution Explorer**, expand the **BdcModel1** node, and then open the BdcModel1.bdcm file.  
   
-2.  비즈니스 데이터 연결 모델 파일이 BDC 디자이너에서 열립니다.  
+2.  The Business Data Connectivity model file opens in the BDC designer.  
   
-3.  디자이너에서 **Entity1** 의 바로 가기 메뉴를 연 다음 **삭제**를 선택합니다.  
+3.  In the designer, open the shortcut menu for **Entity1**, and then choose **Delete**.  
   
-4.  **솔루션 탐색기** 에서, Entity1.vb \(Visual Basic\) 또는 Entity1.cs \(C\#\) 의 바로가기 메뉴를 연 다음, **삭제** 를 선택합니다.  
+4.  In **Solution Explorer**, open the shortcut menu for Entity1.vb (in Visual Basic) or Entity1.cs (in C#), and then choose **Delete**.  
   
-5.  Entity1Service.vb \(Visual Basic\) 또는 Entity1Service.cs \(C\#\) 에 대한 바로 가기 메뉴를 열고 **삭제** 를 선택합니다.  
+5.  Open the shortcut menu for Entity1Service.vb (in Visual Basic) or Entity1Service.cs (in C#), and then choose **Delete**.  
   
-## 모델에 엔터티 추가  
- 모델에 엔터티를 추가합니다.  Visual Studio **도구 상자**의 엔터티를 BDC 디자이너에 추가할 수 있습니다.  
+## <a name="adding-an-entity-to-the-model"></a>Adding an Entity to the Model  
+ Add an entity to the model. You can add entities from the Visual Studio **Toolbox** onto the BDC designer.  
   
-#### 모델에 엔터티를 추가하려면  
+#### <a name="to-add-an-entity-to-the-model"></a>To add an Entity to the model  
   
-1.  메뉴 모음에서 **보기**, **도구 상자**를 선택합니다.  
+1.  On the menu bar, choose **View**, **Toolbox**.  
   
-2.  **도구 상자** 의 **BusinessDataConnectivity** 탭에서 **엔터티** 를 BDC 디자이너에 추가합니다.  
+2.  On the **BusinessDataConnectivity** tab of the **Toolbox**, add an **Entity** onto the BDC designer.  
   
-     디자이너에 새 엔터티가 표시됩니다.  Visual Studio에서 EntityService.vb\(Visual Basic\) 또는 EntityService.cs\(C\#\) 파일을 프로젝트에 추가합니다.  
+     The new entity appears on the designer. Visual Studio adds a file that's named EntityService.vb (in Visual Basic) or EntityService.cs (in C#) to the project.  
   
-3.  메뉴 모음에서 **보기**, **속성**, **창** 을 선택합니다.  
+3.  On the menu bar, choose **View**, **Properties**, **Window**.  
   
-4.  **속성** 창에서 **이름** 속성 값을 Contact로 설정합니다.  
+4.  In the **Properties** window, set the **Name** property value to **Contact**.  
   
-5.  디자이너에서, 엔터티의 바로 가기 메뉴를 열고 **추가** 를 선택한 다음 **식별자** 를 선택합니다.  
+5.  On the designer, open the shortcut menu for the entity, choose **Add**, and then choose **Identifier**.  
   
-     새 식별자가 엔터티에 나타납니다.  
+     A new identifier appears on the entity.  
   
-6.  **속성** 창에서 식별자 이름을 ContactID로 변경합니다.  
+6.  In the **Properties** window, change the name of the identifier to **ContactID**.  
   
-7.  **형식 이름** 목록에서 **System.Int32** 을 선택합니다.  
+7.  In the **Type Name** list, choose **System.Int32**.  
   
-## SpecificFinder 메서드 추가  
- BDC 서비스에서 특정 연락처를 표시할 수 있도록 하려면 SpecificFinder 메서드를 추가해야 합니다.  사용자가 목록에서 항목을 선택하고 리본 메뉴에서 **항목 보기** 단추를 선택하면 BDC 서비스에서 SpecificFinder 메서드를 호출합니다.  
+## <a name="adding-a-specific-finder-method"></a>Adding a Specific Finder Method  
+ To enable the BDC service to display a specific contact, you must add a Specific Finder method. The BDC service calls the Specific Finder method when a user chooses an item in a list and then chooses the **View Item** button on the Ribbon.  
   
- **BDC 메서드 세부 정보** 창을 사용하여 Contact 엔터티에 SpecificFinder 메서드를 추가합니다.  특정 엔터티를 반환하려면 메서드에 코드를 추가합니다.  
+ Add a Specific Finder method to the Contact entity by using the **BDC Method Details** window. To return a specific entity, add code to the method.  
   
-#### SpecificFinder 메서드를 추가하려면  
+#### <a name="to-add-a-specific-finder-method"></a>To add a Specific Finder method  
   
-1.  BDC 디자이너에서 **Contact** 엔터티를 선택합니다.  
+1.  On the BDC designer, choose the **Contact** entity.  
   
-2.  선택 메뉴 모음에서 **보기**, **기타 창**, **BDC 메서드 세부 정보** 을 선택합니다.  
+2.  On the menu bar, choose **View**, **Other Windows**, **BDC Method Details**.  
   
-     BDC 메서드 세부 정보 창이 열립니다.  
+     The BDC Method Details window opens.  
   
-3.  **메서드 추가** 목록에서 **Specific Finder 메서드 만들기** 를 선택합니다.  
+3.  In the **Add a Method** list, choose **Create Specific Finder Method**.  
   
-     모델에 다음 요소가 추가됩니다.  이러한 요소는 **BDC 메서드 세부 정보** 창에 표시됩니다.  
+     Visual Studio adds the following elements to the model. These elements appear in the **BDC Method Details** window.  
   
-    -   ReadItem 메서드  
+    -   A method named ReadItem.  
   
-    -   메서드의 입력 매개 변수  
+    -   An input parameter for the method.  
   
-    -   메서드의 반환 매개 변수  
+    -   A return parameter for the method.  
   
-    -   각 매개 변수에 대한 형식 설명자  
+    -   A type descriptor for each parameter.  
   
-    -   메서드의 메서드 인스턴스  
+    -   A method instance for the method.  
   
-4.  **BDC 메서드 세부 정보** 창에서, **Contact** 형식 설명자에 대해 표시되는 드롭다운 목록을 연 다음 **편집** 을 선택합니다.  
+4.  In the **BDC Method Details** window, open the list that appears for the **Contact** type descriptor, and then choose **Edit**.  
   
-     **BDC 탐색기** 가 열리고 모델의 계층적 뷰를 제공합니다.  
+     The **BDC Explorer** opens and provides a hierarchical view of the model.  
   
-5.  **속성** 창에서 **TypeName** 속성 옆에 있는 목록을 열고 **현재 프로젝트** 탭을 선택한 다음 **연락처** 속성을 선택합니다.  
+5.  In the **Properties** window, open the list next to the **TypeName** property, choose the **Current Project** tab, and then choose the **Contact** property.  
   
-6.  **BDC 탐색기** 에서, **Contact** 형식 설명자의 바로 가기 메뉴를 연 다음, **형식 설명자 추가** 를 선택합니다.  
+6.  In the **BDC Explorer**, open the shortcut menu of the **Contact**, and then choose **Add Type Descriptor**.  
   
-     **TypeDescriptor1**이라는 새 형식 설명자가 **BDC 탐색기**에 표시됩니다.  
+     A new type descriptor that's named **TypeDescriptor1** appears in the **BDC Explorer**.  
   
-7.  **속성** 창에서 **이름** 속성값을 **ContactID**로 설정합니다.  
+7.  In the **Properties** window, set the **Name** property value to **ContactID**.  
   
-8.  **TypeName** 속성 옆에 있는 목록을 연 다음 **Int32** 를 선택합니다.  
+8.  Open the list next to the **TypeName** property, and then choose **Int32**.  
   
-9. **식별자** 속성 옆에 있는 목록을 연 다음 **ContactID** 을 선택합니다.  
+9. Open the list next to the **Identifier** property, and then choose **ContactID**.  
   
-10. 6단계를 반복하여 다음 각 필드에 대한 형식 설명자를 만듭니다.  
+10. Repeat step 6 to create a type descriptor for each of the following fields.  
   
-    |Name|형식 이름|  
-    |----------|-----------|  
+    |Name|Type Name|  
+    |----------|---------------|  
     |FirstName|System.String|  
     |LastName|System.String|  
     |Phone|System.String|  
@@ -208,94 +213,92 @@ caps.handback.revision: 37
     |PasswordHash|System.String|  
     |PasswordSalt|System.String|  
   
-11. BDC 디자이너의 **Contact** 엔터티에서 **ReadItem** 메서드를 엽니다.  
+11. In the BDC designer, on the **Contact** entity, open the **ReadItem** method.  
   
-     코드 편집기에서 Contact 서비스 코드 파일이 열립니다.  
+     The Contact service code file opens in Code Editor.  
   
-12. `ContactService` 클래스에서 `ReadItem` 메서드를 다음 코드로 바꿉니다.  이 코드는 다음 작업을 수행합니다.  
+12. In the `ContactService` class, replace the `ReadItem` method with the following code. This code performs the following tasks:  
   
-    -   AdventureWorks 데이터베이스의 Contact 테이블에서 데이터를 검색합니다.  
+    -   Retrieves a record from Contact table of the AdventureWorks database.  
   
-    -   BDC 서비스에 Contact 엔터티를 반환합니다.  
-  
-    > [!NOTE]  
-    >  `ServerName` 필드의 값을 서버 이름으로 바꿉니다.  
-  
-     [!code-csharp[SP_BDC#3](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/contactservice.cs#3)]
-     [!code-vb[SP_BDC#3](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/contactservice.vb#3)]  
-  
-## Finder 메서드 추가  
- BDC 서비스에서 목록에 연락처를 표시할 수 있도록 하려면 Finder 메서드를 추가해야 합니다.  **BDC 메서드 세부 정보** 창에서 Contact 엔터티에 Finder 메서드를 추가합니다.  BDC 서비스에 엔터티 컬렉션을 반환하려면 메서드에 코드를 추가합니다.  
-  
-#### Finder 메서드를 추가하려면  
-  
-1.  BDC 디자이너에서 **Contact** 엔터티를 선택합니다.  
-  
-2.  **BDC 메서드 세부 정보** 창에서 **ReadItem** 노드를 축소합니다.  
-  
-3.  **ReadList** 메서드 아래의 **메서드 추가** 목록에서 **Finder 메서드 만들기** 를 선택합니다.  
-  
-     메서드, 반환 매개 변수 및 형식 설명자가 추가됩니다.  
-  
-4.  BDC 디자이너의 **Contact** 엔터티에서 **ReadList** 메서드를 엽니다.  
-  
-     코드 편집기에서 Contact 서비스 코드 파일이 열립니다.  
-  
-5.  `ContactService` 클래스에서 `ReadList` 메서드를 다음 코드로 바꿉니다.  이 코드는 다음 작업을 수행합니다.  
-  
-    -   AdventureWorks 데이터베이스의 Contacts 테이블에서 데이터를 검색합니다.  
-  
-    -   Contact 엔터티 목록을 BDC 서비스에 반환합니다.  
+    -   Returns a Contact entity to the BDC service.  
   
     > [!NOTE]  
-    >  `ServerName` 필드의 값을 서버 이름으로 바꿉니다.  
+    >  Replace the value of the `ServerName` field with the name of your server.  
   
-     [!code-csharp[SP_BDC#2](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/contactservice.cs#2)]
-     [!code-vb[SP_BDC#2](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/contactservice.vb#2)]  
+     [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]  [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]  
   
-## 프로젝트 테스트  
- 프로젝트를 실행하면 SharePoint 사이트가 열리고 비즈니스 데이터 연결 서비스에 모델이 추가됩니다.  SharePoint에 Contact 엔터티를 참조하는 외부 목록을 만듭니다.  AdventureWorks 데이터베이스의 연락처 데이터가 목록에 표시됩니다.  
+## <a name="adding-a-finder-method"></a>Adding a Finder Method  
+ To enable the BDC service to display the contacts in a list, you must add a Finder method. Add a Finder method to the Contact entity by using the **BDC Method Details** window. To return a collection of entities to the BDC service, add code to the method.  
+  
+#### <a name="to-add-a-finder-method"></a>To add a Finder method  
+  
+1.  In the BDC designer, choose the **Contact** entity.  
+  
+2.  In the **BDC Method Details** window, collapse the **ReadItem** node.  
+  
+3.  In the **Add a Method** list under the **ReadList** method, choose **Create Finder Method**.  
+  
+     Visual Studio adds a method, a return parameter, and a type descriptor.  
+  
+4.  In the BDC designer, on the **Contact** entity, open the **ReadList** method.  
+  
+     The code file for the Contact service opens in Code Editor.  
+  
+5.  In the `ContactService` class, replace the `ReadList` method with the following code. This code performs the following tasks:  
+  
+    -   Retrieves data from the Contacts table of the AdventureWorks database.  
+  
+    -   Returns a list of Contact entities to the BDC service.  
+  
+    > [!NOTE]  
+    >  Replace the value of the `ServerName` field with the name of your server.  
+  
+     [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]  [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]  
+  
+## <a name="testing-the-project"></a>Testing the Project  
+ When you run the project, the SharePoint site opens and Visual Studio adds your model to the Business Data Connectivity service. Create an external list in SharePoint that references the Contact entity. The data for contacts in the AdventureWorks database appear in the list.  
   
 > [!NOTE]  
->  솔루션을 디버깅하려면 먼저 SharePoint에서 보안 설정을 수정해야 할 수도 있습니다.  자세한 내용은 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)을 참조하십시오.  
+>  You might have to modify your security settings in SharePoint before you can debug your solution.  For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
   
-#### 프로젝트를 테스트하려면  
+#### <a name="to-test-the-project"></a>To test the project  
   
-1.  **F5** 키를 선택합니다.  
+1.  Choose the **F5** key.  
   
-     SharePoint 사이트가 열립니다.  
+     The SharePoint site opens.  
   
-2.  **사이트 작업** 메뉴에서 **기타 옵션** 명령을 선택합니다.  
+2.  On the **Site Actions** menu, choose the **More Options** command.  
   
-3.  **만들기** 페이지에서 **외부 목록** 템플릿을 선택한 다음 **만들기** 버튼을 선택합니다.  
+3.  On the **Create** page, choose the **External List** template, and then choose the **Create** button.  
   
-4.  사용자 지정 목록의 이름으로 Contacts를 지정합니다.  
+4.  Name the custom list **Contacts**.  
   
-5.  **외부 콘텐츠 형식** 필드 옆에 있는 찾아보기 단추를 선택합니다.  
+5.  Choose the browse button next to the **External Content Type** field.  
   
-6.  **외부 콘텐츠 형식 선택** 대화 상자에서 **AdventureWorksContacts.BdcModel1.Contact** 를 선택한 다음 **만들기** 버튼을 선택합니다.  
+6.  In the **External Content Type Picker** dialog box, choose the **AdventureWorksContacts.BdcModel1.Contact** item, and then choose the **Create** button.  
   
-     SharePoint에서 AdventureWorks 샘플 데이터베이스의 연락처를 포함하는 외부 목록을 만듭니다.  
+     SharePoint creates an external list that contains contacts from the AdventureWorks sample database.  
   
-7.  SpecificFinder 메서드를 테스트하려면, 목록의 연락처를 선택합니다.  
+7.  To test the Specific Finder method, choose a contact in the list.  
   
-8.  리본에서 **항목** 탭을 선택한 다음 **항목 보기** 명령을 선택합니다.  
+8.  On the Ribbon, choose the **Items** tab, and then choose the **View Item** command.  
   
-     선택한 연락처의 세부 정보가 폼에 나타납니다.  
+     The details of the contact that you chose appear on a form.  
   
-## 다음 단계  
- 다음 항목에서는 SharePoint에서 BDC 서비스 모델을 디자인하는 방법에 대해 더 자세히 설명합니다.  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to design models for the BDC service in SharePoint from these topics:  
   
--   [방법: Creator 메서드 추가](../sharepoint/how-to-add-a-creator-method.md).  
+-   [How to: Add a Creator Method](../sharepoint/how-to-add-a-creator-method.md).  
   
--   [방법: Updater 메서드 추가](../sharepoint/how-to-add-an-updater-method.md).  
+-   [How to: Add an Updater Method](../sharepoint/how-to-add-an-updater-method.md).  
   
--   [방법: Deleter 메서드 추가](../sharepoint/how-to-add-a-deleter-method.md).  
+-   [How to: Add a Deleter Method](../sharepoint/how-to-add-a-deleter-method.md).  
   
-## 참고 항목  
- [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [비즈니스 데이터 연결 모델 만들기](../sharepoint/creating-a-business-data-connectivity-model.md)   
- [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)   
- [SharePoint에 비즈니스 데이터 통합](../sharepoint/integrating-business-data-into-sharepoint.md)  
+## <a name="see-also"></a>See Also  
+ [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [Creating a Business Data Connectivity Model](../sharepoint/creating-a-business-data-connectivity-model.md)   
+ [BDC Model Design Tools Overview](../sharepoint/bdc-model-design-tools-overview.md)   
+ [Integrating Business Data into SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)  
   
   

@@ -1,81 +1,98 @@
 ---
-title: "SccGetCommandOptions 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccGetCommandOptions"
-helpviewer_keywords: 
-  - "SccGetCommandOptions 함수"
+title: SccGetCommandOptions Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccGetCommandOptions
+helpviewer_keywords:
+- SccGetCommandOptions function
 ms.assetid: bbe4aa4e-b4b0-403e-b7a0-5dd6eb24e5a9
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# SccGetCommandOptions 함수
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: df497de98463d728b5cd040415924a40fb6717b8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 함수는 지정된 된 명령에 대 한 고급 옵션에 대 한 사용자를 묻습니다.  
+---
+# <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions Function
+This function prompts the user for advanced options for a given command.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccGetCommandOptions(  
-   LPVOID pvContext,  
-   HWND hWnd,  
-   enum SCCCOMMAND iCommand,  
-   LPCMDOPTS* ppvOptions  
+   LPVOID pvContext,  
+   HWND hWnd,  
+   enum SCCCOMMAND iCommand,  
+   LPCMDOPTS* ppvOptions  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\] 소스 제어 플러그 인 컨텍스트 구조입니다.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- \[in\] 소스 제어 플러그 인을 제공 하는 모든 대화 상자에 대 한 부모로 사용할 수 있는 IDE 창 핸들입니다.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  iCommand  
- \[in\] 고급 옵션은 요청 된 명령 \(참조 [명령 코드](../extensibility/command-code-enumerator.md) 가능한 값에 대 한\).  
+ [in] The command for which advanced options are requested (see [Command Code](../extensibility/command-code-enumerator.md) for possible values).  
   
  ppvOptions  
- \[in\] 옵션 구조 \(또한 수 `NULL`\).  
+ [in] The option structure (can also be `NULL`).  
   
-## 반환 값  
- 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|값|설명|  
-|-------|--------|  
-|SCC\_OK|명령 실행 성공|  
-|SCC\_I\_ADV\_SUPPORT|소스 제어 플러그 인은 명령에 대 한 고급 옵션을 지원합니다.|  
-|SCC\_I\_OPERATIONCANCELED|사용자는 소스 제어 플러그 인에서 취소 **옵션** 대화 상자입니다.|  
-|SCC\_E\_OPTNOTSUPPORTED|소스 제어 플러그 인이 작업을 지원 하지 않습니다.|  
-|SCC\_E\_ISCHECKEDOUT|현재 체크 아웃 하는 파일에 대 한이 작업을 수행할 수 없습니다.|  
-|SCC\_E\_ACCESSFAILURE|소스 제어 시스템에 경합 또는 네트워크 문제 때문에 액세스할 수 없습니다. 다시 시도 사용 하는 것이 좋습니다.|  
-|SCC\_E\_NONSPECIFICERROR|알 수 없는 오류가 발생 했습니다.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Success.|  
+|SCC_I_ADV_SUPPORT|The source control plug-in supports advanced options for the command.|  
+|SCC_I_OPERATIONCANCELED|The user cancelled the source control plug-in's **Options** dialog box.|  
+|SCC_E_OPTNOTSUPPORTED|The source control plug-in does not support this operation.|  
+|SCC_E_ISCHECKEDOUT|Cannot perform this operation on a file that is currently checked out.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
   
-## 설명  
- IDE를 처음으로이 함수를 호출 `ppvOptions`\=`NULL` 를 소스 제어 플러그 인 지정된 된 명령에 대 한 고급 옵션 기능을 지원 하는지 확인 합니다. 플러그 인에서 기능을 지원 해당 명령에 대 한, IDE이 함수 호출 하며이 다시 사용자는 고급 옵션을 요청 하면 \(일반적으로 구현 된 **고급** 대화 상자에서 단추\)에 대 한 NULL이 아닌 포인터를 제공 합니다. `ppvOptions` 를 가리키는 `NULL` 포인터. 플러그 인 개인 구조에서 사용자가 지정한 모든 고급 옵션을 저장 하 고 해당 구조에 대 한 포인터를 반환 `ppvOptions`합니다. 이 구조에 대해 알아야 할 후속 호출을 포함 한 다른 모든 소스 제어 플러그 인 API 함수에 전달 됩니다는 `SccGetCommandOptions` 함수입니다.  
+## <a name="remarks"></a>Remarks  
+ The IDE calls this function for the first time with `ppvOptions`=`NULL` to determine if the source control plug-in supports the advanced options feature for the specified command. If the plug-in does support the feature for that command, the IDE calls this function again when the user requests advanced options (usually implemented as an **Advanced** button in a dialog box) and supplies a non-NULL pointer for `ppvOptions` that points to a `NULL` pointer. The plug-in stores any advanced options specified by the user in a private structure and returns a pointer to that structure in `ppvOptions`. This structure is then passed to all other Source Control Plug-in API functions that need to know about it, including subsequent calls to the `SccGetCommandOptions` function.  
   
- 예제는이 상황을 명확 하 게 하는 데 도움이 됩니다.  
+ An example may help clarify this situation.  
   
- 사용자가 선택는 **가져오기** 명령과 IDE를 표시 한 **가져오기** 대화 상자입니다. 호출 하 여 IDE는 `SccGetCommandOptions` 작동 `iCommand` 로 설정 `SCC_COMMAND_GET` 및 `ppvOptions` 로 설정 `NULL`합니다. 이것은 소스 제어의 질문으로 플러그 인, "있습니까이 명령에 대 한 고급 옵션?" 플러그 인을 반환 하는 경우 `SCC_I_ADV_SUPPORT`, IDE를 표시 한 **고급** 단추 해당 **가져오기** 대화 상자.  
+ A user chooses the **Get** command and the IDE displays a **Get** dialog box. The IDE calls the `SccGetCommandOptions` function with `iCommand` set to `SCC_COMMAND_GET` and `ppvOptions` set to `NULL`. This is interpreted by the source control plug-in as the question, "Do you have any advanced options for this command?" If the plug-in returns `SCC_I_ADV_SUPPORT`, the IDE displays an **Advanced** button in its **Get** dialog box.  
   
- 사용자가 처음으로 **고급** 단추, IDE를 다시 호출는 `SccGetCommandOptions` 함수,이 이번에는 비\-`NULL` `ppvOptions` 를 가리키는 `NULL` 포인터입니다.  플러그 인 표시 자체 **가져오기 옵션** 대화 상자 자체 구조에 해당 정보를 업데이트 하 고 해당 구조에 대 한 포인터를 반환 합니다. 사용자에 게 정보를 묻는 `ppvOptions`합니다.  
+ The first time the user clicks the **Advanced** button, the IDE again calls the `SccGetCommandOptions` function, this time with a non-`NULL``ppvOptions` that points to a `NULL` pointer. The plug-in displays its own **Get Options** dialog box, prompts the user for information, puts that information into its own structure, and returns a pointer to that structure in `ppvOptions`.  
   
- 클릭 하면 **고급** 다시 동일한 대화 상자에서 IDE 호출는 `SccGetCommandOptions` 함수를 변경 하지 않고 다시 `ppvOptions`, 구조는 플러그 인으로 다시 전달 되도록 합니다. 이렇게 하면 플러그 인이 사용자가 이전에 설정 된 값에 해당 대화 상자를 다시 초기화 하십시오. 플러그 인을 반환 하기 전에 위치에 구조를 수정합니다.  
+ If the user clicks **Advanced** again in the same dialog box, the IDE calls the `SccGetCommandOptions` function again without changing `ppvOptions`, so that the structure is passed back to the plug-in. This enables the plug-in to reinitialize its dialog box to the values that the user had previously set. The plug-in modifies the structure in place before returning.  
   
- 마지막으로, 사용자가 **확인** 는 IDE에서 **가져오기** 대화 상자, IDE 호출의 [SccGet](../extensibility/sccget-function.md), 에서 반환 되는 구조체를 전달 `ppvOptions` 고급 옵션을 포함 하는 합니다.  
+ Finally, when the user clicks **OK** in the IDE's **Get** dialog box, the IDE calls the [SccGet](../extensibility/sccget-function.md), passing the structure returned in `ppvOptions` that contains the advanced options.  
   
 > [!NOTE]
->  명령 `SCC_COMMAND_OPTIONS` IDE를 표시 하는 경우 사용 되는 **옵션** 사용자 수 있는 대화 상자는 통합의 작동 방법을 제어 하는 환경을 설정 합니다. 표시할 수는 소스 제어 플러그를 자체 기본 설정 대화 상자를 제공 하려는 경우는 **고급** IDE의 기본 설정 대화 상자에서 단추입니다. 플러그 인은 전적으로 부담을 가져오고이 정보를 유지 합니다. IDE를 사용 하지 않거나 수정 합니다.  
+>  The command `SCC_COMMAND_OPTIONS` is used when the IDE displays an **Options** dialog box that lets the user set preferences that control how the integration works. If the source control plug-in wants to supply its own preferences dialog box, it can display it from an **Advanced** button in the IDE's preferences dialog box. The plug-in is solely responsible for getting and persisting this information; the IDE does not use it or modify it.  
   
-## 참고 항목  
- [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)   
- [명령 코드](../extensibility/command-code-enumerator.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [Command Code](../extensibility/command-code-enumerator.md)

@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio에서 Xamarin을 사용하여 네이티브 UI로 앱 빌드 | Microsoft 문서"
+title: Build apps with native UI using Xamarin in Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,101 +28,101 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 48b5010ae161b2ce6ad22513afbca4a8e5fe82d3
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e743915718ae035e8fbe804076552f10f2682dfd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio에서 Xamarin을 사용하여 네이티브 UI로 앱 빌드
-[설정 및 설치](../cross-platform/setup-and-install.md) 및 [Xamarin 환경 확인](../cross-platform/verify-your-xamarin-environment.md)의 단계를 완료했으면 이 연습 과정을 통해 네이티브 UI 레이어로 기본 Xamarin 앱을 빌드하는 방법을 확인합니다(아래 참조). 네이티브 UI에서는 공유 코드가 PCL(이식 가능한 클래스 라이브러리)에 상주하며 개별 플랫폼 프로젝트가 UI 정의를 포함합니다.  
+# <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Build apps with native UI using Xamarin in Visual Studio
+Once you've done the steps in [Setup and install](../cross-platform/setup-and-install.md) and [Verify your Xamarin environment](../cross-platform/verify-your-xamarin-environment.md), this walkthrough shows you how to build a basic Xamarin app (shown below) with native UI layers. With native UI, shared code resides in a portable class library (PCL) and the individual platform projects contain the UI definitions.  
   
- ![Android 및 Windows Phone의 Xamarin 앱](~/cross-platform/media/cross-plat-xamarin-build-1.png "Cross-Plat Xamarin Build 1")  
+ ![Xamarin app on Android and Windows Phone](../cross-platform/media/cross-plat-xamarin-build-1.png "Cross-Plat Xamarin Build 1")  
   
- 앱을 빌드하려면 다음 작업을 수행합니다.  
+ You'll do these things to build it:  
   
--   [솔루션 설정](#solution)  
+-   [Set up your solution](#solution)  
   
--   [공유 데이터 서비스 코드 작성](#dataservice)  
+-   [Write shared data service code](#dataservice)  
   
--   [Android용 UI 디자인](#Android)  
+-   [Design UI for Android](#Android)  
   
--   [Windows Phone용 UI 디자인](#Windows)  
+-   [Design UI for Windows Phone](#Windows)  
   
--   [다음 단계](#next)  
+-   [Next steps](#next)  
   
 > [!TIP]
->  [GitHub의 mobile-samples 리포지토리](https://github.com/xamarin/mobile-samples/tree/master/Weather)에서 이 프로젝트에 대한 전체 소스 코드를 찾을 수 있습니다.
+>  You can find the complete source code for this project in the [mobile-samples repository on GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).
 >
->   어려움이 있거나 오류가 발생하면 [forums.xamarin.com](http://forums.xamarin.com)에 질문을 게시하세요. Xamarin에 필요한 최신 SDK로 업데이트하면 많은 오류를 해결할 수 있습니다. 자세한 내용은 각 플랫폼에 대한 [Xamarin 릴리스 정보](https://developer.xamarin.com/releases/)에 설명되어 있습니다.    
+>   If you have difficulties or run into errors, please post questions on [forums.xamarin.com](http://forums.xamarin.com). Many errors can be resolved by updating to the latest SDKs required by Xamarin, which are described in the  [Xamarin Release Notes](https://developer.xamarin.com/releases/) for each platform.    
   
 > [!NOTE]
->  Xamarin 개발자 설명서에서는 아래와 같이 빠른 시작 및 심층 분석 섹션이 둘 다 포함된 여러 가지 연습도 제공합니다. 이러한 모든 페이지에서 Visual Studio 관련 연습을 보려면 페이지 오른쪽 위에서 "Visual Studio"를 선택해야 합니다.  
+>  Xamarin's developer documentation also offers several walkthroughs with both Quickstart and Deep Dive sections as listed below. On all these pages, be sure that "Visual Studio" is selected in the upper right of the page to see Visual Studio-specific walkthroughs.  
 >   
->  -   네이티브 UI를 사용한 Xamarin 앱:  
+>  -   Xamarin apps with native UI:  
 >   
->      -   [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (단일 화면을 사용한 간단한 앱)  
->     -   [Hello, Android 멀티스크린](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (화면 간 탐색을 사용한 앱)  
->     -   [Android 조각 연습](http://developer.xamarin.com/guides/android/platform_features/fragments/fragments_walkthrough/) (마스터/세부 정보 화면에 사용됨)  
+>      -   [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (simple app with one screen)  
+>     -   [Hello, Android multiscreen](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (app with navigation between screens)  
+>     -   [Android Fragments Walkthrough](http://developer.xamarin.com/guides/android/platform_features/fragments/fragments_walkthrough/) (used for master/detail screens, among other things)  
 >     -   [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)  
->     -   [Hello, iOS 멀티스크린](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)  
-> -   Xamarin.Forms를 사용한 Xamarin 앱(공유 UI)  
+>     -   [Hello, iOS Multiscreen](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)  
+> -   Xamarin apps with Xamarin.Forms (shared UI)  
 >   
 >      -   [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)  
->     -   [Hello, Xamarin.Forms 멀티스크린](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
+>     -   [Hello, Xamarin.Forms Multiscreen](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
   
-##  <a name="solution"></a> 솔루션 설정  
- 다음 단계에서는 공유 코드에 대한 PCL과 두 개의 추가 NuGet 패키지를 포함하는 네이티브 UI로 Xamarin 솔루션을 만듭니다.  
+##  <a name="solution"></a> Set up your solution  
+ These steps create a Xamarin solution with native UI that contains a PCL for shared code and two added NuGet packages.  
   
-1.  Visual Studio에서 새 **비어 있는 앱(네이티브 이식 가능)** 솔루션을 만들고 **WeatherApp**으로 이름을 지정합니다. 검색 필드에 **네이티브 이식 가능**을 입력하면 이 템플릿을 가장 쉽게 찾을 수 있습니다.  
+1.  In Visual Studio, create a new **Blank App (Native Portable)** solution and name it **WeatherApp**. You can find this template most easily by entering **Native Portable** into the search field.  
   
-     템플릿이 이 위치에 없으면 Xamarin을 설치하거나 Visual Studio 2015 기능을 사용하도록 설정해야 합니다. [설정 및 설치](../cross-platform/setup-and-install.md)를 참조하세요.  
+     If it's not there, you might have to install Xamarin or enable the Visual Studio 2015 feature, see [Setup and install](../cross-platform/setup-and-install.md).  
   
-2.  [확인]을 클릭하여 솔루션을 만든 후에는 많은 개별 프로젝트가 만들어집니다.  
+2.  After clicking OK to create the solution, you'll have a number of individual projects:  
   
-    -   **WeatherApp(이식 가능)**: 일반적인 비즈니스 논리 및 Xamarin.Forms를 사용하는 UI 코드를 포함하여 플랫폼 간에 공유되는 코드를 작성하는 PCL입니다.  
+    -   **WeatherApp (Portable)**: the PCL where you'll write code that is shared across platforms, including common business logic and UI code using with Xamarin.Forms.  
   
-    -   **WeatherApp.Droid**: 네이티브 Android 코드를 포함하는 프로젝트. 이 프로젝트가 기본 시작 프로젝트로 설정됩니다.  
+    -   **WeatherApp.Droid**: the project that contains the native Android code. This is set as the default startup project.  
   
-    -   **WeatherApp.iOS**: 네이티브 iOS 코드를 포함하는 프로젝트  
+    -   **WeatherApp.iOS**: the project that contains the native iOS code.  
   
-    -   **WeatherApp.WinPhone(Windows Phone 8.1)**: 네이티브 Windows Phone 코드를 포함하는 프로젝트  
+    -   **WeatherApp.WinPhone (Windows Phone 8.1)**: the project that contains the native Windows Phone code.  
   
-     각 네이티브 프로젝트 내에서 해당 플랫폼에 대한 네이티브 디자이너에 액세스하여 플랫폼 특정 화면을 구현할 수 있습니다.  
+     Within each native project you have access to the native designer for the corresponding platform and can implement platform specific screens.  
   
-3.  **Newtonsoft.Json** 및 NuGet 패키지를 PCL 프로젝트에 추가합니다. 이 프로젝트는 날씨 데이터 서비스에서 검색된 정보를 처리하는 데 사용됩니다.  
+3.  Add the **Newtonsoft.Json** and NuGet package to the PCL project, which you'll use to process information retrieved from a weather data service:  
   
-    -   솔루션 탐색기에서 **솔루션 'WeatherApp'**을 마우스 오른쪽 단추로 클릭하고 **솔루션에 대한 NuGet 패키지 관리...**를 선택합니다.  
+    -   Right-click **Solution 'WeatherApp'** in Solution explorer and select **Manage NuGet Packages for Solution...**.  
   
-         NuGet 창에서 **찾아보기** 탭을 선택하고 **Newtonsoft**를 검색합니다.  
+         In the NuGet window, select the **Browse** tab and search for **Newtonsoft**.  
   
-    -   **Newtonsoft.Json**을 선택합니다.  
+    -   Select **Newtonsoft.Json**.  
   
-    -   창의 오른쪽에서 **WeatherApp** 프로젝트를 선택합니다(패키지를 설치하는 데는 이 프로젝트만 필요함).  
+    -   On the right side of the window, check the **WeatherApp** project (this is the only project in which you need to install the package).  
   
-    -   **버전** 필드가 **안정적인 최신 버전** 으로 설정되어 있는지 확인합니다.  
+    -   Ensure the **Version** field is set to the **Latest stable** version.  
   
-    -   **설치**를 클릭합니다.  
+    -   Click **Install**.  
   
-    -   ![Newtonsoft.Json NuGet 패키지 찾기 및 설치](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")  
+    -   ![Locating and installing the Newtonsoft.Json NuGet package](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")  
   
-4.  3단계를 반복하여 **Microsoft.Net.Http** 패키지를 찾아서 설치합니다.  
+4.  Repeat step 3 to find and install the **Microsoft.Net.Http** package.  
   
-5.  솔루션을 빌드하고 빌드 오류가 없는지 확인합니다.  
+5.  Build your solution and verify that there are no build errors.  
   
-##  <a name="dataservice"></a> 공유 데이터 서비스 코드 작성  
- **WeatherApp(이식 가능)** 프로젝트는 모든 플랫폼에서 공유되는 PCL(이식 가능한 클래스 라이브러리)에 대한 코드를 작성하는 프로젝트입니다. PCL은 iOS, Android, Windows Phone 프로젝트에서 빌드된 앱 패키지에 자동으로 포함됩니다.  
+##  <a name="dataservice"></a> Write shared data service code  
+ The **WeatherApp (Portable)** project is where you'll write code for the portable class library (PCL) that's shared across all platforms. The PCL is automatically included in the app packages built by the iOS, Android, and Windows Phone projects.  
   
- 다음 단계에서는 날씨 서비스의 데이터를 액세스하고 저장하기 위한 코드를 PCL에 추가합니다.  
+ The following steps then add code to the PCL to access and store data from that weather service:  
   
-1.  이 샘플을 실행하려면 무료 API 키를 위해 [http://openweathermap.org/appid](http://openweathermap.org/appid)에 먼저 등록해야 합니다.  
+1.  To run this sample you must first sign up for a free API key at [http://openweathermap.org/appid](http://openweathermap.org/appid).  
   
-2.  **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 클래스...**를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름을 **Weather.cs**로 지정합니다. 이 클래스는 날씨 데이터 서비스의 데이터를 저장하는 데 사용합니다.  
+2.  Right-click the **WeatherApp** project and select **Add > Class...**. In the **Add New Item** dialog, name the file **Weather.cs**. You'll use this class to store data from the weather data service.  
   
-3.  **Weather.cs** 의 전체 내용을 다음으로 바꿉니다.  
+3.  Replace the entire contents of **Weather.cs** with the following:  
   
-    ```c#  
+    ```csharp  
     namespace WeatherApp  
     {  
         public class Weather  
@@ -151,11 +151,11 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-4.  **DataService.cs**라는 PCL 프로젝트에 다른 클래스를 추가합니다. 이 프로젝트는 날씨 데이터 서비스의 JSON 데이터를 처리하는 데 사용됩니다.  
+4.  Add another class to the PCL project named **DataService.cs** in which you'll use to process JSON data from the weather data service.  
   
-5.  **DataService.cs** 의 전체 내용을 다음 코드로 바꿉니다.  
+5.  Replace the entire contents of **DataService.cs** with the following code:  
   
-    ```c#  
+    ```csharp  
     using System.Threading.Tasks;  
     using Newtonsoft.Json;  
     using System.Net.Http;  
@@ -182,11 +182,11 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-6.  **Core**라는 PCL에 세 번째 클래스를 추가합니다. 여기서는 우편 번호를 사용하여 쿼리 문자열을 구성하고, 날씨 데이터 서비스를 호출한 다음 **Weather** 클래스의 인스턴스를 채우는 논리와 같은 공유 비즈니스 논리를 추가하게 됩니다.  
+6.  Add a third class to the PCL named **Core** where you'll put shared business logic, such as logic that forms a query string with a zip code, calls the weather data service, and populates an instance of the **Weather** class.  
   
-7.  그런 후 **Core.cs** 의 내용을 다음으로 바꿉니다.  
+7.  Replace the contents of **Core.cs** with the following:  
   
-    ```c#  
+    ```csharp  
     using System;  
     using System.Threading.Tasks;  
   
@@ -234,51 +234,51 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-8.  코드의 *YOUR KEY HERE*를 1단계에서 얻은 API 키로 바꿉니다(여전히 주위에 따옴표 필요).  
+8.  Replace *YOUR KEY HERE* in the code with the API key you obtained in step 1 (it still needs quotes around it).  
   
-9. 사용하지 않을 것이므로 PCL에서 MyClass.cs를 삭제합니다.  
+9. Delete MyClass.cs in the PCL because we won't be using it.  
   
-10. **WeatherApp** PCL 프로젝트를 빌드하여 코드가 올바른지 확인합니다.  
+10. Build the **WeatherApp** PCL project to make sure the code is correct.  
   
-##  <a name="Android"></a> Android용 UI 디자인  
- 이제 사용자 인터페이스를 디자인하고 공유 코드에 연결한 후 앱을 실행합니다.  
+##  <a name="Android"></a> Design UI for Android  
+ Now, we'll design the user interface, connect it to your shared code, and then run the app.  
   
-### <a name="design-the-look-and-feel-of-your-app"></a>앱의 모양과 느낌 디자인  
+### <a name="design-the-look-and-feel-of-your-app"></a>Design the look and feel of your app  
   
-1.  **솔루션 탐색기**에서 **WeatherApp.Droid**>**Resources**>**layout** 폴더를 확장하고 **Main.axml**을 엽니다. 비주얼 디자이너에서 파일이 열립니다. Java 관련 오류가 나타나는 경우 이 [블로그 게시물](http://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9)을 참조하세요.  
-  
-    > [!TIP]
-    >  프로젝트에는 다른 많은 파일이 있습니다. 이 항목에서는 이러한 파일에 대해 자세히 다루지 않지만 Android 프로젝트의 구조를 좀 더 자세히 알아보려면 xamarin.com의 Hello Android 항목에서 [Part 2 Deep Dive(2부 자세히 알아보기)](http://developer.xamarin.com/guides/android/getting_started/hello,android/hello,android_deepdive/)를 참조하세요.  
-  
-2.  디자이너에 표시되는 기본 단추를 선택하여 삭제합니다.  
-  
-3.  **보기 > 다른 창 > 도구 상자**를 선택하여 도구 상자를 엽니다.  
-  
-4.  **도구 상자**의 **RelativeLayout** 컨트롤을 디자이너로 끕니다. 이 컨트롤을 다른 컨트롤의 부모 컨테이너로 사용하게 됩니다.  
+1.  In **Solution Explorer**, expand the **WeatherApp.Droid**>**Resources**>**layout** folder and open **Main.axml**. This opens the file in the visual designer. (If a Java-related error appears, see this [blog post](http://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9).)  
   
     > [!TIP]
-    >  레이아웃이 올바르게 표시되지 않는 경우 언제든지 파일을 저장하고 **디자인** 및 **소스** 탭 간에 전환하여 새로 고칩니다.  
+    >  There are many other files in the project. Exploring them is beyond the scope of this topic, but if you want to dive into the structure of an Android project a bit more, see [Part 2 Deep Dive](http://developer.xamarin.com/guides/android/getting_started/hello,android/hello,android_deepdive/) of the Hello Android topic on xamarin.com.  
   
-5.  **속성** 창에서 **배경** 속성(스타일 그룹)을 `#545454`로 설정합니다.  
+2.  Select and delete the default button that appears in the designer.  
   
-6.  **도구 상자**의 **TextView** 컨트롤을 **RelativeLayout** 컨트롤로 끕니다.  
+3.  Open the Toolbox with **View > Other Windows > Toolbox**.  
   
-7.  **속성** 창에서 다음 속성을 설정합니다(참고: 속성 창 도구 모음의 정렬 단추를 사용하면 목록을 사전순으로 정렬하는 데 도움이 될 수 있음).  
+4.  From the **Toolbox**, drag a **RelativeLayout** control onto the designer. You'll use this control as a parent container for other controls.  
   
-    |속성|값|  
+    > [!TIP]
+    >  If at any time the layout doesn't seem to display correctly, save the file and switching between the **Design** and **Source** tabs to refresh.  
+  
+5.  In the **Properties** window, set the **background** property (in the Style group) to `#545454`.  
+  
+6.  From the **Toolbox**, drag a **TextView** control onto the **RelativeLayout** control.  
+  
+7.  In the **Properties** window, set these properties (note: it can help to sort the list alphabetically using the sort button in the Properties window toolbar):  
+  
+    |Property|Value|  
     |--------------|-----------|  
-    |**text**|**우편 번호로 검색**|  
+    |**text**|**Search by Zip Code**|  
     |**id**|`@+id/ZipCodeSearchLabel`|  
     |**layout_marginLeft**|`10dp`|  
     |**textColor**|`@android:color/white`|  
     |**textStyle**|`bold`|  
   
     > [!TIP]
-    >  대부분의 속성은 선택 가능한 값이 포함된 드롭다운 목록이 없습니다.  따라서 특정 속성에 어떤 문자열 값을 사용해야 할지 추측하기가 어려울 수 있습니다. 제안 사항을 보려면 [R.attr](http://developer.android.com/reference/android/R.attr.html) 클래스 페이지에서 속성 이름을 검색해 보세요.  
+    >  Notice that many properties don't contain a drop-down list of values that you can select.  It can be difficult to guess what string value to use for any given property. For suggestions, try searching for the name of a property in the [R.attr](http://developer.android.com/reference/android/R.attr.html) class page.  
     >   
-    >  또한 빠른 웹 검색을 수행하면 [http://stackoverflow.com/](http://stackoverflow.com/) 에서 다른 사용자가 동일한 속성을 사용한 페이지를 종종 찾을 수 있습니다.  
+    >  Also, a quick web search often leads to a page on [http://stackoverflow.com/](http://stackoverflow.com/) where others have used the same property.  
   
-     참조용으로, **소스** 보기로 전환하면 이 요소에 대해 다음 코드가 표시됩니다.  
+     For reference, if you switch to **Source** view, you should see the following code for this element:  
   
     ```xml  
     <TextView  
@@ -293,18 +293,18 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-8.  **도구 상자**에서 **TextView** 컨트롤을 **RelativeLayout** 컨트롤로 끌어와 ZipCodeSearchLabel 컨트롤 아래에 놓습니다. 새 컨트롤을 기존 컨트롤의 적절한 가장자리에 놓으면 됩니다. 디자이너를 약간 확대하면 도움이 됩니다.  
+8.  From the **Toolbox**, drag a **TextView** control onto the **RelativeLayout** control and position it below the ZipCodeSearchLabel control. You do this by dropping the new control on the appropriate edge of the existing control; it helps to zoom the designer in somewhat for this.  
   
-9. **속성** 창에서 다음 속성을 설정합니다.  
+9. In the **Properties** window, set these properties:  
   
-    |속성|값|  
+    |Property|Value|  
     |--------------|-----------|  
-    |**텍스트**|**우편 번호**|  
-    |**ID**|`@+id/ZipCodeLabel`|  
+    |**text**|**Zip Code**|  
+    |**id**|`@+id/ZipCodeLabel`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginTop**|`5dp`|  
   
-     **소스** 보기의 코드는 다음과 같습니다.  
+     The code in **Source** view should look like this:  
   
     ```xml  
     <TextView  
@@ -317,16 +317,16 @@ ms.lasthandoff: 05/13/2017
         android:layout_marginLeft="10dp" />  
     ```  
   
-10. **도구 상자**의 **숫자** 컨트롤을 **RelativeLayout**으로 끌고 **Zip Code** 레이블 아래에 배치합니다. 다음 속성을 설정합니다.  
+10. From the **Toolbox**, drag a **Number** control onto the **RelativeLayout**, position it below the **Zip Code** label. Then set the following properties:  
   
-    |속성|값|  
+    |Property|Value|  
     |--------------|-----------|  
-    |**ID**|`@+id/zipCodeEntry`|  
+    |**id**|`@+id/zipCodeEntry`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginBottom**|`10dp`|  
     |**width**|`165dp`|  
   
-     이제 코드는 다음과 같습니다.  
+     Again, the code:  
   
     ```xml  
     <EditText  
@@ -340,12 +340,12 @@ ms.lasthandoff: 05/13/2017
         android:width="165dp" />  
     ```  
   
-11. **도구 상자**에서 **단추**를 **RelativeLayout** 컨트롤로 끌고 zipCodeEntry 컨트롤 오른쪽에 배치합니다. 다음 속성을 설정합니다.  
+11. From the **Toolbox**, drag a **Button** onto the **RelativeLayout** control and position it to the right of the zipCodeEntry control. Then set these properties:  
   
-    |속성|값|  
+    |Property|Value|  
     |--------------|-----------|  
-    |**ID**|`@+id/weatherBtn`|  
-    |**텍스트**|**날씨 검색**|  
+    |**id**|`@+id/weatherBtn`|  
+    |**text**|**Get Weather**|  
     |**layout_marginLeft**|`20dp`|  
     |**layout_alignBottom**|`@id/zipCodeEntry`|  
     |**width**|`165dp`|  
@@ -361,7 +361,7 @@ ms.lasthandoff: 05/13/2017
         android:width="165dp" />  
     ```  
   
-12. Android 디자이너를 사용하여 기본 UI를 빌드할 수 있을 정도로 충분히 연습했습니다. 페이지의 .asxml 파일에 직접 마크업을 추가하여 UI를 빌드할 수도 있습니다. UI의 나머지를 이런 방식으로 빌드하려면 디자이너에서 소스 보기로 전환하고, `</RelativeLayout>` 태그 *아래에* 다음 마크업을 붙여 넣습니다. 태그 아래입니다. 이러한 요소는 ReleativeLayout에 포함되어 있지 않습니다.  
+12. You now have enough experience to build a basic UI by using the Android designer. You can also build a UI by adding markup directly to the .asxml file of the page. To build the rest of the UI that way, switch to Source view in the designer, then past the following markup *beneath* the `</RelativeLayout>` tag (yes, that's beneath the tag...these elements are not contained in the ReleativeLayout).  
   
     ```xml  
     <TextView  
@@ -466,11 +466,11 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-13. 파일을 저장하고 **디자인** 보기로 전환합니다. UI가 다음과 같아야 합니다.  
+13. Save the file and switch to **Design** view. Your UI should appear as follows:  
   
-     ![Android 앱용 UI](~/cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
+     ![UI for Android app](../cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
   
-14. **MainActivity.cs**를 열고 *OnCreate* 메서드에서 앞서 제거된 기본 단추를 참조하는 줄을 삭제합니다. 완료했을 때 코드는 다음과 같습니다.  
+14. Open **MainActivity.cs** and delete the lines in the *OnCreate* method that refer to the default button that was removed earlier. The code should look like this when you're done:  
   
     ```  
     protected override void OnCreate (Bundle bundle)  
@@ -482,13 +482,13 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-15. Android 프로젝트를 빌드하여 작업을 확인합니다. 코드에서 이름으로 컨트롤을 참조할 수 있도록 컨트롤 ID가 **Resource.Designer.cs** 파일에 추가됩니다.  
+15. Build the Android project to check your work. Note that building adds control IDs to the **Resource.Designer.cs** file so that you can refer to controls by name in code.  
   
-### <a name="consume-your-shared-code"></a>공유 코드 사용  
+### <a name="consume-your-shared-code"></a>Consume your shared code  
   
-1.  코드 편집기에서 **WeatherApp** 프로젝트의 **MainActivity.cs** 파일을 열고 내용을 다음 코드로 바꿉니다. 이 코드는 공유 코드에 정의된 `GetWeather` 메서드를 호출합니다. 그런 다음 해당 메서드에서 검색된 데이터를 앱의 UI에 표시합니다.  
+1.  Open the **MainActivity.cs** file of the **WeatherApp** project in the code editor and replace its contents with the code below. This code calls the `GetWeather` method that you defined in your shared code. Then, in the UI of the app, it shows the data that is retrieved from that method.  
   
-    ```c#  
+    ```csharp  
     using System;  
     using Android.App;  
     using Android.Widget;  
@@ -530,26 +530,26 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-### <a name="run-the-app-and-see-how-it-looks"></a>앱을 실행하고 어떻게 나타나는지 확인합니다.  
+### <a name="run-the-app-and-see-how-it-looks"></a>Run the app and see how it looks  
   
-1.  **솔루션 탐색기**에서 **WeatherApp.Droid** 프로젝트가 시작 프로젝트로 설정되었는지 확인합니다.  
+1.  In **Solution Explorer**, make sure the **WeatherApp.Droid** project is set as the startup project.  
   
-2.  적절한 장치 또는 에뮬레이터 대상을 선택한 다음 F5 키를 눌러 앱을 시작합니다.  
+2.  Select an appropriate device or emulator target, then start the app by pressing the F5 key.  
   
-3.  장치 또는 에뮬레이터에서 편집 상자에 유효한 미국 우편 번호(예: 60601)를 입력하고 **Get Weather**를 누릅니다. 그러면 해당 지역의 날씨 데이터가 컨트롤에 표시됩니다.  
+3.  On the device or in the emulator, type a valid United States zip code into the edit box (for example: 60601), and press **Get Weather**. Weather data for that region then appears in the controls.  
   
-     ![Android 및 Windows Phone용 날씨 앱](../cross-platform/media/xamarin_getstarted_results.png "Xamarin_GetStarted_Results")  
+     ![Weather app for Android and Windows Phone](../cross-platform/media/xamarin_getstarted_results.png "Xamarin_GetStarted_Results")  
   
 > [!TIP]
->  이 프로젝트에 대한 전체 소스 코드는 [GitHub의 xamarin-forms-samples 리포지토리](https://github.com/xamarin/mobile-samples/tree/master/Weather)에 있습니다.  
+>  The complete source code for this project is in the [mobile-samples repository on GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).  
   
-##  <a name="Windows"></a> Windows Phone용 UI 디자인  
- 이제 Windows Phone용 사용자 인터페이스를 디자인하고 공유 코드에 연결한 후 앱을 실행합니다.  
+##  <a name="Windows"></a> Design UI for Windows Phone  
+ Now we'll design the user interface for Windows Phone, connect it to your shared code, and then run the app.  
   
-### <a name="design-the-look-and-feel-of-your-app"></a>앱의 모양과 느낌 디자인  
- Xamarin 앱에서 네이티브 Windows Phone UI를 디자인하는 과정은 다른 네이티브 Windows Phone 앱과 다르지 않습니다. 따라서 여기서는 디자이너 사용 방법에 대해 자세히 다루지 않겠습니다. 필요한 경우 [XAML 디자이너를 사용하여 UI 만들기](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)를 참조하세요.  
+### <a name="design-the-look-and-feel-of-your-app"></a>Design the look and feel of your app  
+ The process of designing native Windows Phone UI in a Xamarin app is no different from any other native Windows Phone app. For this reason, we won't go into the details here of how to use the designer. For that, refer to [Creating a UI by using XAML Designer](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).  
   
- 대신, MainPage.xaml을 열고 모든 XAML 코드를 다음으로 바꿉니다.  
+ Instead, simply open MainPage.xaml and replace all the XAML code with the following:  
   
 ```xaml  
 <Page  
@@ -595,25 +595,25 @@ ms.lasthandoff: 05/13/2017
 </Page>  
 ```  
   
- 디자인 보기에서 UI가 다음과 같아야 합니다.  
+ In the design view, your UI should appear as follows:  
   
- ![Windows Phone 앱 UI](~/cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
+ ![Windows Phone app UI](../cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
   
-### <a name="consume-your-shared-code"></a>공유 코드 사용  
+### <a name="consume-your-shared-code"></a>Consume your shared code  
   
-1.  디자이너에서 **날씨 검색** 단추를 선택합니다.  
+1.  In the designer, select the **Get Weather** button.  
   
-2.  **속성** 창에서 이벤트 처리기 단추(![Visual Studio 이벤트 처리기 아이콘](~/cross-platform/media/blend_vs_eventhandlers_icon.png "blend_VS_EventHandlers_icon"))를 선택합니다.  
+2.  In the **Properties** window, choose the event handler button (![Visual Studio Event Handlers icon](../cross-platform/media/blend_vs_eventhandlers_icon.png "blend_VS_EventHandlers_icon")).  
   
-     이 아이콘은 **속성** 창의 위 모퉁이에 표시됩니다.  
+     This icon appears in the top corner of the **Properties** window.  
   
-3.  **Click** 이벤트 옆에 **GetWeatherButton_Click**을 입력한 후 Enter 키를 누릅니다.  
+3.  Next to the **Click** event, type **GetWeatherButton_Click**, and then press the ENTER key.  
   
-     그러면 `GetWeatherButton_Click`이라는 이벤트 처리기가 생성됩니다. 코드 편집기가 열리고 커서가 이벤트 처리기 코드 블록 내에 놓입니다.  참고: ENTER 키를 누를 때 편집기가 열리지 않으면 이벤트 이름을 두 번 클릭합니다.  
+     This generates an event handler named `GetWeatherButton_Click`. The code editor opens and places your cursor inside of the event handler code block.  Note: if the editor doesn't open when pressing ENTER, just double-click the event name.  
   
-4.  이벤트 처리기를 다음 코드로 바꿉니다.  
+4.  Replace that event handler with the following code.  
   
-    ```c#  
+    ```csharp  
     private async void GetWeatherButton_Click(object sender, RoutedEventArgs e)  
     {  
         if (!String.IsNullOrEmpty(zipCodeEntry.Text))  
@@ -632,35 +632,35 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-     이 코드는 공유 코드에 정의된 `GetWeather` 메서드를 호출합니다. 이 메서드는 Android 앱에서 호출한 것과 동일한 메서드입니다. 또한 이 코드는 해당 메서드에서 검색된 데이터를 앱의 UI 컨트롤에 표시합니다.  
+     This code calls the `GetWeather` method that you defined in your shared code. This is the same method that you called in your Android app. This code also shows data retrieved from that method in the UI controls of your app.  
   
-5.  열려 있는 MainPage.xaml.cs에서 **OnNavigatedTo** 메서드 내 코드를 모두 삭제합니다. 이 코드는 MainPage.xaml 내용이 교체되었을 때 제거된 기본 단추를 처리하는 것일 뿐입니다.  
+5.  In MainPage.xaml.cs, which is open, delete all the code inside the **OnNavigatedTo** method. This code simply handled the default button that was removed when we replaced the contents of MainPage.xaml.  
   
-### <a name="run-the-app-and-see-how-it-looks"></a>앱을 실행하고 어떻게 나타나는지 확인합니다.  
+### <a name="run-the-app-and-see-how-it-looks"></a>Run the app and see how it looks  
   
-1.  **솔루션 탐색기**에서 **WeatherApp.WinPhone** 프로젝트를 시작 프로젝트로 설정합니다.  
+1.  In **Solution Explorer**, set the **WeatherApp.WinPhone** project as the startup project.  
   
-2.  F5 키를 눌러 앱을 시작합니다.  
+2.  Start the app by pressing the F5 key.  
   
-3.  Windows Phone 에뮬레이터에서 편집 상자에 유효한 미국 우편 번호(예: 60601)를 입력한 다음 **Get Weather**를 누릅니다. 그러면 해당 지역의 날씨 데이터가 컨트롤에 표시됩니다.  
+3.  In the Windows Phone emulator, type a valid United States zip code into the edit box (for example: 60601), and press **Get Weather**. Weather data for that region then appears in the controls.  
   
-     ![실행 중인 앱의 Windows 버전](../cross-platform/media/xamarin_getstarted_results_windows.png "Xamarin_GetStarted_Results_Windows")  
+     ![Windows version of the running app](../cross-platform/media/xamarin_getstarted_results_windows.png "Xamarin_GetStarted_Results_Windows")  
   
 > [!TIP]
->  이 프로젝트에 대한 전체 소스 코드는 [GitHub의 xamarin-forms-samples 리포지토리](https://github.com/xamarin/mobile-samples/tree/master/Weather)에 있습니다.  
+>  The complete source code for this project is in the [mobile-samples repository on GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).  
   
-##  <a name="next"></a> 다음 단계  
- **iOS용 UI를 솔루션에 추가**  
+##  <a name="next"></a> Next steps  
+ **Add UI for iOS to the solution**  
   
- iOS용 네이티브 UI를 추가하여 이 샘플을 확장합니다. 이렇게 하려면, 로컬 네트워크에 있으며 Xcode 및 Xamarin이 설치된 Mac에 연결해야 합니다. 완료했으면 Visual Studio에서 직접 iOS 디자이너를 사용할 수 있습니다. 완성된 앱은 [GitHub의 모바일 샘플 리포지토리](https://github.com/xamarin/mobile-samples/tree/master/Weather)를 참조하세요.  
+ Extend this sample by adding native UI for iOS. For this you'll need to connect to a Mac on your local network that has Xcode and Xamarin installed. Once you do, you can use the iOS designer directly in Visual Studio. See the [mobile-samples repository on GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather) for a completed app.  
   
- 또한 [Hello, iOS](http://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/hello,iOS_quickstart/)(xamarin.com) 연습을 참조하세요. 이 페이지에서 올바른 명령 집합이 표시되도록 xamarin.com의 페이지 오른쪽 위 모서리에서 "Visual Studio"가 선택되어 있는지 확인합니다.  
+ Also refer to the [Hello, iOS](http://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/hello,iOS_quickstart/) (xamarin.com) walkthrough. Note that on this page, be sure that "Visual Studio" is selected in the upper right corner of pages on xamarin.com so that the correct set of instructions appear.  
   
- **공유 프로젝트에 플랫폼별 코드 추가**  
+ **Add platform-specific code in a shared project**  
   
- PCL의 공유 코드는 플랫폼 중립적입니다. PCL은 한 번 컴파일되어 각 플랫폼별 앱 패키지에 포함되기 때문입니다. 플랫폼별 코드를 격리하는 조건부 컴파일을 사용하는 공유 코드를 작성하려면 *공유* 프로젝트를 사용할 수 있습니다. 자세한 내용은 [ode Sharing Options](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/sharing_code_options/)(xamarin.com)를 참조하세요.  
+ Shared code in a PCL is platform-neutral, because the PCL is compiled once and included in each platform-specific app package. If you want to write shared code that uses conditional compilation to isolate platform-specific code, you can use a *shared* project. For more details, see [ode Sharing Options](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/sharing_code_options/) (xamarin.com).  
   
-## <a name="see-also"></a>참고 항목  
- [Xamarin 개발자 사이트](http://developer.xamarin.com/)   
- [Windows 개발자 센터](https://dev.windows.com/en-us)   
- [Swift 및 C# 빠른 참조 포스터](http://aka.ms/scposter)
+## <a name="see-also"></a>See Also  
+ [Xamarin Developer site](http://developer.xamarin.com/)   
+ [Windows Dev Center](https://dev.windows.com/en-us)   
+ [Swift and C# Quick Reference Poster](http://aka.ms/scposter)

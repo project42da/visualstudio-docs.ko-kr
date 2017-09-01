@@ -1,7 +1,7 @@
 ---
-title: "방법: 단독으로 키보드 사용 | Microsoft Docs"
+title: 'How to: Use the Keyboard Exclusively | Microsoft Docs'
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 08/22/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,103 +16,92 @@ helpviewer_keywords:
 - keyboard shortcuts [Visual Studio]
 - accessibility [Visual Studio]
 ms.assetid: d71a4cc1-d352-4164-8538-3f9fa070a331
-caps.latest.revision: 25
 author: kempb
-ms.author: kempb
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 6b1e1a8a1e453015a673580d8a0dda7f5e817168
+ms.translationtype: HT
+ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
+ms.openlocfilehash: af3c76fb90fe79f87091fdde355a54b3e4835f1c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="how-to-use-the-keyboard-exclusively"></a>방법: 단독으로 키보드 사용
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서는 IDE(통합 개발 환경) 내에서 쉽게 탐색 및 코딩할 수 있도록 하는 다양한 기본 바로 가기 키 조합을 제공합니다. Visual Studio에서 사용되는 바로 가기 키의 전체 목록은 [기본 바로 가기 키](../../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요. 다른 Microsoft 제품에 사용 가능한 바로 가기 키에 대한 자세한 내용은 [http://www.microsoft.com/enable/products/keyboard.aspx](http://go.microsoft.com/fwlink/?LinkID=40400) 페이지를 참조하세요.  
-  
+# <a name="how-to-use-the-keyboard-exclusively"></a>How to: Use the Keyboard Exclusively
+> [!TIP]
+> To learn more about recent accessibility updates, see the [Accessibility improvements in Visual Studio 2017 version 15.3](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/) blog post.
+
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] provides many default shortcut key combinations to make it easy to navigate and code within the integrated development environment (IDE). For a full listing of shortcut keys used in Visual Studio, see [Default Keyboard Shortcuts](../../ide/default-keyboard-shortcuts-in-visual-studio.md). For information on keyboard shortcuts available for other Microsoft products, see [http://www.microsoft.com/enable/products/keyboard.aspx](http://go.microsoft.com/fwlink/?LinkID=40400).  
+
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
-  
-## <a name="toolbox-controls"></a>도구 상자 컨트롤  
- 키보드를 사용하여 도구 상자의 컨트롤을 폼 또는 디자이너에 추가할 수 있습니다.  
-  
-#### <a name="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard"></a>키보드에서 도구 상자의 컨트롤을 디자이너에 추가하려면  
-  
-1.  메뉴 모음에서 **보기**, **도구 상자**를 차례로 선택합니다.  
-  
-2.  Ctrl+위쪽 화살표 또는 Ctrl+아래쪽 화살표 키를 선택하여 현재 도구 상자 탭의 섹션 간에 이동합니다.  
-  
-3.  위쪽 화살표 또는 **아래쪽 화살표** 키를 선택하여 컨트롤 간에 이동합니다.  
-  
-4.  컨트롤이 선택된 후 Enter 키를 선택합니다.  
-  
- 컨트롤이 폼 또는 디자이너에 추가됩니다.  
-  
-## <a name="dialog-box-options"></a>대화 상자 옵션  
- 키보드를 사용하여 대화 상자에서 옵션 간에 이동하고 옵션 설정을 변경할 수 있습니다.  
-  
-#### <a name="to-set-dialog-box-options-from-the-keyboard"></a>키보드에서 대화 상자 옵션을 설정하려면  
-  
-1.  **TAB** 또는 **SHIFT+TAB**을 사용하여 대화 상자의 컨트롤 간에 위아래로 이동합니다.  
-  
-2.  옵션 설정을 변경하려면:  
-  
-    -   라디오 단추의 경우 **위쪽 화살표** 및 **아래쪽 화살표**를 사용하여 선택을 변경합니다.  
-  
-    -   확인란의 경우 **스페이스바**를 사용하여 선택하거나 선택 취소합니다.  
-  
-    -   드롭다운 목록의 경우 **ALT** + **아래쪽 화살표**를 사용하여 항목을 표시하고 나서 **위쪽 화살표** 및 **아래쪽 화살표**를 사용하여 선택한 항목을 변경합니다.  
-  
-    -   단추의 경우 **ENTER** 키를 눌러 호출합니다.  
-  
-    -   눈금의 경우 화살표 키를 사용하여 탐색합니다. 눈금에 있는 드롭다운 목록의 경우 **SHIFT** + **ALT** + **아래쪽 화살표**를 사용하여 항목을 표시하고 나서 **위쪽 화살표** 및 **아래쪽 화살표**를 사용하여 선택한 항목을 변경합니다.  
-  
-## <a name="window-and-file-navigation"></a>창 및 파일 탐색  
- IDE에서는 다양한 방식으로 키보드를 사용하여 열린 도구 및 문서 창 간에 이동할 수 있습니다. 키보드를 사용하여 서로 다른 위치에서 도구 창을 이동 및 도킹할 수도 있습니다.  
-  
-#### <a name="to-navigate-among-windows-and-files-in-the-ide-from-the-keyboard"></a>키보드에서 IDE의 창 및 파일 간에 이동하려면  
-  
--   편집기 또는 디자이너에서 파일 간에 이동하려면 CTRL+TAB 키를 선택하여 **활성 파일**이 선택되어 있는 IDE 탐색기를 표시합니다. Enter 키를 선택하여 강조 표시된 파일로 이동합니다.  
-  
--   도킹된 도구 창 간에 이동하려면 Alt+F7을 선택하여 **활성 도구 창**이 선택되어 있는 IDE 탐색기를 표시합니다. Enter 키를 선택하여 강조 표시된 창으로 이동합니다.  
-  
-#### <a name="to-move-and-dock-tool-windows-from-the-keyboard"></a>키보드에서 도구 창을 이동 및 도킹하려면  
-  
-1.  이동할 도구 창으로 이동하고 포커스를 지정합니다.  
-  
-2.  **창** 메뉴에서 **도킹 가능**을 클릭합니다.  
-  
-3.  **ALT** + **스페이스바**를 누르고 나서 **이동**을 선택합니다.  
-  
-     도킹 안내 다이아몬드가 나타납니다.  
-  
-4.  **화살표** 키를 사용하여 창을 새 위치로 이동합니다.  
-  
-     **화살표** 키를 사용함에 따라 마우스 포인터가 창과 함께 이동합니다.  
-  
-5.  새 위치에 도달한 경우 **화살표** 키를 사용하여 마우스 포인터를 안내 다이아몬드의 올바른 부분 위로 이동합니다.  
-  
-     도구 창의 윤곽이 새 도킹 위치에 나타납니다.  
-  
-6.  **ENTER** 키를 누릅니다.  
-  
-     도구 창이 새 도킹 위치의 제자리에 맞춰집니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [바로 가기 키 식별 및 사용자 지정](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)   
- [접근성 팁과 요령](../../ide/reference/accessibility-tips-and-tricks.md)   
- [기본 바로 가기 키](../../ide/default-keyboard-shortcuts-in-visual-studio.md)
+>  The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition. To change your settings, choose **Import and Export Settings** on the **Tools** menu. For more information, see [Personalize the Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md).  
+
+## <a name="toolbox-controls"></a>Toolbox Controls  
+ You can add a control on the Toolbox to a form or designer using the keyboard.  
+
+#### <a name="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard"></a>To add controls from the Toolbox to a designer from the keyboard  
+
+1.  On the menu bar, choose **View**, **Toolbox**.  
+
+2.  Choose the Ctrl + Up Arrow or Ctrl + Down Arrow keys to move among the sections in the current Toolbox tab.  
+
+3.  Choose the Up Arrow or **Down Arrow** keys to move among the controls.  
+
+4.  After the control is selected, choose the Enter key.  
+
+ The control is added to the form or designer.  
+
+## <a name="dialog-box-options"></a>Dialog Box Options  
+ You can move among the options in a dialog and change option settings using the keyboard.  
+
+#### <a name="to-set-dialog-box-options-from-the-keyboard"></a>To set dialog box options from the keyboard  
+
+1.  Use **TAB** or **SHIFT + TAB** to move up and down through the controls in the dialog box.  
+
+2.  To change option settings:  
+
+    -   For radio buttons, use **UP ARROW** and **DOWN ARROW** to change the selection.  
+
+    -   For check boxes, use **SPACEBAR** to select or unselect.  
+
+    -   For drop-down lists, use **ALT** + **DOWNARROW** to display items and then use **UPARROW** and **DOWNARROW** to change the selected item.  
+
+    -   For buttons, press **ENTER** to invoke.  
+
+    -   For grids, use the Arrow keys to navigate. For drop-down lists in grids, use **SHIFT** + **ALT** + **DOWNARROW** to display items and then use **UPARROW** and **DOWNARROW** to change the selected item.  
+
+## <a name="window-and-file-navigation"></a>Window and File Navigation  
+ The IDE provides several ways for you to move among open tool and document windows using the keyboard. You can also move and dock tool windows in different locations using the keyboard.  
+
+#### <a name="to-navigate-among-windows-and-files-in-the-ide-from-the-keyboard"></a>To navigate among windows and files in the IDE from the keyboard  
+
+-   To move among files in an editor or designer, choose CTRL + TAB keys to display the IDE Navigator with **Active Files** selected. Choose the Enter key to navigate to the highlighted file.  
+
+-   To move among docked tool windows, choose Alt + F7 to display the IDE Navigator with **Active Tool Windows** selected. Choose the Enter keyto navigate to the highlighted window.  
+
+#### <a name="to-move-and-dock-tool-windows-from-the-keyboard"></a>To move and dock tool windows from the keyboard  
+
+1.  Navigate to the tool window you intend to move and give it focus.  
+
+2.  On the **Window** menu, click **Dockable**.  
+
+3.  Press **ALT** + **Space** and then choose **Move**.  
+
+     The docking guide diamond appears.  
+
+4.  Use the **ARROW** keys to move the window to a new location.  
+
+     The mouse pointer moves with the window as you use the **ARROW** keys.  
+
+5.  When you have reached the new location, use the **ARROW** keys to move the mouse pointer over the correct portion of the guide diamond.  
+
+     An outline of the tool window appears in the new docking location.  
+
+6.  Press **ENTER**.  
+
+     The tool window snaps into place at the new docking location.  
+
+## <a name="see-also"></a>See Also  
+ [Identifying and Customizing Keyboard Shortcuts](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)   
+ [Accessibility Tips and Tricks](../../ide/reference/accessibility-tips-and-tricks.md)   
+ [Default Keyboard Shortcuts](../../ide/default-keyboard-shortcuts-in-visual-studio.md)
+

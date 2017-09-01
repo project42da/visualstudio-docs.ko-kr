@@ -1,66 +1,81 @@
 ---
-title: "CA1016: AssemblyVersionAttribute로 어셈블리 표시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MarkAssembliesWithAssemblyVersion"
-  - "CA1016"
-helpviewer_keywords: 
-  - "CA1016"
-  - "MarkAssembliesWithAssemblyVersion"
+title: 'CA1016: Mark assemblies with AssemblyVersionAttribute | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MarkAssembliesWithAssemblyVersion
+- CA1016
+helpviewer_keywords:
+- CA1016
+- MarkAssembliesWithAssemblyVersion
 ms.assetid: 4340aed8-d92b-4cde-a398-cb6963c6da5a
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1016: AssemblyVersionAttribute로 어셈블리 표시
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d86a1bc4c8cbb7f327b837c03e826039f6e52e91
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Mark assemblies with AssemblyVersionAttribute
 |||  
 |-|-|  
 |TypeName|MarkAssembliesWithAssemblyVersion|  
 |CheckId|CA1016|  
-|범주|Microsoft.Design|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- 어셈블리에 버전 번호가 없습니다.  
+## <a name="cause"></a>Cause  
+ The assembly does not have a version number.  
   
-## 규칙 설명  
- 어셈블리의 ID는 다음 정보로 구성됩니다.  
+## <a name="rule-description"></a>Rule Description  
+ The identity of an assembly is composed of the following information:  
   
--   어셈블리 이름  
+-   Assembly name  
   
--   버전 번호  
+-   Version number  
   
--   문화권  
+-   Culture  
   
--   공개 키\(강력한 이름의 어셈블리인 경우\)  
+-   Public key (for strongly named assemblies).  
   
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]에서는 버전 번호를 사용하여 어셈블리를 고유하게 식별하고 강력한 이름이 지정된 어셈블리의 형식에 바인딩합니다.  버전 번호는 버전 및 게시자 정책과 함께 사용됩니다.  기본적으로 응용 프로그램은 해당 응용 프로그램이 빌드될 때 사용된 어셈블리 버전으로만 실행됩니다.  
+ The [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] uses the version number to uniquely identify an assembly, and to bind to types in strongly named assemblies. The version number is used together with version and publisher policy. By default, applications run only with the assembly version with which they were built.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> 특성을 사용하여 어셈블리에 버전 번호를 추가합니다.  다음 예제를 참조하십시오.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add a version number to the assembly by using the <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> attribute. See the following example.  
   
-## 경고를 표시하지 않는 경우  
- 타사 또는 프로덕션 환경에서 사용되는 어셈블리에 대해서는 이 규칙에서 경고를 표시하십시오.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule for assemblies that are used by third parties, or in a production environment.  
   
-## 예제  
- 다음 예제에서는 <xref:System.Reflection.AssemblyVersionAttribute> 특성이 적용된 어셈블리를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows an assembly that has the <xref:System.Reflection.AssemblyVersionAttribute> attribute applied.  
   
- [!code-cs[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CSharp/ca1016-mark-assemblies-with-assemblyversionattribute_1.cs)]
- [!code-vb[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/VisualBasic/ca1016-mark-assemblies-with-assemblyversionattribute_1.vb)]
- [!code-cpp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CPP/ca1016-mark-assemblies-with-assemblyversionattribute_1.cpp)]  
+ [!code-csharp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CSharp/ca1016-mark-assemblies-with-assemblyversionattribute_1.cs)] [!code-vb[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/VisualBasic/ca1016-mark-assemblies-with-assemblyversionattribute_1.vb)] [!code-cpp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CPP/ca1016-mark-assemblies-with-assemblyversionattribute_1.cpp)]  
   
-## 참고 항목  
- [어셈블리 버전 관리](../Topic/Assembly%20Versioning.md)   
- [방법: 게시자 정책 만들기](../Topic/How%20to:%20Create%20a%20Publisher%20Policy.md)
+## <a name="see-also"></a>See Also  
+ [Assembly Versioning](/dotnet/framework/app-domains/assembly-versioning)   
+ [How to: Create a Publisher Policy](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)

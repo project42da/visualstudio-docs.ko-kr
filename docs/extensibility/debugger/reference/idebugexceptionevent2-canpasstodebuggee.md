@@ -1,46 +1,63 @@
 ---
-title: "IDebugExceptionEvent2::CanPassToDebuggee | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExceptionEvent2::CanPassToDebuggee"
-helpviewer_keywords: 
-  - "IDebugExceptionEvent2::CanPassToDebuggee"
+title: IDebugExceptionEvent2::CanPassToDebuggee | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExceptionEvent2::CanPassToDebuggee
+helpviewer_keywords:
+- IDebugExceptionEvent2::CanPassToDebuggee
 ms.assetid: ae4bbe0a-fbe1-49be-a310-ea64279a434b
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugExceptionEvent2::CanPassToDebuggee
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2e6505e1779c881141ca17f33ec0ad1ffcf7a42b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-디버그 엔진 \(DE\) 실행을 다시 시작 하는 경우에 디버깅 중인 프로그램에이 예외를 전달 하는 옵션을 지원 하는지 여부를 결정 합니다.  
+---
+# <a name="idebugexceptionevent2canpasstodebuggee"></a>IDebugExceptionEvent2::CanPassToDebuggee
+Determines whether or not the debug engine (DE) supports the option of passing this exception to the program being debugged when execution resumes.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT CanPassToDebuggee(  
-   void  
+```cpp  
+HRESULT CanPassToDebuggee(  
+   void  
 );  
 ```  
   
-```c#  
-int CanPassToDebuggee();  
+```csharp  
+int CanPassToDebuggee();  
 ```  
   
-## 반환 값  
- 반환 `S_OK` \(예외 프로그램으로 전달 될 수 있습니다\) 또는 `S_FALSE` \(예외를 전달할 수 없습니다\).  
+## <a name="return-value"></a>Return Value  
+ Returns either `S_OK` (the exception can be passed to the program) or `S_FALSE` (the exception cannot be passed on).  
   
-## 설명  
- DE 디버기에 전달에 대 한 기본 작업을 해야 합니다.  IDE 나타날 수 있습니다 있는 [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) 호출 하 고 이벤트는 [계속](../../../extensibility/debugger/reference/idebugprocess3-continue.md) 메서드를 호출 하지 않고는 `CanPassToDebuggee` 메서드.  따라서 DE은 기본 경우에 또는 예외를 전달 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The DE must have a default action for passing to the debuggee. The IDE may receive the [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) event and call the [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) method without calling the `CanPassToDebuggee` method. Therefore, the DE should have a default case for passing the exception on or not.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
- [계속](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
+ [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)

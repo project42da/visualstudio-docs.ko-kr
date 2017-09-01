@@ -37,11 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7ec5dd2249f67a2aa23dc42b1f4065bc5d9a318c
+ms.translationtype: HT
+ms.sourcegitcommit: 1c2afd23f9f6a7444b723a0f7d93ababad2624e7
+ms.openlocfilehash: 15e453ace87993aae4ecf80e37cf97e4afce2f28
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="common-msbuild-project-properties"></a>일반적인 MSBuild 프로젝트 속성
@@ -78,6 +78,7 @@ ms.lasthandoff: 05/13/2017
 |DefineTrace|TRACE 상수를 정의할지 여부를 나타내는 부울 값입니다.|  
 |DebugType|생성할 디버그 정보의 수준을 정의합니다. 유효한 값은 "full", "pdbonly" 및 "none"입니다.|  
 |DelaySign|어셈블리에 전체 서명하는 대신 어셈블리 서명을 연기할지 여부를 나타내는 부울 값입니다.|  
+|명확함|컴파일러가 동일한 입력에 대해 동일한 어셈블리를 생성해야 하는지를 나타내는 부울 값입니다. 이 매개 변수는 `vbc.exe` 및 `csc.exe` 컴파일러의 `/deterministic` 스위치에 해당합니다.|
 |DisabledWarnings|지정한 경고를 표시하지 않습니다. 경고 식별자의 숫자 부분만 지정해야 합니다. 경고가 여러 개인 경우 세미콜론으로 구분할 수 있습니다. 이 매개 변수는 vbc.exe 컴파일러의 `/nowarn` 스위치에 해당합니다.|  
 |DisableFastUpToDateCheck|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에만 적용되는 부울 값입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 빌드 관리자는 FastUpToDateCheck 프로세스를 사용하여 프로젝트를 최신 상태로 다시 빌드해야 하는지 여부를 확인합니다. 확인할 때 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]를 사용하는 것보다 이 프로세스가 더 빠릅니다. DisableFastUpToDateCheck 속성을 `true`로 설정하면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 빌드 관리자를 사용하지 않고 대신 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]를 사용하여 프로젝트가 최신 상태인지 여부를 확인할 수 있습니다.|  
 |DocumentationFile|XML 문서 파일로 생성된 파일의 이름입니다. 이 이름에는 파일 이름만 포함되고 경로 정보는 포함되지 않습니다.|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/13/2017
 |ExcludeDeploymentUrl|[GenerateDeploymentManifest 작업](../msbuild/generatedeploymentmanifest-task.md)에서는 프로젝트 파일에 다음 요소가 하나라도 포함된 경우 배포 매니페스트에 deploymentProvider 태그를 추가합니다.<br /><br /> -   UpdateUrl<br />-   InstallUrl<br />-   PublishUrl<br /><br /> 그러나 ExcludeDeploymentUrl을 사용하면 위의 URL이 지정되더라도 deploymentProvider 태그가 배포 매니페스트에 추가되지 않습니다. 이렇게 하려면 프로젝트 파일에 다음 속성을 추가합니다.<br /><br /> `<ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>` **참고:** ExcludeDeploymentUrl은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE에 노출되지 않으며 프로젝트 파일을 수동으로만 편집하여 설정할 수 있습니다. 이 속성을 설정해도 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 내의 게시에는 영향을 주지 않습니다. 즉, deploymentProvider 태그는 PublishUrl로 지정된 URL에 계속 추가됩니다.|  
 |FileAlignment|출력 파일의 섹션에 맞출 위치(바이트)를 지정합니다. 올바른 값은 512, 1024, 2048, 4096, 8192입니다. 이 속성은 `/filealignment` 컴파일러 스위치와 동일합니다.|  
 |FrameworkPathOverride|mscorlib.dll 및 microsoft.visualbasic.dll의 위치를 지정합니다. 이 매개 변수는 vbc.exe 컴파일러의 `/sdkpath` 스위치와 동일합니다.|  
-|GenerateDocumentation|빌드 시 문서의 생성 여부를 나타내는 부울 매개 변수입니다. `true`이면 빌드 시 문서 정보를 생성하여 이 정보를 빌드 작업에서 만든 실행 파일이나 라이브러리의 이름과 함께 .xml 파일에 배치합니다.|  
+|GenerateDocumentation|(Visual Basic .NET에만 해당) 빌드 시 문서의 생성 여부를 나타내는 부울 매개 변수입니다. `true`이면 빌드 시 문서 정보를 생성하여 이 정보를 빌드 작업에서 만든 실행 파일이나 라이브러리의 이름과 함께 .xml 파일에 배치합니다.|
 |IntermediateOutputPath|경로가 지정되지 않은 경우 `BaseIntermediateOutputPath`에서 파생된 것과 같은 전체 중간 출력 경로입니다. 예를 들어 \obj\debug\\입니다. 이 속성이 재정의되면 `BaseIntermediateOutputPath`를 설정해도 아무런 효과가 없습니다.|  
 |KeyContainerName|강력한 이름 키 컨테이너의 이름입니다.|  
 |KeyOriginatorFile|강력한 이름 키 파일의 이름입니다.|  
@@ -105,6 +106,7 @@ ms.lasthandoff: 05/13/2017
 |OverwriteReadOnlyFiles|빌드에서 읽기 전용 파일을 덮어쓸지 아니면 오류를 트리거할지 여부를 나타내는 부울 값입니다.|  
 |PdbFile|내보낼 .pdb 파일의 파일 이름입니다. 이 속성은 csc.exe 컴파일러의 `/pdb` 스위치와 동일합니다.|  
 |플랫폼|빌드하고 있는 운영 체제입니다. 유효한 값은 "Any CPU", "x86" 및 "x64"입니다.|  
+|ProduceReferenceAssembly|부울 값으로, `true`로 설정하면 현재 어셈블리에 대한 [참조 어셈블리](https://github.com/dotnet/roslyn/blob/master/docs/features/refout.md)를 생성합니다. 이 기능을 사용할 경우 `Deterministic`이 `true`여야 합니다. 이 속성은 `vbc.exe` 및 `csc.exe` 컴파일러의 `/refout` 스위치에 해당합니다.|
 |RemoveIntegerChecks|정수 오버플로 오류 검사를 비활성화할지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다. 이 속성은 vbc.exe 컴파일러의 `/removeintchecks` 스위치와 동일합니다.|  
 |SGenUseProxyTypes|SGen.exe에서 프록시 형식을 생성해야 하는지 여부를 나타내는 부울 값입니다.<br /><br /> SGen 대상은 이 속성을 사용하여 UseProxyTypes 플래그를 설정합니다. 이 속성은 기본적으로 true로 설정되어 있으며 이를 변경할 UI가 없습니다. 웹 서비스가 아닌 형식에 대해 serialization 어셈블리를 생성하려면 이 속성을 프로젝트 파일에 추가하고 Microsoft.Common.Targets 또는 C#/VB.targets를 가져오기 전에 false로 설정합니다.|  
 |SGenToolPath|현재 버전의 SGen.exe를 재정의할 때 SGen.exe를 구할 수 있는 위치를 나타내는 선택적 도구 경로입니다.|  

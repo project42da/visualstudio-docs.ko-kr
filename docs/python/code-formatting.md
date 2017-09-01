@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio에서 Python 코드 서식 지정 | Microsoft Docs"
 ms.custom: 
-ms.date: 4/10/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d0f1631-360b-45d4-a0cb-01c3c10d25f2
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: a14bc7e8c9194fff3a1bec2739c9e9c2480e905b
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 9d04c52a595014d06b38205913e3eb1cdd264019
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -43,9 +30,9 @@ Visual Studio에서는 미리 구성된 서식 옵션과 일치하도록 빠르�
 - 선택 항목의 서식을 지정하려면 **편집 > 고급 > 선택 영역 서식**을 선택하거나 Ctrl+E, F를 누릅니다.
 - 전체 파일의 서식을 지정하려면 **편집 > 고급 > 문서 서식**을 선택하거나 Ctrl+E, D를 누릅니다.
 
-옵션은 **도구 > 옵션 > 텍스트 편집기 > Python > 서식** 및 해당 하위 탭을 통해 설정되며, 기본적으로 [PEP 8 스타일 가이드](http://www.python.org/dev/peps/pep-0008/)의 상위 집합과 일치하도록 설정됩니다. **일반** 탭은 서식을 적용할 시기를 결정하며, 다른 세 개의 하위 페이지는 다음 섹션에서 정의됩니다.
+옵션은 **도구 > 옵션 > 텍스트 편집기 > Python > 서식** 및 해당 중첩된 탭을 통해 설정되며, 기본적으로 [PEP 8 스타일 가이드](http://www.python.org/dev/peps/pep-0008/)의 상위 집합과 일치하도록 설정됩니다. **일반** 탭은 서식을 적용할 시기를 결정하며, 다른 세 개의 탭에 대한 설정은 이 항목에서 설명합니다.
 
-[Visual Studio의 Python 지원](installation.md)에는 아래에서 설명한 대로 **편집 > 고급** 메뉴에 유용한 [주석 단락 채우기](#fill-comment-paragraph-command) 명령도 추가되어 있습니다.
+[Visual Studio의 Python 지원](installation.md)에는 다음에 설명하는 대로 **편집 > 고급** 메뉴에 유용한 [주석 단락 채우기](#fill-comment-paragraph-command) 명령도 추가되어 있습니다.
 
 ## <a name="spacing"></a>간격
 
@@ -99,7 +86,7 @@ Visual Studio에서는 미리 구성된 서식 옵션과 일치하도록 빠르�
 
 ## <a name="statements"></a>문
 
-**문**은 더 많은 Python 양식으로 다양한 문을 자동으로 다시 작성하는 것을 제어합니다.
+**문** 옵션은 다양한 문을 더 많은 Python 양식으로 자동으로 다시 작성하는 것을 제어합니다.
 
 | 옵션 | 서식 지정 앞 | 서식 지정 뒤 |
 | --- | --- | --- |
@@ -110,7 +97,7 @@ Visual Studio에서는 미리 구성된 서식 옵션과 일치하도록 빠르�
 
 ## <a name="wrapping"></a>줄 바꿈
 
-**줄 바꿈**은 **최대 주석 너비**(기본값: 80)를 설정할 수 있으므로 **너무 넓은 주석 줄 바꿈** 옵션을 설정하는 경우 Visual Studio에서 최대 주석 너비를 초과하지 않도록 주석의 서식을 다시 지정합니다.
+**줄 바꿈**을 사용하여 **최대 주석 너비**(기본값: 80)를 설정할 수 있습니다. **너무 넓은 주석 줄 바꿈** 옵션을 설정하는 경우 Visual Studio에서 최대 너비를 초과하지 않도록 주석의 서식을 다시 지정합니다.
 
 ```python
 # Wrapped to 40 columns
@@ -127,7 +114,7 @@ Visual Studio에서는 미리 구성된 서식 옵션과 일치하도록 빠르�
 
 ## <a name="fill-comment-paragraph-command"></a>주석 단락 채우기 명령
 
-**편집 > 고급 > 주석 단락 채우기**(Ctrl+E, Ctrl+P)는 주석 텍스트를 다시 배치하고, 해당 서식을 지정하며, 짧은 줄을 결합하고, 긴 줄을 분리합니다.
+**편집 > 고급 > 주석 단락 채우기**(Ctrl+E, P)는 주석 텍스트를 다시 배치하고, 해당 서식을 지정하며, 짧은 줄을 결합하고, 긴 줄을 분리합니다.
 
 예:
 

@@ -1,68 +1,105 @@
 ---
-title: "방법: 형식화된 데이터 집합 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "데이터 집합[Visual Basic], 만들기"
-  - "형식화된 데이터 집합, 만들기"
+title: Create and configure datasets in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typed datasets, creating
+- datasets [Visual Basic], creating
 ms.assetid: 58f33b43-24e1-43b1-b08b-b74329960bd6
 caps.latest.revision: 36
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: e601c2fb6dda97781053fcd2c7be19177e456801
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 형식화된 데이터 집합 만들기
-**데이터 소스 구성 마법사** 또는 [형식화된 데이터 집합 만들기 및 편집](../data-tools/creating-and-editing-typed-datasets.md)를 사용하여 형식화된 <xref:System.Data.DataSet>을 만듭니다.  
+# <a name="create-and-configure-datasets-in-visual-studio"></a>Create and configure datasets in Visual Studio
+A *dataset* is a set of objects that store data from a database in memory and support change tracking to enable create, read, update and delete (CRUD) operations on that data without the need to be always connected to the database. Datasets were designed for simple *forms over data* business applications. For new applications, consider using Entity Framework to store and model data in memory. To work with datasets, you should have a basic knowledge of database concepts.  
   
-> [!NOTE]
->  프로그래밍 방식으로 데이터 집합을 만드는 방법에 대한 자세한 내용은 [DataSet 만들기](../Topic/Creating%20a%20DataSet.md)를 참조하십시오.  
+ You create a typed <xref:System.Data.DataSet> class in Visual Studio at design time by using the **Data Source Configuration Wizard**. For information on creating datasets programmatically, see [Creating a DataSet](/dotnet/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset).  
   
-## 데이터 소스 구성 마법사 또는 데이터 집합 디자이너를 사용하여 형식화된 데이터 집합 만들기  
+## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>Create a new dataset by using the Data Source Configuration Wizard  
   
-#### 데이터 소스 구성 마법사로 데이터 집합을 만들려면  
+1.  On the **Project** menu, click **Add New Data Source** to start the **Data Source Configuration Wizard**.  
   
-1.  **데이터** 메뉴에서 **새 데이터 소스 추가**를 클릭하여 **데이터 소스 구성 마법사**를 시작합니다.  
+2.  Choose the type of data source that you will be connecting to.  
   
-2.  **데이터 소스 형식 선택** 페이지에서 **데이터베이스**를 선택합니다.  
+     ![Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png "Data Source Configuration Wizard")  
   
-3.  마법사를 완료하면 형식화된 데이터 집합이 프로젝트에 추가됩니다.  자세한 내용은 [데이터 소스 구성 마법사](../data-tools/media/data-source-configuration-wizard.png)를 참조하십시오.  
+3.  For databases, choose the database or databases that will be the data source for your dataset.  
   
-#### 데이터 집합 디자이너로 데이터 집합을 만들려면  
+     ![Data source choose a connection](../data-tools/media/data-source-choose-a-connection.png "Data source choose a connection")  
   
-1.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
+4.  Choose the tables (or individual columns), stored procedures, functions, and views from the database that you want to be represented in the dataset.  
   
-2.  **새 항목 추가** 대화 상자에서 **데이터 집합**을 선택합니다.  
+     ![Choose database objects](../data-tools/media/raddata-chose-objects.png "raddata Chose objects")  
   
-3.  데이터 집합의 이름을 입력합니다.  
+5.  Click **Finish**.  
   
-4.  **추가**를 클릭합니다.  
+6.  The dataset appears as a node in **Solution Explorer**:  
   
-     데이터 집합이 프로젝트에 추가되고 **데이터 집합 디자이너**에 열립니다.  
+     ![DataSet in Solution Explorer](../data-tools/media/dataset-in-solution-explorer.png "DataSet in Solution Explorer")  
   
-5.  **도구 상자**의 **데이터 집합** 탭에서 디자이너로 항목을 끌어 옵니다.  자세한 내용은 [방법: 데이터 집합 편집](../Topic/How%20to:%20Edit%20a%20Dataset.md)을 참조하십시오.  
+     Click that node, and the dataset appears in the **DataSet Designer**. Note that each table in the dataset has an associated TableAdapter object, which is represented at the bottom. The table adapter is used to populate the dataset and optionally to send commands to the database.  
   
-     또는  
+     ![DataSet Designer](../data-tools/media/dataset-designer.png "DataSet Designer")  
   
-     **서버 탐색기**\/**데이터베이스 탐색기**의 활성 연결에서 **데이터 집합 디자이너**로 항목을 끌어 옵니다.  
+7.  The relation lines that connect the tables represent table relationships, as defined in the database. By default, foreign-key constraints in a database are represented as a relation only, with the update and delete rules set to none. Typically, that is what you want. However, you can click the lines to bring up the **Relation** dialog, where you can change the behavior of  hierarchical updates. For more information, see [Relationships in datasets](../data-tools/relationships-in-datasets.md) and [Hierarchical update](../data-tools/hierarchical-update.md).  
   
-## 참고 항목  
- [연습: 데이터베이스의 데이터에 연결\(Windows Forms\)](../Topic/Walkthrough:%20Connecting%20to%20Data%20in%20a%20Database%20\(Windows%20Forms\).md)   
- [형식화된 데이터 집합 만들기 및 편집](../data-tools/creating-and-editing-typed-datasets.md)   
- [방법: 데이터 집합 편집](../Topic/How%20to:%20Edit%20a%20Dataset.md)   
- [TableAdapter](../Topic/TableAdapters.md)   
- [데이터 집합에서의 관계](../data-tools/relationships-in-datasets.md)   
- [Visual Studio에서 데이터 집합 작업](../data-tools/dataset-tools-in-visual-studio.md)   
- [데이터를 받기 위해 응용 프로그램 준비](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [Visual Studio에서 데이터에 연결](../data-tools/connecting-to-data-in-visual-studio.md)   
- [데이터를 응용 프로그램으로 페치](../data-tools/fetching-data-into-your-application.md)
+     ![Dataset Relation dialog](../data-tools/media/raddata-relation-dialog.png "raddata Relation dialog")  
+  
+8.  Click a table, table adapter, or column name in a table to see its properties in the **Properties** window. You can modify some of the values here. Just remember that you are modifying the dataset, not the source database.  
+  
+     ![DataSet column properties](../data-tools/media/dataset-column-properties.png "DataSet column properties")  
+  
+9. You can add new tables or table adapters to the dataset, or add new queries for existing table adapters, or specify new relations between tables by dragging those items from the **Toolbox** tab. This tab appears when the **DataSet Designer** is in focus.  
+  
+     ![Dataset Toolbox](../data-tools/media/raddata-dataset-toolbox.png "raddata Dataset Toolbox")  
+  
+10. Next, you probably want to specify how to populate the dataset with data. For that, you use the **TableAdapter Configuration Wizard**. For more information, see [Fill datasets by using TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md) .  
+  
+## <a name="add-a-database-table-or-other-object-to-an-existing-dataset"></a>Add a database table or other object to an existing dataset  
+ This procedure shows how to add a table from the same database that you used to first create the dataset.  
+  
+1.  Click the dataset node in **Solution Explorer** to bring the dataset designer into focus.  
+  
+2.  Click the **Data Sources** tab in the left margin of Visual Studio, or enter `Data Sources` in **QuickLaunch**.  
+  
+3.  Right-click the dataset node and select **Configure Data Source with Wizard** .  
+  
+     ![Data Source context menu](../data-tools/media/data-source-context-menu.png "Data Source context menu")  
+  
+4.  Use the wizard to specify which additional tables, or stored procedures or other database object, to add to the dataset.  
+  
+## <a name="add-a-stand-alone-data-table-to-a-dataset"></a>Add a stand-alone data table to a dataset  
+  
+1.  Open your dataset in the **Dataset Designer**.  
+  
+2.  Drag a <xref:System.Data.DataTable> class from the **DataSet** tab of the **Toolbox** onto the **Dataset Designer**.  
+  
+3.  Add columns to define your data table. Right-click on the table and choose **Add > Column**. Use the **Properties** window to set the data type of the column and a key if necessary.  
+  
+4.  Stand-alone tables need to Implement `Fill` logic in stand-alone tables so that you can fill them with data. For information on filling stand-alone data tables, see [Populating a DataSet from a DataAdapter](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter).

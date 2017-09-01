@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 0c850e9be6f05bac6c312ef8d746b92754eb3e6c
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: 254f2d9121566ef14c5470c3d940e4f781a0f5e2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>리소스 소비량 및 UI 스레드 활동 분석(XAML)
@@ -120,7 +120,7 @@ ms.lasthandoff: 05/13/2017
 |**레이아웃**|큰 응용 프로그램에서는 수천 개의 요소가 동시에 화면에 표시될 수 있습니다. 이로 인해 UI 프레임 속도가 느려지고 응용 프로그램의 응답성이 나빠질 수 있습니다. 레이아웃 이벤트는 각 요소의 레이아웃을 지정하는 비용(즉, Arrange, Measure, ApplyTemplate, ArrangeOverride 및 ArrangeOverride에서 보내는 시간)을 정확하게 결정하고 레이아웃 단계에 참여하는 시각적 트리를 빌드합니다. 이 시각화를 사용하여 잘라내야 할 논리 트리를 결정하거나 다른 지연 메커니즘을 평가하여 레이아웃 단계를 최적화할 수 있습니다.|  
 |**렌더링**|화면에 XAML 요소를 그리는 데 소요된 시간입니다.|  
 |**I/0**|로컬 디스크 또는 [Microsoft Windows 인터넷(WinINet) API](https://msdn.microsoft.com/en-us/library/windows/desktop/aa385331.aspx)를 통해 액세스된 네트워크 리소스에서 데이터를 검색하는 데 소요된 시간입니다.|  
-|**App Code**|구문 분석 또는 레이아웃과 관련이 없는 응용 프로그램(사용자) 코드를 실행하는 데 소요된 시간입니다.|  
+|**앱 코드**|구문 분석 또는 레이아웃과 관련이 없는 응용 프로그램(사용자) 코드를 실행하는 데 소요된 시간입니다.|  
 |**XAML 기타**|XAML 런타임 코드를 실행하는 데 소요되는 시간입니다.|  
   
 > [!TIP]
@@ -137,6 +137,6 @@ ms.lasthandoff: 05/13/2017
 |![타임라인 세부 정보 사용자 지정](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|이벤트에 대한 주석을 지정할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [WPF 팀 블로그: WPF 응용 프로그램의 새로운 UI 성능 분석 도구](http://blogs.msdn.com/b/wpf/archive/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications.aspx)   
+ [WPF Team Blog: New UI Performance Analysis Tool for WPF Applications](http://blogs.msdn.com/b/wpf/archive/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications.aspx)(WPF 팀 블로그: WPF 응용 프로그램의 새로운 UI 성능 분석 도구)  
  [C++, C# 및 Visual Basic을 사용하는 Windows 스토어 앱의 성능 모범 사례](http://msdn.microsoft.com/en-us/567bcefa-5da5-4e42-a4b8-1358c71adfa2)   
- [WPF 응용 프로그램 성능 최적화](http://msdn.microsoft.com/Library/ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf)
+ [WPF 응용 프로그램 성능 최적화](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance) [Visual Studio의 프로파일링](../profiling/index.md) [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)

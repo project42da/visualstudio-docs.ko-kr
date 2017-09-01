@@ -1,89 +1,106 @@
 ---
-title: "지원되는 코드 변경(C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "편집하며 계속하기[C#], 지원되는 코드 변경"
+title: Supported Code Changes (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- Edit and Continue [C#], supported code changes
 ms.assetid: c7a48ea9-5a7f-4328-a9d7-f0e76fac399d
 caps.latest.revision: 27
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# 지원되는 코드 변경(C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 6c870acd2a1a2339e66ef8e960657a44036057aa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-편집하며 계속하기에서는 메서드 본문 내의 코드 변경 유형을 대부분 처리합니다.  그러나 메서드 본문 외부의 변경 내용 대부분과 메서드 본문 내의 몇 가지 변경 내용은 디버깅 중에 적용할 수 없습니다.  이러한 지원되지 않는 변경 내용을 적용하려면 디버깅을 중지하고 새로운 버전의 코드로 다시 시작해야 합니다.  
+---
+# <a name="supported-code-changes-c"></a>Supported Code Changes (C#)
+Edit and Continue handles most types of code changes within method bodies. Most changes outside method bodies, and a few changes within method bodies, cannot be applied during debugging, however. To apply those unsupported changes, you must stop debugging and restart with a fresh version of the code.  
   
- 디버깅 세션 중에 C\# 코드에 적용할 수 없는 변경 내용은 다음과 같습니다.  
+ The following changes cannot be applied to C# code during a debugging session:  
   
--   현재 문 또는 다른 모든 활성 문에 대한 변경  
+-   Changes to the current statement or any other active statement.  
   
-     활성 문에는 호출 스택의 함수에서 현재 문을 실행하기 위해 호출된 모든 문이 포함됩니다.  
+     Active statements include any statements, in functions on the call stack, that were called to get to the current statement.  
   
-     현재 문은 소스 창에서 노란색 배경으로 표시됩니다.  다른 활성 문은 배경이 회색으로 표시되고 읽기 전용입니다.  이러한 기본 색상은 **옵션** 대화 상자에서 변경할 수 있습니다.  
+     The current statement is marked by a yellow background in the source window. Other active statements are marked by a shaded background and are read-only. These default colors can be changed in the **Options** dialog box.  
   
--   형식의 시그니처 변경  
+-   Changing the signature of a type.  
   
--   이전에 캡처하지 않은 변수를 캡처하는 무명 메서드 추가  
+-   Adding an anonymous method that captures a variable that hasn't been captured before.  
   
--   특성 추가, 제거 또는 변경  
+-   Adding, removing, or changing attributes.  
   
--   `using` 지시문 추가, 제거 또는 변경  
+-   Adding, removing, or changing `using` directives.  
   
--   활성 문 주위에 `foreach`, `using` 또는 `lock` 추가  
+-   Adding a `foreach`, `using`, or `lock` around the active statement.  
   
-## 안전하지 않은 코드  
- 안전하지 않은 코드에 대한 변경에는 안전한 코드에 대한 변경과 동일한 제한 사항이 적용되고 한 가지 제한 사항이 추가로 적용됩니다. `stackalloc` 연산자가 포함된 메서드 안에 있는 안전하지 않은 코드에 대한 변경은 편집하며 계속하기에서 지원하지 않습니다.  
+## <a name="unsafe-code"></a>Unsafe Code  
+ Changes to unsafe code have the same limitations as changes to safe code, with one additional restriction: Edit and Continue does not support changes to unsafe code that exits within a method that contains the `stackalloc` operator.  
   
-## 예외  
- 편집하며 계속하기는 `catch` 및 `finally` 블록에 대한 변경을 지원합니다. 단 활성 문 주위에 `catch` 또는 `finally` 블록은 추가할 수 없습니다.  
+## <a name="exceptions"></a>Exceptions  
+ Edit and Continue supports changes to `catch` and `finally` blocks, except that adding a `catch` or `finally` block around the active statement is not allowed.  
   
-## 지원되지 않는 시나리오  
- 다음과 같은 디버깅 시나리오에서는 편집하며 계속하기를 사용할 수 없습니다.  
+## <a name="unsupported-scenarios"></a>Unsupported Scenarios  
+ Edit and Continue is not available in the following debugging scenarios:  
   
--   특정한 경우 LINQ 코드 디버깅.  자세한 내용은 [LINQ 디버깅](../debugger/debugging-linq.md)을 참조하세요.  
+-   Debugging LINQ code in certain circumstances. For more information, see [Debugging LINQ](../debugger/debugging-linq.md).  
   
-    -   이전에 캡처하지 않은 변수 캡처  
+    -   Capturing a variable that hasn't been captured before.  
   
-    -   쿼리 식의 형식 변경\(예: select a \=\> select new { A \= a };\)  
+    -   Changing the type of query expression. (e.g., select a => select new { A = a };)  
   
-    -   활성 문을 포함하는 `where` 제거  
+    -   Removing a `where` that contains an active statement.  
   
-    -   활성 문을 포함하는 `let` 제거  
+    -   Removing a `let` that contains an active statement.  
   
-    -   활성 문을 포함하는 `join` 제거  
+    -   Removing a `join` that contains an active statement.  
   
-    -   활성 문을 포함하는 `orderby` 제거  
+    -   Removing an `orderby` that contains an active statement.  
   
--   혼합 모드\(네이티브\/관리\) 디버깅  
+-   Mixed-mode (native/managed) debugging.  
   
--   SQL 디버깅  
+-   SQL debugging.  
   
--   Dr. Watson 덤프  디버깅  
+-   Debugging a Dr. Watson dump.  
   
--   "**처리되지 않은 예외에 대한 호출 스택 해제**" 옵션을 선택하지 않은 상태에서 처리되지 않은 예외가 발생한 후 코드 편집  
+-   Editing code after an unhandled exception, when the "**Unwind the call stack on unhandled exceptions**" option is not selected.  
   
--   포함된 런타임 응용 프로그램 디버깅  
+-   Debugging an embedded runtime application.  
   
--   **디버그** 메뉴에서 **시작**을 선택하여 응용 프로그램을 실행하는 대신 **연결 대상**을 사용하여 응용 프로그램 디버깅  
+-   Debugging an application that has **Attach to** instead of running the application by choosing **Start** from the **Debug** menu.  
   
--   최적화된 코드 디버깅  
+-   Debugging optimized code.  
   
--   빌드 오류가 발생하여 새 버전을 빌드하는 데 실패한 후 이전 버전의 코드 디버깅  
+-   Debugging an old version of your code after a new version failed to build because of build errors.  
   
-## 참고 항목  
- [편집하며 계속하기\(Visual C\#\)](../debugger/edit-and-continue-visual-csharp.md)   
- [방법: 편집하며 계속하기 사용\(C\#\)](../debugger/how-to-use-edit-and-continue-csharp.md)
+## <a name="see-also"></a>See Also  
+ [Edit and Continue (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)   
+ [How to: Use Edit and Continue (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)

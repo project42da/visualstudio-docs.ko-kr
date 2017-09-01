@@ -1,57 +1,74 @@
 ---
-title: "IDebugObject::SetValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::SetValue"
-helpviewer_keywords: 
-  - "IDebugObject::SetValue 메서드"
+title: IDebugObject::SetValue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject::SetValue
+helpviewer_keywords:
+- IDebugObject::SetValue method
 ms.assetid: d652e09c-cdc1-4519-8116-d7c743f5679b
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugObject::SetValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7249c2bc64afea2ca1037cc7fa1cf617357341d7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-연속 된 일련의 바이트에서 개체의 값을 설정합니다.  
+---
+# <a name="idebugobjectsetvalue"></a>IDebugObject::SetValue
+Sets the value of the object from a consecutive series of bytes.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT SetValue(   
-   BYTE* pValue,  
-   UINT  nSize  
+```cpp  
+HRESULT SetValue(   
+   BYTE* pValue,  
+   UINT  nSize  
 );  
 ```  
   
-```c#  
+```csharp  
 int SetValue(  
-   byte[] pValue,   
-   uint   nSize  
+   byte[] pValue,   
+   uint   nSize  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pValue`  
- \[in\] 새 값을 나타내는 바이트 배열입니다.  
+ [in] An array of bytes representing the new value.  
   
  `nSize`  
- \[in\] 크기 값 \(바이트\)에서입니다.  
+ [in] The size of the value in bytes.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 배열에 값이 복사 됩니다 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 개체에서 기존 값을 대체 합니다.  크기를 새 값 기존 값 보다 크거나 작을 수 있습니다.  이 `IDebugObject` 는 null 참조 여야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The values in the array are copied into this [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object, replacing any existing value. The size of the new value can be larger or smaller than the existing value. This `IDebugObject` cannot be a null reference.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)

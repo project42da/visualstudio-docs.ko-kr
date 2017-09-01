@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio용 R 도구의 변수 탐색기 | Microsoft Docs"
 ms.custom: 
-ms.date: 4/10/2017
+ms.date: 6/30/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c669434-40d8-4970-92cc-502a98c8b5ab
@@ -14,28 +15,13 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: 7a72afdf01a9c1efb389efc893beedfc1eed87c1
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: 92396808161886cf3b15f7e8e0ab23a0a35e26b9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
-
 
 # <a name="variable-explorer"></a>변수 탐색기
 
@@ -49,11 +35,11 @@ n <- c(1,2,3,5,8,13)
  
 [변수 탐색기] 창이 다음과 같이 표시됩니다.
 
-![Visual Studio의 변수 탐색기 창](~/rtvs/media/variable-explorer-window.png)
+![Visual Studio의 변수 탐색기 창](media/variable-explorer-window.png)
 
 세션에 정의된 더 복잡한 R 데이터 프레임이 있는 경우 데이터로 이동할 수 있습니다. 예를 들어 `cars <- mtcars`를 실행한 후 변수 탐색기에서 다른 노드를 확장하여 데이터 집합을 탐색할 수 있습니다.
  
-![변수 탐색기의 확장된 보기](~/rtvs/media/variable-explorer-expanded-results.png)
+![변수 탐색기의 확장된 보기](media/variable-explorer-expanded-results.png)
  
 변수를 삭제하려면 마우스 오른쪽 단추를 클릭하고 **삭제**를 선택하거나, 변수를 선택하고 Delete 키를 누릅니다.
 
@@ -63,29 +49,29 @@ n <- c(1,2,3,5,8,13)
 
 데이터는 테이블 형식으로 제공되는 경우가 많으므로 돋보기 아이콘을 선택하거나 마우스 오른쪽 단추를 클릭하고 **자세한 정보 표시**를 선택하여 복잡한 데이터 형식을 개별 테이블로 볼 수 있습니다. 
 
-![변수 탐색기 테이블 뷰](~/rtvs/media/variable-explorer-table-view.png)
+![변수 탐색기 테이블 뷰](media/variable-explorer-table-view.png)
 
 열 제목을 클릭하면 데이터가 열을 기준으로 정렬됩니다(오름차순 및 내림차순 간 전환). Shift 키를 누른 채 추가 열을 클릭하면 해당 열도 정렬에 추가됩니다. Shift 키 없이 열을 클릭하면 단일 열 정렬로 돌아갑니다.
 
 열 제목을 클릭한 순서에 따라 정렬 수행 순서가 결정됩니다. 예를 들어 Shift 키를 누른 채 **cyl** 열을 클릭하고 Shift 키를 누른 채 **mpg** 열을 두 번 클릭하면 목록에서 실린더가 오름차순으로, 연료 소비량이 내림차순으로 정렬됩니다.
 
-![두 개의 열 기준으로 정렬하는 데이터의 테이블 뷰.](~/rtvs/media/variable-explorer-table-view-sorting.png)
+![두 개의 열 기준으로 정렬하는 데이터의 테이블 뷰.](media/variable-explorer-table-view-sorting.png)
 
 변수 탐색기 및 테이블 뷰는 개별 Visual Studio 창에 있으므로 정렬할 수 있지만 사용자는 단계별 작업을 좋아합니다. 일반적인 지침은 [Visual Studio에서 창 레이아웃 사용자 지정](../ide/customizing-window-layouts-in-visual-studio.md)을 참조하세요.
 
 ## <a name="open-in-excel-or-other-csv-capable-application"></a>Excel(또는 기타 CSV 지원 응용 프로그램)에서 열기
 
-추가 조작 및 분석을 위해 일반적으로 세션 변수를 CSV로 내보내는 것이 좋습니다. 이 작업을 수행하려면 변수 탐색기에서 각 노드 옆에 있는 작은 Excel 아이콘(![Excel 내보내기 아이콘](~/rtvs/media/variable-explorer-excel-icon.png))을 사용하거나 항목을 마우스 오른쪽 단추로 클릭하고 **CSV 앱에서 열기**를 선택합니다. 아이콘을 선택하면 데이터가 `%userprofile%\Documents\RTVS_CSV_Exports` 폴더의 새 CSV 파일에 기록되고 해당 파일이 시작됩니다. 파일은 `.csv` 확장과 연결된 응용 프로그램에서 열립니다.
+추가 조작 및 분석을 위해 일반적으로 세션 변수를 CSV로 내보내는 것이 좋습니다. 변수 탐색기에서 각 노드 옆에 있는 작은 Excel 아이콘(![Excel 내보내기 아이콘](media/variable-explorer-excel-icon.png))을 사용하거나 항목을 마우스 오른쪽 단추로 클릭하고 **CSV 앱에서 열기**를 선택하여 내보내기를 수행합니다. 아이콘을 선택하면 데이터가 `%userprofile%\Documents\RTVS_CSV_Exports` 폴더의 새 CSV 파일에 기록되고 해당 파일이 시작됩니다. 파일은 `.csv` 확장과 연결된 응용 프로그램에서 열립니다.
 
 ## <a name="scopes"></a>범위
 
 기본적으로 변수 탐색기는 전역 범위에 대해 열립니다. 패키지 범위로 전환하려면 창 맨 위의 드롭다운에서 패키지를 선택합니다.
 
-![패키지 범위가 표시된 변수 탐색기](~/rtvs/media/variable-explorer-package-scopes.png)
+![패키지 범위가 표시된 변수 탐색기](media/variable-explorer-package-scopes.png)
 
 디버거의 중단점에서 멈춘 경우 함수 범위로 전환할 수도 있습니다. 변수 탐색기가 디버그되는 코드의 함수 범위로 자동으로 전환되지는 않습니다.
 
-![디버그 중인 데이터 프레임이 표시된 변수 탐색기](~/rtvs/media/variable-explorer-as-locals-window.png)
+![디버그 중인 데이터 프레임이 표시된 변수 탐색기](media/variable-explorer-as-locals-window.png)
 
 변수 탐색기에서는 디버거에서 함수의 로컬 변수 표시와 같이 코드를 단계별로 진행함에 따라 자동으로 함수 범위를 변경합니다.
 
@@ -94,7 +80,7 @@ n <- c(1,2,3,5,8,13)
 
 변수 탐색기 도구 모음의 다음 두 가지 명령(**R 도구 > 데이터** 메뉴를 통해 사용할 수도 있음)은 외부 CSV 데이터 집합을 R 세션으로 가져옵니다. **웹 URL에서 R 세션으로 데이터 집합 가져오기** 및 **텍스트 파일에서 R 세션으로 데이터 집합 가져오기**. 
 
-가져올 CSV 파일을 확정하고 나면 Visual Studio용 R 도구에서 **데이터 집합 가져오기** 대화 상자를 표시합니다. 여기에서 해당 데이터 파일을 구문 분석하는 방법(필드 구분 기호 및 따옴표 처리 방법 선택)을 제어할 수 있고 가져온 데이터 프레임 및 원본 데이터 파일의 미리 보기를 볼 수 있습니다.
+가져올 CSV 파일을 확정하고 나면 Visual Studio에서 **데이터 집합 가져오기** 대화 상자를 표시합니다. 여기에는 해당 데이터 파일을 구문 분석하는 방법(필드 구분 기호 및 따옴표 처리 방법 선택)을 제어하는 옵션이 있습니다. 가져온 데이터 프레임 및 원본 데이터 파일의 미리 보기를 확인할 수도 있습니다.
 
-![데이터 집합 가져오기 대화 상자](~/rtvs/media/variable-explorer-import-dataset-dialog.png)
+![데이터 집합 가져오기 대화 상자](media/variable-explorer-import-dataset-dialog.png)
 

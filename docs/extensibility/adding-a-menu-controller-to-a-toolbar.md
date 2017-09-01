@@ -1,48 +1,65 @@
 ---
-title: "도구 모음에 메뉴 컨트롤러 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "도구 모음 [Visual Studio] 메뉴의 컨트롤러 추가"
-  - "메뉴, 도구 모음 메뉴 컨트롤러를 추가 합니다."
-  - "컨트롤러 메뉴, 도구 모음에 추가"
+title: Adding a Menu Controller to a Toolbar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Visual Studio], adding menu controllers
+- menus, adding menu controllers to toolbars
+- menu controllers, adding to toolbars
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
 caps.latest.revision: 38
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 38
----
-# 도구 모음에 메뉴 컨트롤러 추가
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 998583202afcbf9c99f87d6bbdfcbb5747718bfa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 연습은 [도구 창에는 도구 모음 추가](../extensibility/adding-a-toolbar-to-a-tool-window.md) 연습 하 고 도구 창 도구 모음에 메뉴 컨트롤러를 추가 하는 방법을 보여 줍니다. 여기에 나와 있는 단계도 적용할 수에서 만든 도구 모음에는 [도구 모음 추가](../extensibility/adding-a-toolbar.md) 연습 합니다.  
+---
+# <a name="adding-a-menu-controller-to-a-toolbar"></a>Adding a Menu Controller to a Toolbar
+This walkthrough builds on the [Adding a Toolbar to a Tool Window](../extensibility/adding-a-toolbar-to-a-tool-window.md) walkthrough and shows how to add a menu controller to the tool window toolbar. The steps shown here also can be applied to the toolbar that is created in the [Adding a Toolbar](../extensibility/adding-a-toolbar.md) walkthrough.  
   
- 메뉴 컨트롤러 분할 컨트롤입니다. 메뉴 컨트롤러의 왼쪽에는 최근에 사용 된 명령 표시 하 고 클릭 하 여 실행할 수 있습니다. 메뉴 컨트롤러의 오른쪽 화살표입니다를 클릭 하면 추가 명령 목록이 열립니다. 명령이 실행 목록에서 명령을 클릭 하면 메뉴 컨트롤러의 왼쪽에 있는 명령을 대체 시점과 합니다. 이러한 방식으로 메뉴 컨트롤러 목록에서 최근에 사용 된 명령에는 항상 표시 하는 명령 단추 처럼 작동 합니다.  
+ A menu controller is a split control. The left side of the menu controller shows the last-used command, and it can be run by clicking it. The right side of the menu controller is an arrow that, when clicked, opens a list of additional commands. When you click a command on the list, the command runs, and it replaces the command on the left side of the menu controller. In this way, the menu controller operates like a command button that always shows the last-used command from a list.  
   
- 메뉴 컨트롤러 메뉴에 나타날 수 있지만 도구 모음에 가장 자주 사용 하는.  
+ Menu controllers can appear on menus but they are most often used on toolbars.  
   
-## 사전 요구 사항  
- Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)을 참조하십시오.  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## 메뉴 컨트롤러 만들기  
+## <a name="creating-a-menu-controller"></a>Creating a Menu Controller  
   
-#### 메뉴 컨트롤러를 만들려면  
+#### <a name="to-create-a-menu-controller"></a>To create a menu controller  
   
-1.  에 설명 된 절차에 따라 [도구 창에는 도구 모음 추가](../extensibility/adding-a-toolbar-to-a-tool-window.md) 도구 모음에 있는 도구 창을 만들 수 있습니다.  
+1.  Follow the procedures described in [Adding a Toolbar to a Tool Window](../extensibility/adding-a-toolbar-to-a-tool-window.md) to create a tool window that has a toolbar.  
   
-2.  TWTestCommandPackage.vsct에서 기호 섹션으로 이동 합니다. 이라는 GuidSymbol 요소에 **guidTWTestCommandPackageCmdSet**, 메뉴 컨트롤러, 메뉴 컨트롤러 그룹 및 세 개의 메뉴 항목을 선언 합니다.  
+2.  In TWTestCommandPackage.vsct, go to the Symbols section. In the GuidSymbol element named **guidTWTestCommandPackageCmdSet**, declare your menu controller, menu controller group, and three menu items.  
   
     ```xml  
     <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />  
     ```  
   
-3.  메뉴 섹션에서 마지막 메뉴 항목 후 메뉴로 메뉴 컨트롤러를 정의 합니다.  
+3.  In the Menus section, after the last menu entry, define the menu controller as a menu.  
   
     ```xml  
     <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">  
@@ -57,9 +74,9 @@ caps.handback.revision: 38
     </Menu>  
     ```  
   
-     `TextChanges` 및 `TextIsAnchorCommand` 플래그 마지막 선택한 명령에 맞게 메뉴 컨트롤러를 사용 하도록 설정 하려면 포함 되어야 합니다.  
+     The `TextChanges` and `TextIsAnchorCommand` flags must be included to enable the menu controller to reflect the last selected command.  
   
-4.  그룹의 마지막 그룹 항목을 다음 섹션 메뉴 컨트롤러 그룹을 추가 합니다.  
+4.  In the Groups section, after the last group entry, add the menu controller group.  
   
     ```xml  
     <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">  
@@ -67,9 +84,9 @@ caps.handback.revision: 38
     </Group>  
     ```  
   
-     부모 메뉴 컨트롤러를 설정 하 여이 그룹에 배치 하는 모든 명령 메뉴 컨트롤러에 표시 됩니다.`priority` 특성은 생략 하면 기본값인 0으로 설정 하는 메뉴 컨트롤러에서 유일한 그룹 수 있으므로 합니다.  
+     By setting the menu controller as the parent, any commands placed in this group will appear in the menu controller. The `priority` attribute is omitted, which sets it to the default value of 0, because it will be the only group on the menu controller.  
   
-5.  단추 섹션에서 마지막 단추 항목 후에 각 메뉴 항목에 대 한 Button 요소를 추가 합니다.  
+5.  In the Buttons section, after the last button entry, add a Button element for each of your menu items.  
   
     ```xml  
     <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">  
@@ -101,35 +118,35 @@ caps.handback.revision: 38
     </Button>  
     ```  
   
-6.  이 시점에서 메뉴 컨트롤러 볼 수 있습니다. 프로젝트를 빌드하고 디버깅을 시작합니다. 실험적 인스턴스에서 표시 됩니다.  
+6.  At this point, you can look at the menu controller. Build the project and start debugging. You should see the experimental instance.  
   
-    1.  에 **보기 \/ 다른 창** 메뉴, 열기 **테스트 도구 창**합니다.  
+    1.  On the **View / Other Windows** menu, open **Test ToolWindow**.  
   
-    2.  메뉴 컨트롤러 도구 창에서 도구 모음에 표시 됩니다.  
+    2.  The menu controller appears on the toolbar in the tool window.  
   
-    3.  세 가지 가능한 명령을 보려면 메뉴 컨트롤러의 오른쪽에 있는 화살표를 클릭 합니다.  
+    3.  Click the arrow on the right-hand side of the menu controller to see the three possible commands.  
   
-     명령을 클릭 하면 메뉴 컨트롤러의 제목을 해당 명령을 표시 하려면 변경 되는지 확인 합니다. 다음 섹션에서 이러한 명령을 활성화 하는 코드를 추가 합니다.  
+     Notice that when you click a command, the title of the menu controller changes to display that command. In the next section, we will add the code to activate these commands.  
   
-## 컨트롤러 메뉴 명령 구현  
+## <a name="implementing-the-menu-controller-commands"></a>Implementing the Menu Controller Commands  
   
-1.  TWTestCommandPackageGuids.cs에서 세 메뉴 항목에 대 한 명령 Id를 기존 명령 Id 뒤에 추가 합니다.  
+1.  In TWTestCommandPackageGuids.cs, add command IDs for your three menu items after the existing command IDs.  
   
-    ```c#  
-    public const int cmdidMCItem1 = 0x130;  
-    public const int cmdidMCItem2 = 0x131;  
-    public const int cmdidMCItem3 = 0x132;  
+    ```csharp  
+    public const int cmdidMCItem1 = 0x130;  
+    public const int cmdidMCItem2 = 0x131;  
+    public const int cmdidMCItem3 = 0x132;  
     ```  
   
-2.  TWTestCommand.cs에서 TWTestCommand 클래스의 위쪽에 다음 코드를 추가 합니다.  
+2.  In TWTestCommand.cs, add the following code at the top of the TWTestCommand class.  
   
-    ```c#  
-    private int currentMCCommand; // The currently selected menu controller command  
+    ```csharp  
+    private int currentMCCommand; // The currently selected menu controller command  
     ```  
   
-3.  TWTestCommand 생성자에 대 한 마지막 호출 후에 `AddCommand` 메서드를 동일한 처리기를 통해 각 명령에 대 한 이벤트를 라우팅하는 코드를 추가 합니다.  
+3.  In the TWTestCommand constructor, after the last call to the `AddCommand` method, add code to route the events for each command through the same handlers.  
   
-    ```c#  
+    ```csharp  
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=  
         TWTestCommandPackageGuids.cmdidMCItem3; i++)  
     {  
@@ -139,7 +156,7 @@ caps.handback.revision: 38
           EventHandler(OnMCItemClicked), cmdID);  
         mc.BeforeQueryStatus += new EventHandler(OnMCItemQueryStatus);  
         commandService.AddCommand(mc);  
-        // The first item is, by default, checked.   
+        // The first item is, by default, checked.   
         if (TWTestCommandPackageGuids.cmdidMCItem1 == i)  
         {  
             mc.Checked = true;  
@@ -148,10 +165,10 @@ caps.handback.revision: 38
     }  
     ```  
   
-4.  확인 된으로 선택한 명령을 표시 하려면 TWTestCommand 클래스에 이벤트 처리기를 추가 합니다.  
+4.  Add an event handler to the TWTestCommand class to mark the selected command as checked.  
   
-    ```c#  
-    private void OnMCItemQueryStatus(object sender, EventArgs e)  
+    ```csharp  
+    private void OnMCItemQueryStatus(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -161,10 +178,10 @@ caps.handback.revision: 38
     }  
     ```  
   
-5.  사용자가 메뉴 컨트롤러에서 명령을 선택 하는 경우 MessageBox를 표시 하는 이벤트 처리기를 추가 합니다.  
+5.  Add an event handler that displays a MessageBox when the user selects a command on the menu controller:  
   
-    ```c#  
-    private void OnMCItemClicked(object sender, EventArgs e)  
+    ```csharp  
+    private void OnMCItemClicked(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -211,20 +228,20 @@ caps.handback.revision: 38
     }  
     ```  
   
-## 메뉴 컨트롤러를 테스트합니다.  
+## <a name="testing-the-menu-controller"></a>Testing the Menu Controller  
   
-1.  프로젝트를 빌드하고 디버깅을 시작합니다. 실험적 인스턴스에서 표시 됩니다.  
+1.  Build the project and start debugging. You should see the experimental instance.  
   
-2.  열기는 **테스트 도구 창** 에 **보기 \/ 다른 창** 메뉴.  
+2.  Open the **Test ToolWindow** on the **View / Other Windows** menu.  
   
-     메뉴 컨트롤러 도구 창에서 도구 모음에 나타나고 표시 **MC 항목 1**합니다.  
+     The menu controller appears in the toolbar in the tool window and displays **MC Item 1**.  
   
-3.  메뉴 컨트롤러 단추 왼쪽의 화살표를 클릭 합니다.  
+3.  Click the menu controller button to the left of the arrow.  
   
-     세 항목의 선택 되 고 해당 아이콘 주위에 강조 표시 상자가 표시 됩니다. 클릭 **MC 항목 3**합니다.  
+     You should see three items, the first of which is selected and has a highlight box around its icon. Click **MC Item 3**.  
   
-     메시지와 함께 대화 상자가 나타납니다 **메뉴 컨트롤러 항목 3 선택한**합니다. 메시지 메뉴 컨트롤러 단추 텍스트에 해당 하는지 확인 합니다. 메뉴 컨트롤러 단추를 사용 하는 이제 표시 **MC 항목 3**합니다.  
+     A dialog box appears with the message **You selected Menu controller Item 3**. Notice that the message corresponds to the text on the menu controller button. The menu controller button now displays **MC Item 3**.  
   
-## 참고 항목  
- [도구 창에는 도구 모음 추가](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
- [도구 모음 추가](../extensibility/adding-a-toolbar.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Toolbar to a Tool Window](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
+ [Adding a Toolbar](../extensibility/adding-a-toolbar.md)

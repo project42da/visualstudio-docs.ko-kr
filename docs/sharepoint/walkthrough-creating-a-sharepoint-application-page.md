@@ -1,106 +1,109 @@
 ---
-title: "연습: SharePoint 응용 프로그램 페이지 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "응용 프로그램 페이지[Visual Studio에서 SharePoint 개발], 개발"
-  - "응용 프로그램 페이지[Visual Studio에서 SharePoint 개발], 만들기"
+title: 'Walkthrough: Creating a SharePoint Application Page | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- application pages [SharePoint development in Visual Studio], developing
+- application pages [SharePoint development in Visual Studio], creating
 ms.assetid: 5b6dd941-5c59-4a89-89d0-8e973a00ae9e
 caps.latest.revision: 42
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 41
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 7f3be03c1c3dd5c782c53d116c9a080d11f7d4b9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: SharePoint 응용 프로그램 페이지 만들기
-  응용 프로그램 페이지는 특수한 형태의 ASP.NET 페이지입니다.  응용 프로그램 페이지에는 SharePoint 마스터 페이지와 병합되는 콘텐츠가 포함되어 있습니다.  자세한 내용은 [SharePoint를 위한 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)을 참조하십시오.  
+# <a name="walkthrough-creating-a-sharepoint-application-page"></a>Walkthrough: Creating a SharePoint Application Page
+  An application page is a specialized form of an ASP.NET page. Application pages contain content that's merged with a SharePoint master page. For more information, see [Creating Application Pages for SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).  
   
- 이 연습에서는 응용 프로그램 페이지를 만든 다음 로컬 SharePoint 사이트를 사용하여 이 페이지를 디버깅하는 방법을 보여 줍니다.  이 페이지에는 각 사용자가 서버 팜의 모든 사이트에서 만들었거나 수정한 모든 항목이 표시됩니다.  
+ This walkthrough shows you how to create an application page and then debug it by using a local SharePoint site. This page shows all items that each user has created or modified in all sites on the server farm.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   SharePoint 프로젝트 만들기  
+-   Creating a SharePoint project.  
   
--   SharePoint 프로젝트에 응용 프로그램 페이지 추가  
+-   Adding an application page to the SharePoint project.  
   
--   응용 프로그램 페이지에 ASP.NET 컨트롤 추가  
+-   Adding ASP.NET controls to the application page.  
   
--   ASP.NET 컨트롤의 코드 숨김 파일 추가  
+-   Adding code behind the ASP.NET controls.  
   
--   응용 프로그램 페이지 테스트  
+-   Testing the application page.  
   
 > [!NOTE]  
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다.  설치한 Visual Studio 버전과 사용하는 설정에 따라 이러한 요소가 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   지원되는 Windows 및 SharePoint 버전.  자세한 내용은 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)을 참조하십시오.  
+-   Supported editions of Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)] 또는 Visual Studio Ultimate 또는 Visual Studio Premium  
+-   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)] or an edition of Visual Studio Ultimate or Visual Studio Premium.  
   
-## SharePoint 프로젝트 만들기  
- 먼저 **빈 SharePoint 프로젝트**를 만듭니다.  나중에 이 프로젝트에 **응용 프로그램 페이지** 항목을 추가합니다.  
+## <a name="creating-a-sharepoint-project"></a>Creating a SharePoint Project  
+ First, create an **Empty SharePoint Project**. Later, you will add an **Application Page** item to this project.  
   
-#### SharePoint 프로젝트를 만들려면  
+#### <a name="to-create-a-sharepoint-project"></a>To create a SharePoint Project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  **새 프로젝트** 대화 상자를 열고 사용할 언어 아래의 **Office\/SharePoint** 노드를 확장한 다음 **SharePoint Solutions** 노드를 선택합니다.  
+2.  Open the **New Project** dialog box, expand the **Office/SharePoint** node under the language that you want to use, and then choose the **SharePoint Solutions** node.  
   
-3.  **Visual Studio에 설치되어 있는 템플릿** 창에서 **SharePoint 2010 – 빈 프로젝트** 템플릿을 선택합니다.  프로젝트 MySharePointProject의 이름을 지정한 다음 **확인** 단추를 선택합니다.  
+3.  In the **Visual Studio Installed Templates** pane, choose the **SharePoint 2010 - Empty Project** template. Name the project **MySharePointProject**, and then choose the **OK** button.  
   
-     **SharePoint 사용자 지정 마법사**가 나타납니다.  이 마법사를 사용하면 프로젝트를 디버깅하는 데 사용할 사이트와 솔루션의 신뢰 수준을 선택할 수 있습니다.  
+     The **SharePoint Customization Wizard** appears. This wizard enables you to select the site that you will use to debug the project and the trust level of the solution.  
   
-4.  **팜 솔루션으로 배포** 옵션 단추를 선택한 다음 **마침** 단추를 선택하여 기본 로컬 SharePoint 사이트를 사용합니다.  
+4.  Choose the **Deploy as a farm solution** option button, and then choose the **Finish** button to accept the default local SharePoint site.  
   
-## 응용 프로그램 페이지 만들기  
- 응용 프로그램 페이지를 만들려면 프로젝트에 **응용 프로그램 페이지** 항목을 추가합니다.  
+## <a name="creating-an-application-page"></a>Creating an Application Page  
+ To create an application page, add an **Application Page** item to the project.  
   
-#### 응용 프로그램 페이지를 만들려면  
+#### <a name="to-create-an-application-page"></a>To create an application page  
   
-1.  **솔루션 탐색기**에서 **MySharePointProject** 프로젝트를 선택합니다.  
+1.  In **Solution Explorer**, choose the **MySharePointProject** project.  
   
-2.  메뉴 모음에서 **프로젝트**, **새 항목 추가**를 선택합니다.  
+2.  On the menu bar, choose **Project**, **Add New Item**.  
   
-3.  **새 항목 추가** 대화 상자에서 **응용 프로그램 페이지\(팜 솔루션에만 해당\)** 템플릿을 선택합니다.  
+3.  In the **Add New Item** dialog box, choose the **Application Page (Farm Solution Only** template.  
   
-4.  페이지 이름을 SearchItems로 지정한 다음 **추가** 단추를 선택합니다.  
+4.  Name the page **SearchItems**, and then choose the **Add** button.  
   
-     Visual Web Developer 디자이너의 **소스**  뷰에 응용 프로그램 페이지가 표시되며 여기서 페이지의 HTML 요소를 볼 수 있습니다.  디자이너에 여러 <xref:System.Web.UI.WebControls.Content> 컨트롤의 태그가 표시됩니다.  각 컨트롤은 기본 응용 프로그램 마스터 페이지에 정의되어 있는 <xref:System.Web.UI.WebControls.ContentPlaceHolder> 컨트롤에 매핑됩니다.  
+     The Visual Web Developer designer displays the application page in **Source** view where you can see the page's HTML elements. The designer displays the markup for several <xref:System.Web.UI.WebControls.Content> controls. Each control maps to a <xref:System.Web.UI.WebControls.ContentPlaceHolder> control that is defined in the default application master page.  
   
-## 응용 프로그램 페이지의 레이아웃 디자인  
- 응용 프로그램 페이지 항목을 추가하면 디자이너를 사용하여 응용 프로그램 페이지에 ASP.NET 컨트롤을 추가할 수 있습니다.  이 디자이너는 Visual Web Developer에서 사용되는 디자이너와 같습니다.  표준 ASP.NET 페이지를 디자인할 때와 같은 방식으로 레이블, 라디오 단추 목록 및 표를 디자이너의 **소스** 뷰에 추가한 다음 속성을 설정할 수 있습니다.  
+## <a name="designing-the-layout-of-the-application-page"></a>Designing the Layout of the Application Page  
+ The Application Page item enables you to use a designer to add ASP.NET controls to the application page. This designer is the same designer used in Visual Web Developer. Add a label, a radio button list, and a table to the **Source** view of the designer, and then set properties just as you would when you design any standard ASP.NET page.  
   
- Visual Web Developer의 디자이너를 사용하는 방법에 대한 자세한 내용은 [Visual Studio Web Development Content Map](http://msdn.microsoft.com/ko-kr/9c31f93b-c8fb-4599-9b14-6194ec8c7539)을 참조하십시오.  
+#### <a name="to-design-the-layout-of-the-application-page"></a>To design the layout of the application page  
   
-#### 응용 프로그램 페이지의 레이아웃을 디자인하려면  
+1.  On the menu bar, choose **View**, **Toolbox**.  
   
-1.  메뉴 모음에서 **보기**, **도구 상자**를 선택합니다.  
+2.  In the Standard node of the **Toolbox**, perform one of the following steps:  
   
-2.  **도구 상자** 표준 노드에서 다음 단계 중 하나를 수행합니다.  
+    -   Open the shortcut menu for the **Label** item, choose **Copy**, open the shortcut menu for the line under the **PlaceHolderMain** content control in the designer, and then choose **Paste**.  
   
-    -   **라벨** 항목 바로 가기 메뉴를 열고 **복사**를 선택하고, 디자이너의 **PlaceHolderMain** 콘텐츠 컨트롤 아래 라인에서 바로 가기 메뉴를 연 다음 **붙여넣기**를 선택합니다.  
+    -   Drag the **Label** item from the **Toolbox** onto the body of the **PlaceHolderMain** content control.  
   
-    -   **도구 상자**의 **레이블** 항목을 **PlaceHolderMain** 콘텐츠 컨트롤로 끌어 옵니다.  
+3.  Repeat the previous step to add a **DropDownList** item and a **Table** item to the **PlaceHolderMain** content control.  
   
-3.  이전 단계를 반복해서 **DropDownList** 항목 및 **Table** 항목을 **PlaceHolderMain** 콘텐츠 컨트롤에 추가합니다.  
+4.  On the designer, change the value of the `Text` attribute of the label control to **Show All Items**.  
   
-4.  디자이너에서 레이블 컨트롤의 `Text` 특성 값을 모든 항목 표시로 변경합니다.  
-  
-5.  디자이너에서 `<asp:DropDownList>` 요소를 다음 XML로 바꿉니다.  
+5.  On the designer, replace the `<asp:DropDownList>` element with the following XML.  
   
     ```  
     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true"  
@@ -110,65 +113,61 @@ caps.handback.revision: 41
     </asp:DropDownList>  
     ```  
   
-## 페이지에 있는 컨트롤의 이벤트 처리  
- ASP.NET 페이지와 같은 방식으로 응용 프로그램 페이지의 컨트롤을 처리합니다.  이 절차에서는 드롭다운 목록의 `SelectedIndexChanged`이벤트를 처리합니다.  
+## <a name="handling-the-events-of-controls-on-the-page"></a>Handling the Events of Controls on the Page  
+ Handle controls in an application page just as you would any ASP.NET page. In this procedure, you will handle the `SelectedIndexChanged` event of the drop-down list.  
   
-#### 페이지에 있는 컨트롤의 이벤트를 처리하려면  
+#### <a name="to-handle-the-events-of-controls-on-the-page"></a>To handle the events of controls on the page  
   
-1.  **보기** 메뉴에서 **코드**를 선택합니다.  
+1.  On the **View** menu, choose **Code**.  
   
-     코드 편집기에서 응용 프로그램 페이지 코드 파일이 열립니다.  
+     The application page code file opens in the Code Editor.  
   
-2.  `SearchItems` 클래스에 다음 메서드를 추가합니다.  이 코드는 이 연습의 뒷부분에서 만들 메서드를 호출하여 <xref:System.Web.UI.WebControls.DropDownList>의 <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> 이벤트를 처리합니다.  
+2.  Add the following method to the `SearchItems` class. This code handles the <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> event of the <xref:System.Web.UI.WebControls.DropDownList> by calling a method that you will create later in this walkthrough.  
   
-     [!code-csharp[SP_ApplicationPage#5](../snippets/csharp/VS_Snippets_OfficeSP/sp_applicationpage/cs/layouts/sp_applicationpage/SearchItems.aspx.cs#5)]
-     [!code-vb[SP_ApplicationPage#5](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_applicationpage/vb/layouts/sp_applicationpage/SearchItems.aspx.vb#5)]  
+     [!code-vb[SP_ApplicationPage#5](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#5)]  [!code-csharp[SP_ApplicationPage#5](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#5)]  
   
-3.  응용 프로그램 페이지 코드 파일의 맨 위에 다음 문을 추가합니다.  
+3.  Add the following statements to the top of the application page code file.  
   
-     [!code-csharp[SP_ApplicationPage#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_applicationpage/cs/layouts/sp_applicationpage/SearchItems.aspx.cs#1)]
-     [!code-vb[SP_ApplicationPage#1](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_applicationpage/vb/layouts/sp_applicationpage/SearchItems.aspx.vb#1)]  
+     [!code-vb[SP_ApplicationPage#1](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#1)]  [!code-csharp[SP_ApplicationPage#1](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#1)]  
   
-4.  `SearchItems` 클래스에 다음 메서드를 추가합니다.  이 메서드는 서버 팜의 모든 사이트를 반복하여 현재 사용자가 만들거나 수정한 항목을 검색합니다.  
+4.  Add the following method to the `SearchItems` class. This method iterates through all sites on the server farm and searches for items created or modified by the current user.  
   
-     [!code-csharp[SP_ApplicationPage#2](../snippets/csharp/VS_Snippets_OfficeSP/sp_applicationpage/cs/layouts/sp_applicationpage/SearchItems.aspx.cs#2)]
-     [!code-vb[SP_ApplicationPage#2](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_applicationpage/vb/layouts/sp_applicationpage/SearchItems.aspx.vb#2)]  
+     [!code-vb[SP_ApplicationPage#2](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#2)]  [!code-csharp[SP_ApplicationPage#2](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#2)]  
   
-5.  `SearchItems` 클래스에 다음 메서드를 추가합니다.  이 메서드는 현재 사용자가 테이블에서 만들거나 수정한 항목을 표시합니다.  
+5.  Add the following method to the `SearchItems` class. This method displays items created or modified by the current user in the table.  
   
-     [!code-csharp[SP_ApplicationPage#3](../snippets/csharp/VS_Snippets_OfficeSP/sp_applicationpage/cs/layouts/sp_applicationpage/SearchItems.aspx.cs#3)]
-     [!code-vb[SP_ApplicationPage#3](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_applicationpage/vb/layouts/sp_applicationpage/SearchItems.aspx.vb#3)]  
+     [!code-vb[SP_ApplicationPage#3](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#3)]  [!code-csharp[SP_ApplicationPage#3](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#3)]  
   
-## 응용 프로그램 페이지 테스트  
- 프로젝트를 실행하면 SharePoint 사이트가 열리고 응용 프로그램 페이지가 표시됩니다.  
+## <a name="testing-the-application-page"></a>Testing the Application Page  
+ When you run the project, the SharePoint site opens and the application page appears.  
   
-#### 응용 프로그램 페이지를 테스트하려면  
+#### <a name="to-test-the-application-page"></a>To test the application page  
   
-1.  **솔루션 탐색기**에서 응용 프로그램 페이지의 바로 가기 메뉴를 연 후 **시작 항목으로 설정**을 선택합니다.  
+1.  In **Solution Explorer**, open the shortcut menu for the application page, and then choose **Set as Startup Item**.  
   
-2.  F5 키를 선택합니다.  
+2.  Choose the F5 key.  
   
-     SharePoint 사이트가 열립니다.  
+     The SharePoint site opens.  
   
-3.  응용 프로그램 페이지에서 **내가 수정한 문서** 옵션을 선택합니다.  
+3.  On the application page, choose the **Modified by me** option.  
   
-     응용 프로그램 페이지가 새로 고쳐지고 현재 사용자가 서버 팜의 모든 사이트에서 수정한 항목이 모두 표시됩니다.  
+     The application page refreshes and displays all items that you've modified in all sites on the server farm.  
   
-4.  응용 프로그램 페이지의 목록에서 **내가 만듦**을 선택합니다.  
+4.  On the application page, choose **Created by me** in the list.  
   
-     응용 프로그램 페이지가 새로 고쳐지고 현재 사용자가 서버 팜의 모든 사이트에서 만든 항목이 모두 표시됩니다.  
+     The application page refreshes and displays all items that you have created in all sites on the server farm.  
   
-## 다음 단계  
- SharePoint 응용 프로그램 페이지에 대한 자세한 내용은 [SharePoint를 위한 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)를 참조하십시오.  
+## <a name="next-steps"></a>Next Steps  
+ For more information about SharePoint application pages, see [Creating Application Pages for SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).  
   
- 다음 항목에서 Visual Web Designer를 사용하여 SharePoint 페이지 콘텐츠를 디자인하는 방법에 대해 더 자세히 알아볼 수 있습니다.  
+ You can learn more about how to design SharePoint page content by using the Visual Web Designer from these topics:  
   
--   [SharePoint를 위한 웹 파트 만들기](../sharepoint/creating-web-parts-for-sharepoint.md).  
+-   [Creating Web Parts for SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md).  
   
--   [웹 파트 또는 응용 프로그램 페이지를 위해 재사용 가능한 컨트롤 만들기](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).  
+-   [Creating Reusable Controls for Web Parts or Application Pages](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).  
   
-## 참고 항목  
- [방법: 응용 프로그램 페이지 만들기](../sharepoint/how-to-create-an-application-page.md)   
- [응용 프로그램 \_layouts 페이지 형식](http://go.microsoft.com/fwlink/?LinkID=169274)  
+## <a name="see-also"></a>See Also  
+ [How to: Create an Application Page](../sharepoint/how-to-create-an-application-page.md)   
+ [Application _layouts Page Type](http://go.microsoft.com/fwlink/?LinkID=169274)  
   
   

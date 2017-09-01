@@ -1,49 +1,66 @@
 ---
-title: "IDebugDocumentTextEvents2::onUpdateDocumentAttributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentTextEvents2::OnUpdateDocumentAttributes"
-helpviewer_keywords: 
-  - "IDebugDocumentTextEvents2::onUpdateDocumentAttributes"
+title: IDebugDocumentTextEvents2::onUpdateDocumentAttributes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentTextEvents2::OnUpdateDocumentAttributes
+helpviewer_keywords:
+- IDebugDocumentTextEvents2::onUpdateDocumentAttributes
 ms.assetid: 31b7d151-9ce2-438e-b405-f8cc46b9f537
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDocumentTextEvents2::onUpdateDocumentAttributes
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e23d7c47226050e107444448857ac2e2bc9bb7a7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-문서 속성 업데이트 된 이벤트 수신기에 알립니다.  
+---
+# <a name="idebugdocumenttextevents2onupdatedocumentattributes"></a>IDebugDocumentTextEvents2::onUpdateDocumentAttributes
+Notifies receiver of the event that the document attributes have been updated.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT onUpdateDocumentAttributes(   
-   TEXT_DOC_ATTR_2 textdocattr  
+```cpp  
+HRESULT onUpdateDocumentAttributes(   
+   TEXT_DOC_ATTR_2 textdocattr  
 );  
 ```  
   
-```c#  
-int onUpdateDocumentAttributes(   
-   enum_TEXT_DOC_ATTR_2 textdocattr  
+```csharp  
+int onUpdateDocumentAttributes(   
+   enum_TEXT_DOC_ATTR_2 textdocattr  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `textdocattr`  
- \[in\] 플래그의 조합에서 [TEXT\_DOC\_ATTR\_2](../../../extensibility/debugger/reference/text-doc-attr-2.md) 문서 업데이트 된 특성을 지정 하는 열거형입니다.  
+ [in] A combination of flags from the [TEXT_DOC_ATTR_2](../../../extensibility/debugger/reference/text-doc-attr-2.md) enumeration that specifies the updated attributes of the document.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   
- [TEXT\_DOC\_ATTR\_2](../../../extensibility/debugger/reference/text-doc-attr-2.md)
+ [TEXT_DOC_ATTR_2](../../../extensibility/debugger/reference/text-doc-attr-2.md)

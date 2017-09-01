@@ -1,55 +1,72 @@
 ---
-title: "다중 프로세서 환경에서의 로깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, 기록"
-  - "MSBuild, 다중 프로세서 로깅"
+title: Logging in a Multi-Processor Environment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, multi-processor logging
+- MSBuild, logging
 ms.assetid: dd4dae65-ed04-4883-b48d-59bcb891c4dc
 caps.latest.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 다중 프로세서 환경에서의 로깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e78d6c35fa294d2f1a39c91af5e278e9e4519d2d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-MSBuild에서는 다중 프로세서를 사용할 수 있기 때문에 프로젝트 빌드 시간을 크게 줄일 수 있는 반면 로깅은 복잡해집니다.  단일 프로세서 환경에서는 로거가 들어오는 이벤트, 메시지, 경고 및 오류를 예측 가능한 순차적인 방법으로 처리할 수 있습니다.  그러나 다중 프로세서 환경에서는 여러 소스의 이벤트가 동시에 또는 순서 없이 도착할 수 있습니다.  MSBuild에서는 새 다중 프로세서 인식 로거가 제공되며, 사용자 지정 "전달 로거"를 만들 수 있습니다.  
+---
+# <a name="logging-in-a-multi-processor-environment"></a>Logging in a Multi-Processor Environment
+The ability of MSBuild to use multiple processors can greatly decrease project building time, but it also adds complexity to logging. In a single-processor environment, the logger can handle incoming events, messages, warnings, and errors in a predictable, sequential manner. However, in a multi-processor environment, events from several sources can arrive simultaneously or out of sequence. MSBuild provides a new multi-processor-aware logger and enables the creation of custom "forwarding loggers."  
   
-## 다중 프로세서 빌드 로깅  
- 다중 프로세서 또는 다중 핵심 프로세서에서 하나 이상의 프로젝트를 빌드하면 모든 프로젝트에 대한 MSBuild 빌드 이벤트가 동시에 생성됩니다.  따라서 많은 이벤트 데이터가 로거에 동시에 또는 순서 없이 도착할 수 있습니다.  이는 로거를 과부하시키고 빌드 시간을 증가시키며, 잘못된 로거 출력 혹은 빌드의 손상을 일으킬 수 있습니다.  이러한 문제를 해결하기 위해 MSBuild 로거를 사용하면 순서 없는 이벤트를 처리하고 이벤트와 해당 소스를 서로 연결할 수 있습니다.  
+## <a name="logging-multiple-processor-builds"></a>Logging Multiple-Processor Builds  
+ When you build one or more projects in a multi-processor or multi-core system, MSBuild build events for all the projects are generated simultaneously. An avalanche of event data may arrive at the logger at the same time or out of sequence. This can overwhelm the logger and cause increased build times, incorrect logger output, or even a broken build. To address these issues, the MSBuild logger can process out-of-sequence events and correlate events and their sources.  
   
- 사용자 지정 전달 로거를 만들면 로깅 효율성을 훨씬 더 향상시킬 수 있습니다.  사용자 지정 전달 로거는 빌드하기 전에 모니터링할 이벤트를 선택할 수 있는 필터 역할을 합니다.  사용자 지정 전달 로거를 사용하면 원하지 않는 이벤트에 의해 로거에 과부하가 걸리거나 로그가 복잡해지거나 빌드 시간이 느려지지 않습니다.  
+ You can improve logging efficiency even more by creating a custom forwarding logger. A custom-forwarding logger acts as a filter by letting you choose, before you build, the events you want to monitor. When you use a custom forwarding logger, unwanted events do not overwhelm the logger, clutter your logs, or slow build times.  
   
-### 중앙 로깅 모델  
- MSBuild에서는 다중 프로세서 빌드를 위해 "중앙 로깅 모델"을 사용합니다. 중앙 로깅 모델에서 MSBuild.exe의 인스턴스는 기본 빌드 프로세스 또는 "중앙 노드" 역할을 합니다. MSBuild.exe의 보조 인스턴스 또는 "보조 노드"는 중앙 노드에 연결됩니다.  중앙 노드에 연결된 모든 ILogger 기반 로거는 "중앙 로거"라고 하고 보조 노드에 연결된 로거는 "보조 로거"라고 합니다.  
+### <a name="central-logging-model"></a>Central Logging Model  
+ For multi-processor builds, MSBuild uses a "central logging model." In the central logging model, an instance of MSBuild.exe acts as the primary build process, or "central node." Secondary instances of MSBuild.exe, or "secondary nodes," are attached to the central node. Any ILogger-based loggers attached to the central node are known as "central loggers" and loggers attached to secondary nodes are known as "secondary loggers."  
   
- 빌드가 발생하면 보조 로거는 해당 이벤트 트래픽을 중앙 로거에 라우트합니다.  이벤트가 여러 개의 보조 노드에서 발생하기 때문에 데이터는 중앙 노드에 동시에 인터리브된 상태로 도착합니다.  이벤트\-프로젝트 및 이벤트\-대상 참조를 확인하기 위해 이벤트 인수에는 추가 빌드 이벤트 컨텍스트 정보가 포함되어 있습니다.  
+ When a build occurs, the secondary loggers route their event traffic to the central loggers. Because events originate at several secondary nodes, the data arrives at the central node simultaneously but interleaved. To resolve event-to-project and event-to-target references, the event arguments include additional build event context information.  
   
- 중앙 로거에서 <xref:Microsoft.Build.Framework.ILogger>만 구현하면 되지만 빌드에 참여하는 노드 수만큼 중앙 로거를 초기화하려면 <xref:Microsoft.Build.Framework.INodeLogger>도 구현하는 것이 좋습니다.  <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> 메서드의 다음 오버로드는 엔진에 의해 로거가 초기화될 때 호출됩니다.  
+ Although only <xref:Microsoft.Build.Framework.ILogger> is required to be implemented by the central logger, we recommend that you also implement <xref:Microsoft.Build.Framework.INodeLogger> if you want the central logger to initialize with the number of nodes that are participating in the build. The following overload of the <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> method is invoked when the engine initializes the logger:  
   
-```  
+```csharp
 public interface INodeLogger: ILogger  
 {  
     public void Initialize(IEventSource eventSource, int nodeCount);  
 }  
 ```  
   
-### 분산 로깅 모델  
- 중앙 로깅 모델에서 한 번에 많은 프로젝트를 빌드할 때처럼 들어오는 메시지 트래픽이 너무 많으면 중앙 로거에 과부하가 걸릴 수 있습니다. 그러면 시스템에 과부하가 걸리고 빌드 성능이 저하됩니다.  
+### <a name="distributed-logging-model"></a>Distributed Logging Model  
+ In the central logging model, too much incoming message traffic, such as when many projects build at once, can overwhelm the central node, which stresses the system and lowers build performance.  
   
- 이 문제를 줄이기 위해 MSBuild에서 전달 로거를 만들 수 있도록 하여 중앙 로깅 모델을 확장하는 "분산 로깅 모델"을 사용할 수도 있습니다.  전달 로거는 보조 노드에 연결되고 노드에서 들어오는 빌드 이벤트를 받습니다.  전달 로거는 이벤트를 필터링하여 중앙 노드에 원하는 이벤트만 전달할 수 있다는 점을 제외하고 일반 로거와 같습니다.  전달 로거를 사용하면 중앙 노드의 메시지 트래픽을 줄이고 성능을 향상시킬 수 있습니다.  
+ To reduce this problem, MSBuild also enables a "distributed logging model" that extends the central logging model by letting you create forwarding loggers. A forwarding logger is attached to a secondary node and receives incoming build events from that node. The forwarding logger is just like a regular logger except that it can filter the events and then forward only the desired ones to the central node. This reduces the message traffic at the central node and therefore enables better performance.  
   
- <xref:Microsoft.Build.Framework.ILogger>에서 파생된 <xref:Microsoft.Build.Framework.IForwardingLogger> 인터페이스를 구현하여 전달 로거를 만들 수 있습니다.  이 인터페이스는 다음과 같이 정의됩니다.  
+ You can create a forwarding logger by implementing the <xref:Microsoft.Build.Framework.IForwardingLogger> interface, which derives from <xref:Microsoft.Build.Framework.ILogger>. The interface is defined as:  
   
-```  
+```csharp
 public interface IForwardingLogger: INodeLogger  
 {  
     public IEventRedirector EventRedirector { get; set; }  
@@ -57,12 +74,12 @@ public interface IForwardingLogger: INodeLogger
 }  
 ```  
   
- 전달 로거에 이벤트를 전달하려면 <xref:Microsoft.Build.Framework.IEventRedirector> 인터페이스의 <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> 메서드를 호출합니다.  적절한 <xref:Microsoft.Build.Framework.BuildEventArgs> 또는 파생 개체를 매개 변수로 전달합니다.  
+ To forward events in a forwarding logger, call the <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> method of the <xref:Microsoft.Build.Framework.IEventRedirector> interface. Pass the appropriate <xref:Microsoft.Build.Framework.BuildEventArgs>, or a derivative, as the parameter.  
   
- 자세한 내용은 [전달 로거 만들기](../msbuild/creating-forwarding-loggers.md)을 참조하십시오.  
+ For more information, see [Creating Forwarding Loggers](../msbuild/creating-forwarding-loggers.md).  
   
-### 분산 로거 연결  
- 명령줄 빌드에서 분산 로거를 연결하려면 `/distributedlogger`\(또는 줄여서 `/dl`\) 스위치를 사용합니다.  로거 형식 및 클래스의 이름을 지정하는 형식은 분산 로거가 두 개의 로깅 클래스, 전달 로거와 중앙 로거로 구성된다는 점을 제외하고 `/logger` 스위치와 같습니다.  다음 예제에서는 분산 로거를 연결하는 방법을 보여 줍니다.  
+### <a name="attaching-a-distributed-logger"></a>Attaching a Distributed Logger  
+ To attaching a distributed logger on a command line build, use the `/distributedlogger` (or, `/dl` for short) switch. The format for specifying the names of the logger types and classes are the same as those for the `/logger` switch, except that a distributed logger is comprised of two logging classes: a forwarding logger and a central logger. Following is an example of attaching a distributed logger:  
   
 ```  
 msbuild.exe *.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,  
@@ -70,8 +87,8 @@ Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,
 Culture=neutral  
 ```  
   
- 별표\(\*\)는 `/dl` 스위치에 있는 두 개의 로거 이름을 구분합니다.  
+ An asterisk (*) separates the two logger names in the `/dl` switch.  
   
-## 참고 항목  
- [빌드 로거](../msbuild/build-loggers.md)   
- [전달 로거 만들기](../msbuild/creating-forwarding-loggers.md)
+## <a name="see-also"></a>See Also  
+ [Build Loggers](../msbuild/build-loggers.md)   
+ [Creating Forwarding Loggers](../msbuild/creating-forwarding-loggers.md)

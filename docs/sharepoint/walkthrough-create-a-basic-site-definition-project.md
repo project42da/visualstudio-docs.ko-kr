@@ -1,102 +1,107 @@
 ---
-title: "연습: 기본 사이트 정의 프로젝트 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio에서 SharePoint 개발, 사이트 정의"
-  - "사이트 정의[Visual Studio에서 SharePoint 개발]"
+title: 'Walkthrough: Create a Basic Site Definition Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, site definitions
+- site definitions [SharePoint development in Visual Studio]
 ms.assetid: b0df5b0e-5fa0-43d8-a339-6d92f1276764
 caps.latest.revision: 35
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 34
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: babd72dd748f07020a4480d0e97f7d449479e541
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 기본 사이트 정의 프로젝트 만들기
-  이 연습에서는 일부 컨트롤이 있는 비주얼 웹 파트가 포함된 기본 사이트 정의를 만드는 방법을 보여 줍니다.  구분하기 쉽도록 사용자가 만든 비주얼 웹 파트에는 몇 개의 컨트롤만 있습니다.  하지만 추가 기능이 포함된 보다 복잡한 SharePoint 사이트 정의를 만들 수 있습니다.  
+# <a name="walkthrough-create-a-basic-site-definition-project"></a>Walkthrough: Create a Basic Site Definition Project
+  This walkthrough shows you how to create a basic site definition that contains a visual Web part with some controls on it. For the sake of clarity, the visual Web part that you create has only a few controls. However, you can create more sophisticated SharePoint site definitions that include more functionality.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough demonstrates the following tasks:  
   
--   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 프로젝트 템플릿을 사용하여 사이트 정의 만들기  
+-   Creating a site definition by using the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] project template.  
   
--   SharePoint에서 사이트 정의를 사용하여 SharePoint 사이트 만들기  
+-   Creating a SharePoint site by using a site definition in SharePoint.  
   
--   솔루션에 비주얼 웹 파트 추가  
+-   Adding a visual Web part to the solution.  
   
--   새로운 비주얼 웹 파트를 추가하여 사이트의 default.aspx 페이지 사용자 지정  
+-   Customizing the site's default.aspx page by adding the new visual Web part to it.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   지원되는 Microsoft Windows 및 SharePoint 버전.  자세한 내용은 SharePoint 솔루션 개발 요구 사항을 참조하십시오.  
+-   Supported editions of Microsoft Windows and SharePoint. For more information, see Requirements for Developing SharePoint Solutions.  
   
--   Visual Studio  
+-   Visual Studio.  
   
-## 사이트 정의 솔루션 만들기  
- 먼저 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 사이트 정의를 만듭니다.  
+## <a name="creating-a-site-definition-solution"></a>Creating a Site Definition Solution  
+ First, create the site definition project in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-#### 사이트 정의 프로젝트를 만들려면  
+#### <a name="to-create-a-site-definition-project"></a>To create a site definition project  
   
-1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  IDE가 Visual Basic 개발 설정을 사용하도록 설정된 경우, 메뉴 표시줄에서 **파일**, **새 프로젝트** 를 선택합니다.  
+1.  On the menu bar, choose **File**, **New**, **Project**. If your IDE is set to use Visual Basic development settings, on the menu bar, choose **File**, **New Project**.  
   
-     **새 프로젝트** 대화 상자가 나타납니다.  
+     The **New Project** dialog box appears.  
   
-2.  **Visual C\#** 노드 또는 **Visual Basic** 노드를 확장하고 **SharePoint** 노드를 확장한 다음 **2010** 노드를 선택합니다.  
+2.  Expand the **Visual C#** node or the **Visual Basic** node, expand the **SharePoint** node, and then choose the **2010** node.  
   
-3.  **템플릿** 리스트에서 **SharePoint 2010 프로젝트** 템플릿을 선택합니다.  
+3.  In the **Templates** list, choose the **SharePoint 2010 Project** template.  
   
-4.  **이름** 상자에 TestSiteDef를 입력한 후 **확인** 버튼을 선택합니다.  
+4.  In the **Name** box, enter **TestSiteDef**, and then choose the **OK** button.  
   
-     **SharePoint 사용자 지정 마법사**가 나타납니다.  
+     The **SharePoint Customization Wizard** appears.  
   
-5.  **디버깅에 사용할 사이트 및 보안 수준 지정** 페이지에서 사이트 정의를 디버깅할 SharePoint 사이트의 URL을 입력하거나 기본 위치\(http:\/\/*System Name*\/\)를 사용합니다.  
+5.  On the **Specify the site and security level for debugging** page, enter the URL for the SharePoint site where you want to debug the site definition, or use the default location (http://*System Name*/).  
   
-6.  **이 SharePoint 솔루션의 신뢰 수준을 선택하십시오.** 섹션에서 **팜 솔루션으로 배포** 옵션 단추를 선택합니다.  
+6.  In the **What is the trust level for this SharePoint solution?** section, choose the **Deploy as a farm solution** option button.  
   
-     모든 사이트 정의 프로젝트를 팜 솔루션으로 배포해야 합니다.  샌드박스가 적용된 솔루션과 팜 솔루션 비교에 대한 자세한 내용은 [샌드박스가 적용된 솔루션 고려 사항](../sharepoint/sandboxed-solution-considerations.md)을 참조하십시오.  
+     All site definition projects must be deployed as farm solutions. For more information about sandboxed solutions versus farm solutions, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  **마침** 단추를 선택합니다.  
+7.  Choose the **Finish** button.  
   
-     **솔루션 탐색기**에 프로젝트가 나타납니다.  
+     The project appears in **Solution Explorer**.  
   
-8.  **솔루션 탐색기**에서 프로젝트 노드를 선택한 다음 메뉴 모음에서 **프로젝트**, **화면 추가**를 선택합니다.  
+8.  In **Solution Explorer**, choose the project node, and then, on the menu bar, choose **Project**, **Add New Item**.  
   
-9. **Visual C\#** 또는 **Visual Basic** 아래의 **SharePoint** 노드를 확장한 다음 **2010** 노드를 선택합니다.  
+9. Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** node.  
   
-10. **템플릿** 창에서 **사이트 정의** 템플릿을 선택하고 **이름** 을 **SiteDefinition1** 로 입력한 후 **추가** 버튼을 선택합니다.  
+10. In the **Templates** pane, choose the **Site Definition** template, leave the **Name** as **SiteDefinition1**, and then choose the **Add** button.  
   
-## 비주얼 웹 파트 만들기  
- 다음으로, 사이트 정의의 기본 페이지에 표시할 비주얼 웹 파트를 만듭니다.  
+## <a name="create-a-visual-web-part"></a>Create a Visual Web Part  
+ Next, create a visual Web part to appear on the site definition's main page.  
   
-#### 비주얼 웹 파트를 만들려면  
+#### <a name="to-create-a-visual-web-part"></a>To create a visual Web part  
   
-1.  **솔루션 탐색기**에서 **모든 파일 표시** 버튼을 선택합니다.  
+1.  In **Solution Explorer**, choose the **Show All Files** button.  
   
-2.  **SiteDefinition1** 프로젝트 노드를 선택한 후, 메뉴 표시줄에서 **프로젝트**, **새 항목 추가** 를 선택합니다.  
+2.  Choose the **SiteDefinition1** project node, and then, on the menu bar, choose **Project**, **Add New Item**.  
   
-     **새 항목 추가** 대화 상자가 나타납니다.  
+     The **Add New Item** dialog box appears.  
   
-3.  **Visual C\#** 노드 또는 **Visual Basic** 노드를 확장하고 **SharePoint** 노드를 확장한 다음 **2010** 노드를 선택합니다.  
+3.  Expand the **Visual C#** node or the **Visual Basic** node, expand the **SharePoint** node, and then choose the **2010** node.  
   
-4.  템플릿 목록에서 **비주얼 웹 파트** 템플릿을 선택하고, 기본 이름값을 VisualWebPart1로 지정한 후, **추가** 버튼을 선택합니다.  
+4.  In the list of templates, choose the **Visual Web Part** template, keep the default name VisualWebPart1, and then choose the **Add** button.  
   
-     VisualWebPart1.ascx 파일이 열립니다.  
+     The VisualWebPart1.ascx file opens.  
   
-5.  VisualWebPart1.ascx의 맨 아래에 다음 태그를 추가하여 텍스트 상자, 단추, 레이블의 세 컨트롤을 폼에 추가합니다.  
+5.  At the bottom of VisualWebPart1.ascx, add the following markup to add three controls to the form: a text box, a button, and a label:  
   
     ```  
     <table>  
@@ -114,27 +119,26 @@ caps.handback.revision: 34
     </table>  
     ```  
   
-6.  VisualWebPart1.ascx 아래에 있는 VisualWebPart1.ascx.cs\([!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)]의 경우\) 또는 VisualWebPart1.ascx.vb\([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]의 경우\) 파일을 열고 다음 코드를 추가합니다.  
+6.  Under VisualWebPart1.ascx, open the VisualWebPart1.ascx.cs file (for [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)]) or VisualWebPart1.ascx.vb (for [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]) , and then add the following code:  
   
-     [!code-csharp[SP_SimpleSiteDef#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_simplesitedef/cs/testsitedef/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]
-     [!code-vb[SP_SimpleSiteDef#1](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_simplesitedef/vb/testsitedefvb/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]  
+     [!code-vb[SP_SimpleSiteDef#1](../sharepoint/codesnippet/VisualBasic/testsitedefvb/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]  [!code-csharp[SP_SimpleSiteDef#1](../sharepoint/codesnippet/CSharp/testsitedef/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]  
   
-     이 코드는 웹 파트의 단추 클릭에 대한 기능을 추가합니다.  
+     This code adds functionality for the web part's button click.  
   
-## 기본 ASPX 페이지에 비주얼 웹 파트 추가  
- 다음으로, 사이트 정의의 기본 ASPX 페이지에 비주얼 웹 파트를 추가합니다.  
+## <a name="add-the-visual-web-part-to-the-default-aspx-page"></a>Add the Visual Web Part to the Default ASPX Page  
+ Next, add the visual Web part to the site definition's default ASPX page.  
   
-#### 기본 ASPX 페이지에 비주얼 웹 파트를 추가하려면  
+#### <a name="to-add-a-visual-web-part-to-the-default-aspx-page"></a>To add a visual Web part to the default ASPX page  
   
-1.  default.aspx 페이지를 열고 `WebPartPages` 태그 아래에 다음 줄을 추가합니다.  
+1.  Open the default.aspx page, and then add the following line under the `WebPartPages` tag:  
   
     ```  
     <%@ Register Tagprefix="MyWebPartControls" Namespace="TestSiteDef.VisualWebPart1" Assembly="$SharePoint.Project.AssemblyFullName$" %>  
     ```  
   
-     이 줄에서는 MyWebPartControls라는 이름을 웹 파트 및 해당 코드에 연결합니다.  *Namespace* 매개 변수는 VisualWebPart1.ascx 코드 파일에 사용 되는 네임 스페이스와 매치합니다.  
+     This line associates the name MyWebPartControls with the Web part and its code. The *Namespace* parameter matches the namespace that's used in the VisualWebPart1.ascx code file.  
   
-2.  `</asp:Content>` 요소 뒤에서 전체 `ContentPlaceHolderId="PlaceHolderMain"` 섹션과 그 내용을 다음 코드로 바꿉니다.  
+2.  After the `</asp:Content>` element, replace the entire `ContentPlaceHolderId="PlaceHolderMain"` section and its contents with the following code:  
   
     ```  
     <asp:Content ID="Content1" ContentPlaceHolderId="PlaceHolderMain" runat="server">  
@@ -142,51 +146,51 @@ caps.handback.revision: 34
     </asp:Content>  
     ```  
   
-     이 코드는 앞에서 만든 비주얼 웹 파트에 대한 참조를 만듭니다.  
+     This code creates a reference to the visual Web part that you created earlier.  
   
-3.  **솔루션 탐색기**에서 **SiteDefinition1** 노드에 대한 바로 가기 메뉴를 열고 **시작 항목으로 설정**을 선택합니다.  
+3.  In **Solution Explorer**, open the shortcut menu for the **SiteDefinition1** node, and then choose **Set as Startup Item**.  
   
-## 사이트 정의 솔루션 배포 및 실행  
- 다음으로, 프로젝트를 SharePoint에 배포하고 프로젝트를 실행 합니다.  
+## <a name="deploy-and-run-the-site-definition-solution"></a>Deploy and Run the Site Definition Solution  
+ Next, deploy the project to SharePoint, and then run the project.  
   
-#### 사이트 정의를 배포 및 실행하려면  
+#### <a name="to-deploy-and-run-the-site-definition"></a>To deploy and run the site definition  
   
--   메뉴 모음에서 **빌드**, **TestSiteDef 배포**를 선택합니다.  
+-   On the menu bar, choose **Build**, **Deploy TestSiteDef**.  
   
--   F5 키를 선택합니다.  
+-   Choose the F5 key.  
   
-     Visual Studio에서 코드를 컴파일하고, 기능을 추가하고, 모든 파일을 SharePoint solution \(WSP\) 파일로 패키징한 다음 WSP 파일을 SharePoint Server에 배포합니다.  그러면 SharePoint에서 파일을 설치하고 기능을 활성화합니다.  
+     Visual Studio compiles the code, adds its features, packages all of the files into a SharePoint solution (WSP) file, and deploys the WSP file to SharePoint Server. SharePoint then installs the files and then activates the features.  
   
-## 사이트 정의를 기반으로 하여 사이트 만들기  
- 다음으로, 새 사이트 정의를 사용하여 사이트를 만듭니다.  
+## <a name="create-a-site-based-on-the-site-definition"></a>Create a Site Based on the Site Definition  
+ Next, create a site by using the new site definition.  
   
-#### 사이트 정의를 사용하여 사이트를 만들려면  
+#### <a name="to-create-a-site-by-using-the-site-definition"></a>To create a site by using the site definition  
   
-1.  SharePoint 사이트에 새 SharePoint 사이트 페이지가 나타납니다.  
+1.  On the SharePoint site, the New SharePoint Site page appears.  
   
-2.  **제목 및 설명** 섹션에서 사이트의 제목과 설명으로 My New Site를 입력합니다.  
+2.  In the **Title and Description** section, enter **My New Site** for the title and a description of the site.  
   
-3.  **웹 사이트 주소** 섹션의 **URL 이름** 상자에 mynewsite를 입력합니다.  
+3.  In the **Web Site Address** section, enter **mynewsite** in the **URL name** box.  
   
-4.  **템플릿** 섹션에서 **SharePoint 사용자 지정** 탭을 선택합니다.  
+4.  In the **Template** section, choose the **SharePoint Customizations** tab.  
   
-5.  **템플릿 선택** 목록에서 **SiteDefinition1** 을 선택합니다.  
+5.  In the **Select a template** list, choose **SiteDefinition1**.  
   
-6.  다른 설정은 기본값으로 두고 **만들기** 버튼을 선택합니다.  
+6.  Leave the other settings at their default values, and then choose the **Create** button.  
   
-     새 사이트가 나타납니다.  
+     The new site appears.  
   
-## 새 사이트 테스트  
- 다음으로, 새 사이트를 테스트하여 제대로 작동하는지 확인합니다.  
+## <a name="test-the-new-site"></a>Test the New Site  
+ Next, test the new site to verify whether it works correctly.  
   
-#### 새 사이트를 테스트하려면  
+#### <a name="to-test-the-new-site"></a>To test the new site  
   
--   기본 ASPX 페이지에 일부 텍스트를 입력한 다음, 텍스트 상자 옆에 있는 **레이블 텍스트 변경** 버튼을 선택합니다.  
+-   On the default ASPX page, enter some text, and then choose the **Change Label Text** button next to the text box.  
   
-     버튼 오른쪽에 있는 레이블에 해당 텍스트가 표시됩니다.  
+     The text appears in the label on the right side of the button.  
   
-## 참고 항목  
- [방법: 이벤트 수신자 만들기](../sharepoint/how-to-create-an-event-receiver.md)   
+## <a name="see-also"></a>See Also  
+ [How to: Create an Event Receiver](../sharepoint/how-to-create-an-event-receiver.md)   
  [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
   
   

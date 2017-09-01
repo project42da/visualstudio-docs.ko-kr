@@ -1,48 +1,65 @@
 ---
-title: "IDebugEngineProgram2::Stop | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngineProgram2::Stop"
-helpviewer_keywords: 
-  - "IDebugEngineProgram2::Stop"
+title: IDebugEngineProgram2::Stop | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngineProgram2::Stop
+helpviewer_keywords:
+- IDebugEngineProgram2::Stop
 ms.assetid: 6e1c3d56-fb67-4a5b-80f9-8ee5131972bf
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugEngineProgram2::Stop
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e8a1d5fd980d50326c11101acc54146e4de03258
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 프로그램에서 실행 중인 모든 스레드를 중지 합니다.  
+---
+# <a name="idebugengineprogram2stop"></a>IDebugEngineProgram2::Stop
+Stops all threads running in this program.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT Stop(   
-   void   
+```cpp  
+HRESULT Stop(   
+   void   
 );  
 ```  
   
-```c#  
+```csharp  
 int Stop();  
 ```  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 프로그램은 multi\-program 환경에서 디버깅 되는 동안이 메서드가 호출 됩니다.  있는 일부 다른 프로그램이 중지 이벤트를 수신 하면이 메서드는이 프로그램에서 호출 됩니다.  이 메서드의 구현은 비동기 있어야 합니다. 즉, 모든 스레드가이 메서드가 반환 되기 전에 중지 해야 합니다.  이 메서드의 구현을 호출으로 같은 간단한 것일 수도 [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) 메서드가이 프로그램에.  
+## <a name="remarks"></a>Remarks  
+ This method is called when this program is being debugged in a multi-program environment. When a stopping event from some other program is received, this method is called on this program. The implementation of this method should be asynchronous; that is, not all threads should be required to be stopped before this method returns. The implementation of this method may be as simple as calling the [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) method on this program.  
   
- 디버그 이벤트에 응답 하 고 전송 됩니다.  
+ No debug event is sent in response to this method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
  [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)

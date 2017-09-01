@@ -1,5 +1,5 @@
 ---
-title: "Essentials 서비스 | Microsoft Docs"
+title: Service Essentials | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,54 +28,89 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 8ff357d7ed3542a01cf8d98e36b9d0e99a122864
-ms.lasthandoff: 04/05/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0b78b5f9bf1fb6d9c92657b99e6d21b58cab2728
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="service-essentials"></a>서비스 Essentials
-서비스는 두 개의 Vspackage 사이의 계약입니다. 하나의 VSPackage를 사용할 다른 VSPackage에 대 한 인터페이스의 특정 집합을 제공 합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]다른 Vspackage에 서비스를 제공 하는 Vspackage의 수집 됩니다.  
+# <a name="service-essentials"></a>Service Essentials
+A service is a contract between two VSPackages. One VSPackage provides a specific set of interfaces for another VSPackage to consume. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] is itself a collection of VSPackages that provides services to other VSPackages.  
   
- 예를 들어 활동 로그에 쓰는 데 사용할 수 있는 IVsActivityLog 인터페이스를 가져오지 SVsActivityLog 서비스를 사용할 수 있습니다. 자세한 내용은 참조 [하는 방법: 작업 로그를 사용 하 여](../../extensibility/how-to-use-the-activity-log.md)합니다.  
+ For example, you can use the SVsActivityLog service to obtain an IVsActivityLog interface, which you can use to write to the activity log. For more information, see [How to: Use the Activity Log](../../extensibility/how-to-use-the-activity-log.md).  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]또한 등록 된 일부 기본 제공 서비스를 제공 합니다. Vspackage는 서비스 재정의 제공 하 여 기본 제공 또는 다른 서비스를 바꿀 수 있습니다. 단 하나의 서비스 재정의 모든 서비스에 대 한 허용 됩니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] also provides some built-in services which are not registered. VSPackages can replace built-in or other services by providing a service override. Only one service override is permitted for any service.  
   
- 서비스에는 없는 검색 기능을 해야합니다. 따라서에 라이브러리에 사용 하려는 서비스의 서비스 id (SID)를 알고 있어야 하 고 제공 하는 인터페이스를 알아야 합니다. 서비스에 대 한 참조 설명서는이 정보를 제공합니다.  
+ Services have no discoverability. Therefore, you must know the service identifier (SID) of a service that you want to consume, and you must know which interfaces it provides. The reference documentation for the service provides this information.  
   
--   서비스를 제공 하는 Vspackage는 서비스 공급자 라고 합니다.  
+-   VSPackages that provide services are called service providers.  
   
--   다른 Vspackage에 제공 되는 서비스는 글로벌 서비스 라고 합니다.  
+-   Services that are provided to other VSPackages are called global services.  
   
--   구현 하는 VSPackage 또는, 개체에만 사용할 수 있는 서비스는 로컬 서비스 라고 합니다.  
+-   Services that are available only to the VSPackage that implements them, or to any object it creates, are called local services.  
   
--   기본 제공 서비스 또는 다른 패키지에서 제공 하는 서비스를 대체 하는 서비스는 서비스 재정의 라고 합니다.  
+-   Services that replace built-in services or services provided by other packages, are called service overrides.  
   
--   서비스 또는 서비스 재정의 필요할 때 로드, 다른 VSPackage에서 요청 하는 서비스를 제공 하는 경우 서비스 공급자가 로드 즉, 합니다.  
+-   Services, or service overrides, are loaded on demand, that is, the service provider is loaded when the service it provides is requested by another VSPackage.  
   
--   요청 시 로드를 지원 하려면 서비스 공급자는 글로벌 서비스를 등록 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다. 자세한 내용은 참조 [서비스 등록](../../misc/registering-services.md)합니다.  
+-   To support on-demand loading, a service provider registers its global services with [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. For more information, see [How to: Provide a Service](../../extensibility/how-to-provide-a-service.md).  
   
--   사용 하 여 서비스를 가져온 후 [QueryInterface](/cpp/atl/queryinterface) (비관리 코드) 또는 인터페이스를 가져오려면 원하는, 예를 들어 캐스팅 (관리 코드):  
+-   After you obtain a service, use [QueryInterface](/cpp/atl/queryinterface) (unmanaged code) or casting (managed code) to get the desired interface, for example:  
   
-    ```vb#  
+    ```vb  
     TryCast(GetService(GetType(SVsActivityLog)), IVsActivityLog)  
     ```  
   
-    ```c#  
+    ```csharp  
     GetService(typeof(SVsActivityLog)) as IVsActivityLog;  
-  
     ```  
   
--   관리 코드는 비관리 코드는 서비스 GUID에 의해 참조 되지만 해당 형식 사용 하 여 서비스를 가리킵니다.  
+-   Managed code refers to a service by its type, whereas unmanaged code refers to a service by its GUID.  
   
--   때 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 글로벌 서비스에 VSPackage 액세스할 수 있도록 하기 위해 VSPackage를 서비스 공급자에 전달 VSPackage 로드 합니다. VSPackage "사이 팅" 라고 합니다.  
+-   When [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] loads a VSPackage, it passes a service provider to the VSPackage to give the VSPackage access to global services. This is referred to as "siting" the VSPackage.  
   
--   Vspackage를 만들 개체에 대 한 서비스 공급자 수 있습니다. 예를 들어 폼 색 서비스에 대 한 요청 요청을 전달할 수 있는 해당 프레임에 보낼 수 있습니다 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다.  
+-   VSPackages can be service providers for the objects they create. For example, a form might send a request for a color service to its frame, which might pass the request to [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
   
--   여러 층으로 중첩 추가 되거나 전혀 없거나 관리 되는 개체를 호출할 수 있습니다 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>글로벌 서비스에 대 한 직접 액세스 합니다.</xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> 자세한 내용은 참조 [하는 방법: GetGlobalService 사용](../../misc/how-to-use-getglobalservice.md)합니다.  
+-   Managed objects that are deeply nested, or not sited at all, may call <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> for direct access to global services.   
   
-## <a name="see-also"></a>참고 항목  
- [사용 가능한 서비스 목록](../../extensibility/internals/list-of-available-services.md)   
- [사용 하 고 서비스를 제공 합니다.](../../extensibility/using-and-providing-services.md)   
- [캐스팅 및 형식 변환](/dotnet/csharp/programming-guide/types/casting-and-type-conversions)   
- [캐스팅](/cpp/cpp/casting)
+<a name="how-to-use-getglobalservice"></a>  
+  
+## <a name="use-getglobalservice"></a>Use GetGlobalService  
+  
+Sometimes you may need to get a service from a tool window or control container that has not been sited, or else has been sited with a service provider that does not know about the service you want. For example, you might want to write to the activity log from within a control. For more information about these and other scenarios, see [How to: Troubleshoot Services](../../extensibility/how-to-troubleshoot-services.md).  
+  
+You can get most Visual Studio services by calling the static <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> method.  
+  
+<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> relies on a cached service provider that is initialized the first time any VSPackage derived from Package is sited. You must guarantee that this condition is met, or else be prepared for a null service.  
+  
+Fortunately, <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> works correctly most of the time.  
+  
+-   If a VSPackage provides a service known only to another VSPackage, the VSPackage requesting the service is sited before the VSPackage providing the service is loaded.  
+  
+-   If a tool window is created by a VSPackage, the VSPackage is sited before the tool window is created.  
+  
+-   If a control container is hosted by a tool window created by a VSPackage, the VSPackage is sited before the control container is created.  
+  
+### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>To get a service from within a tool window or control container  
+  
+-   Insert this code in the constructor, tool window, or control container:  
+  
+    ```csharp  
+    IVsActivityLog log = Package.GetGlobalService(typeof(SVsActivityLog)) as IVsActivityLog;
+        if (log == null) return;
+    ```  
+    ```vb  
+    Dim log As IVsActivityLog = TryCast(Package.GetGlobalService(GetType(SVsActivityLog)), IVsActivityLog)
+    If log Is Nothing Then
+        Return
+    End If
+    ```  
+    
+    This code obtains an SVsActivityLog service and casts it to an IVsActivityLog interface, which can be used to write to the activity log. For an example, see [How to: Use the Activity Log](../../extensibility/how-to-use-the-activity-log.md).  
+  
+## <a name="see-also"></a>See Also  
+ [List of Available Services](../../extensibility/internals/list-of-available-services.md)   
+ [Using and Providing Services](../../extensibility/using-and-providing-services.md)   
+ [Casting and Type Conversions](/dotnet/csharp/programming-guide/types/casting-and-type-conversions)   
+ [Casting](/cpp/cpp/casting)

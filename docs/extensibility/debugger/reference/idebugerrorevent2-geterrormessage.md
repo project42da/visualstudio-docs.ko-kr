@@ -1,77 +1,94 @@
 ---
-title: "IDebugErrorEvent2::GetErrorMessage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugErrorEvent2::GetErrorMessage"
-helpviewer_keywords: 
-  - "IDebugErrorEvent2::GetErrorMessage"
+title: IDebugErrorEvent2::GetErrorMessage | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugErrorEvent2::GetErrorMessage
+helpviewer_keywords:
+- IDebugErrorEvent2::GetErrorMessage
 ms.assetid: 9e3b0d74-a2dd-4eaa-bd95-21b2f9c79409
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugErrorEvent2::GetErrorMessage
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a4c15d3a000a1b960bfcf3f7f3a0d46708718bda
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-사람이 읽을 수 있는 오류 메시지를 생성할 때 사용할 수 있는 정보를 반환 합니다.  
+---
+# <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
+Returns information that allows construction of a human-readable error message.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetErrorMessage(  
-   MESSAGETYPE* pMessageType,  
-   BSTR*        pbstrErrorFormat,  
-   HRESULT*     hrErrorReason,  
-   DWORD*       pdwType,  
-   BSTR*        pbstrHelpFileName,  
-   DWORD*       pdwHelpId  
+```cpp  
+HRESULT GetErrorMessage(  
+   MESSAGETYPE* pMessageType,  
+   BSTR*        pbstrErrorFormat,  
+   HRESULT*     hrErrorReason,  
+   DWORD*       pdwType,  
+   BSTR*        pbstrHelpFileName,  
+   DWORD*       pdwHelpId  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetErrorMessage(  
-   out enum_MESSAGETYPE   pMessageType,  
-   out string             pbstrErrorFormat,  
-   out int                phrErrorReason,  
-   out uint               pdwType,  
-   out string             pbstrHelpFileName,  
-   out uint               pdwHelpId  
+   out enum_MESSAGETYPE   pMessageType,  
+   out string             pbstrErrorFormat,  
+   out int                phrErrorReason,  
+   out uint               pdwType,  
+   out string             pbstrHelpFileName,  
+   out uint               pdwHelpId  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pMessageType`  
- \[out\] 값을 반환의 [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) 메시지의 형식을 설명 하는 열거형입니다.  
+ [out] Returns a value from the [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) enumeration, describing the type of message.  
   
  `pbstrErrorFormat`  
- \[out\] 최종 사용자에 게 메시지의 형식 \(자세한 내용은 "설명" 참조\).  
+ [out] The format of the final message to the user (see "Remarks" for details).  
   
  `hrErrorReason`  
- \[out\] 메시지의 오류 코드가입니다.  
+ [out] The error code the message is about.  
   
  `pdwType`  
- \[out\] 오류의 심각도를 \(MB\_XXX 상수를 사용 하 여 `MessageBox`. for example, `MB_EXCLAMATION` or `MB_WARNING`\).  
+ [out] Severity of the error (use the MB_XXX constants for `MessageBox`; for example, `MB_EXCLAMATION` or `MB_WARNING`).  
   
  `pbstrHelpFileName`  
- \[out\] 도움말 파일 \(없음 도움말 파일이 있을 경우 null 값 설정\) 경로입니다.  
+ [out] Path to a help file (set to a null value if there is no help file).  
   
  `pdwHelpId`  
- \[out\] \(도움말 항목이 없는 경우 0으로 설정\)을 표시 하는 도움말 항목의 ID입니다.  
+ [out] ID of the help topic to display (set to 0 if there is no help topic).  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 오류 메시지의 줄 함께 포맷 해야 합니다 `"What I was doing.  %1"`.  `"%1"` 다음 호출자가 오류 코드에서 파생 된 오류 메시지와 함께 바뀝니다 \(반환 됩니다 `hrErrorReason`\).  `pMessageType` 매개 변수 최종 오류 메시지 표시 방법 호출자에 게 알립니다.  
+## <a name="remarks"></a>Remarks  
+ The error message should be formatted along the lines of `"What I was doing.  %1"`. The `"%1"` would then be replaced by the caller with the error message derived from the error code (which is returned in `hrErrorReason`). The `pMessageType` parameter tells the caller how the final error message should be displayed.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   
  [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)

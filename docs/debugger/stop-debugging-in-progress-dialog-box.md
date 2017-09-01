@@ -1,44 +1,58 @@
 ---
-title: "진행하고 있는 디버깅을 중지하고 있습니다... 대화 상자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.stopnow"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "SQL"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "진행하고 있는 디버깅을 중지하고 있습니다... 대화 상자"
+title: Stop Debugging In Progress Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.stopnow
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+- SQL
+helpviewer_keywords:
+- Stop Debugging in Progress dialog box
 ms.assetid: ed7ef49d-e25f-4a4d-9396-9bc7b4143117
 caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 진행하고 있는 디버깅을 중지하고 있습니다... 대화 상자
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d07ab45ca55e164f5b5eaff3603293c862bd7c7a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-이 대화 상자는 디버거가 디버깅 세션을 중지하려고 할 때 세션 중지에 시간이 오래 걸릴 경우에 나타납니다.  일반적으로 디버깅 세션 중지는 매우 빠르게 이루어지므로 이 대화 상자가 나타나지 않습니다.  그러나 경우에 따라 디버깅 중인 모든 프로세스에서 분리하는 데 시간이 추가로 소요됩니다.  세션을 중지하는 데 몇 초 이상 걸리거나 분리 오류가 발생하는 경우 이 대화 상자가 나타납니다.  이러한 현상이 자주 발생하는 경우 내부 문제가 그 원인일 수 있으며 필요하면 기술 지원 서비스에 문의할 수 있습니다.  
+---
+# <a name="stop-debugging-in-progress-dialog-box"></a>Stop Debugging In Progress Dialog Box
+This dialog box appears when the debugger is trying to stop a debugging session, but stopping the session is going to take some time. Stopping a debugging session is normally very fast and this dialog box does not appear. Sometimes, however, it takes additional time to detach from all the processes being debugged. If stopping the session takes more than a few seconds (or if a detach error occurs), this dialog box appears. If this occurs frequently, it may be due to an internal problem and you may want to contact Product Support Services.  
   
- 프로세스가 분리되고 이 대화 상자가 사라질 때까지 기다리거나 **지금 중지** 단추를 사용하여 즉시 종료할 수 있습니다.  
+ You can wait for the processes to detach and this dialog box to disappear, or use the **Stop Now** button to force immediate termination.  
   
- **지금 중지**  
- 디버깅 세션을 즉시 종료하려면 이 단추를 클릭합니다.  **지금 중지**를 사용하면 디버깅 중인 프로세스가 분리되는 것이 아니라 종료됩니다.  시스템 프로세스를 디버깅하는 경우 **지금 중지**를 사용하여 프로세스를 종료하면 예기치 않은 결과가 발생할 수 있습니다.  
+ **Stop Now**  
+ Click this button to end the debugging session immediately. Using **Stop Now** will terminate rather than detaching the processes being debugged. If you are debugging system processes, terminating those processes with **Stop Now** can have unexpected and undesired effects.  
   
-## 참고 항목  
- [디버거 보안](../debugger/debugger-security.md)   
- [Detaching Programs](http://msdn.microsoft.com/ko-kr/f2c756c2-8079-474b-94c2-01c19a141a01)
+## <a name="see-also"></a>See Also  
+ [Debugger Security](../debugger/debugger-security.md)   
+ [Detaching Programs](http://msdn.microsoft.com/en-us/f2c756c2-8079-474b-94c2-01c19a141a01)

@@ -1,138 +1,142 @@
 ---
-title: "리본 개요"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "사용자 지정 리본, 여러 가지 리본 메뉴"
-  - "리본 메뉴 사용자 지정, 여러 가지 리본 메뉴"
-  - "리본[Visual Studio에서 Office 개발]"
-  - "리본[Visual Studio에서 Office 개발], 리본 메뉴 정보"
-  - "리본[Visual Studio에서 Office 개발], 여러 가지 리본 메뉴"
-  - "도구 모음[Visual Studio에서 Office 개발]"
-  - "도구 모음[Visual Studio에서 Office 개발], 리본 메뉴"
+title: Ribbon Overview | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- customizing the Ribbon, multiple Ribbons
+- Ribbon [Office development in Visual Studio], about Ribbon
+- toolbars [Office development in Visual Studio], Ribbon
+- Ribbon [Office development in Visual Studio]
+- Ribbon [Office development in Visual Studio], multiple Ribbons
+- toolbars [Office development in Visual Studio]
+- custom Ribbon, multiple Ribbons
 ms.assetid: 2bdef092-190d-47e3-9440-e862b95dacaa
 caps.latest.revision: 64
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 62
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4335f1f397d8497ca0aaa359e443b823d7441dbe
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 리본 개요
-  리본은 쉽게 찾을 수 있도록 관련된 명령을 구성하는 방법입니다.  명령은 리본 메뉴에 컨트롤로 표시됩니다.  컨트롤은 응용 프로그램 창의 위쪽 가장자리에 있는 가로 스트립을 따라 *그룹*으로 구성됩니다.  관련 그룹은 탭에서 구성됩니다.  
+# <a name="ribbon-overview"></a>Ribbon Overview
+  The Ribbon is a way to organize related commands so that they are easier to find. Commands appear as controls on the Ribbon. Controls are organized into *groups* along a horizontal strip at the top edge of an application window. Related groups are organized on tabs.  
   
- 이전 버전의 Microsoft Office 시스템에서 메뉴와 도구 모음을 사용하여 액세스한 대부분의 기능을 이제 리본 메뉴에서 액세스할 수 있습니다.  자세한 내용은 기술 문서 [2007 Microsoft Office 시스템의 사용자 인터페이스 개발자 개요](http://go.microsoft.com/fwlink/?LinkID=70860)를 참조하세요.  
+ Most of the features that were accessed by using menus and toolbars in earlier versions of the Microsoft Office system can now be accessed by using the Ribbon. For more information, see the technical article [Developer Overview of the User Interface for the 2007 Microsoft Office System](http://go.microsoft.com/fwlink/?LinkID=70860).  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
-## Microsoft Office 리본 사용자 지정  
- 리본을 사용자 지정하려면 다음 리본 항목 중 하나를 Office 프로젝트에 추가합니다.  
+## <a name="customizing-the-microsoft-office-ribbon"></a>Customizing the Microsoft Office Ribbon  
+ To customize the Ribbon, add one of the following Ribbon items to your Office project:  
   
--   **리본\(비주얼 디자이너\)**  
+-   **Ribbon (Visual Designer)**  
   
--   **리본\(XML\)**  
+-   **Ribbon (XML)**  
   
- 예를 들어 Excel 리본을 사용자 지정하려면 Excel VSTO 추가 기능 프로젝트에 리본 항목을 추가합니다.  
+ For example, to customize the Excel Ribbon, add a Ribbon item to an Excel VSTO Add-in project.  
   
-### 리본\(비주얼 디자이너\) 항목  
- **리본\(비주얼 디자이너\)** 항목은 쉽게 사용자 지정 리본을 디자인하고 개발할 수 있게 해주는 고급 도구를 제공합니다.  **리본\(비주얼 디자이너\)** 항목을 사용하여 다음과 같은 방법으로 리본을 사용자 지정합니다.  
+### <a name="ribbon-visual-designer-item"></a>Ribbon (Visual Designer) Item  
+ The **Ribbon (Visual Designer)** item provides advanced tools that make it easier for you to design and develop a custom Ribbon. Use the **Ribbon (Visual Designer)** item to customize the Ribbon in the following ways:  
   
--   리본에 사용자 지정 또는 기본 제공 탭을 추가합니다.  
+-   Add custom or built-in tabs to a Ribbon.  
   
--   사용자 지정 또는 기본 제공 탭에 사용자 지정 그룹을 추가합니다.  
-  
-    > [!NOTE]  
-    >  기본 제공 탭 또는 그룹은 Microsoft Office 응용 프로그램의 리본에 이미 있는 항목입니다.  예를 들어 **데이터** 탭은 Excel의 기본 제공 탭입니다.  **연결** 그룹은 **데이터** 탭의 기본 제공 그룹입니다.  
-  
--   사용자 지정 그룹에 사용자 지정 컨트롤을 추가합니다.  
-  
--   Backstage 보기에 사용자 지정 컨트롤을 추가합니다.  
-  
- **리본\(비주얼 디자이너\)** 항목을 사용하여 리본을 사용자 지정하는 방법에 대한 자세한 내용은 [리본 디자이너](../vsto/ribbon-designer.md)를 참조하세요.  
-  
-### 리본\(XML\) 항목  
- **리본\(비주얼 디자이너\)** 항목에서 지원하지 않는 방법으로 리본을 사용자 지정하려는 경우 **리본\(XML\)** 항목을 사용합니다.  **리본\(XML\)** 항목을 사용하여 다음과 같은 방법으로 리본을 사용자 지정합니다.  
-  
--   사용자 지정 탭 또는 기본 제공 탭에 *기본 제공* 그룹을 추가합니다.  
-  
--   사용자 지정 그룹에 기본 제공 컨트롤을 추가합니다.  
-  
--   사용자 지정 코드를 추가하여 기본 제공 컨트롤의 이벤트 처리기를 재정의합니다.  
-  
--   빠른 실행 도구 모음 사용자 지정  
-  
--   정규화된 ID를 사용하여 VSTO 추가 기능 간에 리본 사용자 지정을 공유합니다.  
-  
- **리본\(XML\)** 항목을 사용하여 리본을 사용자 지정하는 방법에 대한 자세한 내용은 [리본 XML](../vsto/ribbon-xml.md)을 참조하세요.  
-  
-## 리본 디자이너에서 리본 XML로 리본 메뉴 내보내기  
- 리본 디자이너를 사용하여 리본을 만든 다음 **리본\(비주얼 디자이너\)** 항목이 지원하지 않는 방법으로 리본을 사용자 지정하려는 경우 리본 메뉴를 XML로 내보낼 수 있습니다.  
-  
- Visual Studio에서 자동으로 **리본\(XML\)** 항목을 만들고 리본 메뉴에 있는 각 컨트롤에 대한 요소와 특성으로 리본 XML 파일을 채웁니다.  
-  
- 리본 디자이너의 **속성** 창에 있는 속성 중 일부는 리본 XML 파일로 전송됩니다.  예를 들어 Visual Studio는 **이미지** 또는 **텍스트** 속성의 값을 내보내지 않습니다.  이는 이미지를 할당하거나 컨트롤의 텍스트를 설정하려면 내보낸 프로젝트의 리본 코드 파일에서 콜백 메서드를 만들어야 하기 때문입니다.  Visual Studio는 내보내기 프로세스의 일부로 콜백 메서드를 자동으로 생성하지 않습니다.  
-  
- 또한 변경되지 않은 기본 속성 값은 결과 리본 XML 파일에 표시되지 않습니다.  
-  
- 리본 메뉴를 XML로 내보내는 방법에 대한 자세한 내용은 [방법: 리본 디자이너에서 리본 XML로 리본 메뉴 내보내기](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)를 참조하세요.  
-  
-### 코드 업데이트  
- 새 리본 코드 파일이 **솔루션 탐색기**에 추가됩니다.  이 파일에는 리본 XML 클래스가 포함되어 있습니다.  단추 클릭과 같은 사용자 동작을 처리하려면 이 클래스의 `Ribbon Callbacks` 영역에 콜백 메서드를 만들어야 합니다.  이벤트 처리기의 코드를 이러한 콜백 메서드로 이동하고 리본 확장성\(RibbonX\) 프로그래밍 모델을 사용하도록 코드를 수정합니다.  자세한 내용은 [리본 XML](../vsto/ribbon-xml.md)을 참조하세요.  
-  
- 또한 CreateRibbonExtensibilityObject 메서드를 재정의하고 Office 응용 프로그램에 리본 XML 클래스를 반환하는 코드를 `ThisAddIn`, `ThisWorkbook` 또는 `ThisDocument` 클래스에 추가해야 합니다.  
-  
- 자세한 내용은 [리본 XML](../vsto/ribbon-xml.md)를 참조하세요.  
-  
-## 프로젝트에 여러 리본 항목 추가  
- 단일 프로젝트에 둘 이상의 리본 항목을 추가할 수 있습니다.  이 기능은 다음 두 작업 중 하나를 수행하려는 경우에 유용합니다.  
-  
--   Outlook *검사기*에 대한 리본을 만듭니다.  자세한 내용은 [Outlook에 대해 리본 메뉴 사용자 지정](../vsto/customizing-a-ribbon-for-outlook.md)을 참조하세요.  
+-   Add custom groups to a custom or built-in tab.  
   
     > [!NOTE]  
-    >  검사기는 사용자가 메일 메시지 만들기와 같은 특정 작업을 수행할 때 열리는 창입니다.  
+    >  A built-in tab or group is one that already exists on the Ribbon of a Microsoft Office application. For example, the **Data** tab is a built-in tab in Excel. The **Connections** group is a built-in group on the **Data** tab.  
   
--   런타임에 표시할 리본을 선택합니다.  
+-   Add custom controls to a custom group.  
   
-### 런타임에 표시할 리본 선택  
- 프로젝트에 둘 이상의 리본이 포함될 수 있으므로 런타임에 표시할 리본을 선택할 수 있습니다.  
+-   Add custom controls to the Backstage View.  
   
- 런타임에 표시할 리본을 선택하려면 프로젝트의 `ThisAddin`, `ThisWorkbook` 또는 `ThisDocument` 클래스에서 CreateRibbonExtensibilityObject 메서드를 재정의하고 표시할 리본을 반환합니다.  다음 예제에서는 `myCondition`이라는 필드의 값을 검사하고 적절한 리본을 반환합니다.  
+ For more information about how to customize a Ribbon by using the **Ribbon (Visual Designer)** item, see [Ribbon Designer](../vsto/ribbon-designer.md).  
+  
+### <a name="ribbon-xml-item"></a>Ribbon (XML) Item  
+ Use the **Ribbon (XML)** item if you want to customize the Ribbon in a way that is not supported by the **Ribbon (Visual Designer)** item. Use the **Ribbon (XML)** item to customize the Ribbon in the following ways:  
+  
+-   Add *built-in* groups to a custom tab or built-in tab.  
+  
+-   Add built-in controls to a custom group.  
+  
+-   Add custom code to override the event handlers of built-in controls.  
+  
+-   Customize the Quick Access Toolbar.  
+  
+-   Share a Ribbon customization between VSTO Add-in by using a qualified ID.  
+  
+ For more information about how to customize the Ribbon by using the **Ribbon (XML)** item, see [Ribbon XML](../vsto/ribbon-xml.md).  
+  
+## <a name="exporting-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Exporting a Ribbon from the Ribbon Designer to Ribbon XML  
+ If you create a Ribbon by using the Ribbon Designer, and then decide that you want to customize the Ribbon in ways that the **Ribbon (Visual Designer)** item does not support, you can export the Ribbon to XML.  
+  
+ Visual Studio automatically creates a **Ribbon (XML)** item and populates the Ribbon XML file with elements and attributes for each control on the Ribbon.  
+  
+ Not all of the properties that are in the **Properties** window of the Ribbon designer are transferred to the Ribbon XML file.  For example, Visual Studio does not export the value of the **Image** or **Text** property. That is because you must create a callback method in the Ribbon code file of the exported project to assign an image or set the text of a control. Visual Studio does not automatically generate callback methods as part of the export process.  
+  
+ In addition, any unchanged default property values do not appear in the resulting Ribbon XML file.  
+  
+ For more information about how to export the Ribbon to XML, see [How to: Export a Ribbon from the Ribbon Designer to Ribbon XML](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md).  
+  
+### <a name="updating-the-code"></a>Updating the Code  
+ A new Ribbon code file is added to **Solution Explorer**. This file contains the Ribbon XML class. You must create callback methods in the `Ribbon Callbacks` region of this class to handle user actions, such as clicking a button. Move your code from the event handlers to these callback methods and modify the code to work with the Ribbon extensibility (RibbonX) programming model. For more information, see [Ribbon XML](../vsto/ribbon-xml.md).  
+  
+ You must also add code to the `ThisAddIn`, `ThisWorkbook`, or `ThisDocument` class that overrides the CreateRibbonExtensibilityObject method and returns the Ribbon XML class to the Office application.  
+  
+ For more information, see [Ribbon XML](../vsto/ribbon-xml.md).  
+  
+## <a name="adding-multiple-ribbon-items-to-a-project"></a>Adding Multiple Ribbon Items to a Project  
+ You can add more than one Ribbon item to a single project. This is useful if you want to perform either of the following two tasks:  
+  
+-   Create Ribbons for Outlook *Inspectors*. For more information, see [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md).  
+  
+    > [!NOTE]  
+    >  An Inspector is a window that opens when users perform certain tasks, such as creating an e-mail message.  
+  
+-   Select which Ribbon to display at run time.  
+  
+### <a name="selecting-which-ribbons-to-display-at-run-time"></a>Selecting Which Ribbons to Display at Run Time  
+ Because a project can contain more than one Ribbon, you can select which Ribbon to display at run time.  
+  
+ To select a Ribbon to display at run time, override the CreateRibbonExtensibilityObject method in the `ThisAddin`, `ThisWorkbook`, or `ThisDocument` class of your project and return the Ribbon that you want to display. The following example checks the value of a field named `myCondition` and returns the appropriate Ribbon.  
   
 > [!NOTE]  
->  이 예제에서 사용된 구문은 **리본\(비주얼 디자이너\)** 항목을 사용하여 만든 리본을 반환합니다.  **리본\(XML\)** 항목을 사용하여 만든 리본을 반환하는 구문은 약간 다릅니다.  **리본\(XML\)** 항목을 반환하는 방법에 대한 자세한 내용은 [리본 XML](../vsto/ribbon-xml.md)을 참조하세요.  
+>  The syntax used in this example returns a Ribbon that was created by using the **Ribbon (Visual Designer)** item. The syntax for returning a Ribbon that is created by using a **Ribbon (XML)** item is slightly different. For more information about returning a **Ribbon (XML)** item, see [Ribbon XML](../vsto/ribbon-xml.md).  
   
- 다음 코드를 추가합니다.  
+ Add the following code:  
   
- [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Choose_Ribbon/CS/ThisWorkbook.cs#1)]
- [!code-vb[Trin_Ribbon_Choose_Ribbon#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Choose_Ribbon/VB/ThisWorkbook.vb#1)]  
+ [!code-vb[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/VisualBasic/trin_ribbon_choose_ribbon_4/ThisWorkbook.vb#1)] [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/CSharp/trin_ribbon_choose_ribbon_4/ThisWorkbook.cs#1)]  
   
-### 관련 항목  
+### <a name="related-topics"></a>Related Topics  
   
-|제목|설명|  
-|--------|--------|  
-|[방법: 리본 메뉴 사용자 지정 시작](../vsto/how-to-get-started-customizing-the-ribbon.md)|Microsoft Office 응용 프로그램의 리본을 사용자 지정하고, **리본\(비주얼 디자이너\)** 또는 **리본\(XML\)** 항목을 Office 프로젝트에 추가하는 방법을 보여 줍니다.|  
-|[리본 디자이너](../vsto/ribbon-designer.md)|리본 디자이너를 사용하여 Microsoft Office 응용 프로그램의 리본에 사용자 지정 탭, 그룹 및 컨트롤을 추가하는 방법을 설명합니다.|  
-|[연습: 리본 디자이너를 사용하여 사용자 지정 탭 만들기](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)|리본 디자이너를 사용하여 사용자 지정 리본 탭을 만드는 방법을 보여 줍니다.  리본 디자이너를 사용하여 사용자 지정 탭에 컨트롤을 추가하고 배치할 수 있습니다.|  
-|[리본 개체 모델 개요](../vsto/ribbon-object-model-overview.md)|런타임에 리본 컨트롤의 속성을 가져오고 설정하는 데 사용할 수 있는 강력한 형식의 개체 모델에 대해 설명합니다.|  
-|[연습: 런타임에 리본 메뉴의 컨트롤 업데이트](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)|리본이 Office 응용 프로그램에 로드된 후 리본 개체 모델을 사용하여 리본 메뉴의 컨트롤을 업데이트하는 방법을 보여 줍니다.|  
-|[Outlook에 대해 리본 메뉴 사용자 지정](../vsto/customizing-a-ribbon-for-outlook.md)|Microsoft Office Outlook에서 리본을 사용자 지정하는 방법에 대한 지침을 제공합니다.|  
-|[InfoPath에 대해 리본 메뉴 사용자 지정](../vsto/customizing-a-ribbon-for-infopath.md)|Microsoft Office InfoPath에서 리본을 사용자 지정하는 방법에 대한 지침을 제공합니다.|  
-|[런타임에 리본 메뉴에 액세스](../vsto/accessing-the-ribbon-at-run-time.md)|리본을 표시, 숨기기 및 수정하고, 사용자가 사용자 지정 작업창, 작업 창 또는 Outlook 양식 영역의 컨트롤에서 코드를 실행할 수 있도록 하는 방법을 보여 줍니다.|  
-|[방법: 리본의 탭 위치 변경](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)|리본 메뉴의 탭 순서를 변경하는 방법을 보여 줍니다.|  
-|[방법: 기본 제공 탭 사용자 지정](../vsto/how-to-customize-a-built-in-tab.md)|기본 제공 탭에 그룹 및 컨트롤을 추가하는 방법을 보여 줍니다.|  
-|[방법: Backstage 보기에 컨트롤 추가](../vsto/how-to-add-controls-to-the-backstage-view.md)|**파일**을 클릭할 때 열리는 메뉴에 컨트롤을 추가하는 방법을 보여 줍니다.|  
-|[방법: 리본 그룹에 대화 상자 시작 관리자 추가](../vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)|리본 메뉴의 임의 그룹에 대화 상자 표시 아이콘을 추가하는 방법을 보여 줍니다.|  
-|[방법: 리본 디자이너에서 리본 XML로 리본 메뉴 내보내기](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)|디자이너에서 리본 XML로 리본 메뉴를 내보내 고급 방식으로 리본을 사용자 지정하는 방법을 보여 줍니다.|  
-|[리본 XML](../vsto/ribbon-xml.md)|리본 XML을 사용하여 리본을 사용자 지정하는 방법을 설명합니다.|  
-|[연습: 리본 디자이너를 사용하여 사용자 지정 탭 만들기](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)|**본\(XML\)** 항목을 사용하여 사용자 지정 리본 탭을 만드는 방법을 보여 줍니다.|  
+|Title|Description|  
+|-----------|-----------------|  
+|[How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md)|Shows you how to customize the Ribbon of a Microsoft Office application, add a **Ribbon (Visual Designer)** or **Ribbon (XML)** item to an Office project.|  
+|[Ribbon Designer](../vsto/ribbon-designer.md)|Describes how you can use the Ribbon Designer to add custom tabs, groups, and controls to the Ribbon of a Microsoft Office application.|  
+|[Walkthrough: Creating a Custom Tab by Using the Ribbon Designer](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)|Shows you how to create a custom Ribbon tab by using the Ribbon Designer. You can use the Ribbon Designer to add and position controls on the custom tab.|  
+|[Ribbon Object Model Overview](../vsto/ribbon-object-model-overview.md)|Provides an overview of the strongly typed object model that you can use to get and set the properties of Ribbon controls at run time.|  
+|[Walkthrough: Updating the Controls on a Ribbon at Run Time](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)|Demonstrates how to use the Ribbon object model to update the controls on a Ribbon after the Ribbon is loaded into the Office application.|  
+|[Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md)|Provides guidance for customizing the Ribbon in Microsoft Office Outlook.|  
+|[Customizing a Ribbon for InfoPath](../vsto/customizing-a-ribbon-for-infopath.md)|Provides guidance for customizing the Ribbon in Microsoft Office InfoPath.|  
+|[Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)|Shows how to show, hide, and modify the Ribbon, and enable users to run the code from controls in a custom task pane, actions pane, or Outlook form region.|  
+|[How to: Change the Position of a Tab on the Ribbon](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)|Shows how to change the order of tabs on a Ribbon.|  
+|[How to: Customize a Built-in Tab](../vsto/how-to-customize-a-built-in-tab.md)|Shows how to add groups and controls to a built-in tab.|  
+|[How to: Add Controls to the Backstage View](../vsto/how-to-add-controls-to-the-backstage-view.md)|Shows how to add controls to the menu that opens when you click the **File**.|  
+|[How to: Add a Dialog Box Launcher to a Ribbon Group](../vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)|Shows to add a dialog box launcher to any group on a Ribbon.|  
+|[How to: Export a Ribbon from the Ribbon Designer to Ribbon XML](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)|Shows how to customize the Ribbon in advanced ways by exporting the Ribbon from the designer to Ribbon XML.|  
+|[Ribbon XML](../vsto/ribbon-xml.md)|Explains how you can customize a Ribbon by using Ribbon XML.|  
+|[Walkthrough: Creating a Custom Tab by Using the Ribbon Designer](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)|Demonstrates how to create a custom Ribbon tab by using the **Ribbon (XML)** item.|  
   
   

@@ -27,24 +27,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 1600207e0c504f4b4dcbf620e92bcc06e14ec035
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 4401606f97452de235b8a2d406451e5481518006
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>.runsettings 파일을 사용하여 단위 테스트 구성
-*.runsettings 파일을 사용하여 Visual Studio의 단위 테스트를 구성할 수 있습니다. 확장명으로 ‘.runsettings’를 사용하면 파일 이름은 아무런 상관이 없습니다. 예를 들어, 테스트가 실행되는 .NET Framework, 테스트 결과가 전달되는 디렉터리 및 테스트 실행 중에 수집된 데이터를 변경할 수 있습니다.  
+\*.runsettings 파일을 사용하여 Visual Studio의 단위 테스트를 구성할 수 있습니다. 확장명으로 ‘.runsettings’를 사용하면 파일 이름은 아무런 상관이 없습니다. 예를 들어, 테스트가 실행되는 .NET Framework, 테스트 결과가 전달되는 디렉터리 및 테스트 실행 중에 수집된 데이터를 변경할 수 있습니다.  
   
- 특수 구성을 원하지 않는다면 *.runsettings 파일이 필요하지 않습니다. 가장 자주 사용하는 경우는 [코드 검사](../test/customizing-code-coverage-analysis.md)를 사용자 지정하는 경우입니다.  
+ 특별히 구성하지 않는다면 \*.runsettings 파일이 필요하지 않습니다. 가장 자주 사용하는 경우는 [코드 검사](../test/customizing-code-coverage-analysis.md)를 사용자 지정하는 경우입니다.  
   
 > [!NOTE]
 >  **.runsettings 및 .testsettings**  
 >   
->  테스트 구성에는 두 가지 파일 형식이 필요합니다. *.runsettings는 단위 테스트에 사용됩니다. \*.testsettings는 [랩 환경 테스트](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests), 웹 성능 및 로드 테스트 그리고 Intellitrace 및 이벤트 로그 어댑터와 같은 진단 데이터 어댑터의 일부 유형을 사용자 지정하는 데 사용됩니다.  
+>  테스트 구성에는 두 가지 파일 형식이 필요합니다. \*.runsettings는 단위 테스트에 사용됩니다. \*.testsettings는 [랩 환경 테스트](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests), 웹 성능 및 로드 테스트 그리고 Intellitrace 및 이벤트 로그 어댑터와 같은 진단 데이터 어댑터의 일부 유형을 사용자 지정하는 데 사용됩니다.  
 >   
->  Visual Studio 2010까지 Visual Studio의 이전 버전에서는 *.testsettings 파일을 사용해서 단위 테스트를 사용자 지정할 수 있었습니다. 여전히 *.testsettings 파일을 사용해서 단위 테스트를 사용자 지정할 수도 있지만 \*.runsettings 파일에서 동일한 구성을 사용하는 것보다 테스트가 훨씬 느리게 실행됩니다.  
+>  Visual Studio 2010까지 Visual Studio의 이전 버전에서는 \*.testsettings 파일을 사용해서 단위 테스트를 사용자 지정할 수 있었습니다. 여전히 *.testsettings 파일을 사용해서 단위 테스트를 사용자 지정할 수도 있지만 \*.runsettings 파일에서 동일한 구성을 사용하는 것보다 테스트가 훨씬 느리게 실행됩니다.  
   
 ## <a name="customizing-tests-with-a-runsettings-file"></a>.runsettings 파일을 사용하여 테스트 사용자 지정  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/13/2017
  ![실행 설정 파일 사용](../test/media/runsettings-1.png "RunSettings-1")  
   
 ##  <a name="example"></a> 이 예제의 .runsettings 파일 복사  
- 다음은 일반적인 *.runsettings 파일입니다. 모든 값에는 기본값이 있으므로 파일의 각 요소는 선택 사항입니다.  
+ 다음은 일반적인 \*.runsettings 파일입니다. 모든 값에는 기본값이 있으므로 파일의 각 요소는 선택 사항입니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

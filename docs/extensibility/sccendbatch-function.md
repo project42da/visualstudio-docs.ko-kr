@@ -1,48 +1,65 @@
 ---
-title: "SccEndBatch 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccEndBatch"
-helpviewer_keywords: 
-  - "SccEndBatch 함수"
+title: SccEndBatch Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccEndBatch
+helpviewer_keywords:
+- SccEndBatch function
 ms.assetid: 100e7833-fe0a-45c0-9fca-3e61fd1165b7
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# SccEndBatch 함수
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9812491ac56c7a714dad200e4984afa348f564ed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 함수는 일괄 처리의 소스 제어 작업을 완료 했습니다. 이러한 일괄 처리는 중첩 될 수 없습니다.  
+---
+# <a name="sccendbatch-function"></a>SccEndBatch Function
+This function concludes a batch of source control operations. These batches may not be nested.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccEndBatch(void);  
 ```  
   
-#### 매개 변수  
- 없음  
+#### <a name="parameters"></a>Parameters  
+ None.  
   
-## 반환 값  
- 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|값|설명|  
-|-------|--------|  
-|SCC\_OK|일괄 작업 성공적으로 완료 합니다.|  
-|SCC\_E\_UNKNOWNERROR|알 수 없는 오류가 발생 했습니다.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Batch of operations successfully concluded.|  
+|SCC_E_UNKNOWNERROR|Nonspecific failure.|  
   
-## 설명  
- 소스 제어 일괄 처리는 여러 프로젝트 또는 여러 컨텍스트 간에 동일한 소스 제어 작업을 실행 하는 데 사용 됩니다. 일괄 처리는 일괄 처리 된 작업 중 사용자 환경에서 중복 대화 상자를 제거 하기 위해 사용할 수 있습니다.[SccBeginBatch](../extensibility/sccbeginbatch-function.md) 및 `SccEndBatch` 함수는 작업의 시작과 끝을 나타내는 데 쌍으로 사용 됩니다. 중첩 될 수 없습니다.  
+## <a name="remarks"></a>Remarks  
+ Source control batches are used to execute the same source control operations across multiple projects or multiple contexts. Batches can be used to eliminate redundant dialog boxes from the user experience during a batched operation. The [SccBeginBatch](../extensibility/sccbeginbatch-function.md) and the `SccEndBatch` function are used as a pair to indicate the beginning and end of an operation. They cannot be nested.  
   
-## 참고 항목  
- [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccBeginBatch](../extensibility/sccbeginbatch-function.md)

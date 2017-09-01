@@ -1,205 +1,206 @@
 ---
-title: "연습: 디자이너를 사용하여 SharePoint를 위한 웹 파트 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "웹 파트[Visual Studio에서 SharePoint 개발], 만들기"
-  - "웹 파트[Visual Studio에서 SharePoint 개발], 디자이너"
-  - "웹 파트[Visual Studio에서 SharePoint 개발], 디자인"
+title: 'Walkthrough: Creating a Web Part for SharePoint by Using a Designer | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Web Parts [SharePoint development in Visual Studio], designer
+- Web Parts [SharePoint development in Visual Studio], creating
+- Web Parts [SharePoint development in Visual Studio], designing
 ms.assetid: 3dd62654-ada2-468f-b7da-eb5704a2ff7a
 caps.latest.revision: 34
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 58ffc130a6b339d101cb24b582420d78f892aaa5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 디자이너를 사용하여 SharePoint를 위한 웹 파트 만들기
-  SharePoint 사이트를 위해 웹 파트를 만드는 경우 사용자가 해당 사이트 페이지의 콘텐츠, 모양 및 동작을 브라우저에서 직접 수정할 수 있습니다.  이 연습에서는[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 SharePoint **비주얼 웹 파트** 프로젝트 템플릿을 사용하여 시각적으로 웹 파트를 만드는 방법을 보여 줍니다.  
+# <a name="walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer"></a>Walkthrough: Creating a Web Part for SharePoint by Using a Designer
+  If you create web parts for a SharePoint site, your users can directly modify the content, appearance, and behavior of pages in that site by using a browser. This walkthrough shows you how to create a web part visually by using the SharePoint **Visual Web Part** project template in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
- 만들려는 웹 파트는 월별 달력 보기와 사이트의 각 달력 목록에 대한 확인란을 표시합니다.  사용자는 확인란을 선택하여 월별 달력 보기에 포함할 달력 목록을 지정할 수 있습니다.  
+ The web part that you'll create displays a monthly calendar view and a check box for each calendar list on the site. Users can specify which calendar lists to include in the monthly calendar view by selecting the check boxes.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   **비주얼 웹 파트** 프로젝트 템플릿을 사용하여 웹 파트 만들기  
+-   Creating a web part by using the **Visual Web Part** project template.  
   
--   Visual Studio의 Visual Web Developer 디자이너를 사용하여 웹 파트 디자인  
+-   Designing the web part by using the Visual Web Developer designer in Visual Studio.  
   
--   웹 파트에 있는 컨트롤의 이벤트를 처리하기 위한 코드 추가  
+-   Adding code to handle the events of controls on the web part.  
   
--   SharePoint에서 웹 파트 테스트  
+-   Testing the web part in SharePoint.  
   
     > [!NOTE]  
-    >  시스템에서 Visual Studio 사용자 인터페이스의 일부 요소에 대해 다음 지침에서 설명한 것과 다른 이름 또는 위치를 표시할 수 있습니다.  설치한 Visual Studio 버전과 사용하는 설정에 따라 이러한 요소가 결정됩니다.  [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)를 참조하십시오.  
+    >  Your computer might show different names or locations for some elements of the user interface for Visual Studio in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. See [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   지원되는 Windows 및 SharePoint 버전.  [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)를 참조하십시오.  
+-   Supported editions of Windows and SharePoint. See [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)] 이상.  
+-   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)] or greater.  
   
-## 웹 파트 프로젝트 만들기  
- 먼저 **비주얼 웹 파트** 프로젝트 템플릿을 사용하여 웹 파트 프로젝트를 만듭니다.  
+## <a name="creating-a-web-part-project"></a>Creating a web part project  
+ First, create a web part project by using the **Visual Web Part** project template.  
   
-#### 비주얼 웹 파트 프로젝트를 만들려면  
+#### <a name="to-create-a-visual-web-part-project"></a>To create a Visual Web Part project  
   
-1.  **관리자 권한으로 실행** 옵션을 사용하여 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] by using the **Run as Administrator** option.  
   
-2.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
+2.  On the menu bar, choose **File**, **New**, **Project**.  
   
-     **새 프로젝트** 대화 상자가 나타납니다.  
+     The **New Project** dialog box appears.  
   
-3.  **새 프로젝트** 대화 상자의 **Visual C\#** 또는 **Visual Basic**에서 **Office\/SharePoint** 를 확장하고 나서 **Office\/SharePoint** 범주를 선택합니다.  
+3.  In the **New Project** dialog box, under either **Visual C#** or **Visual Basic**, expand **Office/SharePoint**, and then choose the **SharePoint Solutions** category.  
   
-4.  템플릿 목록에서, **SharePoint 2013 \- Visual Web Part** 템플릿을 선택하고 나서 **확인** 단추를 선택합니다.  
+4.  In the list of templates, choose the **SharePoint 2013 - Visual Web Part** template, and then choose the **OK** button.  
   
-     **SharePoint 사용자 지정 마법사**가 나타납니다.  이 마법사를 사용하면 프로젝트를 디버깅하는 데 사용할 사이트와 솔루션의 신뢰 수준을 지정할 수 있습니다.  
+     The **SharePoint Customization Wizard** appears. By using this wizard, you can specify the site that you'll use to debug the project and the trust level of the solution.  
   
-5.  **이 SharePoint 솔루션의 신뢰 수준을 선택하십시오.** 섹션에서 **팜 솔루션으로 배포** 옵션 단추를 선택합니다.  
+5.  In the **What is the trust level for this SharePoint solution?** section, choose the **Deploy as a farm solution** option button.  
   
-6.  **마침** 단추를 선택하여 기본 로컬 SharePoint 사이트를 수락합니다.  
+6.  Choose the **Finish** button to accept the default local SharePoint site.  
   
-## 웹 파트 디자인  
- **도구**  상자의 컨트롤을 Visual Web Developer 디자이너에 추가하여 웹 파트를 디자인합니다.  
+## <a name="designing-the-web-part"></a>Designing the web part  
+ Design the web part by adding controls from the **Toolbox** to the surface of the Visual Web Developer designer.  
   
-#### 웹 파트의 레이아웃을 디자인하려면  
+#### <a name="to-design-the-layout-of-the-web-part"></a>To design the layout of the web part  
   
-1.  Visual Web Developer 디자이너에서 **디자인** 탭을 선택하여 디자인 뷰로 전환합니다.  
+1.  On the Visual Web Developer designer, choose the **Design** tab to switch to Design view.  
   
-2.  메뉴 모음에서 **보기**, **도구 상자**를 선택합니다.  
+2.  On the menu bar, choose **View**, **Toolbox**.  
   
-3.  **도구 상자**의 **표준** 노드에서, **CheckBoxList** 컨트롤을 선택하고 나서 다음 단계 중 하나를 수행합니다.  
+3.  In the **Standard** node of the **Toolbox**, choose the **CheckBoxList** control, and then perform one of the following steps:  
   
-    -   **CheckBoxList** 컨트롤을 위해 바로 가기 메뉴를 열고 **복사**를 선택한 다음 디자이너의 첫 번째 줄에서 바로 가기 메뉴를 열고 나서 **붙여넣기**를 선택합니다.  
+    -   Open the shortcut menu for the **CheckBoxList** control, choose **Copy**, open the shortcut menu for the first line in the designer, and then choose **Paste**.  
   
-    -   **도구 상자**의 **CheckBoxList** 컨트롤을 끌어와서 디자이너의 첫 번째 줄에 연결합니다.  
+    -   Drag the **CheckBoxList** control from the **Toolbox**, and connect the control to the first line in the designer.  
   
-4.  이전 단계를 반복하지만 단추를 디자이너의 다음 줄으로 이동합니다.  
+4.  Repeat the previous step, but move a Button to the next line of the designer.  
   
-5.  디자이너에서 **Button1** 단추를 선택합니다.  
+5.  In the designer, choose the **Button1** button.  
   
-6.  메뉴 모음에서 **보기**, **속성 창**을 선택합니다.  
+6.  On the menu bar, choose **View**, **Properties Window**.  
   
-     **속성** 창이 열립니다.  
+     The **Properties** window opens.  
   
-7.  단추의 **텍스트** 속성에 업데이트를 입력합니다.  
+7.  In the **Text** property of the button, enter **Update**.  
   
-## 웹 파트에 있는 컨트롤의 이벤트 처리  
- 사용자가 마스터 달력 보기에 달력을 추가할 수 있게 해 주는 코드를 추가합니다.  
+## <a name="handling-the-events-of-controls-on-the-web-part"></a>Handling the events of controls on the web part  
+ Add code that enables the user to add calendars to the master calendar view.  
   
-#### 웹 파트에 있는 컨트롤의 이벤트를 처리하려면  
+#### <a name="to-handle-events-of-controls-on-the-web-part"></a>To handle events of controls on the web part  
   
-1.  다음 단계 중 하나를 수행합니다.  
+1.  Perform one of the following sets of steps:  
   
-    -   디자이너에서 **Update** 단추를 두 번 클릭합니다.  
+    -   In the designer, double-click the **Update** button.  
   
-    -   **업데이트** 단추의 **속성** 창에서 **이벤트** 단추를 선택합니다.  **클릭** 속성에 **Button1\_Click**을 입력한 다음 Enter 키를 선택합니다.  
+    -   In the **Properties** window for the **Update** button, choose the **Events** button. In the **Click** property, enter **Button1_Click**, and then choose the Enter key.  
   
-     코드 편집기에서 사용자 정의 컨트롤 코드 파일이 열리고 `Button1_Click` 이벤트 처리기가 나타납니다.  나중에 이 이벤트 처리기에 코드를 추가합니다.  
+     The user control code file opens in Code Editor and the `Button1_Click` event handler appears. Later, you'll add code to this event handler.  
   
-2.  사용자 정의 컨트롤 코드 파일의 맨 위에 다음 문을 추가합니다.  
+2.  Add the following statements to the top of the user control code file.  
   
-     [!code-csharp[SP_VisualWebPart#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_visualwebpart/cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]
-     [!code-vb[SP_VisualWebPart#1](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_visualwebpart/vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]  
+     [!code-vb[SP_VisualWebPart#1](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]  [!code-csharp[SP_VisualWebPart#1](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]  
   
-3.  다음 코드 줄을 `VisualWebPart1` 클래스에 추가합니다.  이 코드는 월별 달력 보기 컨트롤을 선언합니다.  
+3.  Add the following line of code to the `VisualWebPart1` class. This code declares a monthly calendar view control.  
   
-     [!code-csharp[SP_VisualWebPart#2](../snippets/csharp/VS_Snippets_OfficeSP/sp_visualwebpart/cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#2)]
-     [!code-vb[SP_VisualWebPart#2](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_visualwebpart/vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#2)]  
+     [!code-vb[SP_VisualWebPart#2](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#2)]  [!code-csharp[SP_VisualWebPart#2](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#2)]  
   
-4.  `VisualWebPart1` 클래스의 `Page_Load` 메서드를 다음 코드로 바꿉니다.  이 코드는 다음 작업을 수행합니다.  
+4.  Replace the `Page_Load` method of the `VisualWebPart1` class with the following code. This code performs the following tasks:  
   
-    -   월별 달력 보기를 사용자 정의 컨트롤에 추가합니다.  
+    -   Adds a monthly calendar view to the user control.  
   
-    -   사이트의 각 달력 목록에 대한 확인란을 추가합니다.  
+    -   Adds a check box for each calendar list on the site.  
   
-    -   달력 보기에 표시되는 각 항목 형식에 대한 템플릿을 지정합니다.  
+    -   Specifies a template for each type of item that appears in the calendar view.  
   
-     [!code-csharp[SP_VisualWebPart#3](../snippets/csharp/VS_Snippets_OfficeSP/sp_visualwebpart/cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#3)]
-     [!code-vb[SP_VisualWebPart#3](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_visualwebpart/vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#3)]  
+     [!code-vb[SP_VisualWebPart#3](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#3)] [!code-csharp[SP_VisualWebPart#3](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#3)]  
   
-5.  `VisualWebPart1` 클래스의 `Button1_Click` 메서드를 다음 코드로 바꿉니다.  이 코드는 선택한 각 달력의 항목을 마스터 달력 보기에 추가합니다.  
+5.  Replace the `Button1_Click` method of the `VisualWebPart1` class with the following code. This code adds items from each selected calendar to the master calendar view.  
   
-     [!code-csharp[SP_VisualWebPart#4](../snippets/csharp/VS_Snippets_OfficeSP/sp_visualwebpart/cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#4)]
-     [!code-vb[SP_VisualWebPart#4](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_visualwebpart/vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#4)]  
+     [!code-vb[SP_VisualWebPart#4](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#4)]  [!code-csharp[SP_VisualWebPart#4](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#4)]  
   
-## 웹 파트 테스트  
- 프로젝트를 실행하면 SharePoint 사이트가 열립니다.  웹 파트는 SharePoint의 웹 파트 갤러리에 자동으로 추가됩니다.  이 프로젝트를 테스트하려면 다음 작업을 수행합니다.  
+## <a name="testing-the-web-part"></a>Testing the web part  
+ When you run the project, the SharePoint site opens. The web part is automatically added to the Web Part Gallery in SharePoint. To test this project, you'll perform the following tasks:  
   
--   별개의 두 달력 목록에 각각 이벤트를 추가합니다.  
+-   Add an event to each of two separate calendar lists.  
   
--   웹 파트 페이지에 웹 파트를 추가합니다.  
+-   Add the web part to a web part page.  
   
--   월별 달력 보기에 포함할 목록을 지정합니다.  
+-   Specify the lists to include in the monthly calendar view.  
   
-#### 사이트의 달력 목록에 이벤트를 추가하려면  
+#### <a name="to-add-events-to-calendar-lists-on-the-site"></a>To add events to calendar lists on the site  
   
-1.  Visual Studio에서 F5 키를 선택합니다.  
+1.  In Visual Studio, choose the F5 key.  
   
-     SharePoint 사이트가 열리고 페이지에 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] 빠른 실행 모음이 표시됩니다.  
+     The SharePoint site opens, and the [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] Quick Launch bar appears on the page.  
   
-2.  빠른 실행 모음의 **목록**에서 **달력** 링크를 선택합니다.  
+2.  On the Quick Launch bar, under **Lists**, choose the **Calendar** link.  
   
-     **달력** 페이지가 나타납니다.  
+     The **Calendar** page appears.  
   
-     빠른 실행 모음에 일정 링크가 나타나면 **사이트 내용** 링크를 선택합니다.  사이트 콘텐츠 페이지에 **일정** 항목이 표시되지 않으면 일정 항목을 만듭니다.  
+     If you no Calendar link appears on the Quick Launch bar, choose the **Site Contents** link. If the Site Contents page doesn't show a **Calendar** item, create one.  
   
-3.  캘린더 페이지에서 날짜를 선택하고 나서 이벤트 추가로 선택된 날짜에 **추가** 링크를 선택합니다.  
+3.  On the Calendar page, choose a day, and then choose the **Add** link in the selected day to add an event.  
   
-4.  **제목** 상자에 Event in the default calendar를 입력한 다음 **저장** 단추를 선택합니다.  
+4.  In the **Title** box, enter **Event in the default calendar**, and then choose the **Save** button.  
   
-5.  **사이트 내용**을 선택한 다음 **응용 프로그램 추가** 타일을 선택합니다.  
+5.  Choose the **Site Contents** link, and then choose the **Add an app** tile.  
   
-6.  **만들기** 페이지에서 **일정** 형식을 선택하고 일정 이름을 지정한 다음 **만들기** 단추를 선택합니다.  
+6.  On the **Create** page, choose the **Calendar** type, name the calendar, and then choose the **Create** button.  
   
-7.  새 달력에 이벤트를 추가하고, 사용자 지정 달력에서 이벤트 이름을 지정한 다음, **저장** 단추를 선택합니다.  
+7.  Add an event to the new calendar, name the event **Event in the custom calendar**, and then choose the **Save** button.  
   
-#### 웹 파트 페이지에 웹 파트를 추가하려면  
+#### <a name="to-add-the-web-part-to-a-web-part-page"></a>To add the web part to a web part page  
   
-1.  **사이트 내용** 페이지에서 **사이트 페이지** 폴더를 엽니다.  
+1.  On the **Site Contents** page, open the **Site Pages** folder.  
   
-2.  리본 메뉴에서 **파일** 탭을 선택하고 **새 문서** 메뉴를 열고 나서 **웹 파트 페이지** 명령어를 선택합니다.  
+2.  On the ribbon, choose the **Files** tab, open the **New Document** menu, and then choose the **Web Part Page** command.  
   
-3.  **새 웹 파트 페이지** 페이지에서 페이지 이름으로 **SampleWebPartPage.aspx**를 지정한 다음 **만들기**를 선택합니다.  
+3.  On the **New Web Part Page** page, name the page **SampleWebPartPage.aspx**, and then choose the **Create** button.  
   
-     웹 파트 페이지가 표시됩니다.  
+     The web part page appears.  
   
-4.  웹 파트 페이지 상단에서, **삽입** 탭을 선택하고 나서 **웹 파트** 단추를 선택합니다.  
+4.  In the top zone of the web part page, choose the **Insert** tab, and then choose the **Web Part** button.  
   
-5.  **사용자 지정** 폴더를 선택하고 **VisualWebPart1** 웹 파트를 선택한 다음 **추가**를 선택합니다.  
+5.  Choose the **Custom** folder, choose the **VisualWebPart1** web part, and then choose the **Add** button.  
   
-     페이지에 웹 파트 페이지가 표시됩니다.  웹 파트에 다음 컨트롤이 표시됩니다.  
+     The web part appears on the page. The following controls appear on the web part:  
   
-    -   월별 달력 보기  
+    -   A monthly calendar view.  
   
-    -   **Update** 단추  
+    -   An **Update** button.  
   
-    -   **Calendar** 확인란  
+    -   A **Calendar** check box.  
   
-    -   **Custom Calendar** 확인란  
+    -   A **Custom Calendar** check box.  
   
-#### 월별 달력 보기에 포함할 목록을 지정하려면  
+#### <a name="to-specify-lists-to-include-in-the-monthly-calendar-view"></a>To specify lists to include in the monthly calendar view  
   
-1.  웹 파트에서 월별 달력 보기에 포함할 달력을 지정한 다음 **업데이트** 단추를 선택합니다.  
+1.  In the web part, specify calendars that you want to include in the monthly calendar view, and then choose the **Update** button.  
   
-     지정한 모든 달력의 이벤트가 월별 달력 보기에 표시됩니다.  
+     Events from all calendars that you specified appear in the monthly calendar view.  
   
-## 참고 항목  
- [SharePoint를 위한 웹 파트 만들기](../sharepoint/creating-web-parts-for-sharepoint.md)   
- [방법: SharePoint 웹 파트 만들기](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
- [방법: 디자이너를 사용하여 SharePoint 웹 파트 만들기](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
- [연습: SharePoint를 위한 웹 파트 만들기](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)  
+## <a name="see-also"></a>See Also  
+ [Creating Web Parts for SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)   
+ [How to: Create a SharePoint Web Part](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
+ [How to: Create a SharePoint Web Part by Using a Designer](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
+ [Walkthrough: Creating a Web Part for SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)  
   
   

@@ -1,86 +1,306 @@
 ---
-title: "디버거 시작 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-ms.assetid: c763d706-3213-494f-b4d2-990b6e1ec456
-caps.latest.revision: 6
-caps.handback.revision: 2
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 디버거 시작
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+title: Get started with the debugger | Microsoft Docs
+ms.custom: H1HackMay2017
+ms.date: 05/18/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- debugger
+ms.assetid: 62734c0d-a75a-4576-8f73-0e97c19280e1
+caps.latest.revision: 1
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
+ms.openlocfilehash: 09eb8904a2ec442d02f31bf8793d6a105d04ac6a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/31/2017
 
-Visual Studio 디버거는 모든 언어에서 쉽게 사용할 수 있습니다.  여기서는 간단한 C\# 프로그램을 디버그하는 방법을 보여 주겠지만 C\+\+ 및 JavaScript와 같은 다른 언어의 코드에 동일한 단계를 적용할 수 있습니다.  
-  
-##  <a name="BKMK_Start_debugging_a_VS_project"></a> 기본 C\# 프로젝트 디버그  
- 간단한 C\# 콘솔 응용 프로그램으로 시작하겠습니다\(**파일 \/ 새로 만들기 \/ 프로젝트**를 선택한 다음 **Visual C\#** 및 **콘솔 응용 프로그램**을 차례로 선택\).  이전에 Visual Studio를 사용한 적이 없을 경우 [연습: 간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)를 참조하세요.  Main 메서드는 정수 변수에 1을 10회 추가하고 결과를 콘솔에 출력합니다.  
-  
-```c#  
-static void Main(string[] args)  
-{  
-    int testInt = 0;  
-    for (int i = 1; i < 10; i++)  
-    {  
-        testInt += 1;  
-    }  
-    Console.WriteLine(testInt);  
-}  
-```  
-  
- **디버그** 구성에서 이 코드를 빌드합니다.  이 구성은 기본적으로 설정되어 있습니다.  구성에 대한 자세한 내용은 [빌드 구성 이해](../ide/understanding-build-configurations.md)를 참조하세요.  
-  
- **디버그 \/ 디버깅 시작**을 클릭하여\(또는 도구 모음에서 **시작**을 클릭하거나 F5 사용\) 디버거에서 이 코드를 실행합니다.  응용 프로그램이 거의 즉시 종료되므로 콘솔 창에 무엇인가 인쇄되었는지 여부는 사실 알 수 없습니다.  
-  
- 중단점을 설정한 다음 미리 단계별로 실행하면 콘솔 창을 보기에 충분한 시간 동안 실행을 중지할 수 있습니다.  중단점을 설정하려면 커서를 `Console.WriteLine` 줄에 놓고 **디버그 \/ 새 중단점 \/ 함수 중단점**을 클릭하거나 같은 줄에서 왼쪽 여백을 클릭하면 됩니다.  중단점은 다음과 같은 모습입니다.  
-  
- ![중단점 설정](~/debugger/media/getstartedbreakpoint.png "GetStartedBreakpoint")  
-  
- 중단점에 대한 자세한 내용은 [중단점 사용](../debugger/using-breakpoints.md)을 참조하세요.  
-  
- 다시 디버그를 시작합니다.  `Console.WriteLine` 코드가 실행되기 전에 실행이 중지됩니다.  미리 단계별로 실행되도록 지정하여 실행되게 할 수 있습니다\(**디버그 \/ 프로시저 단위 실행**을 클릭하거나 **F10** 사용\).  이 경우에는 **한 단계씩 코드 실행** \(**F11**\)을 선택하고 동일한 결과를 얻을 수도 있습니다. 그 차이는 나중에 설명하겠습니다.  메서드의 마지막 중괄호로 묶인 선이 노란색으로 변해야 합니다.  콘솔 창을 봅니다.  **10**이 표시되어야 합니다.  디버그를 중지합니다\(**디버그 \/ 디버깅 중지**, 또는 도구 모음에서 **디버깅 중지**, 또는 **SHIFT\+F5**\).  
-  
- 이제 변수 값을 살펴보겠습니다.  코드 창 바로 아래에 **자동**, **지역** 및 **조사식** 창이 표시됩니다.  이러한 창에는 실행 당시의 변수에 대한 현재 값이 표시됩니다.  **자동** 및 **지역** 창에는 값이 **10**인 testInt가 표시됩니다.  
-  
- ![디버그할 때의 자동 창](~/debugger/media/getstartedwindows.png "GetStartedWindows")  
-  
- **자동** 및 **지역** 창에 대한 자세한 내용은 [변수 창](../Topic/Variable%20Windows.md)을 참조하세요.  
-  
- 프로그램을 진행함에 따라 변수 값이 어떻게 변경되는지 살펴보겠습니다.  `testInt += 1;` 줄에 중단점을 설정하고 디버그를 시작합니다.  **지역** 및 **자동** 창의 **testInt**가 **0**으로, **i**가 **1**로 표시되어야 합니다.  디버그를 계속할 경우\(**디버그 \/ 계속**, 또는 도구 모음의 **계속** 또는 **F5**\), testInt의 값이 **1**로 변경되고, 그 다음에 **2** 등으로 변경되는 것을 볼 수 있습니다.  이러한 변경 내용을 보는 것이 힘들면 중단점을 제거\(**디버그 \/ 중단점 설정\/해제**, 또는 여백에서 해당 중단점 클릭\)하고 디버그를 계속하세요.  모든 중단점을 제거하려면 **디버그 \/ 모든 중단점 삭제**를 클릭하거나 **CTRL \+ SHIFT \+ F9**를 누르고, **모든 중단점을 제거하시겠습니까?**라고 묻는 대화 상자에서 **예**를 클릭합니다.  
-  
-## 함수 호출을 한 단계씩 코드 실행 및 프로시저 단위 실행  
- **한 단계씩 코드 실행**과 **프로시저 단위 실행** 간의 차이를 알려면 다른 메서드에 의해 호출되는 메서드를 추가해야 합니다.  C\# 응용 프로그램에 메서드를 추가하고 Main 메서드에서 호출합니다.  코드는 다음과 비슷합니다.  
-  
-```c#  
-static void Main(string[] args)  
-{  
-    Method1();  
-    Console.WriteLine("end");  
-}  
-  
-private static void Method1()  
-{  
-    Console.WriteLine("in Method1");  
-}  
-```  
-  
- Main 메서드에서 `Method1();` 호출에 중단점을 설정하고 디버그를 시작합니다.  실행이 중단되면 **디버그 \/ 한 단계씩 코드 실행**\(또는 도구 모음에서 **한 단계씩 코드 실행**, 또는 **F11** 사용\)을 클릭합니다.  Method1\(\)의 첫 번째 중괄호에서 실행이 다시 중단됩니다.  
-  
- ![한 단계씩 코드 실행](~/debugger/media/getstartedstepinto.png "GetStartedStepInto")  
-  
- 디버그를 중지했다가 다시 시작하고, 실행이 중단점에서 중단되면 **디버그\/ 프로시저 단위 실행**\(또는 도구 모음에서 **프로시저 단위 실행**, 또는 **F10** 사용\)을 클릭합니다.  실행이 `Console.WriteLine("end");`에서 다시 중단됩니다.  
-  
- 디버거를 사용한 코드 탐색에 대해 자세히 알려면, [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.
+---
+# <a name="get-started-with-the-visual-studio-debugger"></a>Get started with the Visual Studio debugger
+
+This topic introduces the features of the Visual Studio debugger in a step-by-step walkthrough. If you want a higher-level view of the debugger features, see [Debugger Feature Tour](../debugger/debugger-feature-tour.md).
+
+You can either read along to see the features of the debugger or you can download the complete sample used in the feature tour and follow the steps yourself. To download the sample and follow along, go to [Photo Viewer Demo](https://code.msdn.microsoft.com/windowsdesktop/WPF-Photo-Viewer-Demo-be75662a).
+
+|         |         |
+|---------|---------|
+| ![Watch a video](../install/media/video-icon.png "WatchVideo") | [Watch a video](#video) on debugging that shows similar steps. |
+
+Although the demo app is C#, the features are applicable to C++, Visual Basic, JavaScript, and other languages supported by Visual Studio (except where noted).
+
+## <a name="start-the-debugger"></a>Start the debugger!
+
+1. To follow along these steps in Visual Studio, download the sample [on this page](https://code.msdn.microsoft.com/windowsdesktop/WPF-Photo-Viewer-Demo-be75662a).
+
+    > [!IMPORTANT]
+    > You need to install Visual Studio with the .NET Desktop Development workload to run the app we're using in the demo.
+
+2. Unzip the project.
+
+3. Open Visual Studio and select the **File > Open** menu command, then choose **Project/Solution**, and then open the folder where you downloaded the project.
+
+     ![Open the sample project](../debugger/media/dbg-tour-open-project.png "Open Project")
+
+3. Open the WPF Photo Viewer Demo > C# folder, choose the photoapp.sln file, and select **Open**.
+
+     The project opens in Visual Studio. Solution Explorer in the right pane shows you all the project files.
+
+    ![Solution Explorer files](../debugger/media/dbg-tour-solution-explorer.png "Solution Explorer")
+
+4. Press F5 (**Debug > Start Debugging** or the **Start Debugging** button ![Start Debugging](../debugger/media/dbg-tour-start-debugging.png "Start Debugging") in the Debug Toolbar).
+
+     ![Photo Viewer app](../debugger/media/dbg-tour-wpf-app.png "Photo Viewer App")
+
+     F5 starts the app with the debugger attached to the app process, but right now we haven't added any breakpoints or done anything special to examine the code. So the app just loads and you see the photo images.
+
+     In this tour, we'll take a closer look at this app using the debugger and get a look at the debugger features.
+
+5. Stop the debugger by pressing the red stop ![Stop Debugging](../debugger/media/dbg-tour-stop-debugging.png "Stop Debugging") button.
+
+## <a name="set-a-breakpoint-and-start-the-debugger"></a>Set a breakpoint and start the debugger
+
+To debug, you need to start your app with the debugger attached to the app process.
+
+1. In the `MainWindow` constructor of MainWindow.xaml.cs, set a breakpoint by clicking the left margin of the first line of code.
+
+     ![Set a breakpoint](../debugger/media/dbg-tour-set-a-breakpoint.gif "SetABreakPoint")
+
+6. Press F5 or the **Start Debugging** button, the app starts, and the debugger runs to the line of code where you set the breakpoint.
+
+    The yellow arrow represents the statement on which the debugger paused, which also suspends app execution at the same point (this statement has not yet executed).
+
+    F5 continues running the app to the next breakpoint. (If the app is not yet running, F5 starts the debugger and stops at the first breakpoint.)
+
+    Breakpoints are a useful feature when you know the line of code or the section of code that you want to examine in detail.
+
+## <a name="restart-your-app-quickly"></a>Restart your app quickly
+
+1. Click the **Restart** ![Restart App](../debugger/media/dbg-tour-restart.png "RestartApp") button in the Debug Toolbar (Ctrl + Shift +F5).
+
+    When you press **Restart**, it saves time versus stopping the app and restarting the debugger. The debugger pauses at the first breakpoint that is hit by executing code.
+
+    The debugger stops again at the breakpoint you set, in the `MainWindow` constructor.
+
+## <a name="navigate-code-in-the-debugger-using-step-commands"></a>Navigate code in the debugger using step commands
+
+Mostly, we use the keyboard shortcuts here, because it's a good way to get fast at executing your app in the debugger (equivalent commands such as menu commands are shown in parentheses).
+
+1. Press F11 (**Debug > Step Into**) twice to advance the execution of the app to the `InitializeComponent()` function.
+
+     ![Use F11 to Step Into code](../debugger/media/dbg-tour-f11.png "F11 Step Into")
+
+     F11 is the **Step Into** command and advances the app execution one statement at a time. F11 is a good way to examine the execution flow in the most detail. (To move faster through code, we show you some other options also.) By default, the debugger skips over non-user code (if you want more details, see [Just My Code](../debugger/just-my-code.md)).
+
+     >[!NOTE]
+     > In managed code, you will see a dialog box asking if you want to be notified when you automatically step over properties and operators (default behavior). If you want to change the setting later, disable **Step over properties and operators** setting in the **Tools > Options** menu under **Debugging**.
+
+2. Press F10 (**Debug > Step Over**) a few times until the debugger stops on the first line of code in the `OnApplicationStartup` event handler.
+
+     ![Use F10 to Step Over code](../debugger/media/dbg-tour-f10-step-over.png "F10 Step Over")
+
+     F10 advances the debugger without stepping into functions or methods in your app code (the code still executes). By pressing F10 on the `InitializeComponent` method call (instead of F11), we skipped over the implementation code for `InitializeComponent` (which maybe we're not interested in right now).
+
+## <a name="step-into-a-property"></a>Step into a property
+
+1. With the debugger paused on this line of code:
+
+    ````
+    mainWindow.Photos.Path = Environment.CurrentDirectory + "\\images";
+    ````
+
+    Right-click on the line of code and choose **Step Into Specific**, then **SDKSamples.ImageSample.PhotoCollection.Path.set**
+
+     ![Use the Step into Specific feature](../debugger/media/dbg-tour-step-into-specific.png "Step Into Specific")
+
+    As mentioned earlier, by default the debugger skips over managed properties and fields, but the **Step Into Specific** command allows you to override this behavior. For now, we want to look what happens when the `Path.set` property setter runs. **Step Into Specific** gets us to the `Path.set` code here.
+
+     ![result of Step into Specific](../debugger/media/dbg-tour-step-into-specific-2.png "Step Into Specific")
+
+     The `Update` method in this code looks like it could be interesting, so lets use the debugger to examine that code up close.
+
+5. Hover over the `Update` method until the green **Run to Click** button ![Run to Click](../debugger/media/dbg-tour-run-to-click.png "RunToClick") appears on the left.
+
+     ![Use the Run to Click feature](../debugger/media/dbg-tour-run-to-click-2.png "Run to Click")
+
+    >  [!NOTE] 
+    > The **Run to Click** button is new in [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]. If you don't see the green arrow button, use F11 in this example instead to advance the debugger.
+
+6. Click the **Run to Click** button ![Run to Click](../debugger/media/dbg-tour-run-to-click.png "RunToClick").
+
+    Using this button is similar to setting a temporary breakpoint. **Run to Click** is handy for getting around quickly within a visible region of app code (you can click in any open file).
+
+    The debugger advances to the `Update` method implementation.
+
+7. Press F11 to step into the `Update` method.
+
+     ![Result of stepping into the Update method](../debugger/media/dbg-tour-update-method.png "Step Into Update Method")
+
+    Here, we find some more code that looks interesting; the app is getting all *.jpg files residing in a particular directory, and then creating a Photo object for each file. This code gives us a good opportunity to start inspecting your app state (variables) with the debugger.
+
+    Features that allow you to inspect variables are one of the most useful features of the debugger, and there are different ways to do it. Often, when you try to debug an issue, you are attempting to find out whether variables are storing the values that you expect them to have at a particular time.
+
+## <a name="inspect-variables-with-data-tips"></a>Inspect variables with data tips
+
+1. To pause the debugger on the `Add` method call, hover over the `Add` method call and click the **Run to Click** button ![Run to Click](../debugger/media/dbg-tour-run-to-click.png "RunToClick").
+
+2. Now, hover over the File object (`f`) and you see its default property value, the file name `market 031.jpg`.
+
+     ![View a data tip](../debugger/media/dbg-tour-data-tips.gif "View a Data Tip")
+
+3. Expand the object to see all its properties, such as the `FullPath` property.
+
+    Often, when debugging, you want a quick way to check property values on objects, and the data tips are a good way to do it.
+
+    > [!TIP]
+    > In most supported languages, you can edit code in the middle of a debugger session if you find something you want to change. For more info, see [Edit and Continue](../debugger/edit-and-continue.md). To use that feature in this app, however, we would first need to update the app's version of the .NET Framework.
+
+## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Inspect variables with the Autos and Locals windows
+
+1. Look at the **Autos** window at the bottom of the code editor.
+
+     ![Inspect variables in the Autos Window](../debugger/media/dbg-tour-autos-window.png "Autos Window")
+
+    In the **Autos** window, you see variables and their current value. The **Autos** window shows all variables used on the current line or the preceding line (In C++, the window shows variables in the preceding three lines of code. Check documentation for language-specific behavior).
+
+    > [!NOTE]
+    > In JavaScript, the **Locals** window is supported but not the **Autos** window.
+
+2. Next, look at the **Locals** window.
+
+    The **Locals** window shows you the variables that are in the current scope.
+
+    ![Inspect variables in the Locals Window](../debugger/media/dbg-tour-locals-window.png "Locals Window")
+
+    Currently, the `this` object and the File object (`f`) are in the current scope. For more info, see [Inspect Variables in the Autos and Locals Windows](../debugger/autos-and-locals-windows.md).
+
+## <a name="set-a-watch"></a>Set a watch
+
+1. In the main code editor window, right-click the File object (`f`) and choose **Add Watch**.
+
+    You can use a **Watch** window to specify a variable (or an expression) that you want to keep an eye on.
+
+    Now, you have a watch set on the `File` object, and you can see its value change as you move through the debugger. Unlike the other variable windows, the **Watch** window always shows the variables that you are watching (they're grayed out when out of scope).
+
+2. On the `Add` method, click the green ![Run to Click](../debugger/media/dbg-tour-run-to-click.png "RunToClick") button again (or press F11 a few times) to advance through the `foreach` loop.
+
+    ![Set a watch on a variable](../debugger/media/dbg-tour-watch-window.png "Watch Window")
+
+    You might also see the first picture get added to the main window of the running sample app, but this happens on a different app thread, so images may not be visible yet.
+
+    For more info, see [Set a Watch using the Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md)
+
+## <a name="examine-the-call-stack"></a>Examine the call stack
+
+1. Click the **Call Stack** window, which is by default open in the lower right pane.
+
+     ![Examine the call stack](../debugger/media/dbg-tour-call-stack.png "ExamineCallStack")
+
+    The **Call Stack** window shows the order in which methods and functions are getting called. The top line shows the current function (the `Update` method in the tour app). The second line shows that `Update` was called from the `Path.set` property, and so on.
+
+    >  [!NOTE]
+    > The **Call Stack** window is similar to the Debug perspective in some IDEs like Eclipse.
+
+    The call stack is a good way to examine and understand the execution flow of an app.
+
+    You can double-click a line of code to go look at that source code and that also changes the current scope being inspected by the debugger. This action does not advance the debugger.
+
+    You can also use right-click menus from the **Call Stack** window to do other things. For example, you can insert breakpoints into specified functions, advance the debugger using **Run to Cursor**, and go examine source code. For more information, see [How to: Examine the Call Stack](../debugger/how-to-use-the-call-stack-window.md).
+
+## <a name="change-the-execution-flow"></a>Change the execution flow
+
+1. With the debugger paused on the `Add` method call, use the mouse to grab the yellow arrow (the execution pointer) on the left and move the yellow arrow up one line to the `foreach` loop.
+
+     ![Move the execution pointer](../debugger/media/dbg-tour-move-the-execution-pointer.gif "Move the Execution Pointer")
+
+    By changing the execution flow, you can do things like test different code execution paths or rerun code without restarting the debugger.
+
+2. Now, press F5.
+
+    You can see the images added to the app window. Because you are rerunning code in the `foreach` loop, some of the images have been added twice!
+    
+    > [!WARNING]
+    > Often you need to be careful with this feature, and you see a warning in the tooltip. You may see other warnings, too. Moving the pointer cannot revert your application to an earlier app state.
+
+## <a name="run-to-cursor"></a>Run to cursor
+
+1. Choose the **Stop Debugging** red button ![Stop Debugging](../debugger/media/dbg-tour-stop-debugging.png "Stop Debugging") or Shift + F5.
+
+2. In the `Update` method, right-click the `Add` method call and choose **Run to Cursor**. This command starts debugging and sets a temporary breakpoint on the current line of code.
+
+     ![Use the Run to Cursor feature](../debugger/media/dbg-tour-run-to-cursor.png "Run to Cursor")
+
+    You should be paused on the breakpoint in `MainWindow` (since that is the first breakpoint.
+
+3. Press F5 to advance to the `Add` method where you selected **Run to Cursor**.
+
+    This command is useful when you are editing code and want to quickly set a temporary breakpoint and start the debugger.
+
+## <a name="step-out"></a>Step out
+
+Let's say that you are done examining the `Update` method in Data.cs, and you want to get out of the function but stay in the debugger. You can do this using the **Step Out** command.
+
+1. Press Shift + F11 (or **Debug > Step Out**).
+
+     This command resumes app execution (and advances the debugger) until the current function returns.
+
+     You should be back in the `Update` method call in Data.cs.
+
+2. Press Shift + F11 again, and the debugger goes up the call stack back to the `OnApplicationStartup` event handler.
+
+3. Press F5 to continue.
+
+## <a name="examine-an-exception"></a>Examine an exception
+
+1. In the running app window, delete the text in the **Path** input box and select the **Change** button.
+
+     ![Cause an exception to be thrown](../debugger/media/dbg-tour-cause-an-exception.png "Cause an Exception")
+
+     The app throws an exception, and the debugger takes you to the line of code that threw the exception.
+     
+     ![Exception Helper](../debugger/media/dbg-tour-exception-helper.png "Exception Helper")
+
+     Here, the **Exception Helper** shows you a `System.ArgumentException` and an error message that says that the path is not a legal form. So, we know the error occurred on a method or function argument.
+
+     In this example, the `DirectoryInfo` call gave the error on the empty string stored in the `value` variable. (Hover over `value` to see the empty string.)
+
+     The Exception Helper is a great feature that can help you debug errors. You can also do things like view error details and add a watch from the Exception Helper. Or, if needed, you can change conditions for throwing the particular exception.
+
+    >  [!NOTE] 
+    > The Exception Helper replaces the Exception Assistant in [!include[vs_dev15](../misc/includes/vs_dev15_md.md)].
+
+2. Expand the **Exception Settings** node to see more options on how to handle this exception type, but you don't need to change anything for this tour!
+
+3. Press F5 to continue the app.
+
+To learn more about the features of the debugger, see [Debugger Tips and Tricks](../debugger/debugger-tips-and-tricks.md).
+
+## <a name="video"></a> Watch a video on debugging
+
+<div style="padding-top: 56.25%; position: relative; width: 100%;">
+<iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171" frameborder="0" allowfullscreen></iframe>
+</div>
+
+## <a name="see-also"></a>See Also  
+ [Debugging in Visual Studio](../debugger/index.md) [Debugger Feature Tour](../debugger/debugger-feature-tour.md)
+

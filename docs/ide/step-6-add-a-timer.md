@@ -1,5 +1,5 @@
 ---
-title: "6단계: 타이머 추가 | Microsoft Docs"
+title: 'Step 6: Add a Timer | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,51 +27,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 996ec0a9fa601517993cb6049a114796c36489fe
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0ab82e9962871d6dd5da724a7a72677c387e9a53
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="step-6-add-a-timer"></a>6단계: 타이머 추가
-다음에는 일치 게임에 **Timer** 컨트롤을 추가합니다. 타이머는 지정한 시간(밀리초)을 대기한 뒤 *틱*이라고 하는 이벤트를 발생시킵니다. 이 방법은 작업을 시작하거나 작업을 정기적으로 반복하는 데 유용합니다. 이 경우 타이머를 사용하여 플레이어가 두 개의 아이콘을 선택할 수 있도록 하고 아이콘이 서로 일치하지 않을 경우 잠시 후 다시 두 개의 아이콘을 숨깁니다.  
+# <a name="step-6-add-a-timer"></a>Step 6: Add a Timer
+Next, you add a **Timer** control to the matching game. A timer waits a specified number of milliseconds, and then fires an event, referred to as a *tick*. This is useful for starting an action, or repeating an action on a regular basis. In this case, you'll use a timer to enable players to choose two icons, and if the icons don't match, hide the two icons again after a short period of time.  
   
-### <a name="to-add-a-timer"></a>타이머를 추가하려면  
+### <a name="to-add-a-timer"></a>To add a timer  
   
-1.  Windows Forms 디자이너의 도구 상자에서 **구성 요소** 범주의 **Timer**를 선택한 다음 Enter 키를 선택하거나 타이머를 두 번 클릭하여 타이머 컨트롤을 폼에 추가합니다. **Timer1**이라고 하는 타이머의 아이콘이 다음 그림과 같이 폼 아래 공간에 나타납니다.  
+1.  From the toolbox in Windows Forms Designer, choose **Timer** (in the **Components** category) and then choose the ENTER key, or double-click the timer to add a timer control to the form. The timer's icon, called **Timer1**, should appear in a space below the form, as shown in the following picture.  
   
-     ![Timer](~/ide/media/express_timer.png "Express_Timer")  
+     ![Timer](../ide/media/express_timer.png "Express_Timer")  
 Timer  
   
     > [!NOTE]
-    >  도구 상자가 비어 있는 경우 도구 상자를 열기 전에 폼 뒤쪽의 코드가 아닌 폼 디자이너를 선택했는지 확인하십시오.  
+    >  If the toolbox is empty, be sure to select the form designer, and not the code behind the form, before opening the toolbox.  
   
-2.  **Timer1** 아이콘을 선택하여 타이머를 선택합니다. **속성** 창에서 이벤트 보기에서 속성 보기로 전환합니다. 그런 다음 타이머의 **Interval** 속성은 **750**으로 설정하고 **Enabled** 속성은 **False**로 설정합니다. **Interval** 속성은 타이머의 *틱* 간 대기 시간이나 Tick 이벤트를 트리거하는 시점을 나타냅니다. 750이라는 값은 Tick 이벤트를 발생시키기 전에 타이머가 3/4초, 즉 750 밀리초를 대기함을 의미합니다. `Start()` 메서드를 호출하여 플레이어가 두 번째 레이블을 선택한 후에만 타이머가 시작되도록 합니다.  
+2.  Choose the **Timer1** icon to select the timer. In the **Properties** window, switch from viewing events to viewing properties. Then, set the timer's **Interval** property to **750**, but leave its **Enabled** property set to **False**. The **Interval** property tells the timer how long to wait between *ticks*, or when it triggers its Tick event. A value of 750 tells the timer to wait three quarters of a second (750 milliseconds) before it fires its Tick event. You'll call the `Start()` method to start the timer only after the player chooses the second label.  
   
-3.  Windows Forms 디자이너에서 타이머 컨트롤 아이콘을 선택한 다음 Enter 키를 선택하거나, 타이머를 두 번 클릭하여 빈 **Tick** 이벤트 처리기를 추가합니다. 또는 코드를 다음 코드로 바꾸거나 이벤트 처리기에 다음 코드를 수동으로 입력합니다.  
+3.  Choose the timer control icon in Windows Forms Designer and then choose the ENTER key, or double-click the timer, to add an empty **Tick** event handler. Either replace the code with the following code, or manually enter the following code into the event handler.  
   
-     [!code-cs[VbExpressTutorial4Step6#7](../ide/codesnippet/CSharp/step-6-add-a-timer_1.cs)]  [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]  
+     [!code-csharp[VbExpressTutorial4Step6#7](../ide/codesnippet/CSharp/step-6-add-a-timer_1.cs)]  [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]  
   
-     Tick 이벤트 처리기는 다음 세 가지 작업을 수행합니다. 첫 번째로 타이머는 `Stop()` 메서드를 호출하면 실행이 중지됩니다. 그런 다음 `firstClicked`와 `secondClicked`라는 두 개의 참조 변수를 사용하여 플레이어가 선택한 두 레이블의 아이콘이 다시 보이지 않도록 합니다. 마지막으로 `firstClicked` 및 `secondClicked` 참조 변수를 `null`(Visual C#의 경우)과 `Nothing`(Visual Basic의 경우)으로 다시 설정합니다. 이 단계는 프로그램 자체를 다시 설정하는 방식이기 때문에 중요합니다. 이제 `Label` 컨트롤이 추적되고 있지 않으며 플레이어는 레이블을 다시 선택할 수 있습니다.  
+     The Tick event handler does three things: First, it makes sure the timer isn't running by calling the `Stop()` method. Then it uses two reference variables, `firstClicked` and `secondClicked`, to make the icons of the two labels that the player chose invisible again. Finally, it resets the `firstClicked` and `secondClicked` reference variables to `null` in Visual C# and `Nothing` in Visual Basic. This step is important because it's how the program resets itself. Now it's not keeping track of any `Label` controls, and it's ready for the player to choose a label again.  
   
     > [!NOTE]
-    >  `Timer` 개체에는 타이머를 시작하는 `Start()` 메서드와 타이머를 중지하는 `Stop()` 메서드가 있습니다. **속성** 창에서 타이머의 **Enabled** 속성을 **True**로 설정하면 프로그램이 시작되는 즉시 타이머에서 틱이 시작됩니다. 그러나 이 속성을 **False**로 설정하면 `Start()` 메서드가 호출될 때까지 틱을 시작하지 않습니다. 일반적으로 타이머는 틱 사이의 밀리초를 결정하는 **Interval** 속성을 사용하여 Tick 이벤트를 반복적으로 발생시킵니다. 이 경우에 Tick 이벤트 내에서 타이머의 `Stop()` 메서드가 호출되는 방식을 살펴보면 타이머가 *일회 모드*로 설정되고, 그에 따라 `Start()` 메서드가 호출되면 지정한 간격만큼 기다렸다가 단일 Tick 이벤트를 트리거한 뒤 중지됩니다.  
+    >  A `Timer` object has a `Start()` method that starts the timer, and a `Stop()` method that stops it. When you set the timer's **Enabled** property to **True** in the **Properties** window, it starts ticking as soon as the program begins. But when you leave it set to **False**, it doesn't start ticking until its `Start()` method is called. Normally, a timer fires its Tick event over and over again, using the **Interval** property to determine how many milliseconds to wait between ticks. You may have noticed how the timer's `Stop()` method is called inside the Tick event. That puts the timer into *one shot mode*, meaning that when the `Start()` method is called, it waits for the specified interval, triggers a single Tick event, and then stops.  
   
-4.  새 타이머의 동작을 보려면 코드 편집기로 이동하여 다음 코드를 `label_Click()` 이벤트 처리기 메서드의 위쪽과 아래쪽에 추가합니다. `if` 문을 위쪽에 추가하고 세 개의 문을 아래쪽에 추가하며 메서드의 나머지 부분은 그대로 유지됩니다.  
+4.  To see the new timer in action, go to the code editor and add the following code to the top and bottom of the `label_Click()` event handler method. (You're adding an `if` statement to the top, and three statements to the bottom; the rest of the method stays the same.)  
   
-     [!code-cs[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]  [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]  
+     [!code-csharp[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]  [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]  
   
-     메서드 위쪽의 코드는 **Enabled** 속성 값을 검사하여 타이머가 시작되었는지 여부를 확인합니다. 그러면 플레이어가 첫 번째 및 두 번째 `Label` 컨트롤을 선택하고 타이머가 시작되는 경우 세 번째 레이블을 선택해도 아무것도 수행되지 않습니다.  
+     The code at the top of the method checks whether the timer was started by checking the value of the **Enabled** property. That way, if the player chooses the first and second `Label` controls and the timer starts, choosing a third label won't do anything.  
   
-     메서드 아래쪽의 코드는 플레이어가 선태한 두 번째 `Label` 컨트롤을 추적하도록 `secondClicked` 참조 변수를 설정한 다음 레이블의 아이콘 색을 검정으로 설정하여 표시합니다. 그런 다음 750밀리초 동안 기다린 후 단일 Tick 이벤트를 발생시키도록 일회 모드에서 타이머를 시작합니다. 그러면 타이머의 Tick 이벤트 처리기는 두 아이콘을 숨기고 `firstClicked` 및 `secondClicked` 참조 변수를 다시 설정하므로 폼에서 플레이어가 다른 아이콘 쌍을 선택할 수 있습니다.  
+     The code at the bottom of the method sets the `secondClicked` reference variable to track the second `Label` control that the player chose, and then it sets that label's icon color to black to make it visible. Then, it starts the timer in one shot mode, so that it waits 750 milliseconds and then fires a single Tick event. The timer's Tick event handler hides the two icons and resets the `firstClicked` and `secondClicked` reference variables so the form is ready for the player to choose another pair of icons.  
   
-5.  프로그램을 저장하고 실행합니다. 아이콘을 선택하면 표시됩니다.  
+5.  Save and run your program. Choose an icon, and it becomes visible.  
   
-6.  다른 아이콘을 선택합니다. 그러면 해당 아이콘이 잠깐 나타났다가 두 아이콘이 모두 사라집니다. 이 작업을 여러 번 반복하십시오. 이제 폼에서 사용자가 선택하는 첫 번째 아이콘과 두 번째 아이콘을 추적하고, 아이콘이 사라지기 전에 타이머를 사용하여 일시 중지시킵니다.  
+6.  Choose another icon. It appears briefly, and then both icons disappear. Repeat this numerous times. The form now keeps track of the first and second icons that you choose, and uses the timer to pause before making the icons disappear.  
   
-### <a name="to-continue-or-review"></a>계속하거나 검토하려면  
+### <a name="to-continue-or-review"></a>To continue or review  
   
--   다음 자습서 단계로 이동하려면 [7단계: 쌍 표시](../ide/step-7-keep-pairs-visible.md)를 참조하세요.  
+-   To go to the next tutorial step, see [Step 7: Keep Pairs Visible](../ide/step-7-keep-pairs-visible.md).  
   
--   이전 자습서 단계로 돌아가려면 [5단계: 레이블 참조 추가](../ide/step-5-add-label-references.md)를 참조하세요.
+-   To return to the previous tutorial step, see [Step 5: Add Label References](../ide/step-5-add-label-references.md).

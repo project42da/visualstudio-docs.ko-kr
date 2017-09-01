@@ -1,174 +1,176 @@
 ---
-title: "연습: 리본 디자이너를 사용하여 사용자 지정 탭 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "작업 창[Visual Studio에서 Office 개발], 리본 메뉴에서 제어"
-  - "사용자 지정 리본, 탭"
-  - "사용자 지정 탭[Visual Studio에서 Office 개발]"
-  - "리본 메뉴 사용자 지정, 탭"
-  - "리본[Visual Studio에서 Office 개발], 사용자 지정"
-  - "리본 디자이너[Visual Studio에서 Office 개발]"
+title: 'Walkthrough: Creating a Custom Tab by Using the Ribbon Designer | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- actions panes [Office development in Visual Studio], controlling from Ribbon
+- Ribbon [Office development in Visual Studio], customizing
+- Ribbon Designer [Office development in Visual Studio]
+- customizing the Ribbon, tabs
+- custom Ribbon, tabs
+- Custom tab [Office development in Visual Studio]
 ms.assetid: 312865e6-950f-46ab-88de-fe7eb8036bfe
 caps.latest.revision: 68
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 67
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: f3de58256e8c533b7cd092d056c785c7ad6b60b6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 리본 디자이너를 사용하여 사용자 지정 탭 만들기
-  리본 디자이너를 사용하여 사용자 지정 탭을 만들고 이 탭에 컨트롤을 추가 및 배치할 수 있습니다.  
+# <a name="walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer"></a>Walkthrough: Creating a Custom Tab by Using the Ribbon Designer
+  By using the Ribbon Designer, you can create a custom tab and then add and position controls on it.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   [작업 창 만들기](#BKMK_CreateActionsPanes)  
+-   [Creating Actions Panes](#BKMK_CreateActionsPanes).  
   
--   [사용자 지정 탭 만들기](#BKMK_CreateCustomTab)  
+-   [Creating a Custom Tab](#BKMK_CreateCustomTab).  
   
--   [사용자 지정 탭의 단추를 사용하여 작업 창 숨기기 및 표시](#BKMK_HideShowActionsPane)  
+-   [Hiding and Showing Actions Panes by Using Buttons on the Custom Tab](#BKMK_HideShowActionsPane).  
   
 > [!NOTE]  
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다.  이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Microsoft Excel  
   
-## Excel 통합 문서 프로젝트 만들기  
- 리본 디자이너를 사용하는 단계는 모든 Office 응용 프로그램에서 거의 동일합니다.  이 예제에서는 Excel 통합 문서를 사용합니다.  
+## <a name="creating-an-excel-workbook-project"></a>Creating an Excel Workbook Project  
+ The steps for using the Ribbon Designer are almost identical for all Office applications. This example uses an Excel workbook.  
   
-#### Excel 통합 문서 프로젝트를 만들려면  
+#### <a name="to-create-an-excel-workbook-project"></a>To create an Excel workbook project  
   
--   MyExcelRibbon이라는 Excel 통합 문서 프로젝트를 만듭니다.  자세한 내용은 [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)를 참조하세요.  
+-   Create an Excel workbook project with the name **MyExcelRibbon**. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Visual Studio의 디자이너에 새 통합 문서가 열리고 **MyExcelRibbon** 프로젝트가 **솔루션 탐색기**에 추가됩니다.  
+     Visual Studio opens the new workbook in the designer and adds the **MyExcelRibbon** project to **Solution Explorer**.  
   
-##  <a name="BKMK_CreateActionsPanes"></a> 작업 창 만들기  
- 프로젝트에 두 개의 사용자 지정 작업 창을 추가합니다.  나중에 이러한 작업 창을 표시하거나 숨기는 단추를 사용자 지정 탭에 추가합니다.  
+##  <a name="BKMK_CreateActionsPanes"></a> Creating Actions Panes  
+ Add two custom actions panes to the project. You will later add buttons that show and hide these actions panes to the custom tab.  
   
-#### 작업 창을 만들려면  
+#### <a name="to-create-actions-panes"></a>To create actions panes  
   
-1.  **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+1.  On the **Project** menu, choose **Add New Item**.  
   
-2.  **새 항목 추가** 대화 상자에서 **ActionsPaneControl**을 선택한 다음 **추가**를 선택합니다.  
+2.  In the **Add New Item** dialog box, select **ActionsPaneControl**, and then choose **Add**.  
   
-     **ActionsPaneControl1.cs** 또는 **ActionsPaneControl1.vb** 파일이 디자이너에서 열립니다.  
+     The **ActionsPaneControl1.cs** or **ActionsPaneControl1.vb** file opens in the designer.  
   
-3.  **도구 상자**의 **공용 컨트롤** 탭에서 디자이너 화면에 레이블을 추가합니다.  
+3.  From the **Common Controls** tab of the **Toolbox**, add a label to the designer surface.  
   
-4.  **속성** 창에서 label1의 **Text** 속성을 Actions Pane 1로 설정합니다.  
+4.  In the **Properties** window, set the **Text** property of label1 to **Actions Pane 1**.  
   
-5.  1\-5단계를 반복하여 두 번째 작업 창 및 레이블을 만듭니다.  두 번째 레이블의 **Text** 속성을 Actions Pane 2로 설정합니다.  
+5.  Repeat steps 1 through 5 to create a second actions pane and label. Set the **Text** property of the second label to **Actions Pane 2**.  
   
-##  <a name="BKMK_CreateCustomTab"></a> 사용자 지정 탭 만들기  
- Office 응용 프로그램의 디자인 지침 중 하나는 사용자가 항상 Office 응용 프로그램 UI를 제어할 수 있어야 한다는 것입니다.  작업 창에 대해 이 기능을 추가하려면 리본 메뉴의 사용자 지정 탭에서 각 작업 창을 표시하거나 숨기는 단추를 추가합니다.  사용자 지정 탭을 만들려면 프로젝트에 **리본\(비주얼 디자이너\)** 항목을 추가합니다.  이 디자이너는 컨트롤을 추가 및 배치하고, 컨트롤 속성을 설정하고, 컨트롤 이벤트를 처리하는 데 유용합니다.  
+##  <a name="BKMK_CreateCustomTab"></a> Creating a Custom Tab  
+ One of the Office application design guidelines is that users should always have control of the Office application UI. To add this capability for the actions panes, you can add buttons that show and hide each actions pane from a custom tab on the ribbon. To create a custom tab, add a **Ribbon (Visual Designer)** item to the project. The designer helps you add and position controls, set control properties, and handle control events.  
   
-#### 사용자 지정 탭을 만들려면  
+#### <a name="to-create-a-custom-tab"></a>To create a custom tab  
   
-1.  **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+1.  On the **Project** menu, choose **Add New Item**.  
   
-2.  **새 항목 추가** 대화 상자에서 **리본\(비주얼 디자이너\)**을 선택합니다.  
+2.  In the **Add New Item** dialog box, select **Ribbon (Visual Designer)**.  
   
-3.  새 리본 메뉴의 이름을 **MyRibbon**으로 변경하고 **추가**를 선택합니다.  
+3.  Change the name of the new ribbon to **MyRibbon**, and choose **Add**.  
   
-     **MyRibbon.cs** 또는 **MyRibbon.vb** 파일이 리본 디자이너에서 열리고 기본 탭 및 그룹이 표시됩니다.  
+     The **MyRibbon.cs** or **MyRibbon.vb** file opens in the Ribbon Designer and displays a default tab and group.  
   
-4.  리본 디자이너에서 기본 탭을 선택합니다.  
+4.  In the Ribbon Designer, choose the default tab.  
   
-5.  **속성** 창에서 **ControlId** 속성을 확장하고 **ControlIdType** 속성을 **Custom**으로 설정합니다.  
+5.  In the **Properties** window, expand the **ControlId** property, and then set the **ControlIdType** property to **Custom**.  
   
-6.  **Label** 속성을 My Custom Tab으로 설정합니다.  
+6.  Set the **Label** property to **My Custom Tab**.  
   
-7.  리본 디자이너에서 **group1**을 선택합니다.  
+7.  In the Ribbon Designer, choose **group1**.  
   
-8.  **속성** 창에서 **Label**을 Actions Pane Manager로 설정합니다.  
+8.  In the **Properties** window, set **Label** to **Actions Pane Manager**.  
   
-9. **도구 상자**의 **Office 리본 컨트롤** 탭에 있는 단추를 **group1**로 끌어옵니다.  
+9. From the **Office Ribbon Controls** tab of the **Toolbox**, drag a button onto **group1**.  
   
-10. **button1**을 선택합니다.  
+10. Select **button1**.  
   
-11. **속성** 창에서 **Label**을 Show Actions Pane 1로 설정합니다.  
+11. In the **Properties** window, set **Label** to **Show Actions Pane 1**.  
   
-12. **group1**에 두 번째 단추를 추가하고 **Label** 속성을 Show Actions Pane 2로 설정합니다.  
+12. Add a second button to **group1**, and set the **Label** property to **Show Actions Pane 2**.  
   
-13. **도구 상자**의 **Office 리본 컨트롤** 탭에서 **ToggleButton** 컨트롤을 **group1**로 끌어 옵니다.  
+13. From the **Office Ribbon Controls** tab of the **Toolbox**, drag a **ToggleButton** control onto **group1**.  
   
-14. **Label** 속성을 Hide Actions Pane으로 설정합니다.  
+14. Set the **Label** property to **Hide Actions Pane**.  
   
-##  <a name="BKMK_HideShowActionsPane"></a> 사용자 지정 탭의 단추를 사용하여 작업 창 숨기기 및 표시  
- 마지막 단계는 사용자에게 응답하는 코드를 추가하는 것입니다.  두 단추의 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> 이벤트와 설정\/해제 단추의 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> 이벤트에 대한 이벤트 처리기를 추가합니다.  이러한 이벤트 처리기에 작업 창을 숨기거나 표시할 수 있는 코드를 추가합니다.  
+##  <a name="BKMK_HideShowActionsPane"></a> Hiding and Showing Actions Panes by Using Buttons on the Custom Tab  
+ The last step is to add code that responds to the user. Add event handlers for the <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> events of the two buttons and the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> event of the toggle button. Add code to these event handlers to enable hiding and showing the actions panes.  
   
-#### 사용자 지정 탭의 단추를 사용하여 작업 창을 숨기거나 표시하려면  
+#### <a name="to-hide-and-show-actions-panes-by-using-buttons-in-the-custom-tab"></a>To hide and show actions panes by using buttons in the custom tab  
   
-1.  **솔루션 탐색기**에서 MyRibbon.cs 또는 MyRibbon.vb의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.  
+1.  In **Solution Explorer**, open the shortcut menu for MyRibbon.cs or MyRibbon.vb, and then choose **View Code**.  
   
-2.  다음 코드를 `MyRibbon` 클래스의 맨 위에 추가합니다.  이 코드는 두 개의 작업 창 개체를 만듭니다.  
+2.  Add the following code to the top of the `MyRibbon` class. This code creates two actions pane objects.  
   
-     [!code-csharp[Trin_Ribbon_Custom_Tab#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab/CS/MyRibbon.cs#1)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab/VB/MyRibbon.vb#1)]  
+     [!code-csharp[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#1)]  [!code-vb[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#1)]  
   
-3.  `MyRibbon_Load` 메서드를 다음 코드로 바꿉니다.  이 코드는 <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> 컬렉션에 작업 창 개체를 추가하고 뷰에서 해당 개체를 숨깁니다.  또한 Visual C\# 코드는 여러 리본 컨트롤 이벤트에 대리자를 연결합니다.  
+3.  Replace the `MyRibbon_Load` method with the following code. This code adds the actions pane objects to the <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> collection and hides the objects from view. The Visual C# code also attaches delegates to several ribbon control events.  
   
-     [!code-csharp[Trin_Ribbon_Custom_Tab#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab/CS/MyRibbon.cs#2)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab/VB/MyRibbon.vb#2)]  
+     [!code-csharp[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#2)]  [!code-vb[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#2)]  
   
-4.  `MyRibbon` 클래스에 다음 세 개의 이벤트 처리기 메서드를 추가합니다.  이러한 메서드는 두 단추의 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> 이벤트와 설정\/해제 단추의 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> 이벤트를 처리합니다.  button1 및 button2에 대한 이벤트 처리기는 대체 작업 창을 표시합니다.  toggleButton1에 대한 이벤트 처리기는 활성 작업 창을 표시하거나 숨깁니다.  
+4.  Add the following three event handler methods to the `MyRibbon` class. These methods handle the <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> events of the two buttons and the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> event of the toggle button. The event handlers for button1 and button2 show alternate actions panes. The event handler for toggleButton1 shows and hides the active actions pane.  
   
-     [!code-csharp[Trin_Ribbon_Custom_Tab#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab/CS/MyRibbon.cs#3)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab/VB/MyRibbon.vb#3)]  
+     [!code-csharp[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#3)]  [!code-vb[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#3)]  
   
-## 사용자 지정 탭 테스트  
- 프로젝트를 실행하면 Excel이 시작되고 리본 메뉴에 **My Custom Tab** 탭이 표시됩니다.  **My Custom Tab**의 단추를 선택하여 작업 창을 표시하거나 숨깁니다.  
+## <a name="testing-the-custom-tab"></a>Testing the Custom Tab  
+ When you run the project, Excel starts, and the **My Custom Tab** tab appears on the ribbon. Choose the buttons on **My Custom Tab** to show and hide the actions panes.  
   
-#### 사용자 지정 탭을 테스트하려면  
+#### <a name="to-test-the-custom-tab"></a>To test the custom tab  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  Press F5 to run your project.  
   
-2.  **My Custom Tab** 탭을 선택합니다.  
+2.  Choose the **My Custom Tab** tab.  
   
-3.  **Custom Actions Pane Manager** 그룹에서 **Show Actions Pane 1**을 선택합니다.  
+3.  In the **Custom Actions Pane Manager** group, choose **Show Actions Pane 1**.  
   
-     작업 창이 나타나고 Actions Pane 1이라는 레이블이 표시됩니다.  
+     The actions pane appears and displays the label **Actions Pane 1**.  
   
-4.  **Show Actions Pane 2**를 선택합니다.  
+4.  Choose **Show Actions Pane 2**.  
   
-     작업 창이 나타나고 Actions Pane 2라는 레이블이 표시됩니다.  
+     The actions pane appears and displays the label **Actions Pane 2**.  
   
-5.  **Hide Actions Pane**을 선택합니다.  
+5.  Choose **Hide Actions Pane**.  
   
-     작업 창이 더 이상 표시되지 않습니다.  
+     The actions panes are no longer visible.  
   
-## 다음 단계  
- 다음 항목에서는 Office UI를 사용자 지정하는 방법에 대해 더 자세히 설명합니다.  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to customize the Office UI from these topics:  
   
--   문서 수준 사용자 지정에 컨텍스트 기반 UI를 추가합니다.  자세한 내용은 [작업 창 개요](../vsto/actions-pane-overview.md)를 참조하세요.  
+-   Add context-based UI to any document-level customization. For more information, see [Actions Pane Overview](../vsto/actions-pane-overview.md).  
   
--   표준 또는 사용자 지정 Microsoft Office Outlook 양식을 확장합니다.  자세한 내용은 [연습: Outlook 양식 영역 디자인](../vsto/walkthrough-designing-an-outlook-form-region.md)를 참조하세요.  
+-   Extend a standard or custom Microsoft Office Outlook form. For more information, see [Walkthrough: Designing an Outlook Form Region](../vsto/walkthrough-designing-an-outlook-form-region.md).  
   
-## 참고 항목  
- [런타임에 리본 메뉴에 액세스](../vsto/accessing-the-ribbon-at-run-time.md)   
- [리본 개요](../vsto/ribbon-overview.md)   
- [리본 디자이너](../vsto/ribbon-designer.md)   
- [Outlook에 대해 리본 메뉴 사용자 지정](../vsto/customizing-a-ribbon-for-outlook.md)   
- [방법: 리본 메뉴 사용자 지정 시작](../vsto/how-to-get-started-customizing-the-ribbon.md)   
- [방법: 리본의 탭 위치 변경](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
- [방법: 기본 제공 탭 사용자 지정](../vsto/how-to-customize-a-built-in-tab.md)   
- [방법: Backstage 보기에 컨트롤 추가](../vsto/how-to-add-controls-to-the-backstage-view.md)   
- [리본 개체 모델 개요](../vsto/ribbon-object-model-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
+ [Ribbon Overview](../vsto/ribbon-overview.md)   
+ [Ribbon Designer](../vsto/ribbon-designer.md)   
+ [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md)   
+ [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md)   
+ [How to: Change the Position of a Tab on the Ribbon](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
+ [How to: Customize a Built-in Tab](../vsto/how-to-customize-a-built-in-tab.md)   
+ [How to: Add Controls to the Backstage View](../vsto/how-to-add-controls-to-the-backstage-view.md)   
+ [Ribbon Object Model Overview](../vsto/ribbon-object-model-overview.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "자동화 모델을 사용 하 여 | Microsoft 문서"
+title: Using the Automation Model | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,26 +28,27 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 5655168e868e34befe83521a17b124c58be816b7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 82a9c2068bdd3e234bcc53ffa870ca289289d690
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="using-the-automation-model"></a>자동화 모델을 사용 하 여
-속성 및 메서드를 호출 하 여 얻을 수 VSPackage 자동화에 연결한 후는 <xref:EnvDTE.DTEClass.GetObject%2A>메서드는 <xref:EnvDTE._DTE>개체를 검색 하려면 개체를 나타내는 문자열을 전달 합니다.</xref:EnvDTE._DTE> </xref:EnvDTE.DTEClass.GetObject%2A>  
+# <a name="using-the-automation-model"></a>Using the Automation Model
+After you have connected your VSPackage to automation, you can obtain the properties and methods by calling the <xref:EnvDTE.DTEClass.GetObject%2A> method on the <xref:EnvDTE._DTE> object, passing a string representing the object you wish to retrieve.  
   
-## <a name="obtaining-project-objects"></a>프로젝트 개체 가져오기  
- 자동화 소비자 얻는 방법을 프로젝트 자동화 개체를 보여 주는 두 가지 코드 예제는 다음과 같습니다. DTE 개체를 가져오는 방법에 대 한 정보를 참조 하십시오. [하는 방법: DTE 및 DTE2 개체에 대 한 참조 가져오기](http://msdn.microsoft.com/Library/c92e3c8e-82e6-4a67-85da-e43c50ffd8e4)합니다.  
+## <a name="obtaining-project-objects"></a>Obtaining Project Objects  
+ The following are two code examples that show how an automation consumer obtains the project automation objects. For information about how to get the DTE object, see [How to: Get References to the DTE and DTE2 Objects](http://msdn.microsoft.com/Library/c92e3c8e-82e6-4a67-85da-e43c50ffd8e4).  
   
-```vb#  
+```vb  
 Sub DoAutomation()  
     Dim MyProjects As Projects  
     MyProjects = DTE.GetObject("AcmeProject")  
 End Sub  
 ```  
   
-```cpp#  
+```cpp  
 void DoAutomation(void)  
 {  
   CComQIPtr<Projects> pMyPkg; // Use an IDispatch-derived object type.  
@@ -60,11 +61,11 @@ void DoAutomation(void)
   
 ```  
   
- 이 시점에서 표준 프로젝트 개체 계층 구조 모델 아래로 이동 하려면 특정 VSPackage의 일부를 사용할 수 있습니다.  
+ At this point, you can use the standard project objects that are part of a specific VSPackage to move down the hierarchy model.  
   
- 다음 코드 예제에는 사용자 지정 프로젝트 형식의 속성은 사용자 지정 개체를 가져오는 방법을 보여 줍니다.:  
+ The following code example shows how to get a custom object that is a property of a custom project type.:  
   
-```vb#  
+```vb  
 Dim MyPrj As Project  
 Dim MyPrjItem As ProjectItem  
 Dim objMyObject as MyExtendedObject  
@@ -75,9 +76,9 @@ objMyObject = MyPrj.Object 'You call .Object to get to special Project
 objMyObject.MySpecialMethodOrProperty  
 ```  
   
- 모든 속성의 이름을 나열 하는 다음 코드는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 환경 **일반** 옵션에 **도구** 메뉴:  
+ The following code lists the names of all of the properties in the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] environment **General** option on the **Tools** menu:  
   
-```vb#  
+```vb  
 dim objDTE  
 dim objEnv  
 set objDTE = CreateObject("VisualStudio.DTE")  
@@ -88,5 +89,5 @@ Next
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:EnvDTE.DTEClass.GetObject%2A></xref:EnvDTE.DTEClass.GetObject%2A>
+## <a name="see-also"></a>See Also  
+ <xref:EnvDTE.DTEClass.GetObject%2A>

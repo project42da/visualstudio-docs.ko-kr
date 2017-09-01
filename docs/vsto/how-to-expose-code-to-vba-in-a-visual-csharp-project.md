@@ -1,55 +1,60 @@
 ---
-title: "방법: Visual C# 프로젝트에서 VBA로 코드 노출"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "문서 수준 사용자 지정[Visual Studio에서 Office 개발], 코드 노출"
-  - "VBA에 코드 노출"
-  - "VBA[Visual Studio에서 Office 개발], 문서 수준 사용자 지정의 코드 노출"
-  - "Visual C#[Visual Studio에서 Office 개발], VBA에 코드 노출"
+title: 'How to: Expose Code to VBA in a Visual C# Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Visual C# [Office development in Visual Studio], exposing code to VBA
+- VBA [Office development in Visual Studio], exposing code in document-level customizations
+- document-level customizations [Office development in Visual Studio], exposing code
+- exposing code to VBA
 ms.assetid: 56d5894b-4823-42f4-8c7e-d8739b859c52
 caps.latest.revision: 25
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 24
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4bac541696170363b92ce99270460a10e2f181d8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
+
 ---
-# 방법: Visual C# 프로젝트에서 VBA로 코드 노출
-  VBA\(Visual Basic for Applications\) 코드와 Visual C\# 코드가 서로 상호 작용하도록 VBA 코드에 Visual C\# 프로젝트의 코드를 노출할 수 있습니다.  
+# <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>How to: Expose Code to VBA in a Visual C# Project
+  You can expose code in a Visual C# project to Visual Basic for Applications (VBA) code if you want the two types of code to interact with each other.  
   
- Visual C\# 프로세스는 Visual Basic 프로세스와 다릅니다.  자세한 내용은 [방법: Visual Basic 프로젝트에서 VBA로 코드 노출](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)을 참조하십시오.  
+ The Visual C# process is different from the Visual Basic process. For more information, see [How to: Expose Code to VBA in a Visual Basic Project](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md).  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
-## Visual C\# 프로젝트에서 코드 노출  
- VBA 코드에서 Visual C\# 프로젝트의 코드를 호출할 수 있도록 하려면 해당 코드를 COM에 표시되도록 수정하고 디자이너에서 **ReferenceAssemblyFromVbaProject** 속성을 **True**로 설정합니다.  
+## <a name="exposing-code-in-a-visual-c-project"></a>Exposing Code in a Visual C# Project  
+ To enable VBA code to call code in a Visual C# project, modify the code so it is visible to COM, and then set the **ReferenceAssemblyFromVbaProject** property to **True** in the designer.  
   
- VBA에서 Visual C\# 프로젝트의 메서드를 호출하는 방법을 보여 주는 연습은 [연습: Visual C&#35; 프로젝트에서 VBA의 코드 호출](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)을 참조하십시오.  
+ For a walkthrough that demonstrates how to call a method in a Visual C# project from VBA, see [Walkthrough: Calling Code from VBA in a Visual C&#35; Project](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md).  
   
-#### Visual C\# 프로젝트에서 VBA로 코드를 노출하려면  
+#### <a name="to-expose-code-in-a-visual-c-project-to-vba"></a>To expose code in a Visual C# project to VBA  
   
-1.  매크로를 지원하는 Word 문서, Excel 통합 문서 또는 Excel 서식 파일을 기반으로 하며 VBA 코드가 이미 들어 있는 문서 수준 프로젝트를 열거나 만듭니다.  
+1.  Open or create a document-level project that is based on a Word document, Excel workbook, or Excel template that supports macros, and that already contains VBA code.  
   
-     매크로를 지원하는 문서 파일 형식에 대한 자세한 내용은 [VBA 및 문서 수준 사용자 지정 결합](../vsto/combining-vba-and-document-level-customizations.md)을 참조하십시오.  
+     For more information about the document file formats that support macros, see [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md).  
   
     > [!NOTE]  
-    >  이 기능은 Word 서식 파일 프로젝트에서 사용할 수 없습니다.  
+    >  This feature cannot be used in Word template projects.  
   
-2.  매크로를 사용할 수 있도록 설정하라는 메시지 없이 문서의 VBA 코드를 실행할 수 있는지 확인합니다.  Word 또는 Excel의 보안 센터 설정에서 신뢰할 수 있는 위치 목록에 Office 프로젝트의 위치를 추가하여 VBA 코드를 실행할 수 있는 것으로 신뢰할 수 있습니다.  
+2.  Ensure that VBA code in the document is allowed to run without prompting the user to enable macros. You can trust VBA code to run by adding the location of the Office project to the list of trusted locations in the Trust Center settings for Word or Excel.  
   
-3.  VBA로 노출하려는 멤버를 프로젝트의 public 클래스에 추가하고 새 멤버를 **public**으로 선언합니다.  
+3.  Add the member that you want to expose to VBA to a public class in your project, and declare the new member as **public**.  
   
-4.  VBA로 노출할 클래스에 다음 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 및 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 특성을 적용합니다.  이러한 특성을 적용하면 클래스 인터페이스를 생성하지 않고 클래스가 COM에 표시됩니다.  
+4.  Apply the following <xref:System.Runtime.InteropServices.ComVisibleAttribute> and <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attributes to the class that you are exposing to VBA. These attributes make the class visible to COM, but without generating a class interface.  
   
     ```csharp  
     [System.Runtime.InteropServices.ComVisible(true)]  
@@ -57,9 +62,9 @@ caps.handback.revision: 24
         System.Runtime.InteropServices.ClassInterfaceType.None)]  
     ```  
   
-5.  VBA로 노출할 클래스의 인스턴스를 반환하도록 프로젝트에 포함된 호스트 항목 클래스의 **GetAutomationObject** 메서드를 재정의합니다.  
+5.  Override the **GetAutomationObject** method of a host item class in your project to return an instance of the class that you are exposing to VBA:  
   
-    -   호스트 항목 클래스를 VBA로 노출하려면 이 클래스에 속해 있는 **GetAutomationObject** 메서드를 재정의하여 클래스의 현재 인스턴스가 반환되도록 합니다.  
+    -   If you are exposing a host item class to VBA, override the **GetAutomationObject** method that belongs to this class, and return the current instance of the class.  
   
         ```csharp  
         protected override object GetAutomationObject()  
@@ -68,7 +73,7 @@ caps.handback.revision: 24
         }  
         ```  
   
-    -   호스트 항목이 아닌 클래스를 VBA로 노출하려면 프로젝트에 포함된 호스트 항목의 **GetAutomationObject** 메서드를 재정의하여 호스트 항목이 아닌 클래스의 인스턴스가 반환되도록 합니다.  예를 들어 다음 코드에서는 `DocumentUtilities`라는 클래스를 VBA로 노출한다고 가정합니다.  
+    -   If you are exposing a class that is not a host item to VBA, override the **GetAutomationObject** method of any host item in your project, and return an instance of the non-host item class. For example, the following code assumes that you are exposing a class named `DocumentUtilities` to VBA.  
   
         ```csharp  
         protected override object GetAutomationObject()  
@@ -77,36 +82,36 @@ caps.handback.revision: 24
         }  
         ```  
   
-     호스트 항목에 대한 자세한 내용은 [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)를 참조하십시오.  
+     For more information about host items, see [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md).  
   
-6.  VBA로 노출할 클래스에서 인터페이스를 추출합니다.  **인터페이스 추출** 대화 상자에서 인터페이스 선언에 포함할 public 멤버를 선택합니다.  자세한 내용은 [Extract Interface Refactoring &#40;C&#35;&#41;](../csharp-ide/extract-interface-refactoring-csharp.md)을 참조하십시오.  
+6.  Extract an interface from the class that you are exposing to VBA. In the **Extract Interface** dialog box, select the public members that you want to include in the interface declaration. For more information, see [Extract Interface Refactoring &#40;C&#35;&#41;](/visualstudio/csharp-ide/extract-interface-refactoring-csharp).  
   
-7.  인터페이스 선언에 **public** 키워드를 추가합니다.  
+7.  Add the **public** keyword to the interface declaration.  
   
-8.  인터페이스에 다음 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 특성을 추가하여 COM에 인터페이스를 표시합니다.  
+8.  Make the interface visible to COM by adding the following <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute to the interface.  
   
     ```csharp  
     [System.Runtime.InteropServices.ComVisible(true)]  
     ```  
   
-9. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]의 디자이너에서 문서\(Word의 경우\) 또는 워크시트\(Excel의 경우\)를 엽니다.  
+9. Open the document (for Word) or worksheet (for Excel) in the designer in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-10. **속성** 창에서 **ReferenceAssemblyFromVbaProject** 속성을 선택하고 값을 **True**로 변경합니다.  
+10. In the **Properties** window, select the **ReferenceAssemblyFromVbaProject** property, and change the value to **True**.  
   
     > [!NOTE]  
-    >  통합 문서 또는 문서에 아직 VBA 코드가 없거나 문서의 VBA 코드가 실행할 수 있는 것으로 신뢰되지 않은 경우 **ReferenceAssemblyFromVbaProject** 속성을 **True**로 설정하면 오류 메시지가 표시됩니다.  이는 이 경우 Visual Studio에서 문서의 VBA 프로젝트를 수정할 수 없기 때문입니다.  
+    >  If the workbook or document does not already contain VBA code or if VBA code in the document is not trusted to run, you will receive an error message when you set the **ReferenceAssemblyFromVbaProject** property to **True**. This is because Visual Studio cannot modify the VBA project in the document in this situation.  
   
-11. 메시지가 표시되면 **확인**을 클릭합니다.  이 메시지는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 프로젝트를 실행할 때 통합 문서나 문서에 VBA 코드를 추가하면 다음에 프로젝트를 빌드할 때 VBA 코드를 잃게 된다는 것을 알려 줍니다.  빌드 출력 폴더의 문서는 프로젝트를 빌드할 때마다 덮어쓰여지기 때문입니다.  
+11. Click **OK** in the message that is displayed. This message reminds you that if you add VBA code to the workbook or document when running the project from [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], the VBA code will be lost the next time that you build the project. This is because the document in the build output folder is overwritten every time that you build the project.  
   
-     이 시점에서 Visual Studio는 VBA 프로젝트에서 어셈블리를 호출할 수 있도록 프로젝트를 구성합니다.  또한 VBA 프로젝트에 `GetManagedClass`라는 메서드를 추가됩니다.  VBA 프로젝트의 모든 위치에서 이 메서드를 호출하여 VBA로 노출된 클래스에 액세스할 수 있습니다.  
+     At this point, Visual Studio configures the project so that the VBA project can call into the assembly. Visual Studio also adds a method named `GetManagedClass` to the VBA project. You can call this method from anywhere in the VBA project to access the class that you exposed to VBA.  
   
-12. 프로젝트를 빌드합니다.  
+12. Build the project.  
   
-## 참고 항목  
- [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)   
- [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)   
- [VBA 및 문서 수준 사용자 지정 결합](../vsto/combining-vba-and-document-level-customizations.md)   
- [연습: Visual C&#35; 프로젝트에서 VBA의 코드 호출](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
- [방법: Visual Basic 프로젝트에서 VBA로 코드 노출](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)  
+## <a name="see-also"></a>See Also  
+ [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)   
+ [Designing and Creating Office Solutions](../vsto/designing-and-creating-office-solutions.md)   
+ [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
+ [Walkthrough: Calling Code from VBA in a Visual C&#35; Project](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
+ [How to: Expose Code to VBA in a Visual Basic Project](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)  
   
   

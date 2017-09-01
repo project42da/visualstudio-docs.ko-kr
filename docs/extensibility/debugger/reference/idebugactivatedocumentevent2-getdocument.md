@@ -1,50 +1,67 @@
 ---
-title: "IDebugActivateDocumentEvent2::GetDocument | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugActivateDocumentEvent2::GetDocument"
-helpviewer_keywords: 
-  - "GetDocument 메서드"
-  - "IDebugActivateDocumentEvent2::GetDocument 메서드"
+title: IDebugActivateDocumentEvent2::GetDocument | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugActivateDocumentEvent2::GetDocument
+helpviewer_keywords:
+- GetDocument method
+- IDebugActivateDocumentEvent2::GetDocument method
 ms.assetid: b3c32f1b-f3de-409d-920d-ba7b3fa84fcd
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugActivateDocumentEvent2::GetDocument
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3d2df4b83030e71030ac84df52e9bf998ba554ec
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-활성화 하 여 문서를 가져옵니다.  
+---
+# <a name="idebugactivatedocumentevent2getdocument"></a>IDebugActivateDocumentEvent2::GetDocument
+Gets the document to activate.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetDocument (   
-   IDebugDocument2** ppDoc  
+```cpp  
+HRESULT GetDocument (   
+   IDebugDocument2** ppDoc  
 );  
 ```  
   
-```c#  
-int GetDocument (   
-   out IDebugDocument2 ppDoc  
+```csharp  
+int GetDocument (   
+   out IDebugDocument2 ppDoc  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppDoc`  
- \[out\] 반환 된 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) 활성화 될 수 있는 문서를 나타내는 개체입니다.  
+ [out] Returns an [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) object that represents the document to be activated.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugActivateDocumentEvent2](../../../extensibility/debugger/reference/idebugactivatedocumentevent2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

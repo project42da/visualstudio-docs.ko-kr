@@ -1,41 +1,58 @@
 ---
-title: "하위 메뉴에 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "상황에 맞는 메뉴"
-  - "하위 메뉴, 연계"
-  - "연계 하위 메뉴"
-  - "메뉴, 연계 하위 메뉴 만들기"
+title: Adding a Submenu to a Menu | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- context menus
+- submenus, cascading
+- cascading submenus
+- menus, creating cascading submenus
 ms.assetid: 692600cb-d052-40e2-bdae-4354ae7c6c84
 caps.latest.revision: 43
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 43
----
-# 하위 메뉴에 추가
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 6492dd6f989337b55225a14dd7da4508a8de068b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-데모를 기반으로 하는이 연습에서는 [Visual Studio 메뉴 모음에 메뉴를 추가합니다.](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) 는 하위 메뉴에 추가 하는 방법을 표시 하 여는 **TestMenu** 메뉴.  
+---
+# <a name="adding-a-submenu-to-a-menu"></a>Adding a Submenu to a Menu
+This walkthrough builds on the demonstration in [Adding a Menu to the Visual Studio Menu Bar](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) by showing how to add a submenu to the **TestMenu** menu.  
   
- 하위 메뉴가 다른 메뉴에 표시 되는 보조 메뉴입니다. 하위 메뉴 이름 뒤에 오는 화살표로 식별할 수 있습니다. 이름을 누르면 하위 메뉴 및 명령을 표시 됩니다.  
+ A submenu is a secondary menu that appears in another menu. A submenu can be identified by the arrow that follows its name. Clicking the name causes the submenu and its commands to be displayed.  
   
- 이 연습에서는 Visual Studio 메뉴 모음에서 메뉴에는 하위 메뉴를 만들고 하위 메뉴에서 새 명령을 설정 합니다. 이 연습에는 또한 새 명령을 구현합니다.  
+ This walkthrough creates a submenu in a menu on the Visual Studio menu bar and puts a new command on the submenu. The walkthrough also implements the new command.  
   
-## 사전 요구 사항  
- Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)을 참조하세요.  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## 하위 메뉴에 추가  
+## <a name="adding-a-submenu-to-a-menu"></a>Adding a Submenu to a Menu  
   
-1.  단계에 따라 [Visual Studio 메뉴 모음에 메뉴를 추가합니다.](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) 프로젝트 및 메뉴 항목을 만듭니다. 이 연습의 단계에에서는 VSIX 프로젝트의 이름 이라고 가정 `TopLevelMenu`합니다.  
+1.  Follow the steps in [Adding a Menu to the Visual Studio Menu Bar](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) to create the project and menu item. The steps in this walkthrough assume that the name of the VSIX project is `TopLevelMenu`.  
   
-2.  TestCommandPackage.vsct를 엽니다. 에 `<Symbols>` 섹션을 추가 `<IDSymbol>` 하위 그룹 및에서 모든 명령에 대 한 하위 메뉴에 대 한 요소는 `<GuidSymbol>` "guidTopLevelMenuCmdSet." 라는 노드 이 포함 하는 동일한 노드는 `<IDSymbol>` 최상위 메뉴에 대 한 요소입니다.  
+2.  Open TestCommandPackage.vsct. In the `<Symbols>` section, add an `<IDSymbol>` element for the submenu, one for the submenu group, and one for the command, all in the `<GuidSymbol>` node named "guidTopLevelMenuCmdSet." This is the same node that contains the `<IDSymbol>` element for the top-level menu.  
   
     ```xml  
     <IDSymbol name="SubMenu" value="0x1100"/>  
@@ -43,7 +60,7 @@ caps.handback.revision: 43
     <IDSymbol name="cmdidTestSubCommand" value="0x0105"/>  
     ```  
   
-3.  새로 만든된 하위 메뉴에 추가 된 `<Menus>` 섹션입니다.  
+3.  Add the newly created submenu to the `<Menus>` section.  
   
     ```xml  
     <Menu guid="guidTestCommandPackageCmdSet" id="SubMenu" priority="0x0100" type="Menu">  
@@ -55,9 +72,9 @@ caps.handback.revision: 43
     </Menu>  
     ```  
   
-     생성 된 메뉴 그룹을 지정 하는 부모 GUID\/ID 쌍 [Visual Studio 메뉴 모음에 메뉴를 추가합니다.](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md), 최상위 메뉴의 자식 임을 합니다.  
+     The GUID/ID pair of the parent specifies the menu group that was generated in [Adding a Menu to the Visual Studio Menu Bar](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md), and is a child of the top-level menu.  
   
-4.  2 단계에서 정의 된 메뉴 그룹 추가 `<Groups>` 섹션 및 하위 메뉴의 자식으로 만듭니다.  
+4.  Add the menu group defined in step 2 to the `<Groups>` section and make it a child of the submenu.  
   
     ```xml  
     <Group guid="guidTestCommandPackageCmdSet" id="SubMenuGroup" priority="0x0000">  
@@ -65,7 +82,7 @@ caps.handback.revision: 43
     </Group>  
     ```  
   
-5.  새 추가 `<Button>` 요소는 `<Buttons>` 하위 메뉴 항목으로 2 단계에서 만든 명령을 정의 하는 섹션입니다.  
+5.  Add a new `<Button>` element to the `<Buttons>` section to define the command created in step 2 as an item on the submenu.  
   
     ```xml  
     <Button guid="guidTestCommandPackageCmdSet" id="cmdidTestSubCommand" priority="0x0000" type="Button">  
@@ -78,21 +95,21 @@ caps.handback.revision: 43
     </Button>  
     ```  
   
-6.  솔루션을 빌드하고 디버깅을 시작 합니다. 실험적 인스턴스에서 표시 됩니다.  
+6.  Build the solution and start debugging. You should see the experimental instance.  
   
-7.  클릭 **TestMenu** 라는 새 하위 메뉴를 보려면 **하위 메뉴**합니다. 클릭 **하위 메뉴** 하위 메뉴를 열고 새 명령을 참조 **테스트 하위 명령**합니다. 클릭 하면 확인 **테스트 하위 명령** 는 아무 작업도 수행 합니다.  
+7.  Click **TestMenu** to see a new submenu named **Sub Menu**. Click **Sub Menu** to open the submenu and see a new command, **Test Sub Command**. Notice that clicking **Test Sub Command** does nothing.  
   
-## 명령 추가  
+## <a name="adding-a-command"></a>Adding a Command  
   
-1.  TestCommand.cs를 열고 기존 명령 id입니다. 한 후 다음 명령 ID를 추가 합니다.  
+1.  Open TestCommand.cs and add the following command ID after the existing command ID.  
   
-    ```c#  
-    public const int cmdidTestSubCmd = 0x105;  
+    ```csharp  
+    public const int cmdidTestSubCmd = 0x105;  
     ```  
   
-2.  하위 명령을 추가 합니다. 명령 생성자를 찾습니다. 에 대 한 호출 바로 뒤에 다음 줄을 추가 `AddCommand` 메서드.  
+2.  Add the sub-command. Find the command constructor. Add the following lines just after the call to the `AddCommand` method.  
   
-    ```c#  
+    ```csharp  
     CommandID subCommandID = new CommandID(CommandSet, (int)TestCommandPackageGuids.cmdidTestSubCmd);  
     MenuCommand subItem = new MenuCommand(  
         new EventHandler(SubItemCallback), subCommandID);  
@@ -100,9 +117,9 @@ caps.handback.revision: 43
   
     ```  
   
-     `SubItemCallback` 명령 처리기는 나중에 정의 됩니다. 생성자는 이제 다음과 같이 표시 됩니다.  
+     The `SubItemCallback` command handler will be defined later. The constructor should now look like this:  
   
-    ```c#  
+    ```csharp  
     private TestCommand(Package package)  
             {  
                 if (package == null)  
@@ -125,9 +142,9 @@ caps.handback.revision: 43
                 }  
     ```  
   
-3.  SubItemCallback\(\)를 추가 합니다. 이 방법은 하위 메뉴에 새 명령을 클릭할 때 호출 됩니다.  
+3.  Add SubItemCallback(). This is the method that is called when the new command in the submenu is clicked.  
   
-    ```c#  
+    ```csharp  
     private void SubItemCallback(object sender, EventArgs e)  
     {  
         IVsUIShell uiShell = (IVsUIShell)this.ServiceProvider.GetService(  
@@ -151,10 +168,10 @@ caps.handback.revision: 43
     }  
     ```  
   
-4.  프로젝트를 빌드하고 디버깅을 시작합니다. 실험적 인스턴스가 나타납니다.  
+4.  Build the project and start debugging. The experimental instance should appear.  
   
-5.  에 **TestMenu** 메뉴를 클릭 하 여 **하위 메뉴** 클릭 하 고 **테스트 하위 명령**. 메시지 상자 표시 하 고 "테스트 명령 내 TestCommand.SubItemCallback\(\)" 텍스트를 표시 해야 합니다.  
+5.  On the **TestMenu** menu, click **Sub Menu** and then click **Test Sub Command**. A message box should appear and display the text, "Test Command Inside TestCommand.SubItemCallback()".  
   
-## 참고 항목  
- [Visual Studio 메뉴 모음에 메뉴를 추가합니다.](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)   
- [명령, 메뉴 및 도구 모음](../extensibility/internals/commands-menus-and-toolbars.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Menu to the Visual Studio Menu Bar](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)   
+ [Commands, Menus, and Toolbars](../extensibility/internals/commands-menus-and-toolbars.md)

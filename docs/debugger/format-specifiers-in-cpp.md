@@ -1,143 +1,165 @@
 ---
-title: "C++의 형식 지정자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
-f1_keywords: 
-  - "vs.debug"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "간략한 조사식 대화 상자, C++의 형식 지정자"
-  - "변수[디버거], 조사식 변수 기호"
-  - "기호, 조사식 변수 형식 지정"
-  - "간략한 조사식 대화 상자, 형식 지정자 사용"
-  - "식[C++], 형식 지정자"
-  - "지정자, 조사식 변수 형식"
-  - "지정자"
-  - "조사식 창, C++의 형식 지정자"
-  - "변수 기호 조사"
-  - "형식 지정자, 디버거"
-  - "디버거, 인식되는 형식 지정자"
+title: Format specifiers in the debugger (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- QuickWatch dialog box, format specifiers in C++
+- variables [debugger], watch variable symbols
+- symbols, watch variable formatting
+- QuickWatch dialog box, using format specifiers
+- expressions [C++], format specifiers
+- specifiers, watch variable format
+- specifiers
+- Watch window, format specifiers in C++
+- watch variable symbols
+- format specifiers, debugger
+- debugger, format specifiers recognized by
 ms.assetid: 0f6f3b7c-ce2c-4b4d-b14f-7589dbed5444
 caps.latest.revision: 40
-caps.handback.revision: 40
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# C++의 형식 지정자
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: c0f3cc415b06c4c341a2b4279b7ada393192417c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-형식 지정자를 사용하여 **조사식** 창에 값이 표시되는 형식을 변경할 수 있습니다.  
+---
+# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Format specifiers in C++ in the Visual Studio debugger
+You can change the format in which a value is displayed in the **Watch** window using format specifiers.  
   
- 또한 **직접 실행** 창, **명령** 창 및 소스 창에서도 형식 지정자를 사용할 수 있습니다. 이러한 창에서 식을 일시 중지하면 결과가 DataTip에 나타납니다. DataTip 표시는 형식 지정자를 반영합니다.  
+ You can also use format specifiers in the **Immediate** window, the **Command** window, and even in source windows. If you pause on an expression in those windows, the result will appear in a DataTip. The DataTip display reflects the format specifier.  
   
 > [!NOTE]
->  Visual Studio 네이티브 디버거가 새로운 디버깅 엔진으로 변경되었습니다. 이 변경의 일부로 새로운 형식 지정자가 일부 추가되고 기존 형식 지정자가 일부 제거되었습니다. C\+\+\/CLI를 사용하여 interop\(혼합 네이티브 및 관리\) 디버깅을 수행할 때 이전 디버거가 계속 사용됩니다. 이 항목의 다음 섹션에서는 각 디버그 엔진에 대한 형식 지정자를 보여 줍니다.  
+>  When the Visual Studio native debugger changed to a new debugging engine, some new format specifiers were added and some old ones were removed. The  older debugger is still used when you do interop (mixed native and managed) debugging with C++/CLI. The following sections in this topic show the format specifiers for each debug engine.
 >   
->  -   [형식 지정자](#BKMK_Visual_Studio_2012_format_specifiers)에서는 새로운 디버깅 엔진의 형식 지정자에 대해 설명합니다.  
-> -   [C++/CLI를 사용하는 interop 디버깅의 형식 지정자](#BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue)에서는 이전 디버깅 엔진의 형식 지정자에 대해 설명합니다.  
+>  -   [Format Specifiers](#BKMK_Visual_Studio_2012_format_specifiers) describes the format specifiers in the new debugging engine.  
+> -   [Format specifiers for interop debugging with C++/CLI](#BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue) describes the format specifiers in the older debugging engine.  
   
-## 형식 지정자 사용  
- 다음과 같은 코드를 가정해 봅니다.  
+## <a name="using-format-specifiers"></a>Using Format Specifiers  
+ If you have the following code:  
   
-```cpp  
-int main() { int my_var1 = 0x0065; int my_var2 = 0x0066; int my_var3 = 0x0067; }  
+```C++  
+int main() {  
+    int my_var1 = 0x0065;  
+    int my_var2 = 0x0066;  
+    int my_var3 = 0x0067;  
+}  
 ```  
   
- **조사식** 창\(디버그하는 동안 **디버그 \/ Windows \/ 조사식 \/ 조사식 1**\)에 `my_var1` 변수를 추가하고 표시를 16진수로 설정합니다\(**조사식** 창에서 변수를 마우스 오른쪽 단추로 클릭하고 **16진수 표시** 선택\). 이제는 조사식 창에서 변수의 값이 0x0065로 표시됩니다. 정수 대신 문자로 표현된 이 값을 보려면 이름 열에서 변수 이름 뒤에 문자 형식 지정자 **, c**를 추가합니다. 이제 **값** 열에 **101 'e'**가 표시됩니다.  
+ Add the `my_var1` variable to the **Watch** window (while debugging, **Debug > Windows > Watch > Watch 1**) and set the display to hexadecimal (in the **Watch** window, right-click the variable and select **Hexadecimal Display**). Now the Watch window shows that it contains the value 0x0065. To see this value expressed as a character instead of an integer, in the Name column, after the variable name, add the character format specifier **, c**. The **Value** column now appears with **101 'e'**.  
   
  ![WatchFormatCPlus1](../debugger/media/watchformatcplus1.png "WatchFormatCPlus1")  
   
-##  <a name="BKMK_Visual_Studio_2012_format_specifiers"></a> 형식 지정자  
- 다음 표에서는 Visual Studio에서 사용할 수 있는 형식 지정자를 보여 줍니다. 굵게 표시된 지정자는 C\+\+\/CLI를 사용하는 interop 디버깅에 대해 지원되지 않습니다.  
+##  <a name="BKMK_Visual_Studio_2012_format_specifiers"></a> Format Specifiers  
+ The following tables show the format specifiers that you can use in Visual Studio. Specifiers in bold are not supported for interop debugging with C++/CLI.  
   
-|지정자|형식|원래 조사식 값|표시되는 값|  
-|---------|--------|--------------|------------|  
-|일|10진수 정수|0x00000066|102|  
-|o|부호 없는 8진수 정수|0x00000066|000000000146|  
-|x<br /><br /> **h**|16진수 정수|102|0xcccccccc|  
-|X<br /><br /> **H**|16진수 정수|102|0xCCCCCCCC|  
-|c|단일 문자|0x0065, c|101 'e'|  
-|s|const char\* 문자열|\<위치\> “hello world”|"hello world"|  
-|**sb**|const char\* 문자열|\<위치\> “hello world”|hello world|  
-|s8|const char\* 문자열|\<위치\> “hello world”|"hello world"|  
-|**s8b**|const char\* 문자열|\<위치\> “hello world”|"hello world"|  
-|su|const wchar\_t\* const<br /><br /> char16\_t\* 문자열|\<위치\> L”hello world”|L"hello world"<br /><br /> u"hello world"|  
-|sub|const wchar\_t\* const<br /><br /> char16\_t\* 문자열|\<위치\> L”hello world”|hello world|  
-|bstr|BSTR 문자열|\<위치\> L”hello world”|L”hello world”|  
-|**s32**|UTF\-32 문자열|\<위치\> U”hello world”|U”hello world”|  
-|**s32b**|UTF\-32 문자열\(따옴표 제외\)|\<위치\> U”hello world”|hello world|  
-|**en**|enum|Saturday\(6\)|토요일|  
-|**hv**|포인터 유형 \- 검사 중인 포인터 값이 배열의 힙 할당 결과임을 나타냅니다\(예: `new int[3]`\).|\<위치\>{\<첫 번째 멤버\>}|\<위치\>{\<첫 번째 멤버\>,\<두 번째 멤버\>, ...}|  
-|**na**|개체에 대한 포인터의 메모리 주소를 표시하지 않습니다.|\<위치\>, {member\=value…}|{member\=value…}|  
-|**nd**|파생된 클래스는 무시하고 기본 클래스 정보만 표시합니다.|`(Shape*) square`에는 기본 클래스 및 파생 클래스 정보가 포함됩니다.|기본 클래스 정보만 표시합니다.|  
-|hr|HRESULT 또는 Win32 오류 코드. 이제 디버거가 자동으로 HRESULT를 디코딩하므로 해당 경우에는 이 지정자가 필요하지 않습니다.|S\_OK|S\_OK|  
-|wc|Window 클래스 플래그|0x0010|WC\_DEFAULTCHAR|  
-|wm|Windows 메시지 번호|16|WM\_CLOSE|  
-|\!|원시 형식. 모든 데이터 형식 뷰의 사용자 지정을 무시합니다.|\<사용자 지정 표현\>|4|  
+|Specifier|Format|Original Watch Value|Value Displayed|  
+|---------------|------------|--------------------------|---------------------|  
+|d|decimal integer|0x00000066|102|  
+|o|unsigned octal integer|0x00000066|000000000146|  
+|x<br /><br /> **h**|hexadecimal integer|102|0xcccccccc|  
+|X<br /><br /> **H**|hexadecimal integer|102|0xCCCCCCCC|  
+|c|single character|0x0065, c|101 'e'|  
+|s|const char* string|\<location> "hello world"|"hello world"|  
+|**sb**|const char* string (no quotation marks)|\<location> "hello world"|hello world|  
+|s8|UTF-8 string|\<location> "This is a UTF-8 coffee cup â˜•"|"This is a UTF-8 coffee cup ☕"|
+|**s8b**|UTF-8 string (no quotation marks)|\<location> "hello world"|hello world|  
+|su|Unicode (UTF-16 encoding) string|\<location> L"hello world"|L"hello world"<br /><br /> u"hello world"|  
+|sub|Unicode (UTF-16 encoding) string (no quotation marks)|\<location> L"hello world"|hello world|  
+|bstr|BSTR string|\<location> L"hello world"|L"hello world"|  
+|env|Environment block (double-null terminated string)|\<location> L"=::=::\\\\"|L"=::=::\\\\\\0=C:=C:\\\\windows\\\\system32\\0ALLUSERSPROFILE=...|
+|**s32**|UTF-32 string|\<location> U"hello world"|U"hello world"|  
+|**s32b**|UTF-32 string (no quotation marks)|\<location> U"hello world"|hello world|  
+|**en**|enum|Saturday(6)|Saturday|  
+|**hv**|Pointer type - indicates that the pointer value being inspected is the result of the heap allocation of an array, for example, `new int[3]`.|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|  
+|**na**|Suppresses the memory address of a pointer to an object.|\<location>, {member=value...}|{member=value...}|  
+|**nd**|Displays only the base class information, ignoring derived classes|`(Shape*) square` includes base class and derived class information|Displays only base class information|  
+|hr|HRESULT or Win32 error code. (The debugger now decodes HRESULTs automatically, so this specifier is not required in those cases.|S_OK|S_OK|  
+|wc|Window class flag|0x0010|WC_DEFAULTCHAR|  
+|wm|Windows message numbers|16|WM_CLOSE|  
+|!|raw format, ignoring any data type views customizations|\<customized representation>|4|  
   
 > [!NOTE]
->  **hv** 형식 지정자가 있는 경우 디버거는 버퍼의 길이를 확인하고 적절한 요소 수를 표시하려고 합니다. 디버거에서 항상 배열의 정확한 버퍼 크기를 찾을 수는 없으므로 가능한 한 크기 지정자 `(pBuffer,[bufferSize])`를 사용해야 합니다.**hv** 형식 지정자는 버퍼 크기를 즉시 사용할 수 없는 시나리오를 위한 것입니다.  
+>  When the **hv** format specifier is present, the debugger attempts to determine the length of the buffer and display the appropriate number of elements. Because it is not always possible for the debugger to find the exact buffer size of an array, you should use a size specifier `(pBuffer,[bufferSize])` whenever possible. The **hv** format specifier is intended for scenarios where the buffer size is not readily available  
   
-###  <a name="BKMK_Size_specifiers_for_pointers_as_arrays_in_Visual_Studio_2012"></a> 배열로 사용되는 포인터에 대한 크기 지정자  
- 배열로 표시할 개체에 대한 포인터가 있는 경우 다음과 같이 정수 또는 식을 사용하여 배열 요소의 수를 지정할 수 있습니다.  
+###  <a name="BKMK_Size_specifiers_for_pointers_as_arrays_in_Visual_Studio_2012"></a> Size specifiers for pointers as arrays  
+ If you have a pointer to an object you want to view as an array, you can use an integer or an expression to specify the number of array elements:  
   
-|지정자|형식|원래 조사식 값|표시되는 값|  
-|---------|--------|--------------|------------|  
-|n|10진수 또는 **16진수** 정수|pBuffer,\[32\]<br /><br /> pBuffer,**\[0x20\]**|`pBuffer`를 요소가 32개인 배열로 표시합니다.|  
-|**\[exp\]**|정수로 확인되는 유효한 C\+\+ 식입니다.|pBuffer,\[bufferSize\]|PBuffer를 `bufferSize` 요소의 배열로 표시합니다.|  
-|**expand\(n\)**|정수로 확인되는 유효한 C\+\+ 식입니다.|pBuffer, expand\(2\)|`pBuffer`의 세 번째 요소를 표시합니다.|  
+|Specifier|Format|Original Watch Value|Value Displayed|  
+|---------------|------------|---------------------------|---------------------|  
+|n|Decimal or **hexadecimal** integer|pBuffer,[32]<br /><br /> pBuffer,**[0x20]**|Displays `pBuffer` as a 32 element array.|  
+|**[exp]**|A valid C++ expression that evaluates to an integer.|pBuffer,[bufferSize]|Displays pBuffer as an array of `bufferSize` elements.|  
+|**expand(n)**|A valid C++ expression that evaluates to an integer|pBuffer, expand(2)|Displays the third element of  `pBuffer`|  
   
-##  <a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> C\+\+\/CLI를 사용하는 interop 디버깅의 형식 지정자  
- **굵게** 표시된 지정자는 네이티브 및 C\+\+\/CLI 코드 디버깅에 대해서만 지원됩니다.  
+##  <a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> Format specifiers for interop debugging with C++/CLI  
+ Specifiers in **bold** are supported only for debugging native and C++/CLI code.  
   
-|지정자|형식|원래 조사식 값|표시되는 값|  
-|---------|--------|--------------|------------|  
-|**d,i**|부호 있는 10진수 정수|0xF000F065|\-268373915|  
-|**u**|부호 없는 10진수 정수|0x0065|101|  
-|o|부호 없는 8진수 정수|0xF065|0170145|  
-|x,X|16진수 정수|61541|0x0000f065|  
-|**l,h**|d, i, u, o, x, X에 대한 long 또는 short 접두사|00406042|0x0c22|  
-|**f**|부호 있는 부동 소수점|\(3.\/2.\), f|1.500000|  
-|**e**|부호 있는 과학적 표기법|\(3.0\/2.0\)|1.500000e\+000|  
-|**g**g|부호 있는 부동 소수점 또는 부호 있는 과학적 표기법 중에서 짧은 형식|\(3.0\/2.0\)|1.5|  
-|c|단일 문자|\<위치\>|101 'e'|  
-|s|const char\*|\<위치\>|"hello world"|  
-|su|const wchar\_t\*<br /><br /> const char16\_t\*|\<위치\>|L"hello world"|  
-|sub|const wchar\_t\*<br /><br /> const char16\_t\*|\<위치\>|hello world|  
-|s8|const char\*|\<위치\>|"hello world"|  
-|hr|HRESULT 또는 Win32 오류 코드. 이제 디버거가 자동으로 HRESULT를 디코딩하므로 해당 경우에는 이 지정자가 필요하지 않습니다.|S\_OK|S\_OK|  
-|wc|Window 클래스 플래그|0x00000040,|WC\_DEFAULTCHAR|  
-|wm|Windows 메시지 번호|0x0010|WM\_CLOSE|  
-|\!|원시 형식. 모든 데이터 형식 뷰의 사용자 지정을 무시합니다.|\<사용자 지정 표현\>|4|  
+|Specifier|Format|Original Watch Value|Value Displayed|  
+|---------------|------------|--------------------------|---------------------|  
+|**d,i**|signed decimal integer|0xF000F065|-268373915|  
+|**u**|unsigned decimal integer|0x0065|101|  
+|o|unsigned octal integer|0xF065|0170145|  
+|x,X|Hexadecimal integer|61541|0x0000f065|  
+|**l,h**|long or short prefix for: d, i, u, o, x, X|00406042|0x0c22|  
+|**f**|signed floating point|(3./2.), f|1.500000|  
+|**e**|signed scientific notation|(3.0/2.0)|1.500000e+000|  
+|**g**|signed floating point or signed scientific notation, whichever is shorter|(3.0/2.0)|1.5|  
+|c|single character|\<location>|101 'e'|  
+|s|const char*|\<location>|"hello world"|  
+|su|const wchar_t*<br /><br /> const char16_t\*|\<location>|L"hello world"|  
+|sub|const wchar_t*<br /><br /> const char16_t\*|\<location>|hello world|  
+|s8|const char*|\<location>|"hello world"|  
+|hr|HRESULT or Win32 error code. (The debugger now decodes HRESULTs automatically, so this specifier is not required in those cases.|S_OK|S_OK|  
+|wc|Window class flag.|0x00000040,|WC_DEFAULTCHAR|  
+|wm|Windows message numbers|0x0010|WM_CLOSE|  
+|!|raw format, ignoring any data type views customizations|\<customized representation>|4|  
   
-###  <a name="BKMK_Format_specifiers_memory_locations_in_interop_debugging_and_C___edit_and_continue"></a> C\+\+\/CLI를 사용하는 interop 디버깅의 형식 지정자 메모리 위치  
- 다음 표에는 메모리 위치에 사용되는 형식 지정 기호가 포함되어 있습니다. 메모리 위치 지정자를 위치로 확인되는 값이나 수식에 사용할 수 있습니다.  
+###  <a name="BKMK_Format_specifiers_memory_locations_in_interop_debugging_and_C___edit_and_continue"></a> Format specifiers memory locations in interop debugging with C++/CLI  
+ The following table contains formatting symbols used for memory locations. You can use a memory location specifier with any value or expression that evaluates to a location.  
   
-|기호|형식|원래 조사식 값|표시되는 값|  
-|--------|--------|--------------|------------|  
-|**ma**|ASCII 문자 64개|0x0012ffac|0x0012ffac .4...0...".0W&.......1W&.0.:W..1...."..1.JO&.1.2.."..1...0y....1|  
-|**m**|16바이트 16진수 뒤에 ASCII 문자 16개|0x0012ffac|0x0012ffac B3 34 CB 00 84 30 94 80 FF 22 8A 30 57 26 00 00 .4...0...".0W&..|  
-|**mb**|16바이트 16진수 뒤에 ASCII 문자 16개|0x0012ffac|0x0012ffac B3 34 CB 00 84 30 94 80 FF 22 8A 30 57 26 00 00 .4...0...".0W&..|  
-|**mw**|워드 8개|0x0012ffac|0x0012ffac 34B3 00CB 3084 8094 22FF 308A 2657 0000|  
-|**md**|더블워드 4개|0x0012ffac|0x0012ffac 00CB34B3 80943084 308A22FF 00002657|  
-|**mq**|쿼드워드 2개|0x0012ffac|0x0012ffac 7ffdf00000000000 5f441a790012fdd4|  
-|**mu**|2바이트 유니코드 문자|0x0012ffac|0x0012ffac 8478 77f4 ffff ffff 0000 0000 0000 0000|  
+|Symbol|Format|Original Watch Value|Value Displayed|  
+|------------|------------|--------------------------|---------------------|  
+|**ma**|64 ASCII characters|0x0012ffac|0x0012ffac .4...0...".0W&.......1W&.0.:W..1...."..1.JO&.1.2.."..1...0y....1|  
+|**m**|16 bytes in hexadecimal, followed by 16 ASCII characters|0x0012ffac|0x0012ffac B3 34 CB 00 84 30 94 80 FF 22 8A 30 57 26 00 00 .4...0...".0W&..|  
+|**mb**|16 bytes in hexadecimal, followed by 16 ASCII characters|0x0012ffac|0x0012ffac B3 34 CB 00 84 30 94 80 FF 22 8A 30 57 26 00 00 .4...0...".0W&..|  
+|**mw**|8 words|0x0012ffac|0x0012ffac 34B3 00CB 3084 8094 22FF 308A 2657 0000|  
+|**md**|4 doublewords|0x0012ffac|0x0012ffac 00CB34B3 80943084 308A22FF 00002657|  
+|**mq**|2 quadwords|0x0012ffac|0x0012ffac 7ffdf00000000000 5f441a790012fdd4|  
+|**mu**|2-byte characters (Unicode)|0x0012ffac|0x0012ffac 8478 77f4 ffff ffff 0000 0000 0000 0000|  
   
-###  <a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a> C\+\+\/CLI를 사용하는 interop 디버깅에서 배열로 사용되는 포인터의 크기 지정자  
- 배열로 표시할 개체에 대한 포인터가 있는 경우 다음과 같이 정수를 사용하여 배열 요소의 수를 지정할 수 있습니다.  
+###  <a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a> Size specifier for pointers as arrays in interop debugging with C++/CLIt  
+ If you have a pointer to an object you want to view as an array, you can use an integer to specify the number of array elements:  
   
-|지정자|서식|식|표시되는 값|  
-|---------|--------|-------|------------|  
-|n|10진수 정수|pBuffer\[32\]|`pBuffer`를 요소가 32개인 배열로 표시합니다.|
+|Specifier|Format|Expression|Value Displayed|  
+|---------------|------------|----------------|---------------------|  
+|n|Decimal integer|pBuffer[32]|Displays `pBuffer` as a 32 element array.|

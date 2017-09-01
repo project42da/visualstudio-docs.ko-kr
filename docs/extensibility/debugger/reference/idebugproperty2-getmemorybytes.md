@@ -1,49 +1,66 @@
 ---
-title: "IDebugProperty2::GetMemoryBytes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty2::GetMemoryBytes"
-helpviewer_keywords: 
-  - "IDebugProperty2::GetMemoryBytes"
+title: IDebugProperty2::GetMemoryBytes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProperty2::GetMemoryBytes
+helpviewer_keywords:
+- IDebugProperty2::GetMemoryBytes
 ms.assetid: b32042ed-7a06-4b4a-99ef-fe03b0aa61cc
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugProperty2::GetMemoryBytes
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5f8f0e6933166f1923e15b2b23859361d4c4360d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-속성의 값을 구성 하는 메모리 바이트 수를 가져옵니다.  
+---
+# <a name="idebugproperty2getmemorybytes"></a>IDebugProperty2::GetMemoryBytes
+Gets the memory bytes that compose the value of a property.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetMemoryBytes (   
-   IDebugMemoryBytes2** ppMemoryBytes  
+```cpp  
+HRESULT GetMemoryBytes (   
+   IDebugMemoryBytes2** ppMemoryBytes  
 );  
 ```  
   
-```c#  
-int GetMemoryBytes (   
-   out IDebugMemoryBytes2 ppMemoryBytes  
+```csharp  
+int GetMemoryBytes (   
+   out IDebugMemoryBytes2 ppMemoryBytes  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppMemoryBytes`  
- \[out\] 반환 된 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) 속성의 값을 포함 하는 메모리를 검색 하는 데 사용할 수 있는 개체입니다.  
+ [out] Returns an [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) object that can be used to retrieve the memory that contains the value of the property.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  반환 `S_GETMEMORYBYTES_NO_MEMORY_BYTES` 메모리 바이트를 검색 하는 경우.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns error code. Returns `S_GETMEMORYBYTES_NO_MEMORY_BYTES` if there are no memory bytes to retrieve.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

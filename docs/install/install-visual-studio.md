@@ -1,8 +1,8 @@
 ---
-title: "Visual Studio 2017 설치 | Microsoft Docs"
-description: "Visual Studio를 설치하는 방법을 단계별로 알아봅니다."
+title: Install Visual Studio 2017 | Microsoft Docs
+description: Learn how to install Visual Studio, step-by-step.
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -21,104 +21,113 @@ ms.assetid: 8d4297e4-9f43-4f12-95ec-22e61154480e
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 9f7c1d33191adf3fb54cf59cd98ae5fffe14eee4
+ms.translationtype: HT
+ms.sourcegitcommit: 7adecc638a0ea4b198501752930a5c92c9db282c
+ms.openlocfilehash: db6c415762bce85b2384358347310f93a056ec87
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="install-visual-studio-2017"></a>Visual Studio 2017 설치
-Visual Studio를 설치하는 새로운 방법이 있습니다. 최신 버전에서는 필요한 기능만 쉽게 선택해서 설치할 수 있으며, Visual Studio의 최소 사용 공간을 줄여 이전보다 시스템에 적게 영향을 미치면서 더욱 빠르게 설치할 수 있습니다.
+# <a name="install-visual-studio-2017"></a>Install Visual Studio 2017
+Welcome to a new way to install Visual Studio! In our newest version, we've made it easier for you to select and install just the features you need. We've also reduced the minimum footprint of Visual Studio so that it installs more quickly and with less system impact than ever before.
 
-다른 새로운 기능에 대해 자세히 알고 싶으세요? [릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)를 참조하세요. 설치 환경이 어떻게 새롭게 디자인되었는지에 대한 자세한 내용은 블로그 게시물 “[Faster and leaner Visual Studio installer](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer/)(더 빠르고 간결한 Visual Studio 설치 관리자)” 및 “[Anatomy of a low-impact Visual Studio installation](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install/)(영향이 적은 Visual Studio 설치 분석)”을 참조하세요.  
+Want to know more about what else is new in this version? See our [release notes](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes).   
 
-설치할 준비가 되었나요? 설치 과정을 단계별로 안내합니다.
+Ready to install? We'll walk you through it, step-by-step.
 
-## <a name="check-system-requirements"></a>시스템 요구 사항 확인
-시작하기 전에 [시스템 요구 사항](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs)을 확인하여 컴퓨터가 Visual Studio 2017을 설치할 준비가 되었는지 확인합니다.
+## <a name="step-1---make-sure-your-computer-is-ready-for-visual-studio"></a>Step 1 - Make sure your computer is ready for Visual Studio
+Before you begin installing Visual Studio
 
-## <a name="download-visual-studio"></a>Visual Studio 다운로드
-시작하려면 Visual Studio를 다운로드해야 합니다. 이렇게 하려면 다음 단추를 클릭하고 **저장**, **폴더 열기**를 차례로 클릭합니다.
+1. Check the [system requirements](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs). This helps you know whether your computer supports Visual Studio 2017.
+2. Apply the latest Windows Updates. This ensures that your computer has both the latest security updates and the required system components for Visual Studio.
+3. Reboot. This ensures that any pending installs or updates don't hinder the Visual Studio install.
+4. Free up space. Remove unneeded files and applications from your %SystemDrive% by, for example, running the Disk Cleanup app.
+
+For questions about running previous versions of Visual Studio side-by-side with Visual Studio 2017, see the [Visual Studio compatibility details](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs#compatibility-with-previous-releases).
+
+## <a name="step-2---download-visual-studio"></a>Step 2 - Download Visual Studio
+Next, download the Visual Studio bootstrapper file. To do so, click the following button, select the edition of Visual Studio 2017 that you want, click **Save**, and then click **Open folder**.
 
  > [!div class="button"]
- > [Visual Studio 2017 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ > [Download Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+<br/>
 
-## <a name="install-the-installer"></a>설치 관리자 설치  
-Visual Studio 2017를 다운로드하면 새로운 경량 설치 관리자를 설치하는 부트스트래퍼 파일을 얻을 수 있습니다. 이 새로운 설치 관리자에는 설치를 사용자 지정하는 데 필요한 모든 것이 포함되어 있습니다.  
 
-> [!IMPORTANT]
-> Visual Studio 2017 Preview 릴리스가 컴퓨터에 설치되어 있는 경우 Visual Studio 2017을 설치하기 전에 이 릴리스를 제거하라는 메시지가 표시됩니다.
+|         |         |
+|---------|---------|
+|  ![film icon for video](media/video-icon.png "Watch a video")  |    [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Download-the-Visual-Studio-Installer-GgrESHD6D_3311787171) on how to download the Visual Studio bootstrapper file and select the edition of Visual Studio that's right for you. |
 
-1.  **다운로드** 폴더에서 다음 중 하나와 일치하거나 비슷한 부트스트래퍼 파일을 두 번 클릭합니다.
+## <a name="step-3---install-the-visual-studio-installer"></a>Step 3 - Install the Visual Studio installer  
+Then, run the bootstrapper file to install the Visual Studio Installer. This new lightweight installer includes everything you need to both install and customize Visual Studio 2017.
 
-  * Visual Studio Enterprise용 **vs_enterprise.exe**
-  * Visual Studio Professional용 **vs_professional.exe**
-  * Visual Studio Community용 **vs_community.exe**  <br><br>
+1.  From your **Downloads** folder, double-click the bootstrapper that matches or is similar to one of the following files:
 
-  사용자 계정 컨트롤 알림을 받으면 **예**를 클릭합니다.  
+  * **vs_enterprise.exe** for Visual Studio Enterprise
+  * **vs_professional.exe** for Visual Studio Professional
+  * **vs_community.exe** for Visual Studio Community  <br><br>
 
-2.  Microsoft [사용 약관](https://www.visualstudio.com/license-terms/) 및 Microsoft [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=824704)에 동의하도록 요청하는 메시지가 표시됩니다. **계속**을 클릭합니다.  
+  If you receive a User Account Control notice, click **Yes**.  
 
-   ![사용 조건 및 개인정보처리방침](~/install/media/vs2017-privacy-and-license-terms.PNG "Microsoft 사용 조건 및 개인정보처리방침")  
+2.  We'll ask you to acknowledge the Microsoft [License Terms](https://www.visualstudio.com/license-terms/) and the Microsoft [Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=824704). Click **Continue**.  
 
-설치 진행률을 보여 주는 여러 가지 상태 화면이 표시됩니다. 설치 관리자가 설치를 완료하면 원하는 기능 집합(또는 작업)을 선택해야 합니다.
+   ![License Terms and Privacy Statement](media/vs2017-privacy-and-license-terms.PNG "Microsoft License Terms and Privacy Statement")
 
-## <a name="install-workloads"></a>작업 설치  
- 작업을 사용하여 설치를 사용자 지정할 수 있습니다. 원하는 작업을 하나 이상 선택합니다. 각 작업에는 원하는 프로그래밍 언어 또는 플랫폼에 필요한 기능이 포함되어 있습니다.  
+## <a name="step-4---select-workloads"></a>Step 4 - Select workloads
 
- 가져오는 방법은 다음과 같습니다.  
+After the installer is installed, you can use it to customize your installation by selecting the feature sets—or workloads—that you want. Here's how.
 
-1.  **Visual Studio 설치** 화면에서 원하는 작업을 찾습니다.  
+1.  Find the workload you want in the **Installing Visual Studio** screen.
 
-  ![Visual Studio 2017 설치 대화 상자](~/install/media/vs2017-workloads.PNG "Visual Studio 작업 설치")
+  ![Visual Studio 2017 setup dialog](media/vs2017-workloads.PNG "Install Visual Studio workloads")
 
-     예를 들어 .NET 데스크톱 개발 작업을 선택합니다. 20개가 넘는 언어에 대한 기본 코드 편집 기능, 프로젝트 없이도 폴더에서 코드를 열어 편집할 수 있는 기능 및 통합 소스 코드 제어 기능이 포함된 기본 핵심 편집기가 제공됩니다.  
+     For example, choose the .NET desktop development workload. It comes with the default core editor, which includes basic code editing support for over 20 languages, the ability to open and edit code from any folder without requiring a project, and integrated source code control.  
 
-2.  원하는 작업을 선택한 후 **설치**를 클릭합니다.  
+2.  After you select the workload(s) you want, click **Install**.  
 
-    Visual Studio 설치 진행률을 보여 주는 상태 화면이 나타납니다.
+    Next, status screens appear that show the progress of your Visual Studio installation.
 
-3.  새 작업과 구성 요소가 설치된 후 **시작**을 클릭합니다.
+3.  After the new workloads and components are installed, click **Launch**.
 
-## <a name="install-individual-components"></a>개별 구성 요소 설치
+|         |         |
+|---------|---------|
+|  ![film icon for video](media/video-icon.png "Watch a video")  |    [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Install-Workloads-in-Visual-Studio-2017-jHE19HD6D_1611787171) on how to install the Visual Studio Installer and then install a workload. |
 
-편리한 작업 기능을 사용하여 Visual Studio 설치를 사용자 지정하지 않으려는 경우 Visual Studio 설치 관리자에서 **개별 구성 요소** 옵션을 클릭하고 원하는 구성 요소를 선택한 다음 프롬프트를 따릅니다.
+## <a name="step-5---select-individual-components-optional"></a>Step 5 - Select individual components (Optional)
 
-  ![Visual Studio 2017 - 개별 구성 요소 설치](~/install/media/vs2017-components.PNG "Visual Studio 개별 구성 요소 설치")
+If you don't want to use the Workloads feature to customize your Visual Studio installation, you can do so by installing individual components instead. To do this, click the **Individual components** option from the Visual Studio Installer, select what you want, and then follow the prompts.
 
-## <a name="install-language-packs"></a>언어 팩 설치
+  ![Visual Studio 2017 - Install individual components](media/vs2017-components.PNG "Install Visual Studio individual components")
 
-선택한 언어로 Visual Studio 2017을 설치하려면 Visual Studio 설치 관리자에서 **언어 팩** 옵션을 클릭하고 프롬프트를 따릅니다.
+  |         |         |
+  |---------|---------|
+  |  ![film icon for video](media/video-icon.png "Watch a video")  |   [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Install-Components-in-Visual-Studio-2017-ZMfaVID6D_7411787171) on how to install an individual component by using the Visual Studio Installer. |
 
-  ![Visual Studio 2017 - 언어 팩 설치](~/install/media/vs2017-languages.PNG "Visual Studio 언어 팩 설치")
+## <a name="step-6---install-language-packs-optional"></a>Step 6 - Install language packs (Optional)
 
-### <a name="change-the-installer-language"></a>설치 관리자 언어 변경
+By default, the installer program tries to match the language of the operating system when it runs for the first time. To install Visual Studio 2017 in a language of your choosing, click the **Language packs** option from the Visual Studio Installer, and follow the prompts.
 
-기본적으로 설치 관리자 프로그램은 처음 실행될 때 운영 체제의 언어와 일치시키려고 합니다. 설치 관리자는 이 설정을 기억합니다. 명령줄에서 설치 관리자를 실행하면 이 설정을 변경할 수 있습니다. 예를 들어 `vs_installer.exe --locale en-US` 명령을 사용하여 설치 관리자를 영어로 강제 실행할 수 있습니다. 설치 관리자는 다음에 실행될 때 이 설정을 기억합니다. 설치 관리자는 zh-CN, zh-TW, cs-CZ, en-US, fr-FR, de-DE, it-IT, ja-JP, ko-KR, pl-PL, pt-BR, ru-RU, es-ES 및 tr-TR 언어 토큰을 지원합니다.
+  ![Visual Studio 2017 - Install language packs](media/vs2017-languages.PNG "Install Visual Studio language packs")
 
-## <a name="get-support"></a>지원 받기
-때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 문제 해결](troubleshooting-installation-issues.md) 페이지에서 문제 해결 팁을 참조하세요.
+  |         |         |
+  |---------|---------|
+  |  ![film icon for video](media/video-icon.png "Watch a video")  |   [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Install-Language-Packs-in-Visual-Studio-2017-ByT7yID6D_9011787171) on how to install a language pack by using the Visual Studio Installer. |
 
-## <a name="see-also"></a>참고 항목  
-* [Visual Studio 2017 수정](modify-visual-studio.md)
-* [Visual Studio 2017 업데이트](update-visual-studio.md)
-* [Visual Studio 2017 제거](uninstall-visual-studio.md)
-* [Visual Studio 2017 관리자 가이드](visual-studio-administrator-guide.md)
-* [Visual Studio 2017의 문제를 보고하는 방법](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+### <a name="change-the-installer-language-from-the-command-line"></a>Change the installer language from the command line
+
+Another way that you can change the default language is by running the installer from the command line. For example, you can force the installer to run in English by using the following command: `vs_installer.exe --locale en-US`. The installer will remember this setting when it is run the next time. The installer supports the following language tokens: zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-it, ja-jp, ko-kr, pl-pl, pt-br, ru-ru, and tr-tr.
+
+## <a name="step-7---launch-visual-studio"></a>Step 7 - Launch Visual Studio
+
+After Visual Studio installation is complete, click the **Launch** button to [Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md).
+
+## <a name="get-support"></a>Get support
+Sometimes, things can go wrong. If your Visual Studio installation fails, see the [Troubleshooting Visual Studio 2017 installation and upgrade issues](troubleshooting-installation-issues.md) page for troubleshooting tips.
+
+## <a name="see-also"></a>See also  
+* [Modify Visual Studio 2017](modify-visual-studio.md)
+* [Update Visual Studio 2017](update-visual-studio.md)
+* [Uninstall Visual Studio 2017](uninstall-visual-studio.md)
+* [Visual Studio 2017 administrator guide](visual-studio-administrator-guide.md)
+  * [Use command-line parameters to install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)
+* [How to report a problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

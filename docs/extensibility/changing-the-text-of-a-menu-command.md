@@ -1,33 +1,50 @@
 ---
-title: "메뉴 명령 텍스트를 변경합니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "메뉴, 텍스트 변경"
-  - "텍스트, 메뉴"
-  - "명령, 텍스트 변경"
+title: Changing the Text of a Menu Command | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- menus, changing text
+- text, menus
+- commands, changing text
 ms.assetid: 5cb676a0-c6e2-47e5-bd2b-133dc8842e46
 caps.latest.revision: 25
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# 메뉴 명령 텍스트를 변경합니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5cff9c7a8f834478e9ba414491c193c7a485c936
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-다음 단계를 사용 하 여 메뉴 명령의 텍스트 레이블을 변경 하는 방법을 보여 줍니다는 <xref:System.ComponentModel.Design.IMenuCommandService> 서비스입니다.  
+---
+# <a name="changing-the-text-of-a-menu-command"></a>Changing the Text of a Menu Command
+The following steps show how to change the text label of a menu command by using the <xref:System.ComponentModel.Design.IMenuCommandService> service.  
   
-## IMenuCommandService 사용 하 여 메뉴 명령 레이블을 변경합니다.  
+## <a name="changing-a-menu-command-label-with-the-imenucommandservice"></a>Changing a menu command label with the IMenuCommandService  
   
-1.  라는 이름의 VSIX 프로젝트 `MenuText` 메뉴 명령을 사용 하 여 명명 된 **ChangeMenuText**합니다. 자세한 내용은 [메뉴 명령을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-a-menu-command.md)을 참조하세요.  
+1.  Create a VSIX project named `MenuText` with a menu command named **ChangeMenuText**. For more information, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-2.  .Vstc 파일에서 추가 된 `TextChanges` 다음 예와에서 같이 사용자 메뉴 명령에 플래그를 지정 합니다.  
+2.  In the .vstc file, add the `TextChanges` flag to your menu command, as shown in the following example.  
   
     ```xml  
     <Button guid="guidChangeMenuTextPackageCmdSet" id="ChangeMenuTextId" priority="0x0100" type="Button">  
@@ -40,26 +57,26 @@ caps.handback.revision: 25
     </Button>  
     ```  
   
-3.  ChangeMenuText.cs 파일에서 메뉴 명령을 표시 되기 전에 호출 되는 이벤트 처리기를 만듭니다.  
+3.  In the ChangeMenuText.cs file, create an event handler that will be called before the menu command is displayed.  
   
-    ```c#  
+    ```csharp  
     private void OnBeforeQueryStatus(object sender, EventArgs e)  
     {  
         var myCommand = sender as OleMenuCommand;  
         if (null != myCommand)  
         {  
             myCommand.Text = "New Text";  
-                    }  
+        }  
     }  
     ```  
   
-     변경 하 여이 메서드는 메뉴 명령 상태를 업데이트할 수도 있습니다는 <xref:System.ComponentModel.Design.MenuCommand.Visible%2A>, <xref:System.ComponentModel.Design.MenuCommand.Checked%2A>, 및 <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> 속성에는 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 개체입니다.  
+     You can also update the status of the menu command in this method by changing the <xref:System.ComponentModel.Design.MenuCommand.Visible%2A>, <xref:System.ComponentModel.Design.MenuCommand.Checked%2A>, and <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> properties on the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> object.  
   
-4.  ChangeMenuText 생성자에서 바꿉니다 원래 명령 배치 하 고 초기화 코드를 만드는 코드는 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> \(대신 `MenuCommand`\) 메뉴 명령을 나타냅니다를 추가 하는 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> 이벤트 처리기 및 메뉴 명령을 메뉴 명령 서비스를 제공 합니다.  
+4.  In the ChangeMenuText constructor, replace the original command initialization and placement code with code that creates a <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> (rather than a `MenuCommand`) that represents the menu command, adds the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> event handler, and gives the menu command to the menu command service.  
   
-     그 모양을 다음과 같습니다.  
+     Here is what it should look like:  
   
-    ```c#  
+    ```csharp  
     private ChangeMenuText(Package package)  
     {  
         if (package == null)  
@@ -82,8 +99,9 @@ caps.handback.revision: 25
     }  
     ```  
   
-5.  프로젝트를 빌드하고 디버깅을 시작합니다. Visual Studio의 실험적 인스턴스가 표시 됩니다.  
+5.  Build the project and start debugging. The experimental instance of Visual Studio appears.  
   
-6.  에 **도구** 메뉴 표시 되어야 라는 명령을 **ChangeMenuText 호출**합니다.  
+6.  On the **Tools** menu you should see a command named **Invoke ChangeMenuText**.  
   
-7.  명령을 클릭 합니다. MenuItemCallback가 호출 된 알리는 메시지 상자가 표시 됩니다. 메시지 상자를 닫고 표시 도구 메뉴 명령의 이름입니다. 이제 인지 **새 텍스트**합니다.
+7.  Click the command. You should see the message box announcing that MenuItemCallback has been called. When you dismiss the message box, you should see that the name of the command on the Tools menu is now **New Text**.
+

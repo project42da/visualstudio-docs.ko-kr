@@ -1,56 +1,73 @@
 ---
-title: "IDebugObject::IsEqual | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::IsEqual"
-helpviewer_keywords: 
-  - "IDebugObject::IsEqual 메서드"
+title: IDebugObject::IsEqual | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject::IsEqual
+helpviewer_keywords:
+- IDebugObject::IsEqual method
 ms.assetid: 4b76e663-ef2e-41ff-9be1-bf26d666a34a
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugObject::IsEqual
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9780a18ff72058a90739c421061fabd9ce8520e1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 개체와 개체를 비교합니다.  
+---
+# <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
+Compares an object with this object.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT IsEqual(   
-   IDebugObject* pObject,  
-   BOOL*         pfIsEqual  
+```cpp  
+HRESULT IsEqual(   
+   IDebugObject* pObject,  
+   BOOL*         pfIsEqual  
 );  
 ```  
   
-```c#  
+```csharp  
 int IsEqual(  
-   IDebugObject pObject,  
-   out int      pfIsEqual  
+   IDebugObject pObject,  
+   out int      pfIsEqual  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pObject`  
- \[in\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 을 비교 하 여 개체를 나타내는 개체입니다.  
+ [in] An [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the object to compare to.  
   
  `pfIsEqual`  
- \[out\] 0이 아닌 반환 \(`TRUE`\)는 개체의 값이 같은; 경우 그렇지 않은 경우 0을 반환 \(`FALSE`\).  
+ [out] Returns non-zero (`TRUE`) if the values of the objects are equal; otherwise, returns zero (`FALSE`).  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 주소가 표시 되는 값의이 방법을 비교할 수 있습니다 일반적으로 `pObject` 매개 변수를 사용 하 고이 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 개체입니다. 주소가 같으면 다음 개체 같다고 취급 될 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Typically, this method can compare the addresses of the values represented by the `pObject` parameter and this [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object; if the addresses are equal, then the objects can be considered equal.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

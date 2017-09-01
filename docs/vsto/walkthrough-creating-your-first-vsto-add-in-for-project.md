@@ -1,141 +1,145 @@
 ---
-title: "연습: Project용 첫 VSTO 추가 기능 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "응용 프로그램 수준 추가 기능[Visual Studio에서 Office 개발], 첫 프로젝트 만들기"
-  - "Visual Studio에서 Office 개발, 첫 프로젝트 만들기"
-  - "Project[Visual Studio에서 Office 개발], 첫 프로젝트 만들기"
-  - "추가 기능[Visual Studio에서 Office 개발], 첫 프로젝트 만들기"
+title: 'Walkthrough: Creating Your First VSTO Add-in for Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- application-level add-ins [Office development in Visual Studio], creating your first project
+- Office development in Visual Studio, creating your first project
+- Project [Office development in Visual Studio], creating your first project
+- add-ins [Office development in Visual Studio], creating your first project
 ms.assetid: da2b727e-6db8-4853-bf00-7afe0ef13213
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 466f63c2c93b9ada7218469df3a0abe586becd94
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: Project용 첫 VSTO 추가 기능 만들기
-  이 연습에서는 Microsoft Office Project용 VSTO 추가 기능을 만드는 방법을 보여 줍니다. 이러한 종류의 솔루션에서 만드는 기능은 열려 있는 프로젝트에 관계없이 응용 프로그램 자체에서 사용할 수 있습니다. 자세한 내용은 [Office 솔루션 개발 개요&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)을 참조하십시오.  
+# <a name="walkthrough-creating-your-first-vsto-add-in-for-project"></a>Walkthrough: Creating Your First VSTO Add-in for Project
+  This walkthrough shows you how to create an VSTO Add-in for Microsoft Office Project. The features that you create in this kind of solution are available to the application itself, regardless of which projects are open. For more information, see [Office Solutions Development Overview &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).  
   
  [!INCLUDE[appliesto_projallapp](../vsto/includes/appliesto-projallapp-md.md)]  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   Project VSTO 추가 기능 프로젝트 만들기  
+-   Creating a Project VSTO Add-in project.  
   
--   새 프로젝트에 작업을 추가하기 위해 Project의 개체 모델을 사용하는 코드 작성  
+-   Writing code that uses the object model of Project to add a task to a new project.  
   
--   테스트를 위해 프로젝트 빌드 및 실행  
+-   Building and running the project to test it.  
   
--   VSTO 추가 기능이 개발 컴퓨터에서 더 이상 자동으로 실행되지 않도록 하기 위해 완료된 프로젝트 정리  
+-   Cleaning up the completed project so that the VSTO Add-in no longer runs automatically on your development computer.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Project_15_short](../vsto/includes/project-15-short-md.md)] 또는 [!INCLUDE[Project_14_short](../vsto/includes/project-14-short-md.md)]  
+-   [!INCLUDE[Project_15_short](../vsto/includes/project-15-short-md.md)] or [!INCLUDE[Project_14_short](../vsto/includes/project-14-short-md.md)].  
   
-## 프로젝트 만들기  
+## <a name="creating-the-project"></a>Creating the Project  
   
-#### Visual Studio에서 새 프로젝트를 만들려면  
+#### <a name="to-create-a-new-project-in-visual-studio"></a>To create a new project in Visual Studio  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+2.  On the **File** menu, point to **New**, and then click **Project**.  
   
-3.  템플릿 창에서 **Visual C\#** 또는 **Visual Basic**을 확장한 다음 **Office\/SharePoint**를 확장합니다.  
+3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office/SharePoint**.  
   
-4.  확장된 **Office\/SharePoint** 노드 아래에서 **Office 추가 기능** 노드를 선택합니다.  
+4.  Under the expanded **Office/SharePoint** node, select the **Office Add-ins** node.  
   
-5.  프로젝트 템플릿 목록에서 **Project 2010 추가 기능** 또는 **Project 2013 추가 기능**을 선택합니다.  
+5.  In the list of project templates, select **Project 2010 Add-in** or **Project 2013 Add-in**.  
   
-6.  **이름** 상자에 **FirstProjectAddIn**을 입력합니다.  
+6.  In the **Name** box, type **FirstProjectAddIn**.  
   
-7.  **확인**을 클릭합니다.  
+7.  Click **OK**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 **FirstProjectAddIn** 프로젝트를 만들고 **ThisAddIn** 코드 파일을 편집기에서 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the **FirstProjectAddIn** project and opens the **ThisAddIn** code file in the editor.  
   
-## 프로젝트에 새 작업을 추가하는 코드 작성  
- 다음 작업으로, ThisAddIn 코드 파일에 코드를 추가합니다. 새 코드는 Project의 개체 모델을 사용하여 프로젝트에 새 작업을 추가합니다. 기본적으로 ThisAddIn 코드 파일에는 다음과 같은 생성된 코드가 포함되어 있습니다.  
+## <a name="writing-code-that-adds-a-new-task-to-a-project"></a>Writing Code that Adds a New Task to a Project  
+ Next, add code to the ThisAddIn code file. The new code uses the object model of Project to add a new task to a project. By default, the ThisAddIn code file contains the following generated code:  
   
--   `ThisAddIn` 클래스의 부분 정의. 이 클래스는 코드의 진입점을 제공하고 Project의 개체 모델에 대한 액세스를 제공합니다. 자세한 내용은 [VSTO 추가 기능 프로그래밍](../vsto/programming-vsto-add-ins.md)을 참조하세요.`ThisAddIn` 클래스의 나머지 부분은 수정해서는 안 되는 숨김 코드 파일에서 정의됩니다.  
+-   A partial definition of the `ThisAddIn` class. This class provides an entry point for your code and provides access to the object model of Project. For more information, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md). The remainder of the `ThisAddIn` class is defined in a hidden code file that you should not modify.  
   
--   `ThisAddIn_Startup` 및 `ThisAddIn_Shutdown` 이벤트 처리기. 이러한 이벤트 처리기는 Project에서 VSTO 추가 기능을 로드하고 언로드할 때 호출됩니다. 이러한 이벤트 처리기를 사용하여 VSTO 추가 기능이 로드될 때 VSTO 추가 기능을 초기화하고 VSTO 추가 기능이 언로드될 때 VSTO 추가 기능에서 사용하는 리소스를 정리할 수 있습니다. 자세한 내용은 [Office 프로젝트의 이벤트](../vsto/events-in-office-projects.md)을 참조하십시오.  
+-   The `ThisAddIn_Startup` and `ThisAddIn_Shutdown` event handlers. These event handlers are called when Project loads and unloads your VSTO Add-in. Use these event handlers to initialize your VSTO Add-in when it is loaded, and to clean up resources used by your VSTO Add-in when it is unloaded. For more information, see [Events in Office Projects](../vsto/events-in-office-projects.md).  
   
-#### 작업을 새 프로젝트에 추가하려면  
+#### <a name="to-add-a-task-to-a-new-project"></a>To add a task to a new project  
   
-1.  ThisAddIn 코드 파일에서 다음 코드를 `ThisAddIn` 클래스에 추가합니다. 이 코드는 Microsoft.Office.Interop.MSProject.Application 클래스의 NewProject 이벤트에 대한 이벤트 처리기를 정의합니다.  
+1.  In the ThisAddIn code file, add the following code to the `ThisAddIn` class. This code defines an event handler for the NewProject event of the Microsoft.Office.Interop.MSProject.Application class.  
   
-     사용자가 새 프로젝트를 만들 때 이 이벤트 처리기는 작업을 프로젝트에 추가합니다.  
+     When the user creates a new project, this event handler adds a task to the project.  
   
-     [!code-csharp[Trin_ProjectAddInTutorial#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ProjectAddInTutorial/CS/ThisAddIn.cs#1)]
-     [!code-vb[Trin_ProjectAddInTutorial#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ProjectAddInTutorial/VB/ThisAddIn.vb#1)]  
+     [!code-vb[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb#1)]  [!code-csharp[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#1)]  
   
- 프로젝트를 수정하기 위해 이 코드 예제에서는 다음 개체를 사용합니다.  
+ To modify the project, this code example use the following objects:  
   
--   `ThisAddIn` 클래스의 `Application` 필드.`Application` 필드는 Project의 현재 인스턴스를 나타내는 Microsoft.Office.Interop.MSProject.Application 개체를 반환합니다.  
+-   The `Application` field of the `ThisAddIn` class. The `Application` field returns an Microsoft.Office.Interop.MSProject.Application object, which represents the current instance of Project.  
   
--   NewProject 이벤트에 대한 이벤트 처리기의 `pj` 매개 변수입니다.`pj` 매개 변수는 프로젝트를 나타내는 Microsoft.Office.Interop.MSProject.Project 개체입니다. 자세한 내용은 [프로젝트 솔루션](../vsto/project-solutions.md)을 참조하세요.  
+-   The `pj` parameter of the event handler for the NewProject event. The `pj` parameter is a Microsoft.Office.Interop.MSProject.Project object, which represents the project. For more information, see [Project Solutions](../vsto/project-solutions.md).  
   
-1.  C\#을 사용하는 경우 다음 코드를 `ThisAddIn_Startup` 이벤트 처리기에 추가합니다. 이 코드는 `Application_Newproject` 이벤트 처리기를 NewProject 이벤트와 연결합니다.  
+1.  If you are using C#, add the following code to the `ThisAddIn_Startup` event handler. This code connects the `Application_Newproject` event handler with the NewProject event.  
   
-     [!code-csharp[Trin_ProjectAddInTutorial#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ProjectAddInTutorial/CS/ThisAddIn.cs#2)]  
+     [!code-csharp[Trin_ProjectAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#2)]  
   
 -  
   
-## 프로젝트 테스트  
- 프로젝트를 빌드하고 실행할 때 새 작업이 새 결과 프로젝트에 나타나는지 확인합니다.  
+## <a name="testing-the-project"></a>Testing the Project  
+ When you build and run the project, verify that the new task appears in the resulting new project.  
   
-#### 프로젝트를 테스트하려면  
+#### <a name="to-test-the-project"></a>To test the project  
   
-1.  **F5** 키를 눌러 프로젝트를 빌드하고 실행합니다. Microsoft Project가 시작되고 새 빈 프로젝트가 자동으로 열립니다.  
+1.  Press **F5** to build and run your project. Microsoft Project starts and automatically opens a new blank project.  
   
-     프로젝트를 빌드하면 코드가 프로젝트의 빌드 출력 폴더에 포함된 어셈블리로 컴파일됩니다. 또한 Visual Studio에서는 Project에서 VSTO 추가 기능을 검색하고 로드할 수 있도록 하는 레지스트리 항목 집합을 만들고 VSTO 추가 기능이 실행될 수 있도록 개발 컴퓨터에서 보안 설정을 구성합니다. 자세한 내용은 [Office 솔루션 빌드 프로세스 개요](http://msdn.microsoft.com/ko-kr/a9d12e4f-c9ea-4a62-a841-c42b91f831ee)를 참조하세요.  
+     When you build the project, the code is compiled into an assembly that is included in the build output folder for the project. Visual Studio also creates a set of registry entries that enable Project to discover and load the VSTO Add-in, and it configures the security settings on the development computer to enable the VSTO Add-in to run. For more information, see [Office Solution Build Process Overview](http://msdn.microsoft.com/en-us/a9d12e4f-c9ea-4a62-a841-c42b91f831ee).  
   
-2.  새 작업이 빈 프로젝트에 추가되었는지 확인합니다.  
+2.  Verify that a new task is added to the blank project.  
   
-3.  다음 텍스트가 해당 작업의 **작업 이름** 필드에 표시되는지 확인합니다.  
+3.  Verify that the following text appears in the **Task Name** field of the task.  
   
      **This text was added by using code.**  
   
-4.  Microsoft Project를 닫습니다.  
+4.  Close Microsoft Project.  
   
-## 프로젝트 정리  
- 프로젝트의 개발을 완료하면 VSTO 추가 기능 어셈블리, 레지스트리 항목 및 보안 설정을 개발 컴퓨터에서 제거합니다. 이렇게 하지 않으면 개발 컴퓨터에서 Microsoft Project를 열 때마다 VSTO 추가 기능이 실행됩니다.  
+## <a name="cleaning-up-the-project"></a>Cleaning up the Project  
+ When you finish developing a project, remove the VSTO Add-in assembly, registry entries, and security settings from your development computer. Otherwise, the VSTO Add-in will run every time you open Microsoft Project on the development computer.  
   
-#### 프로젝트를 정리하려면  
+#### <a name="to-clean-up-your-project"></a>To clean up your project  
   
-1.  Visual Studio의 **빌드** 메뉴에서 **솔루션 정리**를 클릭합니다.  
+1.  In Visual Studio, on the **Build** menu, click **Clean Solution**.  
   
-## 다음 단계  
- 기본적인 Project용 VSTO 추가 기능을 만들었으므로 다음 항목에서 VSTO 추가 기능을 개발하는 방법에 대해 자세히 알아볼 수 있습니다.  
+## <a name="next-steps"></a>Next Steps  
+ Now that you have created a basic VSTO Add-in for Project, you can learn more about how to develop VSTO Add-ins from these topics:  
   
--   Project용 VSTO 추가 기능에서 수행할 수 있는 일반적인 프로그래밍 작업: [VSTO 추가 기능 프로그래밍](../vsto/programming-vsto-add-ins.md)  
+-   General programming tasks that you can perform in VSTO Add-ins for Project: [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md).  
   
--   Project 개체 모델 사용: [프로젝트 솔루션](../vsto/project-solutions.md)  
+-   Using the object model of Project: [Project Solutions](../vsto/project-solutions.md).  
   
--   Project용 VSTO 추가 기능 빌드 및 디버그: [Office 솔루션 빌드](../vsto/building-office-solutions.md)  
+-   Building and debugging VSTO Add-ins for Project: [Building Office Solutions](../vsto/building-office-solutions.md).  
   
--   Project용 VSTO 추가 기능 배포: [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)  
+-   Deploying VSTO Add-ins for Project: [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
   
-## 참고 항목  
- [VSTO 추가 기능 프로그래밍](../vsto/programming-vsto-add-ins.md)   
- [프로젝트 솔루션](../vsto/project-solutions.md)   
- [Office 솔루션 빌드](../vsto/building-office-solutions.md)   
- [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)   
- [Office 프로젝트 템플릿 개요](../vsto/office-project-templates-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
+ [Project Solutions](../vsto/project-solutions.md)   
+ [Building Office Solutions](../vsto/building-office-solutions.md)   
+ [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
+ [Office Project Templates Overview](../vsto/office-project-templates-overview.md)  
   
   

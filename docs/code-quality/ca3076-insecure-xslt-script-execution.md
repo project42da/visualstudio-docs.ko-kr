@@ -1,52 +1,70 @@
 ---
-title: "CA3076: 안전하지 않은 XSLT 스크립트 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'CA3076: Insecure XSLT Script Execution | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 53cb7a46-c564-488f-bc51-0e210a7853c9
 caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 5
----
-# CA3076: 안전하지 않은 XSLT 스크립트 실행
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5203c83fb8d9f4fb1dcc729ff6cd95937da1dead
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
+---
+# <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: Insecure XSLT Script Execution
 |||  
 |-|-|  
 |TypeName|InsecureXSLTScriptExecution|  
 |CheckId|CA3076|  
-|범주|Microsoft.Security|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Security|  
+|Breaking Change|Non Breaking|  
   
-## 원인  
- .NET 응용 프로그램에서 비보안 방식으로 [XSLT\(Extensible Stylesheets Language Transformations\)](https://support.microsoft.com/en-us/kb/313997)를 실행하는 경우 프로세서는 공격자에게 중요한 정보를 노출하여 서비스 거부 및 사이트 간 공격을 유발할 수 있는 [신뢰할 수 없는 URI 참조를 확인](http://msdn.microsoft.com/ko-kr/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a)할 수 있습니다.  
+## <a name="cause"></a>Cause  
+ If you execute [Extensible Stylesheets Language Transformations (XSLT)](https://support.microsoft.com/en-us/kb/313997) in .NET applications insecurely, the processor may [resolve untrusted URI references](http://msdn.microsoft.com/en-us/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a) that could disclose sensitive information to attackers, leading to Denial of Service and Cross-Site attacks.  
   
-## 규칙 설명  
- [XSLT](http://msdn.microsoft.com/ko-kr/6377ce5f-3c45-42a6-b7a9-ec8da588b60c)는 XML 데이터를 변환하기 위한 W3C\(World Wide Web 콘소시엄\) 표준입니다. XSLT는 XML 데이터를 HTML, 고정 길이 텍스트, 쉼표로 구분된 텍스트 또는 기타 XML 형식 등으로 변환하기 위한 스타일시트를 작성하는 데 일반적으로 사용됩니다. 이 기능은 프로젝트에서 기본적으로는 금지되어 있지만 사용하도록 설정할 수 있습니다.  
+## <a name="rule-description"></a>Rule Description  
+ [XSLT](http://msdn.microsoft.com/en-us/6377ce5f-3c45-42a6-b7a9-ec8da588b60c) is a World Wide Web Consortium (W3C) standard for transforming XML data. XSLT is typically used to write style sheets to transform XML data to other formats such as HTML, fixed length text, comma-separated text, or a different XML format. Although prohibited by default, you may choose to enable it for your project.  
   
- 공격 영역을 노출하지 않도록 하기 위해 이 규칙은 XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>가 안전하지 않은 <xref:System.Xml.Xsl.XsltSettings> 및 <xref:System.Xml.XmlResolver> 인스턴스가 함께 수신될 때마다 트리거되어 악성 스크립트를 처리합니다.  
+ To ensure you're not exposing an attack surface, this rule triggers whenever the XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> receives insecure combination instances of <xref:System.Xml.Xsl.XsltSettings> and <xref:System.Xml.XmlResolver>, which allows malicious script processing.  
   
-## 위반 문제를 해결하는 방법  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
   
--   안전하지 않은 XsltSettings 인수를 XsltSettings.<xref:System.Xml.Xsl.XsltSettings.Default%2A> 또는 문서 함수 및 스크립트 실행을 사용하지 않도록 하는 인스턴스로 바꿉니다.  
+-   Replace the insecure XsltSettings argument with XsltSettings.<xref:System.Xml.Xsl.XsltSettings.Default%2A> or with an instance that has disabled document function and script execution.  
   
--   <xref:System.Xml.XmlResolver> 인수를 null 또는 <xref:System.Xml.XmlSecureResolver> 인스턴스로 바꿉니다.  
+-   Replace the <xref:System.Xml.XmlResolver> argument with null or an <xref:System.Xml.XmlSecureResolver> instance.  
   
-## 경고를 표시하지 않는 경우  
- 입력 출처를 신뢰할 수 있는지 확신할 수 없으면 이 경고의 규칙이 표시되지 않도록 설정하지 않도록 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Unless you're sure that the input is known to be from a trusted source, do not suppress a rule from this warning.  
   
-## 의사 코드 예제  
+## <a name="pseudo-code-examples"></a>Pseudo-code Examples  
   
-### 위반  
+### <a name="violation"></a>Violation  
   
-```c#  
+```csharp  
 using System.Xml;  
 using System.Xml.Xsl;  
   
@@ -62,12 +80,12 @@ namespace TestNamespace
              xslCompiledTransform.Load("testStylesheet", settings, resolver); // warn   
         }  
     }   
-}   
+}   
 ```  
   
-### 솔루션  
+### <a name="solution"></a>Solution  
   
-```c#  
+```csharp  
 using System.Xml;   
 using System.Xml.Xsl;   
   
@@ -86,9 +104,9 @@ namespace TestNamespace
 }  
 ```  
   
-### 위반  
+### <a name="violation"></a>Violation  
   
-```c#  
+```csharp  
 using System.Xml;   
 using System.Xml.Xsl;   
   
@@ -111,9 +129,9 @@ namespace TestNamespace
 }  
 ```  
   
-### 솔루션  
+### <a name="solution"></a>Solution  
   
-```c#  
+```csharp  
 using System.Xml;   
 using System.Xml.Xsl;   
   

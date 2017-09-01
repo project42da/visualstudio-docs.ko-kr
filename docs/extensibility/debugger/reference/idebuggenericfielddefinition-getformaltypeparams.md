@@ -1,30 +1,47 @@
 ---
-title: "IDebugGenericFieldDefinition::GetFormalTypeParams | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetFormalTypeParams"
-  - "IDebugGenericFieldDefinition::GetFormalTypeParams"
+title: IDebugGenericFieldDefinition::GetFormalTypeParams | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetFormalTypeParams
+- IDebugGenericFieldDefinition::GetFormalTypeParams
 ms.assetid: cadbd6a1-bc7c-4aff-8777-5396b7a23c3e
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugGenericFieldDefinition::GetFormalTypeParams
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 577be76306d4fe54f3a5e95e9d494f82653ecebc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-매개 변수 개수를 지정 된 형식 매개 변수를 검색 합니다.  
+---
+# <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
+Retrieves the type parameters given the number of parameters.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetFormalTypeParams(  
    ULONG32                   cParams,  
    IDebugGenericParamField** ppParams,  
@@ -32,7 +49,7 @@ HRESULT GetFormalTypeParams(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetFormalTypeParams(  
    uint                          cParams,  
    out IDebugGenericParamField[] ppParams,  
@@ -40,21 +57,21 @@ int GetFormalTypeParams(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `cParams`  
- [in] 매개 변수 개수입니다.  
+ [in] Number of parameters.  
   
  `ppParams`  
- [out] 배열 형식 매개 변수입니다.  
+ [out] Array of type parameters.  
   
  `pcParams`  
- [에서, out] 매개 변수 수는 `ppParams` 배열입니다.  
+ [in, out] Number of parameters in the `ppParams` array.  
   
-## <a name="return-value"></a>반환 값  
- 성공 하면 반환 `S_OK`고, 그렇지 않으면 오류 코드가 반환 됩니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>주의  
- 오른쪽으로 왼쪽에서 순서 대로 형식 매개 변수를 반환 합니다. 예를 들어 \< K, V > 사전 IDebugFormalGenericParameters {K, V}를 반환합니다.  
+## <a name="remarks"></a>Remarks  
+ Return the type parameters in order from left to right. For example, Dictionary\<K,V> returns IDebugFormalGenericParameters {K,V}.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

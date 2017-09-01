@@ -1,53 +1,70 @@
 ---
-title: "IDebugPortNotify2::RemoveProgramNode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortNotify2::RemoveProgramNode"
-helpviewer_keywords: 
-  - "IDebugPortNotify2::RemoveProgramNode"
+title: IDebugPortNotify2::RemoveProgramNode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortNotify2::RemoveProgramNode
+helpviewer_keywords:
+- IDebugPortNotify2::RemoveProgramNode
 ms.assetid: 3668157b-66d2-416e-a359-fc04dcd18a48
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugPortNotify2::RemoveProgramNode
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 56e68d79036593bb76c475c60fc431f409f31e3b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-실행 중인 포트에서 디버깅할 수 있는 프로그램의 등록을 취소 합니다.  
+---
+# <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
+Unregisters a program that can be debugged from the port it is running on.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT RemoveProgramNode(   
-   IDebugProgramNode2* pProgramNode  
+```cpp  
+HRESULT RemoveProgramNode(   
+   IDebugProgramNode2* pProgramNode  
 );  
 ```  
   
-```c#  
-int RemoveProgramNode(   
-   IDebugProgramNode2 pProgramNode  
+```csharp  
+int RemoveProgramNode(   
+   IDebugProgramNode2 pProgramNode  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pProgramNode`  
- \[in\] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 등록을 해제 하는 프로그램을 나타내는 objecy입니다.  
+ [in] An [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objecy that represents the program to be unregistered.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드 호출로 추가 된 프로그램 노드 제거를 [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) 메서드가 있습니다.  
+## <a name="remarks"></a>Remarks  
+ This method removes a program node that was added with a call to the [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)

@@ -1,85 +1,95 @@
 ---
-title: "CA1715: 식별자에는 올바른 접두사를 사용해야 합니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1715"
-  - "IdentifiersShouldHaveCorrectPrefix"
-helpviewer_keywords: 
-  - "IdentifiersShouldHaveCorrectPrefix"
-  - "CA1715"
+title: 'CA1715: Identifiers should have correct prefix | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1715
+- IdentifiersShouldHaveCorrectPrefix
+helpviewer_keywords:
+- IdentifiersShouldHaveCorrectPrefix
+- CA1715
 ms.assetid: cf45f8df-6855-4cb6-a4e2-7cfed714cf2f
 caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 30
----
-# CA1715: 식별자에는 올바른 접두사를 사용해야 합니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 79edfba42de7f89dd2827c3ce03a3a0194543361
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Identifiers should have correct prefix
 |||  
 |-|-|  
 |TypeName|IdentifiersShouldHaveCorrectPrefix|  
 |CheckId|CA1715|  
-|범주|Microsoft.Naming|  
-|변경 수준|주요 변경 \- 인터페이스에서 발생한 경우<br /><br /> 주요 변경 아님 \- 제네릭 형식 매개 변수에서 발생한 경우|  
+|Category|Microsoft.Naming|  
+|Breaking Change|Breaking - when fired on interfaces.<br /><br /> Non-breaking - when raised on generic type parameters.|  
   
-## 원인  
- 외부에 노출되는 인터페이스의 이름이 대문자 "I"로 시작하지 않습니다.  
+## <a name="cause"></a>Cause  
+ The name of an externally visible interface does not start with an uppercase 'I'.  
   
- 또는  
+ -or-  
   
- 외부에 노출되는 형식 또는 메서드의 제네릭 형식 매개 변수 이름이 대문자 "T"로 시작하지 않습니다.  
+ The name of a generic type parameter on an externally visible type or method does not start with an uppercase 'T'.  
   
-## 규칙 설명  
- 규칙에 따라 특정 프로그래밍 요소의 이름은 특정 접두사로 시작합니다.  
+## <a name="rule-description"></a>Rule Description  
+ By convention, the names of certain programming elements start with a specific prefix.  
   
- 인터페이스 이름은 대문자 'I'로 시작하고 그 다음에 다른 대문자가 와야 합니다.  이 규칙에서는 'MyInterface' 및 'IsolatedInterface' 같은 인터페이스 이름에 대한 위반을 보고합니다.  
+ Interface names should start with an uppercase 'I' followed by another uppercase letter. This rule reports violations for interface names such as 'MyInterface' and 'IsolatedInterface'.  
   
- 제네릭 형식 매개 변수 이름은 대문자 'T'로 시작해야 하고 필요에 따라 그 다음에 다른 대문자가 올 수 있습니다.  이 규칙에서는 'V' 및 'Type'과 같은 제네릭 형식 매개 변수 이름에 대한 위반을 보고합니다.  
+ Generic type parameter names should start with an uppercase 'T' and optionally may be followed by another uppercase letter. This rule reports violations for generic type parameter names such as 'V' and 'Type'.  
   
- 명명 규칙은 공용 언어 런타임을 대상으로 하는 라이브러리에 공통적인 모양을 적용합니다.  이 라이브러리는 관리 코드 개발에 대한 전문 지식을 가진 사람에 의해 개발되었으므로 새 소프트웨어 라이브러리에 익숙해지는 데 필요한 학습 기간을 단축하고 고객의 신뢰를 높여 줍니다.  
+ Naming conventions provide a common look for libraries that target the common language runtime. This reduces the learning curve that is required for new software libraries, and increases customer confidence that the library was developed by someone who has expertise in developing managed code.  
   
-## 위반 문제를 해결하는 방법  
- 식별자의 이름을 올바른 접두사를 사용하도록 다시 지정합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Rename the identifier so that it is correctly prefixed.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 예제  
- **다음 예제에서는 이름이 잘못된 인터페이스를 보여 줍니다.**  
+## <a name="example"></a>Example  
+ **The following example shows an incorrectly named interface.**  
   
- [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_1.cpp)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_1.vb)]
- [!code-cs[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_1.cs)]  
+ [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_1.cpp)] [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_1.vb)] [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_1.cs)]  
   
-## 예제  
- **다음 예제에서는 인터페이스 이름 앞에 'I'를 추가하여 위에 나와 있는 규칙 위반을 해결합니다.**  
+## <a name="example"></a>Example  
+ **The following example fixes the previous violation by prefixing the interface with 'I'.**  
   
- [!code-cs[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_2.cs)]
- [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_2.cpp)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_2.vb)]  
+ [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_2.cs)] [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_2.cpp)] [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_2.vb)]  
   
-## 예제  
- **다음 예제에서는 이름이 잘못된 제네릭 형식 매개 변수를 보여 줍니다.**  
+## <a name="example"></a>Example  
+ **The following example shows an incorrectly named generic type parameter.**  
   
- [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_3.cpp)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_3.vb)]
- [!code-cs[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_3.cs)]  
+ [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_3.cpp)] [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_3.vb)] [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_3.cs)]  
   
-## 예제  
- **다음 예제에서는 제네릭 형식 매개 변수 이름 앞에 'T'를 추가하여 위에 나와 있는 규칙 위반을 해결합니다.**  
+## <a name="example"></a>Example  
+ **The following example fixes the previous violation by prefixing the generic type parameter with 'T'.**  
   
- [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_4.cpp)]
- [!code-cs[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_4.cs)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_4.vb)]  
+ [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_4.cpp)] [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_4.cs)] [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_4.vb)]  
   
-## 관련 규칙  
- [CA1722: 식별자에는 올바른 접두사를 사용해야 합니다.](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)
+## <a name="related-rules"></a>Related Rules  
+ [CA1722: Identifiers should not have incorrect prefix](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)

@@ -1,76 +1,93 @@
 ---
-title: "IDebugReference2::EnumChildren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugReference2::EnumChildren"
-helpviewer_keywords: 
-  - "IDebugReference2::EnumChildren"
+title: IDebugReference2::EnumChildren | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugReference2::EnumChildren
+helpviewer_keywords:
+- IDebugReference2::EnumChildren
 ms.assetid: 35b3c2f3-69f4-4013-b555-f847221f62e8
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugReference2::EnumChildren
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9b1777fa80596fb0173cfa401e026264e8879ff0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-선택된 된 자식 개체에 대 한 참조 목록을 가져옵니다.  다음에 사용하도록 예약됩니다.  
+---
+# <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
+Get a list of selected children of a reference. Reserved for future use.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT EnumChildren (   
-   DEBUGREF_INFO_FLAGS        dwFields,  
-   DWORD                      dwRadix,  
-   DBG_ATTRIB_FLAGS           dwAttribFilter,  
-   LPCOLESTR                  pszNameFilter,  
-   DWORD                      dwTimeout,  
-   IEnumDebugReferenceInfo2** ppEnum  
+```cpp  
+HRESULT EnumChildren (   
+   DEBUGREF_INFO_FLAGS        dwFields,  
+   DWORD                      dwRadix,  
+   DBG_ATTRIB_FLAGS           dwAttribFilter,  
+   LPCOLESTR                  pszNameFilter,  
+   DWORD                      dwTimeout,  
+   IEnumDebugReferenceInfo2** ppEnum  
 );  
 ```  
   
-```c#  
-int EnumChildren (   
-   enum_DEBUGREF_INFO_FLAGS     dwFields,  
-   uint                         dwRadix,  
-   enum_DBG_ATTRIB_FLAGS        dwAttribFilter,  
-   string                       pszNameFilter,  
-   uint                         dwTimeout,  
-   out IEnumDebugReferenceInfo2 ppEnum  
+```csharp  
+int EnumChildren (   
+   enum_DEBUGREF_INFO_FLAGS     dwFields,  
+   uint                         dwRadix,  
+   enum_DBG_ATTRIB_FLAGS        dwAttribFilter,  
+   string                       pszNameFilter,  
+   uint                         dwTimeout,  
+   out IEnumDebugReferenceInfo2 ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dwFields`  
- \[in\] 플래그의 조합에서 [DEBUGREF\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) 열거에서 필드를 지정 하는 열거형 [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) 구조인 채워야 합니다.  
+ [in] A combination of flags from the [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) enumeration that specifies which fields in the enumerated [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) structures are to be filled in.  
   
  `dwRadix`  
- \[in\] 임의의 숫자 정보를 서식 지정에 사용할 기 수입니다.  
+ [in] The radix to be used in formatting any numerical information.  
   
  `dwAttribFilter`  
- \[in\] 플래그의 조합에서 [DBG\_ATTRIB\_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) 필터와 함께에서 사용 되는 열거형의 `pszNameFilter` 매개 변수를 열거 하는 구조인 선택 합니다.  
+ [in] A combination of flags from the [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) enumeration that is used as a filter in combination with the `pszNameFilter` parameter to select which structures are to be enumerated.  
   
  `pszNameFilter`  
- \[in\] "함께 사용 MyX"와 같은 필터를 지정 하는 문자열을 `dwAttribFilter` 매개 변수를 열거 하는 구조를 선택 합니다.  
+ [in] A string specifying a filter, such as "MyX", used in combination with the `dwAttribFilter` parameter to select the structures to be enumerated.  
   
  `dwTimeout`  
- \[in\] 이 메서드에서 반환 하기 전에 대기할 시간 \(밀리초\), 최대 시간입니다.  사용 `INFINITE` 무제한으로 대기 합니다.  
+ [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
   
  `ppEnum`  
- \[out\] 반환 된 [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) 요청 된 자식 속성 목록을 포함 하는 개체입니다.  
+ [out] Returns an [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) object that contains a list of the requested child properties.  
   
-## 반환 값  
- 항상 `E_NOTIMPL`를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ Always returns `E_NOTIMPL`.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
- [DEBUGREF\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)   
- [DBG\_ATTRIB\_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)   
+ [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)   
+ [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)   
  [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)

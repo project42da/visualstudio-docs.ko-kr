@@ -1,190 +1,204 @@
 ---
-title: "연습: WCF 데이터 서비스에 WPF 컨트롤 바인딩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "WPF 데이터 바인딩[Visual Studio], 연습"
-  - "WPF Designer, 데이터 바인딩"
-  - "WPF, Visual Studio의 데이터 바인딩"
+title: Bind WPF controls to a WCF data service | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- WPF, data binding in Visual Studio
+- WPF data binding [Visual Studio], walkthroughs
+- WPF Designer, data binding
 ms.assetid: 8823537c-82f0-41f7-bf30-705f0e5e59fd
 caps.latest.revision: 40
-caps.handback.revision: 38
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 7286f0fd313a32a72b138de0926eaede74bc7002
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: WCF 데이터 서비스에 WPF 컨트롤 바인딩
-이 연습에서는 데이터 바인딩된 컨트롤을 포함하는 WPF 응용 프로그램을 만듭니다.  이러한 컨트롤은 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]에서 캡슐화된 고객 레코드에 바인딩됩니다.  또한 고객이 레코드를 보고 업데이트하는 데 사용할 수 있는 단추도 추가합니다.  
+# <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Bind WPF controls to a WCF data service
+In this walkthrough, you will create a WPF application that contains data-bound controls. The controls are bound to customer records that are encapsulated in a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]. You will also add buttons that customers can use to view and update records.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   AdventureWorksLT 샘플 데이터베이스의 데이터에서 생성되는 엔터티 데이터 모델을 만듭니다.  
+- Creating an Entity Data Model that is generated from data in the AdventureWorksLT sample database.  
   
--   엔터티 데이터 모델의 데이터를 WPF 응용 프로그램에 표시하는 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]를 만듭니다.  
+- Creating a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] that exposes the data in the Entity Data Model to a WPF application.  
   
--   **데이터 소스** 창에서 WPF 디자이너로 항목을 끌어 데이터 바인딩된 컨트롤 집합을 만듭니다.  
+- Creating a set of data-bound controls by dragging items from the **Data Sources** window to the WPF designer.  
   
--   고객 레코드를 앞뒤로 탐색하는 데 사용할 단추를 만듭니다.  
+- Creating buttons that navigate forward and backward through customer records.  
   
--   컨트롤의 데이터 변경 내용을 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] 및 기본 데이터 소스에 저장하는 단추를 만듭니다.  
+- Creating a button that saves changes to data in the controls to the [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] and the underlying data source.  
   
-     [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
   
--   AdventureWorksLT 샘플 데이터베이스가 연결된 SQL Server 또는 SQL Server Express의 실행 중인 인스턴스 액세스 권한.  AdventureWorksLT 데이터베이스는 [CodePlex 웹 사이트](http://go.microsoft.com/fwlink/?linkid=87843)에서 다운로드할 수 있습니다.  
+-   Access to a running instance of SQL Server or SQL Server Express that has the AdventureWorksLT sample database attached to it. You can download the AdventureWorksLT database from the [CodePlex Web site](http://go.microsoft.com/fwlink/?linkid=87843).  
   
- 또한 다음 개념에 대한 지식은 연습을 완료하는 데 반드시 필요하지는 않지만 사전에 파악해 두면 유용할 수 있습니다.  
+ Prior knowledge of the following concepts is also helpful, but not required to complete the walkthrough:  
   
--   WCF Data Services.  자세한 내용은 [개요](../Topic/WCF%20Data%20Services%20Overview.md)을 참조하십시오.  
+-   WCF Data Services. For more information, see [Overview](/dotnet/framework/data/wcf/wcf-data-services-overview).  
   
--   [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]의 데이터 모델  
+-   Data models in [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)].  
   
--   엔터티 데이터 모델 및 ADO.NET Entity Framework  자세한 내용은 [Entity Framework 개요](../Topic/Entity%20Framework%20Overview.md)을 참조하십시오.  
+-   Entity Data Models and the ADO.NET Entity Framework. For more information, see [Entity Framework Overview](/dotnet/framework/data/adonet/ef/overview).  
   
--   WPF 디자이너 사용법.  자세한 내용은 [WPF 및 Silverlight 디자이너 개요](http://msdn.microsoft.com/ko-kr/570b7a5c-0c86-4326-a371-c9b63378fc62)을 참조하십시오.  
+-   Working with the WPF designer. For more information, see [WPF and Silverlight Designer Overview](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62).  
   
--   WPF 데이터 바인딩.  자세한 내용은 [데이터 바인딩 개요](../Topic/Data%20Binding%20Overview.md)을 참조하십시오.  
+-   WPF data binding. For more information, see [Data Binding Overview](/dotnet/framework/wpf/data/data-binding-overview).  
   
-## 서비스 프로젝트 만들기  
- 이 연습에서는 먼저 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]용 프로젝트를 만듭니다.  
+## <a name="create-the-service-project"></a>Create the service project  
+ Start this walkthrough by creating a project for a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)].  
   
-#### 해당 서비스 프로젝트를 만들려면  
+#### <a name="to-create-the-service-project"></a>To create the service project  
   
-1.  Visual Studio를 시작합니다.  
+1.  Start Visual Studio.  
   
-2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+2.  On the **File** menu, point to **New**, and then click **Project**.  
   
-3.  **Visual C\#** 또는 **Visual Basic**을 확장한 다음 **웹**을 선택합니다.  
+3.  Expand **Visual C#** or **Visual Basic**, and then select **Web**.  
   
-4.  **ASP.NET 웹 응용 프로그램** 프로젝트 템플릿을 선택합니다.  
+4.  Select the **ASP.NET Web Application** project template.  
   
-5.  **이름** 상자에 `AdventureWorksService`를 입력한 다음 **확인**을 클릭합니다.  
+5.  In the **Name** box, type `AdventureWorksService` and click **OK**.  
   
-     `AdventureWorksService` 프로젝트가 만들어집니다.  
+     Visual Studio creates the `AdventureWorksService` project.  
   
-6.  **솔루션 탐색기**에서 **Default.aspx**를 오른쪽 마우스 단추로 클릭하고 **삭제**를 클릭합니다.  이 연습에서는 해당 파일이 필요하지 않습니다.  
+6.  In **Solution Explorer**, right-click **Default.aspx** and select **Delete**. This file is not necessary in this walkthrough.  
   
-## 서비스에 대한 엔터티 데이터 모델 만들기  
- [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]를 사용하여 응용 프로그램에 데이터를 표시하려면 서비스에 대해 데이터 모델을 정의해야 합니다.  [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]에서는 두 가지 데이터 모델 유형이 지원됩니다. 그 중 하나는 엔터티 데이터 모델이고, 다른 하나는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 CLR\(공용 언어 런타임\) 개체를 사용하여 정의하는 사용자 지정 데이터 모델입니다.  이 연습에서는 데이터 모델에 대해 엔터티 데이터 모델을 만듭니다.  
+## <a name="create-an-entity-data-model-for-the-service"></a>Create an Entity Data Model for the service  
+ To expose data to an application by using a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)], you must define a data model for the service. The [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] supports two types of data models: Entity Data Models, and custom data models that are defined by using common language runtime (CLR) objects that implement the <xref:System.Linq.IQueryable%601> interface. In this walkthrough, you create an Entity Data Model for the data model.  
   
-#### 엔터티 데이터 모델을 만들려면  
+#### <a name="to-create-an-entity-data-model"></a>To create an Entity Data Model  
   
-1.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
+1.  On the **Project** menu, click **Add New Item**.  
   
-2.  설치된 템플릿 목록에서 **데이터**를 클릭하고 **ADO.NET 엔터티 데이터 모델** 프로젝트 항목을 선택합니다.  
+2.  In the Installed Templates list, click **Data**, and then select the **ADO.NET Entity Data Model** project item.  
   
-3.  이름을 `AdventureWorksModel.edmx`로 변경하고 **추가**를 클릭합니다.  
+3.  Change the name to `AdventureWorksModel.edmx`, and click **Add**.  
   
-     **엔터티 데이터 모델 마법사**가 열립니다.  
+     The **Entity Data Model** wizard opens.  
   
-4.  **모델 콘텐츠 선택** 페이지에서 **데이터베이스에서 생성**을 클릭하고 **다음**을 클릭합니다.  
+4.  On the **Choose Model Contents** page, click **Generate from database**, and click **Next**.  
   
-5.  **데이터 연결 선택** 페이지에서 다음 옵션 중 하나를 선택합니다.  
+5.  On the **Choose Your Data Connection** page, select one of the following options:  
   
-    -   AdventureWorksLT 샘플 데이터베이스에 대한 데이터 연결이 드롭다운 목록에 표시되면 해당 연결을 선택합니다.  
+    -   If a data connection to the AdventureWorksLT sample database is available in the drop-down list, select it.  
   
-         또는  
+    -   Click **New Connection**, and create a connection to the AdventureWorksLT database.  
   
-    -   **새 연결**을 클릭하고 AdventureWorksLT 데이터베이스에 대한 연결을 만듭니다.  
+6.  On the **Choose Your Data Connection** page, make sure that the **Save entity connection settings in App.Config as** option is selected, and then click **Next**.  
   
-6.  **데이터 연결 선택** 페이지에서 **다른 이름으로 App.Config의 엔터티 연결 설정 저장** 옵션이 선택되어 있는지 확인하고 **다음**을 클릭합니다.  
+7.  On the **Choose Your Database Objects** page, expand **Tables**, and then select the **SalesOrderHeader** table.  
   
-7.  **데이터베이스 개체 선택** 페이지에서 **테이블**을 확장하고 **SalesOrderHeader** 테이블을 선택합니다.  
+8.  Click **Finish**.  
   
-8.  **마침**을 클릭합니다.  
+## <a name="create-the-service"></a>Create the service  
+ Create a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] to expose the data in the Entity Data Model to a WPF application.  
   
-## 서비스 만들기  
- 엔터티 데이터 모델의 데이터를 WPF 응용 프로그램에 표시하는 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] 만들기  
+#### <a name="to-create-the-service"></a>To create the service  
   
-#### 해당 서비스를 만들려면  
+1.  On the **Project** menu, select **Add New Item**.  
   
-1.  **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+2.  In the Installed Templates list, click **Web**, and then select the **WCF Data Service** project item.  
   
-2.  설치된 템플릿 목록에서 **웹**을 클릭하고 **WCF 데이터 서비스** 프로젝트 항목을 선택합니다.  
+3.  In the **Name** box, type `AdventureWorksService.svc`, and click **Add**.  
   
-3.  **이름** 상자에 `AdventureWorksService.svc`를 입력한 다음 **추가**를 클릭합니다.  
+     Visual Studio adds the `AdventureWorksService.svc` to the project.  
   
-     `AdventureWorksService.svc`가 프로젝트에 추가됩니다.  
+## <a name="configure-the-service"></a>Configure the service  
+ You must configure the service to operate on the Entity Data Model that you created.  
   
-## 서비스 구성  
- 작성한 엔터티 데이터 모델에 대해 작동하도록 서비스를 구성해야 합니다.  
+#### <a name="to-configure-the-service"></a>To configure the service  
   
-#### 서비스를 구성하려면  
+1.  In the `AdventureWorks.svc` code file, replace the `AdventureWorksService` class declaration with the following code.  
   
-1.  `AdventureWorks.svc` 코드 파일에서 `AdventureWorksService` 클래스 선언을 다음 코드로 바꿉니다.  
+     [!code-csharp[Data_WPFWCF#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_1.cs)]  [!code-vb[Data_WPFWCF#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_1.vb)]  
   
-     [!code-cs[Data_WPFWCF#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_1.cs)]
-     [!code-vb[Data_WPFWCF#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_1.vb)]  
+     This code updates the `AdventureWorksService` class, so that it derives from a <xref:System.Data.Services.DataService%601> that operates on the `AdventureWorksLTEntities` object context class in your Entity Data Model. It also updates the `InitializeService` method to allow clients of the service full read/write access to the `SalesOrderHeader` entity.  
   
-     이 코드는 `AdventureWorksService` 클래스가 엔터티 데이터 모델의 `AdventureWorksLTEntities` 개체 컨텍스트 클래스에서 작동하는 <xref:System.Data.Services.DataService%601>에서 파생되도록 업데이트합니다.  또한 서비스의 클라이언트에 `SalesOrderHeader` 엔터티에 대한 모든 읽기\/쓰기 권한을 허용하도록 `InitializeService` 메서드를 업데이트합니다.  
+2.  Build the project, and verify that it builds without errors.  
   
-2.  프로젝트를 빌드하고 오류가 없이 빌드되는지 확인합니다.  
+## <a name="create-the-wpf-client-application"></a>Create the WPF client application  
+ To display the data from the [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)], create a new WPF application with a data source that is based on the service. Later in this walkthrough, you will add data-bound controls to the application.  
   
-## WPF 클라이언트 응용 프로그램 만들기  
- [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]에서 데이터를 표시하려면 서비스를 기반으로 하는 데이터 소스를 사용하여 새 WPF 응용 프로그램을 만듭니다.  이 연습 뒷부분에서 응용 프로그램에 데이터 바인딩된 컨트롤을 추가합니다.  
+#### <a name="to-create-the-wpf-client-application"></a>To create the WPF client application  
   
-#### WPF 클라이언트 응용 프로그램을 만들려면  
+1.  In **Solution Explorer**, right-click the solution node, click **Add**, and select **New Project**.  
   
-1.  **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가**를 클릭한 다음 **새 프로젝트**를 선택합니다.  
+2.  In the **New Project** dialog, expand **Visual C#** or **Visual Basic**, and then select **Windows**.  
   
-2.  **새 프로젝트** 대화 상자에서 **Visual C\#** 또는 **Visual Basic**을 확장한 다음 **Windows**를 선택합니다.  
+3.  Select the **WPF Application** project template.  
   
-3.  **WPF 응용 프로그램** 프로젝트 템플릿을 선택합니다.  
+4.  In the **Name** box, type `AdventureWorksSalesEditor`, and click **OK**.  
   
-4.  **이름** 상자에 `AdventureWorksSalesEditor`를 입력한 다음 **확인**을 클릭합니다.  
+     Visual Studio adds the `AdventureWorksSalesEditor` project to the solution.  
   
-     `AdventureWorksSalesEditor` 프로젝트가 솔루션에 추가됩니다.  
+5.  On the **Data** menu, click **Show Data Sources**.  
   
-5.  **데이터** 메뉴에서 **데이터 소스 표시**를 클릭합니다.  
+     The **Data Sources** window opens.  
   
-     **데이터 소스** 창이 열립니다.  
+6.  In the **Data Sources** window, click **Add New Data Source**.  
   
-6.  **데이터 소스** 창에서 **새 데이터 소스 추가**를 클릭합니다.  
+     The **Data Source Configuration** wizard opens.  
   
-     **데이터 소스 구성 마법사**가 열립니다.  
+7.  In the **Choose a Data Source Type** page of the wizard, select **Service**, and then click **Next**.  
   
-7.  마법사의 **데이터 소스 형식 선택** 페이지에서 **서비스**를 선택한 후 **다음**을 클릭합니다.  
+8.  In the **Add Service Reference** dialog box, click **Discover**.  
   
-8.  **서비스 참조 추가** 대화 상자에서 **검색**을 클릭합니다.  
+     Visual Studio searches the current solution for available services, and adds `AdventureWorksService.svc` to the list of available services in the **Services** box.  
   
-     Visual Studio는 현재 사용 가능한 서비스에 대한 솔루션을 검색하고 사용 가능한 서비스 목록의 **서비스** 상자에 `AdventureWorksService.svc`를 추가합니다.  
+9. In the **Namespace** box, type `AdventureWorksService`.  
   
-9. **네임스페이스** 상자에 `AdventureWorksService`를 입력합니다.  
+10. In the **Services** box, click **AdventureWorksService.svc**, and then click **OK**.  
   
-10. **서비스** 상자에서 **AdventureWorksService.svc**를 클릭한 다음 **확인**을 클릭합니다.  
+     Visual Studio downloads the service information, and then returns to the **Data Source Configuration** wizard.  
   
-     서비스 정보가 다운로드된 다음 **데이터 소스 구성 마법사**가 다시 표시됩니다.  
+11. In the **Add Service Reference** page, click **Finish**.  
   
-11. **서비스 참조 추가** 페이지에서 **마침**을 클릭합니다.  
+     Visual Studio adds nodes that represent the data returned by the service to the **Data Sources** window.  
   
-     서비스에서 반환하는 데이터를 나타내는 노드가 **데이터 소스** 창에 추가됩니다.  
+## <a name="define-the-user-interface-of-the-window"></a>Define the user interface of the window  
+ Add several buttons to the window by modifying the XAML in the WPF designer. Later in this walkthrough, you will add code that enables users to view and update sales records by using these buttons.  
   
-## 창의 사용자 인터페이스 정의  
- WPF 디자이너에서 XAML을 수정하여 창에 여러 단추를 추가합니다.  이 연습 뒷부분에서 사용자가 이러한 단추를 사용해 판매 레코드를 보고 업데이트할 수 있도록 하는 코드를 추가합니다.  
+#### <a name="to-create-the-window-layout"></a>To create the window layout  
   
-#### 창 레이아웃을 만들려면  
+1.  In **Solution Explorer**, double-click **MainWindow.xaml**.  
   
-1.  **솔루션 탐색기**에서 MainWindow.xaml을 두 번 클릭합니다.  
+     The window opens in the WPF designer.  
   
-     WPF 디자이너에서 창이 열립니다.  
+2.  In the [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] view of the designer, add the following code between the `<Grid>` tags:  
   
-2.  디자이너의 [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] 뷰에서 `<Grid>` 태그 사이에 다음 코드를 추가합니다.  
-  
-    ```  
+    ```xaml  
     <Grid.RowDefinitions>  
         <RowDefinition Height="75" />  
         <RowDefinition Height="525" />  
@@ -194,18 +208,18 @@ manager: "ghogen"
     <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>  
     ```  
   
-3.  프로젝트를 빌드합니다.  
+3.  Build the project.  
   
-## 데이터 바인딩된 컨트롤 만들기  
- **데이터 소스** 창에서 디자이너로 `SalesOrderHeaders` 노드를 끌어 고객 레코드를 표시하는 컨트롤을 만듭니다.  
+## <a name="create-the-data-bound-controls"></a>Create the data-bound controls  
+ Create controls that display customer records by dragging the `SalesOrderHeaders` node from the **Data Sources** window to the designer.  
   
-#### 데이터 바인딩된 컨트롤을 만들려면  
+#### <a name="to-create-the-data-bound-controls"></a>To create the data-bound controls  
   
-1.  **데이터 소스** 창에서 **SalesOrderHeaders** 노드의 드롭다운 메뉴를 클릭하고 **정보**를 선택합니다.  
+1.  In the **Data Sources** window, click the drop-down menu for the **SalesOrderHeaders** node, and select **Details**.  
   
-2.  **SalesOrderHeaders** 노드를 확장합니다.  
+2.  Expand the **SalesOrderHeaders** node.  
   
-3.  이 예에서는 일부 필드를 표시하지 않을 것이므로 다음 노드 옆의 드롭다운 메뉴를 클릭하고 **없음**을 선택합니다.  
+3.  For this example, some fields will not be displayed, so click the drop-down menu next to the following nodes and select **None**:  
   
     -   **CreditCardApprovalCode**  
   
@@ -217,114 +231,110 @@ manager: "ghogen"
   
     -   **rowguid**  
   
-     이 작업을 수행하면 다음 단계에서 이러한 노드에 대해 데이터 바인딩된 컨트롤이 작성되지 않습니다.  이 연습에서는 최종 사용자가 이 데이터를 확인하지 않아도 된다고 가정합니다.  
+     This action prevents Visual Studio from creating data-bound controls for these nodes in the next step. For this walkthrough, assume that the end user does not need to see this data.  
   
-4.  **데이터 소스** 창에서 단추가 포함된 행 아래의 데이터 표 행으로 **SalesOrderHeaders** 노드를 끌어 옵니다.  
+4.  From the **Data Sources** window, drag the **SalesOrderHeaders** node to the grid row under the row that contains the buttons.  
   
-     **Product** 테이블의 데이터에 바인딩되는 컨트롤 집합을 만드는 코드와 XAML이 생성됩니다.  생성된 XAML 및 코드에 대한 자세한 내용은 [Visual Studio에서 데이터에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)을 참조하세요.  
+     Visual Studio generates XAML and code that creates a set of controls that are bound to data in the **Product** table. For more information about the generated XAML and code, see [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
   
-5.  디자이너에서 **고객 ID** 레이블 옆의 텍스트 상자를 클릭합니다.  
+5.  In the designer, click the text box next to the **Customer ID** label.  
   
-6.  **속성** 창에서 **IsReadOnly** 속성 옆의 확인란을 선택합니다.  
+6.  In the **Properties** window, select the check box next to the **IsReadOnly** property.  
   
-7.  다음의 각 텍스트 상자에 대해 **IsReadOnly** 속성을 설정합니다.  
+7.  Set the **IsReadOnly** property for each of the following text boxes:  
   
-    -   **구매 주문 번호**  
+    -   **Purchase Order Number**  
   
-    -   **판매 주문 ID**  
+    -   **Sales Order ID**  
   
-    -   **판매 주문 번호**  
+    -   **Sales Order Number**  
   
-## 서비스에서 데이터 로드  
- 서비스 프록시 개체를 사용하여 서비스에서 판매 데이터를 로드한 다음 반환된 데이터를 WPF 창에서 <xref:System.Windows.Data.CollectionViewSource>의 데이터 소스에 할당합니다.  
+## <a name="load-the-data-from-the-service"></a>Load the data from the service  
+ Use the service proxy object to load sales data from the service. Then assign the returned data to the data source for the <xref:System.Windows.Data.CollectionViewSource> in the WPF window.  
   
-#### 서비스에서 데이터를 로드하려면  
+#### <a name="to-load-the-data-from-the-service"></a>To load the data from the service  
   
-1.  디자이너에서 **MainWindow** 텍스트를 두 번 클릭하여 `Window_Loaded` 이벤트 처리기를 만듭니다.  
+1.  In the designer, to create the `Window_Loaded` event handler, double-click the text that reads: **MainWindow**.  
   
-2.  이벤트 처리기를 다음 코드로 바꿉니다.  이 코드의 *localhost* 주소는 사용 중인 개발 컴퓨터의 로컬 호스트 주소로 바꿔야 합니다.  
+2.  Replace the event handler with the following code. Make sure that you replace the *localhost* address in this code with the local host address on your development computer.  
   
-     [!code-cs[Data_WPFWCF#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_2.cs)]
-     [!code-vb[Data_WPFWCF#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_2.vb)]  
+     [!code-csharp[Data_WPFWCF#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_2.cs)]  [!code-vb[Data_WPFWCF#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_2.vb)]  
   
-## 판매 레코드 탐색  
- 사용자가 **\<** 및 **\>** 단추를 사용하여 판매 레코드를 스크롤할 수 있도록 하는 코드를 추가합니다.  
+## <a name="navigate-sales-records"></a>Navigate sales records  
+ Add code that enables users to scroll through sales records by using the **\<** and **>** buttons.  
   
-#### 사용자가 판매 레코드를 탐색할 수 있도록 설정하려면  
+#### <a name="to-enable-users-to-navigate-sales-records"></a>To enable users to navigate sales records  
   
-1.  디자이너의 창 화면에서 **\<** 단추를 두 번 클릭합니다.  
+1.  In the designer, double-click the **<** button on the window surface.  
   
-     코드 숨김 파일이 열리고 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에 대해 새 `backButton_Click` 이벤트 처리기가 만들어집니다.  
+     Visual Studio opens the code-behind file, and creates a new `backButton_Click` event handler for the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.  
   
-2.  다음 코드를 생성된 `backButton_Click` 이벤트 처리기에 추가합니다.  
+2.  Add the following code to the generated `backButton_Click` event handler:  
   
-     [!code-cs[Data_WPFWCF#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_3.cs)]
-     [!code-vb[Data_WPFWCF#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_3.vb)]  
+     [!code-csharp[Data_WPFWCF#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_3.cs)]  [!code-vb[Data_WPFWCF#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_3.vb)]  
   
-3.  디자이너로 돌아온 다음 **\>** 단추를 두 번 클릭합니다.  
+3.  Return to the designer, and double-click the **>** button.  
   
-     코드 숨김 파일이 열리고 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에 대해 새 `nextButton_Click` 이벤트 처리기가 만들어집니다.  
+     Visual Studio opens the code-behind file, and creates a new `nextButton_Click` event handler for the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.  
   
-4.  다음 코드를 생성된 `nextButton_Click` 이벤트 처리기에 추가합니다.  
+4.  Add the following code to the generated `nextButton_Click` event handler:  
   
-     [!code-cs[Data_WPFWCF#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_4.cs)]
-     [!code-vb[Data_WPFWCF#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_4.vb)]  
+     [!code-csharp[Data_WPFWCF#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_4.cs)]  [!code-vb[Data_WPFWCF#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_4.vb)]  
   
-## 판매 레코드 변경 내용 저장  
- 사용자가 **변경 내용 저장** 단추를 사용하여 판매 레코드 변경 내용을 확인 및 저장할 수 있도록 하는 코드를 추가합니다.  
+## <a name="saving-changes-to-sales-records"></a>Saving changes to sales records  
+ Add code that enables users to both view and save changes to sales records by using the **Save changes** button.  
   
-#### 판매 레코드 변경 내용을 저장하는 기능을 추가하려면  
+#### <a name="to-add-the-ability-to-save-changes-to-sales-records"></a>To add the ability to save changes to sales records  
   
-1.  디자이너에서 **변경 내용 저장** 단추를 두 번 클릭합니다.  
+1.  In the designer, double-click the **Save Changes** button.  
   
-     코드 숨김 파일이 열리고 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에 대해 새 `saveButton_Click` 이벤트 처리기가 만들어집니다.  
+     Visual Studio opens the code-behind file, and creates a new `saveButton_Click` event handler for the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.  
   
-2.  다음 코드를 `saveButton_Click` 이벤트 처리기에 추가합니다.  
+2.  Add the following code to the `saveButton_Click` event handler.  
   
-     [!code-cs[Data_WPFWCF#5](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_5.cs)]
-     [!code-vb[Data_WPFWCF#5](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_5.vb)]  
+     [!code-csharp[Data_WPFWCF#5](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_5.cs)]  [!code-vb[Data_WPFWCF#5](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_5.vb)]  
   
-## 응용 프로그램 테스트  
- 응용 프로그램을 빌드하고 실행하여 고객 레코드를 보고 업데이트할 수 있는지 확인합니다.  
+## <a name="testing-the-application"></a>Testing the application  
+ Build and run the application to verify that you can view and update customer records.  
   
-#### 응용 프로그램을 테스트하려면  
+#### <a name="to-test-the-application"></a>To test the application  
   
-1.  **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  솔루션이 오류 없이 빌드되는지 확인합니다.  
+1.  On **Build** menu, click **Build Solution**. Verify that the solution builds without errors.  
   
-2.  **Ctrl\+F5**를 누릅니다.  
+2.  Press **Ctrl+F5**.  
   
-     **AdventureWorksService** 프로젝트가 디버그되지 않고 시작됩니다.  
+     Visual Studio starts the **AdventureWorksService** project, without debugging it.  
   
-3.  **솔루션 탐색기**에서 **AdventureWorksSalesEditor** 프로젝트를 마우스 오른쪽 단추로 클릭합니다.  
+3.  In **Solution Explorer**, right-click the **AdventureWorksSalesEditor** project.  
   
-4.  상황에 맞는 메뉴의 **디버그**에서 **새 인스턴스 시작**을 클릭합니다.  
+4.  On the context menu, under **Debug**, click **Start new instance**.  
   
-     응용 프로그램이 실행됩니다.  다음 사항을 확인합니다.  
+     The application runs. Verify the following:  
   
-    -   판매 주문 ID가 **71774**인 첫 번째 판매 레코드의 서로 다른 데이터 필드가 텍스트 상자에 표시됩니다.  
+    -   The text boxes display different fields of data from the first sales record, which has the sales order ID **71774**.  
   
-    -   **\>** 또는 **\<** 단추를 클릭하여 다른 판매 레코드를 탐색할 수 있습니다.  
+    -   You can click the **>** or **<** buttons to navigate through other sales records.  
   
-5.  판매 레코드 중 하나의 **설명** 상자에 텍스트를 입력하고 **변경 내용 저장**을 클릭합니다.  
+5.  In one of the sales records, type some text in the **Comment** box, and then click **Save changes**.  
   
-6.  응용 프로그램을 닫았다가 Visual Studio에서 다시 시작합니다.  
+6.  Close the application, and then start the application again from Visual Studio.  
   
-7.  변경한 판매 레코드로 이동하여 응용 프로그램을 닫았다가 다시 열어도 변경 내용이 그대로 유지되는지 확인합니다.  
+7.  Navigate to the sales record that you changed, and verify that the change persists after you close and reopen the application.  
   
-8.  응용 프로그램을 닫습니다.  
+8.  Close the application.  
   
-## 다음 단계  
- 이 연습을 완료하고 나면 다음과 같은 관련 작업을 수행할 수 있습니다.  
+## <a name="next-steps"></a>Next Steps  
+ After completing this walkthrough, you can perform the following related tasks:  
   
--   Visual Studio에서 **데이터 소스** 창을 사용하여 WPF 컨트롤을 다른 형식의 데이터 소스에 바인딩합니다.  자세한 내용은 [연습: 데이터 집합에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-a-dataset.md)을 참조하십시오.  
+-   Learn how to use the **Data Sources** window in Visual Studio to bind WPF controls to other types of data sources. For more information, see [Bind WPF controls to a dataset](../data-tools/bind-wpf-controls-to-a-dataset.md).  
   
--   Visual Studio에서 **데이터 소스** 창을 사용하여 관련 데이터, 즉 부모\-자식 관계가 적용된 데이터를 WPF 컨트롤에 표시합니다.  자세한 내용은 [연습: WPF 응용 프로그램에서 관련 데이터 표시](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md)을 참조하십시오.  
+-   Learn how to use the **Data Sources** window in Visual Studio to display related data (that is, data in a parent-child relationship) in WPF controls. For more information, see [Walkthrough: Displaying Related Data in a WPF Application](../data-tools/display-related-data-in-wpf-applications.md).  
   
-## 참고 항목  
- [Visual Studio에서 데이터에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   
- [방법: Visual Studio에서 데이터에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-data-in-visual-studio2.md)   
- [연습: 데이터 집합에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-a-dataset.md)   
- [개요](../Topic/WCF%20Data%20Services%20Overview.md)   
- [Entity Framework 개요](../Topic/Entity%20Framework%20Overview.md)   
- [WPF 및 Silverlight 디자이너 개요](http://msdn.microsoft.com/ko-kr/570b7a5c-0c86-4326-a371-c9b63378fc62)   
- [데이터 바인딩 개요](../Topic/Data%20Binding%20Overview.md)
+## <a name="see-also"></a>See Also  
+ [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
+ [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
+ [Bind WPF controls to a dataset](../data-tools/bind-wpf-controls-to-a-dataset.md)   
+ [Overview](/dotnet/framework/data/wcf/wcf-data-services-overview)   
+ [Entity Framework Overview](/dotnet/framework/data/adonet/ef/overview)   
+ [WPF and Silverlight Designer Overview](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)   
+ [Data Binding Overview](/dotnet/framework/wpf/data/data-binding-overview)

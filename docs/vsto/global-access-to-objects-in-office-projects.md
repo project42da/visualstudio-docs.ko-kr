@@ -1,63 +1,68 @@
 ---
-title: "Office 프로젝트의 개체에 전역 액세스"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ThisDocument_Shutdown"
-  - "ThisDocument_Startup"
-  - "전역 클래스, 개체 전역 액세스"
-  - "워크시트[Visual Studio에서 Office 개발], 전역 액세스"
-  - "문서[Visual Studio에서 Office 개발], 전역 액세스"
-  - "이벤트 처리기[Visual Studio에서 Office 개발]"
-  - "ThisWorkbook_Startup"
-  - "응용 프로그램 수준 추가 기능[Visual Studio에서 Office 개발]"
-  - "추가 기능[Visual Studio에서 Office 개발], 이벤트"
-  - "통합 문서[Visual Studio에서 Office 개발], 전역 액세스"
-  - "ThisWorkbook_Shutdown"
-  - "문서 수준 사용자 지정[Visual Studio에서 Office 개발]"
-  - "Startup 이벤트"
-  - "Shutdown 이벤트"
-  - "프로젝트[Visual Studio에서 Office 개발], 전역 액세스"
-  - "Office 문서[Visual Studio에서 Office 개발], 전역 액세스"
-  - "ThisAddin_Startup"
-  - "이벤트[Visual Studio에서 Office 개발]"
-  - "ThisAddIn_Shutdown"
+title: Global Access to Objects in Office Projects | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ThisDocument_Shutdown
+- ThisDocument_Startup
+- Globals class, object global access
+- worksheets [Office development in Visual Studio], global access
+- documents [Office development in Visual Studio], global access
+- event handlers [Office development in Visual Studio]
+- ThisWorkbook_Startup
+- application-level addins [Office development in Visual Studio]
+- addins [Office development in Visual Studio], events
+- workbooks [Office development in Visual Studio], global access
+- ThisWorkbook_Shutdown
+- document-level customizations [Office development in Visual Studio]
+- Startup event
+- Shutdown event
+- projects [Office development in Visual Studio], global access
+- Office documents [Office development in Visual Studio, global access
+- ThisAddin_Startup
+- events [Office development in Visual Studio]
+- ThisAddIn_Shutdown
 ms.assetid: f6a7f0ef-75d0-4a9b-9aec-be95ffa26adf
 caps.latest.revision: 55
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 54
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a166e8ce7dc6315d9e150e8c7a1a11d135fd5517
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# Office 프로젝트의 개체에 전역 액세스
-  Office 프로젝트를 만들면 Visual Studio에서 `Globals`라는 클래스를 프로젝트에 자동으로 생성합니다.`Globals` 클래스를 사용하여 프로젝트의 모든 코드에서 런타임에 여러 프로젝트 항목에 액세스할 수 있습니다.  
+# <a name="global-access-to-objects-in-office-projects"></a>Global Access to Objects in Office Projects
+  When you create an Office project, Visual Studio automatically generates a class named `Globals` in the project. You can use the `Globals` class to access several different project items at run time from any code in the project.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## Globals 클래스를 사용하는 방법  
- `Globals`는 프로젝트의 특정 항목에 대한 참조를 유지하는 정적 클래스입니다.`Globals` 클래스를 사용하면 런타임에 프로젝트의 코드에서 다음과 같은 항목에 액세스할 수 있습니다.  
+## <a name="how-to-use-the-globals-class"></a>How to Use the Globals Class  
+ `Globals` is a static class that keeps references to certain items in your project. By using the `Globals` class, you can access the following items from any code in the project at run time:  
   
--   Excel 통합 문서 또는 서식 파일 프로젝트의 `ThisWorkbook` 및 `Sheet`*n* 클래스.`Globals.ThisWorkbook` 및 `Sheet`*n* 속성을 사용하여 이러한 개체에 액세스할 수 있습니다.  
+-   The `ThisWorkbook` and `Sheet`*n* classes in an Excel workbook or template project. You can access these objects by using the `Globals.ThisWorkbook` and `Sheet`*n* properties.  
   
--   Word 문서 또는 서식 파일 프로젝트의 `ThisDocument` 클래스.`Globals.ThisDocument` 속성을 사용하여 이 개체에 액세스할 수 있습니다.  
+-   The `ThisDocument` class in a Word document or template project. You can access this object by using the `Globals.ThisDocument` property.  
   
--   VSTO 추가 기능 프로젝트의 `ThisAddIn` 클래스입니다.`Globals.ThisAddIn` 속성을 사용하여 이 개체에 액세스할 수 있습니다.  
+-   The `ThisAddIn` class in an VSTO Add-in project. You can access this object by using the `Globals.ThisAddIn` property.  
   
--   리본 디자이너를 사용하여 사용자 지정한 프로젝트의 모든 리본.`Globals.Ribbons` 속성을 사용하여 리본에 액세스할 수 있습니다. 자세한 내용은 [런타임에 리본 메뉴에 액세스](../vsto/accessing-the-ribbon-at-run-time.md)을 참조하십시오.  
+-   All Ribbons in your project that you customized by using the Ribbon Designer. You can access the Ribbons by using the `Globals.Ribbons` property. For more information, see [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md).  
   
--   Outlook VSTO 추가 기능 프로젝트의 모든 Outlook 양식 영역입니다.`Globals.FormRegions` 속성을 사용하여 양식 영역에 액세스할 수 있습니다. 자세한 내용은 [런타임에 양식 영역 액세스](../vsto/accessing-a-form-region-at-run-time.md)을 참조하세요.  
+-   All Outlook form regions in an Outlook VSTO Add-in project. You can access the form regions by using the `Globals.FormRegions` property. For more information, see [Accessing a Form Region at Run Time](../vsto/accessing-a-form-region-at-run-time.md).  
   
--   리본 컨트롤을 만들고 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]를 대상으로 하는 프로젝트에서 런타임에 호스트 항목을 만들 수 있는 팩터리 개체.`Globals.Factory` 속성을 사용하여 이 개체에 액세스할 수 있습니다. 이 개체는 다음 인터페이스 중 하나를 구현하는 클래스의 인스턴스입니다.  
+-   A factory object that enables you to create Ribbon controls, and host items at run time in projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]. You can access this object by using the `Globals.Factory` property. This object is an instance of a class that implements one the following interfaces:  
   
     -   <xref:Microsoft.Office.Tools.Factory>  
   
@@ -67,24 +72,23 @@ caps.handback.revision: 54
   
     -   <xref:Microsoft.Office.Tools.Word.Factory>  
   
- 예를 들어 사용자가 Excel에 대한 문서 수준 프로젝트의 작업창에서 단추를 클릭하면 `Globals.Sheet1` 속성을 사용하여 `Sheet1`의 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤에 텍스트를 삽입할 수 있습니다.  
+ For example, you can use the `Globals.Sheet1` property to insert text into a <xref:Microsoft.Office.Tools.Excel.NamedRange> control on `Sheet1` when a user clicks a button on the actions pane in a document-level project for Excel.  
   
- [!code-csharp[Trin_VstcoreProgramming#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgramming/CS/Sheet1.cs#1)]
- [!code-vb[Trin_VstcoreProgramming#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgramming/VB/Sheet1.vb#1)]  
+ [!code-vb[Trin_VstcoreProgramming#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#1)] [!code-csharp[Trin_VstcoreProgramming#1](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#1)]  
   
-## Globals 클래스 초기화  
- 문서 또는 VSTO 추가 기능이 완전히 초기화되기 전에 `Globals` 클래스를 사용하려고 시도하는 코드는 런타임 예외를 throw할 수 있습니다. 예를 들어 `Globals` 클래스는 선언된 개체가 인스턴스화되기 전에 모든 호스트 항목에 대한 참조로 초기화되지 않을 수 있으므로 클래스 수준 변수를 선언할 때 `Globals`를 사용하면 실패할 수 있습니다.  
+## <a name="initializing-the-globals-class"></a>Initializing the Globals Class  
+ Code that attempts to use the `Globals` class before the document or VSTO Add-in is completely initialized might throw a run time exception. For example, using `Globals` when declaring a class-level variable might fail because the `Globals` class might not be initialized with references to all of the host items before the declared object is instantiated.  
   
 > [!NOTE]  
->  `Globals` 클래스는 디자인 타임에 초기화되지 않지만 컨트롤 인스턴스는 디자이너에서 만듭니다. 즉, 사용자 정의 컨트롤 클래스 내부에서 `Globals` 클래스의 속성을 사용하는 사용자 정의 컨트롤을 만드는 경우 반환된 개체를 사용하기 전에 속성에서 **null**을 반환하는지 여부를 확인해야 합니다.  
+>  The `Globals` class is never initialized at design time, but control instances are created by the designer. This means that if you create a user control that uses a property of the `Globals` class from inside a user control class, you must whether the property returns **null** before you try to use the returned object.  
   
-## 참고 항목  
- [런타임에 리본 메뉴에 액세스](../vsto/accessing-the-ribbon-at-run-time.md)   
- [런타임에 양식 영역 액세스](../vsto/accessing-a-form-region-at-run-time.md)   
- [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
- [문서 호스트 항목](../vsto/document-host-item.md)   
- [통합 문서 호스트 항목](../vsto/workbook-host-item.md)   
- [워크시트 호스트 항목](../vsto/worksheet-host-item.md)   
- [Office 솔루션에서 코드 작성](../vsto/writing-code-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
+ [Accessing a Form Region at Run Time](../vsto/accessing-a-form-region-at-run-time.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [Document Host Item](../vsto/document-host-item.md)   
+ [Workbook Host Item](../vsto/workbook-host-item.md)   
+ [Worksheet Host Item](../vsto/worksheet-host-item.md)   
+ [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   
   

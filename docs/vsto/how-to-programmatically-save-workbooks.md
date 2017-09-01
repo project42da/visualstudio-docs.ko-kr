@@ -1,95 +1,94 @@
 ---
-title: "방법: 프로그래밍 방식으로 통합 문서 저장"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "통합 문서, 저장"
-  - "통합 문서, 백업 복사본 저장"
-  - "통합 문서, XML 형식으로 저장"
+title: 'How to: Programmatically Save Workbooks | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- workbooks, saving in XML format
+- workbooks, saving
+- workbooks, saving backup copies
 ms.assetid: 991ccf9b-5213-4094-9030-284ec167bdcc
 caps.latest.revision: 50
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 49
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: b20aa9c1bfa93295420f4a50803abb31e0d3da07
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 통합 문서 저장
-  통합 문서를 저장하는 방법에는 여러 가지가 있습니다.  경로를 변경하지 않고 통합 문서를 저장할 수 있습니다.  통합 문서가 이전에 저장되지 않은 경우 경로를 지정하여 통합 문서를 저장해야 합니다.  명시적 경로 없이 Microsoft Office Excel은 파일을 만들 때 지정된 이름으로 현재 폴더에 파일을 저장합니다.  메모리에 열려 있는 통합 문서를 수정하지 않고 통합 문서의 복사본을 저장할 수도 있습니다.  
+# <a name="how-to-programmatically-save-workbooks"></a>How to: Programmatically Save Workbooks
+  There are several ways to save a workbook. You can save a workbook without changing the path. If the workbook has not been saved before, you should save the workbook by specifying a path. Without an explicit path, Microsoft Office Excel saves the file in the current folder with the name it was given when it was created. You can also save a copy of the workbook without modifying the open workbook in memory.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## 경로를 변경하지 않고 통합 문서 저장  
+## <a name="saving-a-workbook-without-changing-the-path"></a>Saving a Workbook Without Changing the Path  
   
-#### 문서 수준 사용자 지정과 연결된 통합 문서를 저장하려면  
+#### <a name="to-save-a-workbook-associated-with-a-document-level-customization"></a>To save a workbook associated with a document-level customization  
   
-1.  ThisWorkbook 클래스의 <xref:Microsoft.Office.Tools.Excel.Workbook.Save%2A> 메서드를 호출합니다.  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.Workbook.Save%2A> method of the ThisWorkbook class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/ThisWorkbook.cs#4)]
-     [!code-vb[Trin_VstcoreExcelAutomation#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/ThisWorkbook.vb#4)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#4](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#4)]  [!code-vb[Trin_VstcoreExcelAutomation#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#4)]  
   
-#### VSTO 추가 기능에서 활성 통합 문서를 저장하려면  
+#### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>To save the active workbook in a VSTO Add-in  
   
-1.  <xref:Microsoft.Office.Interop.Excel._Workbook.Save%2A> 메서드를 호출하여 활성 통합 문서를 저장합니다.  다음 코드 예제를 사용하려면 Excel용 VSTO 추가 기능 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
+1.  Call the <xref:Microsoft.Office.Interop.Excel._Workbook.Save%2A> method to save the active workbook. To use the following code example, run it in the `ThisAddIn` class in a VSTO Add-in project for Excel.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#3)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#3)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#3](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#3)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#3](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#3)]  
   
-## 새 경로를 사용하여 통합 문서 저장  
- 필요에 따라 파일 형식, 암호, 액세스 모드 등을 지정하여 지정된 통합 문서를 새 위치나 새 이름으로 저장할 수 있습니다.  
+## <a name="saving-a-workbook-with-a-new-path"></a>Saving a Workbook with a New Path  
+ You can save the specified workbook to a new location or with a new name, optionally specifying a file format, a password, an access mode, and more.  
   
 > [!NOTE]  
->  일부 형식으로 저장하려면 조작이 필요하기 때문에 새 경로를 사용하여 통합 문서를 저장하기 전에 <xref:Microsoft.Office.Interop.Excel._Application.DisplayAlerts%2A> 속성을 **False**로 설정할 수도 있습니다.  이 속성을 **False**로 설정하면 Excel에서 모든 기본값을 사용합니다.  
+>  You might want to set the <xref:Microsoft.Office.Interop.Excel._Application.DisplayAlerts%2A> property to **False** before saving the workbook with a new path because saving in some formats requires interaction. Setting this property to **False** causes Excel to use all defaults.  
   
-#### 문서 수준 사용자 지정과 연결된 통합 문서를 저장하려면  
+#### <a name="to-save-a-workbook-associated-with-a-document-level-customization"></a>To save a workbook associated with a document-level customization  
   
-1.  `ThisWorkbook` 클래스의 <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> 메서드를 호출합니다.  다음 코드 예제를 사용하려면 `ThisWorkbook` 클래스에서 실행합니다.  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> method of the `ThisWorkbook` class. To use the following code example, run it in the `ThisWorkbook` class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/ThisWorkbook.cs#5)]
-     [!code-vb[Trin_VstcoreExcelAutomation#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/ThisWorkbook.vb#5)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#5](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#5)]  [!code-vb[Trin_VstcoreExcelAutomation#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#5)]  
   
-#### VSTO 추가 기능에서 활성 통합 문서를 저장하려면  
+#### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>To save the active workbook in a VSTO Add-in  
   
-1.  <xref:Microsoft.Office.Interop.Excel._Workbook.SaveAs%2A> 메서드를 호출하여 활성 통합 문서를 새 경로에 저장합니다.  다음 코드 예제를 사용하려면 Excel용 VSTO 추가 기능 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
+1.  Call the <xref:Microsoft.Office.Interop.Excel._Workbook.SaveAs%2A> method to save the active workbook to a new path. To use the following code example, run it in the `ThisAddIn` class in a VSTO Add-in project for Excel.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#4)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#4)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#4](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#4)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#4](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#4)]  
   
-## 통합 문서의 복사본 저장  
- 메모리에 열려 있는 통합 문서를 수정하지 않고 통합 문서의 복사본을 파일에 저장할 수 있습니다.  이 기능은 통합 문서의 위치를 수정하지 않고 백업 복사본을 만들려는 경우에 유용합니다.  
+## <a name="saving-a-copy-of-the-workbook"></a>Saving a Copy of the Workbook  
+ You can save a copy of the workbook to a file without modifying the open workbook in memory. This is useful when you want to create a backup copy without modifying the location of the workbook.  
   
-#### 문서 수준 사용자 지정과 연결된 통합 문서를 저장하려면  
+#### <a name="to-save-a-workbook-associated-with-a-document-level-customization"></a>To save a workbook associated with a document-level customization  
   
-1.  `ThisWorkbook` 클래스의 <xref:Microsoft.Office.Tools.Excel.Workbook.SaveCopyAs%2A> 메서드를 호출합니다.  다음 코드 예제를 사용하려면 `ThisWorkbook` 클래스에서 실행합니다.  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.Workbook.SaveCopyAs%2A> method of the `ThisWorkbook` class. To use the following code example, run it in the `ThisWorkbook` class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/ThisWorkbook.cs#6)]
-     [!code-vb[Trin_VstcoreExcelAutomation#6](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/ThisWorkbook.vb#6)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#6](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#6)]  [!code-vb[Trin_VstcoreExcelAutomation#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#6)]  
   
-#### VSTO 추가 기능에서 활성 통합 문서를 저장하려면  
+#### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>To save the active workbook in a VSTO Add-in  
   
-1.  <xref:Microsoft.Office.Interop.Excel._Workbook.SaveCopyAs%2A> 메서드를 호출하여 활성 통합 문서의 복사본을 저장합니다.  다음 코드 예제를 사용하려면 Excel용 VSTO 추가 기능 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
+1.  Call the <xref:Microsoft.Office.Interop.Excel._Workbook.SaveCopyAs%2A> method to save a copy of the active workbook. To use the following code example, run it in the `ThisAddIn` class in a VSTO Add-in project for Excel.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#5)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#5)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#5)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#5)]  
   
-## 강력한 프로그래밍  
- 통합 문서를 저장하거나 복사하는 메서드를 대화형으로 취소하면 코드에서 런타임 오류가 발생합니다.  예를 들어 프로시저에서 <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> 메서드를 호출하지만 Excel에서 메시지가 표시되지 않도록 설정하는 경우 메시지가 표시될 때 사용자가 **취소**를 클릭하면 Excel에서 런타임 오류가 발생합니다.  
+## <a name="robust-programming"></a>Robust Programming  
+ Interactively canceling any of the methods that save or copy the workbook raises a run-time error in your code. For example, if your procedure calls the <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> method but does not disable prompts from Excel, and your user clicks **Cancel** when prompted, Excel raises a run-time error.  
   
-## 참고 항목  
- [통합 문서 사용](../vsto/working-with-workbooks.md)   
- [통합 문서 호스트 항목](../vsto/workbook-host-item.md)   
- [방법: 프로그래밍 방식으로 통합 문서 닫기](../vsto/how-to-programmatically-close-workbooks.md)   
- [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)   
- [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Workbooks](../vsto/working-with-workbooks.md)   
+ [Workbook Host Item](../vsto/workbook-host-item.md)   
+ [How to: Programmatically Close Workbooks](../vsto/how-to-programmatically-close-workbooks.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)  
   
   

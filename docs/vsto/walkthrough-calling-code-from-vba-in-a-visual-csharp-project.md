@@ -1,253 +1,262 @@
 ---
-title: "연습: Visual C# 프로젝트에서 VBA의 코드 호출"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Excel[Visual Studio에서 Office 개발], VBA에서 코드 호출"
-  - "Word[Visual Studio에서 Office 개발], VBA에서 코드 호출"
-  - "Visual C#[Visual Studio에서 Office 개발], VBA에서 코드 호출"
-  - "통합 문서[Visual Studio에서 Office 개발], VBA에서 코드 호출"
-  - "VBA[Visual Studio에서 Office 개발], 문서 수준 사용자 지정에서 코드 호출"
-  - "Office 문서[Visual Studio에서 Office 개발], Visual Basic for Applications"
-  - "VBA에서 코드 호출"
-  - "문서 수준 사용자 지정[Visual Studio에서 Office 개발], 코드 호출"
+title: 'Walkthrough: Calling Code from VBA in a Visual C# Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Excel [Office development in Visual Studio], calling code from VBA
+- Word [Office development in Visual Studio], calling code from VBA
+- Visual C# [Office development in Visual Studio], calling code from VBA
+- workbooks [Office development in Visual Studio], calling code from VBA
+- VBA [Office development in Visual Studio], calling code in document-level customizations
+- Office documents [Office development in Visual Studio, Visual Basic for Applications and
+- calling code from VBA
+- document-level customizations [Office development in Visual Studio], calling code
 ms.assetid: 9a5741f1-8260-4964-afa1-c69b68d1cfdf
 caps.latest.revision: 38
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 37
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: fda5cdcfd4aaa03da13e2a5707ade232ec05c4b7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: Visual C# 프로젝트에서 VBA의 코드 호출
-  이 연습에서는 통합 문서의 VBA\(Visual Basic for Applications\) 코드에서 Microsoft Office Excel에 대한 문서 수준 사용자 지정의 메서드를 호출하는 방법을 보여 줍니다. 이 절차에는 세 가지 기본 단계\(`Sheet1` 호스트 항목 클래스에 메서드 추가, 통합 문서의 VBA 코드에 메서드 노출, 통합 문서의 VBA 코드에서 메서드 호출\)가 포함됩니다.  
+# <a name="walkthrough-calling-code-from-vba-in-a-visual-c-project"></a>Walkthrough: Calling Code from VBA in a Visual C# Project
+  This walkthrough demonstrates how to call a method in a document-level customization for Microsoft Office Excel from Visual Basic for Applications (VBA) code in the workbook. The procedure involves three basic steps: add a method to the `Sheet1` host item class, expose the method to VBA code in the workbook, and then call the method from VBA code in the workbook.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- 이 연습에서는 Excel을 사용하지만 Word용 문서 수준 프로젝트에도 연습에서 설명하는 개념을 적용할 수 있습니다.  
+ Although this walkthrough uses Excel specifically, the concepts demonstrated by the walkthrough are also applicable to document-level projects for Word.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   VBA 코드를 포함하는 통합 문서 만들기  
+-   Creating a workbook that contains VBA code.  
   
--   Excel의 보안 센터를 사용하여 통합 문서 위치 신뢰  
+-   Trusting the location of the workbook by using the Trust Center in Excel.  
   
--   `Sheet1` 호스트 항목 클래스에 메서드 추가  
+-   Adding a method to the `Sheet1` host item class.  
   
--   `Sheet1` 호스트 항목 클래스에 대한 인터페이스 추출  
+-   Extracting an interface for the `Sheet1` host item class.  
   
--   VBA 코드에 메서드 노출  
+-   Exposing the method to VBA code.  
   
--   VBA 코드에서 메서드 호출  
+-   Calling the method from VBA code.  
   
 > [!NOTE]  
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Microsoft Excel  
   
-## VBA 코드를 포함하는 통합 문서 만들기  
- 첫 번째 단계는 간단한 VBA 매크로를 포함하는 매크로 사용 통합 문서를 만드는 것입니다. 사용자 지정의 코드를 VBA에 노출하려면 통합 문서에 VBA 코드가 이미 포함되어 있어야 합니다. 그렇지 않으면 Visual Studio가 VBA 코드에서 사용자 지정 어셈블리를 호출할 수 있도록 VBA 프로젝트를 수정할 수 없습니다.  
+## <a name="creating-a-workbook-that-contains-vba-code"></a>Creating a Workbook That Contains VBA Code  
+ The first step is to create a macro-enabled workbook that contains a simple VBA macro. Before you can expose code in a customization to VBA, the workbook must already contain VBA code. Otherwise, Visual Studio cannot modify the VBA project to enable VBA code to call into the customization assembly.  
   
- 사용하려는 VBA 코드를 포함하는 통합 문서가 이미 있는 경우 이 단계를 건너뛸 수 있습니다.  
+ If you already have a workbook that contains VBA code that you want to use, you can skip this step.  
   
-#### VBA 코드를 포함하는 통합 문서를 만들려면  
+#### <a name="to-create-a-workbook-that-contains-vba-code"></a>To create a workbook that contains VBA code  
   
-1.  Excel을 시작합니다.  
+1.  Start Excel.  
   
-2.  활성 문서를 이름이 **WorkbookWithVBA**인 **Excel 매크로 사용 통합 문서\(\*.xlsm\)**로 저장합니다. 통합 문서를 바탕 화면과 같은 편리한 위치에 저장합니다.  
+2.  Save the active document as an **Excel Macro-Enabled Workbook (\*.xlsm)** with the name **WorkbookWithVBA**. Save it to a convenient location, such as the desktop.  
   
-3.  리본에서 **개발자** 탭을 클릭합니다.  
+3.  On the Ribbon, click the **Developer** tab.  
   
     > [!NOTE]  
-    >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다. 자세한 내용은 [방법: 리본 메뉴에 개발 도구 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)을 참조하세요.  
+    >  If the **Developer** tab is not visible, you must first show it. For more information, see [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
   
-4.  **코드** 그룹에서 **Visual Basic**을 클릭합니다.  
+4.  In the **Code** group, click **Visual Basic**.  
   
-     Visual Basic Editor가 열립니다.  
+     The Visual Basic Editor opens.  
   
-5.  **프로젝트** 창에서 **ThisWorkbook**을 두 번 클릭합니다.  
+5.  In the **Project** window, double-click **ThisWorkbook**.  
   
-     `ThisWorkbook` 개체의 코드 파일이 열립니다.  
+     The code file for the `ThisWorkbook` object opens.  
   
-6.  다음 VBA 코드를 코드 파일에 추가합니다. 이 코드는 아무 작업도 수행하지 않는 간단한 함수를 정의합니다. 이 함수의 유일한 목적은 VBA 프로젝트가 통합 문서에 있는지 확인하는 것입니다. 이 작업은 이 연습의 이후 단계에 필요합니다.  
+6.  Add the following VBA code to the code file. This code defines a simple function that does nothing. The only purpose of this function is to ensure that a VBA project exists in the workbook. This is required for later steps in this walkthrough.  
   
     ```  
-    Sub EmptySub() End Sub  
+    Sub EmptySub()  
+    End Sub  
     ```  
   
-7.  문서를 저장하고 Excel을 종료합니다.  
+7.  Save the document and exit Excel.  
   
-## 프로젝트 만들기  
- 이제 이전에 만든 매크로 사용 통합 문서를 사용하는 Excel용 문서 수준 프로젝트를 만들 수 있습니다.  
+## <a name="creating-the-project"></a>Creating the Project  
+ Now you can create a document-level project for Excel that uses the macro-enabled workbook you created earlier.  
   
-#### 새 프로젝트를 만들려면  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+2.  On the **File** menu, point to **New**, and then click **Project**.  
   
-3.  템플릿 창에서 **Visual C\#**을 확장한 다음 **Office\/SharePoint**를 확장합니다.  
+3.  In the templates pane, expand **Visual C#**, and then expand **Office/SharePoint**.  
   
-4.  **Office 추가 기능** 노드를 선택합니다.  
+4.  Select the **Office Add-ins** node.  
   
-5.  프로젝트 템플릿 목록에서 **Excel 2010 통합 문서** 또는 **Excel 2013 통합 문서** 프로젝트를 선택합니다.  
+5.  In the list of project templates, select the **Excel 2010 Workbook** or **Excel 2013 Workbook** project.  
   
-6.  **이름** 상자에 **CallingCodeFromVBA**를 입력합니다.  
+6.  In the **Name** box, type **CallingCodeFromVBA**.  
   
-7.  **확인**을 클릭합니다.  
+7.  Click **OK**.  
   
-     **Visual Studio Tools for Office 프로젝트 마법사**가 열립니다.  
+     The **Visual Studio Tools for Office Project Wizard** opens.  
   
-8.  **기존 문서 복사**를 선택하고 **기존 문서의 전체 경로** 상자에서 이전에 만든 **WorkbookWithVBA** 통합 문서의 위치를 지정합니다. 사용자 고유의 매크로 사용 통합 문서를 사용하는 경우 대신 이 통합 문서의 위치를 지정합니다.  
+8.  Select **Copy an existing document**, and, in the **Full path of the existing document** box, specify the location of the **WorkbookWithVBA** workbook that you created earlier. If you are using your own macro-enabled workbook, specify the location of that workbook instead.  
   
-9. **마침**을 클릭합니다.  
+9. Click **Finish**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]의 디자이너에 **WorkbookWithVBA** 통합 문서가 열리고 **CallingCodeFromVBA** 프로젝트가 **솔루션 탐색기**에 추가됩니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] opens the **WorkbookWithVBA** workbook in the designer and adds the **CallingCodeFromVBA** project to **Solution Explorer**.  
   
-## 통합 문서 위치 신뢰  
- 통합 문서의 VBA 코드에 솔루션의 코드를 노출하려면 먼저 실행할 통합 문서의 VBA를 신뢰해야 합니다. 다음과 같은 여러 가지 방법으로 이 작업을 수행할 수 있습니다. 이 연습에서는 Excel의 **보안 센터**에서 통합 문서의 위치를 신뢰하여 이 작업을 수행합니다.  
+## <a name="trusting-the-location-of-the-workbook"></a>Trusting the Location of the Workbook  
+ Before you can expose code in your solution to VBA code in the workbook, you must trust VBA in the workbook to run. There are several ways to do this. In this walkthrough, you will accomplish this task by trusting the location of the workbook in the **Trust Center** in Excel.  
   
-#### 통합 문서의 위치를 신뢰하려면  
+#### <a name="to-trust-the-location-of-the-workbook"></a>To trust the location of the workbook  
   
-1.  Excel을 시작합니다.  
+1.  Start Excel.  
   
-2.  **파일** 탭을 클릭합니다.  
+2.  Click the **File** tab.  
   
-3.  **Excel 옵션** 단추를 클릭합니다.  
+3.  Click the **Excel Options** button.  
   
-4.  범주 창에서 **보안 센터**를 클릭합니다.  
+4.  In the categories pane, click **Trust Center**.  
   
-5.  세부 정보 창에서 **보안 센터 설정**을 클릭합니다.  
+5.  In the details pane, click **Trust Center Settings**.  
   
-6.  범주 창에서 **신뢰할 수 있는 위치**를 클릭합니다.  
+6.  In the categories pane, click **Trusted Locations**.  
   
-7.  세부 정보 창에서 **새 위치 추가**를 클릭합니다.  
+7.  In the details pane, click **Add new location**.  
   
-8.  **Microsoft Office 신뢰할 수 있는 위치** 대화 상자에서 **CallingCodeFromVBA** 프로젝트가 들어 있는 폴더를 찾습니다.  
+8.  In the **Microsoft Office Trusted Location** dialog box, browse to the folder that contains the **CallingCodeFromVBA** project.  
   
-9. **이 위치의 하위 폴더도 신뢰할 수 있음**을 선택합니다.  
+9. Select **Subfolders of this location are also trusted**.  
   
-10. **Microsoft Office 신뢰할 수 있는 위치** 대화 상자에서 **확인**을 클릭합니다.  
+10. In the **Microsoft Office Trusted Location** dialog box, click **OK**.  
   
-11. **보안 센터** 대화 상자에서 **확인**을 클릭합니다.  
+11. In the **Trust Center** dialog box, click **OK**.  
   
-12. **Excel 옵션** 대화 상자에서 **확인**을 클릭합니다.  
+12. In the **Excel Options** dialog box, click **OK**.  
   
-13. **Excel**을 종료합니다.  
+13. Exit **Excel**.  
   
-## Sheet1 클래스에 메서드 추가  
- 이제 VBA 프로젝트가 설정되었으므로 VBA 코드에서 호출할 수 있는 `Sheet1` 호스트 항목 클래스에 공용 메서드를 추가합니다.  
+## <a name="adding-a-method-to-the-sheet1-class"></a>Adding a Method to the Sheet1 Class  
+ Now that the VBA project is set up, add a public method to the `Sheet1` host item class that you can call from VBA code.  
   
-#### Sheet1 클래스에 메서드를 추가하려면  
+#### <a name="to-add-a-method-to-the-sheet1-class"></a>To add a method to the Sheet1 class  
   
-1.  **솔루션 탐색기**에서 **Sheet1.cs**를 마우스 오른쪽 단추로 클릭한 다음 **코드 보기**를 클릭합니다.  
+1.  In **Solution Explorer**, right-click **Sheet1.cs**, and then click **View Code**.  
   
-     **Sheet1.cs** 파일이 코드 편집기에서 열립니다.  
+     The **Sheet1.cs** file opens in the Code Editor.  
   
-2.  `Sheet1` 클래스에 다음 코드를 추가합니다.`CreateVstoNamedRange` 메서드는 지정된 범위에 새로운 <xref:Microsoft.Office.Tools.Excel.NamedRange> 개체를 만듭니다. 이 메서드는 <xref:Microsoft.Office.Tools.Excel.NamedRange>의 <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> 이벤트에 대한 이벤트 처리기도 만듭니다. 이 연습의 뒷부분에서는 문서의 VBA 코드에서 `CreateVstoNamedRange` 메서드를 호출합니다.  
+2.  Add the following code to the `Sheet1` class. The `CreateVstoNamedRange` method creates a new <xref:Microsoft.Office.Tools.Excel.NamedRange> object at the specified range. This method also creates an event handler for the <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> event of the <xref:Microsoft.Office.Tools.Excel.NamedRange>. Later in this walkthrough, you will call the `CreateVstoNamedRange` method from VBA code in the document.  
   
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CallingCSCustomizationFromVBA/CS/Sheet1.cs#2)]  
+     [!code-csharp[Trin_CallingCSCustomizationFromVBA#2](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#2)]  
   
-3.  다음 메서드를 `Sheet1` 클래스에 추가합니다. 이 메서드는 <xref:Microsoft.Office.Tools.Excel.Worksheet.GetAutomationObject%2A> 메서드를 재정의하여 `Sheet1` 클래스의 현재 인스턴스를 반환합니다.  
+3.  Add the following method to the `Sheet1` class. This method overrides the <xref:Microsoft.Office.Tools.Excel.Worksheet.GetAutomationObject%2A> method to return the current instance of the `Sheet1` class.  
   
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CallingCSCustomizationFromVBA/CS/Sheet1.cs#3)]  
+     [!code-csharp[Trin_CallingCSCustomizationFromVBA#3](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#3)]  
   
-4.  `Sheet1` 클래스 선언의 첫째 줄 앞에 다음 특성을 적용합니다. 이러한 특성은 클래스가 COM에 표시되도록 하지만 클래스 인터페이스를 생성하지 않습니다.  
+4.  Apply the following attributes before the first line of the `Sheet1` class declaration. These attributes make the class visible to COM, but without generating a class interface.  
   
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CallingCSCustomizationFromVBA/CS/Sheet1.cs#1)]  
+     [!code-csharp[Trin_CallingCSCustomizationFromVBA#1](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#1)]  
   
-## Sheet1 클래스에 대한 인터페이스 추출  
- `CreateVstoNamedRange` 메서드를 VBA 코드에 노출하려면 먼저 이 메서드를 정의하는 공용 인터페이스를 만든 후 이 인터페이스를 COM에 노출해야 합니다.  
+## <a name="extracting-an-interface-for-the-sheet1-class"></a>Extracting an Interface for the Sheet1 Class  
+ Before you can expose the `CreateVstoNamedRange` method to VBA code, you must create a public interface that defines this method, and you must expose this interface to COM.  
   
-#### Sheet1 클래스에 대한 인터페이스를 추출하려면  
+#### <a name="to-extract-an-interface-for-the-sheet1-class"></a>To extract an interface for the Sheet1 class  
   
-1.  **Sheet1.cs** 코드 파일에서 `Sheet1` 클래스의 아무 곳이나 클릭합니다.  
+1.  In the **Sheet1.cs** code file, click anywhere in the `Sheet1` class.  
   
-2.  **리팩터링** 메뉴에서 **인터페이스 추출**을 클릭합니다.  
+2.  On the **Refactor** menu, click **Extract Interface**.  
   
-3.  **인터페이스 추출** 대화 상자의 **인터페이스를 구성할 공용 멤버 선택** 상자에서 `CreateVstoNamedRange` 메서드에 대한 항목을 클릭합니다.  
+3.  In the **Extract Interface** dialog box, in the **Select public members to form interface** box, click the entry for the `CreateVstoNamedRange` method.  
   
-4.  **확인**을 클릭합니다.  
+4.  Click **OK**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 `ISheet1`이라는 새 인터페이스를 생성하고, `ISheet1` 인터페이스를 구현하도록 `Sheet1` 클래스의 정의를 수정합니다. 또한 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]의 코드 편집기에서 **ISheet1.cs** 파일이 열립니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] generates a new interface named `ISheet1`, and it modifies the definition of the `Sheet1` class so that it implements the `ISheet1` interface. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] also opens the **ISheet1.cs** file in the Code Editor.  
   
-5.  **ISheet1.cs** 파일에서 `ISheet1` 인터페이스 선언을 다음 코드로 바꿉니다. 이 코드는 `ISheet1` 인터페이스를 공용으로 설정하고 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 특성을 적용하여 인터페이스가 COM에 표시되도록 합니다.  
+5.  In the **ISheet1.cs** file, replace the `ISheet1` interface declaration with the following code. This code makes the `ISheet1` interface public, and it applies the <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute to make the interface visible to COM.  
   
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CallingCSCustomizationFromVBA/CS/ISheet1.cs#4)]  
+     [!code-csharp[Trin_CallingCSCustomizationFromVBA#4](../vsto/codesnippet/CSharp/CallingCodeFromVBA/ISheet1.cs#4)]  
   
-6.  프로젝트를 빌드합니다.  
+6.  Build the project.  
   
-## VBA 코드에 메서드 노출  
- 통합 문서의 VBA 코드에 `CreateVstoNamedRange` 메서드를 노출하려면 `Sheet1` 호스트 항목의 **ReferenceAssemblyFromVbaProject** 속성을 **True**로 설정합니다.  
+## <a name="exposing-the-method-to-vba-code"></a>Exposing the Method to VBA Code  
+ To expose the `CreateVstoNamedRange` method to VBA code in the workbook, set the **ReferenceAssemblyFromVbaProject** property for the `Sheet1` host item to **True**.  
   
-#### VBA 코드에 메서드를 노출하려면  
+#### <a name="to-expose-the-method-to-vba-code"></a>To expose the method to VBA code  
   
-1.  **솔루션 탐색기**에서 **Sheet1.cs**를 두 번 클릭합니다.  
+1.  In **Solution Explorer**, double-click **Sheet1.cs**.  
   
-     **WorkbookWithVBA** 파일이 디자이너에서 열리고 Sheet1이 표시됩니다.  
+     The **WorkbookWithVBA** file opens in the designer, with Sheet1 visible.  
   
-2.  **속성** 창에서 **ReferenceAssemblyFromVbaProject** 속성을 선택하고 값을 **True**로 변경합니다.  
+2.  In the **Properties** window, select the **ReferenceAssemblyFromVbaProject** property, and change the value to **True**.  
   
-3.  표시되는 메시지에서 **확인**을 클릭합니다.  
+3.  Click **OK** in the message that is displayed.  
   
-4.  프로젝트를 빌드합니다.  
+4.  Build the project.  
   
-## VBA 코드에서 메서드 호출  
- 이제 통합 문서의 VBA 코드에서 `CreateVstoNamedRange` 메서드를 호출할 수 있습니다.  
+## <a name="calling-the-method-from-vba-code"></a>Calling the Method from VBA Code  
+ You can now call the `CreateVstoNamedRange` method from VBA code in the workbook.  
   
 > [!NOTE]  
->  이 연습에서는 프로젝트를 디버그하는 동안 통합 문서에 VBA 코드를 추가합니다. Visual Studio에서 빌드 출력 폴더의 문서를 주 프로젝트 폴더의 문서 복사본으로 바꾸기 때문에 이 문서에 추가하는 모든 VBA 코드는 다음번에 프로젝트를 빌드할 때 덮어쓰입니다. VBA 코드를 저장하려는 경우 프로젝트 폴더의 문서에 복사할 수 있습니다. 자세한 내용은 [VBA 및 문서 수준 사용자 지정 결합](../vsto/combining-vba-and-document-level-customizations.md)을 참조하세요.  
+>  In this walkthrough, you will add VBA code to the workbook while debugging the project. The VBA code you add to this document will be overwritten the next time that you build the project, because Visual Studio replaces the document in the build output folder with a copy of the document from the main project folder. If you want to save the VBA code, you can copy it into the document in the project folder. For more information, see [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md).  
   
-#### VBA 코드에서 메서드를 호출하려면  
+#### <a name="to-call-the-method-from-vba-code"></a>To call the method from VBA code  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  Press F5 to run your project.  
   
-2.  **개발자** 탭의 **코드** 그룹에서 **Visual Basic**을 클릭합니다.  
+2.  On the **Developer** tab, in the **Code** group, click **Visual Basic**.  
   
-     Visual Basic Editor가 열립니다.  
+     The Visual Basic Editor opens.  
   
-3.  **삽입** 메뉴에서 **모듈**을 클릭합니다.  
+3.  On the **Insert** menu, click **Module**.  
   
-4.  새 모듈에 다음 코드를 추가합니다.  
+4.  Add the following code to the new module.  
   
-     이 코드는 사용자 지정 어셈블리의 `CreateTable` 메서드를 호출합니다. 매크로는 전역 `GetManagedClass` 메서드를 사용하여 VBA 코드에 노출한 `Sheet1` 호스트 항목 클래스에 액세스하여 이 메서드에 액세스합니다.`GetManagedClass` 메서드는 이 연습의 앞부분에서 **ReferenceAssemblyFromVbaProject** 속성을 설정할 때 자동으로 생성되었습니다.  
+     This code calls the `CreateTable` method in the customization assembly. The macro accesses this method by using the global `GetManagedClass` method to access the `Sheet1` host item class that you exposed to VBA code. The `GetManagedClass` method was automatically generated when you set the **ReferenceAssemblyFromVbaProject** property earlier in this walkthrough.  
   
     ```  
-    Sub CallVSTOMethod() Dim VSTOSheet1 As CallingCodeFromVBA.Sheet1 Set VSTOSheet1 = GetManagedClass(Sheet1) Call VSTOSheet1.CreateVstoNamedRange(Sheet1.Range("A1"), "VstoNamedRange") End Sub  
+    Sub CallVSTOMethod()  
+        Dim VSTOSheet1 As CallingCodeFromVBA.Sheet1  
+        Set VSTOSheet1 = GetManagedClass(Sheet1)  
+        Call VSTOSheet1.CreateVstoNamedRange(Sheet1.Range("A1"), "VstoNamedRange")  
+    End Sub  
     ```  
   
-5.  F5 키를 누릅니다.  
+5.  Press F5.  
   
-6.  열려 있는 통합 문서의 **Sheet1**에서 **A1** 셀을 클릭합니다. 메시지 상자가 표시되는지 확인합니다.  
+6.  In the open workbook, click cell **A1** on **Sheet1**. Verify that the message box appears.  
   
-7.  변경 내용을 저장하지 않고 Excel을 종료합니다.  
+7.  Exit Excel without saving your changes.  
   
-## 다음 단계  
- 다음 항목에서는 VBA에서 Office 솔루션의 코드를 호출하는 방법에 대해 자세히 알아볼 수 있습니다.  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about calling code in Office solutions from VBA in these topics:  
   
--   VBA에서 Visual Basic 사용자 지정의 호스트 항목에 포함된 코드를 호출합니다. 이 프로세스는 Visual C\# 프로세스와 다릅니다. 자세한 내용은 [연습: Visual Basic 프로젝트에서 VBA의 코드 호출](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)을 참조하세요.  
+-   Call code in a host item in a Visual Basic customization from VBA. This process is different from the Visual C# process. For more information, see [Walkthrough: Calling Code from VBA in a Visual Basic Project](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md).  
   
--   VBA에서 VSTO 추가 기능의 코드를 호출합니다. 자세한 내용은 [연습: VBA에서 VSTO 추가 기능의 코드 호출](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)을 참조하세요.  
+-   Call code in a VSTO Add-in from VBA. For more information, see [Walkthrough: Calling Code in a VSTO Add-in from VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).  
   
-## 참고 항목  
- [VBA 및 문서 수준 사용자 지정 결합](../vsto/combining-vba-and-document-level-customizations.md)   
- [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md)   
- [방법: Visual Basic 프로젝트에서 VBA로 코드 노출](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
- [방법: Visual C&#35; 프로젝트에서 VBA로 코드 노출](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
- [연습: Visual Basic 프로젝트에서 VBA의 코드 호출](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)  
-  
+## <a name="see-also"></a>See Also  
+ [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
+ [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)   
+ [How to: Expose Code to VBA in a Visual Basic Project](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
+ [How to: Expose Code to VBA in a Visual C&#35; Project](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
+ [Walkthrough: Calling Code from VBA in a Visual Basic Project](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)  
   

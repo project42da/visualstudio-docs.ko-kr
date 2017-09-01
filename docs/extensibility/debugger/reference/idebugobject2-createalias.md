@@ -1,52 +1,69 @@
 ---
-title: "IDebugObject2::CreateAlias | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject2::CreateAlias"
-helpviewer_keywords: 
-  - "IDebugObject2::CreateAlias 메서드"
+title: IDebugObject2::CreateAlias | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject2::CreateAlias
+helpviewer_keywords:
+- IDebugObject2::CreateAlias method
 ms.assetid: 54a05920-5d13-4f67-962b-d1a7f013dff9
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugObject2::CreateAlias
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 97bf05023ab5e97ae845ff6d62f873719e997e43
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-고유 ID 또는이 개체에 대 한 별칭을 만듭니다 또는 기존 별칭을 반환 합니다.  
+---
+# <a name="idebugobject2createalias"></a>IDebugObject2::CreateAlias
+Creates a unique ID or alias for this object or returns an existing alias.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT CreateAlias(  
-   IDebugAlias** ppAlias  
+HRESULT CreateAlias(  
+   IDebugAlias** ppAlias  
 );  
 ```  
   
-```c#  
-int CreateAlias(  
-   out IDebugAlias ppAlias  
+```csharp  
+int CreateAlias(  
+   out IDebugAlias ppAlias  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppAlias`  
- \[out\] \(기존 또는 새\) 별칭입니다.  
+ [out] The new (or existing) alias.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 별칭 개체는 메모리에 있는 동안 특정 개체를 나타내는 레이블이 있습니다.  
+## <a name="remarks"></a>Remarks  
+ An alias is a label that represents a particular object while the object is in memory.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

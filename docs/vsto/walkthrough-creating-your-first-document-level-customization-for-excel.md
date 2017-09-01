@@ -1,182 +1,186 @@
 ---
-title: "연습: Excel용 첫 문서 수준 사용자 지정 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "문서 수준 사용자 지정[Visual Studio에서 Office 개발], 프로젝트 처음 만들기"
-  - "Excel[Visual Studio에서 Office 개발], 프로젝트 처음 만들기"
-  - "Visual Studio에서 Office 개발, 프로젝트 처음 만들기"
+title: 'Walkthrough: Creating Your First Document-Level Customization for Excel | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office development in Visual Studio, creating your first project
+- Excel [Office development in Visual Studio], creating your first project
+- document-level customizations [Office development in Visual Studio], creating your first project
 ms.assetid: 785d3b86-5ed5-4e0d-b5ee-896b6b1330ac
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 65318510dd4aa9fdfb78fcb21b74c72b2ddacf18
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: Excel용 첫 문서 수준 사용자 지정 만들기
-  이 소개용 연습에서는 Microsoft Office Excel에 대한 문서 수준 사용자 지정을 만드는 방법을 보여 줍니다.  이러한 종류의 솔루션에서 만드는 기능은 특정 통합 문서가 열려 있는 경우에만 사용할 수 있습니다.  통합 문서가 열려 있을 때 새 리본 탭 표시와 같은 응용 프로그램 수준 변경은 문서 수준 사용자 지정을 사용하여 수행할 수 없습니다.  
+# <a name="walkthrough-creating-your-first-document-level-customization-for-excel"></a>Walkthrough: Creating Your First Document-Level Customization for Excel
+  This introductory walkthrough shows you how to create a document-level customization for Microsoft Office Excel. The features that you create in this kind of solution are available only when a specific workbook is open. You cannot use a document-level customization to make application-wide changes, for example, displaying a new Ribbon tab when any workbook is open.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   Excel 통합 문서 프로젝트 만들기  
+-   Creating an Excel workbook project.  
   
--   Visual Studio 디자이너에 호스트된 워크시트에 텍스트 추가  
+-   Adding text to a worksheet that is hosted in the Visual Studio designer.  
   
--   Excel의 개체 모델을 사용하여 사용자 지정 워크시트가 열릴 때 워크시트에 텍스트를 추가하는 코드 작성  
+-   Writing code that uses the object model of Excel to add text to the customized worksheet when it is opened.  
   
--   프로젝트를 빌드 및 실행하여 테스트  
+-   Building and running the project to test it.  
   
--   완료된 프로젝트를 정리하여 개발 컴퓨터에서 불필요한 빌드 파일 및 보안 설정 제거  
+-   Cleaning up the completed project to remove unnecessary build files and security settings from your development computer.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] 또는 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
-## 프로젝트 만들기  
+## <a name="creating-the-project"></a>Creating the Project  
   
-#### Visual Studio에서 새 Excel 통합 문서 프로젝트를 만들려면  
+#### <a name="to-create-a-new-excel-workbook-project-in-visual-studio"></a>To create a new Excel workbook project in Visual Studio  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+2.  On the **File** menu, point to **New**, and then click **Project**.  
   
-3.  템플릿 창에서 **Visual C\#** 또는 **Visual Basic**을 확장한 다음 **Office\/SharePoint**를 확장합니다.  
+3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office/SharePoint**.  
   
-4.  확장된 **Office\/SharePoint** 노드 아래에서 **Office 추가 기능** 노드를 선택합니다.  
+4.  Under the expanded **Office/SharePoint** node, select the **Office Add-ins** node.  
   
-5.  프로젝트 템플릿 목록에서 Excel VSTO 추가 기능 프로젝트를 선택합니다.  
+5.  In the list of project templates, choose an Excel VSTO Add-in project.  
   
-6.  **이름** 상자에 **FirstWorkbookCustomization**을 입력합니다.  
+6.  In the **Name** box, type **FirstWorkbookCustomization**.  
   
-7.  **확인**을 클릭합니다.  
+7.  Click **OK**.  
   
-     **Visual Studio Tools for Office 프로젝트 마법사**가 열립니다.  
+     The **Visual Studio Tools for Office Project Wizard** opens.  
   
-8.  **새 문서 만들기**를 선택하고 **확인**을 클릭합니다.  
+8.  Select **Create a new document**, and click **OK**.  
   
-    -   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 **FirstWorkbookCustomization** 프로젝트를 만들고 프로젝트에 다음 파일을 추가합니다.  
+    -   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the **FirstWorkbookCustomization** project, and adds the following files to the project.  
   
-    -   *FirstWorkbookCustomization*.xlsx \- 프로젝트의 Excel 통합 문서를 나타냅니다.  모든 워크시트 및 차트를 포함합니다.  
+    -   *FirstWorkbookCustomization*.xlsx - Represents the Excel workbook in the project. Contains all the worksheets and charts.  
   
-    -   Sheet1\(Visual Basic의 경우 .vb 파일 또는 Visual C\#의 경우 .cs 파일\) \- 통합 문서의 첫 번째 워크시트에 대한 디자인 화면 및 코드를 제공하는 워크시트입니다.  자세한 내용은 [워크시트 호스트 항목](../vsto/worksheet-host-item.md)를 참조하세요.  
+    -   Sheet1 (.vb file for Visual Basic or .cs file for Visual C#) - A worksheet that provides the design surface and the code for the first worksheet in the workbook. For more information, see [Worksheet Host Item](../vsto/worksheet-host-item.md).  
   
-    -   Sheet2\(Visual Basic의 경우 .vb 파일 또는 Visual C\#의 경우 .cs 파일\) \- 통합 문서의 두 번째 워크시트에 대한 디자인 화면 및 코드를 제공하는 워크시트입니다.  
+    -   Sheet2 (.vb file for Visual Basic or .cs file for Visual C#) - A worksheet that provides the design surface and the code for the second worksheet in the workbook.  
   
-    -   Sheet3\(Visual Basic의 경우 .vb 파일 또는 Visual C\#의 경우 .cs 파일\) \- 통합 문서의 세 번째 워크시트에 대한 디자인 화면 및 코드를 제공하는 워크시트입니다.  
+    -   Sheet3 (.vb file for Visual Basic or .cs file for Visual C#) - A worksheet that provides the design surface and the code for the third worksheet in the workbook.  
   
-    -   ThisWorkbook\(Visual Basic의 경우 .vb 파일 또는 Visual C\#의 경우 .cs 파일\) \- 통합 문서 수준 사용자 지정에 대한 디자인 화면 및 코드를 포함합니다.  자세한 내용은 [통합 문서 호스트 항목](../vsto/workbook-host-item.md)를 참조하세요.  
+    -   ThisWorkbook (.vb file for Visual Basic or .cs file for Visual C#) - Contains the design surface and the code for workbook-level customizations. For more information, see [Workbook Host Item](../vsto/workbook-host-item.md).  
   
-     Sheet1 코드 파일이 디자이너에서 자동으로 열립니다.  
+     The Sheet1 code file is opened automatically in the designer.  
   
-## 디자이너에서 워크시트 닫기 및 다시 열기  
- 프로젝트를 개발하는 동안 디자이너에서 의도적으로 또는 실수로 통합 문서 또는 워크시트를 닫은 경우 다시 열 수 있습니다.  
+## <a name="closing-and-reopening-worksheets-in-the-designer"></a>Closing and Reopening Worksheets in the Designer  
+ If you deliberately or accidentally close a workbook or a worksheet in the designer while you are developing your project, you can reopen it.  
   
-#### 디자이너에서 워크시트를 닫았다가 다시 열려면  
+#### <a name="to-close-and-reopen-a-worksheet-in-the-designer"></a>To close and reopen a worksheet in the designer  
   
-1.  디자이너 창의 **닫기** 단추\(X\)를 클릭하여 통합 문서를 닫습니다.  
+1.  Close the workbook by clicking the **Close** button (X) for the designer window.  
   
-2.  **솔루션 탐색기**에서 **Sheet1** 코드 파일을 마우스 오른쪽 단추로 클릭하고 **뷰 디자이너**를 클릭합니다.  
+2.  In **Solution Explorer**, right-click the **Sheet1** code file, and click **View Designer**.  
   
-     또는  
+     \- or -  
   
-     **솔루션 탐색기**에서 **Sheet1** 코드 파일을 두 번 클릭합니다.  
+     In **Solution Explorer**, double-click the **Sheet1** code file.  
   
-## 디자이너에서 워크시트에 텍스트 추가  
- 디자이너에서 열려 있는 워크시트를 수정하여 사용자 지정의 UI\(사용자 인터페이스\)를 디자인할 수 있습니다.  예를 들어 셀에 텍스트를 추가하거나, 수식을 적용하거나, Excel 컨트롤을 추가할 수 있습니다.  디자이너를 사용하는 방법에 대한 자세한 내용은 [Visual Studio 환경의 Office 프로젝트](../vsto/office-projects-in-the-visual-studio-environment.md)를 참조하세요.  
+## <a name="adding-text-to-a-worksheet-in-the-designer"></a>Adding Text to a Worksheet in the Designer  
+ You can design the user interface (UI) of your customization by modifying the worksheet that is open in the designer. For example, you can add text to cells, apply formulas, or add Excel controls. For more information about how to use the designer, see [Office Projects in the Visual Studio Environment](../vsto/office-projects-in-the-visual-studio-environment.md).  
   
-#### 디자이너를 사용하여 워크시트에 텍스트를 추가하려면  
+#### <a name="to-add-text-to-a-worksheet-by-using-the-designer"></a>To add text to a worksheet by using the designer  
   
-1.  디자이너에 열려 있는 워크시트에서 **A1** 셀을 선택하고 다음 텍스트를 입력합니다.  
+1.  In the worksheet that is open in the designer, select cell **A1**, and then type the following text.  
   
      **This text was added by using the designer.**  
   
 > [!WARNING]  
->  **A2** 셀에 이 텍스트 줄을 추가하는 경우 이 예제의 다른 코드가 덮어씁니다.  
+>  If you add this line of text to cell **A2**, it will be overwritten by other code in this example.  
   
-## 프로그래밍 방식으로 워크시트에 텍스트 추가  
- 다음에는 Sheet1 코드 파일에 코드를 추가합니다.  새 코드는 Excel의 개체 모델을 사용하여 통합 문서에 두 번째 텍스트 줄을 추가합니다.  기본적으로 Sheet1 코드 파일에는 다음과 같은 생성된 코드가 포함됩니다.  
+## <a name="adding-text-to-a-worksheet-programmatically"></a>Adding Text to a Worksheet Programmatically  
+ Next, add code to the Sheet1 code file. The new code uses the object model of Excel to add a second line of text to the workbook. By default, the Sheet1 code file contains the following generated code:  
   
--   워크시트의 프로그래밍 모델을 나타내고 Excel의 개체 모델에 대한 액세스를 제공하는 `Sheet1` 클래스의 부분 정의입니다.  자세한 내용은 [워크시트 호스트 항목](../vsto/worksheet-host-item.md) 및 [Word 개체 모델 개요](../vsto/word-object-model-overview.md)를 참조하세요.  `Sheet1` 클래스의 나머지 부분은 수정해서는 안 되는 숨김 코드 파일에서 정의됩니다.  
+-   A partial definition of the `Sheet1` class, which represents the programming model of the worksheet and provides access to the object model of Excel. For more information, [Worksheet Host Item](../vsto/worksheet-host-item.md) and [Word Object Model Overview](../vsto/word-object-model-overview.md). The remainder of the `Sheet1` class is defined in a hidden code file that you should not modify.  
   
--   `Sheet1_Startup` 및 `Sheet1_Shutdown` 이벤트 처리기.  이러한 이벤트 처리기는 Excel에서 사용자 지정을 로드하고 언로드할 때 호출됩니다.  이러한 이벤트 처리기를 사용하여 사용자 지정이 로드될 때 사용자 지정을 초기화하고 사용자 지정이 언로드될 때 사용자 지정에서 사용하는 리소스를 정리할 수 있습니다.  자세한 내용은 [Office 프로젝트의 이벤트](../vsto/events-in-office-projects.md)를 참조하세요.  
+-   The `Sheet1_Startup` and `Sheet1_Shutdown` event handlers. These event handlers are called when Excel loads and unloads your customization. Use these event handlers to initialize your customization when it is loaded, and to clean up resources used by your customization when it is unloaded. For more information, see [Events in Office Projects](../vsto/events-in-office-projects.md).  
   
-#### 코드를 사용하여 워크시트에 두 번째 텍스트 줄을 추가하려면  
+#### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>To add a second line of text to the worksheet by using code  
   
-1.  **솔루션 탐색기**에서 **Sheet1**을 마우스 오른쪽 단추로 클릭한 다음 **코드 보기**를 클릭합니다.  
+1.  In **Solution Explorer**, right-click **Sheet1**, and then click **View Code**.  
   
-     Visual Studio에서 코드 파일이 열립니다.  
+     The code file opens in Visual Studio.  
   
-2.  `Sheet1_Startup` 이벤트 처리기를 다음 코드로 바꿉니다.  Sheet1이 열릴 때 이 코드는 워크시트에 두 번째 텍스트 줄을 추가합니다.  
+2.  Replace the `Sheet1_Startup` event handler with the following code. When Sheet1 is opened, this code adds a second line of text to the worksheet.  
   
-     [!code-csharp[Trin_ExcelWorkbookTutorial#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkbookTutorial/CS/Sheet1.cs#1)]
-     [!code-vb[Trin_ExcelWorkbookTutorial#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkbookTutorial/VB/Sheet1.vb#1)]  
+     [!code-csharp[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelWorkbookTutorial/Sheet1.cs#1)]  [!code-vb[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelWorkbookTutorial/Sheet1.vb#1)]  
   
-## 프로젝트 테스트  
+## <a name="testing-the-project"></a>Testing the Project  
   
-#### 통합 문서를 테스트하려면  
+#### <a name="to-test-your-workbook"></a>To test your workbook  
   
-1.  **F5** 키를 눌러 프로젝트를 빌드하고 실행합니다.  
+1.  Press **F5** to build and run your project.  
   
-     프로젝트를 빌드하면 코드가 통합 문서와 연결된 어셈블리로 컴파일됩니다.  Visual Studio는 프로젝트에 대한 빌드 출력 폴더에 통합 문서와 어셈블리의 복사본을 넣고 사용자 지정을 실행할 수 있도록 개발 컴퓨터의 보안 설정을 구성합니다.  자세한 내용은 [Office 솔루션 빌드](../vsto/building-office-solutions.md)를 참조하세요.  
+     When you build the project, the code is compiled into an assembly that is associated with the workbook. Visual Studio puts a copy of the workbook and the assembly in the build output folder for the project, and it configures the security settings on the development computer to enable the customization to run. For more information, see [Building Office Solutions](../vsto/building-office-solutions.md).  
   
-2.  통합 문서에서 다음 텍스트가 표시되는지 확인합니다.  
+2.  In the workbook, verify that you see the following text.  
   
      **This text was added by using the designer.**  
   
      **This text was added by using code.**  
   
-3.  통합 문서를 닫습니다.  
+3.  Close the workbook.  
   
-## 프로젝트 정리  
- 프로젝트 개발을 완료하면 빌드 출력 폴더의 파일 및 빌드 프로세스에서 생성된 보안 설정을 제거해야 합니다.  
+## <a name="cleaning-up-the-project"></a>Cleaning up the Project  
+ When you finish developing a project, you should remove the files in the build output folder and the security settings created by the build process.  
   
-#### 개발 컴퓨터에서 완료된 프로젝트를 정리하려면  
+#### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>To clean up the completed project on your development computer  
   
-1.  Visual Studio의 **빌드** 메뉴에서 **솔루션 정리**를 클릭합니다.  
+1.  In Visual Studio, on the **Build** menu, click **Clean Solution**.  
   
-## 다음 단계  
- 기본적인 Excel용 문서 수준 사용자 지정을 만들었으므로 다음 항목에서 사용자 지정을 개발하는 방법에 대해 자세히 알아볼 수 있습니다.  
+## <a name="next-steps"></a>Next Steps  
+ Now that you have created a basic document-level customization for Excel, you can learn more about how to develop customizations from these topics:  
   
--   문서 수준 사용자 지정에서 수행할 수 있는 일반적인 프로그래밍 작업: [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md).  
+-   General programming tasks that you can perform in document-level customizations: [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md).  
   
--   Excel용 문서 수준 사용자 지정과 관련된 프로그래밍 작업: [Excel 솔루션](../vsto/excel-solutions.md).  
+-   Programming tasks that are specific to document-level customizations for Excel: [Excel Solutions](../vsto/excel-solutions.md).  
   
--   Excel의 개체 모델 사용: [Excel 개체 모델 개요](../vsto/excel-object-model-overview.md).  
+-   Using the object model of Excel: [Excel Object Model Overview](../vsto/excel-object-model-overview.md).  
   
--   Excel의 UI 사용자 지정\(예: 리본에 사용자 지정 탭 추가 또는 사용자 고유의 작업 창 만들기\): [Office UI 사용자 지정](../vsto/office-ui-customization.md).  
+-   Customizing the UI of Excel, for example, by adding a custom tab to the Ribbon or creating your own actions pane: [Office UI Customization](../vsto/office-ui-customization.md).  
   
--   Visual Studio의 Office 개발 도구에서 제공하는 확장된 Excel 개체를 사용하여 Excel 개체 모델을 통해 수행할 수 없는 작업\(예: 문서에서 관리되는 컨트롤 호스트 및 Windows Forms 데이터 바인딩 모델을 사용하여 데이터에 Excel 컨트롤 바인딩\) 수행: [확장된 개체를 사용하여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md).  
+-   Using extended Excel objects provided by Office development tools in Visual Studio to perform tasks that are not possible by using the Excel object model (for example, hosting managed controls on documents and binding Excel controls to data by using the Windows Forms data binding model): [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md).  
   
--   Excel용 문서 수준 사용자 지정 빌드 및 디버그: [Office 솔루션 빌드](../vsto/building-office-solutions.md).  
+-   Building and debugging document-level customizations for Excel: [Building Office Solutions](../vsto/building-office-solutions.md).  
   
--   Excel용 문서 수준 사용자 지정 배포: [Office 솔루션 배포](../vsto/deploying-an-office-solution.md).  
+-   Deploying document-level customizations for Excel: [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
   
-## 참고 항목  
- [Office 솔루션 개발 개요&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
- [Excel 솔루션](../vsto/excel-solutions.md)   
- [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md)   
- [Excel 개체 모델 개요](../vsto/excel-object-model-overview.md)   
- [확장된 개체를 사용하여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
- [Office UI 사용자 지정](../vsto/office-ui-customization.md)   
- [Office 솔루션 빌드](../vsto/building-office-solutions.md)   
- [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)   
- [Office 프로젝트 템플릿 개요](../vsto/office-project-templates-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Office Solutions Development Overview &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
+ [Excel Solutions](../vsto/excel-solutions.md)   
+ [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)   
+ [Excel Object Model Overview](../vsto/excel-object-model-overview.md)   
+ [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
+ [Office UI Customization](../vsto/office-ui-customization.md)   
+ [Building Office Solutions](../vsto/building-office-solutions.md)   
+ [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
+ [Office Project Templates Overview](../vsto/office-project-templates-overview.md)  
   
   

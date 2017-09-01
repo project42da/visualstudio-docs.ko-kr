@@ -1,48 +1,65 @@
 ---
-title: "CA1013: 더하기 및 빼기를 오버로드할 때 같음 연산자를 오버로드하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OverrideOperatorEqualsOnOverridingAddAndSubtract"
-  - "OverrideOperatorEqualsOnOverloadingAddAndSubtract"
-  - "CA1013"
-  - "OverloadOperatorEqualsOnOverloadingAddAndSubtract"
-helpviewer_keywords: 
-  - "OverrideOperatorEqualsOnOverloadingAddAndSubtract"
-  - "OverrideOperatorEqualsOnOverridingAddAndSubtract"
-  - "CA1013"
-  - "OverloadOperatorEqualsOnOverloadingAddAndSubtract"
+title: 'CA1013: Overload operator equals on overloading add and subtract | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OverrideOperatorEqualsOnOverridingAddAndSubtract
+- OverrideOperatorEqualsOnOverloadingAddAndSubtract
+- CA1013
+- OverloadOperatorEqualsOnOverloadingAddAndSubtract
+helpviewer_keywords:
+- OverrideOperatorEqualsOnOverloadingAddAndSubtract
+- OverrideOperatorEqualsOnOverridingAddAndSubtract
+- CA1013
+- OverloadOperatorEqualsOnOverloadingAddAndSubtract
 ms.assetid: 5bd28d68-c179-49ff-af47-5250b8b18a10
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1013: 더하기 및 빼기를 오버로드할 때 같음 연산자를 오버로드하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 5d5f17ca16cc28e4b0c583755f87069836a9422b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: Overload operator equals on overloading add and subtract
 |||  
 |-|-|  
 |TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|  
 |CheckId|CA1013|  
-|범주|Microsoft.Design|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- public 또는 protected 형식이 같음 연산자를 구현하지 않고 더하기 또는 빼기 연산자를 구현합니다.  
+## <a name="cause"></a>Cause  
+ A public or protected type implements the addition or subtraction operators without implementing the equality operator.  
   
-## 규칙 설명  
- 더하기 및 빼기 등과 같은 연산을 사용하여 형식의 인스턴스를 조합할 때는 구성 값이 같은 두 인스턴스에 대해 `true`가 반환되도록 거의 대부분의 경우 같음 연산을 정의해야 합니다.  
+## <a name="rule-description"></a>Rule Description  
+ When instances of a type can be combined by using operations such as addition and subtraction, you should almost always define equality to return `true` for any two instances that have the same constituent values.  
   
- 같음 연산자의 오버로드된 구현에서는 기본 같음 연산자를 사용할 수 없습니다.  기본 같음 연산자를 사용하면 스택 오버플로가 발생합니다.  같음 연산자를 구현하려면 구현에 Object.Equals 메서드를 사용합니다.  다음 예제를 참조하십시오.  
+ You cannot use the default equality operator in an overloaded implementation of the equality operator. Doing so will cause a stack overflow. To implement the equality operator, use the Object.Equals method in your implementation. See the following example.  
   
 ```vb  
 If (Object.ReferenceEquals(left, Nothing)) Then  
@@ -52,34 +69,34 @@ Else
 End If  
 ```  
   
-```c#  
+```csharp  
 if (Object.ReferenceEquals(left, null))   
     return Object.ReferenceEquals(right, null);  
 return left.Equals(right);  
 ```  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 더하기 및 빼기 연산자와 수학적으로 일관되도록 같음 연산자를 구현합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, implement the equality operator so that it is mathematically consistent with the addition and subtraction operators.  
   
-## 경고를 표시하지 않는 경우  
- 같음 연산자의 기본 구현이 형식에 대해 올바른 동작을 제공하는 경우에는 이 규칙에서 경고를 표시하지 않아도 안전합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule when the default implementation of the equality operator provides the correct behavior for the type.  
   
-## 예제  
- 다음 예제에서는 이 규칙을 위반하는 형식\(`BadAddableType`\)을 정의합니다.  이 형식은 필드 값이 같은 모든 두 인스턴스의 같음 테스트가 `true`가 되도록 같음 연산자를 구현해야 합니다.  `GoodAddableType` 형식은 수정된 구현을 보여 줍니다.  이 형식은 다른 규칙을 충족하기 위해 같지 않음 연산자도 구현하고 <xref:System.Object.Equals%2A>를 재정의합니다.  완전한 구현은 <xref:System.Object.GetHashCode%2A>도 구현합니다.  
+## <a name="example"></a>Example  
+ The following example defines a type (`BadAddableType`) that violates this rule. This type should implement the equality operator to make any two instances that have the same field values test `true` for equality. The type `GoodAddableType` shows the corrected implementation. Note that this type also implements the inequality operator and overrides <xref:System.Object.Equals%2A> to satisfy other rules. A complete implementation would also implement <xref:System.Object.GetHashCode%2A>.  
   
- [!code-cs[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]  
+ [!code-csharp[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]  
   
-## 예제  
- 다음 예제에서는 이 항목의 앞에서 정의된 형식의 인스턴스로 같음을 테스트하여 같음 연산자에 대한 기본 동작과 올바른 동작을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example tests for equality by using instances of the types that were previously defined in this topic to illustrate the default and correct behavior for the equality operator.  
   
- [!code-cs[FxCop.Design.TestAddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_2.cs)]  
+ [!code-csharp[FxCop.Design.TestAddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_2.cs)]  
   
- 이 예제의 결과는 다음과 같습니다.  
+ This example produces the following output.  
   
-  **잘못된 형식: {2,2} {2,2}는 같습니까?  아니요**  
-**올바른 형식: {3,3} {3,3}은 같습니까?  예**  
-**올바른 형식: {3,3} {3,3}은 \=\= 입니까?   예**  
-**잘못된 형식: {2,2} {9,9}는 같습니까?  아니요**  
-**올바른 형식: {3,3} {9,9}는 \=\= 입니까?   아니요**    
-## 참고 항목  
- [같음 연산자](../Topic/Equality%20Operators.md)
+ **Bad type:  {2,2} {2,2} are equal? No**  
+**Good type: {3,3} {3,3} are equal? Yes**  
+**Good type: {3,3} {3,3} are == ?   Yes**  
+**Bad type:  {2,2} {9,9} are equal? No**  
+**Good type: {3,3} {9,9} are == ?   No**   
+## <a name="see-also"></a>See Also  
+ [Equality Operators](/dotnet/standard/design-guidelines/equality-operators)

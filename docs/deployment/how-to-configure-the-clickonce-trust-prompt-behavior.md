@@ -1,91 +1,108 @@
 ---
-title: "방법: ClickOnce 신뢰 프롬프트 동작 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 응용 프로그램, 메시지를 표시하지 않고 설치"
-  - "ClickOnce 응용 프로그램, 신뢰 프롬프트"
-  - "ClickOnce 배포, 메시지를 표시하지 않고 설치"
-  - "ClickOnce 배포, 신뢰 프롬프트"
-  - "응용 프로그램 배포[ClickOnce], 신뢰 프롬프트"
+title: 'How to: Configure the ClickOnce Trust Prompt Behavior | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce deployment, install without prompting
+- deploying applications [ClickOnce], trust prompt
+- ClickOnce applications, install without prompting
+- ClickOnce applications, trust prompt
+- ClickOnce deployment, trust prompt
 ms.assetid: cc04fa75-012b-47c9-9347-f4216be23cf2
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 11
----
-# 방법: ClickOnce 신뢰 프롬프트 동작 구성
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 54219ec3ca0ba5b2d8140a91462b9826f469b6f0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-최종 사용자가 Windows Forms 응용 프로그램, Windows Presentation Foundation 응용 프로그램, 콘솔 응용 프로그램, WPF 브라우저 응용 프로그램 및 Office 솔루션 같은 ClickOnce 응용 프로그램을 설치할 수 있는지 여부를 제어하도록 ClickOnce 신뢰 프롬프트를 구성할 수 있습니다.  신뢰 프롬프트는 각 최종 사용자의 컴퓨터에서 레지스트리 키를 설정하여 구성합니다.  
+---
+# <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>How to: Configure the ClickOnce Trust Prompt Behavior
+You can configure the ClickOnce trust prompt to control whether end users are given the option of installing ClickOnce applications, such as Windows Forms applications, Windows Presentation Foundation applications, console applications, WPF browser applications, and Office solutions. You configure the trust prompt by setting registry keys on each end user's computer.  
   
- 다음 표에서는 5개의 각 영역\(Internet, UntrustedSites, MyComputer, LocalIntranet, TrustedSites\)에 적용할 수 있는 구성 옵션을 보여 줍니다.  
+ The following table shows the configuration options that can be applied to each of the five zones (Internet, UntrustedSites, MyComputer, LocalIntranet, and TrustedSites).  
   
-|옵션|레지스트리 설정 값|설명|  
-|--------|----------------|--------|  
-|신뢰 프롬프트를 사용하도록 설정합니다.|`Enabled`|최종 사용자가 ClickOnce 응용 프로그램에 신뢰를 부여할 수 있도록 ClickOnce 신뢰 프롬프트가 표시됩니다.|  
-|신뢰 프롬프트를 제한합니다.|`AuthenticodeRequired`|ClickOnce 응용 프로그램이 게시자를 식별하는 인증서로 서명된 경우에만 ClickOnce 신뢰 프롬프트가 표시됩니다.|  
-|신뢰 프롬프트를 사용하지 않도록 설정합니다.|`Disabled`|명시적으로 신뢰할 수 있는 인증서로 서명되지 않은 ClickOnce 응용 프로그램의 경우 ClickOnce 신뢰 프롬프트가 표시되지 않습니다.|  
+|Option|Registry setting value|Description|  
+|------------|----------------------------|-----------------|  
+|Enable the trust prompt.|`Enabled`|The ClickOnce trust prompt is display so that end users can grant trust to ClickOnce applications.|  
+|Restrict the trust prompt.|`AuthenticodeRequired`|The ClickOnce trust prompt is only displayed if ClickOnce applications are signed with a certificate that identifies the publisher.|  
+|Disable the trust prompt.|`Disabled`|The ClickOnce trust prompt is not displayed for any ClickOnce applications that are not signed with an explicitly trusted certificate.|  
   
- 다음 표에서는 각 영역의 기본 동작을 보여 줍니다.  응용 프로그램 열은 Windows Forms 응용 프로그램, Windows Presentation Foundation 응용 프로그램, WPF 브라우저 응용 프로그램 및 콘솔 응용 프로그램을 나타냅니다.  
+ The following table shows the default behavior for each zone. The Applications column refers to Windows Forms applications, Windows Presentation Foundation applications, WPF browser applications, and console applications.  
   
-|영역|응용 프로그램|Office 솔루션|  
-|--------|-------------|----------------|  
+|Zone|Applications|Office solutions|  
+|----------|------------------|----------------------|  
 |`MyComputer`|`Enabled`|`Enabled`|  
 |`LocalIntranet`|`Enabled`|`Enabled`|  
 |`TrustedSites`|`Enabled`|`Enabled`|  
 |`Internet`|`Enabled`|`AuthenticodeRequired`|  
 |`UntrustedSites`|`Disabled`|`Disabled`|  
   
- ClickOnce 신뢰 프롬프트를 사용하도록 설정하거나 제한하거나 사용하지 않도록 설정하여 이 설정을 재정의할 수 있습니다.  
+ You can override these settings by enabling, restricting, or disabling the ClickOnce trust prompt.  
   
-## ClickOnce 신뢰 프롬프트를 사용하도록 설정  
- 최종 사용자가 특정 영역에서 가져온 ClickOnce 응용 프로그램을 설치하고 실행할 수 있도록 하려면 해당 영역에 대해 신뢰 프롬프트를 사용하도록 설정합니다.  
+## <a name="enabling-the-clickonce-trust-prompt"></a>Enabling the ClickOnce Trust Prompt  
+ Enable the trust prompt for a zone when you want end users to be presented with the option of installing and running any ClickOnce application that comes from that zone.  
   
-#### 레지스트리 편집기를 사용하여 ClickOnce 신뢰 프롬프트를 사용하도록 설정하려면  
+#### <a name="to-enable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>To enable the ClickOnce trust prompt by using the registry editor  
   
-1.  레지스트리 편집기를 엽니다.  
+1.  Open the registry editor:  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
+    1.  Click **Start**, and then click **Run**.  
   
-    2.  **열기** 상자에 `regedit32`를 입력한 다음 **확인**을 클릭합니다.  
+    2.  In the **Open** box, type `regedit32`, and then click **OK**.  
   
-2.  다음 레지스트리 키를 찾습니다.  
+2.  Find the following registry key:  
   
-     \\HKEY\_LOCAL\_MACHINE\\SOFTWARE\\MICROSOFT\\.NETFramework\\Security\\TrustManager\\PromptingLevel  
+     \HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel  
   
-     해당 키가 없으면 만듭니다.  
+     If the key does not exist, create it.  
   
-3.  **문자열 값**으로 다음 하위 키가 아직 없으면 해당 하위 키와 다음 표에 나와 있는 관련 값을 추가합니다.  
+3.  Add the following subkeys as **String Value**, if they do not already exist, with the associated values shown in the following table.  
   
-    |문자열 값 하위 키|값|  
-    |----------------|-------|  
+    |String Value subkey|Value|  
+    |-------------------------|-----------|  
     |`Internet`|`Enabled`|  
     |`UntrustedSites`|`Disabled`|  
     |`MyComputer`|`Enabled`|  
     |`LocalIntranet`|`Enabled`|  
     |`TrustedSites`|`Enabled`|  
   
-     Office 솔루션의 경우 `Internet`에는 기본값인 `AuthenticodeRequired`가 지정되고 `UntrustedSites`에는 `Disabled` 값이 지정됩니다.  나머지 경우에는 모두 `Internet`에 기본값인 `Enabled`가 지정됩니다.  
+     For Office solutions, `Internet` has the default value `AuthenticodeRequired` and `UntrustedSites` has the value `Disabled`. For all others, `Internet` has the default value `Enabled`.  
   
-#### ClickOnce 신뢰 프롬프트를 프로그램 방식으로 사용하도록 지정하려면  
+#### <a name="to-enable-the-clickonce-trust-prompt-programmatically"></a>To enable the ClickOnce trust prompt programmatically  
   
-1.  Visual Studio에서 Visual Basic 또는 Visual C\# 콘솔 응용 프로그램을 만듭니다.  
+1.  Create a Visual Basic or Visual C# console application in Visual Studio.  
   
-2.  편집할 Program.vb 또는 Program.cs 파일을 열고 다음 코드를 추가합니다.  
+2.  Open the Program.vb or Program.cs file for editing and add the following code.  
   
-    ```vb#  
+    ```vb  
     Dim key As Microsoft.Win32.RegistryKey  
     key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\MICROSOFT\.NETFramework\Security\TrustManager\PromptingLevel")  
     key.SetValue("MyComputer", "Enabled")  
@@ -96,7 +113,7 @@ caps.handback.revision: 11
     key.Close()  
     ```  
   
-    ```c#  
+    ```csharp  
     Microsoft.Win32.RegistryKey key;  
     key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\\MICROSOFT\\.NETFramework\\Security\\TrustManager\\PromptingLevel");  
     key.SetValue("MyComputer", "Enabled");  
@@ -107,42 +124,42 @@ caps.handback.revision: 11
     key.Close();  
     ```  
   
-3.  응용 프로그램을 빌드하고 실행합니다.  
+3.  Build and run the application.  
   
-## ClickOnce 신뢰 프롬프트 제한  
- 사용자에게 신뢰 여부를 결정하라는 메시지가 표시되기 전에 알려진 ID가 있는 Authenticode 인증서로 솔루션에 서명해야만 하도록 신뢰 프롬프트를 제한할 수 있습니다.  
+## <a name="restricting-the-clickonce-trust-prompt"></a>Restricting the ClickOnce Trust Prompt  
+ Restrict the trust prompt so that solutions must be signed with Authenticode certificates that have known identity before users are prompted for a trust decision.  
   
-#### 레지스트리 편집기를 사용하여 ClickOnce 신뢰 프롬프트를 제한하려면  
+#### <a name="to-restrict-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>To restrict the ClickOnce trust prompt by using the registry editor  
   
-1.  레지스트리 편집기를 엽니다.  
+1.  Open the registry editor:  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
+    1.  Click **Start**, and then click **Run**.  
   
-    2.  **열기** 상자에 `regedit`를 입력한 다음 **확인**을 클릭합니다.  
+    2.  In the **Open** box, type `regedit`, and then click **OK**.  
   
-2.  다음 레지스트리 키를 찾습니다.  
+2.  Find the following registry key:  
   
-     \\HKEY\_LOCAL\_MACHINE\\SOFTWARE\\MICROSOFT\\.NETFramework\\Security\\TrustManager\\PromptingLevel  
+     \HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel  
   
-     해당 키가 없으면 만듭니다.  
+     If the key does not exist, create it.  
   
-3.  **문자열 값**으로 다음 하위 키가 아직 없으면 해당 하위 키와 다음 표에 나와 있는 관련 값을 추가합니다.  
+3.  Add the following subkeys as **String Value**, if they do not already exist, with the associated values shown in the following table.  
   
-    |문자열 값 하위 키|값|  
-    |----------------|-------|  
+    |String Value subkey|Value|  
+    |-------------------------|-----------|  
     |`UntrustedSites`|`Disabled`|  
     |`Internet`|`AuthenticodeRequired`|  
     |`MyComputer`|`AuthenticodeRequired`|  
     |`LocalIntranet`|`AuthenticodeRequired`|  
     |`TrustedSites`|`AuthenticodeRequired`|  
   
-#### ClickOnce 신뢰 프롬프트를 프로그램 방식으로 제한하려면  
+#### <a name="to-restrict-the-clickonce-trust-prompt-programmatically"></a>To restrict the ClickOnce trust prompt programmatically  
   
-1.  Visual Studio에서 Visual Basic 또는 Visual C\# 콘솔 응용 프로그램을 만듭니다.  
+1.  Create a Visual Basic or Visual C# console application in Visual Studio.  
   
-2.  편집할 Program.vb 또는 Program.cs 파일을 열고 다음 코드를 추가합니다.  
+2.  Open the Program.vb or Program.cs file for editing and add the following code.  
   
-    ```vb#  
+    ```vb  
     Dim key As Microsoft.Win32.RegistryKey  
     key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\MICROSOFT\.NETFramework\Security\TrustManager\PromptingLevel")  
     key.SetValue("MyComputer", "AuthenticodeRequired")  
@@ -153,7 +170,7 @@ caps.handback.revision: 11
     key.Close()  
     ```  
   
-    ```c#  
+    ```csharp  
     Microsoft.Win32.RegistryKey key;  
     key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\\MICROSOFT\\.NETFramework\\Security\\TrustManager\\PromptingLevel");  
     key.SetValue("MyComputer", "AuthenticodeRequired");  
@@ -164,42 +181,42 @@ caps.handback.revision: 11
     key.Close();  
     ```  
   
-3.  응용 프로그램을 빌드하고 실행합니다.  
+3.  Build and run the application.  
   
-## ClickOnce 신뢰 프롬프트를 사용하지 않도록 설정  
- 최종 사용자가 보안 정책에서 아직 신뢰되지 않은 솔루션을 설치할 수 없도록 신뢰 프롬프트를 사용하지 않도록 설정할 수 있습니다.  
+## <a name="disabling-the-clickonce-trust-prompt"></a>Disabling the ClickOnce Trust Prompt  
+ You can disable the trust prompt so that end users are not given the option to install solutions that are not already trusted in their security policy.  
   
-#### 레지스트리 편집기를 사용하여 ClickOnce 신뢰 프롬프트를 사용하지 않도록 설정하려면  
+#### <a name="to-disable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>To disable the ClickOnce trust prompt by using the registry editor  
   
-1.  레지스트리 편집기를 엽니다.  
+1.  Open the registry editor:  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
+    1.  Click **Start**, and then click **Run**.  
   
-    2.  **열기** 상자에 `regedit`를 입력한 다음 **확인**을 클릭합니다.  
+    2.  In the **Open** box, type `regedit`, and then click **OK**.  
   
-2.  다음 레지스트리 키를 찾습니다.  
+2.  Find the following registry key:  
   
-     \\HKEY\_LOCAL\_MACHINE\\SOFTWARE\\MICROSOFT\\.NETFramework\\Security\\TrustManager\\PromptingLevel  
+     \HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel  
   
-     해당 키가 없으면 만듭니다.  
+     If the key does not exist, create it.  
   
-3.  **문자열 값**으로 다음 하위 키가 아직 없으면 해당 하위 키와 다음 표에 나와 있는 관련 값을 추가합니다.  
+3.  Add the following subkeys as **String Value**, if they do not already exist, with the associated values shown in the following table.  
   
-    |문자열 값 하위 키|값|  
-    |----------------|-------|  
+    |String Value subkey|Value|  
+    |-------------------------|-----------|  
     |`UntrustedSites`|`Disabled`|  
     |`Internet`|`Disabled`|  
     |`MyComputer`|`Disabled`|  
     |`LocalIntranet`|`Disabled`|  
     |`TrustedSites`|`Disabled`|  
   
-#### ClickOnce 신뢰 프롬프트를 프로그램 방식으로 사용하지 않도록 지정하려면  
+#### <a name="to-disable-the-clickonce-trust-prompt-programmatically"></a>To disable the ClickOnce trust prompt programmatically  
   
-1.  Visual Studio에서 Visual Basic 또는 Visual C\# 콘솔 응용 프로그램을 만듭니다.  
+1.  Create a Visual Basic or Visual C# console application in Visual Studio.  
   
-2.  편집할 Program.vb 또는 Program.cs 파일을 열고 다음 코드를 추가합니다.  
+2.  Open the Program.vb or Program.cs file for editing and add the following code.  
   
-    ```vb#  
+    ```vb  
     Dim key As Microsoft.Win32.RegistryKey  
     key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\MICROSOFT\.NETFramework\Security\TrustManager\PromptingLevel")  
     key.SetValue("MyComputer", "Disabled")  
@@ -210,7 +227,7 @@ caps.handback.revision: 11
     key.Close()  
     ```  
   
-    ```c#  
+    ```csharp  
     Microsoft.Win32.RegistryKey key;  
     key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\\MICROSOFT\\.NETFramework\\Security\\TrustManager\\PromptingLevel");  
     key.SetValue("MyComputer", "Disabled");  
@@ -222,16 +239,16 @@ caps.handback.revision: 11
   
     ```  
   
-3.  응용 프로그램을 빌드하고 실행합니다.  
+3.  Build and run the application.  
   
-## 참고 항목  
- [ClickOnce 응용 프로그램 보안](../deployment/securing-clickonce-applications.md)   
- [ClickOnce 응용 프로그램의 코드 액세스 보안](../deployment/code-access-security-for-clickonce-applications.md)   
- [ClickOnce 및 Authenticode](../deployment/clickonce-and-authenticode.md)   
- [신뢰할 수 있는 응용 프로그램 배포 개요](../deployment/trusted-application-deployment-overview.md)   
- [방법: ClickOnce 보안 설정 사용](../deployment/how-to-enable-clickonce-security-settings.md)   
- [방법: ClickOnce 응용 프로그램의 보안 영역 설정](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
- [방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버깅](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
- [방법: ClickOnce 응용 프로그램의 클라이언트 컴퓨터에 신뢰할 수 있는 게시자 추가](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
- [방법: 응용 프로그램 및 배포 매니페스트에 다시 서명](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
+## <a name="see-also"></a>See Also  
+ [Securing ClickOnce Applications](../deployment/securing-clickonce-applications.md)   
+ [Code Access Security for ClickOnce Applications](../deployment/code-access-security-for-clickonce-applications.md)   
+ [ClickOnce and Authenticode](../deployment/clickonce-and-authenticode.md)   
+ [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)   
+ [How to: Enable ClickOnce Security Settings](../deployment/how-to-enable-clickonce-security-settings.md)   
+ [How to: Set a Security Zone for a ClickOnce Application](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
+ [How to: Set Custom Permissions for a ClickOnce Application](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+ [How to: Debug a ClickOnce Application with Restricted Permissions](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [How to: Add a Trusted Publisher to a Client Computer for ClickOnce Applications](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
+ [How to: Re-sign Application and Deployment Manifests](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

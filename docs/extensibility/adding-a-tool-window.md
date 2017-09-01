@@ -1,66 +1,83 @@
 ---
-title: "도구 창 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "자습서"
-  - "도구 창"
+title: Adding a Tool Window | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tutorials
+- tool windows
 ms.assetid: 8e16c381-03c8-404e-92ef-3614cdf3150a
 caps.latest.revision: 52
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 52
----
-# 도구 창 추가
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b35bcac09da295efc9fa5fc720370d9e26f9ae7f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 연습에서는 도구 창을 만들고 다음과 같은 방법으로 Visual Studio에 통합 하는 방법에 알아봅니다.  
+---
+# <a name="adding-a-tool-window"></a>Adding a Tool Window
+In this walkthrough you learn how to create a tool window and integrate it into Visual Studio in the following ways:  
   
--   도구 창으로 컨트롤을 추가 합니다.  
+-   Add a control to the tool window.  
   
--   도구 창 도구 모음을 추가 합니다.  
+-   Add a toolbar to a tool window.  
   
--   도구 모음에 명령을 추가 합니다.  
+-   Add a command to the toolbar.  
   
--   명령을 구현 합니다.  
+-   Implement the commands.  
   
--   도구 창에 대 한 기본 위치를 설정 합니다.  
+-   Set the default position for the tool window.  
   
-## 사전 요구 사항  
- Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)을 참조하세요.  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## 도구 창 만들기  
+## <a name="creating-a-tool-window"></a>Creating a Tool Window  
   
-1.  라는 프로젝트 **FirstToolWin** 라는 사용자 지정 도구 창 항목 템플릿을 추가 하 고 VSIX 템플릿을 사용 하 여 **FirstToolWindow**합니다.  
+1.  Create a project named **FirstToolWin** using the VSIX template, and add a custom tool window item template named **FirstToolWindow**.  
   
     > [!NOTE]
-    >  도구 창으로 확장을 만들기에 대 한 자세한 내용은 참조 [확장 도구 창 만들기](../extensibility/creating-an-extension-with-a-tool-window.md)합니다.  
+    >  For more information about creating an extension with a tool window, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## 도구 창으로 컨트롤을 추가 합니다.  
+## <a name="add-a-control-to-the-tool-window"></a>Add a Control to the Tool Window  
   
-1.  기본 컨트롤을 제거 합니다. FirstToolWindowControl.xaml 열고 삭제는 **Click Me\!** 단추입니다.  
+1.  Remove the default control. Open FirstToolWindowControl.xaml and delete the **Click Me!** button.  
   
-2.  에 **도구 상자**, 확장 하 고는 **모든 WPF 컨트롤** 끌어서 섹션는 **미디어 요소** 컨트롤을 **FirstToolWindowControl** 양식입니다. 컨트롤을 선택 및는 **속성** 창에서이 요소 이름을 **mediaElement1**합니다.  
+2.  In the **Toolbox**, expand the **All WPF Controls** section and drag the **Media Element** control to the **FirstToolWindowControl** form. Select the control, and in the **Properties** window, name this element **mediaElement1**.  
   
-## 도구 창으로 도구 모음을 추가 합니다.  
- 다음과 같이 도구 모음에 추가 하 여 해당 그라데이션 및 색 IDE의 나머지 부분과 일치 되도록 보장 합니다.  
+## <a name="add-a-toolbar-to-the-tool-window"></a>Add a Toolbar to the Tool Window  
+ By adding a toolbar in the following manner, you guarantee that its gradients and colors are consistent with the rest of the IDE.  
   
-1.  **솔루션 탐색기**, FirstToolWindowPackage.vsct를 엽니다. .Vsct 파일 도구 창에서 XML을 사용 하 여 그래픽 사용자 인터페이스 \(GUI\) 요소를 정의 합니다.  
+1.  In **Solution Explorer**, open FirstToolWindowPackage.vsct. The .vsct file defines the graphical user interface (GUI) elements in your tool window by using XML.  
   
-2.  에 `<Symbols>` 섹션에서 찾을 `<GuidSymbol>` 노드 인 `name` 특성은 `guidFirstToolWindowPackageCmdSet`합니다. 다음 두 가지 추가 `<IDSymbol>` 요소 목록에 `<IDSymbol>` 이 노드의 도구 모음 및 도구 모음 그룹을 정의 하는 요소입니다.  
+2.  In the `<Symbols>` section, find the `<GuidSymbol>` node whose `name` attribute is `guidFirstToolWindowPackageCmdSet`. Add the following two `<IDSymbol>` elements to the list of `<IDSymbol>` elements in this node to define a toolbar and a toolbar group.  
   
     ```xml  
     <IDSymbol name="ToolbarID" value="0x1000" />  
     <IDSymbol name="ToolbarGroupID" value="0x1001" />  
     ```  
   
-3.  바로 위에 `<Buttons>` 섹션을 만듭니다는 `<Menus>` 이 유사한 섹션:  
+3.  Just above the `<Buttons>` section, create a `<Menus>` section that resembles this:  
   
     ```xml  
     <Menus>  
@@ -74,11 +91,11 @@ caps.handback.revision: 52
     </Menus>  
     ```  
   
-     메뉴에는 여러 가지가 있습니다. 이 메뉴는 도구 창의 도구 모음에 정의 된 해당 `type` 특성입니다.`guid` 및  `id` 설정 도구 모음에서의 정규화 된 ID를 확인 합니다. 일반적으로 `<Parent>` 메뉴의 포함 된 그룹입니다. 그러나 도구 모음은 자신의 부모도 정의 됩니다. 따라서 동일한 식별자에 사용할는 `<Menu>` 및 `<Parent>` 요소입니다.`priority` 특성은 바로 ' 0'입니다.  
+     There are several different kinds of menu. This menu is a toolbar in a tool window, defined by its `type` attribute. The `guid` and  `id` settings make up the fully qualified ID of the toolbar. Typically, the `<Parent>` of a menu is the containing group. However, a toolbar is defined as its own parent. Therefore, the same identifier is used for the `<Menu>` and `<Parent>` elements. The `priority` attribute is just '0'.  
   
-4.  도구 모음에는 여러 가지 방법으로 메뉴와 유사합니다. 예를 들어 메뉴 명령 그룹을 가질 수와 마찬가지로 도구 모음 있을 그룹입니다. \(메뉴 명령 그룹 구분 됩니다 가로 선으로. 도구 모음에는 그룹 구분 되지 않은 시각적 구분선.\)  
+4.  Toolbars resemble menus in many ways. For example, just as a menu may have groups of commands, toolbars may also have groups. (On menus, the command groups are separated by horizontal lines. On toolbars, the groups are not separated by visual dividers.)  
   
-     추가 `<Groups>` 포함 된 섹션을 `<Group>` 요소입니다. 이 그룹에 선언 된 ID를 가진 정의 `<Symbols>` 섹션입니다. 추가 `<Groups>` 섹션 바로 뒤의 `<Menus>` 섹션입니다.  
+     Add a `<Groups>` section that contains a `<Group>` element. This defines the group whose ID you declared in the `<Symbols>` section. Add the `<Groups>` section just after the `<Menus>` section.  
   
     ```xml  
     <Groups>  
@@ -88,19 +105,19 @@ caps.handback.revision: 52
     </Groups>  
     ```  
   
-     부모 GUID 및 ID의 GUID 및 도구 모음 ID로 설정 하 여 도구 모음에 그룹을 추가 합니다.  
+     By setting the parent GUID and ID to the GUID and ID of the toolbar, you add the group to the toolbar.  
   
-## 도구 모음에 명령 추가  
- 단추로 표시 되는 도구 모음에 명령을 추가 합니다.  
+## <a name="add-a-command-to-the-toolbar"></a>Add a Command to the Toolbar  
+ Add a command to the toolbar, which is displayed as a button.  
   
-1.  에 `<Symbols>` 섹션에서 그룹 선언 바로 뒤에 도구 모음 및 도구 모음 다음 IDSymbol 요소를 선언 합니다.  
+1.  In the `<Symbols>` section, declare the following IDSymbol elements just after the toolbar and toolbar group declarations.  
   
     ```xml  
     <IDSymbol name="cmdidWindowsMedia" value="0x0100" />  
     <IDSymbol name="cmdidWindowsMediaOpen" value="0x132" />  
     ```  
   
-2.  내 단추 요소를 추가 `<Buttons>` 섹션입니다. 이 요소는 검색 \(돋보기\) 아이콘을 사용 하는 도구 창에서 도구 모음에 표시 됩니다.  
+2.  Add a Button element inside the `<Buttons>` section. This element will appear on the toolbar in the tool window, with a Search (magnifying glass) icon.  
   
     ```xml  
     <Button guid="guidFirstToolWindowPackageCmdSet" id="cmdidWindowsMediaOpen" priority="0x0101" type="Button">  
@@ -113,64 +130,64 @@ caps.handback.revision: 52
     </Button>  
     ```  
   
-3.  FirstToolWindowCommand.cs 열고 기존 필드 바로 뒤의 클래스에 다음 줄을 추가 합니다.  
+3.  Open FirstToolWindowCommand.cs and add the following lines in the class just after the existing fields.  
   
-    ```c#  
+    ```csharp  
     public const string guidFirstToolWindowPackageCmdSet = "00000000-0000-0000-0000-0000";  // get the GUID from the .vsct file  
     public const uint cmdidWindowsMedia =        0x100;   
     public const int cmdidWindowsMediaOpen = 0x132;  
     public const int ToolbarID = 0x1000;  
     ```  
   
-     이 통해 명령을 코드에서 사용할 수 있습니다.  
+     Doing this makes your commands available in code.  
   
-## FirstToolWindowControl MediaPlayer 속성 추가  
- 도구 모음 컨트롤에 대 한 이벤트 처리기에서 코드 FirstToolWindowControl 클래스의 자식 미디어 플레이어 컨트롤에 액세스할 수 있어야 합니다.  
+## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>Add a MediaPlayer Property to FirstToolWindowControl  
+ From the event handlers for the toolbar controls, your code must be able to access the Media Player control, which is a child of the FirstToolWindowControl class.  
   
- **솔루션 탐색기**, 를 마우스 오른쪽 단추로 FirstToolWindowControl.xaml 클릭 **코드 보기**, FirstToolWindowControl 클래스에 다음 코드를 추가 합니다.  
+ In **Solution Explorer**, right-click FirstToolWindowControl.xaml, click **View Code**, and add the following code to the FirstToolWindowControl Class.  
   
-```c#  
+```csharp  
 public System.Windows.Controls.MediaElement MediaPlayer  
 {  
     get { return mediaElement1; }  
 }  
 ```  
   
-## 도구 창 및 도구 모음을 인스턴스화합니다  
- 도구 모음 및 메뉴 명령을 호출 하는 추가 **파일 열기** 대화 선택한 미디어 파일을 재생 하 고 있습니다.  
+## <a name="instantiate-the-tool-window-and-toolbar"></a>Instantiate the Tool Window and Toolbar  
+ Add a toolbar and a menu command that invokes the **Open File** dialog and plays the selected media file.  
   
-1.  FirstToolWindow.cs를 열고 다음 코드를 추가 `using` 문입니다.  
+1.  Open FirstToolWindow.cs and add the following `using` statements.  
   
-    ```c#  
+    ```csharp  
     using System.ComponentModel.Design;  
     using System.Windows.Forms;  
     using Microsoft.VisualStudio.Shell.Interop;   
     ```  
   
-2.  FirstToolWindow 클래스 내부 FirstToolWindowControl 컨트롤에 대 한 공용 참조를 추가 합니다.  
+2.  Inside the FirstToolWindow class, add a public reference to the FirstToolWindowControl control.  
   
-    ```c#  
+    ```csharp  
     public FirstToolWindowControl control;  
     ```  
   
-3.  생성자의 끝을 새로 만든 컨트롤이 제어 변수를 설정 합니다.  
+3.  At the end of the constructor, set this control variable to the newly-created control.  
   
-    ```c#  
+    ```csharp  
     control = new FirstToolWindowControl();   
     base.Content = control;  
     ```  
   
-4.  생성자 내부 도구 모음을 인스턴스화하십시오.  
+4.  Instantiate the toolbar inside the constructor.  
   
-    ```c#  
+    ```csharp  
     this.ToolBar = new CommandID(new Guid(FirstToolWindowCommand.guidFirstToolWindowPackageCmdSet),   
         FirstToolWindowCommand.ToolbarID);  
     this.ToolBarLocation = (int)VSTWT_LOCATION.VSTWT_TOP;  
     ```  
   
-5.  이 시점에서 FirstToolWindow 생성자는 다음과 같아야 합니다.  
+5.  At this point the FirstToolWindow constructor should look like this:  
   
-    ```c#  
+    ```csharp  
     public FirstToolWindow() : base(null)  
     {  
         this.Caption = "FirstToolWindow";  
@@ -184,15 +201,15 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-6.  도구 모음에 메뉴 명령을 추가 합니다. FirstToolWindowCommand.cs 클래스에 다음을 추가 문을 사용 하 여  
+6.  Add the menu command to the toolbar. In the FirstToolWindowCommand.cs class, add the following using statement  
   
-    ```c#  
+    ```csharp  
     using System.Windows.Forms;  
     ```  
   
-7.  FirstToolWindowCommand 클래스에서 ShowToolWindow\(\) 메서드의 끝에 다음 코드를 추가 합니다. ButtonHandler 명령은 다음 섹션에서 구현 됩니다.  
+7.  In the FirstToolWindowCommand class, add the following code at the end of the ShowToolWindow() method. The ButtonHandler command will be implemented in the next section.  
   
-    ```c#  
+    ```csharp  
     // Create the handles for the toolbar command.   
     var mcs = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;  
     var toolbarbtnCmdID = new CommandID(new Guid(FirstToolWindowCommand.guidFirstToolWindowPackageCmdSet),  
@@ -202,19 +219,19 @@ public System.Windows.Controls.MediaElement MediaPlayer
     mcs.AddCommand(menuItem);  
     ```  
   
-#### 도구 창에 메뉴 명령을 구현 하려면  
+#### <a name="to-implement-a-menu-command-in-the-tool-window"></a>To implement a menu command in the tool window  
   
-1.  FirstToolWindowCommand 클래스에서 호출 하는 ButtonHandler 메서드에 추가 **파일 열기** 대화 합니다. 파일을 선택 하는 경우 미디어 파일을 재생 합니다.  
+1.  In the FirstToolWindowCommand class, add a ButtonHandler method that invokes the **Open File** dialog. When a file has been selected, it plays the media file.  
   
-2.  FirstToolWindowCommand 클래스에서 FindToolWindow\(\) 메서드에서 생성 되는 FirstToolWindow 창에 대 한 개인 참조를 추가 합니다.  
+2.  In the FirstToolWindowCommand class, add a private reference to the FirstToolWindow window that gets created in the FindToolWindow() method.  
   
-    ```c#  
+    ```csharp  
     private FirstToolWindow window;  
     ```  
   
-3.  설정 \(있도록 ButtonHandler 명령 처리기 창 컨트롤에 액세스할 수 있습니다 위에 정의 된 창에 ShowToolWindow\(\) 방법 변경. 다음은 전체 ShowToolWindow\(\) 메서드입니다.  
+3.  Change the ShowToolWindow() method to set the window you defined above (so that the ButtonHandler command handler can access the window control. Here is the complete ShowToolWindow() method.  
   
-    ```c#  
+    ```csharp  
     private void ShowToolWindow(object sender, EventArgs e)  
     {  
         window = (FirstToolWindow) this.package.FindToolWindow(typeof(FirstToolWindow), 0, true);  
@@ -235,9 +252,9 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-4.  ButtonHandler 메서드를 추가 합니다. OpenFileDialog를 재생 하려면 미디어 파일을 지정 하는 사용자에 대 한 생성 한 다음 선택한 파일을 재생 합니다.  
+4.  Add the ButtonHandler method. It creates an OpenFileDialog for the user to specify the media file to play, and then plays the selected file.  
   
-    ```c#  
+    ```csharp  
     private void ButtonHandler(object sender, EventArgs arguments)  
     {  
         OpenFileDialog openFileDialog = new OpenFileDialog();  
@@ -249,33 +266,33 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-## 도구 창에 대 한 기본 위치를 설정 합니다.  
- 다음으로, 도구 창에 대 한 IDE에서 기본 위치를 지정 합니다. 도구 창에 대 한 구성 정보 FirstToolWindowPackage.cs 파일입니다.  
+## <a name="set-the-default-position-for-the-tool-window"></a>Set the Default Position for the Tool Window  
+ Next, specify a default location in the IDE for the tool window. Configuration information for the tool window is in the FirstToolWindowPackage.cs file.  
   
-1.  FirstToolWindowPackage.cs, 찾을 <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> 특성에 `FirstToolWindowPackage` FirstToolWindow 형식을 생성자에 전달 하는 클래스입니다. 기본 위치를 지정 하려면 다음 예제에서는 생성자에 더 많은 매개 변수를 추가 해야 합니다.  
+1.  In FirstToolWindowPackage.cs, find the <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> attribute on the `FirstToolWindowPackage` class, which passes the FirstToolWindow type to the constructor. To specify a default position, you must add more parameters to the constructor following example.  
   
-    ```c#  
+    ```csharp  
     [ProvideToolWindow(typeof(FirstToolWindow),  
         Style = Microsoft.VisualStudio.Shell.VsDockStyle.Tabbed,  
         Window = "3ae79031-e1bc-11d0-8f78-00a0c9110057")]  
     ```  
   
-     첫 번째 명명 된 매개 변수는 `Style` 이며 값은 `Tabbed`, 즉, 창에는 기존 창 탭 된다는 것입니다. 도킹 위치에서 지정 된 `Window` 매개 변수, 여기서 n의 GUID는 **솔루션 탐색기**합니다.  
+     The first named parameter is `Style` and its value is `Tabbed`, which means that the window will be a tab in an existing window. The docking position is specified by the `Window` parameter, n this case, the GUID of the **Solution Explorer**.  
   
     > [!NOTE]
-    >  IDE에서 windows의 형식에 대 한 자세한 내용은 참조 <xref:EnvDTE.vsWindowType>합니다.  
+    >  For more information about the types of windows in the IDE, see <xref:EnvDTE.vsWindowType>.  
   
-## 테스트 도구 창  
+## <a name="testing-the-tool-window"></a>Testing the Tool Window  
   
-1.  실험적 Visual Studio의 새 인스턴스를 열고 F5 키를 눌러 빌드합니다.  
+1.  Press F5 to open a new instance of the Visual Studio experimental build.  
   
-2.  에 **보기** 메뉴에서 **다른 창** 클릭 하 고 **첫 번째 도구 창을**합니다.  
+2.  On the **View** menu, point to **Other Windows** and then click **First Tool Window**.  
   
-     같은 위치에서 미디어 플레이어 도구 창을 열어야 **솔루션 탐색기**합니다. 이전과 같은 위치에 여전히 나타나는 경우에 창 레이아웃 다시 설정 \(**창 \/ 창 레이아웃 다시 설정**\).  
+     The media player tool window should open in the same position as **Solution Explorer**. If it still appears in the same position as before, reset the window layout (**Window / Reset Window Layout**).  
   
-3.  도구 창에서 \(검색 아이콘에 있음\) 단추를 클릭 합니다. 지원 되는 사운드 또는 비디오 파일, 예를 들어 C:\\windows\\media\\chimes.wav 선택 키를 누릅니다 **열려**합니다.  
+3.  Click the button (it has the Search icon) in the tool window. Select a supported sound or video file, for example, C:\windows\media\chimes.wav, then press **Open**.  
   
-     종소리 소리가 들려야 합니다.  
+     You should hear the chime sound.  
   
-## 참고 항목  
- [명령, 메뉴 및 도구 모음](../extensibility/internals/commands-menus-and-toolbars.md)
+## <a name="see-also"></a>See Also  
+ [Commands, Menus, and Toolbars](../extensibility/internals/commands-menus-and-toolbars.md)

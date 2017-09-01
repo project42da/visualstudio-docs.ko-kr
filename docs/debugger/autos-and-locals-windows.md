@@ -1,117 +1,159 @@
 ---
-title: "자동 및 지역 창 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
-f1_keywords: 
-  - "vs.debug.autos"
-  - "vs.debug.locals"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "디버거, 변수 창"
-  - "디버깅[Visual Studio], 변수 창"
+title: Inspect Variables in the Autos and Locals Windows | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.autos
+- vs.debug.locals
+helpviewer_keywords:
+- debugger, variable windows
+- debugging [Visual Studio], variable windows
 ms.assetid: bb6291e1-596d-4af0-9f22-5fd713d6b84b
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 자동 및 지역 창
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 3cd705d703b3d745c502290422e29b3c6da39ee5
+ms.openlocfilehash: f681301201a4f39e0ad83c6724e0b38d82653b84
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-**자동** 창\(디버깅하는 동안 **Ctrl\+Alt\+V, A** 또는 **디버그\/Windows\/자동**\) 및 **지역** 창\(디버깅하는 동안 **Ctrl\+Alt\+V, L** 또는 **디버그\/Windows\/지역**\)은 디버깅하는 동안 변수 값을 확인하려는 경우에 매우 유용합니다.**지역** 창에는 로컬 범위에 정의되는 변수가 표시되며, 일반적으로 현재 실행되고 있는 함수 또는 메서드입니다.**자동** 창에는 현재 줄\(디버거가 중지되어 있는 위치\)에 사용된 변수가 표시됩니다. 정확히 표시되는 변수는 언어에 따라 달라집니다. 아래에서 자동 창에 나타나는 변수를 참조하세요.  
+---
+# <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>Inspect Variables in the Autos and Locals Windows in Visual Studio
+The **Autos** window (while debugging, **CTRL+ALT+V, A**, or **Debug > Windows > Autos**) and the **Locals** window (while debugging, **CTRL+ALT+V, L**, or **Debug > Windows > Locals**) are quite useful when you want to see variable values while you are debugging. The **Locals** window displays variables that are defined in the local  scope, which is generally the function or method that is currently being executed. The **Autos** window displays variables used around the current line (the place where the debugger is stopped). Exactly which variables display in this window is different in different languages. See [What variables appear in the Autos Window?](#bkmk_whatvariables) below.  
   
- 기본 디버깅에 대한 자세한 내용은 [디버거 시작](../debugger/getting-started-with-the-debugger.md)을 참조하세요.  
+If you need more information about basic debugging, see [Getting Started with the Debugger](../debugger/getting-started-with-the-debugger.md).  
   
-## 자동 및 지역 창에서 개체 보기  
- 배열 및 개체는 트리 컨트롤로 자동 및 지역 창에 표시됩니다. 필드 및 속성을 표시하려면 변수 이름 왼쪽에 있는 화살표를 클릭하여 보기를 확장합니다. 다음은 **지역** 창에 있는 [FileStream](../Topic/FileStream%20Class.md) 개체의 예입니다.  
+## <a name="looking-at-objects-in-the-autos-and-locals-windows"></a>Looking at objects in the Autos and Locals windows  
+Arrays and objects are displayed in the Autos and Locals windows as tree controls. Click on the arrow to the left of the variable name to expand the view to show fields and properties. Here is an example of a [FileStream](http://msdn.microsoft.com/Library/a8737776-e545-4867-91ed-51c7f031fa19) object in the **Locals** window:  
   
- ![Locals&#45;FileStream](../debugger/media/locals-filestream.png "Locals\-FileStream")  
+![Locals&#45;FileStream](../debugger/media/locals-filestream.png "Locals-FileStream")  
   
-## 자동 창에 나타나는 변수  
- **자동** 창은 C\#, Visual Basic 및 C\+\+ 코드에서 사용할 수 있습니다.**자동** 창은 JavaScript 또는 F\#을 지원하지 않습니다.  
+## <a name="bkmk_whatvariables"></a> What variables appear in the Autos window?  
+ You can use the **Autos** window in C#, Visual Basic, and C++ code. The **Autos** window does not support JavaScript or F#.  
   
- C\# 및 Visual Basic의 **자동** 창에는 현재 줄이나 이전 줄에 사용된 모든 변수가 표시됩니다. 예를 들어 다음은 네 개의 변수를 선언하고 설정하는 경우입니다.  
+ In C# and Visual Basic, the **Autos** window displays any  variable used on the current or preceding line. For example, if you declare four variables and set them as follows:
+
+```CSharp
+    public static void Main()
+    {
+       int a, b, c, d;
+       a = 1;
+       b = 2;
+       c = 3;
+       d = 4;
+    }
+```
+
+ If you set a breakpoint on the line `c = 3`; and run the debugger, when execution stops the **Autos** window will look like this:  
+
+ ![Autos&#45;CSharp](../debugger/media/autos-csharp.png "Autos-CSharp")  
+
+ Note that the value of `c` is 0, because the line `c = 3` has not yet been executed.  
+
+ In C++ the **Autos** window displays the variables used at least three lines before the current line (the line at which execution is stopped). If you declare six variables:
+
+```C++
+    void main() {
+        int a, b, c, d, e, f;
+        a = 1;
+        b = 2;
+        c = 3;
+        d = 4;
+        e = 5;
+        f = 6;
+    }
+```
+
+ If you set a breakpoint on the line `e = 5;` and run the debugger, when execution stops the **Autos** window will look like this:  
   
-```c#  
-public static void Main() { int a, b, c, d; a = 1; b = 2; c = 3; d = 4; }  
-```  
+ ![Autos&#45;Cplus](../debugger/media/autos-cplus.png "Autos-Cplus")  
   
- `c = 3`; 줄에 중단점을 설정하고 디버거를 실행하는 경우 실행이 중지되면 **자동** 창이 다음과 같이 표시됩니다.  
+ Note that the variable e is uninitialized because the code on the line `e = 5;` has not yet been executed.  
   
- ![Autos&#45;CSharp](../debugger/media/autos-csharp.png "Autos\-CSharp")  
+ You can also see the return values of functions and methods in certain circumstances. See [View return values of method calls](#bkmk_returnValue) below.  
   
- `c = 3` 줄이 아직 실행되지 않았기 때문에 `c`의 값이 0입니다.  
+##  <a name="bkmk_returnValue"></a> View return values of method calls  
+ In .NET and C++ code you can examine return values when you step over or out of a method call. This functionality is useful when the result of a method call is not stored in a local variable, for example when a method is used as a parameter or as a return value of another    method.  
   
- C\+\+의 **자동** 창에는 현재 줄\(실행이 중지된 줄\) 앞에 있는 세 개 이상의 줄에서 사용된 변수가 표시됩니다. 다음은 6개의 변수를 선언하는 경우입니다.  
+ The following C# code adds the return values of two functions:  
+
+```CSharp
+static void Main(string[] args)  
+{  
+    int a, b, c, d;  
+    a = 1;  
+    b = 2;  
+    c = 3;  
+    d = 4;  
+    int x = sumVars(a, b) + subtractVars(c, d);  
+}  
   
-```cpp  
-void main() { int a, b, c, d, e, f; a = 1; b = 2; c = 3; d = 4; e = 5; f = 6; }  
-```  
+private static int sumVars(int i, int j)  
+{  
+    return i + j;  
+}  
   
- `e = 5;` 줄에 중단점을 설정하고 디버거를 실행하는 경우 실행이 중지되면 **자동** 창이 다음과 같이 표시됩니다.  
+private static int subtractVars(int i, int j)  
+{  
+    return j - i;  
+}  
+```
+
+ Set a breakpoint on the `int x = sumVars(a, b) + subtractVars(c, d);` line.  
   
- ![Autos&#45;Cplus](../debugger/media/autos-cplus.png "Autos\-Cplus")  
-  
- `e = 5;`  줄의 코드가 아직 실행되지 않았기 때문에 변수 e가 초기화되지 않습니다.  
-  
- 특정 상황에서는 함수 및 메서드의 반환 값을 볼 수도 있습니다. 아래에서 [메서드 호출의 반환 값 보기](#bkmk_returnValue)를 참조하세요.  
-  
-##  <a name="bkmk_returnValue"></a> 메서드 호출의 반환 값 보기  
- .NET 및 C\+\+ 코드에서는 메서드 호출을 프로시저 단위로 실행하거나 프로시저에서 나가는 경우 반환 값을 검사할 수 있습니다. 이 기능은 메서드가 다른 메서드의 반환 값이나 매개 변수로 사용되는 경우처럼 메서드 호출의 결과가 지역 변수에 저장되지 않는 경우에 유용합니다.  
-  
- 다음 C\# 코드는 두 함수의 반환 값을 추가합니다.  
-  
-```c#  
-static void Main(string[] args) { int a, b, c, d; a = 1; b = 2; c = 3; d = 4; int x = sumVars(a, b) + subtractVars(c, d); } private static int sumVars(int i, int j) { return i + j; } private static int subtractVars(int i, int j) { return j - i; }  
-  
-```  
-  
- int `x = sumVars(a, b) + subtractVars(c, d);` 줄에 중단점을 설정합니다.  
-  
- 디버깅을 시작하고 첫 번째 중단점에서 실행이 중단되면 **F10\(프로시저 단위 실행\)** 키를 누릅니다.**자동** 창에서 다음을 확인해야 합니다.  
+ Start debugging, and when execution breaks at the first breakpoint, press **F10 (Step Over)**. You should see the following in the **Autos** window:  
   
  ![AutosReturnValueCSharp2](../debugger/media/autosreturnvaluecsharp2.png "AutosReturnValueCSharp2")  
   
-## 지역 및 자동 창에서 변수 값이 가끔 빨간색으로 표시되는 이유  
- **지역** 및 **자동** 창에서 변수 값이 가끔 빨간색인 경우를 볼 수 있습니다. 이러한 값은 마지막 평가 이후 변경된 변수 값입니다. 변경은 이전 디버깅 세션에서 수행되거나 값이 창에서 변경되었기 때문에 수행될 수 있습니다.  
+## <a name="why-are-variable-values-sometimes-red-in-locals-and-autos-windows"></a>Why are variable values sometimes red in Locals and Autos windows?  
+You may notice that the value of a variable is sometimes red in the **Locals** and **Autos** windows. These are variable values that have been changed since the last evaluation. The change could be from a previous debugging session, or because the value was changed in the window.  
   
-## 변수 창의 숫자 형식 변경  
- 기본 숫자 형식은 10진수이지만 16진수로 변경할 수 있습니다.**지역** 또는 **자동** 창 내부를 마우스 오른쪽 단추로 클릭하고 **16진수 표시**를 선택합니다. 변경 내용은 모든 디버거 창에 영향을 줍니다.  
+## <a name="changing-the-numeric-format-of-a-variable-window"></a>Changing the numeric format of a variable window  
+The default numeric format is decimal, but you can change it to hexadecimal. Right-click inside a **Locals** or **Autos** window and select **Hexadecimal Display**. The change affects all debugger windows.  
   
-## 변수 창에서 값 편집  
- **자동**, **지역**, **조사식** 및 **간략한 조사식** 창에 나타나는 대부분의 변수 값을 편집할 수 있습니다.**조사식** 및 **간략한 조사식** 창에 대한 자세한 내용은 [조사식 및 간략한 조사식 창](../debugger/watch-and-quickwatch-windows.md)을 참조하세요. 변경하려는 값을 두 번 클릭하고 새 값을 추가하면 됩니다.  
+## <a name="editing-a-value-in-a-variable-window"></a>Editing a value in a Variable window  
+You can edit the values of most variables that appear in the **Autos**, **Locals**, **Watch**, and **QuickWatch** windows. For information about **Watch** and **QuickWatch** windows, see [Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md). Just double-click the value you want to change and add the new the value.  
   
- 값에 대해 식을 입력할 수 있습니다\(예: `a + b`\). 디버거는 유효한 언어 식을 대부분 받아들입니다.  
+You can enter an expression for a value, for example `a + b`. The debugger accepts most valid language expressions.  
   
- 네이티브 C\+\+ 코드에서 변수 이름의 컨텍스트를 한정해야 할 수 있습니다. 자세한 내용은 [컨텍스트 연산자\(C\+\+\)](../debugger/context-operator-cpp.md)을 참조하세요.  
+In native C++ code, you might have to qualify the context of a variable name. For more information, see [Context Operator (C++)](../debugger/context-operator-cpp.md).  
+ 
+However, you should exercise caution when changing values. Here are some possible issues:  
   
- 그러나 값을 변경하는 경우 주의해야 합니다. 다음과 같은 문제가 있을 수 있습니다.  
+-   Evaluating some expressions can change the value of a variable or otherwise affect the state of your program. For example, evaluating `var1 = ++var2` changes the value of `var1` and `var2`.  
   
--   일부 경우에는 식을 계산하면 변수 값이 바뀌거나 프로그램 상태에 영향이 미칠 수 있습니다. 예를 들어 `var1 = ++var2`를 평가하면 `var1` 및 `var2`의 값이 바뀝니다.  
+     Expressions that change data are said to have [side effects](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)), which can produce unexpected results if you are not aware of them. Make sure you understand the consequences of such a change before you make it.  
   
-     데이터를 변경하는 식은 [부작용](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))을 유발하여 인식하지 못할 경우 예기치 않은 결과를 생성할 수 있습니다. 변경을 수행하기 전에 이러한 변경의 결과를 이해해야 합니다.  
+-   Editing floating-point values can result in minor inaccuracies because of decimal-to-binary conversion of fractional components. Even a seemingly harmless edit can result in changes to some of the least significant bits in the floating-point variable.  
   
--   부동 소수점 값을 편집하면 소수 부분이 10진수에서 이진수로 변환되면서 약간의 오차가 발생할 수 있습니다. 겉보기에 해가 없는 편집 작업을 수행하는 경우에도 부동 소수점 변수의 LSB 중 일부가 변경될 수 있습니다.  
+## <a name="changing-the-window-context"></a>Changing the window context  
+You can use the **Debug Location** toolbar to select the desired function, thread, or process, which changes the context for the variable windows. Set a breakpoint and start debugging. (If you do not see this toolbar, you can enable it by clicking in an empty part of the toolbar area. You should see a list of toolbars; select **Debug Location**). When the breakpoint is hit, execution stops and you can see the Debug Location toolbar, which is the bottom row of the following illustration.
   
-## 디버그 위치 도구 모음  
- **디버그 위치** 도구 모음을 사용하여 원하는 함수, 스레드 또는 프로세스를 선택할 수 있습니다. 중단점을 설정하고 디버깅을 시작합니다. 이 도구 모음이 표시되지 않으면 도구 모음 영역의 빈 부분을 클릭하여 사용하도록 설정할 수 있습니다. 도구 모음 목록이 표시되면 **디버그 위치**를 선택합니다. 중단점이 적중되면 실행이 중지되고 디버그 위치 도구 모음이 표시될 수 있으며, 다음 그래픽의 맨 아래쪽 행입니다.  
+![DebugLocationToolbar](../debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")   
   
- ![DebugLocationToolbar](~/debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")  
-  
- **호출 스택** 창, **스레드** 창 또는 **프로세스** 창에서 요소를 두 번 클릭하여 컨텍스트를 다른 함수 호출, 스레드 또는 프로세스로 변경할 수도 있습니다.  
-  
-## 참고 항목  
- [디버거 창](../debugger/debugger-windows.md)
+## <a name="see-also"></a>See Also  
+ [Debugger Windows](../debugger/debugger-windows.md)
+

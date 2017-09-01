@@ -1,5 +1,5 @@
 ---
-title: "도구 창에 검색 추가 | Microsoft 문서"
+title: Adding Search to a Tool Window | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,50 +28,51 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: bca8c87d4f7d89d491fab13e1a511febce81d3d8
-ms.openlocfilehash: 845bbc5c34280f7ceafcaa3d763065f6d73388fe
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: ecaa03757b5b40e92d343fa9328f9d3f9e584ba3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="adding-search-to-a-tool-window"></a>도구 창에 검색 추가
-만들거나 확장에 도구 창을 업데이트 하는 경우 Visual Studio에서 다른 곳에 나타나는 것과 동일한 검색 기능을 추가할 수 있습니다. 이 기능에는 다음과 같은 기능이 포함 됩니다.  
+# <a name="adding-search-to-a-tool-window"></a>Adding Search to a Tool Window
+When you create or update a tool window in your extension, you can add the same search functionality that appears elsewhere in Visual Studio. This functionality includes the following features:  
   
--   도구 모음 사용자 지정 영역에 항상 있는 검색 상자입니다.  
+-   A search box that's always located in a custom area of the toolbar.  
   
--   자체 검색 상자에서 중첩 하는 진행률 표시기입니다.  
+-   A progress indicator that's overlaid on the search box itself.  
   
--   각 문자 (빠른 검색)를 입력 하는 즉시 또는 Enter 키 (필요에 따라 검색)를 선택한 후에 결과 표시할 수 있습니다.  
+-   The ability to show results as soon as you enter each character (instant search) or only after you choose the Enter key (search on demand).  
   
--   용어를 검색 가장 최근에 표시 하는 목록입니다.  
+-   A list that shows terms for which you've searched most recently.  
   
--   특정 필드 또는 검색 대상의 측면에서 검색을 필터링 하는 기능.  
+-   The ability to filter searches by specific fields or aspects of the search targets.  
   
- 이 연습을 수행 하 여 다음 작업을 수행 하는 방법에 알아봅니다.  
+ By following this walkthrough, you'll learn how to perform the following tasks:  
   
-1.  VSPackage 프로젝트를 만듭니다.  
+1.  Create a VSPackage project.  
   
-2.  읽기 전용 TextBox에 UserControl이 포함 된 도구 창을 만듭니다.  
+2.  Create a tool window that contains a UserControl with a read-only TextBox.  
   
-3.  도구 창에 있는 검색 상자를 추가 합니다.  
+3.  Add a search box to the tool window.  
   
-4.  검색 구현을 추가 합니다.  
+4.  Add the search implementation.  
   
-5.  빠른 검색 및 진행률 표시줄의 표시를 사용 하도록 설정 합니다.  
+5.  Enable instant search and display of a progress bar.  
   
-6.  추가 **대/소문자** 옵션입니다.  
+6.  Add a **Match case** option.  
   
-7.  추가 **짝수 줄만 검색** 필터입니다.  
+7.  Add a **Search even lines only** filter.  
   
-## <a name="to-create-a-vsix-project"></a>VSIX 프로젝트를 만들려면  
+## <a name="to-create-a-vsix-project"></a>To create a VSIX project  
   
-1.  라는 이름의 VSIX 프로젝트 `TestToolWindowSearch` 라는 도구 창이 **TestSearch**합니다. 이 작업을 수행 하는 도움이 필요한 경우 참조 [확장 도구 창 만들기](../extensibility/creating-an-extension-with-a-tool-window.md)합니다.  
+1.  Create a VSIX project named `TestToolWindowSearch` with a tool window named **TestSearch**. If you need help doing this, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## <a name="to-create-a-tool-window"></a>도구 창을 만들려면  
+## <a name="to-create-a-tool-window"></a>To create a tool window  
   
-1.  에 `TestToolWindowSearch` 프로젝트를 TestSearchControl.xaml 파일을 엽니다.  
+1.  In the `TestToolWindowSearch` project, open the TestSearchControl.xaml file.  
   
-2.  기존 `<StackPanel>` 읽기 전용를 추가 하는 다음 블록을 사용 하 여 블록 <xref:System.Windows.Controls.TextBox>에 <xref:System.Windows.Controls.UserControl>도구 창에.</xref:System.Windows.Controls.UserControl> </xref:System.Windows.Controls.TextBox>  
+2.  Replace the existing `<StackPanel>` block with the following block, which adds a read-only <xref:System.Windows.Controls.TextBox> to the <xref:System.Windows.Controls.UserControl> in the tool window.  
   
     ```xaml  
     <StackPanel Orientation="Vertical">  
@@ -82,19 +83,19 @@ ms.lasthandoff: 02/22/2017
     </StackPanel>  
     ```  
   
-3.  TestSearchControl.xaml.cs 파일에서 다음 추가 문을 사용 하 여:  
+3.  In the TestSearchControl.xaml.cs file, add the following using statement:  
   
-    ```c#  
+    ```csharp  
     using System.Text;  
     ```  
   
-4.  제거는 `button1_Click()` 메서드.  
+4.  Remove the `button1_Click()` method.  
   
-     에 **TestSearchControl** 클래스를 다음 코드를 추가 합니다.  
+     In the **TestSearchControl** class, add the following code.  
   
-     이 코드는 공용 추가 <xref:System.Windows.Controls.TextBox>라는 속성이 **SearchResultsTextBox** 이라는 public 문자열 속성 및 **SearchContent**.</xref:System.Windows.Controls.TextBox> 생성자는 SearchResultsTextBox 텍스트 상자에 설정 되 고 SearchContent 줄 바꿈 구분 된 문자열 집합이으로 초기화 됩니다. 또한 입력란의 내용은 문자열 집합으로 초기화 됩니다.  
+     This code adds a public <xref:System.Windows.Controls.TextBox> property  named **SearchResultsTextBox** and a public string property named **SearchContent**. In the constructor, SearchResultsTextBox is set to the text box, and SearchContent is initialized to a newline-delimited set of strings. The content of the text box is also initialized to the set of strings.  
   
-    ```c#  
+    ```csharp  
     public partial class TestSearchControl : UserControl  
     {  
         public TextBox SearchResultsTextBox { get; set; }  
@@ -125,40 +126,39 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-     [!code-cs[#1 ToolWindowSearch](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs) ] 
-     [!code-vb [ToolWindowSearch&#1;](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]  
+     [!code-csharp[ToolWindowSearch#1](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs)]  [!code-vb[ToolWindowSearch#1](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]  
   
-5.  프로젝트를 빌드하고 디버깅을 시작합니다. Visual Studio의 실험적 인스턴스가 표시 됩니다.  
+5.  Build the project and start debugging. The experimental instance of Visual Studio appears.  
   
-6.  메뉴 모음에서 **보기**, **다른 창**, **TestSearch**합니다.  
+6.  On the menu bar, choose **View**, **Other Windows**, **TestSearch**.  
   
-     도구 창이 나타나지만 검색 컨트롤은 아직 표시 하지 않습니다.  
+     The tool window appears, but the search control doesn't yet appear.  
   
-## <a name="to-add-a-search-box-to-the-tool-window"></a>도구 창에 있는 검색 상자를 추가 하려면  
+## <a name="to-add-a-search-box-to-the-tool-window"></a>To add a search box to the tool window  
   
-1.  TestSearch.cs 파일에 다음 코드를 추가 `TestSearch` 클래스입니다. 재정의 코드는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>속성 get 접근자 반환 되도록 `true`.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. The code overrides the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> property so that the get accessor returns `true`.  
   
-     검색을 사용 하도록 설정 하려면 재정의 해야는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>속성.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>클래스 구현 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch>하 고 검색을 사용 하지 않습니다 하는 기본 구현을 제공 합니다.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> </xref:Microsoft.VisualStudio.Shell.ToolWindowPane>  
+     To enable search, you must override the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> property. The <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> class implements <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> and provides a default implementation that doesn't enable search.  
   
-    ```c#  
+    ```csharp  
     public override bool SearchEnabled  
     {  
         get { return true; }  
     }  
     ```  
   
-2.  프로젝트를 빌드하고 디버깅을 시작합니다. 실험적 인스턴스가 표시 됩니다.  
+2.  Build the project and start debugging. The experimental instance appears.  
   
-3.  Visual Studio의 실험적 인스턴스를 열고 **TestSearch**합니다.  
+3.  In the experimental instance of Visual Studio, open **TestSearch**.  
   
-     도구 창 맨 위에 있는 검색 컨트롤와 표시는 **검색** 워터 마크와 확대 유리 아이콘입니다. 그러나 검색 프로세스를 구현 되어 있지 않은 때문에 검색 아직 작동 하지 않습니다.  
+     At the top of the tool window, a search control appears with a **Search** watermark and a magnifying-glass icon. However, search doesn't work yet because the search process hasn't been implemented.  
   
-## <a name="to-add-the-search-implementation"></a>검색 구현을 추가 하려면  
- 검색을 사용 하면 한 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>와 마찬가지로 이전 절차에서 도구 창을 검색 호스트를 만듭니다.</xref:Microsoft.VisualStudio.Shell.ToolWindowPane> 이 호스트를 설정 하 고 항상 백그라운드 스레드에서 발생 하는 검색 프로세스를 관리 합니다. 때문에 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>클래스를 검색의 검색 호스트 및 설정의 생성을 관리만 검색 작업을 만들 하 고 검색 메서드를 제공 해야 합니다.</xref:Microsoft.VisualStudio.Shell.ToolWindowPane> 검색 프로세스는 백그라운드 스레드에서 발생 하 고 도구 창 컨트롤에 대 한 호출이 UI 스레드에서 발생 합니다. 따라서를 사용 해야는 <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>컨트롤에서 처리 하는 데에서 수행 하는 모든 호출을 관리 하기 위한 방법을.</xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>  
+## <a name="to-add-the-search-implementation"></a>To add the search implementation  
+ When you enable search on a <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>, as in the previous procedure, the tool window creates a search host. This host sets up and manages search processes, which always occur on a background thread. Because the <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> class manages the creation of the search host and the setting up of the search, you need only create a search task and provide the search method. The search process occurs on a background thread, and calls to the tool window control occur on the UI thread. Therefore, you must use the <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A> method to manage any calls that you make in dealing with the control.  
   
-1.  TestSearch.cs 파일에서 다음 추가 `using` 문:  
+1.  In the TestSearch.cs file, add the following `using` statements:  
   
-    ```c#  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Runtime.InteropServices;  
@@ -171,17 +171,17 @@ ms.lasthandoff: 02/22/2017
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-2.  에 `TestSearch` 클래스를 다음 작업을 수행 하는 다음 코드를 추가 합니다.  
+2.  In the `TestSearch` class, add the following code, which performs the following actions:  
   
-    -   재정의 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch>검색 작업을 만드는 방법.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch>  
+    -   Overrides the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> method to create a search task.  
   
-    -   재정의 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A>입력란의 상태를 복원 하는 방법.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> 이 메서드는 사용자가 사용자를 설정 하거나 옵션 또는 필터 설정이 해제 시기 및 검색 작업을 취소 하는 경우 호출 됩니다. 둘 다 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A>및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A>UI 스레드에서 호출 됩니다.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> </xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> 따라서 방법으로 텍스트 상자에 액세스할 필요가 없습니다는 <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>메서드.</xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>  
+    -   Overrides the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> method to restore the state of the text box. This method is called when a user cancels a search task and when a user sets or unsets options or filters. Both <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> and <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> are called on the UI thread. Therefore, you don't need to access the text box by means of the <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A> method.  
   
-    -   라는 클래스를 만듭니다 `TestSearchTask` <xref:Microsoft.VisualStudio.Shell.VsSearchTask> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>.</xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask> 의 기본 구현을 제공 하는</xref:Microsoft.VisualStudio.Shell.VsSearchTask> 에서 상속 되는  
+    -   Creates a class that's named `TestSearchTask` that inherits from <xref:Microsoft.VisualStudio.Shell.VsSearchTask>, which provides a default implementation of <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>.  
   
-         `TestSearchTask`, 도구 창 참조 하는 전용 필드를 설정 하는 생성자입니다. 재정의 제공 하기 위해 검색 메서드는 <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>및 <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A>메서드.</xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> </xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>메서드는 검색 프로세스를 구현 하는 위치입니다.</xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> 이 프로세스는 검색을 수행 하 고 텍스트 상자에 검색 결과 표시 합니다. 검색 완료 되었음을 보고 하는이 메서드의 기본 클래스 구현을 호출을 포함 합니다.  
+         In `TestSearchTask`, the constructor sets a private field that references the tool window. To provide the search method, you override the <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> and <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> methods. The <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> method is where you implement the search process. This process includes performing the search, displaying the search results in the text box, and calling the base class implementation of this method to report that the search is complete.  
   
-    ```c#  
+    ```csharp  
     public override IVsSearchTask CreateSearch(uint dwCookie, IVsSearchQuery pSearchQuery, IVsSearchCallback pSearchCallback)  
     {  
         if (pSearchQuery == null || pSearchCallback == null)  
@@ -276,20 +276,20 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-3.  다음 단계를 수행 하 여 검색 구현을 테스트 합니다.  
+3.  Test your search implementation by performing the following steps:  
   
-    1.  프로젝트를 빌드하고 디버깅을 시작 합니다.  
+    1.  Rebuild the project and start debugging.  
   
-    2.  Visual Studio의 실험적 인스턴스에서 도구 창을 다시 열고 검색 창에 검색 텍스트를 입력 하 고 enter 키를 누릅니다.  
+    2.  In the experimental instance of Visual Studio, open the tool window again, enter some search text in the search window, and click ENTER.  
   
-         올바른 결과가 표시 됩니다.  
+         The correct results should appear.  
   
-## <a name="to-customize-the-search-behavior"></a>검색 동작을 사용자 지정 하려면  
- 검색 설정을 변경 하 여 검색 컨트롤 모양을 검색 수행 방법 및 다양 한 변화를 결정할 수 있습니다. 예를 들어, 워터 마크 (검색 상자에 표시 되는 기본 텍스트), 최소값 및 검색 컨트롤의 최대 너비 및 진행률 표시줄을 표시할지 여부를 변경할 수 있습니다. 또한의 지점에는 검색 결과 (요청 또는 빠른 검색)에 시작 하 고 있는 최근에 검색 용어 목록을 표시할지 여부를 변경할 수 있습니다. <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource>클래스</xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource> 에서 설정의 전체 목록은 찾을 수 있습니다.  
+## <a name="to-customize-the-search-behavior"></a>To customize the search behavior  
+ By changing the search settings, you can make a variety of changes in how the search control appears and how the search is carried out. For example, you can change the watermark (the default text that appears in the search box), the minimum and maximum width of the search control, and whether to show a progress bar. You can also change the point at which search results start to appear (on demand or instant search) and whether to show a list of terms for which you recently searched. You can find the complete list of settings in the <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource> class.  
   
-1.  TestSearch.cs 파일에 다음 코드를 추가 `TestSearch` 클래스입니다. 이 코드는 요청 시 검색 (ENTER를 클릭 하 여 사용자에 게 의미) 하는 대신 빠른 검색이 되도록 합니다. 재정의 코드는 `ProvideSearchSettings` 에서 메서드는 `TestSearch` 클래스는 기본 설정을 변경 하는 데 필요한 합니다.  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. This code enables instant search instead of on-demand search (meaning that the user doesn't have to click ENTER). The code overrides the `ProvideSearchSettings` method in the `TestSearch` class, which is necessary to change the default settings.  
   
-    ```c#  
+    ```csharp  
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)  
     {  
         Utilities.SetValue(pSearchSettings,   
@@ -297,13 +297,13 @@ ms.lasthandoff: 02/22/2017
             (uint)VSSEARCHSTARTTYPE.SST_INSTANT);}  
     ```  
   
-2.  새 테스트 솔루션을 다시 작성 하는 디버거를 다시 시작 하 여 설정 합니다.  
+2.  Test the new setting by rebuilding the solution and restarting the debugger.  
   
-     검색 결과가 검색 상자에 문자를 입력 하면 때마다 나타납니다.  
+     Search results appear every time that you enter a character in the search box.  
   
-3.  에 `ProvideSearchSettings` 메서드를 진행률 표시줄의 표시를 설정 하는 다음 줄을 추가 합니다.  
+3.  In the `ProvideSearchSettings` method, add the following line, which enables the display of a progress bar.  
   
-    ```c#  
+    ```csharp  
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)  
     {  
         Utilities.SetValue(pSearchSettings,   
@@ -315,28 +315,28 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-     진행률 표시줄 표시에 대 한 진행률을 보고 해야 합니다. 진행률을 보고 하려면 다음 코드를 주석 처리 제거는 `OnStartSearch` 의 메서드는 `TestSearchTask` 클래스:  
+     For the progress bar to appear, the progress must be reported. To report the progress, uncomment the following code in the `OnStartSearch` method of the `TestSearchTask` class:  
   
-    ```c#  
+    ```csharp  
     SearchCallback.ReportProgress(this, progress++, (uint)contentArr.GetLength(0));  
     ```  
   
-4.  다음 줄을 주석 처리를 제거 하는 데 충분 한 진행 상황을 처리 하려면 막대가 표시 되는 `OnStartSearch` 의 메서드는 `TestSearchTask` 클래스:  
+4.  To slow processing enough that the progress bar is visible, uncomment the following line in the `OnStartSearch` method of the `TestSearchTask` class:  
   
-    ```c#  
+    ```csharp  
     System.Threading.Thread.Sleep(100);  
     ```  
   
-5.  솔루션을 다시 작성 하 고 debugb를 시작 하 여 새 설정을 테스트 합니다.  
+5.  Test the new settings by rebuilding the solution and starting to debugb.  
   
-     진행률 표시줄 창에 나타납니다 검색 (검색 텍스트 상자 아래 파란색 선)으로 때마다 검색을 수행 하면 합니다.  
+     The progress bar appears in the search window (as a blue line below the search text box) every time that you perform a search.  
   
-## <a name="to-enable-users-to-refine-their-searches"></a>검색을 구체화할 수 있도록 하려면  
- 와 같은 옵션을 사용 하 여 검색을를 구체화할 수 있도록 할 수 **대/소문자** 또는 **단어 단위로**합니다. 확인란, 또는 단추로 표시 하는 명령에 나타나는 옵션 부울, 수 있습니다. 이 연습에서는 부울 옵션을 만들어야 합니다.  
+## <a name="to-enable-users-to-refine-their-searches"></a>To enable users to refine their searches  
+ You can allow users to refine their searches by means of options such as **Match case** or **Match whole word**. Options can be boolean, which appear as check boxes, or commands, which appear as buttons. For this walkthrough, you'll create a boolean option.  
   
-1.  TestSearch.cs 파일에 다음 코드를 추가 `TestSearch` 클래스입니다. 재정의 코드는 `SearchOptionsEnum` 메서드를 지정 된 옵션을 켜거나 있는지 확인 하는 검색 구현을 허용 합니다. 코드 `SearchOptionsEnum` 를 대/소문자를 구분 하는 옵션이 추가 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions>열거자.</xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> 또한은 대/소문자 구분 하는 옵션으로 사용할 수는 `MatchCaseOption` 속성입니다.  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. The code overrides the `SearchOptionsEnum` method, which allows the search implementation to detect whether a given option is on or off. The code in `SearchOptionsEnum` adds an option to match case to an <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> enumerator. The option to match case is also made available as the `MatchCaseOption` property.  
   
-    ```c#  
+    ```csharp  
     private IVsEnumWindowSearchOptions m_optionsEnum;  
     public override IVsEnumWindowSearchOptions SearchOptionsEnum  
     {  
@@ -368,9 +368,9 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-2.  에 `TestSearchTask` 클래스인 matchCase 줄에 달린 주석을 제거는 `OnStartSearch` 메서드:  
+2.  In the `TestSearchTask` class, uncomment matchCase line in the `OnStartSearch` method:  
   
-    ```c#  
+    ```csharp  
     private IVsEnumWindowSearchOptions m_optionsEnum;  
     public override IVsEnumWindowSearchOptions SearchOptionsEnum  
     {  
@@ -402,22 +402,22 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-3.  옵션을 테스트 합니다.  
+3.  Test the option:  
   
-    1.  프로젝트를 빌드하고 디버깅을 시작합니다. 실험적 인스턴스가 표시 됩니다.  
+    1.  Build the project and start debugging. The experimental instance appears.  
   
-    2.  도구 창에서 입력란의 오른쪽에서 아래쪽 화살표를 선택 합니다.  
+    2.  In the tool window, choose the Down arrow on the right side of the text box.  
   
-         **대/소문자** 확인란이 나타납니다.  
+         The **Match case** check box appears.  
   
-    3.  선택 된 **대/소문자** 확인란을 선택한 다음 몇 가지 검색을 수행 합니다.  
+    3.  Select the **Match case** check box, and then perform some searches.  
   
-## <a name="to-add-a-search-filter"></a>검색 필터를 추가 하려면  
- 검색 대상 집합을 정의 하는 사용자를 허용 하는 검색 필터를 추가할 수 있습니다. 예를 들어 있는 수정한 가장 최근에 날짜 및 해당 파일 이름 확장명으로 파일 탐색기에서 파일을 필터링 할 수 있습니다. 이 연습에서는 짝수 줄만에 대 한 필터를 추가 합니다. 사용자가 해당 필터를 선택 하는 경우 검색 호스트는 검색 쿼리를 지정 하는 문자열을 추가 합니다. 그런 다음 검색 메서드 내 이러한 문자열을 식별 하 고 그에 따라 검색 대상을 필터링 수입니다.  
+## <a name="to-add-a-search-filter"></a>To add a search filter  
+ You can add search filters that allow users to refine the set of search targets. For example, you can filter files in File Explorer by the dates on which they were modified most recently and their file name extensions. In this walkthrough, you'll add a filter for even lines only. When the user chooses that filter, the search host adds the strings that you specify to the search query. You can then identify these strings inside your search method and filter the search targets accordingly.  
   
-1.  TestSearch.cs 파일에 다음 코드를 추가 `TestSearch` 클래스입니다. 코드를 구현 `SearchFiltersEnum` 추가 하 여 한 <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter>지정도 줄만 표시 되도록 검색 결과 필터링 하는.</xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter>  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. The code implements `SearchFiltersEnum` by adding a <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter> that specifies to filter the search results so that only even lines appear.  
   
-    ```c#  
+    ```csharp  
     public override IVsEnumWindowSearchFilters SearchFiltersEnum  
     {  
         get  
@@ -430,11 +430,11 @@ ms.lasthandoff: 02/22/2017
   
     ```  
   
-     검색 필터를 표시 하는 검색 컨트롤 이제 `Search even lines only`합니다. 사용자가 문자열 필터를 선택 하면 `lines:"even"` 검색 상자에 나타납니다. 검색 조건을 다른 필터와 같은 시간에 나타날 수 있습니다. 검색 문자열은 필터, 또는 둘 다 후 필터를 하기 전에 나타날 수 있습니다.  
+     Now the search control displays the search filter `Search even lines only`. When the user chooses the filter, the string `lines:"even"` appears in the search box. Other search criteria can appear at the same time as the filter. Search strings may appear before the filter, after the filter, or both.  
   
-2.  TestSearch.cs 파일에 다음 메서드를 추가 `TestSearchTask` 에 있는 클래스는 `TestSearch` 클래스입니다. 이러한 메서드는 지원의 `OnStartSearch` 메서드를 다음 단계에서 수정 합니다.  
+2.  In the TestSearch.cs file, add the following methods to the `TestSearchTask` class, which is in the `TestSearch` class. These methods support the `OnStartSearch` method, which you'll modify in the next step.  
   
-    ```c#  
+    ```csharp  
     private string RemoveFromString(string origString, string stringToRemove)  
     {  
         int index = origString.IndexOf(stringToRemove);  
@@ -460,9 +460,9 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-3.  에 `TestSearchTask` 클래스를 업데이트는 `OnStartSearch` 메서드를 다음 코드로 바꿉니다. 이 변경은 필터를 지원 하기 위한 코드를 업데이트 합니다.  
+3.  In the `TestSearchTask` class, update the `OnStartSearch` method with the following code. This change updates the code to support the filter.  
   
-    ```c#  
+    ```csharp  
     protected override void OnStartSearch()  
     {  
         // Use the original content of the text box as the target of the search.   
@@ -539,32 +539,32 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-4.  코드를 테스트 합니다.  
+4.  Test your code.  
   
-5.  프로젝트를 빌드하고 디버깅을 시작합니다. Visual Studio의 실험적 인스턴스에서 도구 창을 열고 검색 컨트롤에 있는 아래쪽 화살표를 선택 합니다.  
+5.  Build the project and start debugging. In the experimental instance of Visual Studio, open the tool window, and then choose the Down arrow on the search control.  
   
-     **대/소문자** 확인란 및 **짝수 줄만 검색** 필터 나타납니다.  
+     The **Match case** check box and the **Search even lines only** filter appear.  
   
-6.  필터를 선택 합니다.  
+6.  Choose the filter.  
   
-     검색 상자에 포함 되어 **줄: "짝수"**, 다음과 같은 결과가 나타납니다.  
+     The search box contains **lines:"even"**, and the following results appear:  
   
-     좋은&2;  
+     2 good  
   
-     4 된  
+     4 Good  
   
-     6 goodbye  
+     6 Goodbye  
   
-7.  삭제 `lines:"even"` 검색 상자에서 선택 된 **대/소문자** 확인란을 선택한 다음 입력 `g` 검색 상자에 있습니다.  
+7.  Delete `lines:"even"` from the search box, select the **Match case** check box, and then enter `g` in the search box.  
   
-     다음과 같은 결과가 나타납니다.  
+     The following results appear:  
   
-     1로 이동  
+     1 go  
   
-     좋은&2;  
+     2 good  
   
      5 goodbye  
   
-8.  검색 상자의 오른쪽에 있는 X를 선택 합니다.  
+8.  Choose the X on the right side of the search box.  
   
-     검색의 선택을 취소 하 고 원래 내용을 표시 합니다. 그러나는 **대/소문자** 확인란이 아직 선택 되어 있습니다.
+     The search is cleared, and the original contents appear. However, the **Match case** check box is still selected.

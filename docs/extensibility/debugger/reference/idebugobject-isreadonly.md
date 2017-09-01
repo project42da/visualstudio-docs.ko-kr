@@ -1,51 +1,68 @@
 ---
-title: "IDebugObject::IsReadOnly | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::IsReadOnly"
-helpviewer_keywords: 
-  - "IDebugObject::IsReadOnly 메서드"
+title: IDebugObject::IsReadOnly | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject::IsReadOnly
+helpviewer_keywords:
+- IDebugObject::IsReadOnly method
 ms.assetid: c460f772-d08a-4b36-81f3-dff6a51a93fd
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugObject::IsReadOnly
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 13ede24192408b7b5a68c13d37a4535ccf352fed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 개체가 읽기 전용인 지 여부를 결정 합니다.  
+---
+# <a name="idebugobjectisreadonly"></a>IDebugObject::IsReadOnly
+Determines if this object is read-only.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT IsReadOnly(   
-   BOOL* pfIsReadOnly  
+```cpp  
+HRESULT IsReadOnly(   
+   BOOL* pfIsReadOnly  
 );  
 ```  
   
-```c#  
+```csharp  
 int IsReadOnly(  
-   out int pfIsReadOnly  
+   out int pfIsReadOnly  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pfIsReadOnly`  
- \[out\] 0이 아닌 반환 \(`TRUE`\) 이면이 개체가 읽기 전용입니다. 그렇지 않은 경우 0을 반환 \(`FALSE`\).  
+ [out] Returns non-zero (`TRUE`) if this object is read-only; otherwise, returns zero (`FALSE`).  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 읽기 전용 개체 만든 후 변경 하는 값을 가질 수 없습니다.  
+## <a name="remarks"></a>Remarks  
+ A read-only object cannot have its value changed after it is created.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

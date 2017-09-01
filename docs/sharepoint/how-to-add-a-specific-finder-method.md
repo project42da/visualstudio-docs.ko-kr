@@ -1,102 +1,106 @@
 ---
-title: "방법: SpecificFinder 메서드 추가"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC[Visual Studio에서 SharePoint 개발], 엔터티 가져오기"
-  - "BDC[Visual Studio에서 SharePoint 개발], 엔터티 반환"
-  - "BDC[Visual Studio에서 SharePoint 개발], SpecificFinder"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 엔터티 가져오기"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 엔터티 반환"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], SpecificFinder"
+title: 'How to: Add a Specific Finder Method | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Business Data Connectivity service [SharePoint development in Visual Studio], Specific Finder
+- BDC [SharePoint development in Visual Studio], return an entity
+- BDC [SharePoint development in Visual Studio], get an entity
+- Business Data Connectivity service [SharePoint development in Visual Studio], return an entity
+- BDC [SharePoint development in Visual Studio], Specific Finder
+- Business Data Connectivity service [SharePoint development in Visual Studio], get an entity
 ms.assetid: 7bbc5986-2828-4755-96fa-9f1dc0f8dc75
 caps.latest.revision: 30
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: f079dd28ede8bcb5720bd1af0f2194528ce0d986
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: SpecificFinder 메서드 추가
-  *SpecificFinder* 메서드를 만들어 단일 엔터티 인스턴스를 반환할 수 있습니다.  사용자가 비즈니스 데이터 웹 파트 또는 외부 목록에서 엔터티를 선택하면 BDC\(비즈니스 데이터 연결\) 서비스에서 SpecificFinder 메서드를 실행합니다.  자세한 내용은 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)을 참조하십시오.  
+# <a name="how-to-add-a-specific-finder-method"></a>How to: Add a Specific Finder Method
+  You can return a single entity instance by creating a *Specific Finder* method. The Business Data Connectivity (BDC) service executes the Specific Finder method when a user chooses an entity in a business data web part or external list. For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
   
-### SpecificFinder 메서드를 만들려면  
+### <a name="to-create-a-specific-finder-method"></a>To create a Specific Finder method  
   
-1.  BDC 디자이너에서 엔터티를 선택합니다.  
+1.  On the BDC designer, choose an entity.  
   
-     Visual Studio에서 BDC 디자이너에 엔터티를 추가하는 방법에 대한 자세한 내용은 [방법: 모델에 엔터티 추가](../sharepoint/how-to-add-an-entity-to-a-model.md) 을 참조하십시오.  
+     For information about how to add an entity to the BDC designer in Visual Studio, see [How to: Add an Entity to a Model](../sharepoint/how-to-add-an-entity-to-a-model.md).  
   
-2.  선택 메뉴 모음에서 **보기**, **기타 창**, **BDC 메서드 세부 정보** 을 선택합니다.  
+2.  On the menu bar, choose **View**, **Other Windows**, **BDC Method Details**.  
   
-     **BDC 메서드 세부 정보** 창이 열립니다.  이 창에 대한 자세한 내용은 [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)를 참조하십시오.  
+     The **BDC Method Details** window opens. For more information about that window, see [BDC Model Design Tools Overview](../sharepoint/bdc-model-design-tools-overview.md).  
   
-3.  **메서드 추가** 목록에서 **Specific Finder 메서드 만들기** 를 선택합니다.  
+3.  In the **Add a Method** list, choose **Create Specific Finder Method**.  
   
-     모델에 다음 요소가 추가됩니다.  이러한 요소는 **BDC 메서드 세부 정보** 창에 표시됩니다.  
+     Visual Studio adds the following elements to the model. These elements appear in the **BDC Method Details** window.  
   
-    -   메서드  
+    -   A method.  
   
-    -   메서드의 입력 매개 변수  
+    -   An input parameter for the method.  
   
-    -   메서드의 반환 매개 변수  
+    -   A return parameter for the method.  
   
-    -   각 매개 변수에 대한 형식 설명자  
+    -   A type descriptor for each parameter.  
   
-    -   메서드의 메서드 인스턴스  
+    -   A method instance for the method.  
   
-     자세한 내용은 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)을 참조하십시오.  
+     For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
   
-4.  Visual Studio **속성** 창을 엽니다.  
+4.  Open the Visual Studio **Properties** window.  
   
-5.  반환 매개 변수의 형식 설명자를 엔터티 형식 설명자로 구성합니다.  엔터티 형식 설명자를 만드는 방법에 대한 자세한 내용은 [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)를 참조하십시오.  
-  
-    > [!NOTE]  
-    >  엔터티에 Finder 메서드를 추가한 경우 이 단계를 수행할 필요가 없습니다.  이 단계를 수행할 필요가 없습니다.  
+5.  Configure the type descriptor of the return parameter as an entity type descriptor. For information about how to create an entity type descriptor, see [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).  
   
     > [!NOTE]  
-    >  엔터티 형식의 식별자 필드가 데이터베이스 테이블에서 자동으로 생성되는 필드에 해당할 경우 식별자 필드의 **읽기 전용** 속성을 **True**로 설정합니다.  
-  
-6.  **메서드 세부 정보** 창에서 메서드의 메서드 인스턴스를 선택합니다.  
-  
-7.  **속성 창**에서 **반환 매개 변수 이름** 속성을 메서드의 반환 매개 변수 이름으로 설정합니다.  메서드 인스턴스의 속성에 대한 자세한 내용은 [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282) 을 참조하십시오.  
-  
-8.  **솔루션 탐색기**에서 엔터티에 대해 생성된 서비스 코드 파일의 바로가기를 연 다음 **코드 보기**를 선택합니다.  
-  
-     코드 편집기에서 엔터티 서비스 코드 파일이 열립니다.  엔터티 서비스 코드 파일에 대한 자세한 내용은 [비즈니스 데이터 연결 모델 만들기](../sharepoint/creating-a-business-data-connectivity-model.md)를 참조하십시오.  
-  
-9. SpecificFinder 메서드에 코드를 추가합니다.  이 코드는 다음 작업을 수행합니다.  
-  
-    -   데이터 소스에서 레코드를 검색합니다.  
-  
-    -   BDC 서비스에 엔터티를 반환합니다.  
-  
-     다음 예제에서는 SQL Server의 AdventureWorks 샘플 데이터베이스에서 연락처를 반환합니다.  
+    >  You don't have to perform this step if you have added a Finder method to the entity. Visual Studio uses the type descriptor that you defined in the Finder method.  
   
     > [!NOTE]  
-    >  `ServerName` 필드의 값을 서버 이름으로 바꿉니다.  
+    >  If the identifier field of the entity type represents a field in a database table that's automatically generated, set the **Read-only** property of the identifier field to **True**.  
   
-     [!code-csharp[SP_BDC#3](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/contactservice.cs#3)]
-     [!code-vb[SP_BDC#3](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/contactservice.vb#3)]  
+6.  In the **Method Details** window, choose the method instance of the method.  
   
-## 참고 항목  
- [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [방법: Finder 메서드 추가](../sharepoint/how-to-add-a-finder-method.md)   
- [방법: Creator 메서드 추가](../sharepoint/how-to-add-a-creator-method.md)   
- [방법: Deleter 메서드 추가](../sharepoint/how-to-add-a-deleter-method.md)   
- [방법: Updater 메서드 추가](../sharepoint/how-to-add-an-updater-method.md)   
- [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)   
- [방법: 메서드에 매개 변수 추가](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [방법: 메서드 인스턴스 정의](../sharepoint/how-to-define-a-method-instance.md)  
+7.  In the **Properties Window**, set the **Return Parameter Name** property to the name of the return parameter of the method. For more information about method instance properties, see [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282).  
+  
+8.  In **Solution Explorer**, open the shortcut menu of the service code file that was generated for the entity, and then choose **View Code**.  
+  
+     The entity service code file opens in the Code Editor. For more information about the entity service code file, see [Creating a Business Data Connectivity Model](../sharepoint/creating-a-business-data-connectivity-model.md).  
+  
+9. Add code to the Specific Finder method. This code performs the following tasks:  
+  
+    -   Retrieves a record from a data source.  
+  
+    -   Returns an entity to the BDC service.  
+  
+     The following example returns a contact from the AdventureWorks sample database for SQL Server.  
+  
+    > [!NOTE]  
+    >  Replace the value of the `ServerName` field with the name of your server.  
+  
+     [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]   [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]  
+  
+## <a name="see-also"></a>See Also  
+ [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [How to: Add a Finder Method](../sharepoint/how-to-add-a-finder-method.md)   
+ [How to: Add a Creator Method](../sharepoint/how-to-add-a-creator-method.md)   
+ [How to: Add a Deleter Method](../sharepoint/how-to-add-a-deleter-method.md)   
+ [How to: Add an Updater Method](../sharepoint/how-to-add-an-updater-method.md)   
+ [BDC Model Design Tools Overview](../sharepoint/bdc-model-design-tools-overview.md)   
+ [How to: Add a Parameter to a Method](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [How to: Define a Method Instance](../sharepoint/how-to-define-a-method-instance.md)  
   
   

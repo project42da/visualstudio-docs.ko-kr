@@ -1,81 +1,103 @@
 ---
-title: "편집하며 계속하기(Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "C/C++, 편집하며 계속하기"
-  - "디버깅[C++], 편집하며 계속하기"
-  - "편집하며 계속하기[C++]"
+title: Edit and Continue (Visual C++) | Microsoft Docs
+ms.custom: 
+ms.date: 05/31/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- Edit and Continue [C++]
+- debugging [C++], Edit and Continue
+- C/C++, Edit and Continue
 ms.assetid: 1815251e-a877-433e-9e5e-69bd9ba254c7
 caps.latest.revision: 25
-caps.handback.revision: 25
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 편집하며 계속하기(Visual C++)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d5d795da17e8446bc86417dc302e1df4935a92f4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-Visual C\+\+ 프로젝트에서 편집하며 계속하기를 사용할 수 있습니다. 편집하며 계속하기의 제한에 대한 자세한 내용은 [지원되는 코드 변경 및 제한\(C\+\+\)](../debugger/supported-code-changes-cpp.md)을 참조하세요.  
+---
+# <a name="edit-and-continue-visual-c"></a>Edit and Continue (Visual C++)
+You can use Edit and Continue in Visual C++ projects. See [Supported Code Changes (C++)](../debugger/supported-code-changes-cpp.md) for information about the limitations of Edit and Continue.
   
- Visual Studio 2015 업데이트 1부터는 **\/bigobj** 스위치로 **\/ZI** 컴파일러 스위치를 지원하기 때문에 Windows 스토어 C\+\+ 앱 및 DirectX 앱에서 편집하며 계속하기를 사용할 수 있습니다. **\/FASTLINK** 스위치로 컴파일된 이진 파일을 이용하여 편집하며 계속하기를 사용할 수도 있습니다.  
+For more information about Visual Studio 2015 Update 3 improvements, see [C++ Edit and Continue in Visual Studio 2015 Update 3](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/).  
   
- 다른 업데이트 1 개선 사항으로는 취소할 수 있는 새로운 대기 대화 상자와, 파일에서 편집하며 계속하기를 지원하지 않는 경우 알리는 기능이 있습니다. 업데이트 1의 향상된 기능에 대한 자세한 내용은 [Visual Studio 2015 업데이트 1의 C\+\+ 편집하며 계속하기에 대한 기능 향상](http://blogs.msdn.com/b/vcblog/archive/2015/11/30/improvements-for-c-edit-and-continue-in-visual-studio-2015-update-1.aspx)을 참조하세요.  
+ The [/Zo (Enhance Optimized Debugging)](/cpp/build/reference/zo-enhance-optimized-debugging) compiler option that was introduced in Visual Studio 2013 Update 3 adds additional information to .pdb (symbol) files for binaries compiled without the [/Od (Disable (Debug))](http://msdn.microsoft.com/library/aafb762y.aspx) option.  
   
-Visual Studio 2013 업데이트 3에 소개된 [\/Zo\(최적화된 디버깅 향상\)](/visual-cpp/build/reference/zo-enhance-optimized-debugging) 컴파일러 옵션은 [\/Od\(비활성화\(디버그\)\)](http://msdn.microsoft.com/library/aafb762y.aspx) 옵션 없이 컴파일된 이진 파일에 대한 추가 정보를 .pdb\(기호\) 파일에 추가합니다.  
+ **/Zo** disables Edit and Continue. See [How to: Debug Optimized Code](../debugger/how-to-debug-optimized-code.md).  
   
-**\/Zo**는 편집하며 계속하기를 사용하지 않도록 설정합니다. [방법: 최적화된 코드 디버깅](../debugger/how-to-debug-optimized-code.md)를 참조하세요.  
+##  <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a> Enable or disable Edit and Continue  
+ You may want to  disable the automatic invocation of Edit and Continue if you are making edits to the code that you do not want applied during the current debugging session. You can also re-enable automatic Edit and Continue.
+
+> [!IMPORTANT]
+> For required build settings and other information about feature compatibility, see [C++ Edit and Continue in Visual Studio 2015 Update 3](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/.
   
-## <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a>편집하며 계속하기 사용 또는 사용 안 함  
-현재 디버깅 세션 중에 적용하지 않으려는 코드 편집 내용이 있는 경우 편집하며 계속하기의 자동 호출을 사용하지 않도록 설정할 수 있습니다. 자동 편집하며 계속하기를 다시 사용하도록 설정할 수도 있습니다.  
+1.  If you are in a debugging session, stop debugging (**Shift + F5**).
+
+2. On the **Tools** menu, choose **Options**.
   
-1.  **도구** 메뉴에서 **옵션**을 선택합니다.  
+3.  In the **Options** dialog box, select **Debugging > General**.
+
+4.  To enable, select **Enable Edit and Continue**. To disable, clear the checkbox.
   
-2.  **옵션** 대화 상자에서 **디버깅\/일반**을 선택합니다.  
+5.  In the **Edit and Continue** group, select or clear the **Enable Native Edit and Continue** check box.  
   
-3.  **편집하며 계속하기** 그룹에서 **네이티브 편집하며 계속하기 사용** 확인란을 선택하거나 선택 취소합니다.  
+ Altering this setting affects all projects you work on. You do not need to rebuild your application after changing this setting. If you build your application from the command line or from a makefile, but you debug in the Visual Studio environment, you can still use Edit and Continue if you set the **/ZI** option.  
   
-이 설정을 변경하면 작업 중인 모든 프로젝트에 영향을 줍니다. 이 설정을 변경한 후 응용 프로그램을 다시 빌드할 필요는 없습니다. 이 설정은 디버깅 중에도 변경할 수 있습니다. 응용 프로그램을 명령줄이나 메이크파일에서 빌드하고 Visual Studio 환경에서 디버깅하는 경우에도 **\/ZI** 옵션을 설정하면 편집하며 계속하기를 사용할 수 있습니다.  
+##  <a name="BKMK_How_to_apply_code_changes_explicitly"></a> How to apply code changes explicitly  
+ In Visual C++, Edit and Continue can apply code changes in two ways. Code changes can be applied implicitly, when you choose an execution command, or explicitly, using the **Apply Code Changes** command.  
   
-## <a name="BKMK_How_to_apply_code_changes_explicitly"></a>코드 변경 내용을 명시적으로 적용하는 방법  
-Visual C\+\+에서 편집하며 계속하기는 두 가지 방식으로 코드 변경 내용을 적용할 수 있습니다. 코드 변경 내용은 실행 명령을 선택할 때 암시적으로 적용하거나 **코드 변경 내용 적용** 명령을 사용하여 명시적으로 적용할 수 있습니다.  
+ When you apply code changes explicitly, your program remains in break mode - no execution occurs.  
   
-코드 변경 내용을 명시적으로 적용하면 프로그램이 중단 모드에 계속 남아 있고 실행되지 않습니다.  
+-   To apply code changes explicitly, on the **Debug** menu, choose **Apply Code Changes**.  
   
--   코드 변경 내용을 명시적으로 적용하려면 **디버그** 메뉴에서 **코드 변경 내용 적용**을 선택합니다.  
+##  <a name="BKMK_How_to_stop_code_changes"></a> How to stop code changes  
+ While Edit and Continue is in the process of applying code changes, you can stop the operation.  
   
-## <a name="BKMK_How_to_stop_code_changes"></a>코드 변경을 중지하는 방법  
-편집하며 계속하기에서 코드 변경 내용을 적용하는 동안 작업을 중지할 수 있습니다.  
+ To stop applying code changes:  
   
-코드 변경 내용의 적용을 중지하려면  
+-   On the **Debug** menu, choose **Stop Applying Code Changes**.  
   
--   **디버그** 메뉴에서 **코드 변경 내용 적용 중지**를 선택합니다.  
+ This menu item is visible only when code changes are being applied.  
   
-이 메뉴 항목은 코드 변경 내용을 적용하는 동안에만 표시됩니다.  
+ If you choose this option, none of the code changes are committed.  
   
-이 옵션을 선택하면 코드 변경 내용이 커밋되지 않습니다.  
+##  <a name="BKMK_How_to_reset_the_point_of_execution"></a> How to reset the point of execution  
+ Some code changes can cause the point of execution to move to a new location when Edit and Continue applies the changes. Edit and Continue places the point of execution as accurately as possible, but the results may not be correct in all cases.  
   
-## <a name="BKMK_How_to_reset_the_point_of_execution"></a>실행 지점을 다시 설정하는 방법  
-일부 코드를 변경하면 편집하며 계속하기에서 변경 내용을 적용할 때 실행 위치가 새로운 위치로 이동할 수 있습니다. 편집하며 계속하기에서는 실행 위치를 가능한 한 정확하게 지정하지만 결과가 올바르지 않은 경우도 있습니다.  
+ In Visual C++, a dialog box informs you when the point of execution changes. You should verify that the location is correct before you continue debugging. If it is not correct, use the **Set Next Statement** command. For more information, see [Set the next statement to execute](http://msdn.microsoft.com/library/y740d9d3.aspx#BKMK_Set_the_next_statement_to_execute).  
   
-Visual C\+\+에서는 실행 위치가 변경되면 이를 알리는 대화 상자가 표시됩니다. 디버깅을 계속하기 전에 실행 위치가 올바른지 확인해야 합니다. 실행 위치가 올바르지 않으면 **다음 문 설정** 명령을 사용합니다. 자세한 내용은 [다음에 실행할 문 설정](http://msdn.microsoft.com/library/y740d9d3.aspx#BKMK_Set_the_next_statement_to_execute)을 참조하세요.  
+##  <a name="BKMK_How_to_work_with_stale_code"></a> How to work with stale code  
+ In some cases, Edit and Continue cannot apply code changes to the executable immediately, but might be able to apply the code changes later if you continue debugging. This happens if you edit a function that calls the current function or if you add more than 64 bytes of new variables to a function on the call stack  
   
-## <a name="BKMK_How_to_work_with_stale_code"></a>부실 코드 작업 방법  
-편집하며 계속하기로 실행 파일에 코드 변경 내용을 즉시 적용할 수 없는 경우도 있지만 디버깅을 계속할 경우 나중에 코드 변경 내용을 적용할 수 있습니다. 이는 현재 함수를 호출하는 함수를 편집하거나 호출 스택에 있는 함수에 64바이트 이상의 새 변수를 추가할 때 발생합니다.  
+ In such cases, the debugger continues executing the original code until the changes can be applied. The stale code appears as a temporary source file window in a separate source window, with a title such as `enc25.tmp`. The edited source continues to appear in the original source window. If you try to edit the stale code, a warning message appears.  
   
-이러한 경우 디버거는 변경 내용을 적용할 수 있을 때까지 원본 코드를 계속 실행합니다. 부실 코드는 별도의 소스 창에 `enc25.tmp` 같은 제목을 사용하여 임시 소스 파일 창으로 표시됩니다. 편집된 소스는 원본 소스 창에 계속 표시됩니다. 부실 코드를 편집하려고 하면 경고 메시지가 나타납니다.  
-  
-## 참고 항목  
-[지원되는 코드 변경 및 제한\(C\+\+\)](../debugger/supported-code-changes-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Supported Code Changes (C++)](../debugger/supported-code-changes-cpp.md)

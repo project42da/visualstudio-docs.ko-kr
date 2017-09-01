@@ -1,48 +1,65 @@
 ---
-title: "IDebugModule3::LoadSymbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugModule3::LoadSymbols"
-helpviewer_keywords: 
-  - "IDebugModule3::LoadSymbols"
+title: IDebugModule3::LoadSymbols | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugModule3::LoadSymbols
+helpviewer_keywords:
+- IDebugModule3::LoadSymbols
 ms.assetid: 7548c8c1-cbc6-48aa-a845-19058d4a85bb
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugModule3::LoadSymbols
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 00b357a7c122de2788875632b770c4346963d975
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-현재 모듈에 대 한 기호를 로드합니다.  
+---
+# <a name="idebugmodule3loadsymbols"></a>IDebugModule3::LoadSymbols
+Loads the symbols for the current module.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT LoadSymbols(  
-   void  
+   void  
 );  
 ```  
   
-```c#  
+```csharp  
 int LoadSymbols();  
 ```  
   
-## 반환 값  
- 메서드가 성공 하면, 반환 `S_OK`.  실패할 경우 오류 코드를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns `S_OK`. If it fails, it returns an error code.  
   
-## 설명  
- 이 메서드는 현재 검색 경로에서 기호 로드 \(을 변경할 수 있습니다 호출 하 여 해당 [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md) 메서드\).  
+## <a name="remarks"></a>Remarks  
+ This method loads the symbols from the current search path (which can be altered by calling the [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md) method).  
   
- 이 방법을 통해 사용 하는 것은 [ReloadSymbols\_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md) 메서드가 있습니다.  
+ This method is preferred over the [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   
  [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)

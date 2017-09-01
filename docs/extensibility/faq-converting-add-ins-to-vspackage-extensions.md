@@ -1,89 +1,106 @@
 ---
-title: "FAQ: VSPackage 확장으로 추가 기능 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'FAQ: Converting Add-ins to VSPackage Extensions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a01d333-6e31-423f-ae06-5091a4fcb7a9
 caps.latest.revision: 22
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# FAQ: VSPackage 확장으로 추가 기능 변환
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8db7d203b599c11ce8fea07ed3647771c879a256
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-추가 기능이 이제 사용 되지 않습니다. 새로운 Visual Studio 확장을 하려면 VSIX 확장을 만들기 위해 필요 합니다. 다음은 Visual Studio 추가 기능에 VSIX 확장을 변환 하는 방법에 대 한 몇 가지 자주 묻는 질문에 대답 합니다.  
+---
+# <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ: Converting Add-ins to VSPackage Extensions
+Add-ins are now deprecated. To make a new Visual Studio extension, you need to create a VSIX extension. Here are the answers to some frequently asked questions about how to convert a Visual Studio add-in to a VSIX extension.  
   
 > [!WARNING]
->  Visual Studio 2015에서 C\# 및 Visual Basic 프로젝트에 대 한 시작 VSIX 프로젝트를 사용 하 여 추가 하는 메뉴 명령, 도구 창 및 VSPackages에 대 한 항목 템플릿. 자세한 내용은 [Visual Studio 2015 SDK의 새로운 기능](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md)을 참조하세요.  
+>  Starting in Visual Studio 2015, for C# and Visual Basic projects, you can use the VSIX project and add item templates for menu commands, tool windows, and VSPackages. For more information, see [What's New in the Visual Studio 2015 SDK](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md).  
   
 > [!IMPORTANT]
->  대부분의 경우에는 VSPackage 프로젝트 항목과 VSIX 프로젝트에 간단히 추가 기능 코드를 전송할 수 있습니다. 호출 하 여 DTE 자동화 개체를 가져올 수 있습니다 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> 에 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 메서드.  
+>  In many cases you can simply transfer your add-in code to a VSIX project with a VSPackage project item. You can get the DTE automation object by calling <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> in the <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> method.  
 >   
 >  `DTE2 dte = (DTE2)GetService(typeof(DTE));`  
 >   
->  자세한 내용은 참조 [VSPackage에서 추가 기능에 코드를 실행할 수는 방법](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_RunAddin) 아래입니다.  
+>  For more information, see [How can I run my add-in code in a VSPackage?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_RunAddin) below.  
   
-## 소프트웨어 개발 VSIX 확장 하나요?  
- Visual Studio 확장 Visual Studio 2015 외에도 Visual Studio 2015 SDK 필요합니다.  VSIX 프로젝트를 만들거나 기존 VSIX 프로젝트를 열고 Visual Studio 필요한 소프트웨어를 다운로드 합니다. Visual Studio SDK를 설치 하는 방법에 대 한 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  
+## <a name="what-software-do-i-need-to-develop-vsix-extensions"></a>What software do I need to develop VSIX extensions?  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## 확장 문서는 어디 입니까?  
- 로 시작 [Visual Studio 확장 프로그램을 개발 하기 시작](../extensibility/starting-to-develop-visual-studio-extensions.md)합니다. MSDN에서 VSSDK 확장 개발에 대 한 다른 문서는 하나 다음과 같습니다.  
+## <a name="wheres-the-extension-documentation"></a>Where's the extension documentation?  
+ Start with [Starting to Develop Visual Studio Extensions](../extensibility/starting-to-develop-visual-studio-extensions.md). Other articles about VSSDK extension development on MSDN are below that one.  
   
-## VSIX 프로젝트에 내에서 추가 기능 프로젝트를 변환할 수 있습니까?  
- VSIX 프로젝트에서 사용 되는 메커니즘에서 추가 기능 프로젝트에서 했던 것과 동일 하지 않기 때문에 VSIX 프로젝트에 직접 추가 기능 프로젝트를 변환할 수 없습니다. VSIX 프로젝트 템플릿을 적절 한 프로젝트 항목 템플릿 코드를 사용 하면 비교적 쉽게 시작 하 고 VSIX 확장으로 실행 하는 많이 있을 것입니다.  
+## <a name="can-i-convert-my-add-in-project-to-a-vsix-project"></a>Can I convert my add-in project to a VSIX project?  
+ An add-in project can't be converted directly to a VSIX project because the mechanisms used in VSIX projects are not the same as the ones in add-in projects. The VSIX project template, plus the right project item templates have a lot of code that makes it relatively easy to get up and running as a VSIX extension.  
   
-##  <a name="BKMK_StartDeveloping"></a> VSIX 확장 개발 시작 하려면 어떻게 해야 합니까?  
- 메뉴 명령이 포함 된 VSIX를 활용 하는 방법을 다음과 같습니다.  
+##  <a name="BKMK_StartDeveloping"></a> How do I start developing VSIX extensions?  
+ Here's how you make a VSIX that has a menu command:  
   
-#### 메뉴 명령이 포함 된 VSIX 확장  
+#### <a name="to-make-a-vsix-extension-that-has-a-menu-command"></a>To make a VSIX extension that has a menu command  
   
-1.  VSIX 프로젝트를 만듭니다. \(**파일**, **새로**, **프로젝트**, 또는 형식 **프로젝트** 에 **빠른 실행** 창\). 에 **새 프로젝트** 대화 상자에서 **Visual C\# \/ 확장성** 또는 **Visual Basic \/ 확장성** 선택한 **VSIX 프로젝트**.\) 프로젝트 이름을 **TestExtension** 에 대 한 위치를 지정 합니다.  
+1.  Create a VSIX project. (**File**, **New**, **Project**, or type **project** in the **Quick Launch** window). In the **New Project** dialog box, expand **Visual C# / Extensibility** or **Visual Basic / Extensibility** and select **VSIX Project**.) Name the project **TestExtension** and specify a location for it.  
   
-2.  추가 **사용자 지정 명령** 프로젝트 항목 템플릿. \(에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택한 **추가 \/ 새 항목**합니다. 에 **새 프로젝트** Visual C\# 또는 Visual Basic의 경우 선택 대화 상자는 **확장성** 노드 선택한 **사용자 지정 명령**.\)  
+2.  Add a **Custom Command** project item template. (Right-click the project node in the **Solution Explorer** and select **Add / New Item**. In the **New Project** dialog for either Visual C# or Visual Basic, select the **Extensibility** node and select **Custom Command**.)  
   
-3.  F5 키를 눌러 빌드하고 디버그 모드에서 프로젝트를 실행 합니다.  
+3.  Press F5 to build and run the project in debug mode.  
   
-     Visual Studio의 두 번째 인스턴스가 표시 됩니다. 이 두 번째 인스턴스는 실험적 인스턴스를 라고 하 고 동일한 설정으로 코드를 작성 하려면 사용 중인 Visual Studio의 인스턴스를 없을 수 있습니다. 처음 실험적 인스턴스를 실행 하면 VS Online에 로그인 하 고 테마와 프로필을 지정 하 라는 메시지가 됩니다.  
+     A second instance of Visual Studio appears. This second instance is called the experimental instance, and it may not have the same settings as the instance of Visual Studio you're using to write code. The first time you run the experimental instance, you will be asked to sign in to VS Online and specify your theme and profile.  
   
-     에 **도구** 메뉴 \(실험적 인스턴스\) 이라는 단추가 표시 됩니다 **내 명령 이름**합니다. 이 단추를 선택 하면 메시지가 표시 됩니다: **Testvspackagepackage.menuitemcallback**합니다.  
+     On the **Tools** menu (in the experimental instance) you should see a button named **My Command name**. When you choose this button, a message should appear: **Inside TestVSPackagePackage.MenuItemCallback()**.  
   
-##  <a name="BKMK_RunAddin"></a> VSPackage에서 추가 기능에 코드를 실행할 수는 방법  
- 추가 기능 코드는 일반적으로 두 가지 방법 중 하나에서 실행 됩니다.  
+##  <a name="BKMK_RunAddin"></a> How can I run my add-in code in a VSPackage?  
+ Add-in code usually runs in one of two ways:  
   
--   메뉴 명령에 의해 트리거된 \(코드는는 `IDTCommandTarget.Exec` 메서드\)  
+-   Triggered by a menu command (the code is in the `IDTCommandTarget.Exec` method)  
   
--   시작 시에 자동으로 \(코드는는 `OnConnection` 이벤트 처리기입니다.\)  
+-   Automatically on startup (the code is in the `OnConnection` event handler.)  
   
- VSPackage에서 동일한 작업을 수행할 수 있습니다. 콜백 메서드에 일부 추가 기능 코드를 추가 하는 방법을 다음과 같습니다.  
+ You can do the same things in a VSPackage. Here's how to add some add-in code in the callback method:  
   
-#### VSPackage에서 메뉴 명령을 구현 하려면  
+#### <a name="to-implement-a-menu-command-in-a-vspackage"></a>To implement a menu command in a VSPackage  
   
-1.  메뉴 명령이 포함 된 VSPackage를 만듭니다. 자세한 내용은 [메뉴 명령을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-a-menu-command.md)을 참조하세요.  
+1.  Create a VSPackage that has a menu command. (For more information, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).)  
   
-2.  VSPackage 정의가 포함 된 파일을 엽니다. \(C\# 프로젝트의 경우에 있어서 *\< 프로젝트 이름 \>*Package.cs입니다.\)  
+2.  Open the file that contains the definition of the VSPackage. (In a C# project, it's *\<your project name>*Package.cs.)  
   
-3.  다음 코드를 추가 `using` 문을 파일에 있습니다.  
+3.  Add the following `using` statements to the file:  
   
-    ```c#  
+    ```csharp  
     using EnvDTE;  
     using EnvDTE80;  
     ```  
   
-4.  찾기는 `MenuItemCallback` 메서드. 호출을 추가 하면 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> 가져오려는 <xref:EnvDTE80.DTE2> 개체:  
+4.  Find the `MenuItemCallback` method. Add a call to <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> to get the <xref:EnvDTE80.DTE2> object:  
   
-    ```c#  
+    ```csharp  
     DTE2 dte = (DTE2)GetService(typeof(DTE));  
     ```  
   
-5.  에 추가 기능에 코드를 추가 해당 `IDTCommandTarget.Exec` 메서드. 예를 들어 다음은 새 창에 추가 하는 코드는 **출력** 창 고 새 창에서 "Some Text"에 출력 합니다.  
+5.  Add the code that your add-in had in its `IDTCommandTarget.Exec` method. For example, here is some code that adds a new pane to the **Output** window and prints "Some Text" in the new pane.  
   
-    ```c#  
+    ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
     {  
         DTE2 dte = (DTE2) GetService(typeof(DTE));  
@@ -95,89 +112,89 @@ caps.handback.revision: 22
   
     ```  
   
-6.  빌드하고이 프로젝트를 실행 합니다. F5 키를 누르거나 선택 **시작** 에 **디버그** 도구 모음입니다. Visual Studio의 실험적 인스턴스에서 **도구** 메뉴 이라는 단추가 있어야 **내 명령 이름**합니다. 이 단추는 단어를 선택 하면 **Some Text** 에 나타나야는 **출력** 창 선택 합니다. \(열어야 할 수도 **출력** 창입니다.\)  
+6.  Build and run this project. Press F5 or select **Start** on the **Debug** toolbar. In the experimental instance of Visual Studio, the **Tools** menu should have a button named **My Command name**. When you choose this button, the words **Some Text** should appear in an **Output** window pane. (You may have to open the **Output** window.)  
   
- 시작 시 코드가 실행 되도록 할 수도 있습니다. 그러나이 방법은 일반적으로 VSPackage 확장에 좋습니다. 너무 많은 확장을 Visual Studio를 시작할 때 로드 하려고 시작 시간이 아주 오래 될 수 있습니다. \(예: 솔루션을 열\) 일부 조건이 충족 될 경우에 VSPackage를 자동으로 로드 하는 것이 좋습니다.  
+ You can also have your code run on startup. However, this approach is generally discouraged for VSPackage extensions. If too many extensions try to load when Visual Studio starts, the start time might become noticeably longer. A better practice is to load the VSPackage automatically only when some condition is met (like a solution being opened).  
   
- 이 절차에서는 솔루션을 열 때 자동으로 로드 되는 VSPackage에서 추가 기능 코드를 실행 하는 방법을 보여 줍니다.  
+ This procedure shows how to run add-in code in a VSPackage that loads automatically when a solution is opened:  
   
-#### VSPackage 자동 로드 하려면  
+#### <a name="to-autoload-a-vspackage"></a>To autoload a VSPackage  
   
-1.  Visual Studio 패키지 프로젝트 항목과 VSIX 프로젝트를 만듭니다. \(이 작업을 수행 하는 단계를 참조 하십시오. [VSIX 확장 개발 시작 하려면 어떻게 해야 합니까?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping)합니다. 추가 된 **Visual Studio 패키지** 대신 프로젝트 항목입니다.\) VSIX 프로젝트의 이름을 **testautoload로**합니다.  
+1.  Create a VSIX project with a Visual Studio Package project item. (For the steps to do this, see [How do I start developing VSIX extensions?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping). Just add the **Visual Studio Package** project item instead.) Name the VSIX project **TestAutoload**.  
   
-2.  TestAutoloadPackage.cs를 엽니다. 패키지 클래스를 선언 하는 줄을 찾습니다.  
+2.  Open TestAutoloadPackage.cs. Find the line where the package class is declared:  
   
-    ```c#  
+    ```csharp  
     public sealed class <name of your package>Package : Package  
     ```  
   
-3.  이 줄 위에 특성의 집합입니다. 이 특성을 추가 합니다.  
+3.  Above this line is a set of attributes. Add this attribute:  
   
-    ```c#  
+    ```csharp  
     [ProvideAutoLoad(UIContextGuids80.SolutionExists)]  
     ```  
   
-4.  중단점을 설정는 `Initialize()` 메서드와 시작 \(F5\)을 디버깅 합니다.  
+4.  Set a breakpoint in the `Initialize()` method and start debugging (F5).  
   
-5.  실험적 인스턴스에서 프로젝트를 엽니다. VSPackage가 로드 되 고 중단점에 도달 합니다.  
+5.  In the experimental instance, open a project. The VSPackage should load, and your breakpoint should be hit.  
   
- 필드를 사용 하 여 VSPackage를 로드할 수 있는 다른 컨텍스트를 지정할 수 있습니다 <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>합니다. 자세한 내용은 [Vspackage를 로드합니다.](../extensibility/loading-vspackages.md)을 참조하십시오.  
+ You can specify other contexts in which to load your VSPackage by using the fields of <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>. For more information, see [Loading VSPackages](../extensibility/loading-vspackages.md).  
   
-## DTE 개체를 어떻게 얻을 수 있습니까?  
- 추가 기능에서 UI 표시 되지 않는 경우\-예를 들어 메뉴 명령, 도구 모음 단추 또는 도구 창을\-코드를 사용할 수 있습니다\-VSPackage에서 DTE 자동화 개체를 가져올 그대로입니다. 다음은 방법:  
+## <a name="how-can-i-get-the-dte-object"></a>How can I get the DTE object?  
+ If your add-in doesn't display UI—for example, menu commands, toolbar buttons, or tool windows—you may be able to use your code as-is as long as you get the DTE automation object from the VSPackage. Here's how:  
   
-#### VSPackage에서 DTE 개체를 가져와  
+#### <a name="to-get-the-dte-object-from-a-vspackage"></a>To get the DTE object from a VSPackage  
   
-1.  Visual Studio 패키지 항목 템플릿 사용 하 여 VSIX 프로젝트에서 찾아봅니다는 *\< 프로젝트 이름 \>*Package.cs 파일입니다. 이 클래스는 클래스에서 파생 된 <xref:Microsoft.VisualStudio.Shell.Package>; Visual Studio와 상호 작용 하는 데 유용 합니다. 사용 하는 경우에 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> 가져오려는 <xref:EnvDTE80.DTE2> 개체입니다.  
+1.  In a VSIX project with a Visual Studio Package item template, look for the *\<project name>*Package.cs file. This is the class that derives from <xref:Microsoft.VisualStudio.Shell.Package>; it can help you interact with Visual Studio. In this case, you use its <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> to get the <xref:EnvDTE80.DTE2> object.  
   
-2.  이러한 추가 `using` 문:  
+2.  Add these `using` statements:  
   
-    ```c#  
+    ```csharp  
     using EnvDTE;  
     using EnvDTE80;  
     ```  
   
-3.  찾기는 `Initialize` 메서드. 이 메서드는 패키지 마법사에서 지정한 명령을 처리 합니다. 호출을 추가 하면 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> DTE 개체를 가져옵니다.  
+3.  Find the `Initialize` method. This method handles the command you specified in the package wizard. Add a call to <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> to get the DTE object:  
   
-    ```c#  
+    ```csharp  
     DTE dte = (DTE)GetService(typeof(DTE));  
     ```  
   
- 추가한 후의 <xref:EnvDTE.DTE> 자동화 개체를 프로젝트에 추가 기능 코드의 나머지 부분을 추가할 수 있습니다. 필요한 경우는 <xref:EnvDTE80.DTE2> 개체를 동일한 작업을 수행할 수 있습니다.  
+ After you have the <xref:EnvDTE.DTE> automation object, you can add the rest of your add-in code to the project. If you need the <xref:EnvDTE80.DTE2> object, you can do the same thing.  
   
-## 변경 하는 방법 메뉴 명령 및 도구 모음 단추 내 추가 기능에서 VSPackage 스타일으로?  
- VSPackage 확장.vsct 파일을 사용 하 여 메뉴 명령, 도구 모음, 도구 모음 단추 및 기타 UI의 대부분을 만들려고 합니다.**사용자 지정 명령** 프로젝트 항목 템플릿을에 명령을 만드는 옵션을 제공 된 **도구** 메뉴. 자세한 내용은 [메뉴 명령을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-a-menu-command.md)을 참조하세요.  
+## <a name="how-do-i-change-menu-commands-and-toolbar-buttons-in-my-add-in-to-the-vspackage-style"></a>How do I change menu commands and toolbar buttons in my add-in to the VSPackage style?  
+ VSPackage extensions use the .vsct file to create most of the menu commands, toolbars, toolbar buttons, and other UI. The **Custom Command** project item template gives you the option to create a command on the **Tools** menu. For more information, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
- .Vsct 파일에 대 한 자세한 내용은 참조 [Vspackage에서 사용자 인터페이스 요소를 추가 하는 방법](../extensibility/internals/how-vspackages-add-user-interface-elements.md)합니다. 메뉴 항목, 도구 모음 및 도구 모음 단추를 추가 하려면.vsct 파일을 사용 하는 방법을 보여 주는 연습을 참조 하십시오. [확장 메뉴 및 명령](../extensibility/extending-menus-and-commands.md)합니다.  
+ For more information about .vsct files, see [How VSPackages Add User Interface Elements](../extensibility/internals/how-vspackages-add-user-interface-elements.md). For walkthroughs that show how to use the .vsct file to add menu items, toolbars, and toolbar buttons, see [Extending Menus and Commands](../extensibility/extending-menus-and-commands.md).  
   
-## VSPackage 방식으로 사용자 지정 도구 창 추가  
- 사용자 지정 도구 창 프로젝트 항목 템플릿을 도구 창을 만드는 옵션을 제공 합니다. 이 프로젝트 항목 템플릿에 대 한 자세한 내용은 참조 [확장 도구 창 만들기](../extensibility/creating-an-extension-with-a-tool-window.md)합니다. 도구 창에 대 한 정보를 참조 하십시오. [확장 및 도구 창을 사용자 지정](../extensibility/extending-and-customizing-tool-windows.md) 및 그 아래 문서 특히 [도구 창 추가](../extensibility/adding-a-tool-window.md)합니다.  
+## <a name="how-do-i-add-custom-tool-windows-in-the-vspackage-way"></a>How do I add custom tool windows in the VSPackage way?  
+ The Custom Tool Window project item template gives you the option to create a tool window. For more information about this project item template, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md). For information about tool windows, see [Extending and Customizing Tool Windows](../extensibility/extending-and-customizing-tool-windows.md) and the articles under it, especially [Adding a Tool Window](../extensibility/adding-a-tool-window.md).  
   
-## VSPackage 방식으로 Visual Studio 창을 관리 하려면 어떻게 해야 합니까?  
- 추가 기능에 Visual Studio 창 관리를 하는 경우 VSPackage에서 추가 기능 코드 작동 해야 합니다. 이 절차를 관리 하는 코드를 추가 하는 방법을 보여 줍니다 예를 들어는 **작업 목록** 에 `MenuItemCallback` vspackage 메서드.  
+## <a name="how-do-i-manage-visual-studio-windows-in-the-vspackage-way"></a>How do I manage Visual Studio windows in the VSPackage way?  
+ If your add-in manages Visual Studio windows, the add-in code should work in a VSPackage. For example, this procedure shows how to add code that manages the **Task List** to the `MenuItemCallback` method of the VSPackage.  
   
-#### 추가 기능에서 VSPackage에 창 관리 코드를 삽입 하려면  
+#### <a name="to-insert-window-management-code-from-an-add-in-into-a-vspackage"></a>To insert window-management code from an add-in into a VSPackage  
   
-1.  와 같이 메뉴 명령이 포함 된 VSPackage를 만들기는 [VSIX 확장 개발 시작 하려면 어떻게 해야 합니까?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) 섹션입니다.  
+1.  Create a VSPackage that has a menu command, as in the [How do I start developing VSIX extensions?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) section.  
   
-2.  VSPackage 정의가 포함 된 파일을 엽니다. \(C\# 프로젝트의 경우에 있어서 *\< 프로젝트 이름 \>*Package.cs입니다.\)  
+2.  Open the file that contains the definition of the VSPackage. (In a C# project, it's *\<your project name>*Package.cs.)  
   
-3.  이러한 추가 `using` 문:  
+3.  Add these `using` statements:  
   
-    ```c#  
+    ```csharp  
     using EnvDTE;  
     using EnvDTE80;  
     ```  
   
-4.  찾기는 `MenuItemCallback` 메서드. 호출을 추가 하면 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> 가져오려는 <xref:EnvDTE80.DTE2> 개체:  
+4.  Find the `MenuItemCallback` method. Add a call to <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> to get the <xref:EnvDTE80.DTE2> object:  
   
-    ```c#  
+    ```csharp  
     DTE2 dte = (DTE2)GetService(typeof(DTE));  
     ```  
   
-5.  추가 기능에서 코드를 추가 합니다. 예를 들어 다음은 새로운 작업을 추가 하는 코드는 **작업 목록**, 작업의 수를 나열 하 고 다음 작업 하나를 삭제 합니다.  
+5.  Add the code from your add-in. For example, here is some code that adds new tasks to the **Task List**, lists the number of tasks, and then deletes one task.  
   
-    ```c#  
+    ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)   
     {  
         DTE2 dte = (DTE2) GetService(typeof(DTE));   
@@ -203,29 +220,29 @@ caps.handback.revision: 22
     }  
     ```  
   
-## VSPackage에서 프로젝트 및 솔루션 관리 하려면 어떻게 해야 합니까?  
- 추가 기능에 프로젝트 및 솔루션을 관리 하는 경우 VSPackage에서 추가 기능 코드 작동 해야 합니다. 예를 들어이 절차에서는 시작 프로젝트를 가져오는 코드를 추가 하는 방법을 보여 줍니다.  
+## <a name="how-do-i-manage-projects-and-solutions-in-a-vspackage"></a>How do I manage projects and solutions in a VSPackage?  
+ If your add-in manages projects and solutions, the add-in code should work in a VSPackage. For example, this procedure shows how to add code that gets the startup project.  
   
-1.  와 같이 메뉴 명령이 포함 된 VSPackage를 만들기는 [VSIX 확장 개발 시작 하려면 어떻게 해야 합니까?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) 섹션입니다.  
+1.  Create a VSPackage that has a menu command, as in the [How do I start developing VSIX extensions?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) section.  
   
-2.  VSPackage 정의가 포함 된 파일을 엽니다. \(C\# 프로젝트의 경우에 있어서 *\< 프로젝트 이름 \>*Package.cs입니다.\)  
+2.  Open the file that contains the definition of the VSPackage. (In a C# project, it's *\<your project name>*Package.cs.)  
   
-3.  이러한 추가 `using` 문:  
+3.  Add these `using` statements:  
   
-    ```c#  
+    ```csharp  
     using EnvDTE;  
     using EnvDTE80;  
     ```  
   
-4.  찾기는 `MenuItemCallback` 메서드. 호출을 추가 하면 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> 가져오려는 <xref:EnvDTE80.DTE2> 개체:  
+4.  Find the `MenuItemCallback` method. Add a call to <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> to get the <xref:EnvDTE80.DTE2> object:  
   
-    ```c#  
+    ```csharp  
     DTE2 dte = (DTE2)GetService(typeof(DTE));  
     ```  
   
-5.  추가 기능에서 코드를 추가 합니다. 예를 들어 다음 코드는 솔루션에서 시작 프로젝트의 이름을 가져옵니다. \(다중 프로젝트 솔루션 열려 있어야이 패키지를 실행 합니다.\)  
+5.  Add the code from your add-in. For example, the following code gets the name of the startup project in a solution. (A multi-project solution must be open when this package runs.)  
   
-    ```c#  
+    ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
     {  
         DTE2 dte = (DTE2) GetService(typeof(DTE));   
@@ -244,8 +261,8 @@ caps.handback.revision: 22
     }  
     ```  
   
-## VSPackage에서 바로 가기 키를 설정 하려면 어떻게 합니까?  
- 사용 된 `<KeyBindings>` .vsct 파일의 요소입니다. 다음 예제는 명령에 대 한 바로 가기 키 `idCommand1` Alt \+ A 및 명령에 대 한 바로 가기 키가 `idCommand2` Alt \+ Ctrl \+ A입니다. 키 이름 구문을 확인 하세요.  
+## <a name="how-do-i-set-keyboard-shortcuts-in-a-vspackage"></a>How do I set keyboard shortcuts in a VSPackage?  
+ You use the `<KeyBindings>` element of the .vsct file. In the following example, the keyboard shortcut for the command `idCommand1` is Alt+A, and the keyboard shortcut for the command `idCommand2` is Alt+Ctrl+A. Notice the syntax for the key names.  
   
 ```xml  
 <KeyBindings>  
@@ -254,10 +271,10 @@ caps.handback.revision: 22
 </KeyBindings>  
 ```  
   
-## VSPackage에서 자동화 이벤트를 처리 하는 방법  
- 추가 기능에서 같이 동일한 방법으로 VSPackage에서 자동화 이벤트를 처리 합니다. 다음 코드에서는 처리 하는 방법을 보여 줍니다.는 `OnItemRenamed` 이벤트입니다. \(이 예제에서는 DTE 개체 이미 받으신\)  
+## <a name="how-do-i-handle-automation-events-in-a-vspackage"></a>How do I handle automation events in a VSPackage?  
+ You handle automation events in a VSPackage in the same way as in your add-in. The following code shows how to handle the `OnItemRenamed` event. (This example assumes that you've already gotten the DTE object.)  
   
-```c#  
+```csharp  
 Events2 dteEvents = (Events2)dte.Events;  
 dteEvents.ProjectItemsEvents.ItemRenamed += listener1.OnItemRenamed;   
 . . .  

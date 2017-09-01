@@ -1,41 +1,58 @@
 ---
-title: "기록 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Historical Debugging | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7cc5ddf2-2f7c-4f83-b7ca-58e92e9bfdd2
 caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# 기록 디버깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 9f73ccc235c3b893b2ad8d2ddb07dd1848414734
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-기록 디버깅은 IntelliTrace에서 수집된 정보에 의존하는 디버깅 모드입니다.  이 디버깅을 사용하면 응용 프로그램 실행 도중 앞이나 뒤로 이동하며 상태를 검사할 수 있습니다.  
+---
+# <a name="historical-debugging"></a>Historical Debugging
+Historical debugging is a mode of debugging that depends on the information collected by IntelliTrace. It allows you to move backward and forward through the execution of your application and inspect its state.  
   
- Visual Studio Enterprise Edition\(Professional 또는 Community Edition 아님\)에서 IntelliTrace를 사용할 수 있습니다.  
+ You can use IntelliTrace in Visual Studio Enterprise edition (but not the Professional or Community editions).  
   
-## 기록 디버깅을 사용하는 이유  
- 버그를 찾는 중단점을 설정하는 것은 적중하느냐 누락하느냐의 문제입니다.  코드에서 버그가 있을 것으로 의심되는 위치 가까이에 중단점을 설정하면 디버거에서 응용 프로그램을 실행할 때 중단점이 적중될 것으로 기대할 수 있고, 이에 따라 실행이 중단된 위치가 버그 소스를 노출할 수 있습니다.  그러지 않은 경우에는 코드 내의 다른 위치에 중단점을 설정한 후 디버거를 다시 실행해야 합니다. 즉, 문제를 발견할 때까지 테스트 단계를 반복적으로 실행하게 됩니다.  
+## <a name="why-use-historical-debugging"></a>Why use Historical Debugging?  
+ Setting breakpoints to find bugs can be a rather hit-or-miss affair. You set a breakpoint close to the place in your code where you suspect the bug to be, then run the application in the debugger and hope your breakpoint gets hit, and that the place where execution breaks can reveal the source of the bug. If not, you'll have to try setting a breakpoint somewhere else in the code and rerun the debugger, executing your test steps over and over until you find the problem.  
   
- ![중단점 설정](~/debugger/media/breakpointprocesa.png "BreakpointProcesa")  
+ ![setting a breakpoint](../debugger/media/breakpointprocesa.png "BreakpointProcesa")  
   
- IntelliTrace와 기록 디버깅을 사용하면 중단점을 설정하고 디버깅을 다시 시작하고 테스트 단계를 반복할 필요 없이 응용 프로그램 내부를 이동하면서 상태\(호출 스택 및 지역 변수\)를 검사할 수 있습니다.  이렇게 하면 특히 버그가 테스트 시나리오의 깊은 수준에 있어서 실행하는 데 오래 걸리는 경우 많은 시간을 절약할 수 있습니다.  
+ You can use IntelliTrace and Historical Debugging to roam around in your application and inspect its state (call stack and local variables) without having to set breakpoints, restart debugging, and repeat test steps. This can save you a lot of time, especially when the bug is located deep in a test scenario that takes a long time to execute.  
   
-## 기록 디버깅을 사용하여 시작하는 방법  
- IntelliTrace는 기본적으로 설정되어 있습니다.  관심 있는 이벤트와 함수 호출을 결정하기만 하면 됩니다.  찾으려는 항목을 정의하는 방법에 대한 자세한 내용은 [IntelliTrace 기능](../debugger/intellitrace-features.md)을 참조하세요.  IntelliTrace를 사용한 디버깅에 대한 단계별 설명을 보려면 [연습: IntelliTrace 사용](../debugger/walkthrough-using-intellitrace.md)을 참조하세요.  
+## <a name="how-do-i-start-using-historical-debugging"></a>How do I start using Historical Debugging?  
+ IntelliTrace is on by default. All you have to do is decide which events and function calls are of interest to you. For more information about defining what you want to look for, see [IntelliTrace Features](../debugger/intellitrace-features.md). For a step-by-step account of debugging with IntelliTrace, see [Walkthrough: Using IntelliTrace](../debugger/walkthrough-using-intellitrace.md).  
   
-## 기록 디버깅을 사용하여 코드 탐색  
- 버그가 있는 간단한 프로그램부터 살펴보겠습니다.  C\# 콘솔 응용 프로그램에서 다음 코드를 추가합니다.  
+## <a name="navigating-your-code-with-historical-debugging"></a>Navigating your code with Historical Debugging  
+ Let's start with a simple program that has a bug. In a C# console application, add the following code:  
   
-```c#  
+```CSharp  
 static void Main(string[] args)  
 {  
     int testInt = 0;  
@@ -61,28 +78,28 @@ private static int AddInt(int add)
 }  
 ```  
   
- `AddAll()`을 호출한 후 `resultInt`의 예상 값을 20으로 가정하겠습니다\(`testInt`를 20회 증분한 결과\).  \(또한 `AddInt()`에서 버그를 볼 수 없다고 가정하겠습니다.\) 그러나 결과는 실제로 44입니다.  `AddAll()`을 단계적으로 10회 실행하지 않고도 버그를 찾으려면 어떻게 할까요?  기록 디버깅을 사용하여 더 빠르고 쉽게 버그를 찾을 수 있습니다.  방법은 다음과 같습니다.  
+ We'll assume that the expected value of `resultInt` after calling `AddAll()` is 20 (the result of incrementing `testInt` 20 times). (We'll also assume that you can't see the bug in `AddInt()`).But the result is actually 44. How can we find the bug without stepping through `AddAll()` 10 times? We can use Historical Debugging to find the bug faster and more easily. Here's how:  
   
-1.  도구 \/ 옵션 \/ IntelliTrace \/ 일반에서 IntelliTrace가 사용하도록 설정되어 있는지 확인하고 IntelliTrace 이벤트 및 호출 정보 옵션을 선택합니다.  이 옵션을 선택하지 않으면 탐색 여백\(아래 설명\)을 볼 수 없습니다.  
+1.  In Tools > Options > IntelliTrace > General, make sure that IntelliTrace is enabled, and select the IntelliTrace events and call information option. If you do not select this option, you will not be able to see the navigation gutter (as explained below).  
   
-2.  `Console.WriteLine(resultInt);` 줄에 중단점을 설정합니다.  
+2.  Set a breakpoint on the `Console.WriteLine(resultInt);` line.  
   
-3.  디버깅을 시작합니다.  코드가 중단점까지 실행됩니다.  **지역** 창에서 `resultInt`의 값이 44임을 확인할 수 있습니다.  
+3.  Start debugging. The code executes to the breakpoint. In the **Locals** window, you can see that the value of `resultInt` is 44.  
   
-4.  **진단 도구** 창을 엽니다\(**디버그 \/ 진단 도구 표시**\).  코드 창이 다음과 같이 나타납니다.  
+4.  Open the **Diagnostic Tools** window (**Debug > Show Diagnostic Tools**). The code window should look like this:  
   
-     ![중단점의 코드 창](~/debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")  
+     ![Code window at the breakpoint](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")  
   
-5.  중단점 바로 위 왼쪽 여백 옆에 이중 화살표가 표시됩니다.  이 영역은 탐색 여백이라고 하며 기록 디버깅에 사용됩니다.  화살표를 클릭합니다.  
+5.  You should see a double arrow next to the left margin, just above the breakpoint. This area is called the navigation gutter, and is used for Historical Debugging. Click the arrow.  
   
-     코드 창에서 위 코드 줄\(`int resultInt = AddIterative(testInt);`\)에 분홍색이 지정된 것을 확인할 수 있습니다.  창 위에는 현재 기록 디버깅 중임을 알리는 메시지가 표시됩니다.  
+     In the code window, you should see that the preceding line of code (`int resultInt = AddIterative(testInt);`) is colored pink. Above the window, you should see a message that you are now in Historical Debugging.  
   
-     이제 코드 창의 모양은 다음과 같습니다.  
+     The code window now looks like this:  
   
-     ![기록 디버깅 모드의 코드 창](~/debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
+     ![code window in historical debugging mode](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
   
-6.  이제 `AddAll()` 메서드를 단계별로 실행할 수 있습니다\(**F11** 키 또는 탐색 여백의 **한 단계씩 코드 실행** 단추\).  앞으로 이동합니다\(**F10** 또는 탐색 여백의 **다음 호출로 이동**\).  분홍색 줄이 `j = AddInt(j);` 줄에 표시됩니다.  이 경우에는 **F10** 키를 사용해도 다음 코드 줄로 진행하지 않습니다.  대신, 다음 함수 호출로 이동합니다.  기록 디버깅은 여러 호출을 탐색하며 함수 호출이 포함되지 않은 코드 줄을 건너뜁니다.  
+6.  Now you can step into the `AddAll()` method (**F11**, or the **Step Into** button in the navigation gutter. Step forward (**F10**, or **Go to Next Call** in the navigation gutter. The pink line is now on the `j = AddInt(j);` line. **F10** in this case does not step to the next line of code. Instead, it steps to the next function call. Historical debugging navigates from call to call, and it skips lines of code that do not include a function call.  
   
-7.  이제 `AddInt()` 메서드를 한 단계씩 실행합니다.  이 코드의 버그가 즉시 표시됩니다.  
+7.  Now step into the `AddInt()` method. You should see the bug in this code immediately.  
   
- 이 절차에서는 기록 디버깅으로 수행할 수 있는 작업을 기초적으로만 설명했습니다.  다양한 설정 및 탐색 여백에 있는 여러 단추의 효과에 대해 자세히 알아보려면 [IntelliTrace 기능](../debugger/intellitrace-features.md)을 참조하세요.
+ This procedure just scratched the surface of what you can do with Historical Debugging. To find out more about the different settings and the effects of the different buttons in the navigation gutter, see [IntelliTrace Features](../debugger/intellitrace-features.md).

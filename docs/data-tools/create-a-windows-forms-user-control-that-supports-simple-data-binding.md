@@ -1,188 +1,195 @@
 ---
-title: "연습: 단순 데이터 바인딩을 지원하는 Windows Forms 사용자 정의 컨트롤 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "사용자 지정 컨트롤[Visual Studio], 데이터 소스 창"
-  - "데이터 소스 창, 컨트롤"
+title: Create a user control that supports simple data binding | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- custom controls [Visual Studio], Data Sources Window
+- Data Sources Window, controls
 ms.assetid: b1488366-6dfb-454e-9751-f42fd3f3ddfb
 caps.latest.revision: 14
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6883dc4f4494fef4f53da354b8e4621b90184f45
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 단순 데이터 바인딩을 지원하는 Windows Forms 사용자 정의 컨트롤 만들기
-Windows 응용 프로그램에서 폼에 데이터를 표시할 때는 **도구 상자**에서 기존 컨트롤을 선택할 수도 있고, 표준 컨트롤에서는 제공되지 않는 기능이 응용 프로그램에 필요한 경우에는 사용자 지정 컨트롤을 작성할 수도 있습니다.  이 연습에서는 <xref:System.ComponentModel.DefaultBindingPropertyAttribute>를 구현하는 컨트롤을 만드는 방법을 보여줍니다.  <xref:System.ComponentModel.DefaultBindingPropertyAttribute>를 구현하는 컨트롤은 데이터에 바인딩할 수 있는 속성 한 개를 포함할 수 있습니다.  이러한 컨트롤은 <xref:System.Windows.Forms.TextBox> 또는 <xref:System.Windows.Forms.CheckBox>와 비슷합니다.  
+# <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>Create a Windows Forms user control that supports simple data binding
+When displaying data on forms in Windows applications, you can choose existing controls from the **Toolbox**, or you can author custom controls if your application requires functionality that is not available in the standard controls. This walkthrough shows how to create a control that implements the <xref:System.ComponentModel.DefaultBindingPropertyAttribute>. Controls that implement the <xref:System.ComponentModel.DefaultBindingPropertyAttribute> can contain one property that can be bound to data. Such controls are similar to a <xref:System.Windows.Forms.TextBox> or <xref:System.Windows.Forms.CheckBox>.  
   
- 컨트롤 작성에 대한 자세한 내용은 [디자인할 때 Windows Forms 컨트롤 개발](../Topic/Developing%20Windows%20Forms%20Controls%20at%20Design%20Time.md)을 참조하세요.  
+ For more information on control authoring, see [Developing Windows Forms Controls at Design Time](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).  
   
- 데이터 바인딩 시나리오에 사용할 컨트롤을 작성할 때는 다음 데이터 바인딩 특성 중 하나를 구현해야 합니다.  
+ When authoring controls for use in data-binding scenarios, you should implement one of the following data-binding attributes:  
   
-|데이터 바인딩 특성 사용법|  
-|--------------------|  
-|단일 데이터 열이나 속성을 표시하는 <xref:System.Windows.Forms.TextBox> 등의 단순 컨트롤에 대해 <xref:System.ComponentModel.DefaultBindingPropertyAttribute>를 구현합니다.  이 연습 페이지에서 해당 프로세스에 대해 설명합니다.|  
-|데이터 목록 또는 테이블을 표시하는 <xref:System.Windows.Forms.DataGridView> 등의 컨트롤에 대해 <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>를 구현합니다.  자세한 내용은 [연습: 복합 데이터 바인딩을 지원하는 Windows Forms 사용자 정의 컨트롤 만들기](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)을 참조하십시오.|  
-|데이터 목록 또는 테이블을 표시하는 동시에 단일 열이나 속성도 제공해야 하는 <xref:System.Windows.Forms.ComboBox> 등의 컨트롤에 대해 <xref:System.ComponentModel.LookupBindingPropertiesAttribute>를 구현합니다.  자세한 내용은 [연습: 조회 데이터 바인딩을 지원하는 Windows Forms 사용자 정의 컨트롤 만들기](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)을 참조하십시오.|  
+|Data-binding attribute usage|  
+|-----------------------------------|  
+|Implement the <xref:System.ComponentModel.DefaultBindingPropertyAttribute> on simple controls, like a <xref:System.Windows.Forms.TextBox>, that display a single column (or property) of data. (This process is described in this walkthrough page.)|  
+|Implement the <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> on controls, like a <xref:System.Windows.Forms.DataGridView>, that display lists (or tables) of data. For more information, see [Create a Windows Forms user control that supports complex data binding](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|  
+|Implement the <xref:System.ComponentModel.LookupBindingPropertiesAttribute> on controls, like a <xref:System.Windows.Forms.ComboBox>, that display lists (or tables) of data but also need to present a single column or property. For more information, see [Create a Windows Forms user control that supports lookup data binding](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|  
   
- 이 연습에서는 테이블 내 단일 열의 데이터를 표시하는 단순 컨트롤을 만듭니다.  이 예에서는 Northwind 샘플 데이터베이스 `Customers` 테이블의 `Phone` 열을 사용합니다.  단순 사용자 컨트롤은 <xref:System.Windows.Forms.MaskedTextBox>를 사용하고 전화 번호에 마스크를 설정하여 고객 전화 번호를 표준 전화 번호 형식으로 표시합니다.  
+ This walkthrough creates a simple control that displays data from a single column in a table. This example uses the `Phone` column of the `Customers` table from the Northwind sample database. The simple user control will display customers' phone numbers in a standard phone-number format, by using a <xref:System.Windows.Forms.MaskedTextBox> and setting the mask to a phone number.  
   
- 이 연습에서는 다음 작업을 수행하는 방법을 배웁니다.  
+ During this walkthrough, you will learn how to:  
   
--   새 **Windows 응용 프로그램**을 만듭니다.  
+-   Create a new **Windows Application**.  
   
--   프로젝트에 새 **사용자 컨트롤**을 추가합니다.  
+-   Add a new **User Control** to your project.  
   
--   사용자 컨트롤을 시각적으로 디자인합니다.  
+-   Visually design the user control.  
   
--   `DefaultBindingProperty` 특성을 구현합니다.  
+-   Implement the `DefaultBindingProperty` attribute.  
   
--   [데이터 소스 구성 마법사](../data-tools/media/data-source-configuration-wizard.png)를 사용하여 데이터 집합을 만듭니다.  
+-   Create a dataset with the **Data Source Configuration** wizard.  
   
--   새 컨트롤을 사용하도록 **데이터 소스** 창의 **Phone** 열을 설정합니다.  
+-   Set the **Phone** column in the **Data Sources** window to use the new control.  
   
--   새 컨트롤에 데이터를 표시할 폼을 만듭니다.  
+-   Create a form to display data in the new control.  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 사항이 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ In order to complete this walkthrough, you will need:  
   
--   Northwind 샘플 데이터베이스에 대한 액세스.  자세한 내용은 [방법: 샘플 데이터베이스 설치](../data-tools/how-to-install-sample-databases.md)을 참조하십시오.  
+-   Access to the Northwind sample database. For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
   
-## Windows 응용 프로그램 만들기  
- 첫 번째 단계에서는 **Windows 응용 프로그램**을 만듭니다.  
+## <a name="create-a-windows-application"></a>Create a Windows Application  
+ The first step is to create a **Windows Application**.  
   
-#### 새 Windows 프로젝트를 만들려면  
+#### <a name="to-create-the-new-windows-project"></a>To create the new Windows project  
   
-1.  Visual Studio의 **파일** 메뉴에서 새 **프로젝트**를 만듭니다.  
+1.  In Visual Studio, from the **File** menu, create a new **Project**.  
   
-2.  프로젝트 이름을 **SimpleControlWalkthrough**로 지정합니다.  
+2.  Name the project **SimpleControlWalkthrough**.  
   
-3.  **Windows 응용 프로그램**을 선택하고 **확인**을 클릭합니다.  자세한 내용은 [클라이언트 응용 프로그램](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)을 참조하십시오.  
+3.  Select **Windows Application** and click **OK**. For more information, see [Client Applications](/dotnet/framework/develop-client-apps).  
   
-     **SimpleControlWalkthrough** 프로젝트가 만들어져 **솔루션 탐색기**에 추가됩니다.  
+     The **SimpleControlWalkthrough** project is created, and added to **Solution Explorer**.  
   
-## 프로젝트에 사용자 컨트롤 추가  
- 이 연습에서는 **사용자 컨트롤**에서 데이터 바인딩 가능한 단순 컨트롤을 만들 것이므로 **사용자 컨트롤** 항목을 **SimpleControlWalkthrough** 프로젝트에 추가합니다.  
+## <a name="add-a-user-control-to-the-project"></a>Add a user control to the project  
+ This walkthrough creates a simple data-bindable control from a **User Control**, so add a **User Control** item to the **SimpleControlWalkthrough** project.  
   
-#### 프로젝트에 사용자 컨트롤을 추가하려면  
+#### <a name="to-add-a-user-control-to-the-project"></a>To add a user control to the project  
   
-1.  **프로젝트** 메뉴에서 **사용자 컨트롤 추가**를 선택합니다.  
+1.  From the **Project** menu, choose **Add User Control**.  
   
-2.  이름 영역에 `PhoneNumberBox`를 입력하고 **추가**를 클릭합니다.  
+2.  Type `PhoneNumberBox` in the Name area, and click **Add**.  
   
-     **PhoneNumberBox** 컨트롤이 **솔루션 탐색기**에 추가되고 디자이너에서 열립니다.  
+     The **PhoneNumberBox** control is added to **Solution Explorer**, and opens in the designer.  
   
-## PhoneNumberBox 컨트롤 디자인  
- 이 연습에서는 기존 <xref:System.Windows.Forms.MaskedTextBox>를 확장하여 `PhoneNumberBox` 컨트롤을 만듭니다.  
+## <a name="design-the-phonenumberbox-control"></a>Design the PhoneNumberBox control  
+ This walkthrough expands upon the existing <xref:System.Windows.Forms.MaskedTextBox> to create the `PhoneNumberBox` control.  
   
-#### PhoneNumberBox 컨트롤을 디자인하려면  
+#### <a name="to-design-the-phonenumberbox-control"></a>To design the PhoneNumberBox control  
   
-1.  **도구 상자**에서 사용자 컨트롤의 디자인 화면으로 <xref:System.Windows.Forms.MaskedTextBox>를 끌어 옵니다.  
+1.  Drag a <xref:System.Windows.Forms.MaskedTextBox> from the **Toolbox** onto the user control's design surface.  
   
-2.  방금 끌어 온 <xref:System.Windows.Forms.MaskedTextBox>에서 스마트 태그를 선택하고 **마스크 설정**을 선택합니다.  
+2.  Select the smart tag on the <xref:System.Windows.Forms.MaskedTextBox> you just dragged, and choose **Set Mask**.  
   
-3.  **입력 마스크** 대화 상자에서 **전화 번호**를 선택하고 **확인**을 클릭하여 마스크를 설정합니다.  
+3.  Select **Phone number** in the **Input Mask** dialog box, and click **OK** to set the mask.  
   
-## 필수 데이터 바인딩 특성 추가  
- 데이터 바인딩을 지원하는 단순 컨트롤에 대해 <xref:System.ComponentModel.DefaultBindingPropertyAttribute>를 구현합니다.  
+## <a name="add-the-required-data-binding-attribute"></a>Add the required data-binding attribute  
+ For simple controls that support databinding, implement the <xref:System.ComponentModel.DefaultBindingPropertyAttribute>.  
   
-#### DefaultBindingProperty 특성을 구현하려면  
+#### <a name="to-implement-the-defaultbindingproperty-attribute"></a>To implement the DefaultBindingProperty attribute  
   
-1.  `PhoneNumberBox` 컨트롤을 코드 보기로 전환합니다.  이렇게 하려면 **보기** 메뉴에서 **코드**를 선택합니다.  
+1.  Switch the `PhoneNumberBox` control to code view. (On the **View** menu, choose **Code**.)  
   
-2.  `PhoneNumberBox`의 코드를 다음 코드로 바꿉니다.  
+2.  Replace the code in the `PhoneNumberBox` with the following:  
   
-     [!code-cs[VbRaddataDisplaying#3](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.cs)]
-     [!code-vb[VbRaddataDisplaying#3](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.vb)]  
+     [!code-csharp[VbRaddataDisplaying#3](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.cs)]  [!code-vb[VbRaddataDisplaying#3](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.vb)]  
   
-3.  **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
+3.  From the **Build** menu, choose **Build Solution**.  
   
-## 데이터베이스에서 데이터 소스 만들기  
- 이 단계에서는 **데이터 소스 구성 마법사**를 사용하여 Northwind 샘플 데이터베이스의 `Customers` 테이블을 기반으로 하는 데이터 소스를 만듭니다.  연결을 만들려면 Northwind 샘플 데이터베이스에 액세스해야 합니다.  Northwind 샘플 데이터베이스를 설정하는 방법에 대한 자세한 내용은 [방법: 샘플 데이터베이스 설치](../data-tools/how-to-install-sample-databases.md)를 참조하세요.  
+## <a name="create-a-data-source-from-your-database"></a>Create a data source from your database  
+ This step uses the **Data Source Configuration**wizard to create a data source based on the `Customers` table in the Northwind sample database. You must have access to the Northwind sample database to create the connection. For information on setting up the Northwind sample database, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
   
-#### 데이터 소스를 만들려면  
+#### <a name="to-create-the-data-source"></a>To create the data source  
   
-1.  **데이터** 메뉴에서 **데이터 소스 표시**를 클릭합니다.  
+1.  On the **Data** menu, click **Show Data Sources**.  
   
-2.  **데이터 소스** 창에서 **새 데이터 소스 추가**를 선택하여 **데이터 소스 구성 마법사**를 시작합니다.  
+2.  In the **Data Sources** window, select **Add New Data Source** to start the **Data Source Configuration** wizard.  
   
-3.  **데이터 소스 형식 선택** 페이지에서 **데이터베이스**를 선택하고 **다음**을 클릭합니다.  
+3.  On the **Choose a Data Source Type** page, select **Database**, and then click **Next**.  
   
-4.  **데이터 연결 선택** 페이지에서 다음 중 한 가지를 수행합니다.  
+4.  On the **Choose your Data Connection** page, do one of the following:  
   
-    -   Northwind 샘플 데이터베이스에 대한 데이터 연결이 드롭다운 목록에 표시되면 해당 연결을 선택합니다.  
+    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
   
-         Or  
+    -   Select **New Connection** to launch the **Add/Modify Connection** dialog box.  
   
-    -   **새 연결**을 선택하여 **연결 추가\/수정** 대화 상자를 시작합니다.  
+5.  If your database requires a password, select the option to include sensitive data, and then click **Next**.  
   
-5.  데이터베이스에 암호가 필요하면 중요한 데이터를 포함하는 옵션을 선택하고 **다음**을 클릭합니다.  
+6.  On the **Save connection string to the Application Configuration file** page, click **Next**.  
   
-6.  **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 **다음**을 클릭합니다.  
+7.  On the **Choose your Database Objects** page, expand the **Tables** node.  
   
-7.  **데이터베이스 개체 선택** 페이지에서 **테이블** 노드를 확장합니다.  
+8.  Select the `Customers` table, and then click **Finish**.  
   
-8.  `Customers` 테이블을 선택하고 **마침**을 클릭합니다.  
+     The **NorthwindDataSet** is added to your project, and the `Customers` table appears in the **Data Sources** window.  
   
-     **NorthwindDataSet**가 프로젝트에 추가되고 `Customers` 테이블이 **데이터 소스** 창에 나타납니다.  
+## <a name="set-the-phone-column-to-use-the-phonenumberbox-control"></a>Set the phone column to use the PhoneNumberBox control  
+ Within the **Data Sources** window, you can set the control to be created prior to dragging items onto your form.  
   
-## PhoneNumberBox 컨트롤을 사용하도록 Phone 열 설정  
- **데이터 소스** 창 내에서 항목을 폼으로 끌기 전에 만들 컨트롤을 설정할 수 있습니다.  
+#### <a name="to-set-the-phone-column-to-bind-to-the-phonenumberbox-control"></a>To set the phone column to bind to the PhoneNumberBox control  
   
-#### PhoneNumberBox 컨트롤에 바인딩되도록 Phone 열을 설정하려면  
+1.  Open **Form1** in the designer.  
   
-1.  디자이너에서 **Form1**을 엽니다.  
+2.  Expand the **Customers** node in the **Data Sources** window.  
   
-2.  **데이터 소스** 창에서 **Customers** 노드를 확장합니다.  
+3.  Click the drop-down arrow on the **Customers** node, and choose **Details** from the control list.  
   
-3.  **Customers** 노드에서 드롭다운 화살표를 클릭하고 컨트롤 목록에서 **Details**를 선택합니다.  
+4.  Click the drop-down arrow on the **Phone** column, and choose **Customize**.  
   
-4.  **Phone** 열에서 드롭다운 화살표를 클릭하고 **Customize**를 선택합니다.  
+5.  Select the **PhoneNumberBox** from the list of **Associated Controls** in the **Data UI Customization Options** dialog box.  
   
-5.  **데이터 UI 사용자 지정 옵션** 대화 상자의 **연결된 컨트롤** 목록에서 **PhoneNumberBox**를 선택합니다.  
+6.  Click the drop-down arrow on the **Phone** column, and choose **PhoneNumberBox**.  
   
-6.  **Phone** 열에서 드롭다운 화살표를 클릭하고 **PhoneNumberBox**를 선택합니다.  
+## <a name="add-controls-to-the-form"></a>Add controls to the form  
+ You can create the data-bound controls by dragging items from the **Data Sources** window onto the form.  
   
-## 폼에 컨트롤 추가  
- **데이터 소스** 창에서 폼으로 항목을 끌어서 데이터 바인딩된 컨트롤을 만들 수 있습니다.  
+#### <a name="to-create-data-bound-controls-on-the-form"></a>To create data-bound controls on the form  
   
-#### 폼에서 데이터 바인딩된 컨트롤을 만들려면  
+-   Drag the main **Customers** node from the **Data Sources** window onto the form, and verify that the `PhoneNumberBox` control is used to display the data in the `Phone` column.  
   
--   **데이터 소스** 창의 주 **Customers** 노드를 폼으로 끌어 와서 `Phone` 열의 데이터를 표시하는 데 `PhoneNumberBox` 컨트롤이 사용되는지 확인합니다.  
+     Data-bound controls with descriptive labels appear on the form, along with a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
   
-     설명 레이블이 있는 데이터 바인딩된 컨트롤이 레코드 탐색을 위한 도구 모음인 <xref:System.Windows.Forms.BindingNavigator>와 함께 폼에 나타납니다.  [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), [CustomersTableAdapter](../data-tools/tableadapter-overview.md), <xref:System.Windows.Forms.BindingSource> 및 <xref:System.Windows.Forms.BindingNavigator>가 구성 요소 트레이에 나타납니다.  
+## <a name="run-the-application"></a>Run the application  
   
-## 응용 프로그램 실행  
+#### <a name="to-run-the-application"></a>To run the application  
   
-#### 응용 프로그램을 실행하려면  
+-   Press F5 to run the application.  
   
--   F5 키를 눌러 응용 프로그램을 실행합니다.  
+## <a name="next-steps"></a>Next Steps  
+ Depending on your application requirements, there are several steps you may want to perform after creating a control that supports data binding. Some typical next steps include:  
   
-## 다음 단계  
- 응용 프로그램 요구 사항에 따라 데이터 바인딩을 지원하는 컨트롤을 만든 후 몇 단계를 더 수행해야 할 수도 있습니다.  일반적으로 수행하는 몇 가지 단계는 다음과 같습니다.  
+-   Placing your custom controls in a control library so you can reuse them in other applications.  
   
--   다른 응용 프로그램에서 다시 사용할 수 있도록 컨트롤 라이브러리에 사용자 지정 컨트롤을 배치합니다.  
+-   Creating controls that support more complex data-binding scenarios. For more information, see [Create a Windows Forms user control that supports complex data binding](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md) and [Create a Windows Forms user control that supports lookup data binding](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).  
   
--   보다 복잡한 데이터 바인딩 시나리오를 지원하는 컨트롤을 만듭니다.  자세한 내용은 [연습: 복합 데이터 바인딩을 지원하는 Windows Forms 사용자 정의 컨트롤 만들기](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md) 및 [연습: 조회 데이터 바인딩을 지원하는 Windows Forms 사용자 정의 컨트롤 만들기](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)를 참조하십시오.  
-  
-## 참고 항목  
- [데이터 소스 창에서 끌어올 때 만들 컨트롤 설정](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)   
- [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio의 데이터 응용 프로그램 개요](../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Visual Studio에서 데이터에 연결](../data-tools/connecting-to-data-in-visual-studio.md)   
- [데이터를 받기 위해 응용 프로그램 준비](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [데이터를 응용 프로그램으로 페치](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [응용 프로그램에서 데이터 편집](../data-tools/editing-data-in-your-application.md)   
- [데이터 유효성 검사](../Topic/Validating%20Data.md)   
- [데이터 저장](../data-tools/saving-data.md)
+## <a name="see-also"></a>See Also  
+ [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
+

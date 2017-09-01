@@ -1,56 +1,71 @@
 ---
-title: "CA1017: ComVisibleAttribute로 어셈블리 표시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1017"
-  - "MarkAssembliesWithComVisible"
-helpviewer_keywords: 
-  - "MarkAssembliesWithComVisible"
-  - "CA1017"
+title: 'CA1017: Mark assemblies with ComVisibleAttribute | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1017
+- MarkAssembliesWithComVisible
+helpviewer_keywords:
+- MarkAssembliesWithComVisible
+- CA1017
 ms.assetid: 4842cb49-8dd8-4e5d-a2d6-ceeaf6c6cf8e
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1017: ComVisibleAttribute로 어셈블리 표시
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 642740f4750d643fddf51ba405be4acad6733ea7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Mark assemblies with ComVisibleAttribute
 |||  
 |-|-|  
 |TypeName|MarkAssembliesWithComVisible|  
 |CheckId|CA1017|  
-|범주|Microsoft.Design|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- 어셈블리에 <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> 특성이 적용되어 있지 않습니다.  
+## <a name="cause"></a>Cause  
+ An assembly does not have the <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> attribute applied to it.  
   
-## 규칙 설명  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute> 특성에 따라 COM 클라이언트가 관리 코드에 액세스하는 방식이 달라집니다.  어셈블리에서 COM에 노출할지 여부를 명시적으로 나타내는 것이 좋은 디자인입니다.  전체 어셈블리에 대해 COM 표시 유형을 설정한 다음 개별 형식 및 형식 멤버에 대해 이를 재정의할 수 있습니다.  이 특성이 없으면 COM 클라이언트에서 어셈블리의 내용을 볼 수 있습니다.  
+## <a name="rule-description"></a>Rule Description  
+ The <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute determines how COM clients access managed code. Good design dictates that assemblies explicitly indicate COM visibility. COM visibility can be set for a whole assembly and then overridden for individual types and type members. If the attribute is not present, the contents of the assembly are visible to COM clients.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 어셈블리에 해당 특성을 추가합니다.  COM 클라이언트에서 어셈블리를 볼 수 없도록 하려면 특성을 적용한 다음 그 값을 `false`로 설정합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add the attribute to the assembly. If you do not want the assembly to be visible to COM clients, apply the attribute and set its value to `false`.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  어셈블리를 노출하려면 특성을 적용한 다음 그 값을 `true`로 설정합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule. If you want the assembly to be visible, apply the attribute and set its value to `true`.  
   
-## 예제  
- 다음 예제에서는 COM 클라이언트에서 볼 수 없도록 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 특성이 적용된 어셈블리를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows an assembly that has the <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute applied to prevent it from being visible to COM clients.  
   
- [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)]
- [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)]
- [!code-cs[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CSharp/ca1017-mark-assemblies-with-comvisibleattribute_1.cs)]  
+ [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)] [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)] [!code-csharp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CSharp/ca1017-mark-assemblies-with-comvisibleattribute_1.cs)]  
   
-## 참고 항목  
- [비관리 코드와의 상호 운용](../Topic/Interoperating%20with%20Unmanaged%20Code.md)   
- [상호 운용할 .NET 형식의 정규화](../Topic/Qualifying%20.NET%20Types%20for%20Interoperation.md)
+## <a name="see-also"></a>See Also  
+ [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)   
+ [Qualifying .NET Types for Interoperation](/dotnet/framework/interop/qualifying-net-types-for-interoperation)

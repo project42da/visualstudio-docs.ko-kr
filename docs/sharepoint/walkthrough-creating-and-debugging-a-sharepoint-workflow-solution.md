@@ -1,182 +1,187 @@
 ---
-title: "연습: SharePoint 워크플로 솔루션 만들기 및 디버깅"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.Workflow.WorkflowConditions"
-  - "VS.SharePointTools.Workflow.WorkflowList"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio에서 SharePoint 개발, 워크플로"
-  - "워크플로[Visual Studio에서 SharePoint 개발]"
+title: 'Walkthrough: Creating and Debugging a SharePoint Workflow Solution | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.Workflow.WorkflowConditions
+- VS.SharePointTools.Workflow.WorkflowList
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, workflows
+- workflows [SharePoint development in Visual Studio]
 ms.assetid: 81756490-ab5a-4fa4-96c6-eed2cfbf8374
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7ee27378034bd9c4c8d7cc2700583d22210e4c70
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
+
 ---
-# 연습: SharePoint 워크플로 솔루션 만들기 및 디버깅
-  이 연습에서는 기본적인 순차 워크플로 템플릿을 만드는 방법을 보여 줍니다.  워크플로에서는 공유 문서 라이브러리의 속성을 검사하여 문서가 검토되었는지 여부를 확인합니다.  문서가 검토된 경우 워크플로가 완료됩니다.  
+# <a name="walkthrough-creating-and-debugging-a-sharepoint-workflow-solution"></a>Walkthrough: Creating and Debugging a SharePoint Workflow Solution
+  This walkthrough demonstrates how to create a basic sequential workflow template. The workflow checks a property of a shared document library to determine whether a document has been reviewed. If the document has been reviewed, the workflow finishes.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 SharePoint 목록 정의 순차 워크플로 프로젝트 만들기  
+-   Creating a SharePoint list definition sequential workflow project in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
--   워크플로 작업 만들기  
+-   Creating workflow activities.  
   
--   워크플로 작업 이벤트 처리  
+-   Handling workflow activity events.  
   
 > [!NOTE]  
->  이 연습에서는 순차 워크플로 프로젝트를 사용하지만 상태 시스템 워크플로 프로젝트의 경우에도 프로세스가 동일합니다.  
+>  Although this walkthrough uses a sequential workflow project, the process is identical for a state machine workflow project.  
 >   
->  또한 시스템에서 일부 Visual Studio 사용자 인터페이스 요소에 대해 다음 지침에서 설명한 것과 다른 이름 또는 위치를 표시할 수 있습니다.  설치한 Visual Studio 버전과 사용하는 설정에 따라 이러한 요소가 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  Also, your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   지원되는 Microsoft Windows 및 SharePoint 버전.  자세한 내용은 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)을 참조하십시오.  
+-   Supported editions of Microsoft Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio  
+-   Visual Studio.  
   
-## SharePoint 공유 문서 라이브러리에 속성 추가  
- **공유 문서** 라이브러리에 있는 문서의 검토 상태를 추적하려면 SharePoint 사이트의 공유 문서에 대해 `Status`, `Assignee` 및 `Review Comments`의 세 가지 속성을 만듭니다.  이러한 속성은 **공유 문서** 라이브러리에서 정의합니다.  
+## <a name="adding-properties-to-the-sharepoint-shared-documents-library"></a>Adding Properties to the SharePoint Shared Documents Library  
+ To track the review status of documents in the **Shared Documents** library, we will create three new properties for shared documents on our SharePoint site: `Status`, `Assignee`, and `Review Comments`. We define these properties in the **Shared Documents** library.  
   
-#### SharePoint 공유 문서 라이브러리에 속성을 추가하려면  
+#### <a name="to-add-properties-to-the-sharepoint-shared-documents-library"></a>To add properties to the SharePoint shared documents library  
   
-1.  웹 브라우저에서 SharePoint 사이트\(예: http:\/\/\<시스템 이름\>\/SitePages\/Home.aspx\)를 엽니다.  
+1.  Open a SharePoint site, such as http://\<system name>/SitePages/Home.aspx, in a Web browser.  
   
-2.  빠른 실행 모음에서 **공유문서**를 선택합니다.  
+2.  On the QuickLaunch bar, choose **SharedDocuments**.  
   
-3.  **라이브러리 도구** 리본에서 **라이브러리** 를 선택한 다음 리본에서 **열 만들기** 버튼을 선택하여 새 열을 만듭니다.  
+3.  Choose **Library** on the **Library Tools** ribbon and then choose the **Create Column** button on the ribbon to create a new column.  
   
-4.  열의 이름을 Document Status로 지정하고 형식을 **선택\(선택 메뉴\)**으로 설정한 후 다음 세 가지 선택 옵션을 지정하고 **확인** 버튼을 선택합니다.  
+4.  Name the column **Document Status**, set its type to **Choice (menu to choose from)**, specify the following three choices, and then choose the **OK** button:  
   
-    -   **검토 필요**  
+    -   **Review Needed**  
   
-    -   **검토 완료**  
+    -   **Review Complete**  
   
-    -   **변경 요청**  
+    -   **Changes Requested**  
   
-5.  두 개의 열을 더 만들고 해당 이름을 Assignee 및 Review Comments로 지정합니다.  Assignee 열 형식을 한 줄 텍스트로 설정하고 Review Comments 열 형식을 여러 줄 텍스트로 설정합니다.  
+5.  Create two more columns and name them **Assignee** and **Review Comments**. Set the Assignee column type as a single line of text, and the Review Comments column type as multiple lines of text.  
   
-## 문서를 체크 아웃하지 않고도 편집할 수 있도록 설정  
- 문서를 체크 아웃하지 않고 편집할 수 있는 경우 워크플로 템플릿을 보다 손쉽게 테스트할 수 있습니다.  다음 절차에서는 문서를 체크 아웃하지 않고 편집할 수 있도록 SharePoint 사이트를 구성합니다.  
+## <a name="enabling-documents-to-be-edited-without-requiring-a-check-out"></a>Enabling Documents to be Edited without Requiring a Check Out  
+ It is easier to test the workflow template when you can edit the documents without having to check them out. In the next procedure, you configure the SharePoint site to enable that.  
   
-#### 문서를 체크 아웃하지 않고도 편집할 수 있도록 설정하려면  
+#### <a name="to-enable-documents-to-be-edited-without-checking-them-out"></a>To enable documents to be edited without checking them out  
   
-1.  빠른 실행 모음에서 **공유 문서** 링크를 선택합니다.  
+1.  On the QuickLaunch bar, choose the **Shared Documents** link.  
   
-2.  **라이브러리 도구** 리본에서 **라이브러리** 탭을 선택한 다음 **라이브러리 설정** 버튼를 선택하여 **문서 라이브러리 설정** 페이지를 표시합니다.  
+2.  On the **Library Tools** ribbon, choose the **Library** tab, and then choose the **Library Settings** button to display the **Document Library Settings** page.  
   
-3.  **일반 설정** 섹션에서 **버전 관리 설정** 링크를 선택하여 **버전 관리 설정** 페이지를 표시합니다.  
+3.  In the **General Settings** section, choose the **Versioning Settings** link to display the **Versioning Settings** page.  
   
-4.  **문서를 편집하려면 먼저 체크 아웃해야 합니다.**가 **아니요**로 설정되어 있는지 확인합니다.  설정이 이와 다르면 이 설정을 **아니요**로 변경하고 **확인** 버튼을 선택합니다.  
+4.  Verify that the setting for **Require documents to be checked out before they can be edited** is **No**. If it is not, change it to **No** and then choose the **OK** button.  
   
-5.  브라우저를 닫습니다.  
+5.  Close the browser.  
   
-## SharePoint 순차 워크플로 프로젝트 만들기  
- 순차 워크플로는 마지막 작업이 끝날 때까지 순서대로 실행되는 일련의 단계입니다.  이 절차에서는 공유 문서 목록에 적용할 순차 워크플로를 만듭니다.  워크플로 마법사를 사용하면 워크플로를 사이트 정의나 목록 정의에 연결하고 워크플로 시작 시기를 결정할 수 있습니다.  
+## <a name="creating-a-sharepoint-sequential-workflow-project"></a>Creating a SharePoint Sequential Workflow Project  
+ A sequential workflow is a set of steps that executes in order until the last activity finishes. In this procedure, we create a sequential workflow that will apply to our Shared Documents list. The workflow wizard lets you associate the workflow with either the site definition or the list definition and lets you determine when the workflow will start.  
   
-#### SharePoint 순차 워크플로 프로젝트를 만들려면  
+#### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>To create a SharePoint sequential workflow project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다.  
+2.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-3.  **Visual C\#** 또는 **Visual Basic** 아래의 **SharePoint** 노드를 확장한 다음 **2010** 을 선택합니다.  
+3.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-4.  **템플릿** 창에서 **SharePoint 2010 프로젝트** 템플릿을 선택합니다.  
+4.  In the **Templates** pane, choose the **SharePoint 2010 Project** template.  
   
-5.  **이름** 상자에 MySharePointWorkflow를 입력한 후 **확인** 버튼을 선택합니다.  
+5.  In the **Name** box, enter **MySharePointWorkflow** and then choose the **OK** button.  
   
-     **SharePoint 사용자 지정 마법사**가 나타납니다.  
+     The **SharePoint Customization Wizard** appears.  
   
-6.  **사이트 지정 및 디버깅에 대한 보안 수준** 페이지에서 **팜 솔루션으로 배포** 옵션 버튼을 선택한 다음 **마침** 버튼을 선택하여 신뢰 수준 및 기본 사이트를 수락합니다.  
+6.  In the **Specify the site and security level for debugging** page, choose the **Deploy as a farm solution** option button, and then choose the **Finish** button to accept the trust level and default site.  
   
-     이 단계에서는 솔루션의 신뢰 수준을 팜 솔루션으로 설정합니다. 이 옵션은 워크플로 프로젝트에 사용할 수 있는 유일한 옵션입니다.  자세한 내용은 [샌드박스가 적용된 솔루션 고려 사항](../sharepoint/sandboxed-solution-considerations.md)을 참조하십시오.  
+     This step sets the trust level for the solution as farm solution, the only available option for workflow projects. For more information, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  **솔루션 탐색기**에서 프로젝트 노드를 선택한 다음 메뉴 모음에서 **프로젝트**, **화면 추가**를 선택합니다.  
+7.  In **Solution Explorer**, choose the project node, and then, on the menu bar, choose **Project**, **Add New Item**.  
   
-8.  **Visual C\#** 또는 **Visual Basic** 아래의 **SharePoint** 노드를 확장한 다음 **2010** 노드를 선택합니다.  
+8.  Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** node.  
   
-9. **템플릿** 창에서 **순차 워크플로 \(팜 솔루션에서만\)** 템플릿을 선택한 후 **추가** 버튼을 선택합니다.  
+9. In the **Templates** pane, choose the **Sequential Workflow (Farm Solution only)** template, and then choose the **Add** button.  
   
-     **SharePoint 사용자 지정 마법사**가 나타납니다.  
+     The **SharePoint Customization Wizard** appears.  
   
-10. **디버깅에 사용할 워크플로 이름 지정** 페이지에서 기본 이름\(**MySharePointWorkflow \- Workflow1**\)을 적용합니다.  기본 워크플로 템플릿 형식 값인 **목록 워크플로**를 그대로 두고 **다음** 버튼을 선택합니다.  
+10. In the **Specify the workflow name for debugging** page, accept the default name (**MySharePointWorkflow - Workflow1**). Keep the default workflow template type value, **List Workflow**, and then choose the **Next** button.  
   
-11. **Visual Studio를 통해 디버그 세션에서 워크플로를 자동으로 연결하시겠습니까?** 페이지에서 **다음** 버튼을 선택하여 기본 설정을 모두 적용합니다.  
+11. In the **Would you like Visual Studio to automatically associate the workflow in a debug session?** page, choose the **Next** button to accept all of the default settings.  
   
-     이 단계에서는 워크플로를 공유 문서 라이브러리에 자동으로 연결합니다.  
+     This step automatically associates the workflow with the Shared Documents library.  
   
-12. **워크플로 시작 방법에 대한 조건 지정** 페이지의 **워크플로 시작 방법을 선택하십시오.** 섹션에서 기본 옵션이 선택된 상태로 두고 **마침** 버튼을 선택합니다.  
+12. In the **Specify the conditions for how your workflow is started** page, leave the default options selected in the **How do you want the workflow to start?** section and choose the **Finish** button.  
   
-     이 페이지에서는 워크플로가 시작되는 시점을 지정할 수 있습니다.  기본적으로 워크플로는 SharePoint에서 사용자가 수동으로 워크플로를 시작하거나 워크플로와 연결된 항목이 만들어지면 시작됩니다.  
+     This page enables you to specify when your workflow starts. By default, the workflow starts either when a user manually starts it in SharePoint or when an item to which the workflow is associated is created.  
   
-## 워크플로 작업 만들기  
- 워크플로에는 수행할 작업을 나타내는 *작업*이 하나 이상의 포함됩니다.  Workflow Designer를 사용하여 워크플로의 작업을 정렬할 수 있습니다.  이 절차에서는 워크플로에 HandleExternalEventActivity 및 OnWorkFlowItemChanged라는 두 가지 작업을 추가합니다.  두 작업은 **공유 문서** 목록에서 문서의 검토 상태를 모니터링합니다.  
+## <a name="creating-workflow-activities"></a>Creating Workflow Activities  
+ Workflows contain one or more *activities* that represent actions to perform. Use the workflow designer to arrange activities for a workflow. In this procedure, we will add two activities to the workflow: HandleExternalEventActivity and OnWorkFlowItemChanged. These activities monitor the review status of documents in the **Shared Documents** list  
   
-#### 워크플로 작업을 만들려면  
+#### <a name="to-create-workflow-activities"></a>To create workflow activities  
   
-1.  Workflow Designer에 워크플로가 표시됩니다.  그렇지 않은 경우 **솔루션 탐색기**에서 **Workflow1.cs** 또는 **Workflow1.vb**를 엽니다.  
+1.  The workflow should be displayed in the workflow designer. If it is not, then open either **Workflow1.cs** or **Workflow1.vb** in **Solution Explorer**.  
   
-2.  디자이너에서 **OnWorkflowActivated1** 작업을 선택합니다.  
+2.  In the designer, choose the **OnWorkflowActivated1** activity.  
   
-3.  **속성** 창에서 **Invoked** 속성 옆에 onWorkflowActivated를 입력하고 Enter 키를 누릅니다.  
+3.  In the **Properties** window, enter **onWorkflowActivated** next to the **Invoked** property, and then choose the Enter key.  
   
-     코드 편집기가 열리고 onWorkflowActivated라는 이벤트 처리기 메서드가 Workflow1 코드 파일에 추가됩니다.  
+     The Code Editor opens, and an event handler method named onWorkflowActivated is added to the Workflow1 code file.  
   
-4.  Workflow Designer로 돌아가서 도구 상자를 열고 **Windows Workflow v3.0** 노드를 확장합니다.  
+4.  Switch back to the workflow designer, open the toolbox, and then expand the **Windows Workflow v3.0** node.  
   
-5.  **도구상자** 의 **Windows Workflow v3.0** 노드에서 다음 단계 중 하나를 수행합니다:  
+5.  In the **Windows Workflow v3.0** node of the **Toolbox**, perform one of the following sets of steps:  
   
-    1.  **While** 작업에 대한 바로 가기 메뉴를 열고 **복사** 를 선택합니다.  워크플로 디자이너에서 **onWorkflowActivated1** 작업의 아래 줄에 대한 바로 가기 메뉴의 연 다음 **붙여넣기** 를 선택합니다.  
+    1.  Open the shortcut menu for the **While** activity, and then choose **Copy**. In the workflow designer, open the shortcut menu for the line under the **onWorkflowActivated1** activity, and then choose **Paste**.  
   
-    2.  **While** 작업을 **도구 상자** 에서 워크플로 디자이너로 끌어오고 **onWorkflowActivated1** 작업 아래의 줄에 연결합니다.  
+    2.  Drag the **While** activity from the **Toolbox** to the workflow designer, and connect the activity to the line under the **onWorkflowActivated1** activity.  
   
-6.  **WhileActivity1** 작업을 선택합니다.  
+6.  Choose the **WhileActivity1** activity.  
   
-7.  **속성** 창에서 **Condition** 을 Code Condition으로 설정합니다.  
+7.  In the **Properties** window, set **Condition** to Code Condition.  
   
-8.  **Condition** 속성을 확장하고 자식 **Condition** 속성 옆에 isWorkflowPending을 입력한 다음 Enter 키를 누릅니다.  
+8.  Expand the **Condition** property, enter **isWorkflowPending** next to the child **Condition** property, and then choose the Enter key.  
   
-     코드 편집기가 열리고 isWorkflowPending이라는 메서드가 Workflow1 코드 파일에 추가됩니다.  
+     The Code Editor opens, and a method named isWorkflowPending is added to the Workflow1 code file.  
   
-9. Workflow Designer로 돌아가서 도구 상자를 열고 **SharePoint 워크플로** 노드를 확장합니다.  
+9. Switch back to the workflow designer, open the toolbox, and then expand the **SharePoint Workflow** node.  
   
-10. **도구상자** 의 **SharePoint Workflow** 노드에서 다음 단계 중 하나를 수행합니다:  
+10. In the **SharePoint Workflow** node of the **Toolbox**, perform one of the following sets of steps:  
   
-    -   **OnWorkflowItemChanged** 작업의 바로 가기 메뉴를 열고 **복사**를 선택합니다.  워크플로 디자이너에서 **whileActivity1** 작업 안의 줄에 대한 바로 가기 메뉴의 연 다음 **붙여넣기** 를 선택합니다.  
+    -   Open the shortcut menu for the **OnWorkflowItemChanged** activity, and then choose **Copy**. In the workflow designer, open the shortcut menu for the line inside the **whileActivity1** activity, and then choose **Paste**.  
   
-    -   **OnWorkflowItemChanged** 작업을 **도구상자** 에서 워크플로 디자이너로 끌어오고 **whileActivity1** 작업 내의 줄에 연결합니다.  
+    -   Drag the **OnWorkflowItemChanged** activity from the **Toolbox** to the workflow designer, and connect the activity to the line inside the **whileActivity1** activity.  
   
-11. **onWorkflowItemChanged1** 작업을 선택합니다.  
+11. Choose the **onWorkflowItemChanged1** activity.  
   
-12. **속성** 창에서 속성을 다음 표와 같이 설정합니다.  
+12. In the **Properties** window, set the properties as shown in the following table.  
   
-    |Property|값|  
-    |--------------|-------|  
+    |Property|Value|  
+    |--------------|-----------|  
     |**CorrelationToken**|**workflowToken**|  
     |**Invoked**|**onWorkflowItemChanged**|  
   
-## 작업 이벤트 처리  
- 마지막으로 각 작업에서 문서 상태를 확인합니다.  문서가 검토된 경우 워크플로가 완료됩니다.  
+## <a name="handling-activity-events"></a>Handling Activity Events  
+ Finally, check the status of the document from each activity. If the document has been reviewed, then the workflow is finished.  
   
-#### 작업 이벤트를 처리하려면  
+#### <a name="to-handle-activity-events"></a>To handle activity events  
   
-1.  Workflow1.cs 또는 Workflow1.vb에서 `Workflow1` 클래스의 맨 위에 다음 필드를 추가합니다.  작업에서 이 필드를 사용하여 워크플로를 완료할지 여부를 결정합니다.  
+1.  In Workflow1.cs or Workflow1.vb, add the following field to the top of the `Workflow1` class. This field is used in an activity to determine whether the workflow is finished.  
   
     ```vb  
     Dim workflowPending As Boolean = True  
@@ -186,7 +191,7 @@ caps.handback.revision: 27
     Boolean workflowPending = true;  
     ```  
   
-2.  `Workflow1` 클래스에 다음 메서드를 추가합니다.  이 메서드는 문서 목록의 `Document Status` 속성 값을 검사하여 문서가 검토되었는지 여부를 확인합니다.  `Document Status` 속성이 `Review Complete`로 설정되어 있으면 `checkStatus` 메서드는 `workflowPending` 필드를 **false**로 설정하여 워크플로를 완료할 수 있음을 나타냅니다.  
+2.  Add the following method to the `Workflow1` class. This method checks the value of the `Document Status` property of the Documents list to determine whether the document has been reviewed. If the `Document Status` property is set to `Review Complete`, then the `checkStatus` method sets the `workflowPending` field to **false** to indicate that the workflow is ready to finish.  
   
     ```vb  
     Private Sub checkStatus()  
@@ -204,7 +209,7 @@ caps.handback.revision: 27
     }  
     ```  
   
-3.  `onWorkflowActivated` 및 `onWorkflowItemChanged` 메서드에 다음 코드를 추가하여 `checkStatus` 메서드를 호출합니다.  워크플로가 시작되면 `onWorkflowActivated` 메서드는 `checkStatus` 메서드를 호출하여 문서가 이미 검토되었는지 여부를 확인합니다.  문서가 검토되지 않았으면 워크플로가 계속 실행됩니다.  문서를 저장할 때 `onWorkflowItemChanged` 메서드는 `checkStatus` 메서드를 다시 호출하여 문서가 검토되었는지 여부를 확인합니다.  `workflowPending` 필드가 **true**로 설정되어 있는 동안에는 워크플로가 계속 실행됩니다.  
+3.  Add the following code to the `onWorkflowActivated` and `onWorkflowItemChanged` methods to call the `checkStatus` method. When the workflow starts, the `onWorkflowActivated` method calls the `checkStatus` method to determine whether the document has already been reviewed. If it has not been reviewed, the workflow continues. When the document is saved, the `onWorkflowItemChanged` method calls the `checkStatus` method again to determine whether the document has been reviewed. While the `workflowPending` field is set to **true**, the workflow continues to run.  
   
     ```vb  
     Private Sub onWorkflowActivated(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ExternalDataEventArgs)  
@@ -230,7 +235,7 @@ caps.handback.revision: 27
     }  
     ```  
   
-4.  `isWorkflowPending` 메서드에 다음 코드를 추가하여 `workflowPending` 속성의 상태를 확인합니다.  문서가 저장될 때마다 **whileActivity1** 작업에서는 `isWorkflowPending` 메서드를 호출합니다.  이 메서드는 <xref:System.Workflow.Activities.ConditionalEventArgs> 개체의 <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> 속성을 검사하여 **WhileActivity1** 작업을 계속해야 할지 마쳐야 할지를 결정합니다.  속성이 **true**로 설정되어 있으면 해당 작업이 계속 실행됩니다.  그렇지 않으면 작업이 완료되고 워크플로가 완료됩니다.  
+4.  Add the following code to the `isWorkflowPending` method to check the status of the `workflowPending` property. Each time the document is saved, the **whileActivity1** activity calls the `isWorkflowPending` method. This method examines the <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> property of the <xref:System.Workflow.Activities.ConditionalEventArgs> object to determine whether the **WhileActivity1** activity should continue or finish. If the property is set to **true**, the activity continues. Otherwise, the activity finishes and the workflow finishes.  
   
     ```vb  
     Private Sub isWorkflowPending(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ConditionalEventArgs)  
@@ -245,55 +250,55 @@ caps.handback.revision: 27
     }  
     ```  
   
-5.  프로젝트를 저장합니다.  
+5.  Save the project.  
   
-## SharePoint 워크플로 템플릿 테스트  
- 디버거를 시작하면 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 워크플로 템플릿을 SharePoint 서버에 배포하고 워크플로를 **공유 문서** 목록에 연결합니다.  워크플로를 테스트하려면 **공유 문서** 목록에 있는 문서에서 워크플로 인스턴스를 시작합니다.  
+## <a name="testing-the-sharepoint-workflow-template"></a>Testing the SharePoint Workflow Template  
+ When you start the debugger, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] deploys the workflow template to the SharePoint server and associates the workflow with the **Shared Documents** list. To test the workflow, start an instance of the workflow from a document in the **Shared Documents** list.  
   
-#### SharePoint 워크플로 템플릿을 테스트하려면  
+#### <a name="to-test-the-sharepoint-workflow-template"></a>To test the SharePoint workflow template  
   
-1.  Workflow1.cs 또는 Workflow1.vb에서 **onWorkflowActivated** 메서드 옆에 중단점을 설정합니다.  
+1.  In Workflow1.cs or Workflow1.vb, set a breakpoint next to the **onWorkflowActivated** method.  
   
-2.  솔루션을 빌드하고 실행하려면 F5 키를 선택합니다.  
+2.  Choose the F5 key to build and run the solution.  
   
-     SharePoint 사이트가 나타납니다.  
+     The SharePoint site appears.  
   
-3.  SharePoint의 탐색 창에서 **공유 문서** 링크를 선택합니다.  
+3.  In the navigation pane in SharePoint, choose the **Shared Documents** link.  
   
-4.  **공유 문서** 페이지에서 **라이브러리 도구** 탭의 **문서** 링크를 선택한 다음 **문서 업로드** 버튼을 선택합니다.  
+4.  In the **Shared Documents** page, choose the **Documents** link on the **Library Tools** tab, and then choose the **Upload Document** button.  
   
-5.  **문서 업로드** 대화 상자에서 **찾아보기** 버튼을 선택하고, 문서 파일을 선택하고, **열기** 버튼을 선택한 다음 **확인** 버튼을 선택합니다.  
+5.  In the **Upload Document** dialog box, choose the **Browse** button, choose any document file, choose the **Open** button, and then choose the **OK** button.  
   
-     이렇게 하면 선택한 문서가 **공유 문서** 목록에 업로드되고 워크플로가 시작됩니다.  
+     This uploads the selected document into the **Shared Documents** list and starts the workflow.  
   
-6.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 디버거가 `onWorkflowActivated` 메서드 옆의 중단점에서 중지되는지 확인합니다.  
+6.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], verify that the debugger stops at the breakpoint next to the `onWorkflowActivated` method.  
   
-7.  F5 키를 선택하여 계속 실행합니다.  
+7.  Choose the F5 key to continue execution.  
   
-8.  여기서 문서 설정을 변경할 수 있지만 일단은 **저장** 버튼을 선택하여 기본값을 그대로 유지합니다.  
+8.  You can change the settings for the document here, but leave them at the default values for now by choosing the **Save** button.  
   
-     이렇게 하면 기본 SharePoint 웹 사이트의 **공유 문서** 페이지로 돌아갑니다.  
+     This returns you to the **Shared Documents** page of the default SharePoint Web site.  
   
-9. **공유 문서** 페이지에서 **MySharePointWorkflow \- Workflow1** 열 아래의 값이 **진행 중** 으로 설정되어 있는지 확인합니다.  이는 워크플로가 진행 중이고 문서 검토가 대기 중임을 나타냅니다.  
+9. In the **Shared Documents** page, verify that the value underneath the **MySharePointWorkflow - Workflow1** column is set to **In Progress**. This indicates that the workflow is in progress and that the document is awaiting review.  
   
-10. **공유 문서** 페이지에서, 문서를 선택하고, 나타나는 화살표를 선택한 다음 **속성 편집** 메뉴 항목을 선택합니다.  
+10. In the **Shared Documents** page, choose the document, choose the arrow that appears, and then choose the **Edit Properties** menu item.  
   
-11. **Document Status** 를 **Review Complete** 로 설정하고 **저장** 버튼을 선택합니다.  
+11. Set **Document Status** to **Review Complete**, and then choose the **Save** button.  
   
-     이렇게 하면 기본 SharePoint 웹 사이트의 **공유 문서** 페이지로 돌아갑니다.  
+     This returns you to the **Shared Documents** page of the default SharePoint Web site.  
   
-12. **공유 문서** 페이지에서 **문서 상태** 열 아래의 값이 **검토 완료**로 설정되어 있는지 확인합니다.  **공유 문서** 페이지를 새로고침하고 **MySharePointWorkflow \- Workflow1** 열 아래의 값이 **완료됨** 으로 설정되어 있는지 확인합니다.  이는 워크플로가 완료되고 문서가 검토되었음을 나타냅니다.  
+12. In the **Shared Documents** page, verify that the value underneath the **Document Status** column is set to **Review Complete**. Refresh the **Shared Documents** page and verify that the value underneath the **MySharePointWorkflow - Workflow1** column is set to **Completed**. This indicates that workflow is finished and that the document has been reviewed.  
   
-## 다음 단계  
- 다음 항목에서는 워크플로 템플릿을 만드는 방법에 대해 더 자세히 설명합니다.  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to create workflow templates from these topics:  
   
--   SharePoint 워크플로 작업에 대한 자세한 내용은 [SharePoint Foundation의 워크플로 작업](http://go.microsoft.com/fwlink/?LinkId=178992) 을 참조하십시오.  
+-   To learn more about SharePoint workflow activities, see [Workflow Activities for SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkId=178992).  
   
--   Windows Workflow Foundation 작업에 대한 자세한 내용은 [System.Workflow.Activities 네임스페이스](http://go.microsoft.com/fwlink/?LinkId=178993) 을 참조하십시오.  
+-   To learn more about Windows Workflow Foundation activities, see [System.Workflow.Activities Namespace](http://go.microsoft.com/fwlink/?LinkId=178993).  
   
-## 참고 항목  
- [SharePoint 워크플로 솔루션 만들기](../sharepoint/creating-sharepoint-workflow-solutions.md)   
- [SharePoint 프로젝트 및 프로젝트 항목 템플릿](../sharepoint/sharepoint-project-and-project-item-templates.md)   
- [SharePoint 솔루션 빌드 및 디버깅](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Creating SharePoint Workflow Solutions](../sharepoint/creating-sharepoint-workflow-solutions.md)   
+ [SharePoint Project and Project Item Templates](../sharepoint/sharepoint-project-and-project-item-templates.md)   
+ [Building and Debugging SharePoint Solutions](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   
   

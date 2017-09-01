@@ -1,70 +1,87 @@
 ---
-title: "IDebugCustomViewer::DisplayValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomViewer::DisplayValue"
-helpviewer_keywords: 
-  - "IDebugCustomViewer::DisplayValue"
+title: IDebugCustomViewer::DisplayValue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCustomViewer::DisplayValue
+helpviewer_keywords:
+- IDebugCustomViewer::DisplayValue
 ms.assetid: 7a538248-5ced-450e-97cd-13fabe35fb1c
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugCustomViewer::DisplayValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c3bc315c94dabe095ee1c95d13877b87b1ebbd70
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 메서드는 지정 된 값을 표시 합니다 호출 됩니다.  
+---
+# <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
+This method is called to display the specified value.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT DisplayValue(  
-   HWND             hwnd,  
-   DWORD            dwID,  
-   IUnknown *       pHostServices,  
-   IDebugProperty3* pDebugProperty);  
+   HWND             hwnd,  
+   DWORD            dwID,  
+   IUnknown *       pHostServices,  
+   IDebugProperty3* pDebugProperty);  
 );  
 ```  
   
-```c#  
+```csharp  
 int DisplayValue(  
-   IntPtr          hwnd,   
-   uint            dwID,   
-   object          pHostServices,   
-   IDebugProperty3 pDebugProperty  
+   IntPtr          hwnd,   
+   uint            dwID,   
+   object          pHostServices,   
+   IDebugProperty3 pDebugProperty  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `hwnd`  
- \[in\] 부모 창  
+ [in] Parent window  
   
  `dwID`  
- \[in\] 두 개 이상의 형식을 지 원하는 뷰어 사용자 지정에 대 한 ID입니다.  
+ [in] ID for custom viewers that support more than one type.  
   
  `pHostServices`  
- \[in\] 예약되었습니다.  항상 설정 합니다 null입니다.  
+ [in] Reserved. Always set to null.  
   
  `pDebugProperty`  
- \[in\] 표시 하는 값을 검색 하는 데 사용할 수 있는 인터페이스입니다.  
+ [in] Interface that can be used to retrieve the value to be displayed.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns error code.  
   
-## 설명  
- 이 메서드 됩니다 필요한 창 작성, 값 표시, 입력, 기다린 후 호출자에 게 반환 하기 전에 모든 창을 닫습니다 표시 "모달"입니다.  따라서 메서드 만들기 창 소멸에 사용자 입력을 기다리는 중에 \[출력\] 창에서 속성 값을 표시 하는 모든 측면을 처리 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The display is "modal" in that this method will create the necessary window, display the value, wait for input, and close the window, all before returning to the caller. This means the method must handle all aspects of displaying the property's value, from creating a window for output, to waiting for user input, to destroying the window.  
   
- 지원에서 값을 변경 하는 주어진 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) 개체를 사용할 수 있습니다의 [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) 메서드\-값 문자열로 표현 될 수 있으면 합니다.  그렇지 않으면 사용자 지정 인터페이스를 만드는 데 필요한 됩니다\-이 구현 식 계산기에 단독으로 `DisplayValue` 메서드\-구현 하는 동일한 개체에는 `IDebugProperty3` 인터페이스입니다.  이 사용자 지정 인터페이스는 복잡성 또는 임의 크기의 데이터를 변경 하는 방법을 제공 됩니다.  
+ To support changing the value on the given [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) object, you can use the [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) method —if the value can be expressed as a string. Otherwise, it is necessary to create a custom interface—exclusive to the expression evaluator implementing this `DisplayValue` method—on the same object that implements the `IDebugProperty3` interface. This custom interface would supply methods for changing the data of an arbitrary size or complexity.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)

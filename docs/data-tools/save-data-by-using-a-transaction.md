@@ -1,68 +1,75 @@
 ---
-title: "방법: 트랜잭션을 사용하여 데이터 저장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "데이터[Visual Studio], 저장"
-  - "데이터 저장, 트랜잭션 사용"
-  - "System.Transactions 네임스페이스"
-  - "트랜잭션, 데이터 저장"
+title: Save data by using a transaction | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- saving data, using transactions
+- System.Transactions namespace
+- transactions, saving data
+- data [Visual Studio], saving
 ms.assetid: 8b835e8f-34a3-413d-9bb5-ebaeb87f1198
 caps.latest.revision: 13
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 7b910a178688fd9cb0eca8fa7ae267572e4614b4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 트랜잭션을 사용하여 데이터 저장
-<xref:System.Transactions> 네임스페이스를 사용하여 데이터를 트랜잭션에 저장합니다.  <xref:System.Transactions.TransactionScope> 개체를 사용하면 자동으로 관리되는 트랜잭션에 참여할 수 있습니다.  
+# <a name="save-data-by-using-a-transaction"></a>Save data by using a transaction
+You save data in a transaction by using the <xref:System.Transactions> namespace. Use the <xref:System.Transactions.TransactionScope> object to participate in a transaction that is automatically managed for you.  
   
- 프로젝트가 만들어질 때 System.Transactions 어셈블리에 대한 참조가 없으므로 트랜잭션을 사용하는 프로젝트에 참조를 수동으로 추가해야 합니다.  
+ Projects are not created with a reference to the System.Transactions assembly, so you need to manually add a reference to projects that use transactions.  
   
 > [!NOTE]
->  <xref:System.Transactions> 네임스페이스는 Windows 2000 버전 이상에서 지원됩니다.  
+>  The <xref:System.Transactions> namespace is supported in Windows 2000 or later.  
   
- 트랜잭션을 구현하는 가장 쉬운 방법은 `using` 문에서 <xref:System.Transactions.TransactionScope> 개체를 인스턴스화하는 것입니다.  \(자세한 내용은 [Using Statement](/dotnet/visual-basic/language-reference/statements/using-statement) 및 [using 문](/dotnet/csharp/language-reference/keywords/using-statement)을 참조하십시오. `using` 문 내에서 실행된 코드는 트랜잭션에 참여하게 됩니다.  
+ The easiest way to implement a transaction is to instantiate a <xref:System.Transactions.TransactionScope> object in a `using` statement. (For more information, see [Using Statement](/dotnet/visual-basic/language-reference/statements/using-statement), and [using Statement](/dotnet/csharp/language-reference/keywords/using-statement).) The code that runs within the `using` statement participates in the transaction.  
   
- 트랜잭션을 커밋하려면 <xref:System.Transactions.TransactionScope.Complete%2A> 메서드를 using 블록의 마지막 문으로 호출합니다.  
+ To commit the transaction, call the <xref:System.Transactions.TransactionScope.Complete%2A> method as the last statement in the using block.  
   
- 트랜잭션을 롤백하려면 <xref:System.Transactions.TransactionScope.Complete%2A> 메서드를 호출하기 전에 예외를 throw합니다.  
+ To roll back the transaction, throw an exception prior to calling the <xref:System.Transactions.TransactionScope.Complete%2A> method.  
   
- 자세한 내용은 [연습: 트랜잭션에 데이터 저장](../data-tools/save-data-in-a-transaction.md)을 참조하십시오.  
+ For more information, see [Save data in a transaction](../data-tools/save-data-in-a-transaction.md).  
   
-### System.Transactions dll에 참조를 추가하려면  
+### <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>To add a reference to the System.Transactions.dll  
   
-1.  **프로젝트** 메뉴에서 **참조 추가**를 선택합니다.  
+1.  On the **Project** menu, select **Add Reference**.  
   
-2.  **.NET** 탭\(SQL Server 프로젝트의 경우 **SQL Server** 탭\)에서 **System.Transactions**를 선택하고 **확인**을 클릭합니다.  
+2.  On the **.NET** tab (**SQL Server** tab for SQL Server projects), select **System.Transactions**, and then select **OK**.  
   
-     System.Transactions.dll에 대한 참조가 프로젝트에 추가됩니다.  
+     A reference to System.Transactions.dll is added to the project.  
   
-### 트랜잭션에 데이터를 저장하려면  
+### <a name="to-save-data-in-a-transaction"></a>To save data in a transaction  
   
--   코드를 추가하여 트랜잭션이 포함된 using 문 내에 데이터를 저장합니다.  다음 코드에서는 using 문에서 <xref:System.Transactions.TransactionScope> 개체를 만들고 인스턴스화하는 방법을 보여 줍니다.  
+-   Add code to save data within the using statement that contains the transaction. The following code shows how to create and instantiate a <xref:System.Transactions.TransactionScope> object in a using statement:  
   
-     [!code-vb[VbRaddataSaving#11](../data-tools/codesnippet/VisualBasic/save-data-by-using-a-transaction_1.vb)]
-     [!code-cs[VbRaddataSaving#11](../data-tools/codesnippet/CSharp/save-data-by-using-a-transaction_1.cs)]  
+     [!code-vb[VbRaddataSaving#11](../data-tools/codesnippet/VisualBasic/save-data-by-using-a-transaction_1.vb)]  [!code-csharp[VbRaddataSaving#11](../data-tools/codesnippet/CSharp/save-data-by-using-a-transaction_1.cs)]  
   
-## 참고 항목  
- [연습: 트랜잭션에 데이터 저장](../data-tools/save-data-in-a-transaction.md)   
- [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio의 데이터 응용 프로그램 개요](../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Visual Studio에서 데이터에 연결](../data-tools/connecting-to-data-in-visual-studio.md)   
- [데이터를 받기 위해 응용 프로그램 준비](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [데이터를 응용 프로그램으로 페치](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [응용 프로그램에서 데이터 편집](../data-tools/editing-data-in-your-application.md)   
- [데이터 유효성 검사](../Topic/Validating%20Data.md)   
- [데이터 저장](../data-tools/saving-data.md)
+## <a name="see-also"></a>See Also  
+ [Save data back to the database](../data-tools/save-data-back-to-the-database.md)

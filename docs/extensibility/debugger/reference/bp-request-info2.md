@@ -1,123 +1,140 @@
 ---
-title: "BP_REQUEST_INFO2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_REQUEST_INFO2"
-helpviewer_keywords: 
-  - "BP_REQUEST_INFO2 구조"
+title: BP_REQUEST_INFO2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BP_REQUEST_INFO2
+helpviewer_keywords:
+- BP_REQUEST_INFO2 structure
 ms.assetid: 008c87f7-a76e-43d3-8904-11b225d6a9a5
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# BP_REQUEST_INFO2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4afebff82e866e01c866d1ed2f344ead13dcea14
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-중단점을 추적점 GUID 공급 업체, 제약 조건 등을 구현 하는 데 필요한 정보가 들어 있습니다.  
+---
+# <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
+Contains the information required to implement a breakpoint, including vendor GUID, constraint and tracepoint.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-typedef struct _BP_REQUEST_INFO2 {  
-   BPREQI_FIELDS   dwFields;  
-   GUID            guidLanguage;  
-   BP_LOCATION     bpLocation;  
-   IDebugProgram2* pProgram;  
-   BSTR            bstrProgramName;  
-   IDebugThread2*  pThread;  
-   BSTR            bstrThreadName;  
-   BP_CONDITION    bpCondition;  
-   BP_PASSCOUNT    bpPassCount;  
-   BP_FLAGS        dwFlags;  
-   GUID            guidVendor;  
-   BSTR            bstrConstraint;  
-   BSTR            bstrTracepoint;  
-} BP_REQUEST_INFO2;  
+```cpp  
+typedef struct _BP_REQUEST_INFO2 {  
+   BPREQI_FIELDS   dwFields;  
+   GUID            guidLanguage;  
+   BP_LOCATION     bpLocation;  
+   IDebugProgram2* pProgram;  
+   BSTR            bstrProgramName;  
+   IDebugThread2*  pThread;  
+   BSTR            bstrThreadName;  
+   BP_CONDITION    bpCondition;  
+   BP_PASSCOUNT    bpPassCount;  
+   BP_FLAGS        dwFlags;  
+   GUID            guidVendor;  
+   BSTR            bstrConstraint;  
+   BSTR            bstrTracepoint;  
+} BP_REQUEST_INFO2;  
 ```  
   
-```c#  
-public struct BP_REQUEST_INFO2 {  
-   public uint           dwFields;  
-   public Guid           guidLanguage;  
-   public BP_LOCATION    bpLocation;  
-   public IDebugProgram2 pProgram;  
-   public string         bstrProgramName;  
-   public IDebugThread2  pThread;  
-   public string         bstrThreadName;  
-   public BP_CONDITION   bpCondition;  
-   public BP_PASSCOUNT   bpPassCount;  
-   public uint           dwFlags;  
-   public Guid           guidVendor;  
-   public string         bstrConstraint;  
-   public string         bstrTracepoint;  
+```csharp  
+public struct BP_REQUEST_INFO2 {  
+   public uint           dwFields;  
+   public Guid           guidLanguage;  
+   public BP_LOCATION    bpLocation;  
+   public IDebugProgram2 pProgram;  
+   public string         bstrProgramName;  
+   public IDebugThread2  pThread;  
+   public string         bstrThreadName;  
+   public BP_CONDITION   bpCondition;  
+   public BP_PASSCOUNT   bpPassCount;  
+   public uint           dwFlags;  
+   public Guid           guidVendor;  
+   public string         bstrConstraint;  
+   public string         bstrTracepoint;  
 };  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
  `dwFields`  
- 플래그의 조합에서 [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 채워진 필드를 지정 하는 열거형입니다.  
+ A combination of flags from the [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) enumeration that specifies which fields are filled out.  
   
  `guidLanguage`  
- 언어의 GUID입니다.  
+ The language GUID.  
   
  `bpLocation`  
- [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) 중단점 위치 형식을 지정 하는 구조입니다.  
+ The [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure that specifies the type of the breakpoint location.  
   
  `pProgram`  
- [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 는 중단점이 발생 응용 프로그램을 나타내는 개체입니다.  
+ The [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object that represents the application in which the breakpoint occurs.  
   
  `bstrProgramName`  
- 중단점이 발생 하는 응용 프로그램의 이름입니다.  
+ The name of the application in which the breakpoint occurs.  
   
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) 에 중단점이 발생 하는 스레드를 나타내는 개체입니다.  
+ The [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread in which the breakpoint occurs.  
   
  `bstrThreadName`  
- 이름에 중단점이 발생 하는 스레드입니다.  
+ The name of the thread in which the breakpoint occurs.  
   
  `bpCondition`  
- [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) 에서 중단점이 발생 하는 조건을 설명 하는 구조입니다.  
+ The [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) structure that describes the conditions under which the breakpoint will fire.  
   
  `bpPassCount`  
- [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) 중단점의 패스 개수 정보를 포함 하는 구조입니다.  
+ The [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) structure that contains the pass count information of the breakpoint.  
   
  `dwFlags`  
- 플래그의 조합에서 [BP\_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) 요청 된 중단점에 대 한 플래그를 지정 하는 열거형입니다.  
+ A combination of flags from the [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) enumeration that specifies the flags for the requested breakpoint.  
   
  `guidVendor`  
- 공급 업체의 GUID입니다.  Null 값을 사용할 수 있습니다.  
+ GUID of vendor. May be a null value.  
   
  `bstrConstraint`  
- 중단점 제약 조건의 이름입니다.  Null 값을 사용할 수 있습니다.  
+ Name of breakpoint constraint. May be a null value.  
   
  `bstrTracepoint`  
- 추적 지점 이름입니다.  Null 값을 사용할 수 있습니다.  
+ Name of trace point. May be a null value.  
   
-## 설명  
- 이 구조에서 반환 되는 [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) 메서드.  
+## <a name="remarks"></a>Remarks  
+ This structure is returned by the [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) method.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)   
- [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
- [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
+ [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)   
- [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
- [BP\_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)
+ [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)   
+ [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
+ [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)

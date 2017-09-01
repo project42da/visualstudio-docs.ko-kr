@@ -1,46 +1,61 @@
 ---
-title: "8단계: 게임 플레이어가 이겼는지 여부를 확인하는 메서드 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Step 8: Add a Method to Verify Whether the Player Won | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e317f6e-ba4c-4306-8924-300b0c2f65c6
 caps.latest.revision: 17
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# 8단계: 게임 플레이어가 이겼는지 여부를 확인하는 메서드 추가
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: ae7a07c3ecf77764907a58e8c5f87a73b22df80b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-재미있는 게임을 만들었지만 이를 마무리하려면 추가 항목이 필요합니다.  플레이어가 이기면 게임이 끝나야 하므로 `CheckForWinner()` 메서드를 추가하여 플레이어가 이겼는지 여부를 확인해야 합니다.  
+---
+# <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>Step 8: Add a Method to Verify Whether the Player Won
+You've created a fun game, but it needs an additional item to finish it. The game should end when the player wins, so you need to add a `CheckForWinner()` method to verify whether the player won.  
   
-### 플레이어가 게임에 이겼는지 여부를 확인하기 위해 메서드를 추가하려면  
+### <a name="to-add-a-method-to-verify-whether-the-player-won"></a>To add a method to verify whether the player won  
   
-1.  다음 코드와 같이 코드 아래쪽 `timer1_Tick()` 이벤트 처리기 아래에 `CheckForWinner()` 메서드를 추가합니다.  
+1.  Add a `CheckForWinner()` method to the bottom of your code, below the `timer1_Tick()` event handler, as shown in the following code.  
   
-     [!code-cs[VbExpressTutorial4Step8#10](../ide/codesnippet/CSharp/step-8-add-a-method-to-verify-whether-the-player-won_1.cs)]
-     [!code-vb[VbExpressTutorial4Step8#10](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_1.vb)]  
+     [!code-csharp[VbExpressTutorial4Step8#10](../ide/codesnippet/CSharp/step-8-add-a-method-to-verify-whether-the-player-won_1.cs)]  [!code-vb[VbExpressTutorial4Step8#10](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_1.vb)]  
   
-     이 메서드는 다른 `foreach` 루프\(Visual C\#의 경우\) 또는 `For Each` 루프\(Visual Basic의 경우\)를 사용하여 TableLayoutPanel의 각 레이블을 하나씩 처리합니다.  이 루프에서는 같음 연산자\(Visual C\#의 `==` 및 Visual Basic의 경우 `=`\)를 사용하여 각 레이블의 아이콘 색을 검사한 후 배경과 일치하는지 여부를 확인합니다.  색이 일치하면 아이콘이 표시되지 않은 상대로 유지되고 플레이어가 남아 있는 아이콘 중 일부를 찾지 않았습니다.  이 경우 프로그램에서는 `return` 문을 사용하여 메서드의 나머지 부분을 건너뜁니다.  루프에서 `return` 문을 실행하지 않고 모든 레이블을 차례로 처리하면 폼의 모든 아이콘이 일치되었음을 의미합니다.  그러면 프로그램에서 플레이어에게 게임에 이긴 것을 축하하는 내용의 MessageBox를 표시한 다음, 폼의 `Close()` 메서드를 호출하여 게임을 끝냅니다.  
+     The method uses another `foreach` loop in Visual C# or `For Each` loop in Visual Basic to go through each label in the TableLayoutPanel. It uses the equality operator (`==` in Visual C# and `=` in Visual Basic) to check each label's icon color to verify whether it matches the background. If the colors match, the icon remains invisible, and the player hasn't matched all of the icons remaining. In that case, the program uses a `return` statement to skip the rest of the method. If the loop gets through all of the labels without executing the `return` statement, that means that all of the icons on the form were matched. The program shows a MessageBox to congratulate the player on winning, and then calls the form's `Close()` method to end the game.  
   
-2.  다음에는 레이블의 Click 이벤트 처리기에서 새 `CheckForWinner()` 메서드를 호출하도록 합니다.  프로그램에서는 플레이어가 선택하는 두 번째 아이콘을 표시한 후 바로 승자 여부를 검사해야 합니다.  두 번째 선택한 아이콘의 색을 설정하는 줄을 찾은 후, 다음 코드와 같이 바로 그 뒤에서 `CheckForWinner()` 메서드를 호출합니다.  
+2.  Next, have the label's Click event handler call the new `CheckForWinner()` method. Be sure that your program checks for a winner immediately after it shows the second icon that the player chooses. Look for the line where you set the second chosen icon's color, and then call the `CheckForWinner()` method right after that, as shown in the following code.  
   
-     [!code-cs[VbExpressTutorial4Step8#11](../ide/codesnippet/CSharp/step-8-add-a-method-to-verify-whether-the-player-won_2.cs)]
-     [!code-vb[VbExpressTutorial4Step8#11](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_2.vb)]  
+     [!code-csharp[VbExpressTutorial4Step8#11](../ide/codesnippet/CSharp/step-8-add-a-method-to-verify-whether-the-player-won_2.cs)]  [!code-vb[VbExpressTutorial4Step8#11](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_2.vb)]  
   
-3.  프로그램을 저장하고 실행합니다.  게임을 진행하고 일치하는 아이콘을 모두 찾습니다.  게임에 이기면 프로그램에서 다음 그림과 같은 축하 MessageBox를 표시한 후 상자를 닫습니다.  
+3.  Save and run the program. Play the game and match all of the icons. When you win, the program displays a congratulatory MessageBox (as shown in the following picture), and then closes the box.  
   
-     ![MessageBox가 표시된 일치 게임](../ide/media/express_tut4step8.png "Express\_Tut4Step8")  
-MessageBox가 표시된 일치 게임  
+     ![Matching game with MessageBox](../ide/media/express_tut4step8.png "Express_Tut4Step8")  
+Matching game with MessageBox  
   
-### 계속하거나 검토하려면  
+### <a name="to-continue-or-review"></a>To continue or review  
   
--   다음 자습서 단계로 이동하려면 [9단계: 기타 기능 사용](../ide/step-9-try-other-features.md)을 참조하십시오.  
+-   To go to the next tutorial step, see [Step 9: Try Other Features](../ide/step-9-try-other-features.md).  
   
--   이전 자습서 단계로 돌아가려면 [7단계: 쌍 표시](../ide/step-7-keep-pairs-visible.md)를 참조하십시오.
+-   To return to the previous tutorial step, see [Step 7: Keep Pairs Visible](../ide/step-7-keep-pairs-visible.md).

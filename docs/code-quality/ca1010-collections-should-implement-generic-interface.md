@@ -1,41 +1,59 @@
 ---
-title: "CA1010: 컬렉션은 제네릭 인터페이스를 구현해야 합니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1010"
-  - "CollectionsShouldImplementGenericInterface"
-helpviewer_keywords: 
-  - "CA1010"
-  - "CollectionsShouldImplementGenericInterface"
+title: 'CA1010: Collections should implement generic interface | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1010
+- CollectionsShouldImplementGenericInterface
+helpviewer_keywords:
+- CA1010
+- CollectionsShouldImplementGenericInterface
 ms.assetid: c7d7126f-fa70-40be-8f93-3243e1760dc5
 caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 24
----
-# CA1010: 컬렉션은 제네릭 인터페이스를 구현해야 합니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4fa28f832773e41ee976cba7ba26494231cfd6ba
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010: Collections should implement generic interface
 |||  
 |-|-|  
 |TypeName|CollectionsShouldImplementGenericInterface|  
 |CheckId|CA1010|  
-|범주|Microsoft.Design|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- 외부에 노출되는 형식이 <xref:System.Collections.IEnumerable?displayProperty=fullName> 인터페이스는 구현하지만 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 인터페이스는 구현하지 않으며, 포함하는 어셈블리가 [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]을 대상으로 합니다.  이 규칙은 <xref:System.Collections.IDictionary?displayProperty=fullName>를 구현하는 형식을 무시합니다.  
+## <a name="cause"></a>Cause  
+ An externally visible type implements the <xref:System.Collections.IEnumerable?displayProperty=fullName> interface but does not implement the <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> interface, and the containing assembly targets [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]. This rule ignores types that implement <xref:System.Collections.IDictionary?displayProperty=fullName>.  
   
-## 규칙 설명  
- 컬렉션의 유용성을 높이려면 제네릭 컬렉션 인터페이스 중 하나를 구현합니다.  그러면 컬렉션을 사용하여 다음과 같은 제네릭 컬렉션 형식을 채울 수 있습니다.  
+## <a name="rule-description"></a>Rule Description  
+ To broaden the usability of a collection, implement one of the generic collection interfaces. Then the collection can be used to populate generic collection types such as the following:  
   
 -   <xref:System.Collections.Generic.List%601?displayProperty=fullName>  
   
@@ -43,8 +61,8 @@ caps.handback.revision: 24
   
 -   <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 다음 제네릭 컬렉션 인터페이스 중 하나를 구현합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, implement one of the following generic collection interfaces:  
   
 -   <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>  
   
@@ -52,53 +70,53 @@ caps.handback.revision: 24
   
 -   <xref:System.Collections.Generic.IList%601?displayProperty=fullName>  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서 경고를 표시하지 않도록 설정해도 안전하지만 이렇게 하면 컬렉션의 용도가 더 제한됩니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule; however, the collection will have a more limited use.  
   
-## 규칙 위반 예  
+## <a name="example-violation"></a>Example Violation  
   
-### 설명  
- 다음 예제에서는 제네릭이 아닌 `CollectionBase` 클래스에서 파생되며 이 규칙을 위반하는 클래스\(참조 형식\)를 보여 줍니다.  
+### <a name="description"></a>Description  
+ The following example shows a class (reference type) that derives from the non-generic `CollectionBase` class, which violates this rule.  
   
-### 코드  
- [!code-cs[FxCop.Design.CollectionsGenericViolation#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_1.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.CollectionsGenericViolation#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_1.cs)]  
   
-### 설명  
- 이 규칙 위반 문제를 해결하려면 제네릭 인터페이스를 구현하거나 `Collection<T>` 클래스와 같이 제네릭 인터페이스와 제네릭이 아닌 인터페이스를 이미 모두 구현하는 형식으로 기본 형식을 변경해야 합니다.  
+### <a name="comments"></a>Comments  
+ To fix a violation of this violation, you should either implement the generic interfaces or change the base class to a type that already implements both the generic and non-generic interfaces, such as the `Collection<T>` class.  
   
-## 기본 형식 변경을 통한 해결 방법  
+## <a name="fix-by-base-class-change"></a>Fix by Base Class Change  
   
-### 설명  
- 다음 예제에서는 컬렉션의 기본 형식을 제네릭이 아닌 `CollectionBase` 클래스에서 제네릭 `Collection<T>`\([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 경우 `Collection(Of T)`\) 클래스로 변경하여 위반 문제를 해결합니다.  
+### <a name="description"></a>Description  
+ The following example fixes the violation by changing the base class of the collection from the non-generic `CollectionBase` class to the generic `Collection<T>` (`Collection(Of T)` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) class.  
   
-### 코드  
- [!code-cs[FxCop.Design.CollectionsGenericBase#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_2.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.CollectionsGenericBase#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_2.cs)]  
   
-### 설명  
- 이미 발표된 클래스의 기본 클래스를 변경하는 것은 기존 소비자에게 주요 변경 사항으로 간주됩니다.  
+### <a name="comments"></a>Comments  
+ Changing the base class of an already released class is considered a breaking change to existing consumers.  
   
-## 인터페이스 구현을 통한 해결 방법  
+## <a name="fix-by-interface-implementation"></a>Fix by Interface Implementation  
   
-### 설명  
- 다음 예제에서는 제네릭 클래스 `IEnumerable<T>`, `ICollection<T>` 및 `IList<T>`\([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 경우 `IEnumerable(Of T)`, `ICollection(Of T)` 및 `IList(Of T)`\)를 구현하여 규칙 위반 문제를 해결합니다.  
+### <a name="description"></a>Description  
+ The following example fixes the violation by implementing these generic interfaces: `IEnumerable<T>`, `ICollection<T>`, and `IList<T>` (`IEnumerable(Of T)`, `ICollection(Of T)`, and `IList(Of T)` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]).  
   
-### 코드  
- [!code-cs[FxCop.Design.CollectionsGenericInterface#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_3.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.CollectionsGenericInterface#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_3.cs)]  
   
-## 관련 규칙  
- [CA1005: 제네릭 형식에 매개 변수를 너무 많이 사용하지 마십시오.](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1005: Avoid excessive parameters on generic types](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
   
- [CA1000: 정적 멤버를 제네릭 형식으로 선언하지 마십시오.](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)  
+ [CA1000: Do not declare static members on generic types](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)  
   
- [CA1002: 제네릭 목록을 노출하지 마십시오.](../Topic/CA1002:%20Do%20not%20expose%20generic%20lists.md)  
+ [CA1002: Do not expose generic lists](../code-quality/ca1002-do-not-expose-generic-lists.md)  
   
- [CA1006: 멤버 시그니처에 제네릭 형식을 중첩하지 마십시오.](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
+ [CA1006: Do not nest generic types in member signatures](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
   
- [CA1004: 제네릭 메서드는 형식 매개 변수를 제공해야 합니다.](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
+ [CA1004: Generic methods should provide type parameter](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
   
- [CA1003: 제네릭 이벤트 처리기 인스턴스를 사용하십시오.](../Topic/CA1003:%20Use%20generic%20event%20handler%20instances.md)  
+ [CA1003: Use generic event handler instances](../code-quality/ca1003-use-generic-event-handler-instances.md)  
   
- [CA1007: 적합한 제네릭을 사용하십시오.](../code-quality/ca1007-use-generics-where-appropriate.md)  
+ [CA1007: Use generics where appropriate](../code-quality/ca1007-use-generics-where-appropriate.md)  
   
-## 참고 항목  
- [제네릭](/dotnet/csharp/programming-guide/generics/index)
+## <a name="see-also"></a>See Also  
+ [Generics](/dotnet/csharp/programming-guide/generics/index)

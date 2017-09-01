@@ -1,58 +1,75 @@
 ---
-title: "IDebugStackFrame2::GetPhysicalStackRange | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugStackFrame2::GetPhysicalStackRange"
-helpviewer_keywords: 
-  - "IDebugStackFrame2::GetPhysicalStackRange"
+title: IDebugStackFrame2::GetPhysicalStackRange | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugStackFrame2::GetPhysicalStackRange
+helpviewer_keywords:
+- IDebugStackFrame2::GetPhysicalStackRange
 ms.assetid: 2f6992e2-ac1c-433f-83b7-a7f83a4ce63d
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugStackFrame2::GetPhysicalStackRange
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 920b3fb75a7bcc71fa9d52d049e5099291464414
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-스택 프레임과 연결 된 실제 주소는 컴퓨터에 종속 표현을 가져옵니다.  
+---
+# <a name="idebugstackframe2getphysicalstackrange"></a>IDebugStackFrame2::GetPhysicalStackRange
+Gets a machine-dependent representation of the range of physical addresses associated with a stack frame.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetPhysicalStackRange (   
-   UINT64* paddrMin,  
-   UINT64* paddrMax  
+```cpp  
+HRESULT GetPhysicalStackRange (   
+   UINT64* paddrMin,  
+   UINT64* paddrMax  
 );  
 ```  
   
-```c#  
-int GetPhysicalStackRange (   
-   out ulong paddrMin,  
-   out ulong paddrMax  
+```csharp  
+int GetPhysicalStackRange (   
+   out ulong paddrMin,  
+   out ulong paddrMax  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `paddrMin`  
- \[out\] 이 스택 프레임과 연결 된 낮은 실제 주소를 반환 합니다.  
+ [out] Returns the lowest physical address associated with this stack frame.  
   
  `paddrMax`  
- \[out\] 이 스택 프레임과 연결 된 가장 높은 실제 주소를 반환 합니다.  
+ [out] Returns the highest physical address associated with this stack frame.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드에 의해 반환 되는 정보 세션 디버그 매니저 \(SDM\)을 사용 하 여 스택 프레임을 정렬 합니다.  
+## <a name="remarks"></a>Remarks  
+ The information returned by this method is used by the session debug manager (SDM) to sort stack frames.  
   
- 호출 스택 아래로, 즉, 점점 낮은 메모리 주소에 추가 되어 새 스택 프레임 증가 것으로 간주 됩니다.  런타임 아키텍처가이 가정에 맞는 실제 스택 범위를 제공 해야 합니다.  
+ It is assumed that the call stack grows down, that is, that new stack frames are added at increasingly lower memory addresses. A run-time architecture must provide physical stack ranges that match this assumption.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

@@ -1,51 +1,68 @@
 ---
-title: "IDebugCustomAttributeQuery2::IsCustomAttributeDefined | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttributeQuery2::IsCustomAttributeDefined"
-helpviewer_keywords: 
-  - "IDebugCustomAttributeQuery2::IsCustomAttributeDefined"
+title: IDebugCustomAttributeQuery2::IsCustomAttributeDefined | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCustomAttributeQuery2::IsCustomAttributeDefined
+helpviewer_keywords:
+- IDebugCustomAttributeQuery2::IsCustomAttributeDefined
 ms.assetid: 5c07cc52-6d2d-42df-9d76-9f1f769641db
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugCustomAttributeQuery2::IsCustomAttributeDefined
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4ba562b125d9a619957c460a32ce00b8c2698e30
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-사용자 지정 특성 이름을 사용 하 여 있는지 여부를 확인 합니다.  
+---
+# <a name="idebugcustomattributequery2iscustomattributedefined"></a>IDebugCustomAttributeQuery2::IsCustomAttributeDefined
+Determines whether a custom attribute exists by name.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT IsCustomAttributeDefined(   
-   LPCOLESTR pszCustomAttributeName  
+```cpp  
+HRESULT IsCustomAttributeDefined(   
+   LPCOLESTR pszCustomAttributeName  
 );  
 ```  
   
-```c#  
+```csharp  
 int IsCustomAttributeDefined(  
-   [In] string pszCustomAttributeName  
+   [In] string pszCustomAttributeName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pszCustomAttributeName`  
- \[in\] 찾기 사용자 지정 특성의 이름을 포함 하는 문자열입니다.  
+ [in] A string containing the name of the custom attribute to find.  
   
-## 반환 값  
- 이 필드에 사용자 지정 특성을 정의 하면 S\_OK 그렇지 않으면 S\_FALSE를 반환 하거나 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ Returns S_OK if the custom attribute is defined on this field, otherwise returns S_FALSE.  
   
-## 설명  
- 호출 하는 사용자 지정 속성과 연관 된 특성 바이트를 얻으려면는 [GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md) 메서드가 있습니다.  
+## <a name="remarks"></a>Remarks  
+ To obtain the attribute bytes associated with the custom attribute, call the [GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md) method.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)

@@ -1,154 +1,176 @@
 ---
-title: "연습: 단일 테이블 상속을 사용하여 LINQ to SQL 클래스 만들기(O/R 디자이너) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Walkthrough: Creating LINQ to SQL Classes by Using Single-Table Inheritance (O-R Designer) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
 ms.assetid: 63bc6328-e0df-4655-9ce3-5ff74dbf69a4
 caps.latest.revision: 4
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: 5b98e5ebbcbcbe94b68575d8ceea34fc8ea6fac8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 단일 테이블 상속을 사용하여 LINQ to SQL 클래스 만들기(O/R 디자이너)
-[O\/R 디자이너\(개체 관계형 디자이너\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)는 관계형 시스템에서 일반적으로 구현되는 단일 테이블 속성을 지원합니다.이 연습에서는 [방법: O\/R 디자이너를 사용하여 상속 구성](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) 항목에서 제공한 일반 단계를 확장하고 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서의 상속 사용을 보여 주기 위한 몇 가지 실제 데이터를 제공합니다.  
+# <a name="walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>Walkthrough: Creating LINQ to SQL Classes by Using Single-Table Inheritance (O/R Designer)
+The [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) supports single-table inheritance as it is typically implemented in relational systems. This walkthrough expands upon the generic steps provided in the [How to: Configure inheritance by using the O/R Designer](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) topic and provides some real data to demonstrate the use of inheritance in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ During this walkthrough, you will perform the following tasks:  
   
--   데이터베이스 테이블을 만들고 그 안에 데이터를 추가합니다.  
+-   Create a database table and add data to it.  
   
--   Windows Forms 응용 프로그램을 만듭니다.  
+-   Create a Windows Forms application.  
   
--   [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 파일을 프로젝트에 추가합니다.  
+-   Add a [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] file to a project.  
   
--   새 엔터티 클래스를 만듭니다.  
+-   Create new entity classes.  
   
--   상속을 사용하도록 엔터티 클래스를 구성합니다.  
+-   Configure the entity classes to use inheritance.  
   
--   상속된 클래스를 쿼리합니다.  
+-   Query the inherited class.  
   
--   Windows Form에 데이터를 표시합니다.  
+-   Display the data on a Windows Form.  
   
-## 상속에 사용될 테이블 만들기  
- 상속이 어떻게 작동하는지 보기 위해 작은 Person 테이블을 만들어서 기본 클래스로 사용한 다음 이를 상속하는 Employee 개체를 만듭니다.  
+## <a name="create-a-table-to-inherit-from"></a>Create a Table to Inherit From  
+ To see how inheritance works, you will create a small Person table, use it as a base class, and then create an Employee object that inherits from it.  
   
-#### 상속을 보여 주기 위한 기본 테이블을 만들려면  
+#### <a name="to-create-a-base-table-to-demonstrate-inheritance"></a>To create a base table to demonstrate inheritance  
   
-1.  **서버 탐색기**\/**데이터베이스 탐색기**에서 **테이블**을 마우스 오른쪽 단추로 클릭하고 **새 테이블 추가**를 클릭합니다.  
+1.  In **Server Explorer**/**Database Explorer**, right-click the **Tables** node and click **Add New Table**.  
   
     > [!NOTE]
-    >  Northwind 데이터베이스 또는 테이블을 추가할 수 있는 기타 데이터베이스를 사용할 수 있습니다.  
+    >  You can use the Northwind database or any other database that you can add a table to.  
   
-2.  테이블 디자이너에서 다음 열을 테이블에 추가합니다.  
+2.  In the Table Designer, add the following columns to the table:  
   
-    |열 이름|데이터 형식|Null 허용|  
-    |----------|------------|-------------|  
-    |ID|int|False|  
-    |형식|int|True|  
-    |FirstName|nvarchar\(200\)|False|  
-    |LastName|nvarchar\(200\)|False|  
-    |Manager|int|True|  
+    |Column Name|Data Type|Allow Nulls|  
+    |-----------------|---------------|-----------------|  
+    |**ID**|**int**|**False**|  
+    |**Type**|**int**|**True**|  
+    |**FirstName**|**nvarchar(200)**|**False**|  
+    |**LastName**|**nvarchar(200)**|**False**|  
+    |**Manager**|**int**|**True**|  
   
-3.  ID 열을 기본 키로 설정합니다.  
+3.  Set the ID column as the primary key.  
   
-4.  테이블을 저장하고 이름을 Person으로 지정합니다.  
+4.  Save the table and name it **Person**.  
   
-## 테이블에 데이터 추가  
- 속성이 올바르게 구성되었는지 확인하기 위해서는 단일 테이블 상속에서 각 클래스에 대한 몇 가지 데이터가 테이블에 필요합니다.  
+## <a name="add-data-to-the-table"></a>Add Data to the Table  
+ So that you can verify that inheritance is configured correctly, the table needs some data for each class in the single-table inheritance.  
   
-#### 테이블에 데이터를 추가하려면  
+#### <a name="to-add-data-to-the-table"></a>To add data to the table  
   
-1.  데이터 뷰에서 테이블을 엽니다.**서버 탐색기**\/**데이터베이스 탐색기**에서 **Person** 테이블을 마우스 오른쪽 단추로 클릭하고 **테이블 데이터 표시**를 클릭합니다.  
+1.  Open the table in data view. (Right-click the **Person** table in **Server Explorer**/**Database Explorer** and click **Show Table Data**.)  
   
-2.  다음 데이터를 테이블로 복사합니다.[Results Pane](http://msdn.microsoft.com/ko-kr/3c712f20-7c9f-4021-b1ac-fdc6f534c95a)에서 전체 행을 선택하여 복사하고 테이블에 붙여 넣을 수 있습니다.  
+2.  Copy the following data into the table. (You can copy it and then paste it into the table by selecting the whole row in the Results Pane.)  
   
     ||||||  
     |-|-|-|-|-|  
-    |ID|형식|FirstName|LastName|Manager|  
-    |1|1|Anne|Wallace|NULL|  
-    |2|1|Carlos|Grilo|NULL|  
-    |3|1|Yael|Peled|NULL|  
-    |4|2|Gatis|Ozolins|1|  
-    |5|2|Andreas|Hauser|1|  
-    |6|2|Tiffany|Phuvasate|1|  
-    |7|2|Alexey|Orekhov|2|  
-    |8|2|Michał|Poliszkiewicz|2|  
-    |9|2|Tai|Yee|2|  
-    |10|2|Fabricio|Noriega|3|  
-    |11|2|Mindy|Martin|3|  
-    |12|2|Ken|Kwok|3|  
+    |**ID**|**Type**|**FirstName**|**LastName**|**Manager**|  
+    |**1**|**1**|**Anne**|**Wallace**|**NULL**|  
+    |**2**|**1**|**Carlos**|**Grilo**|**NULL**|  
+    |**3**|**1**|**Yael**|**Peled**|**NULL**|  
+    |**4**|**2**|**Gatis**|**Ozolins**|**1**|  
+    |**5**|**2**|**Andreas**|**Hauser**|**1**|  
+    |**6**|**2**|**Tiffany**|**Phuvasate**|**1**|  
+    |**7**|**2**|**Alexey**|**Orekhov**|**2**|  
+    |**8**|**2**|**Michał**|**Poliszkiewicz**|**2**|  
+    |**9**|**2**|**Tai**|**Yee**|**2**|  
+    |**10**|**2**|**Fabricio**|**Noriega**|**3**|  
+    |**11**|**2**|**Mindy**|**Martin**|**3**|  
+    |**12**|**2**|**Ken**|**Kwok**|**3**|  
   
-## 새 프로젝트 만들기  
- 테이블을 만든 후에는 상속 구성을 보여 주기 위한 새 프로젝트를 만듭니다.  
+## <a name="create-a-new-project"></a>Create a New Project  
+ Now that you have created the table, create a new project to demonstrate configuring inheritance.  
   
-#### 새 Windows 응용 프로그램을 만들려면  
+#### <a name="to-create-the-new-windows-application"></a>To create the new Windows Application  
   
-1.  **파일** 메뉴에서 새 프로젝트를 만듭니다.  
+1.  From the **File** menu, create a new project.  
   
-2.  프로젝트의 이름을 InheritanceWalkthrough로 지정합니다.  
+2.  Name the project **InheritanceWalkthrough**.  
   
     > [!NOTE]
-    >  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]는 Visual Basic 및 C\# 프로젝트에서 지원됩니다.이 언어 중 하나로 새 프로젝트를 만듭니다.  
+    >  The [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] is supported in Visual Basic and C# projects. Create the new project in one of these languages.  
   
-3.  **Windows Forms 응용 프로그램** 템플릿을 클릭한 다음 **확인**을 클릭합니다. 자세한 내용은 [클라이언트 응용 프로그램](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)를 참조하십시오.  
+3.  Click the **Windows Forms Application** template and then click **OK**. For more information, see [Client Applications](/dotnet/framework/develop-client-apps).  
   
-4.  InheritanceWalkthrough 프로젝트가 만들어지고 **솔루션 탐색기**에 추가됩니다.  
+4.  The InheritanceWalkthrough project is created and added to **Solution Explorer**.  
   
-## 프로젝트에 LINQ to SQL 클래스 파일 추가  
+## <a name="add-a-linq-to-sql-classes-file-to-the-project"></a>Add a LINQ to SQL Classes File to the Project  
   
-#### 프로젝트에 LINQ to SQL 파일을 추가하려면  
+#### <a name="to-add-a-linq-to-sql-file-to-the-project"></a>To add a LINQ to SQL File to the project  
   
-1.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
+1.  On the **Project** menu, click **Add New Item**.  
   
-2.  **LINQ to SQL 클래스** 템플릿을 클릭한 다음 **추가**를 클릭합니다.  
+2.  Click the **LINQ to SQL Classes** template and then click **Add**.  
   
-     .dbml 파일이 프로젝트에 추가되고 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]가 열립니다.  
+     The .dbml file is added to the project and the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] opens.  
   
-## O\/R 디자이너를 사용하여 상속 만들기  
- **상속** 개체를 **도구 상자**에서 디자인 화면으로 끌어 와서 상속을 구성합니다.  
+## <a name="create-the-inheritance-by-using-the-or-designer"></a>Create the Inheritance by Using the O/R Designer  
+ Configure the inheritance by dragging an **Inheritance** object from the **Toolbox** onto the design surface.  
   
-#### 상속을 만들려면  
+#### <a name="to-create-the-inheritance"></a>To create the inheritance  
   
-1.  **서버 탐색기**\/**데이터베이스 탐색기**에서 앞에서 만든 **Person** 테이블로 이동합니다.  
+1.  In **Server Explorer**/**Database Explorer**, navigate to the **Person** table that you created earlier.  
   
-2.  **Person** 테이블을 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 디자인 화면으로 끌어서 놓습니다.  
+2.  Drag the **Person** table onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] design surface.  
   
-3.  두 번째 **Person** 테이블을 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]로 끌어 놓고 이름을 Employee로 변경합니다.  
+3.  Drag a second **Person** table onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] and change its name to **Employee**.  
   
-4.  **Person** 개체에서 **Manager** 속성을 삭제합니다.  
+4.  Delete the **Manager** property from the **Person** object.  
   
-5.  **Employee** 개체에서 **Type**, **ID**, **FirstName** 및 **LastName** 속성을 삭제합니다.즉, **Manager**를 제외한 모든 속성을 삭제합니다.  
+5.  Delete the **Type**, **ID**, **FirstName**, and **LastName** properties from the **Employee** object. (In other words, delete all properties except for **Manager**.)  
   
-6.  **도구 상자**의 **개체 관계형 디자이너** 탭에서 **Person** 및 **Employee** 개체 사이에 **상속**을 만듭니다.이렇게 하려면 **도구 상자**에서 **상속** 항목을 클릭하고 마우스 단추를 놓으십시오.그런 다음 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 **Employee** 개체와 **Person** 개체를 차례로 클릭합니다.상속 선의 화살표가 **Person** 개체를 가리킵니다.  
+6.  From the **Object Relational Designer** tab of the **Toolbox**, create an **Inheritance** between the **Person** and **Employee** objects. To do this, click the **Inheritance** item in the **Toolbox** and release the mouse button. Next, click the **Employee** object and then the **Person** object in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. The arrow on the inheritance line will point to the **Person** object.  
   
-7.  디자인 화면에서 **상속** 선을 클릭합니다.  
+7.  Click the **Inheritance** line on the design surface.  
   
-8.  **Discriminator Property** 속성을 **Type**으로 설정합니다.  
+8.  Set the **Discriminator Property** property to **Type**.  
   
-9. **Derived Class Discriminator Value** 속성을 **2**로 설정합니다.  
+9. Set the **Derived Class Discriminator Value** property to **2**.  
   
-10. **Base Class Discriminator Value** 속성을 **1**로 설정합니다.  
+10. Set the **Base Class Discriminator Value** property to **1**.  
   
-11. **Inheritance Default** 속성을 **Person**으로 설정합니다.  
+11. Set the **Inheritance Default** property to **Person**.  
   
-12. 프로젝트를 빌드합니다.  
+12. Build the project.  
   
-## 상속된 클래스 쿼리 및 폼에 데이터 표시  
- 이제 개체 모델에서 특정 클래스에 대해 쿼리하는 폼에 일부 코드를 추가할 수 있습니다.  
+## <a name="query-the-inherited-class-and-display-the-data-on-the-form"></a>Query the Inherited Class and Display the Data on the Form  
+ You will now add some code to the form that queries for a specific class in the object model.  
   
-#### LINQ 쿼리를 만들고 폼에 결과를 표시하려면  
+#### <a name="to-create-a-linq-query-and-display-the-results-on-the-form"></a>To create a LINQ query and display the results on the form  
   
-1.  **ListBox**를 Form1로 끌어서 놓습니다.  
+1.  Drag a **ListBox** onto Form1.  
   
-2.  폼을 두 번 클릭하여 `Form1_Load` 이벤트 처리기를 만듭니다.  
+2.  Double-click the form to create a `Form1_Load` event handler.  
   
-3.  다음 코드를 `Form1_Load` 이벤트 처리기에 추가합니다.  
+3.  Add the following code to the `Form1_Load` event handler:  
   
-    ```vb#  
+    ```vb  
     Dim dc As New DataClasses1DataContext  
     Dim results = From emp In dc.Persons _  
         Where TypeOf emp Is Employee _  
@@ -159,7 +181,7 @@ manager: "ghogen"
     Next  
     ```  
   
-    ```c#  
+    ```csharp  
     NorthwindDataContext dc = new DataClasses1DataContext();  
     var results = from emp in dc.Persons  
                   where emp is Employee  
@@ -171,21 +193,20 @@ manager: "ghogen"
     }  
     ```  
   
-## 응용 프로그램 테스트  
- 응용 프로그램을 실행하고 목록 상자에 표시된 레코드가 모두 직원\(Type 열의 값이 2인 레코드\)인지 확인합니다.  
+## <a name="test-the-application"></a>Test the Application  
+ Run the application and verify that the records displayed in the list box are all employees (records that have a value of 2 in their Type column).  
   
-#### 응용 프로그램을 테스트하려면  
+#### <a name="to-test-the-application"></a>To test the application  
   
-1.  F5 키를 누릅니다.  
+1.  Press F5.  
   
-2.  Type 열의 값이 2인 레코드만 표시되는지 확인합니다.  
+2.  Verify that only records that have a value of 2 in their Type column are displayed.  
   
-3.  폼을 닫습니다.**디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.  
+3.  Close the form. (On the **Debug** menu, click **Stop Debugging**.)  
   
-## 참고 항목  
- [O\/R 디자이너 개요](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio1.md)   
- [방법: 프로젝트에 LINQ to SQL 클래스 추가\(O\/R 디자이너\)](../Topic/How%20to:%20Add%20LINQ%20to%20SQL%20Classes%20to%20a%20Project%20\(O-R%20Designer\).md)   
- [연습: LINQ to SQL 클래스 만들기\(O\/R 디자이너\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
- [방법: 저장 프로시저를 할당하여 업데이트, 삽입 및 삭제 수행\(O\/R 디자이너\)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [방법: Visual Basic 또는 C\#에서 개체 모델 생성](../Topic/How%20to:%20Generate%20the%20Object%20Model%20in%20Visual%20Basic%20or%20C%23.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
+ [How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
+ [How to: Generate the Object Model in Visual Basic or C#](/dotnet/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp)

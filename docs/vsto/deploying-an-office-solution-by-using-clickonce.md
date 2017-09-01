@@ -1,267 +1,271 @@
 ---
-title: "ClickOnce를 사용하여 Office 솔루션 배포"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ClickOnce 개발[Visual Studio에서 Office 개발], 솔루션 배포"
-  - "Visual Studio에서 Office 개발, 솔루션 배포"
+title: Deploying an Office Solution by Using ClickOnce | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office development in Visual Studio, deploying solutions
+- ClickOnce deployment [Office development in Visual Studio], deploying solutions
 ms.assetid: feb516b3-5e4d-449a-9fd2-347d08d90252
 caps.latest.revision: 59
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 58
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a8430c32a7d9352554a9fc940eabe3b4ef0428c4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# ClickOnce를 사용하여 Office 솔루션 배포
-  ClickOnce를 사용하면 Office 솔루션을 더 적은 단계로 배포할 수 있습니다.  업데이트를 게시하는 경우 솔루션에서 자동으로 이를 감지하여 설치합니다.  그러나 ClickOnce에서는 컴퓨터의 각 사용자에 대해 별도로 솔루션을 설치하도록 합니다.  따라서 둘 이상의 사용자가 같은 컴퓨터에서 솔루션을 실행하는 경우 Windows Installer\(.msi\)를 사용하는 것이 좋습니다.  
+# <a name="deploying-an-office-solution-by-using-clickonce"></a>Deploying an Office Solution by Using ClickOnce
+  You can deploy your Office solution in fewer steps if you use ClickOnce. If you publish updates, your solution will automatically detect and install them. However, ClickOnce requires that you install your solution separately for each user of a computer. Therefore, you should consider using Windows Installer (.msi) if more than one user will run your solution on the same computer.  
   
-## 항목 내용  
+## <a name="in-this-topic"></a>In this topic  
   
--   [솔루션 게시](#Publish)  
+-   [Publish the solution](#Publish)  
   
--   [솔루션에 신뢰를 부여하는 방법 결정](#Trust)  
+-   [Decide how you want to grant trust to the solution](#Trust)  
   
--   [사용자의 솔루션 설치 지원](#Helping)  
+-   [Help users install the solution](#Helping)  
   
--   [최종 사용자의 컴퓨터에 솔루션 문서 저장(문서 수준 사용자 지정에만 해당)](#Put)  
+-   [Put the document of a solution onto the end user's computer (document-level customizations only)](#Put)  
   
--   [SharePoint 실행 서버에 솔루션 문서 저장(문서 수준 사용자 지정에만 해당)](#SharePoint)  
+-   [Put the document of a solution onto a server that's running SharePoint (document-level customizations only)](#SharePoint)  
   
--   [사용자 지정 설치 관리자 만들기](#Custom)  
+-   [Create a custom installer](#Custom)  
   
--   [업데이트 게시](#Update)  
+-   [Publish an update](#Update)  
   
--   [솔루션의 설치 위치 변경](#Location)  
+-   [Change the installation location of a solution](#Location)  
   
--   [이전 버전으로 솔루션 롤백](#Roll)  
+-   [Roll back a solution to an earlier version](#Roll)  
   
- Windows Installer 파일을 만들어 Office 솔루션을 배포하는 방법에 대한 자세한 내용은 [Windows Installer를 사용하여 Office 솔루션 배포](../vsto/deploying-an-office-solution-by-using-windows-installer.md)를 참조하세요.  
+ For more information about how to deploy an Office solution by creating a Windows Installer file, see [Deploying an Office Solution by Using Windows Installer](../vsto/deploying-an-office-solution-by-using-windows-installer.md).  
   
-##  <a name="Publish"></a> 솔루션 게시  
- **게시 마법사** 또는 **프로젝트 디자이너**를 사용하여 솔루션을 게시할 수 있습니다.  이 절차에서는 게시 옵션의 전체 집합을 제공하도록 **프로젝트 디자이너**를 사용합니다.  [게시 마법사&#40;Visual Studio에서는 Office 개발&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md)를 참조하세요.  
+##  <a name="Publish"></a> Publish the solution  
+ You can publish your solution by using the **Publish Wizard** or the **Project Designer**. In this procedure, you'll use the **Project Designer** because it provides the complete set of publishing options. See [Publish Wizard &#40;Office Development in Visual Studio&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md).  
   
-#### 솔루션을 게시하려면  
+#### <a name="to-publish-the-solution"></a>To publish the solution  
   
-1.  **솔루션 탐색기**에서 프로젝트의 이름에 해당하는 노드를 선택합니다.  
+1.  In **Solution Explorer**, choose the node that's named for your project.  
   
-2.  메뉴 모음에서 **프로젝트**, *ProjectName* **속성**을 선택합니다.  
+2.  On the menu bar, choose **Project**, *ProjectName* **Properties**.  
   
-3.  **프로젝트 디자이너**에서 다음 그림과 같이 **게시** 탭을 선택합니다.  
+3.  In the **Project Designer**, choose the **Publish** tab, which the following illustration shows.  
   
-     ![프로젝트 디자이너의 게시 탭](../vsto/media/vsto-publishtab.png "프로젝트 디자이너의 게시 탭")  
+     ![The publish tab of the Project Designer](../vsto/media/vsto-publishtab.png "The publish tab of the Project Designer")  
   
-4.  **폴더 위치 게시\(ftp 서버 또는 파일 경로\)** 상자에 **프로젝트 디자이너**에서 솔루션 파일을 복사할 폴더의 경로를 입력합니다.  
+4.  In the **Publishing Folder Location (ftp server, or file path)** box, enter the path of the folder where you want the **Project Designer** to copy the solution files.  
   
-     다음과 같은 형식의 경로를 입력할 수 있습니다.  
+     You can enter any of the following types of paths.  
   
-    -   로컬 경로\(예: *C:\\FolderName\\FolderName*\)  
+    -   A local path (for example, *C:\FolderName\FolderName*).  
   
-    -   네트워크 폴더에 대한 UNC\(Uniform Naming Convention\) 경로\(예: *\\\\ServerName\\FolderName*\)  
+    -   A Uniform Naming Convention (UNC) path to a folder on your network (for example, *\\\ServerName\FolderName*).  
   
-    -   상대 경로\(예: 기본적으로 프로젝트가 게시되는 폴더, *PublishFolder\\*\)  
+    -   A relative path (for example, *PublishFolder\\*, which is the folder into which the project is published by default).  
   
-5.  **설치 폴더 URL** 상자에 최종 사용자가 솔루션을 찾을 위치의 정규화된 경로를 입력합니다.  
+5.  In the **Installation Folder URL** box, enter the fully qualified path of the location where end users will find your solution.  
   
-     위치를 아직 모를 경우 이 필드에 아무 값도 입력하지 마세요.  기본적으로 ClickOnce에서는 사용자가 솔루션을 설치한 폴더에서 업데이트를 찾습니다.  
+     If you don't know the location yet, don't enter anything into this field. By default, ClickOnce looks for updates in the folder from which your users install the solution.  
   
-6.  **필수 구성 요소** 단추를 선택합니다.  
+6.  Choose the **Prerequisites** button.  
   
-7.  **필수 구성 요소** 대화 상자에서 **필수 구성 요소를 설치하기 위한 설치 프로그램 만들기** 확인란이 선택되어 있는지 확인합니다.  
+7.  In the **Prerequisites** dialog box, ensure that the **Create setup program to install prerequisite components** check box is selected.  
   
-8.  **설치할 필수 구성 요소 선택** 목록에서 **Windows Installer 4.5** 및 적절한 .NET Framework 패키지에 대한 확인란을 선택합니다.  
+8.  In the **Choose which prerequisites to install** list, select the check boxes for **Windows Installer 4.5** and the appropriate .NET Framework package.  
   
-     예를 들어 솔루션의 대상이 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]일 경우 **Windows Installer 4.5** 및 **Microsoft .NET Framework 4.5 Full** 확인란을 선택합니다.  
+     For example, if your solution targets the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], select the check boxes for **Windows Installer 4.5** and **Microsoft .NET Framework 4.5 Full**.  
   
-9. .NET Framework 4.5를 대상으로 하는 솔루션의 경우 **Visual Studio 2010 Tools for Office Runtime** 확인란도 선택합니다.  
-  
-    > [!NOTE]  
-    >  기본적으로 이 확인란은 표시되지 않습니다.  이 확인란을 표시하려면 부트스트래퍼 패키지를 만들어야 합니다.  [Visual Studio 2012에서 Office 2013 VSTO 추가 기능용 부트스트래퍼 패키지 만들기](http://blogs.msdn.com/b/vsto/archive/2012/12/21/creating-a-bootstrapper-package-for-an-office-2013-vsto-add-in-with-visual-studio-2012.aspx)를 참조하세요.  
-  
-10. **필수 구성 요소의 설치 위치를 지정하세요.** 아래에 나타나는 옵션 중 하나를 선택하고 **확인** 단추를 선택합니다.  
-  
-     다음 표는 각 옵션에 대해 설명합니다.  
-  
-    |옵션|설명|  
-    |--------|--------|  
-    |**구성 요소 공급업체의 웹 사이트에서 필수 구성 요소 다운로드**|사용자에게 공급업체로부터 이러한 필수 구성 요소를 다운로드하여 설치하라는 메시지가 나타납니다.|  
-    |**내 응용 프로그램과 동일한 위치에서 필수 구성 요소 다운로드**|필수 구성 요소 소프트웨어가 솔루션과 함께 설치되어 있습니다.  이 옵션을 선택하면 자동으로 모든 필수 구성 요소 패키지가 게시 위치에 복사됩니다.  이 옵션이 작동하려면 필수 구성 요소 패키지가 개발 컴퓨터에 있어야 합니다.|  
-    |**다음 위치에서 필수 구성 요소 다운로드**|모든 필수 구성 요소 패키지가 지정한 위치에 복사되고 솔루션을 사용하여 설치됩니다.|  
-  
-     [필수 조건 대화 상자](../ide/reference/prerequisites-dialog-box.md)를 참조하세요.  
-  
-11. **업데이트** 단추를 선택하고, 각 최종 사용자의 VSTO 추가 기능 또는 사용자 지정의 업데이트를 확인할 빈도를 지정한 다음 **확인** 단추를 선택합니다.  
+9. If your solution targets the .NET Framework 4.5, also select the **Visual Studio 2010 Tools for Office Runtime** check box.  
   
     > [!NOTE]  
-    >  CD 또는 이동식 드라이브를 사용하여 배포하려면 **업데이트 확인 안 함** 옵션 단추를 선택합니다.  
+    >  By default, this check box doesn't appear. To show this check box, you must create a Bootstrapper package. See [Creating a Bootstrapper package for an Office 2013 VSTO Add-in with Visual Studio 2012](http://blogs.msdn.com/b/vsto/archive/2012/12/21/creating-a-bootstrapper-package-for-an-office-2013-vsto-add-in-with-visual-studio-2012.aspx).  
   
-     업데이트를 게시하는 방법은 [업데이트 게시](#Update)를 참조하세요.  
+10. Under **Specify the install location for prerequisites**, choose one of the options that appear, and then choose the **OK** button.  
   
-12. **옵션** 단추를 선택하고 **옵션** 대화 상자에서 옵션을 검토한 다음 **확인** 단추를 선택합니다.  
+     The following table describes each option.  
   
-13. **지금 게시** 단추를 선택합니다.  
+    |Option|Description|  
+    |------------|-----------------|  
+    |**Download prerequisites from the component vendor's web site**|The user is prompted to download and install these prerequisites from the vendor.|  
+    |**Download prerequisites from the same location as my application**|The prerequisite software is installed with the solution. If you choose this option, Visual Studio copies all of the prerequisite packages to the publish location for you. For this option to work, the prerequisite packages must be on the development computer.|  
+    |**Download prerequisites from the following location**|Visual Studio copies all of the prerequisite packages to the location that you specify and installs them with the solution.|  
   
-     이 절차의 앞부분에서 지정한 게시 폴더에 다음과 같은 폴더 및 파일이 추가됩니다.  
+     See [Prerequisites Dialog Box](/visualstudio/ide/reference/prerequisites-dialog-box).  
   
-    -   **응용 프로그램 파일** 폴더  
-  
-    -   설치 프로그램  
-  
-    -   최신 버전의 배포 매니페스트를 가리키는 배포 매니페스트  
-  
-     **응용 프로그램 파일** 폴더에는 게시하는 각 버전별 하위 폴더가 있습니다.  각 버전별 하위 폴더에는 다음 파일이 들어 있습니다.  
-  
-    -   응용 프로그램 매니페스트  
-  
-    -   배포 매니페스트  
-  
-    -   사용자 지정 어셈블리  
-  
-     다음 그림에서는 Outlook VSTO 추가 기능용 게시 폴더의 구조를 보여 줍니다.  
-  
-     ![게시 폴더 구조](~/vsto/media/publishfolderstructure.png "게시 폴더 구조")  
+11. Choose the **Updates** button, specify how often you want each end user's VSTO Add-in or customization to check for updates, and then choose the **OK** button.  
   
     > [!NOTE]  
-    >  ClickOnce에서는 안전하지 않은 확장명 때문에 IIS\(인터넷 정보 서비스\)의 보안 설치에서 파일을 차단하지 않도록 어셈블리에 .deploy 확장명이 추가됩니다.  사용자가 솔루션을 설치하면 .deploy 확장명이 제거됩니다.  
+    >  If you're deploying by using a CD or a removable drive, choose the **Never check for updates** option button.  
   
-14. 이 절차의 앞부분에서 지정한 설치 위치에 솔루션 파일을 복사합니다.  
+     For information about how to publish an update, see [Publish an update](#Update).  
   
-##  <a name="Trust"></a> 솔루션에 신뢰를 부여하는 방법 결정  
- 사용자 컴퓨터에서 솔루션을 실행하려면 먼저 관리자가 신뢰를 부여하거나 사용자가 솔루션을 설치할 때 신뢰 프롬프트에 응답해야 합니다.  솔루션에 신뢰를 부여하려면 신뢰할 수 있고 확인된 게시자를 식별하는 인증서를 사용하여 매니페스트에 서명합니다.  [응용 프로그램 및 배포에 서명 하 여 솔루션에 신뢰를 매니페스트합니다](../vsto/granting-trust-to-office-solutions.md#Signing)를 참조하세요.  
+12. Choose the **Options** button, review the options in the **Options** dialog box, and then choose the **OK** button.  
   
- 문서 수준 사용자 지정을 배포할 경우, 사용자 컴퓨터의 폴더에 문서를 저장하거나 SharePoint 사이트에서 문서를 사용할 수 있도록 하려면 Office에서 문서의 위치를 신뢰해야 합니다.  [문서에 신뢰 부여](../vsto/granting-trust-to-documents.md)를 참조하세요.  
+13. Choose the **Publish Now** button.  
   
-##  <a name="Helping"></a> 사용자의 솔루션 설치 지원  
- 사용자는 설치 프로그램을 실행하고 배포 매니페스트를 열거나 문서 수준 사용자 지정의 경우 문서를 직접 열어 솔루션을 설치할 수 있습니다.  가장 좋은 방법은 사용자가 설치 프로그램을 사용하여 솔루션을 설치하는 것입니다.  다른 두 가지 방법으로는 필수 구성 요소 소프트웨어가 설치되었음을 보장할 수 없습니다.  사용자가 설치 위치에서 문서를 열려는 경우, Office 응용 프로그램의 보안 센터에서 신뢰할 수 있는 위치 목록에 이 문서를 추가해야 합니다.  
+     Visual Studio adds the following folders and files to the publishing folder that you specified earlier in this procedure.  
   
-### 문서 수준 사용자 지정의 문서 열기  
- 사용자는 문서 수준 사용자 지정의 문서를 설치 위치에서 바로 열거나 문서를 자신의 로컬 컴퓨터로 복사한 다음 이 복사본을 열 수 있습니다.  
+    -   The **Application Files** folder.  
   
- 가장 좋은 방법은 여러 사용자가 동시에 동일한 복사본을 열려고 시도하지 않도록 사용자가 자신의 컴퓨터에서 문서의 복사본을 여는 것입니다.  이 방법을 적용하려면 사용자 컴퓨터에 문서를 복사하도록 설치 프로그램을 구성하면 됩니다.  [최종 사용자의 컴퓨터에 솔루션 문서 저장(문서 수준 사용자 지정에만 해당)](#Put)을 참조하세요.  
+    -   The setup program.  
   
-### IIS 웹 사이트에서 배포 매니페스트를 열어서 솔루션 설치  
- 사용자는 웹에서 배포 매니페스트를 열어 Office 솔루션을 설치할 수 있습니다.  그러나 IIS\(인터넷 정보 서비스\)의 보안 설치 기능에서는 확장명이 .vsto인 파일을 차단합니다.  따라서 IIS를 사용하여 Office 솔루션을 배포하려면 먼저 IIS에서 MIME 형식을 정의해야 합니다.  
+    -   A deployment manifest that points to the deployment manifest of the most recent version.  
   
-##### IIS 6.0에 .vsto MIME 형식을 추가하려면  
+     The **Application Files** folder contains a subfolder for each version that you publish. Each version-specific subfolder contains the following files.  
   
-1.  IIS 6.0을 실행하는 서버에서 **시작**, **모든 프로그램**, **관리 도구**, **IIS\(인터넷 정보 서비스\) 관리자**를 차례로 선택합니다.  
+    -   An application manifest.  
   
-2.  컴퓨터 이름을 선택하고 **웹 사이트** 폴더 또는 구성하려는 웹 사이트를 선택합니다.  
+    -   A deployment manifest.  
   
-3.  메뉴 모음에서 **작업**, **속성**을 선택합니다.  
+    -   Customization assemblies.  
   
-4.  **HTTP 헤더** 탭에서 **MIME 형식** 단추를 선택합니다.  
+     The following illustration shows the structure of the publish folder for an Outlook VSTO Add-in.  
   
-5.  **MIME 형식** 창에서 **새로 만들기** 단추를 선택합니다.  
-  
-6.  **MIME 형식** 창에서 확장명으로 **.vsto**를 입력하고 MIME 형식으로 **application\/x\-ms\-vsto**를 입력한 다음 새로운 설정을 적용합니다.  
+     ![Publish Folder Structure](../vsto/media/publishfolderstructure.png "Publish Folder Structure")  
   
     > [!NOTE]  
-    >  변경 내용이 적용되려면 World Wide Web Publishing 서비스를 다시 시작하거나 작업자 프로세스가 재생될 때까지 기다려야 합니다.  그런 다음 브라우저의 디스크 캐시를 플러시하고 .vsto 파일을 다시 열어 봅니다.  
+    >  ClickOnce appends the .deploy extension to assemblies so that a secured installation of Internet Information Services (IIS) won't block the files because of an unsafe extension. When the user installs the solution, ClickOnce removes the .deploy extension.  
   
-##### IIS 7.0에 .vsto MIME 형식을 추가하려면  
+14. Copy the solution files to the installation location that you specified earlier in this procedure.  
   
-1.  IIS 7.0을 실행하는 서버에서 **시작**, **모든 프로그램**, **보조프로그램**을 차례로 선택합니다.  
+##  <a name="Trust"></a> Decide how you want to grant trust to the solution  
+ Before a solution can run on user computers, either you must grant trust or users must respond to a trust prompt when they install the solution. To grant trust to the solution, sign the manifests by using a certificate that identifies a known and trusted publisher. See [Trusting the Solution by Signing the Application and Deployment Manifests](../vsto/granting-trust-to-office-solutions.md#Signing).  
   
-2.  **명령 프롬프트**의 바로 가기 메뉴를 열고 **관리자 권한으로 실행**을 선택합니다.  
+ If you're deploying a document-level customization and you want to put the document into a folder on the user's computer or make the document available on a SharePoint site, ensure that Office trusts the location of the document. See [Granting Trust to Documents](../vsto/granting-trust-to-documents.md).  
   
-3.  **열기** 상자에 다음 경로를 입력하고 **확인** 단추를 선택합니다.  
+##  <a name="Helping"></a> Help users install the solution  
+ Users can install the solution by running the setup program, opening the deployment manifest, or in the case of a document-level customization, opening the document directly. As a best practice, users should install your solution by using the setup program. The other two approaches don't ensure that the prerequisite software is installed. If users want to open the document from the installation location, they must add it to the list of trusted locations in the Trust Center of the Office application.  
+  
+### <a name="opening-the-document-of-a-document-level-customization"></a>Opening the document of a document-level customization  
+ Users can open the document of a document-level customization directly from the installation location or by copying the document to their local computer and then opening the copy.  
+  
+ As a best practice, users should open a copy of the document on their computers so that multiple users won't try to open the same copy at the same time. To enforce this practice, you can configure your setup program to copy the document to user computers. See [Put the document of a solution onto the end user's computer (document-level customizations only)](#Put).  
+  
+### <a name="installing-the-solution-by-opening-the-deployment-manifest-from-an-iis-website"></a>Installing the solution by opening the deployment manifest from an IIS website  
+ Users can install an Office solution by opening the deployment manifest from the web. However, a secured installation of Internet Information Services (IIS) will block files that have the .vsto extension. The MIME type must be defined in IIS before you can deploy an Office solution by using IIS.  
+  
+##### <a name="to-add-the-vsto-mime-type-to-iis-60"></a>To add the .vsto MIME type to IIS 6.0  
+  
+1.  On the server that's running IIS 6.0, choose **Start**, **All Programs**, **Administrative Tools**,  **Internet Information Services (IIS) Manager**.  
+  
+2.  Choose the computer name, the **Web Sites** folder, or the web site that you're configuring.  
+  
+3.  On the menu bar, choose **Action**, **Properties**.  
+  
+4.  On the **HTTP Headers** tab, choose the **MIME Types** button.  
+  
+5.  In the **MIME Types** window, choose the **New** button.  
+  
+6.  In the **MIME Type** window, enter **.vsto** as the extension, enter **application/x-ms-vsto** as the MIME type, and then apply the new settings.  
+  
+    > [!NOTE]  
+    >  For the changes to take effect, you must restart the World Wide Web Publishing Service or wait for the worker process to recycle. You must then flush the browser's disk cache and then try to open the .vsto file again.  
+  
+##### <a name="to-add-the-vsto-mime-type-to-iis-70"></a>To add the .vsto MIME type to IIS 7.0  
+  
+1.  On the server that's running IIS 7.0, choose **Start**, **All Programs**, **Accessories**.  
+  
+2.  Open the shortcut menu for **Command Prompt**, and then choose  **Run as administrator.**  
+  
+3.  In the **Open** box, enter the following path, and then choose the **OK** button.  
   
     ```  
     %windir%\system32\inetsrv   
     ```  
   
-4.  다음 명령을 입력한 다음 새로운 설정을 적용합니다.  
+4.  Enter the following command, and then apply the new settings.  
   
     ```  
     set config /section:staticContent /+[fileExtension='.vsto',mimeType='application/x-ms-vsto']  
     ```  
   
     > [!NOTE]  
-    >  변경 내용이 적용되려면 World Wide Web Publishing 서비스를 다시 시작하거나 작업자 프로세스가 재생될 때까지 기다려야 합니다.  그런 다음 브라우저의 디스크 캐시를 플러시하고 .vsto 파일을 다시 열어 봅니다.  
+    >  For the changes to take effect, you must restart the World Wide Web Publishing Service, or you must wait for the worker process to recycle. You must then flush the browser's disk cache and then try to open the .vsto file again.  
   
-##  <a name="Put"></a> 최종 사용자의 컴퓨터에 솔루션 문서 저장\(문서 수준 사용자 지정에만 해당\)  
- 배포 후 작업을 만들어 최종 사용자의 컴퓨터에 솔루션의 문서를 복사할 수 있습니다.  이렇게 하면 사용자가 솔루션을 설치한 후에 수동으로 설치 위치에서 자신의 컴퓨터로 문서를 복사할 필요가 없습니다.  배포 후 작업을 정의하는 클래스를 만들고, 솔루션을 빌드 및 게시하고, 응용 프로그램 매니페스트를 수정하고, 응용 프로그램 및 배포 매니페스트에 다시 서명해야 합니다.  
+##  <a name="Put"></a> Put the document of a solution onto the end user's computer (document-level customizations only)  
+ You can copy the document of your solution onto the end user's computer for them by creating a post-deployment action. That way, the user doesn't have to manually copy the document from the installation location to their computer after they install your solution. You'll have to create a class that defines the post-deployment action, build and publish the solution, modify the application manifest, and re-sign the application and deployment manifest.  
   
- 다음 절차에서는 프로젝트 이름이 **ExcelWorkbook**이고 솔루션을 컴퓨터의 **C:\\publish** 디렉터리에 게시한다고 가정합니다.  
+ The following procedures assume that your project name is **ExcelWorkbook** and that you publish the solution to the **C:\publish** directory on your computer.  
   
-### 배포 후 작업을 정의하는 클래스를 만듭니다.  
+### <a name="create-a-class-that-defines-the-post-deployment-action"></a>Create a class that defines the post-deployment action  
   
-1.  메뉴 모음에서 **파일**, **추가**, **새 프로젝트**를 차례로 선택합니다.  
+1.  On the menu bar, choose **File**, **Add**, **New Project**.  
   
-2.  **새 프로젝트 추가** 대화 상자의 **설치된 템플릿** 창에서 **Windows** 폴더를 선택합니다.  
+2.  In the **Add New Project** dialog box, in the **Installed Templates** pane, choose the **Windows** folder.  
   
-3.  **템플릿** 창에서 **클래스 라이브러리** 템플릿을 선택합니다.  
+3.  In the **Templates** pane, choose the **Class Library** template.  
   
-4.  **이름** 필드에 **FileCopyPDA**를 입력한 후 **확인** 단추를 선택합니다.  
+4.  In the **Name** field, enter **FileCopyPDA**, and then choose the **OK** button.  
   
-5.  **솔루션 탐색기**에서 **FileCopyPDA** 프로젝트를 선택합니다.  
+5.  In **Solution Explorer**, choose the **FileCopyPDA** project.  
   
-6.  메뉴 모음에서 **프로젝트**, **참조 추가**를 선택합니다.  
+6.  On the menu bar, choose **Project**, **Add Reference**.  
   
-7.  **.NET** 탭에서 Microsoft.VisualStudio.Tools.Applications.Runtime 및 Microsoft.VisualStudio.Tools.Applications.ServerDocument에 대한 참조를 추가합니다.  
+7.  On the **.NET** tab, add references to Microsoft.VisualStudio.Tools.Applications.Runtime and Microsoft.VisualStudio.Tools.Applications.ServerDocument.  
   
-8.  클래스 이름을 `FileCopyPDA`로 바꾼 다음 파일의 내용을 이 코드로 바꿉니다.  이 코드는 다음 작업을 수행합니다.  
+8.  Rename the class to `FileCopyPDA`, and then replace the contents of the file with the code. This code performs the following tasks:  
   
-    -   사용자의 바탕 화면에 문서를 복사합니다.  
+    -   Copies the document to the user's desktop.  
   
-    -   \_AssemblyLocation 속성을 배포 매니페스트의 상대 경로에서 정규화된 경로로 변경합니다.  
+    -   Changes the _AssemblyLocation property from a relative path to a fully qualified path for the deployment manifest.  
   
-    -   사용자가 솔루션을 제거한 경우 파일을 삭제합니다.  
+    -   Deletes the file if the user uninstalls the solution.  
   
-     [!code-csharp[Trin_ExcelWorkbookPDA#7](../snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbookpda/cs/filecopypda/class1.cs#7)]
-     [!code-vb[Trin_ExcelWorkbookPDA#7](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbookpda/vb/filecopypda/class1.vb#7)]  
+     [!code-vb[Trin_ExcelWorkbookPDA#7](../vsto/codesnippet/VisualBasic/trin_excelworkbookpda/filecopypda/class1.vb#7)] [!code-csharp[Trin_ExcelWorkbookPDA#7](../vsto/codesnippet/CSharp/trin_excelworkbookpda/filecopypda/class1.cs#7)]  
   
-### 솔루션을 빌드하고 게시합니다.  
+### <a name="build-and-publish-the-solution"></a>Build and publish the solution  
   
-1.  **솔루션 탐색기**에서 **FileCopyPDA** 프로젝트의 바로 가기 메뉴를 열고 **빌드**를 선택합니다.  
+1.  In **Solution Explorer**, open the shortcut menu for the **FileCopyPDA** project, and then choose **Build**.  
   
-2.  **ExcelWorkbook** 프로젝트에 대한 바로 가기 메뉴를 열고 **빌드**를 선택합니다.  
+2.  Open the shortcut menu for the **ExcelWorkbook** project, and then choose **Build**.  
   
-3.  **ExcelWorkbook** 프로젝트에 대한 바로 가기 메뉴를 열고 **참조 추가**를 선택합니다.  
+3.  Open the shortcut menu for the **ExcelWorkbook** project, and then choose **Add Reference**.  
   
-4.  **참조 추가** 대화 상자에서 **프로젝트** 탭을 선택하고 **FileCopyPDA**를 선택한 다음 **확인** 단추를 선택합니다.  
+4.  In the **Add Reference** dialog box, choose the **Projects** tab, choose **FileCopyPDA**, and then choose the **OK** button.  
   
-5.  **솔루션 탐색기**에서 **ExcelWorkbook** 프로젝트를 선택합니다.  
+5.  In **Solution Explorer**, choose the **ExcelWorkbook** project.  
   
-6.  메뉴 모음에서 **프로젝트**, **새 폴더**를 선택합니다.  
+6.  On menu bar, choose **Project**, **New Folder**.  
   
-7.  Data를 입력한 다음 Enter 키를 선택합니다.  
+7.  Enter **Data**, and then choose the Enter key.  
   
-8.  **솔루션 탐색기**에서 **Data** 폴더를 선택합니다.  
+8.  In **Solution Explorer**, choose the **Data** folder.  
   
-9. 메뉴 모음에서 **프로젝트**, **기존 항목 추가**를 선택합니다.  
+9. On the menu bar, choose **Project**, **Add Existing Item**.  
   
-10. **기존 항목 추가** 대화 상자에서 **ExcelWorkbook** 프로젝트의 출력 디렉터리로 이동하여 **ExcelWorkbook.xlsx** 파일을 선택한 다음 **추가** 단추를 선택합니다.  
+10. In the **Add Existing Item** dialog box, browse to the output directory for the **ExcelWorkbook** project, choose the **ExcelWorkbook.xlsx** file, and then choose the **Add** button.  
   
-11. **솔루션 탐색기**에서 **ExcelWorkbook.xlsx** 파일을 선택합니다.  
+11. In **Solution Explorer** choose the **ExcelWorkbook.xlsx** file.  
   
-12. **속성** 창에서 **빌드 작업** 속성을 **내용**으로 변경하고 **출력 디렉터리에 복사** 속성을 **변경된 내용만 복사**로 변경합니다.  
+12. In the **Properties** window, change the **Build Action** property to **Content** and the **Copy to Output Directory** property to **Copy if newer**.  
   
-     이러한 단계를 완료한 경우 프로젝트는 다음 그림과 같습니다.  
+     When you've completed these steps, your project will resemble the following illustration.  
   
-     ![배포 후 작업의 프로젝트 구조입니다.](../vsto/media/vsto-postdeployment.png "배포 후 작업의 프로젝트 구조입니다.")  
+     ![Project structure of the post deployment action.](../vsto/media/vsto-postdeployment.png "Project structure of the post deployment action.")  
   
-13. **ExcelWorkbook** 프로젝트를 게시합니다.  
+13. Publish the **ExcelWorkbook** project.  
   
-### 응용 프로그램 매니페스트 수정  
+### <a name="modify-the-application-manifest"></a>Modify the application manifest  
   
-1.  **파일 탐색기**를 사용하여 **c:\\publish** 디렉터리를 엽니다.  
+1.  Open the **c:\publish** directory by using **File Explorer**.  
   
-2.  **Application Files** 폴더를 열고, 솔루션의 가장 최근에 게시된 버전에 해당하는 폴더를 엽니다.  
+2.  Open the **Application Files** folder, and then open the folder that corresponds to the most recent published version of your solution.  
   
-3.  메모장 등의 텍스트 편집기에서 **ExcelWorkbook.dll.manifest** 파일을 엽니다.  
+3.  Open the **ExcelWorkbook.dll.manifest** file in a text editor such as Notepad.  
   
-4.  `</vstav3:update>` 요소 뒤에 다음 코드를 추가합니다.  `<vstav3:entryPoint>` 요소의 클래스 특성으로 *NamespaceName.ClassName* 구문을 사용합니다.  다음 예제에서는 네임스페이스 및 클래스 이름이 같기 때문에 결과 진입점 이름은 `FileCopyPDA.FileCopyPDA`입니다.  
+4.  After the `</vstav3:update>` element, add following code. For the class attribute of the `<vstav3:entryPoint>` element, use the following syntax: *NamespaceName.ClassName*. In the following example, the namespace and class names are the same, so the resulting entry point name is `FileCopyPDA.FileCopyPDA`.  
   
     ```  
     <vstav3:postActions>  
@@ -280,21 +284,25 @@ caps.handback.revision: 58
     </vstav3:postActions>  
     ```  
   
-### 응용 프로그램 및 배포 매니페스트 다시 서명  
+### <a name="re-sign-the-application-and-deployment-manifests"></a>Re-sign the application and deployment manifests  
   
-1.  **%USERPROFILE%\\Documents\\Visual Studio 2013\\Projects\\ExcelWorkbook\\ExcelWorkbook** 폴더에서 **ExcelWorkbook\_TemporaryKey.pfx** 인증서 파일을 복사하여 *PublishFolder* **\\Application Files\\ExcelWorkbook***MostRecentPublishedVersion* 폴더에 붙여 넣습니다.  
+1.  In the **%USERPROFILE%\Documents\Visual Studio 2013\Projects\ExcelWorkbook\ExcelWorkbook** folder, copy the **ExcelWorkbook_TemporaryKey.pfx** certificate file, and then paste it into the *PublishFolder* **\Application Files\ExcelWorkbook***MostRecentPublishedVersion* folder.  
   
-2.  Visual Studio 명령 프롬프트를 열고 디렉터리를 **c:\\publish\\Application Files\\ExcelWorkbook***MostRecentPublishedVersion* 폴더\(예: **c:\\publish\\Application Files\\ExcelWorkbook\_1\_0\_0\_4**\)로 변경합니다.  
+2.  
   
-3.  다음 명령을 실행하여 수정된 응용 프로그램 매니페스트에 서명합니다.  
+3.  Open the Visual Studio command prompt, and then change directories to the **c:\publish\Application Files\ExcelWorkbook***MostRecentPublishedVersion* folder (for example, **c:\publish\Application Files\ExcelWorkbook_1_0_0_4**).  
+  
+4.  Sign the modified application manifest by running the following command:  
   
     ```  
     mage -sign ExcelWorkbook.dll.manifest -certfile ExcelWorkbook_TemporaryKey.pfx  
     ```  
   
-     "ExcelWorkbook.dll.manifest에 서명했습니다"라는 메시지가 나타납니다.  
+     The message "ExcelWorkbook.dll.manifest successfully signed" appears.  
   
-4.  **c:\\publish** 폴더로 변경한 후 다음 명령을 실행하여 배포 매니페스트를 업데이트 및 서명합니다.  
+5.  
+  
+6.  Change to the **c:\publish** folder, and then update and sign the deployment manifest by running the following command:  
   
     ```  
     mage -update ExcelWorkbook.vsto -appmanifest "Application Files\Ex  
@@ -302,168 +310,168 @@ caps.handback.revision: 58
     ```  
   
     > [!NOTE]  
-    >  앞의 예제에서 MostRecentVersionNumber를 솔루션의 가장 최근에 게시된 버전에 해당하는 버전 번호\(예: **1\_0\_0\_4**\)로 바꿉니다.  
+    >  In the previous example, replace MostRecentVersionNumber with the version number of the most recently published version of your solution (for example, **1_0_0_4**).  
   
-     "ExcelWorkbook.vsto에 서명했습니다."라는 메시지가 나타납니다.  
+     The message "ExcelWorkbook.vsto successfully signed" appears.  
   
-5.  ExcelWorkbook.vsto 파일을 **c:\\publish\\Application Files\\ExcelWorkbook***MostRecentVersionNumber* 디렉터리에 복사합니다.  
+7.  Copy the ExcelWorkbook.vsto file to the **c:\publish\Application Files\ExcelWorkbook***MostRecentVersionNumber* directory.  
   
-##  <a name="SharePoint"></a> SharePoint 실행 서버에 솔루션 문서 저장\(문서 수준 사용자 지정에만 해당\)  
- SharePoint를 사용하여 최종 사용자에게 문서 수준 사용자 지정을 게시할 수 있습니다.  사용자가 SharePoint 사이트에서 문서를 열면 런타임에 자동으로 공유 네트워크 폴더의 솔루션을 사용자의 로컬 컴퓨터에 설치합니다.  솔루션이 로컬로 설치된 후, 문서가 바탕 화면과 같은 다른 위치에 복사되는 경우에도 사용자 지정은 계속 작동합니다.  
+##  <a name="SharePoint"></a> Put the document of a solution onto a server that's running SharePoint (document-level customizations only)  
+ You can publish your document-level customization to end users by using SharePoint. When users go to the SharePoint site and open the document, the runtime automatically installs the solution from the shared network folder to the user's local computer. After the solution is installed locally, the customization will still function even if the document is copied elsewhere, such as the desktop.  
   
-#### SharePoint를 실행하는 서버에 문서를 저장하려면  
+#### <a name="to-put-the-document-on-a-server-thats-running-sharepoint"></a>To put the document on a server that's running SharePoint  
   
-1.  SharePoint 사이트의 문서 라이브러리에 솔루션 문서를 추가합니다.  
+1.  Add the solution document to a document library on a SharePoint site.  
   
-2.  다음 방법 중 하나에 해당하는 단계를 수행합니다.  
+2.  Perform the steps for one of the following approaches:  
   
-    -   Office 구성 도구를 사용하여 모든 사용자 컴퓨터에 있는 Word 또는 Excel의 보안 센터에 SharePoint 실행 서버를 추가합니다.  
+    -   Use the Office Configuration Tool to add the server that's running SharePoint to the Trust Center in Word or Excel on all user computers.  
   
-         [Office 2010의 보안 정책 및 설정](http://go.microsoft.com/fwlink/?LinkId=99227)을 참조하세요.  
+         See [Security policies and settings in Office 2010](http://go.microsoft.com/fwlink/?LinkId=99227).  
   
-    -   각 사용자는 다음 단계를 수행해야 합니다.  
+    -   Ensure that each user performs the following steps.  
   
-        1.  로컬 컴퓨터에서 Word나 Excel을 열고 **파일** 탭을 선택한 다음 **옵션** 단추를 선택합니다.  
+        1.  On the local computer, open Word or Excel, choose the **File** tab, and then choose the **Options** button.  
   
-        2.  **보안 센터** 대화 상자에서 **신뢰할 수 있는 위치** 단추를 선택합니다.  
+        2.  In the **Trust Center** dialog box, choose the **Trusted Locations** button.  
   
-        3.  **네트워크상의 신뢰할 수 있는 위치 허용\(권장하지 않음\)** 확인란을 선택한 다음 **새 위치 추가** 단추를 선택합니다.  
+        3.  Select the **Allow Trusted Locations on my network (not recommended)** check box, and then choose the **Add new location** button.  
   
-        4.  **경로** 상자에 업로드한 문서가 있는 SharePoint 문서 라이브러리의 URL\(예: *http:\/\/SharePointServerName\/TeamName\/ProjectName\/DocumentLibraryName*\)을 입력합니다.  
+        4.  In the **Path** box, enter the URL of the SharePoint document library that contains the document that you uploaded (for example, *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName*).  
   
-             default.aspx나 AllItems.aspx와 같은 기본 웹 페이지의 이름은 추가하지 마세요.  
+             Don't add the name of the default Web page, such as default.aspx or AllItems.aspx.  
   
-        5.  **이 위치의 하위 폴더도 신뢰할 수 있음** 확인란을 선택한 다음 **확인** 단추를 선택합니다.  
+        5.  Select the **Subfolders of this location are also trusted** check box, and then choose the **OK** button.  
   
-             사용자가 SharePoint 사이트에서 문서를 열면 이 문서가 열리고 사용자 지정이 설치됩니다.  사용자는 바탕 화면에 이 문서를 복사할 수 있습니다.  문서의 속성에서 문서의 네트워크 위치를 가리키므로 사용자 지정은 계속 실행됩니다.  
+             When users open the document from the SharePoint site, the document opens, and the customization is installed. Users can copy the document to their desktop. The customization will still run because properties in the document point to the network location of the document.  
   
-##  <a name="Custom"></a> 사용자 지정 설치 관리자 만들기  
- 솔루션을 게시할 때 만들어진 설치 프로그램을 사용하는 대신 Office 솔루션용 사용자 지정 설치 관리자를 만들 수 있습니다.  예를 들어 로그온 스크립트를 사용하여 설치를 시작하거나 사용자 상호 작업 없이 배치 파일을 사용하여 솔루션을 설치할 수 있습니다.  이러한 시나리오는 최종 사용자의 컴퓨터에 필수 구성 요소가 이미 설치된 경우에 가장 적합합니다.  
+##  <a name="Custom"></a> Create a custom installer  
+ You can create a custom installer for your Office solution, instead of using the setup program that's created for you when you publish the solution. For example, you could use a logon script to start the installation, or you could use a batch file to install the solution without user interaction. These scenarios work best if the prerequisites are already installed on end-user computers.  
   
- 사용자 지정 설치 프로세스의 일부로, 다음 위치에 기본적으로 설치되어 있는 Office 솔루션용 설치 관리자 도구\(VSTOInstaller.exe\)가 호출됩니다.  
+ As part of your custom installation process, call the installer tool for Office solutions (VSTOInstaller.exe), which is installed in the following location by default:  
   
- %commonprogramfiles%\\microsoft shared\\VSTO\\10.0\\VSTOInstaller.exe  
+ %commonprogramfiles%\microsoft shared\VSTO\10.0\VSTOInstaller.exe  
   
- 이 도구가 해당 위치에 없는 경우, HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\VSTO Runtime Setup\\v4\\InstallerPath 레지스트리 키나 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\VSTO Runtime Setup\\v4\\InstallerPath 레지스트리 키를 사용하여 이 도구의 경로를 찾을 수 있습니다.  
+ If the tool isn't in that location, you can use the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSTO Runtime Setup\v4\InstallerPath or HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSTO Runtime Setup\v4\InstallerPath registry key to find the path to that tool.  
   
- VSTOinstaller.exe와 함께 다음 매개 변수를 사용할 수 있습니다.  
+ You can use the following parameters with VSTOinstaller.exe.  
   
-|매개 변수|정의|  
-|-----------|--------|  
-|\/Install 또는 \/I|솔루션을 설치합니다.  이 옵션 뒤에는 배포 매니페스트의 경로가 와야 합니다.  로컬 컴퓨터, UNC\(Universal Naming Convention\) 파일 공유에 대한 경로를 지정할 수 있습니다.  로컬 경로\(*C:\\FolderName\\PublishFolder*\), 상대 경로\(*Publish\\*\) 또는 정규화된 위치\(*\\\\ServerName\\FolderName* 또는 http:\/\/*ServerName\/FolderName*\)를 지정할 수 있습니다.|  
-|\/Uninstall 또는 \/U|솔루션을 제거합니다.  이 옵션 뒤에는 배포 매니페스트의 경로가 와야 합니다.  경로를 로컬 컴퓨터의 UNC 파일 공유로 지정할 수 있습니다.  로컬 경로\(*C:\\FolderName\\PublishFolder*\), 상대 경로\(*Publish\\*\) 또는 정규화된 위치\(*\\\\ServerName\\FolderName* 또는 http:\/\/*ServerName\/FolderName*\)를 지정할 수 있습니다.|  
-|\/Silent 또는 \/S|입력에 대한 메시지나 그 밖의 메시지를 사용자에게 표시하지 않고 설치 또는 제거합니다.  신뢰 프롬프트가 필요한 경우 사용자 지정이 설치 또는 업데이트되지 않습니다.|  
-|\/Help 또는 \/?|도움말 정보를 표시합니다.|  
+|Parameter|Definition|  
+|---------------|----------------|  
+|/Install or /I|Install the solution. You must follow this option with the path of a deployment manifest. You can specify a path on the local computer, a universal naming convention (UNC) file share. You can specify a local path (*C:\FolderName\PublishFolder*), a relative path (*Publish\\*), or a fully qualified location (*\\\ServerName\FolderName* or http://*ServerName/FolderName*).|  
+|/Uninstall or /U|Uninstall the solution. You must follow this option with the path of a deployment manifest. You can specify a path can be on the local computer, a UNC file share. You can specify a local path (*c:\FolderName\PublishFolder*), a relative path (*Publish\\*), or a fully qualified location (*\\\ServerName\FolderName* or http://*ServerName/FolderName*).|  
+|/Silent or /S|Install or uninstall without prompting the user for input or displaying any messages. If a trust prompt is required, the customization isn't installed or updated.|  
+|/Help or /?|Display the Help information.|  
   
- VSTOinstaller.exe를 실행하면 다음과 같은 오류 코드가 나타날 수 있습니다.  
+ When you run VSTOinstaller.exe, the following error codes might appear.  
   
-|오류 코드|정의|  
-|-----------|--------|  
-|0|솔루션이 성공적으로 설치되었거나 제거되었습니다. 또는 VSTOInstaller 도움말이 표시되었습니다.|  
-|\-100|하나 이상의 명령줄 옵션이 잘못되었거나 두 번 이상 설정되었습니다.  자세한 내용은 "vstoinstaller \/?"를 입력하거나 [연습: ClickOnce Office 솔루션용 사용자 지정 설치 관리자 만들기](http://msdn.microsoft.com/ko-kr/3e5887ed-155f-485d-b8f6-3c02c074085e)를 참조하세요.|  
-|\-101|하나 이상의 명령줄 옵션이 잘못되었습니다.  자세한 내용을 보려면 "vstoinstaller \/?"를 입력하세요.|  
-|\-200|배포 매니페스트 URI가 잘못되었습니다.  자세한 내용을 보려면 "vstoinstaller \/?"를 입력하세요.|  
-|\-201|배포 매니페스트가 잘못되었으므로 솔루션을 설치할 수 없습니다.  [Office 솔루션의 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)를 참조하세요.|  
-|\-202|응용 프로그램 매니페스트의 Visual Studio Tools for Office 섹션이 잘못되었으므로 솔루션을 설치할 수 없습니다.  [Office 솔루션의 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)를 참조하세요.|  
-|\-203|다운로드 오류가 발생하여 솔루션을 설치할 수 없습니다.  배포 매니페스트의 URI 또는 네트워크 파일 위치를 확인한 다음 다시 시도하세요.|  
-|\-300|보안 예외가 발생하여 솔루션을 설치할 수 없습니다.  [Office 솔루션 보안](../vsto/securing-office-solutions.md)을 참조하세요.|  
-|\-400|솔루션을 설치할 수 없습니다.|  
-|\-401|솔루션을 제거할 수 없습니다.|  
-|\-500|솔루션을 설치 또는 제거할 수 없거나 배포 매니페스트를 다운로드할 수 없어 작업이 취소되었습니다.|  
+|Error Code|Definition|  
+|----------------|----------------|  
+|0|The solution was successfully installed or uninstalled, or the VSTOInstaller Help appeared.|  
+|-100|One or more command-line options isn't valid or was set more than once. For more information, enter "vstoinstaller /?" or see [Creating a Custom Installer for a ClickOnce Office Solution](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e).|  
+|-101|One or more command-line options isn't valid. For more information, enter "vstoinstaller /?".|  
+|-200|The deployment manifest URI isn't valid. For more information, enter "vstoinstaller /?".|  
+|-201|The solution couldn't be installed because the deployment manifest isn't valid. See [Deployment Manifests for Office Solutions](../vsto/deployment-manifests-for-office-solutions.md).|  
+|-202|The solution couldn't be installed because the Visual Studio Tools for Office section of the application manifest isn't valid. See [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md).|  
+|-203|The solution couldn't be installed because a download error occurred. Check the URI or network file location of the deployment manifest, and then try again.|  
+|-300|The solution couldn't be installed because a security exception occurred. See [Securing Office Solutions](../vsto/securing-office-solutions.md).|  
+|-400|The solution couldn't be installed.|  
+|-401|The solution couldn't be uninstalled.|  
+|-500|The operation has been canceled because the solution couldn't be installed or uninstalled or the deployment manifest couldn't be downloaded.|  
   
-##  <a name="Update"></a> 업데이트 게시  
- 솔루션을 업데이트하려면 **프로젝트 디자이너** 또는 **게시 마법사**를 사용하여 솔루션을 다시 게시한 다음 업데이트된 솔루션을 설치 위치에 복사합니다.  설치 위치에 파일을 복사하면 이전 파일을 덮어쓰게 됩니다.  
+##  <a name="Update"></a> Publish an update  
+ To update a solution, you publish it again by using the **Project Designer** or **Publish Wizard**, and then you copy the updated solution to the installation location. When you copy the files to the installation location, make sure that you overwrite the previous files.  
   
- 다음 번에 솔루션에서 업데이트를 검사할 때 자동으로 새 버전을 찾아 로드할 수 있습니다.  
+ The next time that the solution checks for an update, it'll find and load the new version automatically.  
   
-##  <a name="Location"></a> 솔루션의 설치 위치 변경  
- 솔루션이 게시된 후 설치 경로를 추가하거나 변경할 수 있습니다.  다음 이유 중 하나 이상으로 인해 설치 경로를 변경하려 할 수 있습니다.  
+##  <a name="Location"></a> Change the installation location of a solution  
+ You can add or change the installation path after a solution is published. You might want to change the installation path for one or more of the following reasons:  
   
--   설치 경로가 알려지기 전에 설치 프로그램을 컴파일한 경우  
+-   The setup program was compiled before the installation path was known.  
   
--   솔루션 파일이 다른 위치에 복사된 경우  
+-   The solution files have been copied to a different location.  
   
--   설치 파일이 호스팅된 서버에 새 이름 또는 위치가 있는 경우  
+-   The server that hosts the installation files has a new name or location.  
   
- 솔루션의 설치 경로를 변경하려면 설치 프로그램을 업데이트한 다음 사용자가 이를 실행해야 합니다.  문서 수준 사용자 지정의 경우, 사용자가 문서의 속성이 새 위치를 가리키도록 업데이트해야 합니다.  
+ To change the installation path of a solution, you must update the setup program, and then users must run it. For document-level customizations, users must also update a property in their document to point to the new location.  
   
 > [!NOTE]  
->  사용자가 문서 속성을 업데이트하지 않도록 하려면 사용자가 업데이트된 문서를 설치 위치에서 가져오도록 할 수 있습니다.  
+>  If you don't want to ask users to update their document properties, you can ask users to get the updated document from the installation location.  
   
-#### 설치 프로그램에서 설치 경로를 변경하려면  
+#### <a name="to-change-the-installation-path-in-the-setup-program"></a>To change the installation path in the setup program  
   
-1.  **명령 프롬프트** 창을 열고 디렉터리를 설치 폴더로 변경합니다.  
+1.  Open a **Command Prompt** window, and then change directories to the installation folder.  
   
-2.  설치 프로그램을 실행하고 새 설치 경로를 문자열로 받아들이는 `/url` 매개 변수를 포함시킵니다.  
+2.  Run the setup program, and include the `/url` parameter, which takes the new installation path as a string.  
   
-     다음 예제에서는 Fabrikam 웹 사이트에 있는 위치로 설치 경로를 변경하는 방법을 보여 주지만, 해당 URL을 원하는 경로로 바꿀 수 있습니다.  
+     The following example shows how to change the installation path to a location on the Fabrikam website, but you can replace that URL with the path that you want:  
   
     ```  
     setup.exe /url="http://www.fabrikam.com/newlocation"  
     ```  
   
     > [!NOTE]  
-    >  메시지가 표시되어 실행 파일의 시그니처가 무효가 되었음을 알리는 경우, 솔루션 서명에 사용된 인증서는 더 이상 유효하지 않으며 게시자는 알 수 없게 됩니다.  그 결과 사용자는 솔루션의 소스를 신뢰함을 확인한 뒤에야 이를 설치할 수 있게 됩니다.  
+    >  If a message appears and state that the signature of the executable will be invalidated, the certificate that was used to sign the solution is no longer valid, and the publisher is unknown. As a result, users will need to confirm that they trust the source of the solution before they can install it.  
   
     > [!NOTE]  
-    >  현재 URL 값을 표시하려면 `setup.exe /url`을 실행하세요.  
+    >  To display the current value of the URL, run `setup.exe /url`.  
   
- 문서 수준 사용자 지정의 경우, 사용자는 문서를 열고 해당 \_AssemblyLocation 속성을 업데이트해야 합니다.  다음 단계에서는 사용자가 이 작업을 수행하는 방법을 설명합니다.  
+ For document-level customizations, users must open the document and then update its _AssemblyLocation property. The following steps describe how users can perform this task.  
   
-#### 문서에서 \_AssemblyLocation 속성을 업데이트하려면  
+#### <a name="to-update-the-assemblylocation-property-in-a-document"></a>To update the _AssemblyLocation property in a document  
   
-1.  다음 그림과 같이 **파일** 탭에서 **정보**를 선택합니다.  
+1.  On the **File** tab, choose **Info**, which the following illustration shows.  
   
-     ![Excel의 정보 탭](../vsto/media/vsto-infotab.png "Excel의 정보 탭")  
+     ![Info tab in Excel](../vsto/media/vsto-infotab.png "Info tab in Excel")  
   
-2.  다음 그림과 같이 **속성** 목록에서 **고급 속성**을 선택합니다.  
+2.  In the **Properties** list, choose **Advanced Properties**, which the following illustration shows.  
   
-     ![Excel의 고급 속성입니다.](../vsto/media/vsto-advanceddocumentproperties.png "Excel의 고급 속성입니다.")  
+     ![Advanced Properties in Excel.](../vsto/media/vsto-advanceddocumentproperties.png "Advanced Properties in Excel.")  
   
-3.  다음 그림과 같이 **속성** 목록의 **사용자 지정** 탭에서 \_AssemblyLocation을 선택합니다.  
+3.  On the **Custom** tab in the **Properties** list, choose _AssemblyLocation, as the following illustration shows.  
   
-     ![AssemblyLocation 속성입니다.](../vsto/media/vsto-assemblylocationproperty.png "AssemblyLocation 속성입니다.")  
+     ![The AssemblyLocation property.](../vsto/media/vsto-assemblylocationproperty.png "The AssemblyLocation property.")  
   
-     **값** 상자에는 배포 매니페스트 식별자가 들어 있습니다.  
+     The **Value** box contains the deployment manifest identifier.  
   
-4.  식별자의 앞 부분에 *Path* |*Identifier* 형식으로 문서의 정규화된 경로와 세로 줄을 입력합니다\(예: *File:\/\/ServerName\/FolderName\/FileName|74744e4b\-e4d6\-41eb\-84f7\-ad20346fe2d9*\).  
+4.  Before the identifier, enter the fully qualified path of the document, followed by a bar, in the format *Path*|*Identifier* (for example, *File://ServerName/FolderName/FileName|74744e4b-e4d6-41eb-84f7-ad20346fe2d9*.  
   
-     이 식별자의 형식을 지정하는 방법에 대한 자세한 내용은 [사용자 지정 문서 속성 개요](../vsto/custom-document-properties-overview.md)를 참조하세요.  
+     For more information about how to format this identifier, see [Custom Document Properties Overview](../vsto/custom-document-properties-overview.md).  
   
-5.  **확인** 단추를 선택한 후 문서를 저장하고 닫습니다.  
+5.  Choose the **OK** button, and then save and close the document.  
   
-6.  \/url 매개 변수를 사용하지 않고 설치 프로그램을 실행하여 지정한 위치에 솔루션을 설치합니다.  
+6.  Run the setup program without the /url parameter to install the solution in the specified location.  
   
-##  <a name="Roll"></a> 이전 버전으로 솔루션 롤백  
- 솔루션을 롤백하면 사용자의 해당 솔루션이 이전 버전으로 돌아갑니다.  
+##  <a name="Roll"></a> Roll back a solution to an earlier version  
+ When you roll back a solution, you revert users back to an earlier version of that solution.  
   
-#### 솔루션을 롤백하려면  
+#### <a name="to-roll-back-a-solution"></a>To roll back a solution  
   
-1.  솔루션의 설치 위치를 엽니다.  
+1.  Open the installation location of the solution.  
   
-2.  최상위 게시 폴더에서 배포 매니페스트\(.vsto 파일\)를 삭제합니다.  
+2.  In the top-level publish folder, delete the deployment manifest (the .vsto file).  
   
-3.  롤백할 버전의 하위 폴더를 찾습니다.  
+3.  Find the subfolder for the version to which you want to roll back.  
   
-4.  해당 하위 폴더의 배포 매니페스트를 최상위 게시 폴더에 복사합니다.  
+4.  Copy the deployment manifest from that subfolder to the top-level publish folder.  
   
-     예를 들어 **OutlookAddIn1**이라는 솔루션을 버전 1.0.0.1에서 버전 1.0.0.0으로 롤백하려면 **OutlookAddIn1\_1\_0\_0\_0** 폴더의 **OutlookAddIn1.vsto** 파일을 복사한 다음  최상위 게시 폴더에 이 파일을 붙여 넣습니다. 이렇게 하면 이 폴더에 있던 **OutlookAddIn1\_1\_0\_0\_1**의 버전별 배포 매니페스트를 덮어쓰게 됩니다.  
+     For example, to roll back a solution that's called **OutlookAddIn1** from version 1.0.0.1 to version 1.0.0.0, copy the file **OutlookAddIn1.vsto** from the **OutlookAddIn1_1_0_0_0** folder. Paste the file into the top-level publish folder, overwriting the version-specific deployment manifest for **OutlookAddIn1_1_0_0_1** that was already there.  
   
-     다음 그림에서는 이 예제의 게시 폴더 구조를 보여 줍니다.  
+     The following illustration shows the publish folder structure in this example.  
   
-     ![게시 폴더 구조](~/vsto/media/publishfolderstructure.png "게시 폴더 구조")  
+     ![Publish Folder Structure](../vsto/media/publishfolderstructure.png "Publish Folder Structure")  
   
-     다음에 사용자가 응용 프로그램 또는 사용자 지정 문서를 열면 배포 매니페스트 변경 사항이 검색됩니다.  이전 버전의 Office 솔루션은 ClickOnce 캐시에서 실행됩니다.  
+     The next time that a user opens the application or customized document, the deployment manifest change is detected. The earlier version of the Office solution runs from the ClickOnce cache.  
   
 > [!NOTE]  
->  로컬 데이터는 이전 버전의 솔루션 하나에 대해서만 저장됩니다.  두 버전을 롤백하는 경우 로컬 데이터는 유지되지 않습니다.  로컬 데이터에 대한 자세한 내용은 [ClickOnce 응용 프로그램의 로컬 및 원격 데이터 액세스](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)를 참조하세요.  
+>  Local data is saved for only one previous version of a solution. If you roll back two versions, local data isn't retained. For more information about local data, see [Accessing Local and Remote Data in ClickOnce Applications](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
   
-## 참고 항목  
- [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)   
- [Office 솔루션 게시](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
- [방법: ClickOnce를 사용하여 Office 솔루션 게시](http://msdn.microsoft.com/ko-kr/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
- [방법: ClickOnce Office 솔루션 설치](http://msdn.microsoft.com/ko-kr/14702f48-9161-4190-994c-78211fe18065)   
- [방법: ClickOnce를 사용하여 SharePoint 서버에 문서 수준 Office 솔루션 게시](http://msdn.microsoft.com/ko-kr/2408e809-fb78-42a1-9152-00afa1522e58)   
- [연습: ClickOnce Office 솔루션용 사용자 지정 설치 관리자 만들기](http://msdn.microsoft.com/ko-kr/3e5887ed-155f-485d-b8f6-3c02c074085e)  
+## <a name="see-also"></a>See Also  
+ [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
+ [Publishing Office Solutions](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
+ [How to: Publish an Office Solution by Using ClickOnce](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
+ [How to: Install a ClickOnce Office Solution](http://msdn.microsoft.com/en-us/14702f48-9161-4190-994c-78211fe18065)   
+ [How to: Publish a Document-Level Office Solution to a SharePoint Server by Using ClickOnce](http://msdn.microsoft.com/en-us/2408e809-fb78-42a1-9152-00afa1522e58)   
+ [Creating a Custom Installer for a ClickOnce Office Solution](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)  
   
   

@@ -1,107 +1,110 @@
 ---
-title: "방법: 워크시트에 NamedRange 컨트롤 추가"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "범위, 워크시트에 추가"
-  - "NamedRange 컨트롤, 워크시트에 추가"
-  - "컨트롤[Visual Studio에서 Office 개발], 워크시트에 추가"
+title: 'How to: Add NamedRange Controls to Worksheets | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ranges, adding to worksheets
+- NamedRange control, adding to worksheets
+- controls [Office development in Visual Studio], adding to worksheets
 ms.assetid: da7ec48f-92cb-4fa3-b3e2-447c238d17a8
 caps.latest.revision: 54
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 53
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 45fb2c6d6950ea462101f0c60ed2642fedec6510
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 워크시트에 NamedRange 컨트롤 추가
-  디자인 타임 및 런타임에 문서 수준 프로젝트에서 Microsoft Office Excel 워크시트에 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 추가할 수 있습니다.  
+# <a name="how-to-add-namedrange-controls-to-worksheets"></a>How to: Add NamedRange Controls to Worksheets
+  You can add <xref:Microsoft.Office.Tools.Excel.NamedRange> controls to a Microsoft Office Excel worksheet at design time and at run time in document-level projects.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- 런타임에 VSTO 추가 기능 프로젝트에서 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 추가할 수도 있습니다.  
+ You can also add <xref:Microsoft.Office.Tools.Excel.NamedRange> controls at run time in VSTO Add-in projects.  
   
- 이 항목에서는 다음 작업에 대해 설명합니다.  
+ This topic describes the following tasks:  
   
--   [디자인 타임에 NamedRange 컨트롤 추가](#designtime)  
+-   [Adding NamedRange controls at design time](#designtime)  
   
--   [런타임에 문서 수준 프로젝트에서 NamedRange 컨트롤 추가](#runtimedoclevel)  
+-   [Adding NamedRange controls at run time in a document-level project](#runtimedoclevel)  
   
--   [런타임에 VSTO 추가 기능 프로젝트에서 NamedRange 컨트롤 추가](#runtimeaddin)  
+-   [Adding NamedRange controls at run time in an VSTO Add-in project](#runtimeaddin)  
   
- <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤에 대한 자세한 내용은 [NamedRange 컨트롤](../vsto/namedrange-control.md)을 참조하세요.  
+ For more information about <xref:Microsoft.Office.Tools.Excel.NamedRange> controls, see [NamedRange Control](../vsto/namedrange-control.md).  
   
-##  <a name="designtime"></a> 디자인 타임에 NamedRange 컨트롤 추가  
- 디자인 타임에 문서 수준 프로젝트에서 워크시트에 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 추가하기 위한 여러 가지 방법이 있습니다. 즉, Excel, Visual Studio **도구 상자** 및 **데이터 원본** 창에서 추가할 수 있습니다.  
+##  <a name="designtime"></a> Adding NamedRange Controls at Design Time  
+ There are several ways to add <xref:Microsoft.Office.Tools.Excel.NamedRange> controls to a worksheet in a document-level project at design time: from within Excel, from the Visual Studio **Toolbox**, and from the **Data Sources** window.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-#### Excel에서 이름 상자를 사용하여 워크시트에 NamedRange 컨트롤을 추가하려면  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-name-box-in-excel"></a>To add a NamedRange control to a worksheet using the Name Box in Excel  
   
-1.  명명된 범위에 포함하려는 셀을 선택합니다.  
+1.  Select the cell or cells you want to include in the named range.  
   
-2.  **이름 상자**에 범위 이름을 입력한 다음 Enter 키를 누릅니다.  
+2.  In the **Name Box**, type a name for the range and press ENTER.  
   
-     **이름 상자**는 워크시트의 **A** 열 바로 위에 수식 입력줄 옆에 있습니다.  
+     The **Name Box** is located beside the formula bar, just above column **A** of the worksheet.  
   
-#### 도구 상자를 사용하여 워크시트에 NamedRange 컨트롤을 추가하려면  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-toolbox"></a>To add a NamedRange control to a worksheet using the Toolbox  
   
-1.  **도구 상자**를 열고 **Excel 컨트롤** 탭을 클릭합니다.  
+1.  Open the **Toolbox** and click the **Excel Controls** tab.  
   
-2.  <xref:Microsoft.Office.Tools.Excel.NamedRange>를 클릭하고 워크시트에 끌어 놓습니다.  
+2.  Click <xref:Microsoft.Office.Tools.Excel.NamedRange> and drag it to a worksheet.  
   
-     **명명된 범위 추가** 대화 상자가 나타납니다.  
+     The **Add Named Range** dialog box appears.  
   
-3.  명명된 범위에 포함하려는 셀을 선택합니다.  
+3.  Select the cell or cells you want to include in the named range.  
   
-4.  **확인**을 클릭합니다.  
+4.  Click **OK**.  
   
-     컨트롤에 지정된 기본 이름을 원하지 않으면 **속성** 창에서 이름을 변경할 수 있습니다.  
+     If you do not want the default name that is given to the control, you can change the name in the **Properties** window.  
   
-#### 데이터 원본 창을 사용하여 워크시트에 NamedRange 컨트롤을 추가하려면  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-data-sources-window"></a>To add a NamedRange control to a worksheet using the Data Sources window  
   
-1.  **데이터 원본** 창을 열고 데이터베이스에서 데이터 원본을 만듭니다. 자세한 내용은 [방법: 데이터베이스의 데이터에 연결](~/data-tools/how-to-connect-to-data-in-a-database.md)을 참조하세요.  
+1.  Open the **Data Sources** window and create a data source for your project. For more information, see [Add new connections](../data-tools/add-new-connections.md).  
   
-2.  **데이터 원본** 창에서 워크시트로 단일 필드를 끌어 놓습니다.  
+2.  Drag a single field from the **Data Sources** window to your worksheet.  
   
-     데이터 바인딩된 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤이 워크시트에 추가됩니다. 자세한 내용은 [데이터 바인딩 및 Windows Forms](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27)을 참조하세요.  
+     A data-bound <xref:Microsoft.Office.Tools.Excel.NamedRange> control is added to the worksheet. For more information, see [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms).  
   
-##  <a name="runtimedoclevel"></a> 런타임에 문서 수준 프로젝트에서 NamedRange 컨트롤 추가  
- 런타임에 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 워크시트에 프로그래밍 방식으로 추가할 수 있습니다. 이를 통해 이벤트에 대한 응답으로 호스트 컨트롤을 만들 수 있습니다. 동적으로 생성된 명명된 범위는 워크시트를 닫을 때 워크시트에서 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+##  <a name="runtimedoclevel"></a> Adding NamedRange Controls at Run Time in a Document-Level Project  
+ You can add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control programmatically to your worksheet at run time. This enables you to create the host controls in response to events. Dynamically created named ranges are not persisted in the worksheet as host controls when the worksheet is closed. For more information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
   
-#### 프로그래밍 방식으로 워크시트에 NamedRange 컨트롤을 추가하려면  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-programmatically"></a>To add a NamedRange control to a worksheet programmatically  
   
-1.  `Sheet1`의 <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> 이벤트 처리기에서 다음 코드를 삽입하여 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 **A1** 셀에 추가하고 해당 <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> 속성을 `Hello world!`로 설정합니다.  
+1.  In the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event handler of `Sheet1`, insert the following code to add the <xref:Microsoft.Office.Tools.Excel.NamedRange> control to cell **A1** and set its <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> property to `Hello world!`  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet1.cs#3)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/VB/Sheet1.vb#3)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#3)]  [!code-vb[Trin_VstcoreHostControlsExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#3)]  
   
-##  <a name="runtimeaddin"></a> 런타임에 VSTO 추가 기능 프로젝트에서 NamedRange 컨트롤 추가  
- VSTO 추가 기능 프로젝트에서 열려 있는 워크시트에 프로그래밍 방식으로 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 추가할 수 있습니다. 동적으로 생성된 명명된 범위는 워크시트를 닫을 때 워크시트에서 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
+##  <a name="runtimeaddin"></a> Adding NamedRange Controls at Run Time in an VSTO Add-in project  
+ You can add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control programmatically to any open worksheet in an VSTO Add-in project. Dynamically created named ranges are not persisted in the worksheet as host controls when the worksheet is closed. For more information, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
   
-#### 프로그래밍 방식으로 워크시트에 NamedRange 컨트롤을 추가하려면  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-programmatically"></a>To add a NamedRange control to a worksheet programmatically  
   
-1.  다음 코드는 열려 있는 워크시트를 기반으로 하는 워크시트 호스트 항목을 생성하고 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 **A1** 셀에 추가하고 해당 <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> 속성을 `Hello world`로 설정합니다.  
+1.  The following code generates a worksheet host item that is based on the open worksheet, and then adds a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to cell **A1** and sets its <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> property to `Hello world`.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#7](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/CS/ThisAddIn.cs#7)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#7](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/VB/ThisAddIn.vb#7)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#7)]  [!code-vb[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#7)]  
   
-## 참고 항목  
- [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
- [Office 문서의 컨트롤](../vsto/controls-on-office-documents.md)   
- [NamedRange 컨트롤](../vsto/namedrange-control.md)   
- [확장된 개체를 사용하여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
- [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
- [방법: NamedRange 컨트롤 크기 조정](../vsto/how-to-resize-namedrange-controls.md)   
- [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
+## <a name="see-also"></a>See Also  
+ [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
+ [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [How to: Resize NamedRange Controls](../vsto/how-to-resize-namedrange-controls.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
   
   

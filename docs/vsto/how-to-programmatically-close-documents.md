@@ -1,73 +1,74 @@
 ---
-title: "방법: 프로그래밍 방식으로 문서 닫기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "문서[Visual Studio에서 Office 개발], 닫기"
-  - "Word[Visual Studio에서 Office 개발], 문서 닫기"
+title: 'How to: Programmatically Close Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- documents [Office development in Visual Studio], closing
+- Word [Office development in Visual Studio], closing documents
 ms.assetid: d5bee1dc-63d1-4307-828f-b7b077e20fb9
 caps.latest.revision: 55
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 54
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0435e4cf7e8291fb893e8d1233e18e8fe7cd1c60
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 문서 닫기
-  활성 문서를 닫거나 닫을 문서를 지정할 수 있습니다.  
+# <a name="how-to-programmatically-close-documents"></a>How to: Programmatically Close Documents
+  You can close the active document or you can specify a document to close.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## 활성 문서 닫기  
- 활성 문서를 닫는 절차에는 문서 수준 사용자 지정 및 VSTO 추가 기능에 대해 각각 하나씩, 두 가지가 있습니다.  
+## <a name="closing-the-active-document"></a>Closing the Active Document  
+ There are two procedures for closing the active document: one for document-level customizations and one for VSTO Add-ins.  
   
-#### 문서 수준 사용자 지정에서 활성 문서를 닫으려면  
+#### <a name="to-close-the-active-document-in-a-document-level-customization"></a>To close the active document in a document-level customization  
   
-1.  프로젝트에서 `ThisDocument` 클래스의 <xref:Microsoft.Office.Tools.Word.Document.Close%2A> 메서드를 호출하여 사용자 지정과 연결된 문서를 닫습니다. 다음 코드 예제를 사용하려면 `ThisDocument` 클래스에서 실행합니다.  
-  
-    > [!NOTE]  
-    >  이 예제에서는 <xref:Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges> 값을 *SaveChanges* 매개 변수에 전달하여 변경 내용을 저장하거나 사용자에게 메시지를 표시하지 않고 닫습니다.  
-  
-     [!code-csharp[Trin_VstcoreWordAutomation#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#3)]
-     [!code-vb[Trin_VstcoreWordAutomation#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#3)]  
-  
-#### VSTO 추가 기능에서 활성 문서를 닫으려면  
-  
-1.  <xref:Microsoft.Office.Interop.Word._Application.ActiveDocument%2A> 속성의 <xref:Microsoft.Office.Interop.Word._Document.Close%2A> 메서드를 호출하여 활성 문서를 닫습니다. 다음 코드 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
+1.  Call the <xref:Microsoft.Office.Tools.Word.Document.Close%2A> method of the `ThisDocument` class in your project to close the document associated with the customization. To use the following code example, run it from the `ThisDocument` class.  
   
     > [!NOTE]  
-    >  이 예제에서는 <xref:Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges> 값을 *SaveChanges* 매개 변수에 전달하여 변경 내용을 저장하거나 사용자에게 메시지를 표시하지 않고 닫습니다.  
+    >  This example passes the <xref:Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges> value to the *SaveChanges* parameter to close without saving changes or prompting the user.  
   
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/CS/ThisAddIn.cs#3)]
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/VB/ThisAddIn.vb#3)]  
+     [!code-vb[Trin_VstcoreWordAutomation#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#3)]  [!code-csharp[Trin_VstcoreWordAutomation#3](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#3)]  
   
-## 이름으로 지정한 문서 닫기  
- 이름으로 지정한 문서를 닫는 방법은 VSTO 추가 기능과 문서 수준 사용자 지정에서 동일합니다.  
+#### <a name="to-close-the-active-document-in-a-vsto-add-in"></a>To close the active document in a VSTO Add-in  
   
-#### 이름으로 지정한 문서를 닫으려면  
-  
-1.  <xref:Microsoft.Office.Interop.Word._Application.Documents%2A> 컬렉션에 대한 인수로 문서 이름을 지정하고 <xref:Microsoft.Office.Interop.Word._Document.Close%2A> 메서드를 호출합니다. 다음 코드 예제에서는 **NewDocument**라는 문서가 Word에서 열려 있다고 가정합니다.  
+1.  Call the <xref:Microsoft.Office.Interop.Word._Document.Close%2A> method of the <xref:Microsoft.Office.Interop.Word._Application.ActiveDocument%2A> property to close the active document. To use the following code example, run it from the `ThisAddIn` class in your project.  
   
     > [!NOTE]  
-    >  이 예제에서는 <xref:Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges> 값을 *SaveChanges* 매개 변수에 전달하여 변경 내용을 저장하거나 사용자에게 메시지를 표시하지 않고 닫습니다.  
+    >  This example passes the <xref:Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges> value to the *SaveChanges* parameter to close without saving changes or prompting the user.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#4)]
-     [!code-vb[Trin_VstcoreWordAutomation#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#4)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#3)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#3](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#3)]  
   
-## 참고 항목  
- [방법: 프로그래밍 방식으로 기존 문서 열기](../vsto/how-to-programmatically-open-existing-documents.md)   
- [방법: 프로그래밍 방식으로 문서 저장](../vsto/how-to-programmatically-save-documents.md)   
- [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
- [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="closing-a-document-that-you-specify-by-name"></a>Closing a Document That You Specify By Name  
+ The way that you close a document that you specify by name is the same for VSTO Add-ins and document-level customizations.  
   
+#### <a name="to-close-a-document-that-you-specify-by-name"></a>To close a document that you specify by name  
+  
+1.  Specify the document name as an argument to the <xref:Microsoft.Office.Interop.Word._Application.Documents%2A> collection, and then call the <xref:Microsoft.Office.Interop.Word._Document.Close%2A> method. The following code example assumes that a document named **NewDocument** is open in Word.  
+  
+    > [!NOTE]  
+    >  This example passes the <xref:Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges> value to the *SaveChanges* parameter to close without saving changes or prompting the user.  
+  
+     [!code-vb[Trin_VstcoreWordAutomation#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#4)]  [!code-csharp[Trin_VstcoreWordAutomation#4](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#4)]  
+  
+## <a name="see-also"></a>See Also  
+ [How to: Programmatically Open Existing Documents](../vsto/how-to-programmatically-open-existing-documents.md)   
+ [How to: Programmatically Save Documents](../vsto/how-to-programmatically-save-documents.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   

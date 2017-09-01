@@ -1,74 +1,91 @@
 ---
-title: "LAUNCH_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LAUNCH_FLAGS"
-helpviewer_keywords: 
-  - "LAUNCH_FLAGS 열거형"
+title: LAUNCH_FLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LAUNCH_FLAGS
+helpviewer_keywords:
+- LAUNCH_FLAGS enumeration
 ms.assetid: f51aab02-d257-4302-bb79-b7d8ba9ac4e5
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# LAUNCH_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2f838e559d4c33a7bb807d5b0360a51ea7ff0d74
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-디버깅 시작 플래그를 지정합니다.  
+---
+# <a name="launchflags"></a>LAUNCH_FLAGS
+Specifies the debug launch flags.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-enum enum_LAUNCH_FLAGS {   
-   LAUNCH_DEBUG      = 0x0000,  
-   LAUNCH_NODEBUG    = 0x0001,  
-   LAUNCH_ENABLE_ENC = 0x0002,  
-   LAUNCH_MERGE_ENV  = 0x0004  
+```cpp  
+enum enum_LAUNCH_FLAGS {   
+   LAUNCH_DEBUG      = 0x0000,  
+   LAUNCH_NODEBUG    = 0x0001,  
+   LAUNCH_ENABLE_ENC = 0x0002,  
+   LAUNCH_MERGE_ENV  = 0x0004  
 };  
 typedef DWORD LAUNCH_FLAGS;  
 ```  
   
-```c#  
-public enum enum_LAUNCH_FLAGS {   
-   LAUNCH_DEBUG      = 0x0000,  
-   LAUNCH_NODEBUG    = 0x0001,  
-   LAUNCH_ENABLE_ENC = 0x0002,  
-   LAUNCH_MERGE_ENV  = 0x0004  
+```csharp  
+public enum enum_LAUNCH_FLAGS {   
+   LAUNCH_DEBUG      = 0x0000,  
+   LAUNCH_NODEBUG    = 0x0001,  
+   LAUNCH_ENABLE_ENC = 0x0002,  
+   LAUNCH_MERGE_ENV  = 0x0004  
 };  
 ```  
   
-## Members  
- LAUNCH\_DEBUG  
- 디버깅 하는 프로세스를 시작합니다.  
+## <a name="members"></a>Members  
+ LAUNCH_DEBUG  
+ Launches the process for debugging.  
   
- LAUNCH\_NODEBUG  
- 프로세스를 디버깅 하지 않고 시작 합니다.  
+ LAUNCH_NODEBUG  
+ Launches the process without debugging it.  
   
- LAUNCH\_ENABLE\_ENC  
- 더 이상 사용을 사용 하지 않습니다.  
+ LAUNCH_ENABLE_ENC  
+ DEPRECATED, DO NOT USE.  
   
- LAUNCH\_MERGE\_ENV  
- 프로세스를 시작 하 고 시작 호스트 환경과 병합 합니다.  
+ LAUNCH_MERGE_ENV  
+ Launches the process and merges the environment with the launching host.  
   
-## 설명  
- 이러한 값을 인수로 전달 되는 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) 메서드.  
+## <a name="remarks"></a>Remarks  
+ These values are passed as an argument to the [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) method.  
   
- 이러한 플래그의 비트와 함께 사용할 수 있습니다 `OR`.  
+ These flags may be combined with a bitwise `OR`.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)

@@ -1,5 +1,5 @@
 ---
-title: "코어 편집기 만들기 및 등록 된 편집기 파일 형식이 | Microsoft 문서 &quot;"
+title: Creating a Core Editor and Registering an Editor File Type | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,42 +28,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: d5bc147592bfc36247c35f23ac2885055d096af3
-ms.openlocfilehash: 7bde276b0d53793f57266c13c5ccf63583f7aacf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: dec3e53df108377dacfc53ba308029933654b789
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>연습: 코어 편집기 만들기 및 등록 하는 편집기 파일 형식
-이 연습에는 시작 하는 VSPackage를 만드는 방법을 보여 줍니다는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 코어 편집기 때.myext 파일 이름 확장명을 가진 파일을 로드 됩니다.  
+# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>Walkthrough: Creating a Core Editor and Registering an Editor File Type
+This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] core editor when a file that has the .myext file name extension is loaded.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
- 이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ To follow this walkthrough, you must install the Visual Studio SDK. For more information, see [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
-## <a name="locations-for-the-visual-studio-package-project-template"></a>Visual Studio 패키지 프로젝트 템플릿에 대 한 위치  
- Visual Studio 패키지 프로젝트 템플릿은 **새 프로젝트** 대화 상자의 세 가지 서로 다른 위치에 있습니다.  
+## <a name="locations-for-the-visual-studio-package-project-template"></a>Locations for the Visual Studio Package Project template  
+ The Visual Studio Package project template can be found in three different locations in the **New Project** dialog:  
   
-1.  Visual Basic 확장성에 위치한 템플릿 프로젝트의 기본 언어는 Visual Basic입니다.  
+1.  Under Visual Basic Extensibility. The default language of the project is Visual Basic.  
   
-2.  C# 확장성에 위치한 템플릿 프로젝트의 기본 언어는 C#입니다.  
+2.  Under C# Extensibility. The default language of the project is C#.  
   
-3.  다른 프로젝트 형식 확장성에 위치한 템플릿 프로젝트의 기본 언어는 C++입니다.  
+3.  Under Other Project Types Extensibility. The default language of the project is C++.  
   
-### <a name="to-create-the-vspackage"></a>VSPackage를 만들려면  
+### <a name="to-create-the-vspackage"></a>To create the VSPackage  
   
--   시작 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 만들고는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 라는 VSPackage `MyPackage`에 설명 된 대로, [연습: 메뉴 명령 VSPackage 만들기](http://msdn.microsoft.com/en-us/d699c149-5d1e-47ff-94c7-e1222af02c32)합니다.  
+-   Start [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] and create a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] VSPackage named `MyPackage`, as outlined in [Walkthrough: Creating a Menu Command VSPackage](http://msdn.microsoft.com/en-us/d699c149-5d1e-47ff-94c7-e1222af02c32).  
   
-### <a name="to-add-the-editor-factory"></a>편집기 팩터리를 추가 하려면  
+### <a name="to-add-the-editor-factory"></a>To add the editor factory  
   
-1.  마우스 오른쪽 단추로 클릭는 **MyPackage** 프로젝트를 가리키도록 **추가** 클릭 하 고 **클래스**합니다.  
+1.  Right-click the **MyPackage** project, point to **Add** and then click **Class**.  
   
-2.  에 **새 항목 추가** 대화 상자에서 확인는 **클래스** 서식 파일을 선택할 유형 `EditorFactory.cs` 클릭 한 다음 확인 하 고 이름에 대 한 **추가** 프로젝트에 클래스를 추가 하려면.  
+2.  In the **Add New Item** dialog box, make sure the **Class** template is selected, type `EditorFactory.cs` for the name, and then click **Add** to add the class to your project.  
   
-     EditorFactory.cs 파일을 자동으로 열 수 있습니다.  
+     The EditorFactory.cs file should be automatically opened.  
   
-3.  사용자 코드에서 다음 어셈블리를 참조 합니다.  
+3.  Reference the following assemblies from your code.  
   
-    ```vb#  
+    ```vb  
     Imports System.Runtime.InteropServices  
     Imports Microsoft.VisualStudio  
     Imports Microsoft.VisualStudio.Shell  
@@ -73,7 +74,7 @@ ms.lasthandoff: 02/22/2017
     Imports IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider  
     ```  
   
-    ```c#  
+    ```csharp  
     using System.Runtime.InteropServices;  
     using Microsoft.VisualStudio;  
     using Microsoft.VisualStudio.Shell;  
@@ -84,27 +85,27 @@ ms.lasthandoff: 02/22/2017
   
     ```  
   
-4.  GUID를 추가 `EditorFactory` 추가 하 여 클래스는 `Guid` 특성 클래스 선언 바로 앞입니다.  
+4.  Add a GUID to the `EditorFactory` class by adding the `Guid` attribute immediately before the class declaration.  
   
-     에 있는 guidgen.exe 프로그램을 사용 하 여 새 GUID를 생성할 수는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명령 프롬프트, 또는 클릭 하 여 **GUID 만들기** 에 **도구** 메뉴. 여기에 사용 되는 GUID은 예 시일 뿐임; 프로젝트에서 사용 하지 마십시오.  
+     You can generate a new GUID by using the guidgen.exe program at the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] command prompt, or by clicking **Create GUID** on the **Tools** menu. The GUID used here is only an example; do not use it in your project.  
   
-    ```vb#  
+    ```vb  
     <Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")> _  
     ```  
   
-    ```c#  
+    ```csharp  
     [Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")]   
     ```  
   
-5.  클래스 정의에 부모 패키지 및 서비스 공급자를 포함 하는 두 개의 private 변수를 추가 합니다.  
+5.  In the class definition, add two private variables to contain the parent package and a service provider.  
   
-    ```vb#  
+    ```vb  
     Class EditorFactory  
         Private parentPackage As Package  
         Private serviceProvider As IOleServiceProvider  
     ```  
   
-    ```c#  
+    ```csharp  
     class EditorFactory  
     {  
         private Package parentPackage;  
@@ -113,61 +114,61 @@ ms.lasthandoff: 02/22/2017
   
     ```  
   
-6.  <xref:Microsoft.VisualStudio.Shell.Package>::</xref:Microsoft.VisualStudio.Shell.Package> 형식의 매개 변수 하나를 사용 하는 공용 클래스 생성자를 추가 합니다.  
+6.  Add a public class constructor that takes one parameter of type <xref:Microsoft.VisualStudio.Shell.Package>:  
   
-    ```vb#  
+    ```vb  
     Public Sub New(ByVal parentPackage As Package)  
         Me.parentPackage = parentPackage  
     End Sub  
     ```  
   
-    ```c#  
+    ```csharp  
     public EditorFactory(Package parentPackage)  
     {  
         this.parentPackage = parentPackage;  
     }  
     ```  
   
-7.  수정 된 `EditorFactory` 클래스 선언에서 파생 하는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>인터페이스.</xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>  
+7.  Modify the `EditorFactory` class declaration to derive from the <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> interface.  
   
-    ```vb#  
+    ```vb  
     Class EditorFactory Implements IVsEditorFacto  
     ```  
   
-    ```c#  
+    ```csharp  
     class EditorFactory : IVsEditorFactory  
   
     ```  
   
-8.  마우스 오른쪽 단추로 클릭 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>, 클릭 **인터페이스 구현**를 클릭 하 고 **명시적으로 인터페이스 구현**.</xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>  
+8.  Right-click <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>, click **Implement Interface**, and then click **Implement Interface Explicitly**.  
   
-     구현 해야 하는 네 가지 메서드를 추가 하는이 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>인터페이스.</xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>  
+     This adds the four methods that must be implemented in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> interface.  
   
-9. `IVsEditorFactory.Close` 메서드의 내용을 다음 코드로 대체합니다.  
+9. Replace the contents of the `IVsEditorFactory.Close` method with the following code.  
   
-    ```vb#  
+    ```vb  
     Return VSConstants.S_OK  
     ```  
   
-    ```c#  
+    ```csharp  
     return VSConstants.S_OK;  
     ```  
   
-10. 내용을 대체는 `IVsEditorFactory.SetSite` 다음 코드를 사용 합니다.  
+10. Replace the contents of the `IVsEditorFactory.SetSite` with the following code.  
   
-    ```vb#  
+    ```vb  
     Me.serviceProvider = psp  
     Return VSConstants.S_OK  
     ```  
   
-    ```c#  
+    ```csharp  
     this.serviceProvider = psp;  
     return VSConstants.S_OK;  
     ```  
   
-11. `IVsEditorFactory.MapLogicalView` 메서드의 내용을 다음 코드로 대체합니다.  
+11. Replace the contents of the `IVsEditorFactory.MapLogicalView` method with the following code.  
   
-    ```vb#  
+    ```vb  
     Dim retval As Integer = VSConstants.E_NOTIMPL  
     pbstrPhysicalView = Nothing ' We support only one view.  
     If rguidLogicalView.Equals(VSConstants.LOGVIEWID_Designer)OrElse _  
@@ -177,7 +178,7 @@ ms.lasthandoff: 02/22/2017
     Return retval  
     ```  
   
-    ```c#  
+    ```csharp  
     int retval = VSConstants.E_NOTIMPL;  
     pbstrPhysicalView = null;   // We support only one view.  
     if (rguidLogicalView.Equals(VSConstants.LOGVIEWID_Designer) ||  
@@ -188,9 +189,9 @@ ms.lasthandoff: 02/22/2017
     return retval;  
     ```  
   
-12. `IVsEditorFactory.CreateEditorInstance` 메서드의 내용을 다음 코드로 대체합니다.  
+12. Replace the contents of the `IVsEditorFactory.CreateEditorInstance` method with the following code.  
   
-    ```vb#  
+    ```vb  
     Dim retval As Integer = VSConstants.E_FAIL          
   
     ' Initialize these to empty to start with   
@@ -257,7 +258,7 @@ ms.lasthandoff: 02/22/2017
     Return retval  
     ```  
   
-    ```c#  
+    ```csharp  
     int retval = VSConstants.E_FAIL;  
   
     // Initialize these to empty to start with  
@@ -331,85 +332,85 @@ ms.lasthandoff: 02/22/2017
     return retval;   
     ```  
   
-13. 프로젝트를 컴파일하고 오류가 없는지 확인 합니다.  
+13. Compile the project and make sure there are no errors.  
   
-### <a name="to-register-the-editor-factory"></a>편집기 팩터리를 등록 하려면  
+### <a name="to-register-the-editor-factory"></a>To register the editor factory  
   
-1.  **솔루션 탐색기**, Resources.resx 파일을를 문자열 테이블에 열을 두 번 클릭 항목 **g&1;이** 선택 합니다.  
+1.  In **Solution Explorer**, double-click the Resources.resx file to open it to the string table, in which the entry **String1 is** selected.  
   
-2.  식별자의 이름을 변경 `IDS_EDITORNAME` 및 텍스트를 **MyPackage 편집기입니다.** 이 문자열은 편집기의 이름으로 표시 됩니다.  
+2.  Change the name of the identifier to `IDS_EDITORNAME` and the text to **MyPackage Editor.** This string will appear as the name of your editor.  
   
-3.  VSPackage.resx 파일을 열고 새 추가 i n g, 다른 이름으로 설정할 **101** 값을 `IDS_EDITORNAME`합니다. 방금 만든 문자열에 액세스 하는 리소스 id가 패키지를 제공 합니다.  
+3.  Open the VSPackage.resx file and add a new string, set the name to **101** and the value to `IDS_EDITORNAME`. This provides the package with a resource ID to access the string you just created.  
   
     > [!NOTE]
-    >  VSPackage.resx 파일에 있는 다른 경우 문자열은 `name` 특성으로 설정 **101**와 다음 단계에서 다른 고유 하 고 숫자 값을 대체 합니다.  
+    >  If the VSPackage.resx file contains another string that the `name` attribute set to **101**, substitute another unique, numeric value, here and in the following steps.  
   
-4.  **솔루션 탐색기**, MyPackagePackage.cs 파일을 엽니다.  
+4.  In **Solution Explorer**, open the MyPackagePackage.cs file.  
   
-     주 패키지 파일입니다.  
+     This is the main package file.  
   
-5.  바로 앞에 다음 사용자 특성 추가 `Guid` 특성입니다.  
+5.  Add the following user attributes just before the `Guid` attribute.  
   
-    ```vb#  
+    ```vb  
     <ProvideEditorFactoryAttribute(GetType(EditorFactory), 101)> _  
     <ProvideEditorExtensionAttribute(GetType(EditorFactory), _  
           ".myext", 32, NameResourceID:=101 )> _  
     ```  
   
-    ```c#  
+    ```csharp  
     [ProvideEditorFactory(typeof(EditorFactory), 101)]  
     [ProvideEditorExtension(typeof(EditorFactory),   
           ".myext", 32, NameResourceID = 101)]   
     ```  
   
-     <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>특성 확장은 로드를 편집기 팩터리가 호출 된 파일을 언제 든 지 있도록 편집기 팩터리.myext 파일 확장명을 연결 합니다.</xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>  
+     The <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> attribute associates the .myext file extension with your editor factory so that any time a file that has that extension is loaded, your editor factory is invoked.  
   
-6.  개인 변수를 추가 `MyPackage` 생성자 직전 클래스 하 고 형식을 지정 `EditorFactory`합니다.  
+6.  Add a private variable to the `MyPackage` class, just before the constructor, and give it the type `EditorFactory`.  
   
-    ```vb#  
+    ```vb  
     Private editorFactory As EditorFactory  
     ```  
   
-    ```c#  
+    ```csharp  
     private EditorFactory editorFactory;  
     ```  
   
-7.  찾기는 `Initialize` 메서드 (열어야 할 수도 `Package Members` 숨겨진된 영역)에 대 한 호출 뒤에 다음 코드를 추가 하 고 `base.Initialize()`합니다.  
+7.  Find the `Initialize` method (you may have to open the `Package Members` hidden region) and add the following code after the call to `base.Initialize()`.  
   
-    ```vb#  
+    ```vb  
     'Create our editor factory and register it.   
     Me.editorFactory = New EditorFactory(Me)  
     MyBase.RegisterEditorFactory(Me.editorFactory)  
     ```  
   
-    ```c#  
+    ```csharp  
     // Create our editor factory and register it.  
     this.editorFactory = new EditorFactory(this);  
     base.RegisterEditorFactory(this.editorFactory);  
   
     ```  
   
-8.  프로그램을 컴파일하고 오류가 없는지 확인합니다.  
+8.  Compile the program and make sure there are no errors.  
   
-     이 단계에 대 한 실험 레지스트리 하이브 편집기 팩터리를 등록 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. Resource.h 파일을 재정의 하는 메시지가 클릭 **확인**합니다.  
+     This step registers the editor factory in the experimental registry hive for [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. If you are prompted to override the resource.h file, click **OK**.  
   
-9. TextFile1.myext 라는 샘플 파일을 만듭니다.  
+9. Create a sample file named TextFile1.myext.  
   
-10. 키를 눌러 **F5** 의 실험적 인스턴스를 열려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
+10. Press **F5** to open an instance of the experimental [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
-11. 실험에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에 **파일** 메뉴에서 **열려** 클릭 하 고 **파일**합니다.  
+11. In the experimental [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], on the **File** menu, point to **Open** and then click **File**.  
   
-12. TextFile1.myext를 찾은 다음 클릭 **열려**합니다.  
+12. Find TextFile1.myext and then click **Open**.  
   
-     이제 파일을 로드할 수 해야 합니다.  
+     The file should now be loaded.  
   
-## <a name="robust-programming"></a>강력한 프로그래밍  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 코어 편집기 다양 한 텍스트 기반 파일 형식과 밀접 하 게 된 중괄호 일치, 구문 강조 표시 하는 등의 기능 집합을 제공 하기 위해 언어 서비스 및 IntelliSense 단어 완성 및 멤버 완성 목록에서 처리 합니다. 텍스트 기반 파일을 사용 하는 핵심 편집기를 지 원하는 특정 파일 형식을 사용자 지정 언어 서비스와 함께 사용할 수 있습니다.  
+## <a name="robust-programming"></a>Robust Programming  
+ The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] core editor handles a wide range of text-based file types and works closely with language services to provide a rich set of features such as syntax highlighting, brace matching, and IntelliSense word-completion and member-completion lists. If you are working with text-based files, then you can use the core editor together with a custom language service that supports your specific file types.  
   
- VSPackage를 호출할 수는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 편집기 팩터리를 제공 하 여 코어 편집기입니다. 이 편집기 팩터리와 연결 된 파일에 대 한 로드 언제 든 지 사용 됩니다. 프로젝트의 일부 파일을 사용 하는 경우 핵심 편집기 VSPackage에서 재정의 되지 않으면 호출 자동으로 됩니다. 하지만 프로젝트 외부의 파일 로드 되는 경우 다음 코어 편집기 명시적으로 호출 해야 VSPackage에서.  
+ A VSPackage can invoke the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] core editor by supplying an editor factory. This editor factory is used any time a file that is associated with it is loaded. If the file is part of a project, then the core editor is automatically invoked unless overridden by your VSPackage. However, if the file is loaded outside of a project, then the core editor must be explicitly invoked by your VSPackage.  
   
- 코어 편집기에 대 한 자세한 내용은 참조 [코어 편집기 내](../extensibility/inside-the-core-editor.md)합니다.  
+ For more information about the core editor, see [Inside the Core Editor](../extensibility/inside-the-core-editor.md).  
   
-## <a name="see-also"></a>참고 항목  
- [코어 편집기 내](../extensibility/inside-the-core-editor.md)   
- [코어 편집기 레거시 API를 사용 하 여 인스턴스화](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)
+## <a name="see-also"></a>See Also  
+ [Inside the Core Editor](../extensibility/inside-the-core-editor.md)   
+ [Instantiating the Core Editor By Using the Legacy API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)

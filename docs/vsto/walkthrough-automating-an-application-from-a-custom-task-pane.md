@@ -1,151 +1,151 @@
 ---
-title: "연습: 사용자 지정 작업 창을 사용하여 응용 프로그램 자동화"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "작업창[Visual Studio에서 Office 개발], PowerPoint"
-  - "PowerPoint[Visual Studio에서 Office 개발], 사용자 지정 작업창"
-  - "Office 응용 프로그램 자동화"
-  - "사용자 지정 작업창[Visual Studio에서 Office 개발], 응용 프로그램 자동화"
-  - "사용자 지정 작업창[Visual Studio에서 Office 개발], PowerPoint"
-  - "작업창[Visual Studio에서 Office 개발], 응용 프로그램 자동화"
+title: 'Walkthrough: Automating an Application from a Custom Task Pane | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- task panes [Office development in Visual Studio], PowerPoint
+- PowerPoint [Office development in Visual Studio], custom task panes
+- automating Office applications
+- custom task panes [Office development in Visual Studio], automating applications
+- custom task panes [Office development in Visual Studio], PowerPoint
+- task panes [Office development in Visual Studio], automating applications
 ms.assetid: 77be5ab5-e330-4564-87ec-9cba564ba8f9
 caps.latest.revision: 37
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0b8ae724f9104943782583c523cffb3c1e6836da
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: 사용자 지정 작업 창을 사용하여 응용 프로그램 자동화
-  이 연습에서는 PowerPoint를 자동화하는 사용자 지정 작업창을 만드는 방법을 보여 줍니다. 사용자 지정 작업창은 사용자가 사용자 지정 작업창에 있는 <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 클릭할 때 날짜를 슬라이드에 삽입합니다.  
+# <a name="walkthrough-automating-an-application-from-a-custom-task-pane"></a>Walkthrough: Automating an Application from a Custom Task Pane
+  This walkthrough demonstrates how to create a custom task pane that automates PowerPoint. The custom task pane inserts dates into a slide when the user clicks a <xref:System.Windows.Forms.MonthCalendar> control that is on the custom task pane.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
- 이 연습에서는 특별히 PowerPoint를 사용하지만 위에 나열된 응용 프로그램에도 연습에서 설명하는 개념을 적용할 수 있습니다.  
+ Although this walkthrough uses PowerPoint specifically, the concepts demonstrated by the walkthrough are applicable to any applications that are listed above.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   사용자 지정 작업창의 사용자 인터페이스 디자인  
+-   Designing the user interface of the custom task pane.  
   
--   사용자 지정 작업창에서 PowerPoint 자동화  
+-   Automating PowerPoint from the custom task pane.  
   
--   PowerPoint에서 사용자 지정 작업창 표시  
+-   Displaying the custom task pane in PowerPoint.  
   
 > [!NOTE]  
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   Microsoft PowerPoint 2010 또는 [!INCLUDE[PowerPoint_15_short](../vsto/includes/powerpoint-15-short-md.md)]입니다.  
+-   Microsoft PowerPoint 2010 or [!INCLUDE[PowerPoint_15_short](../vsto/includes/powerpoint-15-short-md.md)].  
   
-## 추가 기능 프로젝트 만들기  
- 첫 번째 단계는 PowerPoint용 VSTO 추가 기능 프로젝트를 만드는 것입니다.  
+## <a name="creating-the-add-in-project"></a>Creating the Add-in Project  
+ The first step is to create an VSTO Add-in project for PowerPoint.  
   
-#### 새 프로젝트를 만들려면  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  PowerPoint 추가 기능 프로젝트 템플릿을 사용하여 이름이 **MyAddIn**인 PowerPoint VSTO 추가 기능 프로젝트를 만듭니다. 자세한 내용은 [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하십시오.  
+1.  Create a PowerPoint VSTO Add-in project with the name **MyAddIn**, by using the PowerPoint Add-in project template. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 **ThisAddIn.cs** 또는 **ThisAddIn.vb** 코드 파일을 열고 **MyAddIn** 프로젝트를 **솔루션 탐색기**에 추가합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] opens the **ThisAddIn.cs** or **ThisAddIn.vb** code file and adds the **MyAddIn** project to **Solution Explorer**.  
   
-## 사용자 지정 작업창의 사용자 인터페이스 디자인  
- 사용자 지정 작업창을 위한 비주얼 디자이너는 없지만 원하는 레이아웃을 사용하여 사용자 정의 컨트롤을 디자인할 수 있습니다. 이 연습 뒷부분에서는 사용자 지정 작업창에 사용자 정의 컨트롤을 추가합니다.  
+## <a name="designing-the-user-interface-of-the-custom-task-pane"></a>Designing the User Interface of the Custom Task Pane  
+ There is no visual designer for custom task panes, but you can design a user control with the layout you want. Later in this walkthrough, you will add the user control to the custom task pane.  
   
-#### 사용자 지정 작업창의 사용자 인터페이스를 디자인하려면  
+#### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>To design the user interface of the custom task pane  
   
-1.  **프로젝트** 메뉴에서 **사용자 정의 컨트롤 추가**를 클릭합니다.  
+1.  On the **Project** menu, click **Add User Control**.  
   
-2.  **새 항목 추가** 대화 상자에서 사용자 정의 컨트롤의 이름을 **MyUserControl**로 변경하고 **추가**를 클릭합니다.  
+2.  In the **Add New Item** dialog box, change the name of the user control to **MyUserControl**, and click **Add**.  
   
-     사용자 정의 컨트롤이 디자이너에서 열립니다.  
+     The user control opens in the designer.  
   
-3.  **도구 상자**의 **공용 컨트롤** 탭에서 **MonthCalendar** 컨트롤을 사용자 정의 컨트롤로 끌어 놓습니다.  
+3.  From the **Common Controls** tab of the **Toolbox**, drag a **MonthCalendar** control to the user control.  
   
-     **MonthCalendar** 컨트롤이 사용자 정의 컨트롤의 디자인 화면보다 큰 경우 사용자 정의 컨트롤의 크기를 조정하여 **MonthCalendar** 컨트롤에 맞춥니다.  
+     If the **MonthCalendar** control is larger than the design surface of the user control, resize the user control to fit the **MonthCalendar** control.  
   
-## 사용자 지정 작업창에서 PowerPoint 자동화  
- VSTO 추가 기능의 목적은 선택한 날짜를 활성 프레젠테이션의 첫 번째 슬라이드에 넣는 것입니다. 컨트롤의 <xref:System.Windows.Forms.MonthCalendar.DateChanged> 이벤트를 사용하여 변경될 때마다 선택한 날짜를 추가합니다.  
+## <a name="automating-powerpoint-from-the-custom-task-pane"></a>Automating PowerPoint from the Custom Task Pane  
+ The purpose of the VSTO Add-in is to put a selected date on the first slide of the active presentation. Use the <xref:System.Windows.Forms.MonthCalendar.DateChanged> event of the control to add the selected date whenever it changes.  
   
-#### 사용자 지정 작업창에서 PowerPoint를 자동화하려면  
+#### <a name="to-automate-powerpoint-from-the-custom-task-pane"></a>To automate PowerPoint from the custom task pane  
   
-1.  디자이너에서 <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 두 번 클릭합니다.  
+1.  In the designer, double-click the <xref:System.Windows.Forms.MonthCalendar> control.  
   
-     **MyUserControl.cs** 또는 **MyUserControl.vb** 파일이 열리고 <xref:System.Windows.Forms.MonthCalendar.DateChanged> 이벤트에 대한 이벤트 처리기가 만들어집니다.  
+     The **MyUserControl.cs** or **MyUserControl.vb** file opens, and an event handler for the <xref:System.Windows.Forms.MonthCalendar.DateChanged> event is created.  
   
-2.  다음 코드를 파일의 맨 위에 추가합니다. 이 코드에서는 <xref:Microsoft.Office.Core> 및 <xref:Microsoft.Office.Interop.PowerPoint> 네임스페이스에 대한 별칭을 만듭니다.  
+2.  Add the following code to the top of the file. This code creates aliases for the <xref:Microsoft.Office.Core> and <xref:Microsoft.Office.Interop.PowerPoint> namespaces.  
   
-     [!code-csharp[Trin_TaskPaneMonthCalendar#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/CS/MyUserControl.cs#1)]
-     [!code-vb[Trin_TaskPaneMonthCalendar#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/VB/MyUserControl.vb#1)]  
+     [!code-csharp[Trin_TaskPaneMonthCalendar#1](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs#1)]  [!code-vb[Trin_TaskPaneMonthCalendar#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb#1)]  
   
-3.  `MyUserControl` 클래스에 다음 코드를 추가합니다. 이 코드에서는 <xref:Microsoft.Office.Interop.PowerPoint.Shape> 개체를 `MyUserControl`의 멤버로 선언합니다. 다음 단계에서는 이 <xref:Microsoft.Office.Interop.PowerPoint.Shape>를 사용하여 활성 프레젠테이션의 슬라이드에 텍스트 상자를 추가합니다.  
+3.  Add the following code to the `MyUserControl` class. This code declares a <xref:Microsoft.Office.Interop.PowerPoint.Shape> object as a member of `MyUserControl`. In the following step, you will use this <xref:Microsoft.Office.Interop.PowerPoint.Shape> to add a text box to a slide in the active presentation.  
   
-     [!code-csharp[Trin_TaskPaneMonthCalendar#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/CS/MyUserControl.cs#2)]
-     [!code-vb[Trin_TaskPaneMonthCalendar#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/VB/MyUserControl.vb#2)]  
+     [!code-csharp[Trin_TaskPaneMonthCalendar#2](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs#2)]  [!code-vb[Trin_TaskPaneMonthCalendar#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb#2)]  
   
-4.  `monthCalendar1_DateChanged` 이벤트 처리기를 다음 코드로 바꿉니다. 이 코드에서는 활성 프레젠테이션의 첫 번째 슬라이드에 텍스트 상자를 추가한 다음 현재 선택한 날짜를 텍스트 상자에 추가합니다. 이 코드는 `Globals.ThisAddIn` 개체를 사용하여 PowerPoint의 개체 모델에 액세스합니다.  
+4.  Replace the `monthCalendar1_DateChanged` event handler with the following code. This code adds a text box to the first slide in the active presentation, and then adds the currently selected date to the text box. This code uses the `Globals.ThisAddIn` object to access the object model of PowerPoint.  
   
-     [!code-csharp[Trin_TaskPaneMonthCalendar#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/CS/MyUserControl.cs#3)]
-     [!code-vb[Trin_TaskPaneMonthCalendar#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/VB/MyUserControl.vb#3)]  
+     [!code-csharp[Trin_TaskPaneMonthCalendar#3](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs#3)]  [!code-vb[Trin_TaskPaneMonthCalendar#3](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb#3)]  
   
-5.  **솔루션 탐색기**에서 **MyAddIn** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **빌드**를 클릭합니다. 프로젝트가 오류 없이 빌드되는지 확인합니다.  
+5.  In **Solution Explorer**, right-click the **MyAddIn** project and then click **Build**. Verify that the project builds without errors.  
   
-## 사용자 지정 작업창 표시  
- VSTO 추가 기능이 시작할 때 사용자 지정 작업창을 표시하려면 VSTO 추가 기능의 <xref:Microsoft.Office.Tools.AddIn.Startup> 이벤트 처리기에 있는 작업창에 사용자 정의 컨트롤을 추가합니다.  
+## <a name="displaying-the-custom-task-pane"></a>Displaying the Custom Task Pane  
+ To display the custom task pane when the VSTO Add-in starts, add the user control to the task pane in the <xref:Microsoft.Office.Tools.AddIn.Startup> event handler of the VSTO Add-in.  
   
-#### 사용자 지정 작업창을 표시하려면  
+#### <a name="to-display-the-custom-task-pane"></a>To display the custom task pane  
   
-1.  **솔루션 탐색기**에서 **PowerPoint**를 확장합니다.  
+1.  In **Solution Explorer**, expand **PowerPoint**.  
   
-2.  **ThisAddIn.cs** 또는 **ThisAddIn.vb**를 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 클릭합니다.  
+2.  Right-click **ThisAddIn.cs** or **ThisAddIn.vb** and click **View Code**.  
   
-3.  `ThisAddIn` 클래스에 다음 코드를 추가합니다. 이 코드는 `MyUserControl` 및 <xref:Microsoft.Office.Tools.CustomTaskPane>의 인스턴스를 `ThisAddIn` 클래스의 멤버로 선언합니다.  
+3.  Add the following code to the `ThisAddIn` class. This code declares instances of `MyUserControl` and <xref:Microsoft.Office.Tools.CustomTaskPane> as members of the `ThisAddIn` class.  
   
-     [!code-csharp[Trin_TaskPaneMonthCalendar#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/CS/ThisAddIn.cs#4)]
-     [!code-vb[Trin_TaskPaneMonthCalendar#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/VB/ThisAddIn.vb#4)]  
+     [!code-vb[Trin_TaskPaneMonthCalendar#4](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/ThisAddIn.vb#4)]  [!code-csharp[Trin_TaskPaneMonthCalendar#4](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/ThisAddIn.cs#4)]  
   
-4.  `ThisAddIn_Startup` 이벤트 처리기를 다음 코드로 바꿉니다. 이 코드는 `CustomTaskPanes` 컬렉션에 `MyUserControl` 개체를 추가하여 새 <xref:Microsoft.Office.Tools.CustomTaskPane>을 만듭니다. 코드에서 작업창도 표시합니다.  
+4.  Replace the `ThisAddIn_Startup` event handler with the following code. This code creates a new <xref:Microsoft.Office.Tools.CustomTaskPane> by adding the `MyUserControl` object to the `CustomTaskPanes` collection. The code also displays the task pane.  
   
-     [!code-csharp[Trin_TaskPaneMonthCalendar#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/CS/ThisAddIn.cs#5)]
-     [!code-vb[Trin_TaskPaneMonthCalendar#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneMonthCalendar/VB/ThisAddIn.vb#5)]  
+     [!code-vb[Trin_TaskPaneMonthCalendar#5](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/ThisAddIn.vb#5)]  [!code-csharp[Trin_TaskPaneMonthCalendar#5](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/ThisAddIn.cs#5)]  
   
-## 추가 기능 테스트  
- 프로젝트를 실행하면 PowerPoint가 열리고 VSTO 추가 기능에서 사용자 지정 작업창을 표시합니다.<xref:System.Windows.Forms.MonthCalendar> 컨트롤을 클릭하여 코드를 테스트합니다.  
+## <a name="testing-the-add-in"></a>Testing the Add-In  
+ When you run the project, PowerPoint opens and the VSTO Add-in displays the custom task pane. Click the <xref:System.Windows.Forms.MonthCalendar> control to test the code.  
   
-#### VSTO 추가 기능을 테스트하려면  
+#### <a name="to-test-your-vsto-add-in"></a>To test your VSTO Add-in  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  Press F5 to run your project.  
   
-2.  사용자 지정 작업창이 표시되는지 확인합니다.  
+2.  Confirm that the custom task pane is visible.  
   
-3.  작업창의 <xref:System.Windows.Forms.MonthCalendar> 컨트롤에서 날짜를 클릭합니다.  
+3.  Click a date in the <xref:System.Windows.Forms.MonthCalendar> control on the task pane.  
   
-     날짜가 활성 프레젠테이션의 첫 번째 슬라이드에 삽입됩니다.  
+     The date is inserted into the first slide in the active presentation.  
   
-## 다음 단계  
- 다음 항목에서는 사용자 지정 작업창을 만드는 방법에 대해 더 자세히 설명합니다.  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to create custom task panes from these topics:  
   
--   다른 응용 프로그램용 VSTO 추가 기능의 사용자 지정 작업창을 만듭니다. 사용자 지정 작업창을 지원하는 응용 프로그램에 대한 자세한 내용은 [사용자 지정 작업 창](../vsto/custom-task-panes.md)를 참조하세요.  
+-   Create a custom task pane in an VSTO Add-in for a different application. For more information about the applications that support custom task panes, see [Custom Task Panes](../vsto/custom-task-panes.md).  
   
--   사용자 지정 작업창을 숨기거나 표시하는 데 사용할 수 있는 리본 단추를 만듭니다. 자세한 내용은 [연습: 사용자 지정 작업 창과 리본 단추 동기화](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)을 참조하세요.  
+-   Create a Ribbon button that can be used to hide or display a custom task pane. For more information, see [Walkthrough: Synchronizing a Custom Task Pane with a Ribbon Button](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md).  
   
--   Outlook에서 열린 모든 메일 메시지에 대해 사용자 지정 작업창을 만듭니다. 자세한 내용은 [연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업 창 표시](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)을 참조하세요.  
+-   Create a custom task pane for every e-mail message that is opened in Outlook. For more information, see [Walkthrough: Displaying Custom Task Panes with E-Mail Messages in Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md).  
   
-## 참고 항목  
- [사용자 지정 작업 창](../vsto/custom-task-panes.md)   
- [방법: 응용 프로그램에 사용자 지정 작업 창 추가](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
- [연습: 사용자 지정 작업 창과 리본 단추 동기화](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   
- [연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업 창 표시](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  
+## <a name="see-also"></a>See Also  
+ [Custom Task Panes](../vsto/custom-task-panes.md)   
+ [How to: Add a Custom Task Pane to an Application](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
+ [Walkthrough: Synchronizing a Custom Task Pane with a Ribbon Button](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   
+ [Walkthrough: Displaying Custom Task Panes with E-Mail Messages in Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  
   
   

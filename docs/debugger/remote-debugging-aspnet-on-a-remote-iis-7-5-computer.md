@@ -1,87 +1,206 @@
 ---
-title: "원격 IIS 7.5 컴퓨터의 원격 디버깅 ASP.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
-ms.assetid: 573a3fc5-6901-41f1-bc87-557aa45d8858
-caps.latest.revision: 8
-caps.handback.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 원격 IIS 7.5 컴퓨터의 원격 디버깅 ASP.NET
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+title: Remote Debug ASP.NET on a Remote IIS Computer | Microsoft Docs
+ms.custom: remotedebugging
+ms.date: 07/26/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 9cb339b5-3caf-4755-aad1-4a5da54b2a23
+caps.latest.revision: 6
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: a159da25d9e124bc66a178b72bbd69e6bce9ee5f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-IIS 7.5가 있는 Windows Server 2008 R2 컴퓨터에 ASP.NET 웹 응용 프로그램을 배포하고 원격 디버깅에 대해 설정할 수 있습니다. 다음 지침에서는 Visual Studio 2015 MVC 4.5.2 응용 프로그램을 설정 및 구성하는 방법을 설명합니다.  
+---
+# <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>Remote Debug ASP.NET on a Remote IIS Computer
+To debug an ASP.NET application that has been deployed to IIS, install and run the remote tools on the computer where you deployed your app, and then attach to your running app from Visual Studio.
+
+![Remote debugger components](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
+
+This guide explains how to set up and configure a Visual Studio 2017 ASP.NET MVC 4.5.2 application, deploy it to IIS, and attach the remote debugger from Visual Studio. To remote debug ASP.NET Core, see [Remote Debug ASP.NET Core on an IIS Computer](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md). You can also deploy and debug on IIS using Azure. For more information, see [Remote debug on Azure](../debugger/remote-debugging-azure.md).
+
+These procedures have been tested on these server configurations:
+* Windows Server 2012 R2 and IIS 10 (For Windows Server 2008 R2, server steps are different)
+
+## <a name="create-the-aspnet-452-application-on-the-visual-studio-computer"></a>Create the ASP.NET 4.5.2 application on the Visual Studio computer
   
-## Visual Studio 컴퓨터에서 응용 프로그램 만들기  
+1. Create a new MVC ASP.NET application. (**File > New > Project**, then select **Visual C# > Web > ASP.NET Web Application** . In the **ASP.NET 4.5.2** templates section, select **MVC**. Make sure that **Enable Docker Support** is not selected and that **Authentication** is set to **No Authentication**. Name the project **MyASPApp**.)
+
+2. Open the  HomeController.cs file, and set a breakpoint in the `About()` method.
+
+## <a name="bkmk_configureIIS"></a> Install and Configure IIS on Windows Server
+
+[!INCLUDE [remote-debugger-install-iis-role](../debugger/includes/remote-debugger-install-iis-role.md)]
+
+## <a name="update-browser-security-settings-on-windows-server"></a>Update browser security settings on Windows Server
+
+Depending on your security settings, it may save you time to add the following trusted sites to your browser so you can easily download the software described in this tutorial. Access to these sites may be needed:
+
+- microsoft.com
+- go.microsoft.com
+- download.microsoft.com
+- visualstudio.com
+
+If you are using Internet Explorer, you can add the trusted sites by going to **Internet Options > Security > Trusted Sites > Sites**. These steps are different for other browsers.
+
+When you download the software, you may get requests to grant permission to load various web site scripts and resources. In most cases, these additional resources are not required to install the software.
+
+## <a name="BKMK_deploy_asp_net"></a> Install ASP.NET 4.5 on Windows Server
+
+On Windows Server 2012 R2, see [IIS Configuration](https://docs.asp.net/en/latest/publishing/iis.html#iis-configuration) if you need more detailed information.
+
+1. Use the Web Platform Installer (WebPI) to install ASP.NET 4.5 (from the Server node in Windows Server 2012 R2, choose **Get New Web Platform Components** and then search for ASP.NET)
+
+    ![RemoteDBG_IIS_AspNet_45](../debugger/media/remotedbg_iis_aspnet_45.png "RemoteDBG_IIS_AspNet_45")
+
+    > [!NOTE]
+    > If you are using Windows Server 2008 R2, install ASP.NET 4 instead using this command:
+
+     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -ir**
+
+2. Restart the system (or execute **net stop was /y** followed by **net start w3svc** from a command prompt to pick up a change to the system PATH).
+
+## <a name="BKMK_install_webdeploy"></a> (Optional) Install Web Deploy 3.6 on Windows Server
+
+[!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
+
+## <a name="BKMK_deploy_asp_net"></a> Configure ASP.NET Web site on the Windows Server computer
+
+1. Open Windows Explorer and create a new folder, **C:\Publish**, where you will later deploy the ASP.NET project.
+
+2. Open the **Internet Information Services (IIS) Manager**. (In the left pane of Server Manager, select **IIS**. Right-click the server and select **Internet Information Services (IIS) Manager**.)
+
+3. Under **Connections** in the left pane, go to **Sites**.
+
+4. Select the **Default Web Site**, choose **Basic Settings**, and set the **Physical path** to **C:\Publish**.
+
+5. Right-click the **Default Web Site** node and select **Add Application**.
+
+6. Set the **Alias** field to **MyASPApp**, accept the default Application Pool (**DefaultAppPool**), and set the **Physical path** to **C:\Publish**.
+
+7. Under **Connections**, select **Application Pools**. Open **DefaultAppPool** and set the Application pool field to **ASP.NET v4.0** (ASP.NET 4.5 is not an option for the Application pool).
+
+8. With the site selected in the IIS Manager, choose **Edit Permissions**, and make sure that IUSR, IIS_IUSRS, or the user configured for the Application Pool is an authorized user with Read & Execute rights. If none of these are present, add IUSR as a user with Read & Execute rights.
+
+## <a name="bkmk_webdeploy"></a> (Optional) Publish and deploy the app using Web Deploy from Visual Studio
+
+[!INCLUDE [remote-debugger-deploy-app-web-deploy](../debugger/includes/remote-debugger-deploy-app-web-deploy.md)]
+
+Also, you may need to read the section on [Troubleshooting ports](#bkmk_openports).
+
+## <a name="optional-publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>(Optional) Publish and Deploy the app by publishing to a local folder from Visual Studio
+
+You can also publish and deploy the app using the file system or other tools.
+
+1. (ASP.NET 4.5.2) Make sure that the web.config file lists the correct version of the .NET Framework.  For example, if you are targeting ASP.NET 4.5.2, make sure this version is listed in web.config.
   
-1.  새 MVC ASP.NET 응용 프로그램을 만듭니다.**파일 \/ 새로 만들기 \/ 프로젝트**, **Visual C\# \/ 웹 \/ ASP.NET 웹 응용 프로그램**을 차례로 선택합니다.**ASP.NET 4.5.2** 템플릿 섹션에서 **MVC**를 선택합니다.**Microsoft Azure 웹앱 구성** 페이지를 취소합니다. 이름을 **MyMVC**로 지정합니다.  
+    ```xml
+    <system.web>
+      <compilation debug="true" targetFramework="4.5.2" />
+      <httpRuntime targetFramework="4.5.2" />
+      <httpModules>
+        <add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web" />
+      </httpModules>
+    </system.web>
   
-2.  HomeController.cs 파일을 열고 `About()` 메서드에 중단점을 설정합니다.  
+    ```
+
+    For example, the version should be 4.0 if you install ASP.NET 4 instead of 4.5.2.
+
+[!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
+
+## <a name="BKMK_msvsmon"></a> Download and Install the Remote Tools on Windows Server
+
+In this tutorial, we are using Visual Studio 2017.
+
+[!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
+
+> [!TIP]
+> In some scenarios, it can be most efficient to run the remote debugger from a file share. For more information, see [Run the remote debugger from a file share](../debugger/remote-debugging.md#fileshare_msvsmon).
+
+## <a name="requirements"></a>Requirements
+
+The remote debugger is supported on Windows Server starting with Windows Server 2008 Service Pack 2 and is also supported on Windows 7 and newer. For a complete list of requirements, see [Requirements](../debugger/remote-debugging.md#requirements_msvsmon).
+
+> [!NOTE]
+>  The remote computer and the Visual Studio computer must be connected over a network, workgroup, or homegroup, or else connected directly through an Ethernet cable. Debugging over the Internet is not supported in this scenario.
   
-3.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.  
-  
-4.  **게시 대상 선택**에 대해 **사용자 지정**을 선택하고 프로필 이름을 **MyMVC**로 지정합니다.**다음**을 클릭합니다.  
-  
-5.  **연결** 탭에서 **게시 방법** 필드를 **파일 시스템**으로 설정하고 **대상 위치** 필드를 로컬 디렉터리로 설정합니다.**다음**을 클릭합니다.  
-  
-6.  구성을 **디버그**로 설정합니다.**게시**를 클릭합니다.  
-  
-     로컬 디렉터리에 응용 프로그램을 게시해야 합니다.  
-  
-## Windows Server 원격 컴퓨터에 응용 프로그램 배포  
- 이 섹션에서는 Windows Server 2008 R2 컴퓨터에서 IIS를 이미 사용할 수 있다고 가정합니다.  
-  
-1.  ASP.NET을 설치합니다.  
-  
-     **C:\\Windows\\Microsoft.NET\\Framework\(64\)\\v4.0.30319\\aspnet\_regiis.exe \-ir**  
-  
-2.  Visual Studio 컴퓨터의 ASP.NET 프로젝트 디렉터리를 Windows Server 컴퓨터의 로컬 디렉터리\(**C:\\Publish**라고 함\)에 복사합니다.  
-  
-3.  web.config 파일에 올바른 버전의 .NET Framework가 표시되는지 확인합니다.  기본적으로 이 컴퓨터에 설치되는 .NET Framework 버전은 4.0.30319지만 ASP.NET 4.5.2 버전을 만들었습니다. 이 버전이 Windows Server 컴퓨터에 설치되어 있지 않으면 버전을 변경해야 합니다.  
-  
-    ```xml  
-    <system.web> <authentication mode="None" /> <compilation debug="true" targetFramework="4.0.30319" /> <httpRuntime targetFramework="4.0.30319" /> </system.web>  
-  
-    ```  
-  
-4.  **IIS\(인터넷 정보 서비스\) 관리자**를 열고 **사이트**로 이동합니다.  
-  
-5.  **기본 웹 사이트** 노드를 마우스 오른쪽 단추로 클릭하고 **응용 프로그램 추가**를 선택합니다.  
-  
-6.  **별칭** 필드를 **MyMVC**로 설정하고 응용 프로그램 풀 필드를 **ASP.NET v4.0**으로 설정합니다.**실제 경로**를 **C:\\Publish**\(ASP.NET 프로젝트 디렉터리를 복사한 위치\)로 설정합니다.  
-  
-7.  배포를 테스트하려면 **기본 웹 사이트**를 마우스 오른쪽 단추로 클릭하고 **찾아보기**를 선택합니다. 웹 페이지가 표시됩니다.  
-  
-## Windows Server 컴퓨터에 원격 디버거 설치  
- 원격 디버거를 다운로드하는 방법에 대한 지침은 [원격 디버깅](../debugger/remote-debugging.md)을 참조하세요.  
-  
- ASP.NET 응용 프로그램의 원격 디버깅을 수행하려면 원격 디버거를 서비스로 시작하거나 관리자 권한으로 원격 디버거 응용 프로그램을 실행합니다. 원격 디버거를 서비스로 실행하는 방법에 대한 자세한 내용은 [원격 디버깅](../debugger/remote-debugging.md)에서 확인할 수 있습니다.  
-  
-## Visual Studio 컴퓨터에서 ASP.NET 응용 프로그램에 연결  
-  
--   Visual Studio 컴퓨터에서 **MyMVC** 솔루션을 엽니다.  
-  
--   Visual Studio에서 **디버그 \/ 프로세스에 연결**을 클릭합니다.  
-  
--   한정자 필드를 **\<원격 컴퓨터 이름\>:4020**으로 설정합니다.  
-  
--   일부 프로세스가 **사용 가능한 프로세스** 창에 표시됩니다.  
-  
--   **모든 사용자의 프로세스 표시**를 선택합니다.  
-  
--   **w3wp.exe**를 찾은 다음 **연결**을 클릭합니다.  
-  
--   원격 컴퓨터의 웹 사이트를 엽니다. 브라우저에서 **http:\/\/\<원격 컴퓨터 이름\>**으로 이동합니다.  
-  
--   ASP.NET 웹 페이지가 표시됩니다.**정보**를 클릭합니다.  
-  
-     Visual Studio에서 중단점이 적중됩니다.
+## <a name="BKMK_setup"></a> Set up the remote debugger on Windows Server
+
+[!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
+
+> [!NOTE]
+> If you need to add permissions for additional users, change the authentication mode, or port number for the remote debugger, see [Configure the remote debugger](../debugger/remote-debugging.md#configure_msvsmon).
+
+## <a name="BKMK_attach"></a> Attach to the ASP.NET application from the Visual Studio computer
+
+1. On the Visual Studio computer, open the **MyASPApp** solution.
+2. In Visual Studio, click **Debug > Attach to Process** (Ctrl + Alt + P).
+
+    > [!TIP]
+    > In Visual Studio 2017, you can re-attach to the same process you previously attached to by using **Debug > Reattach to Process...** (Shift+Alt+P). 
+
+3. Set the Qualifier field to **\<remote computer name>:4022**.
+4. Click **Refresh**.
+    You should see some processes appear in the **Available Processes** window.
+
+    If you don't see any processes, try using the IP address instead of the remote computer name (the port is required). You can use `ipconfig` in a command line to get the IPv4 address.
+
+5. Check  **Show processes from all users**.
+6. Type the first letter of a process name to quickly find **w3wp.exe** for ASP.NET 4.5.
+
+    ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg_attachtoprocess.png "RemoteDBG_AttachToProcess")
+
+7. Click **Attach**
+
+8. Open the remote computer's website. In a browser, go to **http://\<remote computer name>**.
+    
+    You should see the ASP.NET web page.
+9. In the running ASP.NET application, click the link to the **About** page.
+
+    The breakpoint should be hit in Visual Studio.
+
+## <a name="bkmk_openports"></a> Troubleshooting: Open required ports on Windows Server
+
+In most setups, required ports are opened by the installation of ASP.NET and the remote debugger. However, you may need to verify that ports are open.
+
+> [!NOTE]
+> On an Azure VM, you must open ports through the [Network security group](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80). 
+
+Required ports:
+
+- 80 - Required for IIS
+- 8172 - (Optional) Required for Web Deploy to deploy the app from Visual Studio
+- 4022 - Required for remote debugging from Visual Studio 2017 (see [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md) for detailed information.
+- UDP 3702 - (Optional) Discovery port enables you to the **Find** button when attaching to the remote debugger in Visual Studio.
+
+1. To open a port on Windows Server, open the **Start** menu, search for **Windows Firewall with Advanced Security**.
+
+2. Then choose **Inbound Rules > New Rule > Port**. Choose **Next** and under **Specific local ports**, enter the port number, click **Next**, then **Allow the Connection**, click **Next** and add the name (**IIS**, **Web Deploy**, or **msvsmon**) for the Inbound Rule.
+
+    If you want more details on configuring Windows Firewall, see [Configure the Windows Firewall for Remote Debugging](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
+
+3. Create additional rules for the other required ports.

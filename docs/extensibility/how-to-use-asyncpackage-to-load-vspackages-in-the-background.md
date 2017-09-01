@@ -1,5 +1,5 @@
 ---
-title: "방법: 백그라운드에서 Vspackage를 로드 하려면 AsyncPackage 사용 | Microsoft Docs"
+title: 'How to: Use AsyncPackage to Load VSPackages in the Background | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,58 +23,59 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
-ms.openlocfilehash: bcfdf6991c12affc1000ace72b16f97be9de469a
-ms.lasthandoff: 05/03/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cfd99e4926aac1847f6f0397747201cb0e3a74ab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>방법: AsyncPackage을 사용 하 여 백그라운드에서 Vspackage를 로드 합니다.
-디스크 I/O 로드 되 고 VS 패키지 초기화 될 수 있습니다. UI 스레드에서 오류가 발생 해도 이러한 I/O 응답성 문제가 발생할 수 있습니다. 이 문제를 해결 하려면 Visual Studio 2015에는 백그라운드 스레드에서 로드 된 패키지 수 있도록 < xref:Microsoft.VisualStudio.Shell.AsyncPackage > 클래스가 도입 되었습니다.  
+# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>How to: Use AsyncPackage to Load VSPackages in the Background
+Loading and initializing a VS package can result in disk I/O. If such I/O happens on the UI thread, it can lead to responsiveness issues. To address this, Visual Studio 2015 introduced the  <xref:Microsoft.VisualStudio.Shell.AsyncPackage> class that enables package loading on a background thread.  
   
-## <a name="creating-an-asyncpackage"></a>AsyncPackage 만들기  
- VSIX 프로젝트를 만들어서 시작할 수 있습니다 (**파일 / 새로 만들기 / 프로젝트 / Visual C# / 확장성 / VSIX 프로젝트**) VSPackage 프로젝트에 추가 하 고 (프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가/새 항목 / C# 항목/확장성/Visual Studio 패키지**). 그런 다음 서비스 만들고 패키지에 해당 서비스를 추가할 수 있습니다.  
+## <a name="creating-an-asyncpackage"></a>Creating an AsyncPackage  
+ You can start by creating a VSIX project (**File / New / Project / Visual C# / Extensibility / VSIX Project**) and adding a VSPackage to the project (right click on the project and **Add/New Item/C# item/Extensibility/Visual Studio Package**). You can then create your services and add those services to your package.  
   
-1.  < Xref:Microsoft.VisualStudio.Shell.AsyncPackage >에서 패키지를 파생 시킵니다.  
+1.  Derive the package from <xref:Microsoft.VisualStudio.Shell.AsyncPackage>.  
   
-2.  서비스를 쿼리 하는 패키지 로드를 발생할 수 있습니다 제공 하는 경우:  
+2.  If you are providing services whose querying may cause your package to load:  
   
-     패키지를 안전 하 게 백그라운드에 로드 하 고이 동작을 선택 하십시오 < xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute >를 설정 해야 Visual Studio를 나타내기 위해 **AllowsBackgroundLoading** 속성을 특성 생성자에는 true입니다.  
+     To indicate to Visual Studio that your package is safe for background loading and to opt into this behavior, your <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> should set **AllowsBackgroundLoading** property to true in the attribute constructor.  
   
-    ```c#  
+    ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]  
   
     ```  
   
-     백그라운드 스레드 서비스를 인스턴스화할 수 안전 하다는 Visual Studio를 나타내기 위해 < xref:Microsoft.VisualStudio.Shell.ProvideServiceAttributeBase.IsAsyncQueryable%2A > 속성 < xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute > 생성자에서 true로 설정 해야 합니다.  
+     To indicate to Visual Studio that it is safe to instantiate your service on a background thread, you should set the <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttributeBase.IsAsyncQueryable%2A> property to true in the <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> constructor.  
   
-    ```c#  
+    ```csharp  
     [ProvideService(typeof(SMyTestService), IsAsyncQueryable = true)]  
   
     ```  
   
-3.  UI 컨텍스트를 통해 로드 하는 경우 지정 해야 **PackageAutoLoadFlags.BackgroundLoad** < xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute >에 대 한 플래그에 값 (0x2) 패키지의 자동 로드 항목의 값으로 기록 합니다.  
+3.  If you are loading via UI contexts, then you should specify **PackageAutoLoadFlags.BackgroundLoad** for the <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> OR the value (0x2) into the flags written as the value of your package's auto-load entry.  
   
-    ```c#  
+    ```csharp  
     [ProvideAutoLoad(UIContextGuid, PackageAutoLoadFlags.BackgroundLoad)]  
   
     ```  
   
-4.  작업을 수행 해야 하는 비동기 초기화에 있으면 < xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A >을 재정의 해야 합니다. 제거는 **initialize ()** VSIX 서식 파일에서 제공 하는 메서드. (의 **initialize ()** 에서 메서드 **AsyncPackage** 는 봉인 클래스). 비동기 서비스 패키지를 추가 하 여 < xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A > 방법 중 하나를 사용할 수 있습니다.  
+4.  If you have asynchronous initialization work to do, you should override <xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A>. Remove the **Initialize()** method provided by the VSIX template. (The **Initialize()** method in **AsyncPackage** is sealed). You can use any of the <xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A> methods to add asynchronous services to your package.  
   
-     참고: 호출할 **기본 합니다. InitializeAsync()**, 소스 코드를 변경할 수 있습니다.  
+     NOTE: To call **base.InitializeAsync()**, you can change your source code to:  
   
-    ```c#  
+    ```csharp  
     await base.InitializeAsync(cancellationToken, progress);  
     ```  
   
-5.  주의 해야 Rpc (원격 프로시저 호출)를 만들지 않는 비동기 초기화 코드에서 (에서 **InitializeAsync**). 이러한 직접 또는 간접적으로 < xref:Microsoft.VisualStudio.Shell.Package.GetService%2A >를 호출 하는 경우에 발생할 수 있습니다.  동기화 로드 필요할 때 < xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory >를 사용 하 여 UI 스레드를 차단 합니다. 기본 차단 모델 Rpc를 해제합니다. 이 비동기 작업에서 RPC를 사용 하려고 하면 교착 상태가 UI 스레드는 자체 패키지를 로드할 때까지 대기 하는 경우를 의미 합니다. 다음과 같이 사용 하 여 필요한 경우을 UI 스레드에 코드를 마샬링하는 대신 사용 하는 일반 **참가할 수 있는 작업 팩터리**의 < xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A > 나 RPC를 사용 하지 않는 일부 다른 메커니즘입니다.  사용 하지 마십시오 **ThreadHelper.Generic.Invoke** 또는 일반적으로 호출을 UI 스레드에 얻기 위해 기다리는 스레드를 차단 합니다.  
+5.  You must take care to NOT make RPCs (Remote Procedure Call) from your asynchronous initialization code (in **InitializeAsync**). These can occur when you call <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> directly or indirectly.  When sync loads are required, the UI thread will block using <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>. The default blocking model disables RPCs. This means that if you attempt to use an RPC from your async tasks, you will deadlock if the UI thread is itself waiting for your package to load. The general alternative is to marshal your code to the UI thread if needed using something like **Joinable Task Factory**'s <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> or some other mechanism that does not use an RPC.  Do NOT use **ThreadHelper.Generic.Invoke** or generally block the calling thread waiting to get to the UI thread.  
   
-     참고: 사용 하지 않아야 **GetService** 또는 **QueryService** 에 프로그램 **InitializeAsync** 메서드. 역할을 사용 해야 할 경우 먼저 UI 스레드로 전환 해야 합니다. < Xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A >에서 사용 하 여 **AsyncPackage** (캐스팅 하 여 < xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider >에 있습니다.)  
+     NOTE: You should avoid using **GetService** or **QueryService** in your **InitializeAsync** method. If you have to use those, you will need to switch to the UI thread first. The alternative is to use <xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A> from your **AsyncPackage** (by casting it to <xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider>.)  
   
- C#의 경우 AsyncPackage 만듭니다.:  
+ C#: Create an AsyncPackage :  
   
-```c#  
+```csharp  
 [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]       
 [ProvideService(typeof(SMyTestService), IsAsyncQueryable = true)]   
 public sealed class TestPackage : AsyncPackage   
@@ -87,35 +88,36 @@ public sealed class TestPackage : AsyncPackage
 }  
 ```  
   
-## <a name="convert-an-existing-vspackage-to-asyncpackage"></a>기존 VSPackage AsyncPackage 변환  
- 작업의 대부분은 새 만들기와 동일 **AsyncPackage**합니다. 위의 1 ~ 5 단계를 수행 해야 합니다. 다음에서 좀 더 주의 수행 해야 합니다.  
+## <a name="convert-an-existing-vspackage-to-asyncpackage"></a>Convert an existing VSPackage to AsyncPackage  
+ The majority of the work is the same as creating a new **AsyncPackage**. You need to follow steps 1 through 5 above. You also need to take extra caution on the following:  
   
-1.  제거 해야는 **초기화** 패키지에서 제공 되었던 재정의 합니다.  
+1.  Remember to remove the **Initialize** override you had in your package.  
   
-2.  교착 상태 방지: 있을 수 이제는 백그라운드 스레드에서 발생 하는 사용자 코드에서 Rpc 숨겨져 있습니다. RPC 하는 경우 했는지 확인 해야 할 (예: **GetService**) 중 하나 (1) 주 스레드로 전환 해야 할 또는 (2) 사용 하 여 비동기 버전의 경우 API가 있습니다 (예: **GetServiceAsync**).  
+2.  Avoid deadlocks: There could be hidden RPCs in your code which now happen on a background thread. You need to ensure that if you are making an RPC (e.g. **GetService**), you need to either (1) switch to the main thread or (2) use the asynchronous version of the API if one exists (e.g. **GetServiceAsync**).  
   
-3.  너무 자주 스레드 간에 전환 하지 마십시오. 백그라운드 스레드에서 발생할 수 있는 작업 필드를 지역화 하려고 합니다. 이렇게 하면 로드 시간이 줄어듭니다.  
+3.  Do not switch between threads too frequently. Try to localize the work that can happen in a background thread. This reduces the load time.  
   
-## <a name="querying-services-from-asyncpackage"></a>AsyncPackage에서 서비스 쿼리  
- **AsyncPackage** 되었거나 호출자에 따라 비동기적으로 로드 되지 않을 수 있습니다. 예를 들어,  
+## <a name="querying-services-from-asyncpackage"></a>Querying Services from AsyncPackage  
+ An **AsyncPackage** may or may not load asynchronously depending on the caller. For instance,  
   
--   호출자에 게 메서드를 호출 하면 **GetService** 또는 **QueryService** (둘 다 동기 Api) 또는  
+-   If the caller called **GetService** or **QueryService** (both synchronous APIs) or  
   
--   호출자에 게 메서드를 호출 하면 **IVsShell::LoadPackage** (또는 **IVsShell5::LoadPackageWithContext**) 또는  
+-   If the caller called **IVsShell::LoadPackage** (or **IVsShell5::LoadPackageWithContext**) or  
   
--   부하 UI 컨텍스트에 의해 트리거되는 하지만 UI 컨텍스트 메커니즘 비동기적으로 있습니다 로드할 수를 지정 하지 않습니다.  
+-   The load is triggered by a UI context, but you did not specify the UI context mechanism can load you asynchronously  
   
- 그런 다음 패키지는 동기적으로 로드 됩니다.  
+ then your package will load synchronously.  
   
- 참고는 패키지에에서 남아 있을 수 있는 기회 (비동기 초기화 단계) UI 스레드에서 작업을 수행할 수 있지만 해당 작업의 완료에 대 한 UI 스레드가 차단 됩니다. 호출자에 게 사용 하는 경우 **IAsyncServiceProvider** 서비스에 대 한 비동기적으로 쿼리를 다음 로드 및 초기화 수행 됩니다 비동기적으로 결과 작업 개체에서 즉시 차단 하지 않는 것으로 가정 합니다.  
+ Note that your package still has an opportunity (in its asynchronous initialization phase) to do work off the UI thread, though the UI thread will be blocked for that work's completion. If the caller uses **IAsyncServiceProvider** to asynchronously query for your service, then your load and initialization will be done asynchronously assuming they don't immediately block on the resulting task object.  
   
- C#의 경우 서비스를 비동기적으로 쿼리 하는 방법:  
+ C#: How to query service asynchronously:  
   
-```c#  
+```csharp  
 using Microsoft.VisualStudio.Shell;   
 using Microsoft.VisualStudio.Shell.Interop;   
   
 IAsyncServiceProvider asyncServiceProvider = Package.GetService(typeof(SAsyncServiceProvider)) as IAsyncServiceProvider;   
 IMyTestService testService = await ayncServiceProvider.GetServiceAsync(typeof(SMyTestService)) as IMyTestService;  
 ```
+  
 

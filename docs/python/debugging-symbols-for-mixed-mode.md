@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio에서 혼합 모드 Python/C++ 디버깅에 대한 기호 | Microsoft Docs"
 ms.custom: 
-ms.date: 4/4/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be5fdf2f-b55f-488a-9772-58adfe07a7ab
@@ -14,30 +15,17 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: b8bf362f506255c09468934f01a7beeef3a632dd
-ms.lasthandoff: 04/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 1be4e28055f0501433f85325870654671c12f961
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/18/2017
 
 ---
 
 # <a name="installing-debugging-symbols-for-python-interpreters"></a>Python 인터프리터에 대한 디버깅 기호 설치
 
-완전한 디버깅 환경을 제공하기 위해, Visual Studio의 [혼합 모드 Python 디버거](debugging-mixed-mode.md)는 사용되는 Python 인터프리터 내에서 수많은 내부 데이터 구조를 구문 분석해야 합니다. 이렇게 하려면 인터프리터 자체에 대한 디버그 기호가 필요합니다. 예를 들어 python27.dll의 경우 해당 기호 파일은 python27.pdb이고, python36.dll의 경우 기호 파일은 python36.pdb입니다. 인터프리터의 각 버전은 다양한 모듈에 대한 기호 파일도 제공합니다.
+완전한 디버깅 환경을 제공하기 위해, Visual Studio의 [혼합 모드 Python 디버거](debugging-mixed-mode.md)는 수많은 내부 데이터 구조를 구문 분석하는 데 사용되는 Python 인터프리터의 디버그 기호가 필요합니다. 예를 들어 python27.dll의 경우 해당 기호 파일은 python27.pdb이고, python36.dll의 경우 기호 파일은 python36.pdb입니다. 인터프리터의 각 버전은 다양한 모듈에 대한 기호 파일도 제공합니다.
 
 Visual Studio 2017에서 “Python 3” 및 “Anaconda 3” 인터프리터는 자동으로 각 기호를 설치하고 Visual Studio는 자동으로 해당 기호를 찾습니다. Visual Studio 2015 및 이전 버전의 경우 또는 다른 인터프리터를 사용하는 경우 별도로 기호를 다운로드한 다음 **디버깅 > 기호** 탭의 **도구 > 옵션** 대화 상자를 통해 Visual Studio가 해당 기호를 가리키도록 해야 합니다. 이러한 단계는 다음 섹션에 자세히 설명되어 있습니다.
 
@@ -46,17 +34,17 @@ Visual Studio는 기호가 필요한 경우(일반적으로 혼합 모드 디버
 - **기호 설정 대화 상자 열기**는 **디버깅 > 기호** 탭에 대한 **옵션** 대화 상자를 엽니다.
 - **인터프리터용 기호 다운로드**는 이 현재 설명서 페이지를 엽니다. 이 경우 **도구 > 옵션**을 선택하고 **디버깅 > 기호** 탭으로 이동하여 계속합니다.
 
-    ![혼합 모드 디버거 기호 프롬프트](~/python/media/mixed-mode-debugging-symbols-required.png)
+    ![혼합 모드 디버거 기호 프롬프트](media/mixed-mode-debugging-symbols-required.png)
 
 ## <a name="downloading-symbols"></a>기호 다운로드
 
 - Python 3.5 이상: Python 설치 관리자를 통해 디버그 기호를 가져옵니다. **사용자 지정 설치**를 선택하고 **다음**을 선택하여 **고급 옵션**으로 이동한 다음, **디버깅 기호 다운로드** 및 **디버그 버전의 이진 파일 다운로드** 상자를 선택합니다.
 
-    ![디버그 기호를 포함한 Python 3.x 설치 관리자](~/python/media/mixed-mode-debugging-symbols-installer35.png)
+    ![디버그 기호를 포함한 Python 3.x 설치 관리자](media/mixed-mode-debugging-symbols-installer35.png)
 
     기호 파일(`.pdb`)은 루트 설치 폴더에 있습니다(개별 모듈에 대한 기호 파일도 `DLLs` 폴더에 있음). 따라서 Visual Studio는 자동으로 해당 기호 파일을 찾으므로 추가 단계가 필요하지 않습니다.
 
-- Python 3.4.x 및 이전 버전: 기호는 아래에 제공된 대로 [공식 배포](#official-distributions) 또는 [Enthought Canopy](#enthought-canopy)에서 다운로드 가능한 .zip 파일로 제공됩니다. 다운로드한 후 로컬 폴더(예: Python 폴더 내의 `Symbols` 폴더)에 파일의 압축을 풀어 계속합니다.
+- Python 3.4.x 및 이전 버전: 기호는 [공식 배포](#official-distributions) 또는 [Enthought Canopy](#enthought-canopy)에서 다운로드 가능한 .zip 파일로 제공됩니다. 다운로드한 후 로컬 폴더(예: Python 폴더 내의 `Symbols` 폴더)에 파일의 압축을 풀어 계속합니다.
 
     > [!Important]
     > 기호는 Python의 부 빌드 간에 다르고 32비트 빌드와 64비트 빌드 간에도 다르므로 버전을 정확하게 일치시키고자 할 수 있습니다. 사용 중인 인터프리터를 확인하려면 솔루션 탐색기의 프로젝트 아래에서 **Python 환경** *노드*를 확장하고 환경 이름을 확인합니다. 그런 다음 **Python 환경** *창*으로 전환하여 설치 위치를 확인합니다. 그런 다음 해당 위치에서 명령 창을 열고 `python.exe`를 시작합니다. 그러면 정확한 버전과 32비트인지, 64비트인지 표시됩니다.
@@ -69,14 +57,14 @@ Visual Studio는 기호가 필요한 경우(일반적으로 혼합 모드 디버
 
 1. **도구 > 옵션** 메뉴를 선택하고 **디버깅 > 기호**로 이동합니다.
     
-1. 도구 모음에서 [추가] 단추를 선택하고(아래에 설명되어 있음) 다운로드한 기호를 확장한 폴더(`python.pdb`가 있는 위치, 예: 아래에 표시된 `c:\python34\Symbols`)를 입력하고 **확인**을 선택합니다. 
+1. 도구 모음에서 **추가** 단추를 선택하고(아래에 설명되어 있음) 다운로드한 기호를 확장한 폴더(`python.pdb`가 있는 위치, 예: 아래에 표시된 `c:\python34\Symbols`)를 입력하고 **확인**을 선택합니다. 
 
-    ![혼합 모드 디버거 기호 옵션](~/python/media/mixed-mode-debugging-symbols.png)
+    ![혼합 모드 디버거 기호 옵션](media/mixed-mode-debugging-symbols.png)
 
-1. 디버깅 세션 중에 Visual Studio에서 Python 인터프리터의 소스 파일 위치를 묻는 메시지를 표시할 수 있습니다. 이를 다운로드한 경우(예: [python.org/downloads](https://www.python.org/downloads)에서) 물론 해당 위치도 가리킬 수 있습니다.
+1. 디버깅 세션 중에 Visual Studio에서 Python 인터프리터의 소스 파일 위치를 묻는 메시지를 표시할 수 있습니다. 소스 파일을 다운로드한 경우(예: [python.org/downloads](https://www.python.org/downloads)에서) 물론 해당 위치도 가리킬 수 있습니다.
 
 > [!Note]
-> 대화 상자에 표시된 기호 캐싱 기능은 온라인 소스에서 가져온 기호의 로컬 캐시를 만드는 데 사용됩니다. 이미 Python 인터프리터 기호를 로컬에 다운로드했으므로 이러한 기능은 해당 기호에 필요하지 않습니다. 어느 경우이든 자세한 내용은 [Specify Symbols and Source Files in the Visual Studio Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)(Visual Studio 디버거에서 기호 및 소스 파일 지정)를 참조하세요.
+> 대화 상자에 표시된 기호 캐싱 기능은 온라인 소스에서 가져온 기호의 로컬 캐시를 만드는 데 사용됩니다. 이미 로컬에 있는 Python 인터프리터 기호에는 이러한 기능이 필요하지 않습니다. 어느 경우이든 자세한 내용은 [Specify Symbols and Source Files in the Visual Studio Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)(Visual Studio 디버거에서 기호 및 소스 파일 지정)를 참조하세요.
 
 ## <a name="official-distributions"></a>공식 배포
 

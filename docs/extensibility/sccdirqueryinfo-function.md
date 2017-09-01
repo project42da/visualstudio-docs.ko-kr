@@ -1,31 +1,48 @@
 ---
-title: "SccDirQueryInfo 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccDirQueryInfo"
-helpviewer_keywords: 
-  - "SccDirQueryInfo 함수"
+title: SccDirQueryInfo Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccDirQueryInfo
+helpviewer_keywords:
+- SccDirQueryInfo function
 ms.assetid: 459e2d99-573d-47c4-b834-6d82c5e14162
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# SccDirQueryInfo 함수
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e8e155075ebf6e619c6504b24381bd3349b1c48b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 함수에서는 현재 상태에 대 한 정규화 된 디렉터리의 목록을 검토합니다.  
+---
+# <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo Function
+This function examines a list of fully qualified directories for their current status.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccDirQueryInfo(  
 LPVOID  pContext,  
 LONG    nDirs,  
@@ -34,37 +51,37 @@ LPLONG  lpStatus
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  pContext  
- \[in\] 소스 제어 플러그 인 컨텍스트 구조입니다.  
+ [in] The source control plug-in context structure.  
   
  nDirs  
- \[in\] 쿼리할 선택한 디렉터리의 수입니다.  
+ [in] The number of directories selected to be queried.  
   
  lpDirNames  
- \[in\] 배열을 쿼리할 수 있는 디렉터리의 정규화 된 경로입니다.  
+ [in] An array of fully qualified paths of the directories to be queried.  
   
  lpStatus  
- \[에서, out\] 상태 플래그를 반환 하는 플러그 인 소스 제어에 대 한 배열 구조 \(참조 [디렉터리 상태 코드](../extensibility/directory-status-code-enumerator.md) 대 한 자세한 내용은\).  
+ [in, out] An array structure for the source control plug-in to return the status flags (see [Directory Status Code](../extensibility/directory-status-code-enumerator.md) for details).  
   
-## 반환 값  
- 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|값|설명|  
-|-------|--------|  
-|SCC\_OK|쿼리가 성공 했습니다.|  
-|SCC\_E\_OPNOTSUPPORTED|소스 코드 제어 시스템에서이 작업을 지원 하지 않습니다.|  
-|SCC\_E\_ACCESSFAILURE|소스 제어 시스템에 경합 또는 네트워크 문제 때문에 액세스할 수 없습니다. 다시 시도 사용 하는 것이 좋습니다.|  
-|SCC\_E\_NONSPECIFICERROR<br /><br /> SCC\_E\_UNKNOWNERROR|알 수 없는 오류가 발생 했습니다.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|The query was successful.|  
+|SCC_E_OPNOTSUPPORTED|The source code control system does not support this operation.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nonspecific failure.|  
   
-## 설명  
- 함수는 비트 마스크의 비트를 사용 하 여 반환 배열을 채웁니다는 `SCC_DIRSTATUS` 제품군 \(참조 [디렉터리 상태 코드](../extensibility/directory-status-code-enumerator.md)\)를 지정 하는 각 디렉터리에 대해 하나의 항목입니다. 에서는 상태 배열은 호출자가 할당 됩니다.  
+## <a name="remarks"></a>Remarks  
+ The function fills the return array with a bitmask of bits from the `SCC_DIRSTATUS` family (see [Directory Status Code](../extensibility/directory-status-code-enumerator.md)), one entry for each directory given. The status array is allocated by the caller.  
   
- 디렉터리 이름이 해당 프로젝트를 갖는지를 쿼리하여 소스 제어 디렉터리 인지 여부를 확인 하기 전에이 함수를 사용 하는 IDE입니다. 소스 제어의 디렉터리가 아닌 경우 IDE는 사용자에 게 적절 한 경고를 제공할 수 있습니다.  
+ The IDE uses this function before a directory is renamed to check whether the directory is under source control by querying whether it has a corresponding project. If the directory is not under source control, the IDE can provide the proper warning to the user.  
   
 > [!NOTE]
->  소스 제어 플러그 인을 보려면 상태 값 중 하나 이상을 구현 하지 하기로 구현 되지 않은 비트를 0으로 설정 되어야 합니다.  
+>  If a source control plug-in chooses to not implement one or more of the status values, unimplemented bits should be set to zero.  
   
-## 참고 항목  
- [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)   
- [디렉터리 상태 코드](../extensibility/directory-status-code-enumerator.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [Directory Status Code](../extensibility/directory-status-code-enumerator.md)

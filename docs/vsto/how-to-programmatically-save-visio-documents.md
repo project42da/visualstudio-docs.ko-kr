@@ -1,87 +1,89 @@
 ---
-title: "방법: 프로그래밍 방식으로 Visio 문서 저장"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "문서[Visual Studio에서 Office 개발], Visio 문서 저장"
-  - "Visio[Visual Studio에서 Office 개발], Visio 문서 저장"
+title: 'How to: Programmatically Save Visio Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- documents [Office development in Visual Studio], saving Visio documents
+- Visio [Office development in Visual Studio], saving Visio documents
 ms.assetid: 1a29ac7e-1da4-4c7a-87a5-d3d16897fe7c
 caps.latest.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 19
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 148409aa0f4489c2eb8e7a1637cb5ac294d49aa6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 Visio 문서 저장
-  여러 가지 방법을 사용하여 Microsoft Office Visio 문서를 저장할 수 있습니다.  
+# <a name="how-to-programmatically-save-visio-documents"></a>How to: Programmatically Save Visio Documents
+  There are several ways to save Microsoft Office Visio documents:  
   
--   변경 내용을 기존 문서에 저장합니다.  
+-   Save changes in an existing document.  
   
--   새 문서를 저장하거나 새 이름으로 문서를 저장합니다.  
+-   Save a new document, or save a document with a new name.  
   
--   지정된 인수와 함께 문서를 저장합니다.  
+-   Save a document with specified arguments.  
   
- 자세한 내용은 VBA 참조 설명서에서 [Microsoft.Office.Interop.Visio.Document.Save](HV10071468) 메서드, [Microsoft.Office.Interop.Visio.Document.SaveAs](HV10071469) 메서드 및 [Microsoft.Office.Interop.Visio.Document.SaveAsEx](HV10071470) 메서드를 참조하세요.  
+ For more information, see the VBA reference documentation for the [Microsoft.Office.Interop.Visio.Document.Save](https://msdn.microsoft.com/library/office/ff766478.aspx) method, [Microsoft.Office.Interop.Visio.Document.SaveAs](https://msdn.microsoft.com/library/office/ff765824.aspx) method, and [Microsoft.Office.Interop.Visio.Document.SaveAsEx](https://msdn.microsoft.com/library/office/ff768149.aspx) method.  
   
-## 기존 문서 저장  
+## <a name="saving-an-existing-document"></a>Saving an Existing Document  
   
-#### 문서를 저장하려면  
+#### <a name="to-save-a-document"></a>To save a document  
   
--   이전에 저장한 문서에서 Microsoft.Office.Tools.Visio.Document 클래스의 Microsoft.Office.Interop.Visio.Document.Save 메서드를 호출합니다.  
+-   Call the Microsoft.Office.Interop.Visio.Document.Save method of the Microsoft.Office.Tools.Visio.Document class of a document that has been previously saved.  
   
-     이 코드 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
+     To use this code example, run it from the `ThisAddIn` class in your project.  
   
     > [!NOTE]  
-    >  새 Visio 문서가 아직 저장되지 않은 경우 Microsoft.Office.Interop.Visio.Document.Save 메서드에서 예외를 throw합니다.  
+    >  The Microsoft.Office.Interop.Visio.Document.Save method throws an exception if a new Visio document has not yet been saved.  
   
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#11](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreVisioAutomationAddIn/CS/ThisAddIn.cs#11)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#11](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreVisioAutomationAddIn/VB/ThisAddIn.vb#11)]  
+     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#11)]  [!code-vb[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#11)]  
   
-## 새 이름으로 문서 저장  
- Microsoft.Office.Interop.Visio.Document.SaveAs 메서드를 사용하여 새 문서를 저장하거나 새 이름으로 문서를 저장합니다. 이 메서드를 사용하려면 새 파일 이름을 지정해야 합니다.  
+## <a name="saving-a-document-with-a-new-name"></a>Saving a Document with a New Name  
+ Use the Microsoft.Office.Interop.Visio.Document.SaveAs method to save a new document, or a document that has a new name. This method requires that you specify the new file name.  
   
-#### 활성 Visio 문서를 새 이름으로 저장하려면  
+#### <a name="to-save-the-active-visio-document-with-a-new-name"></a>To save the active Visio document with a new name  
   
--   파일 이름까지 포함한 정규화된 경로를 사용하여 저장하려는 Microsoft.Office.Tools.Visio.Document의 Microsoft.Office.Interop.Visio.Document.SaveAs 메서드를 호출합니다. 해당 이름의 파일이 폴더에 이미 있으면 자동으로 덮어씁니다.  
+-   Call the Microsoft.Office.Interop.Visio.Document.SaveAs method of the Microsoft.Office.Tools.Visio.Document that you want to save, by using a fully qualified path including a file name. If a file by that name already exists in that folder, it is silently overwritten.  
   
-     이 코드 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
+     To use this code example, run it from the `ThisAddIn` class in your project.  
   
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreVisioAutomationAddIn/CS/ThisAddIn.cs#10)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreVisioAutomationAddIn/VB/ThisAddIn.vb#10)]  
+     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#10)]  [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#10)]  
   
-## 새 이름 및 지정된 인수를 사용하여 문서 저장  
- Microsoft.Office.Interop.Visio.Document.SaveAsEx 메서드를 사용하여 새 이름으로 문서를 저장하고 문서에 적용할 인수를 지정합니다.  
+## <a name="saving-a-document-with-a-new-name-and-specified-arguments"></a>Saving a Document with a New Name and Specified Arguments  
+ Use the Microsoft.Office.Interop.Visio.Document.SaveAsEx method to save a document with a new name, and specify any applicable arguments to apply to the document.  
   
-#### 새 이름 및 지정된 인수를 사용하여 문서를 저장하려면  
+#### <a name="to-save-document-with-a-new-name-and-specified-arguments"></a>To save document with a new name and specified arguments  
   
--   파일 이름까지 포함한 정규화된 경로를 사용하여 저장하려는 Microsoft.Office.Tools.Visio.Document의 Microsoft.Office.Interop.Visio.Document.SaveAsEx 메서드를 호출합니다. 해당 이름의 파일이 폴더에 이미 있으면 예외가 throw됩니다.  
+-   Call the Microsoft.Office.Interop.Visio.Document.SaveAsEx method of the Microsoft.Office.Tools.Visio.Document that you want to save, by using a fully qualified path including a file name. If a file by that name already exists in that folder, an exception is thrown.  
   
-     다음 코드 예제에서는 활성 문서를 새 이름으로 저장하고 문서를 읽기 전용으로 표시하며 가장 최근에 사용됨 문서 목록에 문서를 표시합니다. 이 코드 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
+     The following code example saves the active document with a new name, marks the document as read-only, and shows the document in the Most Recently Used list of documents. To use this code example, run it from the `ThisAddIn` class in your project.  
   
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#12](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreVisioAutomationAddIn/CS/ThisAddIn.cs#12)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#12](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreVisioAutomationAddIn/VB/ThisAddIn.vb#12)]  
+     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#12)]  [!code-vb[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#12)]  
   
-## 코드 컴파일  
- 이 코드 예제에는 다음이 필요합니다.  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This code example requires the following:  
   
--   새 이름으로 문서를 저장하려면 이름이 `Test`인 디렉터리가 내 문서 폴더\(Windows XP 및 이전\) 또는 문서 폴더\(Windows Vista\)에 있어야 합니다.  
+-   To save a document that has a new name, a directory named `Test` must be located in the My Documents folder (for Windows XP and earlier) or the Documents folder (for Windows Vista).  
   
-## 참고 항목  
- [Visio 솔루션](../vsto/visio-solutions.md)   
- [Visio 개체 모델 개요](../vsto/visio-object-model-overview.md)   
- [방법: 프로그래밍 방식으로 새 Visio 문서 만들기](../vsto/how-to-programmatically-create-new-visio-documents.md)   
- [방법: 프로그래밍 방식으로 Visio 문서 열기](../vsto/how-to-programmatically-open-visio-documents.md)   
- [방법: 프로그래밍 방식으로 Visio 문서 닫기](../vsto/how-to-programmatically-close-visio-documents.md)   
- [방법: 프로그래밍 방식으로 Visio 문서 인쇄](../vsto/how-to-programmatically-print-visio-documents.md)  
+## <a name="see-also"></a>See Also  
+ [Visio Solutions](../vsto/visio-solutions.md)   
+ [Visio Object Model Overview](../vsto/visio-object-model-overview.md)   
+ [How to: Programmatically Create New Visio Documents](../vsto/how-to-programmatically-create-new-visio-documents.md)   
+ [How to: Programmatically Open Visio Documents](../vsto/how-to-programmatically-open-visio-documents.md)   
+ [How to: Programmatically Close Visio Documents](../vsto/how-to-programmatically-close-visio-documents.md)   
+ [How to: Programmatically Print Visio Documents](../vsto/how-to-programmatically-print-visio-documents.md)  
   
   

@@ -1,78 +1,148 @@
 ---
-title: "사용자 설정 저장소에 쓰기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Writing to the User Settings Store | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: efd27f00-7fe5-45f8-9b97-371af732be97
 caps.latest.revision: 3
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# 사용자 설정 저장소에 쓰기
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8be43438312773b2e02915f963b1c68fff61e889
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-사용자 설정은에서 것과 같은 쓰기 가능한 설정의 **도구 \/ 옵션** 대화 상자, 속성 창 및 기타 특정 대화 상자입니다. Visual Studio 확장 적은 양의 데이터를 저장 하려면이 사용할 수 있습니다. 이 연습에서는 메모장에서 읽고 써서 사용자 설정 저장소에는 외부 도구와 Visual Studio에 추가 하는 방법을 보여 줍니다.  
+---
+# <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store
+User settings are writeable settings like the ones in the **Tools / Options** dialog, properties windows, and certain other dialog boxes. Visual Studio extensions may use these to store small amounts of data. This walkthrough shows how to add Notepad to Visual Studio as an external tool by reading from and writing to the user settings store.  
   
-### 사용자 설정 백업  
+### <a name="backing-up-your-user-settings"></a>Backing up Your User Settings  
   
-1.  디버깅 하 고 절차를 반복 수 있도록 외부 도구 설정을 다시 설정 수 있어야 합니다. 이 위해 필요에 따라 복원할 수 있도록 원래 설정을 저장 해야 합니다.  
+1.  You must be able to reset the External Tools settings so that you can debug and repeat the procedure. To do this, you must save the original settings so that you can restore them as required.  
   
-2.  Regedit.exe를 엽니다.  
+2.  Open Regedit.exe.  
   
-3.  HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\14.0Exp\\External 도구 \\로 이동 합니다.  
+3.  Navigate to HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\\.  
   
     > [!NOTE]
-    >  \\14.0Exp\\ 및 하지 \\14.0\\를 포함 하는 키에서 찾으려는 있는지 확인 합니다. Visual Studio의 실험적 인스턴스를 실행 하면 "14.0Exp" 레지스트리 하이브에 사용자 설정 됩니다.  
+    >  Make sure that you are looking at the key that contains \14.0Exp\ and not \14.0\\. When you run the experimental instance of Visual Studio, your user settings are in the registry hive "14.0Exp".  
   
-4.  \\External Tools\\ 하위 키를 마우스 오른쪽 단추로 누른 **내보내기**합니다. 다음 사항을 확인 **선택한 분기** 을 선택 합니다.  
+4.  Right-click the \External Tools\ subkey, and then click **Export**. Make sure that **Selected branch** is selected.  
   
-5.  결과 외부 Tools.reg 파일을 저장 합니다.  
+5.  Save the resulting External Tools.reg file.  
   
-6.  외부 도구 설정을 다시 설정 하려는 경우 HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\14.0Exp\\External 도구 \\ 레지스트리 키를 선택 하 고 클릭 나중 **삭제** 상황에 맞는 메뉴에 있습니다.  
+6.  Later, when you want to reset the External Tools settings, select the HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\ registry key and click **Delete** on the context menu.  
   
-7.  경우는 **키 삭제 확인** 대화 상자가 나타나면 클릭 **예**합니다.  
+7.  When the **Confirm Key Delete** dialog box appears, click **Yes**.  
   
-8.  이전에 저장 하는 외부 Tools.reg 파일을 마우스 오른쪽 단추로 클릭 합니다. **로 열기**, 를 클릭 하 고 **레지스트리 편집기**합니다.  
+8.  Right-click the External Tools.reg file that you saved earlier, click **Open with**, and then click **Registry Editor**.  
   
-## 사용자 설정 저장소에 쓰기  
+## <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store  
   
-1.  UserSettingsStoreExtension 라는 VSIX 프로젝트를 하 고 UserSettingsStoreCommand 라는 사용자 지정 명령을 추가 합니다. 사용자 지정 명령을 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [메뉴 명령을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-a-menu-command.md)  
+1.  Create a VSIX project named UserSettingsStoreExtension and then add a custom command named UserSettingsStoreCommand. For more information about how to create a custom command, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
-2.  UserSettingsStoreCommand.cs에서 다음 추가 문을 사용 하 여:  
+2.  In UserSettingsStoreCommand.cs, add the following using statements:  
   
-    ```c#  
-    using System.Collections.Generic; using Microsoft.VisualStudio.Settings; using Microsoft.VisualStudio.Shell.Settings;  
+    ```csharp  
+    using System.Collections.Generic;  
+    using Microsoft.VisualStudio.Settings;  
+    using Microsoft.VisualStudio.Shell.Settings;  
     ```  
   
-3.  MenuItemCallback, 메서드의 본문을 삭제 하 고 다음과 같이 설정 저장 사용자 가져오기:  
+3.  In MenuItemCallback, delete the body of the method and get the user settings store, as follows:  
   
-    ```c#  
-    private void MenuItemCallback(object sender, EventArgs e) { SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider); WritableSettingsStore userSettingsStore = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings); }  
+    ```csharp  
+    private void MenuItemCallback(object sender, EventArgs e)  
+    {  
+        SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
+        WritableSettingsStore userSettingsStore = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);  
+    }  
     ```  
   
-4.  이제 메모장 외부 도구로 이미 설정 되어 있는지 알아보십시오. 인지 확인 하기 위해 ToolCmd 설정을 "Notepad" 다음과 같이 모든 외부 도구를 반복 해야 합니다.  
+4.  Now find out whether Notepad is already set as an external tool. You need to iterate through all the external tools to determine whether the ToolCmd setting is "Notepad", as follows:  
   
-    ```c#  
-    private void MenuItemCallback(object sender, EventArgs e) { SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider); WritableSettingsStore userSettingsStore = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings); // Find out whether Notepad is already an External Tool. int toolCount = userSettingsStore.GetInt32("External Tools", "ToolNumKeys"); bool hasNotepad = false; CompareInfo Compare = CultureInfo.InvariantCulture.CompareInfo; for (int i = 0; i < toolCount; i++) { if (Compare.IndexOf(userSettingsStore.GetString("External Tools", "ToolCmd" + i), "Notepad", CompareOptions.IgnoreCase) >= 0) { hasNotepad = true; break; } } }  
+    ```csharp  
+    private void MenuItemCallback(object sender, EventArgs e)  
+    {  
+        SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
+        WritableSettingsStore userSettingsStore = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);  
+  
+        // Find out whether Notepad is already an External Tool.  
+        int toolCount = userSettingsStore.GetInt32("External Tools", "ToolNumKeys");  
+        bool hasNotepad = false;  
+        CompareInfo Compare = CultureInfo.InvariantCulture.CompareInfo;  
+        for (int i = 0; i < toolCount; i++)  
+        {  
+            if (Compare.IndexOf(userSettingsStore.GetString("External Tools", "ToolCmd" + i), "Notepad", CompareOptions.IgnoreCase) >= 0)  
+            {  
+                hasNotepad = true;  
+                break;  
+            }  
+        }  
+    }  
   
     ```  
   
-5.  메모장으로 외부 도구 설정 되지 않은 경우 설정 다음과 같이 합니다.  
+5.  If Notepad hasn't been set as an external tool, set it as follows:  
   
     ```vb  
-    private void MenuItemCallback(object sender, EventArgs e) { SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider); WritableSettingsStore userSettingsStore = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings); // Find out whether Notepad is already installed. int toolCount = userSettingsStore.GetInt32("External Tools", "ToolNumKeys"); bool hasNotepad = false; CompareInfo Compare = CultureInfo.InvariantCulture.CompareInfo; for (int i = 0; i < toolCount; i++) { if (Compare.IndexOf(userSettingsStore.GetString("External Tools", "ToolCmd" + i), "Notepad", CompareOptions.IgnoreCase) >= 0) { hasNotepad = true; break; } } string message = (hasNotepad) ? "Notepad already installed" : "Installing Notepad"; if (!hasNotepad) { userSettingsStore.SetString("External Tools", "ToolTitle" + toolCount, "&Notepad"); userSettingsStore.SetString("External Tools", "ToolCmd" + toolCount, "C:\\Windows\\notepad.exe"); userSettingsStore.SetString("External Tools", "ToolArg" + toolCount, ""); userSettingsStore.SetString("External Tools", "ToolDir" + toolCount, "$(ProjectDir)"); userSettingsStore.SetString("External Tools", "ToolSourceKey" + toolCount, ""); userSettingsStore.SetUInt32("External Tools", "ToolOpt" + toolCount, 0x00000011); userSettingsStore.SetInt32("External Tools", "ToolNumKeys", toolCount + 1); } }  
+    private void MenuItemCallback(object sender, EventArgs e)  
+    {  
+        SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
+        WritableSettingsStore userSettingsStore = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);  
+  
+        // Find out whether Notepad is already installed.  
+        int toolCount = userSettingsStore.GetInt32("External Tools", "ToolNumKeys");  
+        bool hasNotepad = false;  
+        CompareInfo Compare = CultureInfo.InvariantCulture.CompareInfo;  
+        for (int i = 0; i < toolCount; i++)  
+        {  
+            if (Compare.IndexOf(userSettingsStore.GetString("External Tools", "ToolCmd" + i), "Notepad", CompareOptions.IgnoreCase) >= 0)  
+            {  
+                hasNotepad = true;  
+                break;  
+            }  
+        }  
+  
+        string message = (hasNotepad) ? "Notepad already installed" : "Installing Notepad";  
+         if (!hasNotepad)  
+        {  
+            userSettingsStore.SetString("External Tools", "ToolTitle" + toolCount, "&Notepad");  
+            userSettingsStore.SetString("External Tools", "ToolCmd" + toolCount, "C:\\Windows\\notepad.exe");  
+            userSettingsStore.SetString("External Tools", "ToolArg" + toolCount, "");  
+            userSettingsStore.SetString("External Tools", "ToolDir" + toolCount, "$(ProjectDir)");  
+            userSettingsStore.SetString("External Tools", "ToolSourceKey" + toolCount, "");  
+            userSettingsStore.SetUInt32("External Tools", "ToolOpt" + toolCount, 0x00000011);  
+  
+            userSettingsStore.SetInt32("External Tools", "ToolNumKeys", toolCount + 1);  
+        }  
+    }  
     ```  
   
-6.  코드를 테스트 합니다. 추가 메모장으로 외부 도구를 롤백해야 레지스트리를 두 번째로 실행 하기 전에 해야 합니다.  
+6.  Test the code. Remember that it adds Notepad as an External Tool, so you must roll back the registry before running it a second time.  
   
-7.  코드를 빌드하고 디버깅을 시작 합니다.  
+7.  Build the code and start debugging.  
   
-8.  에 **도구** 메뉴를 클릭 하 여 **UserSettingsStoreCommand 호출**합니다. 메모장에 추가 된 **도구** 메뉴.  
+8.  On the **Tools** menu, click **Invoke UserSettingsStoreCommand**. This will add Notepad to the **Tools** menu.  
   
-9. 이제 메모장에 표시 하는 도구 \/ 옵션 메뉴를 클릭 하 **메모장** 메모장의 인스턴스를 준비 해야 합니다.
+9. Now you should see Notepad on the Tools / Options menu, and clicking **Notepad** should bring up an instance of Notepad.

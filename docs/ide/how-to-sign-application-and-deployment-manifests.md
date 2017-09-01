@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: b59b417eb16674ff8c6c5223d790ae174ba20e09
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
+ms.openlocfilehash: 18f1ea2f5ee76f4f8457b7254ff3dd3b7b3e4901
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>방법: 응용 프로그램 및 배포 매니페스트 서명
@@ -49,7 +50,7 @@ ClickOnce 배포를 사용하여 응용 프로그램을 게시하려면 응용 �
   
  .exe 기반 응용 프로그램의 경우 ClickOnce 매니페스트에 서명하는 것은 선택 사항입니다. 자세한 내용은 이 문서에서 "서명되지 않은 매니페스트 생성" 섹션을 참조하세요.  
   
- 키 파일 만들기에 대한 자세한 내용은 [방법: 공개/개인 키 쌍 만들기](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)를 참조하세요.  
+ 키 파일 만들기에 대한 자세한 내용은 [방법: 공개/개인 키 쌍 만들기](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)를 참조하세요.  
   
 > [!NOTE]
 >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 .pfx 확장명을 가진 PFX(개인 정보 교환) 키 파일만 지원합니다. 그러나 프로젝트 속성의 **서명** 페이지에서 **저장소에서 선택**을 클릭하여 현재 사용자의 Windows 인증서 저장소에서 다른 형식의 인증서를 선택할 수 있습니다.  
@@ -124,7 +125,7 @@ ClickOnce 배포를 사용하여 응용 프로그램을 게시하려면 응용 �
 3.  응용 프로그램을 게시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [강력한 이름의 어셈블리](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)   
- [방법: 공개/개인 키 쌍 만들기](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)   
+ [강력한 이름의 어셈블리](/dotnet/framework/app-domains/strong-named-assemblies)   
+ [방법: 공개/개인 키 쌍 만들기](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)   
  [프로젝트 디자이너, 서명 페이지](../ide/reference/signing-page-project-designer.md)   
  [ClickOnce 보안 및 배포](../deployment/clickonce-security-and-deployment.md)

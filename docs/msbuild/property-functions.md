@@ -1,5 +1,5 @@
 ---
-title: "속성 함수 | Microsoft Docs"
+title: Property Functions | Microsoft Docs
 ms.custom: 
 ms.date: 02/21/2017
 ms.reviewer: 
@@ -29,49 +29,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
-ms.openlocfilehash: f351952a256679ec2d6c9dc2daa5288ca7214ad0
-ms.lasthandoff: 03/01/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 03b4eba806256f0bc6a37c6639a3a9cc44abd3ae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
 ---
-# <a name="property-functions"></a>속성 함수
-.NET Framework 버전 4 및 4.5에서는 속성 함수를 사용하여 MSBuild 스크립트를 평가할 수 있습니다. 속성 함수는 속성이 나타나는 곳마다 사용할 수 있습니다. 작업과 달리 속성 함수는 대상 외부에서 사용할 수 있으며, 대상이 실행되기 전에 평가됩니다.  
+# <a name="property-functions"></a>Property Functions
+In the .NET Framework versions 4 and 4.5, property functions can be used to evaluate MSBuild scripts. Property functions can be used wherever properties appear. Unlike tasks, property functions can be used outside of targets, and are evaluated before any target runs.  
 
- MSBuild 작업을 사용하지 않고도 시스템 시간을 읽고 문자열을 비교하며 정규식을 일치시키고 빌드 스크립트의 다른 작업을 수행할 수 있습니다. MSBuild는 문자열을 숫자로, 숫자를 문자열로 변환하려고 하며, 필요한 경우 다른 변환을 수행합니다.  
+ Without using MSBuild tasks, you can read the system time, compare strings, match regular expressions, and perform other actions in your build script. MSBuild will try to convert string to number and number to string, and make other conversions as required.  
 
-## <a name="property-function-syntax"></a>속성 함수 구문  
- 다음과 같은 세 가지 종류의 속성 함수가 있으며, 각 함수의 구문은 서로 다릅니다.  
+## <a name="property-function-syntax"></a>Property Function Syntax  
+ These are three kinds of property functions; each function has a different syntax:  
 
--   문자열(인스턴스) 속성 함수  
+-   String (instance) property functions  
 
--   정적 속성 함수  
+-   Static property functions  
 
--   MSBuild 속성 함수  
+-   MSBuild property functions  
 
-### <a name="string-property-functions"></a>문자열 속성 함수  
- 모든 빌드 속성 값은 문자열 값입니다. 문자열(인스턴스) 메서드를 사용하여 모든 속성 값에 대해 수행할 수 있습니다. 예를 들어, 다음 코드를 사용하여 전체 경로를 나타내는 빌드 속성에서 드라이브 이름(처음 세 문자)을 추출할 수 있습니다.  
+### <a name="string-property-functions"></a>String Property Functions  
+ All build property values are just string values. You can use string (instance) methods to operate on any property value. For example, you can extract the drive name (the first three characters) from a build property that represents a full path by using this code:  
 
  `$(ProjectOutputFolder.Substring(0,3))`  
 
-### <a name="static-property-functions"></a>정적 속성 함수  
- 빌드 스크립트에서 많은 시스템 클래스의 정적 속성 및 메서드에 액세스할 수 있습니다. 정적 속성값을 가져오려면 다음 구문을 사용합니다. 여기서 *Class*는 시스템 클래스의 이름이고 *Property*는 속성의 이름입니다.  
+### <a name="static-property-functions"></a>Static Property Functions  
+ In your build script, you can access the static properties and methods of many system classes. To get the value of a static property, use the following syntax, where *Class* is the name of the system class and *Property* is the name of the property.  
 
  `$([Class]::Property)`  
 
- 예를 들어, 다음 코드를 사용하여 빌드 속성을 현재 날짜 및 시간으로 설정할 수 있습니다.  
+ For example, you can use the following code to set a build property to the current date and time.  
 
  `<Today>$([System.DateTime]::Now)</Today>`  
 
- 정적 메서드를 호출하려면 다음 구문을 사용합니다. 여기서 *Class*는 시스템 클래스의 이름이고 *Method*는 메서드의 이름이며 *(Parameters)*는 메서드의 매개 변수 목록입니다.  
+ To call a static method, use the following syntax, where *Class* is the name of the system class, *Method* is the name of the method, and *(Parameters)* is the parameter list for the method:  
 
  `$([Class]::Method(Parameters))`  
 
- 예를 들어, 빌드 속성을 새 GUID로 설정하려면 다음 스크립트를 사용하면 됩니다.  
+ For example, to set a build property to a new GUID, you can use this script:  
 
  `<NewGuid>$([System.Guid]::NewGuid())</NewGuid>`  
 
- 정적 속성 함수에는 다음과 같은 시스템 클래스의 모든 정적 메서드 또는 속성을 사용할 수 있습니다.  
+ In static property functions, you can use any static method or property of these system classes:  
 
 -   System.Byte  
 
@@ -99,6 +100,10 @@ ms.lasthandoff: 03/01/2017
 
 -   System.Math  
 
+-   System.Runtime.InteropServices.OSPlatform
+
+-   System.Runtime.InteropServices.RuntimeInformation
+
 -   System.UInt16  
 
 -   System.UInt32  
@@ -119,7 +124,7 @@ ms.lasthandoff: 03/01/2017
 
 -   Microsoft.Build.Utilities.ToolLocationHelper  
 
- 또한 다음 정적 메서드 및 속성을 사용할 수 있습니다.  
+ In addition, you can use the following static methods and properties:  
 
 -   System.Environment::CommandLine  
 
@@ -155,104 +160,113 @@ ms.lasthandoff: 03/01/2017
 
 -   System.IO.File::ReadAllText  
 
-### <a name="calling-instance-methods-on-static-properties"></a>정적 속성에 대한 인스턴스 메서드 호출  
- 개체 인스턴스를 반환하는 정적 속성에 액세스하는 경우 해당 개체의 인스턴스 메서드를 호출할 수 있습니다. 인스턴스 메서드를 호출하려면 다음 구문을 사용합니다. 여기서 *Class*는 시스템 클래스의 이름이고 *Property*는 속성의 이름이며 *Method*는 메서드의 이름이고, *(Parameters)*는 메서드의 매개 변수 목록입니다.  
+### <a name="calling-instance-methods-on-static-properties"></a>Calling Instance Methods on Static Properties  
+ If you access a static property that returns an object instance, you can invoke the instance methods of that object. To invoke an instance method, use the following syntax, where *Class* is the name of the system class, *Property* is the name of the property, *Method* is the name of the method, and *(Parameters)* is the parameter list for the method:  
 
  `$([Class]::Property.Method(Parameters))`  
 
- 클래스의 이름은 네임스페이스를 포함하는 정규화된 이름이어야 합니다.  
+ The name of the class must be fully qualified with the namespace.  
 
- 예를 들어, 다음 코드를 사용하여 빌드 속성을 현재 날짜 오늘로 설정할 수 있습니다.  
+ For example, you can use the following code to set a build property to the current date today.  
 
  `<Today>$([System.DateTime]::Now.ToString("yyyy.MM.dd"))</Today>`  
 
-### <a name="msbuild-property-functions"></a>MSBuild 속성 함수  
- 빌드의 여러 정적 메서드에 액세스하여 산술, 비트 논리 및 이스케이프 문자 지원을 제공할 수 있습니다. 다음 구문을 사용하여 이러한 메서드에 액세스합니다. 여기서 *Method*는 메서드의 이름이고 *Parameters*는 메서드의 매개 변수 목록입니다.  
+### <a name="msbuild-property-functions"></a>MSBuild Property Functions  
+ Several static methods in your build can be accessed to provide arithmetic, bitwise logical, and escape character support. You access these methods by using the following syntax, where *Method* is the name of the method and *Parameters* is the parameter list for the method.  
 
  `$([MSBuild]::Method(Parameters))`  
 
- 예를 들어, 숫자 값을 가지는 두 속성을 함께 추가하려면 다음 코드를 사용합니다.  
+ For example, to add together two properties that have numeric values, use the following code.  
 
  `$([MSBuild]::Add($(NumberOne), $(NumberTwo))`  
 
- 다음은 MSBuild 속성 함수 목록입니다.  
+ Here is a list of MSBuild property functions:  
 
-|함수 시그니처|설명|  
+|Function Signature|Description|  
 |------------------------|-----------------|  
-|double Add(double a, double b)|두 double을 더합니다.|  
-|long Add(long a, long b)|두 long을 더합니다.|  
-|double Subtract(double a, double b)|한 double에서 다른 한 double을 뺍니다.|  
-|long Subtract(long a, long b)|한 long에서 다른 한 long을 뺍니다.|  
-|double Multiply(double a, double b)|두 double을 곱합니다.|  
-|long Multiply(long a, long b)|두 long을 곱합니다.|  
-|double Divide(double a, double b)|한 double을 다른 한 double로 나눕니다.|  
-|long Divide(long a, long b)|한 long을 다른 한 long으로 나눕니다.|  
-|double Modulo(double a, double b)|한 double을 다른 한 double로 나눈 나머지입니다.|  
-|long Modulo(long a, long b)|한 long을 다른 한 long으로 나눈 나머지입니다.|  
-|string Escape(string unescaped)|MSBuild 이스케이프 규칙에 따라 문자열을 이스케이프합니다.|  
-|string Unescape(string escaped)|MSBuild 이스케이프 규칙에 따라 문자열을 이스케이프하지 않습니다.|  
-|int BitwiseOr(int first, int second)|first와 second에 대해 비트 `OR`을 수행합니다(first &#124; second).|  
-|int BitwiseAnd(int first, int second)|first와 second에 대해 비트 `AND`를 수행합니다(first & second).|  
-|int BitwiseXor(int first, int second)|first와 second에 대해 비트 `XOR`를 수행합니다(first ^ second).|  
-|int BitwiseNot(int first)|비트 `NOT`을 수행합니다(~first).|  
+|double Add(double a, double b)|Add two doubles.|  
+|long Add(long a, long b)|Add two longs.|  
+|double Subtract(double a, double b)|Subtract two doubles.|  
+|long Subtract(long a, long b)|Subtract two longs.|  
+|double Multiply(double a, double b)|Multiply two doubles.|  
+|long Multiply(long a, long b)|Multiply two longs.|  
+|double Divide(double a, double b)|Divide two doubles.|  
+|long Divide(long a, long b)|Divide two longs.|  
+|double Modulo(double a, double b)|Modulo two doubles.|  
+|long Modulo(long a, long b)|Modulo two longs.|  
+|string Escape(string unescaped)|Escape the string according to MSBuild escaping rules.|  
+|string Unescape(string escaped)|Unescape the string according to MSBuild escaping rules.|  
+|int BitwiseOr(int first, int second)|Perform a bitwise `OR` on the first and second (first &#124; second).|  
+|int BitwiseAnd(int first, int second)|Perform a bitwise `AND` on the first and second (first & second).|  
+|int BitwiseXor(int first, int second)|Perform a bitwise `XOR` on the first and second (first ^ second).|  
+|int BitwiseNot(int first)|Perform a bitwise `NOT` (~first).|  
+|bool IsOsPlatform(string platformString)|Specify whether the current OS platform is `platformString`. `platformString` must be a member of <xref:System.Runtime.InteropServices.OSPlatform>.|
+|bool IsOSUnixLike|True if current OS is a Unix system.|
+|string NormalizePath(params string[] path)|Gets the canonicalized full path of the provided path and ensures it contains the correct directory separator characters for the current operating system.|
+|string NormalizeDirectory(params string[] path)|Gets the canonicalized full path of the provided directory and ensures it contains the correct directory separator characters for the current operating system while ensuring it has a trailing slash.|
+|string EnsureTrailingSlash(string path)|If the given path doesn't have a trailing slash then add one. If the path is an empty string, does not modify it.|
+|string GetPathOfFileAbove(string file, string startingDirectory)|Searches for a file based on the current build file's location, or based on `startingDirectory`, if specified.|
+|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|Locate a file in either the directory specified or a location in the directory structure above that directory.|
+|string MakeRelative(string basePath, string path)|Makes `path` relative to `basePath`. `basePath` must be an absolute directory. If `path` cannot be made relative, it is returned verbatim. Similar to `Uri.MakeRelativeUri`.|
+|string ValueOrDefault(string conditionValue, string defaultValue)|Return the string in parameter 'defaultValue' only if parameter 'conditionValue' is empty, else, return the value conditionValue.|
 
-##  <a name="nested-property-functions"></a>중첩 속성 함수  
- 다음 예제에서 보여 주는 것처럼, 보다 복잡한 함수를 형성하기 위해 속성 함수를 결합할 수 있습니다.  
+##  <a name="nested-property-functions"></a>Nested Property Functions  
+ You can combine property functions to form more complex functions, as the following example shows.  
 
  `$([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))`  
 
- 이 예제에서는 `tempFile` 경로에 의해 지정된 파일의 <xref:System.IO.FileAttributes>`Archive` 비트 값(32 또는 0)을 반환합니다. 열거형 데이터 값은 속성 함수 내에 이름으로 나타날 수 없습니다. 대신 숫자 값(32)을 사용해야 합니다.  
+ This example returns the value of the <xref:System.IO.FileAttributes>`Archive` bit (32 or 0) of the file given by the path `tempFile`. Notice that enumerated data values cannot appear by name within property functions. The numeric value (32) must be used instead.  
 
- 메타데이터도 중첩 속성 함수에 나타날 수 있습니다. 자세한 내용은 [일괄 처리](../msbuild/msbuild-batching.md)를 참조하세요.  
+ Metadata may also appear in nested property functions. For more information, see [Batching](../msbuild/msbuild-batching.md).  
 
 ##  <a name="msbuild-doestaskhostexist"></a>MSBuild DoesTaskHostExist  
- MSBuild의 `DoesTaskHostExist` 속성 함수는 작업 호스트가 현재 지정된 런타임 및 아키텍처 값에 대해 설치되었는지 여부를 반환합니다.  
+ The `DoesTaskHostExist` property function in MSBuild returns whether a task host is currently installed for the specified runtime and architecture values.  
 
- 이 속성 함수의 구문은 다음과 같습니다.  
+ This property function has the following syntax:  
 
 ```  
 $[MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture)  
 ```  
 
 ##  <a name="msbuild-ensuretrailingslash"></a>MSBuild EnsureTrailingSlash  
- MSBuild의 `EnsureTrailingSlash` 속성 함수는 후행 슬래시(없는 경우)를 추가합니다.  
+ The `EnsureTrailingSlash` property function in MSBuild adds a trailing slash if one doesn't already exist.  
 
- 이 속성 함수의 구문은 다음과 같습니다.  
+ This property function has the following syntax:  
 
 ```  
 $([MSBuild]::EnsureTrailingSlash('$(PathProperty)')  
 ```  
 
 ##  <a name="msbuild-getdirectorynameoffileabove"></a>MSBuild GetDirectoryNameOfFileAbove  
- MSBuild `GetDirectoryNameOfFileAbove` 속성 함수는 경로의 현재 디렉터리 위에 있는 디렉터리에서 파일을 찾습니다.  
+ The MSBuild `GetDirectoryNameOfFileAbove` property function looks for a file in the directories above the current directory in the path.  
 
- 이 속성 함수의 구문은 다음과 같습니다.  
+ This property function has the following syntax:  
 
 ```  
 $[MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile)  
 ```  
 
- 다음 코드는 이 구문의 예제입니다.  
+ The following code is an example of this syntax.  
 
 ```xml  
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))\EnlistmentInfo.props" Condition=" '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))' != '' " />  
 ```  
 
 ##  <a name="msbuild-getpathoffileabove"></a>MSBuild GetPathOfFileAbove  
- MSBuild의 `GetPathOfFileAbove` 속성 함수는 바로 앞에 오는 파일의 경로를 반환합니다. 다음을 호출하는 것과 기능적으로 동일합니다.
+ The `GetPathOfFileAbove` property function in MSBuild returns the path of the file immediately preceding this one. It is functionally equivalent to calling
 
  ```<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />```
 
- 이 속성 함수의 구문은 다음과 같습니다.  
+ This property function has the following syntax:  
 
 ```  
 $([MSBuild]::GetPathOfFileAbove(dir.props)  
 ```  
 
 ##  <a name="msbuild-getregistryvalue"></a>MSBuild GetRegistryValue  
- MSBuild `GetRegistryValue` 속성 함수는 레지스트리 키 값을 반환합니다. 이 함수는 두 개의 인수(키 이름 및 값 이름)를 사용하고 레지스트리의 값을 반환합니다. 값 이름을 지정하지 않은 경우 기본값이 반환됩니다.  
+ The MSBuild `GetRegistryValue` property function returns the value of a registry key. This function takes two arguments, the key name and the value name, and returns the value from the registry. If you don't specify a value name, the default value is returned.  
 
- 다음 예제에서는 이 함수를 사용하는 방법을 보여 줍니다.  
+ The following examples show how this function is used:  
 
 ```  
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, ``))                                  // default value  
@@ -262,40 +276,40 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
 ```  
 
 ##  <a name="msbuild-getregistryvaluefromview"></a>MSBuild GetRegistryValueFromView  
- MSBuild `GetRegistryValueFromView` 속성 함수는 레지스트리 키, 값 및 순서가 지정된 하나 이상의 레지스트리 보기를 고려하여 시스템 레지스트리 데이터를 가져옵니다. 키 및 값은 발견될 때까지 각 레지스트리 보기에서 순서대로 검색됩니다.  
+ The MSBuild `GetRegistryValueFromView` property function gets system registry data given the registry key, value, and one or more ordered registry views. The key and value are searched in each registry view in order until they are found.  
 
- 이 속성 함수의 구문은 다음과 같습니다.  
+ The syntax for this property function is:  
 
  [MSBuild\]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)  
 
- Windows 64비트 운영 체제는 32비트 응용 프로그램에 대한 HKEY_LOCAL_MACHINE\SOFTWARE 레지스트리 보기를 제공하는 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node 레지스트리 키를 유지 관리합니다.  
+ The Windows 64-bit operating system maintains a HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node registry key that presents a HKEY_LOCAL_MACHINE\SOFTWARE registry view for 32-bit applications.  
 
- 기본적으로 WOW64에서 실행되는 32비트 응용 프로그램은 32비트 레지스트리 보기에 액세스하고 64비트 응용 프로그램은 64비트 레지스트리 보기에 액세스합니다.  
+ By default, a 32-bit application running on WOW64 accesses the 32-bit registry view and a 64-bit application accesses the 64-bit registry view.  
 
- 다음과 같은 레지스트리 보기를 사용할 수 있습니다.  
+ The following registry views are available:  
 
-|레지스트리 보기|정의|  
+|Registry View|Definition|  
 |-------------------|----------------|  
-|RegistryView.Registry32|32비트 응용 프로그램 레지스트리 보기입니다.|  
-|RegistryView.Registry64|64비트 응용 프로그램 레지스트리 보기입니다.|  
-|RegistryView.Default|응용 프로그램이 실행되고 있는 프로세스와 일치하는 레지스트리 보기입니다.|  
+|RegistryView.Registry32|The 32-bit application registry view.|  
+|RegistryView.Registry64|The 64-bit application registry view.|  
+|RegistryView.Default|The registry view that matches the process that the application is running on.|  
 
- 다음은 예제입니다.  
+ The following is an example.  
 
  `$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Silverlight\v3.0\ReferenceAssemblies', 'SLRuntimeInstallPath', null, RegistryView.Registry64, RegistryView.Registry32))`  
 
- 는 ReferenceAssemblies 키의 SLRuntimeInstallPath 데이터를 가져오고, 먼저 64비트 레지스트리 보기에서 찾은 다음 32비트 레지스트리 보기에서 찾습니다.  
+ gets the SLRuntimeInstallPath data of the ReferenceAssemblies key, looking first in the 64-bit registry view and then in the 32-bit registry view.  
 
 ##  <a name="msbuild-makerelative"></a>MSBuild MakeRelative  
- MSBuild `MakeRelative` 속성 함수는 첫 번째 경로를 기준으로 하여 두 번째 경로의 상대 경로를 반환합니다. 각 경로는 파일 또는 폴더일 수 있습니다.  
+ The MSBuild `MakeRelative` property function returns the relative path of the second path relative to first path. Each path can be a file or folder.  
 
- 이 속성 함수의 구문은 다음과 같습니다.  
+ This property function has the following syntax:  
 
 ```  
 $[MSBuild]::MakeRelative($(FileOrFolderPath1), $(FileOrFolderPath2))  
 ```  
 
- 다음 코드는 이 구문의 예제입니다.  
+ The following code is an example of this syntax.  
 
 ```xml  
 <PropertyGroup>  
@@ -316,9 +330,9 @@ Output:
 ```  
 
 ##  <a name="msbuild-valueordefault"></a>MSBuild ValueOrDefault  
- MSBuild `ValueOrDefault` 속성 함수는 첫 번째 인수가 null이거나 비어 있지 않은 한 첫 번째 인수를 반환합니다. 첫 번째 인수가 null이거나 비어 있으면 함수는 두 번째 인수를 반환합니다.  
+ The MSBuild `ValueOrDefault` property function returns the first argument, unless it's null or empty. If the first argument is null or empty, the function returns the second argument.  
 
- 다음 예제에서는 이 함수를 사용하는 방법을 보여 줍니다.  
+ The following example shows how this function is used.  
 
 ```xml  
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -341,7 +355,7 @@ Output:
 -->  
 ```
 
-## <a name="see-also"></a>참고 항목
-[MSBuild 속성](../msbuild/msbuild-properties.md)   
-[MSBuild 개요](../msbuild/msbuild.md)
+## <a name="see-also"></a>See Also
+[MSBuild Properties](../msbuild/msbuild-properties.md)   
+[MSBuild Overview](../msbuild/msbuild.md)
 

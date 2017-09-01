@@ -1,5 +1,5 @@
 ---
-title: "연습: 모델에 액세스 하는 텍스트 템플릿 디버깅 | Microsoft 문서"
+title: 'Walkthrough: Debugging a Text Template that Accesses a Model | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,55 +11,56 @@ caps.latest.revision: 6
 author: alancameronwills
 ms.author: awills
 manager: douge
-translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 7bbe2b592dc315bc0885e1f1ca4c890e4e66255d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2943b49571077ac1cab87db5ecc4d0f82390273e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>연습: 모델에 액세스하는 텍스트 템플릿 디버깅
-을 수정 하거나 도메인별 언어 솔루션에서 텍스트 템플릿을 추가 하는 경우 엔진은 생성된 된 코드를 컴파일하는 경우 또는 소스 코드에 템플릿이 변환 하는 경우 오류가 발생할 수 있습니다. 다음 연습에서는 텍스트 템플릿을 디버그 하려면 할 수 있는 작업 중 일부를 보여 줍니다.  
+# <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>Walkthrough: Debugging a Text Template that Accesses a Model
+When you modify or add text templates in a domain-specific language solution, you may get errors when the engine transforms the template to source code or when it compiles the generated code. The following walkthrough demonstrates some of the things you can do to debug a text template.  
   
 > [!NOTE]
->  텍스트에 대 한 자세한 내용은 템플릿 일반적으로 참조 [코드 생성 및 T4 텍스트 템플릿](../modeling/code-generation-and-t4-text-templates.md)합니다. 텍스트 템플릿 디버깅 하는 방법에 대 한 자세한 내용은 참조 [연습: 텍스트 템플릿 디버깅](http://msdn.microsoft.com/Library/5c3fd3b7-c110-4e86-a22f-d5756be6b94f)합니다.  
+>  For more information about text templates in general, see [Code Generation and T4 Text Templates](../modeling/code-generation-and-t4-text-templates.md). For more information about debugging text templates, see [Walkthrough: Debugging a Text Template](http://msdn.microsoft.com/Library/5c3fd3b7-c110-4e86-a22f-d5756be6b94f).  
   
-## <a name="creating-a-domain-specific-language-solution"></a>도메인별 언어 솔루션 만들기  
- 이 절차에서는 다음과 같은 특징이 있는 도메인별 언어 솔루션을 만듭니다.  
+## <a name="creating-a-domain-specific-language-solution"></a>Creating a Domain-Specific Language Solution  
+ In this procedure, you create a domain-specific language solution that has the following characteristics:  
   
--   이름: DebuggingTestLanguage  
+-   Name: DebuggingTestLanguage  
   
--   솔루션 템플릿을: 최소 언어  
+-   Solution template: Minimal Language  
   
--   파일 확장명:.ddd  
+-   File extension: .ddd  
   
--   회사 이름: Fabrikam  
+-   Company name: Fabrikam  
   
- 도메인별 언어 솔루션을 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 도메인별 언어 솔루션 만들기](../modeling/how-to-create-a-domain-specific-language-solution.md)합니다.  
+ For more information about creating a domain-specific language solution, see [How to: Create a Domain-Specific Language Solution](../modeling/how-to-create-a-domain-specific-language-solution.md).  
   
-## <a name="creating-a-text-template"></a>텍스트 템플릿 만들기  
- 텍스트 서식 파일을 솔루션에 추가 합니다.  
+## <a name="creating-a-text-template"></a>Creating a text template  
+ Add a text template to your solution.  
   
-#### <a name="to-create-a-text-template"></a>텍스트 템플릿을 만들려면  
+#### <a name="to-create-a-text-template"></a>To create a text template  
   
-1.  솔루션을 빌드하고 디버거에서 실행을 시작 합니다. (에 **빌드** 메뉴 클릭 **솔루션 다시 빌드**, 선택한 다음는 **디버그** 메뉴 클릭 **디버깅 시작**.) Visual Studio의 새 인스턴스 디버깅 프로젝트를 엽니다.  
+1.  Build the solution and start running it in the debugger. (On the **Build** menu, click **Rebuild Solution**, and then on the **Debug** menu, click **Start Debugging**.) A new instance of Visual Studio opens the Debugging project.  
   
-2.  라는 텍스트 파일을 추가 `DebugTest.tt` 디버깅 프로젝트에 있습니다.  
+2.  Add a text file named `DebugTest.tt` to the Debugging project.  
   
-3.  다음 사항을 확인는 **사용자 지정 도구** DebugTest.tt의 속성이 `TextTemplatingFileGenerator`합니다.  
+3.  Make sure that the **Custom Tool** property of DebugTest.tt is set to `TextTemplatingFileGenerator`.  
   
-## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>텍스트 템플릿에서 모델에 액세스 하는 디버깅 지시문  
- 문 및 텍스트 템플릿의 식에서 모델에 액세스할 수 있습니다, 전에 생성된 된 지시문 프로세서를 먼저 호출 해야 합니다. 생성 된 지시문 프로세서를 호출을 통해 클래스 모델에서 텍스트 템플릿 코드에 사용할 수 있는 속성으로. 자세한 내용은 참조 [텍스트 템플릿에서 모델에 액세스](../modeling/accessing-models-from-text-templates.md)합니다.  
+## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>Debugging directives that access a model from a text template  
+ Before you can access a model from the statements and expressions in a text template, you must first call a generated directive processor. Calling the generated directive processor makes the classes in your model available to the text template code as properties. For more information, see [Accessing Models from Text Templates](../modeling/accessing-models-from-text-templates.md).  
   
- 다음 절차에서 잘못 된 지시문 이름과 잘못 된 속성 이름을 디버깅 합니다.  
+ In the following procedures, you will debug an incorrect directive name and an incorrect property name.  
   
-#### <a name="to-debug-an-incorrect-directive-name"></a>잘못 된 지시문 이름을 디버깅 하려면  
+#### <a name="to-debug-an-incorrect-directive-name"></a>To debug an incorrect directive name  
   
-1.  DebugTest.tt의 코드를 다음 코드로 바꿉니다.  
+1.  Replace the code in DebugTest.tt with the following code:  
   
     > [!NOTE]
-    >  코드에 오류가 있습니다. 디버깅을 위해 오류를 도입 되었습니다.  
+    >  The code contains an error. You are introducing the error in order to debug it.  
   
-    ```c#  
+    ```csharp  
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>  
     <#@ output extension=".txt" #>  
     <#@ modelRoot processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=ExampleModel" #>  
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/22/2017
     #>  
     ```  
   
-    ```vb#  
+    ```vb  
     <#@ template language="VB" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>  
     <#@ output extension=".txt" #>  
     <#@ modelRoot processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=ExampleModel" #>  
@@ -90,40 +91,40 @@ ms.lasthandoff: 02/22/2017
     #>  
     ```  
   
-2.  **솔루션 탐색기**DebugTest.tt를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **사용자 지정 도구 실행**합니다.  
+2.  In **Solution Explorer**, right-click DebugTest.tt, and then click **Run Custom Tool**.  
   
-     **오류 목록** 창에서이 오류를 표시 합니다.  
+     The **Error List** window displays this error:  
   
-     **'DebuggingTestLanguageDirectiveProcessor' 라는 프로세서 'modelRoot' 지시문을 지원 하지 않습니다. 변환을 실행 되지 않습니다.**  
+     **The processor named 'DebuggingTestLanguageDirectiveProcessor' does not support the directive named 'modelRoot'. The transformation will not be run.**  
   
-     이 경우 지시문 호출에 잘못 된 지시문 이름 포함 되어 있습니다. 사용자가 지정한 `modelRoot` 지시문 이름 이지만 올바른 지시문 이름 그대로 `DebuggingTestLanguage`합니다.  
+     In this case, the directive call contains an incorrect directive name. You have specified `modelRoot` as the directive name, but the correct directive name is `DebuggingTestLanguage`.  
   
-3.  오류를 두 번 클릭은 **오류 목록** 창에서 코드로 이동 합니다.  
+3.  Double-click the error in the **Error List** window to jump to the code.  
   
-4.  하도록 지시문 이름을 변경 하는 코드를 수정 하려면 `DebuggingTestLanguage`합니다.  
+4.  To correct the code, change the directive name to `DebuggingTestLanguage`.  
   
-     변경 내용은 강조 표시 됩니다.  
+     The change is highlighted.  
   
-    ```c#  
+    ```csharp  
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=ExampleModel" #>  
     ```  
   
-    ```vb#  
+    ```vb  
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=ExampleModel" #>  
     ```  
   
-5.  **솔루션 탐색기**DebugTest.tt를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **사용자 지정 도구 실행**합니다.  
+5.  In **Solution Explorer**, right-click DebugTest.tt, and then click **Run Custom Tool**.  
   
-     이제 시스템 텍스트 템플릿을 변환 하 고 해당 출력 파일을 생성 합니다. 모든 오류가 표시 되지 것입니다는 **오류 목록** 창입니다.  
+     Now the system transforms the text template and generates the corresponding output file. You will not see any errors in the **Error List** window.  
   
-#### <a name="to-debug-an-incorrect-property-name"></a>잘못 된 속성 이름을 디버깅 하려면  
+#### <a name="to-debug-an-incorrect-property-name"></a>To debug an incorrect property name  
   
-1.  DebugTest.tt의 코드를 다음 코드로 바꿉니다.  
+1.  Replace the code in DebugTest.tt with the following code:  
   
     > [!NOTE]
-    >  코드에 오류가 있습니다. 디버깅을 위해 오류를 도입 되었습니다.  
+    >  The code contains an error. You are introducing the error in order to debug it.  
   
-    ```c#  
+    ```csharp  
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>  
     <#@ output extension=".txt" #>  
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>  
@@ -139,7 +140,7 @@ ms.lasthandoff: 02/22/2017
     #>  
     ```  
   
-    ```vb#  
+    ```vb  
     <#@ template language="VB" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>  
     <#@ output extension=".txt" #>  
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>  
@@ -154,31 +155,31 @@ ms.lasthandoff: 02/22/2017
     #>  
     ```  
   
-2.  에 **솔루션 탐색기**DebugTest.tt를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **사용자 지정 도구 실행**합니다.  
+2.  In the **Solution Explorer**, right-click DebugTest.tt, and then click **Run Custom Tool**.  
   
-     **오류 목록** 창이 나타나고 이러한 오류 중 하나가 표시 됩니다.  
+     The **Error List** window appears and displays one of these errors:  
   
      (C#)  
   
-     **변환을 컴파일하는 중: Microsoft.VisualStudio.TextTemplating\<GUID >. GeneratedTextTransformation' 'ExampleModel'에 대 한 정의 포함 하지 않습니다**  
+     **Compiling transformation: Microsoft.VisualStudio.TextTemplating\<GUID>. GeneratedTextTransformation' does not contain a definition for 'ExampleModel'**  
   
      (Visual Basic)  
   
-     **변환을 컴파일하는 중: 'ExampleModel'의 구성원이 아닙니다. ' Microsoft.VisualStudio.TextTemplating\<GUID >. GeneratedTextTransformation'.**  
+     **Compiling transformation: 'ExampleModel' is not a member of 'Microsoft.VisualStudio.TextTemplating\<GUID>.GeneratedTextTransformation'.**  
   
-     이 경우 텍스트 템플릿 코드가 올바르지 않은 속성 이름을 포함합니다. 사용자가 지정한 `ExampleModel` 속성 이름 하지만 올바른 속성 이름이 `LibraryModel`합니다. 올바른 속성 이름을 찾을 수는 다음 코드에 나와 있는 것 처럼 매개 변수를 제공 합니다.  
+     In this case, the text template code contains an incorrect property name. You have specified `ExampleModel` as the property name, but the correct property name is `LibraryModel`. You can find the correct property name in the provides parameter, as shown in the following code:  
   
     ```  
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>  
     ```  
   
-3.  코드를 이동 하는 오류 목록 창에 오류를 두 번 클릭 합니다.  
+3.  Double-click the error in the Error List window to jump to the code.  
   
-4.  코드를 수정 하려면 속성 이름으로 변경 `LibraryModel` 텍스트 템플릿 코드에서.  
+4.  To correct the code, change the property name to `LibraryModel` in the text template code.  
   
-     변경 내용은 강조 표시 됩니다.  
+     The changes are highlighted.  
   
-    ```c#  
+    ```csharp  
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>  
     <#@ output extension=".txt" #>  
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>  
@@ -194,7 +195,7 @@ ms.lasthandoff: 02/22/2017
     #>  
     ```  
   
-    ```vb#  
+    ```vb  
     <#@ template language="VB" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>  
     <#@ output extension=".txt" #>  
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>  
@@ -209,6 +210,6 @@ ms.lasthandoff: 02/22/2017
     #>  
     ```  
   
-5.  **솔루션 탐색기**DebugTest.tt를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **사용자 지정 도구 실행**합니다.  
+5.  In **Solution Explorer**, right-click DebugTest.tt, and then click **Run Custom Tool**.  
   
-     이제 시스템 텍스트 템플릿을 변환 하 고 해당 출력 파일을 생성 합니다. 모든 오류가 표시 되지 것입니다는 **오류 목록** 창입니다.
+     Now the system transforms the text template and generates the corresponding output file. You will not see any errors in the **Error List** window.

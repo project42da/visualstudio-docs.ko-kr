@@ -1,114 +1,143 @@
 ---
-title: "원격 디버깅을 위해 Windows 방화벽 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configure the Windows Firewall for Remote Debugging | Microsoft Docs
+ms.custom: 
+ms.date: 05/18/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 66e3230a-d195-4473-bbce-8ca198516014
 caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# 원격 디버깅을 위해 Windows 방화벽 구성
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: cd4596e063bc6fb66a259d34109eb1eb74d1780c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-이 항목에서는 다음 운영 체제를 실행하는 컴퓨터에서 원격 디버깅을 사용하도록 방화벽을 구성하는 방법을 설명합니다.  
-  
--   Windows 7  
-  
--   Windows 8\/8.1  
+---
+# <a name="configure-the-windows-firewall-for-remote-debugging"></a>Configure the Windows Firewall for Remote Debugging
+This topic describes how to configure the firewall to enable remote debugging on computers that run the following operating systems:  
   
 -   Windows 10  
   
--   Windows Server 2008\(R2\)  
+-   Windows 8/8.1  
   
--   Windows Server 2012  
+-   Windows 7   
   
 -   Windows Server 2012 R2  
+
+-   Windows Server 2012
   
- 디버그 중인 네트워크가 방화벽으로 보호되지 않는 경우에는 이 구성이 필요하지 않습니다. 그렇지 않은 경우 Visual Studio를 호스트하는 컴퓨터와 디버그해야 하는 원격 컴퓨터 둘 다에서 방화벽 구성을 변경해야 합니다.  
+-   Windows Server 2008 R2 
   
- **IPSec** 네트워크에서 IPSec을 사용하여 통신을 수행해야 하는 경우 Visual Studio 호스트 컴퓨터와 원격 컴퓨터 둘 다에서 추가 포트를 열어야 합니다.  
+ If the network on which you are debugging is not protected by a firewall, this configuration is unnecessary. Otherwise, both the computer that hosts Visual Studio and the remote computer that is to be debugged require changes to the firewall configuration.  
   
- **웹 서버** 원격 웹 서버를 디버그하는 경우 원격 컴퓨터에서 추가 포트를 열어야 합니다.  
+ **IPSec** If your network requires that communication be performed using IPSec, you must open additional ports on both the Visual Studio host computer and the remote computer.  
   
- 두 컴퓨터에서 동일한 운영 체제를 실행할 필요는 없습니다. 예를 들어 Visual Studio 컴퓨터는 Windows 10을 실행하고 원격 컴퓨터는 Windows Server 2012 R2를 실행할 수 있습니다.  
+ **Web Server** If you are debugging a remote Web server, you must open an additional port on the remote computer. (For IIS, port 80 must be open.)  
   
-## Visual Studio 컴퓨터에서 Windows 방화벽을 구성하려면  
- Windows 방화벽을 구성하기 위한 지침은 운영 체제마다 약간 다릅니다. Windows 7 또는 Windows Server 2008에서는 **프로그램**이란 단어가 사용되고, Windows 8\/8.1, Windows 10 및 Windows Server 2012에서는 **앱**이란 단어가 사용됩니다.  다음 단계에서는 **앱**이란 단어를 사용합니다.  
+ Note that both computers do not have to run the same operating system. For example, the Visual Studio computer can run Windows 10 and the remote computer can run Windows Server 2012 R2.      
   
-1.  Windows 방화벽 페이지를 엽니다.**시작** 메뉴 검색 상자에 **Windows 방화벽**을 입력합니다.  
-  
-2.  **Windows 방화벽을 통해 앱 또는 기능 허용**을 클릭합니다.  
-  
-3.  **허용된 앱 및 기능** 목록에서 **Visual Studio 원격 디버거 검색**을 찾습니다. 표시되는 경우 선택되었으며 하나 이상의 네트워크 종류도 선택되었는지 확인합니다.  
-  
-4.  **Visual Studio 원격 디버거 검색**이 표시되지 않는 경우 **다른 앱 허용**을 클릭합니다. 그래도 **앱 추가** 창에 표시되지 않는 경우 **찾아보기**를 클릭하고 **\<Visual Studio 설치 디렉터리\>\\Common7\\IDE\\Remote Debugger**로 이동합니다. 응용 프로그램에 대한 적절한 폴더\(x86, x64, Appx\)를 찾은 다음 **msvsmon.exe**를 선택합니다.**추가**를 클릭합니다.  
-  
-5.  **허용된 앱 및 기능** 목록에서 **Visual Studio 원격 디버깅 모니터**를 선택합니다. 원격 디버깅 모니터에서 통신하려는 네트워크 종류\(**도메인, 홈\/회사\(개인\), 공용**\)를 하나 이상 선택합니다. 종류는 Visual Studio 컴퓨터가 연결된 네트워크를 포함해야 합니다.  
-  
-## 검색을 사용할 수 있도록 Visual Studio 컴퓨터에서 포트를 열려면  
- 원격 디버거를 실행하는 컴퓨터의 검색을 허용하려면 UDP 포트 3702 수신을 허용해야 합니다. 추가하려면 방화벽에서 포트를 구성하는 방법을 참조하세요.  
-  
-## 원격 디버깅을 위해 원격 컴퓨터의 Windows 방화벽을 구성하려면  
- 원격 디버깅 구성 요소는 원격 컴퓨터에 설치하거나 공유 디렉터리에서 실행할 수 있습니다. 두 경우 모두 원격 컴퓨터의 방화벽을 구성해야 합니다. 원격 디버깅 구성 요소는 다음 위치에 있습니다.  
-  
- **\<Visual Studio 설치 디렉터리\>\\Common7\\IDE\\Remote Debugger**  
-  
- Windows 방화벽을 구성하기 위한 지침은 운영 체제마다 약간 다릅니다. Windows 7 또는 Windows Server 2008에서는 **프로그램**이란 단어가 사용되고, Windows 8\/8.1, Windows 10 및 Windows Server 2012에서는 **앱**이란 단어가 사용됩니다.  다음 단계에서는 **앱**이란 단어를 사용합니다.  
-  
-1.  Windows 방화벽 페이지를 엽니다.**시작** 메뉴 검색 상자에 **Windows 방화벽**을 입력합니다.  
-  
-2.  **Windows 방화벽을 통해 앱 또는 기능 허용**을 클릭합니다.  
-  
-3.  **허용된 앱 및 기능** 목록에서 **Visual Studio 원격 디버깅 모니터**를 찾습니다. 표시되는 경우 선택되었으며 하나 이상의 네트워크 종류도 선택되었는지 확인합니다.  
-  
-4.  **Visual Studio 원격 디버깅 모니터**가 표시되지 않는 경우 **다른 앱 허용**을 클릭합니다. 그래도 **앱 추가 창**에 표시되지 않는 경우 **찾아보기**를 클릭하고 **\<Visual Studio 설치 디렉터리\>\\Common7\\IDE\\Remote Debugger**로 이동합니다. 응용 프로그램에 대한 적절한 폴더\(x86, x64, Appx\)를 찾은 다음 **msvsmon.exe**를 선택합니다.**추가**를 클릭합니다.  
-  
-5.  **허용된 앱** 목록에서 **Visual Studio 원격 디버깅 모니터**를 선택합니다. 원격 디버깅 모니터에서 통신하려는 네트워크 종류\(**도메인, 홈\/회사\(개인\), 공용**\)를 하나 이상 선택합니다. 종류는 Visual Studio 컴퓨터가 연결된 네트워크를 포함해야 합니다.  
-  
-## 원격 디버깅을 사용할 수 있도록 하는 원격 컴퓨터의 포트  
+## <a name="ports-on-the-remote-computer-that-enable-remote-debugging"></a>Ports on the remote computer that enable remote debugging  
   
 |||||  
 |-|-|-|-|  
-|**포트**|**들어오는\/나가는 포트**|**프로토콜**|**설명**|  
-|3702|나가는 포트|UDP|원격 디버거 검색에 필요합니다.|  
-|4020||TCP|VS 2015에 사용됩니다. 포트 번호는 각 Visual Studio 버전마다 2씩 증가합니다. 자세한 내용은 Visual Studio 원격 디버거 포트 할당을 참조하세요.|  
-|4021||TCP|VS 2015에 사용됩니다. 포트 번호는 각 Visual Studio 버전마다 2씩 증가합니다. 자세한 내용은 Visual Studio 원격 디버거 포트 할당을 참조하세요.|  
+|**Ports**|**Incoming/Outgoing**|**Protocol**|**Description**|   
+|4022|Incoming|TCP|For VS 2017. The port number is incremented by 2 for each Visual Studio version. For more information, see [Visual Studio Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md).|  
+|4023|Incoming|TCP|For VS 2017. The port number is incremented by 2 for each Visual Studio version. (Only used to remote debug a 32-bit process from the 64-bit version of the remote debugger.) For more information, see  [Visual Studio Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md).| 
+|3702|Outgoing|UDP|(Optional) Required for remote debugger discovery.|    
   
-## 관리 또는 네이티브 호환성 모드로 원격 디버깅을 사용할 수 있도록 하는 원격 컴퓨터의 포트  
+## <a name="how-to-configure-ports-in-windows-firewall"></a>How to Configure Ports in Windows Firewall  
+
+When you install Visual Studio or the remote debugger, the software will try to open the correct ports. However, in some scenarios (such as using a third party firewall), you may need to open a port manually. If you need to verify that ports are open, see [Troubleshooting](#troubleshooting). Some instructions for opening a port may be different on older versions of Windows.
+
+To open a port:
+  
+1. Open the **Start** menu, search for **Windows Firewall with Advanced Security**.
+
+2. Then choose **Inbound Rules > New Rule > Port**, and then click **Next**. (For Outgoing rules, choose **Outbound Rules** instead.)
+
+3. Choose either **TCP** or **UDP**, depending on the port number.
+
+4. Under **Specific local ports**, enter the port number, click **Next**.
+
+5. Click **Allow the Connection** and then click **Next**.
+
+6. Select one or more network types to enable for the port and click **Next**.
+
+    The type you select must include the network to which the remote computer is connected.
+7. Add the name (for example, **msvsmon**, **IIS**, or **Web Deploy**) for the rule and click **Finish**.
+
+    You should see your new rule in the Inbound Rules or Outbound Rules list.
+
+## <a name="troubleshooting"></a>Troubleshooting
+
+If you are having trouble attaching to your app with the remote debugger, you may need to verify that the correct ports are open.
+
+### <a name="verify-that-ports-are-open-in-the-windows-firewall-on-the-visual-studio-computer"></a>Verify that ports are open in the Windows Firewall on the Visual Studio Computer  
+ The instructions for configuring the Windows firewall differ slightly on different operating systems. On Windows 8/8.1, Windows 10, and Windows Server 2012, the word **app** is used; on Windows 7 or Windows Server 2008, the word **program** is used;  In the following steps we will use the word **app**.  
+  
+1.  Open the Windows Firewall page. (In the **Start** menu search box, type **Windows Firewall**).  
+  
+2.  Click **Allow an app or feature through Windows Firewall**.  
+  
+3.  In the **Allowed apps and features** list, look for **Visual Studio Remote Debugger Discovery**. If it is listed, make sure that it is selected, and that one or more network types are also selected.  
+  
+4.  If **Visual Studio Remote Debugger Discovery** is not listed, click **Allow another app**. If you still don't see it in the **Add an app** window, click **Browse** and navigate to **\<Visual Studio installation directory>\Common7\IDE\Remote Debugger**. Find the appropriate folder for the application (x86, x64, Appx) and then select **msvsmon.exe**. Then click **Add**.  
+  
+5.  In the **Allowed apps and features** list, select **Visual Studio Remote Debugger**. Check one or more network types (**Domain, Home/Work (Private), Public**) that you want the remote debugging monitor to communicate with. The types must include the network to which the Visual Studio computer is connected. 
+
+### <a name="verify-that-ports-are-open-in-the-windows-firewall-on-the-remote-computer"></a>Verify that ports are open in the Windows Firewall on the remote computer  
+ The remote debugging components can be installed on the remote computer or run from a shared directory. The firewall of the remote computer must be configured in both cases. The remote debugging components are located in:  
+  
+ **\<Visual Studio installation directory>\Common7\IDE\Remote Debugger**  
+  
+ The instructions for configuring the Windows firewall differ slightly on different operating systems. On Windows 8/8.1, Windows 10, and Windows Server 2012, the word **app** is used; on Windows 7 or Windows Server 2008, the word **program** is used;  In the following steps we will use the word **app**.  
+  
+1.  Open the Windows Firewall page. (On the **Start** menu search box, type **Windows Firewall**.)  
+  
+2.  Click **Allow an app or feature through Windows Firewall**.  
+  
+3.  In the **Allowed apps and features** list, look for **Visual Studio Remote Debugger**. If it is listed, make sure that it is selected, and that one or more network types are also selected.  
+  
+4.  If **Visual Studio Remote Debugger** is not listed, click **Allow another app**. If you still don't see it in the **Add an app window**, click **Browse** and navigate to **\<Visual Studio installation directory>\Common7\IDE\Remote Debugger**. Find the appropriate folder for the application (x86, x64, Appx) and then select **msvsmon.exe**. Then click **Add**.  
+  
+5.  In the **Allowed apps** list, select **Visual Studio Remote Debugger**. Check one or more network types (**Domain, Home/Work (Private), Public**) that you want the remote debugging monitor to communicate with. The types must include the network to which the Visual Studio computer is connected. 
+
+### <a name="managed-or-native-compatibility-mode-open-additional-ports-on-the-remote-computer"></a>(Managed or native compatibility mode) Open additional ports on the remote computer
+
+If you are using compatibility mode for the debugger (**Tools > Options > Debugging**), additional ports will need to be opened. Compatibility mode enables a legacy version of the debugger and different ports are required.
+
+> [!NOTE]
+> The legacy version of the debugger is the Visual Studio 2010 debugger.
   
 |||||  
 |-|-|-|-|  
-|**포트**|**들어오는\/나가는 포트**|**프로토콜**|**설명**|  
-|135, 139, 445|나가는 포트|TCP|필수 요소.|  
-|137, 138|나가는 포트|UDP|필수 요소.|  
-|500, 4500|나가는 포트|UDP|도메인 정책에 따라 IPSec을 통해 네트워크 통신을 수행해야 하는 경우에 필요합니다.|  
-|80|나가는 포트|TCP|웹 서버 디버깅에 필요합니다.|  
+|**Ports**|**Incoming/Outgoing**|**Protocol**|**Description**|  
+|135, 139, 445|Outgoing|TCP|Required.|  
+|137, 138|Outgoing|UDP|Required.|  
+|500, 4500|Outgoing|UDP|Required if your domain policy requires network communication to be performed through IPSec.|  
+|80|Outgoing|TCP|Required for Web Server debugging.|
   
-## Windows 방화벽에서 포트를 구성하는 방법  
-  
-1.  **시작** 메뉴에서 **고급 보안이 포함된 Windows 방화벽**을 검색합니다.  
-  
-2.  **인바운드 규칙** 또는 **아웃바운드 규칙**을 클릭한 다음 **작업** 목록에서 **새 규칙**을 클릭합니다.  
-  
-3.  **규칙 유형** 페이지에서 **포트**를 선택하고 **다음**을 클릭합니다.  
-  
-4.  **프로토콜 및 포트** 페이지에서 포트 프로토콜\(TCP 또는 UDP\)을 선택합니다.**특정 로컬 포트**를 선택하고 프로토콜에 사용하도록 설정할 포트 번호를 하나 이상 입력합니다. 번호를 쉼표로 구분합니다.**다음**을 클릭합니다.  
-  
-5.  **작업** 페이지에서 **연결 허용**을 선택하고 **다음**을 클릭합니다.  
-  
-6.  **프로필** 페이지에서 포트에 사용하도록 설정할 네트워크 종류를 하나 이상 선택합니다. 선택한 유형은 원격 컴퓨터가 연결된 네트워크를 포함해야 합니다.**다음**을 클릭합니다.  
-  
-7.  **이름** 페이지에서 규칙의 이름을 입력하고 **마침**을 클릭합니다.  
-  
-8.  **인바운드 규칙** 또는 **아웃바운드 규칙** 목록에 새 규칙이 표시됩니다.  
-  
-## 참고 항목  
- [원격 디버깅](../debugger/remote-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Remote Debugging](../debugger/remote-debugging.md)

@@ -1,62 +1,79 @@
 ---
-title: "IDebugSymbolProvider::GetMethodFieldsByName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugSymbolProvider::GetMethodFieldsByName"
-helpviewer_keywords: 
-  - "IDebugSymbolProvider::GetMethodFieldsByName 메서드"
+title: IDebugSymbolProvider::GetMethodFieldsByName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugSymbolProvider::GetMethodFieldsByName
+helpviewer_keywords:
+- IDebugSymbolProvider::GetMethodFieldsByName method
 ms.assetid: 1f781320-81ef-4037-b068-f1864b271258
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugSymbolProvider::GetMethodFieldsByName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3bf359535d5b11edb95910afe5a81ca048ab9c21
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 메서드는 정규화 된 메서드 이름을 나타내는 필드를 가져옵니다.  
+---
+# <a name="idebugsymbolprovidergetmethodfieldsbyname"></a>IDebugSymbolProvider::GetMethodFieldsByName
+This method gets the field representing a fully qualified method name.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetMethodFieldsByName(   
-   LPCOLESTR          pszFullName,  
-   NAME_MATCH         nameMatch,  
-   IEnumDebugFields** ppEnum  
+```cpp  
+HRESULT GetMethodFieldsByName(   
+   LPCOLESTR          pszFullName,  
+   NAME_MATCH         nameMatch,  
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMethodFieldsByName(  
-   string               pszFullName,   
-   NAME_MATCH           nameMatch,   
-   out IEnumDebugFields ppEnum  
+   string               pszFullName,   
+   NAME_MATCH           nameMatch,   
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pszFullName`  
- \[in\] 메서드 이름입니다.  
+ [in] The method name.  
   
  `nameMatch`  
- \[in\] 유형을 일치, 대\/소문자 구분을 선택합니다.  
+ [in] Selects the type of match, for example, case-sensitive.  
   
  `ppEnum`  
- \[out\] 반환 된 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) 이 메서드와 관련 된 필드에 대 한 열거자입니다.  
+ [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerator for the fields associated with this method.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 오버 하면, 예를 들어 로드 된 경우 메서드가 여러 필드를 함께 연결할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ A method can be associated with multiple fields if it is overloaded, for example.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

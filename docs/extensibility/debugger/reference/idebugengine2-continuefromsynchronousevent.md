@@ -1,56 +1,73 @@
 ---
-title: "IDebugEngine2::ContinueFromSynchronousEvent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2::ContinueFromSynchronousEvent"
-helpviewer_keywords: 
-  - "IDebugEngine2::ContinueFromSynchronousEvent"
+title: IDebugEngine2::ContinueFromSynchronousEvent | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine2::ContinueFromSynchronousEvent
+helpviewer_keywords:
+- IDebugEngine2::ContinueFromSynchronousEvent
 ms.assetid: 9a57dfcd-df8e-4be5-b1fe-bd853e3c6bb2
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugEngine2::ContinueFromSynchronousEvent
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 422dc31356947d9856f235db8e93cb1ca5b69930
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-세션 디버그 관리자 \(이전에 SDM을 \(DE\)는 디버그 엔진에서 보낸 동기 디버그 이벤트를 받은 처리 되었음을 나타내는 경우 SDM\)가 호출 됩니다.  
+---
+# <a name="idebugengine2continuefromsynchronousevent"></a>IDebugEngine2::ContinueFromSynchronousEvent
+Called by the session debug manager (SDM) to indicate that a synchronous debug event, previously sent by the debug engine (DE) to the SDM, was received and processed.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT ContinueFromSynchronousEvent(   
-   IDebugEvent2* pEvent  
+```cpp  
+HRESULT ContinueFromSynchronousEvent(   
+   IDebugEvent2* pEvent  
 );  
 ```  
   
-```c#  
-HRESULT ContinueFromSynchronousEvent(   
-   IDebugEvent2 pEvent  
+```csharp  
+HRESULT ContinueFromSynchronousEvent(   
+   IDebugEvent2 pEvent  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pEvent`  
- \[in\] [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 을 디버거 합니다 지금 계속 이전에 보낸된 동기 이벤트를 나타내는 개체입니다.  
+ [in] An [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) object that represents the previously sent synchronous event from which the debugger should now continue.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 표시 되는 이벤트의 소스는 않았습니다 DE를 확인 해야 합니다는 `pEvent` 매개 변수.  
+## <a name="remarks"></a>Remarks  
+ The DE must verify that it was the source of the event represented by the `pEvent` parameter.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CEngine` 를 구현 하는 개체는 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) 인터페이스입니다.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CEngine` object that implements the [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CEngine::ContinueFromSynchronousEvent(IDebugEvent2* pEvent)  
 {  
    HRESULT hr;  
@@ -86,6 +103,6 @@ HRESULT CEngine::ContinueFromSynchronousEvent(IDebugEvent2* pEvent)
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

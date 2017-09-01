@@ -1,80 +1,97 @@
 ---
-title: "IDebugStackFrame2::EnumProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugStackFrame2::EnumProperties"
-helpviewer_keywords: 
-  - "IDebugStackFrame2::EnumProperties"
+title: IDebugStackFrame2::EnumProperties | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugStackFrame2::EnumProperties
+helpviewer_keywords:
+- IDebugStackFrame2::EnumProperties
 ms.assetid: 334bb95e-c7e0-4008-9f06-8c3999e47ee8
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugStackFrame2::EnumProperties
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5359698b2ae148abd5fc38da346ebcd5c456634c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-로컬 변수 같은 스택 프레임에 관련 된 속성에 대 한 열거자를 만듭니다.  
+---
+# <a name="idebugstackframe2enumproperties"></a>IDebugStackFrame2::EnumProperties
+Creates an enumerator for properties associated with the stack frame, such as local variables.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT EnumProperties (   
-   DEBUGPROP_INFO_FLAGS      dwFieldSpec,  
-   UINT                      nRadix,  
-   REFIID                    refiid,  
-   DWORD                     dwTimeout,  
-   ULONG*                    pcelt,  
-   IEnumDebugPropertyInfo2** ppEnum  
+```cpp  
+HRESULT EnumProperties (   
+   DEBUGPROP_INFO_FLAGS      dwFieldSpec,  
+   UINT                      nRadix,  
+   REFIID                    refiid,  
+   DWORD                     dwTimeout,  
+   ULONG*                    pcelt,  
+   IEnumDebugPropertyInfo2** ppEnum  
 );  
 ```  
   
-```c#  
-int EnumProperties (   
-   enum_DEBUGPROP_INFO_FLAGS   dwFieldSpec,  
-   uint                        nRadix,  
-   ref Guid                    refiid,  
-   uint                        dwTimeout,  
-   out uint                    pcelt,  
-   out IEnumDebugPropertyInfo2 ppEnum  
+```csharp  
+int EnumProperties (   
+   enum_DEBUGPROP_INFO_FLAGS   dwFieldSpec,  
+   uint                        nRadix,  
+   ref Guid                    refiid,  
+   uint                        dwTimeout,  
+   out uint                    pcelt,  
+   out IEnumDebugPropertyInfo2 ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dwFieldSpec`  
- \[in\] 플래그의 조합에서 [DEBUGPROP\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) 열거에서 필드를 지정 하는 열거형 [DEBUG\_PROPERTY\_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 구조인 채워야 합니다.  
+ [in] A combination of flags from the [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) enumeration that specifies which fields in the enumerated [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) structures are to be filled in.  
   
  `nRadix`  
- \[in\] 임의의 숫자 정보를 서식 지정에 사용할 기 수입니다.  
+ [in] The radix to be used in formatting any numerical information.  
   
  `refiid`  
- \[in\] 필터를 선택 하는 데 사용 하는 GUID [DEBUG\_PROPERTY\_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 구조입니다, 열거 등을 `guidFilterLocals`.  
+ [in] A GUID of a filter used to select which [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) structures are to be enumerated, such as `guidFilterLocals`.  
   
  `dwTimeout`  
- \[in\] 이 메서드에서 반환 하기 전에 대기할 시간 \(밀리초\), 최대 시간입니다.  사용 `INFINITE` 무제한으로 대기 합니다.  
+ [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
   
  `pcelt`  
- \[out\] 열거 된 속성의 수를 반환 합니다.  이는 [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) 메서드.  
+ [out] Returns the number of properties enumerated. This is the same as calling the [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) method.  
   
  `ppEnum`  
- \[out\] 반환 된 [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) 원하는 속성 목록을 포함 하는 개체입니다.  
+ [out] Returns an [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) object containing a list of the desired properties.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드는 선택한 모든 속성을 한 번의 호출에서 검색 될 수 있기 때문에 순차적으로 호출 하는 것 보다 빠른 것은 [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) 및 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 방법.  
+## <a name="remarks"></a>Remarks  
+ Because this method allows all selected properties to be retrieved with a single call, it is faster than sequentially calling the [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) and [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) methods.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
- [DEBUGPROP\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)   
+ [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)   
  [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)   
  [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md)   
  [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md)   

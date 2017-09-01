@@ -1,248 +1,275 @@
 ---
-title: "Visual Studio 디버거에서 기호 파일(.pdb) 및 원본 파일 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Debugger.Native"
-  - "VS.ToolsOptionsPages.Debugger.Symbols"
-  - "vs.debug.options.Native"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "소스 코드"
-  - ".dbg 파일"
-  - "소스 코드, 관리"
-  - "기호, 관리"
-  - ".pdb 파일"
-  - "dbg 파일"
-  - "pdb 파일"
-  - "디버거"
+title: Specify symbol (.pdb) and source files in the debugger | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/05/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Debugger.Native
+- VS.ToolsOptionsPages.Debugger.Symbols
+- vs.debug.options.Native
+- vs.debug.nosymbols
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- source code
+- .dbg files
+- source code, managing
+- symbols, managing
+- .pdb files
+- dbg files
+- pdb files
+- debugger
 ms.assetid: 1105e169-5272-4e7c-b3e7-cda1b7798a6b
 caps.latest.revision: 31
-caps.handback.revision: 31
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Visual Studio 디버거에서 기호 파일(.pdb) 및 원본 파일 지정
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 8355e43e6c8e6142aedbe5dfb325196b01a7a681
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-프로그램 데이터베이스\(.pdb\) 파일로, 기호 파일이라고도 하며 클래스, 메서드 및 기타 코드의 소스 파일을 만드는 식별자를 프로젝트의 컴파일된 실행 파일에 사용되는 식별자에 매핑합니다. .pdb 파일은 소스 코드의 문을 실행 파일의 실행 명령에 매핑합니다. 디버거는 이 정보를 사용하여 두 가지 주요 정보를 확인합니다. 즉, Visual Studio IDE에 표시되는 소스 파일 및 줄 번호와 중단점을 설정할 때 중지될 실행 파일 내 위치를 확인합니다. 기호 파일에는 소스 파일의 원래 위치도 포함되어 있으며 소스 파일을 검색할 수 있는 소스 서버의 위치도 필요에 따라 포함되어 있습니다.  
+---
+# <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>Specify symbol (.pdb) and source files in the Visual Studio debugger
+A program database (.pdb) file, also called a symbol file, maps the identifiers that you create in source code for classes, methods, and other code to the identifiers that are used in the compiled executables of your project. The .pdb file also maps the statements in the source code to the execution instructions in the executables. The debugger uses this information to determine two key pieces of information:
+
+* Name of the source file and line number to be displayed in the Visual Studio IDE
+* Location in the executable to stop at when you set a breakpoint
+
+A symbol file also contains the original location of the source files, and optionally, the location of a source server where the source files can be retrieved from.
   
- Visual Studio IDE에서 프로젝트를 디버깅할 때 디버거는 코드에 대한 .pdb 및 소스 파일의 기본 위치를 알고 있습니다. 프로젝트에서 호출하는 Windows 또는 타사 코드와 같은 프로젝트 소스 코드 외부의 코드를 디버깅하려는 경우, .pdb\(및 필요에 따라 외부 코드의 소스 파일\)의 위치를 지정해야 하며 이러한 파일은 실행 파일의 빌드와 정확히 일치해야 합니다.  
+> [!TIP]
+> If you want to debug code outside your project source code, such as Windows code or third-party code your project calls, you have to specify the location of the .pdb (and optionally, the source files of the external code) and those files need to exactly match the build of the executables.  
+ 
+##  <a name="BKMK_Find_symbol___pdb__files"></a> Where does the debugger search for symbol files? 
   
- Visual Studio 2012 이전에는 원격 장치에서 관리 코드를 디버그하는 경우 원격 컴퓨터에 기호 파일을 넣어야 했습니다. 이제는 그렇지 않습니다. 모든 기호 파일은 로컬 컴퓨터 또는 **도구\/옵션\/디버깅\/기호** 페이지에 지정된 위치에 있어야 합니다.  
+1.  The location that is specified inside the DLL or the executable file.  
   
-##  <a name="BKMK_Find_symbol___pdb__files"></a> 디버거에서 .pdb 파일을 검색하는 위치  
+     (By default, if you have built a DLL or an executable file on your computer, the linker places the full path and file name of the associated .pdb file inside the DLL or the executable file. The debugger first checks to see if the symbol file exists in the location that is specified inside the DLL or the executable file. This is helpful, because you always have symbols available for code that you have compiled on your computer.)  
   
-1.  DLL 또는 실행 파일 내의 지정된 위치  
+2.  .pdb files that are present in the same folder as the DLL or executable file.
+
+3. Any locations [specified in the debugger options](#BKMK_Specify_symbol_locations_and_loading_behavior) for symbol files. 
   
-     기본적으로 컴퓨터에서 DLL 또는 실행 파일을 빌드한 경우 링커는 DLL 또는 실행 파일 내에 관련 .pdb 파일의 전체 경로와 파일 이름을 배치합니다. 디버거는 기호 파일이 DLL 또는 실행 파일 내의 지정된 위치에 존재하는지 여부를 먼저 확인합니다. 이는 컴파일한 코드에 사용할 수 있는 기호가 항상 컴퓨터에 있기 때문에 유용합니다.  
+    * Any local symbol cache folders.  
   
-2.  DLL 또는 실행 파일과 동일한 폴더에 있을 수 있는 .pdb 파일  
+    * Any network, internet, or local symbol servers and locations that are specified, such as the Microsoft symbol server (if enabled). 
+
+> [!NOTE]
+> Before Visual Studio 2012, when you debugged managed code on a remote device you needed to put the symbol files on the remote machine. Starting with Visual Studio 2012, all symbol files must be located on the local machine or in a location [specified in the debugger options](#BKMK_Specify_symbol_locations_and_loading_behavior).  
   
-3.  로컬 기호 캐시 폴더  
+##  <a name="BKMK_Why_do_symbol_files_need_to_exactly_match_the_executable_files_"></a> Why do symbol files need to exactly match the executable files?  
+The debugger will load only a .pdb file for an executable file that exactly matches the .pdb file that was created when the executable was built (that is, the .pdb must be the original or a copy of the original .pdb file). Because the compiler is optimized for compilation speed in addition to its main task of creating correct and efficient code, the actual layout of an executable can change even if the code itself has not changed. For more information see [Why does Visual Studio require debugger symbol files to exactly match the binary files that they were built with?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)
   
-4.  활성화된 경우 Microsoft 기호 서버와 같은 지정된 네트워크, 인터넷 또는 로컬 기호 서버 및 위치  
+##  <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a> Configure where the debugger looks for symbol files and symbol loading behavior
+ When you debug a project in the Visual Studio IDE, the debugger automatically loads symbol files that are located in the project directory. You can specify alternative search paths and symbol servers for Microsoft, Windows, or third-party components in **Tools > Options > Debugging > Symbols**. You can also specify specific modules that you want the debugger to automatically load symbols for. And you can then change these settings manually while you are actively debugging.  
   
-###  <a name="BKMK_Why_do_symbol_files_need_to_exactly_match_the_executable_files_"></a> 기호 파일이 실행 파일과 정확하게 일치해야 하는 이유  
- 디버거는 실행 파일을 빌드할 때 만든 .pdb 파일과 정확히 일치하는 실행 파일의 .pdb 파일만 로드합니다. 즉, .pdb는 원본이거나 원본 .pdb 파일의 복사본이어야 합니다. 올바르고 효율적인 코드를 작성하는 주요 작업 외에 컴파일 속도에 대해 컴파일러가 최적화되므로 실행 파일의 실제 레이아웃은 코드 자체가 변경되지 않은 경우에도 변경될 수 있습니다. 자세한 내용은 [Why does Visual Studio require debugger symbol files to exactly match the binary files that they were built with?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)\(영문\)를 참조하십시오.  
+1.  In Visual Studio, open the **Tools > Options > Debugging > Symbols** page.  
   
-###  <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a> 기호 위치 및 로드 동작 지정  
- VS IDE에서 프로젝트를 디버깅할 때 디버거는 프로젝트 디렉터리에 있는 기호 파일을 자동으로 로드합니다.**도구\/옵션\/디버깅\/기호**에서 Microsoft, Windows 또는 타사 구성 요소의 대체 검색 경로 및 기호 서버를 지정할 수 있습니다. 디버거에서 자동으로 기호를 로드할 특정 모듈을 지정할 수도 있습니다. 그런 다음 본격적으로 디버깅하는 동안 이러한 설정을 수동으로 변경할 수 있습니다.  
+     ![Tools &#45; Options &#45; Debugging &#45; Symbols page](../debugger/media/dbg_tools_options_symbols.gif "DBG_Tools_Options_Symbols")  
   
-1.  Visual Studio에서 **도구\/옵션\/디버깅\/기호** 페이지를 엽니다.  
+2.  Choose the folder ![Tools&#47; Options&#47; Debugging&#47;Symbols  folder icon](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon") icon. Editable text appears in the **Symbol file (.pdb) locations** box.  
   
-     ![도구 &#45; 옵션 &#45; 디버깅 &#45; 기호 페이지](../debugger/media/dbg_tools_options_symbols.png "DBG\_Tools\_Options\_Symbols")  
+3.  Type the URL or directory path of the symbol server or symbol location. Statement completion helps you find the correct format.
+
+    You can use **Ctrl + Up** and **Ctrl + Down** to change the loading order for symbol locations. Press **F2** to edit a URL or directory path.
   
-2.  폴더 ![도구&#47; 옵션&#47; 디버깅&#47;기호 폴더 아이콘](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") 아이콘을 선택합니다. 편집 가능한 텍스트가 **기호 파일\(.pdb\) 위치** 상자에 나타납니다.  
-  
-3.  기호 서버 또는 기호 위치에 대한 URL 또는 디렉터리 경로를 입력합니다. 문 완성 기능으로 올바른 형식을 찾을 수 있습니다.  
-  
-4.  기호 로드 성능을 향상시키려면 기호가 기호 서버에 의해 복사될 수 있는 로컬 디렉터리의 경로를 **이 디렉터리의 기호 캐시** 상자에 입력합니다.  
+4.  To improve symbol loading performance type the path a local directory where symbols can be copied by symbol servers in the **Cache symbols in this directory** box a local directory that symbols can be copied to.  
   
     > [!NOTE]
-    >  보호되는 폴더\(예: C:\\Windows 폴더 또는 하위 폴더 중 하나\)에 기호 캐시를 배치하지 마십시오. 대신 읽기\/쓰기 폴더를 사용하십시오.  
+    >  Do not place your symbol cache in a protected folder (such as the C:\Windows folder or one of its subfolders). Use a read-write folder instead.  
   
- **기호 로드 동작 지정**  
+### <a name="specify-symbol-loading-behavior"></a>Specify symbol loading behavior 
   
- 디버깅을 시작할 때 **기호 파일\(.pdb\) 위치** 상자 위치에서 자동으로 로드될 파일을 지정할 수 있습니다. 프로젝트 디렉터리에 있는 기호 파일은 항상 로드됩니다.  
+You can specify the files that you want to be loaded automatically from **Symbol file (.pdb) locations** box locations when you start debugging. Symbol files in the project directory are always loaded.  
   
-1.  **제외된 모듈 지정** 링크를 선택할 때 지정하는 모듈을 제외하고 모든 모듈에 대한 모든 기호를 로드하려면 **제외되지 않은 모두 모듈**을 선택합니다.  
+1.  Choose **All modules, unless excluded** to load all the symbols for all modules except those that you specify when you choose the **Specify excluded modules** link.  
   
-2.  **지정된 모듈만** 옵션을 선택한 다음 **모듈 지정**을 선택하여 자동으로 로드하려는 기호 파일 모듈을 나열합니다. 다른 모듈의 기호 파일은 무시됩니다.  
+2.  Choose the **Only specified modules** option and then choose **Specify modules** to list the modules that you symbol files that you want loaded automatically. The symbol files for other modules are ignored.  
   
- **추가 기호 옵션 지정**  
+### <a name="specify-additional-symbol-options"></a>Specify additional symbol options 
   
- **도구\/옵션\/디버깅\/기호** 페이지에서 다음 옵션을 설정할 수도 있습니다.  
+You can also set the following options on the **Tools > Options > Debugging > General** page:  
   
- **시작할 때 기호가 없으면 경고\(네이티브 전용\)**  
+**Load DLL exports (native only)**  
   
- 이 옵션을 선택하면 디버거에 기호 정보가 없는 프로그램을 디버깅하려고 할 때 경고 대화 상자가 표시됩니다.  
+When selected, loads DLL export tables. Symbolic information from DLL export tables can be useful if you are working with Windows messages, Windows procedures (WindowProcs), COM objects, or marshaling, or any DLL for which you do not have symbols. Reading DLL export information involves some overhead. Therefore, this capability is turned off by default.  
   
- **DLL 내보내기 로드**  
+To see what symbols are available in the export table of a DLL, use `dumpbin /exports`. Symbols are available for any 32-bit system DLL. By reading the `dumpbin /exports` output, you can see the exact function name, including non-alphanumeric characters. This is useful for setting a breakpoint on a function. Function names from DLL export tables might appear truncated elsewhere in the debugger. The calls are listed in the calling order, with the current function (the most deeply nested) at the top. For more information, see [dumpbin /exports](/cpp/build/reference/dash-exports).  
   
- 이 옵션을 선택하면 DLL 내보내기 테이블이 로드됩니다. Windows 메시지, Windows 프로시저\(WindowProcs\), COM 개체, 마샬링 또는 기호가 없는 DLL을 사용하여 작업하는 경우 DLL 내보내기 테이블의 기호 정보가 유용할 수 있지만, DLL 내보내기 정보를 읽으면 오버헤드가 발생합니다. 따라서 이 기능은 기본적으로 해제되어 있습니다.  
+###  <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a> Use symbol servers to find symbol files not on your local machine  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] can download debugging symbol files from symbol servers that implement the symsrv protocol. [Visual Studio Team Foundation Server](http://msdn.microsoft.com/Library/bd6977ca-e30a-491a-a153-671d81222ce6) and the [Debugging Tools for Windows](http://msdn.microsoft.com/library/windows/hardware/ff551063\(v=VS.85\).aspx) are two tools that can implement symbol servers. You specify the symbol servers to use in the VS **Options** dialog box.  
   
- DLL의 내보내기 테이블에서 사용할 수 있는 기호를 확인하려면 `dumpbin /exports`를 사용하십시오. 모든 32비트 시스템 DLL에 기호를 사용할 수 있습니다.`dumpbin /exports` 출력을 읽으면 영숫자가 아닌 문자를 포함하여 정확한 함수 이름을 확인할 수 있습니다. 이 방법은 함수에 중단점을 설정하는 데 유용합니다. DLL 내보내기 테이블에 있는 함수 이름은 디버거에서 일부가 잘린 상태로 나타날 수 있습니다. 호출은 현재 함수\(가장 안쪽에 중첩된\)가 맨 위에 표시되어 호출한 순서로 나열됩니다. 자세한 내용은 [dumpbin \/exports](/visual-cpp/build/reference/dash-exports)를 참조하십시오.  
+ Symbol servers that you might use include:  
   
-###  <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a> 기호 서버를 사용하여 로컬 컴퓨터에 없는 기호 파일 찾기  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]는 symsrv 프로토콜을 구현하는 기호 서버에서 디버깅 기호 파일을 다운로드할 수 있습니다.[Visual Studio Team Foundation Server](../Topic/Index%20and%20publish%20symbol%20data.md)와 [Windows용 디버깅 도구](http://msdn.microsoft.com/library/windows/hardware/ff551063\(v=VS.85\).aspx)는 기호 서버를 구현할 수 있는 두 가지 도구입니다. VS **옵션** 대화 상자에서 사용할 기호 서버를 지정합니다.  
+ **Microsoft public symbol servers**  
   
- 사용할 수 있는 기호 서버는 다음과 같습니다.  
+ To debug a crash that occurs during a call to a system DLL or to a third-party library, you will often need system .pdb files, which contain symbols for Windows DLLs, EXEs, and device drivers. You can obtain these symbols from the Microsoft public sysmbol servers. The Microsoft public symbol servers provide symbols for Windows operating systems, in addition to MDAC, IIS, ISA, and the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
- **Microsoft 공용 기호 서버**  
+ To use the Microsoft symbol servers, choose **Options and Settings** on the **Debug** menu and then choose **Symbols**. Select **Microsoft Symbol Servers**.  
   
- 시스템 DLL이나 타사 라이브러리를 호출하는 동안 발생하는 충돌을 디버깅하려면 Windows DLL, EXE 및 장치 드라이버에 대한 기호가 포함된 시스템 .pdb 파일이 필요한 경우가 많습니다. 이러한 기호는 Microsoft 공용 기호 서버에서 가져올 수 있습니다. Microsoft 공용 기호 서버는 MDAC, IIS, ISA 및 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 외에도 Windows 운영 체제용 기호를 제공합니다.  
+ **Symbol servers on an internal network or on your local machine**  
   
- Microsoft 기호 서버를 사용하려면 **디버그** 메뉴의 **옵션 및 설정**을 선택한 다음 **기호**를 선택합니다.**Microsoft 기호 서버**를 선택합니다.  
+ Your team or company can create symbol servers for your own products and as a cache for symbols from external sources. You might have a symbol server on your own machine. You can enter the location of the symbol servers as a URL or as a path on the **Debugging**/**Symbols** page of the VS **Option Dialog**.  
   
- **내부 네트워크 또는 로컬 컴퓨터의 기호 서버**  
+ **Third-party symbol servers**  
   
- 팀이나 회사는 사용자 고유 제품에 사용하기 위해서나 외부 소스의 기호에 대한 캐시로 기호 서버를 만들 수 있습니다. 기호 서버가 사용자의 컴퓨터에 있을 수도 있습니다. 기호 서버의 위치를 URL 또는 VS **옵션** 대화 상자의 **디버깅**\/**기호** 페이지에 있는 경로로 입력할 수 있습니다.  
-  
- **타사 기호 서버**  
-  
- Windows 응용 프로그램 및 라이브러리의 타사 공급자는 인터넷에 있는 기호 서버에 대한 액세스를 제공할 수 있습니다.**디버깅**\/**기호** 페이지에도 이러한 기호 서버의 URL을 입력할 수 있습니다.  
+ Third-party providers of Windows applications and libraries can provide access to symbol server on the internet. You also enter the URL of these symbol servers on the **Debugging**/**Symbols** page,  
   
 > [!NOTE]
->  Microsoft 공용 기호 서버 이외의 기호 서버를 사용할 경우 기호 서버와 해당 경로를 신뢰할 수 있는지 확인합니다. 기호 파일은 임의의 실행 코드를 포함할 수 있으므로 보안 위협에 노출될 수 있습니다.  
+>  If you use a symbol server other than the Microsoft public symbol servers, make sure that the symbol server and its path are trustworthy. Because symbol files can contain arbitrary executable code, you can become exposed to security threats.  
   
-###  <a name="BKMK_Find_and_load_symbols_while_debugging"></a> 디버깅하는 동안 기호 찾기 및 로드  
- 디버거가 중단 모드에 있을 때는 디버거 옵션에 의해 이전에 제외되었거나 컴파일러가 찾을 수 없었던 모듈의 기호를 로드할 수 있습니다. 호출 스택, 모듈, 지역, 자동 및 모든 조사식 창의 바로 가기 메뉴에서 기호를 로드할 수 있습니다. 디버거가 기호 또는 소스 파일을 사용할 수 없는 코드에서 중단되는 경우 문서 창이 나타납니다. 여기에서 누락된 파일에 대한 정보를 찾고 이러한 파일을 찾고 로드하기 위해 조치를 취할 수 있습니다.  
+###  <a name="BKMK_Find_and_load_symbols_while_debugging"></a> Find and load symbols while debugging  
+ At any time that the debugger is in break mode, you can load symbols for a module that was previously excluded by debugger options or that the compiler could not find. You can load symbols from the shortcut menus of the Call Stack, Modules, Locals, Autos, and all Watch windows. If the debugger breaks in code that does not have symbol or source files available, a document window appears. Here you can find information about the missing files and take actions to locate and load them.
   
- **로드된 기호 없음 문서 페이지를 사용하여 기호 찾기**  
+ **Find symbols with the No Symbols Loaded document pages**  
   
- 디버거가 기호를 사용할 수 없는 코드를 중단할 수 있는 방법은 여러 가지가 있습니다.  
+ There are a number of ways for the debugger to break into code that does not have symbols available:  
   
-1.  한 단계씩 코드를 실행합니다.  
+1.  Stepping into code.  
   
-2.  중단점 또는 예외에서 코드를 중단합니다.  
+2.  Breaking into code from a breakpoint or exception.  
   
-3.  다른 스레드로 전환합니다.  
+3.  Switching to a different thread.  
   
-4.  호출 스택 창의 프레임을 두 번 클릭하여 스택 프레임을 변경합니다.  
+4.  Changing the stack frame by double-clicking a frame in the Call Stack window.  
   
- 이러한 이벤트 중 하나가 발생하면 디버거는 **로드된 기호 없음** 페이지를 표시하여 필요한 기호를 찾고 로드할 수 있게 해 줍니다.  
+ When one of these events occurs, the debugger displays the **No Symbols Loaded** page to help you find and load the necessary symbols.  
   
- ![로드된 기호가 없음 페이지](../debugger/media/dbg_nosymbolsloaded.png "DBG\_NoSymbolsLoaded")  
+ ![No Symbols Loaded page](../debugger/media/dbg_nosymbolsloaded.png "DBG_NoSymbolsLoaded")  
   
--   검색 경로를 변경하려면 선택되지 않은 경로를 선택하거나 **새로 만들기**를 선택하고 새 경로를 입력합니다. 경로를 다시 검색하고 발견되는 기호 파일을 로드하려면 **로드**를 선택합니다.  
+-   To change the search paths, choose an unselected path or choose **New** and enter a new path. Choose **Load** to search the paths again and load the symbol file if it is found.  
   
--   *실행 파일 이름* **찾아보기 ...**를 선택하여 기호 옵션을 재정의하고 검색 경로를 다시 시도합니다. 기호 파일이 발견되는 경우 로드되거나, 파일 탐색기가 표시되어 기호 파일을 수동으로 선택할 수 있습니다.  
+-   Choose **Browse and find***executable-name***...** to override any symbol options and retry the search paths. The symbol file is loaded if it is found, or a File Explorer is displayed for you to manually select the symbol file.  
   
--   **기호 설정 변경...**을 선택하여 VS 옵션 대화 상자의 **디버깅** \/ **기호** 페이지를 표시합니다.  
+-   Choose **Change Symbol Settings ...** to display the **Debugging** > **Symbols** page of the VS Options dialog.  
   
--   새 창에서 디스어셈블리를 한 번 표시하려면 **디스어셈블리 보기**를 선택합니다.  
+-   Choose **view disassembly** to show the disassembly in a new window one time.  
   
--   소스 또는 기호 파일을 찾을 수 없는 경우 항상 디스어셈블리를 표시하려면 **옵션 대화 상자** 링크를 선택하고 **주소 수준 디버깅 사용** 및 **소스를 사용할 수 없을 경우 디스어셈블리 표시**를 둘 다 선택합니다.  
+-   To always show the disassembly when the source or symbol files are not found, choose the **Options dialog** link, and select both **Enable address level debugging** and **Show disassembly if source not available**.  
   
-     ![옵션 &#47; 디버깅 &#47; 일반 디스어셈블리 옵션](../debugger/media/dbg_options_general_disassembly_checkbox.png "DBG\_Options\_General\_disassembly\_checkbox")  
+     ![Options &#47; Debugging  &#47; General disassembly options](../debugger/media/dbg_options_general_disassembly_checkbox.png "DBG_Options_General_disassembly_checkbox")  
   
- **바로 가기 메뉴에서 기호 옵션 변경**  
+ **Change symbol options from the shortcut menu**  
   
- 중단 모드에 있는 동안 호출 스택, 모듈, 지역, 자동 및 모든 조사식 창에 표시되는 항목에 대한 기호를 찾아 로드할 수 있습니다. 창에서 항목을 선택한 다음 바로 가기 메뉴를 열고 다음 옵션 중 하나를 선택합니다.  
+ While you are in break mode, you can find and load symbols for items that are displayed in the Call Stack, Modules, Locals, Autos, and all Watch windows. Select an item in the window, open the shortcut menu, and choose one of the following options:  
   
-|옵션|설명|  
-|--------|--------|  
-|**기호 로드**|**옵션** 대화 상자의 **디버깅** \/ **기호** 페이지에 지정된 위치에서 기호를 로드하려고 시도합니다. 기호 파일을 찾을 수 없는 경우 검색할 새 위치를 지정할 수 있도록 파일 탐색기가 시작됩니다.|  
-|**기호 로드 정보**|로드된 기호 파일의 위치 또는 디버거가 파일을 찾을 수 없는 경우 검색된 위치를 보여주는 정보를 제공합니다.|  
-|**기호 설정...**|VS **옵션** 대화 상자의 **디버깅** \/ **기호** 페이지를 엽니다.|  
-|**항상 자동으로 로드**|기호 파일을 디버거에서 자동으로 로드되는 파일 목록에 추가합니다.|  
+|Option|Description|  
+|------------|-----------------|  
+|**Load Symbols**|Attempts to load symbols from locations specified on the **Debugging**/**Symbols** page of the **Options** dialog box. If the symbol file cannot be found, File Explorer is launched so that you can specify a new location to search.|  
+|**Symbol Load Information**|Presents information showing the location of a loaded symbol file, or the locations that were searched if the debugger cannot find the file.|  
+|**Symbol Settings...**|Opens the **Debugging**/**Symbols** page of the VS **Options** dialog box.|  
+|**Always Load Automatically**|Adds the symbol file to the list of files that are automatically loaded by the debugger.|  
   
-###  <a name="BKMK_Set_compiler_options_for_symbol_files"></a> 기호 파일에 대한 컴파일러 옵션 설정  
- VS IDE에서 프로젝트를 빌드하고 표준 **디버그** 빌드 구성을 사용하면, C\+\+ 및 관리되는 컴파일러에서 코드에 대한 적절한 기호 파일을 만듭니다. 또한 명령줄에 컴파일러 옵션을 설정하여 기호 파일을 만들 수도 있습니다.  
+###  <a name="BKMK_Set_compiler_options_for_symbol_files"></a> Set compiler options for symbol files  
+ When you build your project from the VS IDE and use the standard **Debug** build configuration, the C++ and managed compilers create the appropriate symbols files for your code. You can also set compiler options on the command line to create the symbol files.  
   
- **C\+\+ 옵션**  
+ **C++ options**  
   
- 프로그램 데이터베이스\(.pdb\) 파일에는 프로그램에 대한 디버그 구성의 증분 링크를 허용하는 디버깅 및 프로젝트 상태 정보가 저장됩니다. .pdb 파일은 [\/ZI 또는 \/Zi](/visual-cpp/build/reference/z7-zi-zi-debug-information-format)를 사용하여 빌드할 때 만들어집니다\(C\/C\+\+의 경우\).  
+ A program database (.pdb) file holds debugging and project state information that allows incremental linking of a Debug configuration of your program. A .pdb file is created when you build with [/ZI or /Zi](/cpp/build/reference/z7-zi-zi-debug-information-format) (for C/C++).  
   
- [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)]의 [\/Fd](/visual-cpp/build/reference/fd-program-database-file-name)는 컴파일러에서 만드는 .pdb 파일의 이름을 지정하는 옵션입니다. 마법사를 사용하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 프로젝트를 만드는 경우, 이름이 *project*.pdb인 .pdb 파일을 만들도록 **\/Fd** 옵션이 설정됩니다.  
+ In [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], the [/Fd](/cpp/build/reference/fd-program-database-file-name) option names the .pdb file created by the compiler. When you create a project in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] using wizards, the **/Fd** option is set to create a .pdb file named *project*.pdb.  
   
- 메이크파일을 사용하여 C\/C\+\+ 응용 프로그램을 빌드하는 경우, **\/Fd** 없이 **\/ZI** 또는 **\/Zi**를 지정하여 .pdb 파일 2개가 만들어집니다.  
+ If you build your C/C++ application using a makefile, and you specify **/ZI** or **/Zi** without **/Fd**, you end up with two .pdb files:  
   
--   VC*x*.pdb. 여기서 *x*는 Visual C\+\+의 버전을 나타냅니다\(예: VC11.pdb\). 이 파일에는 각 OBJ 파일에 대한 디버깅 정보가 모두 들어 있으며, 프로젝트 메이크파일과 동일한 디렉터리에 저장됩니다.  
+-   VC*x*.pdb, where *x* represents the version of Visual C++, for example VC11.pdb. This file stores all debugging information for the individual OBJ files and resides in the same directory as the project makefile.  
   
--   project.pdb. 이 파일에는 .exe 파일에 대한 디버그 정보가 모두 저장됩니다. C\/C\+\+의 경우에는 \\debug 하위 디렉터리에 이 파일이 저장됩니다.  
+-   project.pdb   This file stores all debug information for the.exe file. For C/C++, it resides in the \debug subdirectory.  
   
- C\/C\+\+ 컴파일러는 OBJ 파일을 만들 때마다 VC*x*.pdb에 디버그 정보를 병합합니다. 삽입되는 정보에는 유형 정보가 포함되지만 함수 정의와 같은 기호 정보는 포함되지 않습니다. 따라서 \<windows.h\>와 같은 공통 헤더 파일은 모든 소스 파일에 포함되지만, 해당 헤더의 typedef는 모든 OBJ 파일에 포함되지 않고 한 번만 저장됩니다.  
+ Each time it creates an OBJ file, the C/C++ compiler merges debug information into VC*x*.pdb. The inserted information includes type information but does not include symbol information such as function definitions. So even if every source file includes common header files such as \<windows.h>, the typedefs from those headers are stored only once, rather than being in every OBJ file.  
   
- 링커는 프로젝트의 EXE 파일에 대한 디버그 정보가 포함된 project.pdb를 만듭니다. project.pdb 파일에는 VC*x*.pdb에 있는 형식 정보뿐만 아니라 함수 프로토타입을 비롯한 전체 디버그 정보가 포함됩니다. 두 .pdb 파일 모두 증분 업데이트가 가능합니다. 링커에서는 작성되는 .exe 파일이나 .dll 파일에 .pdb 파일의 경로도 포함합니다.  
+ The linker creates project.pdb, which contains debug information for the project's EXE file. The project.pdb file contains full debug information, including function prototypes, not just the type information found in VC*x*.pdb. Both .pdb files allow incremental updates. The linker also embeds the path to the .pdb file in the .exe or .dll file that it creates.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 디버거는 project.pdb 파일을 찾기 위해 EXE 또는 DLL 파일에서 .pdb 파일의 경로를 사용합니다. 디버거가 해당 위치에서 .pdb 파일을 찾지 못하거나 프로젝트를 다른 컴퓨터로 옮긴 경우와 같이 경로가 올바르지 않은 경우, 디버거는 EXE가 포함된 경로를 검색한 다음 **옵션** 대화 상자\(**기호** 노드의 **디버깅** 폴더\)에 지정된 기호 경로를 검색합니다. 디버거는 디버깅 중인 실행 파일과 일치하지 않는 .pdb 파일은 로드하지 않습니다. 디버거가 .pdb 파일을 찾지 못하면 기호를 검색하거나 검색 경로에 위치를 더 추가할 수 있는 **기호 찾기** 대화 상자가 나타납니다.  
+ The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger uses the path to the .pdb file in the EXE or DLL file to find the project.pdb file. If the debugger cannot find the .pdb file at that location or if the path is invalid (for example, if the project was moved to another computer), the debugger searches the path containing the EXE, the symbol paths specified in the **Options** dialog box (**Debugging** folder, **Symbols** node). The debugger will not load a .pdb file that does not match the executable being debugged. If the debugger cannot find a .pdb file, a **Find Symbols** dialog box appears, which allows you to search for symbols or to add additional locations to the search path.  
   
- **.NET Framework 옵션**  
+ **.NET Framework options**  
   
- 프로그램 데이터베이스\(.pdb\) 파일에는 프로그램에 대한 디버그 구성의 증분 링크를 허용하는 디버깅 및 프로젝트 상태 정보가 저장됩니다. .pdb 파일은 **\/debug**로 빌드하는 경우 만들어집니다.**\/debug:full** 또는 **\/debug:pdbonly**를 사용하여 응용 프로그램을 빌드할 수 있습니다.**\/debug:full**을 사용하여 빌드하면 디버깅 가능한 코드가 생성됩니다.**\/debug:pdbonly**를 사용하여 빌드하면 .pdb 파일이 생성되지만 디버그 정보를 사용할 수 있다는 사실을 JIT 컴파일러에 알리는 `DebuggableAttribute`는 생성되지 않습니다. 디버깅할 수 없도록 하려는 릴리스 빌드에 대해 .pdb 파일을 생성하려면 **\/debug:pdbonly**를 사용합니다. 자세한 내용은 [\/debug \(Emit Debugging Information\)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option) 또는 [\/debug](/dotnet/visual-basic/reference/command-line-compiler/debug)를 참조하세요.  
+ A program database (.pdb) file holds debugging and project state information that allows incremental linking of a debug configuration of your program. A .pdb file is created when you build with **/debug**. You can build applications with **/debug:full** or **/debug:pdbonly**. Building with **/debug:full** generates debuggable code. Building with **/debug:pdbonly** generates .pdb files but does not generate the `DebuggableAttribute` that tells the JIT compiler that debug information is available. Use **/debug:pdbonly** if you want to generate .pdb files for a release build that you do not want to be debuggable. For more information, see [/debug (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option) or [/debug (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/debug).  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 디버거는 project.pdb 파일을 찾기 위해 EXE 또는 DLL 파일에서 .pdb 파일의 경로를 사용합니다. 디버거가 해당 위치에서 .pdb 파일을 찾을 수 없거나 경로가 올바르지 않은 경우, 디버거는 EXE가 포함된 경로를 검색한 다음 **옵션** 대화 상자에 지정된 기호 경로를 검색합니다. 이 경로는 일반적으로 **기호** 노드의 **디버깅** 폴더입니다. 디버거는 디버깅 중인 실행 파일과 일치하지 않는 .pdb 파일은 로드하지 않습니다. 디버거가 .pdb 파일을 찾지 못하면 기호를 검색하거나 검색 경로에 위치를 더 추가할 수 있는 **기호 찾기** 대화 상자가 나타납니다.  
+ The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger uses the path to the .pdb file in the EXE or DLL file to find the project.pdb file. If the debugger cannot find the .pdb file at that location, or if the path is invalid, the debugger searches the path containing the EXE, and then the symbol paths specified in the **Options** dialog box. This path is generally the **Debugging** folder in the **Symbols** node. The debugger will not load a .pdb file that does not match the executable file being debugged. If the debugger cannot find a .pdb file, a **Find Symbols** dialog box appears, which allows you to search for symbols or to add additional locations to the search path.  
   
- **웹 응용 프로그램**  
+ **Web applications**  
   
- 응용 프로그램의 구성 파일\(Web.config\)이 디버그 모드로 설정되어 있어야 합니다. 디버그 모드에서는 동적으로 생성된 파일에 대한 기호가 ASP.NET에서 생성되며 디버거가 ASP.NET 응용 프로그램에 연결될 수 있습니다. 웹 프로젝트 템플릿에서 프로젝트를 만든 경우 디버깅을 시작하면 VS가 이를 자동으로 설정합니다.  
+ The configuration file of your application (Web.config) must be set to debug mode. Debug mode causes ASP.NET to generate symbols for dynamically generated files and enables the debugger to attach to the ASP.NET application. Visual Studio sets this automatically when you start to debug, if you created your project from the Web projects template.  
   
-##  <a name="BKMK_Find_source_files"></a> 소스 파일 찾기  
+##  <a name="BKMK_Find_source_files"></a> Find source files  
   
-###  <a name="BKMK_Where_the_debugger_searches_for_source_files"></a> 디버거에서 소스 파일을 검색하는 위치  
- 디버거는 다음 위치에서 소스 파일을 찾습니다.  
+###  <a name="BKMK_Where_the_debugger_searches_for_source_files"></a> Where the debugger searches for source files  
+ The debugger looks for source files in the following locations:  
   
-1.  디버거를 시작한 Visual Studio 인스턴스의 IDE에 열려 있는 파일  
+1.  Files that are open in the IDE of the Visual Studio instance that launched the debugger.  
   
-2.  Visual Studio 인스턴스에 열려 있는 솔루션의 파일  
+2.  Files in the solution that is open in the Visual Studio instance.  
   
-3.  솔루션의 속성에서 **공용 속성** \/ **소스 파일 디버그** 페이지에 지정된 디렉터리 \( **솔루션 탐색기** 에서 솔루션 노드를 선택하고, 마우스 오른쪽 단추를 클릭하고, **속성**을 선택합니다. \)  
+3.  Directories that are specified in the **Common Properties**/**Debug Source Files** page in the properties of the solution. (In the **Solution Explorer**, select the solution node, right-click, and select **Properties**. )  
   
-4.  모듈의 .pdb에 대한 소스 정보. 모듈이 빌드된 경우 소스 파일의 위치이거나, 소스 서버에 대한 명령일 수 있습니다.  
+4.  The source information of the .pdb of the module. This can be the location of the source file when the module was built, or it can be a command to a source server.  
   
-###  <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a> 로드된 소스 없음\/로드된 기호 없음 페이지를 사용하여 소스 파일 찾기 및 로드  
- 소스 파일을 사용할 수 없는 위치에서 디버거가 실행을 중단하면 소스 파일을 찾는 데 유용할 수 있는 **로드된 소스 없음** 또는 **로드된 기호 없음** 페이지가 표시됩니다. 디버거에서 실행 파일에 대한 기호\(.pdb\) 파일을 찾아 검색을 완료할 수 없는 경우 **로드된 기호 없음**이 표시됩니다. 로드된 기호 없음 페이지는 파일을 검색하는 옵션을 제공합니다. 옵션 중 하나를 실행한 후 .pdb가 발견되고 디버거가 기호 파일에 있는 정보를 사용하여 소스 파일을 검색할 수 있는 경우 소스가 표시됩니다. 그렇지 않은 경우에는 문제를 설명하는 **로드된 소스 없음** 페이지가 나타납니다. 이 페이지에는 문제를 해결할 수 있는 작업을 수행할 수 있는 옵션 링크가 표시됩니다.  
+###  <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a> Find and load source files with the No Source/No Symbols Loaded pages  
+ When the debugger breaks execution at a location where the source file is not available, it will display the **No Source Loaded** or **No Symbols Loaded** pages that can help you find the source file. The **No Symbols Loaded** appears when the debugger cannot find a symbol (.pdb) file for the executable file to complete its search. The No Symbols page provides options to search for the file. If the .pdb is found of after you execute one of the options and the debugger can retrieve the source file using the information in the symbols file, the source is displayed. Otherwise, a **No Source Loaded** page appears that describes the issue. The page displays option links that can perform actions that might resolve the issue.  
   
-###  <a name="BKMK_Add_source_file_search_paths_to_a_solution"></a> 솔루션에 소스 파일 검색 경로 추가  
- 소스 파일을 검색할 네트워크 또는 로컬 디렉터리를 지정할 수 있습니다.  
+###  <a name="BKMK_Add_source_file_search_paths_to_a_solution"></a> Add source file search paths to a solution  
+ You can specify a network or local directories to search for source files.  
   
-1.  솔루션 탐색기에서 솔루션을 선택한 후 바로 가기 메뉴에서 **속성**을 선택합니다.  
+1.  Select the solution in Solution Explorer and then choose **Properties** from the shortcut menu.  
   
-2.  **공용 속성** 노드에서 **소스 파일 디버그**를 선택합니다.  
+2.  Under the **Common Properties** node, choose **Debug Source Files**.  
   
-3.  폴더 ![도구&#47; 옵션&#47; 디버깅&#47;기호 폴더 아이콘](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") 아이콘을 클릭합니다. 편집 가능한 텍스트가 **소스 코드가 포함되어 있는 디렉터리** 목록에 나타납니다.  
+3.  Click the folder ![Tools&#47; Options&#47; Debugging&#47;Symbols  folder icon](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon") icon. Editable text appears in the **Directories containing source code** list.  
   
-4.  검색할 경로를 추가합니다.  
+4.  Add the path that you want to search.  
   
- 지정된 디렉터리만 검색됩니다. 검색하려는 하위 디렉터리에 대한 항목을 추가해야 합니다.  
+ Note that only the specified directory is searched. You must add entries for any subdirectories that you want to search.  
   
-###  <a name="BKMK_Use_source_servers"></a> 소스 서버 사용  
- 로컬 컴퓨터에 소스 코드가 없거나 .pdb 파일이 소스 코드와 일치하지 않는 경우 소스 서버를 사용하여 응용 프로그램을 디버깅할 수 있습니다. 소스 서버에서는 파일에 대한 요청을 전달받고 실제 파일을 반환합니다. 소스 서버를 실행하는 데는 srcsrv.dll이라는 DLL 파일이 사용됩니다. 소스 서버는 응용 프로그램의 .pdb 파일을 읽습니다. 이 PDB 파일에는 소스 코드 리포지토리에 대한 포인터와 리포지토리에서 소스 코드를 검색하는 데 사용되는 명령이 포함되어 있습니다. srcsrv.ini라는 파일 내에 허용되는 명령의 목록을 지정하여 응용 프로그램의 .pdb 파일에서 실행할 수 있는 명령을 제한할 수 있습니다. 이 파일은 srcsrv.dll 및 devenv.exe와 동일한 디렉터리에 있어야 합니다.  
+###  <a name="BKMK_Use_source_servers"></a> Use source servers  
+ When there is no source code on the local machine or the .pdb file does not match the source code, you can use Source Server to help debug an application. Source Server takes requests for files and returns the actual files. Source Server runs by means of a DLL file named srcsrv.dll. Source Server reads the application's .pdb file, which contains pointers to the source code repository, as well as commands used to retrieve source code from the repository. You can limit what commands are allowed to be executed from the application's .pdb file by listing the allowed commands inside a file named srcsrv.ini, which must be placed in the same directory as srcsrv.dll and devenv.exe.  
   
 > [!IMPORTANT]
->  임의의 명령이 응용 프로그램의 .pdb 파일에 포함될 수 있으므로 실행하려는 명령만 srcsrv.ini 파일에 삽입해야 합니다. srcsvr.ini 파일에 포함되지 않은 명령을 실행하려고 하면 확인 대화 상자가 나타납니다. 자세한 내용은 [보안 경고: 디버거가 신뢰할 수 없는 명령을 실행해야 합니다.](../debugger/security-warning-debugger-must-execute-untrusted-command.md)을 참조하세요. 명령 매개 변수에 대해서는 유효성 검사를 수행하지 않으므로 신뢰되는 명령에 대해 주의를 기울여야 합니다. 예를 들어 cmd.exe를 신뢰한 경우 악의적인 사용자가 이 명령을 위험하게 만드는 매개 변수를 지정할 수도 있습니다.  
+>  Arbitrary commands can be embedded in the application's .pdb file, so make sure you put only the ones you want to execute in the srcsrv.ini file. Any attempt to execute a command not in the srcsvr.ini file will cause a confirmation dialog box to appear. For more information, see [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md). No validation is done on command parameters, so be careful with trusted commands. For example, if you trusted cmd.exe, a malicious user might specify parameters that would make the command dangerous.  
   
- **소스 서버를 사용하도록 설정하려면**  
+ **To enable the use of a Source Server**  
   
-1.  이전 단원에서 설명한 보안 지침에 따라 컴파일했는지 확인합니다.  
+1.  Ensure that you have complied with the security measures described in the previous section.  
   
-2.  **도구** 메뉴에서 **옵션**을 선택합니다.  
+2.  On the **Tools** menu, choose **Options**.  
   
-     **옵션** 대화 상자가 표시됩니다.  
+     The **Options** dialog box appears.  
   
-3.  **디버깅** 노드에서 **일반**을 선택합니다.  
+3.  In the **Debugging** node, choose **General**.  
   
-4.  **소스 서버 지원 사용** 확인란을 선택합니다.  
+4.  Select the **Enable source server support** check box.  
   
-     ![원본 서버 옵션 사용](../debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG\_Options\_General\_EnableSrcSrvr\_checkbox")  
+     ![Enable source server options](../debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG_Options_General_EnableSrcSrvr_checkbox")  
   
-5.  \(선택 사항\) 원하는 자식 옵션을 선택합니다.  
+5.  (Optional) Choose the child options that you want.  
   
-     **부분 트러스트 어셈블리에 대한 소스 서버 허용\(관리만 해당\)** 및 **항상 묻지 않고 신뢰하지 않는 소스 서버 명령 실행**은 위에서 설명한 보안 위험을 증가시킬 수 있습니다.  
+     Note that both **Allow source server for partial trust assemblies (Managed only)** and **Always run untrusted source server commands without prompting** can increase the security risks discussed above.  
   
-## 참고 항목  
- [Visual Studio 2012 및 2013의 .NET 원격 기호 로드 변경 내용](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)
+## <a name="see-also"></a>See Also  
+[Understanding Symbol Files and Visual Studio Symbol Settings](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/)
+
+[.NET Remote Symbol Loading Changes in Visual Studio 2012 and 2013](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)

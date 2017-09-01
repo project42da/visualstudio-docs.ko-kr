@@ -1,5 +1,5 @@
 ---
-title: "스토어 앱의 Visual C# 코드 유닛 테스트 | Microsoft Docs"
+title: Unit testing Visual C# code in a Store app | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,60 +26,61 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: dcb028c04558e4795297f5704102068c84d1d532
-ms.lasthandoff: 04/04/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 768dd5253edac137c50ced5bf524bcc1fdd7f6da
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="unit-testing-visual-c-code-in-a-store-app"></a>스토어 앱의 Visual C# 코드 유닛 테스트
-이 항목에서는 Windows 스토어 앱에서 Visual C# 클래스에 대한 단위 테스트를 만드는 한 가지 방법에 대해 설명합니다. Rooter 클래스는 지정된 숫자의 제곱근 예상 값을 계산하는 함수를 구현하여 미적분법의 극한 이론을 보여 줍니다. Maths 응용 프로그램은 이 함수를 사용하여 수학으로 할 수 있는 재미있는 작업을 사용자에게 보여 줄 수 있습니다.  
+# <a name="unit-testing-visual-c-code-in-a-store-app"></a>Unit testing Visual C# code in a Store app
+This topic describes one way to create unit tests for a Visual C# class in a Windows Store app. The Rooter class demonstrates vague memories of limit theory from calculus by implementing a function that calculates an estimate of the square root of a given number. The Maths app can then use this function to show a user the fun things that can be done with math.  
   
- 이 항목에서는 개발의 첫 단계로 단위 테스트를 사용하는 방법을 보여 줍니다. 이 방법에서는 먼저 테스트하고 있는 시스템에서 특정 동작을 확인하는 테스트 메서드를 작성한 다음 테스트를 통과하는 코드를 작성합니다. 다음 절차의 순서를 변경함으로써 이 전략을 반대로 적용하여 먼저 테스트할 코드를 작성한 다음 단위 테스트를 작성할 수 있습니다.  
+ This topic demonstrates how to use unit testing as the first step in development. In this approach, you first write a test method that verifies a specific behavior in the system that you are testing and then you write the code that passes the test. By making changes in the order of the following procedures, you can reverse this strategy to first write the code that you want to test and then write the unit tests.  
   
- 또한 이 항목에서는 단일 Visual Studio 솔루션과 테스트할 DLL 및 단위 테스트에 대한 별도의 프로젝트를 만듭니다. DLL 프로젝트에 직접 단위 테스트를 포함하거나 단위 테스트 및 DLL에 대한 별도의 솔루션을 만들 수도 있습니다.  
+ This topic also creates a single Visual Studio solution and separate projects for the unit tests and the DLL that you want to test. You can also include the unit tests directly in the DLL project, or you can create separate solutions for the unit tests and the DLL.  
   
 > [!NOTE]
->  Visual Studio Community, Enterprise 및 Professional에서는 단위 테스트를 위한 추가 기능을 제공합니다.  
+>  Visual Studio Community, Enterprise. and Professional provide additional features for unit testing.  
 >   
->  -   Microsoft 테스트 탐색기에 대한 추가 어댑터를 만든 타사 및 오픈 소스 단위 테스트 프레임워크를 사용합니다. 또한 테스트에 대한 코드 검사 정보를 분석하고 표시할 수도 있습니다.  
-> -   빌드할 때마다 빌드 후 테스트를 실행합니다.  
-> -   VS Enterprise에는 관리 코드에 대한 격리 프레임워크인 Microsoft Fakes도 포함되어 있습니다. Microsoft Fakes는 시스템 및 타사 기능을 테스트 코드로 대체하여 자체 코드에 대한 테스트에 집중하는 데 도움이 됩니다.  
+>  -   Use any third-party and open source unit test framework that has created an add-on adapter for the Microsoft Test Explorer. You can also analyze and display code coverage information for the tests.  
+> -   Run your tests after every build.  
+> -   VS Enterprise also contains Microsoft Fakes, an isolation framework for managed code that helps you to focus your tests on your own code by substituting test code for system and third-party functionality.  
 >   
->  자세한 내용은 MSDN 라이브러리의 [단위 테스트를 사용하여 코드 확인](http://msdn.microsoft.com/library/dd264975.aspx)을 참조하세요.  
+>  For more information, see [Verifying Code by Using Unit Tests](http://msdn.microsoft.com/library/dd264975.aspx) in the MSDN Library.  
   
-##  <a name="BKMK_In_this_topic"></a> 항목 내용  
- [솔루션 및 단위 테스트 프로젝트 만들기](#BKMK_Create_the_solution_and_the_unit_test_project)  
+##  <a name="BKMK_In_this_topic"></a> In this topic  
+ [Create the solution and the unit test project](#BKMK_Create_the_solution_and_the_unit_test_project)  
   
- [테스트 탐색기에서 테스트가 실행되는지 확인](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)  
+ [Verify that the tests run in Test Explorer](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)  
   
- [Maths 프로젝트에 Rooter 클래스 추가](#BKMK_Add_the_Rooter_class_to_the_Maths_project)  
+ [Add the Rooter class to the Maths project](#BKMK_Add_the_Rooter_class_to_the_Maths_project)  
   
- [응용 프로그램 프로젝트에 테스트 프로젝트 연결](#BKMK_Couple_the_test_project_to_the_app_project)  
+ [Couple the test project to the app project](#BKMK_Couple_the_test_project_to_the_app_project)  
   
- [반복적으로 테스트를 확장하고 통과하도록 만들기](#BKMK_Iteratively_augment_the_tests_and_make_them_pass)  
+ [Iteratively augment the tests and make them pass](#BKMK_Iteratively_augment_the_tests_and_make_them_pass)  
   
- [실패한 테스트 디버그](#BKMK_Debug_a_failing_test)  
+ [Debug a failing test](#BKMK_Debug_a_failing_test)  
   
- [코드 리팩터링](#BKMK_Refactor_the_code_)  
+ [Refactor the code](#BKMK_Refactor_the_code_)  
   
-##  <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> 솔루션 및 단위 테스트 프로젝트 만들기  
+##  <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> Create the solution and the unit test project  
   
-1.  **파일** 메뉴에서 **새로 만들기**를 선택하고 **새 프로젝트**를 선택합니다.  
+1.  On the **File** menu, choose **New**, and then choose **New Project**.  
   
-2.  **새 프로젝트** 대화 상자에서 **설치됨** 및 **Visual C#**를 확장하고 **Windows 스토어**를 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **새 응용 프로그램**을 선택합니다.  
+2.  In the **New Project** dialog box, expand **Installed**, then expand **Visual C#** and choose **Windows Store**. Then choose **Blank App** from the list of project templates.  
   
-3.  프로젝트의 이름을 `Maths`로 지정하고 **솔루션용 디렉터리 만들기**가 선택되어 있는지 확인합니다.  
+3.  Name the project `Maths` and make sure **Create directory for solution** is selected.  
   
-4.  솔루션 탐색기에서 솔루션 이름을 선택하고 바로 가기 메뉴에서 **추가**를 선택한 다음 **새 프로젝트**를 선택합니다.  
+4.  In Solution Explorer, choose the solution name, choose **Add** from the shortcut menu, and then choose **New Project**.  
   
-5.  **새 프로젝트** 대화 상자에서 **설치됨** 및 **Visual C#**을 확장하고 **Windows 스토어**를 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **단위 테스트 라이브러리(Windows 스토어 앱)**를 선택합니다.  
+5.  In the **New Project** dialog box, expand **Installed**, then expand **Visual C#** and choose **Windows Store** . Then choose **Unit Test Library (Windows Store apps)** from the list of project templates.  
   
-     ![단위 테스트 프로젝트 만들기](../test/media/ute_cs_windows_createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")  
+     ![Create the unit test project](../test/media/ute_cs_windows_createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")  
   
-6.  Visual Studio 편집기에서 UnitTest1.cs를 엽니다.  
+6.  Open UnitTest1.cs in the Visual Studio editor.  
   
-    ```c#  
+    ```csharp  
   
     using System;  
     using System.Collections.Generic;  
@@ -101,21 +102,21 @@ ms.lasthandoff: 04/04/2017
   
     ```  
   
-     다음 사항에 유의합니다.  
+     Note that:  
   
-    1.  각 테스트는 `[TestMethod]`를 사용하여 정의됩니다. 테스트 메서드는 void를 반환해야 하고 매개 변수를 사용할 수 없습니다.  
+    1.  Each test is defined by using the `[TestMethod]`. A test method must return void and can't have any parameters.  
   
-    2.  테스트 메서드는 `[TestClass]` 특성으로 데코레이팅된 클래스에 있어야 합니다.  
+    2.  Test methods must be in a class decorated with the `[TestClass]` attribute.  
   
-         테스트가 실행될 때 각 테스트 클래스의 인스턴스가 만들어집니다. 테스트 메서드는 지정되지 않은 순서로 호출됩니다.  
+         When the tests are run, an instance of each test class is created. The test methods are called in an unspecified order.  
   
-    3.  각 모듈, 클래스 또는 메서드의 전/후에 호출되는 특별한 메서드를 정의할 수 있습니다. 자세한 내용은 MSDN 라이브러리의 [단위 테스트에서 Microsoft.VisualStudio.TestTools.UnitTesting 멤버 사용](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)을 참조하세요.  
+    3.  You can define special methods that are invoked before and after each module, class, or method. For more information, see [Using Microsoft.VisualStudio.TestTools.UnitTesting Members in Unit Tests](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md) in the MSDN Library.  
   
-##  <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> 테스트 탐색기에서 테스트가 실행되는지 확인  
+##  <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> Verify that the tests run in Test Explorer  
   
-1.  **UnitTest1.cs** 파일의 `TestMethod1`에 테스트 코드를 삽입합니다.  
+1.  Insert some test code in `TestMethod1` of the **UnitTest1.cs** file:  
   
-    ```c#  
+    ```csharp  
   
     [TestMethod]  
     public void TestMethod1()  
@@ -125,23 +126,23 @@ ms.lasthandoff: 04/04/2017
   
     ```  
   
-     `Assert` 클래스는 테스트 메서드의 결과를 확인하는 데 사용할 수 있는 몇 가지 정적 메서드를 제공합니다.  
+     Notice that the `Assert` class provides several static methods that you can use to verify results in test methods.  
   
-2.  **테스트** 메뉴에서 **실행**을 선택하고 **모두 실행**을 선택합니다.  
+2.  On the **Test** menu, choose **Run** and then choose **Run All**.  
   
-     테스트 프로젝트가 빌드되고 실행됩니다. 테스트 탐색기 창이 나타나고 테스트가 **통과한 테스트** 아래에 나열됩니다. 창의 아래쪽에 있는 요약 창은 선택된 테스트에 대한 추가 정보를 제공합니다.  
+     The test project builds and runs. The Test Explorer window appears, and the test is listed under **Passed Tests**. The Summary pane at the bottom of the window provides additional details about the selected test.  
   
-     ![테스트 탐색기](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
+     ![Test Explorer](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
   
-##  <a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a> Maths 프로젝트에 Rooter 클래스 추가  
+##  <a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a> Add the Rooter class to the Maths project  
   
-1.  솔루션 탐색기에서 **Maths** 프로젝트 이름을 선택합니다. 바로 가기 메뉴에서 **추가**를 선택한 다음 **클래스**를 선택합니다.  
+1.  In Solution Explorer, choose the **Maths** project name. From the shortcut menu, choose **Add**, and then **Class**.  
   
-2.  클래스 파일의 이름을 `Rooter.cs`로 지정합니다.  
+2.  Name the class file `Rooter.cs`  
   
-3.  다음 코드를 Rooter 클래스 **Rooter.cs** 파일에 추가합니다.  
+3.  Add the following code to the Rooter class **Rooter.cs** file:  
   
-    ```c#  
+    ```csharp  
   
     public Rooter()  
     {  
@@ -155,33 +156,33 @@ ms.lasthandoff: 04/04/2017
   
     ```  
   
-     `Rooter` 클래스는 생성자와 `SqareRoot` 평가자 메서드를 선언합니다.  
+     The `Rooter` class declares a constructor and the `SqareRoot` estimator method.  
   
-4.  `SqareRoot` 메서드는 테스트 설정의 기본 구조를 테스트할 정도의 최소 구현일 뿐입니다.  
+4.  The `SqareRoot` method is only a minimal implementation, just enough to test the basic structure of the testing setup.  
   
-##  <a name="BKMK_Couple_the_test_project_to_the_app_project"></a> 응용 프로그램 프로젝트에 테스트 프로젝트 연결  
+##  <a name="BKMK_Couple_the_test_project_to_the_app_project"></a> Couple the test project to the app project  
   
-1.  Maths 응용 프로그램에 대한 참조를 RooterTests 프로젝트에 추가합니다.  
+1.  Add a reference to the Maths app to the RooterTests project.  
   
-    1.  솔루션 탐색기에서 **RooterTests** 프로젝트를 선택한 다음 바로 가기 메뉴에서 **참조 추가...**를 선택합니다.  
+    1.  In Solution Explorer, choose the **RooterTests** project and then choose **Add Reference...** on the shortcut menu.  
   
-    2.  **참조 추가 - RooterTests** 대화 상자에서 **솔루션**을 확장하고 **프로젝트**를 선택한 다음 **Maths** 항목을 선택합니다.  
+    2.  On the **Add Reference - RooterTests** dialog box, expand **Solution** and choose **Projects**. Then select the **Maths** item.  
   
-         ![Maths 프로젝트에 참조 추가](../test/media/ute_cs_windows_addreference.png "UTE_Cs_windows_AddReference")  
+         ![Add a reference to the Maths project](../test/media/ute_cs_windows_addreference.png "UTE_Cs_windows_AddReference")  
   
-2.  using 문을 UnitTest1.cs 파일에 추가합니다.  
+2.  Add a using statement to the UnitTest1.cs file:  
   
-    1.  **UnitTest1.cs**를 엽니다.  
+    1.  Open **UnitTest1.cs**.  
   
-    2.  `using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;` 줄 아래에 다음 코드를 추가합니다.  
+    2.  Add this code below the `using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;` line:  
   
-        ```c#  
+        ```csharp  
         using Maths;  
         ```  
   
-3.  Rooter 함수를 사용하는 테스트를 추가합니다. **UnitTest1.cpp**에 다음 코드를 추가합니다.  
+3.  Add a test that uses the Rooter function. Add the following code to **UnitTest1.cpp**:  
   
-    ```c#  
+    ```csharp  
     [TestMethod]  
     public void BasicTest()  
     {  
@@ -194,21 +195,21 @@ ms.lasthandoff: 04/04/2017
   
     ```  
   
-4.  솔루션을 빌드합니다.  
+4.  Build the solution.  
   
-     새 테스트가 테스트 탐색기의 **실행하지 않은 테스트** 노드에 표시됩니다.  
+     The new test appears in Test Explorer in the **Not Run Tests** node.  
   
-5.  테스트 탐색기에서 **모두 실행**을 선택합니다.  
+5.  In Test Explorer, choose **Run All**.  
   
-     ![기본 테스트 통과](../test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
+     ![Basic Test passed](../test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
   
- 테스트 및 코드 프로젝트를 설정하고 코드 프로젝트에서 함수를 실행하는 테스트를 실행할 수 있는지 확인했습니다. 이제 실제 테스트 및 코드 작성을 시작할 수 있습니다.  
+ You have set up the test and the code projects, and verified that you can run tests that run functions in the code project. Now you can begin to write real tests and code.  
   
-##  <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> 반복적으로 테스트를 확장하고 통과하도록 만들기  
+##  <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> Iteratively augment the tests and make them pass  
   
-1.  새 테스트 추가:  
+1.  Add a new test:  
   
-    ```c#  
+    ```csharp  
     [TestMethod]  
     public void RangeTest()  
     {  
@@ -225,22 +226,22 @@ ms.lasthandoff: 04/04/2017
     ```  
   
     > [!TIP]
-    >  통과된 테스트는 변경하지 않는 것이 좋습니다. 대신, 새 테스트를 추가하고, 테스트가 통과하도록 코드를 업데이트하고, 다시 다른 테스트를 추가하는 방식을 반복합니다.  
+    >  We recommend that you do not change tests that have passed. Instead, add a new test, update the code so that the test passes, and then add another test, and so on.  
     >   
-    >  사용자가 요구 사항을 변경할 경우, 더 이상 올바르지 않은 테스트는 비활성화합니다. 새 테스트를 작성하고, 동일한 증분 방식으로 한 번에 하나씩 작동합니다.  
+    >  When your users change their requirements, disable the tests that are no longer correct. Write new tests and make them work one at a time, in the same incremental manner.  
   
-2.  테스트 탐색기에서 **모두 실행**을 선택합니다.  
+2.  In Test Explorer, choose **Run All**.  
   
-3.  테스트가 실패합니다.  
+3.  The test fails.  
   
-     ![RangeTest 실패](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
+     ![The RangeTest fails](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
   
     > [!TIP]
-    >  테스트를 작성한 후 즉시 각 테스트가 실패하는지 확인합니다. 이렇게 하면 결코 실패하지 않는 테스트를 작성하게 되는 간단한 실수를 방지하는 데 도움이 됩니다.  
+    >  Immediately after you have written it, verify that each test fails. This helps you avoid the easy mistake of writing a test that never fails.  
   
-4.  새 테스트가 통과하도록 테스트 중인 코드를 개선합니다. **Rooter.cs**에서 `SqareRoot` 함수를 다음과 같이 변경합니다.  
+4.  Enhance the code under test so that the new test passes. Change the `SqareRoot` function in **Rooter.cs** to this:  
   
-    ```c#  
+    ```csharp  
     public double SquareRoot(double x)  
     {  
         double estimate = x;  
@@ -256,18 +257,18 @@ ms.lasthandoff: 04/04/2017
   
     ```  
   
-5.  솔루션을 빌드한 다음 테스트 탐색기에서 **모두 실행**을 선택합니다.  
+5.  Build the solution and then in Test Explorer, choose **Run All**.  
   
-     이제 세 테스트가 모두 통과합니다.  
+     All three tests now pass.  
   
 > [!TIP]
->  한 번에 하나씩 테스트를 추가하여 코드를 개발합니다. 각 반복 후 모든 테스트가 통과하는지 확인합니다.  
+>  Develop code by adding tests one at a time. Make sure that all the tests pass after each iteration.  
   
-##  <a name="BKMK_Debug_a_failing_test"></a> 실패한 테스트 디버그  
+##  <a name="BKMK_Debug_a_failing_test"></a> Debug a failing test  
   
-1.  **UnitTest1.cs**  
+1.  Add another test to **UnitTest1.cs**:  
   
-    ```c#  
+    ```csharp  
     // Verify that negative inputs throw an exception.  
     [TestMethod]  
     public void NegativeRangeTest()  
@@ -298,23 +299,23 @@ ms.lasthandoff: 04/04/2017
   
     ```  
   
-2.  테스트 탐색기에서 **모두 실행**을 선택합니다.  
+2.  In Test Explorer, choose **Run All**.  
   
-     테스트가 실패합니다. 테스트 탐색기에서 테스트 이름을 선택합니다. 실패한 어설션이 강조 표시됩니다. 오류 메시지는 테스트 탐색기의 세부 정보 창에 표시됩니다.  
+     The test fails. Choose the test name in Test Explorer. The failed assertion is highlighted. The failure message is visible in the detail pane of Test Explorer.  
   
-     ![NegativeRangeTest 실패](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
+     ![NegativeRangeTests failed](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
   
-3.  테스트가 실패한 이유를 확인하려면 함수를 단계별로 실행합니다.  
+3.  To see why the test fails, step through the function:  
   
-    1.  `SquareRoot` 함수의 시작 부분에 중단점을 설정합니다.  
+    1.  Set a breakpoint at the start of the `SquareRoot` function.  
   
-    2.  실패한 테스트의 바로 가기 메뉴에서 **선택한 테스트 디버그**를 선택합니다.  
+    2.  On the shortcut menu of the failed test, choose **Debug Selected Tests**.  
   
-         중단점에서 실행이 중지되면 코드를 단계별로 실행합니다.  
+         When the run stops at the breakpoint, step through the code.  
   
-    3.  예외를 catch하기 위해 코드를 Rooter 메서드에 추가합니다.  
+    3.  Add code to the Rooter method to catch the exception:  
   
-        ```c#  
+        ```csharp  
         public double SquareRoot(double x)  
         {  
             if (x < 0.0)  
@@ -324,18 +325,18 @@ ms.lasthandoff: 04/04/2017
   
         ```  
   
-    1.  테스트 탐색기에서 **모두 실행**을 선택하여 수정된 메서드를 테스트하고 실패가 재발하지 않는지 확인합니다.  
+    1.  In Test Explorer, choose **Run All** to test the corrected method and make sure that you haven't introduced a regression.  
   
- 이제 모든 테스트가 통과합니다.  
+ All tests now pass.  
   
- ![모든 테스트 통과](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
+ ![All tests pass](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
   
-##  <a name="BKMK_Refactor_the_code_"></a> 코드 리팩터링  
- **SquareRoot 함수에서 중앙 계산을 간소화합니다.**  
+##  <a name="BKMK_Refactor_the_code_"></a> Refactor the code  
+ **Simplify the central calculation in the SquareRoot function.**  
   
-1.  결과 구현을 변경합니다.  
+1.  Change the result implementation  
   
-    ```c#  
+    ```csharp  
     // old code  
     //result = result - (result*result - v)/(2*result);  
     // new code  
@@ -343,18 +344,18 @@ ms.lasthandoff: 04/04/2017
   
     ```  
   
-2.  **모두 실행**을 선택하여 리팩터링된 메서드를 테스트하고 실패가 재발하지 않는지 확인합니다.  
+2.  Choose **Run All** to test the refactored method and make sure that you haven't introduced a regression.  
   
 > [!TIP]
->  훌륭한 단위 테스트의 안정적인 집합은 코드를 변경할 때 버그를 만들지 않았다는 확신을 줍니다.  
+>  A stable set of good unit tests gives confidence that you have not introduced bugs when you change the code.  
   
- **테스트 코드를 리팩터링하여 중복 코드를 제거합니다.**  
+ **Refactor the test code to eliminate duplicated code.**  
   
- `RangeTest` 메서드는 `Assert` 메서드에서 사용되는 허용 오차 변수의 분모를 하드 코드로 작성합니다. 동일한 허용 오차 계산을 사용하는 추가 테스트를 추가할 계획인 경우 여러 위치에서 하드 코드된 값을 사용하면 오류가 발생할 수 있습니다.  
+ Note that the `RangeTest` method hard codes the denominator of the tolerance variable that is used in the `Assert` method. If you plan to add additional tests that use the same tolerance calculation, the use of a hard-coded value in multiple locations could lead to errors.  
   
-1.  허용 오차 값을 계산하기 위해 전용 메서드를 Unit1Test 클래스에 추가한 다음 대신 이 메서드를 호출합니다.  
+1.  Add a private method to the Unit1Test class to calculate the tolerance value and then call that method instead.  
   
-    ```c#  
+    ```csharp  
     private double ToleranceHelper(double expected)  
     {  
         return expected / 1000;  
@@ -376,8 +377,8 @@ ms.lasthandoff: 04/04/2017
   
     ```  
   
-2.  **모두 실행**을 선택하여 리팩터링된 메서드를 테스트하고 오류가 없는지 확인합니다.  
+2.  Choose **Run All** to test the refactored method and make sure that you haven't introduced an error.  
   
 > [!NOTE]
->  도우미 메서드를 테스트 클래스에 추가하려면 `[TestMethod]` 특성을 메서드에 추가하지 마십시오. 테스트 탐색기는 메서드를 실행되도록 등록하지 않습니다.
+>  To add a helper method to a test class, do not add the `[TestMethod]` attribute to the method. Test Explorer does not register the method to be run.
 

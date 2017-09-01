@@ -1,93 +1,109 @@
 ---
-title: "MFC 디버깅 기술 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AfxEnableMemoryTracking"
-  - "CMemoryState"
-  - "delayFreeMemDF"
-  - "checkAlwaysMemDF"
-  - "vs.debug.mfc"
-  - "vs.debug.objects.dump"
-  - "vs.debug.memory.dump"
-  - "allocMemDF"
-  - "afxMemDF"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "디버깅[MFC]"
+title: MFC Debugging Techniques | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AfxEnableMemoryTracking
+- CMemoryState
+- delayFreeMemDF
+- checkAlwaysMemDF
+- vs.debug.mfc
+- vs.debug.objects.dump
+- vs.debug.memory.dump
+- allocMemDF
+- afxMemDF
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging [MFC]
 ms.assetid: b154fc31-5e90-4734-8cbd-58dd9fe1f750
 caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# MFC 디버깅 기술
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 8ead19c84b5a2a522199f70773a7ba99613b6b7f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-다음은 MFC 프로그램을 디버깅하는 데 유용한 디버깅 기술입니다.  
+---
+# <a name="mfc-debugging-techniques"></a>MFC Debugging Techniques
+If you are debugging an MFC program, these debugging techniques may be useful.  
   
-##  <a name="BKMK_In_this_topic"></a> 항목 내용  
+##  <a name="BKMK_In_this_topic"></a> In this topic  
  [AfxDebugBreak](#BKMK_AfxDebugBreak)  
   
- [TRACE 매크로](#BKMK_The_TRACE_macro)  
+ [The TRACE macro](#BKMK_The_TRACE_macro)  
   
- [MFC의 메모리 누수 탐지](#BKMK_Memory_leak_detection_in_MFC)  
+ [Detecting memory leaks in MFC](#BKMK_Memory_leak_detection_in_MFC)  
   
--   [메모리 할당 추적](#BKMK_Tracking_memory_allocations)  
+-   [Tracking memory allocations](#BKMK_Tracking_memory_allocations)  
   
--   [메모리 진단 사용](#BKMK_Enabling_memory_diagnostics)  
+-   [Enabling memory diagnostics](#BKMK_Enabling_memory_diagnostics)  
   
--   [메모리 스냅숏 만들기](#BKMK_Taking_memory_snapshots)  
+-   [Taking memory snapshots](#BKMK_Taking_memory_snapshots)  
   
--   [메모리 통계 보기](#BKMK_Viewing_memory_statistics)  
+-   [Viewing memory statistics](#BKMK_Viewing_memory_statistics)  
   
--   [개체 덤프 수행](#BKMK_Taking_object_dumps)  
+-   [Taking object dumps](#BKMK_Taking_object_dumps)  
   
-    -   [메모리 덤프 해석](#BKMK_Interpreting_memory_dumps)  
+    -   [Interpreting memory dumps](#BKMK_Interpreting_memory_dumps)  
   
-    -   [개체 덤프 사용자 지정](#BKMK_Customizing_object_dumps)  
+    -   [Customizing object dumps](#BKMK_Customizing_object_dumps)  
   
-     [MFC 디버그 빌드 크기 줄이기](#BKMK_Reducing_the_size_of_an_MFC_Debug_build)  
+     [Reducing the size of an MFC Debug build](#BKMK_Reducing_the_size_of_an_MFC_Debug_build)  
   
-    -   [선택한 모듈의 디버그 정보를 사용하여 MFC 응용 프로그램 빌드](#BKMK_Building_an_MFC_app_with_debug_information_for_selected_modules)  
+    -   [Building an MFC app with debug information for selected modules](#BKMK_Building_an_MFC_app_with_debug_information_for_selected_modules)  
   
 ##  <a name="BKMK_AfxDebugBreak"></a> AfxDebugBreak  
- MFC를 사용하면 소스 코드의 하드 코드 중단점에 특별한 [AfxDebugBreak](../Topic/AfxDebugBreak%20\(MFC\).md) 함수를 사용할 수 있습니다.  
+ MFC provides a special [AfxDebugBreak](http://msdn.microsoft.com/Library/c4cd79b9-9327-4db5-a9d6-c4004a92aa30) function for hard-coding breakpoints in source code:  
   
 ```  
 AfxDebugBreak( );  
   
 ```  
   
- Intel 플랫폼에서 `AfxDebugBreak`는 커널 코드가 아닌 소스 코드에서 중단되는 다음과 같은 코드를 생성합니다.  
+ On Intel platforms, `AfxDebugBreak` produces the following code, which breaks in source code rather than kernel code:  
   
 ```  
 _asm int 3  
 ```  
   
- 다른 플랫폼에서는 `AfxDebugBreak`가 `DebugBreak`를 단순히 호출할 뿐입니다.  
+ On other platforms, `AfxDebugBreak` merely calls `DebugBreak`.  
   
- 릴리스 빌드를 만들 때 `AfxDebugBreak` 문을 제거하거나 `#ifdef _DEBUG`를 사용하여 이 문을 포함시키십시오.  
+ Be sure to remove `AfxDebugBreak` statements when you create a release build or use `#ifdef _DEBUG` to surround them.  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_The_TRACE_macro"></a> TRACE 매크로  
- 디버거 [출력 창](../ide/reference/output-window.md)에 프로그램 메시지를 표시하기 위해 [ATLTRACE](../Topic/ATLTRACE%20\(ATL\).md) 매크로나 MFC [TRACE](../Topic/TRACE.md) 매크로를 사용할 수 있습니다.[어설션](../debugger/c-cpp-assertions.md)과 마찬가지로 추적 매크로는 프로그램의 디버그 버전에서만 활성화되며 릴리스 버전에서 컴파일하면 사라집니다.  
+##  <a name="BKMK_The_TRACE_macro"></a> The TRACE macro  
+ To display messages from your program in the debugger [Output window](../ide/reference/output-window.md), you can use the [ATLTRACE](http://msdn.microsoft.com/Library/c796baa5-e2b9-4814-a27d-d800590b102e) macro or the MFC [TRACE](http://msdn.microsoft.com/Library/7b6f42d8-b55a-4bba-ab04-c46251778e6f) macro. Like [assertions](../debugger/c-cpp-assertions.md), the trace macros are active only in the Debug version of your program and disappear when compiled in the Release version.  
   
- 다음 예제에서는 **TRACE** 매크로 사용법을 몇 가지 보여 줍니다.`printf`와 같이 **TRACE** 매크로도 많은 인수를 처리할 수 있습니다.  
+ The following examples show some of the ways you can use the **TRACE** macro. Like `printf`, the **TRACE** macro can handle a number of arguments.  
   
 ```  
 int x = 1;  
@@ -102,7 +118,7 @@ TRACE( "x = %d and y = %d\n", x, y );
 TRACE( "x = %d and y = %x and z = %f\n", x, y, z );  
 ```  
   
- TRACE 매크로는 char\* 및 wchar\_t\* 매개 변수 모두를 적절히 처리합니다. 다음 예제에서는 TRACE 매크로와 다른 형식의 문자열 매개 변수를 함께 사용하는 방법을 보여 줍니다.  
+ The TRACE macro appropriately handles both char* and wchar_t\* parameters. The following examples demonstrate the use of the TRACE macro together with different types of string parameters.  
   
 ```  
 TRACE( "This is a test of the TRACE macro that uses an ANSI string: %s %d\n", "The number is:", 2);  
@@ -113,62 +129,62 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
 ```  
   
- **TRACE** 매크로에 대한 자세한 정보는 [Diagnostic Services](/visual-cpp/mfc/reference/diagnostic-services)를 참조하십시오.  
+ For more information on the **TRACE** macro, see [Diagnostic Services](/cpp/mfc/reference/diagnostic-services).  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Memory_leak_detection_in_MFC"></a> MFC의 메모리 누수 탐지  
- MFC는 할당할 수는 있어도 할당을 취소할 수 없는 메모리를 탐지하는 클래스와 함수를 가지고 있습니다.  
+##  <a name="BKMK_Memory_leak_detection_in_MFC"></a> Detecting memory leaks in MFC  
+ MFC provides classes and functions for detecting memory that is allocated but never deallocated.  
   
-###  <a name="BKMK_Tracking_memory_allocations"></a> 메모리 할당 추적  
- MFC에서 [new](../Topic/DEBUG_NEW.md) 연산자 자리에 **DEBUG\_NEW** 매크로를 사용하면 메모리 누수를 찾는 데 도움이 됩니다. 프로그램의 디버그 버전에서 `DEBUG_NEW`는 할당된 각 개체의 파일 이름과 줄 번호를 추적합니다. 프로그램의 릴리스 버전을 컴파일할 경우 `DEBUG_NEW`는 파일 이름과 줄 번호 정보 없이 간단한 **new** 연산자를 확인합니다. 따라서 프로그램의 릴리스 버전에서는 속도가 저하되지 않습니다.  
+###  <a name="BKMK_Tracking_memory_allocations"></a> Tracking memory allocations  
+ In MFC, you can use the macro [DEBUG_NEW](http://msdn.microsoft.com/Library/9b379344-4093-4bec-a3eb-e0d8a63ada9d) in place of the **new** operator to help locate memory leaks. In the Debug version of your program, `DEBUG_NEW` keeps track of the file name and line number for each object that it allocates. When you compile a Release version of your program, `DEBUG_NEW` resolves to a simple **new** operation without the file name and line number information. Thus, you pay no speed penalty in the Release version of your program.  
   
- **new** 자리에 `DEBUG_NEW`를 사용하기 위해 프로그램 전체를 다시 작성하는 대신, 다음과 같이 소스 파일에서 이 매크로를 정의할 수 있습니다.  
+ If you do not want to rewrite your entire program to use `DEBUG_NEW` in place of **new**, you can define this macro in your source files:  
   
 ```  
 #define new DEBUG_NEW  
 ```  
   
- [개체 덤프](#BKMK_Taking_object_dumps)를 수행하면 `DEBUG_NEW`에서 할당된 개체가 할당된 파일과 줄 번호를 표시하여, 메모리 누수가 발생한 소스를 알 수 있습니다.  
+ When you do an [object dump](#BKMK_Taking_object_dumps), each object allocated with `DEBUG_NEW` will show the file and line number where it was allocated, allowing you to pinpoint the sources of memory leaks.  
   
- MFC 프레임워크의 디버그 버전은 자동으로 `DEBUG_NEW`를 사용하지만 코드는 그렇지 않습니다.`DEBUG_NEW`를 효과적으로 사용하려면, 위와 같이 `DEBUG_NEW`를 명시하거나 **\#define new**를 사용해야 합니다.  
+ The Debug version of the MFC framework uses `DEBUG_NEW` automatically, but your code does not. If you want the benefits of `DEBUG_NEW`, you must use `DEBUG_NEW` explicitly or **#define new** as shown above.  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-###  <a name="BKMK_Enabling_memory_diagnostics"></a> 메모리 진단 사용  
- 메모리 진단 기능을 사용하려면 진단 추적을 활성화해야 합니다.  
+###  <a name="BKMK_Enabling_memory_diagnostics"></a> Enabling memory diagnostics  
+ Before you can use the memory diagnostics facilities, you must enable diagnostic tracing.  
   
- **메모리 진단을 활성화하거나 비활성화하려면**  
+ **To enable or disable memory diagnostics**  
   
--   전역 함수 [AfxEnableMemoryTracking](../Topic/AfxEnableMemoryTracking.md)을 호출하여 진단 메모리 할당자를 활성화하거나 비활성화합니다. 디버그 라이브러리에서는 메모리 진단이 기본적으로 활성화되어 있기 때문에 일반적으로 이 기능을 사용하여 일시적으로 비활성화하며 이는 프로그램 실행 속도를 높이고 진단 결과를 줄입니다.  
+-   Call the global function [AfxEnableMemoryTracking](http://msdn.microsoft.com/Library/0a40e0c4-855d-46e2-9577-a8f2346f47db) to enable or disable the diagnostic memory allocator. Because memory diagnostics are on by default in the debug library, you will typically use this function to temporarily turn them off, which increases program execution speed and reduces diagnostic output.  
   
- **afxMemDF로 특정 메모리 진단 기능을 선택하려면**  
+ **To select specific memory diagnostic features with afxMemDF**  
   
--   메모리 진단 기능을 보다 자세히 제어하려면 MFC 전역 함수 [afxMemDF](../Topic/afxMemDF.md)의 값을 설정하여 각 메모리 진단 기능 사용 여부를 지정할 수 있습니다. 이 변수는 열거 형식 **afxMemDF**가 지정한 대로 다음과 같은 값을 가질 수 있습니다.  
+-   If you want more precise control over the memory diagnostic features, you can selectively turn individual memory diagnostic features on and off by setting the value of the MFC global variable [afxMemDF](http://msdn.microsoft.com/Library/cf117501-5446-4fce-81b3-f7194bc95086). This variable can have the following values as specified by the enumerated type **afxMemDF**.  
   
-    |값|설명|  
-    |-------|--------|  
-    |**allocMemDF**|진단 메모리 할당자를 사용합니다\(기본값\).|  
-    |**delayFreeMemDF**|`delete` 또는 `free`를 호출할 경우 프로그램이 종료될 때까지 메모리 해제를 지연시킵니다. 이렇게 하면 프로그램이 가능한 최대 메모리를 할당하게 됩니다.|  
-    |**checkAlwaysMemDF**|메모리를 할당하거나 해제할 때마다 [AfxCheckMemory](../Topic/AfxCheckMemory.md)를 호출합니다.|  
+    |Value|Description|  
+    |-----------|-----------------|  
+    |**allocMemDF**|Turn on diagnostic memory allocator (default).|  
+    |**delayFreeMemDF**|Delay freeing memory when calling `delete` or `free` until program exits. This will cause your program to allocate the maximum possible amount of memory.|  
+    |**checkAlwaysMemDF**|Call [AfxCheckMemory](http://msdn.microsoft.com/Library/4644da71-7d14-41dc-adc0-ee9558fd7a28) every time memory is allocated or freed.|  
   
-     논리적 OR 연산을 수행하면 다음과 같이 이 값들을 조합하여 사용할 수 있습니다.  
+     These values can be used in combination by performing a logical-OR operation, as shown here:  
   
-    ```cpp  
+    ```C++  
     afxMemDF = allocMemDF | delayFreeMemDF | checkAlwaysMemDF;  
     ```  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-###  <a name="BKMK_Taking_memory_snapshots"></a> 메모리 스냅숏 만들기  
+###  <a name="BKMK_Taking_memory_snapshots"></a> Taking memory snapshots  
   
-1.  [CMemoryState](http://msdn.microsoft.com/ko-kr/8fade6e9-c6fb-4b2a-8565-184a912d26d2) 개체를 만들고 [CMemoryState::Checkpoint](../Topic/CMemoryState::Checkpoint.md) 멤버 함수를 호출합니다. 그러면 첫 번째 메모리 스냅숏이 만들어집니다.  
+1.  Create a [CMemoryState](http://msdn.microsoft.com/en-us/8fade6e9-c6fb-4b2a-8565-184a912d26d2) object and call the [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Checkpoint) member function. This creates the first memory snapshot.  
   
-2.  프로그램이 메모리 할당 작업과 할당 취소 작업을 수행하면 다른 `CMemoryState` 개체를 만들고 해당 개체에 대해 `Checkpoint`를 호출합니다. 그러면 메모리 사용에 대한 두 번째 스냅숏이 만들어집니다.  
+2.  After your program performs its memory allocation and deallocation operations, create another `CMemoryState` object and call `Checkpoint` for that object. This gets a second snapshot of memory usage.  
   
-3.  세 번째 `CMemoryState` 개체를 만들고 이전의 두 [CMemoryState::Difference](../Topic/CMemoryState::Difference.md) 개체를 인수로 제공하여 `CMemoryState` 멤버 함수를 호출합니다. 두 메모리 상태가 서로 다르면 `Difference` 함수가 0이 아닌 값을 반환합니다. 이것은 할당이 취소되지 않은 메모리 블록이 있음을 나타냅니다.  
+3.  Create a third `CMemoryState` object and call its [CMemoryState::Difference](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Difference) member function, supplying as arguments the two previous `CMemoryState` objects. If there is a difference between the two memory states, the `Difference` function returns a nonzero value. This indicates that some memory blocks have not been deallocated.  
   
-     다음 예제는 해당 코드의 내용을 보여 줍니다.  
+     This example shows what the code looks like:  
   
     ```  
     // Declare the variables needed  
@@ -191,16 +207,16 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
     #endif  
     ```  
   
-     메모리를 검사하는 문은 프로그램의 디버그 버전에서만 컴파일되도록 `#ifdef`[\_DEBUG](/visual-cpp/c-runtime-library/debug)\/ **\#endif** 블록으로 묶어야 합니다.  
+     Notice that the memory-checking statements are bracketed by **#ifdef _DEBUG / #endif** blocks so that they are compiled only in Debug versions of your program.  
   
-     이제 메모리 누수가 확인되었으므로 다른 멤버 함수인 [CMemoryState::DumpStatistics](../Topic/CMemoryState::DumpStatistics.md)를 사용하여 해당 위치를 찾을 수 있습니다.  
+     Now that you know a memory leak exists, you can use another member function, [CMemoryState::DumpStatistics](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpStatistics) that will help you locate it.  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-###  <a name="BKMK_Viewing_memory_statistics"></a> 메모리 통계 보기  
- [CMemoryState::Difference](../Topic/CMemoryState::Difference.md) 함수는 두 메모리 상태 개체를 살펴 상태의 시작과 끝 사이의 힙에서 할당 취소되지 않은 모든 개체를 검색합니다. 메모리 스냅숏을 만들고 `CMemoryState::Difference`를 사용하여 스냅숏을 비교한 후 [CMemoryState::DumpStatistics](../Topic/CMemoryState::DumpStatistics.md)를 호출하여 할당이 취소되지 않은 개체에 대한 정보를 가져올 수 있습니다.  
+###  <a name="BKMK_Viewing_memory_statistics"></a> Viewing memory statistics  
+ The [CMemoryState::Difference](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Difference) function looks at two memory-state objects and detects any objects not deallocated from the heap between the beginning and end states. After you have taken memory snapshots and compared them using `CMemoryState::Difference`, you can call [CMemoryState::DumpStatistics](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpStatistics) to get information about the objects that have not been deallocated.  
   
- 다음 예제를 참조하세요.  
+ Consider the following example:  
   
 ```  
 if( diffMemState.Difference( oldMemState, newMemState ) )  
@@ -210,7 +226,7 @@ if( diffMemState.Difference( oldMemState, newMemState ) )
 }  
 ```  
   
- 다음 예제는 덤프 샘플을 보여 줍니다.  
+ A sample dump from the example looks like this:  
   
 ```  
 0 bytes in 0 Free Blocks  
@@ -220,28 +236,28 @@ Largest number used: 67 bytes
 Total allocations: 67 bytes  
 ```  
   
- free 블록은 `afxMemDF`가 `delayFreeMemDF`로 설정되면 할당 취소가 연기되는 블록입니다.  
+ Free blocks are blocks whose deallocation is delayed if `afxMemDF` was set to `delayFreeMemDF`.  
   
- 두 번째 줄에 표시된 보통 개체 블록은 계속 힙에 할당되어 있습니다.  
+ Ordinary object blocks, shown on the second line, remain allocated on the heap.  
   
- 비개체 블록에는 `new`로 할당된 배열 및 구조체가 포함됩니다. 이 경우 할당이 취소되지 않는 비개체 블록 네 개가 힙에 할당되어 있습니다.  
+ Non-object blocks include arrays and structures allocated with `new`. In this case, four non-object blocks were allocated on the heap but not deallocated.  
   
- `Largest number used`를 사용하면 프로그램은 언제라도 최대 메모리를 사용할 수 있습니다.  
+ `Largest number used` gives the maximum memory used by the program at any time.  
   
- `Total allocations`를 사용하면 프로그램이 사용하는 총 메모리를 알 수 있습니다.  
+ `Total allocations` gives the total amount of memory used by the program.  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-###  <a name="BKMK_Taking_object_dumps"></a> 개체 덤프 수행  
- MFC 프로그램에서는 [CMemoryState::DumpAllObjectsSince](../Topic/CMemoryState::DumpAllObjectsSince.md)를 사용하여 힙에서 할당 취소되지 않은 모든 개체의 설명을 덤프할 수 있습니다.`DumpAllObjectsSince`는 마지막 [CMemoryState::Checkpoint](../Topic/CMemoryState::Checkpoint.md) 이후에 할당된 개체를 모두 덤프합니다.`Checkpoint`를 호출할 수 없는 경우 `DumpAllObjectsSince`가 현재 메모리에 있는 모든 개체와 비개체를 덤프합니다.  
-  
-> [!NOTE]
->  MFC 개체를 덤프하려면 먼저 [진단 추적을 활성화](../debugger/mfc-debugging-techniques.md#BKMK_Enabling_Memory_Diagnostics)해야 합니다.  
+###  <a name="BKMK_Taking_object_dumps"></a> Taking object dumps  
+ In an MFC program, you can use [CMemoryState::DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpAllObjectsSince) to dump a description of all objects on the heap that have not been deallocated. `DumpAllObjectsSince` dumps all objects allocated since the last [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Checkpoint). If no `Checkpoint` call has taken place, `DumpAllObjectsSince` dumps all objects and nonobjects currently in memory.  
   
 > [!NOTE]
->  프로그램을 종료할 때 MFC가 누수된 개체를 모두 자동으로 덤프하므로 해당 지점에서 개체를 덤프할 코드를 만들 필요가 없습니다.  
+>  Before you can use MFC object dumping, you must [enable diagnostic tracing](#BKMK_Enabling_Memory_Diagnostics).  
   
- 다음 코드는 두 메모리 상태를 비교하여 메모리 누수를 테스트하고 누수가 탐지되면 모든 개체를 덤프합니다.  
+> [!NOTE]
+>  MFC automatically dumps all leaked objects when your program exits, so you do not need to create code to dump objects at that point.  
+  
+ The following code tests for a memory leak by comparing two memory states and dumps all objects if a leak is detected.  
   
 ```  
 if( diffMemState.Difference( oldMemState, newMemState ) )  
@@ -251,7 +267,7 @@ if( diffMemState.Difference( oldMemState, newMemState ) )
 }  
 ```  
   
- 덤프 내용은 다음과 같습니다.  
+ The contents of the dump look like this:  
   
 ```  
 Dumping objects ->  
@@ -268,18 +284,18 @@ Phone #: 581-0215
 {1} strcore.cpp(80) : non-object block at $00A7516E, 25 bytes long  
 ```  
   
- 대개의 경우 줄 맨 앞의 중괄호에 있는 번호는 개체가 할당된 순서를 나타냅니다. 가장 최근에 할당된 개체는 가장 큰 번호를 가지며 덤프 맨 위에 나타납니다.  
+ The numbers in braces at the beginning of most lines specify the order in which the objects were allocated. The most recently allocated object has the highest number and appears at the top of the dump.  
   
- 개체 덤프에서 최대한의 정보를 얻기 위해 모든 `Dump` 파생 개체의 `CObject` 멤버 함수를 재정의하여 개체 덤프를 사용자 지정할 수 있습니다.  
+ To get the maximum amount of information out of an object dump, you can override the `Dump` member function of any `CObject`-derived object to customize the object dump.  
   
- 전역 변수 `_afxBreakAlloc`을 중괄호 안에 있는 번호에 설정하여 특정 메모리 할당에 중단점을 설정할 수 있습니다. 프로그램을 다시 실행하면 할당할 때 디버거가 실행을 중단합니다. 그러면 호출 스택에서 프로그램이 해당 지점에 도달한 방법을 알 수 있습니다.  
+ You can set a breakpoint on a particular memory allocation by setting the global variable `_afxBreakAlloc` to the number shown in the braces. If you rerun the program the debugger will break execution when that allocation takes place. You can then look at the call stack to see how your program got to that point.  
   
- C 런타임 라이브러리에는 C 런타임 할당에 사용할 수 있는 유사한 함수인 [\_CrtSetBreakAlloc](/visual-cpp/c-runtime-library/reference/crtsetbreakalloc)이 있습니다.  
+ The C run-time library has a similar function, [_CrtSetBreakAlloc](/cpp/c-runtime-library/reference/crtsetbreakalloc), that you can use for C run-time allocations.  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-####  <a name="BKMK_Interpreting_memory_dumps"></a> 메모리 덤프 해석  
- 이 개체 덤프를 자세히 살펴보면 다음과 같습니다.  
+####  <a name="BKMK_Interpreting_memory_dumps"></a> Interpreting memory dumps  
+ Look at this object dump in more detail:  
   
 ```  
 {5} strcore.cpp(80) : non-object block at $00A7521A, 9 bytes long  
@@ -294,7 +310,7 @@ Phone #: 581-0215
 {1} strcore.cpp(80) : non-object block at $00A7516E, 25 bytes long  
 ```  
   
- 이 덤프를 생성한 프로그램에는 스택과 힙에 각각 하나씩 두 개의 명시적 할당이 있습니다.  
+ The program that generated this dump had only two explicit allocations—one on the stack and one on the heap:  
   
 ```  
 // Do your memory allocations and deallocations.  
@@ -303,15 +319,15 @@ CString s("This is a frame variable");
 CPerson* p = new CPerson( "Smith", "Alan", "581-0215" );  
 ```  
   
- `CPerson` 생성자는 `char`의 포인터가 되는 세 인수를 가지며, 이들 인수는 `CString` 멤버 변수를 초기화하는 데 사용됩니다. 메모리 덤프에서 `CPerson` 개체와 세 개의 비개체 블록\(3, 4, 5\)을 볼 수 있습니다. 이들은 `CString` 멤버 변수 문자를 가지고 있으며 `CPerson` 개체 소멸자를 호출할 때 삭제되지 않습니다.  
+ The `CPerson` constructor takes three arguments that are pointers to `char`, which are used to initialize `CString` member variables. In the memory dump, you can see the `CPerson` object along with three nonobject blocks (3, 4, and 5). These hold the characters for the `CString` member variables and will not be deleted when the `CPerson` object destructor is invoked.  
   
- 블록 번호 2는 `CPerson` 개체 자신입니다.`$51A4`는 블록 주소로서 다음에 개체 내용이 표시되며, 개체 내용은 [DumpAllObjectsSince](../Topic/CMemoryState::DumpAllObjectsSince.md)가 호출할 때 `CPerson`::`Dump`를 사용하여 출력됩니다.  
+ Block number 2 is the `CPerson` object itself. `$51A4` represents the address of the block and is followed by the contents of the object, which were output by `CPerson`::`Dump` when called by [DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpAllObjectsSince).  
   
- 블록 번호 1은 `CString` 프레임 변수와 연결되어 있다고 볼 수 있습니다. 해당 시퀀스 번호와 크기가 프레임 `CString` 변수에 있는 문자의 번호와 일치하기 때문입니다. 프레임이 범위를 벗어나면 프레임에 할당된 변수는 자동으로 할당 취소됩니다.  
+ You can guess that block number 1 is associated with the `CString` frame variable because of its sequence number and size, which matches the number of characters in the frame `CString` variable. Variables allocated on the frame are automatically deallocated when the frame goes out of scope.  
   
- **프레임 변수**  
+ **Frame Variables**  
   
- 프레임 변수가 범위를 벗어나면 할당이 자동으로 취소되기 때문에 프레임 변수와 연결된 힙 개체에 대해서는 신경쓸 필요가 없습니다. 메모리 진단 덤프의 혼란을 막으려면 `Checkpoint` 호출을 프레임 변수의 범위 밖에 배치해야 합니다. 예를 들어, 다음과 같이 이전 할당 코드를 범위 괄호로 묶어 주십시오.  
+ In general, you should not worry about heap objects associated with frame variables because they are automatically deallocated when the frame variables go out of scope. To avoid clutter in your memory diagnostic dumps, you should position your calls to `Checkpoint` so that they are outside the scope of frame variables. For example, place scope brackets around the previous allocation code, as shown here:  
   
 ```  
 oldMemState.Checkpoint();  
@@ -324,7 +340,7 @@ oldMemState.Checkpoint();
 newMemState.Checkpoint();  
 ```  
   
- 범위 괄호를 추가하면 이 예제의 메모리 덤프가 다음과 같이 표시됩니다.  
+ With the scope brackets in place, the memory dump for this example is as follows:  
   
 ```  
 Dumping objects ->  
@@ -339,15 +355,15 @@ First Name: Alan
 Phone #: 581-0215  
 ```  
   
- **비개체 할당**  
+ **Nonobject Allocations**  
   
- 일부 할당은 `CPerson`과 같은 개체이며 일부는 비개체 할당입니다. 비개체 할당"이란 `CObject`에서 파생되지 않은 개체의 할당이나 `char`, `int` 또는 **long**과 같은 기본 C 형식의 할당입니다.**CObject** 파생 클래스가 내부 버퍼와 같은 추가 공간을 할당하는 경우 해당 개체는 개체 할당과 비개체 할당을 모두 표시합니다.  
+ Notice that some allocations are objects (such as `CPerson`) and some are nonobject allocations. "Nonobject allocations" are allocations for objects not derived from `CObject` or allocations of primitive C types such as `char`, `int`, or `long`. If the **CObject-**derived class allocates additional space, such as for internal buffers, those objects will show both object and nonobject allocations.  
   
- **메모리 누수 방지**  
+ **Preventing Memory Leaks**  
   
- 위 코드에서, `CString` 프레임 변수와 연결된 메모리 블록은 자동으로 할당 취소되어 메모리 누수로 표시되지 않습니다. 범위 지정 규칙과 관련된 자동 할당 취소는 프레임 변수와 연결된 대부분의 메모리 누수에 적용됩니다.  
+ Notice in the code above that the memory block associated with the `CString` frame variable has been deallocated automatically and does not show up as a memory leak. The automatic deallocation associated with scoping rules takes care of most memory leaks associated with frame variables.  
   
- 그러나 힙에 할당된 개체는 명시적으로 삭제하여 메모리 누수를 방지해야 합니다. 이전 예제의 마지막 메모리 누수를 해결하려면 힙에 할당된 `CPerson` 개체를 다음과 같이 삭제하십시오.  
+ For objects allocated on the heap, however, you must explicitly delete the object to prevent a memory leak. To clean up the last memory leak in the previous example, delete the `CPerson` object allocated on the heap, as follows:  
   
 ```  
 {  
@@ -359,16 +375,16 @@ Phone #: 581-0215
 }  
 ```  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-####  <a name="BKMK_Customizing_object_dumps"></a> 개체 덤프 사용자 지정  
- [CObject](/visual-cpp/mfc/reference/cobject-class)에서 클래스를 파생시키는 경우 [DumpAllObjectsSince](../Topic/CMemoryState::DumpAllObjectsSince.md)를 사용하여 [출력 창](../ide/reference/output-window.md)으로 개체를 덤프할 때 `Dump` 멤버 함수를 재정의하여 추가 정보를 제공할 수 있습니다.  
+####  <a name="BKMK_Customizing_object_dumps"></a> Customizing object dumps  
+ When you derive a class from [CObject](/cpp/mfc/reference/cobject-class), you can override the `Dump` member function to provide additional information when you use [DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpAllObjectsSince) to dump objects to the [Output window](../ide/reference/output-window.md).  
   
- `Dump` 함수는 덤프 컨텍스트\([CDumpContext](/visual-cpp/mfc/reference/cdumpcontext-class)\)에 개체 멤버 변수의 텍스트 표현을 작성합니다. 덤프 컨텍스트는 I\/O 스트림과 유사합니다. 추가 연산자\(**\<\<**\)를 사용하여 `CDumpContext`로 데이터를 보낼 수 있습니다.  
+ The `Dump` function writes a textual representation of the object's member variables to a dump context ([CDumpContext](/cpp/mfc/reference/cdumpcontext-class)). The dump context is similar to an I/O stream. You can use the append operator (**<<**) to send data to a `CDumpContext`.  
   
- `Dump` 함수를 재정의하려면 먼저 `Dump`의 기본 클래스 버전을 호출하여 기본 클래스 개체의 내용을 덤프해야 합니다. 그런 다음 파생 클래스의 각 멤버 변수에 대한 텍스트 설명과 값을 출력하십시오.  
+ When you override the `Dump` function, you should first call the base class version of `Dump` to dump the contents of the base class object. Then output a textual description and value for each member variable of your derived class.  
   
- `Dump` 함수 선언은 다음과 같습니다.  
+ The declaration of the `Dump` function looks like this:  
   
 ```  
 class CPerson : public CObject  
@@ -384,9 +400,9 @@ public:
 };  
 ```  
   
- 개체 덤프는 프로그램을 디버깅할 때만 효과가 있으므로 `Dump` 함수 선언은 **\#ifdef \_DEBUG \/ \#endif** 블록과 함께 대괄호로 묶습니다.  
+ Because object dumping only makes sense when you are debugging your program, the declaration of the `Dump` function is bracketed with an **#ifdef _DEBUG / #endif** block.  
   
- 다음 예제에서는 `Dump` 함수가 먼저 기본 클래스의 `Dump` 함수를 호출합니다. 그런 다음 진단 스트림에 멤버 값과 함께 각 멤버 변수에 대한 간단한 설명을 씁니다.  
+ In the following example, the `Dump` function first calls the `Dump` function for its base class. It then writes a short description of each member variable along with the member's value to the diagnostic stream.  
   
 ```  
 #ifdef _DEBUG  
@@ -402,7 +418,7 @@ void CPerson::Dump( CDumpContext& dc ) const
 #endif  
 ```  
   
- `CDumpContext` 인수를 추가하여 어디로 덤프 출력할지 지정해야 합니다. MFC의 디버그 버전에서는 미리 정의된 `CDumpContext` 개체인 `afxDump`를 사용하여 출력을 디버거로 보냅니다.  
+ You must supply a `CDumpContext` argument to specify where the dump output will go. The Debug version of MFC supplies a predefined `CDumpContext` object named `afxDump` that sends output to the debugger.  
   
 ```  
 CPerson* pMyPerson = new CPerson;  
@@ -414,77 +430,77 @@ pMyPerson->Dump( afxDump );
 #endif  
 ```  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Reducing_the_size_of_an_MFC_Debug_build"></a> MFC 디버그 빌드 크기 줄이기  
- 대형 MFC 응용 프로그램의 디버그 정보는 디스크 공간을 많이 차지할 수 있습니다. 다음 절차 중 하나를 사용하여 크기를 줄일 수 있습니다.  
+##  <a name="BKMK_Reducing_the_size_of_an_MFC_Debug_build"></a> Reducing the size of an MFC Debug build  
+ The debug information for a large MFC application can take up a lot of disk space. You can use one of these procedures to reduce the size:  
   
-1.  **\/Z7** 대신 [\/Z7, \/Zi, \/ZI\(디버깅 정보 형식\)](/visual-cpp/build/reference/z7-zi-zi-debug-information-format) 옵션을 사용하여 MFC 라이브러리를 다시 빌드합니다. 이 옵션은 전체 라이브러리의 디버그 정보가 있는 프로그램 데이터베이스\(PDB\) 파일 하나를 빌드하여 중복을 없애고 공간을 절약합니다.  
+1.  Rebuild the MFC libraries using the [/Z7, /Zi, /ZI (Debug Information Format)](/cpp/build/reference/z7-zi-zi-debug-information-format) option, instead of **/Z7**. These options build a single program database (PDB) file that contains debug information for the entire library, reducing redundancy and saving space.  
   
-2.  디버그 정보\([\/Z7, \/Zi, \/ZI\(디버깅 정보 형식\)](/visual-cpp/build/reference/z7-zi-zi-debug-information-format) 옵션\) 없이 MFC 라이브러리를 다시 빌드합니다. 이 경우 디버그 정보가 부족하여 MFC 라이브러리 코드의 디버거 기능을 대부분 사용할 수 없지만 MFC 라이브러리는 이미 모두 디버깅된 상태이므로 문제가 되지 않습니다.  
+2.  Rebuild the MFC libraries without debug information (no [/Z7, /Zi, /ZI (Debug Information Format)](/cpp/build/reference/z7-zi-zi-debug-information-format) option). In this case, the lack of debug information will prevent you from using most debugger facilities within the MFC library code, but because the MFC libraries are already thoroughly debugged, this may not be a problem.  
   
-3.  아래에 설명된 대로 선택한 모듈의 디버그 정보로 사용자 고유의 응용 프로그램을 빌드합니다.  
+3.  Build your own application with debug information for selected modules only as described below.  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-###  <a name="BKMK_Building_an_MFC_app_with_debug_information_for_selected_modules"></a> 선택한 모듈의 디버그 정보를 사용하여 MFC 응용 프로그램 빌드  
- MFC 디버그 라이브러리를 사용하여 선택한 모듈을 빌드하면 이 모듈에서 단계별 실행 및 다른 디버그 기능을 사용할 수 있습니다. 이 프로시저는 Visual C\+\+ 메이크파일의 디버그 모드와 릴리스 모드를 모두 사용하기 때문에 다음 단계와 같이 변경해야 하며 전체 릴리스 빌드가 필요한 경우에는 "모두 다시 빌드"해야 합니다.  
+###  <a name="BKMK_Building_an_MFC_app_with_debug_information_for_selected_modules"></a> Building an MFC app with debug information for selected modules  
+ Building selected modules with the MFC debug libraries enables you to use stepping and the other debug facilities in those modules. This procedure makes use of both the Debug and Release modes of the Visual C++ makefile, thus necessitating the changes described in the following steps (and also making a "rebuild all" necessary when a full Release build is required).  
   
-1.  솔루션 탐색기에서 프로젝트를 선택합니다.  
+1.  In Solution Explorer, select the project.  
   
-2.  **보기** 메뉴에서 **속성 페이지**를 선택합니다.  
+2.  From the **View** menu, select **Property Pages**.  
   
-3.  먼저 새 프로젝트 구성을 만듭니다.  
+3.  First, you will create a new project configuration.  
   
-    1.  **\<프로젝트\> 속성 페이지** 대화 상자에서 **구성 관리자** 단추를 클릭합니다.  
+    1.  In the **\<Project> Property Pages** dialog box, click the **Configuration Manager** button.  
   
-    2.  [구성 관리자 대화 상자](http://msdn.microsoft.com/ko-kr/fa182dca-282e-4ae5-bf37-e155344ca18b)의 표에서 원하는 프로젝트를 찾습니다.**구성** 열에서 **\<새로 만들기...\>**를 선택합니다.  
+    2.  In the [Configuration Manager dialog box](http://msdn.microsoft.com/en-us/fa182dca-282e-4ae5-bf37-e155344ca18b), locate your project in the grid. In the **Configuration** column, select **\<New...>**.  
   
-    3.  [새 프로젝트 구성 대화 상자](http://msdn.microsoft.com/ko-kr/cca616dc-05a6-4fe3-bdc1-40c72a66f2be)의 **새 프로젝트 구성** 상자에 새 구성의 이름을 ?부분 디버그?등과 같이 입력합니다.  
+    3.  In the [New Project Configuration dialog box](http://msdn.microsoft.com/en-us/cca616dc-05a6-4fe3-bdc1-40c72a66f2be), type a name for your new configuration, such as "Partial Debug", in the **Project Configuration Name** box.  
   
-    4.  **다음에서 설정 복사** 목록에서 **릴리스**를 선택합니다.  
+    4.  In the **Copy Settings from** list, choose **Release**.  
   
-    5.  **확인**을 클릭하여 **새 프로젝트 구성** 대화 상자를 닫습니다.  
+    5.  Click **OK** to close the **New Project Configuration**dialog box.  
   
-    6.  **구성 관리자** 대화 상자를 닫습니다.  
+    6.  Close the **Configuration Manager** dialog box.  
   
-4.  이제 전체 프로젝트의 옵션을 설정합니다.  
+4.  Now, you will set options for the entire project.  
   
-    1.  **속성 페이지** 대화 상자에서 **구성 속성** 폴더의 **일반** 범주를 선택합니다.  
+    1.  In the **Property Pages** dialog box, under the **Configuration Properties** folder, select the **General** category.  
   
-    2.  필요한 경우 프로젝트 설정 표에서 **프로젝트 기본값**을 확장합니다.  
+    2.  In the project settings grid, expand **Project Defaults** (if necessary).  
   
-    3.  **프로젝트 기본값**에서 **MFC 사용**을 찾습니다. 현재 설정이 표의 오른쪽 열에 표시됩니다. 현재 설정을 클릭하여 **정적 라이브러리에서 MFC 사용**으로 변경합니다.  
+    3.  Under **Project Defaults**, find **Use of MFC**. The current setting appears in the right column of the grid. Click on the current setting and change it to **Use MFC in a Static Library**.  
   
-    4.  **속성 페이지** 대화 상자의 왼쪽 창에서 **C\/C\+\+** 폴더를 열고 **전처리기**를 선택합니다. 속성 표에서 **전처리기 정의**를 찾아 "NDEBUG"를 "\_DEBUG"로 대체합니다.  
+    4.  In the left pane of the **Properties Pages** dialog box, open the **C/C++** folder and select **Preprocessor**. In the properties grid, find **Preprocessor Definitions** and replace "NDEBUG" with "_DEBUG".  
   
-    5.  **속성 페이지** 대화 상자의 왼쪽 창에서 **링커** 폴더를 열고 **입력** 범주를 선택합니다. 속성 표에서 **추가 종속성**을 찾습니다.**추가 종속성** 설정에 "NAFXCWD.LIB" 및 "LIBCMT"를 입력합니다.  
+    5.  In the left pane of the **Properties Pages** dialog box, open the **Linker** folder and select the **Input** Category. In the properties grid, find **Additional Dependencies**. In the **Additional Dependencies** setting, type "NAFXCWD.LIB" and "LIBCMT."  
   
-    6.  **확인**을 클릭하여 새 빌드 옵션을 저장하고 **속성 페이지** 대화 상자를 닫습니다.  
+    6.  Click **OK** to save the new build options and close the **Property Pages** dialog box.  
   
-5.  **빌드** 메뉴에서 **다시 빌드**를 선택합니다. 그러면 모듈에서 모든 디버그 정보가 제거되지만 MFC 라이브러리에 영향을 주지는 않습니다.  
+5.  From the **Build** menu, select **Rebuild**. This removes all debug information from your modules but does not affect the MFC library.  
   
-6.  이제 응용 프로그램의 선택한 모듈에 디버그 정보를 다시 추가해야 합니다. 디버그 정보로 컴파일한 모듈에서만 중단점을 설정하고 다른 디버거 기능을 사용할 수 있다는 점을 기억하십시오. 디버그 정보를 추가할 각 프로젝트 파일에 대해 다음 작업을 수행하십시오.  
+6.  Now you must add debug information back to selected modules in your application. Remember that you can set breakpoints and perform other debugger functions only in modules you have compiled with debug information. For each project file in which you want to include debug information, carry out the following steps:  
   
-    1.  솔루션 탐색기 창에서 해당 프로젝트 아래의 **소스 파일** 폴더를 엽니다.  
+    1.  In Solution Explorer, open the **Source Files** folder located under your project.  
   
-    2.  디버그 정보를 설정할 파일을 선택합니다.  
+    2.  Select the file you want to set debug information for.  
   
-    3.  **보기** 메뉴에서 **속성 페이지**를 선택합니다.  
+    3.  From the **View** menu, select **Property Pages**.  
   
-    4.  **속성 페이지** 대화 상자의 **구성 속성** 폴더에서 **C\/C\+\+** 폴더를 연 다음 **일반** 범주를 선택합니다.  
+    4.  In the **Property Pages** dialog box, under the **Configuration Settings** folder, open the **C/C++** folder then select the **General** category.  
   
-    5.  속성 표에서 **디버깅 정보 형식**을 찾습니다.  
+    5.  In the properties grid, find **Debug Information Format.**  
   
-    6.  **디버깅 정보 형식** 설정을 클릭하고 디버그 정보에 대해 원하는 옵션\(대개 **\/ZI**\)을 선택합니다.  
+    6.  Click the **Debug Information Format** settings and select the desired option (usually **/ZI**) for debug information.  
   
-    7.  응용 프로그램 마법사로 만든 응용 프로그램을 사용하거나 헤더를 미리 컴파일한 경우, 다른 모듈을 컴파일하기 전에 미리 컴파일한 헤더를 사용하지 않도록 하거나 다시 컴파일해야 합니다. 그렇지 않으면 경고 C4650과 오류 메시지 C2855를 받게 됩니다.**\<프로젝트\> 속성** 대화 상자에서 **구성 속성** 폴더의 **C\/C\+\+** 하위 폴더에 있는 **미리 컴파일된 헤더** 범주를 선택하고 **미리 컴파일된 헤더 만들기\/사용** 설정을 변경하여 미리 컴파일된 헤더를 해제할 수 있습니다.  
+    7.  If you are using an application wizard-generated application or have precompiled headers, you have to turn off the precompiled headers or recompile them before compiling the other modules. Otherwise, you will receive warning C4650 and error message C2855. You can turn off precompiled headers by changing the **Create/Use Precompiled Headers** setting in the **\<Project> Properties** dialog box (**Configuration Properties** folder, **C/C++** subfolder, **Precompiled Headers** category).  
   
-7.  **빌드** 메뉴에서 **빌드**를 선택하여 날짜가 지난 프로젝트 파일을 다시 빌드합니다.  
+7.  From the **Build** menu, select **Build** to rebuild project files that are out of date.  
   
- 이 항목에서 설명한 기술 대신 외부 메이크파일을 사용하여 파일마다 개별적인 옵션을 정의할 수도 있습니다. 이 경우에 MFC 디버그 라이브러리와 링크하려면 각 모듈에 [\_DEBUG](/visual-cpp/c-runtime-library/debug) 플래그를 정의해야 합니다. MFC 릴리스 라이브러리를 사용하려면 NDEBUG를 정의해야 합니다. 외부 메이크파일 작성에 대한 자세한 내용은 [NMAKE 참조](/visual-cpp/build/running-nmake)를 참조하십시오.  
+ As an alternative to the technique described in this topic, you can use an external makefile to define individual options for each file. In that case, to link with the MFC debug libraries, you must define the [_DEBUG](/cpp/c-runtime-library/debug) flag for each module. If you want to use MFC release libraries, you must define NDEBUG. For more information on writing external makefiles, see the [NMAKE Reference](/cpp/build/running-nmake).  
   
- [항목 내용](#BKMK_In_this_topic)  
+ [In this topic](#BKMK_In_this_topic)  
   
-## 참고 항목  
- [Visual C\+\+ 디버깅](../debugger/debugging-native-code.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Visual C++](../debugger/debugging-native-code.md)

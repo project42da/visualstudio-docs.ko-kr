@@ -1,72 +1,89 @@
 ---
-title: "MACHINE_INFO_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MACHINE_INFO_FIELDS"
-helpviewer_keywords: 
-  - "MACHINE_INFO_FIELDS 열거형"
+title: MACHINE_INFO_FIELDS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MACHINE_INFO_FIELDS
+helpviewer_keywords:
+- MACHINE_INFO_FIELDS enumeration
 ms.assetid: 2d61d206-7d40-4df1-8c88-1b3c9c78821e
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MACHINE_INFO_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: bc4aef9381443cbdc0e83d37f9cadb9a4634a1d3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-특정 컴퓨터를 검색할 수 있는 정보의 종류를 지정 합니다.  
+---
+# <a name="machineinfofields"></a>MACHINE_INFO_FIELDS
+Specifies what kind of information to retrieve for a particular machine.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-enum enum_MACHINE_INFO_FIELDS {   
-   MCIF_NAME  = 0x00000001,  
-   MCIF_FLAGS = 0x00000002,  
-   MCIF_ALL   = 0x00000003  
+```cpp  
+enum enum_MACHINE_INFO_FIELDS {   
+   MCIF_NAME  = 0x00000001,  
+   MCIF_FLAGS = 0x00000002,  
+   MCIF_ALL   = 0x00000003  
 };  
 typedef DWORD MACHINE_INFO_FIELDS;  
 ```  
   
-```c#  
-public enum enum_MACHINE_INFO_FIELDS {   
-   MCIF_NAME  = 0x00000001,  
-   MCIF_FLAGS = 0x00000002,  
-   MCIF_ALL   = 0x00000003  
+```csharp  
+public enum enum_MACHINE_INFO_FIELDS {   
+   MCIF_NAME  = 0x00000001,  
+   MCIF_FLAGS = 0x00000002,  
+   MCIF_ALL   = 0x00000003  
 };  
 ```  
   
-## Members  
- MCIF\_NAME  
- 초기화\/사용의 `bstrName` 구조체의 필드입니다.  
+## <a name="members"></a>Members  
+ MCIF_NAME  
+ Initialize/use the `bstrName` field in the structure.  
   
- MCIF\_FLAGS  
- 초기화\/사용의 `Flags` 구조체의 필드입니다.  
+ MCIF_FLAGS  
+ Initialize/use the `Flags` field in the structure.  
   
- MIF\_ALL  
- 기본 초기화 구조의 필드를 모두 사용 합니다.  
+ MIF_ALL  
+ Initialize/use all of the fields in the structure.  
   
-## 설명  
- 이 값으로 전달 되는 [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) 멤버의 나타내도록 메서드는 [MACHINE\_INFO](../../../extensibility/debugger/reference/machine-info.md) 된 구조를 초기화 합니다.  
+## <a name="remarks"></a>Remarks  
+ These values are passed to the [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) method to indicate which members of the [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) structure are to be initialized.  
   
- 사용의 `Fields` 의 구성원의 `MACHINE_INFO` 구조 필드 사용 되는 및 잘못 된 것을 나타냅니다.  
+ Also used in the `Fields` member of the `MACHINE_INFO` structure to indicate which fields are used and valid.  
   
- 이러한 플래그의 비트와 함께 사용할 수 있습니다 `OR`.  
+ These flags may be combined with a bitwise `OR`.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [MACHINE\_INFO](../../../extensibility/debugger/reference/machine-info.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md)   
  [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md)

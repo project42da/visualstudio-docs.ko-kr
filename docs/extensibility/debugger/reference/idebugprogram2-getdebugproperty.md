@@ -1,55 +1,72 @@
 ---
-title: "IDebugProgram2::GetDebugProperty | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::GetDebugProperty"
-helpviewer_keywords: 
-  - "IDebugProgram2::GetDebugProperty"
+title: IDebugProgram2::GetDebugProperty | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgram2::GetDebugProperty
+helpviewer_keywords:
+- IDebugProgram2::GetDebugProperty
 ms.assetid: d194224e-f0e6-46ab-85d4-9e2639e28946
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugProgram2::GetDebugProperty
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3b7025ba661a864cecd4f7fc32a69486746b776c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-프로그램의 속성을 가져옵니다.  
+---
+# <a name="idebugprogram2getdebugproperty"></a>IDebugProgram2::GetDebugProperty
+Gets the program's properties.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetDebugProperty(   
-   IDebugProperty2** ppProperty  
+```cpp  
+HRESULT GetDebugProperty(   
+   IDebugProperty2** ppProperty  
 );  
 ```  
   
-```c#  
-int GetDebugProperty(   
-   out IDebugProperty2 ppProperty  
+```csharp  
+int GetDebugProperty(   
+   out IDebugProperty2 ppProperty  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `ppProperty`  
- \[out\] 반환 된 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 프로그램의 속성을 나타내는 개체입니다.  
+ [out] Returns an [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object that represents the program's properties.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 이 메서드가 반환 하는 속성 프로그램에 따라 다릅니다.  프로그램이 두 개 이상의 속성을 반환 하는 경우 다음을 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 이 메서드에서 반환 된 개체는 컨테이너의 추가 속성 및 전화는 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 메서드는 모든 속성의 목록을 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ The properties returned by this method are specific to the program. If the program needs to return more than one property, then the [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object returned by this method is a container of additional properties and calling the [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) method returns a list of all properties.  
   
- 프로그램이 모든 개수와 종류를 통해 설명할 수 있습니다 추가 속성을 노출 시킬 수 있습니다 해당 `IDebugProperty2` 인터페이스입니다.  IDE의 추가 프로그램 속성 일반 속성 브라우저 사용자 인터페이스를 통해 표시 됩니다.  
+ A program may expose any number and type of additional properties that can be described through the `IDebugProperty2` interface. An IDE might display the additional program properties through a generic property browser user interface.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)

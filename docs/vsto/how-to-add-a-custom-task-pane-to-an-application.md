@@ -1,67 +1,70 @@
 ---
-title: "방법: 응용 프로그램에 사용자 지정 작업 창 추가"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "사용자 지정 작업 창[Visual Studio에서 Office 개발], 응용 프로그램에 추가"
-  - "작업 창[Visual Studio에서 Office 개발], 응용 프로그램에 추가"
+title: 'How to: Add a Custom Task Pane to an Application | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- task panes [Office development in Visual Studio], adding to application
+- custom task panes [Office development in Visual Studio], adding to application
 ms.assetid: 67b4ed5b-d77e-4630-b851-34bb25bdc9b3
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 8efd2746b20fa8a56ef2629cee26be3240c86c99
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 응용 프로그램에 사용자 지정 작업 창 추가
-  VSTO 추가 기능을 사용하여 위에 나열된 응용 프로그램에 사용자 지정 작업창을 추가할 수 있습니다.  자세한 내용은 [사용자 지정 작업 창](../vsto/custom-task-panes.md)를 참조하세요.  
+# <a name="how-to-add-a-custom-task-pane-to-an-application"></a>How to: Add a Custom Task Pane to an Application
+  You can add a custom task pane to the applications listed above by using VSTO Add-in. For more information, see [Custom Task Panes](../vsto/custom-task-panes.md).  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
 > [!NOTE]  
->  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다.  이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 응용 프로그램에 사용자 지정 작업창 추가  
+## <a name="adding-a-custom-task-pane-to-an-application"></a>Adding a Custom Task Pane to an Application  
   
-#### 응용 프로그램에 사용자 지정 작업창을 추가하려면  
+#### <a name="to-add-a-custom-task-pane-to-an-application"></a>To add a custom task pane to an application  
   
-1.  위에 나열된 응용 프로그램 중 하나에 대한 VSTO 추가 기능 프로젝트를 열거나 만듭니다.  자세한 내용은 [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)를 참조하세요.  
+1.  Open or create a VSTO Add-in project for one of the applications listed above. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-2.  **프로젝트** 메뉴에서 **사용자 정의 컨트롤 추가**를 클릭합니다.  
+2.  On the **Project** menu, click **Add User Control**.  
   
-3.  **새 항목 추가** 대화 상자에서 새 사용자 정의 컨트롤의 이름을 **MyUserControl**로 변경하고 **추가**를 클릭합니다.  
+3.  In the **Add New Item** dialog box, change the name of the new user control to **MyUserControl**, and then click **Add**.  
   
-     사용자 정의 컨트롤이 디자이너에서 열립니다.  
+     The user control opens in the designer.  
   
-4.  **도구 상자**에서 하나 이상의 Windows Forms 컨트롤을 사용자 정의 컨트롤에 추가합니다.  
+4.  Add one or more Windows Forms controls from the **Toolbox** to the user control.  
   
-5.  **ThisAddIn.cs** 또는 **ThisAddIn.vb** 코드 파일을 엽니다.  
+5.  Open the **ThisAddIn.cs** or **ThisAddIn.vb** code file.  
   
-6.  `ThisAddIn` 클래스에 다음 코드를 추가합니다.  이 코드는 `MyUserControl` 및 <xref:Microsoft.Office.Tools.CustomTaskPane>의 인스턴스를 `ThisAddIn` 클래스의 멤버로 선언합니다.  
+6.  Add the following code to the `ThisAddIn` class. This code declares instances of `MyUserControl` and <xref:Microsoft.Office.Tools.CustomTaskPane> as members of the `ThisAddIn` class.  
   
-     [!code-csharp[Trin_TaskPaneBasic#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneBasic/CS/ThisAddIn.cs#1)]
-     [!code-vb[Trin_TaskPaneBasic#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneBasic/VB/ThisAddIn.vb#1)]  
+     [!code-vb[Trin_TaskPaneBasic#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#1)]  [!code-csharp[Trin_TaskPaneBasic#1](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#1)]  
   
-7.  다음 코드를 `ThisAddIn_Startup` 이벤트 처리기에 추가합니다.  이 코드는 `CustomTaskPanes` 컬렉션에 `MyUserControl` 개체를 추가하여 새 <xref:Microsoft.Office.Tools.CustomTaskPane>을 만듭니다.  코드에서 작업창도 표시합니다.  
+7.  Add the following code to the `ThisAddIn_Startup` event handler. This code creates a new <xref:Microsoft.Office.Tools.CustomTaskPane> by adding the `MyUserControl` object to the `CustomTaskPanes` collection. The code also displays the task pane.  
   
-     [!code-csharp[Trin_TaskPaneBasic#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneBasic/CS/ThisAddIn.cs#2)]
-     [!code-vb[Trin_TaskPaneBasic#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneBasic/VB/ThisAddIn.vb#2)]  
+     [!code-vb[Trin_TaskPaneBasic#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#2)]  [!code-csharp[Trin_TaskPaneBasic#2](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#2)]  
   
     > [!NOTE]  
-    >  이 코드는 응용 프로그램의 활성 창과 사용자 지정 작업창을 연결합니다.  일부 응용 프로그램의 경우 작업창이 응용 프로그램의 다른 문서나 항목과 함께 표시되도록 이 코드를 수정하는 것이 좋습니다.  자세한 내용은 [사용자 지정 작업 창](../vsto/custom-task-panes.md)를 참조하세요.  
+    >  This code associates your custom task pane with the active window in the application. For some applications, you might want to modify this code to ensure that the task pane appears with other documents or items in the application. For more information, see [Custom Task Panes](../vsto/custom-task-panes.md).  
   
-## 참고 항목  
- [Office UI 사용자 지정](../vsto/office-ui-customization.md)   
- [사용자 지정 작업 창](../vsto/custom-task-panes.md)   
- [연습: 사용자 지정 작업 창을 사용하여 응용 프로그램 자동화](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)  
+## <a name="see-also"></a>See Also  
+ [Office UI Customization](../vsto/office-ui-customization.md)   
+ [Custom Task Panes](../vsto/custom-task-panes.md)   
+ [Walkthrough: Automating an Application from a Custom Task Pane](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)  
   
   

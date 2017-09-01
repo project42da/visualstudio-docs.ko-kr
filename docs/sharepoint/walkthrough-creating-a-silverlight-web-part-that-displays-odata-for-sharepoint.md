@@ -1,113 +1,106 @@
 ---
-title: "연습: SharePoint용 OData를 표시하는 Silverlight 웹 파트 만들기"
-ms.custom: ""
-ms.date: "02/22/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.SPE.SilverlightWebPart"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: 'Walkthrough: Creating a Silverlight Web Part that Displays OData for SharePoint | Microsoft Docs'
+ms.custom: 
+ms.date: 02/22/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.SPE.SilverlightWebPart
+dev_langs:
+- VB
+- CSharp
 ms.assetid: 92d55e68-8f3f-4bf7-a21b-801c298b04c4
 caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 20
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 04035e9c2925cdc2d7c329509e71b723369a3f8b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
+
 ---
-# 연습: SharePoint용 OData를 표시하는 Silverlight 웹 파트 만들기
-  SharePoint 2010 은 OData를 사용하여 목록 데이터를 노출합니다.  Sharepoint에서 OData 서비스는 RESTful 서비스 ListData.svc에 의해 구현 됩니다.  이 연습에서는 Silverlight 응용 프로그램을 호스팅하는 SharePoint 웹 파트를 만드는 방법을 보여 줍니다.  Silverlight 응용 프로그램은 ListData.svc를 사용하여 SharePoint 공지 사항 목록 정보를 표시 합니다.  자세한 내용은 [SharePoint Foundation REST 인터페이스](http://go.microsoft.com/fwlink/?LinkId=225999) 및 [Open Data Protocol](http://go.microsoft.com/fwlink/?LinkId=226000) 을 참조하십시오.  
-  
- 이 연습에서는 다음 작업을 수행합니다.  
-  
--   [Silverlight 응용 프로그램 및 Silverlight 웹 파트 만들기](#BKMK_creatingSLApp).  
-  
--   [Silverlight 응용 프로그램 사용자 지정](#BKMK_customizeSLApp)  
-  
--   [Silverlight 응용 프로그램 사용자 지정](#BKMK_customizeSLApp).  
-  
--   [Silverlight 응용 프로그램 사용자 지정](#BKMK_customizeSLApp).  
-  
--   [Silverlight 웹 파트 테스트](#BKMK_testSLApp).  
+# <a name="walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>Walkthrough: Creating a Silverlight Web Part that Displays OData for SharePoint
+  SharePoint 2010 exposes its list data by means of OData. In SharePoint, the OData service is implemented by the RESTful service ListData.svc. This walkthrough shows how to create a SharePoint web part that hosts a Silverlight application. The Silverlight application displays SharePoint Announcement list information by using ListData.svc. For more information, see [SharePoint Foundation REST Interface](http://go.microsoft.com/fwlink/?LinkId=225999) and [Open Data Protocol](http://go.microsoft.com/fwlink/?LinkId=226000).  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   지원되는 Microsoft Windows 및 SharePoint 버전.  [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Supported editions of Microsoft Windows and SharePoint. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
 -   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].  
   
-##  <a name="BKMK_creatingSLApp"></a> Silverlight 응용 프로그램 및 Silverlight 웹 파트 만들기  
- 먼저, Visual Studio에서 Silverlight 응용 프로그램을 만듭니다.  Silverlight 응용 프로그램은 ListData.svc 서비스를 사용하여 SharePoint 공지 사항 목록에서 데이터를 검색 합니다.  
+##  <a name="creating-a-silverlight-application-and-silverlight-web-part"></a>Creating a Silverlight Application and Silverlight Web Part  
+ First, create a Silverlight application in Visual Studio. The Silverlight application retrieves data from the SharePoint Announcements list by using the ListData.svc service.  
   
 > [!NOTE]  
->  Silverlight 4.0 이전 버전에서는 SharePoint 목록의 데이터를 참조 하기 위해 필요한 인터페이스를 지원하지 않습니다.  
+>  No versions of Silverlight before 4.0 support the required interfaces for referencing SharePoint list data.  
   
-#### Silverlight 응용 프로그램 및 Silverlight 웹 파트를 만드려면  
+#### <a name="to-create-a-silverlight-application-and-silverlight-web-part"></a>To create a Silverlight Application and Silverlight web part  
   
-1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다.  
+1.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-2.  **Visual C\#** 또는 **Visual Basic** 아래의 **SharePoint** 노드를 확장한 다음 **2010** 을 선택합니다.  
+2.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-3.  템플릿 창에서, **SharePoint 2010 Silverlight 웹 파트** 템플릿을 선택합니다.  
+3.  In the templates pane, choose the **SharePoint 2010 Silverlight Web Part** template.  
   
-4.  **이름** 상자에서 SLWebPartTest를 입력한 후 **OK** 버튼을 선택합니다.  
+4.  In the **Name** box, enter **SLWebPartTest** and then choose the **OK** button.  
   
-     **SharePoint 사용자 지정 마법사** 대화 상자가 나타납니다.  
+     The **SharePoint Customization Wizard** dialog box appears.  
   
-5.  **디버깅에 사용할 사이트 및 보안 수준 지정** 페이지에서, 사이트 정의를 디버깅할 SharePoint 서버 사이트의 URL을 입력하거나 기본 위치\(http:\/\/*system name*\/\)를 사용합니다.  
+5.  On the **Specify the site and security level for debugging** page, enter the URL for the SharePoint server site where you want to debug the site definition, or use the default location (http://*system name*/).  
   
-6.  **이 SharePoint 솔루션의 신뢰 수준을 선택하십시오.** 섹션에서 **팜 솔루션으로 배포** 옵션 단추를 선택합니다.  
+6.  In the **What is the trust level for this SharePoint solution?** section, choose the **Deploy as a farm solution** option button.  
   
-     이 예제에서는 팜 솔루션을 사용하지만, Silverlight 웹 파트 프로젝트는 팜 또는 샌드박스가 적용 된 솔루션으로 배포될 수 있습니다.  샌드박스가 적용된 솔루션과 팜 솔루션 비교에 대한 자세한 내용은 [샌드박스가 적용된 솔루션 고려 사항](../sharepoint/sandboxed-solution-considerations.md)을 참조하십시오.  
+     Although this example uses a farm solution, Silverlight web part projects can be deployed as either farm or sandboxed solutions. For more information about sandboxed solutions and farm solutions, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  **Silverlight 구성 정보를 지정** 페이지의 **Silverlight 웹 파트를 어떻게 연결 하시겠습니까?** 섹션에서 **새 Silverlight 프로젝트 만들기 및 웹 파트에 연결** 옵션 버튼을 선택합니다.  
+7.  In the **How do you want to associate the Silverlight Web Part** section of the **Specify Silverlight Configuration Information** page, choose the **Create a new Silverlight project and associate it with the web part** option button.  
   
-8.  **이름** 을 SLApplication 으로 변경하고 **언어** 를 **Visual Basic** 또는 **Visual C\#** 으로 설정한 다음 **Silverlight 버전** 을 **Silverlight 4.0** 으로 설정합니다.  
+8.  Change the **Name** to **SLApplication**, set **Language** to either **Visual Basic** or **Visual C#**, and then set **Silverlight Version** to **Silverlight 4.0**.  
   
-9. **마침** 단추를 선택합니다.  프로젝트가 **솔루션 탐색기**에 나타납니다.  
+9. Choose the **Finish** button. The projects appear in **Solution Explorer**.  
   
-     솔루션은 두 개의 프로젝트, Silverlight 응용 프로그램 및 Silverlight 웹 파트를 포함합니다.  Silverlight 응용 프로그램은 SharePoint에서 목록 데이터의 검색 및 표시를 하고, Silverlight 웹 파트는 이것을 SharePoint에서 볼 수 있도록 Silverlight 응용 프로그램을 호스트 합니다.  
+     The solution contains two projects: a Silverlight application and a Silverlight web part. The Silverlight application retrieves and displays the list data from SharePoint, and the Silverlight web part hosts the Silverlight application, enabling you to view it in SharePoint.  
   
-##  <a name="BKMK_customizeSLApp"></a> Silverlight 응용 프로그램 사용자 지정  
- Silverlight 응용 프로그램에 코드 및 디자인 요소를 추가 합니다.  
+##  <a name="customizing-the-silverlight-application"></a>Customizing the Silverlight Application  
+ Add code and design elements to the Silverlight application.  
   
-#### Silverlight 응용 프로그램을 사용자 지정 하려면  
+#### <a name="to-customize-the-silverlight-application"></a>To customize the Silverlight Application  
   
-1.  Silverlight 응용 프로그램에서 System.Windows.Data에 대한 어셈블리 참조를 추가 합니다.  자세한 내용은 [방법: 참조 추가 대화 상자를 사용하여 참조 추가 또는 제거](http://msdn.microsoft.com/ko-kr/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)을 참조하십시오.  
+1.  Add an assembly reference to System.Windows.Data in the Silverlight application. For more information, see [NIB How to: Add or Remove References By Using the Add Reference Dialog Box](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).  
   
-2.  **솔루션 탐색기**에서 **참조**의 바로 가기 메뉴를 열고 **서비스 참조 추가**를 선택합니다.  
+2.  In **Solution Explorer**, open the shortcut menu for **References**, and then choose **Add Service Reference**.  
   
     > [!NOTE]  
-    >  Visual Basic 사용 하는 경우, **참조** 노드를 표시하려면 **솔루션 탐색기** 맨 위에 있는 **모든 파일 표시** 아이콘을 사용해야 합니다.  
+    >  If you're using Visual Basic, you must choose the **Show All Files** icon at the top of **Solution Explorer** to display the **References** node.  
   
-3.  **서비스 참조 추가** 대화 상자의 주소 상자에서, **http:\/\/MySPSite** 와 같은 SharePoint 사이트의 URL을 입력 한 다음 **이동** 버튼을 선택합니다.  
+3.  In the Address box of the **Add Service Reference** dialog box, enter the URL of your SharePoint site, such as **http://MySPSite**, and then choose the **Go** button.  
   
-     Silverlight 가 SharePoint OData 서비스 ListData.svc를 찾으면, 주소를 전체 서비스 URL 주소로 바꿉니다.  이 예제에서는 http:\/\/myserver 가 http:\/\/myserver\/\_vti\_bin\/ListData.svc 로 바뀝니다.  
+     When Silverlight locates the SharePoint OData service ListData.svc, it replaces the address with the full service URL. For this example, http://myserver becomes http://myserver/_vti_bin/ListData.svc.  
   
-4.  **확인** 버튼을 선택하여 프로젝트에 서비스 참조를 추가하고, 기본 서비스 이름인 ServiceReference1을 사용 합니다.  
+4.  Choose the **OK** button to add the service reference to the project, and use the default service name, ServiceReference1.  
   
-5.  메뉴 모음에서 **빌드**, **솔루션 빌드**를 선택합니다.  
+5.  On the menu bar, choose **Build**, **Build Solution**.  
   
-6.  새 데이터 원본을 SharePoint 서비스를 기반의 프로젝트에 추가 합니다.  이것을 하려면, 선택 메뉴 모음에서 **보기**, **기타 Windows**, **데이터 소스**를 선택합니다.  
+6.  Add a new data source to the project based on the SharePoint service. To do this, on the menu bar, choose **View**, **Other Windows**, **Data Sources**.  
   
-     **데이터 소스** 창에 작업, 공지 사항, 일정과 같은 사용할 수 있는 모든 SharePoint 목록 데이터가 표시됩니다.  
+     The **Data Sources** window shows all of the available SharePoint list data, such as Tasks, Announcements, and Calendar.  
   
-7.  공지 사항 목록 데이터를 Silverlight 응용 프로그램에 추가 합니다.  **데이터 소스** 창에서 "공지"를 Silverlight 디자이너 창에 추가합니다.  
+7.  Add the Announcements list data to the Silverlight application. You can drag "Announcements" from the **Data Sources** window onto the Silverlight designer.  
   
-     이것은 SharePoint 사이트의 공지 사항 목록에 바인딩된 눈금 컨트롤을 만듭니다.  
+     This creates a grid control bound to the SharePoint site's Announcements list.  
   
-8.  Silverlight 페이지에 맞게 표 컨트롤의 크기를 조정 합니다.  
+8.  Resize the grid control to fit the Silverlight page.  
   
-9. MainPage.xaml 코드 파일 \(Visual C\#의 MainPage.xaml.cs 또는 Visual Basic의 MainPage.xaml.vb\) 에 다음 네임 스페이스 참조를 추가 합니다.  
+9. In the MainPage.xaml code file (MainPage.xaml.cs for Visual C# or MainPage.xaml.vb for Visual Basic), add the following namespace references.  
   
     ```vb  
     ' Add the following three Imports statements.  
@@ -123,9 +116,7 @@ caps.handback.revision: 20
     using System.Data.Services.Client;  
     ```  
   
-<!-- TODO: review snippet reference      [!CODE [SP_SLWebPart#1](SP_SLWebPart#1)]  -->  
-  
-10. 다음 변수 선언을 클래스의 맨 위에 추가합니다.  
+10. Add the following variable declarations at the top of the class.  
   
     ```vb  
     Private context As TeamSiteDataContext  
@@ -138,10 +129,8 @@ caps.handback.revision: 20
     private CollectionViewSource myCollectionViewSource;  
     DataServiceCollection<AnnouncementsItem> announcements = new DataServiceCollection<AnnouncementsItem>();  
     ```  
-  
-<!-- TODO: review snippet reference      [!CODE [SP_SLWebPart#2](SP_SLWebPart#2)]  -->  
-  
-11. `UserControl_Loaded` 프로시저를 다음 코드로 바꿉니다.  
+   
+11. Replace the `UserControl_Loaded` procedure with the following.  
   
     ```vb  
     Private Sub UserControl_Loaded_1(sender As Object, e As RoutedEventArgs)  
@@ -177,12 +166,9 @@ caps.handback.revision: 20
         }  
     }  
     ```  
+     Be sure to replace the *ServerName* placeholder with the name of your server that's running SharePoint.  
   
-<!-- TODO: review snippet reference      [!CODE [SP_SLWebPart#3](SP_SLWebPart#3)]  -->  
-  
-     *ServerName* 자리 표시자를 SharePoint를 실행 하는 서버 이름으로 대체합니다.  
-  
-12. 다음 오류 처리 프로시저를 추가 합니다.  
+12. Add the following error-handling procedure.  
   
     ```vb  
     Private Sub announcements_LoadCompleted(sender As Object, e As LoadCompletedEventArgs)  
@@ -210,50 +196,49 @@ caps.handback.revision: 20
         }  
     }  
     ```  
+       
+## <a name="modifying-the-silverlight-web-part"></a>Modifying the Silverlight Web Part  
+ Change a property in the Silverlight web part project to enable Silverlight debugging.  
   
-<!-- TODO: review snippet reference      [!CODE [SP_SLWebPart#4](SP_SLWebPart#4)]  -->  
+#### <a name="to-modify-the-silverlight-web-part"></a>To modify the Silverlight web part  
   
-## Silverlight 웹 파트 수정  
- Silverlight 디버깅을 활성화 하려면 Silverlight 웹 파트 프로젝트에 속성을 변경 합니다.  
+1.  Open the shortcut menu for the Silverlight web part project (**SLWebPartTest**), and then choose **Properties**.  
   
-#### Silverlight 웹 파트를 수정하려면  
+2.  In the **Properties** window, choose the **SharePoint** tab.  
   
-1.  Silverlight 웹 파트 프로젝트 \(**SLWebPartTest**\) 의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
+3.  If it's not already selected, select the **Enable Silverlight debugging (instead of Script debugging)** check box.  
   
-2.  **속성** 창에서 **SharePoint** 탭을 선택합니다.  
+4.  Save the project.  
   
-3.  선택 되어 있지 않은 경우, **\(스크립트 디버깅 대신\) Silverlight 디버깅 사용** 확인란을 선택합니다.  
+##  <a name="testing-the-silverlight-web-part"></a>Testing the Silverlight Web Part  
+ Test the new Silverlight web part in SharePoint to ensure that it displays the SharePoint list data properly.  
   
-4.  프로젝트를 저장합니다.  
+#### <a name="to-test-the-silverlight-web-part"></a>To test the Silverlight web part  
   
-##  <a name="BKMK_testSLApp"></a> Silverlight 웹 파트 테스트  
- SharePoint 목록 데이터가 올바르게 표시 되도록 하려면 SharePoint에서 새 Silverlight 웹 파트를 테스트 합니다.  
+1.  Choose the F5 key to build and run the SharePoint solution.  
   
-#### Silverlight 웹 파트를 테스트하려면  
+2.  In SharePoint, on the **Site Actions** menu, choose **New Page**.  
   
-1.  F5 키를 눌러 SharePoint 솔루션을 빌드하고 실행합니다.  
+3.  In the **New Page** dialog, enter a title, such as **SL Web Part Test**, and then choose the **Create** button.  
   
-2.  Sharepoint의 **사이트 작업** 메뉴에서 **새 페이지** 를 선택합니다.  
+4.  In the page designer, on the **Editing Tools** tab, choose **Insert**.  
   
-3.  **새 페이지** 다이얼로그에서, SL 웹 파트 테스트와 같은 제목을 입력한 다음 **만들기** 버튼을 선택합니다.  
+5.  On the tab strip, choose **Web Part**.  
   
-4.  페이지 디자이너의 **편집 도구** 탭에서 **삽입** 을 선택합니다.  
+6.  In the **Categories** box, choose the **Custom** folder.  
   
-5.  탭 스트립에서 **웹 파트** 를 선택합니다.  
+7.  In the **Web Parts** list, choose the Silverlight web part, and then choose the **Add** button to add the web part to the designer.  
   
-6.  **범주** 상자에서 **사용자 지정** 폴더를 선택합니다.  
+8.  After you have made all of the additions to the web page that you want, choose the **Page** tab, and then choose the **Save & Close** button on the tool bar.  
   
-7.  **웹 파트** 목록에서, Silverlight 웹 파트를 선택한 다음 **추가** 버튼을 선태갛여 디자이너에 웹 파트를 추가합니다.  
-  
-8.  웹 페이지에 추가할 것을 다 추가하고 난 후, **페이지** 탭을 선택하고, 도구 모음에서 **저장 & 닫기** 버튼을 선택합니다.  
-  
-     이제 Silverlight 웹 파트는 SharePoint 사이트의 알림 데이터를 표시합니다.  기본적으로 페이지는 SharePoint에서 사이트 페이지 목록에 저장 됩니다.  
+     The Silverlight web part should now be displaying Announcement data from the SharePoint site. By default, the page is stored in the Site Pages list in SharePoint.  
   
     > [!NOTE]  
-    >  Silverlight에서 도메인 간 데이터를 액세스할 때, Silverlight 는 웹 응용 프로그램을 악용하는데 사용될 수 있는 보안 취약점으로부터 보호 합니다.  Silverlight에서 원격 데이터에 액세스 할 때 문제가 발생 하면 [도메인 경계간 사용할 수 있는 서비스 만들기](http://go.microsoft.com/fwlink/?LinkId=223276) 을 참조하십시오.  
+    >  When accessing data in Silverlight across domains, Silverlight guards against security vulnerabilities that can be used to exploit web applications. If you encounter problems when accessing remote data in Silverlight, see [Making a Service Available Across Domain Boundaries](http://go.microsoft.com/fwlink/?LinkId=223276).  
   
-## 참고 항목  
- [SharePoint를 위한 웹 파트 만들기](../sharepoint/creating-web-parts-for-sharepoint.md)   
- [SharePoint 솔루션 패키지 배포, 게시 및 업그레이드](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)  
+## <a name="see-also"></a>See Also  
+ [Creating Web Parts for SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)   
+ [Deploying, Publishing, and Upgrading SharePoint Solution Packages](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)  
   
   
+

@@ -1,185 +1,221 @@
 ---
-title: "옵션 대화 상자, 디버깅, 일반 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.options.General"
-  - "VS.ToolsOptionsPages.Debugger.General"
-  - "VS.ToolsOptionsPages.Debugger.ENC"
-  - "vs.debug.options.ENC"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "옵션 대화 상자, 디버깅"
+title: General, Debugging, Options Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 05/23/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.options.General
+- VS.ToolsOptionsPages.Debugger.General
+- VS.ToolsOptionsPages.Debugger.ENC
+- vs.debug.options.ENC
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- Options dialog box, debugging
 ms.assetid: b33aee0b-43c3-4c26-8ed4-bc673f491503
 caps.latest.revision: 46
-caps.handback.revision: 43
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 옵션 대화 상자, 디버깅, 일반
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 643d1892815822b6616d379d07909731c6100ba4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-**도구\/옵션\/디버깅\/일반** 페이지에서 다음 옵션을 설정할 수 있습니다.  
+---
+# <a name="general-debugging-options-dialog-box"></a>General, Debugging, Options Dialog Box
+The **Tools > Options > Debugging > General** page lets you set the following options:  
   
- **모든 중단점을 삭제하기 전에 확인**  
- **모든 중단점 삭제** 명령을 완료하기 전에 사용자 확인을 요청하는 메시지를 표시합니다.  
+**Ask before deleting all breakpoints**  
+Requires confirmation before completing the **Delete All Breakpoints** command.  
   
- **한 프로세스가 중단될 때 모든 프로세스 중단**  
- 중단이 발생하면 디버거가 연결되어 있는 모든 프로세스를 동시에 중단합니다.  
+**Break all processes when one process breaks**  
+Simultaneously breaks all processes to which the debugger is attached, when a break occurs.  
   
- **예외가 AppDomain 또는 관리\/네이티브 경계를 넘어서면 중단**  
- 관리 또는 혼합 모드 디버깅에서 다음 조건이 충족되는 경우 공용 언어 런타임은 응용 프로그램 도메인 경계나 관리\/네이티브 경계를 넘어서는 예외를 catch할 수 있습니다.  
+**Break when exceptions cross AppDomain or managed/native boundaries**  
+In managed or mixed-mode debugging, the common language runtime can catch exceptions that cross application domain boundaries or managed/native boundaries when the following conditions are true:  
   
- 1\) 네이티브 코드가 COM Interop를 사용하여 관리 코드를 호출하고 관리 코드가 예외를 throw하는 경우.[Introduction to COM Interop](/dotnet/visual-basic/programming-guide/com-interop/introduction-to-com-interop)을 참조하세요.  
+1\) When native code calls managed code by using COM Interop and the managed code throws an exception. See [Introduction to COM Interop](/dotnet/articles/visual-basic/programming-guide/com-interop/introduction-to-com-interop).  
   
- 2\) 응용 프로그램 도메인 1에서 실행되는 관리 코드가 응용 프로그램 도메인 2의 관리 코드를 호출하고 응용 프로그램 도메인 2의 코드가 예외를 throw하는 경우.[응용 프로그램 도메인으로 프로그래밍](http://msdn.microsoft.com/ko-kr/bd36055b-56bd-43eb-b4d8-820c37172131)을 참조하세요.  
+2\) When managed code running in application domain 1 calls managed code in application domain 2, and the code in application domain 2 throws an exception. See [Programming with Application Domains](/dotnet/articles/framework/app-domains/index).  
+
+3\) When code calls a function by using reflection, and the function throws an exception. See [Reflection](/dotnet/framework/reflection-and-codedom/reflection).  
   
- 3\) 코드가 리플렉션을 사용하여 함수를 호출하고 이 함수가 예외를 throw하는 경우.[리플렉션](../Topic/Reflection%20in%20the%20.NET%20Framework.md)을 참조하세요.  
+In condition 2 and 3, the exception is sometimes caught by managed code in `mscorlib` instead of the common language runtime. This option does not affect breaking on exceptions caught by `mscorlib`.  
   
- 2\)와 3\)의 경우 예외는 때때로 공용 언어 런타임 대신 `mscorlib`의 관리 코드를 통해 catch될 수 있습니다. 이 옵션은 `mscorlib`를 통해 catch된 예외에서의 중단에 영향을 미치지 않습니다.  
+**Enable address-level debugging**  
+ Enables advanced features for debugging at the address level (the **Disassembly** window, the **Registers** window, and address breakpoints).  
   
- **주소 수준 디버깅 사용**  
- 주소 수준\(**디스어셈블리** 창, **레지스터** 창 및 주소 중단점\)에서 디버깅을 위한 고급 기능을 활성화합니다.  
+- **Show disassembly if source is not available**  
+    Automatically shows the **Disassembly** window when you try to debug code for which source is unavailable.  
   
- **소스를 사용할 수 없을 경우 디스어셈블리 표시**  
- 소스를 사용할 수 없는 코드를 디버깅하려고 할 때 자동으로 **디스어셈블리** 창을 표시합니다.  
+**Enable breakpoint filters**  
+Enables you to set filters on breakpoints so that they will affect only specific processes, threads, or computers.  
+ 
+**Use the new Exception Helper**  
+Enables the Exception Helper (Visual Studio 2017) that replaces the exception assistant.
   
- **중단점 필터 사용**  
- 특정 프로세스, 스레드 또는 컴퓨터에만 영향을 미치도록 중단점에 필터를 설정할 수 있습니다.  
+> [!NOTE]
+> For managed code, this option was previously called **Enable the exception assistant** . 
   
- **예외 도우미 사용**  
- 관리 코드에만 해당됩니다. 관리되는 예외인 경우 예외 도우미 대화 상자가 열립니다.[Exception Assistant](../Topic/Exception%20Assistant.md)을 참조하세요.  
+**Enable Just My Code**  
+The debugger displays and steps into user code ("My Code") only, ignoring system code and other code that is optimized or that does not have debugging symbols.
+
+- **Warn if no user code on launch (Managed only)**  
+    When debugging starts with Just My Code enabled, this option warns you if there is no user code ("My Code"). 
+
+**Enable .NET Framework source stepping**  
+Allows the debugger to step into .NET Framework source. Enabling this option automatically disables Just My Code .NET Framework symbols will be downloaded to a cache location. You can change the cache location in the **Options** dialog box, **Debugging** category, **Symbols** page.  
   
- **처리되지 않은 예외에 대한 호출 스택 해제**  
- **호출 스택** 창에서 호출 스택을 처리되지 않은 예외가 발생하기 전 시점으로 롤백합니다.  
+**Step over properties and operators (Managed only)**  
+Prevents the debugger from stepping into properties and operators in managed code.  
   
- **내 코드만 사용**  
- 디버거는 시스템 코드 및 최적화되었거나 디버깅 기호가 없는 다른 코드를 무시하고 사용자 코드\("내 코드"\)만 표시하고 한 단계씩 실행합니다.  
+**Enable property evaluation and other implicit function calls**  
+Turns on automatic evaluation of properties and implicit function calls in variables windows and the **QuickWatch** dialog box.  
   
- **변수 창에 사용자가 작성하지 않은 개체의 모든 멤버 표시\(Visual Basic 전용\)**  
- "내 코드"가 아닌 사용자가 작성하지 않은 코드에 있는 개체의 public이 아닌 멤버를 표시하도록 설정합니다.  
+- **Call string conversion function on objects in variables windows (C# and JavaScript only)**  
+    Executes an implicit string conversion call when evaluating objects in variables windows. Therefore, that result is displayed as a string instead of the type name. Only applies while debugging in C# code. This setting may be overridden by the DebuggerDisplay attribute (see [Using the DebuggerDisplay Attribute](../debugger/using-the-debuggerdisplay-attribute.md)).  
   
- **시작할 때 사용자 코드가 없으면 경고**  
- 내 코드만 옵션을 활성화하고 디버깅을 시작하는 경우 사용자 코드\("내 코드"\)가 없으면 경고 메시지가 나타납니다.  
-  
- **.NET Framework 소스 단계별 실행 사용**  
- 디버거에서 .NET Framework 소스를 한 단계씩 실행할 수 있도록 허용합니다. 이 옵션을 사용하면 자동으로 "내 코드만" 기능이 사용되지 않습니다. .NET Framework 기호는 캐시 위치로 다운로드됩니다.**옵션** 대화 상자에 있는 **디버깅** 범주의 **기호** 페이지에서 캐시 위치를 변경할 수 있습니다.  
-  
- **속성 및 연산자 건너뛰기\(관리 전용\)**  
- 디버거가 관리 코드에서 속성 및 연산자를 한 단계씩 실행할 수 없도록 설정합니다.  
-  
- **속성 확인 및 기타 암시적 함수 호출 사용**  
- 변수 창과 **간략한 조사식** 대화 상자에서 속성 자동 확인 및 암시적 함수 호출을 설정합니다.  
-  
- **변수 창의 개체에서 문자열 변환 함수 호출\(C\# 및 JavaScript 전용\)**  
- 변수 창에서 개체를 확인할 때 암시적 문자열 변환 호출을 실행합니다. 따라서 그 결과가 형식 이름 대신 문자열로 표시됩니다. C\# 코드에서 디버깅하는 동안에만 적용됩니다. 이 설정은 DebuggerDisplay 특성을 통해 재정의될 수도 있습니다\([DebuggerDisplay 특성 사용](../debugger/using-the-debuggerdisplay-attribute.md) 참조\).  
-  
- **소스 서버 지원 사용**  
- SrcSrv\(`srcsrv.dll`\) 프로토콜을 구현하는 소스 서버로부터 소스 파일을 가져오도록 Visual Studio 디버거에 지시합니다. Team Foundation Server와 Debugging Tools for Windows는 프로토콜을 구현하는 두 가지 소스 서버입니다. SrcSrv 설치에 대한 자세한 내용은 Debugging Tools for Windows 설명서를 참조하십시오. 또한 [기호 파일\(.pdb\) 및 원본 파일 지정](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)을 참조하세요.  
+**Enable source server support**  
+Tells the Visual Studio debugger to get source files from source servers that implement the SrcSrv (`srcsrv.dll`) protocol. Team Foundation Server and the Debugging Tools for Windows are two source servers that implement the protocol. For more information about SrcSrv setup, see the [SrcSrv](hhttps://msdn.microsoft.com/en-us/library/windows/hardware/ff558791(v=vs.85).aspx) documentation. In addition, see [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
 > [!IMPORTANT]
->  .pdb 파일을 읽으면 파일에서 임의의 코드가 실행될 수 있으므로 반드시 서버를 신뢰해야 합니다.  
+>  Because reading .pdb files can execute arbitrary code in the files, make sure that you trust the server.  
   
- **소스 서버 진단 메시지를 출력 창에 표시**  
- 소스 서버 지원이 활성화된 경우 이 설정은 진단 표시를 설정합니다.  
+- **Print source server diagnostic messages to the Output window**  
+    When source server support is enabled, this setting turns on diagnostic display.  
   
- **부분 신뢰 어셈블리에 대해 소스 서버 허용\(관리 전용\)**  
- 소스 서버 지원이 활성화된 경우 이 설정은 부분 신뢰 어셈블리의 소스를 검색하지 않는 기본 동작을 재정의합니다.  
+- **Allow source server for partial trust assemblies (Managed only)**  
+    When source server support is enabled, this setting overrides the default behavior of not retrieving sources for partial trust assemblies.  
+
+- **Enable source link support**  
+    Tells the Visual Studio debugger to download source files for .pdb files that contain Source Link information. For more information about Source Link, see the [Source Link Specification](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/source_link.md).
+
+    > [!IMPORTANT]
+    >  Because Source Link will download files using http or https, make sure you trust the .pdb file.  
   
- **중단점과 현재 문의 전체 줄 강조 표시**  
- 디버거가 중단점이나 현재 문을 강조 표시할 때 전체 줄을 강조 표시합니다.  
+**Highlight entire line for breakpoints and current statement (C++ only)**  
+When the debugger highlights a breakpoint or current statement, it highlights the entire line.  
   
- **소스 파일이 원래 버전과 정확하게 일치해야 함**  
- 디버깅 중인 실행 파일을 빌드하는 데 사용되는 소스 코드의 버전이 소스 파일과 일치하는지 확인하도록 디버거에 지시합니다. 버전이 일치하지 않으면 일치하는 소스를 찾으라는 메시지가 표시됩니다. 일치하는 소스가 없으면 디버깅하는 동안 소스 코드가 표시되지 않습니다.  
+**Require source files to exactly match the original version**  
+Tells the debugger to verify that a source file matches the version of the source code used to build the executable you are debugging. If the version does not match, you'll be prompted to find a matching source. If a matching source is not found, the source code will not be displayed during debugging. 
   
- **출력 창의 모든 텍스트를 \[직접 실행\] 창으로 리디렉션**  
- 일반적으로 **출력** 창에 표시되는 모든 디버거 메시지를 **직접 실행** 창으로 보냅니다.  
+**Redirect all Output window text to the Immediate window**  
+Sends all debugger messages that would ordinarily appear in the **Output** window to the **Immediate** window instead.  
   
- **변수 창에서 개체의 원시 구조체 표시**  
- 모든 개체 구조체 뷰 사용자 지정을 해제합니다. 뷰 사용자 지정에 대한 자세한 내용은 [사용자 지정 데이터 형식 표시](../debugger/create-custom-views-of-dot-managed-objects.md)를 참조하세요.  
+**Show raw structure of objects in variables windows**  
+Turns off all object structure view customizations. For more information about view customizations, see [Create custom views of .managed objects](../debugger/create-custom-views-of-dot-managed-objects.md).  
   
- **모듈을 로드할 때 JIT 최적화 기능 사용 안 함\(관리 전용\)**  
- 디버거가 연결되어 있는 동안 모듈이 로드되고 JIT가 컴파일될 때 관리 코드의 JIT 최적화를 해제합니다. 최적화를 해제하면 성능이 저하될 수 있지만 일부 문제를 보다 쉽게 디버깅할 수 있습니다. 내 코드만 기능을 사용하는 경우 JIT 최적화를 해제하면 사용자가 작성하지 않은 코드가 사용자 코드\("내 코드"\)로 표시될 수 있습니다.  
+**Suppress JIT optimization on module load (Managed only)**  
+Disables the JIT optimization of managed code when a module is loaded and JIT is compiled while the debugger is attached. Disabling optimization may make it easier to debug some problems, although at the expense of performance. If you are using Just My Code, suppressing JIT optimization can cause non-user code to appear as user code ("My Code").
+
+**Enable JavaScript debugging for ASP.NET (Chrome and IE)** Enables the script debugger for ASP.NET apps. On first use in Chrome, you may need to sign into the browser on first use to enable Chrome extensions that you have installed. Disable this option to revert to legacy behavior.    
+
+**Load dll exports**  
+Loads dll export tables. Symbol information from dll export tables can be useful if you are working with Windows messages, Windows procedures (WindowProcs), COM objects, or marshaling, or any dll for which you do not have symbols. Reading dll export information involves some overhead. Therefore, this capability is turned off by default.  
   
- **시작할 때 기호가 없으면 경고\(네이티브 전용\)**  
- 디버거에 기호 정보가 없는 프로그램을 디버깅하려고 할 때 경고 대화 상자가 표시됩니다.  
+To see what symbols are available in the export table of a dll, use `dumpbin /exports`. Symbols are available for any 32-bit system dll. By reading the `dumpbin /exports` output, you can see the exact function name, including non-alphanumeric characters. This is useful for setting a breakpoint on a function. Function names from dll export tables might appear truncated elsewhere in the debugger. The calls are listed in the calling order, with the current function (the most deeply nested) at the top. For more information, see [dumpbin /exports](/cpp/build/reference/dash-exports).  
   
- **시작할 때 스크립트 디버깅을 사용할 수 없으면 경고**  
- 스크립트 디버깅을 사용하지 않고 디버거를 시작할 때 경고 대화 상자가 표시됩니다.  
+**Show parallel stacks diagram bottom-up**  
+Controls the direction in which stacks are displayed in the **Parallel Stacks** window.  
   
- **dll 내보내기 로드**  
- dll 내보내기 테이블이 로드됩니다. Windows 메시지, Windows 프로시저\(WindowProcs\), COM 개체, 마샬링 또는 기호가 없는 dll을 사용하여 작업하는 경우 dll 내보내기 테이블의 기호 정보가 유용할 수 있지만, dll 내보내기 정보를 읽으면 일부 오버헤드가 발생합니다. 따라서 이 기능은 기본적으로 해제되어 있습니다.  
+**Ignore GPU memory access exceptions if the data written didn't change the value**  
+Ignores race conditions that were detected during debugging if the data didn't change. For more information, see [Debugging GPU Code](../debugger/debugging-gpu-code.md).  
   
- dll의 내보내기 테이블에서 사용할 수 있는 기호를 확인하려면 `dumpbin /exports`를 사용하세요. 모든 32비트 시스템 dll에 기호를 사용할 수 있습니다.`dumpbin /exports` 출력을 읽으면 영숫자가 아닌 문자를 포함하여 정확한 함수 이름을 확인할 수 있습니다. 이 방법은 함수에 중단점을 설정하는 데 유용합니다. dll 내보내기 테이블에 있는 함수 이름은 디버거에서 일부가 잘린 상태로 나타날 수 있습니다. 호출은 현재 함수\(가장 안쪽에 중첩된\)가 맨 위에 표시되어 호출한 순서로 나열됩니다. 자세한 내용은 [dumpbin \/exports](/visual-cpp/build/reference/dash-exports)를 참조하십시오.  
+**Use Managed Compatibility Mode**  
+Replaces the default debugging engine with a legacy version to enable these scenarios:  
   
- **병렬 스택 다이어그램 거꾸로 표시**  
- **병렬 스택** 창에 스택이 표시되는 방향을 제어합니다.  
+- You are using a .NET Framework language other than C#, VB, or F# that provides its own Expression Evaluator (this includes C++/CLI).  
   
- **기록된 데이터에서 값을 변경하지 않은 경우 GPU 메모리 액세스 예외를 무시하십시오.**  
- 데이터가 변경되지 않은 경우 디버깅 중 검색된 경합 상태를 무시합니다. 자세한 내용은 [GPU 코드 디버깅](../debugger/debugging-gpu-code.md)을 참조하세요.  
+- You want to enable Edit and Continue for C++ projects while mixed mode debugging.  
   
- **관리되는 호환성 모드 사용**  
- 다음과 같은 시나리오를 사용할 수 있도록 기본 디버깅 엔진을 레거시 버전으로 바꿉니다.  
+Note that choosing Managed Compatibility mode disables some features that are implemented only in the default debugging engine. 
+
+**Use the legacy C# and VB expression evaluators**  
+The debugger will use the Visual Studio 2013 C#/VB expression evaluators instead of the Visual Studio 2015 Roslyn-based expression evaluators.    
   
--   고유의 식 계산기를 제공하는 C\#, VB 또는 F\# 이외의 .NET Framework 언어를 사용하는 경우\(C\+\+\/CLI 포함\)  
+**Warn when using custom debugger visualizers against potentially unsafe processes (Managed only)**  
+Visual Studio warns you when you are using a custom debugger visualizer that is running code in the debuggee process, because it could be running unsafe code.  
   
--   혼합 모드 디버깅 중 C\+\+ 프로젝트에 편집하며 계속하기를 사용하려는 경우  
+**Enable Windows debug heap allocator (Native only)**  
+Enables the windows debug heap to improve heap diagnostics. Enabling this option will impact debugging performance.  
   
- 관리되는 호환성 모드를 선택하면 기본 디버깅 엔진에서만 구현되는 일부 기능이 해제됩니다.  
+**Enable UI Debugging Tools for XAML**  
+The Live Visual Tree and the Live Property Explore windows will appear when you start debugging (F5) a supported project type. For more information, see [Inspect XAML properties while debugging](../debugger/inspect-xaml-properties-while-debugging.md).  
   
- **기본 호환성 모드 사용**  
- 이 옵션을 선택하면 디버거에서는 새 네이티브 디버거 대신 Visual Studio 2010의 네이티브 디버거를 사용합니다.  
+- **Preview selected elements in Live Visual Tree**  
+    The XAML element whose context is selected is also selected in the **Live Visual Tree** window.  
   
- 새 디버깅 엔진에서는 .NET C\+\+ 식 평가를 지원하지 않으므로 .NET C\+\+ 코드를 디버깅할 경우 이 옵션을 사용해야 합니다. 하지만 기본 호환성 모드를 사용할 경우 현재 디버거 구현에 따라 많은 기능을 작동할 수 없습니다. 예를 들어 레거시 엔진에는 Visual Studio 2015 프로젝트에 기본 제공되는 `std::string`과 같은 형식에 대한 시각화 도우미가 많이 부족합니다.   이러한 경우 최적의 디버깅 환경을 위해 Visual Studio 2013 프로젝트를 사용하세요.  
+- **Show runtime tools in application**  
+    Shows the **Live Visual Tree** commands in a toolbar on the main window of the XAML application that is being debugged. This option was introduced in Visual Studio 2015 Update 2. 
+
+- **Enable XAML Edit and Continue** Allows you to use Edit and Continue feature for XAML code. 
   
- **레거시 C\# 식 계산기 사용**  
- 디버거에서는 Visual Studio 2015 Roslyn 기반 식 계산기 대신 Visual Studio 2013 C\#\/VB 식 계산기를 사용합니다.  
+**Enable Diagnostic Tools while debugging**  
+The **Diagnostic Tools** window appears while you are debugging.
   
- **안전하지 않을 수 있는 코드에 대해 사용자 지정 디버거 시각화 도우미를 사용할 때 경고**  
- 디버거 프로세스에서 코드를 실행 중인 사용자 지정 디버거 시각화 도우미를 사용할 경우 안전하지 않은 코드가 실행될 수 있으므로 Visual Studio에서 경고합니다.  
+**Show elapsed time PerfTip while debugging**  
+The code window displays the elapsed time of a given method call when you are debugging.  
   
- **Windows 디버그 힙 할당자 사용\(네이티브 전용\)**  
- Windows 디버그 힙을 사용하여 힙 진단을 향상시킬 수 있도록 합니다. 이 옵션을 사용하면 디버깅 성능에 영향을 줍니다.  
+**Enable Edit and Continue**  
+You can use the Edit and Continue functionality while debugging .  
   
- **XAML용 UI 디버깅 도구 사용**  
- 지원되는 프로젝트 형식에 대한 디버깅을 시작하면\(F5\) 라이브 시각적 트리 및 라이브 속성 탐색기 창이 나타납니다. 자세한 내용은 [디버그하는 동안 XAML 속성 검사](../debugger/inspect-xaml-properties-while-debugging.md)을 참조하세요.  
+- **Enable Native Edit and Continue**  
+    You can use the Edit and Continue functionality while debugging native C++ code. For more information, see [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md).  
   
- **라이브 표시 트리에서 선택한 요소 미리 보기**  
- 컨텍스트가 선택된 XAML 요소가 라이브 시각적 트리 창에서도 선택됩니다.  
+- **Apply changes on continue (Native only)**  
+    Visual Studio automatically compiles and applies any outstanding code changes you have made when continuing the process from a break state. If not selected, you can choose to apply changes using the "Apply Code Changes" item under the Debug menu.  
   
- **디버그하는 동안 진단 도구 사용**  
- 디버깅하는 동안 진단 도구 창이 나타납니다. 자세한 내용은 [디버거 통합 진단](../Topic/Debugger-integrated%20profiling.md)을 참조하십시오.  
+- **Warn about stale code (Native only)**  
+    Get warnings about stale code.    
+
+**Show run to click button in editor while debugging** When this option is selected, the [Run to Click](debugger-feature-tour.md#run-to-a-point-in-your-code-quickly-using-the-mouse) button will be shown while debugging.
+
+## <a name="options-supported-in-older-versions-of-visual-studio"></a>Options supported in older versions of Visual Studio
+
+If you are using an older version of Visual Studio, some additional options might be present.
+
+**Enable the exception assistant**  
+For managed code, enabled the exception assistant. In Visual Studio 2017, the Exception Helper replaced the exception assistant.
+
+**Unwind the call stack on unhandled exceptions**  
+Causes the **Call Stack** window to roll back the call stack to the point before the unhandled exception occurred. 
+
+**Warn if no symbols on launch (native only)**  
+Displays a warning dialog box when you try to debug a program for which the debugger has no symbol information. 
+
+**Warn if script debugging is disabled on launch**  
+Displays a warning dialog box when the debugger is launched with script debugging disabled.
+
+**Use Native Compatibility Mode**  
+When this option is selected, the debugger uses the Visual Studio 2010 native debugger instead of the new native debugger.  
   
- **디버깅 중에 경과한 시간 성능 팁 표시**  
- 디버깅 중에 지정된 메서드를 호출하는 데 경과된 시간이 코드 창에 표시됩니다.  
+You should use this option when you are debugging .NET C++ code, because the new debugging engine does not support evaluating .NET C++ expressions. However, enabling Native Compatibility Mode disables many features that depend on the current debugger implementation to operate. For example, the legacy engine lacks many visualizers for built-in types like `std::string` in Visual Studio 2015 projects.   Please use Visual Studio 2013 projects for the optimal debugging experience in these cases.
   
- **편집하며 계속하기 사용**  
- 디버깅 중에 편집하며 계속하기 기능을 사용할 수 있습니다.  
-  
- **네이티브 편집하며 계속하기 사용**  
- 네이티브 C\+\+ 코드 디버깅 중에 편집하며 계속하기 기능을 사용할 수 있습니다. 자세한 내용은 [편집하며 계속하기\(Visual C\+\+\)](../debugger/edit-and-continue-visual-cpp.md)을 참조하십시오.  
-  
- **계속할 때 변경 내용 적용\(네이티브 전용\)**  
- Visual Studio에서는 중단 상태에서 프로세스를 계속하면 진행 중인 코드 변경 내용을 자동으로 컴파일하여 적용합니다. 이 옵션을 선택하지 않으면 디버그 메뉴에서 "코드 변경 내용 적용" 항목을 사용하여 변경 내용을 적용할 수 있습니다.  
-  
- **부실 코드 경고\(네이티브 전용\)**  
- 부실 코드 경고를 가져옵니다.  
-  
- **미리 컴파일 허용\(네이티브 전용\)**  
- 미리 컴파일이 허용됩니다.  
-  
-## 참고 항목  
- [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Debugging in Visual Studio](../debugger/index.md) [Debugger Feature Tour](../debugger/debugger-feature-tour.md)

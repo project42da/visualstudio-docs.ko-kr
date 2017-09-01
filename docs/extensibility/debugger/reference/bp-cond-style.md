@@ -1,67 +1,84 @@
 ---
-title: "BP_COND_STYLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_COND_STYLE"
-helpviewer_keywords: 
-  - "BP_COND_STYLE 열거형"
+title: BP_COND_STYLE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BP_COND_STYLE
+helpviewer_keywords:
+- BP_COND_STYLE enumeration
 ms.assetid: a93b1412-f447-48a1-af9d-38f3dbb3092f
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# BP_COND_STYLE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3148f8a1aaa333c8ae0cf55bdc3bc4e218c0f574
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-보류 중단점 조건 스타일을 지정 하 고 중단점을 바인딩할.  
+---
+# <a name="bpcondstyle"></a>BP_COND_STYLE
+Specifies the breakpoint condition style for pending and bound breakpoints.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-enum enum_BP_COND_STYLE {   
-   BP_COND_NONE         = 0x0000,  
-   BP_COND_WHEN_TRUE    = 0x0001,  
-   BP_COND_WHEN_CHANGED = 0x0002  
+```cpp  
+enum enum_BP_COND_STYLE {   
+   BP_COND_NONE         = 0x0000,  
+   BP_COND_WHEN_TRUE    = 0x0001,  
+   BP_COND_WHEN_CHANGED = 0x0002  
 };  
 typedef DWORD BP_COND_STYLE;  
 ```  
   
-```c#  
-public enum enum_BP_COND_STYLE {   
-   BP_COND_NONE         = 0x0000,  
-   BP_COND_WHEN_TRUE    = 0x0001,  
-   BP_COND_WHEN_CHANGED = 0x0002  
+```csharp  
+public enum enum_BP_COND_STYLE {   
+   BP_COND_NONE         = 0x0000,  
+   BP_COND_WHEN_TRUE    = 0x0001,  
+   BP_COND_WHEN_CHANGED = 0x0002  
 };  
 ```  
   
-## Members  
- BP\_COND\_NONE  
- 중단점 중단점의 위치에 도달할 때 발생 합니다.  지정 된 중단점 조건 없음입니다.  
+## <a name="members"></a>Members  
+ BP_COND_NONE  
+ Fires the breakpoint when the breakpoint's position is reached. No breakpoint condition specified.  
   
- BP\_COND\_WHEN\_TRUE  
- 평가 때 조건식 중단점에 관련 되는 중단점을 발생 시키는 `true`.  
+ BP_COND_WHEN_TRUE  
+ Fires the breakpoint only when the conditional expression associated with the breakpoint evaluates to `true`.  
   
- BP\_COND\_WHEN\_CHANGED  
- 중단점은 조건식의 값 중단점에 연관 될 때의 이전 실행에서 변경 된 발생.  
+ BP_COND_WHEN_CHANGED  
+ Fires the breakpoint only when the value of the conditional expression associated with the breakpoint has changed from its previous evaluation.  
   
-## 설명  
- 사용 되는 `styleCondition` 의 멤버는 [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) 구조.  
+## <a name="remarks"></a>Remarks  
+ Used for the `styleCondition` member of the [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) structure.  
   
-## 요구 사항  
- 헤더: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
- [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)

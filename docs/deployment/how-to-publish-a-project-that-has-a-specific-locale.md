@@ -1,51 +1,68 @@
 ---
-title: "방법: 특정 로캘이 지정된 프로젝트 게시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "응용 프로그램 배포[ClickOnce], 지역화된 프로젝트"
-  - "로캘, 배포"
-  - "로캘, 게시"
-  - "매크로, 배포"
-  - "매크로, 게시"
-  - "지역화된 프로젝트 게시"
-  - "게시, 지역화된 프로젝트"
+title: 'How to: Publish a Project That Has a Specific Locale | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- publishing, localized projects
+- locales, publishing for
+- deploying applications [ClickOnce], localized projects
+- locales, deploying for
+- publishing localized projects
+- macros, deploying with
+- macros, publishing with
 ms.assetid: 7c4cd83a-f985-4c85-9022-fadb5dbd2b39
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 11
----
-# 방법: 특정 로캘이 지정된 프로젝트 게시
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: cd6d798da4699116a75a486e2aaeac5ff17e577b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
 
-응용 프로그램에 포함된 구성 요소가 서로 다른 로캘을 사용하는 경우를 흔히 볼 수 있습니다.  이러한 시나리오에서는 여러 프로젝트가 포함된 솔루션을 만든 다음 각 로캘에 대해 프로젝트를 별도로 게시합니다.  아래 절차에서는 매크로를 통해 'en' 로캘을 사용하는 솔루션의 첫 번째 프로젝트를 게시하는 방법을 보여줍니다.  'en' 이외의 로캘에 대해 이 절차를 수행하려면 매크로의 `localeString`을 'de' 또는 'de\-DE'와 같이 사용 중인 로캘과 일치하도록 설정합니다.  
+---
+# <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>How to: Publish a Project That Has a Specific Locale
+It is not uncommon for an application to contain components that have different locales. In this scenario, you would create a solution that has several projects, and then publish separate projects for each locale. This procedure shows how to use a macro to publish the first project in a solution by using the 'en' locale. If you want to try this procedure with a locale other than 'en', make sure to set `localeString` in the macro to match the locale that you are using (for example, 'de' or 'de-DE').  
   
 > [!NOTE]
->  이 매크로를 사용할 때 게시 위치는 올바른 URL 또는 UNC\(범용 명명 규칙\) 공유여야 합니다.  또한 IIS\(인터넷 정보 서비스\)가 컴퓨터에 설치되어 있어야 합니다.  IIS를 설치하려면 **시작** 메뉴에서 **제어판**을 클릭합니다.  **프로그램 추가\/제거**를 두 번 클릭합니다.  **프로그램 추가\/제거**에서 **Windows 구성 요소 추가\/제거**를 클릭합니다.  **Windows 구성 요소 마법사**에서 **구성 요소** 목록의 **IIS\(인터넷 정보 서비스\)** 확인란을 선택합니다.  그런 다음 **마침**을 클릭하여 마법사를 닫습니다.  
+>  When you use this macro, the Publish Location should be a valid URL or Universal Naming Convention (UNC) share. Also, Internet Information Services (IIS) has to be installed on your computer. To install IIS, on the **Start** menu, click **Control Panel**. Double-click **Add or Remove Programs**. In **Add or Remove Programs**, click **Add/Remove Windows Components**. In the **Windows Components Wizard**, select the **Internet Information Services (IIS)** check box in the **Components** list. Then click **Finish** to close the wizard.  
   
-### 게시 매크로를 만들려면  
+### <a name="to-create-the-publishing-macro"></a>To create the publishing macro  
   
-1.  매크로 탐색기를 열려면 **도구** 메뉴에서 **매크로**를 가리킨 다음 **매크로 탐색기**를 클릭합니다.  
+1.  To open the Macro Explorer, on the **Tools** menu, point to **Macros**, and then click **Macro Explorer**.  
   
-2.  새 매크로 모듈을 만듭니다.  매크로 탐색기에서 **MyMacros**를 선택합니다.  **도구** 메뉴에서 **매크로**를 가리킨 다음 **새 매크로 모듈**을 클릭합니다.  모듈 이름을 PublishSpecificCulture로 지정합니다.  
+2.  Create a new macro module. In the Macro Explorer, select **MyMacros**. On the **Tools** menu, point to **Macros**, and then click **New Macro Module**. Name the module **PublishSpecificCulture**.  
   
-3.  매크로 탐색기에서 **MyMacros** 노드를 확장하고 **PublishAllProjects** 모듈을 두 번 클릭하여 열거나 **도구** 메뉴에서 **매크로**를 가리키고 **매크로 IDE**를 클릭합니다.  
+3.  In the Macro Explorer, expand the **MyMacros** node, and then open the **PublishAllProjects** module by double-clicking it (or, from the **Tools** menu, point to **Macros**, and then click **Macros IDE**).  
   
-4.  매크로 IDE에서 모듈의 `Import` 문 뒤에 다음 코드를 추가합니다.  
+4.  In the Macros IDE, add the following code to the module, after the `Import` statements:  
   
-    ```vb#  
+    ```vb  
     Module PublishSpecificCulture  
         Sub PublishProjectFirstProjectWithEnLocale()  
             ' Note: You should publish projects by using the IDE at least once  
@@ -137,34 +154,34 @@ caps.handback.revision: 11
     End Module  
     ```  
   
-5.  매크로 IDE를 닫습니다.  포커스가 다시 Visual Studio로 돌아옵니다.  
+5.  Close the Macros IDE. The focus will return to Visual Studio.  
   
-### 특정 로캘에 대한 프로젝트를 게시하려면  
+### <a name="to-publish-a-project-for-a-specific-locale"></a>To publish a project for a specific locale  
   
-1.  Visual Basic Windows 응용 프로그램 프로젝트를 만들려면 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+1.  To create a Visual Basic Windows Application project, on the **File** menu, point to **New**, and then click **Project**.  
   
-2.  **새 프로젝트** 대화 상자의 **Visual Basic** 노드에서 **Windows 응용 프로그램**을 선택합니다.  프로젝트 이름을 PublishLocales로 지정합니다.  
+2.  In the **New Project** dialog box, select **Windows Application** from the **Visual Basic** node. Name the project **PublishLocales**.  
   
-3.  Form1을 클릭합니다.  **속성** 창의 **디자인**에서 **언어** 속성을 **\(기본값\)**에서 **영어**로 변경합니다.  폼의 **텍스트** 속성을 MyForm으로 변경합니다.  
+3.  Click Form1. In the **Properties** window, under **Design**, change the **Language** property from **(Default)** to **English**. Change the **Text** property of the form to **MyForm**.  
   
-     지역화된 리소스 DLL은 필요할 때까지 만들어지지 않습니다.  예를 들어 새 로캘을 지정한 후 폼의 텍스트 또는 해당 컨트롤 중 하나를 변경하면 이러한 DLL이 만들어집니다.  
+     Note that the localized resource DLLs are not created until they are needed. For example, they are created when you change the text of the form or one of its controls after you have specified the new locale.  
   
-4.  Visual Studio IDE를 사용하여 PublishLocales를 게시합니다.  
+4.  Publish PublishLocales by using the Visual Studio IDE.  
   
-     **솔루션 탐색기**에서 PublishLocales를 선택합니다.  **프로젝트** 메뉴에서 **속성**을 선택합니다.  프로젝트 디자이너의 **게시** 페이지에서 게시 위치를 http:\/\/localhost\/PublishLocales로 지정하고 **지금 게시**를 클릭합니다.  
+     In **Solution Explorer**, select PublishLocales. On the **Project** menu, select **Properties**. In the Project Designer, on the **Publish** page, specify a publishing location of **http://localhost/PublishLocales**, and then click **Publish Now**.  
   
-     게시 웹 페이지가 표시되면 닫습니다.  이 단계에서는 프로젝트를 게시만 하면 되며 설치할 필요는 없습니다.  
+     When the publish Web page appears, close it. (For this step, you only have to publish the project; you do not have to install it.)  
   
-5.  Visual Studio 명령 프롬프트 창에서 매크로를 호출하여 PublishLocales를 다시 게시합니다.  명령 프롬프트 창을 표시하려면 **보기** 메뉴에서 **다른 창**을 가리킨 다음 **명령 창**을 클릭하거나 Ctrl\+Alt\+A를 누릅니다.  명령 프롬프트 창에 `macros`를 입력하면 자동 완성 기능을 통해 사용 가능한 매크로의 목록이 표시됩니다.  다음 매크로를 선택하고 Enter 키를 누릅니다.  
+5.  Publish PublishLocales again by invoking the macro in the Visual Studio Command Prompt window. To view the Command Prompt window, on the **View** menu, point to **Other Windows** and then click **Command Window**, or press CTRL+ALT+A. In the Command Prompt window, type `macros`; auto-complete will provide a list of available macros. Select the following macro and press ENTER:  
   
      `Macros.MyMacros.PublishSpecificCulture.PublishProjectFirstProjectWithEnLocale`  
   
-6.  게시 프로세스가 정상적으로 완료되면 "PublishLocales\\PublishLocales.vbproj를 게시했습니다.  게시 언어는 'en'입니다."라는 메시지가 표시됩니다. 메시지 상자에서 **확인**을 클릭합니다.  게시 웹 페이지가 표시되면 **설치**를 클릭합니다.  
+6.  When the publish process succeeds, it will generate a message that says "Publish succeeded for PublishLocales\PublishLocales.vbproj. Publish language was 'en'." Click **OK** in the message box. When the publish Web page appears, click **Install**.  
   
-7.  C:\\Inetpub\\wwwroot\\PublishLocales\\en을 확인합니다.  지역화된 리소스 DLL 외에 매니페스트, setup.exe, 게시 웹 페이지 파일 등의 설치된 파일이 표시되어야 합니다.  ClickOnce는 기본적으로 EXE 및 DLL에 대해 .deploy 확장명을 추가합니다. 배포 후에 이 확장명을 제거할 수 있습니다.  
+7.  Look in C:\Inetpub\wwwroot\PublishLocales\en. You should see the installed files such as the manifests, setup.exe, and the publish Web page file, in addition to the localized resource DLL. (By default ClickOnce appends a .deploy extension on EXEs and DLLs; you can remove this extension after deployment.)  
   
-## 참고 항목  
- [ClickOnce 응용 프로그램 게시](../deployment/publishing-clickonce-applications.md)   
- [Macros Development Environment](http://msdn.microsoft.com/ko-kr/d23105d8-34fe-4ad9-8278-fae2c660aeac)   
- [Macro Explorer Window](http://msdn.microsoft.com/ko-kr/762169e6-f83f-44b4-bffa-d0f107cae9a3)   
- [How to: Edit and Programmatically Create Macros](http://msdn.microsoft.com/ko-kr/6716f820-1feb-48ad-a718-27eb6b473c5a)
+## <a name="see-also"></a>See Also  
+ [Publishing ClickOnce Applications](../deployment/publishing-clickonce-applications.md)   
+ [Macros Development Environment](http://msdn.microsoft.com/en-us/d23105d8-34fe-4ad9-8278-fae2c660aeac)   
+ [Macro Explorer Window](http://msdn.microsoft.com/en-us/762169e6-f83f-44b4-bffa-d0f107cae9a3)   
+ [How to: Edit and Programmatically Create Macros](http://msdn.microsoft.com/en-us/6716f820-1feb-48ad-a718-27eb6b473c5a)

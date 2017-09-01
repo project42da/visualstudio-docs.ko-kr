@@ -1,85 +1,86 @@
 ---
-title: "엔터티 간 연결 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.BDC.Association_Dialog"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC[Visual Studio에서 SharePoint 개발], 외부 콘텐츠 형식 연결"
-  - "BDC[Visual Studio에서 SharePoint 개발], 엔터티 간 연결"
-  - "BDC[Visual Studio에서 SharePoint 개발], 연결 만들기"
-  - "BDC[Visual Studio에서 SharePoint 개발], 엔터티 연결"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 외부 콘텐츠 형식 연결"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 엔터티 간 연결"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 연결 만들기"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 엔터티 연결"
+title: Creating an Association Between Entities | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.BDC.Association_Dialog
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- BDC [SharePoint development in Visual Studio], create an assocation
+- Business Data Connectivity service [SharePoint development in Visual Studio], associations between entities
+- BDC [SharePoint development in Visual Studio], associations between entities
+- Business Data Connectivity service [SharePoint development in Visual Studio], create an assocation
+- Business Data Connectivity service [SharePoint development in Visual Studio], associate external content types
+- Business Data Connectivity service [SharePoint development in Visual Studio], relate entities
+- BDC [SharePoint development in Visual Studio], relate entities
+- BDC [SharePoint development in Visual Studio], associate external content types
 ms.assetid: c908448c-13d3-4d2f-89ad-8d709b2958fb
 caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4ce2395e01f29ab8b3ef836a4b7f9ba7c2c6de7f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 엔터티 간 연결 만들기
-  BDC\(비즈니스 데이터 연결\) 모델에서 연결을 만들어 엔터티 간에 관계를 정의할 수 있습니다.  Visual Studio에서는 모델 사용자에게 각 연결에 대한 정보를 제공하는 메서드를 생성합니다.  이러한 메서드는 SharePoint 웹 파트, 목록 또는 사용자 지정 응용 프로그램에서 사용되어 UI\(사용자 인터페이스\)에 데이터 간 관계를 표시할 수 있습니다.  
+# <a name="creating-an-association-between-entities"></a>Creating an Association Between Entities
+  You can define relationships between entities in your Business Data Connectivity (BDC) model by creating associations. Visual Studio generates methods that provide consumers of the model with information about each association. These methods can be consumed by SharePoint web parts, lists, or custom applications to display data relationships in a user interface (UI).  
   
-## 연결 만들기  
- Visual Studio **도구 상자** 에서 **연결** 컨트롤을 선택하고 첫 번째 엔터티\(소스 엔터티\)를 선택한 다음 두 번째 엔터티\(대상 엔터티\)를 선택하여 연결을 만듭니다.  **연결 편집기**에서 연결 정보를 정의할 수 있습니다.  자세한 내용은 [방법: 엔터티 간 연결 만들기](../sharepoint/how-to-create-an-association-between-entities.md)을 참조하십시오.  
+## <a name="creating-an-association"></a>Creating an Association  
+ Create an association by choosing the **Association** control in the Visual Studio **Toolbox**, choosing the first entity (called the source entity), and then choosing the second entity (called the destination entity). You can define the details of the association in the **Association Editor**. For more information, see [How to: Create an Association between Entities](../sharepoint/how-to-create-an-association-between-entities.md).  
   
-## 연결 메서드  
- SharePoint 비즈니스 데이터 웹 파트와 같은 응용 프로그램에서는 엔터티의 서비스 클래스에 있는 메서드를 호출하여 연결을 사용합니다.  **연결 편집기**에서 메서드를 선택하여 엔터티의 서비스 클래스에 메서드를 추가할 수 있습니다.  
+## <a name="association-methods"></a>Association Methods  
+ Applications such as SharePoint business data web parts consume associations by calling methods in the service class of an entity. You can add methods to the service class of an entity by selecting them in the **Association Editor**.  
   
- 기본적으로 **연결 편집기**에서는 소스 및 대상 엔터티에 AssociationNavigator 메서드를 추가합니다.  사용자는 소스 엔터티의 AssociationNavigator 메서드를 사용하여 대상 엔터티의 목록을 검색하고,  대상 엔터티의 AssociationNavigator 메서드를 사용하여 대상 엔터티와 관련이 있는 소스 엔터티를 검색할 수 있습니다.  
+ By default, the **Association Editor** adds an Association Navigation method to the source and destination entities. An Association Navigation method in the source entity enables consumers to retrieve a list of destination entities. An Association Navigation method in the destination entity enables consumers to retrieve the source entity that relates to a destination entity.  
   
- 적절한 정보를 반환하려면 이러한  메서드 각각에 코드를 추가해야 합니다.  보다 고급 시나리오를 지원하기 위해 다른 형식의 메서드를 추가할 수도 있습니다.  각 메서드에 대한 자세한 내용은 [지원되는 작업](http://go.microsoft.com/fwlink/?LinkId=169286) 을 참조하십시오.  
+ You must add the code to each of these methods to return the appropriate information. You can also add other types of methods to support more advanced scenarios. For more information about each of these methods, see [Supported Operations](http://go.microsoft.com/fwlink/?LinkId=169286).  
   
-## 연결 형식  
- BDC 디자이너에서 외래 키 기반 연결과 외래 키가 없는 연결이라는 두 가지 형식의 연결을 만들 수 있습니다.  
+## <a name="types-of-associations"></a>Types of Associations  
+ You can create two types of associations in the BDC designer: foreign key-based associations and foreign keyless associations.  
   
-### 외래 키 기반 연결  
- 소스 엔터티의 식별자를 대상 엔터티에 정의된 형식 설명자에 연결하여 외래 키 기반 연결을 만들 수 있습니다.  모델 사용자는 이 관계를 사용하여 사용자에게 향상된 UI를 제공할 수 있습니다.  예를 들어 Outlook의 양식에서 사용자가 드롭다운 목록에 고객을 표시하는 판매 주문을 만들 수 있게 해 주고 SharePoint의 판매 주문 목록에서 사용자가 고객의 프로필 페이지를 열 수 있게 해 줍니다.  
+### <a name="foreign-key-based-association"></a>Foreign Key-Based Association  
+ You can create a foreign key-based association by relating an identifier in the source entity to type descriptors defined in the destination entity. This relationship enables consumers of the model to provide an enhanced UI for their users. For example, a form in Outlook that enables a user to create a sales order that can display customers in a drop-down list; or a list of sales orders in SharePoint that enables users to open a profile page for a customer.  
   
- 외래 키 기반 연결을 만들려면 동일한 이름과 형식을 공유하는 식별자와 형식 설명자를 연결합니다.  예를 들어 `Contact` 엔터티와 `SalesOrder` 엔터티 간에 외래 키 기반 연결을 만들 수 있습니다.  `SalesOrder` 엔터티는 Finder 또는 SpecificFinder 메서드의 반환 매개 변수의 일부로 `ContactID` 형식 설명자를 반환합니다.  두 형식 설명자 모두 **연결 편집기**에 표시됩니다.  `Contact` 엔터티와 `SalesOrder` 엔터티 간에 외래 키 기반 관계를 만들려면 이러한 각 필드 옆에 있는 `ContactID` 식별자를 선택합니다.  
+ To create a foreign key-based association, relate identifiers and type descriptors that share the same name and type. For example, you might create a foreign key-based association between a `Contact` entity and a `SalesOrder` entity. The `SalesOrder` entity returns a `ContactID` type descriptor as part of the return parameter of Finder or Specific Finder methods. Both type descriptors appear in the **Association Editor**. To create a foreign key-based relationship between the `Contact` entity and `SalesOrder` entity, choose the `ContactID` identifier next to each of these fields.  
   
- 대상 엔터티의 컬렉션을 반환하는 코드를 소스 엔터티의 Association Navigator 메서드에 추가합니다.  다음 예제에서는 연락처의 판매 주문을 반환합니다.  
+ Add code to the Association Navigator method of the source entity that returns a collection of destination entities. The following example returns the sales orders for a contact.  
   
- [!code-csharp[SP_BDC#7](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/contactservice.cs#7)]
- [!code-vb[SP_BDC#7](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/contactservice.vb#7)]  
+ [!code-csharp[SP_BDC#7](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#7)] [!code-vb[SP_BDC#7](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#7)]  
   
- 소스 엔터티를 반환하는 코드를 대상 엔터티의 Association Navigator 메서드에 추가합니다.  다음 예제에서는 판매 주문과 관련된 연락처를 반환합니다.  
+ Add code to the Association Navigator method of the destination entity that returns a source entity. The following example returns the contact that is related to the sales order.  
   
- [!code-csharp[SP_BDC#8](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/salesorderservice.cs#8)]
- [!code-vb[SP_BDC#8](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/salesorderservice.vb#8)]  
+ [!code-csharp[SP_BDC#8](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#8)] [!code-vb[SP_BDC#8](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#8)]  
   
-### 외래 키가 없는 연결  
- 필드 형식 설명자에 식별자를 매핑하지 않아도 연결을 만들 수 있습니다.  소스 엔터티와 대상 엔터티 간에 직접적인 관계가 없는 경우 이 같은 연결을 만들면 좋습니다.  예를 들어 `SalesOrderDetail` 테이블에는 `Contact` 테이블의 기본 키에 매핑되는 외래 키가 없습니다.  
+### <a name="foreign-keyless-association"></a>Foreign Keyless Association  
+ You can create an association without mapping identifiers to field type descriptors. Create this kind of association when the source entity does not have a direct relationship with the destination entity. For example, a `SalesOrderDetail` table does not have a foreign key that maps to a primary key in a `Contact` table.  
   
- `Contact`와 관련된 정보를 `SalesOrderDetail` 테이블에 표시하려면 `Contact` 엔터티와 `SalesOrderDetail` 엔터티 간에 외래 키가 없는 연결을 만들면 됩니다.  
+ If you want to display information in the `SalesOrderDetail` table that relates to a `Contact`, you can create a foreign keyless association between the `Contact` entity and `SalesOrderDetail` entity.  
   
- `Contact` 엔터티의 AssociationNavigator 메서드에서 테이블을 조인하거나 저장 프로시저를 호출하여 `SalesOrderDetail` 엔터티를 반환합니다.  
+ In the Association Navigation method of the `Contact` entity, return the `SalesOrderDetail` entities by joining tables, or by calling a stored procedure.  
   
- 다음 예제에서는 테이블을 조인하여 모든 판매 주문에 대한 상세 정보를 반환합니다.  
+ The following example returns details of all sales orders by joining tables.  
   
- [!code-csharp[SP_BDC#9](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/contactservice.cs#9)]
- [!code-vb[SP_BDC#9](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/contactservice.vb#9)]  
+ [!code-csharp[SP_BDC#9](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#9)] [!code-vb[SP_BDC#9](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#9)]  
   
- `SalesOrderDetail` 엔터티의 AssociationNavigator 메서드에서 관련 `Contact`를 반환합니다.  다음 예제에서는 이 작업을 보여 줍니다.  
+ In the Association Navigation method of the `SalesOrderDetail` entity, return the related `Contact`. The following example demonstrates this.  
   
- [!code-csharp[SP_BDC#10](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/salesorderdetailservice.cs#10)]
- [!code-vb[SP_BDC#10](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/salesorderdetailservice.vb#10)]  
+ [!code-csharp[SP_BDC#10](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs#10)] [!code-vb[SP_BDC#10](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb#10)]  
   
-## 참고 항목  
- [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [방법: 엔터티 간 연결 만들기](../sharepoint/how-to-create-an-association-between-entities.md)  
+## <a name="see-also"></a>See Also  
+ [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [How to: Create an Association between Entities](../sharepoint/how-to-create-an-association-between-entities.md)  
   
   

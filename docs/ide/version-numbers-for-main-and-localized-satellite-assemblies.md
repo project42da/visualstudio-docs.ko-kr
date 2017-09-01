@@ -1,5 +1,5 @@
 ---
-title: "주 어셈블리 및 지역화된 위성 어셈블리의 버전 번호 | Microsoft 문서"
+title: Version Numbers for Main and Localized Satellite Assemblies | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,35 +33,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 555205ade620de3ad46f0fab34d50b85cbed5e40
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 19ca788264cd3e1075353f5986c365bcf2a57f67
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="version-numbers-for-main-and-localized-satellite-assemblies"></a>주 어셈블리 및 지역화된 위성 어셈블리의 버전 번호
-<xref:System.Resources.SatelliteContractVersionAttribute> 클래스는 리소스 관리자를 통해 지역화된 리소스를 사용하는 주 어셈블리에 대한 버전 관리 지원을 제공합니다. <xref:System.Resources.SatelliteContractVersionAttribute>를 응용 프로그램의 주 어셈블리에 적용하면 위성 어셈블리를 업데이트하지 않고 어셈블리를 업데이트 및 재배포할 수 있습니다. 예를 들어 위성 어셈블리를 다시 빌드 및 다시 배포하지 않고 새 리소스를 도입하지 않은 서비스 팩과 함께 <xref:System.Resources.SatelliteContractVersionAttribute> 클래스를 사용할 수 있습니다. 지역화된 리소스를 사용하려면 주 어셈블리의 위성 계약 버전이 위성 어셈블리의 <xref:System.Reflection.AssemblyVersionAttribute> 클래스와 일치해야 합니다. <xref:System.Resources.SatelliteContractVersionAttribute>에서 정확한 버전 번호를 지정해야 하고 와일드카드 문자(예: “*”)는 허용되지 않습니다. 자세한 내용은 [데스크톱 응용 프로그램의 리소스 검색](/dotnet/framework/resources/retrieving-resources-in-desktop-apps)을 참조하세요.  
+# <a name="version-numbers-for-main-and-localized-satellite-assemblies"></a>Version Numbers for Main and Localized Satellite Assemblies
+The <xref:System.Resources.SatelliteContractVersionAttribute> class provides versioning support for a main assembly that uses localized resources by means of the resource manager. Applying the <xref:System.Resources.SatelliteContractVersionAttribute> to an application's main assembly allows you to update and re-deploy the assembly without updating its satellite assemblies. For example, you can use the <xref:System.Resources.SatelliteContractVersionAttribute> class with a service pack that doesn't introduce new resources without rebuilding and redeploying your satellite assemblies. For your localized resources to be available, the satellite contract version of your main assembly must match the <xref:System.Reflection.AssemblyVersionAttribute> class of your satellite assemblies. You must specify an exact version number in the <xref:System.Resources.SatelliteContractVersionAttribute>; wildcard characters such as "*" are not allowed. For more information, see [Retrieving Resources](/dotnet/framework/resources/retrieving-resources-in-desktop-apps).  
   
-## <a name="updating-assemblies"></a>어셈블리 업데이트  
- <xref:System.Resources.SatelliteContractVersionAttribute> 클래스를 사용하여 위성 어셈블리를 업데이트할 필요 없이 주 어셈블리를 업데이트하거나 그 반대로 할 수 있습니다. 주 어셈블리가 업데이트되면 해당 어셈블리 버전 번호가 변경됩니다. 기존 위성 어셈블리를 계속 사용하려면 주 어셈블리의 버전 번호를 변경하고 위성 계약 버전 번호는 동일하게 유지합니다. 예를 들어 첫 번째 릴리스에서 주 어셈블리 버전은 1.0.0.0일 수 있습니다. 위성 계약 버전 및 위성 어셈블리의 어셈블리 버전도 1.0.0.0입니다. 서비스 팩을 적용하기 위해 주 어셈블리를 업데이트해야 할 경우 어셈블리 버전을 1.0.0.1로 업데이트할 수 있지만 위성 계약 버전 및 위성의 어셈블리 버전은 1.0.0.0으로 유지합니다.  
+## <a name="updating-assemblies"></a>Updating Assemblies  
+ The <xref:System.Resources.SatelliteContractVersionAttribute> class allows you to update a main assembly without having to update your satellite assembly, or vice versa. When the main assembly is updated, its assembly version number is changed. If you want to continue using the existing satellite assemblies, change the main assembly's version number but leave the satellite contract version number the same. For example, in your first release your main assembly version may be 1.0.0.0. The satellite contract version and the assembly version of the satellite assembly will also be 1.0.0.0. If you need to update your main assembly for a service pack, you can change the assembly version to 1.0.0.1, while keeping the satellite contract version and the satellite's assembly version as 1.0.0.0.  
   
- 주 어셈블리를 업데이트하지 않고 위성 어셈블리를 업데이트해야 할 경우에는 위성 어셈블리의 <xref:System.Reflection.AssemblyVersionAttribute>를 변경합니다. 위성 어셈블리와 함께 새 위성 어셈블리가 이전 위성 어셈블리와 호환됨을 명시하는 정책 어셈블리를 전달해야 합니다. 정책에 대한 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)을 참조하세요.  
+ If you need to update a satellite assembly but not your main assembly, you change the <xref:System.Reflection.AssemblyVersionAttribute> of the satellite assembly. Along with your satellite assembly, you will have to ship a policy assembly that states that your new satellite assembly is compatible with your old satellite assembly. For more information on policies, see [How the Runtime Locates Assemblies](/dotnet/framework/deployment/how-the-runtime-locates-assemblies).  
   
- 다음 코드는 위성 계약 버전을 설정하는 방법을 보여 줍니다. 코드는 AssemblyInfo.vb 또는 AssemblyInfo.cs 파일이나 빌드 스크립트에 삽입할 수 있습니다.  
+ The following code shows how to set the satellite contract version. The code can be placed in either a build script or in the AssemblyInfo.vb or AssemblyInfo.cs file.  
   
-```vb#  
+```vb  
 <Assembly: SatelliteContractVersionAttribute("4.3.2.1")>  
   
 ```  
   
-```c#  
+```csharp  
 [assembly: SatelliteContractVersionAttribute("4.3.2.1")]  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [런타임에서 어셈블리를 찾는 방법](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)   
- [어셈블리 특성 설정](/dotnet/framework/app-domains/set-assembly-attributes)   
- [보안 및 지역화된 위성 어셈블리](../ide/security-and-localized-satellite-assemblies.md)   
- [응용 프로그램 지역화](../ide/localizing-applications.md)   
- [응용 프로그램 전역화 및 지역화](../ide/globalizing-and-localizing-applications.md)
+## <a name="see-also"></a>See Also  
+ [How the Runtime Locates Assemblies](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)   
+ [Setting Assembly Attributes](/dotnet/framework/app-domains/set-assembly-attributes)   
+ [Security and Localized Satellite Assemblies](../ide/security-and-localized-satellite-assemblies.md)   
+ [Localizing Applications](../ide/localizing-applications.md)   
+ [Globalizing and Localizing Applications](../ide/globalizing-and-localizing-applications.md)

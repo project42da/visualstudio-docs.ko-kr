@@ -1,111 +1,111 @@
 ---
-title: "방법: 프로그래밍 방식으로 문서에 그림 및 WordArt 추가"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "문서[Visual Studio에서 Office 개발], 그림 추가"
-  - "그래픽, Word 문서에 추가"
-  - "Word 문서, 그림 추가"
-  - "Word 문서, WordArt 추가"
-  - "WordArt, 문서에 추가"
+title: 'How to: Programmatically Add Pictures and Word Art to Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- documents [Office development in Visual Studio], adding pictures
+- Word documents, adding pictures
+- Word documents, adding Word Art
+- graphics, adding to Word documents
+- WordArt, adding to documents
 ms.assetid: 944e1858-bc7c-471f-b5e7-adf3b0fa574d
 caps.latest.revision: 24
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 23
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 921234bb8d2e226035730c676d72b0162b255b2b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 문서에 그림 및 WordArt 추가
-  디자인 타임 또는 런타임에 그림 및 그리기 개체를 문서에 추가할 수 있습니다.  WordArt를 사용하면 Microsoft Office Word 문서에 장식 텍스트를 추가할 수 있습니다.  이러한 특수 텍스트 효과는 사용자 지정하고 문서에 삽입할 수 있는 그리기 개체입니다.  
+# <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>How to: Programmatically Add Pictures and Word Art to Documents
+  You can add pictures and drawing objects to your documents at design time or during run time. WordArt enables you to add decorative text to Microsoft Office Word documents. These special text effects are drawing objects that you can customize and insert into your document.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## 디자인 타임에 그림 추가  
- 문서 수준 사용자 지정을 개발하는 경우 디자인 타임에 문서에 그림을 추가할 수 있습니다.  
+## <a name="adding-a-picture-at-design-time"></a>Adding a Picture at Design Time  
+ If you are developing a document-level customization, you can add a picture to the document at design time.  
   
-#### 디자인 타임에 Word 문서에 그림을 추가하려면  
+#### <a name="to-add-a-picture-to-a-word-document-at-design-time"></a>To add a picture to a Word document at design time  
   
-1.  문서에서 그림을 삽입하려는 위치에 커서를 놓습니다.  
+1.  Place your cursor where you want to insert the picture in the document.  
   
-2.  리본 메뉴의 **삽입** 탭을 클릭합니다.  
+2.  Click the **Insert** tab of the Ribbon.  
   
-3.  **일러스트레이션** 그룹에서 **그림**을 클릭합니다.  
+3.  In the **Illustrations** group, click **Picture**.  
   
-4.  **그림 삽입** 대화 상자에서 삽입하려는 그림을 찾아 **삽입**을 클릭합니다.  
+4.  In the **Insert Picture** dialog box, navigate to the picture you want to insert, and click **Insert**.  
   
-     그림이 문서의 현재 커서 위치에 추가됩니다.  
+     The picture is added to your document at the current cursor location.  
   
-## 런타임에 그림 추가  
- 문서의 현재 커서 위치에 그림을 삽입할 수 있습니다.  
+## <a name="adding-a-picture-at-run-time"></a>Adding a Picture at Run Time  
+ You can insert a picture into a document at the current cursor location.  
   
-#### 커서 위치에 그림을 추가하려면  
+#### <a name="to-add-a-picture-at-the-cursor-location"></a>To add a picture at the cursor location  
   
-1.  <xref:Microsoft.Office.Interop.Word.InlineShapes> 컬렉션의 <xref:Microsoft.Office.Interop.Word.InlineShapes.AddPicture%2A> 메서드를 호출하고 해당 파일의 이름을 전달합니다.  
+1.  Call the <xref:Microsoft.Office.Interop.Word.InlineShapes.AddPicture%2A> method of the <xref:Microsoft.Office.Interop.Word.InlineShapes> collection and pass in the name of the file.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#108](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#108)]
-     [!code-vb[Trin_VstcoreWordAutomation#108](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#108)]  
+     [!code-vb[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#108)]  [!code-csharp[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#108)]  
   
-## 디자인 타임에 WordArt 추가  
- 문서 수준 사용자 지정을 개발하는 경우 디자인 타임에 문서에 WordArt를 추가할 수 있습니다.  
+## <a name="adding-wordart-at-design-time"></a>Adding WordArt at Design Time  
+ If you are developing a document-level customization, you can add WordArt to the document at design time.  
   
-#### 디자인 타임에 Word 문서에 WordArt를 추가하려면  
+#### <a name="to-add-wordart-to-a-word-document-at-design-time"></a>To add WordArt to a Word document at design time  
   
-1.  문서에서 WordArt를 삽입하려는 위치에 커서를 놓습니다.  
+1.  Place your cursor where you want to insert the WordArt in the document.  
   
-2.  리본 메뉴의 **삽입** 탭을 클릭합니다.  
+2.  Click the **Insert** tab of the Ribbon.  
   
-3.  **텍스트** 그룹에서 **WordArt**를 클릭하고 WordArt 스타일을 선택합니다.  
+3.  In the **Text** group, click **WordArt**, and then select a WordArt style.  
   
-4.  문서에 표시하려는 텍스트를 **WordArt 텍스트 편집** 대화 상자에 추가하고 **확인**을 클릭합니다.  
+4.  Add the text that you want to appear in the document to the **Edit WordArt Text** dialog box and click **OK**.  
   
-     선택한 WordArt 스타일이 적용된 문서에 텍스트가 추가됩니다.  
+     The text is added to your document with the selected WordArt style applied.  
   
-## 런타임에 WordArt 추가  
- 문서의 현재 커서 위치에 WordArt를 삽입할 수 있습니다.  문서 수준 사용자 지정 및 VSTO 추가 기능에 대한 절차가 서로 다릅니다.  
+## <a name="adding-wordart-at-run-time"></a>Adding WordArt at Run Time  
+ You can insert WordArt into a document at the current cursor location. The procedure is different for document-level customizations and VSTO Add-ins.  
   
-#### 문서 수준 사용자 지정에서 커서 위치에 WordArt를 추가하려면  
+#### <a name="to-add-wordart-at-the-cursor-location-in-a-document-level-customization"></a>To add WordArt at the cursor location in a document-level customization  
   
-1.  현재 커서 위치의 왼쪽 및 위쪽 위치를 가져옵니다.  
+1.  Get the left and top position of the current cursor location.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#109](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#109)]
-     [!code-vb[Trin_VstcoreWordAutomation#109](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#109)]  
+     [!code-vb[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#109)]  [!code-csharp[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#109)]  
   
-2.  문서에서 <xref:Microsoft.Office.Interop.Word.Shapes> 개체의 <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> 메서드를 호출합니다.  
+2.  Call the <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> method of the <xref:Microsoft.Office.Interop.Word.Shapes> object in the document.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#110](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#110)]
-     [!code-vb[Trin_VstcoreWordAutomation#110](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#110)]  
+     [!code-vb[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#110)]  [!code-csharp[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#110)]  
   
-#### VSTO 추가 기능에서 커서 위치에 WordArt를 추가하려면  
+#### <a name="to-add-wordart-at-the-cursor-location-in-a-vsto-add-in"></a>To add WordArt at the cursor location in a VSTO Add-in  
   
-1.  현재 커서 위치의 왼쪽 및 위쪽 위치를 가져옵니다.  
+1.  Get the left and top position of the current cursor location.  
   
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#109](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/CS/ThisAddIn.cs#109)]
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#109](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/VB/ThisAddIn.vb#109)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#109)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#109)]  
   
-2.  활성 문서\(또는 지정한 다른 문서\)에서 <xref:Microsoft.Office.Interop.Word.Shapes> 개체의 <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> 메서드를 호출합니다.  
+2.  Call the <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> method of the <xref:Microsoft.Office.Interop.Word.Shapes> object of the active document (or a different document that you specify).  
   
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#110](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/CS/ThisAddIn.cs#110)]
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#110](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/VB/ThisAddIn.vb#110)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#110)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#110)]  
   
-## 코드 컴파일  
+## <a name="compiling-the-code"></a>Compiling the Code  
   
--   **SamplePicture.jpg**라는 그림이 C 드라이브에 있어야 합니다.  
+-   A picture named **SamplePicture.jpg** must exist on drive C.  
   
-## 참고 항목  
- [방법: 프로그래밍 방식으로 기존 문서 열기](../vsto/how-to-programmatically-open-existing-documents.md)   
- [방법: 프로그래밍 방식으로 Word 문서에 텍스트 삽입](../vsto/how-to-programmatically-insert-text-into-word-documents.md)   
- [방법: 프로그래밍 방식으로 검색 후 선택 영역 복원](../vsto/how-to-programmatically-restore-selections-after-searches.md)   
- [방법: 프로그래밍 방식으로 문서 저장](../vsto/how-to-programmatically-save-documents.md)   
- [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [How to: Programmatically Open Existing Documents](../vsto/how-to-programmatically-open-existing-documents.md)   
+ [How to: Programmatically Insert Text into Word Documents](../vsto/how-to-programmatically-insert-text-into-word-documents.md)   
+ [How to: Programmatically Restore Selections After Searches](../vsto/how-to-programmatically-restore-selections-after-searches.md)   
+ [How to: Programmatically Save Documents](../vsto/how-to-programmatically-save-documents.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

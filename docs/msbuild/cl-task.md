@@ -40,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: bde2b08fb3cc1b183d224ab3282e44f21a094403
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 0e6777ed52cb1695c90ae42d7795de57f9c62169
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="cl-task"></a>CL 작업
@@ -366,7 +367,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 Microsoft 확장([/Ze](/cpp/build/reference/za-ze-disable-language-extensions))을 사용하는 [for](/cpp/cpp/for-statement-cpp) 루프의 표준 C++ 동작을 구현합니다.  
   
-     자세한 내용은 [/Zc:forScope(for 루프 범위의 강제 규칙)](http://msdn.microsoft.com/Library/3031f02d-3b14-4ad0-869e-22b0110c3aed)를 참조하세요.  
+     자세한 내용은 [/Zc:forScope(for 루프 범위의 강제 규칙)](/cpp/build/reference/zc-forscope-force-conformance-in-for-loop-scope)를 참조하세요.  
   
 -   **ForcedIncludeFiles**  
   
@@ -714,7 +715,7 @@ Visual C++ 컴파일러 도구 cl.exe를 래핑합니다. 컴파일러는 실행
   
      `true`인 경우 `wchar_t` 형식을 네이티브 형식으로 처리합니다.  
   
-     자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](http://msdn.microsoft.com/Library/b0de5a84-da72-4e5a-9a4e-541099f939e0)를 참조하세요.  
+     자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](/cpp/build/reference/zc-wchar-t-wchar-t-is-native-type)를 참조하세요.  
   
 -   **UndefineAllPreprocessorDefinitions**  
   

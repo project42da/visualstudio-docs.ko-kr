@@ -1,100 +1,105 @@
 ---
-title: "Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "project items [SharePoint development in Visual Studio], creating template wizards"
-  - "SharePoint project items, creating template wizards"
-  - "SharePoint development in Visual Studio, defining new project item types"
+title: 'Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2 | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- project items [SharePoint development in Visual Studio], creating template wizards
+- SharePoint project items, creating template wizards
+- SharePoint development in Visual Studio, defining new project item types
 ms.assetid: 2d8165d3-4af9-4a5e-bdba-8b2a06b1dc8d
 caps.latest.revision: 44
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 43
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 1156c1eaab8ce1e73018778ef2b91e6f86806cc7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2
-  Visual Studio에서 SharePoint 프로젝트 항목의 사용자 지정 형식을 정의하여 항목 템플릿과 연결한 후에는 템플릿에 대한 마법사를 제공할 수 있습니다.  마법사를 사용하면 사용자가 템플릿을 사용하여 해당 프로젝트 항목의 새 인스턴스를 프로젝트에 추가할 때 사용자에게서 정보를 수집할 수 있습니다.  수집한 정보는 프로젝트 항목을 초기화하는 데 사용될 수 있습니다.  
+# <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2"></a>Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2
+  After you define a custom type of SharePoint project item and associate it with an item template in Visual Studio, you might also want to provide a wizard for the template. You can use the wizard to collect information from users when they use your template to add a new instance of the project item to a project. The information that you collect can be used to initialize the project item.  
   
- 이 연습에서는 [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)에서 설명한 사용자 지정 작업 프로젝트 항목에 마법사를 추가합니다.  사용자가 사용자 지정 작업 프로젝트 항목을 SharePoint 프로젝트에 추가 하는 경우 마법사가 사용자 지정 작업 \(예: 위치 및 최종 사용자가 선택할 때 탐색할 URL\)에 대 한 정보를 수집 하 고이 정보를 새 프로젝트 항목에서의 Elements.xml 파일에 추가 합니다.  
+ In this walkthrough, you will add a wizard to the Custom Action project item that is demonstrated in [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md). When a user adds a Custom Action project item to a SharePoint project, the wizard collects information about the custom action (such as its location and the URL to navigate to when an end user chooses it) and adds this information to the Elements.xml file in the new project item.  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough demonstrates the following tasks:  
   
--   항목 템플릿과 연결된 사용자 지정 SharePoint 프로젝트 항목 형식을 위한 마법사 만들기  
+-   Creating a wizard for a custom SharePoint project item type that is associated with an item template.  
   
--   Visual Studio에서 SharePoint 프로젝트 항목을 위한 기본 제공 마법사와 유사한 사용자 지정 마법사 UI 정의.  
+-   Defining a custom wizard UI that resembles the built-in wizards for SharePoint project items in Visual Studio.  
   
--   대체 가능한 매개 변수를 사용하여 마법사에서 수집한 데이터로 SharePoint 프로젝트 파일 초기화  
+-   Using replaceable parameters to initialize SharePoint project files with data that you collect in the wizard.  
   
--   마법사 디버깅 및 테스트  
+-   Debugging and testing the wizard.  
   
 > [!NOTE]  
->  완료 된 프로젝트, 코드 및 기타 파일을 다음 위치에서이 연습에 포함 되어 있는 예제를 다운로드할 수 있습니다: [SharePoint 도구 확장 연습에 대 한 프로젝트 파일](http://go.microsoft.com/fwlink/?LinkId=191369).  
+>  You can download a sample that contains the completed projects, code, and other files for this walkthrough from the following location:  [Project files for SharePoint Tools Extensibility Walkthroughs](http://go.microsoft.com/fwlink/?LinkId=191369).  
   
-## 사전 요구 사항  
- 이 연습을 수행하려면 먼저 [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)를 완료하여 CustomActionProjectItem 솔루션을 만들어야 합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ To perform this walkthrough, you must first create the CustomActionProjectItem solution by completing [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md).  
   
- 또한 개발 컴퓨터에 다음 구성 요소가 있어야 이 연습을 완료할 수 있습니다.  
+ You also need the following components on the development computer to complete this walkthrough:  
   
--   지원 되는 버전의 Windows, SharePoint 및 Visual Studio.  자세한 내용은 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)을 참조하십시오.  
+-   Supported editions of Windows, SharePoint, and Visual Studio. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio SDK입니다.  이 연습에서는 SDK의 **VSIX 프로젝트** 템플릿을 사용하여 프로젝트 항목을 배포하기 위한 VSIX 패키지를 만듭니다.  자세한 내용은 [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)을 참조하십시오.  
+-   The Visual Studio SDK. This walkthrough uses the **VSIX Project** template in the SDK to create a VSIX package to deploy the project item. For more information, see [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).  
   
- 다음 개념을 알고 있으면 연습을 완료하는 데 도움이 되지만 반드시 필요하지는 않습니다.  
+ Knowledge of the following concepts is helpful, but not required, to complete the walkthrough:  
   
--   Visual Studio의 프로젝트 마법사 및 항목 템플릿 마법사.  자세한 내용은 [방법: 프로젝트 템플릿에 마법사 사용](~/extensibility/how-to-use-wizards-with-project-templates.md) 및 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스를 참조하십시오.  
+-   Wizards for project and item templates in Visual Studio. For more information, see [How to: Use Wizards with Project Templates](../extensibility/how-to-use-wizards-with-project-templates.md) and the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface.  
   
--   SharePoint의 사용자 지정 작업.  자세한 내용은 [Custom Action](http://go.microsoft.com/fwlink/?LinkId=177800)을 참조하십시오.  
+-   Custom actions in SharePoint. For more information, see [Custom Action](http://go.microsoft.com/fwlink/?LinkId=177800).  
   
-## 마법사 프로젝트 만들기  
- 이 연습을 완료 하려면 프로젝트에서 만든 CustomActionProjectItem 솔루션에 추가 해야 [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md).  이 프로젝트에서 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스를 구현하고 마법사 UI를 정의합니다.  
+## <a name="creating-the-wizard-project"></a>Creating the Wizard Project  
+ To complete this walkthrough, you must add a project to the CustomActionProjectItem solution that you created in [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md). You will implement the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface and define the wizard UI in this project.  
   
-#### 마법사 프로젝트를 만들려면  
+#### <a name="to-create-the-wizard-project"></a>To create the wizard project  
   
-1.  Visual Studio CustomActionProjectItem 솔루션을 엽니다  
+1.  In Visual Studio, open the CustomActionProjectItem solution  
   
-2.  **솔루션 탐색기**, 솔루션 노드 바로 가기 메뉴를 열고  **추가**, 다음 선택  **새 프로젝트**.  
+2.  In **Solution Explorer**, open the shortcut menu for the solution node, choose **Add**, and then choose **New Project**.  
   
     > [!NOTE]  
-    >  Visual Basic 프로젝트에서는 [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ko-kr/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)에서 **솔루션 항상 표시** 확인란을 선택한 경우에만 **솔루션 탐색기**에 솔루션 노드가 표시됩니다.  
+    >  In Visual Basic projects, the solution node appears in **Solution Explorer** only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-3.  에  **새 프로젝트** 대화 상자에서 확장은  **C\#** 또는  **Visual Basic** 노드를 다음 선택은  **Windows** 노드.  
+3.  In the **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, and then choose the **Windows** node.  
   
-4.  상단에 있는  **새 프로젝트** 대화 상자에서 있는지 확인 하십시오  **.NET Framework 4.5** .NET Framework 버전의 목록에서 선택 됩니다.  
+4.  At the top of the **New Project** dialog box, make sure that **.NET Framework 4.5** is chosen in the list of versions of the .NET Framework.  
   
-5.  선택은  **WPF 사용자 컨트롤 라이브러리** : 프로젝트 이름, 프로젝트 템플릿  **ItemTemplateWizard**, 다음 선택은  **확인** 단추.  
+5.  Choose the **WPF User Control Library** project template, name the project **ItemTemplateWizard**, and then choose the **OK** button.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 **ItemTemplateWizard** 프로젝트를 솔루션에 추가합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **ItemTemplateWizard** project to the solution.  
   
-6.  프로젝트에서 UserControl1 항목을 삭제합니다.  
+6.  Delete the UserControl1 item from the project.  
   
-## 마법사 프로젝트 구성  
- 마법사를 만들기 전에 Windows Presentation Foundation \(WPF\) 창, 코드 파일 및 어셈블리 참조를 프로젝트에 추가 해야 합니다.  
+## <a name="configuring-the-wizard-project"></a>Configuring the Wizard Project  
+ Before you create the wizard, you must add a Windows Presentation Foundation (WPF) window, a code file, and assembly references to the project.  
   
-#### 마법사 프로젝트를 구성하려면  
+#### <a name="to-configure-the-wizard-project"></a>To configure the wizard project  
   
-1.  **솔루션 탐색기**, 바로 가기 메뉴에서 열을  **ItemTemplateWizard** 프로젝트 노드 및 다음 선택  **속성**.  
+1.  In **Solution Explorer**, open the shortcut menu from the **ItemTemplateWizard** project node, and then choose **Properties**.  
   
-2.  에 있는  **프로젝트 디자이너**,.NET Framework 4.5로 대상 프레임 워크 설정 되어 있는지 확인 하십시오.  
+2.  In the **Project Designer**, make sure that the target framework is set to .NET Framework 4.5.  
   
-     C\# 프로젝트의 경우이 값을 설정할 수 있는  **응용 프로그램** 탭입니다.  Visual Basic 프로젝트의 경우이 값을 설정할 수 있는  **컴파일** 탭.  자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](~/ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하십시오.  
+     For Visual C# projects, you can set this value on the **Application** tab. For Visual Basic projects, you can set this value on the **Compile** tab. For more information, see [How to: Target a Version of the .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).  
   
-3.  에  **ItemTemplateWizard** 프로젝트에 추가 된  **창 \(WPF\)** 프로젝트에 항목을 만든 후 다음 항목의 이름을  **WizardWindow**.  
+3.  In the **ItemTemplateWizard** project, add a **Window (WPF)** item to the project, and then name the item **WizardWindow**.  
   
-4.  문자열 및 CustomActionWizard 라는 두 개의 코드 파일을 추가 합니다.  
+4.  Add two code files that are named CustomActionWizard and Strings.  
   
-5.  바로 가기 메뉴를 열고를  **ItemTemplateWizard** 프로젝트를 하 고 선택  **참조 추가**.  
+5.  Open the shortcut menu for the **ItemTemplateWizard** project,  and then choose **Add Reference**.  
   
-6.  에  **참조 관리자\-ItemTemplateWizard** 대화 상자에서  **어셈블리** 노드를 선택 된  **확장** 노드.  
+6.  In the **Reference Manager - ItemTemplateWizard** dialog box, under the **Assemblies** node, choose the **Extensions** node.  
   
-7.  다음 어셈블리 옆에 있는 확인란을 선택 하 고 선택 된  **확인** 단추:  
+7.  Select the check boxes next to the following assemblies, and then choose the **OK** button:  
   
     -   EnvDTE  
   
@@ -102,110 +107,107 @@ caps.handback.revision: 43
   
     -   Microsoft.VisualStudio.TemplateWizardInterface  
   
-8.  **솔루션 탐색기**에  **참조** ItemTemplateWizard 프로젝트에 대 한 폴더를 선택은  **EnvDTE** 참조.  
+8.  In **Solution Explorer**, in the **References** folder for the ItemTemplateWizard project, choose the **EnvDTE** reference.  
   
     > [!NOTE]  
-    >  Visual Basic 프로젝트에서는 [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ko-kr/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)에서 **솔루션 항상 표시** 확인란을 선택한 경우에만 **참조** 폴더가 표시됩니다.  
+    >  In Visual Basic projects, the **References** folder appears only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-9. 에  **속성** 창에서 값을 변경의  **Interop 형식 포함** 속성을  **False**.  
+9. In the **Properties** window, change the value of the **Embed Interop Types** property to **False**.  
   
-## 사용자 지정 작업의 기본 위치 및 ID 문자열 정의  
- 모든 사용자 지정 작업에는 Elements.xml 파일에 있는 `CustomAction` 요소의 `GroupID` 및 `Location` 특성으로 지정되는 위치 및 ID가 있습니다.  이 단계에서는 ItemTemplateWizard 프로젝트에서 이러한 특성에 지정할 수 있는 올바른 문자열을 정의합니다.  이 연습을 완료 하면 사용자의 위치 및 ID를 마법사에서 지정 하는 경우 사용자 지정 작업 프로젝트 항목의 Elements.xml 파일에 이러한 문자열이 기록 됩니다.  
+## <a name="defining-the-default-location-and-id-strings-for-custom-actions"></a>Defining the Default Location and ID Strings for Custom Actions  
+ Every custom action has a location and ID that is specified in the `GroupID` and `Location` attributes of the `CustomAction` element in the Elements.xml file. In this step, you define some of the valid strings for these attributes in the ItemTemplateWizard project. When you complete this walkthrough, these strings are written to the Elements.xml file in the Custom Action project item when users specify a location and an ID in the wizard.  
   
- 이 샘플에서는 복잡성을 줄이기 위해 사용 가능한 기본 위치 및 ID의 하위 집합만 지원합니다.  전체 목록은 [Default Custom Action Locations and IDs](http://go.microsoft.com/fwlink/?LinkId=181964)를 참조하십시오.  
+ For simplicity, this sample supports only a subset of the available default locations and IDs. For a full list, see [Default Custom Action Locations and IDs](http://go.microsoft.com/fwlink/?LinkId=181964).  
   
-#### 기본 위치 및 ID 문자열을 정의하려면  
+#### <a name="to-define-the-default-location-and-id-strings"></a>To define the default location and ID strings  
   
-1.  엽니다.  
+1.  open.  
   
-2.  에 있는  **ItemTemplateWizard** 프로젝트에 문자열 코드 파일의 코드를 다음 코드로 바꿉니다.  
+2.  In the **ItemTemplateWizard** project, replace the code in the Strings code file with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#6](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/cs/itemtemplatewizard/strings.cs#6)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#6](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/vb/itemtemplatewizard/strings.vb#6)]  
+     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#6](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/strings.cs#6)]  [!code-vb[SPExtensibility.ProjectItem.CustomAction#6](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/strings.vb#6)]  
   
-## 마법사 UI 만들기  
- 마법사의 UI를 정의하기 위해 XAML을 추가하고 마법사의 일부 컨트롤을 ID 문자열에 바인딩하기 위해 일부 코드를 추가합니다.  만드는 마법사는 Visual Studio의 SharePoint 프로젝트에 대한 기본 제공 마법사와 유사합니다.  
+## <a name="creating-the-wizard-ui"></a>Creating the Wizard UI  
+ Add XAML to define the UI of the wizard, and add some code to bind some of the controls in the wizard to the ID strings. The wizard that you create resembles the built-in wizard for SharePoint projects in Visual Studio.  
   
-#### 마법사 UI를 만들려면  
+#### <a name="to-create-the-wizard-ui"></a>To create the wizard UI  
   
-1.  에  **ItemTemplateWizard** 프로젝트에 대 한 바로 가기 메뉴를 엽니다의  **WizardWindow.xaml** 파일을 및 다음 선택  **열기** 창 디자이너에서 엽니다.  
+1.  In the **ItemTemplateWizard** project, open the shortcut menu for the **WizardWindow.xaml** file, and then choose **Open** to open the window in the designer.  
   
-2.  XAML 뷰에서 현재 XAML을 다음 XAML로 바꿉니다.  이 XAML에서는 제목, 사용자 지정 작업의 동작을 지정하기 위한 컨트롤 및 창 아래쪽의 탐색 단추가 포함된 UI를 정의합니다.  
-  
-    > [!NOTE]  
-    >  이 코드를 추가한 후 프로젝트에 컴파일 오류가 발생 해야 합니다.  이러한 오류는 이후 단계에서 코드를 추가하면 사라집니다.  
-  
-     [!code-xml[SPExtensibility.ProjectItem.CustomAction#9](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/cs/itemtemplatewizard/wizardwindow.xaml#9)]  
+2.  In the XAML view, replace the current XAML with the following XAML. The XAML defines a UI that includes a heading, controls for specifying the behavior of the custom action, and navigation buttons at the bottom of the window.  
   
     > [!NOTE]  
-    >  이 XAML에서 생성 되는 창에서 파생 되는 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 기본 클래스입니다.  사용자 지정 WPF 대화 상자 Visual Studio 추가 하면 대화 상자를 다른 대화 상자에 Visual Studio 일관성 있는 스타일 및 모달 대화 상자가 발생할 수 있는 문제를 방지 하려면이 클래스에서 파생 하는 것이 좋습니다.  자세한 내용은 [만들기 및 관리 모달 대화 상자](../extensibility/creating-and-managing-modal-dialog-boxes.md)을 참조하십시오.  
+    >  Your project will have some compile errors after you add this code. These errors will go away when you add code in later steps.  
   
-3.  Visual Basic 프로젝트를 개발 하는 경우 제거는 `ItemTemplateWizard` 네임 스페이스에서의 `WizardWindow` 클래스 이름에는 `x:Class` 특성은 `Window` 요소.  이 요소에는 XAML의 첫 번째 줄에 있습니다.  완료 되 면 첫 번째 줄에 다음 코드를 유사 합니다.  
+     [!code-xml[SPExtensibility.ProjectItem.CustomAction#9](../sharepoint/codesnippet/Xaml/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml#9)]  
+  
+    > [!NOTE]  
+    >  The window that's created in this XAML is derived from the <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> base class. When you add a custom WPF dialog box to Visual Studio, we recommend that you derive your dialog box from this class to have consistent styling with other dialog boxes in Visual Studio and to avoid issues that might otherwise occur with modal dialog boxes. For more information, see [Creating and Managing Modal Dialog Boxes](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes).  
+  
+3.  If you're developing a Visual Basic project, remove the `ItemTemplateWizard` namespace from the `WizardWindow` class name in the `x:Class` attribute of the `Window` element. This element is in the first line of the XAML. When you're done, the first line should resemble the following code:  
   
     ```  
     <Window x:Class="WizardWindow"  
     ```  
   
-4.  WizardWindow.xaml 파일에 대 한 코드 숨김 파일에 현재 코드를 다음 코드로 대체 합니다.  
+4.  In the code-behind file for the WizardWindow.xaml file, replace the current code with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#7](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/cs/itemtemplatewizard/wizardwindow.xaml.cs#7)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#7](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/vb/itemtemplatewizard/wizardwindow.xaml.vb#7)]  
+     [!code-vb[SPExtensibility.ProjectItem.CustomAction#7](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml.vb#7)]  [!code-csharp[SPExtensibility.ProjectItem.CustomAction#7](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml.cs#7)]  
   
-## 마법사 구현  
- <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스를 구현하여 마법사의 기능을 정의합니다.  
+## <a name="implementing-the-wizard"></a>Implementing the Wizard  
+ Define the functionality of the wizard by implementing the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface.  
   
-#### 마법사를 구현하려면  
+#### <a name="to-implement-the-wizard"></a>To implement the wizard  
   
-1.  에 있는  **ItemTemplateWizard** 열린 프로젝트의  **CustomActionWizard** 파일에서 코드 및 다음이 파일에 현재 코드를 다음 코드로 바꿉니다:  
+1.  In the **ItemTemplateWizard** project, open the **CustomActionWizard** code file, and then replace the current code in this file with the following code:  
   
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#8](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/cs/itemtemplatewizard/customactionwizard.cs#8)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#8](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/vb/itemtemplatewizard/customactionwizard.vb#8)]  
+     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#8](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/customactionwizard.cs#8)]  [!code-vb[SPExtensibility.ProjectItem.CustomAction#8](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/customactionwizard.vb#8)]  
   
-## 검사점  
- 이 연습의 이전 단계를 통해 마법사를 위한 모든 코드가 프로젝트에 포함되었습니다.  프로젝트를 빌드하여 오류 없이 컴파일되는지 확인합니다.  
+## <a name="checkpoint"></a>Checkpoint  
+ At this point in the walkthrough, all the code for the wizard is now in the project. Build the project to make sure that it compiles without errors.  
   
-#### 프로젝트를 빌드하려면  
+#### <a name="to-build-your-project"></a>To build your project  
   
-1.  메뉴 표시줄에서 선택  **빌드**,  **솔루션 빌드**.  
+1.  On the menu bar, choose **Build**, **Build Solution**.  
   
-## 마법사를 항목 템플릿과 연결  
- 마법사를 구현 했으므로를 함께 연결 해야 여  **사용자 지정 작업** 세 가지 주요 단계를 수행 하 여 항목 템플릿:  
+## <a name="associating-the-wizard-with-the-item-template"></a>Associating the Wizard with the Item Template  
+ Now that you have implemented the wizard, you must associate it with the **Custom Action** item template by completing three main steps:  
   
-1.  강력한 이름으로 마법사 어셈블리에 서명합니다.  
+1.  Sign the wizard assembly with a strong name.  
   
-2.  마법사 어셈블리의 공개 키 토큰을 가져옵니다.  
+2.  Get the public key token for the wizard assembly.  
   
-3.  **사용자 지정 작업** 항목 템플릿의 .vstemplate 파일에서 마법사 어셈블리에 대한 참조를 추가합니다.  
+3.  Add a reference to the wizard assembly in the .vstemplate file for the **Custom Action** item template.  
   
-#### 강력한 이름으로 마법사 어셈블리에 서명하려면  
+#### <a name="to-sign-the-wizard-assembly-with-a-strong-name"></a>To sign the wizard assembly with a strong name  
   
-1.  **솔루션 탐색기**, 바로 가기 메뉴에서 열을  **ItemTemplateWizard** 프로젝트 노드 및 다음 선택  **속성**.  
+1.  In **Solution Explorer**, open the shortcut menu from the **ItemTemplateWizard** project node, and then choose **Properties**.  
   
-2.  **서명** 탭에서 **어셈블리 서명** 확인란을 선택합니다.  
+2.  On the **Signing** tab, select the **Sign the assembly** check box.  
   
-3.  에 있는  **강력한 이름 키 파일 선택** 목록에서 선택  **\< 새로... \>**.  
+3.  In the **Choose a strong name key file** list, choose **\<New...>**.  
   
-4.  에  **강력한 이름 키 만들기** 대화 상자에서 선택을 취소의 이름을 입력은  **암호로 내 키 파일 보호** 확인란을 선택한 다음 선택은  **확인** 단추.  
+4.  In the **Create Strong Name Key** dialog box, enter a name, clear the **Protect my key file with a password** check box, and then choose the **OK** button.  
   
-5.  메뉴 표시줄에서 선택  **빌드**,  **솔루션 빌드**.  
+5.  On the menu bar, choose **Build**, **Build Solution**.  
   
-#### 마법사 어셈블리의 공개 키 토큰을 가져오려면  
+#### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>To get the public key token for the wizard assembly  
   
-1.  Visual Studio 명령 프롬프트 창에서 다음을 실행 명령 대체  *PathToWizardAssembly* 빌드된 ItemTemplateWizard.dll 어셈블리의 ItemTemplateWizard 프로젝트 개발 컴퓨터에 전체 경로를입니다.  
+1.  In a Visual Studio Command Prompt window, run the following command, replacing *PathToWizardAssembly* with the full path to the built ItemTemplateWizard.dll assembly for the ItemTemplateWizard project on your development computer.  
   
     ```  
     sn.exe -T PathToWizardAssembly  
     ```  
   
-     ItemTemplateWizard.dll 어셈블리의 공개 키 토큰은 Visual Studio 명령 프롬프트 창에 기록됩니다.  
+     The public key token for the ItemTemplateWizard.dll assembly is written to the Visual Studio Command Prompt window.  
   
-2.  Visual Studio 명령 프롬프트 창을 계속 열어 둡니다.  다음 절차를 완료 하려면 공개 키 토큰이 필요 합니다.  
+2.  Keep the Visual Studio Command Prompt window open. You'll need the public key token to complete the next procedure.  
   
-#### 마법사 어셈블리에 대한 참조를 .vstemplate 파일에 추가하려면  
+#### <a name="to-add-a-reference-to-the-wizard-assembly-in-the-vstemplate-file"></a>To add a reference to the wizard assembly in the .vstemplate file  
   
-1.  **솔루션 탐색기**, 확장 된  **ItemTemplate** 프로젝트 노드 및 ItemTemplate.vstemplate 파일을 엽니다.  
+1.  In **Solution Explorer**, expand the **ItemTemplate** project node, and then open the ItemTemplate.vstemplate file.  
   
-2.  파일의 끝 부분에서 `</TemplateContent>` 및 `</VSTemplate>` 태그 사이에 다음 `WizardExtension` 요소를 추가합니다.  교체는  *YourToken* 의 값은 `PublicKeyToken` 특성은 이전 절차에서 얻은 공개 키 토큰으로.  
+2.  Near the end of the file, add the following `WizardExtension` element between the `</TemplateContent>` and `</VSTemplate>` tags. Replace the *YourToken* value of the `PublicKeyToken` attribute with the public key token that you obtained in the previous procedure.  
   
     ```  
     <WizardExtension>  
@@ -214,21 +216,21 @@ caps.handback.revision: 43
     </WizardExtension>  
     ```  
   
-     `WizardExtension` 요소에 대한 자세한 내용은 [WizardExtension 요소&#40;Visual Studio 템플릿&#41;](../extensibility/wizardextension-element-visual-studio-templates.md)를 참조하십시오.  
+     For more information about the `WizardExtension` element, see [WizardExtension Element &#40;Visual Studio Templates&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).  
   
-3.  파일을 저장한 후 닫습니다.  
+3.  Save and close the file.  
   
-## 항목 템플릿의 Elements.xml 파일에 대체 가능한 매개 변수 추가  
- 대체 가능한 매개 변수 여러 개를 ItemTemplate 프로젝트의 Elements.xml 파일에 추가합니다.  이러한 매개 변수는 앞에서 정의한 `CustomActionWizard` 클래스의 `PopulateReplacementDictionary` 메서드에서 초기화됩니다.  사용자가 프로젝트에 사용자 지정 작업 프로젝트 항목을 추가하면 Visual Studio에서는 자동으로 새 프로젝트 항목의 Elements.xml 파일에 있는 이러한 매개 변수를 마법사에서 지정한 값으로 바꿉니다.  
+## <a name="adding-replaceable-parameters-to-the-elementsxml-file-in-the-item-template"></a>Adding Replaceable Parameters to the Elements.xml File in the Item Template  
+ Add several replaceable parameters to the Elements.xml file in the ItemTemplate project. These parameters are initialized in the `PopulateReplacementDictionary` method in the `CustomActionWizard` class that you defined earlier. When a user adds a Custom Action project item to a project, Visual Studio automatically replaces these parameters in the Elements.xml file in the new project item with the values that they specified in the wizard.  
   
- 대체 가능한 매개 변수는 달러 기호 \($\) 문자로 시작 하는 토큰입니다.  대체 가능한 매개 변수를 정의할 뿐 아니라 SharePoint 프로젝트 시스템을 정의 하 고 초기화 하는 기본 제공 매개 변수를 사용할 수 있습니다.  자세한 내용은 [대체 가능 매개 변수](../sharepoint/replaceable-parameters.md)을 참조하십시오.  
+ A replaceable parameter is a token that starts and ends with the dollar sign ($) character. In addition to defining your own replaceable parameters, you can use built-in parameters that the SharePoint project system defines and initializes. For more information, see [Replaceable Parameters](../sharepoint/replaceable-parameters.md).  
   
-#### 대체 가능한 매개 변수를 Elements.xml 파일에 추가하려면  
+#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>To add replaceable parameters to the Elements.xml file  
   
-1.  ItemTemplate 프로젝트의 Elements.xml 파일의 내용을 다음 XML로 바꿉니다.  
+1.  In the ItemTemplate project, replace the contents of the Elements.xml file with the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8" ?>  
     <Elements Id="$guid8$" xmlns="http://schemas.microsoft.com/sharepoint/">  
       <CustomAction Id="$IdValue$"  
                     GroupId="$GroupIdValue$"  
@@ -241,120 +243,120 @@ caps.handback.revision: 43
     </Elements>  
     ```  
   
-     새로운 XML은 `Id`, `GroupId`, `Location`, `Description` 및 `Url` 특성의 값을 대체 가능한 매개 변수로 변경합니다.  
+     The new XML changes the values of the `Id`, `GroupId`, `Location`, `Description`, and `Url` attributes to replaceable parameters.  
   
-2.  파일을 저장한 후 닫습니다.  
+2.  Save and close the file.  
   
-## VSIX 패키지에 마법사 추가  
- VSIX 프로젝트에서에서 source.extension.vsixmanifest 파일을 프로젝트 항목이 포함 된 VSIX 패키지와 함께 배포 되도록 마법사 프로젝트에 대 한 참조를 추가 합니다.  
+## <a name="adding-the-wizard-to-the-vsix-package"></a>Adding the Wizard to the VSIX Package  
+ In the source.extension.vsixmanifest file in the VSIX project, add a reference to the wizard project so that it's deployed with the VSIX package that contains the project item.  
   
-#### VSIX 패키지에 마법사를 추가하려면  
+#### <a name="to-add-the-wizard-to-the-vsix-package"></a>To add the wizard to the VSIX package  
   
-1.  **솔루션 탐색기**, 바로 가기 메뉴에서 열을  **source.extension.vsixmanifest** CustomActionProjectItem 프로젝트에서 파일 및 다음 선택  **열기** 매니페스트 편집기에서 파일을 열려고.  
+1.  In **Solution Explorer**, open the shortcut menu from the **source.extension.vsixmanifest** file in the CustomActionProjectItem project, and then choose **Open** to open the file in the manifest editor.  
   
-2.  매니페스트 편집기에서 선택 된  **자산** 탭을 클릭 한 다음 선택은  **새로** 단추.  
+2.  In the manifest editor, choose the **Assets** tab, then choose the **New** button.  
   
-     **를 추가 하는 새로운 자산** 대화 상자가 나타납니다.  
+     The **Add New Asset** dialog box appears.  
   
-3.  에 있는  **유형** 목록에서 선택  **Microsoft.VisualStudio.Assembly**.  
+3.  In the **Type** list, choose **Microsoft.VisualStudio.Assembly**.  
   
-4.  에 있는  **원본** 목록에서 선택  **현재 솔루션의 프로젝트에**.  
+4.  In the **Source** list, choose **A project in current solution**.  
   
-5.  에  **프로젝트** 목록에서 선택  **ItemTemplateWizard**, 다음 선택은  **확인** 단추입니다.  
+5.  In the **Project** list, choose **ItemTemplateWizard**, and then choose the **OK** button.  
   
-6.  메뉴 표시줄에서 선택  **빌드**,  **솔루션 빌드**, 및 다음 솔루션이 오류 없이 컴파일되는지 확인 합니다.  
+6.  On the menu bar, choose **Build**, **Build Solution**, and then make sure that the solution compiles without errors.  
   
-## 마법사 테스트  
- 이제 마법사를 테스트할 준비가 되었습니다.  첫째, Visual Studio 실험적 인스턴스에서 CustomActionProjectItem 솔루션 디버깅을 시작 합니다.  다음 마법사 사용자 지정 작업 프로젝트 항목에 대 한 Visual Studio 실험적 인스턴스에 SharePoint 프로젝트에서 테스트 합니다.  마지막으로, SharePoint 프로젝트를 빌드 및 실행하여 사용자 지정 작업이 예상대로 작동하는지 확인합니다.  
+## <a name="testing-the-wizard"></a>Testing the Wizard  
+ You are now ready to test the wizard. First, start to debug the CustomActionProjectItem solution in the experimental instance of Visual Studio. Then test the wizard for the Custom Action project item in a SharePoint project in the experimental instance of Visual Studio. Finally, build and run the SharePoint project to verify that the custom action works as expected.  
   
-#### 솔루션 디버깅을 시작 하려면  
+#### <a name="to-start-to-debug-the-solution"></a>To start to debug the solution  
   
-1.  Visual Studio 관리자 자격 증명으로 다시 시작 하 고 CustomActionProjectItem 솔루션을 엽니다.  
+1.  Restart Visual Studio with administrative credentials, and then open the CustomActionProjectItem solution.  
   
-2.  ItemTemplateWizard 프로젝트에 CustomActionWizard 코드 파일을 열고 다음 코드의 첫째 줄에 중단점을 추가 된 `RunStarted` 메서드입니다.  
+2.  In the ItemTemplateWizard project, open the CustomActionWizard code file, and then add a breakpoint to the first line of code in the `RunStarted` method.  
   
-3.  메뉴 표시줄에서 선택  **디버깅**,  **예외**.  
+3.  On the menu bar, choose **Debug**, **Exceptions**.  
   
-4.  에  **예외** 대화 상자에서 있는지 확인 하십시오의  **throw 됨** 및  **사용자가 처리 하지 않음** 확인란을  **공용 언어 런타임 예외** 선택을 하 고 선택의  **확인** 단추.  
+4.  In the **Exceptions** dialog box, make sure that the **Thrown** and **User-unhandled** check boxes for **Common Language Runtime Exceptions** are cleared, and then choose the **OK** button.  
   
-5.  선택, F5 키를 선택 하거나, 메뉴 모음에서 디버깅 시작  **디버깅**,  **디버깅 시작**.  
+5.  Start debugging by choosing the F5 key, or, on the menu bar, choosing **Debug**, **Start Debugging**.  
   
-     Visual Studio 작업 프로젝트 Item\\1.0 %userprofile%\\appdata\\local\\microsoft\\visualstudio\\11.0exp\\extensions\\contoso\\custom에 있는 확장을 설치 및 Visual Studio 실험 인스턴스를 시작 합니다.  프로젝트 항목에 Visual Studio이 인스턴스를 테스트 합니다.  
+     Visual Studio installs the extension to %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Action Project Item\1.0 and starts an experimental instance of Visual Studio. You'll test the project item in this instance of Visual Studio.  
   
-#### Visual Studio에서 마법사를 테스트하려면  
+#### <a name="to-test-the-wizard-in-visual-studio"></a>To test the wizard in Visual Studio  
   
-1.  Visual Studio 실험적 인스턴스에서 메뉴 표시줄에서 선택  **파일**,  **New**,  **프로젝트**.  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **File**, **New**, **Project**.  
   
-2.  확장은  **C\#** 또는  **Visual Basic** 노드 \(항목 템플릿을 지 원하는 언어에 따라\)의  **SharePoint** 노드를 다음 선택은  **2010** 노드.  
+2.  Expand the **Visual C#** or **Visual Basic** node (depending on the language that your item template supports), expand the **SharePoint** node, and then choose the **2010** node.  
   
-3.  프로젝트 템플릿 목록에서 선택  **SharePoint 2010 프로젝트**, 프로젝트의 이름을  **CustomActionWizardTest**, 다음 선택은  **확인** 단추입니다.  
+3.  In the list of project templates, choose **SharePoint 2010 Project**, name the project **CustomActionWizardTest**, and then choose the **OK** button.  
   
-4.  에  **SharePoint 사용자 지정 마법사**디버깅에 사용 하려는 사이트의 URL을 입력 하 고 다음 선택의  **마침** 단추.  
+4.  In the **SharePoint Customization Wizard**, enter the URL of the site that you want to use for debugging, and then choose the **Finish** button.  
   
-5.  **솔루션 탐색기**, 프로젝트 노드에 대 한 바로 가기 메뉴를 열고  **추가**, 다음 선택  **새 항목**.  
+5.  In **Solution Explorer**, open the shortcut menu for the project node, choose **Add**, and then choose **New Item**.  
   
-6.  에  **새 항목 추가\-CustomItemWizardTest** 대화 상자에서 확장은  **SharePoint** 노드를 차례로 확장 하 고는  **2010** 노드.  
+6.  In the **Add New Item - CustomItemWizardTest** dialog box, expand the **SharePoint** node, and then expand the **2010** node.  
   
-7.  프로젝트 항목의 목록에서 선택의  **사용자 지정 작업** 항목을 및 다음 선택은  **추가** 단추.  
+7.  In the list of project items, choose the **Custom Action** item, and then choose the **Add** button.  
   
-8.  다른 Visual Studio 인스턴스의 코드가 이전에 `RunStarted` 메서드에 설정한 중단점에서 중지하는지 확인합니다.  
+8.  Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `RunStarted` method.  
   
-9. 계속 하려면 F5 키를 선택 하 여 또는 메뉴 표시줄에서 선택 하 여 프로젝트를 디버깅  **디버깅**,  **계속**.  
+9. Continue to debug the project by choosing the F5 key or, on the menu bar, choosing **Debug**, **Continue**.  
   
-     SharePoint 사용자 지정 마법사가 나타납니다.  
+     The SharePoint Customization Wizard appears.  
   
-10. 아래  **위치**, 선택은  **목록 편집** 옵션 단추.  
+10. Under **Location**, choose the **List Edit** option button.  
   
-11. 에 있는  **그룹 ID** 목록에서 선택  **통신**.  
+11. In the **Group ID** list, choose **Communications**.  
   
-12. 에 있는  **제목** 상자에 입력  **SharePoint 개발자 센터**.  
+12. In the **Title** box, enter **SharePoint Developer Center**.  
   
-13. 에 있는  **설명이** 상자에 입력  **SharePoint 개발자 센터 웹 사이트를 엽니다**.  
+13. In the  **Description** box, enter **Opens the SharePoint Developer Center website**.  
   
-14. 에  **URL** 상자에 입력  **http:\/\/msdn.microsoft.com\/sharepoint\/default.aspx**, 다음 선택은  **마침** 단추입니다.  
+14. In the **URL** box, enter **http://msdn.microsoft.com/sharepoint/default.aspx**, and then choose the **Finish** button.  
   
-     isual Studio 라는 항목 추가  **CustomAction1** 프로젝트와의 Elements.xml 파일을 편집기에서 엽니다.  마법사에서 지정한 값이 Elements.xml에 포함되어 있는지 확인합니다.  
+     isual Studio adds an item that's named **CustomAction1** to your project and opens the Elements.xml file in the editor. Verify that Elements.xml contains the values that you specified in the wizard.  
   
-#### SharePoint에서 사용자 지정 작업을 테스트하려면  
+#### <a name="to-test-the-custom-action-in-sharepoint"></a>To test the custom action in SharePoint  
   
-1.  실험적 인스턴스를 Visual Studio f 5 키를 선택 하거나 메뉴 표시줄에서 선택  **디버깅**,  **디버깅 시작**.  
+1.  In the experimental instance of Visual Studio, choose the F5 key or, on the menu bar, choose **Debug**, **Start Debugging**.  
   
-     사용자 지정 작업을 패키지 하 고 지정 된 SharePoint 사이트에 배포 된  **사이트 URL** 속성에서 프로젝트 및 웹 브라우저를이 사이트의 기본 페이지에 열립니다.  
+     The custom action is packaged and deployed to the SharePoint site specified by the **Site URL** property of the project, and the web browser opens to the default page of this site.  
   
     > [!NOTE]  
-    >  경우는  **스크립트 디버깅 사용 안 함** 대화 상자가 나타나며, 선택의  **예** 단추.  
+    >  If the **Script Debugging Disabled** dialog box appears, choose the **Yes** button.  
   
-2.  SharePoint 사이트의 목록 영역에서 선택 된  **작업** 링크입니다.  
+2.  In the Lists area of the SharePoint site, choose the **Tasks** link.  
   
-     **작업\-모든 작업** 페이지가 나타납니다.  
+     The **Tasks - All Tasks** page appears.  
   
-3.  에  **목록 도구** 탭 리본 메뉴의 선택은  **목록** 탭을 한 다음의  **설정** 을  그룹, 선택  **목록 설정**.  
+3.  On the **List Tools** tab of the ribbon, choose the **List** tab, and then, in the **Settings** group, choose **List Settings**.  
   
-     **목록 설정** 페이지가 나타납니다.  
+     The **List Settings** page appears.  
   
-4.  아래는  **통신** 페이지의 위쪽에 제목, 선택은  **SharePoint 개발자 센터** 연결 브라우저 웹 사이트 http:\/\/msdn.microsoft.com\/sharepoint\/default.aspx에서 열린다는 것을 확인 하 고 다음 브라우저를 닫습니다.  
+4.  Under the **Communications** heading near the top of the page, choose the **SharePoint Developer Center** link, verify that the browser opens the website http://msdn.microsoft.com/sharepoint/default.aspx, and then close the browser.  
   
-## 개발 컴퓨터 정리  
- 프로젝트 항목의 테스트를 마쳤으면 실험 모드의 Visual Studio 인스턴스에서 프로젝트 항목 템플릿을 제거합니다.  
+## <a name="cleaning-up-the-development-computer"></a>Cleaning up the Development Computer  
+ After you finish testing the project item, remove the project item template from the experimental instance of Visual Studio.  
   
-#### 개발 컴퓨터를 정리하려면  
+#### <a name="to-clean-up-the-development-computer"></a>To clean up the development computer  
   
-1.  Visual Studio 실험적 인스턴스에서 메뉴 표시줄에서 선택  **도구**,  **확장 및 업데이트**.  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **Tools**, **Extensions and Updates**.  
   
-     **확장 및 업데이트** 대화 상자가 열립니다.  
+     The **Extensions and Updates** dialog box opens.  
   
-2.  확장명 목록에서 선택의  **사용자 지정 작업 프로젝트 항목** 확장명을 다음 선택은  **제거** 단추.  
+2.  In the list of extensions, choose the **Custom Action Project Item** extension, and then choose the **Uninstall** button.  
   
-3.  나타나는 대화 상자에서 선택 된  **예** 확장명을 제거 하 고 선택 확인 단추는  **지금 다시 시작** 단추 제거를 완료 합니다.  
+3.  In the dialog box that appears, choose the **Yes** button to confirm that you want to uninstall the extension, and then choose the **Restart Now** button to complete the uninstallation.  
   
-4.  Visual Studio \(Visual Studio CustomActionProjectItem 솔루션에 열려 있는 인스턴스 및 실험적 인스턴스\)을 모두 닫습니다.  
+4.  Close both instances of Visual Studio (the experimental instance and the instance of Visual Studio in which the CustomActionProjectItem solution is open).  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [Defining Custom SharePoint Project Item Types](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
- [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [방법: 프로젝트 템플릿에 마법사 사용](~/extensibility/how-to-use-wizards-with-project-templates.md)   
+ [Visual Studio Template Schema Reference](/visualstudio/extensibility/visual-studio-template-schema-reference)   
+ [How to: Use Wizards with Project Templates](../extensibility/how-to-use-wizards-with-project-templates.md)   
  [Default Custom Action Locations and IDs](http://go.microsoft.com/fwlink/?LinkId=181964)  
   
   

@@ -1,73 +1,90 @@
 ---
-title: "SccAddFromScc 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccAddFromScc"
-helpviewer_keywords: 
-  - "SccAddFromScc 함수"
+title: SccAddFromScc Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccAddFromScc
+helpviewer_keywords:
+- SccAddFromScc function
 ms.assetid: 902e764d-200e-46e1-8c42-4da7b037f9a0
 caps.latest.revision: 17
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# SccAddFromScc 함수
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4711028976d9a55e4281cb2ba3e8b0dd27aa1417
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 함수를 소스 제어 시스템에 이미 있는 파일을 찾아보려면 허용 하 고 이후에 현재 프로젝트 부분에서는 이러한 파일을 확인 합니다. 예를 들어이 함수 파일을 복사 하지 않고 현재 프로젝트에 공통 헤더 파일을 가져올 수 있습니다. 파일의 반환 배열 `lplpFileNames`, IDE 프로젝트에 추가 하는 사용자가 파일의 목록을 포함 합니다.  
+---
+# <a name="sccaddfromscc-function"></a>SccAddFromScc Function
+This function allows the user to browse for files that are already in the source control system and subsequently make those files part of the current project. For example, this function can get a common header file into the current project without copying the file. The return array of files, `lplpFileNames`, contains the list of files that the user wants to add to the IDE project.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccAddFromScc (  
-   LPVOID   pvContext,  
-   HWND     hWnd,  
-   LPLONG   lpnFiles,  
-   LPCSTR** lplpFileNames  
+   LPVOID   pvContext,  
+   HWND     hWnd,  
+   LPLONG   lpnFiles,  
+   LPCSTR** lplpFileNames  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\] 소스 제어 플러그 인 컨텍스트 구조입니다.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- \[in\] 소스 제어 플러그 인을 제공 하는 모든 대화 상자에 대 한 부모로 사용할 수 있는 IDE 창 핸들입니다.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  lpnFiles  
- \[에서, out\] 에 추가 되는 파일의 수에 대 한 버퍼입니다. \(이 `NULL` 가리키는 메모리 경우 `lplpFileNames` 해제 되어야 하는 것입니다. 주의 참조 대 한 자세한 내용은.\)  
+ [in, out] A buffer for the number of files that are being added in. (This is `NULL` if the memory pointed to by `lplpFileNames` is to be released. See Remarks for details.)  
   
  lplpFileNames  
- \[에서, out\] 디렉터리 경로 없이 모든 파일 이름에 대 한 포인터의 배열입니다. 이 배열은 할당 되 고 소스 제어 플러그 인에 의해 해제 됩니다. 경우 `lpnFiles` \= 1 및 `lplpFileNames` 없는 `NULL`, 를 가리키는 배열에 있는 첫 번째 이름 `lplpFileNames` 대상 폴더를 포함 합니다.  
+ [in, out] An array of pointers to all the file names without directory paths. This array is allocated and freed by the source control plug-in. If `lpnFiles` = 1 and `lplpFileNames` is not `NULL`, the first name in the array pointed to by `lplpFileNames` contains the destination folder.  
   
-## 반환 값  
- 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|값|설명|  
-|-------|--------|  
-|SCC\_OK|성공적으로 파일이 있으며 프로젝트에 추가 되었습니다.|  
-|SCC\_I\_OPERATIONCANCELED|영향을 주지 작업이 취소 되었습니다.|  
-|SCC\_I\_RELOADFILE|파일이 나 프로젝트를 다시 로드 해야 합니다.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|The files were successfully located and added to the project.|  
+|SCC_I_OPERATIONCANCELED|Operation was canceled with no effect.|  
+|SCC_I_RELOADFILE|A file or project needs to be reloaded.|  
   
-## 설명  
- IDE는이 함수를 호출합니다. IDE를 전달 하는 소스 제어 플러그 인이 로컬 대상 폴더를 지정 하를 지 원하는 경우 `lpnFiles` \= 1 및 전달에 로컬 폴더 이름을 `lplpFileNames`합니다.  
+## <a name="remarks"></a>Remarks  
+ The IDE calls this function. If the source control plug-in supports specifying a local destination folder, the IDE passes `lpnFiles` = 1 and passes the local folder name into `lplpFileNames`.  
   
- 경우에 대 한 호출의 `SccAddFromScc` 플러그 인에 값을 할당, 함수 반환 `lpnFiles` 및 `lplpFileNames`, 필요에 따라 파일 이름 배열에 대 한 메모리를 할당 \(이 할당에 대 한 포인터를 대체 하 `lplpFileNames`\). 소스 제어 플러그 인은 사용자의 디렉터리에 있거나 지정 된 대상 폴더에 모든 파일을 배치 하는 일을 담당 합니다. IDE는 그런 다음 IDE 프로젝트에 파일을 추가합니다.  
+ When the call to the `SccAddFromScc` function returns, the plug-in has assigned values to `lpnFiles` and `lplpFileNames`, allocating the memory for the file name array as necessary (note that this allocation replaces the pointer in `lplpFileNames`). The source control plug-in is responsible for placing all files into the user's directory or in the specified designation folder. The IDE then adds the files to the IDE project.  
   
- 마지막으로, IDE 호출이 함수를 다시 한 번 전달 `NULL` 에 대 한 `lpnFiles`합니다. 이것은 특별 한 신호 소스 제어에서 파일 이름 배열에 할당 된 메모리를 해제 하려면 플러그 인 `lplpFileNames``.`  
+ Finally, the IDE calls this function a second time, passing in `NULL` for `lpnFiles`. This is interpreted as a special signal by the source control plug-in to release the memory allocated for the file-name array in `lplpFileNames``.`  
   
- `lplpFileNames` 한 `char ***` 포인터입니다. 따라서이 API에 대 한 목록 표준 방식으로 전달 되는 파일 이름에 대 한 포인터의 배열에 대 한 포인터를 배치 하는 소스 제어 플러그 인 합니다.  
+ `lplpFileNames` is a `char ***` pointer. The source control plug-in places a pointer to an array of pointers to file names, thus passing the list in the standard way for this API.  
   
 > [!NOTE]
->  VSSCI API의 초기 버전에 추가 된 파일에 대 한 대상 프로젝트를 지정 하는 방법을 제공 하지 않았습니다. 이 의미 체계는 `lplpFIleNames` 매개 변수는 출력 매개 변수를 사용 하지 않고\/out 매개 변수 확인 하도록 향상 되었습니다. 단일 파일을 지정 하는 경우만, 즉 값 가리키는 `lpnFiles` 의 첫 번째 요소를 1 \= `lplpFileNames` 대상 폴더를 포함 합니다. 이러한 새로운 의미 체계를 호출 하 여 IDE 사용 하는 `SccSetOption` 함수는 `nOption`매개 변수 설정 `SCC_OPT_SHARESUBPROJ`합니다. 소스 제어 플러그 인 의미 체계를 지원 하지 않는 경우 반환 `SCC_E_OPTNOTSUPPORTED`합니다. 따라서 사용 하지 않도록 설정의 사용을 수행 하는 **소스 제어에서 추가** 기능입니다. 플러그 인을 지 원하는 경우는 **소스 제어에서 추가** 기능 \(`SCC_CAP_ADDFROMSCC`\), 새 의미 체계를 지원 하 고 반환 해야 합니다 `SCC_I_SHARESUBPROJOK`합니다.  
+>  Initial versions of the VSSCI API did not provide a way to indicate the target project for the added files. To accommodate this, the semantics of the `lplpFIleNames` parameter have been enhanced to make it an in/out parameter rather than an output parameter. If only a single file is specified, that is, the value pointed to by `lpnFiles` = 1, then the first element of `lplpFileNames` contains the target folder. To use these new semantics, the IDE calls the `SccSetOption` function with the `nOption`parameter set to `SCC_OPT_SHARESUBPROJ`. If a source control plug-in does not support the semantics, it returns `SCC_E_OPTNOTSUPPORTED`. Doing so disables the use of the **Add from Source Control** feature. If a plug-in supports the **Add from Source Control** feature (`SCC_CAP_ADDFROMSCC`), then it must support the new semantics and return `SCC_I_SHARESUBPROJOK`.  
   
-## 참고 항목  
- [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccSetOption](../extensibility/sccsetoption-function.md)

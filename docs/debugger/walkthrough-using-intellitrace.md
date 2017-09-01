@@ -1,94 +1,123 @@
 ---
-title: "연습: IntelliTrace 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Walkthrough: Using IntelliTrace | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
 caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# 연습: IntelliTrace 사용
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 40aac0c902e9b6fea230ba58e90bda5840da52a9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-IntelliTrace를 사용하여 특정 이벤트 또는 이벤트 범주나 이벤트 외에 개별 함수 호출에 대한 정보를 수집할 수 있습니다. 다음 절차에서는 이 작업을 수행하는 방법을 보여 줍니다.  
+---
+# <a name="walkthrough-using-intellitrace"></a>Walkthrough: Using IntelliTrace
+You can use IntelliTrace to collect information about specific events or categories of events, or about individual function calls in addition to events. The following procedures show how to do this.  
   
- Visual Studio Enterprise Edition\(Professional 또는 Community Edition 아님\)에서 IntelliTrace를 사용할 수 있습니다.  
+ You can use IntelliTrace in Visual Studio Enterprise edition (but not the Professional or Community editions).  
   
-##  <a name="GettingStarted"></a> 이벤트에만 IntelliTrace 사용  
- IntelliTrace 이벤트로만 디버그를 시도할 수 있습니다. IntelliTrace 이벤트에는 디버거 이벤트, 예외, .NET Framework 이벤트 및 기타 시스템 이벤트가 있습니다. 특정 이벤트를 켜거나 꺼서 디버깅을 시작하기 전에 IntelliTrace에서 기록하는 이벤트를 제어할 수 있습니다. 자세한 내용은 [IntelliTrace 기능](../debugger/intellitrace-features.md)을 참조하세요.  
+##  <a name="GettingStarted"></a> Using IntelliTrace with events only  
+ You can try debugging with just IntelliTrace events. IntelliTrace events are debugger events, exceptions, .NET Framework events, and other system events. You should turn on or turn off specific events to control the events that IntelliTrace records before you start debugging. For more information, see [IntelliTrace Features](../debugger/intellitrace-features.md).  
   
- 다음 단계에서는 IntelliTrace 이벤트만 사용하여 디버그하는 방법을 보여 줍니다.  
+ The following steps show how to debug with IntelliTrace events only:  
   
-1.  파일 액세스에 대한 IntelliTrace 이벤트 켜기**도구 \/ 옵션 \/ IntelliTrace \/ IntelliTrace 이벤트** 페이지로 이동하고 및 **파일** 범주를 확장합니다.**파일** 이벤트 범주를 확인합니다. 이렇게 하면 모든 파일 이벤트\(액세스, 닫기, 삭제\)가 확인됩니다.  
+1.  Turn on the IntelliTrace event for File Access. Go to the **Tools > Options > IntelliTrace > IntelliTrace Events** page, and expand the **File** category. Check the **File** event category. This causes all the file events (access, close, delete) to be checked.  
   
-2.  C\# 콘솔 응용 프로그램을 만듭니다. Program.cs 파일에서 다음 `using` 문을 추가합니다.  
+2.  Create a C# console application. In the Program.cs file, add the following `using` statement:  
   
-    ```c#  
+    ```CSharp  
     using System.IO;  
     ```  
   
-3.  Main 메서드에서 <xref:System.IO.FileStream>을 만들고 여기에서 읽고 닫고 파일을 삭제합니다. 다른 줄을 추가하여 중단점을 설정할 위치 지정합니다.  
+3.  Create a <xref:System.IO.FileStream> in the Main method, read from it, close it, and delete the file. Add another line just to have a place to set a breakpoint:  
   
-    ```c#  
-    static void Main(string[] args) { FileStream fs = File.Create("WordSearchInputs.txt"); fs.ReadByte(); fs.Close(); File.Delete("WordSearchInputs.txt"); Console.WriteLine("done"); }  
+    ```CSharp  
+    static void Main(string[] args)  
+    {  
+        FileStream fs = File.Create("WordSearchInputs.txt");  
+        fs.ReadByte();  
+        fs.Close();  
+        File.Delete("WordSearchInputs.txt");  
+  
+        Console.WriteLine("done");  
+    }  
     ```  
   
-4.  `Console.WriteLine("done");`에서 중단점 설정  
+4.  Set a breakpoint on `Console.WriteLine("done");`  
   
-5.  일반적인 방법으로 디버깅을 시작합니다. \(**F5** 키를 누르거나 **디버그 \/ 디버깅 시작**을 클릭합니다.  
-  
-    > [!TIP]
-    >  **지역** 및 **자동** 창에서 값을 보고 기록하기 위해 디버그하는 동안 해당 창은 열어 두세요.  
-  
-6.  중단점에서 실행이 중지됩니다.**진단 도구** 창이 표시되지 않으면, **디버그 \/ Windows \/ IntelliTrace 이벤트**를 클릭하세요.  
-  
-     **진단 도구** 창에서 **이벤트** 탭을 찾으세요\(**이벤트**, **메모리 사용량** 및 **CPU 사용량**, 이렇게 3개의 탭이 표시되어야 함\).**이벤트** 탭에는 디버거 실행이 중단되기 전에 마지막 이벤트로 끝나는 시간 순 이벤트 목록이 표시됩니다.**WordSearchInputs.txt 액세스**라는 이벤트가 표시되어야 합니다.  
-  
-     다음 스크린샷은 Visual Studio 2015 업데이트 1에서 시작됩니다.  
-  
-     ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace\-Update1")  
-  
-7.  이벤트를 선택하여 해당 세부 정보를 확장합니다.  
-  
-     다음 스크린샷은 Visual Studio 2015 업데이트 1에서 시작됩니다.  
-  
-     ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1\-SingleEvent")  
-  
-     경로 이름 링크를 선택하여 파일을 열 수 있습니다. 전체 경로 이름을 사용할 수 없는 경우에는 **파일 열기** 대화 상자가 나타납니다.  
-  
-     **기록 디버깅 활성화**를 클릭합니다. 이 옵션은 디버거의 컨텍스트를 선택한 이벤트가 수집된 시간으로 설정하고 **호출 스택**, **지역** 및 기타 참여 디버거 창에 기록 데이터를 표시합니다. 소스 코드를 사용할 수 있는 경우 Visual Studio가 소스 창에서 포인터를 해당 코드로 이동하여 검사할 수 있게 합니다.  
-  
-     다음 스크린샷은 Visual Studio 2015 업데이트 1에서 시작됩니다.  
-  
-     ![HistoricalDebugging&#45;Update1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging\-Update1")  
-  
-8.  버그를 찾지 못한 경우 버그를 발생시키는 기타 이벤트를 검사합니다. 함수 호출을 단계별로 실행할 수 있도록 IntelliTrace에서 호출 정보를 기록하게 할 수도 있습니다.  
-  
-## 이벤트 및 함수 호출에서 IntelliTrace 사용  
- IntelliTrace는 이벤트와 함께 함수 호출을 기록할 수 있습니다. 이렇게 하면 호출 스택 이력을 참조하고 코드에서 호출을 통해 앞뒤로 이동할 수 있습니다. IntelliTrace는 함수 이름, 함수 진입 지점과 종료 지점, 특정 매개 변수 값 및 반환 값 등의 데이터를 기록합니다.[IntelliTrace 기능](../debugger/intellitrace-features.md)을 참조하세요.  
-  
-1.  호출 수집을 켭니다. \(**도구 \/ 옵션 \/ IntelliTrace \/ 일반**에서 **IntelliTrace 이벤트 및 호출 정보**를 선택합니다. IntelliTrace는 다음 디버깅 세션이 시작되면 이 정보의 수집을 시작합니다.  
+5.  Start debugging as usual. (Press **F5** or click **Debug > Start Debugging**.  
   
     > [!TIP]
-    >  이 경우 응용 프로그램의 속도가 느려지고 디스크에 저장하는 IntelliTrace 로그 파일\(.iTrace 파일\)의 크기가 커질 수 있습니다. 영향을 최소화하면서 가져오는 호출 데이터를 최대화하려면 관심 있는 모듈의 데이터만 기록합니다. .iTrace 파일의 최대 크기를 변경하려면 **도구 \/ 옵션 \/ IntelliTrace \/ 고급**으로 이동하고 디스크 공간의 최대 크기를 지정합니다. 기본값은 250MB입니다.  
+    >  Keep the **Locals** and **Autos** windows open while you're debugging to see and record the values in those windows.  
   
-2.  이전 섹션에서 만든 C\# 콘솔 응용 프로그램의 디버깅을 시작합니다. 중단점에서 실행이 중지됩니다.**진단 도구** 창이 표시되지 않으면, **디버그 \/ Windows \/ IntelliTrace 이벤트**를 클릭하세요.  
+6.  Execution stops at the breakpoint. If you do not see the **Diagnostic Tools** window, click **Debug > Windows > IntelliTrace Events**.  
   
-3.  **호출** 탭으로 전환합니다.  
+     In the **Diagnostic Tools** window, find the **Events** tab (You should see 3 tabs, **Events**, **Memory Usage**, and **CPU Usage**). The **Events** tab shows a chronological list of events, ending with the last event before the debugger broke execution. You should see an event named **Access WordSearchInputs.txt**.  
   
-     이제 응용 프로그램의 함수 호출이 표시되며, 이 호출은 루트 호출\(현재 솔루션의 주 진입점\)에서 시작하여 실행이 중단된 위치로 끝납니다.  
+     The following screenshot is from Visual Studio 2015 Update 1.  
   
-     함수 호출 중 하나를 선택하고 두 번 클릭합니다. 함수 진입 지점과 종료 지점이 표시되고 현재 호출이 다른 함수 및 해당 호출에 의해 발생한 IntelliTrace 이벤트에 수행된 호출도 표시됩니다. 기록 디버깅이 켜져 있지 않은 경우 이 동작으로 기록 디버깅이 켜집니다. 기록 디버깅에 대한 자세한 내용은 [기록 디버깅](../debugger/historical-debugging.md)을 참조하세요.  
+     ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace-Update1")  
+  
+7.  Select the event to expand its details.  
+  
+     The following screenshot is from Visual Studio 2015 Update 1.  
+  
+     ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")  
+  
+     You can choose the pathname link to open the file. If the full pathname is not available, the **Open File** dialog box appears.  
+  
+     Click **Activate Historical Debugging**, which sets the debugger's context to the time when the selected event was collected, showing historical data in the **Call Stack**, **Locals** and the other participating debugger windows. If source code is available, Visual Studio moves the pointer to the corresponding code in the source window so you can examine it.  
+  
+     The following screenshot is from Visual Studio 2015 Update 1.  
+  
+     ![HistoricalDebugging&#45;Update1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-Update1")  
+  
+8.  If you didn't find the bug, try examining other events leading up to the bug. You can also have IntelliTrace record call information so you can step through function calls.  
+  
+## <a name="using-intellitrace-with-events-and-function-calls"></a>Using IntelliTrace with events and function calls  
+ IntelliTrace can record function calls along with events. This lets you see the call stack history and step backward and forward through calls in your code. IntelliTrace records data such as function names, function entry and exit points, and certain parameter values and return values. See [IntelliTrace Features](../debugger/intellitrace-features.md).
+
+> [!NOTE]
+> Call information is not currently available for ASP.NET Core apps. 
+  
+1.  Turn on call collection. (On **Tools > Options > IntelliTrace > General**, select **IntelliTrace events and call information**. IntelliTrace will start collecting this information when the next debugging session starts.  
+  
+    > [!TIP]
+    >  This might slow down your application and increase the size of any IntelliTrace log files (.iTrace files) that you're saving to disk. To get the most call data but minimize the effects, record data from only those modules that interest you. To change the maximum size of your .iTrace files, go to **Tools > Options > IntelliTrace > Advanced**, and specify the maximum amount of disk space. The default is 250 MB.  
+  
+2.  Start debugging the C# console application created in the previous section. Execution stops at the breakpoint. If you do not see the **Diagnostic Tools** window, click **Debug > Windows > IntelliTrace Events**.  
+  
+3.  Switch to the **Calls** tab.  
+  
+     Now you see your application's function calls, starting with the root call (in the current solution, the Main entry point) and ending with the location at which execution broke.  
+  
+     Select one of the function calls and double-click it. You should see the function entry and exit points, as well as the calls that the current call made to other functions and the IntelliTrace events raised by the call. If you do not have historical debugging turned on, this action turns it on. To find out more about historical debugging, see [Historical Debugging](../debugger/historical-debugging.md).  
   
     > [!NOTE]
-    >  일부 호출이 흐리게 표시될 수 있습니다. 이것은 IntelliTrace에서 해당 모듈의 데이터를 기록하지 않았기 때문입니다. 이 데이터를 보려면 IntelliTrace에서 해당 모듈의 데이터를 수집하게 합니다. 모듈을 지정하는 방법에 대한 자세한 내용은 [IntelliTrace 기능](../debugger/intellitrace-features.md)을 참조하세요.  
+    >  You may see that some calls are dimmed. This is because IntelliTrace didn't record data from the corresponding modules. To see this data, have IntelliTrace collect data from those modules. For information about specifying modules, see [IntelliTrace Features](../debugger/intellitrace-features.md).  
   
-## 다음 단계
+## <a name="next-steps"></a>Next Steps

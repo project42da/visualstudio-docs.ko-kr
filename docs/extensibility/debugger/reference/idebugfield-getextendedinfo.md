@@ -1,66 +1,83 @@
 ---
-title: "IDebugField::GetExtendedInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugField::GetExtendedInfo"
-helpviewer_keywords: 
-  - "IDebugField::GetExtendedInfo 메서드"
+title: IDebugField::GetExtendedInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugField::GetExtendedInfo
+helpviewer_keywords:
+- IDebugField::GetExtendedInfo method
 ms.assetid: 46c0dd4d-4fd5-4efd-a908-71e4248e8e8d
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# IDebugField::GetExtendedInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3610a9e61d6140fee11a6db4a30060fa02207981
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 메서드는 필드에 대 한 정보를 확장을 가져옵니다.  
+---
+# <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
+This method gets extended information about a field.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetExtendedInfo(   
-   REFGUID guidExtendedInfo,  
-   BYTE**  prgBuffer,  
-   DWORD*  pdwLen  
+```cpp  
+HRESULT GetExtendedInfo(   
+   REFGUID guidExtendedInfo,  
+   BYTE**  prgBuffer,  
+   DWORD*  pdwLen  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetExtendedInfo(  
-   ref Guid guidExtendedInfo,   
-   IntPtr[] prgBuffer,   
-   ref uint pdwLen  
+   ref Guid guidExtendedInfo,   
+   IntPtr[] prgBuffer,   
+   ref uint pdwLen  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `guidExtendedInfo`  
- \[in\] 반환 되는 정보를 선택 합니다.  올바른 값은 다음과 같습니다.  
+ [in] Selects the information to be returned. Valid values are:  
   
-|값|설명|  
-|-------|--------|  
-|`guidConstantValue`|바이트 시퀀스의 값입니다.|  
-|`guidConstantType`|형식 시그니처는 형식입니다.|  
+|Value|Description|  
+|-----------|-----------------|  
+|`guidConstantValue`|The value as a sequence of bytes.|  
+|`guidConstantType`|The type as a type signature.|  
   
  `prgBuffer`  
- \[out\] 확장된 된 정보를 반환합니다.  
+ [out] Returns the extended information.  
   
  `pdwLen`  
- \[in, out\] 크기는 확장된 된 정보를 \(바이트\)를 반환합니다.  
+ [in, out] Returns the size of the extended information, in bytes.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 설명  
- 현재이 메서드 형식 또는 상수 값을 반환 합니다.  호출자에서는 반환 된 버퍼를 해제 해야 `prgBuffer` 가 호출 되는 COM의 `CoTaskMemFree` 함수 \(c \+ \+\) 또는 <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> \(C\#\).  
+## <a name="remarks"></a>Remarks  
+ Currently, this method returns only the type or value of a constant. The caller must free the buffer returned in `prgBuffer` by calling COM's `CoTaskMemFree` function (C++) or <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> (C#).  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

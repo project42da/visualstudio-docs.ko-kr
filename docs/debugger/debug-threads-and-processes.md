@@ -1,65 +1,87 @@
 ---
-title: "Visual Studio의 스레드 및 프로세스 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "디버깅[Visual Studio], 스레드"
-  - "스레드 디버깅"
-  - "다중 프로세스 디버깅"
-  - "프로세스, 디버깅"
-  - "스레딩[Visual Studio], 디버깅"
+title: Tools to debug threads and processes | Microsoft Docs
+ms.custom: 
+ms.date: 04/21/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- multiprocess debugging
+- threading [Visual Studio], debugging
+- processes, debugging
+- debugging threads
+- debugging [Visual Studio], threads
 ms.assetid: 9f0c8505-b6b2-452b-adfd-076db14d8115
-caps.latest.revision: 15
-caps.handback.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Visual Studio의 스레드 및 프로세스 디버깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+caps.latest.revision: 14
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 394fcc0339f4ce2bef4aca64efc5bc8bcf1e3e00
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-*스레드*와 *프로세스*는 컴퓨터 분야에서 서로 연관된 개념입니다.  이 둘은 모두 특정 순서로 실행해야 할 명령 시퀀스를 나타냅니다.  그러나 개별 스레드 또는 프로세스의 명령은 함께 실행할 수 있습니다.  
+---
+# <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Tools to debug threads and processes in Visual Studio
+*Threads* and *processes* are related concepts in computer science. Both represent sequences of instructions that must execute in a specific order. Instructions in separate threads or processes, however, can execute in parallel.  
   
- 프로세스는 운영 체제에 있으며 사용자에게 프로그램이나 응용 프로그램으로 표시됩니다.  반면에 스레드는 프로세스 내에 있습니다.  따라서 스레드를 *간단한 프로세스*라고도 합니다.  각 프로세스는 하나 이상의 스레드로 구성됩니다.  
+ Processes exist in the operating system and correspond to what users see as programs or applications. A thread, on the other hand, exists within a process. For this reason, threads are sometimes referred to as *light-weight processes*. Each process consists of one or more threads.  
   
- 여러 개의 프로세스가 있으면 컴퓨터에서 한 번에 여러 작업을 수행할 수 있습니다.  여러 개의 스레드가 있으면 프로세스에서 작업을 구분하여 병렬로 수행할 수 있습니다.  프로세서가 여러 개 있는 컴퓨터에서는 프로세스나 스레드를 서로 다른 프로세서에서 실행하여  병렬 처리를 수행할 수 있습니다.  
+ The existence of multiple processes enables a computer to perform more than one task at a time. The existence of multiple threads enables a process to separate work to be performed in parallel. On a computer with multiprocessors, processes or threads can run on different processors. This enables true parallel processing.  
   
- 완벽한 병렬 처리가 항상 가능한 것은 아닙니다.  경우에 따라서는 스레드를 동기화해야 합니다.  한 스레드에서 다른 스레드의 결과를 기다리거나 한 스레드에 사용 중인 리소스를 다른 스레드에서 단독으로 액세스하여 사용해야 할 수도 있습니다.  주로 동기화 문제로 인해 다중 스레드 응용 프로그램에서 버그가 발생합니다.  경우에 따라 스레드가 전혀 사용할 수 없는 리소스를 기다리다가  *교착 상태*가 발생할 수 있습니다.  
+ Perfect parallel processing is not always possible. Threads sometimes must be synchronized. One thread may have to wait for a result from another thread, or one thread may need exclusive access to a resource that another thread is using. Synchronization problems are a common cause of bugs in multithreaded applications. Sometimes threads may end up waiting for a resource that never becomes available. This results in a condition called *deadlock*.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 디버거에서는 스레드 및 프로세스 디버깅에 사용할 수 있는 강력하고 간편한 도구를 제공합니다.  
+ The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger provides powerful but easy-to-use tools for debugging threads and processes.  
   
-## Visual Studio의 스레드 및 프로세스 디버깅 도구  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 프로세스 작업을 수행하기 위한 기본 도구는 **프로세스에 연결** 대화 상자, **프로세스** 창 및 **디버그 위치** 도구 모음입니다.  스레드 디버깅을 위한 기본 도구는 **스레드** 창, 소스 창의 스레드 마커 및 **디버그 위치** 도구 모음입니다.  
+## <a name="tools-and-features"></a>Tools and features
+The tools you need to use in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] depend on what type of code you are trying to debug:
+
+- For processes, the primary tools are the **Attach to Process** dialog box, the **Processes** window, and the **Debug Location** toolbar.
+
+- For threads, the primary tools for debugging threads are the **Threads** window, thread markers in source windows, **Parallel Stacks** window, **Parallel Watch** window, and the **Debug Location** toolbar.  
   
- 다중 스레드 응용 프로그램 디버깅을 위한 기본 도구는 **병렬 스택** 및 **병렬 작업**, **병렬 조사식** 및 **GPU 스레드** 창입니다.  
+- For code that uses the <xref:System.Threading.Tasks.Task> in the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl), the [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime/) (native code), the primary tools for debugging multithreaded applications are the **Parallel Stacks** window, the **Parallel Watch** window, and the **Tasks** window (the **Tasks** window also supports the JavaScript promise object).
+
+- For debugging threads on the GPU, the primary tool is the **GPU Threads** windows.  
   
- 다음 표에서는 각 도구에 제공되는 정보와 각 도구에서 수행할 수 있는 작업을 보여 줍니다.  
+ The following table shows the information available and the actions you can perform in each of these places:  
   
-|사용자 인터페이스|사용할 수 있는 정보|수행할 수 있는 작업|  
-|---------------|-----------------|-----------------|  
-|**프로세스에 연결** 대화 상자|연결할 수 있는 사용 가능한 프로세스<br /><br /> -   프로세스 이름\(.exe\)<br />-   프로세스 ID 번호<br />-   메뉴 모음 제목<br />-   형식\(Managed v4.0; Managed v2.0, v1.1, v1.0; x86; x64; IA64\)<br />-   사용자 이름\(계정 이름\)<br />-   세션 번호|연결할 프로세스 선택<br /><br /> 원격 컴퓨터 선택<br /><br /> 원격 컴퓨터 연결을 위한 전송 형식 변경|  
-|**프로세스** 창|연결된 프로세스<br /><br /> -   프로세스 이름<br />-   프로세스 ID 번호<br />-   프로세스 .exe 경로<br />-   메뉴 모음 제목<br />-   상태\(중단,  실행\)<br />-   디버깅\(네이티브, 관리 등\)<br />-   전송 종류\(기본값, 네이티브, 인증 안 함\)<br />-   전송 한정자\(원격 컴퓨터\)|도구<br /><br /> -   연결<br />-   분리<br />-   종료<br /><br /> 바로 가기 메뉴<br /><br /> -   연결<br />-   분리<br />-   디버깅 중지 시 분리<br />-   종료|  
-|**스레드** 창|현재 프로세스의 스레드<br /><br /> -   스레드 ID<br />-   관리 ID<br />-   범주\(주 스레드, 인터페이스 스레드, 원격 프로시저 호출 처리기 또는 작업자 스레드\)<br />-   스레드 이름<br />-   스레드가 생성되는 위치<br />-   우선 순위<br />-   선호도 마스크<br />-   일시 중단 횟수<br />-   프로세스 이름<br />-   플래그 표시기<br />-   일시 중단 표시기|도구<br /><br /> -   검색<br />-   호출 스택 검색<br />-   내 코드만 플래그 지정<br />-   사용자 지정 모듈 선택 영역 플래그 지정<br />-   그룹화 방법<br />-   Columns<br />-   호출 스택 확장\/축소<br />-   그룹 확장\/축소<br />-   스레드 중지\/재개<br /><br /> 바로 가기 메뉴<br /><br /> -   소스의 스레드 표시<br />-   스레드로 전환<br />-   실행 중인 스레드 중지<br />-   중지된 스레드 재개<br />-   주의할 스레드에 플래그 지정<br />-   스레드 플래그 해제<br />-   스레드 이름 바꾸기<br />-   스레드 표시 및 숨기기<br /><br /> 다른 작업<br /><br /> -   DataTip에서 스레드의 호출 스택 보기|  
-|소스 창|왼쪽 여백의 스레드 표시기는 단일 또는 다중 스레드를 나타냅니다. 기본적으로 설정되어 있지 않으며 **스레드** 창의 바로 가기 메뉴를 사용하여 설정합니다.|바로 가기 메뉴<br /><br /> -   스레드로 전환<br />-   주의할 스레드에 플래그 지정<br />-   스레드 플래그 해제|  
-|**디버그 위치** 도구 모음|-   현재 프로세스<br />-   응용 프로그램 축소판 그림 표시<br />-   응용 프로그램 일시 중단<br />-   응용 프로그램 다시 시작<br />-   응용 프로그램 일시 중단 및 종료<br />-   현재 스레드<br />-   현재 스레드 플래그 상태 전환<br />-   플래그가 지정된 스레드만 표시<br />-   현재 프로세스만 표시<br />-   현재 스택 프레임|-   다른 프로세스로 전환<br />-   응용 프로그램 일시 중단, 다시 시작 및 종료<br />-   현재 프로세스의 다른 스레드로 전환<br />-   현재 스레드의 다른 스택 프레임으로 전환<br />-   현재 스레드 플래그 설정 또는 해제<br />-   플래그가 지정된 스레드만 표시<br />-   현재 프로세스만 표시|  
-|**병렬 스택** 창|-   한 뷰에 표시되는 다중 스레드의 호출 스택입니다.<br />-   스레드별 활성 스택 프레임입니다.<br />-   메서드에 대한 호출자 및 호출 수신자입니다.|-   지정된 스레드 필터링<br />-   병렬 작업 뷰로 전환<br />-   스레드 플래그 설정 또는 해제<br />-   확대\/축소|  
-|**병렬 작업** 창|-   작업 ID, 작업 상태\(예약됨, 실행 중, 대기 중, 교착 상태\), 작업에 할당된 스레드 등의 <xref:System.Threading.Tasks.Task> 개체 정보를 표시합니다.<br />-   호출 스택의 현재 위치입니다.<br />-   만든 시간에 작업에 전달된 대리자입니다.|-   현재 작업으로 전환<br />-   작업 플래그 설정 또는 해제<br />-   작업 중지 또는 재개|  
-|**병렬 조사식** 창|-   특히 주의할 스레드를 표시할 수 있는 플래그 열<br />-   화살표가 선택된 프레임을 나타내는 프레임 열<br />-   컴퓨터, 프로세스, 타일, 작업 및 스레드를 표시할 수 있는 구성 가능한 열|-   스레드 플래그 설정 또는 해제<br />-   플래그가 지정된 스레드만 표시<br />-   프레임 전환<br />-   열 정렬<br />-   스레드 그룹화<br />-   스레드 중지 또는 재개<br />-   병렬 조사식 창에서 데이터 내보내기|  
-|**GPU 스레드** 창|-   특히 주의할 스레드를 표시할 수 있는 플래그 열<br />-   활성 스레드 열 \- 노란색 화살표는 활성 스레드를 나타냅니다.  화살표는 실행이 중단되고 디버거가 실행된 스레드를 나타냅니다.<br />-   **스레드 카운트** 열 \- 스레드 수를 동일한 위치에 표시합니다.<br />-   **줄** 열 \- 각 스레드 그룹이 위치한 코드 줄을 표시합니다.<br />-   **주소** 열 \- 각 스레드 그룹이 위치한 명령 주소를 표시합니다.<br />-   **위치** 열 \- 주소 코드에서의 위치입니다.<br />-   **상태** 열 \- 스레드가 활성화되어 있는지 아니면 차단되어 있는지를 표시합니다.<br />-   **타일** 열 \- 행의 스레드에 대한 타일 인덱스를 표시합니다.|-   다른 활성 스레드로 변경<br />-   특정 타일 및 스레드 표시<br />-   열 표시 또는 숨기기<br />-   열 기준 정렬<br />-   스레드 그룹화<br />-   스레드 중지 또는 재개<br />-   스레드 플래그 설정 또는 해제<br />-   플래그가 지정된 스레드만 표시|  
+|User Interface|Information Available|Actions You Can Perform|  
+|--------------------|---------------------------|-----------------------------|  
+|**Attach to Process** dialog box|Available Processes you can attach to:<br /><br /> -   Process name (.exe)<br />-   Process ID number<br />-   Menubar Title<br />-   Type (Managed v4.0; Managed v2.0, v1.1, v1.0; x86; x64; IA64)<br />-   User Name (account name)<br />-   Session number|Select a process to attach to<br /><br /> Select a remote computer<br /><br /> Change transport type for connecting to remote computers|  
+|**Processes** window|Attached Processes:<br /><br /> -   Process Name<br />-   Process ID number<br />-   Path to process .exe<br />-   Menubar Title<br />-   State (Break. Running)<br />-   Debugging (Native, Managed, and so on.)<br />-   Transport type (default, native with no authentication)<br />-   Transport Qualifier (remote computer)|Tools:<br /><br /> -   Attach<br />-   Detach<br />-   Terminate<br /><br /> Shortcut menu:<br /><br /> -   Attach<br />-   Detach<br />-   Detach when debugging stopped<br />-   Terminate|  
+|**Threads** window|Threads in current process:<br /><br /> -   Thread ID<br />-   Managed ID<br />-   Category (main thread, interface thread, remote procedure call handler, or worker thread)<br />-   Thread Name<br />-   Location where thread is created<br />-   Priority<br />-   Affinity Mask<br />-   Suspended Count<br />-   Process Name<br />-   Flag Indicator<br />-   Suspended indicator|Tools:<br /><br /> -   Search<br />-   Search Call Stack<br />-   Flag Just My Code<br />-   Flag Custom Module Selection<br />-   Group by<br />-   Columns<br />-   Expand/Collapse callstacks<br />-   Expand/Collapse groups<br />-   Freeze/Thaw Threads<br /><br /> Shortcut menu:<br /><br /> -   Show threads in source<br />-   Switch to a thread<br />-   Freeze a running thread<br />-   Thaw a frozen thread<br />-   Flag a thread for additional study<br />-   Unflag a thread<br />-   Rename a thread<br />-   Show and hide threads<br /><br /> Other actions:<br /><br /> -   View the call stack for a thread in a DataTip|  
+|Source window|Thread indicators in left gutter indicate single or multiple threads (off by default, turned on by using shortcut menu in **Threads** window)|Shortcut menu:<br /><br /> -   Switch to a thread<br />-   Flag a thread for additional study<br />-   Unflag a thread|  
+|**Debug Location** toolbar|-   Current process<br />-   Suspend the application<br />-   Resume the application<br />-   Suspend and shut down the application<br />-   Current thread<br />-   Toggle current thread flag state<br />-   Show only flagged threads<br />-   Show only current process<br />-   Current stack frame|-   Switch to another process<br />-   Suspend, resume, or shut down the application<br />-   Switch to another thread in current process<br />-   Switch to another stack frame in current thread<br />-   Flag or unflag current threads<br />-   Show only flagged threads<br />-   Show only the current process|  
+|**Parallel Stacks** window|-   Call stacks for multiple threads in one window.<br />-   Active stack frame for each thread.<br />-   Callers and callees for any method.|-   Filter out specified threads<br />-   Switch to Tasks view<br />-   Flag or unflag a thread<br />-   Zoom|   
+|**Parallel Watch** window|-   The flag column, in which you can mark a thread that you want to pay special attention to.<br />-   The frame column, in which an arrow indicates the selected frame.<br />-   A configurable column that can display the machine, process, tile, task, and thread.|-   Flag or unflag a thread<br />-   Display only flagged threads<br />-   Switch frames<br />-   Sort a column<br />-   Group threads<br />-   Freeze or thaw threads<br />-   export the data in the Parallel Watch window| 
+|**Tasks** window|-   View information about <xref:System.Threading.Tasks.Task> objects including task ID, task status (scheduled, running, waiting, deadlocked), and which thread is assigned to the task.<br />-   Current location in call stack.<br />-   Delegate passed to the task at creation time|-   Switch to current task<br />-   Flag or unflag a task<br />-   Freeze or thaw a task|  
+|**GPU Threads** window|-   The flag column, in which you can mark a thread that you want to pay special attention to.<br />-   The current thread column, in which a yellow arrow indicates the current thread.<br />-   The **Thread Count** column, which displays the number of threads at the same location.<br />-   The **Line** column, which displays the line of code where each group of threads is located.<br />-   The **Address** column, which displays the instruction address where each group of threads is located.<br />-   The **Location** column, which is the location in the code of the address.<br />-   The **Status** column, which shows whether the thread is active or blocked.<br />-   The **Tile** column, which shows the tile index for the threads in the row.|-   Change to a different thread<br />-   Display a particular tile and thread<br />-   Display or hide a column<br />-   Sort by a column<br />-   Group threads<br />-   Freeze or thaw threads<br />-   Flag or unflag a thread<br />-   Display only flagged threads|  
   
-## 참고 항목  
- [실행 중인 프로세스에 연결](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
- [다중 스레드 응용 프로그램 디버깅](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [GPU 코드 디버깅](../debugger/debugging-gpu-code.md)
+## <a name="see-also"></a>See Also  
+ [Attach to Running Processes](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [Debug Multithreaded Applications](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [Debugging GPU Code](../debugger/debugging-gpu-code.md)

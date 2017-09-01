@@ -1,83 +1,86 @@
 ---
-title: "방법: 암호로 보호된 문서의 데이터 캐시"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "데이터[Visual Studio에서 Office 개발], 캐싱"
-  - "데이터 캐싱[Visual Studio에서 Office 개발], 보호된 문서"
-  - "데이터 집합[Visual Studio에서 Office 개발], 캐싱"
+title: 'How to: Cache Data in a Password-Protected Document | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data caching [Office development in Visual Studio], protected documents
+- datasets [Office development in Visual Studio], caching
+- data [Office development in Visual Studio], caching
 ms.assetid: 91b865fc-bd01-438f-ac63-2fe3175bc2e8
 caps.latest.revision: 23
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 23
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 84bab2d070a05e05a72c412097e20e78732abefb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 암호로 보호된 문서의 데이터 캐시
-  암호로 보호된 문서나 통합 문서에서 데이터 캐시에 개체를 추가하면 캐시된 데이터에 대한 변경 내용이 자동으로 저장되지 않습니다.  프로젝트에서 두 개의 메서드를 재정의하여 캐시된 데이터에 대한 변경 내용을 저장할 수 있습니다.  
+# <a name="how-to-cache-data-in-a-password-protected-document"></a>How to: Cache Data in a Password-Protected Document
+  If you add data to the data cache in a document or workbook that is protected with a password, changes to the cached data are not saved automatically. You can save changes to the cached data by overriding two methods in your project.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
-## Word 문서에서 캐싱  
+## <a name="caching-in-word-documents"></a>Caching in Word Documents  
   
-#### 암호로 보호된 Word 문서에서 데이터를 캐시하려면  
+#### <a name="to-cache-data-in-a-word-document-that-is-protected-with-a-password"></a>To cache data in a Word document that is protected with a password  
   
-1.  `ThisDocument` 클래스에서 공용 필드 또는 속성을 캐시하도록 표시합니다.  자세한 내용은 [데이터 캐싱](../vsto/caching-data.md)을 참조하십시오.  
+1.  In the `ThisDocument` class, mark a public field or property to be cached. For more information, see [Caching Data](../vsto/caching-data.md).  
   
-2.  `ThisDocument` 클래스의 <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> 메서드를 재정의하고 문서의 보호를 해제합니다.  
+2.  Override the <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> method in the `ThisDocument` class and remove protection from the document.  
   
-     문서가 저장되면 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서는 이 메서드를 호출하여 문서의 보호를 해제할 수 있게 해 줍니다.  이를 통해 캐시된 데이터의 변경 사항을 저장할 수 있습니다.  
+     When the document is saved, the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] calls this method to give you an opportunity to unprotect the document. This enables changes to the cached data to be saved.  
   
-3.  `ThisDocument` 클래스의 <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> 메서드를 재정의하고 문서에 보호를 다시 적용합니다.  
+3.  Override the <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> method in the `ThisDocument` class and reapply protection to the document.  
   
-     문서가 저장된 후 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서는 이 메서드를 호출하여 문서에 보호를 다시 적용할 수 있게 해 줍니다.  
+     After the document is saved, the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] calls this method to give you an opportunity to reapply protection to the document.  
   
-### 예제  
- 다음 코드 예제에서는 암호로 보호된 Word 문서에서 데이터를 캐시하는 방법을 보여 줍니다.  이 코드에서는 <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> 메서드를 통해 보호를 해제하기 전에 현재 <xref:Microsoft.Office.Tools.Word.Document.ProtectionType%2A> 값을 저장하므로 <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> 메서드에서 동일한 형식의 보호를 다시 적용할 수 있습니다.  
+### <a name="example"></a>Example  
+ The following code example demonstrates how to cache data in a Word document that is protected with a password. Before the code removes the protection in the <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> method, it saves the current <xref:Microsoft.Office.Tools.Word.Document.ProtectionType%2A> value, so that the same type of protection can be reapplied in the <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> method.  
   
- [!code-csharp[Trin_CachedDataProtectedDocument#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CachedDataProtectedDocument/CS/ThisDocument.cs#1)]
- [!code-vb[Trin_CachedDataProtectedDocument#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_CachedDataProtectedDocument/VB/ThisDocument.vb#1)]  
+ [!code-csharp[Trin_CachedDataProtectedDocument#1](../vsto/codesnippet/CSharp/Trin_CachedDataProtectedDocument/ThisDocument.cs#1)] [!code-vb[Trin_CachedDataProtectedDocument#1](../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedDocument/ThisDocument.vb#1)]  
   
-### 코드 컴파일  
- 프로젝트의 `ThisDocument` 클래스에 이 코드를 추가합니다.  이 코드에서는 암호가 `securelyStoredPassword`라는 필드에 저장되어 있다고 가정합니다.  
+### <a name="compiling-the-code"></a>Compiling the Code  
+ Add this code to the `ThisDocument` class in your project. This code assumes that the password is stored in a field named `securelyStoredPassword`.  
   
-## Excel 통합 문서에서 캐싱  
- Excel 프로젝트에서는 <xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> 메서드를 사용하여 통합 문서 전체를 암호로 보호할 경우에만 이 절차가 필요합니다.  <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> 메서드를 사용하여 특정 워크시트만 암호로 보호하려는 경우에는 이 절차가 필요하지 않습니다.  
+## <a name="caching-in-excel-workbooks"></a>Caching in Excel Workbooks  
+ In Excel projects, this procedure is necessary only when you protect the entire workbook with a password by using the <xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> method. This procedure is not necessary if you protect only a specific worksheet with a password by using the <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> method.  
   
-#### 암호로 보호된 Excel 통합 문서에서 데이터를 캐시하려면  
+#### <a name="to-cache-data-in-an-excel-workbook-that-is-protected-with-a-password"></a>To cache data in an Excel workbook that is protected with a password  
   
-1.  `ThisWorkbook` 클래스나 `Sheet`*n* 클래스 중 하나에서 공용 필드 또는 속성을 캐시하도록 표시합니다.  자세한 내용은 [데이터 캐싱](../vsto/caching-data.md)을 참조하십시오.  
+1.  In the `ThisWorkbook` class or one of the `Sheet`*n* classes, mark a public field or property to be cached. For more information, see [Caching Data](../vsto/caching-data.md).  
   
-2.  `ThisWorkbook` 클래스의 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> 메서드를 재정의하고 통합 문서의 보호를 해제합니다.  
+2.  Override the <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> method in the `ThisWorkbook` class and remove protection from the workbook.  
   
-     통합 문서가 저장되면 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서는 이 메서드를 호출하여 통합 문서의 보호를 해제할 수 있게 해 줍니다.  이를 통해 캐시된 데이터의 변경 사항을 저장할 수 있습니다.  
+     When the workbook is saved, the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] calls this method to give you an opportunity to unprotect the workbook. This enables changes to the cached data to be saved.  
   
-3.  `ThisWorkbook` 클래스의 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> 메서드를 재정의하고 문서에 보호를 다시 적용합니다.  
+3.  Override the <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> method in the `ThisWorkbook` class and reapply protection to the document.  
   
-     통합 문서가 저장된 후 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서는 이 메서드를 호출하여 통합 문서에 보호를 다시 적용할 수 있게 해 줍니다.  
+     After the workbook is saved, the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] calls this method to give you an opportunity to reapply protection to the workbook.  
   
-### 예제  
- 다음 코드 예제에서는 암호로 보호된 Excel 통합 문서에서 데이터를 캐시하는 방법을 보여 줍니다.  이 코드에서는 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> 메서드를 통해 보호를 해제하기 전에 현재 <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectStructure%2A> 및 <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectWindows%2A> 값을 저장하므로 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> 메서드에서 동일한 형식의 보호를 다시 적용할 수 있습니다.  
+### <a name="example"></a>Example  
+ The following code example demonstrates how to cache data in an Excel workbook that is protected with a password. Before the code removes the protection in the <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> method, it saves the current <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectStructure%2A> and <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectWindows%2A> values, so that the same type of protection can be reapplied in the <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> method.  
   
- [!code-csharp[Trin_CachedDataProtectedWorkbook#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_CachedDataProtectedWorkbook/CS/ThisWorkbook.cs#1)]
- [!code-vb[Trin_CachedDataProtectedWorkbook#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_CachedDataProtectedWorkbook/VB/ThisWorkbook.vb#1)]  
+ [!code-vb[Trin_CachedDataProtectedWorkbook#1](../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedWorkbook/ThisWorkbook.vb#1)] [!code-csharp[Trin_CachedDataProtectedWorkbook#1](../vsto/codesnippet/CSharp/Trin_CachedDataProtectedWorkbook/ThisWorkbook.cs#1)]  
   
-### 코드 컴파일  
- 프로젝트의 `ThisWorkbook` 클래스에 이 코드를 추가합니다.  이 코드에서는 암호가 `securelyStoredPassword`라는 필드에 저장되어 있다고 가정합니다.  
+### <a name="compiling-the-code"></a>Compiling the Code  
+ Add this code to the `ThisWorkbook` class in your project. This code assumes that the password is stored in a field named `securelyStoredPassword`.  
   
-## 참고 항목  
- [데이터 캐싱](../vsto/caching-data.md)   
- [방법: 오프라인이나 서버에서 사용할 데이터 캐싱](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
- [방법: Office 문서에서 프로그래밍 방식으로 데이터 소스 캐싱](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)  
+## <a name="see-also"></a>See Also  
+ [Caching Data](../vsto/caching-data.md)   
+ [How to: Cache Data for Use Offline or on a Server](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
+ [How to: Programmatically Cache a Data Source in an Office Document](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)  
   
   

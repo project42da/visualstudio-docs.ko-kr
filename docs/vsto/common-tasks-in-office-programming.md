@@ -1,240 +1,245 @@
 ---
-title: "Office 프로그래밍의 일반적인 작업"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio에서의 Office 개발, 시작"
-  - "FAQ(질문과 대답)[Visual Studio에서 Office 개발]"
-  - "Visual Studio에서 Office 개발, 질문과 대답"
+title: Common Tasks in Office Programming | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office development in Visual Studio, getting started
+- FAQs (frequently asked questions) [Office development in Visual Studio]
+- Office development in Visual Studio, frequently asked questions
 ms.assetid: 7afc9bad-1d31-486e-beea-91e6d308cd67
 caps.latest.revision: 45
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 44
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: 1d357b094788be68c3301d5c8f7d8407158d2b33
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# Office 프로그래밍의 일반적인 작업
-  이 항목은 Visual Studio를 사용하여 Office 솔루션을 프로그래밍하는 방법에 대한 다음 범주의 일반적인 질문에 대해 답변을 찾을 수 있도록 설계되었습니다.  
+# <a name="common-tasks-in-office-programming"></a>Common Tasks in Office Programming
+  This topic is designed to help you find the answers to the following categories of common questions about programming Office solutions by using Visual Studio.  
   
--   [설치 및 일반 작업](#projects)  
+-   [Setup and general tasks](#projects).  
   
--   [사용자 인터페이스 사용자 지정 작업](#ui)  
+-   [User interface customization tasks](#ui).  
   
--   [Excel 자동화 작업](#excel)  
+-   [Excel automation tasks](#excel).  
   
--   [Word 자동화 작업](#word)  
+-   [Word automation tasks](#word).  
   
--   [데이터 작업](#data)  
+-   [Data tasks](#data).  
   
--   [서버 쪽 문서 관리 작업](#server)  
+-   [Server-side document management tasks](#server).  
   
--   [보안 작업](#security)  
+-   [Security tasks](#security).  
   
--   [배포 작업](#deployment)  
+-   [Deployment tasks](#deployment).  
   
-##  <a name="projects"></a> 설치 및 일반 작업  
+##  <a name="projects"></a> Setup and General Tasks  
   
--   [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)  
+-   [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
--   [방법: Office 솔루션 업그레이드](http://msdn.microsoft.com/ko-kr/a269e539-b717-4680-a568-2152b070347e)  
+-   [How to: Upgrade Office Solutions](http://msdn.microsoft.com/en-us/a269e539-b717-4680-a568-2152b070347e).  
   
--   [방법: Office 주 Interop 어셈블리 설치](../vsto/how-to-install-office-primary-interop-assemblies.md).  
+-   [How to: Install Office Primary Interop Assemblies](../vsto/how-to-install-office-primary-interop-assemblies.md).  
   
--   [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md).  
+-   [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md).  
   
--   [방법: Office 프로젝트에서 이벤트 처리기 만들기](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+-   [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
--   [방법: 코드를 실행하지 않고 Office 솔루션 열기](../vsto/how-to-open-office-solutions-without-running-code.md).  
+-   [How to: Open Office Solutions without Running Code](../vsto/how-to-open-office-solutions-without-running-code.md).  
   
--   [방법: Office 솔루션의 구성 정보 설정](../vsto/how-to-set-up-configuration-information-for-an-office-solution.md).  
+-   [How to: Set Up Configuration Information for an Office Solution](../vsto/how-to-set-up-configuration-information-for-an-office-solution.md).  
   
--   [방법: 리본 메뉴에 개발 도구 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
+-   [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
   
--   [방법: 추가 기능 사용자 인터페이스 오류 표시](../vsto/how-to-show-add-in-user-interface-errors.md).  
+-   [How to: Show Add-in User Interface Errors](../vsto/how-to-show-add-in-user-interface-errors.md).  
   
-##  <a name="ui"></a> 사용자 인터페이스 사용자 지정 작업  
+##  <a name="ui"></a> User Interface Customization Tasks  
   
-### 문서 및 워크시트의 컨트롤  
+### <a name="controls-on-documents-and-worksheets"></a>Controls on Documents and Worksheets  
   
--   [방법: Office 문서에 Windows Forms 컨트롤 추가](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).  
+-   [How to: Add Windows Forms Controls to Office Documents](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).  
   
--   [방법: 워크시트에 NamedRange 컨트롤 추가](../vsto/how-to-add-namedrange-controls-to-worksheets.md).  
+-   [How to: Add NamedRange Controls to Worksheets](../vsto/how-to-add-namedrange-controls-to-worksheets.md).  
   
--   [방법: 워크시트에 ListObject 컨트롤 추가](../vsto/how-to-add-listobject-controls-to-worksheets.md).  
+-   [How to: Add ListObject Controls to Worksheets](../vsto/how-to-add-listobject-controls-to-worksheets.md).  
   
--   [방법: Office 문서에 Windows Forms 컨트롤 추가](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).  
+-   [How to: Add Windows Forms Controls to Office Documents](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).  
   
--   [방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md).  
+-   [How to: Add Content Controls to Word Documents](../vsto/how-to-add-content-controls-to-word-documents.md).  
   
--   [방법: Word 문서에 책갈피 컨트롤 추가](../vsto/how-to-add-bookmark-controls-to-word-documents.md).  
+-   [How to: Add Bookmark Controls to Word Documents](../vsto/how-to-add-bookmark-controls-to-word-documents.md).  
   
-### 문서 수준 사용자 지정의 작업창  
+### <a name="task-panes-in-document-level-customizations"></a>Task Panes in Document-Level Customizations  
   
--   [방법: Word 문서 또는 Excel 통합 문서에 작업 창 추가](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md).  
+-   [How to: Add an Actions Pane to Word Documents or Excel Workbooks](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md).  
   
-### VSTO 추가 기능의 작업창  
+### <a name="task-panes-in-vsto-add-ins"></a>Task Panes in VSTO Add-ins  
   
--   [방법: 응용 프로그램에 사용자 지정 작업 창 추가](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).  
+-   [How to: Add a Custom Task Pane to an Application](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).  
   
-### 리본 사용자 지정  
+### <a name="ribbon-customizations"></a>Ribbon Customizations  
   
--   [방법: 리본 메뉴 사용자 지정 시작](../vsto/how-to-get-started-customizing-the-ribbon.md).  
+-   [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md).  
   
--   [방법: 리본의 탭 위치 변경](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md).  
+-   [How to: Change the Position of a Tab on the Ribbon](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md).  
   
--   [방법: 기본 제공 탭 사용자 지정](../vsto/how-to-customize-a-built-in-tab.md).  
+-   [How to: Customize a Built-in Tab](../vsto/how-to-customize-a-built-in-tab.md).  
   
--   [방법: Backstage 보기에 컨트롤 추가](../vsto/how-to-add-controls-to-the-backstage-view.md).  
+-   [How to: Add Controls to the Backstage View](../vsto/how-to-add-controls-to-the-backstage-view.md).  
   
--   [방법: 리본 디자이너에서 리본 XML로 리본 메뉴 내보내기](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md).  
+-   [How to: Export a Ribbon from the Ribbon Designer to Ribbon XML](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md).  
   
-### Outlook 양식 영역  
+### <a name="outlook-form-regions"></a>Outlook Form Regions  
   
--   [방법: Outlook 추가 기능 프로젝트에 양식 영역 추가](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md).  
+-   [How to: Add a Form Region to an Outlook Add-in Project](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md).  
   
--   [방법: Outlook에서 양식 영역 표시하지 않기](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md).  
+-   [How to: Prevent Outlook from Displaying a Form Region](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md).  
   
-### 사용자 지정 메뉴  
+### <a name="custom-menus"></a>Custom Menus  
   
--   [방법: 바로 가기 메뉴에 명령 추가](../vsto/how-to-add-commands-to-shortcut-menus.md).  
+-   [How to: Add Commands to Shortcut Menus](../vsto/how-to-add-commands-to-shortcut-menus.md).  
   
-##  <a name="excel"></a> Excel 자동화 작업  
+##  <a name="excel"></a> Excel Automation Tasks  
   
--   [방법: 프로그래밍 방식으로 워크시트 셀에 문자열 표시](../vsto/how-to-programmatically-display-a-string-in-a-worksheet-cell.md).  
+-   [How to: Programmatically Display a String in a Worksheet Cell](../vsto/how-to-programmatically-display-a-string-in-a-worksheet-cell.md).  
   
--   [방법: 프로그래밍 방식으로 새 통합 문서 만들기](../vsto/how-to-programmatically-create-new-workbooks.md).  
+-   [How to: Programmatically Create New Workbooks](../vsto/how-to-programmatically-create-new-workbooks.md).  
   
--   [방법: 프로그래밍 방식으로 통합 문서 열기](../vsto/how-to-programmatically-open-workbooks.md).  
+-   [How to: Programmatically Open Workbooks](../vsto/how-to-programmatically-open-workbooks.md).  
   
--   [방법: 프로그래밍 방식으로 통합 문서 저장](../vsto/how-to-programmatically-save-workbooks.md).  
+-   [How to: Programmatically Save Workbooks](../vsto/how-to-programmatically-save-workbooks.md).  
   
--   [방법: 프로그래밍 방식으로 통합 문서 닫기](../vsto/how-to-programmatically-close-workbooks.md).  
+-   [How to: Programmatically Close Workbooks](../vsto/how-to-programmatically-close-workbooks.md).  
   
--   [방법: 프로그래밍 방식으로 통합 문서에 새 워크시트 추가](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md).  
+-   [How to: Programmatically Add New Worksheets to Workbooks](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md).  
   
--   [방법: 프로그래밍 방식으로 워크시트 숨기기](../vsto/how-to-programmatically-hide-worksheets.md).  
+-   [How to: Programmatically Hide Worksheets](../vsto/how-to-programmatically-hide-worksheets.md).  
   
--   [방법: 프로그래밍 방식으로 통합 문서 내에서 워크시트 이동](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md).  
+-   [How to: Programmatically Move Worksheets Within Workbooks](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md).  
   
--   [방법: 프로그래밍 방식으로 통합 문서 보호](../vsto/how-to-programmatically-protect-workbooks.md).  
+-   [How to: Programmatically Protect Workbooks](../vsto/how-to-programmatically-protect-workbooks.md).  
   
--   [방법: 프로그래밍 방식으로 코드에서 워크시트 범위 참조](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md).  
+-   [How to: Programmatically Refer to Worksheet Ranges in Code](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md).  
   
--   [방법: 프로그래밍 방식으로 통합 문서에서 일정 범위에 스타일 적용](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md).  
+-   [How to: Programmatically Apply Styles to Ranges in Workbooks](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md).  
   
--   [방법: 프로그래밍 방식으로 선택한 셀이 포함된 워크시트 행의 서식 변경](../vsto/how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells.md).  
+-   [How to: Programmatically Change Formatting in Worksheet Rows Containing Selected Cells](../vsto/how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells.md).  
   
--   [방법: 프로그래밍 방식으로 워크시트 범위에서 텍스트 검색](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md).  
+-   [How to: Programmatically Search for Text in Worksheet Ranges](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md).  
   
--   [방법: 프로그래밍 방식으로 워크시트 인쇄](../vsto/how-to-programmatically-print-worksheets.md).  
+-   [How to: Programmatically Print Worksheets](../vsto/how-to-programmatically-print-worksheets.md).  
   
--   [방법: 프로그래밍 방식으로 Excel 계산 실행](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md).  
+-   [How to: Programmatically Run Excel Calculations](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md).  
   
--   [방법: 워크시트에서 프로그래밍 방식으로 데이터 정렬](../vsto/how-to-programmatically-sort-data-in-worksheets.md).  
+-   [How to: Programmatically Sort Data in Worksheets](../vsto/how-to-programmatically-sort-data-in-worksheets.md).  
   
-##  <a name="word"></a> Word 자동화 작업  
+##  <a name="word"></a> Word Automation Tasks  
   
--   [방법: 프로그래밍 방식으로 새 문서 만들기](../vsto/how-to-programmatically-create-new-documents.md).  
+-   [How to: Programmatically Create New Documents](../vsto/how-to-programmatically-create-new-documents.md).  
   
--   [방법: 프로그래밍 방식으로 기존 문서 열기](../vsto/how-to-programmatically-open-existing-documents.md).  
+-   [How to: Programmatically Open Existing Documents](../vsto/how-to-programmatically-open-existing-documents.md).  
   
--   [방법: 프로그래밍 방식으로 문서 저장](../vsto/how-to-programmatically-save-documents.md).  
+-   [How to: Programmatically Save Documents](../vsto/how-to-programmatically-save-documents.md).  
   
--   [방법: 프로그래밍 방식으로 문서 닫기](../vsto/how-to-programmatically-close-documents.md).  
+-   [How to: Programmatically Close Documents](../vsto/how-to-programmatically-close-documents.md).  
   
--   [방법: 프로그래밍 방식으로 Word 문서에 텍스트 삽입](../vsto/how-to-programmatically-insert-text-into-word-documents.md).  
+-   [How to: Programmatically Insert Text into Word Documents](../vsto/how-to-programmatically-insert-text-into-word-documents.md).  
   
--   [방법: 프로그래밍 방식으로 문서의 범위 정의 및 선택](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md).  
+-   [How to: Programmatically Define and Select Ranges in Documents](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md).  
   
--   [방법: 프로그래밍 방식으로 Word 문서의 범위 다시 설정](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md).  
+-   [How to: Programmatically Reset Ranges in Word Documents](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md).  
   
--   [방법: 프로그래밍 방식으로 문서의 텍스트 서식 지정](../vsto/how-to-programmatically-format-text-in-documents.md).  
+-   [How to: Programmatically Format Text in Documents](../vsto/how-to-programmatically-format-text-in-documents.md).  
   
--   [방법: Word 문서에 XMLNode 컨트롤 추가](../vsto/how-to-add-xmlnode-controls-to-word-documents.md).  
+-   [How to: Add XMLNode Controls to Word Documents](../vsto/how-to-add-xmlnode-controls-to-word-documents.md).  
   
--   [방법: 프로그래밍 방식으로 책갈피 텍스트 업데이트](../vsto/how-to-programmatically-update-bookmark-text.md).  
+-   [How to: Programmatically Update Bookmark Text](../vsto/how-to-programmatically-update-bookmark-text.md).  
   
--   [방법: 프로그래밍 방식으로 문서에서 텍스트 검색 및 바꾸기](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md).  
+-   [How to: Programmatically Search for and Replace Text  in Documents](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md).  
   
--   [방법: 프로그래밍 방식으로 문서 인쇄](../vsto/how-to-programmatically-print-documents.md).  
+-   [How to: Programmatically Print Documents](../vsto/how-to-programmatically-print-documents.md).  
   
--   [방법: 프로그래밍 방식으로 Word 표 만들기](../vsto/how-to-programmatically-create-word-tables.md).  
+-   [How to: Programmatically Create Word Tables](../vsto/how-to-programmatically-create-word-tables.md).  
   
--   [방법: 프로그래밍 방식으로 Word 표에 행 및 열 추가](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md).  
+-   [How to: Programmatically Add Rows and Columns to Word Tables](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md).  
   
--   [방법: 프로그래밍 방식으로 문서의 문자 수 세기](../vsto/how-to-programmatically-count-characters-in-documents.md).  
+-   [How to: Programmatically Count Characters in Documents](../vsto/how-to-programmatically-count-characters-in-documents.md).  
   
-##  <a name="data"></a> 데이터 작업  
+##  <a name="data"></a> Data Tasks  
   
-### 데이터 바인딩 컨트롤  
+### <a name="data-bound-controls"></a>Data-bound Controls  
   
--   [방법: 데이터베이스의 데이터로 워크시트 채우기](../vsto/how-to-populate-worksheets-with-data-from-a-database.md).  
+-   [How to: Populate Worksheets with Data from a Database](../vsto/how-to-populate-worksheets-with-data-from-a-database.md).  
   
--   [방법: 데이터베이스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-a-database.md).  
+-   [How to: Populate Documents with Data from a Database](../vsto/how-to-populate-documents-with-data-from-a-database.md).  
   
--   [방법: 서비스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-services.md).  
+-   [How to: Populate Documents with Data from Services](../vsto/how-to-populate-documents-with-data-from-services.md).  
   
--   [방법: 개체의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-objects.md).  
+-   [How to: Populate Documents with Data from Objects](../vsto/how-to-populate-documents-with-data-from-objects.md).  
   
--   [방법: 데이터베이스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-a-database.md).  
+-   [How to: Populate Documents with Data from a Database](../vsto/how-to-populate-documents-with-data-from-a-database.md).  
   
--   [방법: 서비스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-services.md).  
+-   [How to: Populate Documents with Data from Services](../vsto/how-to-populate-documents-with-data-from-services.md).  
   
--   [방법: Host 컨트롤의 데이터로 데이터 원본 업데이트](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).  
+-   [How to: Update a Data Source with Data from a Host Control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).  
   
-### 문서 수준 솔루션의 캐시된 데이터  
+### <a name="cached-data-in-document-level-solutions"></a>Cached Data in Document-Level Solutions  
   
--   [방법: 오프라인이나 서버에서 사용할 데이터 캐싱](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).  
+-   [How to: Cache Data for Use Offline or on a Server](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).  
   
--   [방법: Office 문서에서 프로그래밍 방식으로 데이터 소스 캐싱](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md).  
+-   [How to: Programmatically Cache a Data Source in an Office Document](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md).  
   
--   [방법: 암호로 보호된 문서의 데이터 캐시](../vsto/how-to-cache-data-in-a-password-protected-document.md).  
+-   [How to: Cache Data in a Password-Protected Document](../vsto/how-to-cache-data-in-a-password-protected-document.md).  
   
-### 사용자 지정 XML 데이터  
+### <a name="custom-xml-data"></a>Custom XML Data  
   
--   [방법: 문서 수준 사용자 지정에 사용자 지정 XML 부분 추가](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md).  
+-   [How to: Add Custom XML Parts to Document-Level Customizations](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md).  
   
--   [방법: VSTO 추가 기능을 사용하여 문서에 사용자 지정 XML 부분 추가](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md).  
+-   [How to: Add Custom XML Parts to Documents by Using VSTO Add-Ins](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md).  
   
-##  <a name="server"></a> 서버 쪽 문서 관리 작업  
+##  <a name="server"></a> Server-side Document Management Tasks  
   
--   [방법: 문서에서 관리 코드 확장 제거](../vsto/how-to-remove-managed-code-extensions-from-documents.md).  
+-   [How to: Remove Managed Code Extensions from Documents](../vsto/how-to-remove-managed-code-extensions-from-documents.md).  
   
--   [방법: 문서에 관리 코드 확장 연결](../vsto/how-to-attach-managed-code-extensions-to-documents.md).  
+-   [How to: Attach Managed Code Extensions to Documents](../vsto/how-to-attach-managed-code-extensions-to-documents.md).  
   
-##  <a name="security"></a> 보안 작업  
+##  <a name="security"></a> Security Tasks  
   
--   [방법: Office 솔루션에 서명](../vsto/how-to-sign-office-solutions.md).  
+-   [How to: Sign Office Solutions](../vsto/how-to-sign-office-solutions.md).  
   
-##  <a name="deployment"></a> 배포 작업  
+##  <a name="deployment"></a> Deployment Tasks  
   
--   [방법: ClickOnce를 사용하여 Office 솔루션 게시](http://msdn.microsoft.com/ko-kr/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)  
+-   [How to: Publish an Office Solution by Using ClickOnce](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8).  
   
--   [방법: ClickOnce를 사용하여 SharePoint 서버에 문서 수준 Office 솔루션 게시](http://msdn.microsoft.com/ko-kr/2408e809-fb78-42a1-9152-00afa1522e58).  
+-   [How to: Publish a Document-Level Office Solution to a SharePoint Server by Using ClickOnce](http://msdn.microsoft.com/en-us/2408e809-fb78-42a1-9152-00afa1522e58).  
   
--   [방법: ClickOnce Office 솔루션 설치](http://msdn.microsoft.com/ko-kr/14702f48-9161-4190-994c-78211fe18065).  
+-   [How to: Install a ClickOnce Office Solution](http://msdn.microsoft.com/en-us/14702f48-9161-4190-994c-78211fe18065).  
   
--   [방법: 최종 사용자 컴퓨터에 Office 솔루션 실행을 위한 필수 조건 설치](http://msdn.microsoft.com/ko-kr/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)  
+-   [How to: Install Prerequisites on End User Computers to Run Office Solutions](http://msdn.microsoft.com/en-us/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).  
   
--   [방법: Office 솔루션 배포를 위해 IIS 준비](http://msdn.microsoft.com/ko-kr/f62bce70-81d4-4f8b-86e6-2f2afec5d9b4).  
+-   [How to: Prepare IIS for Deployment of Office Solutions](http://msdn.microsoft.com/en-us/f62bce70-81d4-4f8b-86e6-2f2afec5d9b4).  
   
--   [방법: 배포된 Office 솔루션 업데이트](http://msdn.microsoft.com/ko-kr/be96db53-b6ea-46ab-b8d9-b76b098b3b13).  
+-   [How to: Update Deployed Office Solutions](http://msdn.microsoft.com/en-us/be96db53-b6ea-46ab-b8d9-b76b098b3b13).  
   
--   [방법: Office 솔루션의 설치 경로 변경](http://msdn.microsoft.com/ko-kr/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).  
+-   [How to: Change the Installation Path of an Office Solution](http://msdn.microsoft.com/en-us/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).  
   
-## 참고 항목  
- [시작&#40;Visual Studio에서의 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
- [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)   
- [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)  
+## <a name="see-also"></a>See Also  
+ [Getting Started &#40;Office Development in Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)   
+ [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md)  
   
   

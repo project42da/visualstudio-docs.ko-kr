@@ -1,48 +1,66 @@
 ---
-title: "CA1821: 빈 종료자를 제거하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RemoveEmptyFinalizers"
-  - "CA1821"
-helpviewer_keywords: 
-  - "CA1821"
+title: 'CA1821: Remove empty finalizers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- RemoveEmptyFinalizers
+- CA1821
+helpviewer_keywords:
+- CA1821
 ms.assetid: 3f4855a0-e4a0-46e6-923c-4c3b7074048d
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 13
----
-# CA1821: 빈 종료자를 제거하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4ef95f8961e156cdfbe6858b5424296ee1ba4667
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1821-remove-empty-finalizers"></a>CA1821: Remove empty finalizers
 |||  
 |-|-|  
 |TypeName|RemoveEmptyFinalizers|  
 |CheckId|CA1821|  
-|범주|Microsoft.Performance|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Performance|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- 형식은 빈 종료자를 구현하거나, 기본 형식 종료자만 호출하거나, 조건부로 내보낸 메서드만 호출합니다.  
+## <a name="cause"></a>Cause  
+ A type implements a finalizer that is empty, calls only the base type finalizer, or calls only conditionally emitted methods.  
   
-## 규칙 설명  
- 개체 수명을 추적할 때에는 추가로 성능 오버헤드가 발생하므로 가능한 경우 종료자를 사용하지 마십시오.  가비지 수집기에서는 개체를 수집하기 전에 종료자를 실행합니다.  즉, 개체를 수집하려면 두 가지 컬렉션이 필요합니다.  빈 종료자는 아무런 장점 없이 오버헤드만 가중시킵니다.  
+## <a name="rule-description"></a>Rule Description  
+ Whenever you can, avoid finalizers because of the additional performance overhead that is involved in tracking object lifetime. The garbage collector will run the finalizer before it collects the object. This means that two collections will be required to collect the object. An empty finalizer incurs this added overhead without any benefit.  
   
-## 위반 문제를 해결하는 방법  
- 빈 종료자를 제거합니다.  디버깅하는 데 종료자가 필요하면 전체 종료자를 `#if DEBUG / #endif` 지시문으로 묶습니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Remove the empty finalizer. If a finalizer is required for debugging, enclose the whole finalizer in `#if DEBUG / #endif` directives.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 메시지를 표시해야 합니다.  SuppressFinalize를 호출하지 않으면 성능이 저하되고 다른 이점도 없습니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a message from this rule. Failure to suppress finalization decreases performance and provides no benefits.  
   
-## 예제  
- 다음 예제에서는 제거할 빈 종료자, `#if DEBUG / #endif` 지시문으로 묶어야 할 종료자 및 `#if DEBUG / #endif` 지시문을 올바르게 사용하는 종료자를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows an empty finalizer that should be removed, a finalizer that should be enclosed in `#if DEBUG / #endif` directives, and a finalizer that uses the `#if DEBUG / #endif` directives correctly.  
   
- [!code-cs[FxCop.Performance.RemoveEmptyFinalizers#1](../code-quality/codesnippet/CSharp/ca1821-remove-empty-finalizers_1.cs)]
+ [!code-csharp[FxCop.Performance.RemoveEmptyFinalizers#1](../code-quality/codesnippet/CSharp/ca1821-remove-empty-finalizers_1.cs)]

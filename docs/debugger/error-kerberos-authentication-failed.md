@@ -1,66 +1,83 @@
 ---
-title: "오류: Kerberos 인증에 실패했습니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.callback_kerberos_auth_failed"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: 'Error: Kerberos Authentication Failed | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.callback_kerberos_auth_failed
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: c18053f9-9074-4bc3-a8bf-13e4acbea921
 caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 오류: Kerberos 인증에 실패했습니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: a118e8fa105902ce655aa91038c968dfe5a40d7c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-원격 디버깅을 시작할 때 다음 오류 메시지가 나타날 수 있습니다.  
+---
+# <a name="error-kerberos-authentication-failed"></a>Error: Kerberos Authentication Failed
+When you try to do remote debugging, you might get the following error message:  
   
 ```  
-Error: The Visual Studio Remote Debugger on the target computer cannot connect back to this computer. Kerberos auythentication failed.  
+Error: The Visual Studio Remote Debugger on the target computer cannot connect back to this computer. Kerberos authentication failed.  
 ```  
   
- 이 오류는 로컬 시스템 또는 네트워크 서비스 계정으로 Visual Studio 원격 디버깅 모니터를 실행할 때 발생합니다.  이러한 계정 중 하나를 사용하는 경우 원격 디버거에서는 Kerberos 인증 연결을 설정하여 Visual Studio 디버거 호스트 컴퓨터와 통신해야 합니다.  
+ This error occurs when the Visual Studio Remote Debugging Monitor is running under the Local System or Network Service account. Under one of these accounts, the remote debugger must establish a Kerberos authentication connection to communicate back to the Visual Studio debugger host computer.  
   
- 다음과 같은 경우에는 Kerberos 인증을 사용할 수 없습니다.  
+ Kerberos authentication is not available under these conditions:  
   
--   대상 컴퓨터 또는 디버거 호스트 컴퓨터가 도메인이 아닌 작업 그룹에 있는 경우  
+-   Either the target computer or the debugger host computer is on a workgroup, instead of a domain  
   
-     \- 또는 \-  
+     \- or -  
   
--   도메인 컨트롤러에서 Kerberos가 해제된 경우  
+-   Kerberos has been disabled on the domain controller.  
   
- Kerberos 인증을 사용할 수 없는 경우 Visual Studio 원격 디버깅 모니터를 실행하는 데 사용되는 계정을 변경해야 합니다.  이러한 절차는 [오류: 대상 컴퓨터의 Visual Studio 원격 디버거 서비스가 이 컴퓨터에 다시 연결할 수 없습니다.](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)를 참조하십시오.  
+ If Kerberos authentication is not available, change the account that is used to run the Visual Studio Remote Debugging Monitor. For the procedure, see [Error: The Visual Studio Remote Debugger service on the target computer cannot connect back to this computer](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md).  
   
- 두 컴퓨터가 모두 같은 도메인에 연결되어 있는 경우에도 이 메시지가 나타나면 해당 컴퓨터의 DNS에서 디버거 호스트 컴퓨터의 이름을 제대로 확인하고 있는지 검사합니다.  다음 절차를 참조하십시오.  
+ If both computers are connected to the same domain and you still get this message, verify that DNS on the target computer is correctly resolving the name of the debugger host computer. See the following procedure.  
   
-### 대상 컴퓨터의 DNS에서 디버거 호스트 컴퓨터 이름을 제대로 확인하고 있는지 검사하려면  
+### <a name="to-verify-that-dns-on-the-target-computer-is-correctly-resolving-the-debugger-host-computer-name"></a>To verify that DNS on the target computer is correctly resolving the debugger host computer name  
   
-1.  대상 컴퓨터에서 **시작** 메뉴를 열고 **보조프로그램**을 가리킨 다음 **명령 프롬프트**를 클릭합니다.  
+1.  On the target computer, open the **Start** menu, point to **Accessories** and then click **Command Prompt**.  
   
-2.  **명령 프롬프트** 창에서 다음을 입력합니다.  
+2.  In the **Command Prompt** window, type:  
   
     ```  
     ping <debugger_host_computer_name>  
     ```  
   
-3.  `ping` 응답의 첫 번째 줄에는 지정된 컴퓨터의 DNS에서 반환하는 전체 컴퓨터 이름과 IP 주소가 표시됩니다.  
+3.  The first line of the `ping` response shows the full computer name and IP address returned by DNS for the specified computer.  
   
-4.  디버거 호스트 컴퓨터에서 **명령 프롬프트** 창을 열고 `ipconfig`를 실행합니다.  
+4.  On the debugger host computer, open a **Command Prompt** window and run `ipconfig`.  
   
-5.  IP 주소 값을 비교합니다.  
+5.  Compare the IP address values.  
   
-## 참고 항목  
- [원격 디버깅 오류 및 문제 해결](../debugger/remote-debugging-errors-and-troubleshooting.md)   
- [원격 디버깅](../debugger/remote-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Remote Debugging Errors and Troubleshooting](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Remote Debugging](../debugger/remote-debugging.md)

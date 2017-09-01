@@ -1,314 +1,328 @@
 ---
-title: "연습: 병렬 응용 프로그램 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "디버거, 병렬 작업 연습"
-  - "디버깅, 병렬 응용 프로그램"
-  - "병렬 응용 프로그램, 디버깅[C#]"
-  - "병렬 응용 프로그램, 디버깅[C++]"
-  - "병렬 응용 프로그램, 디버깅[Visual Basic]"
-  - "병렬 스택 도구 창"
-  - "병렬 작업 도구 창"
+title: 'Walkthrough: Debugging a Parallel Application | Microsoft Docs'
+ms.custom: H1HackMay2017
+ms.date: 05/18/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugger, parallel tasks walkthrough
+- parallel stacks toolwindow
+- parallel tasks toolwindow
+- parallel applications, debugging [C++]
+- debugging, parallel applications
+- parallel applications, debugging [Visual Basic]
+- parallel applications, debugging [C#]
 ms.assetid: 2820ac4c-c893-4d87-8c62-83981d561493
 caps.latest.revision: 28
-caps.handback.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 연습: 병렬 응용 프로그램 디버깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 70301ddf35e675d2d187346f4c0e77f034576c14
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-이 연습에서는 **병렬 작업** 및 **병렬 스택** 창을 사용하여 병렬 응용 프로그램을 디버깅하는 방법을 보여 줍니다.  이 두 창은 [Task Parallel Library \(TPL\)](../Topic/Task%20Parallel%20Library%20\(TPL\).md) 또는 [동시성 런타임](/visual-cpp/parallel/concrt/concurrency-runtime)을 사용하는 코드의 런타임 동작을 이해하고 확인하는 데 도움이 됩니다.  이 연습에서는 기본 제공 중단점이 있는 샘플 코드를 제공합니다.  또한 코드가 중단된 후 **병렬 작업** 및 **병렬 스택** 창을 사용하여 코드를 검사하는 방법을 보여 줍니다.  
+---
+# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>Walkthrough: Debugging a Parallel Application in Visual Studio
+This walkthrough shows how to use the **Parallel Tasks** and **Parallel Stacks** windows to debug a parallel application. These windows help you understand and verify the runtime behavior of code that uses the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) or the [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime). This walkthrough provides sample code that has built-in breakpoints. After the code breaks, the walkthrough shows how to use the **Parallel Tasks** and **Parallel Stacks** windows to examine it.  
   
- 이 연습에서는 다음 작업 방법을 배웁니다.  
+ This walkthrough teaches these tasks:  
   
--   한 뷰에서 모든 스레드의 호출 스택을 보는 방법  
+-   How to view the call stacks of all threads in one view.  
   
--   응용 프로그램에서 만들어지는 `System.Threading.Tasks.Task` 인스턴스의 목록을 보는 방법  
+-   How to view the list of `System.Threading.Tasks.Task` instances that are created in your application.  
   
--   스레드 대신 작업의 실제 호출 스택을 보는 방법  
+-   How to view the real call stacks of tasks instead of threads.  
   
--   **병렬 작업** 및 **병렬 스택** 창에서 코드를 탐색하는 방법  
+-   How to navigate to code from the **Parallel Tasks** and **Parallel Stacks** windows.  
   
--   창에서 그룹화, 확대\/축소 및 기타 관련 기능을 통한 크기 조정을 처리하는 방법  
+-   How the windows cope with scale through grouping, zooming, and other related features.  
   
-## 사전 요구 사항  
- 이 연습에서는 **내 코드만**이 사용된다고 가정합니다.  **도구** 메뉴에서 **옵션**을 클릭하고 **디버깅** 노드를 확장한 다음 **일반**을 선택하고 **내 코드만 사용\(관리 전용\)**을 선택합니다.  이 기능을 설정하지 않아도 연습을 사용할 수 있지만 결과가 그림과 다를 수 있습니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that **Just My Code** is enabled (it is enabled by default in more recent versions of Visual Studio). On the **Tools** menu, click **Options**, expand the **Debugging** node, select **General**, and then select **Enable Just My Code (Managed only)**. If you do not set this feature, you can still use this walkthrough, but your results may differ from the illustrations.  
   
-## C\# 샘플  
- C\# 샘플을 사용하는 경우 이 연습에서는 외부 코드가 숨겨져 있다고 가정합니다.  외부 코드의 표시 여부를 전환하려면 **호출 스택** 창의 **이름** 표 머리글을 마우스 오른쪽 단추로 클릭하고 **외부 코드 표시**를 선택하거나 지웁니다.  이 기능을 설정하지 않아도 연습을 사용할 수 있지만 결과가 그림과 다를 수 있습니다.  
+## <a name="c-sample"></a>C# Sample  
+ If you use the C# sample, this walkthrough also assumes that External Code is hidden. To toggle whether external code is displayed, right-click the **Name** table header of the **Call Stack** window, and then select or clear **Show External Code**. If you do not set this feature, you can still use this walkthrough, but your results may differ from the illustrations.  
   
-## C\+\+ 샘플  
- C\+\+ 샘플을 사용하는 경우 이 항목의 외부 코드에 대한 참조를 무시해도 됩니다.  외부 코드는 C\# 샘플에만 적용됩니다.  
+## <a name="c-sample"></a>C++ Sample  
+ If you use the C++ sample, you can ignore references to External Code in this topic. External Code only applies to the C# sample.  
   
-## 그림  
- 이 항목의 그림은 C\# 샘플을 실행하는 쿼드 코어 컴퓨터에서 기록되었습니다.  다른 구성을 사용하여 이 연습을 수행할 수도 있지만 그림이 컴퓨터에 표시되는 것과 다를 수 있습니다.  
+## <a name="illustrations"></a>Illustrations  
+ The illustrations in this topic recorded on a quad core computer running the C# sample. Although you can use other configurations to complete this walkthrough, the illustrations may differ from what is displayed on your computer.  
   
-## 샘플 프로젝트 만들기  
- 이 연습의 샘플 코드는 아무 작업도 수행하지 않는 응용 프로그램의 코드입니다.  이 코드의 목표는 단지 도구 창을 사용하여 병렬 응용 프로그램을 디버깅하는 방법을 이해하는 것입니다.  
+## <a name="creating-the-sample-project"></a>Creating the Sample Project  
+ The sample code in this walkthrough is for an application that does nothing. The goal is just to understand how to use the tool windows to debug a parallel application.  
   
-#### 샘플 프로젝트를 만들려면  
+#### <a name="to-create-the-sample-project"></a>To create the sample project  
   
-1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+1.  In Visual Studio, on the **File** menu, point to **New** and then click **Project**.  
   
-2.  **설치된 템플릿** 창에서 Visual C\#, Visual Basic 또는 Visual C\+\+를 선택합니다.  관리되는 언어의 경우 [!INCLUDE[net_v40_short](../debugger/includes/net_v40_short_md.md)]이 프레임워크 상자에 표시되는지 확인합니다.  
+2.  In the **Installed Templates** pane, select either Visual C#, Visual Basic, or Visual C++. For the managed languages, ensure that [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] is displayed in the framework box.  
   
-3.  **콘솔 응용 프로그램**을 선택하고 **확인**을 클릭합니다.  기본값인 Debug 구성을 유지합니다.  
+3.  Select **Console Application** and then click **OK**. Remain in Debug configuration, which is the default.  
   
-4.  프로젝트에서 .cpp, .cs 또는 .vb 코드 파일을 엽니다.  내용을 삭제하여 빈 코드 파일을 만듭니다.  
+4.  Open the .cpp, .cs, or .vb code file in the project. Delete its contents to create an empty code file.  
   
-5.  선택한 언어의 다음 코드를 빈 코드 파일에 붙여 넣습니다.  
+5.  Paste the following code for your chosen language into the empty code file.  
   
- [!code-cs[Debugger#1](../debugger/codesnippet/CSharp/walkthrough-debugging-a-parallel-application_1.cs)]
- [!code-cpp[Debugger#1](../debugger/codesnippet/CPP/walkthrough-debugging-a-parallel-application_1.cpp)]
- [!code-vb[Debugger#1](../debugger/codesnippet/VisualBasic/walkthrough-debugging-a-parallel-application_1.vb)]  
+ [!code-csharp[Debugger#1](../debugger/codesnippet/CSharp/walkthrough-debugging-a-parallel-application_1.cs)] [!code-cpp[Debugger#1](../debugger/codesnippet/CPP/walkthrough-debugging-a-parallel-application_1.cpp)] [!code-vb[Debugger#1](../debugger/codesnippet/VisualBasic/walkthrough-debugging-a-parallel-application_1.vb)]  
   
-1.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
+1.  On the **File** menu, click **Save All**.  
   
-2.  **빌드** 메뉴에서 **솔루션 다시 빌드**를 클릭합니다.  
+2.  On the **Build** menu, click **Rebuild Solution**.  
   
-     `Debugger.Break`\(C\+\+ 샘플의 경우 `DebugBreak`\)가 4번 호출됩니다. 따라서 중단점을 삽입할 필요가 없으며 응용 프로그램을 실행하기만 하면 디버거에서 응용 프로그램이 최대 4번 중단됩니다.  
+     Notice that there are four calls to `Debugger.Break` (`DebugBreak` in the C++ sample) Therefore, you do not have to insert breakpoints; just running the application will cause it to break in the debugger up to four times.  
   
-## 병렬 스택 창 사용: 스레드 뷰  
- **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  첫 번째 중단점이 적중될 때까지 기다립니다.  
+## <a name="using-the-parallel-stacks-window-threads-view"></a>Using the Parallel Stacks Window: Threads View  
+ On the **Debug** menu, click **Start Debugging**. Wait for the first breakpoint to be hit.  
   
-#### 단일 스레드의 호출 스택을 보려면  
+#### <a name="to-view-the-call-stack-of-a-single-thread"></a>To view the call stack of a single thread  
   
-1.  **디버그** 메뉴에서 **창**을 가리킨 다음 **스레드**를 클릭합니다.  Visual Studio 아래쪽에 **스레드** 창을 고정합니다.  
+1.  On the **Debug** menu, point to **Windows** and then click **Threads**. Dock the **Threads** window at the bottom of Visual Studio.  
   
-2.  **디버그** 메뉴에서 **창**을 가리킨 다음 **호출 스택**을 클릭합니다.  Visual Studio 아래쪽에 **호출 스택** 창을 고정합니다.  
+2.  On the **Debug** menu, point to **Windows** and then click **Call Stack**. Dock the **Call Stack** window at the bottom Visual Studio.  
   
-3.  **스레드** 창에서 스레드를 두 번 클릭하여 활성화합니다.  활성화된 현재 스레드에는 노란색 화살표가 표시됩니다.  현재 스레드를 변경하는 경우 해당 호출 스택이 **호출 스택** 창에 표시됩니다.  
+3.  Double-click a thread in the **Threads** window to make it current. Current threads have a yellow arrow. When you change the current thread, its call stack is displayed in the **Call Stack** window.  
   
-#### 병렬 스택 창을 검사하려면  
+#### <a name="to-examine-the-parallel-stacks-window"></a>To examine the Parallel Stacks window  
   
-1.  **디버그** 메뉴에서 **창**을 가리키고 **병렬 스택**을 클릭합니다.  왼쪽 맨 위의 상자에서 **스레드**가 선택되어 있는지 확인합니다.  
+1.  On the **Debug** menu, point to **Windows** and then click **Parallel Stacks**. Make sure that **Threads** is selected in the box at the upper-left corner.  
   
-     **병렬 스택** 창을 사용하여 한 뷰에서 동시에 여러 호출 스택을 볼 수 있습니다.  다음 그림은 **호출 스택** 창 위에 있는 **병렬 스택** 창을 보여 줍니다.  
+     By using the **Parallel Stacks** window, you can view multiple call stacks at the same time in one view. The following illustration shows the **Parallel Stacks** window above the **Call Stack** window.  
   
-     ![병렬 스택 창의 스레드 뷰](../debugger/media/pdb_walkthrough_1.png "PDB\_Walkthrough\_1")  
+     ![Threads view in Parallel Stacks window](../debugger/media/pdb_walkthrough_1.png "PDB_Walkthrough_1")  
   
-     주 스레드의 호출 스택이 한 상자에 표시되고 다른 4개의 스레드에 대한 호출 스택이 다른 상자에서 그룹화됩니다.  4개의 스레드는 해당 스택 프레임이 동일한 메서드 컨텍스트를 공유 즉, 동일한 메서드인 `A`, `B` 및 `C`에 있기 때문에 그룹화됩니다.  동일한 상자를 공유하는 스레드의 이름과 스레드 ID를 보려면 머리글\(**4개 스레드**\)을 가리킵니다.  다음 그림과 같이 현재 스레드가 굵게 표시됩니다.  
+     The call stack of the Main thread appears in one box and the call stacks for the other four threads are grouped in another box. Four threads are grouped together because their stack frames share the same method contexts; that is, they are in the same methods: `A`, `B`, and `C`. To view the thread IDs and names of the threads that share the same box, hover over the header (**4 Threads**). The current thread is displayed in bold, as shown in the following illustration.  
   
-     ![스레드 ID 및 이름을 표시하는 도구 설명](../debugger/media/pdb_walkthrough_1a.png "PDB\_Walkthrough\_1A")  
+     ![Tooltip that shows thread IDs and names](../debugger/media/pdb_walkthrough_1a.png "PDB_Walkthrough_1A")  
   
-     노란색 화살표는 현재 스레드의 활성 스택 프레임을 나타냅니다.  자세한 정보를 보려면 해당 항목을 가리킵니다.  
+     The yellow arrow indicates the active stack frame of the current thread. To get more information, hover over it  
   
-     ![활성 스택 프레임의 도구 설명](../debugger/media/pdb_walkthrough_1b.png "PDB\_Walkthrough\_1B")  
+     ![Tooltip on active stack frame](../debugger/media/pdb_walkthrough_1b.png "PDB_Walkthrough_1B")  
   
-     **호출 스택** 창을 마우스 오른쪽 단추로 클릭하여 스택 프레임에 대해 표시할 정보\(**모듈 이름**, **매개 변수 형식**, **매개 변수 이름**, **매개 변수 값**, **줄 번호** 및 **바이트 오프셋**\)를 설정할 수 있습니다.  
+     You can set how much detail to show for the stack frames (**Module Names**, **Parameter Types**, **Parameter Names**, **Parameter Values**, **Line Numbers** and **Byte Offsets**) by right-clicking in the **Call Stack** window.  
   
-     상자 주변의 파란색 강조 표시는 현재 스레드가 해당 상자의 일부임을 나타냅니다.  현재 스레드는 도구 설명에서 굵은 스택 프레임으로도 표시됩니다.  스레드 창에서 주 스레드를 두 번 클릭하면 그에 따라 **병렬 스택** 창의 파란색 강조 표시가 이동하는 것을 볼 수 있습니다.  
+     A blue highlight around a box indicates that the current thread is part of that box. The current thread is also indicated by the bold stack frame in the tooltip. If you double-click the Main thread in the Threads window, you can observe that the blue highlight in the **Parallel Stacks** window moves accordingly.  
   
-     ![병렬 스택 창의 강조 표시된 주 스레드](../debugger/media/pdb_walkthrough_1c.png "PDB\_Walkthrough\_1C")  
+     ![Highlighted main thread in Parallel Stacks window](../debugger/media/pdb_walkthrough_1c.png "PDB_Walkthrough_1C")  
   
-#### 2번째 중단점까지 실행을 계속하려면  
+#### <a name="to-resume-execution-until-the-second-breakpoint"></a>To resume execution until the second breakpoint  
   
-1.  2번째 중단점이 적중될 때까지 실행을 계속하려면 **디버그** 메뉴에서 **계속**을 클릭합니다.  다음 그림에서는 2번째 중단점에서의 스레드 트리를 보여 줍니다.  
+1.  To resume execution until the second breakpoint is hit, on the **Debug** menu, click **Continue**. The following illustration shows the thread tree at the second breakpoint.  
   
-     ![여러 분기가 표시된 병렬 스택 창](../debugger/media/pdb_walkthrough_2.png "PDB\_Walkthrough\_2")  
+     ![Parallel Stacks window that shows many branches](../debugger/media/pdb_walkthrough_2.png "PDB_Walkthrough_2")  
   
-     첫 번째 중단점에서 4개 스레드가 모두 S.A 메서드에서 S.B 메서드로 이동되고 다시 S.C 메서드로 이동되었습니다.  해당 정보가 **병렬 스택** 창에 계속 표시되지만 4개 스레드는 더 진행되었습니다.  그 중 하나가 S.D와 S.E로 진행되었습니다.  다른 하나는 S.F, S.G 및 S.H로 진행되었습니다.  나머지 두 개는 S.I와 S.J로 진행되었으며, 이 중단점에서 스레드 중 하나가 S.K로 이동되었고 다른 하나는 사용자 코드가 아닌 외부 코드로 진행되었습니다.  
+     At the first breakpoint, four threads all went from S.A to S.B to S.C methods. That information is still visible in the **Parallel Stacks** window, but the four threads have progressed further. One of them continued to S.D and then S.E. Another continued to S.F, S.G, and S.H. Two others continued to S.I and S.J, and from there one of them went to S.K and the other continued to non-user External Code.  
   
-     상자 머리글\(**1개 스레드** 또는 **2개 스레드**\)을 가리키면 스레드의 ID를 볼 수 있습니다.  스택 프레임을 가리키면 스레드 ID와 기타 스레드 정보를 볼 수 있습니다.  파란색 강조 표시는 현재 스레드를 나타내며 노란색 화살표는 현재 스레드의 활성 스택 프레임을 나타냅니다.  
+     You can hover over the box header, for example, **1 Thread** or **2 Threads**, to see the thread IDs of the threads. You can hover over stack frames to see thread IDs plus other frame details. The blue highlight indicates the current thread and the yellow arrow indicates the active stack frame of the current thread.  
   
-     실 모양 아이콘\(겹친 파란색 및 빨간색 물결선\)은 현재 스레드가 아닌 스레드의 활성 스택 프레임을 나타냅니다.  **호출 스택** 창에서 S.B를 두 번 클릭하여 프레임을 전환합니다.  **병렬 스택** 창은 구부러진 녹색 화살표 아이콘을 사용하여 현재 스레드의 현재 스택 프레임을 나타냅니다.  
+     The cloth-threads icon (overlapping blue and red waved lines) indicate the active stack frames of the noncurrent threads. In the **Call Stack** window, double-click S.B to switch frames. The **Parallel Stacks** window indicates the current stack frame of the current thread by using a green curved arrow icon.  
   
-     **스레드** 창에서 스레드 간을 전환하고 **병렬 스택** 창의 뷰가 업데이트되는지 살펴봅니다.  
+     In the **Threads** window, switch between threads and observe that the view in the **Parallel Stacks** window is updated.  
   
-     **병렬 스택** 창에서 바로 가기 메뉴를 사용하여 다른 스레드로 전환하거나 다른 스레드의 다른 프레임으로 전환할 수 있습니다.  예를 들어, S.J를 마우스 오른쪽 단추로 클릭하고 **프레임으로 전환**을 가리킨 다음 명령을 클릭합니다.  
+     You can switch to another thread, or to another frame of another thread, by using the shortcut menu in the **Parallel Stacks** window. For example, right-click S.J, point to **Switch To Frame**, and then click a command.  
   
-     ![병렬 스택 실행 경로](../debugger/media/pdb_walkthrough_2b.png "PDB\_Walkthrough\_2B")  
+     ![Parallel Stacks Path of Execution](../debugger/media/pdb_walkthrough_2b.png "PDB_Walkthrough_2B")  
   
-     S.C를 마우스 오른쪽 단추로 클릭하고 **프레임으로 전환**을 가리킵니다.  명령 중 하나에 현재 스레드의 스택 프레임을 나타내는 선택 표시가 있습니다.  동일한 스레드의 해당 프레임으로 전환하거나\(녹색 화살표만 이동\) 다른 스레드로 전환할 수 있습니다\(파란색 강조 표시도 이동\).  다음 그림에서는 하위 메뉴를 보여 줍니다.  
+     Right-click S.C and point to **Switch To Frame**. One of the commands has a check mark that indicates the stack frame of the current thread. You can switch to that frame of the same thread (just the green arrow will move) or you can switch to the other thread (the blue highlight will also move). The following illustration shows the submenu.  
   
-     ![J가 현재 스택 프레임인 경우 C에 대한 옵션이 4개 있는 스택 메뉴](../debugger/media/pdb_walkthrough_3.png "PDB\_Walkthrough\_3")  
+     ![Stacks menu with 2 options on C while J is current](../debugger/media/pdb_walkthrough_3.png "PDB_Walkthrough_3")  
   
-     메서드 컨텍스트가 하나의 스택 프레임에만 연결된 경우 상자 머리글에 **1개 스레드**가 표시되고 두 번 클릭하여 이 스레드로 전환할 수 있습니다.  두 개 이상의 프레임이 연결된 메서드 컨텍스트를 두 번 클릭하면 메뉴가 자동으로 표시됩니다.  메서드 컨텍스트를 가리키면 오른쪽에 검은색 삼각형이 나타납니다.  이 삼각형을 클릭해도 바로 가기 메뉴가 표시됩니다.  
+     When a method context is associated with just one stack frame, the box header displays **1 Thread** and you can switch to it by double-clicking. If you double-click a method context that has more than 1 frame associated with it, then the menu automatically pops up. As you hover over the method contexts, notice the black triangle at the right. Clicking that triangle also displays the shortcut menu.  
   
-     스레드가 많은 대규모 응용 프로그램의 경우 일부 스레드에만 초점을 맞출 수 있습니다.  **병렬 스택** 창에서는 플래그가 설정된 스레드에 대해서만 호출 스택을 표시할 수 있습니다.  도구 모음에서 목록 상자 옆에 있는 **플래그 설정된 항목만 표시** 단추를 클릭합니다.  
+     For large applications that have many threads, you may want to focus on just a subset of threads. The **Parallel Stacks** window can display call stacks only for flagged threads. On the toolbar, click the **Show Only Flagged** button next to the list box.  
   
-     ![빈 병렬 스택 창 및 도구 설명](../debugger/media/pdb_walkthrough_3a.png "PDB\_Walkthrough\_3A")  
+     ![Empty Parallel Stacks window and tooltip](../debugger/media/pdb_walkthrough_3a.png "PDB_Walkthrough_3A")  
   
-     그런 다음 **스레드** 창에서 각 스레드에 플래그를 설정하여 **병렬 스택** 창에서 해당 호출 스택이 표시되는 방식을 봅니다.  스레드에 플래그를 설정하려면 바로 가기 메뉴 또는 스레드의 첫 번째 셀을 사용합니다.  **플래그 설정된 항목만 표시** 도구 모음 단추를 다시 클릭하여 모든 스레드를 표시합니다.  
+     Next, in the **Threads** window, flag threads one by one to see how their call stacks appear in the **Parallel Stacks** window. To flag threads, use the shortcut menu or the first cell of a thread. Click the **Show Only Flagged** toolbar button again to show all threads.  
   
-#### 3번째 중단점까지 실행을 계속하려면  
+#### <a name="to-resume-execution-until-the-third-breakpoint"></a>To resume execution until the third breakpoint  
   
-1.  3번째 중단점이 적중될 때까지 실행을 계속하려면 **디버그** 메뉴에서 **계속**을 클릭합니다.  
+1.  To resume execution until the third breakpoint is hit, on the **Debug** menu, click **Continue**.  
   
-     여러 스레드가 동일한 메서드에 있지만 메서드가 호출 스택의 시작 지점에 있지 않은 경우 메서드가 서로 다른 상자에 나타납니다.  현재 중단점의 예는 S.L입니다. 이 중단점은 3개의 스레드를 포함하며 3개의 상자에 나타납니다.  S.L을 두 번 클릭합니다.  
+     When multiple threads are in the same method but the method was not at the beginning of the call stack, the method appears in different boxes. An example at the current breakpoint is S.L, which has three threads in it and appears in three boxes. Double-click S.L.  
   
-     ![병렬 스택 창의 실행 경로](../debugger/media/pdb_walkthrough_3b.png "PDB\_Walkthrough\_3B")  
+     ![Execution path in Parallel Stacks window](../debugger/media/pdb_walkthrough_3b.png "PDB_Walkthrough_3B")  
   
-     다른 두 상자에서 S.L이 굵게 표시되므로 해당 위치를 확인할 수 있습니다.  S.L을 호출되는 프레임과 S.L이 호출하는 프레임을 확인하려면 도구 모음에서 **메서드 뷰 설정\/해제** 단추를 클릭합니다.  다음 그림에서는 **병렬 스택** 창의 메서드 뷰를 보여 줍니다.  
+     Notice that S.L is bold in the other two boxes so that you can see where else it appears. If you want to see which frames call into S.L and which frames it calls, click the **Toggle Method View** button on the toolbar. The following illustration shows the method view of The **Parallel Stacks** window.  
   
-     ![병렬 스택 창의 메서드 뷰](../debugger/media/pdw_walkthrough_4.png "PDW\_Walkthrough\_4")  
+     ![Method view in Parallel Stacks window](../debugger/media/pdw_walkthrough_4.png "PDW_Walkthrough_4")  
   
-     다이어그램이 선택한 메서드를 축으로 회전하고 뷰 중간에 있는 자체 상자에 배치됩니다.  호출 수신자와 호출자가 맨 위와 맨 아래에 나타납니다.  **메서드 뷰 설정\/해제** 단추를 다시 클릭하여 이 모드를 종료합니다.  
+     Notice how the diagram pivoted on the selected method and positioned it in its own box in the middle of the view. The callees and callers appear on the top and bottom. Click the **Toggle Method View** button again to leave this mode.  
   
-     **병렬 스택** 창의 바로 가기 메뉴에는 다음과 같은 기타 항목도 있습니다.  
+     The shortcut menu of the **Parallel Stacks** window also has the following other items.  
   
-    -   **16진수 표시**는 도구 설명의 숫자를 10수 또는 16진수로 전환합니다.  
+    -   **Hexadecimal Display** toggles the numbers in the tooltips between decimal and hexadecimal.  
   
-    -   **기호 로드 정보**와 **기호 설정**은 해당 대화 상자를 엽니다.  
+    -   **Symbol Load Information** and **Symbol Settings** open the respective dialog boxes.  
   
-    -   **소스 코드로 이동** 및 **디스어셈블리로 이동**은 편집기에서 선택한 메서드로 이동합니다.  
+    -   **Go To Source Code** and **Go To Disassembly** navigate in the editor to the selected method.  
   
-    -   **외부 코드 표시**는 사용자 코드에 없는 프레임을 비롯한 모든 프레임을 표시합니다.  이 메뉴 항목을 사용하면 추가 프레임을 수용할 수 있게 다이어그램이 확장됩니다. 추가 프레임에 대한 기호가 없어서 프레임이 흐리게 표시될 수 있습니다.  
+    -   **Show External Code** displays all the frames even if they are not in user code. Try it to see the diagram expand to accommodate the additional frames (which may be dimmed because you do not have symbols for them).  
   
-     큰 다이어그램이 있는 경우 다음 중단점으로 한 단계씩 코드를 실행할 때 뷰가 현재 스레드의 활성 스택 프레임\(중단점을 처음 적중하는 스레드\)으로 자동 스크롤되게 할 수 있습니다.  **병렬 스택** 창에서 도구 모음의 **현재 스택 프레임으로 자동 스크롤** 단추가 켜져 있는지 확인합니다.  
+     When you have large diagrams and you step to the next breakpoint, you may want the view to auto scroll to the active stack frame of the current thread; that is, the thread that hit the breakpoint first. In the **Parallel Stacks** window, make sure that the **Auto Scroll to Current Stack Frame** button on the toolbar is on.  
   
-     ![병렬 스택 창의 자동 스크롤](../debugger/media/pdb_walkthrough_4a.png "PDB\_Walkthrough\_4A")  
+     ![Autoscrolling in the Parallel Stacks window](../debugger/media/pdb_walkthrough_4a.png "PDB_Walkthrough_4A")  
   
-2.  계속하기 전에 **병렬 스택** 창에서 왼쪽과 아래쪽으로 스크롤합니다.  
+2.  Before you continue, in the **Parallel Stacks** window, scroll all the way to the left and all the way down.  
   
-#### 4번째 중단점까지 실행을 계속하려면  
+#### <a name="to-resume-execution-until-the-fourth-breakpoint"></a>To resume execution until the fourth breakpoint  
   
-1.  4번째 중단점이 적중될 때까지 실행을 계속하려면 **디버그** 메뉴에서 **계속**을 클릭합니다.  
+1.  To resume execution until the fourth breakpoint is hit, on the **Debug** menu, click **Continue**.  
   
-     뷰가 어떻게 자동 스크롤되는지 봅니다.  **스레드** 창에서 스레드를 전환하거나 **호출 스택** 창에서 스택 프레임을 전환할 때도 뷰가 항상 정확한 프레임으로 자동 스크롤됩니다.  **현재 도구 프레임으로 자동 스크롤** 옵션을 끄고 차이를 확인합니다.  
+     Notice how the view autoscrolled into place. Switch threads in the **Threads** window or switch stack frames in the **Call Stack** window and notice how the view always autoscrolls to the correct frame. Turn off **Auto Scroll to Current Tool Frame** option and view the difference.  
   
-     **부감 뷰**도 **병렬 스택** 창에서 큰 다이어그램을 사용할 때 도움이 됩니다.  다음 그림과 같이 창의 오른쪽 맨 아래에 있는 스크롤 막대 사이의 단추를 클릭하여 **부감 뷰**를 볼 수 있습니다.  
+     The **Bird's Eye View** also helps with large diagrams in the **Parallel Stacks** window. You can see the **Bird's Eye View** by clicking the button between the scroll bars on the lower-right corner of the window, as shown in the following illustration.  
   
-     ![병렬 스택 창의 조감도](../debugger/media/pdb_walkthrough_5.png "PDB\_Walkthrough\_5")  
+     ![Bird's&#45;eye view in Parallel Stacks window](../debugger/media/pdb_walkthrough_5.png "PDB_Walkthrough_5")  
   
-     사각형을 다이어그램 주변에서 빠르게 이동할 수 있습니다.  
+     You can move the rectangle to quickly pan around the diagram.  
   
-     사각형을 한 방향으로 이동하는 또 한 가지 방법은 다이어그램의 검은색 영역을 클릭하여 원하는 위치로 끄는 것입니다.  
+     Another way to move the diagram in any direction is to click a blank area of the diagram and drag it where you want it.  
   
-     다이어그램을 확대하거나 축소하려면 Ctrl 키를 누른 상태에서 마우스 휠을 움직입니다.  또는 도구 모음의 확대\/축소 단추를 클릭하고 확대\/축소 도구를 사용합니다.  
+     To zoom in and out of the diagram, press and hold CTRL while you move the mouse wheel. Alternatively, click the Zoom button on the toolbar and then use the Zoom tool.  
   
-     ![병렬 스택 창의 확대&#47;축소된 스택](../debugger/media/pdb_walkthrough_5a.png "PDB\_Walkthrough\_5A")  
+     ![Zoomed stacks in Parallel Stacks window](../debugger/media/pdb_walkthrough_5a.png "PDB_Walkthrough_5A")  
   
-     **도구** 메뉴를 클릭하고 **옵션**을 클릭한 다음 **디버깅** 노드 아래의 옵션을 선택하거나 선택 취소하여 상향식이 아닌 하향식으로 스택을 볼 수도 있습니다.  
+     You can also view the stacks in a top-down direction instead of bottom-up, by clicking the **Tools** menu, clicking **Options**, and then select or clear the option under the **Debugging** node.  
   
-2.  계속하기 전에 **디버그** 메뉴에서 **디버깅 중지**를 클릭하여 실행을 종료합니다.  
+2.  Before you continue, on the **Debug** menu, click **Stop Debugging** to end execution.  
   
-## 병렬 작업 창과 병렬 스택 창의 작업 뷰 사용  
- 계속하기 전에 이전 절차를 완료하는 것이 좋습니다.  
+## <a name="using-the-parallel-tasks-window-and-the-tasks-view-of-the-parallel-stacks-window"></a>Using the Parallel Tasks Window and the Tasks View of the Parallel Stacks window  
+ We recommended that you complete the earlier procedures before you continue.  
   
-#### 첫 번째 중단점이 적중될 때까지 응용 프로그램을 다시 시작하려면  
+#### <a name="to-restart-the-application-until-the-first-breakpoint-is-hit"></a>To restart the application until the first breakpoint is hit  
   
-1.  **디버깅** 메뉴에서 **디버깅 시작**을 클릭하고 첫 번째 중단점이 적중될 때까지 기다립니다.  
+1.  On the **Debug** menu, click **Start Debugging** and wait for the first breakpoint to be hit.  
   
-2.  **디버그** 메뉴에서 **창**을 가리킨 다음 **스레드**를 클릭합니다.  Visual Studio 아래쪽에 **스레드** 창을 고정합니다.  
+2.  On the **Debug** menu, point to **Windows** and then click **Threads**. Dock the **Threads** window at the bottom of Visual Studio.  
   
-3.  **디버그** 메뉴에서 **창**을 가리키고 **호출 스택**을 클릭합니다.  Visual Studio 아래쪽에 **호출 스택** 창을 고정합니다.  
+3.  On the **Debug** menu, point to **Windows** and click **Call Stack**. Dock the **Call Stack** window at the bottom Visual Studio.  
   
-4.  **스레드** 창에서 스레드를 두 번 클릭하여 활성화합니다.  활성화된 현재 스레드에는 노란색 화살표가 표시됩니다.  현재 스레드를 변경하면 다른 창이 업데이트됩니다.  다음에는 작업을 살펴보겠습니다.  
+4.  Double-click a thread in the **Threads** window to makes it current. Current threads have the yellow arrow. When you change the current thread, the other windows are updated. Next, we will examine tasks.  
   
-5.  **디버그** 메뉴에서 **창**을 가리킨 다음 **병렬 작업**을 클릭합니다.  다음 그림에서는 **병렬 작업** 창을 보여 줍니다.  
+5.  On the **Debug** menu, point to **Windows** and then click **Parallel Tasks**. The following illustration shows the **Tasks** window.  
   
-     ![병렬 작업 창의 실행 중인 작업 4개](../debugger/media/pdw_walkthrough_6.png "PDW\_Walkthrough\_6")  
+     ![Four running tasks in Tasks window](../debugger/media/pdw_walkthrough_6.png "PDW_Walkthrough_6")  
   
-     실행 중인 각 작업에 대해 같은 이름의 속성에서 반환되는 작업의 ID, 작업을 실행하는 스레드의 ID 및 이름, 작업의 위치가 표시됩니다. 작업을 가리키면 전체 호출 스택이 포함된 도구 설명이 표시됩니다.  또한 **작업** 열 아래에서 작업에 전달된 메서드 즉, 시작 지점을 볼 수 있습니다.  
+     For each running Task, you can read its ID, which is returned by the same-named property, the ID and name of the thread that runs it, its location (hovering over that displays a tooltip that has the whole call stack). Also, under the **Task** column, you can see the method that was passed into the task; in other words, the starting point.  
   
-     열을 정렬할 수 있습니다.  정렬 문자 모양이 정렬 열과 방향을 나타냅니다.  열을 왼쪽이나 오른쪽으로 끌어서 열을 다시 정렬할 수도 있습니다.  
+     You can sort any column. Notice the sort glyph that indicates the sort column and direction. You can also reorder the columns by dragging them left or right.  
   
-     노란색 화살표는 현재 작업을 나타냅니다.  작업을 두 번 클릭하거나 바로 가기 메뉴를 사용하여 작업을 전환할 수 있습니다.  작업을 전환하면 주 스레드가 현재 스레드가 되고 다른 창이 업데이트됩니다.  
+     The yellow arrow indicates the current task. You can switch tasks by double-clicking a task or by using the shortcut menu. When you switch tasks, the underlying thread becomes current and the other windows are updated.  
   
-     작업 간을 수동으로 전환하는 경우 노란색 화살표는 이동하지만 흰색 화살표는 디버거를 중단시킨 작업을 계속 표시합니다.  
+     When you manually switch from one task to another, the yellow arrow moves, but a white arrow still shows the task that caused the debugger to break.  
   
-#### 2번째 중단점까지 실행을 계속하려면  
+#### <a name="to-resume-execution-until-the-second-breakpoint"></a>To resume execution until the second breakpoint  
   
-1.  2번째 중단점이 적중될 때까지 실행을 계속하려면 **디버그** 메뉴에서 **계속**을 클릭합니다.  
+1.  To resume execution until the second breakpoint is hit, on the **Debug** menu, click **Continue**.  
   
-     이전에는 **상태** 열에 모든 작업이 실행 중으로 표시되었지만 이제는 작업 중 두 개가 대기 중입니다.  작업은 다양한 이유로 차단될 수 있습니다.  **상태** 열에서 대기 중인 작업을 가리키면 해당 작업이 차단된 이유를 알 수 있습니다.  예를 들어, 다음 그림에서 작업 3이 작업 4를 기다리고 있습니다.  
+     Previously, the **Status** column showed all tasks as Running, but now two of the tasks are Waiting. Tasks can be blocked for many different reasons. In the **Status** column, hover over a waiting task to learn why it is blocked. For example, in the following illustration, task 3 is waiting on task 4.  
   
-     ![병렬 작업 창의 대기 중인 작업 2개](../debugger/media/pdb_walkthrough_7.png "PDB\_Walkthrough\_7")  
+     ![Two waiting tasks in Tasks window](../debugger/media/pdb_walkthrough_7.png "PDB_Walkthrough_7")  
   
-     작업 4는 작업 2에 할당된 스레드가 소유하는 모니터를 기다리고 있습니다.  
+     Task 4, in turn, is waiting on a monitor owned by the thread assigned to task 2.  
   
-     ![작업 창의 대기 중인 작업 및 도구 설명](../debugger/media/pdb_walkthrough_7a.png "PDB\_Walkthrough\_7A")  
+     ![Waiting task and tooltip in Tasks window](../debugger/media/pdb_walkthrough_7a.png "PDB_Walkthrough_7A")  
   
-     **병렬 작업** 창에서 첫 번째 열의 플래그를 클릭하여 작업에 플래그를 설정할 수 있습니다.  
+     You can flag a task by clicking the flag in the first column of the **Tasks** window.  
   
-     플래그 설정을 사용하여 동일한 디버깅 세션의 여러 중단점 간에 작업을 추적하거나 **병렬 스택** 창에 호출 스택이 표시되는 작업을 필터링할 수 있습니다.  
+     You can use flagging to track tasks between different breakpoints in the same debugging session or to filter for tasks whose call stacks are shown in the **Parallel Stacks** window.  
   
-     앞에서 **병렬 스택** 창을 사용할 때 응용 프로그램 스레드를 보았습니다.  이번에는 **병렬 작업** 창에서 응용 프로그램 작업을 봅니다.  이렇게 하려면 왼쪽 위의 상자에서 **작업**을 선택합니다.  다음 그림에서는 작업 뷰를 보여 줍니다.  
+     When you used the **Parallel Stacks** window earlier, you viewed the application threads. View the **Parallel Stacks** window again, but this time view the application tasks. Do this by selecting **Tasks** in the box on the upper left. The following illustration shows the Tasks View.  
   
-     ![병렬 스택 창의 스레드 뷰](../debugger/media/pdb_walkthrough_8.png "PDB\_Walkthrough\_8")  
+     ![Threads view in Parallel Stacks window](../debugger/media/pdb_walkthrough_8.png "PDB_Walkthrough_8")  
   
-     현재 실행 중인 작업이 아닌 스레드는 **병렬 스택** 창의 작업 뷰에 표시되지 않습니다.  또한 작업을 실행하는 스레드의 경우 작업과 관련이 없는 스택 프레임 중 일부가 스택의 맨 위와 맨 아래에서 필터링됩니다.  
+     Threads that are not currently executing tasks are not shown in the Tasks View of the **Parallel Stacks** window. Also, for threads that execute tasks, some of the stack frames that are not relevant to tasks are filtered from the top and bottom of the stack.  
   
-     **병렬 작업** 창을 다시 봅니다.  열 머리글을 마우스 오른쪽 단추로 클릭하여 열의 바로 가기 메뉴를 표시합니다.  
+     View the **Tasks** window again. Right-click any column header to see a shortcut menu for the column.  
   
-     ![병렬 작업 창의 바로 가기 뷰 메뉴](../debugger/media/pdb_walkthrough_8a.png "PDB\_Walkthrough\_8A")  
+     ![Shortcut view menu in Tasks window](../debugger/media/pdb_walkthrough_8a.png "PDB_Walkthrough_8A")  
   
-     바로 가기 메뉴를 사용하여 열을 추가하거나 제거할 수 있습니다.  예를 들어, AppDomain 열은 선택되지 않았으므로 목록에 표시되지 않습니다.  **부모**를 클릭합니다.  4개 작업 중 하나에 대해 **부모** 열이 값 없이 표시됩니다.  
+     You can use the shortcut menu to add or remove columns. For example, the AppDomain column is not selected; therefore, it is not displayed in the list. Click **Parent**. The **Parent** column appears without values for any of the four tasks.  
   
-#### 3번째 중단점까지 실행을 계속하려면  
+#### <a name="to-resume-execution-until-the-third-breakpoint"></a>To resume execution until the third breakpoint  
   
-1.  3번째 중단점이 적중될 때까지 실행을 계속하려면 **디버그** 메뉴에서 **계속**을 클릭합니다.  
+1.  To resume execution until the third breakpoint is hit, on the **Debug** menu, click **Continue**.  
   
-     지금 새 작업인 작업 5가 실행 중이며 작업 4가 대기 중입니다.  **상태** 창에서 대기 중인 작업을 가리키면 해당 작업이 대기 중인 이유를 알 수 있습니다.  **부모** 열에서 작업 4는 작업 5의 부모입니다.  
+     A new task, task 5, is now running and task 4 is now waiting. You can see why by hovering over the waiting task in the **Status** window. In the **Parent** column, notice that task 4 is the parent of task 5.  
   
-     부모\-자식 관계를 시각적으로 표현하려면 **부모** 열 머리글을 오른쪽 단추로 클릭하고 **부모 자식 뷰**를 클릭합니다.  다음 그림이 표시됩니다.  
+     To better visualize the parent-child relationship, right-click the **Parent** column header and then click **Parent Child View**. You should see the following illustration.  
   
-     ![병렬 작업 창의 부모&#45;자식 뷰](../debugger/media/pdb_walkthrough_9.png "PDB\_Walkthrough\_9")  
+     ![Parent&#45;child view in Tasks window](../debugger/media/pdb_walkthrough_9.png "PDB_Walkthrough_9")  
   
-     동일한 스레드에 대해 작업 4와 작업 5가 실행되고 있습니다.  이 정보는 **스레드** 창에 표시되지 않으므로 여기에서 이 정보를 볼 수 있다는 것은 **병렬 작업** 창의 또 한 가지 이점입니다.  이를 확인하려면 **병렬 스택** 창을 봅니다.  **작업**을 보고 있는지 확인합니다.  **병렬 작업** 창에서 작업 4와 5를 두 번 클릭하여 해당 작업을 찾습니다.  이때 **병렬 스택** 창의 파란색 강조 표시가 업데이트됩니다.  **병렬 스택** 창에서 도구 설명을 검색하여 작업 4와 5를 찾을 수도 있습니다.  
+     Notice that task 4 and task 5 are running on the same thread. This information is not displayed in the **Threads** window; seeing it here is another benefit of the **Tasks** window. To confirm this, view the **Parallel Stacks** window. Make sure that you are viewing **Tasks**. Locate tasks 4 and 5 by double-clicking them in the **Tasks** window. When you do, the blue highlight in the **Parallel Stacks** window is updated. You can also locate tasks 4 and 5 by scanning the tooltips on the **Parallel Stacks** window.  
   
-     ![병렬 스택 창의 작업 뷰](../debugger/media/pdb_walkthrough_9a.png "PDB\_Walkthrough\_9A")  
+     ![Task view in Parallel Stacks window](../debugger/media/pdb_walkthrough_9a.png "PDB_Walkthrough_9A")  
   
-     **병렬 스택** 창에서 S.P를 마우스 오른쪽 단추로 클릭하고 **스레드로 이동**을 클릭합니다.  창이 스레드 뷰로 전환되고 해당 프레임이 뷰에 표시됩니다.  동일한 스레드에서 두 작업을 볼 수 있습니다.  
+     In the **Parallel Stacks** window, right-click S.P, and then click **Go To Thread**. The window switches to Threads View and the corresponding frame is in view. You can see both tasks on the same thread.  
   
-     ![스레드 뷰의 강조 표시된 스레드](../debugger/media/pdb_walkthrough_9b.png "PDB\_Walkthrough\_9B")  
+     ![Highlighted thread in threads view](../debugger/media/pdb_walkthrough_9b.png "PDB_Walkthrough_9B")  
   
-     이는 **스레드** 창과 비교하여 **병렬 스택** 창의 작업 뷰를 사용할 때의 또 한 가지 이점입니다.  
+     This is another benefit of the Tasks View in the **Parallel Stacks** window, compared to the **Threads** window.  
   
-#### 4번째 중단점까지 실행을 계속하려면  
+#### <a name="to-resume-execution-until-the-fourth-breakpoint"></a>To resume execution until the fourth breakpoint  
   
-1.  3번째 중단점이 적중될 때까지 실행을 계속하려면 **디버그** 메뉴에서 **계속**을 클릭합니다.  **ID** 열 머리글을 클릭하여 ID순으로 정렬합니다.  다음 그림이 표시됩니다.  
+1.  To resume execution until the third breakpoint is hit, on the **Debug** menu, click **Continue**. Click the **ID** column header to sort by ID. You should see the following illustration.  
   
-     ![병렬 스택 창의 4가지 작업 상태](../debugger/media/pdb_walkthrough_10.png "PDB\_Walkthrough\_10")  
+     ![Four task states in Parallel Stacks window](../debugger/media/pdb_walkthrough_10.png "PDB_Walkthrough_10")  
   
-     작업 5가 완료되어 더 이상 표시되지 않습니다.  그렇지 않고 교착 상태도 표시되지 않으면 F11 키를 눌러 한 단계씩 코드를 실행합니다.  
+     Because task 5 has completed, it is no longer displayed. If that is not the case on your computer and the deadlock is not shown, step one time by pressing F11.  
   
-     작업 3과 작업 4가 서로 대기 중이어서 교착 상태에 있습니다.  또한 작업 2의 자식인 5개의 새 작업이 있고 현재 예약되어 있습니다.  예약된 작업은 코드 내에서는 시작되었지만 아직 실행되지 않은 작업입니다.  따라서 **위치**와 **스레드 할당** 열이 비어 있습니다.  
+     Task 3 and task 4 are now waiting on each other and are deadlocked. There are also 5 new tasks that are children of task 2 and are now scheduled. Scheduled tasks are tasks that have been started in code but have not run yet. Therefore, their **Location** and **Thread Assignment** columns are empty.  
   
-     **병렬 스택** 창을 다시 봅니다.  각 상자의 머리글에는 스레드 ID 및 이름을 표시하는 도구 설명이 있습니다.  **병렬 스택** 창에서 작업 뷰로 전환합니다.  그림과 같이 머리글을 가리키면 작업 ID, 이름 및 상태가 표시됩니다.  
+     View the **Parallel Stacks** window again. The header of each box has a tooltip that shows the thread IDs and names. Switch to Tasks View in the **Parallel Stacks** window. Hover over a header to see the task ID and name, and the status of the task, as shown in the following illustration.  
   
-     ![병렬 스택 창의 머리글 도구 설명](../debugger/media/pdb_walkthrough_11.png "PDB\_Walkthrough\_11")  
+     ![Header tooltip in Parallel Stacks window](../debugger/media/pdb_walkthrough_11.png "PDB_Walkthrough_11")  
   
-     열별로 작업을 그룹화할 수 있습니다.  **병렬 작업** 창에서 **상태** 열 머리글을 오른쪽 단추로 클릭하고 **상태별로 그룹화**를 클릭합니다.  다음 그림에서는 상태별로 그룹화된 **병렬 작업** 창을 보여 줍니다.  
+     You can group the tasks by column. In the **Tasks** window, right-click the **Status** column header and then click **Group by Status**. The following illustration shows the **Tasks** window grouped by status.  
   
-     ![병렬 작업 창의 그룹화된 작업](../debugger/media/pdb_walkthrough_12.png "PDB\_Walkthrough\_12")  
+     ![Grouped tasks in Tasks window](../debugger/media/pdb_walkthrough_12.png "PDB_Walkthrough_12")  
   
-     다른 열을 기준으로 그룹화할 수도 있습니다.  작업을 그룹화하여 일부 작업에만 초점을 맞출 수 있습니다.  축소 가능한 그룹마다 함께 그룹화되는 항목 수가 있습니다.  또한 **축소** 단추의 오른쪽에 있는 **플래그 설정** 단추를 클릭하여 그룹의 모든 항목에 빠르게 플래그를 설정할 수 있습니다.  
+     You can also group by any other column. By grouping tasks, you can focus on a subset of tasks. Each collapsible group has a count of the items that are grouped together. You can also quickly flag all items in the group by clicking the **Flag** button to the right of the **Collapse** button.  
   
-     ![병렬 스택 창의 그룹화된 스택](../debugger/media/pdb_walkthrough_12a.png "PDB\_Walkthrough\_12A")  
+     ![Grouped stacks in Parallel Stacks window](../debugger/media/pdb_walkthrough_12a.png "PDB_Walkthrough_12A")  
   
-     마지막으로 살펴볼 **병렬 작업** 창의 기능은 작업을 오른쪽 단추로 클릭할 때 표시되는 바로 가기 메뉴입니다.  
+     The last feature of the **Tasks** window to examine is the shortcut menu that is displayed when you right-click a task.  
   
-     ![병렬 작업 창의 바로 가기 메뉴](../debugger/media/pdb_walkthrough_12b.png "PDB\_Walkthrough\_12B")  
+     ![Shortcut menu in Tasks window](../debugger/media/pdb_walkthrough_12b.png "PDB_Walkthrough_12B")  
   
-     바로 가기 메뉴에는 작업 상태에 따라 다양한 명령이 표시됩니다.  명령에는 **복사**, **모두 선택**, **16진수 표시**, **작업으로 전환**, **할당된 스레드 중지**, **이 스레드를 제외한 모든 스레드 중지**, **할당된 스레드 재개** 및 **플래그 설정**이 있습니다.  
+     The shortcut menu displays different commands, depending on the status of the task. The commands may include **Copy**, **Select All**, **Hexadecimal Display**, **Switch to Task**, **Freeze Assigned Thread**, **Freeze All Threads But This**, and **Thaw Assigned Thread**, and **Flag**.  
   
-     작업의 내부 스레드를 중지하거나 할당된 스레드를 제외한 모든 스레드를 중지할 수 있습니다.  중지된 스레드는 **스레드** 창에서처럼 **병렬 작업** 창에 표시되며 옆에 파란색 *일시 중지* 아이콘이 있습니다.  
+     You can freeze the underlying thread of a task, or tasks, or you can freeze all threads except the assigned one. A frozen thread is represented in the **Tasks** window as it is in the **Threads** window, by a blue *pause* icon.  
   
-## 요약  
- 이 연습에서는 **병렬 작업** 및 **병렬 스택** 디버거 창에 대해 설명했습니다.  다중 스레드 코드를 사용하는 실제 프로젝트에서 이러한 창을 사용하십시오.  C\+\+, C\# 또는 Visual Basic으로 작성된 병렬 코드를 검사할 수 있습니다.  
+## <a name="summary"></a>Summary  
+ This walkthrough demonstrated the **Parallel Tasks** and **Parallel Stacks** debugger windows. Use these windows on real projects that use multithreaded code. You can examine parallel code written in C++, C#, or Visual Basic.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [Debugging Multithreaded Applications](../debugger/walkthrough-debugging-a-parallel-application.md)   
- [디버거 기본 사항](../debugger/debugger-basics.md)   
- [관리 코드 디버깅](../debugger/debugging-managed-code.md)   
- [Parallel Programming](../Topic/Parallel%20Programming%20in%20the%20.NET%20Framework.md)   
- [동시성 런타임](/visual-cpp/parallel/concrt/concurrency-runtime)   
- [병렬 스택 창 사용](../debugger/using-the-parallel-stacks-window.md)   
- [작업 창 사용](../debugger/using-the-tasks-window.md)
+ [Debugger Basics](../debugger/debugger-basics.md)   
+ [Debugging Managed Code](../debugger/debugging-managed-code.md)   
+ [Parallel Programming](/dotnet/standard/parallel-programming/index)   
+ [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime)   
+ [Using the Parallel Stacks Window](../debugger/using-the-parallel-stacks-window.md)   
+ [Using the Tasks Window](../debugger/using-the-tasks-window.md)

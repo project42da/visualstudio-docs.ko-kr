@@ -1,57 +1,60 @@
 ---
-title: "방법: 프로그래밍 방식으로 워크시트 셀에 문자열 표시"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "텍스트[Visual Studio에서 Office 개발], 워크시트에 추가"
-  - "워크시트, 셀에 텍스트 표시"
+title: 'How to: Programmatically Display a String in a Worksheet Cell | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- text [Office development in Visual Studio], adding to worksheets
+- worksheets, displaying text in cells
 ms.assetid: b19870ad-e132-49fd-994e-0a91710fa4c9
 caps.latest.revision: 45
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 44
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4667c2fe28cf927b6192cd1011a4570838425d7b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 워크시트 셀에 문자열 표시
-  이 예제에서는 프로그래밍 방식으로 셀에 텍스트를 표시하는 방법을 보여 줍니다.  셀에 텍스트를 표시하려면 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤이나 네이티브 Excel 범위 개체를 사용합니다.  
+# <a name="how-to-programmatically-display-a-string-in-a-worksheet-cell"></a>How to: Programmatically Display a String in a Worksheet Cell
+  This example demonstrates how to display text in a cell programmatically. To display text in cell, use either a <xref:Microsoft.Office.Tools.Excel.NamedRange> control or a native Excel range object.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## NamedRange 컨트롤 사용  
- 이 예제에서는 `message`라는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 사용합니다.  이 컨트롤은 디자인 타임에 문서 수준 사용자 지정에 추가해야 합니다.  다음 코드는 `ThisWorkbook` 클래스가 아닌 시트 클래스에 배치해야 합니다.  
+## <a name="using-a-namedrange-control"></a>Using a NamedRange Control  
+ This example uses a <xref:Microsoft.Office.Tools.Excel.NamedRange> control named `message`. The control must be added to a document-level customization at design time. The following code must be placed in a sheet class, not in the `ThisWorkbook` class.  
   
-#### NamedRange 컨트롤에 텍스트를 표시하려면  
+#### <a name="to-display-text-in-a-namedrange-control"></a>To display text in a NamedRange control  
   
-1.  <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤의 값을 **Hello World**로 설정합니다.  
+1.  Set the value of the <xref:Microsoft.Office.Tools.Excel.NamedRange> control to **Hello World**.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#68](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#68)]
-     [!code-vb[Trin_VstcoreExcelAutomation#68](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#68)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#68)]  [!code-vb[Trin_VstcoreExcelAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#68)]  
   
-## 네이티브 Excel 범위 사용  
- 다음 코드에서는 프로그래밍 방식으로 새 범위를 만든 다음 이 범위에 값을 할당합니다.  
+## <a name="using-a-native-excel-range"></a>Using a Native Excel Range  
+ The following code creates a new range programmatically and then assigns a value to it.  
   
-#### Excel 범위에 텍스트를 표시하려면  
+#### <a name="to-display-text-in-an-excel-range"></a>To display text in an Excel range  
   
-1.  `Sheet1`의 **A1** 셀에서 범위를 검색하고 값을 **Hello World**로 설정합니다.  
+1.  Retrieve the range at cell **A1** on `Sheet1` and set the value to **Hello World**.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#69](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#69)]
-     [!code-vb[Trin_VstcoreExcelAutomation#69](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#69)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#69)]  [!code-vb[Trin_VstcoreExcelAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#69)]  
   
-## 참고 항목  
- [연습: Windows Form을 사용하여 데이터 수집](../vsto/walkthrough-collecting-data-using-a-windows-form.md)   
- [Office 솔루션 문제 해결](../vsto/troubleshooting-office-solutions.md)   
- [NamedRange 컨트롤](../vsto/namedrange-control.md)   
- [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)   
- [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Collecting Data Using a Windows Form](../vsto/walkthrough-collecting-data-using-a-windows-form.md)   
+ [Troubleshooting Office Solutions](../vsto/troubleshooting-office-solutions.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

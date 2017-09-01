@@ -1,119 +1,171 @@
 ---
-title: "배포 후 문제 진단 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Diagnose problems after deployment | Microsoft Docs
+ms.custom: 
+ms.date: 06/20/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a3463eab-a352-4d17-8551-adbaad526db0
 caps.latest.revision: 60
-caps.handback.revision: 60
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 배포 후 문제 진단
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 807f078f1410fcd4ae56e5f7e6d1a4e73f629882
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/22/2017
 
-IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하려면 Visual Studio에서 IntelliTrace 로그를 디버그하는 데 필요한 올바른 소스 파일과 기호 파일을 자동으로 찾을 수 있도록 릴리스에 빌드 정보를 포함합니다.  
+---
+# <a name="diagnose-problems-after-deployment"></a>Diagnose problems after deployment
+To diagnose issues in your ASP.NET web app after deployment by using IntelliTrace, include build information with your release to let Visual Studio automatically find the correct source files and symbol files that are required to debug the IntelliTrace log.  
+
+ If you are using Microsoft Monitoring Agent to control IntelliTrace, you also need to set up set up application performance monitoring on your web server. This records diagnostic events while your app runs and saves the events to an IntelliTrace log file. You can then look at the events in Visual Studio Enterprise (but not Professional or Community editions), go to the code where an event happened, look at the recorded values at that point in time, and move forwards or backwards through the code that ran. After you find and fix the problem, repeat the cycle to build, release, and monitor your release so you can resolve future potential problems earlier and faster.  
+
+ ![Code, build, release, monitor, diagnose, fix](../debugger/media/ffr_cycle.png "FFR_Cycle")  
+
+ **You'll need:**  
   
- Microsoft Monitoring Agent를 사용하여 IntelliTrace를 제어하는 경우에는 웹 서버에서 응용 프로그램 성능 모니터링도 설정해야 합니다. 이 모니터링을 통해, 앱이 실행되는 동안 진단 이벤트가 기록되고 해당 이벤트가 IntelliTrace 로그 파일에 저장됩니다. 그런 다음 Visual Studio Enterprise(Professional 또는 Community Edition 아님)에서 이벤트를 살펴보고, 이벤트가 발생한 코드로 이동하고, 해당 시점에 기록된 값을 살펴보고, 실행된 코드의 이전이나 이후 위치로 이동할 수 있습니다. 문제를 찾아 수정한 후에는 이 사이클을 반복하여 향후 발생할 수 있는 문제를 조기에 찾아 빠르게 해결할 수 있도록 릴리스를 빌드, 릴리스, 모니터링합니다.  
+-   Visual Studio 2017, Visual Studio 2015, or Team Foundation Server 2017, 2015, 2013, 2012, or 2010 to set up your build  
   
- ![코드, 빌드, 릴리스, 모니터, 진단, 수정](../debugger/media/ffr_cycle.png "FFR_Cycle")  
+-   Microsoft Monitoring Agent to monitor your app and record diagnostic data  
+
+-   Visual Studio Enterprise (but not Professional or Community editions) to review diagnostic data and debug your code with IntelliTrace  
+
+##  <a name="SetUpBuild"></a> Step 1: Include build information with your release  
+ Set up your build process to create a build manifest (BuildInfo.config file) for your web project and include this manifest with your release. This manifest contains information about the project, source control, and build system that were used to create a specific build. This information helps Visual Studio find the matching source and symbols after you open the IntelliTrace log to review the recorded events.  
+
+###  <a name="AutomatedBuild"></a> Create the build manifest for an automated build using Team Foundation Server  
+
+ Follow these steps whether you use Team Foundation Version Control or Git.
   
- **이 필요 합니다.**  
+ **Step 2:** [Step 2: Release your app](#DeployRelease)  
   
--   빌드를 설정하기 위한 Visual Studio 2015 또는 Team Foundation Server 2015, 2013, 2012 또는 2010  
+ Follow these steps whether you use Team Foundation Version Control or Git.  
+ 
+ ####  <a name="TFS2017"></a> Team Foundation Server 2017
+
+ Set up your build definition to add the locations of your source, build, and symbols to the build manifest (BuildInfo.config file). Team Foundation Build automatically creates this file and puts it in your project's output folder.
   
--   앱을 모니터링하고 진단 데이터를 기록하기 위한 Microsoft Monitoring Agent  
+1.  If you already have a build definition using the ASP.NET Core (.NET Framework) template, you can either [Edit your build definition or create a new build definition.](http://msdn.microsoft.com/Library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)
   
--   IntelliTrace를 사용하여 진단 데이터를 검토하고 코드를 디버그하기 위한 Visual Studio Enterprise(Professional 또는 Community Edition 아님)  
+     ![View build definition in TFS 2017](../debugger/media/ffr_tfs2017viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
   
-##  <a name="a-namesetupbuilda-step-1-include-build-information-with-your-release"></a><a name="SetUpBuild"></a> 1 단계: 포함 정보를 릴리스에 빌드  
- 빌드 프로세스를 설정하여 웹 프로젝트의 빌드 매니페스트(BuildInfo.config 파일)를 만들어 이 매니페스트를 릴리스에 포함시킵니다. 이 매니페스트에는 특정 빌드를 만드는 데 사용된 프로젝트, 소스 제어 및 빌드 시스템에 대한 정보가 포함됩니다. 기록된 이벤트를 살펴보기 위해 IntelliTrace 로그를 열면 Visual Studio가 이 매니페스트 정보를 통해 일치하는 소스 및 기호를 간단히 찾을 수 있습니다.  
+2.  If you create a new template, choose the ASP.NET Core (.NET Framework) template. 
   
-###  <a name="a-nameautomatedbuilda-create-the-build-manifest-for-an-automated-build-using-team-foundation-server"></a><a name="AutomatedBuild"></a> Team Foundation Server를 사용 하 여 자동화 빌드용 빌드 매니페스트 만들기  
- Team Foundation 버전 제어 또는 GIT에서 다음 단계를 수행합니다.  
+     ![Choose build process template &#45; TFS 2017](../debugger/media/ffr_tfs2017buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
   
-####  <a name="a-nametfs2013a-team-foundation-server-2013"></a><a name="TFS2013"></a> Team Foundation Server 2013  
- 빌드 정의를 설정하여 소스, 빌드 및 기호의 위치를 빌드 매니페스트(BuildInfo.config 파일)에 추가합니다. Team Foundation Build가 이 파일을 자동으로 만들어 프로젝트의 출력 폴더에 저장합니다.  
+3.  Specify where to save the symbols (PDB) file so that your source is indexed automatically.  
   
-1.  [빌드 정의 편집 하거나 새 빌드 정의 만듭니다.](../Topic/Create%20or%20edit%20a%20build%20definition.md)  
+     If you use a custom template, make sure the template has an activity to index your source. You'll later add an MSBuild argument to specify where to save the symbols files.
   
-     ![TFS 2013의 빌드 정의 보기](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")  
+     ![Set up symbols path in build definition TFS 2017](../debugger/media/ffr_tfs2017builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
   
-2.  기본 템플릿(TfvcTemplate.12.xaml) 또는 사용자 지정 템플릿을 선택합니다.  
+     For more about symbols, see [Publish symbol data](http://msdn.microsoft.com/Library/bd6977ca-e30a-491a-a153-671d81222ce6).  
   
-     ![빌드 프로세스 템플릿을 &#45;를 선택 합니다. TFS 2013](../debugger/media/ffr_tfs2013buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
+4.  Add this MSBuild argument to include your TFS and symbols locations in the build manifest file:  
   
-3.  소스가 자동으로 인덱싱되도록 기호(PDB) 파일을 저장할 위치를 지정합니다.  
+     **/p:IncludeServerNameInBuildInfo=True**  
   
-     사용자 지정 템플릿을 사용하는 경우 해당 템플릿에 소스를 인덱싱하는 활동이 있는지 확인합니다. 나중에 기호 파일을 저장할 위치를 지정하는 MSBuild 인수를 추가합니다.  
+     Anyone who can access your web server can see these locations in the build manifest. Make sure that your source server is secure.
   
-     ![빌드 정의 TFS 2013에 기호 경로 설정](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
+6.  Run a new build.  
+
+####  <a name="TFS2013"></a> Team Foundation Server 2013  
+ Set up your build definition to add the locations of your source, build, and symbols to the build manifest (BuildInfo.config file). Team Foundation Build automatically creates this file and puts it in your project's output folder.  
+
+1.  [Edit your build definition or create a new build definition.](http://msdn.microsoft.com/Library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)  
+
+     ![View build definition in TFS 2013](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")  
+
+2.  Choose the default template (TfvcTemplate.12.xaml) or your own custom template.  
+
+     ![Choose build process template &#45; TFS 2013](../debugger/media/ffr_tfs2013buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
+
+3.  Specify where to save the symbols (PDB) file so that your source is indexed automatically.  
+
+     If you use a custom template, make sure the template has an activity to index your source. You'll later add an MSBuild argument to specify where to save the symbols files.  
+
+     ![Set up symbols path in build definition TFS 2013](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
+
+     For more about symbols, see [Publish symbol data](http://msdn.microsoft.com/Library/bd6977ca-e30a-491a-a153-671d81222ce6).  
+
+4.  Add this MSBuild argument to include your TFS and symbols locations in the build manifest file:  
+
+     **/p:IncludeServerNameInBuildInfo=True**  
   
-     기호에 대한 자세한 내용은 [기호 데이터 게시](../Topic/Index%20and%20publish%20symbol%20data.md)를 참조하세요.  
+     Anyone who can access your web server can see these locations in the build manifest. Make sure that your source server is secure.
+
+5.  If you use a custom template, add this MSBuild argument to specify where to save the symbols file:  
   
-4.  이 MSBuild 인수를 추가하여 TFS 및 기호 위치를 빌드 매니페스트 파일에 포함합니다.  
+     **/p:BuildSymbolStorePath=**\<*path to symbols*>  
   
-     **/p:IncludeServerNameInBuildInfo = true**  
+     ![Include build server info in build def TFS 2013](../debugger/media/ffr_tfs2013builddefincludeserverinfo.png "FFR_TFS2013BuildDefIncludeServerInfo")  
   
-     웹 서버에 액세스할 수 있는 사용자는 누구나 빌드 매니페스트에서 이러한 위치를 참조할 수 있습니다. 원본 서버가 안전한지 확인합니다.  
-  
-5.  사용자 지정 템플릿을 사용하는 경우 이 MSBuild 인수를 추가하여 기호 파일을 저장할 위치를 지정합니다.  
-  
-     **/p:BuildSymbolStorePath =**\<*기호에 대 한 경로*>  
-  
-     ![빌드 정의 TFS 2013에 빌드 서버 정보 포함](../debugger/media/ffr_tfs2013builddefincludeserverinfo.png "FFR_TFS2013BuildDefIncludeServerInfo")  
-  
-     다음 줄을 웹 프로젝트 파일(.csproj, .vbproj)에 추가합니다.  
+     And add these lines to your web project file (.csproj, .vbproj):  
   
     ```  
     <!-- Import the targets file. Change the folder location as necessary. -->  
        <Import Project=""$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\BuildInfo\Microsoft.VisualStudio.ReleaseManagement.BuildInfo.targets" />  
   
     ```  
-  
-6.  새 빌드를 실행합니다.  
-  
- **2단계:** [2단계: Release your app](#DeployRelease)  
-  
-####  <a name="a-nametfs20122010a-team-foundation-server-2012-or-2010"></a><a name="TFS2012_2010"></a> Team Foundation Server 2012 또는 2010  
- 다음 단계에 따라 프로젝트에 대한 빌드 매니페스트(BuildInfo.config 파일)를 자동으로 만들고 프로젝트의 출력 폴더에 파일을 저장합니다. 이 파일은 출력 폴더에 "*ProjectName*.BuildInfo.config"로 표시되지만 앱 게시 후 배포 폴더에는 "BuildInfo.config"라는 이름으로 바뀝니다.  
-  
-1.  Team Foundation Build 서버에 임의 버전의 Visual Studio 2013을 설치합니다.  
-  
-2.  소스가 자동으로 인덱싱되도록 빌드 정의에서 기호를 저장할 위치를 지정합니다.  
-  
-     사용자 지정 템플릿을 사용하는 경우 해당 템플릿에 소스를 인덱싱하는 활동이 있는지 확인합니다.  
-  
-3.  빌드 정의에 다음과 같은 MSBuild 인수를 추가합니다.  
-  
-    -   **/p:VisualStudioVersion = 12.0**  
-  
-    -   **/p:MSBuildAssemblyVersion = 12.0**  
-  
+
+     Anyone who can access your web server can see these locations in the build manifest. Make sure that your source server is secure.  
+
+6.  Run a new build.  
+
+ **Step 2:** [Step 2: Release your app](#DeployRelease)  
+
+####  <a name="TFS2012_2010"></a> Team Foundation Server 2012 or 2010  
+ Follow these steps to automatically create the build manifest (BuildInfo.config file) for your project and put the file in your project's output folder. The file appears as "*ProjectName*.BuildInfo.config" in the output folder but is renamed "BuildInfo.config" in the deployment folder after you publish your app.  
+
+1.  Install Visual Studio 2013 (any edition) on your Team Foundation build server.  
+
+2.  In your build definition, specify where to save the symbols so that your source is indexed automatically.  
+
+     If you use a custom template, make sure that the template has an activity to index your source.  
+
+3.  Add these MSBuild arguments to your build definition:  
+
+    -   **/p:VisualStudioVersion=12.0**  
+
+    -   **/p:MSBuildAssemblyVersion=12.0**  
+
     -   **/tv:12.0**  
-  
-    -   **/p:IncludeServerNameInBuildInfo = true**  
-  
-    -   **/p:BuildSymbolStorePath =**\<*기호에 대 한 경로*>  
-  
-4.  새 빌드를 실행합니다.  
-  
- **2단계:** [2단계: Release your app](#DeployRelease)  
-  
-###  <a name="a-namemanualbuilda-create-the-build-manifest-for-a-manual-build-using-visual-studio"></a><a name="ManualBuild"></a> Visual Studio를 사용 하 여 수동 빌드용 빌드 매니페스트 만들기  
- 다음 단계에 따라 프로젝트에 대한 빌드 매니페스트(BuildInfo.config 파일)를 자동으로 만들고 프로젝트의 출력 폴더에 파일을 저장합니다. 이 파일은 출력 폴더에 "*ProjectName*.BuildInfo.config"로 표시되지만 앱 게시 후 배포 폴더에는 "BuildInfo.config"라는 이름으로 바뀝니다.  
-  
-1.  **솔루션 탐색기**에서 웹 프로젝트를 언로드합니다.  
-  
-2.  프로젝트 파일(.csproj, .vbproj)을 엽니다. 다음 줄을 추가합니다.  
-  
+
+    -   **/p:IncludeServerNameInBuildInfo=True**  
+
+    -   **/p:BuildSymbolStorePath=**\<*path to symbols*>  
+
+4.  Run a new build.  
+
+ **Step 2:** [Step 2: Release your app](#DeployRelease)  
+
+###  <a name="ManualBuild"></a> Create the build manifest for a manual build using Visual Studio  
+ Follow these steps to automatically create the build manifest (BuildInfo.config file) for your project and put the file in your project's output folder. The file appears as "*ProjectName*.BuildInfo.config" in the output folder but is renamed "BuildInfo.config" in the deployment folder after you publish your app.  
+
+1.  In **Solution Explorer**, unload your web project.  
+
+2.  Open the project file (.csproj, .vbproj). Add these lines:  
+
     ```xml  
     <!-- **************************************************** -->  
     <!-- Build info -->  
@@ -127,147 +179,147 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
     </PropertyGroup>  
     <!-- **************************************************** -->  
     ```  
-  
-3.  업데이트된 프로젝트 파일을 체크 인합니다.  
-  
-4.  새 빌드를 실행합니다.  
-  
- **2단계:** [2단계: Release your app](#DeployRelease)  
-  
-###  <a name="a-namemsbuilda-create-the-build-manifest-for-a-manual-build-using-msbuildexe"></a><a name="MSBuild"></a> MSBuild.exe를 사용 하 여 수동 빌드용 빌드 매니페스트 만들기  
- 빌드를 실행할 때 다음의 빌드 인수를 추가합니다.  
-  
- **/p:GenerateBuildInfoConfigFile = true**  
-  
- **/p:IncludeServerNameInBuildInfo = true**  
-  
- **/p:BuildSymbolStorePath =**\<*기호에 대 한 경로*>  
-  
-##  <a name="a-namedeployreleasea-step-2-release-your-app"></a><a name="DeployRelease"></a> 2 단계: 앱 릴리스  
- 빌드 프로세스에서 만들어진 [Web.Deploy 패키지](http://msdn.microsoft.com/library/dd394698.aspx) 를 사용하여 앱을 배포할 경우 빌드 매니페스트는 자동으로 "*ProjectName*.BuildInfo.config"에서 "BuildInfo.config"라는 이름으로 바뀌어 웹 서버에서 앱의 Web.config 파일과 같은 폴더에 저장됩니다.  
-  
- 다른 방법을 사용하여 앱을 배포할 경우에는 빌드 매니페스트가 "*ProjectName*.BuildInfo.config"에서 "BuildInfo.config"라는 이름으로 바뀌어 웹 서버에서 앱의 Web.config 파일과 같은 폴더에 저장되었는지 확인해야 합니다.  
-  
-## <a name="step-3-monitor-your-app"></a>3단계: 앱 모니터링  
- 앱의 문제를 모니터링하고 진단 이벤트를 기록하고 해당 이벤트를 IntelliTrace 로그 파일에 저장할 수 있도록 웹 서버에 응용 프로그램 성능 모니터링을 설정합니다. [배포 문제에 대해 릴리스 모니터링](../debugger/using-the-intellitrace-stand-alone-collector.md)을 참조하세요.  
-  
-##  <a name="a-nameinvestigateeventsa-step-4-find-the-problem"></a><a name="InvestigateEvents"></a> 4 단계: 문제 찾기  
- IntelliTrace를 사용하여 기록된 이벤트를 검토하고 코드를 디버그하려면 개발 컴퓨터 또는 다른 컴퓨터에 Visual Studio Enterprise가 있어야 합니다. 문제 진단을 도와주는 CodeLens, 디버거 지도 및 코드 맵 등의 도구를 사용할 수도 있습니다.  
-  
-### <a name="open-the-intellitrace-log-and-matching-solution"></a>IntelliTrace 로그 및 연결 솔루션 열기  
-  
-1.  Visual Studio Enterprise에서 IntelliTrace 로그(.iTrace 파일)를 엽니다. 같은 컴퓨터에 Visual Studio Enterprise가 설치된 경우에는 파일을 두 번 클릭합니다.  
-  
-2.  프로젝트가 솔루션에 포함되어 빌드되지 않은 경우 Visual Studio가 일치하는 솔루션이나 프로젝트를 자동으로 열도록 하려면 **솔루션 열기** 를 선택합니다. [Q: IntelliTrace 로그는 배포 된 앱에 대 한 정보를 누락 되었습니다. 그 이유는 무엇입니까? 어떻게 해야 합니까?](#InvalidConfigFile)  
-  
-     Visual Studio는 일치하는 솔루션 또는 프로젝트를 열 때 보류 중인 변경 내용을 자동으로 보류하지 않습니다. 이 보류 집합에 대해 자세한 정보를 가져오려면 **출력** 창 또는 **팀 탐색기**를 확인합니다.  
-  
-     변경하기 전에 올바른 소스가 있는지 확인하세요. 분기를 사용하는 경우 Visual Studio가 일치하는 소스를 찾는 위치와 다른 분기에서 작업하는 중일 수 있습니다(예: 릴리스 분기).  
-  
-     ![IntelliTrace 로그에서 솔루션 열기](../debugger/media/ffr_itsummarypageopensolution.png "FFR_ITSummaryPageOpenSolution")  
-  
-     이 솔루션 또는 프로젝트에 매핑된 기존의 작업 영역이 있는 경우 Visual Studio는 해당 작업 영역을 선택하여 검색된 소스를 추가합니다.  
-  
-     ![매핑된 작업 영역에 대해 소스 제어에서 열기](../debugger/media/ffr_openprojectfromsourcecontrol_mapped.png "FFR_OpenProjectFromSourceControl_Mapped")  
-  
-     그렇지 않을 경우, 다른 작업 영역을 선택하거나 새 작업 영역 만듭니다. Visual Studio가 전체 분기를 이 작업 영역에 매핑합니다.  
-  
-     ![소스 제어에서 열기 & #45입니다. 새 작업 영역 만들기](../debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")  
-  
-     사용자의 컴퓨터 이름이 아닌 다른 이름 또는 특정 매핑으로 작업 영역을 만들려면 **관리**를 선택합니다.  
-  
-     [Q: 이유는 Visual Studio 내가 선택한 작업 영역이 적합 하지 않다고?](#IneligibleWorkspace)  
-  
-     [팀 컬렉션이 나 다른 컬렉션을 선택할 때까지 계속할 수 없는 q:](#ChooseTeamProject)  
-  
-### <a name="diagnose-a-performance-problem"></a>성능 문제 진단  
-  
-1.  **성능 위반**에서 기록된 성능 이벤트, 총 실행 시간 및 기타 이벤트 정보를 검토합니다. 그런 다음 특정 성능 이벤트 중 호출된 메서드를 자세히 살펴봅니다.  
-  
-     ![성능 이벤트 정보 보기](../debugger/media/ffr_itsummarypageperformance.png "FFR_ITSummaryPagePerformance")  
-  
-     이벤트를 두 번 클릭할 수도 있습니다.  
-  
-2.  이벤트 페이지에서 이러한 호출의 실행 시간을 검토합니다. 실행 트리에서 느린 호출을 찾습니다.  
-  
-     가장 느린 호출은 여러 번 호출하거나 중첩될 때 등의 경우 자신의 섹션에 나타납니다.  
-  
-     해당 호출을 확장하여 특정 시점에 기록된 중첩 호출과 값을 검토합니다. 그런 다음 해당 호출에서 디버깅을 시작합니다.  
-  
-     ![메서드 호출에서 디버깅 시작](../debugger/media/ffr_itsummarypageperformancemethodscalled.png "FFR_ITSummaryPagePerformanceMethodsCalled")  
-  
-     또한 호출을 두 번 클릭할 수도 있습니다.  
-  
-     메서드가 응용 프로그램 코드에 있는 경우 Visual Studio가 해당 메서드로 이동합니다.  
-  
-     ![성능 이벤트에서 응용 프로그램 코드로 이동](../debugger/media/ffr_itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")  
-  
-     이제 다른 기록된 값, 호출 스택을 검토하고 코드를 단계적으로 실행하거나 **IntelliTrace** 창을 사용하여 이 성능 이벤트 동안 호출된 [다른 메서드 사이에 "in time"을 뒤나 앞으로 이동](../debugger/intellitrace.md) 합니다. [IntelliTrace 로그에 포함되어 있는 기타 모든 이벤트 및 정보는 무엇인가요?](../debugger/using-saved-intellitrace-data.md)[What else can I do from here?](#WhatElse)[성능 이벤트에 대한 더 자세히 알고 싶으세요?](http://blogs.msdn.com/b/visualstudioalm/archive/2013/09/20/performance-details-in-intellitrace.aspx)  
-  
-### <a name="diagnose-an-exception"></a>예외 진단  
-  
-1.  **예외 데이터**에서 기록된 예외 이벤트, 해당 유형, 메시지 및 예외가 발생한 시간을 검토합니다. 코드를 자세히 살펴보려면 예외 그룹의 가장 최근 이벤트부터 디버깅을 시작합니다.  
-  
-     ![예외 이벤트에서 디버깅 시작](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")  
-  
-     이벤트를 두 번 클릭할 수도 있습니다.  
-  
-     응용 프로그램 코드에서 예외가 발생하는 경우 Visual Studio가 예외가 발생한 위치로 이동합니다.  
-  
-     ![예외 이벤트에서 응용 프로그램 코드로 이동](../debugger/media/ffr_itsummarypageexceptiongotocode.png "FFR_ITSummaryPageExceptionGoToCode")  
-  
-     이제 다른 기록된 값, 호출 스택을 검토하거나 **IntelliTrace** 창을 사용하여 [다른 기록된 이벤트 사이의 "in time"](../debugger/intellitrace.md), 관련 코드 및 이 시점에 기록된 값을 뒤나 앞으로 이동합니다. [다른 모든 이벤트 및 IntelliTrace 로그의 정보는 무엇입니까?](../debugger/using-saved-intellitrace-data.md)  
-  
-###  <a name="a-namewhatelsea-what-else-can-i-do-from-here"></a><a name="WhatElse"></a> 여기에서 무엇을 할 수 있습니까?  
-  
--   [이 코드에 대한 자세한 정보를 알아봅니다](../ide/find-code-changes-and-other-history-with-codelens.md). 편집기에서 CodeLens 표시기를 사용하여(편집기를 종료하지 않고) 이 코드에 대한 참조, 변경 기록, 관련 버그, 작업 항목, 코드 검토 또는 단위 테스트를 찾아 볼 수 있습니다.  
-  
-     ![CodeLens & #45입니다. 이 코드에 대 한 참조 보기](../debugger/media/ffr_itsummarypageperformancecodelensreferences.png "FFR_ITSummaryPagePerformanceCodeLensReferences")  
-  
-     ![CodeLens & #45입니다. 이 코드의 변경 기록 보기](../debugger/media/ffr_itsummarypageperformancecodelensauthors.png "FFR_ITSummaryPagePerformanceCodeLensAuthors")  
-  
--   [디버깅 하는 동안 코드에서의 위치를 매핑하십시오.](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md) 디버깅 세션 중에 호출된 메서드를 시각적으로 추적하려면 호출 스택을 매핑합니다.  
-  
-     ![디버깅하는 동안 호출 스택 매핑](../debugger/media/ffr_itsummarypageperformancedebuggermap.png "FFR_ITSummaryPagePerformanceDebuggerMap")  
-  
-###  <a name="a-namefaqa-q-a"></a><a name="FAQ"></a> Q & A  
-  
-####  <a name="a-namewhyincludea-q-why-include-information-about-my-project-source-control-build-and-symbols-with-my-release"></a><a name="WhyInclude"></a> 내 프로젝트, 소스 제어, 빌드 및 기호를 릴리스에 대 한 정보를 포함 q:?  
- Visual Studio는 이러한 정보를 사용하여, 디버깅하려는 릴리스에 맞는 솔루션 및 소스를 찾아냅니다. IntelliTrace 로그를 열고 이벤트를 선택하여 디버깅을 시작하면, Visual Studio는 기호를 사용하여 이벤트가 발생한 코드를 찾아 보여줍니다. 그런 다음 기록된 값을 살펴보고 코드 실행 이전 또는 이후 위치로 이동할 수 있습니다.  
-  
- TFS를 사용하는데 이 정보가 빌드 매니페스트(BuildInfo.config 파일)에 없다면 Visual Studio는 현재 연결된 TFS에서 일치하는 소스 및 기호를 찾습니다. Visual Studio가 올바른 TFS나 일치하는 소스를 찾을 수 없는 경우에는 다른 TFS를 선택하라는 메시지가 표시됩니다.  
-  
-####  <a name="a-nameinvalidconfigfilea-q-the-intellitrace-log-is-missing-information-about-my-deployed-app-why-did-this-happen-what-do-i-do"></a><a name="InvalidConfigFile"></a> Q: IntelliTrace 로그는 배포 된 앱에 대 한 정보를 누락 되었습니다. 그 이유는 무엇입니까? 어떻게 해야 합니까?  
- 개발 컴퓨터에서 배포하거나 배포 시 TFS에 연결되어 있지 않은 경우에 이러한 문제가 발생할 수 있습니다.  
-  
-1.  프로젝트의 배포 폴더로 이동합니다.  
-  
-2.  빌드 매니페스트(BuildInfo.config 파일)를 찾아 엽니다.  
-  
-3.  필요한 정보가 파일에 포함되어 있는지 확인합니다.  
-  
--   **프로젝트 이름**  
-  
-     Visual Studio에서의 프로젝트의 이름입니다. 예:  
-  
+
+3.  Check in the updated project file.  
+
+4.  Run a new build.  
+
+ **Step 2:** [Step 2: Release your app](#DeployRelease)  
+
+###  <a name="MSBuild"></a> Create the build manifest for a manual build using MSBuild.exe  
+ Add these build arguments when you run a build:  
+
+ **/p:GenerateBuildInfoConfigFile=True**  
+
+ **/p:IncludeServerNameInBuildInfo=True**  
+
+ **/p:BuildSymbolStorePath=**\<*path to symbols*>  
+
+##  <a name="DeployRelease"></a> Step 2: Release your app  
+ If you use the [Web.Deploy package](http://msdn.microsoft.com/library/dd394698.aspx) that was created by your build process to deploy your app, the build manifest is automatically renamed from "*ProjectName*.BuildInfo.config" to "BuildInfo.config" and is put in the same folder with your app's Web.config file on your web server.  
+
+ If you use other methods to deploy your app, make sure that the build manifest is renamed from "*ProjectName*.BuildInfo.config" to "BuildInfo.config" and is put in the same folder with your app's Web.config file on the web server.  
+
+## <a name="step-3-monitor-your-app"></a>Step 3: Monitor your app  
+ Set up application performance monitoring on your web server so that you can monitor your app for problems, record diagnostic events, and save those events to an IntelliTrace log file. See [Monitor your release for deployment problems](../debugger/using-the-intellitrace-stand-alone-collector.md).  
+
+##  <a name="InvestigateEvents"></a> Step 4: Find the problem  
+ You'll need Visual Studio Enterprise on your development computer or another computer to review the recorded events and debug your code using IntelliTrace. You can also use tools like CodeLens, debugger maps, and code maps to help you diagnose the problem.  
+
+### <a name="open-the-intellitrace-log-and-matching-solution"></a>Open the IntelliTrace log and matching solution  
+
+1.  Open the IntelliTrace log (.iTrace file) from Visual Studio Enterprise. Or just double-click the file if you have Visual Studio Enterprise on the same computer.  
+
+2.  Choose **Open solution** to have Visual Studio automatically open the matching solution or project, if the project wasn't built as part of a solution. [Q: The IntelliTrace log is missing information about my deployed app. Why did this happen? What do I do?](#InvalidConfigFile)  
+
+     Visual Studio automatically shelves any pending changes when it opens the matching solution or project. To get more details about this shelveset, look in the **Output** window or **Team Explorer**.  
+
+     Before you make any changes, confirm that you have the correct source. If you use branching, you might be working in a different branch than where Visual Studio finds the matching source, like your release branch.  
+
+     ![Open solution from IntelliTrace log](../debugger/media/ffr_itsummarypageopensolution.png "FFR_ITSummaryPageOpenSolution")  
+
+     If you have an existing workspace mapped to this solution or project, Visual Studio selects that workspace to put the source that it found.  
+
+     ![Open from source control to mapped workspace](../debugger/media/ffr_openprojectfromsourcecontrol_mapped.png "FFR_OpenProjectFromSourceControl_Mapped")  
+
+     Otherwise, choose another workspace or create a new workspace. Visual Studio will map the entire branch to this workspace.  
+
+     ![Open from source control &#45; create new workspace](../debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")  
+
+     To create a workspace with specific mappings or a name that's not your computer name, choose **Manage**.  
+
+     [Q: Why does Visual Studio say my selected workspace is ineligible?](#IneligibleWorkspace)  
+
+     [Q: Why can't I continue until I choose a team collection or a different collection?](#ChooseTeamProject)  
+
+### <a name="diagnose-a-performance-problem"></a>Diagnose a performance problem  
+
+1.  Under **Performance Violations**, review the recorded performance events, their total execution times, and other event information. Then dig deeper into the methods that were called during a specific performance event.  
+
+     ![View performance event details](../debugger/media/ffr_itsummarypageperformance.png "FFR_ITSummaryPagePerformance")  
+
+     You can also just double-click the event.  
+
+2.  On the event page, review the execution times for these calls. Find a slow call in the execution tree.  
+
+     The slowest calls appear in their own section when you have multiple calls, nested or otherwise.  
+
+     Expand that call to review any nested calls and values that were recorded at that point in time. Then start debugging from that call.  
+
+     ![Start debugging from method call](../debugger/media/ffr_itsummarypageperformancemethodscalled.png "FFR_ITSummaryPagePerformanceMethodsCalled")  
+
+     You can also just double-click the call.  
+
+     If the method is in your application code, Visual Studio goes to that method.  
+
+     ![Go to application code from performance event](../debugger/media/ffr_itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")  
+
+     Now you can review other recorded values, the call stack, step through your code, or use the **IntelliTrace** window to [move backwards or forwards "in time" between other methods](../debugger/intellitrace.md) that were called during this performance event. [What's all these other events and information in the IntelliTrace log?](../debugger/using-saved-intellitrace-data.md)[What else can I do from here?](#WhatElse)[Want more information about performance events?](http://blogs.msdn.com/b/visualstudioalm/archive/2013/09/20/performance-details-in-intellitrace.aspx)  
+
+### <a name="diagnose-an-exception"></a>Diagnose an exception  
+
+1.  Under **Exception Data**, review the recorded exception events, their types, messages, and when the exceptions happened. To dig deeper into the code, start debugging from the most recent event in a group of exceptions.  
+
+     ![Start debugging from exception event](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")  
+
+     You can also just double-click the event.  
+
+     If the exception happened in your application code, Visual Studio goes to where the exception happened.  
+
+     ![Go to application code from an exception event](../debugger/media/ffr_itsummarypageexceptiongotocode.png "FFR_ITSummaryPageExceptionGoToCode")  
+
+     Now you can review other recorded values, the call stack, or use the **IntelliTrace** window to [move backwards or forwards "in time" between other recorded events](../debugger/intellitrace.md), related code, and the values recorded at those points in time. [What's all these other events and information in the IntelliTrace log?](../debugger/using-saved-intellitrace-data.md)  
+
+###  <a name="WhatElse"></a> What else can I do from here?  
+
+-   [Get more information about this code](../ide/find-code-changes-and-other-history-with-codelens.md). To find references to this code, its change history, related bugs, work items, code reviews, or unit tests - all without leaving the editor - use the CodeLens indicators in the editor.  
+
+     ![CodeLens &#45; View references to this code](../debugger/media/ffr_itsummarypageperformancecodelensreferences.png "FFR_ITSummaryPagePerformanceCodeLensReferences")  
+
+     ![CodeLens &#45; View change history for this code](../debugger/media/ffr_itsummarypageperformancecodelensauthors.png "FFR_ITSummaryPagePerformanceCodeLensAuthors")  
+
+-   [Map your place in the code while you're debugging.](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md) To visually track the methods that were called during your debugging session, map the call stack.  
+
+     ![Map the call stack while debugging](../debugger/media/ffr_itsummarypageperformancedebuggermap.png "FFR_ITSummaryPagePerformanceDebuggerMap")  
+
+###  <a name="FAQ"></a> Q & A  
+
+####  <a name="WhyInclude"></a> Q: Why include information about my project, source control, build, and symbols with my release?  
+ Visual Studio uses this information to find the matching solution and source for the release that you're trying to debug. After you open the IntelliTrace log and select an event to start debugging, Visual Studio uses symbols to find and show you the code where the event happened. You can then look at the values that were recorded and move forwards or backwards through your code's execution.  
+
+ If you're using TFS and this information isn't in the build manifest (BuildInfo.config file), Visual Studio looks for the matching source and symbols on your currently connected TFS. If Visual Studio can't find the correct TFS or matching source, you're prompted to choose a different TFS.  
+
+####  <a name="InvalidConfigFile"></a> Q: The IntelliTrace log is missing information about my deployed app. Why did this happen? What do I do?  
+ This might happen when you deploy from your development computer or you're not connected to TFS during deployment.  
+
+1.  Go to your project's deployment folder.  
+
+2.  Find and open the build manifest (BuildInfo.config file).  
+
+3.  Make sure the file has the required information:  
+
+-   **ProjectName**  
+
+     The name of your project in Visual Studio. For example:  
+
     ```  
     <ProjectName>FabrikamFiber.Extranet.Web</ProjectName>  
     ```  
-  
+
 -   **SourceControl**  
-  
--   소스 제어 시스템 및 다음의 필수 속성에 대한 정보입니다.  
-  
+
+-   Information about your source control system and these required properties:  
+
     -   **TFS**  
-  
-        -   **ProjectCollectionUri**: Team Foundation Server 및 프로젝트 컬렉션의 URI  
-  
-        -   **ProjectItemSpec**: 앱 프로젝트 파일(.csproj 또는 .vbproj)의 경로  
-  
-        -   **ProjectVersionSpec**: 프로젝트 버전  
-  
-         예를 들면 다음과 같습니다.  
-  
+
+        -   **ProjectCollectionUri**: The URI for your Team Foundation Server and project collection  
+
+        -   **ProjectItemSpec**: The path to your app's project file (.csproj or .vbproj)  
+
+        -   **ProjectVersionSpec**: The version for your project  
+
+         For example:  
+
         ```  
         <SourceControl type="TFS">  
            <TfsSourceControl>  
@@ -277,19 +329,19 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
            </TfsSourceControl>  
         </SourceControl>  
         ```  
-  
+
     -   **Git**  
-  
-        -   **GitSourceControl**: **GitSourceControl** 스키마의 위치  
-  
-        -   **RepositoryUrl**: Team Foundation Server, 프로젝트 컬렉션 및 Git 리포지토리의 URI  
-  
-        -   **ProjectPath**: 앱 프로젝트 파일(.csproj 또는 .vbproj)의 경로  
-  
-        -   **CommitId**: 커밋 id  
-  
-         예:  
-  
+
+        -   **GitSourceControl**: The location of the **GitSourceControl** schema  
+
+        -   **RepositoryUrl**: The URI for your Team Foundation Server, project collection, and Git repository  
+
+        -   **ProjectPath**: The path to your app's project file (.csproj or .vbproj)  
+
+        -   **CommitId**: The id for your commit  
+
+         For example:  
+
         ```  
         <SourceControl type="Git">   
            <GitSourceControl xmlns="http://schemas.microsoft.com/visualstudio/deploymentevent_git/2013/09">  
@@ -299,25 +351,25 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
            </GitSourceControl>  
         </SourceControl>  
         ```  
-  
--   **빌드**  
-  
-     빌드 시스템( `"TeamBuild"` 또는 `"MSBuild"`) 및 다음의 필수 속성에 대한 정보입니다.  
-  
-    -   **BuildLabel** (TeamBuild용): 빌드 이름 및 번호입니다. 이 레이블은 배포 이벤트의 이름으로도 사용됩니다. 빌드 번호에 대한 자세한 내용은 [빌드 번호를 사용하여 완료된 빌드에 의미 있는 이름 지정](../Topic/Use%20build%20numbers%20to%20give%20meaningful%20names%20to%20completed%20builds.md)을 참조하세요.  
-  
-    -   **SymbolPath** (권장): 세미콜론으로 구분한 기호(PDB 파일) 위치 URI 목록입니다. 이러한 URI는 URL 또는 UNC일 수 있습니다. 이 정보를 통해 Visual Studio에서는 사용자가 디버깅을 손쉽게 할 수 있도록 일치하는 기호를 쉽게 찾을 수 있습니다.  
-  
-    -   **BuildReportUrl** (TeamBuild용): TFS 내 빌드 보고서의 위치  
-  
-    -   **BuildId** (TeamBuild용): TFS 내 빌드 세부 정보의 URI 이 URI는 배포 이벤트의 ID로도 사용됩니다. TeamBuild를 사용하지 않을 경우 고유 ID여야 합니다.  
-  
-    -   **BuiltSolution**: Visual Studio에서 일치하는 솔루션을 찾고 열기 위해 사용하는 솔루션 파일의 경로입니다. **SolutionPath** MsBuild 속성의 내용입니다.  
-  
-     예:  
-  
+
+-   **Build**  
+
+     Information about your build system, either `"TeamBuild"` or `"MSBuild"`, and these required properties:  
+
+    -   **BuildLabel** (for TeamBuild): The build name and number. This label is also used as the name of the deployment event. For more info about build numbers, see [Use build numbers to give meaningful names to completed builds](http://msdn.microsoft.com/Library/1f302e9d-4b0a-40b5-8009-b69ca6f988c3).  
+
+    -   **SymbolPath** (Recommended): The list of URIs for your symbols (PDB file) locations separated by semi-colons. These URIs can be URLs or UNCs. This makes it easier for Visual Studio to find the matching symbols to help you with debugging.  
+
+    -   **BuildReportUrl** (for TeamBuild): The location of the build report in TFS  
+
+    -   **BuildId** (for TeamBuild): The URI for the build details in TFS. This URI is also used as the ID of the deployment event. This must id must be unique if you're not using TeamBuild.  
+
+    -   **BuiltSolution**: The path to the solution file that Visual Studio uses to find and open the matching solution. This is the contents of the **SolutionPath** MsBuild property.  
+
+     For example:  
+
     -   **TFS**  
-  
+
         ```  
         <Build type="TeamBuild">  
            <MsBuild>  
@@ -329,9 +381,9 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
            </MsBuild>  
         </Build>  
         ```  
-  
+
     -   **Git**  
-  
+
         ```  
         <Build type="MSBuild">   
            <MSBuild>  
@@ -340,33 +392,34 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
            </MSBuild>  
         </Build>  
         ```  
-  
-####  <a name="a-nameineligibleworkspacea-q-why-does-visual-studio-say-my-selected-workspace-is-ineligible"></a><a name="IneligibleWorkspace"></a> Q: 이유는 Visual Studio 내가 선택한 작업 영역이 적합 하지 않다고?  
- **A:** 선택된 작업 영역에는 소스 제어 폴더와 로컬 폴더 간의 매핑이 없습니다. 이 작업 영역에 대한 매핑을 만들려면 **관리**를 선택합니다. 그렇지 않으면, 이미 매핑된 작업 영역을 선택하거나 새 작업 영역 만듭니다.  
-  
- ![매핑된 작업 영역 없이 소스 제어에서 열기](../debugger/media/ffr_openprojectfromsourcecontrol_notmapped.png "FFR_OpenProjectFromSourceControl_NotMapped")  
-  
-####  <a name="a-namechooseteamprojecta-q-why-cant-i-continue-until-i-choose-a-team-collection-or-a-different-collection"></a><a name="ChooseTeamProject"></a> 팀 컬렉션이 나 다른 컬렉션을 선택할 때까지 계속할 수 없는 q:  
- **A:** 이 문제는 다음과 같은 이유로 인해 발생할 수 있습니다.  
-  
--   Visual Studio가 TFS에 연결되어 있지 않습니다.  
-  
-     ![소스 제어에서 열기 & #45입니다. 연결 되지 않음](../debugger/media/ffr_openprojectfromsourcecontrol_notconnected.png "FFR_OpenProjectFromSourceControl_NotConnected")  
-  
--   Visual Studio가 사용자의 현재 팀 컬렉션에서 솔루션 또는 프로젝트를 찾지 못했습니다.  
-  
-     빌드 매니페스트 파일 (\<*ProjectName*>입니다. BuildInfo.config) Visual Studio에서 일치 하는 소스를 찾을 수는 위치를 지정 하지 않으면 Visual Studio 현재 연결 된 TFS를 사용 하 여 일치 하는 솔루션 또는 프로젝트를 찾습니다. 현재 팀 컬렉션에 일치하는 소스가 없는 경우 Visual Studio는 다른 팀 컬렉션에 연결할 것인지 묻는 메시지를 표시합니다.  
-  
--   Visual Studio가 빌드 매니페스트 파일에서 지정한 컬렉션에서 솔루션 또는 프로젝트를 찾지 못했습니다 (\<*ProjectName*>입니다. BuildInfo.config)입니다.  
-  
-     새 TFS로 마이그레이션했기 때문에 지정된 TFS에는 더 이상 일치하는 소스가 없거나 존재하지 않을 수 있습니다. 지정한 TFS가 존재하지 않는 경우 Visual Studio는 1분 정도 후에 시간 초과된 다음 다른 컬렉션에 연결하라는 메시지를 표시할 수 있습니다. 계속하려면 올바른 TFS 서버에 연결합니다.  
-  
-     ![소스 제어에서 열기 & #45입니다. 마이그레이션](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")  
-  
-####  <a name="a-namewhatworkspacea-q-whats-a-workspace"></a><a name="WhatWorkspace"></a> Q: 작업 영역 이란?  
- **A:** [작업 영역은 소스 사본을 저장](../Topic/Create%20and%20work%20with%20workspaces.md) 하므로 작업을 체크 인하기 전에 개별적으로 개발하고 테스트할 수 있습니다. 발견된 솔루션 또는 프로젝트에 특별히 매핑된 작업 영역이 아직 없는 경우 Visual Studio는 사용 가능한 작업 영역을 선택하거나 기본 작업 영역 이름으로 사용자 컴퓨터 이름을 사용하는 새 작업 영역을 만들 것인지 묻는 메시지를 표시합니다.  
-  
-####  <a name="a-nameuntrustedsymbolsa-q-why-do-i-get-this-message-about-untrusted-symbols"></a><a name="UntrustedSymbols"></a> 신뢰할 수 없는 기호에 대 한이 메시지는 q: 하나요?  
- ![트러스트되지 않은 기호 경로를 디버그하시겠습니까?](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")  
-  
- **A:** 가이 메시지를 표시 하는 경우 빌드 매니페스트 파일에 기호 경로 (\<*ProjectName*>. BuildInfo.config)의 신뢰할 수 있는 기호 경로 목록에 포함 되지 않습니다. 디버거 옵션에서 기호 경로 목록에 경로를 추가할 수 있습니다.
+
+####  <a name="IneligibleWorkspace"></a> Q: Why does Visual Studio say my selected workspace is ineligible?  
+ **A:** The selected workspace doesn't have any mappings between the source control folder and a local folder. To create a mapping for this workspace, choose **Manage**. Otherwise, choose an already mapped workspace or create a new workspace.  
+
+ ![Open from source control with no mapped workspace](../debugger/media/ffr_openprojectfromsourcecontrol_notmapped.png "FFR_OpenProjectFromSourceControl_NotMapped")  
+
+####  <a name="ChooseTeamProject"></a> Q: Why can't I continue until I choose a team collection or a different collection?  
+ **A:** This might happen for any of these reasons:  
+
+-   Visual Studio isn't connected to TFS.  
+
+     ![Open from source control &#45; not connected](../debugger/media/ffr_openprojectfromsourcecontrol_notconnected.png "FFR_OpenProjectFromSourceControl_NotConnected")  
+
+-   Visual Studio didn't find the solution or project in your current team collection.  
+
+     When the build manifest file (\<*ProjectName*>.BuildInfo.config) doesn't specify where Visual Studio can find the matching source, Visual Studio uses your currently connected TFS to find the matching solution or project. If your current team collection doesn't have the matching source, Visual Studio prompts you to connect to a different team collection.  
+
+-   Visual Studio didn't find the solution or project in the collection specified by the build manifest file (\<*ProjectName*>.BuildInfo.config).  
+
+     The specified TFS might not have the matching source anymore or even exist, maybe because you migrated to a new TFS. If the specified TFS doesn't exist, Visual Studio might time out after a minute or so, and then prompt you to connect to a different collection. To continue, connect to the correct TFS server.  
+
+     ![Open from source control &#45; migrated](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")  
+
+####  <a name="WhatWorkspace"></a> Q: What's a workspace?  
+ **A:** Your [workspace stores a copy of the source](http://msdn.microsoft.com/Library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a) so you can develop and test it separately before you check in your work. If you don't have already have a workspace that's specifically mapped to the found solution or project, then Visual Studio prompts you to choose an available workspace or create a new workspace with your computer name as the default workspace name.  
+
+####  <a name="UntrustedSymbols"></a> Q: Why do I get this message about untrusted symbols?  
+ ![Debug with untrusted symbols path?](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")  
+
+ **A:** This message appears when the symbols path in the build manifest file (\<*ProjectName*>.BuildInfo.config) isn't included in the list of trusted symbol paths. You can add the path to the symbols path list in the debugger options.
+

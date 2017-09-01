@@ -1,56 +1,73 @@
 ---
-title: "IDebugArrayObject::GetDimensions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugArrayObject::GetDimensions"
-helpviewer_keywords: 
-  - "IDebugArrayObject::GetDimensions 메서드"
+title: IDebugArrayObject::GetDimensions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugArrayObject::GetDimensions
+helpviewer_keywords:
+- IDebugArrayObject::GetDimensions method
 ms.assetid: 113e0aff-9028-49d6-b104-9fe7be4772d7
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugArrayObject::GetDimensions
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 05ff3521879afe821fbac681a89ad993f5a18000
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-배열의 차원을 가져옵니다.  
+---
+# <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
+Gets the dimensions of the array.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetDimensions(   
-   DWORD dwCount,  
-   DWORD dwDimensions[]  
+```cpp  
+HRESULT GetDimensions(   
+   DWORD dwCount,  
+   DWORD dwDimensions[]  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetDimensions(  
-   [In] uint    dwCount,   
-   [Out] uint[] dwDimensions  
+   [In] uint    dwCount,   
+   [Out] uint[] dwDimensions  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dwCount`  
- \[in\] 차원 수를 검색 합니다.  
+ [in] The number of dimensions to retrieve.  
   
  `dwDimensions`  
- \[in, out\] 각 차원의 크기를 사용 하 여 채워지는 배열입니다.  `dwCount`최대 크기를 지정은 `dwDimensions` 배열입니다.  
+ [in, out] An array that is filled in with the sizes of each dimension. `dwCount` specifies the maximum size of the `dwDimensions` array.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 설명  
- 다차원 배열의 각 차원에 대해 서로 다른 크기를 가질 수 있습니다.  예를 들어, 3 차원 배열을 제공 `myarray[3][2][6]`, 3, 2 및 6에서이 메서드는 반환 합니다는 `dwDimensions` 매개 변수를 순서 대로.  
+## <a name="remarks"></a>Remarks  
+ A multi-dimensional array can have different sizes for each dimension. For example, given the three-dimensional array `myarray[3][2][6]`, this method would return 3, 2, and 6 in the `dwDimensions` parameter in that order.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

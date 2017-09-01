@@ -1,57 +1,74 @@
 ---
-title: "IDebugEnumField::GetValueFromStringCaseInsensitive | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEnumField::GetValueFromStringCaseInsensitive"
-helpviewer_keywords: 
-  - "IDebugEnumField::GetValueFromStringCaseInsensitive 메서드"
+title: IDebugEnumField::GetValueFromStringCaseInsensitive | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEnumField::GetValueFromStringCaseInsensitive
+helpviewer_keywords:
+- IDebugEnumField::GetValueFromStringCaseInsensitive method
 ms.assetid: ef95b38e-d9b2-4fb5-a166-7c2e14641dc7
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugEnumField::GetValueFromStringCaseInsensitive
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 68a5f199f389cb5bc24f0e648bb4719c1ad79545
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
-이 메서드는 대\/소문자 구분 검색을 사용 하 여 열거형 상수의 이름으로 연결 된 값을 반환 합니다.  
+---
+# <a name="idebugenumfieldgetvaluefromstringcaseinsensitive"></a>IDebugEnumField::GetValueFromStringCaseInsensitive
+This method uses a case-insensitive search to return the value associated with the name of an enumeration constant.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetValueFromStringCaseInsensitive(  
-   LPCOLESTR  pszValue,  
-   ULONGLONG* pvalue  
+   LPCOLESTR  pszValue,  
+   ULONGLONG* pvalue  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetValueFromStringCaseInsensitive(  
-   string    pszValue,   
-   out ulong pValue  
+   string    pszValue,   
+   out ulong pValue  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>Parameters  
  `pszValue`  
- \[in\] 가져올 값의 이름을 지정 하는 문자열입니다.  C \+ \+에 대 한 참고를 와이드 문자의 문자열입니다.  
+ [in] A string specifying the name for which to get the value. Note that for C++, this is a wide character string.  
   
  `pValue`  
- \[out\] 연결 된 숫자 값을 반환합니다.  
+ [out] Returns the associated numerical value.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE`, 이름을 열거형 또는 오류 코드의 일부가 아닌 경우.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns `S_FALSE`, if the name is not part of the enumeration, or an error code.  
   
-## 설명  
- 이 메서드는 대\/소문자 구분입니다.  대\/소문자 구분 검색 \(예를 들어, 이름은 대 소문자를 구분 하는 c \+ \+와 같은 언어\)에 필요 하지 않으면 사용 [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md).  
+## <a name="remarks"></a>Remarks  
+ This method is case-insensitive. If a case-sensitive search is needed (for example, in a language such as C++ where names are case-sensitive), use [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md).  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)

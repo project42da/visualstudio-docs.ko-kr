@@ -1,148 +1,152 @@
 ---
-title: "연습: Word용 첫 VSTO 추가 기능 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "추가 기능[Visual Studio에서 Office 개발], 프로젝트 처음 만들기"
-  - "응용 프로그램 수준 추가 기능[Visual Studio에서 Office 개발], 프로젝트 처음 만들기"
-  - "Visual Studio에서 Office 개발, 프로젝트 처음 만들기"
-  - "Word[Visual Studio에서 Office 개발], 프로젝트 처음 만들기"
+title: 'Walkthrough: Creating Your First VSTO Add-in for Word | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- application-level add-ins [Office development in Visual Studio], creating your first project
+- Office development in Visual Studio, creating your first project
+- add-ins [Office development in Visual Studio], creating your first project
+- Word [Office development in Visual Studio], creating your first project
 ms.assetid: 9d857be7-5c74-4303-baf4-672afc1ea397
 caps.latest.revision: 55
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 51
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 31464b710698d4dd253382676bde88b01f86a62a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 연습: Word용 첫 VSTO 추가 기능 만들기
-  이 소개용 연습에서는 Microsoft Office Word용 VSTO 추가 기능을 만드는 방법을 보여 줍니다.  이러한 종류의 솔루션에서 만드는 기능은 열려 있는 문서에 관계없이 응용 프로그램 자체에서 사용할 수 있습니다.  
+# <a name="walkthrough-creating-your-first-vsto-add-in-for-word"></a>Walkthrough: Creating Your First VSTO Add-in for Word
+  This introductory walkthrough shows you how to create a VSTO Add-in for Microsoft Office Word. The features that you create in this kind of solution are available to the application itself, regardless of which documents are open.  
   
  [!INCLUDE[appliesto_wdallapp](../vsto/includes/appliesto-wdallapp-md.md)]  
   
- 이 연습에서는 다음 작업을 수행합니다.  
+ This walkthrough illustrates the following tasks:  
   
--   Word VSTO 추가 기능 프로젝트 만들기  
+-   Creating a Word VSTO Add-in project.  
   
--   Word의 개체 모델을 사용하여 문서가 저장될 때 문서에 텍스트를 추가하는 코드 작성  
+-   Writing code that uses the object model of Word to add text to a document when it is saved.  
   
--   프로젝트를 빌드 및 실행하여 테스트  
+-   Building and running the project to test it.  
   
--   VSTO 추가 기능이 개발 컴퓨터에서 더 이상 자동으로 실행되지 않도록 하기 위해 완료된 프로젝트 정리  
+-   Cleaning up the completed project so that the VSTO Add-in no longer runs automatically on your development computer.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Microsoft Word  
   
-## 프로젝트 만들기  
+## <a name="creating-the-project"></a>Creating the Project  
   
-#### Visual Studio에서 새 Word VSTO 추가 기능 프로젝트를 만들려면  
+#### <a name="to-create-a-new-word-vsto-add-in-project-in-visual-studio"></a>To create a new Word VSTO Add-in project in Visual Studio  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+2.  On the **File** menu, point to **New**, and then click **Project**.  
   
-3.  템플릿 창에서 **Visual C\#** 또는 **Visual Basic**을 확장한 다음 **Office\/SharePoint**를 확장합니다.  
+3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office/SharePoint**.  
   
-4.  확장된 **Office\/SharePoint** 노드 아래에서 **Office 추가 기능** 노드를 선택합니다.  
+4.  Under the expanded **Office/SharePoint** node, select the **Office Add-ins** node.  
   
-5.  프로젝트 템플릿 목록에서 Word VSTO 추가 기능 프로젝트를 선택합니다.  
+5.  In the list of project templates, select a Word VSTO Add-in project.  
   
-6.  **이름** 상자에 **FirstWordAddIn**을 입력합니다.  
+6.  In the **Name** box, type **FirstWordAddIn**.  
   
-7.  **확인**을 클릭합니다.  
+7.  Click **OK**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 **FirstWordAddIn** 프로젝트를 만들고 ThisAddIn 코드 파일을 편집기에서 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the **FirstWordAddIn** project and opens the ThisAddIn code file in the editor.  
   
-## 저장된 문서에 텍스트를 추가하는 코드 작성  
- 다음 작업으로, ThisAddIn 코드 파일에 코드를 추가합니다.  새 코드는 Word의 개체 모델을 사용하여 저장된 각 문서에 상용구 텍스트를 추가합니다.  기본적으로 ThisAddIn 코드 파일에는 다음과 같은 생성된 코드가 포함되어 있습니다.  
+## <a name="writing-code-to-add-text-to-the-saved-document"></a>Writing Code to Add Text to the Saved Document  
+ Next, add code to the ThisAddIn code file. The new code uses the object model of Word to add boilerplate text to each saved document. By default, the ThisAddIn code file contains the following generated code:  
   
--   `ThisAddIn` 클래스의 부분 정의.  이 클래스는 코드의 진입점을 제공하고 Word의 개체 모델에 대한 액세스를 제공합니다.  자세한 내용은 [VSTO 추가 기능 프로그래밍](../vsto/programming-vsto-add-ins.md)을 참조하세요.  `ThisAddIn` 클래스의 나머지 부분은 수정해서는 안 되는 숨김 코드 파일에서 정의됩니다.  
+-   A partial definition of the `ThisAddIn` class. This class provides an entry point for your code and provides access to the object model of Word. For more information, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md). The remainder of the `ThisAddIn` class is defined in a hidden code file that you should not modify.  
   
--   `ThisAddIn_Startup` 및 `ThisAddIn_Shutdown` 이벤트 처리기.  이러한 이벤트 처리기는 Word에서 VSTO 추가 기능을 로드하고 언로드할 때 호출됩니다.  이러한 이벤트 처리기를 사용하여 VSTO 추가 기능이 로드될 때 VSTO 추가 기능을 초기화하고 VSTO 추가 기능이 언로드될 때 VSTO 추가 기능에서 사용하는 리소스를 정리할 수 있습니다.  자세한 내용은 [Office 프로젝트의 이벤트](../vsto/events-in-office-projects.md)를 참조하세요.  
+-   The `ThisAddIn_Startup` and `ThisAddIn_Shutdown` event handlers. These event handlers are called when Word loads and unloads your VSTO Add-in. Use these event handlers to initialize your VSTO Add-in when it is loaded, and to clean up resources used by your VSTO Add-in when it is unloaded. For more information, see [Events in Office Projects](../vsto/events-in-office-projects.md).  
   
-#### 저장된 문서에 텍스트 단락을 추가하려면  
+#### <a name="to-add-a-paragraph-of-text-to-the-saved-document"></a>To add a paragraph of text to the saved document  
   
-1.  ThisAddIn 코드 파일에서 다음 코드를 `ThisAddIn` 클래스에 추가합니다.  새 코드에서는 문서가 저장될 때 발생하는 <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> 이벤트의 이벤트 처리기를 정의합니다.  
+1.  In the ThisAddIn code file, add the following code to the `ThisAddIn` class. The new code defines an event handler for the <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> event, which is raised when a document is saved.  
   
-     사용자가 문서를 저장하면 이벤트 처리기에서 문서의 시작 부분에 새 텍스트를 추가합니다.  
+     When the user saves a document, the event handler adds new text at the start of the document.  
   
-     [!code-csharp[Trin_WordAddInTutorial#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordAddInTutorial/CS/ThisAddIn.cs#1)]
-     [!code-vb[Trin_WordAddInTutorial#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordAddInTutorial/VB/ThisAddIn.vb#1)]  
+     [!code-vb[Trin_WordAddInTutorial#1](../vsto/codesnippet/VisualBasic/FirstWordAddIn/ThisAddIn.vb#1)]  [!code-csharp[Trin_WordAddInTutorial#1](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#1)]  
   
     > [!NOTE]  
-    >  이 코드는 인덱스 값 1을 사용하여 <xref:Microsoft.Office.Interop.Word._Document.Paragraphs%2A> 컬렉션의 첫 번째 단락에 액세스합니다.  Visual Basic 및 Visual C\#은 0부터 시작하는 배열을 사용하지만 Word 개체 모델에서 대다수 컬렉션의 배열 하한은 1입니다.  자세한 내용은 [Office 솔루션에서 코드 작성](../vsto/writing-code-in-office-solutions.md)을 참조하세요.  
+    >  This code uses an index value of 1 to access the first paragraph in the <xref:Microsoft.Office.Interop.Word._Document.Paragraphs%2A> collection. Although Visual Basic and Visual C# use 0-based arrays, the lower array bounds of most collections in the Word object model is 1. For more information, see [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md).  
   
-2.  C\#을 사용하는 경우 필요한 다음 코드를 `ThisAddIn_Startup` 이벤트 처리기에 추가합니다.  이 코드는 `Application_DocumentBeforeSave` 이벤트 처리기를 <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> 이벤트와 연결하는 데 사용됩니다.  
+2.  If you are using C#, add the following required code to the `ThisAddIn_Startup` event handler. This code is used to connect the `Application_DocumentBeforeSave` event handler with the <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> event.  
   
-     [!code-csharp[Trin_WordAddInTutorial#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordAddInTutorial/CS/ThisAddIn.cs#2)]  
+     [!code-csharp[Trin_WordAddInTutorial#2](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#2)]  
   
- 문서가 저장될 때 문서를 수정하기 위해 앞의 코드 예제에서는 다음 개체를 사용합니다.  
+ To modify the document when it is saved, the previous code examples use the following objects:  
   
--   `ThisAddIn` 클래스의 `Application` 필드.  `Application` 필드는 Word의 현재 인스턴스를 나타내는 <xref:Microsoft.Office.Interop.Word.Application> 개체를 반환합니다.  
+-   The `Application` field of the `ThisAddIn` class. The `Application` field returns a <xref:Microsoft.Office.Interop.Word.Application> object, which represents the current instance of Word.  
   
--   <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> 이벤트에 대한 이벤트 처리기의 `Doc` 매개 변수입니다.  `Doc` 매개 변수는 저장된 문서를 나타내는 <xref:Microsoft.Office.Interop.Word.Document> 개체입니다.  자세한 내용은 [Word 개체 모델 개요](../vsto/word-object-model-overview.md)를 참조하세요.  
+-   The `Doc` parameter of the event handler for the <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> event. The `Doc` parameter is a <xref:Microsoft.Office.Interop.Word.Document> object, which represents the saved document. For more information, see [Word Object Model Overview](../vsto/word-object-model-overview.md).  
   
-## 프로젝트 테스트  
+## <a name="testing-the-project"></a>Testing the Project  
   
-#### 프로젝트를 테스트하려면  
+#### <a name="to-test-the-project"></a>To test the project  
   
-1.  **F5** 키를 눌러 프로젝트를 빌드하고 실행합니다.  
+1.  Press **F5** to build and run your project.  
   
-     프로젝트를 빌드하면 코드가 프로젝트의 빌드 출력 폴더에 포함된 어셈블리로 컴파일됩니다.  또한 Visual Studio에서는 Word에서 VSTO 추가 기능을 검색하고 로드할 수 있도록 하는 레지스트리 항목 집합을 만들고 VSTO 추가 기능이 실행될 수 있도록 개발 컴퓨터에서 보안 설정을 구성합니다.  자세한 내용은 [Office 솔루션 빌드](../vsto/building-office-solutions.md)를 참조하세요.  
+     When you build the project, the code is compiled into an assembly that is included in the build output folder for the project. Visual Studio also creates a set of registry entries that enable Word to discover and load the VSTO Add-in, and it configures the security settings on the development computer to enable the VSTO Add-in to run. For more information, see [Building Office Solutions](../vsto/building-office-solutions.md).  
   
-2.  Word에서 활성 문서를 저장합니다.  
+2.  In Word, save the active document.  
   
-3.  다음 텍스트가 문서에 추가되었는지 확인합니다.  
+3.  Verify that the following text is added to the document.  
   
      **This text was added by using code.**  
   
-4.  Word를 닫습니다.  
+4.  Close Word.  
   
-## 프로젝트 정리  
- 프로젝트의 개발을 완료하면 VSTO 추가 기능 어셈블리, 레지스트리 항목 및 보안 설정을 개발 컴퓨터에서 제거합니다.  이렇게 하지 않으면 개발 컴퓨터에서 Word를 열 때마다 VSTO 추가 기능이 계속 실행됩니다.  
+## <a name="cleaning-up-the-project"></a>Cleaning up the Project  
+ When you finish developing a project, remove the VSTO Add-in assembly, registry entries, and security settings from your development computer. Otherwise, the VSTO Add-in will continue to run every time that you open Word on your development computer.  
   
-#### 개발 컴퓨터에서 완료된 프로젝트를 정리하려면  
+#### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>To clean up the completed project on your development computer  
   
-1.  Visual Studio의 **빌드** 메뉴에서 **솔루션 정리**를 클릭합니다.  
+1.  In Visual Studio, on the **Build** menu, click **Clean Solution**.  
   
-## 다음 단계  
- 기본적인 Word용 VSTO 추가 기능을 만들었으므로 다음 항목에서 VSTO 추가 기능을 개발하는 방법에 대해 자세히 알아볼 수 있습니다.  
+## <a name="next-steps"></a>Next Steps  
+ Now that you have created a basic VSTO Add-in for Word, you can learn more about how to develop VSTO Add-ins from these topics:  
   
--   VSTO 추가 기능에서 수행할 수 있는 일반적인 프로그래밍 작업: [VSTO 추가 기능 프로그래밍](../vsto/programming-vsto-add-ins.md).  
+-   General programming tasks that you can perform in VSTO Add-ins: [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md).  
   
--   Word VSTO 추가 기능과 관련된 프로그래밍 작업: [Word 솔루션](../vsto/word-solutions.md).  
+-   Programming tasks that are specific to Word VSTO Add-ins: [Word Solutions](../vsto/word-solutions.md).  
   
--   Word의 개체 모델 사용: [Word 개체 모델 개요](../vsto/word-object-model-overview.md).  
+-   Using the object model of Word: [Word Object Model Overview](../vsto/word-object-model-overview.md).  
   
--   Word의 UI 사용자 지정\(예: 리본에 사용자 지정 탭 추가 또는 사용자 고유의 사용자 지정 작업창 만들기\): [Office UI 사용자 지정](../vsto/office-ui-customization.md).  
+-   Customizing the UI of Word, for example, by adding a custom tab to the Ribbon or creating your own custom task pane: [Office UI Customization](../vsto/office-ui-customization.md).  
   
--   Word용 VSTO 추가 기능 빌드 및 디버그: [Office 솔루션 빌드](../vsto/building-office-solutions.md).  
+-   Building and debugging VSTO Add-ins for Word: [Building Office Solutions](../vsto/building-office-solutions.md).  
   
--   Word용 VSTO 추가 기능 배포: [Office 솔루션 배포](../vsto/deploying-an-office-solution.md).  
+-   Deploying VSTO Add-ins for Word: [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
   
-## 참고 항목  
- [Office 솔루션 개발 개요&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
- [Word 솔루션](../vsto/word-solutions.md)   
- [VSTO 추가 기능 프로그래밍](../vsto/programming-vsto-add-ins.md)   
- [Word 개체 모델 개요](../vsto/word-object-model-overview.md)   
- [Office UI 사용자 지정](../vsto/office-ui-customization.md)   
- [Office 솔루션 빌드](../vsto/building-office-solutions.md)   
- [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)   
- [Office 프로젝트 템플릿 개요](../vsto/office-project-templates-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Office Solutions Development Overview &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
+ [Word Solutions](../vsto/word-solutions.md)   
+ [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
+ [Word Object Model Overview](../vsto/word-object-model-overview.md)   
+ [Office UI Customization](../vsto/office-ui-customization.md)   
+ [Building Office Solutions](../vsto/building-office-solutions.md)   
+ [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
+ [Office Project Templates Overview](../vsto/office-project-templates-overview.md)  
   
   

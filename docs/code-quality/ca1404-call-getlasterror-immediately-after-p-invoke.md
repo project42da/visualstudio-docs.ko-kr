@@ -1,43 +1,61 @@
 ---
-title: "CA1404: P/Invoke 다음에 바로 GetLastError를 호출하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CallGetLastErrorImmediatelyAfterPInvoke"
-  - "CA1404"
-helpviewer_keywords: 
-  - "CallGetLastErrorImmediatelyAfterPInvoke"
-  - "CA1404"
+title: 'CA1404: Call GetLastError immediately after P-Invoke | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CallGetLastErrorImmediatelyAfterPInvoke
+- CA1404
+helpviewer_keywords:
+- CallGetLastErrorImmediatelyAfterPInvoke
+- CA1404
 ms.assetid: 52ae9eff-50f9-4b2f-8039-ca7e49fba88e
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 18
----
-# CA1404: P/Invoke 다음에 바로 GetLastError를 호출하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: fce2ed84760d5cc9daa3e84118251ea5ba934e6a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1404-call-getlasterror-immediately-after-pinvoke"></a>CA1404: Call GetLastError immediately after P/Invoke
 |||  
 |-|-|  
 |TypeName|CallGetLastErrorImmediatelyAfterPInvoke|  
 |CheckId|CA1404|  
-|범주|Microsoft.Interoperability|  
-|변경 수준|주요 변경 아님|  
+|Category|Microsoft.Interoperability|  
+|Breaking Change|Non-breaking|  
   
-## 원인  
- <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A?displayProperty=fullName> 메서드 또는 이와 동일한 기능의 Win32 `GetLastError` 함수를 호출하였으며 직전의 호출이 플랫폼 호출 메서드에 대한 호출이 아닙니다.  
+## <a name="cause"></a>Cause  
+ A call is made to the <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A?displayProperty=fullName> method or the equivalent Win32 `GetLastError` function, and the call that comes immediately before is not to a platform invoke method.  
   
-## 규칙 설명  
- 플랫폼 호출 메서드가 비관리 코드에 액세스하고 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 `Declare` 키워드 또는 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 특성을 사용하여 선언되었습니다.  일반적으로 실패가 발생하면 관리되지 않는 함수는 Win32 `SetLastError` 함수를 호출하여 실패와 연관된 오류 코드를 설정합니다.  실패한 함수의 호출자는 Win32 `GetLastError` 함수를 호출하여 오류 코드를 검색하고 실패의 원인을 확인합니다.  오류 코드는 스레드 단위로 유지되며 다음에 `SetLastError`가 호출되면 이 오류 코드가 덮어쓰여집니다.  실패한 플랫폼 호출 메서드를 호출한 후에는 관리 코드에서 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> 메서드를 호출하여 오류 코드를 검색할 수 있습니다.  다른 관리되는 클래스 라이브러리 메서드의 내부 호출이 오류 코드를 덮어쓸 수 있기 때문에 플랫폼 호출 메서드를 호출한 직후 `GetLastError` 또는 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> 메서드를 호출해야 합니다.  
+## <a name="rule-description"></a>Rule Description  
+ A platform invoke method accesses unmanaged code and is defined by using the `Declare` keyword in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] or the <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> attribute. Generally, upon failure, unmanaged functions call the Win32 `SetLastError` function to set an error code that is associated with the failure. The caller of the failed function calls the Win32 `GetLastError` function to retrieve the error code and determine the cause of the failure. The error code is maintained on a per-thread basis and is overwritten by the next call to `SetLastError`. After a call to a failed platform invoke method, managed code can retrieve the error code by calling the <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> method. Because the error code can be overwritten by internal calls from other managed class library methods, the `GetLastError` or <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> method should be called immediately after the platform invoke method call.  
   
- 이 규칙에서는 다음 관리되는 멤버에 대한 호출이 플랫폼 호출 메서드에 대한 호출과 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A>에 대한 호출 사이에 발생한 경우 이들 관리되는 멤버에 대한 호출을 무시합니다.  이들 멤버는 오류 코드를 변경하지 않으며 일부 플랫폼 호출 메서드 호출의 성공을 확인하는 데 유용합니다.  
+ The rule ignores calls to the following managed members when they occur between the call to the platform invoke method and the call to <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A>. These members do not change the error code and are useful for determining the success of some platform invoke method calls.  
   
 -   <xref:System.IntPtr.Zero?displayProperty=fullName>  
   
@@ -47,25 +65,24 @@ caps.handback.revision: 18
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.IsInvalid%2A?displayProperty=fullName>  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A>에 대한 호출을 플랫폼 호출 메서드에 대한 호출의 바로 뒤로 이동합니다.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, move the call to <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> so that it immediately follows the call to the platform invoke method.  
   
-## 경고를 표시하지 않는 경우  
- 플랫폼 호출 메서드 호출과 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> 메서드 호출 사이의 코드가 명시적이나 암시적으로 오류 코드를 변경할 수 없는 경우에는 이 규칙에서 경고를 표시하지 않아도 안전합니다.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule if the code between the platform invoke method call and the <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> method call cannot explicitly or implicitly cause the error code to change.  
   
-## 예제  
- 다음 예제에서는 이 규칙을 위반하는 메서드와 규칙을 충족하는 메서드를 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example shows a method that violates the rule and a method that satisfies the rule.  
   
- [!code-vb[FxCop.Interoperability.LastErrorPInvoke#1](../code-quality/codesnippet/VisualBasic/ca1404-call-getlasterror-immediately-after-p-invoke_1.vb)]
- [!code-cs[FxCop.Interoperability.LastErrorPInvoke#1](../code-quality/codesnippet/CSharp/ca1404-call-getlasterror-immediately-after-p-invoke_1.cs)]  
+ [!code-vb[FxCop.Interoperability.LastErrorPInvoke#1](../code-quality/codesnippet/VisualBasic/ca1404-call-getlasterror-immediately-after-p-invoke_1.vb)] [!code-csharp[FxCop.Interoperability.LastErrorPInvoke#1](../code-quality/codesnippet/CSharp/ca1404-call-getlasterror-immediately-after-p-invoke_1.cs)]  
   
-## 관련 규칙  
- [CA1060: P\/Invoke를 NativeMethods 클래스로 이동](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1060: Move P/Invokes to NativeMethods class](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)  
   
- [CA1400: P\/Invoke 진입점이 있어야 합니다.](../Topic/CA1400:%20P-Invoke%20entry%20points%20should%20exist.md)  
+ [CA1400: P/Invoke entry points should exist](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)  
   
- [CA1401: P\/Invoke는 노출되지 않아야 합니다.](../Topic/CA1401:%20P-Invokes%20should%20not%20be%20visible.md)  
+ [CA1401: P/Invokes should not be visible](../code-quality/ca1401-p-invokes-should-not-be-visible.md)  
   
- [CA2101: P\/Invoke 문자열 인수에 대해 마샬링을 지정하십시오.](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)  
+ [CA2101: Specify marshaling for P/Invoke string arguments](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)  
   
- [CA2205: Win32 API에 있는 동일한 기능의 관리되는 항목을 사용하십시오.](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md)
+ [CA2205: Use managed equivalents of Win32 API](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md)

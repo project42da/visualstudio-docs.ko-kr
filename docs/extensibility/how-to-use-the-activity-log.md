@@ -1,5 +1,5 @@
 ---
-title: "방법: 작업 로그를 사용 하 여 | Microsoft Docs"
+title: 'How to: Use the Activity Log | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,23 +29,24 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
-ms.openlocfilehash: dc821f22a04432989a2edb68c483d298ffcf0eb7
-ms.lasthandoff: 05/03/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a1ddf51d02d9e20f6806f8bc202f8a08166876d6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="how-to-use-the-activity-log"></a>방법: 작업 로그를 사용 하 여
-Vspackage 활동 로그에 메시지를 쓸 수 있습니다. 이 기능은 특히 소매 환경에서 Vspackage를 디버깅 하는 데 유용 합니다.  
+# <a name="how-to-use-the-activity-log"></a>How to: Use the Activity Log
+VSPackages can write messages to the activity log. This feature is especially useful for debugging VSPackages in retail environments.  
   
 > [!TIP]
->  항상 작업 로그 켜져 있습니다. Visual Studio는 1 백 마지막 항목 뿐만 아니라 일반 구성 정보를 포함 하는 처음 10 개 항목의 롤링 버퍼를 유지 합니다.  
+>  The activity log is always turned on. Visual Studio keeps a rolling buffer of the last one hundred entries as well as the first ten entries, which have general configuration information.  
   
-### <a name="to-write-an-entry-to-the-activity-log"></a>작업 로그에 항목을 기록 하려면  
+### <a name="to-write-an-entry-to-the-activity-log"></a>To write an entry to the activity log  
   
-1.  < Xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A > 메서드 또는 VSPackage 생성자를 제외한 다른 모든 메서드에이 코드를 삽입 합니다.  
+1.  Insert this code in the <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> method or in any other method except the VSPackage constructor:  
   
-    ```c#  
+    ```csharp  
     IVsActivityLog log = GetService(typeof(SVsActivityLog)) as IVsActivityLog;  
     if (log == null) return;  
   
@@ -55,28 +56,28 @@ Vspackage 활동 로그에 메시지를 쓸 수 있습니다. 이 기능은 특�
         "Called for: {0}", this.ToString()));  
     ```  
   
-     이 코드 < xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog > 서비스를 가져오고 < xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog > 인터페이스로 캐스팅 합니다. < xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A > 문화적 현재 컨텍스트를 사용 하 여 활동 로그에 정보 항목을 씁니다.  
+     This code gets the <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> service and casts it to an <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> interface. <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A> writes an informational entry into the activity log using the current cultural context.  
   
-2.  (일반적으로 하는 경우 명령을 호출 하는 창이 열릴 또는) VSPackage 로드 되 면 텍스트 작업 로그에 기록 됩니다.  
+2.  When the VSPackage is loaded (usually when a command is invoked or a window is opened), the text is written to the activity log.  
   
-### <a name="to-examine-the-activity-log"></a>작업 로그를 검사 하려면  
+### <a name="to-examine-the-activity-log"></a>To examine the activity log  
   
-1.  Visual Studio 데이터에 대 한 활동 로그 하위 폴더에서 찾을: *% AppData %*\Microsoft\VisualStudio\15.0\ActivityLog.XML...  
+1.  Find the activity log in the subfolder for  Visual Studio data: *%AppData%*\Microsoft\VisualStudio\15.0\ActivityLog.XML..  
   
-2.  텍스트 편집기로 활동 로그를 엽니다. 다음은 일반적인 항목이입니다.  
+2.  Open the activity log with any text editor. Here is a typical entry:  
   
     ```  
     Called for: Company.MyApp.MyAppPackage ...  
     ```  
   
-## <a name="robust-programming"></a>강력한 프로그래밍  
- 작업 로그 서비스 때문에 작업 로그 VSPackage 생성자에서 사용할 수 없는 경우  
+## <a name="robust-programming"></a>Robust Programming  
+ Because the activity log is a service, the activity log is unavailable in the VSPackage constructor.  
   
- 에 쓰기 전에 방금 활동 로그를 가져와야 합니다. 캐시 하거나 나중에 사용에 대 한 활동 로그를 저장 하지 마십시오.  
+ You should obtain the activity log just before writing to it. Do not cache or save the activity log for future use.  
   
-## <a name="see-also"></a>참고 항목  
- < xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog >   
- < xref:Microsoft.VisualStudio.Shell.Interop.__ACTIVITYLOG_ENTRYTYPE >   
- [Vspackage를 문제 해결](../extensibility/troubleshooting-vspackages.md)   
- [VSPackage](../extensibility/internals/vspackages.md)
+## <a name="see-also"></a>See Also  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>   
+ <xref:Microsoft.VisualStudio.Shell.Interop.__ACTIVITYLOG_ENTRYTYPE>   
+ [Troubleshooting VSPackages](../extensibility/troubleshooting-vspackages.md)   
+ [VSPackages](../extensibility/internals/vspackages.md)
 

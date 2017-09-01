@@ -1,51 +1,54 @@
 ---
-title: "방법: 프로그래밍 방식으로 Word 표의 셀에 텍스트 및 서식 추가"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "셀, 텍스트 및 서식 추가"
-  - "서식 지정[Visual Studio에서 Office 개발]"
-  - "표[Visual Studio에서 Office 개발], 텍스트 및 서식 추가"
-  - "텍스트[Visual Studio에서 Office 개발], Word 표에 추가"
+title: 'How to: Programmatically Add Text and Formatting to Cells in Word Tables | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- cells, adding text and formatting
+- text [Office development in Visual Studio], adding to Word tables
+- formatting [Office development in Visual Studio]
+- tables [Office development in Visual Studio], adding text and formatting
 ms.assetid: 3df6492a-dc9c-43ac-8fc3-0f944edd88b2
 caps.latest.revision: 40
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 39
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: e41c56a1336ae0fcda2d639e284e09a7b7d17956
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# 방법: 프로그래밍 방식으로 Word 표의 셀에 텍스트 및 서식 추가
-  각 테이블은 셀 컬렉션으로 이루어져 있습니다.  각 개별 <xref:Microsoft.Office.Interop.Word.Cell> 개체는 테이블의 한 셀을 나타냅니다.  테이블의 해당 위치로 각 셀을 참조합니다.  이 예제에서는 테이블의 첫 행과 첫 열에 있는 셀을 참조하고, 셀에 텍스트를 추가하고, 서식을 적용합니다.  
+# <a name="how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables"></a>How to: Programmatically Add Text and Formatting to Cells in Word Tables
+  Each table consists of a collection of cells. Each individual <xref:Microsoft.Office.Interop.Word.Cell> object represents one cell in the table. You refer to each cell by its location in the table. This example refers to the cell located in the first row and the first column of the table; adds text to the cell; and applies formatting.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-### 셀에 텍스트 및 서식을 추가하려면  
+### <a name="to-add-text-and-formatting-to-cells"></a>To add text and formatting to cells  
   
-1.  테이블의 해당 위치에 따라 셀을 참조하고, 셀에 텍스트를 추가한 다음 서식을 적용합니다.  
+1.  Refer to the cell by its location in the table, add text to the cell, and apply the formatting.  
   
-     다음 코드 예제는 문서 수준 사용자 지정에서 사용할 수 있습니다.  이 예제를 사용하려면 프로젝트의 `ThisDocument` 클래스에서 실행합니다.  
+     The following code example can be used in a document-level customization. To use this example, run it from the `ThisDocument` class in your project.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#97](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#97)]
-     [!code-vb[Trin_VstcoreWordAutomation#97](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#97)]  
+     [!code-vb[Trin_VstcoreWordAutomation#97](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#97)]  [!code-csharp[Trin_VstcoreWordAutomation#97](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#97)]  
   
-     다음 코드 예제는 VSTO 추가 기능에서 사용할 수 있습니다.  이 예제에서는 활성 문서를 사용합니다.  예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
+     The following code example can be used in a VSTO Add-in. This example uses the active document. To use the example, run it from the `ThisAddIn` class in your project.  
   
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#97](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/CS/ThisAddIn.cs#97)]
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#97](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/VB/ThisAddIn.vb#97)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#97](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#97)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#97](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#97)]  
   
-## 참고 항목  
- [방법: 프로그래밍 방식으로 Word 표 만들기](../vsto/how-to-programmatically-create-word-tables.md)   
- [방법: 프로그래밍 방식으로 Word 표에 행 및 열 추가](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   
- [방법: 프로그래밍 방식으로 문서 속성을 사용하여 Word 표 채우기](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)  
+## <a name="see-also"></a>See Also  
+ [How to: Programmatically Create Word Tables](../vsto/how-to-programmatically-create-word-tables.md)   
+ [How to: Programmatically Add Rows and Columns to Word Tables](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   
+ [How to: Programmatically Populate Word Tables with Document Properties](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)  
   
   
