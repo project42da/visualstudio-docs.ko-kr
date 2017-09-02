@@ -1,6 +1,6 @@
 ---
-title: "Visual Studio 성능 팁과 요령 | Microsoft Docs"
-ms.date: 08/07/2017
+title: Visual Studio Performance Tips and Tricks | Microsoft Docs
+ms.date: 08/31/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -30,126 +30,126 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: fe6d864baf518cba882cea8e985fdacbfdf5b8b2
-ms.openlocfilehash: 53c31da02b643114d9b152a0cde180ff5f6a5b7e
+ms.sourcegitcommit: 4306111cd49a5299bfa5d4e5e22b212bc7799fe2
+ms.openlocfilehash: fbaa543564506a99d3ed6833ec4d1f692fae43f7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/02/2017
 
 ---
-# <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 성능 팁과 요령
+# <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio Performance Tips and Tricks
 
-Visual Studio 성능 권장 사항은 드물게 발생할 수 있는 메모리 부족 상황에 대처하기 위해 제공됩니다. 이러한 상황에서는 사용하지 않는 특정 Visual Studio 기능을 최적화할 수 있습니다. 아래에서 제시하는 팁은 일반적인 권장 사항이 아닙니다.
+Visual Studio performance recommendations are intended for low memory situations, which may occur in rare cases. In these situations, you can optimize certain Visual Studio features that you may not be using. The following tips are not intended as general recommendations.
 
 > [!NOTE]
-> 메모리 문제로 인해 제품을 사용하는 데 어려움이 있는 경우 피드백 도구를 통해 알려 주세요.
+> If you’re having difficulty using the product because of memory issues, let us know through the feedback tool.
 
-## <a name="optimize-your-environment"></a>환경 최적화
+## <a name="optimize-your-environment"></a>Optimize your environment
 
-- **64비트 OS 사용**
+- **Use a 64bit OS**
 
-    Windows 32비트 버전에서 64비트 버전으로 시스템을 업그레이드하면 Visual Studio에서 사용 가능한 가상 메모리가 2GB에서 4GB로 확장됩니다. Visual Studio는 32비트 프로세스이지만, 이렇게 하면 훨씬 더 큰 작업 부하에 대응할 수 ​​있습니다.
+    If you upgrade your system from a 32-bit version of Windows to a 64-bit version, you expand the amount of virtual memory available to Visual Studio from 2 GB to 4 GB. This enables Visual Studio to handle significantly larger workloads even though it is 32-bit process.
 
-    자세한 내용은 [Memory limits](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366778(v=vs.85).aspx#memory_limits)(메모리 한도) 및 [Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)(64비트 Windows에서 /LARGEADDRESSAWARE 사용)를 참조하세요.
+    For more information, see [Memory limits](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366778(v=vs.85).aspx#memory_limits) and [Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/).
 
-## <a name="configure-solution-and-projects"></a>솔루션 및 프로젝트 구성
+## <a name="configure-solution-and-projects"></a>Configure solution and projects
 
-여러 프로젝트를 포함하는 대규모 솔루션에서는 다음과 같은 최적화를 통해 이점을 얻을 수 있습니다.
+If you have a very large solution with many projects, you may benefit by making the following optimizations:
 
-- **경량 솔루션 로드 사용**
+- **Enable Lightweight Solution Load**
 
-    **경량 솔루션 로드**를 사용하면 솔루션에 포함된 일부 프로젝트를 지연 로드하여 메모리 및 CPU 성능을 높일 수 있습니다. 이 기능을 솔루션별로 사용할 수도 있습니다. 이 옵션은 기본적으로 해제되어 있습니다.
+    Using **Lightweight Solution Load** may improve memory and CPU performance by deferring the load of some projects within your solution. You can also enable this feature per-solution. This option is off by default.
 
-    **경량 솔루션 로드**를 사용하려면 **도구 > 옵션 > 프로젝트 및 솔루션 > 경량 솔루션 로드**를 선택합니다.
+    To enable **Lightweight Solution Load**, choose **Tools > Options > Projects and Solutions > Lightweight Solution Load**.
 
-    이 모드에서는 일부 IDE 기능을 사용할 수 없습니다. 이 선택이 도움이 되는지 판단하려면 [Shorter solution load time](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/)(솔루션 로드 시간 단축) 및 [Visual Studio 시작 시간 최적화](https://docs.microsoft.com/en-us/visualstudio/ide/optimize-visual-studio-startup-time#speed-up-solution-load)를 참조하세요.
+    Some IDE features are not enabled in this mode. To determine whether this choice may help, see [Shorter solution load time](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/) and [Optimize solution loading](../ide/optimize-solution-loading-in-visual-studio).
 
-- **프로젝트 언로드**
+- **Unload Projects**
 
-    솔루션 탐색기에서 마우스 오른쪽 단추를 클릭할 때 나타나는 상황에 맞는 메뉴에서 사용 빈도가 낮은 프로젝트를 개별적으로 직접 언로드할 수 있습니다.
+    You can manually unload rarely used individual projects from Solution Explorer using the right-click context menu.
 
-- **솔루션 리팩터링**
+- **Refactor the solution**
 
-    공통으로 사용하는 프로젝트를 포함하는 솔루션을 여러 개의 작은 솔루션 파일로 나눌 수 있습니다. 이러한 리팩터링은 워크플로의 메모리 사용량을 크게 줄여줍니다. 또한 솔루션이 작을수록 로드 속도가 빨라집니다.
+    You can split your solution into several smaller solution files with commonly used projects. This refactoring should significantly reduce memory usage for your workflow. Smaller solutions also load faster.
 
-## <a name="configure-debugging-options"></a>디버깅 옵션 구성
-디버깅 세션 중에 메모리가 부족한 상황이 반복되면 하나 이상의 구성을 변경하여 성능을 최적화할 수 있습니다.
+## <a name="configure-debugging-options"></a>Configure debugging options
+If you are typically running low on memory during debugging sessions, you can optimize performance by making one or more configuration changes.
 
-- **[내 코드만] 기능 사용**
+- **Enable Just My Code**
 
-    가장 간단한 최적화는 **내 코드만** 기능을 사용하여 내 프로젝트의 기호만 로드하는 것입니다. 이 기능을 사용하면 관리되는 응용 프로그램(.NET)을 디버그할 때 상당한 메모리가 절약될 수 있습니다. 일부 프로젝트 형식에서는 이 옵션이 기본적으로 사용됩니다.
+    The simplest optimization is to enable the **Just My Code** feature, which only loads symbols for your project. Enabling this feature can result in a significant memory saving for debugging managed applications (.NET). This option is already enabled by default in some project types.
 
-    **내 코드만** 기능을 사용하려면 **도구 > 옵션 > 디버깅 > 일반**을 선택한 다음 **내 코드만 사용**을 선택합니다.
+    To enable **Just My Code**, choose **Tools > Options > Debugging > General**, and then select **Enable Just My Code**.
 
-- **로드할 기호 지정**
+- **Specify symbols to load**
 
-    네이티브 디버깅의 경우 기호 파일(.pdb)을 로드하면 메모리 리소스가 많이 소비됩니다. 디버거 기호 설정을 구성하면 메모리를 절약할 수 있습니다. 일반적으로는 내 프로젝트의 모듈만 로드하도록 솔루션을 구성합니다.
+    For native debugging, loading symbol files (.pdb) is expensive in terms of memory resources. You can configure your debugger symbol settings to conserve memory. Typically, you configure the solution to only load modules from your project.
 
-    기호 로딩을 지정하려면 **도구 > 옵션 > 디버깅 > 기호**를 선택합니다.
+    To specify symbol loading, choose **Tools > Options > Debugging > Symbols**.
 
-    옵션을 **모든 모듈** 대신 **지정된 모듈만**으로 설정하고 로드할 모듈을 지정합니다. 디버깅 중에 **모듈** 창의 특정 모듈을 마우스 오른쪽 단추로 클릭하여 기호 로드에 모듈을 명시적으로 포함할 수도 있습니다. 디버깅 중에 이 창을 열려면 **디버그 > 창 > 모듈**을 선택합니다.
+    Set the options to **Only specified modules** instead of **All modules** and then specify which modules you care to load. While debugging, you can also right-click specific modules in the **Modules** window to explicitly include a module in the symbol load. (To open the window while debugging, choose **Debug > Windows > Modules**.)
 
-    자세한 내용은 [Understanding symbol files](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/)(기호 파일 이해)를 참조하세요.
+    For more information, see [Understanding symbol files](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/).
 
-- **진단 도구 사용 안 함**
+- **Disable Diagnostic Tools**
 
-    CPU 프로파일링은 사용 후 해제하는 것이 좋습니다. 이 기능은 많은 리소스를 소비할 수 있습니다. CPU 프로파일링을 한 번 사용하면 이후 디버그 세션에서도 계속 사용되므로 작업을 마쳤으면 명시적으로 해제하는 것이 좋습니다. 진단 도구가 제공하는 기능이 필요하지 않은 경우 디버깅 중에 진단 도구를 해제하여 일부 리소스를 절약할 수 있습니다.
+    It is recommended that you disable CPU profiling after use. This feature can consume large amounts of resources. Once CPU profiling is enabled, this state is persisted across subsequent debug sessions, so it’s worth explicitly turning it off when done. You may save some resources by disabling the diagnostic tools while debugging if you do not need the provided features.
 
-    진단 도구를 해제하려면 디버그 세션을 시작하고 **도구 > 옵션 > 디버그하는 동안 진단 도구 사용**을 선택한 후 옵션을 선택 취소합니다.
+    To disable the Diagnostic Tools, start a debugging session, choose **Tools > Options > Enable Diagnostic Tools**, and deselect the option.
 
-    자세한 내용은 [프로파일링 도구](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)를 참조하세요.
+    For more information, see [Profiling Tools](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools).
 
-## <a name="disable-tools-and-extensions"></a>도구 및 확장 기능 사용 안 함
-일부 도구 또는 확장 기능을 해제하여 성능을 높일 수 있습니다.
+## <a name="disable-tools-and-extensions"></a>Disable tools and extensions
+Some tools or extensions may to turned off to improve performance.
 
 > [!TIP]
-> 확장 기능을 하나씩 끄면서 성능을 재확인하여 성능 문제의 원인을 파악할 수 있는 경우가 많습니다.
+> You can often isolate performance issues by turning off extensions one at a time and rechecking performance.
 
-### <a name="managed-language-services-roslyn"></a>관리 언어 서비스(Roslyn)
+### <a name="managed-language-services-roslyn"></a>Managed Language Services (Roslyn)
 
-Roslyn 성능 고려 사항에 대한 자세한 내용은 [Performance considerations for large solutions](대규모 솔루션에 대한 성능 고려 사항)(https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)를 참조하세요.
+For information about Roslyn performance considerations, see [Performance considerations for large solutions] (https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
 
-- **전체 솔루션 분석 사용 안 함**
+- **Disable Full Solution Analysis**
 
-    Visual Studio는 오류와 관련하여 편리한 환경을 제공하고자 빌드를 호출하기 전에 전체 솔루션에 대한 분석을 수행합니다. 이 기능은 오류를 최대한 빠르게 식별하는 데 유용합니다. 그러나 대규모 솔루션에서는 이 기능에 상당한 메모리 리소스가 소비될 수 있습니다. 메모리 부족 또는 유사한 문제가 발생하는 경우 이 기능을 해제하여 리소스를 확보할 수 있습니다. 기본적으로 이 옵션은 Visual Basic에서는 사용되고 C#에서는 사용되지 않습니다.
+    Visual Studio performs analysis on your entire solution in order to provide a rich experience about errors before invoking a build. This feature is useful to identify errors as soon as possible. However, for very large solutions, this feature can consume significant memory resources. If you’re experiencing memory pressure or similar issues, you can disable this experience to free up these resources. By default, this option is enabled for Visual Basic and disabled for C#.
 
-    **전체 솔루션 분석**을 해제하려면 **도구 > 옵션 > 텍스트 편집기 > <Visual Basic 또는 C#>**을 선택합니다. 그런 다음 **고급**를 선택하고 **전체 솔루션 분석 사용**을 선택 취소합니다.
+    To disable **Full Solution Analysis**, choose **Tools > Options > Text Editor > <Visual Basic or C#>**. Then choose **Advanced** and deselect **Enable full solution analysis**.
 
-- **CodeLens 사용 안 함**
+- **Disable CodeLens**
 
-    Visual Studio는 각 메서드가 표시될 때 **모든 참조 찾기** 작업을 수행합니다. CodeLens는 참조 횟수를 인라인으로 표시하는 등의 기능을 제공합니다. 이때 별도의 프로세스(예: ServiceHub.RoslynCodeAnalysisService32)로 작업이 수행됩니다. 이 기능은 낮은 우선 순위로 실행되지만, 대규모 솔루션이나 리소스가 제한된 시스템에서는 성능에 상당한 영향을 줄 수 있습니다. 이 프로세스의 CPU 사용량이 많거나 메모리 문제가 발생하는 경우(예: 4GB 컴퓨터에서 대규모 솔루션을 로드할 때) 이 기능을 해제하여 리소스를 확보할 수 있습니다.
+    Visual Studio performs a **Find All References** task on each method as it is displayed. CodeLens provides features such as the inline display of the number of references. The work is performed in a separate process (for example, ServiceHub.RoslynCodeAnalysisService32). In very large solutions or on resource constrained systems, this feature can have significant impact on performance even though it is run at a low priority. If you’re experiencing high CPU in this process, or memory issues (for example, when loading a large solution on a 4-GB machine), you can try disabling this feature to free up resources.
 
-    CodeLens를 해제하려면 **도구 > 옵션 > 텍스트 편집기 > 모든 언어 > CodeLens**를 선택하고 기능을 선택 취소합니다.
+    To disable CodeLens, choose **Tools > Options > Text Editor > All Languages > CodeLens**, and deselect the feature.
 
-    이 기능은 Visual Studio Professional 및 Visual Studio Enterprise에서 제공됩니다.
+    This feature is available in Visual Studio Professional and Visual Studio Enterprise.
 
-### <a name="other-tools-and-extensions"></a>기타 도구 및 확장 기능
+### <a name="other-tools-and-extensions"></a>Other tools and extensions
 
-- **확장 기능 사용 안 함**
+- **Disable Extensions**
 
-    확장 기능은 Visual Studio에 추가된 부가적인 소프트웨어 구성 요소로서 새로운 기능을 제공하거나 기존 기능을 확장합니다. 확장 기능은 메모리 리소스 문제의 원인이 될 수도 있습니다. 메모리 리소스 문제가 발생하는 경우 확장 기능을 하나씩 해제하면서 시나리오나 워크플로에 어떠한 영향이 있는지 확인해 보세요.
+    Extensions are additional software components added to Visual Studio that provide new functionality or extend existing functionality. Extensions can often be a source of memory resource issues. If you’re experiencing memory resource problems, try disabling extensions one at a time to see how it impacts the scenario or workflow.
 
-    확장 기능을 해제하려면 **도구 | 확장 및 업데이트**로 이동하고 특정 확장 기능을 해제합니다.
+    To disable extensions, go to **Tools | Extensions and Updates**, and disable a particular extension.
 
-- **XAML 디자이너 사용 안 함**
+- **Disable XAML Designer**
 
-    XAML 디자이너는 기본적으로 사용되지만 .XAML 파일을 열 때만 리소스를 소비합니다. XAML 파일로 작업하지만 디자이너 기능은 사용하지 않으려는 경우 이 기능을 해제하여 일부 메모리를 확보할 수 있습니다.
+    The XAML designer is enabled by default, but only consumes resources if you open a .XAML file. If you work with XAML files but do not wish to use the designer functionality, disable this feature to free up some memory.
 
-    XAML 디자이너를 해제하려면 **도구 > 옵션 > XAML 디자이너 > XAML 디자이너 사용**으로 이동하고 옵션을 선택 취소합니다.
+    To disable XAML Designer, go to **Tools > Options > XAML Designer > Enable XAML Designer**, and deselect the option.
 
-- **워크로드 제거**
+- **Remove workloads**
 
-    Visual Studio 설치 관리자를 사용하여 더 이상 사용되지 않는 워크로드를 제거할 수 있습니다. 이렇게 하면 더 이상 필요하지 않은 패키지 및 어셈블리를 건너뜀으로써 시작 및 런타임 비용을 줄일 수 있습니다.
+    You can use the Visual Studio Installer to remove workloads that are no longer used. This action can streamline the startup and runtime cost by skipping packages and assemblies that aren’t needed anymore.
 
-## <a name="force-a-garbage-collection"></a>가비지 수집 강제 실행
+## <a name="force-a-garbage-collection"></a>Force a garbage collection
 
-CLR은 가비지 수집 메모리 관리 시스템을 사용합니다. 이 시스템에서는 더 이상 필요하지 않은 개체에 메모리가 사용될 수도 있습니다. 이 상태는 일시적이며, 가비지 수집기에서 성능 및 리소스 사용량을 추론하여 메모리를 해제합니다. Visual Studio에서 바로 가기 키를 사용하여 CLR이 미사용 메모리를 모두 수집하도록 강제할 수 있습니다. 수집 대기 중인 가비지가 상당히 많을 때 가비지 수집을 강제 실행하면 작업 관리자에서 devenv.exe 프로세스의 메모리 사용량이 감소하는 것을 확인할 수 있습니다. 이 방법을 사용해야 하는 경우는 거의 없습니다. 그러나 전체 빌드, 디버그 세션 또는 솔루션 열기 이벤트와 같이 부담이 큰 작업이 완료된 후 프로세스에서 실제로 사용 중인 메모리의 양을 확인하는 데 도움이 됩니다. Visual Studio는 관리 방식과 네이티브가 혼합된 환경이므로 경우에 따라서는 네이티브 할당자와 가비지 수집기가 제한된 메모리 리소스를 두고 경쟁할 수 있습니다. 메모리 사용량이 많은 상황에서는 가비지 수집기를 강제 실행하는 방법이 유용할 수 있습니다.
+The CLR uses a garbage collection memory management system. In this system, sometimes memory is used by objects that are no longer needed. This state is temporary; the garbage collector will release this memory based on its performance and resource usage heuristics. You can force the CLR to collect any unused memory by using a hotkey in Visual Studio. If there is a significant amount of garbage waiting for collection and you force a garbage collection, you should see the memory usage of the devenv.exe process drop in Task Manager. It’s rarely necessary to use this method. However, after an expensive operation has completed (such as a full build, debug session, or a solution open event), it can help you determine how much memory is really being used by the process. Because Visual Studio is mixed (managed & native), it’s occasionally possible for the native allocator and the garbage collector to compete for limited memory resources. Under conditions of high memory usage, it may help to force the garbage collector to run.
 
-가비지 수집을 강제 실행하려면 **Ctrl+Alt+Shift+F12**, **Ctrl+Alt+Shift+F12** 단축키를 사용합니다(두 번 누름).
+To force a garbage collection, use the hotkey: **Ctrl+Alt+Shift+F12**, **Ctrl+Alt+Shift+F12** (press it twice).
 
-가비지 수집을 강제 실행해야 시나리오가 안정적으로 작동한다면, 이 동작은 버그일 가능성이 크므로 Visual Studio 피드백 도구를 통해 보고해 주시기 바랍니다.
+If forcing garbage collection reliably makes your scenario work, file a report through the Visual Studio feedback tool as this behavior is likely to be a bug.
 
-CLR 가비지 수집기에 대한 자세한 내용은 [Fundamental of Garbage Collection](https://msdn.microsoft.com/en-us/library/ee787088(v=vs.110).aspx)(가비지 수집 기본 사항)을 참조하세요.
+For a detailed description of the CLR garbage collector, see [Fundamental of Garbage Collection](https://msdn.microsoft.com/en-us/library/ee787088(v=vs.110).aspx).
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [Visual Studio IDE](../ide/index.md)
 
