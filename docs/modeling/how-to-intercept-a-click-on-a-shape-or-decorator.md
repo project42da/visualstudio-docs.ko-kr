@@ -1,5 +1,5 @@
 ---
-title: 'How to: Intercept a Click on a Shape or Decorator | Microsoft Docs'
+title: "방법: 도형 또는 Decorator 클릭 가로채기 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,14 +17,14 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3eb235ec6c38b4995460308c0ac8b104b76f8492
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>How to: Intercept a Click on a Shape or Decorator
-The following procedures demonstrate how to intercept a click on a shape or an icon decorator. You can intercept clicks, double-clicks, drags, and other gestures, and make the element respond.  
+# <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>방법: 모양 또는 데코레이터 클릭 가로채기
+다음 절차는 셰이프나 아이콘 decorator 클릭 가로채기 하는 방법을 보여 줍니다. 번의 클릭을 가로챌 수, 두 번 클릭할 끌기과 기타 제스처, 응답 요소를 확인 합니다.  
   
-## <a name="to-intercept-clicks-on-shapes"></a>To Intercept Clicks on Shapes  
- In the Dsl project, in a code file that is separate from the generated code files, write a partial class definition for the shape class. Override `OnDoubleClick()` or one of the other methods that has a name beginning with `On...`. For example:  
+## <a name="to-intercept-clicks-on-shapes"></a>도형에 대 한 클릭을 가로챌 수  
+ Dsl 프로젝트 생성 된 코드 파일에서 별도 코드 파일에서 shape 클래스에 대 한 partial 클래스 정의 작성 합니다. 재정의 `OnDoubleClick()` 문자로 시작 하는 이름을 가진 다른 방법 중 하나 또는 `On...`합니다. 예:  
   
 ```  
 public partial class MyShape // change  
@@ -38,20 +38,20 @@ public partial class MyShape // change
 ```  
   
 > [!NOTE]
->  Set `e.Handled` to `true`, unless you want the event to be passed to the containing shape or diagram.  
+>  설정 `e.Handled` 를 `true`이벤트를 포함 하는 모양 또는 다이어그램에 전달 하지 않는 한, 합니다.  
   
-## <a name="to-intercept-clicks-on-decorators"></a>To Intercept Clicks on Decorators  
- Image decorators are carried on an instance of ImageField class, which has an OnDoubleClick method. You can intercept the clicks if you write an ImageField subclass. The fields are set up in the InitializeShapeFields method. Therefore, you must change that method to instantiate your subclass instead of the regular ImageField. The InitializeShapeFields method is in the generated code of the shape class. You can override the shape class if you set its `Generates Double Derived` property as described in the following procedure.  
+## <a name="to-intercept-clicks-on-decorators"></a>데코레이터에 대 한 클릭을 가로챌 수  
+ 이미지 데코레이터 OnDoubleClick 메서드가 들어 있는 ImageField 클래스의 인스턴스에서 수행 됩니다. ImageField 서브 클래스를 작성 하는 경우의 클릭을 가로챌 수 있습니다. 필드는 InitializeShapeFields 메서드에서 설정 됩니다. 따라서 해당 방법을 대신 일반 ImageField 서브 클래스를 인스턴스화할 수를 변경 해야 합니다. InitializeShapeFields 방법은 shape 클래스의 생성된 된 코드에 있습니다. 설정 하는 경우에 shape 클래스를 재정의할 수는 `Generates Double Derived` 다음 절차에 설명 된 대로 속성입니다.  
   
- Although InitializeShapeFields is an instance method, it is called only once for each class. Therefore, only one instance of ClickableImageField exists for each field in each class, not one instance for each shape in the diagram. When the user double-clicks an instance, you must identify which instance has been hit, as the code in the example demonstrates.  
+ InitializeShapeFields 인스턴스 메서드인 경우에 각 클래스에 대해 한 번만 호출 됩니다. 따라서, 다이어그램의 각 셰이프에 대해 하나의 인스턴스가 아닌 각 클래스의 각 필드에 대 한 ClickableImageField의 인스턴스가 하나만 존재합니다. 사용자가 인스턴스를 식별 해야 인스턴스 적중 된 예제에서 코드에서 보여 주듯이 합니다.  
   
-#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>To intercept a click on an icon decorator  
+#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>아이콘 decorator 클릭 가로채기를  
   
-1.  Open or create a DSL solution.  
+1.  열거나 DSL 솔루션을 만듭니다.  
   
-2.  Choose or create a shape that has an icon decorator, and map it to a domain class.  
+2.  선택 하 고 또는 포함 된 아이콘 decorator 셰이프를 만들고 도메인 클래스에 매핑하십시오.  
   
-3.  In a code file that is separate from the files in the `GeneratedCode` folder, create the new subclass of ImageField:  
+3.  에 있는 파일에서 별도 코드 파일에는 `GeneratedCode` 폴더를 이미지 필드의 새 하위 클래스를 만듭니다.  
   
     ```  
     using Microsoft.VisualStudio.Modeling;  
@@ -87,9 +87,9 @@ public partial class MyShape // change
     }  
     ```  
   
-     You should set Handled to true if you do not want the event to be passed to the containing shape.  
+     Handled 상위 셰이프를 전달 하도록 이벤트를 원하지 않는 경우 true로 설정 해야 합니다.  
   
-4.  Override the InitializeShapeFields method in your shape classs by adding the following partial class definition.  
+4.  다음 부분 클래스 정의 추가 하 여 도형 classs에서 InitializeShapeFields 메서드를 재정의 합니다.  
   
     ```  
     public partial class MyShape // change  
@@ -116,38 +116,38 @@ public partial class MyShape // change
     }  
     ```  
   
-1.  Build and run the solution.  
+1.  솔루션을 빌드하고 실행합니다.  
   
-2.  Double-click the icon on an instance of the shape. Your test message should appear.  
+2.  도형의 인스턴스에서 아이콘을 두 번 클릭 합니다. 테스트 메시지를 표시 됩니다.  
   
-## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>Intercepting clicks and drags on CompartmentShape lists  
- The following sample allows users to re-order items in a compartment shape by dragging them. To run this code:  
+## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>가로채 클릭 하 고 끌어서 CompartmentShape 목록에  
+ 다음 샘플에서는 구획 모양에 항목을 끌어서 순서 수 있습니다. 이 코드를 실행 합니다.  
   
-1.  Create a new DSL solution by using the **Class Diagrams** solution template.  
+1.  사용 하 여 새 DSL 솔루션을 만듭니다는 **클래스 다이어그램** 솔루션 템플릿을 합니다.  
   
-     You can also work with a solution of your own that contains compartment shapes. This code assumes that there is an embedding relationship between the model elements represented by the shape, and the elements represented in the compartment list items.  
+     자신만의 구획 셰이프를 포함 하는 솔루션을 작업할 수도 있습니다. 이 코드는 도형 나타내는 모델 요소와 구획 목록 항목에 표시 된 요소 간의 포함 관계를 가정 합니다.  
   
-2.  Set the **Generates Double Derived** property of the compartment shape.  
+2.  설정의 **Double 파생 생성** 구획 셰이프의 속성입니다.  
   
-3.  Add this code in a file in the **Dsl** project.  
+3.  이 코드 파일에 추가 된 **Dsl** 프로젝트.  
   
-4.  Adjust the domain class and shape names in this code to match your own DSL.  
+4.  고유한 DSL 일치 하도록이 코드의 도메인 클래스 및 모양 이름을 조정 합니다.  
   
- In summary, the code works as follows. In this example, `ClassShape` is the name of the compartment shape.  
+ 요약 하자면, 코드는 다음과 같이 작동합니다. 이 예제에서는 `ClassShape` 구획 모양 이름입니다.  
   
--   A set of mouse event handlers is attached to each compartment instance when it is created.  
+-   마우스 이벤트 처리기의 집합을 만들 때 각 구획 인스턴스에 연결 됩니다.  
   
--   The `ClassShape.MouseDown` event stores the current item.  
+-   `ClassShape.MouseDown` 현재 항목을 저장 하는 이벤트입니다.  
   
--   When the mouse moves out of the current item, an instance of MouseAction is created, which sets the cursor and captures the mouse until it is released.  
+-   마우스 이동 하면 현재 항목에서 MouseAction 인스턴스의 만든 커서를 설정 하 고 해제 될 때까지 마우스를 캡처할 합니다.  
   
-     To avoid interfering with other mouse actions, such as selecting the text of an item, the MouseAction is not created until the mouse has left the original item.  
+     항목의 텍스트를 선택 하는 등의 다른 마우스 작업에 방해가 되지 않도록 하려면 MouseAction는 원래 항목 마우스가 될 때까지 생성 되지 않습니다.  
   
-     An alternative to creating a MouseAction would be simply to listen for MouseUp. However, this would not work properly if the user releases the mouse after dragging it outside the compartment. The MouseAction is able to perform the appropriate action no matter where the mouse is released.  
+     MouseUp 수신 대기 하는 MouseAction 만드는 대신 단순히 것입니다. 그러나이 제대로 작동 하지 구획 외부 끌어 놓은 후 마우스를 놓을 경우. MouseAction는 마우스를 해제 하는 위치에 관계 없이 적절 한 조치를 수행할 수 있습니다.  
   
--   When the mouse is released, MouseAction.MouseUp rearranges the order of the links between the model elements.  
+-   마우스를 놓으면 MouseAction.MouseUp 모델 요소 간 링크의 순서를 재정렬 합니다.  
   
--   The change of role order fires a rule that updates the display. This behavior is already defined, and no additional code is required.  
+-   역할 순서를 변경 하 여 화면을 업데이트 하는 규칙을 발생 시킵니다. 이 문제를 이미 정의 되며 추가 코드 없이 필요 합니다.  
   
 ```csharp  
 using Microsoft.VisualStudio.Modeling;  
@@ -398,6 +398,6 @@ namespace Company.CompartmentDrag
   
 ```  
   
-## <a name="see-also"></a>See Also  
- [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md)   
- [Properties of Decorators](../modeling/properties-of-decorators.md)
+## <a name="see-also"></a>참고 항목  
+ [응답 하 고 변경 내용 전파](../modeling/responding-to-and-propagating-changes.md)   
+ [데코레이터의 속성](../modeling/properties-of-decorators.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Creating, Editing and Maintaining a Coded UI Test | Microsoft Docs'
+title: "연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,54 +30,54 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 63dd3f809e472bea8f558bff15e17bbfa0421a2c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>Walkthrough: Creating, Editing and Maintaining a Coded UI Test
-In this walkthrough, you will create a simple Windows Presentation Foundation (WPF) application to demonstrate how to create, edit, and maintain a coded UI test. The walkthrough provides solutions for correcting tests that have been broken by various timing issues and control refactoring.  
+# <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리
+이 연습에서는 간단한 WPF(Windows Presentation Foundation) 웹 응용 프로그램을 만들어, 코딩된 UI 테스트를 만들고 편집하고 유지 관리하는 방법을 보여 줍니다. 이 연습에서는 여러 타이밍 문제 및 제어 리팩터링으로 인해 중단된 테스트를 해결하기 위한 방법을 제공합니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- For this walkthrough you will need:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 수행하려면 다음이 필요합니다.  
   
 -   Visual Studio Enterprise  
   
-### <a name="create-a-simple-wpf-application"></a>Create a Simple WPF Application  
+### <a name="create-a-simple-wpf-application"></a>간단한 WPF 응용 프로그램 만들기  
   
-1.  On the **FILE** menu, point to **New**, and then select **Project**.  
+1.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 선택합니다.  
   
-     The **New Project** dialog box appears.  
+     **새 프로젝트** 대화 상자가 나타납니다.  
   
-2.  In the **Installed** pane, expand **Visual C#**, and then select **Windows Desktop**.  
+2.  **설치됨** 창에서 **Visual C#**을 확장한 다음 **Windows 데스크톱**을 선택합니다.  
   
-3.  Above the middle pane, verify that the target framework drop-down list is set to **.NET Framework 4.5**.  
+3.  가운데 창 위에서 대상 프레임워크 드롭다운 목록이 **.NET Framework 4.5**로 설정되어 있는지 확인합니다.  
   
-4.  In the middle pane, select the **WPF Application** template.  
+4.  가운데 창에서 **WPF 응용 프로그램** 템플릿을 선택합니다.  
   
-5.  In the **Name** text box, type **SimpleWPFApp**.  
+5.  **이름** 텍스트 상자에 **SimpleWPFApp**을 입력합니다.  
   
-6.  Choose a folder where you will save the project. In the **Location** text box, type the name of the folder.  
+6.  프로젝트를 저장할 폴더를 선택합니다. **위치** 텍스트 상자에 폴더 이름을 입력합니다.  
   
-7.  Choose **OK**.  
+7.  **확인**을 선택합니다.  
   
-     The WPF Designer for Visual Studio opens and displays MainWindow of the project.  
+     Visual Studio용 WPF Designer가 열리고 프로젝트의 MainWindow가 표시됩니다.  
   
-8.  If the toolbox is not currently open, open it. Choose the **VIEW** menu, and then choose **Toolbox**.  
+8.  현재 도구 상자가 열려 있지 않으면 엽니다. **보기** 메뉴를 선택한 다음 **도구 상자**를 선택합니다.  
   
-9. Under the **All WPF Controls** section, drag a **Button**, **CheckBox** and **ProgressBar** control onto the MainWindow in the design surface.  
+9. **모든 WPF 컨트롤** 섹션에서 **Button**, **CheckBox** 및 **ProgressBar** 컨트롤을 디자인 화면의 MainWindow로 끌어옵니다.  
   
-10. Select the Button control. In the Properties window, change the value for the **Name** property from \<No Name> to button1. Then change the value for the **Content** property from Button to Start.  
+10. Button 컨트롤을 선택합니다. 속성 창에 **Name** 속성의 값을 \<이름 없음>에서 button1으로 변경합니다. 그런 다음 **Content** 속성 값을 Button에서 Start로 변경합니다.  
   
-11. Select the ProgressBar control. In the Properties window, change the value for the value for the **Name** property from \<No Name> to progressBar1. Then change the value for the **Maximum** property from **100** to **10000**.  
+11. ProgressBar 컨트롤을 선택합니다. 속성 창에 **Name** 속성의 값을 \<이름 없음>에서 progressBar1로 변경합니다. 그런 다음 **Maximum** 속성 값을 **100**에서 **10000**으로 변경합니다.  
   
-12. Select the Checkbox control. In the Properties window, change the value for the **Name** property from \<No Name> to checkBox1 and clear the **IsEnabled** property.  
+12. Checkbox 컨트롤을 선택합니다. 속성 창에서 **Name** 속성을 \<이름 없음>에서 checkBox1로 변경하고 **IsEnabled** 속성을 선택 취소합니다.  
   
-     ![Simple WPF Application](../test/media/codedui_wpfapp.png "CodedUI_WPFApp")  
+     ![간단한 WPF 응용 프로그램](../test/media/codedui_wpfapp.png "CodedUI_WPFApp")  
   
-13. Double-click the button control to add a click event handler.  
+13. 단추 컨트롤을 두 번 클릭하여 Click 이벤트 처리기를 추가합니다.  
   
-     The MainWindow.xmal.cs is displayed in the Code Editor with the cursor in the new button1_Click method.  
+     MainWindow.xmal.cs가 새 button1_Click 메서드의 커서와 함께 코드 편집기에 표시됩니다.  
   
-14. At the top of the MainWindow class, add a delegate. The delegate will be used for the progress bar. To add the delegate, add the following code:  
+14. MainWindow 클래스의 맨 위에 대리자를 추가합니다. 대리자는 진행률 표시줄에 사용됩니다. 대리자를 추가하려면 다음 코드 추가합니다.  
   
     ```csharp  
     public partial class MainWindow : Window  
@@ -92,7 +92,7 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-15. In the button1_Click method, add the following code:  
+15. button1_Click 메서드에 다음 코드를 추가합니다.  
   
     ```csharp  
     private void button1_Click(object sender, RoutedEventArgs e)  
@@ -118,97 +118,97 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-16. Save the file.  
+16. 파일을 저장합니다.  
   
-### <a name="verify-the-wpf-application-runs-correctly"></a>Verify the WPF Application Runs Correctly  
+### <a name="verify-the-wpf-application-runs-correctly"></a>WPF 응용 프로그램이 제대로 실행되는지 확인  
   
-1.  On the **DEBUG** menu, select **Start Debugging** or press **F5**.  
+1.  **디버그** 메뉴에서 **디버깅 시작**을 선택하거나 **F5** 키를 누릅니다.  
   
-2.  Notice that the check box control is disabled. Choose **Start**.  
+2.  확인란 컨트롤은 사용하지 않도록 설정되어 있습니다. **시작**을 선택합니다.  
   
-     In a few seconds, the progress bar should be 100% complete.  
+     몇 초 안에 진행률 표시줄이 100% 완료로 표시됩니다.  
   
-3.  You can now select the check box control.  
+3.  이제 확인란 컨트롤을 선택할 수 있습니다.  
   
-4.  Close SimpleWPFApp.  
+4.  SimpleWPFApp를 닫습니다.  
   
-### <a name="create-and-run-a-coded-ui-test-for-simplewpfapp"></a>Create and Run a Coded UI Test for SimpleWPFApp  
+### <a name="create-and-run-a-coded-ui-test-for-simplewpfapp"></a>SimpleWPFApp에 대해 코딩된 UI 테스트 만들기 및 실행  
   
-1.  Locate the SimpleWPFApp application that you created earlier. By default, the application will be located at C:\Users\\<username\>\Documents\Visual Studio \<version>\Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe  
+1.  앞에서 만든 SimpleWPFApp 응용 프로그램을 찾습니다. 기본적으로 응용 프로그램은 C:\Users\\<사용자 이름\>\Documents\Visual Studio \<버전>\Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe에 있습니다.  
   
-2.  Create a desktop shortcut to the SimpleWPFApp application. Right-click SimpleWPFApp.exe and choose **Copy**. On your desktop, right-click and choose **Paste shortcut**.  
+2.  SimpleWPFApp 응용 프로그램에 대한 바탕 화면 바로 가기를 만듭니다. SimpleWPFApp.exe를 마우스 오른쪽 단추로 클릭한 다음 **복사**를 선택합니다. 바탕 화면에서 마우스 오른쪽 단추를 클릭하고 **바로 가기 붙여넣기**를 선택합니다.  
   
     > [!TIP]
-    >  A shortcut to the application makes it easier to add or modify Coded UI tests for your application because it lets you start the application quickly.  
+    >  응용 프로그램 바로 가기를 사용하면 응용 프로그램을 신속하게 시작할 수 있기 때문에 응용 프로그램에 대해 코딩된 UI 테스트를 쉽게 추가하거나 수정할 수 있습니다.  
   
-3.  In Solution Explorer, right-click the solution, choose **Add** and then select **New Project**.  
+3.  솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**를 선택한 다음 **새 프로젝트**를 선택합니다.  
   
-     The **Add New Project** dialog box appears.  
+     **새 프로젝트 추가** 대화 상자가 나타납니다.  
   
-4.  In the **Installed** pane, expand **Visual C#**, and then select **Test**.  
+4.  **설치됨** 창에서 **Visual C#**을 확장한 다음 **테스트**를 선택합니다.  
   
-5.  In the middle pane, select the **Coded UI Test Project** template.  
+5.  가운데 창에서 **코딩된 UI 테스트 프로젝트** 템플릿을 선택합니다.  
   
-6.  Choose **OK**.  
+6.  **확인**을 선택합니다.  
   
-     In Solution Explorer, the new coded UI test project named **CodedUITestProject1** is added to your solution.  
+     솔루션 탐색기에서 **CodedUITestProject1**이라는 새로 코딩된 UI 테스트 프로젝트가 솔루션에 추가됩니다.  
   
-     The **Generate Code for Coded UI Test** dialog box appears.  
+     **코딩된 UI 테스트에 대한 코드 생성** 대화 상자가 나타납니다.  
   
-7.  Select the **Record actions, edit UI map or add assertions** option and choose **OK**.  
+7.  **작업 기록, UI 맵 편집 또는 어설션 추가** 옵션을 선택하고 **확인**을 선택합니다.  
   
-     The UIMap - Coded UI Test Builder appears, and the Visual Studio window is minimized.  
+     UIMap – 코딩된 UI 테스트 빌더가 나타나고 Visual Studio 창이 최소화됩니다.  
   
-     For more information about the options in the dialog box, see [Creating Coded UI Tests](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate).  
+     대화 상자의 옵션에 대한 자세한 내용은 [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)를 참조하세요.  
   
-8.  Choose **Start Recording** on the UIMap - Coded UI Test Builder.  
+8.  UIMap – 코딩된 UI 테스트 빌더에서 **기록 시작**을 선택합니다.  
   
-     ![Start recording](../test/media/cuit_builder_record.png "CUIT_Builder_Record")  
+     ![기록 시작](../test/media/cuit_builder_record.png "CUIT_Builder_Record")  
   
-     You can pause the recording if needed, for example if you have to deal with incoming mail.  
+     필요한 경우, 예를 들어 들어오는 메일을 처리해야 하는 경우 기록을 일시 중지할 수 있습니다.  
   
-     ![Pause the recording](../test/media/cuit_.png "CUIT_")  
+     ![기록 일시 중지](../test/media/cuit_.png "CUIT_")  
   
     > [!WARNING]
-    >  All actions performed on the desktop will be recorded. Pause the recording if you are performing actions that may lead to sensitive data being included in the recording.  
+    >  데스크톱에서 수행된 모든 작업이 기록됩니다. 기록에 중요한 데이터가 포함될 수 있는 작업을 수행하는 경우에는 기록을 일시 중지합니다.  
   
-9. Launch the SimpleWPFApp using the desktop shortcut.  
+9. 바탕 화면 바로 가기를 사용하여 SimpleWPFApp을 시작합니다.  
   
-     As before, notice that the check box control is disabled.  
+     이전처럼 확인란 컨트롤은 사용하지 않도록 설정되어 있습니다.  
   
-10. On the SimpleWPFApp, choose **Start**.  
+10. SimpleWPFApp에서 **시작**을 선택합니다.  
   
-     In a few seconds, the progress bar should be 100% complete.  
+     몇 초 안에 진행률 표시줄이 100% 완료로 표시됩니다.  
   
-11. Check the check box control which is now enabled.  
+11. 이제 사용하도록 설정된 확인란 컨트롤을 선택합니다.  
   
-12. Close the SimpleWPFApp application.  
+12. SimpleWPFApp 응용 프로그램을 닫습니다.  
   
-13. On the UIMap - Coded UI Test Builder, choose **Generate Code**.  
+13. UIMap – 코딩된 UI 테스트 빌더에서 **코드 생성**을 선택합니다.  
   
-14. In the Method Name type **SimpleAppTest** and choose **Add and Generate**. In a few seconds, the Coded UI test appears and is added to the Solution.  
+14. 메서드 이름에 **SimpleAppTest**를 입력하고 **추가 후 생성**을 선택합니다. 그러면 몇 초 안에 코딩된 UI 테스트가 나타나고 솔루션에 추가됩니다.  
   
-15. Close the UIMap - Coded UI Test Builder.  
+15. UIMap – 코딩된 UI 테스트 빌더를 닫습니다.  
   
-     The CodedUITest1.cs file appears in the Code Editor.  
+     CodedUITest1.cs 파일이 코드 편집기에 나타납니다.  
   
-16. Save your project.  
+16. 프로젝트를 저장합니다.  
   
-### <a name="run-the-coded-ui-test"></a>Run the Coded UI Test  
+### <a name="run-the-coded-ui-test"></a>코딩된 UI 테스트 실행  
   
-1.  From the **TEST** menu, choose **Windows** and then choose **Test Explorer**.  
+1.  **테스트** 메뉴에서 **창**을 선택한 다음 **테스트 탐색기**를 선택합니다.  
   
-2.  From the **BUILD** menu, choose **Build Solution**.  
+2.  **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
   
-3.  In the CodedUITest1.cs file, locate the **CodedUITestMethod** method, right-click and select **Run Tests**, or run the test from Test Explorer.  
+3.  CodedUITest1.cs 파일에서 **CodedUITestMethod** 메서드를 찾아 마우스 오른쪽 단추로 클릭한 다음 **테스트 실행**을 선택하거나 테스트 탐색기에서 테스트를 실행합니다.  
   
-     While the coded UI test runs, the SimpleWPFApp is visible. It conducts the steps that you did in the previous procedure. However, when the test tries to select the check box for the check box control, the Test Results window shows that the test failed. This is because the test tries to select the check box but is not aware that the check box control is disabled until the progress bar is 100% complete. You can correct this and similar issues by using the various `UITestControl.WaitForControlXXX()` methods that are available for coded UI testing. The next procedure will demonstrate using the `WaitForControlEnabled()` method to correct the issue that caused this test to fail. For more information, see [Making Coded UI Tests Wait For Specific Events During Playback](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).  
+     코딩된 UI 테스트가 실행되는 동안 SimpleWPFApp를 볼 수 있습니다. 이전 절차에서 수행한 단계가 실행됩니다. 그러나 테스트에서 확인란 컨트롤에 해당하는 확인란을 선택하려고 시도하면 테스트 결과 창에서 테스트가 실패했음을 보여 줍니다. 진행률 표시줄이 100% 완료 상태가 될 때까지 확인란 컨트롤을 사용할 수 없다는 사실을 모르고 테스트에서 해당 확인란을 선택하려고 시도했기 때문입니다. 이와 같은 문제는 코딩된 UI 테스트에 사용할 수 있는 다양한 `UITestControl.WaitForControlXXX()` 메서드를 사용하여 해결할 수 있습니다. 다음 절차에서는 `WaitForControlEnabled()` 메서드를 사용하여, 테스트 실패의 원인이 된 문제를 해결하는 방법을 보여 줍니다. 자세한 내용은 [코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)을 참조하세요.  
   
-### <a name="edit-and-rerun-the-coded-ui-test"></a>Edit and Rerun the Coded UI Test  
+### <a name="edit-and-rerun-the-coded-ui-test"></a>코딩된 UI 테스트 편집 및 다시 실행  
   
-1.  In the Test Explorer window, select the failed test and in the **StackTrace** section, choose the first link to **UIMap.SimpleAppTest()**.  
+1.  테스트 탐색기 창에서 실패한 테스트를 선택하고 **StackTrace** 섹션에서 **UIMap.SimpleAppTest()**에 대한 첫 번째 링크를 선택합니다.  
   
-2.  The UIMap.Designer.cs file opens with the point of error highlighted in the code:  
+2.  UIMap.Designer.cs 파일이 열리고 코드에서 오류 지점이 강조 표시되어 있습니다.  
   
     ```csharp  
   
@@ -216,35 +216,35 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
     uICheckBoxCheckBox.Checked = this.SimpleAppTestParams.UICheckBoxCheckBoxChecked;  
     ```  
   
-3.  To correct this problem, you can make the coded UI test wait for the CheckBox control to be enabled before continuing on to this line using the `WaitForControlEnabled()` method.  
+3.  이 문제를 해결하려면 `WaitForControlEnabled()` 메서드를 사용하여 이 줄을 계속하기 전에 UI 테스트에서 CheckBox 컨트롤을 기다릴 수 있도록 설정하면 됩니다.  
   
     > [!WARNING]
-    >  Do not modify the UIMap.Designer.cs file. Any code changes you make in the UIMapDesigner.cs file will be overwritten every time you generate code using the UIMap - Coded UI Test Builder. If you have to modify a recorded method, you must copy it to UIMap.cs file and rename it. The UIMap.cs file can be used to override methods and properties in the UIMapDesigner.cs file. You must remove the reference to the original method in the Coded UITest.cs file and replace it with the renamed method name.  
+    >  UIMap.Designer.cs 파일은 수정하지 마세요. UIMap - 코딩된 UI 테스트 빌더를 사용하여 코드를 생성할 때마다 UIMapDesigner.cs 파일에서 수정된 코드 변경 내용을 덮어씁니다. 기록된 메서드를 수정해야 하는 경우에는 해당 메서드를 UIMap.cs 파일에 복사한 후 이름을 바꾸어야 합니다. UIMap.cs 파일을 사용하여 UIMapDesigner.cs 파일의 메서드와 속성을 재정의할 수 있습니다. 코딩된 UITest.cs 파일에서 원래 메서드에 대한 참조를 제거하고 이름을 바꾼 메서드 이름으로 바꾸어야 합니다.  
   
-4.  In Solution Explorer, locate **UIMap.uitest** in your coded UI test project.  
+4.  솔루션 탐색기에서 코딩된 UI 테스트 프로젝트의 **UIMap.uitest**를 찾습니다.  
   
-5.  Open the shortcut menu for **UIMap.uitest** and choose **Open**.  
+5.  **UIMap.uitest**에 대한 바로 가기 메뉴를 열고 **열기**를 선택합니다.  
   
-     The coded UI test is displayed in the Coded UI Test Editor. You can now view and edit the coded UI test.  
+     코딩된 UI 테스트가 코딩된 UI 테스트 편집기에 표시됩니다. 이제 코딩된 UI 테스트를 보고 편집할 수 있습니다.  
   
-6.  In the **UI Action** pane, select the test method (SimpleAppTest) that you want to move to the UIMap.cs or UIMap.vb file to facilitate custom code functionality which won't be overwritten when the test code is recompiled.  
+6.  **UI 작업** 창에서 UIMap.cs 또는 UIMap.vb 파일로 이동할 테스트 메서드(SimpleAppTest)를 선택하면 테스트 코드를 다시 컴파일할 때 덮어쓰이지 않는 사용자 지정 코드 기능이 더 쉬워집니다.  
   
-7.  Choose the **Move Code** button on the Coded UI Test Editor toolbar.  
+7.  코딩된 UI 테스트 편집기 도구 모음에서 **코드 이동** 단추를 선택합니다.  
   
-8.  A Microsoft Visual Studio dialog box is displayed. It warns you that the method will be moved from the UIMap.uitest file to the UIMap.cs file and that you will no longer be able to edit the method using the Coded UI Test Editor. Choose **Yes**.  
+8.  Microsoft Visual Studio 대화 상자가 표시됩니다. 메서드가 UIMap.uitest 파일에서 UIMap.cs 파일로 이동하며 더 이상 코딩된 UI 테스트 편집기를 사용하여 메서드를 편집할 수 없다는 경고가 나타납니다. **예**를 선택합니다.  
   
-     The test method is removed from the UIMap.uitest file and no longer is displayed in the UI Actions pane. To edit the moved test file, open the UIMap.cs file from Solution Explorer.  
+     테스트 메서드가 UIMap.uitest 파일에서 제거되고 더 이상 UI 작업 창에 표시되지 않습니다. 이동한 테스트 파일을 편집하려면 솔루션 탐색기에서 UIMap.cs 파일을 엽니다.  
   
-9. On the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] toolbar, choose **Save**.  
+9. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 도구 모음에서 **저장**을 선택합니다.  
   
-     The updates to the test method are saved in the UIMap.Designer file.  
+     테스트 메서드 업데이트가 UIMap.Designer 파일에 저장됩니다.  
   
     > [!CAUTION]
-    >  Once you have moved the method, you can no longer edit it using the Coded UI Test Editor. You must add your custom code and maintain it using the Code Editor.  
+    >  메서드를 이동하면 더 이상 코딩된 UI 편집기를 사용하여 편집할 수 없습니다. 코드 편집기를 사용하여 사용자 지정 코드를 추가하고 유지 관리해야 합니다.  
   
-10. Rename the method from `SimpleAppTest()` to `ModifiedSimpleAppTest()`  
+10. 메서드 이름을 `SimpleAppTest()`에서 `ModifiedSimpleAppTest()`로 바꿉니다.  
   
-11. Add the following using statement to the file:  
+11. 다음 using 문을 파일에 추가합니다.  
   
     ```csharp  
   
@@ -252,7 +252,7 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-12. Add the following `WaitForControlEnabled()` method before the offending line of code identified previously:  
+12. 이전에 식별된 잘못된 코드 줄 앞에 다음 `WaitForControlEnabled()` 메서드를 추가합니다.  
   
     ```csharp  
   
@@ -263,7 +263,7 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-13. In the CodedUITest1.cs file, locate the **CodedUITestMethod** method and either comment out or rename the reference to the original SimpleAppTest() method and then replace it with the new ModifiedSimpleAppTest():  
+13. CodedUITest1.cs 파일에서 **CodedUITestMethod** 메서드를 찾고 원래 SimpleAppTest() 메서드에 대한 참조를 주석으로 처리하거나 이름을 바꾼 다음 새 ModifiedSimpleAppTest():로 바꿉니다.  
   
     ```csharp  
     [TestMethod]  
@@ -277,27 +277,27 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-14. On the **BUILD** menu, choose **Build Solution**.  
+14. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
   
-15. Right-click the **CodedUITestMethod** method and select **Run Tests**.  
+15. **CodedUITestMethod** 메서드를 마우스 오른쪽 단추로 클릭하고 **테스트 실행**을 선택합니다.  
   
-16. This time the coded UI test successfully completes all the steps in the test and **Passed** is displayed in the Test Explorer window.  
+16. 이번에는 코딩된 UI 테스트가 테스트의 모든 단계를 성공적으로 수행하며 테스트 탐색기 창에 **성공**으로 표시됩니다.  
   
-### <a name="refactor-a-control-in-the-simplewpfapp"></a>Refactor a Control in the SimpleWPFApp  
+### <a name="refactor-a-control-in-the-simplewpfapp"></a>SimpleWPFApp의 컨트롤 리팩터링  
   
-1.  In the MainWindow.xaml file, in the Designer, select the button control.  
+1.  Designer의 MainWindow.xaml 파일에서 Button 컨트롤을 선택합니다.  
   
-2.  At the top of the Properties window, change the **Name** property value from button1 to buttonA.  
+2.  속성 창 상단에서 **Name** 속성 값을 button1에서 buttonA로 변경합니다.  
   
-3.  On the **BUILD** menu, choose **Build Solution**.  
+3.  **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
   
-4.  In Test Explorer, run **CodedUITestMethod1**.  
+4.  테스트 탐색기에서 **CodedUITestMethod1**을 실행합니다.  
   
-     The test fails because the coded UI test cannot locate the button control that was originally mapped in the UIMap as button1. Refactoring can impact coded UI tests in this manner.  
+     코딩된 UI 테스트가 원래 UIMap에서 button1으로 매핑된 Button 컨트롤을 찾을 수 없으므로 테스트가 실패합니다. 리팩터링은 코딩된 UI 테스트에 이러한 방식으로 영향을 줄 수 있습니다.  
   
-5.  In the Test Explorer window, in the **StackTrace** section, choose the first link next to **UIMpa.ModifiedSimpleAppTest()**.  
+5.  테스트 탐색기 창의 **StackTrace** 섹션에서 **UIMpa.ModifiedSimpleAppTest()** 옆의 첫 번째 링크를 선택합니다.  
   
-     The UIMap.cs file opens. The point of error is highlighted in the code:  
+     UIMap.cs 파일이 열립니다. 코드에서 오류 지점이 강조 표시됩니다.  
   
     ```csharp  
   
@@ -305,43 +305,43 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
     Mouse.Click(uIStartButton, new Point(27, 10));  
     ```  
   
-     Notice that the line of code earlier in this procedure is using `UiStartButton`, which is the UIMap name before it was refactored.  
+     이 절차 앞부분의 코드 줄에서는 리팩터링되기 전의 UIMap 이름인 `UiStartButton`을 사용합니다.  
   
-     To correct the issue, you can add the refactored control to the UIMap by using the Coded UI Test Builder. You can update the test's code to use the code, as demonstrated in the next procedure.  
+     이 문제를 해결하려면 코딩된 UI 테스트 빌더를 사용하여 UIMap에 리팩터링된 컨트롤을 추가하면 됩니다. 다음 절차에서와 같이 코드를 사용하도록 테스트의 코드를 업데이트할 수 있습니다.  
   
-### <a name="map-refactored-control-and-edit-and-rerun-the-coded-ui-test"></a>Map Refactored Control and Edit and Rerun the Coded UI Test  
+### <a name="map-refactored-control-and-edit-and-rerun-the-coded-ui-test"></a>리팩터링된 컨트롤 매핑 및 코딩된 UI 테스트 편집 및 다시 실행  
   
-1.  In the CodedUITest1.cs file, in the **CodedUITestMethod1()** method, right-click, select **Generate Code for Coded UI Test** and then choose **Use Coded UI Test Builder**.  
+1.  CodedUITest1.cs 파일의 **CodedUITestMethod1()** 메서드에서 마우스 오른쪽 단추를 클릭하고 **코딩된 UI 테스트에 대한 코드 생성**을 선택한 다음 **코딩된 UI 테스트 빌더 사용**을 선택합니다.  
   
-     The UIMap - Coded UI Test Builder appears.  
+     UIMap – 코딩된 UI 테스트 빌더가 나타납니다.  
   
-2.  Using the desktop shortcut you created earlier, run the SimpleWPFApp application that you created earlier.  
+2.  앞에서 만든 바탕 화면 바로 가기를 사용하여, 앞에서 만든 SimpleWPFApp 응용 프로그램을 실행합니다.  
   
-3.  On the UIMap - Coded UI Test Builder, drag the crosshair tool to the **Start** button on the SimpleWPFApp.  
+3.  UIMap – 코딩된 UI 테스트 빌더에서 십자형 도구를 SimpleWPFApp의 **시작** 단추로 끌어옵니다.  
   
-     The **Start** button is enclosed in a blue box and the Coded UI Test Builder takes a few seconds to process the data for the selected control and displays the controls properties. Notice that the **AutomationUId** is named **buttonA**.  
+     **시작** 단추가 파랑 상자 안에 포함되며 코딩된 UI 테스트 빌더에서 몇 초 안에 선택한 컨트롤의 데이터가 처리되고 컨트롤 속성이 표시됩니다. **AutomationUId**의 이름은 **buttonA**로 지정됩니다.  
   
-4.  In the properties for the control, choose the arrow at the upper-left corner to expand the UI Control Map. Notice that **UIStartButton1** is selected.  
+4.  컨트롤에 대한 속성에서 왼쪽 위 모퉁이의 화살표를 선택하여 UI 컨트롤 맵을 확장합니다. **UIStartButton1**이 선택되어 있습니다.  
   
-5.  In the toolbar, choose the **Add control to UI Control Map**.  
+5.  도구 모음에서 **UI 컨트롤 맵에 컨트롤 추가**를 선택합니다.  
   
-     The status at the bottom of the window verifies the action by displaying **Selected control has been added to the UI control map**.  
+     창 맨 아래에 **선택한 컨트롤이 UI 컨트롤 맵에 추가되었습니다.**라는 상태가 표시되어 작업을 확인할 수 있습니다.  
   
-6.  On the UIMap - Coded UI Test Builder, choose **Generate Code**.  
+6.  UIMap – 코딩된 UI 테스트 빌더에서 **코드 생성**을 선택합니다.  
   
-     The Coded UI Test Builder - Generate Code appears with a note indicating that no new method is required and that code will only be generated for the changes to the UI control map.  
+     새 메서드가 필요하지 않으며 UI 컨트롤 맵의 변경 내용에 대해서만 코드가 생성될 것이라는 메모와 함께 코딩된 UI 테스트 빌더 – 코드 생성이 나타납니다.  
   
-7.  Choose **Generate**.  
+7.  **생성**을 선택합니다.  
   
-8.  Close SimpleWPFApp.exe.  
+8.  SimpleWPFApp.exe를 닫습니다.  
   
-9. Close UIMap - Coded UI Test Builder.  
+9. UIMap – 코딩된 UI 테스트 빌더를 닫습니다.  
   
-     The UIMap - Coded UI Test Builder takes a few seconds to process the UI control map changes.  
+     UIMap – 코딩된 UI 테스트 빌더에서 몇 초 안에 UI 컨트롤 맵 변경 내용이 처리됩니다.  
   
-10. In Solution Explorer, open the UIMap.Designer.cs file.  
+10. 솔루션 탐색기에서 UIMap.Designer.cs 파일을 엽니다.  
   
-11. In the UIMap.Designer.cs file, locate the UIStartButton1 property. Notice the `SearchProperties` is set to `"buttonA"`:  
+11. UIMap.Designer.cs 파일에서 UIStartButton1 속성을 찾습니다. `SearchProperties`가 `"buttonA"`로 설정되어 있습니다.  
   
     ```csharp  
   
@@ -363,9 +363,9 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-     Now you can modify the coded UI test to use the newly mapped control. As pointed out in the previous procedure if you want to override any methods or properties in the coded UI test, you must do so in the UIMap.cs file.  
+     이제 새로 매핑된 컨트롤을 사용하도록 코딩된 UI 테스트를 수정할 수 있습니다. 이전 절차에서 언급했듯이 코딩된 UI 테스트에서 메서드나 속성을 재정의하려는 경우에는 UIMap.cs 파일에서 재정의해야 합니다.  
   
-12. In the UIMap.cs file, add a constructor and specify the `SearchProperties` property of the `UIStartButton` property to use the `AutomationID` property with a value of `"buttonA":`  
+12. UIMap.cs 파일에서 생성자를 추가하고 `SearchProperties` 값을 가진 `UIStartButton` 속성을 사용하도록 `AutomationID` 속성의 `"buttonA":` 속성을 지정합니다.  
   
     ```csharp  
   
@@ -376,35 +376,35 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-13. On the **BUILD** menu, choose **Build Solution**.  
+13. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
   
-14. In Test Explorer, run CodedUITestMethod1.  
+14. 테스트 탐색기에서 CodedUITestMethod1을 실행합니다.  
   
-     This time, the coded UI test successfully completes all the steps in the test.  In the Test Results Window, you will see a status of **Passed**.  
+     이번에는 코딩된 UI 테스트가 테스트의 모든 단계를 성공적으로 수행합니다.  테스트 결과 창에 상태가 **성공**으로 표시됩니다.  
   
-## <a name="external-resources"></a>External Resources  
+## <a name="external-resources"></a>외부 리소스  
   
-### <a name="videos"></a>Videos  
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
+### <a name="videos"></a>비디오  
+ ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
   
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
+ ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
   
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
+ ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
   
-### <a name="hands-on-lab"></a>Hands on lab  
- [MSDN Virtual Lab: Introduction to Creating Coded UI Tests with Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=22508)  
+### <a name="hands-on-lab"></a>실습  
+ [MSDN 가상 랩: Visual Studio 2010을 사용하여 코딩된 UI 테스트 만들기 소개](http://go.microsoft.com/fwlink/?LinkID=22508)  
   
 ### <a name="faq"></a>FAQ  
- [Coded UI Tests FAQ - 1](http://go.microsoft.com/fwlink/?LinkID=230576)  
+ [코딩된 UI 테스트 FAQ - 1](http://go.microsoft.com/fwlink/?LinkID=230576)  
   
- [Coded UI Tests FAQ -2](http://go.microsoft.com/fwlink/?LinkID=230578)  
+ [코딩된 UI 테스트 FAQ - 2](http://go.microsoft.com/fwlink/?LinkID=230578)  
   
-### <a name="forum"></a>Forum  
- [Visual Studio UI Automation Testing (includes CodedUI)](http://go.microsoft.com/fwlink/?LinkID=224497)  
+### <a name="forum"></a>포럼  
+ [Visual Studio UI 자동화 테스트(CodedUI 포함)](http://go.microsoft.com/fwlink/?LinkID=224497)  
   
-## <a name="see-also"></a>See Also  
- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)   
- [Getting Started with the WPF Designer](http://msdn.microsoft.com/en-us/18e61d03-b96a-4058-a166-8ec6b3f6116b)   
- [Supported Configurations and Platforms for Coded UI Tests and Action Recordings](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
- [Editing Coded UI Tests Using the Coded UI Test Editor](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
+## <a name="see-also"></a>참고 항목  
+ [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
+ [WPF Designer 시작](http://msdn.microsoft.com/en-us/18e61d03-b96a-4058-a166-8ec6b3f6116b)   
+ [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
+ [코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
 

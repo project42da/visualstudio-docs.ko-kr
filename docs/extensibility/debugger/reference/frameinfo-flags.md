@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: d0b9ae5b6b9139715cd28b40dd8eae2294c507a7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="frameinfoflags"></a>FRAMEINFO_FLAGS
-Specifies the information to retrieve about a stack frame object.  
+검색할 스택 프레임 개체에 대 한 정보를 지정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 enum enum_FRAMEINFO_FLAGS {  
@@ -115,114 +115,114 @@ public enum enum_FRAMEINFO_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>멤버  
  FIF_FUNCNAME  
- Initialize/use the `m_bstrFuncName` field.  
+ 초기화/사용 된 `m_bstrFuncName` 필드입니다.  
   
  FIF_RETURNTYPE  
- Initialize/use the `m_bstrReturnType` field.  
+ 초기화/사용 된 `m_bstrReturnType` 필드입니다.  
   
  FIF_ARGS  
- Initialize/use the `m_bstrArgs` field.  
+ 초기화/사용 된 `m_bstrArgs` 필드입니다.  
   
  FIF_LANGUAGE  
- Initialize/use the `m_bstrLanguage` field.  
+ 초기화/사용 된 `m_bstrLanguage` 필드입니다.  
   
  FIF_MODULE  
- Initialize/use the `m_bstrModule` field.  
+ 초기화/사용 된 `m_bstrModule` 필드입니다.  
   
  FIF_STACKRANGE  
- Initialize/use the `m_addrMin` and `m_addrMax` (stack range) fields.  
+ 초기화/사용 된 `m_addrMin` 및 `m_addrMax` (스택 범위) 필드입니다.  
   
  FIF_FRAME  
- Initialize/use the `m_pFrame` field.  
+ 초기화/사용 된 `m_pFrame` 필드입니다.  
   
  FIF_DEBUGINFO  
- Initialize/use the `m_fHasDebugInfo` field.  
+ 초기화/사용 된 `m_fHasDebugInfo` 필드입니다.  
   
  FIF_STALECODE  
- Initialize/use the `m_fStaleCode` field.  
+ 초기화/사용 된 `m_fStaleCode` 필드입니다.  
   
  FIF_ANNOTATEDFRAME  
- Initialize/use the `m_fAnnotatedFrame` field.  
+ 초기화/사용 된 `m_fAnnotatedFrame` 필드입니다.  
   
  FIF_DEBUG_MODULEP  
- Initialize/use the `m_pModule` field.  
+ 초기화/사용 된 `m_pModule` 필드입니다.  
   
  FIF_FUNCNAME_FORMAT  
- Formats the function name. The result is returned in the `m_bstrFunName` field and no other fields are filled out.  
+ 함수 이름 형식을 지정합니다. 결과에 반환 됩니다는 `m_bstrFunName` 필드와 다른 필드가 작성 됩니다.  
   
  FIF_FUNCNAME_RETURNTYPE  
- Adds the return type to the `m_bstrFuncName` field.  
+ 반환 형식이 추가 된 `m_bstrFuncName` 필드입니다.  
   
  FIF_FUNCNAME_ARGS  
- Adds the arguments to the `m_bstrFuncName` field.  
+ 추가 대 한 인수는 `m_bstrFuncName` 필드입니다.  
   
  FIF_FUNCNAME_LANGUAGE  
- Adds the language to the `m_bstrFuncName` field.  
+ 언어를 추가 하는 `m_bstrFuncName` 필드입니다.  
   
  FIF_FUNCNAME_MODULE  
- Adds the module name to the `m_bstrFuncName` field.  
+ 모듈 이름에 추가 하는 `m_bstrFuncName` 필드입니다.  
   
  FIF_FUNCNAME_LINES  
- Adds the number of lines to the `m_bstrFuncName` field.  
+ 추가 하는 줄 수는 `m_bstrFuncName` 필드입니다.  
   
  FIF_FUNCNAME_OFFSET  
- Adds to the `m_bstrFuncName` field the offset in bytes from the start of the line if `FIF_FUNCNAME_LINES` is specified. If `FIF_FUNCNAME_LINES` is not specified, or if line numbers are not available, adds the offset in bytes from the start of the function.  
+ 에 추가 `m_bstrFuncName` 경우 줄의 시작 부분부터 바이트 오프셋 필드 `FIF_FUNCNAME_LINES` 지정 됩니다. 경우 `FIF_FUNCNAME_LINES` 를 지정 하지 않으면 줄 번호를 사용할 수 없는 경우 추가 하는 오프셋 (바이트)는 함수 시작 부분에서 또는 합니다.  
   
  FIF_FUNCNAME_ARGS_TYPES  
- Adds the type of each function argument to the `m_bstrFuncName` field.  
+ 각 함수 인수를 형식에 추가 `m_bstrFuncName` 필드입니다.  
   
  FIF_FUNCNAME_ARGS_NAMES  
- Adds the name of each function argument to the `m_bstrFuncName` field.  
+ 각 함수 인수 이름을 추가 하는 `m_bstrFuncName` 필드입니다.  
   
  FIF_FUNCNAME_ARGS_VALUES  
- Adds the value of each function argument to the `m_bstrFuncName` field.  
+ 각 함수 인수에 값 추가 `m_bstrFuncName` 필드입니다.  
   
  FIF_FUNCNAME_ARGS_ALL  
- Adds the type, name, and value of all arguments to the `m_bstrFuncName` field.  
+ 추가 유형, 이름 및 값에 대 한 모든 인수는 `m_bstrFuncName` 필드입니다.  
   
  FIF_ARGS_TYPES  
- The argument types are retrieved and formatted.  
+ 인수 형식이 검색 되 고 형식이 지정 됩니다.  
   
  FIF_ARGS_NAMES  
- The argument names are retrieved and formatted.  
+ 인수 이름 검색 및 서식이 지정 됩니다.  
   
  FIF_ARGS_VALUES  
- The argument values are retrieved and formatted.  
+ 인수 값 검색 및 서식이 지정 됩니다.  
   
  FIF_ARGS_ALL  
- Retrieve and format the type, name, and value of all arguments.  
+ 검색 및 유형, 이름 및 값의 모든 인수 형식을 지정 합니다.  
   
  FIF_ARGS_NOFORMAT  
- Specifies that the arguments are not be formatted (for example, do not add opening and closing parentheses around the argument list nor add a separator between arguments).  
+ 인수 형식이 수지 않습니다 지정 (예를 들어 수행 하지 열기와 닫기 괄호는 인수 목록을 추가 하거나 수 없는 인수 사이의 구분 기호를 추가).  
   
  FIF_ARGS_NO_FUNC_EVAL  
- Specifies that function (property) evaluation should not be used when retrieving argument values.  
+ 함수 (속성) 평가 사용 하지 않도록 인수 값을 검색할 때 지정 합니다.  
   
  FIF_FILTER_NON_USER_CODE  
- The debug engine is to filter non-user code frames so they are not included.  
+ 디버그 엔진 포함 되기 때문에 사용자 코드가 아닌 프레임을 필터링 하는 것입니다.  
   
  FIF_ARGS_NO_TOSTRING  
- Do not allow `ToString()` function evaluation or formatting when returning function arguments.  
+ 허용 안 함 `ToString()` 함수 평가 또는 함수 인수를 반환 하는 경우의 형식을 지정 합니다.  
   
  FIF_DESIGN_TIME_EXPR_EVAL  
- Frame information should be gotten from the hosted app-domain rather than the hosting process.  
+ 호스팅 프로세스를 사용 하지 않고 호스팅된 응용 프로그램 도메인에서 프레임 정보를 참조 해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
- These flags are passed to the [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) and [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) methods to indicate which fields are to be initialized in the [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structure or structures.  
+## <a name="remarks"></a>설명  
+ 이러한 플래그에 전달 되는 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) 및 [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) 를 초기화할 수 있는 필드를 나타내는 방법은 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 구조 또는 구조입니다.  
   
- These flags are also used to indicate which fields of the [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structure are used and valid when the structure is returned. These values may be combined with a bitwise `OR`.  
+ 이러한 플래그의 필드를 나타내기 위해 사용도 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 구조는 사용 되지 않으며 유효한 구조를 반환 하는 경우. 이러한 값에 비트와 함께 사용할 수 있습니다 `OR`합니다.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)   
  [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)
