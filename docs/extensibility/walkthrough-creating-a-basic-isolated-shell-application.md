@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
 ms.openlocfilehash: e007e366847ac42d3916b16cbde190e8fd755821
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>연습: 기본 격리 셸 응용 프로그램 만들기
 이 연습에는 격리 셸 솔루션을 만들고 도움말 정보 도구 창을 사용자 지정, 격리 셸을 설치 하는 설치 프로그램을 만드는 방법을 보여 줍니다.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다. 격리 셸을 배포 하려면 또한 Visual Studio Shell (격리) 재배포 가능 패키지를 사용 해야 합니다.  
   
 ## <a name="creating-an-isolated-shell-solution"></a>격리 셸 솔루션 만들기  

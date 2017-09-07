@@ -1,5 +1,5 @@
 ---
-title: Navigating and Updating a Model in Program Code | Microsoft Docs
+title: "프로그램 코드 탐색 및 모델에 업데이트 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,67 +31,67 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 40f3a1d56019a8bcab4a11ffaf3aa7d37b02d262
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="navigating-and-updating-a-model-in-program-code"></a>Navigating and Updating a Model in Program Code
-You can write code to create and delete model elements, set their properties, and create and delete links between elements. All changes must be made within a transaction. If the elements are viewed on a diagram, the diagram will be "fixed up" automatically at the end of the transaction.  
+# <a name="navigating-and-updating-a-model-in-program-code"></a>프로그램 코드에서 모델 탐색 및 업데이트
+만들기 및 삭제 모델 요소, 해당 속성을 설정 하 고 만들기 및 요소 간의 연결을 삭제 하는 코드를 작성할 수 있습니다. 트랜잭션 내에서 모든 변경 해야 합니다. 요소는 다이어그램을 볼 경우 다이어그램 됩니다 "수정" 자동으로 트랜잭션이 끝날 때.  
   
-## <a name="in-this-topic"></a>In this Topic  
- [An Example DSL Definition](#example)  
+## <a name="in-this-topic"></a>이 항목의 내용  
+ [예제 DSL 정의](#example)  
   
- [Navigating the Model](#navigation)  
+ [모델 탐색](#navigation)  
   
- [Accessing Class Information](#metadata)  
+ [클래스 정보 액세스](#metadata)  
   
- [Perform Changes inside a Transaction](#transaction)  
+ [트랜잭션 내의 변경을 수행합니다](#transaction)  
   
- [Creating Model Elements](#elements)  
+ [모델 요소 만들기](#elements)  
   
- [Creating Relationship Links](#links)  
+ [관계 링크 만들기](#links)  
   
- [Deleting Elements](#deleteelements)  
+ [요소 삭제](#deleteelements)  
   
- [Deleting Relationship Links](#deletelinks)  
+ [관계 링크 삭제](#deletelinks)  
   
- [Reordering the Links of a Relationship](#reorder)  
+ [관계의 링크를 다시 정렬](#reorder)  
   
- [Locks](#locks)  
+ [잠금](#locks)  
   
- [Copy and Paste](#copy)  
+ [복사 및 붙여넣기](#copy)  
   
- [Navigating and Updating Diagrams](#diagrams)  
+ [탐색 및 다이어그램 업데이트](#diagrams)  
   
- [Navigating between Shapes and Elements](#views)  
+ [도형 및 요소 간 탐색](#views)  
   
- [Properties of Shapes and Connectors](#shapeProperties)  
+ [셰이프 및 연결선의 속성](#shapeProperties)  
   
- [DocView and DocData](#docdata)  
+ [문서 뷰 및 DocData](#docdata)  
   
-##  <a name="example"></a> An Example DSL Definition  
- This is the main part of DslDefinition.dsl for the examples in this topic:  
+##  <a name="example"></a>예제 DSL 정의  
+ 다음은이 항목의 예제에 대 한 DslDefinition.dsl의 주요 부분입니다.  
   
- ![DSL Definition diagram &#45; family tree model](../modeling/media/familyt_person.png "FamilyT_Person")  
+ ![DSL 정의 다이어그램 &#45; 패밀리 트리 모델](../modeling/media/familyt_person.png "FamilyT_Person")  
   
- This model is an instance of this DSL:  
+ 이 모델은이 DSL의 인스턴스:  
   
- ![Tudor Family Tree Model](../modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
+ ![Tudor 패밀리 트리 모델](../modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
   
-### <a name="references-and-namespaces"></a>References and Namespaces  
- To run the code in this topic, you should reference:  
+### <a name="references-and-namespaces"></a>참조 및 네임 스페이스  
+ 이 항목의 코드를 실행 하려면 참조 해야 합니다.  
   
  `Microsoft.VisualStudio.Modeling.Sdk.11.0.dll`  
   
- Your code will use this namespace:  
+ 코드는이 네임 스페이스를 사용 합니다.  
   
  `using Microsoft.VisualStudio.Modeling;`  
   
- In addition, if you are writing the code in a different project from the one in which your DSL is defined, you should import the assembly that is built by the Dsl project.  
+ 또한 DSL 정의 되어 있는 것과에서 다른 프로젝트에 코드를 작성 하는 경우 Dsl 프로젝트에서 빌드한 어셈블리를 가져올 해야 합니다.  
   
-##  <a name="navigation"></a> Navigating the Model  
+##  <a name="navigation"></a>모델 탐색  
   
-### <a name="properties"></a>Properties  
- Domain properties that you define in the DSL definition become properties that you can access in program code:  
+### <a name="properties"></a>속성  
+ DSL 정의에서 정의 하는 도메인 속성에는 프로그램 코드에서 액세스할 수 있는 속성이 됩니다.  
   
  `Person henry = ...;`  
   
@@ -99,28 +99,28 @@ You can write code to create and delete model elements, set their properties, an
   
  `if (henry.Name.EndsWith("VIII")) ...`  
   
- If you want to set a property, you must do so inside a [transaction](#transaction):  
+ 속성을 설정 하려는 경우 꼭 필요한 내는 [트랜잭션](#transaction):  
   
  `henry.Name = "Henry VIII";`  
   
- If in the DSL definition, a property's **Kind** is **Calculated**, you cannot set it. For more information, see [Calculated and Custom Storage Properties](../modeling/calculated-and-custom-storage-properties.md).  
+ DSL 정의에서 속성의 경우 **종류** 은 **계산**를 설정할 수 없습니다. 자세한 내용은 참조 [계산 및 저장소 속성을 사용자 지정](../modeling/calculated-and-custom-storage-properties.md)합니다.  
   
-### <a name="relationships"></a>Relationships  
- Domain relationships that you define in the DSL definition become pairs of properties, one on the class at each end of the relationship. The names of the properties appear in the DslDefinition diagram as labels on the roles at each side of the relationship. Depending on the multiplicity of the role, the type of the property is either the class at the other end of the relationship, or a collection of that class.  
+### <a name="relationships"></a>관계  
+ DSL 정의에서 정의 하는 도메인 관계의 관계의 양쪽 끝 클래스에 하나씩 속성 쌍이 됩니다. 속성의 이름을 관계의 양쪽에 있는 역할에 대 한 레이블이 DslDefinition 다이어그램에 표시 됩니다. 역할의 복합성에 따라 속성의 유형 중 하나는 관계의 다른 쪽 끝에서 클래스 또는 해당 클래스의 컬렉션입니다.  
   
  `foreach (Person child in henry.Children) { ... }`  
   
  `FamilyTreeModel ftree = henry.FamilyTreeModel;`  
   
- The properties at opposite ends of a relationship are always reciprocal. When a link is created or deleted, the role properties on both elements are updated. The following expression (which uses the extensions of `System.Linq`) is always true for the ParentsHaveChildren relationship in the example:  
+ 관계의 반대쪽 끝에 있는 속성은 항상 역입니다. 링크를 만들거나 삭제할 때 두 요소에서 역할 속성 업데이트 됩니다. 다음 식은 (의 확장을 사용 하 여 `System.Linq`)은 항상 예제에서 ParentsHaveChildren 관계에 대 한 true:  
   
  `(Person p) => p.Children.All(child => child.Parents.Contains(p))`  
   
  `&& p.Parents.All(parent => parent.Children.Contains(p));`  
   
- **ElementLinks**. A relationship is also represented by a model element called a *link*, which is an instance of the domain relationship type. A link always has one source element and one target element. The source element and the target element can be the same.  
+ **ElementLinks**합니다. 또한 관계는 라는 모델 요소에 의해 표시 되는 *링크*, 도메인 관계 유형의 인스턴스인 합니다. 링크는 항상 하나의 원본 요소와 하나의 대상이 요소에 있습니다. 소스 요소와 대상 요소 같을 수 있습니다.  
   
- You can access a link and its properties:  
+ 링크와 해당 속성에 액세스할 수 있습니다.  
   
  `ParentsHaveChildren link = ParentsHaveChildren.GetLink(henry, edward);`  
   
@@ -128,35 +128,35 @@ You can write code to create and delete model elements, set their properties, an
   
  `link == null || link.Parent == henry && link.Child == edward`  
   
- By default, no more than one instance of a relationship is allowed to link any pair of model elements. But if in the DSL definition, the `Allow Duplicates` flag is true for the relationship, then there might be more than one link, and you must use `GetLinks`:  
+ 기본적으로 둘 이상의 인스턴스 관계의 모델 요소 쌍을 연결할 허용 됩니다. 하지만 DSL 정의 있는 경우는 `Allow Duplicates` 플래그가 관계에 대해 true 인 둘 이상의 링크 있을 수 있습니다 하 고 사용 해야 `GetLinks`:  
   
  `foreach (ParentsHaveChildren link in ParentsHaveChildren.GetLinks(henry, edward)) { ... }`  
   
- There are also other methods for accessing links. For example:  
+ 링크에 액세스 하기 위한 다른 방법 있습니다. 예:  
   
  `foreach (ParentsHaveChildren link in     ParentsHaveChildren.GetLinksToChildren(henry)) { ... }`  
   
- **Hidden roles.** If in the DSL definition, **Is Property Generated** is **false** for a particular role, then no property is generated that corresponds to that role. However, you can still access the links and traverse the links using the methods of the relationship:  
+ **숨겨진된 역할입니다.** DSL 정의 있는 경우 **속성이 생성** 은 **false** 특정 역할에 대해 다음 없는 속성이 생성 된 해당 역할에 해당 하는 합니다. 그러나도 링크에 액세스할 및 관계의 메서드를 사용 하 여 링크를 트래버스하 수행할 수 있습니다.  
   
  `foreach (Person p in ParentsHaveChildren.GetChildren(henry)) { ... }`  
   
- The most frequently used example is the <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> relationship, which links a model element to the shape that displays it on a diagram:  
+ 가장 자주 사용 되는 예제는 <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> 관계 다이어그램에서 표시 하는 셰이프를 모델 요소에 연결 합니다.  
   
  `PresentationViewsSubject.GetPresentation(henry)[0] as PersonShape`  
   
-### <a name="the-element-directory"></a>The Element Directory  
- You can access all the elements in the store using the element directory:  
+### <a name="the-element-directory"></a>요소 디렉터리  
+ 요소 디렉터리를 사용 하 여 저장소에 있는 모든 요소를 액세스할 수 있습니다.  
   
  `store.ElementDirectory.AllElements`  
   
- There are also methods for finding elements, such as the following:  
+ 다음과 같은 요소를 찾기 위한 메서드 됩니다.  
   
  `store.ElementDirectory.FindElements(Person.DomainClassId);`  
   
  `store.ElementDirectory.GetElement(elementId);`  
   
-##  <a name="metadata"></a> Accessing Class Information  
- You can get information about the classes, relationships, and other aspects of the DSL definition. For example:  
+##  <a name="metadata"></a>클래스 정보 액세스  
+ 클래스, 관계 및 DSL 정의의 다른 측면에 대 한 정보를 얻을 수 있습니다. 예:  
   
  `DomainClassInfo personClass = henry.GetDomainClass();`  
   
@@ -170,16 +170,16 @@ You can write code to create and delete model elements, set their properties, an
   
  `DomainRoleInfo sourceRole = relationship.DomainRole[0];`  
   
- The ancestor classes of model elements are as follows:  
+ 모델 요소의 상위 클래스는 다음과 같습니다.  
   
--   ModelElement - all elements and relationships are ModelElements  
+-   ModelElement-모든 요소 및 관계는 모델 요소  
   
--   ElementLink - all relationships are ElementLinks  
+-   ElementLink-모든 관계는 ElementLinks  
   
-##  <a name="transaction"></a> Perform Changes inside a Transaction  
- Whenever your program code changes anything in the Store, it must do so inside a transaction. This applies to all model elements, relationships, shapes, diagrams, and their properties. For more information, see <xref:Microsoft.VisualStudio.Modeling.Transaction>.  
+##  <a name="transaction"></a>트랜잭션 내의 변경을 수행합니다  
+ 프로그램 코드는 저장소에 아무 것도 변경 될 때마다 하나의 트랜잭션으로 수행 해야 것입니다. 이 모든 모델 요소, 관계, 셰이프, 다이어그램 및 해당 속성에 적용 됩니다. 자세한 내용은 <xref:Microsoft.VisualStudio.Modeling.Transaction>을 참조하십시오.  
   
- The most convenient method of managing a transaction is with a `using` statement enclosed in a `try...catch` statement:  
+ 와 트랜잭션을 관리 하는 가장 편리한 방법은 `using` 문 안에 한 `try...catch` 문:  
   
 ```  
 Store store; ...  
@@ -205,12 +205,12 @@ catch (Exception ex)
 }  
 ```  
   
- You can make any number of changes inside one transaction. You can open new transactions inside an active transaction.  
+ 임의 개수의 한 트랜잭션 내에서 변경 내용 만들 수 있습니다. 새 트랜잭션이 활성화 된 트랜잭션 내부 열 수 있습니다.  
   
- To make your changes permanent, you should `Commit` the transaction before it is disposed. If an exception occurs that is not caught inside the transaction, the Store will be reset to its state before the changes.  
+ 변경 내용을 영구적, 하려면 `Commit` 삭제 하기 전에 트랜잭션. 예외가 발생 하지는 트랜잭션 내부는 저장소 변경 되기 전에 상태로 다시 설정 됩니다.  
   
-##  <a name="elements"></a> Creating Model Elements  
- This example adds an element to an existing model:  
+##  <a name="elements"></a>모델 요소 만들기  
+ 이 예에서는 기존 모델에 요소를 추가 합니다.  
   
 ```  
 FamilyTreeModel familyTree = ...; // The root of the model.         
@@ -230,97 +230,97 @@ using (Transaction t =
 }  
 ```  
   
- This example illustrates these essential points about creating an element:  
+ 이 예제는 요소를 만드는 방법에 대해 이러한 필수 사항입니다.  
   
--   Create the new element in a specific partition of the Store. For model elements and relationships, but not shapes, this is usually the default partition.  
+-   저장소의 특정 부분에 새 요소를 만듭니다. 모델 요소 및 관계를 있지만 모양은 만들 수 없습니다, 이것이 일반적으로 기본 파티션에입니다.  
   
--   Make it the target of an embedding relationship. In the DslDefinition of this example, each Person must be the target of embedding relationship FamilyTreeHasPeople. To achieve this, we can either set the FamilyTreeModel role property of the Person object, or add the Person to the People role property of the FamilyTreeModel object.  
+-   포함 관계의 대상으로 지정 합니다. 이 예제의 DslDefinition에서 각 사용자는 포함 FamilyTreeHasPeople 관계의 대상 이어야 합니다. 이를 위해 우리 Person 개체의 FamilyTreeModel 역할 속성을 설정 하거나 FamilyTreeModel 개체의 사용자 역할 속성에는 사용자를 추가 합니다.  
   
--   Set the properties of a new element, particularly the property for which `IsName` is true in the DslDefinition. This flag marks the property that serves to identify the element uniquely within its owner. In this case, the Name property has that flag.  
+-   새 요소, 특히 속성의 속성을 설정 `IsName` 는 DslDefinition에 유용 합니다. 이 플래그는 해당 소유자로 고유 하 게 내 요소를 식별 하는 데 사용 되는 속성을 표시 합니다. 이 경우 Name 속성에 해당 플래그가 있습니다.  
   
--   The DSL definition of this DSL must have been loaded into the Store. If you are writing an extension such as a menu command, this will typically be already true. In other cases, you can explicitly load the model into the Store, or use <xref:Microsoft.VisualStudio.Modeling.Integration.ModelBus> to load it. For more information, see [How to: Open a Model from File in Program Code](../modeling/how-to-open-a-model-from-file-in-program-code.md).  
+-   이 dsl DSL 정의 저장소에 로드 합니다. 메뉴 명령과 같은 확장을 작성 하는 경우 일반적으로 내보내기가 가능 합니다 이미 있습니다. 다른 경우에 명시적으로 저장소에 모델을 로드 하거나 사용할 수 있습니다 <xref:Microsoft.VisualStudio.Modeling.Integration.ModelBus> 로드 합니다. 자세한 내용은 참조 [하는 방법: 프로그램 코드 파일에서 모델 열기](../modeling/how-to-open-a-model-from-file-in-program-code.md)합니다.  
   
- When you create an element in this way, a shape is automatically created (if the DSL has a diagram). It appears in an automatically assigned location, with default shape, color, and other features. If you want to control where and how the associated shape appears, see [Creating an Element and its Shape](#merge).  
+ 이러한 방식으로 요소를 만들 셰이프 (DSL에는 다이어그램) 경우 자동으로 생성 됩니다. 기본 모양, 색 및 기타 기능으로는 자동으로 할당 된 위치에 나타납니다. 참조 하십시오 관련된 셰이프가 표시 되는 위치와 방법을 제어 하려면 [요소를 만들고 해당 모양](#merge)합니다.  
   
-##  <a name="links"></a> Creating Relationship Links  
- There are two relationships defined in the example DSL definition. Each relationship defines a *role property* on the class at each end of the relationship.  
+##  <a name="links"></a>관계 링크 만들기  
+ 예제 DSL 정의에 정의 된 두 개의 관계가 있습니다. 각 관계를 정의 *역할 속성* 관계의 양쪽 끝 클래스에 있습니다.  
   
- There are three ways in which you can create an instance of a relationship. Each of these three methods has the same effect:  
+ 세 가지 방법으로 관계의 인스턴스를 만들 수 있습니다. 이러한 세 가지 메서드는 각각 동일한 영향을 미칩니다.  
   
--   Set the property of the source role player. For example:  
+-   소스 역할 수행자의 속성을 설정 합니다. 예:  
   
     -   `familyTree.People.Add(edward);`  
   
     -   `edward.Parents.Add(henry);`  
   
--   Set the property of the target role player. For example:  
+-   대상 역할 수행자의 속성을 설정 합니다. 예:  
   
     -   `edward.familyTreeModel = familyTree;`  
   
-         The multiplicity of this role is `1..1`, so we assign the value.  
+         이 역할의 복합성은 `1..1`이므로 라는 값을 할당 합니다.  
   
     -   `henry.Children.Add(edward);`  
   
-         The multiplicity of this role is `0..*`, so we add to the collection.  
+         이 역할의 복합성은 `0..*`이므로 해당 컬렉션에 추가 합니다.  
   
--   Construct an instance of the relationship explicitly. For example:  
+-   관계의 인스턴스를 명시적으로 생성 합니다. 예:  
   
     -   `FamilyTreeHasPeople edwardLink = new FamilyTreeHasPeople(familyTreeModel, edward);`  
   
     -   `ParentsHaveChildren edwardHenryLink = new ParentsHaveChildren(henry, edward);`  
   
- The last method is useful if you want to set properties on the relationship itself.  
+ 마지막 방법은 관계 자체의 속성을 설정 하려는 경우 유용 합니다.  
   
- When you create an element in this way, a connector on the diagram is automatically created, but it has a default shape, color, and other features. To control how the associated connector is created, see [Creating an Element and its Shape](#merge).  
+ 이러한 방식으로 요소를 만들 때 커넥터 다이어그램에 자동으로 만들어집니다 했으나 기본 모양, 색 및 기타 기능입니다. 참조 관련된 된 커넥터를 만드는 방법을 제어 하려면 [요소를 만들고 해당 모양](#merge)합니다.  
   
-##  <a name="deleteelements"></a> Deleting Elements  
- Delete an element by calling `Delete()`:  
+##  <a name="deleteelements"></a>요소 삭제  
+ 요소를 호출 하 여 삭제 `Delete()`:  
   
  `henry.Delete();`  
   
- This operation will also delete:  
+ 이 작업은 또한 삭제 됩니다.  
   
--   Relationship links to and from the element. For example, `edward.Parents` will no longer contain `henry`.  
+-   관계 요소 사이에 링크 합니다. 예를 들어 `edward.Parents` 더 이상 포함 됩니다 `henry`합니다.  
   
--   Elements at roles for which the `PropagatesDelete` flag is true. For example, the shape that displays the element will be deleted.  
+-   요소를 역할에는 `PropagatesDelete` 플래그는 true입니다. 예를 들어 요소를 표시 하는 셰이프를 삭제 됩니다.  
   
- By default, every embedding relationship has `PropagatesDelete` true at the target role. Deleting `henry` does not delete the `familyTree`, but `familyTree.Delete()` would delete all the `Persons`. For more information, see [Customizing Deletion Behavior](../modeling/customizing-deletion-behavior.md).  
+ 기본적으로 모든 포함 관계는 `PropagatesDelete` 대상 역할 에서도 마찬가지입니다. 삭제 `henry` 삭제 되지 않습니다는 `familyTree`, 하지만 `familyTree.Delete()` 모든 삭제는 `Persons`합니다. 자세한 내용은 참조 [삭제 동작 사용자 지정](../modeling/customizing-deletion-behavior.md)합니다.  
   
- By default, `PropagatesDelete` is not true for the roles of reference relationships.  
+ 기본적으로 `PropagatesDelete` 참조 관계의 역할에 대 한 사실이 아닙니다.  
   
- You can cause the deletion rules to omit specific propagations when you delete an object. This is useful if you are substituting one element for another. You supply the GUID of one or more roles for which deletion should not be propagated. The GUID can be obtained from the relationship class:  
+ 개체를 삭제 하는 경우 특정 전파를 생략 하는 삭제 규칙 발생할 수 있습니다. 다른 한 요소를 대체 하는 경우에 유용 합니다. 삭제 전파 되지 않아야 하는 하나 이상의 역할의 GUID를 제공 합니다. 관계 클래스에서 GUID는 가져올 수 있습니다.  
   
  `henry.Delete(ParentsHaveChildren.SourceDomainRoleId);`  
   
- (This particular example would have no effect, because `PropagatesDelete` is `false` for the roles of the `ParentsHaveChildren` relationship.)  
+ (이 예는 아무런 영향이 때문에 `PropagatesDelete` 은 `false` 의 역할에 대 한는 `ParentsHaveChildren` 관계입니다.)  
   
- In some cases, deletion is prevented by the existence of a lock, either on the element or on an element that would be deleted by propagation. You can use `element.CanDelete()` to check whether the element can be deleted.  
+ 경우에 따라 삭제 전파 하 여 삭제 하려는 요소 또는 요소에 한 잠금 상태에 따라 금지 됩니다. 사용할 수 있습니다 `element.CanDelete()` 에 요소를 삭제할 수 있는지 여부를 확인 합니다.  
   
-##  <a name="deletelinks"></a> Deleting Relationship Links  
- You can delete a relationship link by removing an element from a role property:  
+##  <a name="deletelinks"></a>관계 링크 삭제  
+ 역할 속성에서 요소를 제거 하 여 관계 링크를 삭제할 수 있습니다.  
   
  `henry.Children.Remove(edward); // or:`  
   
  `edward.Parents.Remove(henry);  // or:`  
   
- You can also delete the link explicitly:  
+ 또한 링크를 명시적으로 삭제할 수 있습니다.  
   
  `edwardHenryLink.Delete();`  
   
- These three methods all have the same effect. You only need to use one of them.  
+ 이러한 세 가지 메서드는 모두 동일한 효과가 있습니다. 그 중 하나를 사용 하기만 하면 됩니다.  
   
- If the role has 0..1 or 1..1 multiplicity, you can set it to `null`, or to another value:  
+ 역할에는 복합성이 0..1 또는 1.. 1 인, 경우 설정할 수 있습니다 `null`, 또는 다른 값:  
   
- `edward.FamilyTreeModel = null;` // or:  
+ `edward.FamilyTreeModel = null;`또는:  
   
  `edward.FamilyTreeModel = anotherFamilyTree;`  
   
-##  <a name="reorder"></a> Re-ordering the Links of a Relationship  
- The links of a particular relationship that are sourced or targeted at a particular model element have a specific sequence. They appear in the order in which they were added. For example, this statement will always yield the children in the same order:  
+##  <a name="reorder"></a>관계의 링크를 다시 정렬  
+ 특정 관계는이 원본 또는 대상으로 특정 모델 요소를 링크 특정 순서가 있어야 합니다. 추가 된 순서에 나타납니다. 예를 들어이 문은 동일한 순서로 자식을 양보할 항상:  
   
  `foreach (Person child in henry.Children) ...`  
   
- You can change the order of the links:  
+ 연결의 순서를 변경할 수 있습니다.  
   
  `ParentsHaveChildren link = GetLink(henry,edward);`  
   
@@ -332,13 +332,13 @@ using (Transaction t =
   
  `link.MoveBefore(role, nextLink);`  
   
-##  <a name="locks"></a> Locks  
- Your changes might be prevented by a lock. Locks can be set on individual elements, on partitions, and on the store. If any of these levels has a lock that prevents the kind of change that you want to make, an exception might be thrown when you attempt it. You can discover whether locks are set by using element.GetLocks(), which is an extension method that is defined in the namespace <xref:Microsoft.VisualStudio.Modeling.Immutability>.  
+##  <a name="locks"></a>잠금  
+ 변경 내용을 잠금을 하 여 방지할 수 있습니다. 개별 요소, 파티션 및 저장소에는 잠금은 설정할 수 있습니다. 만들려는 변경의 종류를 방지 하는 잠금을 같은이 수준 모두 있으면 시도 하면 예외가 throw 될 수 있습니다. 요소를 사용 하 여 잠금이 설정 되어 있는지 여부를 확인할 수 있습니다. 네임 스페이스에 정의 된 확장 메서드는 GetLocks() <xref:Microsoft.VisualStudio.Modeling.Immutability>합니다.  
   
- For more information, see [Defining a Locking Policy to Create Read-Only Segments](../modeling/defining-a-locking-policy-to-create-read-only-segments.md).  
+ 자세한 내용은 참조 [잠금 정책을 정의 하는 읽기 전용 세그먼트 만들기를](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)합니다.  
   
-##  <a name="copy"></a> Copy and Paste  
- You can copy elements or groups of elements to an <xref:System.Windows.Forms.IDataObject>:  
+##  <a name="copy"></a>복사 및 붙여넣기  
+ 요소 또는 요소 그룹을 복사할 수 있습니다는 <xref:System.Windows.Forms.IDataObject>:  
   
 ```  
 Person person = personShape.ModelElement as Person;  
@@ -348,9 +348,9 @@ personShape.Diagram.ElementOperations
       .Copy(data, person.Children.ToList<ModelElement>());  
 ```  
   
- The elements are stored as a serialized Element Group.  
+ 요소는 직렬화 된 요소 그룹으로 저장 됩니다.  
   
- You can merge elements from an IDataObject into a model:  
+ 모델로 IDataObject에서 요소를 병합할 수 있습니다.  
   
 ```  
 using (Transaction t = targetDiagram.Store.  
@@ -360,32 +360,32 @@ using (Transaction t = targetDiagram.Store.
 }  
 ```  
   
- `Merge ()` can accept either a `PresentationElement` or a `ModelElement`. If you give it a `PresentationElement`, you can also specify a position on the target diagram as a third parameter.  
+ `Merge ()`둘 중 하나를 허용 수는 `PresentationElement` 또는 `ModelElement`합니다. 지정 하는 경우는 `PresentationElement`, 세 번째 매개 변수로 대상 다이어그램에서 위치를 지정할 수도 있습니다.  
   
-##  <a name="diagrams"></a> Navigating and updating diagrams  
- In a DSL, the domain model element, which represents a concept such as Person or Song, is separate from the shape element, which represents what you see on the diagram. The domain model element stores the important properties and relationships of the concepts. The shape element stores the size, position and color of the object's view on the diagram, and the layout of its component parts.  
+##  <a name="diagrams"></a>탐색 및 다이어그램 업데이트  
+ 를 사용 하는 DSL에서 사람이 나 노래 같은 개념을 나타내는 도메인 모델 요소를 다이어그램에 표시 된 내용을 나타내는 셰이프 요소에서 분리 됩니다. 도메인 모델 요소는 중요 한 속성 및 개념의 관계를 저장합니다. 셰이프 요소는 크기, 위치 및 다이어그램에서 개체의 보기의 색 및 레이아웃 해당 구성 요소 부분을 저장합니다.  
   
-### <a name="presentation-elements"></a>Presentation Elements  
- ![Class diagram of base shape and element types](../modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
+### <a name="presentation-elements"></a>프레젠테이션 요소  
+ ![기본 모양 및 요소 형식의 클래스 다이어그램](../modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
   
- In your DSL Definition, each element that you specify creates a class that is derived from one of the following standard classes.  
+ DSL 정의 지정 하는 각 요소는 다음과 같은 표준 클래스 중 하나에서 파생 된 클래스를 만듭니다.  
   
-|Kind of element|Base class|  
+|종류의 요소|기본 클래스|  
 |---------------------|----------------|  
-|Domain class|<xref:Microsoft.VisualStudio.Modeling.ModelElement>|  
-|Domain relationship|<xref:Microsoft.VisualStudio.Modeling.ElementLink>|  
-|Shape|<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>|  
-|Connector|<xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>|  
-|Diagram|<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>|  
+|도메인 클래스|<xref:Microsoft.VisualStudio.Modeling.ModelElement>|  
+|도메인 관계|<xref:Microsoft.VisualStudio.Modeling.ElementLink>|  
+|모양|<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>|  
+|연결선|<xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>|  
+|다이어그램|<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>|  
   
- An element on a diagram usually represents a model element. Typically (but not always), a <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> represents a domain class instance, and a <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape> represents a domain relationship instance. The <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> relationship links a node or link shape to the model element that it represents.  
+ 다이어그램에서 요소를 일반적으로 모델 요소를 나타냅니다. 일반적으로 (항상 그렇지는 않지만)는 <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> 도메인 클래스 인스턴스를 나타내는 및 <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape> 도메인 관계 인스턴스를 나타냅니다. <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> 관계 노드 또는 링크 셰이프를 나타내는 모델 요소에 연결 합니다.  
   
- Every node or link shape belongs to one diagram. A binary link shape connects two node shapes.  
+ 한 다이어그램에 모든 노드나 링크 셰이프 속해 있습니다. 이진 link 셰이프는 두 노드 셰이프를 연결 합니다.  
   
- Shapes can have child shapes in two sets. A shape in the `NestedChildShapes` set is confined to the bounding box of its parent. A shape in the `RelativeChildShapes` list can appear outside or partly outside the bounds of the parent - for example a label or a port. A diagram has no `RelativeChildShapes` and no `Parent`.  
+ 셰이프는 두 집합의 자식 모양을 가질 수 있습니다. 셰이프는 `NestedChildShapes` 집합은 해당 부모의 경계 상자에만 적용 됩니다. 셰이프는 `RelativeChildShapes` 목록에 외부 또는 부분적으로 부모-예: 레이블 또는 포트 범위를 벗어나는 나타날 수 있습니다. 다이어그램에 `RelativeChildShapes` 및 no `Parent`합니다.  
   
-###  <a name="views"></a> Navigating between shapes and elements  
- Domain model elements and shape elements are related by the <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> relationship.  
+###  <a name="views"></a>도형 및 요소 간 탐색  
+ 도메인 모델 요소와 도형 요소에 의해 연관 되는 <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> 관계입니다.  
   
 ```csharp  
 // using Microsoft.VisualStudio.Modeling;  
@@ -397,7 +397,7 @@ PersonShape henryShape =
     .FirstOrDefault() as PersonShape;  
 ```  
   
- The same relationship links relationships to connectors on the diagram:  
+ 동일한 관계는 관계를 다이어그램에서 연결선에 연결:  
   
 ```  
 Descendants link = Descendants.GetLink(henry, edward);  
@@ -407,7 +407,7 @@ DescendantConnector dc =
 // dc.FromShape == henryShape && dc.ToShape == edwardShape  
 ```  
   
- This relationship also links the root of the model to the diagram:  
+ 이 관계에 대 한 링크가 모델의 루트 다이어그램:  
   
 ```  
 FamilyTreeDiagram diagram =   
@@ -415,28 +415,28 @@ FamilyTreeDiagram diagram =
       .FirstOrDefault() as FamilyTreeDiagram;  
 ```  
   
- To get the model element represented by a shape, use:  
+ 도형이 나타내는 모델 요소를 가져오려면 다음을 사용 합니다.  
   
  `henryShape.ModelElement as Person`  
   
  `diagram.ModelElement as FamilyTreeModel`  
   
-### <a name="navigating-around-the-diagram"></a>Navigating around the Diagram  
- In general it is not advisable to navigate between shapes and connectors on the diagram. It is better to navigate the relationships in the model, moving between the shapes and connectors only when it is necessary to work on the appearance of the diagram. These methods link connectors to the shapes at each end:  
+### <a name="navigating-around-the-diagram"></a>맞추고 다이어그램 탐색  
+ 일반적 모양 및 다이어그램에서 연결선을 탐색할 수 있도록 바람직하지 않습니다. 다이어그램의 모양에 작동 하는 데 필요한 경우에 셰이프 및 연결선 간에 이동 하는 모델에서 관계를 탐색 하는 것이 좋습니다. 이러한 메서드는 커넥터 양쪽 끝 모양에 링크:  
   
  `personShape.FromRoleLinkShapes, personShape.ToRoleLinkShapes`  
   
  `connector.FromShape, connector.ToShape`  
   
- Many shapes are composites; they are made up of a parent shape and one or more layers of children. Shapes that are positioned relative to another shape are said to be its *children*. When the parent shape moves, the children move with it.  
+ 셰이프에 필시 복합적; 부모 모양 및 하나 이상의 계층의 자식 구성 됩니다. 다른 모양에 상대적으로 배치 하는 셰이프 이라고 해당 *자식*합니다. 부모 모양 이동 자식을 함께 이동 합니다.  
   
- *Relative children* can appear outside the bounding box of the parent shape. *Nested* children appear strictly inside the bounds of the parent.  
+ *상대 자식* 부모 모양의 경계 상자 외부에 나타날 수 있습니다. *중첩 된* 자식을 부모 범위 내에 엄격 하 게 표시 합니다.  
   
- To obtain the top set of shapes on a diagram, use:  
+ 다이어그램에서 셰이프의 상위 집합을 가져오려면 다음을 사용 합니다.  
   
  `Diagram.NestedChildShapes`  
   
- The ancestor classes of shapes and connectors are:  
+ 셰이프 및 연결선의 상위 항목 클래스는입니다.  
   
  <xref:Microsoft.VisualStudio.Modeling.ModelElement>  
   
@@ -456,31 +456,31 @@ FamilyTreeDiagram diagram =
   
  --------- *YourConnector*  
   
-###  <a name="shapeProperties"></a> Properties of Shapes and Connectors  
- In most cases, it is not necessary to make explicit changes to shapes. When you have changed the model elements, the "fix up" rules update the shapes and connectors. For more information, see [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md).  
+###  <a name="shapeProperties"></a>셰이프 및 연결선의 속성  
+ 대부분의 경우에서 필요는 없습니다 셰이프에 대 한 명시적 변경할 수 있습니다. 모델 요소를 변경 하는 경우 "픽스업" 규칙 셰이프 및 연결선을 업데이트 합니다. 자세한 내용은 참조 [에 대응 하 고 변경 내용을 전파](../modeling/responding-to-and-propagating-changes.md)합니다.  
   
- However, it is useful to make some explicit changes to shapes in properties that are independent of the model elements. For example, you could change these properties:  
+ 그러나 일부를 변경할 명시적 모델 요소와 무관 하는 속성의 모양에 유용 합니다. 예를 들어 이러한 속성을 변경할 수 있습니다.  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Size%2A> - determines the height and width of the shape.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Size%2A>-모양의 너비와 높이 결정 합니다.  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Location%2A> - position relative to the parent shape or diagram  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Location%2A>-부모 모양 또는 다이어그램에 상대적인 위치  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.StyleSet%2A> - the set of pens and brushes used for drawing the shape or connector  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.StyleSet%2A>-펜과 브러시 셰이프 또는 연결선을 그리는 데 사용 되는 집합  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Hide%2A> - makes the shape invisible  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Hide%2A>-하면 모양을 표시 되지 않습니다  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Show%2A> - makes the shape visible after a `Hide()`  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Show%2A>-하면 셰이프 후 볼 수는`Hide()`  
   
-###  <a name="merge"></a> Creating an Element and its Shape  
- When you create an element and link it into the tree of embedding relationships, a shape is automatically created and associated with it. This is done by the "fixup" rules that execute at the end of the transaction. However, the shape will appear in an automatically-assigned location, and its shape, color and other features will have default values. To control how the shape is created, you can use the merge function. You must first add the elements you want to add into an ElementGroup, and then merge the group into the diagram.  
+###  <a name="merge"></a>요소 및 해당 모양 만들기  
+ 요소를 만들고 포함 관계의 트리에 연결 셰이프는 자동으로 만들어지고 연결 된. 이 작업은 트랜잭션이 끝날 때 실행 하는 "수정" 규칙에 의해 수행 됩니다. 그러나 셰이프를 자동으로 할당 된 위치에 표시 됩니다 및 모양, 색 및 기타 기능 기본값을 갖습니다. 셰이프를 만드는 방법을 제어 하려면 병합 기능을 사용할 수 있습니다. 먼저, ElementGroup에 추가할 요소를 추가 하 고 다이어그램에는 그룹을 병합 해야 합니다.  
   
- This method:  
+ 이 방법:  
   
--   Sets the name, if you have assigned a property as the element name.  
+-   요소 이름으로 속성을 할당 한 경우에서 이름을 설정 합니다.  
   
--   Observes any Element Merge Directives that you specified in the DSL Definition.  
+-   DSL 정의에 지정 하는 요소 병합 지시문을 관찰 합니다.  
   
- This example creates a shape at the mouse position, when the user double-clicks the diagram. In the DSL Definition for this sample, the `FillColor` property of `ExampleShape` has been exposed.  
+ 이 예제에서는 사용자가 다이어그램 마우스 위치에 셰이프를 만듭니다. 이 샘플에 대 한 DSL 정의에 `FillColor` 속성 `ExampleShape` 노출 된 합니다.  
   
 ```  
   
@@ -517,24 +517,24 @@ partial class MyDiagram
   
 ```  
   
- If you provide more than one shape, set their relative positions using the `AbsoluteBounds`.  
+ 하나 이상의 셰이프를 제공 하는 경우 설정의 상대적인 위치를 사용 하 여 `AbsoluteBounds`합니다.  
   
- You can also set the color and other exposed properties of connectors using this method.  
+ 색 및이 메서드를 사용 하 여 커넥터의 다른 노출 된 속성을 설정할 수 있습니다.  
   
-### <a name="use-transactions"></a>Use Transactions  
- Shapes, connectors and diagrams are subtypes of <xref:Microsoft.VisualStudio.Modeling.ModelElement> and live in the Store. You must therefore make changes to them only inside a transaction. For more information, see [How to: Use Transactions to Update the Model](../modeling/how-to-use-transactions-to-update-the-model.md).  
+### <a name="use-transactions"></a>트랜잭션을 사용 하 여  
+ 셰이프와 연결선 다이어그램의 하위 형식을 <xref:Microsoft.VisualStudio.Modeling.ModelElement> 와 사용 중인 저장소에 있습니다. 따라서 변경 해야 할 트랜잭션 내에 합니다. 자세한 내용은 참조 [하는 방법: 모델을 업데이트 하려면 트랜잭션을 사용 하 여](../modeling/how-to-use-transactions-to-update-the-model.md)합니다.  
   
-##  <a name="docdata"></a> Document View and Document Data  
- ![Class diagram of standard diagram types](../modeling/media/dsldiagramsanddocs.png "DSLDiagramsandDocs")  
+##  <a name="docdata"></a>문서 데이터와 문서 보기  
+ ![표준 다이어그램 형식의 클래스 다이어그램](../modeling/media/dsldiagramsanddocs.png "DSLDiagramsandDocs")  
   
-## <a name="store-partitions"></a>Store Partitions  
- When a model is loaded, the accompanying diagram is loaded at the same time. Typically, the model is loaded into Store.DefaultPartition, and the diagram content is loaded into another Partition. Usually, the content of each partition is loaded and saved to a separate file.  
+## <a name="store-partitions"></a>파티션을 저장합니다  
+ 모델 로드 될 때 해당 다이어그램 동시에 로드 됩니다. 일반적으로 모델 Store.DefaultPartition를 로드 하 고 다이어그램 내용을 다른 파티션으로 로드 됩니다. 일반적으로 각 파티션의 콘텐츠 로드 되 고 별도 파일로 저장 합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.Modeling.ModelElement>   
- [Validation in a Domain-Specific Language](../modeling/validation-in-a-domain-specific-language.md)   
- [Generating Code from a Domain-Specific Language](../modeling/generating-code-from-a-domain-specific-language.md)   
- [How to: Use Transactions to Update the Model](../modeling/how-to-use-transactions-to-update-the-model.md)   
- [Integrating Models by using Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
- [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md)
+ [도메인 특정 언어의 유효성 검사](../modeling/validation-in-a-domain-specific-language.md)   
+ [도메인 특정 언어에서 코드를 생성합니다.](../modeling/generating-code-from-a-domain-specific-language.md)   
+ [방법: 트랜잭션을 사용 모델을 업데이트 하 여](../modeling/how-to-use-transactions-to-update-the-model.md)   
+ [Visual Studio Modelbus를 사용 하 여 모델을 통합](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
+ [변경 내용에 대한 대응 및 전파](../modeling/responding-to-and-propagating-changes.md)
 

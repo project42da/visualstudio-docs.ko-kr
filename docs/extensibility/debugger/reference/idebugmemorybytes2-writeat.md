@@ -35,13 +35,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 14d5aa4fa026f27f6b083d656cd5df3f8b7d7f41
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-Writes the specified number of bytes of memory, starting at the specified address.  
+지정 된 수가 지정된 된 주소에서 시작 하는 메모리의 바이트를 씁니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT WriteAt(   
@@ -59,22 +59,22 @@ int WriteAt(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pStartContext`  
- [in] The [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object that specifies where to start writing bytes.  
+ [in] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 바이트 쓰기를 시작할 위치를 지정 하는 개체입니다.  
   
  `dwCount`  
- [in] The number of bytes to write.  
+ [in] 쓸 바이트 수입니다.  
   
  `rgbMemory`  
- [in] The bytes to write. This array is assumed to be at least `dwCount` bytes in size.  
+ [in] 쓸 바이트입니다. 이 배열은 적어도 것으로 간주 됩니다 `dwCount` 바이트 크기입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns `S_FALSE` if not all bytes could be written or returns an error code (typically `E_FAIL`).  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 모든 바이트를 작성할 수 또는 오류 코드를 반환 하는 경우 (일반적으로 `E_FAIL`).  
   
-## <a name="remarks"></a>Remarks  
- If the starting address is not within the memory window represented by this [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) object, no writing occurs and an error code of `E_FAIL` is returned — even if the amount to write overlaps into the memory space.  
+## <a name="remarks"></a>설명  
+ 시작 주소 받았습니다 표시 하는 메모리 창의 내 없으면 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) 개체 쓰기 발생 하 고 오류 코드 `E_FAIL` 반환 됩니다-작성할 양을 메모리 공간에 겹치는 경우에 합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

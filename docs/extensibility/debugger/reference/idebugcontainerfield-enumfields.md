@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 1244306cbdfa70b0885274df75a7bf51a063bc30
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcontainerfieldenumfields"></a>IDebugContainerField::EnumFields
-Creates an enumerator for the fields of the container.  
+컨테이너의 필드에 대 한 열거자를 만듭니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT EnumFields(   
@@ -62,29 +62,29 @@ int EnumFields(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `dwKindFilter`  
- [in] A combination of [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) constants that select the fields to be enumerated. Field kinds can describe storage types, such as class or primitive, or specific information, such as local, parameter, or "this" pointer.  
+ [in] 조합을 [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) 필드 열거를 선택 하는 상수입니다. 필드 종류는 저장소 유형, 클래스 또는 기본 형식에서 또는 특정 정보 같은, 로컬, 매개 변수 또는 "this"이 포인터 등을 설명할 수 있습니다.  
   
  `dwModifiersFilter`  
- [in] A combination of [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) constants that select the fields to be enumerated. Field modifiers can be access permissions, such as public or private, or storage information, such as virtual, static, or final.  
+ [in] 조합을 [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) 필드 열거를 선택 하는 상수입니다. 필드 한정자에는 액세스 권한을 public 또는 private, 가상, 정적으로 또는 최종 같은 저장소 정보 등과 같이 될 수 있습니다.  
   
  `pszNameFilter`  
- [in] The name of the field to be enumerated. This can be a null value if all fields are to be returned.  
+ [in] 열거할 필드의 이름입니다. 이 경우 반환 되는 모든 필드가 null 값을 수 있습니다.  
   
  `nameMatch`  
- [in] A value from the [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) enumeration that controls whether searching is case-sensitive or not.  
+ [in] 값은 [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) 여부를 검색 하 고 있는지 여부를 제어 하는 열거형은 대/소문자 구분 합니다.  
   
  `ppEnum`  
- [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing the list of fields. Returns a null value if there are no fields.  
+ [out] 반환 된 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) 필드 목록을 나타내는 개체입니다. 필드가 없는 경우 null 값을 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK or S_FALSE if there are no fields. Otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고 또는 반환 S_FALSE 필드가 없는 경우. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
- The `dwKindFilter`, `dwModifiersFilter`, and `pszNameFilter` parameters can be combined, for example, to select all public virtual methods named "MyMethod".  
+## <a name="remarks"></a>설명  
+ `dwKindFilter`, `dwModifiersFilter`, 및 `pszNameFilter` 매개 변수 조합 수 있습니다, 예를 들어 "변수" 된 모든 공용 가상 메서드를 선택 합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
  [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)   

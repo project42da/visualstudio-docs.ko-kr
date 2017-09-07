@@ -1,5 +1,5 @@
 ---
-title: Writing to the User Settings Store | Microsoft Docs
+title: "사용자 설정 저장소에 쓰기 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,38 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8be43438312773b2e02915f963b1c68fff61e889
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store
-User settings are writeable settings like the ones in the **Tools / Options** dialog, properties windows, and certain other dialog boxes. Visual Studio extensions may use these to store small amounts of data. This walkthrough shows how to add Notepad to Visual Studio as an external tool by reading from and writing to the user settings store.  
+# <a name="writing-to-the-user-settings-store"></a>사용자 설정 저장소에 쓰기
+사용자 설정은 같은 쓰기 가능 설정이 **도구 / 옵션** 대화 상자, 속성 창 및 다른 특정 대화 상자. Visual Studio 확장명 적은 양의 데이터를 저장 하려면이 사용할 수 있습니다. 이 연습에서는 읽기 및 사용자 설정 저장소에 기록 하 여 Visual Studio에는 외부 도구도 메모장을 추가 하는 방법을 보여 줍니다.  
   
-### <a name="backing-up-your-user-settings"></a>Backing up Your User Settings  
+### <a name="backing-up-your-user-settings"></a>Your 사용자 설정 백업  
   
-1.  You must be able to reset the External Tools settings so that you can debug and repeat the procedure. To do this, you must save the original settings so that you can restore them as required.  
+1.  디버깅 하 고이 절차를 반복 수 있도록 외부 도구 설정을 다시 설정 수 있어야 합니다. 이 작업을 수행 하려면 필요에 따라 복원할 수 있도록 원래 설정을 저장 해야 합니다.  
   
-2.  Open Regedit.exe.  
+2.  Regedit.exe를 엽니다.  
   
-3.  Navigate to HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\\.  
+3.  HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools로 이동\\합니다.  
   
     > [!NOTE]
-    >  Make sure that you are looking at the key that contains \14.0Exp\ and not \14.0\\. When you run the experimental instance of Visual Studio, your user settings are in the registry hive "14.0Exp".  
+    >  \14.0Exp\ 및 하지 \14.0을 포함 하는 키에 찾고 확인\\합니다. Visual Studio의 실험적 인스턴스를 실행 하는 경우 레지스트리 하이브 "14.0Exp"에 사용자 설정 됩니다.  
   
-4.  Right-click the \External Tools\ subkey, and then click **Export**. Make sure that **Selected branch** is selected.  
+4.  \External Tools\ 하위 키를 마우스 오른쪽 단추로 누른 **내보내기**합니다. 다음 사항을 확인 **선택한 분기** 을 선택 합니다.  
   
-5.  Save the resulting External Tools.reg file.  
+5.  생성 되는 외부 Tools.reg 파일을 저장 합니다.  
   
-6.  Later, when you want to reset the External Tools settings, select the HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\ registry key and click **Delete** on the context menu.  
+6.  외부 도구 설정을 다시 설정 하려는 경우 HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\ 레지스트리 키를 선택 하 고 클릭 나중 **삭제** 상황에 맞는 메뉴입니다.  
   
-7.  When the **Confirm Key Delete** dialog box appears, click **Yes**.  
+7.  경우는 **키 삭제 확인** 대화 상자가 나타나면 클릭 **예**합니다.  
   
-8.  Right-click the External Tools.reg file that you saved earlier, click **Open with**, and then click **Registry Editor**.  
+8.  이전에 저장 하는 외부 Tools.reg 파일을 마우스 오른쪽 단추로 클릭 하 여, **로 열기**, 클릭 하 고 **레지스트리 편집기**합니다.  
   
-## <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store  
+## <a name="writing-to-the-user-settings-store"></a>사용자 설정 저장소에 쓰기  
   
-1.  Create a VSIX project named UserSettingsStoreExtension and then add a custom command named UserSettingsStoreCommand. For more information about how to create a custom command, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md)  
+1.  UserSettingsStoreExtension 라는 VSIX 프로젝트 만들고 UserSettingsStoreCommand 라는 사용자 지정 명령 추가 합니다. 사용자 지정 명령을 만드는 방법에 대 한 자세한 내용은 참조 [메뉴 명령을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
-2.  In UserSettingsStoreCommand.cs, add the following using statements:  
+2.  UserSettingsStoreCommand.cs에 다음 추가 문을 사용 하 여:  
   
     ```csharp  
     using System.Collections.Generic;  
@@ -69,7 +69,7 @@ User settings are writeable settings like the ones in the **Tools / Options** di
     using Microsoft.VisualStudio.Shell.Settings;  
     ```  
   
-3.  In MenuItemCallback, delete the body of the method and get the user settings store, as follows:  
+3.  MenuItemCallback에서 메서드의 본문을 삭제 하 고 다음과 같이 설정 저장 사용자 가져오기:  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -79,7 +79,7 @@ User settings are writeable settings like the ones in the **Tools / Options** di
     }  
     ```  
   
-4.  Now find out whether Notepad is already set as an external tool. You need to iterate through all the external tools to determine whether the ToolCmd setting is "Notepad", as follows:  
+4.  이제 메모장 외부 도구로 이미 설정 되어 있는지 알아보십시오. 되는지 확인 하려면 ToolCmd 설정은 "Notepad" 다음과 같은 모든 외부 도구를 반복 해야 합니다.  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -103,7 +103,7 @@ User settings are writeable settings like the ones in the **Tools / Options** di
   
     ```  
   
-5.  If Notepad hasn't been set as an external tool, set it as follows:  
+5.  메모장 외부 도구로 설정 되지 않은 경우이 다음과 같이 설정.  
   
     ```vb  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -139,10 +139,10 @@ User settings are writeable settings like the ones in the **Tools / Options** di
     }  
     ```  
   
-6.  Test the code. Remember that it adds Notepad as an External Tool, so you must roll back the registry before running it a second time.  
+6.  코드를 테스트 합니다. 추가 메모장 외부 도구로 롤백해야 레지스트리를 두 번째로 실행 하기 전에 실행 해야 합니다.  
   
-7.  Build the code and start debugging.  
+7.  코드를 빌드하고 디버깅을 시작 합니다.  
   
-8.  On the **Tools** menu, click **Invoke UserSettingsStoreCommand**. This will add Notepad to the **Tools** menu.  
+8.  에 **도구** 메뉴를 클릭 하 여 **UserSettingsStoreCommand 호출**합니다. 메모장을 추가 합니다.는 **도구** 메뉴.  
   
-9. Now you should see Notepad on the Tools / Options menu, and clicking **Notepad** should bring up an instance of Notepad.
+9. 메모장 도구에 표시 되어야 하는 이제 / 옵션 메뉴를 클릭 한 **메모장** 메모장의 인스턴스를 준비 해야 합니다.

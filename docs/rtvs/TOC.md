@@ -1,4 +1,5 @@
 # [R Tools for Visual Studio](index.md)
+## [데이터 과학 및 분석 응용 프로그램 워크로드](data-science-workload.md)
 ## [설치](installation.md)
 ## [R 시작](getting-started-with-r.md)
 ### [샘플](getting-started-samples.md)

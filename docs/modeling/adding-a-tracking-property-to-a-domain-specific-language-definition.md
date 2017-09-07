@@ -1,5 +1,5 @@
 ---
-title: Adding a Tracking Property to a Domain-Specific Language Definition | Microsoft Docs
+title: "도메인 특정 언어 정의에 추적 속성을 추가 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,34 +33,34 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ef5f86cb3b41af6cc9e7432cdbfb7365471320b8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Adding a Tracking Property to a Domain-Specific Language Definition
-This walkthrough shows how to add a tracking property to a domain model.  
+# <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>도메인별 언어 정의에 추적 속성 추가
+이 도메인 모델에 추적 속성을 추가 하는 방법을 보여 줍니다.  
   
- A *tracking domain* property is a property that can be updated by the user but which has a default value that is calculated by using the values of other domain properties or elements.  
+ A *도메인 추적* 속성은 사용자가 업데이트할 수 있는 이지만 다른 요소나 도메인 속성의 값을 사용 하 여 계산 된 기본값을가 하는 속성입니다.  
   
- For example, in the Domain-Specific Language Tools (DSL Tools), the Display Name property of a domain class has a default value that is calculated by using the name of the domain class, but a user can change the value at design time or reset it to the calculated value.  
+ 예를 들어 도메인 특정 언어 도구 (DSL 도구)에서 도메인 클래스의 속성에는 도메인 클래스 아니라 사용자의 이름을 사용 하 여 계산 된 기본값이 표시 이름 디자인 타임에 값을 변경할 수 있습니다 또는 계산된 된 값으로 다시 설정 합니다.  
   
- In this walkthrough, you create a domain-specific language (DSL) that has a Namespace tracking property that has a default value based on the Default Namespace property of the model. For more information about tracking properties, see [Defining Tracking Properties](http://msdn.microsoft.com/en-us/0538b0e4-6221-4e7d-911a-b92cd622f0be).  
+ 이 연습에서는 모델의 기본 Namespace 속성에 따라 기본값을 가진 속성을 추적 하는 Namespace를 가진 도메인 특정 언어 DSL ()를 만듭니다. 속성을 추적 하는 방법에 대 한 자세한 내용은 참조 [추적 속성 정의](http://msdn.microsoft.com/en-us/0538b0e4-6221-4e7d-911a-b92cd622f0be)합니다.  
   
--   The DSL Tools support tracking property descriptors. However, the DSL designer cannot be used to add a tracking property to a language. Therefore, you must add custom code to define and implement the tracking property.  
+-   추적 속성 설명자 DSL 도구 지원입니다. 그러나 언어로 추적 속성을 추가 하려면 DSL 디자이너를 사용할 수 없습니다. 따라서 정의 하 고 추적 속성을 구현 하는 사용자 지정 코드를 추가 해야 합니다.  
   
- A tracking property has two states: tracking, and updated by the user. Tracking properties have the following features:  
+ 추적 속성에는 두 개의 상태:, 추적 하 고 사용자가 업데이트 합니다. 추적 속성에는 다음과 같은 특징이 있습니다.  
   
--   When in the tracking state, the value of the tracking property is calculated, and the value is updated as other properties in the model change.  
+-   추적 상태에 있을 때 추적 속성의 값은 계산 하 고 값이 다른 속성에는 모델을 변경으로 업데이트 됩니다.  
   
--   When in the updated by user state, the value of the tracking property retains the value to which the user last set the property.  
+-   업데이트 된 때 사용자 상태에 따라 추적 속성의 값에는 사용자 속성 마지막 설정 된 값이 그대로 유지 합니다.  
   
--   In the **Properties** window, the **Reset** command for the tracking property is only enabled when the property is in the updated by user state. The **Reset** command sets the tracking property state to tracking.  
+-   에 **속성** 창은 **다시 설정** 추적 속성은 속성이에 업데이트 된 경우에 활성화 됩니다에 대 한 명령에서 사용자 상태입니다. **재설정** 추적 속성을 설정 하는 명령 상태를 추적 합니다.  
   
--   In the **Properties** window, when the tracking property is in the tracking state, its value is displayed in a regular font.  
+-   에 **속성** 창, 추적 속성 추적 상태에 해당 값은 일반 글꼴로 표시 됩니다.  
   
--   In the **Properties** window, when the tracking property is in the updated by user state, its value is displayed in a bold font.  
+-   에 **속성** 창, 추적 속성은 업데이트 된 사용자 상태에 따라 해당 값은 굵은 글꼴로 표시 됩니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Before you can start this walkthrough, you must first install these components:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 시작 하기 전에 이러한 구성 요소를 먼저 설치 해야 합니다.  
   
 |||  
 |-|-|  
@@ -68,122 +68,122 @@ This walkthrough shows how to add a tracking property to a domain model.
 |[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580)|  
 |[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](http://go.microsoft.com/fwlink/?LinkID=185581)|  
   
-## <a name="creating-the-dsl-project"></a>Creating the DSL Project  
- Create the project for your domain-specific language.  
+## <a name="creating-the-dsl-project"></a>DSL 프로젝트 만들기  
+ 도메인 특정 언어에 대 한 프로젝트를 만듭니다.  
   
-#### <a name="to-create-the-project"></a>To create the project  
+#### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
-1.  Create a Domain-Specific Language Designer project. Name it `TrackingPropertyDSL`.  
+1.  도메인 특정 언어 디자이너 프로젝트를 만듭니다. 이 EventHandler의 이름을 `TrackingPropertyDSL`로 지정합니다.  
   
-2.  In the **Domain-Specific Language Designer Wizard**, set the following options:  
+2.  에 **도메인 특정 언어 디자이너 마법사**, 다음 옵션을 설정 합니다.  
   
-    1.  Select the **MinimalLanguage** template.  
+    1.  선택 된 **MinimalLanguage** 서식 파일입니다.  
   
-    2.  Use the default name for the domain-specific language, `TrackingPropertyDSL`.  
+    2.  도메인 특정 언어에 대 한 기본 이름을 사용 하 여 `TrackingPropertyDSL`합니다.  
   
-    3.  Set the extension for model files to `trackingPropertyDsl`.  
+    3.  모델 파일에 대 한 확장 설정 `trackingPropertyDsl`합니다.  
   
-    4.  Use the default template icon for the model files.  
+    4.  모델 파일에 대 한 기본 서식 파일 아이콘을 사용 합니다.  
   
-    5.  Set the name of the product to `Product Name`.  
+    5.  제품의 이름을 설정 `Product Name`합니다.  
   
-    6.  Set the name of the company to `Company Name`.  
+    6.  회사의 이름을 설정 `Company Name`합니다.  
   
-    7.  Use the default value for the root namespace for projects in the solution, `CompanyName.ProductName.TrackingPropertyDSL`.  
+    7.  프로젝트는 솔루션에 대 한 루트 네임 스페이스에 대 한 기본값을 사용 하 여 `CompanyName.ProductName.TrackingPropertyDSL`합니다.  
   
-    8.  Allow the wizard to create a strong name key file for your assemblies.  
+    8.  어셈블리에 대 한 강력한 이름 키 파일을 만드는 마법사를 사용할 수 있음  
   
-    9. Review the details of the solution, and then click **Finish** to create the DSL definition project.  
+    9. 솔루션의 세부 정보를 검토 한 다음 클릭 **마침** DSL 정의 프로젝트를 만듭니다.  
   
-## <a name="customizing-the-default-dsl-definition"></a>Customizing the Default DSL Definition  
- In this section, you customize the DSL definition to contain the following items:  
+## <a name="customizing-the-default-dsl-definition"></a>기본 DSL 정의 사용자 지정  
+ 이 단원의 다음 항목을 포함할 DSL 정의 사용자 지정할 수 있습니다.  
   
--   A Namespace tracking property for every element of the model.  
+-   추적 모델의 모든 요소에 대해 속성이 Namespace입니다.  
   
--   A Boolean IsNamespaceTracking property for every element of the model. This property will indicate whether the tracking property is in the tracking state or in the updated by user state.  
+-   모델의 모든 요소에 대해 부울 IsNamespaceTracking 속성입니다. 이 속성은 추적 상태 또는 업데이트 된 추적 속성 인지 나타냅니다 사용자 상태에 따라 합니다.  
   
--   A Default Namespace property for the model. This property will be used to calculate the default value of the Namespace tracking property.  
+-   모델에 대 한 기본 Namespace 속성입니다. 추적 속성이 Namespace의 기본값을 계산 하려면이 속성을 사용 합니다.  
   
--   A CustomElements calculated property for the model. This property will indicate the proportion of elements that have a custom namespace.  
+-   모델에 대 한 계산 CustomElements 속성입니다. 이 속성은 사용자 지정 네임 스페이스를 포함 하는 요소의 비율을 나타냅니다.  
   
-#### <a name="to-add-the-domain-properties"></a>To add the domain properties  
+#### <a name="to-add-the-domain-properties"></a>도메인 속성을 추가 하려면  
   
-1.  In the DSL designer, right-click the **ExampleModel** domain class, point to **Add**, and then click **DomainProperty**.  
+1.  DSL 디자이너에서 마우스 오른쪽 단추로 클릭는 **ExampleModel** 도메인 클래스, 가리킨 **추가**, 클릭 하 고 **DomainProperty**합니다.  
   
-    1.  Name the new property `DefaultNamespace`.  
+    1.  새 속성 이름을 `DefaultNamespace`합니다.  
   
-    2.  In the **Properties** window for the new property, set **Default Value** to `DefaultNamespace`, and set **Type** to **String**.  
+    2.  에 **속성** 새 속성에 대 한 창 설정 **Default Value** 를 `DefaultNamespace`, 설정 및 **형식** 를 **문자열**합니다.  
   
-2.  To the **ExampleModel** domain class, add a domain property named `CustomElements`.  
+2.  에 **ExampleModel** 도메인 클래스, 라는 도메인 속성을 추가 `CustomElements`합니다.  
   
-     In the **Properties** window for the new property, set **Kind** to **Calculated**.  
+     에 **속성** 새 속성에 대 한 창 설정 **종류** 를 **계산**합니다.  
   
-3.  To the **ExampleElement** domain class, add a domain property named `Namespace`.  
+3.  에 **ExampleElement** 도메인 클래스, 라는 도메인 속성을 추가 `Namespace`합니다.  
   
-     In the **Properties** window for the new property, set **Is Browsable** to **False**, and set **Kind** to **CustomStorage**.  
+     에 **속성** 새 속성에 대 한 창 설정 **찾아볼 수는** 를 **False**, 설정 및 **종류** 를 **CustomStorage** .  
   
-4.  To the **ExampleElement** domain class, add a domain property named `IsNamespaceTracking`.  
+4.  에 **ExampleElement** 도메인 클래스, 라는 도메인 속성을 추가 `IsNamespaceTracking`합니다.  
   
-     In the **Properties** window for the new property, set **Is Browsable** to **False**, set **Default Value** to `true`, and set **Type** to **Boolean**.  
+     에 **속성** 창에 대 한 새 속성을 설정 **찾아볼 수는** 를 **False**설정, **Default Value** 를 `true`, 설정 **형식** 를 **부울**합니다.  
   
-#### <a name="to-update-the-diagram-elements-and-dsl-details"></a>To update the diagram elements and DSL details  
+#### <a name="to-update-the-diagram-elements-and-dsl-details"></a>다이어그램 요소 및 DSL 세부 정보를 업데이트 하려면  
   
-1.  In the DSL designer, right-click the **ExampleShape** geometry shape, point to **Add**, and then click **Text Decorator**.  
+1.  DSL 디자이너에서 마우스 오른쪽 단추로 클릭는 **ExampleShape** geometry 셰이프를 가리키고 **추가**, 클릭 하 고 **텍스트 Decorator**합니다.  
   
-    1.  Name the new text decorator `NamespaceDecorator`.  
+    1.  새 텍스트 decorator 이름을 `NamespaceDecorator`합니다.  
   
-    2.  In the **Properties** window for the text decorator, set **Position** to **InnerBottomLeft**.  
+    2.  에 **속성** 텍스트 데코레이터에 대 한 창 설정 **위치** 를 **InnerBottomLeft**합니다.  
   
-2.  In the DSL designer, select the line that connects the **ExampleElement** class to the **ExampleShape** shape.  
+2.  DSL 디자이너에서 연결 하는 선을 선택는 **ExampleElement** 클래스는 **ExampleShape** 셰이프.  
   
-    1.  In the **DSL Details** window, select the **Decorator Maps** tab.  
+    1.  에 **DSL 세부 정보** 창에서는 **Decorator 지도** 탭 합니다.  
   
-    2.  In the **Decorators** list, select **NamespaceDecorator**, select its check box and then on the **Display property** list, select **Namespace**.  
+    2.  에 **데코레이터** 목록에서 **NamespaceDecorator**, 확인란은 선택에서 **표시 속성** 목록에서 **Namespace**.  
   
-3.  In **DSL Explorer**, expand the **Domain Classes** folder, right-click the **ExampleElement** node, and then click **Add New Domain Type Descriptor**.  
+3.  **DSL 탐색기**를 확장 하 고는 **도메인 클래스** 폴더를 마우스 오른쪽 단추로 클릭는 **ExampleElement** 노드를 차례로 클릭 한 다음 **새 도메인 형식 설명자 추가**.  
   
-    1.  Expand the **ExampleElement** node, and select the **Custom Type Descriptor (Domain Type Descriptor)** node.  
+    1.  확장 된 **ExampleElement** 노드를 선택한는 **사용자 지정 형식 설명자 (도메인 형식 설명자)** 노드.  
   
-    2.  In the **Properties** window for the domain type descriptor, set **Custom Coded** to **True**.  
+    2.  에 **속성** 도메인 형식 설명자에 대 한 창 설정 **코딩 된 사용자 지정** 를 **True**합니다.  
   
-4.  In **DSL Explorer**, select the **Xml Serialization Behavior** node.  
+4.  **DSL 탐색기**, 선택는 **Xml Serialization 동작** 노드.  
   
-    1.  In the **Properties** window, set **Custom Post Load** to **True**.  
+    1.  에 **속성** 창의 설정 **사용자 지정 Post 부하** 를 **True**합니다.  
   
-## <a name="transforming-templates"></a>Transforming Templates  
- Now that you have defined the domain classes and properties for your DSL, you can verify that the DSL definition can be transformed correctly to regenerate the code for your project.  
+## <a name="transforming-templates"></a>템플릿 변형  
+ DSL에는 도메인 클래스 및 속성을 정의 했으므로 DSL 정의 프로젝트에 대 한 코드를 다시 생성으로 올바르게 변환할 수 있는지 확인할 수 있습니다.  
   
-#### <a name="to-transform-the-text-templates"></a>To transform the text templates  
+#### <a name="to-transform-the-text-templates"></a>텍스트 템플릿 변환 하려면  
   
-1.  On the **Solution Explorer** toolbar, click **Transform All Templates**.  
+1.  에 **솔루션 탐색기** 도구 모음에서 클릭 **모든 템플릿 변형**합니다.  
   
-2.  The system regenerates the code for the solution, and saves DslDefinition.dsl. For information about the XML format of definition files, see [The DslDefinition.dsl File](../modeling/the-dsldefinition-dsl-file.md).  
+2.  시스템은 솔루션에 대 한 코드를 다시 생성을 DslDefinition.dsl를 저장 합니다. 정의 파일의 XML 형식에 대 한 정보를 참조 하십시오. [DslDefinition.dsl 파일](../modeling/the-dsldefinition-dsl-file.md)합니다.  
   
-## <a name="creating-files-for-custom-code"></a>Creating Files for Custom Code  
- When you transform all templates, the system generates the source code that defines your domain-specific language in the Dsl and DslPackage projects. So that you can avoid interfering with the generated text, write your custom code in files that are distinct from the generated code files.  
+## <a name="creating-files-for-custom-code"></a>사용자 지정 코드에 대 한 파일 만들기  
+ 모든 템플릿 변형 하는 경우 시스템은 Dsl 및 DslPackage 프로젝트에 도메인 특정 언어를 정의 하는 소스 코드를 생성 합니다. 생성 된 텍스트에 방해가 방지할 수 있도록 생성된 된 코드 파일에 구분 된 파일에 사용자 지정 코드를 작성 합니다.  
   
- You must provide code for maintaining the value and the state of your tracking property. To help you distinguish your custom code from the generated code, and to avoid file naming conflicts, put your custom code files in a separate subfolder.  
+ 값 및 추적 속성의 상태를 유지 관리 하기 위한 코드를 제공 해야 합니다. 생성된 된 코드에서 사용자 지정 코드를 구별할 수 있도록 하 고 파일 이름 충돌을 방지 하기 위해 별도 하위 폴더에 사용자 지정 코드 파일을 보관 합니다.  
   
-#### <a name="to-create-the-code-files"></a>To create the code files  
+#### <a name="to-create-the-code-files"></a>코드 파일을 만들려면  
   
-1.  In **Solution Explorer**, right-click the **DSL** project, point to **Add**, and then click **New Folder**. Name the new folder `CustomCode`.  
+1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **DSL** 프로젝트를 가리키도록 **추가**, 클릭 하 고 **새 폴더**합니다. 새 폴더 이름을 `CustomCode`합니다.  
   
-2.  Right-click the new **CustomCode** folder, point to **Add**, and then click **New Item**.  
+2.  새을 마우스 오른쪽 단추로 클릭 **CustomCode** 폴더를 가리키도록 **추가**, 클릭 하 고 **새 항목**합니다.  
   
-3.  Select the **Code File** template, set the **Name** to `NamespaceTrackingProperty.cs`, and then click **OK**.  
+3.  선택 된 **코드 파일** 서식 파일을 설정는 **이름** 를 `NamespaceTrackingProperty.cs`, 클릭 하 고 **확인**합니다.  
   
-     The NamespaceTrackingProperty.cs file is created and opened for editing.  
+     NamespaceTrackingProperty.cs 파일을 만들고 편집할 수 있도록 열립니다.  
   
-4.  In the folder, create the following code files: `ExampleModel.cs,``HelperClasses.cs`, `Serialization.cs`, and `TypeDescriptor.cs`.  
+4.  폴더에서 다음 코드 파일을 만듭니다: `ExampleModel.cs,``HelperClasses.cs`, `Serialization.cs`, 및 `TypeDescriptor.cs`합니다.  
   
-5.  In the **DslPackage** project, also create a `CustomCode` folder, and add to it a `Package.cs` code file.  
+5.  에 **DslPackage** 프로젝트를 만들 수도 `CustomCode` 폴더를 추가 하 고는 `Package.cs` 코드 파일.  
   
-## <a name="adding-helper-classes-to-support-tracking-properties"></a>Adding Helper Classes to Support Tracking Properties  
- To the HelperClasses.cs file, add the `TrackingHelper` and `CriticalException` classes as follows. You will reference these classes later in this walkthrough.  
+## <a name="adding-helper-classes-to-support-tracking-properties"></a>추적 속성을 지원 하기 위해 도우미 클래스를 추가 합니다.  
+ HelperClasses.cs 파일에 추가 `TrackingHelper` 및 `CriticalException` 클래스 다음과 같습니다. 이 연습의 뒷부분에서는 이러한 클래스를 참조 합니다.  
   
-#### <a name="to-add-the-helper-classes"></a>To add the helper classes  
+#### <a name="to-add-the-helper-classes"></a>도우미 클래스를 추가 하려면  
   
-1.  Add the following code to the HelperClasses.cs file.  
+1.  HelperClasses.cs 파일에 다음 코드를 추가 합니다.  
   
     ```csharp  
     using System;  
@@ -258,17 +258,17 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-for-the-custom-type-descriptor"></a>Adding Custom Code for the Custom Type Descriptor  
- Implement the `GetCustomProperties` method for the type descriptor for the `ExampleModel` domain class.  
+## <a name="adding-custom-code-for-the-custom-type-descriptor"></a>사용자 지정 형식 설명자에 대 한 사용자 지정 코드 추가  
+ 구현 된 `GetCustomProperties` 에 대 한 형식 설명자에 대 한 메서드는 `ExampleModel` 도메인 클래스입니다.  
   
 > [!NOTE]
->  The code that the DSL Tools generate for the custom type descriptor for `ExampleModel` calls `GetCustomProperties`; however, the DSL Tools do not generate code that implements the method.  
+>  DSL 도구에 대 한 사용자 지정 형식 설명자에 대해 생성 하는 코드 `ExampleModel` 호출 `GetCustomProperties`소비량이 적어지지만 DSL 도구의 메서드를 구현 하는 코드를 생성 하지 않습니다.  
   
- Defining this method creates the tracking property descriptor for the Namespace tracking property. Also, providing attributes for the tracking property enables the **Properties** window to display the property correctly.  
+ 추적이이 메서드를 정의 하면 추적 속성이 Namespace에 대 한 속성 설명자입니다. 또한 사용 추적 속성에 대 한 특성을 제공 하는 **속성** 창에 속성을 올바르게 표시 합니다.  
   
-#### <a name="to-modify-the-type-descriptor-for-the-examplemodel-domain-class"></a>To modify the type descriptor for the ExampleModel domain class  
+#### <a name="to-modify-the-type-descriptor-for-the-examplemodel-domain-class"></a>ExampleModel 도메인 클래스에 대 한 형식 설명자를 수정 하려면  
   
-1.  Add the following code to the TypeDescriptor.cs file.  
+1.  TypeDescriptor.cs 파일에 다음 코드를 추가 합니다.  
   
     ```csharp  
     using System;  
@@ -326,12 +326,12 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-for-the-package"></a>Adding Custom Code for the Package  
- The generated code defines a type description provider for the ExampleElement domain class; however, you must add code to instruct the DSL to use this type description provider.  
+## <a name="adding-custom-code-for-the-package"></a>패키지에 대 한 사용자 지정 코드 추가  
+ 생성 된 코드에서 ExampleElement 도메인 클래스;에 대 한 형식 설명 공급자를 정의합니다. 그러나이 형식 설명 공급자를 사용 하는 DSL을 지시 하는 코드를 추가 해야 합니다.  
   
-#### <a name="to-update-the-dsl-package-to-use-your-custom-type-descriptor"></a>To update the DSL package to use your custom type descriptor  
+#### <a name="to-update-the-dsl-package-to-use-your-custom-type-descriptor"></a>사용자 지정 형식 설명자를 사용 하는 DSL 패키지를 업데이트 하려면  
   
-1.  Add the following code to the Package.cs file.  
+1.  Package.cs 파일에 다음 코드를 추가 합니다.  
   
     ```csharp  
     using System.ComponentModel;  
@@ -354,21 +354,21 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-for-the-model"></a>Adding Custom Code for the Model  
- Implement the `GetCustomElementsValue` method for the `ExampleModel` domain class.  
+## <a name="adding-custom-code-for-the-model"></a>모델에 대 한 사용자 지정 코드 추가  
+ 구현 된 `GetCustomElementsValue` 에 대 한 메서드는 `ExampleModel` 도메인 클래스입니다.  
   
 > [!NOTE]
->  The code that the DSL Tools generate for `ExampleModel` calls `GetCustomElementsValue`; however, the DSL Tools do not generate code that implements the method.  
+>  DSL 도구에 대 한 생성 하는 코드 `ExampleModel` 호출 `GetCustomElementsValue`소비량이 적어지지만 DSL 도구의 메서드를 구현 하는 코드를 생성 하지 않습니다.  
   
- Defining the `GetCustomElementsValue` method provides the logic for the CustomElements calculated property of `ExampleModel`. This method counts the number of `ExampleElement` domain classes that have a Namespace tracking property that has a user-updated value, and returns a string that represents this count as a proportion of the total elements in the model.  
+ 정의 `GetCustomElementsValue` 의 CustomElements 계산 된 속성에 대 한 논리를 제공 하는 메서드 `ExampleModel`합니다. 이 메서드는 횟수를 계산 `ExampleElement` 도메인 클래스를 추적에 사용자를 업데이트 하는 값을 모델의 총 요소에 대 한 비율로이 수를 나타내는 문자열을 반환 하는 속성이 Namespace 있는 클래스입니다.  
   
- In addition, add an `OnDefaultNamespaceChanged` method to `ExampleModel`, and override the `OnValueChanged` method of the `DefaultNamespacePropertyHandler` nested class of `ExampleModel` to call `OnDefaultNamespaceChanged`.  
+ 또한 추가 `OnDefaultNamespaceChanged` 메서드를 `ExampleModel`, 재정의 `OnValueChanged` 의 메서드는 `DefaultNamespacePropertyHandler` 중첩 된 클래스의 `ExampleModel` 를 호출할 `OnDefaultNamespaceChanged`합니다.  
   
- Because the DefaultNamespace property is used to calculate the Namespace tracking property, `ExampleModel` must notify all `ExampleElement` domain classes that the value of DefaultNamespace has changed.  
+ 추적 속성, Namespace를 계산 하는 DefaultNamespace 속성은 사용 하기 때문에 `ExampleModel` 모든 알려야 `ExampleElement` DefaultNamespace의 값이 변경 하는 도메인 클래스입니다.  
   
-#### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>To modify the property handler for the tracked property  
+#### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>추적 된 속성에 대 한 속성 처리기를 수정 하려면  
   
-1.  Add the following code to the ExampleModel.cs file.  
+1.  ExampleModel.cs 파일에 다음 코드를 추가 합니다.  
   
     ```csharp  
     using System.Linq;  
@@ -431,19 +431,19 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-for-the-tracking-property"></a>Adding Custom Code for the Tracking Property  
- Add a `CalculateNamespace` method to the `ExampleElement` domain class.  
+## <a name="adding-custom-code-for-the-tracking-property"></a>추적 속성에 대 한 사용자 지정 코드 추가  
+ 추가 `CalculateNamespace` 메서드는 `ExampleElement` 도메인 클래스입니다.  
   
- Defining this method provides the logic for the CustomElements calculated property of `ExampleModel`. This method counts the number of `ExampleElement` domain classes that have a Namespace tracking property that is in the updated by user state, and returns a string that represents this count as a proportion of the total elements in the model.  
+ 이 메서드를 정의의 계산 CustomElements 속성에 대 한 논리를 제공 `ExampleModel`합니다. 이 메서드는 횟수를 계산 `ExampleElement` 도메인 있는 클래스의 속성 업데이트는에 있는 추적 Namespace 사용자 상태에 따라 모델의 총 요소에 대 한 비율로이 수를 나타내는 문자열을 반환 합니다.  
   
- Also, add storage for, and methods to get and set, the Namespace custom storage property of the `ExampleElement` domain class.  
+ 또한, 저장소 및 가져오고의 Namespace 사용자 지정 저장소 속성을 설정 하는 메서드를 추가 `ExampleElement` 도메인 클래스입니다.  
   
 > [!NOTE]
->  The code that the DSL Tools generate for `ExampleModel` calls the get and set methods; however, the DSL Tools do not generate code that implements the methods.  
+>  DSL 도구에 대 한 생성 하는 코드 `ExampleModel` get 호출 및 set 메서드; 하지만 DSL 도구의 메서드를 구현 하는 코드 생성 하지 않습니다.  
   
-#### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>To add the method for the custom type descriptor  
+#### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>사용자 지정 형식 설명자에 대 한 메서드를 추가 하려면  
   
-1.  Add the following code to the NamespaceTrackingProperty.cs file.  
+1.  NamespaceTrackingProperty.cs 파일에 다음 코드를 추가 합니다.  
   
     ```csharp  
     using System;  
@@ -601,15 +601,15 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-to-support-serialization"></a>Adding Custom Code to Support Serialization  
- Add code to support the custom post-load behavior for XML serialization.  
+## <a name="adding-custom-code-to-support-serialization"></a>Serialization을 지원 하기 위해 사용자 지정 코드 추가  
+ XML serialization에 대 한 사용자 지정 로드 후 동작을 지 원하는 코드를 추가 합니다.  
   
 > [!NOTE]
->  The code that the DSL Tools generate calls the `OnPostLoadModel` and `OnPostLoadModelAndDiagram` methods; however, the DSL Tools do not generate code that implements these methods.  
+>  하지만 DSL 도구의 호출을 생성 하는 코드는 `OnPostLoadModel` 및 `OnPostLoadModelAndDiagram` 방식의 DSL 도구의 이러한 메서드를 구현 하는 코드 생성 하지 않습니다.  
   
-#### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>To add code to support the custom post-load behavior  
+#### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>사용자 지정 로드 후 동작을 지원 하도록 코드를 추가 하려면  
   
-1.  Add the following code to the Serialization.cs file.  
+1.  Serialization.cs 파일에 다음 코드를 추가 합니다.  
   
     ```csharp  
     using System;  
@@ -731,51 +731,51 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="testing-the-language"></a>Testing the Language  
- The next step is to build and run the DSL designer in a new instance of [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] so that you can verify that the tracking property is working correctly.  
+## <a name="testing-the-language"></a>언어를 테스트합니다.  
+ 빌드하고 DSL 디자이너의 새 인스턴스를 실행 하려면 다음 단계는 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 추적 속성이 제대로 작동 하는지 확인할 수 있도록 합니다.  
   
-#### <a name="to-exercise-the-language"></a>To exercise the language  
+#### <a name="to-exercise-the-language"></a>언어를 연습 하려면  
   
-1.  On the **Build** menu, click **Rebuild Solution**.  
+1.  에 **빌드** 메뉴를 클릭 하 여 **솔루션 다시 빌드**합니다.  
   
-2.  On the **Debug** menu, click **Start Debugging**.  
+2.  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
   
-     The experimental build of [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] opens the **Debugging** solution, which contains an empty test file.  
+     실험적 빌드 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 열립니다는 **디버깅** 빈 테스트 파일이 포함 된 솔루션입니다.  
   
-3.  In **Solution Explorer**, double-click the Test.trackingPropertyDsl file to open it in the designer, and then click the design surface.  
+3.  **솔루션 탐색기**를 디자이너에서 열려는 Test.trackingPropertyDsl 파일을 두 번 클릭 한 다음 디자인 화면을 클릭 합니다.  
   
-     Notice that in the **Properties** window for the diagram, the **Default Namespace** property is **DefaultNamespace**, and the **Custom Elements** property is **0/0**.  
+     에 **속성** 다이어그램에 대 한 창은 **Default Namespace** 속성은 **DefaultNamespace**, 및 **사용자지정요소** 속성은 **0/0**합니다.  
   
-4.  Drag an **ExampleElement** element from the **Toolbox** to the diagram surface.  
+4.  끌어서는 **ExampleElement** 에서 요소는 **도구 상자** 상위 합니다.  
   
-5.  In the **Properties** window for the element, select the **Element Namespace** property, and change the value from **DefaultNamespace** to **OtherNamespace**.  
+5.  에 **속성** 선택 요소에 대 한 창은 **요소 Namespace** 속성에서 값을 변경 하 고 **DefaultNamespace** 를  **OtherNamespace**합니다.  
   
-     Notice that the value of **Element Namespace** is now shown in bold.  
+     다음에 유의 값 **요소 Namespace** 이제 굵게 표시 됩니다.  
   
-6.  In the **Properties** window, right-click **Element Namespace**, and then click **Reset**.  
+6.  에 **속성** 창에서 마우스 오른쪽 단추로 클릭 **요소 Namespace**, 클릭 하 고 **재설정**합니다.  
   
-     The value of the property is changed to **DefaultNamespace**, and the value is shown in a regular font.  
+     속성의 값이 **DefaultNamespace**는 값은 일반 글꼴로 표시 합니다.  
   
-     Right-click **Element Namespace** again. The **Reset** command is now disabled because the property is currently in its tracking state.  
+     마우스 오른쪽 단추로 클릭 **요소 Namespace** 다시 합니다. **재설정** 명령 속성은 현재 추적 상태에서 이므로 이제 비활성화 됩니다.  
   
-7.  Drag another **ExampleElement** from the **Toolbox** to the diagram surface, and change its **Element Namespace** to **OtherNamespace**.  
+7.  다른 **ExampleElement** 에서 **도구 상자** 다이어그램 화면을 변경 하는 **요소 Namespace** 를 **OtherNamespace**합니다.  
   
-8.  Click the design surface.  
+8.  디자인 화면을 클릭 합니다.  
   
-     In the **Properties** window for the diagram, the value of **Custom Elements** is now **1/2**.  
+     에 **속성** 다이어그램의 값에 대 한 창 **사용자 지정 요소** 이제 **1/2**합니다.  
   
-9. Change **Default Namespace** for the diagram from **DefaultNamespace** to **NewNamespace**.  
+9. 변경 **Default Namespace** 에서 다이어그램에 대 한 **DefaultNamespace** 를 **NewNamespace**합니다.  
   
-     The **Namespace** of the first element tracks the **Default Namespace** property, whereas the **Namespace** of the second element retains its user-updated value of **OtherNamespace**.  
+     **Namespace** 첫 번째 요소 트랙의는 **Default Namespace** 속성 반면는 **Namespace** 요소를 두 번째 의사용자로업데이트된값을유지 **OtherNamespace**합니다.  
   
-10. Save the solution, and then close the experimental build.  
+10. 솔루션을 저장 하 고 실험적 빌드를 닫습니다.  
   
-## <a name="next-steps"></a>Next Steps  
- If you plan to use more than one tracking property, or implement tracking properties in more than one DSL, you can create a text template to generate the common code for supporting each tracking property. For more information about text templates, see [Code Generation and T4 Text Templates](../modeling/code-generation-and-t4-text-templates.md).  
+## <a name="next-steps"></a>다음 단계  
+ 둘 이상의 추적 속성을 사용 하거나 둘 이상의 DSL에 추적 속성을 구현 하려는 경우 각 추적 속성을 지원 하기 위한 일반적인 코드를 생성 하려면 텍스트 템플릿을 만들 수 있습니다. 텍스트 템플릿에 대 한 자세한 내용은 참조 [코드 생성 및 T4 텍스트 템플릿](../modeling/code-generation-and-t4-text-templates.md)합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor>   
  <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>   
- [How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md)   
- [How to: Create a Domain-Specific Language Solution](../modeling/how-to-create-a-domain-specific-language-solution.md)   
+ [도메인 특정 언어를 정의 하는 방법](../modeling/how-to-define-a-domain-specific-language.md)   
+ [방법: 도메인별 언어 솔루션 만들기](../modeling/how-to-create-a-domain-specific-language-solution.md)   
 

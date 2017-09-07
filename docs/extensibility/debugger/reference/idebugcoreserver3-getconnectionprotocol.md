@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8901f9fff01ecdfe21e3731df8b2d155fe250ac2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # IDebugCoreServer3::GetConnectionProtocol
-Returns a value indicating the protocol that is being used to communicate between the server and the debug package.  
+디버그 패키지가 서버 간의 통신에 사용 되는 프로토콜을 나타내는 값을 반환 합니다.  
   
-## Syntax  
+## 구문  
   
 ```cpp  
 HRESULT GetConnectionProtocol(  
@@ -54,13 +54,13 @@ int GetConnectionProtocol(
 );  
 ```  
   
-#### Parameters  
+#### 매개 변수  
  `pProtocol`  
- [out] Returns one of the values from the [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) enumeration.  
+ [out] 값 중 하나를 반환 된 [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) 열거 합니다.  
   
-## Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드를 반환 합니다.  
   
-## See Also  
+## 참고 항목  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)

@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2be5678704e9a5899c4ce7f5caba8cec1d8a21e6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # CONNECTION_PROTOCOL
-Indicates the protocol being used to communicate between a debug server and the debug package (DE).  
+디버그 하는 서버와 디버그 패키지 (DE) 간의 통신에 사용 되는 프로토콜을 나타냅니다.  
   
-## Syntax  
+## 구문  
   
 ```cpp  
 typedef enum tagCONNECTION_PROTOCOL {  
@@ -66,38 +66,38 @@ public enum CONNECTION_PROTOCOL {
 };  
 ```  
   
-#### Parameters  
+#### 매개 변수  
  CONNECTION_NONE  
- No connection has been made to a server.  
+ 서버를 연결 하지 했습니다.  
   
  CONNECTION_UNKNOWN  
- A connection has been made, but it is of an unknown type.  
+ 연결 된 내용이 있지만 알 수 없는 형식입니다.  
   
  CONNECTION_LOCAL  
- Connection is to a local server.  
+ 로컬 서버입니다.  
   
  CONNECTION_PIPE  
- Connection is through a named pipe.  
+ 명명 된 파이프를 통해 연결이 있습니다.  
   
  CONNECTION_TCPIP  
- Connection uses TCP/IP.  
+ 연결에서 TCP/IP를 사용 합니다.  
   
  CONNECTION_HTTP  
- Connection uses HTTP (through a Web server).  
+ 연결 (웹 서버)를 통해 HTTP를 사용합니다.  
   
  CONNECTION_OTHER  
- Some other type of connection has been established (this value is not currently used).  
+ 다른 유형의 연결을 설정한 (이 값은 현재 사용 되지).  
   
-## Remarks  
- These values are returned from the [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) method.  
+## 설명  
+ 이러한 값이 반환 된 [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) 메서드.  
   
-## Requirements  
- Header: msdbg.h  
+## 요구 사항  
+ 헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## 참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)

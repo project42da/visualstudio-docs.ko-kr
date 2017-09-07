@@ -1,5 +1,5 @@
 ---
-title: Updating Shapes and Connectors to Reflect the Model | Microsoft Docs
+title: "셰이프 및 연결선은 모델을 반영 하도록 업데이트 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,13 +15,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ae3a0d952b8ff88f2df4d297509d01d1a6731d56
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>Updating Shapes and Connectors to Reflect the Model
-In a domain-specific language in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], you can make the appearance of a shape reflect the state of the underlying model.  
+# <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>모양 및 연결선을 업데이트하여 모델 반영
+에 도메인 특정 언어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 기본 모델의 상태를 반영 하는 도형의 모양을 만들 수 있습니다.  
   
- The code examples in this topic should be added to a `.cs` file in your `Dsl` project. You will need these statements in each file:  
+ 이 항목의 코드 예제에 추가할지는 `.cs` 파일 프로그램 `Dsl` 프로젝트. 각 파일에 이러한 문이 필요 합니다.  
   
 ```  
 using Microsoft.VisualStudio.Modeling;  
@@ -29,24 +29,24 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
 ```  
   
-## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Set Shape Map properties to control the visibility of a decorator  
- You can control the visibility of a decorator without writing program code, by configuring the mapping between the shape and the domain class in the DSL Definition. For more information, see [How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md).
+## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>도형 맵 속성을 설정 하는 데코레이터의 표시 유형을 제어합니다  
+ DSL 정의에서 모양과 도메인 클래스 간의 매핑을 구성 하 여 프로그램 코드를 작성 하지 않고도 데코레이터의 표시 여부를 제어할 수 있습니다. 자세한 내용은 참조 [도메인 특정 언어를 정의 하는 방법을](../modeling/how-to-define-a-domain-specific-language.md)합니다.
   
-## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>Expose the color and style of a shape as properties  
- In the DSL Definition, right-click the shape class, point to **Add Exposed**, and then click one of the items such as **Fill Color**.  
+## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>색 및 스타일 도형의 속성으로 노출  
+ DSL 정의에 단추로 shape 클래스 **노출 추가**, 다음 항목 중 하나를 같은 클릭 하 고 **채우기 색**합니다.  
   
- The shape now has a domain property that you can set in program code or as a user. For example, to set it in the program code of a command or rule, you could write:  
+ 모양에는 이제 프로그램 코드에서 또는 사용자로 설정할 수 있는 도메인 속성을 있습니다. 예를 들어, 명령 또는 규칙의 프로그램 코드에 설정를 작성할 수 있습니다.  
   
  `shape.FillColor = System.Drawing.Color.Red;`  
   
- If you want to make the property variable only under program control, and not by the user, select the new domain property such as **Fill Color** in the DSL Definition diagram. Then, in the Properties window, set **Is Browsable** to `false` or set **Is UI Readonly** to `true`.  
+ 프로그램 제어만 하 고 사용자가 아니라 속성 변수를 확인 하려는 경우 새 도메인 속성을 같은 선택 **채우기 색** DSL 정의 다이어그램에 있습니다. 그런 다음 속성 창에서 설정 **는 검색 가능한** 를 `false` 설정 또는 **UI Readonly가** 를 `true`합니다.  
   
-## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Define Change Rules to make color, style or location depend on model element properties  
- You can define rules that update the appearance the shape dependent on other parts of the model. For example, you could define a Change Rule on a model element that updates the color of its shape dependent on the properties of the model element. For more information about Change Rules, see [Rules Propagate Changes Within the Model](../modeling/rules-propagate-changes-within-the-model.md).  
+## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>색, 스타일 또는 모델 요소 속성에 종속 되는 위치를 변경 규칙 정의  
+ 모양 모델의 다른 부분에 종속 셰이프를 업데이트 하는 규칙을 정의할 수 있습니다. 예를 들어 모델 요소의 속성에 종속 된 셰이프의 색을 업데이트 하는 모델 요소에 대해 변경 규칙을 정의할 수 있습니다. 변경 규칙에 대 한 자세한 내용은 참조 [규칙 전파 변경 내에서 모델](../modeling/rules-propagate-changes-within-the-model.md)합니다.  
   
- You should use rules only to update properties that are maintained within the Store, because rules are not invoked when the Undo command is performed. This does not include some graphical features such as the size and visibility of a shape. To update those features of a shape, see [Updating Non-Store Graphical features](#OnAssociatedProperty).  
+ 규칙 실행 취소 명령을 수행 될 때 호출 되지 않습니다 때문에 저장소를 내에서 유지 관리 되는 속성을 업데이트에 규칙을 사용 해야 합니다. 크기와 셰이프의 표시 여부와 같은 일부 그래픽 기능은 다루지 않습니다. 도형의 이러한 기능을 업데이트 하려면 참조 [비 저장소 그래픽 업데이트 기능](#OnAssociatedProperty)합니다.  
   
- The following example assumes that you have exposed `FillColor` as a domain property as described in the previous section.  
+ 다음 예에서는 노출 했다고 가정 `FillColor` 이전 섹션에 설명 된 대로 도메인 속성으로.  
   
 ```csharp  
 [RuleOn(typeof(ExampleElement))]  
@@ -85,8 +85,8 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
 ```  
   
-## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>Use OnChildConfigured to initialize a shape's properties  
- To set the properties of a shape when it is first created, the override `OnChildConfigured()` in a partial definition of your diagram class. The diagram class is specified in your DSL Definition, and the generated code is in **Dsl\Generated Code\Diagram.cs**. For example:  
+## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>OnChildConfigured 셰이프의 속성을 초기화 사용  
+ 처음 셰이프의 속성을 설정 하려면 만들어지면 재정의 `OnChildConfigured()` 다이어그램 클래스의 부분 정의에서 합니다. DSL 정의에 다이어그램 클래스를 지정 하 고 생성 된 코드는 **Dsl\Generated Code\Diagram.cs**합니다. 예:  
   
 ```csharp  
 partial class MyLanguageDiagram  
@@ -109,12 +109,12 @@ partial class MyLanguageDiagram
   
 ```  
   
- This method can be used both for domain properties and non-store features, such as the size of the shape.  
+ 이 메서드는 모두 도메인 속성 및 도형의 크기와 같은 비 저장소 기능을 사용할 수 있습니다.  
   
-##  <a name="OnAssociatedProperty"></a> Use AssociateValueWith() to update other features of a shape  
- For some features of a shape, such as whether it has a shadow, or the arrow style of a connector, there is no built-in method of exposing the feature as a domain property.  Changes to such features are not under the control of the transaction system. Therefore, it is not appropriate to update them using rules, because rules are not invoked when the user performs the Undo command.  
+##  <a name="OnAssociatedProperty"></a>AssociateValueWith()를 사용 하 여 도형의 다른 기능을 업데이트 하려면  
+ 그림자를 또는 연결선의 화살표 스타일에 있는지 여부 등의 셰이프의 일부 기능에 대 한 기능 도메인 속성으로 노출 기본 설정 방법이 있습니다.  등의 기능이 변경 내용은 트랜잭션 시스템에 의해 제어 되지 않습니다. 따라서 해당 키를 업데이트 하는 데 적합 하지 않음을 규칙을를 사용 하는 실행 취소 명령을 수행할 때 규칙 호출 되지 않습니다.  
   
- Instead, you can update such features by using <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>. In the following example, the arrow style of a connector is controlled by a value of a domain property in the relationship that the connector displays:  
+ 대신, 사용 하 여 이러한 기능을 업데이트할 수 있습니다 <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>합니다. 다음 예제에서는 연결선의 화살표 스타일은 커넥터를 표시 하는 관계의 domain 속성 값에 의해 제어 됩니다.  
   
 ```  
 public partial class ArrowConnector // My connector class.   
@@ -155,7 +155,7 @@ public partial class ArrowConnector // My connector class.
   
 ```  
   
- `AssociateValueWith()` should be called one time for each domain property that you want to register. After it has been called, any changes to the specified property will call `OnAssociatedPropertyChanged()` in any shapes that present the property's model element.  
+ `AssociateValueWith()`등록 하려는 각 도메인 속성에 대해 한 번씩을 호출 되어야 합니다. 지정된 된 속성을 변경한 호출 호출 된 후 `OnAssociatedPropertyChanged()` 속성의 모델 요소를 제공 하는 모든 셰이프에 있습니다.  
   
- It is not necessary to call `AssociateValueWith()` for each instance. Although InitializeResources is an instance method, it is invoked only one time for each shape class.
+ 호출할 필요는 없습니다 `AssociateValueWith()` 각 인스턴스에 대 한 합니다. InitializeResources 인스턴스 메서드인 경우에 각 셰이프 클래스에 대해 한 번만 호출 됩니다.
 

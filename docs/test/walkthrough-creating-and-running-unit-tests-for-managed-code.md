@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Creating and Running Unit Tests for Managed Code | Microsoft Docs'
+title: "연습: 관리 코드에 대한 단위 테스트 만들기 및 실행 | Microsoft 문서"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,75 +37,75 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: cbde644f9248935c73bb75b8b2de9573588867f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>Walkthrough: Creating and Running Unit Tests for Managed Code
-This walkthrough will step you through creating, running, and customizing a series of unit tests using the Microsoft unit test framework for managed code and the Visual Studio Test Explorer. You start with a C# project that is under development, create tests that exercise its code, run the tests, and examine the results. Then you can change your project code and re-run the tests.  
+# <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>연습: 관리 코드에 대한 단위 테스트 만들기 및 실행
+이 연습에서는 관리 코드에 대한 Microsoft 단위 테스트 프레임워크 및 Visual Studio 테스트 탐색기를 사용하여 일련의 단위 테스트를 생성, 실행 및 사용자 지정하는 방법을 안내합니다. 개발 중인 C# 프로젝트로 시작하여 해당 코드를 실행해 보는 테스트를 만들어 테스트를 실행하고 결과를 검사합니다. 그런 다음 프로젝트 코드를 변경하고 테스트를 다시 실행할 수 있습니다.  
   
- This topic contains the following sections:  
+ 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
- [Prepare the walkthrough](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)  
+ [연습 준비](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)  
   
- [Create a unit test project](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_a_unit_test_project)  
+ [단위 테스트 프로젝트 만들기](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_a_unit_test_project)  
   
- [Create the test class](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_test_class)  
+ [테스트 클래스 만들기](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_test_class)  
   
--   [Test class requirements](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_class_requirements)  
+-   [테스트 클래스 요구 사항](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_class_requirements)  
   
- [Create the first test method](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_first_test_method)  
+ [첫 번째 테스트 메서드 만들기](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_first_test_method)  
   
--   [Test method requirements](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_method_requirements)  
+-   [테스트 메서드 요구 사항](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_method_requirements)  
   
- [Build and run the test](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Build_and_run_the_test)  
+ [테스트 빌드 및 실행](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Build_and_run_the_test)  
   
- [Fix your code and rerun your tests](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Fix_your_code_and_rerun_your_tests)  
+ [코드를 수정하고 테스트 다시 실행](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Fix_your_code_and_rerun_your_tests)  
   
- [Use unit tests to improve your code](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Use_unit_tests_to_improve_your_code)  
-  
-> [!NOTE]
->  This walkthrough uses the Microsoft unit test framework for managed code. Test Explorer also can run tests from third party unit test frameworks that have adapters for Test Explorer. For more information, see [Install third-party unit test frameworks](../test/install-third-party-unit-test-frameworks.md)  
+ [단위 테스트를 사용하여 코드 개선](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Use_unit_tests_to_improve_your_code)  
   
 > [!NOTE]
->  For information about how to run tests from a command line, see [Walkthrough: using the command-line test utility](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867).  
+>  이 연습에서는 관리 코드에 Microsoft 단위 테스트 프레임워크를 사용합니다. 테스트 탐색기에서는 테스트 탐색기용 어댑터가 포함된 타사 단위 테스트 프레임워크의 테스트도 실행할 수 있습니다. 자세한 내용은 [타사 단위 테스트 프레임워크 설치](../test/install-third-party-unit-test-frameworks.md)를 참조하세요.  
   
-## <a name="prerequisites"></a>Prerequisites  
+> [!NOTE]
+>  명령줄에서 테스트를 실행하는 방법에 대한 자세한 내용은 [연습: 명령줄 테스트 유틸리티 사용](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)을 참조하세요.  
   
--   The Bank project. See [Sample Project for Creating Unit Tests](../test/sample-project-for-creating-unit-tests.md).  
+## <a name="prerequisites"></a>필수 구성 요소  
   
-##  <a name="BKMK_Prepare_the_walkthrough"></a> Prepare the walkthrough  
+-   Bank 프로젝트. [단위 테스트를 만들기 위한 샘플 프로젝트](../test/sample-project-for-creating-unit-tests.md)를 참조하세요.  
   
-1.  Open Visual Studio.  
+##  <a name="BKMK_Prepare_the_walkthrough"></a> 연습 준비  
   
-2.  On the **File** menu, point to **New** and then click **Project**.  
+1.  Visual Studio를 엽니다.  
   
-     The **New Project** dialog box appears.  
+2.  **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-3.  Under **Installed Templates**, click **Visual C#**.  
+     **새 프로젝트** 대화 상자가 나타납니다.  
   
-4.  In the list of application types, click **Class Library**.  
+3.  **설치된 템플릿**에서 **Visual C#**을 클릭합니다.  
   
-5.  In the **Name** box, type `Bank` and then click **OK**.  
+4.  응용 프로그램 형식 목록에서 **클래스 라이브러리**를 클릭합니다.  
   
-    > [!NOTE]
-    >  If the name "Bank" is already used, choose another name for the project.  
-  
-     The new Bank project is created and displayed in Solution Explorer with the Class1.cs file open in the Code Editor.  
+5.  In the **이름** 상자에 `Bank` 를 가리킨 다음 **확인**을 참조하세요.  
   
     > [!NOTE]
-    >  If the Class1.cs file is not open in the Code Editor, double-click the file Class1.cs in Solution Explorer to open it.  
+    >  "Bank"라는 이름이 이미 사용되고 있으면 프로젝트에 대해 다른 이름을 선택합니다.  
   
-6.  Copy the source code from the [Sample Project for Creating Unit Tests](../test/sample-project-for-creating-unit-tests.md).  
+     새 Bank 프로젝트가 만들어져 솔루션 탐색기에 표시되고 코드 편집기에 Class1.cs 파일이 열립니다.  
   
-7.  Replace the original contents of Class1.cs with the code from the [Sample Project for Creating Unit Tests](../test/sample-project-for-creating-unit-tests.md).  
+    > [!NOTE]
+    >  Class1.cs 파일이 코드 편집기에서 열리지 않으면 솔루션 탐색기에서 Class1.cs 파일을 두 번 클릭하여 엽니다.  
   
-8.  Save the file as BankAccount.cs  
+6.  [단위 테스트를 만들기 위한 샘플 프로젝트](../test/sample-project-for-creating-unit-tests.md)에서 소스 코드를 복사합니다.  
   
-9. On the **Build** menu, click **Build Solution**.  
+7.  Class1.cs의 원래 내용을 [단위 테스트를 만들기 위한 샘플 프로젝트](../test/sample-project-for-creating-unit-tests.md)의 코드로 바꿉니다.  
   
- You now have a project named Bank. It contains source code to test and tools to test it with. The namespace for Bank, **BankAccountNS**, contains the public class **BankAccount**, whose methods you will test in the following procedures.  
+8.  파일을 BankAccount.cs로 저장합니다.  
   
- In this quick start, we focus on the `Debit` method.The Debit method is called when money is withdrawn an account and contains the following code:  
+9. **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
+  
+ 이제 Bank라는 프로젝트가 준비되었습니다. 이 프로젝트에는 테스트할 소스 코드와 테스트에 사용할 도구가 들어 있습니다. Bank에 대한 네임스페이스 **BankAccountNS**에는 다음 절차에서 테스트할 메서드가 포함된 공용 클래스인 **BankAccount**가 있습니다.  
+  
+ 신속한 시작으로 사용자는 `Debit` 메서드에 집중합니다. 현금 인출 시 Debit 메서드가 호출되며 다음 코드가 포함됩니다.  
   
 ```csharp  
 // method under test  
@@ -124,35 +124,35 @@ public void Debit(double amount)
   
 ```  
   
-##  <a name="BKMK_Create_a_unit_test_project"></a> Create a unit test project  
- **Prerequisite**: Follow the steps in the procedure, [Prepare the walkthrough](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough).  
+##  <a name="BKMK_Create_a_unit_test_project"></a> 단위 테스트 프로젝트 만들기  
+ **필수 조건**: [Prepare the walkthrough](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)절차의 단계를 따릅니다.  
   
-#### <a name="to-create-a-unit-test-project"></a>To create a unit test project  
+#### <a name="to-create-a-unit-test-project"></a>단위 테스트 프로젝트를 만들려면  
   
-1.  On the **File** menu, choose **Add**, and then choose **New Project ...**.  
+1.  **파일** 메뉴에서 **추가**를 선택한 다음 **새 프로젝트...**를 선택합니다.  
   
-2.  In the New Project dialog box, expand **Installed**, expand **Visual C#**, and then choose **Test**.  
+2.  새 프로젝트 대화 상자에서 **설치됨**, **Visual C#**을 확장한 다음 **테스트**를 선택합니다.  
   
-3.  From the list of templates, select **Unit Test Project**.  
+3.  템플릿 목록에서 **단위 테스트 프로젝트**를 선택합니다.  
   
-4.  In the **Name** box, enter BankTest, and then choose **OK**.  
+4.  **이름** 상자에 BankTest를 입력한 다음 **확인**을 선택합니다.  
   
-     The **BankTests** project is added to the the **Bank** solution.  
+     **BankTests** 프로젝트가 **Bank** 솔루션에 추가됩니다.  
   
-5.  In the **BankTests** project, add a reference to the **Bank** solution.  
+5.  **BankTests** 프로젝트에서 **Bank** 솔루션에 대한 참조를 추가합니다.  
   
-     In Solution Explorer, select **References** in the **BankTests** project and then choose **Add Reference...** from the context menu.  
+     솔루션 탐색기에서 **BankTests** 프로젝트의 **참조** 를 선택하고 상황에 맞는 메뉴에서 **참조 추가...** 를 선택합니다.  
   
-6.  In the Reference Manager dialog box, expand **Solution** and then check the **Bank** item.  
+6.  참조 관리자 대화 상자에서 **솔루션** 을 확장한 다음 **Bank** 항목을 선택합니다.  
   
-##  <a name="BKMK_Create_the_test_class"></a> Create the test class  
- We need a test class for verifying the `BankAccount` class. We can use the UnitTest1.cs that was generated by the project template, but we should give the file and class more descriptive names. We can do that in one step by renaming the file in Solution Explorer.  
+##  <a name="BKMK_Create_the_test_class"></a> 테스트 클래스 만들기  
+ `BankAccount` 클래스를 확인하려면 테스트 클래스가 필요합니다. 프로젝트 템플릿에서 생성된 UnitTest1.cs를 사용할 수 있지만 파일 및 클래스에 설명이 포함된 이름을 제공해야 합니다. 솔루션 탐색기에서 파일 이름을 바꾸면 한 번에 수행할 수 있습니다.  
   
- **Renaming a class file**  
+ **클래스 파일 이름 변경**  
   
- In Solution Explorer, select the UnitTest1.cs file in the BankTests project. From the context menu, choose **Rename**, and then rename the file to BankAccountTests.cs. Choose **Yes** on the dialog that asks if you want to rename all references in the project to the code element 'UnitTest1'. This step changes the name of the class to `BankAccountTest`.  
+ 솔루션 탐색기에서 BankTests 프로젝트의 UnitTest1.cs 파일을 선택합니다. 상황에 맞는 메뉴에서 **이름 바꾸기**를 선택한 다음 파일 이름을 BankAccountTests.cs로 바꿉니다. 프로젝트의 모든 참조 이름을 코드 요소 'UnitTest1'로 바꿀지 묻는 대화 상자에서 **예** 를 선택합니다. 이 단계에서는 클래스 이름을 `BankAccountTest`로 변경합니다.  
   
- The BankAccountTests.cs file now contains the following code:  
+ BankAccountTests.cs 파일에는 이제 다음 코드가 들어 있습니다.  
   
 ```csharp  
 // unit test code  
@@ -172,41 +172,41 @@ namespace BankTests
 }  
 ```  
   
- **Add a using statement to the project under test**  
+ **테스트에서 프로젝트에 using 문 추가**  
   
- We can also add a using statement to the class to let us to call into the project under test without using fully qualified names. At the top of the class file, add:  
+ using 문을 클래스에 추가하여 정규화된 이름을 사용하지 않고 테스트 중인 프로젝트를 호출할 수 있습니다. 클래스 파일의 맨 위에 다음을 추가합니다.  
   
 ```csharp  
 using BankAccountNS;  
 ```  
   
-###  <a name="BKMK_Test_class_requirements"></a> Test class requirements  
- The minimum requirements for a test class are the following:  
+###  <a name="BKMK_Test_class_requirements"></a> 테스트 클래스 요구 사항  
+ 테스트 클래스의 최소 요구 사항은 다음과 같습니다.  
   
--   The `[TestClass]` attribute is required in the Microsoft unit testing framework for managed code for any class that contains unit test methods that you want to run in Test Explorer.  
+-   `[TestClass]` 특성은 테스트 탐색기에서 실행하려는 단위 테스트 메서드가 포함된 모든 클래스의 관리 코드에 대한 Microsoft 단위 테스트 프레임워크에 필요합니다.  
   
--   Each test method that you want Test Explorer to run must have the `[TestMethod]`attribute.  
+-   테스트 탐색기에서 실행하려는 각 테스트 메서드에는 `[TestMethod]`특성이 있어야 합니다.  
   
- You can have other classes in a unit test project that do not have the `[TestClass]` attribute, and you can have other methods in test classes that do not have the `[TestMethod]` attribute. You can use these other classes and methods in your test methods.  
+ `[TestClass]` 특성이 없는 단위 테스트 프로젝트에 다른 클래스를 사용하거나 `[TestMethod]` 특성이 없는 테스트 클래스에 다른 메서드를 사용할 수 있습니다. 테스트 메서드에서 이러한 다른 클래스와 메서드를 사용할 수 있습니다.  
   
-##  <a name="BKMK_Create_the_first_test_method"></a> Create the first test method  
- In this procedure, we will write unit test methods to verify the behavior of the `Debit` method of the `BankAccount` class. The method is listed above.  
+##  <a name="BKMK_Create_the_first_test_method"></a> 첫 번째 테스트 메서드 만들기  
+ 이 절차에서는 단위 테스트 메서드를 작성하여 `Debit` 클래스의 `BankAccount` 메서드 동작을 확인합니다. 이 메서드가 위에 나열되어 있습니다.  
   
- By analyzing the method under test, we determine that there are at least three behaviors that need to be checked:  
+ 테스트 중인 메서드를 분석한 결과, 세 가지 이상의 동작을 확인하기로 결정했습니다.  
   
-1.  The method throws an <xref:System.ArgumentOutOfRangeException> if the debit amount is greater than the balance.  
+1.  이 메서드는 대변 금액이 잔액보다 큰 경우 <xref:System.ArgumentOutOfRangeException> 을 발생시킵니다.  
   
-2.  It also throws `ArgumentOutOfRangeException` if the debit amount is less than zero.  
+2.  또한 대변 금액이 0보다 작을 경우에도 `ArgumentOutOfRangeException` 을 발생시킵니다.  
   
-3.  If the checks in 1.) and 2.) are satisfied, the method subtracts the amount from the account balance.  
+3.  1)과 2)의 검사가 충족될 경우 이 메서드는 계정 잔액에서 금액을 뺍니다.  
   
- In our first test, we verify that a valid amount (one that is less than the account balance and that is greater than zero) withdraws the correct amount from the account.  
+ 첫 번째 테스트에서는 유효 금액(계정 잔액보다 작고 0보다 큰 값)이 계정으로부터 올바른 금액을 인출하는지 확인합니다.  
   
-#### <a name="to-create-a-test-method"></a>To create a test method  
+#### <a name="to-create-a-test-method"></a>테스트 메서드를 만들려면  
   
-1.  Add a using `BankAccountNS;` statement to the BankAccountTests.cs file.  
+1.  using `BankAccountNS;` 문을 BankAccountTests.cs 파일에 추가합니다.  
   
-2.  Add the following method to that `BankAccountTests` class:  
+2.  다음 메서드를 `BankAccountTests` 클래스에 추가합니다.  
   
     ```csharp  
     // unit test code  
@@ -228,68 +228,68 @@ using BankAccountNS;
     }  
     ```  
   
- The method is rather simple. We set up a new `BankAccount` object with a beginning balance and then withdraw a valid amount. We use the Microsoft unit test framework for managed code <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> method to verify that the ending balance is what we expect.  
+ 이 메서드는 상당히 간단합니다. 기초 잔액으로 새 `BankAccount` 개체를 만든 다음 유효한 금액을 인출합니다. 관리 코드 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> 메서드에 Microsoft 단위 테스트 프레임워크를 사용하여 마감 잔액이 기대한 것과 같은지 확인합니다.  
   
-###  <a name="BKMK_Test_method_requirements"></a> Test method requirements  
- A test method must meet the following requirements:  
+###  <a name="BKMK_Test_method_requirements"></a> 테스트 메서드 요구 사항  
+ 테스트 메서드는 다음 요구 사항을 충족해야 합니다.  
   
--   The method must be decorated with the `[TestMethod]` attribute.  
+-   이 메서드를 `[TestMethod]` 특성으로 데코레이팅해야 합니다.  
   
--   The method must return `void`.  
+-   이 메서드는 `void`를 반환해야 합니다.  
   
--   The method cannot have parameters.  
+-   메서드에 매개 변수를 사용할 수 없습니다.  
   
-##  <a name="BKMK_Build_and_run_the_test"></a> Build and run the test  
+##  <a name="BKMK_Build_and_run_the_test"></a> 테스트 빌드 및 실행  
   
-#### <a name="to-build-and-run-the-test"></a>To build and run the test  
+#### <a name="to-build-and-run-the-test"></a>테스트를 빌드 및 실행하려면  
   
-1.  On the **Build** menu, choose **Build Solution**.  
+1.  **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
   
-     If there are no errors, the UnitTestExplorer window appears with **Debit_WithValidAmount_UpdatesBalance** listed in the **Not Run Tests** group. If Test Explorer does not appear after a successful build, choose **Test** on the menu, then choose **Windows**, and then choose  **Test Explorer**.  
+     오류가 없는 경우 **실행하지 않은 테스트** 그룹에 나열된 **Debit_WithValidAmount_UpdatesBalance** 와 함께 UnitTestExplorer 창이 나타납니다. 빌드에 성공한 후 테스트 탐색기가 나타나지 않는 경우 메뉴에서 **테스트** 를 선택하고, **창**을 선택한 다음  **테스트 탐색기**를 선택합니다.  
   
-2.  Choose **Run All** to run the test. As the test is running the status bar at the top of the window is animated. At the end of the test run, the bar turns green if all the test methods pass, or red if any of the tests fail.  
+2.  **모두 실행** 을 선택하여 테스트를 실행합니다. 테스트가 실행되는 동안 창 맨 위의 상태 표시줄에 애니메이션이 사용됩니다. 테스트 실행이 끝날 때 테스트 메서드가 통과했으면 녹색이 되고 테스트가 실패하면 빨간색이 됩니다.  
   
-3.  In this case, the test does fail. The test method is moved to the **Failed Tests**. group. Select the method in Test Explorer to view the details at the bottom of the window.  
+3.  이러한 경우 테스트가 실패할 수 있습니다. 테스트 메서드가 **실패한 테스트**그룹으로 와 함께 UnitTestExplorer 창이 나타납니다. 창 하단에서 세부 정보를 보려면 테스트 탐색기에서 메서드를 선택합니다.  
   
-##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> Fix your code and rerun your tests  
- **Analyze the test results**  
+##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> 코드를 수정하고 테스트 다시 실행  
+ **테스트 결과 분석**  
   
- The test result contains a message that describes the failure. For the `AreEquals` method, message displays you what was expected (the (**Expected\<*XXX*>**parameter) and what was actually received (the **Actual\<*YYY*>** parameter). We were expecting the balance to decline from the beginning balance, but instead it has increased by the amount of the withdrawal.  
+ 테스트 결과에 실패를 설명하는 메시지가 포함됩니다. `AreEquals` 메서드의 경우 메시지에 예상 값(**Expected\<*XXX*> **매개 변수)과 실제 값(**Actual\<*YYY*>** 매개 변수)이 표시됩니다. 기초 잔액보다 줄어든 잔액을 예상했지만, 인출액만큼 늘어났습니다.  
   
- A reexamination of the Debit code shows that the unit test has succeeded in finding a bug. The amount of the withdrawal is added to the account balance when it should be subtracted.  
+ 다시 검사한 Debit 코드에 단위 테스트를 통해 버그를 찾는 데 성공한 것으로 나타납니다. 차감해야 할 경우 계정 잔액에 인출금이 추가됩니다.  
   
- **Correct the bug**  
+ **버그 수정**  
   
- To correct the error, simply replace the line  
+ 오류를 수정하려면 다음 줄  
   
 ```csharp  
 m_balance += amount;  
 ```  
   
- with  
+ 을(를) 다음으로 바꾸면 됩니다.  
   
 ```csharp  
 m_balance -= amount;  
 ```  
   
- **Rerun the test**  
+ **테스트 다시 실행**  
   
- In Test Explorer, choose **Run All** to rerun the test. The red/green bar turns green, and the test is moved to the **Passed Tests** group.  
+ 테스트 탐색기에서 **모두 실행** 을 선택하여 테스트를 다시 실행합니다. 빨강/녹색 막대가 녹색으로 바뀌고 테스트는 **통과한 테스트** 그룹으로 이동합니다.  
   
-##  <a name="BKMK_Use_unit_tests_to_improve_your_code"></a> Use unit tests to improve your code  
- This section describes how an iterative process of analysis, unit test development, and refactoring can help you make your production code more robust and effective.  
+##  <a name="BKMK_Use_unit_tests_to_improve_your_code"></a> 단위 테스트를 사용하여 코드 개선  
+ 이 섹션에서는 반복적인 분석 프로세스, 단위 테스트 개발 및 리팩터링을 통해 프로덕션 코드를 보다 강력하고 효과적으로 만드는 방법을 설명합니다.  
   
- **Analyze the issues**  
+ **문제 분석**  
   
- After creating a test method to confirm that a valid amount is correctly deducted in the `Debit` method, we can turn to remaining cases in our original analysis:  
+ 테스트 메서드를 만들어 `Debit` 메서드에서 유효한 금액이 정확하게 차감된 것을 확인한 후에는 원래 분석의 나머지 사례를 살펴볼 수 있습니다.  
   
-1.  The method throws an `ArgumentOutOfRangeException` if the debit amount is greater than the balance.  
+1.  이 메서드는 대변 금액이 잔액보다 큰 경우 `ArgumentOutOfRangeException` 을 발생시킵니다.  
   
-2.  It also throws `ArgumentOutOfRangeException` if the debit amount is less than zero.  
+2.  또한 대변 금액이 0보다 작을 경우에도 `ArgumentOutOfRangeException` 을 발생시킵니다.  
   
- **Create the test methods**  
+ **테스트 메서드 만들기**  
   
- A first attempt at creating a test method to address these issues seems promising:  
+ 테스트 메서드를 만들어 이러한 문제를 해결하려는 첫 번째 시도가 성공할 가능성이 높습니다.  
   
 ```csharp  
 //unit test method  
@@ -310,33 +310,33 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
   
 ```  
   
- We use the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> attribute to assert that the right exception has been thrown. The attribute causes the test to fail unless an `ArgumentOutOfRangeException` is thrown. Running the test with both positive and negative `debitAmount` values and then temporarily modifying the method under test to throw a generic <xref:System.ApplicationException> when the amount is less than zero demonstrates that test behaves correctly. To test the case when the amount withdrawn is greater than the balance, all we need to do is:  
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> 특성을 사용하여 올바른 예외가 throw되었음을 어설션합니다. `ArgumentOutOfRangeException` 을 throw되는 경우가 아니면 이 특성으로 인해 테스트에 실패합니다. 양수 및 음수 `debitAmount` 값을 모두 사용하여 테스트를 실행한 후 금액이 0보다 작은 경우 제네릭 <xref:System.ApplicationException> 을 throw하는 테스트를 위해 메서드를 일시적으로 수정하면 테스트가 올바르게 작동함을 알 수 있습니다. 인출한 금액이 잔액보다 많을 경우를 테스트하려면 다음을 수행해야 합니다.  
   
-1.  Create a new test method named `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`.  
+1.  `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`라는 새 테스트 메서드를 만듭니다.  
   
-2.  Copy the method body from `Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` to the new method.  
+2.  `Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` 의 메서드 본문을 새 메서드로 복사합니다.  
   
-3.  Set the `debitAmount` to a number greater than the balance.  
+3.  `debitAmount` 를 잔액보다 큰 값으로 설정합니다.  
   
- **Run the tests**  
+ **테스트 실행**  
   
- Running the two methods with different values for `debitAmount` demonstrates that the tests adequately handle our remaining cases. Running all three tests confirm that all cases in our original analysis are correctly covered.  
+ `debitAmount` 에 대한 값이 서로 다른 두 메서드를 실행하여 테스트에서 나머지 경우가 적절히 처리되는지 확인할 수 있습니다. 세 테스트를 모두 실행하면 원래 분석의 모든 경우가 올바르게 검사되는지 확인할 수 있습니다.  
   
- **Continue the analysis**  
+ **분석 계속 수행**  
   
- However, the last two test methods are also somewhat troubling. We cannot be certain which condition in the code under test throws when either test runs. Some way of differentiating the two conditions would be helpful. As we think about the problem more, it becomes apparent that knowing which condition was violated would increase our confidence in the tests. This information would also very likely be helpful to the production mechanism that handles the exception when it is thrown by the method under test. Generating more information when the method throws would assist all concerned, but the `ExpectedException` attribute cannot supply this information..  
+ 하지만 마지막 두 테스트 메서드는 다소 문제가 있습니다. 각 테스트를 실행할 때 테스트 중인 코드의 어떤 조건이 throw되는지 확실히 알 수 없습니다. 두 조건을 구분하는 몇 가지 방법이 유용합니다. 즉, 위반한 조건을 확실히 알면 테스트에 대한 자신감이 증가합니다. 이 정보는 테스트 중인 메서드에 의해 throw되는 예외를 처리하는 프로덕션 메커니즘에도 유용할 것입니다. 메서드가 throw할 때 자세한 정보가 생성되면 관련된 모든 문제에 도움이 되지만 `ExpectedException` 특성은 이 정보를 제공할 수 없습니다.  
   
- Looking at the method under test again, we see both conditional statements use an `ArgumentOutOfRangeException` constructor that takes name of the argument as a parameter:  
+ 테스트 중인 메서드를 살펴보면 인수 이름을 매개 변수로 받는 `ArgumentOutOfRangeException` 생성자가 두 조건문 모두에 사용된다는 사실을 알 수 있습니다.  
   
 ```csharp  
 throw new ArgumentOutOfRangeException("amount");  
 ```  
   
- From a search of the MSDN Library, we discover that a constructor exists that reports far richer information. <xref:System.ArgumentOutOfRangeException.%23ctor%2A>`(String, Object, String)` includes the name of the argument, the argument value, and a user-defined message. We can refactor the method under test to use this constructor. Even better, we can use publicly available type members to specify the errors.  
+ MSDN 라이브러리를 검색하면 많은 정보를 제공하는 생성자가 있음을 알 수 있습니다. <xref:System.ArgumentOutOfRangeException.%23ctor%2A>`(String, Object, String)` 에는 인수 이름, 인수 값 및 사용자 정의 메시지가 포함됩니다. 이 생성자를 사용하도록 테스트 중인 메서드를 리팩터링할 수 있습니다. 더 좋은 점은 공개적으로 사용할 수 있는 형식 멤버를 사용하여 오류를 지정할 수 있다는 점입니다.  
   
- **Refactor the code under test**  
+ **테스트 중인 코드 리팩터링**  
   
- We first define two constants for the error messages at class scope:  
+ 먼저 클래스 범위에서 오류 메시지에 대한 두 개 상수를 정의합니다.  
   
 ```csharp  
 // class under test  
@@ -344,7 +344,7 @@ public const string DebitAmountExceedsBalanceMessage = "Debit amount exceeds bal
 public const string DebitAmountLessThanZeroMessage = "Debit amount less than zero";  
 ```  
   
- We then modify the two conditional statements in the `Debit` method:  
+ 그런 다음 `Debit` 메서드에서 두 조건문을 수정합니다.  
   
 ```csharp  
 // method under test  
@@ -361,17 +361,17 @@ public const string DebitAmountLessThanZeroMessage = "Debit amount less than zer
 // ...  
 ```  
   
- **Refactor the test methods**  
+ **테스트 메서드 리팩터링**  
   
- In our test method, we first remove the `ExpectedException` attribute. In its place, we catch the thrown exception and verify that it was thrown in the correct condition statement. However, we must now decide between two options to verify our remaining conditions. For example in the `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` method, we can take one of the following actions:  
+ 테스트 메서드에서 먼저 `ExpectedException` 특성을 제거합니다. 해당 위치에서 throw된 예외를 catch하고 올바른 조건 문에서 throw되었는지 확인합니다. 그러나 두 옵션 중 하나를 결정하여 나머지 조건을 확인해야 합니다. 예를 들어, `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` 메서드에서 다음 중 한 가지 작업을 수행할 수 있습니다.  
   
--   Assert that the `ActualValue` property of the exception (the second parameter of the `ArgumentOutOfRangeException` constructor) is greater than the beginning balance. This option requires that we test the `ActualValue` property of the exception against the `beginningBalance` variable of the test method, and also requires then verify that the `ActualValue` is greater than zero.  
+-   예외의 `ActualValue` 속성( `ArgumentOutOfRangeException` 생성자의 두 번째 매개 변수)이 기초 잔액보다 크다고 어셜션합니다. 이 옵션을 사용하려면 테스트 메서드의 `ActualValue` 변수에 대해 예외의 `beginningBalance` 속성을 테스트해야 하고, `ActualValue` 가 0보다 큰지도 확인해야 합니다.  
   
--   Assert that the message (the third parameter of the constructor) includes the `DebitAmountExceedsBalanceMessage` defined in the `BankAccount` class.  
+-   메시지(생성자의 세 번째 매개 변수)에 `DebitAmountExceedsBalanceMessage` 가 `BankAccount` 클래스에 정의되어 있음을 어셜션합니다.  
   
- The <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> method in the Microsoft unit test framework enables us to verify the second option without the calculations that are required of the first option.  
+ Microsoft 단위 테스트 프레임워크에서 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> 메서드를 사용하면 첫 번째 옵션에서 필요한 계산 없이도 두 번째 옵션을 확인할 수 있습니다.  
   
- A second attempt at revising `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` might look like:  
+ `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` 를 수정하는 두 번째 시도의 예를 들면 다음과 같습니다.  
   
 ```csharp  
 [TestMethod]  
@@ -395,19 +395,19 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 }  
 ```  
   
- **Retest, rewrite, and reanalyze**  
+ **재테스트, 재작성 및 재분석**  
   
- When we retest the test methods with different values, we encounter the following facts:  
+ 테스트 메서드를 다른 값으로 다시 테스트하면 다음과 같은 사실이 발생합니다.  
   
-1.  If we catch the correct error by using an assert where `debitAmount` that is greater than the balance, the `Contains` assert passes, the exception is ignored, and so the test method passes. This is the behavior we want.  
+1.  `debitAmount` 가 잔액보다 큰 어설션을 사용하여 올바른 오류를 catch하는 경우 `Contains` 어설션이 통과하고, 예외가 무시되어 테스트 메서드를 통과하게 됩니다. 이것이 바로 우리가 원하는 동작입니다.  
   
-2.  If we use a `debitAmount` that is less than 0, the assert fails because the wrong error message is returned. The assert also fails if we introduce a temporary `ArgumentOutOfRange` exception at another point in the method under test code path. This too is good.  
+2.  0보다 작은 `debitAmount` 를 사용할 경우 잘못된 오류 메시지가 반환되어 어설션이 실패합니다. 테스트 코드 경로 아래 메서드의 다른 지점에서 임시 `ArgumentOutOfRange` 예외를 유도하는 경우에도 어설션이 실패합니다. 이 점 역시 좋습니다.  
   
-3.  If the `debitAmount` value is valid (i.e., less than the balance but greater than zero, no exception is caught, so the assert is never caught. The test method passes. This is not good, because we want the test method to fail if no exception is thrown.  
+3.  `debitAmount` 값이 유효하면(예: 잔액보다 작지만 0보다 큼) 예외가 catch되지 않으므로 어설션이 절대로 catch되지 않습니다. 테스트 메서드를 통과합니다. 예외가 throw되지 않는 경우에도 테스트 메서드가 실패하지 않아야 하므로 이 방법은 좋지 않습니다.  
   
- The third fact is a bug in our test method. To attempt to resolve the issue, we add a <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> assert at the end of the test method to handle the case where no exception is thrown.  
+ 세 번째 사실은 테스트 메서드의 버그입니다. 여기서는 문제를 해결하기 위해 테스트 메서드 끝에 예외가 throw되지 않은 경우를 처리하도록 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> 어설션을 추가합니다.  
   
- But retesting shows that the test now fails if the correct exception is caught. The catch statement resets the exception and the method continues to execute, failing at the new assert. To resolve the new problem, we add a `return` statement after the `StringAssert`. Retesting confirms that we have fixed our problems. Our final version of the `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` looks like the following:  
+ 하지만 재테스트를 통해 올바른 예외가 catch되면 테스트가 실패한다는 점이 확인되었습니다. catch 문이 예외를 다시 설정하고 메서드가 계속 실행되어 새 어설션에서 실패합니다. 새 문제를 해결하기 위해 `return` 다음에 `StringAssert`문을 추가합니다. 재테스트를 통해 문제를 해결한 것을 확인합니다. `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` 의 최종 버전은 다음과 같습니다.  
   
 ```csharp  
 [TestMethod]  
@@ -434,5 +434,5 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
   
 ```  
   
- In this final section, the work that we did improving our test code led to more robust and informative test methods. But more importantly, the extra analysis also led to better code in our project under test.
+ 이 최종 단원에서는 테스트 코드 개선 작업으로 테스트 메서드가 더욱 더 견고하고 유용해졌습니다. 하지만 더 중요한 것은 추가 분석을 통해 테스트 중인 프로젝트의 코드가 향상되었다는 점입니다.
 

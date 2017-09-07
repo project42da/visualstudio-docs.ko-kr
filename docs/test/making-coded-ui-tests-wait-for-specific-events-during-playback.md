@@ -1,5 +1,5 @@
 ---
-title: Making Coded UI Tests Wait For Specific Events During Playback | Microsoft Docs
+title: "코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,48 +30,48 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 40983f5c5c79f1555ea039df8d71c931fa633f24
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>Making Coded UI Tests Wait For Specific Events During Playback
-In a coded UI test playback, you can instruct the test to wait for certain events to occur, such as a window to appear, the progress bar to disappear, and so on. To do this, use the appropriate UITestControl.WaitForControlXXX() method, as described in the following table. For an example of a coded UI test that waits for a control to be enabled using the <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> method, see [Walkthrough: Creating, Editing and Maintaining a Coded UI Test](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md).  
+# <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정
+코딩된 UI 테스트 재생 시 창이 나타나거나 진행률 표시줄이 사라지는 등의 특정 이벤트가 발생할 때까지 기다리도록 테스트에 지시할 수 있습니다. 이렇게 하려면 다음 표에 설명된 대로 적절한 UITestControl.WaitForControlXXX() 메서드를 사용합니다. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> 메서드를 사용하여 컨트롤이 사용하도록 설정할 때까지 기다리는 코딩된 UI 테스트에 대한 예제는 [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)를 참조하세요.  
   
- **Requirements**  
+ **요구 사항**  
   
  Visual Studio Enterprise  
   
 > [!TIP]
->  You can also add delays before actions using the Coded UI Test Editor. For more information, see [How to: Insert a Delay Before a UI Action Using the Coded UI Test Editor](http://msdn.microsoft.com/Library/509f8ef7-e105-4049-b11b-d64549e055b0).  
+>  또한 코딩된 UI 테스트 편집기를 사용해서 작업을 수행하기 전에 지연을 추가할 수도 있습니다. 자세한 내용은 [방법: 코딩된 UI 테스트 편집기를 사용하여 UI 작업 전에 지연 삽입](http://msdn.microsoft.com/Library/509f8ef7-e105-4049-b11b-d64549e055b0)을 참조하세요.  
   
- **UITestControl.WaitForControlXXX() Methods**  
+ **UITestControl.WaitForControlXXX() 메서드**  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlReady%2A>  
   
- Waits for the control to be ready to accept mouse and keyboard input. The engine implicitly calls this API for all actions to wait for the control to be ready before doing any operation. However, in certain esoteric scenario, you may have to do explicit call.  
+ 컨트롤이 마우스 및 키보드 입력을 허용할 수 있을 때까지 기다립니다. 엔진은 모든 작업에 대해 이 API를 암시적으로 호출하여 컨트롤이 준비될 때까지 기다린 후 작업을 수행합니다. 그러나 일부 복잡한 시나리오에서는 명시적 호출을 수행해야 할 수 있습니다.  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>  
   
- Waits for the control to be enabled when the wizard is doing some asynchronous validation of the input by making calls to the server. For example, you can method to wait for the **Next** button of the wizard to be enabled (). For an example of this method, see [Walkthrough: Creating, Editing and Maintaining a Coded UI Test](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md).  
+ 마법사가 서버를 호출하여 입력에 대해 몇 가지 비동기 유효성 검사를 수행하는 동안 컨트롤이 사용하도록 설정될 때까지 기다립니다. 예를 들어 메서드를 사용하여 마법사의 **다음** 단추를 사용하도록 설정할 때까지 기다릴 수 있습니다. 이 메서드에 대한 예제는 [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)를 참조하세요.  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlExist%2A>  
   
- Waits for the control to appear on the UI. For example, you are expecting an error dialog after the application has done the validation of the parameters. The time taken for validation is variable. You can use this method to wait for the error dialog box.  
+ 컨트롤이 UI에 나타날 때까지 기다립니다. 예를 들어 응용 프로그램에서 매개 변수의 유효성 검사를 수행한 후 오류 대화 상자를 예상할 수 있습니다. 유효성 검사에 걸린 시간은 변수입니다. 이 메서드는 오류 대화 상자를 기다리는 데 사용할 수 있습니다.  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlNotExist%2A>  
   
- Waits for the control to   disappear from the UI. For example, you can wait for the progress bar to disappear.  
+ 컨트롤이 UI에서 사라질 때까지 기다립니다. 예를 들어 진행률 표시줄이 사라질 때까지 기다릴 수 있습니다.  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlPropertyEqual%2A>  
   
- Waits for the specified property of the control to have the given value. For example, you wait for the status text to change to **Done**.  
+ 컨트롤의 지정된 속성이 지정된 값을 갖게 될 때까지 기다립니다. 예를 들어 상태 텍스트가 **완료**로 변경될 때까지 기다립니다.  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlPropertyNotEqual%2A>  
   
- Waits for the specified property of the control to have the opposite of a specified value. For example, you wait for the edit box to be not read-only, that is, editable.  
+ 컨트롤의 지정된 속성이 지정된 값과 반대되는 값을 갖게 될 때까지 기다립니다. 예를 들어 편집 상자가 읽기 전용이 아니라 편집 가능이 될 때까지 기다립니다.  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlCondition%2A>  
   
- Waits for the specified predicate returns to be `true`. This can be used for complex wait operation (like OR conditions) on a given control. For example, you can wait until the status text is **Succeeded** or **Failed** as shown in the following code:  
+ 지정된 조건자가 `true`로 반환될 때까지 기다립니다. 이 메서드는 특정 컨트롤에서 복잡한 대기 작업(예: OR 조건)에 사용할 수 있습니다. 예를 들어 다음 코드에 표시된 대로 상태 텍스트가 **Succeeded** 또는 **Failed**가 될 때까지 기다릴 수 있습니다.  
   
 ```csharp  
   
@@ -89,7 +89,7 @@ statusText.WaitForControlCondition(IsStatusDone);
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForCondition%2A>  
   
- All the previous methods are instance methods of UITestControl. This method is a static method. This method also waits for the specified predicate to be `true` but it can be used for complex wait operation (like OR conditions) on multiple controls. For example, you can wait until the status text is **Succeeded** or until an error message appears, as shown in the following code:  
+ 이전 메서드는 모두 UITestControl의 인스턴스 메서드입니다. 이 메서드는 정적 메서드입니다. 또한 이 메서드는 지정된 조건자가 `true`가 될 때까지 기다리지만 여러 컨트롤에서 복잡한 대기 작업(예: OR 조건)에 사용할 수 있습니다. 예를 들어 다음 코드에 표시된 대로 상태 텍스트가 **Succeeded**가 되거나 오류 메시지가 나타날 때까지 기다릴 수 있습니다.  
   
 ```csharp  
   
@@ -106,32 +106,32 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
   
 ```  
   
- All these methods have following behavior:  
+ 이러한 모든 메서드에는 다음과 같은 동작이 있습니다.  
   
- The methods return true if the wait is successful and false if the wait failed.  
+ 메서드는 대기에 성공하면 true를 반환하고 대기에 실패하면 false를 반환합니다.  
   
- The implicit timeout for the wait operation is specified by <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyTimeout%2A> property. The default value of this property is 60000 milliseconds (one minute).  
+ 대기 작업의 암시적 시간 제한은 <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyTimeout%2A> 속성으로 지정합니다. 이 속성의 기본값은 60000밀리초(1분)입니다.  
   
- The methods have an overload to take explicit timeout in milliseconds. However, when the wait operation results in an implicit search for the control or, when the application is busy, the actual wait time could be more than the timeout specified.  
+ 메서드에 밀리초 단위의 명시적 시간 제한을 사용하는 오버로드가 있습니다. 그러나 대기 작업으로 인해 컨트롤을 암시적으로 검색하거나 응용 프로그램이 사용 중인 경우 실제 대기 시간은 지정된 시간 제한보다 길어질 수 있습니다.  
   
- The previous functions are powerful and flexible and should satisfy almost all conditions. However, in case these methods do not satisfy your needs and you need to code either a <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A>, or a <xref:System.Threading.Thread.Sleep%2A> in your code, it is recommended that you use the Playback.Wait() instead of Thread.Sleep() API. The reasons for this are:  
+ 이전 함수는 강력하고 유연하지만 거의 모든 조건을 충족해야 합니다. 그러나 이러한 메서드가 요구를 충족하지 못하고 코드에서 <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> 또는 <xref:System.Threading.Thread.Sleep%2A>을 코딩해야 하는 경우에는 Thread.Sleep() API 대신 Playback.Wait()를 사용하는 것이 좋습니다. 그 이유는 다음과 같습니다.  
   
- You can use the  <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A>property to modify the duration of sleep. By default, this variable is 1 but you can increase or decrease it to change the wait time all over the code. For example, if you are specifically testing over slow network, or some other slow performance case, you can change this variable at one place (or even in the configuration file) to 1.5 to add 50% extra wait at all places.  
+ <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> 속성을 사용하여 절전 모드의 기간을 수정할 수 있습니다. 기본적으로 이 변수는 1이지만 늘리거나 줄여 코드 전체에서 대기 시간을 변경할 수 있습니다. 예를 들어 느린 네트워크 또는 일부 다른 성능 저하 사례를 특별히 테스트하는 경우 한 위치(또는 구성 파일에서도 가능)에서 이 변수를 1.5로 변경하여 모든 위치에서 대기를 50% 더 추가할 수 있습니다.  
   
- Playback.Wait() internally calls Thread.Sleep() (after above computation) in smaller chunks in a for-loop while checking for user cancel\break operation. In other words, Playback.Wait() lets you cancel playback before the end of the wait whereas sleep might not or throw exception.  
+ Playback.Wait()는 사용자 취소/분리 작업을 확인하는 동안 위의 계산 후 Thread.Sleep()을 for 루프의 더 작은 청크로 내부적으로 호출합니다. 즉, Playback.Wait()를 사용하면 대기가 끝나기 전에 재생을 취소할 수 있지만, 절전 모드에서는 취소할 수 없거나 예외를 throw합니다.  
   
 > [!TIP]
->  The Coded UI Test Editor lets you easily modify your coded UI tests. Using the Coded UI Test Editor, you can locate, view, and edit your test methods. You can also edit UI actions and their associated controls in the UI control map. For more information, see [Editing Coded UI Tests Using the Coded UI Test Editor](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md).  
+>  코딩된 UI 테스트 편집기에서는 코딩된 UI 테스트를 쉽게 수정할 수 있습니다. 코딩된 UI 테스트 편집기를 사용하면 테스트 메서드를 찾아서 보고 편집할 수 있습니다. 또한 UI 작업을 편집하고 UI 컨트롤 맵에서 관련 컨트롤을 편집할 수도 있습니다. 자세한 내용은 [코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)을 참조하세요.  
   
- **Guidance**  
+ **지침**  
   
- For additional information, see [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)  
+ 자세한 내용은 [Visual Studio 2012를 사용한 지속적인 업데이트 테스트 – 5장: 시스템 테스트 자동화](http://go.microsoft.com/fwlink/?LinkID=255196)를 참조하세요.  
   
-## <a name="see-also"></a>See Also  
- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)   
- [Creating Coded UI Tests](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
- [Walkthrough: Creating, Editing and Maintaining a Coded UI Test](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)   
- [Anatomy of a Coded UI Test](../test/anatomy-of-a-coded-ui-test.md)   
- [Supported Configurations and Platforms for Coded UI Tests and Action Recordings](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
- [How to: Insert a Delay Before a UI Action Using the Coded UI Test Editor](http://msdn.microsoft.com/Library/509f8ef7-e105-4049-b11b-d64549e055b0)
+## <a name="see-also"></a>참고 항목  
+ [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
+ [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
+ [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)   
+ [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)   
+ [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
+ [방법: 코딩된 UI 테스트 편집기를 사용하여 UI 작업 전에 지연 삽입](http://msdn.microsoft.com/Library/509f8ef7-e105-4049-b11b-d64549e055b0)
 

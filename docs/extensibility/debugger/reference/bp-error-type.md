@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ab0dc686c4d002733bf8501be042e33c500fb8e3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="bperrortype"></a>BP_ERROR_TYPE
-Specifies the error type of a breakpoint.  
+중단점의 오류 유형을 지정합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 enum enum_BP_ERROR_TYPE {   
@@ -75,53 +75,53 @@ public enum enum_BP_ERROR_TYPE {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>멤버  
  BPET_NONE  
- Specifies no breakpoint error.  
+ 오류가 발생 하지 중단점을 지정합니다.  
   
  BPET_TYPE_WARNING  
- Specifies a warning-style breakpoint error.  
+ 경고 스타일 중단점 오류를 지정합니다.  
   
  BPET_TYPE_ERROR  
- Specifies an error-style breakpoint error.  
+ 오류-스타일 중단점 오류를 지정 합니다.  
   
  BPET_SEV_HIGH  
- Specifies a high-severity breakpoint error.  
+ 심각한 중단점 오류를 지정합니다.  
   
  BPET_SEV_GENERAL  
- Specifies a medium-severity breakpoint error.  
+ 심각도 보통 중단점 오류를 지정합니다.  
   
  BPET_SEV_LOW  
- Specifies a low-severity breakpoint error.  
+ 낮은 심각도 중단점 오류를 지정합니다.  
   
  BPET_TYPE_MASK  
- Specifies a mask-style breakpoint error.  
+ 마스크 스타일 중단점 오류를 지정합니다.  
   
  BPET_SEV_MASK  
- Specifies a severity-mask-style breakpoint error.  
+ 심각도 마스크 스타일 중단점 오류를 지정합니다.  
   
  BPET_GENERAL_WARNING  
- Specifies a general-warning-style breakpoint error.  
+ 일반 경고 스타일 중단점 오류를 지정합니다.  
   
  BPET_GENERAL_ERROR  
- Specifies a general-error-style breakpoint error.  
+ 일반 오류 스타일 중단점 오류를 지정합니다.  
   
  BPET_ALL  
- Specifies all breakpoint error types.  
+ 모든 중단점 오류 유형을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
- These values may be combined with a bitwise `OR` and used for the `dwType` member of the [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) structure. Passed as a parameter to the [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) method.  
+## <a name="remarks"></a>설명  
+ 이러한 값에 비트와 함께 사용할 수 있습니다 `OR` 하는 데 사용 하 고는 `dwType` 의 멤버는 [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) 구조입니다. 에 대 한 매개 변수로 전달 되는 [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) 메서드.  
   
- A breakpoint error type is composed of a type and a severity. This means that a breakpoint error type is never just a type (for example, `BPET_TYPE_ERROR`,) or a severity (for example, `BPET_SEV_GENERAL`) by itself. `BPET_GENERAL_WARNING` and `BPET_GENERAL_ERROR` provide predefined values for general warning and error breakpoints.  
+ 중단점 오류 유형 심각도 및 형식으로 구성 됩니다. 즉, 중단점 오류 형식이 일종 되지 않습니다 (예를 들어 `BPET_TYPE_ERROR`,) 나 심각도 (예를 들어 `BPET_SEV_GENERAL`) 단독으로 합니다. `BPET_GENERAL_WARNING`및 `BPET_GENERAL_ERROR` 일반 경고 및 오류 중단점에 대 한 미리 정의 된 값을 제공 합니다.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)   
  [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)

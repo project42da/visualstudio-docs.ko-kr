@@ -32,13 +32,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2de27fc0c3ea470e63c82c8116e34e450eb08bb2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="bpreqifields90"></a>BPREQI_FIELDS90
-Enumerates the valid values that specify the information to be retrieved about a breakpoint request. This enumeration extends the [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) enumeration.  
+중단점 요청에 대 한 정보를 검색할 수를 지정 하는 유효한 값을 열거 합니다. 이 열거형 확장는 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 열거 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 enum enum_BPREQI_FIELDS90  
@@ -91,58 +91,58 @@ public enum enum_BPREQI_FIELDS90
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  BPREQI90_BPLOCATION  
- Initialize or use the `bpLocation` (breakpoint location) field of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) or [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structure.  
+ 배열을 초기화 하거나 사용 하 여는 `bpLocation` 의 (중단점 위치) 필드는 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 또는 [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 구조입니다.  
   
  BPREQI90_LANGUAGE  
- Initialize or use the `guidLanguage` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `guidLanguage` 필드는 `BP_REQUEST_INFO` 또는 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_PROGRAM  
- Initialize or use the `pProgram` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `pProgram` 필드는 `BP_REQUEST_INFO` 또는 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_PROGRAMNAME  
- Initialize or use the `bstrProgramName` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `bstrProgramName` 필드는 `BP_REQUEST_INFO` 또는 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_THREAD  
- Initialize or use the `pThread` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `pThread` 필드는 `BP_REQUEST_INFO` 또는 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_THREADNAME  
- Initialize or use the `bstrThreadName` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `bstrThreadName` 필드는 `BP_REQUEST_INFO` 또는 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_PASSCOUNT  
- Initialize or use the `bpPassCount` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `bpPassCount` 필드는 `BP_REQUEST_INFO` 또는 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_CONDITION  
- Initialize or use the `bpCondition` (breakpoint condition) field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `bpCondition` 의 (중단점 조건) 필드는 `BP_REQUEST_INFO` 또는 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_FLAGS  
- Initialize or use the `dwFlags` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `dwFlags` 필드는 `BP_REQUEST_INFO` 또는 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_ALLOLDFIELDS  
- Initialize or use all fields for the of the `BP_REQUEST_INFO` structure.  
+ 배열을 초기화 하거나에 대 한 모든 필드를 사용 하는의 `BP_REQUEST_INFO` 구조입니다.  
   
  BPREQI90_VENDOR  
- Initialize or use the `guidVendor` field of `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `guidVendor` 필드 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_CONSTRAINT  
- Initialize or use the `bstrConstraint` field of `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `bstrConstraint` 필드 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_TRACEPOINT  
- Initialize or use the `bstrTracepoint` field of `BP_REQUEST_INFO2` structure.  
+ 배열을 초기화 하거나 사용 하 여는 `bstrTracepoint` 필드 `BP_REQUEST_INFO2` 구조입니다.  
   
  BPREQI90_MACROTRACEPOINT  
- Initialize or use the `bstrMacroTracepoint` field of `BP_REQUEST_INFO2` structure. BPREQI_ALLFIELDS does not include this field.  
+ 배열을 초기화 하거나 사용 하 여는 `bstrMacroTracepoint` 필드 `BP_REQUEST_INFO2` 구조입니다. BPREQI_ALLFIELDS이이 필드를 포함 하지 않습니다.  
   
  BPREQI90_ALLFIELDS  
- Specifies all fields for the `BP_REQUEST_INFO2` structure.  
+ 모든 필드에 대 한 지정 된 `BP_REQUEST_INFO2` 구조입니다.  
   
-## <a name="requirements"></a>Requirements  
- Header: Msdbg90.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: Msdbg90.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+## <a name="see-also"></a>참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

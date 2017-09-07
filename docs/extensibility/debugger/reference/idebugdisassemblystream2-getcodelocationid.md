@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 0614509685436f46a2f48eb8b6a6299321f84901
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugdisassemblystream2getcodelocationid"></a>IDebugDisassemblyStream2::GetCodeLocationId
-Returns a code location identifier for a particular code context.  
+특정 코드 컨텍스트에 대 한 코드 위치 식별자를 반환합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetCodeLocationId(   
@@ -56,22 +56,22 @@ int GetCodeLocationId(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pCodeContext`  
- [in] An [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) object to be converted to an identifier.  
+ [in] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 식별자로 변환 될 개체입니다.  
   
  `puCodeLocationId`  
- [out] Returns the code location identifier. See Remarks.  
+ [out] 코드 위치 식별자를 반환합니다. 설명 부분을 참조하세요.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_CODE_CONTEXT_OUT_OF_SCOPE` if the code context is valid but outside the scope.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다. 반환 `E_CODE_CONTEXT_OUT_OF_SCOPE` 코드 컨텍스트가 유효 하지만 범위 밖에 있습니다.  
   
-## <a name="remarks"></a>Remarks  
- The code location identifier is specific to the debug engine (DE) supporting the disassembly. This location identifier is used internally by the DE to track positions in the code and is typically an address or offset of some kind. The only requirement is that if the code context of one location is less than the code context of another location, then the corresponding code location identifier of the first code context must also be less than the code location identifier of the second code context.  
+## <a name="remarks"></a>설명  
+ 코드 위치 식별자 디스어셈블리를 지 원하는 디버그 엔진 (DE)에 해당 됩니다. 이 위치 식별자 코드의 위치를 추적 하는 DE에서 내부적으로 사용 이며 일반적으로 된 주소 또는 특정 종류의 오프셋입니다. 유일한 요구 사항은 있으면를 한 곳의 코드 컨텍스트 코드 컨텍스트를 다른 위치를 보다 작은 경우 해당 코드 위치 식별자의 첫 번째 코드 컨텍스트의 두 번째 코드 컨텍스트의 코드 위치 식별자 보다 작을 수 또한 해야 합니다.  
   
- To retrieve the code context of a code location identifier, call the [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) method.  
+ 코드 위치 식별자의 코드 컨텍스트를 검색 하려면는 [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) 메서드.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   
  [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md)
