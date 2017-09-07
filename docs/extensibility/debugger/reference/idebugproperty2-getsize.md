@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 00674430f95eed895a6564676e9d33a36795268d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugproperty2getsize"></a>IDebugProperty2::GetSize
-Gets the size, in bytes, of the property value.  
+속성 값의 바이트 단위로 크기를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetSize (   
@@ -54,12 +54,12 @@ int GetSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pdwSize`  
- [out] Returns the size, in bytes, of the property value.  
+ [out] 속성 값의 바이트 단위로 크기를 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns error code. Returns `S_GETSIZE_NO_SIZE` if the property has no size.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`; 그렇지 않으면 오류 코드를 반환 합니다. 반환 `S_GETSIZE_NO_SIZE` 속성 크기가 없는 경우.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

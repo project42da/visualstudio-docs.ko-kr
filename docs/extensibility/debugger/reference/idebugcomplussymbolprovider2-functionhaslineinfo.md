@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8fa84124925947ed8119b356ed8ee2c1bcff310a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovider2functionhaslineinfo"></a>IDebugComPlusSymbolProvider2::FunctionHasLineInfo
-Determines if the specified method has line information.  
+지정된 된 메서드 줄 정보를 포함 하는지를 결정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT FunctionHasLineInfo(  
@@ -53,15 +53,15 @@ int FunctionHasLineInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pAddress`  
- [in] The debug address that is represented by an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface. This address must be a METHOD_ADDRESS.  
+ [in] 막대로 디버그 주소는 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 인터페이스입니다. 이 주소는 METHOD_ADDRESS 이어야 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns `S_FALSE`.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE`합니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
+## <a name="example"></a>예제  
+ 다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CDebugSymbolProvider** 공개 하는 개체는 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) 인터페이스입니다.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::FunctionHasLineInfo(  
@@ -100,5 +100,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

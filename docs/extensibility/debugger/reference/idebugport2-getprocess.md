@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 7d49bcda20db3651041477109b6c8c21083bbd84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugport2getprocess"></a>IDebugPort2::GetProcess
-Gets the specified process running on a port.  
+지정 된 포트에서 실행 중인 프로세스를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetProcess(   
@@ -56,17 +56,17 @@ int GetProcess(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `ProcessId`  
- [in] An [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure that specifies the process identifier.  
+ [in] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 프로세스 식별자를 지정 하는 구조입니다.  
   
  `ppProcess`  
- [out] Returns an [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) object representing the process.  
+ [out] 반환 된 [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) 프로세스를 나타내는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

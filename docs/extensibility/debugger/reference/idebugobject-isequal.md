@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 9780a18ff72058a90739c421061fabd9ce8520e1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
-Compares an object with this object.  
+이 개체와 개체를 비교합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT IsEqual(   
@@ -56,18 +56,18 @@ int IsEqual(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pObject`  
- [in] An [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the object to compare to.  
+ [in] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 비교할 개체를 나타내는 개체입니다.  
   
  `pfIsEqual`  
- [out] Returns non-zero (`TRUE`) if the values of the objects are equal; otherwise, returns zero (`FALSE`).  
+ [out] 0이 아닌 반환 (`TRUE`) 개체의 값은 같고, 그렇지 않으면 0이 반환 (`FALSE`).  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- Typically, this method can compare the addresses of the values represented by the `pObject` parameter and this [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object; if the addresses are equal, then the objects can be considered equal.  
+## <a name="remarks"></a>설명  
+ 이 메서드 주소를 나타내는 값을 비교할 수는 일반적으로 `pObject` 매개 변수 및이 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 개체; 주소가 같으면 개체 취급 될 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

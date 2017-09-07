@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 7b380859a6020c81a9d2cbb81095f49c8c385405
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ienumdebugaddressesnext"></a>IEnumDebugAddresses::Next
-This method returns the next set of elements from the enumeration.  
+이 메서드는 열거형에서 다음 요소 집합을 반환합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT Next(  
@@ -58,19 +58,19 @@ int Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `celt`  
- [in] The number of elements to retrieve. Also specifies the maximum size of the `rgelt` array.  
+ [in] 검색할 요소의 수입니다. 또한의 최대 크기를 지정 된 `rgelt` 배열입니다.  
   
  `rgelt`  
- [in, out] Array of [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) elements to be filled in.  
+ [out에서] 배열 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 요소를 채워야 합니다.  
   
  `pceltFetched`  
- [out] Returns the number of elements actually returned in `rgelt`.  
+ [out] 에 실제로 반환 된 요소의 수를 반환 `rgelt`합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`. Returns `S_FALSE` if fewer than the requested number of elements could be returned; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 요소 요청 된 수보다 적은지 반환 될 수 있습니다; 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

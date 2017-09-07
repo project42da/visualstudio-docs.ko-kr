@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 7249c2bc64afea2ca1037cc7fa1cf617357341d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugobjectsetvalue"></a>IDebugObject::SetValue
-Sets the value of the object from a consecutive series of bytes.  
+연속 된 일련의 바이트에서 개체의 값을 설정합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT SetValue(   
@@ -56,19 +56,19 @@ int SetValue(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pValue`  
- [in] An array of bytes representing the new value.  
+ [in] 새 값을 나타내는 바이트 배열입니다.  
   
  `nSize`  
- [in] The size of the value in bytes.  
+ [in] 크기 (바이트)에서 값입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- The values in the array are copied into this [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object, replacing any existing value. The size of the new value can be larger or smaller than the existing value. This `IDebugObject` cannot be a null reference.  
+## <a name="remarks"></a>설명  
+ 배열의 값이에 복사 됩니다 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 개체를 기존 값을 대체 합니다. 새 값의 크기는 기존 값 보다 크거나 작을 수 있습니다. 이 `IDebugObject` null 참조일 수 없습니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)

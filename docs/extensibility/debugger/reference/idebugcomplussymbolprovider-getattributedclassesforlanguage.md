@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 0868998a43c48bc985c4801deddcf089c73f01bf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovidergetattributedclassesforlanguage"></a>IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
-Retrieves the classes with the specified attribute that are implemented in the specified programming language.  
+지정된 된 프로그래밍 언어에서 구현 되는 지정 된 특성이 있는 클래스를 검색 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```  
 [C++]  
@@ -59,21 +59,21 @@ int GetAttributedClassesForLanguage (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `guidLanguage`  
- [in] Unique identifier for the language.  
+ [in] 언어에 대 한 고유 식별자입니다.  
   
  `pstrAttribute`  
- [in] The attribute string.  
+ [in] 특성 문자열입니다.  
   
  `ppEnum`  
- [out] Returns an enumeration of the attribute classes.  
+ [out] 특성 클래스의 열거형을 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>예제  
+ 다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CDebugSymbolProvider** 공개 하는 개체는 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) 인터페이스입니다.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetAttributedClassesForLanguage(  
@@ -203,5 +203,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

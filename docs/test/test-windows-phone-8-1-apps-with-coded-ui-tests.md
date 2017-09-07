@@ -1,5 +1,5 @@
 ---
-title: Test Windows UWP and 8.1 Phone Apps with Coded UI Tests | Microsoft Docs
+title: "코딩된 UI 테스트를 사용하여 Windows UWP 및 8.1 Phone 앱 테스트 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,32 +31,32 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 01b31305ba4ed3706e6368a2b8d9963e524c9c1a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>Test Windows UWP and 8.1 Phone Apps with Coded UI Tests
+# <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>코딩된 UI 테스트를 사용하여 Windows UWP 및 8.1 Phone 앱 테스트
 
-Use this walkthrough for creating UI tests for UWP apps that run on mobile device or emulators and XAML-based Phone 8.1 apps.  
+모바일 장치 또는 에뮬레이터에서 실행되는 UWP 앱 및 XAML 기반 Phone 8.1 앱에 대한 UI 테스트를 만드는 데 이 연습을 사용합니다.  
 
-## <a name="create-a-simple-windows-phone-app"></a>Create a simple Windows Phone app  
+## <a name="create-a-simple-windows-phone-app"></a>간단한 Windows Phone 앱 만들기  
   
-1.  Create a new project for a blank Windows Phone app using either Visual C# or Visual Basic template.  
+1.  Visual C# 또는 Visual Basic 템플릿을 사용하여 빈 Windows Phone 앱을 위한 새 프로젝트를 만듭니다.  
   
-     ![Create a new Windows Phone app](../test/media/cuit_phone_app_newproject.png "CUIT_Phone_App_NewProject")  
+     ![새 Windows Phone 앱 만들기](../test/media/cuit_phone_app_newproject.png "CUIT_Phone_App_NewProject")  
   
-2.  In Solution Explorer, open MainPage.xaml. From the Toolbox, drag a button control and a textbox control to the design surface.  
+2.  솔루션 탐색기에서 MainPage.xaml을 엽니다. 도구 상자에서 단추 컨트롤과 textbox 컨트롤을 디자인 화면으로 끕니다.  
   
-     ![Add contols to MainPage.xaml](../test/media/cuit_phone_app_addcontrols.png "CUIT_Phone_App_AddControls")  
+     ![MainPage.xaml에 컨트롤 추가](../test/media/cuit_phone_app_addcontrols.png "CUIT_Phone_App_AddControls")  
   
-3.  In the Properties window, name the button control.  
+3.  속성 창에서 단추 컨트롤의 이름을 지정합니다.  
   
-     ![Name the button control](../test/media/cuit_phone_namebutton.png "CUIT_Phone_NameButton")  
+     ![단추 컨트롤 이름 지정](../test/media/cuit_phone_namebutton.png "CUIT_Phone_NameButton")  
   
-4.  Name the textbox control.  
+4.  textbox 컨트롤의 이름을 지정합니다.  
   
-     ![Name the textbox control](../test/media/cuit_phone_nametesxtbox.png "CUIT_Phone_NameTesxtBox")  
+     ![textbox 컨트롤 이름 지정](../test/media/cuit_phone_nametesxtbox.png "CUIT_Phone_NameTesxtBox")  
   
-5.  On designer surface, double-click the button control and add the following code:  
+5.  디자이너 화면에서 단추 컨트롤을 두 번 클릭하여 다음 코드를 추가합니다.  
   
     ```csharp  
     private void button_Click_1(object sender, RoutedEventArgs e)  
@@ -76,76 +76,76 @@ Use this walkthrough for creating UI tests for UWP apps that run on mobile devic
     End Class  
     ```  
   
-6.  Press F5 to run your Windows Phone app in the emulator and verify that it's working.  
+6.  F5 키를 눌러 에뮬레이터에서 Windows Phone 앱을 실행하고 제대로 작동하는지 확인합니다.  
   
-     ![Run the Windows Phone app](../test/media/cuit_phone_runapp.png "CUIt_Phone_RunApp")  
+     ![Windows Phone 앱 실행](../test/media/cuit_phone_runapp.png "CUIt_Phone_RunApp")  
   
-7.  Exit the emulator.  
+7.  에뮬레이터를 종료합니다.  
   
-## <a name="deploy-the-windows-phone-app"></a>Deploy the Windows Phone app  
+## <a name="deploy-the-windows-phone-app"></a>Windows Phone 앱 배포  
   
-1.  Before a coded UI test can map an app's controls, you have to deploy the app.  
+1.  코딩된 UI 테스트에서 앱의 컨트롤을 매핑하려면 앱을 배포해야 합니다.  
   
-     ![Deploy the Windows Phone app](../test/media/cuit_phone_deploy.png "CUIT_Phone_Deploy")  
+     ![Windows Phone 앱 배포](../test/media/cuit_phone_deploy.png "CUIT_Phone_Deploy")  
   
-     The emulator starts. The app is now available for testing.  
+     에뮬레이터를 시작합니다. 이제 앱을 테스트할 수 있습니다.  
   
-     ![App deployed on emulator](../test/media/cuit_phone_deployed.png "CUIT_Phone_Deployed")  
+     ![에뮬레이터에 배포된 앱](../test/media/cuit_phone_deployed.png "CUIT_Phone_Deployed")  
   
-     Keep the emulator running while you create your coded UI test.  
+     코딩된 UI 테스트를 만드는 동안 에뮬레이터를 계속해서 실행합니다.  
   
-## <a name="create-a-coded-ui-test-for-the-windows-phone-app"></a>Create a coded UI test for the Windows Phone app  
+## <a name="create-a-coded-ui-test-for-the-windows-phone-app"></a>Windows Phone 앱용 코딩된 UI 테스트 만들기  
 
-[How do I create coded UI tests for Universal Windows Platform (UWP) apps?](#uwpapps)
+[UWP(유니버설 Windows 플랫폼) 앱을 위한 코딩된 UI 테스트를 만들려면 어떻게 하나요?](#uwpapps)
   
-1.  Add a new coded UI test project to the solution with the Windows Phone app.  
+1.  Windows Phone 앱을 사용하여 솔루션에 새로 코딩된 UI 테스트 프로젝트를 추가합니다.  
   
-     ![Create new coded UI  test for Windows Phone](../test/media/cuit_phone_newproject.png "CUIT_Phone_NewProject")  
+     ![Windows Phone용으로 새로 코딩된 UI 테스트 만들기](../test/media/cuit_phone_newproject.png "CUIT_Phone_NewProject")  
   
-2.  Choose to edit the UI map using the cross-hair tool.  
+2.  십자선 도구를 사용하여 UI 맵을 편집하도록 선택합니다.  
   
-     ![Generate coded UI test using cross&#45;hair tool.](../test/media/cuit_phone_howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
+     ![십자선 도구를 사용하여 코딩된 UI 테스트 생성](../test/media/cuit_phone_howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
   
-3.  Use the cross-hair tool to select the app, then copy the value for the app's **AutomationId** property, which will be used later to start the app in the test.  
+3.  십자선 도구를 사용하여 앱을 선택한 다음 나중에 테스트에서 앱을 시작하는 데 사용하게 될 앱의 **AutomationId** 속성 값을 복사합니다.  
   
-     ![Copy the app's AutomationId value](../test/media/cuit_phone_getautomationid.png "CUIT_Phone_GetAutomationId")  
+     ![앱의 AutomationId 값 복사](../test/media/cuit_phone_getautomationid.png "CUIT_Phone_GetAutomationId")  
   
-4.  In the emulator, start the app and use the cross-hair tool to select the button control. Then add the button control to the UI control map.  
+4.  에뮬레이터에서 앱을 시작하고 십자선 도구를 사용하여 단추 컨트롤을 선택합니다. 그런 다음 UI 컨트롤 맵에 단추 컨트롤을 추가합니다.  
   
-     ![Use the cross&#45;hair tool to map controls](../test/media/cuit_phone_mapbuttoncontrol.png "CUIT_Phone_MapButtonControl")  
+     ![십자선 도구를 사용하여 컨트롤 매핑](../test/media/cuit_phone_mapbuttoncontrol.png "CUIT_Phone_MapButtonControl")  
   
-5.  To add the textbox control to the UI control map, repeat the previous step.  
+5.  UI 컨트롤 맵에 textbox 컨트롤을 추가하려면 이전 단계를 반복합니다.  
   
-     ![Use the cross&#45;hair tool and map textbox control](../test/media/cuit_phone_maptextboxcontrol.png "CUIT_Phone_MapTextBoxControl")  
+     ![십자선 도구 및 맵 textbox 컨트롤 사용](../test/media/cuit_phone_maptextboxcontrol.png "CUIT_Phone_MapTextBoxControl")  
   
-6.  Generate code to create code for changes to the UI control map.  
+6.  코드를 생성하여 UI 컨트롤 맵 변경을 위한 코드를 작성합니다.  
   
-     ![Generate code from the builder](../test/media/cuit_phone_generatecode.png "CUIT_Phone_GenerateCode")  
+     ![작성기에서 코드 생성](../test/media/cuit_phone_generatecode.png "CUIT_Phone_GenerateCode")  
   
-7.  Use the cross-hair tool to select the textbox control, and then select the **Text** property.  
+7.  십자선 도구를 사용하여 textbox 컨트롤을 선택한 다음 **텍스트** 속성을 선택합니다.  
   
-     ![Select the Text property](../test/media/cuit_phone_textproperty.png "CUIT_Phone_TextProperty")  
+     ![Text 속성 선택](../test/media/cuit_phone_textproperty.png "CUIT_Phone_TextProperty")  
   
-8.  Add an assertion. It will be used in the test to verify that the value is correct.  
+8.  어설션을 추가합니다. 이 어설션은 값이 올바른지 확인하는 테스트에 사용됩니다.  
   
-     ![Add assertion to the test](../test/media/cuit_phone_addassertion.png "CUIT_Phone_AddAssertion")  
+     ![테스트에 어설션 추가](../test/media/cuit_phone_addassertion.png "CUIT_Phone_AddAssertion")  
   
-9. Add and generate code for the assert method.  
+9. assert 메서드에 대한 코드를 추가하고 생성합니다.  
   
-     ![Generate code for the assertion](../test/media/cuit_phone_generatecodeassertion.png "CUIT_Phone_GenerateCodeAssertion")  
+     ![어설션에 대한 코드 생성](../test/media/cuit_phone_generatecodeassertion.png "CUIT_Phone_GenerateCodeAssertion")  
   
 10. **Visual C#**  
   
-     In Solution Explorer, open the UIMap.Designer.cs file to view the code you just added for the assert method and the controls.  
+     솔루션 탐색기에서 UIMap.Designer.cs 파일을 열어 assert 메서드 및 컨트롤에 대해 방금 추가한 코드를 확인합니다.  
   
      **Visual Basic**  
   
-     In Solution Explorer, open the CodedUITest1.vb file. In the CodedUITestMethod1() test method code, right-click the call to the assertion method that was automatically added `Me.UIMap.AssertMethod1()` and choose **Go To Definition**. This will open the UIMap.Designer.vb file in the code editor so you can view the code you added for the assert method and the controls.  
+     솔루션 탐색기에서 CodedUITest1.vb 파일을 엽니다. CodedUITestMethod1() 테스트 메서드 코드에서 자동으로 추가된 `Me.UIMap.AssertMethod1()` 인 어설션 메서드에 대한 호출을 마우스 오른쪽 단추로 클릭한 다음 **정의로 이동**을 선택합니다. 그러면 코드 편집기에서 UIMap.Designer.vb 파일이 열려 assert 메서드 및 해당 컨트롤에 대해 추가한 코드를 확인할 수 있습니다.  
   
     > [!WARNING]
-    >  Do not modify the UIMap.designer.cs or UIMap.Designer.vb file directly. If you do this, the changes to the file will be overwritten each time the test is generated.  
+    >  UIMap.designer.cs 파일 또는 UIMap.Designer.vb 파일은 직접 수정하지 마세요. 수정하면 테스트를 생성할 때마다 파일에 대한 변경 내용을 덮어씁니다.  
   
-     **Assert method**  
+     **Assert 메서드**  
   
     ```csharp  
     public void AssertMethod1()  
@@ -168,7 +168,7 @@ Use this walkthrough for creating UI tests for UWP apps that run on mobile devic
     End Sub  
     ```  
   
-     **Controls**  
+     **컨트롤**  
   
     ```csharp  
     #region Properties  
@@ -234,9 +234,9 @@ Use this walkthrough for creating UI tests for UWP apps that run on mobile devic
     #End Region  
     ```  
   
-11. In Solution Explorer, open the CodedUITest1.cs or CodedUITest1.vb file. You can now add code to the CodedUTTestMethod1 method for the actions needed to run the test. Use the controls that were added to the UIMap to add code:  
+11. 솔루션 탐색기에서 CodedUITest1.cs 또는 CodedUITest1.vb 파일을 엽니다. 이제 테스트 실행에 필요한 작업을 위한 CodedUTTestMethod1 메서드에 코드를 추가할 수 있습니다. UIMap에 추가한 컨트롤을 사용하여 다음과 같이 코드를 추가합니다.  
   
-    1.  Launch the Windows Phone app using the automation ID property you copied to the clipboard previously:  
+    1.  이전에 클립보드에 복사한 AutomationId 속성을 사용하여 Windows Phone 앱을 시작합니다.  
   
         ```csharp  
         XamlWindow myAppWindow = XamlWindow.Launch("ed85f6ff-2fd1-4ec5-9eef-696026c3fa7b_cyrqexqw8cc7c!App");  
@@ -246,7 +246,7 @@ Use this walkthrough for creating UI tests for UWP apps that run on mobile devic
         XamlWindow.Launch("ed85f6ff-2fd1-4ec5-9eef-696026c3fa7b_cyrqexqw8cc7c!App");  
         ```  
   
-    2.  Add a gesture to tap the button control:  
+    2.  다음과 같이 단추 컨트롤을 누르는 제스처를 추가합니다.  
   
         ```csharp  
         Gesture.Tap(this.UIMap.UIApp1Window.UIButtonButton);  
@@ -256,7 +256,7 @@ Use this walkthrough for creating UI tests for UWP apps that run on mobile devic
         Gesture.Tap(Me.UIMap.UIApp1Window.UIButtonButton)  
         ```  
   
-    3.  Verify that the call to the assert method that was automatically generated comes after launching the app and tap gesture on the button:  
+    3.  앱과 단추 탭하기 제스처 시작 후 자동으로 생성된 assert 메서드가 호출되는지 확인합니다.  
   
         ```csharp  
         this.UIMap.AssertMethod1();  
@@ -266,7 +266,7 @@ Use this walkthrough for creating UI tests for UWP apps that run on mobile devic
         Me.UIMap.AssertMethod1()  
         ```  
   
-     After the code is added, the CodedUITestMethod1 test method should appear as follows:  
+     코드가 추가된 후 CodedUITestMethod1 테스트 메서드의 모양은 다음과 같아야 합니다.  
   
     ```csharp  
     [TestMethod]  
@@ -303,24 +303,24 @@ Use this walkthrough for creating UI tests for UWP apps that run on mobile devic
         End Sub  
     ```  
   
-## <a name="run-the-coded-ui-test"></a>Run the coded UI test  
+## <a name="run-the-coded-ui-test"></a>코딩된 UI 테스트 실행  
   
-1.  Build your test and then run the test using the test explorer.  
+1.  테스트를 빌드한 다음 테스트 탐색기를 사용하여 테스트를 실행합니다.  
   
-     ![Build and run the test using Test Explorer](../test/media/cuit_phone_runtestexplorer.png "CUIT_Phone_RunTestExplorer")  
+     ![테스트 탐색기를 사용하여 테스트 빌드 및 실행](../test/media/cuit_phone_runtestexplorer.png "CUIT_Phone_RunTestExplorer")  
   
-     The Windows Phone app launches, the action to tap the button is completed, and the textbox's Text property is populated and validated using the assert method.  
+     Windows Phone 앱이 시작되고 단추 탭하기 작업이 완료되며 assert 메서드를 사용하여 텍스트 상자의 텍스트 속성이 채워지고 확인됩니다.  
   
-     ![Running Winodws Phone test](../test/media/cuit_phone_runtestexplorerrunning.png "CUIT_Phone_RunTestExplorerRunning")  
+     ![Winodws Phone 테스트 실행](../test/media/cuit_phone_runtestexplorerrunning.png "CUIT_Phone_RunTestExplorerRunning")  
   
-     After the test is finished, the test explorer confirms that the test passed.  
+     테스트를 마치면 테스트 탐색기에서 테스트를 통과했음을 확인합니다.  
   
-     ![Test Explorer results](../test/media/cuit_phone_runtestexplorerresults.png "CUIT_Phone_RunTestExplorerResults")  
+     ![테스트 탐색기 결과](../test/media/cuit_phone_runtestexplorerresults.png "CUIT_Phone_RunTestExplorerResults")  
   
-##  <a name="TestingPhoneAppsCodedUI_DataDriven"></a> Use Data-driven coded UI tests on Windows Phone apps  
- To test different conditions, a coded UI test can be run multiple times with different sets of data.  
+##  <a name="TestingPhoneAppsCodedUI_DataDriven"></a> Windows Phone 앱에서 데이터 기반의 코딩된 UI 테스트 사용  
+ 여러 조건을 테스트하기 위해 코딩된 UI 테스트를 여러 데이터 집합을 사용하여 여러 번 실행할 수 있습니다.  
   
- Data-driven Coded UI tests for Windows Phone are defined using the DataRow attribute on a test method. In the following example, x and y use the values of 1 and 2 for the first iteration and -1 and -2 for the second iteration of the test.  
+ Windows Phone용 코딩된 데이터 기반 UI 테스트는 테스트 메서드의 DataRow 특성을 사용하여 정의됩니다. 다음 예에서 x와 y는 첫 번째 반복에는 값 1 및 2를 사용하고 테스트의 두 번째 반복에는 값 -1 및 -2를 사용합니다.  
   
 ```  
 [DataRow(1, 2, DisplayName = "Add positive numbers")]  
@@ -330,50 +330,50 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
   
 ```  
   
-## <a name="q--a"></a>Q & A  
+## <a name="q--a"></a>Q&A  
   
-### <a name="q-do-i-have-to-deploy-the-windows-phone-app-in-the-emulator-in-order-to-map-ui-controls"></a>Q: Do I have to deploy the Windows Phone app in the emulator in order to map UI controls?  
- **A**: Yes, the coded UI test builder requires that an emulator be running and the app be deployed to it. Otherwise, it will throw an error message saying that no running emulator could be found.  
+### <a name="q-do-i-have-to-deploy-the-windows-phone-app-in-the-emulator-in-order-to-map-ui-controls"></a>Q: UI 컨트롤을 매핑하려면 에뮬레이터에서 Windows Phone 앱을 배포해야 하나요?  
+ **A**: 예, 코딩된 UI 테스트 빌더를 사용하려면 에뮬레이터가 실행 중이고 애뮬레이터에 앱을 배포해야 합니다. 그렇지 않으면 실행 중인 에뮬레이터가 없다는 오류 메시지가 throw됩니다.  
   
-###  <a name="TestingPhoneAppsCodedUI_EmulatorDevice"></a> Q: Can tests be executed on the emulator only, or can I also use a physical device?  
- **A**: Either option is supported. The target for test execution is selected by changing the emulator type or selecting device in the device toolbar. If Device is selected, a Phone Blue device needs to be connected to one of the machine's USB ports.  
+###  <a name="TestingPhoneAppsCodedUI_EmulatorDevice"></a> Q: 테스트는 에뮬레이터에서만 실행할 수 있나요? 아니면 실제 장치에서도 할 수 있나요?  
+ **A**: 두 옵션 모두 지원됩니다. 에뮬레이터 유형을 변경하거나 장치 도구 모음에서 장치를 선택하여 테스트 실행 대상을 선택합니다. 장치를 선택하면 컴퓨터의 USB 포트 중 하나에 Phone Blue 장치를 연결해야 합니다.  
   
- ![Select the emulator version, or physcial device](../test/media/cuit_phone_testtarget.png "CUIT_Phone_TestTarget")  
+ ![에뮬레이터 버전 또는 실제 장치 선택](../test/media/cuit_phone_testtarget.png "CUIT_Phone_TestTarget")  
   
-### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Q: Why don't I see the option to record my coded UI test in the Generate Code for a Coded UI Test dialog?  
- **A**: The option to record is not supported for Windows Phone apps.  
+### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Q: [코딩된 UI 테스트용으로 코드 생성] 대화 상자에 나의 코딩된 UI 테스트를 기록할 수 있는 옵션이 표시되지 않는 이유는 무엇인가요?  
+ **A**: Windows Phone 앱의 경우 기록 옵션이 지원되지 않습니다.  
   
-### <a name="q-can-i-create-a-coded-ui-test-for-my-windows-phone-apps-based-on-winjs-silverlight-or-html5"></a>Q: Can I create a coded UI test for my Windows Phone apps based on WinJS, Silverlight or HTML5?  
- **A**: No, only XAML based apps are supported.  
+### <a name="q-can-i-create-a-coded-ui-test-for-my-windows-phone-apps-based-on-winjs-silverlight-or-html5"></a>Q: WinJS, Silverlight 또는 HTML5를 기반으로 Windows Phone 앱용 코딩된 UI 테스트를 만들 수 있나요?  
+ **A**: 아니요, XAML 기반 앱만 지원됩니다.  
   
-### <a name="q-can-i-create-coded-ui-tests-for-my-windows-phone-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>Q: Can I create coded UI tests for my Windows Phone apps on a system that is not running Windows 8.1 or Windows 10?  
- **A**: No, the Coded UI Test Project templates are only available on Windows 8.1 and Windows 10. To create automation for Universal Windows Platform (UWP) apps, you'll need Windows 10.  
+### <a name="q-can-i-create-coded-ui-tests-for-my-windows-phone-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>Q: Windows 8.1 또는 Windows 10이 실행되고 있지 않은 시스템에서 Windows Phone 앱을 위한 코딩된 UI 테스트를 만들 수 있나요?  
+ **A**: 아니요, 코딩된 UI 테스트 프로젝트 템플릿은 Windows 8.1 및 Windows 10에서만 사용할 수 있습니다. UWP(유니버설 Windows 플랫폼) 앱에 대한 자동화를 만들려면 Windows 10이 필요합니다.  
 
 <a name="uwpapps"></a>  
-### <a name="q-how-do-i-create-coded-ui-tests-for-universal-windows-platform-uwp-apps"></a>Q: How do I create coded UI tests for Universal Windows Platform (UWP) apps?  
- **A**: Depending on the platform where you're testing your UWP app, create coded UI test project in one of these ways:  
+### <a name="q-how-do-i-create-coded-ui-tests-for-universal-windows-platform-uwp-apps"></a>Q: UWP(유니버설 Windows 플랫폼) 앱을 위한 코딩된 UI 테스트를 만들려면 어떻게 하나요?  
+ **A**: UWP 앱을 테스트하는 플랫폼에 따라 다음 중 한 가지 방법으로 코딩된 UI 테스트 프로젝트를 만듭니다.  
   
--   A UWP app running on local machine will run as a Store app. To test this, you must use the **Coded UI Test Project (Windows)** template. To find this template when you create a new project, go to the **Windows**, **Universal** node. Or go to the **Windows**, **Windows 8**, **Windows** node.  
+-   로컬 컴퓨터에서 실행 중인 UWP 앱이 스토어 앱으로 실행되는 경우. 이를 테스트하려면 **코딩된 UI 테스트 프로젝트(Windows)** 템플릿을 사용해야 합니다. 새 프로젝트를 만들 때 이 템플릿을 찾으려면 **Windows**, **범용** 노드로 이동합니다. 또는 **Windows**, **Windows 8**, **Windows** 노드로 이동합니다.  
   
--   A UWP app running on mobile device or emulator will run as a Phone app. To test this, you must use the **Coded UI Test Project (Windows Phone)** template. To find this template when you create a new project, go to the **Windows**, **Universal** node. Or go to the **Windows**, **Windows 8**, **Windows Phone** node.  
+-   모바일 장치 또는 에뮬레이터에서 실행 중인 UWP 앱이 휴대폰 앱으로 실행되는 경우. 이를 테스트하려면 **코딩된 UI 테스트 프로젝트(Windows Phone)** 템플릿을 사용해야 합니다. 새 프로젝트를 만들 때 이 템플릿을 찾으려면 **Windows**, **범용** 노드로 이동합니다. 또는 **Windows**, **Windows 8**, **Windows Phone** 노드로 이동합니다.  
   
- After you create the project, authoring a test stays the same as before.  
+ 프로젝트를 만든 후의 테스트 작성은 이전과 동일합니다.  
   
-### <a name="q-can-i-select-controls-that-are-outside-the-emulator"></a>Q: Can I select controls that are outside the emulator?  
- **A**: No, the builder will not detect them.  
+### <a name="q-can-i-select-controls-that-are-outside-the-emulator"></a>Q: 에뮬레이터 외부에 있는 컨트롤을 선택할 수 있나요?  
+ **A**: 아니요, 빌더가 이러한 컨트롤은 검색하지 않습니다.  
   
-### <a name="q-can-i-use-the-coded-ui-test-builder-to-map-controls-using-a-physical-phone-device"></a>Q: Can I use the coded UI test builder to map controls using a physical phone device?  
- **A**: No, The builder can only map UI elements if your app has been deployed to the emulator.  
+### <a name="q-can-i-use-the-coded-ui-test-builder-to-map-controls-using-a-physical-phone-device"></a>Q: 코딩된 UI 테스트 빌더를 사용하여 실제 휴대폰 장치에 컨트롤을 매핑할 수 있나요?  
+ **A**: 아니요, 빌더는 앱을 에뮬레이터에 배포한 경우에만 UI 요소를 매핑할 수 있습니다.  
   
-### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q: Why can't I modify the code in the UIMap.Designer file?  
- **A**: Any code changes you make in the UIMapDesigner.cs file will be overwritten every time you generate code using the UIMap - Coded UI Test Builder. If you have to modify a recorded method, you must copy it to UIMap.cs file and rename it. The UIMap.cs file can be used to override methods and properties in the UIMapDesigner.cs file. You must remove the reference to the original method in the Coded UITest.cs file and replace it with the renamed method name.  
+### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q: UIMap.Designer 파일에서 코드를 수정할 수 없는 이유는 무엇인가요?  
+ **A**: UIMap - 코딩된 UI 테스트 빌더를 사용하여 코드를 생성할 때마다 UIMapDesigner.cs 파일에서 수정된 코드 변경 내용을 덮어씁니다. 기록된 메서드를 수정해야 하는 경우에는 해당 메서드를 UIMap.cs 파일에 복사한 후 이름을 바꾸어야 합니다. UIMap.cs 파일을 사용하여 UIMapDesigner.cs 파일의 메서드와 속성을 재정의할 수 있습니다. 코딩된 UITest.cs 파일에서 원래 메서드에 대한 참조를 제거하고 이름을 바꾼 메서드 이름으로 바꾸어야 합니다.  
   
-### <a name="q-can-i-run-a-coded-ui-test-on-my-windows-phone-app-from-the-command-line"></a>Q: Can I run a coded UI test on my Windows Phone app from the command-line?  
- **A**: Yes, you use a runsettings file to specify the target device for test execution. For example:  
+### <a name="q-can-i-run-a-coded-ui-test-on-my-windows-phone-app-from-the-command-line"></a>Q: Windows Phone 앱의 명령줄에서 코딩된 UI 테스트를 실행할 수 있나요?  
+ **A**: 예, runsettings 파일을 사용하여 테스트를 실행할 대상 장치를 지정할 수 있습니다. 예를 들면 다음과 같습니다.  
   
  **vstest.console.exe "pathToYourCodedUITestDll" /settings:devicetarget.runsettings**  
   
- Sample runsettings file:  
+ 샘플 runsettings 파일:  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -387,23 +387,23 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 </RunSettings>  
 ```  
   
-### <a name="q-what-are-the-differences-between-coded-ui-tests-for-xaml-based-windows-store-apps-and-windows-phone-apps"></a>Q: What are the differences between coded UI tests for XAML-based Windows Store apps and Windows Phone apps?  
- **A**: These are some of the key differences:  
+### <a name="q-what-are-the-differences-between-coded-ui-tests-for-xaml-based-windows-store-apps-and-windows-phone-apps"></a>Q: XAML 기반 Windows 스토어 앱과 Windows Phone 앱용 코딩된 UI 테스트 간의 차이점은 무엇인가요?  
+ **A**: 다음과 같은 몇 가지 주요한 차이점이 있습니다.  
   
-|Feature|Windows Store apps|Windows Phone apps|  
+|기능|Windows 스토어 응용 프로그램|Windows Phone 앱|  
 |-------------|------------------------|------------------------|  
-|Target for running tests|Local or remote computer. Remote computers can be specified when you use an automated test case to run tests. See [Automate a test case in Microsoft Test Manager](/devops-test-docs/test/automate-a-test-case-in-microsoft-test-manager).|Emulator or device. See, [Q: Can tests be executed on the emulator only, or can I also use a physical device?](#TestingPhoneAppsCodedUI_EmulatorDevice) in this topic.|  
-|Execute from the command-line|Settings file not required to specify target.|Runsettings file required to specify target.|  
-|Specialized classes for Shell Controls|<xref:Microsoft.VisualStudio.TestTools.UITesting.DirectUIControls.DirectUIControl>|<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>|  
-|WebView control in a XAML app|Supported if you use Html* specialized classes to interact with HTML elements. See <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>.|Not supported.|  
-|Execute automated tests from MTM|Supported.|Not supported.|  
-|Data-driven tests|See [Data-driven tests](../test/creating-a-data-driven-coded-ui-test.md) for information about using external data-sources and using DataSource attribute on a test method.|Data is specified inline, using DataRow attribute on a test method. See [Use Data-driven coded UI tests on Windows Phone apps](#TestingPhoneAppsCodedUI_DataDriven) in this topic.|  
+|테스트 실행 대상|로컬 또는 원격 컴퓨터. 자동화된 테스트 사례를 사용하여 테스트를 실행하는 경우 원격 컴퓨터를 지정할 수 있습니다. [Microsoft Test Manager에서 테스트 사례 자동화](/devops-test-docs/test/automate-a-test-case-in-microsoft-test-manager)를 참조하세요.|에뮬레이터 또는 장치. 이 항목의 [Q: 테스트는 에뮬레이터에서만 실행할 수 있나요? 아니면 실제 장치에서도 할 수 있나요?](#TestingPhoneAppsCodedUI_EmulatorDevice) 를 참조하세요.|  
+|명령줄에서 실행|대상을 지정하는 데 Settings 파일이 필요 없습니다.|대상을 지정하는 데에는 Runsettings 파일이 필요합니다.|  
+|셸 컨트롤의 특수화 클래스|<xref:Microsoft.VisualStudio.TestTools.UITesting.DirectUIControls.DirectUIControl>|<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>|  
+|XAML 앱의 WebView 컨트롤|Html* 특수화 클래스를 사용하여 HTML 요소와 상호 작용하는 경우 지원됩니다. <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>을 참조하세요.|지원되지 않습니다.|  
+|MTM에서 자동화된 테스트 실행|지원됩니다.|지원되지 않습니다.|  
+|데이터 기반 테스트|외부 데이터 소스 사용 및 테스트 메서드에 DataSource 특성 사용에 대한 자세한 내용은 [데이터 기반 테스트](../test/creating-a-data-driven-coded-ui-test.md) 를 참조하세요.|데이터는 테스트 메서드에 DataRow 특성을 사용하여 인라인으로 지정됩니다. 이 항목의 [Windows Phone 앱에서 데이터 기반의 코딩된 UI 테스트 사용](#TestingPhoneAppsCodedUI_DataDriven) 을 참조하세요.|  
   
- For information about coded UI tests for Windows Store apps, see [Test Windows UWP and 8.1 Store Apps with Coded UI Tests](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md).  
+ Windows 스토어 앱용 코딩된 UI 테스트에 대한 자세한 내용은 [코딩된 UI 테스트를 사용하여 Windows UWP 및 스토어 8.1 앱 테스트](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)를 참조하세요.  
   
-## <a name="external-resources"></a>External resources  
- Microsoft Visual Studio Application Lifecycle Management blog: [Using Coded UI to test XAML-based Windows Phone apps](http://blogs.msdn.com/b/visualstudioalm/archive/2014/04/05/using-coded-ui-to-test-xaml-based-windows-phone-apps.aspx?PageIndex=2#comments)  
+## <a name="external-resources"></a>외부 리소스  
+ Microsoft Visual Studio 애플리케이션 수명 주기 관리 블로그: [코딩된 UI를 사용하여 XAML 기반 Windows Phone 앱 테스트](http://blogs.msdn.com/b/visualstudioalm/archive/2014/04/05/using-coded-ui-to-test-xaml-based-windows-phone-apps.aspx?PageIndex=2#comments)  
   
-## <a name="see-also"></a>See Also  
- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)
+## <a name="see-also"></a>참고 항목  
+ [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Creating Options Pages | Microsoft Docs
+title: "옵션 페이지 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,70 +33,70 @@ ms.translationtype: MT
 ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
 ms.openlocfilehash: 6ed61dbc745b00f5f6f0beeba5aa38c3d316f98f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="creating-options-pages"></a>Creating Options Pages
-In the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] managed package framework, classes derived from <xref:Microsoft.VisualStudio.Shell.DialogPage> extend the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE by adding **Options** pages under the **Tools** menu.  
+# <a name="creating-options-pages"></a>옵션 페이지 만들기
+에 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 관리 패키지 프레임 워크 클래스에서 파생 된 <xref:Microsoft.VisualStudio.Shell.DialogPage> 확장는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 추가 하 여 IDE **옵션** 아래 페이지는 **도구** 메뉴.  
   
- An object implementing a given **Tools Option** page is associated with specific VSPackages by the <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> object.  
+ 구현 하는 개체는 주어진 **도구 옵션** 하 여 특정 Vspackage와 연결 된 페이지는 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 개체입니다.  
   
- Because the environment instantiates the object implementing a particular **Tools Options** page when that particular page is displayed by the IDE:  
+ 환경에서 인스턴스화하는 특정 구현 하는 개체 이므로 **도구 옵션** 특정 페이지에서는 IDE에서 표시 되 면 페이지:  
   
--   A **Tools Option** page should be implemented on its own object, and not on the object implementing a VSPackage.  
+-   A **도구 옵션** VSPackage를 구현 하는 개체 아니라 자체의 개체에 페이지를 구현 해야 합니다.  
   
--   An object cannot implement multiple **Tools Options** pages.  
+-   개체는 여러 구현할 수 없습니다 **도구 옵션** 페이지입니다.  
   
-## <a name="registering-as-a-tools-options-page-provider"></a>Registering as a Tools Options Page Provider  
- A VSPackage supporting user configuration through **Tools Options** pages indicates the objects providing these **Tools Options** pages by applying instances of <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> applied to the <xref:Microsoft.VisualStudio.Shell.Package> implementation.  
+## <a name="registering-as-a-tools-options-page-provider"></a>도구 옵션 페이지 공급자로 등록 하는 중  
+ VSPackage 지원 사용자 구성을 통해 **도구 옵션** 페이지 이러한를 제공 하는 개체를 나타냅니다. **도구 옵션** 의 인스턴스를 적용 하 여 페이지 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 는 적용할<xref:Microsoft.VisualStudio.Shell.Package>구현 합니다.  
   
- There must be one instance of <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> for every <xref:Microsoft.VisualStudio.Shell.DialogPage>-derived type that implements a **Tools Options** page.  
+ 인스턴스가 하나 있어야 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 에 대 한 모든 <xref:Microsoft.VisualStudio.Shell.DialogPage>-파생 형식이 구현 하는 **도구 옵션** 페이지.  
   
- Each instance of <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> uses the type that implements the **Tools Options** page, strings that contain the category and sub-category used to identify a **Tools Options** page, and resource information to register the type as providing a **Tools Options** page.  
+ 각 인스턴스에 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 구현 하는 형식을 사용 하 여는 **도구 옵션** 페이지, 범주 및 식별 하는 데 사용 되는 하위 범주를 포함 하는 문자열을 **도구 옵션** 페이지 및 리소스 제공 된 형식을 등록 하는 정보는 **도구 옵션** 페이지.  
   
-## <a name="persisting-tools-options-page-state"></a>Persisting Tools Options Page State  
- If a **Tools Options** page implementation is registered with automation support enabled, the IDE persists the page's state along with all other **Tools Options** pages.  
+## <a name="persisting-tools-options-page-state"></a>도구 옵션 페이지 상태 유지  
+ 경우는 **도구 옵션** 자동화 지원이 설정 된 페이지 구현이 등록 되어, IDE 함께 다른 모든 페이지의 상태를 유지 해야 **도구 옵션** 페이지입니다.  
   
- A VSPackage can manage its own persistence by using <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>. Only one or the other method of persistence should be used.  
+ VSPackage를 사용 하 여 고유한 지 속성을 관리할 수 <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>합니다. 하나만 또는 지 속성의 다른 방법을 사용 해야 합니다.  
   
-## <a name="implementing-dialogpage-class"></a>Implementing DialogPage Class  
- An object providing a VSPackage's implementation of a <xref:Microsoft.VisualStudio.Shell.DialogPage>-derived type can take advantage of the following inherited features:  
+## <a name="implementing-dialogpage-class"></a>구현 하는 DialogPage 클래스  
+ VSPackage의 구현을 제공 하는 개체는 <xref:Microsoft.VisualStudio.Shell.DialogPage>-파생 된 형식 상속 된 다음과 같은 기능을 이용할 수 있습니다.  
   
--   A default user interface window.  
+-   기본 사용자 인터페이스 창입니다.  
   
--   A default persistence mechanism available either if <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> is applied to the class, or if the <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A> property is set to `true` for the <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> that is applied to the class.  
+-   기본 지 속성 메커니즘이 사용 가능한 경우 <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> 는 클래스에 적용 되 또는 경우에는 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A> 속성이로 설정 되어 `true` 에 대 한는 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 클래스에 적용 되는 합니다.  
   
--   Automation support.  
+-   자동화 지원 합니다.  
   
- The minimum requirement for an object implementing a **Tools Options** page using <xref:Microsoft.VisualStudio.Shell.DialogPage> is the addition of public properties.  
+ 구현 하는 개체에 대 한 최소 요구 사항을 **도구 옵션** 페이지를 사용 하 여 <xref:Microsoft.VisualStudio.Shell.DialogPage> 공용 속성에 추가 합니다.  
   
- If the class properly registered as a **Tools Options** page provider, then its public properties are available on the **Options** section of the **Tools** menu in the form of a property grid.  
+ 클래스는 제대로으로 등록 하는 경우는 **도구 옵션** 다음 공용 속성에서 사용할 수 있는 공급자 페이지는 **옵션** 섹션은 **도구** 의 형태로 메뉴는 속성 표입니다.  
   
- All these default features can be overridden. For example, to create a more sophisticated user interface requires only overriding the default implementation of <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>.  
+ 이러한 모든 기본 기능을 재정의할 수 있습니다. 예를 들어 생성 하려면 보다 정교한 사용자 인터페이스 필요의 기본 구현만 재정의 <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>합니다.  
   
-## <a name="example"></a>Example  
- What follows is a simple "hello world" implementation of an options page. Adding the following code to a default project created by the Visual Studio Package Template with the **Menu Command** option selected will adequately demonstrate option page functionality.  
+## <a name="example"></a>예제  
+ 다음은 옵션 페이지의 간단한 "hello world" 구현 합니다. Visual Studio 패키지 템플릿을 사용 하 여 만든 기본 프로젝트에 다음 코드를 추가 **메뉴 명령을** 옵션을 선택 옵션 페이지 기능을 시연 적절 하 게 됩니다.  
   
-### <a name="description"></a>Description  
- The following class defines a minimal "hello world" options page. When opened, the user can set the public `HelloWorld` property in a property grid.  
+### <a name="description"></a>설명  
+ 다음 클래스에는 최소한의 "hello world" 옵션 페이지를 정의합니다. 사용자가 공용을 설정할 수를 열 때 `HelloWorld` 속성 표에 속성입니다.  
   
-### <a name="code"></a>Code  
- [!code-csharp[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs)] [!code-vb[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]  
+### <a name="code"></a>코드  
+ [!code-csharp[#11 UI_UserSettings_ToolsOptionPages](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs) ] [!code-vb [UI_UserSettings_ToolsOptionPages #11](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]  
   
-### <a name="description"></a>Description  
- Applying the following attribute to the package class makes the options page available when the package loads. The numbers are arbitrary resource IDs for the category and the page, and the Boolean value at the end specifies whether the page supports automation.  
+### <a name="description"></a>설명  
+ 패키지 클래스에 다음 특성을 적용 페이지 옵션은 사용할 수 있도록 패키지를 로드 하는 경우. 숫자는 범주 및 페이지에 대 한 임의의 리소스 Id 및 끝에 부울 값은 페이지 자동화를 지원 하는지 여부를 지정 합니다.  
   
-### <a name="code"></a>Code  
- [!code-csharp[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs)] [!code-vb[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]  
+### <a name="code"></a>코드  
+ [!code-csharp[UI_UserSettings_ToolsOptionPages #07](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs) ] [!code-vb [UI_UserSettings_ToolsOptionPages #07](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]  
   
-### <a name="description"></a>Description  
- The following event handler displays a result depending on the value of the property set in the options page. It uses the <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> method with the result explicitly cast into the custom option page type to access the properties exposed by the page.  
+### <a name="description"></a>설명  
+ 다음 이벤트 처리기 옵션 페이지에서 설정 속성의 값에 따라 결과 표시 합니다. 사용 하 여는 <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> 결과와 메서드를 명시적으로 페이지에 의해 노출 되는 속성에 액세스 하려면 사용자 지정 옵션 페이지 형식으로 캐스팅 합니다.  
   
- In the case of a project generated by the package template, call this function from the `MenuItemCallback` function to attach it to the default command added to the **Tools** menu.  
+ 패키지 템플릿으로 생성 하는 프로젝트의 경우에서이 함수 호출의 `MenuItemCallback` 기본 명령에 연결 하는 함수에 추가 **도구** 메뉴.  
   
-### <a name="code"></a>Code  
- [!code-csharp[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_3.cs)] [!code-vb[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]  
+### <a name="code"></a>코드  
+ [!code-csharp[UI_UserSettings_ToolsOptionPages #08](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_3.cs) ] [!code-vb [UI_UserSettings_ToolsOptionPages #08](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]  
   
-## <a name="see-also"></a>See Also  
- [Extending User Settings and Options](../../extensibility/extending-user-settings-and-options.md)   
- [Automation Support for Options Pages](../../extensibility/internals/automation-support-for-options-pages.md)
+## <a name="see-also"></a>참고 항목  
+ [확장 사용자 설정 및 옵션](../../extensibility/extending-user-settings-and-options.md)   
+ [옵션 페이지의 자동화 지원](../../extensibility/internals/automation-support-for-options-pages.md)

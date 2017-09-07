@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5ae6c92b103ce5d37a24425ec080e651a70dece4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
-Gets a detailed description of the exception that fired this event.  
+이 이벤트를 발생 시킨 예외에 대 한 자세한 설명을 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetException(   
@@ -54,17 +54,17 @@ int GetException(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pExceptionInfo`  
- [in, out] An [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure that is filled in with the description of the exception.  
+ [out에서] [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) 는 예외에 대 한 설명을 포함 하는 구조입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- [C++ only] The caller is responsible for freeing any strings in the [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure as well as releasing the [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object in the structure.  
+## <a name="remarks"></a>설명  
+ [C + + 전용] 호출자가 해제의 모든 문자열에 대 한는 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) 해제 뿐만 아니라 구조체는 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 구조에는 개체입니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
  [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   

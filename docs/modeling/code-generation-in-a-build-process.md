@@ -1,5 +1,5 @@
 ---
-title: Code Generation in a Build Process | Microsoft Docs
+title: "코드를 빌드 프로세스에서 생성 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,22 +32,22 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 6cfdd28afbfb88f83d7931b57adbedfb88bf93bf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="code-generation-in-a-build-process"></a>Code Generation in a Build Process
-[Text transformation](../modeling/code-generation-and-t4-text-templates.md) can be invoked as part of the [build process](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692) of a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution. There are build tasks that are specialized for text transformation. The T4 build tasks run design-time text templates, and they also compile run-time (preprocessed) text templates.  
+# <a name="code-generation-in-a-build-process"></a>빌드 프로세스의 코드 생성
+[텍스트 변환](../modeling/code-generation-and-t4-text-templates.md) 의 일환으로 호출할 수는 [빌드 프로세스](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692) 의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션입니다. 이는 텍스트 변형에 대해 특수화된 빌드 작업입니다. T4 빌드 작업은 디자인 타임 텍스트 템플릿을 실행하고 전처리된 런타임 텍스트 템플릿을 컴파일합니다.  
   
- There are some differences in what the build tasks can do, depending on which build engine you use. When you build the solution in Visual Studio, a text template can access the Visual Studio API (EnvDTE) if the [hostspecific="true"](../modeling/t4-template-directive.md) attribute is set. But that isn't true when you build the solution from the command line or when you initiate a server build through Visual Studio. In those cases, the build is performed by MSBuild and a different T4 host is used.  
+ 사용하는 빌드 엔진에 따라 빌드 작업에서 수행할 수 있는 몇 가지 작업이 다를 수 있습니다. 있으면 텍스트 템플릿이 Visual Studio API (EnvDTE)에 액세스할 수 있는지 Visual Studio에서 솔루션을 빌드할 때는 [hostspecific = "true"](../modeling/t4-template-directive.md) 특성이 설정 되어 있습니다. 하지만 반드시 그럴 true 또는 Visual Studio를 통해 서버 빌드를 시작할 때 명령줄에서 솔루션을 빌드할 경우. 이러한 경우에는 MSBuild에서 빌드가 수행되고 다른 T4 호스트가 사용됩니다.  
   
- This means that you can't access things like project file names in the same way when you build a text template in MSBuild. However, you can [pass environment information into text templates and directive processors by using build parameters](#parameters).  
+ 이 MSBuild에서 텍스트 템플릿을 작성할 때 같은 방식으로 프로젝트 파일 이름과 같은 항목을 액세스할 수 없음을 의미 합니다. 하지만 [텍스트 템플릿 및 명령 프로세서에 빌드 매개 변수를 사용 하 여 환경 정보를 전달할](#parameters)합니다.  
   
-##  <a name="buildserver"></a> Configure your machines  
- To enable build tasks on your development computer, install Modeling SDK for Visual Studio.
+##  <a name="buildserver"></a>컴퓨터 구성  
+ 개발 컴퓨터에서 빌드 작업을 사용 하도록 설정 하려면 Visual Studio에 대 한 Modeling SDK를 설치 합니다.
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
- If [your build server](http://msdn.microsoft.com/Library/788443c3-0547-452e-959c-4805573813a9) runs on a computer on which [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] is not installed, copy the following files to the build computer from your development machine. Substitute the most recent version numbers for '*'.  
+ 경우 [빌드 서버에](http://msdn.microsoft.com/Library/788443c3-0547-452e-959c-4805573813a9) 된 컴퓨터에서 실행 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 는 개발 컴퓨터에서 빌드 컴퓨터로 다음 파일을 복사 설치 되어 있지 않습니다. 에 대 한 가장 최근 버전 번호를 대체 합니다. ' *'입니다.  
   
 -   $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/28/2017
   
     -   Microsoft.VisualStudio.TextTemplating.*.0.dll  
   
-    -   Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll (several files)  
+    -   Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll(여러 파일)  
   
     -   Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll  
   
@@ -69,23 +69,23 @@ ms.lasthandoff: 08/28/2017
   
     -   Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll  
   
-## <a name="to-edit-the-project-file"></a>To edit the project file  
- You'll have to edit your project file to configure some of the features in MSBuild.  
+## <a name="to-edit-the-project-file"></a>프로젝트 파일을 편집하려면  
+ MSBuild에서 일부 기능을 구성 하기 위해 프로젝트 파일을 편집 해야 합니다.  
   
- In solution explorer, choose **Unload** from the context menu of your project. That allows you to edit the .csproj or .vbproj file in the XML editor.  
+ 솔루션 탐색기에서 선택 **언로드** 프로젝트의 상황에 맞는 메뉴에서입니다. 이렇게 하면 XML 편집기에서 .csproj 또는 .vbproj 파일을 편집할 수 있습니다.  
   
- When you've finished editing, choose **Reload**.  
+ 편집을 마쳤으면 선택 **다시 로드**합니다.  
   
-## <a name="import-the-text-transformation-targets"></a>Import the Text Transformation Targets  
- In the .vbproj or .csproj file, find a line like this:  
+## <a name="import-the-text-transformation-targets"></a>텍스트 변형 대상 가져오기  
+ .vbproj 또는 .csproj 파일에서 다음과 같은 줄을 찾습니다.  
   
  `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`  
   
- \- or -  
+ \- 또는 -  
   
  `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`  
   
- After that line, insert the Text Templating import:  
+ 이 코드 뒤에 텍스트 템플릿 가져오기를 삽입합니다.  
   
 ```xml  
 <!-- Optionally make the import portable across VS versions -->  
@@ -100,10 +100,10 @@ ms.lasthandoff: 08/28/2017
   <Import Project="$(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets" />  
 ```  
   
-## <a name="transforming-templates-in-a-build"></a>Transforming templates in a build  
- There are some properties that you can insert into your project file to control the transformation task:  
+## <a name="transforming-templates-in-a-build"></a>빌드에서 템플릿 변환  
+ 변환 작업을 제어하기 위해 프로젝트 파일에 삽입할 수 있는 몇 가지 속성이 있습니다.  
   
--   Run the Transform task at the start of every build:  
+-   모든 빌드를 시작할 때 변환 작업을 실행합니다.  
   
     ```xml  
     <PropertyGroup>  
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/28/2017
     </PropertyGroup>  
     ```  
   
--   Overwrite files that are read-only, for example because they are not checked out:  
+-   예를 들어, 읽기 전용 파일은 체크 아웃되지 않기 때문에 파일을 덮어씁니다.  
   
     ```xml  
     <PropertyGroup>  
@@ -119,7 +119,7 @@ ms.lasthandoff: 08/28/2017
     </PropertyGroup>  
     ```  
   
--   Transform every template every time:  
+-   항상 모든 템플릿 변환:  
   
     ```xml  
     <PropertyGroup>  
@@ -127,31 +127,31 @@ ms.lasthandoff: 08/28/2017
     </PropertyGroup>  
     ```  
   
-     By default, the T4 MSBuild task regenerates an output file if it is older than its template file, or any files that are included, or any files that have previously been read by the template or by a directive processor that it uses. Notice that this is a much more powerful dependency test than is used by the Transform All Templates command in Visual Studio, which only compares the dates of the template and output file.  
+     기본적으로 T4 MSBuild 작업은 출력 파일이 명령 프로세서나 템플릿에 의해 이전에 읽혀진 파일이나 포함된 모든 파일 또는 해당 템플릿 파일보다 오래되었을 경우 출력 파일을 재생성합니다. 이는 템플릿과 출력 파일의 날짜만 비교하는 Visual Studio의 모든 템플릿 변환 명령을 사용하는 것보다 훨씬 더 강력한 종속성 테스트입니다.  
   
- To perform just the text transformations in your project, invoke the TransformAll task:  
+ 프로젝트에서 텍스트 변환만 수행하려면 TransformAll 작업을 호출합니다.  
   
  `msbuild myProject.csproj /t:TransformAll`  
   
- To transform a specific text template:  
+ 특정한 텍스트 템플릿을 변환하려면 다음을 수행합니다.  
   
  `msbuild myProject.csproj /t:Transform /p:TransformFile="Template1.tt"`  
   
- You can use wildcards in TransformFile:  
+ 변환 파일에서 와일드카드를 사용할 수 있습니다.  
   
  `msbuild dsl.csproj /t:Transform /p:TransformFile="GeneratedCode\**\*.tt"`  
   
-## <a name="source-control"></a>Source Control  
- There is no specific built-in integration with a source control system. However, you can add your own extensions, for example to check out and check in a generated file.By default, the text transform task avoids overwriting a file that is marked as read- only, and when such a file is encountered, an error is logged in the Visual Studio error list, and the task fails.  
+## <a name="source-control"></a>소스 제어  
+ 소스 제어 시스템과의 특정 기본 제공 통합은 없습니다. 그러나 예를 들어 생성된 파일을 체크 아웃하고 체크 인하기 위해 확장을 추가할 수 있습니다. 기본적으로 텍스트 변환 작업은 읽기 전용으로 표시된 파일을 덮어쓰지 않으며, 이러한 파일에 오류가 발생하면 해당 오류가 Visual Studio의 오류 목록에 로깅되고 작업은 실패합니다.  
   
- To specify that read-only files should be overwritten, insert this property:  
+ 읽기 전용 파일을 덮어쓰도록 지정하려면 다음 속성을 삽입합니다.  
   
  `<OverwriteReadOnlyOuputFiles>true</OverwriteReadOnlyOuputFiles>`  
   
- Unless you customize the postprocessing step, a warning will be logged in the error list when a file is overwritten.  
+ 후처리 단계를 사용자 지정하지 않는 한 파일을 덮어쓸 때 경고가 오류 목록에 기록됩니다.  
   
-## <a name="customizing-the-build-process"></a>Customizing the build process  
- Text transformation happens before other tasks in the build process. You can define tasks that are invoked before and after transformation, by setting the properties `$(BeforeTransform)` and `$(AfterTransform)`:  
+## <a name="customizing-the-build-process"></a>빌드 프로세스 사용자 지정  
+ 빌드 프로세스에서 다른 작업을 수행하기 전에 텍스트 변환이 수행됩니다. `$(BeforeTransform)` 및 `$(AfterTransform)` 속성을 설정하여 변환 전과 후에 호출되는 작업을 정의할 수 있습니다.  
   
 ```  
 <PropertyGroup>  
@@ -166,16 +166,16 @@ ms.lasthandoff: 08/28/2017
   </Target>  
 ```  
   
- In `AfterTransform`, you can reference lists of files:  
+ `AfterTransform`에서 파일 목록을 참조할 수 있습니다.  
   
--   GeneratedFiles - a list of files written by the process. For those files that overwrote existing read-only files, %(GeneratedFiles.ReadOnlyFileOverwritten) will be true. These files can be checked out of source control.  
+-   GeneratedFiles - 프로세스에서 쓴 파일의 목록입니다. 기존 읽기 전용 파일을 덮어쓴 파일의 경우 %(GeneratedFiles.ReadOnlyFileOverwritten)이 true입니다. 이러한 파일은 소스 제어에서 체크 아웃할 수 있습니다.  
   
--   NonGeneratedFiles - a list of read-only files that were not overwritten.  
+-   NonGeneratedFiles - 덮어쓰지 않은 읽기 전용 파일의 목록입니다.  
   
- For example, you define a task to check out GeneratedFiles.  
+ 예를 들어, 생성된 파일을 체크 아웃하는 작업을 정의합니다.  
   
-## <a name="outputfilepath-and-outputfilename"></a>OutputFilePath and OutputFileName  
- These properties are used only by MSBuild. They do not affect code generation in Visual Studio. They redirect the generated output file to a different folder or file. The target folder must already exist.  
+## <a name="outputfilepath-and-outputfilename"></a>OutputFilePath 및 OutputFileName  
+ MSBuild에서만 이러한 속성을 사용합니다. Visual Studio의 코드 생성에는 영향을 주지 않습니다. 이러한 속성은 생성된 출력 파일을 다른 폴더 또는 파일로 리디렉션합니다. 대상 폴더가 이미 있어야 합니다.  
   
 ```xml  
 <ItemGroup>  
@@ -187,9 +187,9 @@ ms.lasthandoff: 08/28/2017
 </ItemGroup>  
 ```  
   
- A useful folder to redirect to is `$(IntermediateOutputPath).`  
+ 리디렉션하기 유용한 폴더는 `$(IntermediateOutputPath).`입니다.  
   
- If you specify and output filename, it will take precedence over the extension specified in the output directive in the templates.  
+ 파일 이름을 지정하고 출력하는 경우 템플릿의 출력 지시문에 지정된 확장명보다 해당 이름이 우선적으로 적용됩니다.  
   
 ```xml  
 <ItemGroup>  
@@ -201,10 +201,10 @@ ms.lasthandoff: 08/28/2017
 </ItemGroup>  
 ```  
   
- Specifying an OutputFileName or OutputFilePath isn't recommended if you are also transforming templates inside VS using Transform All, or running the single file generator. You will end up with different file paths depending on how you triggered the transformation. This can be very confusing.  
+ OutputFileName 이나 OutputFilePath를 지정 하는 vs 단일 파일 생성기를 실행 하거나 모두 변환을 사용 하 여 템플릿을 변형 하는 경우 권장 되지 않습니다. 변환을 실행하는 방법에 따라 서로 다른 파일 경로가 지정됩니다. 이는 매우 복잡할 수 있습니다.  
   
-## <a name="adding-reference-and-include-paths"></a>Adding reference and include paths  
- The host has a default set of paths where it searches for assemblies referenced in templates. To add to this set:  
+## <a name="adding-reference-and-include-paths"></a>참조 및 포함 경로 추가  
+ 템플릿에 참조된 어셈블리를 검색할 때 호스트에 기본 경로 집합이 있습니다. 이 집합에 추가하려면 다음을 수행합니다.  
   
 ```  
 <ItemGroup>  
@@ -213,7 +213,7 @@ ms.lasthandoff: 08/28/2017
 </ItemGroup>  
 ```  
   
- To set the folders that will be searched for include files, provide a semicolon-separated list. Usually you add to the existing folder list.  
+ 포함 파일을 검색할 폴더를 설정하려면 세미콜론 구분 목록을 제공합니다. 일반적으로 기존 폴더 목록에 추가합니다.  
   
 ```  
 <PropertyGroup>  
@@ -223,8 +223,8 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
   
 ```  
   
-##  <a name="parameters"></a> Pass build context data into the templates  
- You can set parameter values in the project file. For example, you can pass [build](../msbuild/msbuild-properties.md) properties and [environment variables](../msbuild/how-to-use-environment-variables-in-a-build.md):  
+##  <a name="parameters"></a>템플릿으로 빌드 컨텍스트 데이터 전달  
+ 프로젝트 파일에서 매개 변수 값을 설정할 수 있습니다. 예를 들어 전달할 수 있습니다 [빌드](../msbuild/msbuild-properties.md) 속성 및 [환경 변수](../msbuild/how-to-use-environment-variables-in-a-build.md):  
   
 ```xml  
 <ItemGroup>  
@@ -235,7 +235,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </ItemGroup>  
 ```  
   
- In a text template, set `hostspecific` in the template directive. Use the [parameter](../modeling/t4-parameter-directive.md) directive to get values:  
+ 텍스트 템플릿에서 `hostspecific`를 템플릿 지시문에 설정하십시오. 사용 하 여는 [매개 변수](../modeling/t4-parameter-directive.md) 지시문 값을 가져오려면:  
   
 ```  
 <#@template language="c#" hostspecific="true"#>  
@@ -244,7 +244,7 @@ The project folder is: <#= ProjectFolder #>
   
 ```  
   
- In a directive processor, you can call <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost.ResolveParameterValue%2A>:  
+ 지시문 프로세서에서 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost.ResolveParameterValue%2A>를 호출할 수 있습니다.  
   
 ```csharp  
 string value = Host.ResolveParameterValue("-", "-", "parameterName");  
@@ -255,12 +255,12 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 ```  
   
 > [!NOTE]
->  `ResolveParameterValue` gets data from `T4ParameterValues` only when you use MSBuild. When you transform the template using Visual Studio, the parameters will have default values.  
+>  MSBuild를 사용하는 경우에만 `ResolveParameterValue`이 `T4ParameterValues`에서 데이터를 가져옵니다. Visual Studio를 사용하여 템플릿을 변형하는 경우 매개 변수에 기본값이 사용됩니다.  
   
-##  <a name="msbuild"></a> Using project properties in assembly and include directives  
- Visual Studio macros like $(SolutionDir) don't work in MSBuild. You can use project properties instead.  
+##  <a name="msbuild"></a>프로젝트 속성을 사용 하 여 어셈블리에 및 include 지시문  
+ $ (Solutiondir)과 같은 visual Studio 매크로 MSBuild에서 작동 하지 않습니다. 대신 적절한 프로젝트 속성을 사용할 수 있습니다.  
   
- Edit your .csproj or .vbproj file to define a project property. This example defines a property named `myLibFolder`:  
+ 프로젝트 속성을 정의하기 위해 .csproj 또는 .vbproj 파일을 편집합니다. 이 예제에서는 `myLibFolder`라는 속성을 정의합니다.  
   
 ```xml  
 <!-- Define a project property, myLibFolder: -->  
@@ -277,36 +277,36 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
   
 ```  
   
- Now you can use your project property in assembly and include directives:  
+ 이제 assembly 및 Include 지시문에서 프로젝트 속성을 사용할 수 있습니다.  
   
 ```  
 <#@ assembly name="$(myLibFolder)\MyLib.dll" #>  
 <#@ include file="$(myLibFolder)\MyIncludeFile.t4" #>  
 ```  
   
- These directives get values from T4parameterValues both in MSBuild and in Visual Studio hosts.  
+ 이러한 지시문은 MSBuild와 Visual Studio 호스트에서 모두 T4parameterValues의 값을 가져옵니다.  
   
-## <a name="q--a"></a>Q & A  
- **Why would I want to transform templates in the build server? I already transformed templates in Visual Studio before I checked in my code.**  
+## <a name="q--a"></a>Q&A  
+ **빌드 서버에서 템플릿을 변형 하려는 하는 이유 I 내 코드를 체크 인하기에서 전에 Visual Studio에서 템플릿을 이미 변환 합니다.**  
   
- If you update an included file, or another file read by the template, Visual Studio doesn't transform the file automatically. Transforming templates as part of the build makes sure that everything's up to date.  
+ 업데이트 포함된 파일을 하거나 다른 파일 서식 파일을 읽은 경우 Visual Studio 파일을 자동으로 변형 하지 않습니다. 빌드에 포함 하면 템플릿을 변환 하는 모든 항목이 최신 상태입니다.  
   
- **What other options are there for transforming text templates?**  
+ **어떤 있는 다른 옵션은 텍스트 템플릿 변환에 대 한?**  
   
--   The [TextTransform utility](../modeling/generating-files-with-the-texttransform-utility.md) can be used in command scripts. In most cases, it's easier to use MSBuild.  
+-   [TextTransform 유틸리티](../modeling/generating-files-with-the-texttransform-utility.md) 명령 스크립트에 사용할 수 있습니다. 대부분의 경우에서 MSBuild를 사용 하는 것이 쉽습니다.  
   
--   [Invoking Text Transformation in a VS Extension](../modeling/invoking-text-transformation-in-a-vs-extension.md)  
+-   [VS 확장에서 텍스트 변환 호출](../modeling/invoking-text-transformation-in-a-vs-extension.md)  
   
--   [Design-time text templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md) are transformed by Visual Studio.  
+-   [디자인 타임 텍스트 템플릿](../modeling/design-time-code-generation-by-using-t4-text-templates.md) Visual Studio에 의해 변환 됩니다.  
   
--   [Run time text templates](../modeling/run-time-text-generation-with-t4-text-templates.md) are transformed at run time in your application.  
+-   [런타임 텍스트 템플릿](../modeling/run-time-text-generation-with-t4-text-templates.md) 응용 프로그램에서 런타임에 변형 됩니다.  
   
-## <a name="read-more"></a>Read more  
- There is good guidance in the T4 MSbuild template, $(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets  
+## <a name="read-more"></a>자세히 보기  
+ T4 MSbuild 템플릿, $(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets의 유용한 안내서  
   
- [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md)  
+ [T4 텍스트 템플릿 쓰기](../modeling/writing-a-t4-text-template.md)  
   
- [Oleg Sych: Understanding T4:MSBuild Integration](http://www.olegsych.com/2010/04/understanding-t4-msbuild-integration/)
+ [Oleg Sych: t4: msbuild Integration 이해](http://www.olegsych.com/2010/04/understanding-t4-msbuild-integration/)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 

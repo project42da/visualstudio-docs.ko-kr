@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3f573f35ed0130eb020ac2e8e19a0391050ec06e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugprogrampublisher2publishprogram"></a>IDebugProgramPublisher2::PublishProgram
-This method makes a program available for debug engines (DEs) and the session debug manager.  
+이 메서드는 디버그 엔진 (DEs)에 사용할 수 있는 프로그램 및 세션 디버그 관리자를 만듭니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT PublishProgram(  
@@ -58,22 +58,22 @@ int PublishProgram(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `Engines`  
- [in] An array of GUIDs for DEs that can launch or attach to this program.  
+ [in] 배열 des를 시작 하거나이 프로그램에 연결할 수 있는 Guid입니다.  
   
  `szFriendlyName`  
- [in] Friendly name for the program (this appears in menus or dialogs presented to the user).  
+ [in] (메뉴 또는 대화 상자에는 사용자에 게 표시) 프로그램에 대 한 이름입니다.  
   
  `pDebuggeeInterface`  
- [in] `IUnknown` interface for the program (this value is used as a cookie to uniquely identify the program; this same value is used to "unpublish" the program)  
+ [in] `IUnknown` 프로그램에 대 한 인터페이스 (이 값은 고유 하 게 식별 프로그램 쿠키로 사용, "프로그램을 게시"는 동일한이 값은 사용)  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- To make a program no longer available for debugging, call [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md).  
+## <a name="remarks"></a>설명  
+ 프로그램을 디버깅을 위해 더 이상 사용할 수 있도록 하려면 호출 [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   
  [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)

@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5f025b96c3a37cd55d8bc148d04196a862f7e7bc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugfieldgetsize"></a>IDebugField::GetSize
-This method gets the size of a field, in bytes.  
+이 메서드는 바이트에 있는 필드의 크기를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetSize(   
@@ -54,15 +54,15 @@ int GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pdwSize`  
- [out] Returns the size.  
+ [out] 크기를 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- All fields have a type and all types have a size. For example, a field with a type of byte has a size of 1 byte.  
+## <a name="remarks"></a>설명  
+ 모든 필드에는 형식을 사용할 수 있고 모든 형식은 크기. 예를 들어 바이트 형식의 필드에 1 바이트의 크기입니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

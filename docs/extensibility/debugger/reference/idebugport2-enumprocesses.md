@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: e16d46d63ee6f2cac5998c84c62299bb2e909948
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugport2enumprocesses"></a>IDebugPort2::EnumProcesses
-Returns a list of all the processes running on a port.  
+포트에서 실행 중인 모든 프로세스 목록을 반환 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT EnumProcesses(   
@@ -54,13 +54,13 @@ int EnumProcesses(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `ppEnum`  
- [out] Returns an [IEnumDebugProcesses2](../../../extensibility/debugger/reference/ienumdebugprocesses2.md) object that contains a list of all the processes running on a port.  
+ [out] 반환 된 [IEnumDebugProcesses2](../../../extensibility/debugger/reference/ienumdebugprocesses2.md) 포트에서 실행 중인 모든 프로세스 목록을 포함 하는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   
  [IEnumDebugProcesses2](../../../extensibility/debugger/reference/ienumdebugprocesses2.md)

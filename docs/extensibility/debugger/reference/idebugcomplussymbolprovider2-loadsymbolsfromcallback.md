@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5c6e016d3c3bbd11bf57974dc0afe0c8df8f5d21
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromcallback"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback
-Loads debug symbols using the specified callback method.  
+로드는 지정된 된 콜백 메서드를 사용 하 여 기호를 디버깅 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT LoadSymbolsFromCallback(  
@@ -65,33 +65,33 @@ int LoadSymbolsFromCallback(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ [in] 응용 프로그램 도메인의 식별자입니다.  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ [in] 모듈의 고유 식별자입니다.  
   
  `pUnkMetadataImport`  
- [in] Object that contains the symbol metadata.  
+ [in] 기호 메타 데이터를 포함 하는 개체입니다.  
   
  `pUnkCorDebugModule`  
- [in] Object that implements the [ICorDebugModule Interface](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).  
+ [in] 구현 하는 개체는 [ICorDebugModule 인터페이스](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)합니다.  
   
  `bstrModuleName`  
- [in] Name of the module.  
+ [in] 모듈의 이름입니다.  
   
  `bstrSymSearchPath`  
- [in] Path to search for the symbol file.  
+ [in] 기호 파일을 검색할 경로입니다.  
   
  `pCallback`  
- [in] Object that represents the callback method.  
+ [in] 콜백 메서드를 나타내는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
+## <a name="example"></a>예제  
+ 다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CDebugSymbolProvider** 공개 하는 개체는 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) 인터페이스입니다.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::LoadSymbolsFromCallback(  
@@ -184,5 +184,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

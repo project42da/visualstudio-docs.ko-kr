@@ -1,5 +1,5 @@
 ---
-title: Registering and Unregistering VSPackages | Microsoft Docs
+title: "등록 및 Vspackage 등록 취소 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,16 +33,16 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 312c06295492ac9bd1136ea7de9a0399f247c365
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="registering-and-unregistering-vspackages"></a>Registering and Unregistering VSPackages
-You use attributes to register a VSPackage, but  
+# <a name="registering-and-unregistering-vspackages"></a>Vspackage를 등록 및 등록 취소
+특성을 사용 하 여 VSPackage를 등록 하지만  
   
-## <a name="registering-a-vspackage"></a>Registering a VSPackage  
- You can use attributes to control the registration of managed VSPackages. All registration information is contained in a .pkgdef file. For more information on file-based registration, see [CreatePkgDef Utility](../extensibility/internals/createpkgdef-utility.md).  
+## <a name="registering-a-vspackage"></a>VSPackage를 등록 하는 중  
+ 관리 되는 Vspackage의 등록을 제어 하는 특성을 사용할 수 있습니다. 모든 등록 정보는.pkgdef 파일에 포함 됩니다. 파일 기반 등록에 대 한 자세한 내용은 참조 하십시오. [CreatePkgDef 유틸리티](../extensibility/internals/createpkgdef-utility.md)합니다.  
   
- The following code shows how to use the standard registration attributes to register your VSPackage.  
+ 다음 코드에는 VSPackage를 등록 하 여 표준 등록 특성을 사용 하는 방법을 보여 줍니다.  
   
 ```csharp  
 [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -51,16 +51,16 @@ public sealed class BasicPackage : Package
 {. . .}  
 ```  
   
-## <a name="unregistering-an-extension"></a>Unregistering an Extension  
- If you have been experimenting with a lot of different VSPackages and want to remove them from the experimental instance, you can just run the **Reset** command. Look for **Reset the Visual Studio Experimental Instance** on the start page of your computer, or run this command from the command line:  
+## <a name="unregistering-an-extension"></a>확장 등록 취소  
+ 다른 Vspackage 많이 실험 된 실험적 인스턴스에서에서 제거 하려는 하는 경우 실행 하기만 하면는 **재설정** 명령입니다. 검색할 **Visual Studio 실험적 인스턴스 다시 설정** 컴퓨터의 시작 페이지에서 또는 명령줄에서이 명령을 실행:  
   
 ```vb  
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp  
 ```  
   
- If you want to uninstall an extension that you have installed on your development instance of Visual Studio, go to **Tools / Extensions and Updates**, find the extension, and click **Uninstall**.  
+ 로 이동 하는 사용자가 설치한 Visual Studio의 개발 인스턴스에서 확장을 제거 하려는 경우 **도구 / 확장명 및 업데이트**확장을 찾아 클릭 **제거**합니다.  
   
- If for some reason neither of these methods succeeds at uninstalling the extension, you can unregister the VSPackage assembly from the command line as follows:  
+ 몇 가지 이유로 이러한 메서드의 둘 다 확장에 성공 하면 명령줄에서 VSPackage 어셈블리를 다음과 같이 등록 취소할 수 있습니다.  
   
 ```  
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\regpkg" /unregister <pathToVSPackage assembly>  
@@ -68,13 +68,13 @@ public sealed class BasicPackage : Package
   
 <a name="using-a-custom-registration-attribute-to-register-an-extension"></a>  
   
-## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>Use a custom registration attribute to register an extension  
+## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>사용자 지정 등록 특성을 사용 하 여 확장을 등록 하려면  
   
-In certain cases you may need to create a new registration attribute for your extension. You can use registration attributes to add new registry keys or to add new values to existing keys. The new attribute must derive from <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>, and it must override the <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> and <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> methods.  
+특정 한 경우에 확장 프로그램에 대해 새 등록 특성을 만들려면 할 수 있습니다. 새 레지스트리 키를 추가 하거나 기존 키를 새 값을 추가 하려면 등록 특성을 사용할 수 있습니다. 새 특성에서 파생 되어야 <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>를 재정의 해야 하 고는 <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> 및 <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> 메서드.  
   
-### <a name="creating-a-custom-attribute"></a>Creating a Custom Attribute  
+### <a name="creating-a-custom-attribute"></a>사용자 지정 특성 만들기  
   
-The following code shows how to create a new registration attribute.  
+다음 코드에는 새 등록 특성을 만드는 방법을 보여 줍니다.  
   
 ```csharp  
 [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]  
@@ -83,11 +83,11 @@ The following code shows how to create a new registration attribute.
     }  
 ```  
   
- The <xref:System.AttributeUsageAttribute> is used on attribute classes to specify the program element (class, method, etc.) to which the attribute pertains, whether it can be used more than once, and whether it can be inherited.  
+ <xref:System.AttributeUsageAttribute> 특성 클래스에 하 고 그 사용할 수 있는지 여부 두 번 이상을 상속할 수 있는지 여부는 특성 관계가 있는 프로그램 요소 (클래스, 메서드, 등)를 지정 하는 데 사용 됩니다.  
   
-### <a name="creating-a-registry-key"></a>Creating a Registry Key  
+### <a name="creating-a-registry-key"></a>레지스트리 키 만들기  
   
-In the following code, the custom attribute creates a **Custom** subkey under the key for the VSPackage that is being registered.  
+다음 코드에서 사용자 지정 특성을 만듭니다는 **사용자 지정** 등록 되는 VSPackage에 대 한 키 아래 하위 키입니다.  
   
 ```csharp  
 public override void Register(RegistrationAttribute.RegistrationContext context)  
@@ -111,9 +111,9 @@ public override void Unregister(RegistrationContext context)
 }  
 ```  
   
-### <a name="creating-a-new-value-under-an-existing-registry-key"></a>Creating a New Value Under an Existing Registry Key  
+### <a name="creating-a-new-value-under-an-existing-registry-key"></a>기존 레지스트리 키 아래에서 새 값 만들기  
   
-You can add custom values to an existing key. The following code shows how to add a new value to a VSPackage registration key.  
+기존 키를 사용자 지정 값을 추가할 수 있습니다. 다음 코드에는 VSPackage 등록 키를 새 값을 추가 하는 방법을 보여 줍니다.  
   
 ```csharp  
 public override void Register(RegistrationAttribute.RegistrationContext context)  
@@ -137,5 +137,5 @@ public override void Unregister(RegistrationContext context)
 }  
 ```
   
-## <a name="see-also"></a>See Also  
- [VSPackages](../extensibility/internals/vspackages.md)
+## <a name="see-also"></a>참고 항목  
+ [VSPackage](../extensibility/internals/vspackages.md)

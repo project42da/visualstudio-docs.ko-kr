@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 86589a8f3886592ad1659b646b0a983a9f31f48b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="parseflags"></a>PARSEFLAGS
-Specifies how to parse an expression.  
+식의 구문을 분석 하는 방법을 지정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 enum enum_PARSEFLAGS {   
@@ -59,27 +59,27 @@ public enum enum_PARSEFLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>멤버  
  PARSE_EXPRESSION  
- Indicates that the expression is not a statement.  
+ 식 문 임을 나타냅니다.  
   
  PARSE_FUNCTION_AS_ADDRESS  
- Indicates that the expression is to be parsed (and later evaluated) as an address.  
+ 식을 구문 분석 (하 고 나중에 평가) 주소로 임을 나타냅니다.  
   
  PARSE_DESIGN_TIME_EXPR_EVAL  
- Indicates that the expression is being parsed during design time (that is, when a designer is open).  
+ 식이 디자인 타임 동안 구문 분석 되는 나타냅니다 (즉, 디자이너를 열 때).  
   
-## <a name="remarks"></a>Remarks  
- Passed as a parameter to the [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) and [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) methods.  
+## <a name="remarks"></a>설명  
+ 에 대 한 매개 변수로 전달 되는 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 및 [구문 분석](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) 메서드.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)   
- [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)
+ [구문 분석](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)

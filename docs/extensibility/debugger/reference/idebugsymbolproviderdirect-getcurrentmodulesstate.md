@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ce289cb350dfe285d8f2f28d0cd16ed7444fd166
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesstate"></a>IDebugSymbolProviderDirect::GetCurrentModulesState
-Retrieves information about the symbol group of which the symbol provider is a member.  
+기호 공급자 멤버인 기호 그룹에 대 한 정보를 검색 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetCurrentModulesState(  
@@ -55,18 +55,18 @@ int GetCurrentModulesState(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pState`  
- [out] The state of the symbol provider group.  
+ [out] 기호 공급자 그룹의 상태입니다.  
   
  `count`  
- [out] Number of modules in the group.  
+ [out] 그룹에는 모듈 수입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- The state is changed whenever a module is added to, or removed from, the symbol group. Therefore, this method can be used to detect if a symbol group has been modified.  
+## <a name="remarks"></a>설명  
+ 상태는 모듈이, 추가 또는 기호 그룹에서 제거 될 때마다 변경 됩니다. 따라서이 메서드 기호 그룹이 수정 되었으므로 경우 검색 데 사용할 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

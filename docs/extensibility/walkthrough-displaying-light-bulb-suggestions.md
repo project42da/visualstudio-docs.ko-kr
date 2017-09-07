@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Displaying Light Bulb Suggestions | Microsoft Docs'
+title: "연습: 전구 제안을 표시 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,48 +30,48 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 1096b04fee06415e65a93b0ecd8a6257de64edfc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-displaying-light-bulb-suggestions"></a>Walkthrough: Displaying Light Bulb Suggestions
-Light bulbs are icons used in the Visual Studio editor that expand to display a set of actions, for example fixes for problems identified by the built-in code analyzers or code refactoring.  
+# <a name="walkthrough-displaying-light-bulb-suggestions"></a>연습: 전구 제안 표시
+전구는 일련의 작업을 표시 하도록 확장, 예를 들어 기본 제공 코드 분석기 또는 코드 리팩터링에 의해 식별 된 문제를 해결 하는 Visual Studio 편집기에서 사용 되는 아이콘입니다.  
   
- In the Visual C# and Visual Basic editors, you can also use the .NET Compiler Platform ("Roslyn") to write and package your own code analyzers with actions that display light bulbs automatically. For more information, see:  
+ Visual C# 및 Visual Basic 편집기에서 작성 하 고 패키지 전구를 자동으로 표시 되는 작업에 사용자 고유의 코드 분석기.NET 컴파일러 플랫폼 ("Roslyn")을 사용할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
--   [How To: Write a C# Diagnostic and Code Fix](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
+-   [방법: C# 진단 및 코드 수정 프로그램 작성](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
   
--   [How To: Write a Visual Basic Diagnostic and Code Fix](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
+-   [방법: Visual Basic 진단 및 코드 수정 프로그램 작성](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
   
- Other languages such as C++ also provide light bulbs for some quick actions, such as a suggestion to create a stub implementation of that function.  
+ 또한 c + +와 같은 다른 언어는 해당 함수에 대 한 스텁 구현을 만들 한 제안 사항 등의 일부 빠른 동작에 대 한 전구를 제공 합니다.  
   
- Here's what a light bulb looks like. In a Visual Basic or Visual C# project, a red squiggle appears under a variable name when it is invalid. When you mouse over the invalid identifier, a light bulb is displayed near the cursor.  
+ 다음은 전구가 표시 되는 모양입니다. Visual Basic 또는 Visual C# 프로젝트에서 유효 하지 않을 때 변수 이름 아래에 빨간색 물결이 나타납니다. 잘못 된 식별자 위로 마우스 커서 옆 전구가 표시 됩니다.  
   
- ![light bulb](../extensibility/media/lightbulb.png "LightBulb")  
+ ![전구](../extensibility/media/lightbulb.png "전구")  
   
- If you click the down arrow by the light bulb, a set of suggested actions is displayed, along with a preview of the selected action. In this case, it shows the changes that will be made to your code if you execute the action.  
+ 전구에서 아래쪽 화살표를 클릭 하면 선택한 동작의 미리 보기 함께 제안 된 작업 집합이 표시 됩니다. 이 경우 작업을 실행 하는 경우 코드에 적용 될 변경 내용을 보여 줍니다.  
   
- ![light bulb preview](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
+ ![전구 미리 보기](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
   
- You can use light bulbs to provide your own suggested actions. For example, you could provide actions to move opening curly braces to a new line or move them to the end of the preceding line. The following walkthrough shows how to create a light bulb that appears on the current word and has two suggested actions: **Convert to upper case** and **Convert to lower case**.  
+ 사용자 고유의 제안 된 작업을 제공 하도록 전구를 사용할 수 있습니다. 예를 들어 여 중괄호를 새 줄으로 이동 하거나 앞 줄의 끝으로 이동 하는 작업을 제공할 수 있습니다. 다음 연습에서는 현재 단어에 표시 된 전구를 만드는 방법을 보여주며, 두 개의 제안 동작: **대문자로 변환** 및 **를 소문자로 변환**합니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>필수 구성 요소  
+ Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
-## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Creating a Managed Extensibility Framework (MEF) Project  
+## <a name="creating-a-managed-extensibility-framework-mef-project"></a>MEF(Managed Extensibility Framework) 프로젝트 만들기  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `LightBulbTest`.  
+1.  C# VSIX 프로젝트를 만듭니다. (에 **새 프로젝트** 대화 상자에서 **Visual C# / 확장성**, 다음 **VSIX 프로젝트**.) 솔루션 이름을 `LightBulbTest`합니다.  
   
-2.  Add an **Editor Classifier** item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  추가 **편집기 분류자** 항목 템플릿을 프로젝트에 있습니다. 자세한 내용은 참조 [편집기 항목 템플릿을 사용 하 여 확장을 만드는](../extensibility/creating-an-extension-with-an-editor-item-template.md)합니다.  
   
-3.  Delete the existing class files.  
+3.  기존 클래스 파일을 삭제합니다.  
   
-4.  Add the following reference to the project, and set **Copy Local** to `False`:  
+4.  프로젝트에 다음 참조를 추가 하 고 설정 **로컬 복사** 를 `False`:  
   
      Microsoft.VisualStudio.Language.Intellisense  
   
-5.  Add a new class file and name it **LightBulbTest**.  
+5.  새 클래스 파일을 추가 하 고 이름을 **LightBulbTest**합니다.  
   
-6.  Add the following using statements:  
+6.  다음 추가 문을 사용 하 여:  
   
     ```csharp  
     using System;  
@@ -88,9 +88,9 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
   
     ```  
   
-## <a name="implementing-the-light-bulb-source-provider"></a>Implementing the Light Bulb Source Provider  
+## <a name="implementing-the-light-bulb-source-provider"></a>전구 소스 공급자 구현  
   
-1.  In the LightBulbTest.cs class file, delete the LightBulbTest class. Add a class named **TestSuggestedActionsSourceProvider** that implements <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>. Export it with a Name of **Test Suggested Actions** and a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "text".  
+1.  LightBulbTest.cs 클래스 파일에서 LightBulbTest 클래스를 삭제 합니다. 라는 클래스를 추가 **TestSuggestedActionsSourceProvider** 를 구현 하는 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>합니다. 이름으로 내보내기 **테스트 권장 조치** 및 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text"입니다.  
   
     ```csharp  
     [Export(typeof(ISuggestedActionsSourceProvider))]  
@@ -99,14 +99,14 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     internal class TestSuggestedActionsSourceProvider : ISuggestedActionsSourceProvider  
     ```  
   
-2.  Inside the source provider class, import the <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> and add it as a property.  
+2.  원본 공급자 클래스의 내부 가져오기는 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> 속성으로 추가 합니다.  
   
     ```csharp  
     [Import(typeof(ITextStructureNavigatorSelectorService))]  
     internal ITextStructureNavigatorSelectorService NavigatorService { get; set; }  
     ```  
   
-3.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A> method to return an <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> object. We will discuss the source in the next section.  
+3.  구현 된 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A> 반환 하는 메서드는 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> 개체입니다. 다음 섹션에서 소스를 설명 합니다.  
   
     ```csharp  
     public ISuggestedActionsSource CreateSuggestedActionsSource(ITextView textView, ITextBuffer textBuffer)  
@@ -119,16 +119,16 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-## <a name="implementing-the-isuggestedactionsource"></a>Implementing the ISuggestedActionSource  
- The suggested action source is responsible for collecting the set of suggested actions and adding them in the right context. In this case the context is the current word and the suggested actions are **UpperCaseSuggestedAction** and **LowerCaseSuggestedAction**, which we will discuss in the following section.  
+## <a name="implementing-the-isuggestedactionsource"></a>ISuggestedActionSource 구현  
+ 적절된 한 조치 소스는 제안 된 작업의 집합을 수집 하 고 오른쪽 컨텍스트에 추가한 하는 일을 담당 합니다. 이 경우 컨텍스트는 현재 단어 및 권장된 조치는 **UpperCaseSuggestedAction** 및 **LowerCaseSuggestedAction**, 다음 섹션에서 설명 합니다.  
   
-1.  Add a class **TestSuggestedActionsSource** that implements <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>.  
+1.  클래스를 추가 **TestSuggestedActionsSource** 를 구현 하는 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>합니다.  
   
     ```csharp  
     internal class TestSuggestedActionsSource : ISuggestedActionsSource  
     ```  
   
-2.  Add private read-only fields for the suggested action source provider, the text buffer and the text view.  
+2.  적절된 한 조치 소스 공급자, 텍스트 버퍼 및 텍스트 보기에 대 한 전용 읽기 전용 필드를 추가 합니다.  
   
     ```csharp  
     private readonly TestSuggestedActionsSourceProvider m_factory;  
@@ -136,7 +136,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     private readonly ITextView m_textView;  
     ```  
   
-3.  Add a constructor that sets the private fields.  
+3.  전용 필드를 설정 하는 생성자를 추가 합니다.  
   
     ```csharp  
     public TestSuggestedActionsSource(TestSuggestedActionsSourceProvider testSuggestedActionsSourceProvider, ITextView textView, ITextBuffer textBuffer)  
@@ -147,7 +147,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-4.  Add a private method that returns the word that is currently under the cursor. The following method looks at the current location of the cursor and asks the text structure navigator for the extent of the word. If the cursor is on a word, the <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> is returned in the out parameter; otherwise the `out` parameter is `null` and the method returns `false`.  
+4.  현재 커서 아래에 있는 단어를 반환 하는 개인 메서드를 추가 합니다. 다음 메서드는 커서의 현재 위치 찾은 단어 범위에 대 한 텍스트 구조 탐색기를 요청 합니다. 커서가 단어에 있는 경우는 <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> out 매개 변수에서 반환 되 고, 그렇지 않으면는 `out` 매개 변수는 `null` 메서드에서 반환 `false`합니다.  
   
     ```csharp  
     private bool TryGetWordUnderCaret(out TextExtent wordExtent)  
@@ -172,9 +172,9 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-5.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A> method. The editor calls this method to find out whether to display the light bulb. This call is made quite often, for example whenever the cursor moves from one line to another, or when the mouse hovers over an error squiggle. It is asynchronous in order to allow other UI operations to carry on while this method is working. In most cases this method needs to perform some parsing and analysis of the current line, so the processing may take some time.  
+5.  <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A> 메서드를 구현합니다. 편집기의 전구 표시 여부를 확인 하려면이 메서드를 호출 합니다. 이 호출이 오류 표시선 위로 마우스를 이동할 때 또는 다른 커서를 한 줄에서 이동할 때마다 예를 들어 경우가 매우 자주 생성 됩니다. 이 메서드가 작동 하는 동안 수행 하기 위해 다른 UI 작업을 허용 하기 위해 비동기 됩니다. 따라서이 메서드를 일부 구문 분석 및 현재 줄의 분석을 수행 해야 합니다. 대부분의 경우에서 처리 시간이 걸릴 수 있습니다.  
   
-     In our implementation it asynchronously gets the <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> and determines whether the extent is significant, i.e., whether it has some text other than whitespace.  
+     이 구현에서 비동기적으로 가져옵니다는 <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> 범위 중요 한지 여부, 즉, 공백이 아닌 일부 텍스트 있는지 여부를 결정 합니다.  
   
     ```csharp  
     public Task<bool> HasSuggestedActionsAsync(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)  
@@ -192,10 +192,10 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-6.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A> method, which returns an array of <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> objects that contain the different <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> objects. This method is called when the light bulb is expanded.  
+6.  구현 된 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A> 의 배열을 반환 하 <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> 여러 가지를 포함 하는 개체 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> 개체입니다. 이 메서드는 전구 확장 될 때 호출 됩니다.  
   
     > [!WARNING]
-    >  You should make sure that the implementations of `HasSuggestedActionsAsync()` and `GetSuggestedActions()` are consistent; that is, if `HasSuggestedActionsAsync()` returns `true`, then `GetSuggestedActions()` should have some actions to display. In many cases `HasSuggestedActionsAsync()` is called just before `GetSuggestedActions()`, but this is not always the case. For example, if the user invokes the light bulb actions by pressing (CTRL + .) only `GetSuggestedActions()` is called.  
+    >  확인 해야 하는의 구현 `HasSuggestedActionsAsync()` 및 `GetSuggestedActions()` ; 일관 된 되는 경우, `HasSuggestedActionsAsync()` 반환 `true`, 다음 `GetSuggestedActions()` 표시할 일부 작업에 있어야 합니다. 대부분의 경우에서 `HasSuggestedActionsAsync()` 직전에 호출 `GetSuggestedActions()`, 하지만 항상 대/소문자는 없습니다. 예를 들어 사용자 키를 눌러 전구 작업을 호출 하는 경우 (CTRL +.)만 `GetSuggestedActions()` 라고 합니다.  
   
     ```csharp  
     public IEnumerable<SuggestedActionSet> GetSuggestedActions(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)  
@@ -212,13 +212,13 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }   
     ```  
   
-7.  Define a `SuggestedActionsChanged` event.  
+7.  정의 `SuggestedActionsChanged` 이벤트입니다.  
   
     ```csharp  
     public event EventHandler<EventArgs> SuggestedActionsChanged;  
     ```  
   
-8.  To complete the implementation, add implementations for the `Dispose()` and `TryGetTelemetryId()` methods. We don't want to do telemetry, so just return false and set the GUID to Empty.  
+8.  구현을 완료 하려면에 대 한 구현을 추가 `Dispose()` 및 `TryGetTelemetryId()` 메서드. 원격 분석을 수행 하 고, false를 반환 하므로, Empty로 GUID를 설정할 하려고 하지 않습니다.  
   
     ```csharp  
     public void Dispose()  
@@ -233,20 +233,20 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-## <a name="implementing-light-bulb-actions"></a>Implementing Light Bulb Actions  
+## <a name="implementing-light-bulb-actions"></a>전구 동작 구현  
   
-1.  In the project, add a reference to Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll and set **Copy Local** to `False`.  
+1.  프로젝트에서 Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll 및 설정에 대 한 참조를 추가 **로컬 복사** 를 `False`합니다.  
   
-2.  Create two classes, the first named `UpperCaseSuggestedAction` and the second named `LowerCaseSuggestedAction`. Both classes implement <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>.  
+2.  두 개의 클래스를 만드는 첫 번째 라는 `UpperCaseSuggestedAction` 및 두 번째 명명 된 `LowerCaseSuggestedAction`합니다. 두 클래스 모두 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>를 구현합니다.  
   
     ```csharp  
     internal class UpperCaseSuggestedAction : ISuggestedAction   
     internal class LowerCaseSuggestedAction : ISuggestedAction  
     ```  
   
-     Both classes are alike except that one calls <xref:System.String.ToUpper%2A> and the other calls <xref:System.String.ToLower%2A>. The following steps cover only the uppercase action class, but you must implement both classes. Use the steps for implementing the uppercase action as a pattern for implementing the lowercase action.  
+     하나를 호출 한다는 점을 제외 하면 두 클래스는 유사 <xref:System.String.ToUpper%2A> 및 기타 호출 <xref:System.String.ToLower%2A>합니다. 다음 단계에서는 대문자 동작 클래스만 설명하지만 두 클래스를 모두 구현해야 합니다. 대문자 동작 구현 단계를 소문자 동작 구현 패턴으로 사용합니다.  
   
-3.  Add the following using statements for these classes:  
+3.  다음 추가 이러한 클래스에 대 한 문을 사용 하 여:  
   
     ```csharp  
     using Microsoft.VisualStudio.Imaging.Interop;  
@@ -257,7 +257,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
   
     ```  
   
-4.  Declare a set of private fields.  
+4.  전용 필드 집합을 선언합니다.  
   
     ```csharp  
     private ITrackingSpan m_span;  
@@ -266,7 +266,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     private ITextSnapshot m_snapshot;  
     ```  
   
-5.  Add a constructor that sets the fields.  
+5.  필드를 설정하는 생성자를 추가합니다.  
   
     ```csharp  
     public UpperCaseSuggestedAction(ITrackingSpan span)  
@@ -278,7 +278,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-6.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A> method so that it displays the action preview.  
+6.  구현 된 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A> 메서드 작업 미리 보기 표시 되도록 합니다.  
   
     ```csharp  
     public Task<object> GetPreviewAsync(CancellationToken cancellationToken)  
@@ -290,7 +290,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-7.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A> method so that it returns an empty <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> enumeration.  
+7.  구현 된 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A> 메서드는 빈 반환 하도록 <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> 열거 합니다.  
   
     ```csharp  
     public Task<IEnumerable<SuggestedActionSet>> GetActionSetsAsync(CancellationToken cancellationToken)  
@@ -299,7 +299,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-8.  Implement the properties as follows.  
+8.  속성을 다음과 같이 구현합니다.  
   
     ```csharp  
     public bool HasActionSets  
@@ -334,7 +334,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-9. Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A> method by replacing the text in the span with its uppercase equivalent.  
+9. 구현 된 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A> 범위에서 텍스트를 해당 대문자로 바꾸어 메서드.  
   
     ```csharp  
     public void Invoke(CancellationToken cancellationToken)  
@@ -344,9 +344,9 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     ```  
   
     > [!WARNING]
-    >  The light bulb action **Invoke** method is not expected to show UI.  If your action does bring up new UI (for example a preview or selection dialog), do not display the UI directly from within the **Invoke** method but instead schedule to display your UI after returning from **Invoke**.  
+    >  전구 동작 **Invoke** UI를 표시할 수 메서드를 사용할 수 없습니다.  액션 않습니다 새 UI (예를 들어 한 미리 보기 또는 선택 대화 상자)를 가져올 경우 UI 내에서 직접 표시 하지 않습니다는 **Invoke** 메서드 대신에서 반환 된 후 UI를 표시 하려면 예약 하지만 **Invoke**.  
   
-10. To complete the implementation, add the `Dispose()` and `TryGetTelemetryId()` methods.  
+10. 구현을 완료 하려면 추가 `Dispose()` 및 `TryGetTelemetryId()` 메서드.  
   
     ```csharp  
     public void Dispose()  
@@ -361,24 +361,24 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-11. Don't forget to do the same thing for `LowerCaseSuggestedAction` changing the display text to "Convert '{0}' to lower case" and the call <xref:System.String.ToUpper%2A> to <xref:System.String.ToLower%2A>.  
+11. 에 대 한 동일한 작업을 수행 하도록 설정 `LowerCaseSuggestedAction` 표시 텍스트를 "' {'이 (0) 소문자로 변환"에 대 한 호출은 변경 <xref:System.String.ToUpper%2A> 를 <xref:System.String.ToLower%2A>합니다.  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
- To test this code, build the LightBulbTest solution and run it in the Experimental instance.  
+## <a name="building-and-testing-the-code"></a>코드 빌드 및 테스트  
+ 이 코드를 테스트 하려면 LightBulbTest 솔루션을 빌드하고 실험적 인스턴스에서 실행 합니다.  
   
-1.  Build the solution.  
+1.  솔루션을 빌드합니다.  
   
-2.  When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+2.  디버거에서 이 프로젝트를 실행하면 Visual Studio의 두 번째 인스턴스가 인스턴스화됩니다.  
   
-3.  Create a text file and type some text. You should see a light bulb to the left of the text.  
+3.  텍스트 파일을 만들고 일부 텍스트를 입력합니다. 텍스트의 왼쪽에 전구가 나타납니다.  
   
-     ![test the light bulb](../extensibility/media/testlightbulb.png "TestLIghtBulb")  
+     ![전구 테스트](../extensibility/media/testlightbulb.png "TestLIghtBulb")  
   
-4.  Point at the light bulb. You should see a down arrow.  
+4.  전구를 가리키면 됩니다. 아래쪽 화살표를 표시 됩니다.  
   
-5.  When you click the light bulb, two suggested actions should be displayed, along with the preview of the selected action.  
+5.  전구를 클릭 하면 두 가지 권장된 조치를 표시할지 선택한 동작의 미리 보기와 함께 합니다.  
   
-     ![test light bulb, expanded](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
+     ![확장 된 전구 테스트](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
   
-6.  If you click the first action, all the text in the current word should be converted to upper case. If you click the second action, all the text should be converted to lower case.  
+6.  첫 번째 동작을 클릭하면 현재 단어의 모든 텍스트가 대문자로 변환됩니다. 두 번째 동작을 클릭하면 모든 텍스트가 소문자로 변환됩니다.  
   

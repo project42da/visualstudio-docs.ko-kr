@@ -1,5 +1,5 @@
 ---
-title: Support for the Navigation Bar in a Legacy Language Service | Microsoft Docs
+title: "레거시 언어 서비스의 탐색 모음에 대 한 지원 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,19 +33,19 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: eb5212c4828ad24256447bc1c75f85ec0d9d9579
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>Support for the Navigation Bar in a Legacy Language Service
-The Navigation bar at the top of the editor view displays the types and members in the file. Types are shown in the left drop-down, and members are shown in the right drop-down. When the user selects a type, the caret is placed on the first line of the type. When the user selects a member, the caret is placed on the definition of the member. The drop-down boxes are updated to reflect the current location of the caret.  
+# <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>레거시 언어 서비스의 탐색 모음에 대 한 지원
+편집기 보기의 위쪽 탐색 모음 파일의 형식 및 멤버를 표시 합니다. 형식은 왼쪽된 드롭다운 목록에서 확인할 및 멤버 드롭 다운 오른쪽에 표시 됩니다. 사용자가 형식을 선택, 캐럿 형식의 첫 번째 줄에 배치 됩니다. 사용자가 구성원을 선택 하면 멤버의 정의에 캐럿 배치 됩니다. 드롭다운 목록 상자는 캐럿의 현재 위치를 반영 하도록 업데이트 됩니다.  
   
-## <a name="displaying-and-updating-the-navigation-bar"></a>Displaying and Updating the Navigation bar  
- To support the Navigation bar, you must derive a class from the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> class and implement the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method. When your language service is given a code window, the base <xref:Microsoft.VisualStudio.Package.LanguageService> class instantiates the <xref:Microsoft.VisualStudio.Package.CodeWindowManager>, which contains the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> object representing the code window. The <xref:Microsoft.VisualStudio.Package.CodeWindowManager> object is then given a new <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> object. The <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> method gets a <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object. If you return an instance of your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> class, the <xref:Microsoft.VisualStudio.Package.CodeWindowManager> calls your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method to populate the internal lists and passes your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object to the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] drop-down bar manager. The drop-down bar manager, in turn, calls the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.SetDropdownBar%2A> method on your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object to establish the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar> object that holds the two drop-down bars.  
+## <a name="displaying-and-updating-the-navigation-bar"></a>표시 하 고 업데이트의 탐색 모음  
+ 탐색 모음을 지원 하려면에서 클래스를 파생 해야 합니다는 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> 클래스 및 구현 된 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> 메서드. 언어 서비스는 코드 창, 기본이 지정 하는 경우 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스를 인스턴스화하는 <xref:Microsoft.VisualStudio.Package.CodeWindowManager>를 포함 하는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> 코드 창을 나타내는 개체입니다. <xref:Microsoft.VisualStudio.Package.CodeWindowManager> 개체에는 새로운 지정 다음 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 개체입니다. <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> 메서드에서 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> 개체입니다. 인스턴스를 반환 하는 경우 프로그램 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> 클래스는 <xref:Microsoft.VisualStudio.Package.CodeWindowManager> 호출 프로그램 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> 메서드 내부를 채우는를 나열 하 고 전달 프로그램 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> 개체를 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 막대 관리자 드롭 다운 합니다. 드롭 다운 표시줄 관리자를 호출 하는 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.SetDropdownBar%2A> 메서드를 프로그램 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> 설정 하기 위해 개체는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar> 두 개의 드롭다운 막대를 보유 하는 개체입니다.  
   
- When the caret moves, the <xref:Microsoft.VisualStudio.Package.LanguageService.OnIdle%2A> method calls the <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> method. The base <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> method calls the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method in your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> class to update the state of the Navigation bar. You pass a set of <xref:Microsoft.VisualStudio.Package.DropDownMember> objects to this method. Each object represents an entry in the drop-down.  
+ 캐럿 움직이면는 <xref:Microsoft.VisualStudio.Package.LanguageService.OnIdle%2A> 메서드 호출에서 <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> 메서드. 기본 <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> 메서드 호출의 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> 에서 메서드 프로그램 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> 탐색 모음의 상태를 업데이트 하는 클래스입니다. 집합을 전달 하면 <xref:Microsoft.VisualStudio.Package.DropDownMember> 이 메서드에 개체입니다. 각 개체 드롭다운 목록에서 항목을 나타냅니다.  
   
-## <a name="the-contents-of-the-navigation-bar"></a>The Contents of the Navigation Bar  
- The Navigation bar usually contains a list of types and a list of members. The list of types includes all types available in the current source file. The type names include the complete namespace information. The following is an example of C# code with two types:  
+## <a name="the-contents-of-the-navigation-bar"></a>탐색 모음 내용  
+ 탐색 모음 유형 목록 및 멤버 목록은 일반적으로 포함 되어 있습니다. 형식 목록에는 현재 소스 파일에서 사용할 수 있는 모든 형식을 포함 됩니다. 전체 네임 스페이스 정보를 포함 하는 형식 이름입니다. 다음은 두 가지 유형이 C# 코드 예제입니다.  
   
 ```csharp  
 namespace TestLanguagePackage  
@@ -62,48 +62,48 @@ namespace TestLanguagePackage
 }  
 ```  
   
- The type list will display `TestLanguagePackage.TestLanguageService` and `TestLanguagePackage.TestLanguageService.Tokens`.  
+ 형식 목록에 표시 됩니다 `TestLanguagePackage.TestLanguageService` 및 `TestLanguagePackage.TestLanguageService.Tokens`합니다.  
   
- The members list displays the available members of the type that is selected in the types list. Using the code example above, if `TestLanguagePackage.TestLanguageService` is the type that is selected, the members list would contain the private members `tokens` and `serviceName`. The internal structure `Token` is not displayed.  
+ 멤버 목록 형식 목록에서 선택 된 형식의 사용 가능한 구성원을 표시 합니다. 경우에 위의 코드 예제를 사용 하 여 `TestLanguagePackage.TestLanguageService` 을 선택 하는 형식 멤버 목록에는 private 멤버 포함 `tokens` 및 `serviceName`합니다. 내부 구조 `Token` 표시 되지 않습니다.  
   
- You can implement the members list to make the name of a member bold when the caret is placed inside it. Members can also be displayed in grayed out text, indicating that they are not within the scope where the caret is currently positioned.  
+ 멤버 목록에서 그 안에 캐럿 배치는 멤버의 이름을 굵게 표시 된 확인을 구현할 수 있습니다. 멤버 수 또한에 회색으로 표시 텍스트를 나타내는 표시 캐럿 현재 배치 되어 범위에 포함 되지 않는.  
   
-## <a name="enabling-support-for-the-navigation-bar"></a>Enabling Support for the Navigation Bar  
- To enable support for the Navigation bar, you must set the `ShowDropdownBarOption` parameter of the <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> attribute to `true`. This parameter sets the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> property. To support the Navigation bar, you must implement the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object in the <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> method on the <xref:Microsoft.VisualStudio.Package.LanguageService> class.  
+## <a name="enabling-support-for-the-navigation-bar"></a>탐색 모음에 대 한 지원을 사용 하도록 설정  
+ 에 있는 탐색 모음에 대 한 지원을 사용 하려면 설정 해야 합니다는 `ShowDropdownBarOption` 의 매개 변수는 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 특성을 `true`합니다. 이 매개 변수는 <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> 속성을 설정합니다. 탐색 모음을 지원 하려면 구현 해야 합니다는 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> 개체에 <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> 에서 메서드는 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스.  
   
- In your implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> method, if the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> property is set to `true`, you can return a <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object. If you do not return the object, the Navigation bar is not displayed.  
+ 구현에서는 <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> 메서드를 하는 경우는 <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> 속성이로 설정 되어 `true`를 반환할 수 있습니다는 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> 개체입니다. 개체를 반환 하지 않는 경우 탐색 모음 표시 되지 않습니다.  
   
- The option to show the Navigation bar can be set by the user, so it is possible for this control to be reset while the editor view is open. The user must close and reopen the editor window before the change takes place.  
+ 이 컨트롤 편집기 보기 열려 있는 동안 다시 설정할 수 있도록 사용자가 탐색 모음을 표시 하는 옵션을 설정할 수 있습니다. 사용자를 닫고 변경 내용을 수행 되기 전에 편집기 창을 다시 열려면 해야 합니다.  
   
-## <a name="implementing-support-for-the-navigation-bar"></a>Implementing Support for the Navigation Bar  
- The <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method takes two lists (one for each drop-down) and two values representing the current selection in each list. The lists and the selection values can be updated, in which case the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method must return `true` to indicate that the lists have changed.  
+## <a name="implementing-support-for-the-navigation-bar"></a>탐색 모음에 대 한 지원 구현  
+ <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> 메서드는 두 개의 목록 (각 드롭다운에 대해 각각 하나씩) 및 각 목록에서 현재 선택 영역을 나타내는 두 개의 값을 사용 합니다. 목록과 선택 값을 업데이트할 수는 쿼리에서 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> 메서드는 반환 해야 `true` 를 나타내는 목록 변경 되었습니다.  
   
- As the selection changes in the types drop-down, the members list must be updated to reflect the new type. What is shown in the members list can be either:  
+ 형식 드롭다운 목록에서에서 선택이 변경으로 멤버 목록 새 유형을 반영 하도록 업데이트 되어야 합니다. 멤버 목록에 표시 되는 내용을 다음 중 하나일 수 있습니다.  
   
--   The list of members for the current type.  
+-   현재 형식에 대 한 멤버의 목록입니다.  
   
--   All the members available in the source file, but with all members not in the current type displayed in grayed-out text. The user can still select the grayed-out members, so they can be used for quick navigation, but the color indicates that they are not part of the currently selected type.  
+-   원본에 사용할 수 있는 모든 멤버 파일, 하지만 현재 형식에 없는 모든 멤버와 회색 텍스트로 표시 합니다. 빠른 탐색을 위해 사용할 수 있지만 색은 없음을 나타냅니다 현재 선택 된 형식에 포함 되므로 회색 멤버를 여전히 선택할 수 있습니다.  
   
- An implementation of the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method typically performs the following steps:  
+ 구현에서 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> 메서드는 일반적으로 다음 단계를 수행 합니다.  
   
-1.  Get a list of current declarations for the source file.  
+1.  소스 파일에 대 한 현재 선언의 목록을 가져옵니다.  
   
-     There are a number of ways to populate the lists. One approach is to create a custom method on your version of the <xref:Microsoft.VisualStudio.Package.LanguageService> class that calls the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method with a custom parse reason that returns a list of all declarations. Another approach might be to call the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method directly from the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method with the custom parse reason. A third approach might be to cache the declarations in the <xref:Microsoft.VisualStudio.Package.AuthoringScope> class returned by the last full parsing operation in the <xref:Microsoft.VisualStudio.Package.LanguageService> class and retrieve that from the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method.  
+     방법으로는 목록을 채울 수가 있습니다. 버전에는 사용자 지정 메서드를 만드는 한 가지 방법은 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스를 호출 하는 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 모든 선언의 목록을 반환 하는 사용자 지정 구문 분석 이유와 메서드. 또 다른 방법은를 호출할 수 있습니다는 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 에서 직접 메서드는 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> 메서드 구문 분석 사용자 지정 이유를 사용 합니다. 세 번째 차후에서 선언을 캐시할 수도 <xref:Microsoft.VisualStudio.Package.AuthoringScope> 의 마지막 전체 구문 분석 작업에서 반환 된 클래스는 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스 하 고 검색 하는 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> 메서드.  
   
-2.  Populate or update the list of types.  
+2.  채우거 나 형식의 목록을 업데이트 합니다.  
   
-     The contents of the types list may to be updated when the source has changed or if you have chosen to change the text styling of the types based on the current caret position. Note that this position is passed to the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method.  
+     형식 목록의 콘텐츠는 소스가 변경 된 경우 또는 현재 캐럿 위치에 따라 형식의 텍스트 스타일을 변경 하려면 선택한 경우 업데이트할 수 있습니다. 이 위치에 전달 되는 참고는 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> 메서드.  
   
-3.  Determine the type to select in the types list based on the current caret position.  
+3.  현재 캐럿 위치에 따라 형식 목록에서 선택 하려면 유형을 결정 합니다.  
   
-     You can search the declarations that were obtained in step 1 to find the type that encloses the current caret position, and then search the types list for that type to determine its index into the types list.  
+     현재 캐럿 위치를 포함 하는 형식을 찾기 위해 1 단계에서 가져온 선언을 검색 하 고 형식 목록에 해당 항목이 있는 인덱스를 확인 하려면 해당 형식에 대 한 형식 목록을 검색 합니다.  
   
-4.  Populate or update the list of members based on the selected type.  
+4.  채우거 나 선택한 형식을 기반으로 하는 멤버의 목록을 업데이트 합니다.  
   
-     The members list reflects what is currently displayed in the **Members** drop-down. The contents of the members list may need to be updated if the source has changed or if you are displaying only the members of the selected type and the selected type has changed. If you choose to display all the members in the source file, then the text styling of each member in the list needs to be updated if the currently selected type has changed.  
+     멤버 목록에 현재 표시 되는 내용에 반영 된 **멤버** 드롭 다운 합니다. 멤버 목록의 내용을 소스 변경 된 경우 또는 선택한 형식의 멤버만 표시 하는 선택한 형식의 변경 된 경우 업데이트 해야 합니다. 를 소스 파일의 모든 멤버를 표시 하도록 선택 목록에서 각 구성원의 텍스트 스타일을 업데이트 하 여 현재 선택 된 형식이 변경 해야 합니다.  
   
-5.  Determine the member to select in the members list based on the current caret position.  
+5.  현재 캐럿 위치에 따라 멤버 목록에서 선택 하는 멤버를 결정 합니다.  
   
-     Search the declarations that were obtained in step 1 for the member that contains the current caret position, then search the members list for that member to determine its index into the member list.  
+     현재 캐럿 위치를 포함 하는 멤버에 대 한 가져온 선언 1 단계에서 검색 한 다음 멤버 목록에 해당 항목이 있는 인덱스를 확인 하려면 해당 멤버에 대 한 멤버 목록을 검색 합니다.  
   
-6.  Return `true` if any changes have been made to the lists or the selections in either list.
+6.  반환 `true` 는 목록이 나 목록에서 선택 항목에 변경 내용을 적용 된 경우.

@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: fa7b4f24cf215b3cab1bee47ed665d62336fb519
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="adprocessid"></a>AD_PROCESS_ID
-Specifies the process ID, which may be either a system ID or a GUID.  
+프로세스 ID는 시스템 ID 또는 GUID 일 수를 지정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 typedef struct _AD_PROCESS_ID {  
@@ -62,21 +62,21 @@ public struct AD_PROCESS_ID {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>멤버  
  `ProcessIdType`  
- A value from the [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) enumeration specifying how to interpret the `ProcessId` union (or, for managed code, which member of the structure to access).  
+ 값은 [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) 해석 하는 방법을 지정 하는 열거형의 `ProcessId` union (또는 구조체의 멤버에 액세스를 관리 코드용)입니다.  
   
  dwProcessId  
- The process ID as a value from the system.  
+ 시스템에서의 값으로 프로세스 ID입니다.  
   
  guidProcessId  
- The process ID as a GUID.  
+ GUID로 프로세스 ID입니다.  
   
  dwUnused  
- Padding.  
+ 안쪽 여백입니다.  
   
-## <a name="remarks"></a>Remarks  
- This structure is passed to the following methods:  
+## <a name="remarks"></a>설명  
+ 이 구조는 다음 방법에 전달 됩니다.  
   
 -   [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
   
@@ -86,21 +86,21 @@ public struct AD_PROCESS_ID {
   
 -   [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)  
   
- And is returned from the following methods:  
+ 다음 방법 중에서 반환 됩니다.  
   
 -   [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
   
 -   [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>참고 항목  
+ [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)   
  [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)   
  [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)   

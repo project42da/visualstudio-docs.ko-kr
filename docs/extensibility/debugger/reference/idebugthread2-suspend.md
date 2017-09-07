@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3926456c8b625102dfc5df4d8818f3cacc3a2ce3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugthread2suspend"></a>IDebugThread2::Suspend
-Suspends a thread.  
+스레드 일시 중단합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT Suspend (   
@@ -54,18 +54,18 @@ HRESULT Suspend (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pdwSuspendCount`  
- [out] Returns the suspend count after the suspend operation.  
+ [out] 일시 중단 작업 후 일시 중단 횟수를 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- Each call to this method increments the suspend count above 0. This suspend count is displayed in the **Threads** debug window.  
+## <a name="remarks"></a>설명  
+ 이 메서드를 호출할 때마다 0 위에 일시 중단 횟수가 증가 시킵니다. 이 일시 중단 횟수가에 표시 되는 **스레드** 디버그 창.  
   
- For each call to this method, there must be a later call to the [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) method.  
+ 이 메서드를 호출할 때마다, 한 이후의 호출 있어야는 [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) 메서드.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)

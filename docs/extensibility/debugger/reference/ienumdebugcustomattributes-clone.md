@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 58aae975ea79bdfa448ab91b55ae3191e072ac05
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ienumdebugcustomattributesclone"></a>IEnumDebugCustomAttributes::Clone
-Creates an enumerator that contains the same enumeration state as the current enumerator.  
+현재 열거자와 동일한 열거 상태가 포함 하는 열거자를 만듭니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT Clone (   
@@ -54,15 +54,15 @@ int Clone(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  ppEnum  
- [out] Returns a copy of this enumeration as a separate object.  
+ [out] 이 열거형은 개별 개체로 복사본을 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- The copy of the enumeration has the same state as the original at the time this method is called. However, the copy's and the original's states are separate and can be changed individually.  
+## <a name="remarks"></a>설명  
+ 열거형의 복사본이 메서드는 한 번에 원본과 동일한 상태를 있습니다. 그러나 원본 및 복사본의 상태 및는 별개임 개별적으로 변경할 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

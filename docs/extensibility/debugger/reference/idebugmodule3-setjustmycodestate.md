@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: dde5762e1f37b1690c3ffafb68b43380d8203cf2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugmodule3setjustmycodestate"></a>IDebugModule3::SetJustMyCodeState
-Marks the module as being user code or not.  
+여부 사용자 코드를 있는 것으로 모듈을 표시 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT SetJustMyCodeState(  
@@ -54,12 +54,12 @@ int SetJustMyCodeState(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `fIsUserCode`  
- [in] Nonzero (`TRUE`) if the module should be considered user code, zero (`FALSE`) if it should not.  
+ [in] 0이 아닌 (`TRUE`) 모듈 고려할 사용자 코드가 있는 경우에 0 (`FALSE`) 없어야 하는 경우.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

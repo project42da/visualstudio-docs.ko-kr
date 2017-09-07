@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Saving User Settings on a Start Page | Microsoft Docs'
+title: "연습: 시작 페이지에서 사용자 설정을 저장 하 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,32 +30,32 @@ ms.translationtype: MT
 ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
 ms.openlocfilehash: 0135240448bc74c85ab294b9eb4808830dbb4d00
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-saving-user-settings-on-a-start-page"></a>Walkthrough: Saving User Settings on a Start Page
-You can persist user settings for your start page. By following this walkthrough, you can create a control that saves a setting to the registry when the user clicks a button, and then retrieves that setting every time the Start Page loads. Because the Start Page project template includes a customizable user control, and the default Start Page XAML calls that control, you do not have to modify the Start Page itself.  
+# <a name="walkthrough-saving-user-settings-on-a-start-page"></a>연습: 시작 페이지에서 사용자 설정 저장
+시작 페이지에 대 한 사용자 설정을 유지할 수 있습니다. 이 연습을 수행 함으로써 사용자가 단추를 클릭 하 고 다음 시작 페이지가 로드 될 때마다이 설정 검색 레지스트리에 설정을 저장 하는 컨트롤을 만들 수 있습니다. 시작 페이지 프로젝트 템플릿을 사용자 지정 가능한 사용자 정의 컨트롤을 포함 하므로, 해당 컨트롤을 호출 하는 기본 시작 페이지 XAML 자체 시작 페이지를 수정할 필요가 없습니다.  
   
- The settings store that is instantiated in this walkthrough is an instance of the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> interface, which reads and writes to the following registry location when it is called: HKCU\Software\Microsoft\VisualStudio\14.0\\*CollectionName*  
+ 이 연습에 인스턴스화된 설정 저장소의 인스턴스가 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> 인터페이스에 읽기 및 쓰기는 다음 레지스트리 위치를 호출할 때: HKCU\Software\Microsoft\VisualStudio\14.0\\  *CollectionName*  
   
- When it is running in the experimental instance of Visual Studio, the settings store reads and writes to HKCU\Software\Microsoft\VisualStudio\14.0Exp\\*CollectionName.*  
+ Visual Studio의 실험적 인스턴스에서 실행 되는 경우 설정 저장소를 읽고 씁니다 HKCU\Software\Microsoft\VisualStudio\14.0Exp\\*CollectionName입니다.*  
   
- For more information about how to persist settings, see [Extending User Settings and Options](../extensibility/extending-user-settings-and-options.md).  
+ 설정을 유지 하는 방법에 대 한 자세한 내용은 참조 [확장 사용자 설정 및 옵션](../extensibility/extending-user-settings-and-options.md)합니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 > [!NOTE]
->  To follow this walkthrough, you must install the Visual Studio SDK. For more information, see [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+>  이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  
 >   
->  You can download the Start Page project template by using **Extension Manager**.  
+>  시작 페이지 프로젝트 템플릿을 사용 하 여 다운로드할 수 있습니다 **확장 관리자**합니다.  
   
-## <a name="setting-up-the-project"></a>Setting Up the Project  
+## <a name="setting-up-the-project"></a>프로젝트 설정  
   
-#### <a name="to-configure-the-project-for-this-walkthrough"></a>To configure the project for this walkthrough  
+#### <a name="to-configure-the-project-for-this-walkthrough"></a>이 연습에 대 한 프로젝트를 구성 하려면  
   
-1.  Create a Start Page project as described in [Creating a Custom Start Page](creating-a-custom-start-page.md). Name the project **SaveMySettings**.  
+1.  에 설명 된 대로 시작 페이지 프로젝트를 만들 [사용자 지정 시작 페이지 만들기](creating-a-custom-start-page.md)합니다. 프로젝트 이름을 **SaveMySettings**합니다.  
   
-2.  In **Solution Explorer**, add the following assembly references to the StartPageControl project:  
+2.  **솔루션 탐색기**, StartPageControl 프로젝트에 다음 어셈블리 참조를 추가 합니다.  
   
     -   EnvDTE  
   
@@ -65,23 +65,23 @@ You can persist user settings for your start page. By following this walkthrough
   
     -   Microsoft.VisualStudio.Shell.Interop.11.0  
   
-3.  Open MyControl.xaml.  
+3.  MyControl.xaml을 엽니다.  
   
-4.  From the XAML pane, in the top-level <xref:System.Windows.Controls.UserControl> element definition, add the following event declaration after the namespace declarations.  
+4.  XAML 창에서 최상위 수준에서 <xref:System.Windows.Controls.UserControl> 요소 정의입니다. 네임 스페이스 선언 뒤에 다음 이벤트 선언을 추가 합니다.  
   
     ```  
     Loaded="OnLoaded"  
     ```  
   
-5.  In the design pane, click the main area of the control, and then press DELETE.  
+5.  디자인 창에서 컨트롤의 주요 영역을 클릭 한 다음 DELETE 키를 누릅니다.  
   
-     This removes the <xref:System.Windows.Controls.Border> element and everything in it, and leaves only the top-level <xref:System.Windows.Controls.Grid> element.  
+     이렇게 하면 제거는 <xref:System.Windows.Controls.Border> 요소와 그리고 leaves 최상위는 모든 항목 <xref:System.Windows.Controls.Grid> 요소입니다.  
   
-6.  From the **Toolbox**, drag a <xref:System.Windows.Controls.StackPanel> control to the grid.  
+6.  **도구 상자**를 끌어는 <xref:System.Windows.Controls.StackPanel> 표에 제어 합니다.  
   
-7.  Now drag a <xref:System.Windows.Controls.TextBlock>, a <xref:System.Windows.Controls.TextBox>, and a Button to the <xref:System.Windows.Controls.StackPanel>.  
+7.  이제 끌어는 <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.TextBox>, 및 단추를는 <xref:System.Windows.Controls.StackPanel>합니다.  
   
-8.  Add an **x:Name** attribute for the <xref:System.Windows.Controls.TextBox>, and a `Click` event for the <xref:System.Windows.Controls.Button>, as shown in the following example.  
+8.  추가 **X:name** 특성에 <xref:System.Windows.Controls.TextBox>, 및 `Click` 에 대 한 이벤트는 <xref:System.Windows.Controls.Button>다음 예제에 나온 것 처럼 합니다.  
   
     ```xml  
     <StackPanel Width="300" HorizontalAlignment="Center" VerticalAlignment="Center">  
@@ -91,19 +91,19 @@ You can persist user settings for your start page. By following this walkthrough
     </StackPanel>  
     ```  
   
-## <a name="implementing-the-user-control"></a>Implementing the User Control  
+## <a name="implementing-the-user-control"></a>사용자 정의 컨트롤을 구현합니다.  
   
-#### <a name="to-implement-the-user-control"></a>To implement the user control  
+#### <a name="to-implement-the-user-control"></a>사용자 정의 컨트롤을 구현 하려면  
   
-1.  In the XAML pane, right-click the `Click` attribute of the <xref:System.Windows.Controls.Button> element, and then click **Navigate to Event Handler**.  
+1.  XAML 창에서 마우스 오른쪽 단추로 클릭는 `Click` 특성에는 <xref:System.Windows.Controls.Button> 요소를 마우스 클릭 한 다음 **이벤트 처리기 탐색**합니다.  
   
-     This opens MyControl.xaml.cs, and creates a stub handler for the `Button_Click` event.  
+     MyControl.xaml.cs, 열리고에 대 한 스텁 처리기 만듭니다는 `Button_Click` 이벤트입니다.  
   
-2.  Add the following `using` statements to the top of the file.  
+2.  다음 추가 `using` 문을 파일의 맨 위에 있습니다.  
   
-     [!code-csharp[StartPageDTE#11](../extensibility/codesnippet/CSharp/walkthrough-saving-user-settings-on-a-start-page_1.cs)]  
+     [!code-csharp[StartPageDTE # 11](../extensibility/codesnippet/CSharp/walkthrough-saving-user-settings-on-a-start-page_1.cs)]  
   
-3.  Add a private `SettingsStore` property, as shown in the following example.  
+3.  개인 추가 `SettingsStore` 속성을 다음 예제와 같이 합니다.  
   
     ```csharp  
     private IVsWritableSettingsStore _settingsStore = null;  
@@ -135,9 +135,9 @@ You can persist user settings for your start page. By following this walkthrough
     }  
     ```  
   
-     This property first gets a reference to the <xref:EnvDTE80.DTE2> interface, which contains the Automation object model, from the <xref:System.Windows.FrameworkElement.DataContext%2A> of the user control, and then uses the DTE to get an instance of the <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> interface. Then it uses that instance to return the current user settings.  
+     이 속성에 대 한 참조를 먼저 가져옵니다는 <xref:EnvDTE80.DTE2> 자동화 개체 모델에서 포함 된 인터페이스는 <xref:System.Windows.FrameworkElement.DataContext%2A> 의 사용자 정의 컨트롤을 한 다음 DTE의 인스턴스를 사용 하는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> 인터페이스입니다. 그런 다음 현재 사용자 설정을 반환 하려면 해당 인스턴스를 사용 합니다.  
   
-4.  Fill in the `Button_Click` event as follows.  
+4.  입력은 `Button_Click` 다음과 같이 이벤트입니다.  
   
     ```csharp  
     private void Button_Click(object sender, RoutedEventArgs e)  
@@ -152,9 +152,9 @@ You can persist user settings for your start page. By following this walkthrough
     }  
     ```  
   
-     This writes the content of the text box to a "MySetting" field in a "MySettings" collection in the registry. If the collection does not exist, it is created.  
+     이 레지스트리에서 "내 설정" 컬렉션 "MySetting" 필드를 입력란의 콘텐츠를 씁니다. 컬렉션이 없는 경우 자동으로 만들어집니다.  
   
-5.  Add the following handler for the `OnLoaded` event of the user control.  
+5.  에 대 한 다음 처리기를 추가 `OnLoaded` 사용자 정의 컨트롤의 이벤트입니다.  
   
     ```csharp  
     private void OnLoaded(Object sender, RoutedEventArgs e)  
@@ -166,57 +166,57 @@ You can persist user settings for your start page. By following this walkthrough
     }  
     ```  
   
-     This sets the text of the text box to the current value of "MySetting".  
+     입력란의 텍스트 "MySetting"의 현재 값을 설정합니다.  
   
-6.  Build the user control.  
+6.  사용자 정의 컨트롤을 빌드하십시오.  
   
-7.  In **Solution Explorer**, open source.extension.vsixmanifest.  
+7.  **솔루션 탐색기**, source.extension.vsixmanifest를 엽니다.  
   
-8.  In the manifest editor, set **Product Name** to **Save My Settings Start Page**.  
+8.  매니페스트 편집기에서 설정 **제품 이름** 를 **내 설정 시작 페이지 저장**합니다.  
   
-     This sets the name of the Start Page as it is to appear in the **Customize Start Page** list in the **Options** dialog box.  
+     이 이름을 설정 하는 시작 페이지에 표시 하는 것 만큼의 **시작 페이지 사용자 지정** 목록에 **옵션** 대화 상자.  
   
-9. Build StartPage.xaml.  
+9. StartPage.xaml을 빌드하십시오.  
   
-## <a name="testing-the-control"></a>Testing the Control  
+## <a name="testing-the-control"></a>컨트롤 테스트  
   
-#### <a name="to-test-the-user-control"></a>To test the user control  
+#### <a name="to-test-the-user-control"></a>사용자 정의 컨트롤을 테스트 하려면  
   
-1.  Press F5.  
+1.  F5 키를 누릅니다.  
   
-     The experimental instance of Visual Studio opens.  
+     Visual Studio의 실험적 인스턴스가 열립니다.  
   
-2.  In the experimental instance, on the **Tools** menu, click **Options**.  
+2.  실험적 인스턴스에서는 **도구** 메뉴를 클릭 하 여 **옵션**합니다.  
   
-3.  In the **Environment** node, click **Startup**, and then, in the **Customize Start Page** list, select **[Installed Extension] Save My Settings Start Page**.  
+3.  에 **환경** 노드를 클릭 하 여 **시작**를 선택한 후는 **시작 페이지 사용자 지정** 목록에서 **[설치 된 확장] 저장 내 설정 시작 페이지** .  
   
-     Click **OK**.  
+     **확인**을 클릭합니다.  
   
-4.  Close the Start Page if it is open, and then, on the **View** menu, click **Start Page**.  
+4.  열려 있으면 한 다음 시작 페이지를 닫습니다는 **보기** 메뉴를 클릭 하 여 **시작 페이지**합니다.  
   
-5.  On the Start Page, click the **MyControl** tab.  
+5.  시작 페이지에서 클릭 된 **MyControl** 탭 합니다.  
   
-6.  In the text box, type **Cat**, and then click **Save My Setting**.  
+6.  텍스트 상자에 입력 **Cat**, 클릭 하 고 **내 설정 저장**합니다.  
   
-7.  Close the Start Page and then open it again.  
+7.  시작 페이지를 닫고 다시 여십시오.  
   
-     The word "Cat" should be displayed in the text box.  
+     텍스트 상자에 "Cat" 단어를 표시 합니다.  
   
-8.  Replace the word "Cat" with the word "Dog". Do not click the button.  
+8.  단어 "Dog" "Cat" 단어를 바꿉니다. 단추를 클릭 하지 마십시오.  
   
-9. Close the Start Page and then open it again.  
+9. 시작 페이지를 닫고 다시 여십시오.  
   
-     The word "Dog" should be displayed in the text box, even though the setting was not saved. This happens because Visual Studio keeps tool windows in memory, even if they are closed, until Visual Studio itself is closed.  
+     하지만 설정을 저장 하지 못했습니다 "Dog" 라는 단어가 텍스트 상자에 표시 됩니다. 이런 경우가 발생 Visual Studio 도구 창을 메모리에 유지 하기 때문에 Visual Studio 자체를 닫을 때까지 닫혀 있는 경우에 합니다.  
   
-10. Close the experimental instance of Visual Studio.  
+10. Visual Studio의 실험적 인스턴스를 닫습니다.  
   
-11. Press F5 to re-open the experimental instance.  
+11. F5 키를 눌러 실험적 인스턴스를 다시 열려고 합니다.  
   
-12. The word "Cat" should be displayed in the text box.  
+12. 텍스트 상자에 "Cat" 단어를 표시 합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- You can modify this user control to save and retrieve any number of custom settings by using different values from different event handlers to get and set the `SettingsStore` property. As long as you use a different `propertyName` parameter for each call to <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A>, the values will not overwrite one another in the registry.  
+## <a name="next-steps"></a>다음 단계  
+ 이 사용자 정의 컨트롤을 저장 하 고 가져오고 설정 하는 다른 값을 다른 이벤트 처리기를 사용 하 여 사용자 지정 설정 개수에 관계 없이 검색을 수정할 수는 `SettingsStore` 속성입니다. 다른 사용 하 여으로 `propertyName` 각 호출에 대 한 매개 변수 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A>, 값을 덮어쓰지 것입니다 서로 레지스트리에 합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:EnvDTE80.DTE2?displayProperty=fullName>     
- [Adding Visual Studio Commands to a Start Page](../extensibility/adding-visual-studio-commands-to-a-start-page.md)
+ [시작 페이지에 Visual Studio 명령 추가](../extensibility/adding-visual-studio-commands-to-a-start-page.md)

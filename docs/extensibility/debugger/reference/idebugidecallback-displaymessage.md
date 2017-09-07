@@ -32,13 +32,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 7b3f7e5fde160bc9d1e5ece61b810090c5dd7d9b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugidecallbackdisplaymessage"></a>IDebugIDECallback::DisplayMessage
-Sends the specified message string to the debugger's output window.  
+디버거의 출력 창에 지정 된 메시지 문자열을 보냅니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT DisplayMessage (  
@@ -52,12 +52,12 @@ int DisplayMessage (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `szMessage`  
- [in] Message string to display in the debugger's output window.  
+ [in] 디버거 출력 창에 표시할 메시지 문자열입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugIDECallback](../../../extensibility/debugger/reference/idebugidecallback.md)

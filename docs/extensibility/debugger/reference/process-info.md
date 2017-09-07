@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5d217a411e11ee0b2b5e372634be69bf9b84ac8b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="processinfo"></a>PROCESS_INFO
-Contains information about a process.  
+프로세스에 대 한 정보를 포함합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 typedef struct tagPROCESS_INFO {   
@@ -70,46 +70,46 @@ public struct PROCESS_INFO {
 };  
 ```  
   
-## <a name="members"></a>Members  
- Fields  
- A combination of flags from the [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) enumeration that specify which fields are filled out.  
+## <a name="members"></a>멤버  
+ 필드  
+ 플래그의 조합 된 [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) 채워진 필드를 지정 하는 열거형입니다.  
   
  bstrFileName  
- The full path name of the process. Equivalent to calling the [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) method with the parameter `GN_FILENAME`.  
+ 프로세스의 전체 경로 이름입니다. 호출에 해당 하는 [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) 메서드 매개 변수와 함께 `GN_FILENAME`합니다.  
   
  bstrBaseName  
- The file name and extension of the process. Equivalent to calling the `IDebugProcess2::Getname` method with the parameter `GN_BASENAME`.  
+ 파일 이름 및 프로세스의 확장입니다. 호출에 해당 하는 `IDebugProcess2::Getname` 메서드 매개 변수와 함께 `GN_BASENAME`합니다.  
   
  bstrTitle  
- The title of the process, if one exists. Equivalent to calling the `IDebugProcess2::Getname` method with the parameter `GN_TITLE`.  
+ 있는 경우에 프로세스의 제목입니다. 호출에 해당 하는 `IDebugProcess2::Getname` 메서드 매개 변수와 함께 `GN_TITLE`합니다.  
   
  ProcessId  
- The [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure that identifies the process. Equivalent to calling the [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) method.  
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 프로세스를 식별 하는 구조입니다. 호출에 해당 하는 [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) 메서드.  
   
  dwSessionId  
- The identifier of the debug session that this process is running in.  
+ 이 프로세스에서 실행 되는 디버그 세션의 식별자입니다.  
   
  bstrAttachedSessionName  
- The attached session name. Equivalent to calling the [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) method.  
+ 연결 된 세션 이름입니다. 호출에 해당 하는 [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) 메서드.  
   
  CreationTime  
- The time the process was created.  
+ 프로세스 만든 시간입니다.  
   
- Flags  
- A combination of flags from the [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) enumeration that specify properties of the process.  
+ 플래그  
+ 플래그의 조합 된 [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) 프로세스의 속성을 지정 하는 열거형입니다.  
   
-## <a name="remarks"></a>Remarks  
- This structure is passed to the [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) method where it is filled in.  
+## <a name="remarks"></a>설명  
+ 이 구조에 전달 되는 [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) 으로 채워지면 메서드.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>참고 항목  
+ [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)   
  [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)   

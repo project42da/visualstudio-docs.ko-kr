@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: f1d56b32b91b840cc87bb3ba50107b65c54c79d5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugarrayobjectgetelement"></a>IDebugArrayObject::GetElement
-Gets an element of the array.  
+배열의 요소를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetElement(   
@@ -56,18 +56,18 @@ int GetElement(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `dwIndex`  
- [in] The element index.  
+ [in] 요소의 인덱스입니다.  
   
  `ppElement`  
- [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) interface that represents the element.  
+ [out] 반환 된 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 요소를 나타내는 인터페이스입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method sees all of the elements of an array object as a one-dimensional array, even if the array object is multi-dimensional. For example, given the array `myarray[3][2][6]` and a `dwIndex` parameter of 20, this method would return the element from `myarray[1][1][2]`, and a `dwIndex` parameter of 21 would return the element from `myarray[1][1][3]`. Use the [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) method to determine the total number of elements in the array.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 배열 개체는 다차원 배열 하는 경우에 배열 개체의 요소를 모두 1 차원 배열에으로 간주 합니다. 예를 들어 배열의 지정 된 `myarray[3][2][6]` 및 `dwIndex` 20 매개 변수를이 메서드는 반환 요소 `myarray[1][1][2]`, 및 `dwIndex` 21의 매개 변수에서 요소를 반환 합니다 `myarray[1][1][3]`합니다. 사용 하 여는 [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) 메서드는 배열에 있는 요소의 총 수를 결정 합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

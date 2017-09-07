@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: dee4f1909ec5f6e66c7f828b5552ff424b4d9edc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugobjectisnullreference"></a>IDebugObject::IsNullReference
-Tests whether this object is a null reference.  
+이 개체는 null 참조 인지 테스트 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT IsNullReference(   
@@ -54,15 +54,15 @@ int IsNullReference(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pfIsNull`  
- [out] Returns non-zero (`TRUE`) if this object is a null reference; otherwise, returns zero (`FALSE`).  
+ [out] 0이 아닌 반환 (`TRUE`)이이 개체는 null 참조입니다; 그렇지 않으면 0이 반환 (`FALSE`).  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- A null reference means an empty object or an object that has not been assigned to.  
+## <a name="remarks"></a>설명  
+ Null 참조는 빈 개체 또는 개체에 할당 되지 않은 의미 합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

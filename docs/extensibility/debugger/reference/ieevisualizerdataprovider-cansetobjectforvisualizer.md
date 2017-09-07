@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 424cdb45f91c59a3a72474fc6c7a0e41a4dc9e17
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
-This method determines whether the visualizer can have the data object it represents updated.  
+이 메서드는 시각화 도우미 데이터 개체가 나타내는 업데이트할를 가질 수 있는지 여부를 결정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT CanSetObjectForVisualizer(  
@@ -54,15 +54,15 @@ int CanSetObjectForVisualizer(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `b`  
- [out] Nonzero (`TRUE`) if the object on the visualizer can be updated, zero (`FALSE`) if it cannot.  
+ [out] 0이 아닌 (`TRUE`)의 개체에는 시각화 도우미, 업데이트 하는 경우에 0 (`FALSE`) 불가능 한 경우.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- An object might not be changeable if it is bound to read-only memory, for example.  
+## <a name="remarks"></a>설명  
+ 예를 들어 읽기 전용 메모리에 바인딩된 경우에 변경할 수 있는 개체 아닐 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

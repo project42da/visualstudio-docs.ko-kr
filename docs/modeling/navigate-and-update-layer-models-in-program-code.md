@@ -1,5 +1,5 @@
 ---
-title: Navigate and update layer models in program code | Microsoft Docs
+title: "프로그램 코드에서 레이어 모델 탐색 및 업데이트 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,16 +32,16 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: cfe4f389516a3421bdc0d8643790dbb9c7cc2733
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="navigate-and-update-layer-models-in-program-code"></a>Navigate and update layer models in program code
-This topic describes the elements and relationships in layer models, which you can navigate and update by using program code. For more information about dependency diagrams from the user's point of view, see [Dependency Diagrams: Reference](../modeling/layer-diagrams-reference.md) and [Dependency Diagrams: Guidelines](../modeling/layer-diagrams-guidelines.md).  
+# <a name="navigate-and-update-layer-models-in-program-code"></a>프로그램 코드에서 레이어 모델 탐색 및 업데이트
+이 항목에서는 프로그램 코드를 사용하여 탐색하고 업데이트할 수 있는 레이어 모델의 요소와 관계에 대해 설명합니다. 사용자의 관점에서 종속성 다이어그램에 대 한 자세한 내용은 참조 [종속성 다이어그램: 참조](../modeling/layer-diagrams-reference.md) 및 [종속성 다이어그램: 지침](../modeling/layer-diagrams-guidelines.md)합니다.  
   
- The <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> model described in this topic is a facade on a more general <xref:Microsoft.VisualStudio.GraphModel> model. If you are writing a [menu command or gesture extension](../modeling/add-commands-and-gestures-to-layer-diagrams.md), use the `Layer` model. If you are writing a [layer validation extension](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), it is easier to use the `GraphModel`.  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> 이 항목에서 설명 하는 모델은 보다 일반적인의 단순한 버전 <xref:Microsoft.VisualStudio.GraphModel> 모델입니다. 작성 하는 경우는 [메뉴 명령 또는 제스처 확장이](../modeling/add-commands-and-gestures-to-layer-diagrams.md)를 사용 하 여는 `Layer` 모델입니다. 작성 하는 경우는 [레이어 유효성 검사 확장](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), 쉽게 사용할 수는 `GraphModel`합니다.  
   
-## <a name="transactions"></a>Transactions  
- When you update a model, consider enclosing the changes in a `ILinkedUndoTransaction`. This groups your changes into one transaction. If any of the changes fails, the whole transaction will be rolled back. If the user undoes a change, all the changes will be undone together.  
+## <a name="transactions"></a>트랜잭션  
+ 모델을 업데이트할 때는 `ILinkedUndoTransaction`에 변경 내용을 포함할 수도 있습니다. 그러는 경우 변경 내용이 트랜잭션 하나로 그룹화됩니다. 변경 중 하나라도 실패하면 전체 트랜잭션이 롤백됩니다. 사용자가 변경 하나를 실행 취소하면 모든 변경이 함께 실행 취소됩니다.  
   
 ```  
 using (ILinkedUndoTransaction t =  
@@ -52,30 +52,30 @@ using (ILinkedUndoTransaction t =
 }  
 ```  
   
-## <a name="containment"></a>Containment  
- ![ILayer and ILayerModel can both contain ILayers.](../modeling/media/layerapi_containment.png "LayerApi_Containment")  
+## <a name="containment"></a>포함  
+ ![ILayer 및 ILayerModel 모두 Ilayer을 포함할 수 있습니다. ] (../modeling/media/layerapi_containment.png "LayerApi_Containment")  
   
- Layers (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>) and the layer model (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>) can contain Comments and Layers.  
+ 레이어(<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>) 및 레이어 모델(<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>)은 주석과 레이어를 포함할 수 있습니다.  
   
- A layer (`ILayer`) can be contained in a layer model (`ILayerModel`) or it can be nested within another `ILayer`.  
+ 레이어(`ILayer`)는 레이어 모델(`ILayerModel`)에 포함될 수도 있고 다른 `ILayer` 내에 중첩될 수도 있습니다.  
   
- To create a comment or a layer, use the creation methods on the appropriate container.  
+ 주석이나 레이어를 만들려면 해당 컨테이너에 대해 creation 메서드를 사용합니다.  
   
-## <a name="dependency-links"></a>Dependency Links  
- A dependency link is represented by an object. It can be navigated in either direction:  
+## <a name="dependency-links"></a>종속성 링크  
+ 종속성 링크는 개체로 표시되며 양방향으로 탐색할 수 있습니다.  
   
- ![An ILayerDependencyLink connects two ILayers.](../modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
+ ![ILayerDependencyLink가 두 Ilayer를 연결 합니다. ] (../modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
   
- To create a dependency link, call `source.CreateDependencyLink(target)`.  
+ 종속성 링크를 만들려면 `source.CreateDependencyLink(target)`를 호출합니다.  
   
-## <a name="comments"></a>Comments  
- Comments can be contained inside layers or the layer model, and can also be linked to any layer element:  
+## <a name="comments"></a>설명  
+ 주석은 레이어 또는 레이어 모델에 포함될 수 있으며 레이어 요소에 연결할 수도 있습니다.  
   
- ![Comments can be attached to any layer element.](../modeling/media/layerapi_comments.png "LayerApi_Comments")  
+ ![모든 레이어 요소에 주석은 연결할 수 있습니다. ] (../modeling/media/layerapi_comments.png "LayerApi_Comments")  
   
- A comment can be linked to any number of elements, including none.  
+ 원하는 수만큼의 요소에 주석을 연결하거나 아무 요소에 연결하지 않을 수도 있습니다.  
   
- To get the comments that are attached to a layer element, use:  
+ 레이어 요소에 연결된 주석을 가져오려면 다음 코드를 사용합니다.  
   
 ```csharp  
 ILayerModel model = diagram.GetLayerModel();   
@@ -86,39 +86,39 @@ IEnumerable<ILayerComment> comments =
 ```  
   
 > [!CAUTION]
->  The `Comments` property of an `ILayer` gets comments that are contained within the `ILayer`. It does not get the comments that are linked to it.  
+>  `Comments`의 `ILayer` 속성은 `ILayer` 내에 포함된 주석을 가져옵니다. 그러나 이 속성은 그에 연결된 주석은 가져오지 않습니다.  
   
- Create a comment by invoking `CreateComment()` on the appropriate container.  
+ 해당하는 컨테이너에서 `CreateComment()`를 호출하여 주석을 만듭니다.  
   
- Create a link by using `CreateLink()` on the comment.  
+ 주석에 대해 `CreateLink()`를 사용하여 링크를 만듭니다.  
   
-## <a name="layer-elements"></a>Layer Elements  
- All the types of element that can be contained in a model are layer elements:  
+## <a name="layer-elements"></a>레이어 요소  
+ 모델에 포함할 수 있는 모든 형식의 요소는 레이어 요소입니다.  
   
- ![dependency diagram contents are ILayerElements.](../modeling/media/layerapi_layerelements.png "LayerApi_LayerElements")  
+ ![종속성 다이어그램 내용이 Ilayerelement 임 ] (../modeling/media/layerapi_layerelements.png "LayerApi_LayerElements")  
   
-## <a name="properties"></a>Properties  
- Each `ILayerElement` has a string dictionary named `Properties`. You can use this dictionary to attach arbitrary information to any layer element.  
+## <a name="properties"></a>속성  
+ 각 `ILayerElement`에는 `Properties`라는 문자열 디렉터리가 있습니다. 이 디렉터리를 사용하여 임의의 정보를 레이어 요소에 연결할 수 있습니다.  
   
-## <a name="artifact-references"></a>Artifact References  
- An artifact reference (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) represents the link between a layer and a project item such as a file, class, or folder. The user creates artifacts when they create a layer or add to it by dragging items from Solution Explorer, Class View, or Object Browser onto a dependency diagram. Any number of artifact references can be linked to a layer.  
+## <a name="artifact-references"></a>아티팩트 참조  
+ 아티팩트 참조(<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>)는 파일, 클래스, 폴더 등의 프로젝트 항목과 레이어 간 링크를 나타냅니다. 사용자 계층을 만들거나 솔루션 탐색기, 클래스 뷰 또는 개체 브라우저에서 종속성 다이어그램으로 항목을 끌어 추가할 때 아티팩트를 만듭니다. 아티팩트 참조는 원하는 수만큼 레이어에 연결할 수 있습니다.  
   
- Each row in Layer Explorer displays an artifact reference. For more information, see [Create dependency diagrams from your code](../modeling/create-layer-diagrams-from-your-code.md).  
+ 레이어 탐색기의 각 행은 아티팩트 참조를 표시합니다. 자세한 내용은 참조 [사용자 코드에서 종속성 다이어그램을 만들](../modeling/create-layer-diagrams-from-your-code.md)합니다.  
   
- The principal types and methods concerned with artifact references are as follows:  
+ 아티팩트 참조와 관련된 기본 형식 및 메서드는 다음과 같습니다.  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>. The Categories property indicates what kind of artifact is referenced, such as a class, executable file, or assembly. Categories determines how the Identifier identifies the target artifact.  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>. Categories 속성은 클래스, 실행 파일, 어셈블리 등 참조되는 아티팩트의 종류를 나타내며 식별자가 대상 아티팩트를 식별하는 방법을 결정합니다.  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A> creates an artifact reference from an <xref:EnvDTE.Project> or <xref:EnvDTE.ProjectItem>. This is an asynchronous operation. Therefore, you usually provide a callback that is called when the creation is complete.  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A>는 <xref:EnvDTE.Project>또는 <xref:EnvDTE.ProjectItem>에서 아티팩트 참조를 만듭니다. 이 작업은 비동기 작업입니다. 그러므로 만들기가 완료되면 일반적으로 호출될 호출을 제공합니다.  
   
- Layer Artifact References should not be confused with Artifacts in use case diagrams.  
+ 레이어 아티팩트 참조를 사용 사례 다이어그램의 아티팩트와 혼동해서는 안 됩니다.  
   
-## <a name="shapes-and-diagrams"></a>Shapes and Diagrams  
- Two objects are used to represent each element in a layer model: an <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement>, and an <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>. The `IShape` represents the position and size of the shape on the diagram. In layer models, every `ILayerElement` has one `IShape`, and every `IShape` on a dependency diagram has one `ILayerElement`. `IShape` is also used for UML models. Therefore, not every `IShape` has a layer element.  
+## <a name="shapes-and-diagrams"></a>모양 및 다이어그램  
+ 레이어 모델의 각 요소를 나타내는 데 사용되는 두 개체는 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> 및 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>입니다. `IShape`는 다이어그램의 모양 크기와 위치를 나타냅니다. 레이어 모델의 모든 `ILayerElement` 개가 `IShape`, 매 `IShape` 하나 다이어그램에는 종속성에 `ILayerElement`합니다. `IShape`는 UML 모델에도 사용됩니다. 그러므로 모든 `IShape`에 레이어 요소가 있는 것은 아닙니다.  
   
- In the same manner, the <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel> is displayed on one <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>.  
+ 마찬가지로 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>도 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> 하나에 표시됩니다.  
   
- In the code of a custom command or gesture handler, you can get the current diagram and the current selection of shapes from the `DiagramContext` import:  
+ 사용자 지정 명령 또는 제스처 처리기의 코드에서는 `DiagramContext` 가져오기에서 현재 다이어그램 및 현재 모양 선택을 가져올 수 있습니다.  
   
 ```  
 public class ... {  
@@ -135,14 +135,14 @@ public void ... (...)
     if (element != null) ... }}  
 ```  
   
- ![Each ILayerElement is presented by an IShape.](../modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
+ ![각 ilayerelement에 대해 IShape가 표시 됨 ] (../modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> and <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> are also used to display UML models. For more information, see [Display a UML model on diagrams](../modeling/display-a-uml-model-on-diagrams.md).  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> 및 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>은 UML 모델을 표시할 때도 사용됩니다. 자세한 내용은 참조 [다이어그램에 UML 모델 표시](../modeling/display-a-uml-model-on-diagrams.md)합니다.  
   
-## <a name="see-also"></a>See Also  
- [Add commands and gestures to dependency diagrams](../modeling/add-commands-and-gestures-to-layer-diagrams.md)   
- [Add custom architecture validation to dependency diagrams](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
- [Add custom properties to dependency diagrams](../modeling/add-custom-properties-to-layer-diagrams.md)   
- [Dependency Diagrams: Reference](../modeling/layer-diagrams-reference.md)   
- [Dependency Diagrams: Guidelines](../modeling/layer-diagrams-guidelines.md)   
+## <a name="see-also"></a>참고 항목  
+ [종속성 다이어그램에 명령 및 제스처 추가](../modeling/add-commands-and-gestures-to-layer-diagrams.md)   
+ [종속성 다이어그램에 사용자 지정 아키텍처 유효성 검사 추가](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
+ [종속성 다이어그램에 사용자 지정 속성 추가](../modeling/add-custom-properties-to-layer-diagrams.md)   
+ [종속성 다이어그램: 참조](../modeling/layer-diagrams-reference.md)   
+ [종속성 다이어그램: 지침](../modeling/layer-diagrams-guidelines.md)   
 

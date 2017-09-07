@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: edca5da7e4d417f6578946c824ac601dea516270
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="metadataaddressparam"></a>METADATA_ADDRESS_PARAM
-This structure represents a parameter of a method or function.  
+이 구조는 메서드 또는 함수 매개 변수를 나타냅니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_PARAM {  
@@ -58,27 +58,27 @@ public struct METADATA_ADDRESS_PARAM {
 }  
 ```  
   
-## <a name="terms"></a>Terms  
+## <a name="terms"></a>용어  
  tokMethod  
- The ID of the method the parameter is part of.  
+ 메서드의 ID의 일부입니다.  
   
  tokParam  
- The ID of the parameter.  
+ ID 매개 변수입니다.  
   
  dwIndex  
- The index of the parameter in a list of parameters.  
+ 인덱스 매개 변수 목록의 매개 변수입니다.  
   
-## <a name="remarks"></a>Remarks  
- This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_PARAM` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
+## <a name="remarks"></a>설명  
+ 이 구조체의 공용 구조체의 일부인는 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 때 구조는 `dwKind` 필드는 `DEBUG_ADDRESS_UNION` 구조로 설정 되어 `ADDRESS_KIND_PARAM` (의 값은 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 열거형)입니다.  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>참고 항목  
+ [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
  [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

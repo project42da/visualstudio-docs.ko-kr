@@ -32,13 +32,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5e958be77ca266af30556fa8c03c580eea94b903
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="bpflags90"></a>BP_FLAGS90
-Enumerates valid values for optional flags. The optional flags may be used to specify additional information when you set a breakpoint. This enumeration extends the [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) enumeration.  
+선택적 플래그에 대 한 유효한 값을 열거합니다. 중단점을 설정할 때 추가 정보를 지정 하는 선택적 플래그를 사용할 수 있습니다. 이 열거형 확장는 [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) 열거 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 enum enum_BP_FLAGS90  
@@ -67,25 +67,25 @@ public enum enum_BP_FLAGS90
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  BP90_FLAG_NONE  
- Specifies no breakpoint flag.  
+ 중단점 플래그가 지정합니다.  
   
  BP90_FLAG_MAP_DOCPOSITION  
- Specifies that the debug engine (DE) should map the breakpoint by using the document position. This is applicable only to breakpoints set in script-oriented source files such as Active Server Pages (ASP).  
+ 디버그 엔진 (DE) 문서 위치를 사용 하 여 중단점을 매핑하는 것을 지정 합니다. 스크립트 지향 소스 파일 등 ASP Active Server Pages ()에서 설정 된 중단점에만 적용 됩니다.  
   
  BP90_FLAG_DONT_STOP  
- Specifies that the breakpoint should be processed by the debug engine, but that the debug engine ultimately should not stop there; that is, an [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) event object should not be sent. This flag is designed to be used primarily with trace points.  
+ 지정 중단점 디버그 엔진에서 처리 되어야 한다는 하지만 디버그 엔진 궁극적으로 중지 해야 함이 없습니다. 즉, 한 [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) 이벤트 개체를 보내지 않아야 합니다. 이 플래그는 주로 추적 지점에서 사용 되는 설계 되었습니다.  
   
  BP90_FLAG_TRACEPOINT_CONTINUE  
- Used by the native debug engine to determine whether the stepping state should be cleared. It differs from BP90_FLAG_DONT_STOP because BP90_FLAG_DONT_STOP is not set if the trace point executes a macro.  
+ 네이티브 디버그 엔진에서 단계별 실행 상태를 선택 취소 해야 하는지 여부를 결정 하는 데 사용 합니다. BP90_FLAG_DONT_STOP 추적 지점에 매크로 실행 하는 경우 설정 되어 있지 않으므로 BP90_FLAG_DONT_STOP에서 다릅니다.  
   
-## <a name="requirements"></a>Requirements  
- Header: Msdbg90.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: Msdbg90.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+## <a name="see-also"></a>참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

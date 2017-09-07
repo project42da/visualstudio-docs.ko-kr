@@ -1,5 +1,5 @@
 ---
-title: Creating a Windows Forms-Based Domain-Specific Language | Microsoft Docs
+title: "Windows Forms 기반 도메인 특정 언어를 만드는 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,173 +15,173 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 17652a19df04d016db54429ab7bc7d407768df87
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="creating-a-windows-forms-based-domain-specific-language"></a>Creating a Windows Forms-Based Domain-Specific Language
-You can use Windows Forms to display the state of a domain-specific language (DSL) model, instead of using a DSL diagram. This topic walks you through binding a Windows Form to a DSL, using the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK.  
+# <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows Forms 기반 도메인별 언어 만들기
+Windows Forms를 사용 하 여 DSL 다이어그램을 사용 하는 대신 도메인 특정 언어 (DSL) 모델의 상태를 표시 합니다. 이 항목에서는 Windows Form DSL에 바인딩, 사용 하 여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK입니다.  
   
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
-A DSL instance, showing a Windows Form UI and the model explorer.  
+ ![DSL &#45; Wpf &#45; 2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+모델 탐색기 및 Windows 폼 UI를 보여 주는 DSL 인스턴스.  
   
-## <a name="creating-a-windows-forms-dsl"></a>Creating a Windows Forms DSL  
- The **Minimal WinForm Designer** DSL template creates a minimal DSL that you can modify to suit your own requirements.  
+## <a name="creating-a-windows-forms-dsl"></a>Windows Forms DSL 만들기  
+ **최소 WinForm 디자이너** DSL 서식 파일은 고유한 요구 사항에 맞게 수정할 수 있는 최소 DSL를 만듭니다.  
   
-#### <a name="to-create-a-minimal-winforms-dsl"></a>To create a minimal WinForms DSL  
+#### <a name="to-create-a-minimal-winforms-dsl"></a>최소 WinForms DSL를 만들려면  
   
-1.  Create a DSL from the **Minimal WinForm Designer** template.  
+1.  DSL 만들기는 **최소 WinForm 디자이너** 템플릿.  
   
-     In this walkthrough, the following names are assumed:  
+     이 연습에서는 다음 이름이 간주 됩니다.  
   
     |||  
     |-|-|  
-    |Solution and DSL name|FarmApp|  
-    |Namespace|Company.FarmApp|  
+    |솔루션, DSL 이름|FarmApp|  
+    |네임스페이스|Company.FarmApp|  
   
-2.  Experiment with the initial example that the template provides:  
+2.  서식 파일을 제공 하는 초기 예제를 시험해:  
   
-    1.  Transform All Templates.  
+    1.  모든 템플릿 변환 합니다.  
   
-    2.  Build and run the sample (**CTRL+F5**).  
+    2.  빌드 및 샘플을 실행 (**CTRL + f 5**).  
   
-    3.  In the experimental instance of Visual Studio, open the `Sample` file in the debugging project.  
+    3.  Visual Studio의 실험적 인스턴스를 열고는 `Sample` 디버깅 프로젝트 파일에에서 있습니다.  
   
-         Notice that it is displayed in a Windows Forms control.  
+         Windows Forms 컨트롤에 표시 되는지 확인 합니다.  
   
-         You can also see the elements of the model displayed in the Explorer.  
+         탐색기에 표시 되는 모델의 요소를 볼 수 있습니다.  
   
-         Add some elements either in the form or the Explorer, and notice that they appear in the other display.  
+         일부 요소는 폼 또는 탐색기에서 솔루션에 추가 하 고 다른 디스플레이에 표시 되는지 확인 합니다.  
   
- In the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], notice the following points about the DSL solution:  
+ 기본 인스턴스에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], DSL 솔루션에 대 한 다음 사항을 확인 합니다.  
   
--   `DslDefinition.dsl` contains no diagram elements. This is because you will not use DSL diagrams to view instance models of this DSL. Instead, you will bind a Windows Form to the model, and the elements on the form will display the model.  
+-   `DslDefinition.dsl`다이어그램 요소를 포함합니다. 즉,이 DSL의 인스턴스 모델을 볼 DSL 다이어그램을 사용 하지 것입니다. 대신 Windows Form 모델 바인딩될 하 고 폼에서 요소가 모델에 표시 됩니다.  
   
--   In addition to the `Dsl` and `DslPackage` projects, the solution contains a third project named `UI.`**UI** project contains the definition of a Windows Forms control. `DslPackage` depends on `UI`, and `UI` depends on `Dsl`.  
+-   이외에 `Dsl` 및 `DslPackage` 프로젝트, 솔루션 라는 세 번째 프로젝트가 포함 되어 `UI.` **UI** 프로젝트는 Windows Forms 컨트롤의 정의 포함 합니다. `DslPackage`에 따라 달라 집니다 `UI`, 및 `UI` 에 따라 달라 집니다 `Dsl`합니다.  
   
--   In the `DslPackage` project, `UI\DocView.cs` contains the code that displays the Windows Forms control that is defined in the `UI` project.  
+-   에 `DslPackage` 프로젝트를 `UI\DocView.cs` 에 정의 되어 있는 Windows Forms 컨트롤을 표시 하는 코드가 포함 된 `UI` 프로젝트.  
   
--   The `UI` project contains a working sample of a form control bound to the DSL. However, it will not work when you have changed the DSL Definition. The `UI` project contains:  
+-   `UI` DSL에 바인딩된 양식 컨트롤의 작업 예제 프로젝트에 포함 되어 있습니다. 그러나 DSL 정의 변경 된 경우 작동 하지 않습니다. `UI` 프로젝트에 포함 되어 있습니다.  
   
-    -   A Windows Forms class named `ModelViewControl`.  
+    -   라는 Windows Forms 클래스 `ModelViewControl`합니다.  
   
-    -   A file named `DataBinding.cs` that contains an additional partial definition of `ModelViewControl`. To see its content, in **Solution Explorer**, open the shortcut menu for the file and choose **View Code**.  
+    -   라는 파일 `DataBinding.cs` 의 다른 부분 정의 포함 된 `ModelViewControl`합니다. 해당 콘텐츠를 보려면 **솔루션 탐색기**선택을 파일에 대 한 바로 가기 메뉴를 열고 **코드 보기**합니다.  
   
-### <a name="about-the-ui-project"></a>About the UI Project  
- When you update the DSL Definition file to define your own DSL, you will have to update the control in the `UI` project to display your DSL. Unlike the `Dsl` and `DslPackage` projects, the sample `UI` project is not generated from `DslDefinitionl.dsl`. You can add .tt files to generate the code if you want, although that is not covered in this walkthrough.  
+### <a name="about-the-ui-project"></a>UI 프로젝트에 대 한  
+ 고유한 DSL 정의 하는 DSL 정의 파일을 업데이트 하는 경우에 컨트롤을 업데이트 해야 합니다는 `UI` DSL 표시 하는 프로젝트입니다. 와 달리는 `Dsl` 및 `DslPackage` 프로젝트, 샘플 `UI` 프로젝트에서 생성 되지 않습니다 `DslDefinitionl.dsl`합니다. 이 연습에서 설명 되지 않는 하지만 원하는 경우 코드를 생성 하는.tt 파일을 추가할 수 있습니다.  
   
-## <a name="updating-the-dsl-definition"></a>Updating the DSL Definition  
- The following the DSL definition is used in this walkthrough.  
+## <a name="updating-the-dsl-definition"></a>DSL 정의 업데이트  
+ DSL 정의이 연습에서 사용 되는 다음과 같은 있습니다.  
   
- ![DSL&#45;Wpf&#45;1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
+ ![DSL &#45; Wpf &#45; 1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
   
-#### <a name="to-update-the-dsl-definition"></a>To update the DSL definition  
+#### <a name="to-update-the-dsl-definition"></a>DSL 정의 업데이트 하려면  
   
-1.  Open DslDefinition.dsl in the DSL designer.  
+1.  DSL 디자이너에서 DslDefinition.dsl를 엽니다.  
   
-2.  Delete **ExampleElement**  
+2.  삭제 **ExampleElement**  
   
-3.  Rename the **ExampleModel** domain class to `Farm`.  
+3.  이름 바꾸기는 **ExampleModel** 도메인 클래스를 `Farm`합니다.  
   
-     Give it additional domain properties named `Size` of type **Int32**, and `IsOrganic` of type **Boolean**.  
+     명명 된 추가 도메인 속성 지정 `Size` 형식의 **Int32**, 및 `IsOrganic` 형식의 **부울**합니다.  
   
     > [!NOTE]
-    >  If you delete the root domain class and then create a new root, you will have to reset the Editor Root Class property. In **DSL Explorer**, select **Editor**. Then in the Properties window, set **Root Class** to `Farm`.  
+    >  루트 도메인 클래스를 삭제 하 고 그런 다음 새 루트를 만들 경우 편집기 루트 클래스 속성을 다시 설정 해야 합니다. **DSL 탐색기**선택, **편집기**합니다. 그런 다음 속성 창에서 설정 **루트 클래스** 를 `Farm`합니다.  
   
-4.  Use the **Named Domain Class** tool to create the following domain classes:  
+4.  사용 하 여는 **도메인 클래스 라는** 다음 도메인 클래스를 만드는 도구:  
   
-    -   `Field` - Give this an additional domain property named `Size`.  
+    -   `Field`-이 추가 도메인 속성 지정 라는 `Size`합니다.  
   
-    -   `Animal` - In the Properties window, set **Inheritance Modifier** to **Abstract**.  
+    -   `Animal`-속성 창에서 설정 **상속 한정자** 를 **추상**합니다.  
   
-5.  Use the **Domain Class** tool to create the following classes:  
+5.  사용 하 여는 **도메인 클래스** 도구는 다음 클래스를 사용 합니다.  
   
     -   `Sheep`  
   
     -   `Goat`  
   
-6.  Use the **Inheritance** tool to make `Goat` and `Sheep` inherit from `Animal`.  
+6.  사용 하 여는 **상속** 도구를 `Goat` 및 `Sheep` 에서 상속 `Animal`합니다.  
   
-7.  Use the **Embedding** tool to embed `Field` and `Animal` under `Farm`.  
+7.  사용 하 여는 **포함** 포함 하는 도구 `Field` 및 `Animal` 아래 `Farm`합니다.  
   
-8.  You might want to tidy the diagram. To reduce the number of duplicate elements, use the **Bring Subtree Here** command on the shortcut menu of leaf elements.  
+8.  다이어그램을 정리 하는 데 좋습니다. 사용 하 여 중복 된 요소 수를 줄이려면는 **여기에 하위 트리 Bring** 리프 요소의 바로 가기 메뉴에서 명령을 합니다.  
   
-9. **Transform All Templates** in the toolbar of Solution Explorer.  
+9. **모든 템플릿 변환** 솔루션 탐색기의 도구 모음에서입니다.  
   
-10. Build the **Dsl** project.  
-  
-    > [!NOTE]
-    >  At this stage, the other projects will not build without errors. However, we want to build the Dsl project so that its assembly is available to the Data Source Wizard.  
-  
-## <a name="updating-the-ui-project"></a>Updating the UI Project  
- Now you can create a new user control that will display the information that is stored in the DSL model. The easiest way to connect the user control to the model is through data bindings. The data binding adaptor type named **ModelingBindingSource** is specifically designed to connect DSLs to non-VMSDK interfaces.  
-  
-#### <a name="to-define-your-dsl-model-as-a-data-source"></a>To define your DSL model as a data source  
-  
-1.  On the **Data** menu, choose **Show Data Sources**.  
-  
-     The **Data Sources** window opens.  
-  
-     Choose **Add New Data Source**. The **Data Source Configuration Wizard** opens.  
-  
-2.  Choose **Object**, **Next**.  
-  
-     Expand **Dsl**, **Company.FarmApp**, and select **Farm**, which is the root class of your model. Choose **Finish**.  
-  
-     In Solution Explorer, the **UI** project now contains **Properties\DataSources\Farm.datasource**  
-  
-     The properties and relationships of your model class appear in the Data Sources window.  
-  
-     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png "DslWpf-3")  
-  
-#### <a name="to-connect-your-model-to-a-form"></a>To connect your model to a form  
-  
-1.  In the **UI** project, delete all the existing .cs files.  
-  
-2.  Add a new **User Control** file named `FarmControl` to the **UI** project.  
-  
-3.  In the **Data Sources** window, on the drop-down menu on **Farm**, choose **Details**.  
-  
-     Leave the default settings for the other properties.  
-  
-4.  Open FarmControl.cs in the design view.  
-  
-     Drag **Farm** from the Data Sources window onto FarmControl.  
-  
-     A set of controls appears, one for each property. The relationship properties do not generate controls.  
-  
-5.  Delete **farmBindingNavigator**. This is also automatically generated in the `FarmControl` designer, but it is not useful for this application.  
-  
-6.  Using the toolbox, create two instances of **DataGridView**, and name them `AnimalGridView` and `FieldGridView`.  
+10. 빌드는 **Dsl** 프로젝트.  
   
     > [!NOTE]
-    >  An alternative step is to drag the Animals and Fields items from the Data Sources window onto the control. This action automatically creates data grids and bindings between the grid view and the data source. However, this binding does not work correctly for DSLs. Therefore it is better to create the data grids and bindings manually.  
+    >  이 단계에서 다른 프로젝트 오류 없이 빌드되지 않습니다. 그러나 해당 어셈블리를 데이터 원본 마법사를 사용할 수 있도록 Dsl 프로젝트를 빌드할 하려고 합니다.  
   
-7.  If the Toolbox does not contain the **ModelingBindingSource** tool, add it. On the shortcut menu of the **Data** tab, choose **Choose Items**. In the **Choose Toolbox Items** dialog, select **ModelingBindingSource** from the **.NET Framework Tab**.  
+## <a name="updating-the-ui-project"></a>UI 프로젝트 업데이트  
+ 이제 DSL 모델에 저장 된 정보를 표시 하는 새 사용자 정의 컨트롤을 만들 수 있습니다. 모델에 사용자 정의 컨트롤을 연결 하는 가장 쉬운 방법은 데이터 바인딩을 통해 됩니다. 데이터 바인딩 이라는 어댑터 유형을 **ModelingBindingSource** Dsl VMSDK 아닌 인터페이스에 연결 하도록 설계 된.  
   
-8.  Using the Toolbox, create two instances of **ModelingBindingSource**, and name them `AnimalBinding` and `FieldBinding`.  
+#### <a name="to-define-your-dsl-model-as-a-data-source"></a>DSL 모델을 데이터 원본으로 정의 하려면  
   
-9. Set the **DataSource** property of each **ModelingBindingSource** to **farmBindingSource**.  
+1.  에 **데이터** 메뉴 선택 **데이터 소스 표시**합니다.  
   
-     Set the **DataMember** property to **Animals** or **Fields**.  
+     **데이터 소스** 창이 열립니다.  
   
-10. Set the **DataSource** properties of `AnimalGridView` to `AnimalBinding`, and of  `FieldGridView` to `FieldBinding`.  
+     선택 **새 데이터 소스 추가**합니다. **데이터 소스 구성 마법사** 열립니다.  
   
-11. Adjust the layout of the Farm control to your taste.  
+2.  선택 **개체**, **다음**합니다.  
   
- The **ModelingBindingSource** is an adapter that performs several functions that are specific to DSLs:  
+     확장 **Dsl**, **Company.FarmApp**를 선택 하 고 **팜**,이 모델의 루트 클래스입니다. 선택 **마침**합니다.  
   
--   It wraps updates in a VMSDK Store Transaction.  
+     솔루션 탐색기에서는 **UI** 프로젝트에 포함 되어 이제 **Properties\DataSources\Farm.datasource**  
   
-     For example, when the user deletes a row from the data view grid, a regular binding would result in a transaction exception.  
+     속성 및 관계 모델 클래스의 데이터 소스 창에 나타납니다.  
   
--   It ensures that, when the user selects a row, the Properties window displays the properties of the corresponding model element, instead of the data grid row.  
+     ![DslWpf &#45; 3](../modeling/media/dslwpf-3.png "DslWpf-3")  
+  
+#### <a name="to-connect-your-model-to-a-form"></a>폼에 모델에 연결 하려면  
+  
+1.  에 **UI** 프로젝트를 기존.cs 파일을 모두 삭제 합니다.  
+  
+2.  새로 추가 **사용자 정의 컨트롤** 라는 파일 `FarmControl` 에 **UI** 프로젝트.  
+  
+3.  에 **데이터 원본** 드롭 다운 메뉴에서 창을 **팜**, 선택 **세부 정보**합니다.  
+  
+     다른 속성에 대 한 기본 설정을 그대로 둡니다.  
+  
+4.  디자인 뷰에서 FarmControl.cs를 엽니다.  
+  
+     끌기 **팜** FarmControl 데이터 소스 창에서.  
+  
+     컨트롤의 집합이 나타나고, 각 속성에 대 한 관계 속성 컨트롤을 생성 하지 않습니다.  
+  
+5.  삭제 **farmBindingNavigator**합니다. 이 자동으로 생성 된 `FarmControl` 디자이너 하지만이 응용 프로그램에 유용 하지 않습니다.  
+  
+6.  도구 상자를 사용 하 여의 두 인스턴스를 만들 **DataGridView**, 이름을 지정 하 고 `AnimalGridView` 및 `FieldGridView`합니다.  
+  
+    > [!NOTE]
+    >  컨트롤에 데이터 소스 창에서 필드 및 동물 항목을 끌어 하는 대체 단계가입니다. 이 작업에는 자동으로 데이터 표 및 그리드 보기와 데이터 원본 간의 바인딩을 만듭니다. 그러나이 바인딩 Dsl에 대 한 올바르게 작동 하지 않습니다. 따라서 하는 것이 데이터 표 및 바인딩을 만들 수동으로 합니다.  
+  
+7.  도구 상자에 포함 되어 있지 않으면는 **ModelingBindingSource** 도구를 추가 합니다. 바로 가기 메뉴는 **데이터** 탭에서 선택 **항목 선택**합니다. 에 **도구 상자 항목 선택** 대화 상자에서 **ModelingBindingSource** 에서 **.NET Framework 탭**합니다.  
+  
+8.  도구 상자를 사용 하 여의 두 인스턴스를 만들 **ModelingBindingSource**, 이름을 지정 하 고 `AnimalBinding` 및 `FieldBinding`합니다.  
+  
+9. 설정의 **DataSource** 각 속성 **ModelingBindingSource** 를 **farmBindingSource**합니다.  
+  
+     설정의 **DataMember** 속성을 **동물** 또는 **필드**합니다.  
+  
+10. 설정의 **DataSource** 의 속성 `AnimalGridView` 를 `AnimalBinding`, 및의 `FieldGridView` 를 `FieldBinding`합니다.  
+  
+11. 프로그램 경험해 팜 컨트롤의 레이아웃을 조정 합니다.  
+  
+ **ModelingBindingSource** Dsl 관련 된 몇 가지 기능을 수행 하는 어댑터:  
+  
+-   VMSDK 저장소 트랜잭션을에 업데이트를 래핑합니다.  
+  
+     예를 들어 그리드 보기에서에서 한 행을 삭제 하는 경우 일반 바인딩 트랜잭션 예외가 발생 합니다.  
+  
+-   사용자가 행을 선택 하면 속성 창 데이터 표 행 대신 해당 모델 요소와의 속성을 표시, 되도록 조정 합니다.  
   
  ![DslWpf4](../modeling/media/dslwpf4.png "DslWpf4")  
-Schema of links between data sources and views.  
+데이터 원본 및 뷰 간 링크의 스키마입니다.  
   
-#### <a name="to-complete-the-bindings-to-the-dsl"></a>To complete the bindings to the DSL  
+#### <a name="to-complete-the-bindings-to-the-dsl"></a>DSL에 대 한 바인딩을 완료 하려면  
   
-1.  Add the following code in a separate code file in the **UI** project:  
+1.  다음 코드를 별도 코드 파일에 추가 된 **UI** 프로젝트:  
   
     ```csharp  
     using System.ComponentModel;  
@@ -207,57 +207,57 @@ Schema of links between data sources and views.
     }  
     ```  
   
-2.  In the **DslPackage** project, edit **DslPackage\DocView.tt** to update the following variable definition:  
+2.  에 **DslPackage** 프로젝트, 편집 **DslPackage\DocView.tt** 다음 변수 정의 업데이트 하려면:  
   
     ```csharp  
     string viewControlTypeName = "FarmControl";  
     ```  
   
-## <a name="testing-the-dsl"></a>Testing the DSL  
- The DSL solution can now build and run, although you might want to add further improvements later.  
+## <a name="testing-the-dsl"></a>DSL 테스트  
+ 이제 DSL 솔루션 빌드하고 나중에 추가할 추가 개선 하려면 수는 있지만 실행할 수 있습니다.  
   
-#### <a name="to-test-the-dsl"></a>To test the DSL  
+#### <a name="to-test-the-dsl"></a>DSL를 테스트 하려면  
   
-1.  Build and run the solution.  
+1.  솔루션을 빌드하고 실행합니다.  
   
-2.  In the experimental instance of Visual Studio, open the **Sample** file.  
+2.  Visual Studio의 실험적 인스턴스를 열고는 **샘플** 파일입니다.  
   
-3.  In the **FarmApp Explorer**, open the shortcut menu on the **Farm** root node, and choose **Add New Goat**.  
+3.  에 **FarmApp 탐색기**에서 바로 가기 메뉴를 열고는 **팜** 루트 노드를 선택 하 고 **새 염소 추가**합니다.  
   
-     `Goat1` appears in the **Animals** view.  
+     `Goat1`에 표시 된 **동물** 보기.  
   
     > [!WARNING]
-    >  You must use the shortcut menu on the **Farm** node, not the **Animals** node.  
+    >  에 바로 가기 메뉴를 사용 해야 합니다는 **팜** 노드를 하지는 **동물** 노드.  
   
-4.  Select the **Farm** root node and view its properties.  
+4.  선택 된 **팜** 루트 노드 및 해당 속성을 확인 합니다.  
   
-     In the form view, change the **Name** or **Size** of the farm.  
+     폼 보기에서 변경 된 **이름** 또는 **크기** 팜의 합니다.  
   
-     When you navigate away from each field in the form, the corresponding property changes in the Properties window.  
+     때 속성 창에서 해당 속성 변경 내용 폼의 각 필드를 다른 곳으로 이동 합니다.  
   
-## <a name="enhancing-the-dsl"></a>Enhancing the DSL  
+## <a name="enhancing-the-dsl"></a>DSL 향상  
   
-#### <a name="to-make-the-properties-update-immediately"></a>To make the properties update immediately  
+#### <a name="to-make-the-properties-update-immediately"></a>즉시 업데이트 속성을 확인 하려면  
   
-1.  In the design view of FarmControl.cs, select a simple field such as Name, Size or IsOrganic.  
+1.  FarmControl.cs의 디자인 뷰에서 단순 필드 이름, 크기 또는 IsOrganic 등을 선택 합니다.  
   
-2.  In the Properties window, expand **DataBindings** and open **(Advanced)**.  
+2.  속성 창에서 확장 **DataBindings** 엽니다 **(고급)**합니다.  
   
-     In the **Formatting and Advanced Binding** dialog, under **Data Source Update Mode**, choose **OnPropertyChanged**.  
+     에 **서식 지정 및 고급 바인딩** 대화에서 **데이터 원본 업데이트 모드**, 선택 **OnPropertyChanged**합니다.  
   
-3.  Build and run the solution.  
+3.  솔루션을 빌드하고 실행합니다.  
   
-     Verify that when you change the content of the field, the corresponding property of the Farm model changes immediately.  
+     팜 모델 변경 내용 즉시의 해당 속성 필드의 내용을 변경 하면 있는지 확인 하십시오.  
   
-#### <a name="to-provide-add-buttons"></a>To provide Add buttons  
+#### <a name="to-provide-add-buttons"></a>추가 단추를 제공 하려면  
   
-1.  In the design view of FarmControl.cs, use the toolbox to create a button on the form.  
+1.  FarmControl.cs의 디자인 뷰에서 도구 상자를 사용 하 여 폼에 단추를 만듭니다.  
   
-     Edit the name and text of the button, for example to `New Sheep`.  
+     이름과 단추의 텍스트를 예를 들어 편집 `New Sheep`합니다.  
   
-2.  Open the code behind the button (for example by double-clicking it).  
+2.  단추 뒤에 있는 코드 (예를 들어 두 번 클릭)에서 엽니다.  
   
-     Edit it as follows:  
+     다음과 같이 편집 합니다.  
   
     ```csharp  
     private void NewSheepButton_Click(object sender, EventArgs e)  
@@ -290,7 +290,7 @@ Schema of links between data sources and views.
   
     ```  
   
-     You will also need to insert the following directive:  
+     또한 다음 지시문을 삽입 해야 합니다.  
   
     ```csharp  
   
@@ -298,18 +298,18 @@ Schema of links between data sources and views.
   
     ```  
   
-3.  Add similar buttons for Goats and Fields.  
+3.  염소 및 필드에 대 한 유사한 단추를 추가 합니다.  
   
-4.  Build and run the solution.  
+4.  솔루션을 빌드하고 실행합니다.  
   
-5.  Verify that the new button adds an item. The new item should appear in both the FarmApp Explorer and in the appropriate data grid view.  
+5.  새로 만들기 단추 항목을 추가 확인 합니다. 새 항목 FarmApp 탐색기에서 및 적절 한 데이터 그리드 보기에 표시 됩니다.  
   
-     You should be able to edit the name of the element in the data grid view. You can also delete it from there.  
+     데이터 그리드 보기에 있는 요소의 이름을 편집할 수 있습니다. 여기에서 삭제할 수 있습니다.  
   
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL &#45; Wpf &#45; 2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
   
-### <a name="about-the-code-to-add-an-element"></a>About the code to add an element  
- For the new element buttons, the following alternative code is slightly simpler.  
+### <a name="about-the-code-to-add-an-element"></a>요소를 추가 하는 코드에 대 한  
+ 새 요소 단추에 대 한 다음과 같은 대체 코드를 좀 더 간단 합니다.  
   
 ```csharp  
 private void NewSheepButton_Click(object sender, EventArgs e)  
@@ -323,11 +323,11 @@ private void NewSheepButton_Click(object sender, EventArgs e)
   
 ```  
   
- However, this code does not set a default name for the new item. It does not run any customized merge that you might have defined in the **Element Merge Directives** of the DSL, and it does not run any custom merge code that might have been defined.  
+ 그러나이 코드는 새 항목에 대 한 기본 이름을 설정 하지 않습니다. 에 정의 된 모든 사용자 지정 된 병합 실행 되지 않습니다는 **요소 병합 지시문** DSL의 정의 된 모든 병합을 사용자 지정 코드는 실행 되지 않습니다.  
   
- Therefore we recommend that you use <xref:Microsoft.VisualStudio.Modeling.ElementOperations> to create new elements. For more information, see [Customizing Element Creation and Movement](../modeling/customizing-element-creation-and-movement.md).  
+ 사용 하는 권장 따라서 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 새 요소를 만듭니다. 자세한 내용은 참조 [사용자 지정 요소 만들기 및 이동](../modeling/customizing-element-creation-and-movement.md)합니다.  
   
-## <a name="see-also"></a>See Also  
- [How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md)   
- [Writing Code to Customise a Domain-Specific Language](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
- [Modeling SDK for Visual Studio - Domain-Specific Languages](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
+## <a name="see-also"></a>참고 항목  
+ [도메인 특정 언어를 정의 하는 방법](../modeling/how-to-define-a-domain-specific-language.md)   
+ [도메인 특정 언어를 사용자 지정 하는 코드 작성](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
+ [Visual Studio용 모델링 SDK - 도메인별 언어](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)

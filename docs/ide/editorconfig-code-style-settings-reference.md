@@ -1,5 +1,5 @@
 ---
-title: .NET Coding Convention Settings For EditorConfig | Microsoft Docs
+title: "EditorConfig에 대한 .NET Coding 규칙 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/14/2016
 ms.reviewer: 
@@ -34,639 +34,639 @@ ms.translationtype: HT
 ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
 ms.openlocfilehash: ced437215b48c76e6df99699b4c6f9c916452d14
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
-# <a name="net-coding-convention-settings-for-editorconfig"></a>.NET Coding Convention Settings For EditorConfig
-.NET coding conventions are configured using an [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) file. EditorConfig files allow you to **enable/disable individual .NET coding conventions** and **configure the degree at which you want the convention enforced** (via a severity level). To learn more about how to use EditorConfig to enforce consistency on your codebase, read [this article](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options).
+# <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig에 대한 .NET Coding 규칙 설정
+.NET 코딩 규칙은 [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) 파일을 사용하여 구성됩니다. EditorConfig 파일을 사용하면 **개별 .NET 코딩 규칙을 활성화/비활성화**하고 (심각도 수준을 통해) **규칙을 적용하려는 수준을 구성**할 수 있습니다. EditorConfig를 사용하여 코드 베이스에 일관성을 적용하는 방법에 대한 자세한 내용을 보려면 [이 문서](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options)를 참고하세요.
 
-There are three supported .NET coding convention categories:
-- **[Language Conventions](#language)** are rules pertaining to the C# or Visual Basic language, for example, `var`/explicit type, use expression-bodied member.
-- **[Formatting Rules](#formatting)** are rules regarding the layout and structure of your code in order to make it easier to read, for example, Allman braces, spaces in control blocks.
-- **[Naming Conventions](#naming)** are rules respecting the way objects are named, for example, `async` methods must end in "Async". 
+지원되는 .NET 코딩 규칙 범주에는 세 가지가 있습니다.
+- **[언어 규칙](#language)**은 C# 또는 Visual Basic 언어(예: `var`/명시적 형식)에 적용되는 규칙이며 식 본문 멤버를 사용합니다.
+- **[서식 설정 규칙](#formatting)**은 제어 블록에서 간격을 보다 쉽게 읽을 수 있기 위한(예: Allman 중괄호) 코드의 레이아웃 및 구조에 대한 규칙입니다.
+- **[명명 규칙](#naming)**은 개체를 명명하는 방식을 유지하는 규칙입니다(예: `async` 메서드는 "Async"로 끝나야 함). 
 
-# <a name="language"> Language Conventions </a>
-## <a name="overview"></a>Overview
-**Rule Format:**
+# <a name="language">언어 규칙</a>
+## <a name="overview"></a>개요
+**규칙 형식:**
 `options_name = false|true : none|suggestion|warning|error`
 
-For code style option, you must specify **true** (prefer this option) or **false** (do not prefer this option), a colon (`:`), and a severity (`none`, `silent`, `suggestion`, `warning`, or `error`). Severity means the level of enforcement for that style you want in your code base.
+코드 스타일 옵션에 대해 **true**(이 옵션 선호) 또는 **false**(이 옵션 선호 안 함), 콜론(`:`) 및 심각도(`none`, `silent`, `suggestion`, `warning` 또는 `error`)를 지정해야 합니다. 심각도는 코드 베이스에서 원하는 스타일의 적용 수준을 의미합니다.
 
-`none` and `silent` are synonymous and mean that no indication of any kind should be shown to the user. This has the effect of disabling this rule.
+`none` 및 `silent`는 동의어이며 사용자에게 표시되어야 한함을 의미하지 않습니다. 이 항목에는 이 규칙을 비활성화하는 효과가 있습니다.
 
-Severity | effect
+심각도 | 효과
 ------------ | -------------
-none/silent | Do not show anything to the user when this style is not being followed, however code generation features generate in this style. 
-suggestion | When this style is not being followed, show it to the user as a suggestion (underlying dots on the first two characters).
-warning | When this style is not being followed, show a compiler warning.
-error | When this style is not being followed, show a compiler error.
+none/silent | 이 스타일을 따르지 않을 경우 사용자에게 아무 메시지도 표시되지 않지만 코드 생성 기능은 이 스타일로 생성됩니다. 
+suggestion | 이 스타일을 따르지 않을 경우 사용자에게 제안으로 표시됩니다(처음 두 문자에 점선이 밑줄로 표시됨).
+경고 | 이 스타일을 따르지 않을 경우 컴파일러 경고가 표시됩니다.
+오류 | 이 스타일을 따르지 않을 경우 컴파일러 오류가 표시됩니다.
 
-## <a name="net-language-convention-options"></a>.NET Language Convention Options
+## <a name="net-language-convention-options"></a>.NET 언어 규칙 옵션
 
-- **[.NET Code Style Settings](#this_and_me)**
-    - ["This." and "Me." Qualification](#this_and_me)
-        - [Fields](#this_and_me_fields)
-        - [Properties](#this_and_me_properties)
-        - [Methods](#this_and_me_methods)
-        - [Events](#this_and_me_events)
-    - [Language keywords (int, string, etc.) vs framework type names for type references](#language_keywords)
-        - [Locals, parameters, and members](#language_keywords_variables)
-        - [Member access expressions](#language_keywords_member_access)
-    - [Expression-level Preferences](#expression_level)
-        - [Object initializers](#expression_level_object_initializers)
-        - [Collection initializers](#expression_level_collection_initializers)
-        - [Explicit tuple names](#expression_level_tuple_names)
-        - [Coalescing expressions in "null" checking](#expression_level_null_checking)
-        - [Null propagation in "null" checking](#expression_level_null_propogation)
-- **[CSharp Code Style Settings](#csharp_codestyle)**
+- **[.NET 코드 스타일 설정](#this_and_me)**
+    - ["This." 및 "Me." 한정](#this_and_me)
+        - [필드](#this_and_me_fields)
+        - [속성](#this_and_me_properties)
+        - [메서드](#this_and_me_methods)
+        - [이벤트](#this_and_me_events)
+    - [형식 참조를 위한 언어 키워드(int, string 등) 및 프레임워크 형식 이름](#language_keywords)
+        - [로컬 항목, 매개 변수 및 멤버](#language_keywords_variables)
+        - [멤버 액세스 식](#language_keywords_member_access)
+    - [식 수준 기본 설정](#expression_level)
+        - [개체 이니셜라이저](#expression_level_object_initializers)
+        - [컬렉션 이니셜라이저](#expression_level_collection_initializers)
+        - [명시적 튜플 이름](#expression_level_tuple_names)
+        - ["null" 검사에 식 병합](#expression_level_null_checking)
+        - ["null" 검사의 Null 전파](#expression_level_null_propogation)
+- **[CSharp 코드 스타일 설정](#csharp_codestyle)**
     - ["var"](#var)
-        - ["var" for built-in types](#var_built_in)
-        - ["var" when type is apparent](#var_apparent)
-        - ["var" elsewhere](#var_elsewhere)
-    - [Expression-bodied members](#expression_body)
-        - [Methods](#expression_bodied_members_methods)
-        - [Constructors](#expression_bodied_members_constructors)
-        - [Operators](#expression_bodied_members_operators)
-        - [Properties](#expression_bodied_members_properties)
-        - [Indexers](#expression_bodied_members_indexers)
-        - [Accessors](#expression_bodied_members_accessors)
-    - [Pattern matching](#pattern_matching)
-        - ["is" with "cast" checking](#pattern_matching_is_cast)
-        - ["as" with "null" checking](#pattern_matching_as_null)
-    - [Inlined variable declarations](#inlined_variable_declarations)
-    - [Expression-level Preferences](#expression_level_csharp) -[Simplify `default` expressions](#expression_level_default)
-    - ["Null" Checking Preferences](#null_checking)
-        - [Throw-expressions](#null_checking_throw_expressions)
-        - [Conditional delegate calls](#null_checking_conditional_delegate_calls)
-    - [Code Block Preferences](#code_block)
-        - [Prefer braces](#prefer_braces)
+        - [기본 제공 형식에 "var" 사용](#var_built_in)
+        - [형식이 명확한 경우 "var" 사용](#var_apparent)
+        - [다른 곳에서 "var" 사용](#var_elsewhere)
+    - [식 본문 멤버](#expression_body)
+        - [메서드](#expression_bodied_members_methods)
+        - [생성자](#expression_bodied_members_constructors)
+        - [연산자](#expression_bodied_members_operators)
+        - [속성](#expression_bodied_members_properties)
+        - [인덱서](#expression_bodied_members_indexers)
+        - [접근자](#expression_bodied_members_accessors)
+    - [패턴 일치](#pattern_matching)
+        - ["캐스트" 검사를 포함하는 "is"](#pattern_matching_is_cast)
+        - ["null" 검사를 포함하는 "as"](#pattern_matching_as_null)
+    - [인라인 변수 선언](#inlined_variable_declarations)
+    - [식 수준 기본 설정](#expression_level_csharp) -[`default` 식 단순화](#expression_level_default)
+    - ["Null" 검사 기본 설정](#null_checking)
+        - [Throw 식](#null_checking_throw_expressions)
+        - [조건부 대리자 호출](#null_checking_conditional_delegate_calls)
+    - [코드 블록 기본 설정](#code_block)
+        - [중괄호 기본 사용](#prefer_braces)
 
-## <a name="this_and_me">"This." and "Me." Qualification</a>
-### <a name="this_and_me_fields">Fields (IDE0003/IDE0009)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="this_and_me">"This." 및 "Me." 한정</a>
+### <a name="this_and_me_fields">필드(IDE0003/IDE0009)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|  `dotnet_style_qualification_for_field` | C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|  `dotnet_style_qualification_for_field` | C# 및 Visual Basic | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer all non-static fields used in non-static methods to be prefaced with `this.` in C# or `Me.` in Visual Basic. | **C#:** <br>`this.capacity = 0;` <br><br> **Visual Basic:** <br> `Me.capacity = 0`
-| False | Prefer all non-static fields used in non-static methods to not be prefaced with `this.` in C# or `Me.` in Visual Basic. | **C#:** <br>`capacity = 0;` <br><br> **Visual Basic:** <br>`capacity = 0`
+| True | 비정적 메서드에서 사용되는 모든 비정적 필드 앞에 `this.`(C#) 또는 `Me.`(Visual Basic)를 추가하는 것이 좋습니다. | **C#:** <br>`this.capacity = 0;` <br><br> **Visual Basic:** <br> `Me.capacity = 0`
+| False | 비정적 메서드에서 사용되는 모든 비정적 필드 앞에 `this.`(C#) 또는 `Me.`(Visual Basic)를 추가하지 않는 것이 좋습니다. | **C#:** <br>`capacity = 0;` <br><br> **Visual Basic:** <br>`capacity = 0`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_field = false:suggestion
 ```
 
-### <a name="this_and_me_properties">Properties (IDE0003/IDE0009) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="this_and_me_properties">속성(IDE0003/IDE0009)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_qualification_for_property`| C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|`dotnet_style_qualification_for_property`| C# 및 Visual Basic | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer the all non-static properties used in non-static methods to be prefaced with `this.` in C# or `Me.` in Visual Basic.| **C#:** <br>`this.ID = 0;` <br><br> **Visual Basic:** <br>`Me.ID = 0`
-| False | Prefer all non-static properties used in non-static methods to *not* be prefaced with `this.` in C# or `Me.` in Visual Basic. | **C#:** <br>`ID = 0;` <br><br> **Visual Basic:** <br> `ID = 0`
+| True | 비정적 메서드에서 사용되는 모든 비정적 속성 앞에 `this.`(C#) 또는 `Me.`(Visual Basic)를 추가하는 것이 좋습니다.| **C#:** <br>`this.ID = 0;` <br><br> **Visual Basic:** <br>`Me.ID = 0`
+| False | 비정적 메서드에서 사용되는 모든 비정적 속성 앞에 `this.`(C#) 또는 `Me.`(Visual Basic)를 추가하지 *않는* 것이 좋습니다. | **C#:** <br>`ID = 0;` <br><br> **Visual Basic:** <br> `ID = 0`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_property = false:suggestion
 ```
 
-### <a name="this_and_me_methods">Methods (IDE0003/IDE0009) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="this_and_me_methods">메서드(IDE0003/IDE0009) </a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_qualification_for_method`| C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|`dotnet_style_qualification_for_method`| C# 및 Visual Basic | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer all non-static methods called from within non-static methods to be prefaced with `this.` in C# and `Me.` in VB.| **C#:** <br>`this.Display();` <br><br> **Visual Basic:** <br> `Me.Display()`
-| False | Prefer all non-static methods called from within non-static methods to *not* be prefaced with `this.`in C# and `Me.` in VB. | **C#:** <br>`Display();` <br><br> **Visual Basic:** <br> `Display()`
+| True | 비정적 메서드 내에서 호출되는 모든 비정적 메서드 앞에 `this.`(C#) 또는 `Me.`(VB)를 추가하는 것이 좋습니다.| **C#:** <br>`this.Display();` <br><br> **Visual Basic:** <br> `Me.Display()`
+| False | 비정적 메서드 내에서 호출되는 모든 비정적 메서드 앞에 `this.`(C#) 또는 `Me.`(VB)를 추가하지 *않는* 것이 좋습니다. | **C#:** <br>`Display();` <br><br> **Visual Basic:** <br> `Display()`
 
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_method = false:suggestion
 ```
 
-### <a name="this_and_me_events">Events (IDE0003/IDE0009) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="this_and_me_events">이벤트(IDE0003/IDE0009) </a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_qualification_for_event`| C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|`dotnet_style_qualification_for_event`| C# 및 Visual Basic | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer all non-static events referenced from within non-static methods to be prefaced with `this.` in C# and `Me.` in VB.| **C#:** <br>`this.Elapsed += Handler;` <br><br> **Visual Basic:** <br> `AddHandler Me.Elapsed, AddressOf Handler`
-| False | Prefer all non-static events referenced from within non-static methods to *not* be prefaced with `this.`in C# and `Me.` in VB. | **C#:** <br>`Elapsed += Handler;` <br><br> **Visual Basic:** <br>`AddHandler Elapsed, AddressOf Handler`
+| True | 비정적 메서드 내에서 참조되는 모든 비정적 이벤트 앞에 `this.`(C#) 또는 `Me.`(VB)를 추가하는 것이 좋습니다.| **C#:** <br>`this.Elapsed += Handler;` <br><br> **Visual Basic:** <br> `AddHandler Me.Elapsed, AddressOf Handler`
+| False | 비정적 메서드 내에서 참조되는 모든 비정적 이벤트 앞에 `this.`(C#) 또는 `Me.`(VB)를 추가하지 *않는* 것이 좋습니다. | **C#:** <br>`Elapsed += Handler;` <br><br> **Visual Basic:** <br>`AddHandler Elapsed, AddressOf Handler`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_event = false:suggestion
 ```
 
-## <a name="language_keywords">Language keywords (int, string, etc.) vs framework type names for type references </a>
-### <a name="language_keywords_variables"> Locals, parameters, and members (IDE0012/IDE0014)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="language_keywords">형식 참조를 위한 언어 키워드(int, string 등) 및 프레임워크 형식 이름</a>
+### <a name="language_keywords_variables">로컬 항목, 매개 변수 및 멤버(IDE0012/IDE0014)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_predefined_type_for_locals_parameters_members`| C# and Visual Basic | true:none | Visual Studio 2017 RTW |
+|`dotnet_style_predefined_type_for_locals_parameters_members`| C# 및 Visual Basic | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | For locals, parameters and type members, prefer types that have a language keyword to represent them (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) to use the keyword instead of the type name (`Int32`, `Int64`, etc.).| **C#:** <br>`private int _member;` <br><br> **Visual Basic:** `Private _member As Integer`
-| False | For locals, parameters and type members, prefer types that have a language keyword to represent them (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) to use the type name (`Int32`, `Int64`, etc.) instead of the keyword.  | **C#:** <br>`private Int32 _member;` <br><br> **Visual Basic:** <br> `Private _member As Int32`
+| True | 로컬 항목, 매개 변수 및 형식 멤버의 경우 언어 키워드로 형식을 나타내는 형식(`int`, `double`, `float`, `short`, `long`, `decimal`, `string`)에서 형식 이름(`Int32`, `Int64` 등) 대신 키워드를 사용하는 것이 좋습니다.| **C#:** <br>`private int _member;` <br><br> **Visual Basic:** `Private _member As Integer`
+| False | 로컬 항목, 매개 변수 및 형식 멤버의 경우 언어 키워드로 형식을 나타내는 형식(`int`, `double`, `float`, `short`, `long`, `decimal`, `string`)에서 키워드 대신 형식 이름(`Int32`, `Int64` 등)을 사용하는 것이 좋습니다.  | **C#:** <br>`private Int32 _member;` <br><br> **Visual Basic:** <br> `Private _member As Int32`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 ``` 
 
-### <a name="language_keywords_member_access">Member access expressions (IDE0013/IDE0015)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="language_keywords_member_access">멤버 액세스 식(IDE0013/IDE0015)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_predefined_type_for_member_access`| C# and Visual Basic | true:none | Visual Studio 2017 RTW |
+|`dotnet_style_predefined_type_for_member_access`| C# 및 Visual Basic | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer the keyword whenever a member-access expression is used on a type with a keyword representation (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`).| **C#:** <br>`var local = int.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Integer.MaxValue`
-| False | Prefer the type name whenever a member access expression is used on a type with a keyword representation (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`). | **C#:** <br>`var local = Int32.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Int32.MaxValue`
+| True | 멤버 액세스 식이 키워드 표현(`int`, `double`, `float`, `short`, `long`, `decimal`, `string`)과 함께 형식에 사용될 때마다 키워드를 사용하는 것이 좋습니다.| **C#:** <br>`var local = int.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Integer.MaxValue`
+| False | 멤버 액세스 식이 키워드 표현(`int`, `double`, `float`, `short`, `long`, `decimal`, `string`)과 함께 형식에 사용될 때마다 형식 이름을 사용하는 것이 좋습니다. | **C#:** <br>`var local = Int32.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Int32.MaxValue`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_predefined_type_for_member_access = true:suggestion
 ``` 
 
-## <a name="expression_level">Expression-level Preferences</a>
-### <a name="expression_level_object_initializers">Object initializers (IDE0017)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="expression_level">식 수준 기본 설정</a>
+### <a name="expression_level_object_initializers">개체 이니셜라이저(IDE0017)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_object_initializer`| C# and Visual Basic | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_object_initializer`| C# 및 Visual Basic | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer objects to be initialized using object initializers when possible.| **C#:** <br>`var c = new Customer(){ Age = 21 };` <br><br> **Visual Basic:** <br> `Dim c = New Customer() With { .Age = 21 }`
-| False | Prefer objects to *not* be initialized using object initializers. | **C#:** <br>`var c = new Customer();`<br>`c.Age = 21;` <br><br> **Visual Basic:** <br>`Dim c = new Customer() `<br>`c.Age = 21`
+| True | 가능한 경우 개체 이니셜라이저를 사용하여 개체를 초기화하는 것이 좋습니다.| **C#:** <br>`var c = new Customer(){ Age = 21 };` <br><br> **Visual Basic:** <br> `Dim c = New Customer() With { .Age = 21 }`
+| False | 개체 이니셜라이저를 사용하여 개체를 초기화하지 *않는* 것이 좋습니다. | **C#:** <br>`var c = new Customer();`<br>`c.Age = 21;` <br><br> **Visual Basic:** <br>`Dim c = new Customer() `<br>`c.Age = 21`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_object_initializer = true:suggestion
 ``` 
 
-### <a name="expression_level_collection_initializers">Collection initializers (IDE0028)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_collection_initializers">컬렉션 이니셜라이저(IDE0028)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_collection_initializer`| C# and Visual Basic | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_collection_initializer`| C# 및 Visual Basic | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer collections to be initialized using collection initializers when possible.| **C#:** <br>`var list = new List<int>{ 1, 2, 3 };` <br><br> **Visual Basic:** <br> `Dim list = new List(Of Integer) From { 1, 2, 3}`
-| False | Prefer objects to *not* be initialized using collection initializers. | **C#:** <br>`var list = new List<int>();`<br>`list.Add(1);`<br>`list.Add(2);`<br>`list.Add(3);` <br><br> **Visual Basic:** <br>`Dim list = new List(Of Integer)`<br>`list.Add(1)`<br>`list.Add(2)`<br>`list.Add(3)`
+| True | 가능한 경우 컬렉션 이니셜라이저를 사용하여 컬렉션을 초기화하는 것이 좋습니다.| **C#:** <br>`var list = new List<int>{ 1, 2, 3 };` <br><br> **Visual Basic:** <br> `Dim list = new List(Of Integer) From { 1, 2, 3}`
+| False | 컬렉션 이니셜라이저를 사용하여 컬렉션을 초기화하지 *않는* 것이 좋습니다. | **C#:** <br>`var list = new List<int>();`<br>`list.Add(1);`<br>`list.Add(2);`<br>`list.Add(3);` <br><br> **Visual Basic:** <br>`Dim list = new List(Of Integer)`<br>`list.Add(1)`<br>`list.Add(2)`<br>`list.Add(3)`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_collection_initializer = true:suggestion
 ```
 
-### <a name="expression_level_tuple_names">Explicit tuple names (IDE0033)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_tuple_names">명시적 튜플 이름(IDE0033)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_explicit_tuple_names`| C# 7.0+ and Visual Basic 15+ | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_explicit_tuple_names`| C# 7.0+ 및 Visual Basic 15+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer tuple names to ItemX properties.| **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.name;` <br><br> **Visual Basic:** <br> `Dim customer As (name As String, age As Integer) = GetCustomer()`<br>`Dim name = customer.name`
-| False | Prefer ItemX properties to tuple names. | **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.Item1;` <br><br> **Visual Basic:** <br>`Dim customer As (name As String, age As Integer) = GetCustomer()`<br> `Dim name = customer.Item1`
+| True | ItemX 속성보다 튜플 이름을 사용하는 것이 좋습니다.| **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.name;` <br><br> **Visual Basic:** <br> `Dim customer As (name As String, age As Integer) = GetCustomer()`<br>`Dim name = customer.name`
+| False | 튜플 이름보다 ItemX 속성을 사용하는 것이 좋습니다. | **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.Item1;` <br><br> **Visual Basic:** <br>`Dim customer As (name As String, age As Integer) = GetCustomer()`<br> `Dim name = customer.Item1`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_explicit_tuple_names = true:suggestion
 ``` 
 
-### <a name="expression_level_null_checking">Coalescing expressions in "null" checking (IDE0029)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_null_checking">"null" 검사에 식 병합(IDE0029)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_coalesce_expression`| C# and Visual Basic | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_coalesce_expression`| C# 및 Visual Basic | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer null coalescing expression to ternary operator checking.| **C#:** <br>`var v = x ?? y;` <br><br> **Visual Basic:** <br> `Dim v = If(x, y)`
-| False | Prefer ternary operator checking to null coalescing expression. | **C#:** <br>`var v = x != null ? x : y; // or`<br>`var v = x == null ? y : x;` <br><br> **Visual Basic:** <br>`Dim v = If(x Is Nothing, y, x) ' or`<br> `Dim v = If(x IsNot Nothing, x, y)`
+| True | 3개로 구성된 연산자 검사보다 null 병합 식을 사용하는 것이 좋습니다.| **C#:** <br>`var v = x ?? y;` <br><br> **Visual Basic:** <br> `Dim v = If(x, y)`
+| False | null 병합 식보다 3개로 구성된 연산자 검사를 사용하는 것이 좋습니다. | **C#:** <br>`var v = x != null ? x : y; // or`<br>`var v = x == null ? y : x;` <br><br> **Visual Basic:** <br>`Dim v = If(x Is Nothing, y, x) ' or`<br> `Dim v = If(x IsNot Nothing, x, y)`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_coalesce_expression = true:suggestion
 ``` 
 
-### <a name="expression_level_null_propogation">Null propagation in "null" checking (IDE0031)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_null_propogation">"null" 검사의 Null 전파(IDE0031)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_null_propagation`| C# 6.0+ and Visual Basic 14+ | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_null_propagation`| C# 6.0 이상 및 Visual Basic 14 이상 | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer to use null-conditional operator where possible.| **C#:** <br>`var v = o?.ToString();` <br><br> **Visual Basic:** <br> `Dim v = o?.ToString()`
-| False | Prefer to use ternary null checking where possible. | **C#:** <br>`var v = o == null ? null : o.ToString(); // or`<br>`var v = o != null ? o.String() : null;` <br><br> **Visual Basic:** <br>`Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or`<br> `Dim v = If(o IsNot Nothing, o.ToString(), Nothing)`
+| True | 가능한 경우 null 조건부 연산자를 사용하는 것이 좋습니다.| **C#:** <br>`var v = o?.ToString();` <br><br> **Visual Basic:** <br> `Dim v = o?.ToString()`
+| False | 가능한 경우 3개로 구성된 null 검사를 사용하는 것이 좋습니다. | **C#:** <br>`var v = o == null ? null : o.ToString(); // or`<br>`var v = o != null ? o.String() : null;` <br><br> **Visual Basic:** <br>`Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or`<br> `Dim v = If(o IsNot Nothing, o.ToString(), Nothing)`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_null_propagation = true:suggestion
 ``` 
 
-# <a name="csharp_codestyle">CSharp Code Style Settings</a>
-## <a name="var">"var" and Explicit Types</a>
-### <a name="var_built_in">"var" for built-in types (IDE0007, IDE0008)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+# <a name="csharp_codestyle">CSharp 코드 스타일 설정</a>
+## <a name="var">"var" 및 명시적 형식</a>
+### <a name="var_built_in">기본 제공 형식의 "var"(IDE0007, IDE0008)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_var_for_built_in_types`| C# | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer `var` is used for built-in system types such as `int`.| **C#:** <br>`var x = 5;`
-| False | Prefer `var` not be used for built-in system types such as `int`. | **C#:** <br>`int x = 5;`
+| True | `int` 등의 기본 제공 시스템 형식에 `var`을 사용하는 것이 좋습니다.| **C#:** <br>`var x = 5;`
+| False | `int` 등의 기본 제공 시스템 형식에 `var`을 사용하지 않는 것이 좋습니다. | **C#:** <br>`int x = 5;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_var_for_built_in_types = true:suggestion
 ``` 
 
-### <a name="var_apparent">"var" when type is apparent (IDE0007, IDE0008)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="var_apparent">형식이 명확한 경우 "var" 사용(IDE0007, IDE0008)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_var_when_type_is_apparent`| C# | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer `var` when the type is already mentioned on the right-hand side of a declaration expression.| **C#:** <br>`var obj = new C();`
-| False | Prefer to not use `var` when the type is already mentioned on the right-hand side of a declaration expression. | **C#:** <br>`C obj = new C();`
+| True | 선언 식의 오른쪽에서 형식이 이미 언급된 경우 `var`을 사용하는 것이 좋습니다.| **C#:** <br>`var obj = new C();`
+| False | 선언 식의 오른쪽에서 형식이 이미 언급된 경우 `var`을 사용하지 않는 것이 좋습니다. | **C#:** <br>`C obj = new C();`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_var_when_type_is_apparent = true:suggestion
 ``` 
 
-### <a name="var_elsewhere">"var" elsewhere (IDE0007, IDE0008) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="var_elsewhere">다른 곳에서 "var" 사용(IDE0007, IDE0008) </a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_var_elsewhere`| C# | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer `var` in all cases unless overridden by another code style rule.| **C#:** <br>`var f = this.Init();`
-| False | Prefer to not use var in all cases unless overridden by another code style rule.| **C#:** <br>`bool f = this.Init();`
+| True | 다른 코드 스타일 규칙에 의해 재정의되지 않는 경우 항상 `var`을 사용하는 것이 좋습니다.| **C#:** <br>`var f = this.Init();`
+| False | 다른 코드 스타일 규칙에 의해 재정의되지 않는 경우 항상 var을 사용하지 않는 것이 좋습니다.| **C#:** <br>`bool f = this.Init();`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_var_elsewhere = true:suggestion
 ``` 
 
-##<a name="expression_bodied_members">Expression-bodied Members</a>
-### <a name="expression_bodied_members_methods">Methods (IDE0022)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+##<a name="expression_bodied_members">식 본문 멤버</a>
+### <a name="expression_bodied_members_methods">메서드(IDE0022)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_methods`| C# 6.0+ | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for methods.| **C#:** <br>`public int GetAge() => this.Age;`
-| False | Do not prefer expression-bodied members for methods.| **C#:** <br>`public int GetAge() { return this.Age; }`
+| True | 메서드에 식 본문 멤버를 사용하는 것이 좋습니다.| **C#:** <br>`public int GetAge() => this.Age;`
+| False | 메서드에 식 본문 멤버를 사용하지 않는 것이 좋습니다.| **C#:** <br>`public int GetAge() { return this.Age; }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_methods = false:none
 ``` 
 
-### <a name="expression_bodied_members_constructors">Constructors (IDE0021)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_constructors">생성자(IDE0021)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_constructors`| C# 7.0+ | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for constructors.| **C#:** <br>`public Customer(int age) => Age = age;`
-| False | Do not prefer expression-bodied members for constructors.| **C#:** <br>`public Customer(int age) { Age = age; }`
+| True | 생성자에 식 본문 멤버를 사용하는 것이 좋습니다.| **C#:** <br>`public Customer(int age) => Age = age;`
+| False | 생성자에 식 본문 멤버를 사용하지 않는 것이 좋습니다.| **C#:** <br>`public Customer(int age) { Age = age; }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_constructors = false:none
 ``` 
 
-### <a name="expression_bodied_members_operators">Operators (IDE0023, IDE0024)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_operators">연산자(IDE0023, IDE0024)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_operators` | C# 7.0+ | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for operators.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`=> new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);`
-| False | Do not prefer expression-bodied members for operators.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`{ return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }`
+| True | 연산자에 식 본문 멤버를 사용하는 것이 좋습니다.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`=> new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);`
+| False | 연산자에 식 본문 멤버를 사용하지 않는 것이 좋습니다.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`{ return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_operators = false:none
 ``` 
 
-### <a name="expression_bodied_members_properties">Properties (IDE0025)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_properties">속성(IDE0025)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_properties` | C# 7.0+ | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for properties.| **C#:** <br>`public int Age => _age;`
-| False | Do not prefer expression-bodied members for properties.| **C#:** <br>`public int Age { get { return _age; }}`
+| True | 속성에 식 본문 멤버를 사용하는 것이 좋습니다.| **C#:** <br>`public int Age => _age;`
+| False | 속성에 식 본문 멤버를 사용하지 않는 것이 좋습니다.| **C#:** <br>`public int Age { get { return _age; }}`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_properties = true:none
 ``` 
 
-### <a name="expression_bodied_members_indexers">Indexers (IDE0026)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_indexers">인덱서(IDE0026)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_indexers` | C# 7.0+ | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for indexers.| **C#:** <br>`public T this[int i] => _value[i];`
-| False | Do not prefer expression-bodied members for indexers.| **C#:** <br>`public T this[int i] { get { return _values[i]; } }`
+| True | 인덱서에 식 본문 멤버를 사용하는 것이 좋습니다.| **C#:** <br>`public T this[int i] => _value[i];`
+| False | 인덱서에 식 본문 멤버를 사용하지 않는 것이 좋습니다.| **C#:** <br>`public T this[int i] { get { return _values[i]; } }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_indexers = false:none
 ``` 
 
-### <a name="expression_bodied_members_accessors">Accessors (IDE0027)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_accessors">접근자(IDE0027)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_accessors` | C# 7.0+ | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for accessors.| **C#:** <br>`public int Age { get => _age; set => _age = value; }`
-| False | Do not prefer expression-bodied members for accessors.| **C#:** <br>`public int Age { get { return _age; } set { _age = value; } }`
+| True | 접근자에 식 본문 멤버를 사용하는 것이 좋습니다.| **C#:** <br>`public int Age { get => _age; set => _age = value; }`
+| False | 접근자에 식 본문 멤버를 사용하지 않는 것이 좋습니다.| **C#:** <br>`public int Age { get { return _age; } set { _age = value; } }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_accessors = false:none
 ``` 
 
-## <a name="pattern_matching">Pattern matching</a>
-### <a name="pattern_matching_is_cast">"is" with "cast" checking (IDE0020)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="pattern_matching">패턴 일치</a>
+### <a name="pattern_matching_is_cast">"cast" 검사를 포함하는 "is"(IDE0020)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_pattern_matching_over_is_with_cast_check` | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer pattern matching instead of `is` expressions with type casts.| **C#:** <br>`if (o is int i) {...}`
-| False | Prefer `is` expressions with type casts instead of pattern matching.| **C#:** <br>`if (o is int) {var i = (int)o; ... }`
+| True | 캐스트를 포함하는 `is` 식보다 패턴 일치를 사용하는 것이 좋습니다.| **C#:** <br>`if (o is int i) {...}`
+| False | 패턴 일치보다 형식 캐스트를 포함하는 `is` 식을 사용하는 것이 좋습니다.| **C#:** <br>`if (o is int) {var i = (int)o; ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 ```
 
-### <a name="pattern_matching_as_null">"as" with "null" checking (IDE0019)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="pattern_matching_as_null">"null" 검사를 포함하는 "as"(IDE0019)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_pattern_matching_over_as_with_null_check` | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer pattern matching instead of `as` expressions with null checks to determine if something is of a particular type.| **C#:** <br>`if (o is string s) {...}`
-| False | Prefer `as` expressions with null checks instead of pattern matching to determine if something is of a particular type.| **C#:** <br>`var s = o as string; if (s != null) {...}`
+| True | null 검사를 포함하는 `as` 식 대신 패턴 일치를 사용하여 항목이 특정 형식인지 확인하는 것이 좋습니다.| **C#:** <br>`if (o is string s) {...}`
+| False | 패턴 일치 대신 null 검사를 포함하는 `as` 식을 사용하여 항목이 특정 형식인지 확인하는 것이 좋습니다.| **C#:** <br>`var s = o as string; if (s != null) {...}`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
-### <a name="inlined_variable_declarations">Inlined variable declarations (IDE0018)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="inlined_variable_declarations">인라인 변수 선언(IDE0018)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_inlined_variable_declaration` | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer `out` variables to be declared inline when possible. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
-| False | Prefer `out` variables to be declared explicitly.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
+| True | 가능한 경우 `out` 변수를 인라인으로 선언하는 것이 좋습니다. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
+| False | 가능한 경우 `out` 변수를 명시적으로 선언하는 것이 좋습니다.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_inlined_variable_declaration = true:suggestion
 ```
-## <a name="expression_level_csharp">Expression-level Preferences</a>
-### <a name="expression_level_default">Simplify `default` expressions (IDE0034) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="expression_level_csharp">식 수준 기본 설정</a>
+### <a name="expression_level_default">`default` 식 단순화(IDE0034)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_prefer_simple_default_expression` | C# 7.1+ | true:suggestion | Visual Studio 2017 v. 15.3 |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer `default` over `default(T)` | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default){ ... }`
-| False | Prefer. | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default(CancellationToken)){ ... }`
+| True | `default(T)`보다 `default` 선호 | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default){ ... }`
+| False | 선호 | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default(CancellationToken)){ ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_prefer_simple_default_expression = true:suggestion
 ``` 
 
-## <a name="null_checking">"Null" Checking Preferences</a>
-### <a name="null_checking_throw_expressions">Throw-expressions (IDE0016)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="null_checking">"Null" 검사 기본 설정</a>
+### <a name="null_checking_throw_expressions">Throw 식(IDE0016)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_throw_expression`  | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer to use `throw` expressions instead of `throw` statements. | **C#:** <br>`this.s = ss ?? throw new ArgumentNullException(nameof(s));`
-| False | Prefer to use `throw` statements instead of `throw` expressions.| **C#:** <br>`if (s==null) {throw new ArgumentNullException(nameof(s));} this.s = s;`
+| True | `throw` 문 대신 `throw` 식을 사용하는 것이 좋습니다. | **C#:** <br>`this.s = ss ?? throw new ArgumentNullException(nameof(s));`
+| False | `throw` 식 대신 `throw` 문을 사용하는 것이 좋습니다.| **C#:** <br>`if (s==null) {throw new ArgumentNullException(nameof(s));} this.s = s;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_throw_expression = true:suggestion
 ```
 
-### <a name="null_checking_conditional_delegate_calls">Prefer conditional delegate calls (IDE0041)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="null_checking_conditional_delegate_calls">조건부 대리자 호출 선호(IDE0041)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_conditional_delegate_call`  | C# 6.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer to use conditional coalescing operation (`?.`) when invoking a lambda instead of performing a null check. | **C#:** <br>`func?.Invoke(args);`
-| False | Prefer to perform a null check before invoking a lambda instead of using the conditional coalescing operator (`?.`).| **C#:** <br>`if (func!=null) { func(args); }`
+| True | null 검사를 수행하는 대신 람다 호출 시 조건부 병합 연산(`?.`)을 사용하는 것이 좋습니다. | **C#:** <br>`func?.Invoke(args);`
+| False | 조건부 병합 연산자(`?.`)를 사용하는 대신 람다 호출 시 null 검사를 수행하는 것이 좋습니다.| **C#:** <br>`if (func!=null) { func(args); }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_conditional_delegate_call = false:suggestion
 ```
 
-## <a name="code_block">"Code Block Preferences</a>
-### <a name="prefer_braces">Prefer braces (IDE0011)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="code_block">"코드 블록 기본 설정</a>
+### <a name="prefer_braces">중괄호 기본 사용(IDE0011)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_prefer_braces`  | C#  | true:none | Visual Studio 2017 v. 15.3 |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Prefer braces | **C#:** <br>`if (test) { this.Display(); }`
-| False | Prefer no braces when possible | **C#:** <br>`if (test) this.Display();`
+| True | 중괄호 기본 사용 | **C#:** <br>`if (test) { this.Display(); }`
+| False | 가능하면 중괄호 없음 기본 사용 | **C#:** <br>`if (test) this.Display();`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_prefer_braces = true:none
 ```
 
-# <a name="formatting"> Formatting Rules </a>
-## <a name="overview"></a>Overview
-**Rule Format:**
+# <a name="formatting">서식 지정 규칙</a>
+## <a name="overview"></a>개요
+**규칙 형식:**
 `options_name = false|true`
 
-For formatting options, you must specify **true** (prefer this option) or **false** (do not prefer this option) except in a couple cases where you must instead specify what conditions you want the rule applied to.
+규칙을 적용하려는 조건을 대신 지정해야 하는 경우를 제외하고 서식 옵션에 **true**(이 옵션을 선호함) 또는 **false**(이 옵션을 선호하지 않음)를 지정해야 합니다.
 
-## <a name="net-formatting-options"></a>.NET Formatting Options
+## <a name="net-formatting-options"></a>.NET 서식 지정 옵션
 
-- **[.NET Formatting Settings](#usings)**
-    - [Organize Usings](#usings)
-        - [Sort System Directives First](#usings_sort_system_first)
-- **[C# Formatting Settings](#newline)**
-    - [Newline Options](#newline)
-        - [Newline Before Open Brace (`{`)](#newline_before_brace)
-        - [Newline Before `else`](#newline_before_else)
-        - [Newline Before `catch`](#newline_before_catch)
-        - [Newline Before `finally`](#newline_before_finally)
-        - [Newline Before Members in Object Initializers](#newline_before_object)
-        - [Newline Before Members in Anonymous Types](#newline_before_anonymous)
-        - [Newline Before Members in Query Expression Clauses](#newline_before_query)
-    - [Indentation Options](#indent)
-        - [Indent `switch` Case Contents](#indent_switch)
-        - [Indent `switch` Labels](#indent_switch_labels)
-        - [Label Positioning](#label)
-    - [Spacing Options](#spacing)
-        - [Space After Cast](#space_after_cast)
-        - [Space After Keywords in Control Flow Statements](#space_control_flow)
-        - [Space Between Method Declaration Parameter-List Parentheses](#space_parameter_list)
-        - [Space Within Parentheses for Method Call Argument List](#space_method_call)
-        - [Space Within Parentheses for Other Options](#space_other)
-    - [Wrapping Options](#wrapping)
-        - [Leave Statements and Member Declarations on the Same Line](#wrapping_statement)
-        - [Leave Block on Single Line](#wrapping_block)
+- **[.NET 서식 지정 설정](#usings)**
+    - [Using 구성](#usings)
+        - [시스템 지시문 먼저 정렬](#usings_sort_system_first)
+- **[C# 서식 지정 설정](#newline)**
+    - [줄 바꿈 옵션](#newline)
+        - [여는 중괄호 앞에서 줄 바꿈(`{`)](#newline_before_brace)
+        - [앞에서 줄 바꿈`else`](#newline_before_else)
+        - [앞에서 줄 바꿈`catch`](#newline_before_catch)
+        - [앞에서 줄 바꿈`finally`](#newline_before_finally)
+        - [개체 이니셜라이저의 멤버 앞에서 줄 바꿈](#newline_before_object)
+        - [무명 형식의 멤버 앞에서 줄 바꿈](#newline_before_anonymous)
+        - [쿼리 식 절의 멤버 앞에서 줄 바꿈](#newline_before_query)
+    - [들여쓰기 옵션](#indent)
+        - [`switch` 대/소문자 콘텐츠 들여쓰기](#indent_switch)
+        - [`switch` 레이블 들여쓰기](#indent_switch_labels)
+        - [레이블 위치 지정](#label)
+    - [간격 옵션](#spacing)
+        - [캐스트 뒤에 공백](#space_after_cast)
+        - [제어 흐름 문의 키워드 뒤에 공백](#space_control_flow)
+        - [메서드 선언 매개 변수 목록 괄호 간의 공백](#space_parameter_list)
+        - [메서드 호출 인수 목록의 괄호 내 공백](#space_method_call)
+        - [다른 옵션의 괄호 내 공백](#space_other)
+    - [래핑 옵션](#wrapping)
+        - [문과 멤버 선언을 동일한 줄에 유지](#wrapping_statement)
+        - [블록을 한 줄에 유지](#wrapping_block)
 
-## <a name="usings">Organize Usings</a>
-### <a name="usings_sort_system_first">Sort System Directives First</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="usings">Using 구성</a>
+### <a name="usings_sort_system_first">시스템 지시문 먼저 정렬</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_sort_system_directives_first`  |  C# and Visual Basic | true | Visual Studio 2017 v. 15.3  |
+|`dotnet_sort_system_directives_first`  |  C# 및 Visual Basic | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied 
+| 값 | 설명 | 적용됨 
 | ------------- |:-------------|:-------------|
-| True | Sort System.* usings alphabetically and place them before other usings.| **C#:** <br>`using System.Collections.Generic;`<br> `using System.Threading.Tasks;`<br> `using Octokit;`
-| False | Have no requirements on the ordering of usings | **C#:** <br>`using System.Collections.Generic;`<br> `using Octokit;` <br> `using System.Threading.Tasks;`
+| True | System.* usings를 사전순으로 정렬하고 다른 using 앞에 배치합니다.| **C#:** <br>`using System.Collections.Generic;`<br> `using System.Threading.Tasks;`<br> `using Octokit;`
+| False | Using의 순서가 필요하지 않습니다 | **C#:** <br>`using System.Collections.Generic;`<br> `using Octokit;` <br> `using System.Threading.Tasks;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # .NET formatting settings:
 [*.{cs,vb}]
 dotnet_sort_system_directives_first = true
 ``` 
 
-# <a name="csharp_formatting">C# Formatting Settings</a>
-## <a name="newline">Newline Options</a>
-### <a name="newline_before_brace"> Newline Before Open Brace (`{`)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+# <a name="csharp_formatting">C# 서식 지정 설정</a>
+## <a name="newline">줄 바꿈 옵션</a>
+### <a name="newline_before_brace">여는 중괄호 앞에서 줄 바꿈(`{`)</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_new_line_before_open_brace`  |  C#  | all | Visual Studio 2017 v. 15.3  |
+|`csharp_new_line_before_open_brace`  |  C#  | 모두 | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| accessors, anonymous_methods, anonymous_types, control_blocks, events, indexers, lambdas, local_functions, methods, object_collection, properties, types. (For multiple, separate with ','). | Require braces to be on a new line for the given expressions (Allman style) |
-| all | Require braces to be on a new line for all expressions (Allman) |
-| none | Require braces to be on the same line for all expressions (K&R) |
+| accessors, anonymous_methods, anonymous_types, control_blocks, events, indexers, lambdas, local_functions, methods, object_collection, properties, types. (여러 경우에 ','로 구분합니다.) | 지정된 식(Allman 스타일)의 새 줄에 중괄호 필요 |
+| 모두 | 모든 식(Allman)의 새 줄에 중괄호 필요 |
+| 없음 | 모든 식(K&R)의 동일한 줄에 중괄호 필요 |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_new_line_before_open_brace = all
 void MyMethod() 
@@ -687,25 +687,25 @@ void MyMethod() {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_open_brace = methods, properties, control_blocks, types
 ``` 
 
-### <a name="newline_before_else"> Newline Before `else`</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_else">앞에서 줄 바꿈`else`</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_new_line_before_else` |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| True | Place `else` statements on a new line.  |
-| False | Place `else` statements on the same line.  |
+| True | 새 줄에 `else` 문을 배치합니다.  |
+| False | 동일한 줄에 `else` 문을 배치합니다.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_new_line_before_else = true
 if (...) {
@@ -725,25 +725,25 @@ if (...) {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_else = true
 ``` 
 
-### <a name="newline_before_catch"> Newline Before `catch`</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_catch">앞에서 줄 바꿈`catch`</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_catch`|  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| True | Place `catch` statements on a new line.  |
-| False | Place `catch` statements on the same line. |
+| True | 새 줄에 `catch` 문을 배치합니다.  |
+| False | 동일한 줄에 `catch` 문을 배치합니다. |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_new_line_before_catch = true
 try {
@@ -763,25 +763,25 @@ try {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_catch = true
 ``` 
 
-### <a name="newline_before_finally"> Newline Before `finally`</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_finally">앞에서 줄 바꿈`finally`</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_finally`|  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| True | Require `finally` statements to be on a new line after the closing brace.  |
-| False | Require `finally` statements to be on the same line as the closing brace.  |
+| True | `finally` 문을 닫는 괄호 뒤의 새 줄에 배치해야 합니다.  |
+| False | `finally` 문을 닫는 괄호인 동일한 줄에 배치해야 합니다.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_new_line_before_finally = true
 try {
@@ -806,25 +806,25 @@ try {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_finally = true
 ``` 
 
-### <a name="newline_before_object"> Newline Before Members in Object Initializers</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_object">개체 이니셜라이저의 멤버 앞에서 줄 바꿈</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_members_in_object_initializers`|  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| True | Require members of object intializers to be on separate lines.  |
-| False | Require members of object initializers to be on the same line.  |
+| True | 개체 이니셜라이저의 멤버를 별도 줄에 배치해야 합니다.  |
+| False | 개체 이니셜라이저의 멤버를 동일한 줄에 배치해야 합니다.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_new_line_before_members_in_object_initializers = true
 var z = new B()
@@ -842,25 +842,25 @@ var z = new B()
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_members_in_object_initializers = true
 ``` 
 
-### <a name="newline_before_anonymous"> Newline Before Members in Anonymous Types</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_anonymous">무명 형식의 멤버 앞에서 줄 바꿈</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_members_in_anonymous_types` |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| True | Require members of anonymous types to be on separate lines.  |
-| False | Require members of anonymous types to be on the same line.  |
+| True | 무명 형식의 멤버를 별도 줄에 배치해야 합니다.  |
+| False | 무명 형식의 멤버를 동일한 줄에 배치해야 합니다.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_new_line_before_members_in_anonymous_types = true
 var z = new
@@ -878,25 +878,25 @@ var z = new
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_members_in_anonymous_types = true
 ``` 
 
-### <a name="newline_before_query"> Newline Before Members in Query Expression Clauses</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_query">쿼리 식 절의 멤버 앞에서 줄 바꿈</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_new_line_within_query_expression_clauses`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| True | Require elements of query expression clauses to be on separate lines.  |
-| False | Require elements of query expression clauses to be on the same line.  |
+| True | 쿼리 식 절의 요소를 별도 줄에 배치해야 합니다.  |
+| False | 쿼리 식 절의 요소를 동일한 줄에 배치해야 합니다.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_new_line_within_query_expression_clauses = true
 var q = from a in e
@@ -910,25 +910,25 @@ var q = from a in e from b in e
         select a * b;
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_within_query_expression_clauses = true
 ``` 
 
-## <a name="indent">Indentation Options</a>
-### <a name="indent_switch"> Indent `switch` Case Contents </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="indent">들여쓰기 옵션</a>
+### <a name="indent_switch">`switch` 대/소문자 콘텐츠 들여쓰기</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_indent_case_contents`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| True | Indent `switch` case contents  |
-| False | Do not indent `switch` case contents |
+| True | `switch` 대/소문자 콘텐츠 들여쓰기  |
+| False | `switch` 대/소문자 콘텐츠 들여쓰지 않기 |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_indent_case_contents = true
 switch(c) {
@@ -959,24 +959,24 @@ switch(c) {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_indent_case_contents = true
 ``` 
 
-### <a name="indent_switch_labels"> Indent `switch` Labels </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="indent_switch_labels"> `switch` 레이블 들여쓰기 </a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_indent_switch_labels`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| True | Indent `switch` labels  |
-| False | Do not indent `switch` labels |
+| True | `switch` 레이블 들여쓰기  |
+| False | `switch` 레이블 들여쓰지 않음 |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_indent_switch_labels = true
 switch(c) {
@@ -1007,25 +1007,25 @@ default:
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_indent_switch_labels = true
 ``` 
 
-### <a name="label">Label Positioning</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="label">레이블 위치 지정</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_indent_labels`  |  C#  | one_less | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 값 | 설명 
 | ------------- |:-------------|
-| one_less | Labels are placed at one less indent to the current context |
-| no_change | Labels are placed at the same indent as the current context |
+| one_less | 레이블은 현재 컨텍스트에 하나 적은 들여쓰기로 배치됩니다. |
+| no_change | 레이블은 현재 컨텍스트와 동일한 들여쓰기로 배치됩니다. |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>적용됨:
 ```csharp
 // csharp_indent_labels = one_less
 private string MyMethod(...) 
@@ -1051,118 +1051,118 @@ private string MyMethod(...)
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_indent_labels = one_less
 ``` 
 
-## <a name="spacing">Spacing Options</a>
-### <a name="space_after_cast"> Space After Cast </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="spacing">간격 옵션</a>
+### <a name="space_after_cast">캐스트 뒤에 공백</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_after_cast` |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 값 | 설명 | 적용됨 |
 | ------------- |:-------------|:-------------|
-| True | Require a space between a cast and the value  | **C#:** <br>`int y = (int) x;`
-| False | Require no space between the cast and the value | **C#:** <br>`int y = (int)x;`
+| True | 캐스트와 값 간의 공백 필요  | **C#:** <br>`int y = (int) x;`
+| False | 캐스트와 값 간의 공백 필요 없음 | **C#:** <br>`int y = (int)x;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_after_cast = true
 ``` 
 
-### <a name="space_control_flow"> Space After Keywords in Control Flow Statements </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_control_flow"> 제어 흐름 문의 키워드 뒤에 공백 </a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_after_keywords_in_control_flow_statements` |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 값 | 설명 | 적용됨 |
 | ------------- |:-------------|:-------------|
-| True | Require a space after a keyword | **C#:** <br>`for (int i;i<x;i++) { ... }`
-| False | Require no space after a keyword | **C#:** <br>`for(int i;i<x;i++) { ... }`
+| True | 키워드 뒤에 공백 필요 | **C#:** <br>`for (int i;i<x;i++) { ... }`
+| False | 키워드 뒤에 공백 필요 없음 | **C#:** <br>`for(int i;i<x;i++) { ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_after_keywords_in_control_flow_statements = true
 ``` 
 
-### <a name="space_parameter_list"> Space Between Method Declaration Argument-List Parentheses </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_parameter_list">메서드 선언 인수 목록 괄호 간의 공백</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_between_method_declaration_parameter_list_parentheses` |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 값 | 설명 | 적용됨 |
 | ------------- |:-------------|:-------------|
-| True | Require a space after a keyword | **C#:** <br>`void Bark( int x ) { ... }`
-| False | Require no space after a keyword | **C#:** <br>`void Bark(int x) { ... }`
+| True | 키워드 뒤에 공백 필요 | **C#:** <br>`void Bark( int x ) { ... }`
+| False | 키워드 뒤에 공백 필요 없음 | **C#:** <br>`void Bark(int x) { ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_between_method_declaration_parameter_list_parentheses = true
 ```
 
-### <a name="space_method_call"> Space Within Parentheses for Method Call Argument List</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_method_call">메서드 호출 인수 목록의 괄호 내 공백</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |  `csharp_space_between_method_call_parameter_list_parentheses` |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 값 | 설명 | 적용됨 |
 | ------------- |:-------------|:-------------|
-| true | Place space between parentheses of control flow statements | **C#:** <br>`MyMethod( argument );`
-| false | Place space between parentheses of expressions | **C#:** <br>`MyMethod(argument);`
+| true | 제어 흐름 문의 괄호 간에 공백 배치 | **C#:** <br>`MyMethod( argument );`
+| false | 식의 괄호 간에 공백 배치 | **C#:** <br>`MyMethod(argument);`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_between_method_call_parameter_list_parentheses = control_flow_statements, type_casts
 ```  
 
-### <a name="space_other"> Space Within Parentheses for Other Options </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_other">다른 옵션의 괄호 내 공백</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |  `csharp_space_between_parentheses`  |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 값 | 설명 | 적용됨 |
 | ------------- |:-------------|:-------------|
-| control_flow_statements | Place space between parentheses of control flow statements | **C#:** <br>`for( int i;i<x;i++ ) { ... }`
-| expressions | Place space between parentheses of expressions | **C#:** <br>`var z = ( x * y ) - ( ( y - x ) * 3);`
-| type_casts | Place space between parentheses in type casts | **C#:**<br>`int y = ( int )x;`
+| control_flow_statements | 제어 흐름 문의 괄호 간에 공백 배치 | **C#:** <br>`for( int i;i<x;i++ ) { ... }`
+| 식 | 식의 괄호 간에 공백 배치 | **C#:** <br>`var z = ( x * y ) - ( ( y - x ) * 3);`
+| type_casts | 형식 캐스트의 괄호 간에 공백 배치 | **C#:**<br>`int y = ( int )x;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_between_parentheses = control_flow_statements, type_casts
 ``` 
 
-## <a name="wrapping">Wrapping Options</a>
-### <a name="wrapping_statement">Leave Statements and Member Declarations on the Same Line</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="wrapping">래핑 옵션</a>
+### <a name="wrapping_statement">문과 멤버 선언을 동일한 줄에 유지</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |  `csharp_preserve_single_line_statements`   |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description |
+| 값 | 설명 |
 | ------------- |:-------------|
-| True | Leave statements and member declarations on the same line  | 
-| False | Leave statements and member declarations on different lines | 
+| True | 문과 멤버 선언을 동일한 줄에 유지  | 
+| False | 문과 멤버 선언을 다른 줄에 유지 | 
 
-#### <a name="applied"></a>Applied
+#### <a name="applied"></a>적용됨
 ```csharp
 //csharp_preserve_single_line_statements = true
 int i = 0; string name = "John";
@@ -1174,25 +1174,25 @@ int i = 0;
 string name = "John";
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_preserve_single_line_statements = true
 ``` 
 
-### <a name="wrapping_block">Leave Block on Single Line</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="wrapping_block">블록을 한 줄에 유지</a>
+| **옵션 이름** | **해당 언어** | **Visual Studio 기본값** | **지원되는 버전** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |   `csharp_preserve_single_line_blocks`    |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description |
+| 값 | 설명 |
 | ------------- |:-------------|
-| True | Leave block on single line | 
-| False | Leave block on separate lines | 
+| True | 블록을 한 줄에 유지 | 
+| False | 블록을 별도 줄에 유지 | 
 
-#### <a name="applied"></a>Applied
+#### <a name="applied"></a>적용됨
 ```csharp
 //csharp_preserve_single_line_blocks = true
 public int Foo { get; set; }
@@ -1206,16 +1206,16 @@ public int MyProperty
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>예제 editorconfig 파일:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_preserve_single_line_blocks = true
 ``` 
 
-# <a name="naming"> Naming Conventions </a>
-## <a name="overview"></a>Overview
-**Rule Format:**<br>
+# <a name="naming">명명 규칙</a>
+## <a name="overview"></a>개요
+**규칙 형식:**<br>
 namingRuleTitle:<br>
 `dotnet_naming_rule.<namingRuleTitle>.symbols = <symbolTitle>`<br>
 `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>`<br>
@@ -1232,50 +1232,50 @@ styleTitle:<br>
 `dotnet_naming_style.<styleTitle>.required_suffix = string`<br>
 `dotnet_naming_style.<styleTitle>.word_separator = string`<br>
 
-## <a name="writing-a-naming-convention"></a>Writing a Naming Convention
-For naming conventions, you must specify **symbols**, **style**, and a **severity**. Naming conventions should be ordered from most-specific to least-specific. The first rule encountered that can be applied, is the only rule applied. 
+## <a name="writing-a-naming-convention"></a>명명 규칙 작성
+명명 규칙의 경우 **기호**, **스타일** 및 **심각도**를 지정해야 합니다. 명명 규칙은 가장 구체적인 규칙부터 가장 덜 구체적인 규칙으로 정렬되어야 합니다. 적용할 수 있는 첫 번째 규칙은 적용되는 유일한 규칙이 됩니다. 
 
-### <a name="severity"></a>Severity
-The following are valid options for the severity of a naming style rule `none`, `silent`, `suggestion`, `warning`, `error`.
+### <a name="severity"></a>심각도
+다음은 명명 스타일 규칙의 심각도에 유효한 옵션입니다. `none`, `silent`, `suggestion`, `warning`, `error`
 
- `none` and `silent` are synonymous and mean that no indication of any kind should be shown to the user. This has the effect of disabling this rule.
+ `none` 및 `silent`는 동의어이며 사용자에게 표시되어야 한함을 의미하지 않습니다. 이 항목에는 이 규칙을 비활성화하는 효과가 있습니다.
 
- `suggestion` means that the user is shown the following in the Error List: and the following in the IDE. The `suggestion` severity allows the naming rule to run, but it doesn't cause the build to break.
+ `suggestion`은 사용자에게 다음이 오류 목록에 표시되고 다음이 IDE에 표시됨을 의미합니다. `suggestion` 심각도는 실행할 명명 규칙을 허용하지만 빌드를 중단하지는 않습니다.
 
-Severity | effect
+심각도 | 효과
 ------------ | -------------
-none/silent | Do not show anything to the user when this style is not being followed, however code generation features generate in this style. 
-suggestion | When this style is not being followed, show it to the user as a suggestion (underlying dots on the first two characters).
-warning | When this style is not being followed, show a compiler warning.
-error | When this style is not being followed, show a compiler error.
+none/silent | 이 스타일을 따르지 않을 경우 사용자에게 아무 메시지도 표시되지 않지만 코드 생성 기능은 이 스타일로 생성됩니다. 
+suggestion | 이 스타일을 따르지 않을 경우 사용자에게 제안으로 표시됩니다(처음 두 문자에 점선이 밑줄로 표시됨).
+경고 | 이 스타일을 따르지 않을 경우 컴파일러 경고가 표시됩니다.
+오류 | 이 스타일을 따르지 않을 경우 컴파일러 오류가 표시됩니다.
 
-### <a name="symbol-specification"></a>Symbol Specification
-Identify _what_ symbols _with which_ modifiers and _at what_ accessibility level the naming rule should apply to.
+### <a name="symbol-specification"></a>기호 사양
+_어떤_ 기호가 _어떤_ 한정자 및 _어떤_ 액세스 가능성 수준으로 명명 규칙을 적용해야 하는지 식별합니다.
 
-|  Option Name | `dotnet_naming_rule.<namingRuleTitle>.symbols` |
+|  옵션 이름 | `dotnet_naming_rule.<namingRuleTitle>.symbols` |
 | ------------- |:-------------:|
 |  | `dotnet_naming_symbols.<symbolTitle>.applicable_kinds`
 |  | `dotnet_naming_symbols.<symbolTitle>.applicable_accessibilities`
 |  | `dotnet_naming_symbols.<symbolTitle>.required_modifiers`
 
-| Symbol | Accessibility | Modifiers
+| 기호 | 액세스 가능성 | 한정자
 | ------------- |------------- |------------- |
 | `*` | `*` |  `abstract` | 
 | `class` | `public` |  `must_inherit` | `async` | 
-| `struct` | `internal` (C#) /  | `const` | 
-| `interface` | `friend` (Visual Basic) | `readonly` | 
+| `struct` | `internal`(C#) /  | `const` | 
+| `interface` | `friend`(Visual Basic) | `readonly` | 
 | `enum` | `private`  | `static` | 
 | `property` | `protected` | `shared` |
-| `method` |`protected_internal` (C#) | |
-| `field` | `protected_friend` (Visual Basic) | |
+| `method` |`protected_internal`(C#) | |
+| `field` | `protected_friend`(Visual Basic) | |
 | `event` | | |
 | `delegate` | | |
 
 
-### <a name="style-specification"></a>Style Specification
-Identify the naming style to apply to the symbols.
+### <a name="style-specification"></a>스타일 사양
+기호에 적용할 명명 스타일을 식별합니다.
 
-|  Option Name | `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>` |
+|  옵션 이름 | `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>` |
 | ------------- |:-------------:|
 |  | `dotnet_naming_style.<styleTitle>.capitalization`|
 |  | `dotnet_naming_style.<styleTitle>.required_prefix`|
@@ -1283,15 +1283,15 @@ Identify the naming style to apply to the symbols.
 |  | `dotnet_naming_style.<styleTitle>.word_separator`|
 
 
-| Style | Description |
+| 스타일 | 설명 |
 | ------------- |:-------------:|
-| Prefix | Required characters that must appear before the identifier. |
-| Suffix | Required characters that must appear after the identifier. |
-| Word Separator | Required separator between words in the identifier. |
-| Capitalization |`pascal_case`, `camel_case`, `first_word_upper`, `all_upper`, `all_lower` | 
+| 접두사 | 식별자 앞에 표시되어야 하는 필수 문자입니다. |
+| 접미사 | 식별자 뒤에 표시되어야 하는 필수 문자입니다. |
+| 단어 구분 기호 | 식별자에서 단어 간의 필수 구분 기호입니다. |
+| 대문자 표시 |`pascal_case`, `camel_case`, `first_word_upper`, `all_upper`, `all_lower` | 
 
 
-### <a name="example-naming-convention"></a>Example Naming Convention
+### <a name="example-naming-convention"></a>예제 명명 규칙
 ```
 # Dotnet Naming Conventions
 [*.{cs,vb}] 

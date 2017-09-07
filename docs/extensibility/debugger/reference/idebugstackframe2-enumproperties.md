@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5359698b2ae148abd5fc38da346ebcd5c456634c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugstackframe2enumproperties"></a>IDebugStackFrame2::EnumProperties
-Creates an enumerator for properties associated with the stack frame, such as local variables.  
+스택 프레임을 지역 변수와 같은 연관 된 속성에 대 한 열거자를 만듭니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT EnumProperties (   
@@ -64,32 +64,32 @@ int EnumProperties (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `dwFieldSpec`  
- [in] A combination of flags from the [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) enumeration that specifies which fields in the enumerated [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) structures are to be filled in.  
+ [in] 플래그의 조합을 [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) 에 열거 된 필드를 지정 하는 열거형 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 구조체가을 입력 합니다.  
   
  `nRadix`  
- [in] The radix to be used in formatting any numerical information.  
+ [in] 모든 숫자 정보를 서식 지정 하는 데 사용할 기 수입니다.  
   
  `refiid`  
- [in] A GUID of a filter used to select which [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) structures are to be enumerated, such as `guidFilterLocals`.  
+ [in] 선택 하는 데 사용 하는 필터의 GUID [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 구조는 같은 열거 되도록 `guidFilterLocals`합니다.  
   
  `dwTimeout`  
- [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
+ [in] 이 메서드로부터 반환 하기 전에 대기할 밀리초에서는 최대 시간입니다. 사용 하 여 `INFINITE` 무기한 대기를 나타냅니다.  
   
  `pcelt`  
- [out] Returns the number of properties enumerated. This is the same as calling the [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) method.  
+ [out] 열거 속성의 수를 반환 합니다. 이 호출할 때와 동일는 [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) 메서드.  
   
  `ppEnum`  
- [out] Returns an [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) object containing a list of the desired properties.  
+ [out] 반환 된 [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) 원하는 속성의 목록을 포함 하는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- Because this method allows all selected properties to be retrieved with a single call, it is faster than sequentially calling the [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) and [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) methods.  
+## <a name="remarks"></a>설명  
+ 이 메서드를 사용 하면 선택 된 모든 속성을 한 번의 호출으로 검색할 수, 되므로 순차적으로 호출 하는 보다 빠르게는 [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) 및 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 메서드.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)   
  [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)   

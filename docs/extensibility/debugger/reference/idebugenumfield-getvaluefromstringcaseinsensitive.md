@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 68a5f199f389cb5bc24f0e648bb4719c1ad79545
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugenumfieldgetvaluefromstringcaseinsensitive"></a>IDebugEnumField::GetValueFromStringCaseInsensitive
-This method uses a case-insensitive search to return the value associated with the name of an enumeration constant.  
+이 메서드에서 열거형 상수의 이름에 연결 된 값을 반환 하는 대/소문자 구분 검색을 사용 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetValueFromStringCaseInsensitive(  
@@ -56,19 +56,19 @@ int GetValueFromStringCaseInsensitive(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pszValue`  
- [in] A string specifying the name for which to get the value. Note that for C++, this is a wide character string.  
+ [in] 값을 얻을 수 있는 이름을 지정 하는 문자열입니다. C + +에 대 한를 와이드 문자 문자열입니다.  
   
  `pValue`  
- [out] Returns the associated numerical value.  
+ [out] 연결 된 숫자 값을 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns `S_FALSE`, if the name is not part of the enumeration, or an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE`이름을 열거형 또는 오류 코드의 일부가 아닌 경우, 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method is case-insensitive. If a case-sensitive search is needed (for example, in a language such as C++ where names are case-sensitive), use [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md).  
+## <a name="remarks"></a>설명  
+ 이 메서드는 대/소문자 구분. 대/소문자 구분 검색 (예를 들어 이름이 대/소문자 구분 하는 c + +와 같은 언어)에서 필요한 경우 사용 하 여 [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)

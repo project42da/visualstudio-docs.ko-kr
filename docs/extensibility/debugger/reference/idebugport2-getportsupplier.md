@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: b26ff6c2e4d5ff2c7094c203e11e4c6b288fa87b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugport2getportsupplier"></a>IDebugPort2::GetPortSupplier
-Gets the port supplier for this port.  
+이 포트에 대 한 포트 공급자를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetPortSupplier(   
@@ -54,13 +54,13 @@ int GetPortSupplier(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `ppSupplier`  
- [out] Returns an [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) object represents the port supplier for a port.  
+ [out] 반환 된 [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) 개체는 포트에 대 한 포트 공급자를 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

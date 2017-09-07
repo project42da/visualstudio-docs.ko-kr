@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 4d3b06a21b70934863403289fc549815ed515883
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
-Obtains the custom attributes bytes given the name of the custom attribute.  
+사용자 지정 특성의 이름이 지정 된 사용자 지정 특성 (바이트)를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetCustomAttributeByName(   
@@ -58,26 +58,26 @@ int GetCustomAttributeByName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pszCustomAttributeName`  
- [in] A string containing the name of the custom attribute to look for.  
+ [in] 검색할 사용자 지정 특성의 이름을 포함 하는 문자열입니다.  
   
  `ppBlob`  
- [in, out] An array that is filled in with the custom attribute bytes.  
+ [out에서] 사용자 지정 특성 (바이트)를 사용 하 여 입력은 배열입니다.  
   
  `pdwLen`  
- [in, out] Specifies the maximum number of bytes to return in the `ppBlob` array and returns the number of bytes actually written to the array.  
+ [out에서] 반환 하는 바이트의 최대 수를 지정 된 `ppBlob` 배열 및 배열에 실제로 쓴 바이트 수를 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK or returns S_FALSE if the custom attribute does not exist. Otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 S_OK를 반환 하거나 사용자 지정 특성 존재 하지 않는 경우 S_FALSE를 반환 합니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
- Set the `ppBlob` parameter to a null value to return the number of attributes bytes available. Then allocate an array and pass that array in for the `ppBlob` parameter.  
+## <a name="remarks"></a>설명  
+ 설정의 `ppBlob` 매개 변수 개수를 반환 하려면 null 값으로 특성을 사용할 수 있는 바이트입니다. 그런 다음 배열을 할당 하 고에 대 한 해당 배열에 전달 된 `ppBlob` 매개 변수입니다.  
   
- The attribute bytes represent the raw data of the custom attribute.  
+ 특성 바이트는 사용자 지정 특성의 원시 데이터를 나타냅니다.  
   
- If the `ppBlob` and `pdwLen` parameters are set to a null value, this method can be used to determine if the custom attribute merely exists. An easier alternative, however, is to call the [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) method.  
+ 경우는 `ppBlob` 및 `pdwLen` 매개 변수가 null 값으로 설정, 사용자 지정 특성 단순히 있는지 확인 하기 위해이 메서드를 사용할 수 있습니다. 그러나 호출 하는 보다 쉽게 대신는 [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) 메서드.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   
  [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)

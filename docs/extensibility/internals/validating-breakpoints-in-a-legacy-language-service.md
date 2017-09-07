@@ -1,5 +1,5 @@
 ---
-title: Validating Breakpoints in a Legacy Language Service | Microsoft Docs
+title: "유효성을 검사 하는 레거시 언어 서비스의 중단점 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,28 +33,28 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2a87c22948e710a3b95ee7f79b31626794dc7708
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="validating-breakpoints-in-a-legacy-language-service"></a>Validating Breakpoints in a Legacy Language Service
-A breakpoint indicates that program execution should stop at a particular point while it is being run in a debugger. A user can place a breakpoint on any line in the source file, since the editor has no knowledge of what constitutes a valid location for a breakpoint. When the debugger is launched, all of the marked breakpoints (called pending breakpoints) are bound to the appropriate location in the running program. At the same time the breakpoints are validated to ensure that they mark valid code  locations. For example, a breakpoint on a comment is not valid, because there is no code at that location in the source code. The debugger disables invalid breakpoints.  
+# <a name="validating-breakpoints-in-a-legacy-language-service"></a>유효성을 검사 하는 레거시 언어 서비스의 중단점
+중단점은 디버거에 실행 되는 동안 특정 지점에서 프로그램 실행을 중지 해야 함을 나타냅니다. 사용자는 편집기에는 중단점에 대 한 올바른 위치를 구성 하는 항목에 대해 알지 못합니다 소스 파일에서 줄 중단점을 배치할 수 있습니다. 디버거를 시작할 때 실행 중인 프로그램에서 적절 한 위치에는의 모든 표시 된 중단점 (보류 중단점 라고 함)이 바인딩됩니다. 중단점 되도록 유효성을 검사 하는 동시에 유효한 코드 위치 표시 합니다. 예를 들어 메모에 중단점 올바르지 소스 코드의 위치에 있는 코드가 없는 있기 때문에 합니다. 디버거가 잘못 된 중단점을 해제 합니다.  
   
- Since the language service knows about the source code being displayed, it can validate breakpoints before the debugger is launched. You can override the <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method to return a span specifying a valid location for a breakpoint. The breakpoint location is still validated when the debugger is launched, but the user is notified of invalid breakpoints without waiting for the debugger to load.  
+ 표시 되 고 소스 코드에 대 한 언어 서비스를 알고 있으므로 검사할 수 중단점 디버거를 시작 하기 전에. 재정의할 수 있습니다는 <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> 중단점의 올바른 위치를 지정 하는 범위를 반환 하는 메서드. 중단점 위치 디버거를 시작할 때 잘못 된 중단점의 디버거를 로드할 때까지 기다리지 않고 사용자가 알림을 계속 유효성이 검사 됩니다.  
   
-## <a name="implementing-support-for-validating-breakpoints"></a>Implementing Support for Validating Breakpoints  
+## <a name="implementing-support-for-validating-breakpoints"></a>중단점 유효성 검사에 대 한 지원 구현  
   
--   The <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method is given the position of the breakpoint. Your implementation must decide whether or not the location is valid, and indicate this by returning a text span that identifies the code associated with the line position the breakpoint.  
+-   <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> 메서드에 중단점의 위치를 제공 됩니다. 구현 위치 올바른지와 코드를 식별 하는 텍스트 범위를 반환 하 여이 연결 된 줄 위치 중단점 표시 여부를 결정 해야 합니다.  
   
--   Return <xref:Microsoft.VisualStudio.VSConstants.S_OK> if the location is valid, or <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> if it is not valid.  
+-   반환할 <xref:Microsoft.VisualStudio.VSConstants.S_OK> 위치 올바른지 또는 <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> 유효 하지 않을 경우.  
   
--   If the breakpoint is valid the text span is highlighted along with the breakpoint.  
+-   중단점이 올바르면 텍스트 범위 중단점 함께 강조 표시 됩니다.  
   
--   If the breakpoint is invalid, an error message appears in the status bar.  
+-   중단점이 유효 하지 않을 경우 상태 표시줄에 오류 메시지가 나타납니다.  
   
-### <a name="example"></a>Example  
- This example shows an implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method that calls the parser to obtain the span of code (if any) at the specified location.  
+### <a name="example"></a>예제  
+ 구현을 보여 주는이 예제는 <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> 메서드를 지정된 된 위치에 (해당 되는 경우) 코드의 범위를 가져오려면 파서를 호출 합니다.  
   
- This example assumes that you have added a `GetCodeSpan` method to the <xref:Microsoft.VisualStudio.Package.AuthoringSink> class that validates the text span and returns `true` if it is a valid breakpoint location.  
+ 이 예에서는 추가 했다고 가정는 `GetCodeSpan` 메서드는 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 확인 하는 텍스트 범위를 반환 하는 클래스 `true` 중단점이 올바르면 위치인 경우.  
   
 ```csharp  
 using Microsoft VisualStudio;  
@@ -116,5 +116,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)
+## <a name="see-also"></a>참고 항목  
+ [레거시 언어 서비스 기능](../../extensibility/internals/legacy-language-service-features1.md)

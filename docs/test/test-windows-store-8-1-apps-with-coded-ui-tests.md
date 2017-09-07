@@ -1,5 +1,5 @@
 ---
-title: Test Windows UWP and 8.1 Store Apps with Coded UI Tests | Microsoft Docs
+title: "코딩된 UI 테스트를 사용하여 Windows UWP 및 8.1 스토어 앱 테스트 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,32 +31,32 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2a9dc338ce3d08ac61ecc77da8df96d9261b7e62
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>Test Windows UWP and 8.1 Store Apps with Coded UI Tests
+# <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>코딩된 UI 테스트를 사용하여 Windows UWP 및 8.1 스토어 앱 테스트
 
-Use this walkthrough for creating UI tests for UWP apps and XAML-based Store 8.1 apps. 
+UWP 앱 및 XAML 기반 Store 8.1 앱에 대한 UI 테스트를 만들기 위해 이 연습을 사용합니다. 
   
-## <a name="create-a-simple-windows-store-app"></a>Create a simple Windows Store app  
+## <a name="create-a-simple-windows-store-app"></a>간단한 Windows 스토어 앱 만들기  
   
-1.  If you want to run coded UI tests for your XAML-based Windows Store app, you must [set a unique automation property that identifies each control](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md).  
+1.  XAML 기반 Windows 스토어 앱용 코딩된 UI 테스트를 실행하려는 경우 [각 컨트롤을 식별하는 고유한 자동화 속성을 설정해야 합니다](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md).  
   
-     On the **Tools** menu, point to **Options** and then choose **Text Editor**, then **XAML**, and finally **Miscellaneous**.  
+     **도구** 메뉴에서 **옵션** 을 가리킨 다음 **텍스트 편집기**, **XAML**및 **기타**를 차례대로 선택합니다.  
   
-     Select the check box to automatically name interactive elements on creation.  
+     만들 때 대화형 요소의 이름을 자동으로 지정하려면 이 확인란을 선택합니다.  
   
-     ![XAML Miscellaneous options](../test/media/cuit_windowsstoreapp_b.png "CUIT_WindowsStoreApp_B")  
+     ![XAML 기타 옵션](../test/media/cuit_windowsstoreapp_b.png "CUIT_WindowsStoreApp_B")  
   
-2.  Create a new project for a blank XAML based Windows Store app using either Visual C# or Visual Basic template.  
+2.  Visual C# 또는 Visual Basic 템플릿을 사용하여 빈 XAML 기반 Windows 스토어 앱용 새 프로젝트를 만듭니다.  
   
-     ![Create a Windows Store Blank App &#40;XAML&#41;](../test/media/cuit_windowsstoreapp_newproject_blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")  
+     ![Windows 스토어 비어 있는 앱&#40;XAML&#41; 만들기](../test/media/cuit_windowsstoreapp_newproject_blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")  
   
-3.  In Solution Explorer, open MainPage.xaml. From the Toolbox, drag a button control and a textbox control to the design surface.  
+3.  솔루션 탐색기에서 MainPage.xaml을 엽니다. 도구 상자에서 단추 컨트롤과 textbox 컨트롤을 디자인 화면으로 끕니다.  
   
-     ![Design the Windows Store app](../test/media/cuit_windowsstoreapp_design.png "CUIT_WindowsStoreApp_Design")  
+     ![Windows 스토어 앱 디자인](../test/media/cuit_windowsstoreapp_design.png "CUIT_WindowsStoreApp_Design")  
   
-4.  Double-click the button control and add the following code:  
+4.  단추 컨트롤을 두 번 클릭하여 다음 코드를 추가합니다.  
   
     ```csharp  
     private void button_Click_1(object sender, RoutedEventArgs e)  
@@ -76,60 +76,60 @@ Use this walkthrough for creating UI tests for UWP apps and XAML-based Store 8.1
     End Class  
     ```  
   
-5.  Press F5 to run your Windows Store app.  
+5.  F5 키를 눌러 Windows 스토어 앱을 실행합니다.  
   
-## <a name="create-and-run-a-coded-ui-test-for-the-windows-store-app"></a>Create and run a coded UI test for the Windows Store app  
+## <a name="create-and-run-a-coded-ui-test-for-the-windows-store-app"></a>Windows 스토어 앱용 코딩된 UI 테스트 만든 후 실행  
 
-[How do I create coded UI tests for Universal Windows Platform (UWP) apps?](#uwpapps)
+[UWP(유니버설 Windows 플랫폼) 앱을 위한 코딩된 UI 테스트를 만들려면 어떻게 하나요?](#uwpapps)
   
-1.  Create a new coded UI test project for the Windows Store app.  
+1.  Windows 스토어 앱용 코딩된 UI 테스트 프로젝트를 새로 만듭니다.  
   
-     ![New coded UI tet project &#40;Windows Store Apps&#41;](../test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
+     ![새 코딩된 UI 테스트 프로젝트&#40;Windows 스토어 앱&#41;](../test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
   
-2.  Choose to edit the UI map using the cross-hair tool.  
+2.  십자선 도구를 사용하여 UI 맵을 편집하도록 선택합니다.  
   
-     ![Choose edit UI map or add assertions](../test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
+     ![UI 맵 편집 또는 어설션 추가 선택](../test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
   
-3.  Use the cross-hair tool in the Coded UI Test Builder to select the app tile, right-click **AutomationId** and choose **Copy Value to Clipboard**. The value in the clipboard will be used later for writing action to launch the app for testing.  
+3.  코딩된 UI 테스트 빌더에서 십자선 도구를 사용하여 앱 타일을 선택하고 **AutomationId** 를 마우스 오른쪽 단추로 클릭한 다음 **값을 클립보드로 복사**를 선택합니다. 나중에 테스트용으로 앱을 시작하는 작업을 작성할 때 클립보드의 값이 사용됩니다.  
   
-     ![Copy AutomationId to clipboard](../test/media/cuit_windows_store_tileautomationid.png "CUIT_Windows_Store_TileAutomationID")  
+     ![클립보드에 AutomationId 복사](../test/media/cuit_windows_store_tileautomationid.png "CUIT_Windows_Store_TileAutomationID")  
   
-4.  In the running Windows Store app, use the cross-hair tool to select the button control and the textbox control. After adding each control, choose the **Add control to UI control map** button in the Coded UI Test Builder toolbar.  
+4.  실행 중인 Windows 스토어 앱에서 십자선 도구를 사용하여 단추 컨트롤 및 textbox 컨트롤을 선택합니다. 각 컨트롤을 추가한 후 코딩된 UI 테스트 빌더 도구 모음에서 **UI 컨트롤 맵에 컨트롤 추가** 단추를 선택합니다.  
   
-     ![Add control to UI map](../test/media/cuit_windowsstoreapp_uimap.png "CUIT_WindowsStoreApp_UIMap")  
+     ![UI 맵에 컨트롤 추가](../test/media/cuit_windowsstoreapp_uimap.png "CUIT_WindowsStoreApp_UIMap")  
   
-5.  Choose the **Generate Code** button in the Coded UI Test Builder toolbar and then choose **Generate** to create code for changes to the UI control map.  
+5.  코딩된 UI 테스트 빌더 도구 모음에서 **코드 생성** 단추를 선택한 다음 **생성** 을 선택하여 UI 컨트롤 맵 변경을 위한 코드를 만듭니다.  
   
-     ![Generate code for the UI map](../test/media/cuit_windowsstoreapp_generate.png "CUIT_WindowsStoreApp_Generate")  
+     ![UI 맵에 대한 코드 생성](../test/media/cuit_windowsstoreapp_generate.png "CUIT_WindowsStoreApp_Generate")  
   
-6.  Choose the button to set a value in the textbox.  
+6.  단추를 선택하여 텍스트 상자에서 값을 설정합니다.  
   
-     ![Click button control to set textbox value](../test/media/cuit_windowsstoreapp_clickbutton.png "CUIT_WindowsStoreApp_ClickButton")  
+     ![단추 컨트롤을 클릭하여 텍스트 상자 값 설정](../test/media/cuit_windowsstoreapp_clickbutton.png "CUIT_WindowsStoreApp_ClickButton")  
   
-7.  Use the cross-hair tool to select the textbox control, and then select the **Text** property.  
+7.  십자선 도구를 사용하여 textbox 컨트롤을 선택한 다음 **텍스트** 속성을 선택합니다.  
   
-     ![Select the Text property](../test/media/cuit_windowsstoreapp_selecttextproperty.png "CUIT_WindowsStoreApp_SelectTextProperty")  
+     ![Text 속성 선택](../test/media/cuit_windowsstoreapp_selecttextproperty.png "CUIT_WindowsStoreApp_SelectTextProperty")  
   
-8.  Add an assertion. It will be used in the test to verify that the value is correct.  
+8.  어설션을 추가합니다. 이 어설션은 값이 올바른지 확인하는 테스트에 사용됩니다.  
   
-     ![Choose testbox with cross&#45;hair and add assertion](../test/media/cuit_windowsstoreapp_textbox_addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")  
+     ![십자선이 있는 텍스트 상자 선택 및 어설션 추가](../test/media/cuit_windowsstoreapp_textbox_addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")  
   
-9. Add and generate code for the assertion.  
+9. 어설션에 대한 코드를 추가 및 생성합니다.  
   
-     ![Generate code for textbox assertion](../test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
+     ![텍스트 상자 어설션에 대한 코드 생성](../test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
   
 10. **Visual C#**  
   
-     In Solution Explorer, open the UIMap.Designer.cs file to view the added code for the assert method and the controls.  
+     솔루션 탐색기에서 UIMap.Designer.cs 파일을 열어 assert 메서드 및 컨트롤에 대해 추가한 코드를 확인합니다.  
   
      **Visual Basic**  
   
-     In Solution Explorer, open the CodedUITest1.vb file and then in the CodedUITestMethod1() test method code, right-click the call to the assertion method that was automatically added `Me.UIMap.AssertMethod1()` and choose **Go To Definition**. This will open the UIMap.Designer.vb file in the code editor so you can view the view the added code for the assert method and the controls.  
+     솔루션 탐색기에서 CodedUITest1.vb 파일을 연 다음 CodedUITestMethod1() 테스트 메서드 코드에서 자동으로 추가된 `Me.UIMap.AssertMethod1()` 인 어설션 메서드에 대한 호출을 마우스 오른쪽 단추로 클릭한 다음 **정의로 이동**을 선택합니다. 그러면 assert 메서드 및 해당 컨트롤에 대해 추가한 코드를 확인할 수 있도록 코드 편집기에서 UIMap.Designer.vb 파일이 열립니다.  
   
     > [!WARNING]
-    >  Do not modify the UIMap.designer.cs or UIMap.Designer.vb file directly. If you do this, the changes to the file will be overwritten each time the test is generated.  
+    >  UIMap.designer.cs 파일 또는 UIMap.Designer.vb 파일은 직접 수정하지 마세요. 수정하면 테스트를 생성할 때마다 파일에 대한 변경 내용을 덮어씁니다.  
   
-     **Assert method**  
+     **Assert 메서드**  
   
     ```csharp  
     public void AssertMethod1()  
@@ -152,7 +152,7 @@ Use this walkthrough for creating UI tests for UWP apps and XAML-based Store 8.1
     End Sub  
     ```  
   
-     **Controls**  
+     **컨트롤**  
   
     ```csharp  
     #region Properties  
@@ -228,9 +228,9 @@ Use this walkthrough for creating UI tests for UWP apps and XAML-based Store 8.1
     #End Region  
     ```  
   
-11. In Solution Explorer, open the CodedUITest1.cs or CodedUITest1.vb file. You can now add code to the CodedUTTestMethod1 method for the actions need to run the test using the controls added to the UIMap:  
+11. 솔루션 탐색기에서 CodedUITest1.cs 또는 CodedUITest1.vb 파일을 엽니다. 이제 UIMap에 추가한 컨트롤을 사용하여 다음과 같이 테스트 실행에 필요한 작업을 위한 CodedUTTestMethod1 메서드에 코드를 추가할 수 있습니다.  
   
-    1.  Launch the Windows Store app using the automation ID property you copied to the clipboard previously:  
+    1.  이전에 클립보드에 복사한 AutomationId를 사용하여 Windows 스토어 앱을 시작합니다.  
   
         ```csharp  
         XamlWindow.Launch("8ebca7c4-effe-4c86-9998-068daccee452_cyrqexqw8cc7c!App")  
@@ -240,7 +240,7 @@ Use this walkthrough for creating UI tests for UWP apps and XAML-based Store 8.1
         XamlWindow myAppWindow = XamlWindow.Launch("7254db3e-20a7-424e-8e05-7c4dabf4f28d_cyrqexqw8cc7c!App");  
         ```  
   
-    2.  Add a gesture to tap the button control:  
+    2.  다음과 같이 단추 컨트롤을 누르는 제스처를 추가합니다.  
   
         ```csharp  
         Gesture.Tap(this.UIMap.UIApp1Window. UIButtonButton);  
@@ -250,7 +250,7 @@ Use this walkthrough for creating UI tests for UWP apps and XAML-based Store 8.1
         Gesture.Tap(Me.UIMap.UIApp2Window. UIButtonButton)  
         ```  
   
-    3.  Verify that the call to the assert method that was automatically generated comes after launching the app and tap gesture on the button:  
+    3.  앱과 단추 탭하기 제스처 시작 후 자동으로 생성된 assert 메서드가 호출되는지 확인합니다.  
   
         ```csharp  
         this.UIMap.AssertMethod1();  
@@ -260,7 +260,7 @@ Use this walkthrough for creating UI tests for UWP apps and XAML-based Store 8.1
         Me.UIMap.AssertMethod1()  
         ```  
   
-     After adding the code, the CodedUITestMethod1 test method should appear as follows:  
+     코드를 추가한 후 CodedUITestMethod1 테스트 메서드의 모양은 다음과 같아야 합니다.  
   
     ```csharp  
     [TestMethod]  
@@ -298,48 +298,48 @@ Use this walkthrough for creating UI tests for UWP apps and XAML-based Store 8.1
         End Sub  
     ```  
   
-12. Build your test and then run the test using the test explorer.  
+12. 테스트를 빌드한 다음 테스트 탐색기를 사용하여 테스트를 실행합니다.  
   
-     ![Run the coded UI test from Test Explorer](../test/media/cuit_windowsstoreapp_runtest.png "CUIT_WindowsStoreApp_RunTest")  
+     ![테스트 탐색기에서 코딩된 UI 테스트 실행](../test/media/cuit_windowsstoreapp_runtest.png "CUIT_WindowsStoreApp_RunTest")  
   
-     The Windows Store app launches, the action to tap the button is completed, and the textbox's Text property is populated and validated using the assert method.  
+     Windows 스토어 앱이 시작되고 단추 탭하기 작업이 완료되며 assert 메서드를 사용하여 텍스트 상자의 텍스트 속성이 채워지고 확인됩니다.  
   
-     ![Running coded UI test](../test/media/cuit_windowsstoreapp_running.png "CUIT_WindowsStoreApp_Running")  
+     ![코딩된 UI 테스트 실행](../test/media/cuit_windowsstoreapp_running.png "CUIT_WindowsStoreApp_Running")  
   
-     After the test completes, the test explorer displays that the test passed.  
+     테스트를 완료하면 테스트 탐색기에는 테스트를 통과했음이 표시됩니다.  
   
-     ![Passed test displays in Test Explorer](../test/media/cuit_windowsstorapp_passedtest.png "CUIT_WindowsStorApp_PassedTest")  
+     ![테스트 탐색기에 표시된 통과한 테스트](../test/media/cuit_windowsstorapp_passedtest.png "CUIT_WindowsStorApp_PassedTest")  
   
-## <a name="q--a"></a>Q & A  
+## <a name="q--a"></a>Q&A  
   
-#### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Q: Why don't I see the option to record my coded UI test in the Generate Code for a Coded UI Test dialog?**  
+#### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Q: [코딩된 UI 테스트용으로 코드 생성] 대화 상자에 나의 코딩된 UI 테스트를 기록할 수 있는 옵션이 표시되지 않는 이유는 무엇인가요?**  
   
-**A**: The option to record is not supported for Windows Store apps.  
+**A**: Windows 스토어 앱의 경우 기록 옵션이 지원되지 않습니다.  
   
-#### <a name="q-can-i-create-a-coded-ui-test-for-my-windows-store-apps-based-on-winjs"></a>Q: Can I create a coded UI test for my Windows Store apps based on WinJS?**  
+#### <a name="q-can-i-create-a-coded-ui-test-for-my-windows-store-apps-based-on-winjs"></a>Q: WinJS를 기반으로 Windows 스토어 앱용 코딩된 UI 테스트를 만들 수 있나요?**  
 
-**A**: No, only XAML based apps are supported.  
+**A**: 아니요, XAML 기반 앱만 지원됩니다.  
   
-#### <a name="q-can-i-create-coded-ui-tests-for-my-windows-store-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>Q: Can I create coded UI tests for my Windows Store apps on a system that is not running Windows 8.1 or Windows 10?**  
+#### <a name="q-can-i-create-coded-ui-tests-for-my-windows-store-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>Q: Windows 8.1 또는 Windows 10이 실행되고 있지 않은 시스템에서 Windows 스토어 앱을 위한 코딩된 UI 테스트를 만들 수 있나요?**  
   
-**A**: No, the Coded UI Test Project templates are only available on Windows 8.1 and Windows 10. To create automation for Universal Windows Platform (UWP) apps, you'll need Windows 10.  
+**A**: 아니요, 코딩된 UI 테스트 프로젝트 템플릿은 Windows 8.1 및 Windows 10에서만 사용할 수 있습니다. UWP(유니버설 Windows 플랫폼) 앱에 대한 자동화를 만들려면 Windows 10이 필요합니다.  
 
 <a name="uwpapps"></a>  
-#### <a name="q-how-do-i-create-coded-ui-tests-for-universal-windows-platform-uwp-apps"></a>Q: How do I create coded UI tests for Universal Windows Platform (UWP) apps?**  
+#### <a name="q-how-do-i-create-coded-ui-tests-for-universal-windows-platform-uwp-apps"></a>Q: UWP(유니버설 Windows 플랫폼) 앱을 위한 코딩된 UI 테스트를 만들려면 어떻게 하나요?**  
   
-**A**: Depending on the platform where you're testing your UWP app, create coded UI test project in one of these ways:  
+**A**: UWP 앱을 테스트하는 플랫폼에 따라 다음 중 한 가지 방법으로 코딩된 UI 테스트 프로젝트를 만듭니다.  
   
-- A UWP app running on local machine will run as a Store app. To test this, you must use the **Coded UI Test Project (Windows)** template. To find this template when you create a new project, go to the **Windows**, **Universal** node. Or go to the **Windows**, **Windows 8**, **Windows** node.  
+- 로컬 컴퓨터에서 실행 중인 UWP 앱이 스토어 앱으로 실행되는 경우. 이를 테스트하려면 **코딩된 UI 테스트 프로젝트(Windows)** 템플릿을 사용해야 합니다. 새 프로젝트를 만들 때 이 템플릿을 찾으려면 **Windows**, **범용** 노드로 이동합니다. 또는 **Windows**, **Windows 8**, **Windows** 노드로 이동합니다.  
   
-- A UWP app running on mobile device or emulator will run as a Phone app. To test this, you must use the **Coded UI Test Project (Windows Phone)** template. To find this template when you create a new project, go to the **Windows**, **Universal** node. Or go to the **Windows**, **Windows 8**, **Windows Phone** node.  
+- 모바일 장치 또는 에뮬레이터에서 실행 중인 UWP 앱이 휴대폰 앱으로 실행되는 경우. 이를 테스트하려면 **코딩된 UI 테스트 프로젝트(Windows Phone)** 템플릿을 사용해야 합니다. 새 프로젝트를 만들 때 이 템플릿을 찾으려면 **Windows**, **범용** 노드로 이동합니다. 또는 **Windows**, **Windows 8**, **Windows Phone** 노드로 이동합니다.  
   
-After you create the project, authoring a test stays the same as before.  
+프로젝트를 만든 후의 테스트 작성은 이전과 동일합니다.  
   
-#### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q: Why can't I modify the code in the UIMap.Designer file?**  
+#### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q: UIMap.Designer 파일에서 코드를 수정할 수 없는 이유는 무엇인가요?**  
   
-**A**: Any code changes you make in the UIMapDesigner.cs file will be overwritten every time you generate code using the UIMap - Coded UI Test Builder. If you have to modify a recorded method, you must copy it to UIMap.cs file and rename it. The UIMap.cs file can be used to override methods and properties in the UIMapDesigner.cs file. You must remove the reference to the original method in the Coded UITest.cs file and replace it with the renamed method name.  
+**A**: UIMap - 코딩된 UI 테스트 빌더를 사용하여 코드를 생성할 때마다 UIMapDesigner.cs 파일에서 수정된 코드 변경 내용을 덮어씁니다. 기록된 메서드를 수정해야 하는 경우에는 해당 메서드를 UIMap.cs 파일에 복사한 후 이름을 바꾸어야 합니다. UIMap.cs 파일을 사용하여 UIMapDesigner.cs 파일의 메서드와 속성을 재정의할 수 있습니다. 코딩된 UITest.cs 파일에서 원래 메서드에 대한 참조를 제거하고 이름을 바꾼 메서드 이름으로 바꾸어야 합니다.  
   
-## <a name="see-also"></a>See Also  
- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)   
- [Set a Unique Automation Property for Windows Store Controls for Testing](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)
+## <a name="see-also"></a>참고 항목  
+ [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
+ [테스트를 위해 Windows 스토어 컨트롤에 대한 고유 자동화 속성 설정](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)
 

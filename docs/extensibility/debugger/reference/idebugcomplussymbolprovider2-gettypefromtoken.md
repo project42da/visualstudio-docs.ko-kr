@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: b8395849f002519d52ed1f547e92b67e35f6408e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovider2gettypefromtoken"></a>IDebugComPlusSymbolProvider2::GetTypeFromToken
-Retrieves a type given its token.  
+해당 토큰이 지정 된 형식을 검색 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetTypeFromToken(  
@@ -59,24 +59,24 @@ int GetTypeFromToken(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `appDomain`  
- [in] Identifier of the application domain.  
+ [in] 응용 프로그램 도메인의 식별자입니다.  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ [in] 모듈의 고유 식별자입니다.  
   
  `tdToken`  
- [in] Token of the type to be retrieved.  
+ [in] 검색할 형식의 토큰입니다.  
   
  `ppField`  
- [out] Returns the type that is represented by the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
+ [out] 나타내는 형식을 반환는 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
+## <a name="example"></a>예제  
+ 다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CDebugSymbolProvider** 공개 하는 개체는 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) 인터페이스입니다.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetTypeFromToken(  
@@ -104,5 +104,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

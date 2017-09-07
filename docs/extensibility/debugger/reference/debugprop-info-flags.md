@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: f4633730a3dbe09f356c3731cd48c9428b9e8890
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="debugpropinfoflags"></a>DEBUGPROP_INFO_FLAGS
-Specifies what information to retrieve about a debug property object.  
+검색할 디버그 속성 개체에 대 한 정보를 지정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 enum enum_DEBUGPROP_INFO_FLAGS {   
@@ -85,62 +85,62 @@ public enum enum_DEBUGPROP_INFO_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>멤버  
  DEBUGPROP_INFO_FULLNAME  
- Initialize/use the `bstrFullName` field.  
+ 초기화/사용 된 `bstrFullName` 필드입니다.  
   
  DEBUGPROP_INFO_NAME  
- Initialize/use the `bstrName` field.  
+ 초기화/사용 된 `bstrName` 필드입니다.  
   
  DEBUGPROP_INFO_TYPE  
- Initialize/use the `bstrType` field.  
+ 초기화/사용 된 `bstrType` 필드입니다.  
   
  DEBUGPROP_INFO_VALUE  
- Initialize/use the `bstrValue` field.  
+ 초기화/사용 된 `bstrValue` 필드입니다.  
   
  DEBUGPROP_INFO_ATTRIB  
- Initialize/use the `dwAttrib` field.  
+ 초기화/사용 된 `dwAttrib` 필드입니다.  
   
  DEBUGPROP_INFO_PROP,  
- Initialize/use the `pProperty` field that contains an [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interface.  
+ 초기화/사용 된 `pProperty` 포함 된 필드는 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 인터페이스입니다.  
   
  DEBUGPROP_INFO_VALUE_AUTOEXPAND  
- Specifies that the value field should contain the auto-expanded value, if available, for this type of object.  
+ 값 필드는이 형식의 개체에 대 한 사용 가능한 경우 자동 확장 값이 포함 되어야 지정 합니다.  
   
  DEBUGPROP_INFO_VALUE_NOFUNCEVAL  
- Deprecated.  
+ 더 이상 사용되지 않습니다.  
   
  DEBUGPROP_INFO_VALUE_RAW  
- Do not return any beautified values or members (that is, do not format the values).  
+ 모든 beautified 값 또는 멤버를 반환 하지 않습니다 (즉, 포맷 안 함 값).  
   
  DEBUGPROP_INFO_VALUE_NO_TOSTRING  
- Do not return any special synthesized values (for example, do not call `ToString()` on an object to produce a value).  
+ 특별 한 합성 된 값을 반환 하지 않습니다 (예를 들어 호출 하지 마십시오 `ToString()` 하 여 값 개체에).  
   
  DEBUGPROP_INFO_NONE  
- Specifies that no flags are set.  
+ 플래그가 설정 되어 있는지를 지정 합니다.  
   
  DEBUGPROP_INFO_STANDARD  
- Initialize/use the `dwAttrib`, `bstrName`, `bstrType`, and `bstrValue` fields.  
+ 초기화/사용 된 `dwAttrib`, `bstrName`, `bstrType`, 및 `bstrValue` 필드입니다.  
   
  DEBUGPROP_INFO_All  
- Indicates a mask of all flags.  
+ 모든 플래그의 마스크를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
- These values are passed to the [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md), [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md), and [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) methods to indicate which fields are to be initialized the [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) structure.  
+## <a name="remarks"></a>설명  
+ 이러한 값에 전달 되는 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md), [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md), 및 [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) 를 초기화할 수 있는 필드를 나타내는 방법은 [ DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 구조입니다.  
   
- These values are also used for the `dwFields` member of the `DEBUG_PROPERTY_INFO` structure to indicate which fields of the structure are used and valid when the structure is returned.  
+ 이러한 값에도 사용 됩니다는 `dwFields` 의 멤버는 `DEBUG_PROPERTY_INFO` 구조에는 구조체의 필드는 사용 되지 않으며 유효한 구조를 반환 하는 경우.  
   
- These values may be combined with a bitwise `OR`.  
+ 이러한 값에 비트와 함께 사용할 수 있습니다 `OR`합니다.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)   
  [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)   

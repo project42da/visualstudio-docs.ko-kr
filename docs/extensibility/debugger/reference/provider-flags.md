@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: c7803cad2b18ad668bf6ac4814821c1f9098774d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="providerflags"></a>PROVIDER_FLAGS
-Specifies desired properties to be obtained from a program provider.  
+프로그램 공급자에서 가져와야 원하는 속성을 지정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 enum enum_PROVIDER_FLAGS {  
@@ -67,30 +67,30 @@ public enum enum_PROVIDER_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>멤버  
  PFLAG_NONE  
- No flags specified.  
+ 지정 된 플래그가 없습니다.  
   
  PFLAG_REMOTE_PORT  
- Caller wants a list of programs on a different machine than [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
+ 호출자가 다른 컴퓨터에 있는 프로그램 목록을 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]합니다.  
   
  PFLAG_DEBUGGEE  
- The process is currently being debugged by this instance of [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
+ 프로세스의이 인스턴스에서 현재 디버깅 중인 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]합니다.  
   
  PFLAG_ATTACH_TODEBUGGEE  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] is attached to the program being debugged but did not launch it.  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]디버깅 중인 프로그램에 연결 되어 있지만 시작 하지 못했습니다.  
   
  PFLAG_REASON_WATCH  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] is watching for events.  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]가 이벤트를 감시 합니다.  
   
  PFLAG_GET_PROGRAM_NODES  
- Caller wants the `ProgramNodes` field of the [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) structure.  
+ 호출자가는 `ProgramNodes` 필드는 [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) 구조입니다.  
   
  PFLAG_GET_IS_DEBUGGER_PRESENT  
- Caller wants the `fIsTheDebuggerPresent` field of the `PROVIDER_PROCESS_DATA` structure.  
+ 호출자가는 `fIsTheDebuggerPresent` 필드는 `PROVIDER_PROCESS_DATA` 구조입니다.  
   
-## <a name="remarks"></a>Remarks  
- These flags are passed to the following methods:  
+## <a name="remarks"></a>설명  
+ 이러한 플래그는 다음 방법에 전달 됩니다.  
   
 -   [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
   
@@ -98,17 +98,17 @@ public enum enum_PROVIDER_FLAGS {
   
 -   [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
   
- These values can be combined with a bitwise `OR`.  
+ 이러한 값에 비트와 함께 사용할 수 있습니다 `OR`합니다.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>요구 사항  
+ 헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)   
  [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)   
  [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)   

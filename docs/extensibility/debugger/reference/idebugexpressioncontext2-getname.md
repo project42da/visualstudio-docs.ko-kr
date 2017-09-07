@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: fa2e97ef660c4872e234e386b5b2513551551c7c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugexpressioncontext2getname"></a>IDebugExpressionContext2::GetName
-Retrieves the name of the evaluation context.  
+평가 컨텍스트에 이름을 검색합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetName(   
@@ -54,19 +54,19 @@ int GetName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `pbstrName`  
- [out] Returns the name of the evaluation context.  
+ [out] 평가 컨텍스트에 이름을 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- The name is the description of this evaluation context. It is typically something that can be parsed by an expression evaluator that refers to this exact evaluation context. For example, in C++ the name is as follows:  
+## <a name="remarks"></a>설명  
+ 이름은이 평가 컨텍스트에 설명입니다. 일반적으로 문제입니다이 정확 하 게 평가 컨텍스트를 참조 하는 식 계산기의 구문 분석 될 수 있습니다. 예를 들어 c + +에서 이름을 다음과 같습니다.  
   
 ```  
 "{ function-name, source-file-name, module-file-name }"  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)

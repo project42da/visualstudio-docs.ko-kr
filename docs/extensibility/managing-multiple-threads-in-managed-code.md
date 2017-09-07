@@ -1,5 +1,5 @@
 ---
-title: 'How to: Managing Multiple Threads in Managed Code | Microsoft Docs'
+title: "방법: 관리 코드에서 다중 스레드 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,20 +30,20 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 21fcc9388b40baa9e003b4beb876ba2f0f23fbaf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="how-to-managing-multiple-threads-in-managed-code"></a>How to: Managing Multiple Threads in Managed Code
-If you have a managed VSPackage extension that calls asynchronous methods or has operations that execute on threads other than the Visual Studio UI thread, you should follow the guidelines given below. You can keep the UI thread responsive because it doesn't need to wait for work on another thread to complete. You can make your code more efficient, because you don't have extra threads that take up stack space, and you can make it more reliable and easier to debug because you avoid deadlocks and hangs.  
+# <a name="how-to-managing-multiple-threads-in-managed-code"></a>방법: 관리 코드에서 다중 스레드 관리
+비동기 메서드를 호출 하거나는 Visual Studio UI 스레드가 아닌 스레드에서 실행 하는 작업을 제공 하는 관리 되는 VSPackage 확장을 설정한 경우 다음 지침을 따라야 합니다. 완료 하려면 다른 스레드에서 작업을 기다릴 필요 하지 않습니다 때문에 UI 스레드를 응답 유지할 수 있습니다. 코드 보다 효율적으로 수행할 수 스택 공간을 차지 하는 추가 스레드가 없기 때문에 있고 더 안정적이 고 쉽게 교착 상태 및 중지 문제를 방지 하기 때문에 디버깅할 수 있도록 만들 수 있습니다.  
   
- In general, you can switch from the UI thread to a different thread, or vice versa. When the method returns, the current thread is the thread from which it was originally called.  
+ 일반적으로 전환할 수 있습니다 UI 스레드에서 다른 스레드로 또는 그 반대의 경우도 마찬가지입니다. 메서드가 반환 될 때 현재 스레드를 사용 했던 스레드가입니다.  
   
 > [!IMPORTANT]
->  The following guidelines use the APIs in the <xref:Microsoft.VisualStudio.Threading> namespace, in particular, the <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> class. The APIs in this namespace are new in [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]. You can get an instance of a <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> from the <xref:Microsoft.VisualStudio.Shell.ThreadHelper> property `ThreadHelper.JoinableTaskFactory`.  
+>  다음 지침에 Api를 사용 하는 <xref:Microsoft.VisualStudio.Threading> 네임 스페이스, 특히는 <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> 클래스입니다. 이 네임 스페이스에서 Api에 새로 추가 된 [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]합니다. 인스턴스를 가져올 수는 <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> 에서 <xref:Microsoft.VisualStudio.Shell.ThreadHelper> 속성 `ThreadHelper.JoinableTaskFactory`합니다.  
   
-## <a name="switching-from-the-ui-thread-to-a-background-thread"></a>Switching from the UI Thread to a Background Thread  
+## <a name="switching-from-the-ui-thread-to-a-background-thread"></a>UI 스레드 백그라운드 스레드로 전환  
   
-1.  If you are on the UI thread and you want to do asynchronous work on a background thread, use Task.Run():  
+1.  UI 스레드에서 백그라운드 스레드에서 비동기 작업을 수행 하려면 Task.Run()를 사용 하십시오.  
   
     ```csharp  
     await Task.Run(async delegate{  
@@ -53,7 +53,7 @@ If you have a managed VSPackage extension that calls asynchronous methods or has
   
     ```  
   
-2.  If you are on the UI thread and you want to synchronously block while you are performing work on a background thread, use the <xref:System.Threading.Tasks.TaskScheduler> property `TaskScheduler.Default` inside <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>:  
+2.  UI 스레드에서 동기적으로 사용 하 여 백그라운드 스레드에서 작업을 수행 하는 동안를 차단 하려는 경우는 <xref:System.Threading.Tasks.TaskScheduler> 속성 `TaskScheduler.Default` 내 <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>:  
   
     ```csharp  
     // using Microsoft.VisualStudio.Threading;  
@@ -65,18 +65,18 @@ If you have a managed VSPackage extension that calls asynchronous methods or has
     });  
     ```  
   
-## <a name="switching-from-a-background-thread-to-the-ui-thread"></a>Switching from a Background Thread to the UI Thread  
+## <a name="switching-from-a-background-thread-to-the-ui-thread"></a>백그라운드 스레드에서 UI 스레드로 전환  
   
-1.  If you're on a background thread and you want to do something on the UI thread, use <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>:  
+1.  백그라운드 스레드에 속해 있으며 사용 하 여 UI 스레드에서 작업을 수행 하려는 경우 <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>:  
   
     ```csharp  
     // Switch to main thread  
     await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();  
     ```  
   
-     You can use the <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> method to switch to the UI thread. This method posts a message to the UI thread with the continuation of the current asynchronous method, and also communicates with the rest of the threading framework to set the correct priority and avoid deadlocks.  
+     사용할 수는 <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> UI 스레드로 전환 하는 메서드. 이 메서드는 메시지는 현재 비동기 메서드의 연속으로 UI 스레드를 게시 하 고 올바른 우선 순위를 설정 하 고 교착 상태를 방지 하기 위해 스레딩 프레임 워크의 나머지와도 통신.  
   
-     If your background thread method isn't asynchronous and you can't make it asynchronous, you can still use the `await` syntax to switch to the UI thread by wrapping your work with <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>, as in this example:  
+     백그라운드 스레드 메서드 비동기 없고 지킬 수 없을 때는 비동기 경우 계속 사용할 수 있습니다는 `await` 를 사용 하 여 래핑을 사용 하 여 UI 스레드로 전환 하는 구문을 <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>이 예제와 같이,:  
   
     ```csharp  
     ThreadHelper.JoinableTaskFactory.Run(async delegate {  

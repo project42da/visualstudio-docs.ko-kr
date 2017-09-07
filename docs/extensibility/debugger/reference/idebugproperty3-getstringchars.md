@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: f84c744eef8dab863ec9a91aec621764dfa3c266
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
-Retrieves the string associated with this property and stores it in a user-supplied buffer.  
+이 속성과 연결 된 문자열을 검색 하 고 사용자가 제공한 버퍼에 저장 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetStringChars(  
@@ -58,28 +58,28 @@ int GetStringChars(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>매개 변수  
  `buflen`  
- [in] Maximum number of characters the user-supplied buffer can hold.  
+ [in] 최대 문자 수는 사용자가 제공한 버퍼를 보유할 수 있습니다.  
   
  `rgString`  
- [out] Returns the string.  
+ [out] 문자열을 반환 합니다.  
   
- [C++ only], `rgString` is a pointer to a buffer that receives the Unicode characters of the string. This buffer must be at least `buflen` characters (not bytes) in size.  
+ [C + +만], `rgString` 문자열의 유니코드 문자를 받는 버퍼에 대 한 포인터입니다. 이 버퍼 이상 이어야 합니다 `buflen` 크기의 문자 (바이트 아님).  
   
  `pceltFetched`  
- [out] Where the number of characters actually stored in the buffer is returned. (Can be `NULL` in C++.)  
+ [out] 여기서 실제 버퍼에 저장 되는 문자 수가 반환 됩니다. (수 `NULL` c + +에서.)  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`; 그렇지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- In C++, care must be taken to insure that the buffer is at least `buflen` Unicode characters long. Note that a Unicode character is 2 bytes long.  
+## <a name="remarks"></a>설명  
+ C + +에서 주의 해야 버퍼 이상 인지를 보장 하는 데 `buflen` 자의 유니코드 문자입니다. 유니코드 문자가 2 바이트 길이 인지 확인 합니다.  
   
 > [!NOTE]
->  In C++, the returned string does not include a terminating null character. If given, `pceltFetched` will specify the number of characters in the string.  
+>  C + +에서는 반환 된 문자열에는 null 종결 문자 포함 되지 않습니다. 를 지정 하는 경우 `pceltFetched` 문자열의 문자 수를 지정 합니다.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>예제  
  
 ```cpp  
 CStringW RetrievePropertyString(IDebugProperty2 *pPropInfo)  
@@ -102,7 +102,7 @@ CStringW RetrievePropertyString(IDebugProperty2 *pPropInfo)
 }
 ```    
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [GetStringCharLength](../../../extensibility/debugger/reference/idebugproperty3-getstringcharlength.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
