@@ -1,13 +1,13 @@
 ---
 layout: HubPage
 hide_bc: true
-title: "Visual Studio 설명서"
-description: "Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 개발하는 방법에 대해 알아봅니다."
+title: Visual Studio Documentation
+description: Learn how to use Visual Studio 2017 to develop applications, services, and tools in the language of your choice, for your platforms and devices.
 ms.translationtype: HT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: bcd55d1b7e1037a4442ce47fe6b96bf865dfbdfc
+ms.sourcegitcommit: f4b17810a2f59aeee8d6002059d65928882fd51f
+ms.openlocfilehash: 5b20d403d64825f519697b5069ec94eb46233c20
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 <div id="main" class="v2">
@@ -24,8 +24,8 @@ ms.lasthandoff: 09/06/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>설정 &amp; 설치</h3>
-                                    <p>Visual Studio를 설치하고 설정하는 방법을 알아봅니다.</p>
+                                    <h3>Setup &amp; Installation</h3>
+                                    <p>Learn how to install and set up Visual Studio.</p>
                                 </div>
                             </div>
                         </div>
@@ -43,8 +43,8 @@ ms.lasthandoff: 09/06/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Visual Studio 시작</h3>
-                                    <p>모든 플랫폼에 대해 모든 앱을 개발합니다.</p>
+                                    <h3>Get Started with Visual Studio</h3>
+                                    <p>Develop any app for any platform.</p>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@ ms.lasthandoff: 09/06/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Visual Studio 2017의 새로운 기능</h3>
+                                    <h3>What's New in Visual Studio 2017</h3>
                                 </div>
                             </div>
                         </div>
@@ -72,17 +72,17 @@ ms.lasthandoff: 09/06/2017
         </ul>
     </div>
     <div class="container">
-        <h1>Visual Studio 설명서</h1>
+        <h1>Visual Studio Documentation</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">워크로드</a>
+                <a href="#workloads">Workloads</a>
                 <ul id="workloads">
                     <li>
                         <a href="#windows">Windows</a>
                         <ul id="windows" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>Visual Studio를 사용하여 Windows를 실행하는 모든 장치에서 이용할 앱과 게임을 개발합니다.</p>
+                                    <p>Develop apps and games using Visual Studio to reach every device running Windows.</p>
                                 </div>
                             </li>
                             <li>
@@ -96,8 +96,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>유니버설 Windows 플랫폼 개발</h3>
-                                                    <p>Windows 유니버설 플랫폼 및 C#, VB 또는 C++를 사용하여 Windows 10용 응용 프로그램을 개발합니다.</p>
+                                                    <h3>Universal Windows Platform development</h3>
+                                                    <p>Develop applications for Windows 10 with the Windows Universal Platform and C#, VB, or C++.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,8 +115,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET 데스크톱 개발</h3>
-                                                    <p>.NET Framework를 사용하여 WPF, Windows Forms 및 콘솔 응용 프로그램을 개발합니다.</p>
+                                                    <h3>.NET Desktop development</h3>
+                                                    <p>Build WPF, Windows Forms, and console applications using the .NET Framework.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -134,8 +134,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>C++를 사용한 Windows 개발</h3>
-                                                    <p>MFC, ATL 및 Microsoft C++ 도구 집합의 기능을 사용하여 클래식 Windows 기반 응용 프로그램을 빌드합니다.</p>
+                                                    <h3>Windows development with C++</h3>
+                                                    <p>Build classic Windows-based applications using the power of MFC, ATL, and the Microsoft C++ toolset.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,11 +145,11 @@ ms.lasthandoff: 09/06/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="#web">웹 &amp; 클라우드</a>
+                        <a href="#web">Web &amp; Cloud</a>
                         <ul id="web" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>Visual Studio 및 강력한 개방형 도구를 사용하여 최신 웹앱을 개발합니다.
+                                    <p>Develop modern web apps using Visual Studio and powerful open tools.
                                     </p>
                                 </div>
                             </li>
@@ -164,8 +164,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>웹 개발</h3>
-                                                    <p>HTML, JavaScript 및 CSS 같은 표준 기반 기술과 ASP.NET을 사용하여 웹앱을 빌드합니다.</p>
+                                                    <h3>Web development</h3>
+                                                    <p>Build web apps with ASP.NET and standards-based technologies like HTML, JavaScript, and CSS.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,8 +183,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Azure 개발 및 관리</h3>
-                                                    <p>Microsoft 클라우드에서 확장 가능한 앱 및 서비스를 쉽게 빌드, 테스트, 배포 및 관리합니다.</p>
+                                                    <h3>Azure development and management</h3>
+                                                    <p>Easily build, test, deploy, and manage scalable apps and services on the Microsoft cloud.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -203,7 +203,7 @@ ms.lasthandoff: 09/06/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Python</h3>
-                                                    <p>Django, Flask 등 친숙한 프레임워크를 사용하는 Python 앱에 대한 대화형 개발입니다.</p>
+                                                    <p>Interactive development for Python apps, using familiar frameworks including Django and Flask.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -222,7 +222,7 @@ ms.lasthandoff: 09/06/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Node.js</h3>
-                                                    <p>비동기 이벤트 구동 JavaScript 런타임인 Node.js를 사용하여 확장 가능한 네트워크 응용 프로그램을 빌드합니다.</p>
+                                                    <p>Build scalable network applications using Node.js, an asnchronous, event-driven JavaScript runtime.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,8 +240,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>데이터 저장소 및 처리</h3>
-                                                    <p>데이터베이스 개발자가 SQL Server, Hadoop 및 Azure ML용 솔루션을 만드는 데 사용하는 전체 도구 모음입니다.</p>
+                                                    <h3>Data storage and processing</h3>
+                                                    <p>A full suite of tools for database developers to create solutions for SQL Server, Hadoop, and Azure ML.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -259,8 +259,8 @@ ms.lasthandoff: 09/06/2017
                                         </div>
                                         </div>
                                           <div class="cardText">
-                                            <h3>데이터 과학 및 분석 응용 프로그램</h3>
-                                            <p>데이터 과학 응용 프로그램을 만들기 위한 언어 및 도구입니다(Python, R 및 F# 지원 포함).</p>
+                                            <h3>Data science and analytical applications</h3>
+                                            <p>Languages and tooling for creating data science applications, including Python, R, and F#.</p>
                                         </div>
                                       </div>
                                     </div>
@@ -278,8 +278,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Office/SharePoint 개발</h3>
-                                                    <p>C#, Visual Basic 및 JavaScript를 사용하여 Office 및 SharePoint 추가 기능 및 솔루션을 만듭니다.</p>
+                                                    <h3>Office/SharePoint development</h3>
+                                                    <p>Create Office and SharePoint add-ins and solutions using C#, Visual Basic, and JavaScript.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -289,11 +289,11 @@ ms.lasthandoff: 09/06/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">모바일 &amp; 게임</a>
+                        <a href="#mobile">Mobile &amp; Gaming</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>Android, iOS 및 Windows를 대상으로 하는 네이티브 또는 하이브리드 모바일 앱을 만듭니다.</p>
+                                    <p>Create native or hybrid mobile apps that target Android, iOS, and Windows.</p>
                                 </div>
                             </li>
                             <li>
@@ -307,8 +307,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET을 사용한 모바일 개발</h3>
-                                                    <p>Xamarin을 사용하여 iOS, Android 또는 Windows용 플랫폼 간 응용 프로그램을 빌드합니다.</p>
+                                                    <h3>Mobile development with .NET</h3>
+                                                    <p>Build cross-platform applications for iOS, Android, or Windows using Xamarin.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -326,8 +326,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Unity를 사용한 게임 개발</h3>
-                                                    <p>강력한 플랫폼 간 개발 환경인 unity를 사용하여 2D 및 3D 게임을 만듭니다.</p>
+                                                    <h3>Game development with Unity</h3>
+                                                    <p>Create 2D and 3D games with unity, a powerful cross-platform development environment.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -345,8 +345,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>JavaScript를 사용한 모바일 개발</h3>
-                                                    <p>Apache Cordova 프레임워크를 사용하여 iOS, Android 또는 Windows용 플랫폼 간 응용 프로그램을 빌드합니다.</p>
+                                                    <h3>Mobile development with JavaScript</h3>
+                                                    <p>Build cross-platform applications for iOS, Android, or Windows using the Apache Cordova framework.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -364,8 +364,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>C++를 사용한 모바일 개발</h3>
-                                                    <p>C++를 사용하여 iOS, Android 또는 Windows용 플랫폼 간 응용 프로그램을 빌드합니다.</p>
+                                                    <h3>Mobile development with C++</h3>
+                                                    <p>Build cross-platform applications for iOS, Android, or Windows using C++.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -383,8 +383,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>C++를 사용한 게임 개발</h3>
-                                                    <p>C++의 모든 기능을 사용하여 DirectX, Unreal 또는 Cocos2d로 구동하는 전문 게임을 빌드합니다.</p>
+                                                    <h3>Game development with C++</h3>
+                                                    <p>Use the full power of C++ to build professional games powered by DirectX, Unreal, or Cocos2D.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -394,7 +394,7 @@ ms.lasthandoff: 09/06/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="#other">기타 도구 집합</a>
+                        <a href="#other">Other Toolsets</a>
                         <ul id="other" class="cardsC">
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=834750">
@@ -407,8 +407,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Visual Studio 확장 개발</h3>
-                                                    <p>명령, 코드 분석기 및 도구 창과 같이 Visual Studio를 확장하는 추가 기능을 만듭니다.</p>
+                                                    <h3>Visual Studio extension development</h3>
+                                                    <p>Create add-ons that extend Visual Studio, such as commands, code analyzers, and tool windows.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -426,8 +426,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>C++를 사용한 Linux 개발</h3>
-                                                    <p>Linux 환경에서 실행되는 응용 프로그램을 만들고 디버그합니다.</p>
+                                                    <h3>Linux development with C++</h3>
+                                                    <p>Create and debug applications running in a Linux environment.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -441,12 +441,12 @@ ms.lasthandoff: 09/06/2017
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_web-1.svg" src="./images/vs_web-1.svg" alt="" />
+                                                        <img data-scaleimage="./images/vs_tools-3.svg" src="./images/vs_web-1.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET Core 플랫폼 간 개발</h3>
-                                                    <p>.NET Core, ASP.NET Core, HTML, JavaScript 및 컨테이너 개발 도구를 사용하여 플랫폼 간 응용 프로그램을 빌드합니다.</p>
+                                                    <h3>.NET Core cross-platform development</h3>
+                                                    <p>Build cross-platform applications using .NET Core, ASP.NET Core, HTML, JavaScript, and container development tools.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -458,7 +458,7 @@ ms.lasthandoff: 09/06/2017
                 </ul>
             </li>
             <li>
-                <a href="#features">기능</a>
+                <a href="#features">Features</a>
                 <ul id="features">
                     <li>
                         <a href="#features1"> </a>
@@ -474,8 +474,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>개발</h3>
-                                                    <p>코드 편집기를 사용하여 코드를 작성하고 관리합니다.</p>
+                                                    <h3>Develop</h3>
+                                                    <p>Write and manage your code using the code editor.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -493,8 +493,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>빌드</h3>
-                                                    <p>소스 코드를 컴파일하고 빌드합니다.</p>
+                                                    <h3>Build</h3>
+                                                    <p>Compile and build your source code.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -512,8 +512,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>디버그</h3>
-                                                    <p>코드 관련 문제를 조사하고 해결합니다.</p>
+                                                    <h3>Debug</h3>
+                                                    <p>Investigate and fix problems with your code.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -531,8 +531,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>테스트</h3>
-                                                    <p>테스트 프로세스를 구성합니다.</p>
+                                                    <h3>Test</h3>
+                                                    <p>Organize your testing processes.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -550,8 +550,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>배포:</h3>
-                                                    <p>웹 배포, InstallShield, 연속 통합 등을 사용하여 앱을 공유합니다.</p>
+                                                    <h3>Deploy</h3>
+                                                    <p>Share your apps using Web Deploy, InstallShield, and Continuous Integration, and more.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -569,8 +569,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>공동 작업</h3>
-                                                    <p>Git 및 TFVC 같은 버전 제어 기술을 사용하여 코드를 공유합니다.</p>
+                                                    <h3>Collaborate</h3>
+                                                    <p>Share code using version control technologies such as Git and TFVC.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -588,8 +588,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>성능 향상</h3>
-                                                    <p>병목 상태를 식별하고 진단 도구를 사용하여 코드 성능을 최적화합니다.
+                                                    <h3>Improve Performance</h3>
+                                                    <p>Identify bottlenecks and optimize code performance by using diagnostic tools.
                                                     </p>
                                                 </div>
                                             </div>
@@ -608,8 +608,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>확장</h3>
-                                                    <p>개발 환경을 개선하기 위해 Visual Studio IDE에 고유한 기능을 추가합니다.</p>
+                                                    <h3>Extend</h3>
+                                                    <p>Add your own functionality to the Visual Studio IDE to improve your development experience.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -627,8 +627,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>데이터</h3>
-                                                    <p>로컬이든 클라우드든 어디서나 모든 데이터베이스 또는 서비스와 연결하는 데이터 앱을 만듭니다. </p>
+                                                    <h3>Data</h3>
+                                                    <p>Create data apps that connect to any database or service, and anywhere&#8212;local or cloud. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -640,7 +640,7 @@ ms.lasthandoff: 09/06/2017
                 </ul>
             </li>
             <li>
-                <a href="#languages">언어</a>
+                <a href="#languages">Languages</a>
                 <ul id="languages">
                     <li>
                         <a href="#languages1"> </a>
@@ -657,7 +657,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833062">
                                                     <h3>C#</h3>
-                                                    <p>.NET 플랫폼에서 모든 응용 프로그램을 빌드하기 위한 함수 프로그래밍 기능이 있는 최신 개체 지향 프로그래밍 언어입니다.</p>
+                                                    <p>A modern object-oriented programming language with functional programming capabilities for building any application on the .NET platform.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -676,7 +676,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833060">
                                                     <h3>Visual Basic</h3>
-                                                    <p>.NET 플랫폼용으로 쉽게 배울 수 있는 최신 개체 지향 프로그래밍 언어로, 쉽게 Windows 응용 프로그램을 만드는 데 중점을 둡니다.</p>
+                                                    <p>A modern, easy to learn, object-oriented programming language for the .NET platform, focused on easily creating Windows applications.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -695,7 +695,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833063">
                                                     <h3>Visual C++</h3>
-                                                    <p>Windows, Linux, iOS 및 Android용 응용 프로그램을 만들기 위한 강력하고 유연한 프로그래밍 언어 및 개발 환경입니다.</p>
+                                                    <p>A powerful and flexible programming language and development environment for creating applications for Windows, Linux, iOS, and Android.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -714,7 +714,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833067">
                                                     <h3>F#</h3>
-                                                    <p>.NET 플랫폼에 대한 개체 지향 기능이 있는 최신 함수 프로그래밍 언어로, 모든 작업에서 함수 프로그래밍을 더 쉽게 만드는 데 중점을 둡니다.</p>
+                                                    <p>A modern functional programming language with object-oriented capabilities for the .NET platform, focused on making Functional Programming easier for any task.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -733,7 +733,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833064">
                                                     <h3>JavaScript</h3>
-                                                    <p>웹 페이지를 좀 더 대화형으로 만드는 데 자주 사용되는 간단한 플랫폼 간 스크립트 언어입니다.</p>
+                                                    <p>A lightweight, cross-platform, scripting language often used to help make web pages more interactive.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -752,7 +752,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833066">
                                                     <h3>TypeScript</h3>
-                                                    <p>일반 JavaScript로 컴파일되는 JavaScript의 상위 집합이며 코드의 확장성을 높이는 데 사용됩니다.</p>
+                                                    <p>A superset of JavaScript that compiles to plain JavaScript and enables you to create more scalable code.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -771,7 +771,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833068">
                                                     <h3>Python</h3>
-                                                    <p>신속한 응용 프로그램 개발에 자주 사용되는 동적 개체 지향 상위 수준 프로그래밍 언어입니다.</p>
+                                                    <p>A dynamic object-oriented, high-level programming language often used for rapid application development.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -790,7 +790,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833070">
                                                     <h3>R</h3>
-                                                    <p>통계 계산 및 그래픽에 일반적으로 사용되는 확장 가능한 프로그래밍 언어입니다.</p>
+                                                    <p>An extensible programming language typically used for statistical computing and graphics.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -804,10 +804,10 @@ ms.lasthandoff: 09/06/2017
         </ul>
     </div>
     <div class="container centered pageFooter">
-        <h2>연락 방법</h2>
+        <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833100"> 블로그 </a>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833100"> Blog </a>
             </li>
             <li>
                 <a href="https://go.microsoft.com/fwlink/?linkid=833101"> Twitter </a>
@@ -816,10 +816,10 @@ ms.lasthandoff: 09/06/2017
                 <a href="https://go.microsoft.com/fwlink/?linkid=833103"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833104"> 문제 보고 </a>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833104"> Issue Reporting </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833105"> 사용자 의견 </a>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833105"> User Voice </a>
             </li>
         </ul>
     </div>
