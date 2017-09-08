@@ -1,5 +1,5 @@
 ---
-title: Accessibility
+title: "액세스 가능성"
 description: 
 author: asb3993
 ms.author: amburns
@@ -10,72 +10,72 @@ ms.translationtype: HT
 ms.sourcegitcommit: f6c7e290f0abc2c32456e076420a7695ae868ba6
 ms.openlocfilehash: e0d893f155982ecd95f25ebdab768e810005b167
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 
-# <a name="accessibility"></a>Accessibility
+# <a name="accessibility"></a>액세스 가능성
 
-In addition to features and utilities in macOS, Visual Studio for Mac has the following features, making it more accessible for people with disabilities:
+macOS의 기능 및 유틸리티 외에도, Mac용 Visual Studio에는 다음과 같은 기능이 포함되어 있어서 장애가 있는 사용자도 더욱 쉽게 액세스할 수 있습니다.
 
-- Text Enlargement in the Solution and Editor Pads
-- Text size options in the editors
-- Color customization in the editors
-- Keyboard shortcut customization
-- Code-completion for methods and parameters 
+- Solution Pad 및 Editor Pad의 텍스트 확대
+- 편집기의 텍스트 크기 옵션
+- 편집기의 색 사용자 지정
+- 바로 가기 키 사용자 지정
+- 메서드 및 매개 변수의 코드 완성 
 
-For more information on accessibility features in macOS, see [Apple's website](https://www.apple.com/accessibility/mac/).
+macOS의 내게 필요한 옵션 기능에 대한 자세한 내용은 [Apple 웹 사이트](https://www.apple.com/accessibility/mac/)를 참조하세요.
 
-## <a name="using-accessibility-features-in-visual-studio-for-mac"></a>Using Accessibility features in Visual Studio for Mac
+## <a name="using-accessibility-features-in-visual-studio-for-mac"></a>Mac용 Visual Studio의 내게 필요한 옵션 기능 사용
 
-The Accessibility features in Visual Studio for Mac are turned off by default. To enable them, do the following steps:
+Mac용 Visual Studio의 내게 필요한 옵션 기능은 기본적으로 꺼져 있습니다. 이 기능을 사용하도록 설정하려면 다음 단계를 수행합니다.
 
-1. Go to **Visual Studio > Preferences > Other > Accessibility**.
+1. **Visual Studio > 기본 설정 > 기타 > 내게 필요한 옵션**으로 이동합니다.
 
-2. Select the **Enable Accessibility** checkbox, as illustrated in the following diagram:
+2. 다음 그림과 같이 **내게 필요한 옵션 사용** 확인란을 선택합니다.
 
-    ![Enable accessibility checkbox](media/accessibility-image1.png)
+    ![내게 필요한 옵션 사용 확인란](media/accessibility-image1.png)
 
-3. Press the **Restart Visual Studio** button to allow the accessibility features to take effect.
+3. **Visual Studio 다시 시작** 단추를 눌러 내게 필요한 옵션 기능이 적용되도록 합니다.
 
 
-Alternatively, you can use the command line to enable accessibility features. To do this, enter the following command in terminal: 
+또는 명령줄을 사용하여 내게 필요한 옵션 기능을 사용하도록 설정할 수도 있습니다. 이를 위해서는 터미널에 다음 명령을 입력합니다. 
 
 ```bash
 defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 1 
 ```
 
-After turning on accessibility, you need to restart Visual Studio.
+내게 필요한 옵션 기능을 켠 후 Visual Studio를 다시 시작해야 합니다.
 
-## <a name="how-to-use-keyboard-navigation"></a>How to: Use Keyboard Navigation
+## <a name="how-to-use-keyboard-navigation"></a>방법: 키보드 탐색 사용
 
-Keyboard navigation can be enabled by setting the Full Keyboard Access option in **System Preferences > Keyboard > Shortcuts** to **All Controls**:
+**시스템 기본 설정 > 키보드 > 바로 가기**에서 전체 키보드 액세스 옵션을 **모든 컨트롤**로 설정하여 키보드 탐색을 사용하도록 설정할 수 있습니다.
 
-  ![Systems preferences panel in macos](media/accessibility-image2.png)
+  ![macOS의 시스템 기본 설정 패널](media/accessibility-image2.png)
 
-Setting full keyboard access turns on the focus rectangle. You can then select controls using:
-- Tab to go forward through controls
-- Shift-Tab to go backwards through controls
-- Arrow keys to move between controls in the direction of the arrows. 
+전체 키보드 액세스를 설정하면 포커스 사각형이 켜집니다. 그런 후 다음을 사용하여 컨트롤을 선택할 수 있습니다.
+- Tab 키: 컨트롤을 따라 앞으로 이동
+- Shift+Tab: 컨트롤을 따라 뒤로 이동
+- 화살표 키: 화살표 방향으로 컨트롤 간 이동 
 
-Pressing the Space bar activates the focused control.
+스페이스바를 누르면 포커스가 있는 컨트롤이 활성화됩니다.
 
-## <a name="how-to-enable-and-use-voice-over"></a>How to: Enable and use Voice Over
+## <a name="how-to-enable-and-use-voice-over"></a>방법: VoiceOver 설정 및 사용
 
-Turn VoiceOver on or off press **Cmd + F5**
+VoiceOver를 켜거나 끄려면 **Cmd+F5**를 누릅니다.
 
-To navigate through the UI VoiceOver commands, use the following commands:
+UI VoiceOver 명령을 탐색하려면 다음 명령을 사용합니다.
 
-- Move VoiceOver cursor between Controls: **Ctrl + Alt + Left arrow key / Right arrow key**
+- 컨트롤 간에 VoiceOver 커서 이동: **Ctrl+Alt+왼쪽 화살표 키/오른쪽 화살표 키**
 
-VoiceOver reads out the name of the controls, some details about it, and what you can do with it. 
+VoiceOver는 컨트롤의 이름, 일부 세부 정보 및 사용자가 해당 컨트롤로 수행할 수 있는 작업을 읽어줍니다. 
 
-- Enter Groups and controls (such as the Solution Pad, Toolbox, and other Pads): **Ctrl + Alt + Shift + Down Arrow**
+- 그룹 및 컨트롤(예: Solution Pad, 도구 상자 및 기타 패드)로 이동: **Ctrl+Alt+Shift+아래쪽 화살표**
 
-Once inside a control, you can use **Ctrl + Alt + Arrows** to move around inside it. 
+컨트롤 안에 있을 때 **Ctrl+Alt+화살표 키**를 사용하여 컨트롤 내부를 이동할 수 있습니다. 
  
-For general information on using VoiceOver in macOS, refer to the following guides:
+macOS에서의 VoiceOver 사용에 대한 일반적인 내용은 다음 설명서를 참조하세요.
 
-- [Getting Started with VoiceOver](https://help.apple.com/voiceover/info/guide/10.12/)
-- [VoiceOver commands in macOS](http://lab.dotjay.com/notes/voiceover-commands/)
+- [VoiceOver 시작](https://help.apple.com/voiceover/info/guide/10.12/)
+- [macOS의 VoiceOver 명령](http://lab.dotjay.com/notes/voiceover-commands/)
 

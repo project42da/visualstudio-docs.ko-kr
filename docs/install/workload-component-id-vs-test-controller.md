@@ -1,6 +1,6 @@
 ---
-title: Visual Studio Test Controller 2017 workload and component IDs | Microsoft Docs
-description: Use Visual Studio workload and component IDs to distribute automated tests to multiple machines
+title: "Visual Studio Test Controller 2017 작업 및 구성 요소 ID | Microsoft Docs"
+description: "Visual Studio 작업 및 구성 요소 ID를 사용하여 자동화된 테스트를 여러 컴퓨터에 배포합니다."
 keywords: 
 author: TerryGLee
 ms.author: tglee
@@ -35,47 +35,47 @@ ms.translationtype: HT
 ms.sourcegitcommit: 96018963278cd1d53b226473baade41da1e98111
 ms.openlocfilehash: 4af6768bbb9f3e4e494ea85596a9706103537824
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
-# <a name="visual-studio-test-controller-2017-component-directory"></a>Visual Studio Test Controller 2017 component directory
+# <a name="visual-studio-test-controller-2017-component-directory"></a>Visual Studio Test Controller 2017 구성 요소 디렉터리
 
-The tables on this page list the IDs that you can use to install Visual Studio by using the command line. Note that we will add additional components as we release updates to Visual Studio.
+이 페이지의 표에는 명령줄을 사용하여 Visual Studio를 설치하는 데 사용할 수 있는 ID가 나열되어 있습니다. Visual Studio에 대한 업데이트를 릴리스할 때 추가 구성 요소가 추가될 것입니다.
 
-Also note the following about the page:
+또한 이 페이지에 대해 다음 사항에 유의하세요.
 
-* Each workload has its own section, followed by the workload ID and a table of the components that are available for the workload.
-* By default, the **Required** components will be installed when you install the workload. If you choose to, you can also install the **Recommended** and **Optional** components.
-* We've also added a section that lists the additional components that are not affiliated with any workload.
+* 각 작업에는 고유한 섹션 및 작업 ID와 해당 작업에 사용할 수 있는 구성 요소 표가 있습니다.
+* 기본적으로 **필수** 구성 요소는 작업을 설치할 때 설치됩니다. 원하는 경우 **권장** 및 **선택적** 구성 요소를 설치할 수도 있습니다.
+* 작업과 관련이 없는 추가 구성 요소를 나열하는 섹션도 추가했습니다.
 
-For more information about how to use these IDs, see [Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) page. And, for a list of workload and component IDs for other products, see [Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md) page.
+이러한 ID를 사용하는 방법에 대한 자세한 내용은 [명령줄 매개 변수를 사용하여 Visual Studio 2017 설치](use-command-line-parameters-to-install-visual-studio.md) 페이지를 참조하세요. 다른 제품의 작업 및 구성 요소 ID 목록은 [Visual Studio 2017 작업 및 구성 요소 ID](workload-and-component-ids.md) 페이지를 참조하세요.
 
 ## <a name="test-controller"></a>Test Controller
 
 **ID:** Microsoft.VisualStudio.Workload.TestController
 
-**Description:** Distribute automated tests to multiple machines
+**설명:** 자동화된 테스트를 여러 컴퓨터에 배포합니다.
 
-### <a name="components-included-by-this-workload"></a>Components included by this workload
+### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
 
-Component ID | Name | Version | Dependency type
+구성 요소 ID | 이름 | 버전 | 종속성 유형
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Test Controller core features | 15.0.26711.1 | Required
+Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Test Controller 핵심 기능 | 15.0.26711.1 | 필수
 
-## <a name="unaffiliated-components"></a>Unaffiliated components
+## <a name="unaffiliated-components"></a>독립적 구성 요소
 
-These are components that are not included with any workload, but may be selected as an individual component.
+이러한 구성 요소는 작업에 포함되지 않지만 개별 구성 요소로 선택할 수 있습니다.
 
-Component ID | Name | Version
+구성 요소 ID | 이름 | 버전
 --- | --- | ---
-n/a | n/a | n/a
+해당 없음 | 해당 없음 | 해당 없음
 
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>참고 항목
 
-* [Visual Studio workload and component IDs](workload-and-component-ids.md)
-* [Visual Studio administrator guide](visual-studio-administrator-guide.md)
-* [Use command-line parameters to install Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
-  * [Command-line parameter examples](command-line-parameter-examples.md)
-* [Create an offline installation of Visual Studio](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio 작업 및 구성 요소 ID](workload-and-component-ids.md)
+* [Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
+* [명령줄 매개 변수를 사용하여 Visual Studio 설치](use-command-line-parameters-to-install-visual-studio.md)
+  * [명령줄 매개 변수 예](command-line-parameter-examples.md)
+* [Visual Studio의 오프라인 설치 만들기](create-an-offline-installation-of-visual-studio.md)
 

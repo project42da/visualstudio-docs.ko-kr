@@ -1,5 +1,5 @@
 ---
-title: Custom Native ETW Heap Events | Microsoft Docs
+title: "사용자 지정 네이티브 ETW 힙 이벤트 | Microsoft 문서"
 ms.custom: 
 ms.date: 02/24/2017
 ms.reviewer: 
@@ -33,17 +33,17 @@ ms.translationtype: HT
 ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
 ms.openlocfilehash: f2a659347823fee4b933463011c0b69c07fa937f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
-# <a name="custom-native-etw-heap-events"></a>Custom Native ETW Heap Events
+# <a name="custom-native-etw-heap-events"></a>사용자 지정 네이티브 ETW 힙 이벤트
 
-Visual Studio contains a variety of [profiling and diagnostic tools](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools), including a native memory profiler.  This profiler hooks [ETW events](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) from the heap provider and provides analysis of how memory is being allocated and used.  By default, this tool can only analyze allocations made from the standard Windows heap, and any allocations outside this native heap would not be displayed.
+Visual Studio에는 네이티브 메모리 프로파일러를 비롯한 다양한 [프로파일링 및 진단 도구](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)가 포함되어 있습니다.  이 프로파일러는 힙 공급자에서 [ETW 이벤트](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-)를 후크하고 메모리 할당 및 사용 방법을 분석합니다.  기본적으로 이 도구는 표준 Windows 힙에서 만든 할당만 분석할 수 있으므로 이 네이티브 힙 외부의 할당은 표시되지 않습니다.
 
-There are many cases in which you may want to use your own custom heap and avoid the allocation overhead from the standard heap.  For instance, you could use [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) to allocate a large amount of memory at the start of the app or game, and then manage your own blocks within that list.  In this scenario, the memory profiler tool would only see that initial allocation, and not your custom management done inside the memory chunk.  However, using the Custom Native Heap ETW Provider, you can let the tool know about any allocations you are making outside the standard heap.
+사용자 지정 힙을 사용하여 표준 힙에서 할당 오버헤드를 방지할 수도 있습니다.  예를 들어 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)를 사용하여 앱 또는 게임을 시작할 때 대용량 메모리를 할당한 다음 해당 목록에서 자체 블록을 관리할 수 있습니다.  이 시나리오에서 메모리 프로파일러 도구는 초기 할당만 표시하고, 메모리 청크 내부에서 수행되는 사용자 지정 관리는 표시하지 않습니다.  사용자 지정 네이티브 힙 ETW 공급자를 사용하여 표준 힙 외부에서 수행하는 모든 할당을 도구에 알릴 수 있습니다.
 
-For example, in a project like the following where `MemoryPool` is a custom heap, you would only see a single allocation on the Windows heap:
+예를 들어 `MemoryPool`이 사용자 지정 힙인 다음과 같은 프로젝트에는 Windows 힙에 단일 할당만 표시됩니다.
 
 ```cpp
 class Foo
@@ -65,117 +65,117 @@ Foo* pFoo2 = (Foo*)mPool.allocate();
 Foo* pFoo3 = (Foo*)mPool.allocate();
 ```
 
-A snapshot from the [Memory Usage](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) tool without custom heap tracking would show just the single 8192 byte allocation, and none of the custom allocations being made by the pool:
+사용자 지정 힙을 추적하지 않는 [메모리 사용량](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) 도구에서 만든 스냅숏에는 단일 8192바이트 할당만 표시되고, 풀에서 만든 사용자 지정 할당은 표시되지 않습니다.
 
-![Windows Heap allocation](media/heap-example-windows-heap.png)
+![Windows 힙 할당](media/heap-example-windows-heap.png)
 
-By performing the following steps, we can use this same tool to track memory usgae in our custom heap.
+다음 단계를 수행하여 동일한 도구로 사용자 지정 힙의 메모리 사용량을 추적할 수 있습니다.
 
-## <a name="how-to-use"></a>How to Use
+## <a name="how-to-use"></a>사용 방법
 
-This library can be easily used in C and C++.
+이 라이브러리는 C 및 C++에서 쉽게 사용할 수 있습니다.
 
-1. Include the header for the custom heap ETW provider:
+1. 사용자 지정 힙 ETW 공급자에 대한 헤더를 포함합니다.
 
    ```cpp
    #include <VSCustomNativeHeapEtwProvider.h>
    ```
 
-1. Add the `__declspec(allocator)` decorator to any function in your custom heap manager that returns a pointer to newly allocated heap memory.  This decorator allows the tool to correctly identify the type of the memory being returned.  For example:
+1. 포인터를 새로 할당된 힙 메모리로 반환하는 `__declspec(allocator)` 데코레이터를 사용자 지정 힙 관리자의 함수에 추가합니다.  이 데코레이터를 통해 도구에서 반환 중인 메모리의 형식을 올바르게 식별할 수 있습니다.  예:
 
    ```cpp
    __declspec(allocator) void *MyMalloc(size_t size);
    ```
    
    > [!NOTE]
-   > This decorator will tell the compiler that this function is a call to an allocator.  Each call to the function will output the address of the callsite, the size of the call instruction, and the typeId of the new object to a new `S_HEAPALLOCSITE` symbol.  When a callstack is allocated, Windows will emit an ETW event with this information.  The memory profiler tool walks the callstack looking for a return address matching an `S_HEAPALLOCSITE` symbol, and the typeId information in the symbol is used to display the runtime type of the allocation.
+   > 이 데코레이터는 이 함수가 할당자에 대한 호출임을 컴파일러에 알려줍니다.  함수를 호출할 때마다 호출 사이트의 주소, 호출 명령의 크기, 새 개체의 형식 ID를 새 `S_HEAPALLOCSITE` 기호로 출력합니다.  콜백이 할당되면 Windows에서 이 정보를 사용하여 ETW 이벤트를 발생합니다.  메모리 프로파일러 도구는 `S_HEAPALLOCSITE` 기호와 일치하는 반환 주소를 조사하는 콜백을 안내하고 기호로 된 형식 ID 정보를 사용하여 할당의 런타임 형식을 표시합니다.
    >
-   > In short, this means a call that looks like `(B*)(A*)MyMalloc(sizeof(B))` will show up in the tool as being of type `B`, not `void` or `A`.
+   > 즉, `(B*)(A*)MyMalloc(sizeof(B))`와 같은 호출은 도구에 `B` 형식(`void` 또는 `A` 아님)으로 표시됩니다.
 
-1. For C++, create the `VSHeapTracker::CHeapTracker` object, providing a name for the heap, which will show up in the profiling tool:
+1. C++의 경우 힙에 대한 이름을 제공하여 `VSHeapTracker::CHeapTracker` 개체를 만듭니다. 이 이름이 프로파일링 도구에 표시됩니다.
 
    ```cpp
    auto pHeapTracker = std::make_unique<VSHeapTracker::CHeapTracker>("MyCustomHeap");
    ```
 
-   If you are using C, use the `OpenHeapTracker` function instead.  This function will return a handle that you will use when calling other tracking functions:
+   C를 사용 중인 경우 `OpenHeapTracker` 함수를 대신 사용합니다.  이 함수는 다른 추적 함수를 호출할 때 사용할 핸들을 반환합니다.
   
    ```C
    VSHeapTrackerHandle hHeapTracker = OpenHeapTracker("MyHeap");
    ```
 
-1. When allocating memory using your custom function, call the `AllocateEvent` (C++) or `VSHeapTrackerAllocateEvent` (C) method, passing in the pointer to the memory and its size, to track the allocation:
+1. 사용자 지정 함수를 사용하여 메모리를 할당할 경우 `AllocateEvent`(C++) 또는 `VSHeapTrackerAllocateEvent`(C) 메서드를 호출하고 메모리와 해당 크기에 포인터를 전달하여 할당을 추적합니다.
 
    ```cpp
    pHeapTracker->AllocateEvent(memPtr, size);
    ```
 
-   or
+   또는
 
    ```C
    VSHeapTrackerAllocateEvent(hHeapTracker, memPtr, size);
    ```
 
    > [!IMPORTANT]
-   > Don't forget to tag your custom allocator function with the `__declspec(allocator)` decorator described earlier.
+   > 사용자 지정 할당자 함수에 앞에서 설명한 `__declspec(allocator)` 데코레이터로 태그 지정합니다.
 
-1. When deallocating memory using your custom function, call the `DeallocateEvent` (C++) or `VSHeapTracerDeallocateEvent` (C) function, passing in the pointer to the memory, to track the deallocation:
+1. 사용자 지정 함수를 사용하여 메모리를 할당 취소할 경우 `DeallocateEvent`(C++) 또는 `VSHeapTracerDeallocateEvent`(C) 함수를 호출하고 메모리에 포인터를 전달하여 할당 취소를 추적합니다.
 
    ```cpp
    pHeapTracker->DeallocateEvent(memPtr);
    ```
 
-   or:
+   또는
 
    ```C
    VSHeapTrackerDeallocateEvent(hHeapTracker, memPtr);
    ```
 
-1. When reallocating memory using your custom function, call the `ReallocateEvent` (C++) or `VSHeapReallocateEvent` (C) method, passing in a pointer to the new memory, the size of the allocation, and a pointer to the old memory:
+1. 사용자 지정 함수를 사용하여 메모리를 재할당할 경우 `ReallocateEvent`(C++) 또는 `VSHeapReallocateEvent`(C) 메서드를 호출하고 새 메모리, 할당 크기 및 이전 메모리에 포인터를 전달합니다.
 
    ```cpp
    pHeapTracker->ReallocateEvent(memPtrNew, size, memPtrOld);
    ```
 
-   or:
+   또는
 
    ```C
    VSHeapTrackerReallocateEvent(hHeapTracker, memPtrNew, size, memPtrOld);
    ```
 
-1. Finally, to close and clean up the custom heap tracker in C++, use the `CHeapTracker` destructor, either manually or via standard scoping rules, or the `CloseHeapTracker` function in C:
+1. 마지막으로 C++에서 사용자 지정 힙 추적기를 닫고 정리하려면 `CHeapTracker` 소멸자를 수동으로 또는 표준 범위 지정 규칙 또는 C의 `CloseHeapTracker` 함수를 통해 사용합니다.
 
    ```cpp
    delete pHeapTracker;
    ```
 
-   or:
+   또는
 
    ```C
    CloseHeapTracker(hHeapTracker);
    ```
 
-## <a name="tracking-memory-usage"></a>Tracking Memory Usage
-With these calls in place, your custom heap usage can now be tracked using the standard **Memory Usage** tool in Visual Studio.  For more information on how to use this tool, please see the [Memory Usage](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) documentation. Ensure you have enabled heap profiling with snapshots, otherwise you will not see your custom heap usage displayed. 
+## <a name="tracking-memory-usage"></a>메모리 사용량 추적
+이제 이러한 호출을 적절히 배치하여 Visual Studio의 표준 **메모리 사용량** 도구를 통해 사용자 지정 힙 사용량을 추적할 수 있습니다.  이 도구를 사용하는 방법에 대한 자세한 내용은 [메모리 사용량](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) 설명서를 참조하세요. 스냅숏을 사용하여 힙 프로파일링을 설정해야 합니다. 그러지 않으면 표시된 사용자 지정 힙 사용량이 나타나지 않습니다. 
 
-![Enable Heap Profiling](media/heap-enable-heap.png)
+![힙 프로파일링 사용](media/heap-enable-heap.png)
 
-To view your custom heap tracking, use the **Heap** dropdown located at the upper-right corner of the **Snapshot** window to change the view from *NT Heap* to your own heap as named previously.
+사용자 지정 힙 추적을 보려면 **스냅숏** 창의 오른쪽 위에 있는 **힙** 드롭다운을 사용하여 뷰를 *NT 힙*에서 앞에서 이름을 지정한 사용자 힙으로 변경합니다.
 
-![Heap Selection](media/heap-example-custom-heap.png)
+![힙 선택](media/heap-example-custom-heap.png)
 
-Using the code example above, with `MemoryPool` creating a `VSHeapTracker::CHeapTracker` object, and our own `allocate` method now calling the `AllocateEvent` method, you can now see the result of that custom allocation, showing 3 instances totaling 24 bytes, all of type `Foo`.
+위의 코드 예제를 참조하여 `MemoryPool`에서 `VSHeapTracker::CHeapTracker` 개체를 만들고 자체 `allocate` 메서드로 `AllocateEvent` 메서드를 호출하면 사용자 지정 할당 결과를 확인할 수 있습니다. 모두 `Foo` 형식이고 총 24바이트인 세 개의 인스턴스가 표시됩니다.
 
-The default *NT Heap* heap looks the same as earlier, with the addition of our `CHeapTracker` object.
+기본 *NT 힙* 힙의 모양은 이전과 동일하지만 `CHeapTracker` 개체가 추가되었습니다.
 
-![NT Heap with Tracker](media/heap-example-windows-heap.png)
+![추적기가 있는 NT 힙](media/heap-example-windows-heap.png)
 
-As with the standard Windows heap, you can also use this tool to compare snapshots and look for leaks and corruption in your custom heap, which is described in the main [Memory Usage](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) documentation.
+표준 Windows 힙과 마찬가지로 이 도구를 사용하여 스냅숏을 비교하고 사용자 지정 힙의 누수 및 손상을 확인할 수도 있습니다. 자세한 내용은 기본 [메모리 사용량](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) 설명서를 참조하세요.
 
 > [!TIP]
-> Visual Studio also contains a **Memory Usage** tool in the **Performance Profiling** toolset, which is enabled from the **Debug > Performance Profiler** menu option, or the **Alt+F2** keyboard combination.  This feature does not include heap tracking and will not display your custom heap as described here.  Only the **Diagnostic Tools** window, which can be enabled with the **Debug > Windows > Show Diagnostic Tools** menu, or the **Ctrl+Alt+F2** keyboard combination, contains this functionality.
+> Visual Studio의 **성능 프로파일링** 도구 집합에도 **메모리 사용량** 도구가 포함되어 있습니다. 이 도구 집합은 **디버그 > 성능 프로파일러** 메뉴 옵션 또는 **Alt+F2** 키보드 조합을 통해 사용하도록 설정할 수 있습니다.  이 기능은 힙 추적을 포함하지 않으므로 여기서 설명하는 사용자 지정 힙을 표시하지 않습니다.  **진단 도구** 창(**디버그 > Windows > 진단 도구 표시** 메뉴 또는 **Ctrl+Alt+F2** 키보드 조합을 사용하여 설정 가능)에만 이 기능이 포함되어 있습니다.
 
-## <a name="see-also"></a>See Also
-* [Profiling Tools](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)
-* [Memory Usage](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)
+## <a name="see-also"></a>참고 항목
+* [프로파일링 도구](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)
+* [메모리 사용](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)
 
