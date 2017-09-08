@@ -1,6 +1,6 @@
 ---
-title: Uninstall Visual Studio 2017 | Microsoft Docs
-description: Learn how to uninstall Visual Studio, step-by-step.
+title: "Visual Studio 2017 제거 | Microsoft Docs"
+description: "Visual Studio를 제거하는 방법을 단계별로 알아봅니다."
 ms.custom: 
 ms.date: 08/16/2017
 ms.reviewer: 
@@ -20,42 +20,42 @@ ms.translationtype: HT
 ms.sourcegitcommit: 7adecc638a0ea4b198501752930a5c92c9db282c
 ms.openlocfilehash: c1b7c0aa1218090e328f90ca6d44e5a7a47ca219
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
-# <a name="uninstall-visual-studio"></a>Uninstall Visual Studio
-This page walks you through uninstalling Visual Studio, our integrated suite of productivity tools for developers.  
+# <a name="uninstall-visual-studio"></a>Visual Studio 제거
+이 페이지에서는 개발자를 위한 통합 생산성 도구 제품군인 Visual Studio를 제거하는 과정을 안내합니다.  
 
-1.  Find the Visual Studio Installer on your computer.  
+1.  컴퓨터에서 Visual Studio 설치 관리자를 찾습니다.  
 
-     For example, on a computer running Windows 10 Anniversary Update, select **Start** and scroll to the letter **V**, where it is listed as **Visual Studio Installer**.  
+     예를 들어, Windows 10 1주년 업데이트를 실행하는 컴퓨터에서 **시작**을 선택하고 **V** 문자로 스크롤하면 여기에서 **Visual Studio 설치 관리자**로 나열됩니다.  
 
-     ![Visual Studio Installer](media/vs2017-locate-the-visual-studio-installer.PNG "Locate the Microsoft Visual Studio Installer")
+     ![Visual Studio 설치 관리자](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio 설치 관리자 찾기")
 
      >[!NOTE]
-     On some computers, the Visual Studio Installer might be listed under the letter **"M"** as the **Microsoft Visual Studio Installer**.<br/><br/> Alternatively, you can find the Visual Studio Installer in the following location: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+     일부 컴퓨터에서는 Visual Studio 설치 관리자가 **Microsoft Visual Studio 설치 관리자**로 문자 **“M”** 아래에 나열될 수 있습니다.<br/><br/> 또는 다음 위치에서 Visual Studio 설치 관리자를 찾을 수 있습니다.`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-2.  Click to start the installer, click the ![Details icon](media/vs2017uninstall-UninstallIcon.png "Select the Options icon") icon, and then click **Uninstall**.  
+2.  설치 관리자를 클릭하여 시작하고 ![세부 정보 아이콘](media/vs2017uninstall-UninstallIcon.png "옵션 선택 아이콘") 아이콘을 클릭한 다음 **제거**를 클릭합니다.  
 
-     ![Modifying Visual Studio 2017; Modify, Launch, Repair, or Uninstall](media/vs2017-uninstall.PNG "Repair or Uninstall Visual Studio 2017")  
+     ![Visual Studio 2017 수정: 수정, 시작, 복구 또는 제거](media/vs2017-uninstall.PNG "Visual Studio 2017 복구 또는 제거")  
 
-3.  Click **OK** to confirm your choice.
+3.  **확인**을 클릭하여 선택을 확인합니다.
 
-     ![Modifying Visual Studio 2017; Uninstall product](media/vs2017-uninstall-confirm.PNG "Confirm to uninstall Visual Studio 2017")  
+     ![Visual Studio 2017 수정: 제품 제거](media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 제거 확인")  
 
-If you change your mind later and want to reinstall Visual Studio 2017, start the Visual Studio Installer again, and then select **Install** from the selection screen.
+나중에 마음이 바뀌어 Visual Studio 2017을 다시 설치하려면 Visual Studio 설치 관리자를 다시 시작한 다음 선택 영역 화면에서 **설치**를 선택하면 됩니다.
 
-## <a name="uninstall-visual-studio-installer"></a>Uninstall Visual Studio Installer
-To completely remove all installations of Visual Studio 2017 as well as the Visual Studio Installer from your machine, uninstall it from Apps & Features.
-1. Open Apps & Features. For example, in Windows 10, select **Start**, and in the search bar, type **Apps and Features**.  
-2. Find **Microsoft Visual Studio 2017**.  
-3. Click **Uninstall**.  
+## <a name="uninstall-visual-studio-installer"></a>Visual Studio 설치 관리자 제거
+컴퓨터에서 Visual Studio 2017과 Visual Studio 설치 관리자의 모든 설치를 완전히 제거하려면 [앱 및 기능]에서 제거합니다.
+1. [앱 및 기능]을 엽니다. 예를 들어 Windows 10에서는 **시작**을 선택하고 검색 창에 **앱 및 기능**을 입력합니다.  
+2. **Microsoft Visual Studio 2017**을 찾습니다.  
+3. **제거**를 클릭합니다.  
 
 
-## <a name="see-also"></a>See also  
-* [Install Visual Studio](install-visual-studio.md)
-* [Modify Visual Studio 2017](modify-visual-studio.md)
-* [Update Visual Studio](update-visual-studio.md)
-* [How to Report a Problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+## <a name="see-also"></a>참고 항목  
+* [Visual Studio 설치](install-visual-studio.md)
+* [Visual Studio 2017 수정](modify-visual-studio.md)
+* [Visual Studio 업데이트](update-visual-studio.md)
+* [Visual Studio 2017의 문제를 보고하는 방법](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 
