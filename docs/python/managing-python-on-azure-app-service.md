@@ -1,7 +1,7 @@
 ---
-title: "Azure App Service에서 Python 관리 | Microsoft Docs"
+title: Managing Python on Azure App Service | Microsoft Docs
 ms.custom: 
-ms.date: 7/12/2017
+ms.date: 9/6/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -16,33 +16,33 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
-ms.openlocfilehash: 56fccdd5e103cf29c8ea4a93ab80de7187275642
+ms.sourcegitcommit: 4013eb0b251985b0984d0cbf2a723175fe91aad5
+ms.openlocfilehash: a8f76fce826911d9f35adc2c6a0960d0b6ffa034
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 
-# <a name="managing-python-on-azure-app-service"></a>Azure App Service에서 Python 관리
+# <a name="managing-python-on-azure-app-service"></a>Managing Python on Azure App Service
 
-[Azure App Service](https://azure.microsoft.com/services/app-service/)는 브라우저를 통해 액세스한 사이트, 고유한 클라이언트에서 사용된 REST API, 이벤트 트리거된 처리 등 웹앱용 Platform-as-a-Service 제품입니다. App Service는 Python을 사용한 앱 구현을 완벽하게 지원합니다.
+[Azure App Service](https://azure.microsoft.com/services/app-service/) is a platform-as-a-service offering for web apps, whether they are sites accessed through a browser, REST APIs used by your own clients, or event-triggered processing. App Service fully supports using Python to implement apps.
 
-Azure App Service의 Python 지원은 각각 특정 버전의 Python 런타임이 포함된 App Service 사이트 확장 집합으로 제공됩니다. 최신 Python 3 버전이 권장되지만, 필요한 경우 이전 버전을 선택할 수 있습니다. 이 항목에서는 원하는 패키지와 함께 사이트 확장을 설치 및 구성하는 방법을 설명합니다.
+Python support on Azure App Service is provided as a set of App Service site extensions that each contain a specific version of the Python runtime. The latest Python 3 version is recommended, obviously, but you can choose an older version when necessary. This topic explains how to install and configure a site extension along with any desired packages.
 
 > [!Note]
-> 여기서 설명한 프로세스는 변경될 수 있으며, 특히 개선될 수 있습니다. 변경 내용은 [Python Engineering at Microsoft](https://blogs.msdn.microsoft.com/pythonengineering/)(Microsoft의 Python 엔지니어링) 블로그에 공지됩니다.
+> The processes described here are subject to change, and especially to improvement. Changes are announced on the [Python Engineering at Microsoft blog](https://blogs.msdn.microsoft.com/pythonengineering/).
 
-## <a name="choosing-a-python-version-through-the-azure-portal"></a>Azure Portal을 통해 Python 버전 선택
+## <a name="choosing-a-python-version-through-the-azure-portal"></a>Choosing a Python version through the Azure portal
 
-Azure App Service에 사이트가 이미 배포되어 실행 중인 경우 App Service 블레이드로 이동하고 **개발 도구** 섹션으로 스크롤한 다음 **확장 > 추가**를 선택합니다. 목록을 스크롤하여 원하는 Python 버전용 특정 확장을 찾습니다. 안타깝게도, 목록을 정렬할 수 없으므로 다양한 버전이 목록에 분산되어 있는 경우가 많습니다.
+If your site is already deployed and running on Azure App Service, navigate to your App Service in the Azure portal, scroll to the **Development Tools** section, and select **Extensions > Add**. Scroll through the list to find the specific extensions for the version of Python you want:
 
-![Python 확장이 표시된 Azure Portal](media/python-on-azure-extensions.png)
+![Azure portal showing Python extensions](media/python-on-azure-extensions.png)
 
-## <a name="choosing-a-python-version-through-the-azure-resource-manager"></a>Azure Resource Manager를 통해 Python 버전 선택
+## <a name="choosing-a-python-version-through-the-azure-resource-manager"></a>Choosing a Python version through the Azure Resource Manager
 
-Azure Resource Manager 템플릿을 사용하여 사이트를 배포하는 경우 사이트 확장을 리소스로 추가합니다. 확장은 `siteextensions` 형식과 [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22)의 이름을 사용하여 사이트의 중첩된 리소스로 표시됩니다.
+If you are deploying your site with an Azure Resource Manager template, add the site extension as a resource. The extension appears as a nested resource of your site with the type `siteextensions` and the name from [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22).
 
-예를 들어 `python361x64`(Python 3.6.1 x64)에 대한 참조를 추가하면 템플릿이 다음과 같이 표시될 수 있습니다.
+For example, after adding a reference to `python361x64` (Python 3.6.1 x64), your template may look like the following:
 
 ```json
   "resources": [
@@ -64,19 +64,25 @@ Azure Resource Manager 템플릿을 사용하여 사이트를 배포하는 경�
       ...
 ```
 
-## <a name="configuring-your-site"></a>사이트 구성
+## <a name="configuring-your-site"></a>Configuring your site
 
-포털이나 Azure Resource Manager 템플릿을 통해 사이트 확장을 설치하면 Python 설치 경로가 `d:\home\python361x64\python.exe`와 같이 표시됩니다. 특정 경로를 보려면 App Service에 대해 표시된 목록에서 확장을 선택하여 경로를 포함하는 설명 페이지를 엽니다.
+After installing the site extension (through either the portal or an Azure Resource Manager template), the Python installation path will be something like `d:\home\python361x64\python.exe`. To see the specific path, select the extension in the list shown for your App Service to open its description page containing the path:
 
-![Azure App Service의 확장 목록](media/python-on-azure-extension-list.png)
+![Extension list on Azure App Service](media/python-on-azure-extension-list.png)
 
-![Azure App Service의 확장 세부 정보](media/python-on-azure-extension-detail.png)
+![Extension details on Azure App Service](media/python-on-azure-extension-detail.png)
 
-다음 단계는 사이트의 `web.config` 파일에서 FastCGI 및 HTTP 플랫폼 요청 처리기 모두에 대해 Python 설치를 참조하는 것입니다.
+If you have trouble seeing the path for the extension, you can find it manually using the console:
 
-### <a name="using-the-fastcgi-handler"></a>FastCGI 처리기 사용
+1. In your App Service on the Azure portal, select the **Development Tools > Console**.
+2. Enter the command `ls ../home` to see the top-level extensions folders, such as `Python361x64`.
+3. Enter a command like `ls ../home/python361x64` using one of the Python folders to verify that it contains `python.exe` and other interpreter files.
 
-FastCGI는 요청 수준에서 작동하는 인터페이스입니다. IIS는 들어오는 연결을 받은 다음 하나 이상의 영구적 Python 프로세스에서 실행되는 WSGI 앱에 각 요청을 전달합니다. [wfastcgi 패키지](https://pypi.io/project/wfastcgi)는 사전 설치되고 각 Python 사이트 확장으로 구성되어 있으므로 `web.config`에 다음 코드를 포함하여 쉽게 사용할 수 있습니다.
+Note that the full path to `python.exe` is important in the next step, which is to reference that path in the site's `web.config` file for either the FastCGI and Http Platform request handlers.
+
+### <a name="using-the-fastcgi-handler"></a>Using the FastCGI handler
+
+FastCGI is an interface that works at the request level. IIS receives incoming connections and forwards each request to a WSGI app running in one or more persistent Python processes. The [wfastcgi package](https://pypi.io/project/wfastcgi) is pre-installed and configured with each Python site extension, so you can easily enable it by including the following code in `web.config`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -94,16 +100,16 @@ FastCGI는 요청 수준에서 작동하는 인터페이스입니다. IIS는 들
 </configuration>
 ```
 
-`<appSettings>`은 앱에서 환경 변수로 사용할 수 있습니다.
-- `PYTHONPATH` 값은 자유롭게 확장될 수 있지만 해당 사이트의 루트를 포함해야 합니다.
-- `WSGI_HANDLER`는 사이트에서 가져올 수 있는 WSGI 앱을 가리켜야 합니다.
-- `WSGI_LOG`는 선택 사항이지만 사이트 디버깅을 위해 권장됩니다. 
+The `<appSettings>` are available to your app as environment variables:
+- The value for `PYTHONPATH` may be freely extended but must include the root of your site.
+- `WSGI_HANDLER` must point to a WSGI app importable from your site.
+- `WSGI_LOG` is optional but recommended for debugging your site. 
 
-`<handlers>`에서 `<add>` 요소의 `scriptProcessor` 특성에 특정 설치의 적절한 경로가 포함되어 있는지 확인합니다. 경로는 확장의 세부 정보 블레이드에 다시 표시됩니다.
+Under `<handlers>`, make sure the `scriptProcessor` attribute in the `<add>` element contains the proper paths to your specific installation. The path is again shown on the extension's details.
 
-### <a name="using-the-http-platform-handler"></a>HTTP 플랫폼 처리기 사용
+### <a name="using-the-http-platform-handler"></a>Using the Http Platform handler
 
-HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 직접 전달합니다. 이 전달을 통해 원하는 모든 웹 서버를 실행할 수 있지만 로컬 웹 서버를 실행하는 시작 스크립트가 필요합니다. `<httpPlatform>` 요소에 스크립트를 지정합니다. 여기서 `processPath` 특성은 Python을 가리키고, `arguments` 특성은 스크립트 및 제공하려는 모든 인수를 가리킵니다.
+The HttpPlatform module passes the socket connections directly to a standalone Python process. This pass-through allows you to run any web server you like, but requires a startup script that runs a local web server. You specify the script in the `<httpPlatform>` element of `web.config`, where the `processPath` attribute points to Python and the `arguments` attribute points to your script and any arguments you want to provide:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -126,48 +132,50 @@ HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 
 </configuration>
 ```
 
-물론, 구성의 `python.exe` 경로는 설치한 버전과 관련이 있습니다.
+The path to `python.exe` in your configuration is, of course, specific to the version you installed.
 
-코드에 표시된 `HTTP_PLATFORM_PORT` 환경 변수에는 로컬 서버가 localhost의 연결을 수신 대기해야 하는 포트가 포함됩니다. 이 예제에서는 원하는 경우 다른 환경 변수(이 경우 `SERVER_PORT`)를 만드는 방법도 보여 줍니다.
+The `HTTP_PLATFORM_PORT` environment variable shown in the code contains the port your local server should listen on for connections from localhost. This example also shows how to create another environment variable, if desired, in this case `SERVER_PORT`.
 
-## <a name="installing-packages"></a>패키지 설치
+## <a name="installing-packages"></a>Installing packages
 
-앱은 다양한 패키지에 의존하기 때문에 다음 세 가지 방법 중 하나를 통해 App Service의 Python 환경에 해당 패키지가 설치되어 있는지 확인해야 합니다.
+The Python interpreter installed through a site extension is only one piece of your Python environment. You likely need to install different packages in that environment as well, which can be done through one of three methods:
 
-- Azure Portal의 Azure App Service 콘솔
-- Kudu REST API
-- 앱 소스 코드에 각 라이브러리 복사
+- The [Azure App Service Kudu console](#kudu-console).
+- The [Kudu REST API](#kudu-rest-api)
+- [Copying libraries into app source code](#copying-libraries-into-app-source-code)
 
-### <a name="kudu-console"></a>Kudu 콘솔
+### <a name="kudu-console"></a>Kudu console
 
-[Kudu 콘솔](https://github.com/projectkudu/kudu/wiki/Kudu-console)은 App Service 서버와 해당 파일 시스템에 대한 직접적인 관리자 권한 명령줄 액세스를 제공합니다. 유용한 디버깅 도구일뿐만 아니라 CLI 기반 구성에도 사용할 수 있습니다.
+The [Kudu console](https://github.com/projectkudu/kudu/wiki/Kudu-console) gives you direct, elevated command-line access to the App Service server and its file system. In addition to being a valuable debugging tool, it can also be used for CLI-based configurations such as installing packages.
 
-**개발 도구 > 고급 도구**를 선택하여 App Service 블레이드에서 Kudu에 액세스한 다음 **이동**을 선택하여 `.scm`이 삽입된 것을 제외하고 기본 App Service URL과 동일한 URL로 이동합니다. 예를 들어 기준 URL이 `https://vspython-test.azurewebsites.net/`이면 Kudu는 `https://vspython-test.scm.azurewebsites.net/`에 있습니다.
+To open Kudu, go to your App Service on the Azure portal, select **Development Tools > Advanced Tools**, then select **Go**. This action navigates to a URL that's the same as your base App Service URL except with `.scm` inserted. For example, if your base URL is `https://vspython-test.azurewebsites.net/` then Kudu is on `https://vspython-test.scm.azurewebsites.net/`:
 
-![Azure App Service용 Kudu 콘솔](media/python-on-azure-console01.png)
+![The Kudu console for Azure App Service](media/python-on-azure-console01.png)
 
-**디버그 콘솔 > CMD**를 선택하여 콘솔을 엽니다. 여기서 Python 설치로 이동하여 어떤 라이브러리가 있는지 확인할 수 있습니다.
+You can bookmark this URL for future use, fo course.
 
-단일 패키지를 설치하려면
+Select **Debug console > CMD** to open the console, in which you can navigate into your Python installation and see what libraries are already there.
 
-1. 패키지를 설치하려는 Python 설치 폴더(예: `d:\home\python361x64`)로 이동합니다.
-1. `python.exe -m pip install <package_name>`을 사용하여 패키지를 설치합니다.
+To install a single package:
 
-![Azure App Service용 Kudu 콘솔을 통한 matplotlib 설치의 예](media/python-on-azure-console02.png)
+1. Navigate to the folder of the Python installation where you want to install the package, such as `d:\home\python361x64`.
+1. Use `python.exe -m pip install <package_name>` to install a package.
 
-`requirements.txt`에서 패키지를 설치하려면(권장)
+![Example of installing matplotlib through the Kudu console for Azure App Service](media/python-on-azure-console02.png)
 
-1. 패키지를 설치하려는 Python 설치 폴더(예: `d:\home\python361x64`)로 이동합니다.
-1. `python.exe -m pip install --upgrade -r d:\home\site\wwwroot\requirements.txt`를 사용하여 패키지를 설치합니다.
+If you've deployed a `requirements.txt` for your application to the server already, install all those requirements as follows:
 
-로컬 및 서버 모두에서 정확한 패키지 집합을 쉽게 재현할 수 있기 때문에 requirements.txt를 사용하는 것이 좋습니다.
+1. Navigate to the folder of the Python installation where you want to install the package, such as `d:\home\python361x64`.
+1. Enter the command `python.exe -m pip install --upgrade -r d:\home\site\wwwroot\requirements.txt`.
+
+Using requirements.txt is recommended because it's easy to reproduce your exact package set both locally and on the server. Just remember to visit the console after deploying any changes to `requirements.txt` and run the command again.
 
 > [!Note]
-> 웹 서버에는 C 컴파일러가 없으므로 기본 확장 모듈이 있는 모든 패키지에 대해 휠을 설치해야 합니다. 인기 있는 많은 패키지가 자체 휠을 제공합니다. 자체 휠을 제공하지 않는 패키지의 경우 로컬 개발 컴퓨터의 `pip wheel <package_name>`을 사용한 다음 휠을 사이트에 업로드합니다. 예를 들어 [필수 패키지 관리](python-environments.md#managing-required-packages)를 참조하세요.
+> There's no C compiler on your web server, so you need to install the wheel for any packages with native extension modules. Many popular packages provide their own wheels. For packages that don't, use `pip wheel <package_name>` on your local development computer and then upload the wheel to your site. For an example, see [Managing required packages](python-environments.md#managing-required-packages)
 
 ### <a name="kudu-rest-api"></a>Kudu REST API
 
-Azure Portal을 통해 Kudu 콘솔을 사용하는 대신 `https://yoursite.scm.azurewebsites.net/api/command`에 명령을 게시하여 Kudu REST API를 통해 원격으로 명령을 실행할 수 있습니다. 예를 들어 `matplotlib` 패키지를 설치하려면 다음 JSON을 `/api/command`에 게시합니다.
+Instead of using the Kudu console through the Azure portal, you can run commands remotely through the Kudu REST API by posting the command to `https://yoursite.scm.azurewebsites.net/api/command`. For example, to install the `matplotlib` package, post the following JSON to `/api/command`:
 
 ```json
 {
@@ -176,16 +184,17 @@ Azure Portal을 통해 Kudu 콘솔을 사용하는 대신 `https://yoursite.scm.
 }
 ```
 
-명령 및 인증에 대한 자세한 내용은 [Kudu 설명서](https://github.com/projectkudu/kudu/wiki/REST-API)를 참조하세요. Azure CLI에서 [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles)을 사용하여 자격 증명을 확인할 수도 있습니다. Kudu 명령을 게시하는 도우미 라이브러리도 [GitHub에서 사용할 수 있습니다](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).
+For information about commands and authentication, see the [Kudu documentation](https://github.com/projectkudu/kudu/wiki/REST-API). You can also see credentials using the [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles) from the Azure CLI. A helper library for posting Kudu commands is also [available on GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).
 
 
-### <a name="copying-libraries-into-app-source-code"></a>앱 소스 코드에 라이브러리 복사
+### <a name="copying-libraries-into-app-source-code"></a>Copying libraries into app source code
 
-서버에 직접 패키지를 설치하는 대신 사용자 고유의 소스 코드에 라이브러리를 복사하고 앱의 일부인 것처럼 배포할 수 있습니다. 보유한 종속성 수와 업데이트 빈도에 따라 이 방법은 배포 작업을 진행하는 가장 쉬운 방법일 수 있습니다.
+Instead of installing packages directly on the server, you can instead copy libraries into your own source code and deploy them as if they were part of your app. Depending on how many dependencies you have and how frequently you update them, this method may be the easiest way to get a working deployment going.
 
-주의 사항은 이러한 라이브러리가 서버의 Python 버전과 정확하게 일치해야 한다는 것입니다. 일치하지 않으면 배포 후에 모호한 오류가 표시됩니다. 그러나 App Service 사이트 확장의 Python 버전은 python.org에 릴리스된 버전과 정확히 동일하기 때문에 로컬 개발에 사용할 호환되는 버전을 쉽게 얻을 수 있습니다.
+The caveat is that these libraries must precisely match the version of Python on the server, otherwise you'll see obscure errors after deployment. However, because the versions of Python in the App Service site extensions are exactly the same as those versions released on python.org, you can easily obtain a compatible version for local development.
 
-### <a name="avoiding-virtual-environments"></a>가상 환경 방지
+### <a name="avoiding-virtual-environments"></a>Avoiding virtual environments
 
-로컬에서 가상 환경을 사용할 경우 사이트에 필요한 종속성을 완전히 이해하는 데 도움이 되지만 App Service에서 가상 환경을 사용하는 것은 권장되지 않습니다. 대신, 기본 Python 폴더에 라이브러리를 설치하고 앱과 함께 배포하여 종속성 충돌을 방지합니다.
+Although working in a virtual environment locally can help you fully understand the dependencies needed by your site, using virtual environments on App Service is not recommended. Instead, just install libraries into your main Python folder and deploy them with your app to avoid conflicting dependencies.
+
 
