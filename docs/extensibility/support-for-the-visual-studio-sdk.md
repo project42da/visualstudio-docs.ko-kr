@@ -1,68 +1,86 @@
 ---
-title: "Visual Studio SDK에 대 한 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Visual Studio SDK 지원 옵션"
-  - "Visual Studio SDK 지원"
-  - "Visual Studio SDK 도움말"
-  - "Visual Studio SDK 지원 뉴스 그룹"
-  - "웹 사이트, Visual Studio SDK 지원"
+title: Support for the Visual Studio SDK | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Visual Studio SDK, support options
+- support, Visual Studio SDK
+- Help, Visual Studio SDK
+- newsgroups, Visual Studio SDK support
+- Web sites, Visual Studio SDK support
 ms.assetid: d9011f5a-cb53-418f-9d8f-74b15b9fc5f5
 caps.latest.revision: 22
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Visual Studio SDK에 대 한 지원
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: bc8f895d87b6d76e2894aad799d1e12e687fc80c
+ms.openlocfilehash: ea6ca9b6157c956e9471285d7010368f0dee86be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
-지원 옵션을 여러 고객에 게 Visual Studio 통합된 개발 환경 \(IDE\)을 확장 하는 방법에 대해 궁금한 점이 생길 수 있습니다.  
+---
+# <a name="support-for-the-visual-studio-sdk"></a>Support for the Visual Studio SDK
+Several support options are available for customers who have questions about how to extend the Visual Studio integrated development environment (IDE).  
   
-## 무료 지원  
+## <a name="free-support"></a>Free Support  
   
-### MSDN 개발자 센터  
- [Visual Studio 확장성 개발자 센터](http://go.microsoft.com/fwlink/?LinkID=84381) MSDN에서 Visual Studio를 확장 하는 방법에 대 한 질문에 답변 도움이 되는 리소스를 포함 합니다. 예를 들어 여러 링크 VSIP 개발자 블로그를 있습니다.  
+### <a name="msdn-development-center"></a>MSDN Development Center  
+ The [Visual Studio Extensibility Developer Center](http://go.microsoft.com/fwlink/?LinkID=84381) on MSDN contains resources that help answer questions about how to extend Visual Studio. For example, there are several links to VSIP developer blogs.  
   
-### Microsoft 뉴스 그룹  
- Visual Studio 개발 팀 및 다른 개발자가 Visual Studio를 자주 확장의 멤버가 microsoft.public.vstudio.extensibility 뉴스 그룹에 참여 합니다. 이 뉴스 그룹은 관리 되는 뉴스 그룹입니다. MSDN Universal 구독자 인 경우 응답 하는 microsoft 수 있도록 스팸 방지 별칭을 등록 하 고 있는지 확인 합니다.  
+### <a name="microsoft-newsgroups"></a>Microsoft Newsgroups  
+ Members of the Visual Studio development team and other developers who extend Visual Studio often participate in the microsoft.public.vstudio.extensibility newsgroup. This newsgroup is a managed newsgroup. If you are an MSDN Universal Subscriber, make sure that you register a no-spam alias to make it possible for Microsoft to respond.  
   
-### MSDN 포럼  
- [MSDN 포럼](http://go.microsoft.com/fwlink/?LinkID=76632) 피어 및 전문가와 채팅 하는 다른 방법을 제공 합니다. 포럼의 그래픽 사용자 인터페이스 \(UI\)는 뉴스 그룹 보다 사용 하기 쉽도록 설계 되었습니다.[Visual Studio 확장성 포럼](http://go.microsoft.com/fwlink/?LinkID=121964) 는 시작 확장성 질문에 답변을 검색 하는 데 좋은 장소입니다. 다른 사람이 수 있는 질문을 이미 동일한 질문 하기 때문에 질문을 게시 하기 전에 항상 검색 합니다.  
+### <a name="msdn-forums"></a>MSDN Forums  
+ The [MSDN Forums](http://go.microsoft.com/fwlink/?LinkID=76632) provide another way to chat with peers and experts. The graphical user interface (UI) of the forums is designed to make them easier to use than newsgroups. The [Visual Studio Extensibility Forum](http://go.microsoft.com/fwlink/?LinkID=121964) is a good place to start to search for answers to extensibility questions. Always search before you ask a question because someone else may already have asked the same question.  
   
-### Visual Studio 갤러리  
- [Visual Studio 갤러리](http://visualstudiogallery.msdn.microsoft.com/) 확장 및 샘플 코드에 대 한 위치입니다. 생산성과 사용자를 개선 하는 도구는 Visual Studio에서 Vspackage 및는 프레임 워크 MEF \(Managed Extensibility\), 및 다른 종류의 샘플을 사용 하는 방법을 보여 주는 샘플 응용 프로그램에 대 한 경험을 찾을 수 있습니다.  
+### <a name="visual-studio-gallery"></a>Visual Studio Gallery  
+ The [Visual Studio Gallery](http://visualstudiogallery.msdn.microsoft.com/) is the place for extensions and sample code. You can find tools that improve your productivity and user experience with Visual Studio, sample applications that show how to use VSPackages and the Managed Extensibility Framework (MEF), and other kinds of samples.  
   
-### Codeplex  
- [CodePlex](http://go.microsoft.com/fwlink/?LinkId=76627) 는 Microsoft 오픈 소스 프로젝트 호스팅 웹 사이트입니다. CodePlex를 사용 하 여 만들어 및 새 프로젝트를 공유할 기존 프로젝트에 기여 또는 사이트에서 응용 프로그램을 사용 하 고 피드백을 제공 합니다. 모든 PowerToys \(및 해당 설명서\) 이전 버전의 제공 된는 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] CodePlex에서 사용할 수 있습니다.  
+### <a name="visual-studio-sdk-samples"></a>Visual Studio SDK Samples
+
+You can find open source examples of VS SDK extensions on GitHub at [Visual Studio Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples). This GitHub repository contains samples that illustrate various extensible features in Visual Studio.
+
+## <a name="included-support"></a>Included Support  
   
-## 포함 된 지원  
+### <a name="visual-studio-product-support"></a>Visual Studio Product Support  
+ Some support is included with the purchase of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] products. For more information, see [Visual Studio Support](http://msdn.microsoft.com/vstudio/cc136615.aspx). Microsoft maintains a dedicated support team to answer questions about [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extensibility.  
   
-### Visual Studio 제품 지원  
- 구매 하 여 일부 지원 됩니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 제품입니다. 자세한 내용은 참조 [Visual Studio 지원](http://msdn.microsoft.com/vstudio/cc136615.aspx)합니다. Microsoft는 전문적인된 지원 팀에 대 한 질문에 답변을 유지 관리 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장성.  
+### <a name="msdn-subscription-support"></a>MSDN Subscription Support  
+ MSDN subscription packages may also include some support. For more information, see [MSDN Subscriber Support](https://msdn.microsoft.com/subscriptions/aa718661.aspx).  
   
-### MSDN 구독 지원  
- MSDN subscription 패키지에는 일부 지원을 포함할 수도 있습니다. 자세한 내용은 참조 [MSDN 구독자 지원](https://msdn.microsoft.com/subscriptions/aa718661.aspx)합니다.  
+## <a name="paid-support"></a>Paid Support  
   
-## 유료 지원  
+### <a name="developer-tools-support"></a>Developer Tools Support  
+ Support can also be purchased. A variety of support offerings are available under the Developer Tools category at [Microsoft Help and Support Centers](http://go.microsoft.com/fwlink/?LinkID=82383).  
   
-### 개발자 도구 지원  
- 지원을 구입할 수도 있습니다. 다양 한 지원 서비스에서 개발자 도구 범주 아래에서 사용할 수 있는 [Microsoft 도움말 및 지원 센터](http://go.microsoft.com/fwlink/?LinkID=82383)합니다.  
-  
- 사용 하려는 고객은 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] 복잡 한 패키지를 개발할 수도 microsoft 프리미어 지원 계약을 구입 합니다. 자세한 내용은 참조 [Microsoft 프리미어 지원](http://go.microsoft.com/fwlink/?LinkID=76660)합니다. 소규모 회사에 대 한 [파트너 장점은 지원](http://www.microsoft.com/services/microsoftservices/srv_mspa.mspx) 기존 프리미어 지원 제공물에 때문에 매력적인 대안이 될 수 있습니다.  
+ Customers who want to use the [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] to develop complex packages can consider purchasing a Premier Support contract with Microsoft. For more information, see [Microsoft Premier Support](http://go.microsoft.com/fwlink/?LinkID=76660). For small companies, [Partner Advantage Support](http://www.microsoft.com/services/microsoftservices/srv_mspa.mspx) may be an attractive alternative to a traditional Premier Support offering.  
   
 > [!NOTE]
->  표준 지원 컨설팅 있거나 조언을에 사용할 수 없습니다.  
+>  Standard support cannot be used for consultation or to obtain advice.  
   
- 프리미어 지원 제안 함께 VSIP 프로그램에 대 한 질문을 보낼 수 [vsipsvs@microsoft.com](mailto:vsipsvs@microsoft.com)합니다. 새 파트너 고급 프로그램에 대 한 질문을 보낼 수 [advantg@microsoft.com](mailto:advantg@microsoft.com)합니다.  
+ Questions about Premier Support offerings in conjunction with the VSIP program can be sent to [vsipsvs@microsoft.com](mailto:vsipsvs@microsoft.com). Questions about the new Partner Advantage program can be sent to [advantg@microsoft.com](mailto:advantg@microsoft.com).  
   
- 개별 지원 요청에 대 한 정보를 찾을 수 있습니다 [개별 지원 요청](http://go.microsoft.com/fwlink/?LinkID=82385)합니다.  
+ Information about individual support requests can be found at [Individual Support Requests](http://go.microsoft.com/fwlink/?LinkID=82385).  
   
-## 참고 항목  
- [의견 보내기](../ide/talk-to-us.md)
+## <a name="see-also"></a>See Also  
+ [Talk to Us](../ide/talk-to-us.md)
