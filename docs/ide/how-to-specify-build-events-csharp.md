@@ -1,5 +1,5 @@
 ---
-title: "방법: 빌드 이벤트 지정(C#) | Microsoft Docs"
+title: 'How to: Specify Build Events (C#) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 3058bf7c6714f18291353224a192218c1b59a480
+ms.translationtype: HT
+ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
+ms.openlocfilehash: 7c99b10f4bb238e8aca1b96f6990307ee5eec640
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="how-to-specify-build-events-c"></a>방법: 빌드 이벤트 지정(C#)
-빌드 이벤트를 사용하여 빌드 시작 전 또는 빌드 완료 후 실행되는 명령을 지정합니다. 빌드 이벤트는 빌드가 빌드 프로세스의 해당 지점에 성공적으로 도달할 경우에만 실행됩니다.  
+# <a name="how-to-specify-build-events-c"></a>How to: Specify Build Events (C#)
+Use build events to specify commands that run before the build starts or after the build finishes. Build events are executed only if the build successfully reaches those points in the build process.  
   
- 프로젝트가 빌드될 때 빌드 전 이벤트는 PreBuildEvent.bat라는 파일에 추가되고 빌드 후 이벤트는 PostBuildEvent.bat라는 파일에 추가됩니다. 오류 확인을 보장하려면 자체적인 오류 확인 명령을 빌드 단계에 추가합니다.  
+ When a project is built, pre-build events are added to a file that is named PreBuildEvent.bat and post-build events are added to a file that is named PostBuildEvent.bat. If you want to ensure error checking, add your own error-checking commands to the build steps.  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="how-to-specify-pre-build-and-post-build-events"></a>빌드 전 및 빌드 후 이벤트를 지정하는 방법  
+## <a name="how-to-specify-pre-build-and-post-build-events"></a>How to Specify Pre-Build and Post-Build Events  
   
-#### <a name="to-specify-a-build-event"></a>빌드 이벤트를 지정하려면  
+#### <a name="to-specify-a-build-event"></a>To specify a build event  
   
-1.  **솔루션 탐색기**에서 빌드 이벤트를 지정할 프로젝트를 선택합니다.  
+1.  In **Solution Explorer**, select the project for which you want to specify the build event.  
   
-2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+2.  On the **Project** menu, click **Properties**.  
   
-3.  **빌드 이벤트** 탭을 선택합니다.  
+3.  Select the **Build Events** tab.  
   
-4.  **빌드 전 이벤트 명령줄** 상자에서 빌드 이벤트의 구문을 지정합니다.  
-  
-    > [!NOTE]
-    >  프로젝트가 최신 상태이고 빌드가 트리거되지 않으면 빌드 전 이벤트가 실행되지 않습니다.  
-  
-5.  **빌드 후 이벤트 명령줄** 상자에서 빌드 이벤트의 구문을 지정합니다.  
+4.  In the **Pre-build event command line** box, specify the syntax of the build event.  
   
     > [!NOTE]
-    >  .bat 파일을 실행하는 모든 빌드 후 이벤트 명령 앞에 `call` 문을 추가합니다. 예를 들어 `call C:\MyFile.bat` 또는 `call C:\MyFile.bat call C:\MyFile2.bat`로 이름을 지정할 수 있습니다.  
+    >  Pre-build events do not run if the project is up to date and no build is triggered.  
   
-6.  **빌드 후 이벤트 실행** 상자에서 빌드 후 이벤트를 실행할 조건을 지정합니다.  
+5.  In the **Post-build event command line** box, specify the syntax of the build event.  
   
     > [!NOTE]
-    >  긴 구문을 추가하거나 [빌드 전 이벤트/빌드 후 이벤트 명령줄 대화 상자](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)에서 임의의 빌드 매크로를 선택하려면, 줄임표 단추(**...**)를 클릭하여 편집 상자를 표시합니다.  
+    >  Add a `call` statement before all post-build commands that run .bat files. For example, `call C:\MyFile.bat` or `call C:\MyFile.bat call C:\MyFile2.bat`.  
   
-     빌드 이벤트 구문에는 명령 프롬프트 또는 .bat 파일에서 유효한 모든 명령이 포함될 수 있습니다. 일괄 처리 파일의 이름 앞에 `call`을 사용하여 모든 후속 명령이 실행되도록 합니다.  
+6.  In the **Run the post-build event** box, specify under what conditions to run the post-build event.  
   
-     **참고**: 빌드 전 또는 빌드 후 이벤트가 성공적으로 완료되지 않으면 성공적인 작업을 나타내는 0(영) 이외의 코드로 이벤트 작업이 종료되도록 하여 빌드를 종료할 수 있습니다.  
+    > [!NOTE]
+    >  To add lengthy syntax, or to select any build macros from the [Pre-build Event/Post-build Event Command Line Dialog Box](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md), click the Ellipsis button (**...**) to display an edit box.  
   
-## <a name="example-how-to-change-manifest-information-by-using-a-post-build-event"></a>예: 빌드 후 이벤트를 사용하여 매니페스트 정보를 변경하는 방법  
- 다음 절차에서는 빌드 후 이벤트에서 호출된 .exe 명령을 사용하여 응용 프로그램 매니페스트의 최소 운영 체제 버전을 설정하는 방법을 보여 줍니다(프로젝트 디렉터리의 .exe.manifest 파일). 최소 운영 체제 버전은 네 부분으로 구성된 번호입니다(예: 4.10.0.0). 이를 위해 명령은 매니페스트의 `<dependentOS>` 섹션을 변경합니다.  
+     The build event syntax can include any command that is valid at a command prompt or in a .bat file. The name of a batch file should be preceded by `call` to ensure that all subsequent commands are executed.  
+  
+     **Note** If your pre-build or post-build event does not complete successfully, you can terminate the build by having your event action exit with a code other than zero (0), which indicates a successful action.  
+  
+## <a name="example-how-to-change-manifest-information-by-using-a-post-build-event"></a>Example: How to Change Manifest Information by Using a Post-Build Event  
+ The following procedure shows how to set the minimum operating system version in the application manifest by using an .exe command that is called from a post-build event (the .exe.manifest file in the project directory). The minimum operating system version is a four-part number such as 4.10.0.0. To do this, the command will change the `<dependentOS>` section of the manifest:  
   
 ```  
 <dependentOS>  
@@ -87,19 +87,19 @@ ms.lasthandoff: 05/13/2017
 </dependentOS>  
 ```  
   
-#### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>.exe 명령을 만들어 응용 프로그램 매니페스트를 변경하려면  
+#### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>To create an .exe command to change the application manifest  
   
-1.  명령에 대한 콘솔 응용 프로그램을 만듭니다. **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+1.  Create a console application for the command. From the **File** menu, point to **New**, and then click **Project**.  
   
-2.  **새 프로젝트** 대화 상자에서 **Visual C#**을 확장하고, **창**을 클릭하고 나서, **콘솔 응용 프로그램** 템플릿을 클릭합니다. 프로젝트 이름을 `ChangeOSVersionCS`로 지정합니다.  
+2.  In the **New Project** dialog box, expand **Visual C#**, click **Windows**, and then click the **Console Application** template. Name the project `ChangeOSVersionCS`.  
   
-3.  Program.cs에서 파일 맨 위의 다른 `using` 문에 다음 줄을 추가합니다.  
+3.  In Program.cs, add the following line to the other `using` statements at the top of the file:  
   
     ```  
     using System.Xml;  
     ```  
   
-4.  `ChangeOSVersionCS` 네임스페이스에서 `Program` 클래스 구현을 다음 코드로 바꿉니다.  
+4.  In the `ChangeOSVersionCS` namespace, replace the `Program` class implementation with the following code:  
   
     ```  
     class Program  
@@ -151,56 +151,56 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-     이 명령은 두 개의 인수인 응용 프로그램 매니페스트의 경로(매니페스트를 만드는 빌드 프로세스의 폴더, 일반적으로 Projectname.publish) 및 새 운영 체제 버전을 사용합니다.  
+     The command takes two arguments: the path of the application manifest (that is, the folder in which the build process creates the manifest, typically Projectname.publish), and the new operating system version.  
   
-5.  프로젝트를 빌드합니다. **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
+5.  Build the project. On the **Build** menu, click **Build Solution**.  
   
-6.  .exe 파일을 디렉터리(예: `C:\TEMP\ChangeOSVersionVB.exe`)에 복사합니다.  
+6.  Copy the .exe file to a directory such as `C:\TEMP\ChangeOSVersionVB.exe`.  
   
- 다음으로 빌드 후 이벤트에서 이 명령을 호출하여 응용 프로그램 매니페스트를 수정합니다.  
+ Next, invoke this command in a post-build event to modify the application manifest.  
   
-#### <a name="to-invoke-a-post-build-event-to-modify-the-application-manifest"></a>빌드 후 이벤트를 호출하여 응용 프로그램 매니페스트를 수정하려면  
+#### <a name="to-invoke-a-post-build-event-to-modify-the-application-manifest"></a>To invoke a post-build event to modify the application manifest  
   
-1.  프로젝트를 게시할 Windows 응용 프로그램을 만듭니다. **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+1.  Create a Windows application for the project to be published. From the **File** menu, point to **New**, and then click **Project**.  
   
-2.  **새 프로젝트** 대화 상자에서 **Visual C#**을 확장하고, **창**을 클릭하고 나서, **Windows Forms 응용 프로그램** 템플릿을 클릭합니다. 프로젝트 이름을 `CSWinApp`로 지정합니다.  
+2.  In the **New Project** dialog box, expand **Visual C#**, click **Windows Classic Desktop**, and then click the **Windows Forms App** template. Name the project `CSWinApp`.  
   
-3.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+3.  With the project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.  
   
-4.  프로젝트 디자이너에서 **게시** 페이지를 찾고 **게시 위치**를 `C:\TEMP\`로 설정합니다.  
+4.  In the Project Designer, locate the **Publish** page and set **Publishing location** to `C:\TEMP\`.  
   
-5.  **지금 게시**를 클릭하여 프로젝트를 게시합니다.  
+5.  Publish the project by clicking **Publish Now**.  
   
-     매니페스트 파일이 빌드되고 `C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest`에 삽입됩니다. 매니페스트를 보려면 파일을 마우스 오른쪽 단추로 클릭하고, **연결 프로그램**을 클릭하고, **목록에서 프로그램 선택**을 선택하고 나서, **메모장**을 클릭합니다.  
+     The manifest file will be built and put in `C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest`. To view the manifest, right-click the file, click **Open with**, select **Select the program from a list**, and then click **Notepad**.  
   
-     파일에서 `<osVersionInfo>` 요소를 검색합니다. 예를 들어 버전은 다음과 같습니다.  
+     Search in the file for the `<osVersionInfo>` element. For example, the version might be:  
   
     ```  
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />  
     ```  
   
-6.  프로젝트 디자이너에서 **빌드 이벤트** 탭을 클릭하고 **빌드 후 편집** 단추를 클릭합니다.  
+6.  In the Project Designer, click the **Build Events** tab and click the **Edit Post-build** button.  
   
-7.  **빌드 후 이벤트 명령줄** 상자에서 다음 명령을 입력합니다.  
+7.  In the **Post-build Event Command Line** box, type the following command:  
   
      `C:\TEMP\ChangeOSVersionCS.exe "$(TargetPath).manifest" 5.1.2600.0`  
   
-     프로젝트를 빌드할 때 이 명령은 응용 프로그램 매니페스트의 최소 운영 체제 버전을 5.1.2600.0으로 변경합니다.  
+     When you build the project, this command will change the minimum operating system version in the application manifest to 5.1.2600.0.  
   
-     `$(TargetPath)` 매크로는 생성되는 실행 파일의 전체 경로를 표현하므로 `$(TargetPath)`.manifest는 bin 디렉터리에서 생성되는 응용 프로그램 매니페스트를 지정합니다. 게시를 수행하면 이 매니페스트가 이전에 설정한 게시 위치에 복사됩니다.  
+     Because the `$(TargetPath)` macro expresses the full path for the executable being created,  the `$(TargetPath)`.manifest will specify the application manifest created in the bin directory. Publishing will copy this manifest to the publishing location that you set earlier.  
   
-8.  프로젝트를 다시 게시합니다. **게시** 페이지로 이동하고 **지금 게시**를 클릭합니다.  
+8.  Publish the project again. Go to the **Publish** page and click **Publish Now**.  
   
-     매니페스트를 다시 봅니다. 매니페스트를 보려면 게시 디렉터리를 열고, 파일을 마우스 오른쪽 단추로 클릭하고, **연결 프로그램**을 클릭하고, **목록에서 프로그램 선택**을 선택하고 나서, **메모장**을 클릭합니다.  
+     View the manifest again. To view the manifest, open the publish directory, right-click the file, click **Open with**, select **Select the program from a list**, and then click **Notepad**.  
   
-     버전은 다음과 같이 표시됩니다.  
+     The version should now read:  
   
     ```  
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />  
     ```  
   
-## <a name="see-also"></a>참고 항목  
- [프로젝트 디자이너, 빌드 이벤트 페이지(C#)](../ide/reference/build-events-page-project-designer-csharp.md)   
- [빌드 전 이벤트/빌드 후 이벤트 명령줄 대화 상자](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
- [방법: 빌드 이벤트 지정(Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)   
- [컴파일 및 빌드](../ide/compiling-and-building-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Build Events Page, Project Designer (C#)](../ide/reference/build-events-page-project-designer-csharp.md)   
+ [Pre-build Event/Post-build Event Command Line Dialog Box](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
+ [How to: Specify Build Events (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)   
+ [Compiling and Building](../ide/compiling-and-building-in-visual-studio.md)
