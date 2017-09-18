@@ -1,68 +1,51 @@
 ---
-title: IDebugArrayObject::GetElements | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugArrayObject::GetElements
-helpviewer_keywords:
-- IDebugArrayObject::GetElements method
+title: "IDebugArrayObject::GetElements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugArrayObject::GetElements"
+helpviewer_keywords: 
+  - "IDebugArrayObject::GetElements 메서드"
 ms.assetid: f6a6262f-5183-46ce-8a45-33ef46088b98
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 47c0e013a80c0418801f1e99922678d8fc8ccae8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugarrayobjectgetelements"></a>IDebugArrayObject::GetElements
-Gets an enumerator of all elements of the array.  
+# IDebugArrayObject::GetElements
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+배열의 모든 요소에 대 한 열거자를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetElements(   
-   IEnumDebugObjects** ppEnum  
+```cpp#  
+HRESULT GetElements(   
+   IEnumDebugObjects** ppEnum  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetElements(  
-   out IEnumDebugObjects ppEnum  
+   out IEnumDebugObjects ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `ppEnum`  
- [out] Returns an [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) object that allows enumerating over all elements.  
+ \[out\] 반환 된 [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) 는 모든 요소를 열거할 수 있는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- As an alternative, use the [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) and [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) methods to iterate through the elements.  
+## 설명  
+ 사용 하는 대신에 [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) 및 [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) 요소를 반복 하는 방법.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

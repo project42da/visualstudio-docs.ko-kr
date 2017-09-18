@@ -1,120 +1,103 @@
 ---
-title: DEBUGREF_INFO_FLAGS | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DEBUGREF_INFO_FLAGS
-helpviewer_keywords:
-- DEBUGREF_INFO_FLAGS enumeration
+title: "DEBUGREF_INFO_FLAGS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DEBUGREF_INFO_FLAGS"
+helpviewer_keywords: 
+  - "DEBUGREF_INFO_FLAGS 열거형"
 ms.assetid: 1b043327-302a-4f6d-b51d-f94f9d7c7f9d
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e1efd63a837ae86d26b4eebd4851bbfa8d89c4a7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="debugrefinfoflags"></a>DEBUGREF_INFO_FLAGS
-Specifies what information to retrieve about a debug reference object.  
+# DEBUGREF_INFO_FLAGS
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+디버그 참조 개체에 대 한 검색할 정보를 지정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-enum enum_DEBUGREF_INFO_FLAGS {   
-   DEBUGREF_INFO_NAME             = 0x00000001,  
-   DEBUGREF_INFO_TYPE             = 0x00000002,  
-   DEBUGREF_INFO_VALUE            = 0x00000004,  
-   DEBUGREF_INFO_ATTRIB           = 0x00000008,  
-   DEBUGREF_INFO_REFTYPE          = 0x00000010,  
-   DEBUGREF_INFO_REF              = 0x00000020,  
-   DEBUGREF_INFO_VALUE_AUTOEXPAND = 0x00010000,  
-   DEBUGREF_INFO_NONE             = 0x00000000,  
-   DEBUGREF_INFO_ALL              = 0xffffffff  
+```cpp#  
+enum enum_DEBUGREF_INFO_FLAGS {   
+   DEBUGREF_INFO_NAME             = 0x00000001,  
+   DEBUGREF_INFO_TYPE             = 0x00000002,  
+   DEBUGREF_INFO_VALUE            = 0x00000004,  
+   DEBUGREF_INFO_ATTRIB           = 0x00000008,  
+   DEBUGREF_INFO_REFTYPE          = 0x00000010,  
+   DEBUGREF_INFO_REF              = 0x00000020,  
+   DEBUGREF_INFO_VALUE_AUTOEXPAND = 0x00010000,  
+   DEBUGREF_INFO_NONE             = 0x00000000,  
+   DEBUGREF_INFO_ALL              = 0xffffffff  
 };  
 typedef DWORD DEBUGREF_INFO_FLAGS;  
 ```  
   
-```csharp  
-public enum enum_DEBUGREF_INFO_FLAGS {   
-   DEBUGREF_INFO_NAME             = 0x00000001,  
-   DEBUGREF_INFO_TYPE             = 0x00000002,  
-   DEBUGREF_INFO_VALUE            = 0x00000004,  
-   DEBUGREF_INFO_ATTRIB           = 0x00000008,  
-   DEBUGREF_INFO_REFTYPE          = 0x00000010,  
-   DEBUGREF_INFO_REF              = 0x00000020,  
-   DEBUGREF_INFO_VALUE_AUTOEXPAND = 0x00010000,  
-   DEBUGREF_INFO_NONE             = 0x00000000,  
-   DEBUGREF_INFO_ALL              = 0xffffffff  
+```c#  
+public enum enum_DEBUGREF_INFO_FLAGS {   
+   DEBUGREF_INFO_NAME             = 0x00000001,  
+   DEBUGREF_INFO_TYPE             = 0x00000002,  
+   DEBUGREF_INFO_VALUE            = 0x00000004,  
+   DEBUGREF_INFO_ATTRIB           = 0x00000008,  
+   DEBUGREF_INFO_REFTYPE          = 0x00000010,  
+   DEBUGREF_INFO_REF              = 0x00000020,  
+   DEBUGREF_INFO_VALUE_AUTOEXPAND = 0x00010000,  
+   DEBUGREF_INFO_NONE             = 0x00000000,  
+   DEBUGREF_INFO_ALL              = 0xffffffff  
 };  
 ```  
   
-## <a name="members"></a>Members  
- DEBUGREF_INFO_NAME  
- Initialize/use the `bstrName` field in the structure.  
+## Members  
+ DEBUGREF\_INFO\_NAME  
+ 초기화\/사용의 `bstrName` 구조체의 필드입니다.  
   
- DEBUGREF_INFO_TYPE  
- Initialize/use the `bstrType` field in the structure.  
+ DEBUGREF\_INFO\_TYPE  
+ 초기화\/사용의 `bstrType` 구조체의 필드입니다.  
   
- DEBUGREF_INFO_VALUE  
- Initialize/use the `bstrValue` field in the structure.  
+ DEBUGREF\_INFO\_VALUE  
+ 초기화\/사용의 `bstrValue` 구조체의 필드입니다.  
   
- DEBUGREF_INFO_ATTRIB  
- Initialize/use the `dwAttrib` field in the structure.  
+ DEBUGREF\_INFO\_ATTRIB  
+ 초기화\/사용의 `dwAttrib` 구조체의 필드입니다.  
   
- DEBUGREF_INFO_REFTYPE  
- Initialize/use the `dwRefType` field in the structure.  
+ DEBUGREF\_INFO\_REFTYPE  
+ 초기화\/사용의 `dwRefType` 구조체의 필드입니다.  
   
- DEBUGREF_INFO_REF  
- Initialize/use the `pReference` field in the structure.  
+ DEBUGREF\_INFO\_REF  
+ 초기화\/사용의 `pReference` 구조체의 필드입니다.  
   
- DEBUGREF_INFO_VALUE_AUTOEXPAND  
- The value field should contain the auto-expanded value, if available, for this type of object.  
+ DEBUGREF\_INFO\_VALUE\_AUTOEXPAND  
+ 사용 가능한 경우이 형식의 개체에 대 한 자동 확장 값을 값 필드에.  
   
- DEBUGREF_INFO_NONE  
- Indicates that no flags are set.  
+ DEBUGREF\_INFO\_NONE  
+ 플래그가 설정 되어 있는지 나타냅니다.  
   
- DEBUGREF_INFO_ALL  
- Indicates a mask of the flags.  
+ DEBUGREF\_INFO\_ALL  
+ 마스크는 플래그를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
- These flags are passed to the [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) and [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) methods to indicate which fields of the [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) structure are to be initialized.  
+## 설명  
+ 이러한 플래그를 전달의 [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) 및 [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) 필드를 표시 하는 메서드는 [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) 구조에 있는 초기화.  
   
- Used for the `dwFields` member of the `DEBUG_REFERENCE_INFO` structure to indicate which fields are used and valid when the structure is returned.  
+ 사용 되는 `dwFields` 의 멤버는 `DEBUG_REFERENCE_INFO` 구조 구조 반환 될 때 필드 사용 되는 및 잘못 된 것을 나타냅니다.  
   
- These values may be combined with a bitwise `OR`.  
+ 이 값이 비트와 함께 사용할 수 있습니다 `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 요구 사항  
+ 헤더: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
+## 참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
  [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)   
  [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)

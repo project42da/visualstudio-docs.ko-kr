@@ -1,65 +1,48 @@
 ---
-title: IDebugProgram2::Terminate | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgram2::Terminate
-helpviewer_keywords:
-- IDebugProgram2::Terminate
+title: "IDebugProgram2::Terminate | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgram2::Terminate"
+helpviewer_keywords: 
+  - "IDebugProgram2::Terminate"
 ms.assetid: 4d3127d3-b1e9-4b28-ac22-2f2eea255f86
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 259b7137650c1bc9d17e74a07e79543b884312ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugprogram2terminate"></a>IDebugProgram2::Terminate
-Terminates the program.  
+# IDebugProgram2::Terminate
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+프로그램을 종료합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT Terminate(   
-   void   
+```cpp#  
+HRESULT Terminate(   
+   void   
 );  
 ```  
   
-```csharp  
+```c#  
 int Terminate();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- If possible, the program will be terminated and unloaded from the process; otherwise, the debug engine (DE) will perform any necessary cleanup.  
+## 설명  
+ 가능 하면 프로그램이 중지 되 고 언로드되는 과정에서. 그렇지 않으면 디버그 엔진 \(DE\) 이때 필요한 정리를 수행 합니다.  
   
- This method or the [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) method is called by the IDE, typically in response to the user halting all debugging. The implementation of this method should, ideally, terminate the program within the process. If this is not possible, the DE should prevent the program from running any more in this process (and do any necessary cleanup). If the `IDebugProcess2::Terminate` method was called by the IDE, the entire process will be terminated sometime after the `IDebugProgram2::Terminate` method is called.  
+ 이 메서드 또는 [종료](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) IDE를 일반적으로 모든 디버깅 중지 사용자에 대 한 응답으로 메서드를 호출 합니다.  이 메서드의 구현에 프로그램 프로세스 내에서 원칙적으로 종료 해야를 합니다.  이렇게 할 수 없는 경우는 DE 합니다 프로그램에서이 프로세스가 더 이상 실행 되지 않도록와 필요한 정리 작업을 수행할.  경우는 `IDebugProcess2::Terminate` 메서드는 IDE에서 호출 된, 잠시 후 전체 프로세스를 종료 합니다는 `IDebugProgram2::Terminate` 메서드가 호출 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)
+ [종료](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)

@@ -1,68 +1,51 @@
 ---
-title: IDebugProgram2::GetENCUpdate | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgram2::GetENCUpdate
-helpviewer_keywords:
-- IDebugProgram2::GetENCUpdate
+title: "IDebugProgram2::GetENCUpdate | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgram2::GetENCUpdate"
+helpviewer_keywords: 
+  - "IDebugProgram2::GetENCUpdate"
 ms.assetid: 9832aac8-6320-4fd8-91dd-2a0852febb00
 caps.latest.revision: 14
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a3cf362657225ed6d7173431152e4fdb40ebd314
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 14
 ---
-# <a name="idebugprogram2getencupdate"></a>IDebugProgram2::GetENCUpdate
-This method gets the Edit and Continue (ENC) update for this program. A custom debug engine always returns `E_NOTIMPL`.  
+# IDebugProgram2::GetENCUpdate
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는이 프로그램에 대 한 편집 하며 계속 \(ENC\) 업데이트를 가져옵니다.  사용자 지정 디버그 엔진을 항상 반환 `E_NOTIMPL`.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetENCUpdate(   
-   IUnknown** ppUpdate  
+```cpp#  
+HRESULT GetENCUpdate(   
+   IUnknown** ppUpdate  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetENCUpdate(  
-   out object ppUpdate  
+   out object ppUpdate  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `ppUpdate`  
- [out] Returns an internal interface that can be used to update this program.  
+ \[out\] 이 프로그램을 업데이트 하는 데 사용할 수 있는 내부 인터페이스를 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
 > [!NOTE]
->  A custom debug engine should always return `E_NOTIMPL`.  
+>  사용자 지정 디버그 엔진을 항상 반환 해야 `E_NOTIMPL`.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

@@ -1,65 +1,48 @@
 ---
-title: IDebugProgramEngines2::SetEngine | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgramEngines2::SetEngine
-helpviewer_keywords:
-- IDebugProgramEngines2::SetEngine
+title: "IDebugProgramEngines2::SetEngine | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgramEngines2::SetEngine"
+helpviewer_keywords: 
+  - "IDebugProgramEngines2::SetEngine"
 ms.assetid: c05857ee-89cf-455e-8f1e-300cce4a2eab
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c016ef61d327dcbbcec552f97df5d7a01b7fb658
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprogramengines2setengine"></a>IDebugProgramEngines2::SetEngine
-Tells the program or program node which debug engine (DE) to use to debug this program.  
+# IDebugProgramEngines2::SetEngine
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+프로그램 또는 프로그램 노드 \(DE\)이이 프로그램을 디버깅 하는 데 디버그 엔진에 지시 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT SetEngine(   
-   REFGUID guidEngine  
+```cpp#  
+HRESULT SetEngine(   
+   REFGUID guidEngine  
 );  
 ```  
   
-```csharp  
-int SetEngine(   
-   ref Guid guidEngine  
+```c#  
+int SetEngine(   
+   ref Guid guidEngine  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `guidEngine`  
- [in] The GUID of the DE.  
+ \[in\] GUID는 DE입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)

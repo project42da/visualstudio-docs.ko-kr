@@ -1,51 +1,34 @@
 ---
-title: T4 Parameter Directive | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "T4 매개 변수 지시문 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 1d590387-1d9d-40a5-a72c-65fae7a8bdf3
 caps.latest.revision: 3
-author: alancameronwills
-ms.author: awills
-manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6b14a319cbf9e349de4cbf04a2d6781a0c87bf88
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+author: "alancameronwills"
+ms.author: "awills"
+manager: "douge"
+caps.handback.revision: 3
 ---
-# <a name="t4-parameter-directive"></a>T4 Parameter Directive
-In a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] text template, the `parameter` directive declares properties in your template code that are initialized from values passed in from the external context. You can set these values if you write code that invokes text transformation.  
+# T4 매개 변수 지시문
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 텍스트 템플릿에서 `parameter` 지시문은 외부 컨텍스트로부터 전달된 값에서 초기화되는 속성을 템플릿 코드에 선언합니다.  텍스트 변환을 호출하는 코드를 작성하는 경우 이러한 값을 설정할 수 있습니다.  
   
-## <a name="using-the-parameter-directive"></a>Using the Parameter Directive  
+## parameter 지시문 사용  
   
 ```  
 <#@ parameter type="Full.TypeName" name="ParameterName" #>  
 ```  
   
- The `parameter` directive declares properties in your template code that are initialized from values passed in from the external context. You can set these values if you write code that invokes text transformation. The values can be passed either in the `Session` dictionary, or in <xref:System.Runtime.Remoting.Messaging.CallContext>.  
+ `parameter` 지시문은 외부 컨텍스트로부터 전달된 값에서 초기화되는 속성을 템플릿 코드에 선언합니다.  텍스트 변환을 호출하는 코드를 작성하는 경우 이러한 값을 설정할 수 있습니다.  이 값은 `Session` 사전이나 <xref:System.Runtime.Remoting.Messaging.CallContext>에 전달될 수 있습니다.  
   
- You can declare parameters of any remotable type. That is, the type must be declared with <xref:System.SerializableAttribute>, or it must derive from <xref:System.MarshalByRefObject>. This allows parameter values to be passed into the AppDomain in which the template is processed.  
+ 원격 가능 형식의 매개 변수를 선언할 수 있습니다.  즉, 매개 변수 형식은 <xref:System.SerializableAttribute>를 사용하여 선언되거나 <xref:System.MarshalByRefObject>에서 파생되어야 합니다.  이를 통해 템플릿이 처리되는 AppDomain으로 매개 변수 값이 전달될 수 있습니다.  
   
- For example, you could write a text template with the following content:  
+ 예를 들어 다음 내용이 포함된 텍스트 템플릿을 작성할 수 있습니다.  
   
 ```  
 <#@ template language="C#" #>  
@@ -58,11 +41,11 @@ Line <#= i #>
   
 ```  
   
-## <a name="passing-parameter-values-to-a-template"></a>Passing parameter values to a template  
- If you are writing a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension such as a menu command or an event handler, you can process a template by using the text templating service:  
+## 템플릿에 매개 변수 값 전달  
+ 메뉴 명령이나 이벤트 처리기와 같은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension을 작성하는 경우 다음과 같이 텍스트 템플릿 서비스를 사용하여 템플릿을 처리할 수 있습니다.  
   
-```csharp  
-// Get a service provider - how you do this depends on the context:  
+```c#  
+// Get a service provider – how you do this depends on the context:  
 IServiceProvider serviceProvider = dte; // or dslDiagram.Store, for example   
 // Get the text template service:  
 ITextTemplating t4 = serviceProvider.GetService(typeof(STextTemplating)) as ITextTemplating;  
@@ -77,12 +60,12 @@ string result = t4.ProcessTemplate("MyTemplateFile.t4",
   
 ```  
   
-## <a name="passing-values-in-the-call-context"></a>Passing values in the Call Context  
- You can alternatively pass values as logical data in <xref:System.Runtime.Remoting.Messaging.CallContext>.  
+## 호출 컨텍스트에 값 전달  
+ 또는 <xref:System.Runtime.Remoting.Messaging.CallContext>에 논리 데이터로 값을 전달할 수 있습니다.  
   
- The following example passes values by using both methods:  
+ 다음 예제에서는 두 방법을 사용하여 값을 전달합니다.  
   
-```csharp  
+```c#  
 ITextTemplating t4 = this.Store.GetService(typeof(STextTemplating)) as ITextTemplating;  
 ITextTemplatingSessionHost host = t4 as ITextTemplatingSessionHost;  
 host.Session = host.CreateSession();  
@@ -102,12 +85,12 @@ string result = t4.ProcessTemplate("",
   
 ```  
   
-## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Passing values to a Run-Time (Preprocessed) Text Template  
- It is not usually necessary to use the `<#@parameter#>` directive with run-time (preprocessed) text templates. Instead, you can define an additional constructor or a settable property for the generated code, through which you pass parameter values. For more information, see [Run-Time Text Generation with T4 Text Templates](../modeling/run-time-text-generation-with-t4-text-templates.md).  
+## 전처리된 런타임 텍스트 템플릿에 값 전달  
+ 일반적으로는 전처리된 런타임 텍스트 템플릿에 `<#@parameter#>` 지시문을 사용할 필요가 없습니다.  대신 생성된 코드에 대한 추가 생성자나 설정 가능한 속성을 정의하여 이를 통해 매개 변수 값을 전달합니다.  자세한 내용은 [T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성](../modeling/run-time-text-generation-with-t4-text-templates.md)을 참조하십시오.  
   
- However, if you want to use `<#@parameter>` in a run-time template, you can pass values to it by using the Session dictionary. As an example, suppose you have created the file as a preprocessed template called `PreTextTemplate1`. You can invoke the template in your program by using the following code.  
+ 그러나 런타임 템플릿에 `<#@parameter>`를 사용하려는 경우 세션 사전을 사용하여 값을 템플릿에 전달할 수 있습니다.  예를 들어 `PreTextTemplate1`이라는 전처리된 템플릿으로 파일을 만든 경우  다음 코드를 사용하여 프로그램에서 템플릿을 호출할 수 있습니다.  
   
-```csharp  
+```c#  
 PreTextTemplate1 t = new PreTextTemplate1();  
 t.Session = new Microsoft.VisualStudio.TextTemplating.TextTemplatingSession();  
 t.Session["TimesToRepeat"] = 5;  
@@ -117,7 +100,7 @@ string resultText = t.TransformText();
   
 ```  
   
-## <a name="obtaining-arguments-from-texttemplateexe"></a>Obtaining arguments from TextTemplate.exe  
+## TextTemplate.exe에서 인수 가져오기  
   
 > [!IMPORTANT]
->  The `parameter` directive does not retrieve values set in the `-a` parameter of the `TextTransform.exe` utility. To get those values, set `hostSpecific="true"` in the `template` directive, and use `this.Host.ResolveParameterValue("","","argName")`.
+>  `parameter` 지시문은 `TextTransform.exe` 유틸리티의 `–a` 매개 변수에 설정된 값을 검색하지 않습니다.  해당 값을 가져오려면 `template` 지시문에 `hostSpecific="true"`를 설정하고 `this.Host.ResolveParameterValue("","","argName")`를 사용합니다.

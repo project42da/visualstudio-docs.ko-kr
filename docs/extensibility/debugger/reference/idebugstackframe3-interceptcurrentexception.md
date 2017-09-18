@@ -1,90 +1,73 @@
 ---
-title: IDebugStackFrame3::InterceptCurrentException | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugStackFrame3::InterceptCurrentException
-helpviewer_keywords:
-- IDebugStackFrame3::InterceptCurrentException
+title: "IDebugStackFrame3::InterceptCurrentException | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugStackFrame3::InterceptCurrentException"
+helpviewer_keywords: 
+  - "IDebugStackFrame3::InterceptCurrentException"
 ms.assetid: 116c7324-7645-4c15-b484-7a5cdd065ef5
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 009c775af66f457c41342d2ce6c8b20288052f6e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugstackframe3interceptcurrentexception"></a>IDebugStackFrame3::InterceptCurrentException
-Called by the debugger on the current stack frame when it wants to intercept the current exception.  
+# IDebugStackFrame3::InterceptCurrentException
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+현재 예외를 차단 하려고 할 때 현재 스택 프레임에 대 한 디버거를 호출 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
 ```cpp  
 HRESULT InterceptCurrentException(  
-   INTERCEPT_EXCEPTION_ACTION dwFlags,  
-   UINT64*                    pqwCookie  
+   INTERCEPT_EXCEPTION_ACTION dwFlags,  
+   UINT64*                    pqwCookie  
 );  
 ```  
   
-```csharp  
+```c#  
 int InterceptCurrentException(  
-   uint dwFlags,   
-   out  ulong pqwCookie  
+   uint dwFlags,   
+   out  ulong pqwCookie  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `dwFlags`  
- [in] Specifies different actions. Currently, only the [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) value `IEA_INTERCEPT` is supported and must be specified.  
+ \[in\] 다른 동작을 지정합니다.  현재,만 [INTERCEPT\_EXCEPTION\_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) 값 `IEA_INTERCEPT` 지원 되지 않으므로 지정 해야 합니다.  
   
  `pqwCookie`  
- [out] Unique value identifying a particular exception.  
+ \[out\] 특정 예외를 식별 하는 고유 값입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
   
- The following are the most common error returns.  
+ 다음은 가장 일반적인 오류가 반환 됩니다.  
   
-|Error|Description|  
-|-----------|-----------------|  
-|`E_EXCEPTION_CANNOT_BE_INTERCEPTED`|The current exception cannot be intercepted.|  
-|`E_EXCEPTION_CANNOT_UNWIND_ABOVE_CALLBACK`|The current execution frame hasn't been searched for a handler yet.|  
-|`E_INTERCEPT_CURRENT_EXCEPTION_NOT_SUPPORTED`|This method is not supported for this frame.|  
+|오류|설명|  
+|--------|--------|  
+|`E_EXCEPTION_CANNOT_BE_INTERCEPTED`|현재 예외를 가로챌 수 없습니다.|  
+|`E_EXCEPTION_CANNOT_UNWIND_ABOVE_CALLBACK`|현재 실행 프레임에 대 한 처리기를 아직 검색 되지 않은.|  
+|`E_INTERCEPT_CURRENT_EXCEPTION_NOT_SUPPORTED`|이 메서드는이 프레임에 대해 지원 되지 않습니다.|  
   
-## <a name="remarks"></a>Remarks  
- When an exception is thrown, the debugger gains control from the run time at key points during the exception handling process. During these key moments, the debugger can ask the current stack frame if the frame wants to intercept the exception. In this way, an intercepted exception is essentially an on-the-fly exception handler for a stack frame, even if that stack frame doesn't have an exception handler (for example, a try/catch block in the program code).  
+## 설명  
+ 예외가 throw 되 면 디버거가 프로세스를 처리 하는 동안 예외가 컨트롤에서 런타임에 키 포인트를 얻게 됩니다.  이러한 주요 순간 디버거는 현재 스택 프레임 프레임 예외를 차단 하려는 경우 요청할 수 있습니다.  해당 스택 프레임 예외 처리기 \(예: 프로그램 코드에서는 try\/catch 블록\)이 없는 경우에 이러한 방법으로 차단된 예외 기본적으로 스택 프레임에 대 한 즉석에서 예외 처리기입니다.  
   
- When the debugger wants to know if the exception should be intercepted, it calls this method on the current stack frame object. This method is responsible for handling all details of the exception. If the [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md) interface is not implemented or the `InterceptStackException` method returns any error, then the debugger continues processing the exception normally.  
+ 디버거에서 예외를 가로챌 경우를 알고 싶을 때 현재 스택 프레임 개체에이 메서드를 호출 합니다.  이 메서드를 예외에 대 한 모든 세부 사항을 처리 하기 위해 담당 합니다.  경우는 [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md) 인터페이스가 구현 되지 않았습니다 또는 `InterceptStackException` 메서드는 오류를 반환 하 고 예외를 정상적으로 처리 디버거가 계속 합니다.  
   
 > [!NOTE]
->  Exceptions can be intercepted only in managed code, that is, when the program being debugged is running under the .NET run time. Of course, third-party language implementers can implement `InterceptStackException` in their own debug engines if they so choose.  
+>  예외 수 있습니다 수 차단 관리 되는 코드에만 즉, 디버깅 중인 프로그램에서 실행 되는 경우에.NET 실행할 시간입니다.  물론, 다른 언어 구현 자가 구현할 수 있습니다 `InterceptStackException` 가 선택 하는 경우에 자신의 디버깅 엔진에 있습니다.  
   
- After the interception is complete, an [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) is signaled.  
+ 가로채기를 완료 한 후에 [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) 신호를 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)   
- [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md)   
+ [INTERCEPT\_EXCEPTION\_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md)   
  [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)

@@ -1,73 +1,56 @@
 ---
-title: IDebugProgramNode2::GetProgramName | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgramNode2::GetProgramName
-helpviewer_keywords:
-- IDebugProgramNode2::GetProgramName
+title: "IDebugProgramNode2::GetProgramName | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgramNode2::GetProgramName"
+helpviewer_keywords: 
+  - "IDebugProgramNode2::GetProgramName"
 ms.assetid: 510c7f5d-48ff-4d9f-ad79-fbad9f15239d
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 31598f3e18afdfd7d5842ce192b817dbdb8d3747
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprogramnode2getprogramname"></a>IDebugProgramNode2::GetProgramName
-Gets the name of the program.  
+# IDebugProgramNode2::GetProgramName
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+프로그램의 이름을 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetProgramName (   
-   BSTR* pbstrProgramName  
+```cpp#  
+HRESULT GetProgramName (   
+   BSTR* pbstrProgramName  
 );  
 ```  
   
-```csharp  
-int GetProgramName (   
-   out string pbstrProgramName  
+```c#  
+int GetProgramName (   
+   out string pbstrProgramName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pbstrProgramName`  
- [out] Returns the name of the program.  
+ \[out\] 프로그램의 이름을 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- The name of a program is not the same thing as the path to the program, although the name of the program may be part of such a path.  
+## 설명  
+ 프로그램 이름 프로그램 이름을 이러한 경로 수 있지만 프로그램의 경로와 동일 아닙니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CProgram` object that implements the [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) interface. The `MakeBstr` function allocates a copy of the specified string as a BSTR.  
+## 예제  
+ 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CProgram` 를 구현 하는 개체는 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 인터페이스입니다.  `MakeBstr` 함수를 BSTR로 지정한 문자열의 복사본이 할당 됩니다.  
   
-```cpp  
+```cpp#  
 HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {    
    if (!pbstrProgramName)    
       return E_INVALIDARG;    
@@ -78,5 +61,5 @@ HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

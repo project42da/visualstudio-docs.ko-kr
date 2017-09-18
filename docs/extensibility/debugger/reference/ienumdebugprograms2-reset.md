@@ -1,62 +1,45 @@
 ---
-title: IEnumDebugPrograms2::Reset | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IEnumDebugPrograms2::Reset
-helpviewer_keywords:
-- IEnumDebugPrograms2::Reset
+title: "IEnumDebugPrograms2::Reset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IEnumDebugPrograms2::Reset"
+helpviewer_keywords: 
+  - "IEnumDebugPrograms2::Reset"
 ms.assetid: b289242b-24ea-4df3-a811-20b0c8a903d6
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6d6b2c797d3290ca2a39443303dd53b026922d8b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="ienumdebugprograms2reset"></a>IEnumDebugPrograms2::Reset
-Resets the enumeration to the first element.  
+# IEnumDebugPrograms2::Reset
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+열거형의 첫 번째 요소를 다시 설정합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT Reset(  
-   void  
+   void  
 );  
 ```  
   
-```csharp  
+```c#  
 int Reset();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- After this method is called, the next call to the [Next](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md) method returns the first element of the enumeration.  
+## 설명  
+ 이 메서드 호출 후에 다음 호출을 [다음](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md) 메서드 열거형의 첫 번째 요소를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

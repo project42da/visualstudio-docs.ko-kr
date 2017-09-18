@@ -1,76 +1,59 @@
 ---
-title: IDebugMemoryContext2::Add | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMemoryContext2::Add
-helpviewer_keywords:
-- IDebugMemoryContext2::Add method
-- Add method
+title: "IDebugMemoryContext2::Add | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMemoryContext2::Add"
+helpviewer_keywords: 
+  - "IDebugMemoryContext2::Add 메서드"
+  - "Add 메서드"
 ms.assetid: 3c47e646-ce9e-4dd3-8f1a-6dbd3827d407
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 489dbaeb57edb9e0b47917223e98a8427bf4081c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugmemorycontext2add"></a>IDebugMemoryContext2::Add
-Adds the specified value to the current context and returns a new context.  
+# IDebugMemoryContext2::Add
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+지정 된 값을 현재 컨텍스트에 추가 하 고 새 컨텍스트를 반환 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT Add(   
-   UINT64                 dwCount,  
-   IDebugMemoryContext2** ppMemCxt  
+```cpp#  
+HRESULT Add(   
+   UINT64                 dwCount,  
+   IDebugMemoryContext2** ppMemCxt  
 );  
 ```  
   
-```csharp  
+```c#  
 int Add(  
-   ulong                    dwCount,   
-   out IDebugMemoryContext2 ppMemCxt  
+   ulong                    dwCount,   
+   out IDebugMemoryContext2 ppMemCxt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `dwCount`  
- [in] The value to add to the current context.  
+ \[in\] 현재 컨텍스트에 추가할 값입니다.  
   
  `ppMemCxt`  
- [out] Returns a new [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object.  
+ \[out\] 새 반환 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- A memory context is an address, so adding a value to an address produces a new address that requires a new context interface.  
+## 설명  
+ 새 컨텍스트 인터페이스에 필요한 새 주소 값은 주소에 추가 생성 되므로 메모리 컨텍스트 주소입니다.  
   
- This method must always produce a new context, even if the resulting address is outside the memory space associated with this context. The only exception to this is if no memory can be allocated for the new context or if `ppMemCxt` is a null value (which is an error).  
+ 이 컨텍스트와 관련 된 메모리 공간 밖으로 만들어진 주소입니다 경우에이 메서드는 항상 새 컨텍스트를 생성 해야 합니다.  새 컨텍스트에 대 한 메모리를 할당 하지 수 있습니다 또는 경우에 예외입니다 `ppMemCxt` 오류는 null 값입니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

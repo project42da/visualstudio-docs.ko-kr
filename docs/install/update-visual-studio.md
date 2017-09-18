@@ -1,6 +1,6 @@
 ---
-title: Update Visual Studio 2017 | Microsoft Docs
-description: Learn how to update Visual Studio, step-by-step.
+title: "Visual Studio 2017 업데이트 | Microsoft Docs"
+description: "Visual Studio를 업데이트하는 방법을 단계별로 알아봅니다."
 ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
@@ -31,53 +31,52 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 2b776e9567fd48bc91bf507cab5a1efb9d984a25
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: d97358681ba486d75b30d59da1aba8b460c6f757
+ms.lasthandoff: 04/06/2017
 
 ---
-# <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Update Visual Studio 2017 to the most recent release
-We update Visual Studio often to extend its functionality and to fix customer-reported issues. To make sure you have the most [current, optimized release of Visual Studio](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#release-history), you'll want to update it. Here's how.
+# <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Visual Studio 2017을 최신 릴리스 버전으로 업데이트
+Microsoft는 기능을 확장하고 고객이 보고한 문제를 해결하기 위해 Visual Studio를 종종 업데이트합니다. [최신 버전의 최적화된 Visual Studio 버전](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#release-history)을 가지려면 업데이트가 필요합니다. 방법은 다음과 같습니다.
 
-## <a name="update-by-using-the-notifications-hub"></a>Update by using the Notifications hub
-1. When there are updates, you will see a notification flag in Visual Studio.
+## <a name="update-by-using-the-notifications-hub"></a>알림 허브를 사용하여 업데이트
+1. 업데이트가 있으면 Visual Studio에 알림 플래그가 표시됩니다.
 
-  ![Update Visual Studio 2017 by using the Notification hub](media/notification-flag.png "The Notification flag in Visual Studio")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/install/media/notification-flag.png "Visual Studio의 알림 플래그")
 
-  Click or tap the notification flag to open the **Notifications** hub.
+  알림 플래그를 클릭하거나 눌러 **알림** 허브를 엽니다.
 
-  ![Update Visual Studio 2017 by using the Notification hub](media/notifications-hub.png "The Notifications hub in Visual Studio")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/install/media/notifications-hub.png "Visual Studio의 알림 허브")
 
-2. Click or tap **"Visual Studio Update" is available**, which opens the **Extensions and Updates** dialog box.
+2. **“Visual Studio 업데이트” 사용 가능**을 클릭하여 **확장 및 업데이트** 대화 상자를 엽니다.
 
-  ![Update Visual Studio 2017 by using the Notifications hub](media/notifications-hub-select.png "The Notifications hub in Visual Studio")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/install/media/notifications-hub-select.png "Visual Studio의 알림 허브")
 
-3. In the **Extensions and Updates** dialog box, click or tap the **Update** button.
+3. **확장 및 업데이트** 대화 상자에서 **업데이트** 단추를 클릭하거나 탭합니다.
 
-  ![Update Visual Studio 2017 by using the Notifications hub](media/notifications-extensions-and-updates.png "The Extensions and Updates dialog in Visual Studio")
+  ![알림 허브를 사용하여 Visual Studio 2017 업데이트](~/install/media/notifications-extensions-and-updates.png "Visual Studio의 확장 및 업데이트 대화 상자")
 
-## <a name="update-by-using-the-visual-studio-installer"></a>Update by using the Visual Studio Installer
-1.  Open the installer. You might need to update the installer before continuing. If this is the case, you'll be prompted to do so.
+## <a name="update-by-using-the-visual-studio-installer"></a>Visual Studio 설치 관리자를 사용하여 업데이트
+1.    설치 관리자를 엽니다. 계속하기 전에 설치 관리자를 업데이트해야 할 수 있습니다. 이러한 경우라면 업데이트하라는 메시지가 나타납니다.
  >[!NOTE]
- > On a computer running Windows 10, you'll find the installer under the letter **V** as the **Visual Studio Installer**, or under the letter **M** as the **Microsoft Visual Studio Installer**.
+ > Windows 10을 실행하는 컴퓨터에서는 **Visual Studio 설치 관리자**에서와 같이 **V** 문자 아래에 설치 관리자가 나타나고 그렇지 않으면 **Microsoft Visual Studio 설치 관리자**와 같이 **M** 문자 아래에 나타납니다.
 
-2.  On the **Product** page in the installer, look for the edition of Visual Studio that you have installed.
+2.    설치 관리자의 **제품** 페이지에서 사용자가 설치한 Visual Studio의 버전을 확인합니다.
 
-3.  If an update is available, you'll see an **Update** button. (It might take a few seconds for the installer to determine whether an update is available.)
+3.    업데이트를 사용할 수 있는 경우에는 **업데이트** 단추가 표시됩니다. (설치 관리자가 업데이트를 사용할 수 있는지 여부를 확인하는 데 몇 초 정도 걸릴 수 있습니다.)
 
-  Click or tap the **Update** button to install the updates.
+  **업데이트** 단추를 클릭하거나 눌러 업데이트를 설치합니다.
 
-     ![Update Visual Studio 2017 by using the Visual Studio Installer](media/update-visual-studio.png "Update Visual Studio 2017 by using the Visual Studio Installer")
+     ![Visual Studio 설치 관리자를 사용하여 Visual Studio 2017 업데이트](~/install/media/update-visual-studio.png "Visual Studio 설치 관리자를 사용하여 Visual Studio 2017 업데이트")
 
-## <a name="get-support"></a>Get support
-Sometimes, things can go wrong. If your Visual Studio installation fails, see the [Troubleshooting Visual Studio 2017 installation and upgrade failures](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) KB article for troubleshooting tips.
+## <a name="get-support"></a>지원 받기
+때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 실패 문제 해결](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) 기술 자료 문서에서 문제 해결 팁을 참조하세요.
 
-## <a name="see-also"></a>See also
-* [Install Visual Studio 2017](install-visual-studio.md)
-* [Modify Visual Studio 2017](modify-visual-studio.md)
-* [Uninstall Visual Studio 2017](uninstall-visual-studio.md)
-* [Administrator guide for Visual Studio 2017](visual-studio-administrator-guide.md)
-* [Report a problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+## <a name="see-also"></a>참고 항목
+* [Visual Studio 2017 설치](https://go.microsoft.com/fwlink/?linkid=833223)
+* [Visual Studio 2017 수정](modify-visual-studio.md)
+* [Visual Studio 2017 제거](uninstall-visual-studio.md)
+* [Visual Studio 2017용 Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
+* [Visual Studio 2017의 문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

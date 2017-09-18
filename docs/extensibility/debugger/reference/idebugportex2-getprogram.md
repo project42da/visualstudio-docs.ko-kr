@@ -1,72 +1,55 @@
 ---
-title: IDebugPortEx2::GetProgram | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPortEx2::GetProgram
-helpviewer_keywords:
-- IDebugPortEx2::GetProgram
+title: "IDebugPortEx2::GetProgram | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPortEx2::GetProgram"
+helpviewer_keywords: 
+  - "IDebugPortEx2::GetProgram"
 ms.assetid: cd83a111-bfd5-4eae-b576-526466c6b6ec
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 36d291194a8fce2c8b82a0113399edb20a817eee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugportex2getprogram"></a>IDebugPortEx2::GetProgram
-Gets the program associated with a program node.  
+# IDebugPortEx2::GetProgram
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+프로그램 노드와 연결 된 프로그램을 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetProgram(   
-   IDebugProgramNode2* pProgramNode,  
-   IDebugProgram2**    ppProgram  
+```cpp#  
+HRESULT GetProgram(   
+   IDebugProgramNode2* pProgramNode,  
+   IDebugProgram2**    ppProgram  
 );  
 ```  
   
-```csharp  
-int GetProgram(   
-   IDebugProgramNode2 pProgramNode,  
-   out IDebugProgram2 ppProgram  
+```c#  
+int GetProgram(   
+   IDebugProgramNode2 pProgramNode,  
+   out IDebugProgram2 ppProgram  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pProgramNode`  
- [in] An [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) object representing the program node.  
+ \[in\] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 프로그램의 노드를 나타내는 개체입니다.  
   
  `ppProgram`  
- [out] Returns an [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object that represents the program associated with the program node.  
+ \[out\] 반환 된 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 프로그램 노드와 연결 된 프로그램을 나타내는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

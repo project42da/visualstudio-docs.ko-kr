@@ -1,70 +1,53 @@
 ---
-title: IEEVisualizerDataProvider::GetObjectForVisualizer | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IEEVisualizerDataProvider::GetObjectForVisualizer
-helpviewer_keywords:
-- IEEVisualizerDataProvider::GetObjectForVisualizer method
+title: "IEEVisualizerDataProvider::GetObjectForVisualizer | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IEEVisualizerDataProvider::GetObjectForVisualizer"
+helpviewer_keywords: 
+  - "IEEVisualizerDataProvider::GetObjectForVisualizer 메서드"
 ms.assetid: bd5376fc-13b4-40b7-9a5d-7ba8289f1b24
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b5786b88fba5ced1011d4a0874905331883aac24
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="ieevisualizerdataprovidergetobjectforvisualizer"></a>IEEVisualizerDataProvider::GetObjectForVisualizer
-This method gets the object that this visualizer represents.  
+# IEEVisualizerDataProvider::GetObjectForVisualizer
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는이 시각화 도우미를 나타내는 개체를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
 ```cpp  
-HRESULT GetObjectForVisualizer(  
-   IDebugObject** ppObject  
+HRESULT GetObjectForVisualizer(  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```csharp  
-int GetObjectForVisualizer(  
-   out IDebugObject ppObject  
+```c#  
+int GetObjectForVisualizer(  
+   out IDebugObject ppObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `ppObject`  
- [out] The object being represented by this visualizer  
+ \[out\] 이 시각화 도우미에서 표현 되는 개체  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- `GetObjectForVisualizer` is allowed to return a cached version of the object. If the caller wants to make sure that the object is up to date, then it will call [GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md).  
+## 설명  
+ `GetObjectForVisualizer`캐시 된 버전의 개체를 반환할 수 있습니다.  호출자가 개체의 최신 버전입니다 다음 호출 됩니다 있는지 확인 하려는 경우 [GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md).  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   
  [GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

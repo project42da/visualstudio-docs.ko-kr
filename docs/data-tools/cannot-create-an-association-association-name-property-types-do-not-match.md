@@ -1,56 +1,37 @@
 ---
-title: Cannot create an association &lt;association name&gt; - property types do not match | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "&lt;association name&gt; 연결을 만들 수 없습니다. - 속성 형식이 일치하지 않는 경우 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 97ec5a04-6e23-45a2-9226-d77ead854392
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 1537c9fa6f3271f8e2f000613f35616ac03f6bd9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 3
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>Cannot create an association &lt;association name&gt; - property types do not match
-Cannot create an association \<association name> - property types do not match. Properties do not have matching types: \<property names>.  
+# &lt;association name&gt; 연결을 만들 수 없습니다. - 속성 형식이 일치하지 않는 경우
+만들 수 없습니다. \< 연결 이름> -속성 형식이 일치 하지 않습니다. 속성 일치 하는 형식에는 없습니다: \< 속성 이름>합니다.  
   
- Associations are defined by the selected **Association Properties** in the **Association Editor** dialog box. Properties on each side of the association must be of the same data type.  
+ 연결 정의 된 선택한 **연결 속성** 에 **연결 편집기** 대화 상자입니다. 연결의 각 측에 대한 속성은 동일한 데이터 형식이어야 합니다.  
   
- The properties listed in the message do not have the same data types.  
+ 메시지에 나열된 속성은 동일한 데이터 형식을 갖지 않습니다.  
   
-### <a name="to-correct-this-error"></a>To correct this error  
+### <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  Examine the message and note the properties called out in the message.  
+1.  메시지를 검사하여 메시지에서 호출된 속성을 기록합니다.  
   
-2.  Click **OK** to dismiss the dialog box.  
+2.  클릭 **확인** 대화 상자를 닫습니다.  
   
-3.  Inspect the **Association Properties** and select properties of the same data type.  
+3.  검사는 **연관 속성** 고 동일한 데이터 형식 속성을 선택 합니다.  
   
-4.  Click **OK**.  
+4.  **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>See Also  
- [How to: Create an association (relationship) between LINQ to SQL classes (O/R Designer)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)   
- [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+## <a name="see-also"></a>참고 항목  
+ [방법: LINQ to SQL 클래스 (O/R 디자이너) 사이 연결 (관계) 만들기](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)   
+ [연습: LINQ to SQL 클래스 (O-R 디자이너) 만들기](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)

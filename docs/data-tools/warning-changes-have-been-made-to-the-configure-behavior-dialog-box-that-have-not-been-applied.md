@@ -1,53 +1,34 @@
 ---
-title: Warning. Changes have been made to the Configure Behavior dialog box that have not been applied | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "경고. 동작 구성 대화 상자에 적용되지 않은 변경 내용이 있습니다. | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: ce5822dd-4f10-4c86-b707-7766837be216
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: e9ba86170bf9e35258da7c39a8e5f1a980da774d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 1
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>Warning. Changes have been made to the Configure Behavior dialog box that have not been applied
-Warning. Changes have been made to the Configure Behavior dialog box that have not been applied. Do you want to apply your changes?  
+# 경고. 동작 구성 대화 상자에 적용되지 않은 변경 내용이 있습니다.
+경고.동작 구성 대화 상자에 적용되지 않은 변경 내용이 있습니다.변경 내용을 적용하시겠습니까?  
   
- The **Configure Behavior** dialog box enables you to configure Insert, Update, and Delete behavior for all classes available. This message appears when you select a new **Class** and **Behavior** combination and the previous change has not yet been applied.  
+ **동작 구성** 대화 상자에서는 사용 가능한 모든 클래스에 대해 삽입, 업데이트 및 삭제 동작을 구성할 수 있습니다.이 메시지는 새 **클래스**와 **동작** 조합을 선택하고 이전 변경 내용이 아직 적용되지 않은 경우 나타납니다.  
   
-### <a name="to-apply-the-change-and-continue"></a>To apply the change and continue  
+### 변경 내용을 적용하고 계속하려면  
   
--   Click **Yes** to apply the change to the selected **Class** and **Behavior**.  
+-   **예**를 클릭하여 선택한 **클래스** 및 **동작**에 변경 내용을 적용합니다.  
   
-### <a name="to-cancel-the-previous-change-and-continue"></a>To cancel the previous change and continue  
+### 이전 변경 내용을 취소하고 계속하려면  
   
--   Click **No** to cancel the change to the selected **Class** and **Behavior**.  
+-   **아니요**를 클릭하여 선택한 **클래스** 및 **동작**에 대한 변경 내용을 취소합니다.  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   
- [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+## 참고 항목  
+ [O\/R 디자이너\(개체 관계형 디자이너\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [방법: 저장 프로시저를 할당하여 업데이트, 삽입 및 삭제 수행\(O\/R 디자이너\)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   
+ [연습: LINQ to SQL 클래스 만들기\(O\/R 디자이너\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)

@@ -1,77 +1,60 @@
 ---
-title: IDebugMethodField::EnumLocals | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMethodField::EnumLocals
-helpviewer_keywords:
-- IDebugMethodField::EnumLocals method
+title: "IDebugMethodField::EnumLocals | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMethodField::EnumLocals"
+helpviewer_keywords: 
+  - "IDebugMethodField::EnumLocals 메서드"
 ms.assetid: b0456a6d-2b96-49e2-a871-516571b4f6a5
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2b0a7f080e26a6c55fa9ba759ed93e6b1eb09156
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
-Creates an enumerator for selected local variables of the method.  
+# IDebugMethodField::EnumLocals
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+선택한 지역 변수에 메서드는 열거자를 만듭니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT EnumLocals(   
-   IDebugAddress*     pAddress,  
-   IEnumDebugFields** ppLocals  
+```cpp#  
+HRESULT EnumLocals(   
+   IDebugAddress*     pAddress,  
+   IEnumDebugFields** ppLocals  
 );  
 ```  
   
-```csharp  
+```c#  
 int EnumLocals(  
-   IDebugAddress        pAddress,   
-   out IEnumDebugFields ppLocals  
+   IDebugAddress        pAddress,   
+   out IEnumDebugFields ppLocals  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pAddress`  
- [in] An [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) object representing the debug address that selects the context or scope from which to get the locals.  
+ \[in\] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 컨텍스트 또는 범위의 지역 변수를 얻을 수를 선택 하는 디버그 주소를 나타내는 개체입니다.  
   
  `ppLocals`  
- [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing a list of the locals; otherwise, returns a null value if there are no locals.  
+ \[out\] 반환 된 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) ; 지역 변수 목록을 나타내는 개체 그렇지 않으면 지역 없는 경우 null 값을 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK or returns S_FALSE if there are no locals. Otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 S\_OK를 반환 하거나 없는 지역 없으면 S\_FALSE를 반환 합니다.  그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- Only the variables defined within the block that contains the given debug address are enumerated. If all locals including any compiler-generated locals are needed, call the [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) method.  
+## 설명  
+ 지정 된 디버그 주소가 들어 블록 내에서 정의 된 변수만 열거 됩니다.  모든 지역 변수는 컴파일러에서 생성 된 지역 변수를 포함 하 여 필요한 경우 호출 하는 [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) 메서드.  
   
- A method can contain multiple scoping contexts or blocks. For example, the following contrived method contains three scopes, the two inner blocks and the method body itself.  
+ 메서드에 여러 범위 지정 컨텍스트 또는 블록을 포함할 수 있습니다.  예를 들어, 다음과 같은 인위적인된 방법 세 가지 범위는 두 개의 내부 블록과 메서드 본문이 포함 되어 있습니다.  
   
-```csharp  
+```c#  
 public void func(int index)  
 {  
     // Method body scope  
@@ -89,9 +72,9 @@ public void func(int index)
 }  
 ```  
   
- The [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) object represents the `func` method itself. Calling the `EnumLocals` method with an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) set to the `Inner Scope 1` address returns an enumeration containing the `temp1` variable, for example.  
+ [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) 나타내는 개체는 `func` 메서드 자체.  호출 하는 `EnumLocals` 메서드를 사용는 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 설정는 `Inner Scope 1` 주소를 반환 하는 열거형을 포함 하는 `temp1` 예를 들어 변수.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   

@@ -1,81 +1,64 @@
 ---
-title: Single and Multi-tab Views | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], custom - single and multi-tab views
+title: "단일 및 다중 탭 뷰 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "편집기 [Visual Studio SDK] 사용자 지정-단일 및 다중 탭 뷰"
 ms.assetid: e3611704-349f-4323-b03c-f2b0a445d781
 caps.latest.revision: 22
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 94b10507be59b2ead785e8b03f12c71e33874407
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 22
 ---
-# <a name="single-and-multi-tab-views"></a>Single and Multi-tab Views
-An editor can create different types of views. One example is a code editor window, another is a forms designer.  
+# 단일 및 다중 탭 뷰
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+편집기는 서로 다른 뷰를 만들 수 있습니다.  예를 들어 코드 편집기 창, 다른 양식 디자이너입니다.  
   
- A multi-tabbed view is a view that has multiple tabs. For example, the HTML editor has two tabs at the bottom: **Design** and **Source**, each a logical view. The design view displays a rendered web page, while the other displays the HTML that comprises the web page.  
+ 여러 개 있는 보기에 여러 개의 탭으로 구성 된 보기가입니다.  예를 들어, HTML 편집기 맨 아래에 두 개의 탭이 있습니다:  **디자인** 및  **원본**, 각 논리 보기입니다.  다른 웹 페이지를 구성 하는 HTML을 표시 하는 동안 디자인 뷰에 렌더링 된 웹 페이지를 표시 합니다.  
   
-## <a name="accessing-physical-views"></a>Accessing Physical Views  
- Physical views host document view objects, each representing a view of data in the buffer, such as code or a form. Accordingly, each document view object has a physical view (identified by something known as a physical view string), and generally a single logical view.  
+## 물리적 보기에 액세스  
+ 물리적 보기 각 버퍼에 있는 데이터, 코드 또는 폼 등의 보기를 나타내는 문서 보기 개체를 호스트 합니다.  따라서, 각 문서의 뷰 개체로 실제 뷰 문자열로 알려진 실제 보기, 및 일반적으로 단일 논리적 보기 있습니다.  
   
- In some cases, though, a physical view can have two or more logical views. Some examples are an editor that has a split window with side-by-side views, or a forms designer that has a GUI/design view and a code-behind-the-form view.  
+ 경우에 따라, 두 개 이상의 논리 보기 실제 뷰를 가질 수 있습니다.  예를 들면 GUI\/디자인 보기와 코드\-뒤\-\-폼 보기 폼 디자이너 또는 분할 창을 세로로 나란히 보기가 있는 편집기입니다.  
   
- To enable your editor to access all of the available physical views, you must create a unique physical view string for each type of document view object that your editor factory can create. For example, the [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] editor factory can create document view objects for a code window and a forms designer window.  
+ 편집기에서 모든 사용 가능한 물리적 보기에 액세스할 수 있도록 문자열 편집기 팩터리를 만들 수 있습니다 문서 보기 개체의 각 유형에 대 한 고유한 물리적 보기를 만들어야 합니다.  예를 들어 있는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 편집기 팩터리 개체 보기의 코드 창과 폼 디자이너 창을 문서를 만들 수 있습니다.  
   
-## <a name="creating-multi-tabbed-views"></a>Creating Multi-Tabbed Views  
- Though a document view object must be associated with a physical view through a unique physical view string, you can place multiple tabs within the physical view to enable the viewing of data in different ways. In this multi-tabbed configuration, all tabs are associated with the same physical view string, but each tab is given a different logical view GUID.  
+## 여러 개 있는 보기 만들기  
+ 문서 보기 개체 실제 뷰는 실제 보기 고유 문자열을 통해 연결 되어야 합니다 있지만 보기 데이터를 여러 가지 방식으로 사용할 수 있도록 실제 보기 내에서 여러 개의 탭을 배치할 수 있습니다.  이 여러 개 있는 구성에서 모든 탭 같은 물리적 보기 문자열과 관련 된 있지만 각 탭 다른 논리 보기 GUID 지정 됩니다.  
   
- To create a multi-tabbed view for an editor, implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView> interface and then associate a different logical view GUID (<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>) with each tab you create.  
+ 여러 개 있는 보기를 만들려면 편집기를 구현에 <xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView> 인터페이스와 다른 논리 보기 GUID 다음 연결 \(<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>\) 만드는 각 탭이.  
   
- The Visual Studio HTML editor is an example of an editor with a multi-tab view. It has **Design** and **Source** tabs. To enable this, a different logical view is associated with each tab, `LOGICALVIEWID_TextView` for the **Design** tab and `LOGICALVIEWID_Code` for the **Source** tab.  
+ Visual Studio HTML 편집기 편집기를 multi\-tab 보기의 예입니다.  이  **디자인** 및  **원본** 탭.  이 기능을 사용 하려면 다른 논리 보기 탭과 관련이 `LOGICALVIEWID_TextView` 에  **디자인** 탭 및 `LOGICALVIEWID_Code` 에  **원본** 탭.  
   
- By specifying the appropriate logical view, a VSPackage can access the view that corresponds to a particular purpose, such as designing a form, editing code, or debugging code. However, one of the windows must be identified by the NULL string and this must correspond to the primary logical view (`LOGVIEWID_Primary`).  
+ 적절 한 논리 뷰를 지정 하 여 양식 디자인, 코드 편집 또는 코드 디버깅 등 특정 목적에 해당 하는 보기는 VSPackage 액세스할 수 있습니다.  그러나 창 중 하나가 합니다 식별할 수 NULL 문자열 및이 기본 논리 보기에 해당 합니다 \(`LOGVIEWID_Primary`\).  
   
- The following table lists the available logical view values and their use.  
+ 다음 값 사용 가능한 논리 보기 및 사용 하는 표입니다.  
   
-|LOGVIEWID GUID|Recommended Use|  
-|--------------------|---------------------|  
-|`LOGVIEWID_Primary`|Default/primary view of the editor factory.<br /><br /> All editor factories must support this value. This view must use the NULL string as its physical view string. At least one logical view must be set to this value.|  
-|`LOGVIEWID_Debugging`|Debugging view. Typically, `LOGVIEWID_Debugging` maps to the same view as `LOGVIEWID_Code`.|  
-|`LOGVIEWID_Code`|View launched by the **View Code** command.|  
-|`LOGVIEWID_Designer`|View launched by the **View Form** command.|  
-|`LOGVIEWID_TextView`|Text editor view. This is the view that returns <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>, from which you can access <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|  
-|`LOGVIEWID_UserChooseView`|Prompts the user to choose which view to use.|  
-|`LOGVIEWID_ProjectSpecificEditor`|Passed by the **Open With** dialog box to<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> when the user chooses the "(Project default editor)" entry.|  
+|LOGVIEWID GUID|권장된 용도|  
+|--------------------|------------|  
+|`LOGVIEWID_Primary`|기본\/기본 뷰 편집기 팩터리입니다.<br /><br /> 모든 편집기 팩터리는이 값을 지원 해야 합니다.  이 보기의 실제 뷰 문자열로 NULL 문자열을 사용 해야 합니다.  하나 이상의 논리적 보기를이 값으로 설정 되어야 합니다.|  
+|`LOGVIEWID_Debugging`|보기를 디버깅 합니다.  일반적으로, `LOGVIEWID_Debugging` 맵 이름으로 동일한 보기를 `LOGVIEWID_Code`.|  
+|`LOGVIEWID_Code`|보기 시작 하는  **코드 보기** 명령입니다.|  
+|`LOGVIEWID_Designer`|보기를 시작 하는  **양식 보기** 명령을.|  
+|`LOGVIEWID_TextView`|텍스트 편집기 뷰입니다.  이 반환 하는 보기입니다. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>에서 액세스할 수 있는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|  
+|`LOGVIEWID_UserChooseView`|볼을 사용 하려면 선택 하 라는.|  
+|`LOGVIEWID_ProjectSpecificEditor`|전달 하는  **와** 대화 상자에<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> 때 사용자가 "\(프로젝트 기본 편집기\)" 항목을 선택 합니다.|  
   
- Although logical view GUIDs are extensible, you can use only the logical view GUIDs defined in your VSPackage.  
+ 확장 가능한 논리 보기의 Guid는 하지만 하면 Vspackage에 정의 된 논리적 보기 Guid만 사용할 수 있습니다.  
   
- On shutdown, Visual Studio retains the GUID of the editor factory and the physical view strings associated with the document window so that it can be used to re-open document windows when the solution is re-opened. Only windows that are open when a solution is closed are persisted in the solution (.suo) file. These values correspond to the `VSFPROPID_guidEditorType` and `VSFPROPID_pszPhysicalView` values passed in the `propid` parameter in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> method.  
+ 종료에, Visual Studio 편집기 팩터리 및 솔루션이 열립니다 됩니다 때 문서 windows를 사용할 수 있도록 문서 창에 연결 된 실제 보기 문자열 GUID 유지 합니다.  솔루션을 닫을 때 열려 있는 창에는 솔루션 \(.suo\) 파일에 저장 됩니다.  이러한 값에 해당 하는 `VSFPROPID_guidEditorType` 및 `VSFPROPID_pszPhysicalView` 전달 된 값은 `propid` 매개 변수에 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 메서드.  
   
-## <a name="example"></a>Example  
- This snippet illustrates how the <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> object is used to access a view that implements `IVsCodeWindow`. In this case, the <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> service is used to call <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> and request `LOGVIEWID_TextView`, which obtains a pointer to a window frame. A pointer to the document view object is obtained by calling <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> and specifying a value of `VSFPROPID_DocView`. From the document view object, `QueryInterface` is called for `IVsCodeWindow`. The expectation in this case is that a text editor is returned, and so the document view object returned in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> method is a code window.  
+## 예제  
+ 이 코드 조각을 보여 줍니다 방법에 <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> 개체를 구현 하는 보기에 액세스 하는 데 사용 됩니다 `IVsCodeWindow`.  이 경우에 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> 서비스를 호출 하는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> 을 요청 `LOGVIEWID_TextView`, 창 프레임에 대 한 포인터를 가져옵니다.  호출 하 여 문서의 뷰 개체에 대 한 포인터를 얻을 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 값을 지정 하 고 `VSFPROPID_DocView`.  문서 보기 개체를 `QueryInterface` 에 대 한 호출 됩니다 `IVsCodeWindow`.  이란이 경우 텍스트 편집기 반환 되 고 따라서 반환 된 문서 보기 개체에는 해당 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 메서드 코드 창입니다.  
   
-```cpp  
+```cpp#  
 HRESULT CFindTool::GotoFileLocation(const WCHAR * szFile, long iLine, long iStart, long iLen)  
 {  
   HRESULT hr;  
@@ -130,7 +113,7 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Supporting Multiple Document Views](../extensibility/supporting-multiple-document-views.md)   
- [How to: Attach Views to Document Data](../extensibility/how-to-attach-views-to-document-data.md)   
- [Creating Custom Editors and Designers](../extensibility/creating-custom-editors-and-designers.md)
+## 참고 항목  
+ [여러 문서 보기를 지원합니다.](../extensibility/supporting-multiple-document-views.md)   
+ [방법: 뷰 문서 데이터를 연결 합니다.](../extensibility/how-to-attach-views-to-document-data.md)   
+ [사용자 지정 편집기 및 디자이너 만들기](../extensibility/creating-custom-editors-and-designers.md)

@@ -1,74 +1,57 @@
 ---
-title: IDebugEnumField::GetValueFromString | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugEnumField::GetValueFromString
-helpviewer_keywords:
-- IDebugEnumField::GetValueFromString method
+title: "IDebugEnumField::GetValueFromString | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugEnumField::GetValueFromString"
+helpviewer_keywords: 
+  - "IDebugEnumField::GetValueFromString 메서드"
 ms.assetid: 1ef8ac5e-a3e0-4078-b876-7f5615aedcbb
 caps.latest.revision: 7
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9def9e56e0896d11c10bfebfd5c2defe3fb52da8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 7
 ---
-# <a name="idebugenumfieldgetvaluefromstring"></a>IDebugEnumField::GetValueFromString
-This method returns the value associated with the name of an enumeration constant.  
+# IDebugEnumField::GetValueFromString
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+열거형 상수의 이름으로 연결 된 값이 반환 됩니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT GetValueFromString(  
-   LPCOLESTR  pszValue,  
-   ULONGLONG* pvalue  
+   LPCOLESTR  pszValue,  
+   ULONGLONG* pvalue  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetValueFromString(  
-   string    pszValue,  
-   out ulong pValue  
+   string    pszValue,  
+   out ulong pValue  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pszValue`  
- [in] A string specifying the name for which to get the value. Note that for C++, this is a wide character string.  
+ \[in\] 가져올 값의 이름을 지정 하는 문자열입니다.  C \+ \+에 대 한 참고를 와이드 문자의 문자열입니다.  
   
  `pValue`  
- [out] Returns the associated numerical value.  
+ \[out\] 연결 된 숫자 값을 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns `S_FALSE`, if the name is not part of the enumeration, or an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE`, 이름을 열거형 또는 오류 코드의 일부가 아닌 경우.  
   
-## <a name="remarks"></a>Remarks  
- This method is case-sensitive. If a case-insensitive search is needed (for example, in a language such as Visual Basic where names are not case sensitive), use [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md).  
+## 설명  
+ 이 메서드는 대\/소문자를 구분합니다.  대\/소문자 구분 검색 \(예를 들어, 언어 예: Visual Basic 위치 이름 없는 대 \/ 소문자 구분\)에 필요 하지 않으면 사용 [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md).  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)

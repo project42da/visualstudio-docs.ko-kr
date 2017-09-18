@@ -1,61 +1,44 @@
 ---
-title: 'Walkthrough: Displaying Statement Completion | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], new - statement completion
+title: "연습: 문 완성 표시 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "편집기 [Visual Studio SDK] 새-문 완성"
 ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
 caps.latest.revision: 36
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 4398bccf0f043871237a7b41a3454537bb08abd5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 36
 ---
-# <a name="walkthrough-displaying-statement-completion"></a>Walkthrough: Displaying Statement Completion
-You can implement language-based statement completion by defining the identifiers for which you want to provide completion and then triggering a completion session. You can define statement completion in the context of a language service, define your own file name extension and content type and then display completion for just that type, or you can trigger completion for an existing content type—for example, "plaintext". This walkthrough shows how to trigger statement completion for the "plaintext" content type, which is the content type of text files. The "text" content type is the ancestor of all other content types, including code and XML files.  
+# 연습: 문 완성 표시
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+완성 기능을 제공 하려는 식별자를 정의 하 고 다음 완성 세션을 트리거하지 기반 언어 문 완성을 구현할 수 있습니다. 언어 서비스의 컨텍스트에서 문 완성을 정의 하, 고유한 파일 이름 확장명 및 콘텐츠 형식을 정의 하 고 다음 해당 형식만 대 한 완료를 표시할 수 하거나 기존 콘텐츠 형식에 대 한 완료를 트리거할 수 있습니다\-예를 들어 "일반"입니다. 이 연습에서는 텍스트 파일의 콘텐츠 형식인 "일반 텍스트" 콘텐츠 형식에 대 한 문 완성을 트리거하는 방법을 보여 줍니다. "Text" 콘텐츠 유형 코드 및 XML 파일을 비롯 한 모든 콘텐츠 형식의 상위 항목입니다.  
   
- Statement completion is typically triggered by typing certain characters—for example, by typing the beginning of an identifier such as "using". It is typically dismissed by pressing the Spacebar, Tab, or Enter key to commit a selection. You can implement the IntelliSense features that are triggered by typing a character by using a command handler for the keystrokes (the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> interface) and a handler provider that implements the <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> interface. To create the completion source, which is the list of identifiers that participate in completion, implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> interface and a completion source provider (the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> interface). The providers are Managed Extensibility Framework (MEF) component parts. They are responsible for exporting the source and controller classes and importing services and brokers—for example, the <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, which enables navigation in the text buffer, and the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>, which triggers the completion session.  
+ 문 완성은 일반적으로 특정 문자를 입력 하 여 트리거됩니다\-"를 사용 하 여" 등의 식별자의 시작 부분을 입력 하 여 예를 들어 있습니다. 선택 영역을 커밋하지 스페이스바, 탭 또는 Enter 키를 눌러 일반적으로 해제 됩니다. 키 입력에 대 한 명령 처리기를 사용 하 여 문자를 입력 하 여 발생 하는 IntelliSense 기능을 구현할 수 있습니다 \(의 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 인터페이스\) 및 구현 하는 처리기 공급자는 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 인터페이스입니다. 완료에 참여 하는 식별자의 목록을 완성 소스를 만들려면 구현는 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> 인터페이스와 완료 원본 공급자 \(의 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> 인터페이스\)입니다. 공급자는 프레임 워크 MEF \(Managed Extensibility\) 구성 요소입니다. 서비스 및 브로커 소스 및 컨트롤러 클래스를 내보내기 및 가져오기 작업을 담당 하는\-예를 들어는 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, 탐색 텍스트 버퍼의 수 및 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>, 완성 세션의 트리거.  
   
- This walkthrough shows how to implement statement completion for a hard-coded set of identifiers. In full implementations, the language service and the language documentation are responsible for providing that content.  
+ 이 연습에서는 하드 코드 된 일련의 식별자에 대 한 문 완성을 구현 하는 방법을 보여 줍니다. 전체 구현에서 언어 서비스와 해당 언어 설명서는 해당 콘텐츠를 제공 합니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## 사전 요구 사항  
+ Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)을 참조하세요.  
   
-## <a name="creating-a-mef-project"></a>Creating a MEF Project  
+## MEF 프로젝트 만들기  
   
-#### <a name="to-create-a-mef-project"></a>To create a MEF project  
+#### MEF 프로젝트를 만들려면  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `CompletionTest`.  
+1.  C\# VSIX 프로젝트를 만듭니다. \(에 **새 프로젝트** 대화 상자에서 **Visual C\# \/ 확장성**, 다음 **VSIX 프로젝트**.\) 솔루션의 이름을 `CompletionTest`합니다.  
   
-2.  Add an Editor Classifier item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  편집기 분류자 항목 템플릿을 프로젝트에 추가 합니다. 자세한 내용은 [편집기 항목 템플릿을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-an-editor-item-template.md)을 참조하십시오.  
   
-3.  Delete the existing class files.  
+3.  기존 클래스 파일을 삭제합니다.  
   
-4.  Add the following references to the project and make sure that **CopyLocal** is set to `false`:  
+4.  프로젝트에 다음 참조를 추가 하 고 있는지 확인 **{2\>copylocal** 로 설정 된 `false`:  
   
      Microsoft.VisualStudio.Editor  
   
@@ -69,134 +52,155 @@ You can implement language-based statement completion by defining the identifier
   
      Microsoft.VisualStudio.TextManager.Interop  
   
-## <a name="implementing-the-completion-source"></a>Implementing the Completion Source  
- The completion source is responsible for collecting the set of identifiers and adding the content to the completion window when a user types a completion trigger, such as the first letters of an identifier. In this example, the identifiers and their descriptions are hard-coded in the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> method. In most real-world uses, you would use your language's parser to get the tokens to populate the completion list.  
+## 완료 소스 구현  
+ 완료 소스는 식별자의 집합을 수집 하 고 사용자는 완료 트리거 같은 식별자의 첫 번째 문자를 입력할 때 완료 창에 콘텐츠를 추가 하는 일을 담당 합니다. 이 예제에서는 식별자 및 해당 설명을 보려면은에 하드 코드 된 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> 메서드. 대부분의 실제 사용 완성 목록을 채우기 위해 토큰을 가져오는 해당 언어의 파서를 사용 합니다.  
   
-#### <a name="to-implement-the-completion-source"></a>To implement the completion source  
+#### 완료 소스를 구현 하려면  
   
-1.  Add a class file and name it `TestCompletionSource`.  
+1.  클래스 파일을 추가 하 고 이름을 `TestCompletionSource`합니다.  
   
-2.  Add these imports:  
+2.  이러한 가져오기를 추가 합니다.  
   
-     [!code-csharp[VSSDKCompletionTest#1](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_1.cs)]  [!code-vb[VSSDKCompletionTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_1.vb)]  
+     [!code-cs[VSSDKCompletionTest#1](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_1.cs)]
+     [!code-vb[VSSDKCompletionTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_1.vb)]  
   
-3.  Modify the class declaration for `TestCompletionSource` so that it implements <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>:  
+3.  에 대 한 클래스 선언을 수정 `TestCompletionSource` 구현 되도록 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>:  
   
-     [!code-csharp[VSSDKCompletionTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_2.cs)]  [!code-vb[VSSDKCompletionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_2.vb)]  
+     [!code-cs[VSSDKCompletionTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_2.cs)]
+     [!code-vb[VSSDKCompletionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_2.vb)]  
   
-4.  Add private fields for the source provider, the text buffer, and a list of <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> objects (which correspond to the identifiers that will participate in the completion session):  
+4.  Private 필드의 목록과 원본 공급자, 텍스트 버퍼에 대 한 추가 <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> \(하는 개체는 완성 세션에 참여 하는 식별자에 해당\):  
   
-     [!code-csharp[VSSDKCompletionTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_3.cs)]  [!code-vb[VSSDKCompletionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_3.vb)]  
+     [!code-cs[VSSDKCompletionTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_3.cs)]
+     [!code-vb[VSSDKCompletionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_3.vb)]  
   
-5.  Add a constructor that sets the source provider and buffer. The `TestCompletionSourceProvider` class is defined in later steps:  
+5.  원본 공급자 및 버퍼를 설정 하는 생성자를 추가 합니다.`TestCompletionSourceProvider` 클래스는 이후 단계에서 정의 됩니다.  
   
-     [!code-csharp[VSSDKCompletionTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_4.cs)]  [!code-vb[VSSDKCompletionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_4.vb)]  
+     [!code-cs[VSSDKCompletionTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_4.cs)]
+     [!code-vb[VSSDKCompletionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_4.vb)]  
   
-6.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> method by adding a completion set that contains the completions you want to provide in the context. Each completion set contains a set of <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> completions, and corresponds to a tab of the completion window. (In Visual Basic projects, the completion window tabs are named **Common** and **All**.) The FindTokenSpanAtPosition method is defined in the next step.  
+6.  구현 된 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> 컨텍스트에서 제공 하려는 완료를 포함 하는 완료 집합을 추가 하 여 메서드. 집합을 포함 하는 각 완성 집합 <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> 완료 완료 창의 탭에 해당 합니다. \(Visual Basic 프로젝트에서 완료 창의 탭 이름은 **일반적인** 및 **모든**.\) FindTokenSpanAtPosition 메서드는 다음 단계에서 정의 됩니다.  
   
-     [!code-csharp[VSSDKCompletionTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_5.cs)]  [!code-vb[VSSDKCompletionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_5.vb)]  
+     [!code-cs[VSSDKCompletionTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_5.cs)]
+     [!code-vb[VSSDKCompletionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_5.vb)]  
   
-7.  The following method is used to find the current word from the position of the cursor:  
+7.  다음 메서드는 커서의 위치에서 현재 단어를 찾는 데 사용 됩니다.  
   
-     [!code-csharp[VSSDKCompletionTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_6.cs)]  [!code-vb[VSSDKCompletionTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_6.vb)]  
+     [!code-cs[VSSDKCompletionTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_6.cs)]
+     [!code-vb[VSSDKCompletionTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_6.vb)]  
   
-8.  Implement the `Dispose()` method:  
+8.  구현 된 `Dispose()` 메서드:  
   
-     [!code-csharp[VSSDKCompletionTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_7.cs)]  [!code-vb[VSSDKCompletionTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_7.vb)]  
+     [!code-cs[VSSDKCompletionTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_7.cs)]
+     [!code-vb[VSSDKCompletionTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_7.vb)]  
   
-## <a name="implementing-the-completion-source-provider"></a>Implementing the Completion Source Provider  
- The completion source provider is the MEF component part that instantiates the completion source.  
+## 완료 원본 공급자를 구현합니다.  
+ 완료 원본 공급자에는 완료 소스를 인스턴스화하는 MEF 구성 요소 부분입니다.  
   
-#### <a name="to-implement-the-completion-source-provider"></a>To implement the completion source provider  
+#### 완료 원본 공급자를 구현 하려면  
   
-1.  Add a class named `TestCompletionSourceProvider` that implements <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>. Export this class with a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "plaintext" and a <xref:Microsoft.VisualStudio.Utilities.NameAttribute> of "test completion".  
+1.  라는 클래스를 추가 `TestCompletionSourceProvider` 를 구현 하는 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>합니다. 이 클래스와 내보내기는 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "일반"텍스트의 및 <xref:Microsoft.VisualStudio.Utilities.NameAttribute> "테스트 완료"의입니다.  
   
-     [!code-csharp[VSSDKCompletionTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_8.cs)]  [!code-vb[VSSDKCompletionTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_8.vb)]  
+     [!code-cs[VSSDKCompletionTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_8.cs)]
+     [!code-vb[VSSDKCompletionTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_8.vb)]  
   
-2.  Import a <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, which is used to find the current word in the completion source.  
+2.  가져오기는 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, 는 완료 소스에서 현재 단어를 찾는 데 사용 됩니다.  
   
-     [!code-csharp[VSSDKCompletionTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_9.cs)]  [!code-vb[VSSDKCompletionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_9.vb)]  
+     [!code-cs[VSSDKCompletionTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_9.cs)]
+     [!code-vb[VSSDKCompletionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_9.vb)]  
   
-3.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider.TryCreateCompletionSource%2A> method to instantiate the completion source.  
+3.  구현 된 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider.TryCreateCompletionSource%2A> 완료 소스를 인스턴스화하기 위한 메서드를 합니다.  
   
-     [!code-csharp[VSSDKCompletionTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_10.cs)]  [!code-vb[VSSDKCompletionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_10.vb)]  
+     [!code-cs[VSSDKCompletionTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_10.cs)]
+     [!code-vb[VSSDKCompletionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_10.vb)]  
   
-## <a name="implementing-the-completion-command-handler-provider"></a>Implementing the Completion Command Handler Provider  
- The completion command handler provider is derived from a <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>, which listens for a text view creation event and converts the view from an <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>—which enables the addition of the command to the command chain of the Visual Studio shell—to an <xref:Microsoft.VisualStudio.Text.Editor.ITextView>. Because this class is a MEF export, you can also use it to import the services that are required by the command handler itself.  
+## 완료 명령 처리기 공급자 구현  
+ 완료 명령 처리기 공급자에서 파생 되는 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>, 텍스트 뷰 생성 이벤트를 수신 하 고 변환에서 뷰는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>\-Visual Studio shell의 명령 체인에 명령 추가 수 있게 해줍니다\-에 <xref:Microsoft.VisualStudio.Text.Editor.ITextView>. 이 클래스는 MEF 내보내기 이기 때문에 자체 명령 처리기에 필요한 서비스를 가져오는 사용할 수 있습니다.  
   
-#### <a name="to-implement-the-completion-command-handler-provider"></a>To implement the completion command handler provider  
+#### 완료 명령 처리기 공급자를 구현 하려면  
   
-1.  Add a file named `TestCompletionCommandHandler`.  
+1.  라는 파일을 추가 `TestCompletionCommandHandler`합니다.  
   
-2.  Add these using statements:  
+2.  다음 using 문을 추가 합니다.  
   
-     [!code-csharp[VSSDKCompletionTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_11.cs)]  [!code-vb[VSSDKCompletionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_11.vb)]  
+     [!code-cs[VSSDKCompletionTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_11.cs)]
+     [!code-vb[VSSDKCompletionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_11.vb)]  
   
-3.  Add a class named `TestCompletionHandlerProvider` that implements <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>. Export this class with a <xref:Microsoft.VisualStudio.Utilities.NameAttribute> of "token completion handler", a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "plaintext", and a <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> of <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Editable>.  
+3.  라는 클래스를 추가 `TestCompletionHandlerProvider` 를 구현 하는 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>합니다. 내보내기 사용 하 여이 클래스는 <xref:Microsoft.VisualStudio.Utilities.NameAttribute> "토큰 완료 처리기"의 한 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "일반 텍스트"의 및 <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> 의 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Editable>합니다.  
   
-     [!code-csharp[VSSDKCompletionTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_12.cs)]  [!code-vb[VSSDKCompletionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_12.vb)]  
+     [!code-cs[VSSDKCompletionTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_12.cs)]
+     [!code-vb[VSSDKCompletionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_12.vb)]  
   
-4.  Import the <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>, which enables conversion from a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> to a <xref:Microsoft.VisualStudio.Text.Editor.ITextView>, a <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>, and a <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> that enables access to standard Visual Studio services.  
+4.  가져오기는 <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>, 변환할 수 있는 한 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 에 <xref:Microsoft.VisualStudio.Text.Editor.ITextView>,  <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>, 및 <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> 표준 Visual Studio 서비스에 액세스할 수 있도록 하는 합니다.  
   
-     [!code-csharp[VSSDKCompletionTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_13.cs)]  [!code-vb[VSSDKCompletionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_13.vb)]  
+     [!code-cs[VSSDKCompletionTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_13.cs)]
+     [!code-vb[VSSDKCompletionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_13.vb)]  
   
-5.  Implement the <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener.VsTextViewCreated%2A> method to instantiate the command handler.  
+5.  구현 된 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener.VsTextViewCreated%2A> 메서드 명령 처리기를 인스턴스화합니다.  
   
-     [!code-csharp[VSSDKCompletionTest#14](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_14.cs)]  [!code-vb[VSSDKCompletionTest#14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_14.vb)]  
+     [!code-cs[VSSDKCompletionTest#14](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_14.cs)]
+     [!code-vb[VSSDKCompletionTest#14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_14.vb)]  
   
-## <a name="implementing-the-completion-command-handler"></a>Implementing the Completion Command Handler  
- Because statement completion is triggered by keystrokes, you must implement the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> interface to receive and process the keystrokes that trigger, commit, and dismiss the completion session.  
+## 완료 명령 처리기를 구현합니다.  
+ 구현 해야 하므로 문 완성 키 입력에 의해 트리거될는 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 받고 트리거, 커밋 및 완료 세션을 해제 하는 키 입력을 처리 하는 인터페이스입니다.  
   
-#### <a name="to-implement-the-completion-command-handler"></a>To implement the completion command handler  
+#### 완료 명령 처리기를 구현 하려면  
   
-1.  Add a class named `TestCompletionCommandHandler` that implements <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:  
+1.  라는 클래스를 추가 `TestCompletionCommandHandler` 를 구현 하는 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:  
   
-     [!code-csharp[VSSDKCompletionTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_15.cs)]  [!code-vb[VSSDKCompletionTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_15.vb)]  
+     [!code-cs[VSSDKCompletionTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_15.cs)]
+     [!code-vb[VSSDKCompletionTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_15.vb)]  
   
-2.  Add private fields for the next command handler (to which you pass the command), the text view, the command handler provider (which enables access to various services), and a completion session:  
+2.  다음 명령 처리기 \(전달 하는 명령\), 텍스트 뷰 \(다양 한 서비스에 액세스할 수 있도록\)이 표시 하는 명령 처리기 공급자에 대 한 private 필드 추가 및 완료 세션:  
   
-     [!code-csharp[VSSDKCompletionTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_16.cs)]  [!code-vb[VSSDKCompletionTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_16.vb)]  
+     [!code-cs[VSSDKCompletionTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_16.cs)]
+     [!code-vb[VSSDKCompletionTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_16.vb)]  
   
-3.  Add a constructor that sets the text view and the provider fields, and adds the command to the command chain:  
+3.  텍스트 뷰 및 공급자 필드를 설정 하 고 명령 체인에 명령을 추가 하는 생성자를 추가 합니다.  
   
-     [!code-csharp[VSSDKCompletionTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_17.cs)]  [!code-vb[VSSDKCompletionTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_17.vb)]  
+     [!code-cs[VSSDKCompletionTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_17.cs)]
+     [!code-vb[VSSDKCompletionTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_17.vb)]  
   
-4.  Implement the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> method by passing the command along:  
+4.  구현 된 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 따라 명령을 전달 하 여 메서드:  
   
-     [!code-csharp[VSSDKCompletionTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_18.cs)]  [!code-vb[VSSDKCompletionTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_18.vb)]  
+     [!code-cs[VSSDKCompletionTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_18.cs)]
+     [!code-vb[VSSDKCompletionTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_18.vb)]  
   
-5.  Implement the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> method. When this method receives a keystroke, it must do one of these things:  
+5.  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 메서드를 구현합니다. 이 메서드는 키 입력을 받으면 이러한 작업 중 하나를 수행 해야 합니다.  
   
-    -   Allow the character to be written to the buffer, and then trigger or filter completion. (Printing characters do this.)  
+    -   버퍼에 기록 하 고 다음 트리거 또는 완료 필터링 문자를 허용 합니다. \(인쇄 문자가 작업을 수행 합니다.\)  
   
-    -   Commit the completion, but do not allow the character to be written to the buffer. (Whitespace, Tab, and Enter do this when a completion session is displayed.)  
+    -   커밋의 완료 하지만 문자 버퍼에 쓸 수를 허용 하지 마십시오. \(공백, 탭 및 Enter 경우 이렇게 완성 세션이 표시 됩니다.\)  
   
-    -   Allow the command to be passed on to the next handler. (All other commands.)  
+    -   명령 다음 처리기를 전달 하도록 허용 합니다. \(모든 다른 명령입니다.\)  
   
-     Because this method may display UI, call <xref:Microsoft.VisualStudio.Shell.VsShellUtilities.IsInAutomationFunction%2A> to make sure that it is not called in an automation context:  
+     이 메서드가 UI를 표시할 수 있으므로 호출 <xref:Microsoft.VisualStudio.Shell.VsShellUtilities.IsInAutomationFunction%2A> 자동화 컨텍스트에서 호출 되지 않도록 해야 합니다.  
   
-     [!code-csharp[VSSDKCompletionTest#19](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_19.cs)] [!code-vb[VSSDKCompletionTest#19](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_19.vb)]  
+     [!code-cs[VSSDKCompletionTest#19](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_19.cs)]
+     [!code-vb[VSSDKCompletionTest#19](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_19.vb)]  
   
-6.  This code is a private method that triggers the completion session:  
+6.  이 코드는 완료 세션을 시작 하는 전용 메서드.  
   
-     [!code-csharp[VSSDKCompletionTest#20](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_20.cs)]  [!code-vb[VSSDKCompletionTest#20](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_20.vb)]  
+     [!code-cs[VSSDKCompletionTest#20](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_20.cs)]
+     [!code-vb[VSSDKCompletionTest#20](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_20.vb)]  
   
-7.  The next example is a private method that unsubscribes from the <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismissed> event:  
+7.  다음 예제는 이전에서 등록을 취소 하는 개인 메서드는 <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismissed> 이벤트:  
   
-     [!code-csharp[VSSDKCompletionTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_21.cs)]  [!code-vb[VSSDKCompletionTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_21.vb)]  
+     [!code-cs[VSSDKCompletionTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_21.cs)]
+     [!code-vb[VSSDKCompletionTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_21.vb)]  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
- To test this code, build the CompletionTest solution and run it in the experimental instance.  
+## 코드 빌드 및 테스트  
+ 이 코드를 테스트 하려면 CompletionTest 솔루션 빌드하고 실험적 인스턴스에서 실행 합니다.  
   
-#### <a name="to-build-and-test-the-completiontest-solution"></a>To build and test the CompletionTest solution  
+#### 빌드하고 CompletionTest 솔루션을 테스트 하려면  
   
-1.  Build the solution.  
+1.  솔루션을 빌드합니다.  
   
-2.  When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+2.  디버거에서 이 프로젝트를 실행하면 Visual Studio의 두 번째 인스턴스가 인스턴스화됩니다.  
   
-3.  Create a text file and type some text that includes the word "add".  
+3.  텍스트 파일을 만들고 "추가" 라는 단어가 포함 된 일부 텍스트를 입력 합니다.  
   
-4.  As you type first "a" and then "d", a list that contains "addition" and "adaptation" should be displayed. Notice that addition is selected. When you type another "d", the list should contain only "addition", which is now selected. You can commit "addition" by pressing the Spacebar, Tab, or Enter key, or dismiss the list by typing Esc or any other key.  
+4.  입력할 때 먼저 "a"와 "d" 다음 "addition" 및 "조정" 포함 된 목록이 표시 됩니다. 또한 선택 되어 있는지 확인 합니다. 다른 "d"를 입력 하면 목록에만 "추가"를 현재 선택한 있어야 합니다. "Addition" 스페이스바, 탭 또는 Enter 키를 눌러 커밋하거나 Esc 또는 다른 키를 입력 하 여 목록을 해제 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Linking a Content Type to a File Name Extension](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+## 참고 항목  
+ [연습: 파일 이름 확장명에 콘텐츠 형식 연결](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

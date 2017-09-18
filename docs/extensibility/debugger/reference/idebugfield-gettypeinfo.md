@@ -1,70 +1,53 @@
 ---
-title: IDebugField::GetTypeInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugField::GetTypeInfo
-helpviewer_keywords:
-- IDebugField::GetTypeInfo method
+title: "IDebugField::GetTypeInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugField::GetTypeInfo"
+helpviewer_keywords: 
+  - "IDebugField::GetTypeInfo 메서드"
 ms.assetid: bb5acfa3-04c3-4088-be84-9ff8926cd16f
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2baaecd28bfee7534624b77a053efe0a91f10eb1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugfieldgettypeinfo"></a>IDebugField::GetTypeInfo
-This method gets type-independent information about the symbol or type.  
+# IDebugField::GetTypeInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는 기호 또는 형식에 대 한 형식에 관계 없이 정보를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetTypeInfo(   
-   TYPE_INFO* pTypeInfo  
+```cpp#  
+HRESULT GetTypeInfo(   
+   TYPE_INFO* pTypeInfo  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetTypeInfo(  
-   TYPE_INFO[] pTypeInfo  
+   TYPE_INFO[] pTypeInfo  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pTypeInfo`  
- [out] Returns type information in the supplied [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) structure.  
+ \[out\] 유형을 반환 정보에 제공 된 [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md) 구조체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- Type-independent information would include, for example, the AppDomain, the module, and the class that contains the symbol.  
+## 설명  
+ 형식에 관계 없이 정보 예를 들어, AppDomain, 모듈 및 기호를 포함 하는 클래스에 포함 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
- [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)
+ [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md)

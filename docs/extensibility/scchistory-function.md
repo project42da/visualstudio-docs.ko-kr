@@ -1,99 +1,82 @@
 ---
-title: SccHistory Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccHistory
-helpviewer_keywords:
-- SccHistory function
+title: "SccHistory 함수 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccHistory"
+helpviewer_keywords: 
+  - "SccHistory 함수"
 ms.assetid: a636d9d3-47c1-4b48-ac6b-bcfde19d6cf9
 caps.latest.revision: 16
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0efb8505fa59957f8178214d64c7ac0d979a3359
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 16
 ---
-# <a name="scchistory-function"></a>SccHistory Function
-This function displays the history of the specified files.  
+# SccHistory 함수
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+이 함수는 지정된 된 파일의 기록을 표시합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 SCCRTN SccHistory(  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LONG      nFiles,  
-   LPCSTR*   lpFileNames,  
-   LONG      fOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LONG      nFiles,  
+   LPCSTR*   lpFileNames,  
+   LONG      fOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pvContext`  
- [in] The source control plug-in context structure.  
+ \[in\] 소스 제어 플러그 인 컨텍스트 구조입니다.  
   
  `hWnd`  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ \[in\] 소스 제어 플러그 인을 제공 하는 모든 대화 상자에 대 한 부모로 사용할 수 있는 IDE 창 핸들입니다.  
   
  `nFiles`  
- [in] Number of files specified in the `lpFileName` array.  
+ \[in\] 에 지정 된 파일의 수는 `lpFileName` 배열입니다.  
   
  `lpFileName`  
- [in] Array of fully qualified names of files.  
+ \[in\] 파일의 정규화 된 이름의 배열입니다.  
   
  `fOptions`  
- [in] Command flags (currently not used).  
+ \[in\] \(현재 사용 되지 않음\) 하는 명령 플래그입니다.  
   
  `pvOptions`  
- [in] Source control plug-in-specific options.  
+ \[in\] 소스 제어 플러그 인에 대 한 옵션입니다.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 반환 값  
+ 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Version history was successfully obtained.|  
-|SCC_I_RELOADFILE|The source control system actually modified the file on disk while fetching the history (for instance, by getting an old version of it), so the IDE should reload this file.|  
-|SCC_E_FILENOTCONTROLLED|The file is not under source control.|  
-|SCC_E_OPNOTSUPPORTED|The source control system does not support this operation.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
-|SCC_E_PROJNOTOPEN|The project is has not been opened.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure. File history could not be obtained.|  
+|값|설명|  
+|-------|--------|  
+|SCC\_OK|버전 기록이 가져왔습니다.|  
+|SCC\_I\_RELOADFILE|소스 제어 시스템 \(예를 들어, 그 이전 버전의 내용이\), 여 역사를 인출 하는 동안 디스크에 있는 파일을 실제로 수정 하므로 IDE이이 파일을 다시 로드 해야 합니다.|  
+|SCC\_E\_FILENOTCONTROLLED|소스 제어는 파일이 아닙니다.|  
+|SCC\_E\_OPNOTSUPPORTED|소스 제어 시스템에서이 작업을 지원 하지 않습니다.|  
+|SCC\_E\_NOTAUTHORIZED|사용자가이 작업을 수행할 수 없습니다.|  
+|SCC\_E\_ACCESSFAILURE|소스 제어 시스템에 경합 또는 네트워크 문제 때문에 액세스할 수 없습니다. 다시 시도 사용 하는 것이 좋습니다.|  
+|SCC\_E\_PROJNOTOPEN|프로젝트 되어 열립니다.|  
+|SCC\_E\_NONSPECIFICERROR|알 수 없는 오류가 발생 했습니다. 파일 히스토리를 가져올 수 없습니다.|  
   
-## <a name="remarks"></a>Remarks  
- The source control plug-in can display its own dialog box to show the history of each file, using `hWnd` as the parent window. Alternatively, the optional text output callback function supplied to the [SccOpenProject](../extensibility/sccopenproject-function.md) can be used, if it is supported.  
+## 설명  
+ 소스 제어 플러그 인 각 파일의 기록을 표시 하는 자체 대화 상자를 표시할 수를 사용 하 여 `hWnd` 부모 창으로 합니다. 또는 선택적 텍스트 출력 콜백 함수에 제공 되는 [SccOpenProject](../extensibility/sccopenproject-function.md) 지원 되는 경우 사용할 수 있습니다.  
   
- Note that under certain circumstances, the file being examined may change during the execution of this call. For example, the [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] history command gives the user a chance to get an old version of the file. In such a case, the source control plug-in returns `SCC_I_RELOAD` to warn the IDE that it needs to reload the file.  
+ 참고 특정 상황에서는이 호출의 실행 하는 동안 검사할 파일이 변경 될 수 있습니다. 예를 들어는 [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] 기록 명령 파일의 이전 버전을 얻을 수는 사용자에 게 있습니다. 이 경우 소스 제어 플러그 인 반환 `SCC_I_RELOAD` 파일 다시 로드 해야 함을 IDE에 게 경고 합니다.  
   
 > [!NOTE]
->  If the source control plug-in does not support this function for an array of files, only the file history for the first file can be displayed.  
+>  소스 제어 플러그 인 파일의 배열에 대해이 함수를 지원 하지 않으면, 첫 번째 파일에 대 한 파일 기록만 표시할 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+## 참고 항목  
+ [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)

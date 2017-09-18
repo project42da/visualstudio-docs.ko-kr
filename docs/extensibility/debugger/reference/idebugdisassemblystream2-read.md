@@ -1,91 +1,74 @@
 ---
-title: IDebugDisassemblyStream2::Read | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugDisassemblyStream2::Read
-helpviewer_keywords:
-- IDebugDisassemblyStream2::Read
+title: "IDebugDisassemblyStream2::Read | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugDisassemblyStream2::Read"
+helpviewer_keywords: 
+  - "IDebugDisassemblyStream2::Read"
 ms.assetid: 7db5f6bb-73ee-45bc-b187-c1b6aa2dfdd5
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ac6ab04becff0850453d5fb02a67c765264caf49
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
-Reads instructions starting from the current position in the disassembly stream.  
+# IDebugDisassemblyStream2::Read
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+디스어셈블리 스트림 내의 현재 위치에서 시작 하는 지침을 읽습니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT Read(   
-   DWORD                     dwInstructions,  
-   DISASSEMBLY_STREAM_FIELDS dwFields,  
-   DWORD*                    pdwInstructionsRead,  
-   DisassemblyData*          prgDisassembly  
+```cpp#  
+HRESULT Read(   
+   DWORD                     dwInstructions,  
+   DISASSEMBLY_STREAM_FIELDS dwFields,  
+   DWORD*                    pdwInstructionsRead,  
+   DisassemblyData*          prgDisassembly  
 );  
 ```  
   
-```csharp  
-int Read(   
-   uint                           dwInstructions,  
-   enum_DISASSEMBLY_STREAM_FIELDS dwFields,  
-   out uint                       pdwInstructionsRead,  
-   DisassemblyData[]              prgDisassembly  
+```c#  
+int Read(   
+   uint                           dwInstructions,  
+   enum_DISASSEMBLY_STREAM_FIELDS dwFields,  
+   out uint                       pdwInstructionsRead,  
+   DisassemblyData[]              prgDisassembly  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `dwInstructions`  
- [in] The number of instructions to disassemble. This value is also the maximum length of the `prgDisassembly` array.  
+ \[in\] 명령 디스어셈블할 수입니다.  이 값의 최대 길이 이기도 `prgDisassembly` 배열입니다.  
   
  `dwFields`  
- [in] A combination of flags from the [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) enumeration that indicate which fields of `prgDisassembly` are to be filled out.  
+ \[in\] 플래그의 조합에서 [DISASSEMBLY\_STREAM\_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) 필드를 지정 하는 열거형 `prgDisassembly` 데이터를 입력할 수 있습니다.  
   
  `pdwInstructionsRead`  
- [out] Returns the number of instructions actually disassembled.  
+ \[out\] 실제로 분리 된 명령의 수를 반환 합니다.  
   
  `prgDisassembly`  
- [out] An array of [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) structures that is filled in with the disassembled code, one structure per disassembled instruction. The length of this array is dictated by the `dwInstructions` parameter.  
+ \[out\] 배열 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 구조의 분해 된 명령 당 하나의 구조 디스어셈블된 코드를 사용 하 여 입력 됩니다.  이 배열의 길이에 따라 되는 `dwInstructions` 매개 변수.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- The maximum number of instructions that are available in the current scope can be obtained by calling the [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) method.  
+## 설명  
+ 현재 범위에서 사용할 수 있는 명령 최대 수를 호출 하 여 얻을 수 있는 [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) 메서드.  
   
- The current position where the next instruction is read from can be changed by calling the [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) method.  
+ 호출 하 여 다음 명령입니다 읽을 위치에서 현재 위치를 변경할 수 있는 [검색](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) 메서드.  
   
- The `DSF_OPERANDS_SYMBOLS` flag can be added to the `DSF_OPERANDS` flag in the `dwFields` parameter to indicate that symbol names should be used when disassembling instructions.  
+ `DSF_OPERANDS_SYMBOLS` 플래그를 추가할 수는 `DSF_OPERANDS` 에 플래그를 지정은 `dwFields` 지침을 분해 하면 기호 이름을 사용 하도록 지정 하려면 매개 변수.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
- [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)   
+ [DISASSEMBLY\_STREAM\_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
  [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)   
- [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)
+ [검색](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)

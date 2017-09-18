@@ -1,86 +1,67 @@
 ---
-title: 'How to: Create a PolicyActivity Rule Set (Legacy) | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- PolicyActivity activity, creating rule sets
-- Rule Set Editor dialog box
-- PolicyActivity activity, selecting rule sets
-- Select Rule Set dialog box
-- rule sets, creating for PolicyActivity
+title: "방법: PolicyActivity 규칙 집합 만들기(레거시) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+helpviewer_keywords: 
+  - "PolicyActivity 활동, 규칙 집합 만들기"
+  - "PolicyActivity 활동, 규칙 집합 선택"
+  - "규칙 집합 편집기 대화 상자"
+  - "규칙 집합, PolicyActivity에 대해 만들기"
+  - "규칙 집합 선택 대화 상자"
 ms.assetid: f272489d-3342-4511-8b59-6a0fd7a42d70
 caps.latest.revision: 4
-author: ErikRe
-ms.author: erikre
-manager: erikre
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: 42d94d625e2ad7db23dbd4917107b8da4f24009b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+author: "ErikRe"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 4
 ---
-# <a name="how-to-create-a-policyactivity-rule-set-legacy"></a>How to: Create a PolicyActivity Rule Set (Legacy)
-This topic describes how to create a policy activity rule set using the legacy [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] that targets the [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] or the [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)].  
+# 방법: PolicyActivity 규칙 집합 만들기(레거시)
+이 항목에서는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 하는 레거시 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]를 사용하여 정책 활동 규칙 집합을 만드는 방법에 대해 설명합니다.  
   
- After you have dragged a **Policy** activity item from the **Toolbox** to the workflow design surface, you will want to select an existing rule or create a new rule set for the [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) activity. You select an existing rule set by using the [Select Rule Set Dialog Box (Legacy)](../workflow-designer/select-rule-set-dialog-box-legacy.md) and you create rule sets by using the [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).  
+ **도구 상자**에서 워크플로 디자인 화면으로 **정책** 활동 항목을 끌어 온 후에는 [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) 활동을 위해 기존 규칙을 선택하거나 새 규칙 집합을 만들 수 있습니다.기존 규칙 집합을 선택하려면 [규칙 집합 선택 대화 상자\(레거시\)](../workflow-designer/select-rule-set-dialog-box-legacy.md)를 사용하고 규칙 집합을 만들려면 [규칙 집합 편집기 대화 상자\(레거시\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)를 사용합니다.  
   
 > [!NOTE]
->  You can open the [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) dialog box directly by double-clicking on a [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) activity that is on the workflow design surface.  
+>  워크플로 디자인 화면에 있는 [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)\(영문 페이지일 수 있음\) 활동을 두 번 클릭하여 [규칙 집합 편집기 대화 상자\(레거시\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) 대화 상자를 직접 열 수 있습니다.  
   
-### <a name="to-select-or-create-a-rule-set-for-a-policyactivity-activity"></a>To select or create a rule set for a PolicyActivity activity  
+### PolicyActivity 활동의 규칙 집합을 선택하거나 만들려면  
   
-1.  Right-click the [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019), and then click **Properties** to open the **Properties** window.  
+1.  [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)\(영문 페이지일 수 있음\)를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하여 **속성** 창을 엽니다.  
   
-2.  Click the **RuleSetReference** property.  
+2.  **RuleSetReference** 속성을 클릭합니다.  
   
-3.  Do one of the following:  
+3.  다음 작업 중 하나를 수행합니다.  
   
-    -   Click the **RuleSetReference** ellipsis **[...]**, and then select an existing rule set in the [Select Rule Set Dialog Box (Legacy)](../workflow-designer/select-rule-set-dialog-box-legacy.md). Then go to step 10.  
+    -   **RuleSetReference** 줄임표 **\[…\]**를 클릭한 다음 [규칙 집합 선택 대화 상자\(레거시\)](../workflow-designer/select-rule-set-dialog-box-legacy.md)에서 기존 규칙 집합을 선택합니다.10단계로 이동합니다.  
   
-         -or-  
+         \- 또는 \-  
   
-    -   Type a name for a rule set. Click the **RuleSetReference** ellipsis **[...]**, and then select **Edit** in the [Select Rule Set Dialog Box (Legacy)](../workflow-designer/select-rule-set-dialog-box-legacy.md).  
+    -   규칙 집합의 이름을 입력합니다.**RuleSetReference** 줄임표 **\[…\]**를 클릭한 다음 [규칙 집합 선택 대화 상자\(레거시\)](../workflow-designer/select-rule-set-dialog-box-legacy.md)에서 **편집**을 선택합니다.  
   
-         -or-  
+         \-또는\-  
   
-    -   Type a name for a rule set. Expand the **RuleSetReference** property and select the ellipsis **[...]** in the **RuleSet Definition** property.  
+    -   규칙 집합의 이름을 입력합니다.**RuleSetReference** 속성을 확장하고 **RuleSet Definition** 속성에서 줄임표 **\[…\]**를 선택합니다.  
   
-         The [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) opens.  
+         [규칙 집합 편집기 대화 상자\(레거시\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)가 열립니다.  
   
-4.  In the [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md), click **Add Rule** to add a new rule to the rule set.  
+4.  [규칙 집합 편집기 대화 상자\(레거시\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)에서 **규칙 추가**를 클릭하여 규칙 집합에 새 규칙을 추가합니다.  
   
-5.  Enter the **Name**, **Priority**, and **Reevaluation** properties, or keep the default values.  
+5.  **이름**, **우선 순위** 및 **재계산** 속성을 입력하거나 기본값을 유지합니다.  
   
-6.  Enter the text for the **Condition**.  
+6.  **조건**에 텍스트를 입력합니다.  
   
-7.  Enter the text for the **Then Actions** and the **Else Actions**.  
+7.  **ThenActions** 및 **Else 작업**에 텍스트를 입력합니다.  
   
-8.  Click **Add Rule** again to add another rule.  
+8.  다른 규칙을 추가하려면 **규칙 추가**를 다시 클릭합니다.  
   
-9. When you are finished, click **OK**.  
+9. 마쳤으면 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)   
- [Select Rule Set Dialog Box (Legacy)](../workflow-designer/select-rule-set-dialog-box-legacy.md)   
- [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)   
- [Using the Policy Activity](http://go.microsoft.com/fwlink?LinkID=65004)   
- [Legacy Workflow Activities](../workflow-designer/legacy-workflow-activities.md)
+ [규칙 집합 선택 대화 상자\(레거시\)](../workflow-designer/select-rule-set-dialog-box-legacy.md)   
+ [규칙 집합 편집기 대화 상자\(레거시\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)   
+ [PolicyActivity 활동 사용](http://go.microsoft.com/fwlink?LinkID=65004)   
+ [레거시 워크플로 활동](../workflow-designer/legacy-workflow-activities.md)

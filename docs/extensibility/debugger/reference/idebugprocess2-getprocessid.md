@@ -1,68 +1,51 @@
 ---
-title: IDebugProcess2::GetProcessId | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProcess2::GetProcessId
-helpviewer_keywords:
-- IDebugProcess2::GetProcessId
+title: "IDebugProcess2::GetProcessId | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProcess2::GetProcessId"
+helpviewer_keywords: 
+  - "IDebugProcess2::GetProcessId"
 ms.assetid: d5b6f03c-d49d-4b83-b072-016ac3124f5f
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 08258124c9717701c442c5606dda13e90f4c5b52
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprocess2getprocessid"></a>IDebugProcess2::GetProcessId
-Gets the GUID for this process.  
+# IDebugProcess2::GetProcessId
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 프로세스에 대 한 GUID를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetProcessId(  
-   GUID* pguidProcessId  
+```cpp#  
+HRESULT GetProcessId(  
+   GUID* pguidProcessId  
 );  
 ```  
   
-```csharp  
-int GetProcessId(  
-   out Guid pguidProcessId  
+```c#  
+int GetProcessId(  
+   out Guid pguidProcessId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pguidProcessId`  
- [out] Returns the GUID for this process.  
+ \[out\] 이 프로세스에 대 한 GUID를 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- The Globally Unique IDentifier (GUID) identifies this process from all other processes running in the system.  
+## 설명  
+ 이 프로세스는 시스템에서 실행 중인 모든 프로세스에서 글로벌 고유 식별자 \(GUID\)를 식별 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

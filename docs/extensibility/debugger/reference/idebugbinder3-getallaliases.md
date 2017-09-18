@@ -1,75 +1,58 @@
 ---
-title: IDebugBinder3::GetAllAliases | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBinder3::GetAllAliases
-helpviewer_keywords:
-- IDebugBinder3::GetAllAliases method
+title: "IDebugBinder3::GetAllAliases | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBinder3::GetAllAliases"
+helpviewer_keywords: 
+  - "IDebugBinder3::GetAllAliases 메서드"
 ms.assetid: 1f9ab2ee-2ab3-4a61-8b99-95dd7fdf3511
 caps.latest.revision: 7
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f0a3c52090b143d3a5172fcdbd97d48ae7a89560
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 7
 ---
-# <a name="idebugbinder3getallaliases"></a>IDebugBinder3::GetAllAliases
-This method retrieves a list of aliases from the program.  
+# IDebugBinder3::GetAllAliases
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드의 별칭의 목록이 프로그램을 검색합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
 ```cpp  
 HRESULT GetAllAliases(  
-   UINT          uRequest,  
-   IDebugAlias** ppAliases,  
-   UINT*         puFetched  
+   UINT          uRequest,  
+   IDebugAlias** ppAliases,  
+   UINT*         puFetched  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetAllAliases(  
-   uint          uRequest,   
-   IDebugAlias[] ppAliases,   
-   out uint      puFetched  
+   uint          uRequest,   
+   IDebugAlias[] ppAliases,   
+   out uint      puFetched  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `uRequest`  
- [in] The maximum number of aliases to return (specifies the length of the array passed into `ppAliases`).  
+ \[in\] 최대 수의 별칭을 반환 합니다 \(전달 되는 배열의 길이 지정 합니다. `ppAliases`\).  
   
  `ppAliases`  
- [in, out] Array to fill in with aliases (if this is a null value and `uRequest` is 0, the count of aliases that can be returned will be returned by `puFetched`).  
+ \[in, out\] 배열을 사용 하 여 별칭을 채우기 위해 \(null 값인 경우 및 `uRequest` 0, 반환 될 수 있는 별칭 수가 반환 됩니다 `puFetched`\).  
   
  `puFetched`  
- [out] Returns the number of aliases obtained.  
+ \[out\] 가져온 별칭의 수를 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

@@ -1,78 +1,61 @@
 ---
-title: IDebugSettingsCallback2 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugSettingsCallback2 interface
+title: "IDebugSettingsCallback2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugSettingsCallback2 인터페이스"
 ms.assetid: 7e525d0b-7d7a-4d1c-8b78-e1398fa922f2
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 1ed91f112f29f78d0be64fadbacbc313bede39ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugsettingscallback2"></a>IDebugSettingsCallback2
-Enables debug engines to read metric settings remotely.  
+# IDebugSettingsCallback2
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+디버그 엔진 미터법 설정을 읽을 수 있도록 원격으로 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
 ```  
 IDebugSettingsCallback2D : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Notes for Implementers  
- This interface is implemented by the event callback of the session debug manager and consumed by debug engines. It could also be used locally instead of Dbgmetric[d].lib.  
+## 구현자 참고 사항  
+ 이 인터페이스 디버그 세션 관리자의 이벤트 콜백으로 구현 되 고 디버깅 엔진으로 사용 합니다.  로컬 Dbgmetric \[d\].lib 대신 사용할 수도 있습니다.  
   
-## <a name="methods"></a>Methods  
- The following table shows the methods of `IDebugSettingsCallback2`.  
+## 메서드  
+ 다음 표에서 메서드를 `IDebugSettingsCallback2`.  
   
-|Method|Description|  
-|------------|-----------------|  
-|[EnumEEs](../../../extensibility/debugger/reference/idebugsettingscallback2-enumees.md)|Enumerates the available expression evaluators given the language and vendor identifiers.|  
-|[GetEELocalObject](../../../extensibility/debugger/reference/idebugsettingscallback2-geteelocalobject.md)|Retrieves a expression evaluator local object given the metric.|  
-|[GetEEMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricdword.md)|Retrieves a value that corresponds to the specified metric of the expression evaluator.|  
-|[GetEEMetricFile](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricfile.md)|Retrieves the expression evaluator metric file given the name or the metric.|  
-|[GetEEMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricguid.md)|Retrieves the unique identifier for a expression evaluator metric given its name.|  
-|[GetEEMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricstring.md)|Retrieves the value string of an expression evaluator metric given its name.|  
-|[GetMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricdword.md)|Retrieves the value of a metric given its name.|  
-|[GetMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricguid.md)|Retrieves the unique identifier of a metric given its name.|  
-|[GetMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricstring.md)|Retrieves the value string of the metric given its name.|  
+|메서드|설명|  
+|---------|--------|  
+|[EnumEEs](../../../extensibility/debugger/reference/idebugsettingscallback2-enumees.md)|공급 업체 및 언어 식별자를 지정 합니다. 사용할 수 있는 식 계산기를 열거 합니다.|  
+|[GetEELocalObject](../../../extensibility/debugger/reference/idebugsettingscallback2-geteelocalobject.md)|메트릭이 주어진 식 계산기 로컬 개체를 검색 합니다.|  
+|[GetEEMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricdword.md)|지정 된 메트릭이 식 계산기에 해당 하는 값을 검색 합니다.|  
+|[GetEEMetricFile](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricfile.md)|이름 또는 메트릭을 지정 식 계산기 메트릭 파일을 검색 합니다.|  
+|[GetEEMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricguid.md)|식 평가기 메트릭 지정 된 이름에 대 한 고유 식별자를 검색 합니다.|  
+|[GetEEMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricstring.md)|지정 된 이름에 식 계산기 메트릭 값 문자열을 검색 합니다.|  
+|[GetMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricdword.md)|메트릭 지정 된 이름 값을 검색 합니다.|  
+|[GetMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricguid.md)|지정 된 이름에 미터법의 고유 식별자를 검색 합니다.|  
+|[GetMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricstring.md)|지정 된 이름 메트릭 값 문자열을 검색 합니다.|  
   
-## <a name="requirements"></a>Requirements  
- Header: Msdbg.h  
+## 요구 사항  
+ 헤더: Msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="example"></a>Example  
- The following example shows a function that takes an **IDebugSettingsCallback2** object as a parameter.  
+## 예제  
+ 다음 예제에서는 사용 하는 함수는  **IDebugSettingsCallback2** 개체를 매개 변수로.  
   
-```cpp  
+```cpp#  
 HRESULT GetDebugSettingsCallback (IDebugSettingsCallback2 **ppCallback)  
 {  
     HRESULT hRes = E_FAIL;  

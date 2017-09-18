@@ -1,68 +1,51 @@
 ---
-title: IDebugManagedObject::SetFromManagedObject | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugManagedObject::SetFromManagedObject
-helpviewer_keywords:
-- IDebugManagedObject::SetFromManagedObject method
+title: "IDebugManagedObject::SetFromManagedObject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugManagedObject::SetFromManagedObject"
+helpviewer_keywords: 
+  - "IDebugManagedObject::SetFromManagedObject 메서드"
 ms.assetid: 8700ee8d-2704-4580-bccc-046837a24edd
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d19df4fd8726ed3e59d57b314e19684b0a7f6a5e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugmanagedobjectsetfrommanagedobject"></a>IDebugManagedObject::SetFromManagedObject
-Sets the value of the instance of the value class object from the instance of the value class provided as a parameter.  
+# IDebugManagedObject::SetFromManagedObject
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+값 값 클래스 개체의 인스턴스를 매개 변수로 제공 되는 값 클래스의 인스턴스를 설정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT SetFromManagedObject(   
-   IUnknown* pManagedObject  
+```cpp#  
+HRESULT SetFromManagedObject(   
+   IUnknown* pManagedObject  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetFromManagedObject(  
-   object pManagedObject  
+   object pManagedObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pManagedObject`  
- [in] An interface that represents the managed object containing the new value.  
+ \[in\] 새 값을 포함 하는 관리 되는 개체를 나타내는 인터페이스입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method is used to change the managed object as represented by the [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) object.  
+## 설명  
+ 표시 되는 관리 되는 개체를 변경 하려면이 메서드를 사용의 [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) 개체입니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

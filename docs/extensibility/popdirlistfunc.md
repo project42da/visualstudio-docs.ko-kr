@@ -1,80 +1,59 @@
 ---
-title: POPDIRLISTFUNC | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- POPLISTFUNC
-helpviewer_keywords:
-- POPDIRLISTFUNC callback function
+title: "POPDIRLISTFUNC | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "POPLISTFUNC"
+helpviewer_keywords: 
+  - "POPDIRLISTFUNC 콜백 함수"
 ms.assetid: 0ee90fd2-5467-4154-ab4c-7eb02ac3a14c
 caps.latest.revision: 14
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cb56a3e8f90ed31d051f28fe7cfe99be154d2696
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 14
 ---
-# <a name="popdirlistfunc"></a>POPDIRLISTFUNC
-This is a callback function given to the [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) function to update a collection of directories and (optionally) file names to find out which are under source control.  
+# POPDIRLISTFUNC
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+이것이 가리키는 콜백 함수는 [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) 디렉터리 및 소스 제어는 알아보려면 파일 이름 \(선택 사항\)의 컬렉션을 업데이트 하는 함수입니다.  
   
- The `POPDIRLISTFUNC` callback should be called only for those directories and file names (in the list given to the `SccPopulateDirList` function) that are actually under source control.  
+ `POPDIRLISTFUNC` 콜백 디렉터리와 파일 이름에 대해서만 호출 해야 \(에 주어진 목록에는 `SccPopulateDirList` 함수\) 소스 제어에서 실제로입니다.  
   
-## <a name="signature"></a>Signature  
+## Signature  
   
-```cpp  
-typedef BOOL (*POPDIRLISTFUNC)(  
-   LPVOID pvCallerData,  
-   BOOL bFolder,  
-   LPCSTR lpDirectoryOrFileName  
-);  
+```cpp#  
+typedef BOOL (*POPDIRLISTFUNC)( LPVOID pvCallerData, BOOL bFolder, LPCSTR lpDirectoryOrFileName );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## 매개 변수  
  pvCallerData  
- [in] User value given to [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md).  
+ \[in\] 사용자가 값을 가리키는 [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)합니다.  
   
  bFolder  
- [in] `TRUE` if the name in `lpDirectoryOrFileName` is a directory; otherwise the name is a file name.  
+ \[in\] `TRUE` 경우에 이름을 `lpDirectoryOrFileName` 디렉터리입니다; 그렇지 않은 경우의 이름은 파일 이름입니다.  
   
  lpDirectoryOrFileName  
- [in] Full local path to a directory or file name that is under source code control.  
+ \[in\] 소스 코드 제어 아래에 있는 디렉터리 또는 파일 이름에 전체 로컬 경로입니다.  
   
-## <a name="return-value"></a>Return Value  
- The IDE returns an appropriate error code:  
+## 반환 값  
+ IDE에서 적절 한 오류 코드를 반환합니다.  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Continue processing.|  
-|SCC_I_OPERATIONCANCELED|Stop processing.|  
-|SCC_E_xxx|Any appropriate source control error should stop processing.|  
+|값|설명|  
+|-------|--------|  
+|SCC\_OK|처리를 계속 합니다.|  
+|SCC\_I\_OPERATIONCANCELED|처리를 중지 합니다.|  
+|SCC\_E\_xxx|모든 적절 한 소스 제어 오류 처리를 중지 해야 합니다.|  
   
-## <a name="remarks"></a>Remarks  
- If the `fOptions` parameter of the `SccPopulateDirList` function contains the `SCC_PDL_INCLUDEFILES` flag, then the list will possibly contain file names as well as directory names.  
+## 설명  
+ 하는 경우는 `fOptions` 의 매개 변수는 `SccPopulateDirList` 함수에는 `SCC_PDL_INCLUDEFILES` 플래그를 목록에는 디렉터리 이름 뿐만 아니라 파일 이름을 포함 가능성이 있는 됩니다.  
   
-## <a name="see-also"></a>See Also  
- [Callback Functions Implemented by the IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
+## 참고 항목  
+ [IDE에 의해 구현 되는 콜백 함수](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)   
- [Error Codes](../extensibility/error-codes.md)
+ [오류 코드](../extensibility/error-codes.md)

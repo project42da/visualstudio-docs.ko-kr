@@ -1,68 +1,51 @@
 ---
-title: IDebugProcessEx2::Attach | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProcessEx2::Attach
-helpviewer_keywords:
-- IDebugProcessEx2::Attach method
+title: "IDebugProcessEx2::Attach | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProcessEx2::Attach"
+helpviewer_keywords: 
+  - "IDebugProcessEx2::Attach 메서드"
 ms.assetid: f3334ed7-39bf-4d02-a338-36f567b9b287
 caps.latest.revision: 15
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 44e7b5313b0efeb4895cfa53ebacd5397ef97bc5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 15
 ---
-# <a name="idebugprocessex2attach"></a>IDebugProcessEx2::Attach
-This method informs the process that a session is now debugging the process.  
+# IDebugProcessEx2::Attach
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는 프로세스 세션 프로세스는 현재 디버깅 하 알려 줍니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT Attach(   
-   IDebugSession2* pSession  
+```cpp#  
+HRESULT Attach(   
+   IDebugSession2* pSession  
 );  
 ```  
   
-```csharp  
+```c#  
 int Attach(  
-   IDebugSession2 pSession  
+   IDebugSession2 pSession  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pSession`  
- [in] A value that uniquely identifies the session attaching to this process.  
+ \[in\] 이 프로세스에 연결 하는 세션에 고유 하 게 식별 하는 값입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- The interface passed in `pSession` is to be treated only as a cookie, a value that uniquely identifies the session debug manager attaching to this process; none of the methods on the supplied interface are functional.  
+## 설명  
+ 인터페이스에 전달 된 `pSession` 만 쿠키를 연결 하는이 과정에; 디버그 세션 관리자를 고유 하 게 식별 하는 값으로 처리 하는 것 메서드에 제공 된 인터페이스의 기능입니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

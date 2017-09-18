@@ -1,140 +1,123 @@
 ---
-title: DISASSEMBLY_STREAM_FIELDS | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DISASSEMBLY_STREAM_FIELDS
-helpviewer_keywords:
-- DISASSEMBLY_STREAM_FIELDS enumeration
+title: "DISASSEMBLY_STREAM_FIELDS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DISASSEMBLY_STREAM_FIELDS"
+helpviewer_keywords: 
+  - "DISASSEMBLY_STREAM_FIELDS 열거형"
 ms.assetid: cfc9b4de-c756-4844-bea7-d9f186a51d1b
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c1681a66953db211dba3f9cc93235b15083a73a4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
-Specifies what information to retrieve about a disassembly field.  
+# DISASSEMBLY_STREAM_FIELDS
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+필드에 대 한 디스어셈블리를 검색할 정보를 지정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-enum enum_DISASSEMBLY_STREAM_FIELDS {   
-   DSF_ADDRESS          = 0x00000001,  
-   DSF_ADDRESSOFFSET    = 0x00000002,  
-   DSF_CODEBYTES        = 0x00000004,  
-   DSF_OPCODE           = 0x00000008,  
-   DSF_OPERANDS         = 0x00000010,  
-   DSF_SYMBOL           = 0x00000020,  
-   DSF_CODELOCATIONID   = 0x00000040,  
-   DSF_POSITION         = 0x00000080,  
-   DSF_DOCUMENTURL      = 0x00000100,  
-   DSF_BYTEOFFSET       = 0x00000200,  
-   DSF_FLAGS            = 0x00000400,  
-   DSF_OPERANDS_SYMBOLS = 0x00010000,  
-   DSF_ALL              = 0x000107ff  
+```cpp#  
+enum enum_DISASSEMBLY_STREAM_FIELDS {   
+   DSF_ADDRESS          = 0x00000001,  
+   DSF_ADDRESSOFFSET    = 0x00000002,  
+   DSF_CODEBYTES        = 0x00000004,  
+   DSF_OPCODE           = 0x00000008,  
+   DSF_OPERANDS         = 0x00000010,  
+   DSF_SYMBOL           = 0x00000020,  
+   DSF_CODELOCATIONID   = 0x00000040,  
+   DSF_POSITION         = 0x00000080,  
+   DSF_DOCUMENTURL      = 0x00000100,  
+   DSF_BYTEOFFSET       = 0x00000200,  
+   DSF_FLAGS            = 0x00000400,  
+   DSF_OPERANDS_SYMBOLS = 0x00010000,  
+   DSF_ALL              = 0x000107ff  
 };  
 typedef DWORD DISASSEMBLY_STREAM_FIELDS;  
 ```  
   
-```csharp  
-public enum enum_DISASSEMBLY_STREAM_FIELDS {   
-   DSF_ADDRESS          = 0x00000001,  
-   DSF_ADDRESSOFFSET    = 0x00000002,  
-   DSF_CODEBYTES        = 0x00000004,  
-   DSF_OPCODE           = 0x00000008,  
-   DSF_OPERANDS         = 0x00000010,  
-   DSF_SYMBOL           = 0x00000020,  
-   DSF_CODELOCATIONID   = 0x00000040,  
-   DSF_POSITION         = 0x00000080,  
-   DSF_DOCUMENTURL      = 0x00000100,  
-   DSF_BYTEOFFSET       = 0x00000200,  
-   DSF_FLAGS            = 0x00000400,  
-   DSF_OPERANDS_SYMBOLS = 0x00010000,  
-   DSF_ALL              = 0x000107ff  
+```c#  
+public enum enum_DISASSEMBLY_STREAM_FIELDS {   
+   DSF_ADDRESS          = 0x00000001,  
+   DSF_ADDRESSOFFSET    = 0x00000002,  
+   DSF_CODEBYTES        = 0x00000004,  
+   DSF_OPCODE           = 0x00000008,  
+   DSF_OPERANDS         = 0x00000010,  
+   DSF_SYMBOL           = 0x00000020,  
+   DSF_CODELOCATIONID   = 0x00000040,  
+   DSF_POSITION         = 0x00000080,  
+   DSF_DOCUMENTURL      = 0x00000100,  
+   DSF_BYTEOFFSET       = 0x00000200,  
+   DSF_FLAGS            = 0x00000400,  
+   DSF_OPERANDS_SYMBOLS = 0x00010000,  
+   DSF_ALL              = 0x000107ff  
 };  
 ```  
   
-## <a name="members"></a>Members  
- DSF_ADDRESS  
- Initialize/use the `bstrAddress` field.  
+## Members  
+ DSF\_ADDRESS  
+ 초기화\/사용의 `bstrAddress` 필드입니다.  
   
- DSF_ADDRESSOFFSET  
- Initialize/use the `bstrAddressOffset` field.  
+ DSF\_ADDRESSOFFSET  
+ 초기화\/사용의 `bstrAddressOffset` 필드입니다.  
   
- DSF_CODEBYTES  
- Initialize/use the `bstrCodeBytes` field.  
+ DSF\_CODEBYTES  
+ 초기화\/사용의 `bstrCodeBytes` 필드입니다.  
   
- DSF_OPCODE  
- Initialize/use the `bstrOpCode` field.  
+ DSF\_OPCODE  
+ 초기화\/사용의 `bstrOpCode` 필드입니다.  
   
- DSF_OPERANDS  
- Initialize/use the `bstrOperands` field.  
+ DSF\_OPERANDS  
+ 초기화\/사용의 `bstrOperands` 필드입니다.  
   
- DSF_SYMBOL  
- Initialize/use the `bstrSymbol` field.  
+ DSF\_SYMBOL  
+ 초기화\/사용의 `bstrSymbol` 필드입니다.  
   
- DSF_CODELOCATIONID  
- Initialize/use the `uCodeLocationId` field.  
+ DSF\_CODELOCATIONID  
+ 초기화\/사용의 `uCodeLocationId` 필드입니다.  
   
- DSF_POSITION  
- Initialize/use the `posBeg` and `posEnd` fields.  
+ DSF\_POSITION  
+ 초기화\/사용의 `posBeg` 및 `posEnd` 필드입니다.  
   
- DSF_DOCUMENTURL  
- Initialize/use the `bstrDocumentUrl` field.  
+ DSF\_DOCUMENTURL  
+ 초기화\/사용의 `bstrDocumentUrl` 필드입니다.  
   
- DSF_BYTEOFFSET  
- Initialize/use the `dwByteOffset` field.  
+ DSF\_BYTEOFFSET  
+ 초기화\/사용의 `dwByteOffset` 필드입니다.  
   
- DSF_FLAGS  
- Initialize/use the `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) field.  
+ DSF\_FLAGS  
+ 초기화\/사용의 `dwFlags` \([DISASSEMBLY\_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)\) 필드입니다.  
   
- DSF_OPERANDS_SYMBOLS  
- Include symbol names in the `bstrOperands` field.  
+ DSF\_OPERANDS\_SYMBOLS  
+ 기호 이름에 포함 되어 있는 `bstrOperands` 필드입니다.  
   
- DSF_ALL  
- Specifies all fields for the disassembly stream.  
+ DSF\_ALL  
+ 디스어셈블리 스트림에 대 한 모든 필드를 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
- Passed as a parameter to the [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) method to indicate which fields of the [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) structure are to be initialized.  
+## 설명  
+ 매개 변수로 전달 되는 [읽기](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) 필드의 나타내도록 메서드는 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 된 구조를 초기화 합니다.  
   
- Used for the `dwFields` member of the `DisassemblyData` structure to indicate which fields are used and valid when the structure is returned.  
+ 사용 되는 `dwFields` 의 멤버는 `DisassemblyData` 구조 구조 반환 될 때 필드 사용 되는 및 잘못 된 것을 나타냅니다.  
   
- These values may be combined with a bitwise `OR`.  
+ 이 값이 비트와 함께 사용할 수 있습니다 `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 요구 사항  
+ 헤더: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## 참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
- [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)   
- [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)
+ [읽기](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)   
+ [DISASSEMBLY\_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)

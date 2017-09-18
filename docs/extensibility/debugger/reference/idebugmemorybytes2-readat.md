@@ -1,96 +1,79 @@
 ---
-title: IDebugMemoryBytes2::ReadAt | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMemoryBytes2::ReadAt
-helpviewer_keywords:
-- IDebugMemoryBytes2::ReadAt method
-- ReadAt method
+title: "IDebugMemoryBytes2::ReadAt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMemoryBytes2::ReadAt"
+helpviewer_keywords: 
+  - "IDebugMemoryBytes2::ReadAt 메서드"
+  - "ReadAt 메서드"
 ms.assetid: b413684d-4155-4bd4-ae30-ffa512243b5f
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2c92d1be776d3d8e9db23a3871f0f3775dd84397
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
-Reads a sequence of bytes, starting at a given location.  
+# IDebugMemoryBytes2::ReadAt
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+시퀀스에 지정 된 위치에서 시작 하 여 바이트를 읽습니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT ReadAt(   
-   IDebugMemoryContext2* pStartContext,  
-   DWORD                 dwCount,  
-   BYTE*                 rgbMemory,  
-   DWORD*                pdwRead,  
-   DWORD*                pdwUnreadable  
+```cpp#  
+HRESULT ReadAt(   
+   IDebugMemoryContext2* pStartContext,  
+   DWORD                 dwCount,  
+   BYTE*                 rgbMemory,  
+   DWORD*                pdwRead,  
+   DWORD*                pdwUnreadable  
 );  
 ```  
   
-```csharp  
+```c#  
 int ReadAt(  
-   IDebugMemoryContext2 pStartContext,  
-   uint                 dwCount,  
-   byte[]               rgbMemory,  
-   out uint             pdwRead,  
-   ref uint             pdwUnreadable  
+   IDebugMemoryContext2 pStartContext,  
+   uint                 dwCount,  
+   byte[]               rgbMemory,  
+   out uint             pdwRead,  
+   ref uint             pdwUnreadable  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pStartContext`  
- [in] The [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object that specifies where to start reading bytes.  
+ \[in\] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 바이트를 읽기 시작 하는 위치를 지정 하는 개체입니다.  
   
  `dwCount`  
- [in] The number of bytes to read. Also specifies the length of the `rgbMemory` array.  
+ \[in\] 읽을 바이트의 수입니다.  또한 지정은 `rgbMemory` 배열입니다.  
   
  `rgbMemory`  
- [in, out] Array filled in with the bytes actually read.  
+ \[in, out\] 배열에 있는 바이트로 채워진 실제로 읽기.  
   
  `pdwRead`  
- [out] Returns the number of contiguous bytes actually read.  
+ \[out\] 실제로 인접 한 바이트 수를 반환 합니다.  
   
  `pdwUnreadable`  
- [in, out] Returns the number of unreadable bytes. May be a null value if the client is uninterested in the number of unreadable bytes.  
+ \[in, out\] 읽을 바이트 수를 반환합니다.  클라이언트가 읽을 바이트 수에 관심이 있는 경우 null 값을 수 있습니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- If 100 bytes are requested and the first 50 are readable, the next 20 are unreadable, and the remaining 30 are readable, this method returns:  
+## 설명  
+ 100 바이트 요청 된 및 첫 번째 50 읽을 수 있는, 다음 20을 읽을 수 없는 고 나머지 30 읽을 수 있는 경우이 메서드를 반환 합니다.  
   
- *`pdwRead` = 50  
+ \*`pdwRead` \= 50  
   
- *`pdwUnreadable` = 20  
+ \*`pdwUnreadable` \= 20  
   
- In this case, because `*pdwRead + *pdwUnreadable < dwCount`, the caller must make an additional call to read the remaining 30 bytes of the original 100 requested and the [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object passed in the `pStartContext` parameter must be advanced by 70.  
+ 이 경우에 때문에 `*pdwRead + *pdwUnreadable < dwCount`, 호출자가 요청한 원래 100 중 나머지 30 바이트 읽기에서 추가로 호출 해야 하는 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 에 전달 되는 개체는 `pStartContext` 매개 변수는 70 여 고급 해야 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

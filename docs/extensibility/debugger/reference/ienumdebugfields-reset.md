@@ -1,64 +1,47 @@
 ---
-title: IEnumDebugFields::Reset | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IEnumDebugFields::Reset
-helpviewer_keywords:
-- IEnumDebugFields::Reset method
+title: "IEnumDebugFields::Reset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IEnumDebugFields::Reset"
+helpviewer_keywords: 
+  - "IEnumDebugFields::Reset 메서드"
 ms.assetid: 38ff61e4-0120-42e8-971a-16be6050b425
 caps.latest.revision: 6
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 76a27409e517117fc0d0e62aa96b2c83776f2930
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 6
 ---
-# <a name="ienumdebugfieldsreset"></a>IEnumDebugFields::Reset
-This method resets the enumeration to the first element.  
+# IEnumDebugFields::Reset
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는 첫 번째 요소에 열거형을 다시 설정합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT Reset(void);  
 ```  
   
-```csharp  
+```c#  
 int Reset();  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- None  
+#### 매개 변수  
+ 없음  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- After this method is called, the next call to [Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md) returns the first element of the enumeration.  
+## 설명  
+ 이 메서드 호출 후 다음 호출을 [다음](../../../extensibility/debugger/reference/ienumdebugfields-next.md) 열거형의 첫 번째 요소를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
- [Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md)
+ [다음](../../../extensibility/debugger/reference/ienumdebugfields-next.md)

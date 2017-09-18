@@ -1,147 +1,132 @@
 ---
-title: 'Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-helpviewer_keywords:
-- assemblies, downloading [ClickOnce]
-- ClickOnce deployment, on-demand download
-- on-demand assemblies, ClickOnce
+title: "연습: ClickOnce 배포 API에서 요청 시 어셈블리 다운로드 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-deployment"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+helpviewer_keywords: 
+  - "어셈블리, 다운로드[ClickOnce]"
+  - "ClickOnce 배포, 요청 시 다운로드"
+  - "요청 시 어셈블리, ClickOnce"
 ms.assetid: d20e2789-8621-4806-b5b7-841122da1456
 caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 4981aa3515d131f8a75fa0c76849c02ef27dd75c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+caps.handback.revision: 16
 ---
-# <a name="walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API
-By default, all of the assemblies included in a [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application are downloaded when the application is first run. However, you may have parts of your application that are used by a small set of your users. In this case, you want to download an assembly only when you create one of its types. The following walkthrough demonstrates how to mark certain assemblies in your application as "optional", and how to download them by using classes in the <xref:System.Deployment.Application> namespace when the common language runtime (CLR) demands them.  
+# 연습: ClickOnce 배포 API에서 요청 시 어셈블리 다운로드
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+기본적으로 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에 포함된 모든 어셈블리는 응용 프로그램을 처음 실행할 때 다운로드됩니다.  그러나 응용 프로그램의 특정 부분은 그 사용자가 많지 않을 수 있습니다.  이 경우 해당 형식 중 하나를 만들 때만 어셈블리를 다운로드하도록 설정할 수도 있습니다.  다음 연습에서는 응용 프로그램의 특정 어셈블리를 "선택적"인 것으로 표시하는 방법과 CLR\(공용 언어 런타임\)에서 요청할 때 <xref:System.Deployment.Application> 네임스페이스의 클래스를 사용하여 이러한 어셈블리를 다운로드하는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  Your application will have to run in full trust to use this procedure.  
+>  이 절차를 사용하려면 응용 프로그램을 완전 신뢰 수준에서 실행해야 합니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- You will need one of the following components to complete this walkthrough:  
+## 사전 요구 사항  
+ 이 연습을 완료하려면 다음 구성 요소 중 하나가 필요합니다.  
   
--   The Windows SDK. The Windows SDK can be downloaded from the Microsoft Download Center.  
+-   Windows SDK입니다.  Microsoft 다운로드 센터에서 Windows SDK를 다운로드할 수 있습니다.  
   
--   Visual Studio.  
+-   Visual Studio  
   
-## <a name="creating-the-projects"></a>Creating the Projects  
+## 프로젝트 만들기  
   
-#### <a name="to-create-a-project-that-uses-an-on-demand-assembly"></a>To create a project that uses an on-demand assembly  
+#### 요청 시 어셈블리를 사용하는 프로젝트를 만들려면  
   
-1.  Create a directory named ClickOnceOnDemand.  
+1.  이름이 ClickOnceOnDemand인 디렉터리를 만듭니다.  
   
-2.  Open the Windows SDK Command Prompt or the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Command Prompt.  
+2.  Windows SDK 명령 프롬프트나 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명령 프롬프트를 엽니다.  
   
-3.  Change to the ClickOnceOnDemand directory.  
+3.  ClickOnceOnDemand 디렉터리로 이동합니다.  
   
-4.  Generate a public/private key pair using the following command:  
+4.  다음 명령을 사용하여 공개\/개인 키 쌍을 생성합니다.  
   
     ```  
     sn -k TestKey.snk  
     ```  
   
-5.  Using Notepad or another text editor, define a class named `DynamicClass` with a single property named `Message`.  
+5.  메모장이나 기타 텍스트 편집기를 사용하여 `Message`라는 속성 하나가 있는 `DynamicClass`라는 클래스를 정의합니다.  
   
-     [!code-vb[ClickOnceLibrary#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]  [!code-csharp[ClickOnceLibrary#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]  
+     [!code-vb[ClickOnceLibrary#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]
+     [!code-cs[ClickOnceLibrary#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]  
   
-6.  Save the text as a file named `ClickOnceLibrary.cs` or `ClickOnceLibrary.vb`, depending on the language you use, to the ClickOnceOnDemand directory.  
+6.  사용하는 언어에 따라 이 텍스트를 `ClickOnceLibrary.cs` 또는 `ClickOnceLibrary.vb`라는 파일로 ClickOnceOnDemand 디렉터리에 저장합니다.  
   
-7.  Compile the file into an assembly.  
+7.  파일을 어셈블리로 컴파일합니다.  
   
-    ```csharp  
+    ```c#  
     csc /target:library /keyfile:TestKey.snk ClickOnceLibrary.cs  
     ```  
   
-    ```vb  
+    ```vb#  
     vbc /target:library /keyfile:TestKey.snk ClickOnceLibrary.vb  
     ```  
   
-8.  To get the public key token for the assembly, use the following command:  
+8.  어셈블리에 대해 공개 키 토큰을 가져오려면 다음 명령을 사용합니다.  
   
     ```  
     sn -T ClickOnceLibrary.dll  
     ```  
   
-9. Create a new file using your text editor and enter the following code. This code creates a Windows Forms application that downloads the ClickOnceLibrary assembly when it is required.  
+9. 텍스트 편집기에서 새 파일을 만들고 다음 코드를 입력합니다.  이 코드는 필요할 때 ClickOnceLibrary 어셈블리를 다운로드하는 Windows Forms 응용 프로그램을 만듭니다.  
   
-     [!code-csharp[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.cs)]   [!code-vb[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.vb)]  
+     [!code-cs[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.cs)]
+     [!code-vb[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.vb)]  
   
-10. In the code, locate the call to <xref:System.Reflection.Assembly.LoadFile%2A>.  
+10. 이 코드에서 <xref:System.Reflection.Assembly.LoadFile%2A> 호출을 찾습니다.  
   
-11. Set`PublicKeyToken` to the value that you retrieved earlier.  
+11. `PublicKeyToken`을 앞서 검색한 값으로 설정합니다.  
   
-12. Save the file as either `Form1.cs` or `Form1.vb`.  
+12. 파일을 `Form1.cs` 또는 `Form1.vb`로 저장합니다.  
   
-13. Compile it into an executable using the following command.  
+13. 다음 명령을 사용하여 파일을 실행 파일로 컴파일합니다.  
   
-    ```csharp  
+    ```c#  
     csc /target:exe /reference:ClickOnceLibrary.dll Form1.cs  
     ```  
   
-    ```vb  
+    ```vb#  
     vbc /target:exe /reference:ClickOnceLibrary.dll Form1.vb  
     ```  
   
-## <a name="marking-assemblies-as-optional"></a>Marking Assemblies as Optional  
+## 선택적 어셈블리로 표시  
   
-#### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-mageuiexe"></a>To mark assemblies as optional in your ClickOnce application by using MageUI.exe  
+#### MageUI.exe를 사용하여 ClickOnce 응용 프로그램에서 어셈블리를 선택적인 것으로 표시하려면  
   
-1.  Using MageUI.exe, create an application manifest as described in [Walkthrough: Manually Deploying a ClickOnce Application](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Use the following settings for the application manifest:  
+1.  [연습: ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)의 설명에 따라 MageUI.exe를 사용하여 응용 프로그램 매니페스트를 만듭니다.  응용 프로그램 매니페스트에 대해 다음 설정을 사용합니다.  
   
-    -   Name the application manifest `ClickOnceOnDemand`.  
+    -   응용 프로그램 매니페스트의 이름을 `ClickOnceOnDemand`로 지정합니다.  
   
-    -   On the **Files** page, in the ClickOnceLibrary.dll row, set the **File Type** column to **None**.  
+    -   **파일** 페이지의 ClickOnceLibrary.dll 행에서 **파일 형식** 열을 **없음**으로 설정합니다.  
   
-    -   On the **Files** page, in the ClickOnceLibrary.dll row, type `ClickOnceLibrary.dll` in the **Group** column.  
+    -   **파일** 페이지의 ClickOnceLibrary.dll 행에서 **그룹** 열에 `ClickOnceLibrary.dll`을 입력합니다.  
   
-2.  Using MageUI.exe, create a deployment manifest as described in [Walkthrough: Manually Deploying a ClickOnce Application](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Use the following settings for the deployment manifest:  
+2.  [연습: ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)의 설명에 따라 MageUI.exe를 사용하여 배포 매니페스트를 만듭니다.  배포 매니페스트에 대해 다음 설정을 사용합니다.  
   
-    -   Name the deployment manifest `ClickOnceOnDemand`.  
+    -   배포 매니페스트의 이름을 `ClickOnceOnDemand`로 지정합니다.  
   
-## <a name="testing-the-new-assembly"></a>Testing the New Assembly  
+## 새 어셈블리 테스트  
   
-#### <a name="to-test-your-on-demand-assembly"></a>To test your on-demand assembly  
+#### 요청 시 어셈블리를 테스트하려면  
   
-1.  Upload your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] deployment to a Web server.  
+1.  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포를 웹 서버에 업로드합니다.  
   
-2.  Start your application deployed with [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] from a Web browser by entering the URL to the deployment manifest. If you call your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application `ClickOnceOnDemand`, and you upload it to the root directory of adatum.com, your URL would look like this:  
+2.  웹 브라우저에 배포 매니페스트의 URL을 입력하여 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]를 통해 배포된 응용 프로그램을 시작합니다.  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 `ClickOnceOnDemand`를 호출하고 adatum.com의 루트 디렉터리에 이를 업로드하는 경우 URL은 다음과 같습니다.  
   
     ```  
     http://www.adatum.com/ClickOnceOnDemand/ClickOnceOnDemand.application  
     ```  
   
-3.  When your main form appears, press the <xref:System.Windows.Forms.Button>. You should see a string in a message box window that reads "Hello, World!".  
+3.  주 폼이 나타나면 <xref:System.Windows.Forms.Button>을 누릅니다.  "Hello, World\!"라는 문자열이 메시지 상자 창에 나타나야 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  <xref:System.Deployment.Application.ApplicationDeployment>

@@ -1,243 +1,219 @@
 ---
-title: Save data back to the database | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- datasets [Visual Basic], validating data
-- data validation, datasets
-- data [Visual Studio], saving
-- row version
-- updating datasets, constraints
-- datasets [Visual Basic], about datasets
-- datasets [Visual Basic], merging
-- updates, constraints in datasets
-- saving data, about saving data
-- datasets [Visual Basic], constraints
-- TableAdapters
+title: "데이터 집합에 데이터 저장 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "데이터[Visual Studio], 저장"
+  - "데이터 유효성 검사, 데이터 집합"
+  - "데이터 집합[Visual Basic], 데이터 집합 정보"
+  - "데이터 집합[Visual Basic], 제약 조건"
+  - "데이터 집합[Visual Basic], 병합"
+  - "데이터 집합[Visual Basic], 데이터 유효성 검사"
+  - "행 버전"
+  - "데이터 저장, 데이터 저장 정보"
+  - "TableAdapter"
+  - "업데이트, 데이터 집합의 제약 조건"
+  - "데이터 집합 업데이트, 제약 조건"
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
 caps.latest.revision: 27
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: f4b17810a2f59aeee8d6002059d65928882fd51f
-ms.openlocfilehash: 2a8553c23c805d6e8acddaf4ba264a915c2795bc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+caps.handback.revision: 18
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="save-data-back-to-the-database"></a>Save data back to the database
-The dataset is an in-memory copy of data. If you modify that data, it's a good practice to save those changes back to the database. You do this in one of three ways:  
+# 데이터 집합에 데이터 저장
+데이터 저장은 응용 프로그램에서 변경된 데이터를 원래 데이터 저장소\(일반적으로 SQL Server와 같은 관계형 데이터베이스\)에서 유지할 수 있도록 하는 프로세스입니다.  
   
--   By calling one of the Update methods of a TableAdapter  
+ 데이터 집합은 실제로 데이터의 캐시, 즉 메모리 내의 복사본이므로 원래의 데이터 소스에 정보를 기록하는 과정은 데이터 집합의 데이터를 수정하는 과정과는 별개입니다.  TableAdapter의 `Update` 메서드 중 하나를 호출하거나 TableAdapter의 DBDirect 메서드 중 하나를 호출하여 데이터 집합에 있는 업데이트된 데이터를 데이터베이스에 다시 보낼 수 있습니다.  
   
--   By calling one of DBDirect methods of the TableAdapter  
+ 데이터 집합의 변경 내용을 다시 데이터베이스로 보내는 방법에 대한 자세한 내용은 [방법: TableAdapter를 사용하여 데이터 업데이트](../data-tools/update-data-by-using-a-tableadapter.md) 및 [방법: 데이터베이스에 데이터 집합 변경 내용 저장](../Topic/How%20to:%20Save%20Dataset%20Changes%20to%20a%20Database.md)을 참조하십시오.  
   
--   By calling the UpdateAll method on the TableAdapterManager that Visual Studio generates for you when the dataset contains tables that are related to other tables in the dataset  
+ Visual Studio에서는 데이터를 관련 테이블에 저장할 때 저장 작업을 지원하는 `TableAdapterManager` 구성 요소를 제공합니다.  이 구성 요소의 도움을 받아 저장 작업은 데이터베이스에 정의된 외래 키 제약 조건에 따라 올바른 순서로 수행됩니다.  자세한 내용은 [계층적 업데이트 개요](../Topic/Hierarchical%20Update%20Overview.md)을 참조하십시오.  
   
-When you data bind dataset tables to controls on a Windows Form or XAML page, the data binding architecture does all the work for you.  
+ 데이터 집합의 데이터를 수정하는 방법에 대한 자세한 내용은 [응용 프로그램에서 데이터 편집](../data-tools/editing-data-in-your-application.md)을 참조하십시오.  
   
-If you're familiar with TableAdapters, you can jump directly to one of these topics:  
+## 2단계 업데이트  
+ 데이터 집합을 통해 데이터 소스를 업데이트하는 과정은 2단계로 이루어집니다.  첫 번째 단계는 새 레코드, 변경된 레코드, 삭제된 레코드와 같은 새로운 정보로 데이터 집합을 업데이트하는 것입니다.  응용 프로그램에서 데이터 집합과 관련된 작업만 수행하는 경우, 즉 데이터 집합을 업데이트한 다음 다른 응용 프로그램에 데이터 집합을 보내 처리 작업을 계속 수행하도록 하는 경우, 업데이트 작업이 종료된 것입니다.  
   
-|Topic|Description|  
-|-----------|-----------------|  
-|[Insert new records into a database](../data-tools/insert-new-records-into-a-database.md)|How to perform updates and inserts using TableAdapters or Command objects|  
-|[Update data by using a TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md)|How to perform updates with TableAdapters|  
-|[Hierarchical update](../data-tools/hierarchical-update.md)|How to perform updates from a dataset with two or more related tables|  
-|[Handle a concurrency exception](../data-tools/handle-a-concurrency-exception.md)|How to handle exceptions when two users attempt to change the same data in a database at the same time|  
-|[How to: Save data by using a transaction](../data-tools/save-data-by-using-a-transaction.md)|How to save data in a transaction using the System.Transactions namespace and a TransactionScope object|  
-|[Walkthrough: Save data in a transaction](../data-tools/save-data-in-a-transaction.md)|Walkthrough that creates a Windows Forms application to demonstrate saving data to a database inside a transaction|  
-|[Save data to a database (multiple tables)](../data-tools/save-data-to-a-database-multiple-tables.md)|How to edit records and save changes in multiple tables back to the database|  
-|[Save data from an object to a database](../data-tools/save-data-from-an-object-to-a-database.md)|How to pass data from an object that is not in a dataset to a database by using a TableAdapter DbDirect method|  
-|[Save data with the TableAdapter DBDirect methods](../data-tools/save-data-with-the-tableadapter-dbdirect-methods.md)|How to use the TableAdapter to send SQL queries directly to the database|  
-|[Save a dataset as XML](../data-tools/save-a-dataset-as-xml.md)|How to save a dataset to an XML document|  
+> [!NOTE]
+>  Windows Forms에서 데이터 바인딩 아키텍처는 데이터 바인딩된 컨트롤에서 데이터 집합으로 변경 내용을 보내는 일을 맡고 있으므로 코드를 직접 작성하여 데이터 집합을 명시적으로 업데이트하지 않아도 됩니다.  자세한 내용은 [Windows Forms 데이터 바인딩](../Topic/Windows%20Forms%20Data%20Binding.md)을 참조하십시오.  
   
-## <a name="two-stage-updates"></a>Two-stage updates  
- Updating a data source is a two-step process. The first step is to update the dataset with new records, changed records, or deleted records. If your application never sends those changes back to the data source, then you are finished with the update.  
+ 데이터베이스와 같은 데이터 소스를 업데이트하는 경우 두 번째 단계는 데이터 집합의 변경 내용을 원래의 데이터 소스로 보내는 것입니다.  즉, 데이터 집합을 업데이트하더라도 내부 데이터 소스에 변경 내용이 직접 기록되는 것은 아니므로 이 두 번째 단계를 명시적으로 수행해야 합니다.  한 데이터 소스에서 다른 데이터 소스로 데이터를 이동하거나 여러 데이터 소스를 업데이트할 때는 다른 어댑터를 사용할 수도 있지만, 이 작업을 수행할 때는 데이터 집합을 채울 때 사용했던 것과 동일한 TableAdapter 또는 데이터 어댑터의 Update 메서드를 호출해야 합니다.  
   
- If you do send the changes back to the database, then a second step is required. If you aren't using data-bound controls, then you have to manually call the Update method of the same TableAdapter (or data adapter) that you used to populate the dataset. However, you can also use different adapters, for example, to move data from one data source to another or to update multiple data sources. If you aren't using data binding, and are saving changes for related tables, you have to manually instantiate a variable of the auto-generated TableAdapterManager class, and then call its UdpateAll method.  
+ ![Visual Basic 데이터 집합 업데이트](../data-tools/media/vbdatasetupdates.gif "vbDatasetUpdates")  
+2단계 업데이트 과정 및 성공적인 업데이트를 위한 DataRowVersion의 역할  
   
- ![Visual Basic Dataset Updates](../data-tools/media/vbdatasetupdates.gif "vbDatasetUpdates")  
-Two-stage update process and the role of the DataRowVersion in a successful update  
+ 구조적으로 데이터 집합은 데이터를 컬렉션 집합으로 사용할 수 있게 만듭니다.  데이터 집합은 테이블 컬렉션을 포함합니다.  테이블은 행 컬렉션을 포함합니다.  테이블은 <xref:System.Data.DataSet> 개체의 컬렉션으로 노출되며 레코드는 <xref:System.Data.DataTable> 개체의 <xref:System.Data.DataTable.Rows%2A> 컬렉션에서 사용할 수 있습니다.  기본 컬렉션 메서드를 사용하여 이러한 컬렉션을 간단히 조작함으로써 데이터 집합의 데이터를 변경할 수 있지만 내부 데이터 소스를 업데이트하려면 데이터 집합 수정을 위해 특별히 개발된 메서드를 사용해야 합니다.  
   
- A dataset contains collections of tables, which contain a collections of rows. If you intend to  update an underlying data source later, you must use the methods on the DataTable.DataRowCollection property when adding or removing rows. Those methods perform the change tracking that's needed for updating the data source. If you call the RemoveAt collection on the Rows property, the deletion won't be communicated back to the database.  
+ 예를 들어, 데이터 테이블에서 레코드를 제거하려면 테이블에 있는 <xref:System.Data.DataTable.Rows%2A> 컬렉션의 [RemoveAt 메서드](https://msdn.microsoft.com/en-us/library/system.data.datarowcollection.removeat.aspx)를 호출하여 데이터 집합의 레코드를 물리적으로 삭제합니다.  데이터 집합을 데이터의 구조적 저장소로만 사용하고 변경 정보를 다른 응용 프로그램에 전송하지 않아도 되는 경우, 이러한 방식으로 컬렉션을 조작하는 것은 데이터 집합을 업데이트할 때 허용되는 방식입니다.  
   
-## <a name="merge-datasets"></a>Merge datasets  
- You can update the contents of a dataset by *merging* it with another dataset. This involves copying the contents of a *source* dataset into the calling dataset (referred to as the *target* dataset). When you merge datasets, new records in the source dataset are added to the target dataset. Additionally, extra columns in the source dataset are added to the target dataset. Merging datasets is useful when you have a local dataset and you get a second dataset from another application. It's also useful when you get a second dataset  from a component such as an XML web service, or when you need to integrate data from multiple datasets.  
+ 하지만 변경 내용을 데이터 소스나 다른 응용 프로그램에 보내려면 각 업데이트에 대한 변경 정보\(예: 메타데이터\)를 유지해야 합니다.  이렇게 하면 나중에 변경 내용을 데이터 소스나 응용 프로그램으로 보낼 때 프로세스에서 필요한 정보를 사용하여 적절한 레코드를 찾아 업데이트합니다.  예를 들어, 데이터 집합의 레코드를 삭제할 경우 삭제된 데이터에 대한 정보는 데이터 집합에 유지되어야 합니다.  따라서 TableAdapter의 `DeleteCommand`를 호출하면 데이터 소스에서 원래 레코드를 찾는 데 필요한 기록 정보가 있어 원래 레코드를 삭제할 수 있습니다.  자세한 내용은 아래에 있는 "변경 내용에 대한 정보 유지"를 참조하십시오.  
   
- When merging datasets, you can pass a Boolean argument (`preserveChanges`) that tells the <xref:System.Data.DataSet.Merge%2A> method whether to retain existing modifications in the target dataset. Because datasets maintain multiple versions of records, it's important to keep in mind that more than one version of the records is being merged. The following table shows how a record in two datasets is merged:  
+## 데이터 집합 병합  
+ 데이터 집합을 *병합*하여, 즉 *소스* 데이터 집합이라고 하는 한 데이터 집합의 내용을 *대상* 데이터 집합이라고 하는 호출 데이터 집합에 복사하여 데이터 집합의 내용을 업데이트할 수 있습니다.  데이터 집합을 병합할 때 소스 데이터 집합의 새 레코드는 대상 데이터 집합에 추가됩니다.  그리고 소스 데이터 집합에 있는 나머지 열도 대상 데이터 집합에 추가됩니다.  데이터 집합의 병합이 특히 유용한 경우는 로컬 데이터 집합이 있고, XML Web services와 같은 구성 요소 또는 다른 응용 프로그램에서 두 번째 데이터 집합을 가져오거나  여러 데이터 집합의 데이터를 통합하는 경우입니다.  
   
-|DataRowVersion|Target dataset|Source dataset|  
-|--------------------|--------------------|--------------------|  
-|Original|James Wilson|James C. Wilson|  
-|Current|Jim Wilson|James C. Wilson|  
+ 데이터 집합을 병합할 때 대상 데이터 집합에서 기존의 수정 내용을 유지할 것인지 여부를 <xref:System.Data.DataSet.Merge%2A> 메서드에 알려주는 선택적 부울 인수\(`preserveChanges`\)를 전달할 수도 있습니다.  데이터 집합에서는 레코드의 여러 버전을 유지할 수 있으므로 두 개 이상의 레코드 버전을 병합할 때 이 점을 기억하는 것이 중요합니다.  다음 표에서는 병합할 두 개의 데이터 집합에 있는 한 레코드를 설명합니다.  
   
- Calling the <xref:System.Data.DataSet.Merge%2A> method on the previous table with `preserveChanges=false targetDataset.Merge(sourceDataset)` results in the following:  
+|DataRowVersion|대상 데이터 집합|소스 데이터 집합|  
+|--------------------|---------------|---------------|  
+|원래 설정|James Wilson|James C.  Wilson|  
+|Current|Jim Wilson|James C.  Wilson|  
   
-|DataRowVersion|Target dataset|Source dataset|  
-|--------------------|--------------------|--------------------|  
-|Original|James C. Wilson|James C. Wilson|  
-|Current|James C. Wilson|James C. Wilson|  
+ 위 표에서 `preserveChanges=false targetDataset.Merge(sourceDataset)`를 사용하여 <xref:System.Data.DataSet.Merge%2A> 메서드를 호출하면 다음과 같은 결과가 발생합니다.  
   
- Calling the <xref:System.Data.DataSet.Merge%2A> method with `preserveChanges = true targetDataset.Merge(sourceDataset, true)` results in the following:  
+|DataRowVersion|대상 데이터 집합|소스 데이터 집합|  
+|--------------------|---------------|---------------|  
+|원래 설정|James C.  Wilson|James C.  Wilson|  
+|Current|James C.  Wilson|James C.  Wilson|  
   
-|DataRowVersion|Target dataset|Source dataset|  
-|--------------------|--------------------|--------------------|  
-|Original|James C. Wilson|James C. Wilson|  
-|Current|Jim Wilson|James C. Wilson|  
+ `preserveChanges = true targetDataset.Merge(sourceDataset, true)`를 사용하여 <xref:System.Data.DataSet.Merge%2A> 메서드를 호출하면 다음과 같은 결과가 발생합니다.  
+  
+|DataRowVersion|대상 데이터 집합|소스 데이터 집합|  
+|--------------------|---------------|---------------|  
+|원래 설정|James C.  Wilson|James C.  Wilson|  
+|Current|Jim Wilson|James C.  Wilson|  
   
 > [!CAUTION]
->  In the `preserveChanges = true` scenario, if the <xref:System.Data.DataSet.RejectChanges%2A> method is called on a record in the target dataset, then it reverts to the original data from the *source* dataset. This means that if you try to update the original data source with the target dataset, it might not be able to find the original row to update. You can prevent a concurrency violation by filling another dataset with the updated records from the data source and then performing a merge to prevent a concurrency violation. (A concurrency violation occurs when another user modifies a record in the data source after the dataset has been filled.)  
+>  `preserveChanges = true` 시나리오의 경우 대상 데이터 집합의 레코드에서 <xref:System.Data.DataSet.RejectChanges%2A> 메서드가 호출되면 해당 레코드는 *소스* 데이터 집합의 원래 데이터로 되돌려집니다.  이는 대상 데이터 집합으로 원래 데이터 소스를 업데이트하려 할 때 업데이트할 원래 행을 찾을 수 없다는 의미입니다.  그러나 데이터 소스의 업데이트된 레코드를 사용하여 다른 데이터 집합을 채운 다음 병합을 수행하면 동시성 위반을 방지할 수 있습니다. 동시성 위반은 데이터 집합이 채워진 후 다른 사용자가 데이터 소스의 레코드를 수정하면 발생합니다.  
   
-## <a name="update-constraints"></a>Update constraints  
- To make changes to an existing data row,  add or update data in the individual columns. If the dataset contains constraints (such as foreign keys or non-nullable constraints), it's possible that the record can temporarily be in an error state as you update it. That is, it can be in an error state after you finish updating one column but before you get to the next one.  
+## 제약 조건 업데이트  
+ 기존 데이터 행을 변경하려면 개별 열에 데이터를 추가하거나 업데이트합니다.  데이터 집합에 외래 키나 nullable이 아닌 제약 조건과 같은 제약 조건이 들어 있으면 레코드를 업데이트할 때, 즉 한 열을 업데이트한 후 다음 열을 가져오기 전에 레코드가 일시적으로 오류 상태에 있을 수 있습니다.  
   
- To prevent premature constraint violations you can temporarily suspend update constraints. This serves two purposes:  
+ 성급한 제약 조건 위반이 발생하는 것을 막으려면 업데이트 제약 조건을 일시적으로 중단할 수 있습니다.  이러한 작업의 목적은 두 가지입니다.  
   
--   It prevents an error from being thrown after  you've finished updating one column but haven't started updating another.  
+-   다른 열을 가져오기 전에 한 열을 업데이트할 때 오류가 발생하는 것을 throw합니다.  
   
--   It prevents certain update events from being raised (events that are often used for validation).  
-   
+-   주로 유효성 검사에 사용되는 특정 업데이트 이벤트의 발생을 일시 중단시킵니다.  
+  
+ 업데이트를 완료한 다음 제약 조건 검사를 다시 사용할 수 있습니다. 이렇게 하면 업데이트 이벤트도 다시 사용할 수 있으므로 이벤트를 발생시킬 수 있습니다.  
+  
 > [!NOTE]
->  In Windows Forms, the data binding architecture that's built into the datagrid suspends constraint checking until focus moves out of a row, and you do not have to explicitly call the <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, or <xref:System.Data.DataRow.CancelEdit%2A> methods.  
+>  Windows Forms에서는 데이터 표에 내장된 데이터 바인딩 아키텍처에서 포커스가 행 밖으로 이동할 때까지 제약 조건 검사를 일시 중단시키므로 <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> 또는 <xref:System.Data.DataRow.CancelEdit%2A> 메서드를 명시적으로 호출하지 않아도 됩니다.  
   
- Constraints are automatically disabled when the <xref:System.Data.DataSet.Merge%2A> method is invoked on a dataset. When the merge is complete, if there are any constraints on the dataset that cannot be enabled,  a <xref:System.Data.ConstraintException> is thrown. In this situation, the <xref:System.Data.DataSet.EnforceConstraints%2A> property is set to `false,` and all constraint violations must be resolved before resetting the <xref:System.Data.DataSet.EnforceConstraints%2A> property to `true`.  
+ <xref:System.Data.DataSet.Merge%2A> 메서드가 데이터 집합에서 호출되면 제약 조건은 자동으로 사용할 수 없게 됩니다.  병합이 완료될 때 데이터 집합에 사용할 수 없는 제약 조건이 있으면 <xref:System.Data.ConstraintException>이 throw됩니다.  이 경우 <xref:System.Data.DataSet.EnforceConstraints%2A> 속성은 `false`로 설정되며 <xref:System.Data.DataSet.EnforceConstraints%2A> 속성을 `true`로 다시 설정하기 전에 모든 제약 조건 위반을 해결해야 합니다.  
   
- After you complete an update, you can re-enable constraint checking, which also re-enables update events and raises them.  
+ 업데이트를 완료한 다음 제약 조건 검사를 다시 사용할 수 있습니다. 이렇게 하면 업데이트 이벤트도 다시 사용할 수 있으므로 이벤트를 발생시킬 수 있습니다.  
   
- For more information about suspending events, see [Turn off constraints while filling a dataset](../data-tools/turn-off-constraints-while-filling-a-dataset.md).  
+ 이벤트 일시 중단에 대한 자세한 내용은 [방법: 데이터 집합을 채우는 동안 제약 조건 해제](../data-tools/turn-off-constraints-while-filling-a-dataset.md)를 참조하십시오.  
   
-## <a name="dataset-update-errors"></a>Dataset update errors  
- When you update a record in a dataset, there is the possibility of an error. For example, you might inadvertently write data of the wrong type to a column, or data that's too long, or data that has some other integrity problem. Or you might have application-specific validation checks that can raise custom errors during any stage of an update event. For more information, see [Validate data in datasets](../data-tools/validate-data-in-datasets.md).  
+## 데이터 집합 업데이트 오류  
+ 데이터 집합의 레코드를 업데이트할 때 오류가 발생할 가능성이 있습니다.  예를 들어, 잘못된 데이터 형식의 열이나 너무 긴 열 또는 기타 무결성 문제가 있는 열에 데이터를 실수로 기록하는 경우입니다.  또한 업데이트 이벤트 단계에서 사용자 지정 오류를 발생시킬 수 있는 응용 프로그램 관련 유효성 검사를 수행하는 경우도 있습니다.  자세한 내용은 [데이터 집합의 데이터 유효성 검사](../data-tools/validate-data-in-datasets.md)을 참조하십시오.  
   
-## <a name="maintaining-information-about-changes"></a>Maintaining information about changes  
- Information about the changes in a dataset is maintained in two ways: by flagging rows that indicate that they have changed (<xref:System.Data.DataRow.RowState%2A>), and by keeping multiple copies of a record (<xref:System.Data.DataRowVersion>). By using this information, processes can determine what has changed in the dataset and can send appropriate updates to the data source.  
+## 변경 내용에 대한 정보 유지  
+ 데이터 집합의 변경 내용에 대한 정보는 변경 여부를 표시하는 행에 플래그를 설정하거나\(<xref:System.Data.DataRow.RowState%2A>\) 레코드의 여러 복사본을 유지하는\(<xref:System.Data.DataRowVersion>\), 두 가지 방식으로 유지됩니다.  프로세스에서는 이러한 정보를 사용하여 데이터 집합의 변경 내용을 찾아 데이터 소스에 적절한 업데이트를 보냅니다.  
   
-### <a name="rowstate-property"></a>RowState property  
- The <xref:System.Data.DataRow.RowState%2A> property of a <xref:System.Data.DataRow> object is a value that provides information about the status of a particular row of data.  
+### RowState 속성  
+ <xref:System.Data.DataRow> 개체의 <xref:System.Data.DataRow.RowState%2A> 속성은 데이터의 특정 행 상태에 대한 정보를 제공하는 값입니다.  
   
- The following table details the possible values of the <xref:System.Data.DataRowState> enumeration:  
+ 다음 표에서는 <xref:System.Data.DataRowState> 열거형의 가능한 값을 설명합니다.  
   
-|DataRowState Value|Description|  
-|------------------------|-----------------|  
-|<xref:System.Data.DataRowState.Added>|The row has been added as an item to a <xref:System.Data.DataRowCollection>. (A row in this state does not have a corresponding original version since it did not exist when the last <xref:System.Data.DataRow.AcceptChanges%2A> method was called).|  
-|<xref:System.Data.DataRowState.Deleted>|The row was deleted using the <xref:System.Data.DataRow.Delete%2A> of a <xref:System.Data.DataRow> object.|  
-|<xref:System.Data.DataRowState.Detached>|The row has been created but is not part of any <xref:System.Data.DataRowCollection>. A <xref:System.Data.DataRow> object is in this state immediately after it has been created, before it has been added to a collection, and after it has been removed from a collection.|  
-|<xref:System.Data.DataRowState.Modified>|A column value in the row has changed in some way.|  
-|<xref:System.Data.DataRowState.Unchanged>|The row has not changed since <xref:System.Data.DataRow.AcceptChanges%2A> was last called.|  
+|DataRowState 값|설명|  
+|--------------------|--------|  
+|<xref:System.Data.DataRowState>|<xref:System.Data.DataRowCollection>에 열이 항목으로 추가되었습니다. <xref:System.Data.DataRow.AcceptChanges%2A> 메서드가 마지막으로 호출되었을 때 이 상태의 행은 존재하지 않았으므로 이에 해당하는 원래 버전은 없습니다.|  
+|<xref:System.Data.DataRowState>|<xref:System.Data.DataRow> 개체의 <xref:System.Data.DataRow.Delete%2A>를 사용하여 행이 삭제되었습니다.|  
+|<xref:System.Data.DataRowState>|행이 만들어졌지만 <xref:System.Data.DataRowCollection>의 일부는 아닙니다.  <xref:System.Data.DataRow> 개체는 만들어진 다음 그리고 컬렉션에 추가되기 바로 전에 또는 컬렉션에서 제거되었을 때 이 상태가 됩니다.|  
+|<xref:System.Data.DataRowState>|행의 열 값이 어떤 방식으로든 변경되었습니다.|  
+|<xref:System.Data.DataRowState>|<xref:System.Data.DataRow.AcceptChanges%2A>가 마지막으로 호출된 이후에 행이 변경되지 않았습니다.|  
   
-### <a name="datarowversion-enumeration"></a>DataRowVersion enumeration  
-Datasets maintain multiple versions of records. The <xref:System.Data.DataRowVersion> fields can be used when retrieving the value found in a <xref:System.Data.DataRow> using the <xref:System.Data.DataRow.Item%2A> property or the <xref:System.Data.DataRow.GetChildRows%2A> method of the <xref:System.Data.DataRow> object.  
+### DataRowVersion 열거형  
+ 데이터 집합은 여러 버전의 레코드를 유지합니다.  <xref:System.Data.DataRow> 개체의 <xref:System.Data.DataRowVersion> 열거형은 <xref:System.Data.DataRow> 개체의 특정 버전을 반환하는 데 사용할 수 있는 값입니다.  
   
-The following table details the possible values of the <xref:System.Data.DataRowVersion> enumeration:  
+ 다음 표에서는 <xref:System.Data.DataRowVersion> 열거형의 가능한 값을 설명합니다.  
   
-|DataRowVersion Value|Description|  
-|--------------------------|-----------------|  
-|<xref:System.Data.DataRowVersion.Current>|The current version of a record contains all modifications that have been performed on the record since the last time <xref:System.Data.DataRow.AcceptChanges%2A> was called. If the row has been deleted, there is no current version.|  
-|<xref:System.Data.DataRowVersion.Default>|The default value of a record, as defined by the dataset schema or data source.|  
-|<xref:System.Data.DataRowVersion.Original>|The original version of a record is a copy of the record as it was the last time changes were committed in the dataset. In practical terms, this is typically the version of a record as read from a data source.|  
-|<xref:System.Data.DataRowVersion.Proposed>|The proposed version of a record that is available temporarily while you are in the middle of an update — that is, between the time you called the <xref:System.Data.DataRow.BeginEdit%2A> method and the <xref:System.Data.DataRow.EndEdit%2A> method. You typically access the proposed version of a record in a handler for an event such as <xref:System.Data.DataTable.RowChanging>. Invoking the <xref:System.Data.DataRow.CancelEdit%2A> method reverses the changes and deletes the proposed version of the data row.|  
+|DataRowVersion 값|설명|  
+|----------------------|--------|  
+|<xref:System.Data.DataRowVersion>|레코드의 현재 버전에는 마지막으로 <xref:System.Data.DataRow.AcceptChanges%2A>가 호출된 이후 레코드에 대해 수행된 모든 수정 내용이 들어 있습니다.  해당 행이 삭제되었으면 현재 버전이 없습니다.|  
+|<xref:System.Data.DataRowVersion>|데이터 집합 스키마나 데이터 소스에서 정의한 레코드의 기본값입니다.|  
+|<xref:System.Data.DataRowVersion>|레코드의 원래 버전은 데이터 집합에서 변경 내용이 마지막으로 커밋되었을 때의 레코드 복사본입니다.  실질적으로는 데이터 소스에서 가져온 레코드의 버전을 가리킵니다.|  
+|<xref:System.Data.DataRowVersion>|업데이트 도중, 즉 <xref:System.Data.DataRow.BeginEdit%2A> 메서드를 호출한 시간과 <xref:System.Data.DataRow.EndEdit%2A> 메서드를 호출한 시간 사이에 일시적으로 사용할 수 있는 레코드의 제안된 버전입니다.  일반적으로 <xref:System.Data.DataTable.RowChanging>과 같은 이벤트의 처리기에서 레코드의 제안된 버전에 액세스합니다.  <xref:System.Data.DataRow.CancelEdit%2A> 메서드를 호출하면 변경 내용이 취소되고 데이터 행의 제안된 버전이 삭제됩니다.|  
   
- The original and current versions are useful when update information is transmitted to a data source. Typically, when an update is sent to the data source, the new information for the database is in the current version of a record. Information from the original version is used to locate the record to update.  
+ 업데이트 정보를 데이터 소스에 전송할 때는 원래 버전과 현재 버전을 사용하는 것이 유용합니다.  일반적으로 업데이트를 데이터 소스에 전송할 경우 데이터베이스의 새로운 정보는 레코드의 현재 버전에 있으며  원래 버전의 정보를 사용하여 업데이트할 레코드를 찾습니다.  예를 들어, 레코드의 기본 키가 변경된 경우 변경 내용을 업데이트하려면 데이터 소스에서 적절한 레코드를 찾을 수 있는 방법이 있어야 합니다.  원래 버전이 없으면 레코드가 데이터 소스에 추가되어, 원하지 않는 여분의 레코드와 부정확하고 만료된 레코드가 생성됩니다.  두 개의 버전은 동시성 제어에도 사용됩니다. 데이터 소스의 레코드와 원래 버전을 비교하여 레코드가 데이터 집합에 로드된 이후에 변경되었는지 여부를 확인할 수 있습니다.  
   
- For example, in a case where the primary key of a record is changed, you need a way to locate the correct record in the data source in order to update the changes. If no original version existed, then the record would most likely be appended to the data source, resulting not only in an extra unwanted record, but in one record that is inaccurate and out of date. The two versions are also used in concurrency control. You can compare the original version against a record in the data source to determine if the record has changed since it was loaded into the dataset.  
+ 데이터 집합의 변경 내용을 실제로 커밋하기 전에 유효성 검사를 수행할 필요가 있을 때는 제안된 버전이 유용합니다.  
   
- The proposed version is useful when you need to perform validation before actually committing the changes to the dataset.  
+ 레코드가 변경되었더라도 해당 행의 원래 버전이나 현재 버전이 항상 있는 것은 아닙니다.  새 행을 테이블에 삽입하면 원래 버전은 없고 현재 버전만 있게 됩니다.  마찬가지로 테이블의 `Delete` 메서드를 호출하여 한 행을 삭제하면 현재 버전은 없고 원래 버전만 있게 됩니다.  
   
- Even if records have changed, there are not always original or current versions of that row. When you insert a new row into the table, there is no original version, only a current version. Similarly, if you delete a row by calling the table's `Delete` method, there is an original version, but no current version.  
+ 데이터 행의 <xref:System.Data.DataRow.HasVersion%2A> 메서드를 쿼리하여 레코드의 특정 버전이 존재하는지 여부를 확인할 수 있습니다.  열의 값을 요청할 때 <xref:System.Data.DataRowVersion> 열거형 값을 선택적 인수로 전달하여 레코드의 버전 중 하나에 액세스할 수 있습니다.  
   
- You can test to see if a specific version of a record exists by querying a data row's <xref:System.Data.DataRow.HasVersion%2A> method. You can access either version of a record by passing a <xref:System.Data.DataRowVersion> enumeration value as an optional argument when you request the value of a column.  
+## 변경된 레코드 가져오기  
+ 일반적으로 데이터 집합의 모든 레코드를 업데이트하지는 않습니다.  예를 들어, 많은 레코드를 표시하는 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용할 수는 있지만  사용자가 원하는 작업은 몇 개의 레코드만 업데이트하거나 레코드 하나를 삭제하거나 새 레코드 하나를 삽입하는 것입니다.  데이터 집합과 데이터 테이블은 수정된 행만 반환하는 `GetChanges` 메서드를 제공합니다.  
   
-## <a name="getting-changed-records"></a>Getting changed records  
- It's a common practice not to update every record in a dataset. For example, a user might be working with a Windows Forms <xref:System.Windows.Forms.DataGridView> control that displays many records. However, the user might update only a few records, delete one, and insert a new one. Datasets and data tables provide a method (`GetChanges`) for returning only the rows that have been modified.  
+ 데이터 테이블\(<xref:System.Data.DataTable.GetChanges%2A>\)이나 데이터 집합\(<xref:System.Data.DataSet.GetChanges%2A>\) 자체의 `GetChanges` 메서드를 사용하여 변경된 레코드의 하위 집합을 만들 수 있습니다.  데이터 테이블의 메서드를 호출하면 변경된 레코드만 있는 테이블의 복사본을 반환합니다.  마찬가지로 데이터 집합의 메서드를 호출하면 변경된 레코드만 들어 있는 새 데이터 집합을 가져오게 됩니다.  `GetChanges` 메서드 자체는 변경된 레코드를 모두 반환합니다.  반면, 원하는 <xref:System.Data.DataRowState>를 매개 변수로 하여 `GetChanges` 메서드에 전달하면 새로 추가된 레코드, 삭제 표시된 레코드, 분리된 레코드, 수정된 레코드 등 변경된 레코드에서 원하는 하위 집합을 지정할 수 있습니다.  
   
- You can create subsets of changed records using the `GetChanges` method of either the data table (<xref:System.Data.DataTable.GetChanges%2A>) or of the dataset (<xref:System.Data.DataSet.GetChanges%2A>) itself. If you call the method for the data table, it returns a copy of the table with only the changed records. Similarly, if you call the method on the dataset, you get a new dataset with only changed records in it.  
+ 변경된 레코드의 하위 집합을 가져오는 것은 처리를 위해 레코드를 다른 구성 요소로 보낼 때 특히 유용합니다.  전체 데이터 집합을 보내는 대신 구성 요소에서 필요로 하는 레코드만 가져옴으로써 다른 구성 요소와의 통신 오버헤드를 줄일 수 있습니다.  자세한 내용은 [방법: 변경된 행 검색](../Topic/How%20to:%20Retrieve%20Changed%20Rows.md)을 참조하십시오.  
   
- `GetChanges` by itself  returns all changed records. In contrast, by passing the desired <xref:System.Data.DataRowState> as a parameter to the `GetChanges` method, you can specify what subset of changed records you want: newly added records, records that are marked for deletion, detached records, or modified records.  
+## 데이터 집합의 변경 내용 커밋  
+ 데이터 집합이 변경되면 변경된 행의 <xref:System.Data.DataRow.RowState%2A> 속성이 설정됩니다.  레코드의 원래 버전과 현재 버전이 만들어져 유지되므로 <xref:System.Data.DataRowView.RowVersion%2A> 속성을 통해 사용할 수 있습니다.  변경 내용을 나타내는 이러한 속성에 저장되어 있는 메타데이터는 적절한 업데이트를 데이터 소스로 보낼 때 필요합니다.  
   
- Getting a subset of changed records is useful when you want to send records to another component for processing. Instead of sending the entire dataset, you can reduce the overhead of communicating with the other component by getting only the records that the component needs.   
+ 변경 내용에서 데이터 소스의 현재 상태를 반영하면 이러한 정보를 더 이상 유지하지 않아도 됩니다.  일반적으로 데이터 집합과 데이터 소스가 동기화되는 경우는 두 가지가 있습니다.  
   
-## <a name="committing-changes-in-the-dataset"></a>Committing changes in the dataset  
- As changes are made in the dataset, the <xref:System.Data.DataRow.RowState%2A> property of changed rows is set. The original and current versions of records are established, maintained, and made available to you by the <xref:System.Data.DataRowView.RowVersion%2A> property. The metadata that's stored in the properties of these changed rows is necessary for sending the correct updates to the data source.  
+-   소스에서 데이터를 읽어 온 경우와 같이, 데이터 집합으로 정보를 로드한 직후  
   
- If the changes reflect the current state of the data source, you no longer need to maintain this information. Typically, there are two times when the dataset and its source are in sync:  
+-   데이터 집합의 변경 내용을 데이터 소스로 보낸 다음. 하지만 변경 내용을 데이터베이스로 보낼 때 필요한 변경 정보를 잃을 수도 있기 때문에 보내기 전 상태는 동기화되지 않습니다.  
   
--   Immediately after you have loaded information into the dataset, such as when you read data from the source.  
+ <xref:System.Data.DataSet.AcceptChanges%2A> 메서드를 호출하여 데이터 집합에 대해 보류 중인 변경 내용을 커밋할 수 있습니다.  일반적으로 사용자 응용 프로그램에서 다음과 같은 경우에 <xref:System.Data.DataSet.AcceptChanges%2A>가 호출됩니다.  
   
--   After sending changes from the dataset to the data source (but not before, because you would lose the change information that's required to send changes to the database).  
-  
-You can commit the pending changes to the dataset by calling the <xref:System.Data.DataSet.AcceptChanges%2A> method. Typically, <xref:System.Data.DataSet.AcceptChanges%2A> is called at the following times:  
-  
--   After you load the dataset. If you load a dataset by calling a TableAdapter's `Fill` method, then the adapter automatically commits changes for you. However, if you load a dataset by merging another dataset into it, then you have to commit the changes manually.  
+-   데이터 집합을 로드한 다음.  TableAdapter의 `Fill` 메서드를 호출하여 데이터 집합을 로드한 경우 어댑터는 자동으로 변경 내용을 커밋합니다.  그러나 다른 데이터 집합을 병합하여 데이터 집합을 로드한 경우 변경 내용을 수동으로 커밋해야 합니다.  
   
     > [!NOTE]
-    >  You can prevent the adapter from automatically committing the changes when you call the `Fill` method by setting the `AcceptChangesDuringFill` property of the adapter to `false`. If it's set to `false`, then the <xref:System.Data.DataRow.RowState%2A> of each row that's inserted during the fill is set to <xref:System.Data.DataRowState.Added>.  
+    >  어댑터의 `AcceptChangesDuringFill` 속성을 `false`로 설정하면 `Fill` 메서드를 호출할 때 어댑터에서 자동으로 변경 내용을 커밋하는 것을 막을 수 있습니다.  `false`로 설정하면 채우기 작업 중에 삽입된 각 행의 <xref:System.Data.DataRow.RowState%2A>는 <xref:System.Data.DataRowState>로 설정됩니다.  
   
--   After you send dataset changes to another process, such as an XML Web service.  
+-   XML Web services와 같은 다른 프로세스로 데이터 집합 변경 내용을 보냅니다.  
   
     > [!CAUTION]
-    >  Committing the change this way erases any change information. Do not commit changes until after you  finish performing operations that require your application to know what changes have been made in the dataset.  
+    >  이런 방식으로 변경 내용을 커밋하면 변경 정보가 지워집니다.  응용 프로그램에서 데이터 집합의 변경 내용을 알아야 하는 작업을 수행할 때까지는 변경 내용을 커밋하지 마십시오.  
   
-This method accomplishes the following:  
+ 이 메서드는 다음과 같은 작업을 수행합니다.  
   
--   Writes the <xref:System.Data.DataRowVersion.Current> version of a record into its <xref:System.Data.DataRowVersion.Original> version and overwrites the original version.  
+-   원래 버전을 덮어쓰면서 레코드의 <xref:System.Data.DataRowVersion> 버전을 해당 레코드의 <xref:System.Data.DataRowVersion> 버전에 기록합니다.  
   
--   Removes any row where the <xref:System.Data.DataRow.RowState%2A> property is set to <xref:System.Data.DataRowState.Deleted>.  
+-   해당 <xref:System.Data.DataRow.RowState%2A> 속성이 <xref:System.Data.DataRowState>로 설정되어 있는 행을 제거합니다.  
   
--   Sets the <xref:System.Data.DataRow.RowState%2A> property of a record to <xref:System.Data.DataRowState.Unchanged>.  
+-   레코드의 <xref:System.Data.DataRow.RowState%2A> 속성을 <xref:System.Data.DataRowState>로 설정합니다.  
   
-The <xref:System.Data.DataSet.AcceptChanges%2A> method is available at three levels. You can call it on a <xref:System.Data.DataRow> object to commits changes for just that row. You can also call it on a <xref:System.Data.DataTable> object to commit all rows in a table. Finally, you can call it on the <xref:System.Data.DataSet> object to commit all pending changes in all records of all tables of the dataset.  
+ <xref:System.Data.DataSet.AcceptChanges%2A> 메서드는 세 가지 수준에서 사용할 수 있으며,  해당 행에 대한 변경 내용만 커밋하는 <xref:System.Data.DataRow> 개체에서 호출할 수 있습니다.  이 메서드는 또한 테이블의 모든 행을 커밋하는 <xref:System.Data.DataTable> 개체에서 호출하거나 데이터 집합의 모든 테이블에 있는 모든 레코드의 보류된 변경 내용을 모두 커밋하는 <xref:System.Data.DataSet> 개체에서 호출할 수 있습니다.  
   
-The following table describes which changes are committed based on what object the method is called on.  
+ 다음 표에서는 메서드가 호출된 개체에 따라 커밋되는 변경 내용을 설명합니다.  
   
-|Method|Result|  
-|------------|------------|  
-|<xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=fullName>|Changes are committed only on the specific row.|  
-|<xref:System.Data.DataTable.AcceptChanges%2A?displayProperty=fullName>|Changes are committed on all rows in the specific table.|  
-|<xref:System.Data.DataSet.AcceptChanges%2A?displayProperty=fullName>|Changes are committed on all rows in all tables of the dataset.|  
+|방법|결과|  
+|--------|--------|  
+|<xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=fullName>|특정 행에 대해서만 변경 내용이 커밋됩니다.|  
+|<xref:System.Data.DataTable.AcceptChanges%2A?displayProperty=fullName>|특정 테이블의 모든 행에 대해서 변경 내용이 커밋됩니다.|  
+|<xref:System.Data.DataSet.AcceptChanges%2A?displayProperty=fullName>|데이터 집합의 모든 테이블의 모든 행에 대한 변경 내용이 커밋됩니다.|  
   
 > [!NOTE]
->  If you load a dataset by calling a TableAdapter's `Fill` method, you don't have to explicitly accept changes. By default, the `Fill` method calls the `AcceptChanges` method after it finishes populating the data table.  
+>  기본적으로 `Fill` 메서드는 데이터 테이블 채우기를 마치면 `AcceptChanges` 메서드를 호출하므로 TableAdapter의 `Fill` 메서드를 호출하여 데이터 집합을 로드할 때는 변경 내용을 명시적으로 적용할 필요가 없습니다.  
   
- A related method, <xref:System.Data.DataSet.RejectChanges%2A>, undoes the effect of changes by copying the <xref:System.Data.DataRowVersion.Original> version back into the <xref:System.Data.DataRowVersion.Current> version of records. It also sets the <xref:System.Data.DataRow.RowState%2A> of each record back to <xref:System.Data.DataRowState.Unchanged>.  
+ 관련 메서드인 `RejectChanges`는 <xref:System.Data.DataRowVersion> 버전을 다시 레코드의 <xref:System.Data.DataRowVersion> 버전으로 복사하고 각 레코드의 <xref:System.Data.DataRow.RowState%2A>를 다시 <xref:System.Data.DataRowState>로 설정합니다.  
   
-## <a name="data-validation"></a>Data validation  
- In order to verify that the data in your application meets the requirements of the processes that it is passed to, you often have to add validation. This might involve checking that a user's entry in a form is correct, validating data that's sent to your application by another application, or even checking that information that's calculated within your component falls within the constraints of your data source and application requirements.  
+## 데이터 유효성 검사  
+ 응용 프로그램의 데이터가 사용자에게 전달된 프로세스의 요구 사항에 부합하는지 확인하려면 유효성 검사를 추가해야 합니다.  여기에서는 사용자가 폼에 입력한 데이터가 올바른지 검사하거나, 다른 응용 프로그램에서 사용자 응용 프로그램에 보낸 데이터를 검사하거나, 사용자 구성 요소에서 계산한 정보가 데이터 소스의 제약 조건과 응용 프로그램 요구 사항에 맞는지를 검사합니다.  
   
- You can validate data in several ways:  
+ 다음과 같은 몇 가지 방식으로 데이터의 유효성을 검사할 수 있습니다.  
   
--   In the business layer, by adding code to your application to validate data. The dataset is one place you can do this. The dataset provides some of the advantages of back-end validation — such as the ability to validate changes as column and row values are changing. For more information, see [Validate data in datasets](../data-tools/validate-data-in-datasets.md).  
+-   비즈니스 계층에서 데이터 유효성을 검사하는 코드를 응용 프로그램에 추가합니다.  데이터 집합은 이러한 작업을 수행할 수 있는 장소 중 하나로,  열과 행 값이 변경될 때 변경 내용의 유효성을 검사할 수 있는 기능 같은 백 엔드 유효성 검사의 이점을 일부 제공합니다.  자세한 내용은 [데이터 집합의 데이터 유효성 검사](../data-tools/validate-data-in-datasets.md)을 참조하십시오.  
   
--   In the presentation layer, by adding validation to forms. For more information, see [User Input Validation in Windows Forms](/dotnet/framework/winforms/user-input-validation-in-windows-forms).  
+-   프레젠테이션 계층에서 폼에 유효성 검사를 추가합니다.  자세한 내용은 [Windows Forms에서 사용자 입력 유효성 검사](../Topic/User%20Input%20Validation%20in%20Windows%20Forms.md)을 참조하십시오.  
   
--   In the data back end, by sending data to the data source — for example, the database — and allowing it to accept or reject the data. If you are working with a database that has sophisticated facilities for validating data and providing error information, this can be a practical approach because you can validate the data no matter where it comes from. However, this approach might not accommodate application-specific validation requirements. Additionally, having the data source validate data can result in numerous round trips to the data source, depending on how your application facilitates the resolution of validation errors raised by the back end.  
+-   데이터 백 엔드에서 데이터베이스와 같은 데이터 소스에 데이터를 보내고 데이터 소스에서 데이터를 허용하거나 거부하도록 합니다.  데이터 유효성 검사를 하여 오류 정보를 제공하는 복잡한 기능을 갖는 데이터베이스를 사용하는 경우 데이터의 수집 위치에 상관없이 데이터 유효성 검사를 할 수 있으므로 실용적인 방법이 될 수 있습니다.  하지만 데이터베이스에서 응용 프로그램 관련 요구 사항을 수용하지 않을 수도 있습니다.  그리고 데이터 소스에서 데이터의 유효성 검사를 하게 하면 백 엔드에서 발생하는 유효성 검사 오류를 응용 프로그램에서 해결하는 방법에 따라 데이터 소스에 대한 라운드트립이 여러 번 발생할 수 있습니다.  
   
     > [!IMPORTANT]
-    >  When using data commands with a <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> property that's set to <xref:System.Data.CommandType.Text>, carefully check information that is sent from a client before passing it to your database. Malicious users might try to send (inject) modified or additional SQL statements in an effort to gain unauthorized access or damage the database. Before you transfer user input to a database, always verify that the information is valid. It's a best practice to always use parameterized queries or stored procedures when possible. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+    >  <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 속성을 <xref:System.Data.CommandType>로 설정한 상태에서 데이터 명령을 사용하는 경우, 클라이언트에서 전송된 정보를 데이터베이스에 전달하기 전에 이 정보를 자세히 검사해야 합니다.  악의적인 사용자가 데이터베이스에 무단으로 액세스하거나 데이터베이스를 훼손하기 위해 수정된 SQL 문이나 추가적인 SQL 문을 전송\(주입\)할 수도 있습니다.  사용자 입력을 데이터베이스에 전송하기 전에 항상 정보의 유효성을 검사해야 합니다. 가능하면 항상 매개 변수가 있는 쿼리나 저장 프로시저를 사용하는 것이 좋습니다.  자세한 내용은 [Script Exploits Overview](../Topic/Script%20Exploits%20Overview.md)을 참조하십시오.  
   
-## <a name="transmitting-updates-to-the-data-source"></a>Transmitting updates to the data source  
-After changes have been made in a dataset, you can transmit the changes to a data source. Most commonly, you do this by calling the `Update` method of a TableAdapter (or data adapter). The method loops through each record in a data table, determines what type of update is required (update, insert, or delete), if any, and then runs the appropriate command.  
-
- As an illustration of how updates are made, suppose your application uses a dataset that contains a single data table. The application fetches two rows from the database. After the retrieval, the in-memory data table looks like this:  
+ 데이터 집합을 변경한 다음 변경 내용을 데이터 소스에 전송할 수 있습니다.  가장 일반적인 방법은 TableAdapter 또는 데이터 어댑터의 `Update` 메서드를 호출하는 것입니다.  메서드는 데이터 테이블의 각 레코드에서 반복되어 업데이트, 삽입, 삭제 중 필요한 업데이트 유형을 결정한 다음 적절한 명령을 실행합니다.  
+  
+## 데이터 소스로 업데이트를 전송하는 방법  
+ 업데이트가 이루어지는 모습을 그려 보기 위해, 응용 프로그램에서 하나의 데이터 테이블이 들어 있는 데이터 집합을 사용하고 있다고 가정합시다.  응용 프로그램에서는 데이터베이스에서 두 개의 행을 페치합니다.  검색이 수행된 후 메모리 내의 데이터 테이블 모양은 다음과 같습니다.  
   
 ```  
 (RowState)     CustomerID   Name             Status  
@@ -245,7 +221,7 @@ After changes have been made in a dataset, you can transmit the changes to a dat
 (Unchanged)    c400         Nancy Buchanan    Pending  
 ```  
   
- Your application changes Nancy Buchanan's status to "Preferred." As a result of this change, the value of the <xref:System.Data.DataRow.RowState%2A> property for that row changes from <xref:System.Data.DataRowState.Unchanged> to <xref:System.Data.DataRowState.Modified>. The value of the <xref:System.Data.DataRow.RowState%2A> property for the first row remains <xref:System.Data.DataRowState.Unchanged>. The data table now looks like this:  
+ 응용 프로그램에서 Nancy Buchanan의 상태를 "Preferred"로 바꿉니다. 이러한 변경이 이루어지면 해당 행의 <xref:System.Data.DataRow.RowState%2A> 속성이 <xref:System.Data.DataRowState>에서 <xref:System.Data.DataRowState>로 변경됩니다.  첫 행의 <xref:System.Data.DataRow.RowState%2A> 속성 값은 <xref:System.Data.DataRowState>로 남아 있습니다.  이제 데이터 테이블의 모양은 다음과 같습니다.  
   
 ```  
 (RowState)     CustomerID   Name             Status  
@@ -253,34 +229,57 @@ After changes have been made in a dataset, you can transmit the changes to a dat
 (Modified)     c400         Nancy Buchanan    Preferred  
 ```  
   
- Your application now calls the `Update` method to transmit the dataset to the database. The method inspects each row in turn. For the first row, the method transmits no SQL statement to the database because that row has not changed since it was originally fetched from the database.  
+ 이제 응용 프로그램에서 `Update` 메서드를 호출하여 데이터 집합을 데이터베이스로 전송합니다.  메서드에서는 각 행을 차례로 검사합니다.  첫 행의 경우 데이터베이스에서 처음 페치된 이후에 변경되지 않았기 때문에 메서드에서 데이터베이스로 SQL 문을 보내지 않습니다.  
   
- For the second row, however, the `Update` method automatically invokes the correct data command and transmits it to the database. The specific syntax of the SQL statement depends on the dialect of SQL that's supported by the underlying data store. But the following general traits of the transmitted SQL statement are noteworthy:  
+ 하지만 두 번째 행에 대해서는 `Update` 메서드가 적절한 데이터 명령을 자동으로 호출하여 데이터베이스로 전송합니다.  SQL 문의 특정 구문은 내부 데이터 저장소에서 지원하는 SQL 언어에 따라 달라집니다.  전송된 SQL 문과 관련하여 주목해야 하는 일반적인 특성은 다음과 같습니다.  
   
--   The transmitted SQL statement is an UPDATE statement. The adapter knows to use an UPDATE statement because the value of the <xref:System.Data.DataRow.RowState%2A> property is <xref:System.Data.DataRowState.Modified>.  
+-   전송된 SQL 문은 UPDATE 문입니다.  <xref:System.Data.DataRow.RowState%2A> 속성 값이 <xref:System.Data.DataRowState>이므로 어댑터에서 UPDATE 문을 사용한다는 것을 알 수 있습니다.  
   
--   The transmitted SQL statement includes a WHERE clause indicating that the target of the UPDATE statement is the row where `CustomerID = 'c400'`. This part of the SELECT statement distinguishes the target row from all others because the `CustomerID` is the primary key of the target table. The information for the WHERE clause is derived from the original version of the record (`DataRowVersion.Original`), in case the values that are required to identify the row have  changed.  
+-   전송된 SQL 문에는 UPDATE 문의 대상이 `CustomerID = 'c400'`인 행임을 표시하는 WHERE 절을 포함합니다.  `CustomerID`가 대상 테이블의 기본 키이므로 SELECT 문의 이러한 부분은 대상 행을 다른 행과 구분합니다.  WHERE 절의 정보는 레코드의 원래 버전\(`DataRowVersion.Original`\)에서 파생된 것으로 변경된 행을 식별하기 위해 필요한 값입니다.  
   
--   The transmitted SQL statement includes the SET clause, to set the new values of the modified columns.  
+-   전송된 SQL 문에는 수정된 열의 새 값을 설정하는 SET 절이 포함됩니다.  
   
     > [!NOTE]
-    >  If the TableAdapter's `UpdateCommand` property has been set to the name of a stored procedure, the adapter does not construct an SQL statement. Instead, it invokes the stored procedure with the appropriate parameters passed in.  
+    >  TableAdapter의 `UpdateCommand` 속성이 저장 프로시저의 이름으로 설정되어 있는 경우 어댑터에서는 SQL 문을 생성하지 못하고,  대신 적절한 매개 변수를 전달하여 저장 프로시저를 호출합니다.  
   
-## <a name="passing-parameters"></a>Passing parameters  
- You usually use parameters to pass the values for records that are going to be updated in the database.  When the TableAdapter's `Update` method runs an UPDATE statement, it needs to fill in the parameter values. It gets these values from the `Parameters` collection for the appropriate data command — in this case, the `UpdateCommand` object in the TableAdapter.  
+## 매개 변수 전달  
+ 데이터베이스에서 업데이트되어야 하는 레코드의 값은 대개 매개 변수를 사용하여 전달됩니다.  TableAdapter의 `Update` 메서드가 UPDATE 문을 실행하는 경우 매개 변수 값을 채워야 합니다.  데이터 어댑터는 적절한 데이터 명령의 `Parameters` 컬렉션에서 값을 가져오는데, 여기서는 TableAdapter의 `UpdateCommand` 개체가 데이터 명령입니다.  
   
- If you've used the Visual Studio tools to generate a data adapter, the `UpdateCommand` object  contains a collection of parameters that correspond to each parameter placeholder in the statement.  
+ Visual Studio 도구를 사용하여 데이터 어댑터를 생성하였다면 `UpdateCommand` 개체에 해당 문의 각 매개 변수 자리 표시자에 해당하는 매개 변수 컬렉션이 포함됩니다.  
   
- The <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A?displayProperty=fullName> property of each parameter points to a column in the data table. For example, the `SourceColumn` property for the `au_id` and `Original_au_id` parameters is set to whatever column in the data table contains the author id. When the adapter's `Update` method runs, it reads the author id column from the record that's being updated and fills the values into the statement.  
+ 각 매개 변수의 <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A?displayProperty=fullName> 속성은 데이터 테이블의 한 열을 가리킵니다.  예를 들어, `au_id` 및 `Original_au_id` 매개 변수의 `SourceColumn` 속성은 author id가 들어 있는 데이터 테이블의 열로 설정됩니다.  어댑터의 `Update` 메서드가 실행되면 업데이트 중인 레코드의 author id 열을 읽어 해당 문에 값을 채웁니다.  
   
- In an UPDATE statement, you need to specify both the new values (those that will be written to the record) as well as the old values (so that the record can be located in the database). There are therefore two parameters for each value: one for the SET clause and a different one for the WHERE clause. Both parameters read data from the record that's being updated, but they get different versions of the column value based on the parameter's [SqlParameter.SourceVersion Property](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlparameter.sourceversion.aspx). The parameter for the SET clause gets the current version, and the parameter for the WHERE clause gets the original version.  
+ UPDATE 문에서는 레코드에 기록될 새 값과 업데이트할 레코드를 데이터베이스에서 찾을 때 사용할 이전 값을 모두 지정해야 합니다.  따라서 각 값에는 두 개의 매개 변수가 있습니다. 한 매개 변수는 SET 절에서 사용되고 다른 매개 변수는 WHERE 절에서 사용됩니다.  두 매개 변수 모두 업데이트 중인 레코드에서 데이터를 가져오지만 매개 변수의 [SqlParameter.SourceVersion 속성](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlparameter.sourceversion.aspx)에 따라 다른 버전의 열 값을 가져옵니다.  SET 절의 매개 변수는 현재 버전을 가져오고 WHERE 절의 매개 변수는 원래 버전을 가져옵니다.  
   
 > [!NOTE]
->  You can also set values in the `Parameters` collection yourself in code, which you would typically do in an event handler for the data adapter's <xref:System.Data.DataTable.RowChanging> event.  
+>  코드에서 `Parameters` 컬렉션의 값을 직접 설정할 수도 있습니다. 이 작업은 일반적으로 데이터 어댑터의 <xref:System.Data.DataTable.RowChanging> 이벤트에 대한 이벤트 처리기에서 수행합니다.  
   
-## <a name="see-also"></a>See Also  
- [Create and Configure TableAdapters](create-and-configure-tableadapters.md)    
- [Update data by using a TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md)   
- [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Validating Data](validate-data-in-datasets.md)   
- [Saving Data](../data-tools/saving-data.md)
+## 관련 테이블 업데이트  
+ 데이터 집합에 여러 테이블이 있으면 각 데이터 어댑터의 `Update` 메서드를 별도로 호출하여 테이블을 개별적으로 업데이트해야 합니다.  테이블에 부모\-자식 관계가 있으면 특정 순서로 데이터베이스에 업데이트를 보내야 합니다.  일반적인 시나리오는 데이터 집합에 부모 레코드와 관련 자식 레코드를 모두 추가하는 것입니다. 하나의 새 고객 레코드에 한 개 이상의 관련 주문 레코드가 있는 경우가 이 경우에 해당됩니다.  데이터베이스 자체에서 관계 무결성 규칙을 적용하고 있는 경우, 부모 레코드를 만들지 않은 채 데이터베이스에 새로운 자식 레코드를 보내면 오류가 발생합니다.  
+  
+ 반대로, 데이터 집합에서 관련 레코드를 삭제하는 경우에는 역순으로, 자식 테이블에 먼저 업데이트를 보낸 다음에 부모 테이블에 업데이트를 보내야 합니다.  그렇지 않은 경우 참조 무결성 규칙에서 관련 자식 레코드가 남아 있을 때 부모 레코드를 삭제하는 것을 방지하므로 오류가 발생합니다.  
+  
+ 관련 테이블에 업데이트를 보내는 일반적인 규칙은 다음과 같은 순서를 따릅니다.  
+  
+1.  자식 테이블: 레코드 삭제  
+  
+2.  부모 테이블: 레코드 삽입, 업데이트 및 삭제  
+  
+3.  자식 테이블: 레코드 삽입 및 업데이트  
+  
+4.  자세한 내용은 [연습: 데이터베이스에 데이터 저장\(여러 테이블\)](../data-tools/save-data-to-a-database-multiple-tables.md)을 참조하십시오.  
+  
+## 동시성 제어  
+ 데이터 집합은 데이터 소스와 연결되어 있지 않기 때문에 데이터 소스의 레코드에 대해 잠금을 설정할 수 없습니다.  따라서 데이터베이스를 업데이트하려는 경우 응용 프로그램에서 동시성 제어를 유지하는 것이 중요하다면 데이터 집합의 레코드를 데이터베이스의 레코드와 조정해야 합니다.  예를 들어, 마지막으로 데이터 집합을 채운 이후에 데이터베이스의 레코드가 변경되었는지 확인해야 합니다.  이 경우 응용 프로그램에 적합한 논리를 실행하여 데이터베이스 레코드나 데이터 집합의 변경된 레코드를 처리할 방법을 지정해야 합니다.  
+  
+## 참고 항목  
+ [TableAdapter 개요](../data-tools/tableadapter-overview.md)   
+ [방법: TableAdapter를 사용하여 데이터 업데이트](../data-tools/update-data-by-using-a-tableadapter.md)   
+ [Visual Studio의 데이터 응용 프로그램 개요](../data-tools/overview-of-data-applications-in-visual-studio.md)   
+ [Visual Studio에서 데이터에 연결](../data-tools/connecting-to-data-in-visual-studio.md)   
+ [데이터를 받기 위해 응용 프로그램 준비](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
+ [데이터를 응용 프로그램으로 페치](../data-tools/fetching-data-into-your-application.md)   
+ [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)   
+ [응용 프로그램에서 데이터 편집](../data-tools/editing-data-in-your-application.md)   
+ [데이터 유효성 검사](../Topic/Validating%20Data.md)   
+ [데이터 저장](../data-tools/saving-data.md)

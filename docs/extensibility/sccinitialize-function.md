@@ -1,108 +1,91 @@
 ---
-title: SccInitialize Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccInitialize
-helpviewer_keywords:
-- SccInitialize function
+title: "SccInitialize 함수 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccInitialize"
+helpviewer_keywords: 
+  - "SccInitialize 함수"
 ms.assetid: 5bc0d28b-2c68-4d43-9e51-541506a8f76e
 caps.latest.revision: 14
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 76235f932ccaac04672e50f8d349ab6fcd55cd4d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 14
 ---
-# <a name="sccinitialize-function"></a>SccInitialize Function
-This function initializes the source control plug-in and provides capabilities and limits to the integrated development environment (IDE).  
+# SccInitialize 함수
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+이 함수 소스 제어 플러그 인을 초기화 하 고 기능 및 통합된 개발 환경 \(IDE\)에 대 한 제한을 제공 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 SCCRTN SccInitialize (  
-   LPVOID* ppvContext,  
-   HWND    hWnd,  
-   LPCSTR  lpCallerName,  
-   LPSTR   lpSccName,  
-   LPLONG  lpSccCaps,  
-   LPSTR   lpAuxPathLabel,  
-   LPLONG  pnCheckoutCommentLen,  
-   LPLONG  pnCommentLen  
+   LPVOID* ppvContext,  
+   HWND    hWnd,  
+   LPCSTR  lpCallerName,  
+   LPSTR   lpSccName,  
+   LPLONG  lpSccCaps,  
+   LPSTR   lpAuxPathLabel,  
+   LPLONG  pnCheckoutCommentLen,  
+   LPLONG  pnCommentLen  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `ppvContext`  
- [in] The source control plug-in can place a pointer to its context structure here.  
+ \[in\] 소스 제어 플러그 인 여기 해당 상황에 맞는 구조에 대 한 포인터를 배치할 수 있습니다.  
   
  `hWnd`  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ \[in\] 소스 제어 플러그 인을 제공 하는 모든 대화 상자에 대 한 부모로 사용할 수 있는 IDE 창 핸들입니다.  
   
  `lpCallerName`  
- [in] The name of the program calling the source control plug-in.  
+ \[in\] 소스 제어 플러그 인을 호출 하는 프로그램의 이름입니다.  
   
  `lpSccName`  
- [in, out] The buffer where the source control plug-in puts its own name (not to exceed `SCC_NAME_LEN`).  
+ \[에서, out\] 소스 제어 플러그 인 이름 자체를 배치 하는 위치 버퍼 \(이내임 `SCC_NAME_LEN`\).  
   
  `lpSccCaps`  
- [out] Returns the source control plug-in's capability flags.  
+ \[out\] 소스 제어 플러그 인의 기능 플래그를 반환합니다.  
   
  `lpAuxPathLabel`  
- [in, out] The buffer where the source control plug-in puts a string that describes the `lpAuxProjPath` parameter returned by the [SccOpenProject](../extensibility/sccopenproject-function.md) and the [SccGetProjPath](../extensibility/sccgetprojpath-function.md) (not to exceed `SCC_AUXLABEL_LEN`).  
+ \[에서, out\] 소스 제어 플러그 인에 대해 설명 하는 문자열을 배치 하는 위치는 버퍼는 `lpAuxProjPath` 매개 변수에서 반환 되는 [SccOpenProject](../extensibility/sccopenproject-function.md) 및 [SccGetProjPath](../extensibility/sccgetprojpath-function.md) \(이내임 `SCC_AUXLABEL_LEN`\).  
   
  `pnCheckoutCommentLen`  
- [out] Returns the maximum permissible length for a checkout comment.  
+ \[out\] 체크 아웃 설명에 대 한 최대 허용 길이 반환합니다.  
   
  `pnCommentLen`  
- [out] Returns the maximum permissible length for other comments.  
+ \[out\] 다른 의견에 대 한 최대 허용 길이 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 반환 값  
+ 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Source control initialization succeeded.|  
-|SCC_E_INITIALIZEFAILED|System could not be initialized.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform the specified operation.|  
-|SCC_E_NONSPECFICERROR|Nonspecific failure; source control system was not initialized.|  
+|값|설명|  
+|-------|--------|  
+|SCC\_OK|소스 제어 초기화에 성공 했습니다.|  
+|SCC\_E\_INITIALIZEFAILED|시스템을 초기화할 수 없습니다.|  
+|SCC\_E\_NOTAUTHORIZED|사용자 지정된 작업을 수행할 수 없습니다.|  
+|SCC\_E\_NONSPECFICERROR|알 수 없는 오류입니다. 소스 제어 시스템을 초기화 하지 못했습니다.|  
   
-## <a name="remarks"></a>Remarks  
- The IDE calls this function when it first loads the source control plug-in. It enables the IDE to pass certain information, such as the caller name, to the plug-in. The IDE also gets back certain information such as the maximum allowable length for comments and the plug-in's capabilities.  
+## 설명  
+ IDE에서 소스 제어 플러그 인를 처음 로드 될 때이 함수를 호출 합니다. IDE에서를이 플러그 인에 호출자에 게 이름, 같은 특정 정보를 전달할 수 있습니다. IDE도 다시 가져온 주석 및 기능에 대 한 플러그 인에 대 한 허용 가능한 최대 길이 등의 특정 정보가 합니다.  
   
- The `ppvContext` points to a `NULL` pointer. The source control plug-in can allocate a structure for its own use and store a pointer to that structure in `ppvContext`. The IDE will pass this pointer to every other VSSCI API function, allowing the plug-in to have context information available without resorting to global storage and to support multiple instances of the plug-in. This structure should be deallocated when the [SccUninitialize](../extensibility/sccuninitialize-function.md) is called.  
+ `ppvContext` 가리키는 `NULL` 포인터입니다. 소스 제어 플러그 인 수 자체 용도에 구조를 할당 하 고 해당 구조에 대 한 포인터를 저장 `ppvContext`합니다. IDE는 플러그 인 전역 저장소에 문의 하지 않고 컨텍스트 정보를 알고 있어야 하 고 플러그 인의 여러 인스턴스를 지원 하도록 허용이 포인터를 다른 모든 VSSCI API 함수를 전달 합니다. 이 구조를 할당 취소 될 때의 [SccUninitialize](../extensibility/sccuninitialize-function.md) 라고 합니다.  
   
- The `lpCallerName` and `lpSccName` parameters enable the IDE and the source control plug-in to exchange names. These names may be used simply to distinguish among multiple instances, or they may actually appear in menus or dialog boxes.  
+ `lpCallerName` 및 `lpSccName` IDE와 소스 제어 플러그 인 이름 교환할 수 매개 변수를 사용 합니다. 메뉴 또는 대화 상자에서 실제로 표시 될 수 또는 여러 인스턴스를 구별 하는 단순히 이러한 이름은 사용할 수 있습니다.  
   
- The `lpAuxPathLabel` parameter is a string used as a comment to identify the auxiliary project path that is stored in the solution file and passed to the source control plug-in in a call to the [SccOpenProject](../extensibility/sccopenproject-function.md). [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] uses the string "SourceSafe Project:"; other source control plug-ins should refrain from using this particular string.  
+ `lpAuxPathLabel` 매개 변수는 솔루션 파일에 저장 되 고 소스 제어 플러그 인에 대 한 호출에 전달 되는 보조 프로젝트 경로 확인 하는 주석으로 사용 되는 문자열은 [SccOpenProject](../extensibility/sccopenproject-function.md)합니다.[!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] 문자열을 사용 하 여 "SourceSafe 프로젝트:"; 이 특정 문자열을 사용 하 여 다른 소스 제어 플러그 인이 포함 되지 않습니다 해야 합니다.  
   
- The `lpSccCaps` parameter gives the source control plug-in a place to store bitflags indicating the plug-in's capabilities. (For a full list of capability bitflags, see [Capability Flags](../extensibility/capability-flags.md)). For instance, if the plug-in plans to write results into a caller-provided callback function, the plug-in would set the capability bit SCC_CAP_TEXTOUT. This would signal the IDE to create a window for version control results.  
+ `lpSccCaps` 매개 변수를 제공 하는 소스 제어 플러그 인 기능에 대 한 플러그 인을 나타내는 비트를 저장 합니다. \(기능 비트 형식의 전체 목록을 보려면 참조 [기능 플래그](../extensibility/capability-flags.md)\). 예를 들어, 호출자가 제공한 콜백 함수에 결과 기록 하는 기능을 설정 플러그 인에 대 한 플러그 인 않으려는 SCC\_CAP\_TEXTOUT 비트 경우. 버전 제어 결과 대 한 창을 만드는 데 IDE를 신호로 알리는 것이 있습니다.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+## 참고 항목  
+ [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)   
  [SccUninitialize](../extensibility/sccuninitialize-function.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   
- [Capability Flags](../extensibility/capability-flags.md)
+ [기능 플래그](../extensibility/capability-flags.md)

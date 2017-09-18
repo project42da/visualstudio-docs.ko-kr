@@ -1,84 +1,67 @@
 ---
-title: IDebugPointerObject::GetBytes | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPointerObject::GetBytes
-helpviewer_keywords:
-- IDebugPointerObject::GetBytes method
+title: "IDebugPointerObject::GetBytes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPointerObject::GetBytes"
+helpviewer_keywords: 
+  - "IDebugPointerObject::GetBytes 메서드"
 ms.assetid: e986c188-87fb-4b51-86e9-ee6a0035bdab
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: be7648362f250dfba00a244e3d21aff2824eb325
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugpointerobjectgetbytes"></a>IDebugPointerObject::GetBytes
-Gets the value pointed to as a series of consecutive bytes.  
+# IDebugPointerObject::GetBytes
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+으로 일련의 연속 된 바이트를 가리키는 값을 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetBytes(   
-   DWORD  dwStart,  
-   DWORD  dwCount,  
-   BYTE*  pBytes,  
-   DWORD* pdwBytes  
+```cpp#  
+HRESULT GetBytes(   
+   DWORD  dwStart,  
+   DWORD  dwCount,  
+   BYTE*  pBytes,  
+   DWORD* pdwBytes  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetBytes(  
-   uint       dwStart,   
-   uint       dwCount,   
-   out byte[] pBytes,   
-   out uint   pdwBytes  
+   uint       dwStart,   
+   uint       dwCount,   
+   out byte[] pBytes,   
+   out uint   pdwBytes  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `dwStart`  
- [in] An offset, in bytes, from the start of the object pointed to.  
+ \[in\] 개체의 시작에서 바이트에서 오프셋을 가리키는.  
   
  `dwCount`  
- [in] The number of bytes to retrieve.  
+ \[in\] 검색할 바이트의 수입니다.  
   
  `pBytes`  
- [in, out] An array that is filled in with the value as a series of consecutive bytes, starting at the given offset from the object pointed to.  
+ \[in, out\] 값 사용 하 여 일련의 연속 된 바이트 이름으로 채워진 배열을 개체에서 지정 된 오프셋에서 시작 하려면 가리키는.  
   
  `pdwBytes`  
- [out] Returns the number of bytes actually retrieved.  
+ \[out\] 실제로 검색 된 바이트 수를 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method is used if the pointer as represented by this [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) points to a primitive type or a simple array of primitive types (that is, an array that can be represented by a simple sequence of bytes).  
+## 설명  
+ 이 메서드를 사용 하는 경우이로 표시 되는 포인터 [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) 가리키는 기본 형식 또는 기본 형식 \(단순 바이트 시퀀스로 나타낼 수 있는 배열\)의 단순 배열 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)   
  [SetBytes](../../../extensibility/debugger/reference/idebugpointerobject-setbytes.md)

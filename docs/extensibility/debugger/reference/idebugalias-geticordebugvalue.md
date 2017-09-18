@@ -1,68 +1,51 @@
 ---
-title: IDebugAlias::GetICorDebugValue | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugAlias::GetICorDebugValue
-helpviewer_keywords:
-- IDebugAlias::GetICorDebugValue method
+title: "IDebugAlias::GetICorDebugValue | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugAlias::GetICorDebugValue"
+helpviewer_keywords: 
+  - "IDebugAlias::GetICorDebugValue 메서드"
 ms.assetid: b9eb39ee-84af-4ace-9cfe-236b3d48aff5
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4102336616511239bbf3249fc3dc5552a4e9de40
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugaliasgeticordebugvalue"></a>IDebugAlias::GetICorDebugValue
-Retrieves a managed code interface that represents the value associated with this alias.  
+# IDebugAlias::GetICorDebugValue
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 별칭을 연관 된 값을 나타내는 관리 되는 코드 인터페이스를 검색 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
 ```cpp  
-HRESULT GetICorDebugValue(  
-   IUnknown** ppUnk  
+HRESULT GetICorDebugValue(  
+   IUnknown** ppUnk  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetICorDebugValue(  
-   out object ppUnk  
+   out object ppUnk  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `ppUnk`  
- [out] `IUnknown` interface that represents the value associated with this alias. This interface can be queried for the `ICorDebugValue` interface.  
+ \[out\] `IUnknown` 이 별칭을 연관 된 값을 나타내는 인터페이스입니다. 이 인터페이스를 쿼리할 수는 `ICorDebugValue` 인터페이스입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 S\_OK를 반환 합니다. 그렇지 않은 경우 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method applies only to managed values (the `ICorDebugValue` is an interface available in the [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] and is defined in the [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK in the cordebug.idl file).  
+## 설명  
+ 이 메서드는 관리 되는 값에만 적용 됩니다 \(의 `ICorDebugValue` 은 인터페이스에서 사용할 수 있는 [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] 에 정의 되어는 [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK cordebug.idl 파일에서\).  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

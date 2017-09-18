@@ -1,121 +1,104 @@
 ---
-title: EVALFLAGS90 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- EVALFLAGS90 enumeration
+title: "EVALFLAGS90 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "EVALFLAGS90 열거형"
 ms.assetid: 64fb0139-8b04-4726-b52c-db2e04d65498
 caps.latest.revision: 7
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 25ff118d4cb3388798b456c516869d62b47ef4e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 7
 ---
-# <a name="evalflags90"></a>EVALFLAGS90
-Enumerates the valid values for flags that control expression evaluation. This enumeration extends the [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeration.  
+# EVALFLAGS90
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+유효한 값은 식 계산을 제어 하는 플래그를 열거 합니다.  이 열거형에 확장 되는 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 열거형입니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 enum enum_EVALFLAGS90  
 {  
-   // VS 8.0 values  
-   EVAL90_RETURNVALUE                 = 0x0002,  
-   EVAL90_NOSIDEEFFECTS               = 0x0004,  
-   EVAL90_ALLOWBPS                    = 0x0008,  
-   EVAL90_ALLOWERRORREPORT            = 0x0010,  
-   EVAL90_FUNCTION_AS_ADDRESS         = 0x0040,  
-   EVAL90_NOFUNCEVAL                  = 0x0080,  
-   EVAL90_NOEVENTS                    = 0x1000,  
-   EVAL90_DESIGN_TIME_EXPR_EVAL       = 0x2000,  
-   EVAL90_ALLOW_IMPLICIT_VARS         = 0x4000,  
+   // VS 8.0 values  
+   EVAL90_RETURNVALUE                 = 0x0002,  
+   EVAL90_NOSIDEEFFECTS               = 0x0004,  
+   EVAL90_ALLOWBPS                    = 0x0008,  
+   EVAL90_ALLOWERRORREPORT            = 0x0010,  
+   EVAL90_FUNCTION_AS_ADDRESS         = 0x0040,  
+   EVAL90_NOFUNCEVAL                  = 0x0080,  
+   EVAL90_NOEVENTS                    = 0x1000,  
+   EVAL90_DESIGN_TIME_EXPR_EVAL       = 0x2000,  
+   EVAL90_ALLOW_IMPLICIT_VARS         = 0x4000,  
   
-   // Values added in VS 9.0  
-   EVAL90_FORCE_EVALUATION_NOW        = 0x8000  
+   // Values added in VS 9.0  
+   EVAL90_FORCE_EVALUATION_NOW        = 0x8000  
 };  
 typedef DWORD EVALFLAGS90;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_EVALFLAGS90  
 {  
-   // VS 8.0 values  
-   EVAL90_RETURNVALUE                 = 0x0002,  
-   EVAL90_NOSIDEEFFECTS               = 0x0004,  
-   EVAL90_ALLOWBPS                    = 0x0008,  
-   EVAL90_ALLOWERRORREPORT            = 0x0010,  
-   EVAL90_FUNCTION_AS_ADDRESS         = 0x0040,  
-   EVAL90_NOFUNCEVAL                  = 0x0080,  
-   EVAL90_NOEVENTS                    = 0x1000,  
-   EVAL90_DESIGN_TIME_EXPR_EVAL       = 0x2000,  
-   EVAL90_ALLOW_IMPLICIT_VARS         = 0x4000,  
+   // VS 8.0 values  
+   EVAL90_RETURNVALUE                 = 0x0002,  
+   EVAL90_NOSIDEEFFECTS               = 0x0004,  
+   EVAL90_ALLOWBPS                    = 0x0008,  
+   EVAL90_ALLOWERRORREPORT            = 0x0010,  
+   EVAL90_FUNCTION_AS_ADDRESS         = 0x0040,  
+   EVAL90_NOFUNCEVAL                  = 0x0080,  
+   EVAL90_NOEVENTS                    = 0x1000,  
+   EVAL90_DESIGN_TIME_EXPR_EVAL       = 0x2000,  
+   EVAL90_ALLOW_IMPLICIT_VARS         = 0x4000,  
   
-   // Values added in VS 9.0  
-   EVAL90_FORCE_EVALUATION_NOW        = 0x8000  
+   // Values added in VS 9.0  
+   EVAL90_FORCE_EVALUATION_NOW        = 0x8000  
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- EVAL90_RETURNVALUE  
- Specifies that the return value, if any, be evaluated.  
+#### 매개 변수  
+ EVAL90\_RETURNVALUE  
+ 있는 경우 반환 값을 계산할 수를 지정 합니다.  
   
- EVAL90_NOSIDEEFFECTS  
- Specifies that side effects not be allowed.  
+ EVAL90\_NOSIDEEFFECTS  
+ 부작용을 사용할 수 없음을 지정 합니다.  
   
- EVAL90_ALLOWBPS  
- Specifies stopping on breakpoints.  
+ EVAL90\_ALLOWBPS  
+ 중단 중단점을 지정합니다.  
   
- EVAL90_ALLOWERRORREPORT  
- Specifies that error reporting to the host to be allowed. Primarily used for expression evaluation in script in Internet Explorer.  
+ EVAL90\_ALLOWERRORREPORT  
+ 될 수 있는 호스트에 보고 하는 오류를 지정 합니다.  식 계산에서 Internet Explorer 스크립트에서 주로 사용 합니다.  
   
- EVAL90_FUNCTION_AS_ADDRESS  
- Forces functions to be evaluated as addresses, instead of invoking the function.  
+ EVAL90\_FUNCTION\_AS\_ADDRESS  
+ 함수를 호출 하는 대신 주소를로 평가 될 수 강제로 작동 합니다.  
   
- EVAL90_NOFUNCEVAL  
- Prevents function from being evaluated. For example, consider the `int` token in the expression `myExpression(int) + 10`. This function can be correctly evaluated as an address, but not as a value.  
+ EVAL90\_NOFUNCEVAL  
+ 함수를에서 평가 되지 않습니다.  예로 `int` 토큰 식에서 `myExpression(int) + 10`.  주소를 있지만 않는 값으로이 함수를 정확 하 게 평가할 수 있습니다.  
   
- EVAL90_NOEVENTS  
- Flag to indicate that events that occur during the expression evaluation should not be sent to the session debug manager (SDM) or to the IDE.  
+ EVAL90\_NOEVENTS  
+ 식 계산 중에 발생 하는 이벤트 세션 디버그 매니저 \(SDM\) 또는 IDE 보내지도록 없습니다 나타내는 플래그입니다.  
   
- EVAL90_DESIGN_TIME_EXPR_EVAL  
- Enables design-time expression evaluation.  
+ EVAL90\_DESIGN\_TIME\_EXPR\_EVAL  
+ 디자인 타임 식 계산을 활성화 합니다.  
   
- EVAL90_ALLOW_IMPLICIT_VARS  
- Allows implicit variable creation.  
+ EVAL90\_ALLOW\_IMPLICIT\_VARS  
+ 암시적 변수를 만들 수 있습니다.  
   
- EVAL90_FORCE_EVALUATION_NOW  
- Forces evaluation to occur immediately. This is useful when servicing a request, such as a user request.  
+ EVAL90\_FORCE\_EVALUATION\_NOW  
+ 즉시 수행 되도록 힘 평가 합니다.  사용자 요청과 같은 요청을 서비스 하는 경우에 유용 합니다.  
   
-## <a name="requirements"></a>Requirements  
- Header: Msdbg90.h  
+## 요구 사항  
+ 헤더: Msdbg90.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+## 참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

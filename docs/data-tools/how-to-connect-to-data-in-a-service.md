@@ -1,81 +1,68 @@
 ---
-title: 'How to: Connect to Data in a Service | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data [Visual Studio], connecting to Web services
-- data sources, creating from Web services
-- data [Visual Studio], reading from Web services
-- reading data, from Web services
-- Web services, reading data
-- Web services, as data sources
-- Web services, connecting
+title: "방법: 서비스의 데이터에 연결 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "데이터[Visual Studio], 웹 서비스에 연결"
+  - "데이터[Visual Studio], 웹 서비스에서 읽기"
+  - "데이터 소스, 웹 서비스에서 만들기"
+  - "데이터 읽기, 웹 서비스에서"
+  - "웹 서비스, 데이터 소스"
+  - "웹 서비스, 연결"
+  - "웹 서비스, 데이터 읽기"
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 caps.latest.revision: 32
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 7b1edf226b73bd5c705e826d586a844d93ee91ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 30
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="how-to-connect-to-data-in-a-service"></a>How to: Connect to Data in a Service
-You connect your application to the data returned from a service by running the [Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png) and selecting **Service** on the **Choose a Data Source Type** page.  
+# 방법: 서비스의 데이터에 연결
+[데이터 소스 구성 마법사](../data-tools/media/data-source-configuration-wizard.png)를 실행하고 **데이터 소스 형식 선택** 페이지에서 **서비스**를 선택하여 서비스에서 반환한 데이터에 응용 프로그램을 연결합니다.  
   
- Upon completion of the wizard, a service reference is added to your project and is immediately available in the [Data Sources Window](add-new-data-sources.md).  
+ 마법사를 완료하면 서비스 참조가 프로젝트에 추가되어 즉시 [데이터 소스 창](../Topic/Data%20Sources%20Window.md)에서 사용할 수 있게 됩니다.  
   
 > [!NOTE]
->  The items that appear in the **Data Sources** window are dependent on the information that the service returns. Some services might not provide enough information for the **Data Source Configuration Wizard** to create bindable objects. For example, if the service returns an untyped dataset, then no items appear in the **Data Sources Window** upon completing the wizard. This is because untyped datasets do not provide schema, so the wizard does not have enough information to create the data source.  
+>  **데이터 소스** 창에 표시되는 항목은 서비스에서 반환하는 정보에 따라 달라집니다.  일부 서비스는 **데이터 소스 구성 마법사**가 바인딩할 수 있는 개체를 만드는 데 필요한 정보를 충분히 제공하지 않을 수도 있습니다.  예를 들어, 서비스에서 형식화되지 않은 데이터 집합을 반환하면 마법사가 완료될 때 **데이터 소스 창**에 아무런 항목도 표시되지 않습니다.  이것은 형식화되지 않은 데이터 집합이 스키마를 제공하지 않아 마법사가 데이터 소스를 만드는 데 필요한 정보를 충분히 갖지 못하기 때문입니다.  
   
-[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+ [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-### <a name="to-connect-your-application-to-a-service"></a>To connect your application to a service  
+### 응용 프로그램을 서비스에 연결하려면  
   
-1.  On the **Data** menu, click **Add New Data Source**.  
+1.  **데이터** 메뉴에서 **새 데이터 소스 추가**를 클릭합니다.  
   
-2.  Select **Service** on the **Choose a Data Source Type** page, and then click **Next**.  
+2.  **데이터 소스 형식 선택** 페이지에서 **서비스**를 선택하고 **다음**을 클릭합니다.  
   
-3.  Enter the address of the service you want to use, or click **Discover** to locate services in the current solution, and then click **Go**.  
+3.  사용할 서비스의 주소를 입력하거나 **검색**을 클릭하여 현재 솔루션에서 서비스를 찾은 다음 **이동**을 클릭합니다.  
   
-4.  Optionally, a new **Namespace** can be typed in place of the default value.  
+4.  기본값 대신 새 **네임스페이스**가 입력될 수도 있습니다.  
   
     > [!NOTE]
-    >  Click **Advanced** to open the [Configure Service Reference Dialog Box](../data-tools/configure-service-reference-dialog-box.md).  
+    >  **고급**을 클릭하여 [서비스 참조 구성 대화 상자](../data-tools/configure-service-reference-dialog-box.md)를 엽니다.  
   
-5.  Click **OK** to add a service reference to your project.  
+5.  **확인**을 클릭하여 프로젝트에 서비스 참조를 추가합니다.  
   
-6.  Click **Finish**.  
+6.  **마침**을 클릭합니다.  
   
-     The data source is added to the **Data Sources** window.  
+     데이터 소스가 **데이터 소스** 창에 추가됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## 다음 단계  
   
-#### <a name="to-add-functionality-to-your-application"></a>To add functionality to your application  
+#### 응용 프로그램에 기능을 추가하려면  
   
--   Select an item in the **Data Sources** window and drag it onto a form to create bound controls. For more information, see [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).  
+-   **데이터 소스** 창에서 항목을 선택한 다음 폼으로 끌어 와 바인딩된 컨트롤을 만듭니다.  자세한 내용은 [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)을 참조하십시오.  
   
-## <a name="see-also"></a>See Also  
- [Bind WPF controls to a WCF data service](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)   
+## 참고 항목  
+ [연습: WCF 데이터 서비스에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)   
+ [연습: WCF 데이터 서비스에 Silverlight 컨트롤 바인딩](../Topic/Walkthrough:%20Binding%20Silverlight%20Controls%20to%20a%20WCF%20Data%20Service.md)   
  [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

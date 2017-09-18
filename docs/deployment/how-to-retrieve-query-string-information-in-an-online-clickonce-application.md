@@ -1,101 +1,85 @@
 ---
-title: 'How to: Retrieve Query String Information in an Online ClickOnce Application | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-helpviewer_keywords:
-- ClickOnce deployment, query strings
-- query strings, retrieving information
+title: "방법: 온라인 ClickOnce 응용 프로그램에서 쿼리 문자열 정보 검색 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-deployment"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+helpviewer_keywords: 
+  - "ClickOnce 배포, 쿼리 문자열"
+  - "쿼리 문자열, 정보 검색"
 ms.assetid: 48ce098a-a075-481b-a5f5-c8ba11f63120
 caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 904e4060959a912981bb9a6ba47296267591cd2d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.handback.revision: 19
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
 ---
-# <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>How to: Retrieve Query String Information in an Online ClickOnce Application
-The *query string* is the portion of a URL beginning with a question mark (?) that contains arbitrary information in the form *name=value*. Suppose you have a [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application named `WindowsApp1` that you host on `servername`, and you want to pass in a value for the variable `username` when the application launches. Your URL might look like the following:  
+# 방법: 온라인 ClickOnce 응용 프로그램에서 쿼리 문자열 정보 검색
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+*쿼리 문자열*은 임의의 정보를 *name\=value* 형식으로 포함하는, 물음표\(?\)로 시작되는 URL의 일부입니다.`servername`에 호스트하는 `WindowsApp1`이라는 이름의 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램이 있으며, 응용 프로그램이 시작될 때 `username` 변수에 대해 값을 전달하려 한다고 가정해 보겠습니다. URL은 다음과 같습니다.  
   
  `http://servername/WindowsApp1.application?username=joeuser`  
   
- The following two procedures show how to use a [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application to obtain query string information.  
+ 다음 두 절차는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 사용하여 쿼리 문자열 정보를 얻는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  You can only pass information in a query string when your application is being launched using HTTP, instead of using a file share or the local file system.  
+>  파일 공유나 로컬 파일 시스템이 아니라 HTTP를 사용하여 응용 프로그램이 시작될 때 쿼리 문자열에서만 정보를 전달할 수 있습니다.  
   
- The first procedure shows how your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application can use a small piece of code to read these values when the application launches.  
+ 첫 번째 절차에서는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램이 시작될 때 작은 코드 부분을 사용하여 이러한 값을 읽는 방법을 보여 줍니다.  
   
- The next procedure shows how to configure your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application using MageUI.exe so that it can accept query string parameters. You will need to do this whenever you publish your application.  
-  
-> [!NOTE]
->  See the "Security" section later in this topic before you make a decision to enable this feature.  
-  
- For information about how to create a [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] deployment using Mage.exe or MageUI.exe, see [Walkthrough: Manually Deploying a ClickOnce Application](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).  
+ 다음 절차에서는 쿼리 문자열 매개 변수를 수용할 수 있도록 MageUI.exe를 사용하여 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 구성하는 방법을 보여 줍니다. 응용 프로그램을 게시할 때마다 이 작업을 수행해야 합니다.  
   
 > [!NOTE]
->  Starting in .NET Framework 3.5 SP1, it is possible to pass command-line arguments to an offline [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application. If you want to supply arguments to the application, you can pass in parameters to the shortcut file with the .APPREF-MS extension.  
+>  이 기능의 사용 여부를 결정하기 전에 이 항목의 뒷부분에 나오는 "보안" 섹션을 참조하세요.  
   
-### <a name="to-obtain-query-string-information-from-a-clickonce-application"></a>To obtain query string information from a ClickOnce application  
+ Mage.exe 또는 MageUI.exe를 사용하여 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포를 만드는 방법에 대한 자세한 내용은 [연습: ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)를 참조하세요.  
   
-1.  Place the following code in your project. In order for this code to function, you will have to have a reference to System.Web and add `using` or `Imports` statements for System.Web, System.Collections.Specialized, and System.Deployment.Application.  
+> [!NOTE]
+>  .NET Framework 3.5 SP1부터 명령줄 인수를 오프라인 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에 전달할 수 있습니다. 응용 프로그램에 인수를 제공하려는 경우 .APPREF\-MS 확장명의 바로 가기 파일에 매개 변수를 전달할 수 있습니다.  
   
-     [!code-csharp[ClickOnceQueryString#1](../deployment/codesnippet/CSharp/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.cs)]  [!code-vb[ClickOnceQueryString#1](../deployment/codesnippet/VisualBasic/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.vb)]  
+### ClickOnce 응용 프로그램에서 쿼리 문자열 정보를 가져오려면  
   
-2.  Call the function defined previously to retrieve a <xref:System.Collections.DictionaryBase.Dictionary%2A> of the query string parameters, indexed by name.  
+1.  프로젝트에 다음 코드를 추가합니다. 이 코드가 작동하려면 System.Web에 대한 참조가 필요하며 System.Web, System.Collections.Specialized 및 System.Deployment.Application에 대해 `using` 또는 `Imports` 문을 추가해야 합니다.  
   
-### <a name="to-enable-query-string-passing-in-a-clickonce-application-with-mageuiexe"></a>To enable query string passing in a ClickOnce application with MageUI.exe  
+     [!code-cs[ClickOnceQueryString#1](../deployment/codesnippet/CSharp/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.cs)]
+     [!code-vb[ClickOnceQueryString#1](../deployment/codesnippet/VisualBasic/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.vb)]  
   
-1.  Open the .NET Command Prompt and type:  
+2.  이름으로 인덱싱된 쿼리 문자열 매개 변수의 <xref:System.Collections.DictionaryBase.Dictionary%2A>를 검색하려면 전에 정의한 함수를 호출합니다.  
+  
+### MageUI.exe를 사용하여 ClickOnce 응용 프로그램에서 쿼리 문자열이 전달되도록 하려면  
+  
+1.  .NET 명령 프롬프트를 열고 다음을 입력합니다.  
   
     ```  
     MageUI  
     ```  
   
-2.  From the **File** menu, select **Open**, and open the deployment manifest for your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application, which is the file ending in the `.application` extension.  
+2.  **파일** 메뉴에서 **열기**를 선택하고 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에 대한 배포 매니페스트를 엽니다\(`.application` 확장명으로 끝나는 파일\).  
   
-3.  Select the **Deployment Options** panel in the left-hand navigation window, and select the **Allow URL parameters to be passed to application** check box.  
+3.  왼쪽 탐색 창에서 **배포 옵션** 패널을 선택하고, **응용 프로그램으로 URL 매개 변수가 전달되도록 허용** 확인란을 선택합니다.  
   
-4.  From the **File** menu, select **Save**.  
+4.  **파일** 메뉴에서 **저장**을 선택합니다.  
   
 > [!NOTE]
->  Alternately, you can enable query string passing in [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]. Select the **Allow URL parameters to be passed to application** check box, which can be found by opening the **Project Properties**, selecting the **Publish** tab, clicking the **Options** button, and then selecting **Manifests**.  
+>  또는 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]에서 쿼리 문자열이 전달되도록 할 수 있습니다.**프로젝트 속성**을 열고 **게시** 탭을 선택하고 **옵션** 단추를 클릭한 다음 **매니페스트**를 선택하여 **응용 프로그램으로 URL 매개 변수가 전달되도록 허용** 확인란을 선택합니다.  
   
-## <a name="robust-programming"></a>Robust Programming  
- When you use query string parameters, you must give careful consideration to how your application is installed and activated. If your application is configured to install on the user's computer from the Web or from a network share, it is likely that the user will activate the application only once through the URL. After that, the user will usually activate your application using the shortcut in the **Start** menu. As a result, your application is guaranteed to receive query string arguments only once during its lifetime. If you choose to store these arguments on the user's machine for future use, you are responsible for storing them in a safe and secure manner.  
+## 강력한 프로그래밍  
+ 쿼리 문자열 매개 변수를 사용할 경우 응용 프로그램의 설치 및 활성화 방법에 대해 신중해야 합니다. 웹 또는 네트워크 공유에서 응용 프로그램을 사용자 컴퓨터에 설치하도록 구성한 경우 사용자는 URL을 통해 응용 프로그램을 한 번만 활성화할 가능성이 있습니다. 그런 다음 사용자는 대개 **시작** 메뉴의 바로 가기를 사용하여 응용 프로그램을 활성화합니다. 그 결과 응용 프로그램은 수명 동안 쿼리 문자열 인수를 한 번만 수신하도록 보장됩니다. 나중에 사용할 수 있도록 사용자의 컴퓨터에 이러한 인수를 저장하기로 선택한 경우 안전한 방식으로 저장해야 합니다.  
   
- If your application is online only, it will always be activated through a URL. Even in this case, however, your application must be written to function properly if the query string parameters are missing or corrupted.  
+ 온라인 전용인 응용 프로그램은 항상 URL을 통해 활성화됩니다. 그러나 이 경우, 쿼리 문자열 매개 변수가 누락되거나 손상되더라도 제대로 작동하도록 응용 프로그램을 작성해야 합니다.  
   
-## <a name="net-framework-security"></a>.NET Framework Security  
- Allow passing URL parameters to your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application only if you plan to cleanse the input of any malicious characters before using it. A string embedded with quotes, slashes, or semicolons, for example, might perform arbitrary data operations if used unfiltered in a SQL query against a database. For more information on query string security, see [Script Exploits Overview](http://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+## .NET Framework 보안  
+ 악의적인 문자의 입력을 사용 전에 지우려는 경우에만 URL 매개 변수가 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에 전달되도록 하세요. 예를 들어 따옴표, 슬래시 또는 세미콜론이 포함된 문자열은 데이터베이스에 대한 SQL 쿼리에서 필터링되지 않고 사용될 경우 임의의 데이터 작업을 수행할 수 있습니다. 쿼리 문자열 보안에 대한 자세한 내용은 [Script Exploits Overview](../Topic/Script%20Exploits%20Overview.md)를 참조하세요.  
   
-## <a name="see-also"></a>See Also  
- [Securing ClickOnce Applications](../deployment/securing-clickonce-applications.md)
+## 참고 항목  
+ [ClickOnce 응용 프로그램 보안](../deployment/securing-clickonce-applications.md)

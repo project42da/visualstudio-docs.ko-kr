@@ -1,72 +1,55 @@
 ---
-title: IDebugCoreServer3::GetServerName | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugCoreServer3::GetServerName
-helpviewer_keywords:
-- IDebugCoreServer3::GetServerName
+title: "IDebugCoreServer3::GetServerName | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugCoreServer3::GetServerName"
+helpviewer_keywords: 
+  - "IDebugCoreServer3::GetServerName"
 ms.assetid: 0fc3fcf5-d6a3-4a00-bf14-458b8645714e
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a2148c21a81a3d59d193bee47bedc97505969228
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugcoreserver3getservername"></a>IDebugCoreServer3::GetServerName
-Retrieves the name of the server.  
+# IDebugCoreServer3::GetServerName
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+서버 이름을 검색합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetServerName(  
-   BSTR* pbstrName  
+```cpp#  
+HRESULT GetServerName(  
+   BSTR* pbstrName  
 );  
 ```  
   
-```csharp  
-int GetServerName(  
-   out string pbstrName  
+```c#  
+int GetServerName(  
+   out string pbstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pbstrName`  
- [out] Returns the name of the server.  
+ \[out\] 서버 이름을 반환합니다.  
   
 > [!NOTE]
->  The caller is responsible for freeing the string.  
+>  호출자에 게 문자열을 확보 하는 일을 담당 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- For a friendly server name, call the [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) method.  
+## 설명  
+ 친숙 한 서버 이름을 호출 하 여 [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) 메서드.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)

@@ -1,71 +1,54 @@
 ---
-title: IDebugDocumentTextEvents2::onReplaceText | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugDocumentTextEvents2::OnReplaceText
-helpviewer_keywords:
-- IDebugDocumentTextEvents2::onReplaceText
+title: "IDebugDocumentTextEvents2::onReplaceText | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugDocumentTextEvents2::OnReplaceText"
+helpviewer_keywords: 
+  - "IDebugDocumentTextEvents2::onReplaceText"
 ms.assetid: cb39f025-66d8-4dc0-bef6-1bdc8e07db92
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 1e7f7977956591a9519d62f55fd4444c99bebc00
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugdocumenttextevents2onreplacetext"></a>IDebugDocumentTextEvents2::onReplaceText
-Notifies the debug package that text has been replaced in the document.  
+# IDebugDocumentTextEvents2::onReplaceText
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+텍스트 문서에서 대체 되었습니다 디버그 패키지를 알립니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT onReplaceText(   
-   TEXT_POSITION pos,  
-   DWORD         dwNumToReplace  
+```cpp#  
+HRESULT onReplaceText(   
+   TEXT_POSITION pos,  
+   DWORD         dwNumToReplace  
 );  
 ```  
   
-```csharp  
-int onReplaceText(   
-   enum_TEXT_POSITION pos,  
-   uint               dwNumToReplace  
+```c#  
+int onReplaceText(   
+   enum_TEXT_POSITION pos,  
+   uint               dwNumToReplace  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pos`  
- [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) indicates where the text was replaced.  
+ \[in\] A [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) 를 나타내는 텍스트를 바꿨습니다.  
   
  `dwNumToReplace`  
- [in] Specifies the number of characters of text that were replaced.  
+ \[in\] 대체 된 텍스트의 문자 수를 지정 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   
- [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)
+ [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md)

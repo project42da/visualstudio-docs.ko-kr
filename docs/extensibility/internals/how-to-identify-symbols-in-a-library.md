@@ -1,45 +1,28 @@
 ---
-title: 'How to: Identify Symbols in a Library | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Call Browser tool, identifying symbols in the library
-- Call Browser tool
+title: "방법: 라이브러리에 대 한 기호를 식별 합니다. | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "호출 브라우저 도구를 식별 하는 라이브러리의 기호"
+  - "호출 브라우저 도구"
 ms.assetid: 8fb0de61-71e7-42d1-8b41-2ad915474384
 caps.latest.revision: 21
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 099af7cc3e5f77041f95f72e7b42fd6bfb324fdc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 21
 ---
-# <a name="how-to-identify-symbols-in-a-library"></a>How to: Identify Symbols in a Library
-Symbol-browsing tools display hierarchical views of symbols. The symbols represent namespaces, objects, classes, class members, and other language elements.  
+# 방법: 라이브러리에 대 한 기호를 식별 합니다.
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+기호 검색 도구 기호 계층 구조 보기를 표시 합니다.  기호를 네임 스페이스, 개체, 클래스, 클래스 멤버, 및 기타 언어 요소를 나타냅니다.  
   
- Each symbol in the hierarchy can be identified by the navigation information passed by the symbol library to the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] object manager through the following interfaces:  
+ 계층 구조에서 각 심볼 기호 라이브러리에 의해 전달 된 탐색 정보 식별할 수 있습니다의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 다음과 같은 인터페이스를 통해 개체 관리자:  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo>  
   
@@ -47,11 +30,11 @@ Symbol-browsing tools display hierarchical views of symbols. The symbols represe
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes>.  
   
- The location of the symbol in the hierarchy distinguishes a symbol. It allows symbol-browsing tools to navigate to a specific symbol. The unique, fully qualified path to the symbol determines the location. Each element in the path is a node. The path starts with the top-level node and ends with the specific symbol. For example, if the M1 method is a member of the C1 class and C1 is in N1 namespace, the full path of the M1 method is N1.C1.M1. This path contains three nodes: N1, C1, and M1.  
+ 기호 계층 구조에서의 위치에 기호를 구분합니다.  이 기호 검색 도구를 특정 기호로 이동할 수 있습니다.  기호를 특수, 정규화 된 경로 위치를 결정합니다.  경로의 각 요소가 노드입니다.  경로 최상위 노드를 한 특정 기호를.  예를 들어, M1 메서드는 C1 클래스의 구성원 인 C1 N1 네임 스페이스에 있고, N1 M1 메서드의 전체 경로가입니다.C 1입니다.M1입니다.  이 경로의 세 개의 노드가 포함 되어 있습니다: C1, N1, M1 및.  
   
- The navigation information allows the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] object manager to locate, select and keep selected the symbols in the hierarchy. It allows navigating from one browsing tool to another. While using **Object Browser** to browse symbols in a [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] project, you can right click a method and start the **Call Browser** tool to display the method in a call graph.  
+ 탐색 정보를 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 찾아 선택 하 고 유지 하는 개체 관리자 계층 구조에서 기호를 선택 합니다.  하나의 검색 도구에서 다른 위치로 이동 하 여 있습니다.  사용 하는 동안  **개체 브라우저** 기호를 찾아볼 수는 [!INCLUDE[vcprvc](../../debugger/includes/vcprvc_md.md)] 프로젝트를 메서드를 마우스 오른쪽 단추로 클릭 하 고 시작할 수 있습니다의  **호출 브라우저** 메서드 호출 그래프를 표시 하는 도구.  
   
- Two forms describe the symbol location. The canonical form is based on the fully qualified path of the symbol. It represents a unique position of the symbol in the hierarchy. It is independent of the symbol-browsing tool. To obtain the canonical form information, the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] object manager calls <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> method. The presentation form describes the location of the symbol within a specific symbol-browsing tool. The position of the symbol is relative to the position of other symbols in the hierarchicy. A given symbol may have several presentation paths, but only one canonical path. For example, if C1 class is inherited from C2 class and both classes are in N1 namespace, the **Object Browser** displays the following hierarchical tree:  
+ 두 가지 기호 위치에 설명합니다.  정규 형식에서 심볼의 정규화 된 경로 기반으로 합니다.  계층 구조에 있는 심볼의 고유한 위치를 나타냅니다.  기호 검색 도구를 독립적입니다.  정규 형식 정보를 얻을 수 있는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 개체 관리자 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> 메서드.  프레젠테이션 형식 기호는 특정 기호 검색 도구 내에서 위치를 설명합니다.  심볼의 위치는 hierarchicy에서 다른 심볼의 위치에 상대적입니다.  지정 된 기호 정식 경로가 하나만 있지만 프레젠테이션 경로가 여러 개 있을 수 있습니다.  예를 들어, C1 클래스 C2 클래스에서 상속 되 고 N1 네임 스페이스의 두 클래스는 해당  **개체 브라우저** 다음과 같은 계층적 트리에 표시 됩니다.  
   
 ```  
 N1  
@@ -64,19 +47,19 @@ N1
   
 ```  
   
- The canonical path of C2 class, in this example, is N1 + C2. The presentation path of C2 includes C1 and "Bases and Interfaces" nodes: N1 + C1 + "Bases and Interfaces" + C2.  
+ 이 예제에서 c 2 클래스의 정식 경로 N1 \+ c 2입니다.  프레젠테이션 경로를 C2 C1 및 "기본 및 인터페이스" 노드가 포함 되어 있습니다: N1 C2 \+ C1 \+ "기본 및 인터페이스"입니다.  
   
- To obtain the presentation form information, the object manager calls <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> method.  
+ 개체 관리자 호출 프레젠테이션 양식 정보를 얻기 위해 <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> 메서드가 있습니다.  
   
-## <a name="identifying-a-symbol-in-the-hierarchy"></a>Identifying a Symbol in the Hierarchy  
+## 기호 계층 구조를 식별합니다.  
   
-#### <a name="to-obtain-canonical-and-presentation-forms-information"></a>To obtain canonical and presentation forms information  
+#### 정식 얻을 수 및 프레젠테이션 정보를 형성 합니다.  
   
-1.  Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> method.  
+1.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> 메서드를 구현합니다.  
   
-     The object manager calls this method to obtain the list of nodes contained in the canonical path of the symbol.  
+     개체 관리자 기호 정식 경로에 포함 된 노드 목록을 가져오려면이 메서드를 호출 합니다.  
   
-    ```vb  
+    ```vb#  
     Public Function EnumCanonicalNodes(ByRef ppEnum As Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes) As Integer  
         Dim EnumNavInfoNodes As CallBrowserEnumNavInfoNodes = _New CallBrowserEnumNavInfoNodes(m_strMethod)  
         ppEnum = CType(EnumNavInfoNodes, IVsEnumNavInfoNodes)  
@@ -84,7 +67,7 @@ N1
     End Function  
     ```  
   
-    ```csharp  
+    ```c#  
     public int EnumCanonicalNodes(out Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes ppEnum)  
     {  
         CallBrowserEnumNavInfoNodes EnumNavInfoNodes =  
@@ -95,11 +78,11 @@ N1
   
     ```  
   
-2.  Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> method.  
+2.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> 메서드를 구현합니다.  
   
-     The object manager calls this method to obtain the list of nodes contained in the presentation path of the symbol.  
+     개체 관리자 기호 프레젠테이션의 경로에 포함 된 노드 목록을 얻으려면이 메서드를 호출 합니다.  
   
-## <a name="see-also"></a>See Also  
- [Supporting Symbol-Browsing Tools](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
- [How to: Register a Library with the Object Manager](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
- [How to: Expose Lists of Symbols Provided by the Library to the Object Manager](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+## 참고 항목  
+ [기호 검색 도구를 지원합니다.](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
+ [방법: 개체 관리자와 함께 라이브러리를 등록 합니다.](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
+ [방법: 개체 관리자에는 라이브러리에서 제공 하는 기호 목록을 노출](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

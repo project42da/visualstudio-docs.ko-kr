@@ -1,75 +1,58 @@
 ---
-title: IDebugPortSupplier2::AddPort | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPortSupplier2::AddPort
-helpviewer_keywords:
-- IDebugPortSupplier2::AddPort
+title: "IDebugPortSupplier2::AddPort | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPortSupplier2::AddPort"
+helpviewer_keywords: 
+  - "IDebugPortSupplier2::AddPort"
 ms.assetid: df491161-6bf3-4fcc-b478-b9ec88ec995f
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2845b7c3d10b62c268843f934cf3730019afd657
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugportsupplier2addport"></a>IDebugPortSupplier2::AddPort
-Adds a port.  
+# IDebugPortSupplier2::AddPort
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+포트를 추가합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT AddPort(   
-   IDebugPortRequest2* pRequest,  
-   IDebugPort2**       ppPort  
+```cpp#  
+HRESULT AddPort(   
+   IDebugPortRequest2* pRequest,  
+   IDebugPort2**       ppPort  
 );  
 ```  
   
-```csharp  
-int AddPort(   
-   IDebugPortRequest2 pRequest,  
-   out IDebugPort2    ppPort  
+```c#  
+int AddPort(   
+   IDebugPortRequest2 pRequest,  
+   out IDebugPort2    ppPort  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pRequest`  
- [in] An [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) object that describes the port to be added.  
+ \[in\] [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) 추가할 포트를 설명 하는 개체입니다.  
   
  `ppPort`  
- [out] Returns an [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) object that represents the port.  
+ \[out\] 반환 된 [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) 포트를 나타내는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method actually creates the requested port as well as adding it to the port supplier's internal list of active ports. The [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) method can be called first to avoid possible time-consuming delays.  
+## 설명  
+ 이 메서드는 실제로 활성 포트로 포트 공급자 내부 목록에 추가 하는 것 뿐만 아니라 요청한 포트를 만듭니다.  [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) 메서드를 호출 먼저 가능한 시간이 지연 되지 않도록 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
  [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)   
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

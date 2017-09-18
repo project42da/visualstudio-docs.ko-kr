@@ -1,74 +1,57 @@
 ---
-title: IEEVisualizerService::GetValueDisplayStringCount | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IEEVisualizerService::GetValueDisplayStringCount
-- GetValueDisplayStringCount
+title: "IEEVisualizerService::GetValueDisplayStringCount | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IEEVisualizerService::GetValueDisplayStringCount"
+  - "GetValueDisplayStringCount"
 ms.assetid: d683a833-fbfb-4042-84df-6905124a268a
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5cfe28abb387bf6b2500286bbc6c56943bdbe810
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="ieevisualizerservicegetvaluedisplaystringcount"></a>IEEVisualizerService::GetValueDisplayStringCount
-Retrieves the number of value strings to display for the specified property or field.  
+# IEEVisualizerService::GetValueDisplayStringCount
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+지정 된 속성 또는 필드에 대해 표시 하는 값 문자열을 검색 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT GetValueDisplayStringCount (  
-   DWORD         displayKind,   
-   IDebugField * propertyOrField,   
-   ULONG *       pcelt  
+   DWORD         displayKind,   
+   IDebugField * propertyOrField,   
+   ULONG *       pcelt  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetValueDisplayStringCount (  
-   uint        displayKind,   
-   IDebugField propertyOrField,   
-   out ulong   pcelt  
+   uint        displayKind,   
+   IDebugField propertyOrField,   
+   out ulong   pcelt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `displayKind`  
- [in] Value from the [DisplayKind](../../../extensibility/debugger/reference/displaykind.md) enumeration.  
+ \[in\] 값은 [DisplayKind](../../../extensibility/debugger/reference/displaykind.md) 열거형입니다.  
   
  `propertyOrField`  
- [in] An [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface that represents a property or field.  
+ \[in\] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 인터페이스 속성 또는 필드를 나타냅니다.  
   
  `pcelt`  
- [out] Returns the number of value strings to display.  
+ \[out\] 표시할 값 문자열 수를 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

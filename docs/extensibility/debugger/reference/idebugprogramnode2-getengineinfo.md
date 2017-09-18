@@ -1,70 +1,53 @@
 ---
-title: IDebugProgramNode2::GetEngineInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgramNode2::GetEngineInfo
-helpviewer_keywords:
-- IDebugProgramNode2::GetEngineInfo
+title: "IDebugProgramNode2::GetEngineInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgramNode2::GetEngineInfo"
+helpviewer_keywords: 
+  - "IDebugProgramNode2::GetEngineInfo"
 ms.assetid: 664e7fe5-9100-4b7d-9dc5-e5a4dd0d0451
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 116495c3d5fd7a3b06d8d83fd82e23584645c5a0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="idebugprogramnode2getengineinfo"></a>IDebugProgramNode2::GetEngineInfo
-Gets the name and identifier of the debug engine (DE) running a program.  
+# IDebugProgramNode2::GetEngineInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이름 및 프로그램을 실행 하 여 디버그 엔진 \(DE\)의 식별자를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetEngineInfo (   
-   BSTR* pbstrEngine,  
-   GUID* pguidEngine  
+```cpp#  
+HRESULT GetEngineInfo (   
+   BSTR* pbstrEngine,  
+   GUID* pguidEngine  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetEngineInfo(  
-   out string pbstrEngine,   
-   out Guid pguidEngine  
+   out string pbstrEngine,   
+   out Guid pguidEngine  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pbstrEngine`  
- [out] Returns the name of the DE running the program (C++-specific: this can be a null pointer indicating that the caller is not interested in the name of the engine).  
+ \[out\] 프로그램을 실행 하는 DE 이름을 반환 \(c \+ \+ 관련:이 호출자에 게 엔진 이름에 관심이 없음을 나타내는 null 포인터를 수 있습니다\).  
   
  `pguidEngine`  
- [out] Returns the globally unique identifier of the DE running the program (C++-specific: this can be a null pointer indicating that the caller is not interested in the GUID of the engine).  
+ \[out\] 프로그램을 실행 하는 DE의 전역 고유 식별자를 반환 \(c \+ \+ 관련:이 호출자가 엔진의 GUID에 관심이 없음을 나타내는 null 포인터를 수 있습니다\).  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

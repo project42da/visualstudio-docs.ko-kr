@@ -1,61 +1,44 @@
 ---
-title: 'Walkthrough: Displaying Signature Help | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], new - signature help/parameter info
+title: "연습: 서명 도움말 표시 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "편집기 [Visual Studio SDK]-새 서명 도움말/매개 변수 정보"
 ms.assetid: 4a6a884b-5730-4b54-9264-99684f5b523c
 caps.latest.revision: 28
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: e3db1bec71ec34f35824c5a6f33e76fb3a9d522e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 28
 ---
-# <a name="walkthrough-displaying-signature-help"></a>Walkthrough: Displaying Signature Help
-Signature Help (also known as *Parameter Info*) displays the signature of a method in a tooltip when a user types the parameter list start character (typically an opening parenthesis). As a parameter and parameter separator (typically a comma) are typed, the tooltip is updated to show the next parameter in bold. You can define Signature Help in the context of a language service, or you can define your own file name extension and content type and display Signature Help for just that type, or you can display Signature Help for an existing content type (for example, "text"). This walkthrough shows how to display Signature Help for the "text" content type.  
+# 연습: 서명 도움말 표시
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+서명 도움말 \(라고도 *매개 변수 정보*\)는 매개 변수 목록 시작 문자 \(일반적으로 여는 괄호,\)를 입력 한 사용자는 메서드의 서명 도구 설명에 표시 됩니다. 매개 변수 및 매개 변수 구분 기호 \(쉼표\)를 입력 한 도구 설명에 표시할 굵게 표시 된 다음 매개 변수를 표시 하도록 업데이트 됩니다. 언어 서비스의 컨텍스트에서 시그니처 도움말를 정의할 수 고유의 파일 이름 확장명 및 콘텐츠 형식을 정의 하 고 해당 형식만 대 한 시그니처 도움말을 표시할 수 또는 기존 콘텐츠 형식 \(예: "text"\)에 대 한 시그니처 도움말를 표시할 수 있습니다. 이 연습에서는 "text" 콘텐츠 형식에 대 한 시그니처 도움말을 표시 하는 방법을 보여 줍니다.  
   
- Signature Help is typically triggered by typing a specific character, for example, "(" (opening parenthesis), and dismissed by typing another character, for example, ")" (closing parenthesis). IntelliSense features that are triggered by typing a character can be implemented by using a command handler for the keystrokes (the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> interface) and a handler provider that implements the <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> interface. To create the Signature Help source, which is the list of signatures that participate in Signature Help, implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource> interface and a source provider that implements the <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider> interface. The providers are Managed Extensibility Framework (MEF) component parts, and are responsible for exporting the source and controller classes and importing services and brokers, for example, the <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, which lets you navigate in the text buffer, and the <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker>, which triggers the Signature Help session.  
+ 예를 들어, 특정 문자를 입력 하 여 서명 도움말은 일반적으로 트리거됩니다 "\(" \(여는 괄호\), 예를 들어 다른 문자를 입력 하 여 닫히면서 "\)" \(닫는 괄호\). 키 입력에 대 한 명령 처리기를 사용 하 여 문자를 입력 하 여 발생 하는 IntelliSense 기능을 구현할 수 있습니다 \(의 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 인터페이스\) 및 구현 하는 처리기 공급자는 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 인터페이스입니다. 서명을 시그니처 도움말에 참여 하는 목록, 시그니처 도움말 소스를 만들려면 구현에서 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource> 인터페이스와 구현 하는 원본 공급자는 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider> 인터페이스입니다. 공급자는 프레임 워크 MEF \(Managed Extensibility\) 구성 요소 부분으로 설정 되며 서비스 및 브로커, 예를 들어, 소스 및 컨트롤러 클래스를 내보내기 및 가져오기에 대 한 책임은 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, 텍스트 버퍼에서 탐색할 수 있는 및 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker>, 시그니처 도움말 세션의 트리거.  
   
- This walkthrough shows how to implement Signature Help for a hard-coded set of identifiers. In full implementations, the language is responsible for providing that content.  
+ 이 연습에서는 하드 코드 된 일련의 식별자에 대 한 시그니처 도움말을 구현 하는 방법을 보여 줍니다. 전체 구현에서는 언어는 해당 콘텐츠를 제공 하는 일을 담당 합니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## 사전 요구 사항  
+ Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)을 참조하세요.  
   
-## <a name="creating-a-mef-project"></a>Creating a MEF Project  
+## MEF 프로젝트 만들기  
   
-#### <a name="to-create-a-mef-project"></a>To create a MEF project  
+#### MEF 프로젝트를 만들려면  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `SignatureHelpTest`.  
+1.  C\# VSIX 프로젝트를 만듭니다. \(에 **새 프로젝트** 대화 상자에서 **Visual C\# \/ 확장성**, 다음 **VSIX 프로젝트**.\) 솔루션의 이름을 `SignatureHelpTest`합니다.  
   
-2.  Add an Editor Classifier item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  편집기 분류자 항목 템플릿을 프로젝트에 추가 합니다. 자세한 내용은 [편집기 항목 템플릿을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-an-editor-item-template.md)을 참조하세요.  
   
-3.  Delete the existing class files.  
+3.  기존 클래스 파일을 삭제합니다.  
   
-4.  Add the following references to the project, and make sure **CopyLocal** is set to `false`:  
+4.  프로젝트에 다음 참조를 추가 하 고 있는지 **{2\>copylocal** 로 설정 된 `false`:  
   
      Microsoft.VisualStudio.Editor  
   
@@ -67,169 +50,200 @@ Signature Help (also known as *Parameter Info*) displays the signature of a meth
   
      Microsoft.VisualStudio.TextManager.Interop  
   
-## <a name="implementing-signature-help-signatures-and-parameters"></a>Implementing Signature Help Signatures and Parameters  
- The Signature Help source is based on signatures that implement <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature>, each of which contains parameters that implement <xref:Microsoft.VisualStudio.Language.Intellisense.IParameter>. In a full implementation, this information would be obtained from the language documentation, but in this example, the signatures are hard-coded.  
+## 서명 구현 서명 및 매개 변수 도움말  
+ 시그니처 도움말 소스를 구현 하는 서명을 기반 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature>, 를 구현 하는 매개 변수가 포함 된 각 <xref:Microsoft.VisualStudio.Language.Intellisense.IParameter>합니다. 완전 한 구현에서 해당 언어 설명서에서이 정보를 가져올 수는 있지만이 예제에서는 시그니처는 하드 코드 된.  
   
-#### <a name="to-implement-the-signature-help-signatures-and-parameters"></a>To implement the Signature Help signatures and parameters  
+#### 서명 시그니처 도움말 및 매개 변수를 구현 하려면  
   
-1.  Add a class file and name it `SignatureHelpSource`.  
+1.  클래스 파일을 추가 하 고 이름을 `SignatureHelpSource`합니다.  
   
-2.  Add the following imports.  
+2.  다음 import를 추가 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_1.vb)]  [!code-csharp[VSSDKSignatureHelpTest#1](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_1.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_1.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#1](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_1.cs)]  
   
-3.  Add a class named `TestParameter` that implements <xref:Microsoft.VisualStudio.Language.Intellisense.IParameter>.  
+3.  라는 클래스를 추가 `TestParameter` 를 구현 하는 <xref:Microsoft.VisualStudio.Language.Intellisense.IParameter>합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_2.vb)]  [!code-csharp[VSSDKSignatureHelpTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_2.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_2.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_2.cs)]  
   
-4.  Add a constructor that sets all the properties.  
+4.  모든 속성을 설정 하는 생성자를 추가 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_3.vb)]  [!code-csharp[VSSDKSignatureHelpTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_3.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_3.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_3.cs)]  
   
-5.  Add the properties of <xref:Microsoft.VisualStudio.Language.Intellisense.IParameter>.  
+5.  속성을 추가 <xref:Microsoft.VisualStudio.Language.Intellisense.IParameter>합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_4.vb)]  [!code-csharp[VSSDKSignatureHelpTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_4.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_4.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_4.cs)]  
   
-6.  Add a class named `TestSignature` that implements <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature>.  
+6.  라는 클래스를 추가 `TestSignature` 를 구현 하는 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature>합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_5.vb)]  [!code-csharp[VSSDKSignatureHelpTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_5.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_5.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_5.cs)]  
   
-7.  Add some private fields.  
+7.  일부 개인 필드를 추가 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_6.vb)]  [!code-csharp[VSSDKSignatureHelpTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_6.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_6.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_6.cs)]  
   
-8.  Add a constructor that sets the fields and subscribes to the <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> event.  
+8.  필드를 설정 하 고 구독 하는 생성자를 추가 <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> 이벤트입니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_7.vb)]  [!code-csharp[VSSDKSignatureHelpTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_7.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_7.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_7.cs)]  
   
-9. Declare a `CurrentParameterChanged` event. This event is raised when the user fills in one of the parameters in the signature.  
+9. 선언 된 `CurrentParameterChanged` 이벤트입니다. 이 이벤트는 서명에서 매개 변수 중 하나에서 사용자가 입력할 때 발생 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_8.vb)]   [!code-csharp[VSSDKSignatureHelpTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_8.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_8.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_8.cs)]  
   
-10. Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature.CurrentParameter%2A> property so that it raises the `CurrentParameterChanged` event when the property value is changed.  
+10. 구현은 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature.CurrentParameter%2A> 한다는 발생 하므로 속성은 `CurrentParameterChanged` 이벤트 속성 값이 변경 됩니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_9.vb)]  [!code-csharp[VSSDKSignatureHelpTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_9.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_9.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_9.cs)]  
   
-11. Add a method that raises the `CurrentParameterChanged` event.  
+11. 발생 시키는 메서드를 추가 하는 `CurrentParameterChanged` 이벤트입니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_10.vb)]  [!code-csharp[VSSDKSignatureHelpTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_10.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_10.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_10.cs)]  
   
-12. Add a method that computes the current parameter by comparing the number of commas in the <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature.ApplicableToSpan%2A> to the number of commas in the signature.  
+12. 쉼표의 수를 비교 하 여 현재 매개 변수를 계산 하는 메서드를 추가 하는 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature.ApplicableToSpan%2A> 서명에 쉼표의 수입니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_11.vb)]  [!code-csharp[VSSDKSignatureHelpTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_11.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_11.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_11.cs)]  
   
-13. Add an event handler for the <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> event that calls the `ComputeCurrentParameter()` method.  
+13. 에 대 한 이벤트 처리기를 추가 <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> 이벤트를 호출 하 여 `ComputeCurrentParameter()` 메서드.  
   
-     [!code-vb[VSSDKSignatureHelpTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_12.vb)]  [!code-csharp[VSSDKSignatureHelpTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_12.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_12.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_12.cs)]  
   
-14. Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature.ApplicableToSpan%2A> property. This property holds an <xref:Microsoft.VisualStudio.Text.ITrackingSpan> that corresponds to the span of text in the buffer to which the signature applies.  
+14. <xref:Microsoft.VisualStudio.Language.Intellisense.ISignature.ApplicableToSpan%2A> 속성을 구현합니다. 이 속성에 저장 된 <xref:Microsoft.VisualStudio.Text.ITrackingSpan> 서명을 적용 되는 버퍼의 텍스트 범위에 해당 하는 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_13.vb)]  [!code-csharp[VSSDKSignatureHelpTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_13.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_13.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_13.cs)]  
   
-15. Implement the other parameters.  
+15. 다른 매개 변수를 구현 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_14.vb)]  [!code-csharp[VSSDKSignatureHelpTest#14](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_14.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_14.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#14](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_14.cs)]  
   
-## <a name="implementing-the-signature-help-source"></a>Implementing the Signature Help Source  
- The Signature Help source is the set of signatures for which you provide information.  
+## 서명 도움말 소스 구현  
+ 시그니처 도움말 원본은 서명 정보를 제공 하기 위한 집합입니다.  
   
-#### <a name="to-implement-the-signature-help-source"></a>To implement the Signature Help source  
+#### 시그니처 도움말 소스를 구현 하려면  
   
-1.  Add a class named `TestSignatureHelpSource` that implements <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource>.  
+1.  라는 클래스를 추가 `TestSignatureHelpSource` 를 구현 하는 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource>합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_15.vb)]  [!code-csharp[VSSDKSignatureHelpTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_15.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_15.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_15.cs)]  
   
-2.  Add a reference to the text buffer.  
+2.  텍스트 버퍼에 대 한 참조를 추가 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_16.vb)]  [!code-csharp[VSSDKSignatureHelpTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_16.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_16.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_16.cs)]  
   
-3.  Add a constructor that sets the text buffer and the Signature Help source provider.  
+3.  텍스트 버퍼와 시그니처 도움말 소스 공급자를 설정 하는 생성자를 추가 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_17.vb)]  [!code-csharp[VSSDKSignatureHelpTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_17.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_17.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_17.cs)]  
   
-4.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource.AugmentSignatureHelpSession%2A> method. In this example, the signatures are hard-coded, but in a full implementation you would get this information from the language documentation.  
+4.  <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource.AugmentSignatureHelpSession%2A> 메서드를 구현합니다. 이 예제에서는 시그니처는 하드 코드 하지만 완전 한 구현에서 해당 언어 설명서에서이 정보를 받을 것입니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_18.vb)]  [!code-csharp[VSSDKSignatureHelpTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_18.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_18.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_18.cs)]  
   
-5.  The helper method `CreateSignature()` is provided just for illustration.  
+5.  도우미 메서드는 `CreateSignature()` 단지 설명을 위해서만 제공 됩니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#19](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_19.vb)]  [!code-csharp[VSSDKSignatureHelpTest#19](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_19.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#19](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_19.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#19](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_19.cs)]  
   
-6.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource.GetBestMatch%2A> method. In this example, there are just two signatures, each of which has two parameters. Therefore, this method is not required. In a fuller implementation, in which more than one Signature Help source is available, this method is used to decide whether the highest-priority Signature Help source can supply a matching signature. If it cannot, the method returns null and the next-highest-priority source is asked to supply a match.  
+6.  <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource.GetBestMatch%2A> 메서드를 구현합니다. 이 예제에서는 두 가지 서명, 각각에 두 개의 매개 변수가 있습니다. 따라서이 메서드는 필요 하지 않습니다. 둘 이상의 시그니처 도움말 소스를, 사용할 수 있는 완전 한 구현에서이 메서드는 우선 순위가 가장 높은 시그니처 도움말 소스 일치 하는 시그니처를 제공할 수 있는지 여부를 결정에 사용 됩니다. 그렇지 않을 경우 메서드가 null을 반환 하 고\-우선 순위가 가장 높은 소스는 일치 하는 항목을 제공 하 라는 메시지가 표시 됩니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#20](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_20.vb)]  [!code-csharp[VSSDKSignatureHelpTest#20](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_20.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#20](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_20.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#20](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_20.cs)]  
   
-7.  Implement the Dispose() method:  
+7.  Dispose \(\) 메서드를 구현 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_21.vb)]  [!code-csharp[VSSDKSignatureHelpTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_21.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_21.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_21.cs)]  
   
-## <a name="implementing-the-signature-help-source-provider"></a>Implementing the Signature Help Source Provider  
- The Signature Help source provider is responsible for exporting the Managed Extensibility Framework (MEF) component part and for instantiating the Signature Help source.  
+## 서명 도움말 원본 공급자를 구현합니다.  
+ 시그니처 도움말 소스 공급자는 프레임 워크 MEF \(Managed Extensibility\) 구성 요소 부분 내보내기에 대 한 시그니처 도움말 소스를 인스턴스화하기 위한 담당 합니다.  
   
-#### <a name="to-implement-the-signature-help-source-provider"></a>To implement the Signature Help source provider  
+#### 시그니처 도움말 원본 공급자를 구현 하려면  
   
-1.  Add a class named `TestSignatureHelpSourceProvider` that implements <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider>, and export it with a <xref:Microsoft.VisualStudio.Utilities.NameAttribute>, a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "text", and an <xref:Microsoft.VisualStudio.Utilities.OrderAttribute> of Before="default".  
+1.  라는 클래스를 추가 `TestSignatureHelpSourceProvider` 를 구현 하는 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider>, 및 사용 하 여 내보내기는 <xref:Microsoft.VisualStudio.Utilities.NameAttribute>,  <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> 으로 "텍스트" 및 <xref:Microsoft.VisualStudio.Utilities.OrderAttribute> 의 전에 \= "default"입니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#22](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_22.vb)]  [!code-csharp[VSSDKSignatureHelpTest#22](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_22.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#22](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_22.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#22](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_22.cs)]  
   
-2.  Implement <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider.TryCreateSignatureHelpSource%2A> by instantiating the `TestSignatureHelpSource`.  
+2.  구현 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider.TryCreateSignatureHelpSource%2A> 인스턴스화하여는 `TestSignatureHelpSource`합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#23](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_23.vb)]  [!code-csharp[VSSDKSignatureHelpTest#23](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_23.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#23](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_23.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#23](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_23.cs)]  
   
-## <a name="implementing-the-command-handler"></a>Implementing the Command Handler  
- Signature Help is typically triggered by a ( character and dismissed by a ) character. You can handle these keystrokes by implementing a <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> so that it triggers a Signature Help session when it receives a ( character preceded by a known method name, and dismisses the session when it receives a ) character.  
+## 명령 처리기를 구현합니다.  
+ 서명 도움말에 의해 트리거되면 일반적으로 \(문자와으로 해제 됨는\) 문자입니다. 구현 하 여 이러한 키 입력을 처리할 수 있습니다는 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 을 받았을 때 시그니처 도움말 세션은 \(문자 앞에 알려진된 메서드 이름 및 받았을 때 세션을 해제 한\) 문자.  
   
-#### <a name="to-implement-the-command-handler"></a>To implement the command handler  
+#### 명령 처리기를 구현 하려면  
   
-1.  Add a class named `TestSignatureHelpCommand` that implements <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.  
+1.  라는 클래스를 추가 `TestSignatureHelpCommand` 를 구현 하는 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#24](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_24.vb)]  [!code-csharp[VSSDKSignatureHelpTest#24](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_24.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#24](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_24.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#24](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_24.cs)]  
   
-2.  Add private fields for the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> adapter (which lets you add the command handler to the chain of command handlers), the text view, the Signature Help broker and session, a <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>, and the next <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.  
+2.  Private 필드에 대 한 추가 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 어댑터 \(체인의 명령 처리기를 명령 처리기를 추가할 수 있습니다\), 텍스트 보기, 시그니처 도움말 브로커 및 세션에는 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>, 처리와 다음 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#25](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_25.vb)]  [!code-csharp[VSSDKSignatureHelpTest#25](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_25.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#25](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_25.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#25](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_25.cs)]  
   
-3.  Add a constructor to initialize these fields and to add the command filter to the chain of command filters.  
+3.  이러한 필드를 초기화 하 고 명령 필터 체인의 명령 필터를 추가 하는 생성자를 추가 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#26](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_26.vb)]  [!code-csharp[VSSDKSignatureHelpTest#26](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_26.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#26](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_26.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#26](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_26.cs)]  
   
-4.  Implement the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> method to trigger the Signature Help session when the command filter receives a ( character after one of the known method names, and to dismiss the session when it receives a ) character while the session is still active. In every case, the command is forwarded.  
+4.  구현에서 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 명령 필터를 받으면 시그니처 도움말 세션을 트리거하는 메서드는 \(알려진된 메서드 이름 및를 받을 때 세션을 해제 한 후 문자는\) 세션이 여전히 활성 상태인 동안 문자. 모든 경우에 명령이 전달 됩니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#27](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_27.vb)]  [!code-csharp[VSSDKSignatureHelpTest#27](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_27.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#27](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_27.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#27](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_27.cs)]  
   
-5.  Implement the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> method so that it always forwards the command.  
+5.  구현 된 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 메서드를 항상 명령을 전달 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#28](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_28.vb)]  [!code-csharp[VSSDKSignatureHelpTest#28](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_28.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#28](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_28.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#28](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_28.cs)]  
   
-## <a name="implementing-the-signature-help-command-provider"></a>Implementing the Signature Help Command Provider  
- You can provide the Signature Help command by implementing the <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> to instantiate the command handler when the text view is created.  
+## 서명 도움말 명령 공급자를 구현합니다.  
+ 구현 하 여 서명 도움말 명령을 제공할 수 있습니다는 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 텍스트 뷰를 만들 때 명령 처리기를 인스턴스화할 수 있습니다.  
   
-#### <a name="to-implement-the-signature-help-command-provider"></a>To implement the Signature Help command provider  
+#### 시그니처 도움말 명령 공급자를 구현 하려면  
   
-1.  Add a class named `TestSignatureHelpController` that implements <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> and export it with the <xref:Microsoft.VisualStudio.Utilities.NameAttribute>, <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>, and <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>.  
+1.  라는 클래스를 추가 `TestSignatureHelpController` 를 구현 하는 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 및 사용 하 여 내보내기는 <xref:Microsoft.VisualStudio.Utilities.NameAttribute>, <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>, 및 <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#29](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_29.vb)]  [!code-csharp[VSSDKSignatureHelpTest#29](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_29.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#29](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_29.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#29](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_29.cs)]  
   
-2.  Import the <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> (used to get the <xref:Microsoft.VisualStudio.Text.Editor.ITextView>, given the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> object), the <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> (used to find the current word), and the <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker> (to trigger the Signature Help session).  
+2.  가져오기는 <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> \(가져오는 데는 <xref:Microsoft.VisualStudio.Text.Editor.ITextView>, 주어진는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 개체\), <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> \(현재 단어를 찾는 사용\), 및 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker> \(시그니처 도움말 세션 트리거\)를 합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#30](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_30.vb)]  [!code-csharp[VSSDKSignatureHelpTest#30](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_30.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#30](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_30.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#30](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_30.cs)]  
   
-3.  Implement the <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener.VsTextViewCreated%2A> method by instantiating the `TestSignatureCommandHandler`.  
+3.  구현 된 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener.VsTextViewCreated%2A> 인스턴스화하여 메서드는 `TestSignatureCommandHandler`합니다.  
   
-     [!code-vb[VSSDKSignatureHelpTest#31](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_31.vb)]  [!code-csharp[VSSDKSignatureHelpTest#31](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_31.cs)]  
+     [!code-vb[VSSDKSignatureHelpTest#31](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_31.vb)]
+     [!code-cs[VSSDKSignatureHelpTest#31](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_31.cs)]  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
- To test this code, build the SignatureHelpTest solution and run it in the experimental instance.  
+## 코드 빌드 및 테스트  
+ 이 코드를 테스트 하려면 SignatureHelpTest 솔루션 빌드하고 실험적 인스턴스에서 실행 합니다.  
   
-#### <a name="to-build-and-test-the-signaturehelptest-solution"></a>To build and test the SignatureHelpTest solution  
+#### 빌드하고 SignatureHelpTest 솔루션을 테스트 하려면  
   
-1.  Build the solution.  
+1.  솔루션을 빌드합니다.  
   
-2.  When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+2.  디버거에서 이 프로젝트를 실행하면 Visual Studio의 두 번째 인스턴스가 인스턴스화됩니다.  
   
-3.  Create a text file and type some text that includes the word "add" plus an opening parenthesis.  
+3.  텍스트 파일 형식 "추가" 라는 단어를 포함 하는 일부 텍스트와 여는 괄호를 만듭니다.  
   
-4.  After you type the opening parenthesis, you should see a tooltip that displays a list of the two signatures for the `add()` method.  
+4.  여는 괄호를 입력 한 후에 대 한 두 개의 서명의 목록을 표시 하는 도구 설명이 표시 됩니다는 `add()` 메서드.  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Linking a Content Type to a File Name Extension](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+## 참고 항목  
+ [연습: 파일 이름 확장명에 콘텐츠 형식 연결](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

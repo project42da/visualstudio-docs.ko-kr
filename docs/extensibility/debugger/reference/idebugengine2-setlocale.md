@@ -1,68 +1,51 @@
 ---
-title: IDebugEngine2::SetLocale | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugEngine2::SetLocale
-helpviewer_keywords:
-- IDebugEngine2::SetLocale
+title: "IDebugEngine2::SetLocale | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugEngine2::SetLocale"
+helpviewer_keywords: 
+  - "IDebugEngine2::SetLocale"
 ms.assetid: cd0d2cf1-2aac-43da-a830-4bb3d696c219
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6b655d95dacbaf5142c6be70141420e553012d73
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugengine2setlocale"></a>IDebugEngine2::SetLocale
-Sets the locale of the debug engine (DE).  
+# IDebugEngine2::SetLocale
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+디버그 엔진 \(DE\)의 로캘을 설정합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT SetLocale(   
-   WORD wLangID  
+```cpp#  
+HRESULT SetLocale(   
+   WORD wLangID  
 );  
 ```  
   
-```csharp  
-int SetLocale(   
-   ushort wLangID  
+```c#  
+int SetLocale(   
+   ushort wLangID  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `wLangID`  
- [in] Specifies the language locale. For example, 1033 for English.  
+ \[in\] 언어 로캘을 지정합니다.  예를 들어, 영어의 경우 1033입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method is called by the session debug manager (SDM) to propagate the locale settings of the IDE so that strings returned by the DE are properly localized.  
+## 설명  
+ 이 메서드는 세션 디버그 매니저 \(SDM\)를 사용 하는 DE에서 반환 된 문자열이 올바르게 지역화 된 IDE의 로케일 설정을 전파 하 여 호출 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

@@ -1,61 +1,44 @@
 ---
-title: IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugProcessSecurity::QueryCanSafelyAttach
+title: "IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugProcessSecurity::QueryCanSafelyAttach"
 ms.assetid: 63ec1ae8-27da-4574-aa15-1c986fe9fe58
 caps.latest.revision: 4
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8f0e6f4942a9151bb95d4f14e074355562016096
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 4
 ---
-# <a name="idebugprocesssecurityquerycansafelyattach"></a>IDebugProcessSecurity::QueryCanSafelyAttach
-This method allows the port supplier to display a warning before the user attaches to an unsafe process.  
+# IDebugProcessSecurity::QueryCanSafelyAttach
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는 사용자가 안전 하지 않은 프로세스에 연결 하기 전에 경고를 표시 하려면 포트 공급자가 있습니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT QueryCanSafelyAttach();  
 ```  
   
-```csharp  
+```c#  
 int QueryCanSafelyAttach();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- The return values are as follows:  
+## 반환 값  
+ 반환 값은 다음과 같습니다.  
   
--   `S_OK`: Attaching to process is safe and no warning dialog box is shown.  
+-   `S_OK`: 프로세스에 연결 하는 것은 안전 하지 하 고 경고 대화 상자가 표시 됩니다.  
   
--   `S_FALSE`: Attaching could be a security problem and a dialog box with a warning is shown.  
+-   `S_FALSE`: 첨부 보안 문제가 될 수 및 경고 메시지가 포함 된 대화 상자가 표시 됩니다.  
   
--   `FAILURE`: Attaching to process fails.  
+-   `FAILURE`: 프로세스에 연결할 수 없습니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

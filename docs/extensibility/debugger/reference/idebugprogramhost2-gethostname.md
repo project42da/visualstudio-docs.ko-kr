@@ -1,74 +1,57 @@
 ---
-title: IDebugProgramHost2::GetHostName | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgramHost2::GetHostName
-helpviewer_keywords:
-- IDebugProgramHost2::GetHostName
+title: "IDebugProgramHost2::GetHostName | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgramHost2::GetHostName"
+helpviewer_keywords: 
+  - "IDebugProgramHost2::GetHostName"
 ms.assetid: 48bbb089-e59a-471a-9965-24b42a8dabf3
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0efd66ee16ba5c5ab1a20fa07db37cd716a3e2f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprogramhost2gethostname"></a>IDebugProgramHost2::GetHostName
-Gets the title, friendly name, or file name of the hosting process of this program.  
+# IDebugProgramHost2::GetHostName
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+제목, 이름, 또는이 프로그램을 호스팅 프로세스의 파일 이름을 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetHostName(   
-   DWORD dwType,  
-   BSTR* pbstrHostName  
+```cpp#  
+HRESULT GetHostName(   
+   DWORD dwType,  
+   BSTR* pbstrHostName  
 );  
 ```  
   
-```csharp  
-int GetHostName(   
-   uint dwType,  
-   out string pbstrHostName  
+```c#  
+int GetHostName(   
+   uint dwType,  
+   out string pbstrHostName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `dwType`  
- [in] A value from the [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) enumeration.  
+ \[in\] 값은 [GETHOSTNAME\_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) 열거형입니다.  
   
  `pbstrHostName`  
- [out] Returns the requested name of the hosting process.  
+ \[out\] 호스팅 프로세스는 요청 된 이름을 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- In a typical implementation of this method, the `dwType` parameter is ignored and a friendly name of the host machine is returned. Another possible implementation is to pass the `dwType` parameter to a call to the [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) method to get the name.  
+## 설명  
+ 이 메서드의 표준 구현에 `dwType` 매개 변수가 무시 되 고 호스트 컴퓨터의 이름을 반환 합니다.  다른 구현 중 전달 하는 것은 `dwType` 매개 변수를 호출 하는 [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) 메서드의 이름을 가져옵니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)   
  [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md)

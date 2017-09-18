@@ -1,57 +1,40 @@
 ---
-title: Custom Document Properties in a Legacy Language Service | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- custom document properties, language services [managed package framework]
-- document properties, custom
-- language services [managed package framework], custom document properties
+title: "레거시 언어 서비스에서 사용자 지정 문서 속성 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "사용자 지정 문서 속성, 언어 서비스 [관리 되는 패키지 프레임 워크]"
+  - "사용자 지정 문서 속성"
+  - "언어 서비스 [관리 되는 패키지 프레임 워크] 사용자 지정 문서 속성"
 ms.assetid: cc714a67-b33e-4440-9203-3c90f648bd9c
 caps.latest.revision: 18
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a76851b183ead84dad32ed36ce22f677ae3f3c3d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 18
 ---
-# <a name="custom-document-properties-in-a-legacy-language-service"></a>Custom Document Properties in a Legacy Language Service
-Document properties can be displayed in the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Properties** window. Programming languages generally do not have properties associated with individual source files. However, XML supports document properties that affect the encoding, schema, and stylesheet.  
+# 레거시 언어 서비스에서 사용자 지정 문서 속성
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+문서 등록 정보를 표시할 수 있는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]**속성이** 창.   프로그래밍 언어는 일반적으로 개별 소스 파일과 관련 된 등록 정보 없습니다. 그러나 XML 인코딩, 스키마 및 스타일 시트에 영향을 주는 문서 속성을 지원 합니다.  
   
-## <a name="discussion"></a>Discussion  
- If your language needs custom document properties, you must derive a class from the <xref:Microsoft.VisualStudio.Package.DocumentProperties> class and implement the necessary properties on your derived class.  
+## 토론  
+ 사용자 지정 문서 속성 언어를 해야 하는 경우 클래스에서 파생 되어야는 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 클래스 및 파생된 클래스에 필요한 속성을 구현 합니다.  
   
- In addition, document properties are typically stored in the source file itself. This requires the language service to parse the property information from the source file to display in the **Properties** window and to update the source file when a change is made to the document properties in the **Properties** window.  
+ 뿐만 아니라, 문서 등록 정보는 일반적으로 소스 파일에 저장 됩니다.  이 언어 서비스 속성 정보를 표시 하려면 소스 파일에서 구문 분석할 필요는  **속성** 창 문서 등록 정보에 변경 사항이 있을 경우 원본 파일을 업데이트 하 고 있는  **속성** 창.  
   
-## <a name="customizing-the-documentproperties-class"></a>Customizing the DocumentProperties Class  
- To support custom document properties, you must derive a class from the <xref:Microsoft.VisualStudio.Package.DocumentProperties> class and add as many properties as you need. You should also supply user attributes to organize them in the **Properties** window display. If a property has only a `get` accessor, it is shown as read-only in the **Properties** window. If a property has both `get` and `set` accessors, the property can also be updated in the **Properties** window.  
+## DocumentProperties 클래스를 사용자 지정합니다.  
+ 사용자 지정 문서 속성을 지원 하기 위해 클래스에서 파생 되어야는 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 클래스 및 필요한 만큼 속성을 추가 합니다.  도를 구성 하는 사용자 특성을 제공 해야 합니다을  **속성** 창 표시 합니다.  속성이 있는 경우에은 `get` 접근자를 읽기 전용으로 표시 되는  **속성** 창.  속성이 모두 있을 경우 `get` 및 `set` 접근자 속성 또한 업데이트 될 수에  **속성이** 창.  
   
-### <a name="example"></a>Example  
- Here is an example class derived from <xref:Microsoft.VisualStudio.Package.DocumentProperties>, showing two properties, Filename and Description. When a property is updated, a custom method on the <xref:Microsoft.VisualStudio.Package.LanguageService> class is called to write the property to the source file.  
+### 예제  
+ 다음은 예제 클래스에서 파생 된 <xref:Microsoft.VisualStudio.Package.DocumentProperties>, 두 속성, 파일 이름 및 설명을 표시 합니다.  속성이 업데이트 될 때, 사용자 지정 방법에는 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스를 호출할 속성은 소스 파일에 쓸 수 있습니다.  
   
-```csharp  
+```c#  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -138,12 +121,12 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="instantiating-the-custom-documentproperties-class"></a>Instantiating the Custom DocumentProperties class  
- To instantiate your custom document properties class, you must override the <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> method in your version of the <xref:Microsoft.VisualStudio.Package.LanguageService> class to return a single instance of your <xref:Microsoft.VisualStudio.Package.DocumentProperties> class.  
+## 사용자 지정 DocumentProperties 클래스 인스턴스화  
+ 사용자 지정 문서 속성 클래스를 인스턴스화하려면에서는 재정의 해야는 <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> 버전의 메서드에서 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스의 단일 인스턴스를 반환 합니다를 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 클래스입니다.  
   
-### <a name="example"></a>Example  
+### 예제  
   
-```csharp  
+```c#  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -165,22 +148,22 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="properties-in-the-source-file"></a>Properties in the Source File  
- Since document properties are usually specific to the source file, the values are stored in the source file itself. This requires support from the language parser or scanner to define these properties. For example, the properties of an XML document are stored on the root node. The values on the root node are modified when the **Properties** window values are changed, and the root node is updated in the editor.  
+## 소스 파일에서 속성  
+ 문서 속성은 일반적으로 소스 파일에 특정 하기 때문에 값 소스 파일에 저장 됩니다.  이 속성을 정의 하는 스캐너 또는 언어 파서 지원을 해야 합니다.  예를 들어, 속성은 XML 문서의 루트 노드에 저장 됩니다.  경우 루트 노드에 값을 수정에  **속성이** 창 값을 변경 하 고 루트 노드 편집기에서 업데이트 됩니다.  
   
-### <a name="example"></a>Example  
- This example stores the properties "Filename" and "Description" in the first two lines of the source file, embedded in a special comment header, as:  
+### 예제  
+ 이 예제에서는 속성을 "파일 이름" 및 소스 파일의 처음 두 줄에 "설명으로는 특별 한 설명 머리글에 포함"을 저장 합니다.  
   
 ```  
 //!Filename = file.testext  
 //!Description = A sample file  
 ```  
   
- This example shows the two methods needed to get and set the document properties from the first two lines of the source file as well as how the properties are updated if the user modifies the source file directly. The `SetPropertyValue` method in the example shown here is the same one called from the `TestDocumentProperties` class as shown in the "Customizing the DocumentProperties class" section.  
+ 이 예제 가져오고 사용자가 원본 파일을 직접 수정 하는 경우 속성을 업데이트 하는 방법을 함께 소스 파일의 첫 두 줄에서 문서 속성을 설정 하는 데 필요한 두 가지 메서드를 보여 줍니다.  `SetPropertyValue` 다음은 같은 예제 메서드가 호출에서 하나는 `TestDocumentProperties` 클래스는 "DocumentProperties 클래스를 사용자 지정" 섹션에 나와 있는 것 처럼.  
   
- This example uses the scanner to determine the type of tokens in the first two lines. This example is for illustrative purposes only. A more typical approach to this situation is to parse the source file into what is called a parse tree where each node of the tree contains information about a particular token. The root node would contain the document properties.  
+ 처음 두 줄의 토큰의 형식을 확인 하려면 스캐너를 추가 하는 예제입니다.  이 예제는 설명을 위한 것입니다.  좀 더 일반적인 방법은이 상황을 어떻게 구문 분석 트리는 트리의 각 노드에 특정 토큰에 대 한 정보가 들어 있는 라고에 원본 파일을 구문 분석할 것입니다.  루트 노드는 문서 속성이 포함 됩니다.  
   
-```csharp  
+```c#  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -415,5 +398,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)
+## 참고 항목  
+ [레거시 언어 서비스 기능](../../extensibility/internals/legacy-language-service-features1.md)

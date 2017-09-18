@@ -1,79 +1,62 @@
 ---
-title: IDebugProcessEx2::AddImplicitProgramNodes | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProcessEx2::AddImplicitProgramNodes
-helpviewer_keywords:
-- IDebugProcessEx2::AddImplicitProgramNodes method
+title: "IDebugProcessEx2::AddImplicitProgramNodes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProcessEx2::AddImplicitProgramNodes"
+helpviewer_keywords: 
+  - "IDebugProcessEx2::AddImplicitProgramNodes 메서드"
 ms.assetid: 8b491b00-f9e7-45b3-9115-fe58c3464289
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b248f3077a21e0e1f8dfc989971454a8e5c06aa7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprocessex2addimplicitprogramnodes"></a>IDebugProcessEx2::AddImplicitProgramNodes
-This method adds a program node for each debug engine (DE) specified.  
+# IDebugProcessEx2::AddImplicitProgramNodes
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는 프로그램 노드가 지정 된 각 디버그 엔진 \(DE\) 추가 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT AddImplicitProgramNodes(  
-   REFGUID guidLaunchingEngine,  
-   GUID*   rgguidSpecificEngines,  
-   DWORD   celtSpecificEngines  
+   REFGUID guidLaunchingEngine,  
+   GUID*   rgguidSpecificEngines,  
+   DWORD   celtSpecificEngines  
 );  
 ```  
   
-```csharp  
+```c#  
 int AddImplicitProgramNodes(  
-   ref Guid guidLaunchingEngine,  
-   Guid[]   rgguidSpecificEngines,  
-   uint     celtSpecificEngines  
+   ref Guid guidLaunchingEngine,  
+   Guid[]   rgguidSpecificEngines,  
+   uint     celtSpecificEngines  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `guidLaunchingEngine`  
- [in] The `GUID` of a DE that is to be used to launch programs (and is assumed to add its own program nodes).  
+ \[in\] `GUID` 의 프로그램을 실행 하는 데 사용 됩니다 \(및 자체 프로그램에 노드를 추가 하려면 가정\) 하는 DE.  
   
  `rgguidSpecificEngines`  
- [in] Array of `GUID`s of DEs for which program nodes will be added.  
+ \[in\] 배열 `GUID`s DEs 응용 프로그램 노드가 추가 될 것입니다.  
   
  `celtSpecificEngines`  
- [in] The number of `GUID`s in the `rgguidSpecificEngines` array.  
+ \[in\] 수를 `GUID`s에 있는 `rgguidSpecificEngines` 배열.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- [Program Nodes](../../../extensibility/debugger/program-nodes.md) will be added for each DE listed in `rgguidSpecificEngines`—excluding the launching engine (as given in `guidLaunchingEngine`), which is assumed to add its own program node when it launches a program.  
+## 설명  
+ [프로그램 노드](../../../extensibility/debugger/program-nodes.md)나열 된 각 DE에 대 한 추가 됩니다 `rgguidSpecificEngines`\-시작 엔진을 제외 \(지정 `guidLaunchingEngine`\), 가정 프로그램을 시작 하면 해당 프로그램이 노드를 추가 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)   
- [Program Nodes](../../../extensibility/debugger/program-nodes.md)
+ [프로그램 노드](../../../extensibility/debugger/program-nodes.md)

@@ -1,74 +1,57 @@
 ---
-title: IDebugBoundBreakpoint2::SetPassCount | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBoundBreakpoint2::SetPassCount
-helpviewer_keywords:
-- SetPassCount method
-- IDebugBoundBreakpoint2::SetPassCount method
+title: "IDebugBoundBreakpoint2::SetPassCount | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBoundBreakpoint2::SetPassCount"
+helpviewer_keywords: 
+  - "SetPassCount 메서드"
+  - "IDebugBoundBreakpoint2::SetPassCount 메서드"
 ms.assetid: b32c12f9-b34d-43bd-a1b9-61af6cf8e51b
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a817d4d2a6ce10259de9c8749b5e2ecb61d5ad5a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
-Sets or changes the pass count associated with this bound breakpoint.  
+# IDebugBoundBreakpoint2::SetPassCount
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+설정 하거나이 바인딩된 중단점에 관련 된 단계 수를 변경 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT SetPassCount(   
-   BP_PASSCOUNT bpPassCount  
+```cpp#  
+HRESULT SetPassCount(   
+   BP_PASSCOUNT bpPassCount  
 );  
 ```  
   
-```csharp  
-int SetPassCount(   
-   BP_PASSCOUNT bpPassCount  
+```c#  
+int SetPassCount(   
+   BP_PASSCOUNT bpPassCount  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `bpPassCount`  
- [in] The [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) structure that specifies the pass count.  
+ \[in\] [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) 의 단계 수를 지정 하는 구조입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the state of the bound breakpoint object is set to `BPS_DELETED` (part of the [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeration).  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_BP_DELETED` 바인딩된 중단점 개체의 상태를 설정는 경우 `BPS_DELETED` \(일부는 [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md) 열거형\).  
   
-## <a name="remarks"></a>Remarks  
- The pass count determines when the breakpoint is fired. The current pass or hit count can be obtained by calling the [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) method.  
+## 설명  
+ 통과 횟수 중단점을 발생 하는 시기를 결정 합니다.  현재 패스 또는 적중된 횟수를 호출 하 여 얻을 수 있는 [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) 메서드.  
   
- Any pass count that was previously associated with this breakpoint is lost.  
+ 이 중단점에 이전에 연결 된 모든 성공 횟수는 손실 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
  [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md)   
- [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
- [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)
+ [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
+ [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md)

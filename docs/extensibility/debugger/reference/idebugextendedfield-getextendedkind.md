@@ -1,64 +1,47 @@
 ---
-title: IDebugExtendedField::GetExtendedKind | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugExtendedField::GetExtendedKind
-- GetExtendedKind
+title: "IDebugExtendedField::GetExtendedKind | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugExtendedField::GetExtendedKind"
+  - "GetExtendedKind"
 ms.assetid: 20dc1c13-3cc0-4bb4-9c99-fa85587c86c3
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: bbf1ab74d1a1eeeaab4e61792b9e723bc9c9313f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugextendedfieldgetextendedkind"></a>IDebugExtendedField::GetExtendedKind
-Retrieves the specified extended field kind.  
+# IDebugExtendedField::GetExtendedKind
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+지정 된 확장 된 필드 종류를 검색합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT GetExtendedKind(  
-   FIELD_KIND_EX* pdwKind  
+   FIELD_KIND_EX* pdwKind  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetExtendedKind(  
-   ref enum_FIELD_KIND_EX pdwKind  
+   ref enum_FIELD_KIND_EX pdwKind  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pdwKind`  
- [in, out] Value from the [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md) enumeration that defines the kind of field.  
+ \[in, out\] 값은 [FIELD\_KIND\_EX](../../../extensibility/debugger/reference/field-kind-ex.md) 필드의 종류를 정의 하는 열거형입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugExtendedField](../../../extensibility/debugger/reference/idebugextendedfield.md)

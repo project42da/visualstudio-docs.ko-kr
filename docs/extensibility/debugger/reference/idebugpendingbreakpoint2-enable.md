@@ -1,76 +1,59 @@
 ---
-title: IDebugPendingBreakpoint2::Enable | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPendingBreakpoint2::Enable
-helpviewer_keywords:
-- IDebugPendingBreakpoint2::Enable method
-- Enable method
+title: "IDebugPendingBreakpoint2::Enable | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPendingBreakpoint2::Enable"
+helpviewer_keywords: 
+  - "IDebugPendingBreakpoint2::Enable 메서드"
+  - "Enable 메서드"
 ms.assetid: 09e32d05-464b-40a6-a41d-76f2759cf2cd
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5cab200b842de2d63596dfa311acb18236c50782
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugpendingbreakpoint2enable"></a>IDebugPendingBreakpoint2::Enable
-Toggles the enabled state of the pending breakpoint.  
+# IDebugPendingBreakpoint2::Enable
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+보류 중단점의 활성화 상태를 설정\/해제 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT Enable(   
-   BOOL fEnable  
+```cpp#  
+HRESULT Enable(   
+   BOOL fEnable  
 );  
 ```  
   
-```csharp  
-int Enable(   
-   int fEnable  
+```c#  
+int Enable(   
+   int fEnable  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `fEnable`  
- [in] Set to nonzero (`TRUE`) to enable a pending breakpoint, or to zero (`FALSE`) to disable.  
+ \[in\] 0이 아닌 값으로 설정 \(`TRUE`\) 보류 중인 중단점을 설정 하려면 또는 0으로 \(`FALSE`\) 사용 하지 않도록 설정 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the breakpoint has been deleted.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_BP_DELETED` 중단점 삭제 된 경우입니다.  
   
-## <a name="remarks"></a>Remarks  
- When a pending breakpoint is enabled or disabled, all breakpoints bound from it are set to the same state.  
+## 설명  
+ 보류 중단점 설정 또는 해제 하면 모든 중단점을 바인딩할 상태로 동일 하 게 설정 됩니다.  
   
- This method may be called as many times as necessary, even if the breakpoint is already enabled or disabled.  
+ 중단점 이미 활성화 또는 비활성화 하는 경우에 여러 번 필요한 경우이 메서드를 호출할 수 있습니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CPendingBreakpoint` object that exposes the [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface.  
+## 예제  
+ 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CPendingBreakpoint` 를 노출 하는 개체는 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 인터페이스입니다.  
   
-```cpp  
+```cpp#  
 HRESULT CPendingBreakpoint::Enable(BOOL fEnable)    
 {    
    HRESULT hr;    
@@ -100,5 +83,5 @@ HRESULT CPendingBreakpoint::Enable(BOOL fEnable)
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

@@ -1,147 +1,135 @@
 ---
-title: 'Walkthrough: Creating a Legacy Language Service | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- language services [managed package framework], creating
+title: "연습: 레거시 언어 서비스 만들기 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "언어 서비스 [관리 되는 패키지 프레임 워크], 만들기"
 ms.assetid: 6a5dd2c2-261b-4efd-a3f4-8fb90b73dc82
 caps.latest.revision: 19
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 1322e22acf70d37e43e68edac4fe23ba96011317
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 19
 ---
-# <a name="walkthrough-creating-a-legacy-language-service"></a>Walkthrough: Creating a Legacy Language Service
-Using the managed package framework (MPF) language classes to implement a language service in [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] is straightforward. You need a VSPackage to host the language service, the language service itself, and a parser for your language.  
+# 연습: 레거시 언어 서비스 만들기
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+언어 서비스를 구현 하는 관리 되는 패키지 프레임 워크 \(MPF\) 언어 클래스를 사용 하 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 은 간단 합니다. 언어 서비스, 언어 서비스 자체와 해당 언어에 대 한 파서 호스팅하려면 VSPackage 필요 합니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- To follow this walkthrough, you must install the Visual Studio SDK. For more information, see [Visual Studio SDK](../../extensibility/visual-studio-sdk.md).  
+## 사전 요구 사항  
+ 이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 [Visual Studio SDK](../../extensibility/visual-studio-sdk.md)을 참조하세요.  
   
-## <a name="locations-for-the-visual-studio-package-project-template"></a>Locations for the Visual Studio Package Project Template  
- The Visual Studio Package Project Template can be found in three different template locations in the **New Project** dialog box:  
+## Visual Studio 패키지 프로젝트 템플릿의 위치  
+ Visual Studio 패키지 프로젝트 서식 파일의 세 가지 다른 템플릿 위치에서 찾을 수 있습니다는 **새 프로젝트** 대화 상자:  
   
-1.  Under Visual Basic Extensibility. The default language of the project is Visual Basic.  
+1.  Visual Basic 확장성에 위치한 템플릿 프로젝트의 기본 언어는 Visual Basic입니다.  
   
-2.  Under C# Extensibility. The default language of the project is C#.  
+2.  C\# 확장성에 위치한 템플릿 프로젝트의 기본 언어는 C\#입니다.  
   
-3.  Under Other Project Types Extensibility. The default language of the project is C++.  
+3.  다른 프로젝트 형식 확장성에 위치한 템플릿 프로젝트의 기본 언어는 C\+\+입니다.  
   
-### <a name="create-a-vspackage"></a>Create a VSPackage  
+### VSPackage를 만들려면  
   
-1.  Create a new VSPackage with the Visual Studio Package project template.  
+1.  Visual Studio 패키지 프로젝트 템플릿을 사용 하 여 새 VSPackage를 만듭니다.  
   
-     If you are adding a language service to an existing VSPackage, skip the following steps and go directly to the "Create the Language Service Class" procedure.  
+     언어 서비스는 기존 VSPackage를를 추가 하는 경우 다음 단계를 건너뛰고 "언어 서비스 클래스 만들기" 절차로 바로 이동 합니다.  
   
-2.  Enter MyLanguagePackage for the name of the project and click **OK**.  
+2.  MyLanguagePackage 프로젝트의 이름을 입력 하 고 클릭 **확인**합니다.  
   
-     You can use whatever name you want. These procedures detailed here assume MyLanguagePackage as the name.  
+     원하는 어떤 이름이 사용할 수 있습니다. 여기에서 자세히 설명 하는 이러한 프로시저는 이름으로 MyLanguagePackage을 가정 합니다.  
   
-3.  Select [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] as the language and the option to generate a new key file. Click **Next**.  
+3.  선택 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 언어 및 새 키 파일을 생성 하는 옵션입니다.**다음**을 클릭합니다.  
   
-4.  Enter the appropriate company and package information. Click **Next**.  
+4.  적절 한 회사 및 패키지 정보를 입력 합니다.**다음**을 클릭합니다.  
   
-5.  Select **Menu Command**. Click **Next**.  
+5.  선택 **메뉴 명령**합니다.**다음**을 클릭합니다.  
   
-     If you do not intend to support code snippets, you can just click Finish and ignore the next step.  
+     코드 조각을 지원 하지 않을 경우 방금 마침을 클릭을 다음 단계를 무시 합니다.  
   
-6.  Enter **Insert Snippet** as the **Command Name** and `cmdidInsertSnippet` for the **Command ID**. Click **Finish**.  
+6.  입력 **코드 조각을 삽입** 으로 **명령 이름** 및 `cmdidInsertSnippet` 에 대 한는 **명령 ID**합니다.**마침**을 클릭합니다.  
   
-     The **Command Name** and **Command ID** can be whatever you want, these are just examples.  
+     **명령 이름** 및 **명령 ID** 이러한은 예제 일 뿐, 원하는 될 수 있습니다.  
   
-### <a name="create-the-language-service-class"></a>Create the Language Service Class  
+### 언어 서비스 클래스 만들기  
   
-1.  In **Solution Explorer**, right-click on the MyLanguagePackage project, choose **Add**, **Reference**, and then choose the **Add New Reference** button.  
+1.  **솔루션 탐색기**, MyLanguagePackage 프로젝트를 마우스 오른쪽 단추로 클릭, 선택, **추가**, **참조**, 를 선택한 다음는 **새 참조 추가** 단추입니다.  
   
-2.  In the **Add Reference** dialog box, select **Microsoft.VisualStudio.Package.LanguageService** in the **.NET** tab and click **OK**.  
+2.  에 **참조 추가** 대화 상자에서 **Microsoft.VisualStudio.Package.LanguageService** 에 **.NET** 탭을 클릭 **확인**합니다.  
   
-     This needs to be done only once for the language package project.  
+     이 언어 패키지 프로젝트에 대 한 한 번만 수행 해야 합니다.  
   
-3.  In **Solution Explorer**, right-click on the VSPackage project and select **Add**, **Class**.  
+3.  **솔루션 탐색기**, VSPackage 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가**, **클래스**합니다.  
   
-4.  Make sure **Class** is selected in the templates list.  
+4.  확인 **클래스** 템플릿 목록에서 선택 합니다.  
   
-5.  Enter **MyLanguageService.cs** for the name of the class file and click **Add**.  
+5.  입력 **MyLanguageService.cs** 고 클래스 파일 이름에 대 한 **추가**합니다.  
   
-     You can use whatever name you want. These procedures detailed here assume `MyLanguageService` as the name.  
+     원하는 어떤 이름이 사용할 수 있습니다. 여기에서 자세히 가정 `MyLanguageService` 이름으로 합니다.  
   
-6.  In the MyLanguageService.cs file, add the following `using` statements.  
+6.  MyLanguageService.cs 파일에서 다음 추가 `using` 문입니다.  
   
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_1.cs)]  [!code-vb[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_1.vb)]  
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_1.cs)]
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_1.vb)]  
   
-7.  Modify the `MyLanguageService` class to derive from the <xref:Microsoft.VisualStudio.Package.LanguageService> class:  
+7.  수정 된 `MyLanguageService` 클래스에서 파생 하는 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스:  
   
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_2.cs)]  [!code-vb[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_2.vb)]  
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_2.cs)]
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_2.vb)]  
   
-8.  Position the cursor on "LanguageService" and from the **Edit**, **IntelliSense** menu, select **Implement Abstract Class**. This adds the minimum necessary methods to implement a language service class.  
+8.  "LanguageService" 및에서 커서의 위치는 **편집**, **IntelliSense** 메뉴 **추상 클래스 구현**합니다. 이 언어 서비스 클래스를 구현 하는 데 필요한 최소 메서드를 추가 합니다.  
   
-9. Implement the abstract methods as described in [Implementing a Legacy Language Service](../../extensibility/internals/implementing-a-legacy-language-service2.md).  
+9. 에 설명 된 대로 추상 메서드를 구현 [언어 서비스 구현](../../extensibility/internals/implementing-a-legacy-language-service2.md)합니다.  
   
-### <a name="register-the-language-service"></a>Register the Language Service  
+### 언어 서비스를 등록 합니다.  
   
-1.  Open the MyLanguagePackagePackage.cs file and add the following `using` statements:  
+1.  MyLanguagePackagePackage.cs 파일을 열고 다음 코드를 추가 `using` 문:  
   
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_3.vb)]  [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_3.cs)]  
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_3.vb)]
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_3.cs)]  
   
-2.  Register your language service class as described in [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md). This includes the ProvideXX attributes and "Proffering the Language Service" sections. Use MyLanguageService where this topic uses TestLanguageService.  
+2.  에 설명 된 대로 언어 서비스 클래스를 등록 [언어 서비스를 등록 하는 중](../../extensibility/internals/registering-a-legacy-language-service1.md)합니다. ProvideXX 특성 및 "언어 서비스 Proffering" 절이 포함 됩니다. 이 항목에서는 TestLanguageService를 사용 하는 여기서 MyLanguageService를 사용 합니다.  
   
-### <a name="the-parser-and-scanner"></a>The Parser and Scanner  
+### 파서 및 검사  
   
-1.  Implement a parser and scanner for your language as described in [Legacy Language Service Parser and Scanner](../../extensibility/internals/legacy-language-service-parser-and-scanner.md).  
+1.  에 설명 된 대로 파서 및 해당 언어에 대해 스캐너 구현 [레거시 언어 서비스 파서 및 검사](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)합니다.  
   
-     How you implement your parser and scanner is entirely up to you and is beyond the scope of this topic.  
+     파서 및 스캐너 구현 방법을 전적으로 개발자가 되 고이 항목의 범위를 벗어납니다.  
   
-## <a name="language-service-features"></a>Language Service Features  
- To implement each feature in the language service, you typically derive a class from the appropriate MPF language service class, implement any abstract methods as necessary, and override the appropriate methods. What classes you create and/or derive from is dependent on the features you intend to support. These features are discussed in detail in [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md). The following procedure is the general approach to deriving a class from the MPF classes.  
+## 언어 서비스 기능  
+ 언어 서비스의 각 기능을 구현 하려면 일반적으로 적절 한 MPF 언어 서비스 클래스에서 클래스를 파생, 필요에 따라 모든 추상 메서드를 구현 및 적절 한 메서드를 재정의 합니다. 지원 하려면 어떤 클래스를 만들고에서 파생 되는 기능에 따라 달라 집니다. 이러한 기능에 대 한 자세한 설명은 [레거시 언어 서비스 기능](../../extensibility/internals/legacy-language-service-features1.md)합니다. 다음 절차는 일반적인 방법은 MPF 클래스에서 클래스를 파생 하는 합니다.  
   
-#### <a name="deriving-from-an-mpf-class"></a>Deriving From an MPF Class  
+#### MPF 클래스에서 파생  
   
-1.  In **Solution Explorer**, right-click on the VSPackage project and select **Add**, **Class**.  
+1.  **솔루션 탐색기**, VSPackage 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가**, **클래스**합니다.  
   
-2.  Make sure **Class** is selected in the templates list.  
+2.  확인 **클래스** 템플릿 목록에서 선택 합니다.  
   
-     Enter a suitable name for the class file and click **Add**.  
+     클래스 파일에 대 한 적절 한 이름을 입력 하 고 클릭 **추가**합니다.  
   
-3.  In the new class file, add the following `using` statements.  
+3.  새 클래스 파일에서 다음 추가 `using` 문입니다.  
   
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_4.cs)]  [!code-vb[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_4.vb)]  
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_4.cs)]
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_4.vb)]  
   
-4.  Modify the class to derive from the desired MPF class.  
+4.  원하는 MPF 클래스에서 파생 하는 클래스를 수정 합니다.  
   
-5.  Add a class constructor that takes at least the same parameters as the base class's constructor and pass the constructor parameters on to the base class constructor.  
+5.  적어도 기본 클래스의 생성자와 동일한 매개 변수를 사용 하는 클래스 생성자를 추가 하 고 기본 클래스 생성자에 로그온 하는 생성자 매개 변수를 전달 합니다.  
   
-     For example, the constructor for a class derived from the <xref:Microsoft.VisualStudio.Package.Source> class might look like the following:  
+     예를 들어에서 파생 된 클래스에 대 한 생성자는 <xref:Microsoft.VisualStudio.Package.Source> 클래스는 다음과 같을 수 있습니다.  
   
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_5.cs)]  [!code-vb[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_5.vb)]  
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_5.cs)]
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_5.vb)]  
   
-6.  From the **Edit**, **IntelliSense** menu, select **Implement Abstract Class** if the base class has any abstract methods that must be implemented.  
+6.  **편집**, **IntelliSense** 메뉴 **추상 클래스 구현** 기본 클래스에 추상 메서드를 구현 해야 하는 경우.  
   
-7.  Otherwise, position the caret inside the class and enter the method to be overridden.  
+7.  그렇지 않으면 클래스 내에 캐럿을 배치 하 고 메서드를 재정의할 수를 입력 합니다.  
   
-     For example, type `public override` to see a list of all methods that can be overridden in that class.  
+     예를 들어 입력 `public override` 해당 클래스에서 재정의 될 수 있는 모든 방법의 목록을 볼 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
- [Implementing a Legacy Language Service](../../extensibility/internals/implementing-a-legacy-language-service1.md)
+## 참고 항목  
+ [레거시 언어 서비스 구현](../../extensibility/internals/implementing-a-legacy-language-service1.md)
