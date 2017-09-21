@@ -1,68 +1,51 @@
 ---
-title: IDebugExceptionEvent2::GetExceptionDescription | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugExceptionEvent2::GetExceptionDescription
-helpviewer_keywords:
-- IDebugExceptionEvent2::GetExceptionDescription
+title: "IDebugExceptionEvent2::GetExceptionDescription | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugExceptionEvent2::GetExceptionDescription"
+helpviewer_keywords: 
+  - "IDebugExceptionEvent2::GetExceptionDescription"
 ms.assetid: d07d458f-5729-47e4-9b77-1bd59c61a75a
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c7279e8aef6d903e2836a3f6025f550eb89e1bab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugexceptionevent2getexceptiondescription"></a>IDebugExceptionEvent2::GetExceptionDescription
-Gets a displayable description of the exception.  
+# IDebugExceptionEvent2::GetExceptionDescription
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+예외를 표시할 수 있는 설명을 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetExceptionDescription(   
-   BSTR* pbstrDescription  
+```cpp#  
+HRESULT GetExceptionDescription(   
+   BSTR* pbstrDescription  
 );  
 ```  
   
-```csharp  
-int GetExceptionDescription(   
-   out string pbstrDescription  
+```c#  
+int GetExceptionDescription(   
+   out string pbstrDescription  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pbstrDescription`  
- [out] Returns a displayable description of the exception.  
+ \[out\] 예외를 표시할 수 있는 설명을 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- The string returned from this method is typically the name of the exception and is shown in the **Output** window when the exception occurs.  
+## 설명  
+ 이 메서드에서 반환 되는 문자열은 일반적으로 예외 이름을 이며 표시 됩니다 있는  **출력** 예외가 발생할 때 창.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

@@ -1,72 +1,55 @@
 ---
-title: IDebugCanStopEvent2::CanStop | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugCanStopEvent2::CanStop
-helpviewer_keywords:
-- IDebugCanStopEvent2::CanStop
+title: "IDebugCanStopEvent2::CanStop | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugCanStopEvent2::CanStop"
+helpviewer_keywords: 
+  - "IDebugCanStopEvent2::CanStop"
 ms.assetid: 7d61adbe-6b3d-41f3-86a1-45d9cc01a7f8
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ca920a3aff5cda28edfbd2b0c0b6a4329fb34988
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugcanstopevent2canstop"></a>IDebugCanStopEvent2::CanStop
-Notifies the debug engine (DE) whether or not to stop at the current code location or just continue execution.  
+# IDebugCanStopEvent2::CanStop
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+디버그 엔진 \(DE\) 코드의 현재 위치에서 중지 하거나 방금 실행을 계속할 것인지 여부를 알립니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT CanStop (   
-   BOOL fCanStop  
+```cpp#  
+HRESULT CanStop (   
+   BOOL fCanStop  
 );  
 ```  
   
-```csharp  
-int CanStop (   
-   int fCanStop  
+```c#  
+int CanStop (   
+   int fCanStop  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `fCanStop`  
- [in] Non-zero (`TRUE`) if the DE should stop at the current code location; otherwise, zero (`FALSE`).  
+ \[in\] 0이 아닌 \(`TRUE`\)는 DE을 현재 코드 위치에 중지 그렇지 않으면 0 \(`FALSE`\).  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- The receiver of this event typically calls the [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) method to determine the reason the DE wants to stop, and then calls the `IDebugCanStopEvent2::CanStop` method with the appropriate response.  
+## 설명  
+ 일반적으로이 이벤트의 수신기를 호출을 [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) 는 DE 할 중지 하는 이유를 확인 하려면 메서드에 대 한 호출의 `IDebugCanStopEvent2::CanStop` 메서드는 적절 한 응답을.  
   
- If the DE stops, it sends an event that describes the reason for stopping. There are typically two events that are sent, a user or signal break represented by the [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) interface, and a breakpoint event represented by the [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) interface.  
+ DE 중지 되 면 중지 사유를 설명 하는 이벤트를 보냅니다.  일반적으로 전송 된 나타내는 사용자 또는 신호 중단 이벤트가 두 가지는 [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) 인터페이스와 표시 되는 중단점 이벤트를 [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) 인터페이스입니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   
  [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)   
  [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)   

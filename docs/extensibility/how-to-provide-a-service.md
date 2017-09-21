@@ -1,67 +1,50 @@
 ---
-title: 'How to: Provide a Service | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- services, providing
+title: "방법: 서비스를 제공 합니다. | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "제공 하는 서비스"
 ms.assetid: 12bc1f12-47b1-44f6-b8db-862aa88d50d1
 caps.latest.revision: 22
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f624a2f2b030d775af0fc8f14c7541d28e84ca8e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 22
 ---
-# <a name="how-to-provide-a-service"></a>How to: Provide a Service
-A VSPackage can provide services that other VSPackages can use. To provide a service, a VSPackage must register the service with Visual Studio and add the service.  
+# 방법: 서비스를 제공 합니다.
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+VSPackage 다른 Vspackage를 사용할 수 있는 서비스를 제공할 수 있습니다. 서비스를 제공 하려면 VSPackage Visual Studio와 함께 서비스를 등록 하 고 서비스를 추가 해야 합니다.  
   
- The <xref:Microsoft.VisualStudio.Shell.Package> class implements both <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> and <xref:System.ComponentModel.Design.IServiceContainer>. <xref:System.ComponentModel.Design.IServiceContainer> contains callback methods that provide  services on demand.  
+ <xref:Microsoft.VisualStudio.Shell.Package> 클래스 둘 다 구현 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> 및 <xref:System.ComponentModel.Design.IServiceContainer>합니다.<xref:System.ComponentModel.Design.IServiceContainer> 필요에 따라 서비스를 제공 하는 콜백 메서드를 포함 합니다.  
   
- For more information about services, see [Service Essentials](../extensibility/internals/service-essentials.md) .  
+ 서비스에 대 한 자세한 내용은 참조 [서비스 Essentials](../extensibility/internals/service-essentials.md) 합니다.  
   
 > [!NOTE]
->  When a VSPackage is about to be unloaded, Visual Studio waits until all requests for services that a VSPackage provides have been delivered. It does not allow new requests for these services. You should not explicitly call the <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A> method to revoke a service when unloading.  
+>  VSPackage를 언로드할 수 하려고 할 때 Visual Studio VSPackage 제공 하는 서비스에 대 한 모든 요청 배달 될 때까지 대기 합니다. 이러한 서비스에 대 한 새 요청을 허용 하지는 않습니다. 명시적으로 호출 하지 않아야는 <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A> 를 언로드할 때 서비스를 해지 하는 방법입니다.  
   
-#### <a name="implementing-a-service"></a>Implementing a service  
+#### 서비스 구현  
   
-1.  Create a VSIX project (**File / New / Project / Visual C# / Extensiblity / VSIX Project**).  
+1.  VSIX 프로젝트를 만듭니다 \(**파일 \/ 새 \/ 프로젝트 \/ Visual C\# \/ Extensiblity \/ VSIX 프로젝트**\).  
   
-2.  Add a VSPackage to the project. Select the project node in the **Solution Explorer** and click **Add / New item / Visual C# Items / Extensibility / Visual Studio Package**.  
+2.  VSPackage 프로젝트에 추가 합니다. 프로젝트 노드를 선택 된 **솔루션 탐색기** 클릭 **추가 \/ 새 항목 \/ Visual C\# 항목 \/ 확장성 \/ Visual Studio 패키지**합니다.  
   
-3.  To implement a service, you need to create three types:  
+3.  서비스를 구현 하려면 세 가지 형식을 만드는 필요 합니다.  
   
-    -   An interface that describes the service. Many of these interfaces are empty, that is, they have no methods.  
+    -   서비스를 설명 하는 인터페이스입니다. 이러한 인터페이스의 대부분은 빈, 즉, 이러한 메서드가 없습니다.  
   
-    -   An interface that describes the service interface. This interface includes the methods to be implemented.  
+    -   서비스 인터페이스를 설명 하는 인터페이스입니다. 이 인터페이스에 메서드를 구현 해야 합니다.  
   
-    -   A class that implements both the service and the service interface.  
+    -   서비스와 서비스 인터페이스를 구현 하는 클래스입니다.  
   
-     The following example shows a very basic implementation of the three types. The constructor of the service class must set the service provider.  
+     다음 예제에서는 세 가지 종류의 기본 구현을 보여 줍니다. 서비스 클래스의 생성자는 서비스 공급자를 설정 해야 합니다.  
   
-    ```csharp  
+    ```c#  
     public class MyService : SMyService, IMyService  
     {  
         private Microsoft.VisualStudio.OLE.Interop.IServiceProvider serviceProvider;  
@@ -92,11 +75,11 @@ A VSPackage can provide services that other VSPackages can use. To provide a ser
   
     ```  
   
-### <a name="registering-a-service"></a>Registering a service  
+### 서비스를 등록 하는 중  
   
-1.  To register a service, add the <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> to the VSPackage that provides the service. Here is an example:  
+1.  서비스를 등록 하려면 추가 <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> 서비스를 제공 하 여 VSPackage를 합니다. 예를 들면 다음과 같습니다.  
   
-    ```csharp  
+    ```c#  
     [ProvideService(typeof(SMyService))]  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
     [Guid(VSPackage1.PackageGuidString)]  
@@ -104,16 +87,16 @@ A VSPackage can provide services that other VSPackages can use. To provide a ser
     {. . . }  
     ```  
   
-     This attribute registers `SMyService` with Visual Studio.  
+     이 특성을 등록 `SMyService` Visual Studio와 함께 합니다.  
   
     > [!NOTE]
-    >  To register a service that replaces another service with the same name, use the <xref:Microsoft.VisualStudio.Shell.ProvideServiceOverrideAttribute>. Note that only one override of a service is allowed.  
+    >  이름이 같은 다른 서비스를 대체 하는 서비스를 등록 하려면는 <xref:Microsoft.VisualStudio.Shell.ProvideServiceOverrideAttribute>합니다. 참고 서비스의 재정의 하는 하나만 허용 됩니다.  
   
-### <a name="adding-a-service"></a>Adding a Service  
+### 서비스 추가  
   
-1.  In the VSPackage initializer, add the service and add a callback method to create the services. Here is the change to make to the <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> method:  
+1.  1.	VSPackage 이니셜라이저에 서비스를 추가 하 고 콜백 메서드는 서비스 만들기를 추가 합니다. 에 게 하는 변경 된 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 메서드:  
   
-    ```csharp  
+    ```c#  
     protected override void Initialize()  
     {  
         ServiceCreatorCallback callback =new ServiceCreatorCallback(CreateService);  
@@ -123,7 +106,7 @@ A VSPackage can provide services that other VSPackages can use. To provide a ser
     }  
     ```  
   
-2.  Implement the callback method, which should create and return the service, or null if it cannot be created.  
+2.  만들기 및 서비스를 반환 하거나 만들 수 없는 경우 null 해야 하는 콜백 메서드를 구현 합니다.  
   
     ```  
     private object CreateService(IServiceContainer container, Type serviceType)  
@@ -135,11 +118,11 @@ A VSPackage can provide services that other VSPackages can use. To provide a ser
     ```  
   
     > [!NOTE]
-    >  Visual Studio can reject a request to provide a service. It does so if another VSPackage already provides the service.  
+    >  Visual Studio는 서비스를 제공 하는 요청을 거부할 수 있습니다. 다른 VSPackage 이미 서비스를 제공 하는 경우.  
   
-3.  Now you can get the service and use its methods. We'll show this in the initializer, but you can get the service anywhere you want to use the service.  
+3.  이제 서비스를 가져오고 해당 메서드를 사용 하 여 수 있습니다. 이니셜라이저의이 알아봅니다 하지만 서비스를 사용 하려는 서비스 위치를 가져올 수 있습니다.  
   
-    ```csharp  
+    ```c#  
     protected override void Initialize()  
     {  
         ServiceCreatorCallback callback =new ServiceCreatorCallback(CreateService);  
@@ -154,9 +137,9 @@ A VSPackage can provide services that other VSPackages can use. To provide a ser
     }  
     ```  
   
-     The value of `helloString` should be "Hello".  
+     값 `helloString` "Hello" 이어야 합니다.  
   
-## <a name="see-also"></a>See Also  
- [How to: Get a Service](../extensibility/how-to-get-a-service.md)   
- [Using and Providing Services](../extensibility/using-and-providing-services.md)   
- [Service Essentials](../extensibility/internals/service-essentials.md)
+## 참고 항목  
+ [방법: 서비스 가져오기](../extensibility/how-to-get-a-service.md)   
+ [사용 하 고 서비스를 제공 합니다.](../extensibility/using-and-providing-services.md)   
+ [서비스 Essentials](../extensibility/internals/service-essentials.md)

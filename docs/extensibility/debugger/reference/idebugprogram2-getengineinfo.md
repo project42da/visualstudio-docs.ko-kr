@@ -1,73 +1,56 @@
 ---
-title: IDebugProgram2::GetEngineInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgram2::GetEngineInfo
-helpviewer_keywords:
-- IDebugProgram2::GetEngineInfo
+title: "IDebugProgram2::GetEngineInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgram2::GetEngineInfo"
+helpviewer_keywords: 
+  - "IDebugProgram2::GetEngineInfo"
 ms.assetid: 3a4f2dc0-e082-4d8d-aeaf-463ab09d279b
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f031cbe124765d44c116d3af35a877712cbe4502
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
-Gets the name and GUID of the debug engine (DE) running this program.  
+# IDebugProgram2::GetEngineInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 프로그램이 실행 되는 디버그 엔진 \(DE\)의 GUID와 이름을 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetEngineInfo(   
-   BSTR* pbstrEngine,  
-   GUID* pguidEngine  
+```cpp#  
+HRESULT GetEngineInfo(   
+   BSTR* pbstrEngine,  
+   GUID* pguidEngine  
 );  
 ```  
   
-```csharp  
-int GetEngineInfo(   
-   out string pbstrEngine,  
-   out GUID   pguidEngine  
+```c#  
+int GetEngineInfo(   
+   out string pbstrEngine,  
+   out GUID   pguidEngine  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pbstrEngine`  
- [out] Returns the name of the DE running this program.  
+ \[out\] 이 프로그램을 실행 하는 DE 이름을 반환 합니다.  
   
  `pguidEngine`  
- [out] Returns the GUID of the DE running this program.  
+ \[out\] 이 프로그램을 실행 하는 DE의 GUID를 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- Each DE defines its own GUID for identification.  
+## 설명  
+ 각 DE 식별에 대 한 고유 GUID를 정의합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

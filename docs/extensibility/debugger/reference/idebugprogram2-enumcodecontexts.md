@@ -1,75 +1,58 @@
 ---
-title: IDebugProgram2::EnumCodeContexts | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgram2::EnumCodeContexts
-helpviewer_keywords:
-- IDebugProgram2::EnumCodeContexts
+title: "IDebugProgram2::EnumCodeContexts | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgram2::EnumCodeContexts"
+helpviewer_keywords: 
+  - "IDebugProgram2::EnumCodeContexts"
 ms.assetid: 478e06a2-07bb-4841-8887-deab0f42ebd0
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5d223dc90ef7f336365b41d289763895e250fdff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
-Retrieves a list of the code contexts for a given position in a source file.  
+# IDebugProgram2::EnumCodeContexts
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+코드 컨텍스트는 소스 파일의 지정 된 위치에 대 한 목록을 검색합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT EnumCodeContexts(   
-   IDebugDocumentPosition2*  pDocPos,  
-   IEnumDebugCodeContexts2** ppEnum  
+```cpp#  
+HRESULT EnumCodeContexts(   
+   IDebugDocumentPosition2*  pDocPos,  
+   IEnumDebugCodeContexts2** ppEnum  
 );  
 ```  
   
-```csharp  
-int EnumCodeContexts(   
-   IDebugDocumentPosition2     pDocPos,  
-   out IEnumDebugCodeContexts2 ppEnum  
+```c#  
+int EnumCodeContexts(   
+   IDebugDocumentPosition2     pDocPos,  
+   out IEnumDebugCodeContexts2 ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pDocPos`  
- [in] An [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) object representing an abstract position in a source file known to the IDE.  
+ \[in\] [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) 는 추상 IDE로 알려진 소스 파일 위치를 나타내는 개체입니다.  
   
  `ppEnum`  
- [out] Returns an [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) object that contains a list of the code contexts.  
+ \[out\] 반환 된 [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) 코드 컨텍스트 목록을 포함 하는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method allows the session debug manager (SDM) or IDE to map a source file position into a code position. More than one code context is returned if the source generates multiple blocks of code (for example, C++ templates).  
+## 설명  
+ 이 메서드는 세션 디버그 매니저 \(SDM\) 있습니다 또는 IDE에서 소스 파일 위치에 있는 코드 위치에 매핑할 수 있습니다.  여러 개의 코드 블록입니다 \(예를 들어, c \+ \+ 템플릿\)의 소스를 생성 하는 경우 두 개 이상의 코드 컨텍스트 반환 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)   
  [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

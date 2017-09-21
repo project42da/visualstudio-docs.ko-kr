@@ -1,71 +1,54 @@
 ---
-title: BP_LOCATION_CODE_STRING | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- BP_LOCATION_CODE_STRING
-helpviewer_keywords:
-- BP_LOCATION_CODE_STRING structure
+title: "BP_LOCATION_CODE_STRING | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "BP_LOCATION_CODE_STRING"
+helpviewer_keywords: 
+  - "BP_LOCATION_CODE_STRING 구조"
 ms.assetid: a4cd71c6-5052-45fe-907b-ebc6ca1df2e4
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 24c9215aee75d2a1bbc7e123aed4ce3838982cc0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="bplocationcodestring"></a>BP_LOCATION_CODE_STRING
-Used for setting code breakpoints based on a string that the user can enter from the integrated development environment (IDE).  
+# BP_LOCATION_CODE_STRING
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+통합된 개발 환경 \(IDE\)에서 사용자가 입력할 수 있는 문자열 기반 코드 중단점을 설정 하는 데 사용 됩니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-typedef struct _BP_LOCATION_CODE_STRING {   
-   BSTR bstrContext;  
-   BSTR bstrCodeExpr;  
+```cpp#  
+typedef struct _BP_LOCATION_CODE_STRING {   
+   BSTR bstrContext;  
+   BSTR bstrCodeExpr;  
 } BP_LOCATION_CODE_STRING;  
 ```  
   
-## <a name="members"></a>Members  
+## Members  
  `bstrContext`  
- The context of the breakpoint within the code, typically a method or function name as seen on a call stack.  
+ 코드에서 중단점을, 일반적으로 메서드 또는 함수 이름은 호출 스택에 표시 되는 컨텍스트.  
   
  `bstrCodeExpr`  
- The string that the user types in to describe the code breakpoint.  
+ 입력할 사용자 중단점 코드를 설명 하는 문자열입니다.  
   
-## <a name="remarks"></a>Remarks  
- This structure is a member of the [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure as part of a union.  
+## 설명  
+ 이 구조체의 멤버인는 [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) 구조체 합집합 일부로.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 요구 사항  
+ 헤더: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)
+## 참고 항목  
+ [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)

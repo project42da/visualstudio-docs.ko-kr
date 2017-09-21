@@ -1,79 +1,62 @@
 ---
-title: IDebugGenericParamField::GetConstraints | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugGenericParamField::GetConstraints
-- GetConstraints
+title: "IDebugGenericParamField::GetConstraints | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugGenericParamField::GetConstraints"
+  - "GetConstraints"
 ms.assetid: 86a78b5a-ee0f-4999-a0ba-919d3dc7d969
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 583787bbff6b397a04fcd66a6a0fc24244f6baba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebuggenericparamfieldgetconstraints"></a>IDebugGenericParamField::GetConstraints
-Retrieves the constraints that are associated with this generic parameter.  
+# IDebugGenericParamField::GetConstraints
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 제네릭 매개 변수와 관련 된 제약 조건으로 검색 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT GetConstraints(  
-   ULONG32       cConstraints,  
-   IDebugField** ppConstraints,  
-   ULONG32*      pcConstraints  
+   ULONG32       cConstraints,  
+   IDebugField** ppConstraints,  
+   ULONG32*      pcConstraints  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetConstraints(  
-   uint              cConstraints,  
-   out IDebugField[] ppConstraints,  
-   ref uint          pcConstraints  
+   uint              cConstraints,  
+   out IDebugField[] ppConstraints,  
+   ref uint          pcConstraints  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `cConstraints`  
- [in] Number of constraints.  
+ \[in\] 제약 조건 번호입니다.  
   
  `ppConstraints`  
- [out] Returns an array that contains the constraints associated with this field.  
+ \[out\] 이 필드와 연결 된 제약 조건이 포함 된 배열을 반환 합니다.  
   
  `pcConstraints`  
- [in, out] Number of constraints in the `ppConstraints` array.  
+ \[in, out\] 제약 조건에서 수는 `ppConstraints` 배열입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugGenericParamFieldType** object that exposes the [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
+## 예제  
+ 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CDebugGenericParamFieldType** 를 노출 하는 개체는 [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) 인터페이스.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugGenericParamFieldType::GetConstraints(  
     ULONG32 cConstraints,  
     IDebugField** ppConstraints,  
@@ -166,5 +149,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

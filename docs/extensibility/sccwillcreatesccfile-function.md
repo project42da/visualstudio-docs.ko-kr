@@ -1,81 +1,64 @@
 ---
-title: SccWillCreateSccFile Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccWillCreateSccFile
-helpviewer_keywords:
-- SccWillCreateSccFile function
+title: "SccWillCreateSccFile 함수 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccWillCreateSccFile"
+helpviewer_keywords: 
+  - "SccWillCreateSccFile 함수"
 ms.assetid: 0d7542f0-4351-41b3-b24c-960ab99c05a1
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d4b84f25d02710584913e7ade1fb673d1118fc4f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="sccwillcreatesccfile-function"></a>SccWillCreateSccFile Function
-This function determines whether the source control plug-in supports the creation of the MSSCCPRJ.SCC file for each of the given files.  
+# SccWillCreateSccFile 함수
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+이 함수는 소스 제어 플러그 인은 MSSCCPRJ 만들기를 지원 하는지 여부를 결정 합니다. SCC 파일 각각의 지정 된 파일입니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 SCCRTN SccWillCreateSccFile(  
-   LPVOID  pContext,  
-   LONG    nFiles,  
-   LPCSTR* lpFileNames,  
-   LPBOOL  pbSccFiles  
+   LPVOID  pContext,  
+   LONG    nFiles,  
+   LPCSTR* lpFileNames,  
+   LPBOOL  pbSccFiles  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  pContext  
- [in] The source control plug-in context pointer.  
+ \[in\] 소스 제어 플러그 인 컨텍스트 포인터입니다.  
   
  nFiles  
- [in] The number of file names included in the `lpFileNames` array as well as the length of the `pbSccFiles` array.  
+ \[in\] 파일 이름에 포함 된 수의 `lpFileNames` 의 길이와 배열는 `pbSccFiles` 배열입니다.  
   
  lpFileNames  
- [in] An array of fully qualified file names to check (array must be allocated by caller).  
+ \[in\] 확인 하려면 정규화 된 파일 이름 배열을 \(배열 호출자가 할당 해야 합니다\).  
   
  pbSccFiles  
- [in, out] Array in which to store the results.  
+ \[에서, out\] 결과 저장할 배열입니다.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 반환 값  
+ 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Success.|  
-|SCC_E_INVALIDFILEPATH|One of the paths in the array is invalid.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
+|값|설명|  
+|-------|--------|  
+|SCC\_OK|명령 실행 성공|  
+|SCC\_E\_INVALIDFILEPATH|배열에 있는 경로 중 하나가 올바르지 않습니다.|  
+|SCC\_E\_NONSPECIFICERROR|알 수 없는 오류가 발생 했습니다.|  
   
-## <a name="remarks"></a>Remarks  
- This function is called with a list of files to determine if the source control plug-in provides support in the MSSCCPRJ.SCC file for each of the given files (for more information on the MSSCCPRJ.SCC file, see [MSSCCPRJ.SCC File](../extensibility/mssccprj-scc-file.md)). Source control plug-ins can declare whether they have the capability of creating MSSCCPRJ.SCC files by declaring `SCC_CAP_SCCFILE` during initialization. The plug-in returns `TRUE` or `FALSE` per file in the `pbSccFiles` array to indicate which of the given files have MSSCCPRJ.SCC support. If the plug-in returns a success code from the function, the values in the return array are honored. On failure, the array is ignored.  
+## 설명  
+ 이 함수는 소스 제어 플러그 인은 MSSCCPRJ에서 지원 되는 확인 하는 파일 목록과 함께 호출 됩니다. 각 \(에 대 한 자세한 내용은 MSSCCPRJ 지정 된 파일에 대 한 SCC 파일. SCC 파일 참조 [MSSCCPRJ 합니다. SCC 파일](../extensibility/mssccprj-scc-file.md)\). 소스 제어 플러그 인 MSSCCPRJ 만드는 기능이 있는지 선언할 수 있습니다. SCC 파일 선언 하 여 `SCC_CAP_SCCFILE` 초기화 하는 동안. 플러그 인 반환 `TRUE` 또는 `FALSE` 각 파일에는 `pbSccFiles` MSSCCPRJ 지정 된 파일 중 어떤 나타내기 위해 배열입니다. SCC 지원 합니다. 플러그 인을 반환할 경우 성공 코드 함수에서 반환 배열에 값을 적용할 수 있습니다. 오류 시 배열은 무시 됩니다.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
- [MSSCCPRJ.SCC File](../extensibility/mssccprj-scc-file.md)
+## 참고 항목  
+ [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)   
+ [MSSCCPRJ 합니다. SCC 파일](../extensibility/mssccprj-scc-file.md)

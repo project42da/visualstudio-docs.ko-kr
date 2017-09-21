@@ -1,84 +1,67 @@
 ---
-title: IDebugPortEvents2::Event | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPortEvents2::Event
-helpviewer_keywords:
-- IDebugPortEvents2::Event
+title: "IDebugPortEvents2::Event | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPortEvents2::Event"
+helpviewer_keywords: 
+  - "IDebugPortEvents2::Event"
 ms.assetid: 5cc813f7-04a1-4462-9ea7-fbddcf0e0143
 caps.latest.revision: 18
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e9059d4c2d13455c52e690bc424736b35f7cc659
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 18
 ---
-# <a name="idebugportevents2event"></a>IDebugPortEvents2::Event
-This method sends events that signify the creation and destruction of processes and programs on a port.  
+# IDebugPortEvents2::Event
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는 생성 및 폐기 하는 프로세스 및 프로그램에서 포트를 지정 하는 이벤트를 보냅니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT Event(  
-   IDebugCoreServer2* pServer,  
-   IDebugPort2*       pPort,  
-   IDebugProcess2*    pProcess,  
-   IDebugProgram2*    pProgram,  
-   IDebugEvent2*      pEvent,  
-   REFIID             riidEvent  
+   IDebugCoreServer2* pServer,  
+   IDebugPort2*       pPort,  
+   IDebugProcess2*    pProcess,  
+   IDebugProgram2*    pProgram,  
+   IDebugEvent2*      pEvent,  
+   REFIID             riidEvent  
 );  
 ```  
   
-```csharp  
+```c#  
 int Event(  
-   IDebugCoreServer2 pServer,   
-   IDebugPort2       pPort,   
-   IDebugProcess2    pProcess,   
-   IDebugProgram2    pProgram,   
-   IDebugEvent2      pEvent,   
-   ref Guid          riidEvent  
+   IDebugCoreServer2 pServer,   
+   IDebugPort2       pPort,   
+   IDebugProcess2    pProcess,   
+   IDebugProgram2    pProgram,   
+   IDebugEvent2      pEvent,   
+   ref Guid          riidEvent  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pMachine`  
- [in] An [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) object that represents the debug server (there is one for every instance of [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]) in which the event occurred.  
+ \[in\] [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) 디버그 서버를 나타내는 개체 \(의 모든 인스턴스에 대해 하나의 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]\)에 이벤트가 발생 합니다.  
   
  `pPort`  
- [in] An [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) object that represents the port in which the event occurred.  
+ \[in\] [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) 는 이벤트가 발생 하는 포트를 나타내는 개체입니다.  
   
  `pProcess`  
- [in] An [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) object that represents the process in which the event occurred.  
+ \[in\] [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) 에서 이벤트가 발생 한 프로세스를 나타내는 개체입니다.  
   
  `pProgram`  
- [in] An [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object that represents the program in which the event occurred.  
+ \[in\] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 에서 이벤트가 발생 하는 프로그램을 나타내는 개체입니다.  
   
  `pEvent`  
- [in] An [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) object that identifies the event. The possible events are as follows:  
+ \[in\] [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 는 이벤트를 식별 하는 개체입니다.  발생할 수 있는 이벤트는 다음과 같습니다.  
   
 -   [IDebugProcessCreateEvent2](../../../extensibility/debugger/reference/idebugprocesscreateevent2.md)  
   
@@ -89,12 +72,12 @@ int Event(
 -   [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)  
   
  `riidEvent`  
- [in] The GUID of the event. Because the event is cast to [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) before calling this method, this identifier makes it easier to determine which event is being sent.  
+ \[in\] 이벤트의 GUID입니다.  이벤트에 캐스팅 되어 있기 때문에 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 이 메서드를 호출 하기 전에이 식별자는 이벤트를 보낸 확인 하기 쉽습니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)   
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)   
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

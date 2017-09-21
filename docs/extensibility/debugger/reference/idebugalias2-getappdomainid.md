@@ -1,67 +1,50 @@
 ---
-title: IDebugAlias2::GetAppDomainId | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- GetAppDomainId
-- IDebugAlias2::GetAppDomainId
+title: "IDebugAlias2::GetAppDomainId | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "GetAppDomainId"
+  - "IDebugAlias2::GetAppDomainId"
 ms.assetid: 23581aaa-5a53-4859-b264-eca49fc44bcd
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c168e29ba4884ec10acac89c3cafb74e8d1c77ba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugalias2getappdomainid"></a>IDebugAlias2::GetAppDomainId
-Retrieves the identifier for the application domain.  
+# IDebugAlias2::GetAppDomainId
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+응용 프로그램 도메인의 식별자를 검색합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT GetAppDomainId (  
-   ULONG32* pappDomainId  
+   ULONG32* pappDomainId  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetAppDomainId (  
-   out uint pappDomainId  
+   out uint pappDomainId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pappDomainId`  
- [out] Returns the application domain identifier.  
+ \[out\] 응용 프로그램 도메인 식별자를 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- The application domain identifier changes whenever the application is restarted and a new application domain is created.  
+## 설명  
+ 응용 프로그램을 다시 시작할 때마다 응용 프로그램 도메인 식별자 변경 및 새 응용 프로그램 도메인이 만들어집니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugAlias2](../../../extensibility/debugger/reference/idebugalias2.md)

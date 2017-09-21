@@ -1,77 +1,60 @@
 ---
-title: 'Walkthrough: Creating a Custom Text Template Host | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- walkthroughs [text templates], custom host
-- text templates, custom host walkthrough
+title: "연습: 사용자 지정 텍스트 템플릿 호스트 만들기 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "텍스트 템플릿, 사용자 지정 호스트 연습"
+  - "연습[텍스트 템플릿], 사용자 지정 호스트"
 ms.assetid: d00bc366-65ed-4229-885a-196ef9625f05
 caps.latest.revision: 51
-author: alancameronwills
-ms.author: awills
-manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6a14023a35884ed742535872a649927770e93072
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+author: "alancameronwills"
+ms.author: "awills"
+manager: "douge"
+caps.handback.revision: 51
 ---
-# <a name="walkthrough-creating-a-custom-text-template-host"></a>Walkthrough: Creating a Custom Text Template Host
-A *text template**host* provides an environment that enables the *text template transformation engine* to run. The host is responsible for managing the engine's interaction with the file system. The engine or *directive processor* that needs a file or an assembly can request a resource from the host. The host can then search directories and the global assembly cache to locate the requested resource. For more information, see [The Text Template Transformation Process](../modeling/the-text-template-transformation-process.md).  
+# 연습: 사용자 지정 텍스트 템플릿 호스트 만들기
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+*텍스트 템플릿* *호스트*는 *텍스트 템플릿 변환 엔진*이 실행될 수 있도록 하는 환경을 제공합니다.  호스트는 파일 시스템과 엔진의 상호 작용을 관리합니다.  파일이나 어셈블리가 필요한 엔진이나 *지시문 프로세서*는 호스트에서 리소스를 요청할 수 있습니다.  그러면 호스트는 디렉터리와 전역 어셈블리 캐시를 검색하여 요청된 리소스를 찾을 수 있습니다.  자세한 내용은 [텍스트 템플릿 변환 프로세스](../modeling/the-text-template-transformation-process.md)를 참조하십시오.  
   
- You can write a custom host if you want to use the *text template transformation* functionality from outside [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] or if you want to integrate that functionality into custom tools. To create a custom host, you must create a class that inherits from <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>. For the documentation of the individual methods, see <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>.  
+ *텍스트 템플릿 변환* 기능을 외부 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 사용하거나 해당 기능을 사용자 지정 도구에 통합하려는 경우 사용자 지정 호스트를 작성할 수 있습니다.  사용자 지정 호스트를 만들려면 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>에서 상속되는 클래스를 만들어야 합니다.  개별 메서드에 대한 문서를 보려면 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>를 참조하십시오.  
   
 > [!WARNING]
->  If you are writing a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extension or package, consider using the text templating service instead of creating your own host. For more information, see [Invoking Text Transformation in a VS Extension](../modeling/invoking-text-transformation-in-a-vs-extension.md).  
+>  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension 또는 패키지를 작성하는 경우 고유 호스트를 만드는 대신 텍스트 템플릿 서비스를 사용하십시오.  자세한 내용은 [VS 확장에서 텍스트 변환 호출](../modeling/invoking-text-transformation-in-a-vs-extension.md)을 참조하십시오.  
   
- Tasks illustrated in this walkthrough include the following:  
+ 이 연습에서 수행할 작업은 다음과 같습니다.  
   
--   Creating a custom text template host.  
+-   사용자 지정 텍스트 템플릿 호스트 만들기  
   
--   Testing the custom host.  
+-   사용자 지정 호스트 테스트  
   
-## <a name="prerequisites"></a>Prerequisites  
- To complete this walkthrough, you must have the following:  
+## 사전 요구 사항  
+ 이 연습을 완료하려면 다음이 필요합니다.  
   
--   Visual Studio 2010 or later  
+-   Visual Studio 2010 이상  
   
 -   Visual Studio SDK  
   
-## <a name="creating-a-custom-text-template-host"></a>Creating a Custom Text Template Host  
- In this walkthrough, you create a custom host in an executable application that can be called from the command line. The application accepts a text template file as an argument, reads the template, calls the engine to transform the template, and displays any errors that occur in the command prompt window.  
+## 사용자 지정 텍스트 템플릿 호스트 만들기  
+ 이 연습에서는 명령줄에서 호출할 수 있는 실행 가능한 응용 프로그램에서 사용자 지정 호스트를 만듭니다.  응용 프로그램은 텍스트 템플릿 파일을 인수로 받아들이고 템플릿을 읽으며, 엔진을 호출하여 템플릿을 변환하고 명령 프롬프트 창에서 발생하는 모든 오류를 표시합니다.  
   
-#### <a name="to-create-a-custom-host"></a>To create a custom host  
+#### 사용자 지정 호스트를 만들려면  
   
-1.  In Visual Studio, create a new Visual Basic or a C# console application named CustomHost.  
+1.  Visual Studio에서 CustomHost라는 새 Visual Basic 또는 C\# 콘솔 응용 프로그램을 만듭니다.  
   
-2.  Add references to the following assemblies:  
+2.  다음 어셈블리에 대한 참조를 추가합니다.  
   
     -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 and later versions**  
+    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 이상 버전**  
   
-3.  Replace the code in the Program.cs or Module1.vb file with the following code:  
+3.  Program.cs 또는 Module1.vb 파일의 코드를 다음 코드로 바꿉니다.  
   
-    ```csharp  
+    ```c#  
     using System;  
     using System.IO;  
     using System.CodeDom.Compiler;  
@@ -421,7 +404,7 @@ A *text template**host* provides an environment that enables the *text template 
     }  
     ```  
   
-    ```vb  
+    ```vb#  
     Imports System  
     Imports System.IO  
     Imports System.CodeDom.Compiler  
@@ -728,27 +711,27 @@ A *text template**host* provides an environment that enables the *text template 
     End Namespace  
     ```  
   
-4.  For [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] only, open the **Project** menu, and click **CustomHost Properties**. In the **Startup object** list, click **CustomHost.Program**.  
+4.  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 경우에만 **프로젝트** 메뉴를 열고 **CustomHost 속성**을 클릭합니다.  **시작 개체** 목록에서 **CustomHost.Program**을 클릭합니다.  
   
-5.  On the **File** menu, click **Save All**.  
+5.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
-6.  On the **Build** menu, click **Build Solution**.  
+6.  **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
   
-## <a name="testing-the-custom-host"></a>Testing the Custom Host  
- To test the custom host, you write a text template, then you run the custom host, pass it the name of the text template, and verify that the template is transformed.  
+## 사용자 지정 호스트 테스트  
+ 사용자 지정 호스트를 테스트하려면 텍스트 템플릿을 작성한 다음 사용자 지정 호스트를 실행하여 이 호스트에 텍스트 템플릿의 이름을 전달하고 템플릿이 변환되었는지 확인합니다.  
   
-#### <a name="to-create-a-text-template-to-test-the-custom-host"></a>To create a text template to test the custom host  
+#### 텍스트 템플릿을 만들어 사용자 지정 호스트를 테스트하려면  
   
-1.  Create a text file, and name it `TestTemplate.tt`.  
+1.  텍스트 파일을 만들고 `TestTemplate.tt`로 이름을 지정합니다.  
   
-     You can use any text editor (for example, Notepad) to create the file.  
+     메모장 등의 모든 텍스트 편집기를 사용하여 파일을 만들 수 있습니다.  
   
-2.  Add the following to the file:  
+2.  파일에 다음 코드를 추가합니다.  
   
     > [!NOTE]
-    >  The programming language of the text template does not have to match that of the custom host.  
+    >  텍스트 템플릿의 프로그래밍 언어는 사용자 지정 호스트의 프로그래밍 언어와 일치하지 않아도 됩니다.  
   
-    ```csharp  
+    ```c#  
     Text Template Host Test  
   
     <#@ template debug="true" #>  
@@ -766,7 +749,7 @@ A *text template**host* provides an environment that enables the *text template 
     #>  
     ```  
   
-    ```vb  
+    ```vb#  
     Text Template Host Test  
   
     <#@ template debug="true" language="VB"#>  
@@ -786,41 +769,41 @@ A *text template**host* provides an environment that enables the *text template 
   
     ```  
   
-3.  Save and close the file.  
+3.  파일을 저장한 후 닫습니다.  
   
-#### <a name="to-test-the-custom-host"></a>To test the custom host  
+#### 사용자 지정 호스트를 테스트하려면  
   
-1.  Open the Command Prompt window.  
+1.  명령 프롬프트 창을 엽니다.  
   
-2.  Type the path of the executable file for the custom host, but do not press ENTER yet.  
+2.  사용자 지정 호스트에 대한 실행 가능한 파일의 경로를 입력하고 Enter 키를 누르지 않습니다.  
   
-     For example, type:  
+     예를 들어 다음과 같이 입력합니다.  
   
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`  
   
     > [!NOTE]
-    >  Instead of typing the address, you can browse to the file CustomHost.exe in **Windows Explorer** and then drag the file into the Command Prompt window.  
+    >  주소를 입력하는 대신 **Windows 탐색기**에서 CustomHost.exe 파일로 이동한 다음 이 파일을 명령 프롬프트 창으로 끌 수 있습니다.  
   
-3.  Type a space.  
+3.  공백을 입력합니다.  
   
-4.  Type the path of the text template file, and then press ENTER.  
+4.  텍스트 템플릿 파일의 경로를 입력한 다음 Enter 키를 누릅니다.  
   
-     For example, type:  
+     예를 들어 다음과 같이 입력합니다.  
   
      `C:\<YOUR PATH>TestTemplate.tt`  
   
     > [!NOTE]
-    >  Instead of typing the address, you can browse to the file TestTemplate.tt in **Windows Explorer** and then drag the file into the Command Prompt window.  
+    >  주소를 입력하는 대신 **Windows 탐색기**에서 TestTemplate.tt 파일로 이동한 다음 이 파일을 명령 프롬프트 창으로 끌 수 있습니다.  
   
-     The custom host application runs and completes the text template transformation process.  
+     사용자 지정 호스트 응용 프로그램이 실행되어 텍스트 템플릿 변환 프로세스를 완료합니다.  
   
-5.  In **Windows Explorer**, browse to the folder that contains the file TestTemplate.tt.  
+5.  **Windows 탐색기**에서 TestTemplate.tt 파일이 포함된 폴더로 이동합니다.  
   
-     That folder also contains the file TestTemplate1.txt.  
+     이 폴더에는 TestTemplate1.txt 파일도 포함되어 있습니다.  
   
-6.  Open this file to see the results of the text template transformation.  
+6.  이 파일을 열어 텍스트 템플릿 변환의 결과를 확인합니다.  
   
-     The generated text output appears and looks like this:  
+     생성된 텍스트 출력이 다음과 같이 나타납니다.  
   
     ```  
     Text Template Host Test  
@@ -830,8 +813,8 @@ A *text template**host* provides an environment that enables the *text template 
     This is a test  
     ```  
   
-## <a name="next-steps"></a>Next Steps  
- In this walkthrough, you created a text template transformation host that supports the basic transformation functionality. You can expand your host to support text templates that call custom or generated directive processors. For more information, see [Walkthrough: Connecting a Host to a Generated Directive Processor](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md).  
+## 다음 단계  
+ 이 연습에서는 기본 변환 기능을 지원하는 텍스트 템플릿 변환 호스트를 만들었습니다.  사용자 지정 또는 생성된 지시문 프로세서를 호출하는 텍스트 템플릿을 지원하도록 호스트를 확장할 수 있습니다.  자세한 내용은 [연습: 생성된 지시문 프로세서에 호스트 연결](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)을 참조하십시오.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>

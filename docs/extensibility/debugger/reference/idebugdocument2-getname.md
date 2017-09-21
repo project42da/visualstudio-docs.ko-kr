@@ -1,74 +1,57 @@
 ---
-title: IDebugDocument2::GetName | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugDocument2::GetName
-helpviewer_keywords:
-- IDebugDocument2::GetName
+title: "IDebugDocument2::GetName | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugDocument2::GetName"
+helpviewer_keywords: 
+  - "IDebugDocument2::GetName"
 ms.assetid: 6f09ff09-b0cf-4472-8fc8-143991f0ceb1
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: aac8788ea9b4474536dce2c853b0f97ce27ab9b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugdocument2getname"></a>IDebugDocument2::GetName
-Gets the name of the document in one of several forms.  
+# IDebugDocument2::GetName
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+문서의 이름을 여러 형태 중 하나에서 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetName(   
-   GETNAME_TYPE gnType,  
-   BSTR*        pbstrFileName  
+```cpp#  
+HRESULT GetName(   
+   GETNAME_TYPE gnType,  
+   BSTR*        pbstrFileName  
 );  
 ```  
   
-```csharp  
-int GetName(   
-   enum_GETNAME_TYPE gnType,  
-   out string        pbstrFileName  
+```c#  
+int GetName(   
+   enum_GETNAME_TYPE gnType,  
+   out string        pbstrFileName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `gnType`  
- [in] A value from the [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) enumeration that determines the type of name to return.  
+ \[in\] 값은 [GETNAME\_TYPE](../../../extensibility/debugger/reference/getname-type.md) 종류를 반환 하려면 name 속성을 결정 하는 열거형입니다.  
   
  `pbstrFileName`  
- [out] Returns a string containing the document name.  
+ \[out\] 문서 이름이 들어 있는 문자열을 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method can, for example, return the name of the document as a title or as a file name or even part of a file name.  
+## 설명  
+ 이 메서드는 예를 들어, 제목이 나 파일 이름 또는 파일 이름에도 일부 문서의 이름을 반환할 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)   
- [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)
+ [GETNAME\_TYPE](../../../extensibility/debugger/reference/getname-type.md)

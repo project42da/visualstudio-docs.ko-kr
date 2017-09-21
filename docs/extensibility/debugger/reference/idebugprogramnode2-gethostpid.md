@@ -1,70 +1,53 @@
 ---
-title: IDebugProgramNode2::GetHostPid | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgramNode2::GetHostPid
-helpviewer_keywords:
-- IDebugProgramNode2::GetHostPid
+title: "IDebugProgramNode2::GetHostPid | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgramNode2::GetHostPid"
+helpviewer_keywords: 
+  - "IDebugProgramNode2::GetHostPid"
 ms.assetid: e65b4b15-46d8-4ca7-9456-2b4c078f7cf9
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 845511af34a9d5827120d98a408d8d4b5d6f78dc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugprogramnode2gethostpid"></a>IDebugProgramNode2::GetHostPid
-Gets the system process identifier for the process hosting the program.  
+# IDebugProgramNode2::GetHostPid
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+프로그램을 호스팅하는 프로세스의 시스템 프로세스 id를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetHostPid (   
-   AD_PROCESS_ID * pdwHostPid  
+```cpp#  
+HRESULT GetHostPid (   
+   AD_PROCESS_ID * pdwHostPid  
 );  
 ```  
   
-```csharp  
-int GetHostPid (   
-   out AD_PROCESS_ID pdwHostPid  
+```c#  
+int GetHostPid (   
+   out AD_PROCESS_ID pdwHostPid  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pdwHostPid`  
- [out] Returns the system process identifier for the hosting process.  
+ \[out\] 호스팅 프로세스의 시스템 프로세스 식별자를 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CProgram` object that implements the [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) interface.  
+## 예제  
+ 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CProgram` 를 구현 하는 개체는 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 인터페이스입니다.  
   
-```cpp  
+```cpp#  
 HRESULT CProgram::GetHostPid(DWORD* pdwHostPid) {    
     // Check for valid argument.    
    if (pdwHostPid)    
@@ -79,5 +62,5 @@ HRESULT CProgram::GetHostPid(DWORD* pdwHostPid) {
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

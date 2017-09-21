@@ -1,50 +1,33 @@
 ---
-title: Implementing and Registering a Port Supplier | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- debugging [Debugging SDK], registering port suppliers
-- port suppliers, registering
+title: "구현 하 고 포트 공급자를 등록 하는 중 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "디버깅 [디버깅 SDK], 포트 공급자를 등록 합니다."
+  - "포트 공급 업체, 등록"
 ms.assetid: fb057052-ee16-4272-8e16-a4da5dda0ad4
 caps.latest.revision: 17
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 32ffd30ed461e8dfaed9d47ecc54e3ef7acd59ce
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 17
 ---
-# <a name="implementing-and-registering-a-port-supplier"></a>Implementing and Registering a Port Supplier
-The role of a port supplier is to track and supply ports, which in turn manage processes. At the time a port needs to be created, the port supplier is instantiated using CoCreate with the port supplier's GUID (the session debug manager [SDM] will use the port supplier the user selected or the port supplier specified by the project system). The SDM will then call [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) to see if any ports can be added. If a port can be added, a new port is requested by calling [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) and passing it an [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) that describes the port. `AddPort` will return a new port represented by an [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) interface.  
+# 구현 하 고 포트 공급자를 등록 하는 중
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+포트 공급자의 역할을 추적 하 고 차례로 프로세스를 관리 하는 포트입니다.  포트를 만들어야 할 때 CoCreate \(세션 디버그 관리자 \[SDM\] 프로젝트 시스템에서 지정 된 포트 공급자 또는 사용자가 선택한 포트 공급자 사용 합니다\) 포트 공급자의 GUID를 사용 하 여 포트 공급자를 인스턴스화합니다.  SDM을 호출 하 고 [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) 포트를 추가할 수 있는 경우를 볼 수 있습니다.  포트를 추가할 수 있는 경우 새 포트를 호출 하 여 요청 된 [포트 추가](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) 를 전달 하는 [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) 의 포트에 설명 합니다.  `AddPort`표시 되는 새 포트를 반환 합니다는 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) 인터페이스입니다.  
   
-## <a name="discussion"></a>Discussion  
- A port is created by a port supplier, which is in turn associated with a machine or debug server. A server can enumerate its port suppliers through the[EnumPortSuppliers](../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) method, and a port supplier can enumerate its ports through the [EnumPorts](../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) method.  
+## 토론  
+ 포트를 컴퓨터 또는 디버그 서버에 연결 된 포트 공급자를 만듭니다.  포트 공급자를 통해 서버를 열거할 수는[EnumPortSuppliers](../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) 메서드 및 포트 공급자의 포트를 통해 열거할 수 있습니다의 [EnumPorts](../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) 메서드.  
   
- In addition to the typical COM registration, a port supplier must register itself with Visual Studio by placing its CLSID and name in specific registry locations. A Debugging SDK helper function called `SetMetric` handles this chore: it is called once for each item to be registered, thus:  
+ 일반 COM 등록 이외에 포트 공급자 자체를 Visual Studio 해당 CLSID와 이름을 특정 레지스트리 위치에 배치 하 여 등록 해야 합니다.  SDK 디버깅 도우미 함수를 호출 합니다. `SetMetric` 이 자동 처리:이 등록할 수 있으므로 각 항목에 대해 한 번씩 호출 됩니다.  
   
-```cpp  
+```cpp#  
 SetMetric(metrictypePortSupplier,  
           <GUID of your port supplier>,  
           metricCLSID,  
@@ -59,9 +42,9 @@ SetMetric(metrictypePortSupplier,
           NULL);  
 ```  
   
- A port supplier unregisters itself by calling `RemoveMetric` (another Debugging SDK helper function) once for each item that was registered, thus:  
+ 포트 공급자 자체를 호출 하 여 등록 취소 `RemoveMetric` \(다른 SDK 디버깅 도우미 함수\)에 등록 되어 있으므로 각 항목에 대해 한 번씩.  
   
-```cpp  
+```cpp#  
 RemoveMetric(metrictypePortSupplier,  
              <GUID of your port supplier>,  
              metricCLSID,  
@@ -73,11 +56,11 @@ RemoveMetric(metrictypePortSupplier,
 ```  
   
 > [!NOTE]
->  The [SDK Helpers for Debugging](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)`SetMetric` and `RemoveMetric` are static functions defined in dbgmetric.h and compiled into ad2de.lib. The `metrictypePortSupplier`, `metricCLSID`, and `metricName` helpers are also defined in dbgmetric.h.  
+>  [디버깅을 위한 SDK 도우미](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` 및 `RemoveMetric` dbgmetric.h에서 정의 되 고 ad2de.lib로 컴파일된 정적 함수입니다.  `metrictypePortSupplier`, `metricCLSID`, 및 `metricName` 도우미도 dbgmetric.h에서 정의 됩니다.  
   
- A port supplier can supply its name and GUID through the methods [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) and [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md), respectively.  
+ 포트 공급자의 이름과 GUID 메서드를 통해 제공할 수 있습니다 [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) 및 [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md), 각각.  
   
-## <a name="see-also"></a>See Also  
- [Implementing a Port Supplier](../../extensibility/debugger/implementing-a-port-supplier.md)   
- [SDK Helpers for Debugging](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
- [Port Suppliers](../../extensibility/debugger/port-suppliers.md)
+## 참고 항목  
+ [포트 공급자 구현](../../extensibility/debugger/implementing-a-port-supplier.md)   
+ [디버깅을 위한 SDK 도우미](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
+ [포트 공급자](../../extensibility/debugger/port-suppliers.md)

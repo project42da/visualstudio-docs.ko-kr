@@ -1,74 +1,57 @@
 ---
-title: IDebugDisassemblyStream2::GetDocument | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugDisassemblyStream2::GetDocument
-helpviewer_keywords:
-- IDebugDisassemblyStream2::GetDocument
+title: "IDebugDisassemblyStream2::GetDocument | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugDisassemblyStream2::GetDocument"
+helpviewer_keywords: 
+  - "IDebugDisassemblyStream2::GetDocument"
 ms.assetid: 3d039a44-ebaa-4413-ac18-7cfd92c408bd
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: bd485c777364e55c2e6cc9d2ef0f39695fd33df6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
-Gets the source document associated with this input stream.  
+# IDebugDisassemblyStream2::GetDocument
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 입력된 스트림과 연결 된 원본 문서를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetDocument(   
-   BSTR              bstrDocumentUrl,  
-   IDebugDocument2** ppDocument  
+```cpp#  
+HRESULT GetDocument(   
+   BSTR              bstrDocumentUrl,  
+   IDebugDocument2** ppDocument  
 );  
 ```  
   
-```csharp  
-int GetDocument(   
-   string              bstrDocumentUrl,  
-   out IDebugDocument2 ppDocument  
+```c#  
+int GetDocument(   
+   string              bstrDocumentUrl,  
+   out IDebugDocument2 ppDocument  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `bstrDocumentUrl`  
- [in] The document URL.  
+ \[in\] 문서의 URL입니다.  
   
  `ppDocument`  
- [out] Returns an [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) object representing the document.  
+ \[out\] 반환 된 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) 문서를 나타내는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method is implemented by debug engines that have text documents that are not stored in an actual file.  
+## 설명  
+ 이 메서드는 실제 파일에 저장 되지 않은 문서를 텍스트 디버그 엔진에 의해 구현 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

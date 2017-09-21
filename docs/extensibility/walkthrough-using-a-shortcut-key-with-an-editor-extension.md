@@ -1,53 +1,36 @@
 ---
-title: 'Walkthrough: Using a Shortcut Key with an Editor Extension | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], new - link keystrokes to commands
+title: "연습: 편집기 확장에 바로 가기 키 사용 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "편집기 [Visual Studio SDK], 명령에 키 입력을 신규-연결"
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
 caps.latest.revision: 32
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: af4e580195d4867aebe6579bb4a4de15eaee1a8b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 32
 ---
-# <a name="walkthrough-using-a-shortcut-key-with-an-editor-extension"></a>Walkthrough: Using a Shortcut Key with an Editor Extension
-You can respond to shortcut keys in your editor extension. The following walkthrough shows how to add a view adornment to a text view by using a shortcut key. This walkthrough is based on the viewport adornment editor template, and it allows you to add the adornment by using the + character.  
+# 연습: 편집기 확장에 바로 가기 키 사용
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+편집기 확장에 바로 가기 키에 응답할 수 있습니다. 다음 연습에서는 바로 가기 키를 사용 하 여 보기 장식 텍스트 뷰를 추가 하는 방법을 보여 줍니다. 이 연습에서는 뷰포트 장식 편집기 서식 파일에 기반으로 하며 장식을 사용 하 여 추가할 수는 \+ 문자입니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## 사전 요구 사항  
+ Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램의 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)을 참조하세요.  
   
-## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Creating a Managed Extensibility Framework (MEF) Project  
+## MEF\(Managed Extensibility Framework\) 프로젝트 만들기  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `KeyBindingTest`.  
+1.  C\# VSIX 프로젝트를 만듭니다. \(에 **새 프로젝트** 대화 상자에서 **Visual C\# \/ 확장성**, 다음 **VSIX 프로젝트**.\) 솔루션의 이름을 `KeyBindingTest`합니다.  
   
-2.  Add an Editor Text Adornment item template to the project and name it `KeyBindingTest`. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  편집기 텍스트 장식 항목 템플릿을 프로젝트에 추가 하 고 이름을 `KeyBindingTest`합니다. 자세한 내용은 [편집기 항목 템플릿을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-an-editor-item-template.md)을 참조하십시오.  
   
-3.  Add the following references and set **CopyLocal** to `false`:  
+3.  다음 참조를 추가 하 고 설정 **{2\>copylocal** 를 `false`:  
   
      Microsoft.VisualStudio.Editor  
   
@@ -57,20 +40,20 @@ You can respond to shortcut keys in your editor extension. The following walkthr
   
      Microsoft.VisualStudio.TextManager.Interop  
   
- In the KeyBindingTest class file, change the class name to PurpleCornerBox. Use the light bulb that appears in the left margin to make the other appropriate changes. Inside the constructor, change the name of the adornment layer from **KeyBindingTest** to **PurpleCornerBox**:  
+ KeyBindingTest 클래스 파일에서 PurpleCornerBox에 클래스 이름을 변경 합니다. 왼쪽된 여백에 표시 된 전구를 사용 하 여 적절 하 게 다른 변경 합니다. 생성자 내부에서 장식 계층의 이름을 변경 **KeyBindingTest** 를 **PurpleCornerBox**:  
   
-```csharp  
+```c#  
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");  
 ```  
   
-## <a name="defining-the-command-filter"></a>Defining the Command Filter  
- The command filter is an implementation of <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>, which handles the command by instantiating the adornment.  
+## 명령 필터를 정의합니다.  
+ 명령 필터의 구현인 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>, 장식 인스턴스화하여 명령의 처리 합니다.  
   
-1.  Add a class file and name it `KeyBindingCommandFilter`.  
+1.  클래스 파일을 추가 하 고 이름을 `KeyBindingCommandFilter`합니다.  
   
-2.  Add the following using statements.  
+2.  다음 using 문을 추가합니다.  
   
-    ```csharp  
+    ```c#  
     using System;  
     using System.Runtime.InteropServices;  
     using Microsoft.VisualStudio.OLE.Interop;  
@@ -79,24 +62,24 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-3.  The class named KeyBindingCommandFilter should inherit from <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.  
+3.  KeyBindingCommandFilter 라는 클래스에서 상속 해야 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>합니다.  
   
-    ```csharp  
-    internal class KeyBindingCommandFilter : IOleCommandTarget  
+    ```c#  
+    internal class KeyBindingCommandFilter : IOleCommandTarget  
     ```  
   
-4.  Add private fields for the text view, the next command in the command chain, and a flag to represent whether the command filter has already been added.  
+4.  명령 체인 및 명령 필터가 이미 추가 되어 있는지 여부를 나타내는 플래그의 텍스트 보기에 대 한 전용 필드, 다음 명령을 추가 합니다.  
   
-    ```csharp  
+    ```c#  
     private IWpfTextView m_textView;  
     internal IOleCommandTarget m_nextTarget;  
-    internal bool m_added;  
-    internal bool m_adorned;  
+    internal bool m_added;  
+    internal bool m_adorned;  
     ```  
   
-5.  Add a constructor that sets the text view.  
+5.  텍스트 뷰를 설정 하는 생성자를 추가 합니다.  
   
-    ```csharp  
+    ```c#  
     public KeyBindingCommandFilter(IWpfTextView textView)  
     {  
         m_textView = textView;  
@@ -104,7 +87,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-6.  Implement the `QueryStatus()` method as follows.  
+6.  구현 된 `QueryStatus()` 메서드를 다음과 같이 합니다.  
   
     ```vb  
     int IOleCommandTarget.QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)  
@@ -113,9 +96,9 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-7.  Implement the `Exec()` method so that it adds a purple box to the view if a + character is typed.  
+7.  구현 된 `Exec()` 한다는 자주색 상자 보기에 추가 하는 경우 메서드는 \+ 문자를 입력 합니다.  
   
-    ```csharp  
+    ```c#  
     int IOleCommandTarget.Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pvaIn, IntPtr pvaOut)  
     {  
         if (m_adorned == false)  
@@ -137,12 +120,12 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-## <a name="adding-the-command-filter"></a>Adding the Command Filter  
- The adornment provider must add a command filter to the text view. In this example, the provider implements <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> to listen to text view creation events. This adornment provider also exports the adornment layer, which defines the Z-order of the adornment.  
+## 명령 필터를 추가합니다.  
+ 텍스트 장식 공급자 명령 필터를 추가 해야 합니다. 이 예제에서는 공급자 구현 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 텍스트 보기 생성 이벤트를 수신 대기 합니다. 또한이 장식 공급자 장식의 Z 순서를 정의 하는 장식 계층을 내보냅니다.  
   
-1.  In the KeyBindingTestTextViewCreationListener file, add the following using statements:  
+1.  KeyBindingTestTextViewCreationListener 파일에서 다음 추가 문을 사용 하 여:  
   
-    ```csharp  
+    ```c#  
     using System;  
     using System.Collections.Generic;  
     using System.ComponentModel.Composition;  
@@ -155,35 +138,35 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-2.  In the adornment layer definition, change the name of the AdornmentLayer from **KeyBindingTest** to **PurpleCornerBox**.  
+2.  장식 계층 정의 AdornmentLayer의 이름을 변경 **KeyBindingTest** 를 **PurpleCornerBox**합니다.  
   
-    ```csharp  
+    ```c#  
     [Export(typeof(AdornmentLayerDefinition))]  
     [Name("PurpleCornerBox")]  
     [Order(After = PredefinedAdornmentLayers.Selection, Before = PredefinedAdornmentLayers.Text)]  
     public AdornmentLayerDefinition editorAdornmentLayer;  
     ```  
   
-3.  To get the text view adapter, you must import the <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>.  
+3.  텍스트 뷰 어댑터를 가져오려면 가져와야는 <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>합니다.  
   
-    ```csharp  
+    ```c#  
     [Import(typeof(IVsEditorAdaptersFactoryService))]  
     internal IVsEditorAdaptersFactoryService editorFactory = null;  
   
     ```  
   
-4.  Change the <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> method so that it adds the `KeyBindingCommandFilter`.  
+4.  변경 된 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> 추가 하도록 메서드는 `KeyBindingCommandFilter`합니다.  
   
-    ```csharp  
+    ```c#  
     public void TextViewCreated(IWpfTextView textView)  
     {  
         AddCommandFilter(textView, new KeyBindingCommandFilter(textView));  
     }  
     ```  
   
-5.  The `AddCommandFilter` handler gets the text view adapter and adds the command filter.  
+5.  `AddCommandFilter` 처리기가 텍스트 뷰 어댑터를 가져오고 명령 필터를 추가 합니다.  
   
-    ```csharp  
+    ```c#  
     void AddCommandFilter(IWpfTextView textView, KeyBindingCommandFilter commandFilter)  
     {  
         if (commandFilter.m_added == false)  
@@ -205,12 +188,12 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-## <a name="making-the-adornment-appear-on-every-line"></a>Making the Adornment Appear on Every Line  
- The original adornment appeared on every character 'a' in a text file. Now that we have changed the code to add the adornment in response to the '+' character, it adds the adornment only on the line where the '+' is typed. We can change the adornment code so that the adornment once more appears on every 'a'.  
+## 장식 만드는 모든 줄에 표시  
+ 모든 문자에 나타난 원래 장식 텍스트 파일에 ' a'입니다. 줄에 대해서만 장식 추가 장식 '\+' 문자에 대 한 응답에 추가 하는 코드를 변경 했습니다 했으므로 여기서는 '\+'를 입력 합니다. 장식 코드에 한 번 더 장식 표시 되도록 변경할 수 있습니다 모든 'a'입니다.  
   
- In the KeyBindingTest.cs file, change the CreateVisuals() method to iterate through all the lines in the view to decorate the 'a' character.  
+ KeyBindingTest.cs 파일에서 'a' 문자를 데코레이팅하는 뷰에서 모든 줄을 반복 하 CreateVisuals\(\) 메서드를 변경 합니다.  
   
-```csharp  
+```c#  
 private void CreateVisuals(ITextViewLine line)  
 {  
     IWpfTextViewLineCollection textViewLines = this.view.TextViewLines;  
@@ -252,10 +235,10 @@ private void CreateVisuals(ITextViewLine line)
 }  
 ```  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
+## 코드 빌드 및 테스트  
   
-1.  Build the KeyBindingTest solution and run it in the experimental instance.  
+1.  KeyBindingTest 솔루션을 빌드하고 실험적 인스턴스에서 실행 합니다.  
   
-2.  Create or open a text file. Type some words containing the character 'a', and then type + anywhere in the text view.  
+2.  텍스트 파일을 열거나 만듭니다. 문자를 포함 하는 일부 단어를 입력 'a', 다음을 입력 하 고 \+ 텍스트 보기에 위치 합니다.  
   
-     A purple square should appear on every 'a' character in the file.
+     자주색 사각형 파일의 모든 'a' 문자에 나타나야 합니다.

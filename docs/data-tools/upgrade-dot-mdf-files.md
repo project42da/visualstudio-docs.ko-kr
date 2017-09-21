@@ -1,133 +1,114 @@
 ---
-title: Upgrade .mdf files | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- SQL Server Express
-- SQL Server LocalDB
-- LocalDB
-- SQLEXPRESS
-- upgrading SQLExpress to SQLExpress
-- upgrading to LocalDB
+title: "방법: LocalDB로 업그레이드하거나 SQL Server Express 계속 사용 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/16/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "LocalDB"
+  - "SQL Server Express"
+  - "SQL Server LocalDB"
+  - "SQLEXPRESS"
+  - "SQLExpress를 SQLExpress로 업그레이드"
+  - "LocalDB로 업그레이드"
 ms.assetid: 14ca6f76-f80e-4926-8020-3fee2d802b75
 caps.latest.revision: 33
-author: gewarren
-ms.author: gewarren
-manager: ghogen
+caps.handback.revision: 23
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 robots: noindex,nofollow
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 6b5cafd570df333da80d76d95dfc152ec6c1fb2b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
 ---
-# <a name="upgrade-mdf-files"></a>Upgrade .mdf files
-This topic describes your options for upgrading your database file (.mdf) after you install a newer version of Visual Studio. It includes instructions for the following tasks:  
+# 방법: LocalDB로 업그레이드하거나 SQL Server Express 계속 사용
+이 항목을 설치한 후 데이터베이스 파일 \(.mdf\)을 업그레이드 하는 옵션 설명 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 및 다음 작업에 대 한 지침이 포함 되어 있습니다.  
   
--   Upgrade a database file to use a newer version of SQL Server Express LocalDB  
+-   Localdb를 사용 하는 데이터베이스 파일 업그레이드  
   
--   Upgrade a database file to use a newer version of SQL Server Express  
+-   SQL Server 익스프레스의 최신 버전을 사용 하는 데이터베이스 파일 업그레이드  
   
--   Work with a database file in Visual Studio but retain compatibility with an older version of SQL Server Express or LocalDB  
+-   작동 데이터베이스 파일에서 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 호환성을 유지 합니다.[!INCLUDE[ssKatmai_exp](../data-tools/includes/sskatmai_exp_md.md)]  
   
--   Make SQL Server Express the default database engine  
+-   SQL Server 익스프레스 기본 데이터베이스 엔진 확인  
   
- You can use Visual Studio to open a  project that contains a database file (.mdf) that was created by using an older version of SQL Server Express or LocalDB. However, to continue to develop your project in Visual Studio, you must have that version of SQL Server Express or LocalDB  installed on the same machine as Visual Studio, or you must upgrade the database file. If you upgrade the database file, you won't be able to access it by using older versions of SQL Server Express or LocalDB.  
+ 사용할 수 있는 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] SQL Server Express의 이전 버전을 사용 하 여 만든 데이터베이스 파일 \(.mdf\) 포함 된 프로젝트를 엽니다.  그러나 개발 프로젝트에서 계속 하려면 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], Visual Studio 같은 시스템에 설치 된 SQL Server Express 버전 여야 또는 SQL Server LocalDB Express를 사용 하는 데이터베이스 파일을 업그레이드 해야 합니다.  데이터베이스 파일을 업그레이드 하는 경우 이전 버전의 SQL Server Express에 액세스할 수 없습니다.  
   
- You may also be prompted to upgrade a database file that was created through an earlier version of SQL Server Express or LocalDB if the version of the file isn't compatible with the instance of SQL Server Express or LocalDB that's currently installed. To resolve the issue, Visual Studio will prompt you to upgrade the file.  
+ 사용 하 여 만든 데이터베이스 파일을 업그레이드 하 라는 메시지가 표시도 [!INCLUDE[sql_Denali_exp](../data-tools/includes/sql_denali_exp_md.md)] 파일의 버전의 SQL Server를 현재 설치 된 Express 인스턴스와 호환 아닌 경우.  문제를 해결 하려면 Visual Studio 파일의 SQL Server Express 최신 버전으로 업그레이드 하 라는 메시지가 나타납니다.  
   
 > [!IMPORTANT]
->  We recommend that you back up the database file before you upgrade it.  
+>  업그레이드 하기 전에 데이터베이스 파일을 백업 하는 것이 좋습니다.  
   
-> [!WARNING]
->  If you upgrade an .mdf file that was created in LocalDB 2014 (V12) 32 bit to LocalDB 2016 (V13), you will not be able to open the file again in the 32-bit version of LocalDB.  In Update 2, LocalDB V13 is 64 bit only.  
+ 데이터베이스를 업그레이드 하기 전에 다음과 같은 조건을 고려해 야 합니다.  
   
- Before you upgrade a database, consider the following criteria:  
+-   프로젝트에서 작업 하려는 경우 업그레이드 하지 않음 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 및 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)].  
   
--   Don't upgrade if you want to work on your project in both an older version and a newer version of Visual Studio.  
+-   응용 프로그램 LocalDB SQL Server 익스프레스 보다는 사용 환경에서 사용 하는 경우 업그레이드 하지 마십시오.  
   
--   Don't upgrade if your application will be used in environments that use SQL Server Express rather than LocalDB.  
+-   Localdb를 받지 않는 때문에 응용 프로그램 원격 연결을 사용 하는 경우 업그레이드 하지 마십시오.  
   
--   Don't upgrade if your application uses remote connections, because LocalDB doesn't accept them.  
+-   인터넷 정보 서비스 \(IIS\) 응용 프로그램이 의존 하는 경우 업그레이드 하지 마십시오.  
   
--   Don't upgrade if your application relies on Internet Information Services (IIS).  
+-   샌드박스 환경에서 데이터베이스 응용 프로그램을 테스트할 수 있지만 데이터베이스를 관리 하지 않을 경우 업그레이드 하는 것이 좋습니다.  
   
--   Consider upgrading if you want to test database applications in a sandbox environment but don't want to administer a database.  
+### Localdb를 사용 하는 데이터베이스 파일을 업그레이드 하려면  
   
-### <a name="to-upgrade-a-database-file"></a>To upgrade a database file  
+1.  **서버 탐색기**, 선택 된  **데이터베이스에 연결** 단추.  
   
-1.  In **Server Explorer**, select the **Connect to Database** button.  
+2.  에  **연결 추가** 대화 상자에서 다음 정보를 지정 합니다.  
   
-2.  In the **Add Connection** dialog box, specify the following information:  
+    -   **데이터 소스:** Microsoft SQL Server\(SqlClient\)  
   
-    -   **Data Source**: `Microsoft SQL Server (SqlClient)`  
+    -   **서버 이름:** \\v11.0 \(LocalDB\)  
   
-    -   **Server Name**:  
+    -   **데이터베이스 파일 첨부:** *경로*여기서  *경로* 기본.mdf 파일의 실제 경로입니다.  
   
-        -   To use the default version: `(localdb)\MSSQLLocalDB`.  This will specify either ProjectV12 or ProjectV13, depending on which version of Visual Studio  is installed and when the first LocalDB instance was created. The **MSSQLLocalDB** node in **SQL Server Object Explorer** shows which version it is pointing to.  
+    -   **논리적 이름:** *이름*여기서  *이름* 파일에 사용할 이름입니다.  
   
-        -   To use a specific version: `(localdb)\ProjectsV12` or `(localdb)\ProjectsV13`, where V12 is LocalDB 2014 and V13 is LocalDB 2016.  
+3.  **확인** 단추를 선택합니다.  
   
-    -   **Attach a database file**: The physical path of the primary .mdf file.  
+4.  메시지가 나타나면 선택 된  **예** 파일을 업그레이드 하려면 단추.  
   
-    -   **Logical Name**: The name that you want to use with the file.  
+ 없음 더 호환 및 LocalDB 데이터베이스 엔진에 연결 데이터베이스 업그레이드는 [!INCLUDE[ssKatmai_exp](../data-tools/includes/sskatmai_exp_md.md)].  
   
-3.  Select the **OK** button.  
+ LocalDB 연결의 바로 가기 메뉴를 열고 다음 선택 하 여 사용 하는 sql Express 연결을 수정할 수도 있습니다  **연결 수정**.  에  **연결 수정** 대화 상자에서 서버 이름 \(LocalDB\) \\v11.0으로 변경 합니다.  에  **고급 속성** 대화 상자에 있는지 확인  **사용자 인스턴스** 를 False로 설정 합니다.  
   
-4.  When you're prompted, select the **Yes** button to upgrade the file.  
+### SQL Server 익스프레스의 최신 버전으로 업그레이드 하려면  
   
- The database is upgraded, is attached to the LocalDB database engine, and is no longer compatible with  the older version of LocalDB.  
+1.  데이터베이스 연결에 대 한 바로 가기 메뉴에서 선택  **연결 수정**.  
   
- You can also modify a SQL Server Express connection to use LocalDB by opening the shortcut menu for the connection and then selecting **Modify Connection**. In the **Modify Connection** dialog box, change the server name to `(LocalDB)\MSSQLLocalDB`. In the **Advanced Properties** dialog box, make sure that **User Instance** is set to **False**.  
+2.  에  **연결 수정** 대화 상자에서 선택 된  **고급** 단추.  
   
-### <a name="to-upgrade-to-a-newer-version-of-sql-server-express"></a>To upgrade to a newer version of SQL Server Express  
+3.  에  **고급 속성** 대화 상자에서 선택 된  **확인** 서버 이름을 변경 하지 않고 단추.  
   
-1.  On the shortcut menu for the connection to the database, select **Modify Connection**.  
+ 데이터베이스 파일의 현재 버전에 맞게 업그레이드 된 [!INCLUDE[sql_Denali_exp](../data-tools/includes/sql_denali_exp_md.md)].  
   
-2.  In the **Modify Connection** dialog box, select the **Advanced** button.  
+### 데이터베이스에서 사용할 수 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 호환성을 유지 합니다.[!INCLUDE[ssKatmai_exp](../data-tools/includes/sskatmai_exp_md.md)]  
   
-3.  In the **Advanced Properties** dialog box, select the **OK** button without changing the server name.  
+1.  [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], 프로젝트를 업그레이드 하지 않고 엽니다.  
   
- The database file is upgraded to match the current version of SQL Server Express.  
+    -   프로젝트를 실행 하려면 F5 키를 선택 합니다.  
   
-### <a name="to-work-with-the-database-in-visual-studio-but-retain-compatibility-with-sql-server-express"></a>To work with the database in Visual Studio but retain compatibility with SQL Server Express  
+    -   .Mdf 파일에는 데이터베이스를 편집 하려면 열  **솔루션 탐색기**, 노드를 확장 하 고  **서버 탐색기** 데이터베이스와 작동 하지 방금 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)].  
   
--   In Visual Studio, open the project without upgrading it.  
+### SQL Server 익스프레스 기본 데이터베이스 엔진을 확인 하려면  
   
-    -   To run the project, select the F5 key.  
+1.  메뉴 표시줄에서 선택  **도구**,  **옵션**.  
   
-    -   To edit the database, open the .mdf file in **Solution Explorer**, and expand the node in **Server Explorer** to work with your database.  
+2.  에  **옵션** 대화 상자에서 확장은  **데이터 도구** 옵션을 선택한 다음 선택은  **데이터 연결** 노드.  
   
-### <a name="to-make-sql-server-express-the-default-database-engine"></a>To make SQL Server Express the default database engine  
+3.  에  **SQL Server 인스턴스 이름** 을 텍스트 상자에서 SQL Server 사용 하 여 Express의 인스턴스 이름을 지정 합니다.  지정한 인스턴스 이름이 지정 되지 않은 경우  `. \SQLEXPRESS`.  
   
-1.  On the menu bar, select **Tools** > **Options**.  
+4.  **확인** 단추를 선택합니다.  
   
-2.  In the **Options** dialog box, expand the **Data Tools** options, and then select the **Data Connections** node.  
+ 기본 데이터베이스 엔진 응용 프로그램에 대 한 SQL Server 익스프레스입니다.  
   
-3.  In the **SQL Server Instance Name** text box, specify the name of the instance of SQL Server Express or LocalDB that you want to use. If the instance isn't named, specify `.\SQLEXPRESS or (localdb)\MSSQLLocalDB`.  
-  
-4.  Select the **OK** button.  
-  
- SQL Server Express will be the default database engine for your applications.  
-  
-
+## 참고 항목  
+ [로컬 데이터 개요](../data-tools/local-data-overview.md)   
+ [연습: 로컬 데이터베이스 파일의 데이터에 연결\(Windows Forms\)](../Topic/Walkthrough:%20Connecting%20to%20Data%20in%20a%20Local%20Database%20File%20\(Windows%20Forms\).md)

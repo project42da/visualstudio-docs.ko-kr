@@ -1,71 +1,54 @@
 ---
-title: IDebugProcess3::DisableENC | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProcess3::DisableENC
-helpviewer_keywords:
-- IDebugProcess3::DisableENC
+title: "IDebugProcess3::DisableENC | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProcess3::DisableENC"
+helpviewer_keywords: 
+  - "IDebugProcess3::DisableENC"
 ms.assetid: cffdbdac-4d76-4aeb-aa55-5d0410db99f1
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 1182d60d57dba3f1ee49f5a119ef19de6f7ae9c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
-This method explicitly disables Edit and Continue on this process (and all programs it contains). A custom port supplier should always return `E_NOTIMPL`.  
+# IDebugProcess3::DisableENC
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드가 명시적으로 불가능 하 게 편집 하 고이 과정을 계속와 프로그램을 모두 포함 합니다.  사용자 지정 포트 공급자를 항상 반환 해야 `E_NOTIMPL`.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
 ```cpp  
-HRESULT DisableENC(  
-   EncUnavailableReason reason  
+HRESULT DisableENC(  
+   EncUnavailableReason reason  
 );  
 ```  
   
-```csharp  
-   EncUnavailableReason reason  
+```c#  
+   EncUnavailableReason reason  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `reason`  
- [in] A value from the [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) enumeration.  
+ \[in\] 값은 [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) 열거형입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
   
 > [!NOTE]
->  A custom port supplier should always return `E_NOTIMPL`.  
+>  사용자 지정 포트 공급자를 항상 반환 해야 `E_NOTIMPL`.  
   
-## <a name="remarks"></a>Remarks  
- Once Edit and Continue is disabled for a process, it can be re-enabled only by restarting the process.  
+## 설명  
+ 한 번에 편집 프로세스를 계속 하기를 사용할 수 없습니다, 그리고 다시이 과정을 다시 시작 하면 활성화할 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)

@@ -1,100 +1,83 @@
 ---
-title: Options and Options Pages | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Tools Options pages [Visual Studio SDK], managed package framework support
-- managed package framework, Tools Options pages support
-- support, Tools Options pages
-- Tools Options pages [Visual Studio SDK], layouts
-- Tools Options pages [Visual Studio SDK], attributes
+title: "옵션 및 옵션 페이지 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "도구 옵션 페이지 [Visual Studio SDK] 관리 되는 패키지 프레임 워크 지원"
+  - "관리 되는 패키지 프레임 워크, 도구 옵션 페이지 지원"
+  - "지원, 도구 옵션 페이지"
+  - "도구 옵션 페이지 [Visual Studio SDK] 레이아웃"
+  - "도구 옵션 페이지 [Visual Studio SDK] 특성"
 ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
 caps.latest.revision: 34
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 7fa7b8c9772bf850272fc4da86e0fc5be778c21c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 34
 ---
-# <a name="options-and-options-pages"></a>Options and Options Pages
-Clicking **Options** on the **Tools** menu opens the **Options** dialog box. The options in this dialog box are collectively referred to as options pages. The tree control in the navigation pane includes options categories, and every category has options pages. When you select a page, its options appear in the right pane. These pages let you change the values of the options that determine the state of a VSPackage.  
+# 옵션 및 옵션 페이지
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+클릭 하면 **옵션** 에 **도구** 메뉴가 열립니다는 **옵션** 대화 상자입니다. 이 대화 상자의 옵션에에서는 전체적으로 옵션 페이지 라고 합니다. 탐색 창에서 트리 컨트롤 옵션 범주를 포함 하며 모든 범주 옵션 페이지입니다. 페이지를 선택 하면 오른쪽 창에 해당 옵션이 표시 됩니다. 이러한 페이지에는 VSPackage의 상태를 결정 하는 옵션의 값을 변경할 수 있습니다.  
   
-## <a name="support-for-options-pages"></a>Support for Options Pages  
- The <xref:Microsoft.VisualStudio.Shell.Package> class provides support for creating options pages and options categories. The <xref:Microsoft.VisualStudio.Shell.DialogPage> class implements an options page.  
+## 옵션 페이지에 대 한 지원  
+ <xref:Microsoft.VisualStudio.Shell.Package> 옵션 페이지와 옵션 범주를 만들기 위한 지원을 제공 합니다.<xref:Microsoft.VisualStudio.Shell.DialogPage> 클래스 옵션 페이지를 구현 합니다.  
   
- The default implementation of <xref:Microsoft.VisualStudio.Shell.DialogPage> offers its public properties to a user in a generic grid of properties. You can customize this behavior by overriding various methods on the page to create a custom options page that has its own user interface (UI). For more information, see [Creating an Options Page](../../extensibility/creating-an-options-page.md).  
+ 기본 구현은 <xref:Microsoft.VisualStudio.Shell.DialogPage> 사용자 속성의 일반 눈금에 공용 속성을 제공 합니다. 자체 사용자 인터페이스 \(UI\)에 있는 사용자 지정 옵션 페이지를 만들려면 페이지의 다양 한 메서드를 재정의 하 여이 동작을 사용자 지정할 수 있습니다. 자세한 내용은 [옵션 페이지 만들기](../../extensibility/creating-an-options-page.md)을 참조하세요.  
   
- The <xref:Microsoft.VisualStudio.Shell.DialogPage> class implements <xref:Microsoft.VisualStudio.Shell.IProfileManager>, which provides persistence for options pages and also for user settings. The default implementations of the <xref:Microsoft.VisualStudio.Shell.IProfileManager.LoadSettingsFromStorage%2A> and <xref:Microsoft.VisualStudio.Shell.IProfileManager.SaveSettingsToStorage%2A> methods persist property changes into a user section of the registry if the property can be converted to and from a string.  
+ <xref:Microsoft.VisualStudio.Shell.DialogPage> 클래스 구현 <xref:Microsoft.VisualStudio.Shell.IProfileManager>, 옵션 페이지 및 사용자 설정에 대 한도 지 속성을 제공 합니다. 기본 구현에서 <xref:Microsoft.VisualStudio.Shell.IProfileManager.LoadSettingsFromStorage%2A> 및 <xref:Microsoft.VisualStudio.Shell.IProfileManager.SaveSettingsToStorage%2A> 메서드 속성 문자열에서 변환할 수 있는 경우 레지스트리 사용자 섹션에 속성 변경 내용을 유지 합니다.  
   
-## <a name="options-page-registry-path"></a>Options Page Registry Path  
- By default, the registry path of the properties managed by an options page is determined by combining <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>, the word DialogPage, and the type name of the options page class. For example, an options page class might be defined as follows.  
+## 옵션 페이지 레지스트리 경로  
+ 기본적으로 레지스트리 경로 옵션 페이지에서 관리 하는 속성의 조합 하 여 결정 <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>, DialogPage, word 및 옵션 페이지 클래스의 형식 이름입니다. 예를 들어 옵션 페이지 클래스는 다음과 같이 정의 됩니다.  
   
- [!code-csharp[VSSDKSupportForOptionsPages#1](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_1.cs)] [!code-vb[VSSDKSupportForOptionsPages#1](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_1.vb)]  
+ [!CODE [VSSDKSupportForOptionsPages#1](../CodeSnippet/VS_Snippets_VSSDK/vssdksupportforoptionspages#1)]  
   
- If the <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> is HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp, then the property name and value pairs are subkeys of HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp\DialogPage\Company.OptionsPage.OptionsPageGeneral.  
+ 하는 경우는 <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\8.0Exp, 속성 이름 및 값 쌍은 HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\8.0Exp\\DialogPage\\Company.OptionsPage.OptionsPageGeneral의 하위 키가 있습니다.  
   
- The registry path of the options page itself is determined by combining <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, the word, ToolsOptionsPages, and the options page category and name. For example, if the Custom options page has the category, My Option Pages, and the <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> is HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp, then the options page has the registry key, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\ToolsOptionsPages\My Option Pages\Custom.  
+ 옵션 페이지 자체의 레지스트리 경로 결합 하 여 결정 됩니다 <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, 단어, ToolsOptionsPages, 그리고 옵션 페이지 범주 및 이름입니다. 예를 들어 사용자 지정 옵션 페이지에는 범주 내 옵션 페이지 및 <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> 옵션 페이지에는 레지스트리 키에 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\VisualStudio\\8.0Exp\\ToolsOptionsPages\\My 옵션 Pages\\Custom HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\VisualStudio\\8.0Exp, 됩니다.  
   
-## <a name="toolsoptions-page-attributes-and-layout"></a>Tools/Options Page Attributes and Layout  
- The <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> attribute determines the grouping of custom options pages into categories in the navigation tree of the **Options** dialog box. The <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> attribute associates an options page with the VSPackage that provides the interface. Consider the following code fragment:  
+## 도구\/옵션 페이지 특성 및 레이아웃  
+ <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 특성 결정 사용자 지정 옵션 페이지의 탐색 트리에서 범주로 그룹화는 **옵션** 대화 상자입니다.<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 특성 인터페이스를 제공 하는 VSPackage 옵션 페이지에 연결 합니다. 다음과 같은 코드 조각을 생각해 봅시다.  
   
- [!code-csharp[VSSDKSupportForOptionsPages#2](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_2.cs)] [!code-vb[VSSDKSupportForOptionsPages#2](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_2.vb)]  
+ [!CODE [VSSDKSupportForOptionsPages#2](../CodeSnippet/VS_Snippets_VSSDK/vssdksupportforoptionspages#2)]  
   
- This declares that MyPackage provides two options pages, OptionsPageGeneral and OptionsPageCustom. In the **Options** dialog box, both options pages appear in the **My Option Pages** category as **General** and **Custom**, respectively.  
+ 이 선언 MyPackage OptionsPageGeneral 및 OptionsPageCustom 두 옵션 페이지를 제공 합니다. 에 **옵션** 대화 상자에 표시 된 두 옵션 페이지의 **내 옵션 페이지** 범주에 속하는 **일반** 및 **사용자 지정**, 각각.  
   
-## <a name="option-attributes-and-layout"></a>Option Attributes and Layout  
- The user interface (UI) that the page provides determines the appearance of options in a custom options page. The layout, labeling, and description of options in a generic options page are determined by the following attributes:  
+## 옵션 특성 및 레이아웃  
+ 사용자 지정 옵션 페이지의 옵션의 모양을 결정 하는 페이지를 제공 하는 사용자 인터페이스 \(UI\). 레이아웃, 레이블 지정, 및에 대 한 일반 옵션 페이지의 옵션을 설명은 다음 특성으로 결정 됩니다.  
   
--   <xref:System.ComponentModel.CategoryAttribute> determines the category of the option.  
+-   <xref:System.ComponentModel.CategoryAttribute> 옵션의 범주를 결정합니다.  
   
--   <xref:System.ComponentModel.DisplayNameAttribute> determines the display name of the option.  
+-   <xref:System.ComponentModel.DisplayNameAttribute> 옵션의 표시 이름을 결정합니다.  
   
--   <xref:System.ComponentModel.DescriptionAttribute> determines the description of the option.  
+-   <xref:System.ComponentModel.DescriptionAttribute> 옵션의 설명에 따라 결정 됩니다.  
   
     > [!NOTE]
-    >  Equivalent attributes, SRCategory, LocDisplayName, and SRDescription, use string resources for localization and are defined in the [managed project sample](http://go.microsoft.com/fwlink/?LinkId=122774).  
+    >  문자열 리소스를 사용 하 여 지역화를 위한 및에 정의 된 해당 하는 특성, SRCategory, LocDisplayName, 및 SRDescription는 [관리 되는 프로젝트 샘플](http://go.microsoft.com/fwlink/?LinkId=122774)합니다.  
   
- Consider the following code fragment:  
+ 다음과 같은 코드 조각을 생각해 봅시다.  
   
- [!code-csharp[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_3.cs)] [!code-vb[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_3.vb)]  
+ [!CODE [VSSDKSupportForOptionsPages#3](../CodeSnippet/VS_Snippets_VSSDK/vssdksupportforoptionspages#3)]  
   
- The OptionInteger option appears on the options page as **Integer Option** in the **My Options** category. If the option is selected, the description, **My integer option**, appears in the description box.  
+ OptionInteger 옵션이 옵션 페이지에 표시 되는 **정수 옵션** 에 **내 옵션** 범주입니다. 옵션을 선택 하는 경우 설명을 **내 정수 옵션**, 설명 상자에 나타납니다.  
   
-## <a name="accessing-options-pages-from-another-vspackage"></a>Accessing Options Pages from Another VSPackage  
- A VSPackage that hosts and manages an options page can be programmatically accessed from another VSPackage by using the automation model. For example, in the following code a VSPackage is registered as hosting an option page.  
+## 다른 VSPackage에서 옵션 페이지에 액세스  
+ 자동화 모델을 사용 하 여 다른 VSPackage에서 호스팅하고 옵션 페이지를 관리 하는 VSPackage는 프로그래밍 방식으로 액세스할 수 있습니다. 예를 들어 다음 코드에서 VSPackage 옵션 페이지를 호스팅하는 것으로 등록 됩니다.  
   
- [!code-csharp[VSSDKSupportForOptionsPages#4](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_4.cs)] [!code-vb[VSSDKSupportForOptionsPages#4](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_4.vb)]  
+ [!CODE [VSSDKSupportForOptionsPages#4](../CodeSnippet/VS_Snippets_VSSDK/vssdksupportforoptionspages#4)]  
   
- The following code fragment gets the value of OptionInteger from MyOptionPage:  
+ 다음 코드에서는 MyOptionPage에서 OptionInteger의 값을 가져옵니다.  
   
- [!code-csharp[VSSDKSupportForOptionsPages#5](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_5.cs)] [!code-vb[VSSDKSupportForOptionsPages#5](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_5.vb)]  
+ [!CODE [VSSDKSupportForOptionsPages#5](../CodeSnippet/VS_Snippets_VSSDK/vssdksupportforoptionspages#5)]  
   
- When the <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> attribute registers an options page, the page is registered under the AutomationProperties key if the `SupportsAutomation` argument of the attribute is `true`. Automation examines this registry entry to find the associated VSPackage, and automation then accesses the property through the hosted options page, in this case, My Grid Page.  
+ 때는 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 옵션 페이지를 등록 하는 특성, AutomationProperties 키 경우 아래에서 등록 하는 페이지는 `SupportsAutomation` 특성의 인수는 `true`합니다. 자동화 연결된 VSPackage 및 자동화를 찾으려면이 레지스트리 항목을 검사 한 다음 호스팅된 옵션 페이지를 통해이 경우 그리드 페이지 내 속성에 액세스 합니다.  
   
- The registry path of the automation property is determined by combining <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, the word, AutomationProperties, and the options page category and name. For example, if the options page has the My Category category, the My Grid Page name, and the <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp, then the automation property has the registry key, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\AutomationProperties\My Category\My Grid Page.  
+ 자동화 속성의 레지스트리 경로 결합 하 여 결정 됩니다 <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, 단어, AutomationProperties, 그리고 옵션 페이지 범주 및 이름입니다. 예를 들어 옵션 페이지에서 My Category 범주를 내 그리드 페이지 이름 및 <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\VisualStudio\\8.0Exp, 다음 자동화 속성에는 레지스트리 키가 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\VisualStudio\\8.0Exp\\AutomationProperties\\My Category\\My 그리드 페이지입니다.  
   
 > [!NOTE]
->  The canonical name, My Category.My Grid Page, is the value of the Name subkey of this key.
+>  정식 이름 Category.My 그리드 페이지 내에이 키의 이름 하위 키의 값입니다.

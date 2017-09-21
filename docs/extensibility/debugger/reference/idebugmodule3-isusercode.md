@@ -1,65 +1,48 @@
 ---
-title: IDebugModule3::IsUserCode | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugModule3::IsUserCode
-helpviewer_keywords:
-- IDebugModule3::IsUserCode
+title: "IDebugModule3::IsUserCode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugModule3::IsUserCode"
+helpviewer_keywords: 
+  - "IDebugModule3::IsUserCode"
 ms.assetid: 77022946-bb8b-4114-aa81-614df6e54b13
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3f5bffdc71d82883799b94f2433e3eb7bdb37a7b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugmodule3isusercode"></a>IDebugModule3::IsUserCode
-Retrieves information on whether the module represents user code or not.  
+# IDebugModule3::IsUserCode
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+또는 않은 사용자 코드 모듈 나타내는 여부에 대 한 정보를 검색 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT IsUserCode(  
-   BOOL* pfUser  
+```cpp#  
+HRESULT IsUserCode(  
+   BOOL* pfUser  
 );  
 ```  
   
-```csharp  
+```c#  
 int IsUserCode(  
-   out int pfUser  
+   out int pfUser  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pfUser`  
- [out] Nonzero (`TRUE`) if module represents user code, zero (`FALSE`) if it does not.  
+ \[out\] 0이 아닌 \(`TRUE`\) 사용자 코드 모듈을 나타내는 경우에 0 \(`FALSE`\) 표시 되지 않는 경우.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

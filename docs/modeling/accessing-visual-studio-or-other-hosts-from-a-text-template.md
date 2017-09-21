@@ -1,49 +1,32 @@
 ---
-title: Accessing Visual Studio or other Hosts from a Text Template | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "텍스트 템플릿에서 Visual Studio 또는 다른 호스트 액세스 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: a68886da-7416-4785-8145-3796bb382cba
 caps.latest.revision: 5
-author: alancameronwills
-ms.author: awills
-manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 767f5fc72efbfcb6fc69fdec023d8572149b1685
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+author: "alancameronwills"
+ms.author: "awills"
+manager: "douge"
+caps.handback.revision: 5
 ---
-# <a name="accessing-visual-studio-or-other-hosts-from-a-text-template"></a>Accessing Visual Studio or other Hosts from a Text Template
-In a text template, you can use methods and properties exposed by the host that executes the template, such as [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+# 텍스트 템플릿에서 Visual Studio 또는 다른 호스트 액세스
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+텍스트 템플릿에서는 템플릿을 실행하는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]과 같은 호스트에서 노출하는 메서드 및 속성을 사용할 수 있습니다.  
   
- This applies to regular text templates, not preprocessed text templates.  
+ 이 내용은 일반 텍스트 템플릿에 적용되며 전처리된 텍스트 템플릿에는 적용되지 않습니다.  
   
-## <a name="obtaining-access-to-the-host"></a>Obtaining access to the host  
- Set `hostspecific="true"` in the `template` directive. This lets you use  `this.Host`, which has type <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>. This type has members that you can use, for example, to resolve file names and to log errors.  
+## 호스트에 대한 액세스 획득  
+ `template` 지시문에서 `hostspecific="true"`를 설정합니다.  이렇게 하면 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> 형식의 `this.Host`를 사용할 수 있습니다.  이 형식에는 파일 이름을 확인하고 오류를 기록할 때와 같은 경우 사용할 수 있는 멤버가 있습니다.  
   
-### <a name="resolving-file-names"></a>Resolving File Names  
- To find the full path of a file relative to the text template, use this.Host.ResolvePath().  
+### 파일 이름 확인  
+ 텍스트 템플릿에 관련된 파일의 전체 경로를 찾으려면 this.Host.ResolvePath\(\)를 사용합니다.  
   
-```csharp  
+```c#  
 <#@ template hostspecific="true" language="C#" #>  
 <#@ output extension=".txt" #>  
 <#@ import namespace="System.IO" #>  
@@ -56,10 +39,10 @@ Content of myFile is:
   
 ```  
   
-### <a name="displaying-error-messages"></a>Displaying Error Messages  
- This example logs messages when you transform the template. If the host is [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], they are added to the error window.  
+### 오류 메시지 표시  
+ 이 예제에서는 템플릿을 변환할 때 메시지를 기록합니다.  호스트가 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]인 경우에는 해당 메시지가 오류 창에 추가됩니다.  
   
-```csharp  
+```c#  
 <#@ template hostspecific="true" language="C#" #>  
 <#@ output extension=".txt" #>  
 <#@ import namespace="System.CodeDom.Compiler" #>  
@@ -74,14 +57,14 @@ Content of myFile is:
   
 ```  
   
-## <a name="using-the-visual-studio-api"></a>Using the Visual Studio API  
- If you are executing a text template in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], you can use `this.Host` to access services provided by [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] and any packages or extensions that are loaded.  
+## Visual Studio API 사용  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 텍스트 템플릿을 실행하는 경우 `this.Host`를 사용하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 제공하는 서비스와 로드된 패키지나 확장에 액세스할 수 있습니다.  
   
- Set hostspecific="true" and cast `this.Host` to <xref:System.IServiceProvider>.  
+ hostspecific\="true"를 설정하고 `this.Host`를 <xref:System.IServiceProvider>로 캐스팅합니다.  
   
- This example gets the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] API, <xref:EnvDTE.DTE>, as a service:  
+ 이 예제에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] API인 <xref:EnvDTE.DTE>를 서비스로 가져옵니다.  
   
-```csharp  
+```c#  
 <#@ template hostspecific="true" language="C#" #>  
 <#@ output extension=".txt" #>  
 <#@ assembly name="EnvDTE" #>  
@@ -94,5 +77,5 @@ Number of projects in this solution: <#=  dte.Solution.Projects.Count #>
   
 ```  
   
-## <a name="using-hostspecific-with-template-inheritance"></a>Using hostSpecific with template inheritance  
- Specify `hostspecific="trueFromBase"` if you also use the `inherits` attribute, and if you inherit from a template that specifies `hostspecific="true"`. This avoids a compiler warning to the effect that the property `Host` has been declared twice.
+## 템플릿을 사용 하 여 상속을 사용 하 여 hostSpecific  
+ 지정 `hostspecific="trueFromBase"` 도 사용 하는 경우는 `inherits` 특성 및 지정 템플릿에서 상속 `hostspecific="true"`.  이 컴파일러 경고 하는 효과 피할 수 있는 속성이 `Host` 두 번 선언 되었습니다.

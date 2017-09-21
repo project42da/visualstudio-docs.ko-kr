@@ -1,73 +1,56 @@
 ---
-title: IDebugProgram2::WriteDump | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgram2::WriteDump
-helpviewer_keywords:
-- IDebugProgram2::WriteDump
+title: "IDebugProgram2::WriteDump | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgram2::WriteDump"
+helpviewer_keywords: 
+  - "IDebugProgram2::WriteDump"
 ms.assetid: 375afb8c-882d-44db-bfa7-e2c9eb555122
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2053e56d6e8508af1953c8560ac2e167b2966376
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugprogram2writedump"></a>IDebugProgram2::WriteDump
-Writes a dump to a file.  
+# IDebugProgram2::WriteDump
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+덤프 파일에 기록 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT WriteDump(   
-   DUMPTYPE  DumpType,  
-   LPCOLESTR pszDumpUrl  
+```cpp#  
+HRESULT WriteDump(   
+   DUMPTYPE  DumpType,  
+   LPCOLESTR pszDumpUrl  
 );  
 ```  
   
-```csharp  
-int WriteDump(   
-   enum_DUMPTYPE  DumpType,  
-   string         pszDumpUrl  
+```c#  
+int WriteDump(   
+   enum_DUMPTYPE  DumpType,  
+   string         pszDumpUrl  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `DumpType`  
- [in] A value from the [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md) enumeration that specifies the type of dump, for example, short or long.  
+ \[in\] 값은 [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md) 덤프의 유형을 지정 예를 들어, 간단한 열거형 또는 장기.  
   
  `pszDumpUrl`  
- [in] The URL to write the dump to. Typically, this is in the form of `file://c:\path\filename.ext`, but may be any valid URL.  
+ \[in\] 덤프를 작성 하는 URL입니다.  일반적으로이 형식으로 된  `file://c:\path\filename.ext`, 모든 유효한 URL 이지만.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- A program dump would typically include the current stack frame, the stack itself, a list of the threads running in the program, and possibly any memory that the program owns.  
+## 설명  
+ 프로그램 덤프를 일반적으로 포함 됩니다 현재 스택 프레임, 스택 자체, 프로그램, 및 프로그램을 소유 하 고 가능한 경우 메모리에서 실행 중인 스레드 목록입니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

@@ -1,69 +1,52 @@
 ---
-title: IDebugDocumentPosition2::IsPositionInDocument | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugDocumentPosition2::IsPositionInDocument
-helpviewer_keywords:
-- IDebugDocumentPosition2::IsPositionInDocument
+title: "IDebugDocumentPosition2::IsPositionInDocument | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugDocumentPosition2::IsPositionInDocument"
+helpviewer_keywords: 
+  - "IDebugDocumentPosition2::IsPositionInDocument"
 ms.assetid: d5cf57cb-b93b-4e1d-bec9-185f4fe8668d
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 101a380170d4abeed6d96dd28932be0f82a21094
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugdocumentposition2ispositionindocument"></a>IDebugDocumentPosition2::IsPositionInDocument
-Determines if the document position is contained in the given document.  
+# IDebugDocumentPosition2::IsPositionInDocument
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+문서 위치를 지정 된 문서에 포함 되는지 여부를 결정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT IsPositionInDocument(   
-   IDebugDocument2* pDoc  
+```cpp#  
+HRESULT IsPositionInDocument(   
+   IDebugDocument2* pDoc  
 );  
 ```  
   
-```csharp  
-int IsPositionInDocument(   
-   IDebugDocument2 pDoc  
+```c#  
+int IsPositionInDocument(   
+   IDebugDocument2 pDoc  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pDoc`  
- [in] The [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) object that represents the containing document candidate.  
+ \[in\] [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) 포함 된 문서의 후보를 나타내는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- This method is used primarily in setting breakpoints in [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) interfaces. As documents are loaded, the breakpoint position is called to determine if the document contains this position.  
+## 설명  
+ 이 메서드는 주로에 중단점 설정 사용 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) 인터페이스입니다.  문서가 로드 되 면 문서가이 위치를 포함 하는 경우 확인 하려면 중단점 위치 라고 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

@@ -1,75 +1,58 @@
 ---
-title: IDebugReference2::SetValueAsString | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugReference2::SetValueAsString
-helpviewer_keywords:
-- IDebugReference2::SetValueAsString
+title: "IDebugReference2::SetValueAsString | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugReference2::SetValueAsString"
+helpviewer_keywords: 
+  - "IDebugReference2::SetValueAsString"
 ms.assetid: 9a508ced-fd54-44f5-bb42-ec15c80384d7
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c70ee1f6cc80ff2fdaa6c22bea813c8d4d8951d3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugreference2setvalueasstring"></a>IDebugReference2::SetValueAsString
-Sets the value of a reference from a string. Reserved for future use.  
+# IDebugReference2::SetValueAsString
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+문자열에서에 대 한 참조의 값을 설정 합니다.  다음에 사용하도록 예약됩니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT SetValueAsString (   
-   LPCOLESTR pszValue,  
-   DWORD     dwRadix,  
-   DWORD     dwTimeout  
+```cpp#  
+HRESULT SetValueAsString (   
+   LPCOLESTR pszValue,  
+   DWORD     dwRadix,  
+   DWORD     dwTimeout  
 );  
 ```  
   
-```csharp  
-int SetValueAsString (   
-   string pszValue,  
-   uint   dwRadix,  
-   uint   dwTimeout  
+```c#  
+int SetValueAsString (   
+   string pszValue,  
+   uint   dwRadix,  
+   uint   dwTimeout  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pszValue`  
- [in] The value as a string.  
+ \[in\] 문자열로 나타낸 값입니다.  
   
  `dwRadix`  
- [in] The radix to be used in formatting any numerical information.  
+ \[in\] 임의의 숫자 정보를 서식 지정에 사용할 기 수입니다.  
   
  `dwTimeout`  
- [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
+ \[in\] 이 메서드에서 반환 하기 전에 대기할 시간 \(밀리초\), 최대 시간입니다.  사용 `INFINITE` 무제한으로 대기 합니다.  
   
-## <a name="return-value"></a>Return Value  
- Always returns `E_NOTIMPL`.  
+## 반환 값  
+ 항상 `E_NOTIMPL`를 반환합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

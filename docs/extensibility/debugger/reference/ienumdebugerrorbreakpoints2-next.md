@@ -1,76 +1,59 @@
 ---
-title: IEnumDebugErrorBreakpoints2::Next | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IEnumDebugErrorBreakpoints2::Next
-helpviewer_keywords:
-- IEnumDebugErrorBreakpoints2::Next
+title: "IEnumDebugErrorBreakpoints2::Next | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IEnumDebugErrorBreakpoints2::Next"
+helpviewer_keywords: 
+  - "IEnumDebugErrorBreakpoints2::Next"
 ms.assetid: 6a3dee11-5267-4d77-9e28-6a38413ba70b
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5c878e8a5fd42f08ff3375594547f87128b5dfd0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="ienumdebugerrorbreakpoints2next"></a>IEnumDebugErrorBreakpoints2::Next
-Returns the next set of elements from the enumeration.  
+# IEnumDebugErrorBreakpoints2::Next
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+열거형의 다음 집합의 요소를 반환합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT Next(  
-   ULONG                    celt,  
-   IDebugErrorBreakpoint2** rgelt,  
-   ULONG*                   pceltFetched  
+   ULONG                    celt,  
+   IDebugErrorBreakpoint2** rgelt,  
+   ULONG*                   pceltFetched  
 );  
 ```  
   
-```csharp  
+```c#  
 int Next(  
-   uint                     celt,  
-   IDebugErrorBreakpoint2[] rgelt,  
-   ref uint                 pceltFetched  
+   uint                     celt,  
+   IDebugErrorBreakpoint2[] rgelt,  
+   ref uint                 pceltFetched  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `celt`  
- [in] The number of elements to retrieve. Also specifies the maximum size of the `rgelt` array.  
+ \[in\] 검색할 요소의 수입니다.  도의 최대 크기를 지정은 `rgelt` 배열입니다.  
   
  `rgelt`  
- [in, out] Array of [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) elements to be filled in.  
+ \[in, out\] 배열 [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) 요소를 채울 수 있도록 합니다.  
   
  `pceltFetched`  
- [out] Returns the number of elements actually returned in `rgelt`.  
+ \[out\] 실제로 반환 된 요소 수를 반환 합니다. `rgelt`.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`. Returns `S_FALSE` if fewer than the requested number of elements could be returned; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`.  반환 `S_FALSE` 미만인 경우 요청 된 수의 요소를 반환할 수 없습니다. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)   
  [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)

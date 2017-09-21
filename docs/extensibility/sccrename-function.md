@@ -1,85 +1,68 @@
 ---
-title: SccRename Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccRename
-helpviewer_keywords:
-- SccRename function
+title: "SccRename 함수 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccRename"
+helpviewer_keywords: 
+  - "SccRename 함수"
 ms.assetid: b467ade6-a1db-4c0b-b60f-7850ec4f79eb
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 58a500fe775bb7837e6132bd918be63fb68b7fe2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="sccrename-function"></a>SccRename Function
-This function renames a file in the source control system.  
+# SccRename 함수
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+소스 제어 시스템에서이 함수에는 파일을 이름을 바꿉니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 SCCRTN SccRename(  
-   LPVOID pvContext,  
-   HWND   hWnd,  
-   LPCSTR lpFileName,  
-   LPCSTR lpNewName  
+   LPVOID pvContext,  
+   HWND   hWnd,  
+   LPCSTR lpFileName,  
+   LPCSTR lpNewName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  pvContext  
- [in] The source control plug-in context structure.  
+ \[in\] 소스 제어 플러그 인 컨텍스트 구조입니다.  
   
  hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ \[in\] 소스 제어 플러그 인을 제공 하는 모든 대화 상자에 대 한 부모로 사용할 수 있는 IDE 창 핸들입니다.  
   
  lpFileName  
- [in] The fully qualified file name of the file being renamed.  
+ \[in\] 이름을 바꿀 파일의 정규화 된 파일 이름입니다.  
   
  lpNewName  
- [in] The fully qualified new name. If the directory path is different, then the file has moved from one subdirectory to another.  
+ \[in\] 정규화 된 새 이름입니다. 디렉터리 경로가 다른 경우 다음 파일이 이동 한 하위 디렉터리에서 다른 합니다.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 반환 값  
+ 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|The renaming operation completed successfully.|  
-|SCC_E_PROJNOTOPEN|The project is not open under source control.|  
-|SCC_E_FILENOTCONTROLLED|The file is not under source control.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues.|  
-|SCC_E_NOTAUTHORIZED|The user is not authorized to complete this operation.|  
-|SCC_E_COULDNOTCREATEPROJECT|The project could not be created as part of the renaming process.|  
-|SCC_E_OPNOTPERFORMED|The operation was not performed.|  
-|SCC_E_NONSPECIFICERROR|An unspecified or general error occurred.|  
+|값|설명|  
+|-------|--------|  
+|SCC\_OK|이름 바꾸기 작업이 완료 되었습니다.|  
+|SCC\_E\_PROJNOTOPEN|프로젝트 소스 제어에서 열려 있지 않습니다.|  
+|SCC\_E\_FILENOTCONTROLLED|소스 제어는 파일이 아닙니다.|  
+|SCC\_E\_ACCESSFAILURE|소스 제어 시스템에 경합 또는 네트워크 문제 때문에 액세스할 수 없습니다.|  
+|SCC\_E\_NOTAUTHORIZED|사용자는이 작업을 완료할 권한이 없습니다.|  
+|SCC\_E\_COULDNOTCREATEPROJECT|프로젝트 이름 바꾸기 프로세스의 일부로 만들 수 없습니다.|  
+|SCC\_E\_OPNOTPERFORMED|작업을 수행 하지 못했습니다.|  
+|SCC\_E\_NONSPECIFICERROR|지정 되지 않은 또는 일반 오류가 발생 했습니다.|  
   
-## <a name="remarks"></a>Remarks  
- This function can be used to rename a file or move it from one location to another in the source control system. The source control plug-in should not attempt to access the file on disk. It is the IDE's responsibility to rename the local file.  
+## 설명  
+ 파일 이름 바꾸기 또는 이동 하 한 위치에서 다른 소스 제어 시스템에서이 함수를 사용할 수 있습니다. 소스 제어 플러그 인 디스크에 있는 파일에 액세스 하지 않아야 합니다. 것은 로컬 파일의 이름을 바꾸려면 IDE의 책임입니다.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)
+## 참고 항목  
+ [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,78 +1,61 @@
 ---
-title: IDebugSettingsCallback2::GetMetricDword | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugSettingsCallback2::GetMetricDword
+title: "IDebugSettingsCallback2::GetMetricDword | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugSettingsCallback2::GetMetricDword"
 ms.assetid: 831a5a1a-c4af-4520-9fdf-3a731aeff85c
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 392c1d2518287fbe8904cfea3710d9e7faa0309c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugsettingscallback2getmetricdword"></a>IDebugSettingsCallback2::GetMetricDword
-Retrieves the value of a metric given its name.  
+# IDebugSettingsCallback2::GetMetricDword
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+메트릭 지정 된 이름 값을 검색 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT GetMetricDword(  
-   LPCWSTR pszType,  
-   REFGUID guidSection,  
-   LPCWSTR pszMetric,  
-   DWORD*  pdwValue  
+   LPCWSTR pszType,  
+   REFGUID guidSection,  
+   LPCWSTR pszMetric,  
+   DWORD*  pdwValue  
 );  
 ```  
   
-```csharp  
+```c#  
 private int GetMetricDword(  
-   string   pszType,  
-   ref Guid guidSection,  
-   string   pszMetric,  
-   out uint pdwValue  
+   string   pszType,  
+   ref Guid guidSection,  
+   string   pszMetric,  
+   out uint pdwValue  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pszType`  
- [in] Type of the metric.  
+ \[in\] 메트릭 형식입니다.  
   
  `guidSection`  
- [in] Unique identifier of the section.  
+ \[in\] 섹션의 고유 식별자입니다.  
   
  `pszMetric`  
- [in] Name of the metric.  
+ \[in\] 메트릭의 이름입니다.  
   
  `pdwValue`  
- [out] Returns the value of the metric.  
+ \[out\] 메트릭 값을 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

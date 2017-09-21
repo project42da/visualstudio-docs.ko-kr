@@ -1,69 +1,52 @@
 ---
-title: Dynamically Adding Menu Items | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- DYNAMICITEMSTART
-- menu items, adding dynamically
-- menus, adding dynamic items
+title: "동적으로 메뉴 항목 추가 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "DYNAMICITEMSTART"
+  - "메뉴 항목을 동적으로 추가"
+  - "메뉴, 동적 항목 추가"
 ms.assetid: d281e9c9-b289-4d64-8d0a-094bac6c333c
 caps.latest.revision: 37
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0788c7cc5d659c1f0bbf1d4b0043b0c2f7181345
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 37
 ---
-# <a name="dynamically-adding-menu-items"></a>Dynamically Adding Menu Items
-You can add menu items at run time by specifying the `DynamicItemStart` command flag on a placeholder button definition in the Visual Studio command-table (.vsct) file, then defining (in code) the number of menu items to display and handling the command(s). When the VSPackage is loaded, the placeholder is replaced with the dynamic menu items.  
+# 동적으로 메뉴 항목 추가
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+지정 하 여 런타임에 메뉴 항목을 추가할 수는 `DynamicItemStart` 를 표시 하 고 명령 처리 항목 메뉴의 번호를 코드에서 정의 하는 다음 플래그는 Visual Studio 명령 테이블 \(.vsct\) 파일에 있는 자리 표시자 단추 정의를 명령입니다. VSPackage가 로드 되 면 자리 표시자에 있는 동적 메뉴 항목으로 대체 됩니다.  
   
- Visual Studio uses dynamic lists in the **Most Recently Used** (MRU) list, which displays the names of documents that have been opened recently, and the **Windows** list, which displays the names of windows that are currently open.   The `DynamicItemStart` flag on a command definition specifies that the command is a placeholder until the VSPackage is opened. When the VSPackage is opened, the placeholder is replaced with 0 or more commands that are created at run time and added to the dynamic list. You may not be able to see the position on the menu where the dynamic list appears until the VSPackage is opened.  To populate the dynamic list, Visual Studio asks the VSPackage to look for a command with an ID whose first characters are the same as the ID of the placeholder. When Visual Studio finds a matching command, it adds the name of the command  to the dynamic list. Then it increments the ID and looks for another matching command to add to the dynamic list until there are no more dynamic commands.  
+ Visual Studio에서 동적 목록을 사용 하 여는 **가장 최근에 사용한** 최근에 연 문서의 이름을 표시 하는 \(MRU\) 목록 및 **Windows** 현재 열려 있는 창의 이름을 표시 하는 목록입니다.`DynamicItemStart` VSPackage 열릴 때까지 명령이 자리 표시자 플래그 명령 정의를 지정 합니다. VSPackage를 열 때 자리 표시자는 0 또는 런타임 시 만들어지고 동적 목록에 추가 되는 추가 명령으로 대체 됩니다. VSPackage 열릴 때까지 동적 목록이 나타나는 메뉴에서 위치를 알아보려면 못할 수 있습니다. Visual Studio 동적 목록으로 채우려면 id가 있는 첫 번째 문자 자리 표시자의 ID와 동일 명령에 대 한 조회를 VSPackage를 요청 합니다. Visual Studio가 일치 하는 명령을 찾으면 명령의 이름을 동적 목록에 추가 합니다. 그런 다음 ID를 증가 하 고 더 이상 동적 명령 없을 때까지 동적 목록에 추가할 다른 일치 하는 명령을 찾습니다.  
   
- This walkthrough shows how to set the startup project in a Visual Studio solution with a command on the **Solution Explorer** toolbar. It uses a menu controller that has a dynamic dropdown list of the projects in the active solution. To keep this command from appearing when no solution is open or when the open solution has only one project, the VSPackage is loaded only when a solution has multiple projects.  
+ 이 연습에서는 명령 사용 하 여 Visual Studio 솔루션에서 시작 프로젝트에 설정 하는 방법을 보여 줍니다.는 **솔루션 탐색기** 도구 모음입니다. 활성 솔루션 프로젝트 동적 드롭다운 목록에 있는 메뉴 컨트롤러를 사용 합니다. 이 명령은 솔루션이 없을 때 표시 되지 않도록 하려면 현재 열려 있거나 VSPackage 솔루션에 여러 프로젝트가 있는 경우에 로드 되는 열려 있는 솔루션에 프로젝트가 하나만 있는 경우.  
   
- For more information about .vsct files, see [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
+ .Vsct 파일에 대 한 자세한 내용은 참조 [Visual Studio 명령 테이블 \(. Vsct\) 파일](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)합니다.  
   
-## <a name="creating-an-extension-with-a-menu-command"></a>Creating an Extension with a Menu Command  
+## 메뉴 명령을 사용 하 여 확장 만들기  
   
-1.  Create a VSIX project named `DynamicMenuItems`.  
+1.  라는 VSIX 프로젝트를 `DynamicMenuItems`합니다.  
   
-2.  When the project opens, add a custom command item template and name it **DynamicMenu**. For more information, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).  
+2.  프로젝트를 열면 사용자 지정 명령 항목 템플릿을 추가 하 고 이름을 **DynamicMenu**합니다. 자세한 내용은 [메뉴 명령을 사용 하 여 확장 만들기](../extensibility/creating-an-extension-with-a-menu-command.md)을 참조하세요.  
   
-## <a name="setting-up-the-elements-in-the-vsct-file"></a>Setting up the elements in the .vsct file  
- To create a menu controller with dynamic menu items on a toolbar, you specify the following elements:  
+## .Vsct 파일에서 요소를 설정합니다.  
+ 메뉴 컨트롤러 도구 모음에 동적 메뉴 항목을 만들려면 다음 요소를 지정 합니다.  
   
--   Two command groups, one that contains the menu controller and another that contains the menu items in the dropdown  
+-   그룹 메뉴 컨트롤러를 포함 하 고 드롭다운 목록에서 메뉴 항목을 포함 하는 다른 두 개의 명령  
   
--   One menu element of type `MenuController`  
+-   형식의 요소를 하나의 메뉴 `MenuController`  
   
--   Two buttons, one that acts as the placeholder for the menu items and another that supplies the icon and the tooltip on the toolbar.  
+-   두 개의 단추, 아이콘 및 도구 모음에서 도구 설명을 제공 하는 메뉴 항목을 자리 표시자로 사용 되는 하나입니다.  
   
-1.  In DynamicMenuPackage.vsct, define the command IDs. Go to the Symbols section and replace the IDSymbol elements in the **guidDynamicMenuPackageCmdSet** GuidSymbol block. You need to define IDSymbol elements for the two groups, the menu controller, the placeholder command, and the anchor command.  
+1.  DynamicMenuPackage.vsct, 명령 Id를 정의 합니다. 기호 섹션으로 이동 하 고 IDSymbol 요소를 교체는 **guidDynamicMenuPackageCmdSet** GuidSymbol 블록입니다. 두 개의 그룹, 메뉴 컨트롤러, 자리 표시자 명령 및 앵커 명령에 대 한 IDSymbol 요소를 정의 해야 합니다.  
   
-    ```csharp  
+    ```c#  
     <GuidSymbol name="guidDynamicMenuPackageCmdSet" value="{ your GUID here }">  
         <IDSymbol name="MyToolbarItemGroup" value="0x1020" />  
         <IDSymbol name="MyMenuControllerGroup" value="0x1025" />  
@@ -76,7 +59,7 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </GuidSymbol>    
     ```  
   
-2.  In the Groups section, delete the existing groups and add the two groups you just defined:  
+2.  그룹 섹션에서 기존 그룹을 삭제 하 고 방금 정의한 두 그룹을 추가:  
   
     ```  
     <Groups>  
@@ -93,7 +76,7 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </Groups>  
     ```  
   
-     Add the MenuController. Set the DynamicVisibility command flag, since it is not always visible. The ButtonText is not displayed.  
+     MenuController를 추가 합니다. 항상 표시 되지 않으므로 DynamicVisibility 명령 플래그를 설정 합니다. 로드 합니다 표시 되지 않습니다.  
   
     ```  
     <Menus>  
@@ -109,11 +92,11 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </Menus>  
     ```  
   
-3.  Add two buttons, one as a placeholder for the dynamic menu items and one as an anchor for the MenuController.  
+3.  MenuController에 대 한 두 개의 단추, 동적 메뉴 항목에 대 한 자리 표시자로 및 앵커로 추가 합니다.  
   
-     The parent of the placeholder button is the **MyMenuControllerGroup**. Add the DynamicItemStart, DynamicVisibility, and TextChanges command flags to the placeholder button. The ButtonText is not displayed.  
+     자리 표시자 단추의 부모는 **MyMenuControllerGroup**합니다. 자리 표시자 버튼에 DynamicItemStart, DynamicVisibility, 및 TextChanges 명령 플래그를 추가 합니다. 로드 합니다 표시 되지 않습니다.  
   
-     The anchor button holds the icon and the tooltip text. The parent of the anchor button is also the **MyMenuControllerGroup**. You add the NoShowOnMenuController command flag to make sure the button doesn't actually appear in the menu controller dropdown, and the FixMenuController command flag to make it the permanent anchor.  
+     앵커 단추 아이콘 및 도구 설명 텍스트를 저장합니다. 앵커 단추의 부모 이기도 **MyMenuControllerGroup**합니다. 단추 메뉴 컨트롤러 드롭다운에 실제로 표시 되지 않으면 되도록 NoShowOnMenuController 명령 플래그와 영구 앵커 있도록 FixMenuController 명령 플래그 추가 합니다.  
   
     ```  
     <!-- The placeholder for the dynamic items that expand to N items at runtime. -->  
@@ -146,9 +129,9 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </Buttons>  
     ```  
   
-4.  Add an icon to the project (in the Resources folder), and then add the reference to it in the .vsct file. In this walkthrough, we use the Arrows icon that's included in the project template.  
+4.  아이콘 \(Resources 폴더\)에서 프로젝트에 추가 하 고.vsct 파일에서에 대 한 참조를 추가 합니다. 이 연습에서는 프로젝트 템플릿에 포함 되어 있는 화살표 아이콘을 사용 합니다.  
   
-5.  Add a VisibilityConstraints section outside the Commands section just before the Symbols section. (You may get a warning if you add it after Symbols.) This section makes sure that the menu controller appears only when a solution with multiple projects is loaded.  
+5.  Symbols 섹션 바로 앞의 명령 섹션 외부 VisibilityConstraints 섹션을 추가 합니다. \(경우 발생할 수 있습니다 경고를 기호 뒤에 추가 합니다.\) 이 섹션을 추가 하면 메뉴 컨트롤러에 여러 프로젝트가 있는 솔루션 로드 될 때에 표시 되도록 합니다.  
   
     ```  
     <VisibilityConstraints>  
@@ -157,12 +140,12 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </VisibilityConstraints>  
     ```  
   
-## <a name="implementing-the-dynamic-menu-command"></a>Implementing the dynamic menu command  
- You create a dynamic menu command class that inherits from <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>. In this implementation, the constructor specifies a predicate to be used for matching commands. You must override the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> method to use this predicate to set the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> property, which identifies the command to be invoked.  
+## 동적 메뉴 명령 구현  
+ 상속 되는 동적 메뉴 명령 클래스를 만들면 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>합니다. 이 구현에서는 생성자 명령을 일치 하는 데 사용할 조건자를 지정 합니다. 재정의 해야는 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> 이 조건자를 사용 하는 메서드는 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> 명령을 호출할 수를 식별 하는 속성입니다.  
   
-1.  Create a new C# class file named DynamicItemMenuCommand.cs, and add a class named **DynamicItemMenuCommand** that inherits from <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>:  
+1.  C\# 클래스 라는 새 파일 DynamicItemMenuCommand.cs를 만들고 라는 클래스를 추가 **DynamicItemMenuCommand** 에서 상속 되는 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>:  
   
-    ```csharp  
+    ```c#  
     class DynamicItemMenuCommand : OleMenuCommand  
     {  
   
@@ -170,24 +153,24 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
   
     ```  
   
-2.  Add the following using statements:  
+2.  다음 코드를 추가 문을 사용 하 여:  
   
-    ```csharp  
+    ```c#  
     using Microsoft.VisualStudio.Shell;  
     using Microsoft.VisualStudio.Shell.Interop;  
     using System.ComponentModel.Design;  
     ```  
   
-3.  Add a private field to store the match predicate:  
+3.  일치 항목이 조건자를 저장 하는 개인 필드를 추가 합니다.  
   
-    ```csharp  
+    ```c#  
     private Predicate<int> matches;  
   
     ```  
   
-4.  Add a constructor that inherits from the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> constructor and specifies a command handler and a <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> handler. Add a predicate for matching the command:  
+4.  상속 되는 생성자를 추가 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 생성자 명령 처리기를 지정 하 고 및 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> 처리기입니다. 이 명령은 일치 하는 조건자를 추가 합니다.  
   
-    ```csharp  
+    ```c#  
     public DynamicItemMenuCommand(CommandID rootId, Predicate<int> matches, EventHandler invokeHandler, EventHandler beforeQueryStatusHandler)  
         : base(invokeHandler, null /*changeHandler*/, beforeQueryStatusHandler, rootId)  
     {  
@@ -200,9 +183,9 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-5.  Override the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> method so that it calls the matches predicate and sets the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> property:  
+5.  재정의 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> 조건자 집합과 일치 하 고 호출 하도록 메서드는 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> 속성:  
   
-    ```csharp  
+    ```c#  
     public override bool DynamicItemMatch(int cmdId)  
     {  
         // Call the supplied predicate to test whether the given cmdId is a match.  
@@ -220,39 +203,39 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-## <a name="adding-the-command"></a>Adding the command  
- The DynamicMenu constructor is where you set up menu commands, including dynamic menus and menu items.  
+## 명령 추가  
+ DynamicMenu 생성자는 메뉴 명령, 동적 메뉴 및 메뉴 항목을 포함 하 여 설정할 수 있습니다.  
   
-1.  In DynamicMenuPackageGuids.cs, add the GUID of the command set and the command ID:  
+1.  DynamicMenuPackageGuids.cs, 명령 집합의 GUID 및 명령 ID를 추가 합니다.  
   
-    ```csharp  
+    ```c#  
     public const string guidDynamicMenuPackageCmdSet = "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file  
     public const uint cmdidMyCommand = 0x104;  
     ```  
   
-2.  In the DynamicMenu.cs file, add the following using statements:  
+2.  DynamicMenu.cs 파일에서 다음 추가 문을 사용 하 여:  
   
-    ```csharp  
+    ```c#  
     using EnvDTE;  
     using EnvDTE80;  
     using System.ComponentModel.Design;  
     ```  
   
-3.  In the DynamicMenu class, add a private field **dte2**.  
+3.  DynamicMenu 클래스에서 private 필드를 추가 **dte2**합니다.  
   
-    ```csharp  
+    ```c#  
     private DTE2 dte2;  
     ```  
   
-4.  Add a private rootItemId field:  
+4.  개인 rootItemId 필드를 추가 합니다.  
   
-    ```csharp  
+    ```c#  
     private int rootItemId = 0;  
     ```  
   
-5.  In the DynamicMenu constructor, add the menu command. In the next section we'll define the command handler, the `BeforeQueryStatus` event handler, and the match predicate.  
+5.  DynamicMenu 생성자에서 메뉴 명령을 추가 합니다. 다음 섹션에서는 명령 처리기를 정의 합니다는 `BeforeQueryStatus` 이벤트 처리기 및 일치 조건자입니다.  
   
-    ```csharp  
+    ```c#  
     private DynamicMenu(Package package)  
     {  
         if (package == null)  
@@ -278,16 +261,16 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-## <a name="implementing-the-handlers"></a>Implementing the handlers  
- To implement dynamic menu items on a menu controller, you must handle the command when a dynamic item is clicked. You must also implement the logic that sets the state of the menu item. Add the handlers to the DynamicMenu class.  
+## 처리기를 구현합니다.  
+ 메뉴 컨트롤러에서 동적 메뉴 항목을 구현 하려면 동적 항목을 클릭할 때 명령을 처리 해야 합니다. 메뉴 항목의 상태를 설정 하는 논리를 구현 해야 합니다. DynamicMenu 클래스에 처리기를 추가 합니다.  
   
-1.  To implement the **Set Startup Project** command, add the **OnInvokedDynamicItem** event handler. It looks for the project whose name is the same as the text of the command that has been invoked, and sets it as the startup project by setting its absolute path in the <xref:EnvDTE.SolutionBuild.StartupProjects%2A> property.  
+1.  구현 하는 **시작 프로젝트 설정** 명령, 추가 **OnInvokedDynamicItem** 이벤트 처리기입니다. 이 호출 되었고, 및에서 절대 경로 설정 하 여 시작 프로젝트로 설정 하는 명령 텍스트와 동일 하 게 이름은 프로젝트에 대 한 표시는 <xref:EnvDTE.SolutionBuild.StartupProjects%2A> 속성입니다.  
   
-    ```csharp  
+    ```c#  
     private void OnInvokedDynamicItem(object sender, EventArgs args)  
     {  
         DynamicItemMenuCommand invokedCommand = (DynamicItemMenuCommand)sender;  
-        // If the command is already checked, we don't need to do anything  
+        // If the command is already checked, we don’t need to do anything  
         if (invokedCommand.Checked)  
             return;  
   
@@ -304,9 +287,9 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-2.  Add the `OnBeforeQueryStatusDynamicItem` event handler. This is the handler called before a `QueryStatus` event. It determines whether the menu item is a "real" item, that is, not the placeholder item, and whether the item is already checked (meaning that the project is already set as the startup project).  
+2.  추가 된 `OnBeforeQueryStatusDynamicItem` 이벤트 처리기입니다. 이 앞에서 호출 하는 처리기는 `QueryStatus` 이벤트입니다. 메뉴 항목 인지, 즉 하지 자리 표시자 항목을 "실제" 항목을 결정 및 여부는 항목이 이미 선택 되어 \(프로젝트를 시작 프로젝트로 이미 설정 되어 있는지를 의미\).  
   
-    ```csharp  
+    ```c#  
     private void OnBeforeQueryStatusDynamicItem(object sender, EventArgs args)  
     {  
         DynamicItemMenuCommand matchedCommand = (DynamicItemMenuCommand)sender;  
@@ -334,11 +317,11 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-## <a name="implementing-the-command-id-match-predicate"></a>Implementing the command ID match predicate  
+## 명령 ID 일치 조건자를 구현합니다.  
   
-1.  Now implement the match predicate. We need to determine two things: first, whether the command ID is valid (it is greater than or equal to the declared command ID), and second, whether it specifies a possible project (it is less than the number of projects in the solution).  
+1.  이제 일치 조건자를 구현 합니다. 두 가지를 확인 해야: 먼저, 여부 명령 ID가 유효한 \(이기 보다 크거나 같음 선언 된 명령 ID\) 및 두 번째, 가능한 프로젝트 \(넘을 때 솔루션에 프로젝트의 수\)를 지정 하는지 여부를 합니다.  
   
-    ```csharp  
+    ```c#  
     private bool IsValidDynamicItem(int commandId)  
     {  
         // The match is valid if the command ID is >= the id of our root dynamic start item   
@@ -348,10 +331,10 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-## <a name="setting-the-vspackage-to-load-only-when-a-solution-has-multiple-projects"></a>Setting the VSPackage to load only when a solution has multiple projects  
- Because the **Set Startup Project** command doesn't make sense unless the active solution has more than one project, you can set your VSPackage to auto-load only in that case. You use <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> together with the UI context <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects>. In the DynamicMenuPackage.cs file add the following attributes to the DynamicMenuPackage class:  
+## VSPackage 솔루션에 여러 프로젝트가 있는 경우에 로드를 설정 합니다.  
+ 때문에 **시작 프로젝트 설정** 명령 타당성을 잃을 활성 솔루션에 둘 이상의 프로젝트가 없는 경우, 해당 경우에만 자동 로드를 VSPackage를 설정할 수 있습니다. 사용 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> UI 컨텍스트와 함께 <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects>합니다. DynamicMenuPackage.cs 파일에서 DynamicMenuPackage 클래스에 다음 특성을 추가 합니다.  
   
-```csharp  
+```c#  
 [PackageRegistration(UseManagedResourcesOnly = true)]  
 [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]  
 [ProvideMenuResource("Menus.ctmenu", 1)]  
@@ -361,19 +344,19 @@ public sealed class DynamicMenuItemsPackage : Package
 {}  
 ```  
   
-## <a name="testing-the-set-startup-project-command"></a>Testing the Set Startup Project command  
- Now you can test your code.  
+## 시작 프로젝트 설정 명령 테스트  
+ 이제 코드를 테스트할 수 있습니다.  
   
-1.  Build the project and start debugging. The experimental instance should appear.  
+1.  프로젝트를 빌드하고 디버깅을 시작합니다. 실험적 인스턴스가 나타납니다.  
   
-2.  In the experimental instance, open a solution that has more than one project.  
+2.  실험적 인스턴스를 여러 개의 프로젝트가 포함 된 솔루션을 엽니다.  
   
-     You should see the arrow icon on the **Solution Explorer** toolbar. When you expand it, menu items that represent the different projects in the solution should appear.  
+     에 화살표 아이콘이 표시는 **솔루션 탐색기** 도구 모음입니다. 를 확장 하면 솔루션의 다른 프로젝트를 나타내는 메뉴 항목이 표시 됩니다.  
   
-3.  When you check one of the projects, it becomes the startup project.  
+3.  프로젝트 중 하나를 확인 하는 경우 시작 프로젝트 됩니다.  
   
-4.  When you close the solution, or open a solution that has only one project, the toolbar icon should disappear.  
+4.  솔루션을 닫거나 하나의 프로젝트만 포함 된 솔루션을 열고 도구 모음 아이콘이 사라집니다.  
   
-## <a name="see-also"></a>See Also  
- [Commands, Menus, and Toolbars](../extensibility/internals/commands-menus-and-toolbars.md)   
- [How VSPackages Add User Interface Elements](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+## 참고 항목  
+ [명령, 메뉴 및 도구 모음](../extensibility/internals/commands-menus-and-toolbars.md)   
+ [Vspackage에서 사용자 인터페이스 요소를 추가 하는 방법](../extensibility/internals/how-vspackages-add-user-interface-elements.md)

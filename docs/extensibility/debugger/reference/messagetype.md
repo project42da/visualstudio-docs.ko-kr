@@ -1,102 +1,85 @@
 ---
-title: MESSAGETYPE | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- MESSAGETYPE
-helpviewer_keywords:
-- MESSAGETYPE enumeration
+title: "MESSAGETYPE | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "MESSAGETYPE"
+helpviewer_keywords: 
+  - "MESSAGETYPE 열거형"
 ms.assetid: 800cc77d-3c27-4763-a9df-552a9384bd49
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2df884c0e6e6945ff22da6ff38dfef2cc0d63d29
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="messagetype"></a>MESSAGETYPE
-Specifies the message type and reason.  
+# MESSAGETYPE
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+메시지 종류와 이유를 지정합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-enum enum_MESSAGETYPE {   
-   MT_OUTPUTSTRING      = 0x0000001,  
-   MT_MESSAGEBOX        = 0x00000002,  
-   MT_TYPE_MASK         = 0x000000FF,  
-   MT_REASON_EXCEPTION  = 0x00000100,  
-   MT_REASON_TRACEPOINT = 0x00000200,  
-   MT_REASON_MASK       = 0x0000FF00  
+```cpp#  
+enum enum_MESSAGETYPE {   
+   MT_OUTPUTSTRING      = 0x0000001,  
+   MT_MESSAGEBOX        = 0x00000002,  
+   MT_TYPE_MASK         = 0x000000FF,  
+   MT_REASON_EXCEPTION  = 0x00000100,  
+   MT_REASON_TRACEPOINT = 0x00000200,  
+   MT_REASON_MASK       = 0x0000FF00  
 };  
 typedef DWORD MESSAGETYPE;  
 ```  
   
-```csharp  
-public enum enum_MESSAGETYPE {   
-   MT_OUTPUTSTRING      = 0x0000001,  
-   MT_MESSAGEBOX        = 0x00000002,  
-   MT_TYPE_MASK         = 0x000000FF,  
-   MT_REASON_EXCEPTION  = 0x00000100,  
-   MT_REASON_TRACEPOINT = 0x00000200,  
-   MT_REASON_MASK       = 0x0000FF00  
+```c#  
+public enum enum_MESSAGETYPE {   
+   MT_OUTPUTSTRING      = 0x0000001,  
+   MT_MESSAGEBOX        = 0x00000002,  
+   MT_TYPE_MASK         = 0x000000FF,  
+   MT_REASON_EXCEPTION  = 0x00000100,  
+   MT_REASON_TRACEPOINT = 0x00000200,  
+   MT_REASON_MASK       = 0x0000FF00  
 };  
 ```  
   
-## <a name="members"></a>Members  
- MT_OUTPUTSTRING  
- Indicates that the message should be sent to the output window. This is mutually exclusive from `MT_MESSAGEBOX`.  
+## Members  
+ MT\_OUTPUTSTRING  
+ 출력 창에 메시지를 보낼 수 있어야 한다는 나타냅니다.  이 함께 사용할 수 있습니다 `MT_MESSAGEBOX`.  
   
- MT_MESSAGEBOX  
- Indicates that the message should be shown in a message box. This is mutually exclusive from `MT_OUTPUTSTRING`.  
+ MT\_MESSAGEBOX  
+ 메시지를 메시지 상자에 표시할지 나타냅니다.  이 함께 사용할 수 있습니다 `MT_OUTPUTSTRING`.  
   
- MT_TYPE_MASK  
- A mask value to isolate the destination for the message.  
+ MT\_TYPE\_MASK  
+ 대상 메시지를 격리 하는 마스크 값입니다.  
   
- MT_REASON_EXCEPTION  
- Indicates that a message box is being shown as a result of an exception. This is mutually exclusive from `MT_REASON_TRACEPOINT`.  
+ MT\_REASON\_EXCEPTION  
+ 메시지 상자 결과로 예외가 표시 되지 않음을 나타냅니다.  이 함께 사용할 수 있습니다 `MT_REASON_TRACEPOINT`.  
   
- MT_REASON_TRACEPOINT  
- Indicates that a message box is being shown as a result of hitting a tracepoint. This is mutually exclusive to `MT_REASON_EXCEPTION`.  
+ MT\_REASON\_TRACEPOINT  
+ 메시지 상자 추적점을 맞 혀로 인해 표시 되지 않음을 나타냅니다.  이 함께 하는 `MT_REASON_EXCEPTION`.  
   
- MT_REASON_MASK  
- A mask value to isolate the reason for the message being shown.  
+ MT\_REASON\_MASK  
+ 표시 되는 메시지에 대 한 원인을 격리 하는 마스크 값입니다.  
   
-## <a name="remarks"></a>Remarks  
- These values are returned from the [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) and [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) methods.  
+## 설명  
+ 이러한 값에서 반환 되는 [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) 및 [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) 메서드.  
   
- One of the reason values can be combined with one of the output destination values using a bitwise `OR`.  
+ 이유 값 중 하나로 결합할 수 있습니다 연산을 사용 하 여 출력 대상 값 중 하나를 `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 요구 사항  
+ 헤더: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## 참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)   
  [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md)

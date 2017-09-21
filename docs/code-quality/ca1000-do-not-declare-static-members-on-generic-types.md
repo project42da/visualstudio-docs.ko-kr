@@ -1,58 +1,41 @@
 ---
-title: 'CA1000: Do not declare static members on generic types | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- CA1000
-- DoNotDeclareStaticMembersOnGenericTypes
-helpviewer_keywords:
-- DoNotDeclareStaticMembersOnGenericTypes
-- CA1000
+title: "CA1000: 정적 멤버를 제네릭 형식으로 선언하지 마십시오. | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-devops-test"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CA1000"
+  - "DoNotDeclareStaticMembersOnGenericTypes"
+helpviewer_keywords: 
+  - "CA1000"
+  - "DoNotDeclareStaticMembersOnGenericTypes"
 ms.assetid: 5c0da594-f8d0-4f40-953d-56bf7fbd2087
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 60c8440f9ba51b0226a54ccfd814c371510809a9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+caps.handback.revision: 17
 ---
-# <a name="ca1000-do-not-declare-static-members-on-generic-types"></a>CA1000: Do not declare static members on generic types
+# CA1000: 정적 멤버를 제네릭 형식으로 선언하지 마십시오.
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
 |||  
 |-|-|  
 |TypeName|DoNotDeclareStaticMembersOnGenericTypes|  
 |CheckId|CA1000|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- An externally visible generic type contains a `static` (`Shared` in Visual Basic) member.  
+## 원인  
+ 외부에서 볼 수 있는 제네릭 형식에 `static`\(Visual Basic의 경우 `Shared`\) 멤버가 포함되어 있습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- When a `static` member of a generic type is called, the type argument must be specified for the type. When a generic instance member that does not support inference is called, the type argument must be specified for the member. The syntax for specifying the type argument in these two cases is different and easily confused, as the following calls demonstrate:  
+## 규칙 설명  
+ 제네릭 형식의 `static` 멤버를 호출할 때는 형식에 형식 인수를 지정해야 합니다.  유추를 지원하지 않는 제네릭 인스턴스 멤버를 호출할 때는 멤버에 형식 인수를 지정해야 합니다.  다음 호출에서 볼 수 있듯이 이들 두 경우에서 형식 인수를 지정하기 위한 구문은 서로 다르며 혼동하기 쉽습니다.  
   
 ```vb  
 ' Shared method in a generic type.  
@@ -62,7 +45,7 @@ GenericType(Of Integer).SharedMethod()
 someObject.GenericMethod(Of Integer)()  
 ```  
   
-```csharp  
+```c#  
 // Static method in a generic type.  
 GenericType<int>.StaticMethod();  
   
@@ -70,28 +53,28 @@ GenericType<int>.StaticMethod();
 someObject.GenericMethod<int>();  
 ```  
   
- Generally, both of the prior declarations should be avoided so that the type argument does not have to be specified when the member is called. This results in a syntax for calling members in generics that is no different from the syntax for non-generics. For more information, see [CA1004: Generic methods should provide type parameter](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md).  
+ 일반적으로 앞의 두 선언은 피해야 합니다. 즉, 멤버를 호출할 때 형식 인수를 지정할 필요가 없도록 해야 합니다.  이렇게 하면 제네릭의 멤버를 호출하는 구문이 제네릭이 아닌 멤버를 호출하는 구문과 차이가 없게 됩니다.  자세한 내용은 [CA1004: 제네릭 메서드는 형식 매개 변수를 제공해야 합니다.](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)을 참조하십시오.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, remove the static member or change it to an instance member.  
+## 위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결하려면 정적 멤버를 제거하거나 인스턴스 멤버로 변경합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule. Providing generics in a syntax that is easy to understand and use reduces the time that is required to learn and increases the adoption rate of new libraries.  
+## 경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  제네릭을 이해하고 사용하기 쉬운 구문으로 제공하면 학습에 걸리는 시간이 줄어들고 더 많은 사용자가 새로운 라이브러리를 선택하게 됩니다.  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1005: Avoid excessive parameters on generic types](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
+## 관련 규칙  
+ [CA1005: 제네릭 형식에 매개 변수를 너무 많이 사용하지 마십시오.](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
   
- [CA1010: Collections should implement generic interface](../code-quality/ca1010-collections-should-implement-generic-interface.md)  
+ [CA1010: 컬렉션은 제네릭 인터페이스를 구현해야 합니다.](../code-quality/ca1010-collections-should-implement-generic-interface.md)  
   
- [CA1002: Do not expose generic lists](../code-quality/ca1002-do-not-expose-generic-lists.md)  
+ [CA1002: 제네릭 목록을 노출하지 마십시오.](../Topic/CA1002:%20Do%20not%20expose%20generic%20lists.md)  
   
- [CA1006: Do not nest generic types in member signatures](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
+ [CA1006: 멤버 시그니처에 제네릭 형식을 중첩하지 마십시오.](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
   
- [CA1004: Generic methods should provide type parameter](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
+ [CA1004: 제네릭 메서드는 형식 매개 변수를 제공해야 합니다.](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
   
- [CA1003: Use generic event handler instances](../code-quality/ca1003-use-generic-event-handler-instances.md)  
+ [CA1003: 제네릭 이벤트 처리기 인스턴스를 사용하십시오.](../Topic/CA1003:%20Use%20generic%20event%20handler%20instances.md)  
   
- [CA1007: Use generics where appropriate](../code-quality/ca1007-use-generics-where-appropriate.md)  
+ [CA1007: 적합한 제네릭을 사용하십시오.](../code-quality/ca1007-use-generics-where-appropriate.md)  
   
-## <a name="see-also"></a>See Also  
- [Generics](/dotnet/csharp/programming-guide/generics/index)
+## 참고 항목  
+ [제네릭](/dotnet/csharp/programming-guide/generics/index)

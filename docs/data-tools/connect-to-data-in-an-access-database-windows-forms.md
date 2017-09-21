@@ -1,146 +1,138 @@
 ---
-title: Connect to data in an Access database (Windows Forms) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- databases, connecting to
-- databases, Access
-- data [Visual Studio], connecting
-- connecting to data, from Access databases
-- Access databases, connecting
+title: "연습: Access 데이터베이스의 데이터에 연결(Windows Forms) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "Access 데이터베이스, 연결"
+  - "데이터에 연결, Access 데이터베이스"
+  - "데이터[Visual Studio], 연결"
+  - "데이터베이스, Access"
+  - "데이터베이스, 연결"
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 3f11055b41e6fd5ca19b44ccf817ae0b1644a76b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 24
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="connect-to-data-in-an-access-database-windows-forms"></a>Connect to data in an Access database (Windows Forms)
-You can connect to an Access database (either an .mdf file or an .accdb file) by using Visual Studio. After you define the connection, the data appears in the **Data Sources** window. From there, you can drag tables or views onto your forms.   
+# 연습: Access 데이터베이스의 데이터에 연결(Windows Forms)
+Visual Studio를 사용하여 Access 데이터베이스\(.mdf 파일 또는 .accdb 파일\)에 연결할 수 있습니다.  연결을 정의한 후 **데이터 소스 창**에 데이터가 나타납니다.  그 창에서 테이블 또는 뷰를 폼으로 끌 수 있습니다.  Visual Studio의 프로젝트 시스템에서 이러한 로컬 데이터베이스 파일을 관리하는 방법을 이해하려면 [방법: 프로젝트의 로컬 데이터 파일 관리](../data-tools/how-to-manage-local-data-files-in-your-project.md)를 참조하십시오.  
   
-## <a name="prerequisites"></a>Prerequisites  
- To use these procedures, you need a Windows Forms application project, and either an Access database (.accdb file) or an Access 2000-2003 database (.mdb file). Follow the procedure that corresponds to your file type.  
+## 사전 요구 사항  
+ 이런 절차를 사용하려면 Windows Forms 응용 프로그램 프로젝트와 Access 데이터베이스\(.accdb 파일\) 또는 Access 2000\-2003 데이터베이스\(.mdb 파일\)가 필요합니다.  파일 형식에 해당하는 절차를 따릅니다.  
   
-## <a name="creating-the-dataset-for-an-accdb-file"></a>Creating the dataset for an .accdb file  
- You can connect to databases created through Access 2013, Office 365, Access 2010, or Access 2007 by using the following procedure.  
+## .accdb 파일에 대한 데이터 집합 만들기  
+ 다음 절차를 사용하여 Access 2013, Office 365, Access 2010 또는 Access 2007로 만든 데이터베이스에 연결할 수 있습니다.  
   
-#### <a name="to-create-the-dataset"></a>To create the dataset  
+#### 데이터 집합을 만들려면  
   
-1.  Open the Windows Forms application to which you want to connect data.  
+1.  데이터를 연결하려는 Windows Forms 응용 프로그램을 엽니다.  
   
-2.  On the **View** menu, select **Other Windows** > **Data Sources**.  
+2.  **보기** 메뉴에서 **다른 창** \> **데이터 소스**를 선택합니다.  
   
-     ![View Other Windows Data Sources](../data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![다른 창 데이터 소스 보기](../data-tools/media/viewdatasources.png "ViewDataSources")  
   
-3.  In the **Data Sources** window, click **Add New Data Source**.  
+3.  **데이터 소스** 창에서 **새 데이터 소스 추가**를 클릭합니다.  
   
-     ![Add New Data Source](../data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+     ![새 데이터 소스 추가](../data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
   
-4.  Select **Database** on the **Choose a Data Source Type** page, and then select **Next**.  
+4.  **데이터 소스 형식 선택** 페이지에서 **데이터베이스**를 선택하고 **다음**을 선택합니다.  
   
-5.  Select **Dataset** on the **Choose a Database Model** page, and then select **Next**.  
+5.  **데이터베이스 모델 선택** 페이지에서 **데이터 집합**을 선택하고 **다음**을 선택합니다.  
   
-6.  On the **Choose your Data Connection** page, select **New Connection** to configure a new data connection.  
+6.  **데이터 연결 선택** 페이지에서 **새 연결**을 선택하여 새 데이터 연결을 구성합니다.  
   
-7.  Change the **Data source** to **.NET Framework Data Provider for OLE DB**.  
+7.  **데이터 소스**를 **.NET Framework Data Provider for OLE DB**로 변경합니다.  
   
-     ![Change Data Provider to OLE DB](../data-tools/media/datachangedatasourceoledb.png "dataChangeDataSourceOLEDB")  
+     ![OLE DB로 데이터 공급자 변경](../data-tools/media/datachangedatasourceoledb.png "dataChangeDataSourceOLEDB")  
   
     > [!IMPORTANT]
-    >  Although a data source of **Microsoft Access Database File (OLE DB)** might seem like the right choice, you use that data-source type only for .mdb database files.  
+    >  **Microsoft Access Database File\(OLE DB\)**의 데이터 소스가 올바른 선택으로 보일 수 있지만, .mdb 데이터베이스 파일에만 그 데이터 소스 형식을 사용합니다.  
   
-8.  In **OLE DB Provider**, select **Microsoft Office 12.0 Access Database Engine OLE DB Provider**.  
+8.  **OLE DB 공급자**에서 **Microsoft Office 12.0 Access Database Engine OLE DB 공급자**를 선택합니다.  
   
-     ![OLE DB Provider Microsoft Office 12.0 Access](../data-tools/media/dataoledbprovideroffice12access.png "dataOLEDBProviderOffice12Access")  
+     ![OLE DB 공급자 Microsoft Office 12.0 Access](../data-tools/media/dataoledbprovideroffice12access.png "dataOLEDBProviderOffice12Access")  
   
-9. In **Server or file name**, specify the path and name of the .accdb file to which you want to connect, and then select **OK**.  
+9. **서버 또는 파일 이름**에서 연결하려는 .accdb 파일의 경로와 이름을 지정한 후 **확인**을 선택합니다.  
   
     > [!NOTE]
-    >  If the database file has a user name and password, specify them before you select **OK**.  
+    >  데이터베이스 파일에 사용자 이름과 암호가 있는 경우 이들을 지정한 후 **확인**을 선택합니다.  
   
-10. Select **Next** on the **Choose your Data Connection** page.  
+10. **데이터 연결 선택** 페이지에서 **다음**을 선택합니다.  
   
-11. Select **Next** on the **Save connection string to the Application Configuration file** page.  
+11. **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 **다음**을 선택합니다.  
   
-12. Expand the **Tables** node on the **Choose your Database Objects** page.  
+12. **데이터베이스 개체 선택** 페이지에서 **테이블** 노드를 확장합니다.  
   
-13. Select whatever tables or views you want in your dataset, and then select **Finish**.  
+13. 데이터 집합에서 원하는 모든 테이블 또는 뷰를 선택한 후 **마침**을 선택합니다.  
   
-     The dataset is added to your project, and the tables and views appear in the **Data Sources** window.  
+     데이터 집합이 프로젝트에 추가되고 테이블과 뷰가 **데이터 소스** 창에 나타납니다.  
   
-## <a name="creating-the-dataset-for-an-mdb-file"></a>Creating the dataset for an .mdb file  
- You create the dataset by running the **Data Source Configuration Wizard**.  
+## .mdb 파일에 대한 데이터 집합 만들기  
+ 데이터 집합은 **데이터 소스 구성 마법사**를 실행하여 만듭니다.  
   
-#### <a name="to-create-the-dataset"></a>To create the dataset  
+#### 데이터 집합을 만들려면  
   
-1.  Open the Windows Forms application to which you want to connect data.  
+1.  데이터를 연결하려는 Windows Forms 응용 프로그램을 엽니다.  
   
-2.  On the **View** menu, select **Other Windows** > **Data Sources**.  
+2.  **보기** 메뉴에서 **다른 창** \> **데이터 소스**를 선택합니다.  
   
-     ![View Other Windows Data Sources](../data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![다른 창 데이터 소스 보기](../data-tools/media/viewdatasources.png "ViewDataSources")  
   
-3.  In the **Data Sources** window, click **Add New Data Source**.  
+3.  **데이터 소스** 창에서 **새 데이터 소스 추가**를 클릭합니다.  
   
-4.  Select **Database** on the **Choose a Data Source Type** page, and then select **Next**.  
+     ![새 데이터 소스 추가](../data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
   
-5.  Select **Dataset** on the **Choose a Database Model** page, and then select **Next**.  
+4.  **데이터 소스 형식 선택** 페이지에서 **데이터베이스**를 선택하고 **다음**을 선택합니다.  
   
-6.  On the **Choose your Data Connection** page, select **New Connection** to configure a new data connection.  
+5.  **데이터베이스 모델 선택** 페이지에서 **데이터 집합**을 선택하고 **다음**을 선택합니다.  
   
-7.  If the data source is not **Microsoft Access Database File (OLE DB)**, select **Change** to open the **Change Data Source** dialog box and select **Microsoft Access Database File**, and then select **OK**.  
+6.  **데이터 연결 선택** 페이지에서 **새 연결**을 선택하여 새 데이터 연결을 구성합니다.  
   
-8.  In the **Database file name**, specify the path and name of the .mdb file to which you want to connect, and then select **OK**.  
+7.  **데이터 소스**가 **Microsoft Access 데이터베이스 파일\(OLE DB\)**이 아닌 경우, **변경**을 선택하여 **데이터 소스 변경** 대화 상자를 열고 **Microsoft Access 데이터베이스 파일**을 선택한 후 **확인**을 선택합니다.  
   
-     ![Add Connection Access Database File](../data-tools/media/dataaddconnectionaccessmdb.png "dataAddConnectionAccessMDB")  
+8.  **데이터베이스 파일 이름**에서 연결하려는 .mdb 파일의 경로와 이름을 지정한 후 **확인**을 선택합니다.  
   
-9. Select **Next** on the **Choose your Data Connection** page.  
+     ![연결 액세스 데이터베이스 파일 추가](../data-tools/media/dataaddconnectionaccessmdb.png "dataAddConnectionAccessMDB")  
   
-10. Select **Next** on the **Save connection string to the Application Configuration file** page.  
+9. **데이터 연결 선택** 페이지에서 **다음**을 선택합니다.  
   
-11. Expand the **Tables** node on the **Choose your Database Objects** page.  
+10. **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 **다음**을 선택합니다.  
   
-12. Select whatever tables or views you want in your dataset, and then select **Finish**.  
+11. **데이터베이스 개체 선택** 페이지에서 **테이블** 노드를 확장합니다.  
   
-     The dataset is added to your project, and the tables and views appear in the **Data Sources** window.  
+12. 데이터 집합에서 원하는 모든 테이블 또는 뷰를 선택한 후 **마침**을 선택합니다.  
   
-## <a name="security"></a>Security  
- Storing sensitive information (such as a password) can affect the security of your application. Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database. For more information, see [Protecting Connection Information](/dotnet/framework/data/adonet/protecting-connection-information).  
+     데이터 집합이 프로젝트에 추가되고 테이블과 뷰가 **데이터 소스** 창에 나타납니다.  
   
-## <a name="next-steps"></a>Next Steps  
- The dataset that you just created is now available in the **Data Sources** window. You can now perform any of the following tasks:  
+## 보안  
+ 중요한 정보\(예: 암호\)를 저장하면 응용 프로그램 보안 문제가 발생할 수 있습니다.  데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다.  자세한 내용은 [연결 정보 보호](../Topic/Protecting%20Connection%20Information.md)을 참조하십시오.  
   
--   Select items in the **Data Sources** window and drag them onto your form (see [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)).  
+## 다음 단계  
+ 방금 만든 데이터 집합을 이제 **데이터 소스** 창에서 사용할 수 있습니다.  다음 작업 중 어떤 작업이든 수행할 수 있습니다.  
   
--   Open the data source in the **Dataset Designer** to add or edit the objects that make up the dataset.  
+-   **데이터 소스** 창에서 항목을 선택하여 폼으로 끕니다\([Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) 참조\).  
   
--   Add validation logic to the <xref:System.Data.DataTable.ColumnChanging> or <xref:System.Data.DataTable.RowChanging> event of the data tables in the dataset (see [Validate data in datasets](../data-tools/validate-data-in-datasets.md)).  
+-   [데이터 집합 디자이너](../data-tools/creating-and-editing-typed-datasets.md)에서 데이터 소스를 열어 데이터 집합을 구성하는 개체를 추가하거나 편집합니다.  
   
-## <a name="see-also"></a>See Also  
-
- [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Validating Data](validate-data-in-datasets.md)   
- [Saving Data](../data-tools/saving-data.md)   
-
+-   데이터 집합에 있는 데이터 테이블의 <xref:System.Data.DataTable.ColumnChanging> 또는 <xref:System.Data.DataTable.RowChanging> 이벤트에 유효성 검사 논리를 추가합니다\([데이터 집합의 데이터 유효성 검사](../data-tools/validate-data-in-datasets.md) 참조\).  
+  
+## 참고 항목  
+ [Visual Studio에서 데이터에 연결](../data-tools/connecting-to-data-in-visual-studio.md)   
+ [데이터를 받기 위해 응용 프로그램 준비](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
+ [데이터를 응용 프로그램으로 페치](../data-tools/fetching-data-into-your-application.md)   
+ [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)   
+ [응용 프로그램에서 데이터 편집](../data-tools/editing-data-in-your-application.md)   
+ [데이터 유효성 검사](../Topic/Validating%20Data.md)   
+ [데이터 저장](../data-tools/saving-data.md)   
+ [데이터 연습](../Topic/Data%20Walkthroughs.md)

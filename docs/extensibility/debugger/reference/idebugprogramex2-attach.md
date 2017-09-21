@@ -1,82 +1,65 @@
 ---
-title: IDebugProgramEx2::Attach | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgramEx2::Attach
-helpviewer_keywords:
-- IDebugProgramEx2::Attach
+title: "IDebugProgramEx2::Attach | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgramEx2::Attach"
+helpviewer_keywords: 
+  - "IDebugProgramEx2::Attach"
 ms.assetid: 33b22b2f-431e-4205-9441-d28a9c928c97
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f57c387b7d479b761c4336e3c3cefbe1608a8c3e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
-Attach a session to a program.  
+# IDebugProgramEx2::Attach
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+세션을 프로그램에 첨부 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT Attach(   
-   IDebugEventCallback2* pCallback,  
-   DWORD                 dwReason,  
-   IDebugSession2*       pSession  
+```cpp#  
+HRESULT Attach(   
+   IDebugEventCallback2* pCallback,  
+   DWORD                 dwReason,  
+   IDebugSession2*       pSession  
 );  
 ```  
   
 ```  
 [C#]  
-int Attach(   
-   IDebugEventCallback2 pCallback,  
-   uint                 dwReason,  
-   IDebugSession2       pSession  
+int Attach(   
+   IDebugEventCallback2 pCallback,  
+   uint                 dwReason,  
+   IDebugSession2       pSession  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pCallback`  
- [in] An [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) object that represents the callback function that the attached debug engine sends events to.  
+ \[in\] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 이벤트에 연결 된 디버그 엔진 보내는 콜백 함수를 나타내는 개체입니다.  
   
  `dwReason`  
- [in] A value from the [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) enumeration that describes the reason for the attach operation.  
+ \[in\] 값은 [ATTACH\_REASON](../../../extensibility/debugger/reference/attach-reason.md) 는 연결 작업에 대 한 이유를 설명 하는 열거형입니다.  
   
  `pSession`  
- [in] A value that uniquely identifies the session that is attaching to the program.  
+ \[in\] 프로그램에 연결 되는 세션에 고유 하 게 식별 하는 값입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code. This method should return `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` if the program is already attached.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  이 메서드는 반환 합니다 `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` 프로그램에 이미 연결 된 경우입니다.  
   
-## <a name="remarks"></a>Remarks  
- The port that contains the program can use the value in `pSession` to determine which session is attempting to attach to the program. For example, if a port allows only one debug session to attach to a process at a time, the port can determine if the same session is already attached to other programs in the process.  
+## 설명  
+ 프로그램에 포함 되어 있는 포트의 값을 사용할 수 있습니다 `pSession` 프로그램에 연결 하려고 하며 세션을 확인 합니다.  예를 들어, 포트를 한 번에 한 프로세스에 연결 하는 하나의 디버그 세션을 허용 하는 경우 포트 같은 세션 프로세스에서 다른 프로그램에 이미 연결 되어 있는지 확인할 수 있습니다.  
   
 > [!NOTE]
->  The interface passed in `pSession` is to be treated only as a cookie, a value that uniquely identifies the session debug manager attaching to this program; none of the methods on the supplied interface are functional.  
+>  인터페이스에 전달 된 `pSession` 만 쿠키를 연결 하는이 프로그램을 합니다; 디버그 세션 관리자를 고유 하 게 식별 하는 값으로 처리 하는 것 메서드에 제공 된 인터페이스의 기능입니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

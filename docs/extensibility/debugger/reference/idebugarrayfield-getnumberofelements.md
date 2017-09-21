@@ -1,68 +1,51 @@
 ---
-title: IDebugArrayField::GetNumberOfElements | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugArrayField::GetNumberOfElements
-helpviewer_keywords:
-- IDebugArrayField::GetNumberOfElements method
+title: "IDebugArrayField::GetNumberOfElements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugArrayField::GetNumberOfElements"
+helpviewer_keywords: 
+  - "IDebugArrayField::GetNumberOfElements 메서드"
 ms.assetid: a1961ef3-d69d-4022-b8c9-b9cfb9811345
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 947e4b498c0fa7a936bf5a7c15f39c4aeb0ed9b4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugarrayfieldgetnumberofelements"></a>IDebugArrayField::GetNumberOfElements
-Gets the number of elements in the array.  
+# IDebugArrayField::GetNumberOfElements
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+배열에서 요소의 개수를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetNumberOfElements(   
-   DWORD* pdwNumElements  
+```cpp#  
+HRESULT GetNumberOfElements(   
+   DWORD* pdwNumElements  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetNumberOfElements(  
-   out uint pdwNumElements  
+   out uint pdwNumElements  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pdwNumElements`  
- [out] Returns the number of elements in the array.  
+ \[out\] 배열에서 요소의 개수를 반환합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- The value returned is the total number of elements in the array, regardless of the number of dimensions.  
+## 설명  
+ 반환 되는 값은 차원 수에 관계 없이 해당 배열에 있는 요소의 총 수입니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

@@ -1,93 +1,76 @@
 ---
-title: SccUncheckout Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccUncheckout
-helpviewer_keywords:
-- SccUncheckout function
+title: "SccUncheckout 함수 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccUncheckout"
+helpviewer_keywords: 
+  - "SccUncheckout 함수"
 ms.assetid: 6d498b70-29c7-44b7-ae1c-7e99e488bb09
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5db90c033a03605369c19bf358b0642f9f80163b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="sccuncheckout-function"></a>SccUncheckout Function
-This function undoes a previous checkout operation, thereby restoring the contents of the selected file or files to the state prior to the checkout. All changes made to the file since the checkout are lost.  
+# SccUncheckout 함수
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+이 함수는 선택한 파일 또는 파일의 내용을 체크 아웃 이전 상태로 복원 이전 체크 아웃 작업을 실행 취소 합니다. 체크 아웃 이후에 파일을 수정 하는 모든 변경 내용이 손실 됩니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 SCCRTN SccUncheckout (  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LONG      nFiles,  
-   LPCSTR*   lpFileNames,  
-   LONG      fOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LONG      nFiles,  
+   LPCSTR*   lpFileNames,  
+   LONG      fOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  pvContext  
- [in] The source control plug-in context structure.  
+ \[in\] 소스 제어 플러그 인 컨텍스트 구조입니다.  
   
  hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ \[in\] 소스 제어 플러그 인을 제공 하는 모든 대화 상자에 대 한 부모로 사용할 수 있는 IDE 창 핸들입니다.  
   
  nFiles  
- [in] Number of files specified in the `lpFileNames` array.  
+ \[in\] 에 지정 된 파일의 수는 `lpFileNames` 배열입니다.  
   
  lpFileNames  
- [in] Array of fully qualified local path names of files for which to undo a checkout.  
+ \[in\] 체크 아웃을 취소 하려는 파일의 정규화 된 로컬 경로 이름의 배열입니다.  
   
- fOptions  
- [in] Command flags (not used).  
+ 옵션이  
+ \[in\] \(사용 되지 않음\) 하는 명령 플래그입니다.  
   
  pvOptions  
- [in] Source control plug-in-specific options.  
+ \[in\] 소스 제어 플러그 인에 대 한 옵션입니다.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 반환 값  
+ 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Undo checkout was successful.|  
-|SCC_E_FILENOTCONTROLLED|The selected file is not under source code control.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure. Undo checkout did not succeed.|  
-|SCC_E_NOTCHECKEDOUT|The user does not have the file checked out.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
-|SCC_E_PROJNOTOPEN|The project has not been opened from source control.|  
-|SCC_I_OPERATIONCANCELED|The operation was cancelled before completion.|  
+|값|설명|  
+|-------|--------|  
+|SCC\_OK|체크 아웃을 취소 했습니다.|  
+|SCC\_E\_FILENOTCONTROLLED|선택한 파일이 소스 코드 제어 하지 않습니다.|  
+|SCC\_E\_ACCESSFAILURE|소스 제어 시스템에 경합 또는 네트워크 문제 때문에 액세스할 수 없습니다. 다시 시도 사용 하는 것이 좋습니다.|  
+|SCC\_E\_NONSPECIFICERROR|알 수 없는 오류가 발생 했습니다. 실행 취소 체크 아웃 하지 못했습니다.|  
+|SCC\_E\_NOTCHECKEDOUT|사용자는 파일을 체크 아웃는 없습니다.|  
+|SCC\_E\_NOTAUTHORIZED|사용자가이 작업을 수행할 수 없습니다.|  
+|SCC\_E\_PROJNOTOPEN|프로젝트 소스 제어에서 열리지 않았습니다.|  
+|SCC\_I\_OPERATIONCANCELED|작업이 완료 되기 전에 취소 되었습니다.|  
   
-## <a name="remarks"></a>Remarks  
- After this operation, the `SCC_STATUS_CHECKEDOUT` and `SCC_STATUS_MODIFIED` flags will both be cleared for the files on which the undo checkout was performed.  
+## 설명  
+ 이 작업 후의 `SCC_STATUS_CHECKEDOUT` 및 `SCC_STATUS_MODIFIED` 플래그는 모두 지워집니다 체크 아웃을 취소 수행 된 파일에 대 한 합니다.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)
+## 참고 항목  
+ [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,250 +1,85 @@
 ---
-title: Manifest to Code | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "코드에 매니페스트 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
 caps.latest.revision: 4
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3f0383371a1d0b738d16ba0b6466887c33e1b1d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 4
 ---
-# <a name="manifest-to-code"></a>Manifest to Code
-The Manifest to Code tool is a console application that takes an .imagemanifest file for the Visual Studio Image Service and generates a wrapper file or files for referencing the image manifest's values in C++, C#, VB, or .vsct files for Visual Studio extensions. This tool generates wrapper files that can be used for requesting images from the Visual Studio Image Service directly, or for passing the manifest values through APIs if the code does not handle any of its own UI and rendering.  
+# 코드에 매니페스트
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+매니페스트 코드 도구를 Visual Studio 이미지 서비스에 대 한.imagemanifest 파일을 가져와 래퍼 파일 또는 c \+ \+, C\#, VB 또는 Visual Studio 확장에 대 한.vsct 파일에 이미지 매니페스트의 값 참조에 대 한 파일을 생성 하는 콘솔 응용 프로그램은 이 도구를 직접 Visual Studio 이미지 서비스에서 요청 이미지 또는 코드 자체 UI 및 렌더링 중 하나를 처리 하지 않을 경우 Api 통해 매니페스트 값을 전달 하는 데 사용할 수 있는 래퍼 파일을 생성 합니다.  
   
-## <a name="how-to-use-the-tool"></a>How to use the tool  
- **Syntax**  
+## 이 도구를 사용 하는 방법  
+ **구문**  
   
- ManifestToCode /manifest:\<Image Manifest file> /language:\<Code Language> \<Optional Args>  
+ ManifestToCode \/manifest: \< 이미지 매니페스트 파일 \> \/language: \< 코드 언어 \>\< 선택적 인수입니다. \>  
   
- **Arguments**  
+ **인수**  
   
 ||||  
 |-|-|-|  
-|**Switch name**|**Notes**|**Required or Optional**|  
-|/manifest|The path to the image manifest to use to create or update the code wrapper.|Required|  
-|/language|The language in which to generate the code wrapper.<br /><br /> Valid values: CPP, C++, CS, CSharp, C#, VB, or VSCT The values are case-insensitive.<br /><br /> For the VSCT language option, the /monikerClass, /classAccess, and /namespace options are ignored.|Required|  
-|/imageIdClass|The name of the imageIdClass and the associated file created by the tool. For the C++ language option, only .h files are generated.<br /><br /> Default: \<Manifest Path>\MyImageIds.\<Lang Ext>|Optional|  
-|/monikerClass|The name of the monikerClass and the associated file created by the tool. For the C++ language option, only .h files are generated. This is ignored for the VSCT language.<br /><br /> Default: \<Manifest Path>\MyMonikers.\<Lang Ext>|Optional|  
-|/classAccess|The access modifier for the imageIdClass and the monikerClass. Make sure the access modifier is valid for the given language. This is ignored for the VSCT language option.<br /><br /> Default: Public|Optional|  
-|/namespace|The namespace defined in the code wrapper. This is ignored for the VSCT language option. Either '.' or '::' are valid namespace separators, regardless of the chosen language option.<br /><br /> Default: MyImages|Optional|  
-|/noLogo|Setting this flag stops product and copyright information from printing.|Optional|  
-|/?|Print out Help information.|Optional|  
-|/help|Print out Help information.|Optional|  
+|**스위치 이름**|**참고**|**필수 또는 선택**|  
+|\/manifest|만들기 또는 업데이트 코드 래퍼를 사용 하 여 이미지 매니페스트에 대 한 경로입니다.|필수|  
+|\/language|코드 래퍼를 생성 하는 언어입니다.<br /><br /> 유효한 값: CPP, c \+ \+, CS, CSharp, C\#, VB 또는 VSCT 값은 대 소문자를 구분 합니다.<br /><br /> VSCT 언어에 대 한 옵션, \/monikerClass, \/classAccess, 및 \/namespace 옵션이 무시 됩니다.|필수|  
+|\/imageIdClass|imageIdClass 및 도구에서 만든 연결된 된 파일의 이름입니다. C \+ \+ 언어 옵션에 대 한.h 파일에만 생성 됩니다.<br /><br /> 기본값: \< 매니페스트 경로 \> \\MyImageIds. \< Lang Ext \>|선택적|  
+|\/monikerClass|monikerClass 및 도구에서 만든 연결된 된 파일의 이름입니다. C \+ \+ 언어 옵션에 대 한.h 파일에만 생성 됩니다. 이 VSCT 언어에 대 한 무시 됩니다.<br /><br /> 기본값: \< 매니페스트 경로 \> \\MyMonikers. \< Lang Ext \>|선택적|  
+|\/classAccess|imageIdClass 및는 monikerClass에 대 한 액세스 한정자입니다. 액세스 한정자가 지정된 된 언어에 대 한 유효한 지 확인 합니다. 이 VSCT 언어 옵션에 대해 무시 됩니다.<br /><br /> 기본값: 공용|선택적|  
+|\/namespace|코드 래퍼에 정의 된 네임 스페이스입니다. 이 VSCT 언어 옵션에 대해 무시 됩니다. 어느 '.' 또는 ':: '가 선택한 언어 옵션에 관계 없이 유효한 네임 스페이스 구분 기호입니다.<br /><br /> 기본값: MyImages|선택적|  
+|\/noLogo|인쇄에서 제품 및 저작권 정보를 중지이 플래그를 설정 합니다.|선택적|  
+|\/?|도움말 정보를 출력 합니다.|선택적|  
+|\/help|도움말 정보를 출력 합니다.|선택적|  
   
- **Examples**  
+ **예제**  
   
--   ManifestToCode /manifest:D:\MyManifest.imagemanifest                /language:CSharp  
+-   ManifestToCode \/manifest:D:\\MyManifest.imagemanifest \/language: csharp  
   
--   ManifestToCode /manifest:D:\MyManifest.imagemanifest                /language:C++                /namespace:My::Namespace                /imageIdClass:MyImageIds                /monikerClass:MyMonikers                /classAccess:friend  
+-   ManifestToCode \/manifest:D:\\MyManifest.imagemanifest \/language:C\+\+ \/namespace: 내:: \/imageIdClass:MyImageIds \/monikerClass:MyMonikers \/classAccess:friend 네임 스페이스  
   
--   ManifestToCode /manifest:D:\MyManifest.imagemanifest                /language:VSCT                /imageIdClass:MyImageIds  
+-   ManifestToCode \/manifest:D:\\MyManifest.imagemanifest \/language:VSCT \/imageIdClass:MyImageIds  
   
-## <a name="notes"></a>Notes  
+## 참고  
   
--   We recommend that you use this tool with image manifests that were generated by the Manifest from Resources tool.  
+-   이 도구를 사용 하 여 매니페스트 리소스 도구에서 생성 된 이미지 매니페스트를 포함 하는 것이 좋습니다.  
   
--   The tool only looks at symbol entries to generate the code wrappers. If an image manifest contains no symbols, then the generated code wrappers will be empty. If there is an image or set of images in the image manifest that do not use symbols, then they will be excluded from the code wrapper.  
+-   이 도구만 기호 코드 래퍼를 생성 하는 항목에 살펴봅니다. 이미지 매니페스트 기호가 있으면 생성 된 코드 래퍼를 사용 하는 비어 있게 됩니다. 이미지 또는 기호를 사용 하지 않는 이미지 매니페스트에서 이미지 집합에 있으면 코드 래퍼에서 제외 됩니다.  
   
-## <a name="sample-output"></a>Sample output  
- **C# wrappers**  
+## 샘플 출력  
+ **C\# 래퍼**  
   
- A pair of simple image ID and image moniker classes for C# will be similar to the below code:  
+ C\#은 유사해 집니다 한 쌍의 간단한 이미지 ID 및 이미지 모니커 클래스는 아래 코드:  
   
-```csharp  
-//-----------------------------------------------------------------------------  
-// <auto-generated>  
-//     This code was generated by the ManifestToCode tool.  
-//     Tool Version: 14.0.15198  
-// </auto-generated>  
-//-----------------------------------------------------------------------------  
-  
-using System;  
-  
-namespace MyImages  
-{  
-    public static class MyImageIds  
-    {  
-        public static readonly Guid AssetsGuid = new Guid("{442d8739-efde-46a4-8f29-e3a1e5e7f8b4}");  
-  
-        public const int MyImage1 = 0;  
-        public const int MyImage2 = 1;  
-    }  
-}  
-//-----------------------------------------------------------------------------  
-// <auto-generated>  
-//     This code was generated by the ManifestToCode tool.  
-//     Tool Version: 14.0.15198  
-// </auto-generated>  
-//-----------------------------------------------------------------------------  
-  
-using Microsoft.VisualStudio.Imaging.Interop;  
-  
-namespace MyImages  
-{  
-    public static class MyMonikers  
-    {  
-        public static ImageMoniker MyImage1 { get { return new ImageMoniker { Guid = MyImageIds.AssetsGuid, Id = MyImageIds.MyImage1 }; } }  
-        public static ImageMoniker MyImage2 { get { return new ImageMoniker { Guid = MyImageIds.AssetsGuid, Id = MyImageIds.MyImage2 }; } }  
-    }  
-}  
+```c#  
+//----------------------------------------------------------------------------- // <auto-generated> //     This code was generated by the ManifestToCode tool. //     Tool Version: 14.0.15198 // </auto-generated> //----------------------------------------------------------------------------- using System; namespace MyImages { public static class MyImageIds { public static readonly Guid AssetsGuid = new Guid("{442d8739-efde-46a4-8f29-e3a1e5e7f8b4}"); public const int MyImage1 = 0; public const int MyImage2 = 1; } } //----------------------------------------------------------------------------- // <auto-generated> //     This code was generated by the ManifestToCode tool. //     Tool Version: 14.0.15198 // </auto-generated> //----------------------------------------------------------------------------- using Microsoft.VisualStudio.Imaging.Interop; namespace MyImages { public static class MyMonikers { public static ImageMoniker MyImage1 { get { return new ImageMoniker { Guid = MyImageIds.AssetsGuid, Id = MyImageIds.MyImage1 }; } } public static ImageMoniker MyImage2 { get { return new ImageMoniker { Guid = MyImageIds.AssetsGuid, Id = MyImageIds.MyImage2 }; } } } }  
 ```  
   
- **C++ wrappers**  
+ **C \+ \+ 래퍼**  
   
- A pair of simple image ID and image moniker classes for C++ will be similar to the below code:  
+ C \+ \+는 것과 비슷하지만 한 쌍의 간단한 이미지 ID 및 이미지 모니커 클래스는 아래 코드:  
   
 ```cpp  
-//-----------------------------------------------------------------------------  
-// <auto-generated>  
-//     This code was generated by the ManifestToCode tool.  
-//     Tool Version: 14.0.15198  
-// </auto-generated>  
-//-----------------------------------------------------------------------------  
-  
-#pragma once  
-  
-#include <guiddef.h>  
-  
-namespace MyImages {  
-  
-class MyImageIds {  
-public:  
-  
-    static const GUID AssetsGuid;  
-  
-    static const int MyImage1 = 0;  
-    static const int MyImage2 = 1;  
-  
-};  
-  
-__declspec(selectany) const GUID MyImageIds::AssetsGuid = {0x442d8739,0xefde,0x46a4,{0x8f,0x29,0xe3,0xa1,0xe5,0xe7,0xf8,0xb4}};  
-  
-}  
-//-----------------------------------------------------------------------------  
-// <auto-generated>  
-//     This code was generated by the ManifestToCode tool.  
-//     Tool Version: 14.0.15198  
-// </auto-generated>  
-//-----------------------------------------------------------------------------  
-  
-#pragma once  
-  
-#include "ImageParameters140.h"  
-#include "MyImageIds.h"  
-  
-namespace MyImages {  
-  
-class MyMonikers {  
-public:  
-  
-    static const ImageMoniker MyImage1;  
-    static const ImageMoniker MyImage2;  
-  
-};  
-  
-__declspec(selectany) const ImageMoniker MyMonikers::MyImage1 = { MyImageIds::AssetsGuid, MyImageIds::MyImage1 };  
-__declspec(selectany) const ImageMoniker MyMonikers::MyImage2 = { MyImageIds::AssetsGuid, MyImageIds::MyImage2 };  
-  
-}  
+//----------------------------------------------------------------------------- // <auto-generated> //     This code was generated by the ManifestToCode tool. //     Tool Version: 14.0.15198 // </auto-generated> //----------------------------------------------------------------------------- #pragma once #include <guiddef.h> namespace MyImages { class MyImageIds { public: static const GUID AssetsGuid; static const int MyImage1 = 0; static const int MyImage2 = 1; }; __declspec(selectany) const GUID MyImageIds::AssetsGuid = {0x442d8739,0xefde,0x46a4,{0x8f,0x29,0xe3,0xa1,0xe5,0xe7,0xf8,0xb4}}; } //----------------------------------------------------------------------------- // <auto-generated> //     This code was generated by the ManifestToCode tool. //     Tool Version: 14.0.15198 // </auto-generated> //----------------------------------------------------------------------------- #pragma once #include "ImageParameters140.h" #include "MyImageIds.h" namespace MyImages { class MyMonikers { public: static const ImageMoniker MyImage1; static const ImageMoniker MyImage2; }; __declspec(selectany) const ImageMoniker MyMonikers::MyImage1 = { MyImageIds::AssetsGuid, MyImageIds::MyImage1 }; __declspec(selectany) const ImageMoniker MyMonikers::MyImage2 = { MyImageIds::AssetsGuid, MyImageIds::MyImage2 }; }  
 ```  
   
- **Visual Basic wrappers**  
+ **Visual Basic 래퍼**  
   
- A pair of simple image ID and image moniker classes for Visual Basic will be similar to the below code:  
+ Visual Basic은 유사해 집니다 한 쌍의 간단한 이미지 ID 및 이미지 모니커 클래스는 아래 코드:  
   
 ```vb  
-' -----------------------------------------------------------------------------  
-'  <auto-generated>  
-'      This code was generated by the ManifestToCode tool.  
-'      Tool Version: 14.0.15198  
-'  </auto-generated>  
-' -----------------------------------------------------------------------------  
-  
-Imports System  
-  
-Namespace MyImages  
-  
-    Public Module MyImageIds  
-  
-        Public Shared ReadOnly AssetsGuid As Guid = New Guid("{442d8739-efde-46a4-8f29-e3a1e5e7f8b4}")  
-  
-        Public Const MyImage1 As Integer = 0  
-        Public Const MyImage2 As Integer = 1  
-  
-    End Module  
-  
-End Namespace  
-' -----------------------------------------------------------------------------  
-'  <auto-generated>  
-'      This code was generated by the ManifestToCode tool.  
-'      Tool Version: 14.0.15198  
-'  </auto-generated>  
-' -----------------------------------------------------------------------------  
-  
-Imports Microsoft.VisualStudio.Imaging.Interop  
-  
-Namespace MyImages  
-  
-    Public Module MyMonikers  
-  
-        Public Readonly Property MyImage1  
-            Get  
-                Return New ImageMoniker With {.Guid = MyImageIds.AssetsGuid, .Id = MyImageIds.MyImage1}  
-            End Get  
-        End Property  
-  
-        Public Readonly Property MyImage2  
-            Get  
-                Return New ImageMoniker With {.Guid = MyImageIds.AssetsGuid, .Id = MyImageIds.MyImage2}  
-            End Get  
-        End Property  
-  
-    End Module  
-  
-End Namespace  
+' ----------------------------------------------------------------------------- '  <auto-generated> '      This code was generated by the ManifestToCode tool. '      Tool Version: 14.0.15198 '  </auto-generated> ' ----------------------------------------------------------------------------- Imports System Namespace MyImages Public Module MyImageIds Public Shared ReadOnly AssetsGuid As Guid = New Guid("{442d8739-efde-46a4-8f29-e3a1e5e7f8b4}") Public Const MyImage1 As Integer = 0 Public Const MyImage2 As Integer = 1 End Module End Namespace ' ----------------------------------------------------------------------------- '  <auto-generated> '      This code was generated by the ManifestToCode tool. '      Tool Version: 14.0.15198 '  </auto-generated> ' ----------------------------------------------------------------------------- Imports Microsoft.VisualStudio.Imaging.Interop Namespace MyImages Public Module MyMonikers Public Readonly Property MyImage1 Get Return New ImageMoniker With {.Guid = MyImageIds.AssetsGuid, .Id = MyImageIds.MyImage1} End Get End Property Public Readonly Property MyImage2 Get Return New ImageMoniker With {.Guid = MyImageIds.AssetsGuid, .Id = MyImageIds.MyImage2} End Get End Property End Module End Namespace  
 ```  
   
- **VSCT wrapper**  
+ **VSCT 래퍼**  
   
- A set of image IDs for a .vsct file will be similar to this:  
+ .Vsct 파일에 대 한 이미지 Id의 집합은 다음과 유사 하 게 됩니다.  
   
 ```xml  
-<?xml version='1.0' encoding='utf-8'?>  
-<!--  
- [auto-generated]  
-     This code was generated by the ManifestToCode tool.  
-     Tool Version: 14.0.15198  
- [/auto-generated]  
--->  
-<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">  
-  <Symbols>  
-    <GuidSymbol name="AssetsGuid" value="{442d8739-efde-46a4-8f29-e3a1e5e7f8b4}">  
-      <IDSymbol name="MyImage1" value="0" />  
-      <IDSymbol name="MyImage2" value="1" />  
-    </GuidSymbol>  
-  </Symbols>  
-</CommandTable>  
+<?xml version='1.0' encoding='utf-8'?> <!-- [auto-generated] This code was generated by the ManifestToCode tool. Tool Version: 14.0.15198 [/auto-generated] --> <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable"> <Symbols> <GuidSymbol name="AssetsGuid" value="{442d8739-efde-46a4-8f29-e3a1e5e7f8b4}"> <IDSymbol name="MyImage1" value="0" /> <IDSymbol name="MyImage2" value="1" /> </GuidSymbol> </Symbols> </CommandTable>  
 ```

@@ -1,135 +1,118 @@
 ---
-title: IDebugEngineLaunch2::LaunchSuspended | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugEngineLaunch2::LaunchSuspended
-helpviewer_keywords:
-- IDebugEngineLaunch2::LaunchSuspended
+title: "IDebugEngineLaunch2::LaunchSuspended | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugEngineLaunch2::LaunchSuspended"
+helpviewer_keywords: 
+  - "IDebugEngineLaunch2::LaunchSuspended"
 ms.assetid: 5dd2643e-c20a-470e-9024-2a423eb39856
 caps.latest.revision: 17
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: eeecef65ac40231bda84b97f10eceafea1592df9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 17
 ---
-# <a name="idebugenginelaunch2launchsuspended"></a>IDebugEngineLaunch2::LaunchSuspended
-This method launches a process by means of the debug engine (DE).  
+# IDebugEngineLaunch2::LaunchSuspended
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는 프로세스 디버그 엔진 \(DE\)으로 시작합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT LaunchSuspended (   
-   LPCOLESTR             pszMachine,  
-   IDebugPort2*          pPort,  
-   LPCOLESTR             pszExe,  
-   LPCOLESTR             pszArgs,  
-   LPCOLESTR             pszDir,  
-   BSTR                  bstrEnv,  
-   LPCOLESTR             pszOptions,  
-   LAUNCH_FLAGS          dwLaunchFlags,  
-   DWORD                 hStdInput,  
-   DWORD                 hStdOutput,  
-   DWORD                 hStdError,  
-   IDebugEventCallback2* pCallback,  
-   IDebugProcess2**      ppDebugProcess  
+```cpp#  
+HRESULT LaunchSuspended (   
+   LPCOLESTR             pszMachine,  
+   IDebugPort2*          pPort,  
+   LPCOLESTR             pszExe,  
+   LPCOLESTR             pszArgs,  
+   LPCOLESTR             pszDir,  
+   BSTR                  bstrEnv,  
+   LPCOLESTR             pszOptions,  
+   LAUNCH_FLAGS          dwLaunchFlags,  
+   DWORD                 hStdInput,  
+   DWORD                 hStdOutput,  
+   DWORD                 hStdError,  
+   IDebugEventCallback2* pCallback,  
+   IDebugProcess2**      ppDebugProcess  
 );  
 ```  
   
-```csharp  
+```c#  
 int LaunchSuspended(  
-   string               pszServer,   
-   IDebugPort2          pPort,   
-   string               pszExe,   
-   string               pszArgs,   
-   string               pszDir,   
-   string               bstrEnv,   
-   string               pszOptions,   
-   enum_LAUNCH_FLAGS    dwLaunchFlags,   
-   uint                 hStdInput,   
-   uint                 hStdOutput,   
-   uint                 hStdError,  
-   IDebugEventCallback2 pCallback,   
-   out IDebugProcess2   ppProcess  
+   string               pszServer,   
+   IDebugPort2          pPort,   
+   string               pszExe,   
+   string               pszArgs,   
+   string               pszDir,   
+   string               bstrEnv,   
+   string               pszOptions,   
+   enum_LAUNCH_FLAGS    dwLaunchFlags,   
+   uint                 hStdInput,   
+   uint                 hStdOutput,   
+   uint                 hStdError,  
+   IDebugEventCallback2 pCallback,   
+   out IDebugProcess2   ppProcess  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pszMachine`  
- [in] The name of the machine in which to launch the process. Use a null value to specify the local machine.  
+ \[in\] 프로세스를 실행 하는 컴퓨터의 이름입니다.  Null 값을 사용 하 여 로컬 컴퓨터를 지정 합니다.  
   
  `pPort`  
- [in] The [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) interface representing the port that the program will run in.  
+ \[in\] [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) 인터페이스 프로그램을 실행 하는 포트를 표시 합니다.  
   
  `pszExe`  
- [in] The name of the executable to be launched.  
+ \[in\] 실행 될 실행 파일의 이름입니다.  
   
  `pszArgs`  
- [in] The arguments to pass to the executable. May be a null value if there are no arguments.  
+ \[in\] 실행 파일에 전달할 인수입니다.  인수가 없으면 null 값을 수 있습니다.  
   
  `pszDir`  
- [in] The name of the working directory used by the executable. May be a null value if no working directory is required.  
+ \[in\] 실행 파일에서 사용 되는 작업 디렉터리의 이름입니다.  필요한 작업 디렉터리가 없는 경우 null 값을 수 있습니다.  
   
  `bstrEnv`  
- [in] Environment block of NULL-terminated strings, followed by an additional NULL terminator.  
+ \[in\] 환경 블록의 NULL로 끝나는 문자열 뒤에 추가 NULL 종결자가 있습니다.  
   
  `pszOptions`  
- [in] The options for the executable.  
+ \[in\] 실행 파일에 대 한 옵션입니다.  
   
  `dwLaunchFlags`  
- [in] Specifies the [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) for a session.  
+ \[in\] 지정은 [LAUNCH\_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) 세션입니다.  
   
  `hStdInput`  
- [in] Handle to an alternate input stream. May be 0 if redirection is not required.  
+ \[in\] 하는 대체 입력된 스트림을 처리 합니다.  리디렉션이 필요 없는 경우 0 일 수 있습니다.  
   
  `hStdOutput`  
- [in] Handle to an alternate output stream. May be 0 if redirection is not required.  
+ \[in\] 대체 출력 스트림으로 처리 합니다.  리디렉션이 필요 없는 경우 0 일 수 있습니다.  
   
  `hStdError`  
- [in] Handle to an alternate error output stream. May be 0 if redirection is not required.  
+ \[in\] 대체 오류 출력 스트림으로 처리 합니다.  리디렉션이 필요 없는 경우 0 일 수 있습니다.  
   
  `pCallback`  
- [in] The [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) object that receives debugger events.  
+ \[in\] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 는 디버거 이벤트를 수신 하는 개체입니다.  
   
  `ppDebugProcess`  
- [out] Returns the resulting [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) object that represents the launched process.  
+ \[out\] 반환 결과 [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) 시작된 된 프로세스를 나타내는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- Normally, [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] launches a program using the [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) method and then attaches the debugger to the suspended program. However, there are circumstances in which the debug engine may need to launch a program (for example, if the debug engine is part of an interpreter and the program being debugged is an interpreted language), in which case [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] uses the `IDebugEngineLaunch2::LaunchSuspended` method.  
+## 설명  
+ 일반적으로, [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 사용 하 여 프로그램을 시작 합니다를 [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) 메서드 및 다음 일시 중단된 프로그램에 디버거를 연결 합니다.  그러나 가지 환경에서 디버그 엔진 수 있습니다 필요한 경우에 \(예는 인터프리터의 일부 디버그 엔진입니다 및 디버깅 중인 프로그램 언어인 경우\)에서 프로그램을 실행 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 를 사용 하는 `IDebugEngineLaunch2::LaunchSuspended` 메서드.  
   
- The [ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md) method is called to start the process after the process has been successfully launched in a suspended state.  
+ [ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md) 메서드를 호출할 프로세스를 일시 중단된 상태에서 성공적으로 실행 된 이후 프로세스를 시작 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)   
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   
- [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md)   
+ [LAUNCH\_FLAGS](../../../extensibility/debugger/reference/launch-flags.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)   

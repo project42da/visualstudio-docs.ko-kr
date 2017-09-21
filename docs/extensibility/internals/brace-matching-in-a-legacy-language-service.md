@@ -1,76 +1,59 @@
 ---
-title: Brace Matching in a Legacy Language Service | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- brace matching
-- language services [managed package framework], brace matching
+title: "중괄호 일치 레거시 언어 서비스 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "중괄호 일치"
+  - "언어 서비스 [관리 되는 패키지 프레임 워크] 중괄호 일치"
 ms.assetid: 4e3d0a70-f22f-49dd-92d8-edf48ab62b52
 caps.latest.revision: 27
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b4685246ee6e511b849f346fc080982afaec42a4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 27
 ---
-# <a name="brace-matching-in-a-legacy-language-service"></a>Brace Matching in a Legacy Language Service
-Brace matching helps the developer track language elements that need to occur together, such as parentheses and curly braces. When a developer enters a closing brace, the opening brace is highlighted.  
+# 중괄호 일치 레거시 언어 서비스
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+중괄호 일치 함께 괄호 및 중괄호 처럼 발생 해야 하는 언어 요소를 추적 하는 개발자는 데 도움이 됩니다. 개발자가 닫는 중괄호를 여는 중괄호 강조 표시 됩니다.  
   
- You can match two or three co-occurring elements, called pairs and triples. Triples are sets of three co-occurring elements. For example, in C#, the `foreach` statement forms a triple: "`foreach()`", "`{`", and "`}`". All three elements are highlighted when the closing brace is typed.  
+ 쌍과 삼중 쌍 이라는 두 가지 또는 세 개의 동시 발생 요소를 일치 시킬 수 있습니다. 삼중 쌍은 세 동시 발생 요소의 집합입니다. 예를 들어 C\#에서 `foreach` 삼중 쌍을 형성 하는 문: "`foreach()`","`{`", 및 "`}`"입니다. 세 요소 모두에 닫는 중괄호를 입력할 때 강조 표시 됩니다.  
   
- Legacy language services are implemented as part of a VSPackage, but the newer way to implement language service features is to use MEF extensions. To find out more about the new way to implement brace matching, see [Walkthrough: Displaying Matching Braces](../../extensibility/walkthrough-displaying-matching-braces.md).  
+ 레거시 언어 서비스는 VSPackage의 일부로 구현 되는 하지만 MEF 확장을 사용 하는 언어 서비스 기능을 구현 하는 새로운 방법입니다. 중괄호 일치를 구현 하는 새로운 방법에 대 한 자세한 내용을 참조 하십시오 [연습: 일치 하는 중괄호를 표시합니다.](../../extensibility/walkthrough-displaying-matching-braces.md)합니다.  
   
 > [!NOTE]
->  We recommend that you begin to use the new editor API as soon as possible. This will improve the performance of your language service and let you take advantage of new editor features.  
+>  새 편집기 API를 최대한 빨리 사용을 시작 하는 것이 좋습니다. 이 언어 서비스의 성능을 향상 하 고 새로운 편집기 기능을 이용할 수 있도록 합니다.  
   
- The <xref:Microsoft.VisualStudio.Package.AuthoringSink> class supports both pairs and triples with the <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A> and <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A> methods.  
+ <xref:Microsoft.VisualStudio.Package.AuthoringSink> 클래스 모두 쌍을 지원 하며와 데이터 집합을 가져와 <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A> 및 <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A> 메서드.  
   
-## <a name="implementation"></a>Implementation  
- The language service needs to identify all matched elements in the language and then locate all matching pairs. This is typically accomplished by implementing <xref:Microsoft.VisualStudio.Package.IScanner> to detect a matched language and then using the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method to match the elements.  
+## 구현  
+ 언어 서비스는 언어에서 일치 하는 모든 요소를 식별 하 고 다음 모든 일치 하는 쌍을 찾이 필요 합니다. 구현 하 여 일반적으로 이렇게 <xref:Microsoft.VisualStudio.Package.IScanner> 일치 하는 언어와 다음 사용 하 여 검색 하는 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 요소와 일치 하는 방법입니다.  
   
- The <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> method calls the scanner to tokenize the line and return the token just before the caret. The scanner indicates that a language element pair has been found by setting a token trigger value of <xref:Microsoft.VisualStudio.Package.TokenTriggers> on the current token. The <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> method calls the <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> method that in turn calls the <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> method with the parse reason value of <xref:Microsoft.VisualStudio.Package.ParseReason> to locate the matching language element. When the matching language element is found, both elements are highlighted.  
+ <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> 줄 토큰화 캐럿 바로 전에 토큰을 반환 하는 스캐너 메서드를 호출 합니다. 스캐너 토큰 트리거 값을 설정 하 여 언어 요소 쌍을 찾았으면 나타냅니다 <xref:Microsoft.VisualStudio.Package.TokenTriggers> 현재 토큰에 있습니다.<xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> 메서드 호출의 <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> 메서드를 호출 하 여는 <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> 구문 분석 이유 값을 사용 하 여 메서드 <xref:Microsoft.VisualStudio.Package.ParseReason> 일치 하는 언어 요소를 찾습니다. 일치 하는 언어 요소가 발견 되 면 두 요소 모두 강조 표시 됩니다.  
   
- For a complete description of how typing a brace triggers the brace highlighting, see the "Example Parse Operation" section in the topic [Legacy Language Service Parser and Scanner](../../extensibility/internals/legacy-language-service-parser-and-scanner.md).  
+ 참조 항목의 "예제 구문 분석 작업" 섹션에 대 한 전체 설명은 어떻게 괄호를 입력을 트리거합니다 중괄호 강조 표시, [레거시 언어 서비스 파서 및 검사](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)합니다.  
   
-## <a name="enabling-support-for-brace-matching"></a>Enabling Support for Brace Matching  
- The <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> attribute can set the `MatchBraces`, `MatchBracesAtCaret`, and `ShowMatchingBrace` named parameters that set the corresponding properties of the <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class. Language preference properties can also be set by the user.  
+## 중괄호 일치에 대 한 지원을 사용 하도록 설정  
+ <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 특성을 설정할 수는 `MatchBraces`, `MatchBracesAtCaret`, 및 `ShowMatchingBrace` 명명 된 해당 속성을 설정 하는 매개 변수는 <xref:Microsoft.VisualStudio.Package.LanguagePreferences> 클래스입니다. 사용자가 언어 기본 설정 속성을 설정할 수도 있습니다.  
   
-|Registry Entry|Property|Description|  
-|--------------------|--------------|-----------------|  
-|`MatchBraces`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|Enables brace matching|  
-|`MatchBracesAtCaret`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|Enables brace matching as the caret moves.|  
-|`ShowMatchingBrace`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|Highlights the matching brace.|  
+|레지스트리 항목|속성|설명|  
+|--------------|--------|--------|  
+|`MatchBraces`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|활성화 중괄호 일치|  
+|`MatchBracesAtCaret`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|이동 캐럿으로 중괄호 일치를 사용 하도록 설정 합니다.|  
+|`ShowMatchingBrace`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|일치 하는 중괄호를 강조 표시합니다.|  
   
-## <a name="matching-conditional-statements"></a>Matching Conditional Statements  
- You can match conditional statements, such as `if`, `else if`, and `else`, or `#if`, `#elif`, `#else`, `#endif`, in the same way as matching delimiters. You can subclass the <xref:Microsoft.VisualStudio.Package.AuthoringSink> class and provide a method that can add text spans as well as delimiters to the internal array of matching elements.  
+## 일치 하는 조건문  
+ 와 같은 조건문을 일치 시킬 수 `if`, `else if`, 및 `else`, 또는 `#if`, `#elif`, `#else`, `#endif`, 구분 기호 일치와 같은 방식에서입니다. 서브클래싱 할 수는 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 클래스와 일치 하는 요소 내부 배열에 대 한 구분 기호 뿐 아니라 걸쳐 있는 텍스트를 추가할 수 있는 메서드를 제공 합니다.  
   
-## <a name="setting-the-trigger"></a>Setting the Trigger  
- The following example shows how to detect matching parentheses, curly braces and square braces, and setting the trigger for it in the scanner. The <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> method on the <xref:Microsoft.VisualStudio.Package.Source> class detects the trigger and calls the parser to find the matching pair (see the "Finding the Match" section in this topic). This example is for illustrative purposes only. It assumes that your scanner contains a method `GetNextToken` that identifies and returns tokens from a line of text.  
+## 트리거 설정  
+ 다음 예제에서는 일치 하는 괄호와 중괄호 및 대괄호, 그리고 스캐너에서에 대 한 트리거를 설정 하는 방법을 보여 줍니다.<xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> 메서드는 <xref:Microsoft.VisualStudio.Package.Source> 클래스는 트리거를 검색 하 고 \(이 항목의 "일치 찾기" 섹션 참조\) 일치 하는 쌍을 찾을 파서를 호출 합니다. 이 예는 설명 목적 으로만 제공 됩니다. 스캐너는 메서드가 포함 되어 있음을 가정 `GetNextToken` 식별 하 고 텍스트 줄에서 토큰을 반환 합니다.  
   
-```csharp  
+```c#  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -102,10 +85,10 @@ namespace TestLanguagePackage
         }  
 ```  
   
-## <a name="matching-the-braces"></a>Matching the Braces  
- Here is a simplified example for matching the language elements { }, ( ), and [ ], and adding their spans to the <xref:Microsoft.VisualStudio.Package.AuthoringSink> object. This approach is not a recommended approach to parsing source code; it is for illustrative purposes only.  
+## 중괄호 일치  
+ 다음은 언어 요소 {}, \(,\) 및, 일치 하 고 해당 범위를 추가 하는 간소화 된 예제는 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 개체입니다. 이 방법은 소스 코드를 구문 분석 하는 것이 좋습니다 하지 않습니다. 설명 목적 으로만 제공 됩니다.  
   
-```csharp  
+```c#  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -153,6 +136,6 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)   
- [Legacy Language Service Parser and Scanner](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)
+## 참고 항목  
+ [레거시 언어 서비스 기능](../../extensibility/internals/legacy-language-service-features1.md)   
+ [레거시 언어 서비스 파서 및 검사](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)

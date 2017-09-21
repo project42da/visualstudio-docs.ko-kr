@@ -1,69 +1,52 @@
 ---
-title: IDebugProcess3::SetHostingProcessLanguage | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProcess3::SetHostingProcessLanguage
-helpviewer_keywords:
-- IDebugProcess3::SetHostingProcessLanguage
+title: "IDebugProcess3::SetHostingProcessLanguage | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProcess3::SetHostingProcessLanguage"
+helpviewer_keywords: 
+  - "IDebugProcess3::SetHostingProcessLanguage"
 ms.assetid: e42f33ed-f29c-4e45-92ce-ab504b72d77c
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 094163bb1fd5b44e82d966a3090d3caedfbf626e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugprocess3sethostingprocesslanguage"></a>IDebugProcess3::SetHostingProcessLanguage
-This method sets the language that the process will be hosted under. This language can then be used by the debug engine (DE) to load the appropriate expression evaluator.  
+# IDebugProcess3::SetHostingProcessLanguage
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는 프로세스에서 호스팅되는 언어를 설정 합니다.  이 언어는 적절 한 식 계산기를 로드 하는 디버그 엔진 \(DE\) 사용할 수 있습니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
 ```cpp  
-HRESULT SetHostingProcessLanguage(  
-   REFGUID guidLang  
+HRESULT SetHostingProcessLanguage(  
+   REFGUID guidLang  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetHostingProcessLanguage(  
-   ref Guid guidLang  
+   ref Guid guidLang  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `guidLang`  
- [in] `GUID` of the language that the DE should use. Specify `GUID_NULL` (C++) or `Guid.Empty` (C#) to have the DE use the default language.  
+ \[in\] `GUID` DE를 사용 해야 하는 언어입니다.  지정한 `GUID_NULL` \(c \+ \+\) 또는 `Guid.Empty` \(C\#를 사용 하는 기본 언어를 DE\).  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- [GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md) can be used to retrieve the current language setting.  
+## 설명  
+ [GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md)현재 언어 설정을 검색을 사용할 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md)

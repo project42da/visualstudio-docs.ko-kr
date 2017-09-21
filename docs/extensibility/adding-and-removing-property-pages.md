@@ -1,54 +1,37 @@
 ---
-title: Adding and Removing Property Pages | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- property pages, adding
-- property pages, project subtypes
-- property pages, removing
+title: "추가 하 고 속성 페이지를 제거 합니다. | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "속성 페이지 추가"
+  - "속성 페이지, 프로젝트 하위 형식"
+  - "속성 페이지를 제거"
 ms.assetid: 34853412-ab8a-4caa-9601-7d0727b2985d
 caps.latest.revision: 29
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c3071e70c34a139dad20484f783ab32e6bd081e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 29
 ---
-# <a name="adding-and-removing-property-pages"></a>Adding and Removing Property Pages
-The Project Designer provides a centralized location for managing project properties, settings, and resources in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. It appears as a single window in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrated development environment (IDE) and contains a number of panes on the right that are accessed through the tabs on the left. The panes (often referred to as property pages) in the Project Designer vary by project type and language. The Project Designer can be accessed with the **Properties** command on the **Project** menu.  
+# 추가 하 고 속성 페이지를 제거 합니다.
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+프로젝트 디자이너는 프로젝트 속성, 설정 및 리소스를 관리 하기 위한 중앙된 위치를 제공 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  단일 창으로 표시 되는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 통합 개발 환경 \(IDE\)와 왼쪽에 있는 탭을 통해 액세스 하는 창의 오른쪽에 있습니다.  프로젝트 디자이너에 있는 틀 \(속성 페이지 라고도 함\)은 프로젝트 형식과 언어 다.  프로젝트 디자이너에 액세스할 수 있는  **속성** 에  **프로젝트** 메뉴.  
   
- A project subtype frequently needs to display additional property pages in the Project Designer. Likewise, some project subtypes might require that built-in property pages be removed. To do either, your project subtype must implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> interface and override the <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> method. By overriding this method and using `propId` parameter containing one of the values of the <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> enumeration, you can filter, add or remove project properties. For example, you might need to add a page to the configuration-dependent property pages. To do this, you need to filter configuration-dependent property pages and then add a new page to the existing list.  
+ 자주 프로젝트 하위 프로젝트 디자이너에서 추가 속성 페이지를 표시 해야 합니다.  마찬가지로 일부 프로젝트 하위 유형을 기본 제공 속성 페이지 제거 하도록 요구할 수 있습니다.  프로젝트 하위 중 하나를 구현 해야 합니다는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 를 재정의 하 고 인터페이스는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> 메서드.  이 메서드를 재정의 하 고 사용 하 여 `propId` 매개 변수 값 중 하나가 포함 된는 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> 열거형을 필터링을 추가 하거나 프로젝트 속성을 제거 합니다.  예를 들어, 구성 종속성 속성 페이지에 페이지를 추가 해야 합니다.  이렇게 하려면 구성 종속성 속성 페이지를 필터링 한 다음 새 페이지를 기존 목록에 추가 해야 합니다.  
   
-## <a name="adding-and-removing-property-pages-in-project-designer"></a>Adding and Removing Property Pages in Project Designer  
+## 추가 및 프로젝트 디자이너 속성 페이지 제거  
   
-#### <a name="to-remove-a-property-page-in-project-designer"></a>To remove a property page in Project Designer  
+#### 프로젝트 디자이너에서 속성 페이지를 제거 하려면  
   
-1.  Override the `GetProperty(uint itemId, int propId, out object property)` method to filter property pages and obtain a `clsids` list.  
+1.  재정의 `GetProperty(uint itemId, int propId, out object property)` 속성 페이지를 필터링 하 고 메서드는 `clsids` 목록입니다.  
   
-    ```vb  
+    ```vb#  
     Protected Overrides int GetProperty(uint itemId, int propId, out object property)  
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer  
         'Use propId to filter configuration-independent property pages.  
@@ -68,7 +51,7 @@ The Project Designer provides a centralized location for managing project proper
   
     ```  
   
-    ```csharp  
+    ```c#  
     protected override int GetProperty(uint itemId, int propId, out object property)  
     {  
         //Use propId to filter configuration-independent property pages.  
@@ -91,9 +74,9 @@ The Project Designer provides a centralized location for managing project proper
     }  
     ```  
   
-2.  Remove the **Build Events** page from obtained `clsids` list.  
+2.  제거는  **빌드 이벤트** 페이지에서 얻은 `clsids` 목록입니다.  
   
-    ```vb  
+    ```vb#  
     Private buildEventsPageGuid As String = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}"  
     Private index As Integer = propertyPagesList.IndexOf(buildEventsPageGuid)  
     If index <> -1 Then  
@@ -109,7 +92,7 @@ The Project Designer provides a centralized location for managing project proper
     property = propertyPagesList  
     ```  
   
-    ```csharp  
+    ```c#  
     string buildEventsPageGuid = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}";  
     int index = propertyPagesList.IndexOf(buildEventsPageGuid);  
     if (index != -1)  
@@ -125,11 +108,11 @@ The Project Designer provides a centralized location for managing project proper
     property = propertyPagesList;  
     ```  
   
-#### <a name="to-add-a-property-page-in-project-designer"></a>To add a property page in Project Designer  
+#### 프로젝트 디자이너에서 속성 페이지를 추가 하려면  
   
-1.  Create a property page you want to add.  
+1.  추가할 속성 페이지를 만듭니다.  
   
-    ```vb  
+    ```vb#  
     Class DeployPropertyPage  
             Inherits Form  
             Implements Microsoft.VisualStudio.OLE.Interop.IPropertyPage  
@@ -151,7 +134,7 @@ The Project Designer provides a centralized location for managing project proper
     End Class  
     ```  
   
-    ```csharp  
+    ```c#  
     class DeployPropertyPage : Form, Microsoft.VisualStudio.OLE.Interop.IPropertyPage  
     {  
         . . . .   
@@ -172,19 +155,19 @@ The Project Designer provides a centralized location for managing project proper
     }  
     ```  
   
-2.  Register your new property page.  
+2.  새 속성 페이지를 등록 합니다.  
   
-    ```vb  
+    ```vb#  
     <MSVSIP.ProvideObject(GetType(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)>  
     ```  
   
-    ```csharp  
+    ```c#  
     [MSVSIP.ProvideObject(typeof(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)]  
     ```  
   
-3.  Override the `GetProperty(uint itemId, int propId, out object property)` method to filter property pages, obtain a `clsids` list and add a new property page.  
+3.  재정의 `GetProperty(uint itemId, int propId, out object property)` 속성 페이지 필터에서 얻을 수 있는 메서드는 `clsids` 나열 하 고 새 속성 페이지를 추가 합니다.  
   
-    ```vb  
+    ```vb#  
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer  
         'Use propId to filter configuration-dependent property pages.  
         Select Case propId  
@@ -200,7 +183,7 @@ The Project Designer provides a centralized location for managing project proper
     End Function  
     ```  
   
-    ```csharp  
+    ```c#  
     protected override int GetProperty(uint itemId, int propId, out object property)  
     {  
         //Use propId to filter configuration-dependent property pages.  
@@ -221,7 +204,7 @@ The Project Designer provides a centralized location for managing project proper
     ```  
   
 > [!NOTE]
->  All code examples provided in this topic are parts of a larger example in [VSSDK Samples](http://aka.ms/vs2015sdksamples).  
+>  이 항목에서 제공 하는 모든 코드 예제는 보다 큰 예제의 일부입니다 [VSSDK 샘플](../misc/vssdk-samples.md).  
   
-## <a name="see-also"></a>See Also  
- [Project Subtypes](../extensibility/internals/project-subtypes.md)
+## 참고 항목  
+ [프로젝트 하위 형식](../extensibility/internals/project-subtypes.md)

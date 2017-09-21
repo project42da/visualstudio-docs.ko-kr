@@ -1,70 +1,53 @@
 ---
-title: IDebugBreakpointUnboundEvent2::GetBreakpoint | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBreakpointUnboundEvent2::GetBreakpoint
-helpviewer_keywords:
-- IDebugBreakpointUnboundEvent2::GetBreakpoint
+title: "IDebugBreakpointUnboundEvent2::GetBreakpoint | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBreakpointUnboundEvent2::GetBreakpoint"
+helpviewer_keywords: 
+  - "IDebugBreakpointUnboundEvent2::GetBreakpoint"
 ms.assetid: ad73a207-b778-4dc5-b645-5ec668a63333
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 44f0c4ee77524e1c0ddfadcdf3e100caaf01b420
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugbreakpointunboundevent2getbreakpoint"></a>IDebugBreakpointUnboundEvent2::GetBreakpoint
-Gets the breakpoint that became unbound.  
+# IDebugBreakpointUnboundEvent2::GetBreakpoint
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+언바운드 되었습니다 중단점을 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetBreakpoint(   
-   IDebugBoundBreakpoint2** ppBP  
+```cpp#  
+HRESULT GetBreakpoint(   
+   IDebugBoundBreakpoint2** ppBP  
 );  
 ```  
   
-```csharp  
-int GetBreakpoint(   
-   out IDebugBoundBreakpoint2 ppBP  
+```c#  
+int GetBreakpoint(   
+   out IDebugBoundBreakpoint2 ppBP  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `ppBP`  
- [out] Returns an [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) object that represents the breakpoint that became unbound.  
+ \[out\] 반환 된 [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) 언바운드 되었습니다 중단점을 나타내는 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CBreakpointUnboundDebugEventBase** object that exposes the [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) interface.  
+## 예제  
+ 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CBreakpointUnboundDebugEventBase** 를 노출 하는 개체는 [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) 인터페이스.  
   
-```cpp  
+```cpp#  
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetBreakpoint(  
     IDebugBoundBreakpoint2 **ppbp)  
 {  
@@ -91,6 +74,6 @@ STDMETHODIMP CBreakpointUnboundDebugEventBase::GetBreakpoint(
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)   
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)

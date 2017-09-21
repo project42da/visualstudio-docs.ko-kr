@@ -1,94 +1,77 @@
 ---
-title: IDebugSymbolProviderDirect::GetMethodFromAddress | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugSymbolProviderDirect::GetMethodFromAddress
-- GetMethodFromAddress
+title: "IDebugSymbolProviderDirect::GetMethodFromAddress | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugSymbolProviderDirect::GetMethodFromAddress"
+  - "GetMethodFromAddress"
 ms.assetid: 33ffd197-1221-41bc-a9f6-f133ebdcb783
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a2979c305bd8db9700f55e799de26fe4ce1422d6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugsymbolproviderdirectgetmethodfromaddress"></a>IDebugSymbolProviderDirect::GetMethodFromAddress
-Retrieves information about the method at the specified debug address.  
+# IDebugSymbolProviderDirect::GetMethodFromAddress
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+메서드가 지정 된 디버그 주소에 대 한 정보를 검색합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT GetMethodFromAddress(  
-   IDebugAddress* pAddress,  
-   GUID*          pGuid,  
-   DWORD*         pAppID,  
-   _mdToken*      pTokenClass,  
-   _mdToken*      pTokenMethod,  
-   DWORD*         pdwOffset,  
-   DWORD*         pdwVersion  
+   IDebugAddress* pAddress,  
+   GUID*          pGuid,  
+   DWORD*         pAppID,  
+   _mdToken*      pTokenClass,  
+   _mdToken*      pTokenMethod,  
+   DWORD*         pdwOffset,  
+   DWORD*         pdwVersion  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetMethodFromAddress(  
-   IDebugAddress pAddress,  
-   out Guid      pGuid,  
-   out uint      pAppID,  
-   out uint      pTokenClass,  
-   out uint      pTokenMethod,  
-   out uint      pdwOffset,  
-   out uint      pdwVersion  
+   IDebugAddress pAddress,  
+   out Guid      pGuid,  
+   out uint      pAppID,  
+   out uint      pTokenClass,  
+   out uint      pTokenMethod,  
+   out uint      pdwOffset,  
+   out uint      pdwVersion  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pAddress`  
- [in] Debug address that is represented by the [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ \[in\] 디버그 표시 되며 주소는 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 인터페이스입니다.  
   
  `pGuid`  
- [out] Unique identifier of the module.  
+ \[out\] 모듈의 고유 식별자입니다.  
   
  `pAppID`  
- [out] Identifier of the application domain.  
+ \[out\] 응용 프로그램 도메인의 식별자입니다.  
   
  `pTokenClass`  
- [out] Token that represents the containing class.  
+ \[out\] 토큰은 포함 하는 클래스를 나타냅니다.  
   
  `pTokenMethod`  
- [out] Token that represents the module.  
+ \[out\] 토큰에 있는 모듈을 나타냅니다.  
   
  `pdwOffset`  
- [out] An offset in bytes from the start of the `pAddress` parameter.  
+ \[out\] 시작 부분에서 바이트 오프셋에서 `pAddress` 매개 변수.  
   
  `pdwVersion`  
- [out] Version number of the method.  
+ \[out\] 버전 번호는 방법입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

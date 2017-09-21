@@ -1,65 +1,48 @@
 ---
-title: IDebugProcess3::GetEngineFilter | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- GetEngineFilter
-- IDebugProcess3::GetEngineFilter
+title: "IDebugProcess3::GetEngineFilter | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "GetEngineFilter"
+  - "IDebugProcess3::GetEngineFilter"
 ms.assetid: ccb7ecb0-f189-4e80-b5b2-221a095e01f5
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c0d234a190148d3ef2466923490a92d9f42afd27
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugprocess3getenginefilter"></a>IDebugProcess3::GetEngineFilter
-Retrieves an array of unique identifiers for available debug engines.  
+# IDebugProcess3::GetEngineFilter
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+사용할 수 있는 디버깅 엔진에 대 한 고유 식별자의 배열을 검색합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT GetEngineFilter(  
-   GUID_ARRAY *pEngineArray  
+   GUID_ARRAY *pEngineArray  
 );  
 ```  
   
-```csharp  
+```c#  
 public int GetEngineFilter(  
-   out GUID_ARRAY[] pEngineArray  
+   out GUID_ARRAY[] pEngineArray  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pEngineArray`  
- [out] Reference to a structure that contains unique identifiers for debug engines.  
+ \[out\] 디버그 엔진에 대 한 고유 식별자를 포함 하는 구조체에 대 한 참조입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
- [GUID_ARRAY](../../../extensibility/debugger/reference/guid-array.md)
+ [GUID\_ARRAY](../../../extensibility/debugger/reference/guid-array.md)

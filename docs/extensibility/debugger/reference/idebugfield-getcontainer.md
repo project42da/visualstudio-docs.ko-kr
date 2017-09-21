@@ -1,69 +1,52 @@
 ---
-title: IDebugField::GetContainer | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugField::GetContainer
-helpviewer_keywords:
-- IDebugField::GetContainer method
+title: "IDebugField::GetContainer | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugField::GetContainer"
+helpviewer_keywords: 
+  - "IDebugField::GetContainer 메서드"
 ms.assetid: 6d6c8213-6181-4adf-9584-3e4cac163dd8
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a76f02a1edd4a51d28e6667a9662d8db8c570068
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
-This method gets the container of a field.  
+# IDebugField::GetContainer
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 메서드는 필드의 컨테이너를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetContainer(   
-   IDebugContainerField** ppContainerField  
+```cpp#  
+HRESULT GetContainer(   
+   IDebugContainerField** ppContainerField  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetContainer(  
-   out IDebugContainerField ppContainerField  
+   out IDebugContainerField ppContainerField  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `ppContainerField`  
- [out] Returns the container as represented by the [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface.  
+ \[out\] 컨테이너를 반환 하 여 표시 하는 것은 [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) 인터페이스입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- If this field does not have a container, the returned `ppContainerField` will be a null value.  
+## 설명  
+ 이 필드는 반환 되는 컨테이너가 경우 `ppContainerField` null 값이 됩니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)

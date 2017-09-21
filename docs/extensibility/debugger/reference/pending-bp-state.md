@@ -1,89 +1,72 @@
 ---
-title: PENDING_BP_STATE | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- PENDING_BP_STATE
-helpviewer_keywords:
-- PENDING_BP_STATE enumeration
+title: "PENDING_BP_STATE | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "PENDING_BP_STATE"
+helpviewer_keywords: 
+  - "PENDING_BP_STATE 열거형"
 ms.assetid: ac04ad72-fa92-4a15-ade2-0d0bbbadfc7f
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2f051b6f265ab8e7aa60f7218066b5dcbe05b675
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="pendingbpstate"></a>PENDING_BP_STATE
-Specifies the state of a pending breakpoint (a breakpoint that has not yet been bound).  
+# PENDING_BP_STATE
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+보류 중단점 \(아직 연결 된 중단점\)의 상태를 지정 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-enum enum_PENDING_BP_STATE {   
-   PBPS_NONE     = 0x0000,  
-   PBPS_DELETED  = 0x0001,  
-   PBPS_DISABLED = 0x0002,  
-   PBPS_ENABLED  = 0x0003  
+```cpp#  
+enum enum_PENDING_BP_STATE {   
+   PBPS_NONE     = 0x0000,  
+   PBPS_DELETED  = 0x0001,  
+   PBPS_DISABLED = 0x0002,  
+   PBPS_ENABLED  = 0x0003  
 };  
 typedef DWORD PENDING_BP_STATE;  
 ```  
   
-```csharp  
-public enum enum_PENDING_BP_STATE {   
-   PBPS_NONE     = 0x0000,  
-   PBPS_DELETED  = 0x0001,  
-   PBPS_DISABLED = 0x0002,  
-   PBPS_ENABLED  = 0x0003  
+```c#  
+public enum enum_PENDING_BP_STATE {   
+   PBPS_NONE     = 0x0000,  
+   PBPS_DELETED  = 0x0001,  
+   PBPS_DISABLED = 0x0002,  
+   PBPS_ENABLED  = 0x0003  
 };  
 ```  
   
-## <a name="members"></a>Members  
- PBPS_NONE  
- Placeholder for zero. This value is never returned.  
+## Members  
+ PBPS\_NONE  
+ 0 자리 표시자입니다.  이 값은 반환 됩니다.  
   
- PBPS_DELETED  
- Indicates that the pending breakpoint has been deleted.  
+ PBPS\_DELETED  
+ 보류 중단점 삭제 되었음을 나타냅니다.  
   
- PBPS_DISABLED  
- Indicates that the pending breakpoint is disabled.  
+ PBPS\_DISABLED  
+ 보류 중단점이 해제 되었음을 나타냅니다.  
   
- PBPS_ENABLED  
- Indicates that the pending breakpoint is enabled.  
+ PBPS\_ENABLED  
+ 보류 중단점이 설정 되었음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
- Use as the `state` member of the [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) structure.  
+## 설명  
+ 사용은 `state` 의 멤버는 [PENDING\_BP\_STATE\_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) 구조.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 요구 사항  
+ 헤더: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)
+## 참고 항목  
+ [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [PENDING\_BP\_STATE\_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

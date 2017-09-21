@@ -1,58 +1,39 @@
 ---
-title: InvokeDelegate | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- InvokeDelegate Designer
-- System.Activities.Statements.InvokeDelegate.UI
+title: "InvokeDelegate | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "InvokeDelegate Designer"
+  - "System.Activities.Statements.InvokeDelegate.UI"
 ms.assetid: 289a7498-5127-453f-beb5-05f05b80d26f
 caps.latest.revision: 3
-ms.author: sdanie
-manager: erikre
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: 9ee20847f0ee80ce8aef2800fed1c5a120166cd6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.author: "sdanie"
+manager: "erikre"
+caps.handback.revision: 3
 ---
-# <a name="invokedelegate"></a>InvokeDelegate
-The **InvokeDelegate** designer is used to create and configure an <xref:System.Activities.Statements.InvokeDelegate> activity.  
+# InvokeDelegate
+**InvokeDelegate** 디자이너는 <xref:System.Activities.Statements.InvokeDelegate> 활동을 만들고 구성하는 데 사용됩니다.  
   
-## <a name="the-invokedelegate-activity"></a>The InvokeDelegate Activity  
- The <xref:System.Activities.Statements.InvokeDelegate> calls a public delegate.  
+## InvokeDelegate 활동  
+ <xref:System.Activities.Statements.InvokeDelegate>는 public 대리자를 호출합니다.  
   
-### <a name="using-the-invokedelegate-activity-designer"></a>Using the InvokeDelegate Activity Designer  
- The **InvokeDelegate** activity designer can be found in the **Primitives** category of the **Toolbox**, which is accessed by clicking the **Toolbox** tab [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (Alternatively, select **Toolbar** from the **View** menu, or CRTL+ALT+X.)  
+### InvokeDelegate 활동 디자이너 사용  
+ **InvokeDelegate** 활동 디자이너는 **도구 상자**의 **기본 형식** 범주에 있습니다. 이 범주에 액세스하려면 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]의 **도구 상자** 탭을 클릭하거나, **보기** 메뉴에서 **도구 모음**을 선택하거나, Ctrl\+Alt\+X를 누릅니다.  
   
- The **InvokeDelegate** activity designer can be dragged from the **Toolbox** and dropped on to the [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] surface where ever activities are usually placed, such as inside a <xref:System.Activities.Statements.Sequence>. This creates an <xref:System.Activities.Statements.InvokeDelegate> activity with a default <xref:System.Activities.Activity.DisplayName%2A> of InvokeDelegate. The <xref:System.Activities.Activity.DisplayName%2A> can be edited in the header of the **InvokeDelegate** activity designer or in the **DisplayName** box of the property grid.  
+ **InvokeDelegate** 활동 디자이너를 **도구 상자**에서 끌어다가 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 화면의 <xref:System.Activities.Statements.Sequence> 등 일반적으로 활동을 배치하는 아무 곳에나 놓을 수 있습니다.그러면 기본 <xref:System.Activities.Activity.DisplayName%2A>인 InvokeDelegate라는 이름의 <xref:System.Activities.Statements.InvokeDelegate> 활동이 만들어집니다.**InvokeDelegate** 활동 디자이너의 머리글 또는 속성 표의 **DisplayName** 상자에서 <xref:System.Activities.Activity.DisplayName%2A>을 편집할 수 있습니다.  
   
-### <a name="the-invokedelegate-properties"></a>The InvokeDelegate Properties  
- The following table shows the <xref:System.Activities.Statements.InvokeDelegate> properties and describes how they are used in the designer. These properties can be edited in property grid and some can be edited on [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]designer surface.  
+### InvokeDelegate 속성  
+ 다음 표에서는 <xref:System.Activities.Statements.InvokeDelegate> 속성을 보여 주고 디자이너에서 이 속성을 사용하는 방법을 설명합니다.이러한 속성은 속성 표에서 편집할 수 있으며 일부 속성은 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 디자이너 화면에서 편집할 수 있습니다.  
   
-|Property Name|Required|Usage|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|The friendly name of the <xref:System.Activities.Statements.InvokeDelegate> activity. The default value is InvokeDelegate.<br /><br /> Although the <xref:System.Activities.Activity.DisplayName%2A> is not strictly required, it is a best practice to use one.|  
-|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|The name of the <xref:System.Activities.ActivityDelegate> to be called when the activity executes. This property can be edited on designer surface. This is a mandatory property.|  
-|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|The argument collection of the called delegate. The keys are the names of the parameter objects on the <xref:System.Activities.ActivityDelegate> and the values are the arguments whose expressions are evaluated and assigned to the corresponding parameter objects. In the property grid, click the ellipsis button in the **DelegateArguments** field, it displays the **DelegateArguments** dialog to let you set this property. Click the **Create Argument** field to add the arguments.|  
+|속성 이름|필수|사용법|  
+|-----------|--------|---------|  
+|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.InvokeDelegate> 활동의 이름입니다.기본값은 InvokeDelegate입니다.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>은 꼭 필요하지 않더라도 사용하는 것이 좋습니다.|  
+|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|작업이 실행될 때 호출할 <xref:System.Activities.Statements.ActivityDelegate>의 이름입니다.이 속성은 디자이너 화면에서 편집할 수 있습니다.이 속성은 필수 속성입니다.|  
+|<xref:System.Activities.Statements.InvokeMethod.DelegateArguments%2A>|False|호출한 대리자의 인수 컬렉션입니다.키는 <xref:System.Activities.Statements.ActivityDelegate>에 대한 <xref:System.Activities.Statements.ActivityDelegateParameter> 개체의 이름이고 값은 식이 평가되고 해당 <xref:System.Activities.Statements.ActivityDelegateParameter> 개체에 할당되는 인수입니다.속성 표의 **DelegateArguments** 필드에서 줄임표 단추를 클릭하면 **DelegateArguments** 대화 상자가 표시되어 이 속성을 설정할 수 있습니다.**인수 만들기** 필드를 클릭하여 인수를 추가합니다.|  
   
-## <a name="see-also"></a>See Also  
- [How to: Define and consume activity delegates in the Workflow Designer](../workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md)
+## 참고 항목  
+ [방법: Workflow Designer에서 활동 대리자 정의 및 사용](../workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md)

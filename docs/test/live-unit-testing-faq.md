@@ -200,7 +200,7 @@ public class Class1
 
 이전 버전의 Visual Studio 2017에서는 알려진 버그로 인해 Live Unit Testing 빌드가 다음 Win32 PE 헤더 데이터를 포함하는 데 실패할 수 있습니다. 
 
-- 파일 버전(코드에서 @System.Reflection.AssemblyFileVersionAttribute로 지정됨) 
+- 파일 버전(코드에서 @System.Reflection.AssemblyFileVersionAttribute 로 지정됨) 
 
 - Win32 아이콘(명령줄에서 `/win32icon:`로 지정됨) 
 

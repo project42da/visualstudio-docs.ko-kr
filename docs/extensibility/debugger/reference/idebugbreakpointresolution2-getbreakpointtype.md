@@ -1,71 +1,54 @@
 ---
-title: IDebugBreakpointResolution2::GetBreakpointType | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBreakpointResolution2::GetBreakpointType
-helpviewer_keywords:
-- IDebugBreakpointResolution2::GetBreakpointType
+title: "IDebugBreakpointResolution2::GetBreakpointType | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBreakpointResolution2::GetBreakpointType"
+helpviewer_keywords: 
+  - "IDebugBreakpointResolution2::GetBreakpointType"
 ms.assetid: 2b707fb9-f703-4c78-91bf-7434f57790a0
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f766505f9b0d79281fe01a530b3164da66b02148
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugbreakpointresolution2getbreakpointtype"></a>IDebugBreakpointResolution2::GetBreakpointType
-Gets the type of the breakpoint represented by this resolution.  
+# IDebugBreakpointResolution2::GetBreakpointType
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 해결 방법으로 표현 되는 중단점의 종류를 가져옵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
-HRESULT GetBreakpointType(   
-   BP_TYPE* pBPType  
+```cpp#  
+HRESULT GetBreakpointType(   
+   BP_TYPE* pBPType  
 );  
 ```  
   
-```csharp  
-int GetBreakpointType(   
-   out enum_ BP_TYPE pBPType  
+```c#  
+int GetBreakpointType(   
+   out enum_ BP_TYPE pBPType  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `pBPType`  
- [out] Returns a value from the [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) enumeration that specifies the type of this breakpoint.  
+ \[out\] 반환 값에서는 [BP\_TYPE](../../../extensibility/debugger/reference/bp-type.md) 이 중단점 형식을 지정 하는 열거형입니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code. Returns E_FAIL if the `bpResLocation` field in the associated [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) structure is not valid.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  경우 E\_FAIL을 반환의 `bpResLocation` 필드에 연결 된 [BP\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) 구조가 잘못 되었습니다.  
   
-## <a name="remarks"></a>Remarks  
- The breakpoint may be a code or a data breakpoint, for example.  
+## 설명  
+ 중단점이 있는 코드 또는 데이터 중단점을 예를 수 있습니다.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CDebugBreakpointResolution` object that exposes the [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) interface.  
+## 예제  
+ 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CDebugBreakpointResolution` 를 노출 하는 개체는 [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) 인터페이스입니다.  
   
 ```  
 HRESULT CDebugBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)    
@@ -98,9 +81,9 @@ HRESULT CDebugBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)   
- [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)   
- [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)   
- [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)   
- [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)
+ [BP\_TYPE](../../../extensibility/debugger/reference/bp-type.md)   
+ [BPRESI\_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)   
+ [BP\_RESOLUTION\_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)   
+ [BP\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)

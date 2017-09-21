@@ -1,68 +1,51 @@
 ---
-title: IEnumCodePaths2::Clone | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IEnumCodePaths2::Clone
-helpviewer_keywords:
-- IEnumCodePaths2::Clone
+title: "IEnumCodePaths2::Clone | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IEnumCodePaths2::Clone"
+helpviewer_keywords: 
+  - "IEnumCodePaths2::Clone"
 ms.assetid: 9d5c6bc6-7e72-4f1b-801c-7192458f3ba8
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 77ffe3a99a12569c9a4156e72c80d8d1a1e81af7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="ienumcodepaths2clone"></a>IEnumCodePaths2::Clone
-Returns a copy of the current enumeration as a separate object.  
+# IEnumCodePaths2::Clone
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+현재 열거를 별도 개체로 복사본을 반환 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 HRESULT Clone(  
-   IEnumCodePaths2** ppEnum  
+   IEnumCodePaths2** ppEnum  
 );  
 ```  
   
-```csharp  
+```c#  
 int Clone(  
-   out IEnumCodePaths2 ppEnum  
+   out IEnumCodePaths2 ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  `ppEnum`  
- [out] Returns a copy of this enumeration as a separate object.  
+ \[out\] 이 열거형에서 별도 개체로 복사본을 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- The copy of the enumeration has the same state as the original at the time this method is called. However, the copy's and the original's states are separate and can be changed individually.  
+## 설명  
+ 열거형의 복사본은 원본과 동일한 상태가이 메서드가 호출 될 때 있습니다.  그러나 복사본과 원본의 상태는 별도 및 개별적으로 변경할 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)

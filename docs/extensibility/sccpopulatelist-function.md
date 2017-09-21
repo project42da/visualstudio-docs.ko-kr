@@ -1,107 +1,90 @@
 ---
-title: SccPopulateList Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccPopulateList
-helpviewer_keywords:
-- SccPopulateList function
+title: "SccPopulateList 함수 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccPopulateList"
+helpviewer_keywords: 
+  - "SccPopulateList 함수"
 ms.assetid: 7416e781-c571-4a7f-8af3-a089ce8be662
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8d335f9853531f25bd5c7d137248e3b03297a3d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="sccpopulatelist-function"></a>SccPopulateList Function
-This function updates a list of files for a particular source control command and supplies source control status on all given files.  
+# SccPopulateList 함수
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+이 함수는 특정 소스 제어 명령에 대 한 파일의 목록을 업데이트 하 고 모든 지정 된 파일에 대해 소스 제어 상태를 제공 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
-```cpp  
+```cpp#  
 SCCRTN SccPopulateList (  
-   LPVOID          pvContext,  
-   enum SCCCOMMAND nCommand,  
-   LONG            nFiles,  
-   LPCSTR*         lpFileNames,  
-   POPLISTFUNC     pfnPopulate,  
-   LPVOID          pvCallerData,  
-   LPLONG          lpStatus,  
-   LONG            fOptions  
+   LPVOID          pvContext,  
+   enum SCCCOMMAND nCommand,  
+   LONG            nFiles,  
+   LPCSTR*         lpFileNames,  
+   POPLISTFUNC     pfnPopulate,  
+   LPVOID          pvCallerData,  
+   LPLONG          lpStatus,  
+   LONG            fOptions  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### 매개 변수  
  pvContext  
- [in] The source control plug-in context structure.  
+ \[in\] 소스 제어 플러그 인 컨텍스트 구조입니다.  
   
- nCommand  
- [in] The source control command that will be applied to all files in the `lpFileNames` array (see [Command Code](../extensibility/command-code-enumerator.md) for a list of possible commands).  
+ 된 명령  
+ \[in\] 모든 파일에 적용 될 소스 제어 명령을 `lpFileNames` 배열 \(참조 [명령 코드](../extensibility/command-code-enumerator.md) 가능한 명령 목록을 대 한\).  
   
  nFiles  
- [in] Number of files in the `lpFileNames` array.  
+ \[in\] 에 있는 파일 수는 `lpFileNames` 배열입니다.  
   
  lpFileNames  
- [in] An array of file names known to the IDE.  
+ \[in\] 파일 이름에는 IDE의 배열입니다.  
   
  pfnPopulate  
- [in] The IDE callback function to call to add and remove files (see [POPLISTFUNC](../extensibility/poplistfunc.md) for details).  
+ \[in\] 파일 추가 및 제거 하기 위해 호출 하는 IDE 콜백 함수 \(참조 [POPLISTFUNC](../extensibility/poplistfunc.md) 대 한 자세한 내용은\).  
   
  pvCallerData  
- [in] Value that is to be passed unchanged to the callback function.  
+ \[in\] 값 변경 되지 않은 콜백 함수에 전달 하는 것입니다.  
   
  lpStatus  
- [in, out] An array for the source control plug-in to return the status flags for each file.  
+ \[에서, out\] 소스 제어의 각 파일에 대 한 상태 플래그를 반환 하는 플러그 인에 대 한 배열입니다.  
   
- fOptions  
- [in] Command flags (see the "PopulateList flag" section of [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md) for details).  
+ 옵션이  
+ \[in\] 명령 플래그 \(의 "PopulateList 플래그" 섹션을 참조 [특정 명령에서 사용 하는 비트](../extensibility/bitflags-used-by-specific-commands.md) 대 한 자세한 내용은\).  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 반환 값  
+ 이 함수의 소스 제어 플러그 인 구현 다음 값 중 하나를 반환 해야 합니다.  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Success.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
+|값|설명|  
+|-------|--------|  
+|SCC\_OK|명령 실행 성공|  
+|SCC\_E\_NONSPECIFICERROR|알 수 없는 오류가 발생 했습니다.|  
   
-## <a name="remarks"></a>Remarks  
- This function examines the list of files for its current status. It uses the `pfnPopulate` callback function to notify the caller when a file does not match the criteria for the `nCommand`. For example, if the command is `SCC_COMMAND_CHECKIN` and a file in the list is not checked out, then the callback is used to inform the caller. Occasionally, the source control plug-in may find other files that could be part of the command and add them. This allows, for example, a Visual Basic user to check out a .bmp file that is used by his or her project but does not appear in the Visual Basic project file. A user chooses the **Get** command in the IDE. The IDE will display a list of all files that it thinks the user can get, but before the list is shown, the `SccPopulateList` function is called to make sure the list to be displayed is up to date.  
+## 설명  
+ 이 함수에서는 현재 상태에 대 한 파일의 목록을 검토합니다. 사용 하 여는 `pfnPopulate` 파일에 대 한 조건을 일치 하지 않는 경우 호출자에 게 알리기 위해 콜백 함수는 `nCommand`합니다. 예를 들어, 명령이 실행 되 면 `SCC_COMMAND_CHECKIN` 하 고 목록에서 파일 체크 아웃 하지는 다음 호출자에 게 알리는 데 사용 됩니다. 경우에 따라 소스 제어 플러그 인에 추가 하 고 명령 수 있는 다른 파일을 찾을 수 있습니다. 이 사용 하면 예를 들어 Visual Basic 사용자가 자신의 프로젝트에서 사용 되지만 Visual Basic 프로젝트 파일에 나타나지 않으면.bmp 파일을 체크 아웃 합니다. 사용자가 선택 된 **가져오기** IDE에서 명령입니다. IDE 사용자 얻을 수 것으로 확인 하는 모든 파일의 목록이 표시 됩니다 아직 목록 표시 되는 `SccPopulateList` 함수가 호출 되어 표시 되는 목록을 최신 상태 인지 확인 합니다.  
   
-## <a name="example"></a>Example  
- The IDE builds a list of files that it thinks the user can get. Before it displays this list, it calls the `SccPopulateList` function, giving the source control plug-in the opportunity to add and delete files from the list. The plug-in modifies the list by calling the given callback function (see [POPLISTFUNC](../extensibility/poplistfunc.md) for more details).  
+## 예제  
+ IDE는 사용자를 가져올 수 있어야 할 파일의 목록을 작성 합니다. 호출 전에이 목록에 표시 되는 `SccPopulateList` 함수를 추가 하 고 목록에서 파일을 삭제 합니다. 소스 제어 플러그 인 기회를 제공 합니다. 지정된 된 콜백 함수를 호출 하 여 플러그 인 수정 목록 \(참조 [POPLISTFUNC](../extensibility/poplistfunc.md) 대 한 자세한 내용은\).  
   
- The plug-in continues to call the `pfnPopulate` function, which adds and deletes files, until it is finished and then returns from the `SccPopulateList` function. The IDE can then display its list. The `lpStatus` array represents all files in the original list passed in by the IDE. The plug-in fills in the status of all these files in addition to making use of the callback function.  
+ 플러그 인을 계속 호출 하는 `pfnPopulate` 추가 완료 되 고 다음에서 반환 될 때까지 파일을 삭제 하는 함수는 `SccPopulateList` 함수입니다. 그런 다음 IDE 목록을 표시할 수 있습니다.`lpStatus` 배열은 IDE에 의해 전달 된 원래 목록의 모든 파일을 나타냅니다. 또한 시키기 위한 파일 모두의 상태에 플러그 인 채우기는 콜백 함수를 사용 합니다.  
   
 > [!NOTE]
->  A source control plug-in always has the option to simply return immediately from this function, leaving the list as it is. If a plug-in implements this function, it can indicate this by setting the `SCC_CAP_POPULATELIST` capability bitflag in the first call to the [SccInitialize](../extensibility/sccinitialize-function.md). By default, the plug-in should always assume that all items being passed in are files. However, if the IDE sets the `SCC_PL_DIR` flag in the `fOptions` parameter, all the items being passed in are to be considered directories. The plug-in should add all the files that belong in the directories. The IDE will never pass in a mixture of files and directories.  
+>  소스 제어 플러그 인에 항상 단순히이 함수에는 목록 내에서 즉시 반환 하는 옵션을 있습니다. 플러그 인이 함수를 구현 하는 경우를 나타낼 수 있습니다이 설정의 `SCC_CAP_POPULATELIST` 기능 비트 플래그에 대 한 첫 번째 호출에는 [SccInitialize](../extensibility/sccinitialize-function.md)합니다. 기본적으로 플러그 인 항상 가정해 야 모든 항목에 전달 되는 파일. 그러나 IDE 설정 하는 경우는 `SCC_PL_DIR` 플래그는 `fOptions` 매개 변수를 전달 되는 모든 항목 디렉터리로 간주 됩니다. 플러그 인는 디렉터리에 속하는 모든 파일을 추가 해야 합니다. IDE 전달 하지는 않지만 파일 및 디렉터리의 혼합 합니다.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+## 참고 항목  
+ [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)   
  [POPLISTFUNC](../extensibility/poplistfunc.md)   
- [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md)   
- [Command Code](../extensibility/command-code-enumerator.md)
+ [특정 명령에서 사용 하는 비트](../extensibility/bitflags-used-by-specific-commands.md)   
+ [명령 코드](../extensibility/command-code-enumerator.md)

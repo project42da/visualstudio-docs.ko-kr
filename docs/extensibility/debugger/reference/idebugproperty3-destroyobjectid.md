@@ -1,65 +1,48 @@
 ---
-title: IDebugProperty3::DestroyObjectID | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProperty3::DestroyObjectID
-helpviewer_keywords:
-- IDebugProperty3::DestroyObjectID
+title: "IDebugProperty3::DestroyObjectID | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProperty3::DestroyObjectID"
+helpviewer_keywords: 
+  - "IDebugProperty3::DestroyObjectID"
 ms.assetid: bd08f356-cc67-4717-98c9-c3d00cad2040
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 65dfccafc071e2cb73fd530fa9b15ac1503e203a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugproperty3destroyobjectid"></a>IDebugProperty3::DestroyObjectID
-Destroys the unique ID associated with this property, indicating that the caller no longer cares to identify this property uniquely from all other properties.  
+# IDebugProperty3::DestroyObjectID
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+이 속성을 다른 모든 속성을 고유 하 게 식별 하 더 이상 호출자가 존중 한다는 나타내는이 속성에 연결 된 고유 ID를 소멸 시킵니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
 ```cpp  
-HRESULT DestroyObjectID(  
-   void  
+HRESULT DestroyObjectID(  
+   void  
 );  
 ```  
   
-```csharp  
-int DestroyObjectID();  
+```c#  
+int DestroyObjectID();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 반환 값  
+ 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- If the debug engine doesn't need to support unique IDs for a property (because it already tracks them uniquely internally), then it can simply return `E_NOTIMPL` for this method.  
+## 설명  
+ 디버그 엔진 \(이 이미를 고유 하 게 내부적으로 추적 하기 때문에\) 고유 Id에 대 한 속성을 지원 하기 위해 필요 하지 않은 경우, 반환할 수 있습니다 간단 하 게 한 다음 `E_NOTIMPL` 이 메서드에 대 한.  
   
- Unique IDs are created with a call to the [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) method when the caller wants to make sure that this property is uniquely identified among all other properties.  
+ 고유 Id를 생성을 호출 하는 [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) 메서드는 호출자가 다른 속성 중이 속성이 고유 하 게 식별 되는지 확인 하려는 경우.  
   
-## <a name="see-also"></a>See Also  
+## 참고 항목  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)

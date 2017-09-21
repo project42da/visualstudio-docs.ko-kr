@@ -1,87 +1,70 @@
 ---
-title: IDebugExpressionEvaluator | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugExpressionEvaluator
-helpviewer_keywords:
-- IDebugExpressionEvaluator interface
+title: "IDebugExpressionEvaluator | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugExpressionEvaluator"
+helpviewer_keywords: 
+  - "IDebugExpressionEvaluator 인터페이스"
 ms.assetid: 0636d8c3-625a-49fa-94b6-516f22b7e1bc
 caps.latest.revision: 14
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2d817f3316a13b8b1abb4942cf50625ccdae8b16
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 14
 ---
-# <a name="idebugexpressionevaluator"></a>IDebugExpressionEvaluator
+# IDebugExpressionEvaluator
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
 > [!IMPORTANT]
->  In Visual Studio 2015, this way of implementing expression evaluators is deprecated. For information about implementing CLR expression evaluators, please see [CLR Expression Evaluators](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) and [Managed Expression Evaluator Sample](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  Visual Studio 2015의 식 계산기를 구현 합니다. 이러한 방식으로 사용 되지 않습니다. CLR 식 계산기를 구현 하는 방법에 대 한 정보를 참조 하십시오 [CLR 식 계산기](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) 및 [관리 되는 식 계산기 예제](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)합니다.  
   
- This interface represents the expression evaluator.  
+ 이 인터페이스는 식 계산기를 나타냅니다.  
   
-## <a name="syntax"></a>Syntax  
+## 구문  
   
 ```  
 IDebugExpressionEvaluator : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Notes for Implementers  
- The expression evaluator must implement this interface.  
+## 구현자를 위한 정보  
+ 식 계산기는이 인터페이스를 구현 해야 합니다.  
   
-## <a name="notes-for-callers"></a>Notes for Callers  
- To obtain this interface, instantiate the expression evaluator through the `CoCreateInstance` method by using the class ID (CLSID) of the evaluator. See the Example.  
+## 호출자에 대 한 참고 사항  
+ 이 인터페이스를 가져오려면 인스턴스화를 통해 식 계산기는 `CoCreateInstance` 계산기의 클래스 ID \(CLSID\)를 사용 하 여 메서드. 예제를 참조 하십시오.  
   
-## <a name="methods-in-vtable-order"></a>Methods in Vtable Order  
- The following table shows the methods of `IDebugExpressionEvaluator`.  
+## Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugExpressionEvaluator`합니다.  
   
-|Method|Description|  
-|------------|-----------------|  
-|[Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)|Converts an expression string to a parsed expression.|  
-|[GetMethodProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)|Gets the local variables, arguments, and other properties of a method.|  
-|[GetMethodLocationProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodlocationproperty.md)|Converts a method location and offset into a memory address.|  
-|[SetLocale](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|Determines which language to use to create printable results.|  
-|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|Sets the registry root. Used for side-by-side debugging.|  
+|메서드|설명|  
+|---------|--------|  
+|[구문 분석](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)|식 문자열을 구문 분석 된 식으로 변환합니다.|  
+|[GetMethodProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)|지역 변수, 인수 및 기타 속성 메서드를 가져옵니다.|  
+|[GetMethodLocationProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodlocationproperty.md)|메서드 위치와 오프셋 메모리 주소를 변환합니다.|  
+|[SetLocale](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|인쇄 가능한 결과 만드는 데 사용할 언어를 결정 합니다.|  
+|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|레지스트리 루트를 설정합니다. Side\-by\-side\-디버깅에 사용 합니다.|  
   
-## <a name="remarks"></a>Remarks  
- In a typical situation, the debug engine (DE) instantiates the expression evaluator (EE) as a result of a call to [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md). Because the DE knows the language and vendor of the EE it wants to use, the DE gets the EE's CLSID from the registry (the [SDK Helpers for Debugging](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) function, `GetEEMetric`, helps with this retrieval).  
+## 설명  
+ 호출 하는 디버그 엔진 \(DE\) 인스턴스화합니다 \(EE\) 식 계산기는 일반적인 상황에서 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)합니다. 레지스트리에서 DE EE의 CLSID를 가져옵니다는 DE에 맞는 언어 및 공급 업체에 사용 하려는 EE 알고, 있기 때문에 \(의 [디버깅을 위한 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 함수 `GetEEMetric`, 이 검색을 사용할 때 도움이\).  
   
- After the EE is instantiated, the DE calls [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) to parse the expression and store it in an [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) object. Later, a call to [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) evaluates the expression.  
+ EE 인스턴스화되는 DE 호출 [구문 분석](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) 식을 구문 분석에 저장 하는 [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) 개체입니다. 나중에 대 한 호출 [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) 식을 계산 합니다.  
   
-## <a name="requirements"></a>Requirements  
- Header: ee.h  
+## 요구 사항  
+ 헤더: ee.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="example"></a>Example  
- This example shows how to instantiate the expression evaluator given a symbol provider and an address in the source code. This example uses a function, `GetEEMetric`, from the [SDK Helpers for Debugging](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) library, dbgmetric.lib.  
+## 예제  
+ 이 예제에는 소스 코드의 기호 공급자 및 주소를 제공 하는 식 계산기를 인스턴스화하는 방법을 보여 줍니다. 이 예제에서는 함수를 사용 하 여 `GetEEMetric`, 에서 [디버깅을 위한 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 라이브러리, dbgmetric.lib 합니다.  
   
-```cpp  
+```cpp#  
 IDebugExpressionEvaluator GetExpressionEvaluator(IDebugSymbolProvider pSymbolProvider,  
                                                  IDebugAddress *pSourceAddress)  
 {  
@@ -120,9 +103,9 @@ IDebugExpressionEvaluator GetExpressionEvaluator(IDebugSymbolProvider pSymbolPro
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Expression Evaluation Interfaces](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
+## 참고 항목  
+ [식 평가 인터페이스](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)   
  [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)   
  [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)   
- [SDK Helpers for Debugging](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+ [디버깅을 위한 SDK 도우미](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

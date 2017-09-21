@@ -1,69 +1,52 @@
 ---
-title: Anonymous Methods and Code Analysis | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- methods, anonymous
-- code analysis, anonymous methods
-- anonymous methods, code analysis
+title: "무명 메서드 및 코드 분석 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-devops-test"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "무명 메서드, 코드 분석"
+  - "코드 분석, 무명 메서드"
+  - "메서드, 무명"
 ms.assetid: bf0a1a9b-b954-4d46-9c0b-cee65330ad00
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 85a6bd427cf3bc5cada6bbec20b2b919e2a02d62
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+caps.handback.revision: 19
 ---
-# <a name="anonymous-methods-and-code-analysis"></a>Anonymous Methods and Code Analysis
-An *anonymous method* is a method that has no name. Anonymous methods are most frequently used to pass a code block as a delegate parameter.  
+# 무명 메서드 및 코드 분석
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+*무명 메서드*는 이름이 없는 메서드입니다.  무명 메서드는 코드 블록을 대리자 매개 변수로 전달할 때 가장 자주 사용됩니다.  
   
- This topic explains how Code Analysis handles warnings and metrics that are associated with anonymous methods.  
+ 이 항목에서는 코드 분석을 통해 무명 메서드와 관련된 경고 및 메트릭을 처리하는 방법을 설명합니다.  
   
-## <a name="anonymous-methods-declared-in-a-member"></a>Anonymous Methods Declared In a Member  
- Warnings and metrics for an anonymous method that is declared in a member, such as a method or accessor, are associated with the member that declares the method. They are not associated with the member that calls the method.  
+## 멤버에 선언된 무명 메서드  
+ 메서드나 접근자처럼 멤버에서 선언되는 무명 메서드의 경고 및 메트릭은 해당 메서드를 선언하는 멤버와 연결됩니다.  메서드를 호출하는 멤버와는 연결되지 않습니다.  
   
- For example, in the following class, any warnings that are found in the declaration of **anonymousMethod** should be raised against **Method1** and not **Method2**.  
+ 예를 들어 다음 클래스에서 **anonymousMethod**의 선언에 있는 모든 경고는 **Method1**에 대해서는 발생하지만 **Method2**에 대해서는 발생하지 않습니다.  
   
-```vb  
+```vb#  
   
-      Delegate Function ADelegate(ByVal value As Integer) As Boolean  
+        Delegate Function ADelegate(ByVal value As Integer) As Boolean  
 Class AClass  
   
     Sub Method1()  
-        Dim anonymousMethod As ADelegate = Function(ByVal value As Integer) value > 5  
+        Dim anonymousMethod As ADelegate = Function(ByVal value As  Integer) value > 5  
         Method2(anonymousMethod)  
-    End SubSub Method2(ByVal anonymousMethod As ADelegate)  
+    End Sub Sub Method2(ByVal anonymousMethod As ADelegate)  
         anonymousMethod(10)  
-    End SubEnd Class  
+    End Sub End Class  
 ```  
   
-```csharp  
+```c#  
   
-      delegate void Delegate();  
+        delegate void Delegate();  
 class Class  
 {  
     void Method1()  
@@ -82,26 +65,26 @@ class Class
 }  
 ```  
   
-## <a name="inline-anonymous-methods"></a>Inline Anonymous Methods  
- Warnings and metrics for an anonymous method that is declared as an inline assignment to a field are associated with the constructor. If the field is declared as `static` (`Shared` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]), the warnings and metrics are associated with the class constructor; otherwise, they are associated with the instance constructor.  
+## 인라인 무명 메서드  
+ 필드에 대한 인라인 할당으로 선언된 무명 메서드의 경고 및 메트릭은 해당 생성자와 연결됩니다.  필드가 `static`\([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 경우 `Shared`\)으로 선언된 경우에는 경고 및 메트릭이 클래스 생성자와 연결되고, 그렇지 않은 경우에는 경고 및 메트릭이 인스턴스 생성자와 연결됩니다.  
   
- For example, in the following class, any warnings that are found in the declaration of **anonymousMethod1** will be raised against the implicitly generated default constructor of **Class**. Whereas, those found in **anonymousMethod2** will be applied against the implicitly generated class constructor.  
+ 예를 들어 다음 클래스에서 **anonymousMethod1**의 선언에 있는 모든 경고는 **Class**의 암시적으로 생성된 기본 생성자에 대해서 발생합니다.  반면 **anonymousMethod2**에 있는 모든 경고는 암시적으로 생성된 클래스 생성자에 대해 적용됩니다.  
   
-```vb  
+```vb#  
   
-  Delegate Function ADelegate(ByVal value As Integer) As BooleanClass AClass  
-Dim anonymousMethod1 As ADelegate = Function(ByVal value As    Integer) value > 5  
-Shared anonymousMethod2 As ADelegate = Function(ByVal value As     Integer) value > 5  
+    Delegate Function ADelegate(ByVal value As Integer) As Boolean Class AClass  
+Dim anonymousMethod1 As ADelegate = Function(ByVal value As     Integer) value > 5  
+Shared anonymousMethod2 As ADelegate = Function(ByVal value As      Integer) value > 5  
   
 Sub Method1()  
     anonymousMethod1(10)  
     anonymousMethod2(10)  
-End SubEnd Class  
+End Sub End Class  
 ```  
   
-```csharp  
+```c#  
   
-      delegate void Delegate();  
+        delegate void Delegate();  
 class Class  
 {  
     Delegate anonymousMethod1 = delegate()   
@@ -122,27 +105,27 @@ class Class
 }  
 ```  
   
- A class could contain an inline anonymous method that assigns a value to a field that has multiple constructors. In this case, warnings and metrics are associated with all the constructors unless that constructor chains to another constructor in the same class.  
+ 클래스에는 생성자가 여러 개인 필드에 값을 할당하는 인라인 무명 메서드가 들어 있을 수 있습니다.  이 경우 경고 및 메트릭은 모든 생성자와 연결됩니다. 단, 해당 생성자가 동일한 클래스의 다른 생성자에 연결되지 않은 경우에 한합니다.  
   
- For example, in the following class, any warnings that are found in the declaration of **anonymousMethod** should be raised against **Class(int)** and **Class(string)** but not against **Class()**.  
+ 예를 들어 다음 클래스에서 **anonymousMethod**의 선언에 있는 모든 경고는 **Class\(int\)** 및 **Class\(string\)**에 대해서는 발생하지만 **Class\(\)**에 대해서는 발생하지 않습니다.  
   
-```vb  
+```vb#  
   
-  Delegate Function ADelegate(ByVal value As Integer) As BooleanClass AClass  
+    Delegate Function ADelegate(ByVal value As Integer) As Boolean Class AClass  
   
 Dim anonymousMethod As ADelegate = Function(ByVal value As Integer)   
 value > 5  
   
-SubNew()  
+Sub New()  
     New(CStr(Nothing))  
-End SubSub New(ByVal a As Integer)  
-End SubSub New(ByVal a As String)  
-End SubEnd Class  
+End Sub Sub New(ByVal a As Integer)  
+End Sub Sub New(ByVal a As String)  
+End Sub End Class  
 ```  
   
-```csharp  
+```c#  
   
-      delegate void Delegate();  
+        delegate void Delegate();  
 class Class  
 {  
     Delegate anonymousMethod = delegate()   
@@ -164,9 +147,9 @@ class Class
 }  
 ```  
   
- Although this might seem unexpected, this occurs because the compiler outputs a unique method for every constructor that does not chain to another constructor. Because of this behavior, any violation that occurs in **anonymousMethod** must be suppressed separately. This also means that if a new constructor is introduced, warnings that were previously suppressed against **Class(int)** and **Class(string)** must also be suppressed against the new constructor.  
+ 이러한 결과는 예기치 않은 것처럼 보일 수 있지만 컴파일러에서 다른 생성자에 연결되지 않은 모든 생성자에 대해 고유한 메서드를 출력하기 때문에 발생합니다.  이 동작 때문에 **무명 메서드** 내에서 발생하는 모든 위반은 개별적으로 표시되지 않도록 설정해야 합니다.  이는 또한 새 생성자가 사용될 경우 이전에 **Class\(int\)** 및 **Class\(string\)**에 대해 표시되지 않도록 설정된 경고가 새 생성자에 대해서도 표시되지 않도록 설정되어야 함을 의미합니다.  
   
- You can work around this issue in one of two ways. You could declare **anonymousMethod** in a common constructor that all constructors chain. Or you could declare it in an initialization method that is called by all constructors.  
+ 이 문제를 해결하려면  모든 생성자가 거치는 공용 생성자에 **anonymousMethod**를 선언할 수 있습니다.  또는 모든 생성자가 호출하는 초기화 메서드에 선언할 수 있습니다.  
   
-## <a name="see-also"></a>See Also  
- [Analyzing Managed Code Quality](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)
+## 참고 항목  
+ [관리 코드 품질 분석](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)
