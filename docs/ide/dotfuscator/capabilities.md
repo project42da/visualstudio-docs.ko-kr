@@ -1,14 +1,13 @@
 ---
 title: "Dotfuscator의 기능 | Microsoft 문서"
 ms.date: 2017-06-22
-ms.prod: visual-studio-dev15
 ms.devlang: dotnet
 ms.technology:
-- dotfuscator
+- vs-ide-general
 ms.topic: article
 keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 보호, community edition, obfuscation, .NET, 무료, Visual Studio 2017"
 helpviewer_keywords:
-- PreEmptive Protection - Dotfuscator
+- PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
 - Dotfuscator CE
 - Dotfuscator

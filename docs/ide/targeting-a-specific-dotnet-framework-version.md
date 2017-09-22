@@ -15,8 +15,8 @@ helpviewer_keywords:
 - projects [Visual Studio], multi-targeting
 ms.assetid: 91e77ad4-4da3-419d-85fb-9036f0e5c330
 caps.latest.revision: 26
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -39,22 +39,19 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 05/30/2017
 
 ---
-# 특정 대상 .NET Framework 버전 지정
-<a id="targeting-a-specific-net-framework-version" class="xliff"></a>
+# <a name="targeting-a-specific-net-framework-version"></a>특정 대상 .NET Framework 버전 지정
 Visual Studio에서는 프로젝트에서 대상으로 하려는 .NET Framework의 버전 또는 프로필을 지정할 수 있습니다. 응용 프로그램이 다른 컴퓨터에서 실행되려면 응용 프로그램이 대상으로 하는 Framework 버전이 컴퓨터에 설치된 Framework 버전과 호환되어야 합니다.  
   
  이 섹션에는 프로젝트에서 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]의 특정 버전을 대상으로 하는 방법에 대해 설명하는 항목이 있습니다.  
   
-## 단원 내용
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>단원 내용  
  [Visual Studio 멀티 타기팅 개요](../ide/visual-studio-multi-targeting-overview.md)  
  Visual Studio의 멀티 타기팅 기능에 대해 개략적으로 설명합니다.  
   
  [방법: 한 버전의 .NET Framework를 대상으로 지정](../ide/how-to-target-a-version-of-the-dotnet-framework.md)  
  Visual Basic, Visual C# 또는 Visual F# 프로젝트에 대해 특정 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]를 지정하는 방법을 자세히 설명합니다.  
   
-## 관련 단원
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>관련 단원  
  [ASP.NET 웹 프로젝트에 대한 .NET Framework 멀티 타기팅](http://msdn.microsoft.com/Library/8b8145a9-62f6-4fc4-8a83-47b0487cbe76)  
  이 버전의 Visual Studio를 사용하여 이전 버전 .NET Framework에서 실행되는 웹 응용 프로그램을 개발하는 방법을 설명합니다.  
   

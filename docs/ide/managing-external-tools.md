@@ -58,8 +58,8 @@ helpviewer_keywords:
 - Resource Compiler
 ms.assetid: f382fd40-a98f-4934-8c9a-5aeae881acde
 caps.latest.revision: 38
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -82,12 +82,10 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 05/24/2017
 
 ---
-# 외부 도구 관리
-<a id="manage-external-tools" class="xliff"></a>
+# <a name="manage-external-tools"></a>외부 도구 관리
 **도구** 메뉴를 사용하여 Visual Studio 내에서 외부 도구를 호출할 수 있습니다. 몇 가지 기본 도구는 **도구** 메뉴에서 사용할 수 있지만 다른 실행 파일을 직접 추가할 수 있습니다.  
 
-## Visual Studio 도구 메뉴에서 사용할 수 있는 도구
-<a id="tools-available-on-the-visual-studio-tools-menu" class="xliff"></a>
+## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Visual Studio 도구 메뉴에서 사용할 수 있는 도구
  **도구** 메뉴에는 다음과 같은 몇 가지 기본 제공 명령이 포함되어 있습니다.
 
 *  [Visual Studio 확장 관리](finding-and-using-visual-studio-extensions.md)를 위한  **확장 및 업데이트** 
@@ -96,8 +94,7 @@ ms.lasthandoff: 05/24/2017
 *  [메뉴 및 도구 모음 사용자 지정](how-to-customize-menus-and-toolbars-in-visual-studio.md)을 위한 **사용자 지정...** 
 *  [Visual Studio IDE 및 기타 도구에 대한 다양한 옵션 설정](reference/options-dialog-box-visual-studio.md)을 위한  **옵션...** 
 
-## 도구 메뉴에 새 도구 추가
-<a id="add-new-tools-to-the-tools-menu" class="xliff"></a> 
+## <a name="add-new-tools-to-the-tools-menu"></a>도구 메뉴에 새 도구 추가 
  **도구** 메뉴에 외부 도구를 추가할 수 있습니다. **외부 도구...** 대화 상자를 열어 **추가**       를 클릭한 후, 정보를 입력합니다. 예를 들어 다음 항목은 현재 Visual Studio에서 열려 있는 파일의 디렉터리를 Windows 탐색기에서 엽니다.  
   
 1.  제목: *파일 위치 열기*
@@ -130,7 +127,6 @@ ms.lasthandoff: 05/24/2017
 |솔루션 디렉터리|$(Solutiondir)|현재 솔루션의 디렉터리(드라이브 + 경로)입니다.|  
 |솔루션 파일 이름|$(SolutionFileName)|현재 솔루션의 파일 이름(드라이브 + 경로 + 파일 이름)입니다.|  
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  [C/C++ 빌드 도구](/cpp/build/reference/c-cpp-build-tools)
 

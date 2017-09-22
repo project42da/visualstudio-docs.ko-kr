@@ -14,8 +14,8 @@ helpviewer_keywords:
 - Visual C#, international applications
 ms.assetid: 8e1b9920-e1ac-4691-928e-cd95bfc6550b
 caps.latest.revision: 9
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -38,17 +38,14 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 05/30/2017
 
 ---
-# 응용 프로그램 전역화
-<a id="globalizing-applications" class="xliff"></a>
+# <a name="globalizing-applications"></a>응용 프로그램 전역화
 전역화는 여러 문화권에서 작동하도록 소프트웨어를 디자인하고 개발하는 프로세스입니다. 이 섹션은 Windows Forms 및 Web Forms 페이지에 둘 다 적용됩니다.  
   
-## 단원 내용
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>단원 내용  
  [전역 Windows Forms 및 Web Forms을 위한 문화권 관련 클래스](../ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)  
  문화권 설정에 따라 날짜, 시간, 숫자, 통화 및 기타 정보의 서식을 지정하는 클래스를 설명합니다.  
   
-## 관련 단원
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>관련 단원  
  [Windows Forms 전역화](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  Windows Forms 전역화에 대한 도움말 페이지의 링크를 제공합니다.  
   

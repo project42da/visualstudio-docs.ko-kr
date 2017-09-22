@@ -13,8 +13,8 @@ helpviewer_keywords:
 - projects [Visual Studio], user interface
 ms.assetid: eec49aec-5474-48a7-889d-709045b9a475
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -57,8 +57,7 @@ ms.lasthandoff: 05/24/2017
 |[프로젝트 디자이너, 참조 페이지(Visual Basic)](../../ide/reference/references-page-project-designer-visual-basic.md)|프로젝트에 사용되는 참조를 관리하려면 이 페이지를 사용합니다.|  
 |[프로젝트 디자이너, 보안 페이지](../../ide/reference/security-page-project-designer.md)|[!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] 배포를 통해 배포된 응용 프로그램에 대한 코드 액세스 보안을 구성하려면 이 페이지를 사용합니다.|  
 |[프로젝트 디자이너, 서명 페이지](../../ide/reference/signing-page-project-designer.md)|응용 프로그램 및 배포 매니페스트에 서명하고 어셈블리에 서명하려면 이 페이지를 사용합니다.|  
-|||  
-|||  
   
 ## <a name="see-also"></a>참고 항목  
  [솔루션 및 프로젝트](../../ide/solutions-and-projects-in-visual-studio.md)
+

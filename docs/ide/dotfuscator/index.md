@@ -1,14 +1,13 @@
 ---
 title: Dotfuscator CE(Community Edition) | Microsoft Docs
 ms.date: 2017-06-22
-ms.prod: visual-studio-dev15
 ms.devlang: dotnet
 ms.technology:
-- dotfuscator
+- vs-ide-general
 ms.topic: article
 keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 보호, community edition, obfuscation, .NET, 무료, Visual Studio 2017"
 helpviewer_keywords:
-- PreEmptive Protection - Dotfuscator
+- PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
 - Dotfuscator CE
 - Dotfuscator
@@ -46,7 +45,7 @@ ms.lasthandoff: 06/23/2017
 이 프로그램을 사용하여 데스크톱, 모바일, 서버 및 포함된 응용 프로그램을 강화, 보호 및 정리함으로써 거래 비밀 및 기타 IP(지적 재산권)를 보호하고, 불법 복제 및 위조를 줄이고, 변조 및 무단 디버깅으로부터 보호하는 데 도움을 얻을 수 있습니다.
 Dotfuscator는 추가적인 프로그래밍이나 소스 코드 액세스 없이도 컴파일된 어셈블리에 작동합니다.
 
-![](~/ide/dotfuscator/media/header.svg)
+![](media/header.svg)
 
 ## <a name="why-protection-matters"></a>보호가 중요한 이유
 

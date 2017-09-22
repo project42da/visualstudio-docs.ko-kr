@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5378c59-e2e5-49f0-91f1-aa82d984a33c
 caps.latest.revision: 10
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -57,7 +57,7 @@ XAML 디자이너에서 *도형*은 일반적인 도형이 맞습니다. (예: �
 ##  <a name="Shape"></a> 도형 그리기  
  도형은 **자산** 패널에 있습니다.  
   
- ![자산 패널의 도형 범주](~/designers/media/b4_shapes_assetspanel.png "b4_Shapes_AssetsPanel")  
+ ![자산 패널의 도형 범주](../designers/media/b4_shapes_assetspanel.png "b4_Shapes_AssetsPanel")  
   
  아트보드에 원하는 모든 도형을 끕니다. 그런 다음 도형에서 핸들을 사용하여 비율 크기를 조정하고 회전, 이동하거나 도형을 기울일 수 있습니다.  
   
@@ -68,7 +68,7 @@ XAML 디자이너에서 *도형*은 일반적인 도형이 맞습니다. (예: �
   
  선, 펜 또는 연필을 사용하여 패스를 그릴 수 있습니다. 이러한 도구는 **도구** 패널에 있습니다.  
   
- ![](~/designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](~/designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")  
+ ![](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](../designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")  
   
 ### <a name="draw-a-straight-line"></a>직선 그리기  
  **펜** 도구 ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")나 **줄** 도구 ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf")를 사용합니다.  
@@ -116,7 +116,7 @@ XAML 디자이너에서 *도형*은 일반적인 도형이 맞습니다. (예: �
 ##  <a name="Convert"></a> 도형을 패스로 변환  
  패스를 수정하는 방법과 같은 방법으로 도형을 수정하려면 도형을 패스로 변환합니다.  
   
- **짧은 비디오 보기:** ![설치된 기능 구성](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Convert a shape to a path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)(패스 사용: 도형을 패스로 변환).  
+ **짧은 비디오 보기:** ![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Convert a shape to a path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)(패스 사용: 도형을 패스로 변환).  
   
 ##  <a name="Combine"></a> 패스 결합  
  패스 및 도형을 하나의 패스로 결합할 수 있습니다.  
@@ -129,7 +129,7 @@ XAML 디자이너에서 *도형*은 일반적인 도형이 맞습니다. (예: �
 |![](../designers/media/b1_2.png "B1_2")|통합|![](../designers/media/b1_5.png "B1_5")|겹침 제외|  
 |![](../designers/media/b1_3.png "B1_3")|나누기|![](../designers/media/b1_6.png "B1_6")|빼기|  
   
- **짧은 비디오 보기:** ![설치된 기능 구성](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Combine paths](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195)(패스 사용: 패스 결합).  
+ **짧은 비디오 보기:** ![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Combine paths](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195)(패스 사용: 패스 결합).  
   
 ##  <a name="Compound"></a> 복합형 패스 만들기  
  복합형 패스를 만들 때 패스의 교차되는 부분은 결과에서 제외되며, 결과 패스는 맨 아래 패스의 시각적 속성을 사용합니다.  
@@ -138,14 +138,14 @@ XAML 디자이너에서 *도형*은 일반적인 도형이 맞습니다. (예: �
   
  ![](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png "2157a8aa-d9a7-4de4-8de5-b10d28f08a84")  
   
- **짧은 비디오 보기:** ![설치된 기능 구성](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Create a compound path](https://www.youtube.com/watch?v=Io5bC0-nH6Q)(패스 사용: 복합형 패스 만들기).  
+ **짧은 비디오 보기:** ![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Create a compound path](https://www.youtube.com/watch?v=Io5bC0-nH6Q)(패스 사용: 복합형 패스 만들기).  
   
 ##  <a name="Clipping"></a> 클리핑 패스 만들기  
  클리핑 패스는 다른 개체에 적용되는 패스나 도형이며, 개체에서 클리핑 패스를 벗어나는, 마스킹된 개체 부분을 숨깁니다.  
   
  ![](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png "22471e98-a841-4f39-a3ef-36090cf5a625")  
   
- **짧은 비디오 보기:** ![설치된 기능 구성](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Create a clipping path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232)(패스 사용: 클리핑 패스 만들기).  
+ **짧은 비디오 보기:** ![설치된 기능 구성](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Create a clipping path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232)(패스 사용: 클리핑 패스 만들기).  
   
 ## <a name="see-also"></a>참고 항목  
  [Blend for Visual Studio를 사용하여 UI 만들기](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

@@ -16,8 +16,8 @@ helpviewer_keywords:
 - code comments
 ms.assetid: f36b46af-443a-4fa6-a2c3-0c4962bbd4aa
 caps.latest.revision: 21
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -40,8 +40,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 05/30/2017
 
 ---
-# XML 코드 주석 제공
-<a id="supplying-xml-code-comments" class="xliff"></a>
+# <a name="supplying-xml-code-comments"></a>XML 코드 주석 제공
 소스 코드 파일에서 주석을 IntelliSense로 사용할 수 있도록 설정할 수 있습니다. Visual Basic, C# 또는 C++ 컴파일러 명령줄에 /doc 스위치를 추가하면 IntelliSense 문서의 기반으로 사용되는 .xml 파일이 생성됩니다.  
   
  Visual Basic에서 코드를 문서로 만드는 방법에 대한 자세한 내용은 [How to: Create XML Documentation](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)(방법: XML 문서 만들기)을 참조하세요.  
@@ -50,6 +49,5 @@ ms.lasthandoff: 05/30/2017
   
  C++에서 코드를 문서로 만드는 방법에 대한 자세한 내용은 [주석](/cpp/cpp/comments-cpp) 및 [XML 문서](/cpp/ide/xml-documentation-visual-cpp)를 참조하세요.  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  [IntelliSense 사용](../ide/using-intellisense.md)
