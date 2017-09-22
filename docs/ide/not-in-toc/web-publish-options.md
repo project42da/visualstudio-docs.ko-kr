@@ -5,15 +5,15 @@ ms.date: 03/09/2017
 ms.reviewer: riande
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ASP.NET, web applications, deployment, publishing
 ms.assetid: 3A13F685-531C-457D-A98E-631888011E4B
 caps.latest.revision: 1
-author: kraigb
-ms.author: kraigb
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -29,14 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5951e9c6b61e1cb868d792a5aee9389235cfef30
 ms.openlocfilehash: 6bc4d5116517402825317611c44d4b594ee79b2a
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/10/2017
 
 ---
 
-# <a name="what-publishing-options-are-right-for-me"></a>내게 적합한 게시 옵션
+# 내게 적합한 게시 옵션
 
 Visual Studio 내에서 웹 응용 프로그램을 다음 대상에 직접 게시할 수 있습니다.
 
@@ -47,7 +48,7 @@ Visual Studio 내에서 웹 응용 프로그램을 다음 대상에 직접 게�
 
 **게시** 탭에서 기존 게시 프로필을 선택하거나, 기존 게시 프로필을 가져오거나, 여기에 설명된 옵션을 사용하여 새로 만들 수 있습니다.
 
-## <a name="azure-app-service"></a>Azure App Service
+## Azure App Service
 
 [Azure App Service](https://azure.microsoft.com/documentation/articles/app-service-value-prop-what-is/)는 개발자가 인프라를 유지 관리하지 않고 확장 가능한 여러 웹 응용 프로그램과 서비스를 빠르게 만드는 데 도움이 됩니다.
 
@@ -57,7 +58,7 @@ Visual Studio 내에서 웹 응용 프로그램을 다음 대상에 직접 게�
 
 App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되지만 이러한 가상 컴퓨터가 자동으로 관리됩니다. App Service의 각 웹앱에는 고유한 \*.azurewebsites.net URL이 할당됩니다. 무료 이외의 모든 가격 책정 계층에서는 사용자 지정 도메인 이름을 사이트에 할당할 수 있습니다.
 
-### <a name="when-to-choose-azure-app-service"></a>Azure App Service를 선택해야 하는 경우
+### Azure App Service를 선택해야 하는 경우
 
 - 인터넷을 통해 액세스할 수 있는 웹 응용 프로그램을 배포하려고 합니다.
 - 다시 배포할 필요가 없도록 수요에 따라 웹 응용 프로그램을 자동으로 크기를 조정하려고 합니다.
@@ -68,7 +69,7 @@ App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되�
 > 사용자 고유의 데이터 센터 또는 다른 온-프레미스 컴퓨터에서 Azure App Service를 사용하려는 경우 [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)을 사용하면 됩니다.
 
 
-## <a name="azure-virtual-machines"></a>Azure Virtual Machines
+## Azure Virtual Machines
 
 [Azure VM(Virtual Machines)](https://azure.microsoft.com/documentation/services/virtual-machines/)을 사용하면 개수에 관계없이 클라우드에서 컴퓨팅 리소스를 만들고 관리할 수 있습니다. VM의 모든 소프트웨어 및 업데이트에 대한 책임을 지고 웹 응용 프로그램에 필요한 경우 원하는 대로 사용자 지정할 수 있습니다. 원격 데스크톱을 통해 가상 컴퓨터에 직접 액세스할 수 있으며, 각 가상 컴퓨터에서 필요한 기간 동안 할당된 IP 주소를 유지 관리합니다.
 
@@ -76,7 +77,7 @@ App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되�
 
 자세한 내용은 Azure App Service, Azure Virtual Machines 및 Visual Studio의 사용자 지정 옵션을 통해 배포 대상으로 사용할 수 있는 다른 Azure 서비스 간의 [상세 비교](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/)를 참조하세요.
 
-### <a name="when-to-choose-azure-app-virtual-machines"></a>Azure App Virtual Machines를 선택해야 하는 경우
+### Azure App Virtual Machines를 선택해야 하는 경우
 
 - 인터넷을 통해 액세스할 수 있고, 할당된 IP 주소의 수명 주기 동안 모든 권한을 가진 웹 응용 프로그램을 배포하려고 합니다.
 - 특수 데이터베이스 시스템, 특정 네트워킹 구성, 디스크 파티션 등의 추가 소프트웨어를 포함하는 컴퓨터 수준 사용자 지정이 서버에 필요합니다.
@@ -86,7 +87,7 @@ App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되�
 > 사용자 고유의 데이터 센터 또는 다른 온-프레미스 컴퓨터에서 Azure Virtual Machines를 사용하려는 경우 [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)을 사용하면 됩니다.
 
 
-## <a name="file-system"></a>파일 시스템
+## 파일 시스템
 
 파일 시스템에 배포하는 경우 사용자 컴퓨터의 특정 폴더에 웹 응용 프로그램의 파일을 복사하면 됩니다. 이 작업은 주로 테스트를 위해 또는 컴퓨터에서 웹 서버도 실행하는 경우 제한된 수의 사용자가 사용할 응용 프로그램을 배포하기 위해 사용됩니다. 대상 폴더가 네트워크에서 공유되는 경우 파일 시스템에 배포하면 웹 응용 프로그램 파일을 특정 서버에 배포할 수 있는 다른 사용자들이 사용할 수 있게 됩니다.
 
@@ -94,7 +95,7 @@ App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되�
 
 어떤 이유(예: 컴퓨터 액세스)로든 Azure App Service 또는 Azure Virtual Machines와 같은 클라우드 서비스를 사용할 수 없는 경우 고유한 데이터 센터의 [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)을 사용할 수 있습니다. Azure Stack을 사용하면 모든 항목을 온-프레미스에서 유지하면서 Azure App Service 및 Azure Virtual Machines를 통해 컴퓨팅 리소스를 관리하고 사용할 수 있습니다.
 
-### <a name="when-to-choose-file-system-deployment"></a>파일 시스템 배포를 선택해야 하는 경우
+### 파일 시스템 배포를 선택해야 하는 경우
 
 - 파일 공유에만 응용 프로그램을 배포하면 되며, 다른 사용자는 여기서 다른 서버에 배포합니다.
 - 로컬 테스트 배포만 있으면 됩니다.
@@ -102,7 +103,7 @@ App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되�
 
 
 
-## <a name="custom-targets"></a>사용자 지정 대상
+## 사용자 지정 대상
 
 사용자 지정 대상을 사용하면 Azure App Service, Azure Virtual Machines 또는 로컬 파일 시스템 이외의 대상에 웹 응용 프로그램을 배포할 수 있습니다. 파일 시스템 또는 다른 클라우드 서비스의 서버를 포함하여 액세스 권한이 있는 다른 서버(인터넷 또는 인트라넷)에 배포할 수 있습니다. 웹 배포(파일 또는 .ZIP) 및 FTP에서 작동합니다.
 
@@ -115,7 +116,7 @@ App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되�
 
 Visual Studio에서 원하는 수의 사용자 지정 배포 프로필을 만들 수 있으므로 다른 설정으로 프로필을 관리할 수 있습니다.
 
-### <a name="when-to-choose-custom-deployment"></a>사용자 지정 배포를 선택해야 하는 경우
+### 사용자 지정 배포를 선택해야 하는 경우
 
 - URL을 통해 액세스할 수 있는 Azure 이외의 공급자에서 클라우드 서비스를 사용하고 있습니다.
 - Visual Studio 내에서 사용하거나 Azure 계정에 직접 연결된 것 이외의 자격 증명을 사용하여 배포하려고 합니다.

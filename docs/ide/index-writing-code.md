@@ -1,13 +1,16 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
+author: gewarren
+ms.author: gewarren
 ms.topic: landing-page
 title: "Visual Studio 설명서를 통해 코드 작성 및 관리"
 description: "Visual Studio의 코드 편집기 및 다른 도구를 사용하여 코드를 작성, 탐색, 관리 및 개선하는 방법에 대해 알아봅니다."
-translationtype: Human Translation
+ms.technology:
+- vs-ide-general
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
 ms.openlocfilehash: 041e8ca9989b88d4d237e1ae64a051483bc09fb2
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/08/2017
 
 ---
