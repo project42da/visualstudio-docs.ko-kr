@@ -2,7 +2,6 @@
 title: "Python용 Azure Cloud Service 프로젝트 템플릿 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/13/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

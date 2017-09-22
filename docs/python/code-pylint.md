@@ -2,7 +2,6 @@
 title: "Visual Studio에서 PyLint 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/12/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

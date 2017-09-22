@@ -2,7 +2,6 @@
 title: "Visual Studio용 R 도구의 현재 버전 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/25/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

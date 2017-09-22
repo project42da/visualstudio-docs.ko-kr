@@ -3,7 +3,6 @@ title: "방화벽 또는 프록시 서버 뒤에 Visual Studio 설치 | Microsof
 description: 
 ms.custom: 
 ms.date: 08/01/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
