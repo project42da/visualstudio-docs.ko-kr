@@ -1,5 +1,5 @@
 ---
-title: Get started debugging multithreaded applications | Microsoft Docs
+title: "다중 스레드 응용 프로그램 디버깅을 시작 하려면 | Microsoft Docs"
 ms.custom: H1HackMay2017
 ms.date: 06/02/2017
 ms.reviewer: 
@@ -36,46 +36,46 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 5c5aa0df75451fe829b0d6849d8c9d1672e677b0
+ms.sourcegitcommit: 1d4298d60886d8fe8b402b59b1838a4171532ab1
+ms.openlocfilehash: 3ffb550707280d76756cbd144ed03f4143ce144b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Get started debugging a multithreaded application in Visual Studio
-Visual Studio provides several tools and user interface elements to help you debug multithreaded applications. This tutorial shows how to use conditional breakpoints and filter breakpoints, the **Parallel Stacks** window, and **Parallel Watch** window. This tutorial takes only a few minutes, but completing it will familiarize you with the features for debugging multithreaded applications.
+# <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Visual Studio에서 다중 스레드 응용 프로그램 디버깅을 시작.
+Visual Studio는 여러 가지 도구와 다중 스레드 응용 프로그램을 디버그할 수 있도록 사용자 인터페이스 요소를 제공 합니다. 스레드 마커를 사용 하는 방법을 보여 주는이 자습서는 **병렬 스택** 창 고 **병렬 조사식** 창과 조건부 중단점, 중단점 필터입니다. 이 자습서에서는 몇 분 정도 걸리지만 완료에 익숙해질 수 다중 스레드 응용 프로그램 디버깅을 위한 기능입니다.
 
 |         |         |
 |---------|---------|
-| ![Watch a video](../install/media/video-icon.png "WatchVideo") | [Watch a video](#video) on multithreaded debugging that shows similar steps. |
+| ![비디오 보기](../install/media/video-icon.png "WatchVideo") | [비디오 보기](#video) 유사한 단계를 보여 주는 다중 스레드 디버깅 합니다. |
 
-Other topics provide additional information on using other multithreaded debugging tools:
+다른 항목에 다른 다중 스레드 디버깅 도구를 사용 하 여 추가 정보를 제공 합니다.
 
-- For a similar topic that shows how to use the **Debug Location** toolbar and the **Threads** window, see [Walkthrough: Debug a Multithreaded Application](../debugger/how-to-use-the-threads-window.md).
+- 사용 하는 방법을 보여 주는 유사한 항목에 대 한는 **디버그 위치** 도구 모음 및 **스레드** 창 참조 [연습: 다중 스레드 응용 프로그램을 디버깅](../debugger/how-to-use-the-threads-window.md)합니다.
 
-- For a similar topic with a sample that uses <xref:System.Threading.Tasks.Task> (managed code) and the concurrency runtime (C++), see [Walkthrough: Debugging a Parallel Application](../debugger/walkthrough-debugging-a-parallel-application.md). For general debugging tips that apply to most multithreaded application types, read both this topic and the linked topic.
+- 사용 하는 샘플와 비슷한 항목에 대 한 <xref:System.Threading.Tasks.Task> (관리 코드) (c + +) 동시성 런타임 참조 및 [연습: 병렬 응용 프로그램 디버깅](../debugger/walkthrough-debugging-a-parallel-application.md)합니다. 가장 다중 스레드 응용 프로그램 형식에 적용 되 일반 디버깅 팁이 항목과 연결 된 항목을 참조 하세요.
   
-To begin this tutorial, you need a multithreaded application project. Follow the steps listed here to create that project.  
+이 자습서를 시작 하려면 다중 스레드 응용 프로그램 프로젝트를 해야 합니다. 여기에 나열된 단계에 따라 프로젝트를 만드십시오.  
   
-#### <a name="to-create-the-multithreaded-app-project"></a>To create the multithreaded app project  
+#### <a name="to-create-the-multithreaded-app-project"></a>다중 스레드 응용 프로그램 프로젝트를 만들려면  
   
-1.  On the **File** menu, choose **New** and then click **Project**.  
+1.  에 **파일** 메뉴 선택 **새로** 클릭 하 고 **프로젝트**합니다.  
   
-     The **New Project** dialog box appears.  
+     **새 프로젝트** 대화 상자가 나타납니다.  
   
-2.  In the **Project Type**s box, click the language of your choice: **Visual C#**, **Visual C++**, or **Visual Basic**.  
+2.  에 **프로젝트 형식**s 상자에서 원하는 언어 클릭: **Visual C#**, **Visual c + +**, 또는 **Visual Basic**합니다.  
   
-3.  In the **Templates** box, choose **Console App**.  
+3.  에 **템플릿** 상자 **콘솔 응용 프로그램**합니다.  
   
-4.  In the **Name** box, type the name MyThreadWalkthroughApp.  
+4.  에 **이름** 상자에 mythreadwalkthroughapp 라는 이름을 입력 합니다.  
   
-5.  Click **OK**.  
+5.  **확인**을 클릭합니다.  
   
-     A new console project appears. When the project has been created, a source file appears. Depending on the language you have chosen, the source file might be called Program.cs, MyThreadWalkthroughApp.cpp, or Module1.vb.  
+     새 콘솔 프로젝트가 나타납니다. 프로젝트가 만들어지면 소스 파일이 나타납니다. 선택한 언어에 따라 Program.cs, MyThreadWalkthroughApp.cpp, 또는 Module1.vb 소스 파일을 호출할 수 있습니다.  
   
-6.  Delete the code that appears in the source file and replace it with the example code shown here.
+6.  소스 파일에 표시 되는 코드를 삭제 하 고 여기에 표시 된 예제 코드로 바꿉니다.
 
-    ```C#
+    ```csharp
     using System;
     using System.Threading;
 
@@ -208,11 +208,11 @@ To begin this tutorial, you need a multithreaded application project. Follow the
     End Class
     ```
   
-7.  On the **File** menu, click **Save All**.  
+7.  에 **파일** 메뉴를 클릭 하 여 **모두 저장**합니다.  
   
-#### <a name="to-begin-the-tutorial"></a>To begin the tutorial  
+#### <a name="to-begin-the-tutorial"></a>자습서를 시작 하려면  
   
--   In the source code editor, look for the following code: 
+-   소스 코드 편집기에서 다음 코드를 찾습니다. 
   
     ```CSharp  
     Thread.Sleep(3000);  
@@ -228,20 +228,20 @@ To begin this tutorial, you need a multithreaded application project. Follow the
     Console.WriteLine()
     ```
   
-#### <a name="to-start-debugging"></a>To start debugging  
+#### <a name="to-start-debugging"></a>디버깅을 시작하려면  
   
-1.  Click in the left gutter of the `Thread.Sleep` or `Thread::Sleep` statement to insert a new breakpoint.  
+1.  왼쪽된 여백에서 클릭는 `Thread.Sleep` 또는 `Thread::Sleep` 새 중단점을 삽입 하는 문입니다.  
   
-     In the gutter on the left side of the source code editor, a red circle appears. This indicates that a breakpoint is now set at this location. 
+     소스 코드 편집기의 왼쪽 여백에 빨간색 원이 나타납니다. 이 공은 이 위치에 중단점이 설정되었음을 나타냅니다. 
   
-2.  On the **Debug** menu, click **Start Debugging** (**F5**).  
+2.  에 **디버그** 메뉴를 클릭 하 여 **디버깅 시작** (**F5**).  
   
-     Visual Studio builds the solution, the app starts to run with the debugger attached, and then the app stops at the breakpoint.  
+     Visual Studio 솔루션을 빌드합니다, 그리고 연결, 디버거에서 실행 되도록 응용 프로그램 시작 및 응용 프로그램 중단점에서 중지 하는 다음 합니다.  
   
     > [!NOTE]
-    > If you switch focus to the console window, click in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] window to return focus to [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+    > 콘솔 창에 포커스를 전환 하는 경우 클릭는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 창에 포커스를 돌리는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
   
-4.  In the source code editor, locate the line that contains the breakpoint:  
+4.  소스 코드 편집기에서 중단점을 포함 하는 줄을 찾습니다.  
   
     ```CSharp  
     Thread.Sleep(3000);  
@@ -255,153 +255,153 @@ To begin this tutorial, you need a multithreaded application project. Follow the
     Thread.Sleep(3000)
     ```    
   
-#### <a name="ShowThreadsInSource"></a>To discover the thread marker  
+#### <a name="ShowThreadsInSource"></a>스레드 마커를 검색 하려면  
 
-1.  In the Debug Toolbar, click the **Show Threads in Source** button ![Show Threads in Source](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker").
+1.  디버그 도구 모음에서을 클릭는 **소스의 스레드 표시** 단추 ![소스의 스레드 표시](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")합니다.
 
-2. Press **F11** once to advance the debugger one line of code.
+2. 키를 눌러 **F11** 이동 하는 코드의 디버거 한 줄에 한 번입니다.
   
-3.  Look at the gutter on the left side of the window. On this line, you will see a *thread marker* icon  ![Thread Marker](../debugger/media/dbg-thread-marker.png "ThreadMarker") that resembles two cloth threads. The thread marker indicates that a thread is stopped at this location.
+3.  창 왼쪽의 여백을 확인합니다. 이 줄에 표시 됩니다는 *스레드 마커* 아이콘 ![스레드 마커](../debugger/media/dbg-thread-marker.png "ThreadMarker") 두 가닥의 실 유사한 합니다. 스레드 마커는 이 위치에서 스레드가 중지되었음을 나타냅니다.
 
-    Notice that a thread marker may be partially concealed by a breakpoint. 
+    스레드 마커 중단점에서 부분적으로 숨겨진 수를 확인 합니다. 
   
-4.  Hover the pointer over the thread marker. A DataTip appears. The DataTip tells you the name and thread ID number for each stopped thread. In this case, the name is probably `<noname>`. 
+4.  스레드 마커에 포인터를 올려 놓습니다. DataTips가 나타납니다. DataTip을 통해 중지된 각 스레드의 이름과 스레드 ID 번호를 알 수 있습니다. 이 경우 이름이 되었을 `<noname>`합니다. 
   
-5.  Right-click the thread marker to see the available options on the shortcut menu.
+5.  바로 가기 메뉴에서 사용할 수 있는 옵션을 보려면 스레드 마커를 마우스 오른쪽 단추로 클릭 합니다.
     
-## <a name="ParallelStacks"></a>View the Location of Threads
+## <a name="ParallelStacks"></a>스레드 위치를 확인 합니다.
 
-In the **Parallel Stacks** window, you can switch between a Threads view and (for task-based programming) Tasks view, and you can view call stack information for each thread. In this app, we can use the Threads view.
+에 **병렬 스택** 전환할 수 창 작업 보기 하 고 있습니다 (프로그래밍에 대 한 작업 기반)와 스레드 뷰 간에 각 스레드에 대 한 호출 스택 정보 볼 수 있습니다. 이 응용 프로그램에서 스레드 뷰를 사용할 수 있습니다.
 
-1. Open the **Parallel Stacks** window by choosing **Debug > Windows > Parallel Stacks**. You should see something similar to this (the exact information will be different depending on the current location of each thread, your hardware, and your programming language).
+1. 열기는 **병렬 스택** 창을 선택 하 여 **디버그 > Windows > 병렬 스택**합니다. 다음과 같이 표시 됩니다 (정보만 각 스레드, 하드웨어 및 프로그래밍 언어의 현재 위치에 따라 다를 수 됩니다).
 
-    ![Parallel Stacks Window](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
+    ![병렬 스택 창](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
 
-    In this example, from left to right we get this information:
+    이 예제에서는 왼쪽에서 오른쪽 구했습니다이 정보를:
     
-    - The Main thread (left side) has stopped on `Thread.Start` (the stop point is indicated by the thread marker icon ![Thread Marker](../debugger/media/dbg-thread-marker.png "ThreadMarker")).
-    - Two threads have entered the `ServerClass.InstanceMethod`, one of which is the current thread (yellow arrow), while the other thread has stopped in `Thread.Sleep`.
-    - A new thread (on the right) is also starting (stopped on `ThreadHelper.ThreadStart`).
+    - 주 스레드 (왼쪽)에서 중지 되었습니다. `Thread.Start` (중지 지점을 스레드 마커 아이콘으로 표시 됩니다 ![스레드 마커](../debugger/media/dbg-thread-marker.png "ThreadMarker")).
+    - 입력 한 두 개의 스레드는 `ServerClass.InstanceMethod`, 그 중 하나는 현재 스레드 (노란색 화살표)에 다른 스레드가 중지 하는 동안 `Thread.Sleep`합니다.
+    - (오른쪽)에 새 스레드를 시작 됩니다 (에서 중지 `ThreadHelper.ThreadStart`).
 
-2.  Right-click entries in the **Parallel Stacks** window to see the available options on the shortcut menu.
+2.  항목을 마우스 오른쪽 단추로 클릭는 **병렬 스택** 창 바로 가기 메뉴에서 사용할 수 있는 옵션을 확인 합니다.
 
-    You can take various actions from these right-click menus, but for this tutorial we will show more of these details in the **Parallel Watch** window (next sections).
+    이러한 오른쪽 클릭 메뉴에서 다양 한 작업을 수행할 수 있습니다 하지만이 자습서에서 이러한 세부 정보 중에서 **병렬 조사식** 창 (다음 섹션).
 
     > [!NOTE]
-    > If you are more interested in seeing a list view with information on each thread, use the **Threads** window instead. See [Walkthrough: Debug a Multithreaded Application](../debugger/how-to-use-the-threads-window.md).
+    > 각 스레드에 대 한 정보 보기에서 사용 하 여 목록 보기에 더 관심이 있는 경우는 **스레드** 창 대신 합니다. 참조 [연습: 다중 스레드 응용 프로그램을 디버깅](../debugger/how-to-use-the-threads-window.md)합니다.
 
-## <a name="set-a-watch-on-a-variable"></a>Set a Watch on a Variable
+## <a name="set-a-watch-on-a-variable"></a>조사식 변수에 설정
 
-1. Open the **Parallel Watch** window by choosing **Debug > Windows > Parallel Watch > Parallel Watch 1**.
+1. 열기는 **병렬 조사식** 창을 선택 하 여 **디버그 > Windows > 병렬 조사식 > 병렬 조사식 1**합니다.
 
-2. Click in the cell where you see the `<Add Watch>` text (or the empty header cell in the 4th column), type `data`, and press Enter.
+2. 나타나는 셀을 클릭는 `<Add Watch>` 텍스트 (또는 4 번째 열에서 빈 머리글 셀) 형식 `data`, Enter 키를 누릅니다.
 
-    The values for the data variable for each thread appear in the window.
+    각 스레드에 대 한 데이터 변수에 대 한 값 창에 나타납니다.
 
-3. Click again in the cell where you see the `<Add Watch>` text (or the empty header cell in the 5th column), type `count`, and press Enter.
+3. 표시 되는 셀을 다시 클릭는 `<Add Watch>` 텍스트 (또는 5 번째 열에서 빈 머리글 셀) 형식 `count`, Enter 키를 누릅니다.
 
-    The values for the count variable for each thread appear in the window. (If you don't see this much information yet, try pressing F11 a few more times to advance the execution of the threads in the debugger.)
+    각 스레드에 대해 count 변수에 대 한 값 창에 나타납니다. (이 많은 정보를 아직 표시 되지 않으면, 시도 f11를 몇 번 더 디버거에서 스레드 실행 합니다.)
 
-    ![Parallel Watch Window](../debugger/media/dbg-multithreaded-parallel-watch.png "ParallelWatchWindow")
+    ![병렬 조사식 창](../debugger/media/dbg-multithreaded-parallel-watch.png "ParallelWatchWindow")
 
-4. Right-click one of the rows in the window to see available options.
+4. 사용 가능한 옵션을 보려면 창에 행 중 하나를 마우스 오른쪽 단추로 클릭 합니다.
 
-## <a name="flagging-and-unflagging-threads"></a>Flagging and Unflagging Threads  
-You can flag threads that you want to give special attention. Flagging threads is a good way to keep track of important threads and to ignore threads that you do not care about.  
+## <a name="flagging-and-unflagging-threads"></a>스레드에 플래그 지정 및 해제  
+특별 한 주의가 스레드에 플래그를 설정할 수 있습니다. 스레드에 플래그를 지정 하는 것이 중요 한 스레드를 추적 하 고에 대 한 중요 하지 않은 스레드를 무시 하도록 좋습니다.  
   
-#### <a name="to-flag-threads"></a>To flag threads  
+#### <a name="to-flag-threads"></a>스레드에 플래그를 지정하려면  
 
-1. In the **Parallel Watch** window, hold down the SHIFT key and select multiple rows.
+1. 에 **병렬 조사식** 창 SHIFT 키를 누른 채 여러 행을 선택 합니다.
 
-2. Right-click and choose **Flag**.
+2. 마우스 오른쪽 단추로 클릭 하 고 선택 **플래그**합니다.
 
-    Now, all the selected threads are flagged. Now, you can filter to show only flagged threads.
+    이제 선택한 모든 스레드가 플래그가 지정 됩니다. 이제 플래그가 지정 된 스레드만 표시 하도록 필터링 할 수 있습니다.
   
-3.  In the **Parallel Watch** window, find the **Show Only Flagged Threads** button ![Show Flagged Threads](../debugger/media/dbg-threads-show-flagged.png "ThreadMarker").  
+3.  에 **병렬 조사식** 창 찾기는 **플래그가 지정 된 스레드만 표시** 단추 ![플래그가 지정 된 스레드 표시](../debugger/media/dbg-threads-show-flagged.png "ThreadMarker")합니다.  
   
-4.  Click the **Show Only Flagged Threads** button.  
+4.  클릭는 **플래그가 지정 된 스레드만 표시** 단추입니다.  
   
-    Only the flagged thread appears in the list now.
+    플래그가 지정된 스레드만 목록에 나타납니다.
 
     > [!TIP]
-    > When you have flagged some threads, you can right-click a line of code in the code editor and choose **Run Flagged Threads to Cursor** (make sure that you choose code that all flagged threads will reach). This will pause threads on the selected line of code, making it easier to control the order of execution by [freezing and thawing threads](#bkmk_freeze).
+    > 일부 스레드 플래그 때 코드 편집기에서 코드의 줄을 마우스 오른쪽 단추로 클릭 하 고 선택할 수 **실행 플래그가 지정 된 스레드를 커서까지** (스레드를 플래그 지정 하는 코드에 도달 하면 선택 하 고 있는지 확인). 이것은 선택된 된 실행 순서 대로 제어를 더욱 쉽게 코드 줄에 있는 스레드를 일시 중지 [스레드 중지 및 재개](#bkmk_freeze)합니다.
 
-5.  Click the **Show Only Flagged Threads** button to toggle back to **Show All Threads** mode.
+5.  클릭는 **플래그가 지정 된 스레드만 표시** 다시 전환 하려면 단추 **모든 스레드 표시** 모드입니다.
     
-#### <a name="to-unflag-threads"></a>To unflag threads
+#### <a name="to-unflag-threads"></a>스레드의 플래그를 해제하려면
 
-To unflag threads, you can right-click one or more flagged threads in the **Parallel Watch** window and choose **Unflag**.
+스레드 플래그를 해제 하려면 하나 이상의 플래그가 지정 된 스레드 단추로 **병렬 조사식** 창을 선택 하 고 **플래그 해제**합니다.
 
-## <a name="bkmk_freeze"></a> Freezing and thawing thread execution 
+## <a name="bkmk_freeze"></a>중지 및 재개 스레드 실행 
 
 > [!TIP]
-> You can freeze and thaw (suspend and resume) threads to control the order in which threads perform work. This can help you resolve concurrency issues such as deadlocks and race conditions.
+> 고정 및 고정 해제 수 (일시 중단 및 다시 시작) 스레드 작업을 수행 하는 순서를 제어 하는 스레드입니다. 이 교착 상태 같은 동시성 문제를 해결 하 고 경합 조건을 수 있습니다.
   
-#### <a name="to-freeze-and-unfreeze-threads"></a>To freeze and unfreeze threads  
+#### <a name="to-freeze-and-unfreeze-threads"></a>스레드를 중지 및 해제하려면  
   
-1.  In the **Parallel Watch** window, with all the rows selected, right-click and select **Freeze**.
+1.  에 **병렬 조사식** 선택 된 모든 행을 마우스 오른쪽 단추로 클릭 하 고 선택 창 **고정**합니다.
 
-    In the second column, a pause icon now appears for each row. The pause icon indicates that the thread is frozen.
+    두 번째 열에서 일시 중지 아이콘 이제 각 행에 대해 나타납니다. 일시 중지 아이콘은 스레드가 중지 되었음을 나타냅니다.
 
-2.  Deselect the rows by clicking one row only.
+2.  하나의 행을 클릭 하 여 행을 선택 취소 합니다.
 
-3.  Right-click a row and select **Thaw**.
+3.  행을 마우스 오른쪽 단추로 클릭 하 고 선택 **재개**합니다.
 
-    The pause icon goes away on this row, indicating that the thread is no longer frozen.
+    일시 중지 아이콘은 스레드가 더 이상 중지 되었음을 나타내는이 행에서 사라집니다.
 
-4.  Switch to the code editor and click **F11**. Only the unfrozen thread runs.
+4.  코드 편집기로 전환 하 고 클릭 **F11**합니다. 고정 되지 않은 스레드만 실행 됩니다.
 
-    The app may also instantiate some new threads. Notice that any new threads are unflagged and are not frozen.
+    앱에서 몇 가지 새 스레드를 인스턴스화할 수도 수 있습니다. 모든 새 스레드를 플래그 지정 된 않으며 고정 되지 않은 확인 합니다.
 
-## <a name="bkmk_follow_a_thread"></a> Follow a Single Thread by using Conditional Breakpoints
+## <a name="bkmk_follow_a_thread"></a>조건부 중단점을 사용 하 여 단일 스레드를 수행 합니다.
 
-Sometimes, it can be helpful to follow the execution of a single thread in the debugger. One way you can do that is by freezing threads that you are not interested in, but in some scenarios you may wish to follow a single thread without freezing other threads (to repro a particular bug, for example). To follow a thread without freezing other threads, you must avoid breaking into code except on the thread that you are interested in. You can do this by setting a [conditional breakpoint](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
+경우에 따라 디버거에서 단일 스레드로 실행을 추적 하 유용할 수 있습니다. 관심 않은 스레드를 고정 하 여 수행할 수 있는 한 가지 방법은 이지만 일부 시나리오는 단일 스레드 하지 않고를 따르는 고정 하는 다른 스레드 (예를 들어 특정 버그 재현)를 만들 수 있습니다. 스레드가 다른 스레드에서 고정 하지 않고를 수행 하려면에 관심이 있는 스레드에서 제외 하 고 코드를 중단 하면 하면 안 됩니다. 설정 하 여이 수행할 수는 [조건부 중단점](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)합니다.
 
-You can set breakpoints on different conditions, such as the thread name or the thread ID. Another method that may be helpful is to set the condition on data that you know will be unique to each thread. This is a common debugging scenario, in which you are more interested in some particular data value than in any particular thread.
+스레드 이름이 나 스레드 id입니다. 예: 서로 다른 조건에 중단점을 설정할 수 있습니다. 유용할 수 있는 다른 방법은 각 스레드에 고유 된다고 생각 하는 데이터에 조건을 설정 하는 것입니다. 중인 특정 스레드에의 보다 일부 특정 데이터 값에 더 많은 관심 일반적인 디버깅 시나리오입니다.
 
-#### <a name="to-follow-a-single-thread"></a>To follow a single thread
+#### <a name="to-follow-a-single-thread"></a>단일 스레드를 수행 하려면
 
-1. Right-click the breakpoint you previously created and choose **Conditions**.
+1. 이전에 만든 중단점을 마우스 오른쪽 단추로 클릭 하 고 선택 **조건**합니다.
 
-2. In the **Breakpoint Settings** window, type `data == 5` for the conditional expression.
+2. 에 **중단점 설정** 창, 형식 `data == 5` 조건 식에 대 한 합니다.
 
-    ![Conditional Breakpoint](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
+    ![조건부 중단점](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
 
     > [!TIP]
-    > If you are more interested in a specific thread, then use a thread name or thread ID for the condition. To do this in the **Breakpoint Settings** window, select **Filter** instead of **Conditional expression**, and follow the filter tips. You may want to name your threads in your app code (since threads IDs change when you restart the debugger).
+    > 특정 스레드에 더 관심이 인 경우 스레드 이름이 나 스레드 ID 조건에 사용 합니다. 이 작업을 수행 하는 **중단점 설정** 창에서 **필터** 대신 **조건식**, 필터 팁을 따릅니다. 앱 코드에서 스레드 이름 지정 (스레드 Id는 디버거를 다시 시작 하면 변경) 이후 수도 있습니다.
 
-3. Close the **Breakpoint Settings** window.
+3. 닫기는 **중단점 설정** 창.
 
-4. Click the Restart ![Restart App](../debugger/media/dbg-tour-restart.png "RestartApp") button to restart your debugging session.
+4. 다시 시작을 클릭 ![응용 프로그램 다시 시작](../debugger/media/dbg-tour-restart.png "RestartApp") 디버깅 세션을 다시 시작 하는 단추입니다.
 
-    You will break into code on the thread for which the data variable is 5. Look for the yellow arrow (current debugger context) in the **Parallel Watch** window to verify that.
+    데이터 변수는 5 스레드에서 코드로 중단 됩니다. 노란색 화살표 (현재 디버거 컨텍스트)에서 찾을 **병렬 조사식** 되었는지 확인 하는 창입니다.
 
-5. Now, you can step over code (F10) and step into code (F11) and follow the execution of the single thread.
+5. 이제 실행 (F10) 코드 및 코드 (F11)를 한 단계씩 하 고 단일 스레드로 실행을 추적 합니다.
 
-    As long as the breakpoint condition is unique to the thread, and the debugger doesn't hit any other breakpoints on other threads (you may need to disable them), you can step over code and step into code without switching to other threads.
+    중단점 조건은 스레드를 고유 하 고 디버거 (사용 하지 않도록 해야 할 수 있습니다) 다른 스레드에서 다른 중단점이 적중 되지 않습니다, 코드 실행 하 고 다른 스레드를 전환 하지 않으면 코드를 한 단계씩 합니다.
 
     > [!NOTE]
-    > When you advance the debugger, all threads will run. However, the debugger won't break into code on other threads unless one of the other threads hits a breakpoint. 
+    > 디버거를 진행 하면 모든 스레드가 실행 됩니다. 그러나 다른 스레드 중 하나는 중단점에 도달 하지 않는 한 다른 스레드에서 코드로 디버거가 중단 되지 않습니다. 
   
-## <a name="more-about-the-multithreaded-debugging-windows"></a>More about the multithreaded debugging windows 
+## <a name="more-about-the-multithreaded-debugging-windows"></a>다중 스레드 디버깅 창에 대 한 자세한 정보 
 
-#### <a name="to-switch-to-another-thread"></a>To switch to another thread 
+#### <a name="to-switch-to-another-thread"></a>다른 스레드로 전환 하려면 
 
-- To switch to another thread, see [How to: Switch to Another Thread While Debugging](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
+- 다른 스레드로 전환 하려면 참조 [하는 방법: 다른 스레드가 디버그 하는 동안로 전환](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
 
-## <a name="video"></a> Watch a video on multithreaded debugging
+## <a name="video"></a>다중 스레드 디버깅에 대 한 비디오를 보기
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171" frameborder="0" allowfullscreen></iframe>
 </div>
 
-#### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>To learn more about the Parallel Stack and Parallel Watch windows  
+#### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>병렬 스택 및 병렬 조사식 창에 대 한 자세한 내용을 보려면  
   
-- See [How to: Use the Parallel Stack Window](../debugger/using-the-parallel-stacks-window.md) 
+- 참조 [하는 방법: 병렬 스택 창 사용](../debugger/using-the-parallel-stacks-window.md) 
 
-- See [How to: Use the Parallel Watch Window](../debugger/how-to-use-the-parallel-watch-window.md) 
+- 참조 [하는 방법: 병렬 조사식 창 사용](../debugger/how-to-use-the-parallel-watch-window.md) 
   
-## <a name="see-also"></a>See Also  
- [Debug Multithreaded Applications](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [How to: Switch to Another Thread While Debugging](../debugger/how-to-switch-to-another-thread-while-debugging.md)
+## <a name="see-also"></a>참고 항목  
+ [다중 스레드 응용 프로그램 디버그](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [방법: 디버그 중 다른 스레드로 전환](../debugger/how-to-switch-to-another-thread-while-debugging.md)
 

@@ -1,15 +1,17 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
+author: gewarren
+ms.author: gewarren
 ms.topic: landing-page
 title: "Visual Studio IDE 설명서"
 description: "Visual Studio IDE(통합 개발 환경)가 거의 모든 코드 언어를 사용하여 앱을 개발하는 데 어떤 도움이 되는지 알아봅니다."
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
-ms.openlocfilehash: 7f55b5d4cc58620e292cc11399c086e26184081f
+ms.technology:
+- vs-ide-general
+ms.translationtype: HT
+ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
+ms.openlocfilehash: 55a6cd52972758c82f2f03a51d34b601352bbb38
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="visual-studio-ide-documentation"></a>Visual Studio IDE 설명서

@@ -1,4 +1,3 @@
-
 ---
 title: "Visual Studio에서 설정 동기화 | Microsoft 문서"
 ms.custom: 
@@ -13,8 +12,8 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.RoamingSettings
 ms.assetid: a3d2ea29-be5d-4012-9820-44b06adbb7dd
 caps.latest.revision: 10
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -31,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: cc949cae43fe524771f43fe7e9261de3b4325649
-ms.openlocfilehash: 8b8a7587687579e074d1b9ea1c9ae52a5f857fce
+ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
+ms.openlocfilehash: 1882e191caa027e7a6e2b52c766135b240b309a1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="synchronize-your-settings-in-visual-studio"></a>Visual Studio에서 설정 동기화
@@ -82,7 +81,7 @@ Visual Studio 15.3 이상 버전에서는 `%userprofile%\Documents\Visual Studio
 **참고**: 새로운 설치 관련 설정을 사용하려면 새로 설치해야 합니다. 기존 Visual Studio 2017 설치를 현재 업데이트로 업그레이드하는 경우 기존 공유 위치를 사용합니다. 현재 Visual Studio 2017의 side-by-Side 설치가 있는 경우 업그레이드하고 새 설치 관련 설정 파일 위치를 사용하려면 다음 단계를 수행하세요.
 
 1. 업그레이드한 후 설정 가져오기\내보내기 마법사를 사용하여 모든 기존 설정을 `%localappdata%\Microsoft\VisualStudio\15.0_xxxxxxxx` 폴더 외부의 위치로 내보냅니다.
-2. 업그레이드된 Visual Studio 설치의 **VS 2017용 개발자 명령 프롬프트**를 열고 여기에서 “devenv resetuserdata를 실행”합니다.
+2. 업그레이드된 Visual Studio 설치의 **VS 2017용 개발자 명령 프롬프트**를 열고 여기에서 `devenv /resetuserdata`를 실행합니다.
 3. Visual Studio를 시작하고 내보낸 설정 파일에서 저장된 설정을 가져옵니다.
 
 ## <a name="see-also"></a>참고 항목

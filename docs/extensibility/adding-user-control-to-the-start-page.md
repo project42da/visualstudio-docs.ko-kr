@@ -34,7 +34,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ed511fa58ca0d98d38ed2ab1ed3bc24bed642170
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="adding-user-control-to-the-start-page"></a>시작 페이지에 사용자 정의 컨트롤 추가
@@ -190,7 +190,7 @@ ms.lasthandoff: 09/06/2017
   
 ## <a name="testing-a-manually-created-custom-start-page"></a>수동으로 만든된 사용자 지정 시작 페이지를 테스트합니다.  
   
-1.  사용자는 XAML 파일 및 지원 텍스트 파일 또는 태그 파일을 복사는 **%USERPROFILE%\My Documents\Visual Studio 2015 \startpages\\**  폴더입니다.  
+1.  사용자는 XAML 파일 및 지원 텍스트 파일 또는 태그 파일을 복사는 **%USERPROFILE%\My Documents\Visual Studio 2015 \startpages\\ ** 폴더입니다.  
   
 2.  시작 페이지에서 모든 컨트롤 또는 Visual Studio가 설치 되지 않은 어셈블리의 형식을 참조 하는 경우 어셈블리를 복사 하 고 다음에 붙여넣을 *Visual Studio 설치 폴더***\Common7\IDE\ PrivateAssemblies\\**합니다.  
   

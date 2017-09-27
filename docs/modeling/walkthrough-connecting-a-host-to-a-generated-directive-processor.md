@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5bfeb8ea94b457114d7ba6ab74b783972e64350c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>연습: 생성된 지시문 프로세서에 호스트 연결
@@ -96,7 +96,7 @@ ms.lasthandoff: 09/06/2017
   
 1.  CustomHost 솔루션을 엽니다.  
   
-2.  에 **프로젝트** 메뉴를 클릭 하 여 **참조 추가**합니다.  
+2.  **프로젝트** 메뉴에서 **참조 추가**를 클릭합니다.  
   
      **참조 추가** 대화 상자가 열립니다는 **.NET** 탭이 표시 됩니다.  
   
