@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 478415dee5bcf1b37277f84ad0a49240bfc21a16
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>에뮬레이터를 사용하여 Sharepoint 2010 응용 프로그램용 단위 테스트 격리

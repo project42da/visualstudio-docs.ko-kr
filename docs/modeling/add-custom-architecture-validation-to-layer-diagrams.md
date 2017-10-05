@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 25261e06fc2d5ef1d2850b8ecdf159b1085d8d83
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>종속성 다이어그램에 사용자 지정 아키텍처 유효성 검사 추가

@@ -30,7 +30,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: c1836489b1845bca9e57daf83fc97bafeaf9da72
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>연습: 보기 장식, 명령 및 설정 (열 안내선) 만들기
@@ -68,13 +68,13 @@ ms.lasthandoff: 09/06/2017
   
 -   한 `ColumnGuideCommands` .vsct 파일에 선언 된 사용자 명령을 구현 하는 명령에 대 한 명령 처리기를 연결 하는 개체입니다.  
   
- **VSIX**합니다.  사용 하 여 **파일 &#124; 새로운...**  프로젝트를 만들려면 명령입니다.  왼쪽된 탐색 창에서 C#에서 확장성 노드를 선택 하 고 선택 **VSIX 프로젝트** 오른쪽 창에서.  ColumnGuides 이름을 입력 하 고 선택 **확인** 프로젝트를 만듭니다.  
+ **VSIX**합니다.  사용 하 여 **파일 &#124; 새로운... ** 프로젝트를 만들려면 명령입니다.  왼쪽된 탐색 창에서 C#에서 확장성 노드를 선택 하 고 선택 **VSIX 프로젝트** 오른쪽 창에서.  ColumnGuides 이름을 입력 하 고 선택 **확인** 프로젝트를 만듭니다.  
   
- **장식 볼**합니다.  솔루션 탐색기에서 프로젝트 노드를 오른쪽 포인터 단추를 눌러 합니다.  선택 된 **추가 &#124; 새 항목...**  명령을 새 보기 장식 항목을 추가 합니다.  선택 **확장성 &#124; 편집기** 왼쪽된 탐색 창에서 선택한 **편집기 뷰포트 장식** 오른쪽 창에서.  항목 이름으로 ColumnGuideAdornment 이름을 입력 하 고 선택 **추가** 추가 합니다.  
+ **장식 볼**합니다.  솔루션 탐색기에서 프로젝트 노드를 오른쪽 포인터 단추를 눌러 합니다.  선택 된 **추가 &#124; 새 항목... ** 명령을 새 보기 장식 항목을 추가 합니다.  선택 **확장성 &#124; 편집기** 왼쪽된 탐색 창에서 선택한 **편집기 뷰포트 장식** 오른쪽 창에서.  항목 이름으로 ColumnGuideAdornment 이름을 입력 하 고 선택 **추가** 추가 합니다.  
   
  이 항목 템플릿은 두 개의 파일 및에 추가 프로젝트 (뿐만 아니라 참조 등)을 볼 수 있습니다: ColumnGuideAdornment.cs 및 ColumnGuideAdornmentTextViewCreationListener.cs 합니다.  방금 템플릿 보기에 자주색 사각형을 그립니다.  다음 두 줄은 보기 만들기 수신기에서 변경 및 ColumnGuideAdornment.cs의 내용을 대체 합니다.  
   
- **명령**합니다.  솔루션 탐색기에서 프로젝트 노드를 오른쪽 포인터 단추를 눌러 합니다.  선택 된 **추가 &#124; 새 항목...**  명령을 새 보기 장식 항목을 추가 합니다.  선택 **확장성 &#124; VSPackage** 왼쪽된 탐색 창에서 선택한 **사용자 지정 명령** 오른쪽 창에서.  항목 이름으로 ColumnGuideCommands 이름을 입력 하 고 선택 **추가** 추가 합니다.  ColumnGuideCommands.cs, ColumnGuideCommandsPackage.cs, 및 ColumnGuideCommandsPackage.vsct 여러 개의 참조가 외에도 추가 명령 및 패키지를 추가 합니다.  다음 정의 하 고 명령을 구현 첫 번째 및 마지막 파일의 내용을 바꿉니다.  
+ **명령**합니다.  솔루션 탐색기에서 프로젝트 노드를 오른쪽 포인터 단추를 눌러 합니다.  선택 된 **추가 &#124; 새 항목... ** 명령을 새 보기 장식 항목을 추가 합니다.  선택 **확장성 &#124; VSPackage** 왼쪽된 탐색 창에서 선택한 **사용자 지정 명령** 오른쪽 창에서.  항목 이름으로 ColumnGuideCommands 이름을 입력 하 고 선택 **추가** 추가 합니다.  ColumnGuideCommands.cs, ColumnGuideCommandsPackage.cs, 및 ColumnGuideCommandsPackage.vsct 여러 개의 참조가 외에도 추가 명령 및 패키지를 추가 합니다.  다음 정의 하 고 명령을 구현 첫 번째 및 마지막 파일의 내용을 바꿉니다.  
   
 ## <a name="setting-up-the-text-view-creation-listener"></a>텍스트 보기 만들기 수신기를 설정  
  ColumnGuideAdornmentTextViewCreationListener.cs 편집기에서 엽니다.  이 코드는 때마다 Visual Studio 텍스트 뷰를 만듭니다에 대 한 처리기를 구현 합니다.  보기의 특성에 따라 처리기가 호출 하는 시기를 제어 하는 특성도 있습니다.  
@@ -532,7 +532,7 @@ namespace ColumnGuides
  패키지 코드는 Visual Studio 명령, 어디에 배치할지 명령 확장을 제공 한다는 검색에 필요한 상용구 선언 합니다.  패키지를 초기화 하는 경우 명령을 구현 클래스를 인스턴스화합니다.  명령에 관련 된 패키지에 대 한 자세한 내용은 위에 링크 명령을 참조 하십시오.  
   
 ### <a name="a-common-commands-pattern"></a>일반적인 명령 패턴  
- 열 안내선 확장에서 주석은 Visual Studio의 매우 일반적인 패턴의 예입니다.  관련된 명령을 그룹에 배치 하 고 해당 그룹에 놓으면 주 메뉴에서 종종와 "`<CommandFlag>CommandWellOnly</CommandFlag>`" 명령은 표시 되지 않도록 설정 합니다.  주 메뉴에 명령을 배치 하는 (같은 **편집**) 이러한 방식으로 제공 좋은 이름 (같은 **Edit.AddColumnGuide**) 하는 키 바인딩에 다시 할당할 때 명령을 찾는 데 유용  **도구 옵션** 하 고 포함 된 명령을 호출할 때 완성을 가져오기 위한는 **명령 창**합니다.  
+ 열 안내선 확장에서 주석은 Visual Studio의 매우 일반적인 패턴의 예입니다.  관련된 명령을 그룹에 배치 하 고 해당 그룹에 놓으면 주 메뉴에서 종종와 "`<CommandFlag>CommandWellOnly</CommandFlag>`" 명령은 표시 되지 않도록 설정 합니다.  주 메뉴에 명령을 배치 하는 (같은 **편집**) 이러한 방식으로 제공 좋은 이름 (같은 **Edit.AddColumnGuide**) 하는 키 바인딩에 다시 할당할 때 명령을 찾는 데 유용 ** 도구 옵션** 하 고 포함 된 명령을 호출할 때 완성을 가져오기 위한는 **명령 창**합니다.  
   
  다음 상황에 맞는 메뉴에 명령 그룹을 추가 하거나 하거나 하위 메뉴의 명령을 사용 하 여 사용자를 원하는 합니다.  Visual Studio에서 처리 `CommandWellOnly` 주 메뉴의 경우에 표시 안 함 플래그로 합니다.  상황에 맞는 메뉴 또는 하위 메뉴에 명령 같은 그룹을 배치할 때 명령이 표시 됩니다.  
   
@@ -1184,7 +1184,7 @@ namespace ColumnGuides
   
 ```  
   
- **참조를 수정**합니다.  이 시점에서 대 한 참조를 요소가 없습니다.  솔루션 탐색기에서 참조 노드 오른쪽 포인터 단추를 누르면 됩니다.  선택 된 **추가...**  명령입니다.  **참조 추가** 대화 상자에 검색 상자 오른쪽 위 모서리에 있습니다.  (큰따옴표) 없이 "편집기" 입력 합니다.  선택 된 **Microsoft.VisualStudio.Editor** (해야 상자를 선택 하지 선택 항목의 왼쪽에 있는 항목) 항목 선택 **확인** 참조를 추가 합니다.  
+ **참조를 수정**합니다.  이 시점에서 대 한 참조를 요소가 없습니다.  솔루션 탐색기에서 참조 노드 오른쪽 포인터 단추를 누르면 됩니다.  선택 된 **추가... ** 명령입니다.  **참조 추가** 대화 상자에 검색 상자 오른쪽 위 모서리에 있습니다.  (큰따옴표) 없이 "편집기" 입력 합니다.  선택 된 **Microsoft.VisualStudio.Editor** (해야 상자를 선택 하지 선택 항목의 왼쪽에 있는 항목) 항목 선택 **확인** 참조를 추가 합니다.  
   
  **초기화**합니다.  패키지 클래스를 초기화 하는 경우 호출 `Initialize` 명령 구현 클래스에 있습니다.  `ColumnGuideCommands` 초기화는 클래스를 인스턴스화 및 클래스 멤버에 클래스 인스턴스 및 패키지 파일에 대 한 참조를 저장 합니다.  
   

@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 40983f5c5c79f1555ea039df8d71c931fa633f24
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정

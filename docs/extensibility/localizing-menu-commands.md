@@ -37,7 +37,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 13910907c6041884cc0a1414fd0bfd82757a7639
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="localizing-menu-commands"></a>메뉴 명령 지역화
@@ -52,11 +52,11 @@ ms.lasthandoff: 09/06/2017
   
 2.  사본을 *filename*하는데.en-us.resources US.vsct 각각에 대해 지역화 언어입니다.  
   
-     각 복사본의 이름을 *filename*. *로캘*.vsct, 여기서 *로캘* 특정 문화권 이름입니다. 문화권 이름 값의 목록에 대 한 참조 [Microsoft에서 할당 한 로캘 Id](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx)합니다.  
+     각 복사본의 이름을 *filename*.* 로캘*.vsct, 여기서 *로캘* 특정 문화권 이름입니다. 문화권 이름 값의 목록에 대 한 참조 [Microsoft에서 할당 한 로캘 Id](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx)합니다.  
   
-     이러한 *filename*. *로캘*.vsct 파일 패키지에 대 한 지역화 된 메뉴 텍스트에 포함 됩니다.  
+     이러한 *filename*.* 로캘*.vsct 파일 패키지에 대 한 지역화 된 메뉴 텍스트에 포함 됩니다.  
   
-3.  각각 열어 *filename*. *로캘*.vsct 파일을 텍스트를 지역화 합니다.  
+3.  각각 열어 *filename*.* 로캘*.vsct 파일을 텍스트를 지역화 합니다.  
   
     1.  수정 된 [ButtonText](../extensibility/buttontext-element.md) 값 요소는 해당 언어에 적합 합니다.  
   

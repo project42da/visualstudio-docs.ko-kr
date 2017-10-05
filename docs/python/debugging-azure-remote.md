@@ -2,7 +2,6 @@
 title: "Visual Studio에서 Python을 사용하여 Azure 원격 디버깅 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/12/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

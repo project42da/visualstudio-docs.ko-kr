@@ -2,7 +2,6 @@
 title: "Visual Studio용 R 도구를 사용하여 데이터 시각화 | Microsoft Docs"
 ms.custom: 
 ms.date: 6/29/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

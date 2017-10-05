@@ -3,7 +3,6 @@ title: "Visual Studio 관리자 가이드 | Microsoft 문서"
 description: "엔터프라이즈 환경에 Visual Studio를 배포하는 방법을 자세히 알아봅니다."
 ms.custom: 
 ms.date: 05/15/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

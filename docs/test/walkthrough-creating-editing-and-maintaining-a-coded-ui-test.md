@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 63dd3f809e472bea8f558bff15e17bbfa0421a2c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리

@@ -1,52 +1,69 @@
 ---
-title: "IDebugProgramNodeAttach2::OnAttach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramNodeAttach2::OnAttach"
-helpviewer_keywords: 
-  - "IDebugProgramNodeAttach2::OnAttach"
+title: IDebugProgramNodeAttach2::OnAttach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramNodeAttach2::OnAttach
+helpviewer_keywords:
+- IDebugProgramNodeAttach2::OnAttach
 ms.assetid: 5fe52761-a508-4ab5-abdb-334fb6590334
 caps.latest.revision: 3
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# IDebugProgramNodeAttach2::OnAttach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5e0162d17fc81b1304213d0259863f35523a833f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/26/2017
 
-관련된 프로그램에 연결 또는 연결 프로세스를 지연의 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 방법입니다.  
+---
+# <a name="idebugprogramnodeattach2onattach"></a>IDebugProgramNodeAttach2::OnAttach
+연결 된 프로그램에 연결 하거나 연결 프로세스를 지연 된 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 메서드.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT OnAttach(  
-   [in] REFGUID guidProgramId  
+   [in] REFGUID guidProgramId  
 );  
 ```  
   
-```c#  
+```csharp  
 int OnAttach(  
-   ref Guid guidProgramId  
+   ref Guid guidProgramId  
 };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `guidProgramId`  
- \[in\] `GUID` 관련된 프로그램에 할당할 수 있습니다.  
+ [in] `GUID` 연결 된 프로그램에 할당할 수 있습니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`.  반환 `S_FALSE` 경우는 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 메서드를 호출 하면 안 됩니다.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 경우는 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 메서드를 호출 해야 합니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## 설명  
- 연결 하는 동안이 메서드 전에 호출에서 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 메서드가 호출 됩니다.  `OnAttach` 메서드는 연결 프로세스를 수행할 수 있습니다 \(경우에이 메서드는 반환 `S_FALSE`\) 또는 연결 프로세스를 지연의 `IDebugEngine2::Attach` 메서드 \(는 `OnAttach` 메서드가 반환 `S_OK`\).  이벤트는 `OnAttach` 메서드를 설정할 수 있습니다의 `GUID` 으로 디버깅 중인 프로그램의를 주어진 `GUID`.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 연결 과정에서 전에 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 메서드를 호출 합니다. `OnAttach` 메서드 자체 연결 프로세스를 수행할 수 (이 메서드가 반환 하는 경우에 `S_FALSE`) 또는 연결 프로세스를 지연는 `IDebugEngine2::Attach` 메서드 (의 `OnAttach` 메서드 반환 `S_OK`). 하거나 이벤트에 `OnAttach` 메서드 설정할 수 있습니다는 `GUID` 하려면 디버깅 중인 프로그램의는 주어진 `GUID`합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)   
- [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
