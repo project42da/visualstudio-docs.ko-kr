@@ -16,20 +16,6 @@ manager: ghogen
 dev_langs:
 - CSharp
 - VB
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
 ms.openlocfilehash: ec2ae70312c7cb5f26630246046cadc7c210e1c2
@@ -62,7 +48,7 @@ ms.lasthandoff: 05/26/2017
 ### <a name="add-missing-casesdefault-caseboth"></a>누락된 사례/기본 사례/모두 추가
 C#의 `switch` 문이나 Visual Basic의 `Select Case` 문을 만들 때 코드 동작을 사용하여 누락된 사례 항목, 기본 사례 문 또는 모두를 자동으로 추가할 수 있습니다.  빈 문의 경우 다음과 같습니다.
 
-```CSharp
+```csharp
 enum MyEnum
 {
     Item1,
@@ -78,8 +64,7 @@ switch(myEnum)
 {
 }
 ```
-
-```VB
+```vb
 Enum MyEnum
     Item1
     Item2
@@ -96,7 +81,7 @@ End Select
 
 **Add Both**(모두 추가) 빠른 작업을 사용하여 누락된 사례와 기본 사례를 모두 입력하면 다음과 같이 생성됩니다.
 
-```CSharp
+```csharp
 switch(myEnum)
 {
     case MyEnum.Item1:
@@ -109,8 +94,7 @@ switch(myEnum)
         break;
 }
 ```
-
-```VB
+```vb
 Select Case myEnum
     Case MyEnum.Item1
         Exit Select
@@ -124,7 +108,7 @@ End Select
 ### <a name="correct-misspelled-type"></a>철자가 잘못된 형식 수정
 Visual Studio에서 실수로 형식의 철자를 잘못 입력한 경우 이 빠른 작업은 자동으로 수정합니다.  이러한 항목은 전구 메뉴에 **"Change '*misspelled type*' to '*correct type*'(‘철자가 잘못된 형식’을(를) ‘올바른 형식’(으)로 변경)**으로 표시됩니다.  예를 들면 다음과 같습니다.
 
-```CSharp
+```csharp
 // Before
 private viod MyMethod()
 {
@@ -137,8 +121,7 @@ private void MyMethod()
 {
 }
 ```
-
-```VB
+```vb
 ' Before
 Function MyFunction as Intger
 End Function
@@ -153,7 +136,7 @@ End Function
 ### <a name="remove-unnecessary-cast"></a>불필요한 캐스트 제거
 형식을 캐스트가 필요 없는 다른 형식으로 캐스트하는 경우 **불필요한 캐스트 제거** 빠른 작업 항목은 코드에서 캐스트를 제거합니다.
 
-```CSharp
+```csharp
 // before
 int number = (int)3;
 
@@ -162,8 +145,7 @@ int number = (int)3;
 // after
 int number = 3;
 ```
-
-```VB
+```vb
 ' Before
 Dim number as Integer = CType(3, Integer)
 
@@ -176,7 +158,7 @@ Dim number as Integer = 3
 ### <a name="replace-method-with-property--replace-property-with-method"></a>메서드를 속성으로 대체/속성을 메서드로 대체
 이러한 빠른 작업은 메서드를 속성으로 변환하거나 그 반대로 변환합니다.  아래 예제에서는 메서드에서 속성으로 변경을 보여 줍니다.  반대되는 경우에는 *Before* 및 *After* 섹션을 반대로 하면 됩니다.
 
-```CSharp
+```csharp
 private int MyValue;
 
 // Before
@@ -193,8 +175,7 @@ public int MyValue
     get { return MyValue; }
 }
 ```
-
-```VB
+```vb
 Dim MyValue As Integer
 
 ' Before
@@ -215,7 +196,7 @@ End Property
 ### <a name="make-method-synchronous"></a>메서드 동기화
 메서드에서 `async`/`Async` 키워드를 사용하면 해당 메서드 내 어딘가에서 `await`/`Await` 키워드도 사용될 것으로 예상됩니다.  그러나 그렇지 않을 경우 빠른 작업은 `async`/`Async` 키워드를 제거하고 반환 형식을 변경하여 메서드를 동기화할 수 있음을 나타냅니다.  [빠른 작업] 메뉴에서 **Make method synchronous**(메서드 동기화) 옵션을 사용합니다.
 
-```CSharp
+```csharp
 // Before
 async Task<int> MyAsyncMethod()
 {
@@ -230,8 +211,7 @@ int MyAsyncMethod()
     return 3;
 }
 ```
-
-```VB
+```vb
 ' Before
 Async Function MyAsyncMethod() As Task(Of Integer)
     Return 3
@@ -248,7 +228,7 @@ End Function
 ### <a name="make-method-asynchronous"></a>메서드 비동기화
 메서드 내에서 `await`/`Await` 키워드를 사용하는 경우 메서드 자체가 `async`/`Async` 키워드로 표시되는 것으로 예상됩니다.  그러나 그렇지 않을 경우 빠른 작업은 메서드를 비동기화할 수 있음을 나타냅니다.  [빠른 작업] 메뉴에서 **Make method/Function asynchronous**(메서드/함수 비동기화) 옵션을 사용합니다.
 
-```CSharp
+```csharp
 // Before
 int MyAsyncMethod()
 {
@@ -263,8 +243,7 @@ async Task<int> MyAsyncMethod()
     return await Task.Run(...);
 }
 ```
-
-```VB
+```vb
 ' Before
 Function MyAsyncMethod() as Integer
     Return  Await Task.Run(...)
@@ -289,7 +268,7 @@ End Function
 
 사용하도록 설정한 경우 현재 가져오지 않고 참조 어셈블리 또는 NuGet 패키지에 있는 네임스페이스의 형식을 사용하면 using/import 문이 생성됩니다.
 
-```CSharp
+```csharp
 // Before
 Debug.WriteLine("Hello");
 
@@ -300,8 +279,7 @@ using System.Diagnostics;
 
 Debug.WriteLine("Hello");
 ```
-
-```VB
+```vb
 ' Before
 Debug.WriteLine("Hello")
 
@@ -316,7 +294,7 @@ Debug.WriteLine("Hello")
 ### <a name="convert-to-interpolated-string"></a>보간된 문자열로 변환
 [보간된 문자열](/dotnet/csharp/language-reference/keywords/interpolated-strings)은 포함된 변수로 문자열을 표현하는 간단한 방법이며, **[String.Format](https://msdn.microsoft.com/library/system.string.format.aspx)** 메서드와 유사합니다.  이 빠른 작업은 문자열이 연결되는 사례를 인식하거나 **String.Format**을 사용하여 사용법을 보간된 문자열로 변경합니다.
 
-```CSharp
+```csharp
 // Before
 int num = 3;
 string s = string.Format("My string with {0} in the middle", num);
@@ -327,8 +305,7 @@ string s = string.Format("My string with {0} in the middle", num);
 int num = 3;
 string s = $"My string with {num} in the middle";
 ```
-
-```VB
+```vb
 ' Before
 Dim num as Integer = 3
 Dim s as String = String.Format("My string with {0} in the middle", num)
@@ -382,7 +359,7 @@ Dim s As String = $"My string with {num} in the middle"
 ### <a name="convert-if-construct-to-switch"></a>**if** 구문을 **switch**로 변환
 이 빠른 작업을 통해 **if-then-else** 구문을 **switch** 구문으로 변환할 수 있습니다. Visual Studio 2017(버전 15.3 - Preview)에서만 사용할 수 있습니다.
 
-```CSharp
+```csharp
 // Before
 if (obj is string s)
 {
@@ -407,8 +384,7 @@ switch (obj)
     break;
 }
 ```
-
-```VB
+```vb
 ' Before
 If TypeOf obj Is String s Then
     Console.WriteLine("obj is a string: " + s)
