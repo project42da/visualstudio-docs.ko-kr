@@ -1,55 +1,9 @@
 ---
-title: "방법: 그래픽 진단 재생 컴퓨터 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 1b9aa3ea-29a0-4e21-bc57-936f33537b5c
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 방법: 그래픽 진단 재생 컴퓨터 변경
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+redirect_url: /visualstudio/debugger/graphics/how-to-change-the-graphics-diagnostics-playback-machine
+ms.translationtype: HT
+ms.sourcegitcommit: 9b332c2a5fdb1cd14b28a2280a5d0b109f2abc11
+ms.openlocfilehash: 59d2a763d40f268d043bff7059bf553061fdd24d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 11/08/2017
 
-로컬 컴퓨터를 사용하거나 원격 컴퓨터 또는 장치를 사용하여 그래픽 정보를 재생할 수 있습니다.  
-  
-## 재생 컴퓨터를 선택합니다.  
- 재생 컴퓨터는 그래픽 로그에서 그래픽 이벤트를 재생하는 데 사용되는 컴퓨터 또는 장치입니다.  일반적으로 로컬 컴퓨터는 가장 편리한 옵션이지만 렌더링 문제가 캡처된 컴퓨터와 다른 하드웨어나 드라이버 버전을 가진 컴퓨터에서는 재현되지 않을 수 있습니다. 이 경우 문제를 더 잘 재현하고 진단하는 개발 컴퓨터를 사용하는 원격 재생 컴퓨터를 선택할 수 있습니다.  
-  
-#### 로컬 컴퓨터를 사용하여 그래픽 정보를 재생하려면  
-  
-1.  그래픽 로그 문서 창에서 **재생 컴퓨터** 링크를 선택합니다.  **원격 디버거 연결** 대화 상자가 나타납니다.  
-  
-2.  **수동 구성**의 **주소** 속성에서 `localhost`를 입력합니다.  
-  
-3.  **인증 모드** 속성을 **없음**으로 설정합니다.  
-  
-4.  **선택** 단추를 선택합니다.  
-  
-#### 원격 컴퓨터를 사용하여 그래픽 정보를 재생하려면  
-  
-1.  그래픽 로그 문서 창에서 **재생 컴퓨터** 링크를 선택합니다.  **원격 디버거 연결** 대화 상자가 나타납니다.  
-  
-2.  **수동 구성**에서 **주소** 속성에 그래픽 정보를 다시 재생하는 데 사용할 컴퓨터나 장치의 Windows 도메인 이름 또는 IP 주소를 입력합니다.  
-  
-3.  재생 컴퓨터 연결 보안에 사용할 권한 부여의 종류를 지정합니다.  
-  
-    -   Windows 인증의 경우 **인증 모드** 속성을 **Windows**로 설정합니다.  
-  
-    -   인증이 없는 경우 **인증 모드** 속성을 **없음**으로 설정합니다.  
-  
-4.  **선택** 단추를 선택합니다.  
-  
-> [!NOTE]
->  **원격 디버거 연결** 대화 상자는 개발 컴퓨터에 직접 연결되어 있거나 동일한 서브넷에 있는 원격 디버깅 대상을 표시할 수도 있습니다.  이러한 원격 디버깅 대상 중 하나를 수동으로 구성하지 않고도 그래픽 진단 재생 컴퓨터로 사용할 수 있습니다.  **원격 디버거에 연결** 대화 상자에서 원하는 대상을 선택한 다음 **선택** 단추를 선택합니다.  
-  
-## 참고 항목  
- [그래픽 로그 문서](../debugger/graphics-log-document.md)
+---
