@@ -1,1 +1,1 @@
-실험적 JavaScript 기능을 사용하도록 설정된 Microsoft Edge\(about:flags\)
+실험적 JavaScript 기능을 사용하도록 설정된 Microsoft Edge(about:flags)

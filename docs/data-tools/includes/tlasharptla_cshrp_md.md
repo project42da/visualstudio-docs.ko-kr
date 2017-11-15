@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 6fe4be22c9424d22b6dd42c92c3df194c23f91c9
+ms.openlocfilehash: a78407eb034d404722896467c07db9580c545662
 ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2017
 ---
-Blend for Visual Studio
+C#
