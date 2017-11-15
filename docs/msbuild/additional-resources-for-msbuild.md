@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 06/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -13,34 +12,18 @@ dev_langs:
 - CSharp
 - C++
 - jsharp
-helpviewer_keywords:
-- MSBuild, additional resources
+helpviewer_keywords: MSBuild, additional resources
 ms.assetid: 3206dc09-daa4-43c4-8073-731a82e36a89
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: kempb
 ms.author: kempb
 manager: ghogen
 redirect_url: https://social.msdn.microsoft.com/Forums/vstudio/home?forum=msbuild
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: 4daefbf5d7d2782ddb03cf80829c5f22976e992e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: e2e80331d4ba1951c3132dfe720c5fbcef7d1e29
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="additional-resources-for-msbuild"></a>MSBuild를 위한 추가 리소스
 다음 웹 사이트 및 포럼을 사용하면 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]로 작업할 때 생기는 일반적인 질문에 대한 답을 쉽게 찾을 수 있습니다.  
@@ -61,4 +44,3 @@ ms.lasthandoff: 02/22/2017
  [MSBuild](../msbuild/msbuild.md)   
  [MSBuild 개념](../msbuild/msbuild-concepts.md)   
  [MSBuild 참조](../msbuild/msbuild-reference.md)
-

@@ -4,35 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7e9e4a2-5d01-4f78-b408-5be3892bd162
-caps.latest.revision: 25
+caps.latest.revision: "25"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a02ce3721b6eb96770c9fbf074179b7afefdb97b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
-ms.openlocfilehash: 4401606f97452de235b8a2d406451e5481518006
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>.runsettings 파일을 사용하여 단위 테스트 구성
 \*.runsettings 파일을 사용하여 Visual Studio의 단위 테스트를 구성할 수 있습니다. 확장명으로 ‘.runsettings’를 사용하면 파일 이름은 아무런 상관이 없습니다. 예를 들어, 테스트가 실행되는 .NET Framework, 테스트 결과가 전달되는 디렉터리 및 테스트 실행 중에 수집된 데이터를 변경할 수 있습니다.  
@@ -182,4 +165,3 @@ ms.lasthandoff: 08/01/2017
 ## <a name="see-also"></a>참고 항목  
  [코드 검사 분석 사용자 지정](../test/customizing-code-coverage-analysis.md)   
  [Visual Studio 테스트에 대한 테스트 설정 지정](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)
-

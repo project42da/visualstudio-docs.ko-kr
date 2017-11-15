@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,30 +15,15 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - Toolbox, moving items
 ms.assetid: b754dad3-1f32-464f-8b9f-065e17e0bc22
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: ce92fc8cb8369381ad8f00cd677cc04b96bfd1d3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 4e345b573544839aea7601e334545e4ba410d6b7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="toolbox"></a>도구 상자
 **도구 상자**는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 프로젝트에 추가할 수 있는 컨트롤 및 기타 항목의 아이콘을 표시합니다. **도구 상자**를 열려면 **보기** 메뉴에서 **도구 상자**를 클릭합니다. **도구 상자**를 도킹하고 열린 상태로 고정하거나 **자동 숨기기**로 설정할 수 있습니다.  

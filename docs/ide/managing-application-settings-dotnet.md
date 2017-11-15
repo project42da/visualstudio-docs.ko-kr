@@ -4,40 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- msvse_settingsdesigner.err.nameblank
-helpviewer_keywords:
-- application settings [Visual Studio]
+f1_keywords: msvse_settingsdesigner.err.nameblank
+helpviewer_keywords: application settings [Visual Studio]
 ms.assetid: 35254321-ad14-47d9-b8c6-39ab3203c5d9
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 924d62f31ae073f3b832507182aa511abc484011
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: 09baef8c468ac8a165587ec8c143ad5c184d4a05
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="managing-application-settings-net"></a>응용 프로그램 설정 관리(.NET)
 응용 프로그램 설정을 사용하여 응용 프로그램 정보를 동적으로 저장할 수 있습니다. 설정을 사용하면 응용 프로그램 코드(예: 연결 문자열), 사용자 기본 설정 및 런타임에 필요한 기타 정보에 포함되지 않아야 하는 정보를 클라이언트 컴퓨터에 저장할 수 있습니다.  
@@ -112,4 +93,3 @@ Properties.Settings.Default.Save();
   
 ## <a name="see-also"></a>참고 항목  
  [응용 프로그램 설정 액세스](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)
-

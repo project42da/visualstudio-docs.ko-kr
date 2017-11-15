@@ -4,37 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.unittesting.testexplorer.overview
+f1_keywords: vs.unittesting.testexplorer.overview
 ms.assetid: 91b167a3-280a-498b-8fc2-f67859a2c64e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b6b865f51ca12312ad439d059097c328576dfa4e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 6ba82358dd7aea8bfd8f3497e5dff87091fbf9d5
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>테스트 탐색기를 사용하여 단위 테스트 실행
 테스트 탐색기를 사용하여 Visual Studio 또는 타사 단위 테스트 프로젝트에서 단위 테스트를 실행하고, 테스트를 범주로 그룹화하며, 테스트 목록을 필터링하고, 테스트 PLAYLIST를 만들어 저장하고 실행할 수 있습니다. 테스트를 디버그하고 테스트 성능 및 코드 검사를 분석할 수도 있습니다.  
@@ -59,14 +41,14 @@ ms.lasthandoff: 05/13/2017
   
  테스트 탐색기는 솔루션의 여러 테스트 프로젝트 및 프로덕션 코드 프로젝트의 일부인 테스트 클래스에서 테스트를 실행할 수 있습니다. 테스트 프로젝트에 서로 다른 단위 테스트 프레임워크를 사용할 수 있습니다. 테스트 중인 코드가 .NET Framework용으로 작성된 경우 테스트 프로젝트는 대상 코드의 언어에 관계없이 .NET Framework를 대상으로 하는 임의의 언어로 작성할 수 있습니다. 네이티브 C/C++ 코드 프로젝트는 C++ 단위 테스트 프레임워크를 사용하여 테스트해야 합니다.  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ##  <a name="BKMK_Run_tests_in_Test_Explorer"></a> 테스트 탐색기에서 테스트 실행  
  [테스트 실행](#BKMK_Run_tests) **&#124;** [각 빌드 후 테스트 실행](#BKMK_Run_tests_after_every_build)  
   
  테스트 프로젝트를 빌드하면 테스트가 테스트 탐색기에 나타납니다. 테스트 탐색기가 표시되지 않는 경우 Visual Studio 메뉴에서 **테스트** 를 선택하고 **Windows**를 선택한 다음 **테스트 탐색기**를 선택합니다.  
   
- ![단위 테스트 탐색기](~/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![단위 테스트 탐색기](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  테스트를 실행하고 작성하고 다시 실행하면 테스트 탐색기는 **실패한 테스트**, **통과한 테스트**, **건너뛴 테스트** 및 **실행하지 않은 테스트**의 기본 그룹에 결과를 표시합니다. 테스트 탐색기의 테스트 그룹화 방식을 변경할 수 있습니다.  
   
@@ -74,7 +56,7 @@ ms.lasthandoff: 05/13/2017
   
  ![테스트 탐색기 도구 모음에서 테스트 실행](../test/media/ute_toolbar.png "UTE_ToolBar")  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ###  <a name="BKMK_Run_tests"></a> 테스트 실행  
  솔루션의 모든 테스트, 그룹의 모든 테스트 또는 선택한 테스트 집합을 실행할 수 있습니다. 다음 작업 중 하나를 수행합니다.  
@@ -89,7 +71,7 @@ ms.lasthandoff: 05/13/2017
   
  테스트가 실행되면 테스트 탐색기 창 위쪽의 통과/실패 표시줄에 애니메이션 효과가 적용됩니다. 테스트 실행이 끝날 때 통과/실패 표시줄은 모든 테스트가 통과했으면 녹색이 되고 실패한 테스트가 있으면 빨간색이 됩니다.  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ###  <a name="BKMK_Run_tests_after_every_build"></a> 각 빌드 후 테스트 실행  
   
@@ -100,7 +82,7 @@ ms.lasthandoff: 05/13/2017
 |-|-|  
 |![빌드 후 실행](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|각 로컬 빌드 후 단위 테스트를 실행하려면 표준 메뉴에서 **테스트** 를 선택한 다음 테스트 탐색기 도구 모음에서 **빌드 후 테스트 실행** 을 선택합니다.|  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ##  <a name="BKMK_View_test_results"></a> 테스트 결과 보기  
  [테스트 정보 보기](#BKMK_View_test_details) **&#124;** [테스트 메서드의 소스 코드 보기](#BKMK_View_the_source_code_of_a_test_method)  
@@ -110,7 +92,7 @@ ms.lasthandoff: 05/13/2017
 ###  <a name="BKMK_View_test_details"></a> 테스트 정보 보기  
  개별 테스트의 정보를 보려면 해당 테스트를 선택합니다.  
   
- ![테스트 실행 정보](~/test/media/ute_testdetails.png "UTE_TestDetails")  
+ ![테스트 실행 정보](../test/media/ute_testdetails.png "UTE_TestDetails")  
   
  테스트 정보 창에는 다음 정보가 표시됩니다.  
   
@@ -126,12 +108,12 @@ ms.lasthandoff: 05/13/2017
   
 -   테스트 실패 시의 스택 추적  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ###  <a name="BKMK_View_the_source_code_of_a_test_method"></a> 테스트 메서드의 소스 코드 보기  
  Visual Studio 편집기에서 테스트 메서드의 소스 코드를 표시하려면 테스트를 선택한 다음 상황에 맞는 메뉴에서 **테스트 열기** (키보드: F12)를 선택합니다.  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ##  <a name="BKMK_Group_and_filter_the_test_list"></a> 테스트 목록 그룹화 및 필터링  
  [테스트 목록 그룹화](#BKMK_Grouping_the_test_list) **&#124;** [특성(trait)별 그룹화](#BKMK_Group_by_traits) **&#124;** [테스트 목록 검색 및 필터링](#BKMK_Search_and_filter_the_test_list)  
@@ -139,7 +121,7 @@ ms.lasthandoff: 05/13/2017
  테스트 탐색기를 사용하면 미리 정의된 범주로 테스트를 그룹화할 수 있습니다. 테스트 탐색기에서 실행되는 대부분의 단위 테스트 프레임워크에서는 고유의 범주 및 범주/값 쌍을 정의하여 테스트를 그룹화할 수 있습니다. 또한 테스트 속성과 비교하여 일치하는 문자열을 찾아 테스트 목록을 필터링할 수도 있습니다.  
   
 ###  <a name="BKMK_Grouping_the_test_list"></a> 테스트 목록 그룹화  
- 테스트 구성 방식을 변경하려면 **그룹화 방법** 단추 ![테스트 탐색기 그룹 단추](~/test/media/ute_groupby_btn.png "UTE_GroupBy_btn") 옆에 있는 아래쪽 화살표를 선택하고 새 그룹화 기준을 선택합니다.  
+ 테스트 구성 방식을 변경하려면 **그룹화 방법** 단추 ![테스트 탐색기 그룹 단추](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn") 옆에 있는 아래쪽 화살표를 선택하고 새 그룹화 기준을 선택합니다.  
   
  ![테스트 탐색기에서 범주별로 테스트 그룹화](../test/media/ute_groupbycategory.png "UTE_GroupByCategory")  
   
@@ -152,14 +134,14 @@ ms.lasthandoff: 05/13/2017
 |**특성**|정의한 범주/값 쌍을 기준으로 테스트를 그룹화합니다. 특성(trait) 범주 및 값을 지정하는 구문은 단위 테스트 프레임워크에 의해 정의됩니다.|  
 |**프로젝트**|프로젝트 이름을 기준으로 테스트를 그룹화합니다.|  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ###  <a name="BKMK_Group_by_traits"></a> 특성(trait)별 그룹화  
  특성(trait)은 일반적으로 범주 이름/값 쌍이지만 단일 범주일 수도 있습니다. 특성(trait)은 단위 테스트 프레임워크에서 테스트 메서드로 식별하는 메서드에 할당할 수 있습니다. 단위 테스트 프레임워크는 특성(trait) 범주를 정의할 수 있습니다. 특성(trait) 범주에 고유한 범주 이름/값 쌍을 정의하는 값을 추가할 수 있습니다. 특성(trait) 범주 및 값을 지정하는 구문은 단위 테스트 프레임워크에 의해 정의됩니다.  
   
  **Microsoft 단위 테스트 프레임워크의 관리 코드 관련 특성(trait)**  
   
- 관리되는 앱에 대한 Microsoft 단위 테스트 프레임워크에서 특성(trait) 이름/값 쌍을 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> 특성에 정의합니다. 테스트 프레임워크에는 다음과 같은 미리 정의된 특성(trait)이 있습니다.  
+ 관리되는 앱에 대한 Microsoft 단위 테스트 프레임워크에서 특성(trait) 이름/값 쌍을  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> 특성에 정의합니다. 테스트 프레임워크에는 다음과 같은 미리 정의된 특성(trait)이 있습니다.  
   
 |특성|설명|  
 |-----------|-----------------|  
@@ -200,7 +182,7 @@ TEST_METHOD(Method1)
 |`TEST_OWNER(ownerAlias)`|미리 정의된 소유자 특성(trait)을 사용하여 테스트 메서드의 소유자를 지정합니다.|  
 |`TEST_PRIORITY(priority)`|미리 정의된 우선순위 특성(trait)을 사용하여 테스트 메서드에 상대적 우선순위를 할당합니다.|  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ###  <a name="BKMK_Search_and_filter_the_test_list"></a> 테스트 목록 검색 및 필터링  
  테스트 탐색기 필터를 사용하여 프로젝트에서 보고 실행하는 테스트 메서드를 제한할 수 있습니다.  
@@ -244,7 +226,7 @@ FullName:"MyClass" - FullName:"PerfTest"
   
  이름에 "PerfTest"가 들어 있는 경우를 제외하고 "MyClass"가 들어 있는 모든 테스트를 반환합니다.  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ##  <a name="BKMK_Create_custom_playlists"></a> 사용자 지정 재생 목록 만들기  
  실행하거나 그룹으로 보려는 테스트 목록을 만들어 저장할 수 있습니다. 재생 목록을 선택하면 목록의 테스트가 테스트 탐색기에 표시됩니다. 두 개 이상의 재생 목록에 테스트를 추가할 수 있으며 기본 재생 목록인 **모든 테스트** 를 선택하면 프로젝트의 모든 테스트를 사용할 수 있습니다.  
@@ -259,7 +241,7 @@ FullName:"MyClass" - FullName:"PerfTest"
   
  개별 테스트에 종속성이 없어 임의 순서로 실행할 수 있는 경우 도구 모음의 ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") 토글 단추를 사용하여 병렬 테스트 실행을 켭니다. 이렇게 하면 모든 테스트를 실행하는 데 걸리는 시간을 훨씬 줄일 수 있습니다.  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ##  <a name="BKMK_Debug_and_analyze_unit_tests"></a> 단위 테스트 디버그 및 분석  
  [단위 테스트 디버그](#BKMK_Debug_unit_tests) **&#124;** [테스트 메서드 성능 문제 진단](#BKMK_Diagnose_test_method_performance_issues) **&#124;** [단위 테스트 코드 검사 분석](#BKMK_Analyzeunit_test_code_coverage)  
@@ -276,7 +258,7 @@ FullName:"MyClass" - FullName:"PerfTest"
   
  디버거에 대한 자세한 내용은 [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md)항목을 참조하세요.  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ###  <a name="BKMK_Diagnose_test_method_performance_issues"></a> 테스트 메서드 성능 문제 진단  
  테스트 메서드에 너무 많은 시간이 소요되는 이유를 진단하려면 테스트 탐색기에서 메서드를 선택하고 상황에 맞는 메뉴에서 프로필을 선택합니다. [성능 탐색기](../profiling/performance-explorer.md)를 참조하세요.  
@@ -302,7 +284,7 @@ FullName:"MyClass" - FullName:"PerfTest"
   
  자세한 내용은 [코드 검사를 사용하여 테스트할 코드 범위 결정](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)을 참조하세요.  
   
- ![맨 위로 이동](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
+ ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
 ##  <a name="BKMK_External_resources"></a> 외부 리소스  
   
@@ -312,4 +294,3 @@ FullName:"MyClass" - FullName:"PerfTest"
 ## <a name="see-also"></a>참고 항목  
  [코드 단위 테스트](../test/unit-test-your-code.md)   
  [단위 테스트를 64비트 프로세스로 실행](../test/run-a-unit-test-as-a-64-bit-process.md)
-

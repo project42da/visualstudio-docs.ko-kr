@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6cabc626-5310-4622-a743-210a9abb5535
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c05733534a1b57c1bb992d6346d6be8087aa6435
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: e72d80038737b292efd0ad5df184a79c3a404154
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
 이 섹션에서는 Visual Studio를 Unity를 사용하여 게임을 빌드하기 위한 강력한 도구로 만드는 무료 Visual Studio 확장인 Visual Studio Tools for Unity에 대해 알아봅니다.  

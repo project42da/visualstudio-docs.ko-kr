@@ -1,54 +1,54 @@
 ---
-title: "솔루션 열기 명령 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "file.opensolution"
-helpviewer_keywords: 
-  - "File.OpenSolution 명령"
-  - "솔루션 열기 명령"
+title: "솔루션 열기 명령 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: file.opensolution
+helpviewer_keywords:
+- Open Solution command
+- File.OpenSolution command
 ms.assetid: 61de76c8-69d7-4cdb-b605-e132f45d05d9
-caps.latest.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: bae1a28c7d9d0a87eeec3148301234cc0f45c286
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 솔루션 열기 명령
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-기존 솔루션을 열고 열려 있는 다른 솔루션은 닫습니다.  
+# <a name="open-solution-command"></a>솔루션 열기 명령
+기존 솔루션을 열고 다른 열려 있는 솔루션을 모두 닫습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 File.OpenSolution filename  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  `Filename`  
- 필수 요소.  열려는 솔루션의 전체 경로와 파일 이름입니다.  
+ 필수 요소. 열려는 솔루션의 전체 경로와 파일 이름입니다.  
   
- `filename` 인수에 대한 구문에서 공백을 포함하는 경로는 따옴표를 사용해야 합니다.  
+ `filename` 인수 구문에서 공백을 포함하는 경로에는 따옴표를 사용해야 합니다.  
   
-## 설명  
- 올바른 경로 및 입력한 파일 이름을 찾기 위해 자동 완성 기능이 사용됩니다.  
+## <a name="remarks"></a>설명  
+ 입력 시 자동 완성에서 올바른 경로와 파일 이름을 찾으려고 합니다.  
   
-## 예제  
- 다음 예제에서는 Test1.sln 솔루션을 엽니다.  
+## <a name="example"></a>예제  
+ 이 예제에서는 Test1.sln 솔루션을 엽니다.  
   
 ```  
 >File.OpenSolution "c:\MySolutions\Test1\Test1.sln"  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 명령](../../ide/reference/visual-studio-commands.md)   
  [명령 창](../../ide/reference/command-window.md)   
- [찾기\/명령 상자](../../ide/find-command-box.md)   
+ [찾기/명령 상자](../../ide/find-command-box.md)   
  [Visual Studio 명령 별칭](../../ide/reference/visual-studio-command-aliases.md)

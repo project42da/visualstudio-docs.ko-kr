@@ -5,8 +5,7 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-javascript
+ms.technology: devlang-javascript
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,16 +13,15 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 68ef5b2f-0349-492b-b557-73ff2a2f90cf
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
 ms.openlocfilehash: 85c27969609a38b87b15c727e9c8aef89ee77032
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="iterators-and-generators-javascript"></a>반복기 및 생성기(JavaScript)
 반복기는 목록처럼 컨테이너 개체를 트래버스하는 데 사용되는 개체입니다. JavaScript에서 반복기 개체는 고유한 기본 제공 개체가 아니라 `next` 메서드를 구현하여 컨테이너 개체의 다음 항목에 액세스하는 개체입니다.  
@@ -166,4 +164,3 @@ console.log(si3.next(100).value);
 ```  
   
  다른 고급 생성기는 생성기의 `throw` 메서드를 호출할 수도 있습니다. 생성기 일시 중지된 지점(다음 `yield` 문 앞)에서 오류가 발생합니다.
-

@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- coded UI tests, data-driven
+helpviewer_keywords: coded UI tests, data-driven
 ms.assetid: 5838f02d-001f-49ce-adce-c9ea1afaec2f
-caps.latest.revision: 56
+caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f58f547462c6c6f4d313d8b9814974f660bf59de
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f2e6f9a98756b7970ae965e784573ed98fa9c6e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>데이터 기반의 코딩된 UI 테스트 만들기
 다른 조건을 테스트하려면 각기 다른 매개 변수 값을 사용하여 테스트를 여러 번 실행합니다. 이 경우 데이터 기반의 코딩된 UI 테스트를 사용하면 편리합니다. 데이터 소스에서 매개 변수 값을 정의하면 데이터 소스의 각 행에서 코딩된 UI 테스트가 반복됩니다. 테스트의 전체 결과는 모든 반복의 결과를 기반으로 합니다. 예를 들어 테스트 반복 하나가 실패하면 전체 테스트 결과가 실패로 됩니다.  
@@ -275,4 +258,3 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
  [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
  [코딩된 UI 테스트에 대한 모범 사례](../test/best-practices-for-coded-ui-tests.md)   
  [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-

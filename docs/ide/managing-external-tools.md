@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.externaltools
+f1_keywords: vs.externaltools
 helpviewer_keywords:
 - Create GUID tool
 - RC (Resource Compiler)
@@ -57,30 +55,15 @@ helpviewer_keywords:
 - Help Workshop
 - Resource Compiler
 ms.assetid: f382fd40-a98f-4934-8c9a-5aeae881acde
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 1d273749cc41eb975dc9f93329edf9a57aaae09a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 9829887a28ec2e672999732e38604f3d9d6fea9a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="manage-external-tools"></a>외부 도구 관리
 **도구** 메뉴를 사용하여 Visual Studio 내에서 외부 도구를 호출할 수 있습니다. 몇 가지 기본 도구는 **도구** 메뉴에서 사용할 수 있지만 다른 실행 파일을 직접 추가할 수 있습니다.  
@@ -129,4 +112,3 @@ ms.lasthandoff: 05/24/2017
 
 ## <a name="see-also"></a>참고 항목  
  [C/C++ 빌드 도구](/cpp/build/reference/c-cpp-build-tools)
-

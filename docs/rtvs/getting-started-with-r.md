@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio용 R 시작 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 39228cf0-8d21-43bb-a2ce-5e5fdc81ec41
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 616b39cdd355e6a795a4b4e2929586ba233ab8da
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: b9fb38bf7e21924d7fbece72978e99d298a42b74
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="getting-started-with-r-tools-for-visual-studio"></a>Visual Studio용 R 도구 시작
 
 RTVS(Visual Studio용 R 도구)를 설치한 후([설치](installation.md) 참조) 해당 도구가 제공하는 환경을 빠르게 경험할 수 있습니다. 다음 섹션에서는 짧은 둘러보기를 안내합니다.
@@ -183,4 +180,3 @@ Visual Studio의 키 수준 중 하나는 디버깅 UI입니다. RTVS는 이 강
 - [디버깅](debugging.md)
 - [작업 영역](workspaces.md)
 - [코드 시각화](visualizing-data.md)
-

@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45a99a5d-c881-4298-b74d-adb481dec5ee
-caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+caps.latest.revision: "18"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f3cf117116f5da70391f5252e3d1bde4e2416b69
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b5f12c71a894937ad452a31bf53e19e4fbb2d7a2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>5단계: NumericUpDown 컨트롤에 대한 Enter 이벤트 처리기 추가
 이 자습서의 5단계에서는 퀴즈 문제의 답을 좀 더 쉽게 입력할 수 있도록 Enter 이벤트 처리기를 추가합니다. 이 코드에서는 퀴즈를 푸는 사람이 NumericUpDown 컨트롤을 선택하고 다른 값을 입력하는 즉시 각 NumericUpDown 컨트롤의 현재 값을 선택하고 지웁니다.  
@@ -70,7 +53,8 @@ ms.lasthandoff: 09/06/2017
   
 3.  **answer_Enter** 이벤트 처리기의 메서드에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]  [!code-csharp[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]  
+     [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]
+     [!code-csharp[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]  
   
      이 코드는 복잡하게 보일 수 있지만 차근차근 살펴보면 쉽게 이해할 수 있습니다. 먼저 메서드의 맨 위를 살펴보면 `object sender`(Visual C#) 또는 `sender As System.Object`(Visual Basic)가 있습니다. 이 매개 변수는 이벤트를 발생시킨 개체, 즉 이벤트 전송자를 참조합니다. 이 코드에서는 전송자 개체가 NumericUpDown 컨트롤입니다. 따라서 메서드의 첫 번째 줄에서 해당 전송자가 단순히 일반 개체가 아니라 NumericUpDown 컨트롤임을 명시적으로 지정합니다. 모든 NumericUpDown 컨트롤은 개체이지만 모든 개체가 NumericUpDown 컨트롤은 아닙니다. 이 메서드에서 NumericUpDown 컨트롤의 이름은 **answerBox**입니다. 이 이름은 sum NumericUpDown 컨트롤뿐 아니라 폼의 모든 NumericUpDown 컨트롤에 사용되기 때문입니다. 이 메서드에 answerBox 변수를 선언하기 때문에 변수 범위가 이 메서드로만 한정됩니다. 다시 말해 이 메서드 내에서만 이 변수를 사용할 수 있습니다.  
   

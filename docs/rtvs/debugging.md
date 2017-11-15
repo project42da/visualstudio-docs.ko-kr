@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio용 R 도구를 사용하여 디버그 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cb5fe5f8-03bc-42bf-8346-c845036a9c6c
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 7927e897a63b8b06cda9670701f44bc59296fd01
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: e4b8d7fb27407bf8ef4463524e9da66bac591ff4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="debugging-r-in-visual-studio"></a>Visual Studio에서 R 디버그
 
 RTVS(Visual Studio용 R 도구)는 Visual Studio의 전체 디버깅 환경과 통합됩니다([Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md) 참조). 이러한 지원에는 중단점, 실행 중인 프로세스에 연결, 변수 검사 및 감시, 호출 스택 검사 등이 포함됩니다. 이 항목에서는 R 및 RTVS에 고유한 디버깅 측면을 살펴봅니다.
@@ -73,4 +70,3 @@ add <- function(x, y) {
 | &lt;expr&gt; | *expr*의 식을 계산합니다. |
 
 ![대화형 창의 환경 브라우저](media/debugger-environment-browser.png)
-

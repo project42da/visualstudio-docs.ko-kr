@@ -4,35 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8a7b760d-b5ac-4451-9593-6ac1a0b95cdb
-caps.latest.revision: 9
+caps.latest.revision: "9"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 07e37b1a1d7b02992bb4da69bd158878095dd789
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/19/2017
-
+ms.openlocfilehash: 1932646809cba6c6211f87965ffee82e918c6882
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="sample-excel-extension-technologymanager-class"></a>샘플 Excel 확장: TechnologyManager 클래스
 이 클래스는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> 클래스를 확장하고 [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 확장용 핵심 서비스를 제공합니다. 기본 클래스에는 여러 가지 메서드가 있지만, 이 샘플에서는 이러한 메서드 중 일부만 사용합니다.  
@@ -84,4 +67,3 @@ ms.lasthandoff: 05/19/2017
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>   
  [Microsoft Excel을 지원하도록 코딩된 UI 테스트 및 작업 기록 확장](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
-

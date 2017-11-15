@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 06/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,30 +15,15 @@ helpviewer_keywords:
 - project templates [Visual Studio], displaying
 - templates [Visual Studio], locations
 ms.assetid: 71f9ed52-c9c9-4818-9bce-c279ffaa0438
-caps.latest.revision: 25
-author: kempb
-ms.author: kempb
+caps.latest.revision: "25"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 07ff2413503209d6ade252ac89dbfbe2589e7e85
-ms.openlocfilehash: 2ca380e99f820f99fbcd5059e271fa34c8ce1a72
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
-
+ms.openlocfilehash: 1846b145833a7474e8662442313d0e39a262e67c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>방법: 프로젝트 템플릿과 항목 템플릿 찾기 및 구성
 Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 템플릿이 나타납니다. 템플릿에 대한 사용자 지정 하위 범주를 만들어 이러한 하위 범주가 사용자 인터페이스에 나타나도록 할 수도 있습니다.  
@@ -194,4 +178,3 @@ Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야
  [NumberOfParentCategoriesToRollUp(Visual Studio 템플릿)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)   
  [방법: 프로젝트 템플릿 만들기](../ide/how-to-create-project-templates.md)   
  [방법: 항목 템플릿 만들기](../ide/how-to-create-item-templates.md)
-

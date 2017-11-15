@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67ec9a2-a449-413e-8930-9a471bd43a06
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 28bbc6d742a072f1305b0daed7720816492083fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 93259c1a1afe33cb16be9bd6bbf8fdc1cfd3a8cf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="using-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity 사용
 이 섹션에서는 Visual Studio Tools for Unity의 통합 및 생산성 기능을 사용하는 방법과 Unity 개발을 위해 Visual Studio 디버거를 사용하는 방법에 대해 배워 봅니다.  
@@ -50,7 +34,7 @@ ms.lasthandoff: 05/13/2017
 ### <a name="unity-monobehavior-scripting-wizard"></a>Unity MonoBehavior 스크립팅 마법사  
  Unity에서 대부분의 스크립트는 MonoBehavior 클래스에서 파생하고 해당 메서드 중 일부를 재정의하여 구현됩니다. MonoBehavior 마법사를 사용하여 오버로드하려는 MonoBehavior 메서드의 빈 정의를 신속하게 만들 수 있습니다. 이 마법사를 사용하여 사용할 수 있는 메서드의 목록에서 오버로드하려는 하나 이상의 메서드를 지정하고, 코드에서 메서드를 삽입할 위치를 선택하고, 메서드가 사용되는 방법에 대한 설명을 포함할지 여부를 결정할 수 있습니다.  
   
- ![monobehavior 마법사 대화 상자입니다.](~/cross-platform/media/vstu_monobehavior_wizard_full.png "vstu_monobehavior_wizard_full")  
+ ![monobehavior 마법사 대화 상자입니다.](../cross-platform/media/vstu_monobehavior_wizard_full.png "vstu_monobehavior_wizard_full")  
   
 ##### <a name="to-create-empty-monobehavior-method-definitions-by-using-the-monobehavior-wizard"></a>MonoBehavior 마법사를 사용하여 빈 MonoBehavior 메서드 정의를 만들려면  
   
@@ -71,7 +55,7 @@ ms.lasthandoff: 05/13/2017
 #### <a name="quick-monobehavior-scripting-wizard"></a>빠른 MonoBehavior 스크립팅 마법사  
  이미 Unity API에 익숙한 경우 빠른 MonoBehavior 마법사를 사용하여 훨씬 더 빠르게 오버로드된 메서드를 구현할 수 있습니다. 이 마법사를 사용하여 커서 위치에서 메서드 주석 없이 삽입되는 단 하나의 메서드를 지정할 수 있습니다.  
   
- ![빠른 monobehavior 마법사 대화 상자입니다.](~/cross-platform/media/vstu_monobehavior_wizard_quick.png "vstu_monobehavior_wizard_quick")  
+ ![빠른 monobehavior 마법사 대화 상자입니다.](../cross-platform/media/vstu_monobehavior_wizard_quick.png "vstu_monobehavior_wizard_quick")  
   
 ###### <a name="to-create-an-empty-monobehavior-method-definition-by-using-the-quick-monobehavior-wizard"></a>빠른 MonoBehavior 마법사를 사용하여 빈 MonoBehavior 메서드 정의를 만들려면  
   
@@ -86,13 +70,13 @@ ms.lasthandoff: 05/13/2017
 ### <a name="unity-project-explorer"></a>Unity 프로젝트 탐색기  
  Unity 프로젝트 탐색기를 사용하여 Visual Studio 내의 Unity 프로젝트를 탐색할 수 있습니다.  
   
- ![Unity 프로젝트 탐색기 창입니다.](~/cross-platform/media/vstu_unity_project_explorer.png "vstu_unity_project_explorer")  
+ ![Unity 프로젝트 탐색기 창입니다.](../cross-platform/media/vstu_unity_project_explorer.png "vstu_unity_project_explorer")  
   
 ##### <a name="to-view-the-unity-project-explorer"></a>Unity 프로젝트 탐색기를 보려면  
   
 -   Visual Studio의 주 메뉴에서 **보기**, **Unity 프로젝트 탐색기**를 선택합니다. 키보드: **Alt+Shift+E**  
   
-     ![Unity 프로젝트 탐색기 창을 봅니다.](~/cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")  
+     ![Unity 프로젝트 탐색기 창을 봅니다.](../cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")  
   
  Unity 프로젝트 탐색기는 Unity 편집기와 동일한 방식으로 모든 Unity 프로젝트 파일 및 디렉터리를 표시합니다. 이는 Visual Studio Tools for Unity에서 생성한 프로젝트와 솔루션이 구성하는 대로 스크립트 파일만 포함하고 이를 표시하는 솔루션 탐색기를 사용하여 Unity 스크립트를 탐색하는 것과는 다릅니다. 특히 대규모 프로젝트에서 Unity 프로젝트 탐색기를 사용하면 수정하려는 스크립트를 일반적으로 더 쉽게 찾을 수 있습니다. 또한 Visual Studio 솔루션에서 프로젝트 중 하나로 추가하지 않고 Visual Studio에서 다른 종류의 파일(예: 텍스트 기반 구성 파일)을 쉽게 수정할 수 있습니다.  
   
@@ -126,18 +110,18 @@ ms.lasthandoff: 05/13/2017
   
 -   Visual Studio의 주 메뉴에서 **디버그**, **Unity 디버거 연결**을 선택합니다.  
   
-     ![Unity 디버거를 연결합니다.](~/cross-platform/media/vstu_debugging_attach_unity_debugger.png "vstu_debugging_attach_unity_debugger")  
+     ![Unity 디버거를 연결합니다.](../cross-platform/media/vstu_debugging_attach_unity_debugger.png "vstu_debugging_attach_unity_debugger")  
   
 -   *또는* Visual Studio의 상태 표시줄에서 Visual Studio의 오른쪽 아래 모서리에 있는 플러그 아이콘을 선택합니다.  
   
-     ![이 아이콘은 VSTU가 Unity에 연결되었음을 보여 줍니다.](~/cross-platform/media/vstu_connection_connected.png "vstu_connection_connected")  
+     ![이 아이콘은 VSTU가 Unity에 연결되었음을 보여 줍니다.](../cross-platform/media/vstu_connection_connected.png "vstu_connection_connected")  
   
 > [!TIP]
 >  플러그 아이콘에 확인 표시가 보이면 Unity 인스턴스에 이미 연결되어 있는 것입니다.  
   
  **Unity 인스턴스 선택** 대화 상자는 연결할 수 있는 각 Unity 인스턴스에 대한 일부 정보를 표시합니다.  
   
- ![연결할 Unity 인스턴스를 선택합니다.](~/cross-platform/media/vstu_connection_to_unity.png "vstu_connection_to_unity")  
+ ![연결할 Unity 인스턴스를 선택합니다.](../cross-platform/media/vstu_connection_to_unity.png "vstu_connection_to_unity")  
   
  **프로젝트**  
  이 Unity의 인스턴스에서 실행되는 Unity 프로젝트의 이름입니다.  
@@ -146,7 +130,7 @@ ms.lasthandoff: 05/13/2017
  이 Unity가 실행되고 있는 컴퓨터 또는 장치의 이름입니다.  
   
  **Type**  
-이 Unity의 인스턴스가 Unity 편집기의 일부로 실행 중인 경우  **편집기**이며 이 Unity의 인스턴스가 독립 실행형 플레이어인 경우 **플레이어**입니다.  
+ 이 Unity의 인스턴스가 Unity 편집기의 일부로 실행 중인 경우 **편집기**이며 이 Unity의 인스턴스가 독립 실행형 플레이어인 경우 **플레이어**입니다.  
   
  **포트**  
  이 Unity의 인스턴스에서 통신하는 데 사용하는 UDP 소켓의 포트 번호입니다.  
@@ -186,13 +170,13 @@ ms.lasthandoff: 05/13/2017
   
 1.  Visual Studio Tools for Unity에서 생성한 Visual Studio 솔루션에 기존 DLL 프로젝트를 추가합니다. 새로운 관리 DLL 프로젝트를 시작하여 Unity 프로젝트에 코드 구성 요소를 포함하는 경우도 더러 있을 수 있습니다. 이러한 경우 새로운 관리 DLL 프로젝트를 Visual Studio 솔루션에 대신 추가할 수 있습니다. 기존 또는 새 프로젝트를 솔루션에 추가하는 방법에 대한 자세한 내용은 [방법: 솔루션에 프로젝트 추가](https://msdn.microsoft.com/en-us/library/vstudio/ff460187.aspx)를 참조하세요.  
   
-     ![기존 DLL 프로젝트를 솔루션에 추가합니다.] (~/cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")  
+     ![기존 DLL 프로젝트를 솔루션에 추가합니다.] (../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")  
   
      두 경우 모두 Visual Studio Tools for Unity에서는 프로젝트 및 솔루션 파일을 다시 생성해야 하는 경우에도 프로젝트 참조를 유지하므로 이러한 단계는 한 번만 수행하면 됩니다.  
   
 2.  DLL 프로젝트에서 올바른 Unity 프레임워크 프로필을 참조하세요. Visual Studio의 DLL 프로젝트 속성에서 **대상 프레임워크** 속성을 사용 중인 Unity 프레임워크 버전으로 설정합니다. 이는 Unity 전체, 마이크로, 또는 웹 기반 클래스 라이브러리 등 프로젝트가 대상으로 하는 API 호환성과 일치하는 Unity 기반 클래스 라이브러리입니다. 다른 프레임워크 또는 호환성 수준에 있지만 사용 중인 Unity 프레임워크 버전에는 없을 수 있는 프레임워크 메서드를 DLL에서 호출하는 것을 방지합니다.  
   
-     ![Unity 프레임워크에 DLL의 대상 프레임워크를 설정합니다.](~/cross-platform/media/vstu_debugging_dll_target_framework.png "vstu_debugging_dll_target_framework")  
+     ![Unity 프레임워크에 DLL의 대상 프레임워크를 설정합니다.](../cross-platform/media/vstu_debugging_dll_target_framework.png "vstu_debugging_dll_target_framework")  
   
 3.  Unity 프로젝트의 자산 폴더에 DLL을 복사합니다. Unity에서 자산은 런타임에 로드될 수 있도록 Unity 앱과 함께 배포되고 패키지되는 파일입니다. DLL은 런타임에 연결되므로 DDL을 자산으로 배포해야 합니다. 자산으로 배포하기 위해 Unity 편집기는 Unity 프로젝트에서 자산 폴더 안에 DLL을 배치할 것을 요구합니다. 다음 두 가지 방법으로 이 작업을 수행할 수 있습니다.  
   

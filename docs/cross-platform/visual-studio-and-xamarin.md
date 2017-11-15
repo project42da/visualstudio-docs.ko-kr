@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1da4064f-af69-472c-8f31-98484be5f790
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 78da5ca77ee2d6a8bd933907edbe5f921af4e2bc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: e84f946915328eb0ee5a49e690b2ee520d29e968
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-studio-and-xamarin"></a>Visual Studio 및 Xamarin
 Xamarin은 일반적인 C#/.NET 코드베이스에서 네이티브 iOS, Android 및 Windows 앱을 빌드하여 플랫폼 간에 75%에서 거의 100%까지 코드를 재사용할 수 있는 모바일 앱 개발 플랫폼입니다. Xamarin 및 C#으로 작성된 앱에는 기본 플랫폼 API에 대한 모든 권한이 있으며, 네이티브 사용자 인터페이스를 빌드하는 기능 및 런타임 성능에 거의 영향을 주지 않도록 플랫폼별 패키지로 컴파일하는 기능이 있습니다. 참고: Xamarin도 F#을 지원하지만 이 설명서에서는 C#에 대해서만 중점적으로 설명합니다. Visual Basic은 현재 지원되지 않습니다.  

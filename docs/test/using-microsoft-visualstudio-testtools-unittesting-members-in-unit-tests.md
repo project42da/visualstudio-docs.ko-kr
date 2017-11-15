@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0fa335fd-e442-448f-913f-25a19df90a93
-caps.latest.revision: 6
+caps.latest.revision: "6"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 0488f42c64c3079b671e046055112f8366d2c2bf
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 1a723104cdd350dcc2c5fac80eef4e98b178df4c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>단위 테스트에서 Microsoft.VisualStudio.TestTools.UnitTesting 멤버 사용
 단위 테스트 프레임워크는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 단위 테스트를 지원합니다. 단위 테스트를 코딩할 때는 <Microsoft.VisualStudio.TestPlatform.UnitTestFramework> 네임스페이스의 클래스와 멤버를 사용합니다. 단위 테스트를 처음부터 작성했거나 테스트 중인 코드에서 생성된 단위 테스트를 다시 정의하는 경우 이러한 클래스와 멤버를 사용할 수 있습니다.  
@@ -145,4 +129,3 @@ ms.lasthandoff: 04/04/2017
   
 ## <a name="see-also"></a>참고 항목  
  Microsoft.VisualStudio.TestPlatform.UnitTestFramework
-

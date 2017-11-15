@@ -5,14 +5,12 @@ ms.author: amburns
 ms.date: 07/13/2017
 ms.topic: article
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
+ms.openlocfilehash: b494128a26691f9916a0fe2380a5f403e61d21d4
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 9e7d7314240688c1acbf064a53ba182b92833a60
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 시작
 
  Mac용 Visual Studio를 사용하면 최신 ASP.NET Core 웹 개발 플랫폼 지원을 통해 앱 서비스를 쉽게 개발할 수 있습니다. ASP.NET Core는 .NET Framework와 런타임의 최신 형태인 .NET Core에서 실행됩니다. 빠른 성능을 위해 조정되고, 작은 설치 크기에 맞게 팩터링되고, Windows뿐 아니라 Linux 및 macOS에서도 실행되도록 다시 빌드되었습니다.
@@ -63,7 +61,7 @@ public static void Main(string[] args)
     host.Run();
 }
 ```
-ASP.NET Core 앱이 [`WebHostBuilder`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/hosting) 인스턴스를 통해 호스트를 구성 및 시작하여 main 메서드에서 웹 서버를 만듭니다. 이 작성기는 호스트를 구성할 수 있는 메서드를 제공합니다. 템플릿 앱에서는 다음과 같은 구성이 사용됩니다.
+ASP.NET Core 앱이 [`WebHostBuilder`](https://docs.microsoft.com/aspnet/core/fundamentals/hosting) 인스턴스를 통해 호스트를 구성 및 시작하여 main 메서드에서 웹 서버를 만듭니다. 이 작성기는 호스트를 구성할 수 있는 메서드를 제공합니다. 템플릿 앱에서는 다음과 같은 구성이 사용됩니다.
 
  * `UseKestrel`: 앱에서 Kestrel 서버를 사용하도록 지정합니다.
  * `UseContentRoot(Directory.GetCurrentDirectory())`: 이 폴더에서 앱을 시작할 때 웹 프로젝트의 루트 폴더를 앱의 콘텐츠 루트로 사용합니다.
@@ -109,7 +107,7 @@ public class Startup
 
 `ConfigureServices` 메서드는 앱에서 사용될 서비스를 정의합니다.
 
-`Configure`를 사용하면 [미들웨어](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware)를 통해 요청 파이프라인을 구성할 수 있습니다. ASP.NET 응용 프로그램 파이프라인 내에서 요청과 응답을 처리하는 데 사용되는 구성 요소입니다. HTTP 파이프라인은 순서대로 호출되는 많은 요청 대리자로 구성됩니다. 각 대리자는 요청을 직접 처리하거나 다음 대리자에 전달하도록 선택할 수 있습니다.
+`Configure`를 사용하면 [미들웨어](https://docs.microsoft.com/aspnet/core/fundamentals/middleware)를 통해 요청 파이프라인을 구성할 수 있습니다. ASP.NET 응용 프로그램 파이프라인 내에서 요청과 응답을 처리하는 데 사용되는 구성 요소입니다. HTTP 파이프라인은 순서대로 호출되는 많은 요청 대리자로 구성됩니다. 각 대리자는 요청을 직접 처리하거나 다음 대리자에 전달하도록 선택할 수 있습니다.
 
 `IApplicationBuilder`의 `Run`, `Map`, `Use` 메서드를 사용하여 대리자를 구성할 수 있지만, `Run` 메서드는 다음 대리자를 호출하지 않으며 항상 파이프라인의 끝에 사용해야 합니다.
 
@@ -135,7 +133,7 @@ ASP.NET Core 앱은 MVC(모델-뷰-컨트롤러) 디자인 패턴을 사용하�
 - **뷰**: 앱의 사용자 인터페이스(대개 모델 데이터임)를 표시합니다.
 - **컨트롤러**: 브라우저 요청을 처리하고 사용자 입력 및 상호 작용에 응답하는 클래스입니다.
 
-MVC 사용 방법에 대한 자세한 내용은 [ASP.NET Core MVC 개요](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview) 가이드를 참조하세요.
+MVC 사용 방법에 대한 자세한 내용은 [ASP.NET Core MVC 개요](https://docs.microsoft.com/aspnet/core/mvc/overview) 가이드를 참조하세요.
 
 컨트롤러를 추가하려면 다음을 수행합니다.
 
@@ -237,4 +235,3 @@ Mac OS 10.11(El Capitan) 이상에 .NET Core를 수동으로 설치해야 하는
 - [ASP.NET Core](https://docs.microsoft.com/aspnet/core/#build-web-ui-and-web-apis-using-aspnet-core-mvc) 문서
 - [네이티브 모바일 응용 프로그램용 백 엔드 서비스 만들기](https://docs.microsoft.com/aspnet/core/mobile/native-mobile-backend) - Xamarin.Forms 앱용 ASP.NET Core를 사용하여 REST 서비스를 빌드하는 방법을 보여 줍니다.
 - [ASP.NET Core 실습 교육](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)
-

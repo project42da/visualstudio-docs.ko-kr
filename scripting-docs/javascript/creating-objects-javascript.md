@@ -5,8 +5,7 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-javascript
+ms.technology: devlang-javascript
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -27,16 +26,15 @@ helpviewer_keywords:
 - custom objects
 - initializing objects, using constructors
 ms.assetid: 58d1baa5-4fe8-4a56-a926-5b11765df704
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 359e1eb5df8f19774d352ace631802367b6dd8c9
 ms.openlocfilehash: 0ba7962179cc2f0fcb972caee692edabee368c7d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="creating-objects-javascript"></a>개체 만들기(JavaScript)
 JavaScript로 사용자 고유의 개체를 만들 수 있는 다양한 방법이 있습니다. [Object 개체](../javascript/reference/object-object-javascript.md)를 직접 인스턴스화한 다음, 사용자 고유의 속성 및 메서드를 추가할 수 있습니다. 또는 개체 리터럴 표기법을 사용하여 개체를 정의할 수 있습니다. 생성자 함수를 사용하여 개체를 정의할 수도 있습니다. 생성자 함수를 사용하는 방법에 대한 자세한 내용은 [생성자를 사용하여 형식 정의](../javascript/advanced/using-constructors-to-define-types.md)를 참조하세요.  
@@ -162,4 +160,3 @@ const obj = {
     [ 'prop_' + (() => 42)() ]: 42  
 };  
 ```
-

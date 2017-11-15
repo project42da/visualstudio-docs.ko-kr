@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
-caps.latest.revision: 23
+caps.latest.revision: "23"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 28ce78165492b6f74cdd85ba79eae26e4d68d32c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 6c8e2cac9d6f2622bacae0b27cecc8f074ea3a15
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>코딩된 UI 테스트에 다른 웹 브라우저 사용
 코딩된 UI 테스트는 Internet Explorer로 테스트를 기록하여 웹 응용 프로그램 테스트를 자동화합니다. 그런 다음 이러한 웹 응용 프로그램에 대해 Internet Explorer 또는 기타 브라우저를 사용하여 테스트를 사용자 지정하고 재생할 수 있습니다.  
@@ -117,17 +101,17 @@ ms.lasthandoff: 05/13/2017
  *그 외 무엇을 알아야 하나요?*  
  **참고**  
   
--   ![필수 조건](~/test/media/prereq.png "필수 조건") Apple Safari 웹 브라우저는 지원되지 않습니다.  
+-   ![필수 조건](../test/media/prereq.png "필수 조건") Apple Safari 웹 브라우저는 지원되지 않습니다.  
   
--   ![필수 조건](~/test/media/prereq.png "필수 조건") 웹 브라우저를 시작하는 작업은 코딩된 UI 테스트에 포함되어야 합니다.  
+-   ![필수 조건](../test/media/prereq.png "필수 조건") 웹 브라우저를 시작하는 작업은 코딩된 UI 테스트에 포함되어야 합니다.  
   
      웹 브라우저가 이미 열려 있는 상태에서는 Internet Explorer를 사용하지 않는 이상 단계를 실행하려고 해도 재생이 실패합니다. 따라서 코딩된 UI 테스트에 웹 브라우저 시작을 포함하는 것이 좋습니다.  
   
--   ![필수 조건](~/test/media/prereq.png "필수 조건") 최대화, 최소화, 복원 등의 브라우저별 기본 UI 작업은 자동화할 수 없습니다.  
+-   ![필수 조건](../test/media/prereq.png "필수 조건") 최대화, 최소화, 복원 등의 브라우저별 기본 UI 작업은 자동화할 수 없습니다.  
   
  **팁**  
   
--   ![팁](~/test/media/tip.png "팁") 출력을 구성하여 코딩된 UI 로그에 스크린 샷을 포함할 수 있습니다. 이렇게 하려면 QTAgent32.exe.config 파일에 일부 구성 설정을 설정해야 합니다. 기본적으로 이 파일은 다음 디렉터리에 설치됩니다.  
+-   ![팁](../test/media/tip.png "팁") 출력을 구성하여 코딩된 UI 로그에 스크린 샷을 포함할 수 있습니다. 이렇게 하려면 QTAgent32.exe.config 파일에 일부 구성 설정을 설정해야 합니다. 기본적으로 이 파일은 다음 디렉터리에 설치됩니다.  
   
      **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**  
   
@@ -171,4 +155,3 @@ ms.lasthandoff: 05/13/2017
  [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
  [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
  [코딩된 UI 테스트 로그를 사용하여 코딩된 UI 테스트 분석](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)
-

@@ -5,8 +5,7 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-javascript
+ms.technology: devlang-javascript
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,16 +25,15 @@ helpviewer_keywords:
 - strict mode
 - use strict
 ms.assetid: 0f27022a-f41c-4504-965c-5a2701f342cd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 29eb97427c2c5a29ee9a66e8e2a85953fd797efd
 ms.openlocfilehash: 77ee7d54dd265026b2bf4c9af52a71cccf9a7675
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="strict-mode-javascript"></a>Strict 모드(JavaScript)
 strict 모드는 코드에 더 나은 오류 검사를 적용하는 방법입니다. strict 모드를 사용하면, 예를 들어 암시적으로 선언한 변수를 사용하거나 읽기 전용 속성에 값을 할당하거나 확장할 수 없는 개체에 속성을 추가할 수 없습니다. 제한사항은 이 항목 뒷부분의 코드에 적용되는 [Strict 모드의 코드 제한사항](../../javascript/advanced/strict-mode-javascript.md#rest) 섹션에 나와 있습니다. Strict 모드에 대한 추가 정보는 [ECMAScript 언어 사양(5번째 버전)](http://www.ecma-international.org/publications/standards/Ecma-262.htm)을 참조하세요.  

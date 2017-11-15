@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59fc9424-76ca-4365-ae47-bb14a736c9c2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0356a3f277783f998f8a7484b5fb2050db9069ab
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: bec05a24a932816374766c107c1aab6f018e77cf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="performance-rules-reference"></a>성능 규칙 참조
 프로파일링 도구의 성능 규칙은 응용 프로그램 성능에 대한 추가 경고 및 정보를 제공합니다. 성능 규칙은 Windows 및 프로세서 성능 카운터와 같은 출처에서 수집한 프로파일링 실행의 데이터를 분석합니다. [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 통합 개발 환경의 오류 출력 창에 규칙 메시지가 표시됩니다. 메시지는 다음 규칙 수준 중 하나로 나열됩니다.  

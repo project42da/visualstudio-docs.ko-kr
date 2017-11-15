@@ -1,29 +1,32 @@
 ---
-title: "지역화를 위한 리소스의 계층적 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 파일, 지역화된"
-  - "지역화[Visual Studio], 리소스"
-  - "대체(fallback) 리소스"
-  - "국가별 응용 프로그램[Visual Studio], 리소스 저장"
-  - "위성 어셈블리, 리소스 계층 구조"
-  - "전역화[Visual Studio], 리소스"
-  - "위성 어셈블리"
-  - "리소스[Visual Studio LightSwitch], 대체(fallback) 시스템"
-  - "리소스 파일, 대체 프로세스"
+title: "지역화를 위한 리소스의 계층적 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource files, localized
+- localization [Visual Studio], resources
+- fallback resources
+- international applications [Visual Studio], storing resources
+- satellite assemblies, resource hierarchies
+- globalization [Visual Studio], resources
+- satellite assemblies
+- resources [Visual Studio], fallback system
+- resource files, fallback processes
 ms.assetid: dadf8f2c-f74c-44d7-bec0-a1e956d8d38d
-caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7f52d57d45c0f78a5bd64b16f10c9bb7c2256cd7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>지역화를 위한 리소스의 계층적 구성
 Visual Studio에서 지역화된 리소스(각 문화권에 적절한 문자열 및 이미지와 같은 데이터)는 별도의 파일에 저장되며 UI 문화권 설정에 따라 로드됩니다. 지역화된 리소스가 로드되는 방식을 이해하려면 이러한 리소스를 계층 구조 방식으로 구성된 것으로 생각하는 것이 좋습니다.  
@@ -40,11 +43,11 @@ Visual Studio에서 지역화된 리소스(각 문화권에 적절한 문자열 
   
  리소스를 저장하는 가장 좋은 방법은 가급적 일반화하는 것입니다. 즉, 지역화된 문자열, 이미지 등을 가능하면 특정 문화권이 아니라 중립 문화권에 대한 리소스 파일에 저장합니다. 예를 들어 프랑스어(벨기에)("fr-BE") 문화권에 대한 리소스가 있고 그 바로 위의 리소스가 영어로 된 대체 리소스인 경우 다른 사람이 프랑스어(캐나다) 문화권용으로 구성된 시스템에서 사용자의 응용 프로그램을 사용하려고 하면 문제가 발생할 수 있습니다. 즉, 시스템에서는 "fr-CA"에 대한 위성 어셈블리를 찾다가 못 찾은 경우 프랑스 리소스를 로드하는 대신 대체 리소스(영어)가 포함된 주 어셈블리를 로드합니다. 다음 그림에서는 이 바람직하지 않은 시나리오를 보여 줍니다.  
   
- ![특정 리소스 전용](~/ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
+ ![특정 리소스 전용](../ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
   
  가능한 한 많은 리소스를 "fr" 문화권에 대한 중립 리소스 파일에 두는 권장 사례를 따를 경우 프랑스어(캐나다) 사용자는 "fr-BE" 문화권용으로 표시된 리소스를 볼 수 없지만 문자열을 프랑스어로 표시할 수는 있습니다. 다음 상황에서는 이 기본 시나리오를 보여 줍니다.  
   
- ![NeutralSpecificResources 그래픽](~/ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
+ ![NeutralSpecificResources 그래픽](../ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
   
 ## <a name="see-also"></a>참고 항목  
  [지역화를 위한 중립 리소스 언어](../ide/neutral-resources-languages-for-localization.md)   
@@ -53,8 +56,3 @@ Visual Studio에서 지역화된 리소스(각 문화권에 적절한 문자열 
  [응용 프로그램 전역화 및 지역화](../ide/globalizing-and-localizing-applications.md)   
  [방법: Windows Forms 전역화를 위한 Culture 및 UI Culture 설정](http://msdn.microsoft.com/en-us/694e049f-0b91-474a-9789-d35124f248f0)   
  [방법: ASP.NET 웹 페이지 세계화를 위한 문화권 및 UI 문화권 설정](http://msdn.microsoft.com/Library/76091f86-f967-4687-a40f-de87bd8cc9a0)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

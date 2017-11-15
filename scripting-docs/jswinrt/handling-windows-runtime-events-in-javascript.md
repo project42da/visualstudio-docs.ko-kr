@@ -5,24 +5,22 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- javascript
+ms.technology: javascript
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JavaScript, Windows Runtime events
 - Windows Runtime events [JavaScript]
 ms.assetid: d9436aff-2c30-4846-b8df-eaa3e63fd75c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 29eb97427c2c5a29ee9a66e8e2a85953fd797efd
 ms.openlocfilehash: e963472ee51f2439b50807a49425dcd7f6d8443a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="handling-windows-runtime-events-in-javascript"></a>JavaScript의 Windows 런타임 이벤트 처리
 Windows 런타임 이벤트는 C++ 또는 .NET Framework에서 표현되는 방식과 다른 방식으로 JavaScript에서 표현됩니다. Windows 런타임 이벤트는 클래스 속성이 아니며 클래스의 `addEventListener` 및 `removeEventListener` 메서드에 전달되는 문자열 식별자로 표현됩니다. 예를 들어 “positionchanged” 문자열을 `Geolocator.addEventListener` 메서드에 전달하여 [Geolocator.PositionChanged](http://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.geolocation.geolocator.positionchanged.aspx) 이벤트의 이벤트 처리기를 추가할 수 있습니다.  

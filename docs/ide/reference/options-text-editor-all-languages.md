@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,30 +19,15 @@ helpviewer_keywords:
 - line numbers
 - virtual space
 ms.assetid: 49ee7306-9d46-4170-850f-a1716171752d
-caps.latest.revision: 20
-author: kempb
-ms.author: kempb
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 00829d499ae9d5a52e94094eed15b1ae39894075
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 61b3ab54929cdd7e6a584737f8963302335c4fd1
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="options-text-editor-all-languages"></a>옵션, 텍스트 편집기, 모든 언어
 이 대화 상자에서는 코드 편집기의 기본 동작을 변경할 수 있습니다. 이러한 설정은 HTML 디자이너의 소스 뷰와 같이 코드 편집기를 기반으로 하는 다른 편집기에도 적용됩니다. 이 대화 상자를 열려면 **도구** 메뉴에서 **옵션**을 선택합니다. **텍스트 편집기** 폴더 내에서 **모든 언어** 하위 폴더를 확장하고 **일반**을 선택합니다.  
@@ -79,7 +63,7 @@ ms.lasthandoff: 05/24/2017
  자동 줄 바꿈 시각 문자 표시  
  이 옵션을 선택하면 긴 줄이 다음 줄로 줄 바꿈되는 위치에 줄 바꿈 화살표 표시기가 표시됩니다.  
   
- ![LineBreakSymbol 스크린샷](~/ide/reference/media/linebreak.gif "linebreak")  
+ ![LineBreakSymbol 스크린샷](../../ide/reference/media/linebreak.gif "linebreak")  
   
  이러한 표시기를 표시하지 않으려면 이 옵션의 선택을 취소합니다.  
   
@@ -93,7 +77,7 @@ ms.lasthandoff: 05/24/2017
   
 -   이 옵션의 선택을 취소하고 [잘라내기] 명령을 선택하면 빈 줄이 제거됩니다. 그러나 클립보드의 데이터는 유지됩니다. 따라서 이후 [붙여넣기] 명령을 사용하면 최근에 클립보드에 복사된 콘텐츠가 붙여넣어집니다. 전에 아무것도 복사하지 않았으면 아무것도 붙여넣지 않습니다.  
   
- 이 설정은 줄이 비어 있지 않은 경우의 [복사] 또는 [잘라내기]에 영향을 미치지 않습니다. 선택한 내용이 없는 경우에는 줄 전체가 복사되거나 잘립니다. 그런 다음 [붙여넣기]를 수행하면 줄 전체의 텍스트와 해당 줄 끝 문자가 붙여넣어집니다.  
+이 설정은 줄이 비어 있지 않은 경우의 [복사] 또는 [잘라내기]에 영향을 미치지 않습니다. 선택한 내용이 없는 경우에는 줄 전체가 복사되거나 잘립니다. 그런 다음 [붙여넣기]를 수행하면 줄 전체의 텍스트와 해당 줄 끝 문자가 붙여넣어집니다.  
   
 > [!TIP]
 >  공백, 탭 및 줄 끝에 대한 표시기를 나타내어 완전히 비어 있는 줄과 들여쓴 줄을 구분하려면 **편집** 메뉴에서 **고급**을 선택하고 **공백 보기**를 선택합니다.  

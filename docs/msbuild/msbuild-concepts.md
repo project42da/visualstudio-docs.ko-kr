@@ -1,21 +1,23 @@
 ---
 title: "MSBuild 개념 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild 개념"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: MSBuild, concepts
 ms.assetid: 083b8ba3-e4ad-45af-bb5d-3bc81d406131
-caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 4395f4c82be689b1d573be44948e98711ba066c3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-concepts"></a>MSBuild 개념
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 빌드 플랫폼이 소프트웨어를 빌드하는 방법을 제어하는 데 사용할 수 있는 기본 XML 스키마를 제공합니다. 빌드의 구성 요소 및 이러한 구성 요소를 빌드할 방법을 지정하려면 MSBuild의 네 가지 부분(속성, 항목, 작업, 대상)을 사용합니다.  
@@ -34,8 +36,3 @@ caps.handback.revision: 13
 |[연습: MSBuild 사용](../msbuild/walkthrough-using-msbuild.md)|MSBuild의 구성 요소를 소개하고 Visual Studio IDE(통합 개발 환경)를 닫지 않고 MSBuild 프로젝트를 작성, 조작 및 디버깅하는 방법을 보여 줍니다.|  
 |[MSBuild 참조](../msbuild/msbuild-reference.md)|참조 정보를 포함하는 문서에 대한 링크입니다.|  
 |[MSBuild](../msbuild/msbuild.md)|프로젝트 파일용 XML 스키마에 대해 간략하게 소개하고 이 스키마가 소프트웨어를 빌드하는 프로세스를 제어하는 방법을 보여 줍니다.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

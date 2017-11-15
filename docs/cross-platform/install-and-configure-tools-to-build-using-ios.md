@@ -4,38 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: d0c311c9-9eb9-42c5-ba07-25604362cd28
-caps.latest.revision: 11
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 53224c67d6778ea51e1cf055a0c4c0db34940ada
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 368481d0a38b7b8f721aa18be0ecda7d35a42aba
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>Install and Configure Tools to Build using iOS
 플랫폼 간 모바일 개발용 Visual C++를 사용하여 iOS 코드를 편집 및 디버깅하고 iOS 시뮬레이터 또는 iOS 장치에 배포할 수 있지만 라이선스 제한으로 인해 Mac에서 코드를 빌드하고 원격으로 실행해야 합니다. Visual Studio를 사용하여 iOS 앱을 빌드 및 실행하려면 Mac에서 원격 에이전트 [vcremote](http://go.microsoft.com/fwlink/p/?LinkId=534988)를 설정 및 구성해야 합니다. 원격 에이전트는 Visual Studio의 빌드 요청을 처리하고 Mac에 연결된 iOS 장치 또는 Mac의 iOS 시뮬레이터에서 앱을 실행합니다.  
@@ -127,7 +109,7 @@ ms.lasthandoff: 05/13/2017
   
  에이전트를 처음 시작할 때 및 새 클라이언트 인증서를 만들 때마다 호스트 이름, 포트, PIN을 비롯해 Visual Studio에서 에이전트를 구성하는 데 필요한 정보가 표시됩니다.  
   
- ![vcremote를 사용하여 보안 PIN 생성](~/cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
+ ![vcremote를 사용하여 보안 PIN 생성](../cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
   
  Visual Studio에서 호스트 이름을 사용하여 원격 에이전트를 구성하려는 경우 Windows에서 호스트 이름으로 Mac을 ping하여 원격 에이전트에 연결할 수 있는지 확인합니다. 그렇지 않은 경우 대신 IP 주소를 사용해야 할 수도 있습니다.  
   
@@ -177,7 +159,7 @@ ms.lasthandoff: 05/13/2017
   
 7.  **연결**을 선택하여 연결을 사용하도록 설정합니다.  
   
-     ![iOS 빌드에 대한 vcremote 연결 구성](~/cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
+     ![iOS 빌드에 대한 vcremote 연결 구성](../cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
   
      호스트 이름 또는 포트를 변경할 때까지 연결이 유지됩니다. **옵션** 대화 상자에서 호스트 이름 또는 포트를 변경하는 경우 변경 내용을 취소하려면 **되돌리기** 단추를 선택하여 이전 연결로 되돌립니다.  
   

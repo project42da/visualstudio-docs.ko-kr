@@ -1,22 +1,25 @@
 ---
-title: "프로파일링 도구 시작 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "시작, 성능"
-  - "시작, 프로파일링 도구"
+title: "성능 도구 시작 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- getting started, performance
+- getting started, profiling tools
 ms.assetid: 02085214-a8e4-40fd-9b26-32391a7a7082
-caps.latest.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "28"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ccfaa75052ffa90e1e06ba2943ae54305fd54541
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="getting-started-with-performance-tools"></a>성능 도구 시작
 이 섹션에서는 Visual Studio 성능 도구를 사용하여 코드 성능을 수집, 표시 및 분석할 때 적용할 개념과 작업을 간단히 살펴봅니다.  
@@ -40,8 +43,3 @@ caps.handback.revision: 25
  [성능 도구 데이터 분석](../profiling/analyzing-performance-tools-data.md)   
  [성능 규칙을 사용하여 데이터 분석](../profiling/using-performance-rules-to-analyze-data.md)   
  [성능 세션 구성](../profiling/configuring-performance-sessions.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

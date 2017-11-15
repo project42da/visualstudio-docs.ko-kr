@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,30 +14,14 @@ helpviewer_keywords:
 - unit tests, running
 - unit tests, authoring
 ms.assetid: 2b018b18-b412-4e0e-b0ee-b580a2f3ba9c
-caps.latest.revision: 83
+caps.latest.revision: "83"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 825adc757b9ae984bb39b308bab37a0d98b63ab5
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cbde644f9248935c73bb75b8b2de9573588867f5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>연습: 관리 코드에 대한 단위 테스트 만들기 및 실행
 이 연습에서는 관리 코드에 대한 Microsoft 단위 테스트 프레임워크 및 Visual Studio 테스트 탐색기를 사용하여 일련의 단위 테스트를 생성, 실행 및 사용자 지정하는 방법을 안내합니다. 개발 중인 C# 프로젝트로 시작하여 해당 코드를 실행해 보는 테스트를 만들어 테스트를 실행하고 결과를 검사합니다. 그런 다음 프로젝트 코드를 변경하고 테스트를 다시 실행할 수 있습니다.  
@@ -254,7 +237,7 @@ using BankAccountNS;
 ##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> 코드를 수정하고 테스트 다시 실행  
  **테스트 결과 분석**  
   
- 테스트 결과에 실패를 설명하는 메시지가 포함됩니다. `AreEquals` 메서드의 경우 메시지에 예상 값(**Expected\<*XXX*>** 매개 변수)과 실제 값(**Actual\<*YYY*>** 매개 변수)이 표시됩니다. 기초 잔액보다 줄어든 잔액을 예상했지만, 인출액만큼 늘어났습니다.  
+ 테스트 결과에 실패를 설명하는 메시지가 포함됩니다. `AreEquals` 메서드의 경우 메시지에 예상 값(**Expected\<*XXX*> **매개 변수)과 실제 값(**Actual\<*YYY*>** 매개 변수)이 표시됩니다. 기초 잔액보다 줄어든 잔액을 예상했지만, 인출액만큼 늘어났습니다.  
   
  다시 검사한 Debit 코드에 단위 테스트를 통해 버그를 찾는 데 성공한 것으로 나타납니다. 차감해야 할 경우 계정 잔액에 인출금이 추가됩니다.  
   
@@ -435,4 +418,3 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 ```  
   
  이 최종 단원에서는 테스트 코드 개선 작업으로 테스트 메서드가 더욱 더 견고하고 유용해졌습니다. 하지만 더 중요한 것은 추가 분석을 통해 테스트 중인 프로젝트의 코드가 향상되었다는 점입니다.
-

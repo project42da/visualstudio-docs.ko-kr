@@ -7,14 +7,12 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: 5f1eda5ccf6f308c626d525bbe7069a84ce3154b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="data-visualizations"></a>데이터 시각화
 
 Mac용 Visual Studio에는 디버거에 대한 UI 지원이 포함되어 있으므로 디버그하는 동안 변수, 필드 또는 속성의 값을 시각화할 수 있습니다. 이러한 데이터 시각화 도우미는 색 구조체의 색을 표시하는 등 확장된 버전의 데이터를 표시하고 개발자가 알려진 구조를 검사할 수 있게 합니다.
@@ -106,4 +104,3 @@ IEnumerable은 모든 값을 열거합니다. **값 표시** 단추를 클릭하
     *   클릭 가능한 하이퍼링크를 표시합니다.
 *   **IntPtr**
     *   IntPtr의 16진수 표현을 표시합니다.
-

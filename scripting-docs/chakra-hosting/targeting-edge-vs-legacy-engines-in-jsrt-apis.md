@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cbc7df6c-0bc9-48f5-b9ad-b9ed31c42f92
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
 ms.openlocfilehash: 50947cbd619f086daecc1e09f88a4b238a36ee41
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="targeting-edge-vs-legacy-engines-in-jsrt-apis"></a>Edge 및 레거시 엔진을 대상으로 지정
 Windows 10부터 새 Edge 렌더링 엔진을 지원하는 Windows 10 브라우저 전략에 맞춰 Chakra(JavaScript 엔진)에서 변경한 내용 중 하나는 다음 두 개의 서로 다른 Chakra 엔진을 지원하는 것입니다.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,30 +14,15 @@ helpviewer_keywords:
 - imported namespaces [Visual Studio]
 - references [Visual Studio], imported namespaces
 ms.assetid: 44cebec3-0ea0-47c2-8406-4edeab6a997e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: f512673808ae3fab2fdcca39b58f77ca5df93e05
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: 43947a2e239833459923f6991d4ee54d12876fe3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>방법: 가져온 네임스페이스 추가 또는 제거(Visual Basic)
 네임스페이스를 가져오면 해당 네임스페이스의 요소를 정규화하지 않고 코드에서 사용할 수 있습니다. 예를 들어 `System.Messaging.MessageQueue` 클래스의 `Create` 메서드에 액세스하려면 `System.Messaging` 네임스페이스를 가져오고 코드에 필요한 요소를 `MessageQueue.Create`로 참조하면 됩니다.  
@@ -96,4 +80,3 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="see-also"></a>참고 항목  
  [프로젝트의 참조 관리](../ide/managing-references-in-a-project.md)
-

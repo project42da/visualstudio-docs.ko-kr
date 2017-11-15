@@ -4,33 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d08de69-c32e-4f0b-89aa-75347b15fb82
-caps.latest.revision: 11
+caps.latest.revision: "11"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: badc5d3077ddfe8f76f24cbbf7a52869fde8f318
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 665e16720466faff5dd52635066198e36d58d117
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="unit-testing-existing-c-applications-with-test-explorer"></a>테스트 탐색기를 사용하여 기존 C++ 응용 프로그램 유닛 테스트
 기존 응용 프로그램을 변경하기 전에 단위 테스트로 코드가 올바른지 확인해야 합니다. 이렇게 하면 변경으로 인해 버그가 발생하지 않았음을 확신할 수 있습니다. 응용 프로그램에 아직 단위 테스트가 없으면 이 항목에 설명된 기술을 사용하여 단위 테스트를 추가할 수 있습니다. 여기서는 기존 Visual C++ 코드에 대해 코드 테스트 방법을 결정하는 것으로 시작하여 테스트를 생성 및 작성하고 마지막으로 테스트를 실행하는 단위 테스트를 추가하는 방법에 대해 설명합니다.  
@@ -182,4 +167,3 @@ ms.lasthandoff: 04/04/2017
 2.  테스트 탐색기에서 **모두 실행**을 선택합니다.  
   
  자세한 내용은 [빠른 시작: 테스트 탐색기를 사용한 테스트 기반 개발](../test/quick-start-test-driven-development-with-test-explorer.md)을 참조하세요.
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,31 +20,15 @@ helpviewer_keywords:
 - switches
 - Devenv, syntax and list of switches
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 5666566315e94f109c5ca214dcf5b2a539911203
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: a22ac991b88dd62c91a9bf08f5397fe80e4ae37d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="devenv-command-line-switches"></a>Devenv 명령줄 스위치
 Devenv를 사용하면 IDE(통합 개발 환경)에 대한 다양한 옵션을 설정하고 명령줄에서 프로젝트를 빌드, 디버그 및 배포할 수도 있습니다. 이러한 스위치를 사용하여 스크립트 또는 .bat 파일(예: 야간 빌드 스크립트)에서 IDE를 실행하거나 특정 구성으로 IDE를 시작할 수 있습니다.  

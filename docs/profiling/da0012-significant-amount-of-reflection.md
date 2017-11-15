@@ -1,24 +1,27 @@
 ---
-title: "DA0012: 리플렉션 양이 많습니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.rules.DAReflection"
-  - "vs.performance.12"
-  - "vs.performance.rules.DA0012"
-  - "vs.performance.DA0011"
+title: "DA0012: 리플렉션 양이 많습니다. | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.rules.DAReflection
+- vs.performance.12
+- vs.performance.rules.DA0012
+- vs.performance.DA0011
 ms.assetid: c92a1d76-21fa-426e-8b1b-a3c08e9bcbca
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 971b12e3f14848e5f30420da0994f231f8299491
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="da0012-significant-amount-of-reflection"></a>DA0012: 리플렉션 양이 많습니다.
 |||  
@@ -39,8 +42,3 @@ caps.handback.revision: 13
   
 ## <a name="how-to-investigate-a-warning"></a>경고를 조사하는 방법  
  [오류 목록] 창에서 메시지를 두 번 클릭하여 프로파일링 데이터의 [함수 정보 뷰](../profiling/function-details-view.md)로 이동합니다. System.Type 또는 System.Reflection 메서드의 호출 함수를 검사하여 .NET Reflection API를 가장 빈번히 사용하는 프로그램의 섹션을 찾습니다. 메타데이터를 반환하는 메서드를 사용하지 마세요. 응용 프로그램 성능이 중요할 경우 런타임 바인딩을 사용하고 런타임에 형식을 동적으로 만드는 방식을 피해야 합니다.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

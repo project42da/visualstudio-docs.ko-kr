@@ -103,4 +103,3 @@
 #### [<PackageFiles> 요소(부트스트래퍼)](packagefiles-element-bootstrapper.md)
 #### [<Strings> 요소(부트스트래퍼)](strings-element-bootstrapper.md)
 #### [<Schedules> 요소(부트스트래퍼)](schedules-element-bootstrapper.md)
-## [InstallShield Limited Edition](installshield-limited-edition.md)

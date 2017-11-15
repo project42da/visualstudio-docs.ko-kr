@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio용 R 도구의 패키지 관리자 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 93accb9a-1ef8-4806-baa4-02477c2d7ef0
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 87f4c97941a55bd378a72681200748f28e8dd236
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 5170c170f8d087319a8240831237965ca4d252db
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="package-manager"></a>패키지 관리자
 
 RTVS(Visual Studio용 R 도구) 패키지 관리자는 R 패키지를 관리하기 위한 UI입니다. 패키지 관리자를 열려면 **R 도구 > Windows > 패키지**를 선택하거나 Ctrl+7을 누릅니다.
@@ -49,4 +46,3 @@ RTVS(Visual Studio용 R 도구) 패키지 관리자는 R 패키지를 관리하�
 
 - RTVS와 함께 제공되는 코어 패키지는 `C:\Program Files\Microsoft\R Client\R_SERVER\library`에 설치됩니다.
 - 추가 패키지는 `%userprofile%\Documents\R\win-library\3.3`에 설치됩니다.
-

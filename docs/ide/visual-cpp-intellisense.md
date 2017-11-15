@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d7c6414-4e6c-4889-a74c-a6033795eccc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 555a0f9b39d28166c0f414b1bcbf81c2a137d0ff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 88ef1657438cd2073b2f3219739c8236eb94bc2c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-c-intellisense"></a>Visual C++ IntelliSense
 Visual Studio 2015에서 IntelliSense는 프로젝트의 파일과 단일 코드 파일에 사용할 수 있습니다. 플랫폼 간 프로젝트에서는 Android 또는 iOS 컨텍스트에 있는 경우에도 공유 코드 프로젝트의 .cpp 및 .c 파일에서 일부 IntelliSense 기능을 사용할 수 있습니다.  

@@ -4,39 +4,24 @@ ms.custom:
 ms.date: 03/02/2017
 ms.reviewer: 
 ms.suite: 
+ms.technology:
+- vs-ide-general
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- msdnstart
+f1_keywords: msdnstart
 helpviewer_keywords:
 - Visual Studio
 - Visual Studio 2017
 ms.assetid: ba237712-f8c4-4d13-854b-ab4a16afa309
-caps.latest.revision: 125
-author: kempb
-ms.author: kempb
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
-ms.openlocfilehash: 2cf7d1e79ccf79b652dbb730e7ac7fd6a9c984b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: 81942228cd8ee30ac8ea990af072ace0ce626c5b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="welcome-to-visual-studio-2017"></a>Visual Studio 2017 시작
 웹과 클라우드에서 장치 또는 데스크톱 앱용으로 유용한 앱을 만드는 데 필요한 모든 기능을 갖춘 Visual Studio를 시작합니다. 이 버전에서는 IDE(통합 개발 환경) 하나에서 iOS, Android, Linux, Windows 및 기타 운영 체제용 코드를 작성할 수 있습니다. 유용한 대화형 코드 도움말(*IntelliSense*), 쉬운 코드 탐색 및 디버깅, 빠른 빌드 및 신속한 배포의 이점을 누려 보세요. Visual Studio를 사용하여 생산성을 높이고 혼자서나 대규모 팀에 속해서 작업을 손쉽게 수행할 수 있습니다.  
@@ -120,4 +105,3 @@ Visual Studio의 새로운 기능에 대해 알아봅니다.
 .NET 컴파일러 플랫폼(Roslyn)을 사용하여 사용자 고유의 코드 분석기 및 코드 생성기를 작성할 수 있습니다. [Roslyn](https://github.com/dotnet/Roslyn)(영문)에서 필요한 모든 항목을 찾으세요.  
 
 Microsoft 개발자와 개발 커뮤니티에서 만든 [기존 VS IDE용 확장](https://visualstudiogallery.msdn.microsoft.com/) 을 찾아 보세요.  
-

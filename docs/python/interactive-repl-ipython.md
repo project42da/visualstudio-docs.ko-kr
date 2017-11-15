@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio의 IPython REPL | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9bd06b0-2021-4e55-b933-8346476224a8
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: fce859ff47d28a7de44c63f5dd4e52cfb58478f1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 9553aa4944f652c7b8505b0d99d5c2b88167f872
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="using-ipython-in-the-interactive-window"></a>대화형 창에서 IPython 사용
 
 IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고급 대화형 개발 환경으로, 대화형 병렬 컴퓨팅 기능을 지원합니다. 이 항목에서는 일반적인 [대화형 창](interactive-repl.md) 기능도 모두 사용할 수 있는 Visual Studio 대화형 창에서 IPython을 사용하는 과정을 안내합니다.
@@ -87,4 +84,3 @@ IPython에는 시스템 셸로 이스케이프, 변수 대체, 캡처 출력과 
 - 설치하지 않고 쉽게 Jupyter를 사용하려면 노트북을 유지하고 다른 사용자와 공유할 수 있도록 해주는 무료 [Azure Notebook 호스티드 서비스](https://notebooks.azure.com/)를 시도해보세요.
 
 - Azure의 해당 Windows 또는 Linux 가상 컴퓨터에서 Jupyter(이전의 IPython)를 실행할 수도 있습니다. 자세한 내용은 [Azure VM 만들기, Jupyter 설치, Azure에서 Jupyter Notebook 실행](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-jupyter-notebook)을 참조하세요.
-

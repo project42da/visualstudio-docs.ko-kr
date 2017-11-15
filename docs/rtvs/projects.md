@@ -1,28 +1,24 @@
 ---
 title: "Visual Studio용 R 도구의 프로젝트 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
-ms.prod: visual-studio-dev15
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 732b73cf-2014-4f98-838e-4141ef9dedac
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: a7e4311ba042ad00a65f071ea7a735d70b5732d9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 00ccd6319f13fc6be32ca7bde4e2c5f76a5cbc49
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="creating-r-projects-in-visual-studio"></a>Visual Studio에서 R 프로젝트 만들기
 
 R 프로젝트(`.rxproj` 파일)는 프로젝트와 관련된 모든 소스 및 콘텐츠 파일을 식별합니다. 또한 각 파일에 대한 빌드 정보를 포함하고 소스 제어 시스템과 통합할 정보를 유지 관리하며 응용 프로그램을 논리 구성 요소로 구성하는 데 도움을 줍니다. 그러나 설치된 패키지 목록과 같은 작업 영역 관련 정보는 작업 영역 자체에서 별도로 유지 관리됩니다.
@@ -127,4 +123,3 @@ Visual Studio 솔루션은 관련 프로젝트를 하나의 논리적 위치에�
 > 현재 명시적인 R과 C#/C++의 언어 통합이 제공되지 않습니다. 제공되는 Python 언어 통합에 대해서는 [Python용 C++ 확장 만들기](../python/cpp-and-python.md)를 참조하세요.  하지만 R에 대한 C# 및 C++ 브리지를 제공하는 라이브러리를 사용할 수 있습니다.
 
 일반적인 프로젝트 및 솔루션 관리에 대한 자세한 내용은 [Visual Studio의 솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)를 참조하세요.
-

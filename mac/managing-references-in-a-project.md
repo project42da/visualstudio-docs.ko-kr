@@ -5,14 +5,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: 30f6c99c6ac827b7da94fd228a7034e9ce0b0fac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="managing-references-in-a-project"></a>프로젝트에서 참조 관리
 
 Mac용 Visual Studio에서는 프로젝트에 참조를 추가하기 위한 3가지 방법을 제공합니다.
@@ -44,4 +42,3 @@ NuGet은 가장 인기 있는 .NET 개발용 패키지 관리자입니다. Mac�
 이렇게 하려면 Solution Pad의 **패키지** 폴더를 마우스 오른쪽 단추로 클릭한 다음 [패키지 추가]를 선택하세요.
 
 NuGet 패키지를 사용하는 방법에 대한 자세한 내용은 [프로젝트에 NuGet 패키지 포함하기](~/nuget-walkthrough.md) 연습에서 제공합니다.
-

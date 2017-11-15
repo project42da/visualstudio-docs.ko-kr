@@ -1,23 +1,24 @@
 ---
-title: "실행 시간(스레드 뷰) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.threads.timeline.execution"
-helpviewer_keywords: 
-  - "동시성 시각화 도우미, 실행 시간(스레드 뷰)"
+title: "실행 시간(스레드 뷰) | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.cv.threads.timeline.execution
+helpviewer_keywords: Concurrency Visualizer, Execution Time (Threads View)
 ms.assetid: 80c100f8-2502-4613-bfef-4f4f2e09cc8d
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 626f6b0eb9d20685c0b8f71f8dea6f4f02e27254
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="execution-time-threads-view"></a>실행 시간(스레드 뷰)
 스레드가 시스템의 논리 코어에서 활발히 작업을 수행할 경우 스레드 뷰 타임라인의 이러한 세그먼트는 실행 시간을 나타냅니다.  
@@ -31,8 +32,3 @@ caps.handback.revision: 10
 ## <a name="see-also"></a>참고 항목  
  [실행 프로필 보고서](../profiling/execution-profile-report.md)   
  [스레드 뷰](../profiling/threads-view-parallel-performance.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

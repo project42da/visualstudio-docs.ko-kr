@@ -1,11 +1,10 @@
 ---
 title: "Visual Studio의 R 도구 옵션 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 f1_keywords:
@@ -14,18 +13,16 @@ f1_keywords:
 - vs.toolsoptionspages.r_tools.#150
 ms.topic: article
 ms.assetid: 554dc602-ecad-4cd0-8e6f-a60bb8a2328f
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 82e17109ff595ae566ea326dae9237274ee5ad15
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 1e017806ca7bf3d23410ba3a2f999dca0b78f240
-ms.openlocfilehash: 5777be7df1256d4fe4d34be41fb10eb546d4a0ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="r-tools-for-visual-studio-options"></a>Visual Studio용 R 도구 옵션
  
 **R 도구 > 옵션** 메뉴를 통해 액세스하거나 **도구 > 옵션**을 통해 **R 도구**로 스크롤하여 설정에 액세스합니다.
@@ -112,4 +109,3 @@ ms.lasthandoff: 09/26/2017
 | 프로젝트가 닫히면 작업 영역 저장 | `No` | `Yes`로 설정하면 프로젝트가 닫힐 때 전역 환경을 `.RData` 파일에 저장할 수 있습니다. |
 | 작업 영역을 전환하기 전에 확인 대화 상자를 표시합니다. | `Yes` | `No`로 설정하면 작업 영역 간에 전환할 때 사용자에게 확인 메시지가 표시되지 않습니다. [작업 영역 간 전환](workspaces.md#switching-between-workspaces)을 참조하세요. |
  
-

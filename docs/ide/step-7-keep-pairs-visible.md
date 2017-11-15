@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42e1d08c-7b2e-4efd-9f47-85d6206afe35
-caps.latest.revision: 21
-author: kempb
-ms.author: kempb
+caps.latest.revision: "21"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7aba2366893e188107632e5b8393fff79c0a5f82
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 15990f447ba3e368b19d93317eadbde7b126326a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="step-7-keep-pairs-visible"></a>7단계: 쌍 표시
 플레이어가 서로 일치하지 않는 아이콘 쌍을 선택하는 경우 게임이 제대로 실행됩니다. 그러나 일치하는 쌍을 선택할 경우에는 어떻게 되는지 고려해야 합니다. 타이머를 설정(`Start()` 메서드 사용)하여 아이콘이 사라지게 하는 대신 `firstClicked` 및 `secondClicked` 참조 변수를 사용하여 선택한 두 레이블의 색을 다시 설정하는 것이 아니라 레이블을 더 이상 추적하지 않도록 게임 자체를 다시 설정해야 합니다.  
@@ -41,7 +25,8 @@ ms.lasthandoff: 09/06/2017
   
 1.  타이머를 시작하는 문 바로 위의 거의 코드 끝부분에서 `if` 이벤트 처리기 메서드에 다음 `label_Click()` 문을 추가합니다. 프로그램에 추가하는 동안 코드를 자세히 검토하고 코드가 어떻게 실행되는지 살펴보십시오.  
   
-     [!code-csharp[VbExpressTutorial4Step7#9](../ide/codesnippet/CSharp/step-7-keep-pairs-visible_1.cs)]  [!code-vb[VbExpressTutorial4Step7#9](../ide/codesnippet/VisualBasic/step-7-keep-pairs-visible_1.vb)]  
+     [!code-csharp[VbExpressTutorial4Step7#9](../ide/codesnippet/CSharp/step-7-keep-pairs-visible_1.cs)]
+     [!code-vb[VbExpressTutorial4Step7#9](../ide/codesnippet/VisualBasic/step-7-keep-pairs-visible_1.vb)]  
   
      방금 추가한 `if` 문의 첫 번째 줄은 플레이어가 선택하는 첫 번째 레이블의 아이콘이 두 번째 레이블의 아이콘과 같은지 여부를 검사합니다. 두 아이콘이 일치하는 경우 중괄호 사이의 세 문(C#의 경우) 또는 `if` 문 내의 세 문(Visual Basic의 경우)이 실행됩니다. 처음 두 문은 `firstClicked` 및 `secondClicked` 참조 변수를 다시 설정하여 레이블을 더 이상 추적하지 않도록 합니다. 타이머의 Tick 이벤트 처리기에서 이러한 두 문을 인식할 수 있습니다. 세 번째 문은 프로그램에서 메서드의 나머지 문을 실행하지 않고 건너뛰도록 지시하는 `return` 문입니다.  
   

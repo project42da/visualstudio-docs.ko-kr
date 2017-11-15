@@ -4,21 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
-caps.latest.revision: 9
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "9"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: e6ee75cded8cefe4f2e46c4e53edd0f050273a5d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: dab9b5c631edde1883d4e4d2dcfa0dbf530b0441
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-creating-a-realistic-3-d-billiard-ball"></a>연습: 사실적인 3차원 당구공 만들기
 이 연습에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 셰이더 디자이너 및 이미지 편집기를 사용하여 사실적인 3차원 당구공을 만드는 방법을 보여 줍니다. 당구공의 3차원 모양을 만들려면 여러 셰이더 기술을 적절한 질감 리소스와 결합합니다.  
@@ -67,11 +65,11 @@ ms.lasthandoff: 05/13/2017
   
      질감은 다음과 같이 표시됩니다.  
   
-     ![당구공 질감](~/designers/media/gfx_shader_demo_billiard_art_ball_texture.png "gfx_shader_demo_billiard_art_ball_texture")  
+     ![당구공 질감](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png "gfx_shader_demo_billiard_art_ball_texture")  
   
 4.  필요한 경우 이 질감의 저장소 요구 사항을 줄여야 할 수 있습니다. 질감의 너비를 높이에 맞게 줄이면 됩니다. 그러면 너비에 따라 질감이 압축되지만 질감이 구에 매핑된 방식으로 인해 당구공이 렌더링될 때 질감이 확장됩니다. 크기를 조정한 후 질감은 다음과 같이 표시됩니다.  
   
-     ![사각형으로 압축된 당구공 질감](~/designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png "gfx_shader_demo_billiard_art_ball_texture_square")  
+     ![사각형으로 압축된 당구공 질감](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png "gfx_shader_demo_billiard_art_ball_texture_square")  
   
  이제 이 질감을 모델에 적용하는 셰이더를 만들 수 있습니다.  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 05/13/2017
   
  이제 당구공이 다음과 같이 표시됩니다.  
   
- ![질감이 있는 당구공 클로즈업](~/designers/media/gfx_shader_demo_.png "gfx_shader_demo_")  
+ ![질감이 있는 당구공 클로즈업](../designers/media/gfx_shader_demo_.png "gfx_shader_demo_")  
   
 ## <a name="creating-depth-with-the-lambert-lighting-model"></a>램버트 조명 모델을 사용하여 깊이 만들기  
  지금까지 쉽게 인식할 수 있는 당구공을 만들었습니다. 그러나 이 당구공은 실제 당구공의 사실적인 모사라기보다는 만화같이 평면적이고 잘 눈에 띄지 않습니다. 평면적으로 보이는 이유는 셰이더가 당구공 표면의 각 픽셀이 같은 양의 빛을 받는 것처럼 동작하는 너무 단순한 셰이더이기 때문입니다.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 05/13/2017
   
  램버트 조명이 적용되면 당구공이 다음과 같이 표시됩니다.  
   
- ![질감이 있고 빛나는 당구공 클로즈업](~/designers/media/gfx_shader_demo_billiard_ball_2.png "gfx_shader_demo_billiard_ball_2")  
+ ![질감이 있고 빛나는 당구공 클로즈업](../designers/media/gfx_shader_demo_billiard_ball_2.png "gfx_shader_demo_billiard_ball_2")  
   
 ## <a name="enhancing-the-basic-appearance-with-specular-highlights"></a>반사 하이라이트를 사용하여 기본 모양 개선  
  램버트 조명 모델은 질감 전용 셰이더에 없는 모양 및 차원 감각을 제공합니다. 하지만 당구공의 모양이 약간 흐릿합니다.  
@@ -135,7 +133,7 @@ ms.lasthandoff: 05/13/2017
   
  반사광이 적용되면 당구공이 다음과 같이 표시됩니다.  
   
- ![반사광이 추가된 당구공 클로즈업](~/designers/media/gfx_shader_demo_billiard_ball_3.png "gfx_shader_demo_billiard_ball_3")  
+ ![반사광이 추가된 당구공 클로즈업](../designers/media/gfx_shader_demo_billiard_ball_3.png "gfx_shader_demo_billiard_ball_3")  
   
 ## <a name="creating-a-sense-of-space-by-reflecting-the-environment"></a>환경을 반영하여 공간감 만들기  
  반사광이 적용되면 당구공이 약간 사실적으로 보입니다. 올바른 모양, 올바른 그리기 작업 및 올바른 마감을 얻었습니다. 하지만 당구공이 더욱 사실적으로 보이도록 만드는 기술이 하나 더 있습니다.  
@@ -158,13 +156,13 @@ ms.lasthandoff: 05/13/2017
   
 4.  첫 번째와 같은 크기로 두 번째 질감을 만듭니다. 이 질감은 당구대의 표면 및 측면과 당구대 주변 영역에 해당하는 큐브 맵의 4개 측면에서 반복됩니다. 아래쪽 질감과 같은 색을 사용하여 이 질감으로 당구대 표면을 그려야 합니다. 질감은 다음과 같이 표시됩니다.  
   
-     ![큐브 맵 측면의 질감](~/designers/media/gfx_shader_demo_billiard_art_env_texture_side.png "gfx_shader_demo_billiard_art_env_texture_side")  
+     ![큐브 맵 측면의 질감](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png "gfx_shader_demo_billiard_art_env_texture_side")  
   
      반사 맵의 효과는 사진처럼 정확할 필요가 없습니다. 예를 들어 이 문서에서 이미지를 만드는 데 사용된 큐브 맵에는 6개가 아닌 4개 포켓만 포함됩니다.  
   
 5.  다른 질감과 크기가 같은 세 번째 질감을 만듭니다. 이 질감은 당구대 위의 천장에 해당하는 큐브 맵의 상단이 됩니다. 이 반사 부분을 더 눈에 띄게 만들려면 위쪽 조명을 그려 이전 절차의 셰이더에 추가한 반사 하이라이트를 강화합니다. 질감은 다음과 같이 표시됩니다.  
   
-     ![큐브 맵 위쪽의 질감](~/designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png "gfx_shader_demo_billiard_art_env_texture_top2")  
+     ![큐브 맵 위쪽의 질감](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png "gfx_shader_demo_billiard_art_env_texture_top2")  
   
  이제 큐브 맵 측면의 개별 질감을 만들었으므로 도구를 사용하여 단일 .dds 질감에 저장될 수 있는 큐브 맵으로 질감을 어셈블할 수 있습니다. 프로그램이 큐브 맵을 .dds 질감 형식으로 저장할 수 있다면 큐브 맵을 만드는 데 원하는 모든 프로그램을 사용할 수 있습니다. 이 연습에서는 June 2010 DirectX SDK에 포함된 DirectX Texture Tool을 사용하여 질감을 만드는 방법을 보여 줍니다.  
   
@@ -188,7 +186,7 @@ ms.lasthandoff: 05/13/2017
   
  큐브 맵 레이아웃이 다음과 같다고 가정할 수 있습니다.  
   
- ![환경 큐브 맵의 레이아웃](~/designers/media/gfx_shader_demo_billiard_art_env_texture_top.png "gfx_shader_demo_billiard_art_env_texture_top")  
+ ![환경 큐브 맵의 레이아웃](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png "gfx_shader_demo_billiard_art_env_texture_top")  
   
  위쪽의 이미지는 양의 Y(+Y) 큐브 면이고, 중간에, 왼쪽에서 오른쪽까지 이미지는 -X, +Z, +X 및 -Z 큐브 면이고, 아래쪽의 이미지는 -Y 큐브 면입니다.  
   
@@ -212,7 +210,7 @@ ms.lasthandoff: 05/13/2017
   
  환경 매핑이 적용되면 당구공이 다음과 같이 표시됩니다.  
   
- ![환경에 매핑된 당구공의 클로즈업](~/designers/media/gfx_shader_demo_billiard_ball_4.png "gfx_shader_demo_billiard_ball_4")  
+ ![환경에 매핑된 당구공의 클로즈업](../designers/media/gfx_shader_demo_billiard_ball_4.png "gfx_shader_demo_billiard_ball_4")  
   
  이 마지막 이미지에서 추가한 효과가 어떻게 결합되어 매우 사실적인 당구공을 만드는지 알 수 있습니다. 도형, 질감 및 조명은 3차원 개체의 기본 모양을 만들고 반사 하이라이트 및 반사는 당구공을 더 눈에 띠고 환경의 일부처럼 보이게 만듭니다.  
   

@@ -1,30 +1,29 @@
 ---
-title: "확대/축소 컨트롤(사용률 뷰) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.cpu.zoom"
-helpviewer_keywords: 
-  - "동시성 시각화 도우미, 확대/축소 컨트롤(CPU 사용률 뷰)"
+title: "확대/축소 컨트롤(사용률 뷰) | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.cv.cpu.zoom
+helpviewer_keywords: Concurrency Visualizer, Zoom Control (CPU Utilization View)
 ms.assetid: 8aeff804-0183-4588-8218-52e107a5382e
-caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6b055b6970ae4ae20bcb6b2b4ce7c010baa2268f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 확대/축소 컨트롤(사용률 뷰)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-확대\/축소 컨트롤은 관심 있는 특정 영역에 초점을 맞출 수 있도록 CPU 사용률 차트를 확대 및 축소하는 데 유용합니다.  이 컨트롤은 CPU 사용률 차트의 가운데를 확대합니다.  확대하기 전에 관심 있는 영역을 가운데로 맞춰야 합니다.  
+# <a name="zoom-control-utilization-view"></a>확대/축소 컨트롤(사용률 뷰)
+확대/축소 컨트롤은 관심 있는 특정 영역에 초점을 맞출 수 있도록 CPU 사용률 차트를 확대하는 데 유용합니다. 이 컨트롤은 뷰의 가운데로 확대합니다. 따라서 확대하기 전에 관심 영역을 가운데에 배치해야 합니다.  
   
- CPU 사용률 차트 또는 GPU 동작 차트 강조 표시 된 영역을 만들려면 마우스 포인터를 끌 수 있습니다.  마우스 단추를 놓여지면 시간 표시 막대 뷰에서 선택한 범위가 확대됩니다.  
+ CPU 사용률 차트 및 GPU 작업 차트에서 마우스 포인터를 끌어 강조 표시된 영역을 만들 수 있습니다. 마우스 단추를 놓으면 선택된 범위로 뷰가 확대됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [사용률 뷰](../profiling/utilization-view.md)

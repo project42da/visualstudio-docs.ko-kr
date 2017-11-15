@@ -4,24 +4,21 @@ ms.custom:
 ms.date: 3/7/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d30fddae-8e2f-4f50-90d3-8ed2cd35c7a6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 6a91f4d54ce2ef96816787afe1ae8c589f862630
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
-ms.openlocfilehash: 89de0d11791dbf13b9d4fcfcea8168b443d2777b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="azure-sdk-for-python"></a>Python용 Azure SDK
 
 Python용 Azure SDK를 사용하면 Windows, Mac OSX 및 Linux에서 실행되는 응용 프로그램에서 Microsoft Azure 서비스를 쉽게 사용하고 관리할 수 있습니다.
@@ -65,4 +62,3 @@ pip install azure
 SDK용 Git 리포지토리는 [https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python)에 있습니다.
 
 문제를 발견하거나 SDK 사용에 대한 질문이 있는 경우 [리포지토리에 문제를 보고](https://github.com/Azure/azure-sdk-for-python/issues)해 주세요.
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 01/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,31 +23,15 @@ helpviewer_keywords:
 - debug mode
 - custom layouts
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
-caps.latest.revision: 27
-author: kempb
-ms.author: kempb
+caps.latest.revision: "27"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 8ab795965dc205cd783f469d134d64fb2b5dacf6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 85881bf35fb89f753eb4110d7b1128b4761a73a3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio에서 창 레이아웃 사용자 지정
 Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 다양한 개발 워크플로에 가장 적합한 창 레이아웃을 만들 수 있습니다. 레이아웃을 사용자 지정할 때 IDE에서는 레이아웃을 기억합니다. 예를 들어 **솔루션 탐색기** 의 도킹 위치를 변경한 후 Visual Studio를 닫고 다음에 다시 시작하면 다른 컴퓨터에서 작업하고 있는 경우에도 **솔루션 탐색기** 가 같은 위치에 도킹됩니다. 또한 사용자 지정 레이아웃에 이름을 지정하고 저장한 다음 단일 명령으로 레이아웃 간을 전환할 수 있습니다. 예를 들어 편집용 레이아웃과 디버그용 레이아웃을 만들고 **창 &#124; 창 레이아웃 적용** 메뉴 명령을 사용하여 레이아웃 간에 전환할 수 있습니다.  
@@ -105,22 +88,22 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
 
  다음 그림에서는 편집 프레임 내에서만 도킹될 수 있는 문서 창의 안내 다이아몬드를 보여 줍니다.  
 
- ![문서 창 안내 다이아몬드](~/ide/media/documentwindowguidediamonds.png "Documentwindowguidediamonds")  
+ ![문서 창 안내 다이아몬드](../ide/media/documentwindowguidediamonds.png "Documentwindowguidediamonds")  
 
  도구 창은 IDE의 프레임 한쪽이나 편집 프레임 내에서 고정될 수 있습니다. 안내 다이아몬드는 도구 창을 다른 위치로 끌 때 창을 쉽게 다시 도킹할 수 있도록 나타납니다.  
 
  도구 창의 안내 다이아몬드  
 
- ![도구 창 안내 다이아몬드](~/ide/media/vs10guidediamond.png "VS10GuideDiamond")  
+ ![도구 창 안내 다이아몬드](../ide/media/vs10guidediamond.png "VS10GuideDiamond")  
 
  다음 그림에서는 새로운 위치에 도킹되는 솔루션 탐색기를 보여 줍니다. 파란색 음영 영역으로 표시되어 있습니다.  
 
- ![솔루션 탐색기를 새 위치에 도킹](~/ide/media/vs2015_dock_diamond.png "VS2017_Dock_diamond")  
+ ![솔루션 탐색기를 새 위치에 도킹](../ide/media/vs2015_dock_diamond.png "VS2017_Dock_diamond")  
 
 ### <a name="close-and-auto-hide-tool-windows"></a>도구 창 닫기 및 자동 숨기기  
  제목 표시줄의 오른쪽 위에서 X를 클릭하여 도구 창을 닫을 수 있습니다. 창을 다시 열려면 바로 가기 키나 메뉴 명령을 사용합니다. 도구 창은 다른 창을 사용할 때 방해가 되지 않도록 창을 이동시키는 자동 숨기기라는 기능을 지원합니다. 창이 자동으로 숨겨지면 창의 이름이 IDE의 가장자리에 있는 탭에 나타납니다. 창을 다시 사용하려면 창이 다시 표시되도록 탭을 가리킵니다.  
 
- ![자동 숨기기](~/ide/media/vs2015_auto_hide.png "vs2017_auto_hide")  
+ ![자동 숨기기](../ide/media/vs2015_auto_hide.png "vs2017_auto_hide")  
 
 > [!NOTE]
 >  자동 숨기기가 도구 창에서 개별적으로 작동하는지 아니면 도킹된 그룹으로 작동하는지를 설정하려면 **옵션** 대화 상자에서 **Auto Hide button affects active tool windows only(자동 숨기기 단추가 활성 도구 창에만 영향을 미침)** 을 선택하거나 선택 취소합니다. 자세한 내용은 [General, Environment, Options Dialog Box](../ide/reference/general-environment-options-dialog-box.md)을 참조하세요.  
@@ -186,7 +169,7 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
 
 1.  **창 > 창 레이아웃 관리**를 선택하여 사용자 지정 레이아웃을 제거하거나 이름을 바꾸거나 다시 정렬할 수 있습니다. 레이아웃을 이동하면 목록의 새 위치를 반영하도록 키 바인딩이 자동으로 조정됩니다. 바인딩은 수정할 수 없으므로 한 번에 저장할 수 있는 레이아웃의 수는 최대 10개입니다.  
 
-     ![창 레이아웃 관리](~/ide/media/managewindowlayouts.png "ManageWindowLayouts")  
+     ![창 레이아웃 관리](../ide/media/managewindowlayouts.png "ManageWindowLayouts")  
 
      각 레이아웃에 할당된 바로 가기 키를 기억하기 쉽도록 **창 > 창 레이아웃 적용**을 선택합니다.  
 
@@ -195,4 +178,3 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
 ## <a name="related-topics"></a>관련 항목  
 
 [방법: IDE에서 이동](../ide/how-to-move-around-in-the-visual-studio-ide.md)
-

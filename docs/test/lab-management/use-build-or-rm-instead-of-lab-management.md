@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 05/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- automated testing, lab management, test lab
+helpviewer_keywords: automated testing, lab management, test lab
 ms.assetid: F34B0D19-B430-4C01-B402-62A861007E71
-caps.latest.revision: 56
+caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 45d36934cf1c46902cac566203cddf4a118b7fe4
-ms.openlocfilehash: 77a0339e1aae3036990f0d9d133a1fcb68844486
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
-
+ms.openlocfilehash: 8d843800666ae53a686a18fcab28d02eb4c16743
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>자동화된 테스트를 위해 Lab Management 대신 Build 및 Release Management 사용
 
@@ -102,4 +85,3 @@ Lab Center의 셀프 서비스 프로비전 기능에는 두 가지 목표가 �
 * 네트워크 격리의 한 가지 목적은 여러 복제본의 구성을 간소화하는 것이었습니다. 각 복제본이 원본의 정확한 복제본이므로 컴퓨터 이름 및 구성 설정이 있는 그대로 보존되고, 이에 따라 새 환경을 쉽게 설정할 수 있습니다. 그러나 응용 프로그램이 최종적으로 배포되는 방법이 동일하지 않기 때문에 수명 주기에서 나중에 동일한 이점으로 인해 문제가 발생합니다. **대신에** 프로덕션을 설정하는 것과 같은 방법으로 새 환경을 설정해 보고 네트워크 격리 사용을 피하세요.
 
 * 테스트에 필요한 경우 [Microsoft Azure](https://azure.microsoft.com/)와 같은 공용 클라우드 인프라를 사용합니다. 간편하게 [Azure Marketplace](https://azure.microsoft.com/marketplace/) 또는 [Azure 빠른 시작 템플릿](https://azure.microsoft.com/documentation/templates/)의 [Azure Resource Manager 템플릿](https://azure.microsoft.com/documentation/templates/)을 사용하여 개인 네트워크를 통해 연결되고 프록시 또는 ‘jumpbox’를 사용하여 공용 네트워크에만 표시되는 가상 컴퓨터 그룹을 설정할 수 있습니다.
-

@@ -1,30 +1,29 @@
 ---
-title: "marker_series::write_message 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cvmarkersobj/Concurrency::diagnostic::marker_series::write_message"
-helpviewer_keywords: 
-  - "Concurrency::diagnostic::marker_series::write_message 메서드"
+title: "marker_series::write_message 메서드 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cvmarkersobj/Concurrency::diagnostic::marker_series::write_message
+helpviewer_keywords: Concurrency::diagnostic::marker_series::write_message method
 ms.assetid: 546121bc-67e0-4a5a-a456-12bd78fd6de2
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c322fb6f4419aad732db3aa02940edeab6850f10
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# marker_series::write_message 메서드
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-동시성 시각화 추적 파일에 메시지를 씁니다.  
+# <a name="markerserieswritemessage-method"></a>marker_series::write_message 메서드
+동시성 시각화 도우미 추적 파일에 메시지를 씁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void write_message(  
@@ -49,9 +48,9 @@ void write_message(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_Format`  
- 인수 목록에서 배열의 개체에 해당하는 0개 이상의 서식 항목과 혼합된 텍스트를 포함하는 복합컨트롤 문자열입니다.  
+ 인수 목록의 개체에 해당하는 0개 이상의 서식 항목과 뒤섞인 텍스트를 포함하는 복합 형식 문자열입니다.  
   
  `_Importance`  
  중요도 수준입니다.  
@@ -59,10 +58,10 @@ void write_message(
  `_Category`  
  Category.Importance 수준입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** cvmarkersobj.h  
   
  **네임스페이스:** Concurrency::diagnostic  
   
-## 참고 항목  
- [marker\_series 클래스](../profiling/marker-series-class.md)
+## <a name="see-also"></a>참고 항목  
+ [marker_series 클래스](../profiling/marker-series-class.md)

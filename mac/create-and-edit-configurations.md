@@ -6,14 +6,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: CC1B72D6-12FF-4CCC-A9D4-00F2DC14589F
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: 0cce820d76660124838307cc231b379c449b58a7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="creating-and-editing-build-configurations"></a>빌드 구성 만들기 및 편집
 
 개별 프로젝트 또는 솔루션 전체에 대한 빌드 구성을 만들 수 있습니다. 이러한 구성을 통해 빌드를 정밀하게 제어할 수 있습니다.
@@ -62,4 +60,3 @@ ms.lasthandoff: 08/11/2017
 **이름 바꾸기** 단추를 선택합니다.
 
 ![이름 바꾸기 대화 상자](media/create-and-edit-configurations-image5.png) 
-

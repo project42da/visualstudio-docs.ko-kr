@@ -4,42 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.performance.property.instrument
+f1_keywords: vs.performance.property.instrument
 helpviewer_keywords:
 - profiling tools, pre-instrument events
 - events [Visual Studio], pre-instrument
 - pre-instrument events, performance tools
 ms.assetid: 6a8d5340-1d1b-4d81-88dd-8e1f435eb828
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: afbc73dbeda9d8201d1ed0cfccdf80025fc82306
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 7daf63f27d9c285c126e437f55d25ff674d7360f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>방법: 계측 전 명령 및 계측 후 명령 지정
 성능 세션의 이진 파일이 계측되기 전이나 계측된 후 실행되는 명령을 지정할 수 있습니다. 명령줄에서 실행될 수 있는 모든 명령을 계측 전 또는 계측 후 이벤트로 지정할 수 있습니다. 예를 들어 이진 파일이 계측된 후 실행되는 배치 파일에서 강력한 이름 키를 사용하여 어셈블리 재서명을 자동화하는 명령을 지정할 수 있습니다.  

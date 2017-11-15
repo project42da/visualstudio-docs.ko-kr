@@ -1,27 +1,24 @@
 ---
 title: R Tools for Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: hero-article
 ms.assetid: 11324501-ceb6-47a2-ae13-e9e992d3603e
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 693b070974c86babcfb57f71d37aa7eb030aac90
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 80a10c710aac8413bd59b53bb61de7a982c09952
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="working-with-r-in-visual-studio"></a>Visual Studio에서 R 작업
 
 R은 통계 계산 및 그래픽을 위한 고도로 확장 가능한 언어 및 환경입니다. 이 프로그램은 GNU General Public License에 따라 무료로 배포되며, 강력한 커뮤니티 지원을 활용할 수 있고, 수학 기호 및 수식을 포함하는 게시 품질 도표를 생성하는 기능으로 잘 알려져 있습니다. [r project.org](https://www.r-project.org/about.html) 및 [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)(R 소개)에서 R에 대해 자세히 알아볼 수 있습니다.
@@ -126,4 +123,3 @@ Visual Studio에서 R을 사용해 보려면
 1. **웃는 얼굴/찡그린 얼굴 보내기**: **R Tools > 피드백** 메뉴에서는 문제점 진단에 도움이 될 수 있게 신속하게 피드백을 보내고 RTVS 로그 파일을 첨부할 수 있습니다. (로그를 따로 전송하려는 경우 `%temp%/RTVSlogs.zip`에 기록됩니다.) **도움말 > 피드백 > 설정** 메뉴 명령을 사용하거나 설치 중에 Visual Studio 원격 분석에서 옵트아웃(opt-out)한 경우 로깅이 사용되지 않도록 설정됩니다.
 
 1. **전자 메일**: *microsoft.com의 rtvsuserfeedback*에서 팀으로 직접 피드백을 보낼 수 있습니다.
-

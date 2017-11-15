@@ -3,38 +3,20 @@ title: "Visual Studio 성능 팁과 요령 | Microsoft Docs"
 ms.date: 08/31/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- debugger
+helpviewer_keywords: debugger
 ms.assetid: 2fbcb59e-e981-4b40-8b7a-c1140d31ec4b
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 173811a4f2d9974755e2432822c801388403ab7c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 4306111cd49a5299bfa5d4e5e22b212bc7799fe2
-ms.openlocfilehash: fbaa543564506a99d3ed6833ec4d1f692fae43f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 성능 팁과 요령
 
@@ -61,7 +43,7 @@ Visual Studio 성능 권장 사항은 드물게 발생할 수 있는 메모리 �
 
     **경량 솔루션 로드**를 사용하려면 **도구 > 옵션 > 프로젝트 및 솔루션 > 경량 솔루션 로드**를 선택합니다.
 
-    이 모드에서는 일부 IDE 기능을 사용할 수 없습니다. 이 선택이 도움이 되는지 판단하려면 [솔루션 로드 시간 단축](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/) 및 [솔루션 로딩 최적화](../ide/optimize-solution-loading-in-visual-studio)를 참조하세요.
+    이 모드에서는 일부 IDE 기능을 사용할 수 없습니다. 이 선택이 도움이 되는지 판단하려면 [솔루션 로드 시간 단축](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/) 및 [솔루션 로딩 최적화](../ide/optimize-solution-loading-in-visual-studio.md)를 참조하세요.
 
 - **프로젝트 언로드**
 
@@ -152,4 +134,3 @@ CLR 가비지 수집기에 대한 자세한 내용은 [Fundamental of Garbage Co
 
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio IDE](../ide/index.md)
-

@@ -1,85 +1,85 @@
 ---
-title: "방법: 프로파일링 도구 보고서 뷰에서 노이즈 감소 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.noisereduction.dialog"
-helpviewer_keywords: 
-  - "프로파일링 도구, 잘라내기"
-  - "프로파일링 도구, 보고서 노이즈 감소"
-  - "프로파일링 도구, 접기"
+title: "방법: 보고서 뷰에서 노이즈 감소 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.performance.noisereduction.dialog
+helpviewer_keywords:
+- profiling tools, trimming
+- profiling tools, report noise reduction
+- profiling tools, folding
 ms.assetid: b07e0375-bb73-47e3-8d1d-b9b492fb16c9
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b1cda2b61c50deb98752063f9606849356386a84
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 프로파일링 도구 보고서 뷰에서 노이즈 감소 구성
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-호출 트리 뷰 및 할당 뷰에 표시되는 데이터의 크기를 제한하여 성능 보고서에서 노이즈 감소를 구성할 수 있습니다.  노이즈 감소를 사용하면 성능 문제가 더욱 두드러집니다.  이 방법은 성능 보고서를 분석할 때 유용합니다.  
+# <a name="how-to-configure-noise-reduction-in-report-views"></a>방법: 보고서 뷰에서 노이즈 감소 구성
+호출 트리 뷰 및 할당 뷰에 제공되는 데이터 양을 제한하여 노이즈 감소를 위한 성능 보고서를 구성할 수 있습니다. 노이즈 감소를 사용하면 성능 문제가 더 두드러집니다. 성능 보고서를 분석할 경우 이 방법이 유용합니다.  
   
- 노이즈 감소 구성 옵션에는 다음과 같은 설정이 있습니다.  
+ 노이즈 감소 구성 옵션에는 다음 설정이 포함됩니다.  
   
--   **잘라내기** 보고서를 분석할 때 다음 잘라내기 절차에 설명된 것처럼 값의 범위에 포함된 함수와 사용자가 구성한 임계값 설정을 뷰에서 생략합니다.  잘라내기는 기본적으로 사용하도록 설정됩니다.  
+-   **잘라내기** 보고서가 분석될 때 뷰에서는 이어서 나오는 잘라내기 절차에 설명된 대로 구성한 값 및 임계값 설정에 해당하는 함수를 생략합니다. 기본적으로 잘라내기는 사용하도록 설정됩니다.  
   
--   **접기** 접기를 사용하는 경우 다음 접기 절차에 설명된 것처럼 사용자가 구성한 설정을 만족하는 경로에서 연속되는 함수가 병합됩니다.  접기는 기본적으로 사용하도록 설정됩니다.  
+-   **접기** 접기를 사용하도록 설정하면 이어서 나오는 접기 절차에 설명된 대로 구성한 설정을 충족하는 경로의 연속 함수가 병합됩니다. 기본적으로 접기는 사용하도록 설정됩니다.  
   
-### 성능 보고서에 대해 트리밍을 구성하려면  
+### <a name="to-configure-trimming-for-a-performance-report"></a>성능 보고서에 대한 잘라내기를 구성하려면  
   
-1.  생성된 보고서에 호출 트리 뷰나 할당 뷰가 표시되면 **개발자** 메뉴에서 **프로파일러**를 클릭한 다음 **노이즈 감소 옵션**을 클릭합니다.  
+1.  생성된 보고서에서 호출 트리 뷰 또는 할당 뷰가 표시되면 **개발자** 메뉴에서 **프로파일러**, **노이즈 감소 옵션**을 차례로 클릭합니다.  
   
      **노이즈 감소** 대화 상자가 나타납니다.  
   
-2.  트리밍을 사용하려면 다음 단계를 수행합니다.  
+2.  잘라내기를 사용하도록 설정하려면 다음 단계를 수행합니다.  
   
-    1.  **잘라내기 사용**을 선택합니다.  이것이 기본값입니다.  
+    1.  **잘라내기 사용**을 선택합니다. 이것이 기본 설정입니다.  
   
         > [!NOTE]
-        >  노이즈 감소를 사용하면 보고서에 정보 표시줄이 표시됩니다.  자세한 내용은 [호출 트리 뷰](../profiling/call-tree-view.md) 및 [할당 뷰](../profiling/dotnet-memory-allocations-view.md)를 참조하십시오.  
+        >  노이즈 감소가 사용되면 알림 표시줄이 보고서에 표시됩니다. 자세한 내용은 [호출 트리 뷰](../profiling/call-tree-view.md) 및 [할당 뷰](../profiling/dotnet-memory-allocations-view.md)를 참조하세요.  
   
-    2.  **값** 드롭다운 목록에서 적용 가능한 설정을 선택하여 값 설정을 구성합니다.  
+    2.  **값** 드롭다운 목록을 사용하고 적용 가능한 설정을 선택하여 값 설정을 구성합니다.  
   
     3.  **임계값** 텍스트 상자에 백분율 값을 입력하여 원하는 임계값 설정을 구성합니다.  
   
-    4.  생성된 보고서에서 노이즈 감소 경고를 사용하려면 **노이즈 감소를 사용하도록 설정한 경우 생성된 보고서에 경고를 표시합니다.**를 선택합니다.  이것이 기본값입니다.  
+    4.  생성된 보고서에서 노이즈 감소 경고를 사용하도록 설정하려면 **노이즈 감소를 사용하도록 설정한 경우 경고를 표시합니다.**를 선택합니다. 이것이 기본 설정입니다.  
   
-3.  트리밍을 사용하지 않으려면 **잘라내기 사용**의 선택을 취소합니다.  
+3.  잘라내기를 사용하지 않도록 설정하려면 **잘라내기 사용**을 선택 취소합니다.  
   
 4.  **확인**을 클릭합니다.  
   
-### 성능 보고서에 대해 정리를 구성하려면  
+### <a name="to-configure-folding-for-a-performance-report"></a>성능 보고서에 대한 접기를 구성하려면  
   
-1.  **개발자** 메뉴에서 **프로파일러**를 클릭한 다음 **노이즈 감소 옵션**을 클릭합니다.  
+1.  **개발자** 메뉴에서 **프로파일러**, **노이즈 감소 옵션**을 차례로 클릭합니다.  
   
      **노이즈 감소** 대화 상자가 나타납니다.  
   
-2.  정리를 사용하려면 다음 단계를 수행합니다.  
+2.  접기를 사용하도록 설정하려면 다음 단계를 수행합니다.  
   
-    1.  **접기 사용**을 선택합니다.  이것이 기본값입니다.  
+    1.  **접기 사용**을 선택합니다. 이것이 기본 설정입니다.  
   
         > [!NOTE]
-        >  노이즈 감소를 사용하면 보고서에 정보 표시줄이 표시됩니다.  자세한 내용은 [호출 트리 뷰](../profiling/call-tree-view.md) 및 [할당 뷰](../profiling/dotnet-memory-allocations-view.md)를 참조하십시오.  
+        >  노이즈 감소가 사용되면 알림 표시줄이 보고서에 표시됩니다. 자세한 내용은 [호출 트리 뷰](../profiling/call-tree-view.md) 및 [할당 뷰](../profiling/dotnet-memory-allocations-view.md)를 참조하세요.  
   
-    2.  **값** 드롭다운 목록에서 적용 가능한 설정을 선택하여 값 설정을 구성합니다.  
+    2.  **값** 드롭다운 목록을 사용하고 적용 가능한 설정을 선택하여 값 설정을 구성합니다.  
   
     3.  **임계값** 텍스트 상자에 백분율 값을 입력하여 원하는 임계값 설정을 구성합니다.  
   
-    4.  생성된 보고서에서 노이즈 감소 경고를 사용하려면 **노이즈 감소를 사용하도록 설정한 경우 생성된 보고서에 경고를 표시합니다.**를 선택합니다.  이것이 기본값입니다.  
+    4.  생성된 보고서에서 노이즈 감소 경고를 사용하도록 설정하려면 **노이즈 감소를 사용하도록 설정한 경우 경고를 표시합니다.**를 선택합니다. 이것이 기본 설정입니다.  
   
-3.  정리를 사용하지 않으려면 **접기 사용**의 선택을 취소합니다.  
+3.  접기를 사용하지 않도록 설정하려면 **접기 사용**을 선택 취소합니다.  
   
 4.  **확인**을 클릭합니다.  
   
-## 참고 항목  
- [프로파일링 도구 보고서 뷰 사용자 지정](../profiling/customizing-performance-tools-report-views.md)   
- [방법: 계측에서 간단한 함수 제외 또는 포함](../Topic/How%20to:%20Exclude%20or%20Include%20Short%20Functions%20from%20Instrumentation.md)   
+## <a name="see-also"></a>참고 항목  
+ [성능 도구 보고서 뷰 사용자 지정](../profiling/customizing-performance-tools-report-views.md)   
+ [방법: 계측에서 간단한 함수 제외 또는 포함](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)   
  [호출 트리 뷰](../profiling/call-tree-view.md)   
  [할당 뷰](../profiling/dotnet-memory-allocations-view.md)

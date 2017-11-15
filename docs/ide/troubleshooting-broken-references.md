@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 03/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,30 +14,15 @@ helpviewer_keywords:
 - referencing files from projects
 - referencing components, troubleshooting
 ms.assetid: 00a9ade9-652e-40de-8ada-85f63cd183ee
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 61a074110e0a3730c971c319f98498324868067d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: 7a6216f70f6e9eab3887439dee2f35aa59de37c0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="troubleshoot-broken-references"></a>끊어진 참조 문제 해결
 응용 프로그램에서 끊어진 참조를 사용하려고 하면 예외 오류가 생성됩니다. 참조된 구성 요소를 찾을 수 없는 것이 오류의 주된 원인이지만, 참조가 끊어진 것으로 간주되는 여러 상황이 있습니다. 다음 목록에 이러한 경우가 나와 있습니다.  
@@ -106,4 +90,3 @@ ms.lasthandoff: 05/30/2017
 
 ## <a name="see-also"></a>참고 항목  
  [프로젝트 디자이너, 참조 페이지(Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)   
-

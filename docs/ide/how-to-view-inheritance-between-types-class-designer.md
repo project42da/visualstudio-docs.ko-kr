@@ -4,41 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.classdesigner.AssociationTypeNotFoundError
+f1_keywords: vs.classdesigner.AssociationTypeNotFoundError
 helpviewer_keywords:
 - types [Visual Studio], inheritance
 - types [Visual Studio], base
 - types [Visual Studio], derived
 ms.assetid: ea3f0ada-f53b-4fb1-9fb5-908286f5ec3e
-caps.latest.revision: 15
-author: kempb
-ms.author: kempb
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: a7e4e5463dce57f1e81b4f295c18de29b1757c91
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 5007a275759ca2bf3a84c555216546ad481150fb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-view-inheritance-between-types-class-designer"></a>방법: 형식 간의 상속 보기(클래스 디자이너)
 클래스 디자이너의 클래스 다이어그램에서 기본 형식과 파생 형식 간에 상속 관계(있는 경우)를 찾을 수 있습니다. 두 형식 간에 상속 관계가 없는 경우 새로 만들려면 [방법: 형식 간의 상속 만들기(클래스 디자이너)](../ide/how-to-create-inheritance-between-types-class-designer.md)를 참조하세요.  

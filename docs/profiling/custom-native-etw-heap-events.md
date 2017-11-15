@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 02/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
-caps.latest.revision: 8
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
 manager: ghogen
-dev_langs:
-- C++
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+dev_langs: C++
+ms.openlocfilehash: 10d4ab630132d8ce4191978de669436ca7ba5852
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
-ms.openlocfilehash: f2a659347823fee4b933463011c0b69c07fa937f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="custom-native-etw-heap-events"></a>사용자 지정 네이티브 ETW 힙 이벤트
 
 Visual Studio에는 네이티브 메모리 프로파일러를 비롯한 다양한 [프로파일링 및 진단 도구](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)가 포함되어 있습니다.  이 프로파일러는 힙 공급자에서 [ETW 이벤트](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-)를 후크하고 메모리 할당 및 사용 방법을 분석합니다.  기본적으로 이 도구는 표준 Windows 힙에서 만든 할당만 분석할 수 있으므로 이 네이티브 힙 외부의 할당은 표시되지 않습니다.
@@ -176,6 +158,5 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 > Visual Studio의 **성능 프로파일링** 도구 집합에도 **메모리 사용량** 도구가 포함되어 있습니다. 이 도구 집합은 **디버그 > 성능 프로파일러** 메뉴 옵션 또는 **Alt+F2** 키보드 조합을 통해 사용하도록 설정할 수 있습니다.  이 기능은 힙 추적을 포함하지 않으므로 여기서 설명하는 사용자 지정 힙을 표시하지 않습니다.  **진단 도구** 창(**디버그 > Windows > 진단 도구 표시** 메뉴 또는 **Ctrl+Alt+F2** 키보드 조합을 사용하여 설정 가능)에만 이 기능이 포함되어 있습니다.
 
 ## <a name="see-also"></a>참고 항목
-* [프로파일링 도구](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)
-* [메모리 사용](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)
-
+[프로파일링 도구](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)  
+[메모리 사용](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)

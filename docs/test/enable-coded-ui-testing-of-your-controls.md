@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
-caps.latest.revision: 22
+caps.latest.revision: "22"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0d9e28ee58dde41703f2149534f542b08d55b9ec
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 00f7cd1d45bca63387acc7f38b39b1cb51b4b2be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>컨트롤의 코딩된 UI 테스트 사용
 코딩된 UI 테스트 프레임워크에 대한 지원을 구현하면 컨트롤을 보다 쉽게 테스트할 수 있습니다. 지원 수준 증가는 점진적으로 추가할 수 있습니다. 이를 위해서는 먼저 기록 및 재생 및 속성 유효성 검사 지원부터 시작합니다. 이를 기반으로 사용해서 코딩된 UI 테스트 빌더가 사용자 컨트롤의 사용자 지정 속성을 인식하도록 허용하고 생성된 코드에서 이러한 속성에 액세스하기 위한 사용자 지정 클래스를 제공할 수 있습니다. 또한 기록 중인 작업의 의도와 가까운 방식으로 코딩된 UI 테스트 빌더가 작업을 캡처하도록 할 수 있습니다.  
@@ -238,4 +222,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Forms.AccessibleObject>   
  [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)
-

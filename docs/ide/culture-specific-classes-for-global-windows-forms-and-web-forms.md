@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,30 +25,15 @@ helpviewer_keywords:
 - classes [Visual Studio], culture-specific
 - localization [Visual Studio], culture-specific classes
 ms.assetid: 0d06a0a4-f887-4f7c-bde7-1d543c06f803
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1864d3bd07906d5bd7413689c912e0a3c7ede036
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: eaec493f9f0ba258af8dd0c51104ec1bdfeefbb1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>전역 Windows Forms 및 Web Forms을 위한 문화권 관련 클래스
 문화권마다 날짜, 시간, 숫자, 통화 및 기타 정보를 표시하는 규칙이 서로 다릅니다. <xref:System.Globalization> 네임스페이스는 <xref:System.Globalization.DateTimeFormatInfo>, **Calendar**, <xref:System.Globalization.NumberFormatInfo> 등 문화권 관련 값이 표시되는 방식을 수정하는 데 사용할 수 있는 클래스를 포함합니다.  

@@ -13,29 +13,12 @@ ms.assetid: e0846d4d-2ce1-48e3-b219-674ff070bf4e
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.technology:
-- vs-acquisition
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 99d1cfc816d5fd64367ff4524de89776ef25a4b8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.technology: vs-acquisition
+ms.openlocfilehash: 7759e67a4ce886388b9a7afea531448edeefac54
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="talk-to-us"></a>Talk to Us
 제품과 설명서를 개선할 수 있는 아이디어를 보내 주세요. 항상 개인적으로 회신을 드릴 수는 없지만 피드백을 담당자에게 전해 드리겠습니다.  
@@ -71,4 +54,3 @@ Microsoft 지원 서비스는 현재 가격, 약관 및 조건에 따라 다를 
 
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio의 문제를 보고하는 방법](how-to-report-a-problem-with-visual-studio-2017.md)
-

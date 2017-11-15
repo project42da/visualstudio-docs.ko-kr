@@ -5,23 +5,20 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- javascript
+ms.technology: javascript
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- JavaScript, Windows Runtime API
+helpviewer_keywords: JavaScript, Windows Runtime API
 ms.assetid: 2f56d70c-c80d-4876-8e6a-8ae031d31c22
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
 ms.openlocfilehash: 693b3dac9def5533417638c3ec1c0de8db1d5fe3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="considerations-when-using-the-windows-runtime-api"></a>Windows 런타임 API 사용 시 고려 사항
 Windows 런타임 API의 거의 모든 요소를 JavaScript에서 사용할 수 있습니다. 그러나 Windows 런타임 요소의 JavaScript 표현에는 사용자가 유의해야 하는 몇 가지 요소가 있습니다.  

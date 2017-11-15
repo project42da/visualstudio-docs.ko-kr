@@ -7,19 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c71a4d7c-120e-4559-a114-3a99c4b860a9
-caps.latest.revision: 7
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0bb84ea6c47764aa0429fdebf160dae0fd47e570
-
+ms.openlocfilehash: c2a665a397e89edf80f62d0150a98c1941afcd1d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="sync-changes-between-xcode-and-visual-studio"></a>XCode와 Visual Studio 간에 변경 내용 동기화
 모바일 개발용 Microsoft Visual C++ 구성 요소에는 PC와 Mac 간에 작업을 동기화하는 원격 기능이 포함되어 있습니다. Visual Studio 및 Mac 컴퓨터를 쌍으로 연결하면 XCode에서 프로젝트를 여는 데 사용할 수 있는 새로운 옵션을 Visual Studio에서 iOS 응용 프로그램 프로젝트에 대해 상용하고, XCode와 Visual Studio 간에 코드를 이동하고, 임시 XCode 프로젝트 디렉터리를 정리할 수 있습니다.  
@@ -36,7 +32,7 @@ ms.openlocfilehash: 0bb84ea6c47764aa0429fdebf160dae0fd47e570
 ### <a name="open-in-xcode"></a>XCode에서 열기  
  Visual Studio에서 XCode에서 프로젝트를 열려면 **원격 컴퓨터** 하위 메뉴에서 **XCode에서 열기**를 선택하여 쌍으로 연결된 원격 컴퓨터에서 선택한 프로젝트를 엽니다. vcremote 서버를 사용하여 Mac에서 XCode를 열고 프로젝트의 복사본이 포함되어 있는 Mac에 생성된 임시 디렉터리로 이동합니다. Visual Studio에서 프로젝트에 사용되는 임시 디렉터리를 보여 주는 팝업 대화 상자가 표시됩니다. 원격 컴퓨터에서 수행하는 작업은 Visual Studio의 **출력** 창에도 표시됩니다. 이러한 작업을 확인하려면 **출력** 창 위쪽의 **출력 보기 선택** 드롭다운에서 **Visual C++ 원격 컴퓨터**를 선택해야 할 수 있습니다.  
   
- ![원격 컴퓨터 작업이 표시되는 출력 창](~/cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
+ ![원격 컴퓨터 작업이 표시되는 출력 창](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
   
  Mac에서는 모든 XCode 도구를 사용하여 코드/리소스, 스토리보드 및 작업을 편집할 수 있습니다. Visual Studio에서 iOS 응용 프로그램 프로젝트에는 원격 컴퓨터에서 변경을 수행했을 수 있음을 나타내기 위해 "XCode에서 열림" 주석이 표시됩니다. 편집이 완료되면 원격에서 끌어오기 또는 원격에서 증분 끌어오기 명령을 사용하여 변경 내용을 Visual Studio 프로젝트로 다시 복사할 수 있습니다.  
   
@@ -54,8 +50,3 @@ ms.openlocfilehash: 0bb84ea6c47764aa0429fdebf160dae0fd47e570
  원격 정리 명령을 사용하면 원격 컴퓨터에서 임시 프로젝트 디렉터리의 파일을 삭제할 수 있습니다. 이 경우 소스 파일이나 빌드 프로젝트를 비롯한 디렉터리의 콘텐츠가 Mac에서 제거됩니다. 원격 정리 명령을 사용하기 전에 원격에서 끌어오기 또는 원격에서 증분 끌어오기를 사용하여 유지하려는 변경 내용을 Visual Studio로 다시 동기화했는지 확인하세요.  
   
  원격 컴퓨터에서 임시 프로젝트 디렉터리를 정리하려면 Visual Studio의 **솔루션 탐색기** 창에서 iOS 응용 프로그램 프로젝트를 마우스 오른쪽 단추로 클릭하여 상황에 맞는 메뉴를 엽니다. **원격 컴퓨터**를 선택하고 **원격 정리**를 선택하여 Mac에서 프로젝트 디렉터리 파일을 제거합니다.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

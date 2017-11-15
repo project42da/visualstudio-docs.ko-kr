@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f3fb5df4-3aae-40e4-9450-bbe15b0c5af5
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 2b73f62b59c2106cdda090133013603e3dc887c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 6794bf2bbf53df5648c595d7a4ec47b30a974359
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Troubleshooting the Visual Studio Emulator for Android
 이 항목에는 Android용 Visual Studio 에뮬레이터를 사용하는 동안 발생할 수 있는 문제를 해결하는 데 도움이 되는 정보가 들어 있습니다.  
@@ -227,11 +210,11 @@ ms.lasthandoff: 05/13/2017
   
     2.  vEthernet(내부 이더넷 포트 Windows Phone 에뮬레이터 내부 스위치) 어댑터에 대해 상황에 맞는 메뉴에서 **속성** 을 선택합니다.  
   
-         ![Hyper&#45;V에서 사용되는 가상 어댑터](~/cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")  
+         ![Hyper&#45;V에서 사용되는 가상 어댑터](../cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")  
   
          어댑터 속성은 다음과 같습니다.  
   
-         ![가상 어댑터 속성](~/cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")  
+         ![가상 어댑터 속성](../cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")  
   
     3.  이 어댑터에 대해 **이 연결에 다음 항목 사용** 에서 선택해야 하는 유일한 항목은 다음과 같습니다.  
   
@@ -259,7 +242,7 @@ ms.lasthandoff: 05/13/2017
   
     -   Hyper-V를 열고 가상 스위치 관리자로 이동합니다. "Windows Phone 에뮬레이터 내부 스위치"라는 가상 스위치를 만들고 해당 연결 형식을 **내부 네트워크**로 설정합니다.  
   
-         ![가상 스위치 관리자](~/cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")  
+         ![가상 스위치 관리자](../cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")  
   
      이제 에뮬레이터를 시작합니다. 에뮬레이터가 작동됩니다.  
   

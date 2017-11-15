@@ -1,28 +1,24 @@
 ---
 title: "Visual Studio에서 혼합 모드 Python/C++ 디버깅에 대한 기호 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/12/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be5fdf2f-b55f-488a-9772-58adfe07a7ab
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 365131bf30f57c90715bd04cded0f7c4c5761797
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 1be4e28055f0501433f85325870654671c12f961
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="installing-debugging-symbols-for-python-interpreters"></a>Python 인터프리터에 대한 디버깅 기호 설치
 
 완전한 디버깅 환경을 제공하기 위해, Visual Studio의 [혼합 모드 Python 디버거](debugging-mixed-mode.md)는 수많은 내부 데이터 구조를 구문 분석하는 데 사용되는 Python 인터프리터의 디버그 기호가 필요합니다. 예를 들어 python27.dll의 경우 해당 기호 파일은 python27.pdb이고, python36.dll의 경우 기호 파일은 python36.pdb입니다. 인터프리터의 각 버전은 다양한 모듈에 대한 기호 파일도 제공합니다.

@@ -4,33 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2000b214-ae92-4334-b549-aa0eb4f45fe1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 834f53c8d75a06de69f1afe682a0a0b1863dfde0
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 3e2e14748e27d965762b3245908382b278e6e132
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>코딩된 UI 테스트에서 HTML5 컨트롤 사용
 코딩된 UI 테스트에는 Internet Explorer 9 및 Internet Explorer 10에 포함된 일부 HTML5 컨트롤에 대한 지원이 포함됩니다.  
@@ -59,7 +44,7 @@ ms.lasthandoff: 04/04/2017
 ###  <a name="UsingHTML5ControlsCodedUITestsAudio"></a> 오디오 컨트롤  
  **오디오 컨트롤:** HTML5 오디오 컨트롤에 대한 작업은 올바르게 기록되고 재생됩니다.  
   
- ![HTML5 오디오 컨트롤](~/test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
+ ![HTML5 오디오 컨트롤](../test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
   
 |작업|기록 중|생성된 코드|  
 |------------|---------------|--------------------|  
@@ -102,7 +87,7 @@ string Volume
 ###  <a name="UsingHTML5ControlsCodedUITestsVideo"></a> 비디오 컨트롤  
  **비디오 컨트롤:** HTML5 비디오 컨트롤에 대한 작업은 올바르게 기록되고 재생됩니다.  
   
- ![HTML5 비디오 컨트롤](~/test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
+ ![HTML5 비디오 컨트롤](../test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
   
 |작업|기록 중|생성된 코드|  
 |------------|---------------|--------------------|  
@@ -132,7 +117,7 @@ string VideoWidth
 ###  <a name="UsingHTML5ControlsCodedUITestsSlider"></a> 슬라이더  
  **슬라이더 컨트롤:** HTML5 슬라이더 컨트롤에 대한 작업은 올바르게 기록되고 재생됩니다.  
   
- ![HTML5 슬라이더 컨트롤](~/test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
+ ![HTML5 슬라이더 컨트롤](../test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
   
 |작업|기록 중|생성된 코드|  
 |------------|---------------|--------------------|  
@@ -152,7 +137,7 @@ string ValueAsNumber
 ###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar  
  **ProgreesBar 컨트롤:** ProgressBar는 상호 작용할 수 없는 컨트롤입니다. 이 컨트롤의 `Value` 및 `Max` 속성에 어설션을 추가할 수 있습니다.  
   
- ![HTML5 ProgressBar 컨트롤](~/test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
+ ![HTML5 ProgressBar 컨트롤](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
   
 ## <a name="see-also"></a>참고 항목  
  [HTML 요소](http://go.microsoft.com/fwlink/?LinkID=232441)   
@@ -160,4 +145,3 @@ string ValueAsNumber
  [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
  [코딩된 UI 테스트 사용자 지정](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeCUITModify)   
  [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-

@@ -4,53 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Microsoft.VisualStudio.Publish.BaseProvider.Dialog.Bootstrapper
+f1_keywords: Microsoft.VisualStudio.Publish.BaseProvider.Dialog.Bootstrapper
 dev_langs:
 - VB
 - CSharp
 - C++
-helpviewer_keywords:
-- Prerequisites dialog box
+helpviewer_keywords: Prerequisites dialog box
 ms.assetid: 53ac863c-77a0-409b-91e5-7a4bd8b8474e
-caps.latest.revision: 75
-author: kempb
-ms.author: kempb
+caps.latest.revision: "75"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
-ms.openlocfilehash: 5a8237e5c437878b22bd3c67a3a4ba2cdc3fa126
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: 68e326d8045733fc4f491c51405ed51414a92afd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Prerequisites Dialog Box
-<a id="prerequisites-dialog-box" class="xliff"></a>
+# <a name="prerequisites-dialog-box"></a>Prerequisites Dialog Box
 이 대화 상자에서는 설치할 필수 구성 요소, 설치 방법 및 패키지 설치 순서를 지정합니다.  
   
  이 대화 상자에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드를 선택한 다음 **프로젝트** 메뉴에서 **속성**을 클릭합니다. **프로젝트 디자이너** 가 나타나면 **게시** 탭을 클릭합니다. **게시** 페이지에서 **필수 구성 요소**를 클릭합니다. 설치 프로젝트인 경우 **프로젝트** 메뉴에서 **속성**을 클릭합니다. **속성 페이지** 대화 상자가 표시되면 **필수 구성 요소**를 클릭합니다.  
   
-## UI 요소 목록
-<a id="uielement-list" class="xliff"></a>  
+## <a name="uielement-list"></a>UI 요소 목록  
   
 |요소|설명|  
 |-------------|-----------------|  
@@ -61,8 +40,7 @@ ms.lasthandoff: 05/26/2017
 |**내 응용 프로그램과 동일한 위치에서 필수 구성 요소 다운로드**|응용 프로그램과 동일한 위치에서 필수 구성 요소가 설치되도록 지정합니다. 이 옵션은 모든 필수 구성 요소 패키지를 게시 위치에 복사합니다. 이 옵션이 작동하려면 필수 구성 요소 패키지가 개발 컴퓨터에 있어야 합니다.|  
 |**다음 위치에서 필수 구성 요소 다운로드**|선택한 위치에서 필수 구성 요소가 설치되도록 지정합니다. **찾아보기** 단추를 사용하여 위치를 선택할 수 있습니다.|  
   
-## 필수 구성 요소 정보
-<a id="prerequisites-information" class="xliff"></a>  
+## <a name="prerequisites-information"></a>필수 구성 요소 정보  
  **필수 구성 요소** 대화 상자에 나타나는 필수 구성 요소는 다음 목록에 나와 있는 구성 요소와 다를 수도 있습니다. 대화 상자를 처음 열면 **필수 조건 대화 상자**에 나열된 필수 조건 패키지가 자동으로 설정됩니다. 이후에 프로젝트의 대상 프레임워크를 변경하는 경우에는 새 대상 프레임워크에 맞도록 필수 구성 요소를 수동으로 선택해야 합니다.  
   
 |요소|설명|  
@@ -85,8 +63,7 @@ ms.lasthandoff: 05/26/2017
 |**Windows Installer 3.1**|이 패키지는 Windows Installer 설치 프로젝트를 설치할 수 있는 Microsoft Windows Installer 재배포 가능 패키지, 버전 3.1을 설치합니다. Windows Server 2003 SP1 이상에는 이 패키지가 미리 설치되어 있습니다.<br /><br /> 이 항목은 기본적으로 선택됩니다.|  
 |**Windows Installer 4.5**|이 패키지는 Windows Installer 설치 프로젝트를 설치할 수 있는 Microsoft Windows Installer 재배포 가능 패키지, 버전 4.5를 설치합니다.|  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  [프로젝트 디자이너, 게시 페이지](../../ide/reference/publish-page-project-designer.md)   
  [응용 프로그램 배포 필수 구성 요소](../../deployment/application-deployment-prerequisites.md)   
  [.NET Framework 재배포](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287)   

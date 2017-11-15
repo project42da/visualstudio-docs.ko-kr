@@ -1,23 +1,24 @@
 ---
-title: "marker_series::marker_series 생성자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cvmarkersobj/Concurrency::diagnostic::marker_series::marker_series"
-helpviewer_keywords: 
-  - "Concurrency::diagnostic::marker_series 생성자"
+title: "marker_series::marker_series 생성자 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cvmarkersobj/Concurrency::diagnostic::marker_series::marker_series
+helpviewer_keywords: Concurrency::diagnostic::marker_series constructor
 ms.assetid: 042c7d23-f1d8-4e09-9e76-a21c30243790
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 83922b913e810042bef82eb0b81a0e42f8d3bbb1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="markerseriesmarkerseries-constructor"></a>marker_series::marker_series 생성자
 `marker_series` 클래스의 새 인스턴스를 초기화합니다.  
@@ -52,8 +53,3 @@ marker_series(
   
 ## <a name="see-also"></a>참고 항목  
  [marker_series 클래스](../profiling/marker-series-class.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

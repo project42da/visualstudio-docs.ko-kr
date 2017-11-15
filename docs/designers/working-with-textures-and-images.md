@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-designers
+ms.technology: vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 2cb4836ae868d56147a82fcefa0c5546bfcf8cad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 92d133d688ad009dae1b4e518bdd8c749ebc329f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="working-with-textures-and-images"></a>질감 및 이미지 작업
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 이미지 편집기를 사용하여 질감 및 이미지를 만들고 수정할 수 있습니다. 이미지 편집기는 DirectX 앱 개발에 사용되는 질감 및 이미지와 같은 풍부한 질감 및 이미지 형식을 지원합니다.  
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서 이미지 편집기를 사용하여 질감 및 이미지를 만들고 수정할 수 있습니다. 이미지 편집기는 DirectX 앱 개발에 사용되는 질감 및 이미지와 같은 풍부한 질감 및 이미지 형식을 지원합니다.  
   
 > [!NOTE]
->  이미지 편집기는 아이콘이나 커서 같은 로우 컬러 이미지를 지원하지 않습니다. 이런 종류의 이미지를 만들거나 수정하려면 [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)를 사용합니다.  
+>  이미지 편집기는 아이콘이나 커서 같은 로우 컬러 이미지를 지원하지 않습니다. 이런 종류의 이미지를 만들거나 수정하려면 [Image Editor for Icons](/cpp/windows/image-editor-for-icons)을(를) 사용합니다.  
   
 ## <a name="textures-and-images"></a>질감 및 이미지  
  기본적인 수준의, 질감 및 이미지는 그래픽 앱에서 시각적인 세부 정보를 제공하는 데 사용되는 데이터 테이블입니다. 질감이나 이미지가 제공하는 세부 정보의 종류는 사용되는 방식에 따라 다르지만, 색상 샘플, 알파(투명도) 값, 표면 법선 및 높이 값이 일반적인 예입니다. 질감과 이미지의 주요 차이는 질감은 개체나 장면 전체를 나타내기 위한 모양의 표현(일반적으로 3D 모델)에 사용되는 반면, 이미지는 일반적으로 개체나 장면에 대한 독립적인 표현입니다.  

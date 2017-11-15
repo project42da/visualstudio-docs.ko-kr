@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 03/09/2017
 ms.reviewer: riande
 ms.suite: 
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ASP.NET, web applications, deployment, publishing
+helpviewer_keywords: ASP.NET, web applications, deployment, publishing
 ms.assetid: 3A13F685-531C-457D-A98E-631888011E4B
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5951e9c6b61e1cb868d792a5aee9389235cfef30
-ms.openlocfilehash: 6bc4d5116517402825317611c44d4b594ee79b2a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/10/2017
-
+ms.openlocfilehash: 16bc087e6c4a12d3f70e2e71ba644faab9567fee
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # 내게 적합한 게시 옵션
 
 Visual Studio 내에서 웹 응용 프로그램을 다음 대상에 직접 게시할 수 있습니다.
@@ -121,4 +103,3 @@ Visual Studio에서 원하는 수의 사용자 지정 배포 프로필을 만들
 - URL을 통해 액세스할 수 있는 Azure 이외의 공급자에서 클라우드 서비스를 사용하고 있습니다.
 - Visual Studio 내에서 사용하거나 Azure 계정에 직접 연결된 것 이외의 자격 증명을 사용하여 배포하려고 합니다.
 - 배포할 때마다 대상에서 파일을 삭제하려고 합니다.
-

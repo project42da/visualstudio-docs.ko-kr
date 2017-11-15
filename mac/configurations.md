@@ -6,14 +6,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: e435418c0c77f1577e9db8ab35d76d6bd54f8447
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="understanding-build-configurations"></a>빌드 구성 이해
 
 ## <a name="project-build-configurations"></a>프로젝트 빌드 구성 
@@ -69,4 +67,3 @@ Android 프로젝트에 대한 실행 구성을 사용하면 프로젝트를 실
 * WatchKit 프로젝트
     * 모드(한눈에 보기, 알림)
     * 알림 페이로드
-

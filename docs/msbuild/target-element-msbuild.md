@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#Target
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#Target
 dev_langs:
 - VB
 - CSharp
@@ -19,31 +17,15 @@ helpviewer_keywords:
 - Target element [MSBuild]
 - <Target> element [MSBuild]
 ms.assetid: 350f6fc2-86b3-45f2-a31e-ece0e6bd4dca
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
-ms.openlocfilehash: 217f42db123e95557c2425b5678fb1ac9473c162
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ed3af7142d556c52fbed71f03d5cc53eb3025035
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="target-element-msbuild"></a>Target 요소(MSBuild)
 순차적으로 실행할 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]의 작업 집합을 포함합니다.  
@@ -102,7 +84,7 @@ ms.lasthandoff: 03/13/2017
 
 |요소|설명|  
 |-------------|-----------------|  
-|[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일의 필수 루트 요소입니다.|  
+|[프로젝트](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일의 필수 루트 요소입니다.|  
 
 ## <a name="remarks"></a>설명  
  실행할 첫 번째 대상은 런타임에 지정됩니다. 대상은 다른 대상에 대한 종속성을 포함할 수 있습니다. 예를 들어 배포용 대상은 컴파일용 대상에 종속됩니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 엔진은 종속성을 `DependsOnTargets` 특성에 나타나는 순서대로 왼쪽에서 오른쪽으로 실행합니다. 자세한 내용은 [대상](../msbuild/msbuild-targets.md)을 참조하세요.  
@@ -139,4 +121,3 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>참고 항목  
  [대상](../msbuild/msbuild-targets.md)   
  [프로젝트 파일 스키마 참조](../msbuild/msbuild-project-file-schema-reference.md)
-

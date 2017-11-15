@@ -6,14 +6,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 562DCB46-D8FA-4DC4-AAEA-F274448C4CD2
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: 973e7b627a7b5c121ff388874577fe59c45529d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="task-comments"></a>작업 주석
 
 코드를 작성할 때는 미완성 코드, 의심스러운 코드 또는 임시방편 코드에 주석을 달아 주의 사항을 기재하는 것이 일반적인 관행입니다. Mac용 Visual Studio에서 제공하는 기본 신호 토큰은 TODO, HACK, FIXME 및 UNDONE이며 아래 그림과 같이 **Visual Studio > 기본 설정... > 환경 > 작업**에서 개인 설정 토큰을 정의할 수 있습니다.

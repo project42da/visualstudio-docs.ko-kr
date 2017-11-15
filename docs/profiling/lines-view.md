@@ -1,25 +1,27 @@
 ---
-title: "줄 뷰 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.view.lines"
-helpviewer_keywords: 
-  - "줄 뷰"
-  - "프로파일링 도구 보고서, 줄 뷰"
-  - "프로파일링 도구, 줄 뷰"
+title: "줄 뷰 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.performance.view.lines
+helpviewer_keywords:
+- profiling tools reports, Line view
+- profiling tools, Line view
+- Lines view
 ms.assetid: 71ec0781-6031-4e17-af09-f50226018437
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: fa6492447650be1b7ab9db1725b7146fa808ecc9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="lines-view"></a>줄 뷰
 줄 뷰는 샘플링 방법을 사용하여 수집한 프로파일러 데이터에만 사용할 수 있습니다. 이 뷰는 계측을 사용하여 수집한 데이터에 사용할 수 없습니다.  
@@ -46,8 +48,3 @@ caps.handback.revision: 13
  [줄 뷰](../profiling/lines-view-sampling-data.md)   
  [줄 뷰 - 샘플링](../profiling/lines-view-dotnet-memory-sampling-data.md)   
  [줄 뷰](../profiling/lines-view-contention-data.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

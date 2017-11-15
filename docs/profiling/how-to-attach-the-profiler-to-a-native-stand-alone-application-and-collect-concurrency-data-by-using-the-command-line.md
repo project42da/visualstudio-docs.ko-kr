@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12d3e0f3-4b74-4e66-8fbf-8ac99bd4f91c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 8b83635ae6d727cdb0e589852e2ed167543d16ce
-
+ms.openlocfilehash: 4202530fd58f1a3323284cd3c7e59e36ba7b2a8f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-concurrency-data-by-using-the-command-line"></a>방법: 명령줄을 통해 네이티브 독립 실행형 응용 프로그램에 프로파일러를 연결하여 동시성 데이터 수집
 이 항목은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 프로파일러를 실행 중인 네이티브(C/C++) 독립 실행형 응용 프로그램에 연결하고 스레드 경합 데이터를 수집하는 방법을 설명합니다.  
@@ -90,8 +75,3 @@ ms.openlocfilehash: 8b83635ae6d727cdb0e589852e2ed167543d16ce
 2.  다음 명령을 입력하여 프로파일러를 종료합니다.  
   
      **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

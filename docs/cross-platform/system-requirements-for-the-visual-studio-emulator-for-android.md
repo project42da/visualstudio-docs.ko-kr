@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35e766ad-269f-41e4-ba23-74a556c315f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b4ed14f43316dc02ef8d039c590cd2f93b3060e5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 469a8298122abdc96c69f13ed96a893b02575fc9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>System requirements for the Visual Studio Emulator for Android
 Android용 Visual Studio 에뮬레이터는 Windows 8 이상 버전의 가상화 기술인 Hyper-V에서 가상 컴퓨터로 실행됩니다. 에뮬레이터를 실행하려면 컴퓨터가 이 항목의 설명대로 Hyper-V를 실행하기 위한 요구 사항을 충족해야 합니다.  
@@ -101,7 +84,7 @@ Android용 Visual Studio 에뮬레이터는 Windows 8 이상 버전의 가상화
   
  RAM 및 Windows에 대한 요구 사항을 확인하려면 제어판에서 시스템 및 보안을 선택한 다음 시스템을 선택합니다.  
   
- ![시스템 요구 사항 확인](~/cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")  
+ ![시스템 요구 사항 확인](../cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")  
   
 ##  <a name="Network"></a> 네트워크 요구 사항  
  네트워크는 다음 요구 사항을 충족해야 합니다.  
@@ -147,7 +130,7 @@ Android용 Visual Studio 에뮬레이터는 Windows 8 이상 버전의 가상화
 > [!IMPORTANT]
 >  그룹에 참여한 후에는 로그오프하거나 다시 부팅하여 변경 내용을 적용합니다.  
   
- ![Hyper&#45;V 관리자 보안 그룹 가입](~/cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")  
+ ![Hyper&#45;V 관리자 보안 그룹 가입](../cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")  
   
  자신을 수동으로 그룹에 추가하려면 로컬 사용자 및 그룹 스냅인을 엽니다. 자세한 내용은 [그룹에 사용자 계정 추가](http://windows.microsoft.com/en-us/windows/add-user-account-to-group#1TC=windows-7)를 참조하세요. (이 Windows 7 항목은 Windows 8에도 적용됩니다.)  
   

@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62670a2b-efdc-45c6-9646-9b17eeb33dcb
-caps.latest.revision: 23
-author: kempb
-ms.author: kempb
+caps.latest.revision: "23"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b2d9a565300dabd4212695d62c01a415d0e11012
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 1719ed1feb1caa38644550322484d2ba519c1be2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="step-3-add-a-countdown-timer"></a>3단계: 카운트다운 타이머 추가
 이 자습서의 3단계에서는 퀴즈를 푸는 사람이 퀴즈를 마칠 때까지 남은 시간(초)을 추적하도록 카운트다운 타이머를 추가합니다.  
@@ -45,7 +28,8 @@ ms.lasthandoff: 09/06/2017
   
 1.  이전 절차에서와 같이 **timeLeft**라는 정수 변수를 추가합니다. 이 코드는 다음과 같습니다.  
   
-     [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]  [!code-csharp[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]  
+     [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]
+     [!code-csharp[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]  
   
      이제 타이머와 같이 실제로 초를 세는 메서드가 있어야 합니다. 이 메서드는 지정된 시간이 지나면 이벤트를 발생시킵니다.  
   
@@ -63,7 +47,8 @@ ms.lasthandoff: 09/06/2017
   
 5.  새 이벤트 처리기 메서드에 다음 문을 추가합니다.  
   
-     [!code-vb[VbExpressTutorial3Step3#6](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_2.vb)]  [!code-csharp[VbExpressTutorial3Step3#6](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_2.cs)]  
+     [!code-vb[VbExpressTutorial3Step3#6](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_2.vb)]
+     [!code-csharp[VbExpressTutorial3Step3#6](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_2.cs)]  
   
      추가한 문을 기반으로 타이머는 1초 간격으로 **timeLeft** 정수 변수가 0보다 큰지 확인하여 시간이 다 되었는지 여부를 확인합니다. 이 값이 0보다 크면 시간이 남은 것입니다. 타이머는 먼저 timeLeft에서 1을 뺀 다음 퀴즈를 푸는 사람에게 남은 시간(초)을 표시하도록 `timeLabel` 컨트롤의 **Text** 속성을 업데이트합니다.  
   
@@ -99,7 +84,8 @@ ms.lasthandoff: 09/06/2017
   
      더하기 문제의 답을 표시하기 위해 `else` 블록에 추가한 문을 자세히 살펴봅니다.  
   
-     [!code-vb[VbExpressTutorial3Step3#24](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_3.vb)]  [!code-csharp[VbExpressTutorial3Step3#24](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_3.cs)]  
+     [!code-vb[VbExpressTutorial3Step3#24](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_3.vb)]
+     [!code-csharp[VbExpressTutorial3Step3#24](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_3.cs)]  
   
      `addend1 + addend2` 문은 두 변수의 값을 서로 더합니다. 첫 번째 부분(`sum.Value`)은 sum `NumericUpDown` 컨트롤의 **Value** 속성을 사용하여 올바른 답을 표시합니다. 이 속성은 나중에 퀴즈의 답을 확인할 때도 사용됩니다.  
   
@@ -107,7 +93,8 @@ ms.lasthandoff: 09/06/2017
   
 6.  다음과 같이 `StartTheQuiz()` 메서드에 세 개의 줄을 추가합니다.  
   
-     [!code-vb[VbExpressTutorial3Step3#7](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_4.vb)]  [!code-csharp[VbExpressTutorial3Step3#7](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_4.cs)]  
+     [!code-vb[VbExpressTutorial3Step3#7](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_4.vb)]
+     [!code-csharp[VbExpressTutorial3Step3#7](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_4.cs)]  
   
      이제 퀴즈를 시작하면 **timeLeft** 변수가 30으로 설정되고 `timeLabel` 컨트롤의 **Text** 속성이 30초로 설정됩니다. 그런 다음 `Timer` 컨트롤의 `Start()` 메서드가 카운트다운을 시작합니다. 이때 답을 확인하지는 않습니다. 답 확인은 나중에 수행됩니다.  
   

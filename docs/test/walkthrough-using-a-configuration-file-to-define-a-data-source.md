@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,31 +12,17 @@ helpviewer_keywords:
 - unit tests, walkthrough
 - data sources, defining with configuration files
 ms.assetid: 95fa5214-b12e-4e1f-84e5-cc4c2d86b0d7
-caps.latest.revision: 32
+caps.latest.revision: "32"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 212b8bd6e6c6e695bcc7a4486cbcde59e7309446
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 3f7ea8032efa4b35603568afd8b17107c293f2e6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>연습: 구성 파일을 통한 데이터 소스 정의
-이 연습에서는 app.config 파일에 정의된 데이터 원본을 유닛 테스트에 사용하는 방법을 설명합니다. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 클래스에서 사용할 수 있는 데이터 소스를 정의하는 app.config 파일을 만드는 방법을 배우게 됩니다. 이 연습에서 수행할 작업은 다음과 같습니다.  
+이 연습에서는 app.config 파일에 정의된 데이터 원본을 유닛 테스트에 사용하는 방법을 설명합니다. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 클래스에 사용될 수 있는 데이터 원본을 정의하는 app.config 파일을 만드는 방법을 알아봅니다. 이 연습에서 수행할 작업은 다음과 같습니다.  
   
 -   app.config 파일 만들기  
   
@@ -47,9 +32,9 @@ ms.lasthandoff: 04/04/2017
   
 -   데이터 원본 정의  
   
--   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 클래스를 사용하여 데이터 소스에 액세스.  
+-   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 클래스를 사용하여 데이터 원본 액세스  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
   
 -   Visual Studio Enterprise  
@@ -127,7 +112,7 @@ ms.lasthandoff: 04/04/2017
 ## <a name="define-data-sources"></a>데이터 원본 정의  
  데이터 원본 섹션에는 테스트 엔진이 데이터 원본에서 데이터를 검색할 때 사용하는 4개의 특성이 포함되어 있습니다.  
   
--   `name`은 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>에 사용되는 ID를 정의하여 사용할 데이터 소스를 지정합니다.  
+-   `name`은 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>가 사용할 데이터 원본을 지정하는 데 사용하는 ID를 정의합니다.  
   
 -   `connectionString`은 이전 연결 문자열 정의 섹션에서 만든 연결 문자열을 식별합니다.  
   
@@ -288,4 +273,3 @@ ms.lasthandoff: 04/04/2017
  [기존 코드에 대한 단위 테스트 만들기 및 실행](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)   
  [응용 프로그램 테스트](/devops-test-docs/test/test-apps-early-and-often)   
  [방법: 데이터 기반 단위 테스트 만들기](../test/how-to-create-a-data-driven-unit-test.md)
-

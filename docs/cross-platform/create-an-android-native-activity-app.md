@@ -4,38 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 884014b1-5208-45ec-b0da-ad0070d2c24d
-caps.latest.revision: 3
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 4d970c4b028981760d74ec797b87aeae07853fc4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: bf42c5b05ec68546bee938746f3e3b774303e5fb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="create-an-android-native-activity-app"></a>Android Native Activity 앱 만들기
 플랫폼 간 모바일 개발용 Visual C++ 옵션을 설치하는 경우 Visual Studio 2015를 사용하여 완벽하게 작동하는 Android Native Activity 앱을 만들 수 있습니다. Android NDK(네이티브 개발 키트)는 순수 C/C++ 코드를 사용하여 Android 앱의 대부분을 구현할 수 있게 해주는 도구 집합입니다. 일부 Java JNI 코드는 C/C++ 코드가 Android와 상호 작용할 수 있게 해주는 글루 역할을 합니다. Android NDK에서는 Android API 수준 9로 Native Activity 앱을 만들 수 있는 기능이 도입되었습니다. Native Activity 코드는 Unreal Engine 또는 OpenGL을 사용하는 게임 및 그래픽 집약적인 앱을 만드는 데 널리 사용됩니다. 이 항목에서는 OpenGL을 사용하는 간단한 Native Activity 앱을 만드는 과정을 안내합니다. 추가 항목에서는 Native Activity 코드를 편집, 빌드, 디버그 및 배포하는 개발자 수명 주기를 안내합니다.  
@@ -93,7 +75,7 @@ ms.lasthandoff: 05/13/2017
   
      다음은 Visual Studio Emulator for Android에서 기본 앱이 나타나는 모양입니다.  
   
-     ![앱을 실행하는 에뮬레이터](~/cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD_Emulator_Running_App")  
+     ![앱을 실행하는 에뮬레이터](../cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD_Emulator_Running_App")  
   
      에뮬레이터가 시작됩니다. 코드를 로드하고 배포하는 데 몇 초 정도 걸릴 수 있습니다. 앱이 시작되면 중단점을 설정하고 디버거를 사용하여 코드를 단계별로 실행하고 지역을 검토하고 값을 조사할 수 있습니다.  
   

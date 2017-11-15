@@ -1,28 +1,24 @@
 ---
 title: "Visual Studio용 R 도구를 사용하여 코드 편집 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
-ms.prod: visual-studio-dev15
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a198ccc3-5506-48e7-b3b2-9399661b80d5
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 5c856bb02ca33f999273fd6da782226be5f0f2d2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 261cced8583b751d74701a8903a10a4584928940
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="editing-r-code-in-visual-studio"></a>Visual Studio에서 R 코드 편집
  
 RTVS(Visual Studio용 R 도구)에서는 모든 기능과 확장 사용 기능을 유지하면서 특히 R에 맞게 Visual Studio 편집 환경을 조정합니다. 예를 들어 VIM 키 바인딩을 원하는 경우 Visual Studio 갤러리에서 무료 [VsVim 확장](https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329)을 설치할 수 있습니다.
@@ -150,4 +146,3 @@ RTVS에서는 함수의 매개 변수 이름을 사용하여 [Roxygen](http://ro
 | 대화형 창 | R 콘솔의 구문 검사 | 끄기 | 대화형 창에서 구문 검사를 적용합니다. 여러 줄 문에서는 구문 검사가 제대로 작동하지 않을 수 있습니다. | 
 | 개요 | 코드 개요 | 켜기 | 여러 줄 문 같은 영역에 대한 접을 수 있는 영역을 자동으로 만듭니다. | 
 | 구문 검사 | 구문 오류 표시 | 켜기 | 코드의 자동 구문 검사를 사용하도록 설정합니다. |
-

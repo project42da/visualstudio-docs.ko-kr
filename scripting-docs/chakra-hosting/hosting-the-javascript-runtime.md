@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30ec744e-57cc-4ef5-8fe1-d2c27b946548
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
 ms.openlocfilehash: 2bf213bf262ede7642e05c66e424b860238dc57f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="hosting-the-javascript-runtime"></a>JavaScript 런타임 호스팅
 JavaScript 런타임(JsRT) API를 사용하면 Microsoft Edge 및 Internet Explorer에서도 활용되는 표준 기반의 Chakra JavaScript 엔진을 통해 Windows 운영 체제에서 실행되는 데스크톱, Windows 스토어 및 서버 쪽 응용 프로그램이 앱에 스크립팅 기능을 추가할 수 있습니다. 이러한 API는 컴퓨터에 Internet Explorer 버전 11.0이 설치된 Windows 운영 체제의 모든 버전과 Windows 10에서 사용할 수 있습니다. 자세한 내용은 [Reference (JavaScript Runtime)](../chakra-hosting/reference-javascript-runtime.md)을 참조하십시오. Windows 스토어 앱에서 JsRT를 사용하는 방법에 대한 자세한 내용은 [JsRT and the Universal Windows Platform](#Windows)을 참조하세요.  

@@ -4,36 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - unit test sample [Visual Studio]
 - unit tests, samples
 ms.assetid: db80aaf2-0652-4d3f-a8c5-2a98fd8502a2
-caps.latest.revision: 30
+caps.latest.revision: "30"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 85a4222db883846e2da0bb64b4c39be1e737dcd2
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: a3ab1b6abf1949dd2c3a6afcca2987ebcf1594b9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="sample-project-for-creating-unit-tests"></a>단위 테스트를 만들기 위한 샘플 프로젝트
 이 샘플 코드는 다음 연습에서 사용할 수 있도록 제공됩니다.  
@@ -150,4 +135,3 @@ namespace BankAccountNS
  [연습: 관리 코드에 대한 단위 테스트 만들기 및 실행](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)   
  [연습: 테스트 실행 및 코드 검사 보기](http://msdn.microsoft.com/en-us/d4aab8e2-2140-4975-b4e3-41ef3fa944c8)   
  [연습: 명령줄 테스트 유틸리티 사용](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)
-

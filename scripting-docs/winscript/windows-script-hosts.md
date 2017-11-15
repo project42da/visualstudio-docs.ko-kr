@@ -7,19 +7,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Windows Script Host, implementing hosts
+helpviewer_keywords: Windows Script Host, implementing hosts
 ms.assetid: 9d5f6471-b318-40f3-be01-d9cd0b1cdd47
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
 ms.openlocfilehash: 41fa898c7f0d62cd35cc1cb1c7b35eb2651c8bb6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="windows-script-hosts"></a>Windows 스크립트 호스트
 Microsoft Windows 스크립트 호스트를 구현할 때, 호스트에서 다음을 수행하는 경우에 한해 스크립팅 엔진이 기본 스레드의 컨텍스트에서 [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) 인터페이스만 호출한다고 간주해도 됩니다.  

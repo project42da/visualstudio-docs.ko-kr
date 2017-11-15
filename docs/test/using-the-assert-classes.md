@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,30 +13,14 @@ helpviewer_keywords:
 - unit tests, Assert statements
 - unit tests, Assert classes
 ms.assetid: da1b7a0d-4f1d-4d50-a07e-7b3ff60053f9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 5a4f1fd5bf35a6010c2d919194b8ef21073e9a18
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/19/2017
-
+ms.openlocfilehash: 443c3fe0ece064993655895606ad8603b96f6286
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="using-the-assert-classes"></a>Assert 클래스 사용
 UnitTestingFramework 네임스페이스의 Assert 클래스를 사용하여 특정 기능을 확인합니다. 단위 테스트 메서드는 개발 코드에서 메서드 코드를 실행하지만, Assert 문을 포함하는 경우에만 코드의 동작이 정확한지 여부를 보고합니다.  
@@ -79,4 +62,3 @@ UnitTestingFramework 네임스페이스의 Assert 클래스를 사용하여 특�
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting>   
  [기존 코드에 대한 단위 테스트 만들기 및 실행](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)
-
