@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 48fb0065961d358725c6862910111f035e2fc527
+ms.openlocfilehash: 740b2827beaaf53cc0614f0bde361c972578b59e
 ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2017
 ---
-JScript
+Visual Studio Express 2013 for Windows

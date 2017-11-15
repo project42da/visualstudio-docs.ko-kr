@@ -5,14 +5,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: 347378da197b5c6d22bbd145c2ac8673d53a63bf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="build-actions"></a>빌드 작업 
 
 Mac용 Visual Studio 프로젝트의 모든 파일에는 빌드 중 파일에 발생하는 작업을 제어하는 빌드 작업이 있습니다. 아래 그림과 같이 파일을 마우스 오른쪽 단추로 클릭하고 **빌드 작업**으로 이동하면 이러한 빌드 작업을 설정할 수 있습니다.

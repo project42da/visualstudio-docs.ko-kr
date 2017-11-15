@@ -5,14 +5,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 0FE5E929-1846-4F48-B5E3-70990FAF9504
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: cb44dc755721f6095c9a07ad3e6fec1f6849e149
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="comments"></a>설명
 
 코드를 디버그하거나 실험하는 경우 일시적 또는 장기적으로 코드 블록을 주석으로 처리하는 것이 유용할 수 있습니다. 
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/11/2017
   comment in F#
 *)
 ```
-
