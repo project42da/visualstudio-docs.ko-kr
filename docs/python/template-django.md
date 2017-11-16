@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio의 Python용 Django 웹 프로젝트 템플릿 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c479be58-13eb-4d77-9a27-c97ddc290963
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: fb051c025f0d1f62a4ff3c5ef4dc5dace48c0400
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 242203505dc80c9cdfe6041fbf97308a16ccd2c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="django-web-project-template"></a>Django 웹 프로젝트 템플릿
 
 [Django](https://www.djangoproject.com/)는 신속하고 안전하며 확장성 있는 웹 개발을 위해 고안된 상위 수준 Python 프레임워크입니다. Visual Studio의 Python 지원은 Django 기반 웹 응용 프로그램의 구조를 설정하기 위한 프로젝트 템플릿을 제공합니다. Visual Studio에서 템플릿을 사용하려면 **파일 > 새로 만들기 > 프로젝트**를 선택하고 "Django"를 검색하고 "Django 웹 프로젝트" 템플릿을 선택합니다. 결과 프로젝트에는 기본 SQLite 데이터베이스와 상용구 코드가 포함됩니다. "빈 Django 웹 프로젝트" 템플릿도 이와 유사하지만 데이터베이스를 포함하지 않습니다.

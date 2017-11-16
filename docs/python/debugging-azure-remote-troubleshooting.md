@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio에서 Python에 대한 Azure 원격 디버깅 문제 해결 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/12/2017
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b723b343-dffb-457e-9af7-ee48c1451e30
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 5f8c27eb0c1360e2bd0fcf0593a8438383b6fd69
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: de9d74c3a0a8a3f3b66d621884f9c17fe787f856
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="remote-debugging-troubleshooter-for-python-and-azure"></a>Python 및 Azure에 대한 원격 디버깅 문제 해결사
 
 다음 이유 중 하나로 Visual Studio에서 [원격 디버깅을 위해 Azure App Service](debugging-azure-remote.md)에 연결할 수 없습니다.
@@ -38,4 +35,3 @@ ms.lasthandoff: 07/18/2017
 참고 항목:
 
 - [Python에 대한 Azure 원격 디버깅](debugging-azure-remote.md)
-

@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio용 R 도구를 사용한 R Markdown | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3ac955b2-b6e1-4d32-b1a4-2882c93311fc
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: e3d9ee899c9ed82cacfd9466412bacfea6b8c5e8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: b29ae0240a29616edcdf2ae0dced7a9fca0f9584
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="creating-r-markdown-documents"></a>R Markdown 문서 만들기
 
 [R Markdown](https://rmarkdown.rstudio.com/)은 R의 분석을 고품질 문서, 보고서, 프레젠테이션 및 대시보드로 전환하는 문서 형식입니다.
@@ -69,4 +66,3 @@ R Markdown을 사용하려면:
     ~~~
 
 1. 편집하는 동안 언제든지 편집기를 마우스 오른쪽 단추로 클릭하고 HTML, PDF 및 Microsoft Word 옵션이 포함된 **미리 보기**를 선택합니다. 이 미리 보기에서 파일을 선택한 형식에 대해 적절하게 저장할 수 있습니다.
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,30 +19,15 @@ helpviewer_keywords:
 - outlining options [J#]
 - XML documentation, creating
 ms.assetid: 947f9d9a-b0f3-408d-9866-d82895bcee31
-caps.latest.revision: 22
-author: kempb
-ms.author: kempb
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 61a061b6a58b18451fc53c8d53f77889cc1ea253
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 7537b4fc3fec90808c6bdc4a982fe3b7ff37a1d5
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="options-text-editor-c-advanced"></a>옵션, 텍스트 편집기, C#, 고급
 Visual C#의 편집기 서식, 코드 리팩터링 및 XML 문서 주석에 대한 설정을 수정하려면 이 대화 상자를 사용합니다. 이 대화 상자에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고, **텍스트 편집기** 폴더를 확장하고, **C#**을 확장하고, **고급**을 클릭합니다.  
@@ -67,13 +51,13 @@ Visual C#의 편집기 서식, 코드 리팩터링 및 XML 문서 주석에 대�
   
 -   잘못된 [편집하며 계속하기](../../debugger/edit-and-continue.md) 편집은 자주입니다.  
   
- 밑줄 표시된 코드 세그먼트 위로 포인터를 이동하면 오류에 대한 정보가 있는 도구 설명이 표시됩니다.  
+밑줄 표시된 코드 세그먼트 위로 포인터를 이동하면 오류에 대한 정보가 있는 도구 설명이 표시됩니다.  
   
- 라이브 의미 오류 표시  
- 알 수 없는 형식을 선언 및 사용하거나 알 수 없는 속성을 참조하는 것과 같이 명시적 컴파일 없이 특정 컴파일 오류를 식별합니다.  
+라이브 의미 오류 표시  
+알 수 없는 형식을 선언 및 사용하거나 알 수 없는 속성을 참조하는 것과 같이 명시적 컴파일 없이 특정 컴파일 오류를 식별합니다.  
   
- 커서 아래의 기호에 대한 참조 강조  
- 기호 내부에 커서를 놓거나 기호를 클릭하면 코드 파일에 있는 해당 기호의 모든 인스턴스가 강조 표시됩니다.  
+커서 아래의 기호에 대한 참조 강조  
+기호 내부에 커서를 놓거나 기호를 클릭하면 코드 파일에 있는 해당 기호의 모든 인스턴스가 강조 표시됩니다.  
   
 ## <a name="refactoring"></a>리팩터링  
  리팩터링 결과 확인  

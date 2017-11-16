@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,30 +12,15 @@ helpviewer_keywords:
 - performance, reports
 - performance reports, about performance reports
 ms.assetid: 7324c24c-fd09-479b-b2ad-e0c3b613e040
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 8544c8bd6248964beeedc8c55976d7ba903f8335
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 0244cbae9a331303434db89a42518812efc2677b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="performance-report-overview"></a>성능 보고서 개요
 Visual Studio Team System Development Edition IDE(통합 개발 환경)의 **성능 보고서** 창에서 성능 세션의 프로파일링 데이터를 볼 수 있습니다. 프로파일링 데이터는 .vsps 및 .vsp 파일에 저장됩니다. 보고서 뷰 창에서는 응용 프로그램 성능 문제를 확인하고 분석할 수 있습니다.  

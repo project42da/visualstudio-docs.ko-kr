@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,29 +16,15 @@ helpviewer_keywords:
 - <ParameterGroup> element [MSBuild]
 - ParameterGroup element [MSBuild]
 ms.assetid: c3275e69-a427-4889-bc1d-51bff2c285fa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 387639a0432a7654163e5c476af251ccf8721b07
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 49da59387ccd3c7367e06c91fc7f57b824e32ab5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="parametergroup-element"></a>ParameterGroup 요소
 `UsingTask``TaskFactory`에 의해 생성된 작업에 존재할 매개 변수의 선택적 목록을 포함합니다. 자세한 내용은 [UsingTask 요소(MSBuild)](../msbuild/usingtask-element-msbuild.md)를 참조하세요.  
@@ -92,4 +77,3 @@ ms.lasthandoff: 02/22/2017
  [작업](../msbuild/msbuild-tasks.md)   
  [작업 참조](../msbuild/msbuild-task-reference.md)   
  [프로젝트 파일 스키마 참조](../msbuild/msbuild-project-file-schema-reference.md)
-

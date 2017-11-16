@@ -1,23 +1,26 @@
 ---
-title: "DA0026: 과도한 커널 CPU 처리 시간 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.rules.DA0026"
-  - "vs.performance.DA0026"
-  - "vs.performance.26"
+title: "DA0026: 과도한 커널 CPU 처리 시간 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.rules.DA0026
+- vs.performance.DA0026
+- vs.performance.26
 ms.assetid: 4cfc8a29-b29b-4a72-b386-03d8856fdf8a
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2c574d176ccb30c1518238a78472afa798230247
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="da0026-excessive-kernel-cpu-time-processing"></a>DA0026: 과도한 커널 CPU 처리 시간
 |||  
@@ -38,8 +41,3 @@ caps.handback.revision: 7
   
 ## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
  응용 프로그램이 수행하는 시스템 호출 종류를 조사하려면 프로필을 다시 실행하고 시스템 호출을 기반으로 샘플을 수집하는 옵션을 선택합니다. 자세한 내용은 IDE 내부에서 프로파일링 도구를 실행 중인 경우 [방법: 샘플링 이벤트 선택](../profiling/how-to-choose-sampling-events.md)을 참조하세요. 명령줄에서 프로파일링 도구를 실행할 경우 프로파일링 도구 명령줄 도구 참조에서 [VSPerfCmd](../profiling/vsperfcmd.md) 항목의 **샘플링 간격 옵션** 섹션을 참조하세요.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

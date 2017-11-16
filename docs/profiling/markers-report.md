@@ -1,46 +1,46 @@
 ---
-title: "표식 보고서 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.threads.report.markers"
+title: "표식 보고서 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.cv.threads.report.markers
 ms.assetid: 829ce099-172e-4c7e-bbd0-578b110c59bd
-caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1d9d546e96d92c26725bc8a169c413bc7b96feb7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 표식 보고서
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-마커 보고서 표시 된 시간 내에 마커를 나열합니다.  패닝 또는 확대\/축소, 레인, 숨기기 마커 나타나거나 사라지게 될 수 있습니다.  보고서는 각 표식에 대해 다음이 정보가 포함 되어 있습니다.  
+# <a name="markers-report"></a>표식 보고서
+표식 보고서에는 표시된 기간 중의 표식이 나열됩니다.  이동이나 확대/축소 또는 레인 숨기기에 따라 표식이 나타나거나 사라질 수 있습니다. 보고서에는 각 표식에 대해 다음 정보가 포함됩니다.  
   
--   때 시작, 추적의 시작 부분을 기준으로 하는 시간입니다.  
+-   추적 시작을 기준으로 시작된 시간입니다.  
   
--   지속 시간이 길어집니다.  인스턴트를 나타내므로 기간은 0 플래그 메시지가 됩니다.  
+-   해당 기간입니다. 플래그 및 메시지는 인스턴트 항목이므로 기간이 0입니다.  
   
--   스레드의 ID를 생성한 ID  
+-   표식을 생성한 스레드의 ID입니다.  
   
--   이벤트 추적에 대 한 Windows \(ETW\) 공급자 생성 된 것입니다.  
+-   표식을 생성한 ETW(Windows용 이벤트 추적) 공급자입니다.  
   
--   작성 된 마커 시리즈입니다.  
+-   표식이 작성된 표식 계열입니다.  
   
--   이벤트가 속한 범주입니다.  
+-   표식이 속하는 이벤트 범주입니다.  
   
--   중요도입니다.  
+-   중요도 수준입니다.  
   
--   \(범위, 플래그, 메시지\)의 형식입니다.  
+-   해당 형식(범위, 플래그 또는 메시지)입니다.  
   
--   나타내는 것을 자세히 설명  
+-   표식이 나타내는 항목에 대한 고급 설명입니다.  
   
- **내보내기** 마커 보고서를 CSV 파일로 저장 하는 단추를 선택합니다.  다른 응용 프로그램 또는 도구를 사용 하 여 CSV 파일에 데이터를 사용할 수 있습니다.  
+ 표식 보고서를 CSV 파일로 저장하려면 **내보내기** 단추를 선택합니다. CSV 파일의 데이터는 다른 응용 프로그램 또는 도구에서 사용할 수 있습니다.  
   
 > [!NOTE]
->  마커 보고서 1000 마커를 표시할 수 있습니다.  모든 마커를 전체 보고서를 CSV 파일로 내보냅니다.
+>  표식 보고서는 1,000개의 표식을 표시할 수 있습니다. 모든 표식을 보려면 전체 보고서를 CSV 파일로 내보냅니다.

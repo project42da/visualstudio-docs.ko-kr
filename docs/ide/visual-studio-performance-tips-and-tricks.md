@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 173811a4f2d9974755e2432822c801388403ab7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 936d0df8c838227c5d6c99b0f04f1069eae8a277
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 성능 팁과 요령
 
@@ -36,14 +36,6 @@ Visual Studio 성능 권장 사항은 드물게 발생할 수 있는 메모리 �
 ## <a name="configure-solution-and-projects"></a>솔루션 및 프로젝트 구성
 
 여러 프로젝트를 포함하는 대규모 솔루션에서는 다음과 같은 최적화를 통해 이점을 얻을 수 있습니다.
-
-- **경량 솔루션 로드 사용**
-
-    **경량 솔루션 로드**를 사용하면 솔루션에 포함된 일부 프로젝트를 지연 로드하여 메모리 및 CPU 성능을 높일 수 있습니다. 이 기능을 솔루션별로 사용할 수도 있습니다. 이 옵션은 기본적으로 해제되어 있습니다.
-
-    **경량 솔루션 로드**를 사용하려면 **도구 > 옵션 > 프로젝트 및 솔루션 > 경량 솔루션 로드**를 선택합니다.
-
-    이 모드에서는 일부 IDE 기능을 사용할 수 없습니다. 이 선택이 도움이 되는지 판단하려면 [솔루션 로드 시간 단축](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/) 및 [솔루션 로딩 최적화](../ide/optimize-solution-loading-in-visual-studio.md)를 참조하세요.
 
 - **프로젝트 언로드**
 

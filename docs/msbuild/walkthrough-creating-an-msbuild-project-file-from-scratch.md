@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSBuild, tutorial
+helpviewer_keywords: MSBuild, tutorial
 ms.assetid: e3acff7c-cb4e-4ae1-8be2-a871bcff847b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 740eefc28e0b48d327fb5d0900ab39364633f877
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 346c00891913ea2050f3e6790d738cccc5136c0a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>연습: 처음부터 새로 MSBuild 프로젝트 파일 만들기
 .NET Framework를 대상으로 하는 프로그래밍 언어는 MSBuild 프로젝트 파일을 사용하여 응용 프로그램 빌드 프로세스를 설명하고 제어합니다. Visual Studio를 사용하여 MSBuild 프로젝트 파일을 만들 때 적절한 XML이 파일에 자동으로 추가됩니다. 그러나 XML이 구성되는 방식과 이러한 방식을 변경하여 빌드를 제어할 수 있는 방법을 이해하는 것이 좋습니다.  

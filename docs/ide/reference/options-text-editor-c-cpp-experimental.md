@@ -11,33 +11,16 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C%2FC%2B%2B.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Experimental
 ms.assetid: b9e9dda2-350c-460d-b368-37d6c5342eee
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
+ms.openlocfilehash: d67907a99851e09bf384c96b6ff6b87b4882cd30
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: faa37f88995f232f1198d3738ac5fba99d2970bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="options-text-editor-cc-experimental"></a>옵션, 텍스트 편집기, C/C++, 실험적
 이러한 옵션을 변경하면 C 또는 C++에서 프로그래밍할 때 IntelliSense 및 검색 데이터베이스 관련 동작을 변경할 수 있습니다. 이러한 기능은 실험적이며 향후 릴리스의 Visual Studio에서 수정되거나 제거될 수 있습니다. 이 항목에서는 Visual Studio 2017의 옵션을 설명합니다. Visual Studio 2015의 경우 [옵션, 텍스트 편집기, C/C++, 실험적](https://msdn.microsoft.com/library/mt591979.aspx)을 참조하세요. 
@@ -67,9 +50,8 @@ Visual Studio 갤러리의 추가 텍스트 편집기 기능은 [여기](http://
   
 -   **MSDN 도움말** - MSDN에서 오류 메시지를 검색합니다.  
   
- 물결선을 가리켜서 전구를 표시하거나 기본 바로 가기 키 Ctrl+.(Ctrl+점)을 사용할 수 있습니다. 바로 가기 키의 경우 특정 오류나 토큰에 캐럿을 배치할 필요가 없으며 오류와 같은 줄에 있기만 하면 해당 줄의 모든 항목에 대한 제안을 호출할 수 있습니다.  
+물결선을 가리켜서 전구를 표시하거나 기본 바로 가기 키 Ctrl+.(Ctrl+점)을 사용할 수 있습니다. 바로 가기 키의 경우 특정 오류나 토큰에 캐럿을 배치할 필요가 없으며 오류와 같은 줄에 있기만 하면 해당 줄의 모든 항목에 대한 제안을 호출할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [언어별 편집기 옵션 설정](../../ide/reference/setting-language-specific-editor-options.md)   
  [C++에서의 리팩터링(VC 블로그)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
-

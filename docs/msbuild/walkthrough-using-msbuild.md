@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSBuild, tutorial
+helpviewer_keywords: MSBuild, tutorial
 ms.assetid: b8a8b866-bb07-4abf-b9ec-0b40d281c310
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9500cdb26b51d3a91b9565c7ef0353907e9afe7c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 34c78f4573bc2b11e738c3722cefaa8e294287b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-using-msbuild"></a>연습: MSBuild 사용
 MSBuild는 Microsoft 및 Visual Studio용 빌드 플랫폼입니다. 이 연습에서는 MSBuild의 구성 요소를 소개하고 MSBuild 프로젝트를 작성, 조작 및 디버깅하는 방법을 보여 줍니다. 학습 내용은 다음과 같습니다.  
@@ -597,4 +580,3 @@ $(PropertyName)
 ## <a name="see-also"></a>참고 항목
 [MSBuild 개요](../msbuild/msbuild.md)  
  [MSBuild 참조](../msbuild/msbuild-reference.md)
-

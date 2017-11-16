@@ -1,23 +1,26 @@
 ---
 title: "성능 세션 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "프로파일링 도구, 속성"
-  - "속성 페이지, 프로파일링 도구"
-  - "성능 도구, 성능 세션 속성"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Profiling Tools,properties
+- property pages,Profiling Tools
+- performance tools, performance session properties
 ms.assetid: c3a86913-172b-488f-a31a-cea01a71b2ea
-caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 268a3b335990bc620a2eb798c3b774f34bc3262b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="performance-session-properties"></a>성능 세션 속성
 **성능 세션**에서는 응용 프로그램을 프로파일링하는 방식을 결정하는 설정을 구성할 수 있습니다. 또한 프로파일링 세션에 대해 생성되는 보고서도 저장됩니다.  
@@ -112,8 +115,3 @@ caps.handback.revision: 16
  [개요](../profiling/overviews-performance-tools.md)   
  [성능 세션 구성](../profiling/configuring-performance-sessions.md)   
  [데이터 수집 제어](../profiling/controlling-data-collection.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

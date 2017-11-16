@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: ebbaac6449f131fdad03d0ed8eb3686e8f66c074
+ms.openlocfilehash: aa19fa7139a35ad423ffc148ca9be174a673d745
 ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2017
 ---
-Microsoft Visual Basic
+Visual Studio Express 2012 for Windows 8

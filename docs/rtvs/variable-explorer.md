@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio용 R 도구의 변수 탐색기 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/30/2017
+ms.date: 06/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c669434-40d8-4970-92cc-502a98c8b5ab
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 1d86bca24d9e8d4d1bde8d62cd0be25c485b9253
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 92396808161886cf3b15f7e8e0ab23a0a35e26b9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="variable-explorer"></a>변수 탐색기
 
 **R 도구 > Windows > 변수 탐색기**(또는 **R 도구 > 데이터 과학 설정**을 사용한 경우 Ctrl+8)을 사용하여 연 **변수 탐색기** 창에는 현재 R 세션에서 제공된 범위의 모든 변수가 표시됩니다. 예를 들어 변수 탐색기를 열고 [대화형 창](interactive-repl.md)에 다음 줄을 입력할 경우:
@@ -82,4 +79,3 @@ n <- c(1,2,3,5,8,13)
 가져올 CSV 파일을 확정하고 나면 Visual Studio에서 **데이터 집합 가져오기** 대화 상자를 표시합니다. 여기에는 해당 데이터 파일을 구문 분석하는 방법(필드 구분 기호 및 따옴표 처리 방법 선택)을 제어하는 옵션이 있습니다. 가져온 데이터 프레임 및 원본 데이터 파일의 미리 보기를 확인할 수도 있습니다.
 
 ![데이터 집합 가져오기 대화 상자](media/variable-explorer-import-dataset-dialog.png)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,30 +12,15 @@ helpviewer_keywords:
 - MSBuild, including files
 - Include attribute [MSBuild]
 ms.assetid: f5ff182f-7b3a-46fb-9335-37df54cfb8eb
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 0b8cbf0091de41b082b066c12ed28709ade7d1ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: d5e6e13dc9700269f42d8ed640ea725cef9d6b05
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-select-the-files-to-build"></a>방법: 빌드할 파일 선택
 여러 파일이 포함된 프로젝트를 빌드할 경우 각 파일을 프로젝트 파일에 개별적으로 나열하거나, 와일드카드를 사용하여 모든 파일을 하나의 디렉터리 또는 중첩된 디렉터리 집합에 포함할 수 있습니다.  

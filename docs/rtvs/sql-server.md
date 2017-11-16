@@ -1,27 +1,24 @@
 ---
 title: "SQL Server 및 Visual Studio용 R 도구 통합 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/30/2017
+ms.date: 06/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 919dfc34-234a-489e-91bf-74a4cefae26c
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: dfccd737ae7017823fdf7f2a5112fd05c8900559
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
-ms.sourcegitcommit: fa4f6a27eeacd2f016a248daa74074392b1137f2
-ms.openlocfilehash: b7afc0b2e62245e30814a0bc00d455400ae1b2d8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/20/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/15/2017
 ---
-
 # <a name="working-with-sql-server-and-r"></a>SQL Server 및 R 사용
 
 Visual Studio의 뛰어난 SQL Server 지원은 SQL 쿼리를 생성 및 실행하고 저장 프로시저를 사용하는 기능을 통해 데이터 과학자의 R 및 SQL 데이터베이스 작업에 도움을 줍니다.
@@ -71,7 +68,7 @@ RTVS는 다음 섹션의 설명대로 SQL 및 R 코드를 단일 SQL 문으로 �
 ### <a name="add-a-database-connection"></a>데이터베이스 연결 추가
 
 1. **R 도구 > 데이터 > 데이터베이스 연결 추가**를 선택하여 **연결 속성** 대화 상자를 표시합니다. 여기서 데이터 원본(이 경우 SQL Server)의 이름, 서버 이름, 인증 모드 및 데이터베이스 이름을 지정합니다. 대화 상자를 닫기 전에 **연결 테스트**를 선택하여 입력을 확인합니다.
- 
+
     ![SQL 연결 대화 상자](media/sql-connection-string-dialog.png)
 
 1. 올바른 연결과 함께 **확인**을 선택하면 새 `settings.R` 파일에 `dbConnection`라는 연결 문자열이 생성됩니다. RTVS에서 이 파일이 자동으로 제공(실행)되므로 R 스크립트에서 연결을 즉시 사용할 수 있습니다.
@@ -81,7 +78,7 @@ RTVS는 다음 섹션의 설명대로 SQL 및 R 코드를 단일 SQL 문으로 �
 ### <a name="write-and-test-a-sql-stored-procedure"></a>SQL 저장 프로시저 작성 및 테스트
 
 새 SQL 저장 프로시저를 추가하려면 **추가 > 새 항목...**을 선택하고, 템플릿 목록에서 **SQL 저장 프로시저(R 사용)**를 선택하고, 파일 이름(이 예제에서는 `StoredProcedure.R`)을 입력하고, **확인**을 클릭합니다.
- 
+
 RTVS는 R 코드용 `.R` 파일, SQL 코드용 `.Query.sql` 파일, 두 파일을 결합하는 `.Template.sql` 파일 등 저장 프로시저용 파일 3개를 만듭니다. 뒤의 두 파일은 솔루션 탐색기에 `.R` 파일의 자식으로 표시됩니다.
 
 ![SQL 저장 프로시저(R 사용)의 솔루션 탐색기 확장 보기](media/sql-solution-explorer-expanded.png)
@@ -159,4 +156,3 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 
 > [!Tip]
 > SQL Server 개체 탐색기가 Visual Studio에서 열린 경우 데이터베이스의 **프로그래밍 기능 > 저장 프로시저** 폴더에 게시한 저장 프로시저가 표시됩니다. **프로시저 실행**을 마우스 오른쪽 단추로 클릭하고 선택하거나 `.sql` 쿼리 창에서 대화형으로 호출하여 개체 탐색기에서 실행할 수도 있습니다.
-

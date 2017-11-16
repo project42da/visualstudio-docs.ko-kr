@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,32 +12,18 @@ helpviewer_keywords:
 - MSBuild, specifying the defalut target
 - MSBuild, DefaultTargets attribute
 ms.assetid: a580ba5b-2919-42d2-ae38-1af991e0205a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: 401db77b47014ad3330c0a78acf648605a2c3278
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 22c307129e1c0295b041180f475c3d905cc43539
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>방법: 먼저 빌드할 대상 지정
-프로젝트 파일에는 프로젝트 빌드 방식을 정의하는 하나 이상의 `Target` 요소가 포함됩니다. 프로젝트 파일에 `DefaultTargets` 특성, `InitialTargets` 특성이 포함되거나 대상이 명령줄에서 **/target** 스위치를 사용하여 지정된 경우가 아니면 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)]\([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) 엔진은 발견한 첫 번째 프로젝트 및 모든 종속성을 빌드합니다.  
+프로젝트 파일에는 프로젝트 빌드 방식을 정의하는 하나 이상의 `Target` 요소가 포함됩니다. 프로젝트 파일에 `DefaultTargets` 특성, `InitialTargets` 특성이 포함되거나 대상이 명령줄에서 **/target** 스위치를 사용하여 지정된 경우가 아니면 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)]([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) 엔진은 발견한 첫 번째 프로젝트 및 모든 종속성을 빌드합니다.  
   
 ## <a name="using-the-initialtargets-attribute"></a>InitialTargets 특성 사용  
  대상이 명령줄 또는 `DefaultTargets` 특성에서 지정된 경우에도 `Project` 요소의 `InitialTargets` 특성은 먼저 실행할 대상을 지정합니다.  

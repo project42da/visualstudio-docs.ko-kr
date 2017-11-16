@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,29 +12,15 @@ f1_keywords:
 - vs.performance.DA0501
 - vs.performance.501
 ms.assetid: b01946b4-75e3-47d5-a1a1-cebfae66a3af
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2269ea4c58703cf5f2c4d8516e14cb40b342c958
-
+ms.openlocfilehash: 5de803a82110720a78b5b80cada7dad1c39c46c1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501: 프로파일링 중인 프로세스의 평균 CPU 사용
 |||  
@@ -53,8 +38,3 @@ ms.openlocfilehash: 2269ea4c58703cf5f2c4d8516e14cb40b342c958
   
 ## <a name="how-to-use-rule-data"></a>규칙 데이터를 사용하는 방법  
  규칙 값을 사용하여 프로그램의 여러 가지 버전이나 빌드에 대한 성능을 비교하거나 여러 가지 테스트 시나리오에서 응용 프로그램의 성능을 파악합니다.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

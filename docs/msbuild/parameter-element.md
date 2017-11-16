@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,29 +17,15 @@ helpviewer_keywords:
 - Parameter element [MSBuild]
 - <Parameter> element [MSBuild]
 ms.assetid: b273afff-b500-4e97-8cfd-31f39fa64a51
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
-ms.openlocfilehash: 1ab435260e954e2d66952b968697f6f88f701c4f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 39dd727eee6f9af2f60410c4dbfc9daa9ea805a2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="parameter-element"></a>Parameter 요소
 `UsingTask``TaskFactory`에 의해 생성되는 작업에 대한 특정 매개 변수에 대한 정보를 포함합니다.  요소의 이름은 매개 변수의 이름입니다.  자세한 내용은 [UsingTask 요소(MSBuild)](../msbuild/usingtask-element-msbuild.md)를 참조하세요.  
@@ -98,4 +83,3 @@ ms.lasthandoff: 03/13/2017
  [작업](../msbuild/msbuild-tasks.md)   
  [작업 참조](../msbuild/msbuild-task-reference.md)   
  [프로젝트 파일 스키마 참조](../msbuild/msbuild-project-file-schema-reference.md)
-

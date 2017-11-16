@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e7930b-cab6-4a22-9a6f-72e23f489585
-caps.latest.revision: 21
-author: kempb
-ms.author: kempb
+caps.latest.revision: "21"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d4a31cd461f470c7b510be02c33dd1744f7ed616
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 0ab82e9962871d6dd5da724a7a72677c387e9a53
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="step-6-add-a-timer"></a>6단계: 타이머 추가
 다음에는 일치 게임에 **Timer** 컨트롤을 추가합니다. 타이머는 지정한 시간(밀리초)을 대기한 뒤 *틱*이라고 하는 이벤트를 발생시킵니다. 이 방법은 작업을 시작하거나 작업을 정기적으로 반복하는 데 유용합니다. 이 경우 타이머를 사용하여 플레이어가 두 개의 아이콘을 선택할 수 있도록 하고 아이콘이 서로 일치하지 않을 경우 잠시 후 다시 두 개의 아이콘을 숨깁니다.  
@@ -51,7 +35,8 @@ Timer
   
 3.  Windows Forms 디자이너에서 타이머 컨트롤 아이콘을 선택한 다음 Enter 키를 선택하거나, 타이머를 두 번 클릭하여 빈 **Tick** 이벤트 처리기를 추가합니다. 또는 코드를 다음 코드로 바꾸거나 이벤트 처리기에 다음 코드를 수동으로 입력합니다.  
   
-     [!code-csharp[VbExpressTutorial4Step6#7](../ide/codesnippet/CSharp/step-6-add-a-timer_1.cs)]  [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]  
+     [!code-csharp[VbExpressTutorial4Step6#7](../ide/codesnippet/CSharp/step-6-add-a-timer_1.cs)]
+     [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]  
   
      Tick 이벤트 처리기는 다음 세 가지 작업을 수행합니다. 첫 번째로 타이머는 `Stop()` 메서드를 호출하면 실행이 중지됩니다. 그런 다음 `firstClicked`와 `secondClicked`라는 두 개의 참조 변수를 사용하여 플레이어가 선택한 두 레이블의 아이콘이 다시 보이지 않도록 합니다. 마지막으로 `firstClicked` 및 `secondClicked` 참조 변수를 `null`(Visual C#의 경우)과 `Nothing`(Visual Basic의 경우)으로 다시 설정합니다. 이 단계는 프로그램 자체를 다시 설정하는 방식이기 때문에 중요합니다. 이제 `Label` 컨트롤이 추적되고 있지 않으며 플레이어는 레이블을 다시 선택할 수 있습니다.  
   
@@ -60,7 +45,8 @@ Timer
   
 4.  새 타이머의 동작을 보려면 코드 편집기로 이동하여 다음 코드를 `label_Click()` 이벤트 처리기 메서드의 위쪽과 아래쪽에 추가합니다. `if` 문을 위쪽에 추가하고 세 개의 문을 아래쪽에 추가하며 메서드의 나머지 부분은 그대로 유지됩니다.  
   
-     [!code-csharp[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]  [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]  
+     [!code-csharp[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]
+     [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]  
   
      메서드 위쪽의 코드는 **Enabled** 속성 값을 검사하여 타이머가 시작되었는지 여부를 확인합니다. 그러면 플레이어가 첫 번째 및 두 번째 `Label` 컨트롤을 선택하고 타이머가 시작되는 경우 세 번째 레이블을 선택해도 아무것도 수행되지 않습니다.  
   

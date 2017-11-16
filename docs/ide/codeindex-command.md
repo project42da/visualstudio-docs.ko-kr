@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,30 +12,15 @@ helpviewer_keywords:
 - TFSConfig
 - CodeIndex command [Team Foundation Server]
 ms.assetid: b79568d4-6a64-4ca9-a1ee-3e57f92a9c5c
-caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: b57a5a18f3bb01c98e577d2caf5eb7f5b58bc360
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: b68d1a67055e14fce0af48fa58f805216205d4ad
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="codeindex-command"></a>CodeIndex 명령
 **CodeIndex** 명령을 사용하여 Team Foundation Server의 코드 인덱싱을 관리합니다. 예를 들어 인덱싱을 다시 설정하여 CodeLens 정보를 수정하거나 인덱싱을 해제하여 서버 성능 문제를 조사할 수 있습니다.  
@@ -141,5 +125,7 @@ TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Web Site"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
+ [CodeLens에서 코드 변경 내용 및 기타 기록 찾기](../ide/find-code-changes-and-other-history-with-codelens.md)  
+
  [TFSConfig를 사용하여 서버 구성 관리](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62)   
  [TFS용 명령줄 도구](http://msdn.microsoft.com/en-us/be8c997a-b97b-4e59-97f5-04db0a601a6c)

@@ -1,24 +1,27 @@
 ---
-title: "DA0014: 활성 메모리를 디스크에 페이징하는 비율이 극도로 높습니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.rules.DAMemoryBound"
-  - "vs.performance.DA0014"
-  - "vs.performance.14"
-  - "vs.performance.rules.DA0014"
+title: "DA0014: 활성 메모리를 디스크에 페이징하는 비율이 극도로 높습니다. | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.rules.DAMemoryBound
+- vs.performance.DA0014
+- vs.performance.14
+- vs.performance.rules.DA0014
 ms.assetid: a7fa3749-9191-437a-9331-9d917181e62f
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1aacc90a1d85186922fd6b5c13648c77286b02f5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="da0014-extremely-high-rates-of-paging-active-memory-to-disk"></a>DA0014: 활성 메모리를 디스크에 페이징하는 비율이 극도로 높습니다.
 |||  
@@ -48,8 +51,3 @@ caps.handback.revision: 11
  부하 테스트 시나리오에서 ASP.NET 응용 프로그램에 대한 프로필 데이터를 수집할 경우 추가적인 실제 메모리(또는 RAM)가 구성된 컴퓨터에서 부하 테스트를 다시 실행해 보세요.  
   
  알고리즘을 수정하고 메모리를 많이 사용하는 String.Concat, String.Substring 등의 API 사용을 줄이는 방식으로 메모리 할당을 줄여 보세요.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio용 R 도구 샘플 프로젝트 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa52ed0e-cdb5-4fb2-814c-c94cac2ffc6f
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 6ceedfff067f245de4b159728bd34a3a849fe9dc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: ec9862f9e7fcbd084d5e12c0467c8b608a5b4956
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="r-tools-for-visual-studio-sample-projects"></a>Visual Studio용 R 도구 샘플 프로젝트
 
 이 샘플 컬렉션을 통해 R, RTVS(Visual Studio용 R 도구) 및 Microsoft R Server 사용을 시작할 수 있습니다.
@@ -93,4 +90,3 @@ R과 MRO/MRS의 기술적인 비교를 위해 항목에서 [Lixun Zhang의 자�
 다음 그림은 15분 이상의 항공 지연을 예측하는 로지스틱 회귀 모델을 작성하는 데 사용되는 경과된 시간(초)을 비교합니다.  적은 수의 행을 늘릴 때 CRAN R에 사용되는 경과된 시간은 대폭 증가하지만 MRS는 2배 정도씩만 증가합니다. 이 벤치마크에 대한 자세한 내용은 `Benchmarks/rxGlm_benchmark.R` 예제를 참조하세요.
 
 ![rxGlm 벤치마크](media/samples-rxGLM-benchmark.png)
-

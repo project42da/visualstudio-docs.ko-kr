@@ -1,30 +1,29 @@
 ---
-title: "CvCreateMarkerSeriesWithCodePageA 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cvmakers/CvCreateMarkerSeriesWithCodePageA"
-helpviewer_keywords: 
-  - "CvCreateMarkerSeriesWithCodePageA 메서드"
+title: "CvCreateMarkerSeriesWithCodePageA 함수 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cvmakers/CvCreateMarkerSeriesWithCodePageA
+helpviewer_keywords: CvCreateMarkerSeriesWithCodePageA method
 ms.assetid: 3d7ed601-2222-4be9-a557-f217db008753
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: cc266ff4a96fa96f89e1eaafe2eaa8377ef601fa
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CvCreateMarkerSeriesWithCodePageA 함수
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-지정된 된 공급자와 지정 된 코드 페이지에 대 한 표식 계열을 만듭니다.  텍스트 마커 API ANSI 함수 작성에 대 한 명시적으로 코드 페이지를 지정 하려면이 함수를 사용할 수 있습니다.  코드 페이지를 설정할 경우 추적이 캡처되고 다국어 로케일을 사용하여 다른 컴퓨터에서 다음 분석에 유용할 수 있습니다.  GetACP\(\) 함수에 의해 반환 되는 코드 페이지는 기본적으로 사용 됩니다.  
+# <a name="cvcreatemarkerserieswithcodepagea-function"></a>CvCreateMarkerSeriesWithCodePageA 함수
+지정된 공급자 및 지정된 코드 페이지에 대한 표식 계열을 만듭니다. 이 함수는 표식 API ANSI 함수에 의해 작성되는 텍스트에 대한 코드 페이지를 명시적으로 지정하는 데 사용할 수 있습니다. 코드 페이지 설정은 추적을 캡처한 후 서로 다른 로캘/언어의 다양한 컴퓨터에서 분석하는 경우에 유용할 수 있습니다. 기본적으로 GetACP() 함수에서 반환한 코드 페이지가 사용됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 HRESULT CvCreateMarkerSeriesWithCodePageA(  
@@ -35,24 +34,24 @@ HRESULT CvCreateMarkerSeriesWithCodePageA(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pProvider`  
- 이전에 CvInitProvider에 의해 초기화 되는 공급자 개체입니다.  NULL 일 수 없습니다.  
+ 이전에 CvInitProvider에서 초기화한 공급자 개체입니다. NULL일 수 없습니다.  
   
  `pSeriesName`  
- 표식 계열 이름입니다.  NULL 일 수 없지만 빈 문자열을 사용할 수 있습니다.  
+ 표식 계열 이름입니다. NULL일 수 없지만 빈 문자열을 사용할 수 있습니다.  
   
  `nTextCodePage`  
- 코드 페이지가 잘못되었습니다.  
+ 유효한 코드 페이지입니다.  
   
  `ppMarkerSeries`  
- 표식이 계열 컨텍스트를 저장할 출력 변수의 주소입니다.  NULL 일 수 없습니다.  
+ 표식 계열 컨텍스트를 저장할 출력 변수의 주소입니다. NULL일 수 없습니다.  
   
-## 반환 값  
- S\_OK 마커 시리즈가 성공적으로 만들어졌거나 이 경우 오류 코드에는 오류가 발생 했습니다.  성공\/실패 매크로를 사용하여 오류 조건을 확인할 수 있습니다.  
+## <a name="return-value"></a>반환 값  
+ 표식 계열이 성공적으로 생성된 경우 S_OK이고, 오류가 발생한 경우 오류 코드입니다. SUCCEEDED/FAILED 매크로를 사용하여 오류 조건을 확인할 수 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** cvmarkers.h  
   
-## 참고 항목  
- [C\+\+ 라이브러리 참조](../profiling/cpp-library-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 라이브러리 참조](../profiling/cpp-library-reference.md)

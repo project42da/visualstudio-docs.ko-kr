@@ -1,11 +1,10 @@
 ---
 title: "Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/24/2017
+ms.date: 07/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,14 +21,12 @@ ms.assetid: bee759bd-6ff5-4c2e-913a-ea7d3c906c29
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: ef005f6456c532ade108299f556c8ef7211e6055
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: d637dc2b0349bfe1efbcf55417d4f4bf5817b303
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드
 
 새 버전의 Visual Studio에서는 일반적으로 이전 형식의 프로젝트, 파일 및 기타 자산을 대부분 지원합니다. 이러한 항목을 [이전처럼](../ide/solutions-and-projects-in-visual-studio.md) 사용할 수 있습니다. 최신 기능에 의존하지 않을 경우 Visual Studio에서는 Visual Studio 2015, Visual Studio 2013, Visual Studio 2012 등과 같은 이전 버전과의 호환성을 유지합니다. 버전별로 특정한 기능은 [릴리스 정보](https://www.visualstudio.com/vs/release-notes/)를 참조하세요.
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/06/2017
 | Windows Communication Foundation, Windows Workflow Foundation | Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 및 Visual Studio 2012에서 이 프로젝트를 열 수 있습니다. |
 | Windows Presentation Foundation | Visual Studio 2013, Visual Studio 2012 및 Visual Studio 2010 SP1에서 이 프로젝트를 열 수 있습니다. |
 | Windows 스토어/전화 앱 | Visual Studio 2017에서는 Windows 스토어 8.1 및 8.0, Windows Phone 8.1 및 8.0용 프로젝트가 지원되지 않습니다. 이러한 앱을 유지하려면 Visual Studio 2015를 계속 사용합니다. Windows Phone 7.x 프로젝트를 유지하려면 Visual Studio 2012를 사용합니다. |
-

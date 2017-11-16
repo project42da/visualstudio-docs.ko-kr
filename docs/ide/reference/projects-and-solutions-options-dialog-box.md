@@ -1,11 +1,10 @@
 ---
 title: "옵션 대화 상자, 프로젝트 및 솔루션 | Microsoft 문서"
 ms.custom: 
-ms.date: 7/14/2017
+ms.date: 07/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,19 +14,17 @@ helpviewer_keywords:
 - Projects and Solutions Options dialog box
 - Options dialog box, Projects and Solutions
 ms.assetid: 2801f24e-a138-488a-ae3c-e1f99a678ac0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
+ms.openlocfilehash: f912a0aa6588895fb99da83396e2e5caf976e223
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
-ms.openlocfilehash: 2778964a6d5e4f478422727b02e15a058868e644
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>프로젝트 및 솔루션, 옵션 대화 상자
-
 프로젝트 및 솔루션과 관련된 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 동작을 설정합니다. 이러한 옵션에 액세스하려면 **도구 > 옵션**을 선택하고 **프로젝트 및 솔루션**을 확장한 후 **일반**을 클릭합니다.
 
 프로젝트 및 템플릿 폴더에 대한 기본 경로는 같은 대화 상자의 **위치** 탭을 통해 설정됩니다.
@@ -86,5 +83,5 @@ ms.lasthandoff: 09/06/2017
 **새 항목 추가** 대화 상자에서 **내 템플릿** 목록을 만드는 데 사용하는 기본 위치를 지정합니다. 자세한 내용은 [방법: 템플릿 찾기 및 구성](../../ide/how-to-locate-and-organize-project-and-item-templates.md)을 참조하세요. 
 
 ## <a name="see-also"></a>참고 항목  
-- [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)
-- - [옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)
+- [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)  
+- [옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)

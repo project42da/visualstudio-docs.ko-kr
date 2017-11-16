@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 20489db9-7441-4f8b-97de-c72070d569b1
-caps.latest.revision: 10
-author: kempb
-ms.author: kempb
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: 27dc4d56a0608ddf031b47775bd9aaef20e24194
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: 40172defbd56f31de9aedbb4cc422c10d1a68dfd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="tips-and-tricks-for-visual-studio"></a>Visual Studio에 대한 유용한 정보
 이 항목에 나온 바로 가기를 사용하여 [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]에서 쉽게 이동할 수 있습니다. 이 항목은 사용 가능한 바로 가기 키의 하위 집합일 뿐입니다. 더 자세한 목록은 [Visual Studio의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요. 접근성을 위해 Visual Studio를 최적화하는 방법에 대한 자세한 내용은 [접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md)을 참조하세요.  
@@ -90,19 +73,18 @@ ms.lasthandoff: 06/23/2017
 |-|-|  
 |IntelliSense 제안 모드|Ctrl+Alt+스페이스바(설정/해제)|  
 |IntelliSense 강제 표시|Ctrl+J|  
-|스마트 태그|Ctrl+.|  
+|빠른 작업|Ctrl+.|  
 |코드 조각 선택|Ctrl+K,X 또는 ?,Tab(VB)|  
 |포함|Ctrl+K,S|  
 |요약 정보 표시|Ctrl+K,I|  
 |탐색|Ctrl+,|  
-|정의로 이동|F12|  
-|정의 피킹(Peeking)|Alt+F12|  
-|정의로 이동 스택|Ctrl+Shift+8(뒤로), Ctrl+Shift+7(앞으로)|  
 |강조 표시 참조 탐색|Ctrl+Shift+위쪽 화살표(이전), Ctrl+Shift+아래쪽 화살표(다음)|  
 |편집기 확대/축소|Ctrl+Shift+>(확대), Ctrl+Shift+<(축소)|  
 |블록 선택|Alt 키를 누른 채 마우스를 끌기, Shift+Alt+화살표 키|  
 |위/아래로 줄 이동|Alt+위쪽 화살표/Alt+아래쪽 화살표|  
+|정의로 이동|F12|  
 |정의 피킹(Peeking)|Alt+F12|  
+|정의로 이동 스택|Ctrl+Shift+8(뒤로), Ctrl+Shift+7(앞으로)|  
 |정의 피킹(Peeking) 창 닫기|Esc|  
 |정의 피킹(Peeking) 창을 일반 문서 탭으로 승격|Ctrl+Alt+Home|  
 |여러 정의 피킹(Peeking) 창 간에 이동|Ctrl+Alt+- 및 Ctrl+Alt+=|  
@@ -146,4 +128,3 @@ ms.lasthandoff: 06/23/2017
  [Channel 9의 Visual Studio 도구 상자](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)   
  [Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)   
  [Visual Studio Connect 버그](http://connect.microsoft.com/VisualStudio)
-

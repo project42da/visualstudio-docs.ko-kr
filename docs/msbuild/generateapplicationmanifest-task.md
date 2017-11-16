@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#GenerateApplicationManifest
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#GenerateApplicationManifest
 dev_langs:
 - VB
 - CSharp
@@ -20,30 +18,15 @@ helpviewer_keywords:
 - HostInBrowser property (MSBuild)
 - GenerateApplicationManifest task [MSBuild]
 ms.assetid: a494102b-0cb2-4755-8e2a-d2c0f39fac1d
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
-ms.openlocfilehash: a936c177318808278bffb361ebba49b861a2acb3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/03/2017
-
+ms.openlocfilehash: 79e8958ca5e2e75ed62da63f52bdac5b0f3b5043
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest 작업
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 또는 네이티브 매니페스트를 생성합니다. 네이티브 매니페스트는 구성 요소의 고유 ID를 정의하고 구성 요소를 구성하는 모든 어셈블리와 파일을 식별하는 방식으로 구성 요소를 설명합니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트는 응용 프로그램의 진입점을 지정하고 응용 프로그램 보안 수준을 지정하여 네이티브 매니페스트를 확장합니다.  

@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - MSBuild, importing
 - MSBuild, using the same target in multiple project files
 ms.assetid: 163734bd-1bfd-4093-a730-7741fc21742d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 032c5c010352d49fe94c874e6e9026e3255a5d33
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: b591f0158408161d268930416d49c465e29d0b2c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>방법: 여러 프로젝트 파일에서 동일한 대상 사용
 여러 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일을 만들었으면 다른 프로젝트 파일에서 동일한 작업 및 대상을 사용해야 할 수 있다는 사실을 알게 되었을 것입니다. 모든 프로젝트 파일에 이러한 작업이나 대상에 대한 완전한 설명을 포함하는 대신, 대상을 별도 프로젝트 파일에 저장한 다음, 해당 대상을 사용해야 하나ㅡㄴ 다른 프로젝트로 해당 프로젝트를 가져올 수 있습니다.  

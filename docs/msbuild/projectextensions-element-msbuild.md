@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#ProjectExtensions
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#ProjectExtensions
 dev_langs:
 - VB
 - CSharp
@@ -19,29 +17,15 @@ helpviewer_keywords:
 - <ProjectExtensions> element [MSBuild]
 - ProjectExtensions element [MSBuild]
 ms.assetid: f95f312f-ff92-41eb-9469-ad99e236a307
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: f219301ec954442b4c9913c254e234a520177169
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 9a53f7514f58720abfe5c2b5542b354e3255e0cc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="projectextensions-element-msbuild"></a>ProjectExtensions 요소(MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일이 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 이외의 정보를 포함하도록 허용합니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서는 `ProjectExtensions` 요소 내의 모든 항목을 무시합니다.  
@@ -70,7 +54,7 @@ ms.lasthandoff: 02/22/2017
 
 |요소|설명|  
 |-------------|-----------------|  
-|[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일의 필수 루트 요소입니다.|  
+|[프로젝트](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일의 필수 루트 요소입니다.|  
 
 ## <a name="remarks"></a>설명  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트에서는 `ProjectExtensions` 요소를 하나만 사용할 수 있습니다.  
@@ -93,4 +77,3 @@ ms.lasthandoff: 02/22/2017
 ## <a name="see-also"></a>참고 항목  
  [프로젝트 파일 스키마 참조](../msbuild/msbuild-project-file-schema-reference.md)  
  [MSBuild](../msbuild/msbuild.md)
-

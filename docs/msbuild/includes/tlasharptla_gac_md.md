@@ -13,14 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 5401ef71419f0394c70f3c6770ac2803f38c8cfe
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 GAC(전역 어셈블리 캐시)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

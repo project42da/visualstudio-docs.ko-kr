@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSBuild, Items
+helpviewer_keywords: MSBuild, Items
 ms.assetid: d762eff4-c92a-4b5f-a944-1ca30aa22319
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 754cec0effaaa0cf68cf1a4bbc4d536dbdcf0298
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: a306f7cda287e41efc0cb59cf5a75c7111d32c39
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-items"></a>MSBuild 항목
 MSBuild 항목은 빌드 시스템에 대한 입력이며, 일반적으로 파일을 나타냅니다. 항목은 해당 요소 이름에 따라 항목 종류로 그룹화됩니다. 항목 종류는 작업의 매개 변수로 사용할 수 있는 명명된 항목 목록입니다. 작업은 항목 값을 사용하여 빌드 프로세스의 단계를 수행합니다.  

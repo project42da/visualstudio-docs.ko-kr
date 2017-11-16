@@ -1,22 +1,25 @@
 ---
-title: "프로파일링 데이터 파일을 사용하여 기호 정보 저장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "packsymbols, 프로파일링 도구 보고서"
-  - "프로파일링 도구, packsymbols"
+title: "성능 데이터 파일을 사용하여 기호 정보 저장 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- packsymbols, in profiling tools reports
+- profiling tools, packsymbols
 ms.assetid: 8b802505-e94d-4ee0-83e4-fdd790a332c1
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 89913922d4c806e591d6a488f35242444d16ceb0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>성능 데이터 파일을 사용하여 기호 정보 저장
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE(통합 개발 환경)를 사용하여 파일을 분석하는 경우 VSP 파일을 다른 컴퓨터로 이동하려면 보고서 파일에서 기호를 저장 또는 *serialize*하기 위한 성능 프로젝트 설정을 지정해야 합니다. 이렇게 하면 보고서 파일의 크기가 증가합니다. 기호를 serialize해야 하는 이유는 다음의 두 가지입니다.  
@@ -65,8 +68,3 @@ caps.handback.revision: 13
  [성능 도구 데이터 저장 및 내보내기](../profiling/saving-and-exporting-performance-tools-data.md)   
  [방법: Windows 기호 정보 참조](../profiling/how-to-reference-windows-symbol-information.md)   
  [VSPerfReport](../profiling/vsperfreport.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#Import
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#Import
 dev_langs:
 - VB
 - CSharp
@@ -19,30 +17,15 @@ helpviewer_keywords:
 - Import element [MSBuild]
 - <Import> element [MSBuild]
 ms.assetid: 3bfecaf1-69fd-4008-b651-c9dafd4389d9
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
-ms.openlocfilehash: 507b5fc312ca1f3a8c3ab4e24d3c43fddd0398eb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5709fc2ea456a8cfa45d8ce01e97c0c79d256c38
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="import-element-msbuild"></a>Import 요소(MSBuild)
 한 프로젝트 파일의 내용을 다른 프로젝트 파일로 가져옵니다.  
@@ -74,24 +57,24 @@ ms.lasthandoff: 03/13/2017
 
 |요소|설명|  
 |-------------|-----------------|  
-|[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일의 필수 루트 요소입니다.|  
+|[프로젝트](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일의 필수 루트 요소입니다.|  
 |[ImportGroup](../msbuild/importgroup-element.md)|선택적인 조건으로 그룹화된 `Import` 요소의 컬렉션을 포함합니다.|  
 
 ## <a name="remarks"></a>주의  
  `Import` 요소를 사용하면 여러 프로젝트 파일에 공통된 코드를 다시 사용할 수 있습니다. 이렇게 하면 공유 코드에 대한 업데이트가 그것을 가져오는 모든 프로젝트에 전파되므로 코드를 더 쉽게 유지 관리할 수 있습니다.  
 
- 규칙에 따라, 가져온 공유 프로젝트 파일은 .targets 파일로 저장되지만, 실제로는 표준 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일입니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서는 다른 파일 이름 확장명을 가진 프로젝트를 가져오는 것이 금지되지 않지만, 일관성을 위해 .targets 확장명을 사용할 것을 권장합니다.  
+ 규칙에 따라, 가져온 공유 프로젝트 파일은 .targets 파일로 저장되지만, 실제로는 표준 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일입니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 에서는 다른 파일 이름 확장명을 가진 프로젝트를 가져오는 것이 금지되지 않지만, 일관성을 위해 .targets 확장명을 사용할 것을 권장합니다.  
 
  가져온 프로젝트의 상대 경로는 가져오는 프로젝트의 디렉터리를 기준으로 해석됩니다. 따라서 프로젝트 파일을 서로 다른 위치의 여러 프로젝트 파일로 가져온 경우, 가져온 프로젝트 파일의 상대 경로는 가져온 각 프로젝트에 대해 다르게 해석됩니다.  
 
- 가져온 프로젝트에서 참조되는, 프로젝트 파일과 관련된 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]의 모든 예약된 속성(예: `MSBuildProjectDirectory` 및 `MSBuildProjectFile`)은 가져오는 프로젝트 파일을 기반으로 값이 할당됩니다.  
+ 가져온 프로젝트에서 참조되는, 프로젝트 파일과 관련된 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 의 모든 예약된 속성(예: `MSBuildProjectDirectory` 및 `MSBuildProjectFile`)은 가져오는 프로젝트 파일을 기반으로 값이 할당됩니다.  
 
- 가져온 프로젝트에 `DefaultTargets` 특성이 없는 경우 가져온 프로젝트는 가져온 순서대로 검사되며, 처음 검색된 `DefaultTargets` 특성의 값이 사용됩니다. 예를 들어 ProjectA가 ProjectB와 ProjectC를 순서대로 가져오고 ProjectB가 ProjectD를 가져오는 경우에 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 먼저 ProjectA에 지정된 `DefaultTargets`를 검색한 다음 ProjectB, ProjectD, 마지막으로 ProjectC를 검색합니다.  
+ 가져온 프로젝트에 `DefaultTargets` 특성이 없는 경우 가져온 프로젝트는 가져온 순서대로 검사되며, 처음 검색된 `DefaultTargets` 특성의 값이 사용됩니다. 예를 들어 ProjectA가 ProjectB와 ProjectC를 순서대로 가져오고 ProjectB가 ProjectD를 가져오는 경우에 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 는 먼저 ProjectA에 지정된 `DefaultTargets` 를 검색한 다음 ProjectB, ProjectD, 마지막으로 ProjectC를 검색합니다.  
 
- 가져온 프로젝트의 스키마는 표준 프로젝트의 스키마와 동일합니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 가져온 프로젝트를 빌드할 수는 있지만 그럴 가능성은 매우 낮습니다. 일반적으로 가져온 프로젝트에는 설정할 속성 또는 대상을 실행할 순서에 대한 정보가 포함되어 있지 않기 때문입니다. 가져온 프로젝트는 그것을 가져온 상위 프로젝트에 의존하여 해당 정보를 제공합니다.  
+ 가져온 프로젝트의 스키마는 표준 프로젝트의 스키마와 동일합니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 는 가져온 프로젝트를 빌드할 수는 있지만 그럴 가능성은 매우 낮습니다. 일반적으로 가져온 프로젝트에는 설정할 속성 또는 대상을 실행할 순서에 대한 정보가 포함되어 있지 않기 때문입니다. 가져온 프로젝트는 그것을 가져온 상위 프로젝트에 의존하여 해당 정보를 제공합니다.  
 
 > [!NOTE]
->  조건부 import 문은 명령줄 MSBuild에서 작동하지만, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE(통합 개발 환경)에서는 MSBuild와 작동하지 않습니다. 조건부 가져오기는 프로젝트를 로드할 때 설정된 구성 및 플랫폼 값을 사용하여 평가됩니다. 이후 프로젝트 파일의 조건을 재평가하도록 요구하는 변경(예: 플랫폼 변경)이 발생하는 경우 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]는 속성 및 항목에 대한 조건은 재평가하지만 가져오기에 대한 조건은 재평가하지 않습니다. 가져오기 조건부는 재평가되지 않으므로 가져오기는 건너뜁니다.  
+>  조건부 import 문은 명령줄 MSBuild에서 작동하지만, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE(통합 개발 환경)에서는 MSBuild와 작동하지 않습니다. 조건부 가져오기는 프로젝트를 로드할 때 설정된 구성 및 플랫폼 값을 사용하여 평가됩니다. 이후 프로젝트 파일의 조건을 재평가하도록 요구하는 변경(예: 플랫폼 변경)이 발생하는 경우 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 는 속성 및 항목에 대한 조건은 재평가하지만 가져오기에 대한 조건은 재평가하지 않습니다. 가져오기 조건부는 재평가되지 않으므로 가져오기는 건너뜁니다.  
 >   
 >  이 문제를 해결하려면 조건부 가져오기를 .targets 파일에 넣거나 조건부 블록(예: [Choose Element (MSBuild)](../msbuild/choose-element-msbuild.md) 블록)에 코드를 넣습니다.  
 
@@ -133,4 +116,3 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>참고 항목  
  [프로젝트 파일 스키마 참조](../msbuild/msbuild-project-file-schema-reference.md)   
  [방법: 여러 프로젝트 파일에서 동일한 대상 사용](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)
-

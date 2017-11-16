@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,30 +13,15 @@ helpviewer_keywords:
 - multi-targeting [Visual Studio]
 - multitargeting [Visual Studio]
 ms.assetid: b1702c33-0672-4ebc-b779-2b324d6ea880
-caps.latest.revision: 36
-author: kempb
-ms.author: kempb
+caps.latest.revision: "36"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
-ms.openlocfilehash: 93e0c6676d48a0164dcf3b184bcb886934372787
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: ad2917a1cf0a620f2e228828a152d91ec8948734
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio 다중 대상 지정 개요
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 이 버전에서는 응용 프로그램에 필요한 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전을 지정할 수 있습니다. 따라서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 이 버전을 사용해서 이전 버전에서 시작한 프로젝트 개발을 계속하려는 경우 프레임워크 대상을 변경할 필요가 없습니다. 여러 가지 버전의 프레임워크를 대상으로 지정하는 프로젝트가 포함된 솔루션을 만들 수도 있습니다. 프레임워크 대상 지정을 통해 응용 프로그램에서 지정된 버전의 프레임워크에서 제공되는 기능만 사용하도록 할 수 있습니다.  

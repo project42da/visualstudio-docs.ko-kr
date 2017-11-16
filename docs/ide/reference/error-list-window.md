@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ErrorList
+f1_keywords: VS.ErrorList
 helpviewer_keywords:
 - Task List
 - build errors
 - Error List window
 - errors [Visual Studio], Error List window
 ms.assetid: b7f6d45a-733b-4ad8-bc2f-737a37509e56
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: ee881a2ecb205ad01a1d8be6229947dd748cb2b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: d332700fc663375c9fab96d86645b5762e77d851
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="error-list-window"></a>오류 목록 창
 > [!NOTE]
@@ -59,11 +42,11 @@ ms.lasthandoff: 05/24/2017
   
 -   특정 용어를 검색하고 검색 범위를 현재 프로젝트 또는 문서로 지정합니다.  
   
- **오류 목록**을 표시하려면 **보기/오류 목록** 또는 **Ctrl+\\+E**를 클릭합니다.  
+**오류 목록**을 표시하려면 **보기/오류 목록** 또는 **Ctrl+\\+E**를 클릭합니다.  
   
- **오류**, **경고** 및 **메시지** 탭을 선택하면 다른 수준의 정보를 볼 수 있습니다.  
+**오류**, **경고** 및 **메시지** 탭을 선택하면 다른 수준의 정보를 볼 수 있습니다.  
   
- 목록을 정렬하려면 열 머리글을 클릭합니다. 추가 열을 기준으로 다시 정렬하려면 Shift 키를 누른 상태에서 다른 열 머리글을 클릭합니다. 표시할 열과 숨길 열을 선택하려면 바로 가기 메뉴에서 **열 표시**를 선택합니다. 열이 표시되는 순서를 변경하려면 열 머리글을 왼쪽이나 오른쪽으로 끕니다.  
+목록을 정렬하려면 열 머리글을 클릭합니다. 추가 열을 기준으로 다시 정렬하려면 Shift 키를 누른 상태에서 다른 열 머리글을 클릭합니다. 표시할 열과 숨길 열을 선택하려면 바로 가기 메뉴에서 **열 표시**를 선택합니다. 열이 표시되는 순서를 변경하려면 열 머리글을 왼쪽이나 오른쪽으로 끕니다.  
   
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 여기서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구/설정 가져오기 및 내보내기**를 클릭합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
@@ -82,9 +65,9 @@ ms.lasthandoff: 05/24/2017
   
 3.  **현재 문서**: **편집기** 또는 **솔루션 탐색기**에서 현재 선택한 문서에 대한 오류, 경고 및 메시지를 표시합니다.  
   
- 필터가 검색 결과에 현재 적용되어 있는 경우 **오류 목록** 제목 표시줄에 필터 이름이 나타납니다. 이 경우 **오류**, **경고** 및 **메시지** 단추에 총 항목 수와 함께 필터링된 항목 수가 표시됩니다. 예를 들어, 단추에 x/y개 오류가 표시됩니다. 필터가 적용되지 않은 경우 제목 표시줄에 “오류 목록”만 표시됩니다.  
+필터가 검색 결과에 현재 적용되어 있는 경우 **오류 목록** 제목 표시줄에 필터 이름이 나타납니다. 이 경우 **오류**, **경고** 및 **메시지** 단추에 총 항목 수와 함께 필터링된 항목 수가 표시됩니다. 예를 들어, 단추에 x/y개 오류가 표시됩니다. 필터가 적용되지 않은 경우 제목 표시줄에 “오류 목록”만 표시됩니다.  
   
- 도구 모음의 오른쪽에 있는 목록은 빌드의 오류(빌드 작업으로 인한 오류) 또는 IntelliSense의 오류(빌드 실행 전 감지된 오류)인지 또는 둘 다인지 지정합니다.  
+도구 모음의 오른쪽에 있는 목록은 빌드의 오류(빌드 작업으로 인한 오류) 또는 IntelliSense의 오류(빌드 실행 전 감지된 오류)인지 또는 둘 다인지 지정합니다.  
   
 ## <a name="search"></a>검색  
  **오류 목록** 도구 모음의 오른쪽에 있는 **오류 목록 검색** 텍스트 상자를 사용하여 오류 목록에서 특정 오류를 찾습니다. 오류 목록에 표시되는 모든 열을 검색할 수 있으며 검색 결과는 항상 쿼리나 적용된 필터 대신 정렬 우선 순위가 있는 열을 기준으로 정렬됩니다. **오류 목록**에 포커스가 있는 동안 **Esc** 키를 선택하면 검색어와 필터링된 검색 결과를 지울 수 있습니다. 텍스트 상자의 오른쪽에 있는 **X**를 클릭해서도 지울 수 있습니다.  

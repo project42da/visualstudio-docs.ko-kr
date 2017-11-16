@@ -4,38 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - profiling tools, Profiler Report view filter
 - Profiler Report View filter, profiling tools
 ms.assetid: 35f89d86-4683-4db1-aa0c-ae0ce65fa524
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: aa0f51f70ae6d65cd8e8776f02118d59ab0af97b
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 8a7bee6cb18fee301dfab5e7c08c58521eac4e84
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="performance-report-view-filter"></a>성능 보고서 뷰 필터
 프로파일러 보고서 뷰 필터 창은 성능 보고서 창 위쪽에 있습니다. 이 창이 표시되지 않으면 **필터 표시** 단추를 클릭합니다.  

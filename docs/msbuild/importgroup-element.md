@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,29 +16,15 @@ helpviewer_keywords:
 - <ImportGroup> element [MSBuild]
 - ImportGroup element [MSBuild]
 ms.assetid: dac3fa2d-6678-4017-af35-93686f53f302
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
-ms.openlocfilehash: 6581493cef22954bddea70f900c45b4e616423d0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: c86eb35c4ec2022d0839273c731dad240cbaeb98
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="importgroup-element"></a>ImportGroup 요소
 선택적인 조건으로 그룹화된 `Import` 요소의 컬렉션을 포함합니다. 자세한 내용은 [Import 요소(MSBuild)](../msbuild/import-element-msbuild.md)를 참조하세요.  
@@ -75,7 +60,7 @@ ms.lasthandoff: 03/13/2017
 
 |요소|설명|  
 |-------------|-----------------|  
-|[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일의 필수 루트 요소입니다.|  
+|[프로젝트](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일의 필수 루트 요소입니다.|  
 
 ## <a name="remarks"></a>설명  
 
@@ -95,4 +80,3 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>참고 항목  
  [프로젝트 파일 스키마 참조](../msbuild/msbuild-project-file-schema-reference.md)   
  [항목](../msbuild/msbuild-items.md)
-

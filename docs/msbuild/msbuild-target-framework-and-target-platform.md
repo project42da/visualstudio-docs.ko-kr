@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df6517c5-edd6-4cc4-97ad-b3cdfc78e799
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 1628b0c5d74e642e1c52323a74bcd2279ad79436
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: cdfbe126e8a647cda4c8e29e50591a1aa229df80
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>MSBuild 대상 프레임워크 및 대상 플랫폼
 프로젝트는 특정 버전의 .NET Framework인 *대상 프레임워크* 및 특정 소프트웨어 아키텍처인 *대상 플랫폼*에서 실행되도록 빌드할 수 있습니다.  예를 들어 802x86 프로세서 제품군(“x86”)과 호환되는 32비트 플랫폼의 .NET Framework 2.0에서 실행되도록 응용 프로그램을 대상으로 지정할 수 있습니다. 대상 프레임워크와 대상 플랫폼의 조합을 *대상 컨텍스트*라고 합니다.  

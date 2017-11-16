@@ -1,35 +1,38 @@
 ---
-title: "CvEnterSpan 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cvmarkers/CvEnterSpanVA"
-  - "cvmarkers/CvEnterSpanW"
-  - "cvmarkers/CvEnterSpanExW"
-  - "cvmarkers/CvEnterSpanA"
-  - "cvmarkers/CvEnterSpanExVW"
-  - "cvmarkers/CvEnterSpanExA"
-  - "cvmarkers/CvEnterSpanVW"
-helpviewer_keywords: 
-  - "CvEnterSpanVW 메서드"
-  - "CvEnterSpanVA 메서드"
-  - "CvEnterSpanExA 메서드"
-  - "CvEnterSpanW 메서드"
-  - "CvEnterSpanA 메서드"
-  - "CvEnterSpanExVW 메서드"
-  - "CvEnterSpanExW 메서드"
+title: "CvEnterSpan 함수 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cvmarkers/CvEnterSpanVA
+- cvmarkers/CvEnterSpanW
+- cvmarkers/CvEnterSpanExW
+- cvmarkers/CvEnterSpanA
+- cvmarkers/CvEnterSpanExVW
+- cvmarkers/CvEnterSpanExA
+- cvmarkers/CvEnterSpanVW
+helpviewer_keywords:
+- CvEnterSpanVW method
+- CvEnterSpanVA method
+- CvEnterSpanExA method
+- CvEnterSpanW method
+- CvEnterSpanA method
+- CvEnterSpanExVW method
+- CvEnterSpanExW method
 ms.assetid: 91689e9c-6733-44b9-b36a-8b9b2eef7d1d
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c7a24d3809c9e600620b074315a07f2d0eaf3d18
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="cventerspan-function"></a>CvEnterSpan 함수
 새 범위의 시작을 표시합니다.  
@@ -132,8 +135,3 @@ HRESULT CvEnterSpanExVA(
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 라이브러리 참조](../profiling/cpp-library-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

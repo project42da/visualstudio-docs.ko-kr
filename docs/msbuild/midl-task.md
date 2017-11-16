@@ -1,37 +1,40 @@
 ---
-title: "MIDL 작업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCMidlTool.ServerStubFile"
-  - "VC.Project.VCMidlTool.ApplicationConfigurationMode"
-  - "VC.Project.VCMidlTool.GenerateServerFiles"
-  - "VC.Project.VCMidlTool.ClientStubFile"
-  - "VC.Project.VCMidlTool.LocaleID"
-  - "VC.Project.VCMidlTool.GenerateClientFiles"
-  - "VC.Project.VCMidlTool.SuppressCompilerWarnings"
-  - "VC.Project.VCMidlTool.TypeLibFormat"
-  - "vc.task.midl"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild (Visual c + +), MIDL 작업"
-  - "MIDL 작업(MSBuild(Visual C++))"
+title: "MIDL 작업 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCMidlTool.ServerStubFile
+- VC.Project.VCMidlTool.ApplicationConfigurationMode
+- VC.Project.VCMidlTool.GenerateServerFiles
+- VC.Project.VCMidlTool.ClientStubFile
+- VC.Project.VCMidlTool.LocaleID
+- VC.Project.VCMidlTool.GenerateClientFiles
+- VC.Project.VCMidlTool.SuppressCompilerWarnings
+- VC.Project.VCMidlTool.TypeLibFormat
+- vc.task.midl
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MSBuild (Visual C++), MIDL task
+- MIDL task (MSBuild (Visual C++))
 ms.assetid: 727efa8c-3336-40b8-8bef-ae6cbd77a422
-caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 99c0e5dfa2c2ffdb9aaf79356c83e925290f0db2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="midl-task"></a>MIDL 작업
 MIDL(Microsoft 인터페이스 정의 언어) 컴파일러 도구인 midl.exe를 래핑합니다. 자세한 내용은 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) 웹 사이트에서 "MIDL 명령줄 참조"를 참조하세요.  
@@ -419,8 +422,3 @@ MIDL(Microsoft 인터페이스 정의 언어) 컴파일러 도구인 midl.exe를
   
 ## <a name="see-also"></a>참고 항목  
  [작업 참조](../msbuild/msbuild-task-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

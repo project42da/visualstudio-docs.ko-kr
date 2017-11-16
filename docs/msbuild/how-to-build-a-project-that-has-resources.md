@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,30 +13,15 @@ helpviewer_keywords:
 - projects [.NET Framework], building
 - MSBuild, building a project with resources
 ms.assetid: d07ac73f-2c2d-4e9a-812a-6dcb632bafe2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 641697cabee22a86e3b5ee7a360cbea154ead486
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: 42c447625093adb84f3db0c495efb7b0cfa2664e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-build-a-project-that-has-resources"></a>방법: 리소스를 사용하는 프로젝트 빌드
 프로젝트의 현지화된 버전을 빌드할 경우 모든 사용자 인터페이스 요소를 언어에 따라 다른 리소스 파일로 분리해야 합니다. 프로젝트에서 문자열만 사용할 경우 리소스 파일에는 텍스트 파일이 사용됩니다. 또는 .resx 파일을 리소스 파일로 사용할 수 있습니다.  

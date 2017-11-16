@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,30 +12,15 @@ helpviewer_keywords:
 - performance tools, walkthroughs
 - performance tools, command-line tools
 ms.assetid: 1d53972f-6f35-4842-8c74-1b627f18c70a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d4a5fa12578b0e4dd46ac7556e9d77ae46de50bb
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 338b79cfe5dbdb812b385d237523d2a79d8cc965
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-command-line-profiling-using-sampling"></a>연습: 샘플링을 사용하여 명령줄 프로파일링
 이 연습에서는 성능 문제를 파악하도록 명령줄 도구와 샘플링을 사용하여 응용 프로그램을 프로파일링하는 방법을 설명합니다.  
