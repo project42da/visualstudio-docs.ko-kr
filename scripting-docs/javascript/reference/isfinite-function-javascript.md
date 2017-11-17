@@ -1,48 +1,50 @@
 ---
-title: "isFinite 함수(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "isFinite"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "유한 숫자"
-  - "isFinite 메서드"
+title: "isFinite 함수 (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: isFinite
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- finite numbers
+- isFinite method
 ms.assetid: ea9287d2-892f-496b-86b7-f9196868d5cf
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ce78afe59190a03fb079841e7691f84c01eebedd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# isFinite 함수(JavaScript)
-제공된 숫자가 유한한지 여부를 확인합니다.  
+# <a name="isfinite-function-javascript"></a>isFinite 함수(JavaScript)
+제공 된 숫자 유한 인지 확인 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 isFinite(number)   
 ```  
   
-## 설명  
- 필수 `number` 인수는 임의의 숫자 값입니다.  
+## <a name="remarks"></a>설명  
+ 필요한 `number` 인수는 숫자 값입니다.  
   
- `isFinite` 함수는 `number`가 `NaN`, 음의 무한대 또는 양의 무한대 이외의 값이면 `true`를 반환하고,  이 세 경우에는 **false**를 반환합니다.  
+ `isFinite` 함수에서 반환 `true` 경우 `number` 아닌 다른 값이 `NaN`, 양의 무한대 또는 음의 무한대 합니다. 이러한 세 가지 경우에서 반환 **false**합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
- **적용 대상**: [Global 개체](../../javascript/reference/global-object-javascript.md)  
+ **적용 대상**: [전역 개체](../../javascript/reference/global-object-javascript.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [isNaN 함수](../../javascript/reference/isnan-function-javascript.md)

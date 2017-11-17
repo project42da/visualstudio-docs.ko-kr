@@ -1,51 +1,52 @@
 ---
-title: "방법: ClickOnce 게시 버전 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 배포, 게시 버전 설정"
-  - "게시 버전 속성"
-  - "게시, ClickOnce"
+title: "방법: 집합 ClickOnce 게시 버전 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce deployment, setting publish version
+- publishing, ClickOnce
+- Publish Version property
 ms.assetid: 06f15504-6385-40a6-b01d-cd90ca36dc73
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: be66edb3880e8ef91f8fd95d7f11fe465322451f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: ClickOnce 게시 버전 설정
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] **게시 버전** 속성은 게시할 응용 프로그램을 업데이트로 취급할지 여부를 결정합니다.  버전이 증가할 때마다 응용 프로그램은 업데이트로 게시됩니다.  
+# <a name="how-to-set-the-clickonce-publish-version"></a>방법: ClickOnce 게시 버전 설정
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version` 속성 게시 하려는 응용 프로그램 업데이트로 간주할지 여부를 결정 합니다. 각 시간 버전 번호가 증가, 응용 프로그램이 업데이트로 게시 됩니다.  
   
- **게시 버전** 속성은 **프로젝트 디자이너**의 **게시** 페이지에서 설정할 수 있습니다.  
+ `Publish Version` 속성에 설정 될 수는 **게시** 의 페이지는 **프로젝트 디자이너**합니다.  
   
 > [!NOTE]
->  응용 프로그램이 게시될 때마다 **게시 버전** 속성을 자동으로 증가시키는 프로젝트 옵션이 있습니다. 이 옵션은 기본적으로 설정되어 있습니다.  자세한 내용은 [방법: ClickOnce 게시 버전 자동 증가](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)를 참조하십시오.  
+>  자동으로 증가 하는 프로젝트 옵션이 `Publish Version` 속성 될 때마다는 응용 프로그램을 게시할;이 옵션은 기본적으로 사용할 수 있습니다. 자세한 내용은 참조 [하는 방법: ClickOnce 게시 버전 자동 증가](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)합니다.  
   
-### 게시 버전을 변경하려면  
+### <a name="to-change-the-publish-version"></a>게시 버전을 변경 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **게시** 탭을 클릭합니다.  
+2.  클릭는 **게시** 탭 합니다.  
   
-3.  **게시 버전** 필드에서 **주 버전**, **부 버전**, **빌드** 또는 **수정 버전**을 증가시킵니다.  
+3.  **게시 버전** 필드, 증가 **주요**, **부**, **빌드**, 또는 **개정** 버전 숫자입니다.  
   
     > [!NOTE]
-    >  버전 번호를 감소시켜서는 안 됩니다. 감소시키는 경우 예상치 못한 업데이트 동작이 발생할 수 있습니다.  
+    >  버전 번호를; 감소 하지 해야 따라서 이렇게 하면 예측할 수 없는 업데이트 동작을 일으킬 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ClickOnce 업데이트 전략 선택](../deployment/choosing-a-clickonce-update-strategy.md)   
- [방법: ClickOnce 게시 버전 자동 증가](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)   
+ [방법: 자동으로 증가 ClickOnce 게시 버전](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)   
  [ClickOnce 응용 프로그램 게시](../deployment/publishing-clickonce-applications.md)   
  [방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

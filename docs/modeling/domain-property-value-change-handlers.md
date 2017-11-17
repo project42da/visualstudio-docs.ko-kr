@@ -1,29 +1,30 @@
 ---
 title: "도메인 속성 값 변경 처리기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "도메인별 언어, 이벤트 처리기 재정의"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Domain-Specific Language, overriding event handlers
 ms.assetid: 96d8f392-045e-4bc5-b165-fbaa470a3e16
-caps.latest.revision: 24
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: effe18c4b4d363bd7fa4cbed29ddf254c85aac31
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 도메인 속성 값 변경 처리기
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DSL\(Domain\-Specific Language\)에서는 도메인 속성 값이 변경되면 도메인 속성 처리기에서 `OnValueChanging()` 및 `OnValueChanged()` 메서드가 호출됩니다.  변경에 응답하려면 이러한 메서드를 재정의하면 됩니다.  
+# <a name="domain-property-value-change-handlers"></a>도메인 속성 값 변경 처리기
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DSL(Domain-Specific Language)에서는 도메인 속성 값이 변경되면 도메인 속성 처리기에서 `OnValueChanging()` 및 `OnValueChanged()` 메서드가 호출됩니다. 변경에 응답하려면 이러한 메서드를 재정의하면 됩니다.  
   
-## 속성 처리기 메서드 재정의  
- DSL의 각 도메인 속성은 부모 도메인 클래스 내에 중첩된 클래스를 통해 처리됩니다.  해당 이름은 *PropertyName*PropertyHandler 형식을 따릅니다.  이 속성 처리기 클래스는 **Dsl\\Generated Code\\DomainClasses.cs** 파일에서 확인할 수 있습니다.  해당 클래스에서는 값이 변경되기 직전에 `OnValueChanging()`이 호출되고 값이 변경된 직후에 `OnValueChanged()`가 호출됩니다.  
+## <a name="overriding-the-property-handler-methods"></a>속성 처리기 메서드 재정의  
+ DSL의 각 도메인 속성은 부모 도메인 클래스 내에 중첩된 클래스를 통해 처리됩니다. 형식에 따라 해당 이름을 *PropertyName*PropertyHandler 합니다. 파일에서이 속성 처리기 클래스를 검사할 수 **Dsl\Generated Code\DomainClasses.cs**합니다. 해당 클래스에서는 값이 변경되기 직전에 `OnValueChanging()`이 호출되고 값이 변경된 직후에 `OnValueChanged()`가 호출됩니다.  
   
- 예를 들어 `Text` 문자열 도메인 속성과 `TextLengthCount` 정수 속성이 포함된 `Comment` 도메인 클래스가 있다고 가정해 보겠습니다.  여기서 `TextLengthCount`가 `Text` 문자열의 길이를 항상 포함하도록 하려면 Dsl 프로젝트의 별도 파일에 다음 코드를 작성할 수 있습니다.  
+ 예를 들어 라는 도메인 클래스가 있다고 `Comment` 라는 문자열 도메인 속성이 포함 `Text` 및 명명 된 정수 속성 `TextLengthCount`합니다. 시킬 `TextLengthCount` 항상의 길이 포함 하는 `Text` 문자열 Dsl 프로젝트에서 별도 파일에 다음 코드를 작성할 수 있습니다.  
   
 ```  
 // Domain Class "Comment":  
@@ -54,18 +55,18 @@ public partial class Comment
   
 -   속성 처리기 메서드는 사용자가 도메인 속성을 변경할 때와 프로그램 코드가 속성에 다른 값을 할당할 때 모두 호출됩니다.  
   
--   메서드는 값이 실제로 변경될 때만 호출됩니다.  프로그램 코드가 현재 값과 같은 값을 할당하는 경우에는 처리기가 호출되지 않습니다.  
+-   메서드는 값이 실제로 변경될 때만 호출됩니다. 프로그램 코드가 현재 값과 같은 값을 할당하는 경우에는 처리기가 호출되지 않습니다.  
   
 -   계산된 속성 및 사용자 지정 저장소 도메인 속성에는 OnValueChanged 및 OnValueChanging 메서드가 없습니다.  
   
--   변경 처리기를 사용하여 새 값을 수정할 수는 없습니다.  값을 특정 범위로 제한하는 등의 작업을 수행하려면 `ChangeRule`을 정의합니다.  
+-   변경 처리기를 사용하여 새 값을 수정할 수는 없습니다. 값을 특정 범위로 제한하는 등의 작업을 수행하려면 `ChangeRule`을 정의합니다.  
   
--   관계의 역할을 나타내는 속성에는 변경 처리기를 추가할 수 없습니다.  대신 관계 클래스에 대해 `AddRule` 및 `DeleteRule`을 정의합니다.  이러한 규칙은 링크를 만들거나 변경할 때 트리거됩니다.  자세한 내용은 [규칙에는 모델 내에서 변경 내용을 전파 하기](../modeling/rules-propagate-changes-within-the-model.md)을 참조하십시오.  
+-   관계의 역할을 나타내는 속성에는 변경 처리기를 추가할 수 없습니다. 대신 관계 클래스에 대해 `AddRule` 및 `DeleteRule`을 정의합니다. 이러한 규칙은 링크를 만들거나 변경할 때 트리거됩니다. 자세한 내용은 참조 [규칙 전파 변경 내에서 모델](../modeling/rules-propagate-changes-within-the-model.md)합니다.  
   
-### Store 내부 및 외부의 변경 사항  
- 속성 처리기 메서드는 변경을 시작한 트랜잭션 내에서 호출됩니다.  그러므로 새 트랜잭션을 열지 않고 Store에서 추가로 변경할 수 있습니다.  변경하면 처리기가 추가로 호출될 수 있습니다.  
+### <a name="changes-in-and-out-of-the-store"></a>Store 내부 및 외부의 변경 사항  
+ 속성 처리기 메서드는 변경을 시작한 트랜잭션 내에서 호출됩니다. 그러므로 새 트랜잭션을 열지 않고 Store에서 추가로 변경할 수 있습니다. 변경하면 처리기가 추가로 호출될 수 있습니다.  
   
- 트랜잭션 실행을 취소하거나 다시 실행하거나 롤백할 때는 Store에서 변경하면 안 됩니다. 즉, 모델 요소\/관계\/모양\/연결선\/다이어그램 또는 해당 속성을 변경해서는 안 됩니다.  
+ 트랜잭션 실행을 취소하거나 다시 실행하거나 롤백할 때는 Store에서 변경하면 안 됩니다. 즉, 모델 요소/관계/모양/연결선/다이어그램 또는 해당 속성을 변경해서는 안 됩니다.  
   
  또한 파일에서 모델을 로드할 때는 보통 값을 업데이트하지 않습니다.  
   
@@ -80,8 +81,8 @@ if (!store.InUndoRedoOrRollback
   
  반면에 속성 처리기가 파일, 데이터베이스 또는 Store에 포함되지 않은 변수 등의 Store 외부 항목으로 변경 내용을 전파하는 경우에는 항상 사용자가 실행 취소 또는 다시 실행을 호출할 때 외부 값이 업데이트되도록 변경해야 합니다.  
   
-### 변경 취소  
- 변경을 방지하려는 경우 현재 트랜잭션을 롤백하면 됩니다.  예를 들어 속성이 특정 범위 내에 유지되도록 하려면 다음 코드를 사용합니다.  
+### <a name="canceling-a-change"></a>변경 취소  
+ 변경을 방지하려는 경우 현재 트랜잭션을 롤백하면 됩니다. 예를 들어 속성이 특정 범위 내에 유지되도록 하려면 다음 코드를 사용합니다.  
   
 ```  
 if (newValue > 10)   
@@ -91,24 +92,24 @@ if (newValue > 10)
   
 ```  
   
-### 대체 기술: 계산된 속성  
- 위의 예에서는 OnValueChanged\(\)를 사용하여 도메인 속성 간에 값을 전파하는 방법을 보여줍니다.  이 속성에는 자체 저장 값이 있습니다.  
+### <a name="alternative-technique-calculated-properties"></a>대체 기술: 계산된 속성  
+ 위의 예에서는 OnValueChanged()를 사용하여 도메인 속성 간에 값을 전파하는 방법을 보여줍니다. 이 속성에는 자체 저장 값이 있습니다.  
   
- 대신 파생 속성을 계산된 속성으로 정의할 수 있습니다.  이 경우 속성은 자체 저장소를 포함하지 않으며 속성의 값이 필요할 때마다 정의 기능을 평가합니다.  자세한 내용은 [계산 및 사용자 지정 저장소 속성](../modeling/calculated-and-custom-storage-properties.md)을 참조하십시오.  
+ 대신 파생 속성을 계산된 속성으로 정의할 수 있습니다. 이 경우 속성은 자체 저장소를 포함하지 않으며 속성의 값이 필요할 때마다 정의 기능을 평가합니다. 자세한 내용은 참조 [계산 및 저장소 속성을 사용자 지정](../modeling/calculated-and-custom-storage-properties.md)합니다.  
   
- 이전 예제를 사용하는 대신 DSL 정의에서 `TextLengthCount`의 **Kind** 필드를 **Calculated**로 설정할 수 있습니다.  이 도메인 속성에는 고유한 **Get** 메서드를 제공합니다.  **Get** 메서드는 `Text` 문자열의 현재 길이를 반환합니다.  
+ 앞의 예에서 대신 설정할 수 있습니다는 **종류** 필드 `TextLengthCount` 되도록 **계산** DSL 정의 합니다. 제공 하면 사용자 고유의 **가져오기** 이 도메인 속성에 대 한 메서드. **가져오기** 메서드는 반환의 현재 길이 `Text` 문자열입니다.  
   
- 그러나 계산된 속성을 사용하는 경우 값을 사용할 때마다 식을 평가하므로 성능상의 문제가 발생할 수 있다는 단점이 있습니다.  또한 계산된 속성에는 OnValueChanging\(\) 및 OnValueChanged\(\)가 없습니다.  
+ 그러나 계산된 속성을 사용하는 경우 값을 사용할 때마다 식을 평가하므로 성능상의 문제가 발생할 수 있다는 단점이 있습니다. 또한 계산된 속성에는 OnValueChanging() 및 OnValueChanged()가 없습니다.  
   
-### 대체 기술: 변경 규칙  
- ChangeRule을 정의하면 속성 값이 변경되는 트랜잭션 종료 시 해당 ChangeRule이 실행됩니다.  자세한 내용은 [규칙에는 모델 내에서 변경 내용을 전파 하기](../modeling/rules-propagate-changes-within-the-model.md)을 참조하십시오.  
+### <a name="alternative-technique-change-rules"></a>대체 기술: 변경 규칙  
+ ChangeRule 정의 하는 경우 속성의 값이 변경 트랜잭션이 끝날 때 실행 됩니다.  자세한 내용은 참조 [규칙 전파 변경 내에서 모델](../modeling/rules-propagate-changes-within-the-model.md)합니다.  
   
- 트랜잭션 하나에서 여러 항목을 변경하는 경우 모든 변경이 완료되면 ChangeRule이 실행됩니다.  반면에 OnValue...  메서드는 일부 변경이 수행되지 않았더라도 실행됩니다.  그러므로 수행하려는 작업에 따라서 ChangeRule을 사용하는 것이 보다 적절할 수 있습니다.  
+ 트랜잭션 하나에서 여러 항목을 변경하는 경우 모든 변경이 완료되면 ChangeRule이 실행됩니다. 반대로, OnValue... 메서드는 수행 되지 않았음을 일부 변경 될 때 실행 됩니다. 그러므로 수행하려는 작업에 따라서 ChangeRule을 사용하는 것이 보다 적절할 수 있습니다.  
   
- ChangeRule을 사용하여 속성의 새 값이 특정 범위 내에 유지되도록 조정할 수도 있습니다.  
+ 또한 특정 범위 내에 유지 하는 속성의 새 값을 조정 하는 ChangeRule를 사용할 수 있습니다.  
   
 > [!WARNING]
->  규칙이 Store 콘텐츠를 변경하면 다른 규칙과 속성 처리기가 트리거될 수 있습니다.  규칙을 트리거한 속성이 규칙에 의해 변경되면 해당 규칙이 다시 호출됩니다.  규칙 정의로 인해 무한 트리거가 발생하지 않는지 확인해야 합니다.  
+>  규칙이 Store 콘텐츠를 변경하면 다른 규칙과 속성 처리기가 트리거될 수 있습니다. 규칙을 트리거한 속성이 규칙에 의해 변경되면 해당 규칙이 다시 호출됩니다. 규칙 정의로 인해 무한 트리거가 발생하지 않는지 확인해야 합니다.  
   
 ```  
 using Microsoft.VisualStudio.Modeling;   
@@ -139,12 +140,12 @@ public partial class MyDomainModel
   
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
+### <a name="description"></a>설명  
  다음 예에서는 도메인 속성의 속성 처리기를 재정의하고 `ExampleElement` 도메인 클래스의 속성이 변경된 경우 사용자에게 알림을 표시합니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 using DslModeling = global::Microsoft.VisualStudio.Modeling;  
@@ -172,6 +173,6 @@ namespace msft.FieldChangeSample
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.Modeling.DomainPropertyValueHandler%602.OnValueChanged%2A>   
  <xref:Microsoft.VisualStudio.Modeling.DomainPropertyValueHandler%602.OnValueChanging%2A>

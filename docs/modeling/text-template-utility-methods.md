@@ -1,32 +1,33 @@
 ---
 title: "텍스트 템플릿 유틸리티 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "텍스트 템플릿, 유틸리티 메서드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: text templates, utility methods
 ms.assetid: 8c11f9f7-678b-4f0c-b634-dc78fda699d1
-caps.latest.revision: 50
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 50
+caps.latest.revision: "50"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 534a7317b4bca2abe559c028d025a52997a9f508
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 텍스트 템플릿 유틸리티 메서드
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 텍스트 템플릿에서 코드를 작성할 때 항상 사용할 수 있는 몇 가지 메서드가 있습니다.  이러한 메서드는 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>에서 정의됩니다.  
+# <a name="text-template-utility-methods"></a>텍스트 템플릿 유틸리티 메서드
+코드를 작성할 때 항상 사용할 수 있는 여러 가지가 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 텍스트 템플릿. 에 정의 된 이러한 메서드가 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>합니다.  
   
 > [!TIP]
->  전처리된 텍스트 템플릿이 아닌 일반 텍스트 템플릿에서 호스트 환경에 의해 제공되는 다른 메서드 및 서비스를 사용할 수도 있습니다.  예를 들어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 및 로드된 패키지에서 제공되는 서비스를 가져오고 파일 경로를 확인하고 오류를 기록할 수 있습니다.  자세한 내용은 [Accessing Visual Studio from a Text Template](http://msdn.microsoft.com/ko-kr/0556f20c-fef4-41a9-9597-53afab4ab9e4)를 참조하십시오.  
+>  또한 다른 메서드 및 일반 하지 전처리 된 텍스트 템플릿의 호스트 환경에서 제공 하는 서비스를 사용할 수 있습니다. 예를 들어 파일 경로 확인, 오류를 기록할를 가져올 수 제공한 서비스 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 로드 된 패키지 및 합니다.  자세한 내용은 참조 [텍스트 템플릿에서 Visual Studio에 액세스](http://msdn.microsoft.com/en-us/0556f20c-fef4-41a9-9597-53afab4ab9e4)합니다.  
   
-## 쓰기 메서드  
- 식 코드 블록을 사용하는 대신 `Write()` 및 `WriteLine()` 메서드를 사용하여 표준 코드 블록 안에 텍스트를 추가할 수 있습니다.  다음 두 코드 블록은 기능면에서 동일합니다.  
+## <a name="write-methods"></a>Write 메서드  
+ 사용할 수는 `Write()` 및 `WriteLine()` 식 코드 블록을 사용 하는 대신 표준 코드 블록 내에 텍스트를 추가 하는 메서드. 다음 두 코드 블록은 기능적으로 같습니다.  
   
-##### 식 블록이 포함된 코드 블록  
+##### <a name="code-block-with-an-expression-block"></a>식 블록으로 코드 블록  
   
 ```  
 <#  
@@ -38,7 +39,7 @@ while (i-- > 0)
 #>  
 ```  
   
-##### WriteLine\(\)을 사용하는 코드 블록  
+##### <a name="code-block-using-writeline"></a>WriteLine()를 사용 하 여 코드 블록  
   
 ```  
 <#   
@@ -50,9 +51,9 @@ while (i-- > 0)
 #>  
 ```  
   
- 중첩 제어 구조에서 긴 코드 블록 안에 식 블록 대신 이러한 유틸리티 메서드 중 하나를 사용하는 것이 유용할 수 있습니다.  
+ 중첩된 제어 구조에서 긴 코드 블록 안에 식 블록 대신 이러한 유틸리티 메서드 중 하나를 사용 하는 것이 유용할 수 있습니다.  
   
- `Write()` 및 `WriteLine()` 메서드에는 두 오버로드가 있습니다. 한 오버로드는 단일 문자열 매개 변수를 사용하고 다른 오버로드는 합성 형식 문자열과 이 문자열에 포함할 개체의 배열을 사용합니다\(`Console.WriteLine()` 메서드와 유사함\).  `WriteLine()`을 사용하는 다음 두 경우는 기능면에서 동일합니다.  
+ `Write()` 및 `WriteLine()` 메서드는 두 개의 오버 로드를 갖고, 합성 형식 문자열 및 문자열에 포함할 개체의 배열을 사용 하는 단일 문자열 매개 변수 및 1을 사용 하는 하나 (같은 `Console.WriteLine()` 메서드). 다음 두 가지 용도 `WriteLine()` 기능적으로 동일 합니다.  
   
 ```  
 <#  
@@ -66,8 +67,8 @@ while (i-- > 0)
 #>   
 ```  
   
-## 들여쓰기 메서드  
- 들여쓰기 메서드를 사용하여 텍스트 템플릿의 출력 형식을 지정할 수 있습니다.  <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 클래스에는 텍스트 템플릿에서 현재 들여쓰기를 보여 주는 `CurrentIndent` 문자열 속성과 추가된 들여쓰기의 목록인 `indentLengths` 필드가 있습니다.  `PushIndent()` 메서드를 사용하여 들여쓰기를 추가하고 `PopIndent()` 메서드를 사용하여 들여쓰기를 뺄 수 있습니다.  모든 들여쓰기를 제거하려면 `ClearIndent()` 메서드를 사용합니다.  다음 코드 블록에서는 이러한 메서드의 사용 방법을 보여 줍니다.  
+## <a name="indentation-methods"></a>들여쓰기 메서드  
+ 텍스트 서식 파일의 출력 형식을 들여쓰기 메서드를 사용할 수 있습니다. <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 클래스에는 `CurrentIndent` 문자열 텍스트 템플릿에 현재 들여쓰기를 보여 주는 속성 및 `indentLengths` 필드 추가 된 들여쓰기의 목록입니다. 사용 하 여 들여쓰기를 추가할 수는 `PushIndent()` 메서드를 사용 하 여 들여쓰기 뺍니다는 `PopIndent()` 메서드. 모든 들여쓰기를 제거 하려는 경우 사용 하 여는 `ClearIndent()` 메서드. 다음 코드 블록에서는 이러한 메서드의 사용을 보여 줍니다.  
   
 ```  
 <#  
@@ -83,7 +84,7 @@ while (i-- > 0)
 #>  
 ```  
   
- 이 코드 블록은 다음과 같이 출력됩니다.  
+ 이 코드 블록은 다음과 같은 출력을 생성합니다.  
   
 ```  
 Hello  
@@ -93,8 +94,8 @@ Hello
         Hello  
 ```  
   
-## 오류 및 경고 메서드  
- 오류 및 경고 유틸리티 메서드를 사용하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 오류 목록에 메시지를 추가할 수 있습니다.  예를 들어, 다음 코드에서는 오류 메시지를 오류 목록에 추가합니다.  
+## <a name="error-and-warning-methods"></a>오류 및 경고 메서드  
+ 오류 및 경고 유틸리티 메서드를 사용 하 여 메시지를 추가 하는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 오류 목록입니다. 예를 들어 다음 코드는 오류 목록에는 오류 메시지를 추가 합니다.  
   
 ```  
 <#  
@@ -110,23 +111,23 @@ Hello
 #>    
 ```  
   
-## 호스트 및 서비스 공급자 액세스  
- `this.Host` 속성을 사용하여 템플릿을 실행하는 호스트에서 노출하는 속성에 액세스할 수 있습니다.  `this.Host`를 사용하려면 `<@template#>` 지시문에서 `hostspecific` 특성을 설정해야 합니다.  
+## <a name="access-to-host-and-service-provider"></a>호스트와 서비스 공급자에 대 한 액세스  
+ 속성 `this.Host` 여 템플릿을 실행 하는 호스트에서 노출 하는 속성에 대 한 액세스를 제공할 수 있습니다. 사용 하도록 `this.Host`를 설정 해야 `hostspecific` 특성에 `<@template#>` 지시문:  
   
- `<#@template ...  hostspecific="true" #>`  
+ `<#@template ... hostspecific="true" #>`  
   
- `this.Host`의 형식은 템플릿이 실행되는 호스트의 형식에 따라 달라집니다.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 실행되는 템플릿에서 `this.Host`를 `IServiceProvider`로 캐스팅하여 IDE와 같은 서비스에 액세스할 수 있습니다.  예를 들면 다음과 같습니다.  
+ 유형의 `this.Host` 템플릿이 실행 되는 호스트의 형식에 따라 달라 집니다. 실행 되는 서식 파일에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 캐스팅할 수 있습니다 `this.Host` 를 `IServiceProvider` IDE와 같은 서비스에 대 한 액세스 권한을 얻으려고 합니다. 예:  
   
 ```  
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)  
                        .GetService(typeof(EnvDTE.DTE));  
 ```  
   
-## 여러 유틸리티 메서드 집합 사용  
- 텍스트 생성 프로세스의 일부로, 템플릿 파일이 클래스로 변환됩니다. 이 클래스는 항상 `GeneratedTextTransformation`으로 명명되며 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>에서 상속합니다.  다른 메서드 집합을 대신 사용하려면 사용자 고유의 클래스를 작성하고 템플릿 지시문에서 지정할 수 있습니다.  이 클래스는 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>에서 상속해야 합니다.  
+## <a name="using-a-different-set-of-utility-methods"></a>다양 한 유틸리티 메서드를 사용 하 여  
+ 텍스트 생성 프로세스의 일환으로, 서식 파일은 라고 하는 클래스로 변환 `GeneratedTextTransformation`에서 상속 하 고 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>합니다. 다른 사용 하려는 경우 대신 메서드 집합이 작성 클래스를 직접 하 고 있습니다 template 지시문에 지정 합니다. 클래스에서 상속 해야 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>합니다.  
   
 ```  
 <#@ template inherits="MyUtilityClass" #>  
 ```  
   
- `assembly` 지시문을 사용하여 컴파일된 클래스를 찾을 수 있는 어셈블리를 참조할 수 있습니다.
+ 사용 하 여는 `assembly` 지시문 컴파일된 클래스를 찾을 수 있는 어셈블리를 참조할 수 있습니다.

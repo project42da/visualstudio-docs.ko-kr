@@ -1,36 +1,36 @@
 ---
-title: "&lt;Strings&gt; 요소(부트스트래퍼) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MSBuild.GenerateBootstrapper.NoStringsForCulture"
-  - "MSBuild.GenerateBootstrapper.ProductCultureNotFound"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<Strings> 요소[부트스트래퍼]"
+title: "&lt;문자열&gt; 요소 (부트스트래퍼) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MSBuild.GenerateBootstrapper.NoStringsForCulture
+- MSBuild.GenerateBootstrapper.ProductCultureNotFound
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <Strings> element [bootstrapper]
 ms.assetid: d5ea3613-5fc9-4a11-bef3-46a01178bf60
-caps.latest.revision: 4
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 19c4c961dd226ada84fe825643af6d1c7eacc925
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;Strings&gt; 요소(부트스트래퍼)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-제품 이름, 패키지 이름, 설치 오류 메시지에 대한 지역화된 문자열을 정의합니다.  
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt;문자열&gt; 요소 (부트스트래퍼)
+제품 이름, 패키지 이름 및 설치 오류 메시지에 대 한 지역화 된 문자열을 정의합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <Strings>  
@@ -41,20 +41,20 @@ caps.handback.revision: 4
 </Strings>  
 ```  
   
-## 요소 및 특성  
- `Strings` 요소는 `Package` 요소의 자식입니다.  특성이 없습니다.  
+## <a name="elements-and-attributes"></a>요소 및 특성  
+ `Strings` 의 자식인 요소는 `Package` 요소입니다. 특성이 없습니다.  
   
-## String  
- `String` 요소는 `Strings` 요소의 자식입니다.  `Strings` 요소에는 `String` 요소가 하나 이상 있을 수 있습니다.  
+## <a name="string"></a>문자열  
+ `String` 의 자식인 요소는 `Strings` 요소입니다. A `Strings` 하나 이상의 요소를 가질 수 `String` 요소입니다.  
   
- `String`에는 다음과 같은 특성이 있습니다.  
+ `String`에 다음 특성이 있습니다.  
   
 |특성|설명|  
-|--------|--------|  
-|`Name`|필수 요소.  문자열의 이름입니다.|  
+|---------------|-----------------|  
+|`Name`|필수 요소. 문자열의 이름입니다.|  
   
-## 예제  
- 다음 코드 예제에서는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 설치 관리자에 대한 모든 영어 문자열을 지정합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 지정에 대 한 영어 문자열의 모든 고 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 설치 관리자입니다.  
   
 ```  
 <Strings>  
@@ -75,5 +75,5 @@ caps.handback.revision: 4
 </Strings>  
 ```  
   
-## 참고 항목  
- [\<Package\> 요소](../deployment/package-element-bootstrapper.md)
+## <a name="see-also"></a>참고 항목  
+ [\<패키지 > 요소](../deployment/package-element-bootstrapper.md)

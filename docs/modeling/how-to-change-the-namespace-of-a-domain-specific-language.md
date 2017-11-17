@@ -1,56 +1,57 @@
 ---
-title: "방법: 도메인별 언어의 네임스페이스 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "도메인별 언어, 네임스페이스"
+title: "방법: 도메인 특정 언어의 Namespace 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Domain-Specific Language, namespace
 ms.assetid: f20c47e5-230d-4f0e-812f-5c6edb86866c
-caps.latest.revision: 19
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: b7419766b4c195c3bcef2aa45e886004a89fb5ec
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: 도메인별 언어의 네임스페이스 변경
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-도메인 관련 언어의 네임 스페이스를 변경할 수 있습니다.  변경 해야 합니다의  **DSL 탐색기**, Dsl 패키지 프로젝트의 속성 및 어셈블리 정보입니다.  
+# <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>방법: 도메인별 언어의 네임스페이스 변경
+도메인 특정 언어의 네임 스페이스를 변경할 수 있습니다. 변경 내용을 확인 해야 합니다.는 **DSL 탐색기**, Dsl 패키지 프로젝트의 속성 및 어셈블리 정보입니다.  
   
-### 도메인 관련 언어의 네임 스페이스를 변경 하려면  
+### <a name="to-change-the-namespace-of-a-domain-specific-language"></a>도메인 특정 언어의 네임 스페이스를 변경 하려면  
   
-1.  **DSL 탐색기**를 클릭 하는  **Dsl** 노드.  
+1.  **DSL 탐색기**, 클릭는 **Dsl** 노드.  
   
-2.  에  **속성** 창에서 변경의  **네임 스페이스** 속성입니다.  
+2.  에 **속성** 창에서 변경 된 **Namespace** 속성입니다.  
   
-3.  솔루션을 저장 및 서식 파일을 변환 합니다.  
+3.  솔루션을 저장 하 고 템플릿이 변환 합니다.  
   
-4.  에 있는  **프로젝트** 메뉴를 클릭  **Dsl 속성**.  
+4.  에 **프로젝트** 메뉴를 클릭 하 여 **Dsl 속성**합니다.  
   
-     프로젝트 속성이 나타납니다.  
+     프로젝트에 대 한 속성이 표시 됩니다.  
   
 5.  **응용 프로그램** 탭을 클릭합니다.  
   
-6.  변경의  **기본 네임 스페이스** 속성에는 새 네임 스페이스 이름입니다.  
+6.  변경 된 **기본 네임 스페이스** 속성을 새 네임 스페이스 이름입니다.  
   
-7.  어셈블리의 이름을 변경 하려면 변경의  **어셈블리 이름 속성입니다.**  
+7.  어셈블리의 이름을 변경 하려면 변경 된 **어셈블리 이름 속성입니다.**  
   
-8.  어셈블리 이름을 변경 하면 Dslpackage\\package.tt를 열고이 줄을 업데이트 합니다.  
+8.  어셈블리 이름을 변경한 경우 DslPackage\Package.tt 열고이 줄을 업데이트 합니다.  
   
      `string dslAssembly = "YourDSLassembly.Dsl.dll";`  
   
-9. 모든 사용자 지정 코드를 작성 한 경우 코드 파일에서 네임 스페이스 및 클래스 참조를 변경 해야 합니다.  
+9. 사용자 지정 코드를 작성 한 경우에 코드 파일에서 네임 스페이스 및 클래스 참조를 변경 해야 합니다.  
   
-10. Visual Studio 실험 인스턴스를 다시 설정 합니다.  
+10. Visual Studio 실험적 인스턴스를 다시 설정 합니다.  
   
-    1.  삭제 **\\Users\\***{이름}***\\AppData\\Local\\Microsoft\\VisualStudio\\\*Exp**  
+    1.  삭제 **\Users\\***{name}***\AppData\Local\Microsoft\VisualStudio\\\*Exp**  
   
-    2.  Windows  **시작** 메뉴를 선택  **모든 프로그램**,  **Microsoft Visual Studio 2010 SDK**,  **도구**,  **실험 인스턴스 다시**.  
+    2.  Windows **시작** 메뉴 선택 **모든 프로그램**, **Microsoft Visual Studio 2010 SDK**, **도구**, **다시 설정 된 실험적 인스턴스**합니다.  
   
-11. 에 있는  **빌드** 메뉴를 선택  **솔루션 다시 빌드**.  
+11. 에 **빌드** 메뉴 선택 **솔루션 다시 빌드**합니다.  
   
-## 참고 항목  
- [Domain\-Specific Language Tools Glossary](http://msdn.microsoft.com/ko-kr/ca5e84cb-a315-465c-be24-76aa3df276aa)
+## <a name="see-also"></a>참고 항목  
+ [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

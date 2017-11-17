@@ -10,21 +10,15 @@ helpviewer_keywords:
 - walkthroughs [text templates], connecting host to processor
 - text templates, custom directive hosts
 ms.assetid: 254540d9-90d6-42de-8c1c-068affd56e83
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 07b1e70775638d88e67280f2f914412ef4271a48
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5bfeb8ea94b457114d7ba6ab74b783972e64350c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>연습: 생성된 지시문 프로세서에 호스트 연결
 텍스트 템플릿을 처리 하는 고유 호스트를 작성할 수 있습니다. 기본 사용자 지정 호스트에 설명 된 [연습: 사용자 지정 텍스트 템플릿 호스트 만들기](../modeling/walkthrough-creating-a-custom-text-template-host.md)합니다. 여러 개의 출력 파일로 생성 하는 등의 함수를 추가 하려면 해당 호스트를 확장할 수 있습니다.  
@@ -367,4 +361,3 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>참고 항목  
  [연습: 사용자 지정 텍스트 템플릿 호스트 만들기](../modeling/walkthrough-creating-a-custom-text-template-host.md)
-

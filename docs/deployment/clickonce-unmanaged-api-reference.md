@@ -1,85 +1,86 @@
 ---
-title: "ClickOnce 관리되지 않는 API 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "CleanOnlineAppCache[ClickOnce 관리되지 않는]"
-  - "CleanOnlineAppCacheW 인터페이스[ClickOnce 관리되지 않는]"
-  - "ClickOnce, 관리되지 않는 API"
-  - "GetDeploymentDataFromManifest[ClickOnce 관리되지 않는]"
-  - "LaunchApplication[ClickOnce 관리되지 않는]"
+title: "ClickOnce 관리 되지 않는 API 참조 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- LaunchApplication [ClickOnce unmanaged]
+- ClickOnce, unmanaged APIs
+- CleanOnlineAppCache [ClickOnce unmanaged]
+- CleanOnlineAppCacheW interface [ClickOnce unmanaged]
+- GetDeploymentDataFromManifest [ClickOnce unmanaged]
 ms.assetid: ec002138-4054-456d-bcc1-79ac2f4a4fd7
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 11e10800ff51abd6f95447d85204a44f8367f551
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# ClickOnce 관리되지 않는 API 참조
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-dfshim.dll의 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 관리되지 않는 공용 API입니다.  
+# <a name="clickonce-unmanaged-api-reference"></a>ClickOnce 관리되지 않는 API 참조
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]dfshim.dll에서 관리 되지 않는 공용 Api를 지원 합니다.  
   
-## CleanOnlineAppCache  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 캐시에서 모든 온라인 응용 프로그램을 정리하거나 제거합니다.  
+## <a name="cleanonlineappcache"></a>CleanOnlineAppCache  
+ 정리 하거나 모든 온라인 응용 프로그램에서 제거 된 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 캐시 합니다.  
   
-### 반환 값  
- 성공하면 S\_OK가 반환되고, 그렇지 않으면 실패를 나타내는 HRESULT가 반환됩니다.  관리되는 예외가 발생하면 0x80020009\(DISP\_E\_EXCEPTION\)가 반환됩니다.  
+### <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않으면 실패를 나타내는 HRESULT를 반환 합니다. 관리 되는 예외를 발생 하는 경우 0x80020009 (DISP_E_EXCEPTION)를 반환 합니다.  
   
-### 설명  
- CleanOnlineAppCache를 호출하면 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 서비스가 아직 실행되고 있지 않을 경우 이 서비스가 시작됩니다.  
+### <a name="remarks"></a>설명  
+ CleanOnlineAppCache 호출가 시작 되는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 서비스 아직 실행 하지 않은 경우.  
   
-## GetDeploymentDataFromManifest  
+## <a name="getdeploymentdatafrommanifest"></a>GetDeploymentDataFromManifest  
  매니페스트 및 활성화 URL에서 배포 정보를 검색합니다.  
   
-### 매개 변수  
+### <a name="parameters"></a>매개 변수  
   
-|Parameter|설명|형식|  
-|---------------|--------|--------|  
-|`pcwzActivationUrl`|`ActivationURL`에 대한 포인터입니다.|LPCWSTR|  
-|`pcwzPathToDeploymentManifest`|`PathToDeploymentManifest`에 대한 포인터입니다.|LPCWSTR|  
-|`pwzApplicationIdentity`|반환된 전체 응용 프로그램 ID를 지정하는 null로 끝나는 문자열을 받을 버퍼에 대한 포인터입니다.|LPWSTR|  
-|`pdwIdentityBufferLength`|WCHAR에 있는 `pwzApplicationIdentity` 버퍼의 길이인 DWORD에 대한 포인터입니다.  여기에는 null로 끝나는 문자열을 위한 공간이 포함됩니다.|LPDWORD|  
-|`pwzProcessorArchitecture`|매니페스트에서 응용 프로그램 배포의 프로세서 아키텍처를 지정하는 null로 끝나는 문자열을 받을 버퍼에 대한 포인터입니다.|LPWSTR|  
-|`pdwArchitectureBufferLength`|WCHAR에 있는 `pwzProcessorArchitecture` 버퍼의 길이인 DWORD에 대한 포인터입니다.|LPDWORD|  
-|`pwzApplicationManifestCodebase`|매니페스트에서 응용 프로그램 매니페스트의 코드베이스를 지정하는 null로 끝나는 문자열을 받을 버퍼에 대한 포인터입니다.|LPWSTR|  
-|`pdwCodebaseBufferLength`|WCHAR에 있는 `pwzApplicationManifestCodebase` 버퍼의 길이인 DWORD에 대한 포인터입니다.|LPDWORD|  
-|`pwzDeploymentProvider`|배포 공급자가 있을 경우 매니페스트에서 이를 지정하는 null로 끝나는 문자열을 받을 버퍼에 대한 포인터입니다.  그렇지 않으면 빈 문자열이 반환됩니다.|LPWSTR|  
-|`pdwProviderBufferLength`|`pwzProviderBufferLength`의 길이인 DWORD에 대한 포인터입니다.|LPDWORD|  
+|매개 변수|설명|형식|  
+|---------------|-----------------|----------|  
+|`pcwzActivationUrl`|에 대 한 포인터는 `ActivationURL`합니다.|LPCWSTR|  
+|`pcwzPathToDeploymentManifest`|에 대 한 포인터는 `PathToDeploymentManifest`합니다.|LPCWSTR|  
+|`pwzApplicationIdentity`|반환 된 전체 응용 프로그램 id를 지정 하는 NULL로 끝나는 문자열을 받기 위한 버퍼에 대 한 포인터입니다.|LPWSTR|  
+|`pdwIdentityBufferLength`|길이가 DWORD에 대 한 포인터는 `pwzApplicationIdentity` WCHARs 버퍼입니다. 여기에 NULL 종결 문자에 대 한 공간이 포함 됩니다.|LPDWORD|  
+|`pwzProcessorArchitecture`|응용 프로그램 배포 매니페스트에서 프로세서 아키텍처를 지정 하는 NULL로 끝나는 문자열을 받기 위한 버퍼에 대 한 포인터입니다.|LPWSTR|  
+|`pdwArchitectureBufferLength`|길이가 DWORD에 대 한 포인터는 `pwzProcessorArchitecture` WCHARs 버퍼입니다.|LPDWORD|  
+|`pwzApplicationManifestCodebase`|응용 프로그램 매니페스트의 매니페스트에서 코드 베이스를 지정 하는 NULL로 끝나는 문자열을 받기 위한 버퍼에 대 한 포인터입니다.|LPWSTR|  
+|`pdwCodebaseBufferLength`|길이가 DWORD에 대 한 포인터는 `pwzApplicationManifestCodebase` WCHARs 버퍼입니다.|LPDWORD|  
+|`pwzDeploymentProvider`|NULL로 끝나는 문자열을 받기 위한 버퍼에 대 한 포인터 공급자를 지정 하는 배포 매니페스트, 있는 경우. 그렇지 않은 경우 빈 문자열이 반환 됩니다.|LPWSTR|  
+|`pdwProviderBufferLength`|길이가 DWORD에 대 한 포인터는 `pwzProviderBufferLength`합니다.|LPDWORD|  
   
-### 반환 값  
- 성공하면 S\_OK가 반환되고, 그렇지 않으면 실패를 나타내는 HRESULT가 반환됩니다.  버퍼가 너무 작을 경우 HRESULTFROMWIN32\(ERROR\_INSUFFICIENT\_BUFFER\)가 반환됩니다.  
+### <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않으면 실패를 나타내는 HRESULT를 반환 합니다. 버퍼가 너무 작은 경우 HRESULTFROMWIN32(ERROR_INSUFFICIENT_BUFFER)를 반환 합니다.  
   
-### 설명  
- 포인터는 null이 아니어야 합니다.  즉, `pcwzActivationUrl` 및 `pcwzPathToDeploymentManifest`는 비어 있지 않아야 합니다.  
+### <a name="remarks"></a>설명  
+ 포인터를 null 이어야 합니다. `pcwzActivationUrl`및 `pcwzPathToDeploymentManifest` 비어 있지 않아야 합니다.  
   
- 호출자는 활성화 URL을 정리해야 합니다.  예를 들어, 필요한 위치에 이스케이프 문자를 추가하거나 쿼리 문자열을 제거합니다.  
+ 호출자의 정품 인증 URL을 정리 합니다. 예를 들어 이스케이프 문자를 추가 필요한 위치 또는 쿼리 문자열을 제거 합니다.  
   
- 호출자는 입력 길이를 제한해야 합니다.  예를 들어, 최대 URL 길이는 2KB입니다.  
+ 호출자의 입력된 길이 제한 해야 합니다. 예를 들어 최대 URL 길이 2KB입니다.  
   
-## LaunchApplication  
- 배포 URL을 사용하여 응용 프로그램을 시작하거나 설치합니다.  
+## <a name="launchapplication"></a>LaunchApplication  
+ 시작 하거나 배포 URL을 사용 하 여 응용 프로그램을 설치 합니다.  
   
-### 매개 변수  
+### <a name="parameters"></a>매개 변수  
   
-|Parameter|설명|형식|  
-|---------------|--------|--------|  
-|`deploymentUrl`|배포 매니페스트의 URL이 포함된 null로 끝나는 문자열에 대한 포인터입니다.|LPCWSTR|  
-|`data`|다음에 사용하도록 예약됩니다.  null이어야 합니다.|LPVOID|  
-|`flags`|다음에 사용하도록 예약됩니다.  0이어야 합니다.|DWORD|  
+|매개 변수|설명|형식|  
+|---------------|-----------------|----------|  
+|`deploymentUrl`|배포 매니페스트의 URL이 포함 된 NULL로 끝나는 문자열에 대 한 포인터입니다.|LPCWSTR|  
+|`data`|나중에 사용하기 위해 예약되어 있습니다. NULL 이어야 합니다.|LPVOID|  
+|`flags`|나중에 사용하기 위해 예약되어 있습니다. 0 이어야 합니다.|DWORD|  
   
-### 반환 값  
- 성공하면 S\_OK가 반환되고, 그렇지 않으면 실패를 나타내는 HRESULT가 반환됩니다.  관리되는 예외가 발생하면 0x80020009\(DISP\_E\_EXCEPTION\)가 반환됩니다.  
+### <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않으면 실패를 나타내는 HRESULT를 반환 합니다. 관리 되는 예외를 발생 하는 경우 0x80020009 (DISP_E_EXCEPTION)를 반환 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache%2A>

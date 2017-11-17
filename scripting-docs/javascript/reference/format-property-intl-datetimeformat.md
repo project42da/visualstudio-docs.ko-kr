@@ -1,45 +1,48 @@
 ---
-title: "format 속성(Intl.DateTimeFormat) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "format 속성 (Intl.DateTimeFormat) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 487930fe-a948-446f-902d-06bb0d7685d5
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2e94fcd797a63944d0162dceadf773cf9b15f943
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# format 속성(Intl.DateTimeFormat)
-지정된 날짜\/시간 포맷터 설정을 사용해서 로캘별 날짜 형식을 지정하는 함수를 반환합니다.  
+# <a name="format-property-intldatetimeformat"></a>format 속성(Intl.DateTimeFormat)
+지정 된 날짜/시간 포맷터 설정을 사용 하 여 로캘별 날짜 형식을 지정 하는 함수를 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 dateTimeFormatObj.format  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `dateTimeFormatObj`  
- 필수 요소.  포맷터로 사용할 `DateTimeFormat` 개체의 이름입니다.  
+ 필수 요소. 이름에서 `DateTimeFormat` 포맷터로 사용할 개체입니다.  
   
-## 설명  
- `format` 속성에서 반환되는 함수에는 `date`라는 인수 한 개가 있고 `DateTimeFormat` 개체에 지정된 옵션을 사용하여 지역화된 날짜를 표현하는 문자열을 반환합니다.  반환된 함수의 `date` 매개 변수는 숫자, 날짜 문자열 또는 `Date` 개체여야 합니다.  `date`가 제공되지 않는 경우 함수는 [Date.now](../../javascript/reference/date-now-function-javascript.md)를 기본 입력 값으로 사용합니다.  
+## <a name="remarks"></a>설명  
+ 함수에서 반환 되는 `format` 는 하나의 인수를 사용 하는 속성 `date`에 지정 된 옵션을 사용 하 여 지역화 된 날짜를 나타내는 문자열을 반환 하 고는 `DateTimeFormat` 개체입니다. `date` 반환 함수의 매개 변수는 숫자, 날짜 문자열 이어야 합니다. 또는 `Date` 개체입니다. 경우 `date` 를 지정 하지 않은 함수를 사용 하 여 [Date.now](../../javascript/reference/date-now-function-javascript.md) 기본 입력된 값으로.  
   
-## 예제  
- 다음 예제에서는 `DateTimeFormat` 개체를 사용하여 날짜 "Dec 1, 2007"을 독일어로 지역화하고 서식을 다시 지정합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `DateTimeFormat` 개체를 다시 포맷 하 고 독일어로 날짜 "2007 년 12 월 1 일" 필드를 지역화 합니다.  
   
-```javascript  
+```JavaScript  
 var dtFormat = new Intl.DateTimeFormat(["de"], {  
     year: "numeric",  
     month: "long",  
@@ -53,8 +56,8 @@ if (console && console.log) {
 }  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv11](../../javascript/reference/includes/jsv11-md.md)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Intl.DateTimeFormat 개체](../../javascript/reference/intl-datetimeformat-object-javascript.md)

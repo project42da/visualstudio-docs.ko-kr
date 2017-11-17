@@ -11,30 +11,15 @@ helpviewer_keywords:
 - text templates, guide
 - text templates, functions that generate text
 ms.assetid: 94328da7-953b-4e92-9587-648543d1f732
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c5e60ada4489e12312df92ecceab8bc268a6cfac
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 97a9b5ce0237d9a06289e52e6db86ca33b901fc6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="writing-a-t4-text-template"></a>T4 텍스트 템플릿 쓰기
 텍스트 템플릿은 해당 템플릿에서 생성될 텍스트를 포함합니다. 예를 들어 웹 페이지를 만드는 템플릿을 포함 됩니다 "\<html > …" 및 HTML 페이지의 다른 모든 표준 부분입니다. 템플릿에 삽입은 *제어 블록*, 프로그램 코드 조각인입니다. 제어 블록은 경우에 따라 다른 값을 제공하여 텍스트 부분을 조건부로/반복 적용할 수 있도록 합니다.  
@@ -294,4 +279,3 @@ Content of MyFile.txt is:
 |[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 외부에서 텍스트 생성을 실행합니다.|[TextTransform 유틸리티 사용하여 파일 생성](../modeling/generating-files-with-the-texttransform-utility.md)|  
 |DSL(Domain-Specific Language) 형식으로 데이터를 변형합니다.|[도메인별 언어에서 코드 생성](../modeling/generating-code-from-a-domain-specific-language.md)|  
 |고유한 데이터 소스를 변형하는 지시문 프로세서를 작성합니다.|[T4 텍스트 변환 사용자 지정](../modeling/customizing-t4-text-transformation.md)|
-

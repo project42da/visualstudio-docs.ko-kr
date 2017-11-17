@@ -1,5 +1,5 @@
 ---
-title: "방법: 바로 가기 메뉴에 명령 추가 | Microsoft 문서"
+title: "방법: 바로 가기 메뉴에 명령을 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
 ms.assetid: cd550399-05fc-4dbf-be4c-f5094bb752ce
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translationtype: Machine Translation
-ms.sourcegitcommit: 3d07f82ea737449fee6dfa04a61e195654ba35fa
 ms.openlocfilehash: 2504fce27243ff8efeda1961190b07f12561021e
-ms.lasthandoff: 02/22/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>방법: 바로 가기 메뉴에 명령 추가
 사용자가 DSL(Domain-Specific Language) 관련 작업을 수행할 수 있도록 DSL에 메뉴 명령을 추가할 수 있습니다. 사용자가 다이어그램을 마우스 오른쪽 단추로 클릭하면 상황에 맞는(바로 가기) 메뉴에 명령이 표시됩니다. 특정 상황에서만 메뉴에 표시되도록 명령을 정의할 수 있습니다. 예를 들어 사용자가 특정 형식의 요소나 특정 상태의 요소를 클릭할 때만 메뉴가 표시되도록 지정할 수 있습니다.  
   
  요약하자면 DslPackage 프로젝트에서 다음과 같은 단계를 수행합니다.  
   
-1.  [Commands.vsct에서 명령을 선언 합니다.](#VSCT)  
+1.  [선언에 Commands.vsct 명령](#VSCT)  
   
-2.  [Package.tt에서 패키지 버전 번호를 업데이트](#version)합니다. Commands.vsct를 변경할 때마다 이 작업을 수행해야 합니다.  
+2.  [Package.tt에서 패키지 버전 번호를 업데이트할](#version)합니다. Commands.vsct를 변경할 때마다 이 작업을 수행해야 합니다.  
   
-3.  [CommandSet class에서 메서드를 쓸](#CommandSet) 메뉴가 표시 되도록 하 고 작업을 수행 하는 명령을 실행할 작업을 정의 합니다.  
+3.  [Commandset은 클래스에 메서드를 작성](#CommandSet) 명령을 표시 하 고 수행 하는 명령은 수행할 동작을 정의 합니다.  
   
  샘플은 [Visualization and Modeling SDK 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=185579)합니다.  
   
@@ -51,19 +51,18 @@ ms.lasthandoff: 02/22/2017
   
  그 외의 경우에는 MEF 메서드를 사용하여 명령을 정의하는 것이 좋습니다. 자세한 내용은 참조 [MEF를 사용 하 여 DSL 확장](../modeling/extend-your-dsl-by-using-mef.md)합니다.  
   
-##  <a name="a-namevscta-declare-the-command-in-commandsvsct"></a><a name="VSCT"></a>Commands.Vsct에서 명령을 선언 합니다.  
+##  <a name="VSCT"></a>선언에 Commands.Vsct 명령  
  DslPackage\Commands.vsct에서 메뉴 명령을 선언합니다. 이러한 정의는 메뉴 항목의 레이블 및 메뉴에서 항목이 표시되는 위치를 지정합니다.  
   
- Commands.vsct, 파일을 편집 하는 디렉터리에 있는 여러.h 파일에서 정의 가져옵니다 *Visual Studio SDK 설치 경로*\VisualStudioIntegration\Common\Inc 합니다. 또한 DSL 정의에서 생성되는 GeneratedVsct.vsct도 포함합니다.  
+ Commands.vsct, 파일을 편집 하는 디렉터리에 있는 여러 개의.h 파일에서 정의 가져오고 *Visual Studio SDK 설치 경로*\VisualStudioIntegration\Common\Inc 합니다. 또한 DSL 정의에서 생성되는 GeneratedVsct.vsct도 포함합니다.  
   
- .Vsct 파일에 대 한 자세한 내용은 참조 [Visual Studio 명령 테이블 (. Vsct) 파일](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)합니다.  
+ .Vsct 파일에 대 한 자세한 내용은 참조 [Visual Studio 명령 테이블 (합니다. Vsct) 파일](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)합니다.  
   
 #### <a name="to-add-the-command"></a>명령을 추가하려면  
   
-1.  **솔루션 탐색기**아래는 **DslPackage** 프로젝트에서 Commands.vsct를 엽니다.  
+1.  **솔루션 탐색기**아래는 **DslPackage** 프로젝트를 열고 Commands.vsct 합니다.  
   
-2.  
-          `Commands` 요소에서 하나 이상의 단추와 하나의 그룹을 정의합니다. A *단추* 는 메뉴 항목입니다. A *그룹* 은 메뉴의 섹션입니다. 이러한 항목을 정의하려면 다음 요소를 추가합니다.  
+2.  `Commands` 요소에서 하나 이상의 단추와 하나의 그룹을 정의합니다. A *단추* 메뉴 항목입니다. A *그룹* 섹션이 메뉴에 있습니다. 이러한 항목을 정의하려면 다음 요소를 추가합니다.  
   
     ```  
     <!-- Define a group - a section in the menu -->  
@@ -90,7 +89,7 @@ ms.lasthandoff: 02/22/2017
     ```  
   
     > [!NOTE]
-    >  각 단추나 그룹은 GUID 및 정수 ID로 식별됩니다. 같은 GUID로 여러 그룹과 단추를 만들 수 있지만 이러한 항목의 ID는 각각 달라야 합니다. GUID 이름과 ID 이름은 실제 Guid와 숫자 Id로 변환 되는 `<Symbols>` 노드.  
+    >  각 단추나 그룹은 GUID 및 정수 ID로 식별됩니다. 같은 GUID로 여러 그룹과 단추를 만들 수 있지만 이러한 항목의 ID는 각각 달라야 합니다. GUID 이름 및 ID 이름이 실제 Guid 및의 숫자 Id로 변환 됩니다는 `<Symbols>` 노드.  
   
 3.  명령이 DSL 컨텍스트에서만 로드되도록 명령에 대한 표시 유형 제약 조건을 추가합니다. 자세한 내용은 참조 [VisibilityConstraints 요소](../extensibility/visibilityconstraints-element.md)합니다.  
   
@@ -117,8 +116,7 @@ ms.lasthandoff: 02/22/2017
     </Symbols>  
     ```  
   
-5.  
-          `{000...000}`는 그룹 및 메뉴 항목을 식별하는 GUID로 바꿉니다. 새 GUID를 가져오려면는 **GUID 만들기** 에서 도구는 **도구** 메뉴.  
+5.  `{000...000}`는 그룹 및 메뉴 항목을 식별하는 GUID로 바꿉니다. 새 GUID를 가져오려면는 **GUID 만들기** 도구에 **도구** 메뉴.  
   
     > [!NOTE]
     >  그룹 또는 메뉴 항목을 더 추가하는 경우 같은 GUID를 사용할 수 있습니다. 그러나 `IDSymbols`에는 새 값을 사용해야 합니다.  
@@ -133,26 +131,25 @@ ms.lasthandoff: 02/22/2017
   
     -   `My Context Menu Command`  
   
-##  <a name="a-nameversiona-update-the-package-version-in-packagett"></a><a name="version"></a>Package.tt에서 패키지 버전 업데이트  
- 를 추가 하거나 명령을 변경 될 때마다 업데이트는 `version` 의 매개 변수는 <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute>도메인별 언어의 새 버전을 해제 하기 전에 패키지 클래스에 적용 되는.</xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute>  
+##  <a name="version"></a>Package.tt 패키지 버전 업데이트  
+ 명령을 추가하거나 변경할 때마다 새 DSL 버전을 릴리스하기 전에 패키지 클래스에 적용되는 `version`의 <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> 매개 변수를 업데이트합니다.  
   
  패키지 클래스는 생성된 파일에서 정의되므로 Package.cs 파일을 생성하는 텍스트 템플릿 파일에서 특성을 업데이트합니다.  
   
 #### <a name="to-update-the-packagett-file"></a>Package.tt 파일을 업데이트하려면  
   
-1.  **솔루션 탐색기**에 **DslPackage** 프로젝트는 **GeneratedCode** 폴더를 Package.tt 파일을 엽니다.  
+1.  **솔루션 탐색기**에 **DslPackage** 프로젝트에 **GeneratedCode** 폴더 Package.tt 파일을 엽니다.  
   
-2.  
-          `ProvideMenuResource` 특성을 찾습니다.  
+2.  `ProvideMenuResource` 특성을 찾습니다.  
   
 3.  특성의 `version` 매개 변수(두 번째 매개 변수)를 증분합니다. 원하는 경우 용도에 맞게 매개 변수 이름을 명시적으로 작성할 수 있습니다. 예:  
   
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`  
   
-##  <a name="a-namecommandseta-define-the-behavior-of-the-command"></a><a name="CommandSet"></a>명령의 동작을 정의 합니다.  
- DS에는 DslPackage\GeneratedCode\CommandSet.cs에서 선언된 partial 클래스에서 구현되는 일부 명령이 이미 포함되어 있습니다. 새 명령을 추가하려면 같은 클래스의 partial 선언을 포함하는 새 파일을 만들어 이 클래스를 확장해야 합니다. 클래스의 이름은 일반적으로 * \<d s l 이름 >*`CommandSet`합니다. 먼저 클래스 이름을 확인하고 해당 내용을 검사하면 유용합니다.  
+##  <a name="CommandSet"></a>명령 동작 정의  
+ DS에는 DslPackage\GeneratedCode\CommandSet.cs에서 선언된 partial 클래스에서 구현되는 일부 명령이 이미 포함되어 있습니다. 새 명령을 추가하려면 같은 클래스의 partial 선언을 포함하는 새 파일을 만들어 이 클래스를 확장해야 합니다. 클래스의 이름은 일반적으로  *\<YourDslName >*`CommandSet`합니다. 먼저 클래스 이름을 확인하고 해당 내용을 검사하면 유용합니다.  
   
- 명령 집합 클래스 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>.</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> 에서 파생 됩니다.  
+ 명령 집합 클래스는 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>에서 파생됩니다.  
   
 #### <a name="to-extend-the-commandset-class"></a>CommandSet 클래스를 확장하려면  
   
@@ -162,7 +159,7 @@ ms.lasthandoff: 02/22/2017
   
      `{ ...  internal partial class Language1CommandSet : ...`  
   
-2.  **DslPackage**, 라는 폴더를 만듭니다 **사용자 지정 코드**합니다. 이 폴더에 라는 새 클래스 파일을 만듭니다 `CommandSet.cs`합니다.  
+2.  **DslPackage**, 명명 된 폴더를 만들고 **사용자 지정 코드**합니다. 이 폴더에 라는 새 클래스 파일을 만듭니다 `CommandSet.cs`합니다.  
   
 3.  새 파일에 생성된 partial 클래스와 이름 및 네임스페이스가 같은 partial 선언을 작성합니다. 예:  
   
@@ -170,7 +167,7 @@ ms.lasthandoff: 02/22/2017
   
      `{ internal partial class Language1CommandSet { ...`  
   
-     **참고** 클래스 템플릿을 사용 하는 새 파일을 만드는 경우 네임 스페이스 및 클래스 이름을 모두 수정 해야 합니다.  
+     **참고** 클래스 템플릿을 사용 하는 새 파일을 만드는 경우 네임 스페이스와 클래스 이름을 모두 수정 해야 합니다.  
   
 ### <a name="extend-the-command-set-class"></a>명령 집합 클래스 확장  
  명령 집합 코드는 일반적으로 다음 네임스페이스를 가져와야 합니다.  
@@ -227,7 +224,7 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
   
 -   `this.CurrentSelection`. 사용자가 마우스 오른쪽 단추로 클릭한 모양은 항상 이 목록에 포함됩니다. 사용자가 다이어그램의 빈 부분을 클릭하는 경우의 목록 멤버는 Diagram뿐입니다.  
   
--   `this.IsDiagramSelected()` - `true`사용자가 다이어그램의 빈 부분입니다.  
+-   `this.IsDiagramSelected()` - `true`사용자는 다이어그램의 빈 부분을 클릭 합니다.  
   
 -   `this.IsCurrentDiagramEmpty()`  
   
@@ -285,7 +282,7 @@ private void OnMenuMyContextMenuCommand(object sender, EventArgs e)
 }  
 ```  
   
- 모델에서 개체 간을 탐색 하는 방법에 대 한 개체 및 링크를 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 표준 메뉴 명령 수정](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)합니다.  
+ 개체와 링크를 만드는 방법에 대 한 모델의 개체에서 개체를 탐색 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 표준 메뉴 명령 수정](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)합니다.  
   
 ### <a name="register-the-command"></a>명령 등록  
  CommandSet.vsct의 Symbols 섹션에서 작성한 GUID 및 ID 값 선언을 C#에서 반복합니다.  
@@ -297,7 +294,7 @@ private const int grpidMyMenuGroup = 0x01001;
 private const int cmdidMyContextMenuCommand = 1;  
 ```  
   
- 에 삽입 한 것과 동일한 GUID 값을 사용 하 여 **Commands.vsct**합니다.  
+ 에 삽입 하는 대로 동일한 GUID 값을 사용 하 여 **Commands.vsct**합니다.  
   
 > [!NOTE]
 >  VSCT 파일의 Symbols 섹션을 변경하는 경우 이러한 선언도 일치하도록 변경해야 합니다. 또한 Package.tt에서 버전 번호도 증분해야 합니다.  
@@ -326,9 +323,9 @@ protected override IList<MenuCommand> GetMenuCommands()
   
 #### <a name="to-exercise-the-command"></a>명령을 실행해 보려면  
   
-1.  에 **솔루션 탐색기** 도구 모음을 클릭 하 여 **모든 템플릿 변환**합니다.  
+1.  에 **솔루션 탐색기** 도구 모음에서 클릭 **모든 템플릿 변형**합니다.  
   
-2.  키를 눌러 **F5** 를 솔루션을 다시 빌드하고 실험적 빌드에서 도메인별 언어를 디버깅을 시작 합니다.  
+2.  키를 눌러 **F5** 를 솔루션을 다시 빌드하고 실험적 빌드에 도메인 특정 언어를 디버깅을 시작 합니다.  
   
 3.  실험적 빌드에서 샘플 다이어그램을 엽니다.  
   
@@ -341,11 +338,11 @@ protected override IList<MenuCommand> GetMenuCommands()
   
 -   실험적 샘플에서 이 DSL의 파일 이름 확장명이 정확한지 확인합니다. 파일 이름 확장명을 확인하려면 Visual Studio 주 인스턴스에서 DslDefinition.dsl을 엽니다. 그런 다음 DSL 탐색기에서 편집기 노드를 마우스 오른쪽 단추로 클릭하고 속성을 클릭합니다. 속성 창에서 FileExtension 속성을 점검합니다.  
   
--   했습니까 [패키지 버전 번호를 증가](#version)?  
+-   점에 만족 하셨나요 [패키지 버전 번호를 증가](#version)?  
   
 -   OnStatus 메서드 시작 부분에 중단점을 설정합니다. 그러면 다이어그램의 아무 곳이나 마우스 오른쪽 단추로 클릭할 때 메서드가 중단되어야 합니다.  
   
-     **OnStatus 메서드가 호출 되지 않는**:  
+     **OnStatus 메서드는**:  
   
     -   CommandSet 코드의 GUID 및 ID가 Commands.vsct의 Symbols 섹션에 포함된 GUID 및 ID와 일치하는지 확인합니다.  
   
@@ -355,18 +352,17 @@ protected override IList<MenuCommand> GetMenuCommands()
   
 -   OnStatus 메서드를 단계별로 실행하여 command.Visible 및 command.Enabled가 true로 설정되는지 확인합니다.  
   
- **잘못 된 메뉴 텍스트가 표시 되거나 명령이 잘못 된 위치에 표시 되는**:  
+ **잘못 된 메뉴 텍스트 나타나거나 명령이 잘못 된 위치에 표시**:  
   
 -   GUID 및 ID 조합이 해당 명령에 대해 고유한지 확인합니다.  
   
 -   이전 버전 패키지를 제거했는지 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [도메인별 언어 사용자 지정 하는 코드 작성](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
+ [도메인 특정 언어를 사용자 지정 하는 코드 작성](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
  [방법: 표준 메뉴 명령 수정](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)   
- [도메인별 언어 솔루션 배포](../modeling/deploying-domain-specific-language-solutions.md)   
+ [도메인 특정 언어 솔루션 배포](../modeling/deploying-domain-specific-language-solutions.md)   
  [샘플 코드: 회로 다이어그램](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
  
-

@@ -1,65 +1,65 @@
 ---
-title: "방법: SignTool.exe를 사용하여 설치 파일에 서명(ClickOnce) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 응용 프로그램, setup.exe 다시 서명"
-  - "ClickOnce 응용 프로그램, signtool.exe"
-  - "ClickOnce 배포, setup.exe 다시 서명"
-  - "ClickOnce 배포, signtool.exe"
-  - "응용 프로그램 배포[ClickOnce], setup.exe 다시 서명"
+title: "방법: SignTool.exe (ClickOnce)를 사용 하 여 파일 하 여 설치 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce applications, signtool.exe
+- deploying applications [ClickOnce], re-signing setup.exe
+- ClickOnce deployment, signtool.exe
+- ClickOnce applications, re-signing setup.exe
+- ClickOnce deployment, re-signing setup.exe
 ms.assetid: 545a4005-d283-4110-9821-c78a9833c250
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "8"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 9cf5b1b9680d2c4267fde5798cb0b41297f72153
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: SignTool.exe를 사용하여 설치 파일에 서명(ClickOnce)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-SignTool.exe를 사용하여 설치 프로그램\(setup.exe\)에 서명을 할 수 있습니다.  이 프로세스를 수행하면 최종 사용자 컴퓨터에 훼손된 파일이 설치되지 않습니다.  
+# <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>방법: SignTool.exe를 사용하여 설치 파일에 서명(ClickOnce)
+SignTool.exe를 사용하여 설치 프로그램(setup.exe)에 서명을 할 수 있습니다. 이 프로세스를 수행하면 최종 사용자 컴퓨터에 훼손된 파일이 설치되지 않습니다.  
   
- ClickOnce는 기본적으로 서명된 매니페스트 및 서명된 설치 프로그램을 포함합니다.  그러나 설치 프로그램의 매개 변수를 나중에 변경하려는 경우 설치 프로그램에 나중에 서명해야 합니다.  설치 프로그램에 서명을 한 후에 매개 변수를 변경하면 서명이 손상됩니다.  
+ ClickOnce는 기본적으로 서명된 매니페스트 및 서명된 설치 프로그램을 포함합니다. 그러나 설치 프로그램의 매개 변수를 나중에 변경하려는 경우 설치 프로그램에 나중에 서명해야 합니다. 설치 프로그램에 서명을 한 후에 매개 변수를 변경하면 서명이 손상됩니다.  
   
- 다음 절차에서는 서명되지 않은 매니페스트 및 서명되지 않은 설치 프로그램을 생성합니다.  그런 다음 Visual Studio에서 ClickOnce 서명을 사용하도록 설정하여 서명된 매니페스트를 생성합니다.  고객이 자신의 인증서로 실행 파일에 서명을 할 수 있도록 설치 프로그램은 서명되지 않은 상태로 유지합니다.  
+ 다음 절차에서는 서명되지 않은 매니페스트 및 서명되지 않은 설치 프로그램을 생성합니다. 그런 다음 Visual Studio에서 ClickOnce 서명을 사용하도록 설정하여 서명된 매니페스트를 생성합니다. 고객이 자신의 인증서로 실행 파일에 서명을 할 수 있도록 설치 프로그램은 서명되지 않은 상태로 유지합니다.  
   
-### 서명되지 않은 설치 프로그램을 생성하고 나중에 서명을 하려면  
+### <a name="to-generate-an-unsigned-setup-program-and-sign-later"></a>서명되지 않은 설치 프로그램을 생성하고 나중에 서명을 하려면  
   
 1.  매니페스트에 서명하는 데 사용할 인증서를 개발 컴퓨터에 설치합니다.  
   
-2.  **솔루션 탐색기**에서 프로젝트를 선택합니다.  
+2.  프로젝트를 선택 **솔루션 탐색기**합니다.  
   
-3.  **프로젝트** 메뉴에서 *ProjectName* **속성**을 클릭합니다.  
+3.  에 **프로젝트** 메뉴를 클릭 하 여 *p r o j* **속성**합니다.  
   
-4.  **서명** 페이지에서 **ClickOnce 매니페스트 서명** 확인란 선택을 취소합니다.  
+4.  에 **서명** 페이지 지우기 **ClickOnce 매니페스트 서명**합니다.  
   
-5.  **게시** 페이지에서 **필수 구성 요소**를 클릭합니다.  
+5.  에 **게시** 페이지 **필수 구성 요소**합니다.  
   
-6.  모든 필수 구성 요소가 선택되어 있는지 확인한 다음 **확인**을 클릭합니다.  
+6.  모든 필수 구성 요소를 선택 하 고 클릭 한 다음 확인 **확인**합니다.  
   
-7.  **게시** 페이지에서 게시 설정을 확인하고 **지금 게시**를 클릭합니다.  
+7.  에 **게시** 페이지에서 게시 설정을 확인 하 고 클릭 **지금 게시**합니다.  
   
      서명되지 않은 응용 프로그램 매니페스트, 서명되지 않은 배포 매니페스트, 버전별 파일 및 서명되지 않은 설치 프로그램이 게시 폴더 위치에 게시됩니다.  
   
-8.  **게시** 페이지에서 **필수 구성 요소**를 클릭합니다.  
+8.  에 **게시** 페이지 **필수 구성 요소**합니다.  
   
-9. **필수 구성 요소** 대화 상자에서 **필수 구성 요소를 설치하기 위한 설치 프로그램 만들기** 확인란 선택을 취소합니다.  
+9. 에 **필수 구성 요소** 대화 상자, 일반 **필수 구성 요소를 설치 하려면 설치 프로그램 만들기**합니다.  
   
-10. **게시** 페이지에서 게시 설정을 확인하고 **지금 게시**를 클릭합니다.  
+10. 에 **게시** 페이지에서 게시 설정을 확인 하 고 클릭 **지금 게시**합니다.  
   
-     서명된 응용 프로그램 매니페스트, 서명된 배포 매니페스트 및 버전별 파일이 게시 폴더 위치에 게시됩니다.  게시 프로세스는 서명되지 않은 설치 프로그램을 덮어쓰지 않습니다.  
+     서명된 응용 프로그램 매니페스트, 서명된 배포 매니페스트 및 버전별 파일이 게시 폴더 위치에 게시됩니다. 게시 프로세스는 서명되지 않은 설치 프로그램을 덮어쓰지 않습니다.  
   
 11. 고객 사이트에서 명령 프롬프트를 엽니다.  
   
@@ -79,5 +79,5 @@ SignTool.exe를 사용하여 설치 프로그램\(setup.exe\)에 서명을 할 �
     signtool sign /f CertFileName Setup.exe  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [방법: 응용 프로그램 및 배포 매니페스트에 다시 서명](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

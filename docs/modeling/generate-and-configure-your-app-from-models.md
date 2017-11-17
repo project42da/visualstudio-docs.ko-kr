@@ -1,5 +1,5 @@
 ---
-title: "생성 및 모델에서 응용 프로그램 구성 | Microsoft 문서"
+title: "생성 하 고 모델에서 앱 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -7,29 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4dc8f572-a09e-4d19-a92d-f1df383e728b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8f84f22444a5df5b9f4f4af44cd8ee9136403467
-ms.openlocfilehash: 864963f32fe703ada943f7e5202d7ebf6bf21e51
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 7dabd752aed4213c03ffd32ed5cc255ea4f2852e
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>모델에서 앱 생성 및 구성
 모델에서 응용 프로그램의 일부를 생성하거나 구성할 수 있습니다.
@@ -37,7 +23,7 @@ ms.lasthandoff: 02/22/2017
  모델은 코드보다 더 직접적으로 요구 사항을 나타냅니다. 모델에서 직접 응용 프로그램의 동작을 파생시키면 코드를 업데이트하는 것보다 훨씬 더 빠르고 안정적으로 변경된 요구 사항에 응답할 수 있습니다. 파생을 설정하려면 일부 초기 작업이 필요하지만 요구 사항 변경이 예상되거나 제품의 여러 변형을 계획하는 경우 이 투자는 가치가 있습니다.  
   
 ## <a name="generating-the-code-of-your-application-from-a-model"></a>모델에서 응용 프로그램 코드 생성  
- 코드를 생성하는 가장 쉬운 방법은 텍스트 템플릿을 사용하는 것입니다. 동일한 코드를 생성할 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 모델을 유지 하는 솔루션입니다. 자세한 내용은 다음을 참조하세요.  
+ 코드를 생성하는 가장 쉬운 방법은 텍스트 템플릿을 사용하는 것입니다. 동일한 코드를 생성할 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션 모델을 유지 합니다. 자세한 내용은 다음을 참조하세요.  
   
 -   [T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성](../modeling/design-time-code-generation-by-using-t4-text-templates.md)  
   
@@ -52,7 +38,7 @@ ms.lasthandoff: 02/22/2017
  그러나 기존 응용 프로그램에서 시작하는 경우 독립적으로 변형할 수 있도록 모델에 의해 제어되는 다양한 동작을 구분하기 위해 많은 리팩터링이 필요할 수 있습니다. 프로젝트 비용을 예상할 때 응용 프로그램의 이러한 측면을 평가하는 것이 좋습니다.  
   
 ## <a name="configuring-your-application-from-a-model"></a>모델에서 응용 프로그램 구성  
- 런타임에 응용 프로그램의 동작을 변형하려는 경우 응용 프로그램이 컴파일되기 전에 소스 코드를 생성하는 코드 생성을 사용할 수 없습니다. 대신, 모델을 읽는 하 고 그에 따라 해당 동작을 변경 하려면 응용 프로그램을 디자인할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
+ 런타임에 응용 프로그램의 동작을 변형하려는 경우 응용 프로그램이 컴파일되기 전에 소스 코드를 생성하는 코드 생성을 사용할 수 없습니다. 대신, 응용 프로그램의 동작을 적절 하 게 변경 하 고 모델을 읽을 디자인할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
 -   [방법: 프로그램 코드로 파일에서 모델 열기](../modeling/how-to-open-a-model-from-file-in-program-code.md)  
   
@@ -63,11 +49,11 @@ ms.lasthandoff: 02/22/2017
 ## <a name="developing-a-derived-application"></a>파생 응용 프로그램 개발  
  다음과 같은 일반 지침이 유용할 수 있습니다.  
   
--   **특정, 시작 후 일반화 합니다.** 먼저 특정 버전의 응용 프로그램을 작성합니다. 이 버전은 하나의 조건 집합에서 작동해야 합니다. 제대로 작동하는 경우 일부가 모델에서 파생되도록 만들 수 있습니다. 파생 부분을 점점 확장합니다.  
+-   **특정로 시작 하 고를 일반화 합니다.** 먼저 특정 버전의 응용 프로그램을 작성합니다. 이 버전은 하나의 조건 집합에서 작동해야 합니다. 제대로 작동하는 경우 일부가 모델에서 파생되도록 만들 수 있습니다. 파생 부분을 점점 확장합니다.  
   
      예를 들어 모델에 정의된 페이지를 표시하는 웹 응용 프로그램을 디자인하기 전에 웹 페이지의 특정 집합이 포함된 웹 사이트를 디자인합니다.  
   
--   **가변 측면을 모델링 합니다.** 시간 경과에 따라 요구 사항이 변경될 때 또는 배포에 따라 변경되는 측면을 식별합니다. 이러한 측면이 모델에서 파생되어야 하는 측면입니다.  
+-   **Variant 측면을 모델링 합니다.** 시간 경과에 따라 요구 사항이 변경될 때 또는 배포에 따라 변경되는 측면을 식별합니다. 이러한 측면이 모델에서 파생되어야 하는 측면입니다.  
   
      예를 들어 웹 페이지 집합과 웹 페이지 간의 링크가 변경되지만 페이지의 스타일 및 형식은 항상 동일한 경우 모델에서 링크를 설명해야 하지만 페이지의 형식을 설명할 필요는 없습니다.  
   
@@ -75,7 +61,7 @@ ms.lasthandoff: 02/22/2017
   
      예를 들어 한 모델을 사용하여 웹 페이지 간의 탐색을 정의하고, 다른 모델을 사용하여 페이지의 레이아웃을 정의합니다.
   
--   **솔루션이 아니라 요구 사항을 모델링 합니다.** 사용자 요구 사항에 설명 하는 모델을 디자인 합니다. 반대로, 구현의 가변 측면에 따라 표기법을 디자인하지 마세요.  
+-   **솔루션이 아닌 요구 사항을 모델링 합니다.** 사용자 요구 사항에 대해서 설명 되도록 모델을 디자인 합니다. 반대로, 구현의 가변 측면에 따라 표기법을 디자인하지 마세요.  
   
      예를 들어 웹 탐색 모델은 웹 페이지 및 웹 페이지 간의 하이퍼링크를 나타내야 합니다. 웹 탐색 모델에서 HTML 조각이나 응용 프로그램의 클래스를 나타내면 안 됩니다.  
   
@@ -83,11 +69,11 @@ ms.lasthandoff: 02/22/2017
   
      예를 들어 웹 사이트 모델을 사용하여 별도로 설치되는 일련의 여러 웹 사이트를 개발하는 경우 모델에서 사이트의 코드를 생성해야 합니다. 그러나 모델을 사용하여 매일 변경되는 사이트를 제어하는 경우 모델을 읽고 그에 따라 사이트를 표시하는 웹 서버를 작성하는 것이 좋습니다.  
   
--   **UML 또는 DSL?** 스테레오타입을 통해 UML을 확장하여 모델링 표기법을 만드는 것이 좋습니다. 용도에 맞는 UML 다이어그램이 없는 경우 DSL을 정의합니다. 그러나 UML의 표준 의미 체계를 위반하지 않도록 하세요.  
+-   **UML 및 DSL?** 스테레오타입을 통해 UML을 확장하여 모델링 표기법을 만드는 것이 좋습니다. 용도에 맞는 UML 다이어그램이 없는 경우 DSL을 정의합니다. 그러나 UML의 표준 의미 체계를 위반하지 않도록 하세요.  
   
      예를 들어 UML 클래스 다이어그램이 상자와 화살표의 컬렉션인 경우 이론상 이 표기법을 사용하여 무엇이든 정의할 수 있습니다. 그러나 실제로 형식 집합을 설명하는 경우를 제외하고 클래스 다이어그램을 사용하지 않는 것이 좋습니다. 예를 들어 클래스 다이어그램을 조정하여 다양한 형식의 웹 페이지를 설명할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [도메인별 언어에서 코드를 생성합니다.](../modeling/generating-code-from-a-domain-specific-language.md)   
+ [도메인 특정 언어에서 코드를 생성합니다.](../modeling/generating-code-from-a-domain-specific-language.md)   
  [방법: 프로그램 코드 파일에서 모델 열기](../modeling/how-to-open-a-model-from-file-in-program-code.md)   
  [T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성](../modeling/design-time-code-generation-by-using-t4-text-templates.md)

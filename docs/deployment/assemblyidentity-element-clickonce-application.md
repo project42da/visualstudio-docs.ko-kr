@@ -1,34 +1,33 @@
 ---
-title: "&lt;assemblyIdentity&gt; 요소(ClickOnce 응용 프로그램) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:asm.v2#assemblyIdentity"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<assemblyIdentity> 요소[ClickOnce 응용 프로그램 매니페스트]"
+title: "&lt;assemblyIdentity&gt; 요소 (ClickOnce 응용 프로그램) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: urn:schemas-microsoft-com:asm.v2#assemblyIdentity
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <assemblyIdentity> element [ClickOnce application manifest]
 ms.assetid: f48e9531-efac-4d11-8166-f63a5ece1ac5
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: db313077fa7903b2bdb2fbbe6b76aa80c940fecd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;assemblyIdentity&gt; 요소(ClickOnce 응용 프로그램)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포를 통해 배포되는 응용 프로그램을 식별합니다.  
+# <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;assemblyIdentity&gt; 요소 (ClickOnce 응용 프로그램)
+에 배포 된 응용 프로그램을 식별 한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -41,23 +40,23 @@ caps.handback.revision: 20
 />  
 ```  
   
-## 요소 및 특성  
- `assemblyIdentity` 요소는 필수 항목입니다.  자식 요소를 포함하지 않고 다음과 같은 특성이 있습니다.  
+## <a name="elements-and-attributes"></a>요소 및 특성  
+ `assemblyIdentity` 요소는 필수입니다. 자식 요소가 없는 하 고 다음과 같은 특성이 있습니다.  
   
 |특성|설명|  
-|--------|--------|  
-|`Name`|필수 요소.  응용 프로그램의 이름을 식별합니다.<br /><br /> `Name`에 작은따옴표 또는 큰따옴표와 같은 특수 문자가 들어 있으면 응용 프로그램이 활성화되지 않을 수 있습니다.|  
-|`Version`|필수 요소.  `major.minor.build.revision` 같은 형식으로 응용 프로그램의 버전 번호를 지정합니다.|  
-|`publicKeyToken`|선택적 요소.  응용 프로그램이나 어셈블리에 서명하는 데 사용되는 공개 키의 `SHA-1` 해시 값에서 마지막 8바이트를 나타내는 16개의 16진수 문자를 지정합니다.  카탈로그에 서명하는 데 사용되는 공개 키는 2048비트 이상이어야 합니다.<br /><br /> 어셈블리에 서명하는 것은 권장되는 선택적 작업이지만 이 특성은 필수 요소입니다.  어셈블리에 서명하지 않는 경우 자체 서명된 어셈블리에서 값을 복사하거나 0만 포함된 "더미" 값을 사용해야 합니다.|  
-|`processorArchitecture`|필수 요소.  프로세서를 지정합니다.  유효한 값은 모든 프로세서의 경우에는 `msil`, 32비트 Windows의 경우에는 `x86`, 64비트 Windows의 경우에는 `IA64`, Intel 64비트 Itanium 프로세서의 경우에는 `Itanium`입니다.|  
-|`language`|필수 요소.  `en-US` 같이 두 부분으로 구성된 어셈블리의 언어 코드를 식별합니다.  이 요소는 `asmv2` 네임스페이스에 있습니다.  값을 지정하지 않으면 기본값 `neutral`이 사용됩니다.|  
+|---------------|-----------------|  
+|`Name`|필수 요소. 응용 프로그램의 이름을 식별합니다.<br /><br /> 경우 `Name` 특수 문자가 포함 된 작은따옴표 또는 큰따옴표와 같은 응용 프로그램 활성화에 실패할 수 있습니다.|  
+|`Version`|필수 요소. 다음 형식으로 응용 프로그램의 버전 번호를 지정합니다.`major.minor.build.revision`|  
+|`publicKeyToken`|선택 사항입니다. 마지막 8 바이트를 나타내는 16 자 16 진수 문자열을 지정 된 `SHA-1` 응용 프로그램이 나 어셈블리 서명에 사용 된 공개 키의 해시 값입니다. 카탈로그에 서명 하는 데 사용 되는 공개 키에 2048 비트 이어야 합니다. 큰 합니다.<br /><br /> 어셈블리 서명 하는 것이 좋지만 선택 사항,이 특성은 필요 합니다. 어셈블리 서명 되지 않은 경우에 자체 서명 된 어셈블리에서 값을 복사 하거나 "dummy" 모두 0 값을 사용 해야 합니다.|  
+|`processorArchitecture`|필수 요소. 프로세서를 지정합니다. 유효한 값은 `msil` 모든 프로세서에 대해 `x86` 32 비트 Windows에 대 한 `IA64` 64 비트 Windows에 대 한 및 `Itanium` Intel 64 비트 Itanium 프로세서에 대 한 합니다.|  
+|`language`|필수 요소. 두 부분 언어 코드를 식별 합니다. (예를 들어 `en-US`)의 어셈블리. 이 요소는는 `asmv2` 네임 스페이스입니다. 기본값은 지정 하지 않으면 `neutral`합니다.|  
   
-## 예제  
+## <a name="examples"></a>예제  
   
-### 설명  
- 다음 코드 예제에서는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트의 `assemblyIdentity` 요소를 보여 줍니다.  이 코드 예제는 [ClickOnce 응용 프로그램 매니페스트](../deployment/clickonce-application-manifest.md)에 제공되는 더 큰 예제의 일부입니다.  
+### <a name="description"></a>설명  
+ 다음 코드 예제는 `assemblyIdentity` 요소에는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 합니다. 이 코드 예제는에 제공 된 큰 예제의 일부 [ClickOnce 응용 프로그램 매니페스트](../deployment/clickonce-application-manifest.md)합니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 <asmv1:assemblyIdentity   
@@ -69,6 +68,6 @@ caps.handback.revision: 20
   type="win32" />  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ClickOnce 응용 프로그램 매니페스트](../deployment/clickonce-application-manifest.md)   
- [\<assemblyIdentity\> 요소](../deployment/assemblyidentity-element-clickonce-deployment.md)
+ [\<assemblyIdentity > 요소](../deployment/assemblyidentity-element-clickonce-deployment.md)

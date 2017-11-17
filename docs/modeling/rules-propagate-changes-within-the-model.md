@@ -10,30 +10,15 @@ helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, rules
 ms.assetid: 1690a38a-c8f5-4bc6-aab9-015771ec6647
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8ec9540fb68ecb09dc592f9b05a56291c2a8c80d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cbdf006fecb00139eda95cf3e9f2726430888ce7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>규칙으로 모델 내부의 변경 내용 전파
 시각화 및 모델링 SDK (VMSDK)에서 다른 요소에서 변경 전파 하는 저장소 규칙을 만들 수 있습니다. 저장소에 있는 모든 요소를 변경 하면 규칙 예정 가장 바깥쪽 트랜잭션이 커밋될 때 일반적으로 실행할 수입니다. 다양 한 유형의 여러 종류의 요소를 추가 또는 삭제와 같은 이벤트에 대 한 규칙 있습니다. 요소, 도형 또는 다이어그램의 특정 형식에 규칙을 연결할 수 있습니다. 규칙에 의해 정의 된 여러 기본 제공 기능: 다이어그램 모델 변경 될 때 업데이트 되도록 규칙을 확인 하는 예를 들어 있습니다. 사용자 고유의 규칙을 추가 하 여 도메인 특정 언어를 사용자 지정할 수 있습니다.  

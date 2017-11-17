@@ -1,61 +1,62 @@
 ---
 title: "제품 및 패키지 스키마 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MSBuild.GenerateBootstrapper.CircularIncludes"
-  - "MSBuild.ResolveManifestFiles.PublishFileNotFound"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce, 부트스트래퍼 요소"
-  - "ClickOnce, 제품 및 패키지 파일"
-  - "패키지 파일[ClickOnce]"
-  - "패키지 파일[Windows Installer]"
-  - "제품 파일[ClickOnce]"
-  - "제품 파일[Windows Installer]"
-  - "Windows Installer, 부트스트래퍼 요소"
-  - "Windows Installer, 제품 및 패키지 파일"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MSBuild.GenerateBootstrapper.CircularIncludes
+- MSBuild.ResolveManifestFiles.PublishFileNotFound
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce, product and package files
+- Windows Installer, product and package files
+- product files [ClickOnce]
+- ClickOnce, bootstrapper elements
+- package files [Windows Installer]
+- product files [Windows Installer]
+- package files [ClickOnce]
+- Windows Installer, bootstrapper elements
 ms.assetid: 5a74878f-b896-4cca-b968-98d00fe78fb0
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: ad3f3df67fe2545aadc8da71b89e600895cea780
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 제품 및 패키지 스키마 참조
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-*제품 파일*은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에 필요한 모든 외부 종속성을 설명하는 XML 매니페스트입니다.  외부 종속성의 예로는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]나 MDAC\(Microsoft Data Access Components\)를 들 수 있습니다.  패키지 파일은 제품 파일과 비슷하지만 종속성 중 지역화된 어셈블리, 사용권 계약, 설명서 등 culture에 종속된 구성 요소를 설치하는 데 사용된다는 점에서 차이가 있습니다.  
+# <a name="product-and-package-schema-reference"></a>제품 및 패키지 스키마 참조
+A *제품 파일* 는 외부 종속성에 필요한 모든에 대해 설명 하는 XML 매니페스트는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다. 외부 종속성의 예로 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 및 Microsoft 데이터 액세스 구성 요소 (MDAC). 패키지 파일을 제품 파일과 유사 하지만 지역화 된 어셈블리, 사용권 계약 및 설명서 등의 종속성을의 culture에 종속 된 구성 요소를 설치 하는 데 사용 됩니다.  
   
- 제품 파일과 패키지 파일은 최상위 `Product` 요소나 `Package` 요소를 구성하며 각각 다음과 같은 요소를 포함합니다.  
+ 제품 및 패키지 파일은 최상위 `Product` 또는 `Package` 요소를 각각 다음과 같은 요소를 포함 합니다.  
   
 |요소|설명|특성|  
-|--------|--------|--------|  
-|[\<Product\> 요소](../deployment/product-element-bootstrapper.md)|제품 파일에 필요한 최상위 요소입니다.|없음|  
-|[\<Package\> 요소](../deployment/package-element-bootstrapper.md)|패키지 파일에 필요한 최상위 요소입니다.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|  
-|[\<RelatedProducts\> 요소](../deployment/relatedproducts-element-bootstrapper.md)|제품 파일의 선택적 요소입니다.  이 제품에서 설치의 기반으로 삼거나 이 제품이 의존하는 다른 제품입니다.|없음|  
-|[\<InstallChecks\> 요소](../deployment/installchecks-element-bootstrapper.md)|필수적 요소입니다.  설치하는 동안 로컬 컴퓨터에서 수행할 종속성 검사를 나열합니다.|없음|  
-|[\<Commands\> 요소](../deployment/commands-element-bootstrapper.md)|필수적 요소입니다.  `InstallChecks`의 설명에 따라 하나 이상의 설치 검사를 실행하고, 검사가 실패할 경우에 설치할 패키지를 지정합니다.|없음|  
-|[\<PackageFiles\> 요소](../deployment/packagefiles-element-bootstrapper.md)|필수적 요소입니다.  이 설치 프로세스에서 설치할 수 있는 패키지를 나열합니다.|없음|  
-|[\<Strings\> 요소](../deployment/strings-element-bootstrapper.md)|필수적 요소입니다.  제품 이름과 오류 문자열의 지역화된 버전을 저장합니다.|없음|  
+|-------------|-----------------|----------------|  
+|[\<제품 > 요소](../deployment/product-element-bootstrapper.md)|제품 파일에 대 한 필요한 최상위 요소입니다.|없음|  
+|[\<패키지 > 요소](../deployment/package-element-bootstrapper.md)|패키지 파일에 대 한 필요한 최상위 요소입니다.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|  
+|[\<RelatedProducts > 요소](../deployment/relatedproducts-element-bootstrapper.md)|제품 파일에 대 한 선택적 요소입니다. 다른 제품을이 제품을 설치 또는 변경에 따라 달라 집니다.|없음|  
+|[\<InstallChecks > 요소](../deployment/installchecks-element-bootstrapper.md)|필수적 요소입니다. 목록 로컬 컴퓨터에 설치 하는 동안 수행 하는 종속성 확인 합니다.|없음|  
+|[\<명령 > 요소](../deployment/commands-element-bootstrapper.md)|필수적 요소입니다.  에 설명 된 대로 하나 이상의 설치 확인을 실행 `InstallChecks`, 고 패키지를 설치 하는 검사에 실패 합니다.|없음|  
+|[\<PackageFiles > 요소](../deployment/packagefiles-element-bootstrapper.md)|필수적 요소입니다. 이 설치 과정에서 설치할 수 있는 패키지를 나열 합니다.|없음|  
+|[\<문자열 > 요소](../deployment/strings-element-bootstrapper.md)|필수적 요소입니다. 저장소의 해당 언어 버전의 제품 이름 및 오류 문자열입니다.|없음|  
   
-## 설명  
- 패키지 스키마는 MS Build 부트스트래핑 작업에서 생성하며 하드 코딩된 자체 논리가 거의 없는 스텁 프로그램인 Setup.exe에서 사용합니다.  이 스키마는 설치 프로세스의 모든 측면을 주관합니다.  
+## <a name="remarks"></a>설명  
+ 패키지 스키마는 Setup.exe를 자체의 하드 코드 된 작은 논리를 포함 하는 Msbuild 부트스트랩 작업에 의해 생성 된 스텁 프로그램에서 사용 됩니다. 스키마는 설치 프로세스의 모든 측면을 구동합니다.  
   
- `InstallChecks`는 지정한 패키지의 존재에 대해 setup.exe에서 실행해야 하는 테스트입니다.  `PackageFiles`는 지정한 테스트에 실패하는 경우 설치 프로세스에서 설치해야 할 모든 패키지를 나열합니다.  Commands 아래의 각 Command 엔트리에서는 `InstallChecks`에서 설명한 테스트 중 하나를 실행하고 테스트가 실패하는 경우 실행할 `PackageFile`을 지정합니다.  `Strings` 요소를 사용하여 제품 이름과 오류 메시지를 지역화하고 단일 설치 이진 파일을 사용하여 응용 프로그램을 언어 수에 상관없이 설치할 수 있습니다.  
+ `InstallChecks`테스트는 setup.exe는 지정된 된 패키지의 존재 여부에 대 한 수행 해야 합니다. `PackageFiles`모든 지정된 된 테스트 실패 설치 프로세스를 설치 해야 할 수 있는 패키지를 나열 합니다. 명령에서 각 명령 항목에서 설명 하는 테스트 중 하나를 실행 합니다. `InstallChecks`, 지정 `PackageFile` 실행 되도록 테스트 실패 합니다. 사용할 수는 `Strings` 개수에 관계 없이 언어에 대 한 응용 프로그램을 설치할 단일 설치 이진을 사용할 수 있도록 제품 이름과 오류 메시지를 지역화 하는 요소입니다.  
   
-## 예제  
- 다음 코드 예제에서는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]를 설치하기 위한 전체 제품 파일을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제를 설치 하기 위한 완전 한 제품 파일을 보여 줍니다.는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -159,6 +160,6 @@ caps.handback.revision: 7
 </Product>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ClickOnce 배포 매니페스트](../deployment/clickonce-deployment-manifest.md)   
  [ClickOnce 응용 프로그램 매니페스트](../deployment/clickonce-application-manifest.md)

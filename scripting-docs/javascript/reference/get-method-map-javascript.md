@@ -1,48 +1,51 @@
 ---
-title: "get 메서드(Map)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "get 메서드 (Map) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: bebbd6bc-6e61-4674-8196-7e907798973f
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 243d5aa93289cb7a13b34567b7824d028151bad3
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# get 메서드(Map)(JavaScript)
-맵에서 지정된 요소를 반환합니다.  
+# <a name="get-method-map-javascript"></a>get 메서드(Map)(JavaScript)
+맵에서 지정된 된 요소를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```javascript  
+```JavaScript  
 mapObj.get(key)  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `mapObj`  
- 필수 요소.  `Map` 개체  
+ 필수 요소. `Map` 개체입니다.  
   
  `key`  
- 필수 요소.  `Map`에 있는 요소의 키입니다.  
+ 필수 요소. 에 있는 요소의 키는 `Map`합니다.  
   
-## 속성 값\/반환 값  
- 키와 연결된 개체를 반환합니다.  `Map`에 키가 포함되어 있지 않으면 이 메서드는 `undefined` 값을 반환합니다.  
+## <a name="property-valuereturn-value"></a>속성 값/반환 값  
+ 키와 연결 된 개체를 반환 합니다. 경우는 `Map` 에 없는 키를이 메서드는 반환 된 `undefined` 값입니다.  
   
-## 예제  
- 다음 예제는 `Map` 개체에서 요소를 검색하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 요소를 검색 하는 방법을 보여 주는 다음 예제는 `Map` 개체입니다.  
   
-```javascript  
+```JavaScript  
 var m = new Map();  
 m.set(1, "black");  
 m.set(2, "red");  
@@ -55,5 +58,5 @@ document.write(m.get(2));
   
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv11](../../javascript/reference/includes/jsv11-md.md)]

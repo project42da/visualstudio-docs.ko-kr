@@ -1,62 +1,64 @@
 ---
 title: "복사 동작 사용자 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 87fff01c-60ba-440a-b8a0-185edcef83ac
-caps.latest.revision: 16
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 532fd69bea467403047a7151584b7cf918ad602d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 복사 동작 사용자 지정
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK를 사용하여 만든 DSL\(Domain\-Specific Language\)에서는 사용자가 요소를 복사하고 붙여넣을 때 수행되는 작업을 변경할 수 있습니다.  
+# <a name="customizing-copy-behavior"></a>복사 동작 사용자 지정
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK를 사용하여 만든 DSL(Domain-Specific Language)에서는 사용자가 요소를 복사하고 붙여넣을 때 수행되는 작업을 변경할 수 있습니다.  
   
-## 표준 복사 및 붙여넣기 동작  
- 복사를 사용하도록 설정하려면 DSL 탐색기의 **Editor** 노드에서 **Enable Copy Paste** 속성을 설정합니다.  
+## <a name="standard-copy-and-paste-behavior"></a>표준 복사 및 붙여넣기 동작  
+ 복사를 사용 하려면 설정는 **복사 붙여넣기를 사용 하도록 설정** 의 속성은 **편집기** DSL 탐색기에서 노드.  
   
  기본적으로 사용자가 요소를 클립보드에 복사하면 다음 요소도 복사됩니다.  
   
--   선택한 요소의 포함된 종속 항목  이러한 항목은 복사한 요소를 소스로 사용하는 포함 관계의 대상인 요소입니다.  
+-   선택한 요소의 포함된 종속 항목 이러한 항목은 복사한 요소를 소스로 사용하는 포함 관계의 대상인 요소입니다.  
   
 -   복사한 요소 간의 관계 링크  
   
  이 규칙은 복사한 요소와 링크에 재귀적으로 적용됩니다.  
   
- ![복사하여 붙여넣은 요소](../modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
+ ![복사 하 여 요소를 붙여](../modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
   
- 복사한 요소와 링크는 serialize되어 클립보드에 배치되는 EGP\(<xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>\)에 저장됩니다.  
+ 복사한 요소와 링크는 serialize되어 클립보드에 배치되는 EGP(<xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>)에 저장됩니다.  
   
- 복사한 요소의 이미지도 클립보드에 배치됩니다.  따라서 사용자가 Word 등의 다른 응용 프로그램에 해당 이미지를 붙여넣을 수 있습니다.  
+ 복사한 요소의 이미지도 클립보드에 배치됩니다. 따라서 사용자가 Word 등의 다른 응용 프로그램에 해당 이미지를 붙여넣을 수 있습니다.  
   
- 사용자는 DSL 정의에 따라 요소를 수락할 수 있는 대상에 복사한 요소를 붙여넣을 수 있습니다.  예를 들어 구성 요소 솔루션 템플릿에서 생성된 DSL에서 사용자는 포트를 구성 요소에는 붙여넣을 수 있지만 다이어그램에는 붙여넣을 수 없으며, 구성 요소를 다이어그램에는 붙여넣을 수 있지만 다른 구성 요소에는 붙여넣을 수 없습니다.  
+ 사용자는 DSL 정의에 따라 요소를 수락할 수 있는 대상에 복사한 요소를 붙여넣을 수 있습니다. 예를 들어 구성 요소 솔루션 템플릿에서 생성된 DSL에서 사용자는 포트를 구성 요소에는 붙여넣을 수 있지만 다이어그램에는 붙여넣을 수 없으며, 구성 요소를 다이어그램에는 붙여넣을 수 있지만 다른 구성 요소에는 붙여넣을 수 없습니다.  
   
-## 복사 및 붙여넣기 동작 사용자 지정  
- 프로그램 코드를 사용하여 모델을 사용자 지정하는 방법은 [프로그램 코드에서 모델 탐색 및 업데이트](../modeling/navigating-and-updating-a-model-in-program-code.md)를 참조하세요.  
+## <a name="customizing-copy-and-paste-behavior"></a>복사 및 붙여넣기 동작 사용자 지정  
+ 프로그램 코드를 사용 하 여 모델을 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 [탐색 및 프로그램 코드에서 모델 업데이트](../modeling/navigating-and-updating-a-model-in-program-code.md)합니다.  
   
- **복사, 잘라내기 및 붙여넣기를 사용하거나 사용하지 않도록 설정합니다.**  
- DSL 탐색기의 **Editor** 노드에서 **Enable Copy Paste** 속성을 설정합니다.  
+ **복사, 잘라내기 및 붙여넣기를 사용 하지 않도록 설정 하거나 사용 합니다.**  
+ DSL 탐색기에서 설정 된 **복사 붙여넣기를 사용 하도록 설정** 속성의는 **편집기** 노드.  
   
- **같은 대상에 대한 링크를 복사합니다.** 복사한 주석 상자를 같은 주제 요소에 연결하는 경우를 예로 들 수 있습니다.  
- **Propagates Copy** 속성을 **Propagate copy to link only**로 설정합니다.  자세한 내용은 [링크 복사 동작 사용자 지정](#customizeLinks)을 참조하세요.  
+ **동일한 대상에 대 한 링크를 복사 합니다.** 예를 들어 복사 된 설명 상자를 동일한 주체 요소에 연결 합니다.  
+ 설정의 **전파 복사** 역할의 속성 **에 정보만 연결 전파**합니다. 자세한 내용은 참조 [링크 복사 동작을 사용자 지정](#customizeLinks)합니다.  
   
  연결된 요소를 복사합니다. 예를 들어 새 요소를 복사하면 연결된 주석 상자의 복사본도 만들어집니다.  
- **Propagates Copy** 속성을 **Propagate copy to link and opposite role player**로 설정합니다.  자세한 내용은 [링크 복사 동작 사용자 지정](#customizeLinks)을 참조하세요.  
+ 설정의 **전파 복사** 역할의 속성 **반대 역할 수행자 복사 링크에 전파**합니다. 자세한 내용은 참조 [링크 복사 동작을 사용자 지정](#customizeLinks)합니다.  
   
- **복사 및 붙여넣기를 통해 요소를 빠르게 복제합니다.** 일반적으로는 방금 복사한 항목이 계속 선택되어 있으며 같은 형식의 요소를 해당 항목에 붙여넣을 수는 없습니다.  
- 요소 병합 지시문을 도메인 클래스에 추가하고 부모 클래스로 병합을 전달하도록 설정합니다.  이 작업의 효과는 끌기 작업에서도 동일합니다.  자세한 내용은 [요소 만들기 및 이동 사용자 지정](../modeling/customizing-element-creation-and-movement.md)을 참조하십시오.  
+ **복사 하 여 중복 요소를 신속 하 게 합니다.** 일반적으로 방금 복사한 항목 여전히을 선택한 동일한 유형의 요소에 붙여 넣을 수 없습니다.  
+ 요소 병합 지시문을 도메인 클래스에 추가하고 부모 클래스로 병합을 전달하도록 설정합니다. 이 작업의 효과는 끌기 작업에서도 동일합니다. 자세한 내용은 참조 [사용자 지정 요소 만들기 및 이동](../modeling/customizing-element-creation-and-movement.md)합니다.  
   
- 또는  
+ \- 또는 -  
   
- `ClipboardCommandSet.ProcessOnPasteCommand()`를 재정의하여 요소를 붙여넣기 전에 다이어그램을 선택합니다.  DslPackage 프로젝트의 사용자 지정 파일에 이 코드를 추가합니다.  
+ `ClipboardCommandSet.ProcessOnPasteCommand()`를 재정의하여 요소를 붙여넣기 전에 다이어그램을 선택합니다. DslPackage 프로젝트의 사용자 지정 파일에 이 코드를 추가합니다.  
   
-```c#  
+```csharp  
 namespace Company.MyDsl {  
 using System.Linq;  
 using Microsoft.VisualStudio.Modeling.Diagrams;   
@@ -74,25 +76,25 @@ partial class MyDslClipboardCommandSet
   
 ```  
   
- **사용자가 선택한 대상에 붙여넣을 때 추가 링크를 만듭니다.** 예를 들어 주석 상자를 요소에 붙여넣으면 상자와 요소 간에 링크가 작성됩니다.  
- 요소 병합 지시문을 대상 도메인 클래스에 추가하고 링크를 추가하여 병합을 처리하도록 설정합니다.  이 작업의 효과는 끌기 작업에서도 동일합니다.  자세한 내용은 [요소 만들기 및 이동 사용자 지정](../modeling/customizing-element-creation-and-movement.md)을 참조하십시오.  
+ **사용자가 선택한 대상에 붙여 넣는 경우에 추가 링크를 만듭니다.** 예를 들어 설명 상자 요소에 붙여넣으면 링크가 서로 만들어집니다.  
+ 요소 병합 지시문을 대상 도메인 클래스에 추가하고 링크를 추가하여 병합을 처리하도록 설정합니다. 이 작업의 효과는 끌기 작업에서도 동일합니다. 자세한 내용은 참조 [사용자 지정 요소 만들기 및 이동](../modeling/customizing-element-creation-and-movement.md)합니다.  
   
- 또는  
+ \- 또는 -  
   
  `ClipboardCommandSet.ProcessOnPasteCommand()`를 재정의하여 기본 메서드를 호출한 후 추가 링크를 만듭니다.  
   
- **요소를 외부 응용 프로그램으로 복사할 수 있는 형식을 사용자 지정합니다**. 예를 들어 비트맵 양식에 테두리를 추가합니다.  
- DslPackage 프로젝트에서 *MyDsl*`ClipboardCommandSet.ProcessOnMenuCopyCommand()`을 재정의합니다.  
+ **요소를 복사할 수 있는 형식 사용자 지정** 외부 응용 프로그램-예를 들어에 비트맵 형식에 테두리를 추가 합니다.  
+ 재정의 *MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()` DslPackage 프로젝트에 있습니다.  
   
- **끌기 명령이 아닌 복사 명령을 통해 요소가 클립보드에 복사되는 방식을 사용자 지정합니다.**  
- DslPackage 프로젝트에서 *MyDsl*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()`을 재정의합니다.  
+ **Copy 명령으로 있지만 끌기 작업에는 없는 요소가 클립보드에 복사 되는 방식을 사용자 지정 합니다.**  
+ 재정의 *MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` DslPackage 프로젝트에 있습니다.  
   
- **복사와 붙여넣기를 통해 모양 레이아웃을 보존합니다.**  
- 사용자가 여러 모양을 복사할 때 모양이 붙여넣기되는 상대 위치를 보존할 수 있습니다.  [VMSDK: 회로 다이어그램 샘플](http://go.microsoft.com/fwlink/?LinkId=213879)의 예에서 이 기술을 확인할 수 있습니다.  
+ **Copy 통한 셰이프 레이아웃 유지 및 붙여넣기 합니다.**  
+ 사용자가 여러 모양을 복사할 때 모양이 붙여넣기되는 상대 위치를 보존할 수 있습니다. 이 방법은에 나오는 예제에서 설명 않음 [VMSDK: 회로 다이어그램 샘플](http://go.microsoft.com/fwlink/?LinkId=213879)합니다.  
   
- 이 결과를 얻으려면 복사한 ElementGroupPrototype에 모양과 연결선을 추가합니다.  재정의 시 가장 편리한 메서드는 ElementOperations.CreateElementGroupPrototype\(\)입니다.  이렇게 하려면 Dsl 프로젝트에 다음 코드를 추가합니다.  
+ 이 결과를 얻으려면 복사한 ElementGroupPrototype에 모양과 연결선을 추가합니다. 재정의 시 가장 편리한 메서드는 ElementOperations.CreateElementGroupPrototype()입니다. 이렇게 하려면 Dsl 프로젝트에 다음 코드를 추가합니다.  
   
-```c#  
+```csharp  
   
 public class MyElementOperations : DesignSurfaceElementOperations  
 {  
@@ -144,12 +146,12 @@ partial class MyDslDiagram // EDIT NAME
   
 ```  
   
- **선택한 위치\(예: 현재 커서 위치\)에 모양을 붙여넣습니다.**  
- 사용자가 여러 모양을 복사할 때 모양이 붙여넣기되는 상대 위치를 보존할 수 있습니다.  [VMSDK: 회로 다이어그램 샘플](http://go.microsoft.com/fwlink/?LinkId=213879)의 예에서 이 기술을 확인할 수 있습니다.  
+ **현재 커서 위치 등의 선택한 위치에 셰이프를 붙여 넣습니다.**  
+ 사용자가 여러 모양을 복사할 때 모양이 붙여넣기되는 상대 위치를 보존할 수 있습니다. 이 방법은에 나오는 예제에서 설명 않음 [VMSDK: 회로 다이어그램 샘플](http://go.microsoft.com/fwlink/?LinkId=213879)합니다.  
   
- 이 결과를 얻으려면 `ElementOperations.Merge()`의 위치별 버전을 사용하도록 `ClipboardCommandSet.ProcessOnMenuPasteCommand()`를 재정의합니다.  이렇게 하려면 DslPackage 프로젝트에 다음 코드를 추가합니다.  
+ 이 결과를 얻으려면 `ClipboardCommandSet.ProcessOnMenuPasteCommand()`의 위치별 버전을 사용하도록 `ElementOperations.Merge()`를 재정의합니다. 이렇게 하려면 DslPackage 프로젝트에 다음 코드를 추가합니다.  
   
-```c#  
+```csharp  
   
 partial class MyDslClipboardCommandSet // EDIT NAME  
 {  
@@ -211,11 +213,11 @@ partial class MyDslClipboardCommandSet // EDIT NAME
   }  
 ```  
   
- **사용자가 요소를 끌어서 놓을 수 있도록 지정합니다.**  
- [방법: 끌어서 놓기 처리기 추가](../modeling/how-to-add-a-drag-and-drop-handler.md)을 참조하십시오.  
+ **사용자가 끌어서 놓기 요소 수입니다.**  
+ 참조 [하는 방법: 끌어서 놓기 처리기를 추가](../modeling/how-to-add-a-drag-and-drop-handler.md)합니다.  
   
-##  <a name="customizeLinks"></a> 링크 복사 동작 사용자 지정  
- 사용자가 요소를 복사할 때의 표준 동작은 포함된 요소도 모두 복사하는 것입니다.  이러한 표준 복사 동작을 수정할 수 있습니다.  DSL 정의에서 관계 한쪽의 역할을 선택하고 속성 창에서 **Propagates Copy** 값을 설정합니다.  
+##  <a name="customizeLinks"></a>링크 복사 동작 사용자 지정  
+ 사용자가 요소를 복사할 때의 표준 동작은 포함된 요소도 모두 복사하는 것입니다. 이러한 표준 복사 동작을 수정할 수 있습니다. DSL 정의에서 속성 창 설정 및 관계의 한 쪽에서 역할을 선택 된 **전파 복사** 값입니다.  
   
  ![도메인 역할의 복사 속성 전파](../modeling/media/dslpropagatescopy.png "DslPropagatesCopy")  
   
@@ -223,35 +225,35 @@ partial class MyDslClipboardCommandSet // EDIT NAME
   
 -   Do not propagate copy  
   
--   Propagate copy to link only \- 그룹을 붙여넣을 때 이 링크의 새 복사본이 링크 반대쪽의 기존 요소를 참조합니다.  
+-   Propagate copy to link only - 그룹을 붙여넣을 때 이 링크의 새 복사본이 링크 반대쪽의 기존 요소를 참조합니다.  
   
--   Propagate copy to link and opposite role player \- 복사한 그룹에 링크 반대쪽의 요소 복사본이 포함됩니다.  
+-   Propagate copy to link and opposite role player - 복사한 그룹에 링크 반대쪽의 요소 복사본이 포함됩니다.  
   
- ![PropagateCopyToLinkOnly를 사용하여 복사한 결과](../modeling/media/dslpropagatecopy.png "DslPropagateCopy")  
+ ![PropagateCopyToLinkOnly를 효과](../modeling/media/dslpropagatecopy.png "DslPropagateCopy")  
   
  수행하는 변경 내용은 복사된 이미지와 요소에 모두 적용됩니다.  
   
-## 복사 및 붙여넣기 동작 프로그래밍  
- 개체 복사, 붙여넣기, 만들기, 삭제와 관련한 대부분의 DSL 동작 측면은 다이어그램에 연결되는 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 인스턴스를 통해 규정됩니다.  <xref:Microsoft.VisualStudio.Modeling.ElementOperations>에서 고유한 클래스를 파생시키고 다이어그램 클래스의 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> 속성을 재정의하여 DSL 동작을 수정할 수 있습니다.  
+## <a name="programming-copy-and-paste-behavior"></a>복사 및 붙여넣기 동작 프로그래밍  
+ 인스턴스에서 복사, 붙여넣기, 생성 및 삭제 개체의 관련 하 여 DSL의 동작의 다양 한 제어 됩니다 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 다이어그램 연결 됩니다. 고유한 클래스를 파생 하 여 DSL의 동작을 수정할 수 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 재정의 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> 다이어그램 클래스의 속성입니다.  
   
 > [!TIP]
->  프로그램 코드를 사용하여 모델을 사용자 지정하는 방법은 [프로그램 코드에서 모델 탐색 및 업데이트](../modeling/navigating-and-updating-a-model-in-program-code.md)를 참조하세요.  
+>  프로그램 코드를 사용 하 여 모델을 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 [탐색 및 프로그램 코드에서 모델 업데이트](../modeling/navigating-and-updating-a-model-in-program-code.md)합니다.  
   
- ![복사 작업의 시퀀스 다이어그램](../modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")  
+ ![복사 작업에 대 한 시퀀스 다이어그램](../modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")  
   
  ![붙여넣기 작업의 시퀀스 다이어그램](../modeling/media/dslpasteseqdiagram.png "dslPasteSeqDiagram")  
   
-#### 고유 ElementOperations를 정의하려면  
+#### <a name="to-define-your-own-elementoperations"></a>고유 ElementOperations를 정의하려면  
   
 1.  DSL 프로젝트의 새 파일에서 <xref:Microsoft.VisualStudio.Modeling.Diagrams.DesignSurfaceElementOperations>로부터 파생되는 클래스를 만듭니다.  
   
-2.  다이어그램 클래스에 대한 partial 클래스 정의를 추가합니다.  이 클래스의 이름은 **Dsl\\GeneratedCode\\Diagrams.cs**에서 확인할 수 있습니다.  
+2.  다이어그램 클래스에 대한 partial 클래스 정의를 추가합니다. 이 클래스의 이름에 있습니다 **Dsl\GeneratedCode\Diagrams.cs**합니다.  
   
-     다이어그램 클래스에서 ElementOperations 서브클래스 인스턴스를 반환하도록 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A>를 재정의합니다.  모든 호출에서 같은 인스턴스를 반환해야 합니다.  
+     다이어그램 클래스에서 ElementOperations 서브클래스 인스턴스를 반환하도록 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A>를 재정의합니다. 모든 호출에서 같은 인스턴스를 반환해야 합니다.  
   
  DslPackage 프로젝트의 사용자 지정 코드 파일에 이 코드를 추가합니다.  
   
-```c#  
+```csharp  
   
 using Microsoft.VisualStudio.Modeling;  
 using Microsoft.VisualStudio.Modeling.Diagrams;  
@@ -283,8 +285,8 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
   
 ```  
   
-## 다른 모델에서 끈 항목 수신  
- ElementOperations를 사용하여 복사, 이동, 삭제 및 끌어서 놓기 동작을 정의할 수도 있습니다.  ElementOperations 사용법을 설명하기 위해 여기서 제공하는 예제에서는 사용자 지정 끌어서 놓기 동작을 정의합니다.  그러나 이러한 용도로 [방법: 끌어서 놓기 처리기 추가](../modeling/how-to-add-a-drag-and-drop-handler.md)에서 설명하는 보다 확장성이 뛰어난 대체 방식을 사용할 수도 있습니다.  
+## <a name="receiving-items-dragged-from-other-models"></a>다른 모델에서 끈 항목 수신  
+ ElementOperations를 사용하여 복사, 이동, 삭제 및 끌어서 놓기 동작을 정의할 수도 있습니다. ElementOperations 사용법을 설명하기 위해 여기서 제공하는 예제에서는 사용자 지정 끌어서 놓기 동작을 정의합니다. 그러나 포함 하기 위해 해야 할에 설명 된 다른 접근 방식은 [하는 방법: 끌어서 놓기 처리기를 추가](../modeling/how-to-add-a-drag-and-drop-handler.md), 변수인 범위를 확장 합니다.  
   
  ElementOperations 클래스에서 두 메서드를 정의합니다.  
   
@@ -292,12 +294,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
   
 -   `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)` 이 메서드는 소스 요소를 대상에 결합합니다.  
   
-### CanMerge\(\)  
- `CanMerge()` 이 메서드는 다이어그램에서 마우스를 이동하면 사용자에게 제공되어야 하는 피드백을 확인하기 위해 호출됩니다.  이 메서드의 매개 변수는 마우스로 가리키는 요소와 끌기 작업을 수행한 소스에 대한 데이터입니다.  사용자는 화면의 어느 위치에서나 끌기를 수행할 수 있습니다.  그러므로 소스 개체는 다양한 형식이 될 수 있으며 여러 형식으로 serialize할 수 있습니다.  소스가 DSL 또는 UML 모델이면 데이터 매개 변수는 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>의 serialization입니다.  끌기, 복사 및 도구 상자 작업에서는 ElementGroupPrototypes를 사용하여 모델의 코드 조각을 표시합니다.  
+### <a name="canmerge"></a>CanMerge()  
+ `CanMerge()` 이 메서드는 다이어그램에서 마우스를 이동하면 사용자에게 제공되어야 하는 피드백을 확인하기 위해 호출됩니다. 이 메서드의 매개 변수는 마우스로 가리키는 요소와 끌기 작업을 수행한 소스에 대한 데이터입니다. 사용자는 화면의 어느 위치에서나 끌기를 수행할 수 있습니다. 그러므로 소스 개체는 다양한 형식이 될 수 있으며 여러 형식으로 serialize할 수 있습니다. 소스가 DSL 또는 UML 모델이면 데이터 매개 변수는 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>의 serialization입니다. 끌기, 복사 및 도구 상자 작업에서는 ElementGroupPrototypes를 사용하여 모델의 코드 조각을 표시합니다.  
   
- 요소 그룹 프로토타입은 요소와 링크를 수에 제한 없이 포함할 수 있습니다.  요소 형식은 해당 GUID로 식별할 수 있습니다.  여기서 GUID는 기본 모델 요소의 GUID가 아닌 끌어 온 모양의 GUID입니다.  다음 예에서는 UML 다이어그램의 클래스 모양을 이 다이어그램으로 끌면 `CanMerge()`가 true를 반환합니다.  
+ 요소 그룹 프로토타입은 요소와 링크를 수에 제한 없이 포함할 수 있습니다. 요소 형식은 해당 GUID로 식별할 수 있습니다. 여기서 GUID는 기본 모델 요소의 GUID가 아닌 끌어 온 모양의 GUID입니다. 다음 예에서는 UML 다이어그램의 클래스 모양을 이 다이어그램으로 끌면 `CanMerge()`가 true를 반환합니다.  
   
-```c#  
+```csharp  
 public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDataObject data)  
  {  
   // Extract the element prototype from the data.  
@@ -313,10 +315,10 @@ public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDa
   
 ```  
   
-## MergeElementGroupPrototype\(\)  
- 사용자가 요소를 다이어그램, 모양 또는 연결선에 놓으면 이 메서드가 호출됩니다.  이 메서드는 끌어 온 콘텐츠를 대상 요소에 병합해야 합니다.  이 예에서 코드는 대상 및 프로토타입 형식 조합을 인식할 수 있는지 여부를 확인합니다. 해당 조합을 인식할 수 있으면 메서드가 끌어 온 요소를 모델에 추가해야 하는 요소 프로토타입으로 변환합니다.  변환된 요소 또는 변환되지 않은 요소의 병합을 수행하기 위해 기본 메서드가 호출됩니다.  
+## <a name="mergeelementgroupprototype"></a>MergeElementGroupPrototype()  
+ 사용자가 요소를 다이어그램, 모양 또는 연결선에 놓으면 이 메서드가 호출됩니다. 이 메서드는 끌어 온 콘텐츠를 대상 요소에 병합해야 합니다. 이 예에서 코드는 대상 및 프로토타입 형식 조합을 인식할 수 있는지 여부를 확인합니다. 해당 조합을 인식할 수 있으면 메서드가 끌어 온 요소를 모델에 추가해야 하는 요소 프로토타입으로 변환합니다. 변환된 요소 또는 변환되지 않은 요소의 병합을 수행하기 위해 기본 메서드가 호출됩니다.  
   
-```c#  
+```csharp  
 public override void MergeElementGroupPrototype(ModelElement targetShape, ElementGroupPrototype sourcePrototype)  
 {  
   ElementGroupPrototype prototypeToMerge = sourcePrototype;  
@@ -331,9 +333,9 @@ public override void MergeElementGroupPrototype(ModelElement targetShape, Elemen
   
 ```  
   
- 이 예에서는 UML 클래스 다이어그램에서 끌어 온 UML 클래스 요소를 처리합니다.  DSL은 UML 클래스를 직접 저장하지 않으며, 끌어 온 각 UML 클래스에서 DSL 요소를 만듭니다.  따라서 DSL이 인스턴스 다이어그램인 등의 경우에 유용합니다.  사용자는 클래스를 다이어그램으로 끌어 해당 클래스의 인스턴스를 만들 수 있습니다.  
+ 이 예에서는 UML 클래스 다이어그램에서 끌어 온 UML 클래스 요소를 처리합니다. DSL은 UML 클래스를 직접 저장하지 않으며, 끌어 온 각 UML 클래스에서 DSL 요소를 만듭니다. 따라서 DSL이 인스턴스 다이어그램인 등의 경우에 유용합니다. 사용자는 클래스를 다이어그램으로 끌어 해당 클래스의 인스턴스를 만들 수 있습니다.  
   
-```c#  
+```csharp  
   
 private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot, ElementGroupPrototype prototype)  
 {  
@@ -369,14 +371,14 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
   
 ```  
   
-## 표준 복사 동작  
- 이 섹션의 코드는 복사 동작을 변경하기 위해 재정의할 수 있는 메서드를 보여줍니다.  사용자 지정을 직접 수행하는 방법을 쉽게 확인할 수 있도록, 이 섹션에 나와 있는 코드는 복사에 사용되는 메서드를 재정의하되 표준 동작을 변경하지는 않습니다.  
+## <a name="standard-copy-behavior"></a>표준 복사 동작  
+ 이 섹션의 코드는 복사 동작을 변경하기 위해 재정의할 수 있는 메서드를 보여줍니다. 사용자 지정을 직접 수행하는 방법을 쉽게 확인할 수 있도록, 이 섹션에 나와 있는 코드는 복사에 사용되는 메서드를 재정의하되 표준 동작을 변경하지는 않습니다.  
   
- 사용자가 Ctrl\+C를 누르거나 복사 메뉴 명령을 사용하면 <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> 메서드가 호출됩니다.  **DslPackage\\Generated Code\\CommandSet.cs**에서 이 작업이 설정되는 방식을 확인할 수 있습니다.  명령 설정 방식에 대한 자세한 내용은 [방법: 바로 가기 메뉴에 명령 추가](../Topic/How%20to:%20Add%20a%20Command%20to%20the%20Shortcut%20Menu.md)을 참조하세요.  
+ 사용자가 Ctrl+C를 누르거나 복사 메뉴 명령을 사용하면 <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> 메서드가 호출됩니다. 이 설정 방법 나타나면 **DslPackage\Generated Code\CommandSet.cs**합니다. 어떻게 주석은를 설정 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 바로 가기 메뉴에 명령을 추가](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)합니다.  
   
- DslPackage 프로젝트에서 *MyDsl*`ClipboardCommandSet`의 partial 클래스 정의를 추가하여 ProcessOnMenuCopyCommand를 재정의할 수 있습니다.  
+ ProcessOnMenuCopyCommand의 partial 클래스 정의 추가 하 여 재정의할 수 있습니다 *MyDsl* `ClipboardCommandSet` DslPackage 프로젝트에 있습니다.  
   
-```c#  
+```csharp  
 using System.Collections.Generic;  
 using System.Drawing;  
 using System.Windows.Forms;  
@@ -388,7 +390,7 @@ partial class MyDslClipboardCommandSet
   /// <summary>  
   /// Override ProcessOnMenuCopyCommand() to copy elements to the  
   /// clipboard in different formats, or to perform additional tasks  
-  /// before or after copying – for example deselect the copied elements.  
+  /// before or after copying - for example deselect the copied elements.  
   /// </summary>  
   protected override void ProcessOnMenuCopyCommand()  
   {  
@@ -439,9 +441,9 @@ protected override void CopyModelElementsIntoElementGroupPrototype(IDataObject d
 }  
 ```  
   
- 각 다이어그램에는 단일 ElementOperations 인스턴스가 있습니다.  원하는 경우 고유한 파생 인스턴스를 제공할 수 있습니다.  DSL 프로젝트에 배치할 수 있는 이 파일은 재정의 대상 코드와 동일하게 작동합니다.  
+ 각 다이어그램에는 단일 ElementOperations 인스턴스가 있습니다. 원하는 경우 고유한 파생 인스턴스를 제공할 수 있습니다. DSL 프로젝트에 배치할 수 있는 이 파일은 재정의 대상 코드와 동일하게 작동합니다.  
   
-```c#  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -560,8 +562,11 @@ namespace Company.MyDsl
   
 ```  
   
-## 참고 항목  
- [요소 만들기 및 이동 사용자 지정](../modeling/customizing-element-creation-and-movement.md)   
+## <a name="see-also"></a>참고 항목  
+ [사용자 지정 요소 만들기 및 이동](../modeling/customizing-element-creation-and-movement.md)   
  [방법: 끌어서 놓기 처리기 추가](../modeling/how-to-add-a-drag-and-drop-handler.md)   
  [삭제 동작 사용자 지정](../modeling/customizing-deletion-behavior.md)   
- [샘플: VMSDK 회로 다이어그램 샘플](http://go.microsoft.com/fwlink/?LinkId=213879)
+ [샘플: VMSDK 회로 다이어그램 예제](http://go.microsoft.com/fwlink/?LinkId=213879)
+ 
+[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
+ 

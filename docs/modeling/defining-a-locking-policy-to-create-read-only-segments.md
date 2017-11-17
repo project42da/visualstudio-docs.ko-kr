@@ -1,105 +1,109 @@
 ---
-title: "잠금 정책을 정의하여 읽기 전용 세그먼트 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "읽기 전용 세그먼트를 만들려면 잠금 정책을 정의 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fa549c71-2bf6-4b08-b7b2-7756dd6f1dc8
-caps.latest.revision: 12
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 0ac8ba75920c4b3b8964d473258c162c256139ca
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 잠금 정책을 정의하여 읽기 전용 세그먼트 만들기
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-불변성 API에는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] SDK 모델링 및 시각화 수를 잠금 또는 일부 dsl \(DSL\) 모델의 프로그램을 읽을 수 있지만 변경 되지 않도록 합니다.  사용자가 DSL 모델을 검토 하 고 주석을 추가 하는 동료에 게 요청할 수 있습니다 하지만 하 고 원본을 변경 하지 못하도록 수 있습니다 있도록이 읽기 전용 옵션, 예를 들어, 사용할 수 있습니다.  
+# <a name="defining-a-locking-policy-to-create-read-only-segments"></a>잠금 정책을 정의하여 읽기 전용 세그먼트 만들기
+불변성 API는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK 프로그램 잠금 일부 또는 전체 도메인 특정 언어 (DSL) 모델을 읽을 있지만 변경 되지 않습니다 수 있도록 허용 합니다. 이 읽기 전용 옵션이 사용할 수, 예를 들어 사용자가 동료 들이 주석 달기 및 DSL 모델 검토를 요청할 수 있지만가 원래 변경할 거부할 수 있도록 합니다.  
   
- 또한, 저자는 DSL의 사용자 정의할 수 있습니다의  *잠금 정책.* 어떤 잠금 허용 허용 되지 않습니다 또는 필수입니다 잠금 정책을 정의 합니다.  예를 들어, DSL을 게시 하는 경우 타사 개발자가 새 명령으로 확장할 수 하도록 유도할 수 있습니다.  하지만 이러한 모델의 지정 된 파트의 읽기 전용 상태를 변경 하지 못하도록 잠금 정책을 사용할 수 있습니다.  
+ 정의할 수는 또한를 사용 하는 DSL의 작성자는 *잠금 정책을 합니다.* 잠금 정책 허용, 허용 되지 않음 또는 필수 되는 잠금을 정의 합니다. 예를 들어 하는 DSL을 게시할 때 새 명령을 사용 하 여 확장 하는 타사 개발자가 요청할 수 있습니다. 하지만 모델의 지정 된 부분의 읽기 전용 상태를 변경 하지 못하도록 잠금 정책을 사용할 수도 있습니다.  
   
 > [!NOTE]
->  리플렉션을 사용 하 여 잠금 정책을 우회할 수도 있습니다.  그 명확한 경계를 타사 개발자에 게 제공 하지만 강력한 보안을 제공 하지 않습니다.  
+>  리플렉션을 사용 하 여 잠금 정책을 우회할 수 있습니다. 이 다른 공급 업체의 개발자는 명확한 경계를 제공 하지만 강력한 보안을 제공 하지 않습니다.  
   
- 자세한 내용 및 예제에 사용할 수 있는 해당 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)][시각화 및 모델링 SDK](란?LinkId%20=%20186128) 웹 사이트입니다.  
+ 자세한 내용과 샘플에서 사용할 수 있는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkId=186128) 웹 사이트입니다.  
+
+[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
   
-## 설정 및 잠금 가져오기  
- 저장소, 파티션, 또는 개별 요소의 잠금을 설정할 수 있습니다.  예를 들어,이 문을 모델 요소가 삭제 되는 것을 방지할 수 있으며 또한 해당 속성이 변경 되지 않도록 합니다.  
+## <a name="setting-and-getting-locks"></a>설정 및 잠금 가져오기  
+ 저장소, 파티션 또는 개별 요소에 대해 잠금을 설정할 수 있습니다. 예를 들어이 문은 모델 요소를 삭제 하는 하며 수의 속성 변경 되지 않도록 하지 못할 수도 됩니다.  
   
 ```  
 using Microsoft.VisualStudio.Modeling.Immutability; ...  
 element.SetLocks(Locks.Delete | Locks.Property);  
 ```  
   
- 요소 만들기, 파티션 및 역할에 대 한 re\-ordering 링크 간의 이동 관계에 변경 하지 못하도록 다른 잠금 값을 사용할 수 있습니다.  
+ 관계, 요소 만들기, 파티션 및 역할에 다시 정렬 링크 간에 이동 하는 변경할 수 없도록 다른 잠금 값을 사용할 수 있습니다.  
   
- 잠금은 사용자 동작 하 고 프로그램 코드를 적용합니다.  프로그램 코드를 변경 하려고 시도 하는 경우는 `InvalidOperationException` throw 됩니다.  잠금은 실행 취소 또는 다시 실행 작업에서 무시 됩니다.  
+ 잠금에는 프로그램 코드 및 사용자 작업에 모두 적용 됩니다. 프로그램 코드를 변경 하려고 하는 경우는 `InvalidOperationException` throw 됩니다. 잠금이 취소 또는 다시 실행 작업에서 무시 됩니다.  
   
- 요소의 모든 잠금을 지정 된 집합에 사용 하 여 있는지 검색할 수 있습니다 `IsLocked(Locks)` 를 사용 하 여 요소에 대 한 잠금은 현재 집합을 얻을 수 있습니다 및 `GetLocks()`.  
+ 요소에 하는지 모든 잠금이 지정된 된 집합을 사용 하 여 검색할 수 있는 `IsLocked(Locks)` 를 사용 하 여 현재 집합의 요소에 대 한 잠금 가져올 수 있습니다 `GetLocks()`합니다.  
   
- 트랜잭션을 사용 하지 않고 잠금을 설정할 수 있습니다.  잠금 데이터베이스 저장소의 일부가 아닙니다.  예를 들어 Onvaluechanged에서 잠금 값의 변경에는 저장소에 설정 하는 경우 실행 취소 작업의 일부가 변경 허용 해야 합니다.  
+ 트랜잭션을 사용 하지 않고 잠금을 설정할 수 있습니다. 잠금 데이터베이스 저장소의 일부가 아닙니다. 저장소에서 값의 변경에 따른에서 잠금을 설정한 경우 예를 들어 OnValueChanged에서 허용 해야 변경 내용을 실행 취소 작업의 일부분인.  
   
- 이러한 방법에 정의 된 확장 메서드는 해당 <xref:Microsoft.VisualStudio.Modeling.Immutability> 네임 스페이스입니다.  
+ 이러한 메서드는에 정의 된 확장 메서드는 <xref:Microsoft.VisualStudio.Modeling.Immutability> 네임 스페이스입니다.  
   
-### 잠금이 파티션 및 저장소  
- 잠금이 파티션 및 상점에도 적용할 수 있습니다.  파티션을 설정 되어 잠금 파티션에 모든 요소에 적용 됩니다.  따라서 예를 들어, 다음 문을 모든 요소에는 파티션, 자체 잠금 상태에 관계 없이 삭제 되지 않도록 합니다.  그럼에도 불구 하 고 다른 것과 같은 잠금 `Locks.Property` 의 개별 요소에는 설정할 수 없습니다.  
+### <a name="locks-on-partitions-and-stores"></a>파티션 및 저장소에 대 한 잠금  
+ 잠금이는 파티션 및 저장소에 적용할 수도 있습니다. 잠금을 파티션에 설정 된 파티션에 있는 모든 요소에 적용 됩니다. 따라서 예를 들어 다음 문은 하면 파티션의 모든 요소 자신의 잠금 상태에 관계 없이 삭제 되지 않도록 없습니다. 그럼에도 불구 하 고 기타 잠금 수와 같은 `Locks.Property` 여전히 개별 요소에 설정할 수 없습니다.  
   
 ```  
 partition.SetLocks(Locks.Delete);  
 ```  
   
- 저장소에 설정 되어 있는 잠금 파티션 및 요소에 해당 잠금이 설정에 관계 없이 모든 요소에 적용 됩니다.  
+ 저장소에 설정 하는 잠금을 파티션과 요소에 해당 잠금 설정에 관계 없이 모든 해당 요소에 적용 됩니다.  
   
-### 잠금을 사용 하 여  
- 다음 예제와 같은 체계를 구현 하려면 잠금을 사용할 수 있습니다.  
+### <a name="using-locks"></a>잠금을 사용 하 여  
+ 다음 예와 같이 체계를 구현 하는 잠금을 사용할 수 있습니다.  
   
--   모든 요소와 관계 된 메모를 나타내는 제외 하 고 변경 내용을 허용 하지 않습니다.  이 사용자를 변경 하지 않고 모델에 주석을 달 수 있습니다.  
+-   모든 요소와 메모를 표시 하는 것을 제외 하 고 관계에 대 한 변경을 허용 하지 않습니다. 따라서 사용자가 모델을 변경 하지 않고 주석을 달 수 있습니다.  
   
--   다이어그램에서 파티션을 변경할 수 있도록 기본 파티션의 변경 내용을 허용 하지 않습니다.  사용자는 다이어그램을 다시 정렬할 수 있지만 원본이 되는 모델을 변경할 수 없습니다.  
+-   다이어그램 파티션에 허용 하지만 기본 파티션에 대 한 변경 내용을 허용 되지 않습니다. 사용자는 다이어그램을 다시 정렬할 수 있지만 기본 모델을 변경할 수 없습니다.  
   
--   저장소 그룹을 별도 데이터베이스에 등록 된 사용자를 제외 하 고 변경 내용을 허용 하지 않습니다.  다른 사용자에 대 한 다이어그램 및 모델에 읽기 전용입니다.  
+-   별도 데이터베이스에 등록 된 사용자 그룹을 제외 하 고 저장소에 변경 내용을 허용 하지 않습니다. 다른 사용자에 대 한 다이어그램 및 모델은 읽기 전용입니다.  
   
--   다이어그램의 Boolean 속성을 설정 하면 모델의 변경 내용을 허용 하지 않습니다. true로.  해당 속성을 변경 하려면 메뉴 명령을 제공 합니다.  이 수를 수행 하는 사용자를 실수로 변경 하는 확인 하십시오 수 있습니다.  
+-   다이어그램의 부울 속성을 설정 하는 경우 모델의 변경 내용을 허용 되지 않고 true로 합니다. 해당 속성을 변경 하는 메뉴 명령을 제공 합니다. 이렇게 하면 사용자가 이루어지지 않으면 실수로 변경 됩니다.  
   
--   추가 및 삭제 요소를 특정 클래스의 관계를 허용 하지 않습니다 있지만 속성을 변경할 수 있습니다.  이 사용자가 속성을 채울 수 있는 고정된 폼을 제공 합니다.  
+-   속성 변경은 허용 하지만 추가 및 삭제의 요소와 특정 클래스의 관계를 허용 하지 않습니다. 이로써 사용자에 고정된 폼 속성을 채울 수 있습니다.  
   
-## 잠금 값  
- 잠금은 저장소, 파티션 또는 개별 모델 요소에 설정할 수 있습니다.  잠금 수를 `Flags` 열거형:를 사용 하 여 해당 값을 조합할 수 있습니다 ' &#124;'.  
+## <a name="lock-values"></a>잠금 값  
+ 잠금은 저장소, 파티션 또는 개별 모델 요소에서 설정할 수 있습니다. 잠금이 0이 `Flags` 열거형:를 사용 하 여 해당 값을 결합할 수 있습니다 ' &#124;'.  
   
--   잠금에 모델 요소를 항상 잠금 해당 파티션의 포함 됩니다.  
+-   ModelElement의 잠금에는 항상 해당 파티션 잠금이 포함합니다.  
   
--   잠금이 파티션 항상 저장소의 잠금이 포함합니다.  
+-   잠금이 파티션 저장소의 잠금 항상 포함 됩니다.  
   
- 파티션에 잠금을 설정 하거나 저장 및 동시에 개별 요소의 잠금을 해제할 수 없습니다.  
+ 파티션을에 잠금을 설정 하 고 또는 저장 하 고, 동시에 개별 요소에 대 한 잠금을 사용 하지 않도록 설정할 수 없습니다.  
   
-|값|않으면 `IsLocked(Value)` 마찬가지입니다|  
-|-------|-----------------------------------|  
+|값|즉 하는 경우 `IsLocked(Value)` true|  
+|-----------|------------------------------------------|  
 |없음|제한이 없습니다.|  
-|Property|요소 도메인 등록 정보는 변경할 수 없습니다.  이 도메인 클래스는 관계에서의 역할에 의해 생성 된 속성에는 적용 되지 않습니다.|  
-|Add|새 요소에 대 한 링크에 파티션을 만들 수 없거나 또는 저장 합니다.<br /><br /> 에 적용할 수 없습니다 `ModelElement`.|  
-|이동|요소가 경우 파티션 간에 이동할 수 없습니다 `element.IsLocked(Move)` true 인 경우 `targetPartition.IsLocked(Move)` 마찬가지입니다.|  
-|Delete|요소는 요소 자체를이 잠금이 설정 된 경우 모든 요소를 삭제, 포함 된 요소 및 모양 등 전파 합니다. 삭제할 수 없습니다.<br /><br /> 사용할 수 있는 `element.CanDelete()` 요소를 삭제할 수 있는지 여부를 검색 합니다.|  
-|다시 정렬|순서는 roleplayer에 대 한 링크를 변경할 수 없습니다.|  
-|RolePlayer|이 요소를 기반으로 하는 링크의 집합을 변경할 수 없습니다.  예를 들어,이 요소에서 새 요소를 포함할 수 없습니다.  이 요소는 대상 있는 링크는 영향을 주지 않습니다.<br /><br /> 이 요소에 대 한 링크 이면 소스와 대상 적용 되지 않습니다.|  
-|모두|다른 값의 비트 논리합입니다.|  
+|속성|도메인 요소 속성을 변경할 수 없습니다. 관계의 도메인 클래스의 역할을 통해 생성 되는 속성에는 적용 되지 않습니다.|  
+|추가|파티션의 새 포인트 및 링크를 만들 수 없습니다 하거나 저장 합니다.<br /><br /> 에 적용할 수 없는 `ModelElement`합니다.|  
+|이동|요소 경우 파티션 간에 이동할 수 없습니다 `element.IsLocked(Move)` 가 true 인 경우 `targetPartition.IsLocked(Move)` 가 true입니다.|  
+|삭제|이 잠금은 요소 자체에 설정 되거나 있는 요소 중 하나에서 삭제 전파, 포함 된 요소 및 모양과 같은 요소를 삭제할 수 없습니다.<br /><br /> 사용할 수 있습니다 `element.CanDelete()` 요소를 삭제할 수 있는지 여부를 검색 합니다.|  
+|순서 변경|에 한 roleplayer 링크의 순서를 변경할 수 없습니다.|  
+|한 RolePlayer|이 요소에서 생성 되는 링크의 집합을 변경할 수 없습니다. 예를 들어,이 요소 아래에 새 요소를 포함할 수 없습니다. 이 요소는 대상 링크는 영향을 주지 않습니다.<br /><br /> 이 요소는 링크를 해당 원본과 대상 영향 받지 않습니다.|  
+|모두|다른 값의 비트 Or입니다.|  
   
-## 잠금 정책  
- DSL의 작성자는 사용자 정의할 수 있습니다의  *잠금 정책*.  설정 또는 특정 잠금 설정 해야 따라 라 만들어 질 중에서 특정 잠금을 방지할 수 있습니다 있도록 잠금 정책, Setlocks\(\)의 작업을 조정 합니다.  일반적으로 잠금 정책 사용자 또는 개발자가 실수로 DSL의 사용을 같은 방식으로 변수를 선언할 수 있습니다 contravening 하지 못하게 사용 됩니다 `private`.  
+## <a name="locking-policies"></a>잠금 정책  
+ DSL의 작성자를 정의할 수 있습니다는 *잠금 정책을*합니다. 잠금 정책을 특정 잠금을 설정 또는 특정 잠금을 설정 해야 하도록 요구 하는 것에서 수 없도록 SetLocks(), 작업을 조정 합니다. 사용자 또는 개발자가 동일한 방식으로 변수를 선언할 수는 DSL의 용도 실수로 contravening에서 권장 하는 잠금 정책을 사용 하면 일반적으로 `private`합니다.  
   
- 잠금 정책을 사용 하면 잠금 모든 요소에는 요소 형식에 따라 설정할 수 있습니다.  이것은 `SetLocks(Locks.None)` 요소를 처음 만들거나 파일에서 deserialize 할 때 항상 호출 됩니다.  
+ 요소의 형식에 종속 된 모든 요소에 대해 잠금을 설정 하는 잠금 정책을 사용할 수 있습니다. 때문에 이것이 `SetLocks(Locks.None)` 은 요소를 처음 만들거나 파일에서 deserialize 할 때 항상 호출 됩니다.  
   
- 그러나 정책 요소에 대 한 잠금이 수명 동안의 변화를 사용할 수 없습니다.  그 효과 얻기 위해 호출을 사용 해야 `SetLocks()`.  
+ 그러나 요소에 대 한 잠금이 수명 동안의 변경 하는 정책을 사용할 수 없습니다. 에 대 한 호출을 사용 해야 해당 효과 얻기 위해 `SetLocks()`합니다.  
   
- 잠금 정책을 정의 하려면 다음을 수행 해야 합니다.  
+ 잠금 정책을 정의 하려면 해야 합니다.  
   
--   구현 하는 클래스를 만들 <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy>.  
+-   <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy>를 구현하는 클래스를 만듭니다.  
   
--   이 클래스는 DSL의 Docdata를 통해 사용할 수 있는 서비스를 추가 합니다.  
+-   이 클래스 DSL의 DocData를 통해 사용할 수 있는 서비스를 추가 합니다.  
   
-### 잠금 정책 정의 하기  
- <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy>다음 정의 다음과 같습니다.  
+### <a name="to-define-a-locking-policy"></a>잠금 정책을 정의 하려면  
+ <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy>다음 정의 있습니다.  
   
 ```  
 public interface ILockingPolicy  
@@ -110,9 +114,9 @@ public interface ILockingPolicy
 }  
 ```  
   
- 이러한 메서드를 호출할 때 `SetLocks()` 저장소, 파티션, 또는 모델 요소입니다.  각 방법에서, 제안 된 잠금 집합으로 제공 됩니다.  제안 된 집합을 반환할 수 있습니다 또는 추가한 잠금 뺄 수 있습니다.  
+ 이러한 메서드를 호출할 때 호출 됩니다 `SetLocks()` 저장소, 파티션 또는 모델 요소에 있습니다. 각 방법에서는 제안 된 잠금 집합이 함께 제공 됩니다. 제안 된 집합을 반환할 수 있습니다 또는 추가 하 고 잠금을 뺄 수 있습니다.  
   
- 예를 들면 다음과 같습니다.  
+ 예:  
   
 ```  
 using Microsoft.VisualStudio.Modeling;  
@@ -142,16 +146,16 @@ namespace Company.YourDsl.DslPackage // Change
   
 ```  
   
- 다른 코드를 호출 하는 경우에 사용자가 요소를 항상 삭제할 수 있는지 확인.`SetLocks(Lock.Delete):`  
+ 다른 코드를 호출 하는 경우에 사용자가 요소를 삭제할 수 있는지 확인 하려면`SetLocks(Lock.Delete):`  
   
  `return proposedLocks & (Locks.All ^ Locks.Delete);`  
   
- Myclass의 모든 요소의 모든 속성을 변경 하지 못하도록 하려면:  
+ MyClass의 모든 요소의 모든 속성의 변경 허용 되지 않습니다.  
   
- `return element is MyClass ?  (proposedLocks | Locks.Property) : proposedLocks;`  
+ `return element is MyClass ? (proposedLocks | Locks.Property) : proposedLocks;`  
   
-### 정책으로 서비스를 사용할 수 있게 하려면  
- 사용자 `DslPackage` 프로젝트, 다음 예제와 유사한 코드를 포함 하는 새 파일을 추가 합니다.  
+### <a name="to-make-your-policy-available-as-a-service"></a>정책에를 서비스로 사용할 수 있도록 하려면  
+ 사용자 `DslPackage` 프로젝트에서 다음 예제와 유사한 코드를 포함 하는 새 파일을 추가 합니다.  
   
 ```  
 using Microsoft.VisualStudio.Modeling;  

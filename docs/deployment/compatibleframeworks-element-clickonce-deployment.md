@@ -1,70 +1,69 @@
 ---
-title: "&lt;compatibleFrameworks&gt; 요소(ClickOnce 배포) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<compatibleFrameworks> 요소[ClickOnce 배포 매니페스트]"
+title: "&lt;compatibleFrameworks&gt; 요소 (ClickOnce 배포) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <compatibleFrameworks> element [ClickOnce deployment manifest]
 ms.assetid: f6c3ee55-9e65-403d-8664-3ebde872c7d4
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "15"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: bb8c31d37bd37f4e2db8415ef1815caec0ec185a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;compatibleFrameworks&gt; 요소(ClickOnce 배포)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-이 응용 프로그램을 설치하고 실행할 수 있는 .NET Framework 버전을 식별합니다.  
+# <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt; 요소 (ClickOnce 배포)
+이 응용 프로그램이 설치 및 실행할 수 있는 .NET Framework의 버전을 식별합니다.  
   
 > [!NOTE]
->  [MageUI.exe](../Topic/MageUI.exe%20\(Manifest%20Generation%20and%20Editing%20Tool,%20Graphical%20Client\).md) 에서 지원 하지 않는 있는 `compatibleFrameworks` 요소는 응용 프로그램 매니페스트를 저장 하는 경우 이미 서명 인증서 사용과  [MageUI.exe](../Topic/MageUI.exe%20\(Manifest%20Generation%20and%20Editing%20Tool,%20Graphical%20Client\).md).  대신 사용 해야 합니다  [Mage.exe](../Topic/Mage.exe%20\(Manifest%20Generation%20and%20Editing%20Tool\).md).  
+>  [MageUI.exe](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) 지원 하지 않습니다는 `compatibleFrameworks` 요소 응용 프로그램 매니페스트를 저장할 때 사용 하 여 인증서로 서명 된 이미 [MageUI.exe](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)합니다. 대신, [Mage.exe](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)를 사용해야 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <compatibleFrameworks  
-      SupportUrl>   
+      SupportUrl>   
    <framework  
       targetVersion  
       profile  
       supportedRuntime  
-   />   
+   />   
 </ compatibleFrameworks>  
 ```  
   
-## 요소 및 특성  
- `compatibleFrameworks` 요소는 [!INCLUDE[net_v40_short](../debugger/includes/net_v40_short_md.md)] 이상에서 제공하는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 런타임을 대상으로 하는 배포 매니페스트에 필요합니다.  `compatibleFrameworks` 요소에는 이 응용 프로그램을 실행할 수 있는 .NET Framework 버전을 지정하는 `framework` 요소가 하나 이상 포함됩니다.  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]는 이 목록에서 첫 번째로 사용 가능한 `framework`에서 응용 프로그램을 실행합니다.  
+## <a name="elements-and-attributes"></a>요소 및 특성  
+ `compatibleFrameworks` 배포 매니페스트에 대상으로 하는 요소는 필수는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 에서 제공 하는 런타임 [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] 이상. `compatibleFrameworks` 요소 하나 이상 포함 `framework` 이 응용 프로그램 실행 될 수 있는.NET Framework 버전을 지정 하는 요소입니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 런타임 첫 번째 응용 프로그램을 실행 합니다 사용 가능한 `framework` 이 목록에 있습니다.  
   
- 다음 표에서는 `compatibleFrameworks` 요소가 지원하는 특성을 보여 줍니다.  
-  
-|특성|설명|  
-|--------|--------|  
-|`S` `upportUrl`|선택적 요소.  원하는 .NET Framework 버전을 다운로드할 수 있는 URL을 지정합니다.|  
-  
-## framework  
- 필수 요소.  다음 표에서는 `framework` 요소가 지원하는 특성을 보여 줍니다.  
+ 다음 표에서 특성을 나열 하는 `compatibleFrameworks` 요소는 지원 합니다.  
   
 |특성|설명|  
-|--------|--------|  
-|`targetVersion`|필수 요소.  대상 .NET Framework의 버전 번호를 지정합니다.|  
-|`profile`|필수 요소.  대상 .NET Framework의 프로필을 지정합니다.|  
-|`supportedRuntime`|필수 요소.  대상 .NET Framework와 연결된 런타임의 버전 번호를 지정합니다.|  
+|---------------|-----------------|  
+|`S` `upportUrl`|선택 사항입니다. 호환 되는 기본.NET Framework 버전을 다운로드할 수 있는 URL을 지정 합니다.|  
   
-## 설명  
+## <a name="framework"></a>프레임워크  
+ 필수 요소. 다음 표에서 특성을 나열 하는 `framework` 요소를 지원 합니다.  
   
-## 예제  
- 다음 코드 예제에서는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트의 `compatibleFrameworks` 요소를 보여 줍니다.  이 배포는 [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]에서 실행할 수 있으며,  [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]의 상위 집합이므로 [!INCLUDE[net_v40_short](../debugger/includes/net_v40_short_md.md)]에서도 실행할 수 있습니다.  
+|특성|설명|  
+|---------------|-----------------|  
+|`targetVersion`|필수 요소. 대상.NET Framework의 버전 번호를 지정합니다.|  
+|`profile`|필수 요소. 대상.NET Framework의 프로필을 지정합니다.|  
+|`supportedRuntime`|필수 요소. 대상.NET Framework와 관련 된 런타임 버전 번호를 지정 합니다.|  
+  
+## <a name="remarks"></a>설명  
+  
+## <a name="example"></a>예제  
+ 다음 코드 예제는 `compatibleFrameworks` 요소에는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트 합니다. 이 배포에서 실행할 수는 [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]합니다. 또한에서 실행할 수는 [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] 의 상위 집합 이므로 [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]합니다.  
   
 ```  
 <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">  
@@ -75,5 +74,5 @@ manager: "wpickett"
 </compatibleFrameworks>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ClickOnce 배포 매니페스트](../deployment/clickonce-deployment-manifest.md)

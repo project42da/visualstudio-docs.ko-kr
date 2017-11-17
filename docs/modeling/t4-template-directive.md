@@ -7,30 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b0a8e04-6fee-4c6c-b086-e49fc728a3ed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9b48a6d079ebe43f3d1e3c97a9272e8ad05b6735
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a93cb843f45efffe2b8ccdb86543baf48736ed90
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="t4-template-directive"></a>T4 템플릿 지시문
 일반적으로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] T4 텍스트 템플릿은 템플릿의 처리 방식을 지정하는 `template` 지시문으로 시작합니다. 하나의 텍스트 템플릿 및 템플릿이 포함된 파일에는 템플릿 지시문이 하나만 있어야 합니다.  
@@ -252,4 +237,3 @@ This is the common footer.
  `internal`  
   
  런타임 텍스트 템플릿에서 생성된 클래스의 표시 유형 특성을 설정합니다. 기본적으로 클래스는 사용자 코드의 공용 API에 속하지만 `visibility="internal"`을 설정하여 사용자의 코드만 텍스트 생성 클래스를 사용할 수 있도록 지정할 수 있습니다.
-

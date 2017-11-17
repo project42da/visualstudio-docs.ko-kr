@@ -1,53 +1,54 @@
 ---
-title: "$1...$9 속성(RegExp)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "$1...$9"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "$1...$9 속성"
+title: "$1... $9 속성 (RegExp) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: $1...$9
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: $1...$9 properties
 ms.assetid: 8bd84851-f62f-4eb1-a93d-b67135ea091a
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: fc1926d6281c9003c432c9c9e89a73a48a584ef4
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# $1...$9 속성(RegExp)(JavaScript)
-패턴 일치 과정에서 찾아 가장 최근에 저장한 9개 부분을 반환합니다.  읽기 전용입니다.  
+# <a name="19-properties-regexp-javascript"></a>$1...$9 속성(RegExp)(JavaScript)
+9 개 가장 최근에 찾아 저장 한 패턴 일치 하는 동안 부분을 반환 합니다. 읽기 전용입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 RegExp.$n   
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  `RegExp`  
  항상 전역 `RegExp` 개체입니다.  
   
  `n`  
- 1부터 9까지의 정수입니다.  
+ 1에서 9 사이의 모든 정수입니다.  
   
-## 설명  
- **$1...$9** 속성 값은 괄호 안에서 일치하는 내용을 찾을 때마다 수정됩니다.  정규식 패턴에 지정할 수 있는 괄호 안의 부분 문자열 수에는 제한이 없지만 저장되는 것은 최근 9개뿐입니다.  
+## <a name="remarks"></a>설명  
+ 값은 **$1... $9** 때마다 괄호 일치 하는 속성이 수정 됩니다. 정규식 패턴에 괄호로 묶인 부분 문자열 수를 지정할 수 있지만 가장 최근 9만 저장할 수 있습니다.  
   
-## 예제  
- 다음 예제에서는 정규식 검색을 수행합니다.  전역 `RegExp` 개체에서 찾은 일치하는 항목 및 하위 일치 항목을 표시합니다.  하위 일치 항목은 `$1…$9` 속성에 포함된 성공적으로 괄호로 묶인 일치 항목입니다.  이 예제에서는 또한 `exec` 메서드에서 반환된 배열에서 찾은 일치 항목 및 하위 일치 항목을 표시합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 정규식 검색을 수행합니다. 일치 항목을 표시 하 고 전역에서 submatches `RegExp` 개체입니다. 부분 일치에 포함 된 괄호 일치 하는 `$1...$9` 속성입니다. 이 예제에서는 또한 일치 항목을 표시 하 고에서 반환 되는 배열에서 submatches는 `exec` 메서드.  
   
-```javascript  
+```JavaScript  
 var newLine = "<br />";  
   
 var re = /(\w+)@(\w+)\.(\w+)/g  
@@ -103,10 +104,10 @@ document.write(s);
   
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
  **적용 대상**: [RegExp 개체](../../javascript/reference/regexp-object-javascript.md)  
   
-## 참고 항목  
- [Regular Expression Syntax \(JavaScript\)](http://msdn.microsoft.com/ko-kr/ab0766e1-7037-45ed-aa23-706f58358c0e)
+## <a name="see-also"></a>참고 항목  
+ [정규식 구문 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)

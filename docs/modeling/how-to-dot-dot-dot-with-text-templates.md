@@ -7,30 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d1ac2509-0479-47eb-809c-1f171245d0b6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 93b4d129cd09fe3d3b67bfc743286577b1e285dd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6e6841e77556d9ae8b8ce76bff01537d5f45e855
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="how-to--with-text-templates"></a>텍스트 템플릿 사용 방법
 텍스트 템플릿 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 어떤 종류의 텍스트를 생성 하는 효과적인 방법을 제공 합니다. 텍스트 템플릿 텍스트를 생성 하려면 디자인 타임에 프로젝트 코드의 일부를 생성 하 고 응용 프로그램의 일부로 실행 시 사용할 수 있습니다. 이 항목에서는 가장 자주 요약 "작업 방법...?" 라는 메시지가 표시 질문 합니다.  
@@ -142,4 +127,3 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 ### <a name="what-is-t4"></a>"T4" 이란?  
   
 -   에 다른 이름을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 텍스트 템플릿 기능 여기에서 설명 합니다. 게시 되지 않은 이전 버전을 "텍스트 템플릿 변환"에 대 한 약어 했습니다.
-

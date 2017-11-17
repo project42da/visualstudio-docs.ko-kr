@@ -1,43 +1,28 @@
 ---
-title: "Visual Studio-도메인별 언어에 대 한 모델링 SDK | Microsoft 문서"
+title: "Visual Studio-도메인 특정 언어에 대 한 SDK 모델링 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-techdebt
+ms.technology: vs-devops-techdebt
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language Tools
 - Domain-Specific Language
 ms.assetid: 17a531e2-1964-4a9d-84fd-6fb1b4aee662
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3d07f82ea737449fee6dfa04a61e195654ba35fa
-ms.openlocfilehash: 86e70eb82260cdced1ee4d74965832fbc7fa56ab
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 48cb7e5a274092a3ed82d2e41137633d12c3be01
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio용 모델링 SDK - 도메인별 언어
-용 모델링 SDK를 사용 하 여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 통합할 수 있는 강력한 모델 기반 개발 도구를 만들 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 동일한 방식으로 하나 이상의 모델 정의를 만들고 도구 집합으로 통합할 수 있습니다.  
+에 대 한 Modeling SDK를 사용 하 여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 통합할 수 있는 모델을 기반으로 강력한 개발 도구를 만들 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 동일한 방식으로 하나 이상의 모델 정의를 만들고 도구 집합으로 통합할 수 있습니다.  
   
  MSDK의 핵심은 비즈니스 영역에서 개념을 나타내기 위해 만드는 모델의 정의입니다. 다이어그램 보기, 코드와 다른 아티팩트를 생성하는 기능, 모델 변환 명령, 코드와 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 다른 개체와 상호 작용하는 기능과 같은 다양한 도구를 사용하여 모델을 감쌀 수 있습니다. 모델을 개발할 때 다른 모델 및 도구와 결합하여 개발에 중점을 두는 강력한 도구 집합을 구성할 수 있습니다.  
   
@@ -59,7 +44,7 @@ ms.lasthandoff: 02/22/2017
  
  [관련된 블로그 게시물](https://blogs.msdn.microsoft.com/visualstudioalm/tag/code-index/)
   
- 고급 기술 및 문제 해결에 대 한 지침을 참조 하십시오. [Visual Studio DSL / / 모델링 도구 확장성 포럼](http://go.microsoft.com/fwlink/?LinkID=186074)합니다.  
+ 고급 기술 및 문제 해결에 대 한 지침을 참조 하세요. [Visual Studio DSL 및 도구 확장성 모델링 포럼](http://go.microsoft.com/fwlink/?LinkID=186074)합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
  [도메인별 언어 시작](../modeling/getting-started-with-domain-specific-languages.md)  
@@ -93,4 +78,3 @@ ms.lasthandoff: 02/22/2017
  [방법: 도메인별 언어를 새 버전으로 마이그레이션](../modeling/how-to-migrate-a-domain-specific-language-to-a-new-version.md)  
   
  [Visual Studio용 모델링 SDK에 대한 API 참조](../modeling/api-reference-for-modeling-sdk-for-visual-studio.md)
-
