@@ -1,38 +1,40 @@
 ---
-title: "length 속성(String)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "length Property"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "문자열[Visual Studio], 길이"
-  - "Length 속성"
-  - "length 속성(String)"
+title: "length 속성 (String) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: length Property
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- strings [Visual Studio], length
+- Length property
+- length property (String)
 ms.assetid: 7dbd4a0e-c24e-4561-9b5b-e75e649a10a4
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 706a7f6986086f95613e09b9a8355eb5bc2702a7
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# length 속성(String)(JavaScript)
+# <a name="length-property-string-javascript"></a>length 속성(String)(JavaScript)
 `String` 개체의 길이를 반환합니다.  
   
 > [!WARNING]
->  JavaScript 문자열은 변경할 수 없으므로 문자열의 길이를 수정할 수 없습니다.  
+>  JavaScript 문자열을 변경할 수 있는 되지 않으므로 문자열의 길이 수정할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -40,13 +42,13 @@ caps.handback.revision: 9
 "String Literal".length   
 ```  
   
-## 설명  
- `length` 속성에는 `String` 개체의 문자 수를 나타내는 정수가 포함되어 있습니다.  `String` 개체의 마지막 문자에 대한 인덱스는 `length` \- 1입니다.  
+## <a name="remarks"></a>설명  
+ `length` 에 있는 문자의 수를 나타내는 정수를 포함 하는 속성은 `String` 개체입니다. 마지막 문자는 `String` 개체의 인덱스는 i`length` -1입니다.  
   
-## 예제  
- 다음 코드에서는 `length`를 사용하는 방법을 보여 줍니다.  JavaScript 문자열은 변경할 수 없으며 현재 위치에서 수정할 수도 없습니다.  그러나 문자 순서를 역순으로 한 문자열을 배열에 기록한 다음 빈 문자와 함께 `join`을 호출할 수 있습니다. 이렇게 하면 구분 기호 문자가 없는 문자열이 생성됩니다.  
+## <a name="example"></a>예제  
+ 다음 코드를 사용 하는 방법을 보여 줍니다 `length`합니다. JavaScript 변경할 수 없는 문자열과 현재 위치에서 수정할 수 없습니다. 그러나 역방향된 문자열 배열로 작성 하 고 다음 호출 수 `join` 구분 기호 문자가 없는 string 빈 문자를 생성 합니다.  
   
-```javascript  
+```JavaScript  
 var str = "every good boy does fine";  
         var start = 0;  
         var end = str.length - 1;  
@@ -65,5 +67,5 @@ var str = "every good boy does fine";
   
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]

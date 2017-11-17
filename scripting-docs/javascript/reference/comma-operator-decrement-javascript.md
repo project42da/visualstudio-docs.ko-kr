@@ -1,50 +1,51 @@
 ---
-title: "쉼표 연산자(,)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "%2C"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "쉼표 연산자"
+title: "쉼표 연산자 (,) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: '%2C'
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: comma operator
 ms.assetid: 699fa0bf-cd0a-45ee-a291-2fbed4ecd470
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2cb504beefc5ce4c260ec8296e2cf097e17d349e
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 쉼표 연산자(,)(JavaScript)
+# <a name="comma-operator--javascript"></a>쉼표 연산자(,)(JavaScript)
 두 식을 순차적으로 실행합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 expression1, expression2  
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  `expression1`  
  임의의 식입니다.  
   
  `expression2`  
  임의의 식입니다.  
   
-## 설명  
- `,` 연산자는 식이 왼쪽에서 오른쪽 순서로 실행되게 합니다.  `,` 연산자는 `for` 루프의 증분 식에서 가장 일반적으로 사용됩니다.  예를 들면 다음과 같습니다.  
+## <a name="remarks"></a>설명  
+ `,` 연산자는 왼쪽에서 오른쪽 순서로 실행 될 수 있는 식을 합니다. 일반적인 용도 `,` 의 증가 식에 연산자가는 `for` 루프입니다. 예:  
   
-```javascript  
+```JavaScript  
 j=25;  
 for (i = 0; i < 10; i++, j++)  
 {  
@@ -52,12 +53,12 @@ for (i = 0; i < 10; i++, j++)
 }  
 ```  
   
- `for` 문은 매번 루프를 통과하는 끝 부분에서 한 개의 식만 실행되도록 허용합니다.  `,` 연산자를 사용하면 여러 개의 식이 한 개의 식으로 처리되므로 두 변수 모두 증가할 수 있습니다.  
+ `for` 문은 모든 루프의 끝에 실행 하도록 단일 식만 허용 합니다. `,` 연산자를 사용 하면 여러 개의 식을 모두 지는 변수를 증가 될 수 있으므로 단일 식으로 처리 됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [for 문](../../javascript/reference/for-statement-javascript.md)   
  [연산자 우선 순위](../../javascript/operator-subtractprecedence-javascript.md)   
- [연산자 개요\(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [연산자 개요(JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)

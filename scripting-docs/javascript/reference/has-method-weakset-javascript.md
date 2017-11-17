@@ -1,48 +1,51 @@
 ---
-title: "has 메서드(WeakSet)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "has 메서드 (WeakSet) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: e24f0876-26bd-4007-b12a-360bb6fa0951
-caps.latest.revision: 2
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0dbc7e17e3fd73730386293c5e3f894455e41a93
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# has 메서드(WeakSet)(JavaScript)
+# <a name="has-method-weakset-javascript"></a>has 메서드(WeakSet)(JavaScript)
 `WeakSet`가 지정된 요소를 포함하는 경우 `true`를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```javascript  
+```JavaScript  
 setObj.has(obj)  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `setObj`  
- 필수.  `WeakSet` 개체입니다.  
+ 필수 요소. `WeakSet` 개체입니다.  
   
  `obj`  
- 필수.  테스트할 요소입니다.  
+ 필수 요소. 테스트할 요소입니다.  
   
-## 속성 값\/반환 값  
+## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  집합이 지정된 요소를 포함하는 경우 `true`입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 멤버를 `WeakSet`에 추가한 다음 집합에 특정 멤버가 포함되는지 여부를 확인하는 방법을 보여 줍니다.  
   
-```javascript  
+```JavaScript  
 var ws = new WeakSet();  
   
 var str = new String("Thomas Jefferson");  
@@ -61,8 +64,7 @@ console.log(ws.has(str));
 // true  
 // true  
 // false  
-  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv12](../../javascript/reference/includes/jsv12-md.md)]

@@ -1,48 +1,49 @@
 ---
-title: "leftContext 속성($`)(RegExp)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "$`"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "leftContext 속성($`)"
+title: "leftContext 속성 ($') (RegExp) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: $`
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: leftContext property ($`)
 ms.assetid: 840e56c0-eb7c-461f-bb56-91acff9b5bcf
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b0234a547d2e26c6cf6b1d1a058a46135e577fdd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# leftContext 속성($`)(RegExp)(JavaScript)
-검색한 문자열의 처음부터 마지막으로 일치하는 문자열 앞까지의 문자를 반환합니다.  읽기 전용입니다.  
+# <a name="leftcontext-property--regexp-javascript"></a>leftContext 속성($`)(RegExp)(JavaScript)
+마지막 일치 항목의 시작 부분 앞 까지의 검색된 한 문자열의 시작 부분에서 문자를 반환합니다. 읽기 전용입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 RegExp.leftContext  
 ```  
   
-## 설명  
- 이 속성과 연결된 개체는 항상 전역 `RegExp` 개체입니다.  
+## <a name="remarks"></a>설명  
+ 이 속성에 연결 된 개체는 항상 전역 `RegExp` 개체입니다.  
   
- `leftContext` 속성의 초기 값은 빈 문자열입니다.  `leftContext` 속성 값은 일치하는 값을 찾을 때마다 변경됩니다.  
+ 초기 값은 `leftContext` 속성은 빈 문자열입니다. 값은 `leftContext` 속성 때마다 변경 검색 됩니다.  
   
-## 예제  
- 다음 예제에서는 `leftContext` 속성의 사용법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `leftContext` 속성을 사용하는 방법을 보여 줍니다.  
   
-```javascript  
+```JavaScript  
 // Create the regular expression pattern.  
 var re = new RegExp("d(b+)(d)","ig");  
 var str = "cdbBdbsbdbdz";  
@@ -64,16 +65,16 @@ s += "lastParen: " + RegExp.lastParen + "<br />";
 document.write(s);  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
  **적용 대상**: [RegExp 개체](../../javascript/reference/regexp-object-javascript.md)  
   
-## 참고 항목  
- [$1...$9 속성\(RegExp\)](../../javascript/reference/dollar-1-dot-dot-dot-dollar-9-properties-regexp-javascript.md)   
- [index 속성\(RegExp\)](../../javascript/reference/index-property-regexp-javascript.md)   
- [input 속성\($\_\)\(RegExp\)](../../javascript/reference/input-property-dollar-regexp-javascript.md)   
- [lastIndex 속성\(RegExp\)](../../javascript/reference/lastindex-property-regexp-javascript.md)   
- [lastMatch 속성\($&\)\(RegExp\)](../../javascript/reference/lastmatch-property-dollar-regexp-javascript.md)   
- [lastParen 속성\($\+\)\(RegExp\)](../../javascript/reference/lastparen-property-dollar-regexp-javascript.md)   
- [rightContext 속성\($'\)\(RegExp\)](../../javascript/reference/rightcontext-property-dollar-regexp-javascript.md)
+## <a name="see-also"></a>참고 항목  
+ [$1... $9 속성 (RegExp)](../../javascript/reference/dollar-1-dot-dot-dot-dollar-9-properties-regexp-javascript.md)   
+ [index 속성 (RegExp)](../../javascript/reference/index-property-regexp-javascript.md)   
+ [input 속성 ($_) (RegExp)](../../javascript/reference/input-property-dollar-regexp-javascript.md)   
+ [lastIndex 속성 (RegExp)](../../javascript/reference/lastindex-property-regexp-javascript.md)   
+ [lastMatch 속성 ($&) (RegExp)](../../javascript/reference/lastmatch-property-dollar-regexp-javascript.md)   
+ [lastParen 속성 ($ +) (RegExp)](../../javascript/reference/lastparen-property-dollar-regexp-javascript.md)   
+ [rightContext 속성($')(RegExp)](../../javascript/reference/rightcontext-property-dollar-regexp-javascript.md)

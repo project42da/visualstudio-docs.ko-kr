@@ -1,52 +1,54 @@
 ---
-title: "toJSON 메서드(Date)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "toJSON 메서드"
+title: "toJSON 메서드 (Date) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: toJSON method
 ms.assetid: f91df030-e9c9-425e-8e6d-b46bdda66cb6
-caps.latest.revision: 27
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a131c7b248ca0486ab0b3b02d40e4351136c37c9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# toJSON 메서드(Date)(JavaScript)
-[JSON.stringify](../../javascript/reference/json-stringify-function-javascript.md) 메서드에서 JSON\(JavaScript Object Notation\) serialization에 대한 개체 데이터의 변환을 허용하는 데 사용합니다.  
+# <a name="tojson-method-date-javascript"></a>toJSON 메서드(Date)(JavaScript)
+사용 하는 [JSON.stringify](../../javascript/reference/json-stringify-function-javascript.md) 메서드 개체 JSON (JavaScript Notation) serialization에 대 한 개체의 데이터의 변환을 사용할 수 있도록 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 objectname.toJSON()  
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  `objectname`  
- 필수 요소.  JSON serialization이 필요한 개체입니다.  
+ 필수 요소. JSON에 대 한 serialization 하고자 하는 개체입니다.  
   
-## 설명  
- `toJSON` 메서드는 `JSON.stringify` 함수에서 사용됩니다.  `JSON.stringify`는 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 값을 JSON 텍스트로 serialize합니다.  `toJSON` 메서드를 `JSON.stringify`에 지정하면 `JSON.stringify`를 호출할 때 `toJSON` 메서드가 호출됩니다.  
+## <a name="remarks"></a>설명  
+ `toJSON` 메서드를 사용 하 여는 `JSON.stringify` 함수입니다. `JSON.stringify`직렬화는 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] JSON 텍스트에는 값입니다. 경우는 `toJSON` 메서드를 제공 됩니다 `JSON.stringify`, `toJSON` 메서드를 호출한 경우 `JSON.stringify` 라고 합니다.  
   
- `toJSON` 메서드는 [Date](../../javascript/reference/date-object-javascript.md) [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 개체의 기본 제공 멤버입니다.  접미사 Z로 식별된 UTC 표준 시간대의 ISO 형식 날짜 문자열을 반환합니다.  
+ `toJSON` 메서드는 기본 제공 소속 된 [날짜](../../javascript/reference/date-object-javascript.md) [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 개체입니다. UTC 표준 시간대 (접미사 Z로 표시)에 대 한 ISO 형식의 날짜 문자열을 반환 합니다.  
   
- `Date` 형식에 대한 `toJSON` 메서드를 재정의하거나 다른 개체 형식에 대해 `toJSON` 메서드를 정의하여 JSON serialization 전에 특정 개체 형식의 데이터를 변환할 수 있습니다.  
+ 재정의할 수 있습니다는 `toJSON` 에 대 한 메서드는 `Date` 입력 하거나 정의 `toJSON` JSON serialization 전에 특정 개체 유형에 대 한 데이터의 변환과 달성 하기 위해 다른 개체 형식에 대 한 메서드.  
   
-## 예제  
- 다음 예제에서는 `toJSON` 메서드를 사용하여 문자열 멤버 값을 대문자로 serialize합니다.  `JSON.stringify`를 호출하면 `toJSON` 메서드가 호출됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `toJSON` 대문자로 문자열 멤버 값을 serialize 하는 메서드. `toJSON` 메서드를 호출한 경우 `JSON.stringify` 라고 합니다.  
   
-```javascript  
+```JavaScript  
 var contact = new Object();  
 contact.firstname = "Jesper";  
 contact.surname = "Aaberg";  
@@ -72,10 +74,10 @@ var jsonText = JSON.stringify(contact);
 */  
 ```  
   
-## 예제  
- 다음 예제에서는 [Date](../../javascript/reference/date-object-javascript.md) 개체의 기본 제공 멤버인 `toJSON` 메서드의 사용법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 사용 하는 방법을 보여 주는 다음 예제는 `toJSON` 의 기본 제공 멤버인 메서드는 [날짜](../../javascript/reference/date-object-javascript.md) 개체입니다.  
   
-```javascript  
+```JavaScript  
 var dt = new Date('8/24/2009');  
 dt.setUTCHours(7, 30, 0);  
 var jsonText = JSON.stringify(dt);  
@@ -85,10 +87,10 @@ var jsonText = JSON.stringify(dt);
 */  
 ```  
   
-## 요구 사항  
- [!INCLUDE[jsv58](../../javascript/reference/includes/jsv58-md.md)] **적용 대상:** [Date 개체](../../javascript/reference/date-object-javascript.md)  
+## <a name="requirements"></a>요구 사항  
+ [!INCLUDE[jsv58](../../javascript/reference/includes/jsv58-md.md)]**적용 대상:** [Date 개체](../../javascript/reference/date-object-javascript.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [JSON 개체](../../javascript/reference/json-object-javascript.md)   
  [JSON.parse 함수](../../javascript/reference/json-parse-function-javascript.md)   
  [JSON.stringify 함수](../../javascript/reference/json-stringify-function-javascript.md)   
