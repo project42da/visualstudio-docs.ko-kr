@@ -1,59 +1,58 @@
 ---
-title: "IDiaSourceFile::get_checksum | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSourceFile::get_checksum 메서드"
+title: 'Idiasourcefile:: Get_checksum | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSourceFile::get_checksum method
 ms.assetid: aad63a7e-4e22-44e4-8a5b-81b5174ced1e
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c2bcfbc701f6f4799a51d09fac4c4eb184e6f5d7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSourceFile::get_checksum
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-체크섬 바이트를 검색합니다.  
+# <a name="idiasourcefilegetchecksum"></a>IDiaSourceFile::get_checksum
+체크섬 바이트 수를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_checksum (   
-   DWORD  cbData,  
-   DWORD* pcbData,  
-   BYTE   data[]  
+```C++  
+HRESULT get_checksum (   
+   DWORD  cbData,  
+   DWORD* pcbData,  
+   BYTE   data[]  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `cbData`  
- \[in\] 데이터 버퍼에서 바이트 단위의 크기입니다.  
+ [in] 데이터 버퍼의 바이트의 크기입니다.  
   
  `pcbData`  
- \[out\] 체크섬의 바이트 수를 반환합니다.  이 매개 변수는 `NULL`일 수 없습니다.  
+ [out] 체크섬 바이트 수를 반환합니다. 이 매개 변수 여야 `NULL`합니다.  
   
  `data`  
- \[in, out\] 체크섬 바이트를 입력 하는 버퍼입니다.  이 매개 변수가 `NULL`, 다음 `pcbData` 는 데 필요한 바이트 수를 반환 합니다.  
+ [out에서] 체크섬 바이트도 채워진 버퍼입니다. 이 매개 변수가 `NULL`, 다음 `pcbData` 필요한 바이트 수를 반환 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 체크섬 바이트를 생성 하는 데 사용 된 체크섬 알고리즘 유형을 확인 하려면 호출을 [IDiaSourceFile::get\_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md) 메서드.  
+## <a name="remarks"></a>설명  
+ 를 체크섬 바이트를 생성 하는 데 사용 된 체크섬 알고리즘의 형식을 확인 하려면 호출는 [idiasourcefile:: Get_checksumtype](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md) 메서드.  
   
- 체크섬 체크섬 바이트의 변경 내용을 원본 파일의 변경 내용을 반영 됩니다 이미지의 원본 파일에서 일반적으로 생성 됩니다.  체크섬 바이트를 일치 하지 않는 경우 파일이 간주 됩니다 다음 로드 된 이미지 파일을 생성 하는 체크섬이 손상 되거나 변경 됩니다.  
+ 체크섬 변경 소스 파일 체크섬 바이트에서 변경 사항을 반영 하므로 일반적으로 소스 파일의 이미지에서 만들어집니다. 체크섬 바이트 일치 하지 않으면 파일 것으로 간주 해야 파일의 로드 된 이미지에서 생성 된 체크섬 손상 되었거나 임의로 변경 합니다.  
   
- 일반적인 체크섬 절대로 32 바이트의 크기 보다 하지만 검사 값의 최대 크기는 가정 하지 마십시오.  설정에서 `data` 매개 변수를 `NULL` 체크섬을 검색 하는 데 필요한 바이트 수를 가져올 수 있습니다.  적절 한 크기의 버퍼를 할당 하 고 새 버퍼를 다시 한 번이 메서드를 호출 합니다.  
+ 일반적인 체크섬 크기가 32 바이트 이상 아니지만 체크섬의 최대 크기를 가정 하지 않습니다. 설정의 `data` 매개 변수를 `NULL` 체크섬을 검색 하는 데 필요한 바이트 수를 얻을 수 있습니다. 그런 다음 적절 한 크기의 버퍼를 할당 하 고 새 버퍼와 한 번 더이 메서드를 호출 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
- [IDiaSourceFile::get\_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md)
+ [IDiaSourceFile::get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md)

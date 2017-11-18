@@ -1,49 +1,33 @@
 ---
-title: 'CA2151: Fields with critical types should be security critical | Microsoft Docs'
+title: "CA2151: 중요 한 형식으로 필드 보안에 중요 해야 합니다 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09db9d25-7d58-4725-a252-4a07baadf046
-caps.latest.revision: 4
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c312bf4cd90dff17ff10063ab8a293161e2fa328
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "4"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 9a703dec98c93c03a2df51d3bd3d4ecf870f2031
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: Fields with critical types should be security critical
+# <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: 중요한 형식이 포함된 필드는 보안에 중요한 필드여야 함
 |||  
 |-|-|  
 |TypeName||  
 |CheckId|CA2151|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A security transparent field or a safe critical field is declared. Its type is specified as security critical. For example:  
+## <a name="cause"></a>원인  
+ 보안 투명 필드 또는 안전 중요 필드가 선언되었습니다. 해당 형식은 보안에 중요한 것으로 지정되었습니다. 예:  
   
 ```csharp  
 [assembly: AllowPartiallyTrustedCallers]  
@@ -58,13 +42,13 @@ ms.lasthandoff: 08/30/2017
   
 ```  
   
- In this example, `m_field` is a security transparent field of a type that is security critical.  
+ 이 예제에서 `m_field`는 보안 중요 형식의 보안 투명 필드입니다.  
   
-## <a name="rule-description"></a>Rule Description  
- To use security critical types, the code that references the type must be either security critical or security safe critical. This is true even if the reference is indirect. For example, when you reference a transparent field that has a critical type, your code must be either security critical or security safe. Therefore, having a security transparent or security safe critical field is misleading because transparent code will still be unable to access the field.  
+## <a name="rule-description"></a>규칙 설명  
+ 보안 중요 형식을 사용하려면 이 형식을 참조하는 코드가 보안 중요 또는 보안 안전 중요여야 합니다. 참조가 간접적인 경우에도 마찬가지입니다. 예를 들어, 중요 형식이 있는 투명 필드를 참조할 경우 코드는 보안 중요 또는 보안 안전이어야 합니다. 따라서 투명 코드는 필드에 액세스할 수 없으므로 보안 투명 또는 보안 안전 중요 필드가 있을 경우 잘못 해석됩니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, mark the field with the <xref:System.Security.SecurityCriticalAttribute> attribute, or make the type that is referenced by the field eith security transparent or safe critical.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반을 해결하려면 필드에 <xref:System.Security.SecurityCriticalAttribute> 특성을 표시하거나 보안 투명 또는 안전 중요 필드가 참조하는 형식을 만듭니다.  
   
 ```csharp  
 // Fix 1: Make the referencing field security critical  
@@ -92,10 +76,10 @@ ms.lasthandoff: 08/30/2017
   
 ```  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>코드  
  [!code-csharp[FxCop.Security.CA2145.TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity#1](../code-quality/codesnippet/CSharp/ca2151-fields-with-critical-types-should-be-security-critical_1.cs)]  
   
-### <a name="comments"></a>Comments
+### <a name="comments"></a>설명

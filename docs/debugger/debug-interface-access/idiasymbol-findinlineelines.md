@@ -1,43 +1,43 @@
 ---
-title: "IDiaSymbol::findInlineeLines | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: IDiaSymbol::findInlineeLines | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 56ba4bc0-8f96-47c2-8b18-332b4e7c2d91
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6aa4f8b15fd4181682fa392f8fdddad04c64c762
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::findInlineeLines
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-줄 번호 정보가 직접 인라인에 모든 기능 또는이 기호에 간접적으로 반복 하는 클라이언트가 열거형을 검색 합니다.  
+# <a name="idiasymbolfindinlineelines"></a>IDiaSymbol::findInlineeLines
+클라이언트가 모든 없는 함수를 인라인 처리, 직접 또는 간접적으로이 기호는 줄 번호 정보를 반복 하는 데 사용 하는 열거형을 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT findInlineeLines (   
-   IDiaEnumLineNumbers** ppResult  
+```C++  
+HRESULT findInlineeLines (   
+   IDiaEnumLineNumbers** ppResult  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppResult`  
- \[out\] 보유 하 고 있는 `IDiaEnumLineNumbers` 목록을 검색 하는 줄 번호를 포함 하는 개체입니다.  
+ [out] 보유 한 `IDiaEnumLineNumbers` 검색 되는 줄 번호의 목록을 포함 하는 개체입니다.  
   
-## 반환 값  
- 성공하면 `S_OK`를 반환하고, 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 열거형](../../debugger/debug-interface-access/symtagenum.md)   

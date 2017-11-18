@@ -1,32 +1,33 @@
 ---
 title: "관리 코드에서 COM 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "관리 되는 VSPackages COM 상수 및 매크로"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: managed VSPackages, COM constants and macros
 ms.assetid: b6663608-b049-44b0-a75b-080fdc5faafc
-caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 1cd6e70cc58f27dd0beb08d615abcdb52884f3f4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 관리 코드에서 COM 상수
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-관리 되는 패키지 프레임 워크 \(MPF\)를 사용 하면 몇 가지 표준 COM 상수 관리 되는 코드에서 사용할 수 있습니다. 이러한 상수는 참조를 위해 아래 나와 있습니다.  
+# <a name="com-constants-in-managed-code"></a>관리 코드에서 COM 상수
+관리 되는 패키지 프레임 워크 (MPF)를 사용 하면 일부 표준 COM 상수 관리 되는 코드에서 사용할 수 있습니다. 이러한 상수는 참조할 수 있도록 아래 나와 있습니다.  
   
-## 부울 HRESULT 값  
+## <a name="boolean-hresult-values"></a>HRESULT 부울 값  
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>  
   
  <xref:Microsoft.VisualStudio.VSConstants.S_OK>  
   
-## HRESULT 값  
+## <a name="hresult-values"></a>HRESULT 값  
  <xref:Microsoft.VisualStudio.VSConstants.E_ABORT>  
   
  <xref:Microsoft.VisualStudio.VSConstants.E_ACCESSDENIED>  
@@ -51,7 +52,7 @@ caps.handback.revision: 16
   
  <xref:Microsoft.VisualStudio.VSConstants.UNDO_E_CLIENTABORT>  
   
-## OLE 오류  
+## <a name="ole-errors"></a>OLE 오류  
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_ADVF>  
   
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_ADVISENOTSUPPORTED>  
@@ -90,7 +91,7 @@ caps.handback.revision: 16
   
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_WRONGCOMPOBJ>  
   
-## OLE 디스패치 오류  
+## <a name="ole-dispatch-errors"></a>OLE 디스패치 오류  
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_ARRAYISLOCKED>  
   
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_BADCALLEE>  
@@ -127,5 +128,5 @@ caps.handback.revision: 16
   
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 처리 및 반환 값](../extensibility/error-handling-and-return-values.md)

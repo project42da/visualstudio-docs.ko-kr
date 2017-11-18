@@ -1,54 +1,54 @@
 ---
-title: "BP_LOCATION_CODE_STRING | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_LOCATION_CODE_STRING"
-helpviewer_keywords: 
-  - "BP_LOCATION_CODE_STRING 구조"
+title: BP_LOCATION_CODE_STRING | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_LOCATION_CODE_STRING
+helpviewer_keywords: BP_LOCATION_CODE_STRING structure
 ms.assetid: a4cd71c6-5052-45fe-907b-ebc6ca1df2e4
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5ee54e8576d14e70e75372592501afc96517f5fc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# BP_LOCATION_CODE_STRING
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-통합된 개발 환경 \(IDE\)에서 사용자가 입력할 수 있는 문자열 기반 코드 중단점을 설정 하는 데 사용 됩니다.  
+# <a name="bplocationcodestring"></a>BP_LOCATION_CODE_STRING
+사용자는 통합된 개발 환경 (IDE)에서 입력할 수 있는 문자열을 기반으로 코드 중단점을 설정 하기 위한 사용.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-typedef struct _BP_LOCATION_CODE_STRING {   
-   BSTR bstrContext;  
-   BSTR bstrCodeExpr;  
+```cpp  
+typedef struct _BP_LOCATION_CODE_STRING {   
+   BSTR bstrContext;  
+   BSTR bstrCodeExpr;  
 } BP_LOCATION_CODE_STRING;  
 ```  
   
-## Members  
+## <a name="members"></a>멤버  
  `bstrContext`  
- 코드에서 중단점을, 일반적으로 메서드 또는 함수 이름은 호출 스택에 표시 되는 컨텍스트.  
+ 코드 내에서 중단점 호출 스택에 보듯이 메서드 또는 함수 이름, 일반적으로의 컨텍스트.  
   
  `bstrCodeExpr`  
- 입력할 사용자 중단점 코드를 설명 하는 문자열입니다.  
+ 사용자에 코드 중단점을 설명 하기 위해 입력 하는 문자열입니다.  
   
-## 설명  
- 이 구조체의 멤버인는 [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) 구조체 합집합 일부로.  
+## <a name="remarks"></a>설명  
+ 이 구조는의 구성원은 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) 공용 구조체의 일부로 구조입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)

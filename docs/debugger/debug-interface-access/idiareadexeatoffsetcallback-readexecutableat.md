@@ -1,56 +1,55 @@
 ---
-title: "IDiaReadExeAtOffsetCallback::ReadExecutableAt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaReadExeAtOffsetCallback::ReadExecutableAt 메서드"
+title: 'Idiareadexeatoffsetcallback:: Readexecutableat | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaReadExeAtOffsetCallback::ReadExecutableAt method
 ms.assetid: 30b1cef0-b366-4712-8e89-d21f640964f8
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8cb9ff60968d806cfdee0201746a02483895b0af
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaReadExeAtOffsetCallback::ReadExecutableAt
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-지정한 실행 파일의 지정 된 오프셋에서 시작 하는 바이트 수를 읽습니다.  
+# <a name="idiareadexeatoffsetcallbackreadexecutableat"></a>IDiaReadExeAtOffsetCallback::ReadExecutableAt
+지정 된 실행 파일에서 지정된 된 오프셋에서 시작 하는 바이트 수를 읽습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT ReadExecutableAt (   
-   DWORDLONG fileOffset,  
-   DWORD     cbData,  
-   DWORD*    pcbData,  
-   BYTE      data[]  
+```C++  
+HRESULT ReadExecutableAt (   
+   DWORDLONG fileOffset,  
+   DWORD     cbData,  
+   DWORD*    pcbData,  
+   BYTE      data[]  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  fileOffset  
- \[in\] 읽기를 시작할 실행 파일의 오프셋입니다.  
+ [in] 실행 파일 읽기를 시작할 오프셋입니다.  
   
- 사용  
- \[in\] 읽을 바이트의 수입니다.  
+ cbData  
+ [in] 읽을 바이트 수입니다.  
   
  pcbData  
- \[out\] 읽은 바이트 수를 반환 합니다.  
+ [out] 읽은 바이트 수를 반환 합니다.  
   
- 데이터\]  
- \[in, out\] 파일에서 읽은 바이트 사용 하 여 입력 되는 배열입니다.  
+ 데이터]  
+ [out에서] 파일에서 읽은 바이트를 사용 하 여 입력은 배열입니다.  
   
-## 설명  
- DIA 지원 코드 데이터 바이트는 절대 파일 오프셋을 사용 하 여 실행 파일에서 로드 하 여이 메서드가 호출 됩니다.  지원에이 메서드가 호출 되는 [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) 메서드.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 절대 파일 오프셋을 사용 하는 실행 파일에서 데이터 바이트를 로드 하 고 DIA 지원 코드에서 호출 됩니다. 지 원하는이 메서드는 [idiadatasource:: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) 메서드.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)   
  [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)

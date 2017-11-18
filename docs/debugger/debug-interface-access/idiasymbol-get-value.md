@@ -1,53 +1,52 @@
 ---
-title: "IDiaSymbol::get_value | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_value 메서드"
+title: 'Idiasymbol:: Get_value | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_value method
 ms.assetid: 2e40174a-2a61-4e5f-bb32-9e0ceec2178a
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1178fa79631e32e4b15ee7157fc40ebd9fd7383b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_value
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-상수 값을 검색 합니다.  
+# <a name="idiasymbolgetvalue"></a>IDiaSymbol::get_value
+상수 값을 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_value (   
-   VARIANT* pRetVal  
+```C++  
+HRESULT get_value (   
+   VARIANT* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[in, out\] A `VARIANT` 는 상수 값을 사용 하 여 채워진 개체입니다.  
+ [out에서] A `VARIANT` 상수 값을 사용 하 여 입력 되는 개체입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성의 기호를 사용할 수 없음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 의미는 속성은 해당 기호를 사용할 수 없습니다.  
   
-## 설명  
- 제공 된 VARIANT가이 메서드로 전달 되기 전에 초기화 되어야 합니다.  자세한 내용은 예제를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 메서드에 전달 하기 전에 제공 된 VARIANT은 초기화 합니다. 자세한 내용은 예제를 참조 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```cpp#  
+```C++  
 void ProcessValue(IDiaSymbol *pSymbol)  
 {  
     VARIANT value;  
@@ -70,5 +69,5 @@ void ProcessValue2(IDiaSymbol *pSymbol)
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,54 +1,53 @@
 ---
-title: "IDiaPropertyStorage::ReadMultiple | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaPropertyStorage::ReadMultiple"
+title: IDiaPropertyStorage::ReadMultiple | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaPropertyStorage::ReadMultiple
 ms.assetid: 6ccc9397-ce41-4f72-b261-72ac252cd4a5
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 77ead9e28f86067c08aa610fc902f2a0847bfb25
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaPropertyStorage::ReadMultiple
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiapropertystoragereadmultiple"></a>IDiaPropertyStorage::ReadMultiple
 지정한 현재 속성 집합에서 속성을 읽습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT ReadMultiple(   
-   ULONG          cpspec,  
-   PROPSPEC const rgpspec,  
-   PROPVARIANT    rgvar  
+```C++  
+HRESULT ReadMultiple(   
+   ULONG          cpspec,  
+   PROPSPEC const rgpspec,  
+   PROPVARIANT    rgvar  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `cpspec`  
- \[in\] Count에 지정 된 속성은 `rgpspec` 배열입니다.  0 이면 메서드가 속성이 반환 하지만 반환 하지 `S_OK` 로 성공 코드입니다.  
+ [in] 에 지정 된 속성의 수는 `rgpspec` 배열입니다. 메서드가 없는 속성을 반환 하지만 반환지 않습니다 0 이면 `S_OK` 를 성공 코드입니다.  
   
  `rgpspec`  
- \[in\] 읽을 수 있도록 속성의 배열입니다.  속성 ID 또는 선택적 문자열 이름 속성을 지정할 수 있습니다.  특정 순서로 배열에서 속성을 지정할 필요가 없습니다.  배열에 간단한 속성에 대 한 중복 된 속성 값의 중복 속성을 포함할 수 있습니다.  비\-간단 등록 정보 열기를 다시 하려고 할 때 액세스 거부 반환 해야 합니다.  배열 속성 Id와 Id 문자열을 함께 포함 될 수 있습니다.  이 배열에는 적어도 있어야 합니다 `cpspec` 속성 값을 표시 합니다.  
+ [in] 읽을 속성의 배열입니다. 속성 ID 또는 선택적 문자열 이름에는 속성을 지정할 수 있습니다. 배열의 특정 순서 대로 속성을 지정할 필요는 없습니다. 배열에서 간단한 속성에 대 한 중복 된 속성 값에 중복 된 속성을 포함할 수 있습니다. 비 단순 속성을 두 번째로 열 하려고 할 때 액세스 거부를 반환 해야 합니다. 배열에 여러 속성 Id와 문자열 Id를 포함할 수 있습니다. 이 배열에 적어도 있어야 `cpspec` 속성 값의 숫자입니다.  
   
  `rgvar`  
- \[in, out\] 배열 `PROPVARIANT` 구조 \(Microsoft.VisualStudio.OLE.Interop 네임 스페이스에\) 데이터를 사용 하 여 각 속성의 값을 입력할 수 있습니다.  배열에는 `cpspec` 요소의 크기입니다.  호출자는 배열 값을 초기화할 필요가 없습니다.  
+ [out에서] 배열 `PROPVARIANT` 구조 (Microsoft.VisualStudio.OLE.Interop 네임 스페이스) 각 속성에 대 한 값을 채울 수 있습니다. 배열 이상 이어야 합니다 `cpspec` 요소의 크기입니다. 호출자가 배열의 값을 초기화할 필요는 없습니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`.  반환 `S_FALSE` 속성 중 하나 이상이 없는 경우.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 는 속성 중 하나 이상을 찾을 수 없는 경우. 그렇지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 속성 찾을 수 없습니다 하는 경우, 해당 항목에는 `rgvar` 배열에 포함 된 `VARIANT` 형식으로 `VT_EMPTY`.  
+## <a name="remarks"></a>설명  
+ 경우 속성가 없는의 해당 항목에는 `rgvar` 배열에 포함 되어는 `VARIANT` 유형의 `VT_EMPTY`합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

@@ -1,33 +1,33 @@
 ---
 title: "창 속성 대화 상자, 창 탭 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "창 속성 대화 상자, 창 탭"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Window Properties dialog box, Windows Tab
 ms.assetid: 9001342a-09a8-4f5e-b6ed-881a3b9d7246
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a49ec9b52d2eaf6dc336ed28d5b4e531bb3b25cf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 창 속성 대화 상자, 창 탭
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**창** 탭을 사용하여 선택된 창과 관련된 창에 대한 정보를 표시할 수 있습니다.  [창 속성 대화 상자](../debugger/window-properties-dialog-box.md)를 표시하려면 포커스를 [창 뷰](../debugger/windows-view.md) 창으로 이동합니다.  그런 다음 트리에서 창 노드를 선택하고 **보기** 메뉴에서 **속성**을 선택합니다.  
+# <a name="windows-tab-window-properties-dialog-box"></a>창 속성 대화 상자, 창 탭
+사용 하 여는 **Windows** 선택된 창에 관련 된 탭을 windows에 대 한 정보가 표시 됩니다. 표시 하는 [창 속성 대화 상자](../debugger/window-properties-dialog-box.md), 포커스를 이동 하는 [창 뷰](../debugger/windows-view.md) 창. 트리에서 창 노드를 선택한 후 선택 **속성** 에서 **보기** 메뉴.  
   
- **창** 탭에서 사용할 수 있는 설정은 다음과 같습니다.  
+ 다음 설정은에 사용할 수는 **Windows** 탭:  
   
-|Entry|설명|  
-|-----------|--------|  
-|**다음 창**|창 트리 뷰에 표시된 동일한 시퀀스\(Z 순서\)에서 다음 형제 창에 대한 핸들입니다. 다음 창이 없는 경우에는 해당되지 않습니다.  다음 창의 속성을 보려면 이 항목을 선택합니다.|  
-|**이전 창**|창 트리 뷰에 표시된 동일한 시퀀스\(Z 순서\)에서 이전 형제 창에 대한 핸들입니다. 이전 창이 없는 경우에는 해당되지 않습니다.  이전 창의 속성을 보려면 이 항목을 선택합니다.|  
-|**부모 창**|이 창의 부모 창에 대한 핸들입니다. 부모가 없는 경우에는 해당되지 않습니다.  부모 창의 속성을 보려면 이 항목을 선택합니다.|  
-|**첫 번째 자식**|창 트리 뷰에 표시된 동일한 시퀀스\(Z 순서\)에서 이 창의 첫 번째 자식 창에 대한 핸들입니다. 자식 창이 없는 경우에는 해당되지 않습니다.  첫 번째 자식 창의 속성을 보려면 이 값을 선택합니다.|  
-|**소유자 창**|이 창의 소유자 창에 대한 핸들입니다.  일반적으로 응용 프로그램의 주 창은 시스템 모달 대화 상자 창을 소유합니다. 소유자가 없는 경우에는 해당되지 않습니다.  소유자 창의 속성을 보려면 이 항목을 선택합니다.|
+|입력|설명|  
+|-----------|-----------------|  
+|**다음 창**|("없음" 다음 창 없는 경우) 창이 트리 뷰에 표시 된 동일한 순서 (Z-순서)의 다음 형제 창 핸들입니다. 다음 창의 속성을 보려면이 항목을 선택 합니다.|  
+|**이전 창**|("없음" 창이 없습니다 이전 하는 경우) 창이 트리 뷰에 표시 된 동일한 순서 (Z-순서)의 이전 형제 창 핸들입니다. 이전 창의 속성을 보려면이 항목을 선택 합니다.|  
+|**부모 창**|이 창의 부모 창 ("없음" 부모가 없는 경우)의 핸들입니다. 부모 창의 속성을 보려면이 항목을 선택 합니다.|  
+|**첫 번째 자식**|이 창의 첫 번째 자식 창, (Z-순서) 순서로 ("없음" 자식 창이 없는지 있는 경우) 창이 트리 뷰에 표시 된의 핸들입니다. 첫 번째 자식 창의 속성을 보려면이 값을 선택 합니다.|  
+|**소유자 창**|이 창의 소유자 창 핸들입니다. 응용 프로그램의 주 창에는 일반적으로 예를 들어 ("없음" 소유자 하는 경우)의 시스템 모달 대화 상자 창을 소유 합니다. 소유자 창의 속성을 보려면이 항목을 선택 합니다.|

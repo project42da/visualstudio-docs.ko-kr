@@ -1,34 +1,35 @@
 ---
-title: "식 평가 컨텍스트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "식 계산, 컨텍스트"
+title: "식 계산 컨텍스트 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: expression evaluation, context
 ms.assetid: a2fd3758-09bd-45ae-8ecc-2d276c0036ba
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 1ac80a3fcf3a7f75be3f23dd1350da047ccbb393
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 식 평가 컨텍스트
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버깅은  **식 계산 컨텍스트의**:  
+# <a name="expression-evaluation-context"></a>식 계산 컨텍스트
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 을 디버깅 하는 **식 평가 컨텍스트**:  
   
--   식 계산에 대 한 컨텍스트를 나타냅니다.  일반적으로, 평가 컨텍스트를 계산할 변수, 매개 변수, 함수 및 메서드 내의 어휘 범위에 해당 합니다.  예를 들어, 스택 프레임과 연결 된 식 평가 컨텍스트 로컬 변수, 메서드 매개 변수 및 클래스 멤버 \(있는 경우\)를 확인 하기 위해 컨텍스트를 제공 합니다.  
+-   식 계산에 대 한 컨텍스트를 나타냅니다. 일반적으로 평가 컨텍스트 변수, 매개 변수, 함수 및 메서드를 평가 하는 어휘 범위에 해당 합니다. 예를 들어 식 평가 컨텍스트에 연결 된 스택 프레임을 해당 하는 경우 지역 변수, 메서드 매개 변수 및 클래스 멤버를 평가 하기 위한 컨텍스트를 제공 합니다.  
   
--   프로그램이 중단점에서 중지 했을 때 존재 합니다.  식 자체 및 지정 된 컨텍스트 내에서 계산에 대 한 준비가 된 구문 분석 된 식을 나타내는 데이터 구조입니다.  
+-   프로그램이 중단점에서 중지 될 때 존재 합니다. 식 자체에 바인딩 및 지정된 된 컨텍스트 내에서 평가 대 한 사용할 준비가 되어 구문 분석 된 식을 나타내는 데이터 구조입니다.  
   
-     에 자세히를 사용 하 여 식을 생성 됩니다 있는 [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 메서드.  식이 계산 되 면 이름 및 변수 또는 인수와 해당 값의 형식을 포함 하는 인쇄 가능한 문자열을 생성 합니다.  이 문자열에는 조사식 창이 나 지역 창에는 IDE의 표시 됩니다.  
+     좀 더 자세하게에서 식이 사용 하 여 작성 되며는 [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 메서드. 식이 계산 되는 이름 및 유형의 변수 또는 인수 및 값을 포함 하는 인쇄 가능한 문자열을 생성 됩니다. 이 문자열은 조사식 창 또는 IDE의 지역 창에 표시 됩니다.  
   
-     주어는 `BSTR` 및 [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) 디버그 엔진 \(DE\) 인터페이스를 만들 수 있습니다는 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) 인터페이스는 식을 구문 분석 하 여.  주어는 `IDebugExpression2` 인터페이스, 동기 또는 비동기 식 계산 하는 값은 DE에 얻을 수 있습니다.  이 값은 이름 및 형식 변수 또는 인수를 디스플레이를 IDE로 전송 됩니다.  
+     지정 된는 `BSTR` 및 [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) 인터페이스 디버그 엔진 (DE)를 만들 수는 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) 식을 구문 분석 하 여 인터페이스입니다. 지정 된 프로그램 `IDebugExpression2` 인터페이스는 DE 동기 또는 비동기 식 평가 통해 값을 가져올 수 있습니다. 이름 및 유형의 변수 또는 인수를 함께이 값 표시에 대 한 IDE에 전송 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [식 평가 인터페이스](../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
  [디버거 컨텍스트](../../extensibility/debugger/debugger-contexts.md)

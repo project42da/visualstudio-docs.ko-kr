@@ -1,73 +1,72 @@
 ---
-title: "IDiaSymbol::get_baseType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_baseType 메서드"
+title: 'Idiasymbol:: Get_basetype | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_baseType method
 ms.assetid: 5c69a241-a8d3-48ed-8b36-27463a196572
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 62f7ce0d29ec1b5bf997917a74e650a446a468ae
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_baseType
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-이 기호는 기본 형식을 검색*.*  
+# <a name="idiasymbolgetbasetype"></a>IDiaSymbol::get_baseType
+이 기호에 대 한 기본 형식을 검색*합니다.*  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_baseType (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_baseType (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 값을 반환의 [BasicType 열거형](../../debugger/debug-interface-access/basictype.md) 기호는 기본 형식을 지정 하는 열거형입니다.  
+ [out] 값을 반환 된 [BasicType 열거형](../../debugger/debug-interface-access/basictype.md) 기호의 기본 유형을 지정 하는 열거형입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성에 사용할 수 있음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 속성이 해당 기호를 사용할 수 있음을 의미 합니다.  
   
-## 설명  
- 먼저 기호 형식을 가져오고 반환 형식이 기본 형식에 대 한 심문의 차이에서 기호에 대 한 기본 형식이 확인할 수 있습니다.  일부 기호는 기본 형식이 다를 수 참고, 즉 구조 이름 예를 들어.  
+## <a name="remarks"></a>설명  
+ 기호 형식을 있으며 기본 형식에 대 한 형식을 반환 하 심문의 차이 먼저 기호에 대 한 기본 유형이 확인할 수 있습니다. 참고 일부 기호는 기본 형식을 사용할 수 없습니다-예: 구조 이름입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```cpp#  
+```C++  
 IDiaSymbol* pType;  
 CComPtr<IDiaSymbol> pBaseType;  
 if (pType->get_type( &pBaseType ) == S_OK)  
 {  
-    BasicType btBaseType;  
-    if (pBaseType->get_baseType((DWORD *)&btBaseType) == S_OK)  
+    BasicType btBaseType;  
+    if (pBaseType->get_baseType((DWORD *)&btBaseType) == S_OK)  
     {  
-        // Do something with basic type.  
-    }  
+        // Do something with basic type.  
+    }  
 }  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
-|버전:|DIA SDK v 7.0|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
+|버전:|DIA SDK v7.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [BasicType 열거형](../../debugger/debug-interface-access/basictype.md)   
- [IDiaSymbol::get\_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)
+ [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)

@@ -1,56 +1,55 @@
 ---
-title: "IDiaDataSource | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaDataSource 인터페이스"
+title: IDiaDataSource | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaDataSource interface
 ms.assetid: 6260ac76-4f9d-4144-ba22-32f8620b32c2
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 9b6ddb2ba2cc568b8f07e6643dcaeb93c0dec8ff
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaDataSource
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-시작 액세스의 디버깅 기호가 소스입니다.  
+# <a name="idiadatasource"></a>IDiaDataSource
+디버깅 기호가의 원본에 대 한 액세스를 시작 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-IDiaDataSource : IUnknown  
+IDiaDataSource : IUnknown  
 ```  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDiaDataSource`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDiaDataSource`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[IDiaDataSource::get\_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md)|마지막 로드 오류에 대 한 파일 이름을 검색합니다.|  
-|[IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)|열 하 고 프로그램 데이터베이스 \(.pdb\) 파일에 디버그 데이터 원본으로 준비 합니다.|  
-|[IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)|열리고 프로그램 데이터베이스 \(.pdb\) 파일에서 제공 된 서명 정보를 일치 하는지 확인 합니다. .pdb 파일을 디버그 데이터 원본으로 준비합니다.|  
-|[IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)|열리고.exe\/.dll 파일과 관련 된 디버그 데이터를 준비 합니다.|  
-|[IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)|인\-메모리 데이터 스트림을 통해 액세스할 프로그램 데이터베이스 \(.pdb\) 파일에 저장 된 디버그 데이터를 준비 합니다.|  
-|[IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)|기호를 쿼리 하는 것에 대 한 세션을 엽니다.|  
+|------------|-----------------|  
+|[IDiaDataSource::get_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md)|마지막 로드 오류에 대 한 파일 이름을 검색합니다.|  
+|[IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)|페이지를 열고 디버그 데이터 원본으로 하는 프로그램 데이터베이스 (.pdb) 파일을 준비 합니다.|  
+|[IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)|가 열리고 프로그램 데이터베이스 (.pdb) 파일에 서명 정보 제공;와 일치 하는지 확인 디버그 데이터 소스로.pdb 파일을 준비합니다.|  
+|[IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)|열리고.exe/.dll 파일과 관련 된 디버그 데이터를 준비 합니다.|  
+|[IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)|메모리 내 데이터 스트림을 통해 액세스 하는 프로그램 데이터베이스 (.pdb) 파일에 저장 된 디버그 데이터를 준비 합니다.|  
+|[IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)|기호를 쿼리 하기 위한 세션을 엽니다.|  
   
-## 설명  
- 로드 메서드 중 하나를 호출 하 여 `IDiaDataSource` 인터페이스 기호가 소스를 엽니다.  성공적으로 호출 하는 [IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) 메서드가 반환은 [IDiaSession](../../debugger/debug-interface-access/idiasession.md) 쿼리 데이터 원본에서 지 원하는 인터페이스.  Load 메서드가 파일 관련 오류를 반환 하는 경우 다음을 [IDiaDataSource::get\_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md) 메서드의 반환 값이 오류와 관련 된 파일 이름입니다.  
+## <a name="remarks"></a>설명  
+ load 메서드 중 하나를 호출 하는 `IDiaDataSource` 인터페이스 기호 원본이 열립니다. 성공적으로 호출 된 [idiadatasource:: Opensession](../../debugger/debug-interface-access/idiadatasource-opensession.md) 메서드가 반환 되는 [IDiaSession](../../debugger/debug-interface-access/idiasession.md) 인터페이스를 지 원하는 데이터 원본을 쿼리 합니다. Load 메서드는 파일 관련 오류를 반환 하면 [idiadatasource:: Get_lasterror](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md) 메서드 반환 값은 오류와 관련 된 파일 이름을 포함 합니다.  
   
-## 호출자에 대 한 참고 사항  
- 이 인터페이스를 호출 하 여 가져온는 `CoCreateInstance` 함수는 클래스 식별자를 `CLSID_DiaSource` 와의 인터페이스 ID `IID_IDiaDataSource`.  이 인터페이스를 받는 방법을 보여 줍니다.  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ 이 인터페이스를 호출 하 여 가져온는 `CoCreateInstance` 클래스 식별자와 함수 `CLSID_DiaSource` 인터페이스 id의 `IID_IDiaDataSource`합니다. 이 인터페이스는 가져오는 방법을 보여 줍니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```cpp#  
+```C++  
   
       IDiaDataSource* pSource;  
 HRESULT hr = CoCreateInstance(CLSID_DiaSource,  
@@ -64,12 +63,12 @@ if (FAILED(hr))
 }  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: Dia2.h  
   
  라이브러리: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 참고 항목  
- [인터페이스\(디버그 인터페이스 액세스 SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
+## <a name="see-also"></a>참고 항목  
+ [인터페이스(디버그 인터페이스 액세스 SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

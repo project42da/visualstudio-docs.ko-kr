@@ -1,59 +1,58 @@
 ---
-title: "MemoryTypeEnum | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MemoryTypeEnum 열거형"
+title: MemoryTypeEnum | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: MemoryTypeEnum enumeration
 ms.assetid: 8778c047-edeb-4495-8f9f-3f8bbb297099
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: db6a66f8d496c73d05e05fd2f5398998c0a72484
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# MemoryTypeEnum
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-메모리에 액세스할 수 있는 형식을 지정 합니다.  
+# <a name="memorytypeenum"></a>MemoryTypeEnum
+메모리 액세스의 유형을 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```C++  
 enum MemoryTypeEnum {  
-   MemTypeCode,  
-   MemTypeData,  
-   MemTypeStack,  
-   MemTypeAny = -1  
+   MemTypeCode,  
+   MemTypeData,  
+   MemTypeStack,  
+   MemTypeAny = -1  
 };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `MemTypeCode`  
- 액세스 메모리 코드를.  
+ 메모리 액세스는 코드 에서만.  
   
  `MemTypeData`  
- 데이터 또는 스택 메모리에 액세스 합니다.  
+ 데이터 또는 스택 메모리 액세스 합니다.  
   
  `MemTypeStack`  
- 액세스는 메모리 스택.  
+ 만 스택 메모리를 액세스 합니다.  
   
  `MemTypeAny`  
  모든 종류의 메모리에 액세스합니다.  
   
-## 설명  
- 이 열거형의 값으로 전달 되는 [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) 메서드가 서로 다른 유형의 메모리 액세스를 제한 합니다.  
+## <a name="remarks"></a>설명  
+ 이 열거형의 값에 전달 되는 [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) 다양 한 유형의 메모리에 대 한 액세스를 제한 하는 방법이 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: cvconst.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형 및 구조체](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md)

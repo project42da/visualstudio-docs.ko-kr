@@ -1,44 +1,45 @@
 ---
-title: "디버깅 세션에 사용할 실행 파일 대화 상자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.exefordebug"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "실행 파일, 디버깅 시 지정"
-  - "DLL, 디버깅"
-  - "디버거, 디버깅 세션에 사용할 실행 파일 대화 상자"
-  - "디버깅 세션에 사용할 실행 파일 대화 상자"
+title: "디버깅 세션 대화 상자에 대 한 실행 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.debug.exefordebug
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- executable files, specifying when debugging
+- DLLs, debugging
+- debugger, Executable for Debugging Session dialog box
+- Executable for Debugging Session dialog box
 ms.assetid: c0ddbe32-b99f-4425-acf1-f48842804f56
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e2fa8dfde80cff512ca6f774d8ee90a524931450
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 디버깅 세션에 사용할 실행 파일 대화 상자
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-이 대화 상자는 실행 파일이 지정되지 않은 DLL을 디버깅하려고 할 때 나타납니다.  Visual Studio는 DLL을 직접 시작할 수 없으며,  대신 지정된 실행 파일을 시작합니다.  DLL이 실행 파일에서 호출되면 DLL을 디버깅할 수 있습니다.  
+# <a name="executable-for-debugging-session-dialog-box"></a>디버깅 세션에 사용할 실행 파일 대화 상자
+이 대화 상자는 실행 파일이 지정되지 않은 DLL을 디버깅하려고 할 때 나타납니다. Visual Studio는 DLL을 직접 시작할 수 없으며, 대신 지정된 실행 파일을 시작합니다. DLL이 실행 파일에서 호출되면 DLL을 디버깅할 수 있습니다.  
   
  **실행 파일 이름**  
  디버깅할 DLL을 호출하는 실행 파일의 경로 이름을 입력합니다.  
   
- **프로젝트에 액세스할 수 있는 URL\(ATL 서버 전용\)**  
+ **프로젝트 수 있는 URL 액세스 (ATL 서버 전용)**  
  ATL 서버 DLL을 디버깅하는 경우 프로젝트를 찾을 수 있는 URL을 입력합니다.  
   
- 입력한 설정은 프로젝트 속성 페이지에 저장되므로 이후 디버깅 세션에서 다시 입력할 필요가 없습니다.  설정을 변경해야 하는 경우에는 속성 페이지를 열고 값을 변경할 수 있습니다.  디버깅 세션의 실행 파일 지정에 대한 자세한 내용은 [DLL 디버깅](../debugger/how-to-debug-native-dlls.md)을 참조하십시오.  
+ 입력한 설정은 프로젝트 속성 페이지에 저장되므로 이후 디버깅 세션에서 다시 입력할 필요가 없습니다. 설정을 변경해야 하는 경우에는 속성 페이지를 열고 값을 변경할 수 있습니다. 디버깅 세션에 대 한 실행 파일 지정에 대 한 자세한 내용은 참조 하십시오. [Dll 디버깅](../debugger/how-to-debug-from-a-dll-project.md)합니다.  
   
-## 참고 항목  
- [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)
+## <a name="see-also"></a>참고 항목  
+ [Visual Studio의 디버깅](../debugger/index.md)  
+ [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)

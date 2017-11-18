@@ -1,11 +1,10 @@
 ---
-title: 'CA1708: Identifiers should differ by more than case | Microsoft Docs'
+title: "CA1708: 식별자는 대/소문자만 달라 야 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,57 +14,42 @@ helpviewer_keywords:
 - CA1708
 - IdentifiersShouldDifferByMoreThanCase
 ms.assetid: dac0f01d-dd21-484d-add1-c8cd2bf6969f
-caps.latest.revision: 21
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: d935ed7e683747bdbbbc1a24f0ccbee602d0b072
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "21"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: cda7936a1a701b1b51957a7038db496f70ddd9c0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1708-identifiers-should-differ-by-more-than-case"></a>CA1708: Identifiers should differ by more than case
+# <a name="ca1708-identifiers-should-differ-by-more-than-case"></a>CA1708: 식별자에는 대/소문자만 다른 이름을 사용할 수 없습니다.
 |||  
 |-|-|  
 |TypeName|IdentifiersShouldDifferByMoreThanCase|  
 |CheckId|CA1708|  
-|Category|Microsoft.Naming|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Naming|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- The names of two types, members, parameters, or fully qualified namespaces are identical when they are converted to lowercase.  
+## <a name="cause"></a>원인  
+ 두 형식, 멤버, 매개 변수 또는 정규화 된 네임 스페이스의 이름을 소문자로 변환 될 경우 동일 합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- Identifiers for namespaces, types, members, and parameters cannot differ only by case because languages that target the common language runtime are not required to be case-sensitive. For example, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] is a widely used case-insensitive language.  
+## <a name="rule-description"></a>규칙 설명  
+ 공용 언어 런타임을 대상으로 하는 언어는 대/소문자를 구분하지 않으므로 네임스페이스, 형식, 멤버 및 매개 변수의 식별자가 대/소문자만 달라서는 안 됩니다. 예를 들어 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 는 대/소문자 구분 널리 사용 되는 언어입니다.  
   
- This rule fires on publicly visible members only.  
+ 이 규칙은 공개적으로 표시 하는 멤버에만 적용 됩니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- Select a name that is unique when it is compared to other identifiers in a case-insensitive manner.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 대/소문자 구분 방식으로 다른 식별자에 비교 했을 때 고유 이름을 선택 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule. The library might not be usable in all available languages in the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다. 라이브러리에서 사용 가능한 모든 언어에서 사용 하지 못할는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다.  
   
-## <a name="example-of-a-violation"></a>Example of a Violation  
- The following example demonstrates a violation of this rule.  
+## <a name="example-of-a-violation"></a>위반의 예로  
+ 다음 예제에서는이 규칙 위반을 보여 줍니다.  
   
  [!code-csharp[FxCop.Naming.IdentifiersShouldDifferByMoreThanCase#1](../code-quality/codesnippet/CSharp/ca1708-identifiers-should-differ-by-more-than-case_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1709: Identifiers should be cased correctly](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1709: 식별자는 정확한 대/소문자를 사용해야 합니다.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)

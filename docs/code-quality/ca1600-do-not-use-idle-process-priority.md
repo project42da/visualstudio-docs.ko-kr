@@ -1,29 +1,30 @@
 ---
-title: "CA1600: 유휴 상태 프로세스 우선 순위를 사용하지 마십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DoNotUseIdleProcessPriority"
-  - "CA1600"
-helpviewer_keywords: 
-  - "CA1600"
-  - "DoNotUseIdleProcessPriority"
+title: "CA1600: 유휴 상태 프로세스 우선 순위를 사용 하지 마십시오 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DoNotUseIdleProcessPriority
+- CA1600
+helpviewer_keywords:
+- CA1600
+- DoNotUseIdleProcessPriority
 ms.assetid: 9b0d073b-78b6-41be-8ef3-14692a735283
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: e52a658bd6161542ce909b8294f33d6e4bf140ba
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA1600: 유휴 상태 프로세스 우선 순위를 사용하지 마십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1600-do-not-use-idle-process-priority"></a>CA1600: 유휴 상태 프로세스 우선 순위를 사용하지 마십시오.
 |||  
 |-|-|  
 |TypeName|DoNotUseIdleProcessPriority|  
@@ -31,14 +32,14 @@ caps.handback.revision: 15
 |범주|Microsoft.Mobility|  
 |변경 수준|주요 변경|  
   
-## 원인  
- 프로세스가 `ProcessPriorityClass.Idle`로 설정되면 이 규칙이 적용됩니다.  
+## <a name="cause"></a>원인  
+ 이 규칙은 프로세스로 설정 된 경우 `ProcessPriorityClass.Idle`합니다.  
   
-## 규칙 설명  
- 프로세스 우선 순위를 유휴 상태로 설정하지 마십시오.  `System.Diagnostics.ProcessPriorityClass.Idle`인 프로세스는 어떠한 이유로든 유휴 상태가 될 경우 CPU를 차지하므로 블록이 대기 모드가 됩니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 프로세스 우선 순위를 유휴 상태로 설정하지 마십시오. 프로세스에 `System.Diagnostics.ProcessPriorityClass.Idle` 유휴, 블록이 대기 경우 CPU를 차지 합니다.  
   
-## 위반 문제를 해결하는 방법  
- 프로세스를 `ProcessPriorityClass.BelowNormal`로 설정합니다.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 프로세스 설정 `ProcessPriorityClass.BelowNormal`합니다.  
   
-## 경고를 표시하지 않는 경우  
- 유휴 상태 프로세스 우선 순위가 필요하고 이동성 고려 사항을 무시해도 안전한 경우에만 이 규칙을 표시하지 않습니다.
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 유휴 상태 프로세스 우선 순위 필수 이며 이동성 고려 사항의 안전 하 게 무시할 수 있습니다. 경우에이 규칙을 표시 해야 합니다.

@@ -1,32 +1,32 @@
 ---
 title: "검색 메뉴 명령 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "검색 메뉴 명령"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Search menu commands
 ms.assetid: f36dff9a-49ef-46ce-8c9a-76246458c0d0
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 65f0a4c932d9e9e84433b7fef27723d9d2e5aefb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 검색 메뉴 명령
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**검색** 메뉴는 특정 창을 검색하기 위한 명령을 제공합니다.  
+# <a name="search-menu-commands"></a>검색 메뉴 명령
+**검색** 메뉴는 특정 창을 검색 하기 위한 명령을 제공 합니다.  
   
- **창\/프로세스\/스레드\/메시지 찾기**  
- **찾기 도구**를 사용하거나 검색 조건을 지정할 수 있는 **창**\/**프로세스**\/**스레드**\/**메시지 검색** 대화 상자를 엽니다.  
+ **창/프로세스/스레드/메시지 찾기**  
+ 열립니다는 **창**/**프로세스**/**스레드**/**스레드** 대화 상자 사용할 수 있습니다는 **찾기 도구** 하거나 검색 조건을 지정 합니다.  
   
  **다음 찾기**  
- 일치하는 다음 창, 프로세스, 스레드 또는 메시지의 현재 뷰를 검색합니다.  이 메뉴 항목과 관련 도구 모음 단추는 고유하지 않은 유효한 검색 결과가 있는 경우에만 사용할 수 있습니다.  
+ 다음 일치 하는 창, 프로세스, 스레드 또는 메시지에 대 한 현재 보기를 검색합니다. 이 메뉴 항목 (및 관련된 도구 모음 단추)를 유효한 검색 결과가 고유 하지 않은 경우에 사용할 수 있습니다.  
   
  **이전 찾기**  
- 일치하는 이전 창, 프로세스, 스레드 또는 메시지의 현재 뷰를 검색합니다.  이 메뉴 항목과 관련 도구 모음 단추는 고유하지 않은 유효한 검색 결과가 있는 경우에만 사용할 수 있습니다.
+ 이전 일치 하는 창, 프로세스, 스레드 또는 메시지에 대 한 현재 보기를 검색합니다. 이 메뉴 항목 (및 관련된 도구 모음 단추)를 유효한 검색 결과가 고유 하지 않은 경우에 사용할 수 있습니다.

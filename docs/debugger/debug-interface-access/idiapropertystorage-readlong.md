@@ -1,50 +1,49 @@
 ---
-title: "IDiaPropertyStorage::ReadLONG | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaPropertyStorage::ReadLONG"
+title: IDiaPropertyStorage::ReadLONG | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaPropertyStorage::ReadLONG
 ms.assetid: 32054cbc-db55-4513-a1b4-de80e77aac8a
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: aba26ae4e2495d8c0a4feb1ff692d90a228e8292
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaPropertyStorage::ReadLONG
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-읽고 `LONG` 속성 집합 값입니다.  
+# <a name="idiapropertystoragereadlong"></a>IDiaPropertyStorage::ReadLONG
+읽고 `LONG` 속성 집합에 있는 값입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT ReadDLONG (   
-   PROPID id,  
-   LONG*  pValue  
+```C++  
+HRESULT ReadDLONG (   
+   PROPID id,  
+   LONG*  pValue  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `id`  
- \[in\] 읽을 수 있도록 하는 속성의 식별자 \(`PROPID` Wtypes.h로 정의 되는 `ULONG`\).  
+ [in] 읽을 속성의 식별자 (`PROPID` 으로 WTypes.h에 정의 되어 있는 한 `ULONG`).  
   
  `pValue`  
- \[out\] 속성 값을 반환 합니다.  
+ [out] 속성 값을 반환 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_INVALIDARG` 속성의 형식인 경우 `LONG`.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`; 그렇지 않으면 오류 코드가 반환 됩니다. 반환 `E_INVALIDARG` 형식의 속성이 없으면 `LONG`합니다.  
   
-## 설명  
- A `LONG` Windows 32 비트 부호 있는 정수로 정의 됩니다.  
+## <a name="remarks"></a>설명  
+ A `LONG` Windows 32 비트 부호 있는 정수에 의해 정의 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

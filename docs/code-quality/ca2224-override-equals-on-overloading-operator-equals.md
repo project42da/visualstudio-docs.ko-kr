@@ -1,11 +1,10 @@
 ---
-title: 'CA2224: Override equals on overloading operator equals | Microsoft Docs'
+title: "CA2224: 같음 연산자를 오버 로드에 재정의 같으면 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,125 +15,110 @@ helpviewer_keywords:
 - OverrideEqualsOnOverloadingOperatorEquals
 - CA2224
 ms.assetid: 7312afd9-84ba-417f-923e-7a159b53bf70
-caps.latest.revision: 15
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 5cd11628a50f44413118c7004c11201c26297f86
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 44ba1c444d9348babcf07bfd807d6b0767bf3de9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224: Override equals on overloading operator equals
+# <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224: 같음 연산자를 오버로드할 때 Equals를 재정의하십시오.
 |||  
 |-|-|  
 |TypeName|OverrideEqualsOnOverloadingOperatorEquals|  
 |CheckId|CA2224|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A public type implements the equality operator, but does not override <xref:System.Object.Equals%2A?displayProperty=fullName>.  
+## <a name="cause"></a>원인  
+ Public 형식이 같음 연산자를 구현 하지만 재정의 하지 않는 <xref:System.Object.Equals%2A?displayProperty=fullName>합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- The equality operator is intended to be a syntactically convenient way to access the functionality of the <xref:System.Object.Equals%2A> method. If you implement the equality operator, its logic must be identical to that of <xref:System.Object.Equals%2A>.  
+## <a name="rule-description"></a>규칙 설명  
+ 같음 연산자는 구문상 편리한 방법의 기능에 액세스 하기 위한 용도가 <xref:System.Object.Equals%2A> 메서드. 같음 연산자를 구현 하는 경우 해당 논리 같아야의 <xref:System.Object.Equals%2A>합니다.  
   
- The C# compiler issues a warning if your code violates this rule.  
+ 코드는이 규칙을 위반 하는 경우 C# 컴파일러는 경고가 발생 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, you should either remove the implementation of the equality operator, or override <xref:System.Object.Equals%2A> and have the two methods return the same values. If the equality operator does not introduce inconsistent behavior, you can fix the violation by providing an implementation of <xref:System.Object.Equals%2A> that calls the <xref:System.Object.Equals%2A> method in the base class.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 같음 연산자의 구현 제거 하거나 재정의 <xref:System.Object.Equals%2A> 를 두 메서드에 동일한 값을 반환 합니다. 같음 연산자는 일관 되지 않은 동작이 발생 하지 않도록, 있으면의 구현을 제공 하 여 위반을 해결할 수 있습니다 <xref:System.Object.Equals%2A> 를 호출 하는 <xref:System.Object.Equals%2A> 기본 클래스의 메서드.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the equality operator returns the same value as the inherited implementation of <xref:System.Object.Equals%2A>. The Example section includes a type that could safely suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 같음 연산자의 상속 된 구현와 같은 값을 반환 하는 경우이 규칙에서는 경고를에서 표시 하지 않는를 안전 하 게 <xref:System.Object.Equals%2A>합니다. "예" 섹션에는이 규칙에서는 경고를에서 표시 하지 않으려면 수 하는 형식을 포함 합니다.  
   
-## <a name="examples-of-inconsistent-equality-definitions"></a>Examples of Inconsistent Equality Definitions  
+## <a name="examples-of-inconsistent-equality-definitions"></a>일관성 없는 같음 정의의 예  
   
-### <a name="description"></a>Description  
- The following example shows a type with inconsistent definitions of equality. `BadPoint` changes the meaning of equality by providing a custom implementation of the equality operator, but does not override <xref:System.Object.Equals%2A> so that it behaves identically.  
+### <a name="description"></a>설명  
+ 다음 예제와 일치 하지 않는 정의 같음 형식을 보여 줍니다. `BadPoint`같음 연산자의 사용자 지정 구현을 제공 하 여 같음 의미를 변경 하지만 재정의 하지 않습니다 <xref:System.Object.Equals%2A> 동일 하 게 동작 하 게 합니다.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>코드  
  [!code-csharp[FxCop.Usage.OperatorEqualsRequiresEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_1.cs)]  
   
-## <a name="example"></a>Example  
- The following code tests the behavior of `BadPoint`.  
+## <a name="example"></a>예제  
+ 다음 코드의 동작을 테스트 `BadPoint`합니다.  
   
  [!code-csharp[FxCop.Usage.TestOperatorEqualsRequiresEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_2.cs)]  
   
- This example produces the following output.  
+ 이 예제의 결과는 다음과 같습니다.  
   
- **a =  ([0] 1,1) and b = ([1] 2,2) are equal? No**  
-**a == b ? No**  
-**a1 and a are equal? Yes**  
-**a1 == a ? Yes**  
-**b and bcopy are equal ? No**  
-**b == bcopy ? Yes**   
-## <a name="example"></a>Example  
- The following example shows a type that technically violates this rule, but does not behave in an inconsistent manner.  
+ **= (1, 1 [0])와 b ([1] 2, 2) = 같은지? 아니요**  
+**b = =? 아니요**  
+**a 1과 a가 같습니까? 예**  
+**a1 = =는? 예**  
+**b와 복사 같은지? 아니요**  
+**b 복사 = =? 예**   
+## <a name="example"></a>예제  
+ 다음 예제에서는이 규칙을 위반 기술적으로 일관 된 방식에서으로 동작 하지 않는 하 형식을 보여 줍니다.  
   
  [!code-csharp[FxCop.Usage.ValueTypeEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_3.cs)]  
   
-## <a name="example"></a>Example  
- The following code tests the behavior of `GoodPoint`.  
+## <a name="example"></a>예제  
+ 다음 코드의 동작을 테스트 `GoodPoint`합니다.  
   
  [!code-csharp[FxCop.Usage.TestValueTypeEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_4.cs)]  
   
- This example produces the following output.  
+ 이 예제의 결과는 다음과 같습니다.  
   
- **a =  (1,1) and b = (2,2) are equal? No**  
-**a == b ? No**  
-**a1 and a are equal? Yes**  
-**a1 == a ? Yes**  
-**b and bcopy are equal ? Yes**  
-**b == bcopy ? Yes**   
-## <a name="class-example"></a>Class Example  
+ **= (1, 1) 및 b = (2, 2) 같은지? 아니요**  
+**b = =? 아니요**  
+**a 1과 a가 같습니까? 예**  
+**a1 = =는? 예**  
+**b와 복사 같은지? 예**  
+**b 복사 = =? 예**   
+## <a name="class-example"></a>클래스 예제  
   
-### <a name="description"></a>Description  
- The following example shows a class (reference type) that violates this rule.  
+### <a name="description"></a>설명  
+ 다음 예제에서는이 규칙을 위반 하는 클래스 (참조 형식)를 보여 줍니다.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>코드  
  [!code-csharp[FxCop.Usage.OverrideEqualsClassViolation#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_5.cs)]  
   
-## <a name="example"></a>Example  
- The following example fixes the violation by overriding <xref:System.Object.Equals%2A?displayProperty=fullName>.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 재정의 하 여 위반을 해결 <xref:System.Object.Equals%2A?displayProperty=fullName>합니다.  
   
  [!code-csharp[FxCop.Usage.OverrideEqualsClassFixed#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_6.cs)]  
   
-## <a name="structure-example"></a>Structure Example  
+## <a name="structure-example"></a>구조 예제  
   
-### <a name="description"></a>Description  
- The following example shows a structure (value type) that violates this rule.  
+### <a name="description"></a>설명  
+ 다음 예제에서는이 규칙을 위반 하는 구조 (값 형식)를 보여 줍니다.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>코드  
  [!code-csharp[FxCop.Usage.OverrideEqualsStructViolation#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_7.cs)]  
   
-## <a name="example"></a>Example  
- The following example fixes the violation by overriding <xref:System.ValueType.Equals%2A?displayProperty=fullName>.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 재정의 하 여 위반을 해결 <xref:System.ValueType.Equals%2A?displayProperty=fullName>합니다.  
   
  [!code-csharp[FxCop.Usage.OverrideEqualsStructFixed#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_8.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1046: Do not overload operator equals on reference types](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1046: 참조 형식에 같음 연산자를 오버로드하지 마십시오.](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
   
- [CA2225: Operator overloads have named alternates](../code-quality/ca2225-operator-overloads-have-named-alternates.md)  
+ [CA2225: 연산자 오버로드에는 명명된 대체 항목이 있습니다.](../code-quality/ca2225-operator-overloads-have-named-alternates.md)  
   
- [CA2226: Operators should have symmetrical overloads](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
+ [CA2226: 연산자에는 대칭 오버로드가 있어야 합니다.](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
   
- [CA2218: Override GetHashCode on overriding Equals](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
+ [CA2218: Equals를 재정의할 때 GetHashCode를 재정의하십시오.](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
   
- [CA2231: Overload operator equals on overriding ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
+ [CA2231: ValueType.Equals를 재정의할 때 같음 연산자를 오버로드하십시오.](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)

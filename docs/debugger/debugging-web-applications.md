@@ -1,60 +1,47 @@
 ---
 title: "웹 응용 프로그램 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ASP.NET 디버깅, 웹 서비스"
-  - "ASP.NET 웹 페이지, 디버깅"
-  - "디버깅[ASP.NET], ASP.NET 웹 응용 프로그램 디버깅 정보"
-  - "ASP.NET 웹 응용 프로그램 디버깅, ASP.NET 웹 응용 프로그램 디버깅 정보"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging ASP.NET Web applications, about debugging ASP.NET Web applications
+- ASP.NET debugging, Web services
+- debugging [ASP.NET], about debugging ASP.NET Web applications
+- ASP.NET Web pages, debugging
 ms.assetid: a096a90d-6d0d-4752-9fb5-417635ccab3e
-caps.latest.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 7e635a47553cdb0eef1b690e64323ca20188b476
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 웹 응용 프로그램 디버깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="debugging-web-applications"></a>웹 응용 프로그램 디버깅
 이 단원에서는 다양한 형식의 웹 응용 프로그램을 디버깅하는 방법에 대해 설명합니다.  
   
-## 단원 내용  
- [방법: 웹 응용 프로그램 디버깅](../debugger/how-to-debug-web-applications.md)  
- 아직 개발 중인 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 프로젝트의 디버깅 방법을 설명합니다.  
-  
- [배포된 웹 응용 프로그램 디버깅](../debugger/debugging-deployed-web-applications.md)  
- 이미 배포된 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램의 디버깅 방법을 설명합니다.  
-  
+## <a name="in-this-section"></a>단원 내용   
  [클라이언트 쪽 스크립트 디버깅](../debugger/client-side-script-debugging.md)  
  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 페이지에서 스크립트와 클라이언트 쪽 스크립트를 테스트하는 방법에 대해 설명합니다.  
   
- [연습: Web Form 디버깅](../debugger/walkthrough-debugging-a-web-form.md)  
- [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램의 디버깅 방법을 보여 줍니다.  
-  
- [방법: ASP.NET 예외 디버깅](../debugger/how-to-debug-aspnet-exceptions.md)  
- [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 응용 프로그램을 디버깅하는 동안 발생하는 예외를 처리하는 방법에 대해 설명합니다.  
-  
-## 관련 단원  
- [ASP.NET 디버깅 준비](../debugger/preparing-to-debug-aspnet.md)  
+## <a name="related-sections"></a>관련 단원  
+ [ASP.NET 응용 프로그램 디버그](../debugger/how-to-enable-debugging-for-aspnet-applications.md)  
  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 응용 프로그램을 디버깅할 수 있도록 설정하는 데 필요한 단계를 설명합니다.  
   
- [배포된 웹 응용 프로그램 디버깅](../debugger/debugging-deployed-web-applications.md)  
- 이미 배포된 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램의 디버깅 방법을 설명합니다.  
-  
-## 참고 항목  
- [웹 응용 프로그램 및 스크립트 디버깅](../debugger/debugging-web-applications-and-script.md)   
- [디버그 설정 및 준비](../debugger/debugger-settings-and-preparation.md)   
- [디버거 기본 사항](../debugger/debugger-basics.md)   
- [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)
+## <a name="see-also"></a>참고 항목  
+ [Debugging Web Applications and Script](../debugger/debugging-web-applications-and-script.md) (웹 응용 프로그램 및 스크립트 디버그)  
+ [디버거 설정 및 준비](../debugger/debugger-settings-and-preparation.md)   
+ [Debugger Basics](../debugger/debugger-basics.md) (디버거 기본 사항)  
+ [Visual Studio의 디버깅](../debugger/index.md)  
+ [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)

@@ -1,53 +1,52 @@
 ---
-title: "IDiaSymbol::get_container | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_container 메서드"
+title: 'Idiasymbol:: Get_container | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_container method
 ms.assetid: 24e832eb-80b3-484c-a41b-11477ec9de99
-caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f2a9dbd550247f432a7329bfbba224220ea6ea5a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_container
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-이 함수 기호가 부모 컨테이너를 나타내는 기호에 대 한 포인터를 가져옵니다.  
+# <a name="idiasymbolgetcontainer"></a>IDiaSymbol::get_container
+이 함수는이 기호의 부모/컨테이너를 나타내는 기호에 대 한 포인터를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```C++  
 HRESULT get_container(  
-   IDiaSymbol **pRetVal  
+   IDiaSymbol **pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 에 대 한 포인터를 반환 된 `IDiaSymbol` 이 기호에는 컨테이너에 대 한 정보가 포함 된.  
+ [out] 에 대 한 포인터를 반환 합니다.는 `IDiaSymbol` 이 기호의 컨테이너에 대 한 정보가 들어 있는입니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 S\_FALSE 또는 오류 코드를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않으면 S_FALSE 또는 오류 코드를 반환합니다.  
   
 > [!NOTE]
->  S\_FALSE 반환 값이 속성에 사용할 수 없습니다 의미 합니다.  
+>  반환 값이 S_FALSE 속성이 해당 기호를 사용할 수 없다는 것을 의미 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
 |버전:|DIA SDK v 8.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

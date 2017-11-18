@@ -1,43 +1,42 @@
 ---
-title: "IDiaEnumLineNumbers::Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumLineNumbers::Skip 메서드"
+title: 'Idiaenumlinenumbers:: Skip | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumLineNumbers::Skip method
 ms.assetid: d182c269-8c76-4d8b-8275-c6807c5ae4e1
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 96b1d63a0a76bb0fe2217cc0dedc18e3c66dc2ea
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumLineNumbers::Skip
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-지정 된 수의 줄 번호는 열거 시퀀스를 건너뜁니다.  
+# <a name="idiaenumlinenumbersskip"></a>IDiaEnumLineNumbers::Skip
+열거형 시퀀스에 줄 번호의 지정 된 수를 건너뜁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Skip (   
-   ULONG celt  
+```C++  
+HRESULT Skip (   
+   ULONG celt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  celt  
- \[in\] 열거 시퀀스에서 줄 번호를 건너뛰려면 개수입니다.  
+ [in] 열거형에 줄 번호를 건너뛸 수입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 있는 경우 건너뛸 줄 번호입니다.  
+## <a name="return-value"></a>반환 값  
+ 에 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 경우 건너뛸 줄 번호가 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

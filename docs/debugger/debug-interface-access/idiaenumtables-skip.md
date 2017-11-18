@@ -1,43 +1,42 @@
 ---
-title: "IDiaEnumTables::Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumTables::Skip 메서드"
+title: 'Idiaenumtables:: Skip | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumTables::Skip method
 ms.assetid: 5c9db956-0654-4f1a-8775-530aa980d8ec
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6ed5d9f1d20985b9d113058906b14a7e9a9e066b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumTables::Skip
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-테이블 열거 시퀀스에서 지정 된 수를 건너뜁니다.  
+# <a name="idiaenumtablesskip"></a>IDiaEnumTables::Skip
+열거형 시퀀스에 있는 테이블의 지정 된 수를 건너뜁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Skip (   
-   ULONG celt  
+```C++  
+HRESULT Skip (   
+   ULONG celt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `celt`  
- \[in\] 열거형 시퀀스를 건너뛸 테이블 개수입니다.  
+ [in] 열거형 시퀀스를 건너뛰려면에 테이블의 수입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 있는 경우 테이블을 건너뛸 수 없습니다. 더.  
+## <a name="return-value"></a>반환 값  
+ 에 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 경우 건너뛸 자세한 테이블이 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

@@ -1,43 +1,42 @@
 ---
-title: "IDiaEnumDebugStreams::Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumDebugStreams::Skip 메서드"
+title: 'Idiaenumdebugstreams:: Skip | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumDebugStreams::Skip method
 ms.assetid: 6ec7753c-d7af-4879-b107-1b3442e0b025
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 739ee9aa628858d1ea26749872b791ddd2e1cd90
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumDebugStreams::Skip
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-지정한 수 만큼 열거 시퀀스에서 디버그 스트림 건너뜁니다.  
+# <a name="idiaenumdebugstreamsskip"></a>IDiaEnumDebugStreams::Skip
+열거형 시퀀스의 디버그 스트림 지정 된 수를 건너뜁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Skip (   
-   ULONG celt  
+```C++  
+HRESULT Skip (   
+   ULONG celt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `celt`  
- \[in\] 디버그 스트림 건너뛸 열거 시퀀스에서의 수입니다.  
+ [in] 열거형 시퀀스를 건너뛰려면의 디버그 스트림 수입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 건너뜁니다 레코드가 더 이상 없으면.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 건너뛸 레코드가 더 이상 없는 경우.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

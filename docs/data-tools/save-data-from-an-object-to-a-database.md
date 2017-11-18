@@ -1,90 +1,81 @@
 ---
-title: "방법: 개체에서 데이터베이스로 데이터 저장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "데이터[Visual Studio], 저장"
-  - "데이터 액세스[Visual Studio], 개체"
-  - "데이터 저장"
+title: "개체에서 데이터를 데이터베이스에 저장 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Visual Studio], saving
+- data access [Visual Studio], objects
+- saving data
 ms.assetid: efd6135a-40cf-4b0d-8f8b-41a5aaea7057
-caps.latest.revision: 9
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: 1c7e99ce49df969fae439afac5d65369fae9c37a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 개체에서 데이터베이스로 데이터 저장
-개체에서 TableAdapter의 DBDirect 메서드\(예: `TableAdapter.Insert`\) 중 하나로 값을 전달하여 개체의 데이터를 데이터베이스에 저장할 수 있습니다.  자세한 내용은 [TableAdapter 개요](../data-tools/tableadapter-overview.md)를 참조하십시오.  
+# <a name="save-data-from-an-object-to-a-database"></a>개체에서 데이터를 데이터베이스에 저장
+TableAdapter의 DBDirect 메서드 중 하나에 개체에서 값을 전달 하 여 개체를 데이터베이스에 데이터를 저장할 수 있습니다 (예를 들어 `TableAdapter.Insert`). 자세한 내용은 참조 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)합니다.  
   
- 개체 컬렉션의 데이터를 저장하려면 개체 컬렉션을 순환 검색하고\(예: for\-next 루프\) TableAdapter의 DBDirect 메서드 중 하나를 사용하여 각 개체의 값을 데이터베이스로 보냅니다.  
+ 개체의 컬렉션에서 데이터를 저장 하려면 개체 (예를 들어, 다음에 대 한 루프의 경우)의 컬렉션을 반복 하 고 TableAdapter의 DBDirect 메서드 중 하나를 사용 하 여 데이터베이스를 각 개체에 대 한 값을 보냅니다.  
   
- 기본적으로 DBDirect 메서드는 데이터베이스에 대해 직접 실행할 수 있는 TableAdapter에서 만들어집니다.  이러한 메서드는 직접 호출될 수 있으며 업데이트를 데이터베이스로 보내기 위해 변경 내용을 조정하는 <xref:System.Data.DataSet> 또는 <xref:System.Data.DataTable> 개체를 필요로 하지 않습니다.  
+ 기본적으로 DBDirect 메서드는 데이터베이스에 대해 직접 실행할 수 있는 TableAdapter에 생성 됩니다. 이러한 메서드는 직접 호출할 수 하 고 필요 없는 <xref:System.Data.DataSet> 또는 <xref:System.Data.DataTable> 업데이트는 데이터베이스에 보내기 위해 변경 내용을 조정 하는 개체입니다.  
   
 > [!NOTE]
->  TableAdapter를 구성할 때 주 쿼리에서는 DBDirect 메서드를 만들 수 있는 충분한 정보를 제공해야 합니다.  예를 들어, TableAdapter가 정의된 기본 키 열이 없는 테이블의 데이터를 쿼리하도록 구성되어 있는 경우 DBDirect 메서드는 생성되지 않습니다.  
+>  TableAdapter를 구성 하는 경우 주 쿼리에서 DBDirect 메서드를 만들 수에 대 한 충분 한 정보를 제공 해야 합니다. 예를 들어 TableAdapter를 정의 하는 기본 키 열이 없는 테이블에서 데이터를 쿼리할 하도록 구성 된 DBDirect 메서드 생성 하지 않습니다.  
   
 |TableAdapter DBDirect 메서드|설명|  
-|-------------------------------|--------|  
-|`TableAdapter.Insert`|데이터베이스에 새 레코드를 추가하여 개별 열 값을 메서드 매개 변수로 전달할 수 있습니다.|  
-|`TableAdapter.Update`|데이터베이스의 기존 레코드를 업데이트합니다.  `Update` 메서드는 원래 열 값과 새 열 값을 메서드 매개 변수로 사용합니다.  원래 값은 원래 레코드를 찾는 데 사용되고 새 값은 해당 레코드를 업데이트하는 데 사용됩니다.<br /><br /> 또한 `TableAdapter.Update` 메서드를 사용하면 <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow> 또는 <xref:System.Data.DataRow>의 배열을 메서드 매개 변수로 사용하여 데이터 집합의 변경 내용을 다시 데이터베이스에 적용할 수도 있습니다.|  
-|`TableAdapter.Delete`|매서드 매개 변수로 전달된 원래 열 값을 기반으로 데이터베이스에서 기존 레코드를 삭제합니다.|  
+|----------------------------------|-----------------|  
+|`TableAdapter.Insert`|데이터베이스에 새 레코드를 추가 하 고 개별 열 값 메서드 매개 변수로 전달할 수 있습니다.|  
+|`TableAdapter.Update`|기존 데이터베이스의 레코드를 업데이트 합니다. `Update` 메서드는 메서드 매개 변수로 값 원래과 새 열 값입니다. 원래 값 원본 레코드를 찾는 데 사용 되 고 해당 레코드를 업데이트 하려면 새 값이 사용 됩니다.<br /><br /> `TableAdapter.Update` 메서드는 또한을 수행 하 여이 데이터 집합의 변경 내용을 데이터베이스에 다시 조정는 <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow>, 또는 배열을 <xref:System.Data.DataRow>메서드 매개 변수로 합니다.|  
+|`TableAdapter.Delete`|메서드 매개 변수로 전달 된 원래 열 값에 따라 데이터베이스에서 기존 레코드를 삭제 합니다.|  
   
-### 개체의 새 레코드를 데이터베이스에 저장하려면  
+### <a name="to-save-new-records-from-an-object-to-a-database"></a>데이터베이스에 있는 개체에서 새 레코드를 저장 하려면  
   
--   값을 `TableAdapter.Insert` 메서드에 전달하여 레코드를 만듭니다.  
+-   값을 전달 하 여 레코드를 만듭니다는 `TableAdapter.Insert` 메서드.  
   
-     다음 예제에서는 `currentCustomer` 개체의 값을 `TableAdapter.Insert` 메서드에 전달하여 `Customers` 테이블에 새 고객 레코드를 만듭니다.  
+     다음 예제에서는 새 고객 레코드에는 `Customers` 의 값을 전달 하 여 테이블의 `currentCustomer` 개체를 `TableAdapter.Insert` 메서드.  
   
-     [!code-cs[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_1.cs)]
+     [!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_1.cs)]
      [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_1.vb)]  
   
-### 개체의 기존 레코드를 데이터베이스로 업데이트하려면  
+### <a name="to-update-existing-records-from-an-object-to-a-database"></a>데이터베이스에 개체에서 기존 레코드를 업데이트 하려면  
   
--   `TableAdapter.Update` 메서드를 호출하고 레코드를 업데이트할 새 값과 해당 레코드를 찾을 원래 값을 전달하여 레코드를 수정합니다.  
+-   호출 하 여 레코드를 수정 된 `TableAdapter.Update` 메서드를 레코드를 업데이트 하려면 새 값에서을 전달 하 고 레코드를 찾고 원래 값에서 전달 합니다.  
   
     > [!NOTE]
-    >  개체는 `Update` 메서드에 전달할 수 있도록 원래 값을 유지해야 합니다.  이 예제에서는 `orig` 접두사가 있는 속성을 사용하여 원래 값을 저장합니다.  
+    >  개체를 전달할 수 있도록 원래 값을 유지 관리 해야 하는 경우는 `Update` 메서드. 사용 하 여 속성을 사용 하 여이 예제는 `orig` 원래 값을 저장 하는 접두사입니다.  
   
-     다음 예제에서는 `Customer` 개체의 새 값과 원래 값을 `TableAdapter.Update` 메서드에 전달하여 `Customers` 테이블의 기존 레코드를 업데이트합니다.  
+     기존 레코드를 업데이트 하는 다음 예제는 `Customers` 테이블에서 새 및 원래 값을 전달 하 여는 `Customer` 개체는 `TableAdapter.Update` 메서드.  
   
-     [!code-cs[VbRaddataSaving#24](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_2.cs)]
+     [!code-csharp[VbRaddataSaving#24](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_2.cs)]
      [!code-vb[VbRaddataSaving#24](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_2.vb)]  
   
-### 데이터베이스에서 기존 레코드를 삭제하려면  
+### <a name="to-delete-existing-records-from-a-database"></a>데이터베이스에서 기존 레코드를 삭제 하려면  
   
--   `TableAdapter.Delete` 메서드를 호출하고 레코드를 찾을 원래 값을 전달하여 해당 레코드를 삭제합니다.  
+-   호출 하 여 레코드를 삭제는 `TableAdapter.Delete` 메서드와 레코드를 찾고 원래 값을 전달 합니다.  
   
     > [!NOTE]
-    >  개체는 `Delete` 메서드에 전달할 수 있도록 원래 값을 유지해야 합니다.  이 예제에서는 `orig` 접두사가 있는 속성을 사용하여 원래 값을 저장합니다.  
+    >  개체를 전달할 수 있도록 원래 값을 유지 관리 해야 하는 경우는 `Delete` 메서드. 사용 하 여 속성을 사용 하 여이 예제는 `orig` 원래 값을 저장 하는 접두사입니다.  
   
-     다음 예제에서는 `Customer` 개체의 원래 값을 `TableAdapter.Delete` 메서드에 전달하여 `Customers` 테이블에서 레코드를 삭제합니다.  
+     레코드를 삭제 하는 다음 예제는 `Customers` 테이블에 원래 값을 전달 하 여는 `Customer` 개체는 `TableAdapter.Delete` 메서드.  
   
-     [!code-cs[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]
+     [!code-csharp[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]
      [!code-vb[VbRaddataSaving#25](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_3.vb)]  
   
-## .NET Framework 보안  
- 데이터베이스의 테이블에서 선택한 INSERT, UPDATE 또는 DELETE 작업을 수행할 수 있는 권한이 있어야 합니다.  
+## <a name="net-framework-security"></a>.NET Framework 보안  
+ 선택한 INSERT를 수행할 수 있는 권한이 있어야 합니다. 업데이트 또는 데이터베이스의 테이블에서 삭제 합니다.  
   
-## 참고 항목  
- [Visual Studio에서 개체 바인딩](../data-tools/bind-objects-in-visual-studio.md)   
- [방법: 개체의 데이터에 연결](../Topic/How%20to:%20Connect%20to%20Data%20in%20Objects.md)   
- [연습: 개체의 데이터에 연결\(Windows Forms\)](../Topic/Walkthrough:%20Connecting%20to%20Data%20in%20Objects%20\(Windows%20Forms\).md)   
- [방법: TableAdapter를 사용하여 데이터베이스에 직접 액세스](../data-tools/directly-access-the-database-with-a-tableadapter.md)   
- [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio에서 데이터에 연결](../data-tools/connecting-to-data-in-visual-studio.md)   
- [데이터를 받기 위해 응용 프로그램 준비](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [데이터를 응용 프로그램으로 페치](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [응용 프로그램에서 데이터 편집](../data-tools/editing-data-in-your-application.md)   
- [데이터 유효성 검사](../Topic/Validating%20Data.md)   
- [데이터 저장](../data-tools/saving-data.md)
+## <a name="see-also"></a>참고 항목  
+ [데이터를 다시 데이터베이스에 저장](../data-tools/save-data-back-to-the-database.md)

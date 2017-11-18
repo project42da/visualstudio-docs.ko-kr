@@ -1,31 +1,31 @@
 ---
 title: "프로세스 속성 대화 상자, 페이지 파일 탭 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows NT의 프로세스 속성"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Process properties for Windows NT
 ms.assetid: daf41a06-8a55-48f6-95f5-49a8416bd308
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0bf5215e7a6d4c4a4a0dac37a9bde2b15fb8f19a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 프로세스 속성 대화 상자, 페이지 파일 탭
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**페이지 파일** 탭을 사용하여 프로세스의 페이징 파일을 검사할 수 있습니다.  [프로세스 속성 대화 상자](../debugger/process-properties-dialog-box.md)를 표시하려면 포커스를 [프로세스 뷰](../debugger/processes-view.md) 창으로 이동합니다.  그런 다음 트리에서 프로세스 노드를 선택하고 **보기** 메뉴에서 **속성**을 선택합니다.  
+# <a name="page-file-tab-process-properties-dialog-box"></a>프로세스 속성 대화 상자, 페이지 파일 탭
+사용 하 여는 **페이지 파일** 프로세스의 페이징 파일을 검사 하는 탭 합니다. 표시 하는 [프로세스 속성 대화 상자](../debugger/process-properties-dialog-box.md), 포커스를 이동 하는 [프로세스 뷰](../debugger/processes-view.md) 창. 트리에서 프로세스 노드를 선택한 후 선택 **속성** 에서 **보기** 메뉴.  
   
- **페이지 파일** 탭에서 사용할 수 있는 설정은 다음과 같습니다.  
+ 다음 설정은에 사용할 수는 **페이지 파일** 탭:  
   
-|Entry|설명|  
-|-----------|--------|  
-|**페이지 파일 바이트**|이 프로세스가 페이징 파일에서 사용하고 있는 현재 페이지 수입니다.  페이징 파일에는 프로세스에 의해 사용되지만 다른 파일에 포함되지 않은 데이터의 페이지가 저장됩니다.  페이징 파일은 모든 프로세스에 의해 사용되므로 다른 프로세스가 실행 중인 동안 페이징 파일의 공간이 부족하면 오류가 발생할 수 있습니다.|  
-|**최고 페이지 파일 바이트**|이 프로세스가 페이징 파일에서 사용한 최대 페이지 수입니다.|  
-|**페이지 폴트**|이 프로세스에서 실행 중인 스레드에 의해 발생한 페이지 폴트 수입니다.  페이지 폴트는 스레드가 주 메모리에 있는 해당 작업 집합에 없는 가상 메모리 페이지를 참조하는 경우에 발생합니다.  따라서 페이지가 대기 목록에 있어 주 메모리에 이미 로드된 경우 또는 페이지가 다른 공유 프로세스에 의해 사용되고 있는 경우에는 페이지가 검색되지 않습니다.|
+|입력|설명|  
+|-----------|-----------------|  
+|**페이지 파일 바이트**|이 프로세스에서 페이징 파일에 사용 하는 페이지의 현재 수입니다. 페이징 파일에 프로세스에서 사용 되지만 다른 파일에 포함 되지 데이터 페이지를 저장 합니다. 페이징 파일은 모든 프로세스에서 사용 하 고 다른 프로세스에서 실행 하는 동안 페이징 파일의 공간 부족 오류가 발생할 수 있습니다.|  
+|**최고 페이지 파일 바이트**|페이징 파일에이 프로세스에서 사용한 페이지의 최대 수입니다.|  
+|**페이지 폴트**|이 프로세스에서 실행 중인 스레드가 페이지 폴트 수입니다. 페이지 폴트의 주 메모리 작업 집합에 없는 가상 메모리 페이지를 참조할 때 발생 합니다. 따라서 페이지 검색 되지 것입니다 디스크에서 대기 목록에 있으면 및이 따른 주 메모리에 이미 있는 페이지를 공유 하거나 다른에 의해 사용 되는 경우 처리 합니다.|

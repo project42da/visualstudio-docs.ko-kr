@@ -1,39 +1,40 @@
 ---
-title: "m_contingentProperties 필드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "m_contingentProperties 필드, 작업 클래스 [.NET Framework 디버그 엔진]"
+title: "필드 m_contingentProperties | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: m_contingentProperties field, Task class [.NET Framework debug engines]
 ms.assetid: 49e8cb36-db39-440b-acda-a325651f1165
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 571dbe359773ad6a469e17c13546a39fad791dc0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# m_contingentProperties 필드
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-추가 속성을 저장 된 <xref:System.Threading.Tasks.Task> 개체입니다.  
+# <a name="mcontingentproperties-field"></a>m_contingentProperties 필드
+추가 속성을 저장는 <xref:System.Threading.Tasks.Task> 개체입니다.  
   
- **네임 스페이스:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **어셈블리:** \(mscorlib.dll\)에 mscorlib  
+ **어셈블리:** (mscorlib.dll)에 mscorlib  
   
- .NET Framework에서이 내부 멤버를 액세스할 수 없으므로, 다음 구문은 공통 중간 언어 \(CIL\) 제공 됩니다.  
+ .NET Framework에서이 내부 멤버에 액세스할 수 없으므로, 다음 구문은 공통 중간 언어 (CIL) 제공 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 .field assembly class System.Threading.Tasks.Task/ContingentProperties modreq(System.Runtime.CompilerServices.IsVolatile) m_contingentProperties  
 ```  
   
-## 설명  
+## <a name="remarks"></a>설명  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [작업 클래스](../../extensibility/debugger/task-class-internal-members.md)

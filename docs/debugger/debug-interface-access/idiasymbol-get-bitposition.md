@@ -1,54 +1,53 @@
 ---
-title: "IDiaSymbol::get_bitPosition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_bitPosition 메서드"
+title: 'Idiasymbol:: Get_bitposition | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_bitPosition method
 ms.assetid: b0059407-8655-497b-81ca-025595989371
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 34a6939c455037f2466c09ab44d742f8ccfe2977
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_bitPosition
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-비트 위치 위치를 검색합니다.  Used when the [LocationType 열거형](../../debugger/debug-interface-access/locationtype.md) is `LocIsBitField`.  
+# <a name="idiasymbolgetbitposition"></a>IDiaSymbol::get_bitPosition
+위치의 비트 위치를 검색합니다. 때 사용 되는 [LocationType 열거형](../../debugger/debug-interface-access/locationtype.md) 은 `LocIsBitField`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_bitPosition (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_bitPosition (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 위치 비트 위치를 반환 합니다.  
+ [out] 위치의 비트 위치를 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성의 기호를 사용할 수 없음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 의미는 속성은 해당 기호를 사용할 수 없습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
-|버전:|DIA SDK v 7.0|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
+|버전:|DIA SDK v7.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [LocationType 열거형](../../debugger/debug-interface-access/locationtype.md)

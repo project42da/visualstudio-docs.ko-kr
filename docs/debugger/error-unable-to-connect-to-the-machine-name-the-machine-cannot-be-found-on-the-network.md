@@ -1,33 +1,31 @@
 ---
-title: "오류: 컴퓨터 &lt;name&gt;에 연결할 수 없습니다. 컴퓨터를 네트워크에서 찾을 수 없습니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.remote.dcom_disabled"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "DCOM, 연결 실패 오류"
+title: "오류: 컴퓨터에 연결할 수 없습니다 &lt;이름&gt;합니다. 네트워크에서 컴퓨터를 찾을 수 없습니다. | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.debug.remote.dcom_disabled
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords: DCOM, unable to connect error
 ms.assetid: b584b5db-ef52-45ed-8561-1314da3cc5b8
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e8ed30ca3baeb29f92c4d5f02b64c581ef9a37a7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 오류: 컴퓨터 &lt;name&gt;에 연결할 수 없습니다. 컴퓨터를 네트워크에서 찾을 수 없습니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>오류: 컴퓨터에 연결할 수 없습니다 &lt;이름&gt;합니다. 네트워크에서 컴퓨터를 찾을 수 없습니다.
 이 오류는 다음과 같은 경우에 발생합니다.  
   
 -   원격 컴퓨터에 대한 연결이 끊어진 경우  
@@ -36,9 +34,9 @@ manager: "ghogen"
   
 -   원격 컴퓨터의 암호가 만료된 경우  
   
-### 이 동작을 해결하려면  
+### <a name="to-resolve-this-behavior"></a>이 동작을 해결하려면  
   
--   로컬 컴퓨터와 원격 컴퓨터가 동일한 네트워크에 있는지 확인합니다.  이를 확인하려면 Microsoft Windows 탐색기\(또는 파일 탐색기\)를 사용하여 원격 컴퓨터에 액세스해 봅니다.  
+-   로컬 컴퓨터와 원격 컴퓨터가 동일한 네트워크에 있는지 확인합니다. 이를 확인하려면 Microsoft Windows 탐색기(또는 파일 탐색기)를 사용하여 원격 컴퓨터에 액세스해 봅니다.  
   
      — 및 —  
   
@@ -48,6 +46,6 @@ manager: "ghogen"
   
 -   원격 컴퓨터에 연결하는 데 사용 중인 암호가 유효하고 만료되지 않았는지 확인합니다.  
   
-## 참고 항목  
- [장치에서 원격 도구 설정](../Topic/Set%20Up%20the%20Remote%20Tools%20on%20the%20Device.md)   
- [디버그 설정 및 준비](../debugger/debugger-settings-and-preparation.md)
+## <a name="see-also"></a>참고 항목  
+ [원격 디버깅](../debugger/remote-debugging.md)   
+ [디버거 설정 및 준비](../debugger/debugger-settings-and-preparation.md)

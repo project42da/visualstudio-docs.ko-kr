@@ -1,60 +1,59 @@
 ---
-title: "IDiaStackWalkHelper::readMemory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkHelper2::readMemory 메서드"
+title: IDiaStackWalkHelper::readMemory | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkHelper2::readMemory method
 ms.assetid: e1eb90aa-49b7-476c-9e70-7e8f08994cbe
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: cccec7df8428db0a1e7c1fe2274475c2b723d760
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkHelper::readMemory
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-데이터 블록의 메모리에 있는 실행 파일의 이미지를 읽습니다.  
+# <a name="idiastackwalkhelperreadmemory"></a>IDiaStackWalkHelper::readMemory
+메모리에 실행 파일의 이미지에서 데이터 블록을 읽습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT readMemory(   
-   enum MemoryTypeEnum type,  
-   ULONGLONG           va,  
-   DWORD               cbData,  
-   DWORD*              pcbData,  
-   BYTE*               pbData  
+```C++  
+HRESULT readMemory(   
+   enum MemoryTypeEnum type,  
+   ULONGLONG           va,  
+   DWORD               cbData,  
+   DWORD*              pcbData,  
+   BYTE*               pbData  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `type`  
- \[in\] 값은 [MemoryTypeEnum 열거형](../../debugger/debug-interface-access/memorytypeenum.md) 을 읽기 위해 메모리의 종류를 지정 하는 열거형입니다.  
+ [in] 값은 [MemoryTypeEnum 열거형](../../debugger/debug-interface-access/memorytypeenum.md) 읽는 데 필요한 메모리가의 형식을 지정 하는 열거형입니다.  
   
  va  
- \[in\] 이미지에서 읽기 시작할 가상 주소입니다.  
+ [in] 읽기를 시작 하는 이미지에서 가상 주소입니다.  
   
  `cbData`  
- \[in\] 데이터 버퍼의 바이트 크기입니다.  
+ [in] 데이터 버퍼의 바이트의 크기입니다.  
   
  `pcbData`  
- \[out\] 실제로 읽은 바이트 수를 반환 합니다.  경우 `pbData` 입니다 `NULL`,이 총 사용 가능한 데이터의 바이트 수입니다.  
+ [out] 실제로 읽는 바이트 수를 반환 합니다. 경우 `pbData` 은 `NULL`를 사용할 수 있는 데이터의 바이트의 총 수입니다.  
   
  `pbData`  
- \[in, out\] 읽기 메모리 사용 하 여 채워진 버퍼입니다.  
+ [out에서] 읽을 메모리를 사용 하 여 입력 되는 버퍼입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [MemoryTypeEnum 열거형](../../debugger/debug-interface-access/memorytypeenum.md)

@@ -1,43 +1,42 @@
 ---
-title: "IDiaEnumInjectedSources::Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumInjectedSources::Skip 메서드"
+title: 'Idiaenuminjectedsources:: Skip | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumInjectedSources::Skip method
 ms.assetid: 4aad6a51-f2d3-4064-b216-60d830d0a560
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3b49a549ada1e489b68fc01680d13c4591b8346c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumInjectedSources::Skip
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-삽입 한 원본 열거 시퀀스에서 지정 된 수를 건너뜁니다.  
+# <a name="idiaenuminjectedsourcesskip"></a>IDiaEnumInjectedSources::Skip
+지정된 된 수의 열거형 시퀀스에서 삽입 된 소스를 건너뜁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Skip (   
-   ULONG celt  
+```C++  
+HRESULT Skip (   
+   ULONG celt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  celt  
- \[in\] 수를 건너뛰려면 열거 시퀀스에서 삽입 한 소스입니다.  
+ [in] 열거형 시퀀스를 건너뛰려면에서 삽입 된 소스 수입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 더 이상 삽입 한 소스를 건너뛸 경우.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 더 이상 삽입 된 원본이 건너뛸 경우.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

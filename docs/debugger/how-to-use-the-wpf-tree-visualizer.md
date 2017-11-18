@@ -1,70 +1,69 @@
 ---
-title: "방법: WPF 트리 시각화 도우미 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "디버깅, WPF"
-  - "WPF, 디버깅"
+title: "방법: WPF 트리 시각화 도우미를 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- WPF, debugging
+- debugging, WPF
 ms.assetid: 2a1bf1cd-90f9-4d06-9fb4-1bfc925afef3
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e30d1fbd8cd23a514d1036bc43c809626c665d73
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: WPF 트리 시각화 도우미 사용
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-WPF 트리 시각화 도우미를 사용하여 WPF 개체의 표시 트리를 탐색하고 트리에 포함된 개체의 WPF 종속성 속성을 볼 수 있습니다.  표시 트리에 대한 자세한 내용은 [WPF의 트리](../Topic/Trees%20in%20WPF.md)를 참조하십시오.  종속성 속성에 대한 자세한 내용은 [종속성 속성 개요](../Topic/Dependency%20Properties%20Overview.md)를 참조하십시오.  
+# <a name="how-to-use-the-wpf-tree-visualizer"></a>방법: WPF 트리 시각화 도우미 사용
+WPF 트리 시각화 도우미를 사용하여 WPF 개체의 표시 트리를 탐색하고 트리에 포함된 개체의 WPF 종속성 속성을 볼 수 있습니다. 시각적 트리에 대 한 자세한 내용은 참조 [In WPF](/dotnet/framework/wpf/advanced/trees-in-wpf)합니다. 종속성 속성에 대 한 자세한 내용은 참조 [종속성 속성 개요](/dotnet/framework/wpf/advanced/dependency-properties-overview)합니다.  
   
- WPF 트리 시각화 도우미를 열면 왼쪽에 **표시 트리** 창이 표시되고 오른쪽에 *Name* **속성:***Type* 창이 표시됩니다.  **표시 트리** 창에서 개체를 선택하면 *Name* **속성:***Type* 창이 자동으로 업데이트되면서 해당 개체의 속성이 표시됩니다.  
+ WPF 트리 시각화 도우미를 열면 두 개의 창이 표시 됩니다:는 **시각적 트리** 왼쪽 및 **의 속성** *이름***:**  *형식* 오른쪽 창입니다. 모든 개체를 선택는 **시각적 트리** 창 및 **의 속성** *이름***:***형식* 창은 해당 개체에 대 한 속성을 표시 하도록 자동으로 업데이트 합니다.  
   
-### WPF 트리 시각화 도우미를 열려면  
+### <a name="to-open-the-wpf-tree-visualizer"></a>WPF 트리 시각화 도우미를 열려면  
   
-1.  DataTip, **조사식** 창, **자동** 창 또는 **지역** 창에서 WPF 개체 이름 옆에 나타나는 돋보기 모양 아이콘 옆의 화살표를 클릭합니다.  
+1.  DataTip에서 **조사식** 창 **자동** 창 또는 **지역** WPF 개체 이름 옆에 있는 창에서 돋보기 아이콘 옆의 화살표를 클릭 합니다.  
   
      시각화 도우미의 목록이 나타납니다.  
   
-2.  **WPF 트리 시각화 도우미**를 클릭합니다.  
+2.  클릭 **WPF 트리 시각화 도우미**합니다.  
   
-### 표시 트리를 검색하려면  
+### <a name="to-search-the-visual-tree"></a>표시 트리를 검색하려면  
   
--   **표시 트리** 창의 **검색** 상자에 검색할 문자열을 입력합니다.  
+-   에 **시각적 트리** 창에서 검색 하려는 문자열을 입력에서 **검색** 상자입니다.  
   
-     WPF 트리 시각화 도우미가 입력한 문자열과 일치하는 표시 트리의 첫 번째 개체를 즉시 찾습니다.  문자를 추가로 입력하여 좀 더 정확하게 일치하는 항목을 찾을 수 있습니다.  
+     WPF 트리 시각화 도우미가 입력한 문자열과 일치하는 표시 트리의 첫 번째 개체를 즉시 찾습니다. 문자를 추가로 입력하여 좀 더 정확하게 일치하는 항목을 찾을 수 있습니다.  
   
-    -   표시 트리 내에서 다음 일치 항목으로 이동하려면 **다음**을 클릭합니다.  
+    -   시각적 트리 내에서 다음 일치 항목으로 이동 하려면 클릭 **다음**합니다.  
   
-    -   이전 일치 항목으로 이동하려면 **이전**을 클릭합니다.  
+    -   이전 일치 항목으로 돌아가려면 클릭 **Prev**합니다.  
   
-    -   검색 조건을 지우려면 **지우기**를 클릭합니다.  
+    -   검색 조건을 지우려면 클릭 **지우기**합니다.  
   
-### 속성 목록을 검색하려면  
+### <a name="to-search-the-properties-list"></a>속성 목록을 검색하려면  
   
--   *Name* **속성:***Type* 창에서 검색할 문자열을 **필터** 상자에 입력합니다.  
+-   에 **의 속성** *이름***:***형식* 창에서 검색 하려는 문자열을 입력에서 **필터링**상자입니다.  
   
-     WPF 트리 시각화 도우미가 입력한 문자열과 일치하는 속성을 즉시 찾습니다. 이제 목록에는 입력한 문자열과 일치하는 속성만 표시됩니다.  문자를 추가로 입력하여 좀 더 정확하게 일치하는 항목을 찾을 수 있습니다.  
+     WPF 트리 시각화 도우미가 입력한 문자열과 일치하는 속성을 즉시 찾습니다. 이제 목록에는 입력한 문자열과 일치하는 속성만 표시됩니다. 문자를 추가로 입력하여 좀 더 정확하게 일치하는 항목을 찾을 수 있습니다.  
   
-    -   검색 조건을 지우려면 **지우기**를 클릭합니다.  
+    -   검색 조건을 지우려면 클릭 **지우기**합니다.  
   
-### 시각화 도우미를 닫으려면  
+### <a name="to-close-the-visualizer"></a>시각화 도우미를 닫으려면  
   
--   대화 상자의 오른쪽 위 모퉁이에서 **닫기** 아이콘을 클릭합니다.  
+-   클릭는 **닫기** 대화 상자의 오른쪽 위 모서리에 있는 아이콘입니다.  
   
-## 참고 항목  
- [방법: 시각화 도우미 사용](../misc/how-to-use-a-visualizer.md)   
- [시각화 도우미](../debugger/create-custom-visualizers-of-data.md)   
- [WPF의 트리](../Topic/Trees%20in%20WPF.md)   
- [종속성 속성 개요](../Topic/Dependency%20Properties%20Overview.md)
+## <a name="see-also"></a>참고 항목  
+ [사용자 지정 시각화 도우미 만들기](../debugger/create-custom-visualizers-of-data.md)   
+ [WPF의 트리](/dotnet/framework/wpf/advanced/trees-in-wpf)   
+ [종속성 속성 개요](/dotnet/framework/wpf/advanced/dependency-properties-overview)

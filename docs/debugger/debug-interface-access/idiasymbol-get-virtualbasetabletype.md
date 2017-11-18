@@ -1,60 +1,59 @@
 ---
-title: "IDiaSymbol::get_virtualBaseTableType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_virtualBaseTableType 메서드"
+title: 'Idiasymbol:: Get_virtualbasetabletype | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_virtualBaseTableType method
 ms.assetid: e0581c4f-0343-49b5-9754-a48477460e9f
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: dcbc4478830a730f684b008c88ff5c6490a1c596
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_virtualBaseTableType
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-기본 가상 테이블 포인터를 검색합니다.  
+# <a name="idiasymbolgetvirtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
+가상 기본 테이블 포인터의 유형을 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```C++  
 HRESULT get_virtualBaseTableType(  
-   IDiaSymbol *pRetVal  
+   IDiaSymbol *pRetVal  
 };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
   
-|Parameter|설명|  
-|---------------|--------|  
-|`pRetVal`|\[out\] 반환 된 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 는 기본 테이블의 형식을 지정 하는 개체입니다.|  
+|매개 변수|설명|  
+|---------------|-----------------|  
+|`pRetVal`|[out] 반환 된 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 기본 테이블의 형식을 지정 하는 개체입니다.|  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성의 기호를 사용할 수 없음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 의미는 속성은 해당 기호를 사용할 수 없습니다.  
   
-## 설명  
- 기본 가상 테이블 포인터 \(`vbtptr`\)는 숨겨진 포인터에 [!INCLUDE[vcprvc](../../debugger/includes/vcprvc_md.md)] vtable을 처리 하는 가상 기본 클래스에서 상속 합니다.  A `vbtptr` 상속 된 클래스에 따라 서로 다른 크기를 가질 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 가상 기본 테이블 포인터 (`vbtptr`)에 대 한 숨겨진 포인터는 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 처리 가상 기본 클래스에서 상속 하 vtable 합니다. A `vbtptr` 상속 된 클래스에 따라 다양 한 크기를 가질 수 있습니다.  
   
- 이 메서드는 반환 된 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 개체는 vbtptr의 크기를 결정 하는 데 사용할 수 있습니다.  
+ 이 메서드는 반환 된 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 는 vbtptr의 크기를 결정 하는 데 사용할 수 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
 |버전:|DIA SDK v 8.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
