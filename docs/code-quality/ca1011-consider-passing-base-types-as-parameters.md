@@ -1,11 +1,10 @@
 ---
-title: 'CA1011: Consider passing base types as parameters | Microsoft Docs'
+title: ": Ca1011 기본 형식을 매개 변수로 전달 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,63 +14,50 @@ helpviewer_keywords:
 - CA1011
 - ConsiderPassingBaseTypesAsParameters
 ms.assetid: ce1e1241-dcf4-419b-9363-1d5bc4989279
-caps.latest.revision: 18
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 2d950f5e6d9d5bdecfec1353f8c00171884f2e21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ae6923e369d0f4245759bff2c66dc931dc51baf8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Consider passing base types as parameters
+# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: 기본 형식을 매개 변수로 전달해 보십시오.
 |||  
 |-|-|  
 |TypeName|ConsiderPassingBaseTypesAsParameters|  
 |CheckId|CA1011|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A method declaration includes a formal parameter that is a derived type, and the method calls only members of the base type of the parameter.  
+## <a name="cause"></a>원인  
+ 메서드 호출 매개 변수의 기본 형식의 멤버만 및 메서드 선언에 파생 형식이 형식 매개 변수가 포함 됩니다.  
   
-## <a name="rule-description"></a>Rule Description  
- When a base type is specified as a parameter in a method declaration, any type that is derived from the base type can be passed as the corresponding argument to the method. When the argument is used inside the method body, the specific method that is executed depends on the type of the argument. If the additional functionality that is provided by the derived type is not required, use of the base type allows wider use of the method.  
+## <a name="rule-description"></a>규칙 설명  
+ 기본 형식이 메서드 선언의 매개 변수로 지정된 경우 기본 형식에서 파생된 모든 형식을 해당 인수로 메서드에 전달할 수 있습니다. 메서드 본문 내에서 인수를 사용 하는 경우 실행 되는 특정 메서드 인수의 형식에 따라 달라 집니다. 파생된 형식에서 제공 하는 추가 기능이 필요 하지 않은 경우 기본 형식을 사용 하 여를 메서드를 사용 하를 넓은 수 있습니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, change the type of the parameter to its base type.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 해당 기본 형식에 매개 변수 형식의 변경 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
--   if the method requires the specific functionality that is provided by the derived type  
+-   메서드는 파생된 형식에서 제공 되는 특정 기능이 필요한 경우  
   
-     \- or -  
+     \- 또는 -  
   
--   to enforce that only the derived type, or a more derived type, is passed to the method.  
+-   더 많이 파생 된 형식 또는 파생된 된 유형에 적용 하는 메서드에 전달 됩니다.  
   
- In these cases, the code will be more robust because of the strong type checking that is provided by the compiler and runtime.  
+ 이러한 경우, 컴파일러와 런타임은에서 제공 하는 강력한 형식 검사로 인해 코드 보다 강력한 됩니다.  
   
-## <a name="example"></a>Example  
- The following example shows a method, `ManipulateFileStream`, that can be used only with a <xref:System.IO.FileStream> object, which violates this rule. A second method, `ManipulateAnyStream`, satisfies the rule by replacing the <xref:System.IO.FileStream> parameter by using a <xref:System.IO.Stream>.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 메서드를 `ManipulateFileStream`에 사용할 수 있는 한 <xref:System.IO.FileStream> 이 규칙을 위반 하는 개체입니다. 두 번째 방법은 `ManipulateAnyStream`, 대체 하 여 규칙을 충족는 <xref:System.IO.FileStream> 를 사용 하 여 매개 변수는 <xref:System.IO.Stream>합니다.  
   
- [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)] [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)] [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]  
+ [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]
+ [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)]
+ [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1059: Members should not expose certain concrete types](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1059: 멤버는 구체적인 특정 형식을 노출하면 안 됩니다.](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

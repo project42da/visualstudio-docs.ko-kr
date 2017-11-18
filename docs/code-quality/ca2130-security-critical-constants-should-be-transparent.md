@@ -1,62 +1,45 @@
 ---
-title: 'CA2130: Security critical constants should be transparent | Microsoft Docs'
+title: "CA2130: 보안 위험 상수는 투명 해야 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- CA2130
+f1_keywords: CA2130
 ms.assetid: 344c7f7b-9130-4675-ae7f-9fa260cc9789
-caps.latest.revision: 10
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c3a511b716c6a5bfc215bbfe967c19da4f4d7609
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 9975acd53976b1668e158fd3e906c669a0f5ed49
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2130-security-critical-constants-should-be-transparent"></a>CA2130: Security critical constants should be transparent
+# <a name="ca2130-security-critical-constants-should-be-transparent"></a>CA2130: 보안 위험 상수는 투명해야 합니다.
 |||  
 |-|-|  
 |TypeName|ConstantsShouldBeTransparent|  
 |CheckId|CA2130|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A constant field or an enumeration member is marked with the <xref:System.Security.SecurityCriticalAttribute>.  
+## <a name="cause"></a>원인  
+ 상수 필드 또는 열거형 멤버는 기본적으로 <xref:System.Security.SecurityCriticalAttribute>합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- Transparency enforcement is not enforced for constant values because compilers inline constant values so that no lookup is required at run time. Constant fields should be security transparent so that code reviewers do not assume that transparent code cannot access the constant.  
+## <a name="rule-description"></a>규칙 설명  
+ 런타임에 조회가 필요하지 않도록 컴파일러에서 상수 값을 인라인하기 때문에 상수 값에 투명성이 적용되지 않습니다. 상수 필드는 보안 투명해야 하므로 코드 검토자는 투명 코드가 상수에 액세스할 수 없다고 가정하지 않습니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, remove the SecurityCritical attribute from the field or value.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 필드 또는 값에서 SecurityCritical 특성을 제거 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- In the following examples, the enum value `EnumWithCriticalValues.CriticalEnumValue` and the constant `CriticalConstant` raise this warning. To fix the issues, remove the [`SecurityCritical`] attribute to make them security transparent.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 열거형 값 `EnumWithCriticalValues.CriticalEnumValue` 상수의 `CriticalConstant` 이 경고를 발생 시킵니다. 문제를 해결 하려면 제거에서 [`SecurityCritical`] 특성으로 보안 투명 하 게 만들려면 합니다.  
   
  [!code-csharp[FxCop.Security.CA2130.ConstantsShouldBeTransparent#1](../code-quality/codesnippet/CSharp/ca2130-security-critical-constants-should-be-transparent_1.cs)]

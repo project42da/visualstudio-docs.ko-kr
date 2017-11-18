@@ -1,11 +1,10 @@
 ---
-title: 'CA1815: Override equals and operator equals on value types | Microsoft Docs'
+title: "CA1815: 재정의 같음 및 값 형식에서 equals 또는 같음 연산자 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,74 +14,58 @@ helpviewer_keywords:
 - OverrideEqualsAndOperatorEqualsOnValueTypes
 - CA1815
 ms.assetid: 0a8ab3a3-ee8e-46f7-985d-dcf00c89363b
-caps.latest.revision: 17
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 9b4cd8ddc4d5029a81e35460fa19373e69e33330
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 20b31e4ea20fd3d1a4ec254507962bf4e8946bb4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1815-override-equals-and-operator-equals-on-value-types"></a>CA1815: Override equals and operator equals on value types
+# <a name="ca1815-override-equals-and-operator-equals-on-value-types"></a>CA1815: 값 형식에서 Equals 또는 같음 연산자를 재정의하십시오.
 |||  
 |-|-|  
 |TypeName|OverrideEqualsAndOperatorEqualsOnValueTypes|  
 |CheckId|CA1815|  
-|Category|Microsoft.Performance|  
-|Breaking Change|Non-breaking|  
+|범주|Microsoft.Performance|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A public value type does not override <xref:System.Object.Equals%2A?displayProperty=fullName>, or does not implement the equality operator (==). This rule does not check enumerations.  
+## <a name="cause"></a>원인  
+ 공용 값 형식을 재정의 하지 않는 <xref:System.Object.Equals%2A?displayProperty=fullName>, 또는 같음 연산자 (= =)를 구현 하지 않습니다. 이 규칙에서 열거형을 확인 하지 않습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- For value types, the inherited implementation of <xref:System.Object.Equals%2A> uses the Reflection library, and compares the contents of all fields. Reflection is computationally expensive, and comparing every field for equality might be unnecessary. If you expect users to compare or sort instances, or use them as hash table keys, your value type should implement <xref:System.Object.Equals%2A>. If your programming language supports operator overloading, you should also provide an implementation of the equality and inequality operators.  
+## <a name="rule-description"></a>규칙 설명  
+ 값 형식의 경우의 상속 된 구현 <xref:System.Object.Equals%2A> Reflection 라이브러리를 사용 하 고 모든 필드의 내용을 비교 합니다. Reflection에는 많은 계산이 요구되며 모든 필드의 일치 여부를 비교하는 것이 불필요할 수 있습니다. 비교 또는 정렬할 경우 사용자가 자격 증명 또는 해시 테이블 키로 사용할 경우에 값 형식을 구현 해야 <xref:System.Object.Equals%2A>합니다. 선택한 프로그래밍 언어 연산자 오버 로드를 지 원하는 경우 같음 및 같지 않음 연산자를 구현도 제공 해야 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, provide an implementation of <xref:System.Object.Equals%2A>. If you can, implement the equality operator.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면의 구현을 제공 <xref:System.Object.Equals%2A>합니다. 가능 하면 같음 연산자를 구현 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if instances of the value type will not be compared to each other.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 값 형식의 인스턴스를 서로 비교 되지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example-of-a-violation"></a>Example of a Violation  
+## <a name="example-of-a-violation"></a>위반의 예로  
   
-### <a name="description"></a>Description  
- The following example shows a structure (value type) that violates this rule.  
+### <a name="description"></a>설명  
+ 다음 예제에서는이 규칙을 위반 하는 구조 (값 형식)를 보여 줍니다.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>코드  
  [!code-csharp[FxCop.Performance.OverrideEqualsViolation#1](../code-quality/codesnippet/CSharp/ca1815-override-equals-and-operator-equals-on-value-types_1.cs)]  
   
-## <a name="example-of-how-to-fix"></a>Example of How to Fix  
+## <a name="example-of-how-to-fix"></a>수정 하는 방법의 예  
   
-### <a name="description"></a>Description  
- The following example fixes the previous violation by overriding <xref:System.ValueType.Equals%2A?displayProperty=fullName> and implementing the equality operators (==, !=).  
+### <a name="description"></a>설명  
+ 다음 예제에서는 재정의 하 여 위반을 해결 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 같음 연산자를 구현 하 고 (= =,! =) 합니다.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>코드  
  [!code-csharp[FxCop.Performance.OverrideEqualsFixed#1](../code-quality/codesnippet/CSharp/ca1815-override-equals-and-operator-equals-on-value-types_2.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2224: Override equals on overloading operator equals](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA2224: 같음 연산자를 오버로드할 때 Equals를 재정의하십시오.](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
   
- [CA2231: Overload operator equals on overriding ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)  
+ [CA2231: ValueType.Equals를 재정의할 때 같음 연산자를 오버로드하십시오.](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)  
   
- [CA2226: Operators should have symmetrical overloads](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
+ [CA2226: 연산자에는 대칭 오버로드가 있어야 합니다.](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Object.Equals%2A?displayProperty=fullName>

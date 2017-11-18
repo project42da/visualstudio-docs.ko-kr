@@ -1,11 +1,10 @@
 ---
-title: 'CA1302: Do not hardcode locale specific strings | Microsoft Docs'
+title: "CA1302: 로캘별 문자열을 하드 코딩 하지 마십시오 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,58 +14,43 @@ helpviewer_keywords:
 - DoNotHardcodeLocaleSpecificStrings
 - CA1302
 ms.assetid: 05ed134a-837d-43d7-bf97-906edeac44ce
-caps.latest.revision: 17
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b723eade12eac5be6959710afc667452d05ac81a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 9a6fc1bac1b13d432f395842c7de4ce6250dd708
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1302-do-not-hardcode-locale-specific-strings"></a>CA1302: Do not hardcode locale specific strings
+# <a name="ca1302-do-not-hardcode-locale-specific-strings"></a>CA1302: 로캘별 문자열을 하드 코딩하지 마십시오.
 |||  
 |-|-|  
 |TypeName|DoNotHardcodeLocaleSpecificStrings|  
 |CheckId|CA1302|  
-|Category|Microsoft.Globalization|  
-|Breaking Change|Non-breaking|  
+|범주|Microsoft.Globalization|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A method uses a string literal that represents part of the path of certain system folders.  
+## <a name="cause"></a>원인  
+ 메서드는 특정 시스템 폴더의 경로 나타내는 문자열 리터럴을 사용 합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- The <xref:System.Environment.SpecialFolder?displayProperty=fullName> enumeration contains members that refer to special system folders. The locations of these folders can have different values on different operating systems, the user can change some of the locations, and the locations are localized. An example of a special folder is the System folder, which is "C:\WINDOWS\system32" on [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)] but "C:\WINNT\system32" on [!INCLUDE[win2kfamily](../code-quality/includes/win2kfamily_md.md)]. The <xref:System.Environment.GetFolderPath%2A?displayProperty=fullName> method returns the locations that are associated with the <xref:System.Environment.SpecialFolder> enumeration. The locations that are returned by <xref:System.Environment.GetFolderPath%2A> are localized and appropriate for the currently running computer.  
+## <a name="rule-description"></a>규칙 설명  
+ <xref:System.Environment.SpecialFolder?displayProperty=fullName> 열거형 특수 시스템 폴더를 참조 하는 멤버가 포함 되어 있습니다. 이러한 폴더의 위치는 다른 운영 체제에서 서로 다른 값을 가질 수, 사용자가 위치 일부를 변경할 수 및 위치는 지역화 합니다. 특수 폴더의 예로 "C:\WINDOWS\system32"는 시스템 폴더에 켜져 [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)] "C:\WINNT\system32"에 있지만 [!INCLUDE[win2kfamily](../code-quality/includes/win2kfamily_md.md)]합니다. <xref:System.Environment.GetFolderPath%2A?displayProperty=fullName> 연관 된 위치를 반환 하는 메서드는 <xref:System.Environment.SpecialFolder> 열거형입니다. 반환 되는 위치 <xref:System.Environment.GetFolderPath%2A> 는 지역화 하 고 현재 실행 중인 컴퓨터에 적합 합니다.  
   
- This rule tokenizes the folder paths that are retrieved by using the <xref:System.Environment.GetFolderPath%2A> method into separate directory levels. Each string literal is compared to the tokens. If a match is found, it is assumed that the method is building a string that refers to the system location that is associated with the token. For portability and localizability, use the <xref:System.Environment.GetFolderPath%2A> method to retrieve the locations of the special system folders instead of using string literals.  
+ 이 규칙에서는 사용 하 여 검색 되는 폴더 경로 토큰화는 <xref:System.Environment.GetFolderPath%2A> 메서드 별도 디렉터리 수준으로 됩니다. 각 문자열 리터럴 토큰 비교 됩니다. 일치 항목이 발견 되는 메서드가 토큰와 연결 된 시스템의 위치를 참조 하는 문자열을 구성 하 고 있는 간주 됩니다. 이식성 지역화 가능성을 사용 하 여는 <xref:System.Environment.GetFolderPath%2A> 문자열 리터럴을 사용 하는 대신 특수 시스템 폴더의 위치를 검색 하는 메서드입니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, retrieve the location by using the <xref:System.Environment.GetFolderPath%2A> method.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 사용 하 여 위치를 검색할는 <xref:System.Environment.GetFolderPath%2A> 메서드.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the string literal is not used to refer to one of the system locations that is associated with the <xref:System.Environment.SpecialFolder> enumeration.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 와 연결 된 시스템 위치 중 하나를 참조 하려면 리터럴 문자열을 사용 하지 않는 경우이 규칙에서는 경고를에서 표시 하지 않는를 안전 하 게는 <xref:System.Environment.SpecialFolder> 열거형입니다.  
   
-## <a name="example"></a>Example  
- The following example builds the path of the common application data folder, which generates three warnings from this rule. Next, the example retrieves the path by using the <xref:System.Environment.GetFolderPath%2A> method.  
+## <a name="example"></a>예제  
+ 다음 예제에서는이 규칙에서 세 가지 경고를 생성 하는 일반적인 응용 프로그램 데이터 폴더의 경로 빌드합니다. 이 예제를 사용 하 여 경로 검색 하는 다음으로 <xref:System.Environment.GetFolderPath%2A> 메서드.  
   
- [!code-csharp[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/CSharp/ca1302-do-not-hardcode-locale-specific-strings_1.cs)] [!code-vb[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/VisualBasic/ca1302-do-not-hardcode-locale-specific-strings_1.vb)]  
+ [!code-csharp[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/CSharp/ca1302-do-not-hardcode-locale-specific-strings_1.cs)]
+ [!code-vb[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/VisualBasic/ca1302-do-not-hardcode-locale-specific-strings_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1303: Do not pass literals as localized parameters](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1303: 리터럴을 지역화된 매개 변수로 전달하지 마십시오.](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)

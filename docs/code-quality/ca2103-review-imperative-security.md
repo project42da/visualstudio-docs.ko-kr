@@ -1,30 +1,30 @@
 ---
-title: "CA2103: 명령적 보안을 검토하십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2103"
-  - "ReviewImperativeSecurity"
-helpviewer_keywords: 
-  - "CA2103"
-  - "ReviewImperativeSecurity"
+title: "CA2103: 명령적 보안을 검토 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2103
+- ReviewImperativeSecurity
+helpviewer_keywords:
+- CA2103
+- ReviewImperativeSecurity
 ms.assetid: d24fde71-bdf6-46c0-8965-9a73dc33c1aa
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b6047df9ea1b5454d4c4c689a5baef887907779a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA2103: 명령적 보안을 검토하십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca2103-review-imperative-security"></a>CA2103: 명령적 보안을 검토하십시오.
 |||  
 |-|-|  
 |TypeName|ReviewImperativeSecurity|  
@@ -32,20 +32,20 @@ manager: "wpickett"
 |범주|Microsoft.Security|  
 |변경 수준|주요 변경|  
   
-## 원인  
+## <a name="cause"></a>원인  
  메서드가 명령적 보안을 사용하고, 요청이 활성 상태인 동안 변경될 수 있는 반환 값 또는 상태 정보를 사용하여 권한을 구성하고 있습니다.  
   
-## 규칙 설명  
- 명령적 보안에서는 관리되는 개체를 사용하여 코드 실행 중에 권한 및 보안 동작을 지정합니다. 이에 비해 선언적 보안에서는 특성을 사용하여 권한 및 작업을 메타데이터에 저장합니다.  명령적 보안은 사용자가 런타임이 되어야만 사용할 수 있는 정보를 사용하여 권한 개체의 상태를 설정하고 보안 동작을 선택할 수 있으므로 융통성이 매우 뛰어납니다.  이러한 융통성에는 권한의 상태를 확인하는 데 사용되는 런타임 정보가 작업이 적용되는 동안 그대로 유지되지 않는다는 위험이 따릅니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 명령적 보안을 관리 되는 개체를 사용 하 여 특성을 사용 하 여 메타 데이터에 사용 권한 및 작업을 저장 하 여 선언적 보안을 비교 하는 코드 실행 하는 동안 권한 및 보안 동작을 지정 합니다. 명령적 보안은 사용 권한 개체의 상태를 설정 하 고 런타임이 될 때까지 사용할 수 없는 정보를 사용 하 여 보안 동작을 선택할 수 있으므로 매우 유연 합니다. 함께 유연성으로는 작업이 적용 되는 사용 권한의 상태 유지 되지 않는다는 결정 하는 데 사용 하는 런타임 정보가 그대로 위험이 따릅니다.  
   
- 가능하면 선언적 보안을 사용합니다.  선언적 요청은 이해하기 쉽습니다.  
+ 가능하면 선언적 보안을 사용합니다. 선언적 요청은 이해 하기 쉽습니다.  
   
-## 위반 문제를 해결하는 방법  
- 명령적 보안 요청을 검토하여 권한이 사용되는 동안 변경될 가능성이 있는 정보에 의해 권한 상태가 좌우되지 않는지 확인합니다.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 명령적 보안 요청으로 사용 되 고 사용 권한을 변경할 수 있는 정보에는 사용 권한의 상태 의존 하지 않는 있는지 검토 합니다.  
   
-## 경고를 표시하지 않는 경우  
- 변경되는 데이터에 따라 권한이 좌우되지 않으면 이 규칙에 따른 경고를 표시하지 않아도 안전합니다.  그러나 가급적 명령적 요청을 동일한 기능의 선언적 요청으로 변경하는 것이 좋습니다.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 사용 권한을 변경 되는 데이터에 의존 하지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다. 그러나 해당 하는 선언적 명령적 요청을 변경 하는 것이 좋습니다.  
   
-## 참고 항목  
- [보안 코딩 지침](../Topic/Secure%20Coding%20Guidelines.md)   
- [데이터 및 모델링](../Topic/Data%20and%20Modeling%20in%20the%20.NET%20Framework.md)
+## <a name="see-also"></a>참고 항목  
+ [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
+ [데이터 및 모델링](/dotnet/framework/data/index)

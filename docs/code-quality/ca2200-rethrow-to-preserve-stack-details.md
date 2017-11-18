@@ -1,11 +1,10 @@
 ---
-title: 'CA2200: Rethrow to preserve stack details | Microsoft Docs'
+title: "CA2200: 스택 정보를 유지 하는 Rethrow | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,52 +14,38 @@ helpviewer_keywords:
 - CA2200
 - RethrowToPreserveStackDetails
 ms.assetid: 046e1b98-c4dc-4515-874f-9c0de2285621
-caps.latest.revision: 13
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: dfc4529b607196c5c75537f1c337007b41313608
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ca2e6e61b88d4d8aaccd4784e1b521e0cbb48bd4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2200-rethrow-to-preserve-stack-details"></a>CA2200: Rethrow to preserve stack details
+# <a name="ca2200-rethrow-to-preserve-stack-details"></a>CA2200: 스택 정보를 유지하도록 다시 throw하십시오.
 |||  
 |-|-|  
 |TypeName|RethrowToPreserveStackDetails|  
 |CheckId|CA2200|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- An exception is re-thrown and the exception is explicitly specified in the `throw` statement.  
+## <a name="cause"></a>원인  
+ 예외가 다시 throw 됩니다. 및 예외에 명시적으로 지정 되는 `throw` 문.  
   
-## <a name="rule-description"></a>Rule Description  
- Once an exception is thrown, part of the information it carries is the stack trace. The stack trace is a list of the method call hierarchy that starts with the method that throws the exception and ends with the method that catches the exception. If an exception is re-thrown by specifying the exception in the `throw` statement, the stack trace is restarted at the current method and the list of method calls between the original method that threw the exception and the current method is lost. To keep the original stack trace information with the exception, use the `throw` statement without specifying the exception.  
+## <a name="rule-description"></a>규칙 설명  
+ 예외가 throw 되 면 수행 되는 정보의 일부로 스택 추적입니다. 스택 추적은 목록에 예외를 throw 하는 예외를 catch 하는 방법으로 끝나는 방법으로 시작 하는 메서드 호출 계층 구조입니다. 예외를 지정 하 여 예외가 예외가 다시 throw 하는 경우는 `throw` 문, 스택 추적 현재 메서드에서 다시 시작 되 고 예외를 발생 시킨 원래 메서드와 현재 메서드 간의 메서드 호출 목록이 손실 됩니다. 예외와 원래 스택 추적 정보, 사용 된 `throw` 예외를 지정 하지 않고 문입니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, re-throw the exception without specifying the exception explicitly.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 예외를 명시적으로 지정 하지 않고 예외 다시 throw 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a method, `CatchAndRethrowExplicitly`, which violates the rule and a method, `CatchAndRethrowImplicitly`, which satisfies the rule.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 메서드를 `CatchAndRethrowExplicitly`, 규칙을 위반 하는 메서드는 `CatchAndRethrowImplicitly`, 규칙을 만족 하는 합니다.  
   
- [!code-csharp[FxCop.Usage.Rethrow#1](../code-quality/codesnippet/CSharp/ca2200-rethrow-to-preserve-stack-details_1.cs)] [!code-vb[FxCop.Usage.Rethrow#1](../code-quality/codesnippet/VisualBasic/ca2200-rethrow-to-preserve-stack-details_1.vb)]
+ [!code-csharp[FxCop.Usage.Rethrow#1](../code-quality/codesnippet/CSharp/ca2200-rethrow-to-preserve-stack-details_1.cs)]
+ [!code-vb[FxCop.Usage.Rethrow#1](../code-quality/codesnippet/VisualBasic/ca2200-rethrow-to-preserve-stack-details_1.vb)]

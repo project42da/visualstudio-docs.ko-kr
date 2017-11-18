@@ -1,11 +1,10 @@
 ---
-title: 'CA1500: Variable names should not match field names | Microsoft Docs'
+title: ": Ca1500 변수 이름에는 올바른 필드 이름을 사용 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,53 +14,38 @@ helpviewer_keywords:
 - VariableNamesShouldNotMatchFieldNames
 - CA1500
 ms.assetid: fa0e5029-79e9-4a33-8576-787ac3c26c39
-caps.latest.revision: 24
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 1ca10e7738f912d677488264cbea2a5f4f58390c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "24"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7825078ff4d53ad5d90cdd8765f6f4120805b60f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500: Variable names should not match field names
+# <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500: 변수 이름은 필드 이름과 달라야 합니다.
 |||  
 |-|-|  
 |TypeName|VariableNamesShouldNotMatchFieldNames|  
 |CheckId|CA1500|  
-|Category|Microsoft.Maintainability|  
-|Breaking Change|When fired on a parameter that has the same name as a field:<br /><br /> -   Non-breaking - If both the field and method that declares the parameter cannot be seen outside the assembly, regardless of the change you make.<br />-   Breaking - If you change the name of the field and can be seen outside the assembly.<br />-   Breaking - If you change the name of the parameter and the method that declares it can be seen outside the assembly.<br /><br /> When fired on a local variable that has the same name as a field:<br /><br /> -   Non-breaking - If the field cannot be seen outside the assembly, regardless of the change you make.<br />-   Non-breaking - If you change the name of the local variable and do not change the name of the field.<br />-   Breaking - If you change the name of the field and it can be seen outside the assembly.|  
+|범주|Microsoft.Maintainability|  
+|변경 수준|필드 이름이 같은 매개 변수에서 발생 합니다.<br /><br /> --아님-필드와 메서드 매개 변수를 선언 하는 사용자가 변경한에 관계 없이 어셈블리 외부 볼 수 없는 경우.<br />분리-필드의 이름을 변경 하 고 어셈블리 외부에서 볼 수 있습니다.<br />-분석-매개 변수의 이름을 변경 하 고 이벤트를 선언 하는 메서드는 어셈블리 외부에서 볼 수 있습니다.<br /><br /> 필드와 이름이 같은 지역 변수에 발생:<br /><br /> --아님-사용자가 변경한에 관계 없이 어셈블리 외부의 필드를 볼 수 없는 경우.<br />--아님-경우 지역 변수의 이름을 변경 하 고 필드의 이름을 변경 하지 마십시오.<br />-분석-필드의 이름을 변경 하 고 어셈블리 외부에서 볼 수 있습니다.|  
   
-## <a name="cause"></a>Cause  
- An instance method declares a parameter or a local variable whose name matches an instance field of the declaring type. To catch local variables that violate the rule, the tested assembly must be built by using debugging information and the associated program database (.pdb) file must be available.  
+## <a name="cause"></a>원인  
+ 인스턴스 메서드는 매개 변수 또는 이름이 선언 형식의 인스턴스 필드와 지역 변수를 선언 합니다. 규칙을 위반 하는 지역 변수를 catch 하려면 테스트 되는 어셈블리 디버깅 정보를 사용 하 여 작성 해야 하 고 관련된 프로그램 데이터베이스 (.pdb) 파일을 사용할 수 있어야 합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- When the name of an instance field matches a parameter or a local variable name, the instance field is accessed by using the `this` (`Me` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) keyword when inside the method body. When maintaining code, it is easy to forget this difference and assume that the parameter/local variable refers to the instance field, which leads to errors. This is true especially for lengthy method bodies.  
+## <a name="rule-description"></a>규칙 설명  
+ 인스턴스 필드의 이름을 매개 변수나 지역 변수 이름과 경우 인스턴스 필드를 사용 하 여 액세스는 `this` (`Me` 에 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) 메서드 본문 내 키워드입니다. 코드를 유지 관리할 때 매개 변수/지역 변수를 선언 인스턴스 필드를 참조 하 가정 하는 이러한 차이 잊어버렸을 쉽습니다. 메서드 본문이 긴에 특히 유용합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, rename either the parameter/variable or the field.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 매개 변수/변수 또는 필드의 이름을 바꿉니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows two violations of the rule.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 두 개의 규칙을 위반 경우를 보여 줍니다.  
   
- [!code-vb[FxCop.Maintainability.VarMatchesField#1](../code-quality/codesnippet/VisualBasic/ca1500-variable-names-should-not-match-field-names_1.vb)] [!code-csharp[FxCop.Maintainability.VarMatchesField#1](../code-quality/codesnippet/CSharp/ca1500-variable-names-should-not-match-field-names_1.cs)]
+ [!code-vb[FxCop.Maintainability.VarMatchesField#1](../code-quality/codesnippet/VisualBasic/ca1500-variable-names-should-not-match-field-names_1.vb)]
+ [!code-csharp[FxCop.Maintainability.VarMatchesField#1](../code-quality/codesnippet/CSharp/ca1500-variable-names-should-not-match-field-names_1.cs)]

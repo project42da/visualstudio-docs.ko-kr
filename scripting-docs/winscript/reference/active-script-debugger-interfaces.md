@@ -1,29 +1,33 @@
 ---
 title: "액티브 스크립트 디버거 인터페이스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "액티브 스크립트 디버거 인터페이스"
-  - "activdbg.h"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Active Script Debugger interfaces
+- activdbg.h
 ms.assetid: bf4750b1-4e58-442b-ab56-254e640de61d
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d4a3d17a8ff43bb3bd18641c2298f5436f40d925
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 액티브 스크립트 디버거 인터페이스
+# <a name="active-script-debugger-interfaces"></a>액티브 스크립트 디버거 인터페이스
 activdbg.h 및 activdbg100.h 헤더 파일은 이 섹션에 나열된 인터페이스, 열거형 및 구조를 제공합니다. 이 헤더 파일은 스크립트를 디버깅하기 위한 것입니다.  
   
 > [!NOTE]
 >  `IJSDebug*` 인터페이스 및 `IEnumJsStackFrames` 인터페이스는 스크립트를 사용하여 네이티브 코드를 디버깅하기 위해 먼저 Internet Explorer 11에서 릴리스되었습니다. 이러한 인터페이스에 대한 헤더 파일은 jscript9diag.h입니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  다음 인터페이스는 언어 중립적이고 호스트 중립적인 디버깅을 허용합니다.  
   
 -   [액티브 스크립트 디버거 상수, 열거형 및 구조체](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
@@ -36,7 +40,7 @@ activdbg.h 및 activdbg100.h 헤더 파일은 이 섹션에 나열된 인터페�
   
 -   [IActiveScriptSiteDebug 인터페이스](../../winscript/reference/iactivescriptsitedebug-interface.md)  
   
--   [IActiveScriptSiteDebug32 Interface](../../winscript/reference/iactivescriptsitedebug32-interface.md)  
+-   [IActiveScriptSiteDebug32 인터페이스](../../winscript/reference/iactivescriptsitedebug32-interface.md)  
   
 -   [IActiveScriptSiteDebugEx 인터페이스](../../winscript/reference/iactivescriptsitedebugex-interface.md)  
   
@@ -178,5 +182,5 @@ activdbg.h 및 activdbg100.h 헤더 파일은 이 섹션에 나열된 인터페�
   
 -   [액티브 스크립트 디버거 상수, 열거형 및 구조체](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [액티브 스크립트 디버깅 개요](../../winscript/active-script-debugging-overview.md)

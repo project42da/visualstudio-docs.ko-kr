@@ -1,5 +1,5 @@
 ---
-title: Directly access the database with a TableAdapter | Microsoft Docs
+title: "TableAdapter가 포함 된 데이터베이스에 직접 액세스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,8 +9,6 @@ ms.topic: article
 dev_langs:
 - VB
 - CSharp
-- C++
-- aspx
 helpviewer_keywords:
 - databases [Visual Basic], accessing with a TableAdapter
 - DBDirect methods
@@ -24,66 +22,54 @@ helpviewer_keywords:
 - saving data
 - TableAdapters
 ms.assetid: 012c5924-91f7-4790-b2a6-f51402b7014b
-caps.latest.revision: 12
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 2d3b6a7be25b04254cd4cdefd23f7edac2f93cd7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: bd8a4c54ba67af567e28e27e5d70d3576645f496
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="directly-access-the-database-with-a-tableadapter"></a>Directly access the database with a TableAdapter
-In addition to the `InsertCommand`, `UpdateCommand`, and `DeleteCommand`, TableAdapters are created with methods that can be run directly against the database. These methods (`TableAdapter.Insert`, `TableAdapter.Update`, and `TableAdapter.Delete`) can be called to manipulate data directly in the database.  
+# <a name="directly-access-the-database-with-a-tableadapter"></a>TableAdapter가 포함 된 데이터베이스에 직접 액세스
+이외에 `InsertCommand`, `UpdateCommand`, 및 `DeleteCommand`, Tableadapter는 데이터베이스에 대해 직접 실행할 수 있는 메서드를 사용 하 여 만들어집니다. 이러한 메서드 (`TableAdapter.Insert`, `TableAdapter.Update`, 및 `TableAdapter.Delete`) 데이터베이스에서 직접 데이터를 조작 하기 위해 호출할 수 있습니다.  
   
- If you don't want to create these direct methods, set the TableAdapter's `GenerateDbDirectMethods` property to `false` in the **Properties** window. If any queries  are added to a TableAdapter in addition to the TableAdapter's main query, they are standalone queries that don't generate these DbDirect methods.  
+ 이러한 직접 메서드를 만드는 않으려면 설정 TableAdapter의 `GenerateDbDirectMethods` 속성을 `false` 에 **속성** 창. TableAdapter의 주 쿼리 외에도 TableAdapter에 쿼리를 추가 하는 경우 이러한 DbDirect 메서드를 생성 하지 않는 독립 실행형 쿼리 됩니다.  
   
-## <a name="send-commands-directly-to-a-database"></a>Send commands directly to a database  
- Call the TableAdapter DbDirect method that performs the task you are trying to accomplish.  
+## <a name="send-commands-directly-to-a-database"></a>데이터베이스에 직접 명령을 보낼합니다  
+ 수행 하려는 작업을 수행 하는 TableAdapter DbDirect 메서드를 호출 합니다.  
   
-#### <a name="to-insert-new-records-directly-into-a-database"></a>To insert new records directly into a database  
+#### <a name="to-insert-new-records-directly-into-a-database"></a>데이터베이스에 직접 새 레코드를 삽입 하려면  
   
--   Call the TableAdapter's `Insert` method, passing in the values for each column as parameters. The following procedure uses the `Region` table in the Northwind databaseas an example.  
-  
-    > [!NOTE]
-    >  If you do not have an instance available, instantiate the TableAdapter that you want to use.  
-  
-     [!code-vb[VbRaddataSaving#15](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_1.vb)]  [!code-cs[VbRaddataSaving#15](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_1.cs)]  
-  
-#### <a name="to-update-records-directly-in-a-database"></a>To update records directly in a database  
-  
--   Call the TableAdapter's `Update` method, passing in the new and original values for each column as parameters.  
+-   TableAdapter의 호출 `Insert` 메서드를 매개 변수로 각 열에 대 한 값에 전달 합니다. 다음 절차를 사용 하 여는 `Region` 예를 들어 Northwind 데이터베이스의 테이블입니다.  
   
     > [!NOTE]
-    >  If you do not have an instance available, instantiate the TableAdapter that you want to use.  
+    >  인스턴스를 사용할 수 없는 경우 사용 하려는 TableAdapter를 인스턴스화하십시오.  
   
-     [!code-vb[VbRaddataSaving#18](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_2.vb)]  [!code-cs[VbRaddataSaving#18](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_2.cs)]  
+     [!code-vb[VbRaddataSaving#15](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_1.vb)]
+     [!code-csharp[VbRaddataSaving#15](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_1.cs)]  
   
-#### <a name="to-delete-records-directly-from-a-database"></a>To delete records directly from a database  
+#### <a name="to-update-records-directly-in-a-database"></a>레코드를 데이터베이스에 직접 업데이트 하려면  
   
--   Call the TableAdapter's `Delete` method, passing in the values for each column as parameters of the `Delete` method. The following procedure uses the `Region` table in the Northwind database as an example.  
+-   TableAdapter의 호출 `Update` 메서드를 매개 변수로 각 열에 대 한 새 및 원래 값에서 전달 합니다.  
   
     > [!NOTE]
-    >  If you do not have an instance available, instantiate the TableAdapter that you want to use.  
+    >  인스턴스를 사용할 수 없는 경우 사용 하려는 TableAdapter를 인스턴스화하십시오.  
   
-     [!code-vb[VbRaddataSaving#21](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_3.vb)]  [!code-cs[VbRaddataSaving#21](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_3.cs)]  
+     [!code-vb[VbRaddataSaving#18](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_2.vb)]
+     [!code-csharp[VbRaddataSaving#18](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_2.cs)]  
   
-## <a name="see-also"></a>See Also  
- [Fill datasets by using TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md)
+#### <a name="to-delete-records-directly-from-a-database"></a>데이터베이스에서 직접 레코드를 삭제 하려면  
+  
+-   TableAdapter의 호출 `Delete` 의 매개 변수로 각 열에 대 한 값에 전달 하는 메서드는 `Delete` 메서드. 다음 절차를 사용 하 여는 `Region` 예를 들어 Northwind 데이터베이스의 테이블입니다.  
+  
+    > [!NOTE]
+    >  인스턴스를 사용할 수 없는 경우 사용 하려는 TableAdapter를 인스턴스화하십시오.  
+  
+     [!code-vb[VbRaddataSaving#21](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_3.vb)]
+     [!code-csharp[VbRaddataSaving#21](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_3.cs)]  
+  
+## <a name="see-also"></a>참고 항목  
+ [TableAdapter를 사용하여 데이터 집합 채우기](../data-tools/fill-datasets-by-using-tableadapters.md)

@@ -1,11 +1,10 @@
 ---
-title: 'CA1028: Enum storage should be Int32 | Microsoft Docs'
+title: "CA1028: 열거형 저장소는 i n t 32 여야 합니다 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,79 +14,66 @@ helpviewer_keywords:
 - EnumStorageShouldBeInt32
 - CA1028
 ms.assetid: 87160825-9f39-4142-8d7f-a31fe7ac7b84
-caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 01025e19d9ee8e31b6849d6742e3491603903c81
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: bd0f74a322e136263b6445db2692380dfea2efa3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1028-enum-storage-should-be-int32"></a>CA1028: Enum storage should be Int32
+# <a name="ca1028-enum-storage-should-be-int32"></a>CA1028: 열거형 저장소는 Int32여야 합니다.
 |||  
 |-|-|  
 |TypeName|EnumStorageShouldBeInt32|  
 |CheckId|CA1028|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- The underlying type of a public enumeration is not <xref:System.Int32?displayProperty=fullName>.  
+## <a name="cause"></a>원인  
+ Public 열거형의 내부 형식에는 없는 <xref:System.Int32?displayProperty=fullName>합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- An enumeration is a value type that defines a set of related named constants. By default, the <xref:System.Int32?displayProperty=fullName> data type is used to store the constant value. Even though you can change this underlying type, it is not necessary or recommended for most scenarios. Note that no significant performance gain is achieved by using a data type that is smaller than <xref:System.Int32>. If you cannot use the default data type, you should use one of the Common Language System (CLS)-compliant integral types, <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32>, or <xref:System.Int64> to make sure that all values of the enumeration can be represented in CLS-compliant programming languages.  
+## <a name="rule-description"></a>규칙 설명  
+ 열거형은 서로 관련 있는 명명된 상수 집합을 정의하는 값 형식입니다. 기본적으로는 <xref:System.Int32?displayProperty=fullName> 데이터 형식은 상수 값을 저장 하는 데 사용 됩니다. 내부 형식은 변경할 수 있습니다, 경우에 아닙니다 필요 하거나 권장 대부분의 시나리오에 대 한. 성능이 크게 향상 되지 않습니다는 보다 작은 데이터 형식을 사용 하 여 수행할 <xref:System.Int32>합니다. 공용 언어 시스템 (CLS) 중 하나를 사용 해야 기본 데이터 형식을 사용할 수 없는 경우-규격 정수 계열 형식을 <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32>, 또는 <xref:System.Int64> 열거형의 모든 값에 표시할 수 있는지 확인 하려면 CLS 규격 프로그래밍 언어입니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, unless size or compatibility issues exist, use <xref:System.Int32>. For situations where <xref:System.Int32> is not large enough to hold the values, use <xref:System.Int64>. If backward compatibility requires a smaller data type, use <xref:System.Byte> or <xref:System.Int16>.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 크기나 호환성 문제가 존재 하지 않는 한이 규칙 위반의 문제를 해결 하려면 사용 <xref:System.Int32>합니다. 상황에 대 한 여기서 <xref:System.Int32> 이 너무 작아 값을 포함을 사용 하 여 <xref:System.Int64>합니다. 더 작은 데이터 형식이 필요로 하는 이전 버전과 호환성을 사용 하 여 <xref:System.Byte> 또는 <xref:System.Int16>합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a warning from this rule only if backward compatibility issues require it. In applications, failure to comply with this rule usually does not cause problems. In libraries, where language interoperability is required, failure to comply with this rule might adversely affect your users.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이전 버전과 호환성 문제에 필요한 경우에이 규칙에서 경고를 표시 합니다. 응용 프로그램에서 일반적으로이 규칙을 따르지 않으면에 문제가 발생 하지 않습니다. 언어 상호 운용성이 필요한 라이브러리에이 규칙을 따르지 않으면 사용자가 저하 될 수 있습니다.  
   
-## <a name="example-of-a-violation"></a>Example of a Violation  
+## <a name="example-of-a-violation"></a>위반의 예로  
   
-### <a name="description"></a>Description  
- The following example shows two enumerations that do not use the recommended underlying data type.  
+### <a name="description"></a>설명  
+ 다음 예에서는 권장 되는 기본 데이터 형식을 사용 하지 않는 열거형이 두 개를 보여 줍니다.  
   
-### <a name="code"></a>Code  
- [!code-vb[FxCop.Design.EnumIntegralType#1](../code-quality/codesnippet/VisualBasic/ca1028-enum-storage-should-be-int32_1.vb)] [!code-csharp[FxCop.Design.EnumIntegralType#1](../code-quality/codesnippet/CSharp/ca1028-enum-storage-should-be-int32_1.cs)]  
+### <a name="code"></a>코드  
+ [!code-vb[FxCop.Design.EnumIntegralType#1](../code-quality/codesnippet/VisualBasic/ca1028-enum-storage-should-be-int32_1.vb)]
+ [!code-csharp[FxCop.Design.EnumIntegralType#1](../code-quality/codesnippet/CSharp/ca1028-enum-storage-should-be-int32_1.cs)]  
   
-## <a name="example-of-how-to-fix"></a>Example of How to Fix  
+## <a name="example-of-how-to-fix"></a>수정 하는 방법의 예  
   
-### <a name="description"></a>Description  
- The following example fixes the previous violation by changing the underlying data type to <xref:System.Int32>.  
+### <a name="description"></a>설명  
+ 다음 예제에서는 기본 데이터 형식을 변경 하 여 위반을 해결 <xref:System.Int32>합니다.  
   
-### <a name="code"></a>Code  
- [!code-csharp[FxCop.Design.EnumIntegralTypeFixed#1](../code-quality/codesnippet/CSharp/ca1028-enum-storage-should-be-int32_2.cs)] [!code-vb[FxCop.Design.EnumIntegralTypeFixed#1](../code-quality/codesnippet/VisualBasic/ca1028-enum-storage-should-be-int32_2.vb)]  
+### <a name="code"></a>코드  
+ [!code-csharp[FxCop.Design.EnumIntegralTypeFixed#1](../code-quality/codesnippet/CSharp/ca1028-enum-storage-should-be-int32_2.cs)]
+ [!code-vb[FxCop.Design.EnumIntegralTypeFixed#1](../code-quality/codesnippet/VisualBasic/ca1028-enum-storage-should-be-int32_2.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1008: Enums should have zero value](../code-quality/ca1008-enums-should-have-zero-value.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1008: 열거형에는 0 값이 있어야 합니다.](../code-quality/ca1008-enums-should-have-zero-value.md)  
   
- [CA1027: Mark enums with FlagsAttribute](../code-quality/ca1027-mark-enums-with-flagsattribute.md)  
+ [CA1027: 열거형을 FlagsAttribute로 표시하십시오.](../code-quality/ca1027-mark-enums-with-flagsattribute.md)  
   
- [CA2217: Do not mark enums with FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)  
+ [CA2217: 열거형을 FlagsAttribute로 표시하지 마십시오.](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)  
   
- [CA1700: Do not name enum values 'Reserved'](../code-quality/ca1700-do-not-name-enum-values-reserved.md)  
+ [CA1700: 열거형 값의 이름을 'Reserved'로 지정하지 마십시오.](../code-quality/ca1700-do-not-name-enum-values-reserved.md)  
   
- [CA1712: Do not prefix enum values with type name](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)  
+ [CA1712: 열거형 값에 형식 이름을 접두사로 사용하지 마십시오.](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Byte?displayProperty=fullName>   
  <xref:System.Int16?displayProperty=fullName>   
  <xref:System.Int32?displayProperty=fullName>   

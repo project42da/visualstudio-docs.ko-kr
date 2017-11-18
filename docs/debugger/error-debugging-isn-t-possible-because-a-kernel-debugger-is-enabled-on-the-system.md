@@ -1,36 +1,31 @@
 ---
-title: "오류: 시스템에 커널 디버거가 사용 중이므로 디버깅을 할 수 없습니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.kernel_dbg_enabled"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "커널 디버거"
+title: "큰 &#39; 오류: 디버깅 가능한 때문에 커널 디버거가 t는 시스템에서 활성화 되어 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.debug.error.kernel_dbg_enabled
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords: kernel debugger
 ms.assetid: 630a7abd-3303-4aaa-888a-6de3de14bc01
-caps.latest.revision: 23
-caps.handback.revision: 23
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "23"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 448dbc486d58bc46e531b92de9f78272e4304d27
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 오류: 시스템에 커널 디버거가 사용 중이므로 디버깅을 할 수 없습니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>큰 &#39; 오류: 디버깅 가능한 때문에 커널 디버거가 t는 시스템에서 활성화 되어
 관리 코드를 디버깅할 때 다음 오류 메시지가 나타날 수 있습니다.  
   
 ```  
@@ -43,25 +38,25 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 -   응용 프로그램에서 CLR 버전 CLR 2.0, 3.0 또는 3.5를 사용하는 경우  
   
-## 해결책  
+## <a name="solution"></a>솔루션  
   
-#### 이 문제를 해결하려면  
+#### <a name="to-fix-this-problem"></a>이 문제를 해결하려면  
   
 -   CLR 버전 4.0 또는 4.5를 사용하도록 응용 프로그램을 업그레이드합니다.  
   
-     —또는—  
+     또는  
   
 -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 커널 디버깅을 비활성화하고 디버깅합니다.  
   
-     —또는—  
+     또는  
   
 -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 대신 커널 디버거를 사용하여 디버깅합니다.  
   
-     —또는—  
+     또는  
   
 -   커널 디버거에서 사용자 모드 예외를 비활성화합니다.  
   
-#### 현재 세션에서 커널 디버깅을 비활성화하려면  
+#### <a name="to-disable-kernel-debugging-in-the-current-session"></a>현재 세션에서 커널 디버깅을 비활성화하려면  
   
 -   명령 프롬프트에 다음과 같이 입력합니다.  
   
@@ -69,7 +64,7 @@ Debugging isn't possible because a kernel debugger is enabled on the system
     Kdbgctrl.exe -d  
     ```  
   
-#### 모든 세션에 대해 커널 디버깅을 비활성화하려면\(Windows Vista 및 Windows 7\)  
+#### <a name="to-disable-kernel-debugging-for-all-sessions-windows-vista-and-windows-7"></a>모든 세션에 대해 커널 디버깅을 비활성화하려면(Windows Vista 및 Windows 7)  
   
 1.  명령 프롬프트에 다음과 같이 입력합니다.  
   
@@ -79,9 +74,9 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 2.  컴퓨터를 다시 시작합니다.  
   
-#### 모든 세션에 대해 커널 디버깅을 비활성화하려면\(기타 Windows 운영 체제\)  
+#### <a name="to-disable-kernel-debugging-for-all-sessions-other-windows-operating-systems"></a>모든 세션에 대해 커널 디버깅을 비활성화하려면(기타 Windows 운영 체제)  
   
-1.  시스템 드라이브\(일반적으로 C:\\\)에서 boot.ini를 찾습니다.  boot.ini 파일은 숨겨져 있고 읽기 전용일 수 있습니다.  따라서 이 파일을 보려면 다음 명령을 사용해야 합니다.  
+1.  시스템 드라이브에서 boot.ini를 찾습니다 (일반적으로 c:\\). boot.ini 파일은 숨겨져 있고 읽기 전용일 수 있습니다. 따라서 이 파일을 보려면 다음 명령을 사용해야 합니다.  
   
     ```  
     dir /ASH  
@@ -97,14 +92,14 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 3.  컴퓨터를 다시 시작합니다.  
   
-#### 커널 디버거를 사용하여 디버깅하려면  
+#### <a name="to-debug-with-the-kernel-debugger"></a>커널 디버거를 사용하여 디버깅하려면  
   
-1.  커널 디버거가 후크되어 있으면 디버깅을 계속할지 묻는 메시지가 나타납니다.  단추를 클릭하여 디버깅을 계속합니다.  
+1.  커널 디버거가 후크되어 있으면 디버깅을 계속할지 묻는 메시지가 나타납니다. 단추를 클릭하여 디버깅을 계속합니다.  
   
-2.  `User break exception(Int 3)`이 발생할 수도 있습니다. 이 경우 디버깅을 계속하려면 다음과 같은 커널 디버거 명령을 입력합니다.  
+2.  표시 될 수 있습니다는 `User break exception(Int 3).` 디버깅을 계속 하려면 다음 커널 디버거 명령을 입력 하는이 문제가 발생 합니다.  
   
      `gn`  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [디버거 보안](../debugger/debugger-security.md)   
- [관리 코드 디버깅](../debugger/debugging-managed-code.md)
+ [관리 코드 디버그](../debugger/debugging-managed-code.md)

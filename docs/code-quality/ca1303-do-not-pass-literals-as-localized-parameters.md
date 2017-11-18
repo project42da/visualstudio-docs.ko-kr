@@ -1,11 +1,10 @@
 ---
-title: 'CA1303: Do not pass literals as localized parameters | Microsoft Docs'
+title: "CA1303: 리터럴을 지역화 된 매개 변수 전달 하지 마십시오 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,65 +15,52 @@ helpviewer_keywords:
 - DoNotPassLiteralsAsLocalizedParameters
 - CA1303
 ms.assetid: 904d284e-76d0-4b8f-a4df-0094de8d7aac
-caps.latest.revision: 22
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 98989e398166e8fc5a5fc0c765b10a11a12d5083
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ce6ed64a6991342b4dc1506b8384f7691cc90b8f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: Do not pass literals as localized parameters
+# <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: 리터럴을 지역화된 매개 변수로 전달하지 마십시오.
 |||  
 |-|-|  
 |TypeName|DoNotPassLiteralsAsLocalizedParameters|  
 |CheckId|CA1303|  
-|Category|Microsoft.Globalization|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Globalization|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A method passes a string literal as a parameter to a constructor or method in the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] class library and that string should be localizable.  
+## <a name="cause"></a>원인  
+ 메서드는 문자열 리터럴을 전달 매개 변수로 생성자 또는 메서드에에 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 클래스 라이브러리 및는 문자열은 지역화 될 수 있어야 합니다.  
   
- This warning is raised when a literal string is passed as a value to a parameter or property and one or more of the following cases is true:  
+ 이 경고는 리터럴 문자열은 매개 변수 또는 속성에 값으로 전달 되며 다음과 같은 경우 중 하나 이상이 true 때 발생 합니다.  
   
--   The <xref:System.ComponentModel.LocalizableAttribute> attribute of the parameter or property is set to true.  
+-   <xref:System.ComponentModel.LocalizableAttribute> 매개 변수 또는 속성의 특성은 설정을 true로 합니다.  
   
--   The parameter or property name contains "Text", "Message", or "Caption".  
+-   "Text", "Message" 또는 "캡션" 매개 변수 또는 속성 이름에 포함 되어 있습니다.  
   
--   The name of the string parameter that is passed to a Console.Write or Console.WriteLine method is either "value" or "format".  
+-   Console.Write 또는 Console.WriteLine 메서드에 전달 되는 문자열 매개 변수 이름이 "value" 또는 "format"입니다.  
   
-## <a name="rule-description"></a>Rule Description  
- String literals that are embedded in source code are difficult to localize.  
+## <a name="rule-description"></a>규칙 설명  
+ 소스 코드에 포함 된 문자열 리터럴을 지역화 하기 어렵습니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, replace the string literal with a string retrieved through an instance of the <xref:System.Resources.ResourceManager> class.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 리터럴 문자열의 인스턴스를 통해 검색 된 문자열이으로 대체는 <xref:System.Resources.ResourceManager> 클래스입니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the code library will not be localized, or if the string is not exposed to the end user or a developer using the code library.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 코드 라이브러리 지역화 되지 않는 경우 또는 문자열 최종 사용자 또는 코드 라이브러리를 사용 하는 개발자에 노출 되지 않으면이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
- Users can eliminate noise against methods which should not be passed localized strings by either renaming the parameter or property named, or by marking these items as conditional.  
+ 사용자가 메서드에 전달할 수 없습니다. 지역화 된 문자열 매개 변수 또는 명명 된 속성의 이름을 바꾸거나 또는 이러한 항목을 조건부로 표시 하 여를 제거할 수 있습니다.  
   
-## <a name="example"></a>Example  
- The following example shows a method that throws an exception when either of its two arguments are out of range. For the first argument, the exception constructor is passed a literal string, which violates this rule. For the second argument, the constructor is correctly passed a string retrieved through a <xref:System.Resources.ResourceManager>.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 범위를 벗어났습니다. 해당 두 인수 중 하나의 경우 예외를 throw 하는 메서드를 보여 줍니다. 첫 번째 인수에 대 한 예외 생성자에는이 규칙을 위반 하는 리터럴 문자열을 전달 됩니다. 두 번째 인수에 대 한 생성자를 통해 검색 된 문자열이 전달 올바르게 됩니다는 <xref:System.Resources.ResourceManager>합니다.  
   
- [!code-cpp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CPP/ca1303-do-not-pass-literals-as-localized-parameters_1.cpp)] [!code-vb[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/VisualBasic/ca1303-do-not-pass-literals-as-localized-parameters_1.vb)] [!code-csharp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CSharp/ca1303-do-not-pass-literals-as-localized-parameters_1.cs)]  
+ [!code-cpp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CPP/ca1303-do-not-pass-literals-as-localized-parameters_1.cpp)]
+ [!code-vb[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/VisualBasic/ca1303-do-not-pass-literals-as-localized-parameters_1.vb)]
+ [!code-csharp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CSharp/ca1303-do-not-pass-literals-as-localized-parameters_1.cs)]  
   
-## <a name="see-also"></a>See Also  
- [Resources in Desktop Apps](/dotnet/framework/resources/index)
+## <a name="see-also"></a>참고 항목  
+ [데스크톱 앱의 리소스](/dotnet/framework/resources/index)

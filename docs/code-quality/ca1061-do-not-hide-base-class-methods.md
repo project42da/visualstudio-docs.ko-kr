@@ -1,11 +1,10 @@
 ---
-title: 'CA1061: Do not hide base class methods | Microsoft Docs'
+title: "CA1061: 기본 클래스 메서드를 숨기지 마십시오 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,52 +14,37 @@ helpviewer_keywords:
 - DoNotHideBaseClassMethods
 - CA1061
 ms.assetid: 0bda9dc8-87b4-4038-ab9d-563298387466
-caps.latest.revision: 9
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b16bc49bf9206ebbbcc0b0be8397c01d6cbec6e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "9"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 0c2cd6c6cfd06be965581d422b835014f09dd96b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1061-do-not-hide-base-class-methods"></a>CA1061: Do not hide base class methods
+# <a name="ca1061-do-not-hide-base-class-methods"></a>CA1061: 기본 클래스 메서드를 숨기지 마십시오.
 |||  
 |-|-|  
 |TypeName|DoNotHideBaseClassMethods|  
 |CheckId|CA1061|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A derived type declares a method with the same name and with the same number of parameters as one of its base methods; one or more of the parameters is a base type of the corresponding parameter in the base method; and any remaining parameters have types that are identical to the corresponding parameters in the base method.  
+## <a name="cause"></a>원인  
+ 파생 된 형식; 기본 메서드 중 하나로 매개 변수 수가 같은 동일한 이름으로 메서드를 선언합니다. 하나 이상의 매개 변수는 기본 메서드;에서 해당 매개 변수의 기본 형식 및 모든 나머지 매개 변수는 기본 메서드의 해당 매개 변수와 동일 유형의 제공 합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- A method in a base type is hidden by an identically named method in a derived type when the parameter signature of the derived method differs only by types that are more weakly derived than the corresponding types in the parameter signature of the base method.  
+## <a name="rule-description"></a>규칙 설명  
+ 파생 된 메서드의 매개 변수 시그니처에 기본 메서드의 매개 변수 시그니처에 있는 해당 형식 보다 더 약하게 파생 된 형식만 다른 경우 기본 형식의 메서드 파생된 된 형식에서 동일한 이름의 메서드에 의해 숨겨집니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, remove or rename the method, or change the parameter signature so that the method does not hide the base method.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 또는 메서드, 이름 바꾸기 변경 하거나 제거할 매개 변수 시그니처에 하는 메서드는 기본 메서드를 숨기지 않습니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a method that violates the rule.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 규칙을 위반 하는 메서드를 보여 줍니다.  
   
  [!code-csharp[FxCop.Design.HideBaseMethod#1](../code-quality/codesnippet/CSharp/ca1061-do-not-hide-base-class-methods_1.cs)]

@@ -1,29 +1,30 @@
 ---
 title: "CA1307: StringComparison 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1307"
-  - "SpecifyStringComparison"
-helpviewer_keywords: 
-  - "CA1307"
-  - "SpecifyStringComparison"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1307
+- SpecifyStringComparison
+helpviewer_keywords:
+- CA1307
+- SpecifyStringComparison
 ms.assetid: 9b0d5e71-1683-4a0d-bc4a-68b2fbd8af71
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 61d8ca557bfc55e3488a35e82f0242f931c51ed4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA1307: StringComparison 지정
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1307-specify-stringcomparison"></a>CA1307: StringComparison 지정
 |||  
 |-|-|  
 |TypeName|SpecifyStringComparison|  
@@ -31,20 +32,20 @@ caps.handback.revision: 11
 |범주|Microsoft.Globalization|  
 |변경 수준|주요 변경 아님|  
   
-## 원인  
- 문자열 비교 작업에서 <xref:System.StringComparison> 매개 변수를 설정하지 않는 메서드 오버로드를 사용합니다.  
+## <a name="cause"></a>원인  
+ 문자열 비교 작업을 설정 하지 않는 메서드 오버 로드를 사용 하 여 한 <xref:System.StringComparison> 매개 변수입니다.  
   
-## 규칙 설명  
- 대부분의 문자열 작업, 특히 <xref:System.String.Compare%2A> 및 <xref:System.String.Equals%2A> 메서드가 <xref:System.StringComparison> 열거형 값을 매개 변수로 사용할 수 있는 오버로드를 제공합니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 대부분의 문자열 가장 중요 한 작업의 <xref:System.String.Compare%2A> 및 <xref:System.String.Equals%2A> 메서드를 허용 하는 오버 로드를 제공는 <xref:System.StringComparison> 열거형 값을 매개 변수로 합니다.  
   
- <xref:System.StringComparison> 매개 변수를 사용하는 오버로드가 있는 경우에는 항상 이 매개 변수를 사용하지 않는 오버로드 대신 이 오버로드를 사용해야 합니다.  이 매개 변수를 명시적으로 설정하면 코드가 보다 명확해지고 유지 관리하기가 쉬워집니다.  
+ 때마다는 오버 로드가 있으면 해당 하나는 <xref:System.StringComparison> 매개 변수를이 매개 변수를 사용 하지 않는 오버 로드를 대신 사용 해야 합니다. 이 매개 변수를 명시적으로 설정 하면 코드 방식은 보다 명확 해지고 유지 관리가 더 용이 합니다.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙의 위반을 해결하려면 <xref:System.StringComparison> 열거형을 매개 변수로 사용할 수 있는 오버로드로 문자열 비교 메서드를 변경합니다.  예를 들어 `String.Compare(str1, str2)`를 `String.Compare(str1, str2, StringComparison.Ordinal)`로 변경합니다.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하는 오버 로드를 문자열 비교 방법 변경는 <xref:System.StringComparison> 열거형을 매개 변수로 합니다. 예: 변경 `String.Compare(str1, str2)` 를 `String.Compare(str1, str2, StringComparison.Ordinal)`합니다.  
   
-## 경고를 표시하지 않는 경우  
- 라이브러리 또는 응용 프로그램을 제한적인 로컬 사용자에게만 제공하므로 지역화할 필요가 없는 경우에는 이 규칙에서 경고를 표시하지 않는 것이 안전합니다.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 라이브러리 또는 응용 프로그램은 제한 된 로컬 사용자 에게만 되며 따라서 지역화 되지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [전역화 경고](../code-quality/globalization-warnings.md)   
  [CA1309: 서수 StringComparison을 사용하십시오.](../code-quality/ca1309-use-ordinal-stringcomparison.md)

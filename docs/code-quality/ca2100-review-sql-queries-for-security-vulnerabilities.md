@@ -1,11 +1,10 @@
 ---
-title: 'CA2100: Review SQL queries for security vulnerabilities | Microsoft Docs'
+title: "CA2100: 검토 보안 취약점에 대해 SQL 쿼리 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,90 +15,76 @@ helpviewer_keywords:
 - CA2100
 - ReviewSqlQueriesForSecurityVulnerabilities
 ms.assetid: 79670604-c02a-448d-9c0e-7ea0120bc5fe
-caps.latest.revision: 24
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 931e2dae6c7b773ca2b8236917146ab9410d3565
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "24"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c28bf4d7162a7b646653ff1833067d47e7ff574d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: Review SQL queries for security vulnerabilities
+# <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: 보안상 취약한 부분이 있는지 SQL 쿼리를 검토하십시오.
 |||  
 |-|-|  
 |TypeName|ReviewSqlQueriesForSecurityVulnerabilities|  
 |CheckId|CA2100|  
-|Category|Microsoft.Security|  
-|Breaking Change|Non-breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A method sets the <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> property by using a string that is built from a string argument to the method.  
+## <a name="cause"></a>원인  
+ 설정 하는 메서드는 <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> 메서드에 문자열 인수 로부터 만들어진 문자열을 사용 하 여 속성입니다.  
   
-## <a name="rule-description"></a>Rule Description  
- This rule assumes that the string argument contains user input. A SQL command string that is built from user input is vulnerable to SQL injection attacks. In a SQL injection attack, a malicious user supplies input that alters the design of a query in an attempt to damage or gain unauthorized access to the underlying database. Typical techniques include injection of a single quotation mark or apostrophe, which is the SQL literal string delimiter; two dashes, which signifies a SQL comment; and a semicolon, which indicates that a new command follows. If user input must be part of the query, use one of the following, listed in order of effectiveness, to reduce the risk of attack.  
+## <a name="rule-description"></a>규칙 설명  
+ 이 규칙에서는 문자열 인수에 사용자 입력이 포함된 것으로 가정합니다. 사용자 입력으로부터 만들어진 SQL 명령 문자열은 SQL 삽입 공격에 취약합니다. SQL 삽입 공격으로 악의적인 사용자는 손상 되거나 내부 데이터베이스에 무단으로 액세스 하기 위해에서 쿼리 디자인을 변경 하는 입력을 제공 합니다. 일반적인 기술 등의 단일 따옴표 또는 아포스트로피 SQL 리터럴 문자열 구분; 삽입 SQL 주석; 의미 하는 대시 두 개 및 세미콜론 새 명령을 따르는지를 나타냅니다. 사용자 입력에는 쿼리를 다음 중 하나를 사용의 일부 여야 하는 경우의 공격 위험을 줄이기 위해 효율성에 순서 대로 나열 합니다.  
   
--   Use a stored procedure.  
+-   저장된 프로시저를 사용 합니다.  
   
--   Use a parameterized command string.  
+-   매개 변수가 있는 명령 문자열을 사용 합니다.  
   
--   Validate the user input for both type and content before you build the command string.  
+-   명령 문자열을 만들기 전에 형식과 내용에 대해 사용자 입력의 유효성을 검사 합니다.  
   
- The following [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] types implement the <xref:System.Data.IDbCommand.CommandText%2A> property or provide constructors that set the property by using a string argument.  
+ 다음 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 형식은 구현 하는 <xref:System.Data.IDbCommand.CommandText%2A> 속성 또는 문자열 인수를 사용 하 여 속성을 설정 하는 생성자를 제공 합니다.  
   
--   <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> and <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>  
+-   <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> 및 <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>  
   
--   <xref:System.Data.OleDb.OleDbCommand?displayProperty=fullName> and <xref:System.Data.OleDb.OleDbDataAdapter?displayProperty=fullName>  
+-   <xref:System.Data.OleDb.OleDbCommand?displayProperty=fullName> 및 <xref:System.Data.OleDb.OleDbDataAdapter?displayProperty=fullName>  
   
--   <xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName> and <xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>  
+-   <xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName> 및 <xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>  
   
--   [System.Data.SqlServerCe.SqlCeCommand](https://msdn.microsoft.com/library/system.data.sqlserverce.sqlcecommand.aspx) and  [System.Data.SqlServerCe.SqlCeDataAdapter](https://msdn.microsoft.com/library/system.data.sqlserverce.sqlcedataadapter.aspx)  
+-   [System.Data.SqlServerCe.SqlCeCommand](https://msdn.microsoft.com/library/system.data.sqlserverce.sqlcecommand.aspx) 및 [System.Data.SqlServerCe.SqlCeDataAdapter](https://msdn.microsoft.com/library/system.data.sqlserverce.sqlcedataadapter.aspx)  
   
--   <xref:System.Data.SqlClient.SqlCommand?displayProperty=fullName> and <xref:System.Data.SqlClient.SqlDataAdapter?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand?displayProperty=fullName> 및 <xref:System.Data.SqlClient.SqlDataAdapter?displayProperty=fullName>  
   
- Notice that this rule is violated when the ToString method of a type is used explicitly or implicitly to construct the query string. The following is an example.  
+ 명시적 또는 암시적으로 형식의 ToString 메서드를 사용할 때이 규칙이 위반 되 확인 쿼리 문자열을 생성 합니다. 다음은 예제입니다.  
   
 ```  
 int x = 10;  
 string query = "SELECT TOP " + x.ToString() + " FROM Table";  
 ```  
   
- The rule is violated because a malicious user can override the ToString() method.  
+ Tostring () 메서드를 재정의 하는 악의적인 사용자 수 때문에 규칙을 위반 합니다.  
   
- The rule also is violated when ToString is used implicitly.  
+ 또한 규칙 ToString 암시적으로 사용 하는 경우에 위반 됩니다.  
   
 ```  
 int x = 10;  
 string query = String.Format("SELECT TOP {0} FROM Table", x);  
 ```  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, use a parameterized query.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 매개 변수가 있는 쿼리를 사용 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the command text does not contain any user input.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 명령 텍스트에는 사용자 입력이 없는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a method, `UnsafeQuery`, that violates the rule and a method, `SaferQuery`, that satisfies the rule by using a parameterized command string.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 메서드를 `UnsafeQuery`, 규칙을 위반 하는 메서드는 `SaferQuery`, 매개 변수가 있는 명령 문자열을 사용 하 여 규칙을 만족 하는 합니다.  
   
- [!code-vb[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/VisualBasic/ca2100-review-sql-queries-for-security-vulnerabilities_1.vb)] [!code-csharp[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/CSharp/ca2100-review-sql-queries-for-security-vulnerabilities_1.cs)] [!code-cpp[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/CPP/ca2100-review-sql-queries-for-security-vulnerabilities_1.cpp)]  
+ [!code-vb[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/VisualBasic/ca2100-review-sql-queries-for-security-vulnerabilities_1.vb)]
+ [!code-csharp[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/CSharp/ca2100-review-sql-queries-for-security-vulnerabilities_1.cs)]
+ [!code-cpp[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/CPP/ca2100-review-sql-queries-for-security-vulnerabilities_1.cpp)]  
   
-## <a name="see-also"></a>See Also  
- [Security Overview](/dotnet/framework/data/adonet/security-overview)
+## <a name="see-also"></a>참고 항목  
+ [보안 개요](/dotnet/framework/data/adonet/security-overview)

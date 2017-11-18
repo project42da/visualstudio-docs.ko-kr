@@ -1,47 +1,46 @@
 ---
-title: "IDiaAddressMap::get_imageAlign | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaAddressMap::get_imageAlign 메서드"
+title: 'Idiaaddressmap:: Get_imagealign | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaAddressMap::get_imageAlign method
 ms.assetid: f1ba8071-669c-4cf7-9ac0-02f26d99f366
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e3c9400fe8261b8983c76d59a55e7c457d35e572
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaAddressMap::get_imageAlign
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiaaddressmapgetimagealign"></a>IDiaAddressMap::get_imageAlign
 현재 이미지 맞춤을 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_imageAlign (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_imageAlign (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 이미지 맞춤을 실행 파일에서 반환합니다.  
+ [out] 실행 파일에서 이미지 맞춤 값을 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 이미지 이미지 로드 및 작성 된 따라 특정 메모리 경계에 맞춰 정렬 됩니다.  맞춤은 일반적으로 1, 2, 4, 8, 16, 32 또는 64 바이트 경계에 있습니다.  이미지 맞춤에 대 한 호출을 설정할 수 있는 [IDiaAddressMap::put\_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) 메서드.  
+## <a name="remarks"></a>설명  
+ 이미지는 이미지를 로드 하 고 생성 하는 방법을 따라 특정 메모리 경계에 정렬 됩니다. 맞춤은 일반적으로 1, 2, 4, 8, 16, 32 또는 64 바이트 경계에 있습니다. 호출 하 여 이미지 맞춤을 설정할 수 있습니다는 [idiaaddressmap:: Put_imagealign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) 메서드.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [IDiaAddressMap::put\_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md)
+ [IDiaAddressMap::put_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md)

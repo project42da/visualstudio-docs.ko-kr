@@ -1,11 +1,10 @@
 ---
-title: 'CA2232: Mark Windows Forms entry points with STAThread | Microsoft Docs'
+title: "CA2232: Windows Forms 진입점 STAThread | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,55 +14,41 @@ helpviewer_keywords:
 - CA2232
 - MarkWindowsFormsEntryPointsWithStaThread
 ms.assetid: a3c95130-8e7f-4419-9fcd-b67d077e8efb
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: cd1be8452f4729ed17ae6fd87f835c50137c1806
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 6dadac882d5a1b6bf96e4cb0f713979ff566116f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2232-mark-windows-forms-entry-points-with-stathread"></a>CA2232: Mark Windows Forms entry points with STAThread
+# <a name="ca2232-mark-windows-forms-entry-points-with-stathread"></a>CA2232: Windows Forms 진입점을 STAThread를 사용하여 표시하십시오.
 |||  
 |-|-|  
 |TypeName|MarkWindowsFormsEntryPointsWithStaThread|  
 |CheckId|CA2232|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- An assembly references the <xref:System.Windows.Forms> namespace, and its entry point is not marked with the <xref:System.STAThreadAttribute?displayProperty=fullName> attribute.  
+## <a name="cause"></a>원인  
+ 어셈블리 참조는 <xref:System.Windows.Forms> 네임 스페이스 및 해당 진입점으로 표시 되지 않은 <xref:System.STAThreadAttribute?displayProperty=fullName> 특성입니다.  
   
-## <a name="rule-description"></a>Rule Description  
- <xref:System.STAThreadAttribute> indicates that the COM threading model for the application is single-threaded apartment. This attribute must be present on the entry point of any application that uses Windows Forms; if it is omitted, the Windows components might not work correctly. If the attribute is not present, the application uses the multithreaded apartment model, which is not supported for Windows Forms.  
+## <a name="rule-description"></a>규칙 설명  
+ <xref:System.STAThreadAttribute>COM 스레딩 모델이 응용 프로그램에 대 한 단일 스레드 아파트 임을 나타냅니다. 이 특성은 Windows Forms을 사용하는 응용 프로그램의 진입점에 있어야 합니다. 이 특성을 생략하면 Windows 구성 요소가 제대로 작동하지 않을 수 있습니다. 특성이 없으면 응용 프로그램에 Windows Forms에 대 한 지원 되지 않는 다중 스레드 아파트 모델을 사용 합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projects that use the Application Framework do not have to mark the **Main** method with STAThread. The [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] compiler does it automatically.  
+>  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]응용 프로그램 프레임 워크를 사용 하는 프로젝트를 표시할 필요가 없습니다는 **Main** STAThread 사용 하 여 메서드. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 컴파일러 자동으로 수행 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, add the <xref:System.STAThreadAttribute> attribute to the entry point. If the <xref:System.MTAThreadAttribute?displayProperty=fullName> attribute is present, remove it.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 추가 <xref:System.STAThreadAttribute> 진입점에 대 한 특성입니다. 경우는 <xref:System.MTAThreadAttribute?displayProperty=fullName> 특성이 있으면 제거 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if you are developing for the .NET Compact Framework, for which the <xref:System.STAThreadAttribute> attribute is unnecessary and not supported.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ .NET Compact Framework에 대 한 개발 하는 경우이 규칙에서는 경고를에서 표시 하지 않는를 안전 하 게는 <xref:System.STAThreadAttribute> 특성은 불필요 한 지원 되지 않습니다.  
   
-## <a name="example"></a>Example  
- The following examples demonstrate the correct usage of <xref:System.STAThreadAttribute>.  
+## <a name="example"></a>예제  
+ 다음 예에서는 변수의 올바른 사용법을 보여 줍니다. <xref:System.STAThreadAttribute>합니다.  
   
- [!code-csharp[FxCop.Usage.StaThread#1](../code-quality/codesnippet/CSharp/ca2232-mark-windows-forms-entry-points-with-stathread_1.cs)] [!code-vb[FxCop.Usage.StaThread#1](../code-quality/codesnippet/VisualBasic/ca2232-mark-windows-forms-entry-points-with-stathread_1.vb)]
+ [!code-csharp[FxCop.Usage.StaThread#1](../code-quality/codesnippet/CSharp/ca2232-mark-windows-forms-entry-points-with-stathread_1.cs)]
+ [!code-vb[FxCop.Usage.StaThread#1](../code-quality/codesnippet/VisualBasic/ca2232-mark-windows-forms-entry-points-with-stathread_1.vb)]

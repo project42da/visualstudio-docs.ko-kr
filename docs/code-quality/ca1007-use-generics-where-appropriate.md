@@ -1,11 +1,10 @@
 ---
-title: 'CA1007: Use generics where appropriate | Microsoft Docs'
+title: "CA1007: 적합 한 제네릭을 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,70 +14,56 @@ helpviewer_keywords:
 - CA1007
 - UseGenericsWhereAppropriate
 ms.assetid: eab780ea-3b1f-4d32-b15a-5d48da2df46b
-caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 6a0b3e050e8d8ec9944ebce787bcc21ea8a2c6f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 47ee7caafdadd94f7d4ffaaca68a412e406c7c87
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1007-use-generics-where-appropriate"></a>CA1007: Use generics where appropriate
+# <a name="ca1007-use-generics-where-appropriate"></a>CA1007: 적합한 제네릭을 사용하십시오.
 |||  
 |-|-|  
 |TypeName|UseGenericsWhereAppropriate|  
 |CheckId|CA1007|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- An externally visible method contains a reference parameter of type <xref:System.Object?displayProperty=fullName>, and the containing assembly targets [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)].  
+## <a name="cause"></a>원인  
+ 형식의 참조 매개 변수를 포함 하는 외부에서 볼 수 메서드 <xref:System.Object?displayProperty=fullName>, 포함 된 어셈블리 대상을 [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- A reference parameter is a parameter that is modified by using the `ref` (`ByRef` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) keyword. The argument type that is supplied for a reference parameter must exactly match the reference parameter type. To use a type that is derived from the reference parameter type, the type must first be cast and assigned to a variable of the reference parameter type. Use of a generic method allows all types, subject to constraints, to be passed to the method without first casting the type to the reference parameter type.  
+## <a name="rule-description"></a>규칙 설명  
+ 참조 매개 변수는 매개 변수를 사용 하 여 한정 되는 `ref` (`ByRef` 에 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) 키워드입니다. 참조 매개 변수에 대해 제공 되는 인수 형식을 참조 매개 변수 형식과 일치 해야 합니다. 참조 매개 변수 형식에서 파생 된 형식을 사용 하려면 먼저 유형 캐스팅 하 고 참조 매개 변수 형식의 변수에 할당 해야 합니다. 제약 조건 형식을 참조 매개 변수 형식으로 먼저 캐스팅 하지 않고 메서드에 전달할 수에 따라 모든 형식을 허용 하는 제네릭 메서드를 사용 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, make the method generic and replace the <xref:System.Object> parameter by using a type parameter.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 메서드 제네릭으로 찾아 바꿉니다는 <xref:System.Object> 형식 매개 변수를 사용 하 여 매개 변수입니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a general-purpose swap routine that is implemented as both nongeneric and generic methods. Note how efficiently the strings are swapped by using the generic method compared to the nongeneric method.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 특수 및 제네릭 메서드로 구현 되는 범용 스왑 루틴을 보여 줍니다. Note 제네릭이 아닌 메서드에 비해 제네릭 메서드를 사용 하 여 문자열 얼마나 효율적으로 바뀝니다.  
   
- [!code-vb[FxCop.Design.UseGenerics#1](../code-quality/codesnippet/VisualBasic/ca1007-use-generics-where-appropriate_1.vb)] [!code-csharp[FxCop.Design.UseGenerics#1](../code-quality/codesnippet/CSharp/ca1007-use-generics-where-appropriate_1.cs)]  
+ [!code-vb[FxCop.Design.UseGenerics#1](../code-quality/codesnippet/VisualBasic/ca1007-use-generics-where-appropriate_1.vb)]
+ [!code-csharp[FxCop.Design.UseGenerics#1](../code-quality/codesnippet/CSharp/ca1007-use-generics-where-appropriate_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1005: Avoid excessive parameters on generic types](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1005: 제네릭 형식에 매개 변수를 너무 많이 사용하지 마십시오.](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
   
- [CA1010: Collections should implement generic interface](../code-quality/ca1010-collections-should-implement-generic-interface.md)  
+ [CA1010: 컬렉션은 제네릭 인터페이스를 구현해야 합니다.](../code-quality/ca1010-collections-should-implement-generic-interface.md)  
   
- [CA1000: Do not declare static members on generic types](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)  
+ [CA1000: 정적 멤버를 제네릭 형식으로 선언하지 마십시오.](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)  
   
- [CA1002: Do not expose generic lists](../code-quality/ca1002-do-not-expose-generic-lists.md)  
+ [CA1002: 제네릭 목록을 노출하지 마십시오.](../code-quality/ca1002-do-not-expose-generic-lists.md)  
   
- [CA1006: Do not nest generic types in member signatures](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
+ [CA1006: 멤버 시그니처에 제네릭 형식을 중첩하지 마십시오.](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
   
- [CA1004: Generic methods should provide type parameter](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
+ [CA1004: 제네릭 메서드는 형식 매개 변수를 제공해야 합니다.](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
   
- [CA1003: Use generic event handler instances](../code-quality/ca1003-use-generic-event-handler-instances.md)  
+ [CA1003: 제네릭 이벤트 처리기 인스턴스를 사용하십시오.](../code-quality/ca1003-use-generic-event-handler-instances.md)  
   
-## <a name="see-also"></a>See Also  
- [Generics](/dotnet/csharp/programming-guide/generics/index)
+## <a name="see-also"></a>참고 항목  
+ [제네릭](/dotnet/csharp/programming-guide/generics/index)

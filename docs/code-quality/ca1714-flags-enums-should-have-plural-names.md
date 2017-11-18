@@ -1,30 +1,30 @@
 ---
-title: "CA1714: 플래그 열거형에는 복수형 이름을 사용해야 합니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FlagsEnumsShouldHavePluralNames"
-  - "CA1714"
-helpviewer_keywords: 
-  - "CA1714"
-  - "FlagsEnumsShouldHavePluralNames"
+title: ": Ca1714 플래그 열거형에는 복수형 이름을 사용 해야 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FlagsEnumsShouldHavePluralNames
+- CA1714
+helpviewer_keywords:
+- CA1714
+- FlagsEnumsShouldHavePluralNames
 ms.assetid: 95ef5b43-7681-49e9-a5a3-ac0357cf1be7
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b83cb82dab5f723c656b51a5322df7d7aad4570c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA1714: 플래그 열거형에는 복수형 이름을 사용해야 합니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1714-flags-enums-should-have-plural-names"></a>CA1714: 플래그 열거형에는 복수형 이름을 사용해야 합니다.
 |||  
 |-|-|  
 |TypeName|FlagsEnumsShouldHavePluralNames|  
@@ -32,25 +32,25 @@ manager: "wpickett"
 |범주|Microsoft.Naming|  
 |변경 수준|주요 변경|  
   
-## 원인  
- public 열거형에 <xref:System.FlagsAttribute?displayProperty=fullName>가 있고 이름이 's'로 끝나지 않았습니다.  
+## <a name="cause"></a>원인  
+ Public 열거형에는 <xref:System.FlagsAttribute?displayProperty=fullName> 이름과 끝나지 않는 및 s '.  
   
-## 규칙 설명  
- <xref:System.FlagsAttribute> 특성은 둘 이상의 값을 지정할 수 있음을 나타내므로 이 특성으로 표시된 형식은 복수형 이름을 갖습니다.  예를 들어 요일을 정의하는 열거를 여러 날짜를 지정할 수 있는 응용 프로그램에서 사용하려는 경우  이 열거에는 <xref:System.FlagsAttribute>가 있어야 하며 'Days'라는 이름을 지정할 수 있습니다.  이와 비슷하지만 하루만 지정할 수 있는 열거는 이 특성을 포함할 수 없으며 'Day'라는 이름을 지정할 수 있습니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 형식으로 표시 된 <xref:System.FlagsAttribute> 은 둘 이상의 값을 지정할 수 있음을 나타내므로 특성 복수형 이름을 갖습니다. 예를 들어 해당 주의 일을 정의 하는 열거형 수 사용 하려는 응용 프로그램에서 여러 날짜를 지정할 수 있습니다. 이 열거형 있어야는 <xref:System.FlagsAttribute> '일' 호출 될 수 없습니다. 하루를 지정할 수 있는 유사한 열거형에는 특성이 없으며 수 'Day'를 호출 합니다.  
   
- 명명 규칙은 공용 언어 런타임을 대상으로 하는 라이브러리에 공통적인 모양을 적용합니다.  이 라이브러리는 관리 코드 개발에 대한 전문 지식을 가진 사람에 의해 개발되었으므로 새 소프트웨어 라이브러리에 익숙해지는 데 필요한 학습 기간을 단축하고 고객의 신뢰를 높여 줍니다.  
+ 명명 규칙은 공통 된 모양을 라이브러리에 대 한 공용 언어 런타임을 대상으로 합니다. 이렇게 하면 새 소프트웨어 라이브러리에 필요 하 고 관리 되는 코드를 개발에 대 한 전문 지식이 있는 사용자가 라이브러리를 개발 하는 신뢰성이 향상를 배워야 할 필요성이 줄어듭니다.  
   
-## 위반 문제를 해결하는 방법  
- 열거 이름을 복수형 단어로 만들거나, 여러 열거 값을 동시에 지정할 수 없는 경우에는 <xref:System.FlagsAttribute> 특성을 제거합니다.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 열거형의 이름을 복수 단어를 만들거나 제거는 <xref:System.FlagsAttribute> 특성 경우 여러 열거 값을 동시에 지정 하지 않아야 합니다.  
   
-## 경고를 표시하지 않는 경우  
- 이름이 복수 단어이지만 's'로 끝나지 않는 경우에는 경고를 표시하지 않아도 안전합니다.  예를 들어 앞서 설명한 여러 날짜를 지정하는 열거의 이름이 'DaysOfTheWeek'이었다면 이 이름은 규칙의 논리를 위반하지만 의도된 것이 아닙니다.  이러한 위반은 표시하지 않아야 합니다.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 이름이 복수 단어 이지만 끝나지 않는 위반을 보류 하려면 안전의 '. 예를 들어 이전에 설명 된 여러 날짜 열거형 '이었다 이름이 지정 된,이 규칙이 하지만 하지 의도 된 논리를 위반 것입니다. 이러한 위반은 표시 하지 않아야 합니다.  
   
-## 관련 규칙  
+## <a name="related-rules"></a>관련된 규칙  
  [CA1027: 열거형을 FlagsAttribute로 표시하십시오.](../code-quality/ca1027-mark-enums-with-flagsattribute.md)  
   
  [CA2217: 열거형을 FlagsAttribute로 표시하지 마십시오.](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.FlagsAttribute?displayProperty=fullName>   
- [열거형 디자인](../Topic/Enum%20Design.md)
+ [Enum 디자인](/dotnet/standard/design-guidelines/enum)

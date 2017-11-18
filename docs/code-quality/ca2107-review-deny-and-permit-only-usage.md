@@ -1,11 +1,10 @@
 ---
-title: 'CA2107: Review deny and permit only usage | Microsoft Docs'
+title: "CA2107: 검토 deny 및 permitonly 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,89 +14,73 @@ helpviewer_keywords:
 - ReviewDenyAndPermitOnlyUsage
 - CA2107
 ms.assetid: 366f4a56-ae93-4882-81d0-bd0a55ebbc26
-caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 2f0b71223049a22e040beffc7cfb012faf858c22
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: fb802e0d97d265c01540ca10ffe8d0dcf9b273cf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Review deny and permit only usage
+# <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Deny 및 PermitOnly 사용을 검토하십시오.
 |||  
 |-|-|  
 |TypeName|ReviewDenyAndPermitOnlyUsage|  
 |CheckId|CA2107|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A method contains a security check that specifies the PermitOnly or Deny security action.  
+## <a name="cause"></a>원인  
+ Deny 또는 PermitOnly 보안 동작을 지정 하는 보안 검사를 포함 하는 메서드입니다.  
   
-## <a name="rule-description"></a>Rule Description  
- The [Using the PermitOnly Method](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649) and <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> security actions should be used only by those who have an advanced knowledge of [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] security. Code that uses these security actions should undergo a security review.  
+## <a name="rule-description"></a>규칙 설명  
+ [PermitOnly 메서드를 사용 하 여](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649) 및 <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> 잘된 알고 있는 사용자에 게 의해서만 보안 동작을 사용 해야의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 보안 합니다. 이러한 보안 동작을 사용하는 코드는 보안 검토를 거쳐야 합니다.  
   
- Deny alters the default behavior of the stack walk that occurs in response to a security demand. It lets you specify permissions that must not be granted for the duration of the denying method, regardless of the actual permissions of the callers in the call stack. If the stack walk detects a method that is secured by Deny, and if the demanded permission is included in the denied permissions, the stack walk fails. PermitOnly also alters the default behavior of the stack walk. It allows code to specify only those permissions that can be granted, regardless of the permissions of the callers. If the stack walk detects a method that is secured by PermitOnly, and if the demanded permission is not included in the permissions that are specified by the PermitOnly, the stack walk fails.  
+ 거부 하는 보안 요청에 대 한 응답에서 발생 하는 스택 워크의 기본 동작을 변경 합니다. 호출 스택의 호출자의 실제 권한에 상관 없이 거부 메서드 중에 부여 되지 않아야 하는 권한을 지정할 수 있습니다. 스택 워크 Deny로 보호 되는 메서드를 검색 하 고 요청 된 권한이 거부 된 권한에 포함 하는 경우에 스택 워크 실패 합니다. 또한 PermitOnly는 스택 워크의 기본 동작을 변경합니다. 코드를에서 호출자의 권한에 관계 없이 부여할 수 있는 권한만 지정할 수 있습니다. 스택 워크 PermitOnly로 보호 되는 메서드를 검색 하 고 있는 것은 아니며는 PermitOnly에서 지정 된 사용 권한에 포함 되지 않은, 스택 워크가 실패 합니다.  
   
- Code that relies on these actions should be carefully evaluated for security vulnerabilities because of their limited usefulness and subtle behavior. Consider the following:  
+ 제한 된 유용성 및 미묘한 동작으로 인해 보안 취약점에 대해 이러한 동작을 사용 하는 코드를 신중 하 게 평가 되어야 합니다. 다음을 살펴보세요.  
   
--   [Link Demands](/dotnet/framework/misc/link-demands) are not affected by Deny or PermitOnly.  
+-   [링크 요구](/dotnet/framework/misc/link-demands) Deny 또는 PermitOnly 영향을 받지 않습니다.  
   
--   If the Deny or PermitOnly occurs in the same stack frame as the demand that causes the stack walk, the security actions have no effect.  
+-   Deny 또는 PermitOnly에는 스택 워크를 발생 시키는 요청과 같은 스택 프레임에서 발생 하는 경우 보안 동작 아무런 효과가 없습니다.  
   
--   Values that are used to construct path-based permissions can usually be specified in multiple ways. Denying access to one form of the path does not deny access to all forms. For example, if a file share \\\Server\Share is mapped to a network drive X:, to deny access to a file on the share, you must deny \\\Server\Share\File, X:\File and every other path that accesses the file.  
+-   일반적으로 여러 가지 방법으로 경로 기반 권한을 구성 하는 데 사용 되는 값을 지정할 수 있습니다. 한 가지 형태의 경로에 대 한 액세스를 거부 모든 폼에 대 한 액세스를 거부 하지 않습니다. 예를 들어 파일 공유 \\거부 해야 \Server\Share 매핑된 네트워크 드라이브는 공유에서 파일에 대 한 액세스를 거부 하려면 x:에 \\\Server\Share\File, X:\File 및 파일에 액세스 하는 다른 모든 경로입니다.  
   
--   An <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> can terminate a stack walk before the Deny or PermitOnly is reached.  
+-   <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> Deny 또는 PermitOnly에 도달 하기 전에 스택 워크를 종료할 수 있습니다.  
   
--   If a Deny has any effect, namely, when a caller has a permission that is blocked by the Deny, the caller can access the protected resource directly, bypassing the Deny. Similarly, if the caller does not have the denied permission, the stack walk would fail without the Deny.  
+-   Deny에 영향을 줄 경우 즉, 사용 권한을 Deny에 의해 차단 되는 경우 호출자에 게 우회 액세스할 수 있습니다 보호 되는 리소스를 직접 거부 합니다. 마찬가지로, 호출자에 게 거부 된 사용 권한이 없습니다 스택 워크는 Deny 없이 못합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- Any use of these security actions will cause a violation. To fix a violation, do not use these security actions.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이러한 보안 동작을 사용 하면 위반이 발생 합니다. 위반 문제를 해결 하려면 이러한 보안 동작을 사용 하지 마십시오.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a warning from this rule only after you complete a security review.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 보안 검토를 완료 한 후에이 규칙에서 경고를 표시 합니다.  
   
-## <a name="example"></a>Example  
- The following example demonstrates some limitations of Deny.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 몇 가지 제한 사항이 deny 보여 줍니다.  
   
- The following library contains a class that has two methods that are identical except for the security demands that protect them.  
+ 다음 라이브러리는 보호 하는 보안 요구 사항 이외에 동일한 두 메서드가 있는 클래스를 포함 합니다.  
   
  [!code-csharp[FxCop.Security.PermitAndDeny#1](../code-quality/codesnippet/CSharp/ca2107-review-deny-and-permit-only-usage_1.cs)]  
   
-## <a name="example"></a>Example  
- The following application demonstrates the effects of Deny on the secured methods from the library.  
+## <a name="example"></a>예제  
+ 다음 응용 프로그램 라이브러리에서 Deny의 보안이 유지 되는 방법에 영향을 보여 줍니다.  
   
  [!code-csharp[FxCop.Security.TestPermitAndDeny#1](../code-quality/codesnippet/CSharp/ca2107-review-deny-and-permit-only-usage_2.cs)]  
   
- This example produces the following output.  
+ 이 예제의 결과는 다음과 같습니다.  
   
- **Demand: Caller's Deny has no effect on Demand with the asserted permission.**  
-**LinkDemand: Caller's Deny has no effect on LinkDemand with the asserted permission.**  
-**LinkDemand: Caller's Deny has no effect with LinkDemand-protected code.**  
-**LinkDemand: This Deny has no effect with LinkDemand-protected code.**   
-## <a name="see-also"></a>See Also  
+ **요청: 호출자의 Deny는 어설션된 사용 권한이 있는 주문형 효과가 없습니다.**  
+**LinkDemand: 호출자의 거부 된 어설션된 권한 LinkDemand에 영향을 주지에 있습니다.**  
+**LinkDemand: 호출자의 Deny가 LinkDemand로 보호 된 코드로 영향을 주지 않습니다.**  
+**LinkDemand:이 Deny가 LinkDemand로 보호 된 코드로 영향을 주지 않습니다.**   
+## <a name="see-also"></a>참고 항목  
  <xref:System.Security.CodeAccessPermission.PermitOnly%2A?displayProperty=fullName>   
  <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>   
  <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>   
  <xref:System.Security.IStackWalk.PermitOnly%2A?displayProperty=fullName>   
- [Secure Coding Guidelines](/dotnet/standard/security/secure-coding-guidelines)   
- [Overriding Security Checks](http://msdn.microsoft.com/en-us/4acdeff5-fc05-41bf-8505-7387cdbfca28)   
- [Using the PermitOnly Method](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649)
+ [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
+ [보안 검사 재정의](http://msdn.microsoft.com/en-us/4acdeff5-fc05-41bf-8505-7387cdbfca28)   
+ [PermitOnly 메서드를 사용 하 여](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649)

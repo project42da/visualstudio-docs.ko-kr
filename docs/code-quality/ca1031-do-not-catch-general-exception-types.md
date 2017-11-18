@@ -1,11 +1,10 @@
 ---
-title: 'CA1031: Do not catch general exception types | Microsoft Docs'
+title: "CA1031: 일반적인 예외 형식을 catch 하지 마십시오. | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,59 +14,45 @@ helpviewer_keywords:
 - CA1031
 - DoNotCatchGeneralExceptionTypes
 ms.assetid: cbc283ae-2a46-4ec0-940e-85aa189b118f
-caps.latest.revision: 20
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c42f8d7207d87fa10c1dc6f87893015fc492654b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 681785bad04a9f16ca68a1f619700e143c01cb58
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1031-do-not-catch-general-exception-types"></a>CA1031: Do not catch general exception types
+# <a name="ca1031-do-not-catch-general-exception-types"></a>CA1031: 일반적인 예외 형식을 catch하지 마십시오.
 |||  
 |-|-|  
 |TypeName|DoNotCatchGeneralExceptionTypes|  
 |CheckId|CA1031|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A general exception such as <xref:System.Exception?displayProperty=fullName> or <xref:System.SystemException?displayProperty=fullName> is caught in a `catch` statement, or a general catch clause such as `catch()` is used.  
+## <a name="cause"></a>원인  
+ 와 같은 일반 예외 <xref:System.Exception?displayProperty=fullName> 또는 <xref:System.SystemException?displayProperty=fullName> 에 들어갈는 `catch` 문이나와 같은 일반 catch 절 `catch()` 사용 됩니다.  
   
-## <a name="rule-description"></a>Rule Description  
- General exceptions should not be caught.  
+## <a name="rule-description"></a>규칙 설명  
+ 일반 예외는 catch하면 안 됩니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, catch a more specific exception, or rethrow the general exception as the last statement in the `catch` block.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 더 구체적인 예외를 catch 하거나의 마지막 문으로 일반 예외를 다시 throw는 `catch` 블록입니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule. Catching general exception types can hide run-time problems from the library user and can make debugging more difficult.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다. 일반적인 예외 형식을 catch 할 라이브러리 사용자에서 런타임에 문제가 및 디버깅을 더 어렵게 만들 수 있습니다.  
   
 > [!NOTE]
->  Starting with the [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)], the common language runtime (CLR) no longer delivers corrupted state exceptions that occur in the operating system and managed code, such as access violations in [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)], to be handled by managed code. If you want to compile an application in the [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] or later versions and maintain handling of corrupted state exceptions, you can apply the <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> attribute to the method that handles the corrupted state exception.  
+>  [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)]부터 시작해서, CLR(공용 언어 런타임)은 관리 코드에서 처리되어야 하는 [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)]의 액세스 위반과 같이 운영 체제 및 관리 코드에서 발생하는 손상된 상태 예외를 더 이상 제공하지 않습니다. 응용 프로그램을 컴파일할 경우는 [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] 또는 이후 버전 및 유지 관리의 손상 된 상태 예외 처리를 적용할 수 있습니다는 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 특성을 메서드에 손상 된 상태 예외를 처리 하 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a type that violates this rule and a type that correctly implements the `catch` block.  
+## <a name="example"></a>예제  
+ 다음 예제에서는이 규칙을 위반 하는 형식 및 제대로 구현 하는 형식을 `catch` 블록입니다.  
   
- [!code-cpp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CPP/ca1031-do-not-catch-general-exception-types_1.cpp)] [!code-vb[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/VisualBasic/ca1031-do-not-catch-general-exception-types_1.vb)] [!code-csharp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CSharp/ca1031-do-not-catch-general-exception-types_1.cs)]  
+ [!code-cpp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CPP/ca1031-do-not-catch-general-exception-types_1.cpp)]
+ [!code-vb[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/VisualBasic/ca1031-do-not-catch-general-exception-types_1.vb)]
+ [!code-csharp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CSharp/ca1031-do-not-catch-general-exception-types_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2200: Rethrow to preserve stack details](../code-quality/ca2200-rethrow-to-preserve-stack-details.md)
+## <a name="related-rules"></a>관련된 규칙  
+ [CA2200: 스택 정보를 유지하도록 다시 throw하십시오.](../code-quality/ca2200-rethrow-to-preserve-stack-details.md)

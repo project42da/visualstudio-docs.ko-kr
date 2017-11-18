@@ -1,11 +1,10 @@
 ---
-title: 'CA2116: APTCA methods should only call APTCA methods | Microsoft Docs'
+title: "CA2116: APTCA 메서드는 APTCA 메서드만 호출 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,87 +14,72 @@ helpviewer_keywords:
 - AptcaMethodsShouldOnlyCallAptcaMethods
 - CA2116
 ms.assetid: 8b91637e-891f-4dde-857b-bf8012270ec4
-caps.latest.revision: 18
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c3e531c91ec7a321c7ddc1130df7a0e8efa7323c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 92c6a91cffc3ce388a3dfb9000b9f432672018f4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: APTCA methods should only call APTCA methods
+# <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: APTCA 메서드는 APTCA 메서드만 호출해야 합니다.
 |||  
 |-|-|  
 |TypeName|AptcaMethodsShouldOnlyCallAptcaMethods|  
 |CheckId|CA2116|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A method in an assembly with the <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> attribute calls a method in an assembly that does not have the attribute.  
+## <a name="cause"></a>원인  
+ 가진 어셈블리의 메서드는 <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> 어셈블리에는 특성이 있는 메서드를 호출 합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- By default, public or protected methods in assemblies with strong names are implicitly protected by a [Link Demands](/dotnet/framework/misc/link-demands) for full trust; only fully trusted callers can access a strong-named assembly. Strong-named assemblies marked with the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) attribute do not have this protection. The attribute disables the link demand, making the assembly accessible to callers that do not have full trust, such as code executing from an intranet or the Internet.  
+## <a name="rule-description"></a>규칙 설명  
+ 기본적으로 강력한 이름의 어셈블리의 public 또는 protected 메서드에 의해 보호 암시적으로 되는 [링크 요청](/dotnet/framework/misc/link-demands) 완전 신뢰에만 완전히 신뢰할 수 있는 호출자 강력한 이름의 어셈블리에 액세스할 수 있습니다. 강력한 이름의 어셈블리는 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성 (APTCA)이이 보호 필요가 없습니다. 특성 사용 어셈블리를 인트라넷 또는 인터넷에서을 실행 하는 코드와 같은 완전 신뢰를 갖지 않는 호출자에 게 액세스할 수 있도록 하는 링크 요청을 하지 않습니다.  
   
- When the APTCA attribute is present on a fully trusted assembly, and the assembly executes code in another assembly that does not allow partially trusted callers, a security exploit is possible. If two methods `M1` and `M2` meet the following conditions, malicious callers can use the method `M1` to bypass the implicit full trust link demand that protects `M2`:  
+ 완전히 신뢰할 수 있는 어셈블리에 APTCA 특성이 부분적으로 신뢰할 수 있는 호출자를 허용 하지 않는 다른 어셈블리의 코드를 실행 하는 경우 보안 허점이 불가능 합니다. 하는 경우 두 가지 방법 `M1` 및 `M2` 다음 조건을 충족, 악의적인 호출자가 메서드를 사용할 수 `M1` 를 보호 하는 완전 신뢰 암시적 링크 요청을 사용 하지 않을 `M2`:  
   
--   `M1` is a public method declared in a fully trusted assembly that has the APTCA attribute.  
+-   `M1`공용 메서드는 APTCA 특성이 있는 완전히 신뢰할 수 있는 어셈블리에 선언 됩니다.  
   
--   `M1` calls a method `M2` outside `M1`'s assembly.  
+-   `M1`메서드를 호출 `M2` 외부 `M1`의 어셈블리.  
   
--   `M2`'s assembly does not have the APTCA attribute and, therefore, should not be executed by or on behalf of callers that are partially trusted.  
+-   `M2`어셈블리에 APTCA 특성이 없고, 따라서 실행 하지 않아야 또는 부분적으로 신뢰할 수 있는 호출자를 대신 하 여 합니다.  
   
- A partially trusted caller `X` can call method `M1`, causing `M1` to call `M2`. Because `M2` does not have the APTCA attribute, its immediate caller (`M1`) must satisfy a link demand for full trust; `M1` has full trust and therefore satisfies this check. The security risk is because `X` does not participate in satisfying the link demand that protects `M2` from untrusted callers. Therefore, methods with the APTCA attribute must not call methods that do not have the attribute.  
+ 부분적으로 신뢰할 수 있는 호출자 `X` 메서드를 호출할 수 `M1`이며, `M1` 호출할 `M2`합니다. 때문에 `M2` APTCA 특성이, 직접 호출자 (`M1`) 완전 신뢰에 대 한 링크 요청을 충족 해야 합니다 `M1` 완전 신뢰를 포함 하 고 따라서이 검사를 충족 합니다. 보안 위험 때문에 `X` 만족 보호 하는 링크 요청에 참여 하지 않는 `M2` 신뢰할 수 없는 호출자 로부터 합니다. 따라서 APTCA 특성이 있는 메서드에 특성이 없는 메서드 호출 해서는 안 됩니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- If the APCTA attribute is required, use a demand to protect the method that calls into the full trust assembly. The exact permissions you demand will depend on the functionality exposed by your method. If it is possible, protect the method with a demand for full trust to ensure that the underlying functionality is not exposed to partially trusted callers. If this is not possible, select a set of permissions that effectively protects the exposed functionality. For more information about demands, see [Demands](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48).  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ APCTA 특성이 필요한 경우 완전 신뢰 어셈블리를 호출 하는 메서드를 보호 하는 요청을 사용 합니다. 요구가 메서드에서 노출 하는 기능에 따라 달라 집니다 정확한 권한입니다. 가능한 경우 기본 기능이 부분적으로 신뢰할 수 있는 호출자에 게 노출 되지 않도록 하려면 완전 신뢰에 대 한 요청으로 메서드를 보호 합니다. 없는 경우는 노출 된 기능을 효과적으로 보호 하는 사용 권한 집합을 선택 합니다. 요청에 대 한 자세한 내용은 참조 [요구](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- To safely suppress a warning from this rule, you must ensure that the functionality exposed by your method does not directly or indirectly allow callers to access sensitive information, operations, or resources that can be used in a destructive manner.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를에서 표시 하지 않으려면, 메서드에서 노출 하는 기능이을 직접 또는 간접적으로 허용 하지 호출자가 중요 한 정보, 작업 또는 악용에서 사용할 수 있는 리소스에 액세스 하도록 확인 해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example uses two assemblies and a test application to illustrate the security vulnerability detected by this rule. The first assembly does not have the APTCA attribute and should not be accessible to partially trusted callers (represented by `M2` in the previous discussion).  
+## <a name="example"></a>예제  
+ 다음 예제에서는 두 어셈블리와 테스트 응용 프로그램을 사용 하 여이 규칙으로 검색 하는 보안 문제를 나타냅니다. 첫 번째 어셈블리에 APTCA 특성이 없고 부분적으로 신뢰할 수 있는 호출자에 게 액세스할 수 없습니다 (나타내는 `M2` 이전 설명의).  
   
  [!code-csharp[FxCop.Security.NoAptca#1](../code-quality/codesnippet/CSharp/ca2116-aptca-methods-should-only-call-aptca-methods_1.cs)]  
   
-## <a name="example"></a>Example  
- The second assembly is fully trusted and allows partially trusted callers (represented by `M1` in the previous discussion).  
+## <a name="example"></a>예제  
+ 두 번째 어셈블리는 완전히 신뢰할 수 있는 이며 부분적으로 신뢰할 수 있는 호출자를 허용 합니다. (나타내는 `M1` 이전 설명의).  
   
  [!code-csharp[FxCop.Security.YesAptca#1](../code-quality/codesnippet/CSharp/ca2116-aptca-methods-should-only-call-aptca-methods_2.cs)]  
   
-## <a name="example"></a>Example  
- The test application (represented by `X` in the previous discussion) is partially trusted.  
+## <a name="example"></a>예제  
+ 테스트 응용 프로그램 (나타내는 `X` 이전 설명의) 부분적으로 신뢰할 수 있습니다.  
   
  [!code-csharp[FxCop.Security.TestAptcaMethods#1](../code-quality/codesnippet/CSharp/ca2116-aptca-methods-should-only-call-aptca-methods_3.cs)]  
   
- This example produces the following output.  
+ 이 예제의 결과는 다음과 같습니다.  
   
- **Demand for full trust:Request failed.**  
-**ClassRequiringFullTrust.DoWork was called.**   
-## <a name="related-rules"></a>Related Rules  
- [CA2117: APTCA types should only extend APTCA base types](../code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types.md)  
+ **완전 신뢰: 요청에 대 한 요청에 실패 했습니다.**  
+**ClassRequiringFullTrust.DoWork 호출 되었습니다.**   
+## <a name="related-rules"></a>관련된 규칙  
+ [CA2117: APTCA 형식은 APTCA 기본 형식만 확장해야 합니다.](../code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types.md)  
   
-## <a name="see-also"></a>See Also  
- [Secure Coding Guidelines](/dotnet/standard/security/secure-coding-guidelines)   
- [.NET Framework Assemblies Callable by Partially Trusted Code](http://msdn.microsoft.com/en-us/a417fcd4-d3ca-4884-a308-3a1a080eac8d)   
- [Using Libraries from Partially Trusted Code](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   
- [Demands](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)   
- [Link Demands](/dotnet/framework/misc/link-demands)   
- [Data and Modeling](/dotnet/framework/data/index)
+## <a name="see-also"></a>참고 항목  
+ [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
+ [.NET framework 어셈블리를 호출할 수 부분적으로 신뢰할 수 있는 코드](http://msdn.microsoft.com/en-us/a417fcd4-d3ca-4884-a308-3a1a080eac8d)   
+ [부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   
+ [요구 사항](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)   
+ [링크 요구](/dotnet/framework/misc/link-demands)   
+ [데이터 및 모델링](/dotnet/framework/data/index)
