@@ -1,52 +1,54 @@
 ---
-title: "String.fromCharCode 함수(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "fromCharCode"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "fromCharCodeAt 메서드"
-  - "문자, 유니코드"
+title: "String.fromCharCode 함수 (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: fromCharCode
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- fromCharCodeAt method
+- characters, from Unicode
 ms.assetid: f64120c1-23a7-48ca-8d1c-db3e8856cab4
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: dbcd9062d7da0b73647c1d9eb6cc207af23c3532
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# String.fromCharCode 함수(JavaScript)
+# <a name="stringfromcharcode-function-javascript"></a>String.fromCharCode 함수(JavaScript)
 여러 유니코드 문자 값에서 문자열을 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 String.fromCharCode([code1[, code2[, ...[, codeN]]]])   
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  `String`  
- 필수 요소.  `String` 개체입니다.  
+ 필수 요소. `String` 개체  
   
- `code1`, . . . , `codeN`  
- 선택 사항입니다.  문자열로 변환할 일련의 유니코드 문자 값입니다.  아무 인수도 지정되지 않으면 빈 문자열이 반환됩니다.  
+ `code1`, . 입니다. 입니다. , `codeN`  
+ 선택 사항입니다. 일련의 유니코드 문자 값을 문자열로 변환 합니다. 인수를 제공 하는 경우 결과 빈 문자열입니다.  
   
-## 설명  
- 문자열 인스턴스 대신 `String` 개체에 대해 이 함수를 호출합니다.  
+## <a name="remarks"></a>설명  
+ 이 기능을 호출의 `String` 개체 대신 문자열 인스턴스입니다.  
   
- 다음 예제에서는 이 메서드를 사용하는 방법을 보여 줍니다  
+ 다음 예제에서는이 메서드를 사용 하는 방법을 보여 줍니다.  
   
-```javascript  
+```JavaScript  
 var test = String.fromCharCode(112, 108, 97, 105, 110);  
 document.write(test);  
   
@@ -54,8 +56,8 @@ document.write(test);
   
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
-## 참고 항목  
- [charCodeAt 메서드\(String\)](../../javascript/reference/charcodeat-method-string-javascript.md)
+## <a name="see-also"></a>참고 항목  
+ [charCodeAt 메서드(String)](../../javascript/reference/charcodeat-method-string-javascript.md)

@@ -1,48 +1,48 @@
 ---
-title: "IDebugField::Equal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugField::Equal"
-helpviewer_keywords: 
-  - "IDebugField::Equal 메서드"
+title: IDebugField::Equal | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugField::Equal
+helpviewer_keywords: IDebugField::Equal method
 ms.assetid: 75369fe6-ddd3-497d-80d1-2488e6100e9f
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 30ef8524fbc5d6451bcc302079f769fd05c66185
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugField::Equal
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 메서드는이 필드에 지정 된 필드의 일치 여부를 비교합니다.  
+# <a name="idebugfieldequal"></a>IDebugField::Equal
+이 메서드는이 필드는 지정 된 필드의 일치 여부를 비교합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Equal(   
-   IDebugField* pField  
+```cpp  
+HRESULT Equal(   
+   IDebugField* pField  
 );  
 ```  
   
-```c#  
+```csharp  
 int Equal(  
-   IDebugField pField  
+   IDebugField pField  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pField`  
- \[in\] 이 이와 비교 하는 필드입니다.  
+ [in] 이 이와 비교할 필드입니다.  
   
-## 반환 값  
- 반환 된 필드 같은 경우 `S_OK`.  필드를 서로 다른 경우, 반환 `S_FALSE.` 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 필드 같으면 반환 `S_OK`합니다. 다른 필드의 경우 반환 `S_FALSE.` 그렇지 않은 경우 오류 코드를 반환 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

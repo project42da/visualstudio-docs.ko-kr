@@ -1,27 +1,30 @@
 ---
-title: "IDebugDocumentHelper::CreateDebugDocumentContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: IDebugDocumentHelper::CreateDebugDocumentContext | Microsoft Docs
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugDocumentHelper.CreateDebugDocumentContext
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IDebugDocumentHelper::CreateDebugDocumentContext"
+helpviewer_keywords: IDebugDocumentHelper::CreateDebugDocumentContext
 ms.assetid: aa4ec691-9fb1-4da7-8085-b40d8a062467
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 54d91c4df9d1e478d028e95e5cfc930d69355c54
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugDocumentHelper::CreateDebugDocumentContext
+# <a name="idebugdocumenthelpercreatedebugdocumentcontext"></a>IDebugDocumentHelper::CreateDebugDocumentContext
 새 디버그 문서 컨텍스트를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 HRESULT CreateDebugDocumentContext(  
@@ -31,25 +34,25 @@ HRESULT CreateDebugDocumentContext(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `iCharPos`  
- \[in\] 디버그 문서 내용의 시작 위치입니다.  
+ [in] 디버그 문서 내용의 시작 위치입니다.  
   
  `cChars`  
- \[in\] 컨텍스트에서 문자 수입니다.  
+ [in] 컨텍스트에서 문자의 수입니다.  
   
  `ppddc`  
- \[out\] 새 디버그 문서 컨텍스트입니다.  
+ [out] 새 디버그 문서 컨텍스트에서 가져왔습니다.  
   
-## 반환 값  
- 이 메서드는 `HRESULT`를 반환합니다.  가능한 값 포함 되지만, 다음 테이블에 제한 되지는지 않습니다.  
+## <a name="return-value"></a>반환 값  
+ 이 메서드는 `HRESULT`를 반환합니다. 가능한 값에는 다음 표에 있는 값이 포함되지만, 이에 국한되는 것은 아닙니다.  
   
 |값|설명|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|메서드가 성공했으며|  
   
-## 설명  
- 이 메서드는 호스트를 새 디버그 문서 컨텍스트를 만들 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 새 디버그 문서 컨텍스트를 만들 호스트를 사용 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugDocumentHelper 인터페이스](../../winscript/reference/idebugdocumenthelper-interface.md)

@@ -1,11 +1,10 @@
 ---
-title: 'CA2123: Override link demands should be identical to base | Microsoft Docs'
+title: "CA2123: 재정의 링크 요청과 같아야 따르는 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,58 +14,43 @@ helpviewer_keywords:
 - OverrideLinkDemandsShouldBeIdenticalToBase
 - CA2123
 ms.assetid: 4538ecd5-fc6f-4480-ab00-90b2ce4730db
-caps.latest.revision: 18
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b5ec358a3f42e8b82240e901cdad6a5201c41e7a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3e39d278588d8fbce5bc9a7ee77141a56341e8f9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: Override link demands should be identical to base
+# <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: 재정의 링크 요청은 기본 형식의 링크 요청과 같아야 합니다.
 |||  
 |-|-|  
 |TypeName|OverrideLinkDemandsShouldBeIdenticalToBase|  
 |CheckId|CA2123|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A public or protected method in a public type overrides a method or implements an interface, and does not have the same [Link Demands](/dotnet/framework/misc/link-demands) as the interface or virtual method.  
+## <a name="cause"></a>원인  
+ 공용 형식에서 public 또는 protected 메서드가 메서드를 재정의 하거나 인터페이스를 구현 있고 동일한 갖지 않는 [링크 요청](/dotnet/framework/misc/link-demands) 인터페이스 또는 가상 메서드.  
   
-## <a name="rule-description"></a>Rule Description  
- This rule matches a method to its base method, which is either an interface or a virtual method in another type, and then compares the link demands on each. A violation is reported if either the method or the base method has a link demand and the other does not.  
+## <a name="rule-description"></a>규칙 설명  
+ 이 규칙에서는 메서드를 다른 형식의 인터페이스이거나 가상 메서드인 기본 메서드에 일치시킨 다음 각각에 대해 링크 요청을 비교합니다. 메서드 또는 기본 메서드가 링크 요청이 있는 경우 하지 않으면 위반이 보고 됩니다.  
   
- If this rule is violated, a malicious caller can bypass the link demand merely by calling the unsecured method.  
+ 이 규칙이 위반 되 면 악의적인 호출자가 보안 되지 않은 메서드를 호출 하 여 링크 요청을 우회할 수 있습니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, apply the same link demand to the overide method or implementation. If this is not possible, mark the method with a full demand or remove the attribute altogether.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 재정의 메서드 또는 구현에 동일한 링크 요청을 적용 합니다. 없는 경우에 전체 demand로이 메서드를 표시 하거나 특성을 완전히 제거 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows various violations of this rule.  
+## <a name="example"></a>예제  
+ 다음 예제에서는이 규칙의 다양 한 위반을 보여 줍니다.  
   
  [!code-csharp[FxCop.Security.OverridesAndSecurity#1](../code-quality/codesnippet/CSharp/ca2123-override-link-demands-should-be-identical-to-base_1.cs)]  
   
-## <a name="see-also"></a>See Also  
- [Secure Coding Guidelines](/dotnet/standard/security/secure-coding-guidelines)   
- [Link Demands](/dotnet/framework/misc/link-demands)
+## <a name="see-also"></a>참고 항목  
+ [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
+ [링크 요구](/dotnet/framework/misc/link-demands)

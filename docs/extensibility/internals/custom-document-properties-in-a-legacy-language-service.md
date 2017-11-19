@@ -1,40 +1,42 @@
 ---
 title: "레거시 언어 서비스에서 사용자 지정 문서 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "사용자 지정 문서 속성, 언어 서비스 [관리 되는 패키지 프레임 워크]"
-  - "사용자 지정 문서 속성"
-  - "언어 서비스 [관리 되는 패키지 프레임 워크] 사용자 지정 문서 속성"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom document properties, language services [managed package framework]
+- document properties, custom
+- language services [managed package framework], custom document properties
 ms.assetid: cc714a67-b33e-4440-9203-3c90f648bd9c
-caps.latest.revision: 18
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c82476b9d6fd632ed67acbeeab147743ea16cb40
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 레거시 언어 서비스에서 사용자 지정 문서 속성
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-문서 등록 정보를 표시할 수 있는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]**속성이** 창.   프로그래밍 언어는 일반적으로 개별 소스 파일과 관련 된 등록 정보 없습니다. 그러나 XML 인코딩, 스키마 및 스타일 시트에 영향을 주는 문서 속성을 지원 합니다.  
+# <a name="custom-document-properties-in-a-legacy-language-service"></a>레거시 언어 서비스에서 사용자 지정 문서 속성
+문서 속성에 표시 될 수는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **속성** 창. 프로그래밍 언어 개별 소스 파일과 관련 된 속성이 없는 일반적으로 합니다. 그러나 XML 인코딩, 스키마 및 스타일 시트에 영향을 주는 문서 속성을 지원 합니다.  
   
-## 토론  
- 사용자 지정 문서 속성 언어를 해야 하는 경우 클래스에서 파생 되어야는 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 클래스 및 파생된 클래스에 필요한 속성을 구현 합니다.  
+## <a name="discussion"></a>토론  
+ 클래스를 파생 해야 해당 언어는 사용자 지정 문서 속성을 필요한 경우는 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 클래스 및 파생된 클래스에서 필요한 속성을 구현 합니다.  
   
- 뿐만 아니라, 문서 등록 정보는 일반적으로 소스 파일에 저장 됩니다.  이 언어 서비스 속성 정보를 표시 하려면 소스 파일에서 구문 분석할 필요는  **속성** 창 문서 등록 정보에 변경 사항이 있을 경우 원본 파일을 업데이트 하 고 있는  **속성** 창.  
+ 또한 문서 속성은 일반적으로 소스 파일 자체에 저장 됩니다. 그러려면에 표시할 소스 파일에서 속성 정보를 구문 분석은 언어 서비스는 **속성** 창 및 문서 속성을 변경 하는 경우 소스 파일을 업데이트 하는  **속성** 창.  
   
-## DocumentProperties 클래스를 사용자 지정합니다.  
- 사용자 지정 문서 속성을 지원 하기 위해 클래스에서 파생 되어야는 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 클래스 및 필요한 만큼 속성을 추가 합니다.  도를 구성 하는 사용자 특성을 제공 해야 합니다을  **속성** 창 표시 합니다.  속성이 있는 경우에은 `get` 접근자를 읽기 전용으로 표시 되는  **속성** 창.  속성이 모두 있을 경우 `get` 및 `set` 접근자 속성 또한 업데이트 될 수에  **속성이** 창.  
+## <a name="customizing-the-documentproperties-class"></a>DocumentProperties 클래스 사용자 지정  
+ 를 지원 하기 위해 사용자 지정 문서 속성에서 클래스를 파생 해야 합니다는 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 클래스 하 고 필요한 만큼 많은 속성을 추가 합니다. 또한에서 구성 하는 사용자 특성을 제공 해야는 **속성** 창 표시 합니다. 가 속성이 있는 경우는 `get` 접근자에 읽기 전용으로 표시 되는 **속성** 창. 둘 다가 속성이 있는 경우 `get` 및 `set` 접근자 속성을 업데이트할 수도 있습니다에 **속성** 창.  
   
-### 예제  
- 다음은 예제 클래스에서 파생 된 <xref:Microsoft.VisualStudio.Package.DocumentProperties>, 두 속성, 파일 이름 및 설명을 표시 합니다.  속성이 업데이트 될 때, 사용자 지정 방법에는 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스를 호출할 속성은 소스 파일에 쓸 수 있습니다.  
+### <a name="example"></a>예제  
+ 여기에서 파생 된 클래스는 예제는 <xref:Microsoft.VisualStudio.Package.DocumentProperties>, 파일 이름 및 설명의 두 가지 속성이 표시 됩니다. 속성이 업데이트 되는 경우,에 사용자 지정 메서드는 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스 속성 소스 파일을 쓸 하기 위해 호출 됩니다.  
   
-```c#  
+```csharp  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -121,12 +123,12 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## 사용자 지정 DocumentProperties 클래스 인스턴스화  
- 사용자 지정 문서 속성 클래스를 인스턴스화하려면에서는 재정의 해야는 <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> 버전의 메서드에서 <xref:Microsoft.VisualStudio.Package.LanguageService> 클래스의 단일 인스턴스를 반환 합니다를 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 클래스입니다.  
+## <a name="instantiating-the-custom-documentproperties-class"></a>사용자 지정 DocumentProperties 클래스 인스턴스화  
+ 사용자 지정 문서 속성 클래스를 인스턴스화할 때 재정의 해야 합니다는 <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> 사용 중인 버전에서 메서드는 <xref:Microsoft.VisualStudio.Package.LanguageService> 의 단일 인스턴스를 반환 하기 프로그램 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 클래스입니다.  
   
-### 예제  
+### <a name="example"></a>예제  
   
-```c#  
+```csharp  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -148,22 +150,22 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## 소스 파일에서 속성  
- 문서 속성은 일반적으로 소스 파일에 특정 하기 때문에 값 소스 파일에 저장 됩니다.  이 속성을 정의 하는 스캐너 또는 언어 파서 지원을 해야 합니다.  예를 들어, 속성은 XML 문서의 루트 노드에 저장 됩니다.  경우 루트 노드에 값을 수정에  **속성이** 창 값을 변경 하 고 루트 노드 편집기에서 업데이트 됩니다.  
+## <a name="properties-in-the-source-file"></a>소스 파일의 속성  
+ 문서 속성은 소스 파일에 일반적으로 특정, 이후 값에서 소스 파일 자체에 저장 됩니다. 이 언어 파서 또는 이러한 속성을 정의 하는 스캐너의 지원이 필요 합니다. 예를 들어 XML 문서 속성은 루트 노드에 저장 됩니다. 루트 노드에서 값 때 수정 됩니다는 **속성** 창 값이 변경 되 고 편집기에서 루트 노드가 업데이트 됩니다.  
   
-### 예제  
- 이 예제에서는 속성을 "파일 이름" 및 소스 파일의 처음 두 줄에 "설명으로는 특별 한 설명 머리글에 포함"을 저장 합니다.  
+### <a name="example"></a>예제  
+ 이 예제에서는 "Filename" 및 "Description" 소스 파일의 처음 두 줄의 특수 주석 헤더에 포함 된으로 속성을 저장 합니다.  
   
 ```  
 //!Filename = file.testext  
 //!Description = A sample file  
 ```  
   
- 이 예제 가져오고 사용자가 원본 파일을 직접 수정 하는 경우 속성을 업데이트 하는 방법을 함께 소스 파일의 첫 두 줄에서 문서 속성을 설정 하는 데 필요한 두 가지 메서드를 보여 줍니다.  `SetPropertyValue` 다음은 같은 예제 메서드가 호출에서 하나는 `TestDocumentProperties` 클래스는 "DocumentProperties 클래스를 사용자 지정" 섹션에 나와 있는 것 처럼.  
+ 이 예제를 가져오고 사용자에서 소스 파일을 직접 수정 하는 경우의 속성이 업데이트 되는 방법에 소스 파일의 처음 두 줄에서 문서 속성을 설정 하는 데 필요한 두 개의 메서드를 보여줍니다. `SetPropertyValue` 여기에 표시 된 동일한 예제에서 하나에서 메서드 호출의 `TestDocumentProperties` "DocumentProperties 클래스 사용자 지정" 섹션에 나와 있는 것 처럼 클래스.  
   
- 처음 두 줄의 토큰의 형식을 확인 하려면 스캐너를 추가 하는 예제입니다.  이 예제는 설명을 위한 것입니다.  좀 더 일반적인 방법은이 상황을 어떻게 구문 분석 트리는 트리의 각 노드에 특정 토큰에 대 한 정보가 들어 있는 라고에 원본 파일을 구문 분석할 것입니다.  루트 노드는 문서 속성이 포함 됩니다.  
+ 이 예제에서는 처음 두 줄에서 토큰의 유형을 결정 하도록 스캐너를 사용 합니다. 이 예제는 설명 목적 으로만. 이 상황을 섞어 구문 분석 트리는 트리의 각 노드는 특정 토큰에 대 한 정보에 포함 된 소스 파일 구문 분석 하는 보다 일반적인 방법은입니다. 루트 노드에 문서 속성을 포함 됩니다.  
   
-```c#  
+```csharp  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -398,5 +400,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [레거시 언어 서비스 기능](../../extensibility/internals/legacy-language-service-features1.md)

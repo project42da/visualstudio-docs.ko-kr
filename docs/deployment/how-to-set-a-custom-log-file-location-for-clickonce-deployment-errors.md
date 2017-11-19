@@ -1,52 +1,53 @@
 ---
-title: "방법: ClickOnce 배포 오류에 대한 사용자 지정 로그 파일 위치 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 배포, 오류 로깅"
-  - "ClickOnce 배포, 문제 해결"
-  - "ClickOnce 배포 문제 해결"
+title: "방법: ClickOnce 배포 오류에 대 한 사용자 지정 로그 파일 위치를 설정 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- troubleshooting ClickOnce deployments
+- ClickOnce deployment, troubleshooting
+- ClickOnce deployment, error logging
 ms.assetid: 77424414-7f0e-4b99-94bb-ea130de92d09
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 4a8ed7ebbd3fc2fc35e9145509ebf335652c4bbd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: ClickOnce 배포 오류에 대한 사용자 지정 로그 파일 위치 설정
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]에서는 모든 배포의 활성화 로그 파일을 유지 관리합니다.  이러한 로그에는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포의 설치 및 초기화와 관련된 오류가 기록됩니다.  기본적으로 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]에서는 배포가 활성화될 때마다 로그 파일이 하나씩 만들어집니다.  이러한 로그 파일은 임시 인터넷 파일 폴더에 저장됩니다.  활성화 오류가 발생할 때 나타나는 오류 대화 상자에서 **자세히**를 클릭하면 배포에 대한 로그 파일이 표시됩니다.  
+# <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>방법: ClickOnce 배포 오류에 대한 사용자 지정 로그 파일 위치 설정
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]모든 배포에 대 한 정품 인증 로그 파일을 유지 관리합니다. 이러한 로그 문서를 설치 하 고 초기화 하는 모든 오류는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 합니다. 기본적으로 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 각 배포 활성화에 대해 하나의 로그 파일을 만듭니다. 이러한 로그 파일 임시 인터넷 파일 폴더에 저장합니다. 배포에 대 한 로그 파일 활성화 오류가 발생 하 고 사용자가 클릭할 때 사용자에 게 표시 됩니다 **세부 정보** 결과 오류 대화 상자에서 합니다.  
   
- 레지스트리 편집기\(**regedit.exe**\)에서 사용자 지정 로그 파일 경로를 설정하여 특정 클라이언트에 대해 이 동작을 변경할 수 있습니다.  이 경우 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]에서는 모든 배포에 대한 활성화 성공 및 실패 정보를 한 파일에 기록합니다.  
+ 레지스트리 편집기를 사용 하 여 특정 클라이언트에 대 한이 동작을 변경할 수 있습니다 (**regedit.exe**)를 사용자 지정 로그 파일 경로 설정 합니다. 이 경우 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 활성화 성공 및 실패 한 모든 배포에 대 한 단일 파일에 기록 합니다.  
   
 > [!CAUTION]
->  레지스트리 편집기를 잘못 사용하면 심각한 문제가 발생하여 운영 체제를 다시 설치해야 할 수도 있습니다.  레지스트리 편집기를 사용할 때는 주의하십시오.  
+>  레지스트리 편집기를 잘못 사용 하면 운영 체제를 다시 설치 해야 하는 심각한 문제가 발생할 수 있습니다. 레지스트리 편집기를 사용할 때는 주의하세요.  
   
 > [!NOTE]
->  로그 파일이 너무 커지지 않도록 로그 파일을 가끔씩 자르거나 삭제해야 합니다.  
+>  자르거나에 너무 커지지 않도록 경우에 따라 로그 파일을 삭제 해야 합니다.  
   
- 다음 절차에서는 단일 클라이언트에 대해 사용자 지정 로그 파일의 위치를 설정하는 방법을 설명합니다.  
+ 다음 절차에는 단일 클라이언트에 대 한 사용자 지정 로그 파일 위치를 설정 하는 방법을 설명 합니다.  
   
-### 사용자 지정 로그 파일의 위치를 설정하려면  
+### <a name="to-set-a-custom-log-file-location"></a>사용자 지정 로그 파일 위치를 설정 하려면  
   
-1.  **Regedit.exe**를 엽니다.  
+1.  열기 **Regedit.exe**합니다.  
   
-2.  `HKCU\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment` 노드로 이동합니다.  
+2.  노드로 이동 `HKCU\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment`합니다.  
   
-3.  문자열 값 `LogFilePath`를 기본 사용자 지정 로그 위치의 전체 경로와 파일 이름으로 설정합니다.  
+3.  문자열 값으로 설정 `LogFilePath` 를 전체 경로 기본 사용자 지정 로그 위치의 파일 이름입니다.  
   
-     사용자가 쓸 수 있는 권한이 있는 디렉터리 내의 경로로 설정해야 합니다.  예를 들어 Windows Vista에서는 C:\\Users\\\<username\>\\Documents\\Logs\\ClickOnce\\installation.log 폴더 구조를 만들고 `LogFilePath`를 이 폴더 구조로 설정합니다.  
+     이 위치는 사용자 쓰기 액세스 권한을 있는 디렉터리에 있어야 합니다. 예를 들어 Windows Vista에서 다음 폴더 구조를 만들고 설정 `LogFilePath` C:\Users를\\< 사용자 이름\>\Documents\Logs\ClickOnce\installation.log 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ClickOnce 배포 문제 해결](../deployment/troubleshooting-clickonce-deployments.md)

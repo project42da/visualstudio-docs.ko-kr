@@ -1,29 +1,30 @@
 ---
-title: "CA1700: 열거형 값의 이름을 &#39;Reserved&#39;로 지정하지 마십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1700"
-  - "DoNotNameEnumValuesReserved"
-helpviewer_keywords: 
-  - "DoNotNameEnumValuesReserved"
-  - "CA1700"
+title: "CA1700: 열거형 값 &#39; 이름을 바꾸지 마십시오 예약 된 &#39; | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1700
+- DoNotNameEnumValuesReserved
+helpviewer_keywords:
+- DoNotNameEnumValuesReserved
+- CA1700
 ms.assetid: 7a7e01c3-ae7d-4c82-a646-91b58864a749
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 2acfafaec213f619dbe8c3077ab5cc72bdfde88d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA1700: 열거형 값의 이름을 &#39;Reserved&#39;로 지정하지 마십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: 열거형 값 &#39; 이름을 바꾸지 마십시오 예약 된 &#39;
 |||  
 |-|-|  
 |TypeName|DoNotNameEnumValuesReserved|  
@@ -31,29 +32,29 @@ caps.handback.revision: 17
 |범주|Microsoft.Naming|  
 |변경 수준|주요 변경|  
   
-## 원인  
- 열거형 멤버 이름에 "reserved"라는 단어가 포함되어 있습니다.  
+## <a name="cause"></a>원인  
+ 열거형 멤버의 이름에 "reserved" 라는 단어가 포함 되어 있습니다.  
   
-## 규칙 설명  
- 이 규칙에서는 "reserved"라는 단어가 포함된 이름을 갖는 열거형 멤버가 현재 사용되지는 않지만 이후 버전에서 이름이 바뀌거나 제거될 자리 표시자라고 가정합니다.  멤버의 이름을 바꾸거나 멤버를 제거하는 것은 주요 변경에 해당합니다.  사용자가 이름에 "reserved"가 포함되었다고 해서 해당 멤버를 무시하거나 설명서를 읽고 이를 따를 것이라고 기대하지는 마십시오.  또한 예약된 멤버는 개체 브라우저 및 스마트 통합 개발 환경에 표시되기 때문에 사용자는 어떤 멤버가 실제로 사용되는지 혼란스러울 수 있습니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 이 규칙에서는 "reserved"라는 단어가 포함된 이름을 갖는 열거형 멤버가 현재 사용되지는 않지만 이후 버전에서 이름이 바뀌거나 제거될 자리 표시자라고 가정합니다. 멤버의 이름을 바꾸거나 멤버를 제거하는 것은 주요 변경에 해당합니다. 방금 이름에 "예약 됨" 때문에 사용자가을 읽거나 설명서 준수할 멤버를 무시 하는 사용자를 예상할 수 없습니다. 또한 예약 된 멤버 개체 브라우저 및 스마트 통합된 개발 환경에 나타나므로 대 한 멤버는 실제로 사용 중인 혼동을 울 수 있습니다.  
   
- 예약된 멤버를 사용하는 대신 이후 버전에서는 새로운 멤버를 열거형에 추가합니다.  대부분의 경우 새 멤버를 추가하는 것은 원래 멤버의 값을 변경시키지만 않으면 주요 변경에 해당되지 않습니다.  
+ 예약된 된 멤버를 사용 하지 않고 나중 버전에서 열거형에 새 멤버를 추가 합니다. 대부분의 경우에서 새 멤버의 추가 않습니다는 주요 변경 사항이으로 추가 변경 하려면 원래 멤버 값의 발생 하지 않습니다.  
   
- 원래 멤버의 값이 원래 값으로 유지되는 경우에 멤버 추가가 주요 변경에 해당되는 경우는 드뭅니다.  기본적으로 전체 멤버 목록을 포함하고 기본 case에 예외를 throw하는 반환 값에 대해 `switch`\([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서는 `Select`\) 문을 사용하는 호출자를 중단하지 않고서는 기존 코드 경로에서 새 멤버를 반환할 수 없습니다.  두 번째로 고려해야 할 점은 클라이언트 코드가 <xref:System.Enum.IsDefined%2A?displayProperty=fullName> 같은 리플렉션 메서드에서 변경된 동작을 처리하지 못할 수 있다는 것입니다.  따라서 기존 메서드에서 새 멤버를 반환해야 하거나 제한된 리플렉션 사용으로 인해 알려진 응용 프로그램 비호환성 문제가 있을 경우 유일한 해결책은 다음과 같습니다.  
+ 제한 된 경우에에서는 멤버의 추가 원래 멤버의 원래 값을 유지 하는 경우에 주요 변경입니다. 기본적으로, 새 멤버 반환할 수 없는 기존 코드 경로에서 사용 하는 호출자를 중단시 키 지 않고도 `switch` (`Select` 에 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) 문을 전체 멤버 목록을 포함 하 고에서 예외를 throw 하는 반환 값에는 기본 환경입니다. 클라이언트 코드 수 처리 하지 리플렉션 메서드에서 동작의 변화와 같은 크게 중요 하지는 <xref:System.Enum.IsDefined%2A?displayProperty=fullName>합니다. 따라서 기존 메서드에서 반환 될 새 멤버의 또는 알려진된 응용 프로그램 비 호환성 리플렉션 사용으로 인해 발생 하는 경우를 유일한 해결책은:  
   
-1.  원래 멤버와 새 멤버를 포함하는 새 열거형을 추가합니다.  
+1.  원래 및 새 멤버를 포함 하는 새 열거형을 추가 합니다.  
   
-2.  원래 열거형을 <xref:System.ObsoleteAttribute?displayProperty=fullName> 특성으로 표시합니다.  
+2.  표시 된 원래 열거형은 <xref:System.ObsoleteAttribute?displayProperty=fullName> 특성입니다.  
   
- 원래 열거형을 노출하는, 외부에서 볼 수 있는 형식이나 멤버에 대해서도 이와 같은 절차를 따르십시오.  
+ 모든 외부에서 볼 수 있는 형식 또는 원래 열거형을 노출 하는 멤버에 대해 동일한 절차를 따릅니다.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 해당 멤버를 제거하거나 멤버의 이름을 바꿉니다.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 제거 하거나 멤버 이름을 바꿉니다.  
   
-## 경고를 표시하지 않는 경우  
- 이전에 제공된 라이브러리의 경우 또는 멤버가 현재 사용되는 경우에는 이 규칙에서 경고를 표시하지 않아도 안전합니다.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 현재 사용 되는 멤버에 대해 또는 이전에 제공 된 라이브러리에 대 한이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## 관련 규칙  
+## <a name="related-rules"></a>관련된 규칙  
  [CA2217: 열거형을 FlagsAttribute로 표시하지 마십시오.](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)  
   
  [CA1712: 열거형 값에 형식 이름을 접두사로 사용하지 마십시오.](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)  

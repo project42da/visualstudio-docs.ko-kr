@@ -1,52 +1,51 @@
 ---
-title: "IDiaStackWalker::getEnumFrames | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalker2::getEnumFrames 메서드"
+title: IDiaStackWalker::getEnumFrames | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalker2::getEnumFrames method
 ms.assetid: f9f09729-4c34-441c-989c-e0b7339ee32c
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 05c588350d4a378cfea650fb97582e37e74015fe
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalker::getEnumFrames
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-X86 플랫폼은 스택 프레임 열거자를 검색합니다.  
+# <a name="idiastackwalkergetenumframes"></a>IDiaStackWalker::getEnumFrames
+X86에 대 한 스택 프레임 열거자를 검색 플랫폼입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT getEnumFrames(   
-   IDiaStackWalkHelper*   pHelper,  
-   IDiaEnumStackFrames**  ppEnum  
+```C++  
+HRESULT getEnumFrames(   
+   IDiaStackWalkHelper*   pHelper,  
+   IDiaEnumStackFrames**  ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pHelper`  
- \[in\] 도우미 [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) 개체입니다.  
+ [in] 도우미 [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) 개체입니다.  
   
  `ppEnum`  
- \[out\] 반환 된 [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) 목록을 포함 하는 개체 [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) 개체입니다.  
+ [out] 반환 된 [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) 의 목록을 포함 하는 개체 [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) 개체입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 호출 스택 프레임은 다른 플랫폼에서 얻을 수 있는 [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) 메서드.  
+## <a name="remarks"></a>설명  
+ 호출 스택 프레임 목록에 다른 플랫폼을 가져오려면는 [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) 메서드.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)   
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)   

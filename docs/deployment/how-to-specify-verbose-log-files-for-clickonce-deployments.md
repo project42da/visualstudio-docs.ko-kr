@@ -1,46 +1,47 @@
 ---
-title: "방법: ClickOnce 배포에 대한 자세한 로그 파일 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 배포, 기록"
-  - "로그, ClickOnce 배포"
+title: "방법: ClickOnce 배포에 대 한 자세한 로그 파일을 지정 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- logs, ClickOnce deployment
+- ClickOnce deployment, logging
 ms.assetid: 0807a28d-2e40-4a51-ab10-308d808ded6b
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 2fccf1b0c9d7a67ca1eeb6058c1294cea2f2005a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: ClickOnce 배포에 대한 자세한 로그 파일 지정
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]에서는 모든 배포의 작업 로그 파일을 유지 관리합니다.  이러한 로그에는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포의 설치, 초기화, 업데이트 및 제거와 관련된 정보가 기록됩니다.  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]에서 이러한 로그 파일에 쓰는 정보를 늘리려면 레지스트리 편집기\(**regedit.exe**\)를 사용하여 자세한 정도를 지정합니다.  
+# <a name="how-to-specify-verbose-log-files-for-clickonce-deployments"></a>방법: ClickOnce 배포에 대한 자세한 로그 파일 지정
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]모든 배포에 대 한 활동 로그 파일을 유지 관리합니다. 이러한 로그를 설치, 초기화, 업데이트 및 제거와 관련 된 정보가 문서는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 합니다. 세부 정보를 높이기 위해 하는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 레지스트리 편집기를 사용 하 여 이러한 로그 파일에 대 한 쓰기 (**regedit.exe**) 자세한 정도 수준을 지정 합니다.  
   
 > [!CAUTION]
->  레지스트리 편집기를 잘못 사용하면 심각한 문제가 발생하여 운영 체제를 다시 설치해야 할 수도 있습니다.  레지스트리 편집기를 사용할 때는 주의하십시오.  
+>  레지스트리 편집기를 잘못 사용 하면 운영 체제를 다시 설치 해야 하는 심각한 문제가 발생할 수 있습니다. 레지스트리 편집기를 사용할 때는 주의하세요.  
   
- 다음 절차에서는 현재 사용자에 대한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 로그 파일의 자세한 정도를 지정하는 방법을 보여 줍니다.  자세한 정도를 낮추려면 이 레지스트리 값을 제거합니다.  
+ 다음 절차에 대 한 자세한 정도 지정 하는 방법에 설명 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 로그 파일에서 현재 사용자입니다. 세부 정보 표시 수준의 줄이기 위해이 레지스트리 값을 제거 합니다.  
   
-### 자세한 로그 파일을 지정하려면  
+### <a name="to-specify-verbose-log-files"></a>자세한 로그 파일을 지정 하려면  
   
-1.  **Regedit.exe**를 엽니다.  
+1.  열기 **Regedit.exe**합니다.  
   
-2.  `HKEY_CURRENT_USER\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment` 노드로 이동합니다.  
+2.  노드로 이동 `HKEY_CURRENT_USER\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment`합니다.  
   
-3.  필요한 경우 `LogVerbosityLevel`이라는 새 문자열 값을 만듭니다.  
+3.  필요한 경우 라는 새 문자열 값을 만들고 `LogVerbosityLevel`합니다.  
   
-4.  `LogVerbosityLevel` 값을 `1`로 설정합니다.  
+4.  설정의 `LogVerbosityLevel` 값을 `1`합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ClickOnce 배포 문제 해결](../deployment/troubleshooting-clickonce-deployments.md)

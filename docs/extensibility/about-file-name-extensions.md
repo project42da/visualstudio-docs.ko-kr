@@ -1,30 +1,32 @@
 ---
 title: "파일 이름 확장명에 대 한 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "파일 확장명"
-  - "파일 이름 확장명"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file extensions
+- file name extensions
 ms.assetid: 99f4f9ff-fb84-4258-9787-6890f308a57f
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4aba03fd68fc5e0e68dbf13887de0c25094fa951
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 파일 이름 확장명에 대 한
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-있는 Vspackage의 파일 확장명을 등록 하면 해당 버전으로 연결 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  이 버전의 보다 중요 한 경우입니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 컴퓨터에 설치 되어 있습니다.  
+# <a name="about-file-name-extensions"></a>파일 이름 확장명에 대 한
+버전과 연결 하는 VSPackage의 파일 확장명을 등록 하면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 이 중요 한 경우 두 개 이상의 한 버전의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 컴퓨터에 설치 합니다.  
   
- Vspackages에 대 한 파일 확장명 연결 된 프로그래밍 식별자 \(ProgID\)를 가리키는 기본값은 HKEY\_CLASSES\_ROOT 키 아래에 등록 됩니다.  
+ Vspackage에 대 한 파일 확장명은 연결 된 ProgID (프로그래밍 식별자)를 가리키는 기본값을 사용 하 여 HKEY_CLASSES_ROOT 키 아래에서 등록 됩니다.  
   
- .Vcproj 파일 확장명에 대 한 등록 정보의 예는 다음과 같습니다.  
+ 다음은.vcproj 파일 확장명에 대 한 등록 정보의 예입니다.  
   
 ```  
 HKEY_CLASSES_ROOT\  
@@ -32,10 +34,10 @@ HKEY_CLASSES_ROOT\
       (default)=" VisualStudio.vcproj.8.0"   
 ```  
   
- 관련 된 파일을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 버전의 Progid가 있어야 합니다 등 `VisualStudio.vcproj.8.0`, 병렬 설치 제품 버전 간에 파일 확장명 연결을 유지 하는 제품 수 있도록 합니다.  버전별 ProgID 또한 열기, 편집, 등 고, 덮어쓰기 또는 다른 응용 프로그램이 나 버전으로 덮어쓰는 걱정 없이 표준 동사를 사용할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+ 연결 된 파일 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 버전이 지정 된 ProgID와 같은 있어야 `VisualStudio.vcproj.8.0`, 제품 버전 간에 파일 확장명 연결을 유지 하기 위해 제품의 함께-설치를 허용 하도록 합니다. 버전 별로 ProgID 또한 열려 편집 등과 같은 등의 다른 응용 프로그램 또는 버전의에서 덮어쓰이지 우려 없이 표준 동사를 사용할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
   
- 특정 한 경우에 파일 확장명과 연관 된 ProgID 변경할 수 없습니다.  예를 들어.htm 파일 확장명에 대 한 ProgID \(progid \= htmlfile\) 다양 한 운영 체제에서 코딩 된 어렵습니다 고 널리 알려진 및 사용에 관련 하 여.htm 및.html 파일입니다.  
+ 경우에 따라 파일 확장명과 연결 된 ProgID 변경할 수 없습니다. 예를 들어.htm 파일 확장명에 대 한 ProgID (progid htmlfile =) 하드 코딩 다양 한 운영 체제에서 자주 이며.htm 및.html 파일 널리 알려진 및에서 사용 되는 연결 합니다.  
   
-## 참고 항목  
- [병렬 배포에 대 한 파일 이름 확장명을 등록 하는 중입니다.](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)   
- [파일 이름 확장명에 대 한 파일 처리기 지정](../extensibility/specifying-file-handlers-for-file-name-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [병렬 배포를 위한 파일 이름 확장명을 등록 하는 중입니다.](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)   
+ [파일 이름 확장명에 대한 파일 처리기 지정](../extensibility/specifying-file-handlers-for-file-name-extensions.md)

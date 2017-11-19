@@ -19,30 +19,15 @@ helpviewer_keywords:
 - MSBuild, dependency diagrams
 - MSBuild, validating code
 ms.assetid: 70cbe55d-4b33-4355-b0a7-88c770a6f75c
-caps.latest.revision: 82
+caps.latest.revision: "82"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
-ms.openlocfilehash: 53c623ce7ab7126c22aaab856a439862252a5d56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: c6c5954cdb4979ede5e43d2052801ca399f128fd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>종속성 다이어그램으로 코드 유효성 검사
 
@@ -72,7 +57,7 @@ ms.lasthandoff: 04/04/2017
   
 -   포함 된 솔루션을 모델링 프로젝트 종속성 다이어그램을 포함 합니다. 이 종속성 다이어그램의 유효성을 검사 하려는 Visual C#.NET 또는 Visual Basic.NET 프로젝트의 아티팩트에 연결 되어야 합니다. 참조 [사용자 코드에서 종속성 다이어그램을 만들](../modeling/create-layer-diagrams-from-your-code.md)합니다.  
   
- 이 기능을 지 원하는 Visual Studio의 버전을 보려면 참조 [아키텍처 및 모델링 도구에 대 한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)합니다.  
+ 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
   
  Visual Studio에서 열기 종속성 다이어그램에서 수동으로 또는 명령 프롬프트에서 코드를 확인할 수 있습니다. 또한 로컬 빌드 또는 Team Foundation Build를 실행할 때 자동으로 코드 유효성 검사를 실행할 수도 있습니다. 참조 [Channel 9 비디오: 디자인 종속성 다이어그램을 사용 하 여 아키텍처 및 유효성 검사](http://go.microsoft.com/fwlink/?LinkID=252073)합니다.  
   
@@ -168,7 +153,7 @@ ms.lasthandoff: 04/04/2017
   
          - 또는  
   
-         다음 실행 및 종속성 다이어그램을 포함 하는 모델링 프로젝트를 포함 해야 하는 솔루션 폴더를 찾아 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 다음 사용자 지정 속성과 함께:  
+         다음 실행 및 종속성 다이어그램이 포함 된 모델링 프로젝트를 포함 해야 하는 솔루션 폴더를 찾아 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 다음 사용자 지정 속성과 함께:  
   
         ```  
         msbuild /p:ValidateArchitecture=true  
@@ -232,7 +217,7 @@ ms.lasthandoff: 04/04/2017
   
      `/p:ValidateArchitecture=true`  
   
- 유효성 검사 오류에 대 한 자세한 내용은 참조 [레이어 유효성 검사 오류 이해 및 해결](#UnderstandingValidationErrors)합니다. [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]에 대한 자세한 내용은 다음을 참조하세요.  
+ 유효성 검사 오류에 대 한 자세한 내용은 참조 [레이어 유효성 검사 오류 이해 및 해결](#UnderstandingValidationErrors)합니다. [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]에 대한 자세한 내용은 다음을 참조하십시오.  
   
 -   [응용 프로그램 빌드](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)  
   
@@ -240,14 +225,14 @@ ms.lasthandoff: 04/04/2017
   
 -   [UpgradeTemplate.xaml을 기반으로 하는 레거시 빌드 수정](http://msdn.microsoft.com/Library/ee1a8259-1dd1-4a10-9563-66c5446ef41c)  
   
--   [빌드 프로세스 템플릿을 사용자 지정](http://msdn.microsoft.com/Library/b94c58f2-ae6f-4245-bedb-82cd114f6039)  
+-   [빌드 프로세스 템플릿 사용자 지정](http://msdn.microsoft.com/Library/b94c58f2-ae6f-4245-bedb-82cd114f6039)  
   
 -   [실행 중인 빌드의 진행률 모니터링](http://msdn.microsoft.com/Library/e51e3bad-2d1d-4b7b-bfcc-c43439c6c8ef)  
   
 ##  <a name="TroubleshootingValidation"></a>레이어 유효성 검사 문제 해결  
  다음 표에서는 레이어 유효성 검사 문제와 해결 방법에 대해 설명합니다. 이 문제는 코드와 디자인 간의 충돌로 인해 발생하는 오류와 다릅니다. 이러한 오류에 대 한 자세한 내용은 참조 [레이어 유효성 검사 오류 이해 및 해결](#UnderstandingValidationErrors)합니다.  
   
-|**문제**|**가능한 원인**|**해결 방법**|  
+|**문제**|**가능한 원인**|**해결**|  
 |---------------|------------------------|--------------------|  
 |유효성 검사 오류가 예상대로 발생하지 않습니다.|유효성 검사 하는 솔루션 탐색기에서 다른 종속성 다이어그램에서 복사한 같은 모델링 프로젝트에 종속성 다이어그램에서 작동 하지 않습니다. 이러한 방식으로 복사 하는 종속성 다이어그램은 원래 종속성 다이어그램과 동일한 참조를 포함 합니다.|모델링 프로젝트에 새 종속성 다이어그램을 추가 합니다.<br /><br /> 소스 종속성 다이어그램에서 새 다이어그램으로 요소를 복사 합니다.|  
   
@@ -267,7 +252,7 @@ ms.lasthandoff: 04/04/2017
 |*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* 종속성 다이어그램의 레이어와 연결 된 아티팩트입니다.<br /><br /> *ArtifactTypeN* 유형의 *ArtifactN*와 같은 한 **클래스** 또는 **메서드**, 예:<br /><br /> MySolution.MyProject.MyClass.MyMethod(메서드)|  
 |*NamespaceNameN*|네임스페이스의 이름입니다.|  
 |*LayerNameN*|종속성 다이어그램에서 계층의 이름입니다.|  
-|*DependencyType*|종속성 관계 유형을 *Artifact1* 및 *Artifact2*합니다. 예를 들어 *Artifact1* 가 **호출** 관계가 *Artifact2*합니다.|  
+|*DependencyType*|종속성 관계 유형을 *Artifact1* 및 *Artifact2*합니다. 예를 들어 *Artifact1* 에 **호출** 관계가 *Artifact2*합니다.|  
   
 |**오류 구문**|**오류 설명**|  
 |----------------------|---------------------------|  
@@ -282,4 +267,3 @@ ms.lasthandoff: 04/04/2017
 ## <a name="see-also"></a>참고 항목  
  [개발 하는 동안 시스템 유효성 검사](../modeling/validate-your-system-during-development.md)   
  [비디오: 실시간으로 아키텍처 종속성 유효성 검사](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)   
-

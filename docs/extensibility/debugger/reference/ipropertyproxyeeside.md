@@ -4,38 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IPropertyProxyEESide
-helpviewer_keywords:
-- IPropertyProxyEESide interface
+f1_keywords: IPropertyProxyEESide
+helpviewer_keywords: IPropertyProxyEESide interface
 ms.assetid: cf227cf8-39d9-4758-8f7e-a697aebb1926
-caps.latest.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: c22154a77221bd45031428a158bc8060b89f93ef
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: f8e1a7e91156074b4cc4ae8925853d532deec203
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="ipropertyproxyeeside"></a>IPropertyProxyEESide
 이 인터페이스는 연결된 된 개체에 데이터를 보려는 메서드를 제공 합니다. 이 인터페이스는 형식 시각화 도우미에 대 한 지원의 일부입니다.  
@@ -64,7 +47,7 @@ IPropertyProxyEESide : IUnknown
 |[InPlaceUpdateObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)|기존 데이터 저장소에 대 한 참조를 만듭니다.|  
 |[ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)|이 개체를 포함 하는 어셈블리의 컨텍스트에서 특정 어셈블리에 대 한 정보를 검색 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  형식 시각화 도우미는이 인터페이스의 일부인 개체와 관련 된 값에 액세스 하려면이 인터페이스를 사용 합니다. 통해 데이터 액세스는 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) 데이터의 읽기 전용 보기를 제공 하는 인터페이스입니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -1,61 +1,61 @@
 ---
-title: "IDebugClassField::EnumConstructors | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugClassField::EnumConstructors"
-helpviewer_keywords: 
-  - "IDebugClassField::EnumConstructors 메서드"
+title: IDebugClassField::EnumConstructors | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugClassField::EnumConstructors
+helpviewer_keywords: IDebugClassField::EnumConstructors method
 ms.assetid: 66a250b2-75a0-45aa-8d58-40f91cc4bf7b
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 24ae27acb2dd78b086a8b94e28c3de705cd710ee
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugClassField::EnumConstructors
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 클래스를 생성자에 대 한 열거자를 만듭니다.  
+# <a name="idebugclassfieldenumconstructors"></a>IDebugClassField::EnumConstructors
+이 클래스의 생성자에 대 한 열거자를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT EnumConstructors(   
-   CONSTRUCTOR_ENUM   cMatch,  
-   IEnumDebugFields** ppEnum  
+```cpp  
+HRESULT EnumConstructors(   
+   CONSTRUCTOR_ENUM   cMatch,  
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumConstructors(  
-   CONSTRUCTOR_ENUM     cMatch,   
-   out IEnumDebugFields ppEnum  
+   CONSTRUCTOR_ENUM     cMatch,   
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `cMatch`  
- \[in\] 값은 [CONSTRUCTOR\_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) 생성자에 열거형의 형식을 지정 하는 열거형입니다.  
+ [in] 값은 [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) 열거형에는 생성자의 유형을 지정 하는 열거형입니다.  
   
  `ppEnum`  
- \[out\] 반환 된 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) 생성자의 목록을 나타내는 개체입니다.  생성자가 있는 경우 null 값을 반환 합니다.  
+ [out] 반환 된 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) 생성자의 목록을 나타내는 개체입니다. 생성자는 없을 경우 null 값을 반환 합니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 하거나 생성자가 없으면 S\_FALSE를 반환 합니다.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 S_OK를 반환 하거나 생성자 없음 경우 S_FALSE를 반환 합니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## 설명  
- 열거형의 각 요소는 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) 생성자 메서드를 설명 하는 개체입니다.  
+## <a name="remarks"></a>설명  
+ 열거형의 각 요소는 한 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) 생성자 메서드를 설명 하는 개체입니다.  
   
- 목록에 생성자는 일반적으로 컴파일러에서 제공 하는 기본 생성자가 포함 되지 않습니다.  
+ 일반적으로 생성자의 목록을 컴파일러에서 제공 하는 기본 생성자를 포함 되지 않습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
- [CONSTRUCTOR\_ENUM](../../../extensibility/debugger/reference/constructor-enum.md)
+ [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md)

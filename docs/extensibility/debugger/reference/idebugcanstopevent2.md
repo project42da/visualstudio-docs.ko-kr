@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugCanStopEvent2
-helpviewer_keywords:
-- IDebugBreakpointRequest2 interface
+f1_keywords: IDebugCanStopEvent2
+helpviewer_keywords: IDebugBreakpointRequest2 interface
 ms.assetid: 784bd5b1-4a3f-4455-b313-c4c9a82555a5
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 00cfe8409762119c15cbe188b1a20b7a6466ea4a
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 585e1c8760152c9c42e1950c45d3e3821bbe93df
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugcanstopevent2"></a>IDebugCanStopEvent2
 이 인터페이스는 세션 디버그 관리자 (SDM) 현재 코드 위치에서 중지를 요청 하 사용 됩니다.  
@@ -63,8 +47,8 @@ IDebugCanStopEvent2 : IUknown
 |[GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md)|이 이벤트의 위치를 설명 하는 문서 컨텍스트를 가져옵니다.|  
 |[GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md)|이 이벤트의 위치를 설명 하는 코드 컨텍스트를 가져옵니다.|  
   
-## <a name="remarks"></a>주의  
- DE 함수와 DE 사용자 단계 찾습니다 디버깅 정보가 없는 또는 디버그 정보가 있지만 DE 모르는 소스 코드가 해당 위치에 대해 표시 될 수 있습니다 하는 경우이 인터페이스를 전송 합니다.  
+## <a name="remarks"></a>설명  
+ DE 함수와 DE에 사용자 단계 찾습니다 디버깅 정보가 없는 또는 디버그 정보가 있지만 DE 모르는 소스 코드가 해당 위치에 대해 표시 될 수 있습니다 하는 경우이 인터페이스를 전송 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  

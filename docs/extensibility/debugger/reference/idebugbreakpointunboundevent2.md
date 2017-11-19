@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugBreakpointUnboundEvent2
-helpviewer_keywords:
-- IDebugBreakpointUnboundEvent2
+f1_keywords: IDebugBreakpointUnboundEvent2
+helpviewer_keywords: IDebugBreakpointUnboundEvent2
 ms.assetid: 6b1e1863-0c64-4d85-8ab9-aface522fdea
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: e9cbfdc39915a46e31537b35c5c2b1efb8f71abf
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: aa2e9e50205a400616bf71d0e60d60f4a826bdb6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugbreakpointunboundevent2"></a>IDebugBreakpointUnboundEvent2
 이 인터페이스는 바인딩된 중단점이 해제 되었음을 로드 프로그램이 바운드 세션 디버그 관리자 (SDM)을 알려 줍니다.  
@@ -59,7 +43,7 @@ IDebugBreakpointUnboundEvent2 : IUnknown
 |[GetBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getbreakpoint.md)|상태가 바인딩 해제 된 중단점을 가져옵니다.|  
 |[GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)|중단점이 바인딩된 없습니다. 이유를 가져옵니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  디버그 엔진 DLL 또는 클래스를 언로드할 때 해당 모듈의 코드에 바인딩된 모든 중단점 디버깅 중인 프로그램에서 바인딩 해제 되어야 합니다. `IDebugBreakpointUnboundEvent2` 각 바인딩 해제 된 중단점을 위해 전송 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -1,62 +1,64 @@
 ---
-title: "IDebugComPlusSymbolProvider::GetNameFromToken | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugComPlusSymbolProvider::GetNameFromToken"
-  - "GetNameFromToken"
+title: IDebugComPlusSymbolProvider::GetNameFromToken | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugComPlusSymbolProvider::GetNameFromToken
+- GetNameFromToken
 ms.assetid: 6e8cf468-5fd1-4655-93ed-88828d6068b7
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 05f6206e64931a0b47c9d879213f24f9c2b40bf8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugComPlusSymbolProvider::GetNameFromToken
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-메타 데이터 개체를 지정 합니다. 지정한 토큰에 연결 된 이름을 반환 합니다.  
+# <a name="idebugcomplussymbolprovidergetnamefromtoken"></a>IDebugComPlusSymbolProvider::GetNameFromToken
+지정된 된 토큰을 지정 된 해당 메타 데이터 개체와 연결 된 이름을 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT GetNameFromToken (  
-   IUnknown* pMetadataImport,  
-   DWORD     dwToken,  
-   BSTR*     pbstrName  
+   IUnknown* pMetadataImport,  
+   DWORD     dwToken,  
+   BSTR*     pbstrName  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetNameFromToken (  
-   object     pMetadataImport,  
-   uint       dwToken,  
-   out string pbstrName  
+   object     pMetadataImport,  
+   uint       dwToken,  
+   out string pbstrName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pMetadataImport`  
- \[in\] 메타 데이터 정보를 포함 하는 개체입니다.  
+ [in] 메타 데이터 정보를 포함 하는 개체입니다.  
   
  `dwToken`  
- \[in\] 이름을 지정 하는 토큰입니다.  
+ [in] 이름을 지정 하는 경우 토큰입니다.  
   
  `pbstrName`  
- \[out\] 토큰을 해당 하는 이름입니다.  
+ [out] 토큰에 해당 하는 이름입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 예제  
- 다음 예제에서는이 메서드를 구현 하는 방법을 보여 줍니다 있는  **CDebugSymbolProvider** 를 노출 하는 개체는 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) 인터페이스.  
+## <a name="example"></a>예제  
+ 다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CDebugSymbolProvider** 공개 하는 개체는 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) 인터페이스입니다.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::GetNameFromToken(  
     IUnknown* pMetadataImport,  
     DWORD dwToken,  
@@ -120,5 +122,5 @@ Error:
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

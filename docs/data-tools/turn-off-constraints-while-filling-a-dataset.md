@@ -1,5 +1,5 @@
 ---
-title: Turn off constraints while filling a dataset | Microsoft Docs
+title: "데이터 집합을 채우는 동안 제약 조건을 해제할 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,60 +13,44 @@ f1_keywords:
 dev_langs:
 - VB
 - CSharp
-- C++
-- aspx
 helpviewer_keywords:
 - updating datasets, constraints
 - constraints [Visual Basic], datasets
 - datasets [Visual Basic], constraints
 - constraints [Visual Basic], suspending during dataset update
 ms.assetid: 553f7d0c-2faa-4c17-b226-dd02855bf1dc
-caps.latest.revision: 18
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 5b5d6a28bfed55aa925aa667877f9c5e3b7f57c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 29b24794c74f2bd042845384d72a3716506d5e2d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="turn-off-constraints-while-filling-a-dataset"></a>Turn off constraints while filling a dataset
-If a dataset contains constraints (such as foreign-key constraints), they can raise errors related to the order of operations that are performed against the dataset. For example, loading child records before loading related parent records can violate a constraint and cause an error. As soon as you load a child record, the constraint checks for the related parent record and raises an error.  
+# <a name="turn-off-constraints-while-filling-a-dataset"></a>데이터 집합을 채우는 동안 제약 조건 해제
+제약 조건 (외래 키 제약 조건) 등을 포함 하는 데이터 집합, 데이터 집합에 대해 수행 하는 작업 순서와 관련 된 오류를 발생 시킬 수 있습니다. 부모 레코드가 제약 조건을 위반 하 고 오류가 발생할 수 예를 들어 관련 로드 하기 전에 자식 레코드를 로드 합니다. 자식 레코드를 로드 하는 즉시 제약 조건 관련된 부모 레코드에 대 한 확인 하 고 오류를 발생 시킵니다.  
   
- If there were no mechanism to allow temporary constraint suspension, an error would be raised every time you tried to load a record into the child table. Another way to suspend all constraints in a dataset is with the <xref:System.Data.DataRow.BeginEdit%2A>, and <xref:System.Data.DataRow.EndEdit%2A> properties.  
+ 임시 제약 조건 일시 중단을 허용 하는 메커니즘이 있는 경우 자식 테이블에 레코드를 로드 하려고 할 때마다 오류가 발생 합니다. 다른 데이터 집합의 모든 제약 조건을 일시 중단 방법은 <xref:System.Data.DataRow.BeginEdit%2A>, 및 <xref:System.Data.DataRow.EndEdit%2A> 속성입니다.  
   
 > [!NOTE]
->  Validation events (for example, <xref:System.Data.DataTable.ColumnChanging> and<xref:System.Data.DataTable.RowChanging>) will not be raised when constraints are turned off.  
+>  유효성 검사 이벤트 (예를 들어 <xref:System.Data.DataTable.ColumnChanging> 및<xref:System.Data.DataTable.RowChanging>) 제약 조건을 해제 하는 경우 발생 하지 것입니다.  
   
-### <a name="to-suspend-update-constraints-programmatically"></a>To suspend update constraints programmatically  
+### <a name="to-suspend-update-constraints-programmatically"></a>프로그래밍 방식으로 업데이트 제약 조건을 일시 중지 하려면  
   
--   The following example shows how to temporarily turn off constraint checking in a dataset:  
+-   다음 예제에는 데이터 집합에서 제약 조건 검사를 일시적으로 해제 하는 방법을 보여 줍니다.  
   
-     [!code-cs[VbRaddataEditing#10](../data-tools/codesnippet/CSharp/turn-off-constraints-while-filling-a-dataset_1.cs)]  [!code-vb[VbRaddataEditing#10](../data-tools/codesnippet/VisualBasic/turn-off-constraints-while-filling-a-dataset_1.vb)]  
+     [!code-csharp[VbRaddataEditing#10](../data-tools/codesnippet/CSharp/turn-off-constraints-while-filling-a-dataset_1.cs)]
+     [!code-vb[VbRaddataEditing#10](../data-tools/codesnippet/VisualBasic/turn-off-constraints-while-filling-a-dataset_1.vb)]  
   
-### <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>To suspend update constraints using the Dataset Designer  
+### <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>데이터 집합 디자이너를 사용 하 여 업데이트 제약 조건을 일시 중지 하려면  
   
-1.  Open your dataset in the **Dataset Designer**. For more information, see [Walkthrough: Creating a Dataset in the Dataset Designer](walkthrough-creating-a-dataset-with-the-dataset-designer.md).  
+1.  데이터 집합을 열고는 **데이터 집합 디자이너**합니다. 자세한 내용은 참조 [연습: 데이터 집합 디자이너에서 데이터 집합 만들기](walkthrough-creating-a-dataset-with-the-dataset-designer.md)합니다.  
   
-2.  In the **Properties** window, set the <xref:System.Data.DataSet.EnforceConstraints%2A> property to `false`.  
+2.  에 **속성** 창에서 설정 된 <xref:System.Data.DataSet.EnforceConstraints%2A> 속성을 `false`합니다.  
   
-## <a name="see-also"></a>See Also  
- [Fill datasets by using TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md)   
- [Relationships in datasets](../data-tools/relationships-in-datasets.md)
+## <a name="see-also"></a>참고 항목  
+ [Tableadapter를 사용 하 여 데이터 집합 채우기](../data-tools/fill-datasets-by-using-tableadapters.md)   
+ [데이터 집합에서의 관계](../data-tools/relationships-in-datasets.md)

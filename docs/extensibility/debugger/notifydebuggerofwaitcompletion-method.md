@@ -1,40 +1,41 @@
 ---
 title: "NotifyDebuggerOfWaitCompletion 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "NotifyDebuggerOfWaitCompletion 메서드를 작업 클래스 [.NET Framework 디버그 엔진]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: NotifyDebuggerOfWaitCompletion method, Task class [.NET Framework debug engines]
 ms.assetid: 841c5908-4f3f-400b-a7b0-96a95f362817
-caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5bfd605665627bcc9269f9225acb7d2e12418ab4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# NotifyDebuggerOfWaitCompletion 메서드
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-디버거에서 중단점 대상으로 사용 하는 자리 표시자 방법입니다. 이 메서드 인라인 또는 최적화 되지 않아야 합니다.  
+# <a name="notifydebuggerofwaitcompletion-method"></a>NotifyDebuggerOfWaitCompletion 메서드
+디버거가 중단점 대상으로 사용 되는 자리 표시자 메서드. 이 메서드는 인라인 또는 최적화 수 없습니다.  
   
- **네임 스페이스:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **어셈블리:** \(mscorlib.dll\)에 mscorlib  
+ **어셈블리:** (mscorlib.dll)에 mscorlib  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```vb  
 private void NotifyDebuggerOfWaitCompletion()  
 ```  
   
-## 설명  
- 작업을 작업으로 모든 조인 연산이 해당 디버거 알림 비트가 설정 된 경우이 메서드를 호출 해야 합니다.  
+## <a name="remarks"></a>설명  
+ 모든 조인 연산이 작업과 해당 디버거 알림 비트가 설정 되 면이 메서드를 호출 해야 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [작업 클래스](../../extensibility/debugger/task-class-internal-members.md)

@@ -1,46 +1,45 @@
 ---
-title: "IDiaSymbol::get_msil | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_msil 메서드"
+title: 'Idiasymbol:: Get_msil | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_msil method
 ms.assetid: 43a8e003-6856-4726-aa16-c0d4dae7299b
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c30553ed8a2047a8bee927daf88833c04b3a5116
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_msil
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-기호가 Microsoft 중간 언어 \(MSIL\) 코드를 참조 하는지 여부를 지정 하는 플래그를 검색 합니다.  
+# <a name="idiasymbolgetmsil"></a>IDiaSymbol::get_msil
+기호 참조 하는지 여부를 Microsoft MSIL (Intermediate Language) 코드를 지정 하는 플래그를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_msil (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_msil (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 반환 `TRUE` MSIL 코드에; 기호를 참조 하는 경우 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` MSIL 코드;에 있는 기호 참조 하는 경우는 그렇지 않으면 반환 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성의 기호를 사용할 수 없음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 의미는 속성은 해당 기호를 사용할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

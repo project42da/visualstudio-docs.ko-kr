@@ -1,112 +1,115 @@
 ---
-title: "reduceRight 메서드(Array)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "배열[JavaScript], reduceRight 메서드"
-  - "reduceRight 메서드[JavaScript]"
+title: "reduceRight 메서드 (Array) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- arrays [JavaScript], reduceRight method
+- reduceRight method [JavaScript]
 ms.assetid: 85963761-da11-407c-8bce-278c930e61bd
-caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0d7fd2794157eadacefa7404f9333c51aed9425c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# reduceRight 메서드(Array)(JavaScript)
-배열의 모든 요소에 대해 지정된 콜백을 내림차순으로 호출합니다.  콜백 함수의 반환 값은 결과에 누적되며 다음에 콜백 함수를 호출할 때 인수로 제공됩니다.  
+# <a name="reduceright-method-array-javascript"></a>reduceRight 메서드(Array)(JavaScript)
+내림차순 배열의 모든 요소에 대해 지정 된 콜백 함수를 호출 합니다. 호출 함수의 반환 값은 누적된 결과이며, 호출 함수에 대한 다음 호출에서 인수로 제공됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 array1.reduceRight(callbackfn[, initialValue])  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
   
 |매개 변수|정의|  
-|-----------|--------|  
-|`array1`|필수 요소.  Array 개체입니다.|  
-|`callbackfn`|필수 요소.  최대 4개까지 인수를 허용하는 함수입니다.  `reduceRight` 메서드는 배열에 있는 각 요소마다 한 번씩 `callbackfn` 함수를 호출합니다.|  
-|`initialValue`|선택 사항입니다.  `initialValue`가 지정된 경우 누적을 시작하는 초기 값으로 사용됩니다.  `callbackfn` 함수에 대한 첫 번째 호출은 이 값을 배열 값 대신 인수로 제공합니다.|  
+|---------------|----------------|  
+|`array1`|필수 요소. 배열 개체입니다.|  
+|`callbackfn`|필수 요소. 최대 4 개의 인수를 허용 하는 함수입니다. `reduceRight` 메서드는 배열에 있는 각 요소마다 한 번씩 `callbackfn` 함수를 호출합니다.|  
+|`initialValue`|선택 사항입니다. 경우 `initialValue` 을 지정 누적을 시작 하는 초기 값으로 사용 됩니다. 첫 번째 호출에서 `callbackfn` 함수는 배열 값 대신 인수로 서이 값을 제공 합니다.|  
   
-## 반환 값  
- 콜백 함수에 대한 마지막 호출로부터 누적된 결과를 포함하는 개체입니다.  
+## <a name="return-value"></a>반환 값  
+ 콜백 함수에 대 한 마지막 호출에서 누적 된 결과 포함 하는 개체입니다.  
   
-## 예외  
- `TypeError` 예외는 다음 조건 중 하나가 true인 경우 throw됩니다.  
+## <a name="exceptions"></a>예외  
+ A `TypeError` 경우 예외가 throw 되는 다음 조건 중 하나에 해당 합니다.  
   
--   `callbackfn` 인수는 함수 개체가 아닌 경우  
+-   `callbackfn` 인수가 함수 개체가 아닌 합니다.  
   
--   배열에 요소가 포함되지 않고 `initialValue`가 제공되지 않은 경우  
+-   배열에 요소가 없는 및 `initialValue` 제공 되지 않았습니다.  
   
-## 설명  
- `initialValue`가 제공된 경우 `reduceRight` 메서드가 배열의 각 요소에 대해 한 번씩 내림차순 인덱스 순서로 `callbackfn` 함수를 호출합니다.  `initialValue`가 제공되지 않은 경우 `reduceRight` 메서드가 마지막에서 두 번째 요소부터 시작하여 각 요소에 대해 `callbackfn` 함수를 내림차순 인덱스 순서로 호출합니다.  
+## <a name="remarks"></a>설명  
+ 경우는 `initialValue` 제공 되는 `reduceRight` 메서드 호출은 `callbackfn` 인덱스 내림차순 배열의 각 요소에 대해 한 번씩 작동 합니다. 없는 경우 `initialValue` 제공 됩니다는 `reduceRight` 메서드 호출에서 `callbackfn` 마지막에서 두 번째 요소 인덱스의 내림차순으로 시작 하는 각 요소에 대해 함수입니다.  
   
- 콜백 함수의 반환 값은 콜백 함수에 대한 다음 호출의 `previousValue` 인수로 제공됩니다.  콜백 함수에 대한 마지막 호출의 반환 값은 `reduceRight` 메서드의 반환 값입니다.  
+ 콜백 함수의 반환 값으로 제공 되는 `previousValue` 다음 콜백 함수 호출의 인수입니다. 콜백 함수에 대 한 마지막 호출의 반환 값은의 반환 값은 `reduceRight` 메서드.  
   
  배열의 누락된 요소에 대해 콜백 함수를 호출하지 않습니다.  
   
- 결과를 오름차순 인덱스 순서로 누적하려면 [reduce 메서드\(Array\)](../../javascript/reference/reduce-method-array-javascript.md)를 사용합니다.  
+ 사용 하 여 오름차순 인덱스 순서로 결과 누적 하 여 [reduce 메서드 (Array)](../../javascript/reference/reduce-method-array-javascript.md)합니다.  
   
-## 콜백 함수 구문  
- 콜백 함수의 구문은 다음과 같습니다.  
+## <a name="callback-function-syntax"></a>호출 함수 구문  
+ 호출 함수의 구문은 다음과 같습니다.  
   
  `function callbackfn(previousValue, currentValue, currentIndex, array1)`  
   
- 매개 변수를 최대 4개까지 사용하여 콜백 함수를 선언할 수 있습니다.  
+ 최대 4 개의 매개 변수를 사용 하 여 콜백 함수를 선언할 수 있습니다.  
   
  다음 표에는 콜백 함수 매개 변수가 나열되어 있습니다.  
   
 |콜백 인수|정의|  
-|-----------|--------|  
-|`previousValue`|콜백 함수에 대한 이전 호출로부터 얻은 값입니다.  `initialValue`가 `reduceRight` 메서드에 제공된 경우 `previousValue`는 함수를 처음 호출할 때의 `initialValue`입니다.|  
+|-----------------------|----------------|  
+|`previousValue`|콜백 함수에 대 한 이전 호출에서 값입니다. 경우는 `initialValue` 에 제공 되는 `reduceRight` 메서드를는 `previousValue` 은 `initialValue` 처음으로 함수를 호출 합니다.|  
 |`currentValue`|현재 배열 요소의 값입니다.|  
 |`currentIndex`|현재 배열 요소의 숫자 인덱스입니다.|  
-|`array1`|요소가 포함된 Array 개체입니다.|  
+|`array1`|요소가 포함된 배열 개체입니다.|  
   
-## 콜백 함수에 대한 첫 번째 호출  
- 콜백 함수를 처음 호출할 때 인수로 제공되는 값은 `reduceRight` 메서드에 `initialValue` 인수가 포함되었는지 여부에 따라 달라집니다.  
+## <a name="first-call-to-the-callback-function"></a>첫 번째 콜백 함수 호출  
+ 콜백 함수를 호출 하는 처음으로 인수로 제공 된 값이 있는지 여부에 종속 된 `reduceRight` 메서드에는 `initialValue` 인수입니다.  
   
- `initialValue`가 `reduceRight` 메서드에 제공된 경우:  
+ 경우는 `initialValue` 에 제공 되는 `reduceRight` 메서드:  
   
--   `previousValue` 인수가 `initialValue`입니다.  
+-   `previousValue` 인수가 `initialValue`인 경우  
   
--   `currentValue` 인수가 배열에 있는 마지막 요소의 값입니다.  
+-   `currentValue` 인수는 배열에 있는 마지막 요소의 값입니다.  
   
- `initialValue`가 제공되지 않은 경우:  
+ 경우는 `initialValue` 제공 되지 않습니다.  
   
--   `previousValue` 인수가 배열에 있는 마지막 요소의 값입니다.  
+-   `previousValue` 인수는 배열에 있는 마지막 요소의 값입니다.  
   
--   `currentValue` 인수가 배열에 있는 마지막에서 두 번째 요소의 값입니다.  
+-   `currentValue` 인수는 배열에 있는 마지막에서 두 번째 요소 값입니다.  
   
-## Array 개체 수정  
+## <a name="modifying-the-array-object"></a>배열 개체 수정  
  배열 개체는 콜백 함수로 수정할 수 있습니다.  
   
  다음 표에서는 `reduceRight` 메서드가 시작된 후 배열 개체를 수정한 결과를 보여 줍니다.  
   
 |`reduceRight` 메서드가 시작된 후의 조건|콜백 함수에 전달된 요소|  
-|----------------------------------|-------------------|  
+|-----------------------------------------------------|------------------------------------------|  
 |요소는 배열의 원래 길이를 벗어나서 추가됩니다.|아니요.|  
 |요소는 배열의 누락된 요소를 채우도록 추가됩니다.|예, 해당 인덱스가 콜백 함수에 아직 전달되지 않은 경우 그렇습니다.|  
 |요소가 변경되었습니다.|예, 해당 요소가 콜백 함수에 아직 전달되지 않은 경우 그렇습니다.|  
 |요소가 배열에서 삭제됩니다.|아니요, 해당 요소가 콜백 함수에 아직 전달되지 않은 경우 그렇습니다.|  
   
-## 예제  
- 다음 예제에서는 값을 "::"으로 구분하여 배열 값을 문자열로 연결하는 것을 보여 줍니다.  `reduceRight` 메서드에 초기 값이 제공되지 않았기 때문에 콜백 함수에 대한 첫 번째 호출은 `previousValue` 인수로 456을 사용하고 `currentValue` 인수로 123을 사용합니다.  
+## <a name="example"></a>예제  
+ 배열 값으로 값을 구분 하는 문자열에 연결 하 여 다음 예제에서는 "::". 초기 값을 제공 되기 때문에 `reduceRight` 메서드가, 콜백 함수에 대 한 첫 번째 호출으로 456는 `previousValue` 인수와 123으로 `currentValue` 인수입니다.  
   
-```javascript  
+```JavaScript  
 // Define the callback function.  
 function appendCurrent (previousValue, currentValue) {  
     return previousValue + "::" + currentValue;  
@@ -125,10 +128,10 @@ document.write(result);
 //  456::123::def::abc  
 ```  
   
-## 예제  
- 다음 예제에서는 배열 요소의 제곱합 합계를 찾습니다.  `reduceRight` 메서드는 초기 값 0으로 호출됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 배열 요소의 제곱의 합을 찾습니다. `reduceRight` 초기 값이 0 인 메서드 호출 됩니다.  
   
-```javascript  
+```JavaScript  
 // Define the callback function.  
 function Process(previousValue, currentValue, index, array) {  
     // Add the previous value to the current value squared.  
@@ -153,10 +156,10 @@ document.write("sum of squares=" + sumOfSquares);
 //  sum of squares=50  
 ```  
   
-## 예제  
- 다음 예제에서는 값이 1~10 사이인 배열의 요소를 가져옵니다.  `reduceRight` 메서드에 제공된 초기 값은 빈 배열입니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 해당 값은 1과 10 사이의 배열의 해당 요소를 가져옵니다. 에 제공 된 초기 값은 `reduceRight` 메서드는 빈 배열입니다.  
   
-```javascript  
+```JavaScript  
 function Process2(previousArray, currentValue) {  
     // If currentValue is between 1 and 10,   
     // append currentValue to the array.  
@@ -186,10 +189,10 @@ document.write("result array=" + resultArray);
 //  result array=3,6,1  
 ```  
   
-## 예제  
- `reduceRight` 메서드는 문자열에 적용할 수 있습니다.  다음 예제에서는 이 메서드를 사용하여 문자열의 문자를 역순으로 하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ `reduceRight` 메서드는 문자열에 적용할 수 있습니다. 다음 예제에서는 문자열의 문자를 반대로 하려면이 메서드를 사용 하는 방법을 보여 줍니다.  
   
-```javascript  
+```JavaScript  
 // Define the callback function.  
 function AppendToArray(previousValue, currentValue) {  
     return previousValue + currentValue;  
@@ -208,8 +211,8 @@ document.write(result);
 // the computer  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 참고 항목  
- [reduce 메서드\(Array\)](../../javascript/reference/reduce-method-array-javascript.md)
+## <a name="see-also"></a>참고 항목  
+ [reduce 메서드(Array)](../../javascript/reference/reduce-method-array-javascript.md)

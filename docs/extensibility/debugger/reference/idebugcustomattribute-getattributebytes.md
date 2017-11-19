@@ -1,58 +1,58 @@
 ---
-title: "IDebugCustomAttribute::GetAttributeBytes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttribute::GetAttributeBytes"
-helpviewer_keywords: 
-  - "IDebugCustomAttribute::GetAttributeBytes"
+title: IDebugCustomAttribute::GetAttributeBytes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCustomAttribute::GetAttributeBytes
+helpviewer_keywords: IDebugCustomAttribute::GetAttributeBytes
 ms.assetid: cf34583b-6530-4dcc-89f8-eb27e4e8d594
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 1258b2b7fdc1c91eaaa6265ce74a3891deda8ab0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCustomAttribute::GetAttributeBytes
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-특성 정보를 blob 바이트 수를 가져옵니다.  
+# <a name="idebugcustomattributegetattributebytes"></a>IDebugCustomAttribute::GetAttributeBytes
+바이트의 blob으로 특성 정보를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetAttributeBytes(   
-   BYTE*  ppBlob,  
-   DWORD* pdwLen  
+```cpp  
+HRESULT GetAttributeBytes(   
+   BYTE*  ppBlob,  
+   DWORD* pdwLen  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetAttributeBytes(  
-   ref byte[] ppBlob,   
-   ref uint   pdwLen  
+   ref byte[] ppBlob,   
+   ref uint   pdwLen  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppBlob`  
- \[in, out\] 특성 바이트를 사용 하 여 채워지는 배열입니다.  
+ [out에서] 특성 바이트를 사용 하 여 입력은 배열입니다.  
   
  `pdwLen`  
- \[in, out\] 최대 바이트 수를 반환 하려면 지정은 `ppBlob` 배열 및 배열에 실제로 쓴 바이트 수를 반환 합니다.  
+ [out에서] 반환 하는 바이트의 최대 수를 지정 된 `ppBlob` 배열 및 배열에 실제로 쓴 바이트 수를 반환 합니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  
   
-## 설명  
- 설정에서 `ppBlob` 바이트 사용 가능한 특성을 매개 변수에 null 값의 개수를 반환 합니다.  다음 배열 할당 하 고 해당 배열에 대 한 전달의 `ppBlob` 매개 변수.  
+## <a name="remarks"></a>설명  
+ 설정의 `ppBlob` 매개 변수 개수를 반환 하려면 null 값으로 특성을 사용할 수 있는 바이트입니다. 그런 다음 배열을 할당 하 고에 대 한 해당 배열에 전달 된 `ppBlob` 매개 변수입니다.  
   
- 원시 데이터를의 사용자 지정 특성 특성 바이트를 나타냅니다.  
+ 특성 바이트는 사용자 지정 특성의 원시 데이터를 나타냅니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

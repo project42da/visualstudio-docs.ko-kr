@@ -1,57 +1,57 @@
 ---
-title: "BP_RES_DATA_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_RES_DATA_FLAGS"
-helpviewer_keywords: 
-  - "BP_RES_DATA_FLAGS 열거형"
+title: BP_RES_DATA_FLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_RES_DATA_FLAGS
+helpviewer_keywords: BP_RES_DATA_FLAGS enumeration
 ms.assetid: d97611e2-def6-45a9-ad7d-eedf2ad4c82b
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 89bfe7f92e1260c83803136eeed1bf921c8913c8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# BP_RES_DATA_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-데이터 중단점을 에뮬레이트한 여부 또는 구현된에 하드웨어를 지정 합니다.  
+# <a name="bpresdataflags"></a>BP_RES_DATA_FLAGS
+데이터 중단점 에뮬레이트 되는 여부 또는에서 구현 된 하드웨어를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-enum enum_BP_RES_DATA_FLAGS {   
-   BP_RES_DATA_EMULATED = 0x0001  
+```cpp  
+enum enum_BP_RES_DATA_FLAGS {   
+   BP_RES_DATA_EMULATED = 0x0001  
 };  
 typedef DWORD BP_RES_DATA_FLAGS;  
 ```  
   
-```c#  
-public enum enum_BP_RES_DATA_FLAGS {   
-   BP_RES_DATA_EMULATED = 0x0001  
+```csharp  
+public enum enum_BP_RES_DATA_FLAGS {   
+   BP_RES_DATA_EMULATED = 0x0001  
 };  
 ```  
   
-## Members  
- BP\_RES\_DATA\_EMULATED  
- 데이터 중단점을 에뮬레이션 되는 지정 합니다.  
+## <a name="members"></a>멤버  
+ BP_RES_DATA_EMULATED  
+ 데이터 중단점을 에뮬레이트 되는 것을 지정 합니다.  
   
-## 설명  
- 사용 되는 `dwFlags` 의 멤버는 [BP\_RESOLUTION\_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) 구조.  
+## <a name="remarks"></a>설명  
+ 에 사용 되는 `dwFlags` 의 멤버는 [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) 구조입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [BP\_RESOLUTION\_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)
+ [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)

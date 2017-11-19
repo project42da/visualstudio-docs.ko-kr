@@ -1,27 +1,30 @@
 ---
-title: "IScriptScriptlet::SetEventName | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: IScriptScriptlet::SetEventName | Microsoft Docs
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IScriptScriptlet.SetEventName
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IScriptScriptlet::SetEventName"
+helpviewer_keywords: IScriptScriptlet::SetEventName
 ms.assetid: 8787d58b-7deb-415b-b0e9-d2f0eb72dcf7
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 244888d49e1e9a84b8865e9c86a845617af6a5d9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# IScriptScriptlet::SetEventName
-스크립트릿와 연결 된 이벤트의 이름을 설정 합니다.  
+# <a name="iscriptscriptletseteventname"></a>IScriptScriptlet::SetEventName
+스크립틀릿와 연결 된 이벤트의 이름을 설정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 HRESULT SetEventName(  
@@ -29,18 +32,18 @@ HRESULT SetEventName(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `psz`  
- \[in\] 연관 된 이벤트 이름을 포함 하는 버퍼는 `IScriptScriptlet` 개체입니다.  
+ [in] 연결 된 이벤트 이름을 포함 하는 버퍼의 `IScriptScriptlet` 개체입니다.  
   
-## 반환 값  
- `HRESULT`입니다.  가능한 값 포함 되지만, 다음 테이블에 제한 되지는지 않습니다.  
+## <a name="return-value"></a>반환 값  
+ `HRESULT`입니다. 가능한 값에는 다음 표에 있는 값이 포함되지만, 이에 국한되는 것은 아닙니다.  
   
 |값|설명|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|메서드가 성공했으며|  
   
-## 설명  
+## <a name="remarks"></a>설명  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IScriptScriptlet 인터페이스](../../winscript/reference/iscriptscriptlet-interface.md)

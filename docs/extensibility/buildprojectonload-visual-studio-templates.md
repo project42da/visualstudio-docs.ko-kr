@@ -1,60 +1,65 @@
 ---
-title: "BuildProjectOnLoad(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#BuildOnLoad"
-helpviewer_keywords: 
-  - "<BuildOnLoad> 요소[Visual Studio 템플릿]"
-  - "BuildOnLoad 요소[Visual Studio 템플릿]"
+title: "BuildProjectOnLoad (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#BuildOnLoad
+helpviewer_keywords:
+- <BuildOnLoad> element [Visual Studio Templates]
+- BuildOnLoad element [Visual Studio Templates]
 ms.assetid: 950f5fc1-d041-4090-9a5c-60844768a4cc
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ab3744d81f99c394a2633854a0ec24b76e665ecd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# BuildProjectOnLoad(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-바로 만든 후 프로젝트를 빌드할지 여부를 지정 합니다.  
+# <a name="buildprojectonload-visual-studio-templates"></a>BuildProjectOnLoad(Visual Studio 템플릿)
+생성 된 후 즉시 프로젝트를 빌드할 것인지 지정 합니다.  
   
-## 구문  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<BuildProjectOnLoad >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <BuildProjectOnLoad> true/false </BuildProjectOnLoad>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿을 표시하는 방법을 정의합니다.|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에서 템플릿이 표시되는 방식을 정의합니다.|  
   
-## 텍스트 값  
- 텍스트 값이 필요합니다.  
+## <a name="text-value"></a>텍스트 값  
+ 텍스트 값은 필수입니다.  
   
- 텍스트 여야 합니다 `true` 또는 `false`를 만든 즉시 후 프로젝트를 빌드할 것인지 여부를 나타내는 합니다.  
+ 텍스트 중 하나 여야 합니다 `true` 또는 `false`, 생성 된 후 즉시 프로젝트를 빌드할 것인지를 나타내는입니다.  
   
-## 설명  
- `BuildProjectOnLoad`특성은 선택적 요소입니다.  기본값은 `false`입니다.  
+## <a name="remarks"></a>설명  
+ `BuildProjectOnLoad`선택적 특성이입니다. 기본값은 `false`입니다.  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 템플릿에 대한 메타데이터를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 템플릿의 메타데이터를 보여 줍니다.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -81,7 +86,7 @@ caps.handback.revision: 10
 </VSTemplate>  
 ```  
   
-## 참고 항목  
- [TemplateContent 요소\(Visual Studio 템플릿\)](../extensibility/templatecontent-element-visual-studio-templates.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)   
+## <a name="see-also"></a>참고 항목  
+ [TemplateContent 요소 (Visual Studio 템플릿)](../extensibility/templatecontent-element-visual-studio-templates.md)   
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)   
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)

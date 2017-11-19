@@ -1,64 +1,64 @@
 ---
-title: "IDebugThread2::SetNextStatement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugThread2::SetNextStatement"
-helpviewer_keywords: 
-  - "IDebugThread2::SetNextStatement"
+title: IDebugThread2::SetNextStatement | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugThread2::SetNextStatement
+helpviewer_keywords: IDebugThread2::SetNextStatement
 ms.assetid: 9e2834dd-4ecf-45af-8e6c-f9318ebdac06
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 6dd345fe298af42a69ac076bf92de7df9db82ec2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugThread2::SetNextStatement
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-현재 명령 포인터를 지정 된 코드 컨텍스트를 설정 합니다.  
+# <a name="idebugthread2setnextstatement"></a>IDebugThread2::SetNextStatement
+지정 된 코드 컨텍스트를 현재 명령 포인터를 설정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT SetNextStatement (   
-   IDebugStackFrame2*  pStackFrame,  
-   IDebugCodeContext2* pCodeContext  
+```cpp  
+HRESULT SetNextStatement (   
+   IDebugStackFrame2*  pStackFrame,  
+   IDebugCodeContext2* pCodeContext  
 );  
 ```  
   
-```c#  
-int SetNextStatement (   
-   IDebugStackFrame2  pStackFrame,  
-   IDebugCodeContext2 pCodeContext  
+```csharp  
+int SetNextStatement (   
+   IDebugStackFrame2  pStackFrame,  
+   IDebugCodeContext2 pCodeContext  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pStackFrame`  
- 나중에 사용 하도록 예약 됩니다. null 값으로 설정 합니다.  
+ 나중에 사용 됩니다. null 값으로 설정 합니다.  
   
  `pCodeContext`  
- \[in\] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 실행 될 코드 위치를 설명 하는 개체와 그 컨텍스트.  
+ [in] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 실행 될 코드 위치를 설명 하는 개체 및 컨텍스트.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  다른 가능한 값은 다음과 같습니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다. 다음 표에서 가능한 다른 값을 보여 줍니다.  
   
 |값|설명|  
-|-------|--------|  
-|E\_CANNOT\_SET\_NEXT\_STATEMENT\_ON\_NONLEAF\_FRAME|다음 문을 스택 프레임 프레임 스택에 더 깊은 될 수 없습니다.|  
-|E\_CANNOT\_SETIP\_TO\_DIFFERENT\_FUNCTION|다음 문은 스택의 모든 프레임에 연결 된 수 없습니다.|  
-|E\_CANNOT\_SET\_NEXT\_STATEMENT\_ON\_EXCEPTION|일부 디버그 엔진 예외 발생 후 다음 문을 설정할 수 없습니다.|  
+|-----------|-----------------|  
+|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|다음 문은 프레임 스택에 깊은 스택 프레임에 수 없습니다.|  
+|E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|다음 문이 스택의 프레임에 연관 되어 있습니다.|  
+|E_CANNOT_SET_NEXT_STATEMENT_ON_EXCEPTION|일부 디버깅 엔진이 예외가 발생 한 후 다음 문을 설정할 수 없습니다.|  
   
-## 설명  
- 다음 명령이 나 문을 실행 하는 명령 포인터를 나타냅니다.  이 메서드는 소스 코드 줄을 다시 시도 하십시오 또는 다른 함수에, 예를 들어 계속 실행할 강제로 사용 됩니다.  
+## <a name="remarks"></a>설명  
+ 명령 포인터는 다음 명령이 나 문을 실행할 수를 나타냅니다. 이 메서드는 소스 코드 줄을 다시 시도 하거나 예를 들어 다른 함수에서 계속 실행을 강제로 사용 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

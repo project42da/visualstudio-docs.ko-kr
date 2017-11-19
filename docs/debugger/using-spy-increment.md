@@ -1,53 +1,52 @@
 ---
-title: "Using Spy++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Using Spy++"
+title: "Spy + +를 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Using Spy++
 ms.assetid: 02769bfa-5679-4ee2-8c6b-27876edb4e8c
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6dcc0a50c2bf0706e217651e72cd023902d83120
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Using Spy++
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Spy\+\+\(SPYXX.EXE\)는 시스템의 프로세스, 스레드, 창 및 창 메시지에 대한 그래픽 뷰를 제공하는 Win32 기반 유틸리티입니다.  이 Spy\+\+ 도움말 단원에는 다음과 같은 도움말 항목이 포함되어 있습니다.  
+# <a name="using-spy"></a>Spy++ 사용
+Spy + + (SPYXX 합니다. EXE)는 시스템의 프로세스, 스레드, 창 및 창 메시지에 대 한 그래픽 뷰를 제공 하는 Win32 기반 유틸리티입니다. Spy + + 도움말의이 섹션에는 다음 도움말 항목에 포함 됩니다.  
   
-## 단원 내용  
- [Spy\+\+ 소개](../debugger/introducing-spy-increment.md)  
- Spy\+\+ 도구로 표시할 수 있는 정보의 유형에 대해 설명합니다.  
+## <a name="in-this-section"></a>단원 내용  
+ [Spy++ 소개](../debugger/introducing-spy-increment.md)  
+ Spy + + 도구도 표시할 수 있는 정보의 종류에 설명 합니다.  
   
- [How to: Start Spy\+\+](../debugger/how-to-start-spy-increment.md)  
- 도구 메뉴에서 Spy\+\+를 시작하는 방법에 대해 설명합니다.  
+ [방법: Spy++ 시작](../debugger/how-to-start-spy-increment.md)  
+ Spy + + 도구 메뉴에서 시작 하는 방법에 설명 합니다.  
   
- [Spy\+\+ Toolbar](../debugger/spy-increment-toolbar.md)  
- Spy\+\+ 도구 모음에서 사용할 수 있는 명령에 대해 설명합니다.  
+ [Spy++ 도구 모음](../debugger/spy-increment-toolbar.md)  
+ Spy + + 도구 모음에서 사용할 수 있는 명령을 설명합니다.  
   
- [How to: Display Spy\+\+ Views](../debugger/how-to-display-spy-increment-views.md)  
- 창 뷰, 메시지 뷰, 프로세스 뷰 및 스레드 뷰를 표시하는 방법에 대해 설명합니다.  
+ [방법: Spy++ 뷰 표시](../debugger/how-to-display-spy-increment-views.md)  
+ 창 뷰, 메시지, 프로세스 뷰 뷰와 스레드 뷰를 표시 하는 방법입니다.  
   
- [How to: Refresh the View](../debugger/how-to-refresh-the-view.md)  
- 새로 고침 명령에 대해 설명합니다.  
+ [방법: 뷰 새로 고침](../debugger/how-to-refresh-the-view.md)  
+ 새로 고침 명령에 설명 합니다.  
   
- [How to: Change Fonts](../debugger/how-to-change-fonts.md)  
- 뷰가 표시되는 방법을 변경하는 방법에 대해 설명합니다.  
+ [방법: 글꼴 변경](../debugger/how-to-change-fonts.md)  
+ 보기 표시 되는 방식을 변경 하는 방법에 설명 합니다.  
   
- [How to: Expand and Collapse Spy\+\+ Trees](../debugger/how-to-expand-and-collapse-spy-increment-trees.md)  
- 뷰를 조작하는 방법에 대해 설명합니다.  
+ [방법: Spy++ 트리 확장 및 축소](../debugger/how-to-expand-and-collapse-spy-increment-trees.md)  
+ 뷰를 조작 하는 방법에 설명 합니다.  
   
-## 관련 단원  
- [Spy\+\+ 뷰](../debugger/spy-increment-views.md)  
- 창, 메시지, 프로세스 및 스레드의 Spy\+\+ 트리 뷰에 대해 설명합니다.  
+## <a name="related-sections"></a>관련 단원  
+ [Spy++ 뷰](../debugger/spy-increment-views.md)  
+ Windows, 메시지, 프로세스 및 스레드의 Spy + + 트리 보기에 설명합니다.  
   
- [Spy\+\+ 참조](../debugger/spy-increment-reference.md)  
- 각 Spy\+\+ 메뉴 및 대화 상자에 대해 설명하는 단원이 포함되어 있습니다.
+ [Spy++ 참조](../debugger/spy-increment-reference.md)  
+ 각 Spy + + 메뉴 및 대화 상자를 설명 하는 섹션이 포함 됩니다.

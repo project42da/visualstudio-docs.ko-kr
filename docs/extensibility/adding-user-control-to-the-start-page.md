@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,29 +12,15 @@ helpviewer_keywords:
 - custom start page
 - start page assembly
 ms.assetid: 5b7997db-af6f-4fa9-a128-bceb42bddaf1
-caps.latest.revision: 16
+caps.latest.revision: "16"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 16be8f494b5e8709244568afeb654ae02ca85899
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ed511fa58ca0d98d38ed2ab1ed3bc24bed642170
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="adding-user-control-to-the-start-page"></a>시작 페이지에 사용자 정의 컨트롤 추가
 이 연습에서는 사용자 지정 시작 페이지에 대 한 DLL 참조를 추가 하는 방법을 보여 줍니다. 이 예제에서는 솔루션에 사용자 정의 컨트롤 사용자 정의 컨트롤을 빌드하고 시작 페이지.xaml 파일에서 빌드된 어셈블리를 참조 하는 다음을 추가 합니다. 새 탭의 기능을 기본 웹 브라우저 사용자 정의 컨트롤을 호스팅합니다.  
@@ -190,7 +175,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="testing-a-manually-created-custom-start-page"></a>수동으로 만든된 사용자 지정 시작 페이지를 테스트합니다.  
   
-1.  사용자는 XAML 파일 및 지원 텍스트 파일 또는 태그 파일을 복사는 **%USERPROFILE%\My Documents\Visual Studio 2015 \startpages\\ ** 폴더입니다.  
+1.  사용자는 XAML 파일 및 지원 텍스트 파일 또는 태그 파일을 복사는 **%USERPROFILE%\My Documents\Visual Studio 2015 \startpages\\**  폴더입니다.  
   
 2.  시작 페이지에서 모든 컨트롤 또는 Visual Studio가 설치 되지 않은 어셈블리의 형식을 참조 하는 경우 어셈블리를 복사 하 고 다음에 붙여넣을 *Visual Studio 설치 폴더***\Common7\IDE\ PrivateAssemblies\\**합니다.  
   

@@ -1,43 +1,43 @@
 ---
-title: "IDiaSymbol::get_numberOfAcceleratorPointerTags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: IDiaSymbol::get_numberOfAcceleratorPointerTags | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1886e3ec-b227-4187-8d93-c5144b4b77ae
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d4d7145903269822fbc67d0894cbbea1530044e4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_numberOfAcceleratorPointerTags
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-가속기 포인터 태그 C\+\+ AMP 스텁 함수를 반환합니다.  
+# <a name="idiasymbolgetnumberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
+C + + AMP 스텁 함수에서 가속기 포인터 태그의 수를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp  
+```C++  
 HRESULT get_numberOfAcceleratorPointerTags(   
    DWORD* count);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `count`  
- \[out\] 에 대 한 포인터는 `DWORD` 가속기 수가 포인터 태그 C\+\+ AMP 스텁 함수를 포함 합니다.  
+ [out] 에 대 한 포인터는 `DWORD` 에서 포함 된 액셀러레이터 키 수가 포인터 태그는 c + + AMP 스텁 함수입니다.  
   
-## 반환 값  
- 성공하면 `S_OK`를 반환하고, 그렇지 않으면 `S_FALSE` 또는 오류 코드를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
-## 설명  
- 이 메서드가 호출 되는 `IDiaSymbol` 인터페이스는 C\+\+ AMP 가속기 스텁 함수에 해당 합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 프로그램 `IDiaSymbol` c + + AMP 액셀러레이터 스텁 함수에 해당 하는 인터페이스입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

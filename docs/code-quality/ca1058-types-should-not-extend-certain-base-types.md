@@ -1,29 +1,30 @@
 ---
-title: "CA1058: 형식은 특정 기본 형식을 확장하면 안 됩니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TypesShouldNotExtendCertainBaseTypes"
-  - "CA1058"
-helpviewer_keywords: 
-  - "CA1058"
-  - "TypesShouldNotExtendCertainBaseTypes"
+title: "CA1058: 형식은 특정 기본 형식을 확장 하지 해야 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TypesShouldNotExtendCertainBaseTypes
+- CA1058
+helpviewer_keywords:
+- CA1058
+- TypesShouldNotExtendCertainBaseTypes
 ms.assetid: 8446ee40-beb1-49fa-8733-4d8e813471c0
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 45cddd908c53d129a230b998c6dad03196a31c49
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA1058: 형식은 특정 기본 형식을 확장하면 안 됩니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: 형식은 특정 기본 형식을 확장하면 안 됩니다.
 |||  
 |-|-|  
 |TypeName|TypesShouldNotExtendCertainBaseTypes|  
@@ -31,8 +32,8 @@ caps.handback.revision: 24
 |범주|Microsoft.Design|  
 |변경 수준|주요 변경|  
   
-## 원인  
- 외부에서 볼 수 있는 형식이 특정 기본 형식을 확장합니다.  현재로서 이 규칙은 다음 형식에서 파생되는 형식을 보고합니다.  
+## <a name="cause"></a>원인  
+ 외부에서 볼 수 있는 형식이 특정 기본 형식을 확장합니다. 현재,이 규칙은 보고 형식에서 파생 되는 형식:  
   
 -   <xref:System.ApplicationException?displayProperty=fullName>  
   
@@ -50,17 +51,17 @@ caps.handback.revision: 24
   
 -   <xref:System.Collections.Stack?displayProperty=fullName>  
   
-## 규칙 설명  
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전 1의 경우에는 <xref:System.ApplicationException>에서 새 예외를 파생시킬 것을 권장했습니다.  이 권장 사항이 변경되어 새 예외는 <xref:System.Exception?displayProperty=fullName>에서 파생되거나 <xref:System> 네임스페이스에 있는 해당 클래스의 서브클래스 중 하나에서 파생되어야 합니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 에 대 한 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전 1에서 새 예외를 파생 시키는 권장 되었던 것 <xref:System.ApplicationException>합니다. 권장 구성이 변경 되 고 새 예외에서 파생 되어야 <xref:System.Exception?displayProperty=fullName> 또는 해당 서브 클래스에서 중 하나는 <xref:System> 네임 스페이스입니다.  
   
- 내부 개체 모델 또는 데이터 소스의 XML 뷰를 만들고자 하는 경우에는 <xref:System.Xml.XmlDocument>의 서브클래스를 만들지 마십시오.  
+ 서브 클래스를 만들지 마십시오 <xref:System.Xml.XmlDocument> 기본 개체 모델 또는 데이터 원본에 대 한 XML 뷰를 만들려는 경우.  
   
-### 제네릭이 아닌 컬렉션  
- 가능하면 제네릭 컬렉션을 사용하거나 확장하십시오.  제네릭이 아닌 코드는 이미 제공한 경우가 아니면 코드에서 확장하지 마십시오.  
+### <a name="non-generic-collections"></a>제네릭이 아닌 컬렉션  
+ 사용 하거나 가능 하면 제네릭 컬렉션을 확장 합니다. 이전에 제공한 경우가 아니면 사용자 코드에서 제네릭이 아닌 컬렉션을 확장 하지 않습니다.  
   
- **올바르지 않은 사용 예제**  
+ **잘못 된 사용 예제를 보려면**  
   
-```c#  
+```csharp  
 public class MyCollection : CollectionBase  
 {  
 }  
@@ -72,7 +73,7 @@ public class MyReadOnlyCollection : ReadOnlyCollectionBase
   
  **올바른 사용 예제**  
   
-```c#  
+```csharp  
 public class MyCollection : Collection<T>  
 {  
 }  
@@ -82,8 +83,8 @@ public class MyReadOnlyCollection : ReadOnlyCollection<T>
 }  
 ```  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 형식을 다른 기본 형식이나 제네릭 컬렉션에서 파생시킵니다.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 형식을 서로 다른 기본 형식 또는 제네릭 컬렉션에서 파생 됩니다.  
   
-## 경고를 표시하지 않는 경우  
- <xref:System.ApplicationException>과 관련된 위반의 경우 이 규칙에 따른 경고를 표시해야 합니다.  <xref:System.Xml.XmlDocument>에 대한 위반의 경우 이 규칙에서 경고를 표시하지 않도록 설정해도 안전합니다.  코드가 이미 발표된 경우 제네릭이 아닌 컬렉션에 대한 경고를 표시하지 않도록 설정해도 안전합니다.
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 에 대 한 위반에 대 한이 규칙에서는 경고를에서 표시 해야 <xref:System.ApplicationException>합니다. 에 대 한 위반에 대 한이 규칙에서는 경고를에서 억제를 안전 하 게 <xref:System.Xml.XmlDocument>합니다. 코드는 이전에 출시 된 경우에 제네릭이 아닌 컬렉션에 대 한 경고를 표시 하지 않으려면 안전 합니다.

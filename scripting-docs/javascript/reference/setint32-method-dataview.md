@@ -1,51 +1,54 @@
 ---
-title: "setInt32 메서드(DataView) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "setInt32 메서드 (DataView) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 07e5f068-0e3f-4c23-84b3-c72658d7f194
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 00f3f6b03cdd3a8d5d7b95184f1c0ff5c356592a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# setInt32 메서드(DataView)
-뷰의 시작에서 지정된 바이트 오프셋에 Int32 값을 설정합니다.  맞춤 제약 조건이 없습니다. 멀티바이트 값은 모든 오프셋에서 설정됩니다.  
+# <a name="setint32-method-dataview"></a>setInt32 메서드(DataView)
+보기의 시작 부분부터 지정 된 바이트 오프셋에 Int32 값을 설정합니다. 맞춤 제약 조건이 없습니다. 모든 오프셋에서 멀티 바이트 값을 설정할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 dataView.setInt32 (byteOffset, value, littleEndian);   
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  `byteOffset`  
- 값을 검색해야 하는 버퍼의 위치입니다.  
+ 값을 검색 해야 하는 버퍼의 위치입니다.  
   
  `value`  
  설정할 값입니다.  
   
  `littleEndian`  
- 선택 사항입니다.  false 또는 undefined인 경우 big\-endian 값이 기록되어야 하며, 그렇지 않은 경우 little\-endian 값이 기록되어야 합니다.  
+ 선택 사항입니다. False 또는 정의 되지 않은 경우 기록 될 big endian 값, 그렇지 않으면 little endian 값을 써야 하 합니다.  
   
-## 설명  
- 이러한 메서드는 뷰의 끝을 벗어나서 기록하면 예외가 발생합니다.  
+## <a name="remarks"></a>설명  
+ 보기의 끝을 넘어 작성할 수 하는 경우 이러한 메서드는 예외를 발생 시킵니다.  
   
-## 예제  
- 다음 예제에서는 DataView에서 첫 번째 Int32를 설정하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 DataView의 첫 번째 Int32를 설정 하는 방법을 보여 줍니다.  
   
-```javascript  
+```JavaScript  
 var req = new XMLHttpRequest();  
     req.open('GET', "http://www.example.com");  
     req.responseType = "arraybuffer";  
@@ -61,5 +64,5 @@ var req = new XMLHttpRequest();
   
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv10](../../javascript/reference/includes/jsv10-md.md)]

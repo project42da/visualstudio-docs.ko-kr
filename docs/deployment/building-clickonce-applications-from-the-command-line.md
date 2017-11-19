@@ -1,86 +1,87 @@
 ---
-title: "명령줄에서 ClickOnce 응용 프로그램 빌드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 배포, 명령줄"
-  - "게시"
-  - "게시, ClickOnce"
+title: "명령줄에서 ClickOnce 응용 프로그램을 구축 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce deployment, from command line
+- publishing
+- publishing, ClickOnce
 ms.assetid: d9bc6212-c584-4f72-88c9-9a4b998c555e
-caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 86dba79e6e8b7e3f3b2837e494cfeddd2692d0cf
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 명령줄에서 ClickOnce 응용 프로그램 빌드
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]에서는 IDE\(통합 개발 환경\)에서 만든 프로젝트도 명령줄에서 빌드할 수 있습니다.  실제로 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]만 설치된 다른 컴퓨터에서 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]로 만든 프로젝트를 다시 빌드할 수 있습니다.  따라서 중앙의 빌드 작업실을 활용하거나 프로젝트 자체의 빌드 범위를 넘어서는 고급 스크립팅 기술을 사용하여 자동화 프로세스를 통해 빌드를 재현할 수 있습니다.  
+# <a name="building-clickonce-applications-from-the-command-line"></a>명령줄에서 ClickOnce 응용 프로그램 빌드
+[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)], 통합된 개발 환경 (IDE)에서 만들어진 경우에 명령줄에서 프로젝트를 빌드할 수 있습니다. 사용 하 여 만든 프로젝트를 다시 작성할 수는 실제로 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 만 있는 다른 컴퓨터에는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 설치 합니다. 이 자동화 된 프로세스를 사용 하 여 빌드를 재현할 수 있습니다, 그리고 예를 들어 중앙의 빌드 랩 또는 사용 하 여 고급 스크립팅 기술을 자체 프로젝트의 범위를 벗어납니다.  
   
-## MSBuild를 사용하여 ClickOnce 응용 프로그램 배포 재현  
- 명령줄에서 호출된 msbuild \/target:publish는 프로젝트를 빌드하고 게시 폴더에 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 만들도록 MSBuild 시스템에 지시합니다.  IDE에서 **게시** 명령을 선택해도 같은 결과가 발생합니다.  
+## <a name="using-msbuild-to-reproduce-clickonce-application-deployments"></a>ClickOnce 응용 프로그램 배포를 재현 하는 MSBuild를 사용 하 여  
+ 프로젝트 빌드를 만들 MSBuild 시스템은 명령줄에서 msbuild /target:publish를 호출할 때 인지는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 게시 폴더에서 응용 프로그램입니다. 선택 하면 같습니다는 **게시** IDE에 명령 합니다.  
   
- 이 명령은 Visual Studio 명령 프롬프트 환경의 경로에 있는 msbuild.exe를 실행합니다.  
+ 이 명령은 Visual Studio 명령 프롬프트 환경에 포함 된 경로에 있는 msbuild.exe를 실행 합니다.  
   
- "target"은 명령 처리 방식을 MSBuild에 알려 줍니다.  주요 대상은 "빌드" 대상과 "게시" 대상입니다.  빌드 대상은 IDE에서 빌드 명령을 선택하거나 F5 키를 눌러 지정할 수 있습니다.  프로젝트를 빌드하기만 하려는 경우 `msbuild`를 입력하면 됩니다.  빌드 대상이 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]에서 생성한 모든 프로젝트의 기본 대상이 되므로 이 명령만 입력해도 됩니다.  즉, 빌드 대상을 명시적으로 지정하지 않아도 됩니다.  따라서 `msbuild`를 입력하는 경우와 `msbuild /target:build`를 입력하는 경우에 동일한 작업이 수행됩니다.  
+ "대상"는 MSBuild에 명령을 처리 하는 방법을 나타냅니다. 주요 대상은 "빌드" 대상과 "게시" 대상입니다. 빌드 대상이 해당 빌드를 선택 하는 IDE에서 명령 (또는 F5 키를 눌러). 프로젝트를 빌드 하려는 입력 하 여 얻을 수 `msbuild`합니다. 이 명령은 작동 build 대상에 의해 생성 된 모든 프로젝트에 대 한 기본 대상 이므로 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]합니다. 즉, 빌드 대상을 지정 하려면 명시적으로 필요 하지 않습니다. 따라서 입력 `msbuild` 은 입력으로 동일한 작업 `msbuild /target:build`합니다.  
   
- `/target:publish` 명령은 게시 대상을 호출하도록 MSBuild에 지시합니다.  게시 대상은 빌드 대상에 따라 달라집니다.  즉, 게시 작업은 빌드 작업의 상위 집합입니다.  예를 들어 Visual Basic 또는 C\# 소스 파일 중 하나를 변경하면 게시 작업에 의해 해당 어셈블리가 자동으로 다시 빌드됩니다.  
+ `/target:publish` 명령은 게시 대상을 호출 하기 위해 MSBuild에 게 알려줍니다. 게시 대상이 build 대상에 따라 달라 집니다. 이 게시 작업에서 작성 작업의 상위 집합 임을 의미 합니다. 예를 들어 Visual Basic 또는 C# 소스 파일 중 하나를 변경한 경우 게시 작업에서 해당 어셈블리가 자동으로 다시 빌드됩니다.  
   
- Mage.exe 명령줄 도구로 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 매니페스트를 만들어서 전체 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포를 생성하는 방법에 대한 자세한 내용은 [연습: ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)를 참조하십시오.  
+ 전체 생성에 대 한 내용은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 만들려는 Mage.exe 명령줄 도구를 사용 하 여 배포 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 매니페스트를 참조 [연습: ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)합니다.  
   
-## MSBuild를 사용하여 기본 ClickOnce 응용 프로그램 만들기 및 빌드  
+## <a name="creating-and-building-a-basic-clickonce-application-using-msbuild"></a>만들기 및 MSBuild를 사용 하 여 기본 ClickOnce 응용 프로그램 작성  
   
-#### ClickOnce 프로젝트를 만들고 게시하려면  
+#### <a name="to-create-and-publish-a-clickonce-project"></a>만들어 ClickOnce 프로젝트를 게시 하려면  
   
-1.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  **새 프로젝트** 대화 상자가 나타납니다.  
+1.  클릭 **새 프로젝트** 에서 **파일** 메뉴. **새 프로젝트** 대화 상자가 나타납니다.  
   
-2.  **Windows 응용 프로그램**을 선택하고 이름을 `CmdLineDemo`로 지정합니다.  
+2.  선택 **Windows 응용 프로그램** 하 고 이름을 `CmdLineDemo`합니다.  
   
-3.  **빌드** 메뉴에서 **게시** 명령을 클릭합니다.  
+3.  **빌드** 메뉴를 클릭 하 여는 **게시** 명령입니다.  
   
-     이렇게 하면 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 배포를 생성할 수 있도록 프로젝트가 제대로 구성됩니다.  
+     이 단계를 수행 하면 프로젝트가 생성 하기 위해 제대로 구성 되는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 배포.  
   
      게시 마법사가 나타납니다.  
   
-4.  게시 마법사에서 **마침**을 클릭합니다.  
+4.  게시 마법사에서 **마침**합니다.  
   
-     Visual Studio에서는 Publish.htm이라는 기본 웹 페이지를 생성하여 표시합니다.  
+     Visual Studio는 생성 하 고 Publish.htm 이라는 기본 웹 페이지를 표시 합니다.  
   
-5.  프로젝트를 저장하고 프로젝트가 저장된 폴더 위치를 기록해 둡니다.  
+5.  프로젝트를 저장 하 고 저장 된 폴더 위치를 기록 합니다.  
   
- 위 단계를 수행하면 처음으로 게시된 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 프로젝트가 만들어집니다.  이제 IDE 외부에서 빌드를 재현할 수 있습니다.  
+ 위의 단계를 만듭니다는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 처음으로 게시 된 프로젝트입니다. 이제 IDE 외부에서 빌드를 재현할 수 있습니다.  
   
-#### 명령줄에서 빌드를 재현하려면  
+#### <a name="to-reproduce-the-build-from-the-command-line"></a>명령줄에서 빌드를 재현 하려면  
   
 1.  [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]을 종료합니다.  
   
-2.  Windows **시작** 메뉴에서 **모든 프로그램**, **Microsoft Visual Studio**, **Visual Studio Tools**, **Visual Studio 명령 프롬프트**를 차례로 클릭합니다.  이렇게 하면 현재 사용자의 루트 폴더에서 명령 프롬프트가 열립니다.  
+2.  Windows에서 **시작** 메뉴를 클릭 **모든 프로그램**, 다음 **Microsoft Visual Studio**, 다음 **Visual Studio Tools**, 다음 **Visual Studio 명령 프롬프트**합니다. 이 현재 사용자의 루트 폴더에 명령 프롬프트를 열어야 합니다.  
   
-3.  **Visual Studio 명령 프롬프트**에서 현재 디렉터리를 위에서 빌드한 프로젝트의 위치로 변경합니다.  예를 들어 `chdir My Documents\Visual Studio\Projects\CmdLineDemo`를 입력합니다.  
+3.  에 **Visual Studio 명령 프롬프트**, 현재 디렉터리 위에 빌드한 프로젝트의 위치를 변경 합니다. 예를 들어 입력 `chdir My Documents\Visual Studio\Projects\CmdLineDemo`합니다.  
   
-4.  "[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 프로젝트를 만들고 게시하려면"에서 생성한 기존 파일을 제거하려면 `rmdir /s publish`를 입력합니다.  
+4.  로 생성 된 기존 파일을 제거 하려면 "를 만들고 게시 한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 프로젝트" 유형 `rmdir /s publish`합니다.  
   
-     이 단계는 실행하지 않아도 되지만 이렇게 하면 새 파일이 모두 명령줄 빌드를 통해 생성된 것임을 확인할 수 있습니다.  
+     이 단계는 옵션 이지만 새 파일 모두에 의해 생성 된 명령줄 빌드 되도록 합니다.  
   
 5.  `msbuild /target:publish`를 입력합니다.  
   
- 위의 단계를 수행하면 프로젝트의 하위 폴더 **Publish**에 전체 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 배포가 생성됩니다.  CmdLineDemo.application은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트입니다.  CmdLineDemo\_1.0.0.0 폴더에는 CmdLineDemo.exe 파일과 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트인 CmdLineDemo.exe.manifest가 포함되어 있습니다.  Setup.exe는 기본적으로 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]를 설치하도록 구성된 부트스트래퍼입니다.  DotNetFX 폴더에는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]의 재배포 가능 요소가 포함되어 있습니다.  이 폴더는 웹 또는 UNC나 CD\/DVD를 통해 응용 프로그램을 배포하는 데 필요한 전체 파일 집합입니다.  
+ 위의 단계는 전체 생성 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] p 프로젝트의 하위 폴더에 응용 프로그램 배포**ublish**합니다. CmdLineDemo.application는는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트 합니다. 폴더 CmdLineDemo_1.0.0.0 CmdLineDemo.exe 및 CmdLineDemo.exe.manifest의 파일이 포함 된 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 합니다. Setup.exe는 기본적으로 설치 하도록 구성 된 부트스트래퍼는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다. DotNetFX 폴더에 대 한 재배포 가능 패키지에 포함 된 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다. 웹을 통해 또는 UNC 또는 CD/DVD를 통해 응용 프로그램을 배포 하는 데 필요한 파일의 전체 집합입니다.  
   
-## 게시 속성  
- 위의 절차에 따라 응용 프로그램을 게시하면 게시 마법사에 의해 다음 속성이 프로젝트 파일에 삽입됩니다.  이러한 속성은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램의 생성 방식에 직접적인 영향을 줍니다.  
+## <a name="publishing-properties"></a>게시 속성  
+ 위의 절차에서 응용 프로그램을 게시할 때 게시 마법사가 다음과 같은 속성이 프로젝트 파일에 삽입 됩니다. 이러한 속성에 직접 영향을 방법을 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램의 생성 합니다.  
   
- CmdLineDemo.vbproj \/ CmdLineDemo.csproj:  
+ CmdLineDemo.vbproj에서 / CmdLineDemo.csproj:  
   
 ```  
 <AssemblyOriginatorKeyFile>WindowsApplication3.snk</AssemblyOriginatorKeyFile>  
@@ -102,71 +103,71 @@ caps.handback.revision: 23
 <BootstrapperEnabled>true</BootstrapperEnabled>  
 ```  
   
- 프로젝트 파일 자체를 변경하지 않고도 명령줄에서 이러한 속성을 재정의할 수 있습니다.  예를 들어 다음 명령을 입력하면 부트스트래퍼 없이도 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 배포가 작성됩니다.  
+ 프로젝트 파일 자체를 변경 하지 않고 명령줄에서 이러한 속성을 재정의할 수 있습니다. 예를 들어 다음 작성 됩니다는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 부트스트래퍼 없이 응용 프로그램 배포:  
   
 ```  
 msbuild /target:publish /property:BootstrapperEnabled=false  
 ```  
   
- 게시 속성은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 **프로젝트 디자이너**에 있는 **게시**, **보안** 및 **서명** 속성 페이지에서 제어합니다.  다음은 게시 속성에 대한 설명과 응용 프로그램 디자이너의 다양한 속성 페이지에서 이러한 각 게시 속성을 설정하는 방법입니다.  
+ 게시 속성은에서 제어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서 **게시**, **보안**, 및 **서명** 의 속성 페이지는 **프로젝트 디자이너** . 다음은 응용 프로그램 디자이너의 다양 한 속성 페이지에 설정 되어 각 방법의 표시와 함께 게시 속성에 대 한 설명을입니다.  
   
--   `AssemblyOriginatorKeyFile`은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트에 서명하는 데 사용할 키 파일을 결정합니다.  어셈블리에 강력한 이름을 지정할 때도 동일한 키를 사용할 수 있습니다.  이 속성은 **프로젝트 디자이너**의 **서명** 페이지에서 설정합니다.  
+-   `AssemblyOriginatorKeyFile`서명에 사용 되는 키 파일을 결정 하면 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 합니다. 어셈블리에 강력한 이름을 지정 하려면이 동일한 키를 사용할 수도 있습니다. 이 속성에 **서명** 의 페이지는 **프로젝트 디자이너**합니다.  
   
- 다음 속성은 **보안** 페이지에서 설정합니다.  
+ 에 다음 속성이 설정 된는 **보안** 페이지:  
   
--   **ClickOnce 보안 설정 사용**에서는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 매니페스트의 생성 여부를 결정합니다.  프로젝트가 처음 생성될 때 기본적으로 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 매니페스트 생성이 해제되어 있습니다.  사용자가 프로젝트를 처음 게시하면 마법사가 이 플래그를 자동으로 설정합니다.  
+-   **ClickOnce 보안 설정 사용** 결정 여부 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 매니페스트를 생성 합니다. 프로젝트 처음 만들어질 때 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 기본적으로 해제 되어 매니페스트를 생성 합니다. 마법사는이 플래그를 처음으로 게시 하는 경우 자동으로 바뀝니다.  
   
--   **TargetZone**은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트로 내보낼 신뢰 수준을 결정합니다.  가능한 값은 "Internet", "LocalIntranet" 및 "Custom"입니다.  Internet 및 LocalIntranet을 사용하면 기본 권한 집합을 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트로 내보냅니다.  기본값인 LocalIntranet은 기본적으로 완전 신뢰를 의미합니다.  Custom은 기본 app.manifest 파일에 명시적으로 지정된 권한만 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트로 내보내도록 지정합니다.  app.manifest 파일은 트러스트 정보 정의만을 포함하는 부분적인 매니페스트 파일입니다.  이 파일은 숨김 파일이며 **보안** 페이지에서 권한을 구성할 때 자동으로 프로젝트에 추가됩니다.  
+-   **TargetZone** 에 공개 될 신뢰 수준을 결정 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 합니다. 가능한 값은 "Internet", "LocalIntranet" 및 "Custom"입니다. 인터넷 및 LocalIntranet 기본 권한 집합을 데이터로 내보낼 수를 기준으로 하면 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 합니다. LocalIntranet는 기본 템플릿이 고 기본적으로 완전 신뢰를 의미 합니다. 사용자 지정 하는 기본 app.manifest 파일에 명시적으로 지정 된 사용 권한만을 지정 데이터로 내보낼 수는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 합니다. App.manifest 파일은 부분 신뢰 정보 정의 포함 된 매니페스트 파일. 사용 권한을 구성 하는 경우 프로젝트에 자동으로 추가 하는 숨겨진 파일의 **보안** 페이지.  
   
- 다음 속성은 **게시** 페이지에서 설정합니다.  
+ 에 다음 속성이 설정 된는 **게시** 페이지:  
   
--   `PublishUrl`은 IDE에서 응용 프로그램이 게시될 위치입니다.  `InstallUrl` 및 `UpdateUrl` 속성을 지정하지 않으면 이 속성이 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트에 삽입됩니다.  
+-   `PublishUrl`IDE에서에 응용 프로그램이 게시 될 위치가입니다. 에 삽입 됩니다는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 모두 없으면 응용 프로그램 매니페스트는 `InstallUrl` 또는 `UpdateUrl` 속성을 지정 합니다.  
   
--   `ApplicationVersion`은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램의 버전을 지정합니다.  이 속성은 4자리 버전 번호이며  마지막 숫자가 "\*"이면 빌드 시 매니페스트에 삽입된 값 대신 `ApplicationRevision`을 사용합니다.  
+-   `ApplicationVersion`버전을 지정 된 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다. 버전 4 자리 수입니다. 마지막 자릿수가 양수인 경우는 "*"를 하면 `ApplicationRevision` 빌드 시에는 매니페스트에 삽입 되는 값을 대체 합니다.  
   
--   `ApplicationRevision`은 수정 번호를 지정합니다.  이 속성은 IDE에 게시할 때마다 증가하는 정수입니다.  명령줄에서 수행한 빌드의 경우에는 이 값이 자동으로 증가하지 않습니다.  
+-   `ApplicationRevision`수정 버전을 지정 합니다. 이것이 IDE에 게시할 때마다 증가 하는 정수입니다. 에 대 한 자동으로 증가 하지는 명령줄에서 수행한 빌드합니다.  
   
--   `Install`은 응용 프로그램이 설치된 응용 프로그램인지 아니면 웹에서 실행된 응용 프로그램인지를 확인합니다.  
+-   `Install`응용 프로그램이 설치 된 응용 프로그램 또는 웹에서 실행 응용 프로그램 인지 확인 합니다.  
   
--   `InstallUrl`\(표시되지 않음\)은 사용자가 응용 프로그램을 설치할 원본 위치입니다.  `IsWebBootstrapper` 속성을 활성화한 상태에서 이 속성을 지정하면 속성 값이 setup.exe 부트스트래퍼에 지정됩니다.  `UpdateUrl`을 지정하지 않은 경우 이 값은 응용 프로그램 매니페스트에도 삽입됩니다.  
+-   `InstallUrl`사용자가 설치 하는 응용 프로그램을 위치가 됩니다 (표시 되지 않음). Setup.exe 부트스트래퍼에이 값 구워진를 지정 하는 경우는 `IsWebBootstrapper` 속성을 사용할 수 있습니다. 매니페스트 경우 응용 프로그램에 삽입 된 `UpdateUrl` 지정 되지 않았습니다.  
   
--   `SupportUrl`\(표시되지 않음\)은 설치된 응용 프로그램에 대한 **프로그램 추가\/제거** 대화 상자에 연결된 위치입니다.  
+-   `SupportUrl`(표시 되지 않음)가 연결 된 위치에는 **프로그램 추가/제거** 설치 된 응용 프로그램에 대 한 대화 상자.  
   
- 다음 속성은 **게시** 페이지에서 액세스할 수 있는 **응용 프로그램 업데이트** 대화 상자에서 설정합니다.  
+ 다음 속성에서 설정 됩니다는 **응용 프로그램 업데이트** 에서 액세스 되는 대화 상자는 **게시** 페이지.  
   
--   `UpdateEnabled`는 응용 프로그램이 업데이트를 확인할지 여부를 나타냅니다.  
+-   `UpdateEnabled`응용 프로그램 업데이트를 확인 해야 하는지 여부를 나타냅니다.  
   
--   `UpdateMode`는 포그라운드 업데이트 또는 백그라운드 업데이트를 지정합니다.  
+-   `UpdateMode`포그라운드 업데이트 또는 백그라운드 업데이트를 지정합니다.  
   
--   `UpdateInterval`은 응용 프로그램의 업데이트 확인 빈도를 지정합니다.  
+-   `UpdateInterval`응용 프로그램 업데이트를 확인 하는 빈도 지정 합니다.  
   
--   `UpdateIntervalUnits`는 시, 일 또는 주 중에서 `UpdateInterval` 값의 단위를 지정합니다.  
+-   `UpdateIntervalUnits`지정 여부는 `UpdateInterval` 값은 시간, 일 또는 주 단위로 합니다.  
   
--   `UpdateUrl`\(표시되지 않음\)은 응용 프로그램이 업데이트를 받을 위치입니다.  이 속성을 지정하면 해당 값이 응용 프로그램 매니페스트에 삽입됩니다.  
+-   `UpdateUrl`응용 프로그램 업데이트를 받을 위치를입니다 (표시 되지 않음). 를 지정 하는 경우이 값은 응용 프로그램 매니페스트에 삽입 됩니다.  
   
--   다음 속성은 **게시** 페이지에서 액세스할 수 있는 **게시 옵션** 대화 상자에서 설정합니다.  
+-   다음 속성에서 설정 됩니다는 **게시 옵션** 에서 액세스 되는 대화 상자는 **게시** 페이지.  
   
--   `PublisherName`은 응용 프로그램을 설치 또는 실행할 때 표시되는 프롬프트에 나타나는 게시자의 이름을 지정합니다.  설치된 응용 프로그램의 경우 **시작** 메뉴에 표시되는 폴더 이름을 지정하는 데도 이 속성이 사용됩니다.  
+-   `PublisherName`설치 또는 응용 프로그램을 실행할 때 표시 되는 프롬프트에 표시 된 게시자의 이름을 지정 합니다. 설치 된 응용 프로그램의 경우에 사용 됩니다에 폴더 이름을 지정 하는 **시작** 메뉴.  
   
--   `ProductName`은 응용 프로그램을 설치 또는 실행할 때 표시되는 프롬프트에 나타나는 제품의 이름을 지정합니다.  설치된 응용 프로그램의 경우 **시작** 메뉴에 표시되는 바로 가기 이름을 지정하는 데도 이 속성이 사용됩니다.  
+-   `ProductName`설치 또는 응용 프로그램을 실행할 때 표시 되는 프롬프트에 표시 되는 제품의 이름을 지정 합니다. 설치 된 응용 프로그램의 경우에 사용 됩니다에 바로 가기 이름을 지정 하는 **시작** 메뉴.  
   
--   다음 속성은 **게시** 페이지에서 액세스할 수 있는 **필수 구성 요소** 대화 상자에서 설정합니다.  
+-   다음 속성에서 설정 됩니다는 **필수 구성 요소** 에서 액세스 되는 대화 상자는 **게시** 페이지.  
   
--   `BootstrapperEnabled`는 setup.exe 부트스트래퍼를 생성할지 여부를 결정합니다.  
+-   `BootstrapperEnabled`setup.exe 부트스트래퍼를 생성 여부를 결정 합니다.  
   
--   `IsWebBootstrapper`는 setup.exe 부트스트래퍼가 웹을 통해 작동하는지 아니면 디스크 기반 모드로 작동하는지를 결정합니다.  
+-   `IsWebBootstrapper`setup.exe 부트스트래퍼 웹을 통해 또는 디스크 기반 모드에서 작동 하는지 여부를 결정 합니다.  
   
-## InstallURL, SupportUrl, PublishURL 및 UpdateURL  
- 다음 표에서는 ClickOnce 배포에 대한 URL 옵션을 보여 줍니다.  
+## <a name="installurl-supporturl-publishurl-and-updateurl"></a>InstallURL, SupportUrl, PublishURL, 및 UpdateURL  
+ 다음 표에서 ClickOnce 배포를 위한 4 개의 URL 옵션을 보여 줍니다.  
   
 |URL 옵션|설명|  
-|------------|--------|  
-|`PublishURL`|ClickOnce 응용 프로그램을 웹 사이트에 게시하려는 경우에 필요합니다.|  
-|`InstallURL`|선택적 요소.  설치 사이트가 `PublishURL`과 다른 경우 이 URL 옵션을 설정합니다.  예를 들어 `PublishURL`을 FTP 경로로 설정하고 `InstallURL`을 웹 URL로 설정할 수 있습니다.|  
-|`SupportURL`|선택적 요소.  지원 사이트가 `PublishURL`과 다른 경우 이 URL 옵션을 설정합니다.  예를 들어, `SupportURL`을 회사의 고객 지원 웹 사이트로 설정할 수 있습니다.|  
-|`UpdateURL`|선택적 요소.  업데이트 위치가 `InstallURL`과 다른 경우 이 URL 옵션을 설정합니다.  예를 들어, `PublishURL`을 FTP 경로로 설정하고 `UpdateURL`을 웹 URL로 설정할 수 있습니다.|  
+|----------------|-----------------|  
+|`PublishURL`|ClickOnce 응용 프로그램 웹 사이트에 게시 하는 경우 필요 합니다.|  
+|`InstallURL`|선택 사항입니다. 설치 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `InstallURL` 웹 URL로 합니다.|  
+|`SupportURL`|선택 사항입니다. 지원 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `SupportURL` 회사의 고객 지원 웹 사이트입니다.|  
+|`UpdateURL`|선택 사항입니다. 업데이트 위치과 다른 경우이 URL 옵션을 설정 합니다.는 `InstallURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `UpdateURL` 웹 URL로 합니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.Build.Tasks.GenerateBootstrapper>   
  <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>   
  <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest>   

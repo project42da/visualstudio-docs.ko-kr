@@ -1,57 +1,56 @@
 ---
-title: "IDiaSymbol::get_isSplitted | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_isSplitted 메서드"
+title: 'Idiasymbol:: Get_issplitted | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_isSplitted method
 ms.assetid: ff160cf6-003b-4ef5-a406-20a7b287b2bf
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: eee1ad0cb809a6f3afac2b84b3224e162a64da36
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_isSplitted
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-데이터 기호 집계 또는 다른 심볼의 컬렉션으로 나눠진 여부를 지정 하는 플래그를 검색 합니다. 정말 큰 심볼의 일부인 경우에 컴파일러 기호 개별 엔터티로 처리 됩니다.  
+# <a name="idiasymbolgetissplitted"></a>IDiaSymbol::get_isSplitted
+데이터 기호 집계 또는 다른 기호;의 컬렉션으로 분리 되었습니다 있는지 여부를 지정 하는 플래그를 검색 합니다. 컴파일러는 실제로 더 큰 기호의 일부 경우에 별도 엔터티로 기호를 처리 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp  
+```C++  
 HRESULT get_isSplitted(  
-   BOOL *pFlag  
+   BOOL *pFlag  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pFlag`  
- \[out\] 반환 `TRUE` 심볼; 심볼의 집계로 나눠진 경우 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` 기호가 기호;에 대 한 집계로 분할 되어 있습니다 같지 않으면, 반환 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성의 기호를 사용할 수 없음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 의미는 속성은 해당 기호를 사용할 수 없습니다.  
   
-## 설명  
- [IDiaSymbol::get\_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) 메서드가 반환 `TRUE` 의 나누기 기호에 포함 된 모든 기호에 대 한.  
+## <a name="remarks"></a>설명  
+ [idiasymbol:: Get_isaggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) 메서드 반환 `TRUE` 분할 기호의 일부인 모든 기호에 대 한 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
 |버전:|DIA SDK v 8.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [IDiaSymbol::get\_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)
+ [IDiaSymbol::get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)

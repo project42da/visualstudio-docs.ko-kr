@@ -1,11 +1,10 @@
 ---
-title: 'CA1050: Declare types in namespaces | Microsoft Docs'
+title: "CA1050: 네임 스페이스에 형식을 선언 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,57 +14,44 @@ helpviewer_keywords:
 - DeclareTypesInNamespaces
 - CA1050
 ms.assetid: 1002748d-ac8d-404f-85dd-7a12d1ad3e05
-caps.latest.revision: 15
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c8027dcac0515017a1e71c839f00cf84c8073ae2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c0aeaaf3531c45668b8804a6285be5df211c2754
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1050-declare-types-in-namespaces"></a>CA1050: Declare types in namespaces
+# <a name="ca1050-declare-types-in-namespaces"></a>CA1050: 네임스페이스에 형식을 선언하십시오.
 |||  
 |-|-|  
 |TypeName|DeclareTypesInNamespaces|  
 |CheckId|CA1050|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A public or protected type is defined outside the scope of a named namespace.  
+## <a name="cause"></a>원인  
+ 명명된 된 네임 스페이스의 범위를 벗어나는 public 또는 protected 형식이 정의 됩니다.  
   
-## <a name="rule-description"></a>Rule Description  
- Types are declared in namespaces to prevent name collisions, and as a way to organize related types in an object hierarchy. Types that are outside any named namespace are in a global namespace that cannot be referenced in code.  
+## <a name="rule-description"></a>규칙 설명  
+ 형식은 네임 스페이스 이름 충돌을 방지 하 고 관련 된 형식을 개체 계층을 구성 하는 방법으로 선언 됩니다. 명명된 된 네임 스페이스 외부에 있는 유형은 코드에서 참조할 수 없는 전역 네임 스페이스에서입니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, place the type in a namespace.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 네임 스페이스의 형식을 배치 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Although you never have to suppress a warning from this rule, it is safe to do this when the assembly will never be used together with other assemblies.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를에서 표시 하지 않으려면 필요, 없지만 어셈블리가 다른 어셈블리와 함께 사용 하지 않을 경우이 방법을 안전 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a library that has a type incorrectly declared outside a namespace, and a type that has the same name declared in a namespace.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 네임 스페이스, 외부 잘못 선언 형식이 지정 된 라이브러리와 이름이 같은 네임 스페이스 선언 하는 형식을 보여 줍니다.  
   
- [!code-csharp[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_1.cs)] [!code-vb[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_1.vb)]  
+ [!code-csharp[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_1.cs)]
+ [!code-vb[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_1.vb)]  
   
-## <a name="example"></a>Example  
- The following application uses the library that was defined previously. Note that the type that is declared outside a namespace is created when the name `Test` is not qualified by a namespace. Note also that to access the `Test` type in `Goodspace`, the namespace name is required.  
+## <a name="example"></a>예제  
+ 다음 응용 프로그램은 이전에 정의 된 라이브러리를 사용 합니다. 네임 스페이스 외부 선언 된 형식을 생성 될 때 이름 `Test` 네임 스페이스로 한정 되지 않습니다. 액세스 하는 `Test` 에 입력 `Goodspace`, 네임 스페이스 이름은 필수입니다.  
   
- [!code-csharp[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_2.cs)] [!code-vb[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_2.vb)]
+ [!code-csharp[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_2.cs)]
+ [!code-vb[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_2.vb)]

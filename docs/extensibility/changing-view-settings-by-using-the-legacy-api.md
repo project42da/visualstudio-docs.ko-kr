@@ -1,49 +1,50 @@
 ---
-title: "레거시 API를 사용 하 여 보기 설정 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "편집기 [Visual Studio SDK] 레거시-보기 설정 변경"
+title: "레거시 API를 사용 하 여 보기 설정을 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - changing view settings
 ms.assetid: 12c9b300-0894-4124-96a1-764326176d77
-caps.latest.revision: 18
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: fe5bd3b149981ca8183e9311185ef5d6ed19e48f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 레거시 API를 사용 하 여 보기 설정 변경
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-코어 편집기 기능, 자동 줄 바꿈, 선택 영역 여백 및 가상 공간에 대 한 설정으로 사용자가 변경할 수 있는  **옵션** 대화 상자.  그러나 또한 이러한 설정을 변경할 수 있습니다 프로그래밍.  
+# <a name="changing-view-settings-by-using-the-legacy-api"></a>레거시 API를 사용 하 여 보기 설정 변경
+가상 공간, 자동 줄 바꿈 및 선택 영역 여백을 등의 핵심 편집기 기능에 대 한 설정을 통해 사용자가 변경할 수 있습니다는 **옵션** 대화 상자. 하지만 이러한 설정을 변경할 수 이기도 프로그래밍 방식으로 합니다.  
   
-## 레거시 API를 사용 하 여 설정 변경  
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> 인터페이스는 텍스트 편집기 속성 집합을 노출 합니다.  텍스트 뷰 텍스트 보기를 프로그래밍 방식으로 변경 된 설정의 그룹을 나타내는 속성 \(GUID\_EditPropCategory\_View\_MasterSettings\)의 범주를 포함 되어 있습니다.  이 방법으로 보기 설정을 변경한 후에에서 변경할 수 없습니다의  **옵션** 대화 상자 재설정 합니다.  
+## <a name="changing-settings-by-using-the-legacy-api"></a>레거시 API를 사용 하 여 설정 변경  
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> 인터페이스 텍스트 편집기 속성 집합을 노출 합니다. 텍스트 보기 텍스트 보기에 대 한 프로그래밍 방식으로 변경 된 설정의 그룹을 나타내는 (GUID_EditPropCategory_View_MasterSettings) 속성의 범주를 포함 합니다. 이러한 방식으로 뷰 설정 변경 된 후에 변경할 수 없는 **옵션** 가 초기화 될 때까지 대화 상자.  
   
- 다음 인스턴스 코어 편집기의 보기 설정을 변경 하는 일반적인 과정입니다.  
+ 다음은 핵심 편집기의 인스턴스에 대 한 보기 설정을 변경 하기 위한 일반적인 프로세스입니다.  
   
-1.  호출 `QueryInterface` 에 있는 \(<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>\)에 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> 인터페이스.  
+1.  호출 `QueryInterface` 에 (<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>)에 대 한는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> 인터페이스입니다.  
   
-2.  호출 하는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A> 메서드를 guid\_editpropcategory\_view\_mastersettings에 대 한 값을 지정 하는 `rguidCategory` 매개 변수.  
+2.  호출의 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A> 메서드를 GUID_EditPropCategory_View_MasterSettings에 대 한 값을 지정 하는 `rguidCategory` 매개 변수입니다.  
   
-     이 작업에 대 한 포인터를 반환의 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> 보기에 대 한 강제 속성 집합을 포함 하는 인터페이스입니다.  이 그룹의 모든 설정은 영구적으로 강제로 됩니다.  설정을이 그룹에 속하지 않은 경우에 지정 된 옵션에 따라 수 있는  **옵션** 대화 상자 또는 사용자의 명령.  
+     이 작업에 대 한 포인터를 반환 된 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> 보기에 대 한 강제 속성 집합을 포함 하는 인터페이스입니다. 이 그룹의 모든 설정 영구적으로 강제 합니다. 설정이이 그룹에 없는 경우에 지정 된 옵션을 따를 것은 **옵션** 대화 상자 또는 사용자의 명령이 있습니다.  
   
-3.  호출 하는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> 메서드를 적절 한 설정 값을 지정 하는 `idprop` 매개 변수.  
+3.  호출 된 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> 에 적절 한 설정 값을 지정 하는 메서드를는 `idprop` 매개 변수입니다.  
   
-     예를 들어, 단어 잘림 방지 하려면 호출 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> , vseditpropid\_viewlangopt\_wordwrap의 값을 지정 하 고 `vt` 에 있는 `idprop` 매개 변수.  이 호출에서 `vt` VT\_BOOL 형식의 VARIANT입니다 및 `vt.boolVal` VARIANT\_TRUE입니다.  
+     예를 들어, 자동 줄 바꿈 하려면 호출 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> VSEDITPROPID_ViewLangOpt_WordWrap, 값을 지정 하 고 `vt` 에 대 한는 `idprop` 매개 변수입니다. 이 호출에서 `vt` VT_BOOL 형식의 변형 및 `vt.boolVal` 가 VARIANT_TRUE입니다.  
   
-## 변경 된 뷰 설정 다시 설정  
- 코어 편집기의 인스턴스를 설정 된 변경 된 보기를 다시 설정 하기 위해 호출는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.RemoveProperty%2A> 메서드에 적절 한 설정 값을 지정 하는 `idprop` 매개 변수.  
+## <a name="resetting-changed-view-settings"></a>변경 된 보기 설정을 다시 설정  
+ 핵심 편집기의 인스턴스에 대 한 설정 변경 된 모든 보기를 다시 설정 하려면 호출는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.RemoveProperty%2A> 메서드에 적절 한 설정 값을 지정 하 고는 `idprop` 매개 변수입니다.  
   
- 예를 들어, 자유롭게 배치에 자동 줄 바꿈을 허용 하려면 하면이 속성 범주를 호출 하 여 제거 될 수 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.RemoveProperty%2A> 및 vseditpropid\_viewlangopt\_wordwrap에 대 한 값을 지정 하는 `idprop` 매개 변수.  
+ 예를 들어, 자동 줄 바꿈 자유롭게 부동 소수점 수 있도록 있습니다 것에서 제거 된 속성 범주를 호출 하 여 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.RemoveProperty%2A> VSEDITPROPID_ViewLangOpt_WordWrap에 대 한 값을 지정 하 고는 `idprop` 매개 변수입니다.  
   
- 코어 편집기에 대 한 모든 변경 된 설정을 한 번에 제거 하려면 값을 VSEDITPROPID\_ViewComposite\_AllCodeWindowDefaults, v t에 대 한 지정은 `idprop` 매개 변수.  이 호출은 vt VT\_BOOL 형식의 VARIANT 이며 vt.boolVal VARIANT\_TRUE입니다.  
+ 코어 편집기에 대 한 모든 변경 된 설정을 한 번에 제거 하려면 VSEDITPROPID_ViewComposite_AllCodeWindowDefaults, v t에 대 한 값을 지정 된 `idprop` 매개 변수입니다. 이 호출에서 vt VT_BOOL 유형의 VARIANT 이며 vt.boolVal가 VARIANT_TRUE입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코어 편집기 내](../extensibility/inside-the-core-editor.md)   
- [텍스트 보기에 액세스 하는 레거시 API를 사용 하 여](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)   
+ [레거시 API를 사용 하 여 텍스트 보기에 액세스](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)   
  [옵션 대화 상자](../ide/reference/options-dialog-box-visual-studio.md)

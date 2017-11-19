@@ -1,46 +1,47 @@
 ---
 title: "방법: 제품 매니페스트 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "종속성, 사용자 지정 부트스트래퍼 패키지"
-  - "필수 구성 요소, 사용자 지정 부트스트래퍼 패키지"
-  - "제품 파일[ClickOnce]"
-  - "제품 파일[Windows Installer]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- product files [ClickOnce]
+- product files [Windows Installer]
+- prerequisites, custom bootstrapper package
+- dependencies, custom bootstrapper package
 ms.assetid: 2d316aaa-8bc0-4ce5-90ab-23b3eac0b5dd
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 36f1c1d5255233f57f7c2e266fe26fd8cbf789ee
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: 제품 매니페스트 만들기
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-응용 프로그램의 필수 구성 요소를 배포하기 위해 부트스트래퍼 패키지를 만들 수 있습니다.  부트스트래퍼 패키지에 포함되는 제품 매니페스트 파일은 하나 밖에 없지만 패키지 매니페스트는 각 로캘별로 포함됩니다.  패키지 매니페스트에는 패키지의 지역화 관련 항목이 포함되어 있습니다.  예를 들어 문자열, 최종 사용자 사용권 계약 및 언어 팩 등이 포함됩니다.  
+# <a name="how-to-create-a-product-manifest"></a>방법: 제품 매니페스트 만들기
+응용 프로그램에 대 한 필수 구성 요소를 배포 하려면 부트스트래퍼 패키지를 만들 수 있습니다. 부트스트래퍼 패키지는 각 로캘에 대 한 패키지 매니페스트를 제외한 단일 제품 매니페스트 파일을 포함합니다. 패키지 매니페스트의 패키지의 지역화 관련 항목이 포함 되어 있습니다. 문자열, 최종 사용자 사용권 계약 및 언어 팩이 포함 됩니다.  
   
- 제품 매니페스트에 대한 자세한 내용은 [방법: 패키지 매니페스트 만들기](../deployment/how-to-create-a-package-manifest.md)를 참조하십시오.  
+ 제품 매니페스트에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 패키지 매니페스트 만들기](../deployment/how-to-create-a-package-manifest.md)합니다.  
   
-## 제품 매니페스트 만들기  
+## <a name="creating-the-product-manifest"></a>제품 매니페스트 만들기  
   
-#### 제품 매니페스트를 만들려면  
+#### <a name="to-create-the-product-manifest"></a>제품 매니페스트를 만들려면  
   
-1.  부트스트래퍼 패키지용 디렉터리를 만듭니다.  이 예제에서는 C:\\package를 사용합니다.  
+1.  부트스트래퍼 패키지에 대 한 디렉터리를 만듭니다. 이 예제에서는 C:\package를 사용 합니다.  
   
-2.  Visual Studio에서 `product.xml`이라는 새 XML 파일을 만들고 이 파일을 C:\\package 폴더에 저장합니다.  
+2.  Visual Studio에서 라는 새 XML 파일을 만듭니다 `product.xml`, C:\package 폴더에 저장 합니다.  
   
-3.  XML 네임스페이스 및 패키지의 제품 코드를 기술하는 다음 XML을 추가합니다.  제품 코드를 패키지의 고유 식별자로 바꿉니다.  
+3.  패키지에 대 한 XML 네임 스페이스 및 제품 코드를 설명 하는 다음 XML을 추가 합니다. 패키지에 대 한 고유 식별자가 있는 제품 코드를 바꿉니다.  
   
     ```  
     <Product  
@@ -48,7 +49,7 @@ caps.handback.revision: 10
     ProductCode="Custom.Bootstrapper.Package">  
     ```  
   
-4.  패키지에 종속성이 있음을 지정하는 XML을 추가합니다.  이 예제에서는 Microsoft Windows Installer 3.1에 대한 종속성을 사용합니다.  
+4.  패키지에 종속 되어 있는지를 지정 하는 XML을 추가 합니다. 이 예제에서는 Microsoft Windows Installer 3.1에 종속성을 사용 합니다.  
   
     ```  
     <RelatedProducts>  
@@ -56,7 +57,7 @@ caps.handback.revision: 10
       </RelatedProducts>  
     ```  
   
-5.  부트스트래퍼 패키지에 있는 모든 파일을 나열하는 XML을 추가합니다.  이 예제에서는 패키지 파일 이름으로 CorePackage.msi를 사용합니다.  
+5.  부트스트래퍼 패키지에 있는 모든 파일을 나열 하는 XML을 추가 합니다. 이 예제에서는 CorePackage.msi 패키지 파일 이름을 사용 합니다.  
   
     ```  
     <PackageFiles>  
@@ -64,16 +65,16 @@ caps.handback.revision: 10
     </PackageFiles>  
     ```  
   
-6.  CorePackage.msi 파일을 C:\\package 폴더로 복사 또는 이동합니다.  
+6.  복사 하거나 CorePackage.msi 파일을 C:\package 폴더로 이동 합니다.  
   
-7.  부트스트래퍼 명령을 사용하여 패키지를 설치하는 XML을 추가합니다.  부트스트래퍼는 자동으로 .msi 파일에 **\/qn** 플래그를 추가하여 이 파일이 자동으로 설치되도록 합니다.  파일의 확장명이 .exe인 경우 부트스트래퍼는 셸을 사용하여 .exe 파일을 실행합니다.  다음 XML에서는 CorePackage.msi에 대한 인수가 없지만 Arguments 특성에 명령줄 인수를 제공할 수는 있습니다.  
+7.  부트스트래퍼 명령을 사용 하 여 패키지를 설치 하는 XML을 추가 합니다. 부트스트래퍼가 자동으로 추가 **/qn** 자동으로 설치 하는.msi 파일을 플래그 합니다. 파일 확장명이.exe 인 경우 부트스트래퍼 셸을 사용 하 여.exe 파일을 실행 합니다. 다음 XML CorePackage.msi를 인수 없이 보여주지만 인수 특성에 명령줄 인수를 삽입할 수 있습니다.  
   
     ```  
     <Commands>  
         <Command PackageFile="CorePackage.msi" Arguments="">  
     ```  
   
-8.  부트스트래퍼 패키지 설치 여부를 확인하는 다음 XML을 추가합니다.  제품 코드를 재배포 구성 요소의 GUID로 바꿉니다.  
+8.  부트스트래퍼 패키지가 설치 되어 있는지 확인 하려면 다음 XML을 추가 합니다. 재배포 가능 구성 요소에 대 한 GUID를 가진 제품 코드를 바꿉니다.  
   
     ```  
     <InstallChecks>  
@@ -83,7 +84,7 @@ caps.handback.revision: 10
     </InstallChecks>  
     ```  
   
-9. 부트스트래퍼 구성 요소가 이미 설치되어 있는지 여부에 따라 부트스트래퍼 동작을 변경하는 XML을 추가합니다.  이 구성 요소가 설치되어 있으면 부트스트래퍼 패키지가 실행되지 않습니다.  이 구성 요소 설치에는 관리자 권한이 필요하므로 다음 XML에서는 현재 사용자가 관리자인지 확인합니다.  
+9. 부트스트래퍼 구성 요소를 이미 설치한 경우에 따라 부트스트래퍼 동작을 변경 하는 XML을 추가 합니다. 요소를 설치 하면 부트스트래퍼 패키지가 실행 되지 않습니다. 다음 XML이 구성이 요소 관리자 권한이 필요 하므로 현재 사용자가 관리자 인지 확인 합니다.  
   
     ```  
     <InstallConditions>  
@@ -96,7 +97,7 @@ caps.handback.revision: 10
     </InstallConditions>  
     ```  
   
-10. 설치가 성공적이고 재부팅이 필요한 경우에 종료 코드를 설정하는 XML을 추가합니다.  다음 XML에서는 부트스트래퍼가 패키지 설치를 계속하지 않을 것임을 나타내는 Fail 및 FailReboot 종료 코드를 보여 줍니다.  
+10. 성공적으로 설치 하 고 다시 시작이 필요한 경우 종료 코드를 설정 하는 XML을 추가 합니다. 다음 XML 실패 하 고 FailReboot 부트스트래퍼 패키지 설치 계속 되지 것입니다 나타냅니다는 코드를 종료 하는 방법을 보여 줍니다.  
   
     ```  
     <ExitCodes>  
@@ -107,17 +108,17 @@ caps.handback.revision: 10
     </ExitCodes>  
     ```  
   
-11. 부트스트래퍼 명령 섹션을 종료하는 다음 XML을 추가합니다.  
+11. 부트스트래퍼 명령에 대 한 섹션을 종료 하려면 다음 XML을 추가 합니다.  
   
     ```  
         </Command>  
     </Commands>  
     ```  
   
-12. C:\\package 폴더를 Visual Studio 부트스트래퍼 디렉터리로 이동합니다.  Visual Studio 2010의 경우 이 디렉터리의 경로는 \\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bootstrapper\\Packages입니다.  
+12. Visual Studio 부트스트래퍼 디렉터리로 C:\package 폴더를 이동 합니다. Visual Studio 2010 files\microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages 디렉터리입니다.  
   
-## 예제  
- 아래의 제품 매니페스트에는 사용자 지정 필수 구성 요소에 대한 설치 지침이 포함되어 있습니다.  
+## <a name="example"></a>예제  
+ 제품 매니페스트는 사용자 지정 필수 구성 요소에 대 한 설치 지침을 포함합니다.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -160,5 +161,5 @@ caps.handback.revision: 10
 </Product>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [제품 및 패키지 스키마 참조](../deployment/product-and-package-schema-reference.md)

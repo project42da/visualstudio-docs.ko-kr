@@ -11,30 +11,15 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
 ms.assetid: 4aa47777-de75-4897-a423-a3c4426b4125
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a126524672b0b827d278d2d76c01d907c9d403a1
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ef5f86cb3b41af6cc9e7432cdbfb7365471320b8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>도메인별 언어 정의에 추적 속성 추가
 이 도메인 모델에 추적 속성을 추가 하는 방법을 보여 줍니다.  
@@ -120,7 +105,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  에 **ExampleElement** 도메인 클래스, 라는 도메인 속성을 추가 `Namespace`합니다.  
   
-     에 **속성** 새 속성에 대 한 창 설정 **찾아볼 수는** 를 **False**, 설정 및 **종류** 를 **CustomStorage **.  
+     에 **속성** 새 속성에 대 한 창 설정 **찾아볼 수는** 를 **False**, 설정 및 **종류** 를 **CustomStorage** .  
   
 4.  에 **ExampleElement** 도메인 클래스, 라는 도메인 속성을 추가 `IsNamespaceTracking`합니다.  
   
@@ -748,7 +733,7 @@ ms.lasthandoff: 09/26/2017
   
 4.  끌어서는 **ExampleElement** 에서 요소는 **도구 상자** 상위 합니다.  
   
-5.  에 **속성** 선택 요소에 대 한 창은 **요소 Namespace** 속성에서 값을 변경 하 고 **DefaultNamespace** 를 ** OtherNamespace**합니다.  
+5.  에 **속성** 선택 요소에 대 한 창은 **요소 Namespace** 속성에서 값을 변경 하 고 **DefaultNamespace** 를  **OtherNamespace**합니다.  
   
      다음에 유의 값 **요소 Namespace** 이제 굵게 표시 됩니다.  
   
@@ -766,7 +751,7 @@ ms.lasthandoff: 09/26/2017
   
 9. 변경 **Default Namespace** 에서 다이어그램에 대 한 **DefaultNamespace** 를 **NewNamespace**합니다.  
   
-     **Namespace** 첫 번째 요소 트랙의는 **Default Namespace** 속성 반면는 **Namespace** 요소를 두 번째 의사용자로업데이트된값을유지** OtherNamespace**합니다.  
+     **Namespace** 첫 번째 요소 트랙의는 **Default Namespace** 속성 반면는 **Namespace** 요소를 두 번째 의사용자로업데이트된값을유지 **OtherNamespace**합니다.  
   
 10. 솔루션을 저장 하 고 실험적 빌드를 닫습니다.  
   
@@ -778,4 +763,3 @@ ms.lasthandoff: 09/26/2017
  <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>   
  [도메인 특정 언어를 정의 하는 방법](../modeling/how-to-define-a-domain-specific-language.md)   
  [방법: 도메인별 언어 솔루션 만들기](../modeling/how-to-create-a-domain-specific-language-solution.md)   
-

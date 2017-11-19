@@ -1,35 +1,38 @@
 ---
-title: "Sequence 활동 디자이너 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "System.Activities.Statements.Sequence.UI"
+title: "활동 디자이너를 시퀀스 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: System.Activities.Statements.Sequence.UI
 ms.assetid: 51c8d3cb-4d43-458f-9631-b63755f9ac94
-caps.latest.revision: 5
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 51f138d17c2b0f8d8a483ef09c298d1dbbf9345c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# Sequence 활동 디자이너
+# <a name="sequence-activity-designer"></a>Sequence 활동 디자이너
 <xref:System.Activities.Statements.Sequence> 활동에는 순서대로 실행되는 정렬된 자식 활동 컬렉션이 들어 있습니다.  
   
- 활동 집합을 순서대로 실행하는 또 다른 방법은 <xref:System.Activities.Statements.Flowchart> 활동을 사용하는 것입니다.다이어그램 방식으로 모델링하려는 단순 분기 또는 반복 프로그램 흐름이 있는 경우 [순서도](../workflow-designer/flowchart-activity-designer.md)의 사용을 고려해 보십시오.  
+ 활동 집합을 순서대로 실행하는 또 다른 방법은 <xref:System.Activities.Statements.Flowchart> 활동을 사용하는 것입니다. 사용 하는 것이 좋습니다는 [순서도](../workflow-designer/flowchart-activity-designer.md) 설치한 경우 간단한 분기 또는 diagrammatically 모델링 하려는 프로그램 흐름을 반복 합니다.  
   
-## Sequence 활동 디자이너 사용  
- <xref:System.Activities.Statements.Sequence> 활동을 추가하려면 **도구 상자**의 **Sequence** 활동 디자이너를 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] 화면으로 끌어 놓습니다.이 <xref:System.Activities.Statements.Sequence> 활동에 자식 활동을 추가하려면 **도구 상자**의 다른 활동을 "여기에 작업 놓기" 힌트 텍스트가 표시된 상자의 삼각형으로 끌어 놓습니다.  
+## <a name="using-the-sequence-activity-designer"></a>Sequence 활동 디자이너 사용  
+ 추가 하는 <xref:System.Activities.Statements.Sequence> 활동을 끌어는 **시퀀스** 활동 디자이너를는 **도구 상자** 에 놓습니다는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] 화면입니다. 이 자식 활동을 추가 하려면 <xref:System.Activities.Statements.Sequence> 활동, 다른 활동을 끌어는 **도구 상자** 를 "여기에 작업 놓기" 힌트 텍스트가 표시 된 상자의 삼각형 놓습니다.  
   
-### Workflow Designer의 Sequence 활동  
- 다음 표에서는 <xref:System.Activities.Statements.Sequence> 속성을 보여 주고 디자이너에서 이 속성을 사용하는 방법을 설명합니다.이러한 속성은 속성 표 또는 디자이너 화면에서 편집할 수 있습니다.  
+### <a name="sequence-activity-properties-in-the-workflow-designer"></a>워크플로 디자이너의 Sequence 활동 속성  
+ 다음 표에서는 <xref:System.Activities.Statements.Sequence> 속성을 보여 주고 디자이너에서 이 속성을 사용하는 방법을 설명합니다. 이러한 속성은 속성 표 또는 디자이너 화면에서 편집할 수 있습니다.  
   
-|속성 이름|필수|사용법|  
-|-----------|--------|---------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|머리글에 <xref:System.Activities.Statements.Sequence> 활동 디자이너의 이름을 지정합니다.기본값은 Sequence입니다.속성 표에서 또는 활동 디자이너의 머리글에서 직접 값을 편집할 수 있습니다.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>은 꼭 필요하지 않더라도 사용하는 것이 좋습니다.|  
+|속성 이름|필수|용도|  
+|-------------------|--------------|-----------|  
+|<xref:System.Activities.Activity.DisplayName%2A>|False|머리글에 <xref:System.Activities.Statements.Sequence> 활동 디자이너의 이름을 지정합니다. 기본값은 Sequence입니다. 속성 표에서 또는 활동 디자이너의 머리글에서 직접 값을 편집할 수 있습니다.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>은 꼭 필요하지 않더라도 사용하는 것이 좋습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [순서도](../workflow-designer/flowchart-activity-designer.md)   
  [제어 흐름](../workflow-designer/control-flow-activity-designers.md)

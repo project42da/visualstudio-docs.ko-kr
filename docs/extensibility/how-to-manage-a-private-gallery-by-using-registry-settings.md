@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - VSIX private galleries, managing
 - managing VSIX private galleries
 ms.assetid: 86b86442-4293-4cad-9fe2-876eef65f426
-caps.latest.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c7f9c12cef9b46cc29c4fda6ad74855b69386dc9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 8ce054bf6149f0224785f4c3cd9274e86dc09d04
-ms.openlocfilehash: 00c42a4dbd6a9a526d661b7fa04793d531acd8bc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>방법: 레지스트리 설정을 사용 하 여 전용 갤러리를 관리 합니다.
 격리 셸 확장의 개발자 또는 관리자 인 경우에 컨트롤, 템플릿 및 Visual Studio 갤러리, 샘플 갤러리 또는 전용 갤러리의 도구에 대 한 액세스를 제어할 수 있습니다. 사용 가능 여부가 갤러리는 하 게 하려면 수정 된 레지스트리 키와 해당 값을 설명 하는.pkgdef 파일을 만듭니다.  

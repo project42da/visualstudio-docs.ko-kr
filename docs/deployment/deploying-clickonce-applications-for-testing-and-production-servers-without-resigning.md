@@ -1,69 +1,69 @@
 ---
-title: "다시 서명하지 않고 테스트 및 프로덕션 서버용 ClickOnce 응용 프로그램 배포 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "응용 프로그램 업데이트, ClickOnce"
-  - "ClickOnce 응용 프로그램, 다시 서명 없이 배포"
-  - "ClickOnce 배포, 다시 서명하지 않음"
-  - "deploymentProvider 태그"
-  - "매니페스트[ClickOnce]"
-  - "업데이트 위치[ClickOnce]"
+title: "테스트를 위해 ClickOnce 응용 프로그램을 배포 하 고 다시 서명 하지 않고도 프로덕션 서버 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce applications, deploying without resigning
+- ClickOnce deployment, without resigning
+- application updates, ClickOnce
+- update location [ClickOnce]
+- deploymentProvider tag
+- manifests [ClickOnce]
 ms.assetid: 1218a98d-1ad5-4eef-95dd-0e0b3c44168c
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "10"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 91261e0bb70092861f216333bd73a11dc07790ba
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 다시 서명하지 않고 테스트 및 프로덕션 서버용 ClickOnce 응용 프로그램 배포
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-이 항목에서는 .NET Framework 버전 3.5에 도입된 ClickOnce의 새 기능에 대해 설명합니다. 이 기능을 사용하면 다시 서명하거나 ClickOnce 매니페스트를 변경하지 않고 여러 네트워크 위치에서 ClickOnce 응용 프로그램을 배포할 수 있습니다.  
+# <a name="deploying-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>다시 서명하지 않고 테스트 및 프로덕션 서버용 ClickOnce 응용 프로그램 배포
+이 항목에서는.NET Framework 버전 3.5 ClickOnce 변경 하거나 다시 서명 하지 않고 여러 네트워크 위치에서 ClickOnce 응용 프로그램을 배포할 수 있도록 매니페스트에 도입 된 ClickOnce의 새로운 기능을 설명 합니다.  
   
 > [!NOTE]
->  다시 서명하여 새 버전의 응용 프로그램을 배포하는 방법이 가장 좋으므로  가능하면 다시 서명하는 방법을 사용하는 것이 좋습니다.  자세한 내용은 [Mage.exe\(매니페스트 생성 및 편집 도구\)](../Topic/Mage.exe%20\(Manifest%20Generation%20and%20Editing%20Tool\).md)를 참조하십시오.  
+>  새 버전의 응용 프로그램을 배포 하기 위한 기본 방법이 여전히가 다시 서명 합니다. 가능한 경우 항상 서명 메서드를 사용 합니다. 자세한 내용은 [Mage.exe(매니페스트 생성 및 편집 도구)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)를 참조하세요.  
   
- 타사 개발자 및 ISV는 이 기능을 사용하여 자사 고객들이 자사 응용 프로그램을 보다 손쉽게 업데이트하도록 할 수 있습니다.  이 기능은 다음과 같은 경우에 사용할 수 있습니다.  
+ 제 3 자 개발자나 Isv 수에 옵트인이 기능을 보다 쉽게 고객에 게 해당 응용 프로그램을 업데이트 합니다. 다음과 같은 상황에서이 기능을 사용할 수 있습니다.  
   
--   응용 프로그램을 처음 설치하는 것이 아니라 업데이트하는 경우  
+-   응용 프로그램을 응용 프로그램의 첫 번째 설치 되지 않습니다 업데이트할 때.  
   
--   컴퓨터에 응용 프로그램에 대한 구성이 하나만 있는 경우.  예를 들어, 응용 프로그램이 서로 다른 두 데이터베이스를 가리키도록 구성된 경우에는 이 기능을 사용할 수 없습니다.  
+-   하나의 구성만 컴퓨터에서 응용 프로그램의 경우. 예를 들어 서로 다른 두 데이터베이스를 가리키도록 구성 된 응용 프로그램,이 기능을 사용할 수 없습니다.  
   
-## 배포 매니페스트에서 deploymentProvider 제외  
- .NET Framework 2.0 및 .NET Framework 3.0에서는 오프라인으로 사용하도록 시스템에 설치된 모든 ClickOnce 응용 프로그램이 해당 배포 매니페스트에 `deploymentProvider`를 지정해야 합니다.  `deploymentProvider`는 업데이트 위치라고도 하는데, 이 위치는 ClickOnce가 응용 프로그램 업데이트가 있는지 확인하는 위치입니다.  응용 프로그램 게시자가 해당 배포에 서명해야 해는 필요성과 연관된 이 요구 사항은 특정 회사에서 공급업체나 타사의 ClickOnce 응용 프로그램을 업데이트하는 것을 어렵게 할 뿐 아니라  같은 네트워크의 여러 위치에서 동일한 응용 프로그램을 배포하는 것도 더 어렵게 합니다.  
+## <a name="excluding-deploymentprovider-from-deployment-manifests"></a>배포 매니페스트에 deploymentProvider 제외  
+ .NET Framework 2.0 및.NET Framework 3.0에서 오프 라인 사용 가능에 대 한 시스템에 설치 하는 ClickOnce 응용 프로그램 지정 해야 합니다는 `deploymentProvider` 의 배포 매니페스트에 합니다. `deploymentProvider` 업데이트 위치; 라고도 하는 ClickOnce 응용 프로그램 업데이트를 확인 하는 위치입니다. 해당 배포에 서명 하는 응용 프로그램 게시자에 대 한 요구와 결합 되어이 요구 사항은 공급 업체 또는 다른 제 3 자에서 ClickOnce 응용 프로그램을 업데이트 하는 회사 어렵게 합니다. 예제도에서는 동일한 네트워크에 여러 위치에서 동일한 응용 프로그램을 배포 하기가 더 어려워집니다.  
   
- .NET Framework 3.5에서는 ClickOnce가 변경되어 타사에서 다른 조직에 ClickOnce 응용 프로그램을 제공할 수 있습니다. 그러면 ClickOnce 응용 프로그램을 받은 조직에서는 ClickOnce 응용 프로그램을 자체 네트워크에 배포할 수 있습니다.  
+ .NET Framework 3.5에서 ClickOnce에 대 한 변경 내용으로, 그런 다음 자체 네트워크에서 응용 프로그램을 배포할 수 있는 다른 조직의 ClickOnce 응용 프로그램을 제공 하는 제 3 자에 대 한 같습니다.  
   
- 이 기능을 사용하려면 ClickOnce 응용 프로그램의 개발자는 해당 배포 매니페스트에서 `deploymentProvider`를 제외해야 합니다.  즉, Mage.exe를 사용하여 배포 매니페스트를 만들 때 `-providerUrl` 인수를 제외하거나 MageUI.exe를 사용하여 배포 매니페스트를 만들 때 **응용 프로그램 매니페스트** 탭의 **시작 위치** 텍스트 상자가 비어 있는지 확인합니다.  
+ ClickOnce 응용 프로그램 개발자는이 기능을 활용 하기 위해 제외 해야 `deploymentProvider` 배포에서 매니페스트 합니다. 즉, 제외 하 고는 `-providerUrl` Mage.exe 또는 수 있도록 배포를 만들 때 인수 매니페스트는 **시작 위치** 텍스트 상자에는 **응용 프로그램 매니페스트** 탭 비어 있는 경우 있습니다 MageUI.exe와 함께 배포 매니페스트를 생성 하는 합니다.  
   
-## deploymentProvider 및 응용 프로그램 업데이트  
- .NET Framework 3.5부터는 온라인과 오프라인으로 모두 사용하도록 ClickOnce 응용 프로그램을 배포하기 위해 더 이상 배포 매니페스트에 `deploymentProvider`를 지정하지 않아도 됩니다.  이것은 배포를 직접 패키지하고 서명해야 하지만 타사에서 자사 네트워크를 통해 응용 프로그램을 배포하도록 허용하는 시나리오를 지원합니다.  
+## <a name="deploymentprovider-and-application-updates"></a>deploymentProvider 및 응용 프로그램 업데이트  
+ .NET Framework 3.5 이상에서는 더 이상 지정 해야는 `deploymentProvider` 온라인 및 오프 라인 사용에 대 한 ClickOnce 응용 프로그램을 배포 하려면 배포 매니페스트에 합니다. 이 패키지 및를 직접 배포에 서명 되었지만 해당 네트워크를 통해 응용 프로그램을 배포 하도록 다른 회사를 허용 해야 하는 시나리오를 지원 합니다.  
   
- `deploymentProvider`가 제외된 응용 프로그램은 `deploymentProvider` 태그가 포함된 업데이트가 다시 제공될 때까지 업데이트하는 동안 해당 설치 위치를 변경할 수 없습니다.  
+ 점을 기억해 야 하는 제외 된 응용 프로그램은 `deploymentProvider` 포함 하는 업데이트 제공 될 때까지 업데이트 하는 동안 해당 설치 위치를 변경할 수 없습니다는 `deploymentProvider` 다시 태그를 지정 합니다.  
   
- 다음은 이러한 내용을 명확하게 보여 주는 두 가지 예제입니다.  첫 번째 예제에서는 `deploymentProvider` 태그가 없는 ClickOnce 응용 프로그램을 게시하고 사용자에게 http:\/\/www.adatum.com\/MyApplication\/에서 이 응용 프로그램을 설치하도록 요청합니다.  그러나 http:\/\/subdomain.adatum.com\/MyApplication\/에 이 응용 프로그램의 다음 업데이트를 게시하려는 경우 http:\/\/www.adatum.com\/MyApplication\/에 있는 배포 매니페스트에서 이를 나타낼 수 있는 방법이 없습니다.  이 경우 다음 두 작업 중 하나를 수행할 수 있습니다.  
+ 다음은이 점을 명확히 하기 위해 두 가지 예입니다. 첫 번째 예에서는 게시 되지 않는 ClickOnce 응용 프로그램 `deploymentProvider` http://www.adatum.com/MyApplication/에서 설치 하는 사용자에 게 태그를 지정 하 고 있습니다. Http://subdomain.adatum.com/MyApplication/에서 응용 프로그램의 다음 업데이트를 게시 하려는 결정 한 경우 수 없으므로 http://www.adatum.com/MyApplication/에 상주 하는 배포 매니페스트의이 이름임을 갖습니다. 다음 두 가지 중 하나를 수행할 수 있습니다.  
   
--   사용자에게 이전 버전을 제거하고 새 위치에서 새 버전을 설치하도록 요청  
+-   이전 버전을 제거 하 고 새 위치에서 새 버전을 설치 합니다.  
   
--   http:\/\/www.adatum.com\/MyApplication\/을 가리키는 `deploymentProvider`가 있는 http:\/\/www.adatum.com\/MyApplication\/에 업데이트를 저장한 다음  http:\/\/subdomain.adatum.com\/MyApplication\/을 가리키는 `deploymentProvider`를 사용하여 나중에 다른 업데이트 발표  
+-   포함 된 http://www.adatum.com/MyApplication/에 대 한 업데이트를 포함 한 `deploymentProvider` http://www.adatum.com/MyApplication/ 가리키는 합니다. 그런 다음 나중에 다른 업데이트를 릴리스 `deploymentProvider` http://subdomain.adatum.com/MyApplication/ 가리키는 합니다.  
   
- 두 번째 예제에서는 `deploymentProvider`를 지정하는 ClickOnce 응용 프로그램을 게시한 다음 이를 제거하도록 선택합니다.  `deploymentProvider`가 없는 새 버전이 클라이언트로 다운로드되면 복원된 `deploymentProvider`가 있는 응용 프로그램 버전을 출시할 때까지 업데이트에 사용된 경로를 리디렉션할 수 없습니다.  첫 번째 예제와 마찬가지로 `deploymentProvider`는 처음에는 새 위치가 아니라 현재 업데이트 위치를 가리켜야 합니다.  이 경우 http:\/\/subdomain.adatum.com\/MyApplication\/을 참조하는 `deploymentProvider`를 삽입하려고 하면 다음 업데이트가 실패합니다.  
+ 두 번째 예제에서 지정 하는 ClickOnce 응용 프로그램 게시 `deploymentProvider`를 제거 하려면 다음 결정 합니다. 사용 하지 않는 새 버전에 한 번 `deploymentProvider` 다운로드 한 클라이언트에 됩니다 있는 응용 프로그램의 버전을 출시 될 때까지 업데이트에 대 한 사용 되는 경로 리디렉션할 수 `deploymentProvider` 복원 합니다. 첫 번째 예제와 마찬가지로 `deploymentProvider` 처음 새 위치가 아니라 현재 업데이트 위치를 가리켜야 합니다. 이 경우 삽입 하려고 하는 경우는 `deploymentProvider` 참조 http://subdomain.adatum.com/MyApplication/, 하 한 후 다음 업데이트가 실패 합니다.  
   
-## 배포 만들기  
- 여러 네트워크 위치에서 배포할 수 있는 배포를 만드는 방법에 대한 단계별 지침은 [연습: 다시 서명할 필요가 없고 브랜드 정보가 유지되는 ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information.md)를 참조하십시오.  
+## <a name="creating-a-deployment"></a>배포 만들기  
+ 에 다른 네트워크 위치에서 배포 될 수 있는 배포를 만드는 단계별 지침을 참조 하십시오. [연습: ClickOnce 응용 프로그램 해당 않습니다 하지 필요한 항목을 수동으로 배포 하 고 해당 유지 브랜딩 정보](../deployment/walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information.md).  
   
-## 참고 항목  
- [Mage.exe\(매니페스트 생성 및 편집 도구\)](../Topic/Mage.exe%20\(Manifest%20Generation%20and%20Editing%20Tool\).md)   
- [MageUI.exe \(매니페스트 생성 및 편집 도구, 그래픽 클라이언트\)](../Topic/MageUI.exe%20\(Manifest%20Generation%20and%20Editing%20Tool,%20Graphical%20Client\).md)
+## <a name="see-also"></a>참고 항목  
+ [Mage.exe(매니페스트 생성 및 편집 도구)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
+ [MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)

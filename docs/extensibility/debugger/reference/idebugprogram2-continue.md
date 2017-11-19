@@ -1,58 +1,58 @@
 ---
-title: "IDebugProgram2::Continue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::Continue"
-helpviewer_keywords: 
-  - "IDebugProgram2::Continue"
+title: IDebugProgram2::Continue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::Continue
+helpviewer_keywords: IDebugProgram2::Continue
 ms.assetid: e5a6e02a-d21b-4a03-a034-e8de1f71ce2e
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 81a8bf23ee0272f448c49b6d58d194d3ba261509
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::Continue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 프로그램이 중지 된 상태에서 실행이 계속 됩니다.  모든 이전 실행 상태 \(단계\) 유지 됩니다, 다시 실행 프로그램을 시작 하 고 있습니다.  
+# <a name="idebugprogram2continue"></a>IDebugProgram2::Continue
+중지 된 상태에서이 프로그램을 실행을 계속 합니다. 이전 실행 상태 (예: 단계)는 유지, 프로그램 실행을 다시 시작 합니다.  
   
 > [!NOTE]
->  이 메서드는 사용되지 않습니다.  대신 [계속](../../../extensibility/debugger/reference/idebugprocess3-continue.md) 메서드를 사용하십시오.  
+>  이 메서드는 사용 되지 않습니다. 사용 하 여 [계속](../../../extensibility/debugger/reference/idebugprocess3-continue.md) 메서드 대신 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Continue(   
-   IDebugThread2* pThread  
+```cpp  
+HRESULT Continue(   
+   IDebugThread2* pThread  
 );  
 ```  
   
-```c#  
-int Continue(   
-   IDebugThread2 pThread  
+```csharp  
+int Continue(   
+   IDebugThread2 pThread  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pThread`  
- \[in\] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) 스레드를 나타내는 개체입니다.  
+ [in] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) 스레드를 나타내는 개체입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 응용 프로그램 중지 이벤트를 생성 하는 프로그램을 디버깅 하 고 있는, 하 든 관계 없이이 프로그램에서이 메서드가 호출 됩니다.  구현 \(예: 단계\) 이전 실행 상태를 유지 하 고 절대로 이전 실행을 완료 하기 전에 중지 된 있었습니다 것 처럼 계속 실행 해야 합니다.  즉,이 프로그램에는 스레드 스텝 작업을 수행 하 고 다른 프로그램을 중지 하 고이 메서드를 호출한 다음 중지 된 경우 프로그램 원래의 스텝 작업을 완료 해야 합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 디버깅 중인 프로그램 수, 또는 중지 이벤트를 생성 하는 응용 프로그램에 관계 없이이 프로그램에 호출 됩니다. 구현 (예: 단계) 이전 실행 상태를 유지 하 고의 이전 실행을 완료 하기 전에 중지 되지 것 처럼 계속 실행 해야 합니다. 즉,이 프로그램에 한 단계씩 작업 수행 되 던 스레드와 다른 프로그램이 중지 하 고이 메서드가 호출 된 후 중지 되었습니다, 프로그램 원래의 단계씩 작업을 완료 해야 합니다.  
   
 > [!WARNING]
->  중지 이벤트 또는 즉시 \(동기\) 이벤트를 보내지 않습니다 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) 이 호출; 처리 하는 중 그렇지 않으면 디버거가 중단 될 수 있음  
+>  Stopping 이벤트 또는 즉시 (동기) 이벤트를 보내지 않음 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) 이 호출을 처리 하는 동안 그렇지 않은 경우 디버거가 중단 될 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
- [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

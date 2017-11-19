@@ -1,66 +1,66 @@
 ---
-title: "IDebugCoreServer2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCoreServer2"
-helpviewer_keywords: 
-  - "IDebugCoreServer2 인터페이스"
+title: IDebugCoreServer2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCoreServer2
+helpviewer_keywords: IDebugCoreServer2 interface
 ms.assetid: 9c47d0a6-9eb1-464e-bd44-fa2b552d4d36
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 42695a58ecab7f898a0ef8561a9bc715909f6c06
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCoreServer2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 인터페이스를 사용 하 여 표현 하 고 서버는 네트워크 상의 컴퓨터에서 정보를 얻을 합니다.  
+# <a name="idebugcoreserver2"></a>IDebugCoreServer2
+이 인터페이스는 표시 하 고 네트워크에서 컴퓨터에 서버에서 정보를 얻을 사용 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugCoreServer2 : IUknown  
 ```  
   
-## 구현자 참고 사항  
- Visual Studio 서버를 나타내는 데이 인터페이스를 구현 합니다.  Visual Studio 각 인스턴스에이 인터페이스의 인스턴스를 만듭니다.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ Visual Studio는 서버를 나타내는 데이 인터페이스를 구현 합니다. Visual Studio의 각 인스턴스는이 인터페이스의 인스턴스를 만듭니다.  
   
-## 호출자에 대 한 참고 사항  
- 호출 하는 데이 인터페이스를 수신 하는 포트 사용자 지정 협력 업체 [이벤트](../../../extensibility/debugger/reference/idebugportevents2-event.md).  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ 사용자 지정 포트 공급자에 대 한 호출에서이 인터페이스에 부여 [이벤트](../../../extensibility/debugger/reference/idebugportevents2-event.md)합니다.  
   
- 디버그 엔진은이 인터페이스에 대 한 호출을 통해 간접적으로 얻을 수 있습니다 [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md) \(어떤 반환 [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)에서 파생 된 인터페이스 `IDebugCoreServer2`\).  
+ 디버그 엔진에 대 한 호출을 통해 간접적으로이 인터페이스를 가져올 수 [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md) (반환 [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)에서 파생 된 인터페이스 `IDebugCoreServer2`).  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDebugCoreServer2`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugCoreServer2`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
+|------------|-----------------|  
 |[GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md)|이름 및 컴퓨터의 특성을 가져옵니다.|  
 |[GetMachineName](../../../extensibility/debugger/reference/idebugcoreserver2-getmachinename.md)|컴퓨터의 이름을 가져옵니다.|  
 |[GetPortSupplier](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)|컴퓨터에 존재 하는 포트 공급자를 가져옵니다.|  
-|[GetPort](../../../extensibility/debugger/reference/idebugcoreserver2-getport.md)|이미 컴퓨터에 있는 포트를 가져옵니다.|  
+|[GetPort](../../../extensibility/debugger/reference/idebugcoreserver2-getport.md)|컴퓨터에 이미 할당 된 포트를 가져옵니다.|  
 |[EnumPorts](../../../extensibility/debugger/reference/idebugcoreserver2-enumports.md)|컴퓨터에서 모든 포트에 대 한 열거자를 만듭니다.|  
-|[EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md)|컴퓨터에서 모든 포트 공급자에 대 한 열거자를 만듭니다.|  
-|[GetMachineUtilities\_V7](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineutilities-v7.md)|시스템 유틸리티를 대 한 컴퓨터를 가져옵니다.|  
+|[EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md)|컴퓨터에서 포트의 모든 공급 업체에 대 한 열거자를 만듭니다.|  
+|[GetMachineUtilities_V7](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineutilities-v7.md)|컴퓨터를 위한 시스템 유틸리티를 가져옵니다.|  
   
-## 설명  
- 이 인터페이스 네트워크에 있는 컴퓨터에서 실행 중인 프로세스를 검색 하 여 Visual Studio 사용 됩니다.  
+## <a name="remarks"></a>설명  
+ 또한이 인터페이스는 네트워크에 있는 컴퓨터에서 실행 중인 프로세스를 찾아볼 수 Visual Studio에서 사용 됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   
  [이벤트](../../../extensibility/debugger/reference/idebugportevents2-event.md)   
  [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md)   

@@ -7,21 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 39ee88a0-85c3-485e-8c0a-d9644c6b25d9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3b462a3f5eb70fd21b907a046b0774f937bb738d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b773c9339949066c7d1837b7bc687403731e2bb8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>방법: 끌어서 놓기 처리기 추가
 사용자가 다른 다이어그램이나 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 다른 부분에서 다이어그램으로 항목을 끌 수 있도록 DSL에 끌어서 놓기 이벤트용 처리기를 추가할 수 있습니다. 또한 두 번 클릭 등의 이벤트용 처리기도 추가할 수 있습니다. 끌어서 놓기 및 두 번 클릭 처리기 라고 함께 *제스처 처리기*합니다.  
@@ -600,4 +594,3 @@ namespace Company.CompartmentDrag  // EDIT.
  
 
  
-

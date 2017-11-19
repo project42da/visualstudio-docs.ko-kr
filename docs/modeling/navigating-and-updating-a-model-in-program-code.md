@@ -6,33 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Domain-Specific Language, programming domain models
+helpviewer_keywords: Domain-Specific Language, programming domain models
 ms.assetid: 1427ae91-be8a-4ce7-85df-00038faa2cbb
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5c7571cbb4950f91c1b69ae88241c799577f79da
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 40f3a1d56019a8bcab4a11ffaf3aa7d37b02d262
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="navigating-and-updating-a-model-in-program-code"></a>프로그램 코드에서 모델 탐색 및 업데이트
 만들기 및 삭제 모델 요소, 해당 속성을 설정 하 고 만들기 및 요소 간의 연결을 삭제 하는 코드를 작성할 수 있습니다. 트랜잭션 내에서 모든 변경 해야 합니다. 요소는 다이어그램을 볼 경우 다이어그램 됩니다 "수정" 자동으로 트랜잭션이 끝날 때.  
@@ -537,4 +521,3 @@ partial class MyDiagram
  [방법: 트랜잭션을 사용 모델을 업데이트 하 여](../modeling/how-to-use-transactions-to-update-the-model.md)   
  [Visual Studio Modelbus를 사용 하 여 모델을 통합](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
  [변경 내용에 대한 대응 및 전파](../modeling/responding-to-and-propagating-changes.md)
-

@@ -1,40 +1,64 @@
 ---
 title: "방법: 관리 코드에 스레드 이름 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "디버깅[Visual Studio], 스레드"
-  - "스레드 이름"
-  - "Thread.Name 속성"
-  - "스레딩[Visual Studio], 이름"
+ms.custom: 
+ms.date: 04/27/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- Thread.Name property
+- threading [Visual Studio], names
+- thread names
+- debugging [Visual Studio], threads
 ms.assetid: c0c4d74a-0314-4b71-81c9-b0b019347ab8
-caps.latest.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d793924b0a21bc2752d54b93569ded7a79add7f7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 관리 코드에 스레드 이름 설정
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-스레드 명명 기능은 Visual Studio의 모든 버전에서 사용할 수 있습니다.  이 기능은 **스레드** 창에서 스레드를 추적할 때 유용합니다.  Visual Studio Express 버전에서는 **스레드** 창을 사용할 수 없으므로 Express 버전에서는 스레드 명명이 유용하지 않습니다.  
+# <a name="how-to-set-a-thread-name-in-managed-code"></a>방법: 관리 코드에 스레드 이름 설정
+스레드 명명 기능은 Visual Studio의 모든 버전에서 사용할 수 있습니다. 스레드 명명 기능은에서 스레드를 추적할 때 유용는 **스레드** 창.
   
  관리 코드에 스레드 이름을 설정하려면 <xref:System.Threading.Thread.Name%2A> 속성을 사용합니다.  
   
-## 예제  
-  
-```  
+## <a name="example"></a>예제  
+
+```csharp
+public class Needle
+{
+    // This method will be called when the thread is started.  
+    public void Baz()
+    {
+        Console.WriteLine("Needle Baz is running on another thread");
+    }
+}
+
+public void Main()
+{
+    Console.WriteLine("Thread Simple Sample");
+    Needle oNeedle = new Needle();
+    // Create a Thread object.   
+    System.Threading.Thread oThread = new System.Threading.Thread(oNeedle.Baz);
+    // Set the Thread name to "MyThread".  
+    oThread.Name = "MyThread";
+    // Starting the thread invokes the ThreadStart delegate  
+    oThread.Start();
+}
+```
+
+```VB 
 Public Class Needle  
     ' This method will be called when the thread is started.  
     Sub Baz()  
@@ -47,13 +71,13 @@ Sub Main()
     Dim oNeedle As New Needle()  
    ' Create a Thread object.   
     Dim oThread As New System.Threading.Thread(AddressOf oNeedle.Baz)  
-    ' Set the Thread name to "MainThread".  
-    oThread.Name = "MainThread"  
+    ' Set the Thread name to "MyThread".  
+    oThread.Name = "MyThread"  
     ' Starting the thread invokes the ThreadStart delegate  
     oThread.Start()  
 End Sub  
 ```  
   
-## 참고 항목  
- [다중 스레드 응용 프로그램 디버깅](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+## <a name="see-also"></a>참고 항목  
+ [다중 스레드 응용 프로그램 디버그](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [방법: 네이티브 코드에 스레드 이름 설정](../debugger/how-to-set-a-thread-name-in-native-code.md)

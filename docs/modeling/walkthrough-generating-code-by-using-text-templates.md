@@ -1,24 +1,26 @@
 ---
-title: "연습: 텍스트 템플릿을 사용하여 코드 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "연습 [텍스트 템플릿], 응용 프로그램 코드 생성"
-  - "연습[텍스트 템플릿]"
+title: "연습: 텍스트 템플릿을 사용 하 여 코드를 생성 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- walkthroughs [text templates], generating application code
+- walkthroughs [text templates]
 ms.assetid: 24602ade-baca-425e-a6ce-be09a2c7f7e1
-caps.latest.revision: 11
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: b39d142a44a99cc0fde362249d5717ee75c09323
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 연습: 텍스트 템플릿을 사용하여 코드 생성
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="walkthrough-generating-code-by-using-text-templates"></a>연습: 텍스트 템플릿을 사용하여 코드 생성
 코드 생성 기능을 사용하면 강력한 형식을 가지고 있지만 소스 모델이 변경될 때 손쉽게 변경할 수 있는 프로그램 코드를 생성할 수 있습니다. 이와 반대로, 구성 파일을 허용하는 완전한 제네릭 프로그램을 작성하는 대체 방식을 사용할 경우에는 좀 더 유연성이 있지만 코드를 읽고 변경하기가 쉽지 않으며 코드의 성능도 그렇게 좋지 않습니다. 이 연습에서는 이러한 이점을 보여 줍니다.  
   
 ## <a name="typed-code-for-reading-xml"></a>XML 읽기를 위한 형식화된 코드  
@@ -85,7 +87,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
   
 1.  **파일** 메뉴에서 **새로 만들기** 를 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-2.   **Visual C#** 노드를 클릭한 다음, **템플릿** 창에서 **콘솔 응용 프로그램**을 클릭합니다.  
+2.  **Visual C#** 노드를 클릭한 다음, **템플릿** 창에서 **콘솔 응용 프로그램**을 클릭합니다.  
   
 ### <a name="add-a-prototype-xml-file-to-the-project"></a>프로토타입 XML 파일을 프로젝트에 추가  
  이 파일의 목적은 응용 프로그램에 읽을 수 있도록 할 XML 노드 형식의 샘플을 제공하는 것입니다. 그러한 샘플은 응용 프로그램 테스트에 사용할 파일이 될 수도 있습니다. 템플릿은 이 파일의 각 노드 형식에 대해 C# 클래스를 생성합니다.  
@@ -102,7 +104,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
   
 4.  이 연습에서는 파일 이름을 `exampleXml.xml`로 지정합니다. 이전 섹션에 표시된 XML이 되도록 파일의 내용을 설정합니다.  
   
- ..  
+ .  
   
 ### <a name="add-a-test-code-file"></a>테스트 코드 파일 추가  
  C# 파일을 프로젝트에 추가하고, 여기에 원하는 코드의 샘플을 작성합니다. 예:  

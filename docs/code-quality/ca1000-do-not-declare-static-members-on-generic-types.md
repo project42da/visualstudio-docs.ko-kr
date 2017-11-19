@@ -1,29 +1,30 @@
 ---
-title: "CA1000: 정적 멤버를 제네릭 형식으로 선언하지 마십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1000"
-  - "DoNotDeclareStaticMembersOnGenericTypes"
-helpviewer_keywords: 
-  - "CA1000"
-  - "DoNotDeclareStaticMembersOnGenericTypes"
+title: "CA1000: 제네릭 형식에 대해 정적 멤버를 선언 하지 마십시오 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1000
+- DoNotDeclareStaticMembersOnGenericTypes
+helpviewer_keywords:
+- DoNotDeclareStaticMembersOnGenericTypes
+- CA1000
 ms.assetid: 5c0da594-f8d0-4f40-953d-56bf7fbd2087
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 24d46fc6817f4d13ea5502ada707e2abbcdbfda9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA1000: 정적 멤버를 제네릭 형식으로 선언하지 마십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1000-do-not-declare-static-members-on-generic-types"></a>CA1000: 정적 멤버를 제네릭 형식으로 선언하지 마십시오.
 |||  
 |-|-|  
 |TypeName|DoNotDeclareStaticMembersOnGenericTypes|  
@@ -31,11 +32,11 @@ caps.handback.revision: 17
 |범주|Microsoft.Design|  
 |변경 수준|주요 변경|  
   
-## 원인  
- 외부에서 볼 수 있는 제네릭 형식에 `static`\(Visual Basic의 경우 `Shared`\) 멤버가 포함되어 있습니다.  
+## <a name="cause"></a>원인  
+ 외부에서 볼 수는 제네릭 형식을 포함 한 `static` (`Shared` Visual basic에서) 멤버입니다.  
   
-## 규칙 설명  
- 제네릭 형식의 `static` 멤버를 호출할 때는 형식에 형식 인수를 지정해야 합니다.  유추를 지원하지 않는 제네릭 인스턴스 멤버를 호출할 때는 멤버에 형식 인수를 지정해야 합니다.  다음 호출에서 볼 수 있듯이 이들 두 경우에서 형식 인수를 지정하기 위한 구문은 서로 다르며 혼동하기 쉽습니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 경우는 `static` 제네릭 형식의 멤버 라고, 유형에 대 한 형식 인수를 지정 해야 합니다. 유추를 지원하지 않는 제네릭 인스턴스 멤버를 호출할 때는 멤버에 형식 인수를 지정해야 합니다. 이 두 가지 경우에 형식 인수를 지정 하기 위한 구문은 서로 다르며 혼동 되기 쉽습니다 다음 호출 하 여 설명한 것 처럼:  
   
 ```vb  
 ' Shared method in a generic type.  
@@ -45,7 +46,7 @@ GenericType(Of Integer).SharedMethod()
 someObject.GenericMethod(Of Integer)()  
 ```  
   
-```c#  
+```csharp  
 // Static method in a generic type.  
 GenericType<int>.StaticMethod();  
   
@@ -53,28 +54,28 @@ GenericType<int>.StaticMethod();
 someObject.GenericMethod<int>();  
 ```  
   
- 일반적으로 앞의 두 선언은 피해야 합니다. 즉, 멤버를 호출할 때 형식 인수를 지정할 필요가 없도록 해야 합니다.  이렇게 하면 제네릭의 멤버를 호출하는 구문이 제네릭이 아닌 멤버를 호출하는 구문과 차이가 없게 됩니다.  자세한 내용은 [CA1004: 제네릭 메서드는 형식 매개 변수를 제공해야 합니다.](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)을 참조하십시오.  
+ 일반적으로 이전 선언의 둘 다 형식 인수는 멤버 호출 될 때 지정 하지 않아도 되도록 사용 하지 마십시오. 이 구문에서 비 제네릭에 대 한 구문 다르지 않습니다 제네릭의 멤버를 호출에 대 한 결과입니다. 자세한 내용은 참조 [CA1004: 제네릭 메서드 형식 매개 변수를 제공 해야](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)합니다.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 정적 멤버를 제거하거나 인스턴스 멤버로 변경합니다.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 정적 멤버를 제거 하거나 인스턴스 멤버를 변경 합니다.  
   
-## 경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  제네릭을 이해하고 사용하기 쉬운 구문으로 제공하면 학습에 걸리는 시간이 줄어들고 더 많은 사용자가 새로운 라이브러리를 선택하게 됩니다.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다. 제네릭을 사용 하 고 이해 하기 쉬운 구문 제공 더 많은 사용자가 새 라이브러리 및 학습에 걸리는 시간이 줄어듭니다.  
   
-## 관련 규칙  
+## <a name="related-rules"></a>관련된 규칙  
  [CA1005: 제네릭 형식에 매개 변수를 너무 많이 사용하지 마십시오.](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
   
  [CA1010: 컬렉션은 제네릭 인터페이스를 구현해야 합니다.](../code-quality/ca1010-collections-should-implement-generic-interface.md)  
   
- [CA1002: 제네릭 목록을 노출하지 마십시오.](../Topic/CA1002:%20Do%20not%20expose%20generic%20lists.md)  
+ [CA1002: 제네릭 목록을 노출하지 마십시오.](../code-quality/ca1002-do-not-expose-generic-lists.md)  
   
  [CA1006: 멤버 시그니처에 제네릭 형식을 중첩하지 마십시오.](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
   
  [CA1004: 제네릭 메서드는 형식 매개 변수를 제공해야 합니다.](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
   
- [CA1003: 제네릭 이벤트 처리기 인스턴스를 사용하십시오.](../Topic/CA1003:%20Use%20generic%20event%20handler%20instances.md)  
+ [CA1003: 제네릭 이벤트 처리기 인스턴스를 사용하십시오.](../code-quality/ca1003-use-generic-event-handler-instances.md)  
   
  [CA1007: 적합한 제네릭을 사용하십시오.](../code-quality/ca1007-use-generics-where-appropriate.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [제네릭](/dotnet/csharp/programming-guide/generics/index)

@@ -1,73 +1,72 @@
 ---
-title: "THUNK_ORDINAL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Thunk_Ordinal 열거형"
+title: THUNK_ORDINAL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Thunk_Ordinal enumeration
 ms.assetid: 026f98a9-36b8-41ef-8a72-12d7cbc2d362
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3a2711ab101299b47e954e56fcbbae98d9f5fdb6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# THUNK_ORDINAL
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="thunkordinal"></a>THUNK_ORDINAL
 썽크 형식을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-typedef enum THUNK_ORDINAL {   
-   THUNK_ORDINAL_NOTYPE,  
-   THUNK_ORDINAL_ADJUSTOR,  
-   THUNK_ORDINAL_VCALL,  
-   THUNK_ORDINAL_PCODE,  
-   THUNK_ORDINAL_LOAD   
+```C++  
+typedef enum THUNK_ORDINAL {   
+   THUNK_ORDINAL_NOTYPE,  
+   THUNK_ORDINAL_ADJUSTOR,  
+   THUNK_ORDINAL_VCALL,  
+   THUNK_ORDINAL_PCODE,  
+   THUNK_ORDINAL_LOAD   
   
-   // trampoline thunk ordinals - only for use in Trampoline thunk symbols  
-   THUNK_ORDINAL_TRAMP_INCREMENTAL,  
-   THUNK_ORDINAL_TRAMP_BRANCHISLAND,  
+   // trampoline thunk ordinals - only for use in Trampoline thunk symbols  
+   THUNK_ORDINAL_TRAMP_INCREMENTAL,  
+   THUNK_ORDINAL_TRAMP_BRANCHISLAND,  
 } THUNK_ORDINAL;  
 ```  
   
-## Elements  
- THUNK\_ORDINAL\_NOTYPE  
- 표준 만들어집니다.  
+## <a name="elements"></a>요소  
+ THUNK_ORDINAL_NOTYPE  
+ 표준 썽크 합니다.  
   
- THUNK\_ORDINAL\_ADJUSTOR  
- A `this` 조정기 만들어집니다.  
+ THUNK_ORDINAL_ADJUSTOR  
+ A `this` 조정기 썽크 합니다.  
   
- THUNK\_ORDINAL\_VCALL  
- 가상 호출 썽크입니다.  
+ THUNK_ORDINAL_VCALL  
+ 가상 호출 썽크 합니다.  
   
- THUNK\_ORDINAL\_PCODE  
- P\-코드를 썽크.  
+ THUNK_ORDINAL_PCODE  
+ P-코드 썽크 합니다.  
   
- THUNK\_ORDINAL\_LOAD  
- 지연 로드 썽크로 제어 합니다.  
+ THUNK_ORDINAL_LOAD  
+ 지연 로드 썽크 합니다.  
   
- THUNK\_ORDINAL\_TRAMP\_INCREMENTAL  
- 증분 trampoline 썽크 \(trampoline 썽크 메모리 공간에서 다른 호출을 반송 하 사용\).  
+ THUNK_ORDINAL_TRAMP_INCREMENTAL  
+ 증분 trampoline 썽크 (trampoline 썽크는 다른 메모리 공간에서 호출 bounce에 사용 됨).  
   
- THUNK\_ORDINAL\_TRAMP\_BRANCHISLAND  
- 분기 지점 trampoline 만들어집니다.  
+ THUNK_ORDINAL_TRAMP_BRANCHISLAND  
+ 분기 지점 trampoline 썽크 합니다.  
   
-## 설명  
- 이 열거형에 있는 값에 대 한 호출에서 반환 되는 [IDiaSymbol::get\_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) 메서드가 있습니다.  
+## <a name="remarks"></a>설명  
+ 이 열거형의 값에 대 한 호출에서 반환될지는 [idiasymbol:: Get_thunkordinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) 메서드.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: cvconst.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형 및 구조체](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [IDiaSymbol::get\_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)
+ [IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)

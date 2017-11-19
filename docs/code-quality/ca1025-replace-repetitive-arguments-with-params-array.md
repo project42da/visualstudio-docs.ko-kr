@@ -1,11 +1,10 @@
 ---
-title: 'CA1025: Replace repetitive arguments with params array | Microsoft Docs'
+title: "CA1025: 반복 인수를 매개 변수 배열로 바꾸십시오. | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,53 +14,37 @@ helpviewer_keywords:
 - ReplaceRepetitiveArgumentsWithParamsArray
 - CA1025
 ms.assetid: f009b340-dea3-4459-8fe1-2143aa8b5d0b
-caps.latest.revision: 14
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 149d34bcf1192fa93e6ee5416c8003e965f6fc3f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 910be06a7d9897f306b6bb2b89ca99b733623faf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: Replace repetitive arguments with params array
+# <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: 반복 인수를 매개 변수 배열로 바꾸십시오.
 |||  
 |-|-|  
 |TypeName|ReplaceRepetitiveArgumentsWithParamsArray|  
 |CheckId|CA1025|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A public or protected method in a public type has more than three parameters, and its last three parameters are the same type.  
+## <a name="cause"></a>원인  
+ 공용 형식에서 public 또는 protected 메서드가 세 개 이상의 매개 변수를 가지 며 해당 마지막 세 매개 변수는 동일한 형식  
   
-## <a name="rule-description"></a>Rule Description  
- Use a parameter array instead of repeated arguments when the exact number of arguments is unknown and the variable arguments are the same type, or can be passed as the same type. For example, the <xref:System.Console.WriteLine%2A> method provides a general-purpose overload that uses a parameter array to accept any number of <xref:System.Object> arguments.  
+## <a name="rule-description"></a>규칙 설명  
+ 반복 되는 인수 대신 매개 변수 배열을 사용 하 여 인수의 정확한 개수 알 수 없는 하 고 가변 인수가 같은 형식 이거나 같은 형식으로 전달할 수 있습니다. 예를 들어는 <xref:System.Console.WriteLine%2A> 개수에 관계 없이 허용 하도록 매개 변수 배열을 사용 하는 범용 오버 로드를 제공 하는 메서드 <xref:System.Object> 인수입니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, replace the repeated arguments with a parameter array.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 매개 변수 배열을 사용 하 여 반복 되는 인수를 바꿉니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is always safe to suppress a warning from this rule; however, this design might cause usability issues.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙;에서 경고를 표시 하지 않아도 안전는 항상 그러나이 디자인 유용성 문제를 발생할 수 있습니다.  
   
-## <a name="example"></a>Example  
- The following example shows a type that violates this rule.  
+## <a name="example"></a>예제  
+ 다음 예제에서는이 규칙을 위반 하는 형식을 보여 줍니다.  
   
  [!code-csharp[FxCop.Design.RepeatArgs#1](../code-quality/codesnippet/CSharp/ca1025-replace-repetitive-arguments-with-params-array_1.cs)]

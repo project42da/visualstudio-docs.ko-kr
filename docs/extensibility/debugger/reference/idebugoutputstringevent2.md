@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugOutputStringEvent2
-helpviewer_keywords:
-- IDebugOutputStringEvent2 interface
+f1_keywords: IDebugOutputStringEvent2
+helpviewer_keywords: IDebugOutputStringEvent2 interface
 ms.assetid: 86596fd1-cecc-4813-8add-dc3d70068f9b
-caps.latest.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 42a3b630a501a379d38a53f942c0aceb494d94d7
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 18c8443ad5f609a3c31e867fa88e4621471aeec2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugoutputstringevent2"></a>IDebugOutputStringEvent2
 이 인터페이스는 디버그 엔진 (DE)에 의해 세션 디버그 관리자 (SDM)를 출력으로 보내고 문자열  
@@ -58,7 +42,7 @@ IDebugOutputStringEvent2 : IUnknown
 |------------|-----------------|  
 |[GetString](../../../extensibility/debugger/reference/idebugoutputstringevent2-getstring.md)|표시할 수 있는 메시지를 가져옵니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  예를 들어 비관리 코드에서 문자열에 출력을 가져올 수 있습니다 때 디버깅 중인 프로그램 win32 문자열을 보냅니다 `OutputDebugString` 함수입니다. 이 문자열은는 DE에 의해 차단 되 고으로 SDM 게는 `IDebugOutputStringEvent2` 이벤트입니다.  
   
  사용 하 여 [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md) 사용자 응답을 필요로 하는 메시지를 보내려고 합니다.  

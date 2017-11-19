@@ -1,35 +1,37 @@
 ---
-title: "방법: 도메인별 언어 디자이너 확장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 도메인 특정 언어 디자이너 확장 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fa807f1b-2780-491e-925b-abbfd31b2bfa
-caps.latest.revision: 9
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 44b3ea3d3997ac781b02220316810f00826f2beb
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: 도메인별 언어 디자이너 확장
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-디자이너를 사용 하 여 DSL 정의 편집 하려면 확장을 만들 수 있습니다. 유형의 확장 만들 수 있는 메뉴 명령을 추가, 끌어서 제스처 및 특정 유형의 값 또는 관계를 변경할 때 발생 하는 규칙을 두 번 클릭에 대 한 처리기를 추가 합니다. 확장 기능으로는 통합 확장 VSIX \(Visual Studio\) 패키지 되어 다른 사용자에 게 배포 합니다.  
+# <a name="how-to-extend-the-domain-specific-language-designer"></a>방법: 도메인별 언어 디자이너 확장
+사용 하 여 DSL 정의 편집 하는 디자이너 확장을 만들 수 있습니다. 형식의 확장명과 적용할 수 있는 메뉴 명령을 추가 끌어서 제스처 및 특정 유형의 값 또는 관계를 변경할 때 트리거되는 규칙을 두 번 클릭에 대 한 처리기를 추가 합니다. 확장으로는 VSIX Visual Studio Integration Extension ()를 패키지 하 고 다른 사용자에 게 배포할 수 있습니다.  
   
- 샘플 코드 및이 기능에 대 한 자세한 내용은 참조는 Visual Studio [시각화 및 모델링 SDK \(VMSDK\) 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=186128)합니다.  
+ 샘플 코드와이 기능에 대 한 자세한 내용은 참조는 Visual Studio [시각화 및 모델링 SDK (VMSDK) 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=186128)합니다.  
   
-## 솔루션 설정  
- 확장 프로그램의 코드를 포함 하는 프로젝트 및 프로젝트를 내보내는 VSIX 프로젝트를 설정 합니다. 솔루션에 동일한 VSIX에 통합 된 다른 프로젝트를 포함할 수 있습니다.  
+## <a name="setting-up-the-solution"></a>솔루션 설정  
+ 확장 프로그램의 코드를 포함 하는 프로젝트 및 프로젝트에는 VSIX 프로젝트를 설정 합니다. 솔루션에 동일한 VSIX에 통합 하는 다른 프로젝트를 포함할 수 있습니다.  
   
-#### DSL 디자이너 확장 솔루션을 만들려면  
+#### <a name="to-create-a-dsl-designer-extension-solution"></a>DSL 디자이너 확장 솔루션을 만들려면  
   
-1.  클래스 라이브러리 프로젝트 템플릿을 사용 하 여 새 프로젝트를 만듭니다. 에 **새 프로젝트** 대화 상자를 클릭 **Visual C\#** 가운데 창에서 다음을 클릭 하 고 **클래스 라이브러리**합니다.  
+1.  클래스 라이브러리 프로젝트 템플릿을 사용 하 여 새 프로젝트를 만듭니다. 에 **새 프로젝트** 대화 상자를 클릭 **Visual C#** 한 다음 가운데 창에서 클릭 **클래스 라이브러리**합니다.  
   
      이 프로젝트에는 확장 프로그램의 코드가 포함 됩니다.  
   
-2.  VSIX 프로젝트 템플릿을 사용 하 여 새 프로젝트를 만듭니다. 에 **새 프로젝트** 대화 상자에서 **Visual C\#**, 를 클릭 하 여 **확장성**, 를 한 다음 가운데 창 선택 **VSIX 프로젝트**합니다.  
+2.  VSIX 프로젝트 템플릿을 사용 하 여 새 프로젝트를 만듭니다. 에 **새 프로젝트** 대화 상자에서 **Visual C#**, 클릭 **확장성**, 한 다음 가운데 창 선택 **VSIX 프로젝트**합니다.  
   
      선택 **솔루션에 추가**합니다.  
   
@@ -37,9 +39,9 @@ caps.handback.revision: 9
   
 3.  콘텐츠 필드 위에 클릭 **콘텐츠 추가**합니다.  
   
-4.  에 **콘텐츠 추가** 대화 상자, 설정 **콘텐츠 형식 선택** 를 **MEF 구성 요소**, 설정 및 **프로젝트** 클래스 라이브러리 프로젝트에 있습니다.  
+4.  에 **콘텐츠 추가** 대화 상자, 설정 **콘텐츠 형식 선택** 를 **MEF 구성 요소**, 설정 **프로젝트** 클래스 라이브러리 프로젝트에 있습니다.  
   
-5.  클릭 **버전 선택** 있는지 확인 하 고 **Visual Studio Enterprise** 확인 됩니다.  
+5.  클릭 **버전 선택** 있는지 확인 하 고 **Visual Studio Enterprise** 을 선택 합니다.  
   
 6.  VSIX 프로젝트는 솔루션의 시작 프로젝트 인지 확인 합니다.  
   
@@ -63,27 +65,27 @@ caps.handback.revision: 9
   
      System.Windows.Forms  
   
-## 테스트 및 배포  
- 확장명을이 항목의 테스트를 빌드하고 솔루션을 실행 합니다.[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 실험적 인스턴스가 열립니다. 이 인스턴스에서 DSL 솔루션을 엽니다. DslDefinition 다이어그램을 편집 합니다. 확장 프로그램의 동작을 볼 수 있습니다.  
+## <a name="testing-and-deployment"></a>테스트 및 배포  
+ 확장명을이 항목의 테스트를 빌드하고 솔루션을 실행 합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 의 실험적 인스턴스가 열립니다. 이 인스턴스에서 DSL 솔루션을 엽니다. DslDefinition 다이어그램을 편집 합니다. 확장 프로그램의 동작을 볼 수 있습니다.  
   
  확장을 배포 하 고 있는 기본 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 다른 컴퓨터에 다음이 단계를 수행 합니다.  
   
-1.  Bin\\\*\\\*.vsix에서 VSIX 프로젝트에서 VSIX 설치 파일을 찾습니다  
+1.  Bin의 VSIX 프로젝트에 VSIX 설치 파일을 찾거나\\*\\\*.vsix  
   
-2.  대상 컴퓨터에이 파일을 복사 하 고 Windows 탐색기 \(또는 파일 탐색기\)에서 두 번 클릭 합니다.  
+2.  대상 컴퓨터에이 파일을 복사한 다음 Windows 탐색기 (또는 파일 탐색기)에서 두 번 클릭 합니다.  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장이 설치 되어 있는지 확인 하려면 확장 관리자를 엽니다.  
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장이 설치 되어 있는지 확인 하려면 확장 관리자가 열립니다.  
   
  확장을 제거 하려면 다음이 단계를 따르십시오.  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 의 **도구** 메뉴를 클릭 하 여 **확장 관리자**합니다.  
+1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 **도구** 메뉴를 클릭 하 여 **확장 관리자**합니다.  
   
-2.  확장을 선택 하 고 삭제 합니다.  
+2.  확장을 선택 하 여 삭제 합니다.  
   
-## 바로 가기 메뉴 명령 추가  
- 바로 가기 메뉴 명령 또는 DSL 탐색기 창에서 DSL 디자이너 화면에 표시 하려면 다음과 같은 클래스를 작성 합니다.  
+## <a name="adding-a-shortcut-menu-command"></a>바로 가기 메뉴 명령을 추가  
+ DSL 디자이너 화면에 나타나거나 DSL 탐색기 창에서 바로 가기 메뉴 명령을 확인 하려면 다음과 같은 클래스를 작성 합니다.  
   
- 이 클래스를 구현 해야 `ICommandExtension` 특성이 있어야 하 고 `DslDefinitionModelCommandExtension`합니다.  
+ 클래스를 구현 해야 `ICommandExtension` 특성이 있어야 하 고 `DslDefinitionModelCommandExtension`합니다.  
   
 ```  
 using System.Collections.Generic;  
@@ -145,8 +147,8 @@ namespace Fabrikam.SimpleDslDesignerExtension
 }  
 ```  
   
-## 마우스 제스처를 처리합니다.  
- 코드는 메뉴 명령의 코드와 비슷합니다.  
+## <a name="handling-mouse-gestures"></a>마우스 제스처를 처리합니다.  
+ 코드에 메뉴 명령의 코드와 비슷합니다.  
   
 ```  
 [DslDefinitionModelGestureExtension]  
@@ -206,8 +208,8 @@ namespace Fabrikam.SimpleDslDesignerExtension
  }  
 ```  
   
-## 값이 변경에 대 한 응답  
- 이 처리기는 도메인 모델 제대로 작동 해야 합니다. 간단한 도메인 모델을 제공합니다.  
+## <a name="responding-to-value-changes"></a>값이 변경에 응답  
+ 이 처리기는 제대로 작동 하려면 도메인 모델에 필요 합니다. 간단한 도메인 모델을 제공합니다.  
   
 ```  
 using System.Diagnostics;  

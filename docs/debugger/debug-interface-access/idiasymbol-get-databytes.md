@@ -1,61 +1,60 @@
 ---
-title: "IDiaSymbol::get_dataBytes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_dataBytes 메서드"
+title: 'Idiasymbol:: Get_databytes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_dataBytes method
 ms.assetid: 5eb37179-20d8-44ae-a72a-405c1b0435c4
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 98c8cd366b2f9c5c3befcbb86b9d9f8d54fafc7b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_dataBytes
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-기호의 OEM 데이터 바이트를 검색합니다.  
+# <a name="idiasymbolgetdatabytes"></a>IDiaSymbol::get_dataBytes
+OEM 기호의 데이터 바이트를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_dataBytes (   
-   DWORD  cbData,  
-   DWORD* pcbData,  
-   BYTE   data[]  
+```C++  
+HRESULT get_dataBytes (   
+   DWORD  cbData,  
+   DWORD* pcbData,  
+   BYTE   data[]  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `cbData`  
- \[in\] 데이터를 저장 하는 버퍼의 크기입니다.  
+ [in] 데이터를 보유 하는 버퍼의 크기입니다.  
   
  `pcbData`  
- \[out\] 쓴 바이트 수를 반환 또는 if는 `data` 매개 변수가 `NULL`, 사용 가능한 바이트 수를 반환 합니다.  
+ [out] 쓰여진 바이트 수를 반환 하거나, 있는 경우는 `data` 매개 변수는 `NULL`, 사용 가능한 바이트의 수를 반환 합니다.  
   
  `data[]`  
- \[out\] 채워진 데이터 바이트를 사용 하는 버퍼입니다.  
+ [out] 데이터 바이트를 사용 하 여 입력 되는 버퍼입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성에 사용할 수 있음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 속성이 해당 기호를 사용할 수 있음을 의미 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
-|버전:|DIA SDK v 7.0|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
+|버전:|DIA SDK v7.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

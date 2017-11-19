@@ -1,33 +1,33 @@
 ---
-title: "&lt;PackageFiles&gt; 요소(부트스트래퍼) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<PackageFiles> 요소[부트스트래퍼]"
+title: "&lt;PackageFiles&gt; 요소 (부트스트래퍼) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <PackageFiles> element [bootstrapper]
 ms.assetid: 3ea252d7-18a3-47d8-af83-47feebcfe82b
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: a85b06bfc5c82e7d4bd08bef8f768ad2e28a2ab0
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;PackageFiles&gt; 요소(부트스트래퍼)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`PackageFiles` 요소에는 `Command` 요소의 결과로 실행되는 설치 패키지를 정의하는 `PackageFile` 요소가 들어 있습니다.  
+# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt; 요소 (부트스트래퍼)
+`PackageFiles` 요소에 포함 되어 `PackageFile` 의 결과로 실행 설치 패키지를 정의 하는 요소는 `Command` 요소입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <PackageFiles  
@@ -43,28 +43,28 @@ caps.handback.revision: 16
 </PackageFiles>  
 ```  
   
-## 요소 및 특성  
- `PackageFiles` 요소에는 다음과 같은 특성이 있습니다.  
+## <a name="elements-and-attributes"></a>요소 및 특성  
+ `PackageFiles` 요소에는 다음 특성이 있습니다.  
   
 |특성|설명|  
-|--------|--------|  
-|`CopyAllPackageFiles`|선택적 요소.  `false`로 설정되면 설치 관리자는 `Command` 요소에서 참조된 파일만 다운로드하고  `true`로 설정되면 모든 파일을 다운로드합니다.<br /><br /> `IfNotHomesite`로 설정되면 설치 관리자는 `ComponentsLocation`이 `HomeSite`로 설정된 경우 `False`인 것처럼 작동하고 그렇지 않은 경우 `True`인 것처럼 작동합니다.  HomeSite 시나리오에서 고유한 동작을 실행하기 위한 부트스트래퍼인 패키지를 허용하는 데 이 설정이 유용할 수 있습니다.<br /><br /> 기본값은 `true`입니다.|  
+|---------------|-----------------|  
+|`CopyAllPackageFiles`|선택 사항입니다. 경우로 설정 `false`, 설치 관리자에서 참조 하는 파일을 다운로드만 `Command` 요소입니다. 경우 설정 `true`, 모든 파일을 다운로드 합니다.<br /><br /> 경우로 설정 `IfNotHomesite`, 설치 관리자가 작동 하는 동일한 처럼 `False` 경우 `ComponentsLocation` 로 설정 된 `HomeSite`, 그렇지 않은 경우는 동일 하 게 작동 하 고 처럼 `True`합니다. 이 설정은 HomeSite 시나리오에서 고유한 동작을 실행 하는 부트스트래퍼 패키지를 허용 하도록 유용할 수 있습니다.<br /><br /> 기본값은 `true`입니다.|  
   
-## PackageFile  
- `PackageFile` 요소는 `PackageFiles` 요소의 자식입니다.  `PackageFiles` 요소에는 `PackageFile` 요소가 적어도 한 개 있어야 합니다.  
+## <a name="packagefile"></a>PackageFile  
+ `PackageFile` 의 자식인 요소는 `PackageFiles` 요소입니다. A `PackageFiles` 요소가 하나 이상 있어야 `PackageFile` 요소입니다.  
   
- `PackageFile`에는 다음과 같은 특성이 있습니다.  
+ `PackageFile`다음과 같은 특성이 있습니다.  
   
 |특성|설명|  
-|--------|--------|  
-|`Name`|필수 요소.  패키지 파일의 이름입니다.  이 이름은 패키지를 설치할 조건을 정의할 때 `Command` 요소에서 참조하는 이름입니다.  이 값은 `Strings` 테이블에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 같은 도구로 패키지를 설명하는 데 사용할 지역화된 이름을 검색하기 위한 키로도 사용됩니다.|  
-|`HomeSite`|선택적 요소.  패키지가 설치 관리자에 포함되지 않은 경우 원격 서버에 있는 패키지의 위치입니다.|  
-|`CopyOnBuild`|선택적 요소.  빌드할 때 부트스트래퍼가 패키지 파일을 디스크에 복사할지 여부를 지정합니다.  기본값은 true입니다.|  
-|`PublicKey`|패키지 인증서 서명자의 암호화된 공개 키입니다.  `HomeSite`를 사용하는 경우 필수적 요소이고, 그렇지 않으면 선택적 요소입니다.|  
-|`Hash`|선택적 요소.  패키지 파일의 SHA1 해시입니다.  이 특성은 설치 시 파일의 무결성을 확인하는 데 사용됩니다.  패키지 파일에서 동일한 해시를 계산할 수 없으면 패키지가 설치되지 않습니다.|  
+|---------------|-----------------|  
+|`Name`|필수 요소. 패키지 파일의 이름입니다. 이 이름은 하는 `Command` 요소는 패키지를 설치 하는 조건을 정의 될 때 참조 합니다. 이 값은 키로 사용은 `Strings` 와 같은 도구는 지역화 된 이름을 검색 하는 테이블 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 패키지를 설명 하기 위해 사용 됩니다.|  
+|`HomeSite`|선택 사항입니다. 설치 관리자에 포함 되지 않은 경우 원격 서버에서 패키지의 위치입니다.|  
+|`CopyOnBuild`|선택 사항입니다. 부트스트래퍼 빌드 시 디스크에 패키지 파일을 복사 해야 하는지 여부를 지정 합니다. 기본값은 true입니다.|  
+|`PublicKey`|패키지의 인증서 서명자의 공개 키 암호화입니다. 필요한 경우 `HomeSite` 사용 그렇지 않으면 선택 사항입니다.|  
+|`Hash`|선택 사항입니다. 패키지 파일의 SHA1 해시 합니다. 설치 중에 파일의 무결성을 확인 하는이 사용 됩니다. 패키지 파일에서 동일한 해시를 계산할 수 없으면, 패키지가 설치 되지 않습니다.|  
   
-## 예제  
- 다음 코드 예제에서는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 재배포 가능 패키지와 Windows Installer 같은 종속 항목에 대한 패키지를 정의합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 패키지에 대 한 정의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 재배포 가능 패키지 및 해당 종속성 Windows Installer 등입니다.  
   
 ```  
 <PackageFiles>  
@@ -75,7 +75,7 @@ caps.handback.revision: 16
 </PackageFiles>  
 ```  
   
-## 참고 항목  
- [\<Product\> 요소](../deployment/product-element-bootstrapper.md)   
- [\<Package\> 요소](../deployment/package-element-bootstrapper.md)   
+## <a name="see-also"></a>참고 항목  
+ [\<제품 > 요소](../deployment/product-element-bootstrapper.md)   
+ [\<패키지 > 요소](../deployment/package-element-bootstrapper.md)   
  [제품 및 패키지 스키마 참조](../deployment/product-and-package-schema-reference.md)

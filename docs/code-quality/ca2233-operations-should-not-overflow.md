@@ -1,11 +1,10 @@
 ---
-title: 'CA2233: Operations should not overflow | Microsoft Docs'
+title: "CA2233: 연산은 오버플로되지 않아야 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,61 +14,47 @@ helpviewer_keywords:
 - OperationsShouldNotOverflow
 - CA2233
 ms.assetid: 3a2b06ba-6d1b-4666-9eaf-e053ef47ffaa
-caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: f77e3f267d991f4bffbb18c1f69f66c4603d104c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d8b602d83eee4be49f63eef0ee8d2cd3d77f5040
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2233-operations-should-not-overflow"></a>CA2233: Operations should not overflow
+# <a name="ca2233-operations-should-not-overflow"></a>CA2233: 연산은 오버플로되지 않아야 합니다.
 |||  
 |-|-|  
 |TypeName|OperationsShouldNotOverflow|  
 |CheckId|CA2233|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A method performs an arithmetic operation and does not validate the operands beforehand to prevent overflow.  
+## <a name="cause"></a>원인  
+ 메서드가 산술 연산을 수행 하며 오버플로 방지 피연산자에 대해 사전 검사 하지 않습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- Arithmetic operations should not be performed without first validating the operands to make sure that the result of the operation is not outside the range of possible values for the data types involved. Depending on the execution context and the data types involved, arithmetic overflow can result in either a <xref:System.OverflowException?displayProperty=fullName> or the most significant bits of the result discarded.  
+## <a name="rule-description"></a>규칙 설명  
+ 산술 연산은 수행의 피연산자는 아닌지 확인 하는 작업의 결과 관련 된 데이터 형식에 대 한 가능한 값의 범위 밖에 있는 첫 번째 유효성을 검사 해야 합니다. 실행 컨텍스트와 관련 된 데이터 형식에 따라 산술 오버플로가 발생할 수 있습니다 하나는 <xref:System.OverflowException?displayProperty=fullName> 또는 결과의 가장 중요 한 비트는 무시 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, validate the operands before you perform the operation.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 작업을 수행 하기 전에 피연산자 유효성을 검사 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the possible values of the operands will never cause the arithmetic operation to overflow.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 가능한 값의 피연산자는 산술 연산 오버플로 일으키지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example-of-a-violation"></a>Example of a Violation  
+## <a name="example-of-a-violation"></a>위반의 예로  
   
-### <a name="description"></a>Description  
- A method in the following example manipulates an integer that violates this rule. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] requires the **Remove** integer overflow option to be disabled for this to fire.  
+### <a name="description"></a>설명  
+ 다음 예제에서 메서드는이 규칙을 위반 하는 정수를 조작 합니다. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]필요는 **제거** 정수 오버플로 옵션을 실행 하려면이 옵션에 대 한 해제 합니다.  
   
-### <a name="code"></a>Code  
- [!code-vb[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_1.vb)] [!code-csharp[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_1.cs)]  
+### <a name="code"></a>코드  
+ [!code-vb[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_1.vb)]
+ [!code-csharp[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_1.cs)]  
   
-### <a name="comments"></a>Comments  
- If the method in this example is passed <xref:System.Int32.MinValue?displayProperty=fullName>, the operation would underflow. This causes the most significant bit of the result to be discarded. The following code shows how this occurs.  
+### <a name="comments"></a>설명  
+ 이 예의 메서드에 전달 되는 경우 <xref:System.Int32.MinValue?displayProperty=fullName>, 연산이 언더플로 됩니다. 이렇게 하면 삭제 될 결과의 가장 중요 한 비트가 됩니다. 다음 코드에서는이 발생 하는 방법을 보여 줍니다.  
   
  [C#]  
   
@@ -92,42 +77,43 @@ Public Shared Sub Main()
 End Sub  
 ```  
   
-### <a name="output"></a>Output  
+### <a name="output"></a>출력  
   
 ```  
 2147483647  
 ```  
   
-## <a name="fix-with-input-parameter-validation"></a>Fix with Input Parameter Validation  
+## <a name="fix-with-input-parameter-validation"></a>입력된 매개 변수 유효성 검사의 해결  
   
-### <a name="description"></a>Description  
- The following example fixes the previous violation by validating the value of input.  
+### <a name="description"></a>설명  
+ 다음 예제에서는 입력 값의 유효성을 검사 하 여 위반을 해결 합니다.  
   
-### <a name="code"></a>Code  
- [!code-csharp[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_2.cs)] [!code-vb[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_2.vb)]  
+### <a name="code"></a>코드  
+ [!code-csharp[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_2.cs)]
+ [!code-vb[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_2.vb)]  
   
-## <a name="fix-with-a-checked-block"></a>Fix with a Checked Block  
+## <a name="fix-with-a-checked-block"></a>검사 된 블록의 해결  
   
-### <a name="description"></a>Description  
- The following example fixes the previous violation by wrapping the operation in a checked block. If the operation causes an overflow, a <xref:System.OverflowException?displayProperty=fullName> will be thrown.  
+### <a name="description"></a>설명  
+ 다음 예제에서는 작업 검사 된 블록에 래핑하여 위반을 해결 합니다. 작업의 결과로 오버플로가 발생 한 <xref:System.OverflowException?displayProperty=fullName> throw 됩니다.  
   
- Note that checked blocks are not supported in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)].  
+ 확인 된 블록에서 지원 되지 않습니다 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]합니다.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>코드  
  [!code-csharp[FxCop.Usage.OperationOverflowChecked#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_3.cs)]  
   
-## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>Turn on Checked Arithmetic Overflow/Underflow  
- If you turn on checked arithmetic overflow/underflow in C#, it is equivalent to wrapping every integer operation in a checked block.  
+## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>켜기 산술 연산 오버플로/언더플로 확인  
+ 확인 된 산술 연산 오버플로/언더플로 C#을 설정한 경우 모든 정수 연산 검사 된 블록에 배치를 같습니다.  
   
- **To turn on checked arithmetic overflow/underflow in C#**  
+ **C#에서 산술 연산 오버플로/언더플로 확인 설정 하려면**  
   
-1.  In **Solution Explorer**, right-click your project and choose **Properties**.  
+1.  **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.  
   
-2.  Select the **Build** tab and click **Advanced**.  
+2.  선택 된 **빌드** 탭을 클릭 **고급**합니다.  
   
-3.  Select **Check for arithmetic overflow/underflow** and click **OK**.  
+3.  선택 **산술 연산 오버플로/언더플로 확인** 클릭 **확인**합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:System.OverflowException?displayProperty=fullName>   
- [C# Operators](/dotnet/csharp/language-reference/operators/index)   
- [Checked and Unchecked](/dotnet/csharp/language-reference/keywords/checked-and-unchecked)
+ [C# 연산자](/dotnet/csharp/language-reference/operators/index)   
+ [Checked 및 Unchecked](/dotnet/csharp/language-reference/keywords/checked-and-unchecked)

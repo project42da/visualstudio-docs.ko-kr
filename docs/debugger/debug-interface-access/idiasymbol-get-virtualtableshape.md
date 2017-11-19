@@ -1,46 +1,45 @@
 ---
-title: "IDiaSymbol::get_virtualTableShape | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_virtualTableShape 메서드"
+title: 'Idiasymbol:: Get_virtualtableshape | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_virtualTableShape method
 ms.assetid: 92360cbd-0761-446e-93f9-04dc8f4b66c6
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c003b713c7ffc82609c052696507da5423387c20
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_virtualTableShape
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-기호 인터페이스 형식 사용자 정의 형식에 대 한 가상 테이블을 검색합니다.  
+# <a name="idiasymbolgetvirtualtableshape"></a>IDiaSymbol::get_virtualTableShape
+사용자 정의 형식에 대 한 가상 테이블 형식의 기호 인터페이스를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_virtualTableShape (   
-   IDiaSymbol** pRetVal  
+```C++  
+HRESULT get_virtualTableShape (   
+   IDiaSymbol** pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 반환 된 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 사용자 정의 형식에 대 한 가상 테이블을 나타내는 개체입니다.  
+ [out] 반환 된 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 사용자 정의 형식에 대 한 가상 테이블을 나타내는 개체입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성의 기호를 사용할 수 없음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 의미는 속성은 해당 기호를 사용할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

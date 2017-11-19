@@ -1,48 +1,47 @@
 ---
-title: "IDiaStackWalkFrame::searchForReturnAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkFrame::searchForReturnAddress 메서드"
+title: 'Idiastackwalkframe:: Searchforreturnaddress | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkFrame::searchForReturnAddress method
 ms.assetid: 1a54c50d-94af-4a43-ac4e-d80c5df156c3
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 7917d136b106f091e397c5b5b0443e191a4686b7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkFrame::searchForReturnAddress
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-지정 된 스택 프레임에 가까운 함수의 반환 주소를 검색합니다.  
+# <a name="idiastackwalkframesearchforreturnaddress"></a>IDiaStackWalkFrame::searchForReturnAddress
+가장 가까운 함수 반환 주소에 대 한 지정 된 스택 프레임을 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT searchForReturnAddress (   
-   IDiaFrameData* frame,  
-   ULONGLONG*     returnAddress  
+```C++  
+HRESULT searchForReturnAddress (   
+   IDiaFrameData* frame,  
+   ULONGLONG*     returnAddress  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `frame`  
- \[in\] [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) 는 현재 스택 프레임을 나타내는 개체입니다.  
+ [in] [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) 현재 스택 프레임을 나타내는 개체입니다.  
   
  `returnAddress`  
- \[out\] 가까운 함수의 반환 주소를 반환합니다.  
+ [out] 가장 가까운 함수 반환 주소를 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

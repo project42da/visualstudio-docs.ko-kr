@@ -1,24 +1,26 @@
 ---
 title: "T4 Include 지시문 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8c3de9f3-755a-47c5-a30a-65717dcaaac2
-caps.latest.revision: 6
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 4f46faae63d3fd60715ecd9aec804d03ef6dbc81
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# T4 Include 지시문
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 `<#@include#>` 지시문을 사용하여 다른 파일의 텍스트를 텍스트 템플릿에 포함할 수 있습니다.  텍스트 템플릿에서 첫 번째 클래스 기능 블록 `<#+ ... #>` 앞의 어느 곳에나`include` 지시문을 둘 수 있습니다.  포함된 파일에는 `include` 지시문 및 다른 지시문도 포함할 수 있습니다.  따라서 템플릿 간에 템플릿 코드와 상용구 텍스트를 공유할 수 있습니다.  
+# <a name="t4-include-directive"></a>T4 Include 지시문
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 `<#@include#>` 지시문을 사용하여 다른 파일의 텍스트를 텍스트 템플릿에 포함할 수 있습니다. 텍스트 템플릿에서 첫 번째 클래스 기능 블록 `include` 앞의 어느 곳에나`<#+ ... #>` 지시문을 둘 수 있습니다. 포함된 파일에는 `include` 지시문 및 다른 지시문도 포함할 수 있습니다. 따라서 템플릿 간에 템플릿 코드와 상용구 텍스트를 공유할 수 있습니다.  
   
-## include 지시문 사용  
+## <a name="using-include-directives"></a>include 지시문 사용  
   
 ```  
 <#@ include file="filePath" [once="true"] #>  
@@ -26,11 +28,11 @@ caps.handback.revision: 6
   
 -   `filePath`는 현재 템플릿 파일에 대해 상대적인 경로이거나 절대 경로일 수 있습니다.  
   
-     또한 특정 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension에서는 포함 파일을 검색하기 위한 고유 디렉터리를 지정할 수도 있습니다.  예를 들어 Visualization and Modeling SDK\(DSL 도구\)를 설치한 경우 `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates` 폴더가 포함 목록에 추가됩니다.  
+     또한 특정 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension에서는 포함 파일을 검색하기 위한 고유 디렉터리를 지정할 수도 있습니다. 다음과 같은 폴더가 포함 목록에 추가 됩니다 시각화 및 모델링 SDK (DSL 도구)를 설치 하는 경우에 예를 들어: `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates`합니다.  
   
-     이러한 추가적인 포함 폴더는 포함 파일의 파일 확장명에 따라 달라질 수 있습니다.  예를 들어 DSL 도구의 포함 폴더에서는 파일 확장명이 `.tt`인 파일이 있는 포함 파일에만 액세스할 수 있습니다.  
+     이러한 추가적인 포함 폴더는 포함 파일의 파일 확장명에 따라 달라질 수 있습니다. 예를 들어 DSL 도구의 포함 폴더에서는 파일 확장명이 `.tt`인 파일이 있는 포함 파일에만 액세스할 수 있습니다.  
   
--   `filePath`는 "%"로 구분되는 환경 변수를 포함할 수 있습니다.  예를 들면 다음과 같습니다.  
+-   `filePath`는 "%"로 구분되는 환경 변수를 포함할 수 있습니다. 예:  
   
     ```  
     <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>  
@@ -38,15 +40,15 @@ caps.handback.revision: 6
   
 -   포함 파일의 이름에 `".tt"` 확장명을 사용할 필요가 없습니다.  
   
-     포함 파일에 `".t4"`와 같은 다른 확장명을 사용할 수 있습니다.  프로젝트에 `.tt` 파일을 추가하면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 **사용자 지정 도구** 속성이 `TextTemplatingFileGenerator`로 자동 설정되기 때문입니다.  일반적으로 포함된 파일을 개별적으로 변환하지 않을 수 있습니다.  
+     포함 파일에 `".t4"`와 같은 다른 확장명을 사용할 수 있습니다. 추가 하는 경우 때문에 이것이 `.tt` 파일을 프로젝트에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 설정 하는 자동으로 해당 **사용자 지정 도구** 속성을 `TextTemplatingFileGenerator`합니다. 일반적으로 포함된 파일을 개별적으로 변형하지 않을 수 있습니다.  
   
-     반면에 파일 확장명에 따라 포함 파일을 검색할 추가 폴더가 영향을 받는 경우가 있다는 사실에 유의해야 합니다.  이는 다른 파일이 들어 있는 포함된 파일이 있는 경우 중요할 수 있습니다.  
+     반면에 파일 확장명에 따라 포함 파일을 검색할 추가 폴더가 영향을 받는 경우가 있다는 사실에 유의해야 합니다. 이는 다른 파일이 들어 있는 포함된 파일이 있는 경우 중요할 수 있습니다.  
   
--   포함된 내용은 포함하는 텍스트 템플릿의 일부인 것처럼 처리됩니다.  그러나 `include` 지시문 뒤에 일반 텍스트와 표준 제어 블록이 있는 경우에도 클래스 기능 블록 `<#+...#>`이 포함된 파일을 포함할 수 있습니다.  
+-   포함된 내용은 포함하는 텍스트 템플릿의 일부인 것처럼 처리됩니다. 그러나 `<#+...#>` 지시문 뒤에 일반 텍스트와 표준 제어 블록이 있는 경우에도 클래스 기능 블록 `include`이 포함된 파일을 포함할 수 있습니다.  
   
--   템플릿이 둘 이상의 다른 포함 파일에서 호출되는 경우에도 한 번만 포함되도록 하려면 `once="true"`를 사용합니다.  
+-   사용 하 여 `once="true"` 둘 이상의 다른 포함 파일에서 호출 되는 경우에 템플릿을 포함 한 번만 인지 확인 합니다.  
   
-     이 기능을 통해 재사용 가능한 T4 코드 조각 라이브러리를 손쉽게 작성할 수 있습니다. 이 라이브러리는 다른 코드 조각이 이미 포함되어 있는지 여부를 걱정할 필요 없이 자유롭게 포함시킬 수 있습니다. 예를 들어, 템플릿 처리 및 C\# 생성을 다루는 매우 정교한 코드 조각으로 구성된 라이브러리가 있다고 가정합니다. 이 라이브러리는 예외 생성과 같이 더 많은 작업 관련 유틸리티에서 사용되므로 더 많은 응용 프로그램별 템플릿에서 사용할 수 있습니다.  종속성 그래프를 그리는 경우 일부 코드 조각이 여러 번 포함될 수 있습니다.  그러나 `once` 매개 변수가 이후에 포함되지 않도록 방지합니다.  
+     쉽게에 포함할 수 있는 재사용 가능한 T4 조각의 라이브러리를 빌드할 수 됩니다 하는 관계 없이이 기능을 사용 하면 다른 코드 조각에 이미 포함 합니다.  예를 들어 매우 세부적인 코드 조각 템플릿 처리 및 C# 생성을 처리 하는 라이브러리를 있다고 가정 합니다.  차례로 이러한 모든 응용 프로그램 관련 서식 파일에서 사용할 수 있는 예외를 생성 하는 등 일부 작업 관련 유틸리티에서 사용 됩니다. 종속성 그래프를 그리는 경우 일부 코드 조각이 여러 번 포함될 수 있습니다. 그러나 `once` 매개 변수가 이후에 포함되지 않도록 방지합니다.  
   
  **MyTextTemplate.tt:**  
   
@@ -94,7 +96,7 @@ void AnotherGenerateMessage(int n)
   
 ```  
   
- **결과적으로 생성된 파일, MyTextTemplate.txt:**  
+ **결과적으로 생성 된 파일, MyTextTemplate.txt:**  
   
 ```  
 Output message 1 (from top template).  
@@ -109,10 +111,10 @@ Output message 5 (from top template).
   
 ```  
   
-##  <a name="msbuild"></a> MSBuild 및 Visual Studio에서 프로젝트 속성 사용  
- include 지시문에 $\(SolutionDir\)와 같은 Visual Studio 매크로를 사용할 수 있지만 MSBuild에서는 작동하지 않습니다.  빌드 컴퓨터에서 템플릿을 변환하려는 경우 대신 프로젝트 속성을 사용해야 합니다.  
+##  <a name="msbuild"></a>MSBuild 및 Visual Studio에서 프로젝트 속성 사용  
+ Include 지시문에 $ (solutiondir)과 같은 Visual Studio 매크로 사용 하 여 있지만 MSBuild에서 작동 하지 않습니다. 빌드 컴퓨터에서 템플릿을 변형하려는 경우 대신 프로젝트 속성을 사용해야 합니다.  
   
- 프로젝트 속성을 정의하기 위해 .csproj 또는 .vbproj 파일을 편집합니다.  이 예제에서는 `myIncludeFolder`라는 속성을 정의합니다.  
+ 프로젝트 속성을 정의하기 위해 .csproj 또는 .vbproj 파일을 편집합니다. 이 예제에서는 `myIncludeFolder`라는 속성을 정의합니다.  
   
 ```xml  
 <!-- Define a project property, myIncludeFolder: -->  

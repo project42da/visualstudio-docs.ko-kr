@@ -1,49 +1,48 @@
 ---
-title: "IDiaSymbol::get_packed | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_packed 메서드"
+title: 'Idiasymbol:: Get_packed | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_packed method
 ms.assetid: e42ff368-56c4-49a2-8676-f80e349efa21
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 29c56e7a1a86b8b88056b49dc0a6d93276fd597c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_packed
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-사용자 정의 데이터 형식 \(UDT\) 압축 되어 있는지 여부를 지정 하는 플래그를 검색 합니다.  
+# <a name="idiasymbolgetpacked"></a>IDiaSymbol::get_packed
+사용자 정의 데이터 형식 (UDT)이 압축 여부를 지정 하는 플래그를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_packed (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_packed (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 반환 `TRUE` UDT를 압축 하는 경우. 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` UDT이 압축 됩니다; 그렇지 않으면 반환 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성에 사용할 수 있음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 속성이 해당 기호를 사용할 수 있음을 의미 합니다.  
   
-## 설명  
- 이동형 UDT의 모든 멤버를 가능한 조밀 메모리 경계에 맞추려면 중간에 다른 데이터가 채워지지 않습니다 배치 됩니다 것을 의미 합니다.  
+## <a name="remarks"></a>설명  
+ 압축은 메모리 한도에 맞게 중간 패딩 없이 UDT의 모든 멤버에 최대한 가깝게 배치 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

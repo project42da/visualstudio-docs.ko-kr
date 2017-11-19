@@ -1,27 +1,30 @@
 ---
-title: "IDebugApplication::HandleRuntimeError | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: IDebugApplication::HandleRuntimeError | Microsoft Docs
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugApplication.HandleRuntimeError
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IDebugApplication::HandleRuntimeError"
+helpviewer_keywords: IDebugApplication::HandleRuntimeError
 ms.assetid: f8f3bbaf-09e5-4d01-8a35-f380bc7ff8ed
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: eead4780ff061ff9c7280aeee0936c8f64741981
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugApplication::HandleRuntimeError
-현재 스레드를 차단 하 고 IDE 디버거를 오류에 대 한 알림을 보냅니다.  
+# <a name="idebugapplicationhandleruntimeerror"></a>IDebugApplication::HandleRuntimeError
+현재 스레드를 차단 하 고 IDE 디버거 오류에 대 한 알림을 보냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 HRESULT HandleRuntimeError(  
@@ -33,36 +36,36 @@ HRESULT HandleRuntimeError(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pErrorDebug`  
- \[in\] 발생 한 오류입니다.  
+ [in] 오류가 발생 한 경우  
   
  `pScriptSite`  
- \[in\] 스레드의 스크립트 사이트입니다.  
+ [in] 스레드의 스크립트 사이트입니다.  
   
  `pbra`  
- \[out\] 디버거에서 응용 프로그램을 다시 시작할 때 수행할 동작입니다.  
+ [out] 디버거에서 응용 프로그램을 다시 시작 될 때 수행할 동작입니다.  
   
  `perra`  
- \[out\] 오류가 있으면 디버거에서 응용 프로그램을 다시 시작할 때 수행할 동작입니다.  
+ [out] 디버거는 동안 오류가 발생 하는 경우 응용 프로그램을 다시 시작 될 때 수행할 동작입니다.  
   
  `pfCallOnScriptError`  
- \[out\] 플래그는 `TRUE` 엔진을 호출 해야 하는 경우는 `IActiveScriptSite::OnScriptError` 메서드.  
+ [out] 플래그는 `TRUE` 엔진 호출 해야 하는 경우는 `IActiveScriptSite::OnScriptError` 메서드.  
   
-## 반환 값  
- 이 메서드는 `HRESULT`를 반환합니다.  가능한 값 포함 되지만, 다음 테이블에 제한 되지는지 않습니다.  
+## <a name="return-value"></a>반환 값  
+ 이 메서드는 `HRESULT`를 반환합니다. 가능한 값에는 다음 표에 있는 값이 포함되지만, 이에 국한되는 것은 아닙니다.  
   
 |값|설명|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|메서드가 성공했으며|  
   
-## 설명  
- 언어 엔진은 런타임 오류를 발생 시키는 스레드 컨텍스트에서이 메서드를 호출 합니다.  이 메서드는 현재 스레드를 차단 하 고 IDE 디버거를 보낼 수 있는 오류 알림을 보냅니다.  IDE 디버거 응용 프로그램이 다시 시작 될 때 수행할 작업을이 메서드를 반환 합니다.  
+## <a name="remarks"></a>설명  
+ 런타임 오류를 발생 시키는 스레드에의 컨텍스트에서이 메서드를 호출 하는 언어 엔진입니다. 이 메서드는 현재 스레드를 차단 하 고 디버거 IDE에 보낼 오류 알림을 보냅니다. IDE 디버거 응용 프로그램 다시 시작 되 면이 메서드는 수행할 동작을 반환 합니다.  
   
 > [!NOTE]
->  런타임 오류 동안에 언어 엔진 스레드 스택 프레임을 열거 하거나 식을 계산할 때 이러한 작업을 수행 하 여 호출할 수 있습니다.  
+>  런타임 오류에서 스택 프레임을 열거 하거나 포함 된 식을 평가 하는 대로 이러한 작업을 수행 하는 스레드에 의해 언어 엔진을 호출할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugApplication 인터페이스](../../winscript/reference/idebugapplication-interface.md)   
  [IActiveScriptErrorDebug 인터페이스](../../winscript/reference/iactivescripterrordebug-interface.md)   
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)   

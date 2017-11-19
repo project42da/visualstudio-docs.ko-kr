@@ -1,52 +1,51 @@
 ---
-title: "IDiaStackWalkFrame::searchForReturnAddressStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkFrame::searchForReturnAddressStart 메서드"
+title: 'Idiastackwalkframe:: Searchforreturnaddressstart | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkFrame::searchForReturnAddressStart method
 ms.assetid: 47660b9b-6e4f-4dfa-88ab-63dce28f7412
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 883a741258bd4649734310e2edbba3cec5eaf1a2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkFrame::searchForReturnAddressStart
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-반송 주소 또는 지정한 주소 근처에 대해 지정 된 스택 프레임을 검색합니다.  
+# <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
+반송 주소에 도달 했거나 지정된 된 주소에 대 한 지정 된 스택 프레임을 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT searchForReturnAddressStart (   
-   IDiaFrameData* frame,  
-   ULONGLONG      startAddress,  
-   ULONGLONG*     returnAddress  
+```C++  
+HRESULT searchForReturnAddressStart (   
+   IDiaFrameData* frame,  
+   ULONGLONG      startAddress,  
+   ULONGLONG*     returnAddress  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `frame`  
- \[in\] [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) 는 현재 스택 프레임을 나타내는 개체입니다.  
+ [in] [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) 현재 스택 프레임을 나타내는 개체입니다.  
   
  `startAddress`  
- \[in\] 가상 메모리 주소에서 검색을 시작 합니다.  
+ [in] 검색을 시작 하는 가상 메모리 주소입니다.  
   
  `returnAddress`  
- \[out\] 반송 주소를 가까운 함수 반환 `startAddress`.  
+ [out] 가장 가까운 함수 주소를 반환 하는 반환 `startAddress`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

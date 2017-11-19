@@ -1,51 +1,51 @@
 ---
-title: "IDebugObject::GetMemoryContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::GetMemoryContext"
-helpviewer_keywords: 
-  - "IDebugObject::GetMemoryContext 메서드"
+title: IDebugObject::GetMemoryContext | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugObject::GetMemoryContext
+helpviewer_keywords: IDebugObject::GetMemoryContext method
 ms.assetid: 6760a0d3-a898-4e81-b68f-c45c584b225b
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 93f6d82b88be23b160effe1c8162648132f461c5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugObject::GetMemoryContext
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-값 개체의 주소를 나타내는 메모리 컨텍스트를 가져옵니다.  
+# <a name="idebugobjectgetmemorycontext"></a>IDebugObject::GetMemoryContext
+개체의 값의 주소를 나타내는 메모리 컨텍스트를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetMemoryContext(   
-   IDebugMemoryContext2** pContext  
+```cpp  
+HRESULT GetMemoryContext(   
+   IDebugMemoryContext2** pContext  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMemoryContext(  
-   ref IDebugMemoryContext2 pContext  
+   ref IDebugMemoryContext2 pContext  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pContext`  
- \[out\] 반환 된 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 주소는 개체의 값을 나타내는 개체입니다.  
+ [out] 반환 된 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 개체의 값의 주소를 나타내는 개체입니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  
   
-## 설명  
- 이로 표현 되는 값의 주소가 반환 된 메모리 컨텍스트를 지정 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 개체입니다.  
+## <a name="remarks"></a>설명  
+ 이 표시 된 대로 값의 주소 지정 하는 반환 된 메모리 내 컨텍스트에 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 개체입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

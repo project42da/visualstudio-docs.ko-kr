@@ -1,40 +1,44 @@
 ---
-title: "기본 형식 활동 디자이너 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "기본 활동 디자이너 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 0a2b613e-dc04-49a1-a787-caec2ec63b90
-caps.latest.revision: 7
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d8f4c4763d40583f02aa97eaea066db5de2a7479
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 기본 형식 활동 디자이너
-기본 활동 디자이너는 Assign 및 Delay 등 <xref:System.Activities.Statement> 네임스페이스에서 다양한 활동을 만들고 구성하는 데 사용됩니다.이 단원의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 및 템플릿 디자이너의 사용 방법에 대한 지침을 제공합니다.  
+# <a name="primitives-activity-designers"></a>기본 형식 활동 디자이너
+기본 활동 디자이너는 Assign 및 Delay 등 <xref:System.Activities.Statements> 네임스페이스에서 다양한 활동을 만들고 구성하는 데 사용됩니다. 이 단원의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 및 템플릿 디자이너의 사용 방법에 대한 지침을 제공합니다.  
   
-## 단원 내용  
- [Assign](../workflow-designer/assign-activity-designer.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [할당](../workflow-designer/assign-activity-designer.md)  
  <xref:System.Activities.Statements.Assign> 활동을 만들고 구성하는 데 사용됩니다.  
   
- [Delay](../workflow-designer/delay-activity-designer.md)  
+ [지연](../workflow-designer/delay-activity-designer.md)  
  <xref:System.Activities.Statements.Delay> 활동을 만들고 구성하는 데 사용됩니다.  
   
- [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)  
+ [메서드 호출](../workflow-designer/invokemethod-activity-designer.md)  
  <xref:System.Activities.Statements.InvokeMethod> 활동을 만들고 구성하는 데 사용됩니다.  
   
  [WriteLine](../workflow-designer/writeline-activity-designer.md)  
  <xref:System.Activities.Statements.WriteLine> 활동을 만들고 구성하는 데 사용됩니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [제어 흐름](../workflow-designer/control-flow-activity-designers.md)  
   
- [순서도](../workflow-designer/flowchart-activity-designers.md)  
+ [워크플로](../workflow-designer/flowchart-activity-designers.md)  
   
  [메시징](../workflow-designer/messaging-activity-designers.md)  
   
@@ -46,5 +50,5 @@ caps.handback.revision: 7
   
  [오류 처리](../workflow-designer/error-handling-activity-designers.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [활동 디자이너 사용](../workflow-designer/using-the-activity-designers.md)

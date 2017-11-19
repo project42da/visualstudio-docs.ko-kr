@@ -1,52 +1,52 @@
 ---
-title: "IDebugCustomAttributeQuery2::EnumCustomAttributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttributeQuery2::EnumCustomAttributes"
-helpviewer_keywords: 
-  - "IDebugCustomAttributeQuery2::EnumCustomAttributes"
+title: IDebugCustomAttributeQuery2::EnumCustomAttributes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCustomAttributeQuery2::EnumCustomAttributes
+helpviewer_keywords: IDebugCustomAttributeQuery2::EnumCustomAttributes
 ms.assetid: 94bfce74-aa3d-45f0-8e04-5715faf85217
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 47b643c8f08de60bb873f3daf69ee93e0816d31f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCustomAttributeQuery2::EnumCustomAttributes
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 필드에 연결 된 모든 사용자 지정 특성에 대 한 열거자를 가져옵니다.  
+# <a name="idebugcustomattributequery2enumcustomattributes"></a>IDebugCustomAttributeQuery2::EnumCustomAttributes
+이 필드에 연결 하는 모든 사용자 지정 특성에 대 한 열거자를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT EnumCustomAttributes(   
-   IEnumDebugCustomAttributes** ppEnum  
+```cpp  
+HRESULT EnumCustomAttributes(   
+   IEnumDebugCustomAttributes** ppEnum  
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumCustomAttributes(  
-   out IEnumDebugCustomAttributes ppEnum  
+   out IEnumDebugCustomAttributes ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppEnum`  
- \[out\] 반환 된 [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) 사용자 지정 특성입니다; 목록을 나타내는 개체 그렇지 않으면 사용자 지정 특성이 없으면 null 값을 반환 합니다.  
+ [out] 반환 된 [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) 사용자 지정 특성 목록을 나타내는 개체입니다; 그렇지 않으면 사용자 지정 특성이 없는 경우 null 값을 반환 합니다.  
   
-## 반환 값  
- 이 필드에 사용자 지정 특성이 없으면이 작업이 성공 하면 S\_OK 또는 S\_FALSE를 반환 합니다.  그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고 또는 반환 S_FALSE이이 필드에 사용자 지정 특성이 없는 경우. 그러지 않으면 오류 코드 반환  
   
-## 설명  
- 필드는 여러 개의 사용자 지정 특성을 가질 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 필드에는 사용자 지정 특성이 여러 개 있을 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

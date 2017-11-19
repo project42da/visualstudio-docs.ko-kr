@@ -1,55 +1,57 @@
 ---
-title: "IDebugExpressionEvaluator2::GetService | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluator2::GetService"
-  - "GetService"
+title: IDebugExpressionEvaluator2::GetService | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugExpressionEvaluator2::GetService
+- GetService
 ms.assetid: f8988a9e-9d18-42af-84a7-55f41e9adf63
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d907bdd93d2c17eb86ae07f9c9cfa3034fa3c09d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugExpressionEvaluator2::GetService
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-고유 식별자를 제공 하는 서비스 개체를 검색 합니다.  
+# <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
+고유 식별자를 지정 하는 서비스 개체를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT GetService (  
-   GUID        uid,  
-   IUnknown ** ppService  
+   GUID        uid,  
+   IUnknown ** ppService  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetService (  
-   Guid       uid,  
-   out object ppService  
+   Guid       uid,  
+   out object ppService  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `uid`  
- \[in\] 검색할 서비스의 고유 식별자입니다.  
+ [in] 검색할 서비스의 고유 식별자입니다.  
   
  `ppService`  
- \[out\] 서비스를 나타내는 개체를 반환 합니다.  
+ [out] 서비스를 나타내는 개체를 반환 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 다른 식 계산기에서 서비스를 가져오는 데는 타사 식 계산기가 사용할 수 있습니다.  예를 들어, 기본 식 계산기에서 시각화 도우미 서비스에 대 한 인터페이스를 가져오려면이 메서드를 사용 수 있습니다.  제 3의 식 계산기가이 인터페이스를 구현 해야 하는 흔하지 않습니다.  
+## <a name="remarks"></a>설명  
+ 다른 식 계산기에서 서비스를 가져오는 제 3 자 식 계산기 에서도 사용할 수 있습니다. 예를 들어이 메서드는 기본 식 계산기에서 시각화 도우미 서비스에 대 한 인터페이스를 가져올 데 사용할 수 없습니다. 제 3 자 식 계산기가이 인터페이스를 구현 해야 할 가능성이 높습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

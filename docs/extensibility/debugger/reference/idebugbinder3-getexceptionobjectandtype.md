@@ -1,56 +1,56 @@
 ---
-title: "IDebugBinder3::GetExceptionObjectAndType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBinder3::GetExceptionObjectAndType"
-helpviewer_keywords: 
-  - "IDebugBinder3::GetExceptionObjectAndType 메서드"
+title: IDebugBinder3::GetExceptionObjectAndType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugBinder3::GetExceptionObjectAndType
+helpviewer_keywords: IDebugBinder3::GetExceptionObjectAndType method
 ms.assetid: 2a313fe1-4ee1-4f01-af86-382d6c661a8f
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b533423da8152dd23df6d32da3361c99ad032b7e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBinder3::GetExceptionObjectAndType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 메서드는 예외 개체와 관련 있는 경우를 검색 합니다.  
+# <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
+있는 경우이 메서드는 개체와 연결 된 예외를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
-HRESULT GetExceptionObjectAndType(  
-   IDebugObject** ppException,  
-   IDebugField**  ppField  
+HRESULT GetExceptionObjectAndType(  
+   IDebugObject** ppException,  
+   IDebugField**  ppField  
 );  
 ```  
   
-```c#  
-int GetExceptionObjectAndType(  
-   out IDebugObject ppException,  
-   out IDebugField  ppField  
+```csharp  
+int GetExceptionObjectAndType(  
+   out IDebugObject ppException,  
+   out IDebugField  ppField  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppException`  
- \[out\] 예외를 나타내는 개체를 반환 합니다.  
+ [out] 예외를 나타내는 개체를 반환 합니다.  
   
  `ppField`  
- \[out\] \(Null 값이 될 수 있습니다\) 예외를 일으킨 특정 필드를 나타내는 개체를 반환 합니다.  
+ [out] (Null 값 수 있음)는 예외를 일으킬 수 있는 특정 필드를 나타내는 개체를 반환 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
 > [!NOTE]
->  예외 인지 여부를 확인 하 여 반환 값을 확인 합니다. `ppException`: 값이 null 인 경우 예외가이 개체에 연결 됩니다.  
+>  예외가 있는지 여부를 확인 하려면에서 반환한 값 확인 `ppException`: 되는 null 값을 경우이 개체와 연결 된 예외가 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

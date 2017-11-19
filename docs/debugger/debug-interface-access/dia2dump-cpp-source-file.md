@@ -1,29 +1,27 @@
 ---
 title: "Dia2dump.cpp 소스 파일 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dia2dump 샘플[DIA SDK], 샘플 소스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Dia2dump sample [DIA SDK], sample source
 ms.assetid: 32fd92f6-3de5-4353-b7cb-66781e03b38f
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 47c5ad392d031eabcfe51c74de48084144f9e8a0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Dia2dump.cpp 소스 파일
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-.Pdb 파일의 내용을 다음과 같은 Dia2dump.cpp 소스 코드를 표시합니다.  이 소스 코드를 사용 하 여 [Dia2dump 샘플](../../debugger/debug-interface-access/dia2dump-sample.md).  
+# <a name="dia2dumpcpp-source-file"></a>Dia2dump.cpp 소스 파일
+다음 Dia2dump.cpp 소스 코드에는.pdb 파일의 내용을 표시합니다. 이 소스 코드를 사용 하 여 [Dia2dump 샘플](../../debugger/debug-interface-access/dia2dump-sample.md)합니다.  
   
 ```  
 // dia2dump.cpp : Dump contents of a pdb file using DIA.  

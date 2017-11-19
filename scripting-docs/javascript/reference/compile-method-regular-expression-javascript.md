@@ -1,64 +1,66 @@
 ---
-title: "compile 메서드(Regular Expression)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "compile"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Compile 메서드"
-  - "소스 코드 컴파일, 정규식"
-  - "정규식, 컴파일"
+title: "compile 메서드 (Regular Expression) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: compile
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- regular expressions, compiling
+- Compile method
+- compiling source code, regular expressions
 ms.assetid: dc28cae3-478d-49b5-b5ea-203e5edfe195
-caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8b8de23a9e4f0e03fbf042195867ad9426e4c6bb
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# compile 메서드(Regular Expression)(JavaScript)
-빠른 실행을 위해 정규식을 내부 형식으로 컴파일합니다.  
+# <a name="compile-method-regular-expression-javascript"></a>compile 메서드(Regular Expression)(JavaScript)
+정규식을 빠른 실행을 위해 내부 형식으로 컴파일합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 rgExp.compile(pattern, [flags])   
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  `rgExp`  
- 필수 요소.  **Regular Expression** 개체의 인스턴스입니다.  변수 이름이나 리터럴일 수 있습니다.  
+ 필수 요소. 인스턴스는 **정규식** 개체입니다. 변수 이름 또는 리터럴일 수 있습니다.  
   
- *pattern*  
- 필수 요소.  컴파일할 정규식 패턴을 포함하는 문자열 식입니다.  
+ *패턴*  
+ 필수 요소. 컴파일할 정규식 패턴을 포함 하는 문자열 식  
   
  `flags`  
- 선택 사항입니다.  함께 사용할 수 있는 플래그는 다음과 같습니다.  
+ 선택 사항입니다. 결합할 수 있는 사용 가능한 플래그는 다음과 같습니다.  
   
--   g\(발생할 모든 *패턴*에 대한 전역 검색\)  
+-   g (의 모든 항목에 대 한 전역 검색 *패턴*)  
   
--   i\(대\/소문자 구분 안 함\)  
+-   i(대/소문자 무시)  
   
--   m\(여러 행 검색\)  
+-   m(여러 줄 검색)  
   
-## 설명  
- **compile** 메서드는 보다 빠른 실행을 위해 *pattern*을 내부 형식으로 변환합니다.  예를 들어 이렇게 하면 루프의 정규식을 더 효율적으로 사용할 수 있습니다.  컴파일된 정규식은 같은 식을 반복적으로 다시 사용할 때 속도가 빨라집니다.  그렇지만 정규식이 바뀌면 이러한 이점이 없어집니다.  
+## <a name="remarks"></a>설명  
+ **컴파일** 메서드 변환 *패턴* 빠른 실행을 위해 내부 형식으로. 이렇게 하면 보다 효율적으로 활용 루프의 정규식에 대 한 예를 들어 있습니다. 컴파일된 정규식 때 속도가 빨라집니다 같은 식에 반복 해 서 다시 사용 합니다. 그러나 정규식 변경 되 면 아무 이점이 확보 됩니다.  
   
-## 예제  
- 다음 예제에서는 **compile** 메서드의 사용법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 **컴파일** 메서드:  
   
-```javascript  
+```JavaScript  
 function CompileDemo(){  
    var rs;  
    var s = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPp"  
@@ -73,10 +75,10 @@ function CompileDemo(){
 }  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
  **적용 대상**: [Regular Expression 개체](../../javascript/reference/regular-expression-object-javascript.md)  
   
-## 참고 항목  
- [Regular Expression Syntax \(JavaScript\)](http://msdn.microsoft.com/ko-kr/ab0766e1-7037-45ed-aa23-706f58358c0e)
+## <a name="see-also"></a>참고 항목  
+ [정규식 구문 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)

@@ -1,44 +1,44 @@
 ---
-title: "IDebugProcess2::GetAttachedSessionName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess2::GetAttachedSessionName"
-helpviewer_keywords: 
-  - "IDebugProcess2::GetAttachedSessionName"
+title: IDebugProcess2::GetAttachedSessionName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProcess2::GetAttachedSessionName
+helpviewer_keywords: IDebugProcess2::GetAttachedSessionName
 ms.assetid: 7e5e116f-2c0c-4bc8-ad3f-e9fd2318a7e4
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 553141f01211389308978e80d22220634625c940
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcess2::GetAttachedSessionName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 프로세스를 디버그 세션의 이름을 가져옵니다.  IDE를 사용자에 게 특정 시스템의 특정 프로세스를 디버깅이 정보를 표시할 수 있습니다.  
+# <a name="idebugprocess2getattachedsessionname"></a>IDebugProcess2::GetAttachedSessionName
+이 프로세스를 디버그 하는 세션의 이름을 가져옵니다. IDE를 사용자에 게 특정 컴퓨터에서 특정 프로세스를 디버깅 하는이 정보를 표시할 수 있습니다.  
   
 > [!NOTE]
->  이 메서드는 사용 되지 않습니다, 그리고 및 구현을 항상 반환 해야 `E_NOTIMPL`.  
+>  이 메서드는 더 이상 해당 구현은 항상 반환 `E_NOTIMPL`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 HRESULT GetAttachedSessionName(  
-   BSTR* pbstrSessionName  
+   BSTR* pbstrSessionName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pbstrSessionName`  
   
-## 반환 값  
- 이 메서드는 항상 반환 합니다 `E_NOTIMPL`.  
+## <a name="return-value"></a>반환 값  
+ 이 메서드는 항상 반환 `E_NOTIMPL`합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

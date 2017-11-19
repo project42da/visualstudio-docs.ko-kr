@@ -1,52 +1,53 @@
 ---
-title: "IDebugMemoryContext2::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMemoryContext2::GetName"
-helpviewer_keywords: 
-  - "IDebugMemoryContext2::GetName 메서드"
-  - "GetName 메서드"
+title: IDebugMemoryContext2::GetName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugMemoryContext2::GetName
+helpviewer_keywords:
+- IDebugMemoryContext2::GetName method
+- GetName method
 ms.assetid: 8c212556-7d9e-4d68-b2a9-8212f50d0287
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: cbe610430239936e1722df74960651659a92947c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugMemoryContext2::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 컨텍스트에 대해 표시할 수 있는 사용자 이름을 검색합니다.  
+# <a name="idebugmemorycontext2getname"></a>IDebugMemoryContext2::GetName
+이 컨텍스트에 대 한 사용자 표시 이름을 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetName(   
-   BSTR* pbstrName  
+```cpp  
+HRESULT GetName(   
+   BSTR* pbstrName  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetName(  
-   out string pbstrName  
+   out string pbstrName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pbstrName`  
- \[out\] 메모리 컨텍스트의 이름을 반환합니다.  
+ [out] 메모리 컨텍스트의 이름을 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 메모리 컨텍스트 이름은 일반적으로 사용 되지 않습니다.  
+## <a name="remarks"></a>설명  
+ 메모리 내 컨텍스트에 이름 일반적으로 사용 되지 않습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

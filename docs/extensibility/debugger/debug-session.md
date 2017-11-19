@@ -1,30 +1,31 @@
 ---
 title: "디버그 세션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "디버깅 세션을 [디버깅 SDK]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: debugging [Debugging SDK], sessions
 ms.assetid: 18d82199-b2d4-47a9-924f-ab64faf60ca1
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: bd1654ba50f8bf4fd11558518f826d46f91151c3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 디버그 세션
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-디버거 아키텍처 측면에서  **세션**:  
+# <a name="debug-session"></a>디버그 세션
+디버거 아키텍처를 기준으로 한 **세션**:  
   
--   관련 되거나 관련 되지 않은 집합을 모두 처리를 시작 하거나 된 IDE의 단일 인스턴스를 연결 합니다.  
+-   관련 또는 관련 없는 모든 집합이 처리, 시작 또는 IDE의 단일 인스턴스에서 연결 된입니다.  
   
--   세션 디버그 매니저 \(SDM\)에 의해 구현 됩니다.  자세한 내용은 [디버그 세션 관리자](../../extensibility/debugger/session-debug-manager.md)를 참조하십시오.  
+-   세션 디버그 관리자 (SDM)에 의해 구현 됩니다. 자세한 내용은 참조 [세션 디버그 관리자](../../extensibility/debugger/session-debug-manager.md)합니다.  
   
-## 참고 항목  
- [디버그 세션 관리자](../../extensibility/debugger/session-debug-manager.md)   
+## <a name="see-also"></a>참고 항목  
+ [세션 디버그 관리자](../../extensibility/debugger/session-debug-manager.md)   
  [디버거 개념](../../extensibility/debugger/debugger-concepts.md)

@@ -1,116 +1,116 @@
 ---
-title: "방법: ClickOnce 응용 프로그램에 대한 업데이트 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Microsoft.VisualStudio.Publish.ClickOnceProvider.Dialog.Update"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "응용 프로그램 업데이트"
-  - "ClickOnce 배포, 응용 프로그램 관리"
-  - "ClickOnce 배포, 업데이트"
-  - "데이터 업데이트, ClickOnce"
+title: "방법: ClickOnce 응용 프로그램에 대 한 업데이트를 관리 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Microsoft.VisualStudio.Publish.ClickOnceProvider.Dialog.Update
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce deployment, managing applications
+- ClickOnce deployment, updates
+- updating data, ClickOnce
+- application updates
 ms.assetid: a3f23f05-e7f1-4620-b23c-2d68f9643684
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 8de46a08d49bb71da055021b6785e4a3e2e97efc
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: ClickOnce 응용 프로그램에 대한 업데이트 관리
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에서는 업데이트를 자동으로 또는 프로그래밍 방식으로 확인할 수 있습니다.  개발자의 경우 업데이트를 확인하는 시기와 방법, 필수 업데이트인지 여부 및 응용 프로그램에서 업데이트를 확인하는 위치 등을 자유롭게 지정할 수 있습니다.  
+# <a name="how-to-manage-updates-for-a-clickonce-application"></a>방법: ClickOnce 응용 프로그램에 대한 업데이트 관리
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]응용 프로그램 업데이트를 자동으로 또는 프로그래밍 방식으로 확인할 수 있습니다. 개발자는 다양 한 업데이트 검사를 수행 하는 방법과 시기, 필수, 업데이트 인지 및 업데이트를 확인 하는 위치를 지정 하는 유연성 해야 합니다.  
   
- 응용 프로그램이 시작되기 전이나 응용 프로그램이 시작된 후 설정한 간격에 따라 업데이트를 자동으로 확인하도록 응용 프로그램을 구성할 수 있습니다.  필요한 최소 버전을 지정할 수도 있습니다. 이 경우 사용자의 버전이 필요한 버전보다 낮은 경우에 업데이트가 설치됩니다.  
+ 응용 프로그램이 시작 된 후 설정 된 간격 또는 응용 프로그램이 시작 하기 전에 자동으로 업데이트를 확인 하려면 응용 프로그램을 구성할 수 있습니다. 또한; 필요한 최소 버전을 지정할 수 있습니다. 즉, 사용자의 버전이 필요한 버전 보다 낮은 경우 업데이트가 설치 됩니다.  
   
- 사용자 요청과 같은 이벤트에 따라 업데이트를 프로그래밍 방식으로 확인하도록 응용 프로그램을 구성할 수 있습니다.  이 항목의 "프로그래밍 방식으로 업데이트를 확인하려면" 절차에서는 <xref:System.Deployment.Application.ApplicationDeployment> 클래스를 사용하여 이벤트에 따라 업데이트를 확인하는 코드를 작성하는 방법을 보여 줍니다.  
+ 프로그래밍 방식으로 사용자 요청과 같은 이벤트에 따라 업데이트를 확인 하려면 응용 프로그램을 구성할 수 있습니다. 프로그래밍 방식으로 업데이트 확인"하려면" 절차가이 항목에서 사용 하는 코드를 작성 하는 방법을 보여 줍니다는 <xref:System.Deployment.Application.ApplicationDeployment> 이벤트에 따라 업데이트를 확인 하려면 클래스입니다.  
   
- 응용 프로그램을 배포한 위치와는 다른 위치에서 응용 프로그램을 업데이트할 수도 있습니다.  자세한 내용은 "다른 업데이트 위치를 지정하려면" 절차를 참조하십시오.  
+ 또한 한 위치에서 응용 프로그램을 배포 하 고 다른 업데이트할 수 있습니다. 다른 업데이트 위치를 지정 합니다."하려면" 절차를 참조 하십시오.  
   
- 자세한 내용은 [ClickOnce 업데이트 전략 선택](../deployment/choosing-a-clickonce-update-strategy.md)을 참조하십시오.  
+ 자세한 내용은 [ClickOnce 업데이트 전략 선택](../deployment/choosing-a-clickonce-update-strategy.md).  
   
- 업데이트 동작은 **프로젝트 디자이너**의 **게시** 페이지에서 사용할 수 있는 **응용 프로그램 업데이트** 대화 상자에서 관리합니다.  
+ 업데이트 동작에서 관리 되는 **응용 프로그램 업데이트** 에서 사용할 수 있는 대화 상자는 **게시** 의 페이지는 **프로젝트 디자이너입니다.**  
   
-### 응용 프로그램이 시작되기 전에 업데이트를 확인하려면  
+### <a name="to-check-for-updates-before-the-application-starts"></a>응용 프로그램을 시작 하기 전에 업데이트를 확인 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **게시** 탭을 클릭합니다.  
+2.  클릭는 **게시** 탭 합니다.  
   
-3.  **업데이트** 단추를 클릭하여 **응용 프로그램 업데이트** 대화 상자를 엽니다.  
+3.  클릭는 **업데이트** 버튼을 클릭은 **응용 프로그램 업데이트** 대화 상자.  
   
-4.  **응용 프로그램 업데이트** 대화 상자에서 **응용 프로그램이 업데이트를 확인해야 함** 확인란이 선택되어 있는지 확인합니다.  
+4.  에 **응용 프로그램 업데이트** 대화 상자에서 다음 사항을 확인는 **업데이트를 확인 하는** 확인란을 선택 합니다.  
   
-5.  **응용 프로그램이 언제 업데이트를 확인하는지 선택하십시오.** 섹션에서 **응용 프로그램 시작 전**을 선택합니다.  이렇게 하면 네트워크에 연결되어 있는 경우 항상 최신 업데이트로 응용 프로그램을 실행할 수 있습니다.  
+5.  에 **언제 응용 프로그램 업데이트를 확인 하는지 선택** 섹션에서 **응용 프로그램이 시작 되기 전에**합니다. 이렇게 하면 항상 네트워크에 연결 하는 사용자가 최신 업데이트가 적용 된 응용 프로그램을 실행 합니다.  
   
-### 응용 프로그램이 시작된 후에 백그라운드에서 업데이트를 확인하려면  
+### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>응용 프로그램이 시작 된 후 백그라운드에서 업데이트를 확인 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **게시** 탭을 클릭합니다.  
+2.  클릭는 **게시** 탭 합니다.  
   
-3.  **업데이트** 단추를 클릭하여 **응용 프로그램 업데이트** 대화 상자를 엽니다.  
+3.  클릭는 **업데이트** 버튼을 클릭은 **응용 프로그램 업데이트** 대화 상자.  
   
-4.  **응용 프로그램 업데이트** 대화 상자에서 **응용 프로그램이 업데이트를 확인해야 함** 확인란이 선택되어 있는지 확인합니다.  
+4.  에 **응용 프로그램 업데이트** 대화 상자에서 다음 사항을 확인 확인란 **업데이트를 확인 하는** 을 선택 합니다.  
   
-5.  **응용 프로그램이 언제 업데이트를 확인하는지 선택하십시오.** 섹션에서 **응용 프로그램 시작 후**를 선택합니다.  이 방법을 사용하면 응용 프로그램이 좀 더 빨리 시작되고 백그라운드에서 업데이트가 확인되며 사용할 수 있는 업데이트가 있을 때만 사용자에게 알립니다.  업데이트를 설치해도 응용 프로그램을 다시 시작할 때까지는 적용되지 않습니다.  
+5.  에 **언제 응용 프로그램 업데이트 확인 하는지 선택**선택, **응용 프로그램이 시작 된 후**합니다. 이러한 방식으로 보다 신속 하 게 시작 하 고 백그라운드에서 업데이트를 확인 하 고만 업데이트를 사용할 수 있는 경우 사용자에 게 알립니다. 설치 되 면 응용 프로그램을 다시 시작할 때까지 업데이트가 적용을 내용이 되지 않습니다.  
   
-6.  **응용 프로그램이 업데이트를 확인하는 빈도를 지정하십시오.** 구역에서 **응용 프로그램이 실행될 때마다 확인**\(기본값\) 또는 **확인 간격**을 선택하고 숫자 및 시간 간격을 입력합니다.  
+6.  에 **응용 프로그램 업데이트를 확인 하는 빈도 지정** 섹션에서 선택 **응용 프로그램이 실행 될 때마다 확인** (기본값) 또는 **확인 모든** 선택한 시간 및 숫자 간격을 입력 합니다.  
   
-### 응용 프로그램에 필요한 최소 버전을 지정하려면  
+### <a name="to-specify-a-minimum-required-version-for-the-application"></a>응용 프로그램에 필요한 최소 버전을 지정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **게시** 탭을 클릭합니다.  
+2.  클릭는 **게시** 탭 합니다.  
   
-3.  **업데이트** 단추를 클릭하여 **응용 프로그램 업데이트** 대화 상자를 엽니다.  
+3.  클릭는 **업데이트** 버튼을 클릭은 **응용 프로그램 업데이트** 대화 상자.  
   
-4.  **응용 프로그램 업데이트** 대화 상자에서 **응용 프로그램이 업데이트를 확인해야 함** 확인란이 선택되어 있는지 확인합니다.  
+4.  에 **응용 프로그램 업데이트** 대화 상자에서 다음 사항을 확인는 **업데이트를 확인 하는** 확인란을 선택 합니다.  
   
-5.  **이 응용 프로그램에 필요한 최소 버전 지정** 확인란을 선택하고 응용 프로그램의 **주 버전**, **부 버전**, **빌드 버전** 및 **수정 버전**을 입력합니다.  
+5.  선택은 **이 응용 프로그램에 필요한 최소 버전 지정** 확인란을 선택한 다음 입력 **주요**, **부**, **빌드**, 및  **수정 버전** 응용 프로그램에 대 한 번호입니다.  
   
-### 다른 업데이트 위치를 지정하려면  
+### <a name="to-specify-a-different-update-location"></a>다양 한 업데이트 위치를 지정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **게시** 탭을 클릭합니다.  
+2.  클릭는 **게시** 탭 합니다.  
   
-3.  **업데이트** 단추를 클릭하여 **응용 프로그램 업데이트** 대화 상자를 엽니다.  
+3.  클릭는 **업데이트** 버튼을 클릭은 **응용 프로그램 업데이트** 대화 상자.  
   
-4.  **응용 프로그램 업데이트** 대화 상자에서 **응용 프로그램이 업데이트를 확인해야 함** 확인란이 선택되어 있는지 확인합니다.  
+4.  에 **응용 프로그램 업데이트** 대화 상자에서 다음 사항을 확인는 **업데이트를 확인 하는** 확인란을 선택 합니다.  
   
-5.  **업데이트 위치** 필드에서 http:\/\/Hostname\/ApplicationName 형식의 정규화된 URL을 사용하거나 \\\\Server\\ApplicationName 형식의 UNC 경로를 사용하여 업데이트 위치를 입력하거나 **찾아보기** 단추를 클릭하여 업데이트 위치를 찾습니다.  
+5.  에 **위치를 업데이트** 필드에, 정규화 된 URL 형식 http://Hostname/ApplicationName 또는 형식을 사용 하 여 UNC 경로 사용 하 여 함께 업데이트 위치를 입력 \\\Server\ApplicationName, 하거나 클릭 하 고 **찾아보기** 단추를 업데이트 위치를 검색 합니다.  
   
-### 프로그래밍 방식으로 업데이트를 확인하려면  
+### <a name="to-check-for-updates-programmatically"></a>프로그래밍 방식으로 업데이트를 확인 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **게시** 탭을 클릭합니다.  
+2.  클릭는 **게시** 탭 합니다.  
   
-3.  **업데이트** 단추를 클릭하여 **응용 프로그램 업데이트** 대화 상자를 엽니다.  
+3.  클릭는 **업데이트** 버튼을 클릭은 **응용 프로그램 업데이트** 대화 상자.  
   
-4.  **응용 프로그램 업데이트** 대화 상자에서 **응용 프로그램이 업데이트를 확인해야 함** 확인란의 선택이 취소되어 있는지 확인합니다.  필요한 경우 이 확인란을 선택하여 업데이트를 프로그래밍 방식으로 확인할 수 있으며 ClickOnce 런타임에서 업데이트를 자동으로 확인하도록 할 수도 있습니다.  
+4.  에 **응용 프로그램 업데이트** 대화 상자에서 다음 사항을 확인는 **업데이트를 확인 하는** 확인란의 선택을 취소 합니다. (필요에 따라 선택할 수 있습니다 업데이트 그리고 프로그래밍 방식으로 자동으로 업데이트를 확인 하 여 ClickOnce 런타임에서 수 있도록를 확인 하려면이 확인란.)  
   
-5.  **업데이트 위치** 필드에서 http:\/\/Hostname\/ApplicationName 형식의 정규화된 URL을 사용하거나 \\\\Server\\ApplicationName 형식의 UNC 경로를 사용하여 업데이트 위치를 입력하거나 **찾아보기** 단추를 클릭하여 업데이트 위치를 찾습니다.  업데이트 위치는 응용 프로그램에서 업데이트된 버전을 찾는 위치입니다.  
+5.  에 **위치를 업데이트** 필드에, 정규화 된 URL 형식 http://Hostname/ApplicationName 또는 형식을 사용 하 여 UNC 경로 사용 하 여 함께 업데이트 위치를 입력 \\\Server\ApplicationName, 하거나 클릭 하 고 **찾아보기** 단추를 업데이트 위치를 검색 합니다. 업데이트 위치 자체의 업데이트 된 버전에 대 한 응용 프로그램을 찾을 위치입니다.  
   
-6.  Windows Form에서 사용자가 업데이트를 확인하기 위해 선택할 수 있는 단추, 메뉴 항목 또는 기타 사용자 인터페이스 항목을 만듭니다.  해당 항목의 이벤트 처리기에서 메서드를 호출하여 업데이트를 확인하고 설치할 수 있습니다.  이러한 메서드에 대한 Visual Basic 및 Visual C\# 코드 예제는 [방법: ClickOnce 배포 API를 사용하여 프로그래밍 방식으로 응용 프로그램 업데이트 확인](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)을 참조하십시오.  
+6.  사용자가 업데이트를 확인 하려면를 선택 하는 Windows Form에서 단추, 메뉴 항목 또는 기타 사용자 인터페이스 항목을 만듭니다. 해당 항목의 이벤트 처리기에서 확인 하 고 업데이트를 설치 하는 메서드를 호출 합니다. 이러한 메서드에 대 한 Visual Basic 및 Visual C# 코드 예제를 찾을 수 있습니다 [하는 방법: ClickOnce 배포 API 사용 프로그래밍 방식으로 응용 프로그램 업데이트에 대 한 확인](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)합니다.  
   
-7.  응용 프로그램을 빌드합니다.  
+7.  응용 프로그램을 작성 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Deployment.Application.ApplicationDeployment>   
- [Application Updates Dialog Box](http://msdn.microsoft.com/ko-kr/8eca8743-8e68-4d04-bfd5-4dc0a9b2934f)   
+ [응용 프로그램 업데이트 대화 상자](http://msdn.microsoft.com/en-us/8eca8743-8e68-4d04-bfd5-4dc0a9b2934f)   
  [ClickOnce 업데이트 전략 선택](../deployment/choosing-a-clickonce-update-strategy.md)   
  [ClickOnce 응용 프로그램 게시](../deployment/publishing-clickonce-applications.md)   
- [방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
+ [방법: ClickOnce 응용 프로그램 게시 마법사를 사용 하 여 게시](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
  [방법: ClickOnce 배포 API를 사용하여 프로그래밍 방식으로 응용 프로그램 업데이트 확인](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)

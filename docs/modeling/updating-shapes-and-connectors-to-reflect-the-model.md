@@ -7,16 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 51eb2af9-00e7-4725-a87d-62fb4f39f444
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ae3a0d952b8ff88f2df4d297509d01d1a6731d56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>모양 및 연결선을 업데이트하여 모델 반영
 에 도메인 특정 언어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 기본 모델의 상태를 반영 하는 도형의 모양을 만들 수 있습니다.  
@@ -158,4 +157,3 @@ public partial class ArrowConnector // My connector class.
  `AssociateValueWith()`등록 하려는 각 도메인 속성에 대해 한 번씩을 호출 되어야 합니다. 지정된 된 속성을 변경한 호출 호출 된 후 `OnAssociatedPropertyChanged()` 속성의 모델 요소를 제공 하는 모든 셰이프에 있습니다.  
   
  호출할 필요는 없습니다 `AssociateValueWith()` 각 인스턴스에 대 한 합니다. InitializeResources 인스턴스 메서드인 경우에 각 셰이프 클래스에 대해 한 번만 호출 됩니다.
-

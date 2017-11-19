@@ -1,57 +1,56 @@
 ---
-title: "IDiaEnumSymbolsByAddr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumSymbolsbyAddr 인터페이스"
+title: IDiaEnumSymbolsByAddr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumSymbolsbyAddr interface
 ms.assetid: 37d3dcdf-e4fa-4354-b5e1-8843566b52ac
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4efdd5297b1a4b995ba7d3e45edc9b2c982f6ecd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumSymbolsByAddr
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-주소에 의해 데이터 소스에 포함 된 다양 한 기호를 열거 합니다.  
+# <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
+데이터 원본에 포함 된 다양 한 기호 주소로 열거 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-IDiaEnumSymbolsByAddr : IUnknown  
+IDiaEnumSymbolsByAddr : IUnknown  
 ```  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDiaEnumSymbolsByAddr`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDiaEnumSymbolsByAddr`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[IDiaEnumSymbolsByAddr::symbolByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyaddr.md)|열거자 섹션 및 오프셋에서 조회를 수행 하 여 배치 합니다.|  
-|[IDiaEnumSymbolsByAddr::symbolByRVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyrva.md)|열거자가 상대 가상 주소 \(RVA\)에서 조회를 수행 하 여 배치 합니다.|  
-|[IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)|가상 주소 \(VA\)에서 조회를 수행 하 여 해당 열거자를 배치 합니다.|  
-|[IDiaEnumSymbolsByAddr::Next](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-next.md)|순서에서 다음 기호에서 주소를 검색합니다.  반입 된 요소 수 만큼는 열거자의 위치를 업데이트 합니다.|  
-|[IDiaEnumSymbolsByAddr::Prev](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-prev.md)|이전 기호 순서 대로 주소를 검색합니다.  반입 된 요소 수 만큼는 열거자의 위치를 업데이트 합니다.|  
+|------------|-----------------|  
+|[IDiaEnumSymbolsByAddr::symbolByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyaddr.md)|섹션 및 오프셋 조회를 수행 하 여 열거자를 놓습니다.|  
+|[IDiaEnumSymbolsByAddr::symbolByRVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyrva.md)|상대 가상 주소 (RVA) 하 여 조회를 수행 하 여 열거자를 놓습니다.|  
+|[IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)|가상 주소 (VA) 하 여 조회를 수행 하 여 열거자를 놓습니다.|  
+|[IDiaEnumSymbolsByAddr::Next](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-next.md)|주소로 순서 대로 다음 기호를 검색합니다. 인출 된 요소의 수를 열거자 위치를 업데이트 합니다.|  
+|[IDiaEnumSymbolsByAddr::Prev](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-prev.md)|주소로 순서로 이전 기호를 검색합니다. 인출 된 요소의 수를 열거자 위치를 업데이트 합니다.|  
 |[IDiaEnumSymbolsByAddr::Clone](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-clone.md)|개체의 복사본을 만듭니다.|  
   
-## 설명  
- 이 주소에 의해 그룹화 기호는.  기호 형식으로, 예를 들어 그룹화를 사용 하려면 `SymTagUDT` \(사용자 정의 형식\) 또는 `SymTagBaseClass`를 사용 하는 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) 인터페이스.  
+## <a name="remarks"></a>설명  
+ 이 인터페이스는 주소로 그룹화 된 기호를 제공 합니다. 예를 들어을 유형별로 그룹화 하는 기호를 사용 하려면 `SymTagUDT` (사용자 정의 형식) 또는 `SymTagBaseClass`를 사용 하 여는 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) 인터페이스입니다.  
   
-## 호출자에 대 한 참고 사항  
- 이 인터페이스를 호출 하 여 얻을 [IDiaSession::getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) 메서드가 있습니다.  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ 이 인터페이스를 호출 하 여 가져올는 [idiasession:: Getsymbolsbyaddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) 메서드.  
   
-## 예제  
- 이 함수에는 이름 및 주소 상대 가상 주소로 주문한 모든 기호를 표시 합니다.  
+## <a name="example"></a>예제  
+ 이 함수는 이름 및 상대 가상 주소로 정렬 하는 모든 기호는 주소를 표시 합니다.  
   
-```cpp#  
+```C++  
 void ShowSymbolsByAddress(IDiaSession *pSession)  
 {  
     CComPtr<IDiaEnumSymbolsByAddr> pEnumByAddr;  
@@ -95,14 +94,14 @@ void ShowSymbolsByAddress(IDiaSession *pSession)
 }  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: Dia2.h  
   
  라이브러리: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 참고 항목  
- [인터페이스\(디버그 인터페이스 액세스 SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [IDiaSession::getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md)   
+## <a name="see-also"></a>참고 항목  
+ [인터페이스 (디버그 인터페이스 액세스 SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [Idiasession:: Getsymbolsbyaddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md)   
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

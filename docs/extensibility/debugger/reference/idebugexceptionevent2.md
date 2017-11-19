@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugExceptionEvent2
-helpviewer_keywords:
-- IDebugExceptionEvent2 interface
+f1_keywords: IDebugExceptionEvent2
+helpviewer_keywords: IDebugExceptionEvent2 interface
 ms.assetid: 53d32e59-a84b-4710-833e-c5ab08100516
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: c9817ca386846833ab022c5dbca3d3807bd38ef6
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 4aa1c643a07f15f361c77c618d717cc2655277c6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugexceptionevent2"></a>IDebugExceptionEvent2
 디버그 엔진 (DE)는 현재 실행 중인 프로그램에서 예외가 throw 될 때이 인터페이스를 세션 디버그 관리자 (SDM)를 보냅니다.  
@@ -68,7 +52,7 @@ IDebugExceptionEvent2 : IUnknown
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이벤트를 보내기 전에 DE 확인 하는 경우이 예외 이벤트가 지정 된 첫째 또는 둘째 예외에 대 한 이전 호출에서 [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)합니다. 첫째 예외를 지정 된 경우는 `IDebugExceptionEvent2` 이벤트가 SDM로 전송 됩니다. 파일이 없으면는 DE 예외를 처리 하도록 응용 프로그램에 제공 합니다. 없는 예외 처리기가 제공 하 고 예외는 둘째 예외로 지정 된 경우는 `IDebugExceptionEvent2` 이벤트가 SDM로 전송 됩니다. 그렇지 않은 경우는 DE 프로그램의 실행을 다시 시작 하 고 운영 체제 또는 런타임 예외를 처리 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

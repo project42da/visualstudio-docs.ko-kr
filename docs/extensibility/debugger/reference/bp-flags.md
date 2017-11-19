@@ -1,71 +1,71 @@
 ---
-title: "BP_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_FLAGS"
-helpviewer_keywords: 
-  - "BP_FLAGS 열거형"
+title: BP_FLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_FLAGS
+helpviewer_keywords: BP_FLAGS enumeration
 ms.assetid: c45dfc74-5e7f-4f1e-a147-ab2a55dccbd0
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 801ea6fb80c410b43fb8dd9c164e0c83a0f2ea8f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# BP_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-추가 정보를 지정 하 여 중단점을 설정할 때 사용할 수 있는 선택적 플래그를 제공 합니다.  
+# <a name="bpflags"></a>BP_FLAGS
+중단점을 설정할 때 추가 정보를 지정 하는 데 사용할 수 있는 선택적 플래그를 제공 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-enum enum_BP_FLAGS {   
-   BP_FLAG_NONE            = 0x0000,  
-   BP_FLAG_MAP_DOCPOSITION = 0x0001,  
-   BP_FLAG_DONT_STOP       = 0x0002  
+```cpp  
+enum enum_BP_FLAGS {   
+   BP_FLAG_NONE            = 0x0000,  
+   BP_FLAG_MAP_DOCPOSITION = 0x0001,  
+   BP_FLAG_DONT_STOP       = 0x0002  
 };  
 typedef DWORD BP_FLAGS;  
 ```  
   
-```c#  
-public enum enum_BP_FLAGS {   
-   BP_FLAG_NONE            = 0x0000,  
-   BP_FLAG_MAP_DOCPOSITION = 0x0001,  
-   BP_FLAG_DONT_STOP       = 0x0002  
+```csharp  
+public enum enum_BP_FLAGS {   
+   BP_FLAG_NONE            = 0x0000,  
+   BP_FLAG_MAP_DOCPOSITION = 0x0001,  
+   BP_FLAG_DONT_STOP       = 0x0002  
 };  
 ```  
   
-## Members  
- BP\_FLAG\_NONE  
- 플래그 없음 중단점을 지정합니다.  
+## <a name="members"></a>멤버  
+ BP_FLAG_NONE  
+ 중단점 플래그가 지정합니다.  
   
- BP\_FLAG\_MAP\_DOCPOSITION  
- 디버그 엔진 \(DE\) 문서의 위치를 사용 하 여 중단점 매핑되어야 합니다 것을 지정 합니다.  이 설정 스크립트 기반 소스 파일 Active Server Pages \(ASP\)와 같은 중단점에만 적용할 수 있습니다.  
+ BP_FLAG_MAP_DOCPOSITION  
+ 문서 위치를 사용 하 여 중단점을 디버그 엔진 (DE)에 매핑되어야 있는지를 지정 합니다. 스크립트 지향 소스 파일 등 ASP Active Server Pages ()에서 설정 된 중단점에만 적용 됩니다.  
   
- BP\_FLAG\_DONT\_STOP  
- 지정 중단점을 디버그 엔진으로 처리 해야 하지만 디버그 궁극적으로 엔진 있습니다 중지 해서는 안됩니다 \(즉,는 [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) 이벤트 개체를 전송 해야 합니다 없습니다\).  이 플래그는 주로 추적점을 사용 하도록 설계 되었습니다.  
+ BP_FLAG_DONT_STOP  
+ 지정 중단점 디버그 엔진에서 처리 되어야 한다는 하지만 디버그 엔진 궁극적으로 중지 해야 함을 하지 있습니다 (즉, 한 [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) 이벤트 개체를 보내지 않아야). 이 플래그는 추적점에서 주로 사용 되는 설계 되었습니다.  
   
-## 설명  
- 사용 되는 `dwFlags` 의 멤버는 [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 및 [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 구조.  
+## <a name="remarks"></a>설명  
+ 에 사용 되는 `dwFlags` 의 멤버는 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 및 [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 구조입니다.  
   
- 이 값이 비트와 함께 사용할 수 있습니다 `OR`.  
+ 이러한 값에 비트와 함께 사용할 수 있습니다 `OR`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
- [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)   
+ [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
+ [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)   
  [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)

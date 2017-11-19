@@ -1,30 +1,32 @@
 ---
 title: "연습: 사용자 지정 텍스트 템플릿 호스트 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "텍스트 템플릿, 사용자 지정 호스트 연습"
-  - "연습[텍스트 템플릿], 사용자 지정 호스트"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- walkthroughs [text templates], custom host
+- text templates, custom host walkthrough
 ms.assetid: d00bc366-65ed-4229-885a-196ef9625f05
-caps.latest.revision: 51
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 51
+caps.latest.revision: "51"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 40e8529dd439060172ead1ae2f68ac3052345eb4
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 연습: 사용자 지정 텍스트 템플릿 호스트 만들기
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-*텍스트 템플릿* *호스트*는 *텍스트 템플릿 변환 엔진*이 실행될 수 있도록 하는 환경을 제공합니다.  호스트는 파일 시스템과 엔진의 상호 작용을 관리합니다.  파일이나 어셈블리가 필요한 엔진이나 *지시문 프로세서*는 호스트에서 리소스를 요청할 수 있습니다.  그러면 호스트는 디렉터리와 전역 어셈블리 캐시를 검색하여 요청된 리소스를 찾을 수 있습니다.  자세한 내용은 [텍스트 템플릿 변환 프로세스](../modeling/the-text-template-transformation-process.md)를 참조하십시오.  
+# <a name="walkthrough-creating-a-custom-text-template-host"></a>연습: 사용자 지정 텍스트 템플릿 호스트 만들기
+A *텍스트 템플릿**호스트* 수 있도록 하는 환경을 제공는 *텍스트 템플릿 변환 엔진* 실행 되도록 합니다. 호스트는 파일 시스템과 엔진의 상호 작용을 관리합니다. 엔진 또는 *지시문 프로세서* 는 필요한 파일 또는 어셈블리는 호스트에서 리소스를 요청할 수 있습니다. 그러면 호스트는 디렉터리와 전역 어셈블리 캐시를 검색하여 요청된 리소스를 찾을 수 있습니다. 자세한 내용은 참조 [텍스트 템플릿 변환 프로세스](../modeling/the-text-template-transformation-process.md)합니다.  
   
- *텍스트 템플릿 변환* 기능을 외부 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 사용하거나 해당 기능을 사용자 지정 도구에 통합하려는 경우 사용자 지정 호스트를 작성할 수 있습니다.  사용자 지정 호스트를 만들려면 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>에서 상속되는 클래스를 만들어야 합니다.  개별 메서드에 대한 문서를 보려면 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>를 참조하십시오.  
+ 사용 하려는 경우 사용자 지정 호스트를 작성할 수 있습니다는 *텍스트 템플릿 변환* 기능을 외부 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 또는 사용자 지정 도구에 통합 하려는 경우. 사용자 지정 호스트를 만들려면 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>에서 상속되는 클래스를 만들어야 합니다. 개별 메서드에 대한 문서를 보려면 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>를 참조하십시오.  
   
 > [!WARNING]
->  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension 또는 패키지를 작성하는 경우 고유 호스트를 만드는 대신 텍스트 템플릿 서비스를 사용하십시오.  자세한 내용은 [VS 확장에서 텍스트 변환 호출](../modeling/invoking-text-transformation-in-a-vs-extension.md)을 참조하십시오.  
+>  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension 또는 패키지를 작성하는 경우 고유 호스트를 만드는 대신 텍스트 템플릿 서비스를 사용하십시오. 자세한 내용은 참조 [VS 확장에서 텍스트 변환 호출](../modeling/invoking-text-transformation-in-a-vs-extension.md)합니다.  
   
  이 연습에서 수행할 작업은 다음과 같습니다.  
   
@@ -32,29 +34,29 @@ caps.handback.revision: 51
   
 -   사용자 지정 호스트 테스트  
   
-## 사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 완료하려면 다음이 필요합니다.  
   
 -   Visual Studio 2010 이상  
   
 -   Visual Studio SDK  
   
-## 사용자 지정 텍스트 템플릿 호스트 만들기  
- 이 연습에서는 명령줄에서 호출할 수 있는 실행 가능한 응용 프로그램에서 사용자 지정 호스트를 만듭니다.  응용 프로그램은 텍스트 템플릿 파일을 인수로 받아들이고 템플릿을 읽으며, 엔진을 호출하여 템플릿을 변환하고 명령 프롬프트 창에서 발생하는 모든 오류를 표시합니다.  
+## <a name="creating-a-custom-text-template-host"></a>사용자 지정 텍스트 템플릿 호스트 만들기  
+ 이 연습에서는 명령줄에서 호출할 수 있는 실행 가능한 응용 프로그램에서 사용자 지정 호스트를 만듭니다. 응용 프로그램은 텍스트 템플릿 파일을 인수로 받아들이고 템플릿을 읽으며, 엔진을 호출하여 템플릿을 변환하고 명령 프롬프트 창에서 발생하는 모든 오류를 표시합니다.  
   
-#### 사용자 지정 호스트를 만들려면  
+#### <a name="to-create-a-custom-host"></a>사용자 지정 호스트를 만들려면  
   
-1.  Visual Studio에서 CustomHost라는 새 Visual Basic 또는 C\# 콘솔 응용 프로그램을 만듭니다.  
+1.  Visual Studio에서 CustomHost라는 새 Visual Basic 또는 C# 콘솔 응용 프로그램을 만듭니다.  
   
 2.  다음 어셈블리에 대한 참조를 추가합니다.  
   
-    -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating 합니다. \*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 이상 버전**  
+    -   **Microsoft.visualstudio.texttemplating.interfaces.10.0 이상 버전**  
   
 3.  Program.cs 또는 Module1.vb 파일의 코드를 다음 코드로 바꿉니다.  
   
-    ```c#  
+    ```csharp  
     using System;  
     using System.IO;  
     using System.CodeDom.Compiler;  
@@ -404,7 +406,7 @@ caps.handback.revision: 51
     }  
     ```  
   
-    ```vb#  
+    ```vb  
     Imports System  
     Imports System.IO  
     Imports System.CodeDom.Compiler  
@@ -711,18 +713,18 @@ caps.handback.revision: 51
     End Namespace  
     ```  
   
-4.  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 경우에만 **프로젝트** 메뉴를 열고 **CustomHost 속성**을 클릭합니다.  **시작 개체** 목록에서 **CustomHost.Program**을 클릭합니다.  
+4.  에 대 한 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 만 열고는 **프로젝트** 메뉴를 **CustomHost 속성**합니다. 에 **시작 개체** 목록에서 클릭 **CustomHost.Program**합니다.  
   
-5.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
+5.  에 **파일** 메뉴를 클릭 하 여 **모두 저장**합니다.  
   
 6.  **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
   
-## 사용자 지정 호스트 테스트  
+## <a name="testing-the-custom-host"></a>사용자 지정 호스트 테스트  
  사용자 지정 호스트를 테스트하려면 텍스트 템플릿을 작성한 다음 사용자 지정 호스트를 실행하여 이 호스트에 텍스트 템플릿의 이름을 전달하고 템플릿이 변환되었는지 확인합니다.  
   
-#### 텍스트 템플릿을 만들어 사용자 지정 호스트를 테스트하려면  
+#### <a name="to-create-a-text-template-to-test-the-custom-host"></a>텍스트 템플릿을 만들어 사용자 지정 호스트를 테스트하려면  
   
-1.  텍스트 파일을 만들고 `TestTemplate.tt`로 이름을 지정합니다.  
+1.  텍스트 파일을 만들고 이름을 `TestTemplate.tt`합니다.  
   
      메모장 등의 모든 텍스트 편집기를 사용하여 파일을 만들 수 있습니다.  
   
@@ -731,7 +733,7 @@ caps.handback.revision: 51
     > [!NOTE]
     >  텍스트 템플릿의 프로그래밍 언어는 사용자 지정 호스트의 프로그래밍 언어와 일치하지 않아도 됩니다.  
   
-    ```c#  
+    ```csharp  
     Text Template Host Test  
   
     <#@ template debug="true" #>  
@@ -749,7 +751,7 @@ caps.handback.revision: 51
     #>  
     ```  
   
-    ```vb#  
+    ```vb  
     Text Template Host Test  
   
     <#@ template debug="true" language="VB"#>  
@@ -771,7 +773,7 @@ caps.handback.revision: 51
   
 3.  파일을 저장한 후 닫습니다.  
   
-#### 사용자 지정 호스트를 테스트하려면  
+#### <a name="to-test-the-custom-host"></a>사용자 지정 호스트를 테스트하려면  
   
 1.  명령 프롬프트 창을 엽니다.  
   
@@ -782,7 +784,7 @@ caps.handback.revision: 51
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`  
   
     > [!NOTE]
-    >  주소를 입력하는 대신 **Windows 탐색기**에서 CustomHost.exe 파일로 이동한 다음 이 파일을 명령 프롬프트 창으로 끌 수 있습니다.  
+    >  주소를 입력 하는 대신 CustomHost.exe 파일을 찾아볼 수 있습니다에 **Windows 탐색기** 다음 명령 프롬프트 창에 파일을 끕니다.  
   
 3.  공백을 입력합니다.  
   
@@ -793,11 +795,11 @@ caps.handback.revision: 51
      `C:\<YOUR PATH>TestTemplate.tt`  
   
     > [!NOTE]
-    >  주소를 입력하는 대신 **Windows 탐색기**에서 TestTemplate.tt 파일로 이동한 다음 이 파일을 명령 프롬프트 창으로 끌 수 있습니다.  
+    >  주소를 입력 하는 대신 TestTemplate.tt 파일로 찾아볼 수 있습니다에 **Windows 탐색기** 다음 명령 프롬프트 창에 파일을 끕니다.  
   
      사용자 지정 호스트 응용 프로그램이 실행되어 텍스트 템플릿 변환 프로세스를 완료합니다.  
   
-5.  **Windows 탐색기**에서 TestTemplate.tt 파일이 포함된 폴더로 이동합니다.  
+5.  **Windows 탐색기**, TestTemplate.tt 파일이 포함 된 폴더를 찾습니다.  
   
      이 폴더에는 TestTemplate1.txt 파일도 포함되어 있습니다.  
   
@@ -813,8 +815,8 @@ caps.handback.revision: 51
     This is a test  
     ```  
   
-## 다음 단계  
- 이 연습에서는 기본 변환 기능을 지원하는 텍스트 템플릿 변환 호스트를 만들었습니다.  사용자 지정 또는 생성된 지시문 프로세서를 호출하는 텍스트 템플릿을 지원하도록 호스트를 확장할 수 있습니다.  자세한 내용은 [연습: 생성된 지시문 프로세서에 호스트 연결](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)을 참조하십시오.  
+## <a name="next-steps"></a>다음 단계  
+ 이 연습에서는 기본 변환 기능을 지원하는 텍스트 템플릿 변환 호스트를 만들었습니다. 사용자 지정 또는 생성된 지시문 프로세서를 호출하는 텍스트 템플릿을 지원하도록 호스트를 확장할 수 있습니다. 자세한 내용은 참조 [연습: 생성 된 지시문 프로세서에 호스트 연결](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>

@@ -1,33 +1,34 @@
 ---
-title: "디버거 탐색 샘플 코드(Xaml 및 C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "디버거 탐색 샘플 코드 (Xaml 및 C#) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 8f4266bc-4597-43ab-b620-8b08ea988a8e
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: fc03dff54a254c71729d702c887ed81c86b4d48d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 디버거 탐색 샘플 코드(Xaml 및 C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-이 항목의 코드는 [디버그 세션 탐색\(Xaml 및 C\#\)](../debugger/navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md) 항목에 대한 샘플 파일입니다.  
+# <a name="debugger-navigation-sample-code-xaml-and-c"></a>디버거 탐색 샘플 코드(Xaml 및 C#)
+이 항목의 코드에 대 한 샘플 파일입니다.는 [(Xaml 및 C#) 디버그 세션 탐색](../debugger/navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md) 항목입니다.  
   
-## 샘플 코드  
+## <a name="sample-code"></a>샘플 코드  
   
-```c#  
+```CSharp  
 public MainPage()  
 {  
     InitializeComponent();  

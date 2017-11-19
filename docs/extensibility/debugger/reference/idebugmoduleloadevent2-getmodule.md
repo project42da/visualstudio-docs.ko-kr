@@ -1,59 +1,59 @@
 ---
-title: "IDebugModuleLoadEvent2::GetModule | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugModuleLoadEvent2::GetModule"
-helpviewer_keywords: 
-  - "IDebugModuleLoadEvent2::GetModule"
+title: IDebugModuleLoadEvent2::GetModule | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugModuleLoadEvent2::GetModule
+helpviewer_keywords: IDebugModuleLoadEvent2::GetModule
 ms.assetid: c86482bb-9ce5-4e63-bbe0-969b50169424
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e4bd5ebf74bb3818aff06e01b7c6d181760510f9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugModuleLoadEvent2::GetModule
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-되는 모듈을 가져옵니다 로드 또는 언로드.  
+# <a name="idebugmoduleloadevent2getmodule"></a>IDebugModuleLoadEvent2::GetModule
+되는 모듈을 가져옵니다 로드 또는 언로드 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetModule(   
-   IDebugModule2** pModule,  
-   BSTR*           pbstrDebugMessage,  
-   BOOL*           pbLoad  
+```cpp  
+HRESULT GetModule(   
+   IDebugModule2** pModule,  
+   BSTR*           pbstrDebugMessage,  
+   BOOL*           pbLoad  
 );  
 ```  
   
-```c#  
-int GetModule(   
-   out IDebugModule2 pModule,  
-   ref string        pbstrDebugMessage,  
-   ref int           pbLoad  
+```csharp  
+int GetModule(   
+   out IDebugModule2 pModule,  
+   ref string        pbstrDebugMessage,  
+   ref int           pbLoad  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pModule`  
- \[out\] 반환 된 [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) 를 로드 하거나 언로드하는 모듈을 나타내는 개체입니다.  
+ [out] 반환 된 [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) 로드 하거나 언로드하는 모듈을 나타내는 개체입니다.  
   
  `pbstrDebugMessage`  
- \[in, out\] 이 이벤트를 설명 하는 메시지를 반환 합니다.  이 매개 변수는 null 값이 있으면 메시지가 요청 됩니다.  
+ [out에서] 이 이벤트를 설명 하는 선택적 메시지를 반환 합니다. 이 매개 변수는 null 값을 메시지 없이 요청 됩니다.  
   
  `pbLoad`  
- \[in, out\] 0이 아닌 \(`TRUE`\) 모듈 로드 및 0 인 경우 \(`FALSE`\) 모듈을 언로드하는 경우.  이 매개 변수는 null 값이 있으면 없음 상태를 요청 합니다.  
+ [out에서] 0이 아닌 (`TRUE`) 모듈 로드 하 고 0 이면 (`FALSE`) 모듈의 언로드 작업이 수행 하는 경우. 이 매개 변수는 null 값, 상태가 요청 됩니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md)   
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)

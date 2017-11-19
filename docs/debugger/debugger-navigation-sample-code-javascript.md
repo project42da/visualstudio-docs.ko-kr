@@ -1,31 +1,32 @@
 ---
-title: "디버거 탐색 샘플 코드(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "디버거 탐색 샘플 코드 (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 4e2d1346-91d6-4935-9e70-130e369a4cb7
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c6c0642e645fa3eba284fc1e4de888916aeb4a3a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 디버거 탐색 샘플 코드(JavaScript)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-이 항목의 코드는 [디버그 세션에서 실행 제어\(JavaScript\)](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md) 항목에 대한 샘플 파일입니다.  
+# <a name="debugger-navigation-sample-code-javascript"></a>디버거 탐색 샘플 코드(JavaScript)
+이 항목의 코드에 대 한 샘플 파일입니다.는 [(JavaScript) 디버그 세션에서 실행을 제어](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md) 항목입니다.  
   
-## default.js 샘플 코드  
+## <a name="defaultjs-sample-code"></a>default.js 샘플 코드  
   
 ```javascript  
 // For an introduction to the Blank template, see the following documentation:  

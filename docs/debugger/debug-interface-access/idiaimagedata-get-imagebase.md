@@ -1,46 +1,45 @@
 ---
-title: "IDiaImageData::get_imageBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaImageData::get_imageBase 메서드"
+title: 'Idiaimagedata:: Get_imagebase | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaImageData::get_imageBase method
 ms.assetid: 4ba3d9e4-b205-4ee6-a41d-6996972f1f85
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: daaaf26e0a33ce8e90b2b8ac621ed47d299c8276
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaImageData::get_imageBase
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-이미지를 기반으로 해야 합니다 메모리 위치를 검색 합니다.  
+# <a name="idiaimagedatagetimagebase"></a>IDiaImageData::get_imageBase
+여기서는 이미지의 기준이 되는 메모리 위치를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_imageBase (   
-   ULONGLONG* pRetVal  
+```C++  
+HRESULT get_imageBase (   
+   ULONGLONG* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 제안 된 이미지 기본 값을 반환합니다.  
+ [out] 제안 된 이미지 기준 값을 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 기준 주소가 로드 될 때 이미지 기본 충돌 하 여 이미지 자동으로 사용 하지 않는 메모리 위치를 변경 될 수 있습니다.  컴파일 타임에 해당 모듈에 저장 된 기본 힌트 \(권장 되는 메모리 위치\)이 반환 됩니다.  
+## <a name="remarks"></a>설명  
+ 이미지 기본 충돌로 인해 이미지 될 수 있습니다 수 기준 주소를 다시 자동으로 사용 되지 않은 메모리 위치에 로드 될 때 합니다. 이 메서드는 컴파일 타임에 모듈에 저장 된 기본 힌트 (권장된 메모리 위치)를 반환 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

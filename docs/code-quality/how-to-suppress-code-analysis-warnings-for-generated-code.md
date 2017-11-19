@@ -1,36 +1,37 @@
 ---
-title: "방법: 생성된 코드에 대한 코드 분석 경고 표시 안 함 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 생성 된 코드에 대 한 코드 분석 경고 표시 안 함 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a96434e-d419-43a7-81ba-95cccac835b8
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 24b94c0c4ce6031876f5ad26ce01a22299f7056a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 생성된 코드에 대한 코드 분석 경고 표시 안 함
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-관리 코드 컴파일러에서는 코드를 빠르게 개발할 수 있도록 프로젝트에 추가되는 코드를 생성하기도 합니다.  또한 개발자가 응용 프로그램을 빠르게 개발하기 위해 타사 도구를 사용하는 경우도 있습니다.  이러한 도구를 통해서도 프로젝트에 추가되는 코드가 생성됩니다.  
+# <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>방법: 생성된 코드에 대한 코드 분석 경고 표시 안 함
+관리 되는 코드 컴파일러는 종종 신속 하 게 코드 개발을 용이 하 게 하려면 프로젝트에 추가 되는 코드를 생성 합니다. 또한 개발자 자주 사용 하 여 타사 도구 응용 프로그램을 신속 하 게 개발할 수 있도록 지원 합니다. 또한 이러한 도구에는 프로젝트에 추가 된 코드를 생성 합니다.  
   
- 생성된 코드에서 코드 분석을 통해 발견한 규칙 위반 내용을 확인할 수 있지만  규칙 위반 내용이 포함된 코드를 보거나 유지 관리할 수 없는 경우에는 이러한 내용을 확인하지 않을 수도 있습니다.  
+ 코드 분석에서 생성 된 코드에서 검색 하는 규칙 위반 보려는 수 있습니다. 그러나 보고 하 고 위반을 포함 하는 코드를 유지 관리할 수 없는 참조 하지 않을 수 있습니다.  
   
- 프로젝트의 코드 분석 속성 페이지에서 **생성된 코드 결과 표시 안 함** 확인란을 사용하여 타사 도구에서 생성된 코드의 코드 분석 경고를 표시할지 여부를 선택할 수 있습니다.  
+ **생성 된 코드 결과 표시 안 함** 프로젝트의 코드 분석 속성 페이지에서 확인란을 사용 하면 타사 도구에서 생성 된 코드에서 코드 분석 경고를 표시할지 여부를 선택할 수 있습니다.  
   
 > [!NOTE]
->  이 옵션을 사용해도 폼 및 템플릿에 오류와 경고가 나타나면 생성된 코드의 코드 분석 오류와 경고가 계속 표시됩니다.  폼이나 템플릿의 소스 코드를 볼 수도 있고 유지 관리할 수도 있습니다.  
+>  이 옵션 양식 및 서식 파일에 오류 및 경고를 표시 하는 경우 생성 된 코드에서 코드 분석 오류 및 경고를 억제 하지 않습니다. 폼이나 템플릿의 소스 코드를 볼 수도 있고 유지 관리할 수도 있습니다.  
   
-### 프로젝트의 생성된 코드에 대한 경고를 표시하지 않으려면  
+### <a name="to-suppress-warnings-for-generated-code-in-a-project"></a>프로젝트에서 생성 된 코드에 대 한 경고를 표시 하지 않으려면  
   
-1.  솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+1.  솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 누른 **속성**합니다.  
   
-2.  **코드 분석**을 클릭합니다.  
+2.  클릭 **코드 분석**합니다.  
   
-3.  **생성된 코드 결과 표시 안 함** 확인란을 선택합니다.
+3.  선택 된 **생성 된 코드 결과 표시 안 함** 확인란 합니다.

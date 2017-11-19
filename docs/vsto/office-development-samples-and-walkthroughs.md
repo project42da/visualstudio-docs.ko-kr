@@ -1,60 +1,65 @@
 ---
-title: "Office 개발 샘플 및 연습"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "응용 프로그램 개발[Visual Studio에서 Office 개발], 샘플"
-  - "응용 프로그램 개발[Visual Studio에서 Office 개발], 연습"
-  - "예제[Visual Studio에서 Office 개발]"
-  - "Office 응용 프로그램[Visual Studio에서 Office 개발], 샘플"
-  - "Office 응용 프로그램[Visual Studio에서 Office 개발], 연습"
-  - "Visual Studio에서 Office 개발, 샘플"
-  - "Visual Studio에서 Office 개발, 연습"
-  - "샘플 응용 프로그램[Visual Studio에서 Office 개발]"
-  - "연습[Visual Studio에서 Office 개발], Office 개발"
+title: "Office 개발 샘플 및 연습 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office applications [Office development in Visual Studio], walkthroughs
+- application development [Office development in Visual Studio], walkthroughs
+- walkthroughs [Office development in Visual Studio], Office development
+- Office applications [Office development in Visual Studio], samples
+- Office development in Visual Studio, samples
+- Office development in Visual Studio, walkthroughs
+- application development [Office development in Visual Studio], samples
+- sample applications [Office development in Visual Studio]
+- examples [Office development in Visual Studio]
 ms.assetid: 6c59604d-7e14-41c0-bc51-851355100726
-caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "28"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: cd90fbaf4e8f16d1975cbc540bedf2c1e26c018c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Office 개발 샘플 및 연습
-  이 단원에는 Microsoft Office 솔루션 빌드하는 데 사용되는 구문, 구조 및 기술 보여 주는 샘플 응용 프로그램, 예제 코드 및 단계별 연습이 포함되어 있습니다.  
+# <a name="office-development-samples-and-walkthroughs"></a>Office 개발 샘플 및 연습
+  이 섹션에는 샘플 응용 프로그램, 예제 코드 및 구문, 구조 및 Microsoft Office 솔루션을 빌드하는 데 사용 하는 기술을 설명 하는 단계별 연습이 포함 되어 있습니다.  
   
- 샘플 코드는 내용 설명 위한 것이며 실제 배포 솔루션에이 사용하려면 코드 수정해야.  특히 보안 관련 샘플 코드 사용하려는 경우에는 더욱 주의해야.  
+ 예제 코드는 지침을 제공 하기를 위한와 수정 하지 않고 배포 된 솔루션에서 사용할 수 없습니다. 특히 보안 더욱 주의를 기울여야 합니다.  
   
- 응용 프로그램 보안에 대 한 내용은  [Office 솔루션 보안](../vsto/securing-office-solutions.md).  
+ 응용 프로그램 보안에 대 한 정보를 참조 하십시오. [Office 솔루션 보안](../vsto/securing-office-solutions.md)합니다.  
   
-## 단원 내용  
+> [!NOTE]  
+>  Office 환경을 확장 하는 솔루션을 개발에 관심이 [여러 플랫폼](https://dev.office.com/add-in-availability)? 체크 아웃 새 [Office 추가 기능 모델](https://dev.office.com/docs/add-ins/overview/office-add-ins)합니다. Office 추가 기능에서 VSTO 추가 기능 및 솔루션에 비해 적을 있고 거의 모든 웹 프로그래밍 HTML5, JavaScript, CSS3 및 XML 등의 기술을 사용 하 여 빌드할 수 있습니다.  
   
-|항목|설명|  
-|--------|--------|  
-|[Office 개발 샘플](../vsto/office-development-samples.md)|시각적 Studio에서 Office 및 SharePoint 개발 기능 사용하는 방법 보여 주는 샘플 응용 프로그램에 대한 링크 제공.|  
-|[Word를 사용한 연습](../vsto/walkthroughs-using-word.md)|시각적 Studio에 포함된 Office 개발 도구의 기본적인 내용 설명하는 단계별 지침 제공하고 업무용 응용 프로그램에 Word 통합하는 방법에 대해 설명하는 도움말 제공.|  
-|[Excel을 사용한 연습](../vsto/walkthroughs-using-excel.md)|시각적 Studio에 포함된 Office 개발 도구의 기본적인 내용 설명하는 단계별 지침 제공하고 업무용 응용 프로그램에 Excel 통합하는 방법에 대해 설명하는 도움말 제공.|  
-|[Office 솔루션의 데이터 연습](../vsto/data-in-office-solutions-walkthroughs.md)|솔루션에서 데이터 사용하여 작업하는 방법에 대해 설명하는 단계별 지침 제공.|  
-|[Office UI 사용자 지정 연습](../vsto/office-ui-customization-walkthroughs.md)|Microsoft Office 응용 프로그램의 UI \(사용자 인터페이스\)를 사용자 지정하는 방법에 대해 설명하는 단계별 지침 제공.|  
-|[보안 및 배포 연습](../vsto/security-and-deployment-walkthroughs.md)|보안 정책 설정하여 솔루션 실행 허용하는 방법 및 솔루션 배포 방법에 대해 설명하는 단계별 지침 제공.|  
-  
-## 관련 단원  
+## <a name="in-this-section"></a>단원 내용  
   
 |항목|설명|  
-|--------|--------|  
-|[시작&#40;Visual Studio에서의 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)|설치, 프로젝트 템플릿, Office 주 Interop 어셈블리 및 Office 개발의 새로운 기능과 관련된 정보에 대한 링크 제공합니다.|  
-|[Visual Studio의 Office 솔루션 아키텍처](../vsto/architecture-of-office-solutions-in-visual-studio.md)|개발자와 최종 사용자의 관점에서 관리 코드 Office 솔루션이 작동하는 방식 설명하고 Office 문서 및 응용 프로그램에서 관리 코드가 작동하는 방식에 대한 정보 제공.|  
-|[Office 프로그래밍의 일반적인 작업](../vsto/common-tasks-in-office-programming.md)|시각적 Studio의 Office 개발 기능 사용한 프로그래밍에 관련된 질문과 대답 나열하고 일반적인 문제 해결하는 데 도움이 될 수 있는 항목의 링크 제공.|  
-|[Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)|Microsoft Office 솔루션 만드는 방법과 솔루션에서의 어셈블리 역할에 대한 정보 볼 수 있는 링크 제공.|  
-|[작업 창 개요](../vsto/actions-pane-overview.md)|작업 창 \(작업 창\) 이라는 문서 수준 작업 창 \(작업 창\)을 간략하게 설명.|  
+|-----------|-----------------|  
+|[Office 개발 샘플](../vsto/office-development-samples.md)|Visual Studio에서 개발을 Office 및 SharePoint의 사용을 보여 주는 샘플 응용 프로그램에 대 한 링크를 제공 합니다.|  
+|[Word를 사용한 연습](../vsto/walkthroughs-using-word.md)|Visual Studio에서 Office 개발 도구에 대 한 소개를 제공 하 고 Office 비즈니스 응용 프로그램에 Word를 통합 하는 방법도 설명 하기 위해 도움말 단계별 지침을 제공 합니다.|  
+|[Excel을 사용한 연습](../vsto/walkthroughs-using-excel.md)|Visual Studio에서 Office 개발 도구에 대 한 소개를 제공 하 고 Excel Office 비즈니스 응용 프로그램에 통합 하는 방법도 설명 하기 위해 도움말 단계별 지침을 제공 합니다.|  
+|[Office 솔루션의 데이터 연습](../vsto/data-in-office-solutions-walkthroughs.md)|솔루션에서 데이터로 작업 하는 방법을 보여 주는 단계별 지침을 제공 합니다.|  
+|[Office UI 사용자 지정 연습](../vsto/office-ui-customization-walkthroughs.md)|Microsoft Office 응용 프로그램의 사용자 인터페이스 (UI)를 사용자 지정할 수는 방법을 설명 하는 단계별 지침을 제공 합니다.|  
+|[보안 및 배포 연습](../vsto/security-and-deployment-walkthroughs.md)|솔루션을 배포 하는 방법 및를 실행 하려면 솔루션을 허용 하도록 보안 정책을 설정 하는 방법을 보여 주는 단계별 지침을 제공 합니다.|  
+  
+## <a name="related-sections"></a>관련 단원  
+  
+|항목|설명|  
+|-----------|-----------------|  
+|[시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)|설치 프로그램, 프로젝트 템플릿, Office 주 interop 어셈블리 및 Office 개발의 새로운 기능에 대 한 정보 링크를 제공 합니다.|  
+|[Visual Studio의 Office 솔루션 아키텍처](../vsto/architecture-of-office-solutions-in-visual-studio.md)|개발자와 최종 사용자의 관점에서 Office 솔루션 작동 방식 관리 코드를 설명 하 고 Office 문서 및 응용 프로그램 코드가 작동 하는 관리 되는 방법에 대 한 정보가 포함 됩니다.|  
+|[Office 프로그래밍의 일반적인 작업](../vsto/common-tasks-in-office-programming.md)|Visual Studio에서 Office 개발을 사용 하 여 프로그래밍 하는 방법에 대 한 질문과 대답을 나열 하 고 일반적인 문제를 해결 하는 데 도움이 되는 항목 링크를 제공 합니다.|  
+|[Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)|솔루션에서 어셈블리의 역할 및 Microsoft Office 솔루션을 만드는 방법에 대 한 정보 링크를 제공 합니다.|  
+|[작업창 개요](../vsto/actions-pane-overview.md)|작업 창 이라는 문서 수준 작업창의 개요를 제공 합니다.|  
   
   

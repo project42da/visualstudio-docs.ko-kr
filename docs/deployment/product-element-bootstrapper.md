@@ -1,33 +1,33 @@
 ---
-title: "&lt;Product&gt; 요소(부트스트래퍼) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<product> 요소[부트스트래퍼]"
+title: "&lt;제품&gt; 요소 (부트스트래퍼) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <product> element [bootstrapper]
 ms.assetid: 52b414af-ec80-4d2f-ad14-902543cd268e
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: c115fa5cb7191ab1edcff3005620d9ac7835f8a0
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;Product&gt; 요소(부트스트래퍼)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`Product` 요소는 제품 파일 내의 최상위 XML 요소입니다.  
+# <a name="ltproductgt-element-bootstrapper"></a>&lt;제품&gt; 요소 (부트스트래퍼)
+`Product` 요소는 요소는 제품 파일 내의 최상위 XML 요소입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <Product  
@@ -139,15 +139,15 @@ ProductCode
 </Package>  
 ```  
   
-## 요소 및 특성  
- `Product` 요소는 제품 파일의 필수적 요소입니다.  다음과 같은 특성이 있습니다.  
+## <a name="elements-and-attributes"></a>요소 및 특성  
+ `Product` 요소는 제품 파일에 필요 합니다. 다음과 같은 특성이 있습니다.  
   
 |특성|설명|  
-|--------|--------|  
-|`ProductCode`|제품의 고유 ID입니다.|  
+|---------------|-----------------|  
+|`ProductCode`|제품에 대 한 고유 식별자입니다.|  
   
-## 예제  
- 다음 코드 예제에서는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]를 설치하기 위한 전체 제품 파일을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제를 설치 하기 위한 완전 한 제품 파일을 보여 줍니다.는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -251,5 +251,5 @@ ProductCode
 </Product>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [제품 및 패키지 스키마 참조](../deployment/product-and-package-schema-reference.md)

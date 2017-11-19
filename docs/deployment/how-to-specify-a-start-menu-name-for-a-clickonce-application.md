@@ -1,53 +1,54 @@
 ---
-title: "방법: ClickOnce 응용 프로그램의 시작 메뉴 이름 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 배포, 시작 메뉴 이름"
-  - "시작 메뉴 이름"
-  - "시작 메뉴 리소스 이름"
+title: "방법: ClickOnce 응용 프로그램에 대 한 시작 메뉴 이름 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- Start menu resource name
+- Start menu name
+- ClickOnce deployment, Start menu name
 ms.assetid: 4b5183b2-2fd4-4433-9310-4a73bb12c4e3
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: b27cf6d67cef1098a54277d4857b75d3fba0ff65
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: ClickOnce 응용 프로그램의 시작 메뉴 이름 지정
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 온라인과 오프라인으로 모두 사용하도록 설치하면 **시작** 메뉴 및 **프로그램 추가\/제거** 목록에 항목이 추가됩니다.  기본적으로 표시 이름은 응용 프로그램 어셈블리의 이름과 같지만 **게시 옵션** 대화 상자의 **제품 이름**을 설정하여 표시 이름을 바꿀 수 있습니다.  
+# <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>방법: ClickOnce 응용 프로그램의 시작 메뉴 이름 지정
+경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 온라인 및 오프 라인 사용 하 여 응용 프로그램 설치에 항목이 추가 되는 **시작** 메뉴 및 **프로그램 추가 / 제거** 목록입니다. 기본적으로는 표시 이름은 응용 프로그램 어셈블리의 이름과 동일 같지만 표시 이름을 설정 하 여 변경할 수 있습니다 **제품 이름** 에 **게시 옵션** 대화 상자.  
   
- **제품 이름**은 publish.htm 페이지에 표시됩니다. 설치된 오프라인 응용 프로그램의 경우 제품 이름은 **시작** 메뉴의 항목 이름과 **프로그램 추가\/제거**에 표시되는 이름으로 사용됩니다.  
+ **제품 이름** 표시 되는 publish.htm 페이지는;에 설치 된 오프 라인 응용 프로그램에 있는 항목의 이름이 됩니다는 **시작** 메뉴에 표시 되는 이름은 수도 있습니다 **추가 또는 제거 프로그램**합니다.  
   
- **게시자 이름**은 publish.htm 페이지에서 **제품 이름** 위에 표시됩니다. 설치된 오프라인 응용 프로그램의 경우 게시자 이름은 **시작** 메뉴의 응용 프로그램 아이콘이 들어 있는 폴더 이름으로 사용됩니다.  
+ **게시자 이름** 위의 publish.htm 페이지에 표시 될 **제품 이름**, 설치 된 오프 라인 응용 프로그램에 대 한도 것에서 응용 프로그램의 아이콘을 포함 하는 폴더의 이름을 **시작**  메뉴.  
   
- **프로젝트 디자이너**의 **게시** 페이지에 있는 **게시 옵션** 대화 상자에서 **제품 이름** 및 **게시자 이름** 속성을 설정할 수 있습니다.  
+ 설정할 수 있습니다는 **제품 이름** 및 **게시자 이름** 속성에는 **게시 옵션** 에서 사용할 수 있는 대화 상자는 **게시** 페이지 **프로젝트 디자이너**합니다.  
   
-### 시작 메뉴 이름을 지정하려면  
+### <a name="to-specify-a-start-menu-name"></a>시작 메뉴 이름 지정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **게시** 탭을 클릭합니다.  
+2.  클릭는 **게시** 탭 합니다.  
   
-3.  **옵션** 단추를 클릭하여 **게시 옵션** 대화 상자를 엽니다.  
+3.  클릭는 **옵션** 버튼을 클릭은 **게시 옵션** 대화 상자.  
   
-4.  **설명**을 클릭합니다.  
+4.  클릭 **설명**합니다.  
   
-5.  **게시 옵션** 대화 상자에서 **제품 이름**에 표시할 이름을 입력합니다.  
+5.  에 **게시 옵션** 대화 상자에 표시할 이름을 입력 합니다 **제품 이름**합니다.  
   
-6.  선택적으로 **게시자 이름**에 게시자 이름을 입력할 수 있습니다.  
+6.  게시자 이름을 입력할 수는 필요에 따라 **게시자 이름**합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ClickOnce 응용 프로그램 게시](../deployment/publishing-clickonce-applications.md)   
  [방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

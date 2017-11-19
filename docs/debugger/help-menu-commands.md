@@ -1,32 +1,32 @@
 ---
 title: "도움말 메뉴 명령 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "도움말 메뉴 명령"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Help menu commands
 ms.assetid: a842caf3-d635-4620-bc81-1d4a6ea06ed6
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 16cab8d85955c59799f69666c3fb5895c6f3c163
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 도움말 메뉴 명령
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**도움말** 메뉴는 도움말 파일을 열기 위한 명령을 제공합니다.  
+# <a name="help-menu-commands"></a>도움말 메뉴 명령
+**도움말** 메뉴는 도움말 파일을 여는 명령을 제공 합니다.  
   
  **Index**  
- Spy\+\+ 도움말의 목차 화면을 엽니다.  
+ Spy + + 도움말에 대 한 내용을 화면을 엽니다.  
   
  **도움말 사용**  
- 도움말을 사용하는 방법을 설명하는 도움말 파일을 엽니다.  
+ 도움말을 사용 하는 방법을 설명 하는 도움말 파일을 엽니다.  
   
- **Spy\+\+ 정보**  
- Spy\+\+에 대한 소프트웨어 버전 및 저작권 정보를 표시합니다.
+ **Spy + + 정보**  
+ Spy + +에 대 한 소프트웨어 버전 및 저작권 정보를 보여 줍니다.

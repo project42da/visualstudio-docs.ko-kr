@@ -1,72 +1,74 @@
 ---
-title: "비트 배타적 OR 할당 연산자(^=)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "^="
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "^= 연산자"
-  - "^= 연산자, ^= 연산자 정보"
-  - "대입 연산자, 비트[JavaScript]"
-  - "비트 연산자, XOR 연산자"
-  - "XOR 연산자"
+title: "비트 XOR 대입 연산자 (^ =) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: ^=
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- ^= operator, about ^= operator
+- assignment operators, bitwise [JavaScript]
+- bitwise operators, XOR operator
+- XOR operator
+- ^= operator
 ms.assetid: a6ded216-27b6-4fc4-a51b-7d10cc6f820c
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 511ff5b3346bb2b04bf4c24cb3e0b715b2ccf4c5
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 비트 배타적 OR 할당 연산자(^=)(JavaScript)
-변수 값과 식의 값에 대한 비트 배타적 OR을 수행하고 결과를 변수에 할당합니다.  
+# <a name="bitwise-xor-assignment-operator--javascript"></a>비트 배타적 OR 할당 연산자(^=)(JavaScript)
+변수와 식의 비트 배타적 OR 연산을 수행하고 결과를 변수에 할당합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 result ^= expression  
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  *결과*  
- 임의의 변수입니다.  
+ 모든 변수입니다.  
   
- *expression*  
+ *식*  
  임의의 식입니다.  
   
-## 설명  
- **^\=** 연산자를 사용하는 것은 다음을 지정하는 것과 동일합니다.  
+## <a name="remarks"></a>설명  
+ 사용 하는  **^=**  연산자는 정확 하 게 지정과 동일 합니다.  
   
-```javascript  
+```JavaScript  
 result = result ^ expression  
 ```  
   
- **^\=** 연산자는 두 식의 이진 값에 대한 비트 배타적 OR 연산을 수행합니다.  이 연산의 결과는 다음과 같습니다.  
+ **^=**  연산자는 두 식의 값의 이진 표현에는 비트 배타적 OR 연산을 수행 합니다. 이 작업의 결과 다음과 같이 동작합니다.  
   
-```javascript  
+```JavaScript  
 0101    (result)  
 1100    (expression)  
 ----  
 1001    (result)  
 ```  
   
- 두 식의 특정 자릿수 중 하나만 1이면 해당 자릿수의 결과 값은 1이 되고,  그렇지 않으면 해당 자릿수의 결과 값은 0이 됩니다.  
+ 를 한 개만, 식의 값은 1 숫자 때의 결과 값은 1 해당에서 합니다. 그렇지 않은 경우 해당 숫자가 결과 값은 0이 됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 참고 항목  
- [비트 배타적 OR 연산자\(^\)](../../javascript/reference/bitwise-xor-operator-decrement-hat-javascript.md)   
+## <a name="see-also"></a>참고 항목  
+ [비트 배타적 OR 연산자 (^)](../../javascript/reference/bitwise-xor-operator-decrement-hat-javascript.md)   
  [연산자 우선 순위](../../javascript/operator-subtractprecedence-javascript.md)   
- [연산자 개요\(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [연산자 개요(JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)

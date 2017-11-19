@@ -10,30 +10,15 @@ helpviewer_keywords:
 - text templates, custom directive processors
 - walkthroughs [text templates], directive processor
 ms.assetid: b8f35a36-14e1-4467-8f5f-e01402af14d5
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: fd49e497844c85482780c925ef94bc2c422cd80a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 449a8d80eef26935251c265b526d8aacd471d147
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="walkthrough-creating-a-custom-directive-processor"></a>연습: 사용자 지정 지시문 프로세서 만들기
 *지시문 프로세서* 코드를 추가 하 여 작동는 *생성 된 변환 클래스*합니다. 호출 하는 경우는 *지시문* 에서 *텍스트 템플릿*, 텍스트 템플릿을 작성 하는 코드의 나머지 부분에서 지시문이 제공 하는 기능을 사용할 수 있습니다.  
@@ -983,4 +968,3 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 3.  출력을 보려면 브라우저에서에 **솔루션 탐색기**TestDP.htm을 마우스 오른쪽 단추로 클릭 하 고 클릭 **브라우저에서 보기**합니다.  
   
      출력은 HTML 형식이 적용된 것을 제외하고 원래 텍스트와 동일합니다. 각 항목 이름이 굵게 표시됩니다.
-

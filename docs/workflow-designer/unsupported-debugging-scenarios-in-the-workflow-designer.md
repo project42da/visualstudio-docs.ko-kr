@@ -1,25 +1,29 @@
 ---
-title: "Workflow Designer에서 지원되지 않는 디버깅 시나리오 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "지원 되지 않는 디버깅 시나리오는 워크플로 디자이너에서 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 6adbe379-41d0-4681-9cd0-b91f187c3c2c
-caps.latest.revision: 4
-ms.author: "sdanie"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+ms.author: sdanie
+manager: erikre
+ms.openlocfilehash: e442c47611edbc207b3a9ba7c8f10363cd020d10
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# Workflow Designer에서 지원되지 않는 디버깅 시나리오
-[!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)]의 Workflow Designer에는 새로운 여러 기능이 추가되었지만 여전히 지원되지 않는 몇 가지 디버깅 시나리오가 있습니다.이 문서에서는 Workflow Designer에서 지원되지 않는 디버깅 시나리오에 대해 자세히 설명합니다.  
+# <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>워크플로 디자이너에서 지원되지 않는 디버깅 시나리오
+[!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)]의 Workflow Designer에는 새로운 여러 기능이 추가되었지만 여전히 지원되지 않는 몇 가지 디버깅 시나리오가 있습니다. 이 문서에서는 Workflow Designer에서 지원되지 않는 디버깅 시나리오에 대해 자세히 설명합니다.  
   
 -   코드를 편집한 후에는 실행을 계속할 수 없습니다.  
   
--   워크플로의 임의의 지점에서 실행을 계속할 수 없습니다\(다음 설정\).  
+-   워크플로의 임의의 지점에서 실행을 계속할 수 없습니다(다음 설정).  
   
--   커서에 도달할 때까지 실행을 계속할 수 없습니다\(커서까지 실행\).  
+-   커서에 도달할 때까지 실행을 계속할 수 없습니다(커서까지 실행).  
   
 -   Workflow Designer를 사용하지 않고 코드로 만든 워크플로는 Workflow Designer를 사용하여 디버깅할 수 없습니다.  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 4
   
 -   호출 스택 창에서는 워크플로 중단점을 설정할 수 없습니다.  
   
--   디자이너에서 중단점을 만들 때 **새 중단점** 대화 상자의 **줄** 및 **문자** 설정은 사용되지 않습니다.  
+-   디자이너에서 중단점을 만들 때는 **줄** 및 **문자** 설정에는 **새 중단점** 대화 상자는 사용 되지 않습니다.  
   
 -   중단점 창 또는 바로 가기 메뉴에서는 워크플로 디버깅에 다음과 같은 열 또는 옵션을 사용할 수 없습니다.  
   

@@ -7,30 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 64674976-841f-43cb-8e61-0645c8a89eec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dfe21037dcdf85cda2564386343bfd1c74344a7f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f47e551fc1aff5e2e1c65ac80e9a020c28cee8dd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="invoking-text-transformation-in-a-vs-extension"></a>VS 확장에서 텍스트 변환 호출
 메뉴 명령 등 Visual Studio 확장을 작성 하는 경우 또는 [도메인 특정 언어](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md), 텍스트 템플릿 서비스를 사용 하 여 텍스트 템플릿을 변형할 수 있습니다. <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> 서비스를 가져와서 <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating>으로 캐스팅합니다.  
@@ -162,4 +147,3 @@ Sample text.
   
  나중에 컴파일하고 실행할 수 있는 소스 코드를 생성하려면  
  `t4.PreprocessTemplate()`의 <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating> 메서드를 호출합니다.
-

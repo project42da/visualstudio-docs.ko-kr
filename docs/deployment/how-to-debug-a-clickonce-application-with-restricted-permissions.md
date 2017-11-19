@@ -1,38 +1,39 @@
 ---
-title: "방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "디버깅 [Visual Studio], ClickOnce 응용 프로그램"
-  - "ClickOnce 배포, 디버깅"
-  - "ClickOnce 응용 프로그램, 디버깅"
+title: "방법: 제한 된 권한으로 ClickOnce 응용 프로그램 디버그 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- debugging [Visual Studio], ClickOnce applications
+- ClickOnce deployment, debugging
+- ClickOnce applications, debugging
 ms.assetid: 6991ea91-5253-451b-923d-22273a3d38b1
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: aa51d29a1d5703f4fd02ee023eb1180da8031ac4
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버깅
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="how-to-debug-a-clickonce-application-with-restricted-permissions"></a>방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버깅
 개발자는 대부분 완전 신뢰 사용 권한으로 개발 컴퓨터를 실행하므로, ClickOnce 응용 프로그램을 디버그할 때 제한된 권한으로 실행하는 최종 사용자에게 표시될 수 있는 것과 동일한 보안 예외가 표시되지 않습니다.  
   
- 이러한 예외를 catch하려면 최종 사용자와 동일한 사용 권한으로 응용 프로그램을 디버그해야 합니다.**프로젝트 디자이너**의 **보안** 페이지에서 제한된 권한으로 디버그를 사용하도록 설정할 수 있습니다.  
+ 이러한 예외를 catch하려면 최종 사용자와 동일한 사용 권한으로 응용 프로그램을 디버그해야 합니다. **프로젝트 디자이너** 의 **보안**페이지에서 제한된 권한으로 디버그를 사용하도록 설정할 수 있습니다.  
   
  또한 웹 서비스를 호출하는 응용 프로그램을 개발할 때 이러한 웹 서비스는 종종 개발 컴퓨터에 있습니다. 배포된 후 최종 사용자는 다른 URL에서 이러한 웹 서비스에 액세스합니다. 디버그하는 동안 최종 사용자 환경을 에뮬레이트하려면 URL을 지정할 수 있습니다. 그러면 디버거는 마치 해당 URL에서 호출된 것처럼 웹 서비스를 처리합니다.  
   
-### 제한된 권한으로 디버깅을 사용하려면  
+### <a name="to-enable-debugging-with-restricted-permissions"></a>제한된 권한으로 디버깅을 사용하려면  
   
 1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
@@ -46,7 +47,7 @@ caps.handback.revision: 10
   
      응용 프로그램을 디버그할 때는 사용 권한 집합에 속하지 않는 권한에 액세스하려는 모든 시도가 보안 예외를 발생시킵니다.  
   
-### 디버깅에 대한 URL을 지정하려면  
+### <a name="to-specify-a-url-for-debugging"></a>디버깅에 대한 URL을 지정하려면  
   
 1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
@@ -60,8 +61,8 @@ caps.handback.revision: 10
   
 6.  **다음 URL에서 다운로드한 것처럼 이 응용 프로그램을 디버그** 텍스트 상자에 URL 또는 네트워크 경로를 입력합니다.  
   
-## 참고 항목  
- [방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+## <a name="see-also"></a>참고 항목  
+ [How to: Set Custom Permissions for a ClickOnce Application](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
  [ClickOnce 응용 프로그램 보안](../deployment/securing-clickonce-applications.md)   
- [ClickOnce 응용 프로그램의 코드 액세스 보안](../deployment/code-access-security-for-clickonce-applications.md)   
+ [ClickOnce 응용 프로그램에 대 한 코드 액세스 보안](../deployment/code-access-security-for-clickonce-applications.md)   
  [ClickOnce 응용 프로그램 보안](../deployment/securing-clickonce-applications.md)

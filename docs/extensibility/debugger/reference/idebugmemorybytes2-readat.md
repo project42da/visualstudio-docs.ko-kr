@@ -1,79 +1,80 @@
 ---
-title: "IDebugMemoryBytes2::ReadAt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMemoryBytes2::ReadAt"
-helpviewer_keywords: 
-  - "IDebugMemoryBytes2::ReadAt 메서드"
-  - "ReadAt 메서드"
+title: IDebugMemoryBytes2::ReadAt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugMemoryBytes2::ReadAt
+helpviewer_keywords:
+- IDebugMemoryBytes2::ReadAt method
+- ReadAt method
 ms.assetid: b413684d-4155-4bd4-ae30-ffa512243b5f
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4de46d516efca856deef6fa9070e466de73e258f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugMemoryBytes2::ReadAt
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-시퀀스에 지정 된 위치에서 시작 하 여 바이트를 읽습니다.  
+# <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
+지정된 된 위치에서 시작 하는 바이트의 시퀀스를 읽습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT ReadAt(   
-   IDebugMemoryContext2* pStartContext,  
-   DWORD                 dwCount,  
-   BYTE*                 rgbMemory,  
-   DWORD*                pdwRead,  
-   DWORD*                pdwUnreadable  
+```cpp  
+HRESULT ReadAt(   
+   IDebugMemoryContext2* pStartContext,  
+   DWORD                 dwCount,  
+   BYTE*                 rgbMemory,  
+   DWORD*                pdwRead,  
+   DWORD*                pdwUnreadable  
 );  
 ```  
   
-```c#  
+```csharp  
 int ReadAt(  
-   IDebugMemoryContext2 pStartContext,  
-   uint                 dwCount,  
-   byte[]               rgbMemory,  
-   out uint             pdwRead,  
-   ref uint             pdwUnreadable  
+   IDebugMemoryContext2 pStartContext,  
+   uint                 dwCount,  
+   byte[]               rgbMemory,  
+   out uint             pdwRead,  
+   ref uint             pdwUnreadable  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pStartContext`  
- \[in\] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 바이트를 읽기 시작 하는 위치를 지정 하는 개체입니다.  
+ [in] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 바이트 읽기를 시작할 위치를 지정 하는 개체입니다.  
   
  `dwCount`  
- \[in\] 읽을 바이트의 수입니다.  또한 지정은 `rgbMemory` 배열입니다.  
+ [in] 읽을 바이트 수입니다. 또한의 길이 지정 된 `rgbMemory` 배열입니다.  
   
  `rgbMemory`  
- \[in, out\] 배열에 있는 바이트로 채워진 실제로 읽기.  
+ [out에서] 실제로 읽은 바이트를 사용 하 여 입력 하는 배열입니다.  
   
  `pdwRead`  
- \[out\] 실제로 인접 한 바이트 수를 반환 합니다.  
+ [out] 실제로 읽는 연속 된 바이트 수를 반환 합니다.  
   
  `pdwUnreadable`  
- \[in, out\] 읽을 바이트 수를 반환합니다.  클라이언트가 읽을 바이트 수에 관심이 있는 경우 null 값을 수 있습니다.  
+ [out에서] 읽을 수 없는 바이트 수를 반환합니다. 클라이언트가 읽을 수 없는 바이트 수에 관심이 있으면 null 값이 될 수 있습니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  
   
-## 설명  
- 100 바이트 요청 된 및 첫 번째 50 읽을 수 있는, 다음 20을 읽을 수 없는 고 나머지 30 읽을 수 있는 경우이 메서드를 반환 합니다.  
+## <a name="remarks"></a>설명  
+ 100 바이트 요청 및 첫 번째 50을 읽을 수, 다음 20 개 읽을 수는 않으며 나머지 30 대가 읽을 수 있는,이 메서드를 반환 합니다.  
   
- \*`pdwRead` \= 50  
+ *`pdwRead` = 50  
   
- \*`pdwUnreadable` \= 20  
+ *`pdwUnreadable` = 20  
   
- 이 경우에 때문에 `*pdwRead + *pdwUnreadable < dwCount`, 호출자가 요청한 원래 100 중 나머지 30 바이트 읽기에서 추가로 호출 해야 하는 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 에 전달 되는 개체는 `pStartContext` 매개 변수는 70 여 고급 해야 합니다.  
+ 이 경우 때문에 `*pdwRead + *pdwUnreadable < dwCount`, 호출자에 게 요청 된 원래 100의 나머지 30 바이트를 읽으려고 추가 호출 해야 합니다. 및 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 에 전달 된 개체는 `pStartContext` 매개 변수 이동 70입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

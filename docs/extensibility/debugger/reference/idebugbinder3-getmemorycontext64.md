@@ -1,62 +1,64 @@
 ---
-title: "IDebugBinder3::GetMemoryContext64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetMemoryContext64"
-  - "IDebugBinder3::GetMemoryContext64"
+title: IDebugBinder3::GetMemoryContext64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetMemoryContext64
+- IDebugBinder3::GetMemoryContext64
 ms.assetid: f021fd16-9fc7-4c41-86af-e54e6224cfbb
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e482be9105670297e10dd392c4d32e9ee19d7ee9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBinder3::GetMemoryContext64
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-개체 위치 또는 64\-비트 메모리 주소를 메모리 컨텍스트를 변환합니다.  
+# <a name="idebugbinder3getmemorycontext64"></a>IDebugBinder3::GetMemoryContext64
+메모리 내 컨텍스트에 개체 위치 또는 64 비트 메모리 주소를 변환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT GetMemoryContext64 (  
-   IDebugField*           pField,  
-   UINT64                 uConstant,  
-   IDebugMemoryContext2** ppMemCxt  
+   IDebugField*           pField,  
+   UINT64                 uConstant,  
+   IDebugMemoryContext2** ppMemCxt  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMemoryContext64 (  
-   IDebugField              pField,  
-   ulong                    uConstant,  
-   out IDebugMemoryContext2 ppMemCxt  
+   IDebugField              pField,  
+   ulong                    uConstant,  
+   out IDebugMemoryContext2 ppMemCxt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pField`  
- \[in\] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 찾을 개체에 설명 합니다.  경우 `NULL`를 사용 하 고 `dwConstant` 대신 합니다.  
+ [in] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 찾을 개체를 설명 하는 합니다. 경우 `NULL`를 사용 하 여 `dwConstant` 대신 합니다.  
   
  `uConstant`  
- \[in\] 0X50000000와 같은 64 비트 메모리 주소입니다.  
+ [in] 0x50000000 같은 64 비트 메모리 주소입니다.  
   
  `ppMemCxt`  
- \[out\] 반환은 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 인터페이스는 개체의 주소를 메모리 주소를 나타냅니다.  
+ [out] 반환 된 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 개체의 주소 또는 메모리의 주소를 나타내는 인터페이스입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 예제  
- 다음 예제에서는 만들고 구현 하는 개체는 [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) 인터페이스와 메모리 컨텍스트를 검색 하려면이 메서드를 사용 하 여.  
+## <a name="example"></a>예제  
+ 다음 예에서는 구현 하는 개체를 만듭니다는 [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) 인터페이스를이 메서드를 사용 하 여 메모리 컨텍스트를 검색 합니다.  
   
-```cpp#  
+```cpp  
 HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryContext )  
 {  
     // precondition  
@@ -127,5 +129,5 @@ HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryCo
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

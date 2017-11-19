@@ -1,28 +1,29 @@
 ---
 title: "이벤트 원본 (Visual Studio SDK) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "디버깅 [디버깅 SDK], 이벤트 소스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: debugging [Debugging SDK], event sources
 ms.assetid: b9ba0908-ae4c-4a64-aab1-bee453dd7a22
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: dcd2b8457854817f84272420a42872a1b947e6c2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 이벤트 원본 (Visual Studio SDK)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-이벤트의 소스인 두 가지: 디버그 엔진 \(DE\) 및 세션 매니저 \(SDM\)을 디버깅 합니다.  가지 SDM에서 보낸 이벤트를 NULL 엔진 이벤트를 DE에서 보낸 NULL 엔진을 가집니다.  
+# <a name="event-sources-visual-studio-sdk"></a>이벤트 원본 (Visual Studio SDK)
+두 가지 이벤트 소스가: 디버그 엔진 (DE) 및 세션 (SDM) 관리자를 디버그 합니다. DE에서 전송 되는 이벤트는 NULL이 아닌 엔진 있고은 SDM에서 전송 되는 이벤트는 NULL 엔진입니다.  
   
-## 예제  
- 다음은 보내는 방법을 보여 줍니다 있는  **IDebugProgramCreateEvent2** DE은 SDM에서.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 보내는 방법을 보여 줍니다.는 **IDebugProgramCreateEvent2** 은 SDM에 DE에서 합니다.  
   
 ```  
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();  
@@ -73,5 +74,5 @@ HRESULT CEvent::SendAsynchronousEvent(IDebugEventCallback2 *pCallback, IDebugEng
   
 ```  
   
-## 참고 항목  
- [이벤트 전송](../../extensibility/debugger/sending-events.md)
+## <a name="see-also"></a>참고 항목  
+ [이벤트 보내기](../../extensibility/debugger/sending-events.md)

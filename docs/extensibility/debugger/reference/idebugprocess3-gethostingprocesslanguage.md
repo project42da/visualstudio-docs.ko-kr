@@ -1,49 +1,49 @@
 ---
-title: "IDebugProcess3::GetHostingProcessLanguage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess3::GetHostingProcessLanguage"
-helpviewer_keywords: 
-  - "IDebugProcess3::GetHostingProcessLanguage"
+title: IDebugProcess3::GetHostingProcessLanguage | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProcess3::GetHostingProcessLanguage
+helpviewer_keywords: IDebugProcess3::GetHostingProcessLanguage
 ms.assetid: 52fca002-a9ef-43b1-9192-afbe7bb59ad4
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c2dec7a4712ed6f99279f543f8c109ed71bcfe56
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcess3::GetHostingProcessLanguage
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 메서드는 반환 된 `GUID` 를 호출 하 여 집합으로이 프로세스는 언어를 나타내는 [SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md).  
+# <a name="idebugprocess3gethostingprocesslanguage"></a>IDebugProcess3::GetHostingProcessLanguage
+이 메서드는 반환 된 `GUID` 집합으로 호출 하 여이 프로세스의 언어를 나타내는 [SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
-HRESULT GetHostingProcessLanguage(  
-   GUID* pguidLang  
+HRESULT GetHostingProcessLanguage(  
+   GUID* pguidLang  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetHostingProcessLanguage(  
-   out Guid pguidLang  
+   out Guid pguidLang  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pguidLang`  
- \[out\] `GUID` 이 프로세스의 언어입니다.  `GUID_NULL`\(C \+ \+\) 또는 `Guid.Empty` \(C\#\) 즉, 언어 설정 되어 있지.  
+ [out] `GUID` 이 프로세스의 언어입니다. `GUID_NULL`(C + +) 또는 `Guid.Empty` (C#) 언어 설정 되어 있지 않음을 의미 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드를 반환 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)

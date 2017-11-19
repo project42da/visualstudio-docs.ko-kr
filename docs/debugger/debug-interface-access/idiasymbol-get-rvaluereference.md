@@ -1,55 +1,54 @@
 ---
-title: "IDiaSymbol::get_RValueReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_RValueReference 메서드"
+title: 'Idiasymbol:: Get_rvaluereference | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_RValueReference method
 ms.assetid: c6c8c543-253e-4c23-a939-3e66f3db0ee2
-caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8a470972a6e61e7b76edb34710f852d9580175bf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_RValueReference
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-포인터 형식을 rvalue 참조 되는지 여부를 지정 하는 플래그를 검색 합니다.  사용 하는 경우는 [SymTagEnum 열거형](../../debugger/debug-interface-access/symtagenum.md) 포인터 형식으로 설정 됩니다.  
+# <a name="idiasymbolgetrvaluereference"></a>IDiaSymbol::get_RValueReference
+포인터 형식이 rvalue 참조 인지를 지정 하는 플래그를 검색 합니다. 사용 하는 경우는 [SymTagEnum 열거형](../../debugger/debug-interface-access/symtagenum.md) 포인터 형식으로 설정 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```C++  
 HRESULT get_RValueReference (  
-   BOOL* pRetVal  
+   BOOL* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 반환 `TRUE` 경우 포인터는 rvalue 참조. 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` 포인터가 rvalue 참조입니다; 그렇지 않으면 반환 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성의 기호를 사용할 수 없음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 의미는 속성은 해당 기호를 사용할 수 없습니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: Dia2.h  
   
  라이브러리: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

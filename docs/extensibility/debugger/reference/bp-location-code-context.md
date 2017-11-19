@@ -1,51 +1,51 @@
 ---
-title: "BP_LOCATION_CODE_CONTEXT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_LOCATION_CODE_CONTEXT"
-helpviewer_keywords: 
-  - "BP_LOCATION_CODE_CONTEXT 구조"
+title: BP_LOCATION_CODE_CONTEXT | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_LOCATION_CODE_CONTEXT
+helpviewer_keywords: BP_LOCATION_CODE_CONTEXT structure
 ms.assetid: 37412896-021a-4f73-9bb7-4125502c2e18
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 129a96c2c91d56f23ffb1ef61af32f6e85b40b75
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# BP_LOCATION_CODE_CONTEXT
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-디버깅 중인 프로그램에 주소를 직접 바인딩된 중단점의 위치를 설명 합니다.  
+# <a name="bplocationcodecontext"></a>BP_LOCATION_CODE_CONTEXT
+디버깅 중인 프로그램에 있는 주소에 직접 바인딩된 중단점의 위치를 설명 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-typedef struct _BP_LOCATION_CODE_CONTEXT {   
-   IDebugCodeContext2* pCodeContext;  
+```cpp  
+typedef struct _BP_LOCATION_CODE_CONTEXT {   
+   IDebugCodeContext2* pCodeContext;  
 } BP_LOCATION_CODE_CONTEXT;  
 ```  
   
-## Members  
+## <a name="members"></a>멤버  
  pCodeContext  
- [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 코드에서 중단점의 위치를 식별 하는 개체입니다.  
+ [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 코드의 중단점의 위치를 식별 하는 개체입니다.  
   
-## 설명  
- 이 구조체의 멤버인는 [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) 구조체 합집합 일부로.  
+## <a name="remarks"></a>설명  
+ 이 구조는의 구성원은 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) 공용 구조체의 일부로 구조입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

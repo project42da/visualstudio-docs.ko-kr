@@ -1,11 +1,10 @@
 ---
-title: 'CA1415: Declare P-Invokes correctly | Microsoft Docs'
+title: "CA1415: P 호출 올바르게 선언 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,56 +14,40 @@ helpviewer_keywords:
 - CA1415
 - DeclarePInvokesCorrectly
 ms.assetid: 42a90796-0264-4460-bf97-2fb4a093dfdc
-caps.latest.revision: 15
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 2e19d4a786bb58ac6fac55ebcb977be8c330a081
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a9edc52bbc1cd05ed1a3a726dcfb49f26574ccc1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1415-declare-pinvokes-correctly"></a>CA1415: Declare P/Invokes correctly
+# <a name="ca1415-declare-pinvokes-correctly"></a>CA1415: P/Invoke를 올바르게 선언하십시오.
 |||  
 |-|-|  
 |TypeName|DeclarePInvokesCorrectly|  
 |CheckId|CA1415|  
-|Category|Microsoft.Interoperability|  
-|Breaking Change|Non-breaking - If the P/Invoke that declares the parameter cannot be seen outside the assembly. Breaking - If the P/Invoke that declares the parameter can be seen outside the assembly.|  
+|범주|Microsoft.Interoperability|  
+|변경 수준|주요 변경 아님-매개 변수를 선언 하는 P/Invoke 어셈블리 외부에서 볼 수 없는 경우 주요-매개 변수를 선언 하는 P/Invoke 어셈블리 외부에서 볼 수 있는 경우입니다.|  
   
-## <a name="cause"></a>Cause  
- A platform invoke method is incorrectly declared.  
+## <a name="cause"></a>원인  
+ 플랫폼 호출 메서드 잘못 선언 되었습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- A platform invoke method accesses unmanaged code and is defined by using the `Declare` keyword in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] or the <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>. Currently, this rule looks for platform invoke method declarations that target Win32 functions that have a pointer to an OVERLAPPED structure parameter and the corresponding managed parameter is not a pointer to a <xref:System.Threading.NativeOverlapped?displayProperty=fullName> structure.  
+## <a name="rule-description"></a>규칙 설명  
+ 플랫폼 비관리 코드에 액세스 메서드를 호출 하 고 사용 하 여 정의 된 `Declare` 키워드 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 또는 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>합니다. 플랫폼 호출 메서드 선언을 OVERLAPPED 구조체 매개 변수에 대 한 포인터는 Win32 함수를 대상으로 하 고 해당 관리 되는 매개 변수가 없습니다에 대 한 포인터에 대 한이 규칙의에서는 현재는 <xref:System.Threading.NativeOverlapped?displayProperty=fullName> 구조입니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, correctly declare the platform invoke method.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 플랫폼 올바르게 선언 메서드를 호출 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows platform invoke methods that violate the rule and satisfy the rule.  
+## <a name="example"></a>예제  
+ 다음 예제와 플랫폼 규칙을 충족 하는 규칙을 위반 하는 메서드를 호출 합니다.  
   
  [!code-csharp[FxCop.Interoperability.DeclarePInvokes#1](../code-quality/codesnippet/CSharp/ca1415-declare-p-invokes-correctly_1.cs)]  
   
-## <a name="see-also"></a>See Also  
- [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)
+## <a name="see-also"></a>참고 항목  
+ [비관리 코드와의 상호 운용](/dotnet/framework/interop/index)

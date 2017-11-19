@@ -1,36 +1,35 @@
 ---
-title: ".Pdb 파일 쿼리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PDB 파일"
-  - ".pdb 파일, 쿼리"
+title: "쿼리는 합니다. Pdb 파일 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- PDB files
+- .pdb files, querying
 ms.assetid: 8da07d1c-2712-45f9-8fbf-f34040408a8a
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3f329d285ec0f9014335b883e0206a426a9aab8e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# .Pdb 파일 쿼리
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-프로그램 데이터베이스 파일 \(확장명.pdb\) 종류와 수집 과정의 컴파일 및 프로젝트를 연결 하는 기호화 된 디버깅 정보를 포함 하는 이진 파일이입니다.  PDB 파일에는 C\/C\+\+ 프로그램을 컴파일할 때 생성 됩니다 **\/ZI** 또는 **\/Zi** 또는 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], 또는 [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] 와 프로그램의 **\/debug** 옵션.  개체 파일에 디버깅 정보를.pdb 파일에 대 한 참조를 포함 합니다.  Pdb 파일에 대 한 자세한 내용은 [PDB Files](http://msdn.microsoft.com/ko-kr/1761c84e-8c2c-4632-9649-b5f99964ed3f).  DIA 응용 프로그램 다음과 같은 일반적인 단계를 다양 한 기호, 개체 및 실행 파일 이미지 내의 데이터 요소에 대 한 자세한 정보를 얻을 수 있습니다.  
+# <a name="querying-the-pdb-file"></a>.Pdb 파일 쿼리
+프로그램 데이터베이스 파일 (확장명.pdb)은 이진 파일 형식 및 컴파일 및 연결 된 프로젝트의 과정 동안 수집 된 기호 디버깅 정보 포함입니다. PDB 파일을 사용 하 여 C/c + + 프로그램을 컴파일할 때 만들 **/ZI** 또는 **/Zi** 또는 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], 또는 [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] 사용 하 여 프로그래밍의 **/debug** 옵션입니다. 개체 파일 디버깅 정보에 대 한.pdb 파일에 대 한 참조를 포함 합니다. Pdb 파일에 대 한 자세한 내용은 참조 하십시오. [PDB 파일](http://msdn.microsoft.com/en-us/1761c84e-8c2c-4632-9649-b5f99964ed3f)합니다. DIA 응용 프로그램을 다음과 같은 일반적인 단계를 사용 하 여 다양 한 기호, 개체 및 실행 가능 이미지의 데이터 요소에 대 한 자세한 정보를 얻을 수 있습니다.  
   
-### .Pdb 파일을 쿼리.  
+### <a name="to-query-the-pdb-file"></a>.Pdb 파일 쿼리  
   
-1.  작성 하 여 데이터 소스를 얻기를 [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) 인터페이스입니다.  
+1.  데이터 원본을 만들어 가져올는 [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) 인터페이스입니다.  
   
-    ```cpp#  
+    ```C++  
     CComPtr<IDiaDataSource> pSource;  
     hr = CoCreateInstance( CLSID_DiaSource,  
                            NULL,  
@@ -44,9 +43,9 @@ manager: "ghogen"
     }  
     ```  
   
-2.  호출 [IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) 또는 [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) 디버깅 정보를 로드할 수 있습니다.  
+2.  호출 [idiadatasource:: Loaddatafrompdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) 또는 [idiadatasource:: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) 디버깅 정보를 로드 합니다.  
   
-    ```cpp#  
+    ```C++  
     wchar_t wszFilename[ _MAX_PATH ];  
     mbstowcs( wszFilename, szFilename, sizeof( wszFilename )/sizeof( wszFilename[0] ) );  
     if ( FAILED( pSource->loadDataFromPdb( wszFilename ) ) )  
@@ -58,9 +57,9 @@ manager: "ghogen"
     }  
     ```  
   
-3.  호출 [IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) 열 수는 [IDiaSession](../../debugger/debug-interface-access/idiasession.md) 디버깅 정보에 액세스할 수 있습니다.  
+3.  호출 [idiadatasource:: Opensession](../../debugger/debug-interface-access/idiadatasource-opensession.md) 열려는 프로그램 [IDiaSession](../../debugger/debug-interface-access/idiasession.md) 디버깅 정보에 대 한 액세스 권한을 얻으려고 합니다.  
   
-    ```cpp#  
+    ```C++  
     CComPtr<IDiaSession> psession;  
     if ( FAILED( pSource->openSession( &psession ) ) )   
     {  
@@ -68,9 +67,9 @@ manager: "ghogen"
     }  
     ```  
   
-4.  메서드를 사용 하 여 `IDiaSession` 기호를 데이터 원본에 대해 쿼리 합니다.  
+4.  메서드를 사용 하 여 `IDiaSession` 기호 데이터 원본에 대 한 쿼리입니다.  
   
-    ```cpp#  
+    ```C++  
     CComPtr<IDiaSymbol> pglobal;  
     if ( FAILED( psession->get_globalScope( &pglobal) ) )  
     {  
@@ -78,9 +77,9 @@ manager: "ghogen"
     }  
     ```  
   
-5.  사용은 `IDiaEnum*` 열거 하 고 검사할 기호 또는 기타 요소에 인터페이스 정보를 디버그 합니다.  
+5.  사용 하 여는 `IDiaEnum*` 디버그 정보를 열거 하 고 기호 또는 기타 요소를 검색할 인터페이스입니다.  
   
-    ```cpp#  
+    ```C++  
     CComPtr<IDiaEnumTables> pTables;  
     if ( FAILED( psession->getEnumTables( &pTables ) ) )  
     {  
@@ -93,5 +92,5 @@ manager: "ghogen"
     }  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

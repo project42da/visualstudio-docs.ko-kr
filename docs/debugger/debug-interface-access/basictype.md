@@ -1,116 +1,115 @@
 ---
-title: "BasicType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BasicType 열거형"
+title: BasicType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: BasicType enumeration
 ms.assetid: 19ae53ba-cd6e-47b6-9f94-27ae663ce955
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f93fa1380dbb2d7623cddec3780593cd50513f2a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# BasicType
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-심볼의 기본 형식을 지정합니다.  
+# <a name="basictype"></a>BasicType
+심볼의 기본 유형을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-enum BasicType {   
-   btNoType   = 0,  
-   btVoid     = 1,  
-   btChar     = 2,  
-   btWChar    = 3,  
-   btInt      = 6,  
-   btUInt     = 7,  
-   btFloat    = 8,  
-   btBCD      = 9,  
-   btBool     = 10,  
-   btLong     = 13,  
-   btULong    = 14,  
-   btCurrency = 25,  
-   btDate     = 26,  
-   btVariant  = 27,  
-   btComplex  = 28,  
-   btBit      = 29,  
-   btBSTR     = 30,  
-   btHresult  = 31  
+```C++  
+enum BasicType {   
+   btNoType   = 0,  
+   btVoid     = 1,  
+   btChar     = 2,  
+   btWChar    = 3,  
+   btInt      = 6,  
+   btUInt     = 7,  
+   btFloat    = 8,  
+   btBCD      = 9,  
+   btBool     = 10,  
+   btLong     = 13,  
+   btULong    = 14,  
+   btCurrency = 25,  
+   btDate     = 26,  
+   btVariant  = 27,  
+   btComplex  = 28,  
+   btBit      = 29,  
+   btBSTR     = 30,  
+   btHresult  = 31  
 };  
 ```  
   
-## Elements  
+## <a name="elements"></a>요소  
  btNoType  
  기본 형식이 지정 됩니다.  
   
  btVoid  
- 기본 형식에 `void`.  
+ 기본 형식이 `void`합니다.  
   
  btChar  
- 기본 형식에 `char` \(C\/C\+\+ 형식\)입니다.  
+ 기본 형식이 `char` (C/c + + 형식).  
   
  btWChar  
- 와이드 \(유니코드\) 문자 기본 형식인 \(`WCHAR`\).  
+ 기본 형식이 와이드 (유니코드) 문자 (`WCHAR`).  
   
  btInt  
- 기본 형식 `signed int` \(C\/C\+\+ 형식\)입니다.  
+ 기본 형식이 `signed int` (C/c + + 형식).  
   
  btUInt  
- 기본 형식 `unsigned int` \(C\/C\+\+ 형식\)입니다.  
+ 기본 형식이 `unsigned int` (C/c + + 형식).  
   
  btFloat  
- 기본 형식은 부동 소수점 숫자입니다 \(`FLOAT`\).  
+ 기본 형식이 부동 소수점 수 (`FLOAT`).  
   
  btBCD  
- 기본 형식인 이진 코딩 된 소수 \(`BCD`\).  
+ 이진 코딩 decimal 기본 형식입니다 (`BCD`).  
   
  btBool  
- 기본 형식은 부울입니다 \(`BOOL`\).  
+ 기본 형식은 부울 (`BOOL`).  
   
  btLong  
- 기본 형식에 `long int` \(C\/C\+\+ 형식\)입니다.  
+ 기본 형식이 `long int` (C/c + + 형식).  
   
  btULong  
- 기본 형식에 `unsigned long int` \(C\/C\+\+ 형식\)입니다.  
+ 기본 형식이 `unsigned long int` (C/c + + 형식).  
   
  btCurrency  
- 기본 통화입니다.  
+ 기본 유형에 통화입니다.  
   
  btDate  
- 날짜\/시간 기본 형식인 \(`DATE`\).  
+ 기본 형식은 날짜/시간 (`DATE`).  
   
  btVariant  
- 기본 형식인 변수 형식 구조 \(`VARIANT`\).  
+ 기본 형식이 변수 형식이 구조 임 (`VARIANT`).  
   
  btComplex  
- 기본 형식은 복잡 한 숫자입니다.  
+ 기본 유형은 복소수입니다.  
   
  btBit  
- 기본 형식은 약간입니다.  
+ 기본 형식은 비트입니다.  
   
  btBSTR  
- 기본 형식인 기본 또는 이진 문자열 \(`BSTR`\).  
+ 기본 유형은 기본 또는 이진 문자열입니다 (`BSTR`).  
   
  btHresult  
- 기본 형식에 `HRESULT`.  
+ 기본 형식이 `HRESULT`합니다.  
   
-## 설명  
- 이 열거형의 값으로 반환 되는 [IDiaSymbol::get\_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) 방법입니다.  
+## <a name="remarks"></a>설명  
+ 이 열거형의 값을 반환 된 [idiasymbol:: Get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) 메서드.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: cvconst.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형 및 구조체](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [IDiaSymbol::get\_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
- [IDiaSymbol::get\_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)
+ [Idiasymbol:: Get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
+ [IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)

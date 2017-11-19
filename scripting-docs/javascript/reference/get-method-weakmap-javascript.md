@@ -1,54 +1,57 @@
 ---
-title: "get 메서드(WeakMap)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "get 메서드 (WeakMap) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: d922c55d-486d-4feb-aedc-1f4867c417d2
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 29decb7e6a050188b75639eb7cf4f27494b31da2
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# get 메서드(WeakMap)(JavaScript)
-`WeakMap` 개체에서 지정된 요소를 반환합니다.  
+# <a name="get-method-weakmap-javascript"></a>get 메서드(WeakMap)(JavaScript)
+지정 된 요소를 반환 하는 `WeakMap` 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```javascript  
+```JavaScript  
 weakmapObj.get(key)  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `weakmapObj`  
- 필수 요소.  `WeakMap` 개체  
+ 필수 요소. `WeakMap` 개체입니다.  
   
  `key`  
- 필수 요소.  `WeakMap`에 있는 요소의 키입니다.  
+ 필수 요소. 에 있는 요소의 키는 `WeakMap`합니다.  
   
-## 속성 값\/반환 값  
- 키와 연결된 개체를 반환합니다.  `WeakMap`에 키가 포함되어 있지 않으면 이 메서드는 `undefined` 값을 반환합니다.  
+## <a name="property-valuereturn-value"></a>속성 값/반환 값  
+ 키와 연결 된 개체를 반환 합니다. 경우는 `WeakMap` 에 없는 키를이 메서드는 반환 된 `undefined` 값입니다.  
   
-## 예제  
- 다음 예제에서는 `WeakMap` 개체에서 멤버를 검색하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 멤버를 검색 하는 방법을 보여 줍니다는 `WeakMap` 개체입니다.  
   
-```javascript  
+```JavaScript  
 var dog = {  
     breed: "yorkie"  
 }  
   
 var cat = {  
-    breed: "burmese"  
+    breed: "burmese"  
 }  
   
 var wm = new WeakMap();  
@@ -67,5 +70,5 @@ document.write(cat.breed);
   
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv11](../../javascript/reference/includes/jsv11-md.md)]

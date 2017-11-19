@@ -1,53 +1,52 @@
 ---
-title: "IDiaSymbol::get_count | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_count 메서드"
+title: 'Idiasymbol:: Get_count | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_count method
 ms.assetid: f6d6ac2f-6d96-4f88-962b-29c0a66890b0
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 35b61840e5003cc509c906c0b653420d85c4343f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_count
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-배열 또는 목록 항목의 수를 검색합니다.  
+# <a name="idiasymbolgetcount"></a>IDiaSymbol::get_count
+목록 또는 배열에 있는 항목의 수를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_count (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_count (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 목록 또는 배열에서 항목의 수를 반환합니다.  
+ [out] 목록 또는 배열에 있는 항목의 수를 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성에 사용할 수 있음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 속성이 해당 기호를 사용할 수 있음을 의미 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
-|버전:|DIA SDK v 7.0|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
+|버전:|DIA SDK v7.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

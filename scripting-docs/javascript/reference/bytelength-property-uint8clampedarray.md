@@ -1,38 +1,41 @@
 ---
-title: "byteLength 속성(Uint8ClampedArray) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "byteLength 속성 (Uint8ClampedArray) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 37ae1728-8e2c-496c-bb77-f5f85b1ecbba
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a949f245b0710e4c44c7a5944869eca4ea146375
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# byteLength 속성(Uint8ClampedArray)
-읽기 전용입니다.  [ArrayBuffer](../../javascript/reference/arraybuffer-object.md)의 시작 부분부터 생성 시 고정된 이 배열의 길이\(바이트\)입니다.  
+# <a name="bytelength-property-uint8clampedarray"></a>byteLength 속성(Uint8ClampedArray)
+읽기 전용입니다. 시작 부분부터이 배열의 길이 [ArrayBuffer](../../javascript/reference/arraybuffer-object.md), 생성 시 고정 된 바이트에서입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```javascript  
+```JavaScript  
 var arrayByteLength = uint8ClampedArray.byteLength;  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 배열의 길이를 가져오는 방법을 보여줍니다.  
   
-```javascript  
+```JavaScript  
 var req = new XMLHttpRequest();  
     req.open('GET', "http://www.example.com");  
     req.responseType = "arraybuffer";  
@@ -49,9 +52,9 @@ var req = new XMLHttpRequest();
   
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv11_winonly](../../javascript/reference/includes/jsv11-winonly-md.md)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ArrayBuffer 개체](../../javascript/reference/arraybuffer-object.md)   
  [Uint8ClampedArray 개체](../../javascript/reference/uint8clampedarray-object-javascript.md)

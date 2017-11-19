@@ -1,29 +1,30 @@
 ---
-title: "CA2201: 예약된 예외 형식을 발생시키지 마십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DoNotRaiseReservedExceptionTypes"
-  - "CA2201"
-helpviewer_keywords: 
-  - "CA2201"
-  - "DoNotRaiseReservedExceptionTypes"
+title: "CA2201: 예약 된 예외 형식을 발생 시 키 지 않는 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DoNotRaiseReservedExceptionTypes
+- CA2201
+helpviewer_keywords:
+- CA2201
+- DoNotRaiseReservedExceptionTypes
 ms.assetid: dd14ef5c-80e6-41a5-834e-eba8e2eae75e
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 713018b96aed70d52b1b11e75b0c2993312ef474
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA2201: 예약된 예외 형식을 발생시키지 마십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: 예약된 예외 형식을 발생시키지 마십시오.
 |||  
 |-|-|  
 |TypeName|DoNotRaiseReservedExceptionTypes|  
@@ -31,11 +32,11 @@ caps.handback.revision: 16
 |범주|Microsoft.Usage|  
 |변경 수준|주요 변경|  
   
-## 원인  
- 메서드가 너무 일반적이거나 런타임에 예약된 예외 형식을 발생시킵니다.  
+## <a name="cause"></a>원인  
+ 메서드를 너무 일반적 또는 런타임에서 예약 된 예외 형식을 발생 시킵니다.  
   
-## 규칙 설명  
- 다음 예외 형식은 너무 일반적이므로 사용자에게 그다지 충분한 정보를 제공하지 않습니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 사용자에 게 충분 한 정보를 제공 하기는 너무 일반적 다음 예외 유형은 다음과 같습니다.  
   
 -   <xref:System.Exception?displayProperty=fullName>  
   
@@ -43,7 +44,7 @@ caps.handback.revision: 16
   
 -   <xref:System.SystemException?displayProperty=fullName>  
   
- 다음 예외 형식은 예약되어 있으므로 공용 언어 런타임을 통해서만 throw해야 합니다.  
+ 다음 예외 형식 예약 되어 있으므로 공용 언어 런타임에서 throw 됩니다.  
   
 -   <xref:System.ExecutionEngineException?displayProperty=fullName>  
   
@@ -53,39 +54,39 @@ caps.handback.revision: 16
   
 -   <xref:System.OutOfMemoryException?displayProperty=fullName>  
   
- **일반 예외 throw하지 않음**  
+ **일반 예외를 Throw 하지 않습니다**  
   
- 라이브러리나 프레임워크에서 <xref:System.Exception> 또는 <xref:System.SystemException>과 같은 일반 예외 형식을 throw할 경우 소비자는 처리 방법을 모르는 알 수 없는 예외를 포함하여 모든 예외를 catch해야 합니다.  
+ 일반 예외 유형을 같은 throw 하는 경우 <xref:System.Exception> 또는 <xref:System.SystemException> 라이브러리 또는 프레임 워크에서는 사용자가를 모두 catch 강제로 예외를 처리 하는 방법을 알지 못할 알 수 없는 예외를 포함 합니다.  
   
- 대신 프레임워크에 이미 있는 더 많이 파생된 형식을 throw하거나 <xref:System.Exception>에서 파생되는 형식을 직접 만드십시오.  
+ 대신, 프레임 워크에 이미 있는 더 많이 파생 된 형식을 throw 또는에서 파생 된 사용자 정의 형식을 만들 <xref:System.Exception>합니다.  
   
- **특정 예외 throw**  
+ **특정 예외를 throw 합니다.**  
   
- 다음 표에서는 매개 변수와 해당 매개 변수의 유효성을 검사할 때 throw할 예외를 보여 줍니다. 이러한 매개 변수에는 속성의 set 접근자에 있는 값 매개 변수가 포함됩니다.  
+ 다음 표에서 매개 변수를 표시 하 고 예외를 throw 하는 속성의 set 접근자에 값 매개 변수를 포함 하는 매개 변수 유효성을 검사할 때:  
   
 |매개 변수 설명|예외|  
-|--------------|--------|  
-|`null` 참조|<xref:System.ArgumentNullException?displayProperty=fullName>|  
-|허용되는 값\(예: 컬렉션 또는 목록의 인덱스\) 범위를 벗어남|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|  
-|잘못된 `enum` 값|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|  
-|메서드의 매개 변수 사양\(예: `ToString(String)`의 형식 문자열\)에 맞지 않는 형식이 들어 있음|<xref:System.FormatException?displayProperty=fullName>|  
-|그 밖의 잘못된 경우|<xref:System.ArgumentException?displayProperty=fullName>|  
+|---------------------------|---------------|  
+|`null`참조|<xref:System.ArgumentNullException?displayProperty=fullName>|  
+|값 (예: 컬렉션 또는 목록의 대 한 인덱스)의 허용된 범위를 벗어납니다.|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|  
+|잘못 된 `enum` 값|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|  
+|메서드의 매개 변수 사양에 맞지 않는 형식이 포함 되어 있는 (형식 문자열과 같은 `ToString(String)`)|<xref:System.FormatException?displayProperty=fullName>|  
+|유효 하지 않음|<xref:System.ArgumentException?displayProperty=fullName>|  
   
- 연산이 개체의 현재 상태에 대해 올바르지 않을 경우 \- <xref:System.InvalidOperationException?displayProperty=fullName>을 throw합니다.  
+ 작업 개체 throw의 현재 상태에 대해 유효 하지 않은 경우<xref:System.InvalidOperationException?displayProperty=fullName>  
   
- 삭제된 개체에서 연산이 수행될 경우 \- <xref:System.ObjectDisposedException?displayProperty=fullName>을 throw합니다.  
+ 삭제 된 개체에서 연산이 수행 될 때 throw<xref:System.ObjectDisposedException?displayProperty=fullName>  
   
- 연산이 지원되지 않는 경우\(예: 읽기 위해 연 스트림의 **Stream.Write**에서\) \- <xref:System.NotSupportedException?displayProperty=fullName>을 throw합니다.  
+ 작업이 지원 되지 않는 경우 (예: 재정의 된 **Stream.Write** 읽기용으로 열 스트림의) throw<xref:System.NotSupportedException?displayProperty=fullName>  
   
- 변환으로 인해 오버플로가 발생할 경우\(예: 명시적 캐스트 연산자 오버로드에서\) \- <xref:System.OverflowException?displayProperty=fullName>을 throw합니다.  
+ (예: 명시적 캐스트 연산자 오버 로드) 오버플로가 변환으로 인해 throw<xref:System.OverflowException?displayProperty=fullName>  
   
- 그 밖의 모든 경우에는 <xref:System.Exception>에서 파생되는 형식을 직접 만들고 해당 예외를 throw합니다.  
+ 다른 모든 상황에서 파생 되는 형식을 직접 만드는 것이 좋습니다 <xref:System.Exception> 해당 예외를 throw 합니다.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 throw된 예외의 형식을 예약된 형식이 아닌 다른 특정 형식으로 변경합니다.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 예약 된 형식 중 하나가 아닙니다 특정 형식에 throw 된 예외의 종류를 변경 합니다.  
   
-## 경고를 표시하지 않는 경우  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## 관련 규칙  
- [CA1031: 일반적인 예외 형식을 catch하지 마십시오.](../Topic/CA1031:%20Do%20not%20catch%20general%20exception%20types.md)
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1031: 일반적인 예외 형식을 catch하지 마십시오.](../code-quality/ca1031-do-not-catch-general-exception-types.md)

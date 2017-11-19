@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugExpressionEvaluationCompleteEvent2
-helpviewer_keywords:
-- IDebugExpressionEvaluationCompleteEvent2
+f1_keywords: IDebugExpressionEvaluationCompleteEvent2
+helpviewer_keywords: IDebugExpressionEvaluationCompleteEvent2
 ms.assetid: d538fc19-55bf-4231-9595-eb01e84fd1d8
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 67f767a04b91e4d5fc1139c3dc7eb519f440b2c7
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: d161d8adcdc7a089ff8f57f079c31cb024d13ea7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugexpressionevaluationcompleteevent2"></a>IDebugExpressionEvaluationCompleteEvent2
 이 인터페이스는 세션 디버그 관리자 (SDM) 비동기 식 평가 완료 하는 경우 디버그 엔진 (DE)에 의해 보내집니다.  
@@ -62,7 +46,7 @@ IDebugExpressionEvaluationCompleteEvent2 : IUnknown
 ## <a name="remarks"></a>설명  
  DE 평가 성공 여부에 관계 없이이 이벤트를 전송 해야 합니다.  
   
- 평가 하지 못한 경우는 `DEBUG_PROPINFO_VALUE` 및 `DEBUG_PROPINFO_ATTRIB` 플래그를 설정 하지 것입니다는 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 에서 반환 되는 구조 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) (의 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 개체가 DE에서 생성 되 고 반환는 `IDebugExpressionEvaluationCompleteEvent2` 이벤트 평가 실패 한 경우).  
+ 평가 하지 못한 경우는 `DEBUG_PROPINFO_VALUE` 및 `DEBUG_PROPINFO_ATTRIB` 플래그를 설정 하지 것입니다는 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 에서 반환 되는 구조 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) (의 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 개체가 DE에서 생성 되 고 반환 된 `IDebugExpressionEvaluationCompleteEvent2` 이벤트 평가 실패 한 경우).  
   
 ## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  

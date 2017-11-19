@@ -1,33 +1,33 @@
 ---
-title: "&lt;Package&gt; 요소(부트스트래퍼) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<Package> 요소[부트스트래퍼]"
+title: "&lt;패키지&gt; 요소 (부트스트래퍼) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <package> element [bootstrapper]
 ms.assetid: ecd06658-ad02-4440-bccd-88437b7fb816
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 469024d48b1c145210aa518f10647d04315a0471
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;Package&gt; 요소(부트스트래퍼)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`Package` 요소는 패키지 파일 내의 최상위 XML 요소입니다.  
+# <a name="ltpackagegt-element-bootstrapper"></a>&lt;패키지&gt; 요소 (부트스트래퍼)
+`Package` 요소는 요소는 패키지 파일 내의 최상위 XML 요소입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <Package  
@@ -142,17 +142,17 @@ caps.handback.revision: 9
 </Package>  
 ```  
   
-## 요소 및 특성  
- `Package` 요소는 필수 항목입니다.  이 요소에는 다음과 같은 특성이 있습니다.  
+## <a name="elements-and-attributes"></a>요소 및 특성  
+ `Package` 요소는 필수입니다. 다음과 같은 특성이 있습니다.  
   
 |특성|설명|  
-|--------|--------|  
-|`Culture`|필수 요소.  이 패키지에 대해 사용할 언어를 결정하는 문화권을 정의합니다.  이 특성은 설치 과정에서 제품 이름과 오류 메시지에 대한 문화권별 문자열을 나열하는 `Strings` 요소에 대한 키입니다.|  
-|`Name`|필수 요소.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 같은 도구 내에서 개발자에게 표시되는 패키지의 이름입니다.  이 특성은 `Name` 및 `Culture` 속성이 `Package`의 `Name` 및 `Culture` 속성과 일치하도록 설정되어 있는 `String` 요소를 포함하는 `Strings` 요소에 대한 키입니다.|  
-|`LicenseAgreement`|선택적 요소.  EULA\(최종 사용자 사용권 계약\)가 들어 있는 배포 패키지의 파일 이름을 지정합니다.  이 파일은 일반 텍스트\(.txt\) 또는  서식있는 텍스트\(.rtf\)일 수 있습니다.|  
+|---------------|-----------------|  
+|`Culture`|필수 요소. 사용할 언어를 결정 하는이 패키지에 대 한 문화권을 정의 합니다. 이 특성은 한 키의 `Strings` 요소를 설치 하는 동안 제품 이름과 오류 메시지에 대 한 culture 관련 문자열을 나열 합니다.|  
+|`Name`|필수 요소. 와 같은 도구 내에서 개발자에 게 표시 되는 패키지의 이름을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 이 특성은 한 키는 `Strings` 포함 해야 하는 요소는 `String` 인 요소는 `Name` 및 `Culture` 속성과 일치 하도록 설정는 `Name` 및 `Culture` 의 속성 `Package`합니다.|  
+|`LicenseAgreement`|선택 사항입니다. (EULA (최종 사용자 사용권 계약)를 포함 하는 배포 패키지에서 파일의 이름을 지정 합니다.  이 파일에는 일반 텍스트 (.txt) 또는 서식 있는 텍스트 형식 수 있습니다. (.rtf)|  
   
-## 예제  
- 다음 코드 예제에서는 [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]을 재배포하기 위한 전체 패키지 파일을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 재배포 하기 위한 완전 한 패키지 파일을 보여 줍니다.는 [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]합니다.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -189,5 +189,5 @@ caps.handback.revision: 9
 </Package>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [제품 및 패키지 스키마 참조](../deployment/product-and-package-schema-reference.md)

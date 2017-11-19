@@ -1,33 +1,36 @@
 ---
-title: "상관 관계 초기화 대화 상자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "InitializeCorrelation.UI"
+title: "상관 관계 대화 상자를 초기화 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: InitializeCorrelation.UI
 ms.assetid: 2a0a1cd3-7b9e-493e-9264-fcf85289ffcf
-caps.latest.revision: 6
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c14cc612c544fff9a415d68ef173edcc2f9dbd87
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 상관 관계 초기화 대화 상자
-**상관 관계 초기화** 대화 상자는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에서 <xref:System.ServiceModel.Activities.InitializeCorrelation> 활동의 <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> 속성을 편집하는 데 사용됩니다.[!INCLUDE[crdefault](../test/includes/crdefault_md.md)][InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md) 항목을 참조하십시오.  
+# <a name="initialize-correlation-dialog-box"></a>상관 관계 초기화 대화 상자
+**상관 관계 초기화** 에 대화 상자를 사용 하는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] 편집 하는 <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> 속성의는 <xref:System.ServiceModel.Activities.InitializeCorrelation> 활동입니다. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md) 항목입니다.  
   
- 다음 표에서는 **상관 관계 초기화** 대화 상자의 UI\(사용자 인터페이스\) 요소에 대해 설명합니다.  
+ 다음 표에 사용자 인터페이스 (UI) 요소는 **상관 관계 초기화** 대화 상자.  
   
 |UI 요소|설명|  
-|-----------|--------|  
+|----------------|-----------------|  
 |**상관 관계**|초기화할 상관 관계의 <xref:System.ServiceModel.Activities.CorrelationHandle>입니다.|  
-|**초기화 사용**|초기화할 데이터가 포함된 키\/값 쌍입니다.이것은 <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> 속성에 해당합니다.유효한 키\/값 쌍의 예로 "OrderID" 키와 OrderID 변수의 쌍이 있습니다.|  
+|**초기화**|초기화할 데이터가 포함된 키/값 쌍입니다. 이것은 <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> 속성에 해당합니다. 유효한 키/값 쌍의 예로 "OrderID" orderid 변수의 쌍을 이루는 라는 키 것입니다.|  
   
-## 상관 관계 초기화 대화 상자를 시작하려면  
+## <a name="to-launch-the-initialize-correlation-dialog-box"></a>상관 관계 초기화 대화 상자를 시작하려면  
   
--   **InitializeCorrelation** 활동 디자이너에서 **보기**를 클릭하거나 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]에서 <xref:System.ServiceModel.Activities.InitializeCorrelation> 활동을 선택한 다음 속성 표의 <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> 속성 옆에 있는 줄임표 단추를 클릭합니다.  
+-   클릭 **보기** 에 **InitializeCorrelation** 활동 디자이너 select는 <xref:System.ServiceModel.Activities.InitializeCorrelation> 활동에 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 옆 줄임표 단추를 클릭 하 고는 <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> 에서 속성 속성 표입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)

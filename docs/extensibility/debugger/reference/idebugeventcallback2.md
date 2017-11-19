@@ -1,61 +1,61 @@
 ---
-title: "IDebugEventCallback2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEventCallback2"
-helpviewer_keywords: 
-  - "IDebugEventCallback2"
+title: IDebugEventCallback2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEventCallback2
+helpviewer_keywords: IDebugEventCallback2
 ms.assetid: 2c935ee0-2e22-4be0-a852-73736f33c8c9
-caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 1218be6316740b50ebd7446848ee1bd3352b122e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEventCallback2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 인터페이스는 디버그 엔진 \(DE\) 세션 디버그 매니저 \(SDM\) 디버그 이벤트를 보낼 수 있습니다.  
+# <a name="idebugeventcallback2"></a>IDebugEventCallback2
+이 인터페이스는 세션 디버그 관리자 (SDM)로 디버그 이벤트를 보내는 디버그 엔진 (DE)에 의해 사용 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugEventCallback2 : IUnknown  
 ```  
   
-## 구현자 참고 사항  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]디버그 엔진에서 이벤트를 수신 하기 위해이 인터페이스를 구현 합니다.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]디버그 엔진에서 이벤트를 받도록이 인터페이스를 구현 합니다.  
   
-## 호출자에 대 한 참고 사항  
- SDM을 호출 하는 경우이 인터페이스는 디버그 엔진 일반적으로 수신 [연결](../../../extensibility/debugger/reference/idebugprogram2-attach.md), [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md), 또는 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md).  호출 하 여 디버그 엔진 이벤트 SDM을 보냅니다 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md).  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ SDM 호출할 때 일반적으로 디버그 엔진이이 인터페이스는 [연결](../../../extensibility/debugger/reference/idebugprogram2-attach.md), [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md), 또는 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)합니다. 디버그 엔진은 SDM를 호출 하 여 이벤트를 보냅니다 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)합니다.  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDebugEventCallback2`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugEventCallback2`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)|디버깅 이벤트는 SDM에 알림을 보냅니다.|  
+|------------|-----------------|  
+|[Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)|디버깅은 SDM에 이벤트 알림을 보냅니다.|  
   
-## 설명  
- 있지만 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 및 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 취하는 지정 된 `IDebugEventCallback2` 인터페이스는이 경우, 하지 및 인터페이스 포인터가 항상 null 값이 됩니다.  디버그 엔진 대신 사용 해야는 `IDebugEventCallback2` 인터페이스에 대 한 호출을 받은 [연결](../../../extensibility/debugger/reference/idebugprogram2-attach.md), [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md), 또는 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md).  
+## <a name="remarks"></a>설명  
+ 하지만 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 및 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 수행는 지정 된 `IDebugEventCallback2` 인터페이스의 경우 이것이 및 인터페이스 포인터에 null 값은 항상 합니다. 대신, 디버그 엔진을 사용 해야 합니다는 `IDebugEventCallback2` 인터페이스에 대 한 호출에서 받은 [연결](../../../extensibility/debugger/reference/idebugprogram2-attach.md), [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md), 또는 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)합니다.  
   
- 패키지를 구현 하는 경우 [IDebugEventCallback](../../../extensibility/debugger/reference/idebugeventcallback2.md) 관리 되는 코드에 좋습니다는 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 수 호출에 전달 되는 다양 한 인터페이스 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md).  
+ 패키지를 구현 하는 경우 [IDebugEventCallback](../../../extensibility/debugger/reference/idebugeventcallback2.md) 관리 코드에서 좋습니다는 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 에 전달 되는 다양 한 인터페이스에 대해 호출 될 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   
  [연결](../../../extensibility/debugger/reference/idebugprogram2-attach.md)   
- [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)

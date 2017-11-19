@@ -1,36 +1,39 @@
 ---
-title: "방법: 워크플로 프로젝트 속성 구성(레거시) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "workflow"
-helpviewer_keywords: 
-  - "프로젝트, 속성 구성"
-  - "속성, 워크플로 프로젝트 구성"
-  - "워크플로 프로젝트, 속성 구성"
+title: "방법: 워크플로 프로젝트 속성 (레거시) 구성 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: workflow
+helpviewer_keywords:
+- workflow projects, configuring properties
+- properties, configuring workflow project
+- projects, configuring properties
 ms.assetid: 850f5c96-8e5b-4126-bc16-fd2c26e6e656
-caps.latest.revision: 5
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6e0d64c1a0a9f80bf4c3b9ff677c3e3c5e6bc984
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 방법: 워크플로 프로젝트 속성 구성(레거시)
-워크플로 프로젝트와 연결된 속성을 보거나 수정하려면 다음 단계를 따르십시오.  
+# <a name="how-to-configure-workflow-project-properties-legacy"></a>방법: 워크플로 프로젝트 속성 구성(레거시)
+워크플로 프로젝트와 연결된 속성을 보거나 수정하려면 다음 단계를 따르세요.  
   
-### 워크플로 프로젝트 속성을 보거나 수정하려면  
+### <a name="to-view-or-modify-workflow-project-properties"></a>워크플로 프로젝트 속성을 보거나 수정하려면  
   
-1.  **솔루션 탐색기** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **솔루션 탐색기**를 선택합니다.  
+1.  경우 **솔루션 탐색기** 창이 표시, 선택 되지 않으면 **솔루션 탐색기** 에 **보기** 메뉴.  
   
 2.  **솔루션 탐색기**에서 프로젝트를 선택합니다.  
   
-3.  **속성** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **속성 창**을 선택합니다.  
+3.  경우 **속성** 창이 표시, 선택 되지 않으면 **속성 창** 에 **보기** 메뉴.  
   
-4.  프로젝트 **속성** 창에서 변경할 속성을 보고 수정합니다.  
+4.  프로젝트에서 **속성** 창 보기 및 변경 하려면 속성을 수정 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [레거시 워크플로 프로젝트 만들기](../workflow-designer/creating-legacy-workflow-projects.md)

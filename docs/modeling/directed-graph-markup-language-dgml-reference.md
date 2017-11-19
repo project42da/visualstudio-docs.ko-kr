@@ -1,5 +1,5 @@
 ---
-title: "그래프 DGML (Markup Language) 참조를 전달 합니다. | Microsoft 문서"
+title: "DGML Graph Markup Language () 참조를 전달 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -7,29 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc3e4ae7-60fa-4e22-9227-98020b480b73
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c6aadef5b4f8e9ae8682779ccb9cb88d6ca2d3a2
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: e1ea2e37668806849b88d1fb7d6a15142518c076
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>DGML(Directed Graph Markup Language) 참조
 DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분석을 수행하는 데 사용되는 정보를 설명하며, Visual Studio에서 코드 맵을 지속하는 데 사용되는 형식입니다. 단순 XML을 사용하여 순환 및 비순환 방향이 지정된 그래프를 설명합니다. 방향이 지정된 그래프는 링크 또는 가장자리로 연결되는 노드의 집합입니다. 노드 및 링크를 사용하여 소프트웨어 프로젝트의 요소와 같은 네트워크 구조를 나타낼 수 있습니다.  
@@ -37,9 +23,9 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
  일부 버전의 Visual Studio는 DGML 기능의 하위 집합만 지원, 참조 [아키텍처 및 모델링 도구에 대 한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)합니다.  
   
 > [!NOTE]
->  .dgml 파일을 편집하는 경우 IntelliSense를 사용하면 각 요소 및 요소 값에 사용할 수 있는 특성을 식별할 수 있습니다. 특성에 색을 지정하려면 "Blue"와 같은 일반적인 색의 이름 또는 "#ffa0b1c3"과 같은 ARGB&16;진수 값을 사용합니다. DGML은 WPF(Windows Presentation Foundation) 색 정의 형식의 일부를 사용합니다. 자세한 내용은 참조 [Colors 클래스](http://go.microsoft.com/fwlink/?LinkId=182345)합니다.  
+>  .dgml 파일을 편집하는 경우 IntelliSense를 사용하면 각 요소 및 요소 값에 사용할 수 있는 특성을 식별할 수 있습니다. 특성에 색을 지정하려면 "Blue"와 같은 일반적인 색의 이름 또는 "#ffa0b1c3"과 같은 ARGB 16진수 값을 사용합니다. DGML은 WPF(Windows Presentation Foundation) 색 정의 형식의 일부를 사용합니다. 자세한 내용은 참조 [색 클래스](http://go.microsoft.com/fwlink/?LinkId=182345)합니다.  
   
-##  <a name="a-namedgmla-dgml-syntax"></a><a name="DGML"></a>DGML 구문  
+##  <a name="DGML"></a>DGML 구문  
  다음 표에서는 DGML에서 사용되는 요소 종류에 대해 설명합니다.  
   
 -   `<DirectedGraph></DirectedGraph>`  
@@ -52,11 +38,11 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
   
      `BackgroundImage` - 맵 배경으로 사용할 이미지 파일의 위치입니다.  
   
-     `GraphDirection` - 맵이 트리 레이아웃(`Sugiyama`)으로 설정되면 대부분의 링크가 지정된 방향, 즉 `TopToBottom`, `BottomToTop`, `LeftToRight` 또는 `RightToLeft`로 흐르도록 노드를 정렬합니다. 참조 [맵 레이아웃 변경](../modeling/browse-and-rearrange-code-maps.md#Selecting)합니다.  
+     `GraphDirection` - 맵이 트리 레이아웃(`Sugiyama`)으로 설정되면 대부분의 링크가 지정된 방향, 즉 `TopToBottom`, `BottomToTop`, `LeftToRight` 또는 `RightToLeft`로 흐르도록 노드를 정렬합니다. 참조 [지도 레이아웃 변경](../modeling/browse-and-rearrange-code-maps.md#Selecting)합니다.  
   
-     `Layout` - 맵을 `None`, `Sugiyama`(트리 레이아웃), `ForceDirected`(빠른 클러스터) 또는 `DependencyMatrix` 레이아웃으로 설정합니다. 참조 [맵 레이아웃 변경](../modeling/browse-and-rearrange-code-maps.md#Selecting)합니다.  
+     `Layout` - 맵을 `None`, `Sugiyama`(트리 레이아웃), `ForceDirected`(빠른 클러스터) 또는 `DependencyMatrix` 레이아웃으로 설정합니다. 참조 [지도 레이아웃 변경](../modeling/browse-and-rearrange-code-maps.md#Selecting)합니다.  
   
-     `NeighborhoodDistance` - 맵이 트리 레이아웃 또는 빠른 클러스터 레이아웃으로 설정되면 선택한 노드에서 지정된 링크 수(1-7)만큼 떨어진 노드만 표시합니다. 참조 [맵 레이아웃 변경](../modeling/browse-and-rearrange-code-maps.md#Selecting)합니다.  
+     `NeighborhoodDistance` - 맵이 트리 레이아웃 또는 빠른 클러스터 레이아웃으로 설정되면 선택한 노드에서 지정된 링크 수(1-7)만큼 떨어진 노드만 표시합니다. 참조 [지도 레이아웃 변경](../modeling/browse-and-rearrange-code-maps.md#Selecting)합니다.  
   
      예제:  
   
@@ -83,8 +69,7 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
      이 요소는 맵의 노드를 정의하는 `<Node/>` 요소 목록을 포함하는 선택적 요소입니다. 자세한 내용은 `<Node/>` 요소를 참조하세요.  
   
     > [!NOTE]
-    >  
-          `<Link/>` 요소에서 정의되지 않은 노드를 참조하는 경우 맵에서 `<Node/>` 요소를 자동으로 만듭니다.  
+    >  `<Link/>` 요소에서 정의되지 않은 노드를 참조하는 경우 맵에서 `<Node/>` 요소를 자동으로 만듭니다.  
   
      예제:  
   
@@ -112,19 +97,17 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
   
      `Label`-노드의 표시 이름입니다.  
   
-     스타일 특성. 참조 [DGML 파일을 편집 하 여 사용자 지정 코드 맵](../modeling/customize-code-maps-by-editing-the-dgml-files.md)합니다.  
+     스타일 특성. [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)을 참조하세요.  
   
      `Category` - 이 특성을 공유하는 요소를 식별하는 범주의 이름입니다. 자세한 내용은 `<Category/>` 요소를 참조하세요.  
   
      `Property` - 속성 값이 같은 요소를 식별하는 속성의 이름입니다. 자세한 내용은 `<Property/>` 요소를 참조하세요.  
   
-     `Group` - 노드에 다른 노드가 포함된 경우 이 특성을 `Expanded` 또는 `Collapsed`로 설정하여 노드의 내용을 표시하거나 숨길 수 있습니다. 
-          `<Link/>` 특성을 포함하고, 부모 노드와 자식 노드를 각각 소스 노드와 대상 노드로 지정하는 `Category="Contains"` 요소가 있어야 합니다. 참조 [코드 요소를 그룹화](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes)합니다.  
+     `Group` - 노드에 다른 노드가 포함된 경우 이 특성을 `Expanded` 또는 `Collapsed`로 설정하여 노드의 내용을 표시하거나 숨길 수 있습니다. `<Link/>` 특성을 포함하고, 부모 노드와 자식 노드를 각각 소스 노드와 대상 노드로 지정하는 `Category="Contains"` 요소가 있어야 합니다. 참조 [코드 요소를 그룹화](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes)합니다.  
   
-     `Visibility` - 이 특성을 `Visible`, `Hidden` 또는 `Collapsed`로 설정합니다. 
-          `System.Windows.Visibility`를 사용합니다. 참조 [노드 표시 및 링크 숨기기 또는](../modeling/browse-and-rearrange-code-maps.md#HidingShowing)합니다.  
+     `Visibility` - 이 특성을 `Visible`, `Hidden` 또는 `Collapsed`로 설정합니다. `System.Windows.Visibility`를 사용합니다. 참조 [숨기기 또는 표시 노드 및 링크](../modeling/browse-and-rearrange-code-maps.md#HidingShowing)합니다.  
   
-     `Reference` - 이 특성을 문서 또는 URL에 대한 링크로 설정합니다. 참조 [코드 요소 및 링크에 문서 또는 Url 연결](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences)합니다.  
+     `Reference` - 이 특성을 문서 또는 URL에 대한 링크로 설정합니다. 참조 [문서 또는 Url 코드 포인트 및 링크를 연결](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences)합니다.  
   
      예제:  
   
@@ -179,7 +162,7 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
   
      `Label` - 링크의 표시 이름입니다.  
   
-     스타일 특성. 참조 [DGML 파일을 편집 하 여 사용자 지정 코드 맵](../modeling/customize-code-maps-by-editing-the-dgml-files.md)합니다.  
+     스타일 특성. [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)을 참조하세요.  
   
      `Category` - 이 특성을 공유하는 요소를 식별하는 범주의 이름입니다. 자세한 내용은 `<Category/>` 요소를 참조하세요.  
   
@@ -222,8 +205,7 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
   
 -   `<Category/>`  
   
-     이 요소는 이 특성을 공유하는 요소를 식별하는 데 사용되는 `Category` 특성을 정의합니다. 
-          `Category` 특성을 사용하면 맵 요소를 구성하고, 공유된 특성을 상속을 통해 제공하거나 추가 메타데이터를 정의할 수 있습니다.  
+     이 요소는 이 특성을 공유하는 요소를 식별하는 데 사용되는 `Category` 특성을 정의합니다. `Category` 특성을 사용하면 맵 요소를 구성하고, 공유된 특성을 상속을 통해 제공하거나 추가 메타데이터를 정의할 수 있습니다.  
   
      이 요소에는 다음과 같은 특성이 포함되어야 합니다.  
   
@@ -235,9 +217,9 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
   
      `BasedOn` - 현재 요소의 `<Category/>`가 상속되는 부모 범주입니다.  
   
-     이 요소의 예제에서 `FailedTest` 범주는 `Stroke` 범주에서 `PassedTest` 특성을 상속합니다. "계층적 범주를 만들려면"을 참조 [DGML 파일을 편집 하 여 사용자 지정 코드 맵](../modeling/customize-code-maps-by-editing-the-dgml-files.md)합니다.  
+     이 요소의 예제에서 `FailedTest` 범주는 `Stroke` 범주에서 `PassedTest` 특성을 상속합니다. 계층적 범주를 만들려면 "을" 참조 [DGML 파일을 편집 하 여 사용자 지정 코드 맵을](../modeling/customize-code-maps-by-editing-the-dgml-files.md)합니다.  
   
-     또한 범주는 노드 및 링크가 맵에 표시되는 모양을 제어하는 몇 가지 기본적인 템플릿 동작을 제공합니다. 참조 [DGML 파일을 편집 하 여 사용자 지정 코드 맵](../modeling/customize-code-maps-by-editing-the-dgml-files.md)합니다.  
+     또한 범주는 노드 및 링크가 맵에 표시되는 모양을 제어하는 몇 가지 기본적인 템플릿 동작을 제공합니다. [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)을 참조하세요.  
   
      예제:  
   
@@ -290,7 +272,7 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
   
      속성에 표시 되도록 하려는 경우는 **속성** 창에서 사용 하 여는 `Label` 속성을 속성의 표시 이름을 지정 합니다.  
   
-     참조 [코드 요소 및 링크에 범주 할당](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories)합니다.  
+     참조 [범주 코드 포인트 및 링크에 할당](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories)합니다.  
   
      예제:  
   
@@ -319,7 +301,7 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
     </DirectedGraph>  
     ```  
   
-###  <a name="a-nameaddaliasa-aliases-for-commonly-used-paths"></a><a name="AddAlias"></a>일반적으로 사용 되는 경로 대 한 별칭  
+###  <a name="AddAlias"></a>일반적으로 사용 되는 경로 대 한 별칭  
  일반적으로 사용되는 경로를 별칭으로 바꾸면 .dgml 파일의 크기뿐만 아니라 파일을 로드하거나 저장하는 데 필요한 시간을 줄일 수 있습니다. 별칭을 만들려면 .dgml 파일의 끝에 `<Paths></Paths>` 섹션을 추가합니다. 다음과 같이 이 섹션에서 `<Path/>` 요소를 추가하여 경로의 별칭을 정의합니다.  
   
 ```xml  

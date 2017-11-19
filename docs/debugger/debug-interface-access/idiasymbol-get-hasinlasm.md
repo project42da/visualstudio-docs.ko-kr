@@ -1,53 +1,52 @@
 ---
-title: "IDiaSymbol::get_hasInlAsm | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_hasInlAsm 메서드"
+title: 'Idiasymbol:: Get_hasinlasm | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_hasInlAsm method
 ms.assetid: 7001c7cc-1459-4929-851b-a08066a803c6
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b9fb91ec9f626e14f1d084c8e349114c2bf6ac8d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_hasInlAsm
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-함수의 인라인 어셈블리 포함 되어 있는지 여부를 지정 하는 플래그를 검색 합니다.  
+# <a name="idiasymbolgethasinlasm"></a>IDiaSymbol::get_hasInlAsm
+인라인 어셈블리의 함수에 포함 되는지 여부를 지정 하는 플래그를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp  
+```C++  
 HRESULT get_hasInlAsm(  
-   BOOL *pFlag  
+   BOOL *pFlag  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pFlag`  
- \[out\] 반환 `TRUE` 경우 함수의 인라인 어셈블리입니다. 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` 함수에 있는 경우 모든 인라인 어셈블리; 그렇지 않으면 반환 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성에 사용할 수 있음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 속성이 해당 기호를 사용할 수 있음을 의미 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
 |버전:|DIA SDK v 8.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

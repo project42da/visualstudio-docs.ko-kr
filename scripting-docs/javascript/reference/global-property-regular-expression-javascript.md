@@ -1,52 +1,53 @@
 ---
-title: "global 속성(Regular Expression)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Global"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "global 속성"
+title: "global 속성 (Regular Expression) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: Global
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: global property
 ms.assetid: 76a0f115-0d89-4aca-86d5-932895c6d649
-caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 7e2b0256fea60b7ab998c504e79565fc7028cd98
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# global 속성(Regular Expression)(JavaScript)
-정규식에 사용되는 global 플래그\(**g**\)의 상태를 나타내는 부울 값을 반환합니다.  기본값은 **false**입니다.  읽기 전용입니다.  
+# <a name="global-property-regular-expression-javascript"></a>global 속성(Regular Expression)(JavaScript)
+전역 플래그의 상태를 나타내는 부울 값을 반환 (**g**) 정규식 함께 사용 합니다. 기본값은 **false**합니다. 읽기 전용입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 rgExp.global  
 ```  
   
-## 설명  
- 필수 `rgExp` 참조는 **Regular Expression** 개체의 인스턴스입니다.  
+## <a name="remarks"></a>설명  
+ 필요한 `rgExp` 참조의 인스턴스가 **정규식** 개체입니다.  
   
- `global` 속성은 정규식에 전역 플래그가 설정된 경우 **true**를 반환하고 그렇지 않으면 **false**를 반환합니다.  
+ `global` 속성에서 반환 **true** 경우 전역 플래그는 정규식에 대 한 설정 되 고이 반환 하는 **false** 없는 경우.  
   
- global 플래그가 사용되면 첫 문자열뿐만 아니라 검색 문자열 안에서 패턴이 일치하는 모든 경우를 찾습니다.  이를 전역 일치라고도 합니다.  
+ 전역 플래그를 사용 하면 검색 패턴 검색된 된 첫 번째 뿐 아니라 문자열 내에서 모든 항목을 찾을 해야 나타냅니다. 이 일치 하는 전역 라고도 합니다.  
   
-## 예제  
- 다음 예제에서는 `global` 속성의 사용법을 보여 줍니다.  아래 표시된 함수에 **g**을 전달하면 단어 "the"의 모든 인스턴스가 단어 "a"로 바뀝니다.  **i**\(대\/소문자 무시\) 플래그가 함수에 전달되지 않으므로 문자열 시작 부분에 있는 "The"는 바뀌지 않습니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `global` 속성입니다. 전달 하는 경우 **g** 아래 표시 된 함수에는 단어의 모든 인스턴스 "the" 대체 단어 "a"입니다. 확인 하는 "The" 시작 부분에서 문자열의 바뀌지 않습니다는 **i** (대/소문자 무시) 플래그는 함수에 전달 되지 않습니다.  
   
- 이 함수는 허용 가능한 정규식 플래그인 **g**, **i** 및 **m**과 연결된 속성의 조건을 표시합니다.  또한 모든 대체가 수행된 문자열을 표시합니다.  
+ 이 함수는 허용 가능한 정규식 플래그와 연결 된 속성의 조건이 표시 **g**, **i**, 및 **m**합니다. 함수는 또한 모든 대체가 수행 된 문자열을 표시 합니다.  
   
-```javascript  
+```JavaScript  
 function RegExpPropDemo(flag){  
    // The flag parameter is a string that contains  
    // g, i, or m.  The flags can be combined.  
@@ -81,22 +82,22 @@ function RegExpPropDemo(flag){
 document.write(RegExpPropDemo("g"));  
 ```  
   
-## 예제  
- 다음은 결과 출력입니다.  
+## <a name="example"></a>예제  
+ 다음은 결과입니다.  
   
-```javascript  
+```JavaScript  
 global: true  
 ignoreCase: false  
 multiline: false  
 Resulting String: The batter hit a ball with a bat and a fielder caught a ball with a glove.  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
  **적용 대상**: [Regular Expression 개체](../../javascript/reference/regular-expression-object-javascript.md)  
   
-## 참고 항목  
- [ignoreCase 속성\(Regular Expression\)](../../javascript/reference/ignorecase-property-regular-expression-javascript.md)   
- [multiline 속성\(Regular Expression\)](../../javascript/reference/multiline-property-regular-expression-javascript.md)   
- [Regular Expression Syntax \(JavaScript\)](http://msdn.microsoft.com/ko-kr/ab0766e1-7037-45ed-aa23-706f58358c0e)
+## <a name="see-also"></a>참고 항목  
+ [ignoreCase 속성 (Regular Expression)](../../javascript/reference/ignorecase-property-regular-expression-javascript.md)   
+ [multiline 속성 (Regular Expression)](../../javascript/reference/multiline-property-regular-expression-javascript.md)   
+ [정규식 구문 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)

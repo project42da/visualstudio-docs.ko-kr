@@ -1,43 +1,42 @@
 ---
-title: "IDiaSectionContrib::get_code | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSectionContrib::get_code 메서드"
+title: 'Idiasectioncontrib:: Get_code | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSectionContrib::get_code method
 ms.assetid: f9ccf7a6-46e7-4a1d-9d5c-97272e17bbbb
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e003e49e6745a096467944717f4cd817312cbca3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSectionContrib::get_code
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-섹션에 실행 코드가 포함 되어 있는지 여부를 나타내는 플래그를 검색 합니다.  
+# <a name="idiasectioncontribgetcode"></a>IDiaSectionContrib::get_code
+실행 코드 섹션에 포함 되는지 여부를 나타내는 플래그를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_code (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_code (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 반환 `TRUE` 섹션에 실행 코드입니다; 포함 되어 있는 경우 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` 섹션에는 실행 코드를 포함 하는 경우는 그렇지 않으면 반환 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`.  반환 `S_FALSE` 이 속성이 지원 되지 않는 경우.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 경우이 속성이 지원 되지 않습니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

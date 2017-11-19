@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugPointerObject
-helpviewer_keywords:
-- IDebugPointerObject interface
+f1_keywords: IDebugPointerObject
+helpviewer_keywords: IDebugPointerObject interface
 ms.assetid: 257fa167-b46e-4ffb-9a12-272efbf26702
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 0fbc9ae8e067a3442135e436712c1dc47360e339
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: df043051ad6c320c14277dc17967365d02cd0197
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugpointerobject"></a>IDebugPointerObject
 > [!IMPORTANT]
@@ -63,7 +47,7 @@ IDebugPointerObject : IDebugObject
 |[GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)|인터페이스 가리키는 일련의 연속 된 바이트 값을 가져옵니다.|  
 |[SetBytes](../../../extensibility/debugger/reference/idebugpointerobject-setbytes.md)|인터페이스를 일련의 연속 된 바이트를 가리키는 값을 설정 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  식 계산기 구문 분석 트리에 대 한 포인터를 나타내는 데이 인터페이스를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  

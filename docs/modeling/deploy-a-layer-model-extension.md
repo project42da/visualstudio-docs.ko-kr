@@ -1,5 +1,5 @@
 ---
-title: "레이어 모델 확장을 배포 | Microsoft 문서"
+title: "레이어 모델 확장명 배포 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,29 +10,15 @@ helpviewer_keywords:
 - dependency diagrams, deploying extensions
 - layer models, deploying extensions
 ms.assetid: 00a4675b-d20e-487e-8fd5-be2b1e0ba238
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8f84f22444a5df5b9f4f4af44cd8ee9136403467
-ms.openlocfilehash: 03164fe80a0b8f4dbc321a7e57b7db9e38e405d5
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: d019e602c5bf198df03a50034c2ed29519d16e53
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="deploy-a-layer-model-extension"></a>레이어 모델 확장명 배포
 Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이어 모델링 확장을 설치할 수 있습니다.  
@@ -42,9 +28,9 @@ Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이
   
 #### <a name="to-install-the-extension"></a>확장을 설치하려면  
   
-1.  포함 하는 프로젝트에서 **source.vsix.manifest**개방형 **bin\\ \* ** 파일 탐색기에서.  
+1.  포함 하는 프로젝트에서 **source.vsix.manifest**개방형 **bin\\ \***  파일 탐색기에서 합니다.  
   
-2.  복사는 ** \*.vsix** 확장을 설치 하려는 컴퓨터에는 파일입니다.  
+2.  복사는  **\*.vsix** 확장을 설치 하려는 컴퓨터에는 파일입니다.  
   
 3.  대상 컴퓨터에서 Windows 탐색기를 통해 *.vsix 파일을 두 번 클릭합니다.  
   
@@ -52,16 +38,14 @@ Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이
   
 #### <a name="to-uninstall-the-extension"></a>확장을 제거하려면  
   
-1.  Visual Studio에서에 **도구** 메뉴를 클릭 하 여 **확장 및 업데이트**합니다.  
+1.  Visual Studio에서에 **도구** 메뉴를 클릭 하 여 **확장명 및 업데이트**합니다.  
   
 2.  확장의 이름을 클릭 한 다음 클릭 **제거**합니다.  
   
 ## <a name="installing-an-extension-on-a-team-foundation-build-server"></a>Team Foundation Build 서버에 확장 설치  
- [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버에는 일반적으로 Visual Studio가 설치되어 있지 않으므로 VSIX를 두 번 클릭하여 설치할 수 없습니다. 
-          [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 설치에는 VSIX 확장 실행을 허용하는 일부 구성 요소가 포함되어 있지만 수동으로 확장을 설치해야 합니다.  
+ [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버에는 일반적으로 Visual Studio가 설치되어 있지 않으므로 VSIX를 두 번 클릭하여 설치할 수 없습니다. [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 설치에는 VSIX 확장 실행을 허용하는 일부 구성 요소가 포함되어 있지만 수동으로 확장을 설치해야 합니다.  
   
-#### <a name="to-install-your-layer-extension-on-a-includeesprbuildmiscincludesesprbuildmdmd-server"></a>
-          [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버에 레이어 확장을 설치하려면  
+#### <a name="to-install-your-layer-extension-on-a-includeesprbuildmiscincludesesprbuildmdmd-server"></a>[!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버에 레이어 확장을 설치하려면  
   
 1.  복사는 **.vsix** 개발 컴퓨터에서 파일의 [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 컴퓨터입니다.  
   
@@ -71,14 +55,13 @@ Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이
   
          %ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft  
   
-    -   
-          [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]를 실행하는 네트워크 서비스에 대해서만 설치하려면  
+    -   [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]를 실행하는 네트워크 서비스에 대해서만 설치하려면  
   
-         %WinDir%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\VisualStudio\\\Extensions\Microsoft [버전]  
+         %WinDir%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\VisualStudio\\[version] \Extensions\Microsoft  
   
     -   특정 사용자로 대화형 모드에서 실행되도록 [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]를 구성한 경우 해당 사용자에 대해서만 설치할 수 있습니다.  
   
-         %LocalAppData%\Microsoft\VisualStudio\\\Extensions\Microsoft [버전]  
+         %LocalAppData%\Microsoft\VisualStudio\\[version] \Extensions\Microsoft  
   
         > [!NOTE]
         >  % LocalAppData %는 일반적으로 *DriveName*: 사용자가*UserName*AppDataLocal 합니다.  
@@ -91,6 +74,4 @@ Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이
   
     3.  .zip 파일을 삭제합니다.  
   
-3.  
-          [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]를 다시 시작합니다.
-
+3.  [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]를 다시 시작합니다.

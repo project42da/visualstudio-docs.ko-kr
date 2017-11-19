@@ -1,11 +1,10 @@
 ---
-title: 'CA1052: Static holder types should be sealed | Microsoft Docs'
+title: "CA1052: 정적 소유자 형식은 sealed 여야 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,68 +14,53 @@ helpviewer_keywords:
 - CA1052
 - StaticHolderTypesShouldBeSealed
 ms.assetid: 51a3165d-781e-4a55-aa0d-ea25fee7d4f2
-caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 9658a77e9504b08a523ca8fd31a60606cd8f8317
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: deb02958ac89c350c4dc616b68693ee41b3019f5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1052-static-holder-types-should-be-sealed"></a>CA1052: Static holder types should be sealed
+# <a name="ca1052-static-holder-types-should-be-sealed"></a>CA1052: 정적 소유자 형식은 sealed여야 합니다.
 |||  
 |-|-|  
 |TypeName|StaticHolderTypesShouldBeSealed|  
 |CheckId|CA1052|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A public or protected type contains only static members and is not declared with the [sealed](/dotnet/csharp/language-reference/keywords/sealed) ([NotInheritable](/dotnet/visual-basic/language-reference/modifiers/notinheritable)) modifier.  
+## <a name="cause"></a>원인  
+ Public 또는 protected 형식이 정적 멤버만 포함 하 고로 선언 되지 않습니다는 [봉인](/dotnet/csharp/language-reference/keywords/sealed) ([NotInheritable](/dotnet/visual-basic/language-reference/modifiers/notinheritable)) 한정자.  
   
-## <a name="rule-description"></a>Rule Description  
- This rule assumes that a type that contains only static members is not designed to be inherited, because the type does not provide any functionality that can be overridden in a derived type. A type that is not meant to be inherited should be marked with the `sealed` modifier to prohibit its use as a base type.  
+## <a name="rule-description"></a>규칙 설명  
+ 이 규칙에서는 형식에서 파생된 된 형식에서 재정의할 수 있는 모든 기능을 제공 하지 않으므로 정적 멤버를 포함 하는 형식 상속 가능 하도록 설계 되지 않았습니다 가정 합니다. 상속되지 않는 형식은 기본 형식으로 사용되지 않도록 `sealed` 한정자로 표시해야 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, mark the type as `sealed`. If you are targeting [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 2.0 or later, a better approach is to mark the type as `static`. In this manner, you avoid having to declare a private constructor to prevent the class from being created.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 형식을로 표시 `sealed`합니다. 대상으로 하는 경우 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 형식을로 표시 하는 것이 더 나 것 2.0 이상 `static`합니다. 이러한 방식에 않아도 클래스 만들어지지 않도록 방지 하기 위해 private 생성자를 선언 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a warning from this rule only if the type is designed to be inherited. The absence of the `sealed` modifier suggests that the type is useful as a base type.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 상속 형식을 디자인 하는 경우에이 규칙에서 경고를 표시 합니다. 없는 경우는 `sealed` 한정자 제안 유형을 기본 유형으로 유용 합니다.  
   
-## <a name="example-of-a-violation"></a>Example of a Violation  
+## <a name="example-of-a-violation"></a>위반의 예로  
   
-### <a name="description"></a>Description  
- The following example shows a type that violates the rule.  
+### <a name="description"></a>설명  
+ 다음 예제에서는 규칙을 위반 하는 형식을 보여 줍니다.  
   
-### <a name="code"></a>Code  
- [!code-csharp[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/CSharp/ca1052-static-holder-types-should-be-sealed_1.cs)] [!code-vb[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/VisualBasic/ca1052-static-holder-types-should-be-sealed_1.vb)] [!code-cpp[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/CPP/ca1052-static-holder-types-should-be-sealed_1.cpp)]  
+### <a name="code"></a>코드  
+ [!code-csharp[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/CSharp/ca1052-static-holder-types-should-be-sealed_1.cs)]
+ [!code-vb[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/VisualBasic/ca1052-static-holder-types-should-be-sealed_1.vb)]
+ [!code-cpp[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/CPP/ca1052-static-holder-types-should-be-sealed_1.cpp)]  
   
-## <a name="fix-with-the-static-modifier"></a>Fix with the Static Modifier  
+## <a name="fix-with-the-static-modifier"></a>Static 한정자로 수정  
   
-### <a name="description"></a>Description  
- The following example shows how to fix a violation of this rule by marking the type with the `static` modifier.  
+### <a name="description"></a>설명  
+ 다음 예제를 사용 하 여 형식을 표시 하 여이 규칙 위반 문제를 해결 하는 방법을 보여 줍니다는 `static` 한정자입니다.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>코드  
  [!code-csharp[FxCop.Design.StaticMembersFixed#1](../code-quality/codesnippet/CSharp/ca1052-static-holder-types-should-be-sealed_2.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1053: Static holder types should not have constructors](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)
-
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1053: 정적 소유자 형식에는 생성자를 사용하면 안 됩니다.](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)
