@@ -1,25 +1,27 @@
 ---
-title: "SDKReference 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SDKReference 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72c8b352-0b7a-42b3-ba5d-2a2d1e90c34b
-caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a6ca0159d522d7890452a54986093f4062803faf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# SDKReference 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="sdkreference-element-visual-studio-templates"></a>SDKReference 요소(Visual Studio 템플릿)
 항목 템플릿에서 SDK 참조를 사용하도록 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```xml  
 <VSTemplate>      
@@ -29,25 +31,25 @@ caps.handback.revision: 5
                 <SDKReference>SDKname</SDKReference>  
 ```  
   
-## 특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a>특성 및 요소  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
+|-------------|-----------------|  
 |[참조](../extensibility/reference-element-visual-studio-templates.md)|항목이 프로젝트에 추가될 때 추가할 어셈블리 참조를 지정합니다.|  
   
-## 텍스트 값  
+## <a name="text-value"></a>텍스트 값  
  텍스트 값은 필수입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  이 텍스트는 항목 템플릿이 인스턴스화될 때 프로젝트에 추가할 SDK 참조를 지정합니다.  
   
 ```xml  
@@ -60,8 +62,8 @@ caps.handback.revision: 5
 ...  
 ```  
   
-## 참고 항목  
- [References 요소\(Visual Studio 템플릿\)](../extensibility/references-element-visual-studio-templates.md)   
- [Reference 요소\(Visual Studio 템플릿\)](../extensibility/reference-element-visual-studio-templates.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)   
+## <a name="see-also"></a>참고 항목  
+ [References 요소 (Visual Studio 템플릿)](../extensibility/references-element-visual-studio-templates.md)   
+ [Reference 요소 (Visual Studio 템플릿)](../extensibility/reference-element-visual-studio-templates.md)   
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)   
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)

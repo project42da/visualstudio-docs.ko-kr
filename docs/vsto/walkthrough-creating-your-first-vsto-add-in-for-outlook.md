@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Creating Your First VSTO Add-In for Outlook | Microsoft Docs'
+title: "연습: 첫 번째 VSTO 추가 기능에 Outlook에 대 한 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,133 +16,135 @@ helpviewer_keywords:
 - add-ins [Office development in Visual Studio], creating your first project
 - Outlook [Office development in Visual Studio], creating your first project
 ms.assetid: 2c5c5d75-27ee-471f-9328-58f0cf05b2b7
-caps.latest.revision: 28
-author: kempb
-ms.author: kempb
+caps.latest.revision: "28"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: dcaacc506c39734859b9d526ec34155f7111efeb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 514e6e0f52867b586135050d555508caec8cb6e6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-creating-your-first-vsto-add-in-for-outlook"></a>Walkthrough: Creating Your First VSTO Add-In for Outlook
-  This walkthrough shows you how to create a VSTO Add-in for Microsoft Office Outlook. The features that you create in this kind of solution are available to the application itself, regardless of which Outlook item is open. For more information, see [Office Solutions Development Overview &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).  
+# <a name="walkthrough-creating-your-first-vsto-add-in-for-outlook"></a>연습: Outlook용 첫 VSTO 추가 기능 만들기
+  이 연습에서는 Microsoft Office Outlook용 VSTO 추가 기능을 만드는 방법을 보여 줍니다. 이러한 종류의 솔루션에서 만드는 기능은 열려 있는 Outlook 항목에 관계없이 응용 프로그램 자체에서 사용할 수 있습니다. 자세한 내용은 참조 [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md).  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ 이 연습에서는 다음 작업을 수행합니다.  
   
--   Creating an Outlook VSTO Add-in project for Outlook.  
+-   Outlook용 Outlook VSTO 추가 기능 프로젝트 만들기  
   
--   Writing code that uses the object model of Outlook to add text to the subject and body of a new mail message.  
+-   Outlook 개체 모델을 사용하여 새 메일 메시지의 제목 및 본문에 텍스트를 추가하는 코드 작성  
   
--   Building and running the project to test it.  
+-   테스트를 위해 프로젝트 빌드 및 실행  
   
--   Cleaning up the completed project so that the VSTO Add-in no longer runs automatically on your development computer.  
+-   VSTO 추가 기능이 개발 컴퓨터에서 더 이상 자동으로 실행되지 않도록 하기 위해 완료된 프로젝트 정리  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Microsoft Outlook  
   
-## <a name="creating-the-project"></a>Creating the Project  
+## <a name="creating-the-project"></a>프로젝트 만들기  
   
-#### <a name="to-create-a-new-outlook-project-in-visual-studio"></a>To create a new Outlook project in Visual Studio  
+#### <a name="to-create-a-new-outlook-project-in-visual-studio"></a>Visual Studio에서 새로운 Outlook 프로젝트를 만들려면  
   
-1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
   
-2.  On the **File** menu, point to **New**, and then click **Project**.  
+2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office/SharePoint**.  
+3.  템플릿 창에서 **Visual C#** 또는 **Visual Basic**을 확장한 다음 **Office/SharePoint**를 확장합니다.  
   
-4.  Under the expanded **Office/SharePoint** node, select the **Office Add-ins** node.  
+4.  확장된 **Office/SharePoint** 노드 아래에서 **Office 추가 기능** 노드를 선택합니다.  
   
-5.  In the list of project templates, choose an Outlook VSTO Add-in project.  
+5.  프로젝트 템플릿 목록에서 Outlook VSTO 추가 기능 프로젝트를 선택합니다.  
   
-6.  In the **Name** box, type **FirstOutlookAddIn**.  
+6.  **이름** 상자에 **FirstOutlookAddIn**을 입력합니다.  
   
-7.  Click **OK**.  
+7.  **확인**을 클릭합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the **FirstOutlookAddIn** project and opens the **ThisAddIn** code file in the editor.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에서는 **FirstOutlookAddIn** 프로젝트를 만들고 **ThisAddIn** 코드 파일을 편집기에서 엽니다.  
   
-## <a name="writing-code-that-adds-text-to-each-new-mail-message"></a>Writing Code that Adds Text to Each New Mail Message  
- Next, add code to the ThisAddIn code file. The new code uses the object model of Outlook to add text to each new mail message. By default, the ThisAddIn code file contains the following generated code:  
+## <a name="writing-code-that-adds-text-to-each-new-mail-message"></a>각각의 새 메일 메시지에 텍스트를 추가하는 코드 작성  
+ 다음 작업으로, ThisAddIn 코드 파일에 코드를 추가합니다. 새 코드는 Outlook 개체 모델을 사용하여 새 메일 메시지에 각각 텍스트를 추가합니다. 기본적으로 ThisAddIn 코드 파일에는 다음과 같은 생성된 코드가 포함되어 있습니다.  
   
--   A partial definition of the `ThisAddIn` class. This class provides an entry point for your code and provides access to the object model of Outlook. For more information, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md). The remainder of the `ThisAddIn` class is defined in a hidden code file that you should not modify.  
+-   `ThisAddIn` 클래스의 부분 정의. 이 클래스는 코드의 진입점을 제공하고 Outlook의 개체 모델에 대한 액세스를 제공합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요. `ThisAddIn` 클래스의 나머지 부분은 수정해서는 안 되는 숨김 코드 파일에서 정의됩니다.  
   
--   The `ThisAddIn_Startup` and `ThisAddIn_Shutdown` event handlers. These event handlers are called when Outlook loads and unloads your VSTO Add-in. Use these event handlers to initialize your VSTO Add-in when it is loaded, and to clean up resources used by your VSTO Add-in when it is unloaded. For more information, see [Events in Office Projects](../vsto/events-in-office-projects.md).  
+-   `ThisAddIn_Startup` 및 `ThisAddIn_Shutdown` 이벤트 처리기. 이러한 이벤트 처리기는 Outlook에서 VSTO 추가 기능을 로드하고 언로드할 때 호출됩니다. 이러한 이벤트 처리기를 사용하여 VSTO 추가 기능이 로드될 때 VSTO 추가 기능을 초기화하고 VSTO 추가 기능이 언로드될 때 VSTO 추가 기능에서 사용하는 리소스를 정리할 수 있습니다. 자세한 내용은 [Events in Office Projects](../vsto/events-in-office-projects.md)을 참조하세요.  
   
-#### <a name="to-add-text-to-the-subject-and-body-of-each-new-mail-message"></a>To add text to the subject and body of each new mail message  
+#### <a name="to-add-text-to-the-subject-and-body-of-each-new-mail-message"></a>새 메일 메시지의 제목과 본문에 각각 텍스트를 추가하려면  
   
-1.  In the ThisAddIn code file, declare a field named `inspectors` in the `ThisAddIn` class. The `inspectors` field maintains a reference to the collection of Inspector windows in the current Outlook instance. This reference prevents the garbage collector from freeing the memory that contains the event handler for the <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> event.  
+1.  ThisAddIn 코드 파일의 `inspectors` 클래스에서 `ThisAddIn` 라는 필드를 선언합니다. `inspectors` 필드는 현재 Outlook 인스턴스의 검사기 창 컬렉션에 대한 참조를 유지 관리합니다. 이 참조는 가비지 수집기가 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> 이벤트에 대한 이벤트 처리기가 포함된 메모리를 해제할 수 없게 합니다.  
   
-     [!code-vb[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#1)]  [!code-csharp[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#1)]  
+     [!code-vb[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#1)]
+     [!code-csharp[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#1)]  
   
-2.  Replace the `ThisAddIn_Startup` method with the following code. This code attaches an event handler to the <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> event.  
+2.  `ThisAddIn_Startup` 메서드를 다음 코드로 바꿉니다. 이 코드는 이벤트 처리기를 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> 이벤트에 연결합니다.  
   
-     [!code-vb[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#2)]  [!code-csharp[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#2)]  
+     [!code-vb[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#2)]
+     [!code-csharp[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#2)]  
   
-3.  In the ThisAddIn code file, add the following code to the `ThisAddIn` class. This code defines an event handler for the <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> event.  
+3.  ThisAddIn 코드 파일에서 다음 코드를 `ThisAddIn` 클래스에 추가합니다. 이 코드는 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> 이벤트에 대한 이벤트 처리기를 정의합니다.  
   
-     When the user creates a new mail message, this event handler adds text to the subject line and body of the message.  
+     사용자가 새 메일 메시지를 만드는 경우 이 이벤트 처리기는 메시지의 제목 줄과 본문에 텍스트를 추가합니다.  
   
-     [!code-vb[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#3)]  [!code-csharp[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#3)]  
+     [!code-vb[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#3)]
+     [!code-csharp[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#3)]  
   
- To modify each new mail message, the previous code examples use the following objects:  
+ 각각의 새 메일 메시지를 수정하기 위해 이전 코드 예제에서는 다음 개체를 사용합니다.  
   
--   The `Application` field of the `ThisAddIn` class. The `Application` field returns an <xref:Microsoft.Office.Interop.Outlook.Application> object, which represents the current instance of Outlook.  
+-   `Application` 클래스의 `ThisAddIn` 필드. `Application` 필드는 Outlook의 현재 인스턴스를 나타내는 <xref:Microsoft.Office.Interop.Outlook.Application> 개체를 반환합니다.  
   
--   The `Inspector` parameter of the event handler for the <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> event. The `Inspector` parameter is an <xref:Microsoft.Office.Interop.Outlook.Inspector> object, which represents the Inspector window of the new mail message. For more information, see [Outlook Solutions](../vsto/outlook-solutions.md).  
+-   `Inspector` 이벤트에 대한 이벤트 처리기의 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> 매개 변수입니다. `Inspector` 매개 변수는 새 메일 메시지의 검사기 창을 나타내는 <xref:Microsoft.Office.Interop.Outlook.Inspector> 개체입니다. 자세한 내용은 [Outlook Solutions](../vsto/outlook-solutions.md)을 참조하세요.  
   
-## <a name="testing-the-project"></a>Testing the Project  
- When you build and run the project, verify that the text appears in the subject line and body of a new mail message.  
+## <a name="testing-the-project"></a>프로젝트 테스트  
+ 프로젝트를 빌드 및 실행하는 경우 새 메일 메시지의 제목 줄과 본문에 텍스트가 표시되는지 확인합니다.  
   
-#### <a name="to-test-the-project"></a>To test the project  
+#### <a name="to-test-the-project"></a>프로젝트를 테스트하려면  
   
-1.  Press **F5** to build and run your project.  
+1.  **F5** 키를 눌러 프로젝트를 빌드하고 실행합니다.  
   
-     When you build the project, the code is compiled into an assembly that is included in the build output folder for the project. Visual Studio also creates a set of registry entries that enable Outlook to discover and load the VSTO Add-in, and it configures the security settings on the development computer to enable the VSTO Add-in to run. For more information, see [Office Solution Build Process Overview](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md).  
+     프로젝트를 빌드하면 코드가 프로젝트의 빌드 출력 폴더에 포함된 어셈블리로 컴파일됩니다. 또한 Visual Studio에서는 Outlook에서 VSTO 추가 기능을 검색하고 로드할 수 있도록 하는 레지스트리 항목 집합을 만들고 VSTO 추가 기능이 실행될 수 있도록 개발 컴퓨터에서 보안 설정을 구성합니다. 자세한 내용은 [Office Solution Build Process Overview](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)을 참조하세요.  
   
-2.  In Outlook, create a new mail message.  
+2.  Outlook에서 새 메일 메시지를 만듭니다.  
   
-3.  Verify that the following text is added to both the subject line and body of the message.  
+3.  다음 텍스트가 메시지의 제목 줄과 본문에 추가되었는지 확인합니다.  
   
      **This text was added by using code.**  
   
-4.  Close Outlook.  
+4.  Outlook을 닫습니다.  
   
-## <a name="cleaning-up-the-project"></a>Cleaning up the Project  
- When you finish developing a project, remove the VSTO Add-in assembly, registry entries, and security settings from your development computer. Otherwise, the VSTO Add-in will run every time that you open Outlook on the development computer.  
+## <a name="cleaning-up-the-project"></a>프로젝트 정리  
+ 프로젝트의 개발을 완료하면 VSTO 추가 기능 어셈블리, 레지스트리 항목 및 보안 설정을 개발 컴퓨터에서 제거합니다. 이렇게 하지 않으면 개발 컴퓨터에서 Outlook을 열 때마다 VSTO 추가 기능이 실행됩니다.  
   
-#### <a name="to-clean-up-your-project"></a>To clean up your project  
+#### <a name="to-clean-up-your-project"></a>프로젝트를 정리하려면  
   
-1.  In Visual Studio, on the **Build** menu, click **Clean Solution**.  
+1.  Visual Studio의 **빌드** 메뉴에서 **솔루션 정리**를 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- Now that you have created a basic VSTO Add-in for Outlook, you can learn more about how to develop VSTO Add-ins from these topics:  
+## <a name="next-steps"></a>다음 단계  
+ 기본적인 Outlook용 VSTO 추가 기능을 만들었으므로 다음 항목에서 VSTO 추가 기능을 개발하는 방법에 대해 자세히 알아볼 수 있습니다.  
   
--   General programming tasks that you can perform by using VSTO Add-ins for Outlook. For more information, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md).  
+-   Outlook용 VSTO 추가 기능을 사용하여 수행할 수 있는 일반적인 프로그래밍 작업. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요.  
   
--   Using the object model of Outlook. For more information, see [Outlook Solutions](../vsto/outlook-solutions.md).  
+-   Outlook 개체 모델 사용. 자세한 내용은 [Outlook Solutions](../vsto/outlook-solutions.md)을 참조하세요.  
   
--   Customizing the UI of Outlook, for example, by adding a custom tab to the Ribbon or creating your own custom task pane. For more information, see [Office UI Customization](../vsto/office-ui-customization.md).  
+-   Outlook의 UI 사용자 지정(예: 리본에 사용자 지정 탭 추가 또는 사용자 고유의 사용자 지정 작업창 만들기). 자세한 내용은 참조 [Office UI 사용자 지정](../vsto/office-ui-customization.md)합니다.  
   
--   Building and debugging VSTO Add-ins for Outlook. For more information, see [Building Office Solutions](../vsto/building-office-solutions.md).  
+-   Outlook용 VSTO 추가 기능 빌드 및 디버그. 자세한 내용은 참조 [Office 솔루션 빌드](../vsto/building-office-solutions.md)합니다.  
   
--   Deploying VSTO Add-ins for Outlook. For more information, see [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
+-   Outlook용 VSTO 추가 기능 배포. 자세한 내용은 참조 [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
- [Outlook Solutions](../vsto/outlook-solutions.md)   
- [Office UI Customization](../vsto/office-ui-customization.md)   
- [Building Office Solutions](../vsto/building-office-solutions.md)   
- [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
- [Office Project Templates Overview](../vsto/office-project-templates-overview.md)  
+ [Outlook 솔루션](../vsto/outlook-solutions.md)   
+ [Office UI 사용자 지정](../vsto/office-ui-customization.md)   
+ [Office 솔루션 빌드](../vsto/building-office-solutions.md)   
+ [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)   
+ [Office 프로젝트 템플릿 개요](../vsto/office-project-templates-overview.md)  
   
   

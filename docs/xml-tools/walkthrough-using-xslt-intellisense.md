@@ -1,26 +1,27 @@
 ---
-title: "연습: XSLT IntelliSense 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "연습: XSLT IntelliSense를 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 079d95ac-2eaf-4ae1-9cd3-2c81a961a942
-caps.latest.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ae58db5ac642bca1e68d3ad074d4a69062a1f294
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 연습: XSLT IntelliSense 사용
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="walkthrough-using-xslt-intellisense"></a>연습: XSLT IntelliSense 사용
 이 연습에서는 XSLT IntelliSense를 사용하여 일부 특성 값을 자동 완성하는 방법을 보여 줍니다.  
   
-### xsl:with\-param 및 xsl:call\-template 요소의 이름 특성에 IntelliSense를 사용하려면  
+### <a name="to-use-intellisense-in-the-name-attribute-of-xslwith-param-and-xslcall-template-elements"></a>xsl:with-param 및 xsl:call-template 요소의 이름 특성에 IntelliSense를 사용하려면  
   
 1.  새 XSLT 파일을 만들고 다음 코드에 복사합니다.  
   
@@ -46,24 +47,24 @@ caps.handback.revision: 2
     </xsl:stylesheet>  
     ```  
   
-2.  커서를 `<xsl:template name="msg23" match="msg23">` 다음에 놓고 Enter 키를 누릅니다.그리고 나서 다음 `xsl:call-template` 요소 입력을 시작합니다.  
+2.  커서를 `<xsl:template name="msg23" match="msg23">` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl:call-template` 요소 입력을 시작합니다.  
   
     ```  
     <xsl:call-template name="localized-message">  
     </xsl:call-template>  
     ```  
   
-     입력할 때 템플릿 이름의 목록이 `xsl:call-template` 요소의 `name=""` 특성에 나타납니다.  
+     입력할 때 템플릿 이름의 목록이 `name=""` 요소의 `xsl:call-template` 특성에 나타납니다.  
   
-3.  커서를 `<xsl:call-template name="localized-message">` 다음에 놓고 Enter 키를 누릅니다.그리고 나서 다음 `xsl:with-param` 요소 입력을 시작합니다.  
+3.  커서를 `<xsl:call-template name="localized-message">` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl:with-param` 요소 입력을 시작합니다.  
   
     ```  
     <xsl:with-param name="msgcode">msg23</xsl:with-param>  
     ```  
   
-     매개 변수 이름의 목록이 `xsl:with-param` 요소의 `name=""` 특성에 나타납니다.  
+     매개 변수 이름의 목록이 `name=""` 요소의 `xsl:with-param` 특성에 나타납니다.  
   
-### xsl:apply\-templates 요소의 모드 특성에 IntelliSense를 사용하려면  
+### <a name="to-use-intellisense-in-the-mode-attribute-of-an-xslapply-templates-element"></a>xsl:apply-templates 요소의 모드 특성에 IntelliSense를 사용하려면  
   
 1.  새 XSLT 파일을 만들고 다음 코드에 복사합니다.  
   
@@ -112,15 +113,15 @@ caps.handback.revision: 2
     </xsl:stylesheet>  
     ```  
   
-2.  커서를 `<xsl:apply-templates select="phone" />` 다음에 놓고 Enter 키를 누릅니다.그리고 나서 다음 `xsl: apply-templates` 요소 입력을 시작합니다.  
+2.  커서를 `<xsl:apply-templates select="phone" />` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl: apply-templates` 요소 입력을 시작합니다.  
   
     ```  
     <xsl:apply-templates select="phone"  mode="accountNumber">  
     ```  
   
-     템플릿 모드의 목록이 `xsl:apply-templates` 요소의 `mode=""` 특성에 나타납니다.  
+     템플릿 모드의 목록이 `mode=""` 요소의 `xsl:apply-templates` 특성에 나타납니다.  
   
-### xsl:namespace\-alias 요소의 stylesheet\-prefix 및 result\-prefix 특성에 IntelliSense를 사용하려면  
+### <a name="to-use-intellisense-in-the-stylesheet-prefix-and-result-prefix-attributes-of-an-xslnamespace-alias-element"></a>xsl:namespace-alias 요소의 stylesheet-prefix 및 result-prefix 특성에 IntelliSense를 사용하려면  
   
 1.  새 XSLT 파일을 만들고 다음 코드에 복사합니다.  
   
@@ -153,13 +154,13 @@ caps.handback.revision: 2
     </xsl:stylesheet>  
     ```  
   
-2.  커서를 `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` 다음에 놓고 Enter 키를 누릅니다.그리고 나서 다음 `xsl:namespace-alias` 요소 입력을 시작합니다.  
+2.  커서를 `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl:namespace-alias` 요소 입력을 시작합니다.  
   
     ```  
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>  
     ```  
   
-     `xsl:namespace-alias` 요소의 `stylesheet-prefix` 및 `result-prefix` 특성에 접미사 목록이 표시되는 방법에 유의해야 합니다.  
+     `stylesheet-prefix` 요소의 `result-prefix` 및 `xsl:namespace-alias` 특성에 접미사 목록이 표시되는 방법에 유의해야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 편집기 IntelliSense 기능](../xml-tools/xml-editor-intellisense-features.md)

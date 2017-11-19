@@ -1,12 +1,10 @@
 ---
-title: Custom Task Panes | Microsoft Docs
+title: "사용자 지정 작업 창 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -28,134 +26,134 @@ helpviewer_keywords:
 - task panes [Office development in Visual Studio], about custom task panes
 - custom task panes [Office development in Visual Studio], about custom task panes
 ms.assetid: 9a415109-5333-433e-95c6-3d59ce9c4d02
-caps.latest.revision: 52
-author: kempb
-ms.author: kempb
+caps.latest.revision: "52"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b99d43d4e775e118d60ba692f4dde615cbb6f5f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 097a4247ccc7604dd4c39b81e0f733578fc91c89
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="custom-task-panes"></a>Custom Task Panes
-  Task panes are user interface panels that are typically docked to one side of a window in a Microsoft Office application. Custom task panes give you a way to create your own task pane and provide users with a familiar interface to access your solution's features. For example, the interface can contain controls that run code to modify documents or display data from a data source.  
+# <a name="custom-task-panes"></a>사용자 지정 작업 창
+  작업창은 일반적으로 Microsoft Office 응용 프로그램에서 창의 한쪽에 도킹된 사용자 인터페이스 패널입니다. 사용자 지정 작업창을 사용하면 사용자 고유의 작업창을 만들고 사용자에게 솔루션 기능에 액세스하기 위한 친숙한 인터페이스를 제공할 수 있습니다. 예를 들어 인터페이스에는 문서를 수정하거나 데이터 소스의 데이터를 표시하는 코드를 실행하는 컨트롤이 포함될 수 있습니다.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
 > [!NOTE]  
->  A custom task pane differs from the actions pane. The actions pane is part of document-level customizations for Microsoft Office Word and Microsoft Office Excel. For more information, see [Actions Pane Overview](../vsto/actions-pane-overview.md).  
+>  사용자 지정 작업창은 작업 창과 다릅니다. 작업 창은 Microsoft Office Word 및 Microsoft Office Excel용 문서 수준 사용자 지정의 일부입니다. 자세한 내용은 [Actions Pane Overview](../vsto/actions-pane-overview.md)을 참조하십시오.  
   
-## <a name="benefits-of-custom-task-panes"></a>Benefits of Custom Task Panes  
- Custom task panes let you integrate your features into a familiar user interface. You can create a custom task pane quickly by using Visual Studio tools.  
+## <a name="benefits-of-custom-task-panes"></a>사용자 지정 작업창의 이점  
+ 사용자 지정 작업창을 사용하면 친숙한 사용자 인터페이스에 기능을 통합할 수 있습니다. Visual Studio 도구를 사용하여 사용자 지정 작업창을 신속하게 만들 수 있습니다.  
   
-### <a name="familiar-user-interface"></a>Familiar User Interface  
- Users of applications in the Microsoft Office system are already familiar with using task panes such as the **Styles and Formatting** task pane in Word. Custom task panes behave like other task panes in the Microsoft Office system. Users can dock custom task panes to different sides of the application window, or they can drag custom task panes to any location in the window. You can create a VSTO Add-in that displays multiple custom task panes at the same time, and users can control each task pane individually.  
+### <a name="familiar-user-interface"></a>친숙한 사용자 인터페이스  
+ Microsoft Office system 응용 프로그램의 사용자가 이미 익숙한과 같은 작업창 사용 하 여 **스타일 및 서식** Word의 작업창입니다. 사용자 지정 작업창은 Microsoft Office System의 다른 작업창처럼 동작합니다. 사용자는 응용 프로그램 창의 원하는 쪽에 사용자 지정 작업창을 도킹하거나 창에서 임의의 위치로 사용자 지정 작업창을 끌 수 있습니다. 동시에 여러 사용자 지정 작업창을 표시하는 VSTO 추가 기능을 만들 수 있으며 사용자가 각 작업창을 개별적으로 제어할 수 있습니다.  
   
-### <a name="windows-forms-support"></a>Windows Forms Support  
- The user interface of a custom task pane that you create by using the Office development tools in Visual Studio is based on Windows Forms controls. You can use the familiar Windows Forms Designer to design the user interface for a custom task pane. You can also use the data binding support in Windows Forms to bind a data source to controls on the task pane.  
+### <a name="windows-forms-support"></a>Windows Forms 지원  
+ Visual Studio에서 Office 개발 도구를 사용하여 만든 사용자 지정 작업창의 사용자 인터페이스는 Windows Forms 컨트롤을 기반으로 합니다. 친숙한 Windows Forms 디자이너를 사용하여 사용자 지정 작업창에 대한 사용자 인터페이스를 디자인할 수 있습니다. Windows Forms의 데이터 바인딩 지원을 사용하여 데이터 소스를 작업창의 컨트롤에 바인딩할 수도 있습니다.  
   
-## <a name="creating-a-custom-task-pane"></a>Creating a Custom Task Pane  
- You can create a basic custom task pane in two steps:  
+## <a name="creating-a-custom-task-pane"></a>사용자 지정 작업창 만들기  
+ 다음 두 단계를 통해 기본 사용자 지정 작업창을 만들 수 있습니다.  
   
-1.  Create a user interface for your custom task pane by adding Windows Forms controls to a <xref:System.Windows.Forms.UserControl> object.  
+1.  <xref:System.Windows.Forms.UserControl> 개체에 Windows Forms 컨트롤을 추가하여 사용자 지정 작업창에 대한 사용자 인터페이스를 만듭니다.  
   
-2.  Instantiate the custom task pane by passing the user control to the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> object in your VSTO Add-in. This collection returns a new <xref:Microsoft.Office.Tools.CustomTaskPane> object that you can use to modify the appearance of the task pane and respond to user events.  
+2.  VSTO 추가 기능의 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> 개체에 사용자 정의 컨트롤을 전달하여 사용자 지정 작업창을 인스턴스화합니다. 이 컬렉션은 작업창의 모양을 수정하고 사용자 이벤트에 응답하는 데 사용할 수 있는 새로운 <xref:Microsoft.Office.Tools.CustomTaskPane> 개체를 반환합니다.  
   
- For more information, see [How to: Add a Custom Task Pane to an Application](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).  
+ 자세한 내용은 참조 [하는 방법: 응용 프로그램에 사용자 지정 작업창 추가](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)합니다.  
   
-### <a name="creating-the-user-interface"></a>Creating the User Interface  
- All custom task panes that are created by using the Office development tools in Visual Studio contain a <xref:System.Windows.Forms.UserControl> object. This user control provides the user interface of your custom task pane. You can create the user control at design time or at run time. If you create the user control at design time, you can use the Windows Forms Designer to construct the user interface of your task pane.  
+### <a name="creating-the-user-interface"></a>사용자 인터페이스 만들기  
+ Visual Studio의 Office 개발 도구를 사용하여 만든 모든 사용자 지정 작업창에는 <xref:System.Windows.Forms.UserControl> 개체가 포함됩니다. 이 사용자 정의 컨트롤은 사용자 지정 작업창의 사용자 인터페이스를 제공합니다. 디자인 타임 또는 런타임에 사용자 정의 컨트롤을 만들 수 있습니다. 디자인 타임에 사용자 정의 컨트롤을 만드는 경우 Windows Forms 디자이너를 사용하여 작업창의 사용자 인터페이스를 생성할 수 있습니다.  
   
-### <a name="instantiating-the-custom-task-pane"></a>Instantiating the Custom Task Pane  
- After you create a user control that contains the user interface of the custom task pane, you have to instantiate a <xref:Microsoft.Office.Tools.CustomTaskPane>. To do this, pass the user control to the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> in your VSTO Add-in by calling one of the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> methods. This collection is exposed as the `CustomTaskPanes` field of the `ThisAddIn` class. The following code example is intended to be run from the `ThisAddIn` class.  
+### <a name="instantiating-the-custom-task-pane"></a>사용자 지정 작업창 인스턴스화  
+ 사용자 지정 작업창의 사용자 인터페이스를 포함하는 사용자 정의 컨트롤을 만든 후 <xref:Microsoft.Office.Tools.CustomTaskPane>을 인스턴스화해야 합니다. 이렇게 하려면 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> 메서드 중 하나를 호출하여 VSTO 추가 기능의 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection>에 사용자 정의 컨트롤을 전달합니다. 이 컬렉션은 `ThisAddIn` 클래스의 `CustomTaskPanes` 필드로 노출됩니다. 다음 코드 예제는 `ThisAddIn` 클래스에서 실행해야 합니다.  
   
- [!code-vb[Trin_TaskPaneBasic#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#2)] [!code-csharp[Trin_TaskPaneBasic#2](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#2)]  
+ [!code-vb[Trin_TaskPaneBasic#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#2)]
+ [!code-csharp[Trin_TaskPaneBasic#2](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#2)]  
   
- The <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> methods return a new <xref:Microsoft.Office.Tools.CustomTaskPane> object. You can use this object to modify the appearance of the task pane and to respond to user events.  
+ <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> 메서드는 새로운 <xref:Microsoft.Office.Tools.CustomTaskPane> 개체를 반환합니다. 이 개체를 사용하여 작업창의 모양을 수정하고 사용자 이벤트에 응답할 수 있습니다.  
   
-### <a name="controlling-the-task-pane-in-multiple-windows"></a>Controlling the Task Pane in Multiple Windows  
- Custom task panes are associated with a document frame window, which presents a view of a document or item to the user. The task pane is visible only when the associated window is visible.  
+### <a name="controlling-the-task-pane-in-multiple-windows"></a>여러 창의 작업창 제어  
+ 사용자 지정 작업창은 사용자에게 문서 또는 항목의 뷰를 제공하는 문서 프레임 창에 연결됩니다. 작업창은 연결된 창이 표시되는 경우에만 표시됩니다.  
   
- To determine which window displays the custom task pane, use the appropriate <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> method overload when you create the task pane:  
+ 사용자 지정 작업창을 표시하는 창을 확인하려면 작업창을 만들 때 적절한 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> 메서드 오버로드를 사용합니다.  
   
--   To associate the task pane with the active window, use the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> method.  
+-   작업창을 활성 창에 연결하려면 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> 메서드를 사용합니다.  
   
--   To associate the task pane with a document that is hosted by a specified window, use the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> method.  
+-   작업창을 지정된 창에 호스트된 문서와 연결하려면 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> 메서드를 사용합니다.  
   
- Some Office applications require explicit instructions for when to create or display your task pane when more than one window is open. This makes it important to consider where to instantiate the custom task pane in your code to ensure that the task pane appears with the appropriate documents or items in the application. For more information, see [Managing Custom Task Panes in Application Windows](#Managing).  
+ 일부 Office 응용 프로그램에는 둘 이상의 창이 열려 있을 때 작업창을 만들거나 표시하는 시기에 대한 명시적 지침이 필요합니다. 따라서 작업창이 응용 프로그램에서 적절한 문서 또는 항목과 함께 표시되도록 코드에서 사용자 지정 작업창을 인스턴스화할 위치를 고려하는 것이 중요합니다. 자세한 내용은 참조 [사용자 지정 작업창 관리 응용 프로그램 창에서](#Managing)합니다.  
   
-## <a name="accessing-the-application-from-the-task-pane"></a>Accessing the Application from the Task Pane  
- If you want to automate the application from the user control, you can directly access the object model by using `Globals.ThisAddIn.Application` in your code. The static `Globals` class provides access to the `ThisAddIn` object. The `Application` field of this object is the entry point into the object model of the application.  
+## <a name="accessing-the-application-from-the-task-pane"></a>작업창에서 응용 프로그램 액세스  
+ 사용자 정의 컨트롤에서 응용 프로그램을 자동화하려는 경우 코드에서 `Globals.ThisAddIn.Application`을 사용하여 개체 모델에 직접 액세스할 수 있습니다. 정적 `Globals` 클래스는 `ThisAddIn` 개체에 대한 액세스를 제공합니다. 이 개체의 `Application` 필드는 응용 프로그램의 개체 모델에 대한 진입점입니다.  
   
- For more information about the `Application` field of the `ThisAddIn` object, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md). For a walkthrough that demonstrates how to automate an application from a custom task pane, see [Walkthrough: Automating an Application from a Custom Task Pane](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md). For more information about the `Globals` class, see [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md).  
+ 에 대 한 자세한 내용은 `Application` 필드는 `ThisAddIn` 개체, 참조 [VSTO 추가 기능 프로그래밍](../vsto/programming-vsto-add-ins.md)합니다. 사용자 지정 작업창에서 응용 프로그램을 자동화 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 사용자 지정 작업창에서 응용 프로그램 자동화](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)합니다. 에 대 한 자세한 내용은 `Globals` 클래스를 참조 하십시오. [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
   
-## <a name="managing-the-user-interface-of-the-task-pane"></a>Managing the User Interface of the Task Pane  
- After you create the task pane, you can use properties and events of the <xref:Microsoft.Office.Tools.CustomTaskPane> object to control the user interface of the task pane and to respond when the user changes the task pane.  
+## <a name="managing-the-user-interface-of-the-task-pane"></a>작업창의 사용자 인터페이스 관리  
+ 작업창을 만든 후 <xref:Microsoft.Office.Tools.CustomTaskPane> 개체의 속성 및 이벤트를 사용하여 작업창의 사용자 인터페이스를 제어하고 사용자가 작업창을 변경할 때 응답할 수 있습니다.  
   
-### <a name="making-the-custom-task-pane-visible"></a>Making the Custom Task Pane Visible  
- By default, the task pane is not visible. To make the task pane visible, you must set the <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> property to **true**.  
+### <a name="making-the-custom-task-pane-visible"></a>사용자 지정 작업창이 표시되도록 설정  
+ 기본적으로 작업창은 표시되지 않습니다. 작업창을 표시 하려면 설정 해야 합니다는 <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> 속성을 **true**합니다.  
   
- Users can close a task pane at any time by clicking the **Close** button (X) in the corner of the task pane. However, there is no default way for users to open the custom task pane again. If a user closes a custom task pane, that user cannot view the custom task pane again unless you provide a way to display it.  
+ 사용자가 클릭 하 여 언제 든 지 작업창을 닫을 수는 **닫습니다** 작업창의 모퉁이에 있는 단추 (X). 그러나 사용자가 사용자 지정 작업창을 다시 열 수 있는 기본 방법은 없습니다. 표시할 방법을 제공하지 않는 한 사용자 지정 작업창을 닫은 사용자는 사용자 지정 작업창을 다시 볼 수 없습니다.  
   
- If you create a custom task pane in your VSTO Add-in, you should also create a UI element, such as a button, that users can click to display or hide your custom task pane. If you create a custom task pane in a Microsoft Office application that supports customizing the Ribbon, you can add a control group to the Ribbon with a button that displays or hides your custom task pane. For a walkthrough that demonstrates how to do this, see [Walkthrough: Synchronizing a Custom Task Pane with a Ribbon Button](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md).  
+ VSTO 추가 기능에서 사용자 지정 작업창을 만드는 경우 사용자가 사용자 지정 작업창을 표시하거나 숨기기 위해 클릭할 수 있는 UI 요소(예: 단추)도 만들어야 합니다. Microsoft Office 응용 프로그램에서 리본 메뉴 사용자 지정을 지원하는 사용자 지정 작업창을 만드는 경우 사용자 지정 작업창을 표시하거나 숨기는 단추를 사용하여 리본 메뉴에 컨트롤 그룹을 추가할 수 있습니다. 이 작업을 수행 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 사용자 지정 작업창과 리본 단추 동기화](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)합니다.  
   
- If you create a custom task pane in a Microsoft Office application that does not support customizing the Ribbon, you can add a <xref:Microsoft.Office.Core.CommandBarButton> that displays or hides your custom task pane.  
+ Microsoft Office 응용 프로그램에서 리본 메뉴 사용자 지정을 지원하지 않는 사용자 지정 작업창을 만드는 경우 사용자 지정 작업창을 표시하거나 숨기는 <xref:Microsoft.Office.Core.CommandBarButton>을 추가할 수 있습니다.  
   
-### <a name="modifying-the-appearance-of-the-task-pane"></a>Modifying the Appearance of the Task Pane  
- You can control the size and location of a custom task pane by using properties of the <xref:Microsoft.Office.Tools.CustomTaskPane> object. You can make many other changes to the appearance of a custom task pane by using properties of the <xref:System.Windows.Forms.UserControl> object that is contained in the custom task pane. For example, you can specify a background image for a custom task pane by using the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property of the user control.  
+### <a name="modifying-the-appearance-of-the-task-pane"></a>작업창의 모양 수정  
+ <xref:Microsoft.Office.Tools.CustomTaskPane> 개체의 속성을 사용하여 사용자 지정 작업창의 크기와 위치를 제어할 수 있습니다. 사용자 지정 작업창에 포함된 <xref:System.Windows.Forms.UserControl> 개체의 속성을 사용하여 사용자 지정 작업창의 모양에 대해 다른 여러 변경을 수행할 수 있습니다. 예를 들어 사용자 정의 컨트롤의 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 속성을 사용하여 사용자 지정 작업창에 대한 배경 이미지를 지정할 수 있습니다.  
   
- The following table lists the changes you can make to a custom task pane by using <xref:Microsoft.Office.Tools.CustomTaskPane> properties.  
+ 다음 표에서는 <xref:Microsoft.Office.Tools.CustomTaskPane> 속성을 사용하여 사용자 지정 작업창에 대해 수행할 수 있는 변경 내용을 보여 줍니다.  
   
-|Task|Property|  
+|작업|속성|  
 |----------|--------------|  
-|To change the size of the task pane|<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A><br /><br /> <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>|  
-|To change the location of the task pane|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>|  
-|To hide the task pane or make it visible|<xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A>|  
-|To prevent the user from changing the location of the task pane|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionRestrict%2A>|  
+|작업창의 크기를 변경하려면|<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A><br /><br /> <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>|  
+|작업창의 위치를 변경하려면|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>|  
+|작업창을 숨기거나 표시되도록 설정하려면|<xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A>|  
+|사용자가 작업창의 위치를 변경할 수 없도록 하려면|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionRestrict%2A>|  
   
-### <a name="programming-custom-task-pane-events"></a>Programming Custom Task Pane Events  
- You might want your VSTO Add-in to respond when the user modifies the custom task pane. For example, if the user changes the orientation of the pane from vertical to horizontal, you might want to reposition the controls.  
+### <a name="programming-custom-task-pane-events"></a>사용자 지정 작업창 이벤트 프로그래밍  
+ 사용자가 사용자 지정 작업창을 수정할 때 VSTO 추가 기능에서 응답하도록 할 수도 있습니다. 예를 들어 사용자가 창의 방향을 세로에서 가로로 변경하는 경우 컨트롤의 위치를 변경하는 것이 좋습니다.  
   
- The following table lists the events that you can handle to respond to changes that the user makes to the custom task pane.  
+ 다음 표에서는 사용자 지정 작업창에 대한 사용자 변경 내용에 응답하기 위해 처리할 수 있는 이벤트를 보여 줍니다.  
   
-|Task|Event|  
+|작업|이벤트|  
 |----------|-----------|  
-|To respond when the user changes the location of the task pane.|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>|  
-|To respond when the user hides the task pane or makes it visible.|<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>|  
+|사용자가 작업창의 위치를 변경할 때 응답|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>|  
+|사용자 작업창을 숨기거나 표시되도록 설정할 때 응답|<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>|  
   
-## <a name="cleaning-up-resources-used-by-the-task-pane"></a>Cleaning Up Resources Used by the Task Pane  
- After you create a custom task pane, the <xref:Microsoft.Office.Tools.CustomTaskPane> object remains in memory as long as your VSTO Add-in is running. The object remains in memory even after the user clicks the **Close** button (X) in the corner of the task pane.  
+## <a name="cleaning-up-resources-used-by-the-task-pane"></a>작업창에서 사용하는 리소스 정리  
+ 사용자 지정 작업창을 만든 후 <xref:Microsoft.Office.Tools.CustomTaskPane> 개체는 VSTO 추가 기능이 실행되는 한 메모리에 유지됩니다. 사용자가 클릭 한 후에 개체가 메모리에 유지 됩니다는 **닫기** 작업창의 모퉁이에 있는 단추 (X).  
   
- To clean up resources used by the task pane while the VSTO Add-in is still running, use the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> or <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> methods. These methods remove the specified <xref:Microsoft.Office.Tools.CustomTaskPane> object from the `CustomTaskPanes` collection, and they call the <xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A> method of the object.  
+ VSTO 추가 기능이 계속 실행되는 동안 작업창에서 사용하는 리소스를 정리하려면 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> 또는 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> 메서드를 사용합니다. 이러한 메서드는 `CustomTaskPanes` 컬렉션에서 지정된 <xref:Microsoft.Office.Tools.CustomTaskPane> 개체를 제거하고 개체의 <xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A> 메서드를 호출합니다.  
   
- The [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] automatically cleans up resources used by the custom task pane when the VSTO Add-in is unloaded. Do not call the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> or <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> methods in the `ThisAddIn_Shutdown` event handler in your project. These methods will throw an <xref:System.ObjectDisposedException>, because the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] cleans up resources used by the <xref:Microsoft.Office.Tools.CustomTaskPane> object before `ThisAddIn_Shutdown` is called. For more information about `ThisAddIn_Shutdown`, see [Events in Office Projects](../vsto/events-in-office-projects.md)  
+ VSTO 추가 기능이 언로드되면 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서 사용자 지정 작업창이 사용하는 리소스를 자동으로 정리합니다. 호출 하지 마십시오는 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> 또는 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> 의 메서드는 `ThisAddIn_Shutdown` 프로젝트의 이벤트 처리기입니다. `ThisAddIn_Shutdown`이 호출되기 전에 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서 <xref:Microsoft.Office.Tools.CustomTaskPane> 개체가 사용하는 리소스를 정리하기 때문에 이러한 메서드에서 <xref:System.ObjectDisposedException>이 발생합니다. 에 대 한 자세한 내용은 `ThisAddIn_Shutdown`, 참조 [Office 프로젝트의 이벤트](../vsto/events-in-office-projects.md)  
   
-##  <a name="Managing"></a> Managing Custom Task Panes in Multiple Application Windows  
- When you create a custom task pane in an application that uses multiple windows to display documents and other items, you need to take extra steps to ensure that the task pane is visible when the user expects it to be.  
+##  <a name="Managing"></a>여러 응용 프로그램 창에서 사용자 지정 작업창 관리  
+ 응용 프로그램에서 여러 창을 사용하여 문서 및 기타 항목을 표시하는 사용자 지정 작업창을 만드는 경우 사용자가 예상하는 시기에 작업창이 표시되도록 추가 단계를 수행해야 합니다.  
   
- Custom task panes in all applications are associated with a document frame window, which presents a view of a document or item to the user. The task pane is visible only when the associated window is visible. However, not all applications use document frame windows the same way.  
+ 모든 응용 프로그램의 사용자 지정 작업창은 사용자에게 문서 또는 항목의 뷰를 제공하는 문서 프레임 창에 연결됩니다. 작업창은 연결된 창이 표시되는 경우에만 표시됩니다. 그러나 일부 응용 프로그램은 문서 프레임 창을 동일한 방식으로 사용합니다.  
   
- The following application groups have different development requirements:  
+ 다음 응용 프로그램 그룹에는 다양한 개발 요구 사항이 있습니다.  
   
 -   [Outlook](#Outlook)  
   
--   [Word, InfoPath, and PowerPoint](#WordAndInfoPath)  
+-   [Word, InfoPath 및 PowerPoint](#WordAndInfoPath)  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Manage Task Panes in Word VSTO Add-ins?](http://go.microsoft.com/fwlink/?LinkId=136781).  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 할까요?: 관리 작업창 Word VSTO 추가 기능에서?](http://go.microsoft.com/fwlink/?LinkId=136781)합니다.  
   
-##  <a name="Outlook"></a> Outlook  
- When you create a custom task pane for Outlook, the custom task pane is associated with a specific Explorer or Inspector window. Explorers are windows that display the contents of a folder, and Inspectors are windows that display an item such as an e-mail message or a task.  
+##  <a name="Outlook"></a>Outlook  
+ Outlook에 대한 사용자 지정 작업창을 만드는 경우 사용자 지정 작업창이 특정 탐색기 또는 검사기 창에 연결됩니다. 탐색기는 폴더 내용을 표시하는 창이고, 검사기는 메일 메시지 또는 작업과 같은 항목을 표시하는 창입니다.  
   
- If you want to display a custom task pane with multiple Explorer or Inspector windows, you need to create a new instance of the custom task pane when an Explorer or Inspector window opens. To do this, handle an event that is raised when an Explorer or Inspector window is created, and then create the task pane in the event handler. You can also handle Explorer and Inspector events to hide or display task panes depending on which window is visible.  
+ 여러 탐색기 또는 검사기 창이 포함된 사용자 지정 작업창을 표시하려는 경우 탐색기 또는 검사기 창이 열릴 때 사용자 지정 작업창의 새 인스턴스를 만들어야 합니다. 이렇게 하려면 탐색기 또는 검사기 창을 만들 때 발생하는 이벤트를 처리한 다음 이벤트 처리기에서 작업창을 만듭니다. 표시되는 창에 따라 탐색기 및 검사기 이벤트를 처리하여 작업창을 숨기거나 표시할 수도 있습니다.  
   
- To associate the task pane with a specific Explorer or Inspector, use the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> method to create the task pane, and pass the <xref:Microsoft.Office.Interop.Outlook.Explorer> or <xref:Microsoft.Office.Interop.Outlook.Inspector> object to the *window* parameter. For more information about creating custom task panes, see [Custom Task Panes Overview](../vsto/custom-task-panes.md).  
+ 작업창을 특정 탐색기 또는 검사기를 연결 하려면 사용는 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> 작업창을 만들고 전달 하는 메서드는 <xref:Microsoft.Office.Interop.Outlook.Explorer> 또는 <xref:Microsoft.Office.Interop.Outlook.Inspector> 개체는 *창* 매개 변수입니다. 사용자 지정 작업창을 만드는 방법에 대 한 자세한 내용은 참조 [사용자 지정 작업창 개요](../vsto/custom-task-panes.md)합니다.  
   
- For a walkthrough that demonstrates how to create a task pane for every e-mail message that is opened, see [Walkthrough: Displaying Custom Task Panes with E-Mail Messages in Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md).  
+ 열려 있는 모든 전자 메일 메시지에 대 한 작업창을 만드는 방법을 보여 주는 연습을 참조 하십시오. [연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업 창 표시](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)합니다.  
   
-### <a name="outlook-events"></a>Outlook Events  
- To monitor the state of Explorer windows, you can handle the following Explorer-related events:  
+### <a name="outlook-events"></a>Outlook 이벤트  
+ 탐색기 창의 상태를 모니터링하기 위해 탐색기와 관련된 다음 이벤트를 처리할 수 있습니다.  
   
 -   <xref:Microsoft.Office.Interop.Outlook.ExplorersEvents_Event.NewExplorer>  
   
@@ -165,7 +163,7 @@ ms.lasthandoff: 08/30/2017
   
 -   <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Deactivate>  
   
- To monitor the state of Inspector windows, you can handle the following Inspector-related events:  
+ 검사기 창의 상태를 모니터링하기 위해 검사기와 관련된 다음 이벤트를 처리할 수 있습니다.  
   
 -   <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>  
   
@@ -175,20 +173,20 @@ ms.lasthandoff: 08/30/2017
   
 -   <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Deactivate>  
   
-### <a name="preventing-multiple-instances-of-a-custom-task-pane-in-outlook"></a>Preventing Multiple Instances of a Custom Task Pane in Outlook  
- To prevent Outlook windows from displaying multiple instances of a custom task pane, explicitly remove the custom task pane from the `CustomTaskPanes` collection of the `ThisAddIn` class when each window is closed. Call the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> method in an event that is raised when a window is closed, such as <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close> or <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Close>.  
+### <a name="preventing-multiple-instances-of-a-custom-task-pane-in-outlook"></a>Outlook에서 사용자 지정 작업창의 여러 인스턴스 방지  
+ Outlook 창에 사용자 지정 작업창의 여러 인스턴스가 표시되지 않도록 하려면 각 창을 닫을 때 `ThisAddIn` 클래스의 `CustomTaskPanes` 컬렉션에서 사용자 지정 작업창을 명시적으로 제거합니다. 창을 닫을 때 발생하는 이벤트(예: <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close> 또는 <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Close>)에서 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> 메서드를 호출합니다.  
   
- If you do not explicitly remove the custom task pane, Outlook windows might display multiple instances of the custom task pane. Outlook sometimes recycles windows, and recycled windows retain references to any custom task panes that were attached to them.  
+ 사용자 지정 작업창을 명시적으로 제거하지 않는 경우 Outlook 창에 사용자 지정 작업창의 여러 인스턴스가 표시될 수도 있습니다. 경우에 따라 Outlook에서 창을 재활용하며, 재활용된 창은 연결된 사용자 지정 작업창에 대한 참조를 유지합니다.  
   
-##  <a name="WordAndInfoPath"></a> Word, InfoPath, and PowerPoint  
- Word, InfoPath, and PowerPoint display each document in a different document frame window. When you create a custom task pane for these applications, the custom task pane is associated only with a specific document. If the user opens a different document, the custom task pane is hidden until the earlier document is visible again.  
+##  <a name="WordAndInfoPath"></a>Word, InfoPath 및 PowerPoint  
+ Word, InfoPath 및 PowerPoint는 각 문서를 서로 다른 문서 프레임 창에서 표시합니다. 이러한 응용 프로그램에 대한 사용자 지정 작업창을 만드는 경우 사용자 지정 작업창이 특정 문서에만 연결됩니다. 사용자가 다른 문서를 여는 경우 이전 문서가 다시 표시될 때까지 사용자 지정 작업창이 숨겨집니다.  
   
- If you want to display a custom task pane with multiple documents, create a new instance of the custom task pane when the user creates a new document or opens an existing document. To do this, handle events that are raised when a document is created or opened, and then create the task pane in the event handlers. You can also handle document events to hide or display task panes depending on which document is visible.  
+ 여러 문서가 포함된 사용자 지정 작업창을 표시하려는 경우 사용자가 새 문서를 만들거나 기존 문서를 열 때 사용자 지정 작업창의 새 인스턴스를 만듭니다. 이렇게 하려면 문서를 만들거나 열 때 발생하는 이벤트를 처리한 다음 이벤트 처리기에서 작업창을 만듭니다. 표시되는 문서에 따라 문서 이벤트를 처리하여 작업창을 숨기거나 표시할 수도 있습니다.  
   
- To associate the task pane with a specific document window, use the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> method to create the task pane, and pass a <xref:Microsoft.Office.Interop.Word.Window> (for Word),  <xref:Microsoft.Office.Interop.InfoPath.WindowObject> (for InfoPath), or <xref:Microsoft.Office.Interop.PowerPoint.DocumentWindow> (for PowerPoint) to the *window* parameter.  
+ 작업창을 특정 문서 창에 연결 하려면 사용 된 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> 작업창을 만들고 전달 하는 메서드는 <xref:Microsoft.Office.Interop.Word.Window> (Word)에 대 한 <xref:Microsoft.Office.Interop.InfoPath.WindowObject> (InfoPath)에 대 한 또는 <xref:Microsoft.Office.Interop.PowerPoint.DocumentWindow> (PowerPoint)에 대 한를 *창*매개 변수입니다.  
   
-### <a name="word-events"></a>Word Events  
- To monitor the state of document windows in Word, you can handle the following events:  
+### <a name="word-events"></a>Word 이벤트  
+ Word에서 문서 창의 상태를 모니터링하기 위해 다음 이벤트를 처리할 수 있습니다.  
   
 -   <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeClose>  
   
@@ -200,8 +198,8 @@ ms.lasthandoff: 08/30/2017
   
 -   <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.WindowDeactivate>  
   
-### <a name="infopath-events"></a>InfoPath Events  
- To monitor the state of document windows in InfoPath, you can handle the following events:  
+### <a name="infopath-events"></a>InfoPath 이벤트  
+ InfoPath에서 문서 창의 상태를 모니터링하기 위해 다음 이벤트를 처리할 수 있습니다.  
   
 -   <xref:Microsoft.Office.Interop.InfoPath._ApplicationEvents_Event.NewXDocument>  
   
@@ -213,8 +211,8 @@ ms.lasthandoff: 08/30/2017
   
 -   <xref:Microsoft.Office.Interop.InfoPath._ApplicationEvents_Event.XDocumentOpen>  
   
-### <a name="powerpoint-events"></a>PowerPoint Events  
- To monitor the state of document windows in PowerPoint, you can handle the following events:  
+### <a name="powerpoint-events"></a>PowerPoint 이벤트  
+ PowerPoint에서 문서 창의 상태를 모니터링하기 위해 다음 이벤트를 처리할 수 있습니다.  
   
 -   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.AfterNewPresentation>  
   
@@ -228,9 +226,8 @@ ms.lasthandoff: 08/30/2017
   
 -   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.WindowDeactivate>  
   
-## <a name="see-also"></a>See Also  
- [How to: Add a Custom Task Pane to an Application](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
- [Walkthrough: Automating an Application from a Custom Task Pane](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)   
- [Walkthrough: Synchronizing a Custom Task Pane with a Ribbon Button](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   
- [Walkthrough: Displaying Custom Task Panes with E-Mail Messages in Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  
-
+## <a name="see-also"></a>참고 항목  
+ [방법: 응용 프로그램에 사용자 지정 작업창 추가](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
+ [연습: 사용자 지정 작업창에서 응용 프로그램 자동화](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)   
+ [연습:는 사용자 지정 작업창과 리본 단추 동기화](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   
+ [연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업창 표시](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  

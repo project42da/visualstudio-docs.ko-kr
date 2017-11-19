@@ -1,12 +1,10 @@
 ---
-title: Content Controls | Microsoft Docs
+title: "콘텐츠 컨트롤 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,148 +39,147 @@ helpviewer_keywords:
 - templates [Office development in Visual Studio], content controls
 - BuildingBlockGalleryContentControl class
 ms.assetid: ed59e522-dd6e-4c82-8d49-f5dbcfcc950d
-caps.latest.revision: 65
-author: kempb
-ms.author: kempb
+caps.latest.revision: "65"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b6c09c989a481dba36da5b7de05f3b47d7047a79
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 5b2950370b35eb8e2f60f15c5de032284c5546f3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="content-controls"></a>Content Controls
-  Content controls provide a way for you to design documents and templates that have these features:  
+# <a name="content-controls"></a>콘텐츠 컨트롤
+  콘텐츠 컨트롤은 다음과 같은 기능이 있는 문서와 템플릿을 디자인하는 방법을 제공합니다.  
   
--   A user interface (UI) that has controlled input like a form.  
+-   양식과 같은 제어된 입력이 있는 UI(사용자 인터페이스).  
   
--   Restrictions that prevent users from editing protected sections of the document or template. For more information, see [Protecting Parts of Documents by Using Content Controls](#Protection).  
+-   사용자가 문서 또는 템플릿의 보호된 섹션을 편집하지 못하도록 하는 제한. 자세한 내용은 참조 [콘텐츠 컨트롤을 사용 하 여 문서의 일부 보호](#Protection)합니다.  
   
--   Data binding to a data source. For more information, see [Binding Data to Content Controls](#DataBinding).  
+-   데이터 소스에 대한 데이터 바인딩. 자세한 내용은 참조 [콘텐츠 컨트롤에 데이터 바인딩](#DataBinding)합니다.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [Binding Data to Word 2007 Content Controls Using Visual Studio Tools for the Office System (3.0)](http://go.microsoft.com/fwlink/?LinkId=136785).  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [Word 2007 콘텐츠 컨트롤 사용 하 여 Visual Studio Tools for Office System (3.0)에 데이터 바인딩](http://go.microsoft.com/fwlink/?LinkId=136785)합니다.  
   
-## <a name="overview-of-content-controls"></a>Overview of Content Controls  
- Content controls provide a UI that is optimized for both user input and print. When you add a content control to a document, the control is identified by a border, a title, and temporary text that can provide instructions to the user. The border and the title of the control do not appear in printed versions of the document.  
+## <a name="overview-of-content-controls"></a>콘텐츠 컨트롤 개요  
+ 콘텐츠 컨트롤은 사용자 입력 및 인쇄 둘 다에 최적화된 UI를 제공합니다. 문서에 콘텐츠 컨트롤을 추가하는 경우 컨트롤은 테두리, 제목 및 사용자에게 지침을 제공할 수 있는 임시 텍스트로 식별됩니다. 컨트롤의 테두리와 제목은 인쇄 버전의 문서에 표시되지 않습니다.  
   
- For example, if you want the user to enter a date in a section of your document, you can add a date picker content control to the document. When users click the control, the standard date picker UI appears. You can also set properties of the control to set the regional calendar that is displayed and to specify the date format. After the user chooses a date, the UI of the control is hidden, and only the date appears if the user prints the document.  
+ 예를 들어 사용자가 문서의 구역에 날짜를 입력하게 하려는 경우 문서에 날짜 선택 콘텐츠 컨트롤을 추가할 수 있습니다. 사용자가 컨트롤을 클릭하면 표준 날짜 선택 UI가 나타납니다. 컨트롤의 속성을 설정하여 표시되는 지역별 달력을 설정하고 날짜 형식을 지정할 수도 있습니다. 사용자가 날짜를 선택하면 컨트롤의 UI가 숨겨지고 사용자가 문서를 인쇄할 경우 날짜만 나타납니다.  
   
- Content controls also help you do the following:  
+ 콘텐츠 컨트롤은 다음 작업을 수행하는 데에도 도움이 됩니다.  
   
--   Prevent users from editing or deleting parts of a document. This is useful if you have information in a document or template that users should be able to read but not edit, or if you want users to be able to edit content controls but not delete them.  
+-   사용자가 문서의 일부를 편집 또는 삭제하지 못하도록 합니다. 이 기능은 사용자가 읽을 수 있지만 편집할 수 없어야 하는 정보가 문서 또는 템플릿에 있는 경우 또는 사용자가 콘텐츠 컨트롤을 편집할 수 있지만 삭제할 수 없도록 하려는 경우에 유용합니다.  
   
--   Bind parts of a document or template to data. You can bind content controls to database fields, managed objects in the [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)], XML elements that are stored in the document, and other data sources.  
+-   문서 또는 템플릿 부분을 데이터에 바인딩합니다. 데이터베이스 필드, [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)]의 관리되는 개체, 문서에 저장된 XML 요소 및 기타 데이터 소스에 콘텐츠 컨트롤을 바인딩할 수 있습니다.  
   
- In document-level projects, you can add content controls to your document at design time or at run time. In VSTO Add-in projects, you can add content controls to any open document at run time. For more information, see [How to: Add Content Controls to Word Documents](../vsto/how-to-add-content-controls-to-word-documents.md).  
+ 문서 수준 프로젝트에서는 디자인 타임 또는 런타임에 콘텐츠 컨트롤을 문서에 추가할 수 있습니다. VSTO 추가 기능 프로젝트에서는 런타임에 열려 있는 임의 문서에 콘텐츠 컨트롤을 추가할 수 있습니다. 자세한 내용은 참조 [하는 방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)합니다.  
   
 > [!NOTE]  
->  You can use content controls only in documents that are saved in the Open XML Format. You cannot use content controls in documents that are saved in the Word 97-2003 document (.doc) format.  
+>  Open XML 형식으로 저장된 문서에서만 콘텐츠 컨트롤을 사용할 수 있습니다. Word 97-2003 문서(.doc) 형식으로 저장된 문서에서는 콘텐츠 컨트롤을 사용할 수 없습니다.  
   
-## <a name="types-of-content-controls"></a>Types of Content Controls  
- There are nine different types of content controls that you can add to documents. Most of the content controls have a corresponding type in the <xref:Microsoft.Office.Tools.Word> namespace. You can also use a generic <xref:Microsoft.Office.Tools.Word.ContentControl>, which can represent any of the available content controls. For a walkthrough that demonstrates how to use each of the available content controls, see [Walkthrough: Creating a Template By Using Content Controls](../vsto/walkthrough-creating-a-template-by-using-content-controls.md).  
+## <a name="types-of-content-controls"></a>콘텐츠 컨트롤 형식  
+ 문서에 추가할 수 있는 9가지 형식의 콘텐츠 컨트롤이 있습니다. 대부분의 콘텐츠 컨트롤은 <xref:Microsoft.Office.Tools.Word> 네임스페이스에 해당 형식이 있습니다. 사용 가능한 콘텐츠 컨트롤 중 하나를 나타낼 수 있는 제네릭 <xref:Microsoft.Office.Tools.Word.ContentControl>을 사용할 수도 있습니다. 각각의 사용 가능한 콘텐츠 컨트롤을 사용 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 템플릿을 사용 하 여 콘텐츠 컨트롤을 여 만들기](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)합니다.  
   
-### <a name="building-block-gallery"></a>Building Block Gallery  
- A building block gallery enables users to select from a list of *document building blocks* to insert into a document. A document building block is a piece of content that has been created to be used multiple times, such as a common cover page, a formatted table, or a header. For more information, see the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> type. For more information about building blocks, see [What's New for Developers in Word 2007](http://msdn.microsoft.com/en-us/74aa6688-65b3-4167-997d-131f26ad8f84).  
+### <a name="building-block-gallery"></a>문서 블록 갤러리  
+ 문서 블록 갤러리의 목록에서 선택할 수 있도록 *문서 블록* 는 문서에 삽입할 수 있습니다. 문서 블록은 일반적인 표지, 서식이 지정된 표 또는 머리글과 같이 여러 번 사용하기 위해 생성된 콘텐츠입니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> 형식을 참조하세요. 구성 요소에 대 한 자세한 내용은 참조 [Word 2007의 개발자를 위한 새로운](http://msdn.microsoft.com/en-us/74aa6688-65b3-4167-997d-131f26ad8f84)합니다.  
   
-### <a name="check-box"></a>Check Box  
- A check box provides a UI that represents a binary state: selected or cleared.  
+### <a name="check-box"></a>확인란  
+ 확인란은 이진 상태(선택됨 또는 선택 취소됨)를 나타내는 UI를 제공합니다.  
   
- Unlike the other types of content controls, the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] does not provide a specific type that represents a check box content control. In other words, there is no CheckBoxContentControl type. However, you can still create a check box content control by adding a generic <xref:Microsoft.Office.Tools.Word.ContentControl> to a document programmatically. For more information, see [Check Box Content Controls in Word Projects](#checkbox).  
+ 다른 형식의 콘텐츠 컨트롤과 달리 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]은 확인란 콘텐츠 컨트롤을 나타내는 특정 형식을 제공하지 않습니다. 즉, CheckBoxContentControl 형식이 있습니다. 그러나 프로그래밍 방식으로 문서에 제네릭 <xref:Microsoft.Office.Tools.Word.ContentControl>을 추가하여 확인란 콘텐츠 컨트롤을 만들 수 있습니다. 자세한 내용은 참조 [Word 프로젝트의 확인란 콘텐츠 컨트롤](#checkbox)합니다.  
   
 ### <a name="combo-box"></a>Combo Box  
- A combo box displays a list of items that users can select. Unlike a drop-down list, the combo box enables users to add their own items. For more information, see the <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> type.  
+ 콤보 상자에는 사용자가 선택할 수 있는 항목 목록이 표시됩니다. 드롭다운 목록과 달리 콤보 상자를 사용하면 사용자가 고유한 항목을 추가할 수 있습니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> 형식을 참조하세요.  
   
-### <a name="date-picker"></a>Date Picker  
- A date picker provides a calendar UI for selecting a date. The calendar appears when the end user clicks the drop-down arrow in the control. You can use regional calendars and different date formats. For more information, see the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> type.  
+### <a name="date-picker"></a>날짜 선택  
+ 날짜 선택은 날짜를 선택하기 위한 달력 UI를 제공합니다. 최종 사용자가 컨트롤에서 드롭다운 화살표를 클릭하면 달력이 나타납니다. 지역별 달력 및 다른 날짜 형식을 사용할 수 있습니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> 형식을 참조하세요.  
   
-### <a name="drop-down-list"></a>Drop-Down List  
- A drop-down list displays a list of items that users can select. Unlike a combo box, the drop-down list does not let users add or edit items. For more information, see the <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> type.  
+### <a name="drop-down-list"></a>드롭다운 목록  
+ 드롭다운 목록에는 사용자가 선택할 수 있는 항목 목록이 표시됩니다. 콤보 상자와 달리 드롭다운 목록에서는 사용자가 항목을 추가하거나 편집할 수 없습니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> 형식을 참조하세요.  
   
-### <a name="group"></a>Group  
- A group control defines a protected region of a document that users cannot edit or delete. A group control can contain any document items, such as text, tables, graphics, and other content controls. For more information, see the <xref:Microsoft.Office.Tools.Word.GroupContentControl> type.  
+### <a name="group"></a>그룹화  
+ 그룹 컨트롤은 사용자가 편집하거나 삭제할 수 없는 문서의 보호된 영역을 정의합니다. 그룹 컨트롤에는 텍스트, 표, 그래픽 및 기타 콘텐츠 컨트롤과 같은 모든 문서 항목이 포함될 수 있습니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.GroupContentControl> 형식을 참조하세요.  
   
 ### <a name="picture"></a>Picture  
- A picture control displays an image. You can specify the image at design time or run time, or users can click this control to select an image to insert in the document. For more information, see the <xref:Microsoft.Office.Tools.Word.PictureContentControl> type.  
+ 그림 컨트롤은 이미지를 표시합니다. 디자인 타임 또는 런타임에 이미지를 지정할 수 있거나, 사용자가 이 컨트롤을 클릭하여 문서에 삽입할 이미지를 선택할 수 있습니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.PictureContentControl> 형식을 참조하세요.  
   
-### <a name="rich-text"></a>Rich Text  
- A rich text control contains text or other items, such as tables, pictures, or other content controls. For more information, see the <xref:Microsoft.Office.Tools.Word.RichTextContentControl> type.  
+### <a name="rich-text"></a>서식 있는 텍스트  
+ 서식 있는 텍스트 컨트롤에는 텍스트 또는 표, 그림, 기타 콘텐츠 컨트롤과 같은 항목이 포함됩니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 형식을 참조하세요.  
   
-### <a name="plain-text"></a>Plain Text  
- A plain text control contains text. A plain text control cannot contain other items, such as tables, pictures, or other content controls. In addition, all of the text in a plain text control has the same formatting. For example, if you italicize one word of a sentence that is in a plain text control, all the text inside the control is italicized. For more information, see the <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> type.  
+### <a name="plain-text"></a>일반 텍스트  
+ 일반 텍스트 컨트롤에는 텍스트가 포함됩니다. 일반 텍스트 컨트롤에는 표, 그림, 기타 콘텐츠 컨트롤과 같은 항목이 포함될 수 없습니다. 또한 일반 텍스트 컨트롤의 모든 텍스트는 동일한 서식을 갖습니다. 예를 들어 일반 텍스트 컨트롤에 있는 문장의 한 단어를 기울임꼴로 표시하는 경우 컨트롤 안의 모든 텍스트가 기울임꼴로 표시됩니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> 형식을 참조하세요.  
   
-### <a name="generic-content-control"></a>Generic Content Control  
- A generic content control is a <xref:Microsoft.Office.Tools.Word.ContentControl> object that can represent any of the available types of content controls. You can change a <xref:Microsoft.Office.Tools.Word.ContentControl> object to behave like a different type of content control by using the <xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A> property. For example, if you create a <xref:Microsoft.Office.Tools.Word.ContentControl> object that represents a plain text control, you can change it at run time so that it behaves like a combo box.  
+### <a name="generic-content-control"></a>제네릭 콘텐츠 컨트롤  
+ 제네릭 콘텐츠 컨트롤은 사용 가능한 콘텐츠 컨트롤 형식 중 하나를 나타낼 수 있는 <xref:Microsoft.Office.Tools.Word.ContentControl> 개체입니다. <xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A> 속성을 사용하여 다른 콘텐츠 컨트롤 형식처럼 동작하도록 <xref:Microsoft.Office.Tools.Word.ContentControl> 개체를 변경할 수 있습니다. 예를 들어 일반 텍스트 컨트롤을 나타내는 <xref:Microsoft.Office.Tools.Word.ContentControl> 개체를 만드는 경우 콤보 상자처럼 동작하도록 런타임에 변경할 수 있습니다.  
   
- You can create <xref:Microsoft.Office.Tools.Word.ContentControl> objects only at run time, not at design time. For more information, see [How to: Add Content Controls to Word Documents](../vsto/how-to-add-content-controls-to-word-documents.md).  
+ <xref:Microsoft.Office.Tools.Word.ContentControl> 개체는 런타임에만 만들 수 있고 디자인 타임에는 만들 수 없습니다. 자세한 내용은 참조 [하는 방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)합니다.  
   
-## <a name="common-features-of-content-controls"></a>Common Features of Content Controls  
- Most content controls share a set of members that you can use to perform common tasks. The following table describes some of the tasks that you can perform by using these members.  
+## <a name="common-features-of-content-controls"></a>콘텐츠 컨트롤의 일반적인 기능  
+ 대부분의 콘텐츠 컨트롤은 일반적인 작업을 수행하는 데 사용할 수 있는 일련의 멤버를 공유합니다. 다음 표에서는 이러한 멤버를 사용하여 수행할 수 있는 일부 작업을 설명합니다.  
   
-|For this task:|Do this:|  
+|작업|방법|  
 |--------------------|--------------|  
-|Get or set the text that is displayed in the control.|Use the **Text** property. **Note:**  The <xref:Microsoft.Office.Tools.Word.PictureContentControl> and <xref:Microsoft.Office.Tools.Word.ContentControl> types do not have this property.|  
-|Get or set the temporary text that is displayed in the control until a user edits the control, the control is populated with data from a data source, or the control's contents are deleted.|Use the **PlaceholderText** property. **Note:**  The <xref:Microsoft.Office.Tools.Word.PictureContentControl> type does not have this property.|  
-|Get or set the title that is displayed in the border of the content control when the user clicks it.|Use the **Title** property.|  
-|Remove the control from the document automatically after the user edits the control. (The text in the control remains in the document.)|Use the **Temporary** property.|  
-|Run code when the user clicks in the content control, or when the cursor is moved into the content control programmatically.|Handle the <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> event of the control.|  
-|Run code when the user clicks outside the content control, or when the cursor is moved outside the content control programmatically.|Handle the <xref:Microsoft.Office.Tools.Word.ContentControlBase.Exiting> event of the control.|  
-|Run code after the content control is added to the document as a result of a redo or undo operation.|Handle the <xref:Microsoft.Office.Tools.Word.ContentControlBase.Added> event of the control.|  
-|Run code just before the content control is deleted from the document.|Handle the <xref:Microsoft.Office.Tools.Word.ContentControlBase.Deleting> event of the control.|  
+|컨트롤에 표시되는 텍스트를 가져오거나 설정합니다.|사용 하 여 **텍스트** 속성입니다. **참고:** 는 <xref:Microsoft.Office.Tools.Word.PictureContentControl> 및 <xref:Microsoft.Office.Tools.Word.ContentControl> 형식이이 속성이 필요는 없습니다.|  
+|사용자가 컨트롤을 편집하거나, 컨트롤이 데이터 소스의 데이터로 채워지거나, 컨트롤의 내용이 삭제될 때까지 컨트롤에 표시되는 임시 텍스트를 가져오거나 설정합니다.|사용 하 여 **PlaceholderText** 속성입니다. **참고:** 는 <xref:Microsoft.Office.Tools.Word.PictureContentControl> 형식이이 속성이 되어 있지 않습니다.|  
+|사용자가 클릭할 때 콘텐츠 컨트롤의 테두리에 표시되는 제목을 가져오거나 설정합니다.|사용 하 여 **제목** 속성입니다.|  
+|사용자 컨트롤을 편집한 후 자동으로 문서에서 컨트롤을 제거합니다. 컨트롤의 텍스트는 문서에 남아 있습니다.|사용 하 여 **임시** 속성입니다.|  
+|사용자가 콘텐츠 컨트롤을 클릭하거나 커서가 프로그래밍 방식으로 콘텐츠 컨트롤로 이동할 때 코드를 실행합니다.|컨트롤의 <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> 이벤트를 처리합니다.|  
+|사용자가 콘텐츠 컨트롤 바깥쪽을 클릭하거나 커서가 프로그래밍 방식으로 콘텐츠 컨트롤 바깥쪽으로 이동할 때 코드를 실행합니다.|컨트롤의 <xref:Microsoft.Office.Tools.Word.ContentControlBase.Exiting> 이벤트를 처리합니다.|  
+|다시 실행 또는 실행 취소 작업의 결과로 콘텐츠 컨트롤이 문서에 추가된 후 코드를 실행합니다.|컨트롤의 <xref:Microsoft.Office.Tools.Word.ContentControlBase.Added> 이벤트를 처리합니다.|  
+|문서에서 콘텐츠 컨트롤이 삭제되기 바로 전에 코드를 실행합니다.|컨트롤의 <xref:Microsoft.Office.Tools.Word.ContentControlBase.Deleting> 이벤트를 처리합니다.|  
   
-##  <a name="Protection"></a> Protecting Parts of Documents By Using Content Controls  
- When you protect a part of a document, you prevent users from changing or deleting the content in that part of the document. There are several ways you can protect parts of a document by using content controls.  
+##  <a name="Protection"></a>콘텐츠 컨트롤을 사용 하 여 문서 부분 보호  
+ 문서의 일부를 보호하는 경우 사용자가 문서의 해당 부분에서 내용을 변경하거나 삭제하지 못하도록 합니다. 콘텐츠 컨트롤을 사용하여 문서 부분을 보호할 수 있는 여러 가지 방법이 있습니다.  
   
- If the area you want to protect is inside a content control, you can use properties of the content control to prevent users from editing or deleting the control:  
+ 보호하려는 영역이 콘텐츠 컨트롤 안에 있는 경우 콘텐츠 컨트롤의 속성을 사용하여 사용자가 컨트롤을 편집 또는 삭제하지 못하도록 할 수 있습니다.  
   
--   The **LockContents** property prevents users from editing the contents.  
+-   **LockContents** 내용을 편집 하 여 사용자가 방지 하는 속성입니다.  
   
--   The **LockContentControl** property prevents users from deleting the control.  
+-   **LockContentControl** 속성을 사용자가 컨트롤을 삭제 하지 않습니다.  
   
- If the area you want to protect is not inside a content control, or if you want to protect an area that contains content controls and other types of content, you can put the whole area in a <xref:Microsoft.Office.Tools.Word.GroupContentControl>. Unlike other content controls, a <xref:Microsoft.Office.Tools.Word.GroupContentControl> provides no UI that is visible to the user. Its only purpose is to define a region that users cannot edit.  
+ 보호하려는 영역이 콘텐츠 컨트롤 안에 없거나 콘텐츠 컨트롤 및 다른 형식의 콘텐츠를 포함하는 영역을 보호하려는 경우 <xref:Microsoft.Office.Tools.Word.GroupContentControl>에 전체 영역을 넣을 수 있습니다. 다른 콘텐츠 컨트롤과 달리 <xref:Microsoft.Office.Tools.Word.GroupContentControl>은 사용자에게 표시되는 UI를 제공하지 않습니다. 사용자가 편집할 수 없는 영역을 정의하는 용도로만 사용됩니다.  
   
 > [!NOTE]  
->  If you create a <xref:Microsoft.Office.Tools.Word.GroupContentControl> that contains embedded content controls, the embedded content controls are not automatically protected. You must use the **LockContents** property of each embedded control to prevent users from editing their contents.  
+>  포함된 콘텐츠 컨트롤을 포함하는 <xref:Microsoft.Office.Tools.Word.GroupContentControl>을 만드는 경우 포함된 콘텐츠 컨트롤은 자동으로 보호되지 않습니다. 사용 해야 합니다는 **LockContents** 각 속성에 포함 된 사용자가 내용을 편집 하지 못하도록는 컨트롤입니다.  
   
- For more information about how to use content controls to protect parts of documents, see [How to: Protect Parts of Documents by Using Content Controls](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).  
+ 콘텐츠 컨트롤을 사용 하 여 문서 부분 보호 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 문서 부분 보호 콘텐츠 컨트롤을 사용 하 여](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)합니다.  
   
-##  <a name="DataBinding"></a> Binding Data to Content Controls  
- You can display data in documents by binding a content control to a data source. When the data source is updated, the content control reflects the changes. You can also save changes back to the data source.  
+##  <a name="DataBinding"></a>콘텐츠 컨트롤에 데이터 바인딩  
+ 데이터 소스에 콘텐츠 컨트롤을 바인딩하여 문서의 데이터를 표시할 수 있습니다. 데이터 소스가 업데이트되면 콘텐츠 컨트롤에 변경 내용이 반영됩니다. 변경 내용을 데이터 소스에 다시 저장할 수도 있습니다.  
   
- Content controls provide the following data binding options:  
+ 콘텐츠 컨트롤은 다음과 같은 데이터 바인딩 옵션을 제공합니다.  
   
--   You can bind content controls to database fields or managed objects by using the same data binding model as Windows Forms.  
+-   Windows Forms과 동일한 데이터 바인딩 모델을 사용하여 데이터베이스 필드 또는 관리되는 개체에 콘텐츠 컨트롤을 바인딩할 수 있습니다.  
   
--   You can bind content controls to elements in pieces of XML (also named *custom XML parts*) that are embedded in the document.  
+-   요소 XML 부분에 콘텐츠 컨트롤을 바인딩할 수 있습니다 (이 라고도 함 *사용자 지정 XML 부분*) 문서에 포함 된 합니다.  
   
- For an overview of binding host controls in Office solutions to data, see [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md).  
+ Office 솔루션에서 호스트 컨트롤에서 데이터 바인딩 개요를 참조 하십시오. [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)합니다.  
   
-### <a name="using-the-windows-forms-data-binding-model"></a>Using the Windows Forms Data Binding Model  
- Most content controls support the simple data binding model that Windows Forms uses. Simple data binding means that a control is bound to a single data element, such as a value in a column of a data table. For more information, see [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms).  
+### <a name="using-the-windows-forms-data-binding-model"></a>Windows Forms 데이터 바인딩 모델 사용  
+ 대부분의 콘텐츠 컨트롤은 Windows Forms에서 사용하는 단순 데이터 바인딩 모델을 지원합니다. 단순 데이터 바인딩은 컨트롤이 데이터 테이블의 열 값과 같은 단일 데이터 요소에 바인딩됨을 의미합니다. 자세한 내용은 [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)을 참조하세요.  
   
- In document-level projects, you can bind data to content controls by using the **Data Sources** window in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. For more information about how to add data-bound content controls to documents, see [How to: Populate Documents with Data from a Database](../vsto/how-to-populate-documents-with-data-from-a-database.md) and [How to: Populate Documents with Data from Objects](../vsto/how-to-populate-documents-with-data-from-objects.md).  
+ 문서 수준 프로젝트에서 데이터 바인딩할 수 있습니다 콘텐츠 컨트롤에 사용 하 여는 **데이터 원본** 창을 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다. 문서에 데이터 바인딩된 콘텐츠 컨트롤을 추가 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 데이터베이스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-a-database.md) 및 [하는 방법: 개체의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-objects.md)합니다.  
   
- The following table lists the content controls that you can bind to each data type in the **Data Sources** window.  
+ 다음 표에서 각 데이터 형식에 바인딩할 수 있는 콘텐츠 컨트롤은 **데이터 소스** 창.  
   
-|Data type|Default content control|Other content controls that can be bound to this data type|  
+|데이터 형식|기본 콘텐츠 컨트롤|이 데이터 형식에 바인딩할 수 있는 기타 콘텐츠 컨트롤|  
 |---------------|-----------------------------|----------------------------------------------------------------|  
 |<xref:System.Boolean><br /><br /> <xref:System.Byte><br /><br /> <xref:System.Char><br /><br /> <xref:System.Double><br /><br /> <xref:System.Enum><br /><br /> <xref:System.Guid><br /><br /> <xref:System.Int16><br /><br /> <xref:System.Int32><br /><br /> <xref:System.Int64><br /><br /> <xref:System.SByte><br /><br /> <xref:System.Single><br /><br /> <xref:System.String><br /><br /> <xref:System.TimeSpan><br /><br /> <xref:System.UInt16><br /><br /> <xref:System.UInt32><br /><br /> <xref:System.UInt64>|<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>|<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.DatePickerContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.RichTextContentControl>|  
 |<xref:System.DateTime>|<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>|<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.PlainTextContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.RichTextContentControl>|  
-|<xref:System.Drawing.Image><br /><br /> <xref:System.Byte> array|<xref:Microsoft.Office.Tools.Word.PictureContentControl>|None|  
+|<xref:System.Drawing.Image><br /><br /> <xref:System.Byte> 배열|<xref:Microsoft.Office.Tools.Word.PictureContentControl>|없음|  
   
- In document-level and VSTO Add-in projects, you can bind a content control to a data source programmatically by using the <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> method of the <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> property of the control. If you do this, pass in the string **Text** to the *propertyName* parameter of the <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> method. The **Text** property is the default data binding property of content controls.  
+ 문서 수준 및 VSTO 추가 기능 프로젝트에서 컨트롤 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 속성의 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 메서드를 사용하여 프로그래밍 방식으로 콘텐츠 컨트롤을 데이터 소스에 바인딩할 수 있습니다. 이 작업을 수행 하는 경우 문자열에 전달 **텍스트** 에 *propertyName* 의 매개 변수는 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 메서드. **텍스트** 속성은 콘텐츠 컨트롤의 기본 데이터 바인딩 속성입니다.  
   
- Content controls also support two-way data binding, in which changes in the control are updated to the data source. For more information, see [How to: Update a Data Source with Data from a Host Control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).  
+ 또한 콘텐츠 컨트롤은 컨트롤의 변경 내용이 데이터 소스에 업데이트되는 양방향 데이터 바인딩을 지원합니다. 자세한 내용은 [How to: Update a Data Source with Data from a Host Control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)을 참조하세요.  
   
 > [!NOTE]  
->  Content controls do not support complex data binding. If you bind a <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> or <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> to a data source by using the Windows Forms data model, users will see only a single value when they click the control. If you want to bind these controls to a set of data values that users can choose from, you can bind these controls to elements in a custom XML part.  
+>  콘텐츠 컨트롤은 복잡한 데이터 바인딩을 지원하지 않습니다. Windows Forms 데이터 모델을 사용하여 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> 또는 <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>을 데이터 소스에 바인딩하는 경우 사용자가 컨트롤을 클릭하면 단일 값만 표시됩니다. 사용자가 선택할 수 있는 데이터 값 집합에 이러한 컨트롤을 바인딩하려는 경우 사용자 지정 XML 부분의 요소에 해당 컨트롤을 바인딩할 수 있습니다.  
   
-### <a name="binding-content-controls-to-custom-xml-parts"></a>Binding Content Controls to Custom XML Parts  
- You can bind some content controls to elements in custom XML parts that are embedded in the document. For more information about custom XML parts, see [Custom XML Parts Overview](../vsto/custom-xml-parts-overview.md).  
+### <a name="binding-content-controls-to-custom-xml-parts"></a>콘텐츠 컨트롤을 사용자 지정 XML 부분에 바인딩  
+ 문서에 포함된 사용자 지정 XML 부분의 요소에 일부 콘텐츠 컨트롤을 바인딩할 수 있습니다. 사용자 지정 XML 부분에 대 한 자세한 내용은 참조 [사용자 지정 XML 부분 개요](../vsto/custom-xml-parts-overview.md)합니다.  
   
- To bind a content control to an element in a custom XML part, use the **XMLMapping** property of the control. The following code example demonstrates how to bind a <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> to the `Price` element under the `Product` node in a custom XML part that has already been added to the document.  
+ 사용 하 여 사용자 지정 XML 부분의 요소에 콘텐츠 컨트롤을 바인딩하는 **XMLMapping** 컨트롤의 속성입니다. 다음 코드 예제에서는 이미 문서에 추가된 사용자 지정 XML 부분에서 `Product` 노드 아래의 `Price` 요소에 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>을 바인딩하는 방법을 보여 줍니다.  
   
 ```vb  
 plainTextContentControl1.XMLMapping.SetMapping("/Product/Price")  
@@ -192,11 +189,11 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price")
 plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, null);  
 ```  
   
- For a walkthrough that demonstrates how to bind content controls to custom XML parts in more detail, see [Walkthrough: Binding Content Controls to Custom XML Parts](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md).  
+ 더 자세히 사용자 지정 XML 부분에 콘텐츠 컨트롤을 바인딩하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 사용자 지정 XML 부분에 콘텐츠 컨트롤 바인딩](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)합니다.  
   
- When you bind a content control to a custom XML part, two-way data binding is automatically enabled. If a user edits text in the control, the corresponding XML elements are automatically updated. Similarly, if element values in the custom XML parts are changed, the content controls that are bound to the XML elements will display the new data.  
+ 사용자 지정 XML 부분에 콘텐츠 컨트롤을 바인딩하는 경우 양방향 데이터 바인딩이 자동으로 사용됩니다. 사용자가 컨트롤의 텍스트를 편집하는 경우 해당 XML 요소가 자동으로 업데이트됩니다. 마찬가지로, 사용자 지정 XML 부분의 요소 값이 변경되는 경우 XML 요소에 바인딩된 콘텐츠 컨트롤에 새 데이터가 표시됩니다.  
   
- You can bind the following types of content controls to custom XML parts:  
+ 사용자 지정 XML 부분에 다음과 같은 형식의 콘텐츠 컨트롤을 바인딩할 수 있습니다.  
   
 -   <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>  
   
@@ -208,43 +205,43 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
   
 -   <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>  
   
-### <a name="data-binding-events-for-content-controls"></a>Data Binding Events for Content Controls  
- All content controls provide a set of events that you can handle to perform data-related tasks, such as validating that the text in a control meets certain criteria before the data source is updated. The following table lists the content control events that are related to data binding.  
+### <a name="data-binding-events-for-content-controls"></a>콘텐츠 컨트롤에 대한 데이터 바인딩 이벤트  
+ 모든 콘텐츠 컨트롤은 데이터 소스가 업데이트되기 전에 컨트롤의 텍스트가 특정 조건을 충족하는지 확인하는 작업과 같은 데이터 관련 작업을 수행하기 위해 처리할 수 있는 이벤트 집합을 제공합니다. 다음 표에서는 데이터 바인딩과 관련된 콘텐츠 컨트롤 이벤트를 보여 줍니다.  
   
-|Task|Event|  
+|작업|이벤트|  
 |----------|-----------|  
-|Run code just before Word automatically updates the text in a content control that is bound to a custom XML part.|<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>|  
-|Run code just before Word automatically updates data in a custom XML part that is bound to a content control (that is, after the text in the content control changes).|<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>|  
-|Run your own code to validate the contents of the control according to custom criteria.|<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>|  
-|Run code after the contents of the control have been successfully validated.|<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validated>|  
+|Word에서 사용자 지정 XML 부분에 바인딩된 콘텐츠 컨트롤의 텍스트를 자동으로 업데이트하기 바로 전에 코드를 실행합니다.|<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>|  
+|Word에서 콘텐츠 컨트롤에 바인딩된 사용자 지정 XML 부분의 데이터를 자동으로 업데이트하기 바로 전, 즉 콘텐츠 컨트롤의 텍스트가 변경된 후에 코드를 실행합니다.|<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>|  
+|사용자 지정 조건에 따라 컨트롤 내용의 유효성을 검사하는 사용자 고유의 코드를 실행합니다.|<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>|  
+|컨트롤 내용의 유효성 검사가 성공적으로 완료된 후에 코드를 실행합니다.|<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validated>|  
   
-## <a name="limitations-of-content-controls"></a>Limitations of Content Controls  
- When you use content controls in your Office projects, be aware of the following limitations.  
+## <a name="limitations-of-content-controls"></a>콘텐츠 컨트롤의 제한 사항  
+ Office 프로젝트에서 콘텐츠 컨트롤을 사용하는 경우 다음과 같은 제한 사항에 주의하세요.  
   
-### <a name="behavior-differences-between-design-time-and-run-time"></a>Behavior Differences Between Design Time and Run Time  
- Many of the limitations that Microsoft Office Word imposes on content controls at run time are not enforced at design time. When you design the UI of a document-level solution in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], be sure to modify content controls only in ways that are supported at run time.  
+### <a name="behavior-differences-between-design-time-and-run-time"></a>디자인 타임 및 런타임 간의 동작 차이  
+ Microsoft Office Word에서 런타임에 콘텐츠 컨트롤에 적용하는 제한 사항은 대부분 디자인 타임에 적용되지 않습니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 문서 수준 솔루션의 UI를 디자인하는 경우 런타임에 지원되는 방식으로만 콘텐츠 컨트롤을 수정해야 합니다.  
   
- If you modify a content control at design time in a way that the control does not support at run time, the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer will not alert you of the unsupported changes. However, when you debug or run the project, or if you save and then reopen the project, Word will display an error message and request permission to repair the document. When you repair the document, Word removes all unsupported content and formatting from the control.  
+ 런타임에 컨트롤이 지원하지 않는 방법으로 디자인 타임에 콘텐츠 컨트롤을 수정하는 경우 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너에서 지원되지 않는 변경 내용을 경고하지 않습니다. 그러나 프로젝트를 디버그 또는 실행하거나 프로젝트를 저장한 후 다시 여는 경우 Word에서 오류 메시지를 표시하고 문서를 복구할 수 있는 권한을 요청합니다. 문서를 복구하면 컨트롤에서 지원되지 않는 콘텐츠 및 서식이 모두 제거됩니다.  
   
- For example, Word does not prevent you from adding a table to a <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> at design time. However, because <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> objects cannot contain tables at run time, Word will display an error message when the document is opened.  
+ 예를 들어 Word에서 디자인 타임에 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>에 표를 추가하지 못하도록 차단하지는 않습니다. 그러나 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> 개체는 런타임에 표를 포함할 수 없으므로 Word에서 문서를 열 때 오류 메시지가 표시됩니다.  
   
- Also note that many properties that define the behavior of content controls have no effect at design time. For example, if you set the **LockContents** property of a content control to **True** at design time, you can still edit text in the control in the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer. This property only prevents users from editing the control at run time.  
+ 또한 콘텐츠 컨트롤의 동작을 정의하는 많은 속성은 디자인 타임에 영향을 주지 않습니다. 예를 들어, 설정 하는 경우는 **LockContents** 에 콘텐츠 컨트롤의 속성 **True** 디자인 타임에 여전히의 컨트롤에 텍스트를 편집할 수는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너입니다. 이 속성은 런타임에 사용자가 컨트롤을 편집하지 못하도록 하는 역할만 합니다.  
   
-### <a name="event-limitations"></a>Event Limitations  
- Content controls do not provide an event that is raised when the user changes text or other items in the control. For example, there is no event that is raised when a user selects a different item in a <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> or <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>.  
+### <a name="event-limitations"></a>이벤트 제한 사항  
+ 콘텐츠 컨트롤은 사용자가 컨트롤의 텍스트 또는 기타 항목을 변경할 때 발생하는 이벤트를 제공하지 않습니다. 예를 들어 사용자가 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> 또는 <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>에서 다른 항목을 선택할 때 발생하는 이벤트가 없습니다.  
   
- To determine when a user edits the contents of a content control, you can bind the control to a custom XML part, and then handle the <xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating> event. This event is raised when the user changes the contents of a control that is bound to a custom XML part. For a walkthrough that demonstrates how to bind a content control to a custom XML part, see [Walkthrough: Binding Content Controls to Custom XML Parts](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md).  
+ 사용자가 콘텐츠 컨트롤의 내용을 편집하는 시기를 확인하기 위해 사용자 지정 XML 부분에 컨트롤을 바인딩한 다음 <xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating> 이벤트를 처리할 수 있습니다. 이 이벤트는 사용자가 사용자 지정 XML 부분에 바인딩된 컨트롤의 내용을 변경할 때 발생합니다. 사용자 지정 XML 부분에 콘텐츠 컨트롤을 바인딩하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 사용자 지정 XML 부분에 콘텐츠 컨트롤 바인딩](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)합니다.  
   
-###  <a name="checkbox"></a> Check Box Content Controls in Word Projects  
- Word 2010 introduced a new type of content control that represents a check box. However, the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] does not provide a corresponding CheckBoxContentControl type for you to use in Office projects. To create a check box content control in a [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] or Word 2010 project, use the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A> method to create a <xref:Microsoft.Office.Tools.Word.ContentControl> object, and pass the <xref:Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox> value to the method to specify a check box content control. The following code example demonstrates how to do this.  
+###  <a name="checkbox"></a>Word 프로젝트의 확인란 콘텐츠 컨트롤  
+ Word 2010에서는 확인란을 나타내는 새로운 형식의 콘텐츠 컨트롤이 도입되었습니다. 그러나는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Office 프로젝트에서 사용할 수 있는 해당 CheckBoxContentControl 형식을 제공 하지 않습니다. [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] 또는 Word 2010 프로젝트에서 확인란 콘텐츠 컨트롤을 만들려면 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A> 메서드를 사용하여 <xref:Microsoft.Office.Tools.Word.ContentControl> 개체를 만들고 <xref:Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox> 값을 메서드에 전달하여 확인란 콘텐츠 컨트롤을 지정합니다. 다음 코드 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.  
   
- [!code-vb[Trin_ContentControlReference#800](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb#800)] [!code-csharp[Trin_ContentControlReference#800](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs#800)]  
+ [!code-vb[Trin_ContentControlReference#800](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb#800)]
+ [!code-csharp[Trin_ContentControlReference#800](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs#800)]  
   
-## <a name="see-also"></a>See Also  
- [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md)   
- [How to: Add Content Controls to Word Documents](../vsto/how-to-add-content-controls-to-word-documents.md)   
- [Walkthrough: Creating a Template By Using Content Controls](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)   
- [Data in Office Solutions](../vsto/data-in-office-solutions.md)   
- [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
-
+## <a name="see-also"></a>참고 항목  
+ [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
+ [방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)   
+ [연습: 콘텐츠 컨트롤을 사용 하 여 서식 파일 만들기](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)   
+ [Office 솔루션의 데이터](../vsto/data-in-office-solutions.md)   
+ [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  

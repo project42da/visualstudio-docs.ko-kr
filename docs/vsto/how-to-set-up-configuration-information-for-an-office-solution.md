@@ -1,52 +1,54 @@
 ---
-title: "방법: Office 솔루션의 구성 정보 설정"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "구성 파일[Visual Studio에서 Office 개발]"
-  - "솔루션[Visual Studio에서 Office 개발], 구성 파일"
+title: "방법: Office 솔루션에 대 한 구성 정보를 설정 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- solutions [Office development in Visual Studio], configuration files
+- configuration files [Office development in Visual Studio]
 ms.assetid: f123838f-957a-4cf5-acc0-0cc0f4c2aea2
-caps.latest.revision: 33
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a8c2e0a904ad3cdbef3e70072d263cc26274de52
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: Office 솔루션의 구성 정보 설정
-  구성 파일을 사용하여 Office 솔루션과 관련된 설정을 구성하고  어셈블리 바인딩 정책, 원격 개체, 디버그 및 추적 설정 등의 설정을 지정할 수 있습니다.  
+# <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>방법: Office 솔루션의 구성 정보 설정
+  Office 솔루션에 관련 된 설정을 구성 하려면 구성 파일을 사용할 수 있습니다. 어셈블리 바인딩 정책, 원격 개체, debug 및 추적 설정 등 설정을 지정할 수 있습니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-### Office 프로젝트에 구성 파일을 추가하려면  
+### <a name="to-add-a-configuration-file-to-your-office-project"></a>Office 프로젝트에 구성 파일을 추가 하려면  
   
 1.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
   
-2.  **범주** 창에서 **일반**을 클릭합니다.  
+2.  에 **범주** 창에서 클릭 **일반**합니다.  
   
-3.  **템플릿** 창에서 **응용 프로그램 구성 파일**을 선택합니다.  
+3.  에 **템플릿** 창 선택 **응용 프로그램 구성 파일**합니다.  
   
-4.  **이름** 상자에서 어셈블리와 동일한 이름에 확장명 .config를 붙여 입력합니다.  예를 들어, ExcelWorkbook1.dll이라는 Excel 프로젝트 어셈블리에 대한 구성 파일의 이름은 ExcelWorkbook1.dll.config로 지정됩니다.  
+4.  에 **이름** 확장명.config 어셈블리와 같은 이름을 입력 합니다. 예를 들어 ExcelWorkbook1.dll 라는 Excel 프로젝트 어셈블리에 대 한 구성 파일 이름이 ExcelWorkbook1.dll.config 합니다.  
   
 5.  **추가**를 클릭합니다.  
   
-6.  응용 프로그램 구성 파일 스키마에 따라 구성 파일을 만듭니다.  자세한 내용은 [.NET Framework의 구성 파일 스키마](http://msdn.microsoft.com/library/69003d39-dc8a-460c-a6be-e6d93e690b38)을 참조하십시오.  
+6.  응용 프로그램 구성 파일 스키마에 따라 구성 파일을 만듭니다. 자세한 내용은 참조 [.NET Framework에 대 한 구성 파일 스키마](/dotnet/framework/configure-apps/file-schema/index)합니다.  
   
- Office 프로젝트에서 구성 파일을 사용하는 경우 특별히 고려할 사항이 없습니다.  
+ 구성 파일을 사용 하 여 Office 프로젝트를 사용 하는 것에 대 한 특별 한 고려 사항 없이 있습니다.  
   
-## 참고 항목  
- [.NET Framework의 구성 파일 스키마](http://msdn.microsoft.com/library/69003d39-dc8a-460c-a6be-e6d93e690b38)   
+## <a name="see-also"></a>참고 항목  
+ [.NET Framework에 대 한 구성 파일 스키마](/dotnet/framework/configure-apps/file-schema/index)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)   
  [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)  
   

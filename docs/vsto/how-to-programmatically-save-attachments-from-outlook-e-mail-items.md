@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Save Attachments from Outlook E-Mail Items | Microsoft Docs'
+title: "방법: 프로그래밍 방식으로 Outlook 전자 메일 항목의 첨부 파일을 저장 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,32 +17,31 @@ helpviewer_keywords:
 - mail items [Office development in Visual Studio], attachments
 - attachments [Office development in Visual Studio]
 ms.assetid: 2f05e2bb-ae4f-407c-a6da-a3b1a4c31ab3
-caps.latest.revision: 23
-author: kempb
-ms.author: kempb
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 860e0506aebbeeaa1829cf052cc1dbc87685c3fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 50673163fdbdd1c0927f6efa56eae39e8cc2e3c8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-save-attachments-from-outlook-e-mail-items"></a>How to: Programmatically Save Attachments from Outlook E-Mail Items
-  This example saves e-mail attachments to a specified folder when the mail is received in the inbox.  
+# <a name="how-to-programmatically-save-attachments-from-outlook-e-mail-items"></a>방법: 프로그래밍 방식으로 Outlook 전자 메일 항목의 첨부 파일 저장
+  이 예제는 받은 편지함에 전자 메일이 수신될 때 메일 첨부 파일을 지정된 폴더에 저장합니다.  
   
 > [!IMPORTANT]  
->  This example works only if you add a folder named **TestFileSave** at the root of the C directory.  
+>  이 예에서는 라는 폴더를 추가 하는 경우에 사용할 **TestFileSave** 는 C 디렉터리의 루트에 있습니다.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>예제  
  [!code-csharp[Trin_OL_SaveAttachments#1](../vsto/codesnippet/CSharp/Trin_OL_SaveAttachments/thisaddin.cs#1)]  
   
-## <a name="see-also"></a>See Also  
- [Working with Mail Items](../vsto/working-with-mail-items.md)   
- [How to: Programmatically Retrieve a Folder by Name](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
- [How to: Programmatically Perform Actions When an E-Mail Message Is Received](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)   
- [How to: Programmatically Search Within a Specific Folder](../vsto/how-to-programmatically-search-within-a-specific-folder.md)  
+## <a name="see-also"></a>참고 항목  
+ [메일 항목 작업](../vsto/working-with-mail-items.md)   
+ [방법: 프로그래밍 방식으로 이름으로 폴더 검색](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
+ [방법: 프로그래밍 방식으로 작업을 수행 하는 전자 메일 메시지를 받을 때](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)   
+ [방법: 프로그래밍 방식으로 특정 폴더 내용 검색](../vsto/how-to-programmatically-search-within-a-specific-folder.md)  
   
   

@@ -1,51 +1,51 @@
 ---
-title: "지원되는 코드 변경 및 제한(C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "C# 언어, 지원되는 코드 변경"
-  - "코드 변경 내용"
-  - "코드 변경 내용, 편집하며 계속하기에서 처리"
-  - "코딩, 지원되는 코드 변경"
-  - "편집하며 계속하기, 제한 사항"
-  - "개체 파일, 편집하며 계속하기의 제한 사항"
-  - "리소스 파일, 편집하며 계속하기의 제한 사항"
-  - "지원되는 코드 변경"
-  - "새로운 기능[C#], 지원되는 코드 변경"
+title: "지원 되는 코드 변경 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- Edit and Continue, limitations
+- supported code changes
+- object files, limitations of Edit and Continue
+- C# language, supported code changes
+- coding, supported code changes
+- resource files, limitations of Edit and Continue
+- code changes, handling in Edit and Continue
+- what's new [C#], supported code changes
+- code changes
 ms.assetid: f5754363-8a56-417b-b904-b05d9dd26d03
-caps.latest.revision: 26
-caps.handback.revision: 26
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e7309e17e04627654aaaf2e28a54c75fa2d6993c
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
-# 지원되는 코드 변경 및 제한(C++)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Visual C\+\+용 편집하며 계속하기에서는 대부분의 코드 변경 유형을 처리합니다. 그러나 일부 변경 내용은 프로그램을 실행하는 동안 적용할 수 없습니다. 이러한 변경 내용을 적용하려면 실행을 중지하고 새로운 버전의 코드를 빌드해야 합니다.  
+# <a name="supported-code-changes-c"></a>지원되는 코드 변경(C++)
+Visual C++용 편집하며 계속하기에서는 대부분의 코드 변경 유형을 처리합니다. 그러나 일부 변경 내용은 프로그램을 실행하는 동안 적용할 수 없습니다. 이러한 변경 내용을 적용하려면 실행을 중지하고 새로운 버전의 코드를 빌드해야 합니다.  
   
- Visual Studio에서 C\+\+용 편집하며 계속하기를 사용하는 방법에 대한 자세한 내용은 [편집하며 계속하기\(Visual C\+\+\)](../debugger/edit-and-continue-visual-cpp.md)를 참조하세요.  
+ Visual Studio에서 C++용 편집하며 계속하기를 사용하는 방법에 대한 자세한 내용은 [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md) 를 참조하세요.  
   
 ##  <a name="BKMK_Unsupported_changes"></a> 지원되지 않는 변경 사항  
- 디버깅 세션 중에 적용할 수 없는 C\/C\+\+ 변경 내용은 다음과 같습니다.  
+ 디버깅 세션 중에 적용할 수 없는 C/C++ 변경 내용은 다음과 같습니다.  
   
 -   대부분의 전역 또는 정적 데이터 변경  
   
 -   다른 컴퓨터에서 복사하여 로컬로 빌드하지 않은 실행 파일의 변경  
   
--   개체\(예: 클래스의 데이터 멤버\)의 레이아웃에 영향을 주는 데이터 형식의 변경  
+-   개체(예: 클래스의 데이터 멤버)의 레이아웃에 영향을 주는 데이터 형식의 변경  
   
 -   64KB를 초과하는 새 코드나 데이터 추가  
   
@@ -68,15 +68,15 @@ Visual C\+\+용 편집하며 계속하기에서는 대부분의 코드 변경 �
 -   편집하며 계속하기는 정적 라이브러리를 업데이트하지 않습니다. 정적 라이브러리에서 변경하면 이전 버전을 사용하여 실행이 계속되고 경고가 발생하지 않습니다.  
   
 ##  <a name="BKMK_Unsupported_scenarios"></a> 지원되지 않는 시나리오  
- 다음과 같은 디버깅 시나리오에서는 C\/C\+\+의 편집하며 계속하기를 사용할 수 없습니다.  
+ 다음과 같은 디버깅 시나리오에서는 C/C++의 편집하며 계속하기를 사용할 수 없습니다.  
   
--   [\/Zo\(최적화된 디버깅 향상\)](/visual-cpp/build/reference/zo-enhance-optimized-debugging)로 컴파일한 네이티브 앱 디버그  
+-   [/Zo(최적화된 디버깅 향상)](/cpp/build/reference/zo-enhance-optimized-debugging)로 컴파일한 네이티브 앱 디버그  
   
--   Visual Studio 2015 업데이트 1 이전의 Visual Studio 버전에서 Windows 스토어 앱 또는 구성 요소를 디버그합니다. Visual Studio 2015 업데이트 1부터는 `/bigobj` 스위치로 `/ZI` 컴파일러 스위치를 지원하기 때문에 Windows 스토어 C\+\+ 앱 및 DirectX 앱에서 편집하며 계속하기를 사용할 수 있습니다.`/FASTLINK` 스위치로 컴파일된 이진 파일을 이용하여 편집하며 계속하기를 사용할 수도 있습니다.  
+-   Visual Studio 2015 업데이트 1을 UWP 앱 또는 구성 요소 디버깅 이전의 Visual Studio의 버전입니다. Visual Studio 2015 업데이트 1 부터는 있습니다 צ ְ ײ 편집 하며 계속 하기 c + + UWP 앱 및 DirectX 앱에서 지원 하기 때문에 `/ZI` 컴파일러 스위치와는 `/bigobj` 전환 합니다. `/FASTLINK` 컴파일러 스위치를 지원하기 때문에 Windows 스토어 C++ 앱 및 DirectX 앱에서 편집하며 계속하기를 사용할 수 있습니다.  
   
 -   Windows 98에서 디버깅  
   
--   혼합 모드\(네이티브\/관리\) 디버깅  
+-   혼합 모드(네이티브/관리) 디버깅  
   
 -   Javascript 디버깅  
   
@@ -86,7 +86,7 @@ Visual C\+\+용 편집하며 계속하기에서는 대부분의 코드 변경 �
   
 -   **처리되지 않은 예외에 대한 호출 스택 해제** 옵션을 선택하지 않은 상태에서 처리되지 않은 예외가 발생한 후 코드 편집  
   
--   **디버그** 메뉴에서 **시작**을 선택하여 앱을 실행하는 대신 **연결 대상**을 사용하여 앱 디버깅  
+-   **디버그** 메뉴에서 **시작** 을 선택하여 앱을 실행하는 대신 **연결 대상** 을 사용하여 앱 디버깅  
   
 -   최적화된 코드 디버깅  
   
@@ -97,19 +97,19 @@ Visual C\+\+용 편집하며 계속하기에서는 대부분의 코드 변경 �
 ###  <a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a> 편집하며 계속하기를 사용하지 않도록 설정하는 링커 옵션  
  다음 링커 옵션을 사용하면 편집하며 계속하기가 비활성화됩니다.  
   
--   **\/OPT:REF**, **\/OPT:ICF** 또는 **\/INCREMENTAL:NO**를 설정하면 다음 경고가 나타나고 편집하며 계속하기가 비활성화됩니다.  
+-   **/OPT:REF**, **/OPT:ICF**또는 **/INCREMENTAL:NO** 를 설정하면 다음 경고가 나타나고 편집하며 계속하기가 비활성화됩니다.  
   
-     LINK : warning LNK4075: \/EDITANDCONTINUE이\(가\) \/OPT 사양으로 인해  
-  
-     specification  
-  
--   **\/ORDER**, **\/RELEASE** 또는 **\/FORCE**를 설정하면 다음 경고가 나타나고 편집하며 계속하기가 비활성화됩니다.  
-  
-     LINK : warning LNK4075: \/INCREMENTAL이\(가\) \/option 사양으로 인해  
+     LINK : warning LNK4075: /EDITANDCONTINUE이(가) /OPT 사양으로 인해  
   
      specification  
   
--   프로그램 데이터베이스 파일\(.pdb\)을 작성하지 않는 옵션을 설정하면 특별한 경고 없이 편집하며 계속하기가 비활성화됩니다.  
+-   **/ORDER**, **/RELEASE**또는 **/FORCE** 를 설정하면 다음 경고가 나타나고 편집하며 계속하기가 비활성화됩니다.  
+  
+     LINK : warning LNK4075: /INCREMENTAL이(가) /option 사양으로 인해  
+  
+     specification  
+  
+-   프로그램 데이터베이스 파일(.pdb)을 작성하지 않는 옵션을 설정하면 특별한 경고 없이 편집하며 계속하기가 비활성화됩니다.  
   
 ###  <a name="BKMK_Auto_relinking_limitations"></a> 자동 다시 링크 제한 사항  
  기본적으로 편집하며 계속하기는 디버깅 섹션의 끝에서 프로그램을 다시 링크하여 실행 가능한 업데이트를 만듭니다.  
@@ -140,7 +140,7 @@ Visual C\+\+용 편집하며 계속하기에서는 대부분의 코드 변경 �
 3.  **미리 컴파일 허용** 확인란 선택을 취소합니다.  
   
 ##  <a name="BKMK_IDL_Attribute_Limitations"></a> IDL 특성 제한 사항  
- 편집하며 계속하기는 IDL\(인터페이스 정의\) 파일을 다시 생성하지 않습니다. 따라서 디버깅하는 동안 IDL 특성의 변경 내용이 반영되지 않습니다. IDL 특성을 변경한 결과를 확인하려면 디버깅을 중단하고 앱을 다시 빌드해야 합니다. 편집하며 계속하기는 IDL 특성이 변경되어도 오류나 경고를 생성하지 않습니다. 자세한 내용은 [IDL 특성](/visual-cpp/windows/idl-attributes)을 참조하세요.  
+ 편집하며 계속하기는 IDL(인터페이스 정의) 파일을 다시 생성하지 않습니다. 따라서 디버깅하는 동안 IDL 특성의 변경 내용이 반영되지 않습니다. IDL 특성을 변경한 결과를 확인하려면 디버깅을 중단하고 앱을 다시 빌드해야 합니다. 편집하며 계속하기는 IDL 특성이 변경되어도 오류나 경고를 생성하지 않습니다. 자세한 내용은 [IDL 특성](/cpp/windows/idl-attributes)을 참조하세요.  
   
-## 참고 항목  
- [편집하며 계속하기\(Visual C\+\+\)](../debugger/edit-and-continue-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)

@@ -1,46 +1,47 @@
 ---
-title: "IDebugPortPicker | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugPortPicker 인터페이스"
+title: IDebugPortPicker | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugPortPicker interface
 ms.assetid: 8b7f6685-a3c5-4355-b706-c1b574f6ff84
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ee5b500f0ba42f7aa3b56439d34f88294b3b3717
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPortPicker
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-포트 선택에 대 한 사용자 지정 된 UI를 나타냅니다.  
+# <a name="idebugportpicker"></a>IDebugPortPicker
+포트를 선택 하기 위한 사용자 지정된 UI를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugPortPicker : IUnknown  
 ```  
   
-## 구현자 참고 사항  
- 포트 공급자가이 인터페이스를 구현 합니다.  CLSID로 노출 하 고 가리키는 포트 공급자가 포트 선택을 정의 `metricPortPickerCLSID` 미터에 노출 된 CLSID입니다.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ 이 인터페이스는 포트 공급 업체에서 구현 됩니다. 포트 공급자 CLSID로 노출 하 고 가리켜서 해당 포트 선택을 정의 `metricPortPickerCLSID` 노출 된 CLSID에 메트릭.  
   
-## 메서드  
- 다음 표에서 메서드를 `IDebugPortPicker`.  
+## <a name="methods"></a>메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugPortPicker`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[DisplayPortPicker](../../../extensibility/debugger/reference/idebugportpicker-displayportpicker.md)|포트를 선택할 수 있도록 하는 지정 된 대화 상자를 표시 합니다.|  
+|------------|-----------------|  
+|[DisplayPortPicker](../../../extensibility/debugger/reference/idebugportpicker-displayportpicker.md)|사용자가 포트를 선택할 수 있는 지정 된 대화 상자를 표시 합니다.|  
 |[SetSite](../../../extensibility/debugger/reference/idebugportpicker-setsite.md)|서비스 공급자를 설정합니다.|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: Msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll

@@ -1,56 +1,56 @@
 ---
-title: "IDebugBreakpointRequest2::GetRequestInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBreakpointRequest2::GetRequestInfo"
-helpviewer_keywords: 
-  - "IDebugBreakpointRequest2::GetRequestInfo"
+title: IDebugBreakpointRequest2::GetRequestInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugBreakpointRequest2::GetRequestInfo
+helpviewer_keywords: IDebugBreakpointRequest2::GetRequestInfo
 ms.assetid: 5defd8d7-6daa-479b-8909-fcc4ae0b357a
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c8f44bc48f2d16cd01be67a9058722749f1863d2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBreakpointRequest2::GetRequestInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 중단점 요청은 중단점 요청 정보를 가져옵니다.  
+# <a name="idebugbreakpointrequest2getrequestinfo"></a>IDebugBreakpointRequest2::GetRequestInfo
+이 중단점 요청을 설명 하는 중단점 요청 정보를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetRequestInfo(   
-   BPREQI_FIELDS    dwFields,  
-   BP_REQUEST_INFO* pBPRequestInfo  
+```cpp  
+HRESULT GetRequestInfo(   
+   BPREQI_FIELDS    dwFields,  
+   BP_REQUEST_INFO* pBPRequestInfo  
 );  
 ```  
   
-```c#  
-int GetRequestInfo(   
-   eunm_BPREQI_FIELDS  dwFields,  
-   BP_REQUEST_INFO[]   pBPRequestInfo  
+```csharp  
+int GetRequestInfo(   
+   eunm_BPREQI_FIELDS  dwFields,  
+   BP_REQUEST_INFO[]   pBPRequestInfo  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `dwFields`  
- \[in\] 플래그의 조합을 [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 필드를 결정 하는 열거형의 `pBPRequestInfo` 매개 변수는 데이터를 입력할 수 있습니다.  
+ [in] 플래그의 조합을 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 의 필드를 결정 하는 `pBPRequestInfo` 매개 변수는 데이터를 입력할 수 있습니다.  
   
  `pBPRequestInfo`  
- \[out\] 지정은 [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 구조 중단점 요청에 대 한 사용 하 여 데이터를 입력할 수 있습니다.  
+ [out] 지정 된 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 구조 중단점 요청에 대 한 설명을 채울 수 있습니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CDebugBreakpointRequest` 를 노출 하는 개체는 [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) 인터페이스입니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CDebugBreakpointRequest` 공개 하는 개체는 [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) 인터페이스입니다.  
   
 ```  
 HRESULT CDebugBreakpointRequest::GetRequestInfo(  
@@ -214,7 +214,7 @@ HRESULT CDebugBreakpointRequest::CopyBP_REQUEST_INFO(
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)   
- [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
- [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
+ [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
+ [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)

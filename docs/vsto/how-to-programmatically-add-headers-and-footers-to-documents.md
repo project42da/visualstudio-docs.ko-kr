@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Add Headers and Footers to Documents | Microsoft Docs'
+title: "방법: 프로그래밍 방식으로 문서에 머리글 및 바닥글을 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], adding footers
 - footers, adding to documents
 ms.assetid: c7a5cc8a-d8c0-48e9-81d3-108aa6bfbb74
-caps.latest.revision: 24
-author: kempb
-ms.author: kempb
+caps.latest.revision: "24"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 552fbd6257589fe7a10012b80cb4f88696187b84
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: e6b8b95953257cefd7cf229cd094791793dfff1b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>How to: Programmatically Add Headers and Footers to Documents
-  You can add text to headers and footers in your document by using the <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> property and <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> property of the <xref:Microsoft.Office.Interop.Word.Section>. Each section of a document contains three headers and footers:  
+# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>방법: 프로그래밍 방식으로 문서에 머리글 및 바닥글 추가
+  <xref:Microsoft.Office.Interop.Word.Section>의 <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> 속성 및 <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> 속성을 사용하여 문서의 머리글 및 바닥글에 텍스트를 추가할 수 있습니다. 문서의 각 섹션에는 다음 세 개의 머리글과 바닥글이 포함됩니다.  
   
 -   <xref:Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary>  
   
@@ -38,42 +35,46 @@ ms.lasthandoff: 08/30/2017
   
 -   <xref:Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterFirstPage>  
   
- The procedures are different for document-level customizations and VSTO Add-ins.  
+ 문서 수준 사용자 지정 및 VSTO 추가 기능에 대한 절차가 서로 다릅니다.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="document-level-customizations"></a>Document-Level Customizations  
- To use the following code examples, run them from the `ThisDocument` class in your project.  
+## <a name="document-level-customizations"></a>문서 수준 사용자 지정  
+ 다음 코드 예제를 사용하려면 프로젝트의 `ThisDocument` 클래스에서 실행합니다.  
   
-#### <a name="to-add-text-to-footers-in-the-document"></a>To add text to footers in the document  
+#### <a name="to-add-text-to-footers-in-the-document"></a>문서의 바닥글에 텍스트를 추가하려면  
   
-1.  The following code example sets the font of the text to be inserted into the primary footer of each section of the document, and then inserts text into the footer.  
+1.  다음 코드 예제에서는 문서의 각 섹션에 대한 기본 바닥글에 삽입할 텍스트의 글꼴을 설정하고 바닥글에 텍스트를 삽입합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#114](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#114)]  [!code-csharp[Trin_VstcoreWordAutomation#114](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#114)]  
+     [!code-vb[Trin_VstcoreWordAutomation#114](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#114)]
+     [!code-csharp[Trin_VstcoreWordAutomation#114](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#114)]  
   
-#### <a name="to-add-text-to-headers-in-the-document"></a>To add text to headers in the document  
+#### <a name="to-add-text-to-headers-in-the-document"></a>문서의 머리글에 텍스트를 추가하려면  
   
-1.  The following code example adds a field to show the page number in each header in the document, and then sets the paragraph alignment so that the text aligns to the right of the header.  
+1.  다음 코드 예제에서는 문서의 각 머리글에 페이지 번호를 표시할 필드를 추가하고 텍스트가 머리글 오른쪽에 정렬되도록 단락 맞춤을 설정합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#116](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#116)]  [!code-csharp[Trin_VstcoreWordAutomation#116](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#116)]  
+     [!code-vb[Trin_VstcoreWordAutomation#116](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#116)]
+     [!code-csharp[Trin_VstcoreWordAutomation#116](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#116)]  
   
-## <a name="vsto-add-ins"></a>VSTO Add-Ins  
- To use the following code examples, run them from the `ThisAddIn` class in your project.  
+## <a name="vsto-add-ins"></a>VSTO Add-ins  
+ 다음 코드 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
   
-#### <a name="to-add-text-to-footers-in-a-document"></a>To add text to footers in a document  
+#### <a name="to-add-text-to-footers-in-a-document"></a>문서의 바닥글에 텍스트를 추가하려면  
   
-1.  The following code example sets the font of the text to be inserted into the primary footer of each section of the document, and then inserts text into the footer. This code example uses the active document.  
+1.  다음 코드 예제에서는 문서의 각 섹션에 대한 기본 바닥글에 삽입할 텍스트의 글꼴을 설정하고 바닥글에 텍스트를 삽입합니다. 이 코드 예제에서는 활성 문서를 사용합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#114](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#114)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#114](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#114)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#114](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#114)]
+     [!code-csharp[Trin_VstcoreWordAutomationAddIn#114](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#114)]  
   
-#### <a name="to-add-text-to-headers-in-the-document"></a>To add text to headers in the document  
+#### <a name="to-add-text-to-headers-in-the-document"></a>문서의 머리글에 텍스트를 추가하려면  
   
-1.  The following code example adds a field to show the page number in each header in the document, and then sets the paragraph alignment so that the text aligns to the right of the header. This code example uses the active document.  
+1.  다음 코드 예제에서는 문서의 각 머리글에 페이지 번호를 표시할 필드를 추가하고 텍스트가 머리글 오른쪽에 정렬되도록 단락 맞춤을 설정합니다. 이 코드 예제에서는 활성 문서를 사용합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#116](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#116)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#116](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#116)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#116](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#116)]
+     [!code-csharp[Trin_VstcoreWordAutomationAddIn#116](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#116)]  
   
-## <a name="see-also"></a>See Also  
- [How to: Programmatically Create New Documents](../vsto/how-to-programmatically-create-new-documents.md)   
- [How to: Programmatically Extend Ranges in Documents](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
- [How to: Programmatically Loop Through Found Items in Documents](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)  
+## <a name="see-also"></a>참고 항목  
+ [방법: 프로그래밍 방식으로 새 문서 만들기](../vsto/how-to-programmatically-create-new-documents.md)   
+ [방법: 프로그래밍 방식으로 문서의 범위 확장](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
+ [방법: 프로그래밍 방식으로 문서에서 찾은 항목 순환 검색](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)  
    

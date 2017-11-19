@@ -1,34 +1,38 @@
 ---
-title: "시작(Visual Studio에서의 Office 개발)"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio에서 Office 개발, 시작"
+title: "시작 (Visual Studio에서 Office 개발) | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: Office development in Visual Studio, getting started
 ms.assetid: fc27e84c-dca2-4b0a-8794-f57a2a886262
-caps.latest.revision: 56
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 52
+caps.latest.revision: "56"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 04e0419fe3c56ef51656aafb20f16d78045dabab
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 시작(Visual Studio에서의 Office 개발)
+# <a name="getting-started-office-development-in-visual-studio"></a>시작(Visual Studio에서의 Office 개발)
   이 섹션에는 Visual Studio에서 Microsoft Office 개발자 도구 사용을 시작하는 데 도움이 되는 항목이 포함되어 있습니다.  
   
-## 단원 내용  
- [Office 솔루션 개발 개요&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)  
+> [!NOTE]  
+>  Office 환경을 확장 하는 솔루션을 개발에 관심이 [여러 플랫폼](https://dev.office.com/add-in-availability)? 체크 아웃 새 [Office 추가 기능 모델](https://dev.office.com/docs/add-ins/overview/office-add-ins)합니다. Office 추가 기능에서 VSTO 추가 기능 및 솔루션에 비해 적을 있고 거의 모든 웹 프로그래밍 HTML5, JavaScript, CSS3 및 XML 등의 기술을 사용 하 여 빌드할 수 있습니다.  
+  
+## <a name="in-this-section"></a>단원 내용  
+ [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)  
  Visual Studio에서 Office 솔루션을 개발하는 데 필요한 배경 정보를 제공합니다.  
   
- [.NET Framework 4 또는 .NET Framework 4.5를 대상으로 하는 Office 프로젝트의 디자인 변경 ](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
+ [.NET Framework 4 또는 .NET Framework 4.5를 대상으로 하는 Office 프로젝트의 디자인 변경](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 Office 프로젝트의 새로운 디자인에 대해 설명하고 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상으로 마이그레이션되는 Office 프로젝트의 주요 코드 변경 내용을 제공합니다.  
   
  [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)  
@@ -44,7 +48,7 @@ caps.handback.revision: 52
  Visual Studio를 사용하여 Word용 문서 수준 사용자 지정을 만드는 데 필요한 중요한 개념에 대한 요약을 제공합니다.  
   
  [VSTO 추가 기능 프로그래밍 시작](../vsto/getting-started-programming-vsto-add-ins.md)  
- Visual Studio를 사용하여 Microsoft Office 응용 프로그램용 응용 프로그램 수준 VSTO\(Visual Studio Tools for Office\) 추가 기능을 만드는 데 필요한 중요한 개념에 대한 요약을 제공합니다.  
+ Visual Studio를 사용하여 Microsoft Office 응용 프로그램용 응용 프로그램 수준 VSTO(Visual Studio Tools for Office) 추가 기능을 만드는 데 필요한 중요한 개념에 대한 요약을 제공합니다.  
   
  [VBA 솔루션과 Visual Studio의 Office 솔루션 비교](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)  
  Visual Studio에서 Office 솔루션을 개발할 때 Visual Basic for Applications와 Office 개발 도구의 상대적 장점에 대해 설명합니다.  
@@ -52,7 +56,7 @@ caps.handback.revision: 52
  [Office 프로그래밍의 일반적인 작업](../vsto/common-tasks-in-office-programming.md)  
  일반적인 문제를 해결하는 데 도움이 되는 항목에 대한 링크를 제공합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)  
  일반적인 작업을 수행하기 위한 단계별 지침을 제공하는 항목과 샘플 응용 프로그램에 대한 링크를 제공합니다.  
   

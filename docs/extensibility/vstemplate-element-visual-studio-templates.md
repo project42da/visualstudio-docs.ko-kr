@@ -1,29 +1,29 @@
 ---
-title: "VSTemplate 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#VSTemplate"
-helpviewer_keywords: 
-  - "VSTemplate 요소[Visual Studio 프로젝트 템플릿]"
+title: "VSTemplate 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#VSTemplate
+helpviewer_keywords: VSTemplate element [Visual Studio project templates]
 ms.assetid: f8ac561b-3b0b-4246-9ec9-118d2447e9a9
-caps.latest.revision: 20
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e4a191c94731560cbc36b4738d16ef202f051873
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# VSTemplate 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-프로젝트 템플릿, 항목 템플릿 또는 시작 키트에 대한 모든 메타데이터가 들어 있습니다.  
+# <a name="vstemplate-element-visual-studio-templates"></a>VSTemplate 요소(Visual Studio 템플릿)
+프로젝트 템플릿, 항목 템플릿 또는 시작 키트에 대 한 모든 메타 데이터를 포함합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <VSTemplate Type="TemplateType" Version="x.x.x">  
@@ -33,33 +33,33 @@ caps.handback.revision: 20
 </VSTemplate>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|`Type`|템플릿을 프로젝트 템플릿 또는 항목 템플릿으로 식별합니다.  이 특성의 값은 `Project` 또는 `Item`일 수 있습니다.|  
-|`Version`|템플릿의 버전 번호를 지정합니다.  서식 파일에서 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 및 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 가 `Version` 특성 값은  `3.0.0`.|  
+|---------------|-----------------|  
+|`Type`|서식 파일 프로젝트 템플릿 또는 항목 템플릿을으로 식별합니다. 이 특성의 값을 가질 수 `Project` 또는 `Item`합니다.|  
+|`Version`|서식 파일에 대 한 버전 번호를 지정합니다. 서식 파일에서 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 및 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 가 `Version` 특성 값이 `3.0.0`합니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿을 표시하는 방법을 정의하는 데이터를 지정합니다.|  
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿 내용을 지정합니다.|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 서식 파일을 분류 하 고 표시 되는 방식을 정의 하는 데이터를 지정 된 **새 프로젝트** 또는 **새 항목 추가** 대화 상자.|  
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 서식 파일의 내용을 지정합니다.|  
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|선택적 요소입니다.|  
 |[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|선택적 요소입니다.|  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
  없음  
   
-## 설명  
- `VSTemplate` 요소는 .vstemplate 파일의 루트 요소입니다.  
+## <a name="remarks"></a>설명  
+ `VSTemplate` 요소는.vstemplate 파일의 루트 요소입니다.  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 응용 프로그램의 프로젝트 템플릿에 대한 메타데이터를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 응용 프로그램입니다.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -85,6 +85,6 @@ caps.handback.revision: 20
 </VSTemplate>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)

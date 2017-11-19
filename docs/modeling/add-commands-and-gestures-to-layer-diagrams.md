@@ -1,5 +1,5 @@
 ---
-title: "종속성 다이어그램에 명령 및 제스처 추가 | Microsoft 문서"
+title: "종속성 다이어그램에 명령 및 제스처 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,41 +10,26 @@ helpviewer_keywords:
 - dependency diagrams, adding custom commands
 - dependency diagrams, adding custom gestures
 ms.assetid: ac9c417b-0b40-4a90-86f5-ee3cbdce030b
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: fd26c504273cae739ccbeef5e406891def732985
-ms.openlocfilehash: 6f833612aaa1859c312a5343fe12a209780e3ee3
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 40bad32ef38fb99032690804d572f630bb60ac6d
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>종속성 다이어그램에 명령 및 제스처 추가
 상황에 맞는 메뉴 명령을 정의 하 고 제스처 처리기를 Visual Studio에서 종속성 다이어그램 수 있습니다. 이러한 확장을 다른 Visual Studio 사용자에게 배포할 수 있는 VSIX(Visual Studio Integration Extension)로 패키지할 수 있습니다.  
   
- 필요한 경우 동일한 Visual Studio 프로젝트에서 여러 개의 명령 및 제스처 처리기를 정의할 수 있습니다. 이러한 여러 프로젝트를 하나의 VSIX에 결합할 수도 있습니다. 예를 들어 레이어 명령 및 도메인별 언어를 포함 하는 단일 VSIX를 정의할 수 있습니다.  
+ 필요한 경우 동일한 Visual Studio 프로젝트에서 여러 개의 명령 및 제스처 처리기를 정의할 수 있습니다. 이러한 여러 프로젝트를 하나의 VSIX에 결합할 수도 있습니다. 예를 들어 레이어 명령, 및 도메인 특정 언어를 포함 하는 단일 VSIX를 정의할 수 있습니다.  
   
 > [!NOTE]
->  또한 어떤 사용자의 소스 코드 종속성 다이어그램와 비교 되는 아키텍처 유효성 검사를 사용자 지정할 수 있습니다. 별도의 Visual Studio 프로젝트에서 아키텍처 유효성 검사를 정의해야 합니다. 동일한 VSIX에 다른 확장으로 추가할 수 있습니다. 자세한 내용은 참조 [종속성 다이어그램에 사용자 지정 아키텍처 유효성 검사 추가](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)합니다.  
+>  아키텍처 유효성 검사는 사용자의 소스 코드를 비교 하 종속성 다이어그램을 사용자 지정할 수 있습니다. 별도의 Visual Studio 프로젝트에서 아키텍처 유효성 검사를 정의해야 합니다. 동일한 VSIX에 다른 확장으로 추가할 수 있습니다. 자세한 내용은 참조 [종속성 다이어그램에 사용자 지정 아키텍처 유효성 검사를 추가](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- 참조 [요구 사항을](../modeling/extend-layer-diagrams.md#prereqs)합니다.  
+ 참조 [요구 사항](../modeling/extend-layer-diagrams.md#prereqs)합니다.  
   
 ## <a name="defining-a-command-or-gesture-in-a-new-vsix"></a>새 VSIX에서 명령 또는 제스처 정의  
  확장을 만드는 가장 빠른 방법은 프로젝트 템플릿을 사용하는 것입니다. 이 방법에서는 코드 및 VSIX 매니페스트를 동일한 프로젝트에 배치합니다.  
@@ -59,9 +44,9 @@ ms.lasthandoff: 02/22/2017
   
 3.  확장을 테스트하려면 **Ctrl+F5** 또는 **F5**키를 누릅니다.  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 실험적 인스턴스가 시작됩니다. 이 인스턴스의 종속성 다이어그램을 만듭니다. 이 다이어그램에서 명령 또는 제스처 확장이 작동해야 합니다.  
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 의 실험적 인스턴스가 시작됩니다. 이 인스턴스에서 종속성 다이어그램을 만듭니다. 이 다이어그램에서 명령 또는 제스처 확장이 작동해야 합니다.  
   
-4.  실험적 인스턴스를 닫고 샘플 코드를 수정합니다. 자세한 내용은 참조 [탐색 및 업데이트 프로그램 코드에서 모델 계층](../modeling/navigate-and-update-layer-models-in-program-code.md)합니다.  
+4.  실험적 인스턴스를 닫고 샘플 코드를 수정합니다. 자세한 내용은 참조 [탐색 및 업데이트 프로그램 코드에서 모델을 계층](../modeling/navigate-and-update-layer-models-in-program-code.md)합니다.  
   
 5.  동일한 프로젝트에 명령 또는 제스처 처리기를 더 추가할 수 있습니다. 자세한 내용은 다음 섹션 중 하나를 참조하세요.  
   
@@ -69,7 +54,7 @@ ms.lasthandoff: 02/22/2017
   
      [제스처 처리기 정의](#gesture)  
   
-6.  기본 인스턴스에서 확장을 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 검색 된 **.vsix** 파일에서 **bin\\\***. 설치할 컴퓨터로 파일을 복사하고 파일을 두 번 클릭합니다. 파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
+6.  기본 인스턴스에서 확장을 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 찾을 **.vsix** 파일 **bin\\\***합니다. 설치할 컴퓨터로 파일을 복사하고 파일을 두 번 클릭합니다. 파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
   
 ## <a name="adding-a-command-or-gesture-to-a-separate-vsix"></a>별도 VSIX에 명령 또는 제스처 추가  
  명령, 레이어 유효성 검사기 및 기타 확장이 포함된 하나의 VSIX를 만들려면 VSIX를 정의하는 프로젝트 하나와 처리기에 대한 개별 프로젝트를 만드는 것이 좋습니다.
@@ -101,7 +86,7 @@ ms.lasthandoff: 02/22/2017
   
 4.  명령 또는 제스처 처리기 프로젝트로 돌아가서 다음 프로젝트 참조를 추가합니다.  
   
-|**참조**|**이 기능을 수행할 수 있습니다.**|  
+|**참조**|**수행할 수 있는 기능**|  
 |-------------------|------------------------------------|  
 |Program Files\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|레이어 만들기 및 편집|  
 |Microsoft.VisualStudio.Uml.Interfaces|레이어 만들기 및 편집|  
@@ -116,16 +101,15 @@ ms.lasthandoff: 02/22/2017
   
      [제스처 처리기 정의](#gesture)  
   
-     참고 항목 [탐색 및 업데이트 프로그램 코드에서 모델 계층](../modeling/navigate-and-update-layer-models-in-program-code.md)합니다.  
+     참고 항목 [탐색 및 업데이트 프로그램 코드에서 모델을 계층](../modeling/navigate-and-update-layer-models-in-program-code.md)합니다.  
   
-2.  기능을 테스트하려면 Ctrl+F5 또는 F5 키를 누릅니다. 
-          [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 실험적 인스턴스가 열립니다. 이 인스턴스에서 만들거나 종속성 다이어그램을 엽니다.  
+2.  기능을 테스트하려면 Ctrl+F5 또는 F5 키를 누릅니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 의 실험적 인스턴스가 열립니다. 이 경우에 생성 하거나 종속성 다이어그램을 엽니다.  
   
-3.  기본 인스턴스에서 VSIX를 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 검색의 **.vsix** 파일에 **bin** VSIX 프로젝트 디렉터리. VSIX를 설치할 컴퓨터에 파일을 복사합니다. Windows 탐색기(Windows 8에서는 파일 탐색기)에서 VSIX 파일을 두 번 클릭합니다.  
+3.  기본 인스턴스에서 VSIX를 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 찾을 **.vsix** 파일에 **bin** VSIX 프로젝트의 디렉터리입니다. VSIX를 설치할 컴퓨터에 파일을 복사합니다. Windows 탐색기(Windows 8에서는 파일 탐색기)에서 VSIX 파일을 두 번 클릭합니다.  
   
      파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
   
-##  <a name="a-namecommanda-defining-a-menu-command"></a><a name="command"></a>메뉴 명령 정의  
+##  <a name="command"></a> 메뉴 명령 정의  
  기존 제스처 또는 명령 프로젝트에 메뉴 명령 정의를 더 추가할 수 있습니다. 각 명령은 다음과 같은 특징이 있는 클래스에 의해 정의됩니다.  
   
 -   클래스는 다음과 같이 선언됩니다.  
@@ -138,8 +122,7 @@ ms.lasthandoff: 02/22/2017
   
 -   네임스페이스 및 클래스 이름은 중요하지 않습니다.  
   
--   
-          `ICommandExtension`을 구현하는 메서드는 다음과 같습니다.  
+-   `ICommandExtension` 을 구현하는 메서드는 다음과 같습니다.  
   
     -   `string Text {get;}` - 메뉴에 표시되는 레이블입니다.  
   
@@ -157,7 +140,7 @@ ms.lasthandoff: 02/22/2017
   
      `DiagramContext.CurrentDiagram.SelectedShapes.Count()...`  
   
- 자세한 내용은 참조 [탐색 및 업데이트 프로그램 코드에서 모델 계층](../modeling/navigate-and-update-layer-models-in-program-code.md)합니다.  
+ 자세한 내용은 참조 [탐색 및 업데이트 프로그램 코드에서 모델을 계층](../modeling/navigate-and-update-layer-models-in-program-code.md)합니다.  
   
  새 명령을 추가하려면 다음 샘플을 포함하는 새 코드 파일을 만듭니다. 그런 다음 파일을 테스트하고 편집합니다.  
   
@@ -231,8 +214,8 @@ namespace MyLayerExtension // Change to your preference.
 }  
 ```  
   
-##  <a name="a-namegesturea-defining-a-gesture-handler"></a><a name="gesture"></a>제스처 처리기 정의  
- 제스처 처리기는 사용자가 컨트롤로 끌어 항목 종속성 다이어그램 및 사용자가 다이어그램의 아무 곳 이나 두 번 클릭에 응답 합니다.  
+##  <a name="gesture"></a> 제스처 처리기 정의  
+ 제스처 처리기 및 사용자가 다이어그램에서 아무 곳 이나 종속성 다이어그램으로 항목을 끌 때 응답 합니다.  
   
  기존 명령 또는 제스처 처리기 VSIX 프로젝트에 제스처 처리기를 정의하는 코드 파일을 추가할 수 있습니다.  
   
@@ -278,10 +261,7 @@ namespace MyLayerExtensions // change to your preference
   
 -   일부 형식의 끌어온 항목에 대한 처리기는 이미 정의되었습니다. 예를 들어 사용자 종속성 다이어그램으로 솔루션 탐색기에서 항목을 끌어 옵니다. 이러한 형식의 항목에 대한 끌기 처리기는 정의할 수 없습니다. 이 경우 `DragDrop` 메서드가 호출되지 않습니다.  
   
- 다이어그램으로 끌어올 때 다른 항목을 디코딩하는 방법에 대 한 자세한 내용은 참조 [모델링 다이어그램의 제스처 처리기 정의](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [이동 하 고 프로그램 코드에서 레이어 모델 업데이트](../modeling/navigate-and-update-layer-models-in-program-code.md)   
+ [프로그램 코드에서 레이어 모델 탐색 및 업데이트](../modeling/navigate-and-update-layer-models-in-program-code.md)   
  [종속성 다이어그램에 사용자 지정 아키텍처 유효성 검사 추가](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
- [모델링 확장 정의 및 설치](../modeling/define-and-install-a-modeling-extension.md)
-

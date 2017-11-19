@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Add an Application Page to a Workflow | Microsoft Docs'
+title: "연습: 워크플로에 응용 프로그램 페이지 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,49 +16,48 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, adding applications page to workflow
 - application page [SharePoint development in Visual Studio]
 ms.assetid: e4845d07-917b-45cb-a569-4ecdd602fbd9
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c06cccc5a3bd846c1b8c3c75986e6ed9637b7e82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: bab156bdd1589aaac10a619409b44e50558b9c15
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>Walkthrough: Add an Application Page to a Workflow
-  This walkthrough demonstrates how to add an application page that displays data derived from a workflow to a workflow project. It builds on the project described in the topic [Walkthrough: Creating a Workflow with Association and Initiation Forms](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).  
+# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>연습: 워크플로에 응용 프로그램 페이지 추가
+  이 연습에는 워크플로 프로젝트에는 워크플로에서 파생 된 데이터를 표시 하는 응용 프로그램 페이지를 추가 하는 방법을 보여 줍니다. 이 항목에서 설명 하는 프로젝트에 기반 [연습: 연결 및 초기화 폼이 있는 워크플로 만들기](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)합니다.  
   
- This walkthrough demonstrates the following tasks:  
+ 이 연습에서는 다음 작업을 수행합니다.  
   
--   Adding an ASPX application page to a SharePoint workflow project.  
+-   ASPX 응용 프로그램 페이지를 SharePoint 워크플로 프로젝트에 추가 합니다.  
   
--   Obtaining data from the workflow project and manipulating it.  
+-   워크플로 프로젝트에서 데이터를 가져오기 및 조작 합니다.  
   
--   Displaying data in a table on the application page.  
+-   응용 프로그램 페이지에서 테이블에 데이터를 표시 합니다.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   Supported editions of [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   지원 되는 버전 [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] 및 SharePoint 합니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
   
 -   Visual Studio.  
   
--   You also have to complete the project in the topic [Walkthrough: Creating a Workflow with Association and Initiation Forms](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).  
+-   항목의 프로젝트를 완료 해야 [연습: 연결 및 초기화 폼이 있는 워크플로 만들기](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)합니다.  
   
-## <a name="amending-the-workflow-code"></a>Amending the Workflow Code  
- First, add a line of code to the workflow to set the value of the Outcome column to the amount of the expense report. This value is used later in the expense report summary calculation.  
+## <a name="amending-the-workflow-code"></a>워크플로 코드 수정  
+ 먼저, 경비 보고서에는 결과 열 값을 설정 하는 워크플로를 코드의 줄을 추가 합니다. 이 값은 경비 보고서 요약 계산의 뒷부분에 나오는 사용 됩니다.  
   
-#### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>To set the value of the Outcome column in the workflow  
+#### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>워크플로에서 결과 열 값을 설정 하려면  
   
-1.  Load the completed project from the topic [Walkthrough: Creating a Workflow with Association and Initiation Forms](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) into [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+1.  이 항목에서 완료 된 프로젝트를 로드할 [연습: 연결 및 초기화 폼이 있는 워크플로 만들기](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) 에 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.  
   
-2.  Open the code for Workflow1.cs or Workflow1.vb (depending on your programming language).  
+2.  (선택한 프로그래밍 언어)에 따라 다름 Workflow1.cs 또는 Workflow1.vb에 대 한 코드를 엽니다.  
   
-3.  To the bottom of the `createTask1_MethodInvoking` method, add the following code:  
+3.  맨 아래에 `createTask1_MethodInvoking` 메서드를 다음 코드를 추가 합니다.  
   
     ```vb  
     createTask1_TaskProperties1.ExtendedProperties("Outcome") =   
@@ -72,16 +69,16 @@ ms.lasthandoff: 08/28/2017
       workflowProperties.InitiationData;  
     ```  
   
-## <a name="creating-an-application-page"></a>Creating an Application Page  
- Next, add an ASPX form to the project. This form will display data obtained from the expense report workflow project. To do this, you will add an application page. An application page uses the same master page as other SharePoint pages, meaning that it will resemble other pages on the SharePoint site.  
+## <a name="creating-an-application-page"></a>응용 프로그램 페이지 만들기  
+ 다음으로 프로젝트에 ASPX 폼을 추가 합니다. 이 양식은 경비 보고서 워크플로 프로젝트에서 가져온 데이터가 표시 됩니다. 이 위해 응용 프로그램 페이지를 추가 합니다. 응용 프로그램 페이지는 다른 SharePoint 페이지가 만들어지고 SharePoint 사이트에서 다른 페이지와 유사 합니다 즉으로 동일한 마스터 페이지를 사용 합니다.  
   
-#### <a name="to-add-an-application-page-to-the-project"></a>To add an application page to the project  
+#### <a name="to-add-an-application-page-to-the-project"></a>프로젝트에 응용 프로그램 페이지를 추가 하려면  
   
-1.  Choose the ExpenseReport project, and then, on the menu bar, choose **Project**, **Add New Item**.  
+1.  경비 보고서 프로젝트를 선택한 다음 메뉴 모음에서 메뉴 **프로젝트**, **새 항목 추가**합니다.  
   
-2.  In the **Templates** pane, choose the **Application Page** template, use the default name for the project item (**ApplicaitonPage1.aspx**), and choose the **Add** button.  
+2.  에 **템플릿** 창, 선택는 **응용 프로그램 페이지** 서식 파일을 프로젝트 항목에 대 한 기본 이름을 사용 (**ApplicaitonPage1.aspx**)는 선택**추가** 단추입니다.  
   
-3.  In the [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] of ApplicationPage1.aspx, replace the `PlaceHolderMain` section with the following:  
+3.  에 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 의 ApplicationPage1.aspx, 대체 된 `PlaceHolderMain` 섹션을 다음:  
   
     ```  
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">  
@@ -93,9 +90,9 @@ ms.lasthandoff: 08/28/2017
     </asp:Content>  
     ```  
   
-     This code adds a table to the page together with a title.  
+     이 코드는 제목과 함께 페이지에 테이블을 추가합니다.  
   
-4.  Add a title to the application page by replacing the `PlaceHolderPageTitleInTitleArea` section with the following:  
+4.  대체 하 여 응용 프로그램 페이지에 제목 추가 `PlaceHolderPageTitleInTitleArea` 섹션을 다음:  
   
     ```  
     <asp:Content ID="PageTitleInTitleArea" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server" >  
@@ -103,14 +100,14 @@ ms.lasthandoff: 08/28/2017
     </asp:Content>  
     ```  
   
-## <a name="coding-the-application-page"></a>Coding the Application Page  
- Next, add code to the expense report summary application page. When you open the page, the code scans the Task list in SharePoint for expenses that exceeded the allocated spending limit. The report lists each item together with the sum of the expenses.  
+## <a name="coding-the-application-page"></a>응용 프로그램 페이지를 코딩합니다.  
+ 다음으로 경비 보고서 요약 응용 프로그램 페이지에 코드를 추가 합니다. 페이지를 열 때 코드는 SharePoint 작업 목록에에서 할당 된 지출 한도 초과 하는 비용이 대 한를 검색 합니다. 보고서는 비용 합계와 함께 각 항목을 나열합니다.  
   
-#### <a name="to-code-the-application-page"></a>To code the application page  
+#### <a name="to-code-the-application-page"></a>응용 프로그램 페이지의 코드를 작성 하려면  
   
-1.  Choose the **ApplicationPage1.aspx** node, and then, on the menu bar, choose **View**, **Code** to display the code behind the application page.  
+1.  선택 된 **ApplicationPage1.aspx** 노드를 선택한 다음 메뉴 모음에서 메뉴 **보기**, **코드** 코드 숨김 응용 프로그램 페이지를 표시 합니다.  
   
-2.  Replace the **using** or **Import** statements (depending on your programming language) at the top of the class with the following:  
+2.  대체는 **를 사용 하 여** 또는 **가져오기** 다음을 사용 하 여 클래스의 맨 (에 따라 선택한 프로그래밍 언어) 문:  
   
     ```vb  
     Imports System  
@@ -138,7 +135,7 @@ ms.lasthandoff: 08/28/2017
     using Microsoft.SharePoint.Navigation;  
     ```  
   
-3.  Add the following code to the `Page_Load` method:  
+3.  `Page_Load` 메서드에 다음 코드를 추가합니다.  
   
     ```vb  
     Try  
@@ -302,62 +299,62 @@ ms.lasthandoff: 08/28/2017
     ```  
   
     > [!WARNING]  
-    >  Be sure to replace "TestServer" in the code with the name of a valid server that's running SharePoint.  
+    >  SharePoint를 실행 하는 유효한 서버 이름으로 코드에서 "TestServer"를 대체 해야 합니다.  
   
-## <a name="testing-the-application-page"></a>Testing the Application Page  
- Next, determine whether the application page displays the expense data correctly.  
+## <a name="testing-the-application-page"></a>응용 프로그램 페이지를 테스트합니다.  
+ 다음으로 응용 프로그램 페이지 비용 데이터를 올바르게 표시 여부를 확인 합니다.  
   
-#### <a name="to-test-the-application-page"></a>To test the application page  
+#### <a name="to-test-the-application-page"></a>응용 프로그램 페이지를 테스트 하려면  
   
-1.  Choose the F5 key to run and deploy the project to SharePoint.  
+1.  F5 키를 실행 하 고 프로젝트를 SharePoint 배포를 선택 합니다.  
   
-2.  Choose the **Home** button, and then choose the **Shared Documents** link on the QuickLaunch bar to display the Shared Documents list on the SharePoint site.  
+2.  선택 된 **홈** 단추를 선택한 후는 **공유 문서** SharePoint 사이트에서 공유 문서 목록을 표시 하려면 빠른 실행 모음에서 링크 합니다.  
   
-3.  To represent expense reports for this example, upload some new documents into the Documents list by choosing the **Documents** link on the **LibraryTools** tab at the top of the page and then choosing the **Upload Document** button on the tool ribbon.  
+3.  이 예제에 대 한 경비 보고서를 표시 하려면 몇 가지 새 문서 문서 목록에 선택 하 여 업로드는 **문서** 에서 링크는 **라이브러리** 는 선택페이지의맨위탭 **문서 업로드** 도구 리본의 단추입니다.  
   
-4.  After you upload some documents, instantiate the workflow by choosing the **Library** link on the **LibraryTools** tab at the top of the page and then choosing the **Library Settings** button on the tool ribbon.  
+4.  일부 문서를 업로드 한 후을 선택 하 여 워크플로 인스턴스화하는 **라이브러리** 링크를 **라이브러리** 페이지 및 다음의 맨 위 탭은 **라이브러리 설정**도구 리본의 단추입니다.  
   
-5.  In the **Document Library Settings** page, choose the **Workflow Settings** link in the **Permissions and Management** section.  
+5.  에 **문서 라이브러리 설정** 페이지를 선택 합니다는 **워크플로 설정** 연결에 **사용 권한 및 관리** 섹션.  
   
-6.  In the **Workflow Settings** page, choose the **Add a workflow** link.  
+6.  **워크플로 설정** 페이지에서 선택 된 **워크플로 추가** 링크 합니다.  
   
-7.  In the **Add a Workflow** page, choose the **ExpenseReport - Workflow1** workflow, enter a name for the workflow, such as **ExpenseTest**, and then choose the **Next** button.  
+7.  **워크플로 추가** 페이지를 선택 합니다는 **경비 보고서-Workflow1** 워크플로 같은 워크플로의 이름을 입력 **ExpenseTest**는 선택**다음** 단추입니다.  
   
-     The workflow Association form appears. Use it to report the expense limit amount.  
+     워크플로 연결 폼이 나타납니다. 지출 한도 금액을 보고 하기 위해 사용 합니다.  
   
-8.  In the Association form, enter **1000** into the **Auto Approval Limit** box, and then choose the **Associate Workflow** button.  
+8.  연결 폼에 입력 **1000** 에 **자동 승인 제한** 상자를 선택한 후는 **워크플로 연결** 단추입니다.  
   
-9. Choose the **Home** button to return to the SharePoint home page.  
+9. 선택 된 **홈** 단추 SharePoint 홈 페이지로 돌아갑니다.  
   
-10. Choose the **Shared Documents** link on the QuickLaunch bar.  
+10. 선택 된 **공유 문서** 빠른 실행 모음에서 링크 합니다.  
   
-11. Choose one of the uploaded documents to display a drop-down arrow, choose it, and then choose the **Workflows** item.  
+11. 드롭다운 화살표를 표시을 선택한 다음를 선택 하려면 업로드 된 문서 중 하나를 선택 하 고 **워크플로** 항목입니다.  
   
-12. Choose the image next to the ExpenseTest to display the workflow Initiation form.  
+12. 워크플로 초기화 폼을 표시 하려면 ExpenseTest 옆에 있는 이미지를 선택 합니다.  
   
-13. In the **Expense Total** text box, enter a value that's greater than 1000, and then choose the **Start Workflow** button.  
+13. 에 **비용 합계** 입력란을 1000 보다 큰 값을 입력 한 다음 선택는 **워크플로 시작** 단추입니다.  
   
-     When a reported expense exceeds the allocated expense amount, a task is added to the Task List. A column named **ExpenseTest** with the value **Completed** is also added to the expense report item in the Shared Documents list.  
+     보고 된 비용이 할당된 된 비용 금액을 초과 하면 작업이 작업 목록에 추가 됩니다. 라는 열 **ExpenseTest** 값과 **Completed** 공유 문서 목록에 경비 보고서 항목에도 추가 됩니다.  
   
-14. Repeat steps 11 - 13 with other documents in the Shared Documents list. (The exact number of documents is not important.)  
+14. 공유 문서 목록에 다른 문서와 함께 11-13 단계를 반복 합니다. (문서의 정확한 수 중요 하지 않습니다.)  
   
-15. Display the expense report summary application page by opening the following URL in a Web browser: **http://***SystemName***/_layouts/ExpenseReport/ApplicationPage1.aspx**.  
+15. 웹 브라우저에서 다음 URL을 열어 경비 보고서 요약 응용 프로그램 페이지를 표시: **http://***SystemName***/_layouts/ExpenseReport/ApplicationPage1.aspx**.  
   
-     The expense report summary page lists all of the expense reports that exceeded the allocated amount, the amount they exceeded it by, and the total amount for all reports.  
+     경비 보고서 요약 페이지에 할당 된 금액을 초과 하는 경비 보고서, by, 초과 금액 및 모든 보고서에 대 한 총 금액 모두 나열 합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- For more information about SharePoint application pages, see [Creating Application Pages for SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).  
+## <a name="next-steps"></a>다음 단계  
+ SharePoint 응용 프로그램 페이지에 대 한 자세한 내용은 참조 [SharePoint 용 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)합니다.  
   
- You can learn more about how to design SharePoint page content by using the Visual Web Designer in Visual Studio from these topics:  
+ 다음이 항목에서는 Visual Studio에서 비주얼 웹 디자이너를 사용 하 여 SharePoint 페이지 콘텐츠를 디자인 하는 방법에 대 한 더 알아볼 수 있습니다.  
   
--   [Creating Web Parts for SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md).  
+-   [SharePoint를 위한 웹 파트 만들기](../sharepoint/creating-web-parts-for-sharepoint.md)합니다.  
   
--   [Creating Reusable Controls for Web Parts or Application Pages](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).  
+-   [웹 파트 또는 응용 프로그램 페이지에 대 한 재사용 가능한 컨트롤 만들기](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)합니다.  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Creating a Workflow with Association and Initiation Forms](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)   
- [How to: Create an Application Page](../sharepoint/how-to-create-an-application-page.md)   
- [Creating Application Pages for SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)   
- [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
+## <a name="see-also"></a>참고 항목  
+ [연습: 연결 및 초기화 폼이 있는 워크플로 만들기](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)   
+ [방법: 응용 프로그램 페이지 만들기](../sharepoint/how-to-create-an-application-page.md)   
+ [SharePoint 용 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)   
+ [SharePoint 솔루션 개발](../sharepoint/developing-sharepoint-solutions.md)  
   
   

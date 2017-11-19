@@ -1,74 +1,74 @@
 ---
-title: "PROCESS_INFO_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROCESS_INFO_FLAGS"
-helpviewer_keywords: 
-  - "PROCESS_INFO_FLAGS 열거형"
+title: PROCESS_INFO_FLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROCESS_INFO_FLAGS
+helpviewer_keywords: PROCESS_INFO_FLAGS enumeration
 ms.assetid: 696951ce-701a-40c2-ac8c-b897f3aae6e2
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 228b2d3286ad0b69a2eb813e18b8837ec038f28f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# PROCESS_INFO_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-설명 또는 프로세스의 속성을 지정 합니다.  
+# <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
+또는 설명 하는 프로세스의 속성을 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-enum enum_PROCESS_INFO_FLAGS {   
-   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
-   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
-   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
-   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
+```cpp  
+enum enum_PROCESS_INFO_FLAGS {   
+   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
+   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
+   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
+   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
 };  
 typedef DWORD PROCESS_INFO_FLAGS;  
 ```  
   
-```c#  
-enum enum_PROCESS_INFO_FLAGS {   
-   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
-   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
-   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
-   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
+```csharp  
+enum enum_PROCESS_INFO_FLAGS {   
+   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
+   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
+   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
+   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
 };  
 ```  
   
-## Members  
- PIFLAG\_SYSTEM\_PROCESS  
- 프로세스는 시스템 프로세스입니다.  
+## <a name="members"></a>멤버  
+ PIFLAG_SYSTEM_PROCESS  
+ 프로세스는 시스템 프로세스 임을 나타냅니다.  
   
- PIFLAG\_DEBUGGER\_ATTACHED  
- 프로세스는 디버거를 통해 디버깅 중인 나타냅니다.  것은 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 디버거, 또는 일부 다른 디버거 WinDbg 예를 들어 있을 수 있습니다.  
+ PIFLAG_DEBUGGER_ATTACHED  
+ 디버거에 의해 프로세스가 디버깅 되 고 있는지를 나타냅니다. 수도 있습니다는 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 디버거, 또는 몇 가지 다른 디버거, 예를 들어 WinDbg를 일 수 있습니다.  
   
- PIFLAG\_PROCESS\_STOPPED  
- 프로세스를 중지를 나타냅니다.  유효한 경우에만 `PIFLAG_DEBUGGER_ATTACHED` 도 지정 됩니다.  사용할 수 있는 [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] 이상입니다.  
+ PIFLAG_PROCESS_STOPPED  
+ 프로세스 중지 되었음을 나타냅니다. 경우에만 유효한 `PIFLAG_DEBUGGER_ATTACHED` 도 지정 합니다. 사용할 수 있는 [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] 이상.  
   
- PIFLAG\_PROCESS\_RUNNING  
- 프로세스 실행을 나타냅니다.  유효한 경우에만 `PIFLAG_DEBUGGER_ATTACHED` 도 지정 됩니다.  사용할 수 있는 [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] 이상입니다.  
+ PIFLAG_PROCESS_RUNNING  
+ 프로세스가 실행 되는 것을 나타냅니다. 경우에만 유효한 `PIFLAG_DEBUGGER_ATTACHED` 도 지정 합니다. 사용할 수 있는 [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] 이상.  
   
-## 설명  
- 사용 되는 `Flags` 의 멤버는 [PROCESS\_INFO](../../../extensibility/debugger/reference/process-info.md) 구조.  
+## <a name="remarks"></a>설명  
+ 에 사용 되는 `Flags` 의 멤버는 [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) 구조입니다.  
   
- 이러한 플래그의 비트와 함께 사용할 수 있습니다 `OR`.  
+ 이러한 플래그 비트와 함께 `OR`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [PROCESS\_INFO](../../../extensibility/debugger/reference/process-info.md)
+ [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

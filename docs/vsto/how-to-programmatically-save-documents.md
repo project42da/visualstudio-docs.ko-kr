@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Save Documents | Microsoft Docs'
+title: "방법: 프로그래밍 방식으로 문서를 저장할 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,81 +14,85 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], saving
 - Word [Office development in Visual Studio], saving documents
 ms.assetid: a6225ae9-94f5-421a-9860-5299002d543d
-caps.latest.revision: 44
-author: kempb
-ms.author: kempb
+caps.latest.revision: "44"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 7b9e68b81903ea309df6ad2903e98b6c8900a0aa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 2c6a47bae9923d68acc189c53766d5206244f97c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-save-documents"></a>How to: Programmatically Save Documents
-  There are several ways to save Microsoft Office Word documents. You can save a document without changing the name of the document, or you can save a document with a new name.  
+# <a name="how-to-programmatically-save-documents"></a>방법: 프로그래밍 방식으로 문서 저장
+  Microsoft Office Word 문서를 저장 하는 방법은 여러 가지가 있습니다. 문서 이름을 변경 하지 않고 문서를 저장할 수 또는 새 이름으로 문서를 저장할 수 있습니다.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="saving-a-document-without-changing-the-name"></a>Saving a Document Without Changing the Name  
+## <a name="saving-a-document-without-changing-the-name"></a>이름을 변경 하지 않고 문서 저장  
   
-#### <a name="to-save-the-document-associated-with-a-document-level-customization"></a>To save the document associated with a document-level customization  
+#### <a name="to-save-the-document-associated-with-a-document-level-customization"></a>문서 수준 사용자 지정과 관련 된 문서를 저장 하려면  
   
-1.  Call the <xref:Microsoft.Office.Tools.Word.Document.Save%2A> method of the <xref:Microsoft.Office.Tools.Word.Document> class. To use this code example, run it from the `ThisDocument` class in your project.  
+1.  <xref:Microsoft.Office.Tools.Word.Document> 클래스의 <xref:Microsoft.Office.Tools.Word.Document.Save%2A> 메서드를 호출합니다. 이 코드 예제를 사용하려면 프로젝트의 `ThisDocument` 클래스에서 실행합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#7)]  [!code-csharp[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#7)]  
+     [!code-vb[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#7)]
+     [!code-csharp[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#7)]  
   
-#### <a name="to-save-the-active-document"></a>To save the active document  
+#### <a name="to-save-the-active-document"></a>활성 문서를 저장 하려면  
   
-1.  Call the <xref:Microsoft.Office.Interop.Word._Document.Save%2A> method for the active document. To use this code example, run it from the `ThisDocument` or `ThisAddIn` class in your project.  
+1.  호출 된 <xref:Microsoft.Office.Interop.Word._Document.Save%2A> 활성 문서에 대 한 메서드. 이 코드 예제를 사용하려면 프로젝트의 `ThisDocument` 또는 `ThisAddIn` 클래스에서 실행합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#8)]  [!code-csharp[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#8)]  
+     [!code-vb[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#8)]
+     [!code-csharp[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#8)]  
   
- If you are not sure whether the document you want to save is the active document, you can refer to it by its name.  
+ 저장할 문서 현재 문서 인지 확실 하지 않은 이름을 사용 하 여를 참조할 수 있습니다.  
   
-#### <a name="to-save-a-document-specified-by-name"></a>To save a document specified by name  
+#### <a name="to-save-a-document-specified-by-name"></a>이름으로 지정 된 문서를 저장 하려면  
   
-1.  Use the document name as an argument to the <xref:Microsoft.Office.Interop.Word.Documents> collection. To use this code example, run it from the `ThisDocument` or `ThisAddIn` class in your project.  
+1.  에 대 한 인수로 문서 이름을 사용 하 여는 <xref:Microsoft.Office.Interop.Word.Documents> 컬렉션입니다. 이 코드 예제를 사용하려면 프로젝트의 `ThisDocument` 또는 `ThisAddIn` 클래스에서 실행합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#9)]  [!code-csharp[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#9)]  
+     [!code-vb[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#9)]
+     [!code-csharp[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#9)]  
   
-## <a name="saving-a-document-with-a-new-name"></a>Saving a Document With a New Name  
- Use the SaveAs method to save a document with a new name. You can use this method of the <xref:Microsoft.Office.Tools.Word.Document> host item in a document-level Word project, or of a native <xref:Microsoft.Office.Interop.Word.Document> object in any Word project. This method requires that you specify the new file name, but other arguments are optional.  
+## <a name="saving-a-document-with-a-new-name"></a>새 이름으로 문서 저장  
+ SaveAs 메서드를 사용 하 여 새 이름으로 문서를 저장 합니다. 이 방법을 사용 하 여 수는 <xref:Microsoft.Office.Tools.Word.Document> 또는 네이티브는 문서 수준 Word 프로젝트에서 호스트 항목 <xref:Microsoft.Office.Interop.Word.Document> 모든 Word 프로젝트의 개체입니다. 이 메서드는 새 파일 이름을 지정 하지 않지만 다른 인수는 선택 사항 필요 합니다.  
   
 > [!NOTE]  
->  If you show the **SaveAs** dialog box inside of the <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> event handler of `ThisDocument` and set the *Cancel* parameter to **false**, the application might quit unexpectedly. If you set the *Cancel* parameter to **true**, an error message appears indicating that Autosave has been disabled.  
+>  표시 하는 경우는 **SaveAs** 내에 대화 상자는 <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> 의 이벤트 처리기 `ThisDocument` 설정 하 고는 *취소* 매개 변수를 **false**, 응용 프로그램 수 예기치 않게 종료. 설정 하는 경우는 *취소* 매개 변수를 **true**, 자동 저장 비활성화 되었음을 나타내는 오류 메시지가 나타납니다.  
   
-#### <a name="to-save-the-document-associated-with-a-document-level-customization-with-a-new-name"></a>To save the document associated with a document-level customization with a new name  
+#### <a name="to-save-the-document-associated-with-a-document-level-customization-with-a-new-name"></a>새 이름으로 문서 수준 사용자 지정과 관련 된 문서를 저장 하려면  
   
-1.  Call the <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> method of the `ThisDocument` class in your project, using a fully qualified path and file name. If a file by that name already exists in that folder, it is silently overwritten. To use this code example, run it from the `ThisDocument` class.  
-  
-    > [!NOTE]  
-    >  The <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> method throws an exception if a target directory does not exist or if there are other problems saving a file. It is a good practice to use a **try...catch** block around the <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> method or inside a calling method.  
-  
-     [!code-vb[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#10)]  [!code-csharp[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#10)]  
-  
-#### <a name="to-save-a-native-document-with-a-new-name"></a>To save a native document with a new name  
-  
-1.  Call the <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> method of the <xref:Microsoft.Office.Interop.Word.Document> that you want to save, using a fully qualified path and file name. If a file by that name already exists in that folder, it is silently overwritten.  
-  
-     The following code example saves the active document with a new name. To use this code example, run it from the `ThisDocument` or `ThisAddIn` class in your project.  
+1.  호출 된 <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> 의 메서드는 `ThisDocument` 정규화 된 경로 파일 이름을 사용 하 여 프로젝트의 클래스입니다. 해당 이름의 파일이 폴더에 이미 있으면 자동으로 덮어씁니다. 이 코드 예제를 사용하려면 `ThisDocument` 클래스에서 실행합니다.  
   
     > [!NOTE]  
-    >  The <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> method throws an exception if a target directory does not exist or if there are other problems saving a file. It is a good practice to use a **try...catch** block around the <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> method or inside a calling method.  
+    >  <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> 대상 디렉터리가 존재 하지 않는 경우 또는 파일을 저장 하는 다른 문제가 있는 경우 메서드에서 예외를 throw 합니다. 사용 하는 것이 좋습니다는 **try … catch** 주위 차단는 <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> 메서드 또는 메서드 내에서 호출 합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#10)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#10)]  
+     [!code-vb[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#10)]
+     [!code-csharp[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#10)]  
   
-## <a name="compiling-the-code"></a>Compiling the Code  
- This code example requires the following:  
+#### <a name="to-save-a-native-document-with-a-new-name"></a>기본 문서를 새 이름으로 저장 하려면  
   
--   To save a document by name, a document named NewDocument.doc must exist in a directory named Test on drive C.  
+1.  호출 된 <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> 의 메서드는 <xref:Microsoft.Office.Interop.Word.Document> 정규화 된 경로 파일 이름을 사용 하 여를 저장 하려는 합니다. 해당 이름의 파일이 폴더에 이미 있으면 자동으로 덮어씁니다.  
   
--   To save a document with a new name, a directory named Test must exist on drive C.  
+     다음 코드 예제에서는 새 이름으로 활성 문서를 저장합니다. 이 코드 예제를 사용하려면 프로젝트의 `ThisDocument` 또는 `ThisAddIn` 클래스에서 실행합니다.  
   
-## <a name="see-also"></a>See Also  
- [How to: Programmatically Close Documents](../vsto/how-to-programmatically-close-documents.md)   
- [How to: Programmatically Open Existing Documents](../vsto/how-to-programmatically-open-existing-documents.md)   
- [Document Host Item](../vsto/document-host-item.md)   
- [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
+    > [!NOTE]  
+    >  <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> 대상 디렉터리가 존재 하지 않는 경우 또는 파일을 저장 하는 다른 문제가 있는 경우 메서드에서 예외를 throw 합니다. 사용 하는 것이 좋습니다는 **try … catch** 주위 차단는 <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> 메서드 또는 메서드 내에서 호출 합니다.  
+  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#10)]
+     [!code-csharp[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#10)]  
+  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 이 코드 예제에는 다음이 필요합니다.  
+  
+-   C 드라이브에 Test 라는 디렉터리에 존재 해야 NewDocument.doc 라는 이름으로 문서를 저장 하려면  
+  
+-   C 드라이브에 존재 해야 Test 라는 디렉터리를 새 이름으로 문서를 저장 하려면  
+  
+## <a name="see-also"></a>참고 항목  
+ [방법: 프로그래밍 방식으로 문서 닫기](../vsto/how-to-programmatically-close-documents.md)   
+ [방법: 프로그래밍 방식으로 기존 문서 열기](../vsto/how-to-programmatically-open-existing-documents.md)   
+ [문서 호스트 항목](../vsto/document-host-item.md)   
+ [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
   
   

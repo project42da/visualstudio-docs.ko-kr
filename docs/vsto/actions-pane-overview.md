@@ -1,12 +1,10 @@
 ---
-title: Actions Pane Overview | Microsoft Docs
+title: "작업 창 개요 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,146 +16,153 @@ helpviewer_keywords:
 - smart documents [Office development in Visual Studio]
 - user controls [Office development in Visual Studio], actions panes
 ms.assetid: 1b9b7db5-b19f-44ea-a774-f0962ca03bd2
-caps.latest.revision: 101
-author: kempb
-ms.author: kempb
+caps.latest.revision: "101"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 89f1d8db1ebfce2fe27aa6762c6ebd95a0eacea0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: c9d8bd58c8dabc1114b3516e518992b0f91bc173
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="actions-pane-overview"></a>Actions Pane Overview
-  An actions pane is a customizable **Document Actions** task pane that is attached to a specific Microsoft Office Word document or Microsoft Office Excel workbook. It is hosted inside the Office task pane along with other built-in task panes such as the **XML Source** task pane in Excel or the **Styles and Formatting** task pane in Word. You can use Windows Forms controls or WPF controls to design the actions pane user interface.  
+# <a name="actions-pane-overview"></a>작업 창 개요
+  작업창은 사용자 지정 가능한 **문서 동작** 특정 Microsoft Office Word 문서 또는 Microsoft Office Excel 통합 문서에 연결 된 작업창입니다. 다른 기본 제공 작업창과 함께 Office 작업창 내과 같은 호스트의 **XML 원본은** Excel의 작업 창 또는 **스타일 및 서식** Word의 작업창입니다. Windows Forms 컨트롤 또는 WPF 컨트롤을 사용하여 작업 창 사용자 인터페이스를 디자인할 수 있습니다.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- You can create an actions pane only in a document-level customization for Word or Excel. You cannot create an actions pane in a VSTO Add-in. For more information, see [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md).  
+ Word 또는 Excel에 대한 문서 수준 사용자 지정에만 작업 창을 만들 수 있습니다. VSTO 추가 기능에서는 작업 창을 만들 수 없습니다. 자세한 내용은 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
   
 > [!NOTE]  
->  The actions pane differs from custom task panes. Custom task panes are associated with the application, not a specific document. You can create custom task panes in VSTO Add-ins for some Microsoft Office applications. For more information, see [Custom Task Panes](../vsto/custom-task-panes.md).  
+>  작업 창은 사용자 지정 작업창과 다릅니다. 사용자 지정 작업창은 특정 문서가 아니라 응용 프로그램과 연결됩니다. VSTO 추가 기능에서 일부 Microsoft Office 응용 프로그램에 대한 사용자 지정 작업창을 만들 수 있습니다. 자세한 내용은 참조 [사용자 지정 작업창](../vsto/custom-task-panes.md)합니다.  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Use WPF Controls Inside an Excel Actions Pane?](http://go.microsoft.com/fwlink/?LinkId=132763).  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요 사용 하 여 WPF 컨트롤 내부의 Excel 작업 창?](http://go.microsoft.com/fwlink/?LinkId=132763)합니다.  
   
-## <a name="displaying-the-actions-pane"></a>Displaying the Actions Pane  
- The actions pane is represented by the <xref:Microsoft.Office.Tools.ActionsPane> class. When you create a document-level project, an instance of this class is available to your code by using the `ActionsPane` field of the `ThisWorkbook` (for Excel) or `ThisDocument` (for Word) class in your project. To display the actions pane, add a Windows Forms control to the <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> property of the `ActionsPane` field. The following code example adds a control named `actions` to the actions pane.  
+## <a name="displaying-the-actions-pane"></a>작업 창 표시  
+ 작업 창은 <xref:Microsoft.Office.Tools.ActionsPane> 클래스로 표현됩니다. 문서 수준 프로젝트를 만드는 경우 프로젝트에서 `ThisWorkbook`(Excel용) 또는 `ThisDocument`(Word용) 클래스의 `ActionsPane` 필드를 통해 코드에서 이 클래스의 인스턴스를 사용할 수 있습니다. 작업 창을 표시하려면 `ActionsPane` 필드의 <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> 속성에 Windows Forms 컨트롤을 추가합니다. 다음 코드 예제에서는 `actions`라는 컨트롤을 작업 창에 추가합니다.  
   
- [!code-csharp[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#7)] [!code-vb[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#7)]  
+ [!code-csharp[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#7)]
+ [!code-vb[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#7)]  
   
- The actions pane becomes visible at run time as soon as you explicitly add a control to it. After the actions pane is displayed, you can dynamically add or remove controls in response to the user's actions. Typically, you add the code to display the actions pane in the `Startup` event handler of `ThisDocument` or `ThisWorkbook` so that the actions pane is visible when the user first opens the document. However, you might want to display the actions pane only in response to a user's action in the document. For example, you might add the code to the `Click` event of a control on the document.  
+ 작업 창에 컨트롤을 명시적으로 추가하는 즉시 런타임에 표시됩니다. 작업 창이 표시되면 사용자 작업에 대한 응답으로 컨트롤을 동적으로 추가하거나 제거할 수 있습니다. 일반적으로 사용자가 처음 문서를 열 때 작업 창이 표시되도록 `ThisDocument` 또는 `ThisWorkbook`의 `Startup` 이벤트 처리기에 작업 창을 표시하는 코드를 추가합니다. 그러나 문서의 사용자 작업에 대한 응답으로만 작업 창을 표시하는 것이 좋습니다. 예를 들어 문서에서 컨트롤의 `Click` 이벤트에 코드를 추가할 수 있습니다.  
   
-### <a name="adding-multiple-controls-to-the-actions-pane"></a>Adding Multiple Controls to the Actions Pane  
- If you are adding multiple controls to the actions pane, in most cases you should group the controls in a user control, and then add the user control to the <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> property. This process includes the following steps:  
+### <a name="adding-multiple-controls-to-the-actions-pane"></a>작업 창에 여러 컨트롤 추가  
+ 작업 창에 여러 컨트롤을 추가하는 경우 대체로 사용자 정의 컨트롤에 컨트롤을 그룹화한 다음 사용자 정의 컨트롤을 <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> 속성에 추가해야 합니다. 이 프로세스에는 다음 단계가 포함됩니다.  
   
-1.  Create the user interface (UI) of the actions pane by adding an **Actions Pane Control** or **User Control** item to your project. Both of these items include a custom Windows Forms <xref:System.Windows.Forms.UserControl> class. The **Actions Pane Control** and **User Control** items are equivalent; the only difference is their name.  
+1.  추가 하 여 작업 창의 사용자 인터페이스 (UI)을 만듭니다는 **작업 창 컨트롤** 또는 **사용자 정의 컨트롤** 항목을 프로젝트입니다. 두 항목에는 모두 사용자 지정 Windows Forms <xref:System.Windows.Forms.UserControl> 클래스가 포함되어 있습니다. **작업 창 컨트롤** 및 **사용자 정의 컨트롤** 항목은 동일 하며, 유일한 차이점은 이름 뿐입니다.  
   
-2.  Add Windows Forms controls to the <xref:System.Windows.Forms.UserControl> by using the designer, or by writing code.  
+2.  디자이너를 사용하여 또는 코드를 작성하여 <xref:System.Windows.Forms.UserControl>에 Windows Forms 컨트롤을 추가합니다.  
   
     > [!NOTE]  
-    >  You can also add WPF controls to the actions pane by adding a WPF <xref:System.Windows.Controls.UserControl> to the Windows Forms <xref:System.Windows.Forms.UserControl>. For more information, see [Using WPF Controls in Office Solutions](../vsto/using-wpf-controls-in-office-solutions.md).  
+    >  Windows Forms <xref:System.Windows.Forms.UserControl>에 WPF <xref:System.Windows.Controls.UserControl>을 추가하여 작업 창에 WPF 컨트롤을 추가할 수도 있습니다. 자세한 내용은 참조 [Office 솔루션에서 WPF 컨트롤을 사용 하 여](../vsto/using-wpf-controls-in-office-solutions.md)합니다.  
   
-3.  Add an instance of the custom user control to the controls that are contained in the `ActionsPane` field of the `ThisWorkbook` (for Excel) or `ThisDocument` (for Word) class in your project.  
+3.  프로젝트에서 `ThisWorkbook`(Excel용) 또는 `ThisDocument`(Word용) 클래스의 `ActionsPane` 필드에 포함된 컨트롤에 사용자 지정 사용자 정의 컨트롤의 인스턴스를 추가합니다.  
   
- For examples that demonstrate this process in more detail, see [How to: Add an Actions Pane to Word Documents or Excel Workbooks](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md).  
+ 이 과정을 자세히 보여 주는 예제를 보려면 [하는 방법: Word 문서 또는 Excel 통합 문서에 작업 창 추가](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)합니다.  
   
-## <a name="hiding-the-actions-pane"></a>Hiding the Actions Pane  
- Although the <xref:Microsoft.Office.Tools.ActionsPane> class has a <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> method and a <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> property, you cannot remove the actions pane from the user interface by using any members of the <xref:Microsoft.Office.Tools.ActionsPane> class itself. Calling the <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> method or setting the <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> property to **false** hides only the controls on the actions pane; it does not hide the task pane.  
+## <a name="hiding-the-actions-pane"></a>작업 창 숨기기  
+ <xref:Microsoft.Office.Tools.ActionsPane> 클래스에는 <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> 메서드 및 <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> 속성이 있지만 <xref:Microsoft.Office.Tools.ActionsPane> 클래스 자체의 멤버를 사용하여 사용자 인터페이스에서 작업 창을 제거할 수 없습니다. 호출 된 <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> 메서드 또는 설정은 <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> 속성을 **false** 작업 창의 컨트롤만 숨겨집니다 작업창은 숨겨지지 않습니다.  
   
- To hide the task pane in your solution, you have several options:  
+ 솔루션에서 작업창을 숨기려면 다음 여러 가지 옵션이 있습니다.  
   
--   For Word, set the <xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A> property of the <xref:Microsoft.Office.Interop.Word.TaskPane> object that represents the Document Actions task pane to **false**. The following code example is intended to be run from the `ThisDocument` class in your project.  
+-   Word의 경우 설정는 <xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A> 속성의는 <xref:Microsoft.Office.Interop.Word.TaskPane> 에 문서 동작 작업 창을 나타내는 개체 **false**합니다. 다음 코드 예제는 프로젝트의 `ThisDocument` 클래스에서 실행해야 합니다.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#34)]  [!code-vb[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#34)]  
+     [!code-csharp[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#34)]
+     [!code-vb[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#34)]  
   
--   For Excel, set the <xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A> property of the <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A> object to **false**. The following code example is intended to be run from the `ThisWorkbook` class in your project.  
+-   Excel에 대 한 설정의 <xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A> 의 속성은 <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A> 개체를 **false**합니다. 다음 코드 예제는 프로젝트의 `ThisWorkbook` 클래스에서 실행해야 합니다.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#11)]  [!code-vb[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#11)]  
+     [!code-csharp[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#11)]
+     [!code-vb[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#11)]  
   
--   For Word or Excel, you can alternatively set the <xref:Microsoft.Office.Core.CommandBar.Visible%2A> property of the command bar that represents the task pane to **false**. The following code example is intended to be run from the `ThisDocument` or `ThisWorkbook` class in your project.  
+-   Word 또는 Excel 설정할 수도 있습니다는 <xref:Microsoft.Office.Core.CommandBar.Visible%2A> 작업창을 나타내는 명령 모음의 속성 **false**합니다. 다음 코드 예제는 프로젝트의 `ThisDocument` 또는 `ThisWorkbook` 클래스에서 실행해야 합니다.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#9)]  [!code-vb[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#9)]  
+     [!code-csharp[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#9)]
+     [!code-vb[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#9)]  
   
-### <a name="clearing-the-actions-pane-when-the-document-is-opened"></a>Clearing the Actions Pane When the Document is Opened  
- If the user saves the document while the actions pane is visible, the actions pane is visible every time the document is opened, whether or not the actions pane contains any controls. If you want to control when it appears, call the <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> method of the `ActionsPane` field in the `Startup` event handler of `ThisDocument` or `ThisWorkbook` to ensure that the actions pane is not visible when the document is opened.  
+### <a name="clearing-the-actions-pane-when-the-document-is-opened"></a>문서를 열 때 작업 창 지우기  
+ 작업 창이 표시되는 동안 사용자가 문서를 저장하는 경우 작업 창에 컨트롤이 포함되어 있는지 여부에 관계없이 문서를 열 때마다 작업 창이 표시됩니다. 표시되는 시기를 제어하려는 경우 `ThisDocument` 또는 `ThisWorkbook`의 `Startup` 이벤트 처리기에서 `ActionsPane` 필드의 <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> 메서드를 호출하여 문서를 열 때 작업 창이 표시되지 않도록 합니다.  
   
-### <a name="determining-when-the-actions-pane-is-closed"></a>Determining When the Actions Pane is Closed  
- There is no event that is raised when the actions pane is closed. Although the <xref:Microsoft.Office.Tools.ActionsPane> class has a <xref:Microsoft.Office.Tools.ActionsPane.VisibleChanged> event, this event is not raised when the end user closes the actions pane. Instead, this event is raised when the controls on the actions pane are hidden by calling the <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> method or by setting the <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> property to **false**.  
+### <a name="determining-when-the-actions-pane-is-closed"></a>작업 창이 닫히는 시기 결정  
+ 작업 창이 닫힐 때 발생하는 이벤트는 없습니다. <xref:Microsoft.Office.Tools.ActionsPane> 클래스에 <xref:Microsoft.Office.Tools.ActionsPane.VisibleChanged> 이벤트가 있긴 하지만 이 이벤트는 최종 사용자가 작업 창을 닫을 때 발생하지 않습니다. 작업 창의 컨트롤은 호출 하 여 숨겨진 경우이 이벤트는 발생 하는 대신,는 <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> 메서드 또는 설정 하 여는 <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> 속성을 **false**합니다.  
   
- If the end user closes the actions pane, the user can display it again by performing one of the following procedures in the user interface (UI) of the application.  
+ 최종 사용자가 작업 창을 닫는 경우 응용 프로그램의 UI(사용자 인터페이스)에서 다음 절차 중 하나를 수행하여 다시 표시할 수 있습니다.  
   
-##### <a name="to-display-the-actions-pane-by-using-the-ui-of-word-or-excel"></a>To display the actions pane by using the UI of Word or Excel  
+##### <a name="to-display-the-actions-pane-by-using-the-ui-of-word-or-excel"></a>Word 또는 Excel의 UI를 사용하여 작업 창을 표시하려면  
   
-1.  On the Ribbon, click the **View** tab.  
+1.  리본 메뉴에서 클릭 된 **보기** 탭 합니다.  
   
-2.  In the **Show/Hide** group, click the **Document Actions** toggle button.  
+2.  에 **표시/숨기기** 그룹에서 클릭는 **문서 동작** 토글 단추입니다.  
   
-## <a name="programming-actions-pane-events"></a>Programming Actions Pane Events  
- You can add multiple user controls to the actions pane and then write code to respond to events on the document by showing and hiding the user controls. If you map XML schema elements to your document, you can show certain user controls in the actions pane whenever the insertion point is inside one of the XML elements. For more information, see [How to: Map Schemas to Word Documents Inside Visual Studio](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md) and [How to: Map Schemas to Worksheets Inside Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md).  
+## <a name="programming-actions-pane-events"></a>작업 창 이벤트 프로그래밍  
+ 작업 창에 여러 개의 사용자 정의 컨트롤을 추가한 다음 사용자 정의 컨트롤을 표시하거나 숨겨 문서의 이벤트에 응답하는 코드를 작성할 수 있습니다. 문서에 XML 스키마 요소를 매핑하는 경우 삽입 지점이 XML 요소 중 하나의 내부에 있을 때마다 작업 창에 특정 사용자 정의 컨트롤을 표시할 수 있습니다. 자세한 내용은 참조 [하는 방법: Visual Studio 내부의 Word 문서에 스키마 맵](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md) 및 [하는 방법: Visual Studio 내의 워크시트에 스키마 맵](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)합니다.  
   
- You can also write code to respond to the events of any object, including host control, application, or document events. For more information see [Walkthrough: Programming Against Events of a NamedRange Control](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md).  
+ 호스트 컨트롤, 응용 프로그램 또는 문서 이벤트를 포함하여 개체의 이벤트에 응답하는 코드를 작성할 수도 있습니다. 자세한 내용은 참조 [연습: NamedRange 컨트롤의 이벤트 프로그래밍](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)합니다.  
   
-## <a name="binding-data-to-controls-on-the-actions-pane"></a>Binding Data to Controls on the Actions Pane  
- The controls on the actions pane have the same data binding capabilities as controls on Windows Forms. You can bind the controls to data sources such as data sets, typed data sets, and XML. For more information, see [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms).  
+## <a name="binding-data-to-controls-on-the-actions-pane"></a>작업 창의 컨트롤에 데이터 바인딩  
+ 작업 창의 컨트롤은 Windows Forms의 컨트롤과 동일한 데이터 바인딩 기능을 가지고 있습니다. 데이터 집합, 형식화된 데이터 집합 및 XML과 같은 데이터 소스에 컨트롤을 바인딩할 수 있습니다. 자세한 내용은 [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)을 참조하세요.  
   
- You can bind controls on the actions pane and controls on the document to the same dataset. For example, you can create a master/detail relation between the controls on the actions pane and the controls on the worksheet. For more information, see [Walkthrough: Binding Data to Controls on an Excel Actions Pane](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md).  
+ 작업 창의 컨트롤과 문서의 컨트롤을 동일한 데이터 집합에 바인딩할 수 있습니다. 예를 들어 작업 창의 컨트롤과 워크시트의 컨트롤 간에 마스터/세부 관계를 만들 수 있습니다. 자세한 내용은 참조 [연습: Excel 작업 창의 컨트롤에 데이터 바인딩](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)합니다.  
   
-## <a name="validating-data-in-actions-pane-controls"></a>Validating Data in Actions Pane Controls  
- If you display a message box in the <xref:System.Windows.Forms.Control.Validating> event handler of a control on the actions pane, the event might be raised a second time when focus moves from the control to the message box. To prevent this issue, use an <xref:System.Windows.Forms.ErrorProvider> control to display any validation error messages.  
+## <a name="validating-data-in-actions-pane-controls"></a>작업 창 컨트롤의 데이터 유효성 검사  
+ 작업 창에 있는 컨트롤의 <xref:System.Windows.Forms.Control.Validating> 이벤트 처리기에 메시지 상자를 표시하는 경우 포커스가 두 번째로 컨트롤에서 메시지 상자로 이동할 때 이벤트가 발생할 수도 있습니다. 이 문제를 방지하려면 <xref:System.Windows.Forms.ErrorProvider> 컨트롤을 사용하여 유효성 검사 오류 메시지를 표시합니다.  
   
-## <a name="user-control-stacking-order"></a>User Control Stacking Order  
- If you are using multiple user controls, you can write code to properly stack the user controls on the actions pane whether it is docked vertically or horizontally. You can set the stacking order of the user controls on the actions pane by using the <xref:Microsoft.Office.Tools.StackStyle> enumeration of the <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> property. For more information, see [How to: Manage Control Layout on Actions Panes](../vsto/how-to-manage-control-layout-on-actions-panes.md)  
+## <a name="user-control-stacking-order"></a>사용자 정의 컨트롤 스택 순서  
+ 여러 개의 사용자 정의 컨트롤을 사용하는 경우 가로 또는 세로로 도킹하는지에 관계없이 작업 창에서 사용자 정의 컨트롤을 제대로 쌓는 코드를 작성할 수 있습니다. <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> 속성의 <xref:Microsoft.Office.Tools.StackStyle> 열거형을 사용하여 작업 창의 사용자 정의 컨트롤 스택 순서를 설정할 수 있습니다. 자세한 내용은 참조 [하는 방법: 작업 창에서 컨트롤 레이아웃 관리](../vsto/how-to-manage-control-layout-on-actions-panes.md)  
   
- The <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> property can take the following <xref:Microsoft.Office.Tools.StackStyle> enumeration values.  
+ <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> 속성은 다음 <xref:Microsoft.Office.Tools.StackStyle> 열거형 값을 사용할 수 있습니다.  
   
-|Stacking style|Definition|  
+|스택 스타일|정의|  
 |--------------------|----------------|  
-|FromBottom|Stack from the bottom of the actions pane.|  
-|FromLeft|Stack from the left of the actions pane.|  
-|FromRight|Stack from the right of the actions pane.|  
-|FromTop|Stack from the top of the actions pane.|  
-|None|No stacking order defined; order is controlled by the developer.|  
+|FromBottom|작업 창의 아래쪽에서 쌓습니다.|  
+|FromLeft|작업 창의 왼쪽에서 쌓습니다.|  
+|FromRight|작업 창의 오른쪽에서 쌓습니다.|  
+|FromTop|작업 창의 위쪽에서 쌓습니다.|  
+|없음|스택 순서가 정의되지 않습니다. 개발자가 순서를 제어합니다.|  
   
- The following code sets the <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> property to stack the user controls from the top of the actions pane.  
+ 다음 코드에서는 <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> 속성을 설정하여 작업 창의 위쪽에서 사용자 정의 컨트롤을 쌓습니다.  
   
- [!code-csharp[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#10)] [!code-vb[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#10)]  
+ [!code-csharp[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#10)]
+ [!code-vb[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#10)]  
   
-## <a name="anchoring-controls"></a>Anchoring Controls  
- If the user resizes the actions pane at run time, the controls can resize with the actions pane. You can use the <xref:System.Windows.Forms.Control.Anchor%2A> property of a Windows Forms control to anchor controls to the actions pane. You can also anchor the Windows Forms controls onto the user control in the same manner. For more information, see [How to: Anchor Controls on Windows Forms](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms).  
+## <a name="anchoring-controls"></a>컨트롤 고정  
+ 사용자가 런타임에 작업 창의 크기를 조정하는 경우 작업 창과 함께 컨트롤의 크기가 조정될 수 있습니다. Windows Forms 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 사용하여 작업 창에 컨트롤을 고정할 수 있습니다. 동일한 방식으로 사용자 정의 컨트롤에 Windows Forms 컨트롤을 고정할 수도 있습니다. 자세한 내용은 참조 [하는 방법: Windows Forms에서 컨트롤 고정](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms)합니다.  
   
-## <a name="resizing-the-actions-pane"></a>Resizing the Actions Pane  
- You cannot directly change the size of an <xref:Microsoft.Office.Tools.ActionsPane> because the <xref:Microsoft.Office.Tools.ActionsPane> is embedded in the task pane. However, you can programmatically change the width of the task pane by setting the <xref:Microsoft.Office.Core.CommandBar.Width%2A> property of the <xref:Microsoft.Office.Core.CommandBar> that represents the task pane. You can change the height of the task pane if it is docked horizontally or is floating.  
+## <a name="resizing-the-actions-pane"></a>작업 창 크기 조정  
+ <xref:Microsoft.Office.Tools.ActionsPane>이 작업창에 포함되어 있으므로 <xref:Microsoft.Office.Tools.ActionsPane>의 크기를 직접 변경할 수는 없습니다. 그러나 작업창을 나타내는 <xref:Microsoft.Office.Core.CommandBar>의 <xref:Microsoft.Office.Core.CommandBar.Width%2A> 속성을 설정하여 프로그래밍 방식으로 작업창의 너비를 변경할 수 있습니다. 가로로 도킹되어 있거나 부동 창인 경우 작업창의 높이를 변경할 수 있습니다.  
   
- Programmatically resizing the task pane is generally not recommended because the user should be able to select the task pane size that best suits his or her needs. However, if you must resize the width of the task pane, you could use the following code to achieve this task.  
+ 사용자가 요구 사항에 가장 적합한 작업창 크기를 선택할 수 있어야 하므로 일반적으로 프로그래밍 방식으로 작업창의 크기를 조정하지 않는 것이 좋습니다. 그러나 작업창의 너비를 조정해야 하는 경우 다음 코드를 사용하여 이 작업을 수행할 수 있습니다.  
   
- [!code-csharp[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#102)] [!code-vb[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#102)]  
+ [!code-csharp[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#102)]
+ [!code-vb[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#102)]  
   
-## <a name="repositioning-the-actions-pane"></a>Repositioning the Actions Pane  
- You cannot directly reposition the <xref:Microsoft.Office.Tools.ActionsPane> because it is embedded in the task pane. However, you can programmatically move the task pane by setting the <xref:Microsoft.Office.Core.CommandBar.Position%2A> property of the <xref:Microsoft.Office.Core.CommandBar> that represents the task pane.  
+## <a name="repositioning-the-actions-pane"></a>작업 창 위치 변경  
+ <xref:Microsoft.Office.Tools.ActionsPane>은 작업창에 포함되어 있으므로 직접 위치를 변경할 수 없습니다. 그러나 작업창을 나타내는 <xref:Microsoft.Office.Core.CommandBar>의 <xref:Microsoft.Office.Core.CommandBar.Position%2A> 속성을 설정하여 프로그래밍 방식으로 작업창을 이동할 수 있습니다.  
   
- Programmatically repositioning the task pane is generally not recommended because the user should be able to choose the task pane position on the screen that best suits his or her needs. However, if you must move the task pane to a particular position, you could use the following code to achieve this task.  
+ 사용자가 화면에서 요구 사항에 가장 적합한 작업창 위치를 선택할 수 있어야 하므로 일반적으로 프로그래밍 방식으로 작업창의 위치를 변경하지 않는 것이 좋습니다. 그러나 작업창을 특정 위치로 이동해야 하는 경우 다음 코드를 사용하여 이 작업을 수행할 수 있습니다.  
   
- [!code-csharp[Trin_VstcoreActionsPaneWord#100](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#100)] [!code-vb[Trin_VstcoreActionsPaneWord#100](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#100)]  
+ [!code-csharp[Trin_VstcoreActionsPaneWord#100](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#100)]
+ [!code-vb[Trin_VstcoreActionsPaneWord#100](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#100)]  
   
 > [!NOTE]  
->  End users can manually reposition the task pane at any time. There is no way to ensure that the task pane will remain docked at the position you indicate programmatically. However, you can check for orientation changes and ensure that the controls on the actions pane are stacked in the correct direction. For more information, see [How to: Manage Control Layout on Actions Panes](../vsto/how-to-manage-control-layout-on-actions-panes.md).  
+>  최종 사용자는 언제든지 작업창의 위치를 수동으로 변경할 수 있습니다. 프로그래밍 방식으로 지정한 위치에 작업창이 도킹된 상태로 유지되도록 하는 방법은 없습니다. 그러나 방향 변경을 검사하고 작업 창의 컨트롤이 올바른 방향으로 쌓이는지 확인할 수 있습니다. 자세한 내용은 참조 [하는 방법: 작업 창에서 컨트롤 레이아웃 관리](../vsto/how-to-manage-control-layout-on-actions-panes.md)합니다.  
   
- Setting the <xref:Microsoft.Office.Tools.ActionsPane.Top%2A> and <xref:Microsoft.Office.Tools.ActionsPane.Left%2A> properties of the <xref:Microsoft.Office.Tools.ActionsPane> does not change its position because the <xref:Microsoft.Office.Tools.ActionsPane> object is embedded in the task pane.  
+ <xref:Microsoft.Office.Tools.ActionsPane> 개체는 작업창에 포함되어 있으므로 <xref:Microsoft.Office.Tools.ActionsPane>의 <xref:Microsoft.Office.Tools.ActionsPane.Top%2A> 및 <xref:Microsoft.Office.Tools.ActionsPane.Left%2A> 속성을 설정해도 해당 위치가 변경되지 않습니다.  
   
- If the task pane is not docked, you can set the <xref:Microsoft.Office.Core.CommandBar.Top%2A> and <xref:Microsoft.Office.Core.CommandBar.Left%2A> properties of the <xref:Microsoft.Office.Core.CommandBar> that represents the task pane. The following code moves an undocked task pane to the upper-left corner of the document.  
+ 작업창이 도킹되지 않은 경우 작업창을 나타내는 <xref:Microsoft.Office.Core.CommandBar>의 <xref:Microsoft.Office.Core.CommandBar.Top%2A> 및 <xref:Microsoft.Office.Core.CommandBar.Left%2A> 속성을 설정할 수 있습니다. 다음 코드는 도킹되지 않은 작업창을 문서의 왼쪽 위로 이동합니다.  
   
- [!code-csharp[Trin_VstcoreActionsPaneWord#101](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#101)] [!code-vb[Trin_VstcoreActionsPaneWord#101](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#101)]  
+ [!code-csharp[Trin_VstcoreActionsPaneWord#101](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#101)]
+ [!code-vb[Trin_VstcoreActionsPaneWord#101](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#101)]  
   
-## <a name="see-also"></a>See Also  
- [Using WPF Controls in Office Solutions](../vsto/using-wpf-controls-in-office-solutions.md)   
- [Office UI Customization](../vsto/office-ui-customization.md)   
- [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md)   
- [How to: Add an Actions Pane to Word Documents or Excel Workbooks](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
- [Walkthrough: Inserting Text into a Document from an Actions Pane](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)   
- [Walkthrough: Binding Data to Controls on a Word Actions Pane](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)   
- [Walkthrough: Binding Data to Controls on an Excel Actions Pane](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)   
- [How to: Manage Control Layout on Actions Panes](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
- [Walkthrough: Inserting Text into a Document from an Actions Pane](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)  
+## <a name="see-also"></a>참고 항목  
+ [Office 솔루션에서 WPF 컨트롤 사용](../vsto/using-wpf-controls-in-office-solutions.md)   
+ [Office UI 사용자 지정](../vsto/office-ui-customization.md)   
+ [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)   
+ [방법: Word 문서 또는 Excel 통합 문서에 작업 창 추가](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
+ [연습: 작업 창에서 문서로 텍스트 삽입](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)   
+ [연습: Word 작업 창의 컨트롤에 데이터 바인딩](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)   
+ [연습: Excel 작업 창의 컨트롤에 데이터 바인딩](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)   
+ [방법: 작업 창에서 컨트롤 레이아웃 관리](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
+ [연습: 작업창에서 문서로 텍스트 삽입](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)  
   
   

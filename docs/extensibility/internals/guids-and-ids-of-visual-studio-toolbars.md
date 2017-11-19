@@ -1,141 +1,143 @@
 ---
 title: "Guid 및 Visual Studio 도구 모음의 Id | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "visual studio 그룹"
-  - "도구 모음"
-  - "visual studio 도구 모음"
-  - "ID"
-  - "toolgar 그룹"
-  - "도구 창 도구 모음"
-  - "guid"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- visual studio groups
+- toolbars
+- visual studio toolbar
+- id
+- toolgar group
+- tool window toolbar
+- guid
 ms.assetid: c9cacd57-9225-450f-a9ac-cbf3168ea844
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 787cebc77d0ca3d06fd88be8ab6f42c6bae3ee38
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Guid 및 Visual Studio 도구 모음의 Id
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-이 항목에서는 GUID 및 ID 값 Visual Studio 통합된 개발 환경 \(IDE\)에 포함 된 도구 모음을 열거 하 고 그룹을 포함 합니다.  이러한 값은 Visual Studio SDK의 일부로 설치 된.vsct 파일에 정의 됩니다.  자세한 내용은 [IDE 정의 명령, 메뉴 및 그룹](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)를 참조하십시오.  
+# <a name="guids-and-ids-of-visual-studio-toolbars"></a>Guid 및 Id를 Visual Studio 도구 모음
+이 항목의 도구 모음을 Visual Studio 통합된 개발 환경 (IDE)에 포함 된 GUID 및 ID 값을 열거 하며 그룹 포함. 이러한 값은 Visual Studio SDK의 일부로 설치 되는.vsct 파일에서 정의 됩니다. 자세한 내용은 참조 [IDE-Defined 명령, 메뉴 및 그룹](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)합니다.  
   
 > [!NOTE]
->  대부분의 Visual Studio 사용할 수 Visual Studio 해당 GUID가 정의 되지 않은 및 ID 값은 공개 되지 않습니다.  이 항목에서는 Visual Studio SDK.vsct 파일에 정의 된 도구 모음만을 나열 합니다.  
+>  Visual Studio 및 GUID에 정의 되지 않은 다양 한 Visual Studio에서 사용할 수 있는 도구 모음 및 ID 값이 public이 아니어야 합니다. 이 항목에서는 Visual Studio SDK.vsct 파일에 정의 되어 있는 도구 모음만 나열 합니다.  
   
- .Vsct 파일에 정의 된 IDE 개체를 사용 하는 방법에 대 한 자세한 내용은 [확장 메뉴 및 명령](../../extensibility/extending-menus-and-commands.md).  
+ .Vsct 파일에 정의 되어 있는 IDE 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [확장 메뉴 및 명령을](../../extensibility/extending-menus-and-commands.md)합니다.  
   
- GUID를 사용 하는 Visual Studio IDE에서 제공 하는 기본 도구 모음 `guidSHLMainMenu`, GUID:ID 구문을 사용 하 여 지정 하는 경우를 제외 하 고.  
+ Visual Studio IDE에서 제공 하는 기본 도구 모음 GUID는 사용 `guidSHLMainMenu`, guid: id 구문을 사용 하 여 다르게 지정을 제외 하 고 있습니다.  
   
-## IDE 도구 모음  
- Visual Studio IDE에서 다음 도구 모음을 제공 합니다.  도구 모음을 선택 하 여 표시할 수 있습니다의  **도구 모음** 의 하위 메뉴의  **도구** 메뉴.  도구 창 도구 모음이이 섹션에 포함 되지 않습니다.  
+## <a name="ide-toolbars"></a>IDE의 도구 모음  
+ 다음 도구 모음에서 Visual Studio IDE에 의해 제공 됩니다. 도구 모음에서 선택 하 여 표시할 수는 **도구 모음** 의 하위 메뉴는 **도구** 메뉴. 이 섹션에는 도구 창에서 도구 모음 포함 되지 않습니다.  
   
- 그룹 에서만 도구 모음에서 직접 내려가 야 수 있습니다.  그룹을 추가 하려면 부모 GUID 및 도구 모음의 ID를 설정 합니다.  도구 모음에 단추를 추가 하려면 도구 모음에서 그룹에 부모를 설정 합니다.  
+ 그룹에만 도구 모음에서 직접 상속 됩니다. 그룹을 추가 하려면 GUID 및 도구 모음 ID를 해당 부모를 설정 합니다. 도구 모음 단추를 추가 하려면 해당 부모 그룹에 도구 모음에서 설정 합니다.  
   
-|도구 모음|ID|  
-|-----------|--------|  
-|Standard|IDM\_VS\_TOOL\_STANDARD|  
-|Build|IDM\_VS\_TOOL\_BUILD|  
-|텍스트 편집기|IDM\_VS\_TOOL\_TEXTEDITOR|  
-|디버그|guidVSDebugGroup:IDM\_DEBUG\_TOOLBAR|  
-|디버그 위치|guidVSDebugGroup:IDM\_DEBUG\_CONTEXT\_TOOLBAR|  
+|Toolbar|ID|  
+|-------------|--------|  
+|표준|IDM_VS_TOOL_STANDARD|  
+|빌드|IDM_VS_TOOL_BUILD|  
+|텍스트 편집기|IDM_VS_TOOL_TEXTEDITOR|  
+|디버그|guidVSDebugGroup:IDM_DEBUG_TOOLBAR|  
+|디버그 위치|guidVSDebugGroup:IDM_DEBUG_CONTEXT_TOOLBAR|  
   
-### 특수 도구 모음  
- 이러한 도구 모음은 Visual Studio IDE에서 정의 되지만 특수 한 기능을 수행 하 고 명령 그룹을 호스트 하지 않습니다.  
+### <a name="special-toolbars"></a>특수 도구 모음  
+ 이러한 도구 모음에서 Visual Studio IDE에 의해 정의 된 특수 기능을 제공 하 고 하지만 명령 그룹을 호스트 하지 않습니다.  
   
-|도구 모음|ID|  
-|-----------|--------|  
-|추가 명령|IDM\_VS\_TOOL\_ADDCOMMAND|  
-|정의되어 있지 않습니다.|IDM\_VS\_TOOL\_UNDEFINED|  
-|XML 스키마|IDM\_VS\_TOOL\_SCHEMA|  
-|XML 데이터|IDM\_VS\_TOOL\_DATA|  
+|Toolbar|ID|  
+|-------------|--------|  
+|명령 추가|IDM_VS_TOOL_ADDCOMMAND|  
+|정의 되지 않은|IDM_VS_TOOL_UNDEFINED|  
+|XML 스키마|IDM_VS_TOOL_SCHEMA|  
+|XML 데이터|IDM_VS_TOOL_DATA|  
   
-## IDE 도구 모음에 그룹  
- 표준 도구 모음에 단추를 추가 하려면 상위 다음 그룹 중 하나를 설정 합니다.  그룹 부모 도구 모음에서 정렬 됩니다.  
+## <a name="groups-on-the-ide-toolbars"></a>IDE 도구 모음에는 그룹  
+ 표준 도구 모음 단추를 추가 하려면 다음 그룹 중 하나를 부모로 설정 합니다. 그룹은 부모 도구 모음으로 정렬 됩니다.  
   
-### 표준 도구 모음의 그룹  
+### <a name="standard-toolbar-groups"></a>표준 도구 모음 그룹  
   
-|Name|ID|  
+|이름|ID|  
 |----------|--------|  
-|저장\/열기|IDG\_VS\_TOOLSB\_SAVEOPEN|  
-|잘라내기\/붙여넣기|IDG\_VS\_TOOLSB\_CUTCOPY|  
-|실행 취소\/다시 실행|IDG\_VS\_TOOLSB\_UNDOREDO|  
-|실행\/구축|IDG\_VS\_TOOLSB\_RUNBUILD|  
-|검색|IDG\_VS\_TOOLSB\_SEARCH|  
-|Windows|IDG\_VS\_TOOLSB\_WINDOWS|  
-|새 창|IDG\_VS\_TOOLSB\_NEWWINDOWS|  
-|로드\/저장|IDG\_VS\_WINDOWUI\_LOADSAVE|  
-|진행 상태 표시|IDG\_VS\_TOOLSB\_GAUGE|  
+|저장/열기|IDG_VS_TOOLSB_SAVEOPEN|  
+|잘라내기/복사|IDG_VS_TOOLSB_CUTCOPY|  
+|실행 취소/다시 실행|IDG_VS_TOOLSB_UNDOREDO|  
+|실행/빌드|IDG_VS_TOOLSB_RUNBUILD|  
+|검색|IDG_VS_TOOLSB_SEARCH|  
+|Windows|IDG_VS_TOOLSB_WINDOWS|  
+|새 창|IDG_VS_TOOLSB_NEWWINDOWS|  
+|로드/저장|IDG_VS_WINDOWUI_LOADSAVE|  
+|계기|IDG_VS_TOOLSB_GAUGE|  
   
-### 도구 모음 그룹 작성  
+### <a name="build-toolbar-groups"></a>빌드 도구 모음 그룹  
   
-|Name|ID|  
+|이름|ID|  
 |----------|--------|  
-|빌드 모음|IDG\_VS\_BUILDBAR|  
-|Cancel|IDG\_VS\_BUILD\_CANCEL|  
+|빌드 표시줄|IDG_VS_BUILDBAR|  
+|취소|IDG_VS_BUILD_CANCEL|  
   
-### 텍스트 편집기 도구 모음 그룹  
+### <a name="text-editor-toolbar-groups"></a>텍스트 편집기 도구 모음 그룹  
   
-|Name|ID|  
+|이름|ID|  
 |----------|--------|  
-|완료|IDM\_VS\_TOOL\_TEXTEDITOR|  
-|들여쓰기|IDG\_VS\_EDITTOOLBAR\_INDENT|  
-|주석|IDG\_VS\_EDITTOOLBAR\_COMMENT|  
-|책갈피|IDG\_VS\_EDITTOOLBAR\_TEMPBOOKMARKS|  
+|완료|IDM_VS_TOOL_TEXTEDITOR|  
+|Indent|IDG_VS_EDITTOOLBAR_INDENT|  
+|주석|IDG_VS_EDITTOOLBAR_COMMENT|  
+|책갈피|IDG_VS_EDITTOOLBAR_TEMPBOOKMARKS|  
   
-### 디버그 도구 모음 그룹  
+### <a name="debug-toolbar-groups"></a>디버그 도구 모음 그룹  
   
-|Name|ID|  
+|이름|ID|  
 |----------|--------|  
-|실행|IDM\_DEBUG\_TOOLBAR|  
-|단계별 실행|IDG\_DEBUG\_TOOLBAR\_STEPPING|  
-|Watch|IDG\_DEBUG\_TOOLBAR\_WATCH|  
-|Windows|IDG\_DEBUG\_TOOLBAR\_WINDOWS|  
+|실행|IDM_DEBUG_TOOLBAR|  
+|단계별 실행|IDG_DEBUG_TOOLBAR_STEPPING|  
+|조사식|IDG_DEBUG_TOOLBAR_WATCH|  
+|Windows|IDG_DEBUG_TOOLBAR_WINDOWS|  
   
-### 디버그 위치 도구 모음의 그룹  
+### <a name="debug-location-toolbar-groups"></a>디버그 위치 도구 모음 그룹  
   
-|Name|ID|  
+|이름|ID|  
 |----------|--------|  
-|디버그 위치|IDG\_DEBUG\_CONTEXT\_TOOLBAR|  
+|디버그 위치|IDG_DEBUG_CONTEXT_TOOLBAR|  
   
-## 도구 창 도구 모음  
- 도구 모음이 나타날 수 있습니다 직접 IDE 나 도구 창 등  **솔루션 탐색기**.  도구 창 도구 모음 도구 창을.vsct 파일에 정의 되어 있지 않으므로 정의 된 부모가 없습니다.  대신, 이러한 코드에 배치 됩니다.  다음 표에서 IDE에서 도구 창에 나타나는 도구 모음 및 명령 그룹을 포함 보여 줍니다.  
+## <a name="tool-window-toolbars"></a>도구 창 도구 모음  
+ 도구 모음 또는 도구 창은 IDE에서 직접와 같이 나타날 수 **솔루션 탐색기**합니다. 도구 창은.vsct 파일에 정의 되어 있지 않은, 때문에 도구 창 도구 모음에서 정의 된 부모를 갖지 않습니다. 코드에 배치 됩니다. 다음 표에서 IDE에서 도구 창에 표시 되는 도구 모음 및 포함 명령 그룹을 보여 줍니다.  
   
 > [!NOTE]
->  도구 모음 및 그룹 GUID를 사용 `guidSHLMainMenu`, GUID:ID 구문을 사용 하 여 지정 하는 경우를 제외 하 고.  도구 모음에 대 한 GUID를 지정 하는 경우 또한 해당 도구 모음에서 내려가 야 하는 그룹에 적용 됩니다.  
+>  도구 모음 및 그룹의 GUID를 사용 하 여 `guidSHLMainMenu`, guid: id 구문을 사용 하 여 다르게 지정을 제외 하 고 있습니다. 도구 모음에 대 한 GUID를 지정 하는 경우 해당 도구 모음에서 상속 하는 그룹에도 적용 됩니다.  
   
-|도구 창|도구 모음|그룹|  
-|----------|-----------|--------|  
-|솔루션 탐색기|IDM\_VS\_TOOL\_PROJWIN|IDG\_VS\_PROJ\_TOOLBAR1.5|  
-|서버 탐색기|guid\_SE\_MenuGroup:IDM\_SE\_TOOLBAR\_SERVEREXPLORER|IDG\_SE\_TOOLBAR\_REFRESH|  
-|속성|IDM\_VS\_TOOL\_PROPERTIES|IDG\_VS\_PROPERTIES\_SORT<br /><br /> IDG\_VS\_PROPERTIES\_PAGES|  
-|클래스 뷰|IDM\_VS\_TOOL\_CLASSVIEW|IDG\_VS\_CLASSVIEW\_FOLDERS<br /><br /> IDG\_VS\_CLASSVIEW\_SEARCH<br /><br /> IDG\_VS\_CLASSVIEW\_SETTINGS|  
-|클래스 뷰|IDM\_VS\_TOOL\_CLASSVIEW\_GO|IDG\_VS\_CLASSVIEW\_SEARCH2|  
-|개체 브라우저|IDM\_VS\_TOOL\_OBJBROWSER|IDG\_VS\_OBJBROWSER\_SUBSETS<br /><br /> IDG\_VS\_OBJBROWSER\_SEARCH<br /><br /> IDG\_VS\_OBJBROWSER\_ADDREFERENCE<br /><br /> IDG\_VS\_OBJBROWSER\_BROWSERSETTINGS|  
-|개체 브라우저|IDM\_VS\_TOOL\_OBJECT\_BROWSER\_GO|IDG\_VS\_OBJBROWSER\_SEARCH2|  
-|Output|IDM\_VS\_TOOL\_OUTPUTWINDOW|IDG\_VS\_OUTPUTWINDOW\_SELECT<br /><br /> IDG\_VS\_OUTPUTWINDOW\_GOTO<br /><br /> IDG\_VS\_OUTPUTWINDOW\_NEXTPREV<br /><br /> IDG\_VS\_OUTPUTWINDOW\_CLEAR<br /><br /> IDG\_VS\_OUTPUTWINDOW\_WORDWRAP|  
-|찾기 및 바꾸기|IDM\_VS\_TOOL\_UNIFIEDFIND|IDG\_VS\_FINDTAB<br /><br /> IDG\_VS\_REPLACETAB|  
-|찾기 결과 1|IDM\_VS\_TOOL\_FINDRESULTS1|IDG\_VS\_FINDRESULTS1\_GOTO<br /><br /> IDG\_VS\_FINDRESULTS1\_NEXTPREV<br /><br /> IDG\_VS\_FINDRESULTS1\_CLEAR<br /><br /> IDG\_VS\_FINDRESULTS1\_STOPFIND|  
-|찾기 결과 2|IDM\_VS\_TOOL\_FINDRESULTS2|IDG\_VS\_FINDRESULTS2\_GOTO<br /><br /> IDG\_VS\_FINDRESULTS2\_NEXTPREV<br /><br /> IDG\_VS\_FINDRESULTS2\_CLEAR<br /><br /> IDG\_VS\_FINDRESULTS2\_STOPFIND|  
-|Snippet|IDM\_VS\_TOOL\_SNIPPETMENUS|IDG\_VS\_SNIPPET\_REPL<br /><br /> IDG\_VS\_SNIPPET\_REF<br /><br /> IDG\_VS\_SNIPPET\_PROP|  
-|책갈피|IDM\_VS\_TOOL\_BOOKMARKWIND|IDG\_VS\_BWNEWFOLDER<br /><br /> IDG\_VS\_BWNEXTBM<br /><br /> IDG\_VS\_BWNEXTBMF<br /><br /> IDG\_VS\_BWENABLE<br /><br /> IDG\_VS\_BWDELETE|  
-|작업 목록|IDM\_VS\_TOOL\_TASKLIST|IDG\_VS\_TASKLIST\_PROVIDERLIST|  
-|사용자 작업|IDM\_VS\_TOOL\_USERTASKS|IDG\_VS\_TASKLIST\_PROVIDERLIST<br /><br /> IDG\_VS\_USERTASKS\_EDIT|  
-|오류 목록|IDM\_VS\_TOOL\_ERRORLIST|IDG\_VS\_ERRORLIST\_ERRORGROUP<br /><br /> IDG\_VS\_ERRORLIST\_WARNINGGROUP<br /><br /> IDG\_VS\_ERRORLIST\_MESSAGEGROUP|  
-|호출 브라우저|IDM\_VS\_TOOL\_CALLBROWSER1.16|IDG\_VS\_TOOLBAR\_CALLBROWSER1\_ACTIONS<br /><br /> IDG\_VS\_TOOLBAR\_CALLBROWSER1\_TYPE<br /><br /> IDG\_VS\_TOOLBAR\_CALLBROWSER1\_CBSETTINGS|  
-|중단점|guidVSDebugGroup:IDM\_BREAKPOINTS\_WINDOW\_TOOLBAR|IDG\_BREAKPOINTS\_WINDOW\_NEW<br /><br /> IDG\_BREAKPOINTS\_WINDOW\_DELETE<br /><br /> IDG\_BREAKPOINTS\_WINDOW\_ALL<br /><br /> IDG\_BREAKPOINTS\_WINDOW\_VIEW<br /><br /> IDG\_BREAKPOINTS\_WINDOW\_EDIT<br /><br /> IDG\_BREAKPOINTS\_WINDOW\_COLUMNS|  
-|디스어셈블리|guidVSDebugGroup:IDM\_DISASM\_WINDOW\_TOOLBAR|IDG\_DISASM\_WINDOW\_TOOLBAR|  
-|메모리 1\-4|guidVSDebugGroup:IDM\_MEMORY\_WINDOW\_TOOLBAR1…4|IDG\_MEMORY\_EXPRESSION1.4<br /><br /> IDG\_MEMORY\_COLUMNS1.4|  
-|프로세스|guidVSDebugGroup:IDM\_ATTACHED\_PROCS\_TOOLBAR|IDG\_ATTACHED\_PROCS\_EXECCNTRL IDG\_ATTACHED\_PROCS\_STEPPING<br /><br /> IDG\_ATTACHED\_PROCS\_EXECCNTRL2<br /><br /> IDG\_ATTACHED\_PROCS\_ATTACH<br /><br /> IDG\_ATTACHED\_PROCS\_COLUMNS|  
+|도구 창|Toolbar|그룹|  
+|-----------------|-------------|------------|  
+|솔루션 탐색기|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1... 5|  
+|서버 탐색기|guid_SE_MenuGroup:IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|  
+|속성|IDM_VS_TOOL_PROPERTIES|IDG_VS_PROPERTIES_SORT<br /><br /> IDG_VS_PROPERTIES_PAGES|  
+|클래스 뷰|IDM_VS_TOOL_CLASSVIEW|IDG_VS_CLASSVIEW_FOLDERS<br /><br /> IDG_VS_CLASSVIEW_SEARCH<br /><br /> IDG_VS_CLASSVIEW_SETTINGS|  
+|클래스 뷰|IDM_VS_TOOL_CLASSVIEW_GO|IDG_VS_CLASSVIEW_SEARCH2|  
+|개체 브라우저|IDM_VS_TOOL_OBJBROWSER|IDG_VS_OBJBROWSER_SUBSETS<br /><br /> IDG_VS_OBJBROWSER_SEARCH<br /><br /> IDG_VS_OBJBROWSER_ADDREFERENCE<br /><br /> IDG_VS_OBJBROWSER_BROWSERSETTINGS|  
+|개체 브라우저|IDM_VS_TOOL_OBJECT_BROWSER_GO|IDG_VS_OBJBROWSER_SEARCH2|  
+|출력|IDM_VS_TOOL_OUTPUTWINDOW|IDG_VS_OUTPUTWINDOW_SELECT<br /><br /> IDG_VS_OUTPUTWINDOW_GOTO<br /><br /> IDG_VS_OUTPUTWINDOW_NEXTPREV<br /><br /> IDG_VS_OUTPUTWINDOW_CLEAR<br /><br /> IDG_VS_OUTPUTWINDOW_WORDWRAP|  
+|찾기 및 바꾸기|IDM_VS_TOOL_UNIFIEDFIND|IDG_VS_FINDTAB<br /><br /> IDG_VS_REPLACETAB|  
+|찾기 결과 1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|  
+|찾기 결과 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|  
+|코드 조각|IDM_VS_TOOL_SNIPPETMENUS|IDG_VS_SNIPPET_REPL<br /><br /> IDG_VS_SNIPPET_REF<br /><br /> IDG_VS_SNIPPET_PROP|  
+|책갈피|IDM_VS_TOOL_BOOKMARKWIND|IDG_VS_BWNEWFOLDER<br /><br /> IDG_VS_BWNEXTBM<br /><br /> IDG_VS_BWNEXTBMF<br /><br /> IDG_VS_BWENABLE<br /><br /> IDG_VS_BWDELETE|  
+|작업 목록|IDM_VS_TOOL_TASKLIST|IDG_VS_TASKLIST_PROVIDERLIST|  
+|사용자 작업|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|  
+|오류 목록|IDM_VS_TOOL_ERRORLIST|IDG_VS_ERRORLIST_ERRORGROUP<br /><br /> IDG_VS_ERRORLIST_WARNINGGROUP<br /><br /> IDG_VS_ERRORLIST_MESSAGEGROUP|  
+|호출 브라우저|IDM_VS_TOOL_CALLBROWSER1... 16|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|  
+|중단점|guidVSDebugGroup:IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|  
+|디스어셈블리|guidVSDebugGroup:IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|  
+|1-4 메모리|guidVSDebugGroup:IDM_MEMORY_WINDOW_TOOLBAR1 중... 4|IDG_MEMORY_EXPRESSION1... 4<br /><br /> IDG_MEMORY_COLUMNS1... 4|  
+|프로세스|guidVSDebugGroup:IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [도구 모음에 메뉴 컨트롤러 추가](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)   
  [도구 창에는 도구 모음 추가](../../extensibility/adding-a-toolbar-to-a-tool-window.md)   
- [Guid 및 Id의 Visual Studio 메뉴](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)
+ [Visual Studio 메뉴의 GUID 및 ID](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)

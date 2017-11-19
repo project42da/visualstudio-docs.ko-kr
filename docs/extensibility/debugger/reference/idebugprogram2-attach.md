@@ -1,60 +1,60 @@
 ---
-title: "IDebugProgram2::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::Attach"
-helpviewer_keywords: 
-  - "IDebugProgram2::Attach"
+title: IDebugProgram2::Attach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::Attach
+helpviewer_keywords: IDebugProgram2::Attach
 ms.assetid: de069fbf-a565-4905-b102-f5658c55aacd
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 60127ceb0cb177bd8532d2e20ebc1afebeb90937
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::Attach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-프로그램에 첨부합니다.  
+# <a name="idebugprogram2attach"></a>IDebugProgram2::Attach
+프로그램에 연결합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Attach(   
-   IDebugEventCallback2* pCallback  
+```cpp  
+HRESULT Attach(   
+   IDebugEventCallback2* pCallback  
 );  
 ```  
   
-```c#  
-int Attach(   
-   IDebugEventCallback2 pCallback  
+```csharp  
+int Attach(   
+   IDebugEventCallback2 pCallback  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pCallback`  
- \[in\] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 개체에 대 한 디버그 이벤트 알림을 사용할 수 있습니다.  
+ [in] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 디버그 이벤트 알림에 사용할 개체입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  몇 가지 가능한 오류 코드는 다음과 같습니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다. 다음 표에서 몇 가지 가능한 오류 코드를 보여 줍니다.  
   
 |값|설명|  
-|-------|--------|  
-|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|지정 된 프로그램에 디버거가 이미 연결 되어 있습니다.|  
-|`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|보안 위반이 연결 과정 동안 발생 했습니다.|  
-|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|데스크탑 프로그램을 디버거에 연결할 수 없습니다.|  
+|-----------|-----------------|  
+|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|지정된 된 프로그램 디버거가 이미 연결 되어 있습니다.|  
+|`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|Attach는 동안 보안 위반이 발생 했습니다.|  
+|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|데스크톱 프로그램을 디버거에 연결할 수 없습니다.|  
   
-## 설명  
- 디버그 엔진 \(DE\) 프로그램에 연결 하려면이 메서드를 호출 하지 않습니다.  DE는 프로그램의 주소 공간에서 실행 되는 경우는 [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) 메서드가 호출 됩니다.  DE 연속 \(SDM\) 세션 디버그 관리자의 주소 공간을 경우는 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 메서드가 호출 됩니다.  
+## <a name="remarks"></a>설명  
+ 디버그 엔진 (DE) 프로그램에 연결 하려면이 메서드를 호출 하지 않습니다. 프로그램의 주소 공간에서 실행 되는 DE 경우는 [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) 메서드를 호출 합니다. 주소 공간, (SDM) 세션 디버그 관리자에서 장치가 실행 하는 경우는 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 메서드를 호출 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   
  [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
- [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)

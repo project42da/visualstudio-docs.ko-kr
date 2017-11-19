@@ -1,36 +1,38 @@
 ---
-title: "문서 텍스트 작업"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "문서[Visual Studio에서 Office 개발], 텍스트"
-  - "Office 문서[Visual Studio에서 Office 개발], 텍스트"
-  - "텍스트[Visual Studio에서 Office 개발]"
-  - "Word[Visual Studio에서 Office 개발], 텍스트"
+title: "문서 텍스트 작업 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office documents [Office development in Visual Studio, text
+- Word [Office development in Visual Studio], text
+- text [Office development in Visual Studio]
+- documents [Office development in Visual Studio], text
 ms.assetid: 6f9e5a35-8c29-4237-bd44-f3a79e6a5f1c
-caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c3d9ef7af80e7840405433ec7d87f647b90442c5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 문서 텍스트 작업
+# <a name="working-with-text-in-documents"></a>문서 텍스트 작업
   이 섹션의 항목에서는 Microsoft Office Word의 개체 모델을 사용하여 Office 프로젝트에서 텍스트 작업을 수행하는 단계별 절차 및 코드 예제를 제공합니다.  
   
  VSTO 추가 기능에서 이러한 작업을 수행하는 방법과 문서 수준 사용자 지정에서 수행하는 방법 간에 차이가 있는 경우가 있습니다.  
   
 |작업|프로시저|  
-|--------|----------|  
+|----------|---------------|  
 |다양한 조건에 따라 범위를 정의하고 선택합니다.|[방법: 프로그래밍 방식으로 문서의 범위 정의 및 선택](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)|  
 |범위를 시작하고 끝내는 문자를 가져옵니다.|[방법: 프로그래밍 방식으로 범위의 시작 및 끝 문자 검색](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)|  
 |단락 표시를 포함하지 않고 단락을 선택하고 텍스트를 이동합니다.|[방법: 프로그래밍 방식으로 범위를 만들 때 단락 표시 제외](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)|  
@@ -48,8 +50,8 @@ caps.handback.revision: 14
 |문서를 인쇄하기 전에 책갈피의 텍스트를 숨깁니다.|[방법: 프로그래밍 방식으로 문서에서 텍스트 숨기기](../vsto/how-to-programmatically-hide-text-in-documents.md)|  
 |텍스트에 주석을 추가합니다.|[방법: 프로그래밍 방식으로 문서의 텍스트에 메모 추가](../vsto/how-to-programmatically-add-comments-to-text-in-documents.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Word 개체 모델 개요](../vsto/word-object-model-overview.md)   
- [Office 솔루션 개발 개요&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)  
+ [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)  
   
   

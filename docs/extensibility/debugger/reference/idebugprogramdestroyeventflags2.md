@@ -1,48 +1,49 @@
 ---
-title: "IDebugProgramDestroyEventFlags2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProgramDestroyEventFlags2 인터페이스"
+title: IDebugProgramDestroyEventFlags2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugProgramDestroyEventFlags2 interface
 ms.assetid: d384ff71-dc71-40b9-a871-801f8b6a3418
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: bee4fe04f22bd9afbff8e2d26ef9d699b0226241
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramDestroyEventFlags2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-디버그 엔진의 기본 동작을 재정의할 수 있습니다 해당 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 디버그 세션을 종료 하면 UI입니다.  
+# <a name="idebugprogramdestroyeventflags2"></a>IDebugProgramDestroyEventFlags2
+기본 동작을 재정의 하는 디버그 엔진을 사용 하도록 설정 된 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] UI는 디버그 세션을 종료 하는 경우.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugProgramDestroyEventFlags2 : IUnknown  
 ```  
   
-## 구현자 참고 사항  
- 이 인터페이스는 디버그 엔진에서 구현 됩니다.  수도 있습니다 생성 하는 프로세스의 수명 여러 프로그램을 파괴 하는 호스트에 대 한 유용 합니다.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ 이 인터페이스는 디버그 엔진에서 구현 됩니다. 만들고 프로세스의 수명 동안 여러 프로그램을 제거할 수 있는 호스트에 두는 것이 유용 합니다.  
   
-## 메서드  
- 다음 표에서 메서드를 `IDebugProgramDestroyEventFlags2`.  
+## <a name="methods"></a>메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugProgramDestroyEventFlags2`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)|프로그램 검색 플래그를 파괴 하십시오.|  
+|------------|-----------------|  
+|[GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)|검색 프로그램 플래그를 삭제 합니다.|  
   
-## 설명  
- 기본적으로는 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] UI 인 디자인 모드로 돌아가 프로그램 프로그램을 모두 보낸 후에 이벤트를 파괴 하십시오.  이 인터페이스는 디버그 엔진을 해당 동작을 변경할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 기본 동작은 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] UI 모든 프로그램 프로그램 보낸 후 디자인 모드로 다시 이동 하는 이벤트를 삭제 합니다. 이 인터페이스에 디버그 엔진을을 해당 동작을 변경할 수 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: Msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll

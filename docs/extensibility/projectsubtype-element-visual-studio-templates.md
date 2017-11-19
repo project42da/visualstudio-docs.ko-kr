@@ -1,72 +1,77 @@
 ---
-title: "ProjectSubType 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#ProjectSubType"
-helpviewer_keywords: 
-  - "<ProjectSubType> 요소[Visual Studio 템플릿]"
-  - "ProjectSubType 요소[Visual Studio 템플릿]"
+title: "ProjectSubType 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#ProjectSubType
+helpviewer_keywords:
+- ProjectSubType element [Visual Studio Templates]
+- <ProjectSubType> element [Visual Studio Templates]
 ms.assetid: f6895cd4-3e95-4f0e-aa9e-8c7750f46ed4
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c42cfdd72207fdca7fbbe0b17b0f96f20066f098
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# ProjectSubType 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-템플릿을 `ProjectType` 요소에 지정된 값의 하위 범주로 분류합니다.  
+# <a name="projectsubtype-element-visual-studio-templates"></a>ProjectSubType 요소(Visual Studio 템플릿)
+서식 파일에 지정 된 값의 하위 범주도 분류 하는 `ProjectType` 요소입니다.  
   
-## 구문  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<ProjectSubType >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <ProjectSubType> SubType </ProjectSubType>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a>특성 및 요소  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿을 표시하는 방법을 정의합니다.|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에서 템플릿이 표시되는 방식을 정의합니다.|  
   
-## 텍스트 값  
- 텍스트 값이 필요합니다.  
+## <a name="text-value"></a>텍스트 값  
+ 텍스트 값은 필수입니다.  
   
  이 값은 템플릿의 하위 범주를 지정합니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `ProjectSubType`은 `TemplateData`의 선택적 자식 요소입니다.  
   
- `ProjectSubType` 요소는 [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) 요소에 대한 하위 범주를 제공합니다.  이 값은 다음을 포함할 수 있습니다.  
+ `ProjectSubType` 하위 범주를 제공 하는 요소는 [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) 요소입니다. 이 값을 포함할 수 있습니다.  
   
--   `SmartDevice-NETCFv1`: 템플릿이 [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] 버전 1.0을 대상으로 하도록 지정합니다.  
+-   `SmartDevice-NETCFv1`: 지정 하는 템플릿의 대상은 [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] 버전 1.0입니다.  
   
--   `SmartDevice-NETCFv2`: 템플릿이 [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] 버전 2.0을 대상으로 하도록 지정합니다.  
+-   `SmartDevice-NETCFv2`: 지정 하는 템플릿이 대상으로 [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] 버전 2.0.  
   
- 템플릿에 있는 `ProjectType` 요소의 값이 `Web`인 경우 `ProjectSubType` 요소는 템플릿의 프로그래밍 언어를 지정합니다.  이 요소는 다음 값을 가질 수 있습니다.  
+ 서식 파일을 포함 하는 경우는 `ProjectType` 의 값을 가진 요소가 `Web`, `ProjectSubType` 요소 템플릿의 프로그래밍 언어를 지정 합니다. 이 요소는 다음 값을 가질 수 있습니다.  
   
--   `CSharp`: 템플릿이 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 웹 프로젝트나 항목을 만들도록 지정합니다.  
+-   `CSharp`: 서식 파일을 만들도록 지정는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 웹 프로젝트 또는 항목입니다.  
   
--   `VisualBasic`: 템플릿이 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 웹 프로젝트나 항목을 만들도록 지정합니다.  
+-   `VisualBasic`: 서식 파일을 만들도록 지정는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 웹 프로젝트 또는 항목입니다.  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] 버전 2.0을 대상으로 하는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 장치 응용 프로그램의 프로젝트 템플릿에 대한 메타데이터를 보여줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 장치 응용 프로그램을 대상으로 [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] 버전 2.0.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -93,7 +98,7 @@ caps.handback.revision: 13
 </VSTemplate>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)   
- [ProjectType 요소\(Visual Studio 템플릿\)](../extensibility/projecttype-element-visual-studio-templates.md)
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)   
+ [ProjectType 요소(Visual Studio 템플릿)](../extensibility/projecttype-element-visual-studio-templates.md)

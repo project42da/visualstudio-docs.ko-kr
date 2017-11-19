@@ -1,41 +1,42 @@
 ---
-title: "간단한 포함 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "편집기 [Visual Studio SDK], 사용자 지정-단순 보기 포함"
+title: "포함 하는 간소화 된 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], custom - simple view embedding
 ms.assetid: f1292478-a57d-48ec-8c9e-88a23f04ffe5
-caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d4315a55b74d938576572b0630f5dca553643a24
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 간단한 포함
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-단순화 된 포함 사용 편집기에 해당 문서의 뷰 개체 \(즉, 대 한 수의 자식\) 부모로 지정 되 면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 는 인터페이스를 구현 하는 창 명령을 처리 합니다.  단순화 된 포함 편집기 활성 컨트롤을 호스팅할 수 없습니다.  편집기 단순화 포함을 만드는 데 사용 되는 개체는 다음 그림에 표시 됩니다.  
+# <a name="simplified-embedding"></a>포함 하는 간소화 된
+해당 문서 뷰 개체 (즉, 수행의 자식) 부모가 되는 경우 편집기에서 활성화 되어 단순화 포함 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 인터페이스는 창 명령을 처리 하기 위해 구현 됩니다. 간단한 포함 편집기 활성 컨트롤을 호스트할 수 없습니다. 간소화 된 포함 된 편집기를 만드는 데 개체는 다음 그림에 표시 됩니다.  
   
- ![간단한 포함 편집기 그래픽](~/extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
-편집기로 단순화 포함  
+ ![간단한 포함 편집기 그래픽](../extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
+간단한 포함 편집기  
   
 > [!NOTE]
->  만이 그림의 개체는 `CYourEditorFactory` 표준 파일 기반 편집기를 만들기 위해 개체가 필요 합니다.  사용자 지정 편집기를 만드는 경우를 구현할 필요는 없습니다 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>, 자신의 개인 지 속성 메커니즘을 편집기 가능성이 없기 때문에.  그러나\-사용자 정의 편집기에 대 한, 그렇게 해야 합니다.  
+>  만이 그림의 개체는 `CYourEditorFactory` 표준 파일 기반 편집기를 만드는 데 필요한 개체입니다. 사용자 지정 편집기를 만드는 경우 구현 하려면 않아도 됩니다 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>편집기에는 자체 전용 지 속성 메커니즘이 있을 때문에 있습니다. 그러나 사용자 지정이 아닌 편집기에 대 한 해야 합니다.  
   
- 단순화 포함와 편집기를 만들기 위해 구현 된 모든 인터페이스에 포함 되어 있는 `CYourEditorDocument` 개체입니다.  그러나 문서 데이터의 다중 뷰를 지원 하려면 인터페이스 데이터 및 보기에 별도 개체에는 다음 표에 표시 된 대로 분할 합니다.  
+ 에 포함 된 간소화 된 포함 된 편집기를 만들기 위해 구현 하는 모든 인터페이스는 `CYourEditorDocument` 개체입니다. 그러나 문서 데이터의 여러 뷰를 지원 하기 위해 분할 별도 데이터 및 보기 개체에 대 한 인터페이스는 다음 표에 나와 있는 것 처럼 합니다.  
   
-|Interface|인터페이스의 위치|사용할 도구|  
-|---------------|---------------|------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|보기|부모 창에 연결할을 수 있습니다.|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|보기|명령을 처리합니다.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|보기|상태 표시줄 업데이트를 수 있습니다.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|보기|수 있도록  **도구** 항목입니다.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|데이터|파일이 변경 되 면 알림을 보냅니다.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|데이터|파일 형식에 대 한 다른 이름으로 저장 기능을 있습니다.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>|데이터|문서에 대 한 지 속성을 수 있습니다.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>|데이터|다시 로드를 트리거하는 것과 같이 파일 변경 이벤트를 억제 수 있습니다.|
+|인터페이스|인터페이스의 위치|기능|  
+|---------------|---------------------------|---------|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|보기|부모 창에 대 한 연결을 제공합니다.|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|보기|명령을 처리 합니다.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|보기|상태 표시줄 업데이트를 사용하도록 설정합니다.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|보기|수 있도록 **도구 상자** 항목입니다.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|데이터|파일이 변경 될 때 알림을 보냅니다.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|데이터|파일 형식에 대 한 이름으로 저장 기능을 사용 하도록 설정 합니다.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>|데이터|문서에 대해 지속성을 사용하도록 설정합니다.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>|데이터|다시 로드 트리거 등의 파일 변경 이벤트의 제거를 허용합니다.|

@@ -1,30 +1,35 @@
 ---
-title: "WizardExtension 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#WizardExtension"
-helpviewer_keywords: 
-  - "<WizardExtension> 요소[Visual Studio 템플릿]"
-  - "WizardExtension 요소[Visual Studio 템플릿]"
+title: "WizardExtension 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#WizardExtension
+helpviewer_keywords:
+- WizardExtension element [Visual Studio Templates]
+- <WizardExtension> element [Visual Studio Templates]
 ms.assetid: d54b01c1-50f5-4b65-828c-686e2321cc8c
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 41b5b3b786716603167b3917e5aa7b4a7ae14920
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# WizardExtension 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-템플릿 마법사를 사용자 지정하기 위한 등록 요소가 들어 있습니다.  
+# <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension 요소(Visual Studio 템플릿)
+템플릿 마법사 사용자 지정 하기 위한 등록 요소를 포함 합니다.  
   
-## 구문  
+ \<VSTemplate >  
+ ...  
+ \<WizardExtension >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <WizardExtension>  
@@ -33,30 +38,30 @@ caps.handback.revision: 11
 </WizardExtension>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a>특성 및 요소  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[Assembly](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|필수적 요소입니다.<br /><br /> 전역 어셈블리 캐시에 나타나는 어셈블리의 이름 또는 강력한 이름을 지정합니다.  `WizardExtension` 요소에 `Assembly` 요소가 적어도 하나는 있어야 합니다.|  
-|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|필수적 요소입니다.<br /><br /> `IWizard` 인터페이스를 구현하는 클래스의 정규화된 이름입니다.  `WizardExtension` 요소에 `FullClassName` 요소가 적어도 하나는 있어야 합니다.|  
+|-------------|-----------------|  
+|[어셈블리](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|필수적 요소입니다.<br /><br /> 이름 또는 전역 어셈블리 캐시에 표시 되는 어셈블리의 강력한 이름을 지정 합니다. 하나 이상 있어야 `Assembly` 요소에는 `WizardExtension` 요소입니다.|  
+|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|필수적 요소입니다.<br /><br /> 구현 하는 클래스의 정규화 된 이름을 `IWizard` 인터페이스입니다. 하나 이상 있어야 `FullClassName` 요소에는 `WizardExtension` 요소입니다.|  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|프로젝트 템플릿, 항목 템플릿 또는 시작 키트에 대한 모든 메타데이터가 들어 있습니다.|  
+|-------------|-----------------|  
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|프로젝트 템플릿, 항목 템플릿 또는 시작 키트에 대 한 모든 메타 데이터를 포함합니다.|  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `WizardExtension`은 `VSTemplate`의 선택적 자식 요소입니다.  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램의 표준 프로젝트 템플릿에 대한 메타데이터를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에 대 한 표준 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램입니다.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -86,7 +91,7 @@ caps.handback.revision: 11
 </VSTemplate>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)   
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)   
  [방법: 프로젝트 템플릿에 마법사 사용](../extensibility/how-to-use-wizards-with-project-templates.md)

@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 04/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
-caps.latest.revision: 2
+caps.latest.revision: "2"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9524ecc3cadef58821fba857de8e82e59eea9b43
-ms.openlocfilehash: b36b5e35758ad10109328d6f001e043ad7dcbe15
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/04/2017
-
+ms.openlocfilehash: 6a554a52fc5ef42f81d1531dbe63bf320e1cd72e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="animations-for-visual-studio"></a>Visual Studio에 대 한 애니메이션
-## <a name="animation-fundamentals"></a>애니메이션의 기본 사항  
+## <a name="animation-fundamentals"></a>애니메이션 기본 사항  
   
 ### <a name="animation-best-practices-in-visual-studio"></a>Visual Studio에서 애니메이션 모범 사례  
 Visual Studio IDE에서 일관 되 고 사용자에 게 친숙 하는 애니메이션 스타일을 유지 하기 위해 이러한 규칙을 따릅니다.  
@@ -53,7 +38,7 @@ Visual Studio IDE에서 일관 되 고 사용자에 게 친숙 하는 애니메�
   
 -   **점진적 비선형 감속/가속을 사용 하 여** 다른 한 상태에서 잡고 자연 이동의 의미를 제공 합니다.  
   
--   가능 하면 **가리키기 미묘한 애니메이션을 사용 하 여** 마우스 아래 대화형 요소를 나타냅니다.  
+-   가능 하면 **가리키기 미묘한 애니메이션을 사용 하 여** 마우스 아래 대화형 요소를 나타내는입니다.  
   
 -   경우 있습니다에 크게 의존 애니메이션 기능을에서 다음 **를 해제 하는 방법을 제공** 로컬로 (기능에 대 한 모든 사용자)에 옵션으로는 **도구 > 옵션** 대화 상자.  
   
@@ -61,7 +46,7 @@ Visual Studio IDE에서 일관 되 고 사용자에 게 친숙 하는 애니메�
   
 -   **주의 해야 하는 것이 중요 합니다.** 대부분의 경우에서 애니메이션의 목적에 따라 요청 시 사용자 주의 필요가 없습니다. 타이밍, 순서 지정 기능 및 동작에 미묘한 변화 인식에 크게 영향을 줄 수 있으며 효율적이 고 비효율적인 애니메이션 차이 수 있습니다.  
   
--   항목에 주목 하도록 애니메이션을 사용 하는 경우 **가치가 사용자 중단을 반드시**의 한 사고의 흐름.  
+-   애니메이션을 사용 하 여 어떠한 항목에 주목 하도록 하는 경우 **가치가 사용자 중단을 반드시**의 한 사고의 흐름.  
   
 -   **진행률 또는 상태를 표시할 때** 애니메이션을 통해:  
   
@@ -77,7 +62,7 @@ Visual Studio IDE에서 일관 되 고 사용자에 게 친숙 하는 애니메�
   
 -   작은 움직임 (적에서 이동)을 사용 하지 마십시오. 페이드 선호 하 고 이동 하는 개체를 통해 변경 합니다.  
   
--   화면 자원을의 큰 영역을 통해 수행 하는 애니메이션을 사용 하지 마십시오. 크기에 관계 없이 애니메이션의이 스타일은 사용자에 게 혼란 합니다.  
+-   화면 자원을의 큰 영역을 통해 수행 하는 애니메이션을 사용 하지 마십시오. 크기에 관계 없이 애니메이션의이 스타일은 사용자에 게 혼란입니다.  
   
 -   사용자는 방법에 대해 현재 개체와 관련 없는 하거나 상호 작용 하는 애니메이션을 사용 하지 마십시오.  
   
@@ -228,15 +213,15 @@ Visual Studio에서 애니메이션 사용자 생산성을 방해 하지 않고 
   
 이 그림에서는 Visual Studio에 대 한 것이 좋습니다 애니메이션 스타일을 보여 줍니다. 페이드 인 / 페이드 아웃 처럼 미묘한 애니메이션 없음이나 애니메이션 가장 자주 사용 됩니다. 확장 / 축소와 같은 이동 애니메이션의 제한 된 응용 프로그램이, X 및 Y 위치가 변경 및 회전 합니다. 
   
-![Visual Studio에 대 한 권장 되는 애니메이션 스타일](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202-a_VSAnimStyles")<br />Visual Studio에 권장되는 애니메이션 스타일
+![Visual Studio에 대 한 권장 되는 애니메이션 스타일](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202 a_VSAnimStyles")<br />Visual Studio에 권장되는 애니메이션 스타일
   
 #### <a name="appear-and-disappear"></a>표시 되거나 사라집니다  
 이러한 패턴에서는 요소 보기 아웃 하 고 전환 애니메이션 없이 다시 표시에서 전환합니다.  
   
-![표시 되 고 애니메이션 사라집니다.](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202-b_AppearAndDisappear")<br />표시 하거나 숨길 애니메이션  
+![표시 되 고 애니메이션 사라질](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202 b_AppearAndDisappear")<br />표시 되 고 애니메이션 사라집니다.  
   
 ##### <a name="correct-usage"></a>올바른 사용  
-즉시 나타나거나 사라질 사용자 신경 아니고 방해 필요로 하는 새 UI 요소. 또한 천천히 움직이는 애니메이션 및 사라집니다 표시 스타일으로도 발생 하지 않습니다 성능 끌어 옵니다도 인식 될 수 있습니다.  
+즉시 나타나거나 사라질 사용자 신경 아니고 방해 필요로 하는 새 UI 요소입니다. 또한 천천히 움직이는 애니메이션 및 사라집니다 표시 스타일으로도 발생 하지 않습니다 성능 끌어 옵니다도 인식 될 수 있습니다.  
   
 ##### <a name="incorrect-usage"></a>잘못 된 사용  
 UI 무슨 상황이, 나타납니다 갑자기 사용자에 게 어떠한 정보도 표시 하 고 상황에 맞는 이해에 도움이 될 애니메이션 추가 없는 경우.  
@@ -254,7 +239,7 @@ UI 무슨 상황이, 나타납니다 갑자기 사용자에 게 어떠한 정보
 #### <a name="fade-in-and-fade-out"></a>전파가  
 이 패턴으로 UI 요소는 표시 되지 않습니다 (불투명도 0%)에서 전환 표시 (100% 불투명도) 하거나 반대로 변경 합니다.  
   
-![전파가 애니메이션](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202-c_FadeInFadeOut")<br />전파가 애니메이션  
+![전파가 애니메이션](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202 c_FadeInFadeOut")<br />전파가 애니메이션  
   
 ##### <a name="correct-usage"></a>올바른 사용  
 가장 일반적으로 UI 애니메이션에 권장 됩니다. 이 흐름을 중단 하지 않고 관심을 추가 하는 미묘한 나타납니다. 경우에 따라 사용자 수 조차 모를 애니메이션는 부드러운 스트리밍 그 특수 하 고 UI 시스템 이동 합니다.  
@@ -280,7 +265,7 @@ UI 무슨 상황이, 나타납니다 갑자기 사용자에 게 어떠한 정보
 #### <a name="color-blend-from-a-to-b"></a>B A에서 색 혼합  
 이 패턴을 사용 UI 요소에서 A 색을 색으로 변경 2.  
   
-![색 혼합 애니메이션](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202-d_ColorBlend")<br />색 혼합 애니메이션  
+![색 혼합 애니메이션](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202 d_ColorBlend")<br />색 혼합 애니메이션  
   
 ##### <a name="correct-usage"></a>올바른 사용  
 으로 UI 요소를 하나의 컨텍스트 또는 상태에서 다른 색이 변경 될 때 애니메이션 효과 준된 전환입니다.  
@@ -304,7 +289,7 @@ UI 무슨 상황이, 나타납니다 갑자기 사용자에 게 어떠한 정보
 #### <a name="expand-and-contract"></a>확장 / 축소  
 이 패턴을 사용 X, Y, 또는 두 방향에서 UI 요소를 확장합니다.  
   
-![확장 / 축소 애니메이션](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202-e_ExpandContract")<br />확장 / 축소 애니메이션  
+![확장 / 축소 애니메이션](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202 e_ExpandContract")<br />확장 / 축소 애니메이션  
   
 ##### <a name="correct-usage"></a>올바른 사용  
 으로 UI 요소를 다른 특정 컨텍스트에서 크기가 변경 될 때 애니메이션 효과 준된 전환입니다.  
@@ -328,10 +313,10 @@ UI 무슨 상황이, 나타납니다 갑자기 사용자에 게 어떠한 정보
 #### <a name="x-y-position-change"></a>X, Y 위치 변경  
 UI 요소에는이 패턴을 사용의 X 또는 Y 위치 또는 둘 다 변경합니다.  
   
-![X, Y 위치 변경 애니메이션](~/extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />X, Y 위치 변경 애니메이션  
+![X, Y 위치 변경 애니메이션](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202 f_XYPositionChange")<br />X, Y 위치 변경 애니메이션  
   
 ##### <a name="correct-usage"></a>올바른 사용  
-UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메이션 효과 준된 전환으로 합니다.  
+UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메이션된 전환으로 합니다.  
   
 ##### <a name="animation-properties"></a>애니메이션 속성  
   
@@ -351,7 +336,7 @@ UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메
 #### <a name="rotate"></a>회전  
 이 패턴으로 UI 요소를 회전합니다.  
   
-![UI 요소 회전 애니메이션](~/extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />UI 요소 회전 애니메이션  
+![UI 요소 회전 애니메이션](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202 g_Rotate")<br />UI 요소 회전 애니메이션  
   
 ##### <a name="correct-usage"></a>올바른 사용  
 비활성화 상태 회전 진행률 표시기에 대해서만입니다.  
@@ -370,56 +355,56 @@ UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메
 ### <a name="common-shell-ui-actions-and-recommended-animations"></a>일반적인 셸 UI 작업 및 권장된 애니메이션  
   
 #### <a name="tab-open"></a>탭 열기  
-![탭 열기 애니메이션](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202-h_TabOpen")<br />탭 열기 애니메이션  
+![탭 열기 애니메이션](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202 h_TabOpen")<br />탭 열기 애니메이션  
     
 -   스타일: 표시  
   
 -   0 초 기간:  
 
 #### <a name="tab-close"></a>탭 닫기  
-![탭 닫기 애니메이션](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202-i_TabClose")<br />탭 닫기 애니메이션  
+![탭 닫기 애니메이션](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202 i_TabClose")<br />탭 닫기 애니메이션  
   
 -   Style: X 위치 변경  
   
 -   200 밀리초 기간:  
   
 #### <a name="tab-reorder"></a>탭 순서 변경  
-![Visual Studio에서 탭 순서 바꾸기 애니메이션](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202-j_TabReorder")<br />탭 순서 바꾸기 애니메이션
+![Visual Studio에서 순서 바꾸기 애니메이션 탭](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202 j_TabReorder")<br />탭 순서 바꾸기 애니메이션
 
 -   Style: X 위치 변경  
   
 -   200 밀리초 기간:  
     
 #### <a name="close-floating-document"></a>부동 문서 닫기  
-![부동 문서의 닫기 애니메이션](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202-k_CloseFloatingDocument")<br />닫기 부동 문서 애니메이션  
+![부동 문서 애니메이션 닫기](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202 k_CloseFloatingDocument")<br />부동 문서의 닫기 애니메이션  
    
 -   스타일: 표시  
   
 -   200 밀리초 기간:   
  
 #### <a name="window-state-transition"></a>창 상태 전환  
-![창 상태 전환 애니메이션](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202-l_WindowStateTransition")<br />창 상태 전환 애니메이션  
+![창 상태 전환 애니메이션](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202 l_WindowStateTransition")<br />창 상태 전환 애니메이션  
     
 -   Style: 다른 windows와 일치 하도록 문서 닫기 애니메이션을 정의 하는 현재 운영 체제를 사용 합니다.  
   
 -   200 밀리초 기간:  
   
 #### <a name="menu-open"></a>메뉴 열기  
-![메뉴 열기 애니메이션](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202-m_MenuOpen")<br />메뉴 열기 애니메이션  
+![메뉴 열기 애니메이션](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202 m_MenuOpen")<br />메뉴 열기 애니메이션  
     
 -   스타일: 페이드 인  
   
 -   200 밀리초 기간:  
   
 #### <a name="menu-close"></a>메뉴 닫기  
-![메뉴 닫기 애니메이션](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202-n_MenuClose")<br />메뉴 닫기 애니메이션  
+![메뉴 닫기 애니메이션](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202 n_MenuClose")<br />메뉴 닫기 애니메이션  
     
 -   스타일: 페이드 아웃  
   
 -   200 밀리초 기간:  
   
 #### <a name="auto-hide-tool-window-reveal"></a>자동 숨기기 도구 창 표시  
-![자동 숨기기 도구 창 표시 애니메이션](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202-o_AutoHideToolWindowReveal")<br />자동 숨기기 도구 창 표시 애니메이션  
+![자동 숨기기 도구 창 표시 애니메이션](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202 o_AutoHideToolWindowReveal")<br />자동 숨기기 도구 창 표시 애니메이션  
 
 -   스타일: 표시  
   

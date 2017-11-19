@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Group Rows in a Worksheet | Microsoft Docs'
+title: "방법: 프로그래밍 방식으로 워크시트의 행을 그룹화 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -23,50 +21,51 @@ helpviewer_keywords:
 - rows [Office development in Visual Studio], ungrouping
 - columns [Office development in Visual Studio], ungrouping
 ms.assetid: 48037dca-35a2-4df2-918b-6a9f568fae91
-caps.latest.revision: 46
-author: kempb
-ms.author: kempb
+caps.latest.revision: "46"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 996904cfea85793c2359e6fc5264b8e8dd973024
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: c11911d6d9e7b92b7a86b21723c8788afe15a57b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>How to: Programmatically Group Rows in a Worksheet
-  You can group one or more whole rows. To create a group in a worksheet, use a <xref:Microsoft.Office.Tools.Excel.NamedRange> control or a native Excel range object.  
+# <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>방법: 프로그래밍 방식으로 워크시트에서 행 그룹화
+  하나 이상의 전체 행을 그룹화 할 수 있습니다. 워크시트에 그룹을 만들려면 사용는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤 또는 네이티브 Excel 범위 개체입니다.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## <a name="using-a-namedrange-control"></a>Using a NamedRange Control  
- If you add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to a document-level project at design time, you can use the control to programmatically create a group. The following example assumes that there are three <xref:Microsoft.Office.Tools.Excel.NamedRange> controls on the same worksheet: `data2001`, `data2002`, and `dataAll`. Each named range refers to a whole row in the worksheet.  
+## <a name="using-a-namedrange-control"></a>NamedRange 컨트롤을 사용 하 여  
+ 추가 하는 경우는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤 디자인 타임에 문서 수준 프로젝트에 프로그래밍 방식으로 그룹을 만들고 컨트롤을 사용할 수 있습니다. 다음 예에서는 세 개의 된다고 가정 <xref:Microsoft.Office.Tools.Excel.NamedRange> 동일한 워크시트에 컨트롤: `data2001`, `data2002`, 및 `dataAll`합니다. 각 명명 된 범위는 워크시트의 전체 행을 나타냅니다.  
   
-#### <a name="to-create-a-group-of-namedrange-controls-on-a-worksheet"></a>To create a group of NamedRange controls on a worksheet  
+#### <a name="to-create-a-group-of-namedrange-controls-on-a-worksheet"></a>워크시트에 NamedRange 컨트롤의 그룹을 만들려면  
   
-1.  Group three named ranges by calling the <xref:Microsoft.Office.Tools.Excel.NamedRange.Group%2A> method of each range. This code must be placed in a sheet class, not in the `ThisWorkbook` class.  
+1.  세 개의 명명 된 범위를 호출 하 여 그룹화 된 <xref:Microsoft.Office.Tools.Excel.NamedRange.Group%2A> 각 범위의 메서드. 이 코드는 `ThisWorkbook` 클래스가 아니라 시트 클래스에 배치해야 합니다.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#32](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#32)]  [!code-vb[Trin_VstcoreExcelAutomation#32](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#32)]  
-  
-    > [!NOTE]  
-    >  To ungroup rows, call the <xref:Microsoft.Office.Tools.Excel.NamedRange.Ungroup%2A> method.  
-  
-## <a name="using-native-excel-ranges"></a>Using Native Excel Ranges  
- The code assumes that you have three Excel ranges named `data2001`, `data2002`, and `dataAll` on a worksheet.  
-  
-#### <a name="to-create-a-group-of-excel-ranges-in-a-worksheet"></a>To create a group of Excel ranges in a worksheet  
-  
-1.  Group three named ranges by calling the <xref:Microsoft.Office.Interop.Excel.Range.Group%2A> method of each range. The following example assumes that there are three <xref:Microsoft.Office.Interop.Excel.Range> controls named `data2001`, `data2002`, and `dataAll` on the same worksheet. Each named range refers to a whole row in the worksheet.  
-  
-     [!code-csharp[Trin_VstcoreExcelAutomation#33](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#33)]  [!code-vb[Trin_VstcoreExcelAutomation#33](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#33)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#32](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#32)]
+     [!code-vb[Trin_VstcoreExcelAutomation#32](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#32)]  
   
     > [!NOTE]  
-    >  To ungroup rows, call the <xref:Microsoft.Office.Interop.Excel.Range.Ungroup%2A> method.  
+    >  행 그룹을 해제 하려면 호출 된 <xref:Microsoft.Office.Tools.Excel.NamedRange.Ungroup%2A> 메서드.  
   
-## <a name="see-also"></a>See Also  
- [Working with Worksheets](../vsto/working-with-worksheets.md)   
- [NamedRange Control](../vsto/namedrange-control.md)   
- [How to: Add NamedRange Controls to Worksheets](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
- [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="using-native-excel-ranges"></a>네이티브 Excel 범위를 사용 하 여  
+ 코드 라는 3 개의 Excel 범위 있다고 가정 `data2001`, `data2002`, 및 `dataAll` 워크시트에 있습니다.  
+  
+#### <a name="to-create-a-group-of-excel-ranges-in-a-worksheet"></a>워크시트에 Excel 범위 그룹을 만들려면  
+  
+1.  세 개의 명명 된 범위를 호출 하 여 그룹화 된 <xref:Microsoft.Office.Interop.Excel.Range.Group%2A> 각 범위의 메서드. 다음 예에서는 세 개의 된다고 가정 <xref:Microsoft.Office.Interop.Excel.Range> 라는 컨트롤 `data2001`, `data2002`, 및 `dataAll` 동일한 워크시트에 있습니다. 각 명명 된 범위는 워크시트의 전체 행을 나타냅니다.  
+  
+     [!code-csharp[Trin_VstcoreExcelAutomation#33](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#33)]
+     [!code-vb[Trin_VstcoreExcelAutomation#33](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#33)]  
+  
+    > [!NOTE]  
+    >  행 그룹을 해제 하려면 호출 된 <xref:Microsoft.Office.Interop.Excel.Range.Ungroup%2A> 메서드.  
+  
+## <a name="see-also"></a>참고 항목  
+ [워크시트 작업](../vsto/working-with-worksheets.md)   
+ [NamedRange 컨트롤](../vsto/namedrange-control.md)   
+ [방법: 워크시트에 NamedRange 컨트롤 추가](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
+ [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
   
   

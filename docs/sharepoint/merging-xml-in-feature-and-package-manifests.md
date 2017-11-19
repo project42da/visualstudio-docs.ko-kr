@@ -1,86 +1,87 @@
 ---
-title: "기능 및 패키지 매니페스트에서 XML 병합"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio에서 SharePoint 개발, 패키징"
+title: "매니페스트에서 기능 및 패키지 XML 병합 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, packaging
 ms.assetid: fc1cbd2a-0166-4f2f-a81b-4dac2fa7b0f3
-caps.latest.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 6d418e757a93d77b0034bbdb8287b0e81a5a3860
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 기능 및 패키지 매니페스트에서 XML 병합
-  기능과 패키지는 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 매니페스트 파일에서 정의됩니다.  이러한 패키지된 매니페스트는 디자이너에서 생성된 데이터와 사용자가 매니페스트 템플릿에 입력한 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]의 조합입니다.  패키징 시에 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 문과 디자이너 제공 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]을 병합하여 패키지된 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 매니페스트 파일을 생성합니다.  파일을 SharePoint에 배포한 후 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 유효성 검사 오류를 방지하고 매니페스트 파일을 더 작고 효율적으로 만들기 위해 유사한 요소가 병합됩니다. 이때 뒷부분의 병합 예외에 나와 있는 요소는 제외됩니다.  
+# <a name="merging-xml-in-feature-and-package-manifests"></a>기능 및 패키지 매니페스트에서 XML 병합
+  기능과 패키지 정의한 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 매니페스트 파일. 이러한 패키지에 포함 된 매니페스트는 디자이너와 사용자 지정에서 생성 된 데이터의 조합을 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 매니페스트 템플릿의 사용자가 입력 한 합니다. 패키징 시 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 병합 하는 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 디자이너에서 제공 된 문을 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 하 여 패키지 된 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 매니페스트 파일. 비슷한 요소 예외 병합의 뒷부분에 설명 된 예외와 병합 됩니다 하지 않으려면 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 보다 작고 효율적인 파일 매니페스트를 확인 하려면 SharePoint에 파일을 배포한 후 유효성 검사 오류입니다.  
   
-## 매니페스트 수정  
- 기능 또는 패키지 디자이너를 사용하지 않도록 설정할 때까지 패키지된 매니페스트 파일을 직접 수정할 수 없습니다.  그러나 기능 및 패키지 디자이너나 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 편집기를 통해 매니페스트 템플릿에 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소를 수동으로 추가할 수 있습니다.  자세한 내용은 [방법: SharePoint 기능 사용자 지정](../sharepoint/how-to-customize-a-sharepoint-feature.md) 및 [방법: SharePoint 솔루션 패키지 사용자 지정](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)를 참조하십시오.  
+## <a name="modifying-the-manifests"></a>매니페스트 수정  
+ 기능 또는 패키지 디자이너를 사용 하지 않도록 설정 될 때까지 직접 패키지에 포함 된 매니페스트 파일은 수정할 수 없습니다. 그러나 사용자 지정 수동으로 추가할 수 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소를 사용 하는 매니페스트 템플릿 기능 및 패키지 디자이너를 통해 또는 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 편집기입니다. 자세한 내용은 참조 [하는 방법: SharePoint 기능을 사용자 지정](../sharepoint/how-to-customize-a-sharepoint-feature.md) 및 [하는 방법: SharePoint 솔루션 패키지 사용자 지정](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)합니다.  
   
-## 기능 및 패키지 매니페스트 병합 프로세스  
- 사용자 지정 요소를 디자이너 제공 요소와 함께 결합할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 다음 프로세스를 사용합니다.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 각 요소에 고유한 키 값이 있는지 확인합니다.  요소에 고유 키 값이 없을 경우, 패키징된 매니페스트 파일에 추가 됩니다.  마찬가지로, 여러 키를 가지는 요소들은 병합될 수 없습니다.  매니페스트 파일에 추가됩니다.  
+## <a name="feature-and-package-manifest-merge-process"></a>기능 및 패키지 매니페스트 병합 프로세스  
+ 디자이너에서 제공 요소와 함께 사용자 지정 요소를 결합 하는 경우 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 다음 프로세스를 사용 합니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]각 요소에 고유 키 값이 있는지 여부를 확인 합니다. 요소에 고유한 키 값이 없으면 요소가 패키지된 매니페스트 파일에 추가됩니다. 이와 마찬가지로 여러 키가 있는 요소는 병합될 수 없으므로 따라서 매니페스트 파일에 추가 됩니다.  
   
- 요소에 고유 키가 있는 경우 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 디자이너 키와 사용자 지정 키의 값을 비교합니다.  두 값이 일치하면 한 값으로 병합되고,  두 값이 다르면 디자이너 키 값이 삭제되고 사용자 지정 키 값이 사용됩니다.  또한 컬렉션도 병합됩니다.  예를 들어, 디자이너에서 생성된 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]과 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]에 Assemblies 컬렉션이 포함된 경우 패키지된 매니페스트에는 Assemblies 컬렉션이 하나만 포함됩니다.  
+ 요소에 있는 경우 고유 키 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너와 사용자 지정 키의 값을 비교 합니다. 값이 일치 하는 경우 단일 값으로 병합 합니다. 값이 다른 디자이너 키 값이 삭제 되 고 사용자 지정 키 값이 사용 됩니다. 컬렉션도 병합 됩니다. 예를 들어 경우 디자이너에서 생성 된 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 및 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 모두 어셈블리 컬렉션을 포함, 패키지 매니페스트 하나의 어셈블리 컬렉션을 포함 합니다.  
   
-## 병합 예외  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 대부분의 디자이너 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소를 유사한 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소와 함께 병합합니다. 이때 병합되는 요소는 고유한 단일 식별 특성을 갖고 있어야 합니다.  그러나 일부 요소에는 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 병합에 필요한 고유 식별자가 없습니다.  이러한 요소를 *병합 예외*라고 합니다.  이러한 경우 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서는 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소를 디자이너 제공 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소와 함께 병합하지 않고 대신 패키지된 매니페스트 파일에 추가합니다.  
+## <a name="merge-exceptions"></a>병합 예외  
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]대부분의 디자이너 병합 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소와 유사한 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소 단일, 고유한 식별 특성을 갖습니다. 그러나 일부 요소에 필요한 고유 식별자를 부족 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 병합 합니다. 이러한 요소 라고 *병합 예외*합니다. 이러한 경우 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 사용자 지정을 병합 하지 않습니다 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소와 디자이너에서 제공 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 요소 하지만 대신 패키지 매니페스트 파일에 추가 합니다.  
   
- 기능 및 패키지 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 매니페스트 파일의 병합 예외 목록은 다음과 같습니다.  
+ 다음은 기능 및 패키지에 대 한 병합 예외 목록이 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 매니페스트 파일.  
   
-|디자이너|XML 요소|  
-|----------|------------|  
+|Designer|XML 요소|  
+|--------------|-----------------|  
 |기능 디자이너|ActivationDependency|  
 |기능 디자이너|UpgradeAction|  
 |패키지 디자이너|SafeControl|  
 |패키지 디자이너|CodeAccessSecurity|  
   
-## 기능 매니페스트 요소  
- 다음 표에는 병합될 수 있는 모든 기능 매니페스트 요소의 목록과 일치에 사용되는 요소의 고유 키가 나와 있습니다.  
+## <a name="feature-manifest-elements"></a>기능 매니페스트 요소  
+ 다음 테이블은 병합 될 수 있는 모든 기능 매니페스트 요소 및 일치에 사용 되는 고유 키의 목록입니다.  
   
 |요소 이름|고유 키|  
-|-----------|----------|  
-|Feature\(모든 특성\)|*Attribute Name* \(Feature 요소의 각 특성 이름이 고유 키임\)|  
+|------------------|----------------|  
+|기능 (모든 특성의 경우)|*특성 이름은* (기능 요소는 각 특성 이름에는 고유 키입니다.)|  
 |ElementFile|위치|  
-|ElementManifests\/ElementManifest|위치|  
-|Properties\/Property|Key|  
-|CustomUpgradeAction|Name|  
-|CustomUpgradeActionParameter|Name|  
+|ElementManifests/ElementManifest|위치|  
+|속성/속성|Key|  
+|CustomUpgradeAction|이름|  
+|CustomUpgradeActionParameter|이름|  
   
 > [!NOTE]  
->  CustomUpgradeAction 요소는 사용자 지정 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 편집기에서만 수정할 수 있기 때문에 병합하지 않는 경우의 효과가 낮습니다.  
+>  사용자 지정 CustomUpgradeAction 요소를 수정 하는 유일한 방법은 중 이므로 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 편집기 병합 되지 않는의 효과 부족 합니다.  
   
-## 패키지 매니페스트 요소  
- 다음 표에는 병합될 수 있는 모든 패키지 매니페스트 요소의 목록과 일치에 사용되는 요소의 고유 키가 나와 있습니다.  
+## <a name="package-manifest-elements"></a>패키지 매니페스트 요소  
+ 다음 테이블은 병합 될 수 있는 모든 패키지 매니페스트 요소 및 일치에 사용 되는 고유 키의 목록입니다.  
   
 |요소 이름|고유 키|  
-|-----------|----------|  
-|Solution\(모든 특성\)|*Attribute Name* \(Solution 요소의 각 특성 이름이 고유 키임\)|  
-|ApplicationResourceFiles\/ApplicationResourceFile|위치|  
-|Assemblies\/Assembly|위치|  
-|ClassResources\/ClassResource|위치|  
-|DwpFiles\/DwpFile|위치|  
-|FeatureManifests\/FeatureManifest|위치|  
-|Resources\/Resource|위치|  
-|RootFiles\/RootFile|위치|  
-|SiteDefinitionManifests\/SiteDefinitionManifest|위치|  
+|------------------|----------------|  
+|솔루션 (모든 특성의 경우)|*특성 이름은* (솔루션 요소는 각 특성 이름에는 고유 키입니다.)|  
+|ApplicationResourceFiles/ApplicationResourceFile|위치|  
+|어셈블리/어셈블리|위치|  
+|ClassResources/ClassResource|위치|  
+|DwpFiles/DwpFile|위치|  
+|FeatureManifests/FeatureManifest|위치|  
+|리소스/리소스|위치|  
+|RootFiles/RootFile|위치|  
+|SiteDefinitionManifests/SiteDefinitionManifest|위치|  
 |WebTempFile|위치|  
-|TemplateFiles\/TemplateFile|위치|  
-|SolutionDependency|솔루션 ID|  
+|TemplateFiles/TemplateFile|위치|  
+|SolutionDependency|SolutionID|  
   
-## 배포된 파일 수동 추가  
- ApplicationResourceFile 및 DwpFiles와 같은 일부 매니페스트 요소는 파일 이름이 포함된 위치를 지정합니다.  그러나 파일 이름 항목을 매니페스트 템플릿에 추가하는 경우 기본 파일이 패키지에 추가되지 않습니다.  따라서 기본 파일을 프로젝트에 직접 추가하여 패키지에 포함하고 배포 형식 속성을 적절하게 설정해야 합니다.  
+## <a name="manually-add-deployed-files"></a>배포 된 파일을 수동으로 추가  
+ ApplicationResourceFile DwpFiles, 등의 몇 가지 매니페스트 요소가 파일 이름을 포함 하는 위치를 지정 합니다. 그러나 추가 파일 이름 항목 매니페스트 서식 파일에 추가 되지 않습니다 내부 파일 패키지에 있습니다. 배포 유형의 속성을 적절 하 게 설정 하 고 패키지에 포함할 프로젝트에 파일을 추가 해야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint 솔루션 패키징 및 배포](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)   
  [SharePoint 솔루션 빌드 및 디버깅](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   

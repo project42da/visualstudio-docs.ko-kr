@@ -1,51 +1,52 @@
 ---
-title: "IDebugProcessSecurity | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProcessSecurity 인터페이스"
+title: IDebugProcessSecurity | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugProcessSecurity interface
 ms.assetid: 8a52ddca-bd99-49c0-9778-469dce7abd44
-caps.latest.revision: 4
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 0e9c3a5f87540f8b255030654fb0917e3045ae19
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcessSecurity
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-`IDebugProcessSecurity`사용자가 프로세스에 연결 안전 하지 않다고 경고할 포트 업체로 구현 됩니다.  
+# <a name="idebugprocesssecurity"></a>IDebugProcessSecurity
+`IDebugProcessSecurity`경고를 표시 하는 프로세스에 연결 됨은 안전 하지 않습니다을 포트 공급자에 의해 구현 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugProcessSecurity : IUnknown  
 ```  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDebugProcessSecurity`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugProcessSecurity`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[GetUserName](../../../extensibility/debugger/reference/idebugprocesssecurity-getusername.md)|사용자 이름을 포트 공급자에서 가져옵니다.|  
-|[QueryCanSafelyAttach](../../../extensibility/debugger/reference/idebugprocesssecurity-querycansafelyattach.md)|사용자가 연결 하 여 디버깅 프로세스에 안전 하지 경고 메시지가 나타납니다.|  
+|------------|-----------------|  
+|[GetUserName](../../../extensibility/debugger/reference/idebugprocesssecurity-getusername.md)|포트 공급자에서 사용자 이름을 가져옵니다.|  
+|[QueryCanSafelyAttach](../../../extensibility/debugger/reference/idebugprocesssecurity-querycansafelyattach.md)|사용자는 디버깅 프로세스에 연결 됨은 안전 하지 않습니다에 대 한 경고를 표시 합니다.|  
   
-## 설명  
- 경고를 표시 하 고 사용자가 연결 하려는 프로세스 안전 하지 않다고 간주 수 있습니다 취소할 수이 인터페이스를 구현 합니다.  
+## <a name="remarks"></a>설명  
+ 경고를 표시 하 고는 사용자가 연결 되는 프로세스는 안전 하지 않은 간주할 수 있으면 취소를 허용 하려면이 인터페이스를 구현 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [포트](../../../extensibility/debugger/ports.md)   
  [포트 공급자](../../../extensibility/debugger/port-suppliers.md)   
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   

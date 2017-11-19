@@ -1,12 +1,10 @@
 ---
-title: 'How to: Add a Filter Descriptor to a Finder Method | Microsoft Docs'
+title: "방법: Finder 메서드에 필터 설명자 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,67 +18,67 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], add a filter
 - BDC [SharePoint development in Visual Studio], filter descriptors
 ms.assetid: 228a6190-8cb8-4182-b6d9-d4c656f4a164
-caps.latest.revision: 14
-author: kempb
-ms.author: kempb
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: fea1eb561889f545fd4d97bb05855d83b4070ddb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 37aff0510af501b75aafe190fc412a0d4b9fd625
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>How to: Add a Filter Descriptor to a Finder Method
-  Filter descriptors enable consumers of the model to pass values to methods before they execute. For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
+# <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>방법: Finder 메서드에 필터 설명자 추가
+  필터 설명자 실행 되기 전에를 메서드에 값을 전달 하는 모델의 소비자를 사용 합니다. 자세한 내용은 참조 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  
   
- One common scenario is that users in SharePoint want to retrieve instances of an external content type that match some criteria. You can support this scenario by adding a filter descriptor to a Finder method.  
+ 한 가지 일반적인 시나리오는 SharePoint에서 사용자가 원하는 기준과 일치 하는 외부 콘텐츠 형식의 인스턴스를 검색 합니다. Finder 메서드에 필터 설명자 추가 하 여이 시나리오를 지원할 수 있습니다.  
   
-### <a name="to-add-a-filter-descriptor-to-a-finder-method"></a>To add a filter descriptor to a Finder method  
+### <a name="to-add-a-filter-descriptor-to-a-finder-method"></a>Finder 메서드에 필터 설명자 추가 하려면  
   
-1.  In the **BDC Method Details** window, expand the node of a Finder method, expand the **Parameters** node, and then add an input parameter. For more information, see [How to: Add a Parameter to a Method](../sharepoint/how-to-add-a-parameter-to-a-method.md).  
+1.  에 **BDC 메서드 세부 정보** 창 Finder 메서드 노드를 확장의 **매개 변수** 노드를 추가한 다음 입력된 매개 변수를 추가 합니다. 자세한 내용은 참조 [하는 방법: 메서드에 매개 변수를 추가](../sharepoint/how-to-add-a-parameter-to-a-method.md)합니다.  
   
-2.  In the **Method Details** window, choose the type descriptor of the parameter.  
+2.  에 **메서드 세부 정보** 창에서 매개 변수의 형식 설명자를 선택 합니다.  
   
-3.  On the menu bar, choose **View**, **Properties Window**.  
+3.  메뉴 모음에서 **보기**, **속성 창**합니다.  
   
-4.  In the **Properties** window, set the **Type Name** property to a data type that is appropriate for the filter.  
+4.  에 **속성** 창의 설정는 **유형 이름** 필터에 대 한 적절 한 데이터 형식에는 속성입니다.  
   
-     For example, a filter might use an order date to limit the number of sales orders returned by the method. To support that filter, the **Type Name** property of the type descriptor must be set to **System.DateTime**.  
+     예를 들어 필터 메서드에서 반환 되는 판매 주문 수를 제한 하려면 주문 날짜를 사용할 수 있습니다. 해당 필터를 지원 하기 위해는 **유형 이름** 형식 설명자의 속성으로 설정 되어 있어야 **System.DateTime**합니다.  
   
-5.  In the **Method Details** window, expand the **Filter Descriptors** node.  
+5.  에 **메서드 세부 정보** 창을 확장 하 고는 **필터 설명자** 노드.  
   
-6.  In **Add a Filter Descriptor** list, choose **Create Filter Descriptor**.  
+6.  **필터 설명자 추가** 목록에서 선택 **필터 설명자 만들기**합니다.  
   
-     A new filter descriptor appears underneath the **Filter Descriptors** node.  
+     아래에 새 필터 설명자 표시는 **필터 설명자** 노드.  
   
-7.  On the menu bar, choose **View**, **Properties Window**.  
+7.  메뉴 모음에서 **보기**, **속성 창**합니다.  
   
-8.  In the **Properties** window, choose the **Type** property.  
+8.  에 **속성** 창, 선택는 **형식** 속성입니다.  
   
-9. In the list that appears for the **Type** property, choose the filtering pattern that you want.  
+9. 에 대 한 표시 되는 목록에는 **형식** 속성을 원하는 필터링 패턴을 선택 합니다.  
   
-     For example, to create a filter that uses an order date to limit the number of sales orders returned in a Finder method, choose **Comparison**. A Comparison filter ensures that a finder method returns only instances that meet a specific condition. For more information about each filtering pattern, see [Types of Filters Supported by the BDC](http://go.microsoft.com/fwlink/?LinkId=169287).  
+     예를 들어 Finder 메서드를 반환 하 고 판매 주문의 수를 제한 하는 주문 날짜를 사용 하는 필터를 만들려면 선택 **비교**합니다. 비교 필터는 finder 메서드가 반환 하는 특정 조건을 충족 하는 인스턴스만 보장 합니다. 필터링 각 패턴에 대 한 자세한 내용은 참조 [종류의 필터에서 지 원하는 BDC](http://go.microsoft.com/fwlink/?LinkId=169287)합니다.  
   
-10. In the **Properties** window, choose the **Associated Type Descriptors** property.  
+10. 에 **속성** 창, 선택는 **연결 된 Typedescriptor** 속성입니다.  
   
-11. In the list that appears for the **Associated Type Descriptors** property, choose the type descriptor that you created earlier in this procedure. This relates the filter to the input parameter of the Finder method.  
+11. 에 대 한 표시 되는 목록에는 **연결 된 Typedescriptor** 속성을이 절차의 앞부분에서 만든 형식 설명자를 선택 합니다. 이 필터는 Finder 메서드의 입력된 매개 변수 관련이 있습니다.  
   
-12. Add code to the Finder method that returns data. You can use the input parameter as a condition in a select query.  
+12. 데이터를 반환 하는 Finder 메서드에 코드를 추가 합니다. 입력된 매개 변수는 선택 쿼리에 조건으로 사용할 수 있습니다.  
   
-     The following example returns sales orders that have the specified order date.  
+     다음 예에서는 지정 된 주문 날짜를 가진 판매 주문을 반환 합니다.  
   
     > [!NOTE]  
-    >  Replace the value of the `ServerName` field with the name of your server.  
+    >  값을 바꿉니다는 `ServerName` 필드와 사용자 서버의 이름입니다.  
   
-     [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]  [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]  
+     [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]
+     [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]  
   
-## <a name="see-also"></a>See Also  
- [How to: Add a Finder Method](../sharepoint/how-to-add-a-finder-method.md)   
- [How to: Add a Specific Finder Method](../sharepoint/how-to-add-a-specific-finder-method.md)   
- [How to: Add a Parameter to a Method](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
- [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [Integrating Business Data into SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)  
+## <a name="see-also"></a>참고 항목  
+ [방법: Finder 메서드 추가](../sharepoint/how-to-add-a-finder-method.md)   
+ [방법: 특정 Finder 메서드 추가](../sharepoint/how-to-add-a-specific-finder-method.md)   
+ [방법: 메서드에 매개 변수를 추가 합니다.](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [방법: 매개 변수의 형식 설명자를 정의 합니다.](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
+ [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [SharePoint에 비즈니스 데이터 통합](../sharepoint/integrating-business-data-into-sharepoint.md)  
   
   

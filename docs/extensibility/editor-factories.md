@@ -1,57 +1,58 @@
 ---
 title: "편집기 팩터리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "편집기 [Visual Studio SDK] 레거시-편집기 팩터리"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - editor factories
 ms.assetid: cf4e8164-3546-441d-b465-e8a836ae7216
-caps.latest.revision: 20
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 0bfef7e641bc8f7e041242ce28110845855c2a65
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 편집기 팩터리
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-편집기 팩터리 편집기 개체를 만들고 실제 보기 라는 창 프레임을 적용 됩니다.  문서 데이터 및 편집기와 디자이너를 만드는 데 필요한 문서의 뷰 개체를 만듭니다.  편집기 팩터리 Visual Studio 코어 편집기와 기타 표준 편집기를 작성 해야 합니다.  사용자 지정 편집기는 편집기 팩터리를 선택적으로 만들 수 있습니다.  
+# <a name="editor-factories"></a>편집기 팩터리
+편집기 팩터리 편집기 개체를 만들고 물리적 뷰 라고 하는 창 프레임에 저장 합니다. 문서 데이터와 편집기 및 디자이너를 만드는 데 필요한 문서 뷰 개체를 만듭니다. 편집기 팩터리 Visual Studio 코어 편집기 및 모든 표준 편집기를 만드는 데 필요 합니다. 사용자 지정 편집기 편집기 팩터리와 선택적으로 만들 수 있습니다.  
   
- 편집기 팩터리를 구현 하 여 만들는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 인터페이스입니다.  다음은 구현 하는 방법을 보여 줍니다. <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 편집기 팩터리를 만들려면:  
+ 구현 하 여 편집기 팩터리를 만들어는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 인터페이스입니다. 다음 예제에서는 구현 하는 방법을 보여 줍니다. <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 편집기 팩터리를 만들어야 합니다.  
   
  [!code-vb[VSSDKEditorFactories#1](../extensibility/codesnippet/VisualBasic/editor-factories_1.vb)]
- [!code-cs[VSSDKEditorFactories#1](../extensibility/codesnippet/CSharp/editor-factories_1.cs)]  
+ [!code-csharp[VSSDKEditorFactories#1](../extensibility/codesnippet/CSharp/editor-factories_1.cs)]  
   
- 편집기 처음 처리 해당 편집기에서 파일 형식을 열 때 로드 됩니다.  특정 편집기 또는 기본 편집기를 열 수 있습니다.  기본 편집기를 선택 하면 통합된 개발 환경 \(IDE\) 올바른 열 편집기를 결정 하 고 엽니다.  자세한 내용은 [프로젝트의 파일 편집기 열리는 결정합니다.](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)를 참조하십시오.  
+ 편집기는 해당 편집기에서 처리 하는 파일 형식을 사용자가 처음으로 로드 됩니다. 특정 편집기 또는 기본 편집기를 열 수 있습니다. 기본 편집기를 선택 하는 경우 통합된 개발 환경 (IDE) 올바른 열 편집기를 결정 하 고 엽니다. 자세한 내용은 참조 [프로젝트의 파일을 열 편집기 결정](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)합니다.  
   
-## 편집기 팩터리를 등록합니다.  
- 생성 한 편집기를 사용 하기 전에 먼저 처리할 수 있는 파일 확장명을 포함 하 여,에 대 한 정보를 등록 해야 합니다.  
+## <a name="registering-editor-factories"></a>편집기 팩터리를 등록 하는 중  
+ 사용자가 만든 편집기를 사용 하려면 먼저에 대 한 정보를 처리할 수 있는 파일 확장명을 포함 하 여 먼저 등록 해야 합니다.  
   
- Vspackage를 관리 되는 코드로 작성 된 경우 패키지 관리 프레임 워크 \(MPF\) 메서드를 사용할 수 있습니다 <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> 하면 VSPackage 로드 된 후 편집기 팩터리를 등록 합니다.  Vspackage를 관리 되지 않는 코드를 작성 하 고 사용자 편집기 팩터리를 사용 하 여 등록 해야 합니다 경우는 <xref:Microsoft.VisualStudio.Shell.Interop.SVsRegisterEditors> 서비스 합니다.  
+ 관리 되는 코드를 VSPackage를 작성 하는 경우 관리 되는 패키지 프레임 워크 MPF () 메서드를 사용할 수 있습니다 <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> VSPackage를 로드 한 후 편집기 팩터리를 등록할 수 있습니다. VSPackage는 비관리 코드에서 작성 된 경우 사용 하 여 편집기 팩터리를 등록 해야 합니다는 <xref:Microsoft.VisualStudio.Shell.Interop.SVsRegisterEditors> 서비스입니다.  
   
-### 관리 코드를 사용 하 여 편집기 팩터리 등록  
- 사용자 편집기 팩터리를 Vspackage에 등록 해야는 `Initialize` 방법입니다.  먼저 호출 `base.Initialize`, 다음 호출 <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> 의 각 편집기 팩터리  
+### <a name="registering-an-editor-factory-by-using-managed-code"></a>관리 코드를 사용 하 여 편집기 팩터리를 등록 하는 중  
+ VSPackage의의 편집기 팩터리를 등록 해야는 `Initialize` 메서드. 먼저 호출 `base.Initialize`, 한 다음 호출 <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> 각 편집기 팩터리의  
   
- 관리 되는 코드에 없는 편집기 팩터리를 등록 하지 않아도 Vspackage는이 처리 합니다 때문 에입니다.  또한 편집기 팩터리를 구현 하는 경우 <xref:System.IDisposable>에 등록 된 경우 자동으로 삭제 됩니다.  
+ 관리 코드, 즉 한 편집기 팩터리 등록을 취소할 필요가 없습니다 VSPackage는 자동으로 처리 하기 때문에 있습니다. 또한 편집기 팩터리를 구현 하는 경우 <xref:System.IDisposable>, 등록 되어 있지 않은 경우 자동으로 삭제 됩니다.  
   
-### 관리 되지 않는 코드를 사용 하 여 편집기 팩터리 등록  
- 에 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> 구현을 사용 편집기 패키지에 `QueryService` 메서드를 호출 하 `SVsRegisterEditors`.  이 작업에 대 한 포인터를 반환 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors>.  호출 하는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> 메서드 구현을 전달의 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 인터페이스.  Mplement 해야 합니다 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 는 별도 클래스에 있습니다.  
+### <a name="registering-an-editor-factory-by-using-unmanaged-code"></a>비관리 코드를 사용 하 여 편집기 팩터리를 등록 하는 중  
+ 에 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> 편집기 패키지를 사용 하 여 구현 된 `QueryService` 호출할 메서드를 `SVsRegisterEditors`합니다. 이 작업에 대 한 포인터를 반환 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors>합니다. 호출 된 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> 메서드 구현에 전달 하 여는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 인터페이스입니다. Mplement 해야 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 별도 클래스에 있습니다.  
   
-## 편집기 팩터리 등록  
- Visual Studio 편집기 팩터리를 사용 하 여 편집기를 로드 하는 경우 다음과 같은 프로세스가 발생 합니다.  
+## <a name="the-editor-factory-registration-process"></a>편집기 팩터리 등록 프로세스  
+ 다음 프로세스는 Visual Studio 편집기 팩터리를 사용 하 여 편집기를 로드할 때 발생 합니다.  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 시스템 호출 프로젝트 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>.  
+1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 시스템 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>합니다.  
   
-2.  이 메서드는 편집기 팩터리를 반환합니다.  그러나 편집기의 패키지 프로젝트 시스템 편집기를 실제로 필요할 때까지 로드 Visual Studio 연기 합니다.  
+2.  이 메서드는 편집기 팩터리를 반환합니다. 그러나 Visual Studio 지연 프로젝트 시스템 편집기를 실제로 필요할 때까지 편집기의 패키지를 로드 합니다.  
   
-3.  편집기 프로젝트 시스템에 필요한 경우 Visual Studio 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>, 문서와 문서 보기에 데이터 개체를 반환 하는 특수화 된 메서드.  
+3.  프로젝트 시스템에서 편집기를 필요한 경우 Visual Studio 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>, 문서 보기와 문서 데이터 개체를 반환 하는 특수 한 메서드입니다.  
   
-4.  경우 Visual Studio 편집기 팩터리 사용 하 여 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> 문서 데이터 객체와 문서 뷰 개체를 반환 하 고 Visual Studio 다음 문서 창을 만들고 문서 보기 개체를 배치한 후에 실행 중인 문서 \(RDT\) 문서 데이터 개체에 대 한 항목이 있습니다.  
+4.  경우에 편집기 팩터리를 사용 하 여 Visual Studio에서 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> 문서 데이터 개체와 문서 뷰 개체를 모두 반환, Visual Studio 다음 문서 창, 문서 보기 개체 배치 만들고를 실행 중인 문서에 항목 문서 데이터 개체에 대 한 테이블 (RDT) 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>   
- [실행 중인 Document 테이블](../extensibility/internals/running-document-table.md)
+ [문서 테이블 실행](../extensibility/internals/running-document-table.md)

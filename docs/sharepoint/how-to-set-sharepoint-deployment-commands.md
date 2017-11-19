@@ -1,52 +1,53 @@
 ---
-title: "방법: SharePoint 배포 명령 설정"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio에서 SharePoint 개발, 배포"
+title: "방법: SharePoint 배포 명령 설정 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, deploying
 ms.assetid: 289c8c33-a603-434e-889f-a0d0a1736ecb
-caps.latest.revision: 12
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 65c67972dddedcd05338d793883b2dcba0789d48
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: SharePoint 배포 명령 설정
-  배포 전 및 배포 후 명령을 설정하여 배포 프로세스를 사용자 지정할 수 있습니다.  이러한 명령은 Visual Studio에서 SharePoint 솔루션을 디버깅할 때 다른 배포 작업 전후에 실행됩니다.  
+# <a name="how-to-set-sharepoint-deployment-commands"></a>방법: SharePoint 배포 명령 설정
+  배포 전 / 배포 후 명령이 설정 하 여 배포 프로세스를 사용자 지정할 수 있습니다. 이들이 명령은 Visual Studio에서 SharePoint 솔루션을 디버깅할 때 다른 배포 작업 전후의 실행 합니다.  
   
-### 배포 전 명령을 추가하려면  
+### <a name="to-add-a-pre-deployment-command"></a>배포 전 명령을 추가 하려면  
   
-1.  메뉴 모음의 **프로젝트** 메뉴에서 *ProjectName* **속성**을 선택합니다.  
+1.  메뉴 모음에서 **프로젝트**, *ProjectName***속성**을 참조하세요.  
   
-2.  **SharePoint** 탭을 선택합니다.  
+2.  선택 된 **SharePoint** 탭 합니다.  
   
-3.  **사전 배포 명령줄** 텍스트 상자에서 MS\-DOS 또는 MSBuild 명령을 입력하여 이 단계를 사용자 지정합니다.  
+3.  에 **배포 전 명령줄** 텍스트 상자에이 단계를 사용자 지정할 MS-DOS 또는 MSBuild 명령을 입력 합니다.  
   
-     예를 들어, 배포가 완료되기 전에 디렉터리 내용을 표시하려면 **dir**을 입력합니다.  
+     예를 들어 입력 배포가 완료 되기 전에 디렉터리 내용을 나열할, **dir**합니다.  
   
-### 배포 후 명령을 추가하려면  
+### <a name="to-add-a-post-deployment-command"></a>배포 후 명령을 추가 하려면  
   
-1.  메뉴 모음의 **프로젝트** 메뉴에서 *ProjectName* **속성**을 선택합니다.  
+1.  메뉴 모음에서 **프로젝트**, *ProjectName***속성**을 참조하세요.  
   
-2.  **SharePoint** 탭을 선택합니다.  
+2.  선택 된 **SharePoint** 탭 합니다.  
   
-3.  **배포 후 명령줄** 텍스트 상자에서 MS\-DOS 또는 MSBuild 명령을 입력하여 이 단계를 사용자 지정합니다.  
+3.  에 **배포 후 명령줄** 텍스트 상자에이 단계를 사용자 지정할 MS-DOS 또는 MSBuild 명령을 입력 합니다.  
   
-     예를 들어, 배포가 완료된 후에 디렉터리 내용을 표시하려면 **dir**을 입력합니다.  MSBuild 변수를 사용하여 빌드 디렉터리에서 어셈블리를 복사하려면 **copy $\(TargetPath\) c:\\DeploymentDirectory**를 입력합니다.  
+     예를 들어 입력 배포가 완료 된 후 디렉터리 내용을 나열할, **dir**합니다. 빌드 디렉터리에서 어셈블리를 복사 하는 MSBuild 변수를 사용 하려면 입력 **$ (targetpath) c:\DeploymentDirectory 복사**합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint 솔루션 패키징 및 배포](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

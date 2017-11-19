@@ -1,76 +1,129 @@
 ---
-title: "&lt;application&gt; 요소(Visual Studio에서 Office 개발)"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "응용 프로그램 매니페스트[Visual Studio에서 Office 개발], <application> 요소"
+title: "&lt;응용 프로그램&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: application manifests [Office development in Visual Studio], <application> element
 ms.assetid: b8d3db7c-9127-4812-b18f-bb17e1f8788f
-caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 95ea54e6aa41209c18ece03585c3b02898f9327b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# &lt;application&gt; 요소(Visual Studio에서 Office 개발)
-  `vstav3` 네임스페이스의 `application` 요소는 Office 솔루션에 대한 설명을 래핑합니다. 문서 수준 사용자 지정 및 VSTO 추가 기능에 대한 자식 요소가 서로 다릅니다.  
+# <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;응용 프로그램&gt; 요소 (Visual Studio에서 Office 개발)
+  `application` 네임스페이스의 `vstav3` 요소는 Office 솔루션에 대한 설명을 래핑합니다. 문서 수준 사용자 지정 및 VSTO 추가 기능에 대한 자식 요소가 서로 다릅니다.  
   
-## 문서 수준 사용자 지정에 대한 구문  
-  
-```  
-<application> <customization id <document solutionId /> </customization> </application>  
-```  
-  
-## 응용 프로그램 수준 추가 기능에 대한 구문  
+## <a name="syntax-for-document-level-customizations"></a>문서 수준 사용자 지정에 대한 구문  
   
 ```  
-<application> <customization id <appAddin application loadBehavior keyName> <friendlyName></friendlyName> <description></description> <formRegions></formRegions> </customization> </application>  
+<application>  
+  <customization  
+    id  
+    <document  
+      solutionId  
+    />  
+  </customization>  
+</application>  
 ```  
   
-## 요소 및 특성  
- `vstav3` 네임스페이스의 `application` 요소는 `vstov4` 네임스페이스에 포함된 모든 사용자 지정 관련 정보를 래핑하는 노드입니다.  
+## <a name="syntax-for-application-level-add-ins"></a>응용 프로그램 수준 추가 기능에 대한 구문  
+  
+```  
+<application>  
+  <customization  
+    id  
+    <appAddin  
+      application  
+      loadBehavior  
+      keyName>  
+    <friendlyName></friendlyName>  
+    <description></description>  
+    <formRegions></formRegions>  
+  </customization>  
+</application>  
+```  
+  
+## <a name="elements-and-attributes"></a>요소 및 특성  
+ `application` 네임스페이스의 `vstav3` 요소는 `vstov4` 네임스페이스에 포함된 모든 사용자 지정 관련 정보를 래핑하는 노드입니다.  
   
  `application` 요소에는 특성이 없습니다.  
   
  `application` 요소에는 다음 요소가 있습니다.  
   
-### 사용자 지정  
- `vstov3` 네임스페이스에서 `customization` 요소의 역할은 [&#60;customization&#62; 요소&#40;Visual Studio에서 Office 개발&#41;](../vsto/customization-element-office-development-in-visual-studio.md)에 정의되어 있습니다.  
+### <a name="customization"></a>사용자 지정  
+ 역할은 `customization` 요소에는 `vstov3` 네임 스페이스에 정의 된 [&#60; 사용자 지정 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/customization-element-office-development-in-visual-studio.md).  
   
-## 문서 수준 사용자 지정 예제  
+## <a name="document-level-customization-example"></a>문서 수준 사용자 지정 예제  
   
-### 설명  
- 다음 코드 예제에서는 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]을 사용하여 배포된 문서 수준 Office 솔루션의 `application` 요소를 보여 줍니다. 이 코드 예제는 [Office 솔루션의 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
+### <a name="description"></a>설명  
+ 다음 코드 예제에서는 `application` 을 사용하여 배포된 문서 수준 Office 솔루션의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
   
-### 코드  
-  
-```  
-<vstav3:application> <vstov4:customizations xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4"> <vstov4:customization> <vstov4:document solutionId="73e" /> </vstov4:customization> </vstov4:customizations> </vstav3:application>  
-```  
-  
-## VSTO 추가 기능 예제  
-  
-### 설명  
- 다음 코드 예제에서는 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]을 사용하여 배포된 응용 프로그램 수준 Office 솔루션의 `application` 요소를 보여 줍니다. 이 코드 예제는 [Office 솔루션의 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
-  
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
-<vstav3:application> <vstov4:customizations xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4"> <vstov4:customization> <vstov4:appAddIn application="Outlook" loadBehavior="3" keyName="ContosoOutlookAddIn"> <vstov4:friendlyName> ContosoOutlookAddIn </vstov4:friendlyName> <vstov4:description> ContosoOutlookAddIn - Outlook VSTO Add-in created with Visual Studio Tools for Office </vstov4:description> <vstov4:formRegions> <vstov4:formRegion name="OutlookAddIn1.FormRegion1"> <vstov4:messageClass name="IPM.Note" /> <vstov4:messageClass name="IPM.Contact" /> <vstov4:messageClass name="IPM.Appointment" /> </vstov4:formRegion> </vstov4:formRegions> </vstov4:appAddIn> </vstov4:customization> </vstov4:customizations> </vstav3:application>  
+<vstav3:application>  
+  <vstov4:customizations   
+    xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4">  
+    <vstov4:customization>  
+      <vstov4:document   
+        solutionId="73e" />  
+    </vstov4:customization>  
+  </vstov4:customizations>  
+</vstav3:application>  
 ```  
   
-## 참고 항목  
- [Office 솔루션의 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)   
- [Office 솔루션의 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
- [ClickOnce 응용 프로그램 매니페스트](../deployment/clickonce-application-manifest.md)  
+## <a name="vsto-add-in-example"></a>VSTO 추가 기능 예제  
+  
+### <a name="description"></a>설명  
+ 다음 코드 예제에서는 `application` 을 사용하여 배포된 응용 프로그램 수준 Office 솔루션의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
+  
+### <a name="code"></a>코드  
+  
+```  
+<vstav3:application>  
+  <vstov4:customizations   
+    xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4">  
+    <vstov4:customization>  
+      <vstov4:appAddIn   
+        application="Outlook"   
+        loadBehavior="3"   
+        keyName="ContosoOutlookAddIn">  
+        <vstov4:friendlyName>  
+          ContosoOutlookAddIn  
+        </vstov4:friendlyName>  
+        <vstov4:description>  
+          ContosoOutlookAddIn - Outlook VSTO Add-in   
+          created with Visual Studio Tools for Office  
+        </vstov4:description>  
+        <vstov4:formRegions>  
+          <vstov4:formRegion  
+              name="OutlookAddIn1.FormRegion1">  
+            <vstov4:messageClass name="IPM.Note" />  
+            <vstov4:messageClass name="IPM.Contact" />  
+            <vstov4:messageClass name="IPM.Appointment" />  
+          </vstov4:formRegion>  
+        </vstov4:formRegions>  
+      </vstov4:appAddIn>  
+    </vstov4:customization>  
+  </vstov4:customizations>  
+</vstav3:application>  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
+ [Office 솔루션에 대 한 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
+ [ClickOnce 응용 프로그램 매니페스트](/visualstudio/deployment/clickonce-application-manifest)  
   
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,36 +12,23 @@ helpviewer_keywords:
 - Visual Studio integration SDK roadmap
 - integration roadmap, Visual Studio SDK
 ms.assetid: 9118eaa4-0453-4dc5-9e16-c7062d254869
-caps.latest.revision: 30
+caps.latest.revision: "30"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 565aaeb189ad129d5e4e26d9c73c080de2e77676
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: ebba0ea11781a4b5a3d01aabb718b0ad778daab9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="inside-the-visual-studio-sdk"></a>Visual studio SDK
+# <a name="inside-the-visual-studio-sdk"></a>Visual Studio SDK 기본 사항
 이 섹션에서는 Visual Studio 아키텍처, 구성 요소, 서비스, 스키마, 유틸리티 및 like를 포함 하 여 Visual Studio 확장에 대 한 자세한 정보를 제공 합니다.  
   
 ## <a name="extensibility-architecture"></a>확장성 아키텍처  
- 다음 그림은 Visual Studio 확장성 아키텍처를 보여 줍니다. Vspackage는 서비스로 IDE 간에 공유 되는 응용 프로그램 기능을 제공 합니다. 표준 IDE에서는 다양 한 범위의 서비스와 같은 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>, IDE 창 관리 기능에 대 한 액세스를 제공 하는.</xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>  
+ 다음 그림은 Visual Studio 확장성 아키텍처를 보여 줍니다. Vspackage는 서비스로 IDE 간에 공유 되는 응용 프로그램 기능을 제공 합니다. 표준 IDE에서는 다양 한 범위의 서비스와 같은 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>, IDE 창 관리 기능에 대 한 액세스를 제공 합니다.  
   
- ![환경 아키텍처 그래픽](~/extensibility/internals/media/environment.gif "environment")  
+ ![환경 아키텍처 그래픽](../../extensibility/internals/media/environment.gif "환경")  
 Visual Studio 아키텍처의 일반화 된 보기  
   
 ## <a name="vspackages"></a>VSPackages  
@@ -59,41 +45,41 @@ Visual Studio 아키텍처의 일반화 된 보기
   
  Visual Studio를 확장 하는 경우 명령을 만들고 Visual Studio shell에 등록할 수 있습니다. 이러한 명령에서에서 어떻게 나타나는지 IDE, 예를 들어 메뉴 또는 도구 모음을 지정할 수 있습니다. 사용자 지정 명령에 표시 되는 일반적으로 **도구** 메뉴 및 도구 창을 표시 하기 위한 명령에 표시는 **다른 창** 의 하위 메뉴는 **보기** 메뉴.  
   
- 명령을 만들 때도 만들어야 이벤트 처리기에 대 한 합니다. 이벤트 처리기 명령을 표시 또는 사용, 해당 텍스트를 수정할 수 있습니다 및가 활성화 된 경우 명령이 적절히 응답 하는지 보장 시기를 결정 합니다. 명령을 사용 하 여 IDE 대부분의 경우에서 처리는 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>인터페이스.</xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> Visual Studio에서 명령은 가장 안쪽의 명령 컨텍스트부터 전역 선택 기반의 가장 바깥쪽 컨텍스트로 진행 하 고 로컬 선택을 기반으로 처리 됩니다. 주 메뉴에 추가된 명령은 즉시 스크립팅에 사용할 수 있습니다.  
+ 명령을 만들 때도 만들어야 이벤트 처리기에 대 한 합니다. 이벤트 처리기 명령을 표시 또는 사용, 해당 텍스트를 수정할 수 있습니다 및가 활성화 된 경우 명령이 적절히 응답 하는지 보장 시기를 결정 합니다. 명령을 사용 하 여 IDE 대부분의 경우에서 처리는 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 인터페이스입니다. Visual Studio에서 명령은 가장 안쪽의 명령 컨텍스트부터 전역 선택 기반의 가장 바깥쪽 컨텍스트로 진행 하 고 로컬 선택을 기반으로 처리 됩니다. 주 메뉴에 추가된 명령은 즉시 스크립팅에 사용할 수 있습니다.  
   
  자세한 내용은 참조 [명령, 메뉴 및 도구 모음](../../extensibility/internals/commands-menus-and-toolbars.md)합니다.  
   
 ## <a name="menus-and-toolbars"></a>메뉴 및 도구 모음  
  메뉴 및 도구 모음 사용자가 명령을 호출할 수 있는 방법을 제공 합니다. 메뉴는 일반적으로 도구 창 위쪽에서 개별 텍스트 항목으로 표시 되는 명령의 행 이나 열 됩니다. 하위 메뉴는 작은 화살표를 포함 하는 명령을 클릭할 때 표시 되는 보조 메뉴가 있습니다. 상황에 맞는 메뉴에는 특정 UI 요소를 누를 때 나타납니다. 몇 가지 일반적인 메뉴 이름에는 **파일**, **편집**, **보기**, 및 **창**합니다. 자세한 내용은 참조 [확장 메뉴 및 명령을](../../extensibility/extending-menus-and-commands.md)합니다.  
   
- 도구 모음 단추와 콤보 상자, 목록 상자 및 텍스트 상자 같은 다른 컨트롤의 행 이나 열 됩니다. 도구 모음 단추에는 일반적으로 폴더 아이콘에 대 한 같은 아이콘 이미지를 포함 한 **열려 있는 파일** 명령 또는 프린터에 대 한는 **인쇄** 명령입니다. 모든 도구 모음 요소가 명령과 연결 합니다. 도구 모음 단추를 클릭 하면 연결 된 명령이 실행 됩니다. 드롭다운 목록 컨트롤의 경우 드롭 다운 목록에서 각 항목은 다른 명령과 연결 됩니다. Splitter 컨트롤 같은 일부 도구 모음 컨트롤은 하이브리드입니다. 컨트롤의 한 쪽은 도구 모음 단추 및 다른 쪽은 클릭할 때 몇 가지 명령을 표시 하는 아래쪽 화살표입니다.  
+ 도구 모음 단추와 콤보 상자, 목록 상자 및 텍스트 상자 같은 다른 컨트롤의 행 이나 열 됩니다. 도구 모음 단추에 아이콘 이미지에 대 한 폴더 아이콘 등 일반적으로 필요는 **열려 있는 파일** 명령 또는 대 한 프린터는 **인쇄** 명령입니다. 모든 도구 모음 요소가 명령과 연결 합니다. 도구 모음 단추를 클릭 하면 연결 된 명령이 실행 됩니다. 드롭다운 목록 컨트롤의 경우 드롭 다운 목록에서 각 항목은 다른 명령과 연결 됩니다. Splitter 컨트롤 같은 일부 도구 모음 컨트롤은 하이브리드입니다. 컨트롤의 한 쪽은 도구 모음 단추 및 다른 쪽은 클릭할 때 몇 가지 명령을 표시 하는 아래쪽 화살표입니다.  
   
 ## <a name="tool-windows"></a>도구 창  
  도구 창은 정보를 표시 하려면 IDE에서 사용 됩니다. **도구 상자**, **솔루션 탐색기**, **속성** 창 및 **웹 브라우저** 은 도구 창의 예입니다.  
   
- 도구 창은 일반적으로 사용자 작용할 수 있는 다양 한 컨트롤을 제공 합니다. 예를 들어,는 **속성** 창 사용자가 특정 목적으로 사용 되는 개체의 속성을 설정할 수 있습니다. **속성** 창 이므로 이런이 의미에서 특수 하지만 또한 일반적인 여러 가지 상황에서 사용할 수 있습니다. 마찬가지로,는 **출력** 창이 Visual Studio에서 많은 하위 시스템 Visual Studio 사용자에 게 출력을 제공 하는 데 사용할 수 있지만 일반 텍스트 기반 출력을 제공 하기 때문에 전문화 될 합니다.  
+ 도구 창은 일반적으로 사용자 작용할 수 있는 다양 한 컨트롤을 제공 합니다. 예를 들어,는 **속성** 창에는 사용자가 특정 목적으로 사용 되는 개체의 속성을 설정할 수 있습니다. **속성** 창 이므로 이런이 의미에서 특수 하지만 또한 일반적인 여러 가지 상황에서 사용할 수 있습니다. 마찬가지로,는 **출력** 창이 Visual Studio에서 많은 하위 시스템 Visual Studio 사용자에 게 출력을 제공 하는 데 사용할 수 있지만 일반 텍스트 기반 출력을 제공 하기 때문에 전문화 될 합니다.  
   
  여러 도구 창이 포함 된 Visual Studio의 다음 그림을 고려 합니다.  
   
- ![스크린 샷](~/extensibility/internals/media/t1gui.png "T1gui")  
+ ![스크린 샷](../../extensibility/internals/media/t1gui.png "T1gui")  
   
  일부 도구 창은 함께 솔루션 탐색기 도구 창을 표시 하 고 다른 도구 창을 숨깁니다 하지만 탭을 클릭 하 여 사용할 수 있도록 하는 단일 창에 도킹 됩니다. 그림에는 나와 다른 두 개의 도구 창에는 **오류 목록** 및 **출력** 함께 단일 창에서 도킹 창.  
   
- 또한 표시 된 다양 한 편집기 창을 표시 하는 주 문서 창이입니다. 도구 창에는 일반적으로 인스턴스를 하나만 필요는 없지만 (예를 들어 하나만 열 수 있습니다 **솔루션 탐색기**), 편집기 창은 여러 개의 인스턴스를 동일한 창에 도킹 되는 모두 있지만 별도 문서를 편집 하는 데 사용 되는 각각 있을 수 있습니다. 그림에는 두 개의 편집기 창, 양식 디자이너 창을 두 개 및 시작 페이지를 표시 하는 브라우저 창이 있는 문서 창을 보여 줍니다. 문서 창에 있는 모든 창을 탭을 클릭 하 여 사용할 수 있지만 EditorPane.cs 파일을 포함 하는 편집기 창을 표시 되 고 활성화 합니다.  
+ 또한 표시 된 다양 한 편집기 창을 표시 하는 주 문서 창이입니다. 도구 창에는 일반적으로 인스턴스를 하나만 필요는 없지만 (예를 들어 하나만 열 수 있습니다 **솔루션 탐색기**), 편집기 창에 도킹 되는 모두 있지만 별도 문서를 편집 하는 데 사용 되는 각각의 여러 인스턴스를 가질 수 있습니다 같은 창입니다. 그림에는 두 개의 편집기 창, 양식 디자이너 창을 두 개 및 시작 페이지를 표시 하는 브라우저 창이 있는 문서 창을 보여 줍니다. 문서 창에 있는 모든 창을 탭을 클릭 하 여 사용할 수 있지만 EditorPane.cs 파일을 포함 하는 편집기 창을 표시 되 고 활성화 합니다.  
   
  Visual Studio를 확장할 때 확장으로 Visual Studio 사용자가 수 있는 창이 상호 작용 하는 도구를 만들 수 있습니다. Visual Studio 사용자가 문서를 편집할 수 있도록 사용자 고유의 편집기를 만들 수 있습니다. 하므로 도구 창과 편집기는 Visual Studio에 통합 될 것을 도킹 하거나 탭에 올바르게 표시 하도록 프로그래밍 필요는 없습니다. Visual Studio에 올바르게 등록 된, 자동으로 갖게 됩니다 도구 창과 문서 창 Visual Studio에서의 일반적인 기능입니다. 자세한 내용은 참조 [확장 및 사용자 지정 도구 창의](../../extensibility/extending-and-customizing-tool-windows.md)합니다.  
   
 ## <a name="document-windows"></a>문서 창  
  문서 창에는 다중 문서 인터페이스 (mdi 다중) 창의 자식 프레임된 창이입니다. 문서 창 텍스트 편집기, 수 있는 폼 편집기 (라고도 디자이너) 또는 편집 컨트롤을 호스트 하기 일반적으로 사용 되지만 다른 기능 형식의 호스트할 수 있습니다. **새 파일** 대화 상자에는 문서 창은 Visual Studio에서 제공 하는 예가 포함 되어 있습니다.  
   
- 대부분의 편집기는 프로그래밍 언어에 또는 HTML 페이지, 프레임, c + + 파일, 헤더 파일 등의 파일 형식에 적용 됩니다. 템플릿을 선택 하 고 **새 파일** 대화 상자에서 사용자를 동적으로 만듭니다 문서 창에서 템플릿에 연결 되어 있는 파일 형식에 대 한 편집기에 대 한 합니다. 사용자가 기존 파일을 열 때 문서 창이 만들어집니다.  
+ 대부분의 편집기는 프로그래밍 언어에 또는 HTML 페이지, 프레임, c + + 파일, 헤더 파일 등의 파일 형식에 적용 됩니다. 템플릿을 선택 하 고 **새 파일** 대화 상자에서 사용자를 동적으로 만듭니다 문서 창에서 템플릿과 연결 된 파일 형식에 대 한 편집기에 대 한 합니다. 사용자가 기존 파일을 열 때 문서 창이 만들어집니다.  
   
  문서 창을 사용해 서 MDI 클라이언트 영역으로 제한 됩니다. 바탕 화면에서 각 문서 창에는 탭 및 탭 순서 MDI 영역에 열려 있을 수 있는 다른 창에 연결 됩니다. 여러 개의 가로 또는 세로 탭 그룹을 사용해 서 MDI 영역을 분할 하는 옵션이 포함 된 바로 가기 메뉴를 표시 문서 창의 탭을 마우스 오른쪽 단추로 클릭 합니다. MDI 영역을 분할 여러 파일을을 동시에 볼 수 있습니다. 자세한 내용은 참조 [문서 창을](../../extensibility/internals/document-windows.md)합니다.  
   
 ## <a name="editors"></a>편집기  
  Visual Studio 편집기를 사용 하면 사용자 지정 하 고 관리 되는 확장성 프레임 워크 (MEF)를 사용 하 여 콘텐츠 유형에 사용할 수 있습니다. 대부분의 경우에서 (예를 들어 메뉴 명령 또는 바로 가기 키) 셸에서 기능을 포함 하려는 경우 MEF 확장을 VSPackage와 결합할 수 있습니다는 편집기를 확장 하기 위해 VSPackage 만들도록 않아도 됩니다.  
   
- 또한 읽기 / 쓰기 데이터베이스를 하려는 경우 또는 디자이너를 사용 하려는 경우 예를 들어 사용자 지정 편집기를 만들 수 있습니다. 예: 메모장 또는 Microsoft 워드 패드 외부 편집기를 사용할 수 있습니다. 자세한 내용은 참조 [편집기와 언어 서비스 확장](../../extensibility/editor-and-language-service-extensions.md)합니다.  
+ 예를 들어 사용자 지정 편집기를 읽기 / 쓰기 데이터베이스를 하려는 경우 또는 디자이너를 사용 하려는 경우에 만들 수 있습니다. 예: 메모장 또는 Microsoft 워드 패드 외부 편집기를 사용할 수 있습니다. 자세한 내용은 참조 [편집기와 언어 서비스 확장](../../extensibility/editor-and-language-service-extensions.md)합니다.  
   
 ## <a name="language-services"></a>언어 서비스  
  새 프로그래밍 키워드 또는 새 프로그래밍 언어도 지원 하기 위해 Visual Studio 편집기를 사용 하도록 하려는 경우 언어 서비스를 만듭니다. 각 언어 서비스는 완벽 하 게, 부분적으로, 또는 전혀 특정 편집기 기능을 구현할 수 있습니다. 구성 방법에 따라 언어 서비스 구문 강조, 중괄호 일치, IntelliSense 지원 및 편집기의 다른 기능을 제공할 수 있습니다.  
@@ -118,7 +104,7 @@ Visual Studio 아키텍처의 일반화 된 보기
  자세한 내용은 참조 [추가 프로젝트 및 프로젝트 항목 템플릿](../../extensibility/internals/adding-project-and-project-item-templates.md)합니다.  
   
 ## <a name="properties-and-options"></a>속성 및 옵션  
- **속성** 단일 또는 여러 선택된 항목의 속성 창에 표시 됩니다: [확장 속성](../../extensibility/internals/extending-properties.md) 옵션 페이지에는 프로그래밍 언어 또는 VSPackage 등의 특정 구성 요소와 관련 된 옵션 집합이 포함 될: [옵션 및 옵션 페이지](../../extensibility/internals/options-and-options-pages.md)합니다. 설정은 일반적으로 UI 관련 된 기능을 가져오고 내보낼 수 있습니다: [사용자 설정에 대 한 지원을](../../extensibility/internals/support-for-user-settings.md)합니다.  
+ **속성** 단일 또는 여러 선택된 항목의 속성 창에 표시 됩니다: [확장 속성](../../extensibility/internals/extending-properties.md) 옵션 페이지와 같은 특정 구성 요소와 관련 된 옵션의 집합을 포함 한 프로그래밍 언어 또는 VSPackage: [옵션 및 옵션 페이지](../../extensibility/internals/options-and-options-pages.md)합니다. 설정은 일반적으로 UI 관련 된 기능을 가져오고 내보낼 수 있습니다: [사용자 설정에 대 한 지원을](../../extensibility/internals/support-for-user-settings.md)합니다.  
   
 ## <a name="visual-studio-services"></a>Visual Studio 서비스  
  서비스를 사용할 구성 요소에 대 한 인터페이스의 특정 집합을 제공 합니다. Visual Studio 확장을 포함 한 모든 구성 요소에서 사용할 수 있는 서비스를 제공 합니다. 예를 들어 Visual Studio 서비스를 표시 또는 도움말, 상태 표시줄 또는 UI 이벤트에 액세스할 수 있도록 동적으로 숨겨진 도구 창을 사용 합니다. Visual Studio 편집기는 또한 편집기 확장 하 여 가져올 수 있는 서비스를 제공 합니다. 자세한 내용은 참조 [사용 및 서비스 제공](../../extensibility/using-and-providing-services.md)합니다.  
@@ -133,7 +119,7 @@ Visual Studio 아키텍처의 일반화 된 보기
  마법사를 통해 수 있도록 사용자가 해당 유형의 새 프로젝트를 만들 때 올바른 결정을 확인 하는, 새 프로젝트 형식으로는 마법사를 함께에서 만들 수 있습니다. 자세한 내용은 참조 [마법사](../../extensibility/internals/wizards.md)합니다.  
   
 ## <a name="custom-tools"></a>사용자 지정 도구  
- 사용자 지정 도구를 사용 하는 도구는 프로젝트에서 항목 연결 하 고 파일을 저장할 때마다 해당 도구를 실행할 수 있도록 합니다. 자세한 내용은 참조 [사용자 지정 도구](../../extensibility/internals/custom-tools.md)합니다.  
+ 사용자 지정 도구를 사용 하 여 프로젝트에서 항목 도구 연결 하 고 파일을 저장할 때마다 해당 도구를 실행할 수 있도록 합니다. 자세한 내용은 참조 [사용자 지정 도구](../../extensibility/internals/custom-tools.md)합니다.  
   
 ## <a name="vssdk-utilities"></a>VSSDK 유틸리티  
  VSSDK은 Vspackage의 다양 한 측면을 사용 하려면 필요할 수 있는 유틸리티 집합이 포함 되어 있습니다. 자세한 내용은 참조 [VSSDK 유틸리티](../../extensibility/internals/vssdk-utilities.md)합니다.  

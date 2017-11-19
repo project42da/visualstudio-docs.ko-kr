@@ -1,57 +1,58 @@
 ---
-title: "방법: SharePoint 프로젝트에 항목 추가"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio에서 SharePoint 개발, 항목 추가"
+title: "방법: SharePoint 프로젝트 항목을 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, adding items
 ms.assetid: 25a76408-6061-4cd3-b210-100f1c644df7
-caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a7995b6768ae188484c15a3b1d3157df116ca481
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: SharePoint 프로젝트에 항목 추가
-  SharePoint 솔루션에는 하나 이상의 프로젝트가 포함되며, 각 프로젝트에는 여러 개의 SharePoint 프로젝트 항목이 포함됩니다.  SharePoint 솔루션을 열거나 만든 후 새 항목이나 기존 항목을 이러한 프로젝트에 추가할 수 있습니다.  예를 들어 새 워크플로 프로젝트에는 default.aspx라는 폼이 기본적으로 포함되지만 이 폼을 새 폼이나 다른 폼으로 바꿀 수도 있고 다른 ASPX 폼을 추가할 수도 있습니다.  
+# <a name="how-to-add-items-to-a-sharepoint-project"></a>방법: SharePoint 프로젝트에 항목 추가
+  SharePoint 솔루션에 하나 이상의 프로젝트를 각각 포함 하는 SharePoint 프로젝트 항목이 여러 개 포함 됩니다. 열거나 SharePoint 솔루션 만들기 후에 이러한 프로젝트 신규 또는 기존 항목을 추가할 수 있습니다. 예를 들어 새 워크플로 프로젝트 default.aspx를 이라는 기본 폼을 함께 제공 되지만 새로운 또는 다른 형식으로 바꿀 하거나 다른 ASPX 폼을 추가할 수 있습니다.  
   
-### SharePoint 솔루션에 새 프로젝트 항목을 추가하려면  
+### <a name="to-add-a-new-project-item-to-a-sharepoint-solution"></a>SharePoint 솔루션에 새 프로젝트 항목을 추가 하려면  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 SharePoint 솔루션을 열거나 새로 만듭니다.  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]열거나 SharePoint 솔루션을 만듭니다.  
   
-2.  **솔루션 탐색기**에서 프로젝트의 노드를 선택합니다.  
+2.  **솔루션 탐색기**, 프로젝트 노드를 선택 합니다.  
   
-3.  메뉴 모음에서 **프로젝트**, **새 항목 추가**를 선택하여 **새 항목 추가** 대화 상자를 표시합니다.  
+3.  메뉴 모음에서 **프로젝트**, **새 항목 추가** 표시 하는 **새 항목 추가** 대화 상자.  
   
-4.  **설치된 템플릿** 목록에서 **SharePoint** 노드를 확장하고 **2010** 노드를 선택합니다.  
+4.  에 **설치 된 템플릿** 목록는 **SharePoint** 노드를 선택한 후는 **2010** 노드.  
   
-5.  프로젝트 아이템 템플릿 목록에서, 템플릿을 선택합니다.  
+5.  프로젝트 항목 템플릿 목록에서 템플릿을 선택 합니다.  
   
-6.  **이름** 텍스트 상자에서 이름을 입력한 후 **OK** 버튼을 선택합니다.  
+6.  에 **이름** 입력란 이름을 입력 한 다음 선택에서 **확인** 단추입니다.  
   
-### SharePoint 솔루션에 기존 프로젝트 항목을 추가하려면  
+### <a name="to-add-an-existing-project-item-to-a-sharepoint-solution"></a>SharePoint 솔루션에 기존 프로젝트 항목을 추가 하려면  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 SharePoint 솔루션을 열거나 새로 만듭니다.  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]열거나 SharePoint 솔루션을 만듭니다.  
   
-2.  **솔루션 탐색기**에서 프로젝트의 노드를 선택합니다.  
+2.  **솔루션 탐색기**, 프로젝트 노드를 선택 합니다.  
   
-3.  메뉴 모음에서 **프로젝트**, **기존 항목 추가** 를 선택하여 **기존 항목 추가** 대화 상자를 표시합니다.  
+3.  메뉴 모음에서 **프로젝트**, **기존 항목 추가** 표시 하는 **기존 항목 추가** 대화 상자.  
   
-4.  추가할 아이템을 포함하는 폴더를 찾고, 그것을 선택한 다음, **추가** 버튼을 선택합니다.  
+4.  추가 선택한 다음를 선택 하려는 항목이 포함 된 폴더를 찾아는 **추가** 단추입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint 프로젝트 및 프로젝트 항목 템플릿](../sharepoint/sharepoint-project-and-project-item-templates.md)   
- [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
+ [SharePoint 솔루션 개발](../sharepoint/developing-sharepoint-solutions.md)  
   
   

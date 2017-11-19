@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 04/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9524ecc3cadef58821fba857de8e82e59eea9b43
-ms.openlocfilehash: 19db4e41ef35ddbec4f43823d4bf66bb148a854f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/04/2017
-
+ms.openlocfilehash: 368540b909536523515ea610e509b22600628f81
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio에 대 한 UX Essentials
 ## <a name="best-practices"></a>최선의 구현 방법  
@@ -99,7 +84,7 @@ ms.lasthandoff: 05/04/2017
   
  이 경우 추가 문제 때문에 않습니다 경고에 사용 되는 아이콘을 포함 한 "&times;" 아이콘을 옆에 있는 공용 제거 아이콘을 사용할 수 없습니다. 결과적으로, UI 컨트롤을 더 이상 사용 하지 않게 제거 단추를 사용합니다.  
   
- ![Visual Studio 안티패턴은 기본적으로 UI 오류 상태에 배치 합니다.](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-pattern")<br />Visual Studio 안티패턴은 기본적으로 UI 오류 상태에 배치 합니다.
+ ![Visual Studio 안티패턴은 기본적으로 UI 오류 상태에 배치 합니다. ] (../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti 패턴")<br />Visual Studio 안티패턴은 기본적으로 UI 오류 상태에 배치 합니다.
   
 #### <a name="alternatives"></a>대체 방법  
  이 문제를 보다 나은 솔루션을 합니다.  
@@ -130,20 +115,20 @@ ms.lasthandoff: 05/04/2017
 #### <a name="alternatives"></a>대체 방법  
  이러한 상황에 대 한 올바른 디자인 Internet Explorer, Office 및 Visual Studio를 일반 패턴을 따를 것: 가리키기, 사용자가 도구 설명을 볼 수와 한 번의 클릭 UI를 숨깁니다.  
   
- ![설명 텍스트 anti #45 패턴 &; #45 맞는](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti-pattern-correct")<br />올바른 비디오 링크가 패턴
+ ![설명 텍스트 anti #45 패턴 &; #45 올바른](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti 패턴 해결")<br />올바른 비디오 링크가 패턴
   
 ### <a name="using-command-bars-for-settings"></a>명령 모음 설정에 대 한 사용  
  **그림 A** 이 안티패턴 나타냅니다: 보다 더 명령에 적용 되는 명령 단추 아래 설정을 추가 합니다. 이 스케치에서은 외에도 디버깅 시작 명령-브라우저, 디버깅 하지 않고 시작 및 한 단계씩 코드 실행에서 보기와 같은-선택한 설정 존중입니다.  
 
-  ![A: 그림 명령 모음 안티패턴](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-pattern-FigureA")<br />A: 그림 명령 모음 안티패턴
+  ![A: 그림 명령 안티패턴 모음](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-패턴-FigureA")<br />A: 그림 명령 모음 안티패턴
   
- 조금 더 나은 없지만 바람직하지 지정 하는 것이 유형의 설정의 도구 모음에서와 같이 **그림 B**합니다. 분할 단추 적은 공간을 차지 하 고 드롭다운을 통해 향상 되므로, 두 디자인 여전히 사용 하는 도구 모음은 명령을 실제로 아닌 개체를 승격 하 합니다.  
+ 조금 더 나은 없지만 바람직하지 지정 하는 것이 유형의 설정의 도구 모음에서와 같이 **그림 B**합니다. 분할 단추 적은 공간을 차지 하 고 드롭다운을 통해 향상 되므로, 두 디자인 계속 사용 하는 도구 모음은 명령을 실제로 아닌 개체를 승격 하 합니다.  
  
- ![그림 b: 향상 되었지만 여전히는 명령 모음 안티패턴](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-pattern-FigureB")<br />그림 b: 향상 되었지만 여전히는 명령 모음 안티패턴
+ ![그림 b: 나타낼지, 하지만 여전히는 명령 모음 안티패턴](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-패턴-FigureB")<br />그림 b: 향상 되었지만 여전히는 명령 모음 안티패턴
  
   에 표시 된 올바른 접근 방식에서 **그림 C**, 일련의 명령에 설정을 연결 됩니다. 설정 되 고 전역 설정이 없습니다 및 4 개 명령은 방금 전환 하는 것입니다. 명령을 도구 모음에서 허용 되는 경우에만입니다. 
 
- ![Visual Studio 명령 모음 패턴의 그림 c: 올바른 사용](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-pattern-FigureC")<br />Visual Studio 명령 모음 패턴의 그림 c: 올바른 사용
+ ![그림 c: Visual Studio 명령 모음 패턴을 사용 하 여 해결](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-패턴-FigureC")<br />Visual Studio 명령 모음 패턴의 그림 c: 올바른 사용
    
 ### <a name="control-anti-patterns"></a>컨트롤 패턴  
  일부 패턴은 단순히 잘못 된 사용 또는 컨트롤 또는 컨트롤 그룹을 표시 합니다.  
@@ -152,24 +137,24 @@ ms.lasthandoff: 05/04/2017
  하이퍼링크에 대 한 밑줄 텍스트를 사용 해야 합니다.  
   
  **잘못 된:**    
- ![밑줄이 그어진된 텍스트 하이퍼링크를 Visual Studio 바이러스 패턴입니다.](../../extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102-g_GroupLabelIncorrect")<br />밑줄이 그어진된 텍스트 하이퍼링크를 Visual Studio 바이러스 패턴입니다.
+ ![밑줄이 그어진된 텍스트 하이퍼링크를 Visual Studio 바이러스 패턴입니다. ] (../../extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102 g_GroupLabelIncorrect")<br />밑줄이 그어진된 텍스트 하이퍼링크를 Visual Studio 바이러스 패턴입니다.
   
  **좋은:**   
- ![올바르게 스타일의 비 하이퍼링크 텍스트 유사점이 환경 글꼴로 표시 합니다.](../../extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102-h_GroupLabelCorrect")<br />올바르게 스타일의 비 하이퍼링크 텍스트 유사점이 환경 글꼴로 표시 합니다.
+ ![올바르게 스타일의 비 하이퍼링크 텍스트 유사점이 환경 글꼴로 표시 합니다. ] (../../extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102 h_GroupLabelCorrect")<br />올바르게 스타일의 비 하이퍼링크 텍스트 유사점이 환경 글꼴로 표시 합니다.
   
 #### <a name="clicking-on-a-check-box-results-in-a-pop-up-dialog"></a>팝업 대화 상자에서 확인란 결과 사용 하 여 클릭 하면  
  즉시 "Windows Azure 응용 프로그램 게시" 마법사에서 "모든 역할에 원격 데스크톱 사용" 확인란을 클릭 하면 Visual Studio 안티패턴 팝업 대화 상자에서 나타납니다. 또한 확인란 필드를 채우지 확인란을 선택한 후 다른 상호 작용 안티패턴 합니다.  
   
- ![Visual Studio 안티패턴 되는 확인란을 클릭 하는 대화 상자를 표시 합니다.](../../extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102-i_CheckboxPopup")<br />Visual Studio 안티패턴 되는 확인란을 클릭 하는 대화 상자를 표시 합니다.
+ ![Visual Studio 안티패턴 되는 확인란을 클릭 하는 대화 상자를 표시 합니다. ] (../../extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102 i_CheckboxPopup")<br />Visual Studio 안티패턴 되는 확인란을 클릭 하는 대화 상자를 표시 합니다.
   
 ### <a name="hyperlink-anti-patterns"></a>하이퍼링크 안티패턴  
  다음 예제에서는 두 개의 패턴을 포함합니다.  
   
-1.  Hover에 빨간색 켜기 전경 글꼴 서비스에서 올바른 공유 색 사용 되지 않기를 의미 합니다.  
+1.  Hover에 빨간색 켜는 전경 글꼴 서비스에서 올바른 공유 색 사용 되지 않기를 의미 합니다.  
   
 2.  개념 항목에 대 한 링크에 대 한 적절 한 텍스트 않습니다 "자세히". 사용자의 목표는 하지 자세한 내용, 원하는 결과 이해 하는 것입니다.  
   
- ![색 서비스를 무시 하 고 "자세히" 하이퍼링크에 대 한 사용 하 여 Visual Studio 안티패턴 됩니다.](~/extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />색 서비스를 무시 하 고 "자세히" 하이퍼링크에 대 한 사용 하 여 Visual Studio 안티패턴 됩니다.  
+ ![색 서비스를 무시 하 고 "자세히" 하이퍼링크에 대 한 사용 하 여 Visual Studio 안티패턴 됩니다. ] (../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102 j_HyperlinkIncorrect")<br />색 서비스를 무시 하 고 "자세히" 하이퍼링크에 대 한 사용 하 여 Visual Studio 안티패턴 됩니다.  
   
  **향상 된 솔루션:** 링크를 클릭 하 여 사용자가 대하여 질문 합니다.  
   

@@ -1,49 +1,49 @@
 ---
-title: "IDebugProgramHost2::GetHostId | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramHost2::GetHostId"
-helpviewer_keywords: 
-  - "IDebugProgramHost2::GetHostId"
+title: IDebugProgramHost2::GetHostId | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramHost2::GetHostId
+helpviewer_keywords: IDebugProgramHost2::GetHostId
 ms.assetid: 7702e221-feb1-446b-a224-cb46c420987e
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: af778ce0f2b5d14a952426abe6d068e7b8ff6b30
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramHost2::GetHostId
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 프로그램을 호스팅하는 프로세스의 프로세스 식별자를 가져옵니다.  
+# <a name="idebugprogramhost2gethostid"></a>IDebugProgramHost2::GetHostId
+이 프로그램을 호스트 하는 프로세스의 프로세스 식별자를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetHostId(   
-   AD_PROCESS_ID* pdwId  
+```cpp  
+HRESULT GetHostId(   
+   AD_PROCESS_ID* pdwId  
 );  
 ```  
   
-```c#  
-int GetHostId(   
-   AD_PROCESS_ID[] pdwId  
+```csharp  
+int GetHostId(   
+   AD_PROCESS_ID[] pdwId  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pdwId`  
- \[in, out\] [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) 구조는 프로세스 식별자 정보로 채워집니다.  
+ [out에서] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 프로세스 식별자 정보를 사용 하 여 입력 되는 구조입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)   
- [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md)
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

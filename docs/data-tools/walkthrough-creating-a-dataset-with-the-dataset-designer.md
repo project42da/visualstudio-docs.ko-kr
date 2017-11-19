@@ -1,7 +1,7 @@
 ---
-title: 'Walkthrough: Creating a Dataset with the Dataset Designer | Microsoft Docs'
+title: "연습: 데이터 집합 디자이너를 사용 하 여 데이터 집합을 만들기 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/02/2016
+ms.date: 09/11/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -13,133 +13,128 @@ helpviewer_keywords:
 - Dataset Designer, walkthroughs
 - datasets [Visual Basic], creating
 ms.assetid: 12360f54-db6c-45d2-a91f-fee43214b555
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 4dca7e32af0f3c24542a7a069ac74f4da7d114b1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: f327d2010105c12c4b137317ed2406cae6cad9a3
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="walkthrough-creating-a-dataset-with-the-dataset-designer"></a>Walkthrough: Creating a Dataset with the Dataset Designer
-In this walkthrough you will create a dataset using the **Dataset Designer**. It will take you through the process of creating a new project and adding a new **DataSet** item to it. You will learn how to create tables based on tables in a database without using a wizard.  
+# <a name="walkthrough-creating-a-dataset-with-the-dataset-designer"></a>연습: 데이터 집합 디자이너를 사용하여 데이터 집합 만들기
+이 연습에서는 만듭니다 사용 하 여 데이터 집합의 **데이터 집합 디자이너**합니다. 새 프로젝트를 만들고 새 추가 과정을 단계별로 걸리는 **데이터 집합** 항목 것입니다. 마법사를 사용 하지 않고 데이터베이스의 테이블에 따라 테이블을 만드는 방법에 설명 합니다.  
   
- Tasks illustrated in this walkthrough include:  
+ 이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   Creating a new **Windows Forms Application** project.  
+-   새 **Windows Forms 응용 프로그램** 프로젝트.  
   
--   Adding an empty **DataSet** item to the project.  
+-   빈 추가 **DataSet** 항목을 프로젝트입니다.  
   
--   Creating and configuring a data source in your application by building a dataset with the **Dataset Designer**.  
+-   만들고 있는 데이터 집합을 작성 하 여 응용 프로그램에서 데이터 원본 구성의 **데이터 집합 디자이너**합니다.  
   
--   Creating a connection to the Northwind database in **Server Explorer**.  
+-   Northwind 데이터베이스에 연결을 만들면 **서버 탐색기**합니다.  
   
--   Creating tables with TableAdapters in the dataset based on tables in the database.  
+-   데이터베이스의 테이블을 기반으로 데이터 집합에서 TableAdapters를 사용 하 여 테이블 만들기  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
-In order to complete this walkthrough, you need:  
+## <a name="prerequisites"></a>필수 구성 요소  
+이 연습에서는 Northwind 샘플 데이터베이스 및 SQL Server Express LocalDB를 사용 합니다.  
   
--   Access to the Northwind sample database (SQL Server or Access version). For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
+1.  SQL Server Express LocalDB가 없는 경우 설치에서 [SQL Server 버전의 다운로드 페이지](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx), 또는 **Visual Studio 설치 관리자**합니다. Visual Studio 설치 관리자 SQL Server Express LocalDB의 일부로 설치할 수 있습니다는 **데이터 저장 및 처리** 작업 또는 개별 구성 요소입니다.  
   
-## <a name="creating-a-new-windows-forms-application-project"></a>Creating a New Windows Forms Application Project  
-  
-#### <a name="to-create-a-new-windows-forms-application-project"></a>To create a new Windows Forms Application project  
-  
-1. In Visual Studio, on the **File** menu, select **New**, **Project...**.  
-  
-2. Expand either **Visual C#** or **Visual Basic** in the left-hand pane, then select **Windows Classic Desktop**.  
+2.  다음 단계를 수행 하 여 Northwind 샘플 데이터베이스를 설치 합니다.  
 
-3. In the middle pane, select the **Windows Forms App** project type.  
+    1. Visual Studio에서 열고는 **SQL Server 개체 탐색기** 창. (SQL Server 개체 탐색기의 일부로 설치 되는 **데이터 저장 및 처리** Visual Studio 설치 관리자에서 작업 합니다.) 확장 된 **SQL Server** 노드. LocalDB 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **새 쿼리 중...** .  
 
-4. Name the project **DatasetDesignerWalkthrough**, and then choose **OK**. 
+       쿼리 편집기 창이 열립니다.  
+
+    2. 복사는 [Northwind Transact SQL 스크립트](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) 를 클립보드에 복사 합니다. 이 T-SQL 스크립트를 처음부터 Northwind 데이터베이스를 만들고 데이터로 채웁니다.  
+
+    3. 쿼리 편집기에 T-SQL 스크립트를 붙여 넣습니다.를 선택한 후는 **Execute** 단추입니다.  
+
+       짧은 시간 후 쿼리 실행이 완료 되 하 고 Northwind 데이터베이스 생성 됩니다.  
   
-     The **DatasetDesignerWalkthrough** project is created, and added to **Solution Explorer**.  
+## <a name="creating-a-new-windows-forms-application-project"></a>새 Windows Forms 응용 프로그램 프로젝트 만들기  
   
-## <a name="adding-a-new-dataset-to-the-application"></a>Adding a New Dataset to the Application  
+#### <a name="to-create-a-new-windows-forms-application-project"></a>새 Windows Forms 응용 프로그램 프로젝트를 만들려면  
   
-#### <a name="to-add-a-new-dataset-item-to-the-project"></a>To add a new dataset item to the project  
+1. Visual Studio에서에 **파일** 메뉴 선택 **새로**, **프로젝트...** .  
   
-1.  On the **Project** menu, click **Add New Item**.  
+2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **클래식 Windows 데스크톱**합니다.  
+
+3. 가운데 창에서 선택 된 **Windows Forms 앱** 프로젝트 형식을 합니다.  
+
+4. 프로젝트 이름을 **DatasetDesignerWalkthrough**를 선택한 후 **확인**합니다.  
   
-     The **Add New Item** dialog box appears.  
+     프로젝트를 추가 하는 visual Studio **솔루션 탐색기** 디자이너에서 새 양식을 표시 합니다.  
   
-2.  In the **Templates** box of the **Add New Item** dialog box, click **DataSet**.  
+## <a name="adding-a-new-dataset-to-the-application"></a>응용 프로그램에 새 데이터 집합 추가  
   
-3.  Name the Dataset `NorthwindDataset`, and then click **Add**.  
+#### <a name="to-add-a-new-dataset-item-to-the-project"></a>프로젝트에 새 데이터 집합 항목을 추가 하려면  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] will add a file called **NorthwindDataset.xsd** to the project and open it in the **Dataset Designer**.  
+1.  에 **프로젝트** 메뉴 선택 **새 항목 추가...** .  
   
-## <a name="creating-a-data-connection-in-server-explorer"></a>Creating a Data Connection in Server Explorer  
+     **새 항목 추가** 대화 상자가 나타납니다.  
   
-#### <a name="to-create-a-connection-to-the-northwind-database"></a>To create a connection to the Northwind database  
+2.  왼쪽 창에서 선택 **데이터**을 선택한 후 **DataSet** 가운데 창에서.  
   
-1.  On the **View** menu, click **Server Explorer**.  
+3.  데이터 집합 이름을 **NorthwindDataset**를 선택한 후 **추가**합니다.  
   
-2.  In **Server Explorer**, click the **Connect to Database** button.  
+     라는 파일을 추가 하는 visual Studio **NorthwindDataset.xsd** 프로젝트에서 엽니다는 **데이터 집합 디자이너**합니다.  
   
-3.  Create a connection to the Northwind sample database.  
+## <a name="creating-a-data-connection-in-server-explorer"></a>서버 탐색기에서 데이터 연결 만들기  
   
-    > [!NOTE]
-    >  You can connect to the SQL Server or Access version of Northwind for this walkthrough.  
+#### <a name="to-create-a-connection-to-the-northwind-database"></a>Northwind 데이터베이스에 연결을 만들려면  
   
-## <a name="creating-the-tables-in-the-dataset"></a>Creating the Tables in the Dataset  
-This section explains how to add tables to the dataset.  
+1.  에 **보기** 메뉴를 클릭 하 여 **서버 탐색기**합니다.  
   
-#### <a name="to-create-the-customers-table"></a>To create the Customers table  
+2.  **서버 탐색기**, 클릭는 **연결할 데이터베이스** 단추입니다.  
   
-1.  Expand the data connection you created in **Server Explorer**, and then expand the **Tables** node.  
+3.  Northwind 샘플 데이터베이스에 연결을 만듭니다.  
   
-2.  Drag the **Customers** table from **Server Explorer** onto the **Dataset Designer**.  
+## <a name="creating-the-tables-in-the-dataset"></a>데이터 집합에 테이블 만들기  
+이 섹션에서는 데이터 집합에 테이블을 추가 하는 방법을 설명 합니다.  
   
-     A **Customers** data table and **CustomersTableAdapter** are added to the dataset.  
+#### <a name="to-create-the-customers-table"></a>Customers 테이블을 만들려면  
   
-#### <a name="to-create-the-orders-table"></a>To create the Orders table  
+1.  데이터 연결에서 만든 확장 **서버 탐색기**를 차례로 확장 하 고는 **테이블** 노드.  
   
--   Drag the **Orders** table from **Server Explorer** onto the **Dataset Designer**.  
+2.  끌어서는 **고객** 에서 테이블 **서버 탐색기** 에 **데이터 집합 디자이너**합니다.  
   
-     An **Orders** data table, **OrdersTableAdapter**, and data relation between the **Customers** and **Orders** tables are added to the dataset.  
+     A **고객** 데이터 테이블 및 **CustomersTableAdapter** 데이터 집합에 추가 됩니다.  
   
-#### <a name="to-create-the-orderdetails-table"></a>To create the OrderDetails table  
+#### <a name="to-create-the-orders-table"></a>Orders 테이블을 만들려면  
   
--   Drag the **Order Details** table from **Server Explorer** onto the **Dataset Designer**.  
+-   끌어서는 **Orders** 에서 테이블 **서버 탐색기** 에 **데이터 집합 디자이너**합니다.  
   
-     An **Order Details** data table, **OrderDetailsTableAdapter**, and a data relation between the **Orders** and **OrderDetails** tables are added to the dataset.  
+     **Orders** 데이터 테이블 **OrdersTableAdapter**, 및 간에 데이터 관계는 **고객** 및 **Orders** 테이블에 추가 되는 데이터 집합입니다.  
   
-## <a name="next-steps"></a>Next Steps  
+#### <a name="to-create-the-orderdetails-table"></a>OrderDetails 테이블을 만들려면  
   
-### <a name="to-add-functionality-to-your-application"></a>To add functionality to your application  
+-   끌어서는 **Order Details** 에서 테이블 **서버 탐색기** 에 **데이터 집합 디자이너**합니다.  
   
--   Save the dataset.  
+     **Order Details** 데이터 테이블 **OrderDetailsTableAdapter**, 및 간에 데이터 관계는 **Orders** 및 **OrderDetails** 테이블 데이터 집합에 추가 됩니다.  
   
--   Select items in the **Data Sources** window and drag them onto a form. For more information, see [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).  
+## <a name="next-steps"></a>다음 단계  
   
--   Add more queries to the TableAdapters. 
+### <a name="to-add-functionality-to-your-application"></a>응용 프로그램에 기능을 추가하려면  
   
--   Add validation logic to the <xref:System.Data.DataTable.ColumnChanging> or <xref:System.Data.DataTable.RowChanging> events of the data tables in the dataset. For more information, see [Validate data in datasets](../data-tools/validate-data-in-datasets.md).  
+-   데이터 집합을 저장 합니다.  
   
-## <a name="see-also"></a>See Also  
- [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Validating Data](validate-data-in-datasets.md)   
- [Saving Data](../data-tools/saving-data.md)
+-   항목을 선택는 **데이터 소스** 창에서 폼으로 끕니다. 자세한 내용은 참조 [Visual Studio에서 데이터를 바인딩할 Windows Forms 컨트롤](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)합니다.  
+  
+-   Tableadapter에 더 많은 쿼리를 추가 합니다. 
+  
+-   유효성 검사 논리를 추가 <xref:System.Data.DataTable.ColumnChanging> 또는 <xref:System.Data.DataTable.RowChanging> 데이터 집합에 있는 데이터 테이블의 이벤트입니다. 자세한 내용은 참조 [데이터 집합의 데이터 유효성 검사](../data-tools/validate-data-in-datasets.md)합니다.  
+  
+## <a name="see-also"></a>참고 항목
+[Visual Studio에서 데이터 집합 만들기 및 구성](../data-tools/create-and-configure-datasets-in-visual-studio.md)  
+[Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+[Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)   
+[데이터 유효성 검사](../data-tools/validate-data-in-datasets.md)   
+[데이터 저장](../data-tools/saving-data.md)

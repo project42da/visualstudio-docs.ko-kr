@@ -1,27 +1,28 @@
 ---
-title: "모범 사례 및 예제(SAL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "모범 사례 및 예제 (SAL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 666276fb-99c2-4dc9-8bac-d74861c203ea
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cfd56596a49bc562ded401dc65009bcde73cec2d
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/15/2017
 ---
-# 모범 사례 및 예제(SAL)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-일부의 소스 코드 주석 언어 \(SAL\) 중 대부분을 몇 가지 일반적인 문제를 방지 합니다.  
+# <a name="best-practices-and-examples-sal"></a>모범 사례 및 예제(SAL)
+SAL(Source Code Annotation Language)을 최대한 활용하고 몇 가지 일반적인 문제를 방지하는 방법은 다음과 같습니다.  
   
-## \_In\_  
- 요소에 쓰는 함수를  `_Inout_`  대신  `_In_` 사용합니다.  SAL 이전 매크로에서 자동 변환 하는 경우에서에 매우 유용 합니다.  매크로 설명으로 많은 프로그래머 SAL를 전에 이름이 매크로  `IN` ,  `OUT` ,  `IN_OUT` , 또는 이러한 이름의 변형합니다.  SAL에 이러한 매크로 변환 하는 것이 좋습니다 있지만 또한에 명기 변환할 경우 원래 프로토타입 작성 하 고 기존 매크로 코드가 무엇 반영 되지 않을 수 없습니다 코드 변경 했을 수 있으므로 주의 해야 합니다.  특히  `OPTIONAL`  자주 적용 되므로 하지 올바르게 매크로 주석\-예를 들어, 쉼표의 잘못 된 쪽에서 주의하세요.  
+## <a name="in"></a>(_I)\_  
+ 함수가 요소에 항목을 기록하는 경우 `_Inout_` 대신 `_In_`을 사용합니다. 이 옵션은 이전 매크로에서 SAL로 변환을 자동화하는 경우에 특히 유용합니다. SAL 이전에는 많은 프로그래머들이 매크로를 주석으로 사용했습니다. 이러한 매크로에는 주로 `IN`, `OUT`, `IN_OUT` 등의 이름이 사용되었습니다. 이러한 매크로를 SAL로 변환하는 것이 좋지만 원래 프로토타입이 작성된 이후 코드가 변경되었을 수 있고 이전 매크로가 더 이상 코드 수행 작업을 반영하지 않을 수 있기 때문에 매크로를 변환할 때에도 특별한 주의가 필요할 수 있습니다. `OPTIONAL` 주석 매크로는 잘못 배치되는 경우가 자주 있기 때문에(예: 쉼표의 잘못된 쪽) 특히 주의가 필요합니다.  
   
 ```cpp  
   
@@ -42,11 +43,10 @@ void Func2(_Inout_ PCHAR p1)
   
     *p1 = 1;  
 }  
-  
 ```  
   
-## \_opt\_  
- Null 포인터를 전달 하는 호출자 허용 되지 않는 경우  `_In_`  또는  `_Out_`  대신  `_In_opt_`  또는  `_Out_opt_` 를 사용하세요.  이 매개 변수를 확인 하 고 안 면이 NULL 이면 오류를 반환 하는 함수에도 적용 됩니다.  예기치 못한 NULL 매개 변수를 확인 하 고 정상적으로 반환 하는 함수를 가진 방어 좋은 코딩 습관 이지만 의미 하지 않는 선택적 형식 매개 변수가 주석 수 있는지 \(\_*Xxx*\_opt\_\) 확인하세요.  
+## <a name="opt"></a>_opt\_  
+ 호출자가 Null 포인터를 전달하도록 허용되지 않는 경우 `_In_` 또는 `_Out_` 대신 `_In_opt_` 또는 `_Out_opt_`을 사용합니다. 이 규칙은 해당 매개 변수를 확인하고 매개 변수가 NULL이 아니어야 하는데 NULL인 경우 오류를 반환하는 함수에도 적용됩니다. 예기치 않은 null의 매개 변수를 확인 하 고 정상적으로 반환 함수가 좋은 방어적 인 코딩 습관 이지만 의미 하지 않는 매개 변수 주석이 선택적인 형식 수 있습니다 (_*Xxx*_opt\_).  
   
 ```cpp  
   
@@ -64,11 +64,11 @@ void Func2(_Out_ int *p1)
   
 ```  
   
-## \_Pre\_defensive\_ 및 \_Post\_defensive\_  
- 함수에는 신뢰 경계가 나타나면 있는  `_Pre_defensive_`  주석을 사용하는 것이 좋습니다.  "방어" 한정자를 나타내는 호출 시 특정 주석 수정 하 고 인터페이스를 엄격 하 게 검사 해야 하지만 구현 본문에서 그는 가정 잘못 된 매개 변수를 전달할 수 있습니다.  이 경우  `_In_ _Pre_defensive_`  는 있지만 호출자는 오류 NULL을 전달 하려고 하면, 함수 본문 분석 합니다 매개 변수는 NULL 일 수를 첫 번째 NULL을 확인 하지 않고 포인터를 참조 취소 하려고 표시 됩니다 나타내는 신뢰 경계에 권장 됩니다.   `_Post_defensive_`  주석 콜백이 있는 신뢰할 수 있는 타사 호출자로 간주 됩니다 및 신뢰할 수 없는 코드는 호출된 코드에서 사용 하기 위해 사용할 수도 있습니다.  
+## <a name="predefensive-and-postdefensive"></a>_Pre_defensive\_ 및 _Post_defensive\_  
+ 함수가 신뢰 경계에 나타날 경우에는 `_Pre_defensive_` 주석을 사용하는 것이 좋습니다.  "방어적" 수정자는 호출 시점에 인터페이스가 엄격하게 검사되도록 특정 주석을 수정하지만, 구현 본문에서는 잘못된 매개 변수가 전달될 수 있다고 가정해야 합니다. 이 경우에는 NULL을 전달하려고 시도할 경우 호출자에게 오류가 표시되더라도 매개 변수가 NULL일 수 있는 것처럼 함수 본문을 분석하고 먼저 NULL을 확인하지 않고 포인터에 대한 참조를 해제하려는 모든 시도가 플래깅되도록 신뢰 경계에서 `_In_ _Pre_defensive_`가 선호됩니다.  신뢰할 수 있는 당사자가 호출자인 것으로 간주되고 신뢰할 수 없는 코드가 호출된 코드인 콜백에서는 `_Post_defensive_` 주석도 사용할 수 있습니다.  
   
-## \_Out\_writes\_  
- 다음 예제는 `_Out_writes_`의 보통의 잘못된 사용을 보여 줍니다.  
+## <a name="outwrites"></a>_Out_writes\_  
+ 다음 예제는 일반적으로 `_Out_writes_`의 잘못 사용된 경우를 보여줍니다.  
   
 ```cpp  
   
@@ -79,9 +79,9 @@ void Func1(_Out_writes_(size) CHAR *pb,
   
 ```  
   
- 주석  `_Out_writes_`  버퍼를 사용 해야 한다는 것을 나타냅니다.   `cb`  종료 시 초기화 하는 첫 번째 바이트를 사용 하 여 할당 된 바이트 수입니다.  이 주석은 엄격 하 게 잘못 되지 않으며 할당 된 크기를 표현 하는 것이 좋습니다.  그러나 요소의 개수 함수에 의해 초기화 되는 것을 알려주지 않습니다.  
+ `_Out_writes_` 주석은 버퍼가 있어야 한다는 것을 나타냅니다. 여기에는 종료 시 초기화되는 첫 번째 바이트와 함께 `cb` 바이트가 할당됩니다. 이 주석은 엄밀히 말해서 잘못된 것이 아니며 할당된 크기를 표현하는 데 유용합니다. 하지만 함수로 초기화된 요소 수는 알려주지 않습니다.  
   
- 다음 예제에서는 완전히 버퍼 초기화 부분의 정확한 크기를 지정 하려면 세 가지 올바른 방법을 보여 줍니다.  
+ 다음 예제에서는 버퍼의 초기화된 부분에 대한 정확한 크기를 완전하게 지정하는 세 가지 올바른 방법을 보여줍니다.  
   
 ```cpp  
   
@@ -101,8 +101,8 @@ void Func3(_Out_writes_(size) PSTR pb,
   
 ```  
   
-## \_Out\_ PSTR  
- `_Out_ PSTR` 의 사용은 거의 항상 잘못된 것입니다.  이 출력 매개 변수는 문자 버퍼를 가리키는 것으로 해석 되 고 NULL로 끝나는 것입니다.  
+## <a name="out-pstr"></a>_Out\_ PSTR  
+ `_Out_ PSTR` 사용은 항상 거의 잘못된 것입니다. 이 항목은 문자 버퍼를 가리키는 출력 매개 변수가 있는 것으로 해석되며 NULL로 종료됩니다.  
   
 ```cpp  
   
@@ -114,10 +114,10 @@ void Func2(_Out_writes_(n) PSTR wszFileName, size_t n);
   
 ```  
   
- `_In_ PCSTR` 과 같은 주석은 일반적이고 유용 합니다.  입력된 문자열에 NULL 종료를 가리키는의 전제 조건  `_In_`  하면 NULL로 끝나는 문자열을 인식 합니다.  
+ `_In_ PCSTR`과 같은 주석은 일반적이고 유용합니다. `_In_`의 사전 조건에서 NULL 종료 문자열 인식이 허용되기 때문에 이 항목은 NULL 종료를 포함하는 입력 문자열을 가리킵니다.  
   
-## \_In\_ WCHAR\* p  
- `_In_ WCHAR* p`입력된 포인터 라는  `p`  문자를 가리키는 있습니다.  그러나 대부분의 경우에서이 없는 것입니다 사양입니다.  대신, 아마도 의도 NULL로 끝나는 배열; 사양 이렇게 하려면  `_In_ PWSTR` 을 사용하세요.  
+## <a name="in-wchar-p"></a>_In\_ WCHAR p  
+ `_In_ WCHAR* p`는 하나의 문자를 가리키는 입력 포인터 `p`가 있음을 나타냅니다. 하지만 대부분의 경우에는 의도된 사양이 아닙니다. 대신, 원래의 의도는 NULL 종료 배열의 사양일 수 있습니다. 이를 위해서는 `_In_ PWSTR`을 사용하십시오.  
   
 ```cpp  
   
@@ -129,7 +129,7 @@ void Func2(_In_ PWSTR wszFileName);
   
 ```  
   
- NULL 종료의 적절 한 사양이 일반적입니다.  적절 한 사용  `STR`  버전을 다음 예제와 같이 형식으로 대체 합니다.  
+ NULL 종료에 대한 적절한 사양이 누락된 것은 일반적인 현상입니다. 다음 예제에 표시된 것처럼 적절한 `STR` 버전을 사용해서 형식을 바꾸십시오.  
   
 ```cpp  
   
@@ -147,8 +147,8 @@ BOOL StrEquals2(_In_ PSTR p1, _In_ PSTR p2)
   
 ```  
   
-## \_Out\_range\_  
- 매개 변수는 포인터 값이 가리키는 포인터를 사용 하 여 요소의 범위를 표현할 경우  `_Deref_out_range_`  대신  `_Out_range_` 을 사용하세요.  다음 예제에서는 범위 pcbFilled이 아니라 \* pcbFilled이 표현됩니다.  
+## <a name="outrange"></a>_Out_range\_  
+ 매개 변수가 포인터이고 포인터로 가리키는 요소의 값 범위를 표시하려면 `_Deref_out_range_` 대신 `_Out_range_`를 사용합니다. 다음 예제에서는 pcbFilled가 아니라 *pcbFilled의 범위가 표시됩니다.  
   
 ```cpp  
   
@@ -168,10 +168,10 @@ void Func2(
   
 ```  
   
- `_Deref_out_range_(0, cbSize)`유추할 수 있기 때문에 꼭 필요한 몇 가지 도구는  `_Out_writes_to_(cbSize,*pcbFilled)` , 있지만 편의 위해 여기 표시 됩니다.  
+ `_Deref_out_range_(0, cbSize)`는 `_Out_writes_to_(cbSize,*pcbFilled)`에서 유추될 수 있기 때문에 일부 도구의 경우 엄밀히 말해서 필수는 아니지만 여기에서는 모든 항목을 설명하기 위해 포함되었습니다.  
   
-## \_When\_의 잘못된 컨텍스트  
- 사전에 대한 사후 상태 평가를 사용하여 다른 일반적인 실수가 있습니다.  다음 예제에서 `_Requires_lock_held_`는 precondition입니다.  
+## <a name="wrong-context-in-when"></a>(_W)에 잘못 된 컨텍스트\_  
+ 또 다른 일반적인 실수는 사전 조건을 위해 사후 상태 평가를 사용하는 것입니다. 다음 예제에서 `_Requires_lock_held_`는 사전 조건입니다.  
   
 ```cpp  
   
@@ -185,10 +185,10 @@ int Func2(_In_ MyData *p, int flag);
   
 ```  
   
- `result` 식은 전 상태로 사용할 수 없는 후 상태 값을 참조 합니다.  
+ `result` 식은 사전 상태에서 사용할 수 없는 사후 상태 값을 참조합니다.  
   
-## \_Success\_: TRUE  
- 함수가 성공 하면 반환 값은 0이 아닌 경우  `return != 0`  대신 성공 조건으로  `return == TRUE` 을 사용합니다.  0이 아니면 반드시 동등성에 대 한 컴파일러를 제공 하는 실제 값을  `TRUE`  사용합니다.  매개 변수를  `_Success_`  는 식 및 다음 식은 동일한 것으로 평가 됩니다:  `return != 0` ,  `return != false` ,  `return != FALSE` , 및  `return`  매개 변수 또는 비교 없이 사용합니다.  
+## <a name="true-in-success"></a>_Success TRUE\_  
+ 반환 값이 0이 아닐 때 함수가 성공하면 `return != 0` 대신 `return == TRUE`을 성공 조건으로 사용합니다. 0이 아닌 값이라고 해서 컴파일러가 `TRUE`에 대해 제공하는 실제 값과 반드시 동일하지는 않습니다. `_Success_`에 대한 매개 변수는 식이고, `return != 0`, `return != false`, `return != FALSE` 및 매개 변수 또는 비교가 없는 `return`과 같은 식이 동일 항목으로 평가됩니다.  
   
 ```cpp  
   
@@ -206,8 +206,8 @@ BOOL WINAPI TryEnterCriticalSection(
   
 ```  
   
-## 참조 변수  
- 참조 변수의 SAL의 이전 버전 주석 대상으로 암시적된 포인터를 사용 하 고 추가 되어야는  `__deref`  변수 참조에 연결 된 주석입니다.  이 버전 개체 자체를 사용 하고 `_Deref_`가 추가로 필요 하지 않습니다.  
+## <a name="reference-variable"></a>참조 변수  
+ 참조 변수의 경우 이전 버전의 SAL에서는 주석 대상으로 암시적 포인터가 사용되었고 참조 변수에 연결되는 주석에 `__deref`를 추가해야 했습니다. 이 버전에서는 개체 자체가 사용되며 추가 `_Deref_`가 필요하지 않습니다.  
   
 ```cpp  
   
@@ -225,8 +225,8 @@ void Func2(
   
 ```  
   
-## 반환 값에 대한 주석  
- 다음 예제에서는 주석을 반환 값에 일반적인 문제를 보여 줍니다.  
+## <a name="annotations-on-return-values"></a>반환 값에 대한 주석  
+ 다음 예제에서는 반환 값 주석의 일반적인 문제를 보여줍니다.  
   
 ```cpp  
   
@@ -238,10 +238,10 @@ _Ret_maybenull_ void *MightReturnNullPtr2();
   
 ```  
   
- 이 예제에서는  `_Out_opt_`  포인터는 전제 조건으로 NULL 일 수 있음을 표시 합니다.  그러나 전제 조건이 반환 값에 적용할 수 없습니다.  이 경우에 올바른 주석은  `_Ret_maybenull_` 입니다.  
+ 이 예제에서 `_Out_opt_`는 포인터가 사전 조건의 일부로 NULL일 수 있는 것으로 지정합니다. 하지만 사전 조건은 반환 값에 적용할 수 없습니다. 이 경우에 올바른 주석은 `_Ret_maybenull_`입니다.  
   
-## 참고 항목  
- [C\/C\+\+ 코드 오류를 줄이기 위한 SAL 주석 사용](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+## <a name="see-also"></a>참고 항목  
+ [C/c + + 코드 오류를 줄이기 위한 SAL 주석 사용](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [SAL 이해](../code-quality/understanding-sal.md)   
  [함수 매개 변수 및 반환 값에 주석 지정](../code-quality/annotating-function-parameters-and-return-values.md)   
  [함수 동작에 주석 지정](../code-quality/annotating-function-behavior.md)   

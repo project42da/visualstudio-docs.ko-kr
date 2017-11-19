@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - breakpoint validation
 - language services [managed package framework], breakpoint validation
 ms.assetid: a7e873cd-dfe1-474f-bda5-fd7532774b15
-caps.latest.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f8d2f56c29121a4be06f00198edd235007fc1cd0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2a87c22948e710a3b95ee7f79b31626794dc7708
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>유효성을 검사 하는 레거시 언어 서비스의 중단점
 중단점은 디버거에 실행 되는 동안 특정 지점에서 프로그램 실행을 중지 해야 함을 나타냅니다. 사용자는 편집기에는 중단점에 대 한 올바른 위치를 구성 하는 항목에 대해 알지 못합니다 소스 파일에서 줄 중단점을 배치할 수 있습니다. 디버거를 시작할 때 실행 중인 프로그램에서 적절 한 위치에는의 모든 표시 된 중단점 (보류 중단점 라고 함)이 바인딩됩니다. 중단점 되도록 유효성을 검사 하는 동시에 유효한 코드 위치 표시 합니다. 예를 들어 메모에 중단점 올바르지 소스 코드의 위치에 있는 코드가 없는 있기 때문에 합니다. 디버거가 잘못 된 중단점을 해제 합니다.  

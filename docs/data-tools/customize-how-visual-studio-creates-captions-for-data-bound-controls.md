@@ -1,144 +1,112 @@
 ---
-title: Customize how Visual Studio creates captions for data-bound controls | Microsoft Docs
+title: "Visual Studio의 데이터 바인딩된 컨트롤에 대 한 캡션을 만드는 방법을 사용자 지정 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/03/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- aspx
 helpviewer_keywords:
 - Label captions, Data Sources window
 - smart captions
 - captions, data-bound
 - Data Sources Window, label captions
 ms.assetid: 6d4d15f8-4d78-42fd-af64-779ae98d62c8
-caps.latest.revision: 12
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 0a14212b85b1fa13fb61a7691689f5eb1f8e74de
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 86f0e451fe81875868db0d6ddcd9cead790800d3
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Customize how Visual Studio creates captions for data-bound controls
-When you drag items from the [Data Sources Window](add-new-data-sources.md) onto the Windows Forms Designer, a special consideration comes into play: the column names in the caption labels are reformatted into a more readable string when two or more words are found to be concatenated together. You can customize the way in which these labels are created, by setting the **SmartCaptionExpression**, **SmartCaptionReplacement**, and **SmartCaptionSuffix** values in the **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Data Designers** registry key.  
+# <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio의 데이터 바인딩된 컨트롤에 대 한 캡션을 만드는 방법을 사용자 지정
+항목을 끌면는 [데이터 소스 창](add-new-data-sources.md) 디자이너에 특별 한 고려 질문과 관련 하 여: 캡션 레이블의 열 이름을 두 보다 읽기 쉬운 문자열로 변경 또는 되도록 개 이상의 단어가 서로 연결 됩니다. 이러한 레이블을 설정 하 여 만든 하는 방법을 사용자 지정할 수 있습니다는 **SmartCaptionExpression**, **SmartCaptionReplacement**, 및 **SmartCaptionSuffix** 값 **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data 디자이너** 레지스트리 키입니다.  
   
 > [!NOTE]
->  This registry key does not exist until you create it.  
+> 이 레지스트리 키를 만들 때까지 존재 하지 않습니다.  
   
- Smart captioning is controlled by the regular expression entered into the value of the **SmartCaptionExpression** value. Adding the **Data Designers** registry key overrides the default regular expression that controls caption labels. For more information about regular expressions, see [Using Regular Expressions in Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).  
+값에 입력 한 정규식에 의해 제어 됩니다 스마트 캡션는 **SmartCaptionExpression** 값입니다. 추가 **데이터 디자이너** 레지스트리 키에 기본 정규식 캡션 레이블을 제어 하는 보다 우선 합니다. 정규식에 대 한 자세한 내용은 참조 [Visual Studio에서 정규식 사용](../ide/using-regular-expressions-in-visual-studio.md)합니다.  
   
- The following table describes the registry values that control caption labels.  
+다음 표에서 캡션 레이블을 제어 하는 레지스트리 값을 설명 합니다.  
   
-|Registry item|Description|  
+|레지스트리 항목|설명|  
 |-------------------|-----------------|  
-|**SmartCaptionExpression**|The regular expression used to match your patterns.|  
-|**SmartCaptionReplacement**|The format to display any groups matched in the **SmartCaptionExpression**.|  
-|**SmartCaptionSuffix**|An optional string to append to the end of the caption.|  
+|**SmartCaptionExpression**|패턴에 일치 시키는 데 사용할 정규식입니다.|  
+|**SmartCaptionReplacement**|형식에서 일치 하는 모든 그룹을 표시 하는 **SmartCaptionExpression**합니다.|  
+|**SmartCaptionSuffix**|캡션의 끝에 추가 하는 선택적 문자열.|  
   
- The following table lists the internal default settings for these registry values.  
+다음 표에서 이러한 레지스트리 값에 대 한 내부 기본 설정을 나열합니다.  
   
-|Registry item|Default value|Explanation|  
+|레지스트리 항목|기본값|설명|  
 |-------------------|-------------------|-----------------|  
-|**SmartCaptionExpression**|(\\\p{Ll})(\\\p{Lu})&#124;_+|Matches a lowercase character followed by an uppercase character or an underscore.|  
-|**SmartCaptionReplacement**|$1 $2|The $1 represents any characters matched in the first parentheses of the expression, and the $2 represents any characters matched in the second parentheses. The replacement is the first match, a space, and then the second match.|  
-|**SmartCaptionSuffix**|:|Represents a character appended to the returned string. For example, if the caption is `Company Name`, the suffix makes it `Company Name:`|  
+|**SmartCaptionExpression**|(\\\p{Ll}) (\\\p{Lu}) &#124; _ +|소문자 대문자 문자 또는 밑줄 문자를 찾습니다.|  
+|**SmartCaptionReplacement**|$1 $2|$1 식의 첫 번째 괄호로 일치 하는 문자를 나타내고 $2의 두 번째 괄호에 일치 하는 문자를 나타냅니다. 대신 일치 하는 첫 번째, 공백 하나 및 일치 하는 두 번째에 있습니다.|  
+|**SmartCaptionSuffix**|:|반환된 된 문자열에 추가 되는 문자를 나타냅니다. 예를 들어, 캡션이 `Company Name`, 접미사를 사용 하면`Company Name:`|  
   
 > [!CAUTION]
->  You should be very careful when doing anything in the Registry Editor. Back up the registry before editing it. If you use the Registry Editor incorrectly, you can cause serious problems that may require you to reinstall your operating system. Microsoft does not guarantee that problems that you cause by using the Registry Editor incorrectly can be resolved. Use the Registry Editor at your own risk.  
+> 레지스트리 편집기에서 작업을 수행 하는 경우에 매우 주의 해야 합니다. 편집 하기 전에 레지스트리를 백업 합니다. 레지스트리 편집기를 잘못 사용 하면 운영 체제를 다시 설치 해야 하는 심각한 문제가 발생할 수 있습니다. Microsoft은 레지스트리 편집기를 잘못 사용 하 여 발생 하는 문제를 해결할 수 있음을 보장 하지 않습니다. 레지스트리 편집기 사용에 따른 결과는 사용자의 책임입니다.  
 >   
->  The following KnowledgeBase article contains instructions for backing up, editing, and restoring the registry: [Description of the Microsoft Windows registry](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986) (http://support.microsoft.com/default.aspx?scid=kb;en-us;256986)  
+>  다음 기술 자료 문서를 백업, 편집 및 레지스트리 복원에 대 한 지침이 포함 되어: [Microsoft Windows 레지스트리 설명](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986) (http://support.microsoft.com/default.aspx?scid=kb;en-us; 256986)  
   
-### <a name="to-modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>To modify the smart captioning behavior of the Data Sources window  
+### <a name="to-modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>데이터 소스 창에서의 스마트 캡션 동작을 수정 하려면  
   
-1.  Open a command window by clicking **Start** and then **Run**.  
+1.  클릭 하 여 명령 창을 열고 **시작** 차례로 **실행**합니다.  
   
-2.  Type `regedit` in the **Run** dialog box, and click **OK**.  
+2.  형식 `regedit` 에 **실행** 대화 상자와 클릭 **확인**합니다.  
   
-3.  Expand the **HKEY_CURRENT_USER** node.  
+3.  확장 된 **HKEY_CURRENT_USER**, **소프트웨어*, **Microsoft**, **VisualStudio** 노드.  
   
-4.  Expand the **Software** node.  
+7.  마우스 오른쪽 단추로 클릭는 **15.0** 노드를 새 고 **키** 라는 `Data Designers`합니다.  
   
-5.  Expand the **Microsoft** node.  
+8.  마우스 오른쪽 단추로 클릭는 **데이터 디자이너** 노드를 3 개의 새 문자열 값을 만듭니다.
+
+    - `SmartCaptionExpression`
+    - `SmartCaptionReplacement`
+    - `SmartCaptionSuffix`
   
-6.  Expand the **VisualStudio** node.  
+11. 마우스 오른쪽 단추로 클릭는 **SmartCaptionExpression** 값을 선택 **수정**합니다.  
   
-7.  Right-click the **10.0** node, and create a new **Key** named `Data Designers`.  
+12. 원하는 정규식 입력는 **데이터 원본** 사용 하는 창입니다.  
   
-8.  Right-click the **Data Designers** node, and create a new **String Value** named `SmartCaptionExpression`.  
+13. 마우스 오른쪽 단추로 클릭는 **SmartCaptionReplacement** 값을 선택 **수정**합니다.  
   
-9. Right-click the **Data Designers** node, and create a new **String Value** named `SmartCaptionReplacement`.  
+14. 교체를 입력 합니다. 정규식에 일치 하는 패턴을 원하는 방식으로 형식이 지정 된 문자열입니다.  
   
-10. Right-click the **Data Designers** node, and create a new **String Value** named `SmartCaptionSuffix`.  
+15. 마우스 오른쪽 단추로 클릭는 **SmartCaptionSuffix** 값을 선택 **수정**합니다.  
   
-11. Right-click the **SmartCaptionExpression** item, and select **Modify**.  
+16. 캡션의 끝에 표시할 모든 문자를 입력 합니다.  
   
-12. Enter the regular expression you want the **Data Sources** window to use.  
+    항목을 끌어 다음에 **데이터 소스** 창에서 캡션 레이블이 만들어집니다 제공 된 새 레지스트리 값을 사용 하 여 합니다.  
   
-13. Right-click the **SmartCaptionReplacement** item, and select **Modify**.  
+### <a name="to-turn-off-the-smart-captioning-feature"></a>스마트 캡션 기능 해제 하려면  
   
-14. Enter the replacement string formatted the way you want to display the patterns matched in your regular expression.  
+1.  클릭 하 여 명령 창을 열고 **시작** 차례로 **실행**합니다.  
   
-15. Right-click the **SmartCaptionSuffix** item, and select **Modify**.  
+2.  형식 `regedit` 에 **실행** 대화 상자와 클릭 **확인**합니다.  
   
-16. Enter any characters you want to appear at the end of the caption.  
+3.  확장 된 **HKEY_CURRENT_USER**, **소프트웨어**, **Microsoft**, **VisualStudio** 노드.  
   
-     The next time you drag items from the **Data Sources** window, the caption labels are created using the new registry values provided.  
+7.  마우스 오른쪽 단추로 클릭는 **15.0** 노드를 새 고 **키** 라는 `Data Designers`합니다.  
   
-### <a name="to-turn-off-the-smart-captioning-feature"></a>To turn off the smart captioning feature  
+8.  마우스 오른쪽 단추로 클릭는 **데이터 디자이너** 노드를 3 개의 새 문자열 값을 만듭니다.
+
+    - `SmartCaptionExpression`
+    - `SmartCaptionReplacement`
+    - `SmartCaptionSuffix`
   
-1.  Open a command window by clicking **Start** and then **Run**.  
+11. 마우스 오른쪽 단추로 클릭는 **SmartCaptionExpression** 선택한 항목을 **수정**합니다.  
   
-2.  Type `regedit` in the **Run** dialog box, and click **OK**.  
+12. 입력 `(.*)` 값에 대 한 합니다. 이 전체 문자열을 일치 합니다.  
   
-3.  Expand the **HKEY_CURRENT_USER** node.  
+13. 마우스 오른쪽 단추로 클릭는 **SmartCaptionReplacement** 선택한 항목을 **수정**합니다.  
   
-4.  Expand the **Software** node.  
+14. 입력 `$1` 값에 대 한 합니다. 이 문자열을 변경 되지 않도록 하는 전체 문자열은 일치 하는 값을 바꿉니다.  
   
-5.  Expand the **Microsoft** node.  
+    항목을 끌어 다음에 **데이터 소스** 창의 캡션 레이블이 수정 되지 않은 캡션을 사용 하 여 만들어집니다.  
   
-6.  Expand the **VisualStudio** node.  
-  
-7.  Right-click the **10.0** node, and create a new **Key** named `Data Designers`.  
-  
-8.  Right-click the **Data Designers** node, and create a new **String Value** named `SmartCaptionExpression`.  
-  
-9. Right-click the **Data Designers** node, and create a new **String Value** named `SmartCaptionReplacement`.  
-  
-10. Right-click the **Data Designers** node, and create a new **String Value** named `SmartCaptionSuffix`.  
-  
-11. Right-click the **SmartCaptionExpression** item, and select **Modify**.  
-  
-12. Enter `(.*)` for the value. This will match the entire string.  
-  
-13. Right-click the **SmartCaptionReplacement** item, and select **Modify**.  
-  
-14. Enter `$1` for the value. This replaces the string with the matched value, which is the entire string so that it will remain unchanged.  
-  
-     The next time you drag items from the **Data Sources** window, the caption labels are created with unmodified captions.  
-  
-## <a name="see-also"></a>See Also  
- [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)
+## <a name="see-also"></a>참고 항목  
+[Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)

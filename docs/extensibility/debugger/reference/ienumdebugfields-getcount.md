@@ -1,51 +1,51 @@
 ---
-title: "IEnumDebugFields::GetCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugFields::GetCount"
-helpviewer_keywords: 
-  - "IEnumDebugFields::GetCount 메서드"
+title: IEnumDebugFields::GetCount | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugFields::GetCount
+helpviewer_keywords: IEnumDebugFields::GetCount method
 ms.assetid: 3f471b40-4db3-49f7-b504-58b2476eef74
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 0dbbafda528d88f84f9796037faa6587e8789fcc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugFields::GetCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 메서드 열거형의 요소 수를 반환합니다.  
+# <a name="ienumdebugfieldsgetcount"></a>IEnumDebugFields::GetCount
+이 메서드는 열거의 요소 수를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT GetCount(  
-   [out] ULONG* pcelt  
+   [out] ULONG* pcelt  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetCount(  
-   out uint pcelt  
+   out uint pcelt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pcelt`  
- \[out\] 열거형의 요소 수를 반환합니다.  
+ [out] 열거의 요소 수를 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 이 메서드는 다음, 클론, 건너뛰기 및 다시 구현 해야 하는 지정 관습 COM 열거형 인터페이스의 일부가 아닙니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드를 구현 해야 다음, 복제, Skip 및 재설정 필요를 지정 하는 일반적인 COM 열거형 인터페이스의 일부가 아닙니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

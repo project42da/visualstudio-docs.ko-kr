@@ -1,11 +1,11 @@
 ---
+redirect_url: shell/walkthrough-creating-a-basic-isolated-shell-application
 title: "연습: 만드는 기본 격리 셸 응용 프로그램 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,29 +13,15 @@ helpviewer_keywords:
 - Shell [Visual Studio], walkthroughs
 - walkthroughs [Visual Studio], isolated shell-based application
 ms.assetid: 8b12e223-aae3-4c23-813d-ede1125f5f69
-caps.latest.revision: 54
+caps.latest.revision: "54"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4df0d9f772d92ac7f1f106b9befc0a8a2f89a22
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: e007e366847ac42d3916b16cbde190e8fd755821
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>연습: 기본 격리 셸 응용 프로그램 만들기
 이 연습에는 격리 셸 솔루션을 만들고 도움말 정보 도구 창을 사용자 지정, 격리 셸을 설치 하는 설치 프로그램을 만드는 방법을 보여 줍니다.  

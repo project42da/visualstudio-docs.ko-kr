@@ -1,12 +1,10 @@
 ---
-title: 'How to: Add Content Controls to Word Documents | Microsoft Docs'
+title: "방법: Word 문서에 콘텐츠 컨트롤 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,164 +27,169 @@ helpviewer_keywords:
 - DatePickerContentControl, adding to documents
 - Word [Office development in Visual Studio], restricted permissions
 ms.assetid: 68ddb24e-71c6-46f7-8e11-c9899d7814df
-caps.latest.revision: 51
-author: kempb
-ms.author: kempb
+caps.latest.revision: "51"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 5dca7affb4ca1cb447b296a574f4b5dea89eb0c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 33e431dc907de8573a4eca00b9de73bcd0f523f9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-add-content-controls-to-word-documents"></a>How to: Add Content Controls to Word Documents
-  In document-level Word projects, you can add content controls to the document in your project at design time or at run time. In Word VSTO Add-in projects, you can add content controls to any open document at run time.  
+# <a name="how-to-add-content-controls-to-word-documents"></a>방법: Word 문서에 콘텐츠 컨트롤 추가
+  문서 수준 Word 프로젝트에서는 디자인 타임 또는 런타임에 프로젝트의 문서에 콘텐츠 컨트롤을 추가할 수 있습니다. Word VSTO 추가 기능 프로젝트에서는 런타임에 열려 있는 임의 문서에 콘텐츠 컨트롤을 추가할 수 있습니다.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
- This topic describes the following tasks:  
+ 이 항목에서는 다음 작업에 대해 설명합니다.  
   
--   [Adding content controls at design time](#designtime)  
+-   [디자인 타임에 콘텐츠 컨트롤 추가](#designtime)  
   
--   [Adding content controls at run time in a document-level project](#runtimedoclevel)  
+-   [런타임에 문서 수준 프로젝트에서 콘텐츠 컨트롤 추가](#runtimedoclevel)  
   
--   [Adding content controls at run time in an VSTO Add-in project](#runtimeaddin)  
+-   [런타임에 VSTO 추가 기능 프로젝트에서 콘텐츠 컨트롤 추가](#runtimeaddin)  
   
- For information about content controls, see [Content Controls](../vsto/content-controls.md).  
+ 콘텐츠 컨트롤에 대한 자세한 내용은 [Content Controls](../vsto/content-controls.md)을 참조하세요.  
   
 ##  <a name="designtime"></a> Adding Content Controls at Design Time  
- There are several ways to add content controls to the document in a document-level project at design time:  
+ 디자인 타임에 문서 수준 프로젝트의 문서에 콘텐츠 컨트롤을 추가하는 여러 가지 방법이 있습니다.  
   
--   Add a content control from the **Word Controls** tab of the **Toolbox**.  
+-   **도구 상자** 의 **Word 컨트롤**탭에서 콘텐츠 컨트롤을 추가합니다.  
   
--   Add a content control to your document in the same manner you would add a native content control in Word.  
+-   Word에서 네이티브 콘텐츠 컨트롤을 추가하는 것과 동일한 방식으로 문서에 콘텐츠 컨트롤을 추가합니다.  
   
--   Drag a content control to your document from the **Data Sources** window. This is useful when you want to bind the control to data when the control is created. For more information, see [How to: Populate Documents with Data from Objects](../vsto/how-to-populate-documents-with-data-from-objects.md) and [How to: Populate Documents with Data from a Database](../vsto/how-to-populate-documents-with-data-from-a-database.md).  
+-   **데이터 소스** 창에서 콘텐츠 컨트롤을 문서로 끌어옵니다. 이 기능은 컨트롤을 만들 때 컨트롤을 데이터에 바인딩하려는 경우에 유용합니다. 자세한 내용은 참조 [하는 방법: 개체의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-objects.md) 및 [하는 방법: 데이터베이스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-a-database.md)합니다.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-#### <a name="to-add-a-content-control-to-a-document-by-using-the-toolbox"></a>To add a content control to a document by using the Toolbox  
+#### <a name="to-add-a-content-control-to-a-document-by-using-the-toolbox"></a>도구 상자를 사용하여 문서에 콘텐츠 컨트롤을 추가하려면  
   
-1.  In the document that is hosted in the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer, put the cursor where you want to add the content control, or select the text that you want the content control to replace.  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너에 호스트된 문서에서 콘텐츠 컨트롤을 추가하려는 위치에 커서를 놓거나 콘텐츠 컨트롤로 바꾸려는 텍스트를 선택합니다.  
   
-2.  Open the **Toolbox** and click the **Word Controls** tab.  
+2.  **도구 상자** 를 열고 **Word 컨트롤** 탭을 클릭합니다.  
   
-3.  Add the control one of the following ways:  
+3.  다음 방법 중 하나로 컨트롤을 추가합니다.  
   
-    -   Double-click a content control in the **Toolbox**.  
+    -   **도구 상자**에서 콘텐츠 컨트롤을 두 번 클릭합니다.  
   
-         or  
+         또는  
   
-    -   Click a content control in the **Toolbox** and then press the ENTER key.  
+    -   **도구 상자** 에서 콘텐츠 컨트롤을 클릭하고 Enter 키를 누릅니다.  
   
-         or  
+         또는  
   
-    -   Drag a content control from the **Toolbox** to the document. The content control is added at the current selection in the document, not at the location of the mouse pointer.  
-  
-> [!NOTE]  
->  You cannot add a <xref:Microsoft.Office.Tools.Word.GroupContentControl> by using the **Toolbox**. You can only add a <xref:Microsoft.Office.Tools.Word.GroupContentControl> in Word, or at run time.  
+    -   **도구 상자** 에서 문서로 콘텐츠 컨트롤을 끌어옵니다. 콘텐츠 컨트롤이 마우스 포인터 위치가 아니라 문서의 현재 선택 영역에 추가됩니다.  
   
 > [!NOTE]  
->  Visual Studio does not provide a check box content control in the Toolbox. To add a check box content control to the document, you must create a <xref:Microsoft.Office.Tools.Word.ContentControl> object programmatically. For more information, see [Content Controls](../vsto/content-controls.md).  
+>  <xref:Microsoft.Office.Tools.Word.GroupContentControl> 도구 상자 **를 사용하여**을 추가할 수 없습니다. Word에서나 런타임에만 <xref:Microsoft.Office.Tools.Word.GroupContentControl> 을 추가할 수 있습니다.  
   
-#### <a name="to-add-a-content-control-to-a-document-in-word"></a>To add a content control to a document in Word  
+> [!NOTE]  
+>  Visual Studio는 도구 상자에 확인란 콘텐츠 컨트롤을 제공하지 않습니다. 문서에 확인란 콘텐츠 컨트롤을 추가하려면 프로그래밍 방식으로 <xref:Microsoft.Office.Tools.Word.ContentControl> 개체를 만들어야 합니다. 자세한 내용은 [Content Controls](../vsto/content-controls.md)을 참조하세요.  
   
-1.  In the document that is hosted in the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer, put the cursor where you want to add the content control, or select the text that you want the content control to replace.  
+#### <a name="to-add-a-content-control-to-a-document-in-word"></a>Word에서 문서에 콘텐츠 컨트롤을 추가하려면  
   
-2.  On the Ribbon, click the **Developer** tab.  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너에 호스트된 문서에서 콘텐츠 컨트롤을 추가하려는 위치에 커서를 놓거나 콘텐츠 컨트롤로 바꾸려는 텍스트를 선택합니다.  
+  
+2.  리본에서 **개발자** 탭을 클릭합니다.  
   
     > [!NOTE]  
-    >  If the **Developer** tab is not visible, you must first show it. For more information, see [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
+    >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다. 자세한 내용은 [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)을 참조하십시오.  
   
-3.  In the **Controls** group, click the icon for the content control that you want to add.  
+3.  **컨트롤** 그룹에서 추가하려는 콘텐츠 컨트롤의 아이콘을 클릭합니다.  
   
 ##  <a name="runtimedoclevel"></a> Adding Content Controls at Run Time in a Document-Level Project  
- You can add content controls programmatically to your document at run time by using methods of the <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> property of the `ThisDocument` class in your project. Each method has three overloads that you can use to add a content control in the following ways:  
+ 프로젝트에서 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 클래스의 `ThisDocument` 속성 메서드를 사용하여 프로그래밍 방식으로 런타임에 문서에 콘텐츠 컨트롤을 추가할 수 있습니다. 각 메서드에 다음과 같은 방법으로 콘텐츠 컨트롤을 추가하는 데 사용할 수 있는 세 개의 오버로드가 있습니다.  
   
--   Add a control at the current selection.  
+-   현재 선택 영역에 컨트롤을 추가합니다.  
   
--   Add a control at a specified range.  
+-   지정된 범위에 컨트롤을 추가합니다.  
   
--   Add a control that is based on a native content control in the document.  
+-   문서의 네이티브 콘텐츠 컨트롤을 기반으로 하는 컨트롤을 추가합니다.  
   
- Dynamically created content controls are not persisted in the document when the document is closed. However, a native content control remains in the document. You can recreate a content control that is based on a native content control the next time the document is opened. For more information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
-  
-> [!NOTE]  
->  To add a check box content control to a document in a Word 2010 project, you must create a <xref:Microsoft.Office.Tools.Word.ContentControl> object. For more information, see [Content Controls](../vsto/content-controls.md).  
-  
-#### <a name="to-add-a-content-control-at-the-current-selection"></a>To add a content control at the current selection  
-  
-1.  Use a <xref:Microsoft.Office.Tools.Word.ControlCollection> method that has the name `Add`\<*control class*> (where *control class* is the class name of the content control that you want to add, such as <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), and that has a single parameter for the name of the new control.  
-  
-     The following code example uses the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> method to add a new <xref:Microsoft.Office.Tools.Word.RichTextContentControl> to the beginning of the document. To run this code, add the code to the `ThisDocument` class in your project, and call the `AddRichTextControlAtSelection` method from the `ThisDocument_Startup` event handler.  
-  
-     [!code-csharp[Trin_ContentControlReference#700](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#700)]  [!code-vb[Trin_ContentControlReference#700](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#700)]  
-  
-#### <a name="to-add-a-content-control-at-a-specified-range"></a>To add a content control at a specified range  
-  
-1.  Use a <xref:Microsoft.Office.Tools.Word.ControlCollection> method that has the name `Add`\<*control class*> (where *control class* is the name of the content control class that you want to add, such as <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), and that has a <xref:Microsoft.Office.Interop.Word.Range> parameter.  
-  
-     The following code example uses the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> method to add a new <xref:Microsoft.Office.Tools.Word.RichTextContentControl> to the beginning of the document. To run this code, add the code to the `ThisDocument` class in your project, and call the `AddRichTextControlAtRange` method from the `ThisDocument_Startup` event handler.  
-  
-     [!code-csharp[Trin_ContentControlReference#701](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#701)]  [!code-vb[Trin_ContentControlReference#701](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#701)]  
-  
-#### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>To add a content control that is based on a native content control  
-  
-1.  Use a <xref:Microsoft.Office.Tools.Word.ControlCollection> method that has the name `Add`\<*control class*> (where *control class* is the name of the content control class that you want to add, such as <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), and that has a Microsoft.Office.Interop.Word.ContentControl parameter.  
-  
-     The following code example uses the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> method to create a new <xref:Microsoft.Office.Tools.Word.RichTextContentControl> for every native rich text control that is in the document. To run this code, add the code to the `ThisDocument` class in your project, and call the `CreateRichTextControlsFromNativeControls` method from the `ThisDocument_Startup` event handler.  
-  
-     [!code-csharp[Trin_ContentControlReference#702](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#702)]  [!code-vb[Trin_ContentControlReference#702](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#702)]  
-  
-##  <a name="runtimeaddin"></a> Adding Content Controls at Run Time in a VSTO Add-in Project  
- You can add content controls programmatically to any open document at run time by using a VSTO Add-in. To do this, generate a <xref:Microsoft.Office.Tools.Word.Document> host item that is based on an open document, and then use methods of the <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> property of this host item. Each method has three overloads that you can use to add a content control in the following ways:  
-  
--   Add a control at the current selection.  
-  
--   Add a control at a specified range.  
-  
--   Add a control that is based on a native content control in the document.  
-  
- Dynamically created content controls are not persisted in the document when the document is closed. However, a native content control remains in the document. You can recreate a content control that is based on a native content control the next time the document is opened. For more information, see [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md).  
-  
- For more information about generating host items in VSTO Add-in projects, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
+ 동적으로 생성된 콘텐츠 컨트롤은 문서를 닫을 때 문서에 유지되지 않습니다. 그러나 네이티브 콘텐츠 컨트롤은 문서에 남아 있습니다. 다음에 문서를 열 때 네이티브 콘텐츠 컨트롤을 기반으로 하는 콘텐츠 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 > [!NOTE]  
->  To add a check box content control to a document, you must create a <xref:Microsoft.Office.Tools.Word.ContentControl> object. For more information, see [Content Controls](../vsto/content-controls.md).  
+>  Word 2010 프로젝트에서 문서에 확인란 콘텐츠 컨트롤을 추가하려면 <xref:Microsoft.Office.Tools.Word.ContentControl> 개체를 만들어야 합니다. 자세한 내용은 [Content Controls](../vsto/content-controls.md)을 참조하세요.  
   
-#### <a name="to-add-a-content-control-at-the-current-selection"></a>To add a content control at the current selection  
+#### <a name="to-add-a-content-control-at-the-current-selection"></a>현재 선택 영역에 콘텐츠 컨트롤을 추가하려면  
   
-1.  Use a <xref:Microsoft.Office.Tools.Word.ControlCollection> method that has the name `Add`\<*control class*> (where *control class* is the class name of the content control that you want to add, such as <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), and that has a single parameter for the name of the new control.  
+1.  사용 하 여 한 <xref:Microsoft.Office.Tools.Word.ControlCollection> 메서드 이름이 있는 `Add` \< *컨트롤 클래스*> (여기서 *컨트롤 클래스* 등의추가하려는콘텐츠컨트롤의클래스이름<xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), 새 컨트롤의 이름에 대 한 단일 매개 변수가 있는 합니다.  
   
-     The following code example uses the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> method to add a new <xref:Microsoft.Office.Tools.Word.RichTextContentControl> to the beginning of the active document. To run this code, add the code to the `ThisAddIn` class in your project, and call the `AddRichTextControlAtSelection` method from the `ThisAddIn_Startup` event handler.  
+     다음 코드 예제에서는 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 메서드를 사용하여 문서의 시작 부분에 새 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 을 추가합니다. 이 코드를 실행하려면 프로젝트의 `ThisDocument` 클래스에 코드를 추가하고 `AddRichTextControlAtSelection` 이벤트 처리기에서 `ThisDocument_Startup` 메서드를 호출합니다.  
   
-     [!code-vb[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#1)]  [!code-csharp[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#1)]  
+     [!code-csharp[Trin_ContentControlReference#700](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#700)]
+     [!code-vb[Trin_ContentControlReference#700](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#700)]  
   
-#### <a name="to-add-a-content-control-at-a-specified-range"></a>To add a content control at a specified range  
+#### <a name="to-add-a-content-control-at-a-specified-range"></a>지정된 범위에 콘텐츠 컨트롤을 추가하려면  
   
-1.  Use a <xref:Microsoft.Office.Tools.Word.ControlCollection> method that has the name `Add`\<*control class*> (where *control class* is the name of the content control class that you want to add, such as <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), and that has a <xref:Microsoft.Office.Interop.Word.Range> parameter.  
+1.  사용 하 여 한 <xref:Microsoft.Office.Tools.Word.ControlCollection> 메서드 이름이 있는 `Add` \< *컨트롤 클래스*> (여기서 *컨트롤 클래스* 등의추가하려는콘텐츠컨트롤클래스의이름<xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), 올려진는 <xref:Microsoft.Office.Interop.Word.Range> 매개 변수입니다.  
   
-     The following code example uses the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> method to add a new <xref:Microsoft.Office.Tools.Word.RichTextContentControl> to the beginning of the active document. To run this code, add the code to the `ThisAddIn` class in your project, and call the `AddRichTextControlAtRange` method from the `ThisAddIn_Startup` event handler.  
+     다음 코드 예제에서는 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 메서드를 사용하여 문서의 시작 부분에 새 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 을 추가합니다. 이 코드를 실행하려면 프로젝트의 `ThisDocument` 클래스에 코드를 추가하고 `AddRichTextControlAtRange` 이벤트 처리기에서 `ThisDocument_Startup` 메서드를 호출합니다.  
   
-     [!code-vb[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#2)]  [!code-csharp[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#2)]  
+     [!code-csharp[Trin_ContentControlReference#701](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#701)]
+     [!code-vb[Trin_ContentControlReference#701](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#701)]  
   
-#### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>To add a content control that is based on a native content control  
+#### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>네이티브 콘텐츠 컨트롤을 기반으로 하는 콘텐츠 컨트롤을 추가하려면  
   
-1.  Use a <xref:Microsoft.Office.Tools.Word.ControlCollection> method that has the name `Add`\<*control class*> (where *control class* is the name of the content control class that you want to add, such as <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), and that has a Microsoft.Office.Interop.Word.ContentControl parameter.  
+1.  사용 하 여 한 <xref:Microsoft.Office.Tools.Word.ControlCollection> 메서드 이름이 있는 `Add` \< *컨트롤 클래스*> (여기서 *컨트롤 클래스* 등의추가하려는콘텐츠컨트롤클래스의이름<xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), Microsoft.Office.Interop.Word.ContentControl 매개 변수가 있는 합니다.  
   
-     The following code example uses the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> method to create a new <xref:Microsoft.Office.Tools.Word.RichTextContentControl> for every native rich text control that is in a document, after the document is opened. To run this code, add the code to the `ThisAddIn` class in your project.  
+     다음 코드 예제에서는 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 메서드를 사용하여 문서에 있는 각 네이티브 서식 있는 텍스트 컨트롤에 대한 새 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 을 만듭니다. 이 코드를 실행하려면 프로젝트의 `ThisDocument` 클래스에 코드를 추가하고 `CreateRichTextControlsFromNativeControls` 이벤트 처리기에서 `ThisDocument_Startup` 메서드를 호출합니다.  
   
-     [!code-vb[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#3)]  [!code-csharp[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#3)]  
+     [!code-csharp[Trin_ContentControlReference#702](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#702)]
+     [!code-vb[Trin_ContentControlReference#702](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#702)]  
   
-     For C#, you must also attach the `Application_DocumentOpen` event handler to the <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> event.  
+##  <a name="runtimeaddin"></a> 런타임에 VSTO 추가 기능 프로젝트에서 콘텐츠 컨트롤 추가  
+ VSTO 추가 기능을 사용하여 프로그래밍 방식으로 런타임에 열려 있는 문서에 콘텐츠 컨트롤을 추가할 수 있습니다. 이렇게 하려면 열려 있는 문서를 기반으로 하는 <xref:Microsoft.Office.Tools.Word.Document> 호스트 항목을 생성한 다음 이 호스트 항목의 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 속성 메서드를 사용합니다. 각 메서드에 다음과 같은 방법으로 콘텐츠 컨트롤을 추가하는 데 사용할 수 있는 세 개의 오버로드가 있습니다.  
+  
+-   현재 선택 영역에 컨트롤을 추가합니다.  
+  
+-   지정된 범위에 컨트롤을 추가합니다.  
+  
+-   문서의 네이티브 콘텐츠 컨트롤을 기반으로 하는 컨트롤을 추가합니다.  
+  
+ 동적으로 생성된 콘텐츠 컨트롤은 문서를 닫을 때 문서에 유지되지 않습니다. 그러나 네이티브 콘텐츠 컨트롤은 문서에 남아 있습니다. 다음에 문서를 열 때 네이티브 콘텐츠 컨트롤을 기반으로 하는 콘텐츠 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md)을 참조하세요.  
+  
+ VSTO 추가 기능 프로젝트에서 호스트 항목을 생성 하는 방법에 대 한 자세한 내용은 참조 [런타임에 Word 문서 및 Excel 통합 문서 런타임에 VSTO 추가 기능에서](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)합니다.  
+  
+> [!NOTE]  
+>  문서에 확인란 콘텐츠 컨트롤을 추가하려면 <xref:Microsoft.Office.Tools.Word.ContentControl> 개체를 만들어야 합니다. 자세한 내용은 [Content Controls](../vsto/content-controls.md)을 참조하세요.  
+  
+#### <a name="to-add-a-content-control-at-the-current-selection"></a>현재 선택 영역에 콘텐츠 컨트롤을 추가하려면  
+  
+1.  사용 하 여 한 <xref:Microsoft.Office.Tools.Word.ControlCollection> 메서드 이름이 있는 `Add` \< *컨트롤 클래스*> (여기서 *컨트롤 클래스* 등의추가하려는콘텐츠컨트롤의클래스이름<xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), 새 컨트롤의 이름에 대 한 단일 매개 변수가 있는 합니다.  
+  
+     다음 코드 예제에서는 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 메서드를 사용하여 활성 문서의 시작 부분에 새 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 을 추가합니다. 이 코드를 실행하려면 프로젝트의 `ThisAddIn` 클래스에 코드를 추가하고 `AddRichTextControlAtSelection` 이벤트 처리기에서 `ThisAddIn_Startup` 메서드를 호출합니다.  
+  
+     [!code-vb[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#1)]
+     [!code-csharp[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#1)]  
+  
+#### <a name="to-add-a-content-control-at-a-specified-range"></a>지정된 범위에 콘텐츠 컨트롤을 추가하려면  
+  
+1.  사용 하 여 한 <xref:Microsoft.Office.Tools.Word.ControlCollection> 메서드 이름이 있는 `Add` \< *컨트롤 클래스*> (여기서 *컨트롤 클래스* 등의추가하려는콘텐츠컨트롤클래스의이름<xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), 올려진는 <xref:Microsoft.Office.Interop.Word.Range> 매개 변수입니다.  
+  
+     다음 코드 예제에서는 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 메서드를 사용하여 활성 문서의 시작 부분에 새 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 을 추가합니다. 이 코드를 실행하려면 프로젝트의 `ThisAddIn` 클래스에 코드를 추가하고 `AddRichTextControlAtRange` 이벤트 처리기에서 `ThisAddIn_Startup` 메서드를 호출합니다.  
+  
+     [!code-vb[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#2)]
+     [!code-csharp[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#2)]  
+  
+#### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>네이티브 콘텐츠 컨트롤을 기반으로 하는 콘텐츠 컨트롤을 추가하려면  
+  
+1.  사용 하 여 한 <xref:Microsoft.Office.Tools.Word.ControlCollection> 메서드 이름이 있는 `Add` \< *컨트롤 클래스*> (여기서 *컨트롤 클래스* 등의추가하려는콘텐츠컨트롤클래스의이름<xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), Microsoft.Office.Interop.Word.ContentControl 매개 변수가 있는 합니다.  
+  
+     다음 코드 예제에서는 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 메서드를 사용하여 문서가 열린 후 문서에 있는 각 네이티브 서식 있는 텍스트 컨트롤에 대한 새 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 을 만듭니다. 이 코드를 실행하려면 프로젝트의 `ThisAddIn` 클래스에 코드를 추가합니다.  
+  
+     [!code-vb[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#3)]
+     [!code-csharp[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#3)]  
+  
+     C#의 경우 `Application_DocumentOpen` 이벤트 처리기도 <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> 이벤트에 연결해야 합니다.  
   
      [!code-csharp[Trin_WordAddInDynamicControls#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#6)]  
   
-## <a name="see-also"></a>See Also  
- [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md)   
+## <a name="see-also"></a>참고 항목  
+ [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)   
+ [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)  

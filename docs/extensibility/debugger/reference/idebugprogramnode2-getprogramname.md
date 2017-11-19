@@ -1,56 +1,56 @@
 ---
-title: "IDebugProgramNode2::GetProgramName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramNode2::GetProgramName"
-helpviewer_keywords: 
-  - "IDebugProgramNode2::GetProgramName"
+title: IDebugProgramNode2::GetProgramName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramNode2::GetProgramName
+helpviewer_keywords: IDebugProgramNode2::GetProgramName
 ms.assetid: 510c7f5d-48ff-4d9f-ad79-fbad9f15239d
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 44581760a932940df4504691b5ad00b753ee304a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramNode2::GetProgramName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugprogramnode2getprogramname"></a>IDebugProgramNode2::GetProgramName
 프로그램의 이름을 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetProgramName (   
-   BSTR* pbstrProgramName  
+```cpp  
+HRESULT GetProgramName (   
+   BSTR* pbstrProgramName  
 );  
 ```  
   
-```c#  
-int GetProgramName (   
-   out string pbstrProgramName  
+```csharp  
+int GetProgramName (   
+   out string pbstrProgramName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pbstrProgramName`  
- \[out\] 프로그램의 이름을 반환합니다.  
+ [out] 프로그램의 이름을 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 프로그램 이름 프로그램 이름을 이러한 경로 수 있지만 프로그램의 경로와 동일 아닙니다.  
+## <a name="remarks"></a>설명  
+ 프로그램의 이름이 프로그램의 이름에는 이러한 경로의 일부일 수 있습니다 하지만 프로그램에 대 한 경로와 같은 작업 않습니다.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CProgram` 를 구현 하는 개체는 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 인터페이스입니다.  `MakeBstr` 함수를 BSTR로 지정한 문자열의 복사본이 할당 됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CProgram` 구현 하는 개체는 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 인터페이스입니다. `MakeBstr` 함수 BSTR로 지정된 된 문자열의 복사본을 할당 합니다.  
   
-```cpp#  
+```cpp  
 HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {    
    if (!pbstrProgramName)    
       return E_INVALIDARG;    
@@ -61,5 +61,5 @@ HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

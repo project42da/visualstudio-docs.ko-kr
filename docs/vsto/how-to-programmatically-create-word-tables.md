@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Create Word Tables | Microsoft Docs'
+title: "방법: 프로그래밍 방식으로 Word 표 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,86 +14,91 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], adding tables
 - tables [Office development in Visual Studio], adding to documents
 ms.assetid: fe1f9143-9622-45e8-b0a5-511336d99ad1
-caps.latest.revision: 45
-author: kempb
-ms.author: kempb
+caps.latest.revision: "45"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 206109fae04dfdce7ac94d15194ef66de720b076
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 0c903ed815e35c3d4f6821d70910ef56611889f9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-create-word-tables"></a>How to: Programmatically Create Word Tables
-  The <xref:Microsoft.Office.Interop.Word.Tables> collection is a member of the <xref:Microsoft.Office.Interop.Word.Document>, <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Interop.Word.Selection>, and <xref:Microsoft.Office.Interop.Word.Range> classes, which means that you can create a table in any of those contexts. You use the <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> method of the <xref:Microsoft.Office.Interop.Word.Tables> collection to add a table at the specified range.  
+# <a name="how-to-programmatically-create-word-tables"></a>방법: 프로그래밍 방식으로 Word 표 만들기
+  <xref:Microsoft.Office.Interop.Word.Tables> 컬렉션은 <xref:Microsoft.Office.Interop.Word.Document>, <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Interop.Word.Selection> 및 <xref:Microsoft.Office.Interop.Word.Range> 클래스의 멤버이므로 이러한 컨텍스트 중 하나에서 표를 만들 수 있습니다. <xref:Microsoft.Office.Interop.Word.Tables> 컬렉션의 <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> 메서드를 사용하여 지정된 범위에 표를 추가합니다.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="creating-tables-in-document-level-customizations"></a>Creating Tables in Document-Level Customizations  
+## <a name="creating-tables-in-document-level-customizations"></a>문서 수준 사용자 지정에서 표 만들기  
   
-#### <a name="to-add-a-simple-table-to-a-document"></a>To add a simple table to a document  
+#### <a name="to-add-a-simple-table-to-a-document"></a>문서에 간단한 표를 추가하려면  
   
--   Use the <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> method to add a table consisting of three rows and four columns at the beginning of the document.  
+-   <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> 메서드를 사용하여 문서의 시작 부분에 행 3개와 열 4개로 구성된 표를 추가합니다.  
   
-     To use the following code example, run it from the `ThisDocument` class in your project.  
+     다음 코드 예제를 사용하려면 프로젝트의 `ThisDocument` 클래스에서 실행합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#86](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#86)]  [!code-csharp[Trin_VstcoreWordAutomation#86](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#86)]  
+     [!code-vb[Trin_VstcoreWordAutomation#86](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#86)]
+     [!code-csharp[Trin_VstcoreWordAutomation#86](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#86)]  
   
- When you create a table, it is automatically added to the <xref:Microsoft.Office.Interop.Word.Tables> collection of the <xref:Microsoft.Office.Tools.Word.Document> host item. You can then refer to the table by its item number by using the <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> property, as shown in the following code.  
+ 표를 만들면 <xref:Microsoft.Office.Tools.Word.Document> 호스트 항목의 <xref:Microsoft.Office.Interop.Word.Tables> 컬렉션에 자동으로 추가됩니다. 그런 후에 다음 코드와 같이 <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> 속성을 사용하여 해당 항목 번호로 표를 참조할 수 있습니다.  
   
-#### <a name="to-refer-to-a-table-by-item-number"></a>To refer to a table by item number  
+#### <a name="to-refer-to-a-table-by-item-number"></a>항목 번호로 표를 참조하려면  
   
-1.  Use the <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> property and supply the item number of the table that you want to refer to.  
+1.  <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> 속성을 사용하고 참조하려는 표의 항목 번호를 제공합니다.  
   
-     To use the following code example, run it from the `ThisDocument` class in your project.  
+     다음 코드 예제를 사용하려면 프로젝트의 `ThisDocument` 클래스에서 실행합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#87](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#87)]  [!code-csharp[Trin_VstcoreWordAutomation#87](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#87)]  
+     [!code-vb[Trin_VstcoreWordAutomation#87](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#87)]
+     [!code-csharp[Trin_VstcoreWordAutomation#87](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#87)]  
   
- Each <xref:Microsoft.Office.Interop.Word.Table> object also has a <xref:Microsoft.Office.Interop.Word.Table.Range%2A> property that enables you to set formatting attributes.  
+ 각 <xref:Microsoft.Office.Interop.Word.Table> 개체에는 서식 특성을 설정할 수 있게 해주는 <xref:Microsoft.Office.Interop.Word.Table.Range%2A> 속성도 있습니다.  
   
-#### <a name="to-apply-a-style-to-a-table"></a>To apply a style to a table  
+#### <a name="to-apply-a-style-to-a-table"></a>표에 스타일을 적용하려면  
   
-1.  Use the <xref:Microsoft.Office.Interop.Word.Table.Style%2A> property to apply one of the Word built-in styles to a table.  
+1.  <xref:Microsoft.Office.Interop.Word.Table.Style%2A> 속성을 사용하여 Word 기본 제공 스타일 중 하나를 표에 적용합니다.  
   
-     To use the following code example, run it from the `ThisDocument` class in your project.  
+     다음 코드 예제를 사용하려면 프로젝트의 `ThisDocument` 클래스에서 실행합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#88)]  [!code-csharp[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#88)]  
+     [!code-vb[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#88)]
+     [!code-csharp[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#88)]  
   
-## <a name="creating-tables-in-vsto-add-ins"></a>Creating Tables in VSTO Add-ins  
+## <a name="creating-tables-in-vsto-add-ins"></a>VSTO 추가 기능에서 표 만들기  
   
-#### <a name="to-add-a-simple-table-to-a-document"></a>To add a simple table to a document  
+#### <a name="to-add-a-simple-table-to-a-document"></a>문서에 간단한 표를 추가하려면  
   
--   Use the <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> method to add a table consisting of three rows and four columns at the beginning of the document.  
+-   <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> 메서드를 사용하여 문서의 시작 부분에 행 3개와 열 4개로 구성된 표를 추가합니다.  
   
-     The following code example adds a table to the active document. To use this example, run it from the `ThisAddIn` class in your project.  
+     다음 코드 예제에서는 활성 문서에 표를 추가합니다. 이 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#86](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#86)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#86](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#86)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#86](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#86)]
+     [!code-csharp[Trin_VstcoreWordAutomationAddIn#86](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#86)]  
   
- When you create a table, it is automatically added to the <xref:Microsoft.Office.Interop.Word.Tables> collection of the <xref:Microsoft.Office.Interop.Word.Document>. You can then refer to the table by its item number by using the <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> property, as shown in the following code.  
+ 표를 만들면 <xref:Microsoft.Office.Interop.Word.Document>의 <xref:Microsoft.Office.Interop.Word.Tables> 컬렉션에 자동으로 추가됩니다. 그런 후에 다음 코드와 같이 <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> 속성을 사용하여 해당 항목 번호로 표를 참조할 수 있습니다.  
   
-#### <a name="to-refer-to-a-table-by-item-number"></a>To refer to a table by item number  
+#### <a name="to-refer-to-a-table-by-item-number"></a>항목 번호로 표를 참조하려면  
   
-1.  Use the <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> property and supply the item number of the table that you want to refer to.  
+1.  <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> 속성을 사용하고 참조하려는 표의 항목 번호를 제공합니다.  
   
-     The following code example uses the active document. To use this example, run it from the `ThisAddIn` class in your project.  
+     다음 코드 예제에서는 활성 문서를 사용합니다. 이 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#87](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#87)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#87](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#87)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#87](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#87)]
+     [!code-csharp[Trin_VstcoreWordAutomationAddIn#87](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#87)]  
   
- Each <xref:Microsoft.Office.Interop.Word.Table> object also has a <xref:Microsoft.Office.Interop.Word.Table.Range%2A> property that enables you to set formatting attributes.  
+ 각 <xref:Microsoft.Office.Interop.Word.Table> 개체에는 서식 특성을 설정할 수 있게 해주는 <xref:Microsoft.Office.Interop.Word.Table.Range%2A> 속성도 있습니다.  
   
-#### <a name="to-apply-a-style-to-a-table"></a>To apply a style to a table  
+#### <a name="to-apply-a-style-to-a-table"></a>표에 스타일을 적용하려면  
   
-1.  Use the <xref:Microsoft.Office.Interop.Word.Table.Style%2A> property to apply one of the Word built-in styles to a table.  
+1.  <xref:Microsoft.Office.Interop.Word.Table.Style%2A> 속성을 사용하여 Word 기본 제공 스타일 중 하나를 표에 적용합니다.  
   
-     The following code example uses the active document. To use this example, run it from the `ThisAddIn` class in your project.  
+     다음 코드 예제에서는 활성 문서를 사용합니다. 이 예제를 사용하려면 프로젝트의 `ThisAddIn` 클래스에서 실행합니다.  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#88](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#88)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#88)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#88](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#88)]
+     [!code-csharp[Trin_VstcoreWordAutomationAddIn#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#88)]  
   
-## <a name="see-also"></a>See Also  
- [How to: Programmatically Add Text and Formatting to Cells in Word Tables](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)   
- [How to: Programmatically Add Rows and Columns to Word Tables](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   
- [How to: Programmatically Populate Word Tables with Document Properties](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)   
- [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>참고 항목  
+ [방법: 프로그래밍 방식으로 Word 표 셀에 텍스트 및 서식 추가](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)   
+ [방법: 프로그래밍 방식으로 Word 표에 행과 열 추가](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   
+ [방법: 프로그래밍 방식으로 문서 속성으로 Word 표 채우기](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)   
+ [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
   
   

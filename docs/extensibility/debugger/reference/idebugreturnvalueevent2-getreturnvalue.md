@@ -1,49 +1,49 @@
 ---
-title: "IDebugReturnValueEvent2::GetReturnValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugReturnValueEvent2::GetReturnValue"
-helpviewer_keywords: 
-  - "IDebugReturnValueEvent2::GetReturnValue"
+title: IDebugReturnValueEvent2::GetReturnValue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugReturnValueEvent2::GetReturnValue
+helpviewer_keywords: IDebugReturnValueEvent2::GetReturnValue
 ms.assetid: 86c50d5a-6df6-4798-818a-c587a8741f90
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 530d187d74143c2f3419147e0ded0265052b588e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugReturnValueEvent2::GetReturnValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-부족 또는 함수 위에 실행에서 반환 되는 값을 가져옵니다.  
+# <a name="idebugreturnvalueevent2getreturnvalue"></a>IDebugReturnValueEvent2::GetReturnValue
+또는 함수를 단계별로 실행에서 반환 되는 값을 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetReturnValue (   
-   IDebugProperty2** ppReturnValue  
+```cpp  
+HRESULT GetReturnValue (   
+   IDebugProperty2** ppReturnValue  
 );  
 ```  
   
-```c#  
-int GetReturnValue (   
-   out IDebugProperty2 ppReturnValue  
+```csharp  
+int GetReturnValue (   
+   out IDebugProperty2 ppReturnValue  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppReturnValue`  
- \[out\] 반환 된 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 검색할 값을 나타내는 개체입니다.  
+ [out] 반환 된 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 값을 검색할 수를 나타내는 개체입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugReturnValueEvent2](../../../extensibility/debugger/reference/idebugreturnvalueevent2.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

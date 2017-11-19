@@ -1,44 +1,45 @@
 ---
-title: "Programming Concepts and Features for SharePoint Tools Extensions"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint development in Visual Studio, extensibility features"
+title: "SharePoint 도구 확장에 대 한 프로그래밍 개념 및 기능 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, extensibility features
 ms.assetid: 5179e544-f678-422e-a532-1e2d55004b60
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: f6d6f3ae5608d8092fbeb065867ae04db4e04c95
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Programming Concepts and Features for SharePoint Tools Extensions
-  Visual Studio에서 SharePoint 도구와 관련된 몇 가지 중요한 프로그래밍 개념과 기능이 있습니다.  이러한 개념과 기능은 대부분의 SharePoint 도구 확장에서 중요한 역할을 합니다.  
+# <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>SharePoint 도구 확장의 프로그래밍 개념 및 기능
+  몇 가지 중요 한 프로그래밍 개념 및 Visual Studio에서 SharePoint 도구에 관련 된 기능을 있습니다. 이러한 개념 및 기능 대부분 SharePoint 도구 확장에서 중요 한 역할을 수행 합니다.  
   
-## 단원 내용  
- [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md)  
- SharePoint 도구 확장의 SharePoint 서버 개체 모델과 SharePoint 클라이언트를 사용하여 비교하고 *SharePoint 명령*을 만들어 SharePoint 서버 개체 모델을 호출할 수 있는 방법에 대한 정보를 제공합니다.  
+## <a name="in-this-section"></a>단원 내용  
+ [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)  
+ SharePoint 클라이언트와 SharePoint 도구 확장에서 SharePoint 서버 개체 모델을 사용 하 여 비교 하 고 만드는 방법에 대 한 정보를 제공 *SharePoint 명령* 를 SharePoint 서버 개체 모델을 호출 합니다.  
   
- [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md)  
- SharePoint 프로젝트 서비스에서 SharePoint 도구 확장에 제공하는 기능에 대해 설명하고 여러 종류의 확장에서 서비스를 검색하기 위한 지침을 제공합니다.  
+ [SharePoint 프로젝트 서비스 사용](../sharepoint/using-the-sharepoint-project-service.md)  
+ SharePoint 프로젝트 서비스는 SharePoint 도구 확장을 제공 하 고 다양 한 확장명 종류에서 서비스를 검색 하기 위한 지침을 제공 하는 기능을 설명 합니다.  
   
- [Associating Custom Data with SharePoint Tools Extensions](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)  
- SharePoint 도구 확장에 있는 특정 형식의 개체와 사용자 지정 데이터를 연결하는 방법에 대해 설명합니다.  
+ [SharePoint 도구 확장과 사용자 지정 데이터 연결](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)  
+ 사용자 지정 데이터를 특정 유형의 SharePoint 도구 확장의 개체와 연결 하는 방법에 설명 합니다.  
   
-## 참고 항목  
- [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
- [Extending the SharePoint Project System](../sharepoint/extending-the-sharepoint-project-system.md)   
- [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
- [Debugging Extensions for the SharePoint Tools in Visual Studio](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)   
- [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
+## <a name="see-also"></a>참고 항목  
+ [Visual Studio에서 SharePoint 도구 확장](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
+ [SharePoint 프로젝트 시스템 확장](../sharepoint/extending-the-sharepoint-project-system.md)   
+ [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
+ [Visual Studio에서 SharePoint 도구에 대 한 확장 디버깅](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)   
+ [Visual Studio에서 SharePoint 도구에 대한 확장명 배포](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
   
   

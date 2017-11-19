@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,29 +15,15 @@ helpviewer_keywords:
 - localize visual studio
 - localize vsct
 ms.assetid: b04ee0f6-82ea-47e6-853a-72382267d6da
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 586f087e4c0cbd087bd06d7dc54a524b09ae21c3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 13910907c6041884cc0a1414fd0bfd82757a7639
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="localizing-menu-commands"></a>메뉴 명령 지역화
 메뉴에 대 한 지역화 된 텍스트를 제공할 수 있습니다 및 도구 모음 지역화 된.vsct 파일을 작성 하 여 명령 및.resx 파일 VSPackage를 제거한 다음 프로젝트 파일을 업데이트 하 여 변경 내용을 통합에 대 한 지역화 합니다.  
@@ -52,11 +37,11 @@ ms.lasthandoff: 09/26/2017
   
 2.  사본을 *filename*하는데.en-us.resources US.vsct 각각에 대해 지역화 언어입니다.  
   
-     각 복사본의 이름을 *filename*.* 로캘*.vsct, 여기서 *로캘* 특정 문화권 이름입니다. 문화권 이름 값의 목록에 대 한 참조 [Microsoft에서 할당 한 로캘 Id](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx)합니다.  
+     각 복사본의 이름을 *filename*. *로캘*.vsct, 여기서 *로캘* 특정 문화권 이름입니다. 문화권 이름 값의 목록에 대 한 참조 [Microsoft에서 할당 한 로캘 Id](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx)합니다.  
   
-     이러한 *filename*.* 로캘*.vsct 파일 패키지에 대 한 지역화 된 메뉴 텍스트에 포함 됩니다.  
+     이러한 *filename*. *로캘*.vsct 파일 패키지에 대 한 지역화 된 메뉴 텍스트에 포함 됩니다.  
   
-3.  각각 열어 *filename*.* 로캘*.vsct 파일을 텍스트를 지역화 합니다.  
+3.  각각 열어 *filename*. *로캘*.vsct 파일을 텍스트를 지역화 합니다.  
   
     1.  수정 된 [ButtonText](../extensibility/buttontext-element.md) 값 요소는 해당 언어에 적합 합니다.  
   

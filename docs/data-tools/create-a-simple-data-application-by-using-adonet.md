@@ -1,5 +1,5 @@
 ---
-title: Create a simple data application by using ADO.NET | Microsoft Docs
+title: "ADO.NET을 사용 하 여 간단한 데이터 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
 ms.reviewer: 
@@ -10,177 +10,177 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 2222841f-e443-4a3d-8c70-4506aa905193
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b9ddc58b4205be5928f366ae82d4e0512eb9b767
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 05a0a339b413495aadfa397e5fec3b826f920026
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="create-a-simple-data-application-by-using-adonet"></a>Create a simple data application by using ADO.NET
-When you create an application that manipulates data in a database, you perform basic tasks such as defining connection strings, inserting data, and running stored procedures. By following this topic, you can discover how to interact with a database from within a simple Windows Forms "forms over data" application by using Visual C# or Visual Basic and ADO.NET.  All .NET data technologies—including datasets, LINQ to SQL, and Entity Framework—ultimately perform steps that are very similar to those shown in this article.  
+# <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET을 사용 하 여 간단한 데이터 응용 프로그램 만들기
+데이터베이스의 데이터를 조작 하는 응용 프로그램을 만들 때 연결 문자열 정의 데이터를 삽입 및 저장된 프로시저를 실행 하는 등의 기본 작업을 수행 합니다. 이 항목에 따라 Visual C# 또는 Visual Basic 및 ADO.NET을 사용 하 여 간단한 Windows Forms "데이터 폼" 응용 프로그램 내에서 데이터베이스와 상호 작용 하는 방법을 확인할 수 있습니다.  모든.NET 데이터 기술-데이터 집합, LINQ to SQL 및 Entity Framework를 포함 하 여-궁극적으로이 문서에 표시 된 것과 매우 유사한 단계를 수행 합니다.  
   
- This article demonstrates a simple way to get data out of a database in a very fast manner. If your application needs to modify data in non-trivial ways and update the database, you should consider using Entity Framework and using data binding to automatically sync user interface controls to changes in the underlying data.  
+ 이 문서는 매우 빠르게 방식으로 데이터베이스에서 데이터를 가져오기 하는 간단한 방법을 보여줍니다. 응용 프로그램을 특정 방법으로 데이터를 수정 하 고 데이터베이스를 업데이트 하는 경우 자동으로 동기화 원본으로 사용 데이터의 변화에 따라 사용자 인터페이스 컨트롤에 데이터 바인딩 및 Entity Framework를 사용 하 여 고려해 야 합니다.  
   
 > [!IMPORTANT]
->  To keep the code simple, it doesn't include production-ready exception handling.  
+>  코드를 간단히 유지 하기 위해 프로덕션에 사용 가능한 예외 처리를 포함 되지 않습니다.  
   
- **In this topic**  
+ **항목 내용**  
   
--   [Set up the sample database](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_setupthesampledatabase)  
+-   [샘플 데이터베이스 설정](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_setupthesampledatabase)  
   
--   [Create the forms and add controls](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_createtheformsandaddcontrols)  
+-   [폼 만들기 및 컨트롤 추가](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_createtheformsandaddcontrols)  
   
--   [Store the connection string](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_storetheconnectionstring)   
+-   [연결 문자열 저장](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_storetheconnectionstring)   
   
--   [Write the code for the forms](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_writethecodefortheforms)  
+-   [폼에 대 한 코드 작성](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_writethecodefortheforms)  
   
--   [Test your application](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_testyourapplication)  
+-   [응용 프로그램 테스트](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_testyourapplication)  
   
-## <a name="prerequisites"></a>Prerequisites  
- To create the application, you'll need:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 응용 프로그램을 만들려면 다음이 필요 합니다.  
   
--   Visual Studio Community Edition.  
+-   Visual Studio Community Edition입니다.  
   
--   SQL Server Express LocalDB.  
-  
--   The small sample database that you create by following the steps in [Create a SQL database by using a script](../data-tools/create-a-sql-database-by-using-a-script.md).  
-  
--   The connection string for the database after you set it up. You can find this value by opening **SQL Server Object Explorer**, opening the shortcut menu for the database, selecting **Properties**, and then scrolling to the **ConnectionString**  property.  
+-   SQL Server Express LocalDB SQL Server Express LocalDB가 없는 경우에서 설치할 수 있습니다는 [SQL Server 버전의 다운로드 페이지](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)합니다.  
 
-This topic assumes that you're familiar with the basic functionality of the Visual Studio IDE and can create a Windows Forms application, add forms to that project, put buttons and other controls on those forms, set properties of those controls, and code simple events. If you aren't comfortable with these tasks, we suggest that you complete the [Getting Started with Visual C# and Visual Basic](../ide/getting-started-with-visual-csharp-and-visual-basic.md) before you start this topic.  
+이 항목 Visual Studio IDE의 기본 기능에 익숙한 및 수는 Windows Forms 응용 프로그램을 만들 하 컨트롤 및 간단한 이벤트 코드의 속성을 설정 하는 단추 및 다른 컨트롤을 폼에 배치 하는 프로젝트에 폼 추가 가정 합니다. 이러한 작업에 익숙하지 경우 완료 하는 것이 좋습니다는 [Visual C# 및 Visual Basic 시작](../ide/getting-started-with-visual-csharp-and-visual-basic.md) 이 연습을 시작 하기 전에 항목입니다.  
   
-##  <a name="BKMK_setupthesampledatabase"></a> Set up the sample database  
- The sample database for this walkthrough includes the Customer and Orders tables. The tables contain no data initially, but you can add data when you run the application that you'll create. The database also has five simple stored procedures. [Create a SQL database by using a script](../data-tools/create-a-sql-database-by-using-a-script.md) contains a Transact-SQL script that creates the tables, the primary and foreign keys, the constraints, and the stored procedures.  
+##  <a name="BKMK_setupthesampledatabase"></a>샘플 데이터베이스 설정  
+다음이 단계를 수행 하 여 샘플 데이터베이스를 만듭니다.  
+
+1. Visual Studio에서 열고는 **서버 탐색기** 창.  
+
+2. 마우스 오른쪽 단추로 클릭 **데이터 연결** 선택 하 고 * * 새 SQL Server 데이터베이스 만들기... ".  
+
+3. 에 **서버 이름** 텍스트 상자에 입력 **(localdb) \mssqllocaldb**합니다.  
+
+4. 에 **새 데이터베이스 이름을** 텍스트 상자에 입력 **Sales**, 선택 **확인**합니다.  
+
+     빈 **Sales** 데이터베이스 생성 되어 서버 탐색기에서 데이터 연결 노드에 추가 합니다.  
+
+5. 마우스 오른쪽 단추로 클릭는 **Sales** 데이터 연결 및 선택 **새 쿼리**합니다.  
+
+     쿼리 편집기 창이 열립니다.  
+
+6. 복사는 [Sales Transact SQL 스크립트](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/data-tools/samples/sales.sql) 를 클립보드에 복사 합니다.  
+
+7. 쿼리 편집기에 T-SQL 스크립트를 붙여 넣습니다.를 선택한 후는 **Execute** 단추입니다.  
+
+     짧은 시간 후 쿼리 실행이 완료 되 하 고 데이터베이스 개체가 생성 됩니다. 데이터베이스에 두 개의 테이블: 고객과 주문 합니다. 이 테이블 처음에 없는 데이터를 포함 하지만 만들어야 하는 응용 프로그램을 실행할 때 데이터를 추가할 수 있습니다. 데이터베이스에는 네 개의 간단한 저장된 프로시저 포함 되어 있습니다.   
   
-##  <a name="BKMK_createtheformsandaddcontrols"></a> Create the forms and add controls  
+##  <a name="BKMK_createtheformsandaddcontrols"></a>폼 만들기 및 컨트롤 추가  
   
-1.  Create a project for a Windows Forms application, and then name it SimpleDataApp.  
+1.  Windows Forms 응용 프로그램에 대 한 프로젝트를 만들고 이름을 SimpleDataApp 합니다.  
   
-     Visual Studio creates the project and several files, including an empty Windows form that's named Form1.  
+     Visual Studio에서 프로젝트와 Form1이라는 빈 Windows 폼을 포함한 여러 파일을 만듭니다.  
   
-2.  Add two Windows forms to your project so that it has three forms, and then give them the following names:  
+2.  세 개의 폼을 갖도록 프로젝트에 두 개의 Windows forms를 추가 하 고 다음 이름을 지정 합니다.  
   
-    -   Navigation  
+    -   탐색  
   
     -   NewCustomer  
   
     -   FillOrCancel  
   
-3.  For each form, add the text boxes, buttons, and other controls that appear in the following illustrations. For each control, set the properties that the tables describe.  
+3.  각 폼에 대해 다음 그림에 나오는 텍스트 상자, 단추 및 기타 컨트롤을 추가합니다. 각 컨트롤에 대해 테이블이 설명하는 속성을 설정합니다.  
   
     > [!NOTE]
-    >  The group box and the label controls add clarity but aren't used in the code.  
+    >  그룹 상자 및 레이블 컨트롤도 선명성을 더해 주지만 코드에서는 사용하지 않습니다.  
   
- **Navigation form**  
+ **Navigation 폼**  
   
- ![Navigation dialog box](../data-tools/media/simpleappnav.png "SimpleAppNav")  
+ ![탐색 대화 상자](../data-tools/media/simpleappnav.png "SimpleAppNav")  
   
-|Controls for the Navigation form|Properties|  
+|Navigation 폼 컨트롤|속성|  
 |--------------------------------------|----------------|  
-|Button|Name = btnGoToAdd|  
-|Button|Name = btnGoToFillOrCancel|  
-|Button|Name = btnExit|  
+|단추|Name = btnGoToAdd|  
+|단추|Name = btnGoToFillOrCancel|  
+|단추|Name = btnExit|  
   
- **NewCustomer form**  
+ **NewCustomer 폼**  
   
- ![Add  a new customer and place an order](../data-tools/media/simpleappnewcust.png "SimpleAppNewCust")  
+ ![새 고객을 추가 하 고 주문](../data-tools/media/simpleappnewcust.png "SimpleAppNewCust")  
   
-|Controls for the NewCustomer form|Properties|  
+|NewCustomer 폼 컨트롤|속성|  
 |---------------------------------------|----------------|  
 |TextBox|Name = txtCustomerName|  
 |TextBox|Name = txtCustomerID<br /><br /> Readonly = True|  
-|Button|Name = btnCreateAccount|  
+|단추|Name = btnCreateAccount|  
 |NumericUpdown|DecimalPlaces = 0<br /><br /> Maximum = 5000<br /><br /> Name = numOrderAmount|  
 |DateTimePicker|Format = Short<br /><br /> Name = dtpOrderDate|  
-|Button|Name = btnPlaceOrder|  
-|Button|Name = btnAddAnotherAccount|  
-|Button|Name = btnAddFinish|  
+|단추|Name = btnPlaceOrder|  
+|단추|Name = btnAddAnotherAccount|  
+|단추|Name = btnAddFinish|  
   
- **FillOrCancel form**  
+ **FillOrCancel 폼**  
   
- ![fill or cancel orders](../data-tools/media/simpleappcancelfill.png "SimpleAppCancelFill")  
+ ![주문 입력 또는 취소](../data-tools/media/simpleappcancelfill.png "SimpleAppCancelFill")  
   
-|Controls for the FillOrCancel form|Properties|  
+|FillOrCancel 폼 컨트롤|속성|  
 |----------------------------------------|----------------|  
 |TextBox|Name = txtOrderID|  
-|Button|Name = btnFindByOrderID|  
+|단추|Name = btnFindByOrderID|  
 |DateTimePicker|Format = Short<br /><br /> Name = dtpFillDate|  
 |DataGridView|Name = dgvCustomerOrders<br /><br /> Readonly = True<br /><br /> RowHeadersVisible = False|  
-|Button|Name = btnCancelOrder|  
-|Button|Name = btnFillOrder|  
-|Button|Name = btnFinishUpdates|  
+|단추|Name = btnCancelOrder|  
+|단추|Name = btnFillOrder|  
+|단추|Name = btnFinishUpdates|  
   
-##  <a name="BKMK_storetheconnectionstring"></a> Store the connection string  
- When your application tries to open a connection to the database, your application must have access to the connection string. To avoid entering the string manually on each form, store the string in the App.config file in your project, and create a method that returns the string when the method is called from any form in your application.  
+##  <a name="BKMK_storetheconnectionstring"></a>연결 문자열 저장  
+ 응용 프로그램이 데이터베이스에 대한 연결을 열려면 응용 프로그램에는 연결 문자열에 액세스할 수 있어야 합니다. 각 폼에 문자열을 수동으로 입력를 방지 하려면 프로젝트의 App.config 파일에 문자열을 저장 하 고 응용 프로그램의 폼에서 메서드를 호출할 때 문자열을 반환 하는 메서드를 만듭니다.  
   
- You can find the connection string in **SQL Server Object Explorer** by right-clicking the database, selecting **Properties**, and then locating the ConnectionString property. Use Ctrl+A, Ctrl+C to select and copy the string to the clipboard. 
+ 마우스 오른쪽 단추로 클릭 하 여 연결 문자열을 찾을 수 있습니다는 **Sales** 에서 데이터 연결 **서버 탐색기** 선택한 **속성**합니다. 찾을 **ConnectionString** 속성을 다음 Ctrl + C를 선택 하 고 클립보드에 문자열을 복사 하려면 Ctrl + A를 사용 합니다. 
   
-1.  If you're using C#, in **Solution Explorer**, expand the **Properties** node under the project, and then open the **Settings.settings** file.  
-    If you're using Visual Basic, in **Solution Explorer**, click **Show All Files**, expand the **My Project** node, and then open the **Settings.settings** file.
+1.  사용 중인 경우 C#에서 **솔루션 탐색기**를 확장 하 고는 **속성** 노드 프로젝트를 연 다음는 **Settings.settings** 파일입니다.  
+    Visual Basic에서 사용 중인 경우 **솔루션 탐색기**, 클릭 **모든 파일 표시**를 확장 하 고는 **My Project** 노드를 연 후는 **Settings.settings** 파일입니다.
   
-2.  In the **Name** column, enter `connString`.  
+2.  에 **이름** 열, 입력 `connString`합니다.  
   
-3.  In the **Type** list, select **(Connection String)**.  
+3.  에 **형식** 목록에서 **(연결 문자열)**합니다.  
   
-4.  In the **Scope** list, select **Application**.  
-  
+4.  에 **범위** 목록에서 **응용 프로그램**합니다.    
 
-5.  In the **Value** column, enter your connection string (without any outside quotes), and then save your changes.  
+5.  에 **값** 열 (없이 따옴표 외부), 연결 문자열을 입력 한 다음 변경 내용을 저장 합니다.  
   
 > [!NOTE]
->  In a real application, you should store the connection string securely, as described in [Connection Strings and Configuration Files](/dotnet/framework/data/adonet/connection-strings-and-configuration-files).     
+>  실제 응용 프로그램을 저장 해야 연결 문자열을 안전 하 게에 설명 된 대로 [연결 문자열 및 구성 파일](/dotnet/framework/data/adonet/connection-strings-and-configuration-files)합니다.     
   
-##  <a name="BKMK_writethecodefortheforms"></a> Write the code for the forms  
- This section contains brief overviews of what each form does. It also provides the code that defines the underlying logic when a button on the form is clicked.  
+##  <a name="BKMK_writethecodefortheforms"></a>폼에 대 한 코드 작성  
+ 이 섹션에는 각 양식에서 수행 하는 작업의 간단한 개요를 포함 합니다. 또한 폼에 단추를 클릭할 때의 기본 논리를 정의 하는 코드를 제공 합니다.  
   
-### <a name="navigation-form"></a>Navigation form  
+### <a name="navigation-form"></a>Navigation 폼  
 
-The Navigation form opens when you run the application. The **Add an account** button opens the NewCustomer form. The **Fill or cancel orders** button opens the FillOrCancel form. The **Exit** button closes the application.  
+응용 프로그램을 실행하면 Navigation 폼이 열립니다. **계정 추가** 단추는 NewCustomer 폼을 엽니다. **또는 취소 정렬** 단추 FillOrCancel 폼을 엽니다. **종료** 단추 응용 프로그램을 닫습니다.  
   
-#### <a name="make-the-navigation-form-the-startup-form"></a>Make the Navigation form the startup form  
- If you're using C#, in **Solution Explorer**, open Program.cs, and then change the `Application.Run` line to this: `Application.Run(new Navigation());`  
+#### <a name="make-the-navigation-form-the-startup-form"></a>Navigation 폼을 시작 폼으로 만들기  
+ 사용 중인 경우 C#에서 **솔루션 탐색기**Program.cs를 연 다음 변경 된 `Application.Run` 줄:`Application.Run(new Navigation());`  
   
- If you're using Visual Basic, in **Solution Explorer**, open the **Properties** window, select the **Application** tab, and then select **SimpleDataApp.Navigation** in the **Startup form** list.  
+ Visual Basic에서 사용 중인 경우 **솔루션 탐색기**열고는 **속성** 창에서는 **응용 프로그램** 탭을 선택한 다음 선택  **SimpleDataApp.Navigation** 에 **시작 폼** 목록입니다.  
   
-#### <a name="create-auto-generated-event-handlers"></a>Create auto-generated event handlers  
- Double-click the three buttons on the Navigation form to create empty event handler methods. Double-clicking the buttons also adds auto-generated code in the Designer code file that enables a button click to raise an event.  
+#### <a name="create-auto-generated-event-handlers"></a>자동으로 생성 된 이벤트 처리기 만들기  
+ 빈 이벤트 처리기 메서드를 만드는 탐색 양식에서 세 개의 단추를 두 번 클릭 합니다. 이벤트를 발생 시키는 단추 클릭 수 있는 디자이너 코드 파일에서 자동 생성 된 코드에도 추가 단추를 두 번 클릭 합니다.  
   
-#### <a name="add-code-for-the-navigation-form-logic"></a>Add code for the Navigation form logic   
- In the code page for the Navigation form, complete the method bodies for the three button click event handlers as shown in the following code.  
+#### <a name="add-code-for-the-navigation-form-logic"></a>탐색 양식 논리에 대 한 코드를 추가 합니다.   
+ Navigation 폼에 대 한 코드 페이지에서 완료 메서드 본문을 세 개의 단추에 대 한 click 이벤트 처리기 다음 코드에 나와 있는 것 처럼 합니다.  
   
 [!code-csharp[Navigation#1](../data-tools/codesnippet/CSharp/SimpleDataApp/Navigation.cs#1)]  
 [!code-vb[Navigation#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/Navigation.vb#1)]   
   
-### <a name="newcustomer-form"></a>NewCustomer form  
- When you enter a customer name and then select the **Create Account** button, the NewCustomer form creates a customer account, and SQL Server returns an IDENTITY value as the new customer ID. You can then place an order for the new account by specifying an amount and an order date and selecting the **Place Order** button.  
+### <a name="newcustomer-form"></a>NewCustomer 폼  
+ 고객 이름을 입력 하 고 다음 선택에서 **계정 만들기** 단추를 NewCustomer 폼은 고객 계정을 만들고 SQL Server는 ID 값을 새 고객 ID 반환 합니다. 그런 다음 금액과 주문 날짜를 지정 하 고 선택 하 여 새 계정에 대 한 순서를 배치할 수 있습니다는 **구매 주문** 단추입니다.  
   
-#### <a name="create-auto-generated-event-handlers"></a>Create auto-generated event handlers  
- Create an empty Click event handler for each button on the NewCustomer form by double-clicking on each of the four buttons. Double-clicking the buttons also adds auto-generated code in the Designer code file that enables a button click to raise an event.  
+#### <a name="create-auto-generated-event-handlers"></a>자동으로 생성 된 이벤트 처리기 만들기  
+ 빈 Click 만들기 각각 네 개의 단추를 두 번 클릭 하면 NewCustomer 폼에 있는 각 단추에 대 한 이벤트 처리기입니다. 이벤트를 발생 시키는 단추 클릭 수 있는 디자이너 코드 파일에서 자동 생성 된 코드에도 추가 단추를 두 번 클릭 합니다.  
   
-#### <a name="add-code-for-the-newcustomer-form-logic"></a>Add code for the NewCustomer form logic  
-To complete the NewCustomer form logic, follow these steps.  
+#### <a name="add-code-for-the-newcustomer-form-logic"></a>NewCustomer 폼 논리에 대 한 코드를 추가 합니다.  
+NewCustomer 폼 논리를 완료 하려면 다음이 단계를 수행 합니다.  
 
-1. Bring the ```System.Data.SqlClient``` namespace into scope so that you don't have to fully qualify the names of its members.  
+1. 가져오기는 ```System.Data.SqlClient``` 범위로 네임 스페이스를 완벽 하 게 하려면 않아도 이름을 한 정하는 해당 멤버의 합니다.  
 
      ```csharp  
      using System.Data.SqlClient  
@@ -189,25 +189,25 @@ To complete the NewCustomer form logic, follow these steps.
      Imports System.Data.SqlClient  
      ```  
 
-2. Add some variables and helper methods to the class as shown in the following code.  
+2. 다음 코드와 같이 클래스에 일부 변수 및 도우미 메서드를 추가 합니다.  
 
      [!code-csharp[NewCustomer#1](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#1)]  
      [!code-vb[NewCustomer#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#1)]  
 
-3. Complete the method bodies for the four button click event handlers as shown in the following code.  
+3. 완료 메서드 본문을 네 개의 단추에 대 한 click 이벤트 처리기 다음 코드에 나와 있는 것 처럼 합니다.  
 
      [!code-csharp[NewCustomer#2](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#2)]  
      [!code-vb[NewCustomer#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#2)]  
 
-### <a name="fillorcancel-form"></a>FillOrCancel form  
- The FillOrCancel form runs a query to return an order when you enter an order ID and then click the **Find Order** button. The returned row appears in a read-only data grid. You can mark the order as canceled (X) if you select the **Cancel Order** button, or you can mark the order as filled (F) if you select the **Fill Order** button. If you select the **Find Order** button again, the updated row appears.  
-#### <a name="create-auto-generated-event-handlers"></a>Create auto-generated event handlers  
- Create empty Click event handlers for the four buttons on the FillOrCancel form by double-clicking the buttons. Double-clicking the buttons also adds auto-generated code in the Designer code file that enables a button click to raise an event.  
+### <a name="fillorcancel-form"></a>FillOrCancel 폼  
+ FillOrCancel 폼이 주문 ID를 입력 한 다음 클릭 하면 주문을 반환 하는 쿼리 실행은 **주문** 단추입니다. 반환되는 행은 읽기 전용 데이터 표에 표시됩니다. 선택 하는 경우 (X) 취소 하 고 순서를 표시할 수 있습니다는 **주문 취소** 단추 또는 있습니다 표시할 수 순서 채워진된 (F)로 선택 하는 경우는 **주문** 단추입니다. 선택 하는 경우는 **주문** 단추를 다시 업데이트 된 행이 나타납니다.  
+#### <a name="create-auto-generated-event-handlers"></a>자동으로 생성 된 이벤트 처리기 만들기  
+ 빈 만들기 단추를 두 번 클릭 하 여 FillOrCancel 폼에 단추 4 개에 대 한 이벤트 처리기를 클릭 합니다. 이벤트를 발생 시키는 단추 클릭 수 있는 디자이너 코드 파일에서 자동 생성 된 코드에도 추가 단추를 두 번 클릭 합니다.  
   
-#### <a name="add-code-for-the-fillorcancel-form-logic"></a>Add code for the FillOrCancel form logic  
-To complete the FillOrCancel form logic, follow these steps.  
+#### <a name="add-code-for-the-fillorcancel-form-logic"></a>FillOrCancel 폼 논리에 대 한 코드를 추가 합니다.  
+FillOrCancel 폼 논리를 완료 하려면 다음이 단계를 수행 합니다.  
 
-1. Bring the following two namespaces into scope so that you don't have to fully qualify the names of their members.  
+1. 해당 멤버의 이름을 정규화 필요가 없도록 범위에는 다음 두 가지 네임 스페이스를 가져옵니다.  
 
      ```csharp  
      using System.Data.SqlClient;  
@@ -218,15 +218,18 @@ To complete the FillOrCancel form logic, follow these steps.
      Imports System.Text.RegularExpressions  
      ```  
 
-2. Add a variable and helper method to the class as shown in the following code.  
+2. 다음 코드와 같이 클래스에는 변수 및 도우미 메서드를 추가 합니다.  
 
      [!code-csharp[FillOrCancel#1](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#1)]  
      [!code-vb[FillOrCancel#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#1)]  
 
-3. Complete the method bodies for the four button click event handlers as shown in the following code.  
+3. 완료 메서드 본문을 네 개의 단추에 대 한 click 이벤트 처리기 다음 코드에 나와 있는 것 처럼 합니다.  
 
      [!code-csharp[FillOrCancel#2](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#2)]  
      [!code-vb[FillOrCancel#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#2)]  
 
-##  <a name="BKMK_testyourapplication"></a> Test your application  
- Select the F5 key to build and test your application after you code each Click event handler, and then after you finish coding.
+##  <a name="BKMK_testyourapplication"></a>응용 프로그램 테스트  
+선택 된 **F5** 키를 빌드하고 각 Click 이벤트 처리기를 코딩 한 후 응용 프로그램을 테스트 한 코딩을 마친 후 다음 합니다.
+
+## <a name="see-also"></a>참고 항목
+[.NET용 Visual Studio 데이터 도구](../data-tools/visual-studio-data-tools-for-dotnet.md)

@@ -1,44 +1,45 @@
 ---
-title: "중첩된 프로젝트에 대 한 처리 명령 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "명령 처리를 구현 하는 중첩된 프로젝트"
+title: "중첩 된 프로젝트에 대 한 처리 명령 구현 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: nested projects, implementing command handling
 ms.assetid: 48a9d66e-d51c-4376-a95a-15796643a9f2
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a71da10ee4473f3fb542e0ce0e03891d60b75d34
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 중첩된 프로젝트에 대 한 처리 명령 구현
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-IDE를 통해 전달 되는 명령을 전달할 수 있습니다를 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> 및 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 인터페이스에 중첩 된 프로젝트 또는 부모 프로젝트 필터링 하거나 명령을 무시할 수 있습니다.  
+# <a name="implementing-command-handling-for-nested-projects"></a>중첩 된 프로젝트에 대 한 처리 명령 구현
+IDE를 통해 전달 되는 명령에 전달할 수는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> 및 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 인터페이스 부모 프로젝트 또는 중첩 된 프로젝트를 필터링 하거나 명령을 재정의할 수 있습니다.  
   
 > [!NOTE]
->  일반적으로 부모 프로젝트에서 처리 명령에만 필터링 할 수 있습니다.  명령으로 **Build** 및 **Deploy** 로 취급 됩니다 IDE를 필터링 할 수 없습니다.  
+>  일반적으로 부모 프로젝트에서 처리 하는 명령만 필터링 할 수 있습니다. 와 같은 명령 **빌드** 및 **배포** 에서 처리 하는 IDE를 필터링 할 수 없습니다.  
   
- 다음 단계는 명령 처리를 구현 하는 프로세스에 설명 합니다.  
+ 다음 단계에서는 명령 처리를 구현 하기 위한 프로세스에 설명 합니다.  
   
-## 절차  
+## <a name="procedures"></a>절차  
   
-#### 명령 처리를 구현 하려면  
+#### <a name="to-implement-command-handling"></a>명령 처리를 구현 하려면  
   
-1.  때 사용자가 중첩 된 프로젝트에서 중첩된 프로젝트 노드 또는 노드 선택:  
+1.  때 사용자는 중첩 된 프로젝트에서 중첩 된 프로젝트 또는 노드를 선택 합니다.  
   
-    1.  IDE 호출을 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 메서드가 있습니다.  
+    1.  IDE 호출은 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 메서드.  
   
-     —또는—  
+     — 또는 —  
   
-    1.  IDE 명령 예: 솔루션 탐색기에서 바로 가기 메뉴 명령 계층 구조 창에서 시작 된 경우 호출 하는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> 에서 프로젝트의 부모 메서드.  
+    1.  IDE를 호출 하는 솔루션 탐색기에서 바로 가기 메뉴 명령 등의 계층 구조 창에서 명령을 발생 하는 경우는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> 메서드를 프로젝트의 부모입니다.  
   
-2.  부모 프로젝트에 전달할 매개 변수를 검사할 수 있습니다 `QueryStatus`, 같은 `pguidCmdGroup` 및 `prgCmds`, 부모 프로젝트의 명령을 필터링 해야 하는지 여부를 결정 합니다.  부모 프로젝트 명령을 필터링에 구현 되는 경우이 설정 해야 합니다.  
+2.  부모 프로젝트에 전달할 매개 변수를 검사할 수 `QueryStatus`와 같은 `pguidCmdGroup` 및 `prgCmds`, 부모 프로젝트 명령을 필터링 해야 하는지 여부를 확인 하려면. 부모 프로젝트 명령을 필터링 할 구현 되는 경우 설정 합니다.  
   
     ```  
     prgCmds[0].cmdf = OLECMDF_SUPPORTED;  
@@ -46,13 +47,13 @@ IDE를 통해 전달 되는 명령을 전달할 수 있습니다를 <xref:Micros
     prgCmds[0].cmdf &= ~MSOCMDF_ENABLED;  
     ```  
   
-     부모 프로젝트를 반환 해야 하 고 `S_OK`.  
+     부모 프로젝트를 반환 해야 하는 다음 `S_OK`합니다.  
   
-     부모 프로젝트 명령을 필터링 하지 않습니다 경우에 바로 반환 해야 `S_OK`.  이 경우 IDE 자동으로 명령을 하위 프로젝트를 회람합니다.  
+     경우에 부모 프로젝트 명령을 필터링 하지 않습니다만 반환 해야 `S_OK`합니다. 이 경우 IDE 자동으로 라우팅하여 해당 명령을 자식 프로젝트에 있습니다.  
   
-     부모 프로젝트 명령 자식 프로젝트에 라우팅할 수 없습니다.  IDE이이 작업을 수행합니다.  
+     부모 프로젝트 자식 프로젝트에 명령이 라우팅하 필요가 없습니다. 이 작업을 수행 하는 IDE...  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>   
  [명령, 메뉴 및 도구 모음](../../extensibility/internals/commands-menus-and-toolbars.md)   
- [중첩 프로젝트](../../extensibility/internals/nesting-projects.md)
+ [프로젝트 중첩](../../extensibility/internals/nesting-projects.md)

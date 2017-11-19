@@ -1,52 +1,52 @@
 ---
-title: "IDebugObject::GetSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::GetSize"
-helpviewer_keywords: 
-  - "IDebugObject::GetSize 메서드"
+title: IDebugObject::GetSize | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugObject::GetSize
+helpviewer_keywords: IDebugObject::GetSize method
 ms.assetid: 89af423b-36eb-479d-b2de-2693455eca15
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ab3903526ed9dc8e516520603966ea1936e46fbe
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugObject::GetSize
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-개체의 크기를 \(바이트\)를 가져옵니다.  
+# <a name="idebugobjectgetsize"></a>IDebugObject::GetSize
+개체의 크기를 바이트 단위로 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetSize(   
-   UINT* pnSize  
+```cpp  
+HRESULT GetSize(   
+   UINT* pnSize  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetSize(  
-   out uint pnSize  
+   out uint pnSize  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pnSize`  
- \[out\] 크기 \(바이트\)를 반환합니다.  
+ [out] 바이트 단위로 크기를 반환 합니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  
   
-## 설명  
- 사용은 [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) 바이트 시퀀스로 값을 검색 하는 방법입니다.  
+## <a name="remarks"></a>설명  
+ 사용 하 여는 [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) 바이트의 시퀀스로 값을 검색 하는 메서드입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)

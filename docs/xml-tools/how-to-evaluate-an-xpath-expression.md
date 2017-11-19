@@ -1,24 +1,25 @@
 ---
 title: "방법: XPath 식 계산 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
-caps.latest.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d549afb96465590a21e516f649d860f23f4056f3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: XPath 식 계산
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**간략한 조사식** 대화 상자를 사용하여 XPath 식을 계산할 수 있습니다.XPath 식은 W3C XPath 1.0 권장 사항에 따라 유효한 식이어야 합니다.현재 XSLT컨텍스트, 즉 **지역** 창의 `self::node()` 노드에서는 XPath 식에 대한 계산 컨텍스트를 제공합니다.  
+# <a name="how-to-evaluate-an-xpath-expression"></a>방법: XPath 식 계산
+된 XPath 식을 계산할 수 있습니다는 **간략 한 조사식** 대화 상자. XPath 식은 W3C XPath 1.0 권장 사항에 따라 유효한 식이어야 합니다. 현재 XSLT 컨텍스트-즉,는 `self::node()` 에서 노드는 **지역** 창-XPath 식에 대 한 계산 컨텍스트를 제공 합니다.  
   
  다음 목록에서는 XPath 식을 계산할 때 지원되는 함수를 설명합니다.  
   
@@ -29,27 +30,27 @@ caps.handback.revision: 2
 -   사용자 정의 함수는 지원되지 않습니다.  
   
 > [!NOTE]
->  다음 프로시저에서는 [연습: XSLT 스타일시트 디버깅](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) 항목의 belowAvg.xsl 및 books.xml 파일을 사용합니다.  
+>  다음 절차에서 belowAvg.xsl 및 books.xml 파일을 사용 하는 [연습: XSLT 스타일 시트를 디버깅](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) 항목입니다.  
   
-### XPath 식을 계산하려면  
+### <a name="to-evaluate-an-xpath-expression"></a>XPath 식을 계산하려면  
   
 1.  `xsl:if` 시작 태그에 중단점을 삽입합니다.  
   
-2.  XML 편집기 도구 모음에서 **XSL 디버깅** 단추를 클릭합니다.  
+2.  클릭는 **XSL 디버깅** XML 편집기 도구 모음 단추입니다.  
   
      디버거가 시작되고 `xsl:if` 태그에서 중단됩니다.  
   
-3.  마우스 오른쪽 단추를 클릭하고 **간략한 조사식**을 선택합니다.  
+3.  마우스 오른쪽 단추로 클릭 하 고 선택 **간략 한 조사식**합니다.  
   
-     **간략한 조사식** 대화 상자가 표시됩니다.  
+     **간략 한 조사식** 대화 상자가 표시 됩니다.  
   
-4.  **간략한 조사식** 대화 상자의 **식** 필드에 `./price/text()`를 입력하고 **다시 계산**을 클릭합니다.  
+4.  입력 `./price/text()` 에 **식** 필드는 **간략 한 조사식** 대화 상자와 클릭 **다시 평가**합니다.  
   
-     현재 book 노드의 가격이 **값** 상자에 나타납니다.  
+     현재 book 노드의 가격이에 표시 된 **값** 상자입니다.  
   
-5.  XPath 식을 `./price/text() < $bookAverage`로 변경하고 **다시 계산**을 클릭합니다.  
+5.  XPath 식을 변경 `./price/text() < $bookAverage` 클릭 **재평가**합니다.  
   
-     **값** 상자에 XPath 식이 `true`로 평가되었음이 나타납니다.  
+     **값** 상자 XPath 식은로 평가 되었음이 나타납니다 `true`합니다.  
   
-## 참고 항목  
- [XSLT 디버깅](../xml-tools/debugging-xslt.md)
+## <a name="see-also"></a>참고 항목  
+ [XSLT 디버그](../xml-tools/debugging-xslt.md)

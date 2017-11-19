@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Changing Document Formatting Using CheckBox Controls | Microsoft Docs'
+title: "연습: CheckBox 컨트롤을 사용 하 여 문서 서식 변경 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,153 +17,155 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], check box controls
 - controls [Office development in Visual Studio], adding to documents
 ms.assetid: 3740e41d-a57e-43bb-87e7-6e5481ef290b
-caps.latest.revision: 70
-author: kempb
-ms.author: kempb
+caps.latest.revision: "70"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 69edcb6d683c910d02e4224ec44590c288fefefa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: cf214f2ffc55cf0846373fcaa226253f276e3d69
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-changing-document-formatting-using-checkbox-controls"></a>Walkthrough: Changing Document Formatting Using CheckBox Controls
-  This walkthrough demonstrates how to use Windows Forms controls in a document-level customization for Microsoft Office Word to change text formatting.  
+# <a name="walkthrough-changing-document-formatting-using-checkbox-controls"></a>연습: CheckBox 컨트롤을 사용하여 문서 서식 변경
+  이 연습에서는 Microsoft Office Word 용 문서 수준 사용자 지정에서 Windows Forms 컨트롤을 사용 하 여 텍스트 서식을 변경 하는 방법을 보여 줍니다.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ 이 연습에서는 다음 작업을 수행합니다.  
   
--   Adding text and a control to the document in a document-level project at design time.  
+-   디자인 타임에 문서 수준 프로젝트의 문서에 텍스트 및 컨트롤을 추가 합니다.  
   
--   Formatting the text when an option is selected.  
+-   옵션을 선택할 때 텍스트 서식 지정 합니다.  
   
- To see the result as a completed sample, see the Word Controls Sample at [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md).  
+ 결과 전체 샘플을 보려면에 Word 컨트롤 샘플을 참조 [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)합니다.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] or [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].  
+-   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] 또는 [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
   
-## <a name="creating-the-project"></a>Creating the Project  
- The first step is to create a Word Document project.  
+## <a name="creating-the-project"></a>프로젝트 만들기  
+ 첫 번째 단계에서는 Word 문서 프로젝트를 만듭니다.  
   
-#### <a name="to-create-a-new-project"></a>To create a new project  
+#### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
   
-1.  Create a Word Document project with the name **My Word Formatting**. In the wizard, select **Create a new document**.  
+1.  이름으로 한 Word 문서 프로젝트 만들기 **My Word 서식을**합니다. 마법사에서 선택 **새 문서**합니다.  
   
-     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+     자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
   
-     Visual Studio opens the new Word document in the designer and adds the **My Word Formatting** project to **Solution Explorer**.  
+     Visual Studio 디자이너에서 새 Word 문서가 열리고 추가 **My Word 서식** 프로젝트를 **솔루션 탐색기**합니다.  
   
-## <a name="adding-text-and-controls-to-the-word-document"></a>Adding Text and Controls to the Word Document  
- For this walkthrough, add three check boxes and some text in a <xref:Microsoft.Office.Tools.Word.Bookmark> control to the Word document. The check boxes will present options to the user for formatting the text.  
+## <a name="adding-text-and-controls-to-the-word-document"></a>Word 문서에 텍스트 및 컨트롤 추가  
+ 이 연습에 대 한 확인란 세 개 및 일부 텍스트에 추가 <xref:Microsoft.Office.Tools.Word.Bookmark> Word 문서에 컨트롤입니다. 확인란 텍스트 서식 지정에 대 한 사용자에 게 옵션을 제공 합니다.  
   
-#### <a name="to-add-three-check-boxes"></a>To add three check boxes  
+#### <a name="to-add-three-check-boxes"></a>확인란 세 개를 추가 하려면  
   
-1.  Verify that the document is open in the Visual Studio designer.  
+1.  Visual Studio 디자이너에서 문서가 열려 있는지 확인합니다.  
   
-2.  From the **Common Controls** tab of the **Toolbox**, drag the first <xref:Microsoft.Office.Tools.Word.Controls.CheckBox> control to the document.  
+2.  **공용 컨트롤** 탭은 **도구 상자**을 끌어 첫 번째 <xref:Microsoft.Office.Tools.Word.Controls.CheckBox> 컨트롤을 문서로 합니다.  
   
-3.  In the **Properties** window, change the following properties.  
+3.  **속성** 창에서 다음 속성을 변경합니다.  
   
-    |Property|Value|  
+    |속성|값|  
     |--------------|-----------|  
     |**Name**|**applyBoldFont**|  
-    |**Text**|**Bold**|  
+    |**텍스트**|**굵게**|  
   
-4.  Press **Enter** to move the insertion point below the first check box.  
+4.  키를 눌러 **Enter** 삽입 지점을 첫 번째 확인란이 아래로 이동 합니다.  
   
-5.  Add a second check box to the document below the `ApplyBoldFont` check box and change the following properties.  
+5.  두 번째 확인란 아래 문서에 추가 된 `ApplyBoldFont` 확인란을 선택 하 고 다음 속성을 변경 합니다.  
   
-    |Property|Value|  
+    |속성|값|  
     |--------------|-----------|  
     |**Name**|**applyItalicFont**|  
-    |**Text**|**Italic**|  
+    |**텍스트**|**기울임꼴**|  
   
-6.  Press **Enter** to move the insertion point below the second check box.  
+6.  키를 눌러 **Enter** 두 번째 확인란 아래 삽입 지점을 이동 합니다.  
   
-7.  Add a third check box to the document below the `ApplyItalicFont` check box and change the following properties.  
+7.  세 번째 확인란 아래 문서에 추가 된 `ApplyItalicFont` 확인란을 선택 하 고 다음 속성을 변경 합니다.  
   
-    |Property|Value|  
+    |속성|값|  
     |--------------|-----------|  
     |**Name**|**applyUnderlineFont**|  
-    |**Text**|**Underline**|  
+    |**텍스트**|**밑줄**|  
   
-#### <a name="to-add-text-and-a-bookmark-control"></a>To add text and a Bookmark control  
+#### <a name="to-add-text-and-a-bookmark-control"></a>텍스트 및 책갈피 컨트롤 추가 하려면  
   
-1.  Move the insertion point below the check box controls and type the following text:  
+1.  Check box 컨트롤 아래 삽입 지점을 이동 하 고 다음 텍스트를 입력 합니다.  
   
-     **Click a check box to change the formatting of this text.**  
+     **이 텍스트의 서식을 변경 하려면이 확인란을 클릭 합니다.**  
   
-2.  From the **Word Controls** tab of the **Toolbox**, drag a <xref:Microsoft.Office.Tools.Word.Bookmark> control to the document.  
+2.  **Word 컨트롤** 탭은 **도구 상자**를 끌어 한 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 문서로 합니다.  
   
-     The **Add Bookmark Control** dialog box appears.  
+     **책갈피 컨트롤 추가** 대화 상자가 나타납니다.  
   
-3.  Select the text you added to the document and click **OK**.  
+3.  문서에 추가 된 텍스트를 선택 하 고 클릭 **확인**합니다.  
   
-     A <xref:Microsoft.Office.Tools.Word.Bookmark> control named **Bookmark1** is added to the selected text in the document.  
+     A <xref:Microsoft.Office.Tools.Word.Bookmark> 라는 컨트롤 **Bookmark1** 문서에서 선택한 텍스트에 추가 됩니다.  
   
-4.  In the **Properties** window, change the value of the **(Name)** property to **fontText.**  
+4.  에 **속성** 창의 값을 변경는 **(이름)** 속성을 **fontText 합니다.**  
   
- Next, write the code to format the text when a check box is checked or cleared.  
+ 그런 다음 확인란을 선택 하거나 취소 하는 경우 텍스트의 서식을 지정 하려면 코드를 작성 합니다.  
   
-## <a name="formatting-the-text-when-a-check-box-is-checked-or-cleared"></a>Formatting the Text When a Check box is Checked or Cleared  
- When the user selects a formatting option, change the format of the text in the document.  
+## <a name="formatting-the-text-when-a-check-box-is-checked-or-cleared"></a>서식의 텍스트 때 확인란을 선택 또는 선택 취소  
+ 문서에 있는 텍스트의 서식을 변경 하는 사용자가 서식 옵션을 선택 합니다.  
   
-#### <a name="to-change-formatting-when-a-check-box-is-selected"></a>To change formatting when a check box is selected  
+#### <a name="to-change-formatting-when-a-check-box-is-selected"></a>선택한 경우 확인란 서식을 변경 하려면  
   
-1.  Right-click `ThisDocument` in **Solution Explorer**, and then click **View Code** on the shortcut menu.  
+1.  마우스 오른쪽 단추로 클릭 `ThisDocument` 에 **솔루션 탐색기**, 클릭 하 고 **코드 보기** 바로 가기 메뉴.  
   
-2.  For C# only, add the following constants to the **ThisDocument** class.  
+2.  C#에 해당, 추가를 다음 상수는 **ThisDocument** 클래스입니다.  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#2)]  
   
-3.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyBoldFont` check box.  
+3.  다음 코드를 추가 하는 <xref:System.Windows.Forms.Control.Click> 의 이벤트 처리기는 `applyBoldFont` 확인란 합니다.  
   
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#3)]  [!code-csharp[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#3)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#3)]
+     [!code-csharp[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#3)]  
   
-4.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyItalicFont` check box.  
+4.  다음 코드를 추가 하는 <xref:System.Windows.Forms.Control.Click> 의 이벤트 처리기는 `applyItalicFont` 확인란 합니다.  
   
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#4)]  [!code-csharp[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#4)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#4)]
+     [!code-csharp[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#4)]  
   
-5.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyUnderlineFont` check box.  
+5.  다음 코드를 추가 하는 <xref:System.Windows.Forms.Control.Click> 의 이벤트 처리기는 `applyUnderlineFont` 확인란 합니다.  
   
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#5)]  [!code-csharp[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#5)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#5)]
+     [!code-csharp[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#5)]  
   
-6.  In C#, you must add event handlers for the text boxes to the <xref:Microsoft.Office.Tools.Word.Document.Startup> event. For information about how to create event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+6.  C#에 텍스트 상자에 대 한 이벤트 처리기를 추가 해야는 <xref:Microsoft.Office.Tools.Word.Document.Startup> 이벤트입니다. 이벤트 처리기를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Office 프로젝트의 이벤트 처리기 만들기](../vsto/how-to-create-event-handlers-in-office-projects.md)합니다.  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#6)]  
   
-## <a name="testing-the-application"></a>Testing the Application  
- You can now test your document to verify that the text is formatted correctly when you select or clear a check box.  
+## <a name="testing-the-application"></a>응용 프로그램 테스트  
+ 이제 선택 하거나 확인란의 선택을 취소 하면 텍스트 올바르게 포맷 되어 있는지 확인 하려면 문서를 테스트할 수 있습니다.  
   
-#### <a name="to-test-your-document"></a>To test your document  
+#### <a name="to-test-your-document"></a>문서를 테스트하려면  
   
-1.  Press F5 to run your project.  
+1.  F5 키를 눌러 프로젝트를 실행합니다.  
   
-2.  Select or clear a check box.  
+2.  선택 하거나 확인란의 선택을 취소 합니다.  
   
-3.  Confirm that the text is formatted correctly.  
+3.  텍스트 올바르게 포맷 되어 있는지 확인 합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- This walkthrough shows the basics of using check boxes and programmatically changing text formatting on Word documents. Here are some tasks that might come next:  
+## <a name="next-steps"></a>다음 단계  
+ 이 확인란을 사용 하 여 프로그래밍 방식으로 Word 문서에서 텍스트를 변경 하는 기본적인 방법을 보여 줍니다. 다음으로 수행할 수 있는 몇 가지 작업은 다음과 같습니다.  
   
--   Use a button to populate a text box. For more information, see [Walkthrough: Displaying Text in a Text Box in a Document Using a Button](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md).  
+-   단추를 사용 하 여 텍스트 상자를 채웁니다. 자세한 내용은 참조 [연습:는 단추를 사용 하는 문서에서 텍스트 상자에 텍스트 표시](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)합니다.  
   
--   Using radio buttons to select chart styles. For more information, see [Walkthrough: Updating a Chart in a Document Using Radio Buttons](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md).  
+-   라디오 단추를 사용하여 차트 스타일 선택. 자세한 내용은 참조 [연습: 문서를 사용 하 여 라디오 단추에서 차트 업데이트](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)합니다.  
   
 -  
   
-## <a name="see-also"></a>See Also  
- [Walkthroughs Using Word](../vsto/walkthroughs-using-word.md)   
- [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md)   
- [NamedRange Control](../vsto/namedrange-control.md)   
- [Limitations of Windows Forms Controls on Office Documents](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
+## <a name="see-also"></a>참고 항목  
+ [Word를 사용한 연습](../vsto/walkthroughs-using-word.md)   
+ [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)   
+ [NamedRange 컨트롤](../vsto/namedrange-control.md)   
+ [Office 문서에서 Windows Forms 컨트롤에 대한 제한 사항](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
   
   

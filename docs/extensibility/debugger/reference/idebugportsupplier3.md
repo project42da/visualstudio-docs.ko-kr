@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugPortSupplier3
-helpviewer_keywords:
-- IDebugPortSupplier3 interface
+f1_keywords: IDebugPortSupplier3
+helpviewer_keywords: IDebugPortSupplier3 interface
 ms.assetid: e458cd02-2370-4435-8953-17d7a60ce152
-caps.latest.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 0eb7cf542fa61d53220cd10f54e3fbd7c6165bf4
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 3bd2a46573ca655df3372c33182860cf2d4816d7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugportsupplier3"></a>IDebugPortSupplier3
 이 인터페이스는 호출자가 포트 공급자의 디버거 호출 사이의 (디스크에 작성) 하 여 포트를 유지 하 고 다음 유지 된 포트 목록을 받을 수 있는지 여부를 확인할 수 있습니다.  
@@ -59,7 +43,7 @@ IDebugPortSupplier3 : IDebugPortSupplier2
 |[CanPersistPorts](../../../extensibility/debugger/reference/idebugportsupplier3-canpersistports.md)|여부 포트 공급자 유지할 수 포트 (디스크에 작성) 하 여 디버거 호출 사이의 반환 합니다.|  
 |[EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)|열거 하는이 포트 공급 업체에 의해 디스크에 기록 된 모든 포트를 통해 사용할 수 있는 개체를 반환 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  여러 호출 간에 포트 공급자 포트를 유지할 수, 하는 경우에이 인터페이스를 구현 해야 합니다. 포트는 포트 공급자를 인스턴스화할 이며 포트 공급자 소멸 될 때 디스크에 쓸 때 로드 해야 합니다.  
   
  디버그 엔진 일반적으로 포트 공급자 상호 작용 하지 않습니다 있으며,이 인터페이스에 대 한가 사용 되지 않지만 있습니다.  

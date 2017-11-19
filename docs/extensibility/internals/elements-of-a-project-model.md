@@ -1,50 +1,52 @@
 ---
 title: "프로젝트 모델의 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "프로젝트 [Visual Studio SDK] 구현 시 고려 사항"
-  - "프로젝트 모델"
-  - "프로젝트 [Visual Studio SDK] 요소"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- projects [Visual Studio SDK], implementation considerations
+- project models
+- projects [Visual Studio SDK], elements
 ms.assetid: a1dbe0dc-68da-45d7-8704-5b43ff7e4fc4
-caps.latest.revision: 18
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 689fac97264aad3d301095cffed07b825c723474
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 프로젝트 모델의 요소
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-인터페이스와 구현에 대 한 모든 프로젝트의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 기본 구조를 공유 합니다: 프로젝트 모델 프로젝트 형식에 대 한.  개발 중인 VSPackage 인 프로젝트 모델에서 디자인 결정을 준수 하 고 IDE에서 제공 하는 글로벌 기능이 함께 작동 하는 개체를 만듭니다.  예를 들어, 프로젝트 항목이 유지 되는 방식을 제어 하지만 알림 파일을 유지 해야 것을 제어 하지 않습니다.  때 사용자가 프로젝트 열기 항목에 포커스가 이동 하 고 선택  **저장** 에  **파일** 메뉴에서의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 파일이 더 오래 된 알림을 보낼 IDE로 다시 변경 및 프로젝트 형식 코드 합니다 명령을 IDE에서 중단, 파일을 유지 메뉴 모음.  
+# <a name="elements-of-a-project-model"></a>프로젝트 모델의 요소
+인터페이스와의 모든 프로젝트의 구현을 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 기본 구조를 공유: 프로젝트 형식에 대 한 프로젝트 모델입니다. 프로젝트 모델을 개발 하는 VSPackage는 디자인 관련 결정 사항을 따르고 IDE에서 제공 하는 전역 기능와 함께 작동 하는 개체를 만듭니다. 프로젝트 항목을 유지 하는 방법을 제어할 수 있지만 예를 들어 제어 하지 않으면 파일을 유지 해야 하는 알림입니다. 사용자 현재 열려 있는 프로젝트 항목에 포커스를 배치 하 고 선택 **저장** 에 **파일** 메뉴에는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 메뉴 모음, 프로젝트 형식 코드 해야 가로채 IDE에서 명령, 파일을 보존 하 고 파일을 더 이상 변경 알림을 IDE에 다시 보냅니다.  
   
- Vspackage를 액세스 하는 IDE 인터페이스를 제공 하는 서비스를 통해 IDE와 상호 작용 합니다.  예를 들어, 특정 서비스를 통해 모니터 하 고 경로 명령과 선택한 프로젝트에 대 한 컨텍스트 정보를 제공 합니다.  필요 하면 Vspackage를 모든 전역 IDE 기능 서비스를 통해 제공 됩니다.  서비스에 대 한 자세한 내용은 [방법: 서비스 가져오기](../../extensibility/how-to-get-a-service.md).  
+ VSPackage는 IDE 인터페이스에 대 한 액세스를 제공 하는 서비스를 통해 IDE 상호 작용 합니다. 예를 들어 특정 서비스를 통해 모니터링 하 고 경로 명령 및 프로젝트에서 선택한 항목에 대 한 컨텍스트 정보를 제공 합니다. 모든 전역 IDE 기능 VSPackage에 필요한 서비스에서 제공 됩니다. 서비스에 대 한 자세한 내용은 참조 [하는 방법: 서비스 가져오기](../../extensibility/how-to-get-a-service.md)합니다.  
   
- 기타 구현 고려 사항:  
+ 다른 구현 고려 사항:  
   
--   단일 프로젝트 모델 프로젝트 형식이 둘 이상 포함 될 수 있습니다.  
+-   단일 프로젝트 모델에는 둘 이상의 프로젝트 형식을 포함할 수 있습니다.  
   
--   프로젝트 형식 및 프로젝트 수행자 팩토리 독립적으로 Guid로 등록 되었습니다.  
+-   프로젝트 형식 및 관련 프로젝트 팩터리는 잘못 등록 된 독립적으로 Guid를 포함 합니다.  
   
--   각 프로젝트 서식 파일 또는 마법사에서 사용자는 새 프로젝트를 만들 때 새 프로젝트 파일을 초기화할 수 있어야 합니다의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI입니다.  예를 들어, 있는 [!INCLUDE[vcprvc](../../debugger/includes/vcprvc_md.md)] 템플릿 초기화 무엇이 결국.vcproj 파일이 됩니다.  
+-   서식 파일 또는 사용자가을 통해 새 프로젝트를 만들 때 새 프로젝트 파일을 초기화 하는 마법사에서 각 프로젝트 있어야는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI입니다. 예를 들어는 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 템플릿 결국.vcproj 파일 기능을 초기화 합니다.  
   
- 다음 그림은 기본 인터페이스와 서비스, 일반적인 프로젝트 구현을 작성 하는 개체를 보여 줍니다.  응용 프로그램 도우미, HierUtil7, 기본 객체 및 기타 프로그래밍의 기본 구성 요소를 만드는 데 사용할 수 있습니다.  HierUtil7 응용 프로그램 도우미에 대 한 자세한 내용은 참조 하십시오. [Not in Build: Using HierUtil7 Project Classes to Implement a Project Type \(C\+\+\)](http://msdn.microsoft.com/ko-kr/a5c16a09-94a2-46ef-87b5-35b815e2f346).  
+ 다음은 기본 인터페이스, 서비스 및 일반적인 프로젝트 구현을 구성 하는 개체입니다. 원본 개체를 만들고 다른 프로그래밍 상용구 HierUtil7, 응용 프로그램 도우미를 사용할 수 있습니다. HierUtil7 응용 프로그램 도우미에 대 한 자세한 내용은 참조 [빌드에 없음: 프로젝트 형식 (c + +)를 구현 하려면 HierUtil7 프로젝트 클래스를 사용 하 여](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)합니다.  
   
- ![Visual Studio 프로젝트 모델 그래픽](~/extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
+ ![Visual Studio 프로젝트 모델 그래픽](../../extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
 프로젝트 모델  
   
- 인터페이스 및 이전 다이어그램에서 나열 된 서비스 및 다이어그램에 포함 되지 않은 다른 선택적 인터페이스에 대 한 자세한 내용은 참조 하십시오. [프로젝트 모델에 대 한 핵심 구성 요소](../../extensibility/internals/project-model-core-components.md).  
+ 인터페이스와 이전 다이어그램에 나열 된 서비스 및 다이어그램에 포함 되지 기타 선택적 인터페이스에 대 한 자세한 내용은 참조 [프로젝트 모델에 대 한 핵심 구성 요소](../../extensibility/internals/project-model-core-components.md)합니다.  
   
- 프로젝트 명령을 지원할 수 있으며 따라서 구현 해야는 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 인터페이스 명령 명령을 통해 컨텍스트 Guid 라우팅에 참가 하도록 합니다.  
+ 프로젝트 명령을 지원할 수 있습니다 및 따라서 구현 해야 합니다는 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 인터페이스 명령 컨텍스트 Guid 통해 명령 라우팅에 참여할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [검사 목록: 새 프로젝트 형식 만들기](../../extensibility/internals/checklist-creating-new-project-types.md)   
- [Not in Build: Using HierUtil7 Project Classes to Implement a Project Type \(C\+\+\)](http://msdn.microsoft.com/ko-kr/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
+ [빌드에 없음: HierUtil7 프로젝트 클래스를 사용 하 여 프로젝트 형식 (c + +)를 구현 하려면](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
  [프로젝트 모델에 대 한 핵심 구성 요소](../../extensibility/internals/project-model-core-components.md)   
  [프로젝트 팩터리를 사용 하 여 프로젝트 인스턴스 만들기](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)   
  [방법: 서비스 가져오기](../../extensibility/how-to-get-a-service.md)   

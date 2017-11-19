@@ -1,32 +1,34 @@
 ---
-title: "Office 솔루션 문제 해결"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Office 응용 프로그램[Visual Studio에서 Office 개발], 문제 해결"
-  - "Visual Studio에서 Office 개발, 문제 해결"
-  - "문제 해결[Visual Studio에서 Office 개발]"
+title: "Office 솔루션 문제 해결 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office applications [Office development in Visual Studio], troubleshooting
+- Office development in Visual Studio, troubleshooting
+- troubleshooting [Office development in Visual Studio]
 ms.assetid: 0518ffa9-97e5-4596-8ff2-8a24aef42b9e
-caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "27"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d4e93509595dc9bd576bc1f3f427ef222df11abd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Office 솔루션 문제 해결
+# <a name="troubleshooting-office-solutions"></a>Office 솔루션 문제 해결
   이 섹션에는 Visual Studio의 Office 개발 도구를 사용하여 솔루션을 만들 때 발생할 수 있는 일반적인 문제를 해결하기 위한 팁이 들어 있습니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [Office 솔루션에서 런타임 오류 문제 해결](../vsto/troubleshooting-errors-in-office-solutions.md)  
  Visual Studio에서 Office 솔루션을 디자인하고 실행하고 테스트하는 동안 발생할 수 있는 일반적인 문제에 대해 설명합니다.  
   
@@ -36,7 +38,7 @@ caps.handback.revision: 26
  [Office 솔루션 오류에 대한 추가 지원](../vsto/additional-support-for-errors-in-office-solutions.md)  
  Office 솔루션의 오류 및 경고 문제 해결을 위한 다른 리소스에 대해 설명합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [Office 솔루션 보안 문제 해결](../vsto/troubleshooting-office-solution-security.md)  
  Office 솔루션 보안 작업을 수행할 때 발생할 수 있는 일반적인 문제에 대해 설명합니다.  
   

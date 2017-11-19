@@ -1,56 +1,56 @@
 ---
-title: "NATIVE_ADDRESS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NATIVE_ADDRESS"
-helpviewer_keywords: 
-  - "NATIVE_ADDRESS 구조"
+title: NATIVE_ADDRESS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NATIVE_ADDRESS
+helpviewer_keywords: NATIVE_ADDRESS structure
 ms.assetid: 7a0cd085-bfc8-45cc-a3d4-4459070e207a
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 0fba67a73adb913e033f18288f0920b2e2da0b44
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# NATIVE_ADDRESS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 구조체는 기본 주소를 나타냅니다.  
+# <a name="nativeaddress"></a>NATIVE_ADDRESS
+이 구조는 기본 주소를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 typedef struct _tagNATIVE_ADDRESS {  
-   DWORD unknown;  
+   DWORD unknown;  
 } NATIVE_ADDRESS;  
 ```  
   
-```c#  
+```csharp  
 public struct NATIVE_ADDRESS {  
-   public uint unknown;  
+   public uint unknown;  
 }  
 ```  
   
-## 용어  
- unknown  
- \(이 의미 런타임 및 운영 체제에 따라 다릅니다\)의 기본 주소입니다.  
+## <a name="terms"></a>용어  
+ 알 수 없음  
+ (이것의 의미는 런타임 및 운영 체제에 따라 다름)는 기본 주소입니다.  
   
-## 설명  
- 이 구조 연합에 속하지는 [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 때 구조는 `dwKind` 필드는 `DEBUG_ADDRESS_UNION` 구조 설정 되어 `ADDRESS_KIND_NATIVE` \(값의 [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md) 열거형\).  
+## <a name="remarks"></a>설명  
+ 이 구조체의 공용 구조체의 일부인는 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 때 구조는 `dwKind` 필드는 `DEBUG_ADDRESS_UNION` 구조로 설정 되어 `ADDRESS_KIND_NATIVE` (의 값은 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 열거형)입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: sh.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md)
+ [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

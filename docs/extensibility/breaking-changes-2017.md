@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/09/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54d5af60-0b44-4ae1-aa57-45aa03f89f3d
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1d474374a0c7603bc9b6995783bbed96c81c8907
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: MT
-ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
-ms.openlocfilehash: ac7a99673eb4dc23dd53a46c3c93fd735325c255
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 확장성의 변경 내용
 
@@ -123,8 +107,3 @@ Visual Studio 프로세스 내에서 실행 되는 코드는 Visual Studio 설�
 * 외부 구성 요소는 Visual Studio 위치를 찾을 수 [여기에 제공 된 지침에 따라](https://blogs.msdn.microsoft.com/heaths/2016/09/15/changes-to-visual-studio-15-setup)합니다.
 * 외부 구성 요소를 사용 하는 것이 좋습니다는 [외부 설정 관리자](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.settings.externalsettingsmanager.aspx) 대신 Visual Studio의 레지스트리 키에 직접 읽기/쓰기입니다.
 * 확장 프로그램을 사용 하 여 구성 요소 여부 등록에 대 한 또 다른 방법에서 구현 있을 수 있습니다를 확인 합니다. 예를 들어 디버거 확장 수 새 활용 하기 위해 [msvsmon JSON 파일 COM 등록](migrate-debugger-COM-registration.md)합니다.
-
-## <a name="change-lightweight-solution-load"></a>변경 사항: 간단한 솔루션 로드
-
-간단한 솔루션 로드 (LSL) 사용자가 이러한 작업을 시작 될 때까지 완전히 프로젝트를 로드 하 여 솔루션 로드 시간을 줄입니다. 이 프로젝트는 완전히 로드 된 것으로 가정 하는 확장명 변화 시킬 수 있습니다. 참조 [Lightweight 솔루션 로드](lightweight-solution-load-extension-impact.md) 여부 확장 영향을 미칠 수 있습니다 하 고 확장을 업데이트 하는 방법에 대 한 지침을 확인 합니다.
-

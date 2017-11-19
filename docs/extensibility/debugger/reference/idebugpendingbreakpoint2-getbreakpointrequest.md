@@ -1,50 +1,51 @@
 ---
-title: "IDebugPendingBreakpoint2::GetBreakpointRequest | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPendingBreakpoint2::GetBreakpointRequest"
-helpviewer_keywords: 
-  - "IDebugPendingBreakpoint2::GetBreakpointRequest 메서드"
-  - "GetBreakpointRequest 메서드"
+title: IDebugPendingBreakpoint2::GetBreakpointRequest | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugPendingBreakpoint2::GetBreakpointRequest
+helpviewer_keywords:
+- IDebugPendingBreakpoint2::GetBreakpointRequest method
+- GetBreakpointRequest method
 ms.assetid: cb1e36aa-4302-455c-98fb-6638a1ef5c46
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2e938af7bdf86d703b7301ac88a341f45eefc332
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPendingBreakpoint2::GetBreakpointRequest
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 보류 중단점을 만드는 데 사용 된 중단점 요청을 가져옵니다.  
+# <a name="idebugpendingbreakpoint2getbreakpointrequest"></a>IDebugPendingBreakpoint2::GetBreakpointRequest
+이 보류 중인 중단점을 만드는 데 사용 된 중단점 요청을 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetBreakpointRequest(   
-   IDebugBreakpointRequest2** ppBPRequest  
+```cpp  
+HRESULT GetBreakpointRequest(   
+   IDebugBreakpointRequest2** ppBPRequest  
 );  
 ```  
   
-```c#  
-int GetBreakpointRequest(   
-   out IDebugBreakpointRequest2 ppBPRequest  
+```csharp  
+int GetBreakpointRequest(   
+   out IDebugBreakpointRequest2 ppBPRequest  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppBPRequest`  
- \[out\] 반환 된 [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) 이 보류 중인 중단점을 만드는 데 사용 된 중단점 요청을 나타내는 개체입니다.  
+ [out] 반환 된 [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) 중단점 보류 중인이 만드는 데 사용 하는 중단점 요청을 나타내는 개체입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_BP_DELETED` 중단점 삭제 된 경우입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다. 반환 `E_BP_DELETED` 중단점 삭제 된 경우.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)

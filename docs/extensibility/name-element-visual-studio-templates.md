@@ -1,29 +1,33 @@
 ---
-title: "Name 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#Name"
-helpviewer_keywords: 
-  - "Name 요소[Visual Studio 프로젝트 템플릿]"
+title: "Name 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#Name
+helpviewer_keywords: Name element [Visual Studio project templates]
 ms.assetid: 48788dbf-7da0-4443-8061-aab966fc22c8
-caps.latest.revision: 17
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 919244051df838861816279513f14e8e98f3e34f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Name 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**새 프로젝트** 또는 **새 항목 추가** 대화 상자에 나타나는 템플릿 이름을 지정합니다.  
+# <a name="name-element-visual-studio-templates"></a>Name 요소(Visual Studio 템플릿)
+에 표시 된 대로 서식 파일의 이름을 지정는 **새 프로젝트** 또는 **새 항목 추가** 대화 상자.  
   
-## 구문  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<이름 >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <Name> Template Name </Name>  
@@ -33,35 +37,35 @@ caps.handback.revision: 17
 <Name Package="{PackageID}" ID="ResourceID" />  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|`Package`|고급 사용자 시나리오에서는 선택적 특성입니다.<br /><br /> Visual Studio 패키지 ID를 지정하는 GUID입니다.|  
-|`ID`|고급 사용자 시나리오에서는 선택적 특성입니다.<br /><br /> Visual Studio 리소스 ID를 지정합니다.|  
+|---------------|-----------------|  
+|`Package`|고급 사용자 시나리오에 대 한 선택적 특성입니다.<br /><br /> Visual Studio 패키지를 지정 하는 GUID id입니다.|  
+|`ID`|고급 사용자 시나리오에 대 한 선택적 특성입니다.<br /><br /> Visual Studio 리소스 ID를 지정 합니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿을 표시하는 방법을 정의합니다.|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에서 템플릿이 표시되는 방식을 정의합니다.|  
   
-## 텍스트 값  
- `Package` 및 `ID` 특성이 사용되지 않으면 텍스트 값은 필수 요소입니다.  
+## <a name="text-value"></a>텍스트 값  
+ 텍스트 값이 필요 하지 않으면는 `Package` 및 `ID` 특성이 사용 됩니다.  
   
- 텍스트는 템플릿 이름을 제공합니다.  
+ 텍스트 템플릿의 이름을 제공합니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `Name`은 `TemplateData`의 필수 자식 요소입니다.  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 응용 프로그램의 프로젝트 템플릿에 대한 메타데이터를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 응용 프로그램입니다.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -87,6 +91,6 @@ caps.handback.revision: 17
 </VSTemplate>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)

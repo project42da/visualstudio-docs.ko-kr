@@ -1,47 +1,49 @@
 ---
-title: "XmlMappedRange 컨트롤"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "XMLMappedRange 컨트롤"
-  - "XMLMappedRange 컨트롤, 데이터 바인딩"
-  - "XMLMappedRange 컨트롤, 이벤트"
+title: "XmlMappedRange 컨트롤 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- XMLMappedRange control, data binding
+- XMLMappedRange control
+- XMLMappedRange control, events
 ms.assetid: af1ae1b7-6cbe-4d6b-bc22-d9a3c8740665
-caps.latest.revision: 40
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 39
+caps.latest.revision: "40"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 391964152c48601b11b10ce6d8001d2d303a9a01
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# XmlMappedRange 컨트롤
-  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤은 반복되지 않는 스키마 요소를 Microsoft Office Excel의 셀에 매핑하는 경우에만 만들어지는 범위입니다.  예를 들어 스키마 요소의 `maxOccurs` 특성이 1인 경우,  Visual Studio에서 XML이 매핑된 범위가 만들어진 후 Excel 개체 모델을 트래버스하지 않고도 이 범위에 대해 직접 프로그래밍을 할 수 있습니다.  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤은 요소 매핑을 제거하는 경우에만 Excel 내에서 삭제할 수 있습니다.  
+# <a name="xmlmappedrange-control"></a>XmlMappedRange 컨트롤
+  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤은 반복 되지 않는 스키마 요소는 Microsoft Office Excel에서 셀에 매핑될 때에 생성 되는 범위입니다. 예를 들어는 `maxOccurs` 스키마 요소의 특성은 1입니다. Visual Studio에서 매핑된 XML 범위를 만든 후 Excel 개체 모델을 트래버스 하지 않고 직접 프로그래밍할 수 있습니다. 삭제할 수 있습니다는 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 요소 매핑을 제거 될 때 Excel 내에서 제어 합니다.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- ![비디오에 링크](~/data-tools/media/playvideo.gif "비디오에 링크") 관련 비디오 데모를 보려면 [How Do I: Use XML Mapping in Excel?](http://go.microsoft.com/fwlink/?LinkID=130288)을 참조하십시오.  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요 사용 하 여 XML의에서 매핑 Excel?](http://go.microsoft.com/fwlink/?LinkID=130288)합니다.  
   
-## 컨트롤에 데이터 바인딩  
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤은 단일 데이터 필드에 대한 바인딩\(단순 데이터 바인딩\)을 지원합니다.  <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤은 복합 데이터 바인딩을 지원할 수 있으며 반복되는 스키마 요소를 셀에 매핑하는 경우 자동으로 작성됩니다.  자세한 내용은 [ListObject 컨트롤](../vsto/listobject-control.md)을 참조하십시오.  
+## <a name="binding-data-to-the-control"></a>컨트롤에 데이터 바인딩  
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤은 단일 데이터 필드 (단순 데이터 바인딩)에 대 한 바인딩을 지원 합니다. <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤 수 복잡 한 데이터 바인딩을 지원 하 고 반복 스키마 요소는 셀에 매핑될 때 자동으로 만들어집니다. 자세한 내용은 [ListObject Control](../vsto/listobject-control.md)을 참조하세요.  
   
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤은 <xref:System.Windows.Forms.Control.DataBindings%2A> 속성을 사용하여 데이터 소스에 바인딩됩니다.  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>를 워크시트 셀에 추가하면 Visual Studio를 통해 매핑된 셀의 데이터에서 데이터 집합이 자동으로 생성되고 컨트롤이 이 데이터 집합에 바인딩됩니다.  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>의 기본 데이터 바인딩 속성은 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>입니다.  
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 사용 하 여 데이터 소스에 바인딩된 컨트롤에서 <xref:System.Windows.Forms.Control.DataBindings%2A> 속성입니다. 경우는 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> Visual Studio에서 자동으로 매핑된 셀의 데이터에서 데이터 집합을 생성 하 고 해당 데이터 집합에 바인딩됩니다 워크시트 셀에 추가 됩니다. 기본 데이터 바인딩 속성은 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 은 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>합니다.  
   
- 바인딩된 데이터 집합의 데이터가 어떤 메커니즘을 통해 업데이트되면 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤이 변경 내용을 반영합니다.  
+ 바인딩된 데이터 집합의 데이터가 임의 메커니즘을 통해 업데이트 되는 경우는 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤이 변경 내용을 반영 합니다.  
   
-## 형식 지정  
- <xref:Microsoft.Office.Interop.Excel.Range>에 적용할 수 있는 것과 동일한 형식을 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>에 적용할 수 있습니다.  여기에는 테두리, 글꼴, 숫자 형식 및 스타일이 포함됩니다.  
+## <a name="formatting"></a>서식  
+ 에 동일한 서식을 적용할 수 있습니다는 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤에 적용할 수 있는 한 <xref:Microsoft.Office.Interop.Excel.Range>합니다. 여기에는 테두리, 글꼴, 숫자 서식 및 스타일이 포함됩니다.  
   
-## 이벤트  
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤에 사용할 수 있는 이벤트는 다음과 같습니다.  
+## <a name="events"></a>이벤트  
+ 에 대해 사용할 수 있는 이벤트는 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 제어 됩니다.  
   
 -   <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BeforeDoubleClick>  
   
@@ -59,8 +61,8 @@ caps.handback.revision: 39
   
 -   <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.SelectionChange>  
   
-## 참고 항목  
- [확장된 개체를 사용하여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
+## <a name="see-also"></a>참고 항목  
+ [확장 된 개체를 사용 하 여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
  [방법: 워크시트에 XMLMappedRange 컨트롤 추가](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)   
  [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [방법: Visual Studio 내에서 워크시트에 스키마 매핑](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)   

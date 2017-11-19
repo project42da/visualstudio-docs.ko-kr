@@ -1,65 +1,71 @@
 ---
 title: "UsedCommand 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UsedCommands 요소 (VSCT XML 스키마)"
-  - "VSCT XML 스키마 요소, UsedCommands"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UsedCommands element (VSCT XML schema)
+- VSCT XML schema elements, UsedCommands
 ms.assetid: 99cd05d3-644a-42ff-b289-8458cd1b20c0
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2b3974c9103a385badc56fda759ee95ef3a40a93
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# UsedCommand 요소
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-VSPackage에 다른.vsct 파일에 정의 된 명령에 액세스할 수 있습니다. 예를 들어 표준을 사용 하 여 VSPackage **복사** 명령으로 정의 되는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 셸 명령을 추가할 수 있습니다는 메뉴 또는 도구 모음을 다시 구현 하지 않고 있습니다.  
+# <a name="usedcommand-element"></a>UsedCommand 요소
+다른.vsct 파일에 정의 된 명령에 액세스 하기 위해 VSPackage를 수 있습니다. 예를 들어 VSPackage는 표준을 사용 하 여 **복사** 문자로 정의 되는 명령에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 셸 명령을 추가할 수 있습니다는 메뉴 또는 도구 모음을 다시 구현 하지 않고도 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <UsedCommand guid="guidMyCommandGroup" id="MyCommand" />  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
+|---------------|-----------------|  
 |guid|필수 요소. 명령을 식별 하는 GUID ID 쌍의 GUID입니다.|  
 |ID|필수 요소. 명령을 식별 하는 GUID ID 쌍의 ID입니다.|  
-|조건|선택적 요소.[조건부 특성](../extensibility/vsct-xml-schema-conditional-attributes.md)을 참조하세요.|  
+|조건|선택 사항입니다. 참조 [조건부 특성](../extensibility/vsct-xml-schema-conditional-attributes.md)합니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
-|--------|--------|  
+|-------------|-----------------|  
 |없음||  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[UsedCommands 요소](../extensibility/usedcommands-element.md)|UsedCommand 요소 그룹 및 기타 UsedCommands 그룹화 합니다.|  
+|-------------|-----------------|  
+|[UsedCommands 요소](../extensibility/usedcommands-element.md)|UsedCommand 요소 그룹 및 다른 UsedCommands 그룹화 합니다.|  
   
-## 설명  
- 명령을 추가 하 여는 `<UsedCommands>` 요소를 VSPackage 알립니다는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 환경 VSPackage 명령에 필요 합니다. 추가 해야는 `<UsedCommand>` 요소 패키지에 필요한 모든 명령에 대 한 모든 버전 및 Visual Studio의 구성에 포함 될 수 있습니다. 예를 들어, Visual c \+ \+에만 적용 되는 명령을 호출 하는 패키지, 명령 됩니다 Visual Web Developer의 사용자에 게 사용할 수 있는 포함 하지 않으면는 `<UsedCommand>` 명령에 대 한 요소입니다.  
+## <a name="remarks"></a>설명  
+ 에 명령을 추가 하 여는 `<UsedCommands>` 요소, VSPackage 알립니다는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage 명령이 필요 하다는 환경입니다. 추가 해야는 `<UsedCommand>` 요소 패키지에 필요한 모든 명령에 대 한 모든 버전 및 Visual Studio의 구성에 포함 되어 있지 않습니다. 예를 들어 패키지는 Visual c + +에만 적용 되는 명령의 호출할 경우 명령이 제공 됩니다 Visual Web Developer의 사용자에 게 포함 하지 않으면는 `<UsedCommand>` 명령에 대 한 요소입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
-<UsedCommands> <UsedCommand guid="guidVSStd97" id="cmdidCut"/> <UsedCommand guid="guidVSStd97" id="cmdidCopy"/> <UsedCommand guid="guidVSStd97" id="cmdidPaste"/> </UsedCommands>  
+<UsedCommands>  
+  <UsedCommand guid="guidVSStd97" id="cmdidCut"/>  
+  <UsedCommand guid="guidVSStd97" id="cmdidCopy"/>  
+  <UsedCommand guid="guidVSStd97" id="cmdidPaste"/>  
+</UsedCommands>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [UsedCommands 요소](../extensibility/usedcommands-element.md)   
- [Visual Studio 명령 테이블 \(. Vsct\) 파일](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Visual Studio 명령 테이블(.Vsct) 파일](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

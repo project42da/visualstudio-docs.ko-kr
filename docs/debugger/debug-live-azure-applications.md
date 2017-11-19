@@ -1,0 +1,133 @@
+---
+title: "라이브 Azure ASP.NET 앱-Visual Studio 디버그 | Microsoft Docs"
+ms.date: 11/13/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: debugger
+ms.assetid: adb22512-4d4d-40e5-9564-1af421b7087e
+caps.latest.revision: "1"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 71facc3515bf90d378b19242bb804ce825131b4e
+ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
+---
+# <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>스냅숏 디버거를 사용 하 여 라이브 Azure ASP.NET 응용 프로그램을 디버깅
+
+스냅숏 디버거는 관심이 코드가 실행 되 면 프로덕션에서 응용 프로그램의 스냅숏을 만듭니다. 에 대 한 스냅숏을 만들려면 디버거 명령, snappoints 및 logpoints에서에서 설정한 코드 합니다. 디버거를 사용 하면 정확 하 게 무엇이 잘못 되었는지, 프로덕션 응용 프로그램의 트래픽에 영향을 주지 않고 확인할 수 있습니다. 스냅숏 디버거를 프로덕션 환경에서 발생 하는 문제를 해결 하는 데 걸리는 시간을 상당히 줄일 수 있습니다.
+
+Snappoints 및 logpoints 중단점 비슷합니다. 중단점, 달리 snappoints 응용 프로그램이 중단 되지는 않습니다 적중 될 때입니다. 일반적으로 snappoint에서 스냅숏을 캡처하 게 10-20 밀리초를 사용 합니다. 
+
+스냅숏 컬렉션은 Azure 앱 서비스에서 실행 되는 다음 웹 앱에 사용할 수 있습니다.
+
+- .NET Framework 4.6.1에서 실행 되는 ASP.NET 응용 프로그램 이상.
+- .NET Core 2.0 또는 나중에 Windows에서 실행 되는 ASP.NET Core 응용 프로그램
+
+또한 스냅숏 디버거는 Visual Studio 2017 Enterprise 15.5 이상 버전에 사용할 수만 있습니다. 
+
+## <a name="start-the-snapshot-debugger"></a>스냅숏 디버거 시작
+
+1. 설치는 [Visual Studio Enterprise 15.5 Preview](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-preview-relnotes) 이상. 이전 Visual Studio 2017 미리 보기에서 업데이트 하는 경우 Visual Studio 설치 관리자를 실행 하 고 ASP.NET 및 웹 개발 작업에서 스냅숏 디버거 구성 요소를 확인 합니다.
+
+2. 스냅숏 디버그 하려면 프로젝트를 엽니다. 
+
+    > [!IMPORTANT] 
+    > 스냅숏 디버그 하려면를 열어야 할는 **동일한 버전의 소스 코드** Azure 앱 서비스에 게시 하는 합니다. 
+
+3. 클라우드 탐색기에서 (선택 **보기 > 클라우드 탐색기**) 프로젝트를 배포 하는 Azure 앱 서비스를 마우스 오른쪽 단추로 클릭 하 고 선택 **스냅숏 디버거 연결** 스냅숏 디버거를 시작 합니다.
+
+   ![스냅숏 디버거를 시작할](../debugger/media/snapshot-launch.png "스냅숏 디버거 시작")
+
+    선택 하면 처음으로 **스냅숏 디버거 연결**, Azure 앱 서비스에서 스냅숏 디버거를 설치 하 라는 메시지가 표시 됩니다. 이 Azure 앱 서비스를 다시 시작을 해야 합니다. 
+
+   Visual Studio 디버깅 모드 스냅숏에 포함 되었습니다.
+
+   ![디버깅 모드 스냅숏](../debugger/media/snapshot-message.png "스냅숏 디버깅 모드")
+
+   **모듈** 창에 표시 되는 Azure 앱 서비스에 대 한 모든 모듈 로드 한 경우 (선택 **디버그 / Windows / 모듈** 이 창을 열려면).
+
+   ![모듈 창을 확인](../debugger/media/snapshot-modules.png "모듈 창을 확인 합니다.")
+
+## <a name="set-a-snappoint"></a>snappoint 설정
+
+1. 코드 편집기 왼쪽된 여백에 관심이 있는 snappoint 설정 하려면 코드 줄 옆을 클릭 합니다. 실행될지 알고 있는 코드 인지 확인 합니다.
+
+   ![snappoint 설정](../debugger/media/snapshot-set-snappoint.png "는 snappoint 설정")
+
+2. 클릭 **컬렉션 시작** 는 snappoint 켜려면 합니다.  
+
+   ![snappoint 켜기](../debugger/media/snapshot-start-collection.png "는 snappoint 켜기")
+
+    > [!TIP]
+    > 스냅숏, 볼 때 이동할 수 없습니다 되지만 여러 snappoints 코드의 서로 다른 줄에서 실행을 수행 하기 위해 코드에 배치할 수 있습니다. 코드에서 여러 snappoints 있으면 스냅숏 디버거 하면 해당 스냅숏을 같은 최종 사용자 세션에서 여러 사용자가 응용 프로그램에 도달 하는 경우에 됩니다.
+
+## <a name="take-a-snapshot"></a>스냅숏 만들기
+
+snappoint를 설정 하는 경우에 snappoint 위치 코드 줄이 실행 될 때마다 스냅숏을 캡처하려면 됩니다. 이 실행 서버에서 실제 요청에 의해 발생할 수 있습니다. 에 도달 하 여 snappoint를 강제로 표시 하려면 웹 사이트 및 take 작업 필요한 발생 하면 snappoint 적중 될 수 있는 브라우저 보기로 이동할 수 있습니다.
+
+## <a name="inspect-snapshot-data"></a>스냅숏 데이터를 검사 합니다.
+
+1. snappoint 적중 될 때 스냅숏 진단 도구 창에 나타납니다. 선택 **디버그 / Windows / 진단 도구 표시** 이 창을 엽니다.
+
+   ![snappoint 열고](../debugger/media/snapshot-diagsession-window.png "는 snappoint 열기")
+
+1. 코드 편집기에서 스냅숏을 열려면 snappoint 두 번 클릭 합니다.
+
+   ![스냅숏 데이터를 검사](../debugger/media/snapshot-inspect-data.png "스냅숏 데이터를 검사 합니다.")
+
+   DataTips를 보려면 사용 하 여 변수를 가리키면 수이 뷰에서 **지역**, **감시**, 및 **호출 스택** 창, 식을 평가 합니다.
+
+    웹 사이트 자체는 여전히 실시간 및 최종 사용자에 게 영향을 받지 않습니다. 기본적으로 snappoint 당 하나의 스냅숏을 캡처하도록:는 snappoint 해제 후 스냅숏이 캡처됩니다. snappoint에서 다른 스냅숏을 캡처하려면 하려면 켤 수 있습니다는 snappoint 다시 클릭 하 여 **컬렉션 업데이트**합니다.
+
+앱에 더 많은 snappoints를 추가 하 고와 매크로 설정할 수도 있습니다는 **컬렉션 업데이트** 단추입니다.
+
+**도움이 필요 하십니까?** 참조는 [문제 해결 및 알려진된 문제](../debugger/debug-live-azure-apps-troubleshooting.md) 및 [스냅숏 디버깅에 대 한 FAQ](../debugger/debug-live-azure-apps-faq.md) 페이지입니다.
+
+## <a name="set-a-conditional-snappoint"></a>조건부 snappoint 설정
+
+응용 프로그램에서 특정 상태를 다시 만드는 어려운 경우 조건부 snappoint의 사용 여부를 활용 하는 것이 좋습니다. 조건부 snappoints에 관심이 변수 특정 값 범위는 때와 같은 응용 프로그램을 원하는 상태로 전환 될 때까지 스냅숏을 만드는 것을 방지 하기 위해 사용할 수 있습니다. 적중 횟수 또는 필터 식을 사용 하는 조건을 설정할 수 있습니다.
+
+#### <a name="to-create-a-conditional-snappoint"></a>조건부 snappoint를 만들려면
+
+1. Snappoint 아이콘 (빈 볼)를 마우스 오른쪽 단추로 클릭 하 고 선택 **설정을**합니다.
+
+   ![설정을 선택](../debugger/media/snapshot-snappoint-settings.png "설정 선택")
+
+1. Snappoint 설정 창에서 식을 입력 합니다.
+
+   ![식을 입력](../debugger/media/snapshot-snappoint-conditions.png "식을 입력 합니다.")
+
+   앞의 그림에만 스냅숏이 만들어질는 snappoint에 대 한 때 `visitor.FirstName == "Dan"`합니다.
+
+## <a name="set-a-logpoint"></a>logpoint 설정
+
+메시지를 기록 하도록 snappoint 구성할 수도 한 snappoint 적중 될 때 스냅숏 만들기, 외에도 (즉, 한 logpoint 만들기). 응용 프로그램을 다시 배포할 필요 없이 logpoints를 설정할 수 있습니다. Logpoints 실제로 실행 되는 및를 실행 중인 응용 프로그램에 파생 작업이 없거나 영향 발생 합니다.
+
+#### <a name="to-create-a-logpoint"></a>logpoint를 만들려면
+
+1. Snappoint 아이콘 (파란색 양쪽 대괄호)를 마우스 오른쪽 단추로 클릭 하 고 선택 **설정을**합니다.
+
+1. Snappoint 설정 창에서 선택 **동작**합니다.
+
+    ![만들기는 logpoint](../debugger/media/snapshot-logpoint.png "는 logpoint 만들기")
+
+1. 메시지 필드에 기록 하려면 새 로그 메시지를 입력할 수 있습니다. 또한 로그 메시지에서 중괄호 내에 배치 하 여 변수를 평가할 수 있습니다.
+
+    선택 하면 **출력 창에 보내기**는 logpoint 도달 메시지가 진단 도구 창에 나타납니다.
+
+    ![Diagsession 창에 Logpoint 데이터](../debugger/media/snapshot-logpoint-output.png "Logpoint.diagsession 창에는 데이터")
+
+    선택 하는 경우 **응용 프로그램 로그에 보낼**는 logpoint 적중 될 때, 메시지가 메시지를 볼 수 아무 곳 이나 표시 `System.Diagnostics.Trace` (또는 `ILogger` .NET Core에서는), 같은 [App Insights](/azure/application-insights/app-insights-asp-net-trace-logs)합니다.
+
+## <a name="next-steps"></a>다음 단계
+
+- 스냅숏을 보는 동안 변수를 검사 하는 방법을 알아보려면 참조 [Debbuger 기능 둘러보기](../debugger/debugger-feature-tour.md)합니다.
+- 보기는 [스냅숏 디버깅에 대 한 FAQ](../debugger/debug-live-azure-apps-faq.md)합니다.
+- 보기 [문제 해결 팁 및 스냅숏 디버깅에 대 한 알려진된 문제](../debugger/debug-live-azure-apps-troubleshooting.md)합니다.
+- 응용 프로그램 예외에 도달 하면 Application Insights의 스냅숏 보기 하려는 경우는 수행할 수 있습니다. 자세한 내용은 참조 [예외.NET 응용 프로그램에 대 한 스냅숏 디버그](/azure/application-insights/app-insights-snapshot-debugger)합니다. Application Insights Azure 앱 서비스 외에도 서비스 패브릭 응용 프로그램을 지원 합니다.

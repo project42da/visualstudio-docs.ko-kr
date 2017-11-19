@@ -1,91 +1,88 @@
 ---
-title: 'How to: Create a SharePoint Command | Microsoft Docs'
+title: "방법: SharePoint 명령 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- SharePoint commands [SharePoint development in Visual Studio], creating
+helpviewer_keywords: SharePoint commands [SharePoint development in Visual Studio], creating
 ms.assetid: e1fda8f0-eae1-4278-91c1-19a5e1fc327f
-caps.latest.revision: 22
-author: kempb
-ms.author: kempb
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b4676efb2d64541566daf5c9902de8a4a2157e6d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 913ccb36c54914387cd6ca8a50a350ada1b14ce7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-create-a-sharepoint-command"></a>How to: Create a SharePoint Command
-  If you want to use the server object model in a SharePoint tools extension, you must create a custom *SharePoint command* to call the API. You define the SharePoint command in an assembly that can call into the server object model directly.  
+# <a name="how-to-create-a-sharepoint-command"></a>방법: SharePoint 명령 만들기
+  사용자 지정 SharePoint 도구 확장에서 서버 개체 모델을 사용 하려는 경우 만들어야 *SharePoint 명령* API를 호출 합니다. SharePoint 명령 서버 개체 모델을 직접 호출할 수 있는 어셈블리를 정의 합니다.  
   
- For more information about the purpose of SharePoint commands, see [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
+ SharePoint 명령의 용도 대 한 자세한 내용은 참조 [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)합니다.  
   
-### <a name="to-create-a-sharepoint-command"></a>To create a SharePoint command  
+### <a name="to-create-a-sharepoint-command"></a>SharePoint 명령을 만들려면  
   
-1.  Create a class library project that has the following configuration:  
+1.  다음과 같은 구성 하는 클래스 라이브러리 프로젝트를 만듭니다.  
   
-    -   Targets the .NET Framework 3.5. For more information about selecting the target framework, see [How to: Target a Version of the .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).  
+    -   .NET Framework 3.5를 대상 으로합니다. 대상 프레임 워크를 선택 하는 방법에 대 한 자세한 내용은 참조 [하는 방법:.NET Framework의 버전을 대상](../ide/how-to-target-a-version-of-the-dotnet-framework.md)합니다.  
   
-    -   Targets the AnyCPU or x64 platform. By default, the target platform for class library projects is AnyCPU. For more information about selecting the target platform, see [How to: Configure Projects to Target Platforms](../ide/how-to-configure-projects-to-target-platforms.md).  
+    -   AnyCPU 또는 x64 대상 플랫폼입니다. 기본적으로 클래스 라이브러리 프로젝트에 대 한 대상 플랫폼은 AnyCPU입니다. 대상 플랫폼을 선택 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 플랫폼을 대상으로 프로젝트 구성](../ide/how-to-configure-projects-to-target-platforms.md)합니다.  
   
     > [!NOTE]  
-    >  You cannot implement a SharePoint command in the same project that defines a SharePoint tools extension, because SharePoint commands target the .NET Framework 3.5 and SharePoint tools extensions target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. You must define any SharePoint commands that are used by your extension in a separate project. For more information, see [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
+    >  SharePoint 명령은.NET Framework 3.5 및 SharePoint 도구 확장 대상으로 대상이 되므로 SharePoint 명령은 SharePoint 도구 확장을 정의 하는 동일한 프로젝트에서 구현할 수 없습니다는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]합니다. 별도 프로젝트에 확장 프로그램에서 사용 되는 모든 SharePoint 명령을 정의 해야 합니다. 자세한 내용은 참조 [Visual Studio에서 SharePoint 도구에 대 한 확장명 배포](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)합니다.  
   
-2.  Add references to the following assemblies:  
+2.  다음 어셈블리에 대한 참조를 추가합니다.  
   
     -   Microsoft.VisualStudio.SharePoint.Commands  
   
     -   Microsoft.SharePoint  
   
-3.  In a class in the project, create a method that defines your SharePoint command. The method must conform to the following guidelines:  
+3.  프로젝트의 클래스에서 SharePoint 명령을 정의 하는 메서드를 만듭니다. 메서드는 다음 지침을 따라야 합니다.  
   
-    -   It can have one or two parameters.  
+    -   하나 또는 두 개의 매개 변수를 가질 수 있습니다.  
   
-         The first parameter must be a <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> object. This object provides the Microsoft.SharePoint.SPSite or Microsoft.SharePoint.SPWeb in which the command is executed. It also provides an <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger> object that can be used to write messages to the **Output** window or **Error List** window in Visual Studio.  
+         첫째 매개 변수는 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 개체입니다. 이 개체는 Microsoft.SharePoint.SPSite 또는 명령이 실행 될 Microsoft.SharePoint.SPWeb 제공 합니다. 또한 제공 된 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger> 메시지를 쓰는 데 사용할 수 있는 개체는 **출력** 창 또는 **오류 목록** Visual Studio의 창.  
   
-         The second parameter can be a type of your choice, but this parameter is optional. You can add this parameter to your SharePoint command if you need to pass data from your SharePoint tools extension to the command.  
+         두 번째 매개 변수는 선택한 형식일 수 있지만이 매개 변수는 선택 사항입니다. SharePoint 도구 확장에서 명령에 데이터를 전달 하는 경우 SharePoint 명령에이 매개 변수를 추가할 수 있습니다.  
   
-    -   It can have a return value, but this is optional.  
+    -   반환 값을 가질 수 있습니다 하지만이 선택 사항입니다.  
   
-    -   The second parameter and return value must be a type that can be serialized by the Windows Communication Foundation (WCF). For more information, see [Types Supported by the Data Contract Serializer](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer) and [Using the XmlSerializer Class](/dotnet/framework/wcf/feature-details/using-the-xmlserializer-class).  
+    -   두 번째 매개 변수 및 반환 값에는 Windows Communication Foundation (WCF) serialize 할 수 있는 형식 이어야 합니다. 자세한 내용은 참조 [데이터 계약 Serializer에서 지 원하는 유형](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer) 및 [XmlSerializer 클래스를 사용 하 여](/dotnet/framework/wcf/feature-details/using-the-xmlserializer-class)합니다.  
   
-    -   The method can have any visibility (**public**, **internal**, or **private**), and it can be static or non-static.  
+    -   메서드는 표시 여부를 가질 수 있습니다 (**공용**, **내부**, 또는 **개인**), 정적 또는 비정적 수 있습니다.  
   
-4.  Apply the <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> to the method. This attribute specifies a unique identifier for the command; this identifier does not have to match the method name.  
+4.  적용 된 <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> 메서드에 합니다. 이 특성 명령;에 대 한 고유 식별자를 지정합니다. 이 식별자는 메서드 이름과 일치 하지 않아도 됩니다.  
   
-     You must specify the same unique identifier when you call the command from your SharePoint tools extension. For more information, see [How to: Execute a SharePoint Command](../sharepoint/how-to-execute-a-sharepoint-command.md).  
+     SharePoint 도구 확장에서 명령을 호출 하면 동일한 고유 식별자를 지정 해야 합니다. 자세한 내용은 참조 [하는 방법: SharePoint 명령 실행](../sharepoint/how-to-execute-a-sharepoint-command.md)합니다.  
   
-## <a name="example"></a>Example  
- The following code example demonstrates a SharePoint command that has the identifier `Contoso.Commands.UpgradeSolution`. This command uses APIs in the server object model to upgrade to a deployed solution.  
+## <a name="example"></a>예제  
+ 다음 코드 예제는 식별자를 가진 SharePoint 명령을 `Contoso.Commands.UpgradeSolution`합니다. 이 명령은 서버 개체 모델에서 Api를 사용 하 여 배포 된 솔루션으로 업그레이드 합니다.  
   
- [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)] [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#5)]  
+ [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)]
+ [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#5)]  
   
- In addition to the implicit first <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter, this command also has a custom string parameter that contains the full path of the .wsp file that is being upgraded to the SharePoint site. To see this code in the context of a larger example, see [Walkthrough: Creating a Custom Deployment Step for SharePoint Projects](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).  
+ 암시적 첫 번째 외에도 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 매개 변수를이 명령에는 SharePoint 사이트를 업그레이드 중인.wsp 파일의 전체 경로 포함 하는 사용자 지정 문자열 매개 변수입니다. 보다 큰 예제의의 컨텍스트에서이 코드를 보려면 [연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)합니다.  
   
-## <a name="compiling-the-code"></a>Compiling the Code  
- This example requires references to the following assemblies:  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 이 예제에는 다음 어셈블리에 대 한 참조가 필요합니다.  
   
 -   Microsoft.VisualStudio.SharePoint.Commands  
   
 -   Microsoft.SharePoint  
   
-## <a name="deploying-the-command"></a>Deploying the Command  
- To deploy the command, include the command assembly in the same [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] extension (VSIX) package with the extension assembly that uses the command. You must also add an entry for the command assembly in the extension.vsixmanifest file. For more information, see [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
+## <a name="deploying-the-command"></a>명령 배포  
+ 명령을 배포 하려면 동일한 명령 어셈블리를 포함 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 명령을 사용 하는 확장 프로그램 어셈블리와 함께 패키지 (VSIX) 확장 합니다. 또한 extension.vsixmanifest 파일에서 명령 어셈블리에 대 한 항목을 추가 해야 합니다. 자세한 내용은 참조 [Visual Studio에서 SharePoint 도구에 대 한 확장명 배포](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)합니다.  
   
-## <a name="see-also"></a>See Also  
- [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md)   
- [How to: Execute a SharePoint Command](../sharepoint/how-to-execute-a-sharepoint-command.md)   
- [Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
+## <a name="see-also"></a>참고 항목  
+ [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)   
+ [방법: SharePoint 명령 실행](../sharepoint/how-to-execute-a-sharepoint-command.md)   
+ [연습: 서버 탐색기를 확장하여 웹 파트 표시](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
   
   

@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugProcess3
-helpviewer_keywords:
-- IDebugProcess3 interface
+f1_keywords: IDebugProcess3
+helpviewer_keywords: IDebugProcess3 interface
 ms.assetid: 7bd6b952-cf34-4e66-b8f6-d472dac3748f
-caps.latest.revision: 24
+caps.latest.revision: "24"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 6b98394c4880ce78eb8069534b009ea351608cd6
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: cc6c8fe7553a1fdff43875ec305978ea4f983843
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugprocess3"></a>IDebugProcess3
 이 인터페이스는 실행 중인 프로세스와 프로그램을 나타냅니다. 이 인터페이스의 여러 가지 방법에 대체 값으로 존재는 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 인터페이스입니다. 프로세스의 모든 프로그램에 대 한 제어를 제공합니다.  
@@ -61,9 +45,9 @@ IDebugProcess3 : IDebugProcess2
   
 |메서드|설명|  
 |------------|-----------------|  
-|[계속](../../../extensibility/debugger/reference/idebugprocess3-continue.md)|또는 프로세스를 통해 단계별 실행의 실행을 계속 합니다.|  
+|[Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)|또는 프로세스를 통해 단계별 실행의 실행을 계속 합니다.|  
 |[실행](../../../extensibility/debugger/reference/idebugprocess3-execute.md)|프로세스의 실행을 시작합니다.|  
-|[단계](../../../extensibility/debugger/reference/idebugprocess3-step.md)|하나의 명령 또는 프로세스에서 문을 앞으로 이동 합니다.|  
+|[Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)|하나의 명령 또는 프로세스에서 문을 앞으로 이동 합니다.|  
 |[GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)|디버깅 하는 프로세스를 시작한 이유를 가져옵니다.|  
 |[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)|디버그 엔진에서 적절 한 식 계산기를 로드할 수 있도록 호스팅 언어를 설정 합니다.|  
 |[GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md)|현재이 프로세스에 대해 설정 하는 언어를 검색 합니다.|  

@@ -1,31 +1,31 @@
 ---
-title: "MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MODULE_SYMBOL_SEARCH_INFO"
-helpviewer_keywords: 
-  - "MODULE_SYMBOL_SEARCH_INFO 구조"
+title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MODULE_SYMBOL_SEARCH_INFO
+helpviewer_keywords: MODULE_SYMBOL_SEARCH_INFO structure
 ms.assetid: 432aff03-08a5-4c5a-b2d5-e212090fc70a
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 967da176757dbd9d1ac09b8710074f9038533734
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# MODULE_SYMBOL_SEARCH_INFO
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="modulesymbolsearchinfo"></a>MODULE_SYMBOL_SEARCH_INFO
 에 대 한 검색이 기호 검색 경로 대 한 상태 정보를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 typedef struct _tagSYMBOL_SEARCH_INFO  
 {  
    SYMBOL_SEARCH_INFO_FIELDS dwValidFields;  
@@ -33,7 +33,7 @@ typedef struct _tagSYMBOL_SEARCH_INFO
 } MODULE_SYMBOL_SEARCH_INFO;  
 ```  
   
-```c#  
+```csharp  
 public struct MODULE_SYMBOL_SEARCH_INFO {  
    public uint   dwValidFields;  
    public string bstrVerboseSearchInfo;  
@@ -42,21 +42,21 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
   
 #### <a name="parameters"></a>매개 변수  
  `dwValidFields`  
- 플래그의 조합 된 [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) 이 구조에 설명 된 검색 정보의 종류를 지정 하는 열거형입니다.  
+ 플래그의 조합 된 [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) 이 구조에서 설명한 검색 정보의 종류를 지정 하는 열거형입니다.  
   
  `bstrVerboseSearchInfo`  
- 검색 경로 및 결과 단일 문자열로 연결 합니다.  
+ 검색 경로 및 단일 문자열로 연결 된 결과입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 구조에 대 한 호출에서 반환 되는 [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) 메서드.  
   
- 하는 경우는 `bstrVerboseSearchInfo` 필드가 비어 있지 않으면 다음 검색 경로 및 해당 검색 결과의 목록을 포함 합니다. 목록 경로, 줄임표 ("..."), 결과 뒤 다음으로 지정 됩니다. 둘 이상의 경로 결과 쌍 이면 각 쌍은 "\r\n" (캐리지 리턴/줄 바꿈) 쌍으로 구분 됩니다. 패턴은 다음과 같습니다.  
+ 경우는 `bstrVerboseSearchInfo` 필드가 비어 있지 않으면 다음 검색 경로 및 해당 검색 결과의 목록을 포함 합니다. 목록 뒤 결과 뒤에 줄임표가 ("…"), 경로으로 지정 됩니다. 둘 이상의 경로 결과 쌍 이면 각 쌍은 "\r\n" (캐리지 리턴/줄 바꿈) 쌍으로 구분 됩니다. 패턴은 다음과 같습니다.  
   
- \< 경로>... \< 결과>\r\n \< 경로>... \< 결과>\r\n \< 경로>... \< 결과>  
+ \<경로 >... \<결과 > \r\n\<경로 >... \<결과 > \r\n\<경로 >... \<결과 >  
   
- 마지막 항목 \r\n 시퀀스 없는 참고 합니다.  
+ 마지막 항목 \r\n 시퀀스 하지 않았는지 확인 합니다.  
   
- 다음은 가능한 `bstrVerboseSearchInfo` 문자열을 표준 출력에 전송 되었습니다.  
+ 다음은 가능한 `bstrVerboseSearchInfo` 를 표준 출력으로 전송 된 문자열입니다.  
   
  `c:\symbols\user32.pdb... File not found.`  
   
@@ -67,7 +67,7 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 ## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   

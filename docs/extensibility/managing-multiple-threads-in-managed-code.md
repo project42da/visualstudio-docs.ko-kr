@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59730063-cc29-4dae-baff-2234ad8d0c8f
-caps.latest.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c246c8be1d10893b018d5d0c5727d4af42efdc6b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 21fcc9388b40baa9e003b4beb876ba2f0f23fbaf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-managing-multiple-threads-in-managed-code"></a>방법: 관리 코드에서 다중 스레드 관리
 비동기 메서드를 호출 하거나는 Visual Studio UI 스레드가 아닌 스레드에서 실행 하는 작업을 제공 하는 관리 되는 VSPackage 확장을 설정한 경우 다음 지침을 따라야 합니다. 완료 하려면 다른 스레드에서 작업을 기다릴 필요 하지 않습니다 때문에 UI 스레드를 응답 유지할 수 있습니다. 코드 보다 효율적으로 수행할 수 스택 공간을 차지 하는 추가 스레드가 없기 때문에 있고 더 안정적이 고 쉽게 교착 상태 및 중지 문제를 방지 하기 때문에 디버깅할 수 있도록 만들 수 있습니다.  

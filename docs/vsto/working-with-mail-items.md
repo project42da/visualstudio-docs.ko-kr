@@ -1,11 +1,10 @@
 ---
-title: Working with Mail Items | Microsoft Docs
+title: "메일 항목 작업 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,35 +16,34 @@ helpviewer_keywords:
 - mail items [Office development in Visual Studio]
 - mail items [Office development in Visual Studio], about mail items
 ms.assetid: e5c82974-d302-49dc-9487-9b265125af03
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: a717fac19a3e88e656c8179c9831a49ac5e661c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 55b1da36fbf982b26f079b0aebbee67bc9d5f203
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="working-with-mail-items"></a>Working with Mail Items
-  The <xref:Microsoft.Office.Interop.Outlook.MailItem> class contains the methods and properties you use to perform tasks with e-mail messages.  
+# <a name="working-with-mail-items"></a>메일 항목 작업
+  <xref:Microsoft.Office.Interop.Outlook.MailItem> 클래스는 메서드 및 속성을 사용 하 여 전자 메일 메시지를 사용 하 여 작업을 수행할 포함 합니다.  
   
-|Task|Procedure|  
+|작업|프로시저|  
 |----------|---------------|  
-|Create an e-mail message.|[How to: Programmatically Create an E-Mail Item](../vsto/how-to-programmatically-create-an-e-mail-item.md)|  
-|Send an e-mail message.|[How to: Programmatically Send E-Mail](../vsto/how-to-programmatically-send-e-mail-programmatically.md)|  
-|Respond to new e-mail messages with a custom action.|[How to: Programmatically Perform Actions When an E-Mail Message Is Received](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)|  
-|Save attachments.|[How to: Programmatically Save Attachments from Outlook E-Mail Items](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)|  
-|Add attachments|[How to: Programmatically Attach Files to Outlook E-Mail Items](../vsto/how-to-programmatically-attach-files-to-outlook-e-mail-items.md)|  
-|Iterate through all unread messages.|[How to: Programmatically Retrieve Unread Messages from the Inbox](../vsto/how-to-programmatically-retrieve-unread-messages-from-the-inbox.md)|  
+|전자 메일 메시지를 만듭니다.|[방법: 프로그래밍 방식으로 전자 메일 항목 만들기](../vsto/how-to-programmatically-create-an-e-mail-item.md)|  
+|전자 메일 메시지를 보냅니다.|[방법: 프로그래밍 방식으로 전자 메일 보내기](../vsto/how-to-programmatically-send-e-mail-programmatically.md)|  
+|사용자 지정 작업으로 새 전자 메일 메시지에 응답 합니다.|[방법: 프로그래밍 방식으로 전자 메일 메시지를 받은 경우 작업 수행](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)|  
+|첨부 파일을 저장 합니다.|[방법: 프로그래밍 방식으로 Outlook 전자 메일 항목의 첨부 파일 저장](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)|  
+|첨부 파일 추가|[방법: 프로그래밍 방식으로 Outlook 전자 메일 항목에 파일 첨부](../vsto/how-to-programmatically-attach-files-to-outlook-e-mail-items.md)|  
+|읽지 않은 모든 메시지를 검색 합니다.|[방법: 프로그래밍 방식으로 받은 편지함에서 읽지 않은 메시지 검색](../vsto/how-to-programmatically-retrieve-unread-messages-from-the-inbox.md)|  
   
- For more information about Outlook tasks and the Outlook object model, see [Outlook Object Model Overview](../vsto/outlook-object-model-overview.md).  
+ Outlook 작업 및 Outlook 개체 모델에 대한 자세한 내용은 [Outlook Object Model Overview](../vsto/outlook-object-model-overview.md)를 참조하세요.  
   
-## <a name="see-also"></a>See Also  
- [Working with Contact Items](../vsto/working-with-contact-items.md)   
- [Working with Folders](../vsto/working-with-folders.md)   
- [Working with Calendar Items](../vsto/working-with-calendar-items.md)   
- [Outlook Solutions](../vsto/outlook-solutions.md)  
+## <a name="see-also"></a>참고 항목  
+ [연락처 항목 작업](../vsto/working-with-contact-items.md)   
+ [폴더 작업](../vsto/working-with-folders.md)   
+ [달력 항목 작업](../vsto/working-with-calendar-items.md)   
+ [Outlook 솔루션](../vsto/outlook-solutions.md)  
   
   

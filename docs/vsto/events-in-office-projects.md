@@ -1,12 +1,10 @@
 ---
-title: Events in Office Projects | Microsoft Docs
+title: "Office 프로젝트의 이벤트 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -35,33 +33,32 @@ helpviewer_keywords:
 - events [Office development in Visual Studio]
 - ThisAddIn_Shutdown
 ms.assetid: 666d7f23-ef85-4f2e-9cd3-258df5bdc6fd
-caps.latest.revision: 51
-author: kempb
-ms.author: kempb
+caps.latest.revision: "51"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 6a54e56cbb529482b8980d041044ff8c07b0cd1b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 48670b03444a8701dc3c23fe591a962e01f51f31
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="events-in-office-projects"></a>Events in Office Projects
-  Each Office project template automatically generates several event handlers. The event handlers for document-level customizations are slightly different from event handlers for VSTO Add-ins.  
+# <a name="events-in-office-projects"></a>Office 프로젝트의 이벤트
+  각 Office 프로젝트 템플릿은 몇 가지 이벤트 처리기를 자동으로 생성합니다. 문서 수준 사용자 지정의 이벤트 처리기는 VSTO 추가 기능의 이벤트 처리기와 약간 다릅니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## <a name="document-level-projects"></a>Document-Level Projects  
- Visual Studio provides generated code behind new or existing documents or worksheets in document-level customizations. This code raises two different events: **Startup** and **Shutdown**.  
+## <a name="document-level-projects"></a>문서 수준 프로젝트  
+ Visual Studio에서는 문서 수준 사용자 지정의 신규 또는 기존 문서나 워크시트 뒤에서 생성된 코드를 제공합니다. 이 코드에서는 두 가지 이벤트인 **Startup** 및 **Shutdown**을 발생시킵니다.  
   
-### <a name="startup-event"></a>Startup Event  
- The **Startup** event is raised for each of the host items (document, workbook or worksheet) after the document is running and all the initialization code in the assembly has been run. It is the last thing to run in the constructor of the class that your code is running in. For more information about host items, see [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md).  
+### <a name="startup-event"></a>Startup 이벤트  
+ **Startup** 이벤트는 문서가 실행 중이고 어셈블리의 모든 초기화 코드가 실행된 후 각 호스트 항목(문서, 통합 문서 또는 워크시트)에 대해 발생합니다. 이 이벤트는 코드가 실행되고 있는 클래스의 생성자에서 실행될 마지막 항목입니다. 호스트 항목에 대한 자세한 내용은 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)를 참조하세요.  
   
- When you create a document-level project, Visual Studio creates event handlers for the **Startup** event in the generated code files:  
+ 문서 수준 프로젝트를 만드는 경우 Visual Studio에서는 생성된 코드 파일에서 **Startup** 이벤트에 대한 이벤트 처리기를 만듭니다.  
   
--   For Microsoft Office Word projects, the event handler is named `ThisDocument_Startup`.  
+-   Microsoft Office Word 프로젝트에 대한 이벤트 처리기의 이름은 `ThisDocument_Startup`입니다.  
   
--   For Microsoft Office Excel projects, the event handlers have the following names:  
+-   Microsoft Office Excel 프로젝트에 대한 이벤트 처리기의 이름은 다음과 같습니다.  
   
     -   `Sheet1_Startup`  
   
@@ -71,14 +68,14 @@ ms.lasthandoff: 08/30/2017
   
     -   `ThisWorkbook_Startup`  
   
-### <a name="shutdown-event"></a>Shutdown Event  
- The **Shutdown** event is raised for each of the host items (document or worksheet) when the application domain that your code is loaded in is about to unload. It is the last thing to be called in the class as it unloads.  
+### <a name="shutdown-event"></a>Shutdown 이벤트  
+ **Shutdown** 이벤트는 코드가 로드된 응용 프로그램 도메인이 언로드되려고 할 때 각 호스트 항목(문서 또는 워크시트)에 대해 발생합니다. 이 이벤트는 언로드될 때 클래스에서 호출되는 마지막 항목입니다.  
   
- When you create a document-level project, Visual Studio creates event handlers for the **Shutdown** event in the generated code files:  
+ 문서 수준 프로젝트를 만드는 경우 Visual Studio에서는 생성된 코드 파일에서 **Shutdown** 이벤트에 대한 이벤트 처리기를 만듭니다.  
   
--   For Microsoft Office Word projects, the event handler is named `ThisDocument_Shutdown`.  
+-   Microsoft Office Word 프로젝트에 대한 이벤트 처리기의 이름은 `ThisDocument_Shutdown`입니다.  
   
--   For Microsoft Office Excel projects, the event handlers have the following names:  
+-   Microsoft Office Excel 프로젝트에 대한 이벤트 처리기의 이름은 다음과 같습니다.  
   
     -   `Sheet1_Shutdown`  
   
@@ -89,24 +86,26 @@ ms.lasthandoff: 08/30/2017
     -   `ThisWorkbook_Shutdown`  
   
 > [!NOTE]  
->  Do not programmatically remove controls during the **Shutdown** event handler of the document. The UI elements of the document are no longer available when the **Shutdown** event occurs. If you want to remove controls before the application closes, add your code to another event handler, such as **BeforeClose** or **BeforeSave**.  
+>  문서의 **Shutdown** 이벤트 처리기 중에 프로그래밍 방식으로 컨트롤을 제거하지 마세요. 문서의 UI 요소는 **Shutdown** 이벤트가 발생할 때 더 이상 사용할 수 없습니다. 응용 프로그램이 닫히기 전에 컨트롤을 제거하려면 **BeforeClose** , **BeforeSave**등의 다른 이벤트 처리기에 코드를 추가합니다.  
   
-### <a name="event-handler-method-declarations"></a>Event Handler Method Declarations  
- Every event handler method declaration has the same arguments passed to it: *sender* and *e*. In Excel, the *sender* argument refers to the sheet, such as `Sheet1` or `Sheet2`; in Word, the *sender* argument refers to the document. The *e* argument refers to the standard arguments for an event, which are not used in this case.  
+### <a name="event-handler-method-declarations"></a>이벤트 처리기 메서드 선언  
+ 모든 이벤트 처리기 메서드 선언에는 동일한 인수인 *sender* 및 *e*가 전달됩니다. Excel에서 *sender* 인수는 `Sheet1` , `Sheet2`등의 시트를 참조하고, Word에서 *sender* 인수는 문서를 참조합니다. *e* 인수는 이벤트의 표준 인수를 참조합니다. 이 경우에는 표준 인수가 사용되지 않습니다.  
   
- The following code example shows the default event handlers in document-level projects for Word.  
+ 다음 코드 예제에서는 Word용 문서 수준 프로젝트의 기본 이벤트 처리기를 보여 줍니다.  
   
- [!code-vb[Trin_VstcoreWordAutomation#121](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#121)] [!code-csharp[Trin_VstcoreWordAutomation#121](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#121)]  
+ [!code-vb[Trin_VstcoreWordAutomation#121](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#121)]
+ [!code-csharp[Trin_VstcoreWordAutomation#121](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#121)]  
   
- The following code example shows the default event handlers in document-level projects for Excel.  
+ 다음 코드 예제에서는 Excel용 문서 수준 프로젝트의 기본 이벤트 처리기를 보여 줍니다.  
   
 > [!NOTE]  
->  The following code example shows the event handlers in the `Sheet1` class. The names of the event handlers in other host item classes correspond to the class name. For example, in the `Sheet2` class, the **Startup** event handler is named `Sheet2_Startup`. In the `ThisWorkbook` class, the **Startup** event handler is named `ThisWorkbook_Startup`.  
+>  다음 코드 예제에서는 `Sheet1` 클래스의 이벤트 처리기를 보여 줍니다. 다른 호스트 항목 클래스의 이벤트 처리기 이름은 클래스 이름에 해당합니다. 예를 들어 `Sheet2` 클래스에서 **Startup** 이벤트 처리기의 이름은 `Sheet2_Startup`을 발생시킵니다. 에 `ThisWorkbook` 클래스는 **시작** 이벤트 처리기의 이름은 `ThisWorkbook_Startup`합니다.  
   
- [!code-csharp[Trin_VstcoreExcelAutomation#83](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#83)] [!code-vb[Trin_VstcoreExcelAutomation#83](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#83)]  
+ [!code-csharp[Trin_VstcoreExcelAutomation#83](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#83)]
+ [!code-vb[Trin_VstcoreExcelAutomation#83](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#83)]  
   
-### <a name="order-of-events-in-document-level-excel-projects"></a>Order of Events in Document-Level Excel Projects  
- The **Startup** event handlers in Excel projects are called in this order:  
+### <a name="order-of-events-in-document-level-excel-projects"></a>문서 수준 Excel 프로젝트의 이벤트 순서  
+ Excel 프로젝트의 **Startup** 이벤트 처리기는 다음 순서로 호출됩니다.  
   
 1.  `ThisWorkbook_Startup`.  
   
@@ -116,9 +115,9 @@ ms.lasthandoff: 08/30/2017
   
 4.  `Sheet3_Startup`.  
   
-5.  Other sheets in order.  
+5.  순서에 있는 다른 시트  
   
- The **Shutdown** event handlers in a workbook solution are called in this order:  
+ 통합 문서 솔루션의 **Shutdown** 이벤트 처리기는 다음 순서로 호출됩니다.  
   
 1.  `ThisWorkbook_Shutdown`.  
   
@@ -128,40 +127,40 @@ ms.lasthandoff: 08/30/2017
   
 4.  `Sheet3_Shutdown`.  
   
-5.  Other sheets in order.  
+5.  순서에 있는 다른 시트  
   
- The order is determined when the project is compiled. If the user rearranges the sheets at run time, it does not change the order that the events are raised the next time the workbook is opened or closed.  
+ 순서는 프로젝트가 컴파일될 때 결정됩니다. 사용자가 런타임에 시트를 다시 정렬하는 경우 다음번에 통합 문서가 열리거나 닫힐 때 이벤트가 발생하는 순서는 변경되지 않습니다.  
   
-## <a name="vsto-add-in-projects"></a>VSTO Add-in Projects  
- Visual Studio provides generated code in VSTO Add-ins. This code raises two different events: <xref:Microsoft.Office.Tools.AddInBase.Startup> and <xref:Microsoft.Office.Tools.AddInBase.Shutdown>.  
+## <a name="vsto-add-in-projects"></a>VSTO 추가 기능 프로젝트  
+ Visual Studio에서는 VSTO 추가 기능에서 생성된 코드를 제공합니다. 이 코드에서는 두 가지 이벤트인 <xref:Microsoft.Office.Tools.AddInBase.Startup> 및 <xref:Microsoft.Office.Tools.AddInBase.Shutdown>을 발생시킵니다.  
   
-### <a name="startup-event"></a>Startup Event  
- The <xref:Microsoft.Office.Tools.AddIn.Startup> event is raised after the VSTO Add-in is loaded and all the initialization code in the assembly has been run. This event is handled by the `ThisAddIn_Startup` method in the generated code file.  
+### <a name="startup-event"></a>Startup 이벤트  
+ <xref:Microsoft.Office.Tools.AddIn.Startup> 이벤트는 VSTO 추가 기능이 로드되고 어셈블리의 모든 초기화 코드가 실행된 후 발생합니다. 이 이벤트는 생성된 코드 파일의 `ThisAddIn_Startup` 메서드에서 처리됩니다.  
   
- Code in the `ThisAddIn_Startup` event handler is the first user code to run, unless your VSTO Add-in overrides the <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> method. In this case, the `ThisAddIn_Startup` event handler is called after <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>.  
+ VSTO 추가 기능이 `ThisAddIn_Startup` 메서드를 재정의하지 않는 한 <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> 이벤트 처리기의 코드는 실행할 첫 번째 사용자 코드입니다. 이 경우에 `ThisAddIn_Startup` 이벤트 처리기는 <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>뒤에 호출됩니다.  
   
- Don't add code in the `ThisAdd-In_Startup` event handler if the code requires a document to be open. Instead, add that code to an event that the Office application raises when a user creates or opens a document. For more information, see [Accessing a Document When the Office Application Starts](../vsto/programming-vsto-add-ins.md#AccessingDocuments).  
+ 코드를 추가 하지는 `ThisAdd-In_Startup` 이벤트 처리기 코드를 실행 하려면 문서를 열어야 하는 경우. 대신 사용자가 문서를 만들거나 열 때 Office 응용 프로그램에서 발생하는 이벤트에 해당 코드를 추가합니다. 자세한 내용은 [Accessing a Document When the Office Application Starts](../vsto/programming-vsto-add-ins.md#AccessingDocuments)을 참조하세요.  
   
- For more information about the startup sequence of VSTO Add-ins, see [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md).  
+ VSTO 추가 기능의 시작 시퀀스에 대 한 자세한 내용은 참조 [아키텍처의 VSTO 추가 기능](../vsto/architecture-of-vsto-add-ins.md)합니다.  
   
-### <a name="shutdown-event"></a>Shutdown Event  
- The <xref:Microsoft.Office.Tools.AddInBase.Shutdown> event is raised when the application domain that your code is loaded in is about to be unloaded. This event is handled by the `ThisAddIn_Shutdown` method in the generated code file. This event handler is the last user code to run when the VSTO Add-in is unloaded.  
+### <a name="shutdown-event"></a>Shutdown 이벤트  
+ <xref:Microsoft.Office.Tools.AddInBase.Shutdown> 이벤트는 코드가 로드된 응용 프로그램 도메인이 언로드되려고 할 때 발생합니다. 이 이벤트는 생성된 코드 파일의 `ThisAddIn_Shutdown` 메서드에서 처리됩니다. 이 이벤트 처리기는 VSTO 추가 기능이 언로드될 때 실행할 마지막 사용자 코드입니다.  
   
-#### <a name="shutdown-event-in-outlook-vsto-add-ins"></a>Shutdown Event in Outlook VSTO Add-ins  
- The <xref:Microsoft.Office.Tools.AddInBase.Shutdown> event is raised only when the user disables the VSTO Add-in by using the COM Add-ins dialog box in Outlook. It is not raised when Outlook exits. If you have code that must run when Outlook exits, handle either of the following events:  
+#### <a name="shutdown-event-in-outlook-vsto-add-ins"></a>Outlook VSTO 추가 기능의 Shutdown 이벤트  
+ <xref:Microsoft.Office.Tools.AddInBase.Shutdown> 이벤트는 사용자가 Outlook에서 COM 추가 기능 대화 상자를 사용하여 VSTO 추가 기능을 사용하지 않도록 설정할 때만 발생합니다. 이 이벤트는 Outlook이 종료될 때 발생하지 않습니다. Outlook이 종료될 때 실행되어야 하는 코드가 있는 경우 다음 이벤트 중 하나를 처리합니다.  
   
--   The <xref:Microsoft.Office.Interop.Outlook.ApplicationEvents_11_Event.Quit> event of the <xref:Microsoft.Office.Interop.Outlook.Application> object.  
+-   <xref:Microsoft.Office.Interop.Outlook.ApplicationEvents_11_Event.Quit> 개체의 <xref:Microsoft.Office.Interop.Outlook.Application> 이벤트  
   
--   The <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close> event of the <xref:Microsoft.Office.Interop.Outlook.Explorer> object.  
+-   <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close> 개체의 <xref:Microsoft.Office.Interop.Outlook.Explorer> 이벤트  
   
 > [!NOTE]  
->  You can force Outlook to raise the <xref:Microsoft.Office.Tools.AddInBase.Shutdown> event when it exits by modifying the registry. However, if an administrator reverts this setting, any code that you add to the `ThisAddIn_Shutdown` method no longer runs when Outlook exits. For more information, see [Shutdown Changes for Outlook 2010](http://go.microsoft.com/fwlink/?LinkID=184614).  
+>  레지스트리를 수정하여 Outlook이 종료될 때 Outlook에서 <xref:Microsoft.Office.Tools.AddInBase.Shutdown> 이벤트를 강제로 발생시킬 수 있습니다. 그러나 관리자가 이 설정을 되돌리는 경우 `ThisAddIn_Shutdown` 메서드에 추가하는 모든 코드가 Outlook이 종료될 때 더 이상 실행되지 않습니다. 자세한 내용은 [Outlook 2010의 종료 변경 내용](http://go.microsoft.com/fwlink/?LinkID=184614)을 참조하세요.  
   
-## <a name="see-also"></a>See Also  
- [Developing Office Solutions](../vsto/developing-office-solutions.md)   
- [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)   
- [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)   
+## <a name="see-also"></a>참고 항목  
+ [Office 솔루션 개발](../vsto/developing-office-solutions.md)   
+ [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)   
+ [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
- [Office Project Templates Overview](../vsto/office-project-templates-overview.md)  
+ [Office 프로젝트 템플릿 개요](../vsto/office-project-templates-overview.md)  
   
   

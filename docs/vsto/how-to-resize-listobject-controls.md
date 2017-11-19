@@ -1,12 +1,10 @@
 ---
-title: 'How to: Resize ListObject Controls | Microsoft Docs'
+title: "방법: ListObject 컨트롤 크기 조정 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,87 +14,90 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], resizing
 - ListObject control, resizing
 ms.assetid: a4c7dceb-7b55-447e-9b88-c3596a2fc361
-caps.latest.revision: 50
-author: kempb
-ms.author: kempb
+caps.latest.revision: "50"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: df869317edc3a4bfecd9cc208c7434f82375088e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 9aafcb9a131743c09d139f6f210c0d50425f4cba
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-resize-listobject-controls"></a>How to: Resize ListObject Controls
-  You set the size of a <xref:Microsoft.Office.Tools.Excel.ListObject> control when you add it to a Microsoft Office Excel workbook; however, you might want to resize it at a later time. For example, you might want to change a two-column list to three columns.  
+# <a name="how-to-resize-listobject-controls"></a>방법: ListObject 컨트롤 크기 조정
+  <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤의 크기는 Microsoft Office Excel 통합 문서에 추가할 때 설정하지만 나중에 크기를 조정할 수 있습니다. 예를 들어 2열로 된 목록을 3열로 변경할 수 있습니다.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- You can resize <xref:Microsoft.Office.Tools.Excel.ListObject> controls at design time or at run time in document-level projects. You can resize <xref:Microsoft.Office.Tools.Excel.ListObject> controls at run time in an VSTO Add-in project.  
+ 문서 수준 프로젝트에서는 디자인 타임 또는 런타임에 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤의 크기를 조정할 수 있습니다. VSTO 추가 기능 프로젝트에서는 런타임에 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤의 크기를 조정할 수 있습니다.  
   
- This topic describes the following tasks:  
+ 이 항목에서는 다음 작업에 대해 설명합니다.  
   
--   [Resizing ListObject controls at design time](#designtime)  
+-   [디자인 타임에 ListObject 컨트롤 크기 조정](#designtime)  
   
--   [Resizing ListObject controls at run time in a document-level project](#runtimedoclevel)  
+-   [런타임에 문서 수준 프로젝트에서 ListObject 컨트롤 크기 조정](#runtimedoclevel)  
   
--   [Resizing ListObject controls at run time in an VSTO Add-in project](#runtimeaddin)  
+-   [런타임에 VSTO 추가 기능 프로젝트에서 ListObject 컨트롤 크기 조정](#runtimeaddin)  
   
- For more information about <xref:Microsoft.Office.Tools.Excel.ListObject> controls, see [ListObject Control](../vsto/listobject-control.md).  
+ 에 대 한 자세한 내용은 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤 참조 [ListObject 컨트롤](../vsto/listobject-control.md)합니다.  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Add Columns to a Data-Bound List Object at RunTime?](http://go.microsoft.com/fwlink/?LinkID=130318).  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요?: 추가 열을 런타임에 데이터 바인딩된 목록 개체?](http://go.microsoft.com/fwlink/?LinkID=130318)합니다.  
   
-##  <a name="designtime"></a> Resizing a ListObject Control at Design Time  
- To resize a list, you can click and drag one of the sizing handles, or you can redefine its size in the **Resize List** dialog box.  
+##  <a name="designtime"></a> 디자인 타임에 ListObject 컨트롤 크기 조정  
+ 목록 크기를 조정하려면 크기 조정 핸들 중 하나를 클릭하여 끌거나 **목록 크기 조정** 대화 상자에서 크기를 재정의합니다.  
   
-#### <a name="to-resize-a-list-by-using-the-resize-list-dialog-box"></a>To resize a list by using the Resize List dialog box  
+#### <a name="to-resize-a-list-by-using-the-resize-list-dialog-box"></a>목록 크기 조정 대화 상자를 사용하여 목록 크기를 조정하려면  
   
   
-1.  Click anywhere in the  <xref:Microsoft.Office.Tools.Excel.ListObject> table. The **Table Tools, Design** tab in the ribbon appears.  
+1.  아무 곳 이나 클릭는 <xref:Microsoft.Office.Tools.Excel.ListObject> 테이블입니다. **테이블 도구, 디자인** 리본 메뉴에 탭이 나타납니다.  
   
-2.  In the Properties section, click on **Resize Table**.  
+2.  속성 섹션에서 클릭 **테이블 크기를 조정**합니다.  
 
     ![VSTO_ResizeTable](../vsto/media/vsto-resizetable.png)
   
-3.  Select the new data range for your table.  
+3.  테이블에 대 한 새 데이터 범위를 선택 합니다.  
   
-4.  Click **OK**.  
+4.  **확인**을 클릭합니다.  
   
-##  <a name="runtimedoclevel"></a> Resizing a ListObject Control at Run Time in a Document-Level Project  
- You can resize a <xref:Microsoft.Office.Tools.Excel.ListObject> control at run time by using the <xref:Microsoft.Office.Tools.Excel.ListObject.Resize%2A> method. You cannot use this method to move the <xref:Microsoft.Office.Tools.Excel.ListObject> control to a new location on the worksheet. The headers must remain in the same row, and the resized <xref:Microsoft.Office.Tools.Excel.ListObject> control must overlap the original list object. The resized <xref:Microsoft.Office.Tools.Excel.ListObject> control must contain a header row, and at least one row of data.  
+##  <a name="runtimedoclevel"></a> 런타임에 문서 수준 프로젝트에서 ListObject 컨트롤 크기 조정  
+ <xref:Microsoft.Office.Tools.Excel.ListObject> 메서드를 사용하여 런타임에 <xref:Microsoft.Office.Tools.Excel.ListObject.Resize%2A> 컨트롤의 크기를 조정할 수 있습니다. 이 메서드를 사용하여 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤을 워크시트의 새 위치로 이동할 수는 없습니다. 머리글은 동일한 행에 유지되고 크기 조정된 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤은 원래 목록 개체에 겹쳐져야 합니다. 크기 조정된 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤에는 하나의 머리글 행과 하나 이상의 데이터 행이 있어야 합니다.  
   
-#### <a name="to-resize-a-list-object-programmatically"></a>To resize a list object programmatically  
+#### <a name="to-resize-a-list-object-programmatically"></a>프로그래밍 방식으로 목록 개체의 크기를 조정하려면  
   
-1.  Create a <xref:Microsoft.Office.Tools.Excel.ListObject> control that spans cell **A1** through **B3** on `Sheet1`.  
+1.  <xref:Microsoft.Office.Tools.Excel.ListObject> 에서 **A1** 부터 **B3** 까지의 셀을 포함하도록 `Sheet1`컨트롤을 만듭니다.  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#6)]  [!code-vb[Trin_VstcoreHostControlsExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#6)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#6)]
+     [!code-vb[Trin_VstcoreHostControlsExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#6)]  
   
-2.  Resize the list to include cells **A1** through **C5**.  
+2.  **A1** 부터 **C5**까지의 셀을 포함하도록 목록의 크기를 조정합니다.  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#7)]  [!code-vb[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#7)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#7)]
+     [!code-vb[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#7)]  
   
-##  <a name="runtimeaddin"></a> Resizing a ListObject at Run Time in an VSTO Add-in project  
- You can resize a <xref:Microsoft.Office.Tools.Excel.ListObject> control on any open worksheet at run time. For more information about how to add a <xref:Microsoft.Office.Tools.Excel.ListObject> control to a worksheet by using an VSTO Add-in, see [How to: Add ListObject Controls to Worksheets](../vsto/how-to-add-listobject-controls-to-worksheets.md).  
+##  <a name="runtimeaddin"></a> 런타임에 VSTO 추가 기능 프로젝트에서 ListObject 크기 조정  
+ 런타임에 열려 있는 워크시트에서 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤의 크기를 조정할 수 있습니다. VSTO 추가 기능을 사용하여 워크시트에 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤을 추가하는 방법에 대한 자세한 내용은 [How to: Add ListObject Controls to Worksheets](../vsto/how-to-add-listobject-controls-to-worksheets.md)을 참조하세요.  
   
-#### <a name="to-resize-a-list-object-programmatically"></a>To resize a list object programmatically  
+#### <a name="to-resize-a-list-object-programmatically"></a>프로그래밍 방식으로 목록 개체의 크기를 조정하려면  
   
-1.  Create a <xref:Microsoft.Office.Tools.Excel.ListObject> control that spans cell **A1** through **B3** on `Sheet1`.  
+1.  <xref:Microsoft.Office.Tools.Excel.ListObject> 에서 **A1** 부터 **B3** 까지의 셀을 포함하도록 `Sheet1`컨트롤을 만듭니다.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#12](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#12)]  [!code-vb[Trin_Excel_Dynamic_Controls#12](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#12)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#12](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#12)]
+     [!code-vb[Trin_Excel_Dynamic_Controls#12](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#12)]  
   
-2.  Resize the list to include cells **A1** through **C5**.  
+2.  **A1** 부터 **C5**까지의 셀을 포함하도록 목록의 크기를 조정합니다.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#13](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#13)]  [!code-vb[Trin_Excel_Dynamic_Controls#13](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#13)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#13](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#13)]
+     [!code-vb[Trin_Excel_Dynamic_Controls#13](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#13)]  
   
-## <a name="see-also"></a>See Also  
- [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
- [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
- [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)   
+## <a name="see-also"></a>참고 항목  
+ [런타임에 Word 문서 및 VSTO 추가 기능에서 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
+ [Office 문서의 컨트롤](../vsto/controls-on-office-documents.md)   
+ [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
- [ListObject Control](../vsto/listobject-control.md)   
- [How to: Add ListObject Controls to Worksheets](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
- [How to: Resize Bookmark Controls](../vsto/how-to-resize-bookmark-controls.md)   
- [How to: Resize NamedRange Controls](../vsto/how-to-resize-namedrange-controls.md)  
+ [확장 된 개체를 사용 하 여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
+ [ListObject 컨트롤](../vsto/listobject-control.md)   
+ [방법: 워크시트에 ListObject 컨트롤 추가](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
+ [방법: 책갈피 컨트롤 크기 조정](../vsto/how-to-resize-bookmark-controls.md)   
+ [방법: NamedRange 컨트롤 크기 조정](../vsto/how-to-resize-namedrange-controls.md)  
   
   

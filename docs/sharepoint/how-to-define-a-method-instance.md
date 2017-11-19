@@ -1,53 +1,55 @@
 ---
-title: "방법: 메서드 인스턴스 정의"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC[Visual Studio에서 SharePoint 개발], 메서드"
-  - "BDC[Visual Studio에서 SharePoint 개발], 메서드 인스턴스"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 메서드"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 메서드 인스턴스"
+title: "방법: 메서드 인스턴스 정의 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Business Data Connectivity service [SharePoint development in Visual Studio], method instance
+- BDC [SharePoint development in Visual Studio], method instance
+- BDC [SharePoint development in Visual Studio], method
+- Business Data Connectivity service [SharePoint development in Visual Studio], method
 ms.assetid: f0c8a686-c0de-414e-8de9-f228f59d1eb3
-caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 9316eaa48b11342891584e448f8bb67bdce6f682
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 메서드 인스턴스 정의
-  모델의 모든 메서드에 대해 적어도 하나의 메서드 인스턴스를 정의해야 합니다.  
+# <a name="how-to-define-a-method-instance"></a>방법: 메서드 인스턴스 정의
+  모델의 모든 메서드에 대해 메서드가 인스턴스를 하나 이상 정의 해야 합니다.  
   
- **BDC 메서드 세부 정보** 창에서 메서드 인스턴스를 추가합니다.  메서드 인스턴스를 추가하면 프로젝트의 모델 파일 XML에 `<MethodInstance>` 요소가 추가됩니다.  `<MethodInstance>` 요소의 특성에 대한 자세한 내용은 [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282) 를 참조하십시오.  
+ 사용 하 여 메서드 인스턴스 추가 **BDC 메서드 세부 정보** 창. 메서드 인스턴스 추가 하면 Visual Studio에서는 추가 `<MethodInstance>` 요소를 프로젝트에 모델 파일의 XML입니다. 특성에 대 한 자세한 내용은 `<MethodInstance>` 요소 참조 [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282)합니다.  
   
-### 메서드 인스턴스를 정의하려면  
+### <a name="to-define-a-method-instance"></a>메서드 인스턴스를 정의 하려면  
   
-1.  **BDC 메서드 세부 정보** 창에서 메서드 노드를 확장한 다음 **인스턴스** 노드를 확장합니다.  
+1.  에 **BDC 메서드 세부 정보** 창은 메서드의 해당 노드를 확장 한 다음 확장은 **인스턴스** 노드.  
   
-2.  **메서드 인스턴스 추가** 목록에서 **Finder 인스턴스 만들기** 를 선택합니다.  
+2.  에 **메서드 인스턴스 추가** 목록에서 선택 **Finder 인스턴스 만들기**합니다.  
   
-     **인스턴스** 노드 아래에 새 메서드 인스턴스가 표시됩니다.  
+     새 메서드 인스턴스 아래에 표시 된 **인스턴스** 노드.  
   
-3.  메뉴 모음에서 **보기**, **속성 창** 을 선택합니다.  
+3.  메뉴 모음에서 **보기**, 선택 **속성 창**합니다.  
   
-4.  **속성** 창에서 메서드 인스턴스의 속성을 설정합니다.  각 속성에 대한 자세한 내용은 [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282) 을 참조하십시오.  
+4.  에 **속성** 창 메서드 인스턴스의 속성을 설정 합니다. 각 속성에 대 한 자세한 내용은 참조 [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)   
  [방법: 모델에 엔터티 추가](../sharepoint/how-to-add-an-entity-to-a-model.md)   
- [방법: 메서드에 매개 변수 추가](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
+ [방법: 메서드에 매개 변수를 추가 합니다.](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [방법: 매개 변수의 형식 설명자를 정의 합니다.](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
  [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)  
   
   

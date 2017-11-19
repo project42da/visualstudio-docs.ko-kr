@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugPortNotify2
-helpviewer_keywords:
-- IDebugPortNotify2 interface
+f1_keywords: IDebugPortNotify2
+helpviewer_keywords: IDebugPortNotify2 interface
 ms.assetid: 43278b79-bf16-4c08-bcf1-6f7f7a17feab
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: de163fdf55052ff4cc2f1599bc8ddfd162d03df3
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 9aec1465334a4399136d47c29faa8cccbb99c3a2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugportnotify2"></a>IDebugPortNotify2
 이 인터페이스를 등록 하거나에서 실행 되는 포트와 디버깅할 수 있는 프로그램의 등록을 취소 합니다.  
@@ -59,7 +43,7 @@ IDebugPortNotify2 : IUnknown
 |[AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)|실행 되는 포트를 디버깅할 수 있는 프로그램을 등록 합니다.|  
 |[RemoveProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md)|실행 되는 포트에서 디버깅할 수 있는 프로그램의 등록을 취소 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  디버그 포트에 프로그램의 로드 되거나 언로드될 때 알아야 하는 방법이, 하지 않는 한 사용자 지정 포트 공급자는이 인터페이스를 구현 해야 합니다. 특정 포트를 통해 디버깅을 위해 로드 되는 모든 프로그램은이 인터페이스를 사용 하 여 추적 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
