@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Collecting Data Using a Windows Form | Microsoft Docs'
+title: "연습: Windows Form을 사용 하 여 데이터를 수집 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,134 +16,136 @@ helpviewer_keywords:
 - forms [Office development in Visual Studio], walkthroughs
 - worksheets [Office development in Visual Studio], collecting data
 ms.assetid: 40e87f7f-cfbb-4761-bf1b-d042f45f4f09
-caps.latest.revision: 54
-author: kempb
-ms.author: kempb
+caps.latest.revision: "54"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: d69e91088401857391c935f768e171153a50faeb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 32156e4d2c9e8e5f809a4de64478667e7133aeb1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-collecting-data-using-a-windows-form"></a>Walkthrough: Collecting Data Using a Windows Form
-  This walkthrough demonstrates how to open a Windows Form from a document-level customization for Microsoft Office Excel, collect information from the user, and write that information into a worksheet cell.  
+# <a name="walkthrough-collecting-data-using-a-windows-form"></a>연습: Windows Form을 사용하여 데이터 수집
+  이 연습에서는 Microsoft Office Excel용 문서 수준 사용자 지정에서 Windows Form을 열고 사용자로부터 정보를 수집하고 워크시트 셀에 해당 정보를 기록하는 방법을 보여 줍니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- Although this walkthrough uses a document-level project for Excel specifically, the concepts demonstrated by the walkthrough are applicable to other Office projects.  
+ 이 연습에서는 Excel용 문서 수준 프로젝트를 사용하지만 연습에서 설명하는 개념을 다른 Office 프로젝트에 적용할 수 있습니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] 또는 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]  
   
 > [!NOTE]  
->  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="creating-a-new-project"></a>Creating a New Project  
- The first step is to create an Excel Workbook project.  
+## <a name="creating-a-new-project"></a>새 프로젝트 만들기  
+ 첫 번째 단계에서 Excel 통합 문서 프로젝트를 만듭니다.  
   
-#### <a name="to-create-a-new-project"></a>To create a new project  
+#### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
   
-1.  Create an Excel Workbook project with the name **WinFormInput**, and select **Create a new document** in the wizard. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  **WinFormInput**이라는 이름의 Excel 통합 문서 프로젝트를 만들고 마법사에서 **새 문서 만들기** 를 선택합니다. 자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
   
-     Visual Studio opens the new Excel workbook in the designer and adds the **WinFormInput** project to **Solution Explorer**.  
+     Visual Studio의 디자이너에 새 Excel 통합 문서가 열리고 **WinFormInput** 프로젝트가 **솔루션 탐색기**에 추가됩니다.  
   
-## <a name="adding-a-namedrange-control-to-the-worksheet"></a>Adding a NamedRange Control to the Worksheet  
+## <a name="adding-a-namedrange-control-to-the-worksheet"></a>워크시트에 NamedRange 컨트롤 추가  
   
-#### <a name="to-add-a-named-range-to-sheet1"></a>To add a named range to Sheet1  
+#### <a name="to-add-a-named-range-to-sheet1"></a>Sheet1에 명명된 범위를 추가하려면  
   
-1.  Select cell **A1** on `Sheet1`.  
+1.  **에서** A1 `Sheet1`셀을 선택합니다.  
   
-2.  In the **Name** box, type **formInput**.  
+2.  **이름** 상자에 **formInput**를 입력합니다.  
   
-     The **Name** box is located to the left of the formula bar, just above column **A** of the worksheet.  
+     **이름** 상자는 워크시트의 **A** 열 바로 위에 수식 입력줄의 왼쪽에 있습니다.  
   
-3.  Press ENTER.  
+3.  Enter 키를 누릅니다.  
   
-     A <xref:Microsoft.Office.Tools.Excel.NamedRange> control is added to cell **A1**. There is no visible indication on the worksheet, but **formInput** appears in the **Name** box (just above the worksheet on the left side) and in the **Properties** window when cell **A1** is selected.  
+     <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤이 **A1**셀에 추가됩니다. 워크시트에 볼 수 있는 표시가 없지만 **A1** 셀을 선택하면 **formInput** 이 **이름** 상자(왼쪽에 워크시트 바로 위) 및 **속성** 창에 나타납니다.  
   
-## <a name="adding-a-windows-form-to-the-project"></a>Adding a Windows Form to the Project  
- Create a Windows Form to prompt the user for information.  
+## <a name="adding-a-windows-form-to-the-project"></a>프로젝트에 새 Windows Form 추가  
+ 사용자에게 정보 확인 메시지를 표시하는 Windows Form을 만듭니다.  
   
-#### <a name="to-add-a-windows-form"></a>To add a Windows Form  
+#### <a name="to-add-a-windows-form"></a>Windows Form을 추가하려면  
   
-1.  Select the project **WinFormInput** in **Solution Explorer**.  
+1.  **솔루션 탐색기** 에서 **WinFormInput**프로젝트를 선택합니다.  
   
-2.  On the **Project** menu, click **Add Windows Form**.  
+2.  **프로젝트** 메뉴에서 **새 Windows Form 추가**를 클릭합니다.  
   
-3.  Name the form **GetInputString.vb** or **GetInputString.cs**, and then click **Add**.  
+3.  양식을 **GetInputString.vb** 또는 **GetInputString.cs**로 명명한 다음 **추가**를 클릭합니다.  
   
-     The new form opens in the designer.  
+     새 양식이 디자이너에서 열립니다.  
   
-4.  Add a <xref:System.Windows.Forms.TextBox> and a <xref:System.Windows.Forms.Button> to the form.  
+4.  폼에 <xref:System.Windows.Forms.TextBox> 및 <xref:System.Windows.Forms.Button> 를 추가합니다.  
   
-5.  Select the button, find the property **Text** in the **Properties** window, and change the text to **OK**.  
+5.  단추를 선택하고 **속성** 창에서 **Text** 속성을 찾은 다음 텍스트를 **확인**으로 변경합니다.  
   
- Next, add code to `ThisWorkbook.vb` or `ThisWorkbook.cs` to collect the user's information.  
+ 그런 다음 코드를 `ThisWorkbook.vb` 또는 `ThisWorkbook.cs` 에 추가하여 사용자의 정보를 수집합니다.  
   
-## <a name="displaying-the-windows-form-and-collecting-information"></a>Displaying the Windows Form and Collecting Information  
- Create an instance of the `GetInputString` Windows Form and display it, and then write the user's information into a cell in the worksheet.  
+## <a name="displaying-the-windows-form-and-collecting-information"></a>Windows Form 표시 및 정보 수집  
+ `GetInputString` Windows Form의 인스턴스를 만들어 표시한 다음 사용자의 정보를 워크시트의 임의 셀에 기록합니다.  
   
-#### <a name="to-display-the-form-and-collect-information"></a>To display the form and collect information  
+#### <a name="to-display-the-form-and-collect-information"></a>양식을 표시하고 정보를 수집하려면  
   
-1.  Right-click **ThisWorkbook.vb** or **ThisWorkbook.cs** in **Solution Explorer**, and then click **View Code**.  
+1.  **솔루션 탐색기** 에서 **ThisWorkbook.vb** 또는 **ThisWorkbook.cs**를 마우스 오른쪽 단추로 클릭한 다음 **코드 보기**를 클릭합니다.  
   
-2.  In the <xref:Microsoft.Office.Tools.Excel.Workbook.Open> event handler of `ThisWorkbook`, add the following code to declare a variable for the form `GetInputString` and then show the form.  
+2.  <xref:Microsoft.Office.Tools.Excel.Workbook.Open> 의 `ThisWorkbook`이벤트 처리기에서 다음 코드를 추가하여 `GetInputString` 양식에 대한 변수를 선언한 다음 양식을 표시합니다.  
   
     > [!NOTE]  
-    >  In C#, you must add an event handler as shown in the <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> event below. For information about creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+    >  C#에서는 아래 <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> 이벤트에 표시된 것처럼 이벤트 처리기를 추가해야 합니다. 이벤트 처리기를 만드는 방법은 참조 [하는 방법: Office 프로젝트의 이벤트 처리기 만들기](../vsto/how-to-create-event-handlers-in-office-projects.md)합니다.  
   
-     [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]  [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]  
+     [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]
+     [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]  
   
-3.  Create a method called `WriteStringToCell` that writes text to a named range. This method is called from the form, and the user's input is passed to the <xref:Microsoft.Office.Tools.Excel.NamedRange> control, `formInput`, on cell **A1**.  
+3.  명명된 범위에 텍스트를 쓰는 `WriteStringToCell` 이라는 메서드를 만듭니다. 이 메서드가 양식에서 호출되고 사용자의 입력이 <xref:Microsoft.Office.Tools.Excel.NamedRange> A1 `formInput`셀의 **컨트롤인**에 전달됩니다.  
   
-     [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]  [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]  
+     [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]
+     [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]  
   
- Next, add code to the form to handle the button's click event.  
+ 그런 다음 양식에 코드를 추가하여 단추의 클릭 이벤트를 처리합니다.  
   
-## <a name="sending-information-to-the-worksheet"></a>Sending Information to the Worksheet  
+## <a name="sending-information-to-the-worksheet"></a>워크시트에 정보 보내기  
   
-#### <a name="to-send-information-to-the-worksheet"></a>To send information to the worksheet  
+#### <a name="to-send-information-to-the-worksheet"></a>워크시트에 정보를 보내려면  
   
-1.  Right-click **GetInputString** in **Solution Explorer**, and then click **View Designer**.  
+1.  **솔루션 탐색기** 에서 **GetInputString**을 마우스 오른쪽으로 클릭한 다음 **뷰 디자이너**를 클릭합니다.  
   
-2.  Double-click the button to open the code file with the button's <xref:System.Windows.Forms.Control.Click> event handler added.  
+2.  해당 단추를 두 번 클릭하여 단추의 추가된 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기로 코드 파일을 엽니다.  
   
-3.  Add code to the event handler to take the input from the text box, send it to the function `WriteStringToCell`, and then close the form.  
+3.  코드를 이벤트 처리기에 추가하여 텍스트 상자에서 받은 입력을 `WriteStringToCell`함수로 보낸 다음 양식을 닫습니다.  
   
-     [!code-csharp[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs#3)]  [!code-vb[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb#3)]  
+     [!code-csharp[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs#3)]
+     [!code-vb[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb#3)]  
   
-## <a name="testing"></a>Testing  
- You can now run the project. The Windows Form appears, and your input appears in the worksheet.  
+## <a name="testing"></a>테스트  
+ 이제 프로젝트를 실행할 수 있습니다. Windows Form이 나타나고 사용자 입력이 워크시트에 표시됩니다.  
   
-#### <a name="to-test-your-workbook"></a>To test your workbook  
+#### <a name="to-test-your-workbook"></a>통합 문서를 테스트하려면  
   
-1.  Press F5 to run your project.  
+1.  F5 키를 눌러 프로젝트를 실행합니다.  
   
-2.  Confirm that the Windows Form appears.  
+2.  Windows Form이 나타나는지 확인합니다.  
   
-3.  Type **Hello World** in the text box, and then click **OK**.  
+3.  텍스트 상자에 **Hello World** 를 입력한 다음 **확인**을 클릭합니다.  
   
-4.  Confirm that **Hello World** appears in cell **A1** of the worksheet.  
+4.  **Hello World** 가 워크시트의 **A1** 셀에 나타나는지 확인합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- This walkthrough shows the basics of showing a Windows Form and passing data to a worksheet. Other tasks you may want to perform include:  
+## <a name="next-steps"></a>다음 단계  
+ 이 연습에서는 Windows Form을 표시하고 데이터를 워크시트에 전달하는 기본 사항을 보여 줍니다. 수행할 수 있는 다른 작업은 다음과 같습니다.  
   
--   Use Windows Forms controls on an Excel workbook or a Word document. For more information, see [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md).  
+-   Excel 통합 문서 또는 Word 문서에서 Windows Forms 컨트롤 사용. 자세한 내용은 [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)을 참조하세요.  
   
--   Modify the user interface of a Microsoft Office application from a document-level customization or an VSTO Add-in. For more information, see [Office UI Customization](../vsto/office-ui-customization.md).  
+-   문서 수준 사용자 지정 또는 VSTO 추가 기능에서 Microsoft Office 응용 프로그램의 사용자 인터페이스 수정. 자세한 내용은 참조 [Office UI 사용자 지정](../vsto/office-ui-customization.md)합니다.  
   
-## <a name="see-also"></a>See Also  
- [Developing Office Solutions](../vsto/developing-office-solutions.md)   
- [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)   
+## <a name="see-also"></a>참고 항목  
+ [Office 솔루션 개발](../vsto/developing-office-solutions.md)   
+ [Office 솔루션에서 코드 작성](../vsto/writing-code-in-office-solutions.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
- [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)   
- [Walkthroughs Using Word](../vsto/walkthroughs-using-word.md)   
- [Walkthroughs Using Excel](../vsto/walkthroughs-using-excel.md)  
+ [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md)   
+ [Word를 사용한 연습](../vsto/walkthroughs-using-word.md)   
+ [Excel을 사용한 연습](../vsto/walkthroughs-using-excel.md)  
   
   

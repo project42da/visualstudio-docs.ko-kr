@@ -1,38 +1,38 @@
 ---
-title: "JavaScript Console commands | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "JavaScript 콘솔 명령[Windows 스토어 앱]"
-  - "JavaScript 디버깅, 콘솔[Windows 스토어 앱]"
-  - "JavaScript 디버그, 콘솔[Windows 스토어 앱]"
+title: "Visual Studio에서 JavaScript 콘솔 명령 | Microsoft Docs"
+ms.custom: 
+ms.date: 07/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- JavaScript Console commands [UWP apps]
+- JavaScript debugging, console [UWP apps]
+- debugging JavaScript, console [UWP apps]
 ms.assetid: 359e2b24-6bb7-48e7-8b55-b570df0cb774
-caps.latest.revision: 47
-caps.handback.revision: 47
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "47"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d9808c664e5e3d06558faf8f9b44a6a2bb6e9b83
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
-# JavaScript Console commands
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-![Windows 및 Windows Phone에 적용](~/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+# <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio의 JavaScript 콘솔 명령
+![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- 명령을 사용하여 Visual Studio의 JavaScript 콘솔 창에서 메시지를 보내고 다른 작업을 수행할 수 있습니다. 해당 창을 사용 하는 방법을 보여 주는 예제를 보려면 [퀵 스타트: JavaScript 디버깅](../debugger/quickstart-debug-javascript-using-the-console.md)합니다. 이 항목의 내용은 Windows 스토어 앱, Windows Phone 스토어 앱 및 Visual Studio Tools for Apache Cordova를 사용하여 만든 앱에 적용됩니다. Cordova 앱에서 지원되는 콘솔 명령에 대한 자세한 내용은 [Debug Your App](../Topic/Debug%20Your%20App%20Built%20with%20Visual%20Studio%20Tools%20for%20Apache%20Cordova.md)를 참조하세요. Internet Explorer F12 도구에서 콘솔을 사용하는 방법에 대한 자세한 내용은 [이 항목](http://msdn.microsoft.com/library/ie/dn255006.aspx)을 참조하세요.  
+ 명령을 사용하여 Visual Studio의 JavaScript 콘솔 창에서 메시지를 보내고 다른 작업을 수행할 수 있습니다. 해당 창을 사용 하는 방법을 보여 주는 예제를 보려면 [퀵 스타트: JavaScript 디버그](../debugger/quickstart-debug-javascript-using-the-console.md)합니다. 이 항목의 정보는 UWP 앱 및 Apache Cordova 용 도구 Visual Studio를 사용 하 여 만든 앱에 적용 됩니다. Cordova 앱에서 지원 되는 콘솔 명령에 대 한 정보를 참조 하십시오. [응용 프로그램 디버그](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)합니다. Internet Explorer F12 도구에서 콘솔을 사용하는 방법에 대한 자세한 내용은 [이 항목](http://msdn.microsoft.com/library/ie/dn255006.aspx)을 참조하세요.  
   
- JavaScript 콘솔 창이 닫혀 있는 경우 Visual Studio에서 디버그하는 동안 **디버그** > **창** > **JavaScript 콘솔**를 참조하세요.  
+ JavaScript 콘솔 창이 닫혀 있습니다 열 수를 선택 하 여 Visual Studio에서 디버그 하는 동안 **디버그** > **Windows** > **JavaScript 콘솔**합니다.  
   
 > [!NOTE]
 >  디버깅 세션 중에 창을 사용할 수 없는 경우 프로젝트의 디버그 속성에서 디버거 형식이 **Script** 로 설정되었는지 확인하세요.  
@@ -59,10 +59,10 @@ manager: "ghogen"
 |`groupEnd()`|현재 그룹을 종료합니다.<br /><br /> 요구 사항:<br /><br /> Visual Studio 2013|`group` 명령의 예를 참조하세요.|  
 |`info(message)`|콘솔 창에 `message` 를 보냅니다. 메시지 앞에 정보 기호가 옵니다.|`console.info("info message");`<br /><br /> 추가 예제는 이 항목의 뒷부분에 나오는 [Formatting console.log output](#ConsoleLog) 을 참조하세요.|  
 |`log(message)`|콘솔 창에 `message` 를 보냅니다.<br /><br /> 개체를 전달하는 경우 이 명령은 해당 개체를 콘솔 창으로 보내고 개체 시각화 도우미에 표시합니다. 시각화 도우미를 사용하여 콘솔 창에서 속성을 검사할 수 있습니다.|`console.log("logging message");`|  
-|`msIsIndependentlyComposed(element)`|웹 앱에서 사용됩니다. JavaScript를 사용하는 스토어 앱에서는 지원되지 않습니다.|지원되지 않음|  
-|`profile(reportName)`|웹 앱에서 사용됩니다. JavaScript를 사용하는 스토어 앱에서는 지원되지 않습니다.|지원되지 않음|  
-|`profileEnd()`|웹 앱에서 사용됩니다. JavaScript를 사용하는 스토어 앱에서는 지원되지 않습니다.|지원되지 않음|  
-|`select(element)`|`element` DOM 탐색기 [에서 지정한 HTML](../debugger/quickstart-debug-html-and-css.md)를 선택합니다.|console.select(요소);|  
+|`msIsIndependentlyComposed(element)`|웹 앱에서 사용됩니다. JavaScript를 사용 하는 UWP 앱에서 지원 되지 않습니다.|지원되지 않습니다.|  
+|`profile(reportName)`|웹 앱에서 사용됩니다. JavaScript를 사용 하는 UWP 앱에서 지원 되지 않습니다.|지원되지 않습니다.|  
+|`profileEnd()`|웹 앱에서 사용됩니다. JavaScript를 사용 하는 UWP 앱에서 지원 되지 않습니다.|지원되지 않습니다.|  
+|`select(element)`|지정된 된 HTML 선택 `element` 에 [DOM 탐색기](../debugger/quickstart-debug-html-and-css.md)합니다.|console.select(요소);|  
 |`time (name)`|선택적 `name` 매개 변수에서 식별하는 타이머를 시작합니다. `console.timeEnd`와 함께 사용할 경우 `time` 과 `timeEnd`사이에 경과된 시간을 계산하고 `name` 문자열을 접두사로 사용하여 결과(단위: ms)를 콘솔에 보냅니다. 성능을 측정하기 위한 앱 코드 계측을 활성화하는 데 사용됩니다.|`console.time("app start");  app.start();  console.timeEnd("app start");`|  
 |`timeEnd(name)`|선택적 `name` 매개 변수에서 식별하는 타이머를 중지합니다. `time` 콘솔 명령을 참조하세요.|`console.time("app start"); app.start(); console.timeEnd("app start");`|  
 |`trace()`|스택 추적을 콘솔 창에 보냅니다. 추적에는 파일 이름, 줄 번호 및 열 번호 등의 정보와 완전한 호출 스택이 포함됩니다.|`console.trace();`|  
@@ -77,7 +77,7 @@ manager: "ghogen"
 |`$(id)`|ID별로 요소를 반환합니다. `document.getElementById(id)`에 대한 바로 가기 명령입니다. 여기서 `id` 는 요소 ID를 나타내는 문자열입니다.|`$("contenthost")`|  
 |`$$(selector)`|CSS 선택기 구문을 사용하여 지정된 선택기와 일치하는 요소의 배열을 반환합니다. `document.querySelectorAll()`에 대한 바로 가기 명령입니다.|`$$(".itemlist")`|  
 |`cd()`<br /><br /> `cd(window)`|식 계산 컨텍스트를 페이지의 기본 최상위 창에서 지정된 프레임의 창으로 변경할 수 있습니다. 매개 변수 없이 `cd()` 를 호출하면 컨텍스트가 최상위 창에 반환됩니다.|`cd();`<br /><br /> `cd(myframe);`|  
-|`select(element)`|[DOM 탐색기](../debugger/quickstart-debug-html-and-css.md)에서 지정된 요소를 선택합니다.|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|  
+|`select(element)`|지정 된 요소를 선택 [DOM 탐색기](../debugger/quickstart-debug-html-and-css.md)합니다.|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|  
 |`dir(object)`|지정된 개체에 대한 시각화 도우미를 반환합니다. 시각화 도우미를 사용하여 콘솔 창에서 속성을 검사할 수 있습니다.|`dir(obj);`|  
   
 ## <a name="checking-whether-a-console-command-exists"></a>콘솔 명령이 있는지 여부 확인  
@@ -93,7 +93,7 @@ if (console && console.log) {
 ## <a name="examining-objects-in-the-javascript-console-window"></a>JavaScript 콘솔 창에서 개체 검사  
  JavaScript 콘솔 창을 사용하면 범위 내에 있는 개체와 상호 작용할 수 있습니다. 콘솔 창에서 범위 외부의 개체를 검토하려면 코드에서 `console.log` , `console.dir`또는 기타 명령을 사용하세요. 또는 개체가 범위 내에 있는 경우 코드에 중단점을 설정(**중단점** > **Insert 중단점**)하여 콘솔 창에서 이 개체와 상호 작용할 수 있습니다.  
   
-##  <a name="a-nameconsoleloga-formatting-consolelog-output"></a><a name="ConsoleLog"></a> Console.log 출력 서식 지정  
+##  <a name="ConsoleLog"></a>Console.log 출력 서식 지정  
  여러 인수를 `console.log`에 전달하는 경우 콘솔은 인수를 배열로 처리하고 출력을 연결합니다.  
   
 ```javascript  
@@ -139,4 +139,4 @@ console.log("%s is %f years old!", user.first, user.age);
   
 ## <a name="see-also"></a>참고 항목  
  [퀵 스타트: JavaScript 디버깅](../debugger/quickstart-debug-javascript-using-the-console.md)   
- [퀵 스타트: HTML 및 CSS 디버깅](../debugger/quickstart-debug-html-and-css.md)
+ [빠른 시작: HTML 및 CSS 디버그](../debugger/quickstart-debug-html-and-css.md)

@@ -1,12 +1,10 @@
 ---
-title: 'How to: Add Windows Forms Controls to Office Documents | Microsoft Docs'
+title: "방법: Office 문서에 Windows Forms 컨트롤 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,129 +16,130 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], Windows Forms controls
 - documents [Office development in Visual Studio], Windows Forms controls
 ms.assetid: 4d188ad2-8e17-4eb0-8422-2ff56c683e3d
-caps.latest.revision: 54
-author: kempb
-ms.author: kempb
+caps.latest.revision: "54"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 6721c077316fd6c52ac1f793d87230a4bffe5ae4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 8044ede5e7a83028af305a906a1879807ade79a7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>How to: Add Windows Forms Controls to Office Documents
-  You can add Windows Forms controls to Microsoft Office Excel and Microsoft Office Word documents at design time in document-level projects. At run time, you can add controls in document-level customizations and in VSTO Add-ins. For example, you can add a <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> control to your worksheet so that users can select from a list of options.  
+  디자인 타임에 문서 수준 프로젝트에서 Microsoft Office Excel 및 Microsoft Office Word 문서에 Windows Forms 컨트롤을 추가할 수 있습니다. 런타임에 문서 수준 사용자 지정 및 VSTO 추가 기능에서 컨트롤을 추가할 수 있습니다. 예를 들어 사용자가 옵션 목록에서 선택할 수 있도록 워크시트에 <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> 컨트롤을 추가할 수 있습니다.  
   
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
   
- This topic describes the following tasks:  
+ 이 항목에서는 다음 작업에 대해 설명합니다.  
   
--   [Adding controls at design time](#designtime)  
+-   [디자인 타임에 컨트롤 추가](#designtime)  
   
--   [Adding controls at run time in document-level projects](#runtimedoclevel)  
+-   [런타임에 문서 수준 프로젝트에서 컨트롤 추가](#runtimedoclevel)  
   
--   [Adding controls at run time in VSTO Add-ins](#runtimeaddin)  
+-   [런타임에 VSTO 추가 기능에서 컨트롤 추가](#runtimeaddin)  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Add Controls to a Document Surface at Runtime?](http://go.microsoft.com/fwlink/?LinkId=132782).  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요?: 컨트롤 추가 런타임에 문서 화면에?](http://go.microsoft.com/fwlink/?LinkId=132782)합니다.  
   
-##  <a name="designtime"></a> Adding Controls at Design Time  
- There are several ways to add Windows Forms controls to the document in a document-level project at design time.  
+##  <a name="designtime"></a>디자인 타임에 컨트롤 추가  
+ 디자인 타임에 문서 수준 프로젝트의 문서에 Windows Forms 컨트롤을 추가하는 여러 가지 방법이 있습니다.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-#### <a name="to-drag-a-windows-forms-control-to-the-document"></a>To drag a Windows Forms control to the document  
+#### <a name="to-drag-a-windows-forms-control-to-the-document"></a>Windows Forms 컨트롤을 문서로 끌어오려면  
   
-1.  Create or open an Excel Workbook project or Word Document project in Visual Studio so that the document is visible in the designer. For information on creating projects, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  문서가 디자이너에 표시되도록 Visual Studio에서 Excel 통합 문서 프로젝트 또는 Word 문서 프로젝트를 만들거나 엽니다. 프로젝트를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)합니다.  
   
-2.  In the **Common Controls** tab of the **Toolbox**, click the control you want to add, and drag it to the document.  
-  
-    > [!NOTE]  
-    >  When you select a control in Excel, you will see **=EMBED("WinForms.Control.Host","")** in the **Formula Bar**. This text is necessary and should not be deleted.  
-  
-#### <a name="to-draw-a-windows-forms-control-on-the-document"></a>To draw a Windows Forms control on the document  
-  
-1.  Create or open an Excel Workbook project or Word Document project in Visual Studio so that the document is visible in the designer. For information on creating projects, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
-  
-2.  In the **Common Controls** tab of the **Toolbox**, click the control you want to add.  
-  
-3.  On the document, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.  
-  
-     The control is added to the document with the specified location and size.  
+2.  에 **공용 컨트롤** 탭은 **도구 상자**를 추가 하려는 컨트롤을 문서로 끌어 옵니다.  
   
     > [!NOTE]  
-    >  When you select a control in Excel, you will see **=EMBED("WinForms.Control.Host","")**  in the **Formula Bar**. This text is necessary and should not be deleted.  
+    >  Excel에서 컨트롤을 선택하는 경우 **수식 입력줄** 에 **=EMBED("WinForms.Control.Host","")**가 표시됩니다. 이 텍스트는 필요하며 삭제하면 안 됩니다.  
   
-#### <a name="to-add-a-windows-forms-control-to-the-document-by-single-clicking-the-control"></a>To add a Windows Forms control to the document by single-clicking the control  
+#### <a name="to-draw-a-windows-forms-control-on-the-document"></a>문서에서 Windows Forms 컨트롤을 그리려면  
   
-1.  Create or open an Excel Workbook project or Word Document project in Visual Studio so that the document is visible in the designer. For information on creating projects, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  문서가 디자이너에 표시되도록 Visual Studio에서 Excel 통합 문서 프로젝트 또는 Word 문서 프로젝트를 만들거나 엽니다. 프로젝트를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)합니다.  
   
-2.  In the **Common Controls** tab of the **Toolbox**, click the control you want to add  
+2.  에 **공용 컨트롤** 탭은 **도구 상자**를 추가 하려면 컨트롤을 클릭 합니다.  
   
-3.  One the document, click where you want the control to be added.  
+3.  문서에서 컨트롤의 왼쪽 위를 배치할 위치를 클릭한 다음 컨트롤의 오른쪽 아래를 배치할 위치로 끕니다.  
   
-     The control is added to the document with the default size.  
-  
-    > [!NOTE]  
-    >  When you select a control in Excel, you will see **=EMBED("WinForms.Control.Host","")** in the **Formula Bar**. This text is necessary and should not be deleted.  
-  
-#### <a name="to-add-a-windows-forms-control-to-the-document-by-double-clicking-the-control"></a>To add a Windows Forms control to the document by double-clicking the control  
-  
-1.  Create or open an Excel Workbook project or Word Document project in Visual Studio so that the document is visible in the designer. For information on creating projects, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
-  
-2.  In the **Common Controls** tab of the **Toolbox**, double-click the control you want to add.  
-  
-     The control is added to the document at the center of the document or active pane.  
+     지정된 위치와 크기를 사용하여 컨트롤이 문서에 추가됩니다.  
   
     > [!NOTE]  
-    >  When you select a control in Excel, you will see **=EMBED("WinForms.Control.Host","")** in the **Formula Bar**. This text is necessary and should not be deleted.  
+    >  Excel에서 컨트롤을 선택 하면 나타납니다 **=EMBED("WinForms.Control.Host","")** 에 **수식 입력줄**합니다. 이 텍스트는 필요하며 삭제하면 안 됩니다.  
   
-#### <a name="to-add-a-windows-forms-control-to-the-document-by-pressing-the-enter-key"></a>To add a Windows Forms control to the document by pressing the ENTER key  
+#### <a name="to-add-a-windows-forms-control-to-the-document-by-single-clicking-the-control"></a>컨트롤을 한 번 클릭하여 문서에 Windows Forms 컨트롤을 추가하려면  
   
-1.  Create or open an Excel Workbook project or Word Document project in Visual Studio so that the document is visible in the designer. For information on creating projects, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  문서가 디자이너에 표시되도록 Visual Studio에서 Excel 통합 문서 프로젝트 또는 Word 문서 프로젝트를 만들거나 엽니다. 프로젝트를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)합니다.  
   
-2.  In the **Common Controls** tab of the **Toolbox**, click the control you want to add, and press the ENTER key.  
+2.  에 **공용 컨트롤** 탭은 **도구 상자**를 추가할 컨트롤을 클릭 합니다.  
   
-     The control is added to the document at the center of the document or active pane.  
+3.  문서에서 컨트롤을 추가할 위치를 클릭합니다.  
   
-    > [!NOTE]  
-    >  When you select a control in Excel, you will see **=EMBED("WinForms.Control.Host","")** in the **Formula Bar**. This text is necessary and should not be deleted.  
-  
-##  <a name="runtimedoclevel"></a> Adding Controls at Run Time in Document-Level Projects  
- You can programmatically add Windows Forms controls to a document at run time. In Word, use methods of the <xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A> property of the `ThisDocument` class. In Excel, use methods of the <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> property of a `Sheet`*n* class. Each method has several overloads that enable you to specify the location of the control in different ways.  
-  
- When you add a Windows Forms control to a document at run time, the control is not persisted in the document when the document is closed. You can recreate the control the next time the document is opened. For more information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
-  
-#### <a name="to-add-a-windows-forms-control-at-run-time"></a>To add a Windows Forms control at run time  
-  
-1.  Use a method that has the name Add\<*control class*> (where *control class* is the class name of the Windows Forms control that you want to add, such as <xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>).  
-  
-     The following code example demonstrates how to add a <xref:Microsoft.Office.Tools.Excel.Controls.Button> to cell **C5** of `Sheet1` in a document-level project for Excel.  
-  
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#4)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#4)]  
-  
-##  <a name="runtimeaddin"></a> Adding Controls at Run Time in VSTO Add-ins  
- You can add Windows Forms controls programmatically to any open document at run time. First, generate a host item that is based on an open document or worksheet. Then, in Word, use methods of the <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> property of the new host item. In Excel, use methods of the <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> property of the new host item. Each method has several overloads that enable you to specify the location of the control in different ways.  
-  
- When you add a Windows Forms control to a document at run time, the control is not persisted in the document when the document is closed. You can recreate the control the next time the document is opened. For more information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
-  
- For more information about generating host items in VSTO Add-in projects, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
-  
-#### <a name="to-add-a-windows-forms-control-at-run-time"></a>To add a Windows Forms control at run time  
-  
-1.  Use a method that has the name Add\<*control class*> (where *control class* is the class name of the Windows Forms control that you want to add, such as <xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>).  
+     기본 크기를 사용하여 컨트롤이 문서에 추가됩니다.  
   
     > [!NOTE]  
-    >  In VSTO Add-in projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must add a reference to the Microsoft.Office.Tools.Excel.v4.0.Utilities.dll or Microsoft.Office.Tools.Word.v4.0.Utilities.dll assembly before you can access the Add\<*control class*> methods.  
+    >  Excel에서 컨트롤을 선택하는 경우 **수식 입력줄** 에 **=EMBED("WinForms.Control.Host","")**가 표시됩니다. 이 텍스트는 필요하며 삭제하면 안 됩니다.  
   
-     The following code example demonstrates how to add a <xref:Microsoft.Office.Tools.Word.Controls.Button> to the first paragraph of the active document by using a Word VSTO Add-in.  
+#### <a name="to-add-a-windows-forms-control-to-the-document-by-double-clicking-the-control"></a>컨트롤을 두 번 클릭하여 문서에 Windows Forms 컨트롤을 추가하려면  
   
-     [!code-vb[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#7)]  [!code-csharp[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#7)]  
+1.  문서가 디자이너에 표시되도록 Visual Studio에서 Excel 통합 문서 프로젝트 또는 Word 문서 프로젝트를 만들거나 엽니다. 프로젝트를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)합니다.  
   
-## <a name="see-also"></a>See Also  
- [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)   
- [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [How to: Resize Controls Within Worksheet Cells](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
+2.  에 **공용 컨트롤** 탭은 **도구 상자**, 추가할 컨트롤을 두 번 클릭 합니다.  
+  
+     컨트롤의 문서 또는 활성 창의 가운데에 추가됩니다.  
+  
+    > [!NOTE]  
+    >  Excel에서 컨트롤을 선택하는 경우 **수식 입력줄** 에 **=EMBED("WinForms.Control.Host","")**가 표시됩니다. 이 텍스트는 필요하며 삭제하면 안 됩니다.  
+  
+#### <a name="to-add-a-windows-forms-control-to-the-document-by-pressing-the-enter-key"></a>Enter 키를 눌러 문서에 Windows Forms 컨트롤을 추가하려면  
+  
+1.  문서가 디자이너에 표시되도록 Visual Studio에서 Excel 통합 문서 프로젝트 또는 Word 문서 프로젝트를 만들거나 엽니다. 프로젝트를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)합니다.  
+  
+2.  에 **공용 컨트롤** 탭은 **도구 상자**를 추가 하려면 컨트롤을 클릭 하 고 ENTER 키를 누릅니다.  
+  
+     컨트롤의 문서 또는 활성 창의 가운데에 추가됩니다.  
+  
+    > [!NOTE]  
+    >  Excel에서 컨트롤을 선택하는 경우 **수식 입력줄** 에 **=EMBED("WinForms.Control.Host","")**가 표시됩니다. 이 텍스트는 필요하며 삭제하면 안 됩니다.  
+  
+##  <a name="runtimedoclevel"></a>런타임에 문서 수준 프로젝트에서 컨트롤 추가  
+ 프로그래밍 방식으로 런타임에 Windows Forms 컨트롤을 문서에 추가할 수 있습니다. Word에서 `ThisDocument` 클래스의 <xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A> 속성 메서드를 사용합니다. Excel에서는 메서드를 사용는 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> 속성은 `Sheet`  *n*  클래스입니다. 각 메서드에는 다양한 방법으로 컨트롤의 위치를 지정할 수 있는 여러 오버로드가 있습니다.  
+  
+ 런타임에 Windows Forms 컨트롤을 문서에 추가할 경우 문서를 닫으면 컨트롤이 문서에 유지되지 않습니다. 다음에 문서를 열 때 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+  
+#### <a name="to-add-a-windows-forms-control-at-run-time"></a>런타임에 Windows Forms 컨트롤을 추가하려면  
+  
+1.  추가 된 이름을 가진 메서드를 사용 하 여\<*컨트롤 클래스*> (여기서 *컨트롤 클래스* 는 같은 추가 하려는 Windows Forms 컨트롤의 클래스 이름 <xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>).  
+  
+     다음 코드 예제에서는 추가 하는 방법을 보여 줍니다.는 <xref:Microsoft.Office.Tools.Excel.Controls.Button> 셀으로 **C5** 의 `Sheet1` Excel 용 문서 수준 프로젝트에서.  
+  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#4)]
+     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#4)]  
+  
+##  <a name="runtimeaddin"></a>런타임에 VSTO 추가 기능에서 컨트롤 추가  
+ 프로그래밍 방식으로 런타임에 열려 있는 문서에 Windows Forms 컨트롤을 추가할 수 있습니다. 먼저, 열려 있는 문서 또는 워크시트의 기반이 되는 호스트 항목을 생성합니다. 그런 다음 Word에서 새 호스트 항목의 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 속성 메서드를 사용합니다. Excel에서 새 호스트 항목의 <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> 속성 메서드를 사용합니다. 각 메서드에는 다양한 방법으로 컨트롤의 위치를 지정할 수 있는 여러 오버로드가 있습니다.  
+  
+ 런타임에 Windows Forms 컨트롤을 문서에 추가할 경우 문서를 닫으면 컨트롤이 문서에 유지되지 않습니다. 다음에 문서를 열 때 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+  
+ VSTO 추가 기능 프로젝트에서 호스트 항목을 생성 하는 방법에 대 한 자세한 내용은 참조 [런타임에 Word 문서 및 Excel 통합 문서 런타임에 VSTO 추가 기능에서](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)합니다.  
+  
+#### <a name="to-add-a-windows-forms-control-at-run-time"></a>런타임에 Windows Forms 컨트롤을 추가하려면  
+  
+1.  추가 된 이름을 가진 메서드를 사용 하 여\<*컨트롤 클래스*> (여기서 *컨트롤 클래스* 는 같은 추가 하려는 Windows Forms 컨트롤의 클래스 이름 <xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>).  
+  
+    > [!NOTE]  
+    >  VSTO 추가 기능에서 대상으로 하는 프로젝트는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 추가 액세스 하려면 먼저 Microsoft.Office.Tools.Excel.v4.0.Utilities.dll 또는 Microsoft.Office.Tools.Word.v4.0.Utilities.dll 어셈블리에 대 한 참조를 추가 해야 나중\< *컨트롤 클래스*> 메서드.  
+  
+     다음 코드 예제에서는 Word VSTO 추가 기능을 사용하여 활성 문서의 첫 번째 단락에 <xref:Microsoft.Office.Tools.Word.Controls.Button>을 추가하는 방법을 보여 줍니다.  
+  
+     [!code-vb[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#7)]
+     [!code-csharp[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#7)]  
+  
+## <a name="see-also"></a>참고 항목  
+ [Windows Forms 컨트롤 Office 문서 개요](../vsto/windows-forms-controls-on-office-documents-overview.md)   
+ [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   
+ [방법: 워크시트 셀에서 컨트롤 크기 조정](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
+ [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
   
