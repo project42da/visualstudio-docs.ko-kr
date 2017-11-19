@@ -1,12 +1,10 @@
 ---
-title: Late Binding in Office Solutions | Microsoft Docs
+title: "Office 솔루션에서 런타임에 바인딩 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,61 +16,62 @@ helpviewer_keywords:
 - automation [Office development in Visual Studio], casting objects
 - casting, object to specific type
 ms.assetid: 80b0d23e-df68-4ea9-a02b-238aee8ca9c0
-caps.latest.revision: 49
-author: kempb
-ms.author: kempb
+caps.latest.revision: "49"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: a028772bd74c8160724f34e71489674809b8188f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 932a7ccc3f52d80e4f75999f401c61b2663095f5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="late-binding-in-office-solutions"></a>Late Binding in Office Solutions
-  Some types in the object models of Office applications provide functionality that is available through late-binding features. For example, some methods and properties can return different types of objects depending on the context of the Office application, and some types can expose different methods or properties in different contexts.  
+# <a name="late-binding-in-office-solutions"></a>Office 솔루션에서 런타임에 바인딩
+  Office 응용 프로그램의 개체 모델의 일부 형식은 런타임에 바인딩 기능을 통해 사용할 수 있는 기능을 제공 합니다. 예를 들어 일부 메서드 및 속성은 다양 한 유형의 Office 응용 프로그램의 컨텍스트에 따라 개체를 반환할 수 있으며 일부 형식은 다른 메서드나 속성에 다양 한 상황에 노출할 수 있습니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- Visual Basic projects where **Option Strict** is off and Visual C# projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] can work directly with types that employ these late-binding features.  
+ Visual Basic 프로젝트 **Option Strict** 가 해제 Visual C# 프로젝트를 대상으로 하는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] 이러한 런타임에 바인딩 기능을 사용 하는 형식와 직접 협업할 수 있습니다.  
   
-## <a name="implicit-and-explicit-casting-of-object-return-values"></a>Implicit and Explicit Casting of Object Return Values  
- Many methods and properties in the Microsoft Office primary interop assemblies (PIAs) return <xref:System.Object> values, because they can return several different types of objects. For example, the <xref:Microsoft.Office.Tools.Excel.Workbook.ActiveSheet%2A> property returns an <xref:System.Object> because its return value can be a <xref:Microsoft.Office.Interop.Excel.Worksheet> or <xref:Microsoft.Office.Interop.Excel.Chart> object, depending on what the active sheet is.  
+## <a name="implicit-and-explicit-casting-of-object-return-values"></a>개체의 반환 값의 암시적 및 명시적 캐스팅  
+ 여러 메서드와 속성이 주 interop 어셈블리 (Pia)를 반환 하는 Microsoft Office에서 <xref:System.Object> 값, 몇 가지 유형의 개체를 반환할 수 있기 때문입니다. 예를 들어는 <xref:Microsoft.Office.Tools.Excel.Workbook.ActiveSheet%2A> 속성에서 반환 된 <xref:System.Object> 반환 값 수 있기 때문에 <xref:Microsoft.Office.Interop.Excel.Worksheet> 또는 <xref:Microsoft.Office.Interop.Excel.Chart> 활성 시트에 따라 개체.  
   
- When a method or property returns a <xref:System.Object>, you must explicitly convert (in Visual Basic) the object to the correct type in Visual Basic projects where **Option Strict** is on. You do not have to explicitly cast <xref:System.Object> return values in Visual Basic projects where **Option Strict** is off.  
+ 메서드 또는 속성 반환 하는 경우는 <xref:System.Object>, 명시적으로 변환 해야 (Visual Basic)의 개체는 Visual Basic 프로젝트에서 올바른 형식으로 위치 **Option Strict** 켜져 있습니다. 명시적으로 캐스팅 해야 <xref:System.Object> Visual Basic 프로젝트에서 값을 반환 합니다. 여기서 **Option Strict** 꺼져 있습니다.  
   
- In most cases, the reference documentation lists the possible types of the return value for a member that returns an <xref:System.Object>. Converting or casting the object enables IntelliSense for the object in the Code Editor.  
+ 반환 값의 가능한 형식을 반환 하는 멤버에 대 한 참조 설명서 대부분의 경우에서 나열 된 <xref:System.Object>합니다. 개체를 캐스팅 또는 변환 코드 편집기에서 개체에 대 한 IntelliSense를 사용할 수 있습니다.  
   
- For information about conversion in Visual Basic, see [Implicit and Explicit Conversions &#40;Visual Basic&#41;](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions) and [CType Function &#40;Visual Basic&#41;](/dotnet/visual-basic/language-reference/functions/ctype-function).  
+ Visual Basic의 변환에 대 한 정보를 참조 하십시오. [암시적 및 명시적 변환 &#40; Visual Basic &#41; ](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions) 및 [CType 함수 &#40; Visual Basic &#41; ](/dotnet/visual-basic/language-reference/functions/ctype-function).  
   
-### <a name="examples"></a>Examples  
- The following code example demonstrates how to cast an object to a specific type in a Visual Basic project where **Option Strict** is on. In this type of project, you must explicitly cast the <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A> property to a <xref:Microsoft.Office.Interop.Excel.Range>. This example requires a document-level Excel project with a worksheet class named `Sheet1`.  
+### <a name="examples"></a>예제  
+ 다음 코드 예제에서는 Visual Basic 프로젝트에서 특정 형식으로 개체를 캐스팅 하는 방법을 보여 줍니다. 여기서 **Option Strict** 켜져 있습니다. 이러한 유형의 프로젝트를 명시적으로 캐스팅 해야는 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A> 속성을는 <xref:Microsoft.Office.Interop.Excel.Range>합니다. 이 예제는 문서 수준 Excel 프로젝트 이라는 워크시트 클래스가 포함 된 `Sheet1`합니다.  
   
  [!code-vb[Trin_VstcoreProgramming#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#9)]  
   
- The following code example demonstrates how to implicitly cast an object to a specific type in a Visual Basic project where **Option Strict** is off or in a Visual C# project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. In these types of projects, the <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A> property is implicitly cast to a <xref:Microsoft.Office.Interop.Excel.Range>. This example requires a document-level Excel project with a worksheet class named `Sheet1`.  
+ 다음 코드 예제에서는 Visual Basic 프로젝트에서 특정 형식으로 개체를 암시적으로 캐스팅 하는 방법을 보여 줍니다. 여기서 **Option Strict** 는 꺼져 있거나 대상으로 하는 Visual C# 프로젝트에는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]합니다. 이러한 유형의 프로젝트의 경우에 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A> 속성으로 암시적으로 캐스팅 되는 <xref:Microsoft.Office.Interop.Excel.Range>합니다. 이 예제는 문서 수준 Excel 프로젝트 이라는 워크시트 클래스가 포함 된 `Sheet1`합니다.  
   
- [!code-vb[Trin_VstcoreProgramming#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#10)] [!code-csharp[Trin_VstcoreProgramming#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#10)]  
+ [!code-vb[Trin_VstcoreProgramming#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#10)]
+ [!code-csharp[Trin_VstcoreProgramming#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#10)]  
   
-## <a name="accessing-members-that-are-available-only-through-late-binding"></a>Accessing Members That Are Available Only Through Late Binding  
- Some properties and methods in the Office PIAs are available only through late binding. In Visual Basic projects where **Option Strict** is off or in Visual C# projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], you can use the late binding features in these languages to access late-bound members. In Visual Basic projects where **Option Strict** is on, you must use reflection to access these members.  
+## <a name="accessing-members-that-are-available-only-through-late-binding"></a>런타임에 바인딩을 통해서만 사용할 수 있는 멤버에 액세스  
+ 일부 속성 및 Office Pia의 메서드는 런타임에 바인딩을 통해서만 사용할 수 있습니다. 프로젝트나 Visual Basic에서는 **Option Strict** 는 꺼져 있거나 Visual C# 프로젝트에서 대상으로 하는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], 런타임에 바인딩된 멤버에 액세스 하려면 이러한 언어에서는 런타임에 바인딩 기능을 사용할 수 있습니다. 프로젝트나 Visual Basic에서는 **Option Strict** 켜져, 리플렉션을 사용 하 여 이러한 멤버에 액세스 해야 합니다.  
   
-### <a name="examples"></a>Examples  
- The following code example demonstrates how to access late-bound members in a Visual Basic project where **Option Strict** is off or in a Visual C# project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. This example accesses the late-bound **Name** property of the **File Open** dialog box in Word. To use this example, run it from the `ThisDocument` or `ThisAddIn` class in a Word project.  
+### <a name="examples"></a>예제  
+ 다음 코드 예제에서는 Visual Basic 프로젝트에서 런타임에 바인딩된 멤버에 액세스 하는 방법을 보여 줍니다. 여기서 **Option Strict** 는 꺼져 있거나 대상으로 하는 Visual C# 프로젝트에는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]합니다. 이 예제에서는 런타임에 바인딩된 액세스 **이름** 의 속성은 **파일 열기** Word에서 대화 상자. 이 예제를 사용 하려면에서 실행 된 `ThisDocument` 또는 `ThisAddIn` Word 프로젝트의 클래스.  
   
- [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)] [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]  
+ [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)]
+ [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]  
   
- The following code example demonstrates how to use reflection to accomplish the same task in a Visual Basic project where **Option Strict** is on.  
+ 다음 코드 예제에서는 리플렉션을 사용 하 여 Visual Basic 프로젝트에서 동일한 작업을 수행 하는 방법을 보여 줍니다. 여기서 **Option Strict** 켜져 있습니다.  
   
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
-## <a name="see-also"></a>See Also  
- [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)   
- [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)   
- [Using Type dynamic &#40;C&#35; Programming Guide&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
- [Option Strict Statement](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
- [Reflection (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
- [Reflection (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
- [Designing and Creating Office Solutions](../vsto/designing-and-creating-office-solutions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Office 솔루션에서 코드 작성](../vsto/writing-code-in-office-solutions.md)   
+ [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)   
+ [유형 동적 &#40;를 사용 하 여 &#35; 프로그래밍 가이드 &#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
+ [Option Strict 문](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
+ [리플렉션(C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
+ [리플렉션(Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
+ [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
   
   

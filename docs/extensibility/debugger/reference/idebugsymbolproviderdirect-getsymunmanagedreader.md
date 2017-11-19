@@ -1,57 +1,59 @@
 ---
-title: "IDebugSymbolProviderDirect::GetSymUnmanagedReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetSymUnmanagedReader"
-  - "IDebugSymbolProviderDirect::GetSymUnmanagedReader"
+title: IDebugSymbolProviderDirect::GetSymUnmanagedReader | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetSymUnmanagedReader
+- IDebugSymbolProviderDirect::GetSymUnmanagedReader
 ms.assetid: 147bacfa-f66c-43e0-8a72-e601058dc57f
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 8ccbc65919c658fac5132fa3fc9cec37b16e05e5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugSymbolProviderDirect::GetSymUnmanagedReader
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-비관리 코드의 기호 판독기를 검색합니다.  
+# <a name="idebugsymbolproviderdirectgetsymunmanagedreader"></a>IDebugSymbolProviderDirect::GetSymUnmanagedReader
+비관리 코드에 대 한 기호 판독기를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT GetSymUnmanagedReader (  
-   ULONG32    ulAppDomainID,  
-   GUID       guidModule,  
-   IUnknown** ppSymUnmanagedReader  
+   ULONG32    ulAppDomainID,  
+   GUID       guidModule,  
+   IUnknown** ppSymUnmanagedReader  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetSymUnmanagedReader (  
-   uint       ulAppDomainID,  
-   Guid       guidModule,  
-   out object ppSymUnmanagedReader  
+   uint       ulAppDomainID,  
+   Guid       guidModule,  
+   out object ppSymUnmanagedReader  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ulAppDomainID`  
- \[in\] 응용 프로그램 도메인의 식별자입니다.  
+ [in] 응용 프로그램 도메인의 식별자입니다.  
   
  `guidModule`  
- \[in\] 모듈의 고유 식별자입니다.  
+ [in] 모듈의 고유 식별자입니다.  
   
  `ppSymUnmanagedReader`  
- \[out\] 비관리 코드의 기호 판독기를 나타내는 object를 반환 합니다.  
+ [out] 비관리 코드에 대 한 기호 판독기를 나타내는 개체를 반환 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

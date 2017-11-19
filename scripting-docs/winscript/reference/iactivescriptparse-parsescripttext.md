@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptParse::ParseScriptText | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: IActiveScriptParse::ParseScriptText | Microsoft Docs
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptParse.ParseScriptText
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptParse_ParseScriptText"
+helpviewer_keywords: IActiveScriptParse_ParseScriptText
 ms.assetid: 2d237d6c-cc65-415b-8808-72791304a136
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 70d17807b47468f2238c0254cc39b339df616411
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptParse::ParseScriptText
-네임 스페페이스 선언을 추가하고 코드를 평가하여 주어진 코드 스크립트릿 구문 분석을 합니다.  
+# <a name="iactivescriptparseparsescripttext"></a>IActiveScriptParse::ParseScriptText
+네임 스페이스에 선언 추가 하 고 평가 하는 코드를 적절 하 게 지정 된 코드 스크립틀릿을 구문 분석 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 HRESULT ParseScriptText(  
@@ -37,50 +40,50 @@ HRESULT ParseScriptText(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
   
 |||  
 |-|-|  
-|`pstrCode`|\[in\] 확인할 scriptlet 텍스트의 주소입니다.  스크립트 언어에 따라 이 문자열의 해석이 달라집니다.|  
-|`pstrItemName`|\[in\] scriptlet을 평가할 컨텍스트를 제공하는 항목 이름의 주소입니다.  이 매개 변수가 NULL인 경우 엔진의 전역 컨텍스트를 스크립팅하여 코드가 평가됩니다.|  
-|`punkContext`|\[in\] 컨텍스트 개체의 주소입니다.  이 개체는 디버깅 환경에서 사용하도록 예약되어 있습니다. 이러한 컨텍스트는 활성 런타임 컨텍스트를 나타내도록 디버거에서 제공할 수 있습니다.  이 매개 변수가 NULL인 경우 엔진에서 `pstrItemName`를 사용하여 컨텍스트를 식별합니다.|  
-|`pstrDelimiter`|\[in\] scriptlet의 끝 구분 기호의 주소입니다.  `pstrCode`가 텍스트 스트림에서 구문 분석되는 경우 호스트는 일반적으로 작은따옴표 두 개\(''\)와 같은 구분 기호를 사용하여 스크립트릿의 끝을 검색합니다.  이 매개 변수는 호스트가 사용한 구분 기호를 지정하여 스크립팅 엔진에서 일부 조건 기본 전처리\(예: 구분 기호로 사용하기 위해 작은따옴표\['\]를 큰따옴표로 교체\)를 제공하도록 합니다.  스크립팅 엔진이 정확하게 얼마나 \(그리고 혹시\) 이 정보를 사용하는지는 스크립팅 엔진에 따라 달라집니다.  호스트가 한정자를 사용하여 scriptlet의 끝을 표시하지 않은 경우 이 매개 변수를 `NULL`로 설정합니다.|  
-|`dwSourceContextCookie`|\[in\] 디버깅 목적으로 사용되는 쿠키입니다.|  
-|`ulStartingLineNumber`|\[in\] 구문 분석이 시작되는 줄을 지정하는 0부터 시작하는 값입니다.|  
-|`dwFlags`|\[in\] scriptlet과 연결된 플래그입니다.  다음 값을 조합하여 사용할 수 있습니다.|  
+|`pstrCode`|[in] 평가할 스크립틀릿 텍스트의 주소입니다. 이 문자열의 해석 스크립트 언어에 따라 달라 집니다.|  
+|`pstrItemName`|[in] 주소는 스크립틀릿 계산할 컨텍스트를 제공 하는 항목 이름입니다. 이 매개 변수가 NULL 인 경우 코드는 스크립팅 엔진의 전역 컨텍스트에서 평가 됩니다.|  
+|`punkContext`|[in] 컨텍스트 개체의 주소입니다. 이 개체를 활성는 런타임에 컨텍스트를 나타내는 디버거를 통해 이러한 컨텍스트를 제공 하는 위치는 디버깅 환경에서 사용 하기 위해 예약 되어 있습니다. 엔진에서 사용 하 여이 매개 변수가 NULL 이면 `pstrItemName` 컨텍스트를 식별 하 합니다.|  
+|`pstrDelimiter`|[in] 주소는 스크립틀릿 끝 구분 기호입니다. 때 `pstrCode` 구문 분석 되 텍스트의 스트림에서 호스트 일반적으로 사용 하 여 구분 기호, 예: 두 개의 작은 따옴표 (")는 스크립틀릿의 끝을 검색 합니다. 이 매개 변수 지정 호스트 사용 조건부 몇 가지 기본 전처리를 제공 하는 스크립팅 엔진 수 있도록 하는 구분 기호 (예를 들어 작은따옴표로 구분 기호로 사용 하기 위해 두 개의 작은따옴표 ['] 교체) 됩니다. 방식을 정확 하 게 (및 if) 스크립팅 엔진 사용 하면이 정보의 사용 스크립팅 엔진에 따라 달라 집니다. 이 매개 변수를 설정 `NULL` 호스트는 스크립틀릿의 끝을 표시 하는 구분 기호를 사용 하지 않은 경우.|  
+|`dwSourceContextCookie`|[in] 디버깅 목적으로 사용 되는 쿠키입니다.|  
+|`ulStartingLineNumber`|[in] 구문 분석은에서 시작 된 줄을 지정 하는 0부터 시작 값입니다.|  
+|`dwFlags`|[in] 스크립틀릿와 관련 된 플래그입니다. 이러한 값의 조합 될 수 있습니다.|  
   
 |값|의미|  
-|-------|--------|  
-|SCRIPTTEXT\_ISEXPRESSION|계산 식과 문 사이의 구분이 중요하지만 스크립트 언어에서 구문상 모호한 경우 이 플래그는 scriptlet을 문 또는 문 목록이 아닌 식으로 해석하도록 지정합니다.  기본적으로 문은 scriptlet 텍스트의 구문에서 올바른 선택을 결정할 수 없는 경우 가정합니다.|  
-|SCRIPTTEXT\_ISPERSISTENT|이 호출 동안 추가된 코드는 스크립팅 엔진이 저장된 경우\(예: `IPersist*::Save` 호출을 통해\) 또는 스크립팅 엔진이 초기화된 상태로 다시 전환하여 재설정된 경우 저장되어야 함을 나타냅니다.|  
-|SCRIPTTEXT\_ISVISIBLE|스크립트 텍스트가 스크립트의 네임스페이스에서 전역 변수로 표시되어야 함을 나타냅니다\(따라서 이름으로 호출이 가능\).|  
+|-----------|-------------|  
+|SCRIPTTEXT_ISEXPRESSION|계산 식과 문을 간의 차이 중요 하지만 구문상 모호한 스크립트 언어의 경우이 플래그는 문 또는 문 목록이 아니라 식으로 해석 해야 하는 스크립틀릿 임을 지정 합니다. 기본적으로 올바른 스크립틀릿 텍스트 구문에서 확인할 수 있는 경우가 아니면 문은 간주 됩니다.|  
+|SCRIPTTEXT_ISPERSISTENT|스크립팅 엔진에 저장 된 경우이 호출 하는 동안 추가 된 코드를 저장 해야 할지 나타냅니다 (예를 들어 호출을 통해 `IPersist*::Save`), 또는 다시 초기화 된 상태로 전환을 통해 스크립팅 엔진을 다시 설정 합니다.|  
+|SCRIPTTEXT_ISVISIBLE|스크립트 텍스트를 표시 해야 함을 나타냅니다 (그리고이 이름으로 호출할 수)는 스크립트의 네임 스페이스에서 전역 메서드로 합니다.|  
   
 |||  
 |-|-|  
-|`pvarResult`|\[out\] 호출자가 아무런 결과를 예상하지 않을 경우\(즉, SCRIPTTEXT\_ISEXPRESSION 값이 설정되지 않음\) scriptlet 처리의 결과 또는 `NULL`를 받는 버퍼의 주소입니다.|  
-|`pexcepinfo`|\[out\] 예외 정보를 받는 구조체의 주소입니다.  이 구조체는 `IActiveScriptParse::ParseScriptText`가 DISP\_E\_EXCEPTION을 반환할 경우에 채워집니다.|  
+|`pvarResult`|[out] 스크립틀릿 처리의 결과 받는 버퍼의 주소 또는 `NULL` 호출자 결과가 없습니다. 필요한 경우 (즉 SCRIPTTEXT_ISEXPRESSION 값은 설정 되지 않음).|  
+|`pexcepinfo`|[out] 예외 정보를 수신 하는 구조체의 주소입니다. 이 구조 채워진 경우 `IActiveScriptParse::ParseScriptText` DISP_E_EXCEPTION를 반환 합니다.|  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  다음 값 중 하나를 반환합니다.  
   
 |반환 값|의미|  
-|----------|--------|  
-|`S_OK`|성공|  
-|`DISP_E_EXCEPTION`|scriptlet 처리 시 예외가 발생하였습니다.  `pexcepinfo` 매개 변수에는 예외에 대한 정보가 포함됩니다.|  
-|`E_INVALIDARG`|인수가 잘못된 경우.|  
-|`E_POINTER`|잘못된 포인터가 지정되었습니다.|  
-|`E_NOTIMPL`|이 메서드는 지원되지 않습니다.  스크립팅 엔진은 식이나 문에서 런타임 계산을 지원하지 않습니다.|  
-|`E_UNEXPECTED`|예상된 호출이 아닙니다\(예: 스크립팅 엔진이 초기화 되지 않았거나 종료 상태인 경우 또는 SCRIPTTEXT\_ISEXPRESSION 플래그가 설정되고 스크립팅 엔진이 초기화 상태인 경우\).|  
-|`OLESCRIPT_E_SYNTAX`|scriptlet에 지정되지 않은 구문 오류가 발생했습니다.|  
+|------------------|-------------|  
+|`S_OK`|명령 실행 성공|  
+|`DISP_E_EXCEPTION`|처리는 스크립틀릿에 예외가 발생 했습니다. `pexcepinfo` 매개 변수는 예외에 대 한 정보를 포함 합니다.|  
+|`E_INVALIDARG`|인수가 올바르지 않습니다.|  
+|`E_POINTER`|잘못 된 포인터를 지정 했습니다.|  
+|`E_NOTIMPL`|이 메서드는 지원되지 않습니다. 스크립팅 엔진의 식 또는 문으로 런타임에 평가 지원 하지 않습니다.|  
+|`E_UNEXPECTED`|호출이 필요 하지 않습니다 (예를 들어 스크립팅 엔진에는 초기화 되지 않은 또는 닫힘 상태로 또는 SCRIPTTEXT_ISEXPRESSION 플래그가 설정 된 있고 스크립팅 엔진 형식은 초기화 된 상태에서).|  
+|`OLESCRIPT_E_SYNTAX`|스크립틀릿에 지정 되지 않은 구문 오류가 발생 했습니다.|  
   
-## 설명  
- 스크립팅 엔진이 초기화된 상태에 있는 경우 이 호출 동안에는 실제로 코드가 평가되지 않습니다. 오히려 이런 코드는 큐에 들어가 스크립팅 엔진이 시작된 상태로 전환\(또는 진행\)될 때 실행됩니다.  초기화된 상태에서는 실행이 허용되지 않으므로 초기화된 상태에서 SCRIPTTEXT\_ISEXPRESSION 플래그를 사용하여 이 메서드를 호출하는 것은 오류입니다.  
+## <a name="remarks"></a>설명  
+ 스크립팅 엔진에서 초기화 된 상태 이면이 호출 하는 동안 코드 없이 평가 실제로 됩니다. 이러한 코드 대기 되 고로 (또는 통해) 스크립팅 엔진 전환 될 때 실행 되는 대신, 시작 됨된 상태입니다. 실행에 초기화 된 상태에 허용 되지 않습니다 되므로 SCRIPTTEXT_ISEXPRESSION 플래그 초기화 된 상태에 있을 때 사용 하 여이 메서드를 호출 하면 오류가 발생 합니다.  
   
- 스크립트릿은 식, 문 목록 또는 스크립트 언어에서 허용되는 모든 것이 될 수 있습니다.  예를 들어, 이 메서드는 HTML \<SCRIPT\> 태그의 평가에 사용됩니다. HTML 페이지로 실행할 문은 스크립트 상태로 컴파일되기 보다는 작성됩니다.  
+ 스크립틀릿 식, 문, 목록 또는 스크립트 언어에서 허용 하는 아무 것도 될 수 있습니다. 예를 들어이 메서드는 평가 하는 데 html \<스크립트 > 태그를 HTML 페이지 생성 되 방금 스크립트 상태로 컴파일하는 대신 때 실행할 문을 허용 합니다.  
   
- 이 메서드에 전달된 코드는 코드의 유효하고 완료된 부분이어야 합니다.  예를 들어, VBScript에서는 Sub Function\(x\)을 사용하여 이 메서드를 한 번 호출한 다음 `End Sub`를 사용하여 두 번째로 호출하는 것은 잘못된 것입니다.  파서는 서브루틴을 완료하려면 두 번째 호출을 기다려서는 안 되지만 서브루틴 선언이 시작되었고 완료되지 않았기 때문에 구문 분석 오류를 생성해야 합니다.  
+ 이 메서드에 전달 된 코드는 유효 하 고 전체 코드의 일부 여야 합니다. 예를 들어 VBScript에는 다음와 함께 두 번째로 Sub Function(x)로 한 번이 메서드를 호출 하려면 `End Sub`합니다. 파서가는 서브루틴을 완료 하려면 두 번째 호출에 대 한 대기 하지 않아야 하지만 대신 해야 생성 구문 분석 오류 서브루틴 선언을 시작 되었지만 완료 되지 때문에.  
   
- 스크립트 상태에 대한 자세한 내용은 [Windows 스크립트 엔진](../../winscript/windows-script-engines.md)의 스크립트 엔진 상태 섹션을 참조하십시오.  
+ 스크립트 상태에 대 한 자세한 내용은의 스크립트 엔진 상태 섹션을 참조 하십시오. [Windows 스크립트 엔진](../../winscript/windows-script-engines.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IActiveScriptParse](../../winscript/reference/iactivescriptparse.md)

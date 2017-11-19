@@ -1,137 +1,138 @@
 ---
-title: "Deploying Extensions for the SharePoint Tools in Visual Studio"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint development in Visual Studio, deploying extensions"
+title: "Visual Studio에서 SharePoint 도구에 대 한 확장 배포 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, deploying extensions
 ms.assetid: 69927d95-acdf-4fd8-ac43-28e9a7fa8a38
-caps.latest.revision: 40
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 39
+caps.latest.revision: "40"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 0145982781ca3e21229a7af46090ed2addcaccde
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Deploying Extensions for the SharePoint Tools in Visual Studio
-  SharePoint 도구 확장을 배포하려면 확장 어셈블리 및 확장과 함께 배포할 다른 모든 파일이 포함된 VSIX\([!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Extension\) 패키지를 만듭니다.  VSIX 패키지는 OPC\(Open Packaging Conventions\) 표준을 따르는 압축 파일입니다.  VSIX 패키지의 확장명은 .vsix입니다.  
+# <a name="deploying-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio에서 SharePoint 도구에 대한 확장명 배포
+  SharePoint 도구 확장을 배포 하려면 만들기를 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 확장 프로그램 어셈블리 및 다른 모든 파일 확장명으로 배포 하려면에 포함 된 (VSIX) 확장 패키지입니다. VSIX 패키지는 압축된 된 파일을 열고 패키징 규칙 (OPC) 표준을 따릅니다. VSIX 패키지는.vsix 확장을 포함합니다.  
   
- VSIX 패키지를 만든 후에는 다른 사용자가 .vsix 파일을 실행하여 확장을 설치할 수 있습니다.  사용자가 확장을 설치하면 모든 파일이 %UserProfile%\\AppData\\Local\\Microsoft\\VisualStudio\\11.0\\Extensions 폴더에 설치됩니다.  확장을 배포하려면 VSIX 패키지를 [Visual Studio Gallery](http://go.microsoft.com/fwlink/?LinkID=123847) 웹 사이트에 업로드하거나 네트워크 공유 또는 다른 웹 사이트에서 패키지를 호스팅하는 등의 다른 방법으로 패키지를 고객에게 배포할 수 있습니다.  
+ VSIX 패키지를 만든 후 다른 사용자가 확장을 설치 하려면.vsix 파일을 실행할 수 있습니다. 사용자 확장 프로그램을 설치 하는 경우 모든 파일 %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0\Extensions 폴더에 설치 됩니다. 확장을 배포 하려면 VSIX 패키지를 업로드할 수 있습니다는 [Visual Studio 갤러리](http://go.microsoft.com/fwlink/?LinkID=123847) 웹 사이트 또는 있습니다 패키지에 배포할 수 고객에 게 네트워크 공유 나 일부 다른 웹 사이트에 패키지를 호스트 하는 등의 다른 방법으로 합니다.  
   
- VSIX 패키지를 만들어 [Visual Studio 갤러리](http://go.microsoft.com/fwlink/?LinkID=123847)에 배포하는 방법에 대한 자세한 내용은 [배송 Visual Studio 확장](../extensibility/shipping-visual-studio-extensions.md)를 참조하십시오.  
+ VSIX 패키지 만들기 및 배포에 대 한 자세한 내용은 [Visual Studio 갤러리](http://go.microsoft.com/fwlink/?LinkID=123847), 참조 [Visual Studio 확장명 전달](/visualstudio/extensibility/shipping-visual-studio-extensions)합니다.  
   
- VSIX 패키지는 Visual Studio의 **VSIX 프로젝트** 템플릿을 사용하여 만들거나 수동으로 만들 수 있습니다.  
+ 사용 하 여 VSIX 패키지를 만들 수는 **VSIX 프로젝트** Visual Studio에서 템플릿을 VSIX 패키지를 수동으로 만들 수 있습니다.  
   
-## VSIX 프로젝트를 사용하여 VSIX 패키지 만들기  
- Visual Studio SDK에서 제공하는 **VSIX 프로젝트** 템플릿을 사용하여 SharePoint 도구 확장용 VSIX 패키지를 만들 수 있습니다.  VSIX 프로젝트를 사용하면 수동으로 VSIX 패키지를 만들 때보다 다음과 같은 여러 가지 이점이 있습니다.  
+## <a name="using-vsix-projects-to-create-vsix-packages"></a>VSIX 프로젝트를 사용 하 여 VSIX 패키지 만들기  
+ 사용할 수는 **VSIX 프로젝트** 템플릿 패키지를 만드는 VSIX SharePoint 도구 확장에 대 한 Visual Studio SDK에서 제공 합니다. VSIX 프로젝트를 사용 하 여 VSIX 패키지를 수동으로 만드는 여러 가지 이점을 제공 합니다.  
   
--   프로젝트를 빌드할 때 VSIX 패키지가 자동으로 생성됩니다.  패키지에 배포 파일을 추가하고 패키지에 사용할 \[Content\_Types\].xml 파일을 만드는 등의 작업이 자동으로 수행됩니다.  
+-   프로젝트를 빌드할 때 visual Studio는 VSIX 패키지를 자동으로 생성 합니다. 패키지에 배포 파일을 추가 하 고 패키지에 대 한 [Content_Types].xml 파일을 만드는 등의 작업 수행 됩니다.  
   
--   확장 프로젝트와 프로젝트 템플릿 및 항목 템플릿과 같은 기타 파일의 빌드 출력을 VSIX 패키지에 포함하도록 VSIX 프로젝트를 구성할 수 있습니다.  
+-   VSIX 패키지의 확장 프로그램 프로젝트 및 프로젝트 템플릿 및 항목 템플릿 등의 기타 파일의 빌드 출력을 포함 하도록 VSIX 프로젝트를 구성할 수 있습니다.  
   
- VSIX 프로젝트를 사용하는 방법에 대한 자세한 내용은 [VSIX 프로젝트 템플릿](../extensibility/vsix-project-template.md)를 참조하십시오.  
+ VSIX 프로젝트를 사용 하는 방법에 대 한 자세한 내용은 참조 [VSIX 프로젝트 템플릿은](/visualstudio/extensibility/vsix-project-template)합니다.  
   
-### 프로젝트 구성  
- 기본적으로 VSIX 프로젝트는 VSIX 패키지만 생성하고 어셈블리는 생성하지 않습니다.  따라서 VSIX 프로젝트에서는 대개 SharePoint 도구 확장을 구현하지 않습니다.  일반적으로 적어도 다음 두 프로젝트로 작업합니다.  
+### <a name="organizing-your-projects"></a>프로젝트 구성  
+ 기본적으로 VSIX 프로젝트는 어셈블리는 아님 VSIX 패키지를 생성합니다. 따라서 일반적으로 구현 하지 않으면 SharePoint 도구 확장의 VSIX 프로젝트. 일반적으로 두 개 이상의 프로젝트와 함께 작동합니다.  
   
--   VSIX 프로젝트  
+-   VSIX 프로젝트입니다.  
   
--   확장을 구현하는 클래스 라이브러리 프로젝트  
+-   확장을 구현 하는 클래스 라이브러리 프로젝트.  
   
- 특정 유형의 확장에 대해 추가 프로젝트로 작업할 수도 있습니다.  
+ 작업할 수도 있습니다 추가 프로젝트와 함께 특정 확장 프로그램:  
   
--   확장에서 사용하는 모든 SharePoint 명령을 구현하는 클래스 라이브러리 프로젝트.  이 시나리오를 보여 주는 연습은 [Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)를 참조하십시오.  
+-   확장 프로그램에서 사용 되는 모든 SharePoint 명령을 구현 하는 클래스 라이브러리 프로젝트. 이 시나리오를 보여 주는 연습을 참조 하십시오. [연습: 디스플레이 웹 파트를 서버 탐색기 확장](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)합니다.  
   
--   확장에서 새로운 형식의 SharePoint 프로젝트 항목을 정의하는 경우 항목 템플릿이나 프로젝트 템플릿을 만드는 항목 템플릿 또는 프로젝트 템플릿 프로젝트.  이 시나리오를 보여 주는 연습은 [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)를 참조하십시오.  
+-   확장 프로그램 새 형식의 SharePoint 프로젝트 항목을 정의 하는 경우 프로젝트 템플릿 또는 항목 템플릿을 만드는 프로젝트 템플릿 또는 항목 템플릿을 프로젝트입니다. 이 시나리오를 보여 주는 연습을 참조 하십시오. [연습: 항목 템플릿, 1 부를 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)합니다.  
   
--   확장에 템플릿이 포함된 경우 항목 템플릿 또는 프로젝트 템플릿에 대한 사용자 지정 마법사를 구현하는 클래스 라이브러리 프로젝트.  이 시나리오를 보여 주는 연습은 [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)를 참조하십시오.  
+-   확장 프로그램에 템플릿을 포함 하는 경우 항목 템플릿 또는 서식 파일 프로젝트에 대 한 사용자 지정 마법사를 구현 하는 클래스 라이브러리 프로젝트. 이 시나리오를 보여 주는 연습을 참조 하십시오. [연습: 항목 템플릿, 2 부를 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)합니다.  
   
- 모든 프로젝트를 같은 Visual Studio 솔루션에 포함하는 경우 VSIX 프로젝트에서 source.extension.vsixmanifest 파일을 수정하여 클래스 라이브러리 프로젝트의 빌드 출력을 포함할 수 있습니다.  
+ 같은 Visual Studio 솔루션의 모든 프로젝트를 포함 하는 경우 클래스 라이브러리 프로젝트의 빌드 출력을 포함 하도록 VSIX 프로젝트에서 source.extension.vsixmanifest 파일을 수정할 수 있습니다.  
   
-### VSIX 매니페스트 편집  
- VSIX 프로젝트에서 source.extension.vsixmanifest 파일을 편집하여 확장에 포함할 모든 항목에 대한 항목을 포함해야 합니다.  해당 바로 가기 메뉴에서 source.extension.vsixmanifest 파일을 열면 파일에 XML을 편집할 수 있는 UI를 제공 하는 디자이너 파일이 나타납니다.  자세한 내용은 [VSIX 매니페스트 디자이너](../extensibility/media/vsix-manifest-designer.png)을 참조하십시오.  
+### <a name="editing-the-vsix-manifest"></a>VSIX 매니페스트 편집  
+ 확장 프로그램에 포함할 수 있는 모든 항목에 대 한 항목을 포함 하려면 VSIX 프로젝트에서 source.extension.vsixmanifest 파일을 편집 해야 합니다. 바로 가기 메뉴에서 source.extension.vsixmanifest 파일을 열 때 파일에서 XML을 편집 하기 위한 UI를 제공 하는 디자이너에는 파일이 나타납니다. 자세한 내용은 참조 [VSIX 매니페스트 디자이너](/visualstudio/extensibility/vsix-manifest-designer)합니다.  
   
- source.extension.vsixmanifest 파일에 다음 항목에 대한 항목을 추가해야 합니다.  
+ 다음 항목에 대 한 source.extension.vsixmanifest 파일에 항목을 추가 해야 합니다.  
   
--   확장 어셈블리  
+-   확장 프로그램 어셈블리입니다.  
   
--   확장에서 사용하는 모든 SharePoint 명령을 구현하는 어셈블리  
+-   확장 프로그램에서 사용 되는 모든 SharePoint 명령을 구현 하는 어셈블리입니다.  
   
--   확장과 연결된 모든 프로젝트 템플릿 또는 항목 템플릿  
+-   모든 프로젝트 템플릿 또는 연결 된 확장 프로그램 항목 템플릿  
   
--   확장과 연결된 템플릿에 대한 사용자 지정 마법사  
+-   확장 프로그램에 연결 하는 서식 파일에 대 한 사용자 지정 마법사.  
   
- 다음 절차에서는 이러한 각 항목에 대한 .vsixmanifest 파일에 항목을 추가하는 방법에 대해 설명합니다.  
+ 다음 절차는 이러한 각 항목에 대 한.vsixmanifest 파일에 항목을 추가 하는 방법을 설명 합니다.  
   
-##### 확장 어셈블리를 포함하려면  
+##### <a name="to-include-the-extension-assembly"></a>확장 프로그램 어셈블리를 포함 하려면  
   
-1.  VSIX 프로젝트를 source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 선택  **열기**.  
+1.  VSIX 프로젝트에서 source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 선택한 후 **열고**합니다.  
   
-     디자이너에서 파일을 엽니다.  
+     디자이너에서 파일이 열립니다.  
   
-2.  에  **자산** 탭 편집기의 선택은  **New** 단추.  
+2.  에 **자산** 탭 편집기의 선택은 **새로 만들기** 단추입니다.  
   
-     **를 추가 하는 새로운 자산** 대화 상자가 열립니다.  
+     **새 자산 추가** 대화 상자가 열립니다.  
   
-3.  에 있는  **유형** 목록에서 선택  **Microsoft.VisualStudio.MefComponent**.  
+3.  에 **형식** 목록에서 선택 **Microsoft.VisualStudio.MefComponent**합니다.  
   
-4.  에  **소스** 목록에서 다음 단계 중 하나를 수행 하십시오.  
+4.  에 **소스** 목록에서 다음 단계 중 하나를 수행 합니다.  
   
-    -   확장 어셈블리가 VSIX 프로젝트와 동일한 솔루션에 있는 프로젝트에서 빌드된 경우 선택  **는 프로젝트를 현재 솔루션**.  에 있는  **프로젝트** 목록에서 프로젝트의 이름을 선택 합니다.  
+    -   확장 프로그램 어셈블리를 VSIX 프로젝트와 동일한 솔루션에 있는 프로젝트에서 빌드한 경우 선택 **현재 솔루션의 프로젝트**합니다. 에 **프로젝트** 목록에서 프로젝트의 이름을 선택 합니다.  
   
-    -   확장 어셈블리가 프로젝트에 파일로 포함 되어 있는 경우 선택  **파일 시스템에 파일을**.  에  **경로** 목록, 확장 어셈블리 파일에 전체 경로 입력 하거나 사용 된  **찾아보기** 찾아 어셈블리 파일을 선택 하려면 단추.  
-  
-5.  **확인** 단추를 선택합니다.  
-  
-##### SharePoint 명령 어셈블리를 포함하려면  
-  
-1.  VSIX 프로젝트를 source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 선택 된  **열기** 단추.  
-  
-     파일이 디자이너에서 열립니다.  
-  
-2.  에  **자산** 섹션 편집기의 선택은  **새** 단추.  
-  
-     **를 추가 하는 새로운 자산** 대화 상자가 열립니다.  
-  
-3.  에 있는  **유형** 상자에 입력  **SharePoint.Commands.v4**.  
-  
-4.  에  **소스** 목록에서 다음 단계 중 하나를 수행 하십시오.  
-  
-    -   명령 어셈블리가 VSIX 프로젝트와 동일한 솔루션에 있는 프로젝트에서 빌드된 경우 선택  **는 프로젝트를 현재 솔루션**.  에 있는  **프로젝트** 목록에서 프로젝트의 이름을 선택 합니다.  
-  
-    -   명령 어셈블리가 프로젝트에 파일로 포함 되어 있는 경우 선택  **파일 시스템에 파일을**.  에  **경로** 목록, 확장 어셈블리 파일에 전체 경로 입력 하거나 사용 된  **찾아보기** 찾아 어셈블리 파일을 선택 하려면 단추.  
+    -   확장 프로그램 어셈블리를 프로젝트에 파일로 포함할 경우 선택 **파일 시스템의 파일**합니다. 에 **경로** 목록 확장 프로그램 어셈블리 파일 전체 경로를 입력 하거나 사용 하 여는 **찾아보기** 단추를 찾아 어셈블리 파일을 선택 합니다.  
   
 5.  **확인** 단추를 선택합니다.  
   
-##### 사용자가 만든 서식 파일을 포함 하려면  
+##### <a name="to-include-a-sharepoint-command-assembly"></a>SharePoint 명령 어셈블리를 포함 하려면  
   
-1.  VSIX 프로젝트를 source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 선택 된  **열기** 단추.  
+1.  VSIX 프로젝트에서 source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 선택한 후는 **열고** 단추입니다.  
   
-     파일이 디자이너에서 열립니다.  
+     파일이는 디자이너에서 열립니다.  
   
-2.  에  **자산** 섹션 편집기의 선택은  **새** 단추.  
+2.  에 **자산** 섹션 편집기의 선택은 **새로 만들기** 단추입니다.  
   
-     **를 추가 하는 새로운 자산** 대화 상자가 열립니다.  
+     **새 자산 추가** 대화 상자가 열립니다.  
   
-3.  에 있는  **유형** 목록에서 선택  **Microsoft.VisualStudio.ProjectTemplate** 또는  **Microsoft.VisualStudio.ItemTemplate**.  
+3.  에 **형식** 상자에 입력 **SharePoint.Commands.v4**합니다.  
   
-4.  에 있는  **원본** 목록에서 선택  **현재 솔루션의 프로젝트에**.  
+4.  에 **소스** 목록에서 다음 단계 중 하나를 수행 합니다.  
   
-5.  에  **프로젝트** 목록에서 프로젝트의 이름을 선택 하 고 다음 선택은  **확인** 단추.  
+    -   선택 명령 어셈블리에서 VSIX 프로젝트와 동일한 솔루션에 있는 프로젝트를 빌드할 경우 **현재 솔루션의 프로젝트**합니다. 에 **프로젝트** 목록에서 프로젝트의 이름을 선택 합니다.  
   
-6.  **솔루션 탐색기**프로젝트 템플릿 또는 항목 템플릿 프로젝트에 대 한 바로 가기 메뉴를 열고 선택  **프로젝트 언로드**.  
+    -   명령 어셈블리가 파일로 프로젝트에 포함 되 면 선택 **파일 시스템의 파일**합니다. 에 **경로** 목록 확장 프로그램 어셈블리 파일 전체 경로를 입력 하거나 사용 하 여는 **찾아보기** 단추를 찾아 어셈블리 파일을 선택 합니다.  
   
-7.  프로젝트 노드에 대 한 바로 가기 메뉴를 다시 열고 선택  **편집***YourTemplateProjectName***.csproj** 또는  **편집***YourTemplateProjectName***.vbproj**.  
+5.  **확인** 단추를 선택합니다.  
   
-8.  프로젝트 파일에서 다음 `VSTemplate` 요소를 찾습니다.  
+##### <a name="to-include-a-template-that-you-create"></a>만든 서식 파일을 포함 하려면  
+  
+1.  VSIX 프로젝트에서 source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 선택한 후는 **열고** 단추입니다.  
+  
+     파일이는 디자이너에서 열립니다.  
+  
+2.  에 **자산** 섹션 편집기의 선택은 **새로 만들기** 단추입니다.  
+  
+     **새 자산 추가** 대화 상자가 열립니다.  
+  
+3.  에 **형식** 목록에서 선택 **Microsoft.VisualStudio.ProjectTemplate** 또는 **Microsoft.VisualStudio.ItemTemplate**합니다.  
+  
+4.  에 **소스** 목록에서 선택 **현재 솔루션의 프로젝트**합니다.  
+  
+5.  에 **프로젝트** 나열 하는 프로젝트의 이름을 선택한 다음 선택에서 **확인** 단추입니다.  
+  
+6.  **솔루션 탐색기**, 프로젝트 템플릿 또는 항목 템플릿을 프로젝트에 대 한 바로 가기 메뉴를 열고 선택한 후 **프로젝트 언로드**합니다.  
+  
+7.  프로젝트 노드에 대 한 바로 가기 메뉴를 다시 연 다음 선택 **편집***YourTemplateProjectName***.csproj** 또는 **편집**  *YourTemplateProjectName***.vbproj**합니다.  
+  
+8.  다음 찾기 `VSTemplate` 프로젝트 파일의 요소입니다.  
   
     ```  
     <VSTemplate Include="YourTemplateName.vstemplate">  
@@ -145,17 +146,17 @@ caps.handback.revision: 39
     </VSTemplate>  
     ```  
   
-     `OutputSubPath` 요소는 프로젝트를 빌드할 때 프로젝트 템플릿이 만들어지는 경로의 추가 폴더를 지정합니다.  여기에 지정 된 폴더 고객 열면 항목 템플릿을 사용할 수 있게는  **새 프로젝트 추가** 대화 상자에서 확장은  **SharePoint** 노드를 다음 선택은  **2010** 노드.  
+     `OutputSubPath` 요소 프로젝트를 빌드할 때 프로젝트 템플릿이 생성 되었는지 경로에 추가 폴더를 지정 합니다. 여기에 지정 된 폴더는 고객 열면 항목 템플릿을 사용할 수 있게 된 **새 프로젝트 추가** 대화 상자에서 **SharePoint** 노드를 선택한 후는 **2010**  노드.  
   
 10. 파일을 저장한 후 닫습니다.  
   
-11. **솔루션 탐색기**프로젝트 템플릿 또는 항목 템플릿 프로젝트에 대 한 바로 가기 메뉴를 열고 선택  **프로젝트 다시 로드**.  
+11. **솔루션 탐색기**, 프로젝트 템플릿 또는 항목 템플릿을 프로젝트에 대 한 바로 가기 메뉴를 열고 선택한 후 **프로젝트 다시 로드**합니다.  
   
-##### 수동으로 만든 템플릿을 포함하려면  
+##### <a name="to-include-a-template-that-you-create-manually"></a>수동으로 만든 서식 파일을 포함 하려면  
   
-1.  VSIX 프로젝트에서 템플릿이 포함될 프로젝트에 새 폴더를 추가합니다.  
+1.  VSIX 프로젝트에서 서식 파일을 포함 하도록 프로젝트에 새 폴더를 추가 합니다.  
   
-2.  이 새 폴더 아래에 다음 하위 폴더를 만든 다음 *Locale ID* 폴더에 템플릿 파일\(.zip\)을 추가합니다.  
+2.  이 새 폴더 아래에 다음 하위 폴더를 만들고 서식 파일 (.zip) 파일을 추가 *로캘 ID* 폴더입니다.  
   
      *YourTemplateFolder*  
   
@@ -163,105 +164,107 @@ caps.handback.revision: 39
   
      **SharePoint14**  
   
-     *Locale ID*  
+     *로캘 ID*  
   
      *YourTemplateName*.zip  
   
-     예를 들어 영어\(미국\) 로캘을 지원하는 ContosoCustomAction.zip이라는 항목 템플릿이 있는 경우 전체 경로는 ItemTemplates\\SharePoint\\SharePoint14\\1033\\ContosoCustomAction.zip일 수 있습니다.  
+     예를 들어 영어 (미국) 로캘을 지 원하는 ContosoCustomAction.zip 라는 항목 템플릿을 설정한 경우 전체 경로 ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip 수 있습니다.  
   
-3.  **솔루션 탐색기**, 템플릿 파일을 선택 \(*YourTemplateName*.zip\).  
+3.  **솔루션 탐색기**를 템플릿 파일을 선택 (*YourTemplateName*.zip).  
   
-4.  **속성** 창에서 **빌드 작업** 속성을 **콘텐츠**로 설정합니다.  
+4.  에 **속성** 창에서 설정 된 **빌드 작업** 속성을 **콘텐츠**합니다.  
   
-5.  Source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 선택  **열기**.  
+5.  Source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 **열려**합니다.  
   
-     파일이 디자이너에서 열립니다.  
+     파일이는 디자이너에서 열립니다.  
   
-6.  에  **자산** 섹션 편집기의 선택은  **새** 단추.  
+6.  에 **자산** 섹션 편집기의 선택은 **새로 만들기** 단추입니다.  
   
-     **를 추가 하는 새로운 자산** 대화 상자가 열립니다.  
+     **새 자산 추가** 대화 상자가 열립니다.  
   
-7.  에 있는  **유형** 목록에서 선택  **Microsoft.VisualStudio.ItemTemplate** 또는  **Microsoft.VisualStudio.ProjectTemplate**.  
+7.  에 **형식** 목록에서 선택 **Microsoft.VisualStudio.ItemTemplate** 또는 **Microsoft.VisualStudio.ProjectTemplate**합니다.  
   
-8.  에  **원본** 목록에서 선택  **파일 시스템에 파일을**.  
+8.  에 **소스** 목록에서 선택 **파일 시스템의 파일**합니다.  
   
-9. 에  **경로** 필드에서 어셈블리 전체 경로 입력 \(예를 들어,  **ItemTemplates\\SharePoint\\SharePoint14\\1033\\ContosoCustomAction.zip**, 또는 사용은  **찾아보기** 단추를 찾아 어셈블리를 선택 하 고 선택의  **확인** 단추.  
+9. 에 **경로** 필드 어셈블리에 전체 경로 입력 합니다 (예를 들어 **ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip**, 사용 또는 **찾아보기**단추을 찾아 선택 어셈블리를 선택한 후는 **확인** 단추입니다.  
   
-##### 프로젝트 템플릿 또는 항목 템플릿에 대한 마법사를 포함하려면  
+##### <a name="to-include-a-wizard-for-a-project-template-or-item-template"></a>프로젝트 템플릿 또는 항목 템플릿에 대 한 마법사를 포함 하려면  
   
-1.  VSIX 프로젝트를 source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 선택  **열기**.  
+1.  VSIX 프로젝트에서 source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 선택한 후 **열고**합니다.  
   
-     파일이 디자이너에서 열립니다.  
+     파일이는 디자이너에서 열립니다.  
   
-2.  에  **자산** 섹션 편집기의 선택은  **새** 단추.  
+2.  에 **자산** 섹션 편집기의 선택은 **새로 만들기** 단추입니다.  
   
-     **를 추가 하는 새로운 자산** 대화 상자가 열립니다.  
+     **새 자산 추가** 대화 상자가 열립니다.  
   
-3.  에 있는  **유형** 목록에서 선택  **Microsoft.VisualStudio.Assembly**.  
+3.  에 **형식** 목록에서 선택 **Microsoft.VisualStudio.Assembly**합니다.  
   
-4.  에  **소스** 목록에서 다음 단계 중 하나를 수행 하십시오.  
+4.  에 **소스** 목록에서 다음 단계 중 하나를 수행 합니다.  
   
-    -   마법사 어셈블리가 VSIX 프로젝트와 동일한 솔루션에 있는 프로젝트에서 빌드된 경우 선택  **는 프로젝트를 현재 솔루션**.  에 있는  **프로젝트** 목록에서 프로젝트의 이름을 선택 합니다.  
+    -   마법사 어셈블리에서 VSIX 프로젝트와 동일한 솔루션에 있는 프로젝트를 빌드할 경우 선택 **현재 솔루션의 프로젝트**합니다. 에 **프로젝트** 목록에서 프로젝트의 이름을 선택 합니다.  
   
-    -   마법사 어셈블리가 프로젝트에 파일로 포함 되는 경우 선택  **파일 시스템에 파일을**.  에  **경로** 필드, 어셈블리 파일에 전체 경로 입력 하거나 사용 된  **찾아보기** 단추를 찾아 어셈블리를 선택 합니다.  
+    -   마법사 어셈블리를 프로젝트에 파일로 포함할 경우 선택 **파일 시스템의 파일**합니다. 에 **경로** 필드에서 어셈블리 파일의 전체 경로 입력 하거나 사용는 **찾아보기** 단추를 찾아 어셈블리를 선택 합니다.  
   
 5.  **확인** 단추를 선택합니다.  
   
-### 관련 연습  
- 다음 표에는 VSIX 프로젝트를 사용하여 다양한 형식의 SharePoint 도구 확장을 배포하는 방법을 보여 주는 연습이 나와 있습니다.  
+### <a name="related-walkthroughs"></a>관련된 연습  
+ 다음 표에서 다양 한 유형의 SharePoint 도구 확장을 배포 하려면 VSIX 프로젝트를 사용 하는 방법을 보여 주는 연습을 나열 합니다.  
   
-|확장 형식|관련 연습|  
-|-----------|-----------|  
-|확장 어셈블리만 포함된 확장|[Walkthrough: Extending a SharePoint Project Item Type](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)<br /><br /> [Walkthrough: Creating a SharePoint Project Extension](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)<br /><br /> [Walkthrough: Calling into the SharePoint Client Object Model in a Server Explorer Extension](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)|  
-|SharePoint 명령이 포함된 확장|[Walkthrough: Creating a Custom Deployment Step for SharePoint Projects](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)<br /><br /> [Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)<br /><br /> [연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|  
-|Visual Studio 템플릿이 포함된 확장|[Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)<br /><br /> [연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 1부](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)|  
-|템플릿 마법사가 포함된 확장|[Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)<br /><br /> [연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|  
+|확장 형식|관련된 연습|  
+|--------------------|--------------------------|  
+|확장 프로그램 어셈블리에만 포함 된 확장|[연습: SharePoint 프로젝트 항목 형식 확장](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)<br /><br /> [연습: SharePoint 프로젝트 확장명 만들기](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)<br /><br /> [연습: 서버 탐색기 확장의 SharePoint 클라이언트 개체 모델 호출](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)|  
+|SharePoint 명령에 포함 된 확장|[연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)<br /><br /> [연습: 서버 탐색기를 확장하여 웹 파트 표시](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)<br /><br /> [연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|  
+|Visual Studio 템플릿이 포함 된 확장|[연습: 항목 템플릿을 사용하여 사용자 지정 작업 프로젝트 항목 만들기, 1부](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)<br /><br /> [연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 1부](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)|  
+|템플릿 마법사가 포함 된 확장|[연습: 항목 템플릿을 사용하여 사용자 지정 작업 프로젝트 항목 만들기, 2부](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)<br /><br /> [연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|  
   
-## 수동으로 VSIX 패키지 만들기  
- SharePoint 도구 확장용 VSIX 패키지를 수동으로 만들려는 경우 다음 단계를 수행합니다.  
+## <a name="creating-vsix-packages-manually"></a>VSIX 패키지를 수동으로 만들기  
+ SharePoint 도구 확장에 대 한 VSIX 패키지를 수동으로 만들려면 하려는 경우 다음 단계를 수행 합니다.  
   
-1.  extension.vsixmanifest 파일, \[Content\_Types\].xml 및 VSIX 패키지 파일\(.vsix 파일\)을 만듭니다.  자세한 내용은 [VSIX 패키지에 대 한 분석](../extensibility/anatomy-of-a-vsix-package.md) 및 [방법: 수동으로 확장 패키지&#40;VSIX 배포&#41;](~/misc/how-to-manually-package-an-extension-vsix-deployment.md)를 참조하십시오.  
+1.  새 폴더에 extension.vsixmanifest 파일 및 [Content_Types].xml 파일을 만듭니다. 자세한 내용은 참조 [VSIX 패키지 분석](/visualstudio/extensibility/anatomy-of-a-vsix-package)합니다.  
   
-2.  VSIX 패키지에 확장 어셈블리를 추가합니다.  확장에 SharePoint 명령이 포함되어 있으면 SharePoint 명령을 구현하는 어셈블리도 VSIX 패키지에 추가합니다.  
+2.  Windows 탐색기에서 두 개의 XML 파일이 포함 된 폴더를 마우스 오른쪽 단추로 클릭 보내기를 클릭 한 다음 압축 (zip) 폴더를 클릭 합니다. 결과.zip 파일을 Filename은 패키지를 설치 하는 재배포 가능 파일의 이름 Filename.vsix을 바꿉니다.  
   
-3.  extension.vsixmanifest 파일을 수정합니다.  
+3.  VSIX 패키지에 확장 어셈블리를 추가 합니다. SharePoint 명령 확장 프로그램의 경우, VSIX 패키지를 SharePoint 명령을 구현 하는 어셈블리를 추가할 수도 있습니다.  
   
-    -   추가 `Microsoft.VisualStudio.MefComponent` 요소는 `Assets` 요소로 설정한 다음 VSIX 패키지에 확장을 구현 하는 어셈블리의 상대 경로 새 요소의 값입니다.  자세한 내용은 [NIB: MEFComponent Element \(VSX Schema\)](http://msdn.microsoft.com/ko-kr/8a813141-8b73-44c9-b80b-ca85bbac9551)을 참조하십시오.  
+4.  Extension.vsixmanifest 파일을 수정 합니다.  
   
-    -   추가 확장에 대 한 SharePoint 서버 개체 모델을 호출 하는 SharePoint 명령을 포함 하는 경우는 `Microsoft.VisualStudio.Assembly` 요소는 `Assets` 요소.  새 요소의 값을 VSIX 패키지에서 SharePoint 명령을 구현 하는 어셈블리의 상대 경로로 설정 합니다.  자세한 내용은 [자산 요소 \(VSX 스키마\)](http://msdn.microsoft.com/ko-kr/9fcfc098-edc7-484b-9d4c-acd17829d737)을 참조하십시오.  
+    -   추가 `Microsoft.VisualStudio.MefComponent` 요소 아래에서 `Assets` 요소를 제거한 다음 VSIX 패키지에서 확장을 구현 하는 어셈블리의 상대 경로를 새 요소의 값을 설정 합니다. 자세한 내용은 참조 [MEFComponent 요소 (VSX 스키마)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551)합니다.  
   
-    -   확장 프로젝트 템플릿 또는 항목 템플릿을 포함 하는 경우 추가 `ProjectTemplate` 또는 `ItemTemplate` 요소는 `Assets` 요소.  새 요소의 값을 VSIX 패키지에서 템플릿이 포함 된 폴더의 상대 경로로 설정 합니다.  자세한 내용은 [NIB: ProjectTemplate Element \(VSX Schema\)](http://msdn.microsoft.com/ko-kr/87add64c-9dcd-495f-8815-209dab182cb1) 및 [NIB: ItemTemplate Element \(VSX Schema\)](http://msdn.microsoft.com/ko-kr/1d489e54-c1c5-4f96-a510-6c2640867ff0)를 참조하십시오.  
+    -   SharePoint 명령은 SharePoint에 대 한 서버 개체 모델을 호출 하는 확장 프로그램의 경우, 추가 `Microsoft.VisualStudio.Assembly` 요소 아래에서 `Assets` 요소입니다. VSIX 패키지의 SharePoint 명령을 구현 하는 어셈블리의 상대 경로를 새 요소의 값을 설정 합니다. 자세한 내용은 참조 [자산 요소 (VSX 스키마)](http://msdn.microsoft.com/en-us/9fcfc098-edc7-484b-9d4c-acd17829d737)합니다.  
   
-    -   프로젝트 템플릿 또는 항목 템플릿에 대 한 사용자 지정 마법사 확장을 포함 하는 경우 추가 된 `Assembly` 요소 아래는 `Assets` 요소.  새 요소 값을 VSIX 패키지에 있는 어셈블리의 상대 경로로 설정한 다음 설정 된 `AssemblyName` 특성 \(버전, culture 및 공개 키 토큰 포함\) 전체 어셈블리 이름으로.  자세한 내용은 [종속성 요소 \(VSX 스키마\)](http://msdn.microsoft.com/ko-kr/1f63f60a-98ad-48ec-8e44-4eba383d3e37)을 참조하십시오.  
+    -   확장 프로그램 프로젝트 템플릿 또는 항목 템플릿의 포함 하는 경우 추가 `ProjectTemplate` 또는 `ItemTemplate` 요소 아래에서 `Assets` 요소입니다. VSIX 패키지에서 템플릿을 포함 하는 폴더의 상대 경로를 새 요소의 값을 설정 합니다. 자세한 내용은 참조 [ProjectTemplate 요소 (VSX 스키마)](http://msdn.microsoft.com/en-us/87add64c-9dcd-495f-8815-209dab182cb1) 및 [ItemTemplate 요소 (VSX 스키마)](http://msdn.microsoft.com/en-us/1d489e54-c1c5-4f96-a510-6c2640867ff0)합니다.  
   
-### 예제  
- 다음 예제에서는 SharePoint 도구 확장에 대한 extension.vsixmanifest 파일의 내용을 보여 줍니다.  확장 Contoso.ProjectExtension.dll 라는 어셈블리에 구현 됩니다.  확장 하 고 Contoso.ExtensionCommands.dll 라는 폴더 아래의 항목 템플릿을 이라는 SharePoint 명령 어셈블리가 포함  **ItemTemplates** VSIX 패키지에서입니다.  이 예제에서는 두 어셈블리 모두 VSIX 패키지의 extension.vsixmanifest 파일과 동일한 폴더에 있다고 가정합니다.  
+    -   확장 프로그램 프로젝트 템플릿 또는 항목 템플릿에 대 한 사용자 지정 마법사가 포함 된 경우 추가 `Assembly` 요소 아래에서 `Assets` 요소입니다. VSIX 패키지에 어셈블리의 상대 경로를 새 요소의 값을 설정한 다음 설정의 `AssemblyName` 특성을 전체 어셈블리 이름 (버전, culture 및 공개 키 토큰 포함). 자세한 내용은 참조 [Dependency 요소 (VSX 스키마)](http://msdn.microsoft.com/en-us/1f63f60a-98ad-48ec-8e44-4eba383d3e37)합니다.  
+  
+### <a name="example"></a>예제  
+ 다음 예제에서는 SharePoint 도구 확장에 대 한 extension.vsixmanifest 파일의 내용을 보여 줍니다. 확장은 Contoso.ProjectExtension.dll 라는 어셈블리에서 구현 됩니다. 확장 Contoso.ExtensionCommands.dll 및 명명 된 폴더에서 항목 템플릿을 라고 하는 SharePoint 명령 어셈블리가 포함 **Itemtemplate** VSIX 패키지에 있습니다. 이 예에서는 extension.vsixmanifest 파일 VSIX 패키지에서와 같은 폴더에는 두 어셈블리가 모두 가정 합니다.  
   
 ```  
-<PackageManifest Version=”2.0.0” xmlns=”http://schemas.microsoft.com/developer/vsx-schema/2011”>  
-  <Metadata>  
-    <Identity Id="CustomActionProjectItem.Microsoft.b99efe4d-cef3-4afd-b9af-034ca0c52743" Version="1.0" Language="en-US" Publisher="Microsoft" />  
-    <DisplayName>CustomActionProjectItem</DisplayName>  
-    <Description>Empty VSIX Project.</Description>  
-  </Metadata>  
-  <Installation>  
-    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />  
-  </Installation>  
-  <Dependencies>  
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="4.5" />  
-  </Dependencies>  
-  <Assets>  
-    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="ItemTemplates" />  
-    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="ProjectItemDefinition.dll" />  
-  </Assets>  
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">  
+  <Metadata>  
+    <Identity Id="CustomActionProjectItem.Microsoft.b99efe4d-cef3-4afd-b9af-034ca0c52743" Version="1.0" Language="en-US" Publisher="Microsoft" />  
+    <DisplayName>CustomActionProjectItem</DisplayName>  
+    <Description>Empty VSIX Project.</Description>  
+  </Metadata>  
+  <Installation>  
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />  
+  </Installation>  
+  <Dependencies>  
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="4.5" />  
+  </Dependencies>  
+  <Assets>  
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="ItemTemplates" />  
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="ProjectItemDefinition.dll" />  
+  </Assets>  
 </PackageManifest>  
   
 ```  
   
-## 참고 항목  
- [Extending the SharePoint Project System](../sharepoint/extending-the-sharepoint-project-system.md)   
- [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
- [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md)   
- [Debugging Extensions for the SharePoint Tools in Visual Studio](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
+## <a name="see-also"></a>참고 항목  
+ [SharePoint 프로젝트 시스템 확장](../sharepoint/extending-the-sharepoint-project-system.md)   
+ [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
+ [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)   
+ [Visual Studio에서 SharePoint 도구에 대한 확장명 디버깅](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
   
   

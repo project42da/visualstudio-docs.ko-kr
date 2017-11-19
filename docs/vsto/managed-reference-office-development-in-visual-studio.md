@@ -1,31 +1,36 @@
 ---
-title: "관리되는 참조(Visual Studio에서 Office 개발)"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "참조[Visual Studio에서 Office 개발], 2007 Microsoft Office 시스템"
-  - "Visual Studio에서 Office 개발, 참조"
+title: "관리 되는 참조 (Visual Studio에서 Office 개발) | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- reference [Office development in Visual Studio], 2007 Microsoft Office system
+- Office development in Visual Studio, reference
 ms.assetid: 1fa66da0-9d90-4524-ba4f-4da13aab73b5
-caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 2e7bb95ba186c55820ce0c8fd965196ede957b1e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 관리되는 참조(Visual Studio에서 Office 개발)
-  이 섹션에는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] 대상의 Office 프로젝트에서 사용되는 네임스페이스 및 형식에 대한 API 참조 설명서가 포함되어 있습니다. .NET Framework 3.5를 대상으로 하는 Office 프로젝트에서 사용되는 네임스페이스 및 형식에 대한 API 참조 설명서는 Visual Studio 설명서에서 [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=160658](http://go.microsoft.com/fwlink/?LinkId=160658) 참조 섹션을 참조하세요.  
+# <a name="managed-reference-office-development-in-visual-studio"></a>관리되는 참조(Visual Studio에서 Office 개발)
+  이 섹션에는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]대상의 Office 프로젝트에서 사용되는 네임스페이스 및 형식에 대한 API 참조 설명서가 포함되어 있습니다. .NET Framework 3.5를 대상으로 하는 Office 프로젝트에서 사용되는 네임스페이스 및 형식에 대한 API 참조 설명서는 Visual Studio 설명서에서 [http://go.microsoft.com/fwlink/?LinkId=160658](http://go.microsoft.com/fwlink/?LinkId=160658)참조 섹션을 참조하세요.  
   
-## 단원 내용  
+> [!NOTE]  
+>  Office 환경을 확장 하는 솔루션을 개발에 관심이 [여러 플랫폼](https://dev.office.com/add-in-availability)? 체크 아웃 새 [Office 추가 기능 모델](https://dev.office.com/docs/add-ins/overview/office-add-ins)합니다. Office 추가 기능에서 VSTO 추가 기능 및 솔루션에 비해 적을 있고 거의 모든 웹 프로그래밍 HTML5, JavaScript, CSS3 및 XML 등의 기술을 사용 하 여 빌드할 수 있습니다.  
+  
+## <a name="in-this-section"></a>단원 내용  
  <xref:Microsoft.Office.Tools>  
  Office 솔루션을 프로그래밍할 때 일반적으로 사용하는 클래스가 포함됩니다. 여기에는 VSTO 추가 기능용 기본 클래스, VSTO 추가 기능에서 사용자 지정 작업창을 만들기 위한 클래스, Excel 및 Word 솔루션에서 스마트 태그를 만들기 위한 클래스, 문서 수준 사용자 지정에서 작업 창을 만들기 위한 클래스가 포함됩니다.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 18
  <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스 및 그와 관련된 캐시된 데이터 클래스 집합이 포함되어 있습니다. 이러한 클래스를 사용하면 Microsoft Office가 설치되지 않은 컴퓨터에서 문서 수준 사용자 지정의 여러 측면을 수정할 수 있습니다.  
   
  <xref:Microsoft.VisualStudio.Tools.Applications.Deployment>  
- Office 솔루션에 대한 *배포 후 작업*을 만들기 위해 구현할 수 있는 <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> 인터페이스, Office 솔루션을 설치할 때 throw될 수 있는 예외 및 Visual Studio 인프라의 일부인 다른 API가 포함됩니다.  
+ Office 솔루션에 대한 <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> 배포 후 작업 *을 만들기 위해 구현할 수 있는* 인터페이스, Office 솔루션을 설치할 때 throw될 수 있는 예외 및 Visual Studio 인프라의 일부인 다른 API가 포함됩니다.  
   
  <xref:Microsoft.VisualStudio.Tools.Applications.Runtime>  
  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에 의해 throw될 수 있는 대부분의 예외, 문서 수준 사용자 지정에 데이터를 캐시하는 데 사용할 수 있는 여러 클래스 및 Visual Studio 인프라의 일부인 기타 API가 포함됩니다.  
@@ -59,9 +64,9 @@ caps.handback.revision: 18
  <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks>  
  Office 프로젝트를 빌드하는 데 사용되는 MSBuild 작업 클래스가 포함됩니다.  
   
-## 참고 항목  
- [Visual Studio Tools for Office 런타임 개요](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
- [시작&#40;Visual Studio에서의 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
+ [시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
   

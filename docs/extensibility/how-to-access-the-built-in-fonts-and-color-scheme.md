@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,32 +12,18 @@ helpviewer_keywords:
 - font and color control [Visual Studio SDK], categories
 - colors, accessing built-in schemes
 ms.assetid: 6905845e-e88e-4805-adcf-21da39108ec7
-caps.latest.revision: 23
+caps.latest.revision: "23"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: f646bb0a1606bd5944c945c5db89083fa265afbd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: ae5c64d0272b998d27a9eb5753c04ae764c3af8f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-access-the-built-in-fonts-and-color-scheme"></a>방법: 기본 제공 글꼴 및 색 구성표에 액세스
-Visual Studio 통합된 개발 환경 (IDE)에 편집기 창에 연결 되는 글꼴 및 색 구성표가 있습니다. 이 체계를 통해 액세스할 수 있습니다는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>인터페이스.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>  
+Visual Studio 통합된 개발 환경 (IDE)에 편집기 창에 연결 되는 글꼴 및 색 구성표가 있습니다. 이 체계를 통해 액세스할 수 있습니다는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 인터페이스입니다.  
   
  기본 제공 글꼴 및 색 구성표를 사용 하려면 VSPackage 해야 합니다.  
   
@@ -57,7 +42,7 @@ Visual Studio 통합된 개발 환경 (IDE)에 편집기 창에 연결 되는 �
      이 GUID는 범주를 고유 하 게 식별 하는 데 사용 되**합니다.** 이 범주에는 IDE의 기본 글꼴 및 색 사양 다시 사용합니다.  
   
     > [!NOTE]
-    >  사용 하 여 글꼴 및 색 데이터를 검색할 때는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>다른 인터페이스의 경우 Vspackage를 사용 하 여이 GUID 기본 제공 정보를 참조 합니다.</xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>  
+    >  사용 하 여 글꼴 및 색 데이터를 검색할 때는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents> 다른 인터페이스의 경우 Vspackage를 사용 하 여이 GUID 기본 제공 정보를 참조 합니다.  
   
 2.  IDE에서 표시 하는 경우 필요에 따라 지역화할 수 있도록 항목의 이름은 VSPackage의 리소스 (.rc) 파일 내의 문자열 테이블에 추가 되어야 합니다.  
   
@@ -78,17 +63,17 @@ Visual Studio 통합된 개발 환경 (IDE)에 편집기 창에 연결 되는 �
     |범주|REG_SZ|GUID|스톡 글꼴 및 색 구성표를 포함 하는 범주를 식별 하는 임의의 GUID입니다.|  
     |패키지|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> 이 GUID는 기본 글꼴 및 색 구성을 사용 하는 모든 Vspackage에서 사용 됩니다.|  
     |NameID|REG_DWORD|ID|VSPackage에서 지역화 가능한 범주 이름의 리소스 ID입니다.|  
-    |ToolWindowPackage|REG_SZ|GUID|구현 하는 VSPackage의 GUID는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>인터페이스.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|  
+    |ToolWindowPackage|REG_SZ|GUID|구현 하는 VSPackage의 GUID는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 인터페이스입니다.|  
   
 3.  
   
 ### <a name="to-initiate-the-use-of-system-provided-fonts-and-colors"></a>시스템 제공 글꼴 및 색의 사용을 시작 하려면  
   
-1.  인스턴스를 만들고는 `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer` 창 구현 및 초기화의 일부로 인터페이스입니다.  
+1.  인스턴스를 만들고는 `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer` 창의 구현과 초기화의 일부로 인터페이스입니다.  
   
-2.  호출 된 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A>의 인스턴스를 가져오는 메서드는 `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer` 현재 해당 인터페이스 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>인스턴스.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> </xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A>  
+2.  호출 된 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A> 의 인스턴스를 가져오는 메서드는 `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer` 현재 해당 인터페이스 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 인스턴스.  
   
-3.  호출 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A>두 번.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A>  
+3.  호출 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> 두 번입니다.  
   
     -   한 번 호출 `VSEDITPROPID_ViewGeneral_ColorCategory`인수로 합니다.  
   

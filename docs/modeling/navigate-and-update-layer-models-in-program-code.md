@@ -10,30 +10,15 @@ helpviewer_keywords:
 - layer models, navigating in program code
 - layer models, updating in program code
 ms.assetid: c60edc87-33ee-4964-a954-40069f9febf3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 50da0b90dd1c8924d8772eabd83265ff3827c2c2
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cfe4f389516a3421bdc0d8643790dbb9c7cc2733
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>프로그램 코드에서 레이어 모델 탐색 및 업데이트
 이 항목에서는 프로그램 코드를 사용하여 탐색하고 업데이트할 수 있는 레이어 모델의 요소와 관계에 대해 설명합니다. 사용자의 관점에서 종속성 다이어그램에 대 한 자세한 내용은 참조 [종속성 다이어그램: 참조](../modeling/layer-diagrams-reference.md) 및 [종속성 다이어그램: 지침](../modeling/layer-diagrams-guidelines.md)합니다.  
@@ -137,7 +122,7 @@ public void ... (...)
   
  ![각 ilayerelement에 대해 IShape가 표시 됨 ] (../modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> 및 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>은 UML 모델을 표시할 때도 사용됩니다. 자세한 내용은 참조 [다이어그램에 UML 모델 표시](../modeling/display-a-uml-model-on-diagrams.md)합니다.  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> 및 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>은 UML 모델을 표시할 때도 사용됩니다. 
   
 ## <a name="see-also"></a>참고 항목  
  [종속성 다이어그램에 명령 및 제스처 추가](../modeling/add-commands-and-gestures-to-layer-diagrams.md)   
@@ -145,4 +130,3 @@ public void ... (...)
  [종속성 다이어그램에 사용자 지정 속성 추가](../modeling/add-custom-properties-to-layer-diagrams.md)   
  [종속성 다이어그램: 참조](../modeling/layer-diagrams-reference.md)   
  [종속성 다이어그램: 지침](../modeling/layer-diagrams-guidelines.md)   
-

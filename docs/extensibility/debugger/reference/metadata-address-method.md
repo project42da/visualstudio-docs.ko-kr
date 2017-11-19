@@ -1,69 +1,69 @@
 ---
-title: "METADATA_ADDRESS_METHOD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "METADATA_ADDRESS_METHOD"
-helpviewer_keywords: 
-  - "METADATA_ADDRESS_METHOD 구조"
+title: METADATA_ADDRESS_METHOD | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: METADATA_ADDRESS_METHOD
+helpviewer_keywords: METADATA_ADDRESS_METHOD structure
 ms.assetid: fc0e5370-1b4f-4867-837f-0d63c4b9dd09
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d94087b9408afcc82dda8715faa643fa4f348cf0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# METADATA_ADDRESS_METHOD
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 구조는 주소를 클래스의 메서드를 나타냅니다.  
+# <a name="metadataaddressmethod"></a>METADATA_ADDRESS_METHOD
+이 구조체는 클래스의 메서드에의 주소를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_METHOD {  
-   _mdToken tokMethod;  
-   DWORD    dwOffset;  
-   DWORD    dwVersion;  
+   _mdToken tokMethod;  
+   DWORD    dwOffset;  
+   DWORD    dwVersion;  
 } METADATA_ADDRESS_METHOD;  
 ```  
   
-```c#  
+```csharp  
 public struct METADATA_ADDRESS_METHOD {  
-   public int  tokMethod;  
-   public uint dwOffset;  
-   public uint dwVersion;  
+   public int  tokMethod;  
+   public uint dwOffset;  
+   public uint dwVersion;  
 }  
 ```  
   
-## 용어  
+## <a name="terms"></a>용어  
  tokMethod  
- 메서드 ID입니다.  
+ 메서드의 ID입니다.  
   
- \[C\+\+\] `_mdToken` is a `typedef` for a 32\-bit `int`.  
+ [C + +] `_mdToken` 는 `typedef` 32 비트 `int`합니다.  
   
  dwOffset  
- \(오프셋에 vtable을 나타낼 수 있습니다.\)이 메서드가 클래스의 시작 까지의 오프셋입니다.  
+ 클래스에서의 오프셋 (vtable에 오프셋을 나타낼 수 있습니다)이이 메서드를 시작 합니다.  
   
  dwVersion  
- \(이 값은 기호 공급자에 게 고유\) 메서드 버전입니다.  
+ 메서드 (이 값은 기호 공급자에 고유한)의 버전입니다.  
   
-## 설명  
- 이 구조 연합에 속하지는 [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 때 구조는 `dwKind` 필드는 `DEBUG_ADDRESS_UNION` 구조 설정 되어 `ADDRESS_KIND_METHOD` \(값의 [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md) 열거형\).  
+## <a name="remarks"></a>설명  
+ 이 구조체의 공용 구조체의 일부인는 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 때 구조는 `dwKind` 필드는 `DEBUG_ADDRESS_UNION` 구조로 설정 되어 `ADDRESS_KIND_METHOD` (의 값은 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 열거형)입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: sh.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
- [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md)
+ [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
+ [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

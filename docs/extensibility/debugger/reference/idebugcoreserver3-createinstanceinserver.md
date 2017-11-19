@@ -1,69 +1,69 @@
 ---
-title: "IDebugCoreServer3::CreateInstanceInServer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCoreServer3::CreateInstanceInServer"
-helpviewer_keywords: 
-  - "IDebugCoreServer3::CreateInstanceInServer"
+title: IDebugCoreServer3::CreateInstanceInServer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCoreServer3::CreateInstanceInServer
+helpviewer_keywords: IDebugCoreServer3::CreateInstanceInServer
 ms.assetid: 76f36bae-f6ab-413c-a8a9-8808bfeba05b
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a89657949938526fa8e53689ea04015253b52520
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCoreServer3::CreateInstanceInServer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-디버그 엔진의 인스턴스를 서버에 만듭니다.  
+# <a name="idebugcoreserver3createinstanceinserver"></a>IDebugCoreServer3::CreateInstanceInServer
+서버에서 디버그 엔진의 인스턴스를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT CreateInstanceInServer(  
-   LPCWSTR  szDll,  
-   WORD     wLangId,  
-   REFCLSID clsidObject,  
-   REFIID   riid,  
-   void**   ppvObject  
+```cpp  
+HRESULT CreateInstanceInServer(  
+   LPCWSTR  szDll,  
+   WORD     wLangId,  
+   REFCLSID clsidObject,  
+   REFIID   riid,  
+   void**   ppvObject  
 );  
 ```  
   
-```c#  
+```csharp  
 int CreateInstanceInServer(  
-   string     szDll,   
-   ushort     wLangID,   
-   ref Guid   clsidObject,   
-   ref Guid   riid,   
-   out IntPtr ppvObject  
+   string     szDll,   
+   ushort     wLangID,   
+   ref Guid   clsidObject,   
+   ref Guid   riid,   
+   out IntPtr ppvObject  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `szDll`  
- \[in\] 지정 된 CLSID를 구현 하는 dll의 경로 `clsidObject` 매개 변수.  이 경우 `NULL`, 다음 COM의 `CoCreateInstance` 함수를 호출 합니다.  
+ [in] 에 지정 된 CLSID를 구현 하는 dll에 대 한 경로 `clsidObject` 매개 변수입니다. 이것이 `NULL`, 다음 COM의 `CoCreateInstance` 함수를 호출 합니다.  
   
  `wLangId`  
- \[in\] 디버그 엔진의 로캘입니다.  경우는 0입니다 있는 [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) 메서드를 호출 하면 안 됩니다.  
+ [in] 디버그 엔진의 로캘입니다. 이 경우 0 수 있습니다는 [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) 메서드를 호출 해야 합니다.  
   
  `clsidObject`  
- \[in\] 디버그 엔진의 CLSID에 만들 수 있습니다.  
+ [in] 만들려는 CLSID 디버그 엔진입니다.  
   
  `riid`  
- \[in\] 클래스에서 개체를 검색 하려면 인터페이스의 인터페이스 ID는 특정.  
+ [in] 클래스 개체에서 검색 하는 특정 인터페이스의 인터페이스 ID입니다.  
   
  `ppvObject`  
- \[out\] `IUnknown` 인터페이스에서 인스턴스화된 개체입니다.  캐스팅 또는이 개체를 사용 하 여 원하는 인터페이스를 마샬링해야 합니다.  
+ [out] `IUnknown` 인스턴스화된 개체의 인터페이스입니다. 캐스팅 하거나이 개체는 원하는 인터페이스를 마샬링하십시오.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)

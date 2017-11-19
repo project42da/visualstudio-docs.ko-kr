@@ -1,67 +1,67 @@
 ---
-title: "IDebugDocumentContext2::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentContext2::Compare"
-helpviewer_keywords: 
-  - "IDebugDocumentContext2::Compare"
+title: IDebugDocumentContext2::Compare | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDocumentContext2::Compare
+helpviewer_keywords: IDebugDocumentContext2::Compare
 ms.assetid: 2327b1ba-52d0-42fb-a01e-63cb4b332d2f
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4ed45c54b406d0e12a2909439755faf934f65941
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDocumentContext2::Compare
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-문서 컨텍스트를 지정 된 배열에이 문서 컨텍스트를 비교합니다.  
+# <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
+이 문서 컨텍스트 문서 컨텍스트를 지정 된 배열 비교합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Compare(   
-   DOCCONTEXT_COMPARE       compare,  
-   IDebugDocumentContext2** rgpDocContextSet,  
-   DWORD                    dwDocContextSetLen,  
-   DWORD*                   pdwDocContext  
+```cpp  
+HRESULT Compare(   
+   DOCCONTEXT_COMPARE       compare,  
+   IDebugDocumentContext2** rgpDocContextSet,  
+   DWORD                    dwDocContextSetLen,  
+   DWORD*                   pdwDocContext  
 );  
 ```  
   
-```c#  
-int Compare(   
-   enum_ DOCCONTEXT_COMPARE compare,  
-   IDebugDocumentContext2[] rgpDocContextSet,  
-   uint                     dwDocContextSetLen,  
-   out uint                 pdwDocContext  
+```csharp  
+int Compare(   
+   enum_ DOCCONTEXT_COMPARE compare,  
+   IDebugDocumentContext2[] rgpDocContextSet,  
+   uint                     dwDocContextSetLen,  
+   out uint                 pdwDocContext  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `compare`  
- \[in\] 값은 [DOCCONTEXT\_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) 비교 형식을 지정 하는 열거형입니다.  
+ [in] 값은 [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) 비교 유형을 지정 하는 열거형입니다.  
   
  `rgpDocContextSet`  
- \[in\] 배열 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) 를 비교 하 고 있는 문서 컨텍스트를 나타내는 개체입니다.  
+ [in] 배열을 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) 비교 하 고 문서 컨텍스트를 나타내는 개체입니다.  
   
  `dwDocContextSetLen`  
- \[in\] 비교할 문서 컨텍스트 배열의 길이입니다.  
+ [in] 비교할 문서 컨텍스트의 배열의 길이입니다.  
   
  `pdwDocContext`  
- \[out\] 인덱스를 반환의 `rgpDocContextSet` 의 비교를 만족 시키는 첫 번째 문서의 컨텍스트 배열입니다.  
+ [out] 에 대 한 인덱스를 반환 합니다.는 `rgpDocContextSet` 의 비교를 만족 하는 첫 번째 문서 컨텍스트의 배열입니다.  
   
-## 반환 값  
- 반환 `S_OK` 와 일치 하는 경우.  반환 `S_FALSE` 일치 하는 항목을 찾을 수 없는 경우.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 반환 `S_OK` 와 일치 하는 경우. 반환 `S_FALSE` 일치 항목이 없는 경우. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## 설명  
- [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) 배열에 전달 되는 개체를 구현 하는 같은 디버그 엔진에서 구현할 수 있는 `IDebugDocumentContext2` ;에서 호출 되는 개체 그렇지 않으면 비교가 잘못 되었습니다.  
+## <a name="remarks"></a>설명  
+ [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) 배열에 전달 되는 개체를 구현 하는 디버그 엔진에 의해 구현 되어야는 `IDebugDocumentContext2` 개체 그렇지 않으면 호출 되는 비교가 유효 하지 않습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
- [DOCCONTEXT\_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)
+ [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)

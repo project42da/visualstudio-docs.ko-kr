@@ -1,42 +1,42 @@
 ---
-title: "IDebugDefaultPort2::QueryIsLocal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDefaultPort2::QueryIsLocal"
-helpviewer_keywords: 
-  - "IDebugDefaultPort2::QueryIsLocal"
+title: IDebugDefaultPort2::QueryIsLocal | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDefaultPort2::QueryIsLocal
+helpviewer_keywords: IDebugDefaultPort2::QueryIsLocal
 ms.assetid: 1a42e774-c6ed-419a-a0e3-cab5778652ca
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b90459eb9dc3a2646bbe1ba5eb9ab25e9a8327b6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDefaultPort2::QueryIsLocal
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 메서드는이 포트는 로컬 컴퓨터에 적용 되는지 확인 합니다.  
+# <a name="idebugdefaultport2queryislocal"></a>IDebugDefaultPort2::QueryIsLocal
+이 메서드는이 포트는 로컬 컴퓨터에 있는지 여부를 결정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT QueryIsLocal(  
-   void  
+```cpp  
+HRESULT QueryIsLocal(  
+   void  
 );  
 ```  
   
-```c#  
-int QueryIsLocal();  
+```csharp  
+int QueryIsLocal();  
 ```  
   
-## 반환 값  
- 반환 `S_OK` 이 포트 \(호출자와 동일한 컴퓨터\)에서 로컬 인지 또는 `S_FALSE` 포트를 다른 컴퓨터에 있는 경우.  
+## <a name="return-value"></a>반환 값  
+ 반환 `S_OK` 경우이 포트는 로컬 (호출자와 동일한 컴퓨터)에서 또는 `S_FALSE` 포트가 다른 컴퓨터에 있을 경우.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)

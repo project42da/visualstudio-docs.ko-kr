@@ -1,60 +1,65 @@
 ---
-title: "TemplateID 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#TemplateID"
-helpviewer_keywords: 
-  - "<TemplateID> 요소[Visual Studio 템플릿]"
-  - "TemplateID 요소[Visual Studio 템플릿]"
+title: "TemplateID 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#TemplateID
+helpviewer_keywords:
+- <TemplateID> element [Visual Studio Templates]
+- TemplateID element [Visual Studio Templates]
 ms.assetid: 6ca24b4e-0325-4a9e-855e-0cbbe7361d8f
-caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5907a6953ae58c3cca042ce7aa975eec9f4563f1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# TemplateID 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) 요소에 의해 항목 템플릿 그룹으로 분류되는 항목 템플릿의 식별자를 지정합니다.  
+# <a name="templateid-element-visual-studio-templates"></a>TemplateID 요소(Visual Studio 템플릿)
+항목 템플릿의 그룹으로 분류 하는 항목 템플릿에 대 한 식별자를 지정 된 [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) 요소입니다.  
   
-## 구문  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<TemplateID >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <TemplateID> ... </TemplateID>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿을 표시하는 방법을 정의합니다.|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에서 템플릿이 표시되는 방식을 정의합니다.|  
   
-## 텍스트 값  
- `TemplateGroupID` 요소에 의해 항목 템플릿 그룹으로 분류되는 항목 템플릿의 식별자를 나타내는 `string`입니다.  
+## <a name="text-value"></a>텍스트 값  
+ A `string` 의해 항목 템플릿 그룹으로 분류 하는 항목 템플릿에 대 한 식별자를 나타내는 `TemplateGroupID` 요소입니다.  
   
-## 설명  
- `TemplateID`은 선택적 요소입니다.  
+## <a name="remarks"></a>설명  
+ `TemplateID`는 선택적 요소입니다.  
   
- .vstemplate 파일에서 `TemplateID` 요소가 생략된 경우 [Name](../extensibility/name-element-visual-studio-templates.md) 요소가 템플릿의 식별자로 사용됩니다.  
+ .Vstemplate 파일을 생략 하는 경우는 `TemplateID` 요소인 하면 [이름](../extensibility/name-element-visual-studio-templates.md) 요소 템플릿에 대 한 식별자로 사용 됩니다.  
   
- `TemplateID` 요소의 값은 프로젝트 시스템 등록\(\(HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\VisualStudio\\11.0\\Projects\\\)과 함께 **새 항목 추가** 대화 상자에 나타나는 템플릿을 필터링하는 데 사용됩니다.  
+ 값은 `TemplateID` 프로젝트 시스템 등록 함께 사용 하는 요소 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects\\)에 표시 되는 템플릿을 필터링 하는 **새 항목 추가** 대화 상자입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)

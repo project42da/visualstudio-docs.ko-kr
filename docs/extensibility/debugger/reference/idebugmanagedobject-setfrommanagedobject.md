@@ -1,51 +1,51 @@
 ---
-title: "IDebugManagedObject::SetFromManagedObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugManagedObject::SetFromManagedObject"
-helpviewer_keywords: 
-  - "IDebugManagedObject::SetFromManagedObject 메서드"
+title: IDebugManagedObject::SetFromManagedObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugManagedObject::SetFromManagedObject
+helpviewer_keywords: IDebugManagedObject::SetFromManagedObject method
 ms.assetid: 8700ee8d-2704-4580-bccc-046837a24edd
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a3f73236b45edea7a9dea003a1f3604669eb3739
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugManagedObject::SetFromManagedObject
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-값 값 클래스 개체의 인스턴스를 매개 변수로 제공 되는 값 클래스의 인스턴스를 설정 합니다.  
+# <a name="idebugmanagedobjectsetfrommanagedobject"></a>IDebugManagedObject::SetFromManagedObject
+매개 변수로 제공 하는 값 클래스의 인스턴스에서 값 클래스 개체의 인스턴스 값을 설정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT SetFromManagedObject(   
-   IUnknown* pManagedObject  
+```cpp  
+HRESULT SetFromManagedObject(   
+   IUnknown* pManagedObject  
 );  
 ```  
   
-```c#  
+```csharp  
 int SetFromManagedObject(  
-   object pManagedObject  
+   object pManagedObject  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pManagedObject`  
- \[in\] 새 값을 포함 하는 관리 되는 개체를 나타내는 인터페이스입니다.  
+ [in] 새 값을 포함 하는 관리 되는 개체를 나타내는 인터페이스입니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  
   
-## 설명  
- 표시 되는 관리 되는 개체를 변경 하려면이 메서드를 사용의 [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) 개체입니다.  
+## <a name="remarks"></a>설명  
+ 로 표현 되는 관리 되는 개체를 변경 하려면이 메서드는는 [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) 개체입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

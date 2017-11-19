@@ -1,53 +1,53 @@
 ---
-title: "IDebugField::GetTypeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugField::GetTypeInfo"
-helpviewer_keywords: 
-  - "IDebugField::GetTypeInfo 메서드"
+title: IDebugField::GetTypeInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugField::GetTypeInfo
+helpviewer_keywords: IDebugField::GetTypeInfo method
 ms.assetid: bb5acfa3-04c3-4088-be84-9ff8926cd16f
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 11b04ce148fbfe8129f62c21da0a0b015ed6e8f3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugField::GetTypeInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 메서드는 기호 또는 형식에 대 한 형식에 관계 없이 정보를 가져옵니다.  
+# <a name="idebugfieldgettypeinfo"></a>IDebugField::GetTypeInfo
+이 메서드는 기호 또는 형식에 대 한 형식에 독립적인 정보를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetTypeInfo(   
-   TYPE_INFO* pTypeInfo  
+```cpp  
+HRESULT GetTypeInfo(   
+   TYPE_INFO* pTypeInfo  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetTypeInfo(  
-   TYPE_INFO[] pTypeInfo  
+   TYPE_INFO[] pTypeInfo  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pTypeInfo`  
- \[out\] 유형을 반환 정보에 제공 된 [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md) 구조체입니다.  
+ [out] 반환 형식 정보에 제공 된 [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) 구조입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 형식에 관계 없이 정보 예를 들어, AppDomain, 모듈 및 기호를 포함 하는 클래스에 포함 됩니다.  
+## <a name="remarks"></a>설명  
+ 예를 들어, AppDomain, 모듈 및 기호를 포함 하는 클래스 형식에 독립적인 정보 포함 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
- [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md)
+ [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)

@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Creating Shortcut Menus for Bookmarks | Microsoft Docs'
+title: "연습: 책갈피에 대 한 바로 가기 메뉴 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,102 +16,102 @@ helpviewer_keywords:
 - shortcut menus, Word
 - menus, creating in Office applications
 ms.assetid: 86dbf3ff-ba75-42f9-8df6-abfc19b3cf6b
-caps.latest.revision: 57
-author: kempb
-ms.author: kempb
+caps.latest.revision: "57"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 2479bc8afdf4f02b586e4631d75fcf884bb2271e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 8dbb248fdaab10aaef6146ae68e36a64b60bb453
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-creating-shortcut-menus-for-bookmarks"></a>Walkthrough: Creating Shortcut Menus for Bookmarks
-  This walkthrough demonstrates how to create shortcut menus for <xref:Microsoft.Office.Tools.Word.Bookmark> controls in a document-level customization for Word. When a user right-clicks the text in a bookmark, a shortcut menu appears and gives the user options for formatting the text.  
+# <a name="walkthrough-creating-shortcut-menus-for-bookmarks"></a>연습: 책갈피에 대한 바로 가기 메뉴 만들기
+  이 연습에 대 한 바로 가기 메뉴를 만드는 방법을 보여 줍니다 <xref:Microsoft.Office.Tools.Word.Bookmark> Word 용 문서 수준 사용자 지정에서 컨트롤입니다. 책갈피에 텍스트를 누를 때 바로 가기 메뉴가 표시 되 고 텍스트의 서식을 지정 하기 위한 옵션이 제공.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ 이 연습에서는 다음 작업을 수행합니다.  
   
--   [Creating the Project](#BKMK_CreateProject).  
+-   [프로젝트 만들기](#BKMK_CreateProject)합니다.  
   
--   [Adding Text and Bookmarks to the Document](#BKMK_addtextandbookmarks).  
+-   [문서에 텍스트와 책갈피를 추가](#BKMK_addtextandbookmarks)합니다.  
   
--   [Adding Commands to a Shortcut Menu](#BKMK_AddCmndsShortMenu).  
+-   [바로 가기 메뉴에 명령 추가](#BKMK_AddCmndsShortMenu)합니다.  
   
--   [Format the Text in the Bookmark](#BKMK_formattextbkmk).  
+-   [책갈피의 텍스트 서식을](#BKMK_formattextbkmk)합니다.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] or [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
+-   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] 또는 [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
   
-##  <a name="BKMK_CreateProject"></a> Creating the Project  
- The first step is to create a Word document project in Visual Studio.  
+##  <a name="BKMK_CreateProject"></a>프로젝트 만들기  
+ 첫 번째 단계는 Visual Studio에서 Word 문서 프로젝트를 만드는 것입니다.  
   
-#### <a name="to-create-a-new-project"></a>To create a new project  
+#### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
   
--   Create a Word document project that has the name **My Bookmark Shortcut Menu**. In the wizard, select **Create a new document**. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+-   이름을 가진 Word 문서 프로젝트 만들기 **내 책갈피 바로 가기 메뉴**합니다. 마법사에서 선택 **새 문서**합니다. 자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
   
-     Visual Studio opens the new Word document in the designer and adds the **My Bookmark Shortcut Menu** project to **Solution Explorer**.  
+     Visual Studio 디자이너에서 새 Word 문서가 열리고 추가 **내 책갈피 바로 가기 메뉴** 프로젝트를 **솔루션 탐색기**합니다.  
   
-##  <a name="BKMK_addtextandbookmarks"></a> Adding Text and Bookmarks to the Document  
- Add some text to your document and then add two overlapping bookmarks.  
+##  <a name="BKMK_addtextandbookmarks"></a>문서에 텍스트와 책갈피를 추가  
+ 문서에 일부 텍스트를 추가 하 고 두 개의 겹치는 책갈피를 추가 합니다.  
   
-#### <a name="to-add-text-to-your-document"></a>To add text to your document  
+#### <a name="to-add-text-to-your-document"></a>텍스트 문서를 추가 하려면  
   
--   In the document that appears in the designer of your project, type the following text.  
+-   프로젝트의 디자이너에 표시 되는 문서에서 다음 텍스트를 입력 합니다.  
   
-     **This is an example of creating a shortcut menu when you right-click the text in a bookmark.**  
+     **이것이 책갈피에 텍스트를 마우스 오른쪽 단추로 클릭할 때 바로 가기 메뉴를 만드는 예입니다.**  
   
-#### <a name="to-add-a-bookmark-control-to-your-document"></a>To add a Bookmark control to your document  
+#### <a name="to-add-a-bookmark-control-to-your-document"></a>문서에 책갈피 컨트롤을 추가 하려면  
   
-1.  In the **Toolbox**, from the **Word Controls** tab, drag a <xref:Microsoft.Office.Tools.Word.Bookmark> control to your document.  
+1.  에 **도구 상자**에서 **Word 컨트롤** 탭을 끌어는 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 문서로 합니다.  
   
-     The **Add Bookmark Control** dialog box appears.  
+     **책갈피 컨트롤 추가** 대화 상자가 나타납니다.  
   
-2.  Select the words "creating a shortcut menu when you right-click the text", and then click **OK**.  
+2.  "텍스트를 마우스 오른쪽 단추로 클릭 바로 가기 메뉴를 만드는" 단어를 선택를 클릭 하 고 **확인**합니다.  
   
-     `bookmark1` is added to the document.  
+     `bookmark1`문서에 추가 됩니다.  
   
-3.  Add another <xref:Microsoft.Office.Tools.Word.Bookmark> control to the words "right-click the text in a bookmark".  
+3.  다른 항목 추가 <xref:Microsoft.Office.Tools.Word.Bookmark> "책갈피의 텍스트를 마우스 오른쪽 단추로 클릭" 단어를 제어 합니다.  
   
-     `bookmark2` is added to the document.  
+     `bookmark2`문서에 추가 됩니다.  
   
     > [!NOTE]  
-    >  The words "right-click the text" are in both `bookmark1` and `bookmark2`.  
+    >  둘 다에 있는 "텍스트를 오른쪽 단추로 클릭" 단어 `bookmark1` 및 `bookmark2`합니다.  
   
- When you add a bookmark to a document at design time, a <xref:Microsoft.Office.Tools.Word.Bookmark> control is created. You can program against several events of the bookmark. You can write code in the <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> event of the bookmark so that when the user right-clicks the text in the bookmark, a shortcut menu appears.  
+ 디자인 타임에 문서에 책갈피를 추가 하는 경우는 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤이 만들어집니다. 책갈피의 여러 이벤트에 대해 프로그래밍할 수 있습니다. 코드를 작성할 수 있습니다는 <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> 이벤트 책갈피의 책갈피에 텍스트를 클릭할 때 있도록 바로 가기 메뉴가 나타납니다.  
   
-##  <a name="BKMK_AddCmndsShortMenu"></a> Adding Commands to a Shortcut Menu  
- Add buttons to the shortcut menu that appears when you right-click the document.  
+##  <a name="BKMK_AddCmndsShortMenu"></a>바로 가기 메뉴에 명령 추가  
+ 문서를 마우스 오른쪽 단추로 클릭할 때 표시 되는 바로 가기 메뉴를 단추를 추가 합니다.  
   
-#### <a name="to-add-commands-to-a-shortcut-menu"></a>To add commands to a shortcut menu  
+#### <a name="to-add-commands-to-a-shortcut-menu"></a>바로 가기 메뉴에 명령을 추가 하려면  
   
-1.  Add a **Ribbon XML** item to the project. For more information, see [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md).  
+1.  추가 **리본 XML** 항목을 프로젝트입니다. 자세한 내용은 [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md)을 참조하십시오.  
   
-2.  In **Solution Explorer**, select **ThisDocument.cs** or **ThisDocument.vb**.  
+2.  **솔루션 탐색기**선택, **ThisDocument.cs** 또는 **ThisDocument.vb**합니다.  
   
-3.  On the menu bar, choose **View**, **Code**.  
+3.  메뉴 모음에서 **보기**, **코드**를 차례로 선택합니다.  
   
-     The **ThisDocument** class file opens in the Code Editor.  
+     **ThisDocument** 클래스 파일이 코드 편집기에서 열립니다.  
   
-4.  Add the following code to the **ThisDocument** class. This code overrides the CreateRibbonExtensibilityObject method and returns the Ribbon XML class to the Office application.  
+4.  다음 코드를 추가 하는 **ThisDocument** 클래스입니다. 이 코드 프로젝트 메서드를 재정의 하 고 Office 응용 프로그램에 리본 XML 클래스를 반환 합니다.  
   
-     [!code-csharp[Trin_Word_Document_Menus#1](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#1)]  [!code-vb[Trin_Word_Document_Menus#1](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#1)]  
+     [!code-csharp[Trin_Word_Document_Menus#1](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#1)]
+     [!code-vb[Trin_Word_Document_Menus#1](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#1)]  
   
-5.  In **Solution Explorer**, select the Ribbon XML file. By default, the Ribbon XML file is named Ribbon1.xml.  
+5.  **솔루션 탐색기**에서 리본 XML 파일을 선택합니다. 기본적으로 리본 XML 파일의 이름은 Ribbon1.xml입니다.  
   
-6.  On the menu bar, choose **View**, **Code**.  
+6.  메뉴 모음에서 **보기**, **코드**를 차례로 선택합니다.  
   
-     The Ribbon xml file opens in the Code Editor.  
+     코드 편집기에서 리본 xml 파일이 열립니다.  
   
-7.  In the Code Editor, replace the contents of the Ribbon XML file with the following code.  
+7.  코드 편집기에서 리본 XML 파일의 내용을 다음 코드로 바꿉니다.  
   
     ```  
     <?xml version="1.0" encoding="UTF-8"?>  
@@ -129,76 +127,80 @@ ms.lasthandoff: 08/30/2017
     </customUI>  
     ```  
   
-     This code adds two buttons to the shortcut menu that appears when you right-click the document.  
+     이 코드는 문서를 마우스 오른쪽 단추로 클릭할 때 표시 되는 바로 가기 메뉴에 두 개의 단추를 추가 합니다.  
   
-8.  In **Solution Explorer**, right-click `ThisDocument`, and then click **View Code**.  
+8.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 `ThisDocument`, 클릭 하 고 **코드 보기**합니다.  
   
-9. Declare the following variables and a bookmark variable at the class level.  
+9. 다음과 같은 변수 및 클래스 수준에서 책갈피 변수 선언 합니다.  
   
-     [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]   [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]  
+     [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]
+     [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]  
   
-10. In **Solution Explorer**, select the Ribbon code file. By default, the Ribbon code file is named **Ribbon1.cs** or **Ribbon1.vb**.  
+10. **솔루션 탐색기**을 리본 코드 파일을 선택 합니다. 기본적으로 리본 코드 파일 이름은 **Ribbon1.cs** 또는 **Ribbon1.vb**합니다.  
   
-11. On the menu bar, choose **View**, **Code**.  
+11. 메뉴 모음에서 **보기**, **코드**를 차례로 선택합니다.  
   
-     The Ribbon code file opens in the Code Editor.  
+     코드 편집기에서 리본 코드 파일이 열립니다.  
   
-12. In the Ribbon code file, add the following method. This is a callback method for the two buttons that you have added to the shortcut menu of the document. This method determines whether these buttons appear in the shortcut menu. The bold and italic buttons appear only if you right-click text within the bookmark.  
+12. 리본 코드 파일에서 다음 메서드를 추가 합니다. 이 문서의 바로 가기 메뉴에 추가 된 두 개의 단추에 대 한 콜백 메서드입니다. 이 메서드는 바로 가기 메뉴에 이러한 단추를 표시할지 여부를 결정 합니다. 굵게 및 기울임꼴 단추 텍스트를 책갈피 안에 마우스 오른쪽 단추로 클릭 하는 경우에 표시 합니다.  
   
-     [!code-csharp[Trin_Word_Document_Menus#5](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#5)]  [!code-vb[Trin_Word_Document_Menus#5](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#5)]  
+     [!code-csharp[Trin_Word_Document_Menus#5](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#5)]
+     [!code-vb[Trin_Word_Document_Menus#5](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#5)]  
   
-##  <a name="BKMK_formattextbkmk"></a> Format the Text in the Bookmark  
+##  <a name="BKMK_formattextbkmk"></a>책갈피에 텍스트 서식 지정  
   
-#### <a name="to-format-the-text-in-the-bookmark"></a>To format the text in the bookmark  
+#### <a name="to-format-the-text-in-the-bookmark"></a>책갈피의 텍스트 서식을 지정 하려면  
   
-1.  In the Ribbon code file, add a `ButtonClick` event handler to apply formatting to the bookmark.  
+1.  리본 코드 파일에서 추가 된 `ButtonClick` 이벤트 처리기를 책갈피에 서식을 적용 합니다.  
   
-     [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]  [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]  
+     [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]
+     [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]  
   
-2.  **Solution Explorer**, select **ThisDocument.cs** or **ThisDocument.vb**.  
+2.  **솔루션 탐색기**선택, **ThisDocument.cs** 또는 **ThisDocument.vb**합니다.  
   
-3.  On the menu bar, choose **View**, **Code**.  
+3.  메뉴 모음에서 **보기**, **코드**를 차례로 선택합니다.  
   
-     The **ThisDocument** class file opens in the Code Editor.  
+     **ThisDocument** 클래스 파일이 코드 편집기에서 열립니다.  
   
-4.  Add the following code to the **ThisDocument** class.  
+4.  다음 코드를 추가 하는 **ThisDocument** 클래스입니다.  
   
-     [!code-csharp[Trin_Word_Document_Menus#3](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#3)]  [!code-vb[Trin_Word_Document_Menus#3](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#3)]  
+     [!code-csharp[Trin_Word_Document_Menus#3](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#3)]
+     [!code-vb[Trin_Word_Document_Menus#3](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#3)]  
   
     > [!NOTE]  
-    >  You must write code to handle the case where bookmarks overlap. If you do not, by default, the code will be called for all bookmarks in the selection.  
+    >  책갈피가 겹치는 경우를 처리 하는 코드를 작성 해야 합니다. 기본적으로, 그렇지 않은 경우 선택 영역에서 모든 책갈피에 대 한 코드를 호출 됩니다.  
   
-5.  In C#, you must add event handlers for the bookmark controls to the <xref:Microsoft.Office.Tools.Word.Document.Startup> event. For information about creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+5.  C#에 책갈피 컨트롤에 대 한 이벤트 처리기를 추가 해야는 <xref:Microsoft.Office.Tools.Word.Document.Startup> 이벤트입니다. 이벤트 처리기를 만드는 방법은 참조 [하는 방법: Office 프로젝트의 이벤트 처리기 만들기](../vsto/how-to-create-event-handlers-in-office-projects.md)합니다.  
   
      [!code-csharp[Trin_Word_Document_Menus#4](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#4)]  
   
-## <a name="testing-the-application"></a>Testing the Application  
- Test your document to verify that the bold and italic menu items appear in the shortcut menu when you right-click text in a bookmark and that the text is properly formatted.  
+## <a name="testing-the-application"></a>응용 프로그램 테스트  
+ 책갈피의에서 텍스트를 마우스 오른쪽 단추로 클릭할 때 굵게 및 기울임꼴 메뉴 항목 바로 가기 메뉴에 표시 하 고 텍스트의 형식이 올바르게 지정 되었는지 확인 하려면 문서를 테스트 합니다.  
   
-#### <a name="to-test-your-document"></a>To test your document  
+#### <a name="to-test-your-document"></a>문서를 테스트하려면  
   
-1.  Press F5 to run your project.  
+1.  F5 키를 눌러 프로젝트를 실행합니다.  
   
-2.  Right-click in the first bookmark, and then click **Bold**.  
+2.  첫 번째 책갈피를 마우스 오른쪽 단추로 누른 **b o l d**합니다.  
   
-3.  Verify that all of the text in `bookmark1` is formatted as bold.  
+3.  확인에 텍스트를 모두 `bookmark1` 굵게 서식 지정 합니다.  
   
-4.  Right-click the text where the bookmarks overlap, and then click **Italic**.  
+4.  책갈피가 겹치는 텍스트를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **기울임꼴**합니다.  
   
-5.  Verify that all of the text in `bookmark2` is italic, and only the part of the text in `bookmark1` that overlaps `bookmark2` is italic.  
+5.  되어 있는지 확인에 텍스트를 모두 `bookmark2` 기울임꼴 이며에 있는 텍스트의 일부만 `bookmark1` 에 겹치는 `bookmark2` 기울임꼴로 표시 됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
- Here are some tasks that might come next:  
+## <a name="next-steps"></a>다음 단계  
+ 다음으로 수행할 수 있는 몇 가지 작업은 다음과 같습니다.  
   
--   Write code to respond to events of host controls in Excel. For more information, see [Walkthrough: Programming Against Events of a NamedRange Control](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md).  
+-   Excel에서 호스트 컨트롤의 이벤트에 응답 하는 코드를 작성 합니다. 자세한 내용은 [Walkthrough: Programming Against Events of a NamedRange Control](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)을 참조하세요.  
   
--   Use a check box to change formatting in a bookmark. For more information, see [Walkthrough: Changing Document Formatting Using CheckBox Controls](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).  
+-   책갈피에 서식을 변경 하는 확인란을 사용 합니다. 자세한 내용은 참조 [연습: 변경 문서 서식을 사용 하 여 CheckBox 컨트롤](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)합니다.  
   
-## <a name="see-also"></a>See Also  
- [Walkthroughs Using Word](../vsto/walkthroughs-using-word.md)   
- [Office UI Customization](../vsto/office-ui-customization.md)   
- [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md)   
- [Bookmark Control](../vsto/bookmark-control.md)   
- [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Word를 사용한 연습](../vsto/walkthroughs-using-word.md)   
+ [Office UI 사용자 지정](../vsto/office-ui-customization.md)   
+ [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
+ [Bookmark 컨트롤](../vsto/bookmark-control.md)   
+ [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
   
   

@@ -1,52 +1,52 @@
 ---
-title: "IDebugObject::GetManagedDebugObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::GetManagedDebugObject"
-helpviewer_keywords: 
-  - "IDebugObject::GetManagedDebugObject 메서드"
+title: IDebugObject::GetManagedDebugObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugObject::GetManagedDebugObject
+helpviewer_keywords: IDebugObject::GetManagedDebugObject method
 ms.assetid: cb89692e-7657-47ff-846d-311943521951
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a01823a2409b15ba101ad4b55d5584e385872574
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugObject::GetManagedDebugObject
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugobjectgetmanageddebugobject"></a>IDebugObject::GetManagedDebugObject
 디버그 엔진의 주소 공간에서 관리 되는 개체의 복사본을 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetManagedDebugObject(   
-   IDebugManagedObject** ppObject  
+```cpp  
+HRESULT GetManagedDebugObject(   
+   IDebugManagedObject** ppObject  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetManagedDebugObject(  
-   out IDebugManagedObject ppObject  
+   out IDebugManagedObject ppObject  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppObject`  
- \[out\] 반환 된 [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) 새로 만든된 관리 되는 개체를 나타내는 개체입니다.  
+ [out] 반환 된 [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) 새로 만든된 관리 되는 개체를 나타내는 개체입니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환 합니다.  이 경우 E\_FAIL 반환 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 는 관리 되는 값 클래스 인스턴스를 표시 하지 않습니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다. 이 경우 e_fail [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 관리 되는 값 클래스 인스턴스를 나타내지 않습니다.  
   
-## 설명  
- 이 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 개체는 같은 관리 되는 값 클래스 인스턴스를 나타낼 합니다는 `System.Decimal` 인스턴스.  로컬 복사본, 호출의 오버 헤드를 배치 하 여 [평가](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) 제거 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 개체와 같은 관리 되는 값 클래스 인스턴스를 나타내야 합니다는 `System.Decimal` 인스턴스. 호출의 오버 헤드 로컬 복사본을 사용 함으로써 [평가](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) 제거 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

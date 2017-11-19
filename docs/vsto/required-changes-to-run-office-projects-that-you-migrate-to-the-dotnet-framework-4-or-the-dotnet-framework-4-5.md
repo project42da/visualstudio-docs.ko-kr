@@ -1,59 +1,55 @@
 ---
-title: Required Changes to Run Office Projects that You Migrate to the .NET Framework 4 or the .NET Framework 4.5 | Microsoft Docs
+title: "필요한.NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 Office 프로젝트를 실행 하는 변경 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- Office projects [Office development in Visual Studio], migrating to .NET Framework 4
+helpviewer_keywords: Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 ms.assetid: e2cd35cc-7731-428e-9046-34fc57a02c48
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3f4f869cfe609a97a784fef0794f4f98ae19e24a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 2a037bd26eb3caa24c86fdba63753894b0bd1af3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="required-changes-to-run-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>Required Changes to Run Office Projects that You Migrate to the .NET Framework 4 or the .NET Framework 4.5
-  If the target framework of an Office project is changed to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later from an earlier version of the .NET Framework, you must perform the following tasks to ensure that the solution can run on the development computer and on end user computers:  
+# <a name="required-changes-to-run-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 또는 .NET Framework 4.5로 마이그레이션하는 Office 프로젝트를 실행하는 데 필요한 변경
+  Office 프로젝트의 대상 프레임 워크도 변경 된 경우는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 나중에 이전 버전의.NET Framework에서 하면 수행 해야 합니다는 솔루션을 개발 컴퓨터와 최종 사용자 컴퓨터에서 실행할 수 있도록 하려면 다음 작업:  
   
--   Remove the <xref:System.Security.SecurityTransparentAttribute> from the project if you upgraded it from Visual Studio 2008.  
+-   Visual Studio 2008에서 업그레이드한 경우 프로젝트에서 <xref:System.Security.SecurityTransparentAttribute>를 제거합니다.  
   
--   Perform a **Clean** command in Visual Studio to be able to run or debug the project on the development computer.  
+-   수행 된 **Clean** 프로젝트 개발 컴퓨터에서 실행 하거나 디버깅 하려면 Visual Studio에서 명령을 합니다.  
   
--   Update the .NET Framework prerequisite for the project.  
+-   프로젝트에 대한 .NET Framework 필수 조건을 업데이트합니다.  
   
--   End users must also reinstall the solution if you previously deployed it by using ClickOnce before you changed the target framework.  
+-   또한 대상 프레임워크를 변경하기 전에 ClickOnce를 사용하여 이전에 배포한 경우 최종 사용자가 솔루션을 다시 설치해야 합니다.  
   
- For more information about each of these tasks, see the corresponding sections below.  
+ 이러한 각 작업에 대한 자세한 내용은 아래 해당 섹션을 참조하세요.  
   
-## <a name="removing-the-securitytransparent-attribute-from-projects-that-you-upgrade-from-visual-studio-2008"></a>Removing the SecurityTransparent Attribute from Projects that You Upgrade from Visual Studio 2008  
- If you upgrade an Office project from Visual Studio 2008 and the target framework of the project subsequently changes to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must remove the <xref:System.Security.SecurityTransparentAttribute> from the project. Visual Studio does not automatically remove this attribute for you. If you do not remove this attribute, you receive an error message when you compile the project.  
+## <a name="removing-the-securitytransparent-attribute-from-projects-that-you-upgrade-from-visual-studio-2008"></a>Visual Studio 2008에서 업그레이드하는 프로젝트에서 SecurityTransparent 특성 제거  
+ Visual Studio 2008에서 Office 프로젝트를 업그레이드하고 프로젝트의 대상 프레임워크가 이후에 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상 버전으로 변경되는 경우 프로젝트에서 <xref:System.Security.SecurityTransparentAttribute>를 제거해야 합니다. Visual Studio에서 자동으로 이 특성을 제거하지 않습니다. 이 특성을 제거하지 않으면 프로젝트를 컴파일할 때 오류 메시지가 수신됩니다.  
   
- For more information about the conditions in which Visual Studio can change the target framework of an upgraded project to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], see [Upgrading and Migrating Office Solutions](../vsto/upgrading-and-migrating-office-solutions.md).  
+ Visual Studio를 업그레이드 된 프로젝트의 대상 프레임 워크를 변경할 수 있는 조건에 대 한 자세한 내용은 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], 참조 [솔루션 업그레이드 및 마이그레이션 Office](../vsto/upgrading-and-migrating-office-solutions.md)합니다.  
   
-#### <a name="to-remove-the-securitytransparentattribute"></a>To remove the SecurityTransparentAttribute  
+#### <a name="to-remove-the-securitytransparentattribute"></a>SecurityTransparentAttribute를 제거하려면  
   
-1.  With the project open in Visual Studio, open **Solution Explorer**.  
+1.  Visual Studio에서 프로젝트를 열고 **솔루션 탐색기**를 엽니다.  
   
-2.  Under the **Properties** node (for C#) or the **My Project** node (for Visual Basic), double-click the AssemblyInfo code file to open it in the code editor.  
+2.  **속성** 노드(C#의 경우) 또는 **My Project** 노드(Visual Basic의 경우) 아래에서 AssemblyInfo 코드 파일을 두 번 클릭하여 코드 편집기에서 엽니다.  
   
     > [!NOTE]  
-    >  In Visual Basic projects, you must click the **Show All Files** button in **Solution Explorer** to see the AssemblyInfo code file.  
+    >  Visual Basic 프로젝트에서 AssemblyInfo 코드 파일을 보려면 **솔루션 탐색기** 에서 **모든 파일 표시** 단추를 클릭해야 합니다.  
   
-3.  Locate the <xref:System.Security.SecurityTransparentAttribute> and either remove it from the file or comment it out.  
+3.  <xref:System.Security.SecurityTransparentAttribute>를 찾아 파일에서 제거하거나 주석으로 처리합니다.  
   
     ```vb  
     <Assembly: SecurityTransparent()>  
@@ -63,20 +59,20 @@ ms.lasthandoff: 08/28/2017
     [assembly: SecurityTransparent()]  
     ```  
   
-## <a name="performing-the-clean-command-to-debug-or-run-a-project-on-the-development-computer"></a>Performing the Clean Command to Debug or Run a Project on the Development Computer  
- If an Office project was built before the target framework of the project is changed to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must perform a **Clean** command and then rebuild the project after the target framework is changed. If do not perform a **Clean** command, you will receive a <xref:System.Runtime.InteropServices.COMException> when you try to debug or run the retargeted project.  
+## <a name="performing-the-clean-command-to-debug-or-run-a-project-on-the-development-computer"></a>Clean 명령을 수행하여 개발 컴퓨터에서 프로젝트 디버그 또는 실행  
+ Office 프로젝트를 프로젝트의 대상 프레임 워크를 변경 하기 전에 빌드된 경우는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 수행 해야 합니다는 이상 버전에서는 **Clean** 명령을 클릭 한 다음 대상 프레임 워크가 변경 된 후 프로젝트를 다시 작성 합니다. 하는 경우 수행 하지 않습니다는 **Clean** 명령, 표시 됩니다는 <xref:System.Runtime.InteropServices.COMException> 디버깅 하거나 대상이 변경 된 프로젝트를 실행 하려는 경우.  
   
- For more information about the **Clean** command, see [Building Office Solutions](../vsto/building-office-solutions.md).  
+ 에 대 한 자세한 내용은 **Clean** 명령에서 참조 [Office 솔루션 빌드](../vsto/building-office-solutions.md)합니다.  
   
-## <a name="updating-the-prerequisites-for-deployment"></a>Updating the Prerequisites for Deployment  
- When you retarget an Office project to [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must also update the corresponding .NET Framework prerequisite in the **Prerequisites** dialog box. Otherwise, the ClickOnce deployment or InstallShield Limited Edition project checks for and installs a previous version of the .NET Framework.  
+## <a name="updating-the-prerequisites-for-deployment"></a>배포를 위한 필수 조건 업데이트  
+ Office 프로젝트 대상을 다시 지정 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 나중에 해당 하는.NET Framework 필수도 업데이트 해야 합니다는 **필수 구성 요소** 대화 상자. 그렇지 않으면 ClickOnce 배포 또는 InstallShield Limited Edition 프로젝트가 이전 버전의 .NET Framework를 검사하고 설치합니다.  
   
- For more information about updating the prerequisites for deployment to end user computers, see [How to: Install Prerequisites on End User Computers to Run Office Solutions](http://msdn.microsoft.com/en-us/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).  
+ 최종 사용자 컴퓨터에 배포를 위한 필수 구성 요소를 업데이트 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: Office 솔루션을 실행 하려면 최종 사용자 컴퓨터에 필수 조건 설치](http://msdn.microsoft.com/en-us/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)합니다.  
   
-## <a name="reinstalling-solutions-on-end-user-computers"></a>Reinstalling Solutions on End User Computers  
- If you use ClickOnce to deploy an Office solution that targets the .NET Framework 3.5 and then you retarget the project to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, end users must uninstall the solution and then reinstall the solution after you republish it. If you republish the retargeted solution and the solution is updated on end user computers, end users will receive a <xref:System.Runtime.InteropServices.COMException> when they run the updated solution.  
+## <a name="reinstalling-solutions-on-end-user-computers"></a>최종 사용자 컴퓨터에 솔루션 다시 설치  
+ ClickOnce를 사용하여 .NET Framework 3.5를 대상으로 하는 Office 솔루션을 배포한 다음 프로젝트 대상을 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상 버전으로 변경하는 경우 다시 게시한 후 최종 사용자가 솔루션을 제거하고 다시 설치해야 합니다. 대상이 변경된 솔루션을 다시 게시하고 최종 사용자 컴퓨터에서 솔루션이 업데이트되면 최종 사용자가 업데이트된 솔루션을 실행할 때 <xref:System.Runtime.InteropServices.COMException>이 수신됩니다.  
   
-## <a name="see-also"></a>See Also  
- [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)  
+## <a name="see-also"></a>참고 항목  
+ [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)  
   
   

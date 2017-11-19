@@ -1,58 +1,63 @@
 ---
-title: "MaxFrameworkVersion 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "<MaxFrameworkVersion> 요소(Visual Studio 템플릿)"
-  - "MaxFrameworkVersion 요소(Visual Studio 템플릿)"
+title: "MaxFrameworkVersion 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <MaxFrameworkVersion> Element (Visual Studio Templates)
+- MaxFrameworkVersion Element (Visual Studio Templates)
 ms.assetid: f732a9d3-fc29-405b-9298-01ea83fc58b8
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: da1b30274254c5c1dd81ad20dd64e8749672f96e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# MaxFrameworkVersion 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-템플릿에서 요구하는 .NET Framework의 최대 버전을 지정합니다.  템플릿이 **새 프로젝트 추가** 대화 상자의 **대상 Framework 버전** 상자에서 선택하는 값을 기반으로 하여 **새 프로젝트 추가** 대화 상자의 **템플릿** 섹션에 표시되는지 확인합니다.  
+# <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion 요소(Visual Studio 템플릿)
+서식 파일에 필요한.NET Framework의 최대 버전을 지정 합니다. 서식 파일에 표시 되는지 여부를 결정는 **템플릿** 의 섹션은 **새 프로젝트 추가** 대화 상자에서 선택한 값에 따라는 **대상 프레임 워크 버전** 상자는 **새 프로젝트 추가** 대화 상자.  
   
-## 구문  
+ \<VSTemplate >  
+ \<MaxFrameworkVersion >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <MaxFrameworkVersion> ... </MaxFrameworkVersion>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿을 표시하는 방법을 정의합니다.|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류 하 고 하나에 표시 되는 방식을 정의 **새 프로젝트** 또는 **새 항목 추가** 대화 상자.|  
   
-## 텍스트 값  
- 텍스트 값이 필요합니다.  
+## <a name="text-value"></a>텍스트 값  
+ 텍스트 값은 필수입니다.  
   
- 텍스트는 템플릿에서 허용되는 가장 높은 버전의 .NET Framework여야 합니다.  
+ 텍스트는 템플릿에 의해 허용 되는.NET Framework의 가장 높은 버전 번호 여야 합니다.  
   
-## 설명  
- `MaxFrameworkVersion`은 선택적 요소입니다.  .vstemplate 파일의 `TemplateData` 섹션 내 요소는 **새 프로젝트 추가** 대화 상자의 **템플릿** 섹션의 필터 역할을 합니다.  템플릿이 **새 프로젝트 추가** 대화 상자의 **대상 Framework 버전** 상자에서 선택하는 값을 기반으로 하여 `MaxFrameworkVersion` 요소 값보다 작은 .NET Framework 요구 사항을 가진 템플릿만 표시됩니다.  `MaxFrameworkVersion` 요소는 필수가 아닌 경우에는 생략해야 하므로 최신 .NET Framework의 버전에 사용되는 경우 템플릿이 실수로 표시되지 않도록 해야 합니다.  
+## <a name="remarks"></a>설명  
+ `MaxFrameworkVersion`는 선택적 요소입니다. 요소에는 `TemplateData` .vstemplate 파일의 섹션에 대 한 필터로 작동는 **템플릿** 의 섹션은 **새 프로젝트 추가** 대화 상자. .NET Framework 요구 사항이 템플릿만 보다 작은 `MaxFrameworkVersion` 요소 값에는 표시에서 선택한 값에 따라는 **대상 프레임 워크 버전** 상자는 **새 프로젝트 추가**대화 상자. `MaxFrameworkVersion` 를 하지 못하도록.NET Framework의 최신 버전으로 사용 될 때 표시 되지 않도록 템플릿 인해 실수로 발생할 필요한 경우가 아니면 요소를 생략 해야 합니다.  
   
-## 예제  
- 다음 예제에서는 표준 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 클래스 템플릿에 대한 메타데이터를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 표준에 대 한 메타 데이터 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 클래스 템플릿을 합니다.  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -71,8 +76,8 @@ caps.handback.revision: 9
 </VSTemplate>  
 ```  
   
- 이 예제에서 `MaxFrameworkVersion`에 표시되는 템플릿에 필요한 .NET Framework의 최대 버전은 3.5입니다.  위 템플릿은 **새 프로젝트 추가** 대화 상자의 **대상 프레임워크 버전** 상자에서 3.0 또는 3.5를 선택할 경우에만 표시됩니다.  
+ 이 예제에서는 서식 파일을 여는 데 필요한.NET Framework의 최대 버전에에서도 표현 `MaxFrameworkVersion`은 3.5. 3.0 또는 3.5에서 선택 하는 경우에 위의 템플릿이 표시 됩니다는 **대상 프레임 워크 버전** 상자에 **새 프로젝트 추가** 대화 상자.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)

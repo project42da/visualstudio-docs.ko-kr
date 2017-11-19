@@ -1,64 +1,64 @@
 ---
-title: "PROVIDER_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_FIELDS"
-helpviewer_keywords: 
-  - "PROVIDER_FIELDS 열거형"
+title: PROVIDER_FIELDS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_FIELDS
+helpviewer_keywords: PROVIDER_FIELDS enumeration
 ms.assetid: 39631545-2b0e-45b4-978b-d63656484b02
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 01aa9048e26c265b1fe04ba653fb224b86ec77cd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# PROVIDER_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-프로그램 공급자와 관련 된 속성을 지정 합니다.  
+# <a name="providerfields"></a>PROVIDER_FIELDS
+프로그램 공급자와 연결 된 속성을 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-enum enum_PROVIDER_FIELDS {  
-   PFIELD_PROGRAM_NODES       = 0x01,  
-   PFIELD_IS_DEBUGGER_PRESENT = 0x02  
+```cpp  
+enum enum_PROVIDER_FIELDS {  
+   PFIELD_PROGRAM_NODES       = 0x01,  
+   PFIELD_IS_DEBUGGER_PRESENT = 0x02  
 };  
 typedef DWORD PROVIDER_FIELDS;  
 ```  
   
-```c#  
-public enum enum_PROVIDER_FIELDS {  
-   PFIELD_PROGRAM_NODES       = 0x01,  
-   PFIELD_IS_DEBUGGER_PRESENT = 0x02  
+```csharp  
+public enum enum_PROVIDER_FIELDS {  
+   PFIELD_PROGRAM_NODES       = 0x01,  
+   PFIELD_IS_DEBUGGER_PRESENT = 0x02  
 };  
 ```  
   
-## Members  
- PFIELD\_PROGRAM\_NODES  
- `ProgramNodes` 필드를 사용할 수 있습니다.  
+## <a name="members"></a>멤버  
+ PFIELD_PROGRAM_NODES  
+ `ProgramNodes` 필드는 유효 합니다.  
   
- PFIELD\_IS\_DEBUGGER\_PRESENT  
- `fIsDebuggerPresent` 필드를 사용할 수 있습니다.  
+ PFIELD_IS_DEBUGGER_PRESENT  
+ `fIsDebuggerPresent` 필드는 유효 합니다.  
   
-## 설명  
- 이 값이 반환 됩니다는 `Fields` 의 멤버는 [PROVIDER\_PROCESS\_DATA](../../../extensibility/debugger/reference/provider-process-data.md) 필드 구조를 명시적으로 입력 나타내도록 구조.  
+## <a name="remarks"></a>설명  
+ 이러한 값은 반환는 `Fields` 의 멤버는 [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) 구조를 나타내는 구조의 필드 명시적으로 채워졌습니다.  
   
- 이 값이 비트와 결합 될 수 있습니다 `OR`.  
+ 이러한 값에 비트와 함께 사용할 수 있습니다 `OR`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [PROVIDER\_PROCESS\_DATA](../../../extensibility/debugger/reference/provider-process-data.md)
+ [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)

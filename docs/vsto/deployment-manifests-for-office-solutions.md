@@ -1,45 +1,47 @@
 ---
-title: "Office 솔루션의 배포 매니페스트"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Office 응용 프로그램[Visual Studio에서 Office 개발], 배포 매니페스트"
-  - "배포 매니페스트[Visual Studio에서 Office 개발]"
-  - "매니페스트[Visual Studio에서 Office 개발], 배포 "
-  - "Visual Studio에서 Office 개발, 배포 매니페스트"
+title: "Office 솔루션의 배포 매니페스트 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office applications [Office development in Visual Studio], deployment manifests
+- deployment manifests [Office development in Visual Studio]
+- manifests [Office development in Visual Studio], deployment
+- Office development in Visual Studio, deployment manifests
 ms.assetid: 3fb29743-fb96-4d61-a99a-9b1bbafeee13
-caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: f6569c8c4a2420949862b8d09532c217606073d8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Office 솔루션의 배포 매니페스트
-  배포 매니페스트는 Office 솔루션의 배포 설정을 기술하고 현재 응용 프로그램 버전을 식별하는 XML 파일입니다.  
+# <a name="deployment-manifests-for-office-solutions"></a>Office 솔루션의 배포 매니페스트
+  배포 매니페스트는 Office 솔루션의 배포 설정에 설명 하 고 현재 응용 프로그램 버전을 식별 하는 XML 파일입니다.  
   
- Visual Studio의 Office 개발 도구는 [ClickOnce 배포 매니페스트](../deployment/clickonce-deployment-manifest.md) 참조에 정의된 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 배포 매니페스트 스키마를 사용합니다.  
+ Visual Studio에서 Office 개발에 사용 하 여는 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 에 정의 된 배포 매니페스트 스키마는 [ClickOnce 배포 매니페스트](/visualstudio/deployment/clickonce-deployment-manifest) 참조 합니다.  
   
-## 설명  
- Office 솔루션용 배포 매니페스트 파일은 현재 버전과 기타 배포 설정을 식별합니다.  이 파일에서는 솔루션의 현재 버전과 솔루션에 포함된 모든 파일을 기술하는 응용 프로그램 매니페스트를 참조합니다.  
+## <a name="remarks"></a>설명  
+ Office 솔루션에 대 한 배포 매니페스트 파일에는 현재 버전 및 기타 배포 설정을 식별합니다. 솔루션과 모든 솔루션에 포함 된 파일의 현재 버전을 설명 하는 응용 프로그램 매니페스트를 참조 합니다.  
   
-## 파일 이름 구문  
- 배포 매니페스트 파일의 이름은 .vsto 확장명으로 끝나야 합니다.  표준 있지만 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]확장명배포매니페스트를 다른 Office런타임파일핸들하기 위한Visual Studio도구를 사용 합니다.  
+## <a name="file-name-syntax"></a>파일 이름 구문  
+ 배포 매니페스트 파일의 이름은.vsto 확장명으로 끝나야 합니다. 이것은 표준 있지만 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 배포 매니페스트는 Visual Studio Tools for Office runtime 파일을 처리할 수 있도록 확장 달라 집니다.  
   
-## 예제  
- 다음코딩하다예제에서는Visual Studio도구 Office솔루션에 대 한배포매니페스트를 설명 합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 Office 솔루션에 대 한 Visual Studio Tools에 대 한 배포 매니페스트를 보여 줍니다.  
   
 ```  
-  
+<?xml version="1.0" encoding="utf-8"?>  
 <asmv1:assembly   
   xsi:schemaLocation=  
     "urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd"   
@@ -185,7 +187,7 @@ caps.handback.revision: 21
 </asmv1:assembly>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Office 솔루션의 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)  
   
   

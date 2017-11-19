@@ -1,46 +1,46 @@
 ---
-title: "IDebugExceptionEvent2::CanPassToDebuggee | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExceptionEvent2::CanPassToDebuggee"
-helpviewer_keywords: 
-  - "IDebugExceptionEvent2::CanPassToDebuggee"
+title: IDebugExceptionEvent2::CanPassToDebuggee | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugExceptionEvent2::CanPassToDebuggee
+helpviewer_keywords: IDebugExceptionEvent2::CanPassToDebuggee
 ms.assetid: ae4bbe0a-fbe1-49be-a310-ea64279a434b
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ef10fd3ca7f41c2afd1c827fb71ca2178782e3d4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugExceptionEvent2::CanPassToDebuggee
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-디버그 엔진 \(DE\) 실행을 다시 시작 하는 경우에 디버깅 중인 프로그램에이 예외를 전달 하는 옵션을 지원 하는지 여부를 결정 합니다.  
+# <a name="idebugexceptionevent2canpasstodebuggee"></a>IDebugExceptionEvent2::CanPassToDebuggee
+디버그 엔진 (DE) 실행이 다시 시작 하는 경우 디버깅 중인 프로그램에이 예외를 전달 하는 옵션을 지원 여부를 결정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT CanPassToDebuggee(  
-   void  
+```cpp  
+HRESULT CanPassToDebuggee(  
+   void  
 );  
 ```  
   
-```c#  
-int CanPassToDebuggee();  
+```csharp  
+int CanPassToDebuggee();  
 ```  
   
-## 반환 값  
- 반환 `S_OK` \(예외 프로그램으로 전달 될 수 있습니다\) 또는 `S_FALSE` \(예외를 전달할 수 없습니다\).  
+## <a name="return-value"></a>반환 값  
+ 중 하나를 반환 `S_OK` (예외 프로그램에 전달 될 수 있음) 또는 `S_FALSE` (예외 전달할 수 없습니다).  
   
-## 설명  
- DE 디버기에 전달에 대 한 기본 작업을 해야 합니다.  IDE 나타날 수 있습니다 있는 [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) 호출 하 고 이벤트는 [계속](../../../extensibility/debugger/reference/idebugprocess3-continue.md) 메서드를 호출 하지 않고는 `CanPassToDebuggee` 메서드.  따라서 DE은 기본 경우에 또는 예외를 전달 해야 합니다.  
+## <a name="remarks"></a>설명  
+ DE 디버기로 전달 하기 위한 기본 작업이 있어야 합니다. IDE 나타날 수는 [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) 이벤트 및 호출 된 [계속](../../../extensibility/debugger/reference/idebugprocess3-continue.md) 메서드를 호출 하지 않고는 `CanPassToDebuggee` 메서드. 따라서는 DE 여부 예외를 전달 하기 위한 기본 사례가 있어야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
- [계속](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
+ [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)

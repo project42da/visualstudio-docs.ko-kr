@@ -1,63 +1,67 @@
 ---
-title: "ProvideDefaultName 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#ProvideDefaultName"
-helpviewer_keywords: 
-  - "ProvideDefaultName 요소[Visual Studio 프로젝트 템플릿]"
+title: "ProvideDefaultName 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#ProvideDefaultName
+helpviewer_keywords: ProvideDefaultName element [Visual Studio project templates]
 ms.assetid: 7b0e7b20-fd6b-42e2-81d0-e5100cea0528
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 797382d770c9c6f0ac8b48ef5d7eb7652ff28f1b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# ProvideDefaultName 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 시스템이 **새 항목 추가** 또는 **새 프로젝트** 대화 상자에서 템플릿의 기본 이름을 생성하는지 여부를 지정합니다.  
+# <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName 요소(Visual Studio 템플릿)
+지정 여부는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 시스템에서 서식 파일에 대 한 기본 이름이 생성 됩니다는 **새 항목 추가** 또는 **새 프로젝트** 대화 상자.  
   
-## 구문  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<ProvideDefaultName >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <ProvideDefaultName> true/false </ProvideDefaultName>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿을 표시하는 방법을 정의합니다.|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에서 템플릿이 표시되는 방식을 정의합니다.|  
   
-## 텍스트 값  
- 텍스트 값이 필요합니다.  
+## <a name="text-value"></a>텍스트 값  
+ 텍스트 값은 필수입니다.  
   
- 텍스트는 **새 항목 추가** 또는 **새 프로젝트** 대화 상자에 템플릿의 기본 이름을 생성하는지 여부를 나타내는 `true` 또는 `false`여야 합니다.  
+ 텍스트 중 하나 여야 합니다 `true` 또는 `false`에서 서식 파일에 대 한 기본 이름을 생성 여부를 나타내는 **새 항목 추가** 또는 **새 프로젝트** 대화 상자.  
   
-## 설명  
- `ProvideDefaultName`은 선택적 요소입니다.  기본값은 `true`입니다.  
+## <a name="remarks"></a>설명  
+ `ProvideDefaultName`는 선택적 요소입니다. 기본값은 `true`입니다.  
   
- `ProvideDefaultName` 요소가 `false`인 경우 **새 항목 추가** 및 **새 프로젝트** 대화 상자의 **이름** 상자에는 `<이름 입력>` 값이 들어 있습니다.  
+ 경우는 `ProvideDefaultName` 요소는 `false`, **이름** 의 상자는 **새 항목 추가** 및 **새 프로젝트** 대화 상자에 값이 포함 되어 `<Enter_name>`합니다.  
   
- [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) 요소를 사용하여 **새 항목 추가** 및 **새 프로젝트** 대화 상자에 프로젝트나 항목의 기본 이름을 지정할 수 있습니다.  
+ 사용 하 여는 [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) 요소를 프로젝트의 기본 이름을 지정 하거나 항목에 **새 항목 추가** 및 **새 프로젝트** 대화 상자.  
   
-## 예제  
- 다음 코드 예제에서는 `ProvideDefaultName` 요소를 `false`로 설정합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 `ProvideDefaultName` 요소의 `false`합니다.  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -75,6 +79,6 @@ caps.handback.revision: 12
 </VSTemplate>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)

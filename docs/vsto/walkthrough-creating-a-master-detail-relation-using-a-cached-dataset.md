@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Creating a Master Detail Relation Using a Cached Dataset | Microsoft Docs'
+title: "연습: 캐시 된 데이터 집합을 사용 하 여 마스터 세부 관계 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,186 +14,188 @@ helpviewer_keywords:
 - master-detail tables [Office development in Visual Studio], walkthroughs
 - data caching [Office development in Visual Studio], Master/Detail Relation
 ms.assetid: 419f4e07-c67f-4fc9-973a-bc794f349ac3
-caps.latest.revision: 41
-author: kempb
-ms.author: kempb
+caps.latest.revision: "41"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: fb02770a5cb607cc13a5db2be2cc7128a699d569
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: b392b4de0288478c73fba8cecd88be1f701cd5ae
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-creating-a-master-detail-relation-using-a-cached-dataset"></a>Walkthrough: Creating a Master Detail Relation Using a Cached Dataset
-  This walkthrough demonstrates creating a master/detail relation on a worksheet, and caching the data so that the solution can be used offline.  
+# <a name="walkthrough-creating-a-master-detail-relation-using-a-cached-dataset"></a>연습: 캐시 된 데이터 집합을 사용 하 여 마스터 세부 관계 만들기
+  이 연습에서는 워크시트에서 마스터/세부 관계를 만드는 솔루션을 오프 라인으로 사용할 수 있도록 데이터를 캐시 하는 방법을 보여 줍니다.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- During this walkthrough, you will learn how to:  
+ 이 연습에서는 다음 작업을 수행하는 방법을 배웁니다.  
   
--   Add controls to a worksheet.  
+-   워크시트에 컨트롤을 추가 합니다.  
   
--   Set up a dataset to be cached in a worksheet.  
+-   데이터 집합 워크시트에 캐시를 설정 합니다.  
   
--   Add code to enable scrolling through the records.  
+-   레코드를 스크롤할 수 있도록 코드를 추가 합니다.  
   
--   Test your project.  
+-   프로젝트를 테스트 합니다.  
   
 > [!NOTE]  
->  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] 또는 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]  
   
--   Access to the Northwind SQL Server sample database. The database can be on your development computer or on a server.  
+-   Northwind SQL Server 예제 데이터베이스에 액세스 합니다. 데이터베이스 개발 컴퓨터 또는 서버 수 있습니다.  
   
--   Permissions to read from and write to the SQL Server database.  
+-   사용 권한에서 읽기 / 쓰기를 SQL Server 데이터베이스입니다.  
   
-## <a name="creating-a-new-project"></a>Creating a New Project  
- In this step, you will create an Excel Workbook project.  
+## <a name="creating-a-new-project"></a>새 프로젝트 만들기  
+ 이 단계에서는 Excel 통합 문서 프로젝트를 만듭니다.  
   
-#### <a name="to-create-a-new-project"></a>To create a new project  
+#### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
   
-1.  Create an Excel Workbook project with the name **My Master-Detail**, using either Visual Basic or C#. Make sure that **Create a new document** is selected. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  이름의 Excel 통합 문서 프로젝트를 만들 **내 마스터-세부**, Visual Basic 또는 C#을 사용 하 여 합니다. 다음 사항을 확인 **새 문서** 을 선택 합니다. 자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
   
- Visual Studio opens the new Excel workbook in the designer and adds the **My Master-Detail** project to **Solution Explorer**.  
+ Visual Studio 디자이너에서 새 Excel 통합 문서를 열고 추가 된 **내 마스터-세부** 프로젝트를 **솔루션 탐색기**합니다.  
   
-## <a name="creating-the-data-source"></a>Creating the Data Source  
- Use the **Data Sources** window to add a typed dataset to your project.  
+## <a name="creating-the-data-source"></a>데이터 소스 만들기  
+ **데이터 원본** 창을 사용하여 형식화된 데이터 집합을 프로젝트에 추가합니다.  
   
-#### <a name="to-create-the-data-source"></a>To create the data source  
+#### <a name="to-create-the-data-source"></a>데이터 소스를 만들려면  
   
-1.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
+1.  **데이터 소스** 창이 표시되지 않으면 메뉴 모음에서 **보기**, **다른 창**, **데이터 소스**를 차례로 선택하여 이를 표시합니다.  
   
-2.  Choose **Add New Data Source** to start the **Data Source Configuration Wizard**.  
+2.  **새 데이터 소스 추가** 를 선택하여 **데이터 소스 구성 마법사**를 시작합니다.  
   
-3.  Select **Database** and then click **Next**.  
+3.  선택 **데이터베이스** 클릭 하 고 **다음**합니다.  
   
-4.  Select a data connection to the Northwind sample SQL Server database, or add a new connection by using the **New Connection** button.  
+4.  Northwind 샘플 SQL Server 데이터베이스에 데이터 연결을 선택 하거나 새 연결을 사용 하 여 추가 된 **새 연결** 단추입니다.  
   
-5.  After selecting or creating a connection, click **Next**.  
+5.  을 선택 하거나 연결을 만든 후 클릭 **다음**합니다.  
   
-6.  Clear the option to save the connection if it is selected, and then click **Next**.  
+6.  옵션을 선택 하는 경우 연결을 저장 하 고 클릭 한 다음의 선택을 취소 **다음**합니다.  
   
-7.  Expand the **Tables** node in the **Database objects** window.  
+7.  확장 된 **테이블** 에서 노드는 **데이터베이스 개체** 창.  
   
-8.  Select the **Orders** table and the **Order Details** table.  
+8.  선택 된 **Orders** 테이블 및 **Order Details** 테이블입니다.  
   
-9. Click **Finish**.  
+9. **마침**을 클릭합니다.  
   
- The wizard adds the two tables to the **Data Sources** window. It also adds a typed dataset to your project that is visible in **Solution Explorer**.  
+ 두 개의 테이블을 추가 하는 마법사는 **데이터 소스** 창. 또한 형식화 된 데이터 집합에 표시 되는 프로젝트에 추가 **솔루션 탐색기**합니다.  
   
-## <a name="adding-controls-to-the-worksheet"></a>Adding Controls to the Worksheet  
- In this step, you will add a named range, a list object, and two buttons to the first worksheet. First, add the named range and the list object from the **Data Sources** window so that they are automatically bound to the data source. Next, add the buttons from the **Toolbox**.  
+## <a name="adding-controls-to-the-worksheet"></a>워크시트에 컨트롤 추가  
+ 이 단계에서는 첫 번째 워크시트의 명명된 된 범위, 목록 개체 및 두 개의 단추를 추가 합니다. 먼저 명명된 된 범위와 목록 개체를 추가 하는 **데이터 소스** 창 하는 데이터 원본에 자동 바인딩됩니다. 단추를 추가 하는 다음으로 **도구 상자**합니다.  
   
-#### <a name="to-add-a-named-range-and-a-list-object"></a>To add a named range and a list object  
+#### <a name="to-add-a-named-range-and-a-list-object"></a>명명된 된 범위와 목록 개체를 추가 하려면  
   
-1.  Verify that the **My Master-Detail.xlsx** workbook is open in the Visual Studio designer, with **Sheet1** displayed.  
+1.  되어 있는지 확인는 **내 마스터 Detail.xlsx** Visual Studio 디자이너에 통합 문서가 열려 있는 **Sheet1** 표시 합니다.  
   
-2.  Open the **Data Sources** window and expand the **Orders** node.  
+2.  열기는 **데이터 원본** 창 확장는 **Orders** 노드.  
   
-3.  Select the **OrderID** column, and then click the drop-down arrow that appears.  
+3.  선택은 **OrderID** 열을 다음 표시 되는 드롭다운 화살표를 클릭 합니다.  
   
-4.  Click **NamedRange** in the drop-down list, and then drag the **OrderID** column to cell **A2**.  
+4.  클릭 **NamedRange** 다음 끌어서 드롭 다운 목록에는 **OrderID** 셀으로 열 **A2**합니다.  
   
-     A <xref:Microsoft.Office.Tools.Excel.NamedRange> control named `OrderIDNamedRange` is created in cell **A2**. At the same time, a <xref:System.Windows.Forms.BindingSource> named `OrdersBindingSource`, a table adapter, and a <xref:System.Data.DataSet> instance are added to the project. The control is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the <xref:System.Data.DataSet> instance.  
+     A <xref:Microsoft.Office.Tools.Excel.NamedRange> 라는 컨트롤 `OrderIDNamedRange` 셀에 작성 **A2**합니다. 같은 시간에는 <xref:System.Windows.Forms.BindingSource> 라는 `OrdersBindingSource`, 테이블 어댑터 및 <xref:System.Data.DataSet> 인스턴스는 프로젝트에 추가 됩니다. 컨트롤이 바인딩되는 <xref:System.Windows.Forms.BindingSource>에 바인딩된 차례로 <xref:System.Data.DataSet> 인스턴스.  
   
-5.  Scroll down past the columns that are under the **Orders** table. At the bottom of the list is the **Order Details** table; it is here because it is a child of the **Orders** table. Select this **Order Details** table, not the one that is at the same level as the **Orders** table, and then click the drop-down arrow that appears.  
+5.  아래에 있는 열을 아래로 넘어가면는 **Orders** 테이블입니다. 목록의 맨 아래에는 **Order Details** ; 테이블의 자식 이기 때문에 여기는 **Orders** 테이블입니다. 이 옵션을 선택 **Order Details** 테이블을 동일한 수준으로 중이 아닌는 **Orders** 테이블을 선택한 다음 표시 되는 드롭다운 화살표를 클릭 합니다.  
   
-6.  Click **ListObject** in the drop-down list, and then drag the **OrderDetails** table to cell **A6**.  
+6.  클릭 **ListObject** 다음 끌어서 드롭 다운 목록에는 **OrderDetails** 테이블 셀으로 **A6**합니다.  
   
-7.  A <xref:Microsoft.Office.Tools.Excel.ListObject> control named **Order_DetailsListObject** is created in cell **A6**, and bound to the <xref:System.Windows.Forms.BindingSource>.  
+7.  A <xref:Microsoft.Office.Tools.Excel.ListObject> 라는 컨트롤 **Order_DetailsListObject** 셀에 작성 **A6**에 바인딩되고는 <xref:System.Windows.Forms.BindingSource>합니다.  
   
-#### <a name="to-add-two-buttons"></a>To add two buttons  
+#### <a name="to-add-two-buttons"></a>두 개의 단추를 추가 하려면  
   
-1.  From the **Common Controls** tab of the **Toolbox**, add a <xref:System.Windows.Forms.Button> control to cell **A3** of the worksheet.  
+1.  **공용 컨트롤** 탭은 **도구 상자**, 추가 <xref:System.Windows.Forms.Button> 컨트롤을 셀 **A3** 워크시트의 합니다.  
   
-     This button is named `Button1`.  
+     이 단추 이름이 `Button1`합니다.  
   
-2.  Add another <xref:System.Windows.Forms.Button> control to cell **B3** of the worksheet.  
+2.  다른 항목 추가 <xref:System.Windows.Forms.Button> 컨트롤을 셀 **B3** 워크시트의 합니다.  
   
-     This button is named `Button2`.  
+     이 단추 이름이 `Button2`합니다.  
   
- Next, mark the dataset to be cached in the document.  
+ 다음으로 문서에서 캐시를 매길 데이터 집합을 표시 합니다.  
   
-## <a name="caching-the-dataset"></a>Caching the Dataset  
- Mark the dataset to be cached in the document by making the dataset public and setting the **CacheInDocument** property.  
+## <a name="caching-the-dataset"></a>데이터 집합 캐싱  
+ 데이터 집합을 공개을 설정 하 여 문서에 캐시 되어야 데이터 집합 표시는 **CacheInDocument** 속성입니다.  
   
-#### <a name="to-cache-the-dataset"></a>To cache the dataset  
+#### <a name="to-cache-the-dataset"></a>데이터 집합을 캐시 하려면  
   
-1.  Select **NorthwindDataSet** in the component tray.  
+1.  선택 **NorthwindDataSet** 구성 요소 트레이에 합니다.  
   
-2.  In the **Properties** window, change the **Modifiers** property to **Public**.  
+2.  에 **속성** 창에서 변경 된 **한정자** 속성을 **공용**합니다.  
   
-     Datasets must be public before caching is enabled.  
+     데이터 집합 캐싱을 활성화 하려면 공용 이어야 합니다.  
   
-3.  Change the **CacheInDocument** property to **True**.  
+3.  변경 된 **CacheInDocument** 속성을 **True**합니다.  
   
- The next step is to add text to the buttons, and in C# add code to hook up the event handlers.  
+ 다음 단계를 단추, 텍스트를 추가 하 고 C#의 이벤트 처리기를 연결 하는 코드를 추가 하는 것입니다.  
   
-## <a name="initializing-the-controls"></a>Initializing the Controls  
- Set the button text and add event handlers during the <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> event.  
+## <a name="initializing-the-controls"></a>컨트롤을 초기화합니다.  
+ 단추 텍스트를 설정 하는 동안 이벤트 처리기를 추가 하 고는 <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> 이벤트입니다.  
   
-#### <a name="to-initialize-the-data-and-the-controls"></a>To initialize the data and the controls  
+#### <a name="to-initialize-the-data-and-the-controls"></a>데이터 및 컨트롤을 초기화 하려면  
   
-1.  In **Solution Explorer**, right-click **Sheet1.vb** or **Sheet1.cs**, and then click **View Code** on the shortcut menu.  
+1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Sheet1.vb** 또는 **Sheet1.cs**, 클릭 하 고 **코드 보기** 바로 가기 메뉴.  
   
-2.  Add the following code to the `Sheet1_Startup` method to set the text for the buttons.  
+2.  다음 코드를 추가 하는 `Sheet1_Startup` 단추에 대 한 텍스트를 설정 하는 메서드.  
   
-     [!code-vb[Trin_VstcoreDataExcel#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#15)]  [!code-csharp[Trin_VstcoreDataExcel#15](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#15)]  
+     [!code-vb[Trin_VstcoreDataExcel#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#15)]
+     [!code-csharp[Trin_VstcoreDataExcel#15](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#15)]  
   
-3.  For C# only, add event handlers for the button click events to the `Sheet1_Startup` method.  
+3.  C#, click 이벤트를 단추에 대 한 이벤트 처리기를 추가 `Sheet1_Startup` 메서드.  
   
      [!code-csharp[Trin_VstcoreDataExcel#16](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#16)]  
   
-## <a name="adding-code-to-enable-scrolling-through-the-records"></a>Adding Code to Enable Scrolling Through the Records  
- Add code to the <xref:System.Windows.Forms.Control.Click> event handler of each button to move through the records.  
+## <a name="adding-code-to-enable-scrolling-through-the-records"></a>레코드를 스크롤할 수 있도록 코드를 추가 합니다.  
+ 코드를 추가 하는 <xref:System.Windows.Forms.Control.Click> 레코드 간에 이동 하려면 각 단추의 이벤트 처리기입니다.  
   
-#### <a name="to-scroll-through-the-records"></a>To scroll through the records  
+#### <a name="to-scroll-through-the-records"></a>레코드를 스크롤하려면  
   
-1.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of `Button1`, and add the following code to move backwards through the records:  
+1.  에 대 한 이벤트 처리기를 추가 <xref:System.Windows.Forms.Control.Click> 이벤트의 `Button1`, 레코드를 뒤로 이동 하려면 다음 코드를 추가 합니다.  
   
-     [!code-vb[Trin_VstcoreDataExcel#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#17)]  [!code-csharp[Trin_VstcoreDataExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#17)]  
+     [!code-vb[Trin_VstcoreDataExcel#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#17)]
+     [!code-csharp[Trin_VstcoreDataExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#17)]  
   
-2.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of `Button2`, and add the following code to advance through the records:  
+2.  에 대 한 이벤트 처리기를 추가 <xref:System.Windows.Forms.Control.Click> 이벤트의 `Button2`, 레코드를 진행 하려면 다음 코드를 추가 합니다.  
   
-     [!code-vb[Trin_VstcoreDataExcel#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#18)]  [!code-csharp[Trin_VstcoreDataExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#18)]  
+     [!code-vb[Trin_VstcoreDataExcel#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#18)]
+     [!code-csharp[Trin_VstcoreDataExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#18)]  
   
-## <a name="testing-the-application"></a>Testing the Application  
- Now you can test your workbook to make sure that the data appears as expected, and that you can use the solution offline.  
+## <a name="testing-the-application"></a>응용 프로그램 테스트  
+ 이제 데이터가 예상 대로 나타나는지 하 고 솔루션을 오프 라인으로 사용할 수 있는 통합 문서를 테스트할 수 있습니다.  
   
-#### <a name="to-test-the-data-caching"></a>To test the data caching  
+#### <a name="to-test-the-data-caching"></a>데이터 캐싱 테스트 하려면  
   
-1.  Press **F5**.  
+1.  **F5**키를 누릅니다.  
   
-2.  Verify that the named range and the list object are filled with data from the data source.  
+2.  명명 된 범위와 목록 개체는 데이터 원본의 데이터로 채워집니다 확인 합니다.  
   
-3.  Scroll through some of the records by clicking the buttons.  
+3.  단추를 클릭 하 여 일부 레코드를 스크롤하십시오.  
   
-4.  Save the workbook, and then close the workbook and Visual Studio.  
+4.  통합 문서를 저장 하 고 통합 문서 및 Visual Studio를 닫습니다.  
   
-5.  Disable the connection to the database. Unplug the network cable from your computer if the database is located on a server, or stop the SQL Server service if the database is on your development computer.  
+5.  데이터베이스에 연결을 사용 하지 않도록 설정 합니다. 데이터베이스는 서버에 있는 경우 컴퓨터에서 네트워크 케이블을 분리 하거나 데이터베이스가 개발 컴퓨터에 있으면 SQL Server 서비스를 중지 합니다.  
   
-6.  Open Excel, and then open **My Master-Detail.xlsx** from the \bin directory (\My Master-Detail\bin in Visual Basic or \My Master-Detail\bin\debug in C#).  
+6.  Excel을 연 다음 **내 마스터 Detail.xlsx** (\My Master-Detail\bin Visual basic에서 또는 C#에서 \My Master-Detail\bin\debug) \bin 디렉터리의 합니다.  
   
-7.  Scroll through some of the records to see that the worksheet operates normally when disconnected.  
+7.  일부 끊기면 워크시트 정상적으로 작동을 확인할 레코드를 스크롤하십시오.  
   
-8.  Reconnect to the database. Connect your computer to the network again if the database is located on a server, or start the SQL Server service if the database is on your development computer.  
+8.  데이터베이스에 다시 연결 합니다. 컴퓨터 네트워크에 다시 연결 데이터베이스는 서버에 있는 경우 또는 데이터베이스가 개발 컴퓨터에 SQL Server 서비스를 시작 합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- This walkthrough shows the basics of creating a master/detail data relationship on a worksheet and caching a dataset. Here are some tasks that might come next:  
+## <a name="next-steps"></a>다음 단계  
+ 이 연습에서는 워크시트에서 마스터/세부 데이터 관계를 만드는 데이터 집합을 캐시 하는 기본적인 방법을 보여 줍니다. 다음으로 수행할 수 있는 몇 가지 작업은 다음과 같습니다.  
   
--   Deploy the solution. For more information, see [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)  
+-   솔루션을 배포 합니다. 자세한 내용은 참조 [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)  
   
-## <a name="see-also"></a>See Also  
- [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [Data in Office Solutions](../vsto/data-in-office-solutions.md)   
- [Caching Data](../vsto/caching-data.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)  
+## <a name="see-also"></a>참고 항목  
+ [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [Office 솔루션의 데이터](../vsto/data-in-office-solutions.md)   
+ [데이터 캐싱](../vsto/caching-data.md)   
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)  
   
   

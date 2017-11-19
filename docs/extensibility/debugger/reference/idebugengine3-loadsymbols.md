@@ -1,47 +1,47 @@
 ---
-title: "IDebugEngine3::LoadSymbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine3::LoadSymbols"
-helpviewer_keywords: 
-  - "IDebugEngine3::LoadSymbols"
+title: IDebugEngine3::LoadSymbols | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEngine3::LoadSymbols
+helpviewer_keywords: IDebugEngine3::LoadSymbols
 ms.assetid: c846a440-1d91-4d48-b8f1-82e902ae152b
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ad486256b194ae0f03ed3fe41c23a71f2f9159c8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEngine3::LoadSymbols
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 디버깅 엔진에서 디버깅 되 고 모든 모듈에 대해 로드 \(필요\)에 따라 기호입니다.  
+# <a name="idebugengine3loadsymbols"></a>IDebugEngine3::LoadSymbols
+이 디버깅 엔진으로 디버깅 중인 모든 모듈에 대 한 기호 (필요)에 따라 로드 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT LoadSymbols();  
 ```  
   
-```c#  
+```csharp  
 int LoadSymbols();  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  없음  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 합니다. 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고; 반환 그렇지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 이 디버깅 엔진에 의해 참조 되는 모든 모듈에 대해 디버깅 기호를 로드 합니다.  만 이미 로드 되지 않은 경우 기호 로드 됩니다.  기호 검색 경로 호출 하 여 설정에 [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md).  
+## <a name="remarks"></a>설명  
+ 이 디버깅 엔진에서 참조 하는 모든 모듈에 대 한 디버깅 기호를 로드 합니다. 기호는 이미 않았습니다 로드 하는 경우에 로드 됩니다. 기호를 호출 하 여 설정 경로에서 검색 됩니다 [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)   
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

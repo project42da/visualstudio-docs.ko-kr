@@ -1,36 +1,37 @@
 ---
-title: "방법: 편집기 포커스를 잃을 때 이벤트를 발생 시키고 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "편집기 [Visual Studio SDK] 레거시-포커스를 잃거나 이벤트를 발생 시킵니다."
+title: "방법: 편집기 포커스를 잃을 때 이벤트를 발생 시킬 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - fire events on losing focus
 ms.assetid: 64d40695-6917-468a-8037-a253453ac159
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 9a566d52dc1aabb9895e2f1f9751fdb37ae016d6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 편집기 포커스를 잃을 때 이벤트를 발생 시키고
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-편집기 창의 프레임으로 포커스를 넘겨줄 때 알아야 하는 경우가 있습니다.  예를 들어, 편집기에 더 이상 포커스가 없습니다 후 코드 창에서 코드를 추출 해야 합니다.  다음 절차는 편집기 포커스 손실의 알림을 수신 하는 단계를 제공 합니다.  
+# <a name="how-to-fire-events-when-the-editor-loses-focus"></a>방법: 편집기 포커스를 잃을 때 이벤트 발생
+경우에 따라 편집기 창 프레임에 포커스를 잃을 때 확인 해야 합니다. 예를 들어 편집기에 포커스를 잃을 후 코드 창에서 코드를 추출 해야 합니다. 다음 절차는 포커스를 잃을 편집기에 대 한 알림을 수신 하는 단계를 제공 합니다.  
   
-### 포커스를 잃을 편집기에 이벤트를 발생 시키려면  
+### <a name="to-fire-an-event-in-response-to-an-editor-losing-focus"></a>포커스를 잃을 편집기에 대 한 응답에서 이벤트를 실행 하려면  
   
-1.  받아 선택 이벤트 모니터링은 <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> 개체에서 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>.  
+1.  확보 하 여 선택 영역 이벤트를 모니터링 한 <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> 에서 개체 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>합니다.  
   
-2.  호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.AdviseSelectionEvents%2A> 그리고이 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents> 개체입니다.  
+2.  호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.AdviseSelectionEvents%2A> 제공 프로그램 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents> 개체입니다.  
   
-3.  호출 하 여 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents.OnElementValueChanged%2A>, 찾는 위치에 대 한 `elementid==SEID_WindowFrame`.  
+3.  에 대 한 호출에서 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents.OnElementValueChanged%2A>를 찾도록 `elementid==SEID_WindowFrame`합니다.  
   
-4.  테스트는 `varValueNew` 매개 변수에 대 한 두 가지:  
+4.  테스트는 `varValueNew` 두 가지 작업에 대 한 매개 변수:  
   
-    1.  찾고 있는 창 프레임입니다.  
+    1.  원하는 창 프레임입니다.  
   
-    2.  지점에서 프로그램을 선택 하는 창 프레임 손실.
+    2.  프로그램 손실 해당 창 프레임을 선택 하는 점입니다.

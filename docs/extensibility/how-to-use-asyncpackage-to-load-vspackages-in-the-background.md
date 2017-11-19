@@ -7,28 +7,14 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dedf0173-197e-4258-ae5a-807eb3abc952
-caps.latest.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
 ms.author: gregvanl
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8adc348553ba613898117f10ccd21a6e5cd02ab8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cfd99e4926aac1847f6f0397747201cb0e3a74ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>방법: AsyncPackage를 사용 하 여 백그라운드에서 Vspackage를 로드 합니다.
 디스크 I/O 로드 되 고 VS 패키지 초기화 될 수 있습니다. UI 스레드에서 오류가 발생 해도 이러한 I/O 응답성 문제가 발생할 수 있습니다. 이 문제를 해결 하려면 Visual Studio 2015 도입는 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 백그라운드 스레드에서 로드 수 있는 클래스입니다.  
@@ -120,4 +106,3 @@ IAsyncServiceProvider asyncServiceProvider = Package.GetService(typeof(SAsyncSer
 IMyTestService testService = await ayncServiceProvider.GetServiceAsync(typeof(SMyTestService)) as IMyTestService;  
 ```
   
-

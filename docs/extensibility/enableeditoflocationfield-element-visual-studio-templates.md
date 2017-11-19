@@ -1,59 +1,64 @@
 ---
-title: "EnableEditOfLocationField 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EnableEditOfLocationField(Visual Studio 프로젝트 템플릿)"
+title: "EnableEditOfLocationField 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: EnableEditOfLocationField (Visual Studio project templates)
 ms.assetid: 51a91963-8a3f-4741-928e-bc90c11473bb
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 99916d3affa41d90c9fcfb912e2d3f94c743d87c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# EnableEditOfLocationField 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-사용자가 위치 필드를 편집할 수 있는지 여부를 지정합니다.  
+# <a name="enableeditoflocationfield-element-visual-studio-templates"></a>EnableEditOfLocationField 요소(Visual Studio 템플릿)
+사용자가 위치 필드를 편집할 수는 경우를 지정 합니다.  
   
-## 구문  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<EnableEditOfLocationField >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <EnableEditOfLocationField> true/false </EnableEditOfLocationField>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿을 표시하는 방법을 정의합니다.|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에서 템플릿이 표시되는 방식을 정의합니다.|  
   
-## 텍스트 값  
- 텍스트 값이 필요합니다.  
+## <a name="text-value"></a>텍스트 값  
+ 텍스트 값은 필수입니다.  
   
- 텍스트는 `true` 또는 `false` 중 하나여야 하며 사용자가 **새 프로젝트** 대화 상자의 **위치** 텍스트 상자에서 편집이 가능한지 여부를 나타냅니다.  
+ 텍스트 중 하나 여야 합니다 `true` 또는 `false`한다는 표시 이므로 사용자가 편집할 수 여부는 **위치** 텍스트 상자에는 **새 프로젝트** 대화 상자.  
   
-## 설명  
- `EnableEditOfLocationField`은 선택적 요소입니다.  기본값은 `true`입니다. 사용자는 이 값을 사용하여 **새 프로젝트** 대화 상자의 **위치** 텍스트 상자에서 값을 편집할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `EnableEditOfLocationField`는 선택적 요소입니다. 기본값은 `true`의 값을 편집 하면는 **위치** 텍스트 상자에 **새 프로젝트** 대화 상자.  
   
- **새 프로젝트** 대화 상자의 **위치** 텍스트 상자는 새 프로젝트가 저장되는 디렉터리를 지정합니다.  
+ 에 **새 프로젝트** 대화 상자는 **위치** 텍스트 상자는 새 프로젝트 저장 된 디렉터리를 지정 합니다.  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램에 대한 메타데이터를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램입니다.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -81,6 +86,6 @@ caps.handback.revision: 7
 </VSTemplate>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)

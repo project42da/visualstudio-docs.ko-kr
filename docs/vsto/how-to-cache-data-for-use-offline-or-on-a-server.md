@@ -1,12 +1,10 @@
 ---
-title: 'How to: Cache Data for Use Offline or on a Server | Microsoft Docs'
+title: "방법: 오프 라인 상태가 되거나 서버에 사용 하기 위해 데이터를 캐시 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,56 +18,56 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], caching
 - data caching [Office development in Visual Studio], offline use
 ms.assetid: 6246b187-9413-4336-821d-2259b1adec5a
-caps.latest.revision: 49
-author: kempb
-ms.author: kempb
+caps.latest.revision: "49"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 0958c4b94f6d0d1e5121ee3d153cf5a19ddfe42f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 7a8da60aa9d9dc3ab7becb56b3b4c7701494daef
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>How to: Cache Data for Use Offline or on a Server
-  You can mark a data item to be cached in the document, so that it is available offline. This also makes it possible for the data in the document to be manipulated by other code when the document is stored on a server.  
+# <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>방법: 오프라인이나 서버에서 사용할 데이터 캐싱
+  표시할 수 있습니다는 문서에 캐시 되어야 데이터 항목을 사용할 수 있도록 오프 라인입니다. 이 쉽게 처리할 수는 데이터에 대 한 문서에서 문서를 서버에 저장 될 때 다른 코드에 의해 조작 될를 합니다.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- You can mark a data item to be cached when the data item is declared in your code, or, if you are using a <xref:System.Data.DataSet>, by setting a property in the **Properties** window. If you are caching a data item that is not a <xref:System.Data.DataSet> or <xref:System.Data.DataTable>, ensure that it meets the criteria for being cached in the document. For more information, see [Caching Data](../vsto/caching-data.md).  
+ 데이터 항목을 캐시 하 여 사용자 코드에서 데이터 항목을 선언한 경우 또는 사용 하는 경우 표시할 수 있습니다는 <xref:System.Data.DataSet>에서 속성을 설정 하 여는 **속성** 창. 캐시 되지 않는 데이터 항목을 <xref:System.Data.DataSet> 또는 <xref:System.Data.DataTable>, 문서에 캐시 되 고 조건을 충족 하는지 확인 합니다. 자세한 내용은 [Caching Data](../vsto/caching-data.md)을 참조하세요.  
   
 > [!NOTE]  
->  Datasets created using Visual Basic that are marked as **Cached** and **WithEvents** (including datasets that are dragged from the **Data Sources** window or **Toolbox** that have the **CacheInDocument** property set to **True**) have an underscore prefixed to their names in the cache. For example, if you create a dataset and name it **Customers**, the <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> name will be **_Customers** in the cache. When you use <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> to access this cached item, you must specify **_Customers** instead of **Customers**.  
+>  데이터 집합으로 표시 된 Visual Basic을 사용 하 여 만든 **Cached** 및 **WithEvents** (에서 끌어 데이터 집합을 포함 하는 **데이터 소스** 창이 나 **도구 상자** 있는 **CacheInDocument** 속성이로 설정 **True**)는 밑줄 캐시에 해당 이름 앞에 붙습니다. 예를 들어 데이터 집합을 만들고 이름을 **고객**, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> 이름은 **_Customers** 캐시에 있습니다. 사용 하는 경우 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 지정 해야이 캐시 된 항목에 액세스 하려면 **_Customers** 대신 **고객**합니다.  
   
-### <a name="to-cache-data-in-the-document-using-code"></a>To cache data in the document using code  
+### <a name="to-cache-data-in-the-document-using-code"></a>코드를 사용 하 여 문서에 데이터를 캐시  
   
-1.  Declare a public field or property for the data item as a member of a host item class in your project, such as the `ThisDocumen`t class in a Word project or the `ThisWorkbook` class in an Excel project.  
+1.  공용 필드 또는 속성 데이터 항목에 대 한 프로젝트에서 호스트 항목 클래스의 멤버로 같이 선언는 `ThisDocumen`Word 프로젝트의 클래스 또는 `ThisWorkbook` Excel 프로젝트의 클래스.  
   
-2.  Apply the <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> attribute to the member to mark the data item to be stored in the document's data cache. The following example applies this attribute to a field declaration for a <xref:System.Data.DataSet>.  
+2.  적용 된 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 특성을 멤버 문서의 데이터 캐시에 저장할 데이터 항목을 표시 합니다. 에 대 한 필드 선언에이 특성을 적용 하는 다음 예제는 <xref:System.Data.DataSet>합니다.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#11)]  [!code-vb[Trin_VstcoreDataExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#11)]  
+     [!code-csharp[Trin_VstcoreDataExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#11)]
+     [!code-vb[Trin_VstcoreDataExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#11)]  
   
-3.  Add code to create an instance of the data item and, if applicable, to load it from the database.  
+3.  데이터 항목의 인스턴스를 만드는 코드를 추가 및 해당 데이터베이스에서 로드 하는 경우.  
   
-     The data item is only loaded when it is first created; thereafter, the cache stays with the document and you must write other code to update it.  
+     데이터 항목은 처음 만들어질; 때만 로드 그런 다음 문서와 함께 캐시를 유지 하 고 업데이트 하는 다른 코드를 작성 해야 합니다.  
   
-### <a name="to-cache-a-dataset-in-the-document-by-using-the-properties-window"></a>To cache a dataset in the document by using the Properties window  
+### <a name="to-cache-a-dataset-in-the-document-by-using-the-properties-window"></a>속성 창을 사용 하 여 문서에서 데이터 집합을 캐시 하려면  
   
-1.  Add the dataset to the project by using tools in the Visual Studio designer, for example, by adding a data source to your project using the **Data Sources** window.  
+1.  데이터 집합을 사용 하 여 프로젝트에 데이터 소스를 추가 하 여 예를 들어 Visual Studio 디자이너 도구를 사용 하 여 프로젝트에 추가 된 **데이터 소스** 창.  
   
-2.  Create an instance of the dataset if you do not already have one, and select the instance in the designer.  
+2.  않으면 아직 하나, 있고 디자이너에서 인스턴스를 선택 합니다. 데이터 집합의 인스턴스를 만듭니다.  
   
-3.  In the **Properties** window, set the **CacheInDocument** property to **True**.  
+3.  에 **속성** 창에서 설정 된 **CacheInDocument** 속성을 **True**합니다.  
   
-     For more information, see [Properties in Office Projects](../vsto/properties-in-office-projects.md).  
+     자세한 내용은 참조 [Office 프로젝트의 속성](../vsto/properties-in-office-projects.md)합니다.  
   
-4.  In the **Properties** window, set the **Modifiers** property to **Public** (by default it is **Internal**).  
+4.  에 **속성** 창의 설정는 **한정자** 속성을 **공용** (것이 기본적으로 **내부**).  
   
-## <a name="see-also"></a>See Also  
- [Caching Data](../vsto/caching-data.md)   
- [How to: Programmatically Cache a Data Source in an Office Document](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
- [How to: Cache Data in a Password-Protected Document](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
- [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)   
- [Saving Data](/visualstudio/data-tools/saving-data)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 캐싱](../vsto/caching-data.md)   
+ [방법: 프로그래밍 방식으로 Office 문서에 데이터 소스를 캐싱](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
+ [방법: 암호로 보호 된 문서에서 데이터를 캐시 합니다.](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
+ [서버에 있는 문서의 데이터 액세스](../vsto/accessing-data-in-documents-on-the-server.md)   
+ [데이터 저장](/visualstudio/data-tools/saving-data)  
   
   

@@ -1,57 +1,59 @@
 ---
-title: "IDebugGenericFieldInstance::GetTypeArguments | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetTypeArguments"
-  - "IDebugGenericFieldInstance::GetTypeArguments"
+title: IDebugGenericFieldInstance::GetTypeArguments | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetTypeArguments
+- IDebugGenericFieldInstance::GetTypeArguments
 ms.assetid: 6e7e0f95-181a-4805-adb3-c2407de0ab93
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ae79230887bdcef2945f94474707f7f00a1c0257
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugGenericFieldInstance::GetTypeArguments
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 인스턴스에 대 한 형식 매개 변수의 인수를 검색합니다.  
+# <a name="idebuggenericfieldinstancegettypearguments"></a>IDebugGenericFieldInstance::GetTypeArguments
+이 인스턴스에 대 한 형식 매개 변수 인수를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT GetTypeArguments(  
-   ULONG32       cArgs,  
-   IDebugField** ppArgs,  
-   ULONG32*      pcArgs  
+   ULONG32       cArgs,  
+   IDebugField** ppArgs,  
+   ULONG32*      pcArgs  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetTypeArguments(  
-   uint              cArgs,  
-   out IDebugField[] ppArgs,  
-   ref uint          pcArgs  
+   uint              cArgs,  
+   out IDebugField[] ppArgs,  
+   ref uint          pcArgs  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `cArgs`  
- \[in\] 형식 매개 변수 개수입니다.  
+ [in] 형식 매개 변수 수입니다.  
   
  `ppArgs`  
- \[out\] 형식 매개 변수의 배열을 반환합니다.  
+ [out] 형식 매개 변수 배열을 반환합니다.  
   
  `pcArgs`  
- \[in, out\] 구성원 수는 `ppArgs` 배열입니다.  
+ [out에서] 멤버 수가 `ppArgs` 배열입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

@@ -1,51 +1,52 @@
 ---
-title: "IDebugPortSupplierDescription2::GetDescription | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugPortSupplierDescription2::GetDescription"
+title: IDebugPortSupplierDescription2::GetDescription | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugPortSupplierDescription2::GetDescription
 ms.assetid: bff5f536-1cd1-4313-8856-db7b05818305
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d281ae3b069eb3644e57b82581cc3f5b51a7b0c2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPortSupplierDescription2::GetDescription
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugportsupplierdescription2getdescription"></a>IDebugPortSupplierDescription2::GetDescription
 포트 공급자에 대 한 설명 및 설명 메타 데이터를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT GetDescription(  
-   PORT_SUPPLIER_DESCRIPTION_FLAGS *pdwFlags,  
-   BSTR *pbstrText  
+   PORT_SUPPLIER_DESCRIPTION_FLAGS *pdwFlags,  
+   BSTR *pbstrText  
 );  
 ```  
   
-```c#  
+```csharp  
 public int GetDescription(  
-   out enum_PORT_SUPPLIER_DESCRIPTION_FLAGS pdwFlags,  
-   out string pbstrText  
+   out enum_PORT_SUPPLIER_DESCRIPTION_FLAGS pdwFlags,  
+   out string pbstrText  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pdwFlags`  
- \[out\] 메타 데이터 플래그에 대해 설명 합니다.  
+ [out] 메타 데이터 설명에 대 한 플래그입니다.  
   
  `pbstrText`  
- \[out\] 포트 공급자에 대 한 설명입니다.  
+ [out] 포트 공급 업체의 설명입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugPortSupplierDescription2](../../../extensibility/debugger/reference/idebugportsupplierdescription2.md)

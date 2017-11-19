@@ -1,53 +1,53 @@
 ---
-title: "IDebugDisassemblyStream2::GetSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDisassemblyStream2::GetSize"
-helpviewer_keywords: 
-  - "IDebugDisassemblyStream2::GetSize"
+title: IDebugDisassemblyStream2::GetSize | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDisassemblyStream2::GetSize
+helpviewer_keywords: IDebugDisassemblyStream2::GetSize
 ms.assetid: 8f512704-12d0-46d2-959a-4f8dffe117b5
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 35dfb225c6359e3b039b21255b1e6ba5979c3e6f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDisassemblyStream2::GetSize
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-디스어셈블리 stream이 지침에는 크기를 가져옵니다.  
+# <a name="idebugdisassemblystream2getsize"></a>IDebugDisassemblyStream2::GetSize
+이 디스어셈블리 스트림의 지침에 설명 된 크기를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetSize(   
-   UINT64* pnSize  
+```cpp  
+HRESULT GetSize(   
+   UINT64* pnSize  
 );  
 ```  
   
-```c#  
-int GetSize(   
-   out ulong pnSize  
+```csharp  
+int GetSize(   
+   out ulong pnSize  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pnSize`  
- \[out\] 지시를 내부 크기를 반환 합니다.  
+ [out] 지침에 설명 된 크기를 반환 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 이 메서드에서 반환 된 값을 사용 하 여 배열을 할당할 수 있습니다 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 에 전달 되는 구조체는 [읽기](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) 메서드가 있습니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드에서 반환 된 값의 배열을 할당 데 사용할 수 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 에 전달 되는 구조는 [읽기](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) 메서드.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
  [읽기](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)

@@ -1,12 +1,10 @@
 ---
-title: 'How to: Add Commands to Shortcut Menus | Microsoft Docs'
+title: "방법: 바로 가기 메뉴에 명령 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,45 +14,45 @@ helpviewer_keywords:
 - Office menus, creating
 - Office development in Visual Studio, context menus
 ms.assetid: 9a848817-db11-4294-8f6f-9181ab87aadd
-caps.latest.revision: 22
-author: kempb
-ms.author: kempb
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 0dd95e7cb207542a2f0131192b2ef0f43eee73d8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 40b2bbb7c7b86665790a06feed288b0dd37272df
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-add-commands-to-shortcut-menus"></a>How to: Add Commands to Shortcut Menus
-  This topic demonstrates how to add commands to a shortcut menu in an Office application by using an VSTO Add-in.  
+# <a name="how-to-add-commands-to-shortcut-menus"></a>방법: 바로 가기 메뉴에 명령 추가
+  이 항목에서는 VSTO 추가 기능을 사용하여 Office 응용 프로그램의 바로 가기 메뉴에 명령을 추가하는 방법을 보여 줍니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-### <a name="to-add-commands-to-shortcut-menus-in-office"></a>To add commands to shortcut menus in Office  
+### <a name="to-add-commands-to-shortcut-menus-in-office"></a>Office에서 바로 가기 메뉴에 명령을 추가하려면  
   
-1.  Add a **Ribbon XML** item to a document-level or VSTO Add-in project. For more information, see [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md). In  
+1.  **리본 XML** 항목을 문서 수준 또는 VSTO 추가 기능 프로젝트에 추가합니다. 자세한 내용은 [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md)을 참조하십시오. 입력  
   
-2.  **Solution Explorer**, select **ThisAddin.cs** or **ThisAddin.vb**.  
+2.  **솔루션 탐색기**에서 **ThisAddin.cs** 또는 **ThisAddin.vb**를 선택합니다.  
   
-3.  On the menu bar, choose **View**, **Code**.  
+3.  메뉴 모음에서 **보기**, **코드**를 차례로 선택합니다.  
   
-     The **ThisAddin** class file opens in the Code Editor.  
+     **ThisAddin** 클래스 파일이 코드 편집기에서 열립니다.  
   
-4.  Add the following code to the **ThisAddin** class. This code overrides the CreateRibbonExtensibilityObject method and returns the Ribbon XML class to the Office application.  
+4.  **ThisAddin** 클래스에 다음 코드를 추가합니다. 이 코드 프로젝트 메서드를 재정의 하 고 Office 응용 프로그램에 리본 XML 클래스를 반환 합니다.  
   
-     [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]  [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]  
+     [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
+     [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]  
   
-5.  In **Solution Explorer**, select the Ribbon XML file. By default, the Ribbon XML file is named Ribbon1.xml.  
+5.  **솔루션 탐색기**에서 리본 XML 파일을 선택합니다. 기본적으로 리본 XML 파일의 이름은 Ribbon1.xml입니다.  
   
-6.  On the menu bar, choose **View**, **Code**.  
+6.  메뉴 모음에서 **보기**, **코드**를 차례로 선택합니다.  
   
-     The Ribbon xml file opens in the Code Editor.  
+     코드 편집기에서 리본 xml 파일이 열립니다.  
   
-7.  In the Code Editor, add XML that describes the shortcut menu and the control that you want to add to the shortcut menu.  
+7.  코드 편집기에서 바로 가기 메뉴와 바로 가기 메뉴에 추가할 컨트롤을 설명하는 XML을 추가합니다.  
   
-     The following example adds a button, a menu, and a gallery control to the shortcut menu for a word document. The control ID of this shortcut menu is ContextMenuText. For a complete list of Office 2010 shortcut control ID's, see [Office 2010 Help Files: Office Fluent User Interface Control Identifiers](http://go.microsoft.com/fwlink/?LinkID=181052).  
+     다음 예제에서는 Word 문서의 바로 가기 메뉴에 단추, 메뉴 및 갤러리 컨트롤을 추가합니다. 이 바로 가기 메뉴의 컨트롤 ID는 ContextMenuText입니다. Office 2010 바로 가기 컨트롤의 전체 목록은 ID 참조 [Office 2010 도움말 파일: Office Fluent 사용자 인터페이스 컨트롤 식별자](http://go.microsoft.com/fwlink/?LinkID=181052)합니다.  
   
     ```  
     <?xml version="1.0" encoding="UTF-8"?>  
@@ -76,18 +74,19 @@ ms.lasthandoff: 08/30/2017
     </customUI>  
     ```  
   
-8.  In **Solution Explorer**, choose **MyRibbon.cs** or **MyRibbon.vb**.  
+8.  **솔루션 탐색기**에서 **MyRibbon.cs** 또는 **MyRibbon.vb**를 선택합니다.  
   
-9. Add the a callback method to the `Ribbon1` class for each control that you want to handle.  
+9. 처리하려는 각 컨트롤의 `Ribbon1` 클래스에 콜백 메서드를 추가합니다.  
   
-     The following callback method handles the **My Button** button. This code adds a string to the active document at the current location of the curser.  
+     다음 콜백 메서드는 **My Button** 단추를 처리합니다. 이 코드는 활성 문서의 현재 커서 위치에 문자열을 추가합니다.  
   
-     [!code-vb[Trin_WordAddIn_Menus#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb#2)]   [!code-csharp[Trin_WordAddIn_Menus#2](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs#2)]  
+     [!code-vb[Trin_WordAddIn_Menus#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb#2)]
+     [!code-csharp[Trin_WordAddIn_Menus#2](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs#2)]  
   
-## <a name="see-also"></a>See Also  
- [Office UI Customization](../vsto/office-ui-customization.md)   
- [Walkthrough: Creating Shortcut Menus for Bookmarks](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)   
- [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)   
- [Customizing Context Menus in Office 2010](http://go.microsoft.com/fwlink/?LinkId=182186)  
+## <a name="see-also"></a>참고 항목  
+ [Office UI 사용자 지정](../vsto/office-ui-customization.md)   
+ [연습: 책갈피에 대 한 바로 가기 메뉴 만들기](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)   
+ [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)   
+ [Office 2010의 상황에 맞는 메뉴를 사용자 지정](http://go.microsoft.com/fwlink/?LinkId=182186)  
   
   

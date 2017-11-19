@@ -1,36 +1,39 @@
 ---
-title: "방법: 사용자 계정으로 작업자 프로세스 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "사용자 계정, aspnet_wp.exe"
-  - "ASP.NET, 웹 응용 프로그램 디버깅"
-  - "도구, aspnet_wp.exe"
-  - "ASP.NET, 도구"
-  - "aspnet_wp.exe"
+title: "방법: 사용자 계정으로 작업자 프로세스를 실행 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- user accounts, aspnet_wp.exe
+- ASP.NET, debugging Web applications
+- tools, aspnet_wp.exe
+- ASP.NET, tools
+- aspnet_wp.exe
 ms.assetid: b58e97b1-e62a-4318-aea4-52276ea20735
-caps.latest.revision: 32
-caps.handback.revision: 32
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "32"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8b823675623f20df49edb87582f3e40695aec50e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 사용자 계정으로 작업자 프로세스 실행
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="how-to-run-the-worker-process-under-a-user-account"></a>방법: 사용자 계정으로 작업자 프로세스 실행
+[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 작업자 프로세스(aspnet_wp.exe 또는 w3wp.exe)를 사용자 계정으로 실행할 수 있도록 컴퓨터를 설정하려면 다음 단계를 따르십시오.  
 
-[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 작업자 프로세스(aspnet_wp.exe 또는 w3wp.exe)를 사용자 계정으로 실행할 수 있도록 컴퓨터를 설정하려면 다음 단계를 따르세요.  
+ > [!IMPORTANT]
+ > Windows Server 2008 r 2 부터는 좋습니다의 사용은 [ApplicationPoolIdentity](https://docs.microsoft.com/en-us/iis/manage/configuring-security/application-pool-identities) 각 응용 프로그램 풀 id로 합니다.
   
 ## <a name="procedure"></a>프로시저  
   
@@ -38,7 +41,7 @@ manager: "ghogen"
   
 1.  컴퓨터에서 런타임을 설치한 경로에 있는 CONFIG 폴더의 machine.config 파일을 엽니다.  
   
-2.  찾기는 &lt;processModel&gt; 섹션 및 사용자 및 암호 특성 이름 및 원하는 aspnet_wp.exe를 실행할 사용자 계정의 암호를 변경 합니다.  
+2.  찾을 &lt;processModel&gt; 섹션 및 사용자 이름 및 암호 특성 이름 및 aspnet_wp.exe를 실행할 사용자 계정의 암호를 변경 합니다.  
   
 3.  machine.config 파일을 저장합니다.  
   
@@ -66,7 +69,7 @@ manager: "ghogen"
     net start w3svc  
     ```  
   
-6.  CONFIG 폴더와 같은 경로에 있는 Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files 폴더를 찾습니다. Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files 폴더를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **속성** 을 선택합니다.  
+6.  CONFIG 폴더와 같은 경로에 있는 Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files 폴더를 찾습니다. 임시를 마우스 오른쪽 단추로 클릭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files 폴더를 선택 하 고 **속성** 바로 가기 메뉴.  
   
 7.  **Temporary ASP.NET Files 속성** 대화 상자에서 **보안** 탭을 클릭합니다.  
   
@@ -85,5 +88,6 @@ manager: "ghogen"
 13. **확인** 을 클릭하여 **Temporary ASP.NET Files 속성** 대화 상자를 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
+[ASP.NET 응용 프로그램 디버그](../debugger/how-to-enable-debugging-for-aspnet-applications.md)   
 [ASP.NET 디버깅: 시스템 요구 사항](../debugger/aspnet-debugging-system-requirements.md)  
   

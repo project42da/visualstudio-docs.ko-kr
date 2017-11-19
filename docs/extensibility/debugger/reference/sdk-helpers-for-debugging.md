@@ -1,43 +1,45 @@
 ---
-title: "디버깅을 위한 SDK 도우미 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dbgmetric.lib"
-  - "레지스트리, SDK 디버깅"
-  - "디버깅 SDK, 레지스트리 위치"
-  - "dbgmetric.h"
-  - "메트릭 [디버깅 SDK]"
+title: "디버깅에 대 한 SDK 도우미 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dbgmetric.lib
+- registry, Debugging SDK
+- Debugging SDK, registry locations
+- dbgmetric.h
+- metrics [Debugging SDK]
 ms.assetid: 80a52e93-4a04-4ab2-8adc-a7847c2dc20b
-caps.latest.revision: 28
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d9c5d24c8a3a2bb81c87b2cc405a6885b8f23374
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 디버깅을 위한 SDK 도우미
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이러한 함수 및 선언을 c \+ \+에서 디버그 엔진, 식 계산기 및 기호 공급자 구현에 대 한 전역 도우미 함수입니다.  
+# <a name="sdk-helpers-for-debugging"></a>디버깅을 위한 도우미 SDK
+이러한 함수 및 선언에는 c + +에서 디버그 엔진, 식 계산기 및 기호 공급자를 구현 하기 위한 전역 도우미 함수입니다.  
   
 > [!NOTE]
->  이 지금은 이러한 함수와 선언은 관리 되는 버전입니다.  
+>  이 이번에는 이러한 함수 및 선언 없는 관리 되는 버전이 있습니다.  
   
-## 개요  
- Visual Studio 사용 하는 순서에 디버깅 엔진, 식 계산기 및 기호 공급자는 등록 되어야 합니다.  이 레지스트리 하위 키 및 항목 "설정은 메트릭."로 알려져, 설정 하 여 수행 됩니다. 다음 전역 함수는 이러한 메트릭을 업데이트 하는 프로세스를 간편 하 게 디자인 되었습니다.  이러한 함수에서 업데이트 된 각 레지스트리 하위 키의 레이아웃을 확인 하려면 레지스트리 위치를 참조 하십시오.  
+## <a name="overview"></a>개요  
+ Visual Studio에서 사용할 디버그 엔진, 식 계산기 및 기호 공급자에 대 한 순서에 등록 해야 합니다. 이 레지스트리 하위 키와 "설정 메트릭." 라고도 하는 항목을 설정 하 여 작업 수행 다음 전역 함수는 이러한 메트릭을 업데이트를 손쉽게 설계 되었습니다. 이러한 함수에 의해 업데이트 되는 각 레지스트리 하위 키의 레이아웃을 알아보려면 레지스트리 위치에는 섹션을 참조 합니다.  
   
-## 일반적인 메트릭은 함수  
- 이러한 디버그 엔진에 사용 되는 일반적인 기능입니다.  함수 식 계산기에 대 한 특별 한 기호 공급자는 나중에 자세히 설명 되어 있습니다.  
+## <a name="general-metric-functions"></a>일반 메트릭을 함수  
+ 이들은 디버그 엔진에서 사용 하는 일반적인 기능입니다. 식 계산기에 대 한 함수를 특수화할 및 기호 공급자는 나중에 자세히 설명 합니다.  
   
-### GetMetric 메서드  
- 메트릭 값을 레지스트리에서 검색합니다.  
+### <a name="getmetric-method"></a>GetMetric 메서드  
+ 레지스트리에서 메트릭 값을 검색합니다.  
   
-```cpp#  
+```cpp  
 HRESULT GetMetric(  
    LPCWSTR pszMachine,  
    LPCWSTR pszType,  
@@ -48,19 +50,19 @@ HRESULT GetMetric(
 );  
 ```  
   
-|Parameter|설명|  
-|---------------|--------|  
-|pszMachine|\[in\] 해당 등록 작성 된 가능 하면 원격 컴퓨터의 이름 \(`NULL` 로컬 컴퓨터를 의미\)입니다.|  
-|pszType|\[in\] 미터법 형식 중 하나입니다.|  
-|guidSection|\[in\] 특정 엔진, 계산기, 예외 등의 GUID입니다.  이 하위 섹션에서 특정 요소에 대 한 미터법 형식 지정합니다.|  
-|pszMetric|\[in\] 가져올 메트릭입니다.  이 특정 값 이름에 해당합니다.|  
-|pdwValue|\[in\] 메트릭은 값의 저장소 위치입니다.  여러 가지 맛의 GetMetric DWORD \(이 예에서 같이\), BSTR, GUID 또는 Guid의 배열을 반환할 수 있습니다.|  
-|pszAltRoot|\[in\] 사용 하 여 대체 레지스트리 루트입니다.  설정 `NULL` 기본값을 사용 합니다.|  
+|매개 변수|설명|  
+|---------------|-----------------|  
+|pszMachine|[in] 해당 레지스터를 쓸 수 있는 원격 컴퓨터의 이름 (`NULL` 로컬 컴퓨터를 의미).|  
+|pszType|[in] 메트릭 형식 중 하나입니다.|  
+|guidSection|[in] 특정 엔진, 계산기, 예외 등의 GUID입니다. 이 하위 섹션에서 특정 요소에 대 한 메트릭 유형 지정합니다.|  
+|pszMetric|[in] 가져올 메트릭입니다. 이 특정 값 이름에 해당합니다.|  
+|pdwValue|[in] 에 대 한 메트릭에서 값의 저장소 위치입니다. 여러 버전의이 예제와 같이이 DWORD, BSTR, GUID 또는 Guid의 배열을 반환할 수 있는 GetMetric 가지가 있습니다.|  
+|pszAltRoot|[in] 사용 하는 대체 레지스트리 루트입니다. 로 설정 `NULL` 기본값을 사용 하도록 합니다.|  
   
-### SetMetric 메서드  
- 레지스트리에서 지정 된 메트릭 값을 설정합니다.  
+### <a name="setmetric-method"></a>SetMetric 메서드  
+ 레지스트리에 지정된 된 메트릭 값을 설정 합니다.  
   
-```cpp#  
+```cpp  
 HRESULT SetMetric(  
          LPCWSTR pszType,  
          REFGUID guidSection,  
@@ -71,19 +73,19 @@ HRESULT SetMetric(
 );  
 ```  
   
-|Parameter|설명|  
-|---------------|--------|  
-|pszType|\[in\] 미터법 형식 중 하나입니다.|  
-|guidSection|\[in\] 특정 엔진, 계산기, 예외 등의 GUID입니다.  이 하위 섹션에서 특정 요소에 대 한 미터법 형식 지정합니다.|  
-|pszMetric|\[in\] 가져올 메트릭입니다.  이 특정 값 이름에 해당합니다.|  
-|dwValue|\[in\] 저장소 위치는 미터법의 값입니다.  여러 가지 맛의 SetMetric DWORD \(이 예에서\), BSTR, GUID 또는 Guid의 배열을 저장할 수 있습니다.|  
-|fUserSpecific|\[in\] 사용자 고유의 메트릭입니다 및 로컬 시스템 하이브를 대신 사용자의 하이브를 작성 해야 하는 경우 TRUE입니다.|  
-|pszAltRoot|\[in\] 사용 하 여 대체 레지스트리 루트입니다.  설정 `NULL` 기본값을 사용 합니다.|  
+|매개 변수|설명|  
+|---------------|-----------------|  
+|pszType|[in] 메트릭 형식 중 하나입니다.|  
+|guidSection|[in] 특정 엔진, 계산기, 예외 등의 GUID입니다. 이 하위 섹션에서 특정 요소에 대 한 메트릭 유형 지정합니다.|  
+|pszMetric|[in] 가져올 메트릭입니다. 이 특정 값 이름에 해당합니다.|  
+|dwValue|[in] 에 대 한 메트릭에 있는 값의 저장소 위치입니다. 여러 운영 체제 (이 예제의) DWORD, BSTR, GUID 또는 Guid의 배열에 저장할 수 있는 SetMetric의 가지가 있습니다.|  
+|fUserSpecific|[in] 에 대 한 메트릭을 사용자 고유의 로컬 컴퓨터 하이브 대신 사용자의 하이브에 써야 하는 경우 TRUE입니다.|  
+|pszAltRoot|[in] 사용 하는 대체 레지스트리 루트입니다. 로 설정 `NULL` 기본값을 사용 하도록 합니다.|  
   
-### RemoveMetric 메서드  
- 지정 된 메트릭의 레지스트리에서 제거합니다.  
+### <a name="removemetric-method"></a>RemoveMetric 메서드  
+ 지정 된 메트릭에 레지스트리에서 제거합니다.  
   
-```cpp#  
+```cpp  
 HRESULT RemoveMetric(  
    LPCWSTR pszType,  
    REFGUID guidSection,  
@@ -92,17 +94,17 @@ HRESULT RemoveMetric(
 );  
 ```  
   
-|Parameter|설명|  
-|---------------|--------|  
-|pszType|\[in\] 미터법 형식 중 하나입니다.|  
-|guidSection|\[in\] 특정 엔진, 계산기, 예외 등의 GUID입니다.  이 하위 섹션에서 특정 요소에 대 한 미터법 형식 지정합니다.|  
-|pszMetric|\[in\] 제거할 메트릭입니다.  이 특정 값 이름에 해당합니다.|  
-|pszAltRoot|\[in\] 사용 하 여 대체 레지스트리 루트입니다.  설정 `NULL` 기본값을 사용 합니다.|  
+|매개 변수|설명|  
+|---------------|-----------------|  
+|pszType|[in] 메트릭 형식 중 하나입니다.|  
+|guidSection|[in] 특정 엔진, 계산기, 예외 등의 GUID입니다. 이 하위 섹션에서 특정 요소에 대 한 메트릭 유형 지정합니다.|  
+|pszMetric|[in] 제거할 메트릭입니다. 이 특정 값 이름에 해당합니다.|  
+|pszAltRoot|[in] 사용 하는 대체 레지스트리 루트입니다. 로 설정 `NULL` 기본값을 사용 하도록 합니다.|  
   
-### EnumMetricSections 메서드  
- 다양 한 메트릭 섹션 레지스트리에서 열거합니다.  
+### <a name="enummetricsections-method"></a>EnumMetricSections 메서드  
+ 레지스트리에서 메트릭 다양 한 섹션을 열거합니다.  
   
-```cpp#  
+```cpp  
 HRESULT EnumMetricSections(  
    LPCWSTR pszMachine,  
    LPCWSTR pszType,  
@@ -112,318 +114,318 @@ HRESULT EnumMetricSections(
 );  
 ```  
   
-|Parameter|설명|  
-|---------------|--------|  
-|pszMachine|\[in\] 해당 등록 작성 된 가능 하면 원격 컴퓨터의 이름 \(`NULL` 로컬 컴퓨터를 의미\)입니다.|  
-|pszType|\[in\] 미터법 형식 중 하나입니다.|  
-|rgguidSections|\[in, out\] 미리 할당 된 배열에서 Guid입니다.|  
-|pdwSize|\[in\] 최대 저장할 수 있는 Guid는 `rgguidSections` 배열입니다.|  
-|pszAltRoot|\[in\] 사용 하 여 대체 레지스트리 루트입니다.  설정 `NULL` 기본값을 사용 합니다.|  
+|매개 변수|설명|  
+|---------------|-----------------|  
+|pszMachine|[in] 해당 레지스터를 쓸 수 있는 원격 컴퓨터의 이름 (`NULL` 로컬 컴퓨터를 의미).|  
+|pszType|[in] 메트릭 형식 중 하나입니다.|  
+|rgguidSections|[out에서] 미리 할당 된 배열에서를 입력 하도록 하는 Guid입니다.|  
+|pdwSize|[in] Guid에 저장할 수 있는 최대 수는 `rgguidSections` 배열입니다.|  
+|pszAltRoot|[in] 사용 하는 대체 레지스트리 루트입니다. 로 설정 `NULL` 기본값을 사용 하도록 합니다.|  
   
-## 식 계산기 기능  
+## <a name="expression-evaluator-functions"></a>식 계산기 함수  
   
-|Function|설명|  
-|--------------|--------|  
-|GetEEMetric|메트릭 값을 레지스트리에서 검색합니다.|  
-|SetEEMetric|레지스트리에서 지정 된 메트릭 값을 설정합니다.|  
-|RemoveEEMetric|지정 된 메트릭의 레지스트리에서 제거합니다.|  
-|GetEEMetricFile|파일 이름에서 지정 된 메트릭을 가져옵니다 및 로드 파일 내용을 문자열로 반환 합니다.|  
+|함수|설명|  
+|--------------|-----------------|  
+|GetEEMetric|레지스트리에서 메트릭 값을 검색합니다.|  
+|SetEEMetric|레지스트리에 지정된 된 메트릭 값을 설정 합니다.|  
+|RemoveEEMetric|지정 된 메트릭에 레지스트리에서 제거합니다.|  
+|GetEEMetricFile|지정 된 메트릭에에서 파일 이름을 가져옵니다 로드 파일 콘텐츠를 문자열로 반환 합니다.|  
   
-## 예외 함수  
+## <a name="exception-functions"></a>예외 함수  
   
-|Function|설명|  
-|--------------|--------|  
-|GetExceptionMetric|메트릭 값을 레지스트리에서 검색합니다.|  
-|SetExceptionMetric|레지스트리에서 지정 된 메트릭 값을 설정합니다.|  
-|RemoveExceptionMetric|지정 된 메트릭의 레지스트리에서 제거합니다.|  
-|RemoveAllExceptionMetrics|모든 예외 메트릭스를 레지스트리에서 제거합니다.|  
+|함수|설명|  
+|--------------|-----------------|  
+|GetExceptionMetric|레지스트리에서 메트릭 값을 검색합니다.|  
+|SetExceptionMetric|레지스트리에 지정된 된 메트릭 값을 설정 합니다.|  
+|RemoveExceptionMetric|지정 된 메트릭에 레지스트리에서 제거합니다.|  
+|RemoveAllExceptionMetrics|모든 예외 메트릭을 레지스트리에서 제거합니다.|  
   
-## 공급자가 함수 기호  
+## <a name="symbol-provider-functions"></a>기호 공급자 함수  
   
-|Function|설명|  
-|--------------|--------|  
-|GetSPMetric|메트릭 값을 레지스트리에서 검색합니다.|  
-|SetSPMetric|레지스트리에서 지정 된 메트릭 값을 설정합니다.|  
-|RemoveSPMetric|지정 된 메트릭의 레지스트리에서 제거합니다.|  
+|함수|설명|  
+|--------------|-----------------|  
+|GetSPMetric|레지스트리에서 메트릭 값을 검색합니다.|  
+|SetSPMetric|레지스트리에 지정된 된 메트릭 값을 설정 합니다.|  
+|RemoveSPMetric|지정 된 메트릭에 레지스트리에서 제거합니다.|  
   
-## 열거 함수  
+## <a name="enumeration-functions"></a>열거 함수  
   
-|Function|설명|  
-|--------------|--------|  
-|EnumMetricSections|모든 메트릭을 메트릭 지정 된 형식에 대해 열거합니다.|  
-|EnumDebugEngine|등록 된 디버깅 엔진을 열거합니다.|  
+|함수|설명|  
+|--------------|-----------------|  
+|EnumMetricSections|지정된 된 메트릭 형식에 대 한 모든 메트릭을 열거합니다.|  
+|EnumDebugEngine|등록 된 디버그 엔진을 열거합니다.|  
 |EnumEEs|등록 된 식 계산기를 열거합니다.|  
-|EnumExceptionMetrics|모든 예외 메트릭스를 열거합니다.|  
+|EnumExceptionMetrics|모든 예외 메트릭을 열거합니다.|  
   
-## 메트릭 정의  
- 이러한 정의 대 한 미리 정의 된 메트릭 이름 사용할 수 있습니다.  다양 한 레지스트리 키 및 값 이름 및 모든 와이드 문자 문자열로 정의 된 이름에 해당 합니다: 예를 들어, `extern LPCWSTR metrictypeEngine`.  
+## <a name="metric-definitions"></a>메트릭 정의  
+ 미리 정의 된 메트릭 이름에 대 한 이러한 정의 사용할 수 있습니다. 이름은 와이드 문자 문자열으로 정의 된 모든 다양 한 레지스트리 키 및 값 이름에 해당 합니다: 예를 들어 `extern LPCWSTR metrictypeEngine`합니다.  
   
-|미리 정의 된 메트릭 형식|설명 합니다: 기본 키에 대해....|  
-|--------------------|--------------------------|  
-|metrictypeEngine|모든 엔진이 메트릭스를 디버그합니다.|  
-|metrictypePortSupplier|모든 포트 공급자 메트릭입니다.|  
-|metrictypeException|모든 예외 메트릭이 있습니다.|  
-|metricttypeEEExtension|모든 식 계산기 확장 합니다.|  
+|미리 정의 된 메트릭 형식|설명:에 대 한 기본 키 중...|  
+|-----------------------------|---------------------------------------|  
+|metrictypeEngine|모든 디버그 엔진 메트릭.|  
+|metrictypePortSupplier|포트의 모든 공급 업체 메트릭입니다.|  
+|metrictypeException|모든 예외 메트릭입니다.|  
+|metricttypeEEExtension|모든 식 계산기 확장입니다.|  
   
 |디버그 엔진 속성|설명|  
-|---------------|--------|  
-|metricAddressBP|주소 중단점에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricAlwaysLoadLocal|항상 로컬로 디버그 엔진을 로드 하려면 0이 아닌 설정.|  
-|metricLoadInDebuggeeSession|사용 하지 않는|  
-|metricLoadedByDebuggee|디버그 엔진 항상 또는 디버깅 중인 프로그램에 의해 로드 됩니다 나타내는 0이 아닌 설정.|  
-|metricAttach|첨부 파일을 기존 프로그램에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricCallStackBP|호출 스택 중단점에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricConditionalBP|조건부 중단점의 설정에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricDataBP|중단점에서 데이터 변경의 설정에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricDisassembly|생산 하는 분해 목록에 대 한 지원을 나타내기 위해 0이 아닌 설정 합니다.|  
-|metricDumpWriting|덤프 \(는 출력 장치 메모리 덤프\) 쓰기에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricENC|편집 하며 계속 하기에 대 한 지원을 나타낼 수를 0이 아닌 설정 합니다. **Note:**  사용자 지정 디버그 엔진이 되지 않도록 설정 해야 합니다 또는 항상 0으로 설정 해야 합니다.|  
-|metricExceptions|예외에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricFunctionBP|\(특정 함수 이름을 호출할 때 중단 중단점\) 명명 된 중단점에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricHitCountBP|중단점 \(만 되 고 특정 횟수에 도달 하면 트리거되는 중단점\) "방문 포인트"의 설정에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricJITDebug|0이 아닌\-의 시간 \(실행 중인 프로세스에 예외가 발생 하면 디버거에서 시작 됩니다\) 디버깅을 지원 하기에 설정 합니다.|  
-|metricMemory|사용 하지 않는|  
-|metricPortSupplier|하나 구현 되는 경우 포트 공급자의 CLSID에 설정 합니다.|  
-|metricRegisters|사용 하지 않는|  
-|metricSetNextStatement|\(어떤 중간 문 실행을 건너뜁니다\) 다음 문을 설정에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricSuspendThread|스레드 실행을 일시 중단 하는 것에 대 한 지원을 나타내기 위해 0이 아닌 설정.|  
-|metricWarnIfNoSymbols|기호가 있는 경우 사용자가 알림을 받을 수 나타내려면 0 이외의 설정 하십시오.|  
-|metricProgramProvider|이 프로그램 공급자의 CLSID에 설정 합니다.|  
-|metricAlwaysLoadProgramProviderLocal|이 0이 아닌 프로그램 공급자가 항상 로컬로 로드 된 것을 나타냅니다에 설정 합니다.|  
-|metricEngineCanWatchProcess|디버그 엔진 프로그램 공급자의 이벤트 처리에 대 한 감시를 나타내기 위해 0이 아닌 설정 합니다.|  
-|metricRemoteDebugging|원격 디버깅을 지원 하려면 0이 아닌 설정 합니다.|  
-|metricEncUseNativeBuilder|이 0이 아닌 편집 하며 계속 하는 관리자는 디버그 엔진 encbuild.dll을 편집 하며 계속 하기에 대 한 빌드를 사용할 수를 설정 합니다. **Note:**  사용자 지정 디버그 엔진이 되지 않도록 설정 해야 합니다 또는 항상 0으로 설정 해야 합니다.|  
-|metricLoadUnderWOW64|디버그 엔진 디버기 프로세스에서 WOW에서 64 비트 프로세스를 디버깅할 때 로드 하도록 나타내는 0 이외의 설정 합니다. 그렇지 않으면 디버그 엔진 \(w o w 64에서 실행 되 고\)는 Visual Studio 프로세스에서 로드 됩니다.|  
-|metricLoadProgramProviderUnderWOW64|프로그램 공급자는 WOW에서 64 비트 프로세스를 디버깅할 때 디버기가 프로세스에서 로드 된 것을 나타냅니다에 0 이외의 설정 합니다. 그렇지 않으면 Visual Studio 프로세스에서 로드 됩니다.|  
-|metricStopOnExceptionCrossingManagedBoundary|처리 되지 않은 예외 코드 관리\/비관리 경계를 넘어 발생 하는 경우 프로세스를 중지 하도록 지정 하는 0 이외의 설정 합니다.|  
-|metricAutoSelectPriority|이 자동 선택 디버그 엔진 \(높은 값은 높은 우선 순위\)의 우선 순위를 설정 합니다.|  
-|metricAutoSelectIncompatibleList|자동 선택 영역을 무시 합니다 디버깅 엔진에 대 한 Guid를 지정 하는 항목을 포함 하는 레지스트리 키입니다.  이러한 항목에는 숫자입니다 \(0, 1, 2, 등\)으로 GUID는 문자열로 표현 합니다.|  
-|metricIncompatibleList|이 디버그 엔진과 호환 되지 않는 디버깅 엔진에 대 한 Guid를 지정 하는 항목을 포함 하는 레지스트리 키입니다.|  
-|metricDisableJITOptimization|디버깅 하는 동안 적시에 최적화 \(예: 관리 되는 코드\)를 사용 하지 않도록 지정 하려면 0이 아닌 설정 합니다.|  
+|-----------------------------|-----------------|  
+|metricAddressBP|로 설정 주소 중단점에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricAlwaysLoadLocal|로 설정 항상 로컬로 디버그 엔진을 로드 하기 위해 0이 아닌 합니다.|  
+|metricLoadInDebuggeeSession|사용 되지 않음|  
+|metricLoadedByDebuggee|로 설정 하거나 디버깅 중인 프로그램 디버그 엔진 로드 항상은 0이 아닌 합니다.|  
+|metricAttach|로 설정 하 고 기존 프로그램 첨부 파일에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricCallStackBP|로 설정 호출 스택 중단점에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricConditionalBP|로 설정 조건부 중단점의 설정에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricDataBP|설정 데이터의 변경에 대 한 중단점 설정에 대 한 지원을 나타내는 데 0이 아닌.|  
+|metricDisassembly|에 디스어셈블리 목록 프로덕션에 대 한 지원을 나타내는 데 0이 아닌 설정 합니다.|  
+|metricDumpWriting|로 설정 (의 덤프를 출력 장치에 대 한 메모리)를 작성 하는 덤프에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricENC|편집 하며 계속 하기 지원을 나타내는 데 0이 아닌 값으로 설정 합니다. **참고:** 사용자 지정 디버그 엔진이 설정 해서는 안됩니다 또는 0을 항상 설정 해야 합니다.|  
+|metricExceptions|로 설정 예외에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricFunctionBP|로 설정 (특정 함수 이름의 호출 될 때 중단 하는 중단점) 명명 된 중단점에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricHitCountBP|로 설정 "지점 hit" 중단점 (특정 횟수 만큼 적중 된 후에 시작 되는 중단점)의 설정에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricJITDebug|Just-in-time 디버깅 (디버거를 시작할 실행 중인 프로세스에서 예외가 발생 하는 경우)에 대 한 지원을 나타냅니다에 0이 아닌 값을 설정 합니다.|  
+|metricMemory|사용 되지 않음|  
+|metricPortSupplier|구현 된 경우이 포트 공급자 CLSID로 설정 합니다.|  
+|metricRegisters|사용 되지 않음|  
+|metricSetNextStatement|로 설정 (중간 문 실행을 건너뜁니다)는 다음 문을 설정에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricSuspendThread|로 설정 스레드 실행을 일시 중단 하기 위한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricWarnIfNoSymbols|로 설정 기호가 없는 경우 사용자를 알릴 나타내려면 0이 아닌 합니다.|  
+|metricProgramProvider|이 프로그램 공급자 CLSID로 설정 합니다.|  
+|metricAlwaysLoadProgramProviderLocal|이를 해야 함을 나타내려면 프로그램 공급자 항상 로드 로컬로 0이 아닌 설정 합니다.|  
+|metricEngineCanWatchProcess|이 설정 프로그램 공급자 대신 프로세스 이벤트에 대 한 디버그 엔진에서 감시 나타내려면 0이 아닌 합니다.|  
+|metricRemoteDebugging|이 설정 원격 디버깅에 대 한 지원을 나타내는 데 0이 아닌 합니다.|  
+|metricEncUseNativeBuilder|편집 하며 계속 하기에 대 한 빌드에 편집 하며 계속 관리자 디버그 엔진 encbuild.dll 사용 해야 함을 나타내려면 0이 아닌 값으로 설정 합니다. **참고:** 사용자 지정 디버그 엔진이 설정 해서는 안됩니다 또는 0을 항상 설정 해야 합니다.|  
+|metricLoadUnderWOW64|64 비트 프로세스를 디버깅할 때 wow 디버기 프로세스에 디버그 엔진을 로드 해야는 나타내려면 0이 아닌 값으로 설정 그렇지 않으면 디버그 엔진 (w o w 64에서 실행 되 고)는 Visual Studio 프로세스에서 로드 됩니다.|  
+|metricLoadProgramProviderUnderWOW64|이 속성을 설정 해야 함을 나타내려면 프로그램 공급자는 디버거 프로세스에서 로드 된 wow; 64 비트 프로세스를 디버깅 하는 경우에 0이 아닌 그렇지 않으면 Visual Studio 프로세스에서 로드 됩니다.|  
+|metricStopOnExceptionCrossingManagedBoundary|이 설정 프로세스에서 관리 되 는/관리 코드 경계를 넘어 처리 되지 않은 예외가 throw 되 면 중지 해야 함을 나타내기 위해 0이 아닌 합니다.|  
+|metricAutoSelectPriority|디버그 엔진 (높은 값은 더 높은 우선 순위)의 자동 선택에 대 한 우선 순위를 설정 합니다.|  
+|metricAutoSelectIncompatibleList|레지스트리 키를 자동으로 선택에서 무시 되어야 디버그 엔진에 대 한 Guid를 지정 하는 항목이 포함 되도록 합니다. 이러한 항목은 숫자 (0, 1, 2, 및 등)를 문자열로 표현 된 GUID를 사용 합니다.|  
+|metricIncompatibleList|이 디버그 엔진과 호환 되지 않는 디버그 엔진에 대 한 Guid를 지정 하는 항목을 포함 하는 레지스트리 키입니다.|  
+|metricDisableJITOptimization|이 설정 (관리 코드용) 최적화 적시에 디버깅 하는 동안 않도록 나타내려면 0이 아닌 합니다.|  
   
-|식 평가기 속성|설명|  
-|--------------|--------|  
-|metricEngine|지정 된 식 계산기는 지원 되는 디버깅 엔진의 수를 보유 합니다.|  
-|metricPreloadModules|이 프로그램에 대해 식 계산기를 시작 하는 경우 모듈 미리 로드 합니다 나타내려면 0이 아닌 설정.|  
-|metricThisObjectName|이것을 "이" 개체 이름으로 설정 합니다.|  
+|식 계산기 속성|설명|  
+|-------------------------------------|-----------------|  
+|metricEngine|디버그 엔진을 지 원하는 지정 된 식 계산기의 수를 보유 합니다.|  
+|metricPreloadModules|이 설정는 모듈을 미리 설치 해야 식 계산기는 프로그램에 대해 시작 될 때 나타내려면 0이 아닌 합니다.|  
+|metricThisObjectName|"This" 개체 이름으로 설정 합니다.|  
   
-|식 평가기 확장 속성|설명|  
-|-----------------|--------|  
-|metricExtensionDll|이 확장을 지 원하는 dll의 이름입니다.|  
+|식 계산기 확장 속성|설명|  
+|-----------------------------------------------|-----------------|  
+|metricExtensionDll|이 확장명을 지 원하는 dll의 이름입니다.|  
 |metricExtensionRegistersSupported|지원 되는 레지스터의 목록입니다.|  
-|metricExtensionRegistersEntryPoint|레지스터에 액세스 하기 위한 시작 지점입니다.|  
-|metricExtensionTypesSupported|지원 되는 형식의 목록입니다.|  
-|metricExtensionTypesEntryPoint|형식에 액세스 하는 것에 대 한 진입점입니다.|  
+|metricExtensionRegistersEntryPoint|레지스터에 액세스 하기 위한 진입점입니다.|  
+|metricExtensionTypesSupported|지원 되는 유형 목록입니다.|  
+|metricExtensionTypesEntryPoint|형식에 액세스 하기 위한 진입점입니다.|  
   
 |포트 공급자 속성|설명|  
-|---------------|--------|  
-|metricPortPickerCLSID|\(대화 상자 사용자 포트를 선택 하 고 디버깅 하는 데 사용 하는 포트를 추가할 수 있습니다\) 포트 선택기의 CLSID입니다.|  
-|metricDisallowUserEnteredPorts|사용자가 입력 한 포트 포트 공급자에 추가할 수 없으면 0이 아닌 \(이 포트 선택 대화 상자의 기본적으로 읽기 전용으로 설정\) 합니다.|  
-|metricPidBase|포트 공급자가 프로세스 Id를 할당 하는 경우 사용 되는 기본 프로세스 ID.|  
+|------------------------------|-----------------|  
+|metricPortPickerCLSID|포트 선택 (포트를 선택 하 고 디버깅을 위해 사용할 포트를 추가 하는 대화 상자가 사용자 사용할 수 있음)의 CLSID입니다.|  
+|metricDisallowUserEnteredPorts|사용자가 입력 한 포트는 포트 공급자에 추가할 수 없습니다 하면 0이 아니고 (이렇게 하면 포트 선택 대화 상자는 기본적으로 읽기 전용).|  
+|metricPidBase|프로세스 Id를 할당할 때 포트 공급자에서 사용 하는 기본 프로세스 ID입니다.|  
   
-|미리 정의 된 SP 저장소 형식|설명|  
-|-----------------------|--------|  
-|storetypeFile|기호를 별도 파일에 저장 됩니다.|  
-|storetypeMetadata|기호는 어셈블리의 메타 데이터로 저장 됩니다.|  
+|미리 정의 된 SP 저장소 유형|설명|  
+|-------------------------------|-----------------|  
+|storetypeFile|기호는 별도 파일에 저장 됩니다.|  
+|storetypeMetadata|기호는 어셈블리에서 메타 데이터로 저장 됩니다.|  
   
 |기타 속성|설명|  
-|-----------|--------|  
-|metricShowNonUserCode|Nonuser 코드를 표시 하는 0 이외의 설정 합니다.|  
-|metricJustMyCodeStepping|이 단계별 실행 사용자 코드에만 발생할 수 있습니다 나타내기 위해 0이 아닌 설정.|  
-|metricCLSID|미터는 특정 종류의 개체에 대 한 CLSID입니다.|  
-|metricName|미터는 특정 종류의 개체에 대 한 친숙 한 이름입니다.|  
+|------------------------------|-----------------|  
+|metricShowNonUserCode|이 설정 nonuser 코드를 표시 하려면 0이 아닌 합니다.|  
+|metricJustMyCodeStepping|이 설정 단계별 실행 사용자 코드에만 발생할 수 있다는 것을 나타내려면 0이 아닌 합니다.|  
+|metricCLSID|특정 메트릭 형식의 개체에 대 한 CLSID입니다.|  
+|metricName|특정 메트릭 형식의 개체에 대 한 알기 쉬운 이름.|  
 |metricLanguage|언어 이름입니다.|  
   
-## 레지스트리 위치  
- 메트릭을 읽기 \/ 특별히에 있는 레지스트리에 기록 되는 `VisualStudio` 하위 키입니다.  
+## <a name="registry-locations"></a>레지스트리 위치  
+ 메트릭을 읽고 특히의 레지스트리에 기록 된 `VisualStudio` 하위 키입니다.  
   
 > [!NOTE]
->  대부분의 경우 메트릭 HKEY\_LOCAL\_MACHINE 키에 기록 됩니다.  그러나 때로는 HKEY\_CURRENT\_USER 키 대상 됩니다.  Dbgmetric.lib 두 키를 처리합니다.  메트릭을 가져오는 경우 HKEY\_CURRENT\_USER 검색 한 첫 번째, 다음 HKEY\_LOCAL\_MACHINE입니다.  메트릭을 설정 하는 경우 최상위 수준 키를 사용 하 여 매개 변수를 지정 합니다.  
+>  대부분의 경우 HKEY_LOCAL_MACHINE 키에 메트릭이 기록 됩니다. 그러나 때로는 HKEY_CURRENT_USER 됩니다 대상 키입니다. Dbgmetric.lib 두 키를 처리합니다. HKEY_CURRENT_USER 검색 메트릭의 가져올 때 가장 먼저 다음 HKEY_LOCAL_MACHINE입니다. 메트릭, 설정 되는 경우 매개 변수는 최상위 사용할 키를 지정 합니다.  
   
- *\[레지스트리 키\]*\\  
+ *[레지스트리 키]*\  
   
- `Software`\\  
+ `Software`\  
   
- `Microsoft`\\  
+ `Microsoft`\  
   
- `VisualStudio`\\  
+ `VisualStudio`\  
   
- *\[버전 루트\]*\\  
+ *[버전 루트]*\  
   
- *\[메트릭 루트\]*\\  
+ *[메트릭 루트]*\  
   
- *\[메트릭 형식\]*\\  
+ *[메트릭 유형]*\  
   
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
 |자리 표시자|설명|  
-|------------|--------|  
-|*\[레지스트리 키\]*|`HKEY_CURRENT_USER` 또는 `HKEY_LOCAL_MACHINE`|  
-|*\[버전 루트\]*|Visual Studio 버전 \(예를 들어, `7.0`, `7.1`, 또는 `8.0`\).  그러나이 루트를 사용 하 여 수정할 수도 있습니다 해당 **\/rootsuffix** 전환 **devenv.exe**.  VSIP에 대 한 버전 루트, 예를 들어, 8.0Exp 이므로이 한정자 Exp를 일반적입니다.|  
-|*\[메트릭 루트\]*|이 중 하나입니다 `AD7Metrics` 또는 `AD7Metrics(Debug)`dbgmetric.lib의 디버그 버전 사용 여부에 따라. **Note:**  Dbgmetric.lib를 사용 하는지 여부 디버그 및 릴리스 간에 차이가 있는 경우이 명명 규칙 준수 될 해야 합니다 버전에서 레지스트리를 반영 해야 합니다.|  
-|*\[메트릭 형식\]*|쓸 미터법의 종류: `Engine`, `ExpressionEvaluator`, `SymbolProvider`등.  모두에서 dbgmetric.h로 정의 된 `metricTypeXXXX`, 어디 `XXXX` 특정 유형의 이름입니다.|  
-|*\[메트릭\]*|메트릭을 설정에 값이 할당 될 수 있는 항목의 이름입니다.  실제 회사 메트릭을 메트릭 형식에 따라 달라 집니다.|  
-|*\[메트릭 값\]*|미터법에 할당 되는 값입니다.  값 \(문자열, 숫자, 등\)가 있어야 형식을 미터법에 따라 달라 집니다.|  
+|-----------------|-----------------|  
+|*[레지스트리 키]*|`HKEY_CURRENT_USER` 또는 `HKEY_LOCAL_MACHINE`|  
+|*[버전 루트]*|Visual Studio 버전 (예를 들어 `7.0`, `7.1`, 또는 `8.0`). 그러나이 루트 수정할 수도 있습니다를 사용 하는 **/rootsuffix** 전환할 **devenv.exe**합니다. VSIP,이 한정자는 일반적으로 **Exp**버전 루트 것, 예를 들어 8.0Exp 때문입니다.|  
+|*[메트릭 루트]*|이 역할은 `AD7Metrics` 또는 `AD7Metrics(Debug)`dbgmetric.lib의 디버그 버전 사용 여부에 따라 합니다. **참고:** 디버그 및 릴리스 차이점 있는 경우이 명명 규칙을 따라야 dbgmetric.lib을 사용 하는 여부 레지스트리에 반영 해야 하는 버전입니다.|  
+|*[메트릭 유형]*|메트릭 기록할 유형의: `Engine`, `ExpressionEvaluator`, `SymbolProvider`등입니다. 이러한 작업은 모든 정의로 dbgmetric.h 에서처럼 `metricTypeXXXX`여기서 `XXXX` 특정 형식 이름입니다.|  
+|*[메트릭을]*|에 대 한 메트릭을 설정 하려면 값을 지정 하는 항목의 이름입니다. 메트릭의 실제 회사 메트릭 형식에 따라 달라 집니다.|  
+|*[메트릭 값]*|에 대 한 메트릭을에 할당 된 값입니다. 값 (문자열, 숫자, 등) 있어야 합니다. 형식에 대 한 메트릭을에 따라 달라 집니다.|  
   
 > [!NOTE]
->  모든 Guid 형식으로 저장 된 `{GUID}`.  예를 들면 `{123D150B-FA18-461C-B218-45B3E4589F9B}`와 같습니다.  
+>  모든 Guid의 형식으로 저장 되며 `{GUID}`합니다. 예를 들어, `{123D150B-FA18-461C-B218-45B3E4589F9B}`을 입력합니다.  
   
-### 디버그 엔진  
- 다음 디버그 엔진 메트릭 레지스트리에서 조직입니다.  `Engine`디버그 엔진에 대 한 미터법 형식 이름으로 서 해당  *\[메트릭 형식\]* 위의 레지스트리 하위 트리에 있습니다.  
+### <a name="debug-engines"></a>디버그 엔진  
+ 다음은 레지스트리에서 디버그 엔진 메트릭의 구성 합니다. `Engine`디버그 엔진에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]* 위의 레지스트리 하위 트리에 있는 합니다.  
   
- `Engine`\\  
+ `Engine`\  
   
- *\[guid 엔진\]*\\  
+ *[엔진 guid]*\  
   
- `CLSID`\=  *\[클래스 guid\]*  
+ `CLSID` = *[클래스 guid]*  
   
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
- `PortSupplier`\\  
+ `PortSupplier`\  
   
- `0`\=  *\[포트 공급자 guid\]*  
+ `0` = *[포트 공급자 guid]*  
   
- `1`\=  *\[포트 공급자 guid\]*  
-  
-|자리 표시자|설명|  
-|------------|--------|  
-|*\[엔진 guid\]*|디버그 엔진의 GUID입니다.|  
-|*\[클래스 guid\]*|이 디버그 엔진을 구현 하는 클래스의 GUID를 지정 합니다.|  
-|*\[포트 공급자 guid\]*|있는 경우 포트 공급자의 GUID입니다.  디버그 엔진 기본 포트 공급자를 사용 하 고 따라서 자신의 공급 업체를 지정 하지.  이 경우에 하위 키 `PortSupplier` 것입니다.|  
-  
-### 포트 공급자  
- 다음 레지스트리에서 포트 공급자 메트릭을 조직입니다.  `PortSupplier`포트 공급자에 대 한 미터법 형식 이름으로 서 해당  *\[메트릭 형식\]*.  
-  
- `PortSupplier`\\  
-  
- *\[포트 공급자 guid\]*\\  
-  
- `CLSID`\=  *\[클래스 guid\]*  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
+ `1` = *[포트 공급자 guid]*  
   
 |자리 표시자|설명|  
-|------------|--------|  
-|*\[포트 공급자 guid\]*|포트 공급자의 GUID를|  
-|*\[클래스 guid\]*|이 포트 공급자를 구현 하는 클래스의 GUID를|  
+|-----------------|-----------------|  
+|*[엔진 guid]*|디버그 엔진의 GUID입니다.|  
+|*[클래스 guid]*|이 디버그 엔진 구현 하는 클래스의 GUID입니다.|  
+|*[포트 공급자 guid]*|있는 경우 포트 공급자의 GUID입니다. 많은 디버그 엔진 기본 포트 공급자를 사용 하 여 및 자신의 공급 업체를 지정 하지 마십시오. 이 경우, 하위 키 `PortSupplier` 없습니다.|  
   
-### 기호 공급자  
- 다음의 기호 협력 업체 메트릭스는 레지스트리에서 구성입니다.  `SymbolProvider`미터법 형식 이름이 기호 공급자 및 해당  *\[메트릭 형식\]*.  
+### <a name="port-suppliers"></a>포트 공급자  
+ 다음은 레지스트리에서 포트 공급 업체 메트릭의 구성 합니다. `PortSupplier`포트 공급자에 대 한 메트릭 형식 이름 및 해당 *[메트릭 유형]*합니다.  
   
- `SymbolProvider`\\  
+ `PortSupplier`\  
   
- *\[공급자 guid 기호\]*\\  
+ *[포트 공급자 guid]*\  
   
- `file`\\  
+ `CLSID` = *[클래스 guid]*  
   
- `CLSID`\=  *\[클래스 guid\]*  
+ *[메트릭을] = [메트릭 값]*  
   
- *\[메트릭\] \= \[메트릭 값\]*  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
-  
- `metadata`\\  
-  
- `CLSID`\=  *\[클래스 guid\]*  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
 |자리 표시자|설명|  
-|------------|--------|  
-|*\[기호 공급자 guid\]*|기호 공급자의 GUID를|  
-|*\[클래스 guid\]*|이 기호 공급자를 구현 하는 클래스의 GUID를|  
+|-----------------|-----------------|  
+|*[포트 공급자 guid]*|포트 공급자의 GUID|  
+|*[클래스 guid]*|이 포트 공급자를 구현 하는 클래스의 GUID|  
   
-### 식 계산기  
- 다음의 식 계산기 메트릭 레지스트리에서 구성입니다.  `ExpressionEvaluator`식 계산기는 미터법 형식 이름입니다 및 해당  *\[메트릭 형식\]*.  
+### <a name="symbol-providers"></a>기호 공급자  
+ 다음은 레지스트리에서 기호 공급 업체 메트릭의 구성 합니다. `SymbolProvider`기호 공급자에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]*합니다.  
+  
+ `SymbolProvider`\  
+  
+ *[기호 공급자 guid]*\  
+  
+ `file`\  
+  
+ `CLSID` = *[클래스 guid]*  
+  
+ *[메트릭을] = [메트릭 값]*  
+  
+ *[메트릭을] = [메트릭 값]*  
+  
+ `metadata`\  
+  
+ `CLSID` = *[클래스 guid]*  
+  
+ *[메트릭을] = [메트릭 값]*  
+  
+ *[메트릭을] = [메트릭 값]*  
+  
+|자리 표시자|설명|  
+|-----------------|-----------------|  
+|*[기호 공급자 guid]*|기호 공급자의 GUID|  
+|*[클래스 guid]*|이 기호 공급자를 구현 하는 클래스의 GUID|  
+  
+### <a name="expression-evaluators"></a>식 계산기  
+ 다음은 레지스트리에서 식 계산기 메트릭의 구성 합니다. `ExpressionEvaluator`식 계산기에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]*합니다.  
   
 > [!NOTE]
->  미터법 형식에 대 한 `ExpressionEvaluator` 식 계산기에 대 한 메트릭 변경 내용을 모두 적절 한 식 계산기 미터 기능을 통해 진행 될 것으로 간주 되는 dbgmetric.h에 정의 되어 있지 않습니다 \(의 레이아웃은 `ExpressionEvaluator` dbgmetric.lib 안에 표시 되지 않도록 하위 키가 다소 복잡 한 것\).  
+>  에 대 한 메트릭 유형을 `ExpressionEvaluator` 식 계산기에 대 한 모든 메트릭 변경 내용을 적절 한 식 계산기 메트릭 함수를 통해 진행 될를 가정 하는 대로 dbgmetric.h에 정의 되지 않았습니다 (의 레이아웃은 `ExpressionEvaluator` 다소 하위 키를 복잡 하 고 dbgmetric.lib 내 세부 정보가 숨겨져 있으므로).  
   
- `ExpressionEvaluator`\\  
+ `ExpressionEvaluator`\  
   
- *\[언어 guid\]*\\  
+ *[언어 guid]*\  
   
- *\[공급 업체 guid\]*\\  
+ *[공급 업체 guid]*\  
   
- `CLSID`\=  *\[클래스 guid\]*  
+ `CLSID` = *[클래스 guid]*  
   
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
- `Engine`\\  
+ `Engine`\  
   
- `0`\=  *\[엔진 guid 디버그\]*  
+ `0` = *[디버그 엔진 guid]*  
   
- `1`\=  *\[엔진 guid 디버그\]*  
-  
-|자리 표시자|설명|  
-|------------|--------|  
-|*\[언어 guid\]*|언어의 GUID|  
-|*\[공급 업체 guid\]*|공급 업체의 GUID|  
-|*\[클래스 guid\]*|이 식 계산기를 구현 하는 클래스의 GUID를|  
-|*\[디버그 엔진 guid\]*|계산 열이 사용 되는 디버그 엔진의 GUID|  
-  
-### 식 계산기를 확장  
- 다음 레지스트리에서 식 계산기 확장 기준을 조직입니다.  `EEExtensions`미터법 형식 이름 식 계산기 확장명입니다 및 해당  *\[메트릭 형식\]*.  
-  
- `EEExtensions`\\  
-  
- *\[확장 guid\]*\\  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
+ `1` = *[디버그 엔진 guid]*  
   
 |자리 표시자|설명|  
-|------------|--------|  
-|*\[확장 guid\]*|식 평가기 확장의 GUID|  
+|-----------------|-----------------|  
+|*[언어 guid]*|언어의 GUID|  
+|*[공급 업체 guid]*|공급 업체의 GUID|  
+|*[클래스 guid]*|이 식 계산기를 구현 하는 클래스의 GUID|  
+|*[디버그 엔진 guid]*|이 식 계산기를 사용 하는 디버그 엔진의 GUID|  
   
-### 예외  
- 다음 예외 기준을 레지스트리에서 조직입니다.  `Exception`예외에 대 한 미터법 형식 이름으로 서 해당  *\[메트릭 형식\]*.  
+### <a name="expression-evaluator-extensions"></a>식 계산기 확장  
+ 다음은 식 계산기 확장 메트릭 레지스트리에 구성 합니다. `EEExtensions`이 식에 대 한 메트릭 형식 이름이 계산기 확장 하 고 해당 *[메트릭 유형]*합니다.  
   
- `Exception`\\  
+ `EEExtensions`\  
   
- *\[디버깅 엔진 guid\]*\\  
+ *[확장 guid]*\  
   
- *\[예외 형식\]*\\  
+ *[메트릭을] = [메트릭 값]*  
   
- *\[예외\]*\\  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
-  
- *\[예외\]*\\  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
-  
- *\[메트릭\] \= \[메트릭 값\]*  
+ *[메트릭을] = [메트릭 값]*  
   
 |자리 표시자|설명|  
-|------------|--------|  
-|*\[디버그 엔진 guid\]*|예외를 지 원하는 디버그 엔진의 GUID입니다.|  
-|*\[예외 형식\]*|처리할 수 있는 예외 클래스를 식별 하는 하위 키에 대 한 일반 제목입니다.  Typical names are **C\+\+ Exceptions**, **Win32 Exceptions**, **Common Language Runtime Exceptions**, and **Native Run\-Time Checks**.  이 이름에 사용자의 특정 클래스를 식별할 수도 사용 됩니다.|  
-|*\[예외\]*|예외 이름: 예를 들어, **\_com\_error** 또는 **Control\-Break**.  이러한 이름은 특정 예외가 사용자에 게 확인 하도 사용 됩니다.|  
+|-----------------|-----------------|  
+|*[확장 guid]*|식 계산기 확장의 GUID|  
   
-## 요구 사항  
- 이러한 파일에는 있는 [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK 설치 디렉터리 \(기본적으로  *\[드라이브\]*\\Program Files\\Microsoft Visual Studio 2010 SDK\\\).  
+### <a name="exceptions"></a>예외  
+ 다음은 레지스트리에서 예외 메트릭 구성 합니다. `Exception`예외에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]*합니다.  
   
- 헤더: includes\\dbgmetric.h  
+ `Exception`\  
   
- 라이브러리: libs\\ad2de.lib, libs\\dbgmetric.lib  
+ *[디버그 엔진 guid]*\  
   
-## 참고 항목  
+ *[예외 유형]*\  
+  
+ *[예외]*\  
+  
+ *[메트릭을] = [메트릭 값]*  
+  
+ *[메트릭을] = [메트릭 값]*  
+  
+ *[예외]*\  
+  
+ *[메트릭을] = [메트릭 값]*  
+  
+ *[메트릭을] = [메트릭 값]*  
+  
+|자리 표시자|설명|  
+|-----------------|-----------------|  
+|*[디버그 엔진 guid]*|지 원하는 예외 디버그 엔진의 GUID입니다.|  
+|*[예외 유형]*|예외 처리 될 수 있는 클래스를 식별 하는 하위 키에 대 한 일반 제목입니다. 일반적인 이름은 **c + + 예외**, **Win32 예외**, **공용 언어 런타임 예외**, 및 **네이티브 런타임 검사**합니다. 이러한 이름은 특정 클래스의 사용자에 게 예외를 식별 하도 사용 됩니다.|  
+|*[예외]*|예외에 대 한 이름을: 예를 들어 **_com_error** 또는 **Control-break**합니다. 이러한 이름은 사용자에 게 특정 예외를 식별 하도 사용 됩니다.|  
+  
+## <a name="requirements"></a>요구 사항  
+ 이러한 파일은 %programfiles%\microsoft는 [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK 설치 디렉터리 (기본적으로 *[드라이브]*files\microsoft Visual Studio 2010 SDK\\).  
+  
+ 헤더: includes\dbgmetric.h  
+  
+ 라이브러리: libs\ad2de.lib, libs\dbgmetric.lib  
+  
+## <a name="see-also"></a>참고 항목  
  [API 참조](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugObject
-helpviewer_keywords:
-- IDebugObject interface
+f1_keywords: IDebugObject
+helpviewer_keywords: IDebugObject interface
 ms.assetid: 05cd8bf4-c9ee-4b49-b782-2263c33067d6
-caps.latest.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 4707784dcccfa85f0edee277bc40ed19013509b5
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 7dd6df32ce98aa88f2eb511dc664be7f7c3c675c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugobject"></a>IDebugObject
 > [!IMPORTANT]
@@ -70,7 +54,7 @@ IDebugObject : IUnknown
 |[IsReadOnly](../../../extensibility/debugger/reference/idebugobject-isreadonly.md)|이 개체는 읽기 전용으로 설정 하는 경우를 결정 합니다.|  
 |[합니다](../../../extensibility/debugger/reference/idebugobject-isproxy.md)|투명 프록시 개체 인지 여부를 확인 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  식 계산기 구문 분석 트리에 개체를 나타내는 기본 클래스와이 인터페이스를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  

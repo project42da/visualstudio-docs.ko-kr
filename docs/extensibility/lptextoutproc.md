@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- LPTEXTOUTPROC
+f1_keywords: LPTEXTOUTPROC
 helpviewer_keywords:
 - SccMsgDataOnMessage structure
 - SccMsgDataOnBeforeGetFile structure
@@ -17,29 +15,15 @@ helpviewer_keywords:
 - LPTEXTOUTPROC callback function
 - SccMsgDataOnAfterGetFile structure
 ms.assetid: 2025c969-e3c7-4cf4-a5c5-099d342895ea
-caps.latest.revision: 21
+caps.latest.revision: "21"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 86c8cce3abf16d7236acdd5ec468b06fdb46f997
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 658193f526123d237ef9b90a05861492b9f007c9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 통합된 개발 환경 (IDE) 내에서 소스 제어 작업을 실행 하는 사용자, 소스 제어 플러그 인 작업에 오류 또는 상태 메시지를 전달 하기 위해 할 수 있습니다. 플러그 인이 목적을 위해 자체 메시지 상자를 표시할 수 있습니다. 그러나 더 원활한 통합에 대 한 플러그 인을 전달할 수 문자열 IDE, 상태 정보를 표시 하는 기본 방법에서 표시 합니다. 이 메커니즘은는 `LPTEXTOUTPROC` 함수 포인터입니다. IDE 오류 및 상태를 표시 하기 위한 (아래에서 자세히 설명)이이 함수를 구현 합니다.  

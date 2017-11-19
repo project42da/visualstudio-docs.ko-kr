@@ -1,51 +1,51 @@
 ---
-title: "IDebugProperty2::GetDerivedMostProperty | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty2::GetDerivedMostProperty"
-helpviewer_keywords: 
-  - "IDebugProperty2::GetDerivedMostProperty"
+title: IDebugProperty2::GetDerivedMostProperty | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProperty2::GetDerivedMostProperty
+helpviewer_keywords: IDebugProperty2::GetDerivedMostProperty
 ms.assetid: cc86b461-62d1-4340-8209-c65037fd8b02
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3ac691b8e1c2d28477eb8c07f760eae8909a9633
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProperty2::GetDerivedMostProperty
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-파생 된 대부분 속성을의 속성을 가져옵니다.  
+# <a name="idebugproperty2getderivedmostproperty"></a>IDebugProperty2::GetDerivedMostProperty
+속성의 가장 많이 파생 속성을 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetDerivedMostProperty (   
-   IDebugProperty2** ppDerivedMost  
+```cpp  
+HRESULT GetDerivedMostProperty (   
+   IDebugProperty2** ppDerivedMost  
 );  
 ```  
   
-```c#  
-int GetDerivedMostProperty (   
-   out IDebugProperty2 ppDerivedMost  
+```csharp  
+int GetDerivedMostProperty (   
+   out IDebugProperty2 ppDerivedMost  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppDerivedMost`  
- \[out\] 반환 된 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 에서 대부분 파생 된 속성을 나타내는 개체입니다.  
+ [out] 반환 된 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 가장 많이 파생 속성을 나타내는 개체입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환합니다.  반환 `S_GETDERIVEDMOST_NO_DERIVED_MOST` 없는 경우를 검색 하는 대부분 파생 된 속성입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`; 그렇지 않으면 오류 코드를 반환 합니다. 반환 `S_GETDERIVEDMOST_NO_DERIVED_MOST` 검색할 가장 많이 파생 속성이 없을 경우.  
   
-## 설명  
- 예를 들어,이 속성을 구현 하는 개체에 설명 합니다. `ClassRoot` 하지만 실제로의 인스턴스화 하는 `ClassDerived` 에서 파생 됩니다 `ClassRoot`,이 메서드를 반환 합니다는 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 개체를 설명 하는 `ClassDerived` 개체.  
+## <a name="remarks"></a>설명  
+ 예를 들어,이 속성을 구현 하는 개체를 설명 하는 경우 `ClassRoot` 의 인스턴스인 실제로 하지만 `ClassDerived` 에서 파생 된 `ClassRoot`,이 메서드는 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 개체 설명 하는 `ClassDerived` 개체입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

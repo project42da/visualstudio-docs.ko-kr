@@ -1,53 +1,53 @@
 ---
-title: "IDebugClassField::GetDefaultIndexer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugClassField::GetDefaultIndexer"
-helpviewer_keywords: 
-  - "IDebugClassField::GetDefaultIndexer 메서드"
+title: IDebugClassField::GetDefaultIndexer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugClassField::GetDefaultIndexer
+helpviewer_keywords: IDebugClassField::GetDefaultIndexer method
 ms.assetid: 47ce4f45-3816-4b40-909c-5032d0692d75
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d30388b170f4a7de672fbdda11ccead83acce32c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugClassField::GetDefaultIndexer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-기본 인덱서 이름을 가져옵니다.  
+# <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
+기본 인덱서의 이름을 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetDefaultIndexer(   
-   BSTR* pbstrIndexer  
+```cpp  
+HRESULT GetDefaultIndexer(   
+   BSTR* pbstrIndexer  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetDefaultIndexer(  
-   out string pbstrIndexer  
+   out string pbstrIndexer  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pbstrIndexer`  
- \[out\] 기본 인덱서 이름을 포함 하는 문자열을 반환 합니다.  
+ [out] 기본 인덱서의 이름을 포함 하는 문자열을 반환 합니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 또는 없음 기본 인덱서 없으면 S\_FALSE를 반환 합니다.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 S_OK를 반환 하거나 인덱서가 없습니다. 기본 경우 S_FALSE를 반환 합니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## 설명  
- 클래스의 기본 인덱서 속성으로 표시 되는 `Default` 속성을 배열에 액세스 합니다.  이 특정 한입니다 [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)].  예를 들어 선언 된 기본 인덱서 [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] 사용 됩니다.  
+## <a name="remarks"></a>설명  
+ 클래스의 기본 인덱서는로 표시 된 속성은 `Default` 배열 액세스에 대 한 속성. 이 관련 [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]합니다. 에 선언 된 기본 인덱서의 예로 [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] 와 사용 방법입니다.  
   
-```vb#  
+```vb  
 Imports System.Collections;  
   
 Public Class Class1  
@@ -77,5 +77,5 @@ Function GetItem(Index as Integer) as Integer
 End Function  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3a01d333-6e31-423f-ae06-5091a4fcb7a9
-caps.latest.revision: 22
+caps.latest.revision: "22"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7ef1e10f0f19d7134b00d6dd3d37f7e7e6a1ede5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8db7d203b599c11ce8fea07ed3647771c879a256
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ: VSPackage 확장으로 추가 기능 변환
 추가 기능은 이제 사용되지 않습니다. 새 Visual Studio 확장을 하려면 VSIX 확장을 만들기 위해 필요 합니다. 다음은 VSIX 확장을 Visual Studio 추가 기능을 변환 하는 방법에 대 한 몇 가지 자주 묻는 질문에 대답 합니다.  
@@ -83,7 +68,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  메뉴 명령이 포함된 VSPackage를 만듭니다. (자세한 내용은 참조 [메뉴 명령을 사용 하 여 확장을 만드는](../extensibility/creating-an-extension-with-a-menu-command.md).)  
   
-2.  VSPackage 정의가 포함된 파일을 엽니다. (C# 프로젝트의 있기 * \<프로젝트 이름 >*Package.cs.)  
+2.  VSPackage 정의가 포함된 파일을 엽니다. (C# 프로젝트의 있기  *\<프로젝트 이름 >*Package.cs.)  
   
 3.  파일에 다음 `using` 문을 추가합니다.  
   
@@ -145,7 +130,7 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="to-get-the-dte-object-from-a-vspackage"></a>VSPackage에서 DTE 개체를 가져오려면  
   
-1.  Visual Studio 패키지 항목 템플릿 사용 하 여 VSIX 프로젝트를 찾습니다는 * \<프로젝트 이름 >*Package.cs 파일입니다. 이 파일은 <xref:Microsoft.VisualStudio.Shell.Package>에서 파생되는 클래스로, Visual Studio와 상호 작용하는 데 사용할 수 있습니다. 여기서는 해당 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>를 사용하여 <xref:EnvDTE80.DTE2> 개체를 가져옵니다.  
+1.  Visual Studio 패키지 항목 템플릿 사용 하 여 VSIX 프로젝트를 찾습니다는  *\<프로젝트 이름 >*Package.cs 파일입니다. 이 파일은 <xref:Microsoft.VisualStudio.Shell.Package>에서 파생되는 클래스로, Visual Studio와 상호 작용하는 데 사용할 수 있습니다. 여기서는 해당 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>를 사용하여 <xref:EnvDTE80.DTE2> 개체를 가져옵니다.  
   
 2.  다음 `using` 문을 추가합니다.  
   
@@ -177,7 +162,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  메뉴 명령에는 VSPackage 만들기는 [개발 VSIX 확장을 시작 하는 방법?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) 섹션.  
   
-2.  VSPackage 정의가 포함된 파일을 엽니다. (C# 프로젝트의 있기 * \<프로젝트 이름 >*Package.cs.)  
+2.  VSPackage 정의가 포함된 파일을 엽니다. (C# 프로젝트의 있기  *\<프로젝트 이름 >*Package.cs.)  
   
 3.  다음 `using` 문을 추가합니다.  
   
@@ -225,7 +210,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  메뉴 명령에는 VSPackage 만들기는 [개발 VSIX 확장을 시작 하는 방법?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) 섹션.  
   
-2.  VSPackage 정의가 포함된 파일을 엽니다. (C# 프로젝트의 있기 * \<프로젝트 이름 >*Package.cs.)  
+2.  VSPackage 정의가 포함된 파일을 엽니다. (C# 프로젝트의 있기  *\<프로젝트 이름 >*Package.cs.)  
   
 3.  다음 `using` 문을 추가합니다.  
   

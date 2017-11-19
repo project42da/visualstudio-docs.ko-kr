@@ -1,59 +1,60 @@
 ---
-title: "IDebugModule2::GetInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugModule2::GetInfo"
-helpviewer_keywords: 
-  - "GetInfo 메서드"
-  - "IDebugModule2::GetInfo 메서드"
+title: IDebugModule2::GetInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugModule2::GetInfo
+helpviewer_keywords:
+- GetInfo method
+- IDebugModule2::GetInfo method
 ms.assetid: de337e66-294f-4ac9-b21e-71fac7418e36
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e9d88f78d9f3942eb4744168c874a37db26dd144
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugModule2::GetInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugmodule2getinfo"></a>IDebugModule2::GetInfo
 이 모듈에 대 한 정보를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetInfo(   
-   MODULE_INFO_FIELDS dwFields,  
-   MODULE_INFO*       pInfo  
+```cpp  
+HRESULT GetInfo(   
+   MODULE_INFO_FIELDS dwFields,  
+   MODULE_INFO*       pInfo  
 );  
 ```  
   
-```cpp#  
-int GetInfo(   
-   enum_MODULE_INFO_FIELDS dwFields,  
-   MODULE_INFO[]           pInfo  
+```cpp  
+int GetInfo(   
+   enum_MODULE_INFO_FIELDS dwFields,  
+   MODULE_INFO[]           pInfo  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `dwFields`  
- \[in\] 플래그의 조합에서 [MODULE\_INFO\_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) 의 필드를 지정 하는 열거형 `pInfo` 데이터를 입력할 수 있습니다.  
+ [in] 플래그의 조합 된 [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) 의 필드를 지정 하는 열거형 `pInfo` 작성 됩니다.  
   
  `pInfo`  
- \[in, out\] A [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md) 구조는 모듈에 대 한 사용 하 여 채워집니다.  
+ [out에서] A [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) 는 모듈에 대 한 설명을 포함 하는 구조입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md) 구조에 표시 되는 모듈의 이름 포함를  **모듈** 창.  
+## <a name="remarks"></a>설명  
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) 구조에 표시 되는 모듈의 이름이 고 **모듈** 창.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)   
- [MODULE\_INFO\_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)   
- [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md)
+ [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)   
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)

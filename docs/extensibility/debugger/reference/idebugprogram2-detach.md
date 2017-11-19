@@ -1,45 +1,45 @@
 ---
-title: "IDebugProgram2::Detach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::Detach"
-helpviewer_keywords: 
-  - "IDebugProgram2::Detach"
+title: IDebugProgram2::Detach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::Detach
+helpviewer_keywords: IDebugProgram2::Detach
 ms.assetid: 5e8d88b0-a8d4-4746-88c0-ad332ee73f33
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3d916bf047471e506166610882313d66177448fc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::Detach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-프로그램에서을 디버그 엔진을 분리합니다.  
+# <a name="idebugprogram2detach"></a>IDebugProgram2::Detach
+프로그램에서 디버그 엔진을 분리합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Detach(   
-   void   
+```cpp  
+HRESULT Detach(   
+   void   
 );  
 ```  
   
-```c#  
+```csharp  
 int Detach();  
 ```  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 분리 된 프로그램 실행이 계속 됩니다 있지만 디버그 세션에 더 이상 없습니다.  프로그램 디버그 이벤트가 더 이상 디버그 엔진 분리 된 후에 보내집니다.  
+## <a name="remarks"></a>설명  
+ 분리 된 프로그램 실행을 계속 하지만 디버그 세션의 일부가 더 이상. 디버그 이벤트를 더 이상 프로그램 디버그 엔진 분리 되 면 전송 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

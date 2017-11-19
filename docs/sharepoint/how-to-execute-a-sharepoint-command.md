@@ -1,84 +1,81 @@
 ---
-title: 'How to: Execute a SharePoint Command | Microsoft Docs'
+title: "방법: SharePoint 명령 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- SharePoint commands [SharePoint development in Visual Studio], executing
+helpviewer_keywords: SharePoint commands [SharePoint development in Visual Studio], executing
 ms.assetid: 2d1a163b-b601-4dac-bcea-328f24cb4d57
-caps.latest.revision: 23
-author: kempb
-ms.author: kempb
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 7f51a23170059ac4bd5a2b610e65f64f43fcb7cd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: f1cfe20d0cac50603265644fb48102ef22537631
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-execute-a-sharepoint-command"></a>How to: Execute a SharePoint Command
-  If you want to use the server object model in a SharePoint tools extension, you must create a custom *SharePoint command* to call the API. After you define the command and deploy it with your SharePoint tools extension, your extension can execute the command to call into the SharePoint server object model. To execute the command, use one of the ExecuteCommand methods of an <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object.  
+# <a name="how-to-execute-a-sharepoint-command"></a>방법: SharePoint 명령 실행
+  사용자 지정 SharePoint 도구 확장에서 서버 개체 모델을 사용 하려는 경우 만들어야 *SharePoint 명령* API를 호출 합니다. 명령을 정의 하 고 SharePoint 도구 확장으로 배포한 후 확장 프로그램에 SharePoint 서버 개체 모델을 호출 하는 명령을 실행할 수 있습니다. 이 명령은 실행 하려면의 ExecuteCommand 메서드 중 하나를 사용는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> 개체입니다.  
   
- For more information about the purpose of SharePoint commands, see [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
+ SharePoint 명령의 용도 대 한 자세한 내용은 참조 [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)합니다.  
   
-### <a name="to-execute-a-sharepoint-command"></a>To execute a SharePoint command  
+### <a name="to-execute-a-sharepoint-command"></a>SharePoint 명령을 실행 하려면  
   
-1.  In your SharePoint tools extension, get an <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object. The way you get an <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object depends on the type of extension you are creating:  
+1.  SharePoint 도구 확장에 전달 되는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> 개체입니다. 가져오는 방법은 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> 개체 만들면 확장의 형식에 따라 달라 집니다.  
   
-    -   In an extension of the SharePoint project system, use the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection%2A> property.  
+    -   SharePoint 프로젝트 시스템의 확장을 사용 하 여는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection%2A> 속성입니다.  
   
-         For more information about project system extensions, see [Extending the SharePoint Project System](../sharepoint/extending-the-sharepoint-project-system.md).  
+         프로젝트 시스템 확장에 대 한 자세한 내용은 참조 [SharePoint 프로젝트 시스템 확장](../sharepoint/extending-the-sharepoint-project-system.md)합니다.  
   
-    -   In an extension of the **SharePoint Connections** node in **Server Explorer**, use the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> property. To get an <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> object, use the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> property.  
+    -   확장에는 **SharePoint 연결** 노드에서 **서버 탐색기**를 사용 하 여는 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> 속성입니다. 가져오려는 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> 개체를 가져오려면는 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> 속성입니다.  
   
-         For more information about **Server Explorer** extensions, see [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).  
+         에 대 한 자세한 내용은 **서버 탐색기** 확장 참조 [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)합니다.  
   
-    -   In code that is not part of an extension of the SharePoint tools, such as a project template wizard, use the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A> property.  
+    -   프로젝트 템플릿 마법사와 같은 SharePoint 도구의 확장에 포함 하지 않은 코드를 사용 하 여는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A> 속성입니다.  
   
-         For more information about retrieving the project service, see [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md).  
+         프로젝트 서비스 검색 하는 방법에 대 한 자세한 내용은 참조 [SharePoint 프로젝트 서비스를 사용 하 여](../sharepoint/using-the-sharepoint-project-service.md)합니다.  
   
-2.  Call one of the ExecuteCommand methods of the <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object. Pass the name of the command you want to execute to the first argument of the ExecuteCommand method. If your command has a custom parameter, pass that parameter to the second argument of the ExecuteCommand method.  
+2.  ExecuteCommand 메서드 중 하나를 호출 하는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> 개체입니다. ExecuteCommand 메서드의 첫 번째 인수에 실행 하려는 명령의 이름을 전달 합니다. 명령에는 사용자 지정 매개 변수를 ExecuteCommand 메서드의 두 번째 인수를 해당 매개 변수를 전달 합니다.  
   
-     There is a different ExecuteCommand overload for each supported command signature. The following table lists the supported signatures and which overload to use for each signature.  
+     각 지원 되는 명령 서명에 대 한 다른 ExecuteCommand 오버 로드가 있습니다. 다음 표에서 지원 되는 서명 및 오버 로드 각 서명에 사용할를 나열 합니다.  
   
-    |Command signature|ExecuteCommand overload to use|  
+    |명령 시그니처|사용 하도록 ExecuteCommand 오버 로드|  
     |-----------------------|------------------------------------|  
-    |The command has only the default <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter and no return value.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
-    |The command has only the default <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter and a return value.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
-    |The command has two parameters (the default <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter and a custom parameter) and no return value.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
-    |The command has two parameters and a return value.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
+    |명령에 기본 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 매개 변수 및 반환 값이 없습니다.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
+    |명령에 기본 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 매개 변수 및 반환 값입니다.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
+    |명령에 두 개의 매개 변수 (기본 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 매개 변수 및 사용자 지정 매개 변수) 및 반환 값이 없습니다.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
+    |이 명령은 두 개의 매개 변수 및 반환 값에 있습니다.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
   
-## <a name="example"></a>Example  
- The following code example demonstrates how to use the <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> overload to call the `Contoso.Commands.UpgradeSolution` command that is described in [How to: Create a SharePoint Command](../sharepoint/how-to-create-a-sharepoint-command.md).  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 사용 하는 방법을 보여 줍니다.는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> 오버 로드를 호출 하는 `Contoso.Commands.UpgradeSolution` 명령에 설명 된 [하는 방법: SharePoint 명령 만들기](../sharepoint/how-to-create-a-sharepoint-command.md)합니다.  
   
- [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs#6)] [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb#6)]  
+ [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs#6)]
+ [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb#6)]  
   
- The `Execute` method shown in this example is an implementation of the <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A> method of the <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> interface in a custom deployment step. To see this code in the context of a larger example, see [Walkthrough: Creating a Custom Deployment Step for SharePoint Projects](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).  
+ `Execute` 이 예제에 표시 된 메서드는의 구현은 <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A> 의 메서드는 <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> 사용자 지정 배포 단계에 대 한 인터페이스입니다. 보다 큰 예제의의 컨텍스트에서이 코드를 보려면 [연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)합니다.  
   
- Note the following details about the call to the <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> method:  
+ 에 대 한 호출에 대 한 다음 세부 정보를 참고는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> 메서드:  
   
--   The first parameter identifies the command that you want to call. This string matches the value that you pass to the <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> on the command definition.  
+-   첫 번째 매개 변수를 호출 하는 명령을 식별 합니다. 이 문자열에 전달 하는 값과 일치는 <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> 명령 정의 합니다.  
   
--   The second parameter is the value that you want to pass to the custom second parameter of the command. In this case, it is the full path of the .wsp file that is being upgraded to the SharePoint site.  
+-   두 번째 명령의 두 번째 사용자 지정 매개 변수에 전달 하려는 값입니다. 이 경우,이 SharePoint 사이트에는 업그레이드 중인.wsp 파일의 전체 경로입니다.  
   
--   The code does not pass the implicit <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter to the command. This parameter is passed into the command automatically when you call the command from an extension of the SharePoint project system or an extension of the **SharePoint Connections** node in **Server Explorer**. In other types of solutions, such as in a project template wizard that implements the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface, this parameter is **null**.  
+-   코드는 암시적 통과 하지 못하면 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 명령에 매개 변수입니다. 이 매개 변수는 명령에 자동 전달 SharePoint 프로젝트 시스템의 확장 또는의 확장에서 명령을 호출 하는 경우는 **SharePoint 연결** 노드에서 **서버 탐색기**. 다른 유형의 솔루션을 구현 하는 프로젝트 템플릿 마법사와 같이 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스는이 매개 변수는 **null**합니다.  
   
-## <a name="compiling-the-code"></a>Compiling the Code  
- This example requires a reference to the Microsoft.VisualStudio.SharePoint assembly.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 이 예제에서는 Microsoft.VisualStudio.SharePoint 어셈블리에 대 한 참조가 필요합니다.  
   
-## <a name="see-also"></a>See Also  
- [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md)   
- [How to: Create a SharePoint Command](../sharepoint/how-to-create-a-sharepoint-command.md)   
- [Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
+## <a name="see-also"></a>참고 항목  
+ [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)   
+ [방법: SharePoint 명령 만들기](../sharepoint/how-to-create-a-sharepoint-command.md)   
+ [연습: 서버 탐색기를 확장하여 웹 파트 표시](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
   
   

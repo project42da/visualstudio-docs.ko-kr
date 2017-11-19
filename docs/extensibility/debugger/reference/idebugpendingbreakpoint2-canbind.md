@@ -1,57 +1,58 @@
 ---
-title: "IDebugPendingBreakpoint2::CanBind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPendingBreakpoint2::CanBind"
-helpviewer_keywords: 
-  - "IDebugPendingBreakpoint2::CanBind 메서드"
-  - "CanBind 메서드"
+title: IDebugPendingBreakpoint2::CanBind | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugPendingBreakpoint2::CanBind
+helpviewer_keywords:
+- IDebugPendingBreakpoint2::CanBind method
+- CanBind method
 ms.assetid: 84a2b189-ccf1-467e-8fab-0c0da68f0b91
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c1e64de7048f071437b6166b8cc9a6cc5cd920b2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPendingBreakpoint2::CanBind
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 보류 중단점이 코드 위치에 바인딩할 수 있는지 여부를 결정 합니다.  
+# <a name="idebugpendingbreakpoint2canbind"></a>IDebugPendingBreakpoint2::CanBind
+이 보류 중인 중단점 코드 위치에 바인딩할 수 있는지 여부를 결정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT CanBind (   
-   IEnumDebugErrorBreakpoints2** ppErrorEnum  
+```cpp  
+HRESULT CanBind (   
+   IEnumDebugErrorBreakpoints2** ppErrorEnum  
 );  
 ```  
   
-```c#  
-int CanBind (   
-   out IEnumDebugErrorBreakpoints2 ppErrorEnum  
+```csharp  
+int CanBind (   
+   out IEnumDebugErrorBreakpoints2 ppErrorEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppErrorEnum`  
- \[out\] 반환 된 [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) 목록을 포함 하는 개체 [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) 발생할 수 경우 오류 개체입니다.  
+ [out] 반환 된 [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) 개체의 목록을 포함 하 [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) 개체 오류 될 수 있습니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK.` 반환 `S_FALSE` 중단점을 바인딩할 수 없으면 경우에 오류 반환 하는 `ppErrorEnum` 매개 변수.  그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_BP_DELETED` 중단점 삭제 된 경우입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK.` 반환 `S_FALSE` 중단점 바인딩할 수 없는 경우이 경우 오류 정보에서 반환한는 `ppErrorEnum` 매개 변수입니다. 그러지 않으면 오류 코드가 반환됩니다. 반환 `E_BP_DELETED` 중단점 삭제 된 경우.  
   
-## 설명  
- 이 메서드가 발생 하는 상황을 확인 하 라고이 보류 중단점이 바인딩 되었으면 합니다.  호출을 [바인딩](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) 메서드가 실제로 보류 중단점을 바인딩할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 수행 된 작업을 확인 하려면이 메서드는 중단점 보류 중인이 바인딩된 경우입니다. 호출 된 [바인딩할](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) 실제로 보류 중단점을 바인딩할 메서드를 합니다.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CPendingBreakpoint` 를 노출 하는 개체는 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 인터페이스입니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CPendingBreakpoint` 공개 하는 개체는 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 인터페이스입니다.  
   
-```cpp#  
+```cpp  
 HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)    
 {    
    HRESULT hr;    
@@ -136,7 +137,7 @@ HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)   
  [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)   

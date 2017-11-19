@@ -1,56 +1,56 @@
 ---
-title: "IDebugEngine2::GetEngineID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2::GetEngineID"
-helpviewer_keywords: 
-  - "IDebugEngine2::GetEngineID"
+title: IDebugEngine2::GetEngineID | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEngine2::GetEngineID
+helpviewer_keywords: IDebugEngine2::GetEngineID
 ms.assetid: 0d5674c8-a9b9-4b72-8211-d2d68695775a
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 008c3cb2f2c4f8e12eedbae347515099524da2c0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEngine2::GetEngineID
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-디버그 엔진 \(DE\)의 GUID를 가져옵니다.  
+# <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
+디버그 엔진 (DE)의 GUID를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetEngineID(   
-   GUID* pguidEngine  
+```cpp  
+HRESULT GetEngineID(   
+   GUID* pguidEngine  
 );  
 ```  
   
-```c#  
-int GetEngineID(   
-   out Guid pguidEngine  
+```csharp  
+int GetEngineID(   
+   out Guid pguidEngine  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pguidEngine`  
- \[out\] DE의 GUID를 반환합니다.  
+ [out] DE의 GUID를 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 일반적인 Guid의 예는 `guidScriptEng`, `guidNativeEng`, 또는 `guidSQLEng`.  새로운 디버깅 엔진 식별에 대 한 고유한 GUID를 만듭니다.  
+## <a name="remarks"></a>설명  
+ 일반적인 Guid의 몇 가지 예는 `guidScriptEng`, `guidNativeEng`, 또는 `guidSQLEng`합니다. 새 디버그 엔진 id에 대 한 고유 GUID를 만듭니다.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CEngine` 를 구현 하는 개체는 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) 인터페이스입니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CEngine` 구현 하는 개체는 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) 인터페이스입니다.  
   
-```cpp#  
+```cpp  
 HRESULT CEngine::GetEngineId(GUID *pguidEngine){    
    if (pguidEngine) {    
       // Set pguidEngine to guidBatEng, as defined in the Batdbg.idl file.    
@@ -64,5 +64,5 @@ HRESULT CEngine::GetEngineId(GUID *pguidEngine){
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

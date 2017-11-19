@@ -1,47 +1,30 @@
 ---
-title: "모델에서 테스트 개발 | Microsoft 문서"
+title: "모델에서 테스트를 개발 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tests and requirements
+helpviewer_keywords: tests and requirements
 ms.assetid: 40f87192-ba85-4552-8804-314a678261ae
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 08aabdfe0e268f93ef7723076375b7f65b15ccf3
-ms.openlocfilehash: b7cb109d11669f411b5ca3bdf3c4c32a63ac53a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: ea0753130b6fa1da60cf83cf15c0ee5c7f4010c2
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="develop-tests-from-a-model"></a>모델에서 테스트 개발
-요구 사항 및 아키텍처 모델을 사용하여 시스템 및 해당 구성 요소의 테스트를 구성하도록 지원할 수 있습니다. 이렇게 하면 사용자 및 기타 이해 관계자에게 중요한 요구 사항을 테스트하는지 확인할 수 있고 요구 사항이 변경될 때 테스트를 빠르게 업데이트할 수 있습니다. 
-          [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]를 사용하는 경우 모델과 테스트 간의 링크를 유지할 수도 있습니다.  
+요구 사항 및 아키텍처 모델을 사용하여 시스템 및 해당 구성 요소의 테스트를 구성하도록 지원할 수 있습니다. 이렇게 하면 사용자 및 기타 이해 관계자에게 중요한 요구 사항을 테스트하는지 확인할 수 있고 요구 사항이 변경될 때 테스트를 빠르게 업데이트할 수 있습니다. [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]를 사용하는 경우 모델과 테스트 간의 링크를 유지할 수도 있습니다.  
   
- 이러한 기능을 지 원하는 Visual Studio의 버전을 확인 하려면 참조 [아키텍처 및 모델링 도구에 대 한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)합니다.  
+ 이러한 기능을 지 원하는 Visual Studio의 버전을 보려면 참조 [아키텍처 및 모델링 도구에 대 한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)합니다.  
   
 ## <a name="system-and-subsystem-testing"></a>시스템 및 하위 시스템 테스트  
- *시스템 테스트* 라고도 *수용 테스트*, 사용자의 요구 사항이 충족 되는지 여부를 테스트 합니다. 이러한 테스트는 내부 디자인이 아니라 시스템 외부에 표시되는 동작과 관련이 있습니다.  
+ *시스템 테스트* 라고도 *수용 테스트*, 사용자의 요구 사항이 충족 되는지 여부를 테스트 하는 수단입니다. 이러한 테스트는 내부 디자인이 아니라 시스템 외부에 표시되는 동작과 관련이 있습니다.  
   
  시스템 테스트는 시스템을 확장하거나 다시 디자인할 때 매우 유용합니다. 코드를 변경할 때 버그가 발생하는 것을 방지하는 데 도움이 됩니다.  
   
@@ -52,11 +35,10 @@ ms.lasthandoff: 02/22/2017
  하위 시스템 테스트는 시스템의 주요 구성 요소에 동일한 원칙을 적용합니다. 각 구성 요소가 다른 구성 요소와 별도로 테스트됩니다. 하위 시스템 테스트는 구성 요소의 사용자 인터페이스 또는 API에 표시되는 동작에 중점을 둡니다.  
   
 ## <a name="deriving-system-tests-from-a-requirements-model"></a>요구 사항 모델에서 시스템 테스트 파생  
- 시스템 테스트와 요구 사항 모델 간의 관계를 만들고 유지 관리할 수 있습니다. 이 관계를 설정하려면 요구 사항 모델의 주요 요소에 해당하는 테스트를 작성합니다. Visual Studio는 테스트 및 모델 파트 간에 링크를 만들 수 있도록 하여 해당 관계의 유지 관리를 도와줍니다. 요구 사항 모델에 대 한 자세한 내용은 참조 [사용자 요구 사항을 모델링](../modeling/model-user-requirements.md)합니다.  
+ 시스템 테스트와 요구 사항 모델 간의 관계를 만들고 유지 관리할 수 있습니다. 이 관계를 설정하려면 요구 사항 모델의 주요 요소에 해당하는 테스트를 작성합니다. Visual Studio는 테스트 및 모델 파트 간에 링크를 만들 수 있도록 하여 해당 관계의 유지 관리를 도와줍니다. 요구 사항 모델에 대 한 자세한 내용은 참조 [사용자 요구 사항을 모델링할](../modeling/model-user-requirements.md)합니다.  
   
 ### <a name="write-tests-for-each-use-case"></a>각 사용 사례에 대한 테스트 작성  
- 
-          [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]를 사용하는 경우 요구 사항 모델에 정의된 각 사용 사례에 대한 테스트 그룹을 만들 수 있습니다. 예를 들어 주문 만들기 및 주문에 항목 추가를 포함하는 음식 주문 사용 사례가 있는 경우 전체 사용 사례 및 보다 자세한 사용 사례에 대한 테스트를 모두 만들 수 있습니다. 
+ [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]를 사용하는 경우 요구 사항 모델에 정의된 각 사용 사례에 대한 테스트 그룹을 만들 수 있습니다. 예를 들어 주문 만들기 및 주문에 항목 추가를 포함하는 음식 주문 사용 사례가 있는 경우 전체 사용 사례 및 보다 자세한 사용 사례에 대한 테스트를 모두 만들 수 있습니다. 
   
  다음 지침이 도움이 될 수 있습니다.  
   
@@ -73,18 +55,17 @@ ms.lasthandoff: 02/22/2017
 -   테스트를 디자인할 때 사후 조건이 달성되었는지 여부를 확인하는 테스트 데이터 선택 항목을 코드 또는 스크립트에서 구분합니다. 예를 들어 단순한 산술 함수 테스트는 입력 4, 출력이 2인지 확인이 될 수 있습니다. 대신, 스크립트를 입력 선택, 출력에 자신을 곱하고 결과가 원래 입력인지 확인으로 디자인합니다. 이 스타일을 사용하면 테스트의 본문을 변경하지 않고 테스트 입력을 확인할 수 있습니다.  
   
 #### <a name="linking-tests-to-use-cases"></a>사용 사례에 테스트 연결  
- 사용 중인 경우 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] 를 디자인 하 고 테스트를 실행 하려면 요구 사항, 사용 사례 또는 사용자 스토리 작업 항목 아래에 테스트를 구성할 수 있습니다. 모델의 사용 사례에 이러한 작업 항목을 연결할 수 있습니다. 이렇게 하면 테스트에 대한 요구 사항 변경을 신속하게 추적할 수 있으며 각 사용 사례의 진행률을 추적하는 데 도움이 됩니다.  
+ 사용 중인 경우 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] 디자인 하 고 테스트를 실행, 조건 요구 사항, 사용 사례 또는 사용자 스토리 작업 항목에서 테스트를 구성할 수 있습니다. 모델의 사용 사례에 이러한 작업 항목을 연결할 수 있습니다. 이렇게 하면 테스트에 대한 요구 사항 변경을 신속하게 추적할 수 있으며 각 사용 사례의 진행률을 추적하는 데 도움이 됩니다.  
   
 ###### <a name="to-link-tests-to-a-use-case"></a>사용 사례에 테스트를 연결하려면  
   
-1.  
-          [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]에서 요구 사항을 만들고 요구 사항에 따라 테스트 도구 모음을 만듭니다.
+1.  [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]에서 요구 사항을 만들고 요구 사항에 따라 테스트 도구 모음을 만듭니다.
   
-     만드는 요구 사항은 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]에서 작업 항목이 됩니다. 프로젝트가 [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)]에서 사용하는 프로세스 템플릿에 따라 사용자 스토리, 요구 사항 또는 사용 사례 작업 항목일 수 있습니다. 자세한 내용은 참조 [Visual Studio Team Services 또는 Team Foundation Server를 사용 하 여 작업 추적](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)합니다.  
+     만드는 요구 사항은 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]에서 작업 항목이 됩니다. 프로젝트가 [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)]에서 사용하는 프로세스 템플릿에 따라 사용자 스토리, 요구 사항 또는 사용 사례 작업 항목일 수 있습니다. 자세한 내용은 참조 [Visual Studio Team Services 나 Team Foundation Server를 사용 하 여 작업 추적](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)합니다.  
   
 2.  모델에서 하나 이상의 사용 사례에 요구 사항 작업 항목을 연결합니다.  
   
-     사용 사례 다이어그램에서 사용 사례를 마우스 오른쪽 단추로 클릭 하 고 클릭 **작업 항목에 링크**합니다. 자세한 내용은 참조 [모델 요소에 연결 하 고 작업 항목](../modeling/link-model-elements-and-work-items.md)합니다.  
+     사용 사례 다이어그램에서 사용 사례를 마우스 오른쪽 단추로 클릭 하 고 클릭 **작업 항목에 링크**합니다. 
   
 3.  테스트 도구 모음에 사용 사례를 확인하는 테스트 사례를 추가합니다.  
   
@@ -166,20 +147,18 @@ Assert (countAfter == countBefore = 1);
   
 #### <a name="to-link-tests-to-a-model-element-or-relationship"></a>모델 요소 또는 관계에 테스트를 연결하려면  
   
-1.  
-          [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]에서 요구 사항을 만들고 요구 사항에 따라 테스트 도구 모음을 만듭니다. 
+1.  [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]에서 요구 사항을 만들고 요구 사항에 따라 테스트 도구 모음을 만듭니다. 
   
-     만드는 요구 사항은 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]에서 작업 항목이 됩니다. 프로젝트가 [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)]에서 사용하는 프로세스 템플릿에 따라 사용자 스토리, 요구 사항 또는 사용 사례 작업 항목일 수 있습니다. 자세한 내용은 참조 [Visual Studio Team Services 또는 Team Foundation Server를 사용 하 여 작업 추적](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)합니다.  
+     만드는 요구 사항은 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]에서 작업 항목이 됩니다. 프로젝트가 [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)]에서 사용하는 프로세스 템플릿에 따라 사용자 스토리, 요구 사항 또는 사용 사례 작업 항목일 수 있습니다. 자세한 내용은 참조 [Visual Studio Team Services 나 Team Foundation Server를 사용 하 여 작업 추적](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)합니다.  
   
 2.  모델에서 하나 이상의 요소에 요구 사항 작업 항목을 연결합니다.  
   
-     모델링 다이어그램에서 요소, 주석 또는 관계를 마우스 오른쪽 단추로 클릭 하 고 클릭 **작업 항목에 링크**합니다. 자세한 내용은 참조 [모델 요소에 연결 하 고 작업 항목](../modeling/link-model-elements-and-work-items.md)합니다.  
+     모델링 다이어그램에서 요소, 주석 또는 관계를 마우스 오른쪽 단추로 클릭 하 고 클릭 **작업 항목에 링크**합니다.
   
 3.  모델 요소에서 표현된 요구 사항을 확인하는 테스트 사례를 테스트 도구 모음에 추가합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [앱에 대 한 모델 만들기](../modeling/create-models-for-your-app.md)   
- [모델 사용자 요구 사항](../modeling/model-user-requirements.md)   
+ [앱 용 모델 만들기](../modeling/create-models-for-your-app.md)   
+ [사용자 요구 사항 모델링](../modeling/model-user-requirements.md)   
  [응용 프로그램의 아키텍처 모델링](../modeling/model-your-app-s-architecture.md)   
  [아키텍처 분석 및 모델링](../modeling/analyze-and-model-your-architecture.md)
-

@@ -1,30 +1,32 @@
 ---
-title: "IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule"
-  - "LoadSymbolsFromStreamWithCorModule"
+title: IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
+- LoadSymbolsFromStreamWithCorModule
 ms.assetid: f79b894f-52c4-43c2-9a68-c71536451f6c
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 13edb3af701c1f1c7dbcd17cc10cc02cb5d90fc3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
 지정 된 데이터 스트림에서 디버그 기호를 로드는 **ICorDebugModule** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT LoadSymbolsFromStreamWithCorModule(  
    ULONG32   ulAppDomainID,  
    GUID      guidModule,  
@@ -35,7 +37,7 @@ HRESULT LoadSymbolsFromStreamWithCorModule(
 );  
 ```  
   
-```c#  
+```csharp  
 int LoadSymbolsFromStreamWithCorModule(  
    uint    ulAppDomainID,  
    Guid    guidModule,  
@@ -60,18 +62,18 @@ int LoadSymbolsFromStreamWithCorModule(
  [in] 기호 메타 데이터를 포함 하는 개체입니다.  
   
  `pUnkCorDebugModule`  
- [in] 구현 하는 개체는 [ICorDebugModule 인터페이스](ICorDebugModule%20Interface.xml)합니다.  
+ [in] 구현 하는 개체는 [ICorDebugModule 인터페이스](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)합니다.  
   
  `pStream`  
- [in] 로드할 수 있는 디버그 기호를 포함 하는 데이터 스트림.  
+ [in] 디버그 기호 로드를 포함 하는 데이터 스트림.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 하면 반환 `S_OK`고, 그렇지 않으면 오류 코드가 반환 됩니다.  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서이 메서드를 구현 하는 방법을 한 **CDebugSymbolProvider** 개체를 노출 하는 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) 인터페이스입니다.  
+ 다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CDebugSymbolProvider** 공개 하는 개체는 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) 인터페이스입니다.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStreamWithCorModule(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  

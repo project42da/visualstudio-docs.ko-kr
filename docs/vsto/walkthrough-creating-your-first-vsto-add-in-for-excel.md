@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Creating Your First VSTO Add-in for Excel | Microsoft Docs'
+title: "연습: 첫 번째 VSTO 추가 기능에 Excel 용 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,132 +16,132 @@ helpviewer_keywords:
 - add-ins [Office development in Visual Studio], creating your first project
 - Excel [Office development in Visual Studio], creating your first project
 ms.assetid: a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f
-caps.latest.revision: 33
-author: kempb
-ms.author: kempb
+caps.latest.revision: "33"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 298cc2730bd6656df7628454600710fd21fa4ecd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 3d22d5b80186bf3117980cd8059ac9431bac5522
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-creating-your-first-vsto-add-in-for-excel"></a>Walkthrough: Creating Your First VSTO Add-in for Excel
-  This introductory walkthrough shows you how to create an application-level Add-in for Microsoft Office Excel. The features that you create in this kind of solution are available to the application itself, regardless of which workbooks are open.  
+# <a name="walkthrough-creating-your-first-vsto-add-in-for-excel"></a>연습: Excel용 첫 VSTO 추가 기능 만들기
+  이 소개용 연습에서는 Microsoft Office Excel의 응용 프로그램 수준 추가 기능을 만드는 방법을 보여 줍니다. 이러한 종류의 솔루션에서 만드는 기능은 열려 있는 통합 문서에 관계없이 응용 프로그램 자체에서 사용할 수 있습니다.  
   
  [!INCLUDE[appliesto_xlallapp](../vsto/includes/appliesto-xlallapp-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ 이 연습에서는 다음 작업을 수행합니다.  
   
--   Creating an Excel VSTO Add-in project for Excel.  
+-   Excel용 Excel VSTO 추가 기능 프로젝트 만들기  
   
--   Writing code that uses the object model of Excel to add text to a workbook when it is saved.  
+-   Excel의 개체 모델을 사용하여 통합 문서가 저장될 때 통합 문서에 텍스트를 추가하는 코드 작성  
   
--   Building and running the project to test it.  
+-   테스트를 위해 프로젝트 빌드 및 실행  
   
--   Cleaning up the completed project so that the VSTO Add-in no longer runs automatically on your development computer.  
+-   VSTO 추가 기능이 개발 컴퓨터에서 더 이상 자동으로 실행되지 않도록 하기 위해 완료된 프로젝트 정리  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] 또는 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]  
   
-## <a name="creating-the-project"></a>Creating the Project  
+## <a name="creating-the-project"></a>프로젝트 만들기  
   
-#### <a name="to-create-a-new-excel-vsto-add-in-project-in-visual-studio"></a>To create a new Excel VSTO Add-in project in Visual Studio  
+#### <a name="to-create-a-new-excel-vsto-add-in-project-in-visual-studio"></a>Visual Studio에서 새로운 Excel VSTO 추가 기능 프로젝트를 만들려면  
   
-1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 시작합니다.  
   
-2.  On the **File** menu, point to **New**, and then click **Project**.  
+2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office/SharePoint**.  
+3.  템플릿 창에서 **Visual C#** 또는 **Visual Basic**을 확장한 다음 **Office/SharePoint**를 확장합니다.  
   
-4.  Under the expanded **Office/SharePoint** node, select the **Office Add-ins** node.  
+4.  확장된 **Office/SharePoint** 노드 아래에서 **Office 추가 기능** 노드를 선택합니다.  
   
-5.  In the list of project templates, select **Excel 2010 Add-in** or **Excel 2013 Add-in**.  
+5.  프로젝트 템플릿의 목록에서 **Excel 2010 추가 기능** 또는 **Excel 2013 추가 기능**을 선택합니다.  
   
-6.  In the **Name** box, type **FirstExcelAddIn**.  
+6.  **이름** 상자에 **FirstExcelAddIn**을 입력합니다.  
   
-7.  Click **OK**.  
+7.  **확인**을 클릭합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the **FirstExcelAddIn** project and opens the ThisAddIn code file in the editor.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에서는 **FirstExcelAddIn** 프로젝트를 만들고 ThisAddIn 코드 파일을 편집기에서 엽니다.  
   
-## <a name="writing-code-to-add-text-to-the-saved-workbook"></a>Writing Code to Add Text to the Saved Workbook  
- Next, add code to the ThisAddIn code file. The new code uses the object model of Excel to insert boilerplate text in the first row of the active worksheet. The active worksheet is the worksheet that is open when the user saves the workbook. By default, the ThisAddIn code file contains the following generated code:  
+## <a name="writing-code-to-add-text-to-the-saved-workbook"></a>저장된 통합 문서에 텍스트를 추가하기 위한 코드 작성  
+ 다음 작업으로, ThisAddIn 코드 파일에 코드를 추가합니다. 새 코드에서는 Excel의 개체 모델을 사용하여 현재 워크시트의 첫 행에 상용구 텍스트를 삽입합니다. 현재 워크시트는 사용자가 통합 문서를 저장할 때 열려 있는 워크시트입니다. 기본적으로 ThisAddIn 코드 파일에는 다음과 같은 생성된 코드가 포함되어 있습니다.  
   
--   A partial definition of the `ThisAddIn` class. This class provides an entry point for your code and provides access to the object model of Excel. For more information, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md). The remainder of the `ThisAddIn` class is defined in a hidden code file that you should not modify.  
+-   `ThisAddIn` 클래스의 부분 정의. 이 클래스는 코드의 진입점을 제공하고 Excel의 개체 모델에 대한 액세스를 제공합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요. `ThisAddIn` 클래스의 나머지 부분은 수정해서는 안 되는 숨김 코드 파일에서 정의됩니다.  
   
--   The `ThisAddIn_Startup` and `ThisAddIn_Shutdown` event handlers. These event handlers are called when Excel loads and unloads your VSTO Add-in. Use these event handlers to initialize your VSTO Add-in when it is loaded, and to clean up resources used by your Add-in when it is unloaded. For more information, see [Events in Office Projects](../vsto/events-in-office-projects.md).  
+-   `ThisAddIn_Startup` 및 `ThisAddIn_Shutdown` 이벤트 처리기. 이러한 이벤트 처리기는 Excel에서 VSTO 추가 기능을 로드하고 언로드할 때 호출됩니다. 이러한 이벤트 처리기를 사용하여 VSTO 추가 기능이 로드될 때 VSTO 추가 기능을 초기화하고 추가 기능이 언로드될 때 추가 기능에서 사용하는 리소스를 정리할 수 있습니다. 자세한 내용은 [Events in Office Projects](../vsto/events-in-office-projects.md)을 참조하세요.  
   
-#### <a name="to-add-a-line-of-text-to-the-saved-workbook"></a>To add a line of text to the saved workbook  
+#### <a name="to-add-a-line-of-text-to-the-saved-workbook"></a>저장된 통합 문서에 텍스트 줄을 추가하려면  
   
-1.  In the ThisAddIn code file, add the following code to the `ThisAddIn` class. The new code defines an event handler for the <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> event, which is raised when a workbook is saved.  
+1.  ThisAddIn 코드 파일에서 다음 코드를 `ThisAddIn` 클래스에 추가합니다. 새 코드에서는 통합 문서가 저장될 때 발생하는 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> 이벤트의 이벤트 처리기를 정의합니다.  
   
-     When the user saves a workbook, the event handler adds new text at the start of the active worksheet.  
+     사용자가 통합 문서를 저장하면 이벤트 처리기는 현재 워크시트의 시작 부분에 새 텍스트를 추가합니다.  
   
-     [!code-vb[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb#1)]  [!code-csharp[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#1)]  
+     [!code-vb[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb#1)]
+     [!code-csharp[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#1)]  
   
-2.  If you are using C#, add the following required code to the `ThisAddIn_Startup` event handler. This code is used to connect the `Application_WorkbookBeforeSave` event handler with the <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> event.  
+2.  C#을 사용하는 경우 필요한 다음 코드를 `ThisAddIn_Startup` 이벤트 처리기에 추가합니다. 이 코드는 `Application_WorkbookBeforeSave` 이벤트 처리기를 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> 이벤트와 연결하는 데 사용됩니다.  
   
      [!code-csharp[Trin_ExcelAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#2)]  
   
- To modify the workbook when it is saved, the previous code examples use the following objects:  
+ 통합 문서가 저장될 때 통합 문서를 수정하기 위해 앞의 코드 예제에서는 다음 개체를 사용합니다.  
   
--   The `Application` field of the `ThisAddIn` class. The `Application` field returns a <xref:Microsoft.Office.Interop.Excel.Application> object, which represents the current instance of Excel.  
+-   `Application` 클래스의 `ThisAddIn` 필드. `Application` 필드는 Excel의 현재 인스턴스를 나타내는 <xref:Microsoft.Office.Interop.Excel.Application> 개체를 반환합니다.  
   
--   The `Wb` parameter of the event handler for the <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> event. The `Wb` parameter is a <xref:Microsoft.Office.Interop.Excel.Workbook> object, which represents the saved workbook. For more information, see [Excel Object Model Overview](../vsto/excel-object-model-overview.md).  
+-   `Wb` 이벤트에 대한 이벤트 처리기의 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> 매개 변수입니다. `Wb` 매개 변수는 저장된 통합 문서를 나타내는 <xref:Microsoft.Office.Interop.Excel.Workbook> 개체입니다. 자세한 내용은 [Excel Object Model Overview](../vsto/excel-object-model-overview.md)을 참조하세요.  
   
-## <a name="testing-the-project"></a>Testing the Project  
+## <a name="testing-the-project"></a>프로젝트 테스트  
   
-#### <a name="to-test-the-project"></a>To test the project  
+#### <a name="to-test-the-project"></a>프로젝트를 테스트하려면  
   
-1.  Press **F5** to build and run your project.  
+1.  **F5** 키를 눌러 프로젝트를 빌드하고 실행합니다.  
   
-     When you build the project, the code is compiled into an assembly that is included in the build output folder for the project. Visual Studio also creates a set of registry entries that enable Excel to discover and load the VSTO Add-in, and it configures the security settings on the development computer to enable the VSTO Add-in to run. For more information, see [Building Office Solutions](../vsto/building-office-solutions.md).  
+     프로젝트를 빌드하면 코드가 프로젝트의 빌드 출력 폴더에 포함된 어셈블리로 컴파일됩니다. 또한 Visual Studio에서는 Excel에서 VSTO 추가 기능을 검색하고 로드할 수 있도록 하는 레지스트리 항목 집합을 만들고 VSTO 추가 기능이 실행될 수 있도록 개발 컴퓨터에서 보안 설정을 구성합니다. 자세한 내용은 참조 [Office 솔루션 빌드](../vsto/building-office-solutions.md)합니다.  
   
-2.  In Excel, save the workbook.  
+2.  Excel에서 통합 문서를 저장합니다.  
   
-3.  Verify that the following text is added to the workbook.  
+3.  다음 텍스트가 통합 문서에 추가되었는지 확인합니다.  
   
      **This text was added by using code.**  
   
-4.  Close Excel.  
+4.  Excel을 닫습니다.  
   
-## <a name="cleaning-up-the-project"></a>Cleaning up the Project  
- When you finish developing a project, remove the VSTO Add-in assembly, registry entries, and security settings from your development computer. Otherwise, the VSTO Add-in will continue to run every time that you open Excel on your development computer.  
+## <a name="cleaning-up-the-project"></a>프로젝트 정리  
+ 프로젝트의 개발을 완료하면 VSTO 추가 기능 어셈블리, 레지스트리 항목 및 보안 설정을 개발 컴퓨터에서 제거합니다. 이렇게 하지 않으면 개발 컴퓨터에서 Excel을 열 때마다 VSTO 추가 기능이 계속 실행됩니다.  
   
-#### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>To clean up the completed project on your development computer  
+#### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>개발 컴퓨터에서 완료된 프로젝트를 정리하려면  
   
-1.  In Visual Studio, on the **Build** menu, click **Clean Solution**.  
+1.  Visual Studio의 **빌드** 메뉴에서 **솔루션 정리**를 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- Now that you have created a basic VSTO Add-in for Excel, you can learn more about how to develop VSTO Add-ins from these topics:  
+## <a name="next-steps"></a>다음 단계  
+ 기본적인 Excel용 VSTO 추가 기능을 만들었으므로 다음 항목에서 VSTO 추가 기능을 개발하는 방법에 대해 자세히 알아볼 수 있습니다.  
   
--   General programming tasks that you can perform in VSTO Add-ins: [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md).  
+-   VSTO 추가 기능에서 수행할 수 있는 일반적인 프로그래밍 작업: [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)  
   
--   Programming tasks that are specific to Excel VSTO Add-ins: [Excel Solutions](../vsto/excel-solutions.md).  
+-   Excel VSTO 추가 기능과 관련된 프로그래밍 작업: [Excel Solutions](../vsto/excel-solutions.md)  
   
--   Using the object model of Excel: [Excel Object Model Overview](../vsto/excel-object-model-overview.md).  
+-   Excel 개체 모델 사용: [Excel Object Model Overview](../vsto/excel-object-model-overview.md)  
   
--   Customizing the user interface (UI) of Excel, for example, by adding a custom tab to the Ribbon or creating your own custom task pane: [Office UI Customization](../vsto/office-ui-customization.md).  
+-   Excel의 사용자 인터페이스 (UI) 사용자 지정, 예를 들어 여 리본에 사용자 지정 탭 추가 또는 사용자 고유의 사용자 지정 작업창 만들기: [Office UI 사용자 지정](../vsto/office-ui-customization.md)합니다.  
   
--   Building and debugging VSTO Add-ins for Excel: [Building Office Solutions](../vsto/building-office-solutions.md).  
+-   빌드 및 Excel 용 VSTO 추가 기능 디버깅: [Office 솔루션 빌드](../vsto/building-office-solutions.md)합니다.  
   
--   Deploying VSTO Add-ins for Excel: [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
+-   Excel 용 VSTO 추가 기능 배포: [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)합니다.  
   
-## <a name="see-also"></a>See Also  
- [Office Solutions Development Overview &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
- [Excel Solutions](../vsto/excel-solutions.md)   
+## <a name="see-also"></a>참고 항목  
+ [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
+ [Excel 솔루션](../vsto/excel-solutions.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
- [Excel Object Model Overview](../vsto/excel-object-model-overview.md)   
- [Office UI Customization](../vsto/office-ui-customization.md)   
- [Building Office Solutions](../vsto/building-office-solutions.md)   
- [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
- [Office Project Templates Overview](../vsto/office-project-templates-overview.md)  
+ [Excel 개체 모델 개요](../vsto/excel-object-model-overview.md)   
+ [Office UI 사용자 지정](../vsto/office-ui-customization.md)   
+ [Office 솔루션 빌드](../vsto/building-office-solutions.md)   
+ [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)   
+ [Office 프로젝트 템플릿 개요](../vsto/office-project-templates-overview.md)  
   
   

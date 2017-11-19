@@ -1,51 +1,51 @@
 ---
-title: "IDebugProgram2::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::GetName"
-helpviewer_keywords: 
-  - "IDebugProgram2::GetName"
+title: IDebugProgram2::GetName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::GetName
+helpviewer_keywords: IDebugProgram2::GetName
 ms.assetid: a54cbf13-b3e3-4c9f-8b8d-13573232dfb0
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: bea739c8c2d62893422e46f3d75e2f12224f8d18
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugprogram2getname"></a>IDebugProgram2::GetName
 프로그램의 이름을 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetName(   
-   BSTR* pbstrName  
+```cpp  
+HRESULT GetName(   
+   BSTR* pbstrName  
 );  
 ```  
   
-```c#  
-int GetName(   
-   out string pbstrName  
+```csharp  
+int GetName(   
+   out string pbstrName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pbstrName`  
- \[out\] 프로그램의 이름을 반환합니다.  
+ [out] 프로그램의 이름을 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 이 메서드에서 반환 되는 이름을 항상 프로그램 설명 친숙 하 고 표시할 수 있는 사용자 이름이입니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드에서 반환 된 이름은 프로그램을 설명 하는 친숙 하 고 사용자를 표시할 수 있는 이름을 항상 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

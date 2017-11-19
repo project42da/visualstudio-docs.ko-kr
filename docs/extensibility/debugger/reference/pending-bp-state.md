@@ -1,72 +1,72 @@
 ---
-title: "PENDING_BP_STATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PENDING_BP_STATE"
-helpviewer_keywords: 
-  - "PENDING_BP_STATE 열거형"
+title: PENDING_BP_STATE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PENDING_BP_STATE
+helpviewer_keywords: PENDING_BP_STATE enumeration
 ms.assetid: ac04ad72-fa92-4a15-ade2-0d0bbbadfc7f
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: de7ac105f7dea0c57297c29a4bdb8d5c85f62321
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# PENDING_BP_STATE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-보류 중단점 \(아직 연결 된 중단점\)의 상태를 지정 합니다.  
+# <a name="pendingbpstate"></a>PENDING_BP_STATE
+(아직 바인딩되지 않은 중단점) 보류 중인 중단점의 상태를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-enum enum_PENDING_BP_STATE {   
-   PBPS_NONE     = 0x0000,  
-   PBPS_DELETED  = 0x0001,  
-   PBPS_DISABLED = 0x0002,  
-   PBPS_ENABLED  = 0x0003  
+```cpp  
+enum enum_PENDING_BP_STATE {   
+   PBPS_NONE     = 0x0000,  
+   PBPS_DELETED  = 0x0001,  
+   PBPS_DISABLED = 0x0002,  
+   PBPS_ENABLED  = 0x0003  
 };  
 typedef DWORD PENDING_BP_STATE;  
 ```  
   
-```c#  
-public enum enum_PENDING_BP_STATE {   
-   PBPS_NONE     = 0x0000,  
-   PBPS_DELETED  = 0x0001,  
-   PBPS_DISABLED = 0x0002,  
-   PBPS_ENABLED  = 0x0003  
+```csharp  
+public enum enum_PENDING_BP_STATE {   
+   PBPS_NONE     = 0x0000,  
+   PBPS_DELETED  = 0x0001,  
+   PBPS_DISABLED = 0x0002,  
+   PBPS_ENABLED  = 0x0003  
 };  
 ```  
   
-## Members  
- PBPS\_NONE  
- 0 자리 표시자입니다.  이 값은 반환 됩니다.  
+## <a name="members"></a>멤버  
+ PBPS_NONE  
+ 0에 대 한 자리 표시자입니다. 이 값은 반환 되지 않습니다.  
   
- PBPS\_DELETED  
- 보류 중단점 삭제 되었음을 나타냅니다.  
+ PBPS_DELETED  
+ 보류 중인 중단점 삭제 했을 나타냅니다.  
   
- PBPS\_DISABLED  
- 보류 중단점이 해제 되었음을 나타냅니다.  
+ PBPS_DISABLED  
+ 보류 중인 중단점을 사용할 수 없음을 나타냅니다.  
   
- PBPS\_ENABLED  
- 보류 중단점이 설정 되었음을 나타냅니다.  
+ PBPS_ENABLED  
+ 보류 중인 중단점이 설정 되었음을 나타냅니다.  
   
-## 설명  
- 사용은 `state` 의 멤버는 [PENDING\_BP\_STATE\_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) 구조.  
+## <a name="remarks"></a>설명  
+ 로 사용 하 여는 `state` 의 멤버는 [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) 구조입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [PENDING\_BP\_STATE\_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)
+ [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

@@ -1,61 +1,62 @@
 ---
-title: "방법: 오류 마커를 구현 합니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "편집기 [Visual Studio SDK] 레거시-오차 표식"
+title: "방법: 오류 표식 구현 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - error markers
 ms.assetid: e8e78514-5720-4fc2-aa43-00b6af482e38
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d926a498549e868e478d83b7930f5e569f49ce20
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 오류 마커를 구현 합니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-오류 표식 \(또는 빨간색 물결 모양 밑줄\) 가장 어려운 텍스트 편집기 사용자 지정을 구현할 수 있습니다.  그러나 이들은 VSPackage 사용자에 게 부여 혜택이 제공 하는 비용까지 보다 클 수 있습니다.  오류 표식이 약간 언어 파서를 물결 이나 물결 모양의 빨간색 줄을 잘못 하다 고 여기는 텍스트를 표시 합니다.  잘못 된 코드를 시각적으로 표시 하 여이 지표 프로그래머가 도움이 됩니다.  
+# <a name="how-to-implement-error-markers"></a>방법: 오류 마커를 구현 합니다.
+오류 표식 (또는 빨간색 물결 무늬 밑줄로)은 가장 어려운 텍스트 편집기 사용자 지정을 구현 합니다. 그러나 VSPackage의 사용자에 게 이점을 제공 하는 데 드는 비용이 훨씬 보다 클 수 있습니다. 오류 표식 언어 파서 따라 빨간색 구불구불한 또는 물결 모양의 선으로 잘못 된 경우 텍스트를 미세 하 게 표시 합니다. 잘못 된 코드를 시각적으로 표시 하 여 프로그래머에 도움이 됩니다.  
   
- 텍스트 마커를 사용 하 여 빨강 물결 모양의 밑줄을 구현할 수 있습니다.  일반적으로 언어 서비스 빨간색 물결 모양 밑줄 텍스트 버퍼에 백그라운드 과정으로, 또는 유휴 시간에 백그라운드 스레드를 추가합니다.  
+ 텍스트 표식을 사용 하 여 빨간색 물결 무늬 밑줄로 구현. 일반적으로 언어 서비스 추가 빨간색 물결 무늬 밑줄로 텍스트 버퍼를 백그라운드 패스를으로 유휴 시간 또는 백그라운드 스레드에서 합니다.  
   
-### 빨간색 물결 모양 밑줄 기능을 구현 하려면  
+### <a name="to-implement-the-red-wavy-underline-feature"></a>빨간색 물결선 기능을 구현 하려면  
   
-1.  빨간색 물결 모양의 밑줄을 넣을 텍스트를 선택 합니다.  
+1.  빨간색 물결선을 배치 하려는 텍스트를 선택 합니다.  
   
-2.  형식 마커를 만들 `MARKER_CODESENSE_ERROR`.  자세한 내용은 [방법: 표준 텍스트 표식을 추가](../extensibility/how-to-add-standard-text-markers.md)를 참조하십시오.  
+2.  형식의 표식 만들기 `MARKER_CODESENSE_ERROR`합니다. 자세한 내용은 참조 [하는 방법: 표준 텍스트 표식 추가](../extensibility/how-to-add-standard-text-markers.md)합니다.  
   
 3.  그 후에 전달 된 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> 인터페이스 포인터입니다.  
   
- 이 프로세스는 또한 주어진된 표식 위에 설명 텍스트 또는 특수 한 상황에 맞는 메뉴를 만들 수 있습니다.  자세한 내용은 [방법: 표준 텍스트 표식을 추가](../extensibility/how-to-add-standard-text-markers.md)를 참조하십시오.  
+ 이 프로세스를 사용 하면 특정된 표식을 통해 팁 텍스트 또는 특별 한 상황에 맞는 메뉴를 만들 수 있습니다. 자세한 내용은 참조 [하는 방법: 표준 텍스트 표식 추가](../extensibility/how-to-add-standard-text-markers.md)합니다.  
   
- 오류 표식이 표시 될 수 있습니다 전에 다음 개체가 필요 합니다.  
+ 오류 표식을 표시할 수에 다음 개체가 필요 합니다.  
   
--   하는 파서.  
+-   파서입니다.  
   
--   작업 공급자 \(즉, 구현 하는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2>\) re\-parsed 수 있도록 줄을 확인 하기 위해 행 정보에 대 한 변경 내용 기록 유지.  
+-   작업 공급자 (즉, 구현 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2>)을 줄 정보에는 변경 레코드를 다시 구문 분석할 줄을 식별 하기 위해 유지 관리 합니다.  
   
--   캐럿을 캡처하는 텍스트 보기 필터 변경 이벤트 사용 하 여 보기에서 해당 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEvents.OnChangeCaretLine%2A>\) 메서드.  
+-   변경 이벤트를 사용 하 여 보기에서 캐럿을 캡처하는 텍스트 뷰 필터는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEvents.OnChangeCaretLine%2A>) 메서드.  
   
- 파서, 작업 공급자 및 필터 오류 표식이 가능 하 게 하는 데 필요한 인프라를 제공 합니다.  다음 단계 오류 마커를 표시 하는 프로세스를 제공 합니다.  
+ 파서, 작업 공급자 및 필터에는 오류 마커를 가능 하 게 하는 데 필요한 인프라를 제공 합니다. 다음 단계는 오류 표식을 표시 하기 위한 프로세스를 제공 합니다.  
   
-1.  필터링 된 보기에서는 필터 보기의 데이터와 연관 된 작업 공급자에 대 한 포인터를 가져옵니다.  
+1.  필터링 된 보기에서 필터는 해당 보기의 데이터와 관련 된 작업 공급자에 대 한 포인터를 가져옵니다.  
   
     > [!NOTE]
-    >  방법 팁, 문 완성, 오류 표식 등을 같은 명령 필터를 사용할 수 있습니다.  
+    >  메서드 팁, 문 완성, 오류 표식 등에 대 한 동일한 명령 필터를 사용할 수 있습니다.  
   
-2.  필터 다른 줄으로 이동 했음을 나타내는 이벤트가 수신 되 면 작업을 만들면 오류를 확인 합니다.  
+2.  필터 다른 줄으로 이동 했음을 나타내는 이벤트를 받으면 오류를 확인 하는 작업이 만들어집니다.  
   
-3.  작업 처리기 줄 변경 되었는지 확인 합니다.  그렇다면 오류 줄을 구문 분석 합니다.  
+3.  작업 처리기 줄 변경 되었는지 확인 합니다. 이 경우에 오류에 대 한 줄 구문 분석 합니다.  
   
-4.  오류가 발견 되 면 작업 공급자는 작업 항목 인스턴스를 만듭니다.  텍스트 마커 환경을 사용 하 여 텍스트 보기에서는 오류 표식으로이 인스턴스를 만듭니다.  
+4.  오류가 발견 되 면 작업 공급자는 작업 항목 인스턴스를 만듭니다. 이 인스턴스의 텍스트 보기에서 오류 마커로 환경을 사용 하는 텍스트 마커를 만듭니다.  
   
-## 참고 항목  
- [레거시 API와 함께 텍스트 마커를 사용 하 여](../extensibility/using-text-markers-with-the-legacy-api.md)   
+## <a name="see-also"></a>참고 항목  
+ [텍스트 표식 레거시 API 사용](../extensibility/using-text-markers-with-the-legacy-api.md)   
  [방법: 표준 텍스트 표식을 추가](../extensibility/how-to-add-standard-text-markers.md)   
  [방법: 사용자 지정 텍스트 표식 만들기](../extensibility/how-to-create-custom-text-markers.md)   
  [방법: 텍스트 표식을 사용 하 여](../extensibility/how-to-use-text-markers.md)

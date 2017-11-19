@@ -1,12 +1,10 @@
 ---
-title: 'How to: Create and Modify Custom Document Properties | Microsoft Docs'
+title: "방법: 사용자 지정 문서 속성 만들기 및 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,37 +15,37 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], properties
 - document properties [Office development in Visual Studio]
 ms.assetid: 99d9dfaf-891f-4f3b-a580-67362afdaf34
-caps.latest.revision: 47
-author: kempb
-ms.author: kempb
+caps.latest.revision: "47"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 3bf28426b348e5ac9f91021d0b74e2f60e7204b9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 78cf27b7d58e85217c770abee1dc6a4151cc1eb1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-create-and-modify-custom-document-properties"></a>How to: Create and Modify Custom Document Properties
-  The Microsoft Office applications listed above provide built-in properties that are stored with documents. In addition, you can create and modify custom document properties if there is additional information you want to store with the document.  
+# <a name="how-to-create-and-modify-custom-document-properties"></a>방법: 사용자 지정 문서 속성 만들기 및 수정
+  위에 나열된 Microsoft Office 응용 프로그램은 문서와 함께 저장되는 기본 제공 속성을 제공합니다. 문서와 함께 저장하려는 추가 정보가 있는 경우 사용자 지정 문서 속성을 만들고 수정할 수 있습니다.  
   
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]  
   
- Use the CustomDocumentProperties property of a document to work with custom properties. For example, in a document-level project for Microsoft Office Excel, use the <xref:Microsoft.Office.Tools.Excel.Workbook.CustomDocumentProperties%2A> property of the `ThisWorkbook` class. In a VSTO Add-in project for Excel, use the <xref:Microsoft.Office.Interop.Excel._Workbook.CustomDocumentProperties%2A> property of a <xref:Microsoft.Office.Interop.Excel.Workbook> object. These properties return a <xref:Microsoft.Office.Core.DocumentProperties> object, which is a collection of <xref:Microsoft.Office.Core.DocumentProperty> objects. You can use the `Item` property of the collection to retrieve a particular property, either by name or by index within the collection.  
+ 사용자 지정 속성을 사용 하려면 문서를 사용 합니다. 예를 들어 Microsoft Office Excel용 문서 수준 프로젝트에서는 <xref:Microsoft.Office.Tools.Excel.Workbook.CustomDocumentProperties%2A> 클래스의 `ThisWorkbook` 속성을 사용합니다. Excel용 VSTO 추가 기능 프로젝트에서는 <xref:Microsoft.Office.Interop.Excel._Workbook.CustomDocumentProperties%2A> 개체의 <xref:Microsoft.Office.Interop.Excel.Workbook> 속성을 사용합니다. 이러한 속성은 <xref:Microsoft.Office.Core.DocumentProperties> 개체 컬렉션인 <xref:Microsoft.Office.Core.DocumentProperty> 개체를 반환합니다. 컬렉션의 `Item` 속성을 사용하여 이름 또는 컬렉션 내의 인덱스로 특정 속성을 검색할 수 있습니다.  
   
- The following example demonstrates how to add a custom property in a document-level customization for Excel and assign it a value.  
+ 다음 예제에서는 Excel용 문서 수준 사용자 지정에서 사용자 지정 속성을 추가하고 값을 할당하는 방법을 보여 줍니다.  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Access and Manipulate Custom Document Properties in Microsoft Word?](http://go.microsoft.com/fwlink/?LinkId=136772).  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요 속성 액세스 및 조작 사용자 지정 문서 Microsoft Word에서?](http://go.microsoft.com/fwlink/?LinkId=136772)합니다.  
   
-## <a name="example"></a>Example  
- [!code-vb[Trin_VstcoreProgramming#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#6)] [!code-csharp[Trin_VstcoreProgramming#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#6)]  
+## <a name="example"></a>예제  
+ [!code-vb[Trin_VstcoreProgramming#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#6)]
+ [!code-csharp[Trin_VstcoreProgramming#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#6)]  
   
-## <a name="robust-programming"></a>Robust Programming  
- Attempting to access the `Value` property for undefined properties raises an exception.  
+## <a name="robust-programming"></a>강력한 프로그래밍  
+ 정의되지 않은 속성에 대한 `Value` 속성에 액세스하는 동안 예외가 발생합니다.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
- [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)   
- [How to: Read from and Write to Document Properties](../vsto/how-to-read-from-and-write-to-document-properties.md)  
+ [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md)   
+ [방법: 문서 속성에서 읽기 및 문서 속성에 쓰기](../vsto/how-to-read-from-and-write-to-document-properties.md)  
   
   

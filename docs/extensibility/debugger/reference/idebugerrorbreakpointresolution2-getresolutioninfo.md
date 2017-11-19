@@ -1,56 +1,56 @@
 ---
-title: "IDebugErrorBreakpointResolution2::GetResolutionInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugErrorBreakpointResolution2::GetResolutionInfo"
-helpviewer_keywords: 
-  - "IDebugErrorBreakpointResolution2::GetResolutionInfo"
+title: IDebugErrorBreakpointResolution2::GetResolutionInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugErrorBreakpointResolution2::GetResolutionInfo
+helpviewer_keywords: IDebugErrorBreakpointResolution2::GetResolutionInfo
 ms.assetid: d94c4f60-8796-4848-86ee-186bbaa613f5
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 91922b09c3dff38b65473978f352f96ea12732a0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugErrorBreakpointResolution2::GetResolutionInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-중단점 오류 해결 방법 정보를 가져옵니다.  
+# <a name="idebugerrorbreakpointresolution2getresolutioninfo"></a>IDebugErrorBreakpointResolution2::GetResolutionInfo
+중단점 오류 해결 정보를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetResolutionInfo(   
-   BPERESI_FIELDS            dwFields,  
-   BP_ERROR_RESOLUTION_INFO* pErrorResolutionInfo  
+```cpp  
+HRESULT GetResolutionInfo(   
+   BPERESI_FIELDS            dwFields,  
+   BP_ERROR_RESOLUTION_INFO* pErrorResolutionInfo  
 );  
 ```  
   
-```c#  
-int GetResolutionInfo(   
-   enum_BPERESI_FIELDS        dwFields,  
-   BP_ERROR_RESOLUTION_INFO[] pErrorResolutionInfo  
+```csharp  
+int GetResolutionInfo(   
+   enum_BPERESI_FIELDS        dwFields,  
+   BP_ERROR_RESOLUTION_INFO[] pErrorResolutionInfo  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `dwFields`  
- \[in\] 플래그의 조합에서 [BPERESI\_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) 의 필드를 결정 하는 열거형 `pErrorResolutionInfo` 데이터를 입력할 수 있습니다.  
+ [in] 플래그의 조합 된 [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) 의 필드를 결정 하는 열거형 `pErrorResolutionInfo` 작성 됩니다.  
   
  `pErrorResolutionInfo`  
- \[in, out\] [BP\_ERROR\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) 중단점 해상도에 대 한 설명으로 채워진 구조입니다.  
+ [out에서] [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) 구조를 설명 하는 중단점 확인을 사용 하 여 채워집니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 예제  
- 다음 예제는이 메서드에 대 한 간단한 구현 `CDebugErrorBreakpointResolution` 를 노출 하는 개체는 [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) 인터페이스입니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 간단한에 대 한이 메서드를 구현 `CDebugErrorBreakpointResolution` 공개 하는 개체는 [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) 인터페이스입니다.  
   
 ```  
 HRESULT CDebugErrorBreakpointResolution::GetResolutionInfo(  
@@ -150,7 +150,7 @@ HRESULT CDebugErrorBreakpointResolution::CopyBP_ERROR_RESOLUTION_INFO(
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)   
- [BPERESI\_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)   
- [BP\_ERROR\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)
+ [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)   
+ [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)

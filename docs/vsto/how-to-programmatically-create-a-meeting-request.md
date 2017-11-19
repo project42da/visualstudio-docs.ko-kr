@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Create a Meeting Request | Microsoft Docs'
+title: "방법: 프로그래밍 방식으로 모임 요청 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,27 +15,27 @@ helpviewer_keywords:
 - appointments [Office development in Visual Studio]
 - calendars [Office development in Visual Studio], meeting requests
 ms.assetid: 889f8fa4-c0d0-42be-9c16-9987b43008ab
-caps.latest.revision: 20
-author: kempb
-ms.author: kempb
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 8a19f6437108e898b174101cb0965a280b9fd335
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: a8bf894d8dc68e951333c517ddc1708b9b277582
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-create-a-meeting-request"></a>How to: Programmatically Create a Meeting Request
-  This example creates a meeting request in Microsoft Office Outlook and sends the request to a required attendee.  
+# <a name="how-to-programmatically-create-a-meeting-request"></a>방법: 프로그래밍 방식으로 모임 요청 만들기
+  이 예제에서는 Microsoft Office Outlook에서 모임 요청을 만들고 필요한 참석자에게 요청을 보냅니다.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="example"></a>Example  
- [!code-csharp[Trin_Outlook_RL_MeetingRequest#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_MeetingRequest/thisaddin.cs#1)] [!code-vb[Trin_Outlook_RL_MeetingRequest#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_MeetingRequest/thisaddin.vb#1)]  
+## <a name="example"></a>예제  
+ [!code-csharp[Trin_Outlook_RL_MeetingRequest#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_MeetingRequest/thisaddin.cs#1)]
+ [!code-vb[Trin_Outlook_RL_MeetingRequest#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_MeetingRequest/thisaddin.vb#1)]  
   
-## <a name="see-also"></a>See Also  
- [Working with Calendar Items](../vsto/working-with-calendar-items.md)   
- [Getting Started Programming VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md)  
+## <a name="see-also"></a>참고 항목  
+ [달력 항목 작업](../vsto/working-with-calendar-items.md)   
+ [VSTO 추가 기능 프로그래밍 시작](../vsto/getting-started-programming-vsto-add-ins.md)  
   
   

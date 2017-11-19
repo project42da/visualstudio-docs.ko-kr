@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 04/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
-caps.latest.revision: 5
+caps.latest.revision: "5"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9524ecc3cadef58821fba857de8e82e59eea9b43
-ms.openlocfilehash: c55c135034f5b3b2dd09ccf94e22e56e8f04797e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/04/2017
-
+ms.openlocfilehash: 5a252e22cda234f6a45bee084522b2add2bafada
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>글꼴 및 Visual Studio에 대 한 서식 지정
 ##  <a name="BKMK_TheEnvironmentFont"></a>환경 글꼴  
@@ -83,7 +68,7 @@ internal partial class WebConfigModificationWindow : DialogWindow
 }  
 ```  
   
- (바꾸기 `Microsoft.VisualStudio.Shell.11.0` MPF dll의 현재 버전과.)  
+ (대체 `Microsoft.VisualStudio.Shell.11.0` MPF dll의 현재 버전과.)  
   
  대화 상자를 표시 하려면 "`ShowModal()`" 클래스를 통해 `ShowDialog()`합니다. `ShowModal()`셸에서 올바른 모달 상태를 설정으로, 대화 상자에 확인 하 고 부모 창을에 가운데 맞춤 됩니다.  
   
@@ -96,7 +81,7 @@ window.ShowModal()
   
  `ShowModal`부울 값을 반환? (nullable 부울)와 `DialogResult`, 필요한 경우 사용할 수 있는 합니다. 반환 값은 true와 대화 상자를 닫은 경우 **확인**합니다.  
   
- 자체에 대화 상자 아니며 호스팅되는 일부 WPF UI를 표시 하기 위해 필요한 경우 `HwndSource`, 팝업 창 또는 Win32/WinForms 부모 창 창의 WPF 자식 창 같은 설정 해야 합니다는 `FontFamily` 및 `FontSize` WPF 요소의 루트 요소에 있습니다. (주 창에서 속성을 설정 하는 셸 하지만 지난 상속 되지 것입니다는 `HWND`). 셸에 속성을 바인딩할 수, 다음과 같은 리소스를 제공 합니다.  
+ 자체에 대화 상자 아니며 호스팅되는 일부 WPF UI를 표시 하기 위해 필요한 경우 `HwndSource`, 팝업 창 또는 Win32/WinForms 부모 창 창의 WPF 자식 창 같은 설정 해야 합니다는 `FontFamily` 및 `FontSize` WPF e의 루트 요소에 대해 lement 합니다. (주 창에서 속성을 설정 하는 셸 하지만 지난 상속 되지 것입니다는 `HWND`). 셸에 속성을 바인딩할 수, 다음과 같은 리소스를 제공 합니다.  
   
 ```  
 <Setter property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />  
@@ -104,7 +89,7 @@ window.ShowModal()
 ```  
   
 ###  <a name="BKMK_Formatting"></a>(확장/굵게 표시) 참조 서식 지정  
- 일부 대화 상자에는 특정 텍스트를 굵게 표시 또는 이외의 환경 글꼴 크기 필요 합니다. 환경 글꼴 보다 큰 글꼴으로 코딩 된 이전에 "`environment font +2`" 또는 유사한 곳입니다. 제공 된 코드 조각을 사용 하 여 높은 DPI 모니터를 지원 되 고 표시 텍스트 정확한 크기와 가중치 (예: 조명 또는 semilight를 권장)에서 항상 표시 되는지 확인 됩니다.  
+ 일부 대화 상자에는 특정 텍스트를 굵게 표시 또는 이외의 환경 글꼴 크기 필요 합니다. 환경 글꼴 보다 큰 글꼴으로 코딩 된 이전에 "`environment font +2`" 또는 유사한 곳입니다. 제공 된 코드 조각을 사용 하 여 높은 DPI 모니터를 지원 되 고 표시 텍스트 정확한 크기와 가중치 (예: Light 또는 semilight를 권장)에서 항상 표시 되는지 확인 됩니다.  
   
 > **참고: 서식 지정을 적용 하기 전에 확인의 지침을 따르는 [텍스트 스타일](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle)합니다.**  
   
@@ -300,11 +285,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ### <a name="testing-the-environment-font"></a>테스트 환경 글꼴  
  UI 환경 글꼴을 사용 하 고 크기 설정을 적용 되도록 열고 **도구 > 옵션 > 환경 > 글꼴 및 색** "환경 글꼴" 아래에서 선택 하 고는 "설정 표시:" 드롭 다운 메뉴.  
   
- ![도구에서 글꼴 및 색 설정을 &gt; 옵션 대화 상자](~/extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />도구에서 글꼴 및 색 설정을 &gt; 옵션 대화 상자
+ ![도구에서 글꼴 및 색 설정을 &gt; 옵션 대화 상자](../../extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201 a_OptionsFonts")<br />도구에서 글꼴 및 색 설정을 &gt; 옵션 대화 상자
   
  기본값 보다 매우 다른 글꼴을 설정 합니다. 명확 하 게 하는 UI를 업데이트 하지 않습니다, serif (예: "Times New Roman")와 글꼴을 선택 하 고 매우 큰 크기를 설정 합니다. 그런 다음 테스트 환경에 반영 하기 위해 UI. 라이선스 대화 상자를 사용 하는 예제는 다음과 같습니다.  
   
- ![환경 글꼴을 고려 하지 않는 UI 텍스트의 예](~/extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />환경 글꼴을 고려 하지 않는 UI 텍스트의 예
+ ![환경 글꼴을 고려 하지 않는 UI 텍스트의 예](../../extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201 b_WrongFontDialog")<br />환경 글꼴을 고려 하지 않는 UI 텍스트의 예
   
  이 경우 "사용자 정보" 및 "제품 정보" 글꼴을 유지 하지 됩니다. 명시적 글꼴 검토 사양의 일부분으로 지정 하지 않으면 버그 수 없지만 일부 경우에는 명시적 디자인 선택 수 있습니다.  
   
@@ -349,7 +334,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 |대문자|설명 및 예제|  
 |---------------|---------------------------|  
 |모든 명사||  
-|모든 동사|"Is" 및 다른 형태의 "를 be"를 포함 하 여|  
+|모든 동사|"Is" 및 "되려면 일"의 다른 형태 포함|  
 |모든 부사|"보다" 및 "When"을 포함 하 여|  
 |모든 형용사|"는" 및 "This"를 포함 하 여|  
 |모든 대명사|소유격이 포함 하 여 "의"도 그대로"," 대명사의 축약 된 것 "it" 및 동사 "is"|  
@@ -395,7 +380,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 -   복잡 한 대화 또는 디자이너 UI 섹션 헤더  
   
-#### <a name="italics"></a>기울임꼴  
+#### <a name="italics"></a>기울임꼴로 표시  
  Visual Studio는 굵게 또는 기울임꼴 기울임꼴 텍스트를 사용 하지 않습니다.  
   
 #### <a name="color"></a>색  
@@ -431,46 +416,46 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**사용법:**<br /><br /> -큰 서명 대화 상자에 제목<br />-주 보고서 제목<br /><br /> **수행 합니다.**<br /><br /> -문장 대/소문자를 사용 합니다.<br />-항상 경량 사용<br /><br /> **안 함:**<br /><br /> -사용 하 여 UI에 대 한 서명 시작 페이지와 같은 UI 이외의<br />-굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-도구 창에서 사용 합니다.|**로 표시:** 28 pt 맑은 고딕, Segoe UI Light<br /><br /> **Visual 예:**<br /><br /> ![310% 환경 글꼴 &#43;의 예 Light 제목](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202-a_EF310")|  
+|**사용법:**<br /><br /> -큰 서명 대화 상자에 제목<br />-주 보고서 제목<br /><br /> **수행 합니다.**<br /><br /> -문장 대/소문자를 사용 합니다.<br />-항상 경량 사용<br /><br /> **안 함:**<br /><br /> -사용 하 여 UI에 대 한 서명 시작 페이지와 같은 UI 이외의<br />-굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-도구 창에서 사용 합니다.|**로 표시:** 28 pt 맑은 고딕, Segoe UI Light<br /><br /> **Visual 예:**<br /><br /> ![310% 환경 글꼴 &#43;의 예 Light 제목의](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202 a_EF310")|  
   
 #### <a name="200-environment-font--semilight"></a>200% 환경 글꼴 + semilight를 권장  
   
 |||  
 |-|-|  
-|**사용법:**<br /><br /> -부제목<br />-소형 및 중간 규모 대화 상자에서 제목<br /><br /> **수행 합니다.**<br /><br /> -문장 대/소문자를 사용 합니다.<br />-항상 semilight를 권장 가중치를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-도구 창에서 사용 합니다.|**로 표시:** 18 포인트 맑은 고딕, Segoe UI Semillight<br /><br /> **Visual 예:**<br /><br /> ![200% 환경 글꼴 &#43;의 예 Semilight를 권장](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202-b_EF200")|  
+|**사용법:**<br /><br /> -부제목<br />-소형 및 중간 규모 대화 상자에서 제목<br /><br /> **수행 합니다.**<br /><br /> -문장 대/소문자를 사용 합니다.<br />-항상 semilight를 권장 가중치를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-도구 창에서 사용 합니다.|**로 표시:** 18 포인트 맑은 고딕, Segoe UI Semillight<br /><br /> **Visual 예:**<br /><br /> ![200% 환경 글꼴 &#43;의 예 Semilight를 권장](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202 b_EF200")|  
   
 #### <a name="155-environment-font"></a>155% 환경 글꼴  
   
 |||  
 |-|-|  
-|**사용법:**<br /><br /> -Section 머리글 문서에 잘 UI<br />-보고서<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 14pt 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![155% 환경 글꼴 제목의 예](~/extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
+|**사용법:**<br /><br /> -Section 머리글 문서에 잘 UI<br />-보고서<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 14pt 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![155% 환경 글꼴 제목의 예](../../extensibility/ux-guidelines/media/0202-c_ef155.png "0202 c_EF155")|  
   
 #### <a name="133-environment-font"></a>133% 환경 글꼴  
   
 |||  
 |-|-|  
-|**사용법:**<br /><br /> 서명 대화 상자에서 더 작은 부제목<br />문서에 더 작은 부제목 잘 UI<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 12 포인트 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![133% 환경 글꼴 제목의 예](../../extensibility/ux-guidelines/media/0202-d_ef133.png "0202-d_EF133")|  
+|**사용법:**<br /><br /> 서명 대화 상자에서 더 작은 부제목<br />문서에 더 작은 부제목 잘 UI<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 12 포인트 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![133% 환경 글꼴 제목의 예](../../extensibility/ux-guidelines/media/0202-d_ef133.png "0202 d_EF133")|  
   
 #### <a name="122-environment-font"></a>122% 환경 글꼴  
   
 |||  
 |-|-|  
-|**사용법:**<br /><br /> -서명 대화 상자에서 섹션 제목<br />-트리 뷰의 노드 위쪽<br />-세로 탭 탐색<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 11 pt 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![122% 환경 글꼴 제목의 예](../../extensibility/ux-guidelines/media/0202-e_ef122.png "0202-e_EF122")|  
+|**사용법:**<br /><br /> -서명 대화 상자에서 섹션 제목<br />-트리 뷰의 노드 위쪽<br />-세로 탭 탐색<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:**<br /><br /> -굵게, 기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 11 pt 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![122% 환경 글꼴 제목의 예](../../extensibility/ux-guidelines/media/0202-e_ef122.png "0202 e_EF122")|  
   
 #### <a name="environment-font--bold"></a>환경 글꼴 + 굵게 표시  
   
 |||  
 |-|-|  
-|**사용법:**<br /><br /> -레이블 및 부제목 서명 대화 상자에서<br />-레이블을 지정 하 고 보고서에 부제목<br />-레이블 및 문서에 부제목 변경과 UI<br /><br /> **수행 합니다.**<br /><br /> -문장 대/소문자를 사용 합니다.<br />-B o l 가중치를 사용 합니다.<br /><br /> **안 함:**<br /><br /> -기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 굵게 표시 된 9 포인트 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![환경 글꼴 &#43;의 예 굵게 제목](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202-f_EFB")|  
+|**사용법:**<br /><br /> -레이블 및 부제목 서명 대화 상자에서<br />-레이블을 지정 하 고 보고서에 부제목<br />-레이블 및 문서에 부제목 변경과 UI<br /><br /> **수행 합니다.**<br /><br /> -문장 대/소문자를 사용 합니다.<br />-B o l 가중치를 사용 합니다.<br /><br /> **안 함:**<br /><br /> -기울임꼴 또는 bold italic<br />본문 텍스트에 대 한 사용<br />-표준 Visual Studio 컨트롤에서 사용 합니다.<br />-도구 창에서 사용 합니다.|**로 표시:** 굵게 표시 된 9 포인트 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![환경 글꼴 &#43;의 예 굵게 제목의](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202 f_EFB")|  
   
 #### <a name="environment-font"></a>환경 글꼴  
   
 |||  
 |-|-|  
-|**사용법:** 다른 모든 텍스트<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:** 기울임꼴 굵게 기울임꼴 또는|**로 표시:** 9 포인트 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![환경 글꼴의 예](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202-g_EF")|  
+|**사용법:** 다른 모든 텍스트<br /><br /> **방법:** 문장 대/소문자를 사용 하 여<br /><br /> **안 함:** 기울임꼴 굵게 기울임꼴 또는|**로 표시:** 9 포인트 맑은 고딕, Segoe UI<br /><br /> **Visual 예:**<br /><br /> ![환경 글꼴의 예](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202 g_EF")|  
   
 ### <a name="padding-and-spacing"></a>안쪽 여백 및 간격  
- 머리글에는 주위에 적절 한 강조를 지정 하는 공간이 필요 합니다. 이 공간은 포인트 크기와 환경 글꼴의 텍스트의 줄 또는 단락 구분선 등 머리글 이라는 다른 작업에 따라 달라 집니다.  
+ 머리글에는 주위에 적절 한 강조를 지정 하는 공간이 필요 합니다. 이 공간은 포인트 크기와 같은 환경 글꼴의 텍스트의 줄 또는 단락 구분선은 머리글, 이라는 다른 작업에 따라 달라 집니다.  
   
 -   단독으로 제목에 대 한 이상적인 안쪽 여백 문자 자본 높이 공간을 90% 이어야 합니다. 예를 들어 한 28 pt 42 포인트 Segoe UI Light 머리글에 26 포인트의 대문자 높이 하며 23 pt 또는 약 31 픽셀의 안쪽 여백을 약 여야 합니다.  
   

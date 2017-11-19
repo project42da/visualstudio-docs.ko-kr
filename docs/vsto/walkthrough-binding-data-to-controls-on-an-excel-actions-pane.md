@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Binding Data to Controls on an Excel Actions Pane | Microsoft Docs'
+title: "연습: Excel 작업 창의 컨트롤에 데이터 바인딩 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,176 +18,178 @@ helpviewer_keywords:
 - actions panes [Office development in Visual Studio], binding controls
 - smart documents [Office development in Visual Studio], data binding
 ms.assetid: 106c07bd-e931-4dc5-94dc-ca43900fe09d
-caps.latest.revision: 63
-author: kempb
-ms.author: kempb
+caps.latest.revision: "63"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 66b4340f86c480fa040c0fc6a51623f30da34d27
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: e47f9083629ac66e0e195feb089a589c69a22789
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-binding-data-to-controls-on-an-excel-actions-pane"></a>Walkthrough: Binding Data to Controls on an Excel Actions Pane
-  This walkthrough demonstrates data binding to controls on an actions pane in Microsoft Office Excel. The controls demonstrate a master/detail relation between tables in a SQL Server database.  
+# <a name="walkthrough-binding-data-to-controls-on-an-excel-actions-pane"></a>연습: Excel 작업 창의 컨트롤에 데이터 바인딩
+  이 연습에서는 Microsoft Office Excel의 작업 창에서 컨트롤에 데이터 바인딩을 보여 줍니다. 컨트롤은 SQL Server 데이터베이스의 테이블 간 마스터/세부 관계를 보여 줍니다.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ 이 연습에서는 다음 작업을 수행합니다.  
   
--   Adding controls to a worksheet.  
+-   워크시트에 컨트롤을 추가 합니다.  
   
--   Creating an actions pane control.  
+-   작업 창 컨트롤을 만듭니다.  
   
--   Adding data-bound Windows Forms controls to an actions pane control.  
+-   작업 창 컨트롤에 데이터 바인딩된 Windows Forms 컨트롤을 추가 합니다.  
   
--   Showing the actions pane when the application opens.  
+-   작업 창 응용 프로그램을 열 때 표시 됩니다.  
   
 > [!NOTE]  
->  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] 또는 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]  
   
--   Access to a server with the Northwind SQL Server sample database.  
+-   Northwind SQL Server 예제 데이터베이스를 사용 하 여 서버에 액세스 합니다.  
   
--   Permissions to read from and write to the SQL Server database.  
+-   사용 권한에서 읽기 / 쓰기를 SQL Server 데이터베이스입니다.  
   
-## <a name="creating-the-project"></a>Creating the Project  
- The first step is to create an Excel Workbook project.  
+## <a name="creating-the-project"></a>프로젝트 만들기  
+ 첫 번째 단계에서 Excel 통합 문서 프로젝트를 만듭니다.  
   
-#### <a name="to-create-a-new-project"></a>To create a new project  
+#### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
   
-1.  Create an Excel Workbook project with the name **My Excel Actions Pane**. In the wizard, select **Create a new document**. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  이름의 Excel 통합 문서 프로젝트를 만들 **내 Excel 작업 창의**합니다. 마법사에서 선택 **새 문서**합니다. 자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
   
-     Visual Studio opens the new Excel workbook in the designer and adds the **My Excel Actions Pane** project to **Solution Explorer**.  
+     Visual Studio 디자이너에서 새 Excel 통합 문서를 열고 추가 된 **내 Excel 작업 창의** 프로젝트를 **솔루션 탐색기**합니다.  
   
-## <a name="adding-a-new-data-source-to-the-project"></a>Adding a New Data Source to the Project  
+## <a name="adding-a-new-data-source-to-the-project"></a>프로젝트에 새 데이터 소스 추가  
   
-#### <a name="to-add-a-new-data-source-to-the-project"></a>To add a new data source to the project  
+#### <a name="to-add-a-new-data-source-to-the-project"></a>프로젝트에 새 데이터 원본을 추가 하려면  
   
-1.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
+1.  **데이터 소스** 창이 표시되지 않으면 메뉴 모음에서 **보기**, **다른 창**, **데이터 소스**를 차례로 선택하여 이를 표시합니다.  
   
-2.  Choose **Add New Data Source** to start the **Data Source Configuration Wizard**.  
+2.  **새 데이터 소스 추가** 를 선택하여 **데이터 소스 구성 마법사**를 시작합니다.  
   
-3.  Select **Database** and then click **Next**.  
+3.  선택 **데이터베이스** 클릭 하 고 **다음**합니다.  
   
-4.  Select a data connection to the Northwind sample SQL Server database, or add a new connection by using the **New Connection** button.  
+4.  Northwind 샘플 SQL Server 데이터베이스에 데이터 연결을 선택 하거나 새 연결을 사용 하 여 추가 된 **새 연결** 단추입니다.  
   
-5.  Click **Next**.  
+5.  **다음**을 클릭합니다.  
   
-6.  Clear the option to save the connection if it is selected, and then click **Next**.  
+6.  옵션을 선택 하는 경우 연결을 저장 하 고 클릭 한 다음의 선택을 취소 **다음**합니다.  
   
-7.  Expand the **Tables** node in the **Database objects** window.  
+7.  확장 된 **테이블** 에서 노드는 **데이터베이스 개체** 창.  
   
-8.  Select the check box next to the **Suppliers** table.  
+8.  옆에 확인란을 선택 된 **Suppliers** 테이블입니다.  
   
-9. Expand the **Products** table and select **ProductName**, **SupplierID**, **QuantityPerUnit**, and **UnitPrice**.  
+9. 확장 된 **제품** 테이블을 선택한 **ProductName**, **SupplierID**, **QuantityPerUnit**, 및 **UnitPrice**.  
   
-10. Click **Finish**.  
+10. **마침**을 클릭합니다.  
   
- The wizard adds the **Suppliers** table and **Products** table to the **Data Sources** window. It also adds a typed dataset to your project that is visible in **Solution Explorer**.  
+ 마법사에서 추가 **Suppliers** 테이블 및 **제품** 테이블는 **데이터 소스** 창. 또한 형식화 된 데이터 집합에 표시 되는 프로젝트에 추가 **솔루션 탐색기**합니다.  
   
-## <a name="adding-controls-to-the-worksheet"></a>Adding Controls to the Worksheet  
- Next, add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control and a <xref:Microsoft.Office.Tools.Excel.ListObject> control to the first worksheet.  
+## <a name="adding-controls-to-the-worksheet"></a>워크시트에 컨트롤 추가  
+ 다음에 추가 <xref:Microsoft.Office.Tools.Excel.NamedRange> 제어 및 <xref:Microsoft.Office.Tools.Excel.ListObject> 첫 번째 워크시트를 제어 합니다.  
   
-#### <a name="to-add-a-namedrange-control-and-a-listobject-control"></a>To add a NamedRange control and a ListObject control  
+#### <a name="to-add-a-namedrange-control-and-a-listobject-control"></a>NamedRange 컨트롤 및 ListObject 컨트롤을 추가 하려면  
   
-1.  Verify that the **My Excel Actions Pane.xlsx** workbook is open in the Visual Studio designer, with `Sheet1` displayed.  
+1.  되어 있는지 확인는 **내 Excel 작업 Pane.xlsx** Visual Studio 디자이너에 통합 문서가 열려 있는 `Sheet1` 표시 합니다.  
   
-2.  In the **Data Sources** window, expand the **Suppliers** table.  
+2.  에 **데이터 원본** 창 확장는 **Suppliers** 테이블입니다.  
   
-3.  Click the drop-down arrow on the **Company Name** node, and then click **NamedRange**.  
+3.  드롭다운 화살표를 클릭는 **회사 이름** 노드를 차례로 클릭 한 다음 **NamedRange**합니다.  
   
-4.  Drag **Company Name** from the **Data Sources** window to cell **A2** in `Sheet1`.  
+4.  끌기 **회사 이름** 에서 **데이터 원본** 셀에는 창 **A2** 에서 `Sheet1`합니다.  
   
-     A <xref:Microsoft.Office.Tools.Excel.NamedRange> control named `CompanyNameNamedRange` is created, and the text \<CompanyName> appears in cell **A2**. At the same time, a <xref:System.Windows.Forms.BindingSource> named `suppliersBindingSource`, a table adapter, and a <xref:System.Data.DataSet> are added to the project. The control is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the <xref:System.Data.DataSet> instance.  
+     A <xref:Microsoft.Office.Tools.Excel.NamedRange> 라는 컨트롤 `CompanyNameNamedRange` 만들어지면 및 텍스트 \<CompanyName > 셀에 표시 **A2**합니다. 같은 시간에는 <xref:System.Windows.Forms.BindingSource> 라는 `suppliersBindingSource`, 테이블 어댑터 및 <xref:System.Data.DataSet> 프로젝트에 추가 합니다. 컨트롤이 바인딩되는 <xref:System.Windows.Forms.BindingSource>에 바인딩된 차례로 <xref:System.Data.DataSet> 인스턴스.  
   
-5.  In the **Data Sources** window, scroll down past the columns that are under the **Suppliers** table. At the bottom of the list is the **Products** table; it is here because it is a child of the **Suppliers** table. Select this **Products** table, not the one that is at the same level as the **Suppliers** table, and then click the drop-down arrow that appears.  
+5.  에 **데이터 원본** 창 아래에 있는 열을 지 나 아래로 스크롤하여는 **Suppliers** 테이블입니다. 목록의 맨 아래에는 **제품** ; 테이블의 자식 이기 때문에 여기는 **Suppliers** 테이블입니다. 이 옵션을 선택 **제품** 테이블을 동일한 수준으로 중이 아닌는 **Suppliers** 테이블을 선택한 다음 표시 되는 드롭다운 화살표를 클릭 합니다.  
   
-6.  Click **ListObject** in the drop-down list, and then drag the **Products** table to cell **A6** in `Sheet1`.  
+6.  클릭 **ListObject** 다음 끌어서 드롭 다운 목록에는 **제품** 테이블 셀으로 **A6** 에 `Sheet1`합니다.  
   
-     A <xref:Microsoft.Office.Tools.Excel.ListObject> control named `ProductNameListObject` is created in cell **A6**. At the same time, a <xref:System.Windows.Forms.BindingSource> named `productsBindingSource` and a table adapter are added to the project. The control is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the <xref:System.Data.DataSet> instance.  
+     A <xref:Microsoft.Office.Tools.Excel.ListObject> 라는 컨트롤 `ProductNameListObject` 셀에 작성 **A6**합니다. 같은 시간에는 <xref:System.Windows.Forms.BindingSource> 라는 `productsBindingSource` 테이블 어댑터 프로젝트에 추가 됩니다. 컨트롤이 바인딩되는 <xref:System.Windows.Forms.BindingSource>에 바인딩된 차례로 <xref:System.Data.DataSet> 인스턴스.  
   
-7.  For C# only, select **suppliersBindingSource** on the component tray, and change the **Modifiers** property to **Internal** in the **Properties** window.  
+7.  C#에 해당, 선택 **suppliersBindingSource** 변경 되며 구성 요소 트레이 **한정자** 속성을 **내부** 에 **속성** 창.  
   
-## <a name="adding-controls-to-the-actions-pane"></a>Adding Controls to the Actions Pane  
- Next, you need an actions pane control that contains a combo box.  
+## <a name="adding-controls-to-the-actions-pane"></a>작업 창에 컨트롤 추가  
+ 다음으로, 콤보 상자를 포함 하는 작업 창 컨트롤을 해야 합니다.  
   
-#### <a name="to-add-an-actions-pane-control"></a>To add an actions pane control  
+#### <a name="to-add-an-actions-pane-control"></a>작업 창 컨트롤을 추가 하려면  
   
-1.  Select the **My Excel Actions Pane** project in **Solution Explorer**.  
+1.  선택 된 **내 Excel 작업 창의** 프로젝트에서 **솔루션 탐색기**합니다.  
   
-2.  On the **Project** menu, click **Add New Item**.  
+2.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
   
-3.  In the **Add New Item** dialog box, select **Actions Pane Control**, name it **ActionsControl**, and click **Add**.  
+3.  에 **새 항목 추가** 대화 상자에서 **작업 창 컨트롤**, 이름을 **actionscontrol로 지정한**를 클릭 하 고 **추가**합니다.  
   
-#### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>To add data-bound Windows Forms controls to an actions pane control  
+#### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>작업 창 컨트롤에 데이터 바인딩된 Windows Forms 컨트롤을 추가 하려면  
   
-1.  From the **Common Controls** tabs of the **Toolbox**, drag a <xref:System.Windows.Forms.ComboBox> control to the actions pane control.  
+1.  **공용 컨트롤** 의 탭은 **도구 상자**, 끌어는 <xref:System.Windows.Forms.ComboBox> 작업 창 컨트롤을 제어 합니다.  
   
-2.  Change the **Size** property to **171, 21**.  
+2.  변경 된 **크기** 속성을 **171, 21**합니다.  
   
-3.  Resize the user control to fit the combo box.  
+3.  콤보 상자에 맞게 사용자 정의 컨트롤의 크기를 조정 합니다.  
   
-## <a name="binding-the-control-on-the-actions-pane-to-data"></a>Binding the Control on the Actions Pane to Data  
- In this section, you will set the data source of the <xref:System.Windows.Forms.ComboBox> to the same data source as the <xref:Microsoft.Office.Tools.Excel.NamedRange> control on the worksheet.  
+## <a name="binding-the-control-on-the-actions-pane-to-data"></a>작업 창의 컨트롤에서 데이터 바인딩  
+ 이 섹션의 데이터 원본 설정에서 <xref:System.Windows.Forms.ComboBox> 로 동일한 데이터 원본에는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 워크시트에 컨트롤.  
   
-#### <a name="to-set-data-binding-properties-of-the-control"></a>To set data binding properties of the control  
+#### <a name="to-set-data-binding-properties-of-the-control"></a>컨트롤의 데이터 바인딩 속성을 설정 하려면  
   
-1.  Right-click the actions pane control, and then click **View Code**.  
+1.  작업 창 컨트롤을 마우스 오른쪽 단추로 누른 **코드 보기**합니다.  
   
-2.  Add the following code to the <xref:System.Windows.Forms.UserControl.Load> event of the actions pane control.  
+2.  다음 코드를 추가 하는 <xref:System.Windows.Forms.UserControl.Load> 작업 창 컨트롤의 이벤트입니다.  
   
-     [!code-vb[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ActionsControl.vb#1)]  [!code-csharp[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#1)]  
+     [!code-vb[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ActionsControl.vb#1)]
+     [!code-csharp[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#1)]  
   
-3.  In C#, you must create an event handler for the `ActionsControl`. You can place this code in the `ActionsControl` constructor. For more information about creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+3.  C#에서 이벤트 처리기를 만들어야 합니다는 `ActionsControl`합니다. 이 코드를 배치할 수 있습니다는 `ActionsControl` 생성자입니다. 이벤트 처리기를 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: Office 프로젝트의 이벤트 처리기 만들기](../vsto/how-to-create-event-handlers-in-office-projects.md)합니다.  
   
      [!code-csharp[Trin_VstcoreActionsPaneExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#2)]  
   
-## <a name="showing-the-actions-pane"></a>Showing the Actions Pane  
- The actions pane is not visible until you add the control at run time.  
+## <a name="showing-the-actions-pane"></a>작업 창 표시  
+ 작업 창에서 런타임에 컨트롤을 추가할 때 까지는 표시 되지 않습니다.  
   
-#### <a name="to-show-the-actions-pane"></a>To show the actions pane  
+#### <a name="to-show-the-actions-pane"></a>작업 창을 표시 하려면  
   
-1.  In **Solution Explorer**, right-click ThisWorkbook.vb or ThisWorkbook.cs, and then click **View Code**.  
+1.  **솔루션 탐색기**ThisWorkbook.vb 또는 ThisWorkbook.cs, 마우스 오른쪽 단추로 클릭 한 다음 클릭 **코드 보기**합니다.  
   
-2.  Create a new instance of the user control in the `ThisWorkbook` class.  
+2.  사용자 정의 컨트롤의 새 인스턴스를 만들고는 `ThisWorkbook` 클래스입니다.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#3)]  [!code-vb[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#3)]  
+     [!code-csharp[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#3)]
+     [!code-vb[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#3)]  
   
-3.  In the <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> event handler of `ThisWorkbook`, add the control to the actions pane.  
+3.  에 <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> 의 이벤트 처리기 `ThisWorkbook`, 작업 창에 컨트롤을 추가 합니다.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#4)]  [!code-vb[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#4)]  
+     [!code-csharp[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#4)]
+     [!code-vb[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#4)]  
   
-## <a name="testing-the-application"></a>Testing the Application  
- Now you can test your document to verify that the actions pane opens when the document is opened, and that the controls have a master/detail relation.  
+## <a name="testing-the-application"></a>응용 프로그램 테스트  
+ 이제 문서를 열 때 작업 창이 열리고 있는지 및 컨트롤은 마스터/세부 관계를가지고 있는지 확인 하 여 문서를 테스트할 수 있습니다.  
   
-#### <a name="to-test-your-document"></a>To test your document  
+#### <a name="to-test-your-document"></a>문서를 테스트하려면  
   
-1.  Press F5 to run your project.  
+1.  F5 키를 눌러 프로젝트를 실행합니다.  
   
-2.  Confirm that the actions pane is visible.  
+2.  작업 창이 표시 되는지 확인 합니다.  
   
-3.  Select a company in the list box. Verify that the company name is listed in the <xref:Microsoft.Office.Tools.Excel.NamedRange> control and that the product details are listed in the <xref:Microsoft.Office.Tools.Excel.ListObject> control.  
+3.  목록 상자에 회사를 선택 합니다. 회사 이름에 나열 되어 있는지 확인 하십시오.는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 제어 되며 제품 세부 정보에 나열 됩니다는 <xref:Microsoft.Office.Tools.Excel.ListObject> 제어 합니다.  
   
-4.  Select various companies to verify the company name and product details change as appropriate.  
+4.  회사 이름을 확인 하는 다양 한 회사를 선택 하 고 제품 세부 정보를 적절 하 게 변경 합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- Here are some tasks that might come next:  
+## <a name="next-steps"></a>다음 단계  
+ 다음으로 수행할 수 있는 몇 가지 작업은 다음과 같습니다.  
   
--   Binding data to controls in Word. For more information, see [Walkthrough: Binding Data to Controls on a Word Actions Pane](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md).  
+-   Word에서 컨트롤에 데이터 바인딩 자세한 내용은 참조 [연습: Word 작업 창의 컨트롤에 데이터 바인딩](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)합니다.  
   
--   Deploying the project. For more information, see [Deploying an Office Solution by Using ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).  
+-   프로젝트를 배포 합니다. 자세한 내용은 참조 [ClickOnce를 사용 하 여 Office 솔루션 배포](../vsto/deploying-an-office-solution-by-using-clickonce.md)합니다.  
   
-## <a name="see-also"></a>See Also  
- [Actions Pane Overview](../vsto/actions-pane-overview.md)   
- [How to: Manage Control Layout on Actions Panes](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
- [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)  
+## <a name="see-also"></a>참고 항목  
+ [작업 창 개요](../vsto/actions-pane-overview.md)   
+ [방법: 작업 창에서 컨트롤 레이아웃 관리](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
+ [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)  
   
   

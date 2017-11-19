@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugPropertyCreateEvent2
-helpviewer_keywords:
-- IDebugPropertyCreateEvent2 interface
+f1_keywords: IDebugPropertyCreateEvent2
+helpviewer_keywords: IDebugPropertyCreateEvent2 interface
 ms.assetid: 33b3082b-a42e-488a-a1e4-dadf506f922c
-caps.latest.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: f8925c755189dbf6392534e1463e799ed5e01889
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: afe91b8dfa6321d046b7bdeb301e426d1083263f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugpropertycreateevent2"></a>IDebugPropertyCreateEvent2
 이 인터페이스는 세션 디버그 관리자 (SDM) 특정 문서와 연결 된 속성을 만들 때 디버그 엔진 (DE)에 의해 보내집니다.  
@@ -58,7 +42,7 @@ IDebugPropertyCreateEvent2 : IUnknown
 |------------|-----------------|  
 |[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertycreateevent2-getdebugproperty.md)|새 속성을 가져옵니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  특정 문서 또는 연결 된 스크립트 속성이 있으면는 DE를 보낼 수 있습니다이 이벤트는 SDM 업데이트 하기 위해는 **스크립트 문서** 문서의 이름이 있는 창입니다. SDM를 호출 합니다 [GetExtendedInfo](../../../extensibility/debugger/reference/idebugproperty2-getextendedinfo.md) 인수와 함께 `guidDocument` 검색 하는 `VARIANT` 포함 하는 [IUnknown](/cpp/atl/iunknown) 포인터입니다. SDM를 호출 합니다 [QueryInterface](/cpp/atl/queryinterface) 검색에 대 한 포인터이 고 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) 업데이트 하는 데 사용 되는 인터페이스는 **스크립트 문서** 창.  
   
 ## <a name="requirements"></a>요구 사항  

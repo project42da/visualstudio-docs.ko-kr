@@ -1,53 +1,53 @@
 ---
-title: "IDebugProgram2::Execute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::Execute"
-helpviewer_keywords: 
-  - "IDebugProgram2::Execute"
+title: IDebugProgram2::Execute | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::Execute
+helpviewer_keywords: IDebugProgram2::Execute
 ms.assetid: f7205ce8-0ac6-4fcd-b6ec-b720b4fcaccf
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: be6a1f1b2259b573b829490d6015eb1964790679
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::Execute
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 프로그램이 중지 된 상태에서 실행이 계속 됩니다.  모든 이전 실행 상태 \(단계\)와 같은 선택을 취소, 다시 실행 프로그램을 시작 하 고.  
+# <a name="idebugprogram2execute"></a>IDebugProgram2::Execute
+중지 된 상태에서이 프로그램을 실행을 계속 합니다. 이전 실행 상태 (예: 단계)의 선택을 취소 하면, 프로그램 실행을 다시 시작 합니다.  
   
 > [!NOTE]
->  이 메서드는 사용되지 않습니다.  대신 [실행](../../../extensibility/debugger/reference/idebugprocess3-execute.md) 메서드를 사용하십시오.  
+>  이 메서드는 사용 되지 않습니다. 사용 하 여 [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md) 메서드 대신 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT Execute(  
-   void  
+   void  
 );  
 ```  
   
-```c#  
+```csharp  
 int Execute();  
 ```  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 사용자 실행이 중지 된 상태에서 다른 프로그램의 스레드를 시작 하는 경우이 메서드는이 프로그램에 호출 됩니다.  사용자가 선택 하는 경우에이 메서드가 호출 되는  **시작** 명령에서  **디버그** ide에서 메뉴입니다.  이 메서드의 구현을 호출으로 같은 간단한 것일 수도 있는 [다시 시작](../../../extensibility/debugger/reference/idebugthread2-resume.md) 프로그램에서 현재 스레드의 메서드.  
+## <a name="remarks"></a>설명  
+ 다른 프로그램의 스레드 중지 된 상태에서 실행을 시작할 때이 메서드는이 프로그램에 호출 됩니다. 이 메서드는 사용자가을 선택할 때에 호출 됩니다는 **시작** 명령을 **디버그** IDE의 메뉴. 이 메서드의 구현을 호출 처럼 간단 해질 수 있습니다는 [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) 프로그램에서 현재 스레드의 메서드.  
   
 > [!WARNING]
->  중지 이벤트 또는 즉시 \(동기\) 이벤트를 보내지 않습니다 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) 이 호출; 처리 하는 중 그렇지 않으면 디버거가 중단 될 수 있음  
+>  Stopping 이벤트 또는 즉시 (동기) 이벤트를 보내지 않음 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) 이 호출을 처리 하는 동안 그렇지 않은 경우 디버거가 중단 될 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
- [다시 시작](../../../extensibility/debugger/reference/idebugthread2-resume.md)
+ [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)

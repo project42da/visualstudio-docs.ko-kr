@@ -1,61 +1,65 @@
 ---
-title: "Hidden 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#Hidden"
-helpviewer_keywords: 
-  - "Hidden 요소[Visual Studio 프로젝트 템플릿]"
+title: "숨겨진 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#Hidden
+helpviewer_keywords: Hidden element [Visual Studio project template]
 ms.assetid: f37406b0-52e7-4f2c-aacf-bc8d7a4117b3
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b40343b3269a83854259cae80418a2c5154a78fd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Hidden 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿이 나타나는지 여부를 지정합니다.  
+# <a name="hidden-element-visual-studio-templates"></a>Hidden 요소(Visual Studio 템플릿)
+서식 파일 중 하나에 표시 되는지 여부를 지정 된 **새 프로젝트** 또는 **새 항목 추가** 대화 상자.  
   
-## 구문  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<숨김 >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <Hidden> true/false </Hidden>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 템플릿을 표시하는 방법을 정의합니다.|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 템플릿을 분류하고 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에서 템플릿이 표시되는 방식을 정의합니다.|  
   
-## 텍스트 값  
- 텍스트 값이 필요합니다.  
+## <a name="text-value"></a>텍스트 값  
+ 텍스트 값은 필수입니다.  
   
- 텍스트는 템플릿이 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 나타날지 여부를 나타내는 `true` 또는 `false`여야 합니다.  
+ 텍스트 중 하나 여야 합니다 `true` 또는 `false`한다는 표시 이므로에 해당 템플릿이 표시 됩니다는 여부는 **새 프로젝트** 또는 **새 항목 추가** 대화 상자.  
   
-## 설명  
- `Hidden`은 선택적 요소입니다.  
+## <a name="remarks"></a>설명  
+ `Hidden`는 선택적 요소입니다.  
   
- 지정한 경우 `TemplateData` 요소의 다른 자식 요소는 필요하지 않습니다.  
+ 지정 된을의 다른 자식 요소가 없는 경우는 `TemplateData` 는 필요 합니다.  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 템플릿에 대한 메타데이터를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 템플릿의 메타데이터를 보여 줍니다.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -82,6 +86,6 @@ caps.handback.revision: 9
 </VSTemplate>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)

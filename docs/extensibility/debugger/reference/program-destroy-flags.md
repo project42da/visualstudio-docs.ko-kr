@@ -1,57 +1,58 @@
 ---
-title: "PROGRAM_DESTROY_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PROGRAM_DESTROY_FLAGS 열거형"
+title: PROGRAM_DESTROY_FLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: PROGRAM_DESTROY_FLAGS enumeration
 ms.assetid: be00d4a3-d5b8-4159-b632-64577f534883
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 011808759562310db47af2d9809c2ea36fe624c9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# PROGRAM_DESTROY_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-열거의 올바른 값은 프로그램의 플래그를 파괴 하십시오.  
+# <a name="programdestroyflags"></a>PROGRAM_DESTROY_FLAGS
+열거는 유효한 값은 프로그램의 플래그를 삭제 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 enum enum_PPROGRAM_DESTROY_FLAGS  
 {  
-   PROGRAM_DESTROY_CONTINUE_DEBUGGING = 0x1  
+   PROGRAM_DESTROY_CONTINUE_DEBUGGING = 0x1  
 };  
 typedef DWORD PROGRAM_DESTROY_FLAGS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_PPROGRAM_DESTROY_FLAGS  
 {  
-   PROGRAM_DESTROY_CONTINUE_DEBUGGING = 0x1  
+   PROGRAM_DESTROY_CONTINUE_DEBUGGING = 0x1  
 };  
 ```  
   
-## 용어  
- PROGRAM\_DESTROY\_CONTINUE\_DEBUGGING  
- 프로그램을 파괴 하지만 디버깅을 계속 합니다.  
+## <a name="terms"></a>용어  
+ PROGRAM_DESTROY_CONTINUE_DEBUGGING  
+ 프로그램을 삭제 하지만 디버깅을 계속 합니다.  
   
-## 설명  
- 열거형을 반환 하는 있는 [GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md) 메서드가 있습니다.  
+## <a name="remarks"></a>설명  
+ 열거형에서 반환 되는 [GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md) 메서드.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: Msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)

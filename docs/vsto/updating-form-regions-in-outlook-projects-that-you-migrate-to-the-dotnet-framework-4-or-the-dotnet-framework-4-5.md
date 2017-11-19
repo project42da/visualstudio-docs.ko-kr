@@ -1,46 +1,42 @@
 ---
-title: Updating Form Regions in Outlook Projects that You Migrate to the .NET Framework 4 or the .NET Framework 4.5 | Microsoft Docs
+title: ".NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 Outlook 프로젝트에서 양식 영역 업데이트 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- Office projects [Office development in Visual Studio], migrating to .NET Framework 4
+helpviewer_keywords: Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 ms.assetid: 65991e2f-4875-49f0-b21b-6a3d0175d0f4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 47e751b76324ec6a8d15df1ace36da647649c5a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 57bb9bf6ddf20574b06b336b5620adb86c3070c7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="updating-form-regions-in-outlook-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>Updating Form Regions in Outlook Projects that You Migrate to the .NET Framework 4 or the .NET Framework 4.5
-  If the target framework of an Outlook VSTO Add-in project with a form region is changed to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must make some changes to the generated form region code and to any code that instantiates certain form region classes at run time.  
+# <a name="updating-form-regions-in-outlook-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 또는 .NET Framework 4.5로 마이그레이션하는 Outlook 프로젝트에서 양식 영역 업데이트
+  양식 영역이 있는 Outlook VSTO 추가 기능 프로젝트의 대상 프레임워크가 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상 버전으로 변경된 경우 생성된 양식 영역 코드 및 런타임에 특정 양식 영역 클래스를 인스턴스화하는 코드를 일부 변경해야 합니다.  
   
-## <a name="updating-the-generated-form-region-code"></a>Updating the Generated Form Region Code  
- If the target framework of the project is changed to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must change the generated form region code. The changes you make are different for form regions that you designed in Visual Studio and form regions that you imported from Outlook. For more information about the differences between these types of form regions, see [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md).  
+## <a name="updating-the-generated-form-region-code"></a>생성된 양식 영역 코드 업데이트  
+ 프로젝트의 대상 프레임워크가 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상 버전으로 변경된 경우 생성된 양식 영역 코드를 변경해야 합니다. Visual Studio에서 디자인한 양식 영역과 Outlook에서 가져온 양식 영역에 대한 변경 내용이 서로 다릅니다. 이러한 양식 영역 형식 간의 차이점에 대한 자세한 내용은 [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md)를 참조하세요.  
   
-#### <a name="to-update-the-generated-code-for-a-form-region-that-you-designed-in-visual-studio"></a>To update the generated code for a form region that you designed in Visual Studio  
+#### <a name="to-update-the-generated-code-for-a-form-region-that-you-designed-in-visual-studio"></a>Visual Studio에서 디자인한 양식 영역에 대해 생성된 코드를 업데이트하려면  
   
-1.  Open the form region code-behind file in the code editor. This file is named *YourFormRegion*.Designer.cs or *YourFormRegion*.Designer.vb. To see this file in Visual Basic projects, click the **Show All Files** button in **Solution Explorer**.  
+1.  코드 편집기에서 양식 영역 코드 숨김 파일을 엽니다. 이 파일의 이름은 *YourFormRegion*.Designer.cs 또는 *YourFormRegion*.Designer.vb입니다. Visual Basic 프로젝트에서 이 파일을 보려면 **솔루션 탐색기** 에서 **모든 파일 표시**단추를 클릭합니다.  
   
-2.  Modify the declaration of the form region class so that it derives from <xref:Microsoft.Office.Tools.Outlook.FormRegionBase> instead of Microsoft.Office.Tools.Outlook.FormRegionControl.  
+2.  파생 되도록 양식 영역 클래스의 선언을 수정 <xref:Microsoft.Office.Tools.Outlook.FormRegionBase> Microsoft.Office.Tools.Outlook.FormRegionControl 대신 합니다.  
   
-3.  Modify the constructor of the form region class as shown in the following code examples.  
+3.  다음 코드 예제에 표시된 것처럼 양식 영역 클래스의 생성자를 수정합니다.  
   
-     The following code example shows the constructor of a form region class in a project that targets the .NET Framework 3.5.  
+     다음 코드 예제에서는 .NET Framework 3.5를 대상으로 하는 프로젝트에서 양식 영역 클래스의 생성자를 보여 줍니다.  
   
     ```vb  
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)  
@@ -57,7 +53,7 @@ ms.lasthandoff: 08/28/2017
     }  
     ```  
   
-     The following code example shows the constructor of a form region class in a project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)].  
+     다음 코드 예제에서는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]를 대상으로 하는 프로젝트에서 양식 영역 클래스의 생성자를 보여 줍니다.  
   
     ```vb  
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)  
@@ -74,9 +70,9 @@ ms.lasthandoff: 08/28/2017
     }  
     ```  
   
-4.  Modify the signature of the `InitializeManifest` method as shown below. Make sure that you do not modify the code in the method; this code represents form region settings that you applied in the designer. In Visual C# projects, you must expand the region that is named `Form Region Designer generated code` to see this method.  
+4.  아래 표시된 대로 `InitializeManifest` 메서드의 서명을 수정합니다. 메서드의 코드를 수정하지 마세요. 이 코드는 디자이너에서 적용한 양식 영역 설정을 나타냅니다. Visual C# 프로젝트에서 이 메서드를 확인하려면 `Form Region Designer generated code` 라는 영역을 확장해야 합니다.  
   
-     The following code example shows the signature of the `InitializeManifest` method in a project that targets the .NET Framework 3.5.  
+     다음 코드 예제에서는 .NET Framework 3.5를 대상으로 하는 프로젝트에서 `InitializeManifest` 메서드의 서명을 보여 줍니다.  
   
     ```vb  
     Private Shared Sub InitializeManifest(ByVal manifest As Microsoft.Office.Tools.Outlook.FormRegionManifest)  
@@ -92,7 +88,7 @@ ms.lasthandoff: 08/28/2017
     }  
     ```  
   
-     The following code example shows the signature `InitializeManifest` method in a project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)].  
+     다음 코드 예제에서는 `InitializeManifest` 를 대상으로 하는 프로젝트에서 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]메서드의 서명을 보여 줍니다.  
   
     ```vb  
     Private Shared Sub InitializeManifest(ByVal manifest As Microsoft.Office.Tools.Outlook.FormRegionManifest,   
@@ -110,23 +106,23 @@ ms.lasthandoff: 08/28/2017
     }  
     ```  
   
-5.  Add a new Outlook Form Region item to your project. Open the code-behind file for the new form region, locate the *YourNewFormRegion*`Factory` and `WindowFormRegionCollection` classes in the file, and copy these classes to the Clipboard.  
+5.  프로젝트에 새 Outlook 양식 영역 항목을 추가합니다. 새 양식 영역에 대한 코드 숨김 파일을 열고 파일에서 *YourNewFormRegion*`Factory` 및 `WindowFormRegionCollection` 클래스를 찾은 다음 이러한 클래스를 클립보드에 복사합니다.  
   
-6.  Delete the new form region you added to your project.  
+6.  프로젝트에 추가한 새 양식 영역을 삭제합니다.  
   
-7.  In the code-behind file of the form region that you are updating to work in the retargeted project, locate the *YourOriginalFormRegion*`Factory` and `WindowFormRegionCollection` classes and replace them with the code that you copied from the new form region.  
+7.  대상이 변경된 프로젝트에서 작동하도록 업데이트하는 양식 영역의 코드 숨김 파일에서 *YourOriginalFormRegion*`Factory` 및 `WindowFormRegionCollection` 클래스를 찾아 새 양식 영역에서 복사한 코드로 바꿉니다.  
   
-8.  In the *YourNewFormRegion*`Factory` and `WindowFormRegionCollection` classes, search for all references to the *YourNewFormRegion* class and change each reference to the *YourOriginalFormRegion* class instead. For example, if the form region you are updating is named `SalesDataFormRegion` and the new form region you created in step 5 is named `FormRegion1`, change all references of `FormRegion1` to `SalesDataFormRegion`.  
+8.  *YourNewFormRegion*`Factory` 및 `WindowFormRegionCollection` 클래스에서 *YourNewFormRegion* 클래스에 대한 모든 참조를 검색하고 *YourOriginalFormRegion* 클래스에 대한 각 참조를 대신 변경합니다. 예를 들어 업데이트하는 양식 영역의 이름이 `SalesDataFormRegion` 이고 5단계에서 만든 새 양식 영역의 이름이 `FormRegion1`인 경우 `FormRegion1` 의 모든 참조를 `SalesDataFormRegion`으로 변경합니다.  
   
-#### <a name="to-update-the-generated-code-for-a-form-region-that-you-imported-from-outlook"></a>To update the generated code for a form region that you imported from Outlook  
+#### <a name="to-update-the-generated-code-for-a-form-region-that-you-imported-from-outlook"></a>Outlook에서 가져온 양식 영역에 대해 생성된 코드를 업데이트하려면  
   
-1.  Open the form region code-behind file in the code editor. This file is named *YourFormRegion*.Designer.cs or *YourFormRegion*.Designer.vb. To see this file in Visual Basic projects, click the **Show All Files** button in **Solution Explorer**.  
+1.  코드 편집기에서 양식 영역 코드 숨김 파일을 엽니다. 이 파일의 이름은 *YourFormRegion*.Designer.cs 또는 *YourFormRegion*.Designer.vb입니다. Visual Basic 프로젝트에서 이 파일을 보려면 **솔루션 탐색기** 에서 **모든 파일 표시**단추를 클릭합니다.  
   
-2.  Modify the declaration of the form region class so that it derives from <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase> instead of Microsoft.Office.Tools.Outlook.ImportedFormRegion.  
+2.  파생 되도록 양식 영역 클래스의 선언을 수정 <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase> Microsoft.Office.Tools.Outlook.ImportedFormRegion 대신 합니다.  
   
-3.  Modify the constructor of the form region class as shown in the following code examples.  
+3.  다음 코드 예제에 표시된 것처럼 양식 영역 클래스의 생성자를 수정합니다.  
   
-     The following code example shows the constructor of a form region class in a project that targets the .NET Framework 3.5.  
+     다음 코드 예제에서는 .NET Framework 3.5를 대상으로 하는 프로젝트에서 양식 영역 클래스의 생성자를 보여 줍니다.  
   
     ```vb  
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)  
@@ -143,7 +139,7 @@ ms.lasthandoff: 08/28/2017
     }  
     ```  
   
-     The following code example shows the signature of the constructor of a form region class in a project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)].  
+     다음 코드 예제에서는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]를 대상으로 하는 프로젝트에서 양식 영역 클래스의 생성자 서명을 보여 줍니다.  
   
     ```vb  
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)  
@@ -160,9 +156,9 @@ ms.lasthandoff: 08/28/2017
     }  
     ```  
   
-4.  For each line of code in the `InitializeControls` method that initializes a control in the form region class, modify the code as shown below.  
+4.  양식 영역 클래스의 컨트롤을 초기화하는 `InitializeControls` 메서드의 각 코드 줄에 대해 아래와 같이 코드를 수정합니다.  
   
-     The following code example shows how to initialize a control in a project that targets the .NET Framework 3.5. In this code, the GetFormRegionControl method has a type parameter that specifies the type of the control that is returned.  
+     다음 코드 예제에서는 .NET Framework 3.5를 대상으로 하는 프로젝트에서 컨트롤을 초기화하는 방법을 보여 줍니다. 이 코드에서는 GetFormRegionControl 메서드가 반환 되는 컨트롤의 형식을 지정 하는 형식 매개 변수입니다.  
   
     ```vb  
     Me.olkTextBox1 = Me.GetFormRegionControl(Of Microsoft.Office.Interop.Outlook.OlkTextBox)("OlkTextBox1")  
@@ -172,7 +168,7 @@ ms.lasthandoff: 08/28/2017
     this.olkTextBox1 = this.GetFormRegionControl<Microsoft.Office.Interop.Outlook.OlkTextBox>("OlkTextBox1");  
     ```  
   
-     The following code example shows how to initialize a control in a project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. In this code, the <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.GetFormRegionControl%2A> method does not have a type parameter. You must cast the return value to the type of the control that you are initializing.  
+     다음 코드 예제에서는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]를 대상으로 하는 프로젝트에서 컨트롤을 초기화하는 방법을 보여 줍니다. 이 코드에서 <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.GetFormRegionControl%2A> 메서드에는 형식 매개 변수가 없습니다. 반환 값을 초기화하는 컨트롤의 형식으로 캐스팅해야 합니다.  
   
     ```vb  
     Me.olkTextBox1 = CType(GetFormRegionControl("OlkTextBox1"), Microsoft.Office.Interop.Outlook.OlkTextBox)  
@@ -182,28 +178,28 @@ ms.lasthandoff: 08/28/2017
     this.olkTextBox1 = (Microsoft.Office.Interop.Outlook.OlkTextBox)GetFormRegionControl("OlkTextBox1");  
     ```  
   
-5.  Add a new Outlook Form Region item to your project. Open the code-behind file for the new form region, locate the *YourNewFormRegion*`Factory` and `WindowFormRegionCollection` classes in the file, and copy these classes to the Clipboard.  
+5.  프로젝트에 새 Outlook 양식 영역 항목을 추가합니다. 새 양식 영역에 대한 코드 숨김 파일을 열고 파일에서 *YourNewFormRegion*`Factory` 및 `WindowFormRegionCollection` 클래스를 찾은 다음 이러한 클래스를 클립보드에 복사합니다.  
   
-6.  Delete the new form region you added to your project.  
+6.  프로젝트에 추가한 새 양식 영역을 삭제합니다.  
   
-7.  In the code-behind file of the form region that you are updating to work in the retargeted project, locate the *YourOriginalFormRegion*`Factory` and `WindowFormRegionCollection` classes and replace them with the code that you copied from the new form region.  
+7.  대상이 변경된 프로젝트에서 작동하도록 업데이트하는 양식 영역의 코드 숨김 파일에서 *YourOriginalFormRegion*`Factory` 및 `WindowFormRegionCollection` 클래스를 찾아 새 양식 영역에서 복사한 코드로 바꿉니다.  
   
-8.  In the *YourNewFormRegion*`Factory` and `WindowFormRegionCollection` classes, search for all references to the *YourNewFormRegion* class and change each reference to the *YourOriginalFormRegion* class instead. For example, if the form region you are updating is named `SalesDataFormRegion` and the new form region you created in step 5 is named `FormRegion1`, change all references of `FormRegion1` to `SalesDataFormRegion`.  
+8.  *YourNewFormRegion*`Factory` 및 `WindowFormRegionCollection` 클래스에서 *YourNewFormRegion* 클래스에 대한 모든 참조를 검색하고 *YourOriginalFormRegion* 클래스에 대한 각 참조를 대신 변경합니다. 예를 들어 업데이트하는 양식 영역의 이름이 `SalesDataFormRegion` 이고 5단계에서 만든 새 양식 영역의 이름이 `FormRegion1`인 경우 `FormRegion1` 의 모든 참조를 `SalesDataFormRegion`으로 변경합니다.  
   
-## <a name="instantiating-form-region-classes"></a>Instantiating Form Region Classes  
- You must modify any code that dynamically instantiates certain form region classes. In projects that target the .NET Framework 3.5, you can instantiate form region classes such as Microsoft.Office.Tools.Outlook.FormRegionManifest directly. In projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, these classes are interfaces that you cannot instantiate directly.  
+## <a name="instantiating-form-region-classes"></a>양식 영역 클래스 인스턴스화  
+ 특정 양식 영역 클래스를 동적으로 인스턴스화하는 코드를 수정해야 합니다. .NET Framework 3.5를 대상으로 하는 프로젝트에서 Microsoft.Office.Tools.Outlook.FormRegionManifest 같은 양식 영역 클래스를 직접 인스턴스화할 수 있습니다. [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서 이러한 클래스는 직접 인스턴스화할 수 없는 인터페이스입니다.  
   
- If the target framework of your project is changed to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must instantiate the interfaces by using methods that are provided by the Globals.Factory property. For more information about the Globals.Factory property, see [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md).  
+ 프로젝트의 대상 프레임 워크도 변경 된 경우는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 나중 Globals.Factory 속성에 의해 제공 되는 메서드를 사용 하 여 인터페이스를 인스턴스화하고 해야 합니다. Globals.Factory 속성에 대 한 자세한 내용은 참조 [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
   
- The following table lists the form region types and the method to use to instantiate the types in projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later.  
+ 다음 표에서는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서 형식을 인스턴스화하는 데 사용할 메서드 및 양식 영역 형식을 보여 줍니다.  
   
-|Type|Factory method to use|  
+|형식|사용할 팩터리 메서드|  
 |----------|---------------------------|  
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction>|<xref:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionCustomAction%2A>|  
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs>|<xref:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionInitializingEventArgs%2A>|  
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest>|<xref:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionManifest%2A>|  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
- [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md)  
+ [Outlook 양식 영역 만들기](../vsto/creating-outlook-form-regions.md)  
   

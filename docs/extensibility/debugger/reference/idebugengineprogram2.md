@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugEngineProgram2
-helpviewer_keywords:
-- IDebugEngineProgram2 interface
+f1_keywords: IDebugEngineProgram2
+helpviewer_keywords: IDebugEngineProgram2 interface
 ms.assetid: 151003a9-2e4d-4acf-9f4d-365dfa6b9596
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 2897213b9c94a2c8a140c12bfdbc3d4deb29052e
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 9e4b7d83f40607dbb94371e4ca3244a9bb5b9a5b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugengineprogram2"></a>IDebugEngineProgram2
 이 인터페이스는 다중 스레드 디버깅을 지원 합니다.  
@@ -56,7 +40,7 @@ IDebugEngineProgram2 : IUnknown
   
 |메서드|설명|  
 |------------|-----------------|  
-|[중지](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md)|이 프로그램에서 실행 중인 모든 스레드를 중지 합니다.|  
+|[Stop](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md)|이 프로그램에서 실행 중인 모든 스레드를 중지 합니다.|  
 |[WatchForThreadStep](../../../extensibility/debugger/reference/idebugengineprogram2-watchforthreadstep.md)|실행 (또는 실행에 대 한 감시 중지)에 대 한 감시 지정한 스레드에서 발생 합니다.|  
 |[WatchForExpressionEvaluationOnThread](../../../extensibility/debugger/reference/idebugengineprogram2-watchforexpressionevaluationonthread.md)|허용 (하거나 허용 하지 않는) 프로그램이 중지 하는 경우에 지정한 스레드에서 발생 되는 식 계산 합니다.|  
   

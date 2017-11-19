@@ -1,66 +1,68 @@
 ---
-title: "방법: 메서드에 매개 변수 추가"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC[Visual Studio에서 SharePoint 개발], 메서드를 매개 변수에 추가"
-  - "BDC[Visual Studio에서 SharePoint 개발], 메서드 매개 변수"
-  - "BDC[Visual Studio에서 SharePoint 개발], 매개 변수"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 메서드를 매개 변수에 추가"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 메서드 매개 변수"
-  - "비즈니스 데이터 연결 서비스[Visual Studio에서 SharePoint 개발], 매개 변수"
+title: "방법: 메서드에 매개 변수를 추가 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Business Data Connectivity service [SharePoint development in Visual Studio], adding a method to a parameter
+- Business Data Connectivity service [SharePoint development in Visual Studio], parameter
+- BDC [SharePoint development in Visual Studio], adding a method to a parameter
+- BDC [SharePoint development in Visual Studio], parameter
+- Business Data Connectivity service [SharePoint development in Visual Studio], method parameters
+- BDC [SharePoint development in Visual Studio], method parameters
 ms.assetid: c5b6fd32-bf85-4b2a-a01e-f9199f0fb26e
-caps.latest.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 881eccae253fc07c13eead45ae9d14658f9adf46
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 메서드에 매개 변수 추가
-  매개 변수를 사용하여 메서드에 정보를 추가하거나 메서드에서 정보를 반환할 수 있습니다.  모든 메서드에는 매개 변수를 적어도 하나는 지정해야 합니다.  만들려는 메서드 형식을 지원하는 매개 변수를 디자인하는 방법에 대한 자세한 내용은 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)을 참조하십시오.  
+# <a name="how-to-add-a-parameter-to-a-method"></a>방법: 메서드에 매개 변수 추가
+  메서드에서 정보를 반환 하거나 정보를 메서드에 전달 하는 매개 변수를 사용 합니다. 모든 메서드 매개 변수가 하나 이상 있어야 합니다. 만들려는 메서드의 유형을 지원 하도록 매개 변수를 디자인 하는 방법에 대 한 자세한 내용은 참조 하십시오. [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  
   
- 메서드에 매개 변수를 추가하면 프로젝트의 모델 파일 XML에 `<Parameter>` 요소가 추가됩니다.  `<Parameter>` 요소의 특성에 대한 자세한 내용은 [매개 변수](http://go.microsoft.com/fwlink/?LinkId=169284) 를 참조하십시오.  
+ 메서드에 매개 변수를 추가 하면 Visual Studio 추가 `<Parameter>` 요소를 프로젝트에 모델 파일의 XML입니다. 특성에 대 한 자세한 내용은 `<Parameter>` 요소 참조 [매개 변수](http://go.microsoft.com/fwlink/?LinkId=169284)합니다.  
   
-### 메서드에 매개 변수를 추가하려면  
+### <a name="to-add-a-parameter-to-a-method"></a>메서드에 매개 변수를 추가하려면  
   
-1.  엔터티에 메서드를 추가합니다.  
+1.  엔터티에 메서드를 추가 합니다.  
   
-2.  선택 메뉴 모음에서 **보기**, **기타 창**, **BDC 메서드 세부 정보** 을 선택합니다.  
+2.  메뉴 모음에서 **보기**, **다른 창**, **BDC 메서드 세부 정보**합니다.  
   
-     **BDC 메서드 세부 정보** 창이 열립니다.  자세한 내용은 [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)을 참조하십시오.  
+     **BDC 메서드 세부 정보** 창이 열립니다. 자세한 내용은 참조 [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)합니다.  
   
-3.  **BDC 메서드 세부 정보** 창에서 메서드 노드를 확장한 다음 **매개 변수** 노드를 확장합니다.  
+3.  에 **BDC 메서드 세부 정보** 창에서 노드를 확장 한 다음 확장은 **매개 변수** 노드.  
   
-4.  **매개 변수 추가** 목록에서 **매개 변수 만들기** 를 선택합니다.  
+4.  에 **매개 변수를 추가** 목록에서 선택 **매개 변수 만들기**합니다.  
   
-     **매개 변수** 노드 아래에 새 매개 변수가 표시됩니다.  
+     아래에 새 매개 변수 표시는 **매개 변수** 노드.  
   
-5.  메뉴 모음에서 **보기**, **속성 창**을 선택합니다.  
+5.  메뉴 모음에서 **보기**, **속성 창**합니다.  
   
-6.  **속성** 창에서 **Name** 속성이 적절한 이름으로 설정되어 있는지 확인합니다.  예를 들어 메서드에서 고객을 반환하는 경우 메서드 이름으로 GetCustomers를 지정합니다.  
+6.  에 **속성** 창의 설정는 **이름** 속성을 쉽게 알아볼 수 있는 모든 이름입니다. 예를 들어 메서드는 고객을 반환 하는 경우 메서드 이름을 수 **GetCustomers**합니다.  
   
-7.  **BDC 메서드 세부 정보** 창에서 매개 변수 방향에 대해 표시되는 드롭다운 목록을 연 다음 **In**, **InOut**, **Out** 또는 **Return**을 선택합니다.  
+7.  에 **BDC 메서드 세부 정보** 창에서 매개 변수의 방향에 대 한 표시 되는 목록을 열고 한 다음 **에**, **InOut**, **아웃**, 또는 **반환**합니다.  
   
-     만들고 있는 형식 메서드에 대해 선택할 방향에 대한 자세한 내용은 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)를 참조하십시오.  
+     만들고 있는 형식 메서드 선택할 방향에 대 한 자세한 내용은 참조 하십시오. [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  
   
-8.  매개 변수의 형식 설명자를 수정합니다.  자세한 내용은 [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)을 참조하십시오.  
+8.  매개 변수의 형식 설명자를 수정 합니다. 자세한 내용은 참조 [하는 방법: 매개 변수의 형식 설명자 정의](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)   
  [방법: 모델에 엔터티 추가](../sharepoint/how-to-add-an-entity-to-a-model.md)   
- [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
+ [방법: 매개 변수의 형식 설명자를 정의 합니다.](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
  [방법: 메서드 인스턴스 정의](../sharepoint/how-to-define-a-method-instance.md)   
  [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)  
   

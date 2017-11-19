@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - managed package framework, creating Tools Options pages
 - Tools Options pages [Visual Studio SDK], creating using managed package framework
 ms.assetid: 1bf11fec-dece-4943-8053-6de1483c43eb
-caps.latest.revision: 29
+caps.latest.revision: "29"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f6329950b3af0b0ec44347ad9a85124ee7192439
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 6ed61dbc745b00f5f6f0beeba5aa38c3d316f98f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="creating-options-pages"></a>옵션 페이지 만들기
 에 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 관리 패키지 프레임 워크 클래스에서 파생 된 <xref:Microsoft.VisualStudio.Shell.DialogPage> 확장는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 추가 하 여 IDE **옵션** 아래 페이지는 **도구** 메뉴.  
@@ -81,13 +66,15 @@ ms.lasthandoff: 09/06/2017
  다음 클래스에는 최소한의 "hello world" 옵션 페이지를 정의합니다. 사용자가 공용을 설정할 수를 열 때 `HelloWorld` 속성 표에 속성입니다.  
   
 ### <a name="code"></a>코드  
- [!code-csharp[#11 UI_UserSettings_ToolsOptionPages](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs) ] [!code-vb [UI_UserSettings_ToolsOptionPages #11](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]  
+ [!code-csharp[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs)]
+ [!code-vb[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]  
   
 ### <a name="description"></a>설명  
  패키지 클래스에 다음 특성을 적용 페이지 옵션은 사용할 수 있도록 패키지를 로드 하는 경우. 숫자는 범주 및 페이지에 대 한 임의의 리소스 Id 및 끝에 부울 값은 페이지 자동화를 지원 하는지 여부를 지정 합니다.  
   
 ### <a name="code"></a>코드  
- [!code-csharp[UI_UserSettings_ToolsOptionPages #07](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs) ] [!code-vb [UI_UserSettings_ToolsOptionPages #07](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]  
+ [!code-csharp[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs)]
+ [!code-vb[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]  
   
 ### <a name="description"></a>설명  
  다음 이벤트 처리기 옵션 페이지에서 설정 속성의 값에 따라 결과 표시 합니다. 사용 하 여는 <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> 결과와 메서드를 명시적으로 페이지에 의해 노출 되는 속성에 액세스 하려면 사용자 지정 옵션 페이지 형식으로 캐스팅 합니다.  
@@ -95,7 +82,8 @@ ms.lasthandoff: 09/06/2017
  패키지 템플릿으로 생성 하는 프로젝트의 경우에서이 함수 호출의 `MenuItemCallback` 기본 명령에 연결 하는 함수에 추가 **도구** 메뉴.  
   
 ### <a name="code"></a>코드  
- [!code-csharp[UI_UserSettings_ToolsOptionPages #08](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_3.cs) ] [!code-vb [UI_UserSettings_ToolsOptionPages #08](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]  
+ [!code-csharp[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_3.cs)]
+ [!code-vb[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 사용자 설정 및 옵션](../../extensibility/extending-user-settings-and-options.md)   

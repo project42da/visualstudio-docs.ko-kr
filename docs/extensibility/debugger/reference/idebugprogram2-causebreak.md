@@ -1,48 +1,48 @@
 ---
-title: "IDebugProgram2::CauseBreak | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::CauseBreak"
-helpviewer_keywords: 
-  - "IDebugProgram2::CauseBreak"
+title: IDebugProgram2::CauseBreak | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::CauseBreak
+helpviewer_keywords: IDebugProgram2::CauseBreak
 ms.assetid: 07d353fc-68ab-4297-a18f-3d3c7a80e121
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2a58abdcf816896c0705a7ecce32ae82c9c8f16d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::CauseBreak
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-프로그램 실행은 다음을 중지 요청 실행 스레드의 시도 중 시간.  
+# <a name="idebugprogram2causebreak"></a>IDebugProgram2::CauseBreak
+프로그램이 다음 실행을 중지 하는 요청 시간 자신의 스레드 실행 시도 중 하나입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT CauseBreak(   
-   void   
+```cpp  
+HRESULT CauseBreak(   
+   void   
 );  
 ```  
   
-```c#  
+```csharp  
 int CauseBreak();  
 ```  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) 이벤트 프로그램이 다음이 메서드가 호출 된 후 코드를 실행 하려고 할 때 보내집니다.  
+## <a name="remarks"></a>설명  
+ [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) 프로그램은 다음이 메서드가 호출 된 후 코드를 실행 하려고 할 때 이벤트를 보냅니다.  
   
- 이 메서드는 반드시 프로그램이 중지를 기다리지 않고 메서드를 즉시 반환 하는 비동기입니다.  
+ 이 메서드는 메서드는 반드시 프로그램을 중지 될 때까지 기다리지 않고 즉시 반환 한다는 점에서 비동기입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)

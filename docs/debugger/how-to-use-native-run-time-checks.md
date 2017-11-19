@@ -1,56 +1,53 @@
 ---
-title: "방법: 네이티브 런타임 검사 기능 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime.errorchecks"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "/O 컴파일러 옵션, /RTC 옵션"
-  - "/RTC 컴파일러 옵션[C++], /O 컴파일러 옵션"
-  - "배열[Visual Studio], 디버깅"
-  - "디버거, 네이티브 런타임 검사"
-  - "디버거, 런타임 오류"
-  - "배열 디버깅"
-  - "네이티브 런타임 검사"
-  - "O 컴파일러 옵션, /RTC 옵션"
-  - "최적화된 빌드 옵션"
-  - "RTC 컴파일러 옵션, /O 컴파일러 옵션"
-  - "런타임 검사"
-  - "런타임 검사, native"
-  - "런타임 오류, 디버깅"
-  - "런타임 오류, 오류 검사"
-  - "runtime_checks pragma"
-  - "스택 포인터"
-  - "스택 포인터, 손상"
-  - "스택, 포인터 손상"
-  - "변수[디버거], 초기화되지 않은 지역 변수에 대한 종속성 catch"
-  - "변수[디버거], 데이터 손실"
+title: "방법: 네이티브 런타임 검사를 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: c.runtime.errorchecks
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- /RTC compiler option [C++], /O compiler option
+- run-time checks, native
+- stack, pointer corruption
+- stack pointers, corruption
+- /O compiler option, /RTC option
+- run-time errors, error checks
+- O compiler option, /RTC option
+- debugger, runtime errors
+- variables [debugger], loss of data
+- runtime_checks pragma
+- variables [debugger], catching dependencies on uninitialized local variables
+- run-time errors, debugging
+- debugger, native run-time checks
+- optimized build option
+- RTC compiler option, /O compiler option
+- native run-time checks
+- run-time checks
+- debugging arrays
+- stack pointers
+- arrays [Visual Studio], debugging
 ms.assetid: dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1
-caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f6dd581882231b64af03d34f53c3a5a67fa921e3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 네이티브 런타임 검사 기능 사용
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Visual C\+\+에서는 네이티브 [runtime\_checks](/visual-cpp/preprocessor/runtime-checks)를 사용하여 다음과 같은 일반적인 런타임 오류를 catch할 수 있습니다.  
+# <a name="how-to-use-native-run-time-checks"></a>방법: 네이티브 런타임 검사 기능 사용
+Visual C++에서는 네이티브 [runtime_checks](/cpp/preprocessor/runtime-checks) 를 사용하여 다음과 같은 일반적인 런타임 오류를 catch할 수 있습니다.  
   
 -   스택 포인터 손상  
   
@@ -62,9 +59,9 @@ Visual C\+\+에서는 네이티브 [runtime\_checks](/visual-cpp/preprocessor/ru
   
 -   Short형 변수에 할당한 경우 발생한 데이터 손실  
   
- **\/RTC**를 최적화된 빌드\(**\/O**\)와 함께 사용하면 컴파일러 오류가 발생합니다. 최적화된 빌드에는 `runtime_checks` pragma를 사용해도 적용되지 않습니다.  
+ **/RTC** 를 최적화된 빌드(**/O**)와 함께 사용하면 컴파일러 오류가 발생합니다. 최적화된 빌드에는 `runtime_checks` pragma를 사용해도 적용되지 않습니다.  
   
- 런타임 검사가 활성화된 상태에서 프로그램을 디버깅하면 런타임 오류가 발생한 경우 기본적으로 프로그램을 중지하고 디버거를 중단합니다. 모든 런타임 검사의 기본 동작은 변경할 수 있습니다. 자세한 내용은 [디버거를 사용한 예외 관리](../debugger/managing-exceptions-with-the-debugger.md)를 참조하세요.  
+ 런타임 검사가 활성화된 상태에서 프로그램을 디버깅하면 런타임 오류가 발생한 경우 기본적으로 프로그램을 중지하고 디버거를 중단합니다. 모든 런타임 검사의 기본 동작은 변경할 수 있습니다. 자세한 내용은 참조 [디버거를 사용한 예외 관리](../debugger/managing-exceptions-with-the-debugger.md)합니다.  
   
  다음 절차에서는 디버그 빌드에서 네이티브 런타임 검사 기능을 활성화하는 방법과 네이티브 런타임 검사 동작을 수정하는 방법에 대해 설명합니다.  
   
@@ -74,15 +71,16 @@ Visual C\+\+에서는 네이티브 [runtime\_checks](/visual-cpp/preprocessor/ru
   
 -   [C 런타임 라이브러리 없이 런타임 검사 사용](../debugger/using-run-time-checks-without-the-c-run-time-library.md)  
   
-### 디버그 빌드에 네이티브 런타임 검사 기능을 사용하려면  
+### <a name="to-enable-native-run-time-checks-in-a-debug-build"></a>디버그 빌드에 네이티브 런타임 검사 기능을 사용하려면  
   
--   **\/RTC** 옵션을 사용하고 C 런타임 라이브러리의 디버그 버전\(예: \/MDd\)으로 연결합니다.  
+-   **/RTC** 옵션을 사용하고 C 런타임 라이브러리의 디버그 버전(예: /MDd)으로 연결합니다.  
   
-### 네이티브 런타임 검사 동작을 수정하려면  
+### <a name="to-modify-native-run-time-check-behavior"></a>네이티브 런타임 검사 동작을 수정하려면  
   
 -   `runtime_checks` pragma를 사용합니다.  
   
-## 참고 항목  
- [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)   
- [runtime\_checks](/visual-cpp/preprocessor/runtime-checks)   
- [런타임 오류 검사](/visual-cpp/c-runtime-library/run-time-error-checking)
+## <a name="see-also"></a>참고 항목  
+ [Visual Studio의 디버깅](../debugger/index.md)  
+ [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)   
+ [runtime_checks](/cpp/preprocessor/runtime-checks)   
+ [런타임 오류 검사](/cpp/c-runtime-library/run-time-error-checking)

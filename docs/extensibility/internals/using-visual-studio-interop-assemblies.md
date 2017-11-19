@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,29 +12,15 @@ helpviewer_keywords:
 - interop assemblies, Visual Studio
 - managed VSPackages, interop assemblies
 ms.assetid: 1043eb95-4f0d-4861-be21-2a25395b3b3c
-caps.latest.revision: 33
+caps.latest.revision: "33"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 298caf0b1c65ecb3612b927859b4d7d01720fc27
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 5d4b825b33339367ee331eb74aa2eb210c85206c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Visual Studio Interop 어셈블리를 사용 하 여
 Visual Studio interop 어셈블리는 Visual Studio 확장성을 제공 하는 COM 인터페이스를 액세스 하는 관리 되는 응용 프로그램을 허용 합니다. 직선 COM 인터페이스 및 해당 interop 버전 간의 차이가 있습니다. 예를 들어 Hresult int 값으로 표시 일반적으로 되 고 동일한 방식으로 예외를 처리 해야 및 (특히 out 매개 변수) 매개 변수는 다르게 처리 됩니다.  
@@ -50,11 +35,13 @@ Visual Studio interop 어셈블리는 Visual Studio 확장성을 제공 하는 C
   
  예를 들어 다음 함수 호출은는 <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> 은 허용 가능한 반환 값 이지만 다른 HRESULT는 오류를 나타내는 0 보다 작은 합니다.  
   
- [!code-vb[#1 VSSDKHRESULTInformation](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_1.vb) ] [!code-csharp [VSSDKHRESULTInformation #1](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_1.cs)]  
+ [!code-vb[VSSDKHRESULTInformation#1](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_1.vb)]
+ [!code-csharp[VSSDKHRESULTInformation#1](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_1.cs)]  
   
  가 있는 경우 여러 개 사용할 수 있는 반환 값 추가 HRESULT 값만 추가할 수 있는 목록에 대 한 호출에서 <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>합니다.  
   
- [!code-vb[#2 VSSDKHRESULTInformation](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_2.vb) ] [!code-csharp [VSSDKHRESULTInformation #2](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_2.cs)]  
+ [!code-vb[VSSDKHRESULTInformation#2](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_2.vb)]
+ [!code-csharp[VSSDKHRESULTInformation#2](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_2.cs)]  
   
 ## <a name="returning-hresults-to-com-from-managed-code"></a>관리 코드에서 COM으로 HRESULT 반환  
  예외가 발생 하는 경우 관리 코드 반환 <xref:Microsoft.VisualStudio.VSConstants.S_OK> 를 호출한 COM 함수에 있습니다. COM interop는 관리 코드에서 강력한 형식의 일반적인 예외를 지원합니다. 허용 되지 않는 수신 하는 메서드가 예를 들어 `null` 인수 throw는 <xref:System.ArgumentNullException>합니다.  

@@ -1,47 +1,47 @@
 ---
-title: "IEnumDebugObjects::Reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugObjects::Reset"
-helpviewer_keywords: 
-  - "IEnumDebugObjects::Reset 메서드"
+title: IEnumDebugObjects::Reset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugObjects::Reset
+helpviewer_keywords: IEnumDebugObjects::Reset method
 ms.assetid: 4a245e47-cc39-4177-b83d-083ea0e3190f
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e7b42e3b57752af5ab1e6086711ab020b5ee7946
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugObjects::Reset
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="ienumdebugobjectsreset"></a>IEnumDebugObjects::Reset
 이 메서드는 첫 번째 요소에 열거형을 다시 설정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT Reset(void);  
 ```  
   
-```c#  
+```csharp  
 int Reset();  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  없음  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 이 메서드 호출 후 다음 호출을 [다음](../../../extensibility/debugger/reference/ienumdebugobjects-next.md) 열거형의 첫 번째 요소를 반환 합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드를 호출한 다음 호출 후 [다음](../../../extensibility/debugger/reference/ienumdebugobjects-next.md) 열거형의 첫 번째 요소를 반환 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)   
  [다음](../../../extensibility/debugger/reference/ienumdebugobjects-next.md)

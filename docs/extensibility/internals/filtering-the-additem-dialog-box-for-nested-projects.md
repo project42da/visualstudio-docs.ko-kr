@@ -1,37 +1,39 @@
 ---
-title: "중첩된 프로젝트에 대 한 항목 추가 대화 상자를 필터링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "필터링, 중첩된 프로젝트"
-  - "중첩된 프로젝트 항목 추가 대화 상자 필터링"
+title: "중첩 된 프로젝트에 대 한 항목 추가 대화 상자를 필터링 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtering, nested projects
+- nested projects, AddItem dialog box filtering
 ms.assetid: 5b3e352e-7f18-4f66-be16-b0ad55637ce5
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 392f2f33d792c4e8f31ff0423b68a28a68797818
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 중첩된 프로젝트에 대 한 항목 추가 대화 상자를 필터링
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-표시 된  **항목 추가** 대화 상자가 중첩 된 프로젝트의 부모 프로젝트 어떤 항목의 대화 상자에 표시 됩니다 제어할 수 있습니다.  
+# <a name="filtering-the-additem-dialog-box-for-nested-projects"></a>중첩 된 프로젝트에 대 한 필터링 항목 추가 대화 상자
+표시할 때는 **AddItem** 중첩 된 프로젝트의 경우 부모 프로젝트 대화 상자 대화 상자에 표시 되는 항목을 제어할 수 있습니다.  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> 인터페이스를 사용 하면 필터링 됩니다 노드는  **항목 추가** 대화 상자.  때 하위 프로젝트가 표시 됩니다를  **항목 추가** 대화 상자의 부모를 구현할 수 있습니다는 `IVsFilterAddProjectItemDlg` 는 하위 프로젝트의 표시 될 인터페이스 및 필터 항목.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> 인터페이스를 사용 하면에 있는 노드를 필터링 한 **AddItem** 대화 상자. 자식 프로젝트 표시 될 때는 **AddItem** 대화 상자에서 부모를 구현할 수는 `IVsFilterAddProjectItemDlg` 자식 프로젝트에 표시 되는 인터페이스 및 필터 항목입니다.  
   
- 함수가 특정 상위 프로젝트 아래에 프로젝트를 그룹화 하면 구현할 수 있습니다 `IVsFilterAddProjectItemDlg` 사용자가 선택할 때  **프로젝트 항목 추가** 에서 중첩된 프로젝트 바로 가기 메뉴에서.  구현 `IvsFilterAddProjectItemDlg displays` 만 프로젝트 항목 또는 그룹에 특정 파일입니다.  같은 디렉터리에 저장 된 경우에 대화 상자를 프로젝트 항목을 다른 그룹에 대해 필터링 됩니다.  
+ 구현할 수 있습니다 프로젝트에서는 부모 프로젝트에서 함수에 의해 그룹화 되 `IVsFilterAddProjectItemDlg` 선택 **프로젝트 항목 추가** 중첩 된 프로젝트의 바로 가기 메뉴. 구현 `IvsFilterAddProjectItemDlg displays` 만 프로젝트 항목 또는 파일 그룹에 특정 합니다. 다른 그룹에 대 한 프로젝트 항목은 동일한 디렉터리에 저장 되는 경우에 대화 상자에서 필터링 됩니다.  
   
- 사용자가 열 때의  **항목 추가** 자식, 부모 프로젝트의 구현에 대 한 대화 상자를 `IVsFilterAddProjectItemDlg` 인터페이스를 호출할.  
+ 사용자가 열 때는 **AddItem** 부모 프로젝트의 구현 자식에 대 한 대화 상자는 `IVsFilterAddProjectItemDlg` 인터페이스가 호출 됩니다.  
   
- `IVsFilterAddProjectItemDlg` 범주에 따라 필터링 인터페이스 구현할 수도 있습니다.  자세한 내용은 [에 항목 추가 된 새 항목 추가 대화 상자](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md) 및 [프로젝트 및 항목 템플릿 등록](../../extensibility/internals/registering-project-and-item-templates.md)을 참조하십시오.  
+ `IVsFilterAddProjectItemDlg` 인터페이스 범주별으로 필터링을 구현할 수도 있습니다. 자세한 내용은 참조 [새 항목 추가 대화 상자에 항목 추가](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md) 및 [등록 프로젝트 및 항목 템플릿](../../extensibility/internals/registering-project-and-item-templates.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>   
- [에 항목 추가 된 새 항목 추가 대화 상자](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
+ [항목에 추가 된 새 항목 추가 대화 상자](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
  [프로젝트 및 항목 템플릿 등록](../../extensibility/internals/registering-project-and-item-templates.md)   
- [중첩 프로젝트](../../extensibility/internals/nesting-projects.md)
+ [프로젝트 중첩](../../extensibility/internals/nesting-projects.md)

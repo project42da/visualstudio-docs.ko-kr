@@ -1,51 +1,51 @@
 ---
-title: "IDebugBreakpointRequest2::GetLocationType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBreakpointRequest2::GetLocationType"
-helpviewer_keywords: 
-  - "IDebugBreakpointRequest2::GetLocationType"
+title: IDebugBreakpointRequest2::GetLocationType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugBreakpointRequest2::GetLocationType
+helpviewer_keywords: IDebugBreakpointRequest2::GetLocationType
 ms.assetid: b6d14c59-d3aa-48ff-8278-f6b5bba9c2f3
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 9a286d0d8faafaca9b646daecceab8fa165bcd02
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBreakpointRequest2::GetLocationType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 중단점 요청은 중단점 위치 형식을 가져옵니다.  
+# <a name="idebugbreakpointrequest2getlocationtype"></a>IDebugBreakpointRequest2::GetLocationType
+이 중단점 요청의 중단점 위치 유형을 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetLocationType(   
-   BP_LOCATION_TYPE* pBPLocationType  
+```cpp  
+HRESULT GetLocationType(   
+   BP_LOCATION_TYPE* pBPLocationType  
 );  
 ```  
   
-```c#  
-int GetLocationType(   
-   out enum_BP_LOCATION_TYPE pBPLocationType  
+```csharp  
+int GetLocationType(   
+   out enum_BP_LOCATION_TYPE pBPLocationType  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pBPLocationType`  
- \[out\] 값의 반환은 [BP\_LOCATION\_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) 위치 중단점 요청을 설명 하는 열거형입니다.  
+ [out] 값을 반환 된 [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) 이 중단점 요청의 위치를 설명 하는 열거형입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  반환 `E_FAIL` 경우는 `bpLocation` 필드에 연결 된 [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 구조가 잘못 되었습니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다. 반환 `E_FAIL` 경우는 `bpLocation` 은 연결 된 필드 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 구조가 잘못 되었습니다.  
   
-## 예제  
- 다음 예제에서는 단순에이 메서드를 구현 하는 방법을 보여 줍니다. `CDebugBreakpointRequest` 를 노출 하는 개체는[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) 인터페이스입니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CDebugBreakpointRequest` 공개 하는 개체는[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) 인터페이스입니다.  
   
 ```  
 HRESULT CDebugBreakpointRequest::GetLocationType(BP_LOCATION_TYPE* pBPLocationType)    
@@ -78,8 +78,8 @@ HRESULT CDebugBreakpointRequest::GetLocationType(BP_LOCATION_TYPE* pBPLocationTy
 }    
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)   
- [BP\_LOCATION\_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)   
- [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
- [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
+ [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)   
+ [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
+ [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)

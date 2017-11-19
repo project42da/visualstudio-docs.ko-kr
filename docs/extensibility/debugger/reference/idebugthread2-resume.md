@@ -1,54 +1,54 @@
 ---
-title: "IDebugThread2::Resume | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugThread2::Resume"
-helpviewer_keywords: 
-  - "IDebugThread2::Resume"
+title: IDebugThread2::Resume | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugThread2::Resume
+helpviewer_keywords: IDebugThread2::Resume
 ms.assetid: 36aad682-b0b9-40a2-b3fc-f0e61d41cdbc
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 25b0f663b6f512cbe8ea6eaafa2167a6828280c9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugThread2::Resume
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugthread2resume"></a>IDebugThread2::Resume
 스레드의 실행을 다시 시작합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Resume (   
-   DWORD *pdwSuspendCount  
+```cpp  
+HRESULT Resume (   
+   DWORD *pdwSuspendCount  
 );  
 ```  
   
-```c#  
-int Resume (   
-   out uint pdwSuspendCount  
+```csharp  
+int Resume (   
+   out uint pdwSuspendCount  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pdwSuspendCount`  
- \[out\] 이력서 작업 후 일시 중단 계수를 반환합니다.  
+ [out] 다시 시작 작업 후 일시 중단 횟수를 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 일시 중단 횟수가이 메서드가 감소를 호출 되며 이때 0에 도달할 때까지 실제로 실행 다시 시작 됩니다.  이 일시 중단 횟수가 표시 되는  **스레드에서** 디버그 창.  
+## <a name="remarks"></a>설명  
+ 이 메서드 감소를 호출할 때마다 일시 중단 횟수가 실행이 실제로 다시 시작 될 때 0, 도달할 때까지 합니다. 이 일시 중단 횟수가에 표시 되는 **스레드** 디버그 창.  
   
- 각 호출에 대해이 메서드를 반드시 있어야 하는 이전 호출에서 [일시 중단](../../../extensibility/debugger/reference/idebugthread2-suspend.md) 메서드.  일시 중단 횟수가 몇 번 결정의 `IDebugThread2::Suspend` 메서드가 현재까지 호출 합니다.  
+ 이 메서드를 호출할 때마다, 이전에 호출 되어야는 [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md) 메서드. 일시 중단 횟수가 결정 횟수는 `IDebugThread2::Suspend` 지금까지 메서드가 호출 되었습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [일시 중단](../../../extensibility/debugger/reference/idebugthread2-suspend.md)
+ [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md)

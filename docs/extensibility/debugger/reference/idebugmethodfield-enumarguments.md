@@ -1,55 +1,55 @@
 ---
-title: "IDebugMethodField::EnumArguments | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMethodField::EnumArguments"
-helpviewer_keywords: 
-  - "IDebugMethodField::EnumArguments 메서드"
+title: IDebugMethodField::EnumArguments | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugMethodField::EnumArguments
+helpviewer_keywords: IDebugMethodField::EnumArguments method
 ms.assetid: 3ab55488-2437-4ff6-a9ae-78ea6d7b23a8
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d500e5bedbd284c15430ab65e9477d4a3a404eaf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugMethodField::EnumArguments
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugmethodfieldenumarguments"></a>IDebugMethodField::EnumArguments
 메서드를 호출 하는 데 필요한 각 인수의 형식에 대 한 열거자를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT EnumArguments(   
-   IEnumDebugFields** ppParams  
+```cpp  
+HRESULT EnumArguments(   
+   IEnumDebugFields** ppParams  
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumArguments(  
-   out IEnumDebugFields ppParams  
+   out IEnumDebugFields ppParams  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppParams`  
- \[out\] 반환 된 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) 형식 인수 목록을 나타내는 개체입니다.  인수가 없으면 null 값을 반환 합니다.  
+ [out] 반환 된 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) 인수 형식 목록을 나타내는 개체입니다. 인수가 없는 경우 null 값을 반환 합니다.  
   
-## 반환 값  
- 성공 하면 S\_OK를 반환 하거나 인수가 없으면 S\_FALSE를 반환 합니다.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 S_OK를 반환 하거나 인수가 없는 경우 S_FALSE를 반환 합니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## 설명  
- 각 요소는 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 각 매개 변수의 형식을 나타내는 개체입니다.  호출 하는 [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) 메서드의 각 매개 변수의 형식에 대 한 정보를 검색 합니다.  
+## <a name="remarks"></a>설명  
+ 각 요소는 한 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 각 매개 변수의 형식을 나타내는 개체입니다. 호출 된 [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) 각 매개 변수의 형식에 대 한 정보를 검색 하는 메서드입니다.  
   
- 이름 매개 변수의 형식과 함께 필요한 경우 다음 호출을 [EnumParameters](../../../extensibility/debugger/reference/idebugmethodfield-enumparameters.md) 메서드.  
+ 다음 호출 매개 변수의 이름을 형식과 함께 필요한 경우는 [EnumParameters](../../../extensibility/debugger/reference/idebugmethodfield-enumparameters.md) 메서드.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   

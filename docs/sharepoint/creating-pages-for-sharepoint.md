@@ -1,74 +1,75 @@
 ---
-title: "SharePoint에 대한 페이지 만들기"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "콘텐츠 페이지[Visual Studio에서 SharePoint 개발], 디자인"
-  - "마스터 페이지[Visual Studio에서 SharePoint 개발], 디자인"
-  - "페이지 레이아웃[Visual Studio에서 SharePoint 개발], 디자인"
-  - "Visual Studio에서 SharePoint 개발, 콘텐츠 페이지"
-  - "Visual Studio에서 SharePoint 개발, 마스터 페이지"
-  - "Visual Studio에서 SharePoint 개발, 페이지 레이아웃"
+title: "SharePoint에 대 한 페이지 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, master pages
+- SharePoint development in Visual Studio, page layouts
+- SharePoint development in Visual Studio, content pages
+- master pages[SharePoint development in Visual Studio], designing
+- content pages[SharePoint development in Visual Studio], designing
+- page layouts[SharePoint development in Visual Studio], designing
 ms.assetid: 57678ed1-841f-45de-a1d3-5f9e233bf3ce
-caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: bef1fce26bbd9ea57073273f462ec484a46a647b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# SharePoint에 대한 페이지 만들기
-  SharePoint 사이트의 응용 프로그램 페이지, 사이트 페이지, 마스터 페이지 및 페이지 레이아웃을 만들 수 있습니다.  
+# <a name="creating-pages-for-sharepoint"></a>SharePoint에 대한 페이지 만들기
+  응용 프로그램 페이지, 사이트 페이지, 마스터 페이지 및 SharePoint 사이트에 대 한 페이지 레이아웃을 만들 수 있습니다.  
   
- Visual Studio에서 템플릿을 사용하여 응용 프로그램 페이지를 만들 수 있습니다.  SharePoint Designer를 사용하여 사이트 페이지, 마스터 페이지 및 페이지 레이아웃을 만든 다음  이러한 페이지를 Visual Studio로 가져와서 SharePoint 프로젝트에서 사용할 수 있습니다.  
+ Visual Studio에서 템플릿을 사용 하 여 응용 프로그램 페이지를 만들 수 있습니다. SharePoint Designer를 사용 하 여 사이트 페이지, 마스터 페이지 및 페이지 레이아웃을 만듭니다. 그런 다음 SharePoint 프로젝트에서 사용 하는 Visual Studio에이 페이지를 가져올 수 있습니다.  
   
- CSS 스타일시트, ECMAScript 및 테마를 사용하여 페이지의 모양과 동작을 수정할 수도 있습니다.  
+ 또한 스타일 시트, ECMAScript, 및 테마를 사용 하 여 모양 및 페이지의 동작을 수정할 수 있습니다.  
   
-## SharePoint 페이지 유형  
- 다음 표에서는 SharePoint 사이트에 포함되는 네 가지 기본 페이지 유형에 대해 설명합니다.  
+## <a name="types-of-sharepoint-pages"></a>SharePoint 페이지의 유형  
+ 다음 표에서 SharePoint 사이트를 포함 하는 페이지의 라는 네 가지 종류를 설명 합니다.  
   
 |페이지 유형|설명|  
-|------------|--------|  
-|응용 프로그램 페이지|페이지에 사용자 지정 코드를 포함하거나 페이지가 여러 사이트에서 공유되도록 하려는 경우 응용 프로그램 페이지를 만듭니다.  그렇지 않은 경우에는 사이트 페이지를 선택하는 것이 가장 좋습니다.|  
-|사이트 페이지|다음 작업 중 하나를 수행하려면 사이트 페이지를 만듭니다.<br /><br /> -   SharePoint 라이브러리에 페이지를 추가합니다.<br />-   페이지에서 동적 웹 파트 및 웹 파트 영역과 같은 기능을 호스팅할 수 있게 합니다.<br />-   사용자가 SharePoint Designer를 사용하여 페이지를 사용자 지정할 수 있게 합니다.<br /><br /> 페이지에 사용자 지정 코드가 포함되도록 하려면 사이트 페이지를 만들지 마십시오.  사이트 페이지에 사용자 지정 코드를 추가할 수는 있지만 사용자가 SharePoint Designer를 사용하여 페이지를 사용자 지정하면 코드의 실행이 중지됩니다.|  
-|마스터 페이지|사이트 페이지 및 응용 프로그램 페이지의 일반적 구조를 정의하려면 마스터 페이지를 만듭니다.|  
-|페이지 레이아웃|페이지 레이아웃은 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]에서만 사용 가능하며 사이트 페이지 및 응용 프로그램 페이지의 일반적 구조를 세밀히 정의할 수 있게 합니다.|  
+|---------------|-----------------|  
+|응용 프로그램 페이지|사용자 지정 코드를 포함 하도록 페이지 또는 페이지 여러 사이트에서 공유를 원하는 경우 응용 프로그램 페이지를 만듭니다. 그렇지 않으면 사이트 페이지에 적합 하 고 수 있습니다.|  
+|사이트 페이지|다음 작업을 수행 하려면 사이트 페이지를 만듭니다.<br /><br /> -SharePoint 라이브러리에 페이지를 추가 합니다.<br />-동적 웹 파트와 웹 파트 영역을 같은 호스트 기능에 페이지를 사용 하도록 설정 합니다.<br />-사용자가 SharePoint Designer를 사용 하 여 페이지를 사용자 지정할 수 있도록 합니다.<br /><br /> 사용자 지정 코드를 포함 하도록 페이지 하려면 사이트 페이지를 만들지 마십시오. 사이트 페이지에 사용자 지정 코드를 추가할 수 있습니다, 있지만 코드 사용자가 SharePoint Designer를 사용 하 여 페이지를 사용자 지정 실행이 중지 됩니다.|  
+|마스터 페이지|사이트 페이지에 대 한 공통 구조를 정의 하려면 마스터 페이지 및 응용 프로그램 페이지를 만듭니다.|  
+|페이지 레이아웃|페이지 레이아웃은 관련 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] 사이트 페이지 및 응용 프로그램 페이지에 대 한 공통 구조를 추가로 정의할 수 있도록 합니다.|  
   
- 페이지의 각 유형의 개요는 [블록 구성 : 페이지 및 사용자 인터페이스](http://go.microsoft.com/fwlink/?LinkID=182095) 및 [페이지 레이아웃 및 마스터 페이지](http://go.microsoft.com/fwlink/?LinkID=182096) 을 참조하십시오.  
+ 각 유형의 페이지의 개요를 참조 하십시오. [문서 블록: 페이지와 사용자 인터페이스](http://go.microsoft.com/fwlink/?LinkID=182095), 및 [페이지 레이아웃 및 마스터 페이지](http://go.microsoft.com/fwlink/?LinkID=182096)합니다.  
   
-## 응용 프로그램 페이지 만들기  
- Visual Studio에서 **응용 프로그램 페이지** 항목을 SharePoint 프로젝트에 추가하여 응용 프로그램 페이지를 만들 수 있습니다.  이 페이지에 컨트롤을 추가한 다음 코드를 추가하여 컨트롤 이벤트를 처리할 수 있습니다.  
+## <a name="creating-application-pages"></a>응용 프로그램 페이지 만들기  
+ 추가 하 여 Visual Studio에서 응용 프로그램 페이지를 만들 수는 **응용 프로그램 페이지** 을 SharePoint 프로젝트 항목입니다. 페이지에 컨트롤을 추가 하 고 코드를 추가 하 여 컨트롤 이벤트를 처리할 수 있습니다.  
   
- 이 페이지의 코드 파일에서 중단점을 설정하고, 디버거를 시작하고, 로컬 SharePoint 사이트의 페이지를 테스트할 수 있으며 이 과정에서 추가 구성 절차를 수행할 필요는 없습니다.  자세한 내용은 [SharePoint를 위한 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)을 참조하십시오.  
+ 페이지의 코드 파일에 중단점을 설정 하 고, 디버거를 시작 하 고, 추가 구성 단계를 수행 하지 않고 로컬 SharePoint 사이트에서 페이지를 테스트할 수 있습니다. 자세한 내용은 참조 [SharePoint 용 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)합니다.  
   
-## 사이트 페이지, 마스터 페이지 및 페이지 레이아웃 만들기  
- SharePoint Designer를 사용하여 사이트 페이지, 마스터 페이지 및 페이지 레이아웃을 만들 수 있습니다.  그런 다음 이러한 페이지를 Visual Studio로 가져올 수 있습니다.  Visual Studio에서 사용 가능한 배포 또는 소스 제어 기능을 활용하려면 페이지를 가져오십시오.  자세한 내용은 [기존 SharePoint 사이트에서 항목 가져오기](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)을 참조하십시오.  
+## <a name="creating-site-pages-master-pages-and-page-layouts"></a>사이트 페이지, 마스터 페이지 및 페이지 레이아웃 만들기  
+ SharePoint Designer를 사용 하 여 사이트 페이지, 마스터 페이지 및 페이지 레이아웃을 만들 수 있습니다. 그런 다음 Visual Studio에이 페이지를 가져올 수 있습니다. 배포 또는 Visual Studio에서 사용할 수 있는 소스 제어 기능을 활용 하려면 페이지를 가져옵니다. 자세한 내용은 참조 [기존 SharePoint 사이트에서 항목 가져오기](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)합니다.  
   
- 이러한 페이지는 가져온 이후에는 수정하기 어렵기 때문에 페이지를 가져오기 전에 디자인해야 합니다.  
+ 가져온 후 이러한 페이지를 수정 하려면 어렵기 때문에 가져오기 전에 이러한 페이지를 디자인 해야 합니다.  
   
-## CSS 스타일시트, ECMAScript 및 테마 만들기  
- Visual Studio에서는 SharePoint 사이트용 CSS 스타일시트, ECMAScript\(JavaScript, JScript\) 또는 테마 파일을 개발할 수 있는 템플릿을 제공하지 않습니다.  이러한 파일은 SharePoint SDK에서 제공하는 지침을 사용하거나 SharePoint Designer 같은 도구를 사용하여 만들 수 있습니다.  
+## <a name="creating-cascading-style-sheets-ecmascript-and-themes"></a>스타일 시트, ECMAScript, 및 테마 만들기  
+ Visual Studio 개발 스타일 시트 (CSS), ECMAScript (JavaScript, JScript) 또는 SharePoint 사이트에 대 한 테마 파일에 대 한 템플릿을 제공 하지 않습니다. SharePoint SDK에서 사용할 수 있는 지침을 사용 하 여 또는 SharePoint Designer와 같은 도구를 사용 하 여 이러한 파일을 만들 수 있습니다.  
   
- 이러한 파일은 솔루션에 직접 추가하거나 Visual Studio로 가져올 수 있습니다.  둘 중 어느 방법을 선택하는지와 상관없이 추가한 각 항목에 대해 적절하게 매핑된 폴더를 만들어야 합니다.  매핑된 폴더를 만드는 방법에 대한 자세한 내용은 [방법: 매핑된 폴더 추가 및 제거](../sharepoint/how-to-add-and-remove-mapped-folders.md)를 참조하십시오.  
+ 솔루션에 이러한 파일 직접 추가 하거나 가져올 수 있습니다. 두 경우 모두 추가 하는 각 항목에 대 한 적절 한 매핑된 폴더 만들어야 합니다. 매핑된 폴더를 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 매핑된 폴더 추가 및 제거](../sharepoint/how-to-add-and-remove-mapped-folders.md)합니다.  
   
- CSS 스타일시트 만들기에 대한 자세한 내용은 [Cascading Style Sheets Class Usage in SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkID=182098) 을 참조하십시오.  SharePoint 솔루션에 필요한 JavaScript 및 JScript 파일을 만드는 방법에 대한 자세한 내용은 [Basic ASPX Page for ECMAScript 설정](http://go.microsoft.com/fwlink/?LinkID=182099) 을 참조하십시오.  테마에 대한 자세한 내용은 [블록 구성: 페이지 및 사용자 인터페이스](http://go.microsoft.com/fwlink/?LinkID=182095) 을 참조하십시오.  
+ 연계 스타일 시트 파일을 만드는 방법에 대 한 자세한 내용은 참조 [SharePoint Foundation의 스타일 시트 클래스 사용 연계](http://go.microsoft.com/fwlink/?LinkID=182098)합니다. SharePoint 솔루션에 대 한 JavaScript 및 JScript 파일 만들기에 대 한 자세한 내용은 참조 [설정을를 정도 기본 ASPX 페이지에 대 한 ECMAScript](http://go.microsoft.com/fwlink/?LinkID=182099)합니다. 테마에 대 한 자세한 내용은 참조 [문서 블록: 페이지와 사용자 인터페이스](http://go.microsoft.com/fwlink/?LinkID=182095)합니다.  
   
-## 관련 항목  
+## <a name="related-topics"></a>관련 항목  
   
 |제목|설명|  
-|--------|--------|  
-|[SharePoint를 위한 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)|응용 프로그램 페이지: SharePoint 마스터 페이지와 병합되는 .aspx 콘텐츠를 추가하는 방법에 대해 설명합니다.|  
-|[방법: 응용 프로그램 페이지 만들기](../sharepoint/how-to-create-an-application-page.md)|SharePoint 사이트에서 실행되는 ASP.NET 페이지를 만드는 방법을 보여 줍니다.|  
-|[연습: SharePoint 응용 프로그램 페이지 만들기](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)|SharePoint 사이트를 위한 ASP.NET 웹 페이지를 디자인하고 디버깅하는 방법을 보여 줍니다.|  
-|[Visual Web Developer 작업](http://msdn.microsoft.com/ko-kr/9c31f93b-c8fb-4599-9b14-6194ec8c7539)|프로젝트에서 웹 페이지를 열 때 나타나는 디자이너를 사용하는 방법에 대해 설명합니다.|  
+|-----------|-----------------|  
+|[SharePoint를 위한 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)|응용 프로그램 페이지를 추가 하는 방법에 설명 합니다: SharePoint 마스터 페이지와 병합 하는.aspx 콘텐츠입니다.|  
+|[방법: 응용 프로그램 페이지 만들기](../sharepoint/how-to-create-an-application-page.md)|SharePoint 사이트에서 실행 되는 ASP.NET 페이지를 만드는 방법을 보여 줍니다.|  
+|[연습: SharePoint 응용 프로그램 페이지 만들기](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)|디자인 및 SharePoint 사이트에 대 한 ASP.NET 웹 페이지를 디버깅 하는 방법을 보여 줍니다.|  
   
   

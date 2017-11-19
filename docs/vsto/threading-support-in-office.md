@@ -1,12 +1,10 @@
 ---
-title: Threading Support in Office | Microsoft Docs
+title: "Office의 스레딩 지원 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,69 +16,69 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], threading support
 - object models [Office development in Visual Studio], threading support
 ms.assetid: 810a6648-fece-4b43-9eb6-948d28ed2157
-caps.latest.revision: 33
-author: kempb
-ms.author: kempb
+caps.latest.revision: "33"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 10df94908366d53a01239bbd2ce9837d2b6780e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: bbfccabe310732943a818515c69abc61bec59e52
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="threading-support-in-office"></a>Threading Support in Office
-  This topic provides information about how threading is supported in the Microsoft Office object model. The Office object model is not thread safe, but it is possible to work with multiple threads in an Office solution. Office applications are Component Object Model (COM) servers. COM allows clients to call COM servers on arbitrary threads. For COM servers that are not thread safe, COM provides a mechanism to serialize concurrent calls so that only one logical thread executes on the server at any time. This mechanism is known as the single-threaded apartment (STA) model. Because calls are serialized, callers might be blocked for periods of time while the server is busy or is handling other calls on a background thread.  
+# <a name="threading-support-in-office"></a>Office의 스레딩 지원
+  이 항목에서는 Microsoft Office 개체 모델에서 스레딩 지 원하는 하는 방법에 대 한 정보를 제공 합니다. Office 개체 모델은 스레드로부터 안전 하지 하지만 Office 솔루션에서 여러 스레드를 작성 하려면 가능 합니다. Office 응용 프로그램은 서버 구성 요소 개체 모델 (COM). COM 클라이언트가 임의 스레드에서 COM 서버를 호출할 수 있습니다. 스레드로부터 안전 하지 않은 COM 서버에 대 한 하나의 논리 스레드가 언제 든 지 서버에서 실행 되도록 동시 호출을 serialize 하는 메커니즘을 제공 합니다. 이 메커니즘은 단일 스레드 아파트 (STA) 모델 이라고 합니다. 호출이 serialize 되므로 서버 사용 되 고 있거나 백그라운드 스레드에 대 한 다른 호출을 처리 하는 동안 기간에 대 한 호출자가 차단 될 수 있습니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## <a name="knowledge-required-when-using-multiple-threads"></a>Knowledge Required When Using Multiple Threads  
- To work with multiple threads, you must have at least basic knowledge of the following aspects of multithreading:  
+## <a name="knowledge-required-when-using-multiple-threads"></a>여러 스레드를 사용 하는 경우 필수 기술  
+ 여러 스레드를 사용 하려면 다음과 같은 측면을 기본적으로 알고 있어야 다중 스레딩:  
   
--   Windows APIs  
+-   Windows Api  
   
--   COM multithreaded concepts  
+-   COM 다중 스레드 개념  
   
--   Concurrency  
+-   동시성  
   
--   Synchronization  
+-   동기화  
   
--   Marshaling  
+-   마샬링  
   
- For general information about multithreading, see [Managed Threading](/dotnet/standard/threading/).  
+ 일반 정보에 대 한 다중 스레딩에 대 한 참조 [관리 되는 스레딩](/dotnet/standard/threading/)합니다.  
   
- Office runs in the main STA. Understanding the implications of this makes it possible to understand how to use multiple threads with Office.  
+ Office 주 STA에서 실행 이것의 의미를 이해 하면 Office와 함께 여러 스레드를 사용 하는 방법을 이해할 수 있습니다.  
   
-## <a name="basic-multithreading-scenario"></a>Basic Multithreading Scenario  
- Code in Office solutions always runs on the main UI thread. You might want to smooth out application performance by running a separate task on a background thread. The goal is to complete two tasks seemingly at once instead of one task followed by the other, which should result in smoother execution (the main reason to use multiple threads). For example, you might have your event code on the main Excel UI thread, and on a background thread you might run a task that gathers data from a server and updates cells in the Excel UI with the data from the server.  
+## <a name="basic-multithreading-scenario"></a>다중 스레딩 기본 시나리오  
+ Office 솔루션에서 코드는 항상 주 UI 스레드에서 실행 됩니다. 백그라운드 스레드에서 별도 작업을 실행 하 여 응용 프로그램 성능을 개선할 할 수 있습니다. 목표는 두 작업을 완료 겉보기 한 번에 하나 이상의 태스크 뒤에 다른 원활 하 게 실행 (다중 스레드 사용 하는 주요 이유)을 유발 하는 대신입니다. 예를 들어 주 Excel UI 스레드에서 이벤트 코드를 할 수 있습니다 및 백그라운드 스레드는 서버에서 데이터를 수집 하 고 서버에서 데이터와 Excel UI 셀을 업데이트 하는 작업을 실행할 수 있습니다.  
   
-## <a name="background-threads-that-call-into-the-office-object-model"></a>Background Threads That Call into the Office Object Model  
- When a background thread makes a call to the Office application, the call is automatically marshaled across the STA boundary. However, there is no guarantee that the Office application can handle the call at the time the background thread makes it. There are several possibilities:  
+## <a name="background-threads-that-call-into-the-office-object-model"></a>Office 개체 모델을 호출 하는 백그라운드 스레드  
+ 백그라운드 스레드 Office 응용 프로그램에 대 한 호출을 호출 자동으로 STA 경계를 넘어 마샬링됩니다. 그러나 보장이 없습니다 Office 응용 프로그램 시간에 백그라운드 스레드에서 호출을 처리할 수 있습니다. 일부의 가능성이 있습니다.  
   
-1.  The Office application must pump messages for the call to have the opportunity to enter. If it is doing heavy processing without yielding this could take time.  
+1.  Office 응용 프로그램에는 입력 수에 대 한 호출에 대 한 메시지 펌프 해야 합니다. 수행 중인 경우이 차이 계산 하지 않고 처리 작업이 너무 많은 시간이 걸릴 수 있습니다.  
   
-2.  If another logical thread is already in the apartment, the new thread cannot enter. This often happens when a logical thread enters the Office application and then makes a reentrant call back to the caller's apartment. The application is blocked waiting for that call to return.  
+2.  다른 논리 스레드 아파트에 이미 있으면 새 스레드를 입력할 수 없습니다. 논리 스레드 Office 응용 프로그램을 입력 하 고 다음 호출자의 아파트에 다시 재진입 호출을 수행 하는 경우에 종종 발생 합니다. 응용 프로그램은 해당 호출이 반환 될 때까지 기다리는 차단 됩니다.  
   
-3.  Excel might be in a state such that it cannot immediately handle an incoming call. For example, the Office application might be displaying a modal dialog.  
+3.  들어오는 호출을 즉시 처리할 수 없는 되도록 Excel는 상태일에서 수 있습니다. 예를 들어 Office 응용 프로그램에는 모달 대화 상자가 표시 될 수 있습니다.  
   
- For possibilities 2 and 3, COM provides the [IMessageFilter](http://msdn.microsoft.com/en-us/e12d48c0-5033-47a8-bdcd-e94c49857248) interface. If the server implements it, all calls enter through the [HandleIncomingCall](http://msdn.microsoft.com/en-us/7e31b518-ef4f-4bdd-b5c7-e1b16383a5be) method. For possibility 2, calls are automatically rejected. For possibility 3, the server can reject the call, depending on the circumstances. If the call is rejected, the caller must decide what to do. Normally, the caller implements [IMessageFilter](http://msdn.microsoft.com/en-us/e12d48c0-5033-47a8-bdcd-e94c49857248), in which case it would be notified of the rejection by the [RetryRejectedCall](http://msdn.microsoft.com/en-us/3f800819-2a21-4e46-ad15-f9594fac1a3d) method.  
+ COM은 한 비즈니스 가능성이 2와 3에 대 한 다음을 제공 합니다.는 [IMessageFilter](http://msdn.microsoft.com/en-us/e12d48c0-5033-47a8-bdcd-e94c49857248) 인터페이스입니다. 모든 호출을 통해 입력 서버를 구현 하는 경우는 [HandleIncomingCall](http://msdn.microsoft.com/en-us/7e31b518-ef4f-4bdd-b5c7-e1b16383a5be) 메서드. 2 가능성에 대 한 호출은 자동으로 거부 됩니다. 세 번째 서버는 상황에 따라 호출을 거부할 수 있습니다. 호출이 거부 될 경우 수행할 작업을 호출자에 게 결정 해야 합니다. 일반적으로 호출자에 게 구현 [IMessageFilter](http://msdn.microsoft.com/en-us/e12d48c0-5033-47a8-bdcd-e94c49857248),이 경우가 거부 알림을 받을 것는 [RetryRejectedCall](http://msdn.microsoft.com/en-us/3f800819-2a21-4e46-ad15-f9594fac1a3d) 메서드.  
   
- However, in the case of solutions created by using the Office development tools in Visual Studio, COM interop converts all rejected calls to a <xref:System.Runtime.InteropServices.COMException> ("The message filter indicated that the application is busy"). Whenever you make an object model call on a background thread, you must to be prepared to handle this exception. Typically, that involves retrying for a certain amount of time and then displaying a dialog. However, you can also create the background thread as STA and then register a message filter for that thread to handle this case.  
+ 그러나 경우 Visual Studio에서 Office 개발 도구를 사용 하 여 만든 솔루션, COM interop 변환에 대 한 모든 거부 된 호출을 <xref:System.Runtime.InteropServices.COMException> ("메시지 필터가 표시 응용 프로그램은 사용 중"). 개체 모델을 호출할 때마다 수행한 백그라운드 스레드에서이 예외를 처리 하도록 준비 해야 합니다. 일반적으로 특정 시간 동안 다시 시도 하 고 다음 대화 상자를 표시 합니다. 그러나 백그라운드 스레드를 STA로 만들 수도 하 고이 경우를 처리 하는 스레드에 대 한 메시지 필터를 등록할 수 있습니다.  
   
-## <a name="starting-the-thread-correctly"></a>Starting the Thread Correctly  
- When you create a new STA thread, set the apartment state to STA before you start the thread. The following code example demonstrates how to do this.  
+## <a name="starting-the-thread-correctly"></a>올바른 스레드 시작  
+ 새 STA 스레드를 만들 때에 스레드를 시작 하기 전에 아파트 상태를 STA로 설정 합니다. 다음 코드 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.  
   
- [!code-csharp[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/ThisWorkbook.cs#5)] [!code-vb[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/ThisWorkbook.vb#5)]  
+ [!code-csharp[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/ThisWorkbook.cs#5)]
+ [!code-vb[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/ThisWorkbook.vb#5)]  
   
- For more information, see [Managed Threading Best Practices](/dotnet/standard/threading/managed-threading-best-practices).  
+ 자세한 내용은 참조 [관리 되는 스레딩 유용한](/dotnet/standard/threading/managed-threading-best-practices)합니다.  
   
-## <a name="modeless-forms"></a>Modeless Forms  
- A modeless form allows some type of interaction with the application while the form is displayed. The user interacts with the form, and the form interacts with the application without closing. The Office object model supports managed modeless forms; however, they should not be used on a background thread.  
+## <a name="modeless-forms"></a>모덜리스 폼  
+ 모덜리스 폼 폼이 표시 하는 동안 일부 종류의 응용 프로그램과 상호 작용을 허용 합니다. 폼을와 상호 작용할 및 양식을 닫지 않고 응용 프로그램 상호 작용 합니다. Office 개체 모델에는 관리 되는 모덜리스 폼; 지원 그러나 백그라운드 스레드에서 사용 하지 않아야 합니다.  
   
-## <a name="see-also"></a>See Also  
- [Managed Threading](/dotnet/standard/threading/)  
- [Threading (C#)](/dotnet/csharp/programming-guide/concepts/threading/index) [Threading (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/threading/index)   
- [Using Threads and Threading](/dotnet/standard/threading/using-threads-and-threading)   
- [Designing and Creating Office Solutions](../vsto/designing-and-creating-office-solutions.md)  
+## <a name="see-also"></a>참고 항목  
+ [관리 되는 스레드](/dotnet/standard/threading/)  
+ [스레딩 (C#)](/dotnet/csharp/programming-guide/concepts/threading/index) [스레딩 (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/threading/index)   
+ [스레드 및 스레딩 사용](/dotnet/standard/threading/using-threads-and-threading)   
+ [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
   
   

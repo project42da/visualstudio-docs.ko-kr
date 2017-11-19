@@ -1,53 +1,53 @@
 ---
-title: "IDebugProgram2::GetProgramId | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::GetProgramId"
-helpviewer_keywords: 
-  - "IDebugProgram2::GetProgramId"
+title: IDebugProgram2::GetProgramId | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::GetProgramId
+helpviewer_keywords: IDebugProgram2::GetProgramId
 ms.assetid: 2c31c0aa-2b71-46c7-849c-356e237d26f8
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 094dde4330775b77a50ce98451fc9dafcd3bd23b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::GetProgramId
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugprogram2getprogramid"></a>IDebugProgram2::GetProgramId
 이 프로그램에 대 한 GUID를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT GetProgramId(   
-   GUID* pguidProgramId  
+```cpp  
+HRESULT GetProgramId(   
+   GUID* pguidProgramId  
 );  
 ```  
   
-```c#  
-int GetProgramId(   
-   out Guid pguidProgramId  
+```csharp  
+int GetProgramId(   
+   out Guid pguidProgramId  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pguidProgramId`  
- \[out\] 반환은 `GUID` 이 프로그램에 대 한.  
+ [out] 반환 된 `GUID` 이 프로그램에 대 한 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 디버그 엔진 \(DE\) 원래 전달 프로그램 식별자를 반환 해야 합니다는 [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) 또는 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 방법입니다.  구성 요소의 식별 프로그램을 디버거를 통해 있습니다.  
+## <a name="remarks"></a>설명  
+ 디버그 엔진 (DE)에서 원래 전달 된 프로그램 식별자를 반환 해야 합니다는 [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) 또는 [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md) 메서드. 이렇게 하면 프로그램의 식별 디버거 걸쳐 구성 요소입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
- [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)

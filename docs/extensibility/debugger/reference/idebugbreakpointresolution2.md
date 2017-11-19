@@ -1,54 +1,54 @@
 ---
-title: "IDebugBreakpointResolution2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBreakpointResolution2"
-helpviewer_keywords: 
-  - "IDebugBreakpointRequest2 인터페이스"
+title: IDebugBreakpointResolution2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugBreakpointResolution2
+helpviewer_keywords: IDebugBreakpointRequest2 interface
 ms.assetid: 451d5bce-b9c1-48ff-beaa-2b4c3e1ceea0
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 44de0372c1951a13061c4726f9a83d15fc31435d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBreakpointResolution2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 인터페이스에 바인딩된 중단점에 설명 하는 정보를 나타냅니다.  
+# <a name="idebugbreakpointresolution2"></a>IDebugBreakpointResolution2
+이 인터페이스는 바인딩된 중단점을 설명 하는 정보를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IDebugBreakpointResolution2 : IUnknown  
 ```  
   
-## 구현자 참고 사항  
- 디버그 엔진 \(DE\) 중단점에 대 한 지원의 일부로 서이 인터페이스를 구현합니다.  이 인터페이스는 사용자 중단점의 속성을 볼 때 디버그 세션 관리자를 사용 하 여 바인딩된 중단점에 대 한 설명을 제공 합니다.  
+## <a name="notes-for-implementers"></a>구현자 참고 사항  
+ 디버그 엔진 (DE) 중단점에 대 한 지원의 일부로이 인터페이스를 구현합니다. 이 인터페이스는 세션 디버그 관리자에는 중단점의 속성을 볼 때 사용 하는 바인딩된 중단점에 대 한 설명을 제공 합니다.  
   
-## 호출자에 대 한 참고 사항  
- 호출을 [GetBreakpointResolution](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md) 이 인터페이스를 반환 합니다.  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ 에 대 한 호출 [GetBreakpointResolution](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md) 이 인터페이스를 반환 합니다.  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDebugBreakpointResolution2`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDebugBreakpointResolution2`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)|이 해결 방법으로 표현 되는 중단점의 종류를 가져옵니다.|  
-|[GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)|이 중단점은 중단점 해상도 정보를 가져옵니다.|  
+|------------|-----------------|  
+|[GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)|이 해결 방법을 나타내는 중단점의 형식을 가져옵니다.|  
+|[GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)|이 중단점을 설명 하는 중단점 확인 정보를 가져옵니다.|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
- 네임 스페이스: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [GetBreakpointResolution](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)

@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Creating a Site Column Project Item with a Project Template, Part 2 | Microsoft Docs'
+title: "연습: 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기, 2 부 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,127 +12,123 @@ helpviewer_keywords:
 - SharePoint project items, creating template wizards
 - SharePoint development in Visual Studio, defining new project item types
 ms.assetid: da14207d-ac09-41ba-b387-c7f881b2a366
-caps.latest.revision: 54
-author: kempb
-ms.author: kempb
+caps.latest.revision: "54"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: cc33e878acb87deac73190e6b590b58f59ce8ffd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 82a3793920b1e35f9077ee68eaa2f18db07d2d04
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2"></a>Walkthrough: Creating a Site Column Project Item with a Project Template, Part 2
-  After you define a custom type of SharePoint project item and associate it with a project template in Visual Studio, you might also want to provide a wizard for the template. You can use the wizard to collect information from users when they use your template to create a new project that contains the project item. The information that you collect can be used to initialize the project item.  
+# <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2"></a>연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부
+  사용자 지정 형식의 SharePoint 프로젝트 항목을 정의 하 고 Visual Studio에서 프로젝트 템플릿을 사용 하 여 연결 하는 마법사를 제공 수도 있습니다. 서식 파일 프로젝트 항목이 포함 된 새 프로젝트를 만들려면 사용할 때 사용자 로부터 정보를 수집 하는 마법사를 사용할 수 있습니다. 수집 하는 정보는 프로젝트 항목을 초기화 데 사용할 수 있습니다.  
   
- In this walkthrough, you will add a wizard to the Site Column project template that is demonstrated in [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md). When a user creates a Site Column project, the wizard collects information about the site column (such as its base type and group) and adds this information to the Elements.xml file in the new project.  
+ 이 연습에 설명 된 사이트 열 프로젝트 템플릿에 마법사를 추가 합니다 [연습: 1 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)합니다. 사용자가 사이트 열 프로젝트를 만들 때 마법사는 사이트 열 (예: 기본 형식 및 그룹)에 대 한 정보를 수집 하 고이 정보를 새 프로젝트에서 Elements.xml 파일 추가.  
   
- This walkthrough demonstrates the following tasks:  
+ 이 연습에서는 다음 작업을 수행합니다.  
   
--   Creating a wizard for a custom SharePoint project item type that is associated with a project template.  
+-   프로젝트 템플릿에 연결 되어 있으므로 사용자 지정 SharePoint 프로젝트 항목 형식에 대 한 마법사 만들기  
   
--   Defining a custom wizard UI that resembles the built-in wizards for SharePoint projects in Visual Studio.  
+-   사용자 지정 마법사 Visual Studio에서 SharePoint 프로젝트에 대 한 기본 제공 마법사 유사한 UI를 정의 합니다.  
   
--   Creating two *SharePoint commands* that are used to call into the local SharePoint site while the wizard is running. SharePoint commands are methods that can be used by Visual Studio extensions to call APIs in the SharePoint server object model. For more information, see [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
+-   두 개의 만들기 *SharePoint 명령* 마법사를 실행 하는 동안 로컬 SharePoint 사이트를 호출 하는 데 사용 되는 합니다. SharePoint 명령은 SharePoint 서버 개체 모델의 Api를 호출 합니다. Visual Studio 확장 프로그램에서 사용할 수 있는 메서드입니다. 자세한 내용은 참조 [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)합니다.  
   
--   Using replaceable parameters to initialize SharePoint project files with data that you collect in the wizard.  
+-   대체 가능 매개 변수를 사용 하 여 마법사에서 수집한 데이터가 포함 된 SharePoint 프로젝트 파일을 초기화 합니다.  
   
--   Creating a new .snk file in each new Site Column project instance. This file is used to sign the project output so that the SharePoint solution assembly can be deployed to the global assembly cache.  
+-   각 새 사이트 열 프로젝트 개체의 새.snk 파일을 만듭니다. 이 파일은 프로젝트에서 SharePoint 솔루션 어셈블리를 전역 어셈블리 캐시에 배포할 수 있도록 출력에 서명 하려면 사용 합니다.  
   
--   Debugging and testing the wizard.  
+-   디버깅 하 고 마법사를 테스트 합니다.  
   
 > [!NOTE]  
->  You can download a sample that contains the completed projects, code, and other files for this walkthrough from the following location:  [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369).  
+>  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
   
-## <a name="prerequisites"></a>Prerequisites  
- To perform this walkthrough, you must first create the SiteColumnProjectItem solution by completing [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 수행 하려면 먼저 만들어야 합니다 SiteColumnProjectItem 솔루션을 완료 하 여 [연습: 1 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)합니다.  
   
- You also need the following components on the development computer to complete this walkthrough:  
+ 또한이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
   
--   Supported editions of Windows, SharePoint, and Visual Studio. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   지원 되는 Windows, SharePoint 및 Visual Studio의 버전입니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
   
--   The Visual Studio SDK. This walkthrough uses the **VSIX Project** template in the SDK to create a VSIX package to deploy the project item. For more information, see [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).  
+-   Visual Studio SDK입니다. 이 연습에서는 **VSIX 프로젝트** 프로젝트 항목을 배포 하려면 VSIX 패키지를 만드는 SDK에서 서식 파일입니다. 자세한 내용은 참조 [Visual Studio에서 SharePoint 도구 확장](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)합니다.  
   
- Knowledge of the following concepts is helpful, but not required, to complete the walkthrough:  
+ 다음 개념을 이해에 도움이 되지만 필수는 아니므로 연습을 완료 하는:  
   
--   Wizards for project and item templates in Visual Studio. For more information, see [How to: Use Wizards with Project Templates](../extensibility/how-to-use-wizards-with-project-templates.md) and the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface.  
+-   Visual Studio에서 프로젝트 및 항목 템플릿에 대 한 마법사를 제공 합니다. 자세한 내용은 참조 [하는 방법: 프로젝트 템플릿이 함께 제공 마법사 사용](../extensibility/how-to-use-wizards-with-project-templates.md) 및 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스입니다.  
   
--   Site columns in SharePoint. For more information, see [Columns](http://go.microsoft.com/fwlink/?LinkId=183547).  
+-   Sharepoint에서 사이트 열입니다. 자세한 내용은 참조 [열](http://go.microsoft.com/fwlink/?LinkId=183547)합니다.  
   
-##  <a name="wizardcomponents"></a> Understanding the Wizard Components  
- The wizard that is demonstrated in this walkthrough contains several components. The following table describes these components.  
+##  <a name="wizardcomponents"></a>마법사 구성 요소 이해  
+ 이 연습에 설명 된 마법사에는 몇 가지 구성 요소를 포함 합니다. 다음 표에서 이러한 구성 요소를 설명합니다.  
   
-|Component|Description|  
+|구성 요소|설명|  
 |---------------|-----------------|  
-|Wizard implementation|This is a class, named `SiteColumnProjectWizard`, which implements the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface. This interface defines the methods that Visual Studio calls when the wizard starts and finishes, and at certain times while the wizard runs.|  
-|Wizard UI|This is a WPF-based window, named `WizardWindow`. This window includes two user controls, named `Page1` and `Page2`. These user controls represent the two pages of the wizard.<br /><br /> In this walkthrough, the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> method of the wizard implementation displays the wizard UI.|  
-|Wizard data model|This is an intermediary class, named `SiteColumnWizardModel`, which provides a layer between the wizard UI and the wizard implementation. This sample uses this class to help abstract the wizard implementation and the wizard UI from each other; this class is not a required component of all wizards.<br /><br /> In this walkthrough, the wizard implementation passes a `SiteColumnWizardModel` object to the wizard window when it displays the wizard UI. The wizard UI uses methods of this object to save the values of controls in the UI, and to perform tasks like verifying that the input site URL is valid. After the user finishes the wizard, the wizard implementation uses the `SiteColumnWizardModel` object to determine the final state of the UI.|  
-|Project signing manager|This is a helper class, named `ProjectSigningManager`, which is used by the wizard implementation to create a new key.snk file in each new project instance.|  
-|SharePoint commands|These are methods that are used by the wizard data model to call into the local SharePoint site while the wizard is running. Because SharePoint commands must target the .NET Framework 3.5, these commands are implemented in a different assembly than the rest of the wizard code.|  
+|마법사 구현|이것은 라는 클래스를 `SiteColumnProjectWizard`를 구현 하는 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스입니다. 이 인터페이스는 Visual Studio에서 마법사를 시작 하 고 완료 되 면 실행 하는 경우 마법사 중 특정 시간에 호출 하는 메서드를 정의 합니다.|  
+|마법사 UI|이 라는 WPF 기반 창을 `WizardWindow`합니다. 이 창에 라는 두 개의 사용자 정의 컨트롤 `Page1` 및 `Page2`합니다. 이러한 사용자 정의 컨트롤 마법사의 두 페이지를 나타냅니다.<br /><br /> 이 연습에서는 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> 마법사 구현 방식의 마법사 UI가 표시 됩니다.|  
+|데이터 모델 마법사|이 클래스는 명명 된 중간 클래스 `SiteColumnWizardModel`, 마법사 UI 및 마법사 구현 사이의 계층을 제공 하는 합니다. 이 샘플이이 클래스를 사용 하 여 추상 마법사 구현 및 다른; 마법사 UI 도움말 이 클래스는 모든 마법사의 필수 구성 요소는 아닙니다.<br /><br /> 이 연습에서는 마법사 구현이 전달는 `SiteColumnWizardModel` 마법사 UI를 표시 하는 경우 마법사 창에 개체를 합니다. 마법사 UI이이 개체의 메서드를 사용 하 여 ui에서 컨트롤의 값을 저장 하 고 입력된 사이트 URL이 올바른지 확인 하는 등 작업을 수행 합니다. 마법사 구현이 사용 하 여 사용자가 마법사를 완료는 `SiteColumnWizardModel` UI의 최종 상태를 확인 하는 개체입니다.|  
+|프로젝트 서명 관리자|이 라는 도우미 클래스를 `ProjectSigningManager`, 인스턴스마다 새 프로젝트에에서 새 key.snk 파일을 만드는 마법사 구현에서 사용 되는 합니다.|  
+|SharePoint 명령|이 마법사 데이터 모델 마법사를 실행 하는 동안 로컬 SharePoint 사이트를 호출 하기 위해 사용 되는 메서드입니다. SharePoint 명령은.NET Framework 3.5를 대상 해야 하기 때문에이 명령은 마법사 코드의 나머지 부분 보다 다른 어셈블리에서 구현 됩니다.|  
   
-## <a name="creating-the-projects"></a>Creating the Projects  
- To complete this walkthrough, you need to add several projects to the SiteColumnProjectItem solution that you created in [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md):  
+## <a name="creating-the-projects"></a>프로젝트 만들기  
+ 이 연습을 완료 하려면 몇 가지 프로젝트에서 만든 SiteColumnProjectItem 솔루션에 추가할 [연습: 1 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md):  
   
--   A WPF project. You will implement the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface and define the wizard UI in this project.  
+-   WPF 프로젝트입니다. 구현 합니다는 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스를이 프로젝트에서 마법사 UI를 정의 합니다.  
   
--   A class library project that defines the SharePoint commands. This project must target the.NET Framework 3.5.  
+-   SharePoint 명령을 정의 하는 클래스 라이브러리 프로젝트. 이 프로젝트는 the.NET Framework 3.5를 대상 해야 합니다.  
   
- Start the walkthrough by creating the projects.  
+ 이 연습에서는 먼저 프로젝트를 만듭니다.  
   
-#### <a name="to-create-the-wpf-project"></a>To create the WPF project  
+#### <a name="to-create-the-wpf-project"></a>WPF 프로젝트를 만들려면  
   
-1.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], open the SiteColumnProjectItem solution.  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], SiteColumnProjectItem 솔루션을 엽니다.  
   
-2.  In **Solution Explorer**, open the shortcut menu for the **SiteColumnProjectItem** solution node, choose **Add**, and then choose **New Project**.  
+2.  **솔루션 탐색기**에 대 한 바로 가기 메뉴를 열고는 **SiteColumnProjectItem** 솔루션 노드를 선택 **추가**를 선택한 후 **새프로젝트**.  
   
-    > [!NOTE]  
-    >  In Visual Basic projects, the solution node appears only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
+3.  맨 위에 있는 **새 프로젝트 추가** 대화 상자에서 다음 사항을 확인 **.NET Framework 4.5** 버전의.NET Framework의 목록에서 선택 됩니다.  
   
-3.  At the top of the **Add New Project** dialog box, make sure that **.NET Framework 4.5** is chosen in the list of versions of the .NET Framework.  
+4.  확장 된 **Visual C#** 노드 또는 **Visual Basic** 노드를 선택 하 고는 **Windows** 노드.  
   
-4.  Expand the **Visual C#** node or the **Visual Basic** node, and choose the **Windows** node.  
+5.  프로젝트 템플릿 목록에서 선택 **WPF 사용자 정의 컨트롤 라이브러리**, 프로젝트 이름을 **ProjectTemplateWizard**를 선택한 후는 **확인** 단추입니다.  
   
-5.  In the list of project templates, choose **WPF User Control Library**, name the project **ProjectTemplateWizard**, and then choose the **OK** button.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **ProjectTemplateWizard** 프로젝트를 솔루션 기본 usercontrol1.xaml이 파일을 엽니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **ProjectTemplateWizard** project to the solution and opens the default UserControl1.xaml file.  
+6.  프로젝트에서 usercontrol1.xaml이 파일을 삭제 합니다.  
   
-6.  Delete the UserControl1.xaml file from the project.  
+#### <a name="to-create-the-sharepoint-commands-project"></a>SharePoint 명령은 프로젝트를 만들려면  
   
-#### <a name="to-create-the-sharepoint-commands-project"></a>To create the SharePoint commands project  
+1.  **솔루션 탐색기**SiteColumnProjectItem 솔루션 노드에 대 한 바로 가기 메뉴를 열고 **추가**를 선택한 후 **새 프로젝트**합니다.  
   
-1.  In **Solution Explorer**, open the shortcut menu for the SiteColumnProjectItem solution node, choose **Add**, and then choose **New Project**.  
+2.  맨 위에 있는 **새 프로젝트 추가** 대화 상자에서 선택 **.NET Framework 3.5** 버전의.NET Framework의 목록에 있습니다.  
   
-2.  At the top of the **Add New Project** dialog box, choose **.NET Framework 3.5** in the list of versions of the .NET Framework.  
+3.  확장 된 **Visual C#** 노드 또는 **Visual Basic** 노드를 선택한 후는 **Windows** 노드.  
   
-3.  Expand the **Visual C#** node or the  **Visual Basic** node, and then choose the **Windows** node.  
+4.  선택 된 **클래스 라이브러리** 서식 파일 프로젝트에서 프로젝트 이름을 **SharePointCommands**, 선택한 후는 **확인** 단추 합니다.  
   
-4.  Choose the **Class Library** project template, name the project **SharePointCommands**, and then choose the **OK** button.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **SharePointCommands** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **SharePointCommands** project to the solution and opens the default Class1 code file.  
+5.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
-5.  Delete the Class1 code file from the project.  
+## <a name="configuring-the-projects"></a>프로젝트 구성  
+ 마법사를 만들기 전에 일부 코드 파일 및 프로젝트에 어셈블리 참조를 추가 해야 합니다.  
   
-## <a name="configuring-the-projects"></a>Configuring the Projects  
- Before you create the wizard, you must add some code files and assembly references to the projects.  
+#### <a name="to-configure-the-wizard-project"></a>마법사 프로젝트를 구성 하려면  
   
-#### <a name="to-configure-the-wizard-project"></a>To configure the wizard project  
+1.  **솔루션 탐색기**에 대 한 바로 가기 메뉴를 열고는 **ProjectTemplateWizard** 프로젝트 노드를 선택한 후 **속성**합니다.  
   
-1.  In **Solution Explorer**, open the shortcut menu for the **ProjectTemplateWizard** project node, and then choose **Properties**.  
+2.  에 **프로젝트 디자이너**, 선택는 **응용 프로그램** Visual C# 프로젝트에 대 한 탭 또는 **컴파일** Visual Basic 프로젝트에 대 한 탭 합니다.  
   
-2.  In the **Project Designer**, choose the **Application** tab for a Visual C# project or the **Compile** tab for a Visual Basic project.  
+3.  대상 프레임 워크가.NET Framework 4.5,.NET Framework 4.5 클라이언트 프로필 아님로 설정 되어 있는지 확인 합니다.  
   
-3.  Make sure that the target framework is set to the .NET Framework 4.5, not the .NET Framework 4.5 Client Profile.  
+     자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.  
   
-     For more information, see [How to: Target a Version of the .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).  
+4.  에 대 한 바로 가기 메뉴를 열고는 **ProjectTemplateWizard** 프로젝트 **추가**를 선택한 후 **새 항목**합니다.  
   
-4.  Open the shortcut menu for the **ProjectTemplateWizard** project, choose **Add**, and then choose **New Item**.  
+5.  선택 된 **창 (WPF)** 항목, 항목 이름을 **WizardWindow**, 선택한 후는 **추가** 단추 합니다.  
   
-5.  Choose the **Window (WPF)** item, name the item **WizardWindow**, and then choose the **Add** button.  
+6.  두 개의 추가 **사용자 정의 컨트롤 (WPF)** 항목을 프로젝트에 이름을 지정 하 고 **1 페이지** 및 **페이지 2**합니다.  
   
-6.  Add two **User Control (WPF)** items to the project, and name them **Page1** and **Page2**.  
-  
-7.  Add four code files to the project, and give them the following names:  
+7.  4 개의 코드 파일을 프로젝트에 추가 하 고 다음의 이름을 지정:  
   
     -   SiteColumnProjectWizard  
   
@@ -144,9 +138,9 @@ ms.lasthandoff: 08/30/2017
   
     -   CommandIds  
   
-8.  Open the shortcut menu for the **ProjectTemplateWizard** project node, and then choose **Add Reference**.  
+8.  에 대 한 바로 가기 메뉴를 열고는 **ProjectTemplateWizard** 프로젝트 노드를 선택한 후 **참조 추가**합니다.  
   
-9. Expand the **Assemblies** node, choose the **Extensions** node, and then select the check boxes next to the following assemblies:  
+9. 확장의 **어셈블리** 노드를 선택는 **확장** 노드와 다음 어셈블리 옆의 확인란을 선택 합니다.  
   
     -   EnvDTE  
   
@@ -162,186 +156,191 @@ ms.lasthandoff: 08/30/2017
   
     -   Microsoft.VisualStudio.TemplateWizardInterface  
   
-10. Choose the **OK** button to add the assemblies to the project.  
+10. 선택 된 **확인** 프로젝트에 어셈블리를 추가 하는 단추입니다.  
   
-11. In **Solution Explorer**, under the **References** folder for the **ProjectTemplateWizard** project, choose **EnvDTE**.  
+11. **솔루션 탐색기**아래는 **참조** 에 대 한 폴더는 **ProjectTemplateWizard** 프로젝트 **EnvDTE**합니다.  
   
-    > [!NOTE]  
-    >  In Visual Basic projects, the **References** folder appears only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
+12. 에 **속성** 창의 값을 변경는 **Interop 형식 포함** 속성을 **False**합니다.  
   
-12. In the **Properties** window, change the value of the **Embed Interop Types** property to **False**.  
+13. Visual Basic 프로젝트를 개발 하는 경우 ProjectTemplateWizard 네임 스페이스를 프로젝트에 사용 하 여 가져올는 **프로젝트 디자이너**합니다.  
   
-13. If you're developing a Visual Basic project, import the ProjectTemplateWizard namespace into your project by using the **Project Designer**.  
+     자세한 내용은 참조 [하는 방법: 추가 또는 제거 가져온 네임 스페이스 &#40; Visual Basic &#41; ](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md).  
   
-     For more information, see [How to: Add or Remove Imported Namespaces &#40;Visual Basic&#41;](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md).  
+#### <a name="to-configure-the-sharepointcommands-project"></a>SharePointCommands 프로젝트를 구성 하려면  
   
-#### <a name="to-configure-the-sharepointcommands-project"></a>To configure the SharePointCommands project  
+1.  **솔루션 탐색기**, 선택는 **SharePointCommands** 프로젝트 노드.  
   
-1.  In **Solution Explorer**, choose the **SharePointCommands** project node.  
+2.  메뉴 모음에서 **프로젝트**, **기존 항목 추가**합니다.  
   
-2.  On the menu bar, choose **Project**,  **Add Existing Item**.  
+3.  에 **기존 항목 추가** 대화 상자, ProjectTemplateWizard 프로젝트에 대 한 코드 파일이 포함 된 폴더를 찾아 선택 합니다는 **CommandIds** 코드 파일.  
   
-3.  In the **Add Existing Item** dialog box, browse to the folder that contains the code files for the ProjectTemplateWizard project, and then choose the **CommandIds** code file.  
+4.  옆에 있는 화살표를 선택는 **추가** 단추를 선택한 후는 **링크로 추가** 나타나는 메뉴에서 옵션입니다.  
   
-4.  Choose the arrow next to the **Add** button, and then choose the **Add As Link** option on the menu that appears.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]코드 파일을 추가 하는 **SharePointCommands** 링크로 프로젝트입니다. 코드 파일에는 **ProjectTemplateWizard** 프로젝트 이지만 파일의 코드에도 컴파일된는 **SharePointCommands** 프로젝트.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the code file to the **SharePointCommands** project as a link. The code file is located in the **ProjectTemplateWizard** project, but the code in the file is also compiled in the **SharePointCommands** project.  
+5.  에 **SharePointCommands** 프로젝트에서 명령을 라고 하는 다른 코드 파일을 추가 합니다.  
   
-5.  In the **SharePointCommands** project, add another code file that's named Commands.  
+6.  SharePointCommands 프로젝트를 선택한 다음 메뉴 모음에서 메뉴 **프로젝트**, **참조 추가**합니다.  
   
-6.  Choose the SharePointCommands project, and then, on the menu bar, choose **Project**, **Add Reference**.  
-  
-7.  Expand the **Assemblies** node, choose the **Extensions** node, and then select the check boxes next to the following assemblies:  
+7.  확장의 **어셈블리** 노드를 선택는 **확장** 노드와 다음 어셈블리 옆의 확인란을 선택 합니다.  
   
     -   Microsoft.SharePoint  
   
     -   Microsoft.VisualStudio.SharePoint.Commands  
   
-8.  Choose the **OK** button to add the assemblies to the project.  
+8.  선택 된 **확인** 프로젝트에 어셈블리를 추가 하는 단추입니다.  
   
-## <a name="creating-the-wizard-model-signing-manager-and-sharepoint-command-ids"></a>Creating the Wizard Model, Signing Manager, and SharePoint Command IDs  
- Add code to the ProjectTemplateWizard project to implement the following components in the sample:  
+## <a name="creating-the-wizard-model-signing-manager-and-sharepoint-command-ids"></a>관리자 및 SharePoint 명령 Id 서명 마법사 모델 만들기  
+ 이 샘플에서 다음 구성 요소를 구현 하 ProjectTemplateWizard 프로젝트에 코드를 추가 합니다.  
   
--   The SharePoint command IDs. These strings identify the SharePoint commands that the wizard uses. Later in this walkthrough, you'll add code to the SharePointCommands project to implement the commands.  
+-   SharePoint 명령 Id입니다. 이러한 문자열에는 마법사를 사용 하는 SharePoint 명령 식별 합니다. 이 연습의 뒷부분에서 명령을 구현 하려면 SharePointCommands 프로젝트에 코드를 추가 합니다.  
   
--   The wizard data model.  
+-   마법사 데이터 모델입니다.  
   
--   The project signing manager.  
+-   프로젝트의 서명 관리자입니다.  
   
- For more information about these components, see [Understanding the Wizard Components](#wizardcomponents).  
+ 이러한 구성 요소에 대 한 자세한 내용은 참조 [마법사 구성 요소 이해](#wizardcomponents)합니다.  
   
-#### <a name="to-define-the-sharepoint-command-ids"></a>To define the SharePoint command IDs  
+#### <a name="to-define-the-sharepoint-command-ids"></a>SharePoint 명령 Id를 정의 하려면  
   
-1.  In the ProjectTemplateWizard project, open the CommandIds code file, and then replace the entire contents of this file with the following code.  
+1.  ProjectTemplateWizard 프로젝트에서 CommandIds 코드 파일을 연 후이 파일의 전체 내용을 다음 코드로 바꿉니다.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/commandids.cs#5)]  [!code-vb[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/commandids.vb#5)]  
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/commandids.cs#5)]
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/commandids.vb#5)]  
   
-#### <a name="to-create-the-wizard-model"></a>To create the wizard model  
+#### <a name="to-create-the-wizard-model"></a>마법사 모델을 만들려면  
   
-1.  Open the SiteColumnWizardModel code file, and replace the entire contents of this file with the following code.  
+1.  SiteColumnWizardModel 코드 파일을 열고이 파일의 전체 내용을 다음 코드로 바꿉니다.  
   
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.vb#6)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.cs#6)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.vb#6)]
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.cs#6)]  
   
-#### <a name="to-create-the-project-signing-manager"></a>To create the project signing manager  
+#### <a name="to-create-the-project-signing-manager"></a>프로젝트 서명 관리자를 만들려면  
   
-1.  Open the ProjectSigningManager code file, and then replace the entire contents of this file with the following code.  
+1.  ProjectSigningManager 코드 파일을 연 후이 파일의 전체 내용을 다음 코드로 바꿉니다.  
   
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.vb#8)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.cs#8)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.vb#8)]
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.cs#8)]  
   
-## <a name="creating-the-wizard-ui"></a>Creating the Wizard UI  
- Add XAML to define the UI of the wizard window and the two user controls that provide the UI for the wizard pages, and add code to define the behavior of the window and user controls. The wizard that you create resembles the built-in wizard for SharePoint projects in Visual Studio.  
+## <a name="creating-the-wizard-ui"></a>마법사 UI 만들기  
+ 마법사 창 및 마법사 페이지에 대 한 UI를 제공 하는 두 개의 사용자 정의 컨트롤의 UI를 정의 하는 XAML을 추가 하 고 창 및 사용자 정의 컨트롤의 동작을 정의 하는 코드를 추가 합니다. 마법사를 만들면 Visual Studio에서 SharePoint 프로젝트에 대 한 기본 제공 마법사와 유사 합니다.  
   
 > [!NOTE]  
->  In the following steps, your project will have some compile errors after you add XAML or code to your project. These errors will go away when you add code in later steps.  
+>  다음 단계에서는 프로젝트에 프로젝트에 XAML 또는 코드를 추가 하면 컴파일 오류가 발생 해야 합니다. 이러한 오류는 사라집니다 이후 단계에서 코드를 추가 합니다.  
   
-#### <a name="to-create-the-wizard-window-ui"></a>To create the wizard window UI  
+#### <a name="to-create-the-wizard-window-ui"></a>마법사 창을 UI를 만들려면  
   
-1.  In the ProjectTemplateWizard project, open the shortcut menu for the WizardWindow.xaml file, and then choose **Open** to open the window in the designer.  
+1.  ProjectTemplateWizard 프로젝트에서 WizardWindow.xaml 파일에 대 한 바로 가기 메뉴를 열고 선택한 후 **열고** 디자이너에서 창을 엽니다.  
   
-2.  In the XAML view of the designer, replace the current XAML with the following XAML. The XAML defines a UI that includes a heading, a <xref:System.Windows.Controls.Grid> that contains the wizard pages, and navigation buttons at the bottom of the window.  
+2.  디자이너의 XAML 뷰에서 XAML을 현재 다음 XAML로 바꿉니다. XAML 정의 제목을 포함 하는 UI는 <xref:System.Windows.Controls.Grid> 마법사 페이지를 포함 하 고 탐색 창의 맨 아래에 단추가 있습니다.  
   
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml#10)]  
   
     > [!NOTE]  
-    >  The window that's created in this XAML is derived from the <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> base class. When you add a custom WPF dialog box to Visual Studio, we recommend that you derive your dialog box from this class to have consistent styling with other Visual Studio dialog boxes and to avoid modal dialog issues that might otherwise occur. For more information, see [Creating and Managing Modal Dialog Boxes](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes).  
+    >  이 XAML에서 생성 된 창에서 파생 되는 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 기본 클래스입니다. Visual Studio에 사용자 지정 WPF 대화 상자를 추가 하는 경우에 다른 Visual Studio 대화 상자와 일관성 있는 스타일 하 고 발생할 수 있는 모달 대화 상자 문제를 방지 하기 위해이 클래스에서 대화 상자를 파생 하는 것이 좋습니다. 자세한 내용은 참조 [만들기 및 모달 대화 상자 관리](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes)합니다.  
   
-3.  If you're developing a Visual Basic project, remove the `ProjectTemplateWizard` namespace from the `WizardWindow` class name in the `x:Class` attribute of the `Window` element. This element is in the first line of the XAML. When you're done, the first line should look like the following example.  
+3.  Visual Basic 프로젝트를 개발 하는 경우 제거는 `ProjectTemplateWizard` 에서 네임 스페이스는 `WizardWindow` 클래스 이름에는 `x:Class` 특성은 `Window` 요소입니다. XAML의 첫 번째 줄에 있는이 요소가입니다. 완료 되 면 첫 번째 줄은 다음 예제에서는 같습니다.  
   
     ```  
     <Window x:Class="WizardWindow"  
     ```  
   
-4.  Open the code-behind file for the WizardWindow.xaml file.  
+4.  WizardWindow.xaml 파일에 대 한 코드 숨김 파일을 엽니다.  
   
-5.  Replace the contents of this file, except for the `using` declarations at the top of the file, with the following code.  
+5.  제외 하 고이 파일의 내용을 바꿉니다는 `using` 선언을 다음 코드로 파일 맨 위에 있는 합니다.  
   
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.vb#4)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.cs#4)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.vb#4)]
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.cs#4)]  
   
-#### <a name="to-create-the-first-wizard-page-ui"></a>To create the first wizard page UI  
+#### <a name="to-create-the-first-wizard-page-ui"></a>첫 번째 마법사 페이지 UI를 만들려면  
   
-1.  In the ProjectTemplateWizard project, open the shortcut menu for the Page1.xaml file, and then choose **Open** to open the user control in the designer.  
+1.  ProjectTemplateWizard 프로젝트에서 Page1.xaml 파일에 대 한 바로 가기 메뉴를 열고 선택한 후 **열고** 디자이너에서 사용자 컨트롤을 엽니다.  
   
-2.  In the XAML view of the designer, replace the current XAML with the following XAML. The XAML defines a UI that includes a text box where users can enter the URL of the local sites that they want to use for debugging. The UI also includes option buttons with which users can specify whether the project is sandboxed.  
+2.  디자이너의 XAML 뷰에서 XAML을 현재 다음 XAML로 바꿉니다. XAML은 사용자는 원하는 디버깅에 사용할 로컬 사이트의 URL을 입력할 수 있는 입력란을 포함 하는 UI를 정의 합니다. UI에 옵션 단추는 사용자가 프로젝트의 샌드박스 인지 지정할 수 포함 되어 있습니다.  
   
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#11](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page1.xaml#11)]  
   
-3.  If you are developing a Visual Basic project, remove the `ProjectTemplateWizard` namespace from the `Page1` class name in the `x:Class` attribute of the `UserControl` element. This is in the first line of the XAML. When you are done, the first line should look like the following.  
+3.  Visual Basic 프로젝트를 개발 하는 경우 제거는 `ProjectTemplateWizard` 에서 네임 스페이스는 `Page1` 클래스 이름에는 `x:Class` 특성은 `UserControl` 요소입니다. XAML의 첫 번째 줄에입니다. 완료 되 면 첫 번째 줄은 다음과 같습니다.  
   
     ```  
     <UserControl x:Class="Page1"  
     ```  
   
-4.  Replace the contents of the Page1.xaml file, except for the `using` declarations at the top of the file, with the following code.  
+4.  제외 하 고 Page1.xaml 파일의 내용을 대체는 `using` 선언을 다음 코드로 파일 맨 위에 있는 합니다.  
   
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.vb#2)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.cs#2)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.vb#2)]
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.cs#2)]  
   
-#### <a name="to-create-the-second-wizard-page-ui"></a>To create the second wizard page UI  
+#### <a name="to-create-the-second-wizard-page-ui"></a>두 번째 마법사 페이지 UI를 만들려면  
   
-1.  In the ProjectTemplateWizard project, open the shortcut menu for the Page2.xaml file, and then choose **Open**.  
+1.  ProjectTemplateWizard 프로젝트에서 Page2.xaml 파일에 대 한 바로 가기 메뉴를 열고 선택한 후 **열고**합니다.  
   
-     The user control opens in the designer.  
+     사용자 정의 컨트롤이 디자이너에서 열립니다.  
   
-2.  In the XAML view, replace the current XAML with the following XAML. The XAML defines a UI that includes a drop-down list for choosing the base type of the site column, a combo box for specifying a built-in or custom group under which to display the site column in the gallery, and a text box for specifying the name of the site column.  
+2.  XAML 뷰에서 현재 XAML을 다음 XAML로 바꿉니다. XAML은 사이트 열, 갤러리에서 사이트 열을 표시 하는 기본 제공 또는 사용자 지정 그룹을 지정 하기 위한 콤보 상자 및 사이트 열 이름을 지정 하는 텍스트 상자가의 기본 형식을 선택 하기 위한 드롭 다운 목록을 포함 하는 UI를 정의 합니다.  
   
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#12](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page2.xaml#12)]  
   
-3.  If you are developing a Visual Basic project, remove the `ProjectTemplateWizard` namespace from the `Page2` class name in the `x:Class` attribute of the `UserControl` element. This is in the first line of the XAML. When you are done, the first line should look like the following.  
+3.  Visual Basic 프로젝트를 개발 하는 경우 제거는 `ProjectTemplateWizard` 에서 네임 스페이스는 `Page2` 클래스 이름에는 `x:Class` 특성은 `UserControl` 요소입니다. XAML의 첫 번째 줄에입니다. 완료 되 면 첫 번째 줄은 다음과 같습니다.  
   
     ```  
     <UserControl x:Class="Page2"  
     ```  
   
-4.  Replace the contents of the code-behind file for the Page2.xaml file, except for the `using` declarations at the top of the file, with the following code.  
+4.  내용을 대체 합니다 Page2.xaml 파일에 대 한 코드 숨김 파일을 제외 하 고는 `using` 선언을 다음 코드로 파일 맨 위에 있는 합니다.  
   
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.vb#3)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.cs#3)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.vb#3)]
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.cs#3)]  
   
-## <a name="implementing-the-wizard"></a>Implementing the Wizard  
- Define the main functionality of the wizard by implementing the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface. This interface defines the methods that Visual Studio calls when the wizard starts and finishes, and at certain times while the wizard runs.  
+## <a name="implementing-the-wizard"></a>마법사를 구현합니다.  
+ 마법사의 주요 기능을 구현 하 여 정의 된 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스입니다. 이 인터페이스는 Visual Studio에서 마법사를 시작 하 고 완료 되 면 실행 하는 경우 마법사 중 특정 시간에 호출 하는 메서드를 정의 합니다.  
   
-#### <a name="to-implement-the-wizard"></a>To implement the wizard  
+#### <a name="to-implement-the-wizard"></a>마법사를 구현 하려면  
   
-1.  In the ProjectTemplateWizard project, open the SiteColumnProjectWizard code file.  
+1.  ProjectTemplateWizard 프로젝트에서 SiteColumnProjectWizard 코드 파일을 엽니다.  
   
-2.  Replace the entire contents of this file with the following code.  
+2.  이 파일의 전체 내용을 다음 코드로 바꿉니다.  
   
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.vb#7)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.cs#7)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.vb#7)]
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.cs#7)]  
   
-## <a name="creating-the-sharepoint-commands"></a>Creating the SharePoint Commands  
- Create two custom commands that call into the SharePoint server object model. One command determines whether the site URL that the user types in the wizard is valid. The other command gets all of the field types from the specified SharePoint site so that users can select which one to use as the basis for their new site column.  
+## <a name="creating-the-sharepoint-commands"></a>SharePoint 명령 만들기  
+ SharePoint 서버 개체 모델을 호출 하는 두 개의 사용자 지정 명령을 만듭니다. 하나의 명령 마법사에 사용자를 입력 하는 사이트 URL이 유효한 지 확인 합니다. 다른 명령이 사용자가 자신의 새 사이트 열에 대 한 기준으로 사용 하도록 선택할 수 있도록 모든 필드 형식 지정 된 SharePoint 사이트에서 가져옵니다.  
   
-#### <a name="to-define-the-sharepoint-commands"></a>To define the SharePoint commands  
+#### <a name="to-define-the-sharepoint-commands"></a>SharePoint 명령을 정의 하려면  
   
-1.  In the **SharePointCommands** project, open the Commands code file.  
+1.  에 **SharePointCommands** 프로젝트를 명령 코드 파일을 엽니다.  
   
-2.  Replace the entire contents of this file with the following code.  
+2.  이 파일의 전체 내용을 다음 코드로 바꿉니다.  
   
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/sharepointcommands/commands.vb#9)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/sharepointcommands/commands.cs#9)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/sharepointcommands/commands.vb#9)]
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/sharepointcommands/commands.cs#9)]  
   
-## <a name="checkpoint"></a>Checkpoint  
- At this point in the walkthrough, all the code for the wizard is now in the project. Build the project to make sure that it compiles without errors.  
+## <a name="checkpoint"></a>검사점  
+ 이 연습에서는 마법사에 대 한 모든 코드 프로젝트에 포함 되었습니다. 오류 없이 컴파일되는지 확인 하려면 프로젝트를 빌드하십시오.  
   
-#### <a name="to-build-your-project"></a>To build your project  
+#### <a name="to-build-your-project"></a>프로젝트를 빌드하려면  
   
-1.  On the menu bar, choose **Build**, **Build Solution**.  
+1.  메뉴 모음에서 **빌드**, **솔루션 빌드**를 선택합니다.  
   
-## <a name="removing-the-keysnk-file-from-the-project-template"></a>Removing the key.snk File from the Project Template  
- In [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md), the project template that you created contains a key.snk file that is used to sign each Site Column project instance. This key.snk file is no longer necessary because the wizard now generates a new key.snk file for each project. Remove the key.snk file from the project template and remove references to this file.  
+## <a name="removing-the-keysnk-file-from-the-project-template"></a>프로젝트 템플릿에서 key.snk 파일을 제거합니다.  
+ [연습: 1 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md), 사용자가 만든 프로젝트 템플릿을 사이트 열 프로젝트 인스턴스마다 서명에 사용 되는 key.snk 파일을 포함 합니다. 이 key.snk 파일은 마법사에는 이제 각 프로젝트에 대 한 새 key.snk 파일을 생성 하기 때문에 더 이상 필요 합니다. 프로젝트 템플릿에서 key.snk 파일을 제거 하 고이 파일에 대 한 참조를 제거 합니다.  
   
-#### <a name="to-remove-the-keysnk-file-from-the-project-template"></a>To remove the key.snk file from the project template  
+#### <a name="to-remove-the-keysnk-file-from-the-project-template"></a>프로젝트 템플릿에서 key.snk 파일을 제거 하려면  
   
-1.  In **Solution Explorer**, under the **SiteColumnProjectTemplate** node, open the shortcut menu for the **key.snk** file, and then choose **Delete**.  
+1.  **솔루션 탐색기**아래는 **SiteColumnProjectTemplate** 노드를에 대 한 바로 가기 메뉴를 열고는 **key.snk** 파일을 선택한 다음 선택 **삭제**.  
   
-2.  In the confirmation dialog box that appears, choose the **OK** button.  
+2.  나타나는 확인 대화 상자에서 선택 된 **확인** 단추입니다.  
   
-3.  Under the **SiteColumnProjectTemplate** node, open the SiteColumnProjectTemplate.vstemplate file, and then remove the following element from it.  
+3.  아래는 **SiteColumnProjectTemplate** 노드를 SiteColumnProjectTemplate.vstemplate 파일을 연 후 여기에서 다음 요소를 제거 합니다.  
   
     ```  
     <ProjectItem ReplaceParameters="false" TargetFileName="key.snk">key.snk</ProjectItem>  
     ```  
   
-4.  Save and close the file.  
+4.  파일을 저장한 후 닫습니다.  
   
-5.  Under the **SiteColumnProjectTemplate** node, open the ProjectTemplate.csproj or ProjectTemplate.vbproj file, and then remove the following `PropertyGroup` element from it.  
+5.  아래는 **SiteColumnProjectTemplate** 노드를 ProjectTemplate.csproj 또는 ProjectTemplate.vbproj 파일을 연 후 다음을 제거 `PropertyGroup` 여기에서 요소입니다.  
   
     ```  
     <PropertyGroup>  
@@ -350,56 +349,56 @@ ms.lasthandoff: 08/30/2017
     </PropertyGroup>  
     ```  
   
-6.  Remove the following `None` element.  
+6.  다음 제거 `None` 요소입니다.  
   
     ```  
     <None Include="key.snk" />  
     ```  
   
-7.  Save and close the file.  
+7.  파일을 저장한 후 닫습니다.  
   
-## <a name="associating-the-wizard-with-the-project-template"></a>Associating the Wizard with the Project Template  
- Now that you have implemented the wizard, you must associate the wizard with the **Site Column** project template. There are three procedures you must complete to do this:  
+## <a name="associating-the-wizard-with-the-project-template"></a>마법사 프로젝트 템플릿을 사용 하 여 연결  
+ 마법사를 구현 했으므로는 마법사를 연결 해야는 **사이트 열** 서식 파일 프로젝트. 이 작업을 수행 하기 위해 완료 해야 하는 세 가지 절차가 있습니다.  
   
-1.  Sign the wizard assembly with a strong name.  
+1.  강력한 이름의 마법사 어셈블리에 서명 합니다.  
   
-2.  Get the public key token for the wizard assembly.  
+2.  마법사 어셈블리에 대 한 공개 키를 토큰을 가져옵니다.  
   
-3.  Add a reference to the wizard assembly in the .vstemplate file for the **Site Column** project template.  
+3.  마법사 어셈블리에 대 한 참조에 대 한.vstemplate 파일에 추가 된 **사이트 열** 프로젝트 템플릿을 합니다.  
   
-#### <a name="to-sign-the-wizard-assembly-with-a-strong-name"></a>To sign the wizard assembly with a strong name  
+#### <a name="to-sign-the-wizard-assembly-with-a-strong-name"></a>강력한 이름의 마법사 어셈블리에 서명 하려면  
   
-1.  In **Solution Explorer**, open the shortcut menu for the **ProjectTemplateWizard** project, and then choose **Properties**.  
+1.  **솔루션 탐색기**에 대 한 바로 가기 메뉴를 열고는 **ProjectTemplateWizard** 프로젝트를 선택한 후 **속성**합니다.  
   
-2.  On the **Signing** tab, select the **Sign the assembly** check box.  
+2.  에 **서명** 탭을는 **어셈블리에 서명** 확인란 합니다.  
   
-3.  In the **Choose a strong name key file** list, choose **\<New...>**.  
+3.  에 **강력한 이름 키 파일 선택** 목록에서 선택  **\<새로 만들기 … >**합니다.  
   
-4.  In the **Create Strong Name Key** dialog box, enter a name for the new key file, clear the **Protect my key file with a password** check box, and then choose the **OK** button.  
+4.  에 **강력한 이름 키 만들기** 대화 상자 선택을 취소 새 키 파일에 대 한 이름을 입력 합니다는 **암호로 내 키 파일 보호** 확인란을 선택한 후는 **확인** 단추입니다.  
   
-5.  Open the shortcut menu for the **ProjectTemplateWizard** project, and then choose **Build** to create the ProjectTemplateWizard.dll file.  
+5.  에 대 한 바로 가기 메뉴를 열고는 **ProjectTemplateWizard** 프로젝트를 선택한 후 **빌드** ProjectTemplateWizard.dll 파일을 만들 수 있습니다.  
   
-#### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>To get the public key token for the wizard assembly  
+#### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>마법사 어셈블리에 대 한 공개 키 토큰 가져오려는  
   
-1.  On the **Start Menu**, choose **All Programs**, choose **Microsoft Visual Studio**, choose **Visual Studio Tools**, and then choose **Developer Command Prompt**.  
+1.  에 **시작 메뉴**, 선택 **모든 프로그램**, 선택 **Microsoft Visual Studio**, 선택 **Visual Studio Tools**, 선택 **개발자 명령 프롬프트**합니다.  
   
-     A Visual Studio Command Prompt window opens.  
+     Visual Studio 명령 프롬프트 창이 열립니다.  
   
-2.  Run the following command, replacing *PathToWizardAssembly* with the full path to the built ProjectTemplateWizard.dll assembly for the ProjectTemplateWizard project on your development computer:  
+2.  다음 명령을 실행 대체 *PathToWizardAssembly* 빌드된 ProjectTemplateWizard.dll 어셈블리 개발 컴퓨터에 ProjectTemplateWizard 프로젝트에 대 한 전체 경로:  
   
     ```  
     sn.exe -T PathToWizardAssembly  
     ```  
   
-     The public key token for the ProjectTemplateWizard.dll assembly is written to the Visual Studio Command Prompt window.  
+     ProjectTemplateWizard.dll 어셈블리에 대 한 공개 키 토큰은 Visual Studio 명령 프롬프트 창에 기록 됩니다.  
   
-3.  Keep the Visual Studio Command Prompt window open. You will need the public key token during the next procedure.  
+3.  Visual Studio 명령 프롬프트 창을 계속 열어둡니다. 다음 절차 중 공개 키 토큰이 필요 합니다.  
   
-#### <a name="to-add-a-reference-to-the-wizard-assembly-in-the-vstemplate-file"></a>To add a reference to the wizard assembly in the .vstemplate file  
+#### <a name="to-add-a-reference-to-the-wizard-assembly-in-the-vstemplate-file"></a>.Vstemplate 파일에 마법사 어셈블리에 대 한 참조를 추가 하려면  
   
-1.  In **Solution Explorer**, expand the **SiteColumnProjectTemplate** project node and open the SiteColumnProjectTemplate.vstemplate file.  
+1.  **솔루션 탐색기**를 확장 하 고는 **SiteColumnProjectTemplate** 프로젝트 노드 및 SiteColumnProjectTemplate.vstemplate 파일을 엽니다.  
   
-2.  Near the end of the file, add the following `WizardExtension` element between the `</TemplateContent>` and `</VSTemplate>` tags. Replace the *your token* value of the `PublicKeyToken` attribute with the public key token that you obtained in the previous procedure.  
+2.  파일의 끝에 다음 추가 `WizardExtension` 사이 요소는 `</TemplateContent>` 및 `</VSTemplate>` 태그입니다. 대체는 *토큰* 의 값은 `PublicKeyToken` 이전 절차에서 가져온 공개 키 토큰을 사용 하 여 특성입니다.  
   
     ```  
     <WizardExtension>  
@@ -408,18 +407,18 @@ ms.lasthandoff: 08/30/2017
     </WizardExtension>  
     ```  
   
-     For more information about the `WizardExtension` element, see [WizardExtension Element &#40;Visual Studio Templates&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).  
+     에 대 한 자세한 내용은 `WizardExtension` 요소 참조 [WizardExtension 요소 &#40; Visual Studio 서식 파일 &#41; ](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).  
   
-3.  Save and close the file.  
+3.  파일을 저장한 후 닫습니다.  
   
-## <a name="adding-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>Adding Replaceable Parameters to the Elements.xml File in the Project Template  
- Add several replaceable parameters to the Elements.xml file in the SiteColumnProjectTemplate project. These parameters are initialized in the `RunStarted` method in the `SiteColumnProjectWizard` class that you defined earlier. When a user creates a Site Column project, Visual Studio automatically replaces these parameters in the Elements.xml file in the new project with the values that they specified in the wizard.  
+## <a name="adding-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>프로젝트 템플릿에 있는 Elements.xml 파일에 대체 가능 매개 변수를 추가합니다.  
+ Elements.xml 파일 SiteColumnProjectTemplate 프로젝트에 여러 개의 대체 가능 매개 변수를 추가 합니다. 이러한 매개 변수에서 초기화 되는 `RunStarted` 에서 메서드는 `SiteColumnProjectWizard` 앞에서 정의한 클래스입니다. 사용자가 사이트 열 프로젝트를 만들 때 Visual Studio는 자동으로 새 프로젝트에서 Elements.xml 파일에서 이러한 매개 변수를 마법사에서 지정한 값으로 바꿉니다.  
   
- A replaceable parameter is a token that begins and ends with the dollar sign ($) character. In addition to defining your own replaceable parameters, you can use built-in parameters that are defined and initialized by the SharePoint project system. For more information, see [Replaceable Parameters](../sharepoint/replaceable-parameters.md).  
+ 대체 가능 매개 변수는 시작 하 고 달러 기호 ($) 문자로 끝나는 토큰입니다. 사용자 고유의 대체 가능 매개 변수를 정의 하는 것 외에도 정의 되어 있고 SharePoint 프로젝트 시스템에 의해 초기화 되는 기본 제공 매개 변수를 사용할 수 있습니다. 자세한 내용은 참조 [대체 가능 매개 변수](../sharepoint/replaceable-parameters.md)합니다.  
   
-#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>To add replaceable parameters to the Elements.xml file  
+#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>Elements.xml 파일에 대체 가능 매개 변수를 추가 하려면  
   
-1.  In the SiteColumnProjectTemplate project, replace the contents of the Elements.xml file with the following XML.  
+1.  SiteColumnProjectTemplate 프로젝트에서 Elements.xml 파일의 내용을 다음 XML로 대체 합니다.  
   
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -433,121 +432,121 @@ ms.lasthandoff: 08/30/2017
     </Elements>  
     ```  
   
-     The new XML changes the values of the `Name`, `DisplayName`, `Type`, and `Group` attributes to custom replaceable parameters.  
+     값을 변경 하는 새 XML는 `Name`, `DisplayName`, `Type`, 및 `Group` 특성을 사용자 지정 대체 가능 매개 변수입니다.  
   
-2.  Save and close the file.  
+2.  파일을 저장한 후 닫습니다.  
   
-## <a name="adding-the-wizard-to-the-vsix-package"></a>Adding the Wizard to the VSIX Package  
- To deploy the wizard with the VSIX package that contains the Site Column project template, add references to the wizard project and the SharePoint commands project to the source.extension.vsixmanifest file in the VSIX project.  
+## <a name="adding-the-wizard-to-the-vsix-package"></a>VSIX 패키지를 마법사 추가  
+ 마법사는 사이트 열 프로젝트 템플릿이 포함 하는 VSIX 패키지를 배포 하려면 VSIX 프로젝트에서 source.extension.vsixmanifest 파일을 마법사 프로젝트와 SharePoint 명령 프로젝트에 대 한 참조를 추가 합니다.  
   
-#### <a name="to-add-the-wizard-to-the-vsix-package"></a>To add the wizard to the VSIX package  
+#### <a name="to-add-the-wizard-to-the-vsix-package"></a>마법사는 VSIX 패키지를 추가 하려면  
   
-1.  In **Solution Explorer**, in the **SiteColumnProjectItem** project, open the shortcut menu for the **source.extension.vsixmanifest** file, and then choose **Open**.  
+1.  **솔루션 탐색기**에 **SiteColumnProjectItem** 프로젝트에 대 한 바로 가기 메뉴를 열고는 **source.extension.vsixmanifest** 파일을 선택한 후 **열려**합니다.  
   
-     Visual Studio opens the file in the manifest editor.  
+     Visual Studio 매니페스트 편집기에서 파일을 엽니다.  
   
-2.  On the **Assets** tab of the editor, choose the **New** button.  
+2.  에 **자산** 탭 편집기의 선택은 **새로 만들기** 단추입니다.  
   
-     The **Add New Asset** dialog box opens.  
+     **새 자산 추가** 대화 상자가 열립니다.  
   
-3.  In the **Type** list, choose **Microsoft.VisualStudio.Assembly**.  
+3.  에 **형식** 목록에서 선택 **Microsoft.VisualStudio.Assembly**합니다.  
   
-4.  In the **Source** list, choose **A project in current solution**.  
+4.  에 **소스** 목록에서 선택 **현재 솔루션의 프로젝트**합니다.  
   
-5.  In the **Project** list, choose **ProjectTemplateWizard**, and then choose the **OK** button.  
+5.  에 **프로젝트** 목록에서 선택 **ProjectTemplateWizard**를 선택한 후는 **확인** 단추입니다.  
   
-6.  On the **Assets** tab of the editor, choose the **New** button again.  
+6.  에 **자산** 탭 편집기의 선택은 **새로** 단추를 다시 합니다.  
   
-     The **Add New Asset** dialog box opens.  
+     **새 자산 추가** 대화 상자가 열립니다.  
   
-7.  In the **Type** list, enter **SharePoint.Commands.v4**.  
+7.  에 **형식** 목록에서 입력 **SharePoint.Commands.v4**합니다.  
   
-8.  In the **Source** list, choose **A project in current solution**.  
+8.  에 **소스** 목록에서 선택 **현재 솔루션의 프로젝트**합니다.  
   
-9. In the **Project** list, choose the **SharePointCommands** project, and then choose the **OK** button.  
+9. 에 **프로젝트** 목록에서 선택 된 **SharePointCommands** 프로젝트를 선택한 후는 **확인** 단추입니다.  
   
-10. On the menu bar, choose **Build**, **Build Solution**, and then make sure that the solution builds without errors.  
+10. 메뉴 모음에서 **빌드**, **솔루션 빌드**, 솔루션이 오류 없이 빌드되는지 확인 합니다.  
   
-## <a name="testing-the-wizard"></a>Testing the Wizard  
- You are now ready to test the wizard. First, start debugging the SiteColumnProjectItem solution in the experimental instance of Visual Studio. Then, test the wizard for the Site Column project in the experimental instance of Visual Studio. Finally, build and run the project to verify that the site column works as expected.  
+## <a name="testing-the-wizard"></a>마법사를 테스트합니다.  
+ 이제 마법사를 테스트할 준비가 되었습니다. 먼저 Visual Studio의 실험적 인스턴스에서 SiteColumnProjectItem 솔루션 디버깅을 시작 합니다. 그런 다음 Visual Studio의 실험적 인스턴스에서 사이트 열 프로젝트에 대 한 마법사를 테스트 합니다. 마지막으로, 빌드 및 사이트 열이 예상 대로 작동 하는지 확인 하기 위해 프로젝트를 실행 합니다.  
   
-#### <a name="to-start-debugging-the-solution"></a>To start debugging the solution  
+#### <a name="to-start-debugging-the-solution"></a>솔루션 디버깅을 시작 하려면  
   
-1.  Restart Visual Studio with administrative credentials, and then open the SiteColumnProjectItem solution.  
+1.  관리 자격 증명으로 Visual Studio를 다시 시작 하 고 SiteColumnProjectItem 솔루션을 엽니다.  
   
-2.  In the ProjectTemplateWizard project, open the SiteColumnProjectWizard code file, and then add a breakpoint to the first line of code in the `RunStarted` method.  
+2.  ProjectTemplateWizard 프로젝트에서 SiteColumnProjectWizard 코드 파일을 열고 다음 코드의 첫 번째 줄에 중단점을 추가 `RunStarted` 메서드.  
   
-3.  On the menu bar, choose **Debug**, **Exceptions**.  
+3.  메뉴 모음에서 **디버그**, **예외**합니다.  
   
-4.  In the **Exceptions** dialog box, make sure that the **Thrown** and **User-unhandled** check boxes for **Common Language Runtime Exceptions** are cleared, and then choose the **OK** button.  
+4.  에 **예외** 대화 상자에서 다음 사항을 확인는 **throw 됨** 및 **사용자가 처리** 에 대 한 확인란 **공용 언어 런타임 예외**이 삭제 되 고 선택 합니다는 **확인** 단추입니다.  
   
-5.  Start debugging by choosing the **F5** key or, on the menu bar, choosing **Debug**, **Start Debugging**.  
+5.  선택 하 여 디버깅을 시작는 **F5** 키 또는 메뉴 모음 선택에서 **디버그**, **디버깅 시작**합니다.  
   
-     Visual Studio installs the extension to %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Site Column\1.0 and starts an experimental instance of Visual Studio. You'll test the project item in this instance of Visual Studio.  
+     Visual Studio에서는 %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Site Column\1.0에 확장을 설치 하 고 Visual Studio의 실험적 인스턴스를 시작 합니다. Visual Studio의이 인스턴스에 있는 프로젝트 항목을 테스트 합니다.  
   
-#### <a name="to-test-the-wizard-in-visual-studio"></a>To test the wizard in Visual Studio  
+#### <a name="to-test-the-wizard-in-visual-studio"></a>Visual Studio에서 마법사를 테스트 하려면  
   
-1.  In the experimental instance of Visual Studio, on the menu bar, choose **File**, **New**, **Project**.  
+1.  메뉴 모음에서 Visual Studio의 실험적 인스턴스에서 선택 **파일**, **새로**, **프로젝트**합니다.  
   
-2.  Expand the **Visual C#** node or the **Visual Basic** node (depending on the language that your project template supports), expand the **SharePoint** node, and then choose the **2010** node.  
+2.  확장은 **Visual C#** 노드 또는 **Visual Basic** 노드 (언어에 따라 프로젝트 템플릿은 지원)를 확장 하 고는 **SharePoint** 노드를 선택한 후는 **2010** 노드.  
   
-3.  In the list of project templates, choose **Site Column**, name the project **SiteColumnWizardTest**, and then choose the **OK** button.  
+3.  프로젝트 템플릿 목록에서 선택 **사이트 열**, 프로젝트 이름을 **SiteColumnWizardTest**를 선택한 후는 **확인** 단추입니다.  
   
-4.  Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `RunStarted` method.  
+4.  Visual Studio의 다른 인스턴스에서 코드에서 이전에 설정한 중단점에서 중지 확인는 `RunStarted` 메서드.  
   
-5.  Continue to debug the project by choosing the **F5** key or, on the menu bar, choosing **Debug**, **Continue**.  
+5.  프로젝트를 선택 하 여 디버깅을 계속는 **F5** 키 또는 메뉴 모음 선택에서 **디버그**, **계속**합니다.  
   
-6.  In the **SharePoint Customization Wizard**, enter the URL of the site that you want to use for debugging, and then choose the **Next** button.  
+6.  에 **SharePoint 사용자 지정 마법사**, 디버깅을 위해 사용 하려는 사이트의 URL을 입력 한 다음 선택에서 **다음** 단추입니다.  
   
-7.  In the second page of the **SharePoint Customization Wizard**, make the following selections:  
+7.  두 번째 페이지에는 **SharePoint 사용자 지정 마법사**, 다음을 선택 합니다.  
   
-    -   In the **Type** list, choose **Boolean**.  
+    -   에 **형식** 목록에서 선택 **부울**합니다.  
   
-    -   In the **Group** list, choose **Custom Yes/No Columns**.  
+    -   에 **그룹** 목록에서 선택 **사용자 지정 예/아니요 열**합니다.  
   
-    -   In the **Name** box, enter **My Yes/No Column**, and then choose the **Finish** button.  
+    -   에 **이름** 상자에 입력 **내 예/아니요 열**, 선택한 후는 **마침** 단추입니다.  
   
-     In **Solution Explorer**, a new project appears and contains a project item that's named **Field1**, and Visual Studio opens the project's Elements.xml file in the editor.  
+     **솔루션 탐색기**, 새 프로젝트에 표시 되 고 명명 된 프로젝트 항목이 포함 **Field1**, Visual Studio 편집기에서 프로젝트의 Elements.xml 파일을 엽니다.  
   
-8.  Verify that Elements.xml contains the values that you specified in the wizard.  
+8.  Elements.xml 마법사에서 지정한 값이 들어 있는지 확인 합니다.  
   
-#### <a name="to-test-the-site-column-in-sharepoint"></a>To test the site column in SharePoint  
+#### <a name="to-test-the-site-column-in-sharepoint"></a>Sharepoint에서 사이트 열을 테스트 하려면  
   
-1.  In the experimental instance of Visual Studio, choose the F5 key.  
+1.  Visual Studio의 실험적 인스턴스에서 F5 키를 선택 합니다.  
   
-     The site column is packaged and deployed to the SharePoint site that the **Site URL** property of the project specifies. The web browser opens to the default page of this site.  
+     사이트 열은 패키지 하 고 SharePoint에 배포 된 사이트는 **사이트 URL** 프로젝트의 속성을 지정 합니다. 이 사이트의 기본 페이지에는 웹 브라우저를 엽니다.  
   
     > [!NOTE]  
-    >  If the **Script Debugging Disabled** dialog box appears, choose the **Yes** button to continue to debug the project.  
+    >  경우는 **스크립트 디버깅 사용 안 함** 선택 대화 상자가 나타나면는 **예** 프로젝트 디버깅을 계속 하려면는 단추입니다.  
   
-2.  On the **Site Actions** menu, choose **Site Settings**.  
+2.  에 **사이트 작업** 메뉴 선택 **사이트 설정**합니다.  
   
-3.  On the Site Settings page, under **Galleries**, choose the **Site columns** link.  
+3.  사이트 설정 페이지에서 아래 **갤러리**, 선택는 **열 사이트** 링크 합니다.  
   
-4.  In the list of site columns, verify that a **Custom Yes/No Columns** group contains a column that's named **My Yes/No Column**, and then close the web browser.  
+4.  사이트 열 목록에 있는지를 확인 한 **사용자 지정 예/아니요 열** 그룹 이라는 열이 포함 되어 **내 예/아니요 열**, 웹 브라우저를 닫습니다.  
   
-## <a name="cleaning-up-the-development-computer"></a>Cleaning up the Development Computer  
- After you finish testing the project item, remove the project template from the experimental instance of Visual Studio.  
+## <a name="cleaning-up-the-development-computer"></a>개발 컴퓨터를 정리합니다.  
+ 프로젝트 항목의 테스트를 마친 후 프로젝트 템플릿을 Visual Studio의 실험적 인스턴스에서 제거 합니다.  
   
-#### <a name="to-clean-up-the-development-computer"></a>To clean up the development computer  
+#### <a name="to-clean-up-the-development-computer"></a>개발 컴퓨터를 정리 하려면  
   
-1.  In the experimental instance of Visual Studio, on the menu bar, choose **Tools**, **Extensions and Updates**.  
+1.  메뉴 모음에서 Visual Studio의 실험적 인스턴스에서 선택 **도구**, **확장명 및 업데이트**합니다.  
   
-     The **Extensions and Updates** dialog box opens.  
+     **확장명 및 업데이트** 대화 상자가 열립니다.  
   
-2.  In the list of extensions, choose **Site Column**, and then choose the **Uninstall** button.  
+2.  확장의 목록에서 선택 **사이트 열**를 선택한 후는 **제거** 단추입니다.  
   
-3.  In the dialog box that appears, choose the **Yes** button to confirm that you want to uninstall the extension, and then choose the **Restart Now** button to complete the uninstallation.  
+3.  표시 되는 대화 상자에서 선택은 **예** 단추에서 확장을 제거 하 고 다음을 선택 하도록 확인할 수는 **지금 다시 시작** 단추 제거를 완료 합니다.  
   
-4.  Close both the experimental instance of Visual Studio and the instance in which the CustomActionProjectItem solution is open.  
+4.  Visual Studio의 실험적 인스턴스에서 CustomActionProjectItem 솔루션 열기의 인스턴스를 모두 닫습니다.  
   
-     For information about how to deploy [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] extensions, see [Shipping Visual Studio Extensions](/visualstudio/extensibility/shipping-visual-studio-extensions).  
+     배포 하는 방법에 대 한 내용은 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 확장 참조 [Visual Studio 확장명 전달](/visualstudio/extensibility/shipping-visual-studio-extensions)합니다.  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)   
- [Defining Custom SharePoint Project Item Types](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
- [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
- [Visual Studio Template Schema Reference](/visualstudio/extensibility/visual-studio-template-schema-reference)   
- [How to: Use Wizards with Project Templates](../extensibility/how-to-use-wizards-with-project-templates.md)  
+## <a name="see-also"></a>참고 항목  
+ [연습: 1 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)   
+ [사용자 지정 SharePoint 프로젝트 항목 형식 정의](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
+ [SharePoint 프로젝트 항목에 대 한 프로젝트 템플릿과 항목 템플릿 만들기](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
+ [Visual Studio 템플릿 스키마 참조](/visualstudio/extensibility/visual-studio-template-schema-reference)   
+ [방법: 프로젝트 템플릿에 마법사 사용](../extensibility/how-to-use-wizards-with-project-templates.md)  
   
   

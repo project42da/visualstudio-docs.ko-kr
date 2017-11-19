@@ -1,59 +1,59 @@
 ---
-title: "IEnumDebugObjects::Next | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugObjects::Next"
-helpviewer_keywords: 
-  - "IEnumDebugObjects::Next 메서드"
+title: IEnumDebugObjects::Next | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugObjects::Next
+helpviewer_keywords: IEnumDebugObjects::Next method
 ms.assetid: e54c3055-6030-4dc9-9f7a-5e3ce75f252f
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 8b57634ffd0634c7dada2f91827605b03d5cd3f7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugObjects::Next
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 요소는 다음 집합 열거에서 반환 됩니다.  
+# <a name="ienumdebugobjectsnext"></a>IEnumDebugObjects::Next
+이 메서드는 열거형에서 다음 요소 집합을 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 HRESULT Next(  
-   ULONG          celt,  
-   IDebugObject** rgelt,  
-   ULONG*         pceltFetched  
+   ULONG          celt,  
+   IDebugObject** rgelt,  
+   ULONG*         pceltFetched  
 );  
 ```  
   
-```c#  
+```csharp  
 int Next(  
-   uint           celt,  
-   IDebugObject[] rgelt,  
-   ref uint       pceltFetched  
+   uint           celt,  
+   IDebugObject[] rgelt,  
+   ref uint       pceltFetched  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `celt`  
- \[in\] 검색할 요소의 수입니다.  도의 최대 크기를 지정은 `rgelt` 배열입니다.  
+ [in] 검색할 요소의 수입니다. 또한의 최대 크기를 지정 된 `rgelt` 배열입니다.  
   
  `rgelt`  
- \[in, out\] 배열 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 요소를 채울 수 있도록 합니다.  
+ [out에서] 배열 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 요소를 채워야 합니다.  
   
  `pceltFetched`  
- \[out\] 실제로 반환 된 요소 수를 반환 합니다. `rgelt`.  
+ [out] 에 실제로 반환 된 요소의 수를 반환 `rgelt`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`.  반환 `S_FALSE` 미만인 경우 요청 된 수의 요소를 반환할 수 없습니다. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 요소 요청 된 수보다 적은지 반환 될 수 있습니다; 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

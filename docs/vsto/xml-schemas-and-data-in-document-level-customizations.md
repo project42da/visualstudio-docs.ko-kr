@@ -1,12 +1,10 @@
 ---
-title: XML Schemas and Data in Document-Level Customizations | Microsoft Docs
+title: "문서 수준 사용자 지정에서 데이터 및 XML 스키마 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,74 +17,74 @@ helpviewer_keywords:
 - XML schemas [Office development in Visual Studio], about XML schemas and data
 - Office development in Visual Studio, XML
 ms.assetid: 74bd5773-6cb0-44fb-9738-75e2f2c6e48d
-caps.latest.revision: 28
-author: kempb
-ms.author: kempb
+caps.latest.revision: "28"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 3ad424ab226121850e473b8e13ffee305fad88eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: d53a17484a350e361459f5c975ed3090779332bd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="xml-schemas-and-data-in-document-level-customizations"></a>XML Schemas and Data in Document-Level Customizations
-  **Important** The information set out in this topic regarding Microsoft Word is presented exclusively for the benefit and use of individuals and organizations who are located outside the United States and its territories or who are using, or developing programs that run on, Microsoft Word products that were licensed by Microsoft before January 2010, when Microsoft removed an implementation of particular functionality related to custom XML from Microsoft Word. This information regarding Microsoft Word may not be read or used by individuals or organizations in the United States or its territories who are using, or developing programs that run on, Microsoft Word products that were licensed by Microsoft after January 10, 2010; those products will not behave the same as products licensed before that date or purchased and licensed for use outside the United States.  
+# <a name="xml-schemas-and-data-in-document-level-customizations"></a>문서 수준 사용자 지정의 XML 스키마 및 데이터
+  **중요 한** Microsoft Word에 대 한이 항목에 정보는 이점과 개인 및 United States 및 해당 지역 외부에 있는 사용자 또는 사용자를 사용 하는 조직의 사용에 대해 독점적으로 발표 된 또는 개발 실행 되는 프로그램, Microsoft Word 2010 년 1 월, Microsoft 구현의 특정 기능을 제거 하는 경우 하기 전에 Microsoft에서 사용이 허가 된 제품에서에서와 관련 된 사용자 지정 XML Microsoft Word입니다. Microsoft Word에 대 한이 정보를 읽거나 개인 이나 조직에는 미국이 나 Microsoft Word 2010 년 1 월 10 일 이후에 Microsoft에서 사용이 허가 된 제품에서 실행 되는 프로그램을 개발 하거나를 사용 하는 사용자의 지역에서 사용 될 수 있습니다. ; 이러한 제품 해당 날짜 이전에 사용이 허가 또는 구입 해야 하 고 미국 이외의 용도로 사용이 허가 된 제품와 동일 하 게 작동 하지 않습니다.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- Microsoft Office Excel and Microsoft Office Word provide the capability to map schemas to your documents. This feature can simplify importing and exporting XML data in and out of the document.  
+ Microsoft Office Excel 및 Microsoft Office Word 문서에 스키마 매핑 수 있는 기능을 제공 합니다. 이 기능은 가져오거나는 문서에서 XML 데이터 가져오기 및 내보내기 단순화할 수 있습니다.  
   
- Visual Studio exposes mapped schema elements in document-level customizations as controls in the programming model. For Excel, Visual Studio adds support for binding the controls to data in databases, Web services, and objects. For Word and Excel, Visual Studio adds support for actions panes, which can be used with a schema-mapped document to create an enhanced end user experience for your solutions. For more information, see [Actions Pane Overview](../vsto/actions-pane-overview.md).  
+ 프로그래밍 모델에서 컨트롤로 매핑된 문서 수준 사용자 지정에서 스키마 요소를 visual Studio 노출 합니다. Excel의 경우 Visual Studio에서는 데이터베이스, 웹 서비스 및 개체의 데이터에 컨트롤 바인딩을 지원을 합니다. Word 및 Excel에 대 한 Visual Studio 솔루션에는 향상 된 최종 사용자 환경을 제공 하는 스키마로 매핑된 문서와 함께 사용할 수 있는 작업 창에 대 한 지원을 추가 합니다. 자세한 내용은 [Actions Pane Overview](../vsto/actions-pane-overview.md)을 참조하십시오.  
   
 > [!NOTE]  
->  You cannot use multipart XML schemas in Excel solutions.  
+>  Excel 솔루션에서 다중 파트 XML 스키마를 사용할 수 없습니다.  
   
-## <a name="objects-created-when-schemas-are-attached-to-excel-workbooks"></a>Objects Created when Schemas are Attached to Excel Workbooks  
- When you attach a schema to a workbook, Visual Studio automatically creates several objects and adds them to your project. These objects should not be deleted using Visual Studio tools, because they are managed by Excel. To delete them, remove the mapped elements from the worksheet or detach the schema by using Excel tools.  
+## <a name="objects-created-when-schemas-are-attached-to-excel-workbooks"></a>스키마를 Excel 통합 문서에 첨부할 때 작성 개체  
+ 통합 문서에 스키마를 연결 하면 Visual Studio가 자동으로 여러 개체를 만든 고 프로젝트에 추가 합니다. 이러한 개체 삭제 해서는 Visual Studio 도구를 사용 하 여 Excel에서 관리 됩니다. 를 삭제 하려면 워크시트에서 매핑된 요소를 제거 하거나 Excel 도구를 사용 하 여 스키마를 분리 합니다.  
   
- There are two main objects:  
+ 두 가지 주요 개체:  
   
--   XML schema (XSD file). For every schema in the workbook, Visual Studio adds a schema to the project. This appears as a project item with an XSD extension in **Solution Explorer**.  
+-   XML 스키마 (XSD 파일)입니다. 통합 문서에서 모든 스키마에 대해 Visual Studio 프로젝트에 스키마를 추가합니다. XSD 확장명을 가진 프로젝트 항목으로 표시 됨 **솔루션 탐색기**합니다.  
   
--   A typed <xref:System.Data.DataSet> class. This class is created based on the schema. This dataset class is visible in **Class View**.  
+-   형식화된 <xref:System.Data.DataSet> 클래스. 이 클래스는 스키마에 따라 생성 됩니다. 이 데이터 집합 클래스에 표시 됩니다. **클래스 뷰**합니다.  
   
-## <a name="objects-created-when-schema-elements-are-mapped-to-excel-worksheets"></a>Objects Created when Schema Elements are Mapped to Excel Worksheets  
- When you map a schema element from the **XML Source** task pane to a worksheet, Visual Studio automatically creates several objects and adds them to your project:  
+## <a name="objects-created-when-schema-elements-are-mapped-to-excel-worksheets"></a>스키마 요소는 Excel 워크시트에 매핑 했으면 작성 개체  
+ 스키마 요소를 매핑할 때의 **XML 원본은** 워크시트, Visual Studio에 작업 창에서 자동으로 여러 개체를 만든 하 고 프로젝트에 추가 합니다.  
   
--   Controls. For every mapped object in the workbook, an <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> control (for non-repeating schema elements) or a <xref:Microsoft.Office.Tools.Excel.ListObject> control (for repeating schema elements) is created in the programming model. The <xref:Microsoft.Office.Tools.Excel.ListObject> control can be deleted only by deleting the mappings and the mapped objects from the workbook. For more information about controls, see [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md).  
+-   제어 합니다. 통합 문서에 매핑된 각 개체에 대 한는 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 제어 (-반복 되지 않는 스키마 요소) 또는 <xref:Microsoft.Office.Tools.Excel.ListObject> 제어 (반복 되는 스키마 요소) 프로그래밍 모델에서 만들어집니다. <xref:Microsoft.Office.Tools.Excel.ListObject> 만 통합 문서에서 매핑과 매핑된 개체를 삭제 하 여 컨트롤을 삭제할 수 있습니다. 컨트롤에 대 한 자세한 내용은 참조 [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)합니다.  
   
--   BindingSource. When you create an <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> by mapping a non-repeating schema element to the worksheet, a <xref:System.Windows.Forms.BindingSource> is created and the <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> control is bound to the <xref:System.Windows.Forms.BindingSource>. You must bind the <xref:System.Windows.Forms.BindingSource> to an instance of the data source that matches the schema mapped to the document, such as an instance of the typed <xref:System.Data.DataSet> class that was created. Create the binding by setting the <xref:System.Windows.Forms.BindingSource.DataSource%2A> and <xref:System.Windows.Forms.BindingSource.DataMember%2A> properties, which are exposed in the **Properties** window.  
+-   BindingSource입니다. 만들 때는 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 워크시트에는 반복 되지 않는 스키마 요소를 매핑하는 방법으로 <xref:System.Windows.Forms.BindingSource> 만들어집니다 및 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤이 바인딩되는 <xref:System.Windows.Forms.BindingSource>합니다. 바인딩해야는 <xref:System.Windows.Forms.BindingSource> 형식화 된 인스턴스와 같은 문서에 매핑된 스키마와 일치 하는 데이터 원본의 인스턴스에 <xref:System.Data.DataSet> 생성 된 클래스입니다. 설정 하 여 바인딩을 만듭니다는 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 에 노출 된 속성의 **속성** 창.  
   
     > [!NOTE]  
-    >  The <xref:System.Windows.Forms.BindingSource> is not created for <xref:Microsoft.Office.Tools.Excel.ListObject> objects. You must manually bind the <xref:Microsoft.Office.Tools.Excel.ListObject> to the data source by setting the <xref:System.Windows.Forms.BindingSource.DataSource%2A> and <xref:System.Windows.Forms.BindingSource.DataMember%2A> properties in the **Properties** window.  
+    >  <xref:System.Windows.Forms.BindingSource> 자동으로 만들어지지는지 않습니다 <xref:Microsoft.Office.Tools.Excel.ListObject> 개체입니다. 에 수동으로 바인딩해야는 <xref:Microsoft.Office.Tools.Excel.ListObject> 설정 하 여 데이터 원본에는 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 속성에는 **속성** 창.  
   
-### <a name="office-mapped-schemas-and-the-visual-studio-data-sources-window"></a>Office Mapped Schemas and the Visual Studio Data Sources Window  
- Both the mapped schema functionality of Office and the Visual Studio **Data Sources** window can help you present data on an Excel worksheet for reporting or editing. In both cases you can drag data elements onto the Excel worksheet. Both methods create controls that are data bound through a <xref:System.Windows.Forms.BindingSource> to a data source such as a <xref:System.Data.DataSet> or a Web service.  
+### <a name="office-mapped-schemas-and-the-visual-studio-data-sources-window"></a>Office 매핑된 스키마와 Visual Studio 데이터 소스 창  
+ Office 및 Visual Studio의 매핑된 스키마 기능 **데이터 소스** 창 수를 보고 편집 하거나 Excel 워크시트에서 데이터를 표시 합니다. 두 경우 모두 데이터 요소 Excel 워크시트로 끌 수 있습니다. 두 방법 모두 데이터를 통해 바인딩된 컨트롤을 만들는 <xref:System.Windows.Forms.BindingSource> 와 같은 데이터 원본에는 <xref:System.Data.DataSet> 또는 웹 서비스입니다.  
   
 > [!NOTE]  
->  When you map a repeating schema element to a worksheet, Visual Studio creates a <xref:Microsoft.Office.Tools.Excel.ListObject>. The <xref:Microsoft.Office.Tools.Excel.ListObject> is not automatically bound to data through the <xref:System.Windows.Forms.BindingSource>. You must manually bind the <xref:Microsoft.Office.Tools.Excel.ListObject> to the data source by setting the <xref:System.Windows.Forms.BindingSource.DataSource%2A> and <xref:System.Windows.Forms.BindingSource.DataMember%2A> properties in the **Properties** window.  
+>  워크시트에 반복 되는 스키마 요소를 매핑하는 경우에 Visual Studio 만들어집니다는 <xref:Microsoft.Office.Tools.Excel.ListObject>합니다. <xref:Microsoft.Office.Tools.Excel.ListObject> 를 통해 데이터에 자동으로 바인딩되지 않은 <xref:System.Windows.Forms.BindingSource>합니다. 에 수동으로 바인딩해야는 <xref:Microsoft.Office.Tools.Excel.ListObject> 설정 하 여 데이터 원본에는 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 속성에는 **속성** 창.  
   
- The following table shows some of the differences between the two methods.  
+ 다음 표에서 두 방법 간의 차이점 중 일부를 보여 줍니다.  
   
-|XML schema|Data Sources window|  
+|XML 스키마|데이터 소스 창|  
 |----------------|-------------------------|  
-|Uses Office interface.|Uses **Data Sources** window in Visual Studio.|  
-|Enables the built-in Office features for importing and exporting data from XML files.|You must provide import and export functionality programmatically.|  
-|You must write code to fill the generated controls with data.|Controls added from the **Data Sources** window have code generated automatically to fill them, along with the necessary connection strings when you use database servers.|  
+|Office 인터페이스를 사용합니다.|사용 하 여 **데이터 소스** Visual Studio의 창.|  
+|가져오기 및 XML 파일에서 데이터 내보내기 기본 제공 Office 기능을 사용할 수 있습니다.|기능을 프로그래밍 방식으로 내보내기 및 가져오기를 제공 해야 합니다.|  
+|생성된 된 컨트롤을 데이터로 채우는 코드를 작성 해야 합니다.|추가 된 컨트롤의 **데이터 소스** 창 채우려는 데이터베이스 서버에서 사용할 때 필요한 연결 문자열과 함께 자동으로 생성 된 코드는 필요한 합니다.|  
   
-## <a name="behavior-when-schemas-are-attached-to-word-documents"></a>Behavior when Schemas are Attached to Word Documents  
- Data objects are not created when you attach a schema to a Word document that is used in a document-level Office project. However, when you map a schema element to your document, controls are created. The type of control depends on what type of element you map; repeating elements generate <xref:Microsoft.Office.Tools.Word.XMLNodes> controls, and non-repeating elements generate <xref:Microsoft.Office.Tools.Word.XMLNode> controls. For more information, see [XMLNodes Control](../vsto/xmlnodes-control.md) and [XMLNode Control](../vsto/xmlnode-control.md).  
+## <a name="behavior-when-schemas-are-attached-to-word-documents"></a>스키마를 Word 문서에 첨부할 때의 동작  
+ 문서 수준 Office 프로젝트에서 사용 되는 Word 문서에 스키마를 연결 하는 경우에 데이터 개체 만들어지지 않습니다. 그러나 문서에는 스키마 요소를 매핑할 때 컨트롤이 만들어집니다. 컨트롤 형식의 어떤 유형의 매핑할; 요소에 따라 달라 집니다. 요소 생성 반복 <xref:Microsoft.Office.Tools.Word.XMLNodes> 컨트롤과 생성-반복 되지 않는 요소 <xref:Microsoft.Office.Tools.Word.XMLNode> 컨트롤입니다. 자세한 내용은 참조 [XMLNodes 컨트롤](../vsto/xmlnodes-control.md) 및 [XMLNode 컨트롤](../vsto/xmlnode-control.md)합니다.  
   
-## <a name="deployment-of-solutions-that-include-xml-schemas"></a>Deployment of Solutions That Include XML Schemas  
- You should create an installer to deploy a solution that uses an XML schema that is mapped to a document. The installer should register the schema in the schema library on the user's computer. If you do not register the schema, the solution will still work because Word generates a temporary schema based on the elements that are in the document when the user opens it. However, the user will not be able to perform validation against or save the schema that was used to create the project. For more information about installers, see [Deploying Applications, Services, and Components](/visualstudio/deployment/deploying-applications-services-and-components).  
+## <a name="deployment-of-solutions-that-include-xml-schemas"></a>XML 스키마가 포함 된 솔루션 배포  
+ 문서에 매핑되는 XML 스키마를 사용 하는 솔루션을 배포 하려면 설치 관리자를 만들어야 합니다. 설치 관리자는 사용자의 컴퓨터에 스키마 라이브러리에서 스키마를 등록 해야 합니다. 스키마를 등록 하면 Word에서 사용자가 열 때 문서에 있는 요소를 기반으로 임시 스키마를 생성 하기 때문에 솔루션은 계속 작동 합니다. 그러나 사용자에 대해 또는 프로젝트를 만드는 데 사용 하는 스키마를 저장 하는 유효성 검사를 수행할 수 없습니다. 설치 관리자에 대 한 자세한 내용은 참조 [응용 프로그램 배포, 서비스 및 구성 요소](/visualstudio/deployment/deploying-applications-services-and-components)합니다.  
   
- You can also add code to your project to check whether the schema is in the library and registered. If it is not, you can warn the user.  
+ 스키마 라이브러리에 등록 되어 있는지 여부를 확인 하 여 프로젝트에 코드를 추가할 수 있습니다. 그렇지 않은 경우 사용자를 경고할 수 있습니다.  
   
- [!code-vb[Trin_VstcoreDataWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataWordVB/ThisDocument.vb#1)] [!code-csharp[Trin_VstcoreDataWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreDataWordCS/ThisDocument.cs#1)]  
+ [!code-vb[Trin_VstcoreDataWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataWordVB/ThisDocument.vb#1)]
+ [!code-csharp[Trin_VstcoreDataWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreDataWordCS/ThisDocument.cs#1)]  
   
-## <a name="see-also"></a>See Also  
- [How to: Map Schemas to Word Documents Inside Visual Studio](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)   
- [How to: Map Schemas to Worksheets Inside Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)  
+## <a name="see-also"></a>참고 항목  
+ [방법: Visual Studio 내부의 Word 문서에 스키마 매핑](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)   
+ [방법: Visual Studio 내에서 워크시트에 스키마 매핑](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)  
   
   

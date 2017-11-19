@@ -4,36 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], new - add a menu command
+helpviewer_keywords: editors [Visual Studio SDK], new - add a menu command
 ms.assetid: 08526848-a442-4cd4-afa1-b2eac2005adb
-caps.latest.revision: 46
+caps.latest.revision: "46"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b83fe23b830594ac81b489b8f43095c24b29dd7a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 349b2fab80b6dd8a15e1f38669dc2644708aab96
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-using-a-shell-command-with-an-editor-extension"></a>연습: 셸 명령을 사용 하 여 편집기 확장명이
 VSPackage에서 편집기로 메뉴 명령과 같은 기능을 추가할 수 있습니다. 이 연습에 메뉴 명령을 호출 하 여 편집기에서 텍스트 보기로 adornment를 추가 하는 방법을 보여 줍니다.  
@@ -287,7 +271,8 @@ VSPackage에서 편집기로 메뉴 명령과 같은 기능을 추가할 수 있
   
 3.  구현 하는 클래스 선언 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>, 및 사용 하 여 내보내기는 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text"와 <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> 의 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document>합니다. 콘텐츠 형식 특성은 구성 요소가 적용 되는 콘텐츠의 종류를 지정 합니다. 텍스트 형식은 모든 이진이 아닌 파일 형식에 대 한 기본 형식이입니다. 따라서이 유형의 생성은 거의 모든 텍스트 보기가 됩니다. 텍스트 보기의 역할 속성 구성 요소가 적용 되는 텍스트 보기의 종류를 지정 합니다. 문서 텍스트 보기 역할에는 일반적으로 텍스트 줄의 구성 파일에 저장 되며를 보여 줍니다.  
   
-     [!code-vb[#11 VSSDKMenuCommandTest](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_1.vb)][!code-csharp[VSSDKMenuCommandTest #11  ](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_1.cs)]  
+     [!code-vb[VSSDKMenuCommandTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_1.vb)]
+     [!code-csharp[VSSDKMenuCommandTest#11](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_1.cs)]  
   
 4.  구현 된 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> 메서드는 정적 호출한 `Create()` 의 이벤트는 `CommentAdornmentManager`합니다.  
   
@@ -425,7 +410,8 @@ VSPackage에서 편집기로 메뉴 명령과 같은 기능을 추가할 수 있
   
     ```  
   
-     [!code-csharp[VSSDKMenuCommandTest #21](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_2.cs)][!code-vb[VSSDKMenuCommandTest #21  ](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_2.vb)]  
+     [!code-csharp[VSSDKMenuCommandTest#21](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_2.cs)]
+     [!code-vb[VSSDKMenuCommandTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_2.vb)]  
   
 9. 에 대 한 선언을 추가 `CommentsChanged` 이벤트입니다.  
   
@@ -635,7 +621,8 @@ VSPackage에서 편집기로 메뉴 명령과 같은 기능을 추가할 수 있
   
 10. 메모를 그릴 수 있는 전용 메서드에 추가 합니다.  
   
-     [!code-csharp[#35 VSSDKMenuCommandTest](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_3.cs)][!code-vb[VSSDKMenuCommandTest #35  ](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_3.vb)]  
+     [!code-csharp[VSSDKMenuCommandTest#35](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_3.cs)]
+     [!code-vb[VSSDKMenuCommandTest#35](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_3.vb)]  
   
 ## <a name="using-the-menu-command-to-add-the-comment-adornment"></a>주석 장식 추가할 메뉴 명령을 사용 하 여  
  메뉴 명령을 사용 하 여 구현 하 여 주석 장식을 만들 수 있습니다는 `MenuItemCallback` vspackage 메서드.  

@@ -1,47 +1,47 @@
 ---
 title: "SccGetVersion 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccGetVersion"
-helpviewer_keywords: 
-  - "SccGetVersion 함수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SccGetVersion
+helpviewer_keywords: SccGetVersion function
 ms.assetid: a6e786bf-744e-4272-9e21-0be44d23b1a1
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4f64b1412d0750bba4d3985d33286915e22f1474
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# SccGetVersion 함수
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-이 함수는 소스 제어 플러그 인에서 지원 되는 소스 제어 플러그 인 API의 버전 번호를 가져옵니다.  
+# <a name="sccgetversion-function"></a>SccGetVersion 함수
+이 함수는 소스 제어 플러그 인에서 지 원하는 소스 제어 플러그 인 API의 버전 번호를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```cpp  
 LONG SccGetVersion(void);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  없음  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  A `LONG` 지원 되는 소스 제어 플러그 인 API의 버전 번호를 포함 하는 데이터 형식:  
   
 |WORD|설명|  
-|----------|--------|  
+|----------|-----------------|  
 |HIWORD|주 버전|  
 |LOWORD|부 버전|  
   
-## 설명  
- 예를 들어 소스 제어 플러그 인 버전 1.3의 소스 제어 플러그 인 API를 지 원하는 경우이 함수 0x0103를 반환 합니다.  
+## <a name="remarks"></a>설명  
+ 예를 들어 소스 제어 플러그 인 소스 제어 플러그 인 API의 버전 1.3을 지 원하는 경우이 함수 0x0103를 반환 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [소스 제어 플러그 인 API 함수](../extensibility/source-control-plug-in-api-functions.md)

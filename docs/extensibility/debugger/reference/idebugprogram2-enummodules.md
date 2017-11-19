@@ -1,52 +1,52 @@
 ---
-title: "IDebugProgram2::EnumModules | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::EnumModules"
-helpviewer_keywords: 
-  - "IDebugProgram2::EnumModules"
+title: IDebugProgram2::EnumModules | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::EnumModules
+helpviewer_keywords: IDebugProgram2::EnumModules
 ms.assetid: 876ac9da-3b7c-4156-b79a-8f340e9fcea6
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 23f905a4a7fc239efb2220f15deb95954a46d998
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::EnumModules
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 프로그램이 로드 되 고 실행 되는 모듈의 목록을 검색 합니다.  
+# <a name="idebugprogram2enummodules"></a>IDebugProgram2::EnumModules
+이 프로그램을 로드 하 고 실행 되는 모듈의 목록을 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT EnumModules(   
-   IEnumDebugModules2** ppEnum  
+```cpp  
+HRESULT EnumModules(   
+   IEnumDebugModules2** ppEnum  
 );  
 ```  
   
-```c#  
-int EnumModules(   
-   out IEnumDebugModules2 ppEnum  
+```csharp  
+int EnumModules(   
+   out IEnumDebugModules2 ppEnum  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ppEnum`  
- \[out\] 반환 된 [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) 모듈의 목록을 포함 하는 개체입니다.  
+ [out] 반환 된 [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) 모듈의 목록을 포함 하는 개체입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 모듈은 DLL 또는 어셈블리 이며 일반적으로 표시 되는  **모듈** 디버그 창입니다.  
+## <a name="remarks"></a>설명  
+ 모듈 DLL 또는 어셈블리 이며에 일반적으로 사이트는 **모듈** 디버그 창.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

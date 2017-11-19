@@ -4,40 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - projects [Visual Studio], new project dialog
 - projects [Visual Studio], new project generation
 ms.assetid: 73ce91d8-0ab1-4a1f-bf12-4d3c49c01e13
-caps.latest.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
-ms.openlocfilehash: 859eeac9c2fd322dcf231e9c70fe83b92b099111
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: f7dc04752b034f666dfcb1d72b500f2c12f54fba
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>새 프로젝트 생성: 내부적으로 2 부
-[새 프로젝트 생성: 고급, 1 부](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) 줄이는 방법을 **새 프로젝트** 대화 상자가 채워집니다. 선택한를 가정해 보겠습니다는 **Visual C# Windows 응용 프로그램**, 입력 한는 **이름** 및 **위치** 텍스트 상자 및 확인을 클릭된 합니다.  
+[새 프로젝트 생성: 고급, 1 부](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) 살펴본 방법을 **새 프로젝트** 대화 상자가 채워집니다. 선택한를 가정해 보겠습니다는 **Visual C# Windows 응용 프로그램**, 입력 한는 **이름** 및 **위치** 텍스트 상자 및 확인을 클릭된 합니다.  
   
 ## <a name="generating-the-solution-files"></a>솔루션 파일을 생성  
  응용 프로그램 템플릿을 선택 하도록 지시 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 풀고 해당.vstemplate 파일을 엽니다 하 고이 파일에 XML 명령을 해석 하는 템플릿을 시작할 수 있습니다. 이러한 명령은 새로운 또는 기존 솔루션에 프로젝트와 프로젝트 항목을 만듭니다.  
@@ -161,7 +146,7 @@ namespace Simple
 </ItemGroup>  
 ```  
   
- 이 솔루션 탐색기에 표시 되는 6 개의 프로젝트 참조를 확인할 수 있습니다. 다음에서 다른 섹션은 \<ItemGroup >. 코드의 줄 수를 이해 하기 쉽도록 삭제 되었습니다. 이 섹션에서는 Settings.Designer.cs Settings.settings에 의존 합니다.  
+ 이 솔루션 탐색기에 표시 되는 6 개의 프로젝트 참조를 확인할 수 있습니다. 다음에서 다른 섹션은 \<ItemGroup > 합니다. 코드의 줄 수를 이해 하기 쉽도록 삭제 되었습니다. 이 섹션에서는 Settings.Designer.cs Settings.settings에 의존 합니다.  
   
 ```  
 <ItemGroup>  

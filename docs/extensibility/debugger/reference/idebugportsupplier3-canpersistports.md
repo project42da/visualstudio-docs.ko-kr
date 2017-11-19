@@ -1,46 +1,46 @@
 ---
-title: "IDebugPortSupplier3::CanPersistPorts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortSupplier3::CanPersistPorts"
-helpviewer_keywords: 
-  - "IDebugPortSupplier3::CanPersistPorts"
+title: IDebugPortSupplier3::CanPersistPorts | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugPortSupplier3::CanPersistPorts
+helpviewer_keywords: IDebugPortSupplier3::CanPersistPorts
 ms.assetid: 4127760c-e602-4e86-9232-457e382a52c7
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 95e62f283d2ea0411162fb0406c712f0d17a1183
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPortSupplier3::CanPersistPorts
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-이 메서드는 포트 공급자 포트 \(해당 디스크에 기록 하 여\) 디버거가 호출 사이 지속 될 수 있는지 확인 합니다.  
+# <a name="idebugportsupplier3canpersistports"></a>IDebugPortSupplier3::CanPersistPorts
+이 메서드는 지 여부를 포트 공급자 유지할 수 포트 (디스크에 작성) 하 여 디버거 호출 사이의 결정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
-HRESULT CanPersistPorts();  
+HRESULT CanPersistPorts();  
 ```  
   
-```c#  
-int CanPersistPorts();  
+```csharp  
+int CanPersistPorts();  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  없음  
   
-## 반환 값  
- `S_OK`포트 유지 될 수 있는 경우 또는 `S_FALSE` 포트를 유지할 수 없습니다 나타낼 수 있습니다.  
+## <a name="return-value"></a>반환 값  
+ `S_OK`포트를 유지 하는 경우 또는 `S_FALSE` 를 나타내는 포트를 유지할 수 없습니다.  
   
-## 설명  
- 포트 포트 공급자에 저장 하는 경우 소멸 될 때 작업을 수행 하 고 다시 인스턴스화될 때이 다시 로드 해야 합니다.  
+## <a name="remarks"></a>설명  
+ 포트 공급자 포트를 유지할 수, 하는 경우 소멸 될 때 사용자에 게 그렇게 하 고 다시 한 번 인스턴스화될 때 다시 로드 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

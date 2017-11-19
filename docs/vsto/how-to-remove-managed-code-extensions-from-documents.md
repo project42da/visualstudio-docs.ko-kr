@@ -1,12 +1,10 @@
 ---
-title: 'How to: Remove Managed Code Extensions from Documents | Microsoft Docs'
+title: "방법: 문서에서 관리 코드 확장을 제거 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,50 +14,51 @@ helpviewer_keywords:
 - managed code extensions [Office development in Visual Studio], removing
 - documents [Office development in Visual Studio], managed code extensions
 ms.assetid: e893d9a5-72a5-4087-b81b-04d4d3d9ebf8
-caps.latest.revision: 30
-author: kempb
-ms.author: kempb
+caps.latest.revision: "30"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 2a70cf3bffc46632eaa85e8b999cd3c366d1cde2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: f9da75468ae417bd835b457cdbd5219ef9462df1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-remove-managed-code-extensions-from-documents"></a>How to: Remove Managed Code Extensions from Documents
-  You can programmatically remove the customization assembly from a document or workbook that is part of a document-level customization for Microsoft Office Word or Microsoft Office Excel. Users can then open the documents and view the contents, but any custom user interface (UI) you add to the documents will not appear, and your code will not run.  
+# <a name="how-to-remove-managed-code-extensions-from-documents"></a>방법: 문서에서 관리 코드 확장명 제거
+  프로그래밍 방식으로 문서 또는 Microsoft Office Word 또는 Microsoft Office Excel 문서 수준 사용자 지정의 일부인 통합 문서에서 사용자 지정 어셈블리를 제거할 수 있습니다. 사용자 수 다음 문서를 열 내용이 되지만 문서에 추가 사용자 지정 사용자 인터페이스 (UI) 표시 되지 않습니다 및 코드가 실행 되지 않습니다.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- You can remove the customization assembly by using one of the RemoveCustomization methods provided by the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Which method you use depends on whether you want to remove the customization at run time (that is, by running code in the customization while the Word document or Excel workbook is open), or if you want to remove the customization from a closed document or a document that is on a server that does not have Microsoft Office installed.  
+ 제공 RemoveCustomization 방법 중 하나를 사용 하 여 사용자 지정 어셈블리를 제거할 수 있습니다는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]합니다. 어떤 방법을 사용 하 여 런타임 시 사용자 지정을 제거 하려는 여부에 따라 달라 집니다 (즉, 단어 하는 동안 사용자 지정의 코드를 실행 하 여 문서 또는 Excel 통합 문서를 연) 닫힌된 문서 또는 문서에서 사용자 지정을 제거 하려는 경우 또는 해당 i Microsoft Office가 설치 되지 않은 서버에서를 클릭 합니다.  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Attach or Detach a VSTO Assembly from a Word Document?](http://go.microsoft.com/fwlink/?LinkId=136782).  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [i: 연결 수행 방법 또는 Word 문서에서 VSTO 어셈블리 분리?](http://go.microsoft.com/fwlink/?LinkId=136782)합니다.  
   
-### <a name="to-remove-the-customization-assembly-at-run-time"></a>To remove the customization assembly at run time  
+### <a name="to-remove-the-customization-assembly-at-run-time"></a>런타임 시 사용자 지정 어셈블리를 제거 하려면  
   
-1.  In your customization code, call the <xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> method (for Word) or the <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> method (for Excel). This method should be called only after the customization is no longer needed.  
+1.  사용자 지정 코드에서 호출 된 <xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> 메서드 (Word) 또는 <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> 메서드 (Excel). 사용자 지정 필요 하지 않은 후에이 메서드를 호출 해야 합니다.  
   
-     Where you call this method in your code depends on how your customization is used. For example, if customers use your customization's features until they are ready to send the document to other clients that only need to the document itself (not the customization), you can provide some UI that calls RemoveCustomization when the customer clicks it. Alternatively, if your customization populates the document with data when it is first opened, but the customization doesn't provide any other features that are accessed directly by customers, then you can call RemoveCustomization as soon as your customization finishes initializing the document.  
+     코드에서이 메서드를 호출 하는 위치는 사용자 지정 사용 방법에 따라 달라 집니다. 예를 들어 문서 자체 (사용자 지정 하지 함)만 해야 하는 다른 클라이언트에 문서를 보낼 준비가 될 때까지 사용자 지정 기능을 사용 하는 고객, 고객이 클릭 때 RemoveCustomization를 호출 하는 몇 가지 UI를 제공할 수 있습니다. 또는 사용자 지정 처음 열 때 고객이 직접 액세스할 수 있는 다른 기능을 제공 하지 않는 데이터로 문서를 채우면를 호출할 수 있습니다 RemoveCustomization 곧 사용자 지정 문서 초기화를 마칩니다.  
   
-### <a name="to-remove-the-customization-assembly-from-a-closed-document-or-a-document-on-a-server"></a>To remove the customization assembly from a closed document or a document on a server  
+### <a name="to-remove-the-customization-assembly-from-a-closed-document-or-a-document-on-a-server"></a>닫힌된 문서 또는 문서에는 서버에서 사용자 지정 어셈블리를 제거 하려면  
   
-1.  In a project that does not require Microsoft Office, such as a console application or Windows Forms project, add a reference to the Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll assembly.  
+1.  콘솔 응용 프로그램과 같은 Microsoft Office 필요 없는 프로젝트 또는 Windows Forms 프로젝트를 Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 어셈블리에 대 한 참조를 추가 합니다.  
   
-2.  Add the following **Imports** or **using** statement to the top of your code file.  
+2.  다음 추가 **Imports** 또는 **를 사용 하 여** 문을 코드 파일의 맨 위에 있습니다.  
   
-     [!code-csharp[Trin_VstcoreDeployment#1](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#1)]  [!code-vb[Trin_VstcoreDeployment#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#1)]  
+     [!code-csharp[Trin_VstcoreDeployment#1](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#1)]
+     [!code-vb[Trin_VstcoreDeployment#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#1)]  
   
-3.  Call the static <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> method of the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class, and specify the solution document path for the parameter.  
+3.  정적 호출 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> 의 메서드는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스 하 고 솔루션 문서 경로 매개 변수를 지정 합니다.  
   
-     The following code example assumes that you are removing the customization from a document named **WordDocument1.docx** that is on the desktop.  
+     다음 코드 예제에서는 명명 된 문서에서 사용자 지정 제거 된다고 가정 **WordDocument1.docx** 바탕 화면입니다.  
   
-     [!code-csharp[Trin_VstcoreDeployment#2](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#2)]  [!code-vb[Trin_VstcoreDeployment#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#2)]  
+     [!code-csharp[Trin_VstcoreDeployment#2](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#2)]
+     [!code-vb[Trin_VstcoreDeployment#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#2)]  
   
-4.  Build the project and run the application on the computer where you want to remove the customization. The computer must have the Visual Studio 2010 Tools for Office Runtime installed.  
+4.  프로젝트를 빌드하고 사용자 지정을 제거 하려는 컴퓨터에 응용 프로그램을 실행 합니다. 컴퓨터는 Visual Studio 2010 Tools for Office Runtime 설치 있어야 합니다.  
   
-## <a name="see-also"></a>See Also  
- [Managing Documents on a Server by Using the ServerDocument Class](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
- [How to: Attach Managed Code Extensions to Documents](../vsto/how-to-attach-managed-code-extensions-to-documents.md)  
+## <a name="see-also"></a>참고 항목  
+ [ServerDocument 클래스를 사용 하 여 서버의 문서 관리](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
+ [방법: 문서에 관리 코드 확장명 연결](../vsto/how-to-attach-managed-code-extensions-to-documents.md)  
   
   

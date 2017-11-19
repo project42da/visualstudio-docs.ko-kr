@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- CONNECTION_PROTOCOL
-helpviewer_keywords:
-- CONNECTION_PROTOCOL enumeration
+f1_keywords: CONNECTION_PROTOCOL
+helpviewer_keywords: CONNECTION_PROTOCOL enumeration
 ms.assetid: 99df5865-8b36-486d-9f4c-d10ae2bc688a
-caps.latest.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 498090c71abb41fa7b0837bd608715db30df5e86
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2be5678704e9a5899c4ce7f5caba8cec1d8a21e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CONNECTION_PROTOCOL
+# <a name="connectionprotocol"></a>CONNECTION_PROTOCOL
 디버그 하는 서버와 디버그 패키지 (DE) 간의 통신에 사용 되는 프로토콜을 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 typedef enum tagCONNECTION_PROTOCOL {  
@@ -66,7 +49,7 @@ public enum CONNECTION_PROTOCOL {
 };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  CONNECTION_NONE  
  서버를 연결 하지 했습니다.  
   
@@ -88,16 +71,16 @@ public enum CONNECTION_PROTOCOL {
  CONNECTION_OTHER  
  다른 유형의 연결을 설정한 (이 값은 현재 사용 되지).  
   
-## 설명  
+## <a name="remarks"></a>설명  
  이러한 값이 반환 된 [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) 메서드.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)

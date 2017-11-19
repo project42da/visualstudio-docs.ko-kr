@@ -1,27 +1,30 @@
 ---
-title: "IDebugDocumentText::GetPositionOfContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: IDebugDocumentText::GetPositionOfContext | Microsoft Docs
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugDocumentText.GetPositionOfContext
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IDebugDocumentText::GetPositionOfContext"
+helpviewer_keywords: IDebugDocumentText::GetPositionOfContext
 ms.assetid: 90fec730-c3fb-45fb-92ef-05ecc90dca38
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0f843d71096dea4c22eda757a4d6975dfda94180
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugDocumentText::GetPositionOfContext
-문자 위치는 문서의 컨텍스트에 해당 범위를 반환 합니다.  
+# <a name="idebugdocumenttextgetpositionofcontext"></a>IDebugDocumentText::GetPositionOfContext
+문서 컨텍스트에 해당 하는 문자 위치 범위를 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 HRESULT GetPositionOfContext(  
@@ -31,25 +34,25 @@ HRESULT GetPositionOfContext(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `psc`  
- \[in\] 문서 컨텍스트 개체입니다.  
+ [in] 문서 컨텍스트 개체입니다.  
   
  `pcCharacterPosition`  
- \[out\] 위치 문자 범위의 위치를 시작 합니다.  
+ [out] 시작 문자 위치 범위의 위치입니다.  
   
  `cNumChars`  
- \[out\] 범위에 있는 문자의 개수입니다.  
+ [out] 범위에 있는 문자의 수입니다.  
   
-## 반환 값  
- 이 메서드는 `HRESULT`를 반환합니다.  가능한 값 포함 되지만, 다음 테이블에 제한 되지는지 않습니다.  
+## <a name="return-value"></a>반환 값  
+ 이 메서드는 `HRESULT`를 반환합니다. 가능한 값에는 다음 표에 있는 값이 포함되지만, 이에 국한되는 것은 아닙니다.  
   
 |값|설명|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|메서드가 성공했으며|  
   
-## 설명  
- 문서 컨텍스트를 제공 하려면이 메서드는이 문서와 연결 해야 합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드를 제공 하는 문서 컨텍스트에이 문서와 연결 되어야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugDocumentText 인터페이스](../../winscript/reference/idebugdocumenttext-interface.md)

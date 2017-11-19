@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugActivateDocumentEvent2
-helpviewer_keywords:
-- IDebugActivateDocumentEvent2 interface
+f1_keywords: IDebugActivateDocumentEvent2
+helpviewer_keywords: IDebugActivateDocumentEvent2 interface
 ms.assetid: 6f37edd7-a48c-4b41-b160-dff9be63a284
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 673ead5a81cf0037d794f315ac7731e2500b8fe3
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 9f21648f9b019fbb765290d969b1a6c68fe5ce2f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugactivatedocumentevent2"></a>IDebugActivateDocumentEvent2
 디버그 엔진 (DE)이이 인터페이스를 사용 하 여 문서를 로드를 요청 합니다.  
@@ -59,8 +43,8 @@ IDebugActivateDocumentEvent2 : IUnknown
 |[GetDocument](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocument.md)|활성화 하려면 문서를 가져옵니다.|  
 |[GetDocumentContext](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocumentcontext.md)|문서 내에서 위치를 설명 하는 문서 컨텍스트를 가져옵니다.|  
   
-## <a name="remarks"></a>주의  
- 이 인터페이스 사용 되는 일반적인 시나리오는 구문 분석 오류가 발생 하는 HTML 페이지에서 스크립트 코드에서 스크립트 DE이이 인터페이스를 보냅니다은 SDM 문서를 구문 분석 오류 표시 될 수 있도록 합니다.  
+## <a name="remarks"></a>설명  
+ 이 인터페이스 사용 되는 일반적인 시나리오는 문서를 구문 분석 오류 표시 될 수 있도록 DE 스크립트의은 SDM에이 인터페이스 보내는 HTML 페이지에서 스크립트 코드에서 구문 분석 오류가 발생 하는 경우입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  

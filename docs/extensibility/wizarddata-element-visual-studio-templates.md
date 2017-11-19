@@ -1,30 +1,34 @@
 ---
-title: "WizardData 요소(Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#WizardData"
-helpviewer_keywords: 
-  - "<WizardData> 요소[Visual Studio 템플릿]"
-  - "WizardData 요소[Visual Studio 템플릿]"
+title: "WizardData 요소 (Visual Studio 템플릿) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#WizardData
+helpviewer_keywords:
+- WizardData element [Visual Studio Templates]
+- <WizardData> element [Visual Studio Templates]
 ms.assetid: d0403a16-5d07-4fe5-b474-19ae3d9fd3ab
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 44d74aff60e4b53c223795e6cadc32a30270c8c0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# WizardData 요소(Visual Studio 템플릿)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-사용자 지정 XML을 지정합니다.  
+# <a name="wizarddata-element-visual-studio-templates"></a>WizardData 요소(Visual Studio 템플릿)
+사용자 지정 XML 지정  
   
-## 구문  
+ \<VSTemplate >  
+ \<WizardData >  
+  
+## <a name="syntax"></a>구문  
   
 ```  
 <WizardData>  
@@ -33,33 +37,33 @@ caps.handback.revision: 9
 </WizardData>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a>특성 및 요소  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 프로젝트 템플릿, 항목 템플릿 또는 시작 키트에 대한 모든 메타데이터가 들어 있습니다.|  
+|-------------|-----------------|  
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|필수적 요소입니다.<br /><br /> 프로젝트 템플릿, 항목 템플릿 또는 시작 키트에 대 한 모든 메타 데이터를 포함합니다.|  
   
-## 텍스트 값  
+## <a name="text-value"></a>텍스트 값  
  텍스트 값은 선택적입니다.  
   
- 이 텍스트는 [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md) 요소에 지정된 사용자 지정 마법사 확장으로 전달할 사용자 지정 XML을 지정합니다.  
+ 이 텍스트에 지정 된 사용자 지정 마법사 확장명에 전달할 사용자 지정 XML 지정는 [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md) 요소입니다.  
   
-## 설명  
- 모든 XML을 이 요소에 지정할 수 있습니다.  XML이 매개 변수로서 사용자 지정 마법사 확장으로 전달되므로 확장에서 이 요소의 내용을 사용할 수 있습니다.  이 데이터에 대한 유효성 검사는 수행되지 않습니다.  
+## <a name="remarks"></a>설명  
+ 이 요소의 모든 XML은 지정할 수 있습니다. XML 전달 됩니다 매개 변수로 사용자 지정 마법사 확장 프로그램에이 요소의 콘텐츠를 사용할 확장명을 허용 합니다. 유효성을 검사 하지는이 데이터에서 수행 됩니다.  
   
- `WizardData` 요소의 내용은 변경되지 않고 `IWizard.RunStarted` 메서드에서 매개 변수 문자열 사전 내부의 매개 변수로서 전달됩니다.  매개 변수는 $WizardData$로 명명됩니다.  
+ 콘텐츠는 `WizardData` 요소 내에서 매개 변수의 문자열 사전 매개 변수로 변경 되지 않고 전달 되는 `IWizard.RunStarted` 메서드. 매개 변수는 이름이 $WizardData$입니다.  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램의 표준 프로젝트 템플릿에 대한 메타데이터를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에 대 한 표준 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램입니다.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -92,8 +96,8 @@ caps.handback.revision: 9
 </VSTemplate>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)   
- [WizardExtension 요소\(Visual Studio 템플릿\)](../extensibility/wizardextension-element-visual-studio-templates.md)   
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)   
+ [WizardExtension 요소 (Visual Studio 템플릿)](../extensibility/wizardextension-element-visual-studio-templates.md)   
  [방법: 프로젝트 템플릿에 마법사 사용](../extensibility/how-to-use-wizards-with-project-templates.md)

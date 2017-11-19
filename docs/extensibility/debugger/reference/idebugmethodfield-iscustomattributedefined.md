@@ -1,48 +1,48 @@
 ---
-title: "IDebugMethodField::IsCustomAttributeDefined | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMethodField::IsCustomAttributeDefined"
-helpviewer_keywords: 
-  - "IDebugMethodField::IsCustomAttributeDefined 메서드"
+title: IDebugMethodField::IsCustomAttributeDefined | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugMethodField::IsCustomAttributeDefined
+helpviewer_keywords: IDebugMethodField::IsCustomAttributeDefined method
 ms.assetid: 1b5d95a8-cc87-4acb-9e6a-3928f3632b7c
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5bf6d2dbc915638005f377826c5504b2f6bdf859
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugMethodField::IsCustomAttributeDefined
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-특정 사용자 지정 특성의 정의 여부를 결정 합니다.  
+# <a name="idebugmethodfieldiscustomattributedefined"></a>IDebugMethodField::IsCustomAttributeDefined
+특정 사용자 지정 특성 정의 되었는지 여부를 결정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT IsCustomAttributeDefined(   
-   LPCOLESTR pszCustomAttributeName  
+```cpp  
+HRESULT IsCustomAttributeDefined(   
+   LPCOLESTR pszCustomAttributeName  
 );  
 ```  
   
-```c#  
+```csharp  
 int IsCustomAttributeDefined(  
-   [In] string pszCustomAttributeName  
+   [In] string pszCustomAttributeName  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pszCustomAttributeName`  
- \[in\] 찾기 사용자 지정 특성의 이름을 포함 하는 문자열입니다.  
+ [in] 찾을 사용자 지정 특성의 이름을 포함 하는 문자열입니다.  
   
-## 반환 값  
- 이 메서드를 사용자 지정 특성을 정의 하면 S\_OK 그렇지 않으면 S\_FALSE를 반환 하거나 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ S_ok이 고 사용자 지정 특성에이 메서드를 정의 하면 그렇지 않으면 반환 S_FALSE를 반환 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

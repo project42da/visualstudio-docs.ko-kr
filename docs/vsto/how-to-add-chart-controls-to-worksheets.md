@@ -1,12 +1,10 @@
 ---
-title: 'How to: Add Chart Controls to Worksheets | Microsoft Docs'
+title: "방법: 워크시트에 Chart 컨트롤 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,84 +14,85 @@ helpviewer_keywords:
 - Chart control [Office development in Visual Studio], adding to worksheets
 - controls [Office development in Visual Studio], adding to worksheets
 ms.assetid: f02568e7-5caa-45b4-aa2a-4f73b0565d4e
-caps.latest.revision: 44
-author: kempb
-ms.author: kempb
+caps.latest.revision: "44"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 62810cb2bcb6f03be91f66f3c581fa0798fca3ba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 1ba31b5577090c3aef01ad974ba51a72e6f9980e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-add-chart-controls-to-worksheets"></a>How to: Add Chart Controls to Worksheets
-  You can add <xref:Microsoft.Office.Tools.Excel.Chart> controls to a Microsoft Office Excel worksheet at design time and at run time in document-level customizations. You can also add <xref:Microsoft.Office.Tools.Excel.Chart> controls at run time in VSTO Add-ins.  
+# <a name="how-to-add-chart-controls-to-worksheets"></a>방법: 워크시트에 Chart 컨트롤 추가
+  디자인 타임 및 런타임에 문서 수준 사용자 지정에서 Microsoft Office Excel 워크시트에 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가할 수 있습니다. 런타임에 VSTO 추가 기능에서 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가할 수도 있습니다.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- This topic describes the following tasks:  
+ 이 항목에서는 다음 작업에 대해 설명합니다.  
   
--   [Adding Chart controls at design time](#designtime)  
+-   [디자인 타임에 차트 컨트롤 추가](#designtime)  
   
--   [Adding Chart controls at run time in a document-level project](#runtimedoclevel)  
+-   [런타임에 문서 수준 프로젝트에서 차트 컨트롤 추가](#runtimedoclevel)  
   
--   [Adding Chart controls at run time in a VSTO Add-in project](#runtimeaddin)  
+-   [런타임에 VSTO 추가 기능 프로젝트에서 차트 컨트롤 추가](#runtimeaddin)  
   
- For more information about <xref:Microsoft.Office.Tools.Excel.Chart> controls, see [Chart Control](../vsto/chart-control.md).  
+ 에 대 한 자세한 내용은 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤 참조 [차트 컨트롤](../vsto/chart-control.md)합니다.  
   
-##  <a name="designtime"></a> Adding Chart Controls at Design Time  
- You can add the <xref:Microsoft.Office.Tools.Excel.Chart> control to your worksheet in the same manner you would add a chart from within the application.  
+##  <a name="designtime"></a>디자인 타임에 차트 컨트롤 추가  
+ 응용 프로그램 내에서 차트를 추가하는 것과 동일한 방식으로 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 워크시트에 추가할 수 있습니다.  
   
 > [!NOTE]  
->  The <xref:Microsoft.Office.Tools.Excel.Chart> control is not available from the **Toolbox** or the **Data Sources** window.  
+>  <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤에서 지원 하지 않는 **도구 상자** 또는 **데이터 소스** 창.  
   
-#### <a name="to-add-a-chart-host-control-to-a-worksheet-in-excel"></a>To add a Chart host control to a worksheet in Excel  
+#### <a name="to-add-a-chart-host-control-to-a-worksheet-in-excel"></a>Excel의 워크시트에 차트 호스트 컨트롤을 추가하려면  
   
-1.  On the **Insert** tab, in the **Charts** group, click **Column**, click a category of charts, and then click the type of chart you want.  
+1.  에 **삽입** 탭에 **차트** 그룹에서 클릭 **열**, 차트의 범주를 클릭 한 다음 원하는 차트 종류를 클릭 합니다.  
   
-2.  In the **Insert Chart** dialog box, click **OK**.  
+2.  에 **차트 삽입** 대화 상자를 클릭 **확인**합니다.  
   
-3.  On the **Design** tab, in the **Data** group, click **Select Data**.  
+3.  에 **디자인** 탭에 **데이터** 그룹에서 클릭 **데이터 선택**합니다.  
   
-4.  In the **Select Data Source** dialog box, click in the **Chart** **data range** box and clear any default selection.  
+4.  에 **데이터 원본 선택** 대화 상자에서를 클릭 하 고 **차트** **데이터 범위** 상자 하 고 기본 선택 값을 지웁니다.  
   
-5.  In the **Data for Chart** sheet, select the range of cells that contains the data for the chart (cells **A5** through **D8**).  
+5.  에 **차트에 대 한 데이터** 시트 스타일은 차트에 대 한 데이터가 포함 된 셀 범위를 선택 합니다 (셀 **A5** 통해 **D8**).  
   
-6.  In the **Select Data Source** dialog box, click **OK**.  
+6.  에 **데이터 원본 선택** 대화 상자를 클릭 **확인**합니다.  
   
-##  <a name="runtimedoclevel"></a> Adding Chart Controls at Run Time in a Document-Level Project  
- You can add the <xref:Microsoft.Office.Tools.Excel.Chart> control dynamically at run time. Dynamically created charts are not persisted in the document as host controls when the document is closed. For more information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
+##  <a name="runtimedoclevel"></a>런타임에 문서 수준 프로젝트에서 차트 컨트롤 추가  
+ 런타임에 동적으로 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가할 수 있습니다. 동적으로 생성된 차트는 문서를 닫을 때 문서에 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
-#### <a name="to-add-a-chart-control-to-a-worksheet-programmatically"></a>To add a Chart control to a worksheet programmatically  
+#### <a name="to-add-a-chart-control-to-a-worksheet-programmatically"></a>프로그래밍 방식으로 워크시트에 차트 컨트롤을 추가하려면  
   
-1.  In the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event handler of `Sheet1`, insert the following code to add the <xref:Microsoft.Office.Tools.Excel.Chart> control.  
+1.  `Sheet1`의 <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> 이벤트 처리기에서 다음 코드를 삽입하여 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가합니다.  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#1)]  [!code-vb[Trin_VstcoreHostControlsExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#1)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#1)]
+     [!code-vb[Trin_VstcoreHostControlsExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#1)]  
   
-##  <a name="runtimeaddin"></a> Adding Chart Controls at Run Time in a VSTO Add-in Project  
- You can add a <xref:Microsoft.Office.Tools.Excel.Chart> control programmatically to any open worksheet in a VSTO Add-in project. For more information, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
+##  <a name="runtimeaddin"></a>런타임에 VSTO 추가 기능 프로젝트에서 차트 컨트롤 추가  
+ VSTO 추가 기능 프로젝트에서 열려 있는 워크시트에 프로그래밍 방식으로 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가할 수 있습니다. 자세한 내용은 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
   
- Dynamically created chart controls are not persisted in the worksheet as host controls when the worksheet is closed. For more information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
+ 동적으로 생성된 차트 컨트롤은 워크시트를 닫을 때 워크시트에서 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
-#### <a name="to-add-a-chart-control-to-a-worksheet-programmatically"></a>To add a Chart control to a worksheet programmatically  
+#### <a name="to-add-a-chart-control-to-a-worksheet-programmatically"></a>프로그래밍 방식으로 워크시트에 차트 컨트롤을 추가하려면  
   
-1.  The following code generates a worksheet host item that is based on the open worksheet, and then adds a <xref:Microsoft.Office.Tools.Excel.Chart> control.  
+1.  다음 코드는 열려 있는 워크시트를 기반으로 하는 워크시트 호스트 항목을 생성하고 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가합니다.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#9](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#9)]  [!code-vb[Trin_Excel_Dynamic_Controls#9](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#9)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#9](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#9)]
+     [!code-vb[Trin_Excel_Dynamic_Controls#9](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#9)]  
   
-## <a name="compiling-the-code"></a>Compiling the Code  
- This example has the following requirements:  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 이 예제에는 다음과 같은 요구 사항이 있습니다.  
   
--   Data to be charted, stored in the range from A5 to D8 in the worksheet.  
+-   워크시트의 A5부터 D8까지의 범위에 저장된 차트로 작성할 데이터  
   
-## <a name="see-also"></a>See Also  
- [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
- [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
- [Chart Control](../vsto/chart-control.md)   
- [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
+## <a name="see-also"></a>참고 항목  
+ [런타임에 Word 문서 및 VSTO 추가 기능에서 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
+ [Office 문서의 컨트롤](../vsto/controls-on-office-documents.md)   
+ [차트 컨트롤](../vsto/chart-control.md)   
+ [확장 된 개체를 사용 하 여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
+ [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
   
   

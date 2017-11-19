@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Profiling a SharePoint Application | Microsoft Docs'
+title: "연습: SharePoint 응용 프로그램 프로 파일링 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,74 +16,73 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, performance testing
 - profiling [SharePoint development in Visual Studio]
 ms.assetid: 0b19d4b7-5fcc-42a2-b411-96eccd00137f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d5f13883367d68999df59647aba7cedeb48628e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 0b2785e69bbfd6dff17f73b9840b88ad48454e0b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-profiling-a-sharepoint-application"></a>Walkthrough: Profiling a SharePoint Application
-  This walkthrough shows how to use the profiling tools in Visual Studio to optimize the performance of a SharePoint application. The example application is a SharePoint feature event receiver that contains an idle loop that degrades the performance of the feature event receiver. The Visual Studio profiler enables you to locate and eliminate the most expensive (slowest-performing) part of the project, also known as the *hot path*.  
+# <a name="walkthrough-profiling-a-sharepoint-application"></a>연습: SharePoint 응용 프로그램 프로파일링
+  이 연습에서는 Visual Studio에서 프로파일링 도구를 사용하여 SharePoint 응용 프로그램의 성능을 최적화하는 방법을 보여 줍니다. 예제 응용 프로그램은 기능 이벤트 수신기의 성능을 저하시키는 유휴 루프가 포함된 SharePoint 기능 이벤트 수신기입니다. Visual Studio 프로파일러를 사용 하면을 찾고, 프로젝트의 가장 비용이 많이 드는 (성능이 가장 낮은) 부분을 라고도 제거할는 *실행 부하 과다 경로*합니다.  
   
- This walkthrough demonstrates the following tasks:  
+ 이 연습에서는 다음 작업을 수행합니다.  
   
--   [Adding a Feature and Feature Event Receiver](#BKMK_AddFtrandFtrEvntReceiver).  
+-   [기능 및 기능 이벤트 수신기 추가](#BKMK_AddFtrandFtrEvntReceiver)합니다.  
   
--   [Configuring and Deploying the SharePoint Application](#BKMK_ConfigSharePointApp).  
+-   [구성 및 SharePoint 응용 프로그램 배포](#BKMK_ConfigSharePointApp)합니다.  
   
--   [Running the SharePoint Application](#BKMK_RunSPApp).  
+-   [SharePoint 응용 프로그램을 실행](#BKMK_RunSPApp)합니다.  
   
--   [Viewing and Interpreting the Profiling Results](#BKMK_ViewResults).  
+-   [확인 및 프로 파일링 결과 해석](#BKMK_ViewResults)합니다.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   Supported editions of Microsoft Windows and SharePoint. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   지원되는 Microsoft Windows 및 SharePoint 버전. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][SharePoint 솔루션 개발을 위한 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
   
 -   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].  
   
-## <a name="creating-a-sharepoint-project"></a>Creating a SharePoint Project  
- First, create a SharePoint project.  
+## <a name="creating-a-sharepoint-project"></a>SharePoint 프로젝트 만들기  
+ 먼저 SharePoint 프로젝트를 만듭니다.  
   
-#### <a name="to-create-a-sharepoint-project"></a>To create a SharePoint project  
+#### <a name="to-create-a-sharepoint-project"></a>SharePoint 프로젝트를 만들려면  
   
-1.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
+1.  메뉴 모음에서 **파일**, **새로**, **프로젝트** 표시 하는 **새 프로젝트** 대화 상자.  
   
-2.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
+2.  확장 하 고는 **SharePoint** 노드 아래의 **Visual C#** 또는 **Visual Basic**를 선택한 후는 **2010** 노드.  
   
-3.  In the templates pane, choose the **SharePoint 2010 Project** template.  
+3.  템플릿 창에서 선택 된 **SharePoint 2010 프로젝트** 템플릿.  
   
-4.  In the **Name** box, enter **ProfileTest**, and then choose the **OK** button.  
+4.  에 **이름** 상자에 입력 **ProfileTest**, 선택한 후는 **확인** 단추입니다.  
   
-     The **SharePoint Customization Wizard** appears.  
+     **SharePoint 사용자 지정 마법사** 나타납니다.  
   
-5.  On the **Specify the site and security level for debugging** page, enter the URL for the SharePoint server site where you want to debug the site definition, or use the default location (http://*system name*/).  
+5.  에 **디버깅에 대 한 사이트 및 보안 수준을 지정** 페이지, 사이트 정의 디버깅 하려는 SharePoint 서버 사이트에 대 한 URL을 입력 하거나 기본 위치를 사용 하 여 (http://*시스템 이름*/) .  
   
-6.  In the **What is the trust level for this SharePoint solution?** section, choose the **Deploy as a farm solution** option button.  
+6.  에 **이 SharePoint 솔루션에 대 한 신뢰 수준을?** 섹션에서 선택 된 **팜 솔루션으로 배포** 옵션 단추입니다.  
   
-     Currently, you can only profile farm solutions. For more information about sandboxed solutions versus farm solutions, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
+     현재 팜 솔루션만 프로파일링할 수 있습니다. 샌드박스 솔루션과 팜 솔루션 비교에 대 한 자세한 내용은 참조 [샌드박스 솔루션 고려 사항](../sharepoint/sandboxed-solution-considerations.md)합니다.  
   
-7.  Choose the **Finish** button. The project appears in **Solution Explorer**.  
+7.  선택 된 **마침** 단추입니다. 에 프로젝트가 표시 **솔루션 탐색기**합니다.  
   
-##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a> Adding a Feature and Feature Event Receiver  
- Next, add a feature to the project along with an event receiver for the feature. This event receiver will contain the code to be profiled.  
+##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a>기능 및 기능 이벤트 수신기 추가  
+ 다음 작업으로, 기능의 이벤트 수신기와 함께 프로젝트에 기능을 추가합니다. 이 이벤트 수신기에는 프로파일링할 코드가 포함됩니다.  
   
-#### <a name="to-add-a-feature-and-feature-event-receiver"></a>To add a feature and feature event receiver  
+#### <a name="to-add-a-feature-and-feature-event-receiver"></a>기능 및 기능 이벤트 수신기를 추가하려면  
   
-1.  In **Solution Explorer**, open the shortcut menu for the **Features** node, choose **Add Feature**, and leave the name at the default value, **Feature1**.  
+1.  **솔루션 탐색기**에 대 한 바로 가기 메뉴를 열고는 **기능** 노드를 선택 **기능 추가**, 이름 값을 기본값으로 유지 하 고 **Feature1**.  
   
-2.  In **Solution Explorer**, open the shortcut menu for **Feature1**, and then choose **Add Event Receiver**.  
+2.  **솔루션 탐색기**, 바로 가기 메뉴를 열고 **Feature1**를 선택한 후 **이벤트 수신기 추가**합니다.  
   
-     This adds a code file to the feature with several commented-out event handlers and opens the file for editing.  
+     주석 처리된 몇 가지 이벤트 처리기가 포함된 코드 파일이 기능에 추가되고 편집할 수 있도록 열립니다.  
   
-3.  In the event receiver class, add the following variable declarations.  
+3.  이벤트 수신기 클래스에서 다음 변수 선언을 추가합니다.  
   
     ```vb  
     ' SharePoint site/subsite.  
@@ -99,7 +96,7 @@ ms.lasthandoff: 08/28/2017
     private string webUrl = "/";  
     ```  
   
-4.  Replace the `FeatureActivated` procedure with the following code.  
+4.  `FeatureActivated` 프로시저를 다음 코드로 바꿉니다.  
   
     ```vb  
     Public Overrides Sub FeatureActivated(properties As SPFeatureReceiverProperties)  
@@ -158,7 +155,7 @@ ms.lasthandoff: 08/28/2017
     }  
     ```  
   
-5.  Add the following procedure below the `FeatureActivated`procedure.  
+5.  다음 절차 아래 추가 `FeatureActivated`프로시저입니다.  
   
     ```vb  
   
@@ -185,104 +182,104 @@ ms.lasthandoff: 08/28/2017
     }  
     ```  
   
-6.  In **Solution Explorer**, open the shortcut menu for the project (**ProfileTest**), and then choose **Properties**.  
+6.  **솔루션 탐색기**, 프로젝트에 대 한 바로 가기 메뉴를 열고 (**ProfileTest**)를 선택한 후 **속성**합니다.  
   
-7.  In the **Properties** dialog box, choose the **SharePoint** tab.  
+7.  에 **속성** 대화 상자에서 선택 하는 **SharePoint** 탭 합니다.  
   
-8.  In the **Active Deployment Configuration** list, choose **No Activation**.  
+8.  에 **활성 배포 구성** 목록에서 선택 **활성화 없음**합니다.  
   
-     Selecting this deployment configuration enables you to manually activate the feature later in SharePoint.  
+     이 배포 구성을 선택하면 SharePoint에서 나중에 기능을 수동으로 활성화할 수 있습니다.  
   
-9. Save the project.  
+9. 프로젝트를 저장합니다.  
   
-##  <a name="BKMK_ConfigSharePointApp"></a> Configuring and Deploying the SharePoint Application  
- Now that the SharePoint project is ready, configure it and deploy it to the SharePoint server.  
+##  <a name="BKMK_ConfigSharePointApp"></a>구성 및 SharePoint 응용 프로그램 배포  
+ SharePoint 프로젝트가 준비되었으므로 이 프로젝트를 구성하고 SharePoint 서버에 배포합니다.  
   
-#### <a name="to-configure-and-deploy-the-sharepoint-application"></a>To configure and deploy the SharePoint application  
+#### <a name="to-configure-and-deploy-the-sharepoint-application"></a>SharePoint 응용 프로그램을 구성하고 배포하려면  
   
-1.  On the **Analyze** menu, choose **Launch Performance Wizard**.  
+1.  에 **분석** 메뉴 선택 **성능 마법사 시작**합니다.  
   
-2.  On page one of the **Performance Wizard**, leave the method of profiling as **CPU sampling** and choose the **Next** button.  
+2.  첫 번째 페이지는 **성능 마법사**,으로 프로 파일링 방법을 둡니다 **CPU 샘플링** 선택 하 고는 **다음** 단추입니다.  
   
-     The other profiling methods can be used in more advanced profiling situations. For more information, see [Understanding Performance Collection Methods](/visualstudio/profiling/understanding-performance-collection-methods).  
+     다른 프로파일링 방법은 고급 프로파일링 상황에서 사용할 수 있습니다. 자세한 내용은 [성능 컬렉션 메서드 이해](/visualstudio/profiling/understanding-performance-collection-methods)를 참조하세요.  
   
-3.  On page two of the **Performance Wizard**, leave the profile target as **ProfileTest** and choose the **Next** button.  
+3.  두 개의 페이지는 **성능 마법사**, 프로필 대상으로 유지 **ProfileTest** 선택 하 고는 **다음** 단추입니다.  
   
-     If a solution has multiple projects, they appear in this list.  
+     솔루션에 여러 프로젝트가 있는 경우 해당 프로젝트가 이 목록에 나타납니다.  
   
-4.  On page three of the **Performance Wizard**, clear the **Enable Tier Interaction Profiling** check box, and then choose the **Next** button.  
+4.  세 번째 페이지는 **성능 마법사**선택을 취소는 **계층 상호 작용 프로 파일링** 확인란을 선택한 후는 **다음** 단추입니다.  
   
-     The Tier Interaction Profiling (TIP) feature is useful for measuring the performance of applications that query databases and for showing you the number of times a web page is requested. Because that data is not required for this example, we will not enable this feature.  
+     TIP(계층 상호 작용 프로파일링) 기능은 데이터베이스를 쿼리하는 응용 프로그램의 성능을 측정하고 웹 페이지가 요청된 횟수를 표시하는 데 유용합니다. 해당 데이터가 이 예제에 필요하지 않기 때문에 이 기능을 사용하도록 설정하지 않을 것입니다.  
   
-5.  On page four of the **Performance Wizard**, leave the **Launch profiling after the wizard finishes** check box selected, and then choose the **Finish** button.  
+5.  네 번째 페이지는 **성능 마법사**, 둡니다는 **마법사를 완료 한 후 프로 파일링 시작** 확인란을 선택 하 고 선택 합니다는 **마침** 단추입니다.  
   
-     The wizard enables application profiling on the server, displays the **Performance Explorer** window, and then builds, deploys, and runs the SharePoint application.  
+     마법사 응용 프로그램 서버에 프로 파일링, 표시 된 **성능 탐색기** 창을 닫은 후 빌드, 배포 및 SharePoint 응용 프로그램을 실행 합니다.  
   
-##  <a name="BKMK_RunSPApp"></a> Running the SharePoint Application  
- Activate the feature in SharePoint, triggering the `FeatureActivation` event code to run.  
+##  <a name="BKMK_RunSPApp"></a>SharePoint 응용 프로그램 실행  
+ SharePoint에서 기능을 활성화하여 `FeatureActivation` 이벤트 코드가 실행되도록 합니다.  
   
-#### <a name="to-run-the-sharepoint-application"></a>To run the SharePoint application  
+#### <a name="to-run-the-sharepoint-application"></a>SharePoint 응용 프로그램을 실행하려면  
   
-1.  In SharePoint, open the **Site Actions** menu, and then choose **Site Settings**.  
+1.  Sharepoint에서 열고는 **사이트 작업** 메뉴를 선택한 후 **사이트 설정**합니다.  
   
-2.  In the **Site Actions** list, choose the **Manage site features** link.  
+2.  에 **사이트 작업** 목록에서 선택 된 **사이트 기능 관리** 링크 합니다.  
   
-3.  In the **Features** list, choose the **Activate** button next to **ProfileTest Feature1**.  
+3.  에 **기능** 목록에서 선택 된 **Activate** 단추 옆에 **ProfileTest Feature1**합니다.  
   
-     There is a pause when you do this, due to the idle loop being called in the `FeatureActivated` function.  
+     유휴 루프가 `FeatureActivated` 함수에서 호출되기 때문에 이 작업을 수행할 때 일시 중지됩니다.  
   
-4.  On the **Quick Launch** bar, choose **Lists** and then in the **Lists** list, choose **Announcements**.  
+4.  에 **빠른 실행** 막대에서 **나열** 한 다음는 **나열** 목록에서 선택 **공지**합니다.  
   
-     Notice that a new announcement has been added to the list stating that the feature was activated.  
+     기능이 활성화되었다는 새 알림이 목록에 추가되었음을 확인합니다.  
   
-5.  Close the SharePoint site.  
+5.  SharePoint 사이트를 닫습니다.  
   
-     After you close SharePoint, the profiler creates and displays a Sample Profiling Report and saves it as a .vsp file in the **ProfileTest** project's folder.  
+     SharePoint를 닫은 후 프로파일러 및 샘플 프로 파일링 보고서를 표시 만들고에.vsp 파일로 저장 된 **ProfileTest** 프로젝트의 폴더입니다.  
   
-##  <a name="BKMK_ViewResults"></a> Viewing and Interpreting the Profiling Results  
- Now that you have run and profiled the SharePoint application, view the test results.  
+##  <a name="BKMK_ViewResults"></a>확인 및 프로 파일링 결과 해석  
+ SharePoint 응용 프로그램을 실행하고 프로파일링했으므로 테스트 결과를 확인합니다.  
   
-#### <a name="to-view-and-interpret-the-profiling-results"></a>To view and interpret the profiling results  
+#### <a name="to-view-and-interpret-the-profiling-results"></a>프로파일링 결과를 확인하고 해석하려면  
   
-1.  In the **Functions Doing the Most Individual Work** section of the Sample Profiling Report, notice that `TimeCounter` is near the top of the list.  
+1.  에 **함수 목록의 개별 작업이 가장 많은** 섹션 샘플 프로 파일링 보고서의 알 수 있듯이 `TimeCounter` 목록의 위쪽에 있습니다.  
   
-     This location indicates that `TimeCounter` was one of the functions with the highest number of samples, meaning it's one of the biggest performance bottlenecks in the application. This situation isn't surprising, however, because it was purposely designed that way for demonstration purposes.  
+     이 위치는 `TimeCounter`가 샘플이 가장 많은 함수 중 하나이므로 응용 프로그램에서 가장 큰 성능 병목 지점 중 하나임을 나타냅니다. 그러나 이 상황은 예시 목적으로 그렇게 의도적으로 설계되었기 때문에 놀라운 것은 아닙니다.  
   
-2.  In the **Functions Doing the Most Individual Work** section, choose the `ProcessRequest` link to display the cost distribution for the `ProcessRequest` function.  
+2.  에 **함수 목록의 개별 작업이 가장 많은** 섹션에서 `ProcessRequest` 링크에 대 한 비용 분포를 표시 하는 `ProcessRequest` 함수입니다.  
   
-     In the **Called functions** section for `ProcessRequest`, notice that the **FeatureActiviated** function is listed as the most expensive called function.  
+     에 **함수 라고** 섹션 `ProcessRequest`, 다음에 유의 **FeatureActiviated** 함수가 나열 되어 가장 비용이 많이 드는 함수를 호출 합니다.  
   
-3.  In the **Called functions** section, choose the **FeatureActivated** button.  
+3.  에 **함수 라고** 섹션에서 선택 된 **FeatureActivated** 단추 합니다.  
   
-     In the **Called functions** section for **FeatureActivated**, the `TimeCounter` function is listed as the most expensive called function. In the **Function Code View** pane, the highlighted code (`TimeCounter`) is the hotspot and indicates where the correction is needed.  
+     에 **함수 라고** 섹션 **FeatureActivated**, `TimeCounter` 함수가 나열 되어 가장 비용이 많이 드는 함수를 호출 합니다. 에 **함수 코드 뷰** 창, 강조 표시 된 코드 (`TimeCounter`) 핫 스폿 이며 수정이 필요한 위치를 나타냅니다.  
   
-4.  Close the Sample Profiling Report.  
+4.  샘플 프로파일링 보고서를 닫습니다.  
   
-     To view the report again at any time, open the .vsp file in the **Performance Explorer** window.  
+     언제 든 지 다시 보려면 보고서를 열고.vsp 파일에는 **성능 탐색기** 창.  
   
-## <a name="fixing-the-code-and-reprofiling-the-application"></a>Fixing the Code and Reprofiling the Application  
- Now that hotspot function in the SharePoint application has been identified, fix it.  
+## <a name="fixing-the-code-and-reprofiling-the-application"></a>코드 수정 및 응용 프로그램 다시 프로파일링  
+ SharePoint 응용 프로그램의 핫 스폿 함수가 식별되었으므로 해당 함수를 수정합니다.  
   
-#### <a name="to-fix-the-code-and-reprofile-the-application"></a>To fix the code and reprofile the application  
+#### <a name="to-fix-the-code-and-reprofile-the-application"></a>코드를 수정하고 응용 프로그램을 다시 프로파일링하려면  
   
-1.  In the feature event receiver code, comment out the `TimeCounter` method call in `FeatureActivated` to prevent it from being called.  
+1.  기능 이벤트 수신기 코드의 `TimeCounter`에서 `FeatureActivated` 메서드 호출을 주석으로 처리하여 호출되지 않도록 합니다.  
   
-2.  Save the project.  
+2.  프로젝트를 저장합니다.  
   
-3.  In **Performance Explorer**, open the Targets folder, and then choose the **ProfileTest** node.  
+3.  **성능 탐색기**대상 폴더를 연 다음 선택에서 **ProfileTest** 노드.  
   
-4.  On the **Performance Explorer** toolbar, in the **Actions** tab, choose the **Start Profiling** button.  
+4.  에 **성능 탐색기** 도구 모음에는 **동작** 탭을 선택는 **프로 파일링 시작** 단추입니다.  
   
-     If you want to change any of the profiling properties prior to reprofiling the application, choose the **Launch Performance Wizard** button instead.  
+     응용 프로그램을 다시 프로 파일링 하기 전에 프로 파일링 속성 변경, 선택 하려는 경우는 **성능 마법사 시작** 단추를 대신 합니다.  
   
-5.  Follow the instructions in the **Running the SharePoint Application** section, previously in this topic.  
+5.  지침에 따라는 **SharePoint 응용 프로그램을 실행** 이전에이 항목의 섹션입니다.  
   
-     The feature should activate much faster now that the call to the idle loop has been eliminated. The Sample Profiling Report should reflect this.  
+     유휴 루프 호출이 제거되었으므로 기능이 훨씬 빠르게 활성화됩니다. 샘플 프로파일링 보고서는 이를 반영합니다.  
   
-## <a name="see-also"></a>See Also  
- [Performance Explorer](/visualstudio/profiling/performance-explorer)   
- [Performance Session Overview](/visualstudio/profiling/performance-session-overview)   
- [Beginners Guide to Performance Profiling](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [Find Application Bottlenecks with Visual Studio Profiler](http://go.microsoft.com/fwlink/?LinkID=137266)  
+## <a name="see-also"></a>참고 항목  
+ [성능 탐색기](/visualstudio/profiling/performance-explorer)   
+ [성능 세션 개요](/visualstudio/profiling/performance-session-overview)   
+ [초보자를 위한 성능 프로파일링 지침](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
+ [Visual Studio 프로파일러를 사용한 응용 프로그램 병목 지점 찾기](http://go.microsoft.com/fwlink/?LinkID=137266)  
   
   
