@@ -26,7 +26,7 @@ ms.lasthandoff: 10/31/2017
 프로젝트를 빌드할 때 프로젝트 파일이나 프로젝트를 구성하는 파일에 없는 정보를 사용하여 빌드 옵션을 설치해야 하는 경우가 많습니다. 이 정보는 대개 환경 변수에 저장되어 있습니다.  
   
 ## <a name="referencing-environment-variables"></a>환경 변수 참조  
- 모든 환경 변수를 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)]([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) 프로젝트 파일에 속성으로 사용할 수 있습니다.  
+ 모든 환경 변수를 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) 프로젝트 파일에 속성으로 사용할 수 있습니다.  
   
 > [!NOTE]
 >  프로젝트 파일에 환경 변수와 이름이 같은 명시적 속성 정의가 포함되어 있으면 프로젝트 파일의 속성이 환경 변수의 값을 재정의합니다.  

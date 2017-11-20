@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>방법: 먼저 빌드할 대상 지정
-프로젝트 파일에는 프로젝트 빌드 방식을 정의하는 하나 이상의 `Target` 요소가 포함됩니다. 프로젝트 파일에 `DefaultTargets` 특성, `InitialTargets` 특성이 포함되거나 대상이 명령줄에서 **/target** 스위치를 사용하여 지정된 경우가 아니면 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)]([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) 엔진은 발견한 첫 번째 프로젝트 및 모든 종속성을 빌드합니다.  
+프로젝트 파일에는 프로젝트 빌드 방식을 정의하는 하나 이상의 `Target` 요소가 포함됩니다. 프로젝트 파일에 `DefaultTargets` 특성, `InitialTargets` 특성이 포함되거나 대상이 명령줄에서 **/target** 스위치를 사용하여 지정된 경우가 아니면 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) 엔진은 발견한 첫 번째 프로젝트 및 모든 종속성을 빌드합니다.  
   
 ## <a name="using-the-initialtargets-attribute"></a>InitialTargets 특성 사용  
  대상이 명령줄 또는 `DefaultTargets` 특성에서 지정된 경우에도 `Project` 요소의 `InitialTargets` 특성은 먼저 실행할 대상을 지정합니다.  
