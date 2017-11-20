@@ -1,11 +1,10 @@
 ---
-title: 'CA2241: Provide correct arguments to formatting methods | Microsoft Docs'
+title: "CA2241: 올바른 인수를 제공 하십시오. | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,52 +15,38 @@ helpviewer_keywords:
 - ProvideCorrectArgumentsToFormattingMethods
 - CA2241
 ms.assetid: 83639bc4-4c91-4a07-a40e-dc5e49a84494
-caps.latest.revision: 12
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 4ed5e5210683f073abcc65943fc7ae01677bf775
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 20952c22f7449e7e19880f6f89f87d5d34bf8ee9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2241-provide-correct-arguments-to-formatting-methods"></a>CA2241: Provide correct arguments to formatting methods
+# <a name="ca2241-provide-correct-arguments-to-formatting-methods"></a>CA2241: 형식 메서드에 올바른 인수를 제공하십시오.
 |||  
 |-|-|  
 |TypeName|ProvideCorrectArgumentsToFormattingMethods|  
 |CheckId|CA2241|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- The `format` string argument passed to a method such as <xref:System.Console.WriteLine%2A>,  <xref:System.Console.Write%2A>, or  <xref:System.String.Format%2A?displayProperty=fullName> does not contain a format item that corresponds to each object argument, or vice versa.  
+## <a name="cause"></a>원인  
+ `format` 문자열 인수 같은 메서드에 전달 된 <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>, 또는 <xref:System.String.Format%2A?displayProperty=fullName> 형식 항목 또는 그 반대로 각 개체 인수에 해당 하는 포함 되지 않습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- The arguments to methods such as <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>, and <xref:System.String.Format%2A> consist of a format string followed by several <xref:System.Object?displayProperty=fullName> instances. The format string consists of text and embedded format items of the form, {index[,alignment][:formatString]}. 'index' is a zero-based integer that indicates which of the objects to format. If an object does not have a corresponding index in the format string, the object is ignored. If the object specified by 'index' does not exist, a <xref:System.FormatException?displayProperty=fullName> is thrown at runtime.  
+## <a name="rule-description"></a>규칙 설명  
+ 인수 같은 메서드에 <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>, 및 <xref:System.String.Format%2A> 뒤에 여러 개의 형식 문자열 구성 <xref:System.Object?displayProperty=fullName> 인스턴스. 텍스트와 폼의 항목이 포함된 형식의 형식 문자열이 구성 된 {인덱스 [, 맞춤] [: formatString]을 (를). 'index'는 형식을 지정할 개체 부분을 나타내는 0부터 시작하는 정수입니다. 개체에 해당 하는 인덱스가 형식 문자열에서 개체는 무시 됩니다. 'Index'로 지정 된 개체가 있는 경우는 <xref:System.FormatException?displayProperty=fullName> 런타임 시 throw 됩니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, provide a format item for each object argument and provide an object argument for each format item.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 각 개체 인수에 대 한 서식 항목을 제공 하 고 각 형식 항목에 대 한 개체 인수를 제공 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows two violations of the rule.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 두 개의 규칙을 위반 경우를 보여 줍니다.  
   
- [!code-vb[FxCop.Usage.FormattingArguments#1](../code-quality/codesnippet/VisualBasic/ca2241-provide-correct-arguments-to-formatting-methods_1.vb)] [!code-csharp[FxCop.Usage.FormattingArguments#1](../code-quality/codesnippet/CSharp/ca2241-provide-correct-arguments-to-formatting-methods_1.cs)]
+ [!code-vb[FxCop.Usage.FormattingArguments#1](../code-quality/codesnippet/VisualBasic/ca2241-provide-correct-arguments-to-formatting-methods_1.vb)]
+ [!code-csharp[FxCop.Usage.FormattingArguments#1](../code-quality/codesnippet/CSharp/ca2241-provide-correct-arguments-to-formatting-methods_1.cs)]

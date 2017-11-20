@@ -1,11 +1,10 @@
 ---
-title: 'CA2117: APTCA types should only extend APTCA base types | Microsoft Docs'
+title: "CA2117: APTCA 형식은 APTCA 기본 형식만 확장만 해야 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,92 +14,77 @@ helpviewer_keywords:
 - AptcaTypesShouldOnlyExtendAptcaBaseTypes
 - CA2117
 ms.assetid: c505b586-2f1e-47cb-98ee-a5afcbeda70f
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: a10a5e0fb867e819f62705a224aadb1073854a3a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5619de2512e18cbe9d7dbfb3d992886ae23a25bf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: APTCA types should only extend APTCA base types
+# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: APTCA 형식은 APTCA 기본 형식만 확장해야 합니다.
 |||  
 |-|-|  
 |TypeName|AptcaTypesShouldOnlyExtendAptcaBaseTypes|  
 |CheckId|CA2117|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A public or protected type in an assembly with the <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> attribute inherits from a type declared in an assembly that does not have the attribute.  
+## <a name="cause"></a>원인  
+ 가진 어셈블리의 public 또는 protected 형식이 고 <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> 특성은 특성이 없는 어셈블리에 선언 된 형식에서 상속 합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- By default, public or protected types in assemblies with strong names are implicitly protected by an [Inheritance Demands](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9) for full trust. Strong-named assemblies marked with the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) attribute do not have this protection. The attribute disables the inheritance demand. This makes exposed types declared in the assembly inheritable by types that do not have full trust.  
+## <a name="rule-description"></a>규칙 설명  
+ 기본적으로 강력한 이름의 어셈블리에서 public 또는 protected 형식이 암시적으로 보호는 [상속 요청](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9) 완전 신뢰에 대 한 합니다. 강력한 이름의 어셈블리는 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성 (APTCA)이이 보호 필요가 없습니다. 특성 상속 요청을 해제합니다. 따라서 완전 신뢰 되지 않은 형식에 의해 노출 된 형식 상속 가능한 어셈블리에 선언 합니다.  
   
- When the APTCA attribute is present on a fully trusted assembly, and a type in the assembly inherits from a type that does not allow partially trusted callers, a security exploit is possible. If two types `T1` and `T2` meet the following conditions, malicious callers can use the type `T1` to bypass the implicit full trust inheritance demand that protects `T2`:  
+ 완전히 신뢰할 수 있는 어셈블리에 APTCA 특성이 있으면 어셈블리의 형식이 부분적으로 신뢰할 수 있는 호출자를 허용 하지 않는 형식에서 상속 하는 경우 보안 허점이 불가능 합니다. 두 개의 입력 된 경우 `T1` 및 `T2` 다음 조건을 충족, 악의적인 호출자가 형식을 사용할 수 `T1` 를 보호 하는 암시적 완전 신뢰 상속 요청을 사용 하지 않을 `T2`:  
   
--   `T1` is a public type declared in a fully trusted assembly that has the APTCA attribute.  
+-   `T1`APTCA 특성이 있는 완전히 신뢰할 수 있는 어셈블리에서 공용 형식 선언 되었습니다.  
   
--   `T1` inherits from a type `T2` outside its assembly.  
+-   `T1`형식에서 상속 `T2` 어셈블리 외부에 있습니다.  
   
--   `T2`'s assembly does not have the APTCA attribute and, therefore, should not be inheritable by types in partially trusted assemblies.  
+-   `T2`어셈블리에 APTCA 특성이 없고, 따라서 부분적으로 신뢰할 수 있는 어셈블리의 형식에서에서 상속 될 수 없습니다.  
   
- A partially trusted type `X` can inherit from `T1`, which gives it access to inherited members declared in `T2`. Because `T2` does not have the APTCA attribute, its immediate derived type (`T1`) must satisfy an inheritance demand for full trust; `T1` has full trust and therefore satisfies this check. The security risk is because `X` does not participate in satisfying the inheritance demand that protects `T2` from untrusted subclassing. For this reason, types with the APTCA attribute must not extend types that do not have the attribute.  
+ 부분적으로 신뢰할 수 있는 형식 `X` 에서 상속할 수 `T1`, 해당 액세스 권한을 제공에 선언 된 상속 된 멤버에 `T2`합니다. 때문에 `T2` APTCA 특성이, 직접 파생된 형식 (`T1`) 완전 신뢰에 대 한 상속 요청을 충족 해야 합니다 `T1` 완전 신뢰를 포함 하 고 따라서이 검사를 충족 합니다. 보안 위험 때문에 `X` 보호 하는 상속 요청을 만족 하는에 참여 하지 않는 `T2` 에서 신뢰할 수 없는 서브클래싱 합니다. 이러한 이유로 APTCA 특성이 포함 된 형식에 특성을 하지 않은 형식에 확장 하지 해야 합니다.  
   
- Another security issue, and perhaps a more common one, is that the derived type (`T1`) can, through programmer error, expose protected members from the type that requires full trust (`T2`). When this occurs, untrusted callers gain access to information that should be available only to fully trusted types.  
+ 다른 보안 문제 및 아마도 일반적인 하나는 파생된 형식 (`T1`), 프로그래머 오류를 통해 보호 된 멤버를 노출할 수 완전 신뢰가 필요한 형식에서 (`T2`). 이 경우 신뢰할 수 없는 호출자 완전히 신뢰할 수 있는 형식에만 사용할 수 있는 정보에 액세스할을 수 있습니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- If the type reported by the violation is in an assembly that does not require the APTCA attribute, remove it.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ APTCA 특성이 필요 하지 않은 어셈블리에 위반에 의해 보고 형식이 있는 경우이 제거 합니다.  
   
- If the APTCA attribute is required, add an inheritance demand for full trust to the type. This protects against inheritance by untrusted types.  
+ APTCA 특성이 필요한 경우 완전 신뢰에 대 한 상속 요청 형식에 추가 합니다. 이 신뢰할 수 없는 형식에 의해 상속 방지 됩니다.  
   
- It is possible to fix a violation by adding the APTCA attribute to the assemblies of the base types reported by the violation. Do not do this without first conducting an intensive security review of all code in the assemblies and all code that depends on the assemblies.  
+ 위반 위반에 의해 보고 된 기본 형식의 어셈블리에 APTCA 특성을 추가 하 여 문제를 해결 하는 것이 불가능 합니다. 이렇게 하지 않으면 첫 번째는 어셈블리의 모든 코드 및 어셈블리에 종속 되는 모든 코드는 많은 보안 검토를 수행 하지 않고 있습니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- To safely suppress a warning from this rule, you must ensure that protected members exposed by your type do not directly or indirectly allow untrusted callers to access sensitive information, operations, or resources that can be used in a destructive manner.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를에서 표시 하지 않으려면,는 해당 형식에서 노출 하는 보호 된 멤버 직접 또는 간접적으로 불가 신뢰할 수 없는 호출자가 중요 한 정보, 작업 또는 악용에서 사용할 수 있는 리소스에 액세스할 수를 확인 해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example uses two assemblies and a test application to illustrate the security vulnerability detected by this rule. The first assembly does not have the APTCA attribute and should not be inheritable by partially trusted types (represented by `T2` in the previous discussion).  
+## <a name="example"></a>예제  
+ 다음 예제에서는 두 어셈블리와 테스트 응용 프로그램을 사용 하 여이 규칙으로 검색 하는 보안 문제를 나타냅니다. 첫 번째 어셈블리에 APTCA 특성이 없고 부분적으로 신뢰할 수 있는 형식 상속 되지 않습니다 (나타내는 `T2` 이전 설명의).  
   
  [!code-csharp[FxCop.Security.NoAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_1.cs)]  
   
-## <a name="example"></a>Example  
- The second assembly, represented by `T1` in the previous discussion, is fully trusted and allows partially trusted callers.  
+## <a name="example"></a>예제  
+ 나타내는 두 번째 어셈블리는 `T1` 이전 설명의 되므로 완전히 신뢰할 수 있는 부분적으로 신뢰할 수 있는 호출자를 허용 합니다.  
   
  [!code-csharp[FxCop.Security.YesAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_2.cs)]  
   
-## <a name="example"></a>Example  
- The test type, represented by `X` in the previous discussion, is in a partially trusted assembly.  
+## <a name="example"></a>예제  
+ 에 표시 된 테스트 형식을 `X` 부분적으로 신뢰할 수 있는 어셈블리에는 이전 설명 합니다.  
   
  [!code-csharp[FxCop.Security.TestAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_3.cs)]  
   
- This example produces the following output.  
+ 이 예제의 결과는 다음과 같습니다.  
   
- **Meet at the shady glen 2/22/2003 12:00:00 AM!**  
-**From Test: sunny meadow**  
-**Meet at the sunny meadow 2/22/2003 12:00:00 AM!**   
-## <a name="related-rules"></a>Related Rules  
- [CA2116: APTCA methods should only call APTCA methods](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)  
+ **그늘진 협곡에서 2003 년 2 월 22 일 오전 12시: 00!**  
+**Sunny 목초지 테스트:**  
+**Sunny 목초지에서 2003 년 2 월 22 일 오전 12시: 00!**   
+## <a name="related-rules"></a>관련된 규칙  
+ [CA2116: APTCA 메서드는 APTCA 메서드만 호출해야 합니다.](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)  
   
-## <a name="see-also"></a>See Also  
- [Secure Coding Guidelines](/dotnet/standard/security/secure-coding-guidelines)   
- [.NET Framework Assemblies Callable by Partially Trusted Code](http://msdn.microsoft.com/en-us/a417fcd4-d3ca-4884-a308-3a1a080eac8d)   
- [Using Libraries from Partially Trusted Code](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   
- [Inheritance Demands](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)
+## <a name="see-also"></a>참고 항목  
+ [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
+ [.NET framework 어셈블리를 호출할 수 부분적으로 신뢰할 수 있는 코드](http://msdn.microsoft.com/en-us/a417fcd4-d3ca-4884-a308-3a1a080eac8d)   
+ [부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   
+ [상속 요청](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)

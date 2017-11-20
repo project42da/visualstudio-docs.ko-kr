@@ -1,11 +1,10 @@
 ---
-title: 'CA2225: Operator overloads have named alternates | Microsoft Docs'
+title: "CA2225: 연산자 오버 로드는 명명 된 대체 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,110 +14,95 @@ helpviewer_keywords:
 - OperatorOverloadsHaveNamedAlternates
 - CA2225
 ms.assetid: af8f7ab1-63ad-4861-afb9-b7a7a2be15e1
-caps.latest.revision: 20
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: bc8e648b8a463b08ce520cde7bcec8efaeeec4c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 07d15e5ec123e645a7607f16b6020487d4c0fc2a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225: Operator overloads have named alternates
+# <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225: 연산자 오버로드에는 명명된 대체 항목이 있습니다.
 |||  
 |-|-|  
 |TypeName|OperatorOverloadsHaveNamedAlternates|  
 |CheckId|CA2225|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- An operator overload was detected, and the expected named alternative method was not found.  
+## <a name="cause"></a>원인  
+ 연산자 오버로드가 감지되었으며 예상되는 이름의 대체 메서드를 찾을 수 없습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- Operator overloading allows the use of symbols to represent computations for a type. For example, a type that overloads the plus symbol (+) for addition would typically have an alternative member named 'Add'. The named alternative member provides access to the same functionality as the operator, and is provided for developers who program in languages that do not support overloaded operators.  
+## <a name="rule-description"></a>규칙 설명  
+ 연산자 오버 로드에 기호는 형식에 대 한 계산을 나타내는 데 사용할 수 있습니다. 예를 들어 더하기 기호 (+)에 추가 하는 오버 로드 하는 형식 이름이 'Add' 인 대체 멤버가 일반적으로 것입니다. 명명 된 대체 멤버는 연산자와 동일한 기능에 대 한 액세스를 제공 하 고 오버 로드 된 연산자를 지원 하지 않는 언어로 프로그래밍의 개발자를 위해 제공 됩니다.  
   
- This rule examines the operators listed in the following table.  
+ 이 규칙은 다음 표에 나와 있는 연산자를 검사 합니다.  
   
-|C#|Visual Basic|C++|Alternate name|  
+|C#|Visual Basic|C++|대체 이름|  
 |---------|------------------|-----------|--------------------|  
-|+ (binary)|+|+ (binary)|Add|  
+|+ (이진)|+|+ (이진)|Add|  
 |+=|+=|+=|Add|  
 |&|And|&|BitwiseAnd|  
-|&=|And=|&=|BitwiseAnd|  
+|&=|=|&=|BitwiseAnd|  
 |&#124;|Or|&#124;|BitwiseOr|  
-|&#124;=|Or=|&#124;=|BitwiseOr|  
-|--|N/A|--|Decrement|  
-|/|/|/|Divide|  
-|/=|/=|/=|Divide|  
-|==|=|==|Equals|  
+|&#124;=|또는 =|&#124;=|BitwiseOr|  
+|--|N/A|--|감소|  
+|/|/|/|나누기|  
+|/=|/=|/=|나누기|  
+|==|=|==|같음|  
 |^|Xor|^|Xor|  
-|^=|Xor=|^=|Xor|  
-|>|>|>|Compare|  
-|>=|>=|>=|Compare|  
-|++|N/A|++|Increment|  
-|<>|!=|Equals|  
-|<<|<<|<<|LeftShift|  
-|<<=|<<=|<<=|LeftShift|  
-|<|<|<|Compare|  
-|<=|<=|\<=|Compare|  
+|^=|Xor =|^=|Xor|  
+|>|>|>|비교|  
+|>=|>=|>=|비교|  
+|++|N/A|++|증가|  
+|<>|!=|같음|  
+|<<|<<|<<|으로 읽기 순서|  
+|<<=|<<=|<<=|으로 읽기 순서|  
+|<|<|<|비교|  
+|<=|<=|\<=|비교|  
 |&&|N/A|&&|LogicalAnd|  
 |&#124;&#124;|N/A|&#124;&#124;|LogicalOr|  
 |!|N/A|!|LogicalNot|  
-|%|Mod|%|Mod or Remainder|  
+|%|Mod|%|나머지 또는 mod|  
 |%=|N/A|%=|Mod|  
-|* (binary)|*|*|Multiply|  
-|*=|N/A|*=|Multiply|  
-|~|Not|~|OnesComplement|  
-|>>|>>|>>|RightShift|  
-=|N/A|>>=|RightShift|  
-|- (binary)|- (binary)|- (binary)|Subtract|  
-|-=|N/A|-=|Subtract|  
-|true|IsTrue|N/A|IsTrue (Property)|  
-|- (unary)|N/A|-|Negate|  
-|+ (unary)|N/A|+|Plus|  
-|false|IsFalse|False|IsTrue (Property)|  
+|* (이진)|*|*|곱하기|  
+|*=|N/A|*=|곱하기|  
+|~|not|~|OnesComplement|  
+|>>|>>|>>|속성|  
+=|N/A|>>=|속성|  
+|-(이진)|-(이진)|-(이진)|빼기|  
+|-=|N/A|-=|빼기|  
+|true|IsTrue|N/A|IsTrue (속성)|  
+|-(단항)|N/A|-|Negate|  
+|+ (단항)|N/A|+|더하기|  
+|false|IsFalse|False|IsTrue (속성)|  
   
- N/A == Cannot be overloaded in the selected language.  
+ 해당 없음 = = 선택한 언어로 오버 로드할 수 없습니다.  
   
- The rule also checks implicit and explicit cast operators in a type (`SomeType`) by checking for methods named `ToSomeType` and `FromSomeType`.  
+ 규칙 형식에 암시적 및 명시적 캐스트 연산자는 또한 확인 (`SomeType`) 라는 메서드를 확인 하 여 `ToSomeType` 및 `FromSomeType`합니다.  
   
- In C#, when a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.  
+ C#의 이항 연산자가 오버 로드 해당 대입 연산자, 있는 경우 이기도 암시적으로 오버 로드 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, implement the alternative method for the operator; name it using the recommended alternative name.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 현재 연산자에 대 한 대체 메서드를 구현 권장 되는 대체 이름을 사용 하 여 이름을 지정 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule if you are implementing a shared library. Applications can ignore a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 공유 라이브러리를 구현 하는 경우에이 규칙에서는 경고를에서 표시 하지 마십시오. 응용 프로그램에는이 규칙에서는 경고를에서 무시 해도 됩니다.  
   
-## <a name="example"></a>Example  
- The following example defines a structure that violates this rule. To correct the example, add a public `Add(int x, int y)` method to the structure.  
+## <a name="example"></a>예제  
+ 다음 예제에서는이 규칙을 위반 하는 구조를 정의 합니다. 이 예제를 수정 하려면 추가 공용 `Add(int x, int y)` 구조에 메서드.  
   
  [!code-csharp[FxCop.Usage.OperatorOverloadsHaveNamedAlternates#1](../code-quality/codesnippet/CSharp/ca2225-operator-overloads-have-named-alternates_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1046: Do not overload operator equals on reference types](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1046: 참조 형식에 같음 연산자를 오버로드하지 마십시오.](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
   
- [CA2226: Operators should have symmetrical overloads](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
+ [CA2226: 연산자에는 대칭 오버로드가 있어야 합니다.](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
   
- [CA2224: Override equals on overloading operator equals](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
+ [CA2224: 같음 연산자를 오버로드할 때 Equals를 재정의하십시오.](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
   
- [CA2218: Override GetHashCode on overriding Equals](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
+ [CA2218: Equals를 재정의할 때 GetHashCode를 재정의하십시오.](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
   
- [CA2231: Overload operator equals on overriding ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
+ [CA2231: ValueType.Equals를 재정의할 때 같음 연산자를 오버로드하십시오.](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)

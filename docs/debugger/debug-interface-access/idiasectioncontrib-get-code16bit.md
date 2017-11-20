@@ -1,46 +1,45 @@
 ---
-title: "IDiaSectionContrib::get_code16bit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSectionContrib::get_code16bit 메서드"
+title: 'Idiasectioncontrib:: Get_code16bit | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSectionContrib::get_code16bit method
 ms.assetid: 8cde8fc5-9546-4f82-b4a8-afd0d835039e
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 98a20a771de7c03a2b9b28b21fd3c42634c1a989
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSectionContrib::get_code16bit
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-16 비트 코드 섹션이 있는지 여부를 나타내는 플래그를 검색 합니다.  
+# <a name="idiasectioncontribgetcode16bit"></a>IDiaSectionContrib::get_code16bit
+16 비트 코드 섹션에 포함 되는지 여부를 나타내는 플래그를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```C++  
 HRESULT get_code16bit(  
-   BOOL *pRetVal  
+   BOOL *pRetVal  
 };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 반환 `TRUE` 경우 코드 섹션에서 16 비트입니다. 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` 단원의 코드 고, 그렇지 않으면 16 비트를 반환 합니다 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 이 메서드는 코드 16 비트 임을 나타냅니다.  코드가 없습니다 16 비트 이면 32 비트 또는 64 비트 코드와 같은 다른 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는의 코드는 16 비트만 나타냅니다. 코드가 하지 16 비트 이면 32 비트 또는 64 비트 코드 등의 다른 모든 항목 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

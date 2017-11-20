@@ -1,40 +1,39 @@
 ---
-title: "IDiaLoadCallback::RestrictRegistryAccess | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaLoadCallback::RestrictRegistryAccess 메서드"
+title: 'Idialoadcallback:: Restrictregistryaccess | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaLoadCallback::RestrictRegistryAccess method
 ms.assetid: de4760c3-a746-4bab-8065-1388fed31b67
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 021b074bd42cb9a06b38dd788510397c1440777f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaLoadCallback::RestrictRegistryAccess
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-레지스트리 쿼리 기호 검색 경로 찾는 데 사용할 수 있는지 확인 합니다.  
+# <a name="idialoadcallbackrestrictregistryaccess"></a>IDiaLoadCallback::RestrictRegistryAccess
+기호 검색 경로 찾을 레지스트리 쿼리를 사용할 수 있으면 결정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```C++  
 HRESULT RestrictRegistryAccess();  
 ```  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 모든 코드 이외의 반환 `S_OK` 레지스트리의 기호 검색 경로 쿼리 하는 것을 금지 합니다.  
+## <a name="remarks"></a>설명  
+ 이외의 다른 모든 반환 코드 `S_OK` 기호 검색 경로 대 한 레지스트리를 쿼리할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

@@ -1,53 +1,52 @@
 ---
-title: "IDiaSession::findLines | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSession::findLines 메서드"
+title: 'Idiasession:: Findlines | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSession::findLines method
 ms.assetid: d6e84916-fd55-457e-b057-57f97b51fe73
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 366c41ee6befafa633428e2b6a959809a08b6cd9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSession::findLines
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-지정 된 컴파일 대상 및 원본 파일 식별자에 줄 번호를 검색합니다.  
+# <a name="idiasessionfindlines"></a>IDiaSession::findLines
+지정 된 컴파일 대상 및 소스 파일 식별자 내의 줄 번호를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT findLines (   
-   IDiaSymbol*           compiland,  
-   IDiaSourceFile*       file,  
-   IDiaEnumLineNumbers** ppResult  
+```C++  
+HRESULT findLines (   
+   IDiaSymbol*           compiland,  
+   IDiaSourceFile*       file,  
+   IDiaEnumLineNumbers** ppResult  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `compiland`  
- \[in\][IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 컴파일 대상 개체입니다.  이 인터페이스를 사용 하 여 컨텍스트 줄 번호에 대 한 검색으로.  
+ [in] [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 컴파일 대상을 나타내는 개체입니다. 이 인터페이스를 사용 하 여 줄 번호를 검색 하는 컨텍스트.  
   
  `file`  
- \[in\] [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) 소스 파일 검색에 대 한 줄 번호를 나타내는 개체입니다.  
+ [in] [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) 줄 번호에 대 한 검색 하려는 소스 파일을 나타내는 개체입니다.  
   
  `ppResult`  
- \[out\] 반환 된 [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) 줄 번호 목록을 포함 하는 개체를 검색 합니다.  
+ [out] 반환 된 [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) 줄 번호의 목록을 포함 하는 개체를 검색 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   

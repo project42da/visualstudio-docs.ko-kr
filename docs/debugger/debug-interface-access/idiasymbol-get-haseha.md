@@ -1,56 +1,55 @@
 ---
-title: "IDiaSymbol::get_hasEHa | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_hasEHa 메서드"
+title: 'Idiasymbol:: Get_haseha | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_hasEHa method
 ms.assetid: cb61dfd9-fe69-461c-8185-288440454864
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 323f94ffdbb05fcf37cd749a1b29bef47738489b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_hasEHa
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-비동기 \(구조적된\) 예외 처리 함수를 포함 하는지 여부를 지정 하는 플래그를 검색 합니다.  
+# <a name="idiasymbolgethaseha"></a>IDiaSymbol::get_hasEHa
+비동기 (구조적된) 예외 처리 함수에 포함 되어 있는지 여부를 지정 하는 플래그를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp  
+```C++  
 HRESULT get_hasEHa(  
-   BOOL *pFlag  
+   BOOL *pFlag  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pFlag`  
- \[out\] 반환 `TRUE` 경우 함수는 비동기 예외 처리 됩니다. 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` 함수에 있는 경우 비동기 예외 처리; 그렇지 않으면 반환 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성에 사용할 수 있음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 속성이 해당 기호를 사용할 수 있음을 의미 합니다.  
   
-## 설명  
- 비동기 또는 구조적 예외 처리와 스타일 C\+\+ 예외 처리를 함께 사용할 수 있지만 특정 컴파일러 스위치를 사용 하려면 \/eha를 필요로 합니다.  
+## <a name="remarks"></a>설명  
+ 비동기 또는 구조적 예외 처리, c + + 형식 예외로 처리를 혼합할 수 있지만 특정 컴파일러 스위치를 사용 하도록 설정 하려면 /EHa 필요 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
 |버전:|DIA SDK v 8.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

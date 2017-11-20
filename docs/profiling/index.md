@@ -1,14 +1,13 @@
 ---
 layout: LandingPage
-title: "Visual Studio로 앱 프로파일링"
+title: "Visual Studio로 앱 프로파일링 | Microsoft Docs"
 description: "Visual Studio 2017을 사용하여 원하는 언어로 응용 프로그램, 서비스 및 도구의 성능을 프로파일링하는 방법을 알아보세요."
 ms.technology: vs-ide-debug
+ms.openlocfilehash: 78313c0e8f4591fef161a246b1231cdb43b54b2d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
-ms.openlocfilehash: e90fc5b4997acd7a9228e8132eb00f6f32ed2d3d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/13/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="profiling-in-visual-studio"></a>Visual Studio의 프로파일링
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 07/13/2017
         </a>
     </li>
     <li>
-        <a href="https://docs.microsoft.com/en-us/visualstudio/profiling/beginners-guide-to-performance-profiling.md#video">
+        <a href="../profiling/beginners-guide-to-performance-profiling.md#video">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

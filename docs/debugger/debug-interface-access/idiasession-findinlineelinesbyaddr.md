@@ -1,59 +1,56 @@
 ---
-title: "IDiaSession::findInlineeLinesByAddr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: IDiaSession::findInlineeLinesByAddr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: bb70e408-eed1-4c9c-b5b1-44323125f48b
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f93d9d04f83b2f23a3ae4e84e60b2b397bbd0c42
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSession::findInlineeLinesByAddr
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-줄 번호 정보가 직접 인라인, 될 모든 함수 또는 지정한 부모 기호로 간접적으로 반복 하는 클라이언트를 허용 하 고 지정 된 주소 범위 내에 포함 된 열거형을 검색 합니다.  
+# <a name="idiasessionfindinlineelinesbyaddr"></a>IDiaSession::findInlineeLinesByAddr
+클라이언트가 모든 없는 함수를 인라인 처리, 직접 또는 간접적으로 지정 된 부모 기호는 줄 번호 정보를 반복 하는 데 사용 하 고 지정된 된 주소 범위 내에 포함 하는 열거형을 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT findInlineeLinesByAddr (   
-   IDiaSymbol*           parent,  
-   DWORD                 isect,  
-   DWORD                 offset,  
-   DWORD                 length,  
-   IDiaEnumLineNumbers** ppResult  
+```C++  
+HRESULT findInlineeLinesByAddr (   
+   IDiaSymbol*           parent,   DWORD                 isect,   DWORD                 offset,   DWORD                 length,  
+   IDiaEnumLineNumbers** ppResult  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `parent`  
- \[in\] 부모 개체를 나타내는 `IDiaSymbol` 개체입니다.  
+ [in] `IDiaSymbol` 부모를 나타내는 개체입니다.  
   
  `isect`  
- \[in\] 주소의 섹션 구성 요소를 지정합니다.  
+ [in] 섹션 구성 요소 주소를 지정 합니다.  
   
  `offset`  
- \[in\] 주소의 오프셋 구성 요소를 지정합니다.  
+ [in] 주소 오프셋된 구성 요소를 지정합니다.  
   
  `length`  
- \[in\] 주소 범위에이 쿼리를 포함 하는 바이트 수를 지정 합니다.  
+ [in] 이 쿼리를 처리 하려면 바이트 수에 주소 범위를 지정 합니다.  
   
  `ppResult`  
- \[out\] 보유 하 고 있는 `IDiaEnumLineNumbers` 목록을 검색 하는 줄 번호를 포함 하는 개체입니다.  
+ [out] 보유 한 `IDiaEnumLineNumbers` 검색 되는 줄 번호의 목록을 포함 하는 개체입니다.  
   
-## 반환 값  
- 성공하면 `S_OK`를 반환하고, 그렇지 않으면 오류 코드를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 열거형](../../debugger/debug-interface-access/symtagenum.md)   

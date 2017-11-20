@@ -1,11 +1,10 @@
 ---
-title: 'CA1001: Types that own disposable fields should be disposable | Microsoft Docs'
+title: "CA1001: 삭제 가능한 필드가 있는 형식은 삭제 가능 해야 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,62 +14,47 @@ helpviewer_keywords:
 - CA1001
 - TypesThatOwnDisposableFieldsShouldBeDisposable
 ms.assetid: c85c126c-2b16-4505-940a-b5ddf873fb22
-caps.latest.revision: 22
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 8c7941272b56a1b98c70f2f8bd3275cba3f3ce08
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 30609be8b70f65cb48478c6d6d2c0f3b6d89a029
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1001-types-that-own-disposable-fields-should-be-disposable"></a>CA1001: Types that own disposable fields should be disposable
+# <a name="ca1001-types-that-own-disposable-fields-should-be-disposable"></a>CA1001: 삭제 가능한 필드가 있는 형식은 삭제 가능해야 합니다.
 |||  
 |-|-|  
 |TypeName|TypesThatOwnDisposableFieldsShouldBeDisposable|  
 |CheckId|CA1001|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking - If the type is not visible outside the assembly.<br /><br /> Breaking - If the type is visible outside the assembly.|  
+|범주|Microsoft.Design|  
+|변경 수준|아님-형식이 어셈블리 외부에 표시 되지 않습니다.<br /><br /> 주요 변경-형식이 어셈블리 외부에 표시 되는 경우|  
   
-## <a name="cause"></a>Cause  
- A class declares and implements an instance field that is a <xref:System.IDisposable?displayProperty=fullName> type and the class does not implement <xref:System.IDisposable>.  
+## <a name="cause"></a>원인  
+ 클래스 선언 하 고는 인스턴스 필드를 구현 하는 <xref:System.IDisposable?displayProperty=fullName> 형식 및 클래스를 구현 하지 않는 <xref:System.IDisposable>합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- A class implements the <xref:System.IDisposable> interface to dispose of unmanaged resources that it owns. An instance field that is an <xref:System.IDisposable> type indicates that the field owns an unmanaged resource. A class that declares an <xref:System.IDisposable> field indirectly owns an unmanaged resource and should implement the <xref:System.IDisposable> interface. If the class does not directly own any unmanaged resources, it should not implement a finalizer.  
+## <a name="rule-description"></a>규칙 설명  
+ 클래스에서 구현 하는 <xref:System.IDisposable> 인터페이스를 소유 하는 관리 되지 않는 리소스를 삭제 합니다. 인스턴스 필드를 한 <xref:System.IDisposable> 형식 필드 관리 되지 않는 리소스를 소유 하 고 있음을 나타냅니다. 선언 하는 클래스는 <xref:System.IDisposable> 필드에서 간접적으로 관리 되지 않는 리소스를 소유 하 고 구현 해야는 <xref:System.IDisposable> 인터페이스입니다. 클래스는 관리 되지 않는 리소스를 직접 소유 하지 않은, 경우 종료자를 구현 하지 않아야 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, implement <xref:System.IDisposable> and from the <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> method call the <xref:System.IDisposable.Dispose%2A> method of the field.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 구현 <xref:System.IDisposable> 들어오고는 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 메서드 호출에서 <xref:System.IDisposable.Dispose%2A> 필드의 메서드가 있습니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a class that violates the rule and a class that satisfies the rule by implementing <xref:System.IDisposable>. The class does not implement a finalizer because the class does not directly own any unmanaged resources.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 규칙을 위반 하는 클래스 및 구현 하 여 규칙을 충족 하는 클래스 <xref:System.IDisposable>합니다. 클래스는 직접 관리 되지 않는 리소스를 소유 하지 때문에 클래스 종료자를 구현 하지 않습니다.  
   
- [!code-vb[FxCop.Design.DisposableFields#1](../code-quality/codesnippet/VisualBasic/ca1001-types-that-own-disposable-fields-should-be-disposable_1.vb)] [!code-csharp[FxCop.Design.DisposableFields#1](../code-quality/codesnippet/CSharp/ca1001-types-that-own-disposable-fields-should-be-disposable_1.cs)]  
+ [!code-vb[FxCop.Design.DisposableFields#1](../code-quality/codesnippet/VisualBasic/ca1001-types-that-own-disposable-fields-should-be-disposable_1.vb)]
+ [!code-csharp[FxCop.Design.DisposableFields#1](../code-quality/codesnippet/CSharp/ca1001-types-that-own-disposable-fields-should-be-disposable_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2213: Disposable fields should be disposed](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA2213: 삭제 가능한 필드는 삭제해야 합니다.](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
   
- [CA2216: Disposable types should declare finalizer](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
+ [CA2216: 삭제 가능한 형식은 종료자를 선언해야 합니다.](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
   
- [CA2215: Dispose methods should call base class dispose](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)  
+ [CA2215: Dispose 메서드는 기본 클래스 Dispose를 호출해야 합니다.](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)  
   
- [CA1049: Types that own native resources should be disposable](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
+ [CA1049: 네이티브 리소스가 있는 형식은 삭제 가능해야 합니다.](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)

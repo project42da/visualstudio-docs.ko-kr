@@ -1,29 +1,30 @@
 ---
-title: "CA1704: 식별자에는 정확한 철자를 사용해야 합니다. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1704"
-  - "IdentifiersShouldBeSpelledCorrectly"
-helpviewer_keywords: 
-  - "CA1704"
-  - "IdentifiersShouldBeSpelledCorrectly"
+title: "CA1704: 식별자 철자가 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1704
+- IdentifiersShouldBeSpelledCorrectly
+helpviewer_keywords:
+- CA1704
+- IdentifiersShouldBeSpelledCorrectly
 ms.assetid: f2c7a44d-1690-44ca-9cd0-681b04b12b2a
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: e43e3340cdbc05ec00c909542e201692199ccfef
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA1704: 식별자에는 정확한 철자를 사용해야 합니다.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704: 식별자에는 정확한 철자를 사용해야 합니다.
 |||  
 |-|-|  
 |TypeName|IdentifiersShouldBeSpelledCorrectly|  
@@ -31,36 +32,36 @@ caps.handback.revision: 25
 |범주|Microsoft.Naming|  
 |변경 수준|주요 변경|  
   
-## 원인  
- 식별자의 이름에 Microsoft 맞춤법 검사 라이브러리에서 인식하지 못하는 단어가 하나 이상 있습니다.  이 규칙은 get 및 set 속성 접근자 같은 특수한 이름의 멤버나 생성자를 검사하지 않습니다.  
+## <a name="cause"></a>원인  
+ 식별자의 이름에 Microsoft 맞춤법 검사 라이브러리에서 인식 하지 못하는 단어가 하나 이상 있습니다. 이 규칙 생성자 또는 get 같은 특수 한 이름이 지정 된 멤버를 확인 하 고 set 속성 접근자 하지 않습니다.  
   
-## 규칙 설명  
- 이 규칙은 식별자를 토큰으로 구문 분석하고 각 토큰의 맞춤법을 검사합니다.  구문 분석 알고리즘은 다음과 같은 변환을 수행합니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 이 규칙의 식별자를 토큰으로 구문 분석 하 고 각 토큰의 맞춤법을 검사 합니다. 구문 분석 알고리즘에서는 다음과 같은 변환을 수행합니다.  
   
--   대문자는 새 토큰을 시작합니다.  예를 들어 MyNameIsJoe는 "My", "Name", "Is", "Joe"로 토큰화됩니다.  
+-   대문자는 새 토큰을 시작 합니다. 예를 들어 "My", "Name", "Is", "Joe" MyNameIsJoe 토큰화합니다.  
   
--   대문자가 여러 개인 경우 마지막 대문자는 새 토큰을 시작합니다.  예를 들어 GUIEditor는 "GUI", "Editor"로 토큰화됩니다.  
+-   여러 문자가 마지막 대문자는 새 토큰을 시작합니다. 예를 들어 GUIEditor "GUI", "편집기"를 토큰화합니다.  
   
--   앞과 뒤의 아포스트로피가 제거됩니다.  예를 들어 'sender'는 "sender"로 토큰화됩니다.  
+-   선행 및 후행 아포스트로피 제거 됩니다. 예를 들어 "보낸 사람에 게" 'd e r'를 토큰화합니다.  
   
--   밑줄은 토큰의 끝을 의미하고 이후에 제거됩니다.  예를 들어 Hello\_world는 "Hello", "world"로 토큰화됩니다.  
+-   밑줄 토큰의 끝을 나타냅니다 하 고 제거 됩니다. "Hello"에 Hello_world 토큰화 하는 예를 들어, "world"입니다.  
   
--   포함된 앰퍼샌드는 제거됩니다.  예를 들어 for&은 "format"으로 토큰화됩니다.  
+-   포함 된 앰퍼샌드 제거 됩니다. 예를 들어 for&mat은 "format"으로 토큰화됩니다.  
   
- 기본적으로 영어 버전의 맞춤법 검사기가 사용됩니다.  현재 사용할 수 있는 다른 언어 사전은 없습니다.  
+ 기본적으로 영어 (en) 버전의 맞춤법 검사기 사용 됩니다. 현재 사용할 수 있는 다른 언어 사전이 없습니다.  
   
-## 위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결하려면 단어의 맞춤법을 수정하거나 해당 단어를 CustomDictionary.xml이라는 사용자 지정 사전에 추가합니다.  사전을 도구의 설치 디렉터리, 프로젝트 디렉터리 또는 도구와 연결된 사용자 프로파일\(%USERPROFILE%\\Application Data\\...\) 아래의 디렉터리에 저장합니다.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 프로젝트에 사용자 지정 사전을 추가하는 방법을 보려면 [방법: 코드 분석 사전 사용자 지정](../Topic/How%20to:%20Customize%20the%20Code%20Analysis%20Dictionary.md)를 참조하십시오.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하는 word의 철자를 수정 하거나 CustomDictionary.xml 라는 사용자 지정 사전에 단어를 추가 합니다. 도구를 프로젝트 디렉터리의 설치 디렉터리에서 나 사용자의 프로필 아래에서 도구와 연관 된 디렉터리에 사전 배치할 (%USERPROFILE%\Application 데이터\\...). 사용자 지정 사전 프로젝트에 추가 하는 방법에 알아보려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 참조 [하는 방법: 코드 분석 사전 사용자 지정](../code-quality/how-to-customize-the-code-analysis-dictionary.md)  
   
--   규칙을 위반하지 않는 단어를 Dictionary\/Words\/Recognized 경로 아래에 추가합니다.  
+-   사전/단어/인식 경로 아래의 위반 인해 발생 하지 않아야 하는 단어를 추가 합니다.  
   
--   규칙을 위반하는 단어를 Dictionary\/Words\/Unrecognized 경로 아래에 추가합니다.  
+-   사전/단어/알 수 없는 경로 아래의 위반이 발생 해야 하는 단어를 추가 합니다.  
   
--   사용되지 않음으로 플래그가 지정된 단어를 Dictionary\/Words\/Deprecated 경로 아래에 추가합니다.  자세한 내용은 관련 규칙 항목 [CA1726: 기본 설정 용어를 사용하십시오.](../code-quality/ca1726-use-preferred-terms.md)를 참조하십시오.  
+-   사전/단어/Deprecated 경로 아래에서 사용 되지 않는으로 플래그 지정 해야 하는 단어를 추가 합니다. 관련된 규칙 항목을 참조 [CA1726: 기본 설정된 용어를 사용 하 여](../code-quality/ca1726-use-preferred-terms.md) 자세한 정보에 대 한 합니다.  
   
--   머리글자어 대\/소문자 규칙에 대한 예외를 Dictionary\/Acronyms\/CasingExceptions 경로에 추가합니다.  
+-   사전/머리글자어/CasingExceptions 경로에 머리글자어 대/소문자 규칙에 예외를 추가 합니다.  
   
- 다음은 사용자 지정 사전 파일 구조의 예입니다.  
+ 다음은 사용자 지정 사전 파일의 구조의 예제입니다.  
   
 ```  
 <Dictionary>  
@@ -85,21 +86,21 @@ caps.handback.revision: 25
 </Dictionary>  
 ```  
   
-## 경고를 표시하지 않는 경우  
- 단어의 맞춤법을 일부러 잘못 쓴 경우 및 단어를 라이브러리의 제한된 설정에 적용하는 경우에만 이 규칙에서 경고를 표시하지 마십시오.  맞춤법이 올바른 단어를 사용하면 새 소프트웨어 라이브러리에 익숙해지는 데 필요한 학습 기간이 줄어듭니다.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 단어는 의도적으로 맞춤법이 틀린 단어 라이브러리의 제한 된 집합에 적용 됩니다. 경우에이 규칙에서 경고를 표시 합니다. 맞춤법이 단어를 사용 하는 새 소프트웨어 라이브러리에 필요한 배워야 할 필요성이 줄어듭니다.  
   
-## 관련 규칙  
+## <a name="related-rules"></a>관련된 규칙  
  [CA2204: 리터럴의 철자가 맞아야 합니다.](../code-quality/ca2204-literals-should-be-spelled-correctly.md)  
   
  [CA1703: 리소스 문자열에는 정확한 철자를 사용해야 합니다.](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)  
   
- [CA1709: 식별자는 정확한 대\/소문자를 사용해야 합니다.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)  
+ [CA1709: 식별자는 정확한 대/소문자를 사용해야 합니다.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)  
   
- [CA1708: 식별자에는 대\/소문자만 다른 이름을 사용할 수 없습니다.](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)  
+ [CA1708: 식별자에는 대/소문자만 다른 이름을 사용할 수 없습니다.](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)  
   
  [CA1707: 식별자에는 밑줄을 사용할 수 없습니다.](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)  
   
  [CA1726: 기본 설정 용어를 사용하십시오.](../code-quality/ca1726-use-preferred-terms.md)  
   
-## 참고 항목  
- [방법: 코드 분석 사전 사용자 지정](../Topic/How%20to:%20Customize%20the%20Code%20Analysis%20Dictionary.md)
+## <a name="see-also"></a>참고 항목  
+ [방법: 코드 분석 사전 사용자 지정](../code-quality/how-to-customize-the-code-analysis-dictionary.md)

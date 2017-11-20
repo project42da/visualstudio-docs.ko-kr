@@ -1,11 +1,10 @@
 ---
-title: 'CA1033: Interface methods should be callable by child types | Microsoft Docs'
+title: "CA1033: 인터페이스 메서드 자식 형식에서 호출할 수 있어야 합니다 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,58 +14,42 @@ helpviewer_keywords:
 - CA1033
 - InterfaceMethodsShouldBeCallableByChildTypes
 ms.assetid: 9f171497-a5e3-4769-a77b-7aed755b2662
-caps.latest.revision: 17
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: ee5cfe4241fa80e435a3ceb66d7a90cc45a71d1b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 4694e1dbcbcf541b502edbe5f2520229ee33f4a6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1033-interface-methods-should-be-callable-by-child-types"></a>CA1033: Interface methods should be callable by child types
+# <a name="ca1033-interface-methods-should-be-callable-by-child-types"></a>CA1033: 인터페이스 메서드는 자식 형식에서 호출할 수 있어야 합니다.
 |||  
 |-|-|  
 |TypeName|InterfaceMethodsShouldBeCallableByChildTypes|  
 |CheckId|CA1033|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- An unsealed externally visible type provides an explicit method implementation of a public interface and does not provide an alternative externally visible method that has the same name.  
+## <a name="cause"></a>원인  
+ 외부에서 볼 수 있는 unsealed 형식이 public 인터페이스의 명시적 메서드 구현을 제공하면서 외부에서 볼 수 있는 같은 이름의 대체 메서드를 제공하지 않습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- Consider a base type that explicitly implements a public interface method. A type that derives from the base type can access the inherited interface method only through a reference to the current instance (`this` in C#) that is cast to the interface. If the derived type re-implements (explicitly) the inherited interface method, the base implementation can no longer be accessed. The call through the current instance reference will invoke the derived implementation; this causes recursion and an eventual stack overflow.  
+## <a name="rule-description"></a>규칙 설명  
+ 명시적으로 공용 인터페이스 메서드를 구현 하는 기본 형식인을 것이 좋습니다. 기본 형식에서 파생 되는 형식의 현재 인스턴스에 대 한 참조를 통해서만 상속 된 인터페이스 메서드를 액세스할 수 있습니다 (`this` C#) 인터페이스로 캐스팅 되 합니다. 파생 된 형식 상속 된 인터페이스 메서드를 명시적으로 다시 구현 하는 경우의 기본 구현은 더 이상 액세스할 수 없습니다. 현재 인스턴스 참조를 통해 호출 되며 호출 파생된 구현을 제공 합니다. 그러면, 재귀 및 스택 오버플로가 발생 합니다.  
   
- This rule does not report a violation for an explicit implementation of <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> when an externally visible `Close()` or `System.IDisposable.Dispose(Boolean)` method is provided.  
+ 이 규칙에서는 명시적 구현에 대 한 위반을 보고 하지 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 외부에서 볼 때 `Close()` 또는 `System.IDisposable.Dispose(Boolean)` 메서드가 제공 됩니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, implement a new method that exposes the same functionality and is visible to derived types or change to a nonexplicit implementation. If a breaking change is acceptable, an alternative is to make the type sealed.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 파생된 형식에 표시 되 고 동일한 기능을 노출 하는 새 메서드를 구현 하거나 명시적이 아닌 구현을 변경 합니다. 주요 변경 내용 허용 되는 경우 대신 봉인 형식을 쉽게 것입니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if an externally visible method is provided that has the same functionality but a different name than the explicitly implemented method.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 외부에 표시 되는 메서드를 기능은 다른 이름 명시적으로 구현 된 메서드와 같지만 제공할 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a type, `ViolatingBase`, that violates the rule and a type, `FixedBase`, that shows a fix for the violation.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 형식 `ViolatingBase`, 규칙을 위반 하는 형식이 있는 `FixedBase`, 위반에 대 한 수정을 보여 주는 합니다.  
   
  [!code-csharp[FxCop.Design.ExplicitMethodImplementations#1](../code-quality/codesnippet/CSharp/ca1033-interface-methods-should-be-callable-by-child-types_1.cs)]  
   
-## <a name="see-also"></a>See Also  
- [Interfaces](/dotnet/csharp/programming-guide/interfaces/index)
+## <a name="see-also"></a>참고 항목  
+ [인터페이스](/dotnet/csharp/programming-guide/interfaces/index)

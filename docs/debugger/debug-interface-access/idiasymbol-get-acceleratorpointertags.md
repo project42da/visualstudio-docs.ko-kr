@@ -1,51 +1,51 @@
 ---
-title: "IDiaSymbol::get_acceleratorPointerTags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: IDiaSymbol::get_acceleratorPointerTags | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 30e13cee-e511-49ec-affd-99b0097071b2
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e8467c25c8665dfb3fc91ea29d9b99c184b7ecce
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_acceleratorPointerTags
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-C \+ \+ AMP 가속기 스텁 함수에 해당 하는 모든 가속기 포인터 태그 값을 반환 합니다.  
+# <a name="idiasymbolgetacceleratorpointertags"></a>IDiaSymbol::get_acceleratorPointerTags
+C + + AMP 액셀러레이터 스텁 함수에 해당 하는 모든 액셀러레이터 포인터 태그 값을 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp  
+```C++  
 HRESULT get_acceleratorPointerTags(   
    DWORD          cnt,  
    DWORD*         pcnt,  
    DWORD*         pPointerTags);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `cnt`  
- \[in\] 출력 배열의 크기를 `pPointerTags`.  
+ [in] 출력 배열의 크기 `pPointerTags`합니다.  
   
  `pcnt`  
- \[out\] 가속기 가속기 C\+\+ AMP 스텁 함수 포인터 태그 개수입니다.  
+ [out] C + + AMP 액셀러레이터 스텁 함수에서 가속기 포인터 태그의 수입니다.  
   
  `pPointerTags`  
- \[out\] A `DWORD` 배열 포인터 C\+\+ AMP 가속기 스텁 함수 가속기 포인터 태그 값으로 채워집니다.  
+ [out] A `DWORD` c + + AMP 액셀러레이터 스텁 함수에서 가속기 포인터 태그 값으로 채워진 배열 포인터입니다.  
   
-## 반환 값  
- 성공하면 `S_OK`를 반환하고, 그렇지 않으면 `S_FALSE` 또는 오류 코드를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
-## 설명  
- 이 메서드가 호출 되는 `IDiaSymbol` 인터페이스는 C\+\+ AMP 가속기 스텁 함수에 해당 합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 프로그램 `IDiaSymbol` c + + AMP 액셀러레이터 스텁 함수에 해당 하는 인터페이스입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

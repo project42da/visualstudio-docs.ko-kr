@@ -1,11 +1,10 @@
 ---
-title: 'CA1903: Use only API from targeted framework | Microsoft Docs'
+title: "CA1903: 대상된 프레임 워크에서 API만 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,73 +14,58 @@ helpviewer_keywords:
 - UseOnlyApiFromTargetedFramework
 - CA1903
 ms.assetid: efdb5cc7-bbd8-4fa7-9fff-02b91e59350e
-caps.latest.revision: 8
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: ec60623b651e990d77895d3c4eeef90cd69222a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "8"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7caff553adfd812e671a2d8643b2352d9868ca43
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903: Use only API from targeted framework
+# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903: 대상 프레임워크에서 API만 사용하십시오.
 |||  
 |-|-|  
 |TypeName|UseOnlyApiFromTargetedFramework|  
 |CheckId|CA1903|  
-|Category|Microsoft.Portability|  
-|Breaking Change|Breaking - when fired against the signature of an externally visible member or type.<br /><br /> Non breaking - when fired in the body of a method.|  
+|범주|Microsoft.Portability|  
+|변경 수준|주요-외부에서 볼 수 있는 멤버 또는 형식을 서명에 대해 발생 한 경우입니다.<br /><br /> 주요 변경 아님-메서드의 본문에 발생 한 경우.|  
   
-## <a name="cause"></a>Cause  
- A member or type is using a member or type that was introduced in a service pack that was not included with the project's targeted framework.  
+## <a name="cause"></a>원인  
+ 멤버 또는 형식 멤버 또는 프로젝트의 대상된 프레임 워크와 포함 되지 않은 서비스 팩에 도입 된 형식을 사용 합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- New members and types were included in .NET Framework 2.0 Service Pack 1 and 2, .NET Framework 3.0 Service Pack 1 and 2, and .NET Framework 3.5 Service Pack 1. Projects that target the major versions of the .NET Framework can unintentionally take dependencies on these new APIs. To prevent this dependency, this rule fires on usages of any new members and types that were not included by default with the project's target framework.  
+## <a name="rule-description"></a>규칙 설명  
+ .NET Framework 2.0 서비스 팩 1 및 2,.NET Framework 3.0 서비스 팩 1과 2 및.NET Framework 3.5 서비스 팩 1에 새 멤버 및 유형이 포함 되어 있습니다. .NET Framework의 주 버전을 대상으로 하는 프로젝트 종속성 이러한 이벤트에 대해 새로운 Api 걸릴 실수로 수 있습니다. 이 종속성을 방지 하려면이 규칙은 모든 새 멤버 및 프로젝트의 대상 프레임 워크를 사용 하 여 기본적으로 포함 되지 않은 형식을 사용 합니다.  
   
- **Target Framework and Service Pack Dependencies**  
+ **대상 프레임 워크 및 서비스 팩 종속성**  
   
 |||  
 |-|-|  
-|When target framework is|Fires on usages of members introduced in|  
-|.NET Framework 2.0|.NET Framework 2.0 SP1, .NET Framework 2.0 SP2|  
-|.NET Framework 3.0|.NET Framework 2.0 SP1, .NET Framework 2.0 SP2, .NET Framework 3.0 SP1, .NET Framework 3.0 SP2|  
+|대상 프레임 워크|에 도입 된 멤버를 사용할 경우에 발생.|  
+|.NET Framework 2.0|.NET framework 2.0 SP1,.NET Framework 2.0 SP2|  
+|.NET Framework 3.0|.NET framework 2.0 SP1,.NET Framework 2.0 s p 2,.NET Framework 3.0 SP1,.NET Framework 3.0 s p 2|  
 |.NET Framework 3.5|.NET Framework 3.5 SP1|  
 |.NET Framework 4|N/A|  
   
- To change a project's target framework, see [Targeting a Specific .NET Framework Version](../ide/targeting-a-specific-dotnet-framework-version.md).  
+ 프로젝트의 대상 프레임 워크를 변경 하려면 참조 [특정.NET Framework 버전 대상 지정](../ide/targeting-a-specific-dotnet-framework-version.md)합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To remove the dependency on the service pack, remove all usages of the new member or type. If this is a deliberate dependency, either suppress the warning or turn this rule off.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 서비스 팩에 대 한 종속성을 제거 하려면 형식 또는 새 멤버의 모든 사용을 제거 합니다. 이 의도적인 종속성, 경고를 억제 또는이 규칙을 해제 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule if this was not a deliberate dependency on the specified service pack. In this situation, your application might fail to run on systems without this service pack installed. Suppress the warning or turn this rule off if this was a deliberate dependency.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 관리 팩은 지정 된 서비스 팩 의도적인 종속성 아닌 경우에이 규칙에서는 경고를에서 표시 하지 마십시오. 이 경우 응용 프로그램이 서비스 팩이 설치 되지 않은 시스템에서 실행 하지 못할 수 있습니다. 경고를 억제 또는 의도적인 종속성이 경우이 규칙을 해제 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a class that uses the type DateTimeOffset that is only available in .NET 2.0 Service Pack 1. This example requires that .NET Framework 2.0 has been selected in the Target Framework drop-down list in the Project properties.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 DateTimeOffset만.NET 2.0 서비스 팩 1에서 사용할 수 있는 형식을 사용 하는 클래스를 보여 줍니다. 이 예제에서는.NET Framework 2.0가 선택한 프로젝트 속성에 대상 프레임 워크 드롭다운 목록에서 필요 합니다.  
   
  [!code-csharp[FxCop.Portability.UseOnlyApiFromTargetedFramework#1](../code-quality/codesnippet/CSharp/ca1903-use-only-api-from-targeted-framework_1.cs)]  
   
-## <a name="example"></a>Example  
- The following example fixes the previously described violation by replacing usages of the DateTimeOffset type with the DateTime type.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 앞에서 설명한 위반 DateTimeOffset 형식의 사용 날짜/시간 형식으로 대체 하 여 문제를 해결 합니다.  
   
  [!code-csharp[FxCop.Portability.UseOnlyApiFromTargetedFramework2#1](../code-quality/codesnippet/CSharp/ca1903-use-only-api-from-targeted-framework_2.cs)]  
   
-## <a name="see-also"></a>See Also  
- [Portability Warnings](../code-quality/portability-warnings.md)   
- [Targeting a Specific .NET Framework Version](../ide/targeting-a-specific-dotnet-framework-version.md)
+## <a name="see-also"></a>참고 항목  
+ [이식성 경고](../code-quality/portability-warnings.md)   
+ [특정 대상 .NET Framework 버전 지정](../ide/targeting-a-specific-dotnet-framework-version.md)

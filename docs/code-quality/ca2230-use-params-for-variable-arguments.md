@@ -1,11 +1,10 @@
 ---
-title: 'CA2230: Use params for variable arguments | Microsoft Docs'
+title: "CA2230: 가변 인수에 대 한 매개 변수를 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,58 +14,43 @@ helpviewer_keywords:
 - CA2230
 - UseParamsForVariableArguments
 ms.assetid: bf98b733-4855-4110-9f16-eba5a9e79421
-caps.latest.revision: 15
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 8e7037e7b642aa36bb1a351113e7d09dc1ea2537
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 10920c4ff9083b52e2d35f7fa151644b89bb1102
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: Use params for variable arguments
+# <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: 가변 인수로 params를 사용하십시오.
 |||  
 |-|-|  
 |TypeName|UseParamsForVariableArguments|  
 |CheckId|CA2230|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A public or protected type contains a public or protected method that uses the `VarArgs` calling convention.  
+## <a name="cause"></a>원인  
+ Public 또는 protected 형식이 사용 하는 public 또는 protected 메서드가 들어는 `VarArgs` 호출 규칙입니다.  
   
-## <a name="rule-description"></a>Rule Description  
- The `VarArgs` calling convention is used with certain method definitions that take a variable number of parameters. A method using the `VarArgs` calling convention is not Common Language Specification (CLS) compliant and might not be accessible across programming languages.  
+## <a name="rule-description"></a>규칙 설명  
+ `VarArgs` 가변 개수의 매개 변수를 사용 하는 특정 메서드 정의 호출 규칙이 사용 됩니다. 사용 하는 메서드는 `VarArgs` CLS 규격이 아닙니다. 공용 언어 사양 () 호출 규칙 및 여러 프로그래밍 언어 액세스할 수 없습니다.  
   
- In C#, the `VarArgs` calling convention is used when a method's parameter list ends with the `__arglist` keyword. Visual Basic does not support the `VarArgs` calling convention, and Visual C++  allows its use only in unmanaged code that uses the ellipse `...` notation.  
+ C#에서 `VarArgs` 메서드 매개 변수 목록으로 종료 될 때 호출 규칙이 사용 됩니다는 `__arglist` 키워드입니다. Visual Basic을 지원 하지 않습니다는 `VarArgs` 타원을 사용 하는 관리 되지 않는 코드에만 사용할 수 있습니다 호출 규칙, 및 Visual c + + `...` 표기법입니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule in C#, use the [params](/dotnet/csharp/language-reference/keywords/params) keyword instead of `__arglist`.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ C#에서이 규칙 위반을 해결 하려면 사용 된 [params](/dotnet/csharp/language-reference/keywords/params) 키워드 대신 `__arglist`합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows two methods, one that violates the rule and one that satisfies the rule.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 두 가지 방법, 규칙을 위반 하 고 다른 하나는 규칙을 만족 보여 줍니다.  
   
  [!code-csharp[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Reflection.CallingConventions?displayProperty=fullName>   
- [Language Independence and Language-Independent Components](http://msdn.microsoft.com/Library/4f0b77d0-4844-464f-af73-6e06bedeafc6)
+ [언어 독립성 및 언어 독립적 구성 요소](http://msdn.microsoft.com/Library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

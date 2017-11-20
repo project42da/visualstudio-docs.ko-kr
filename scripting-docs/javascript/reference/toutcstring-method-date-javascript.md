@@ -1,49 +1,51 @@
 ---
-title: "toUTCString 메서드(Date)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "toUTCString"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "toUTCString 메서드"
-  - "UTC 날짜, 문자열로 변환"
+title: "toUTCString 메서드 (Date) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: toUTCString
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- UTC dates, converting to strings
+- toUTCString method
 ms.assetid: eb0983ed-7884-42fa-a2cc-de92b3111207
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0bd5efc43152c1af2dd467b73dce235e8fe52f29
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# toUTCString 메서드(Date)(JavaScript)
-UTC\(협정 세계 표준시\)를 사용하여 문자열로 변환된 날짜를 반환합니다.  
+# <a name="toutcstring-method-date-javascript"></a>toUTCString 메서드(Date)(JavaScript)
+Utc (협정 세계시)를 사용 하 여 문자열로 변환 된 날짜를 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 dateObj.toUTCString()   
 ```  
   
-## 설명  
- 필수 `dateObj` 참조는 임의의 `Date` 개체입니다.  
+## <a name="remarks"></a>설명  
+ 필요한 `dateObj` 참조는 임의의 `Date` 개체입니다.  
   
- `toUTCString` 메서드는 UTC 규칙을 사용하는 날짜 형식을 가진 `String` 개체를 편리하고 읽기 쉬운 형식으로 반환합니다.  
+ `toUTCString` 메서드가 반환 되는 `String` UTC 규칙을 사용 하 여 편리 하 고 서식을 날짜를 포함 하는 개체 읽기 쉬운 형식입니다.  
   
-## 예제  
- 다음 예제에서는 `toUTCString` 메서드의 사용법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `toUTCString` 메서드를 사용하는 방법을 보여 줍니다.  
   
-```javascript  
+```JavaScript  
 function toUTCStrDemo(){  
    var d, s;                   //Declare variables.  
    d = new Date();             //Create Date object.  
@@ -53,10 +55,10 @@ function toUTCStrDemo(){
 }  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
- **적용 대상**: [Date 개체](../../javascript/reference/date-object-javascript.md)  
+ **적용 대상**: [Date Object](../../javascript/reference/date-object-javascript.md)  
   
-## 참고 항목  
- [toGMTString 메서드\(Date\)](../../javascript/reference/togmtstring-method-date-javascript.md)
+## <a name="see-also"></a>참고 항목  
+ [toGMTString 메서드(Date)](../../javascript/reference/togmtstring-method-date-javascript.md)

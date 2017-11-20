@@ -1,61 +1,60 @@
 ---
-title: "DiaAddressMapEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DiaAddressMapEntry 열거형"
+title: DiaAddressMapEntry | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: DiaAddressMapEntry enumeration
 ms.assetid: 5d0ae226-981d-4541-a801-fc4993fe663b
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f1324ea79ec60a61e315253573b9d4aa3ced2695
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# DiaAddressMapEntry
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-주소 맵 항목에 설명 합니다.  
+# <a name="diaaddressmapentry"></a>DiaAddressMapEntry
+주소 맵에서 항목을 설명 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-struct DiaAddressMapEntry {   
-   DWORD rva,  
-   DWORD rvaTo  
+```C++  
+struct DiaAddressMapEntry {   
+   DWORD rva,  
+   DWORD rvaTo  
 };  
 ```  
   
-## Elements  
+## <a name="elements"></a>요소  
  `rva`  
- A. 이미지 상대 가상 주소 \(RVA\)  
+ 1. 이미지의 상대 가상 주소 (RVA)  
   
  `rvaTo`  
- 상대 가상 주소 `rva` B. 이미지에 매핑됩니다  
+ 상대 가상 주소 `rva` 2. 이미지에 매핑될  
   
-## 설명  
- 주소 맵 이미지 레이아웃에서 번역 \(A\)를 다른 \(B\)를 제공합니다.  배열 `DiaAddressMapEntry` 구조를 기준으로 정렬 `rva` 주소 구조를 정의 합니다.  
+## <a name="remarks"></a>설명  
+ 주소 구조는 하나의 이미지 레이아웃에서 변환 (A)에 다른 (B)를 제공합니다. 배열을 `DiaAddressMapEntry` 구조를 기준으로 정렬 `rva` 주소 맵을 정의 합니다.  
   
- 주소를 번역 `addrA`, A 이미지에 있는 주소에서 `addrB`, 이미지 B에서 다음 단계를 수행:  
+ 주소를 변환 `addrA`, 주소로 A 이미지에 `addrB`, 이미지 B에서에서 다음 단계를 수행 합니다.  
   
-1.  지도 항목을 검색 `e`에 가장 큰 `rva` 보다 작거나 `addrA`.  
+1.  검색에 대 한 항목에 대 한 맵을 `e`, 가장 큰와 `rva` 보다 작거나 `addrA`합니다.  
   
-2.  Set `delta = addrA – e.rva`.  
+2.  Set `delta = addrA - e.rva`.  
   
 3.  Set `addrB = e.rvaTo + delta`.  
   
- 배열 `DiaAddressMapEntry` 구조체에 전달 되는 [IDiaAddressMap::set\_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) 메서드.  
+ 배열을 `DiaAddressMapEntry` 구조에 전달 되는 [idiaaddressmap:: Set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) 메서드.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: dia2.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열거형 및 구조체](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [IDiaAddressMap::set\_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)
+ [IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)

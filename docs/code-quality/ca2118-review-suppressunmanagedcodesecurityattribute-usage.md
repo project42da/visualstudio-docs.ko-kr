@@ -1,11 +1,10 @@
 ---
-title: 'CA2118: Review SuppressUnmanagedCodeSecurityAttribute usage | Microsoft Docs'
+title: "CA2118: SuppressUnmanagedCodeSecurityAttribute 사용을 검토 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,82 +14,67 @@ helpviewer_keywords:
 - ReviewSuppressUnmanagedCodeSecurityUsage
 - CA2118
 ms.assetid: 4cb8d2fc-4e44-4dc3-9b74-7f5838827d41
-caps.latest.revision: 20
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: cdec0f1446b87f23be8f9da9014cd4fd3d3d05e2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 92728eae21d4a3035f0396957fa643d14ef06e1c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118: Review SuppressUnmanagedCodeSecurityAttribute usage
+# <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118: SuppressUnmanagedCodeSecurityAttribute 사용을 검토하십시오.
 |||  
 |-|-|  
 |TypeName|ReviewSuppressUnmanagedCodeSecurityUsage|  
 |CheckId|CA2118|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A public or protected type or member has the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> attribute.  
+## <a name="cause"></a>원인  
+ Public 또는 protected 형식이 나 멤버에는 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> 특성입니다.  
   
-## <a name="rule-description"></a>Rule Description  
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> changes the default security system behavior for members that execute unmanaged code using COM interop or platform invocation. Generally, the system makes a [Data and Modeling](/dotnet/framework/data/index) for unmanaged code permission. This demand occurs at run time for every invocation of the member, and checks every caller in the call stack for permission. When the attribute is present, the system makes a [Link Demands](/dotnet/framework/misc/link-demands) for the permission: the permissions of the immediate caller are checked when the caller is JIT-compiled.  
+## <a name="rule-description"></a>규칙 설명  
+ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>COM interop 또는 플랫폼 호출을 사용 하 여 관리 되지 않는 코드를 실행 하는 멤버에 대 한 기본 보안 시스템 동작을 변경 합니다. 시스템에서는 일반적으로 [데이터 및 모델링](/dotnet/framework/data/index) 비관리 코드 권한이 대 한 합니다. 이 요청 된 멤버를 호출할 때마다 런타임 시 발생 하 고 권한에 대 한 호출 스택의 모든 호출자를 확인 합니다. 특성이 있는 경우 시스템에서는 한 [링크 요청](/dotnet/framework/misc/link-demands) 권한에 대 한: JIT 컴파일된 호출자가 직접 실행 호출자의 권한이 확인 됩니다.  
   
- This attribute is primarily used to increase performance; however, the performance gains come with significant security risks. If you place the attribute on public members that call native methods, the callers in the call stack (other than the immediate caller) do not need unmanaged code permission to execute unmanaged code. Depending on the public member's actions and input handling, it might allow untrustworthy callers to access functionality normally restricted to trustworthy code.  
+ 이 특성은 기본적으로 성능 향상을 위해 사용되지만 성능이 향상되는 대신 중대한 보안 위험이 발생합니다. 네이티브 메서드를 호출 하는 공용 멤버에 특성을 배치 하는 경우 직접 실행 호출자) (제외 호출 스택의 호출자에 게 비관리 코드를 실행 하려면 비관리 코드 권한이 않아도 됩니다. Public 멤버의 작업 및 입력된 처리에 따라 해당 액세스 기능을 일반적으로 신뢰할 수 있는 코드 제한에 신뢰할 수 없는 호출자를 통합할 수 있습니다.  
   
- The [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] relies on security checks to prevent callers from gaining direct access to the current process's address space. Because this attribute bypasses normal security, your code poses a serious threat if it can be used to read or write to the process's memory. Note that the risk is not limited to methods that intentionally provide access to process memory; it is also present in any scenario where malicious code can achieve access by any means, for example, by providing surprising, malformed, or invalid input.  
+ [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 에서는 보안 검사를 호출자가 현재 프로세스의 주소 공간에 직접 액세스 하지 못하도록 합니다. 이 특성이 무시 일반적인 보안, 하 게 되므로 코드를 읽기 또는 쓰기 프로세스의 메모리를 사용할 수 있는 경우 심각한 위협을 발생 합니다. Note 위험 의도적으로 프로세스 메모리;에 대 한 액세스를 제공 하는 메서드가 제한 되지 않습니다 여기서 악성 코드가 액세스를 획득할 수 어떤 방법으로 예를 들어 놀라운 형식이 잘못 되거나 잘못 된 입력을 제공 하 여 모든 시나리오에 이기도 합니다.  
   
- The default security policy does not grant unmanaged code permission to an assembly unless it is executing from the local computer or is a member of one of the following groups:  
+ 기본 보안 정책은 로컬 컴퓨터에서 실행 하거나 다음 그룹 중 하나의 구성원 어셈블리에 비관리 코드 권한을 부여 하지 않습니다.  
   
--   My Computer Zone Code Group  
+-   내 컴퓨터 영역 코드 그룹이  
   
--   Microsoft Strong Name Code Group  
+-   Microsoft 강력한 이름 코드 그룹  
   
--   ECMA Strong Name Code Group  
+-   ECMA 강력한 이름 코드 그룹  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- Carefully review your code to ensure that this attribute is absolutely necessary. If you are unfamiliar with managed code security, or do not understand the security implications of using this attribute, remove it from your code. If the attribute is required, you must ensure that callers cannot use your code maliciously. If your code does not have permission to execute unmanaged code, this attribute has no effect and should be removed.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 특성은 반드시 필요한 경우가 아니면 되도록 코드를 주의 깊게 검토 합니다. 관리 되는 코드 보안에 익숙하지 않은 하거나이 특성을 사용 하 여의 보안 의미를 이해 하지 않는 경우 사용자 코드에서 제거 합니다. 특성이 필요한 경우 호출자가 코드를 악의적으로 사용할 수 없는 확인 해야 합니다. 코드에 비관리 코드를 실행할 수 있는 권한이 없는 경우이 특성이 아무 효과가 없으며 제거 해야 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- To safely suppress a warning from this rule, you must ensure that your code does not provide callers access to native operations or resources that can be used in a destructive manner.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를에서 표시 하지 않으려면, 있는지 코드에서는 호출자 작업이 나 악용에서 사용할 수 있는 리소스에 대 한 액세스를 확인 해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example violates the rule.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 규칙을 위반 합니다.  
   
  [!code-csharp[FxCop.Security.TypesDoNotSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_1.cs)]  
   
-## <a name="example"></a>Example  
- In the following example, the `DoWork` method provides a publicly accessible code path to the platform invocation method `FormatHardDisk`.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `DoWork` 플랫폼 호출 메서드를 공개적으로 액세스할 수 있는 코드 경로 제공 하는 메서드 `FormatHardDisk`합니다.  
   
  [!code-csharp[FxCop.Security.PInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_2.cs)]  
   
-## <a name="example"></a>Example  
- In the following example, the public method `DoDangerousThing` causes a violation. To resolve the violation, `DoDangerousThing` should be made private, and access to it should be through a public method secured by a security demand, as illustrated by the `DoWork` method.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 공용 메서드 `DoDangerousThing` 위반을 발생 합니다. 위반을 해결 하려면 `DoDangerousThing` private, 및 표시 된 것 처럼 보안 요청으로 보안 되는 공용 메서드를 통해 액세스할 수 있어야는 `DoWork` 메서드.  
   
  [!code-csharp[FxCop.Security.TypeInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_3.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>   
- [Secure Coding Guidelines](/dotnet/standard/security/secure-coding-guidelines)   
- [Security Optimizations](http://msdn.microsoft.com/en-us/cf255069-d85d-4de3-914a-e4625215a7c0)   
- [Data and Modeling](/dotnet/framework/data/index)  
- [Link Demands](/dotnet/framework/misc/link-demands)  
+ [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
+ [보안 최적화](http://msdn.microsoft.com/en-us/cf255069-d85d-4de3-914a-e4625215a7c0)   
+ [데이터 및 모델링](/dotnet/framework/data/index)  
+ [링크 요구](/dotnet/framework/misc/link-demands)  
   

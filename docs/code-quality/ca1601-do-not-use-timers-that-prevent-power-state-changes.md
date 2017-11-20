@@ -1,29 +1,30 @@
 ---
-title: "CA1601: 전원 상태 변경을 방해하는 타이머를 사용하지 마십시오. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1601"
-  - "DoNotUseTimersThatPreventPowerStateChanges"
-helpviewer_keywords: 
-  - "CA1601"
-  - "DoNotUseTimersThatPreventPowerStateChanges"
+title: "CA1601: 전원 상태 변경을 방해 하는 타이머를 사용 하지 마십시오 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1601
+- DoNotUseTimersThatPreventPowerStateChanges
+helpviewer_keywords:
+- CA1601
+- DoNotUseTimersThatPreventPowerStateChanges
 ms.assetid: b8028c92-0696-4c54-9773-0028f29bda9a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5fc42c15beda68472f4a980fe96b0055b70a01cc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# CA1601: 전원 상태 변경을 방해하는 타이머를 사용하지 마십시오.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1601-do-not-use-timers-that-prevent-power-state-changes"></a>CA1601: 전원 상태 변경을 방해하는 타이머를 사용하지 마십시오.
 |||  
 |-|-|  
 |TypeName|DoNotUseTimersThatPreventPowerStateChanges|  
@@ -31,14 +32,14 @@ caps.handback.revision: 15
 |범주|Microsoft.Mobility|  
 |변경 수준|주요 변경|  
   
-## 원인  
- 타이머가 1초에 두 번 이상 발생하도록 간격이 설정되어 있습니다.  
+## <a name="cause"></a>원인  
+ 타이머는 초 당 한 번 발생 하도록 설정 하는 간격을 있습니다.  
   
-## 규칙 설명  
- 1초에 두 번 이상 폴링하거나 1초에 두 번 이상 발생하는 타이머는 사용하지 않는 것이 좋습니다.  정기적인 작업의 실행 빈도가 높아지면 CPU 사용률도 높아져 디스플레이 및 하드 디스크를 끄는 절전 유휴 타이머에 방해가 됩니다.  
+## <a name="rule-description"></a>규칙 설명  
+ 초 또는 1 보다 더 자주 발생 하는 타이머를 사용 하 여 마다 한 번씩 보다 더 자주 폴링 되지 않습니다 초당 시간입니다. 정기적인 작업의 실행 빈도가 높아지면 CPU 사용률도 높아져 디스플레이 및 하드 디스크를 끄는 절전 유휴 타이머에 방해가 됩니다.  
   
-## 위반 문제를 해결하는 방법  
- 타이머 간격을 1초에 한 번 미만 발생하도록 설정합니다.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 초당 보다 작은 한 번 발생 하도록 타이머 간격을 설정 합니다.  
   
-## 경고를 표시하지 않는 경우  
- 타이머를 1초에 두 번 이상 발생시켜야 하고 이동성 고려 사항을 무시해도 안전한 경우에만 이 규칙을 표시하지 않습니다.
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 타이머 초당 한 번 발생 하는 것이 필요 이동성 고려 사항을 무시할 수 있고 경우에이 규칙을 표시 해야 합니다.

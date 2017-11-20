@@ -366,4 +366,4 @@
 ##### [CvWriteFlag 함수](cvwriteflag-function.md)
 ##### [CvWriteMessage 함수](cvwritemessage-function.md)
 ### [동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd)](concurrency-visualizer-command-line-utility-cvcollectioncmd.md)
-## [스토어 앱의 에너지 사용 분석](analyze-energy-use-in-store-apps.md)
+## [UWP 앱의 에너지 사용 분석](analyze-energy-use-in-store-apps.md)

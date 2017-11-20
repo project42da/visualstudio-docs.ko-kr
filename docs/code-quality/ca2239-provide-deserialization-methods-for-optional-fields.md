@@ -1,11 +1,10 @@
 ---
-title: 'CA2239: Provide deserialization methods for optional fields | Microsoft Docs'
+title: "CA2239: 제공 선택적 필드에 deserialization 메서드 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,67 +14,53 @@ helpviewer_keywords:
 - ProvideDeserializationMethodsForOptionalFields
 - CA2239
 ms.assetid: 6480ff5e-0caa-4707-814e-2f927cdafef5
-caps.latest.revision: 13
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: f7dc9755c80095b5b79695aea583fd5ab710c774
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 6992dc561fb9ef018de02b0192528621d2e069fb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2239-provide-deserialization-methods-for-optional-fields"></a>CA2239: Provide deserialization methods for optional fields
+# <a name="ca2239-provide-deserialization-methods-for-optional-fields"></a>CA2239: 선택적 필드에 deserialization 메서드를 제공하십시오.
 |||  
 |-|-|  
 |TypeName|ProvideDeserializationMethodsForOptionalFields|  
 |CheckId|CA2239|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A type has a field that is marked with the <xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName> attribute and the type does not provide de-serialization event handling methods.  
+## <a name="cause"></a>원인  
+ 형식으로 표시 된 필드에는 <xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName> 특성 및 형식을 deserialization 이벤트 처리 메서드를 제공 하지 않습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- The <xref:System.Runtime.Serialization.OptionalFieldAttribute> attribute has no effect on serialization; a field marked with the attribute is serialized. However, the field is ignored on de-serialization and retains the default value associated with its type. De-serialization event handlers should be declared to set the field during the de-serialization process.  
+## <a name="rule-description"></a>규칙 설명  
+ <xref:System.Runtime.Serialization.OptionalFieldAttribute> 특성에 serialization 중에 영향을 주지 않습니다; 특성으로 표시 하는 필드가 serialize 됩니다. 그러나 필드 deserialization 중에 무시 되는지은 형식과 연결 된 기본값을 유지 합니다. Deserialization 프로세스 동안 필드를 설정 하려면 deserialization 이벤트 처리기를 선언 해야 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, add de-serialization event handling methods to the type.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 deserialization 이벤트 처리 형식에 메서드를 추가 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the field should be ignored during the de-serialization process.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 필드 역직렬화 프로세스 중에 무시 되어야 하는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a type with an optional field and de-serialization event handling methods.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 수 있는 선택적 필드 및 deserialization 이벤트 형식을 처리 메서드를 보여 줍니다.  
   
- [!code-csharp[FxCop.Usage.OptionalFields#1](../code-quality/codesnippet/CSharp/ca2239-provide-deserialization-methods-for-optional-fields_1.cs)] [!code-vb[FxCop.Usage.OptionalFields#1](../code-quality/codesnippet/VisualBasic/ca2239-provide-deserialization-methods-for-optional-fields_1.vb)]  
+ [!code-csharp[FxCop.Usage.OptionalFields#1](../code-quality/codesnippet/CSharp/ca2239-provide-deserialization-methods-for-optional-fields_1.cs)]
+ [!code-vb[FxCop.Usage.OptionalFields#1](../code-quality/codesnippet/VisualBasic/ca2239-provide-deserialization-methods-for-optional-fields_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2236: Call base class methods on ISerializable types](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA2236: ISerializable 형식에서 기본 클래스 메서드를 호출하십시오.](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)  
   
- [CA2240: Implement ISerializable correctly](../code-quality/ca2240-implement-iserializable-correctly.md)  
+ [CA2240: ISerializable을 올바르게 구현하십시오.](../code-quality/ca2240-implement-iserializable-correctly.md)  
   
- [CA2229: Implement serialization constructors](../code-quality/ca2229-implement-serialization-constructors.md)  
+ [CA2229: serialization 생성자를 구현하십시오.](../code-quality/ca2229-implement-serialization-constructors.md)  
   
- [CA2238: Implement serialization methods correctly](../code-quality/ca2238-implement-serialization-methods-correctly.md)  
+ [CA2238: serialization 메서드를 올바르게 구현하십시오.](../code-quality/ca2238-implement-serialization-methods-correctly.md)  
   
- [CA2235: Mark all non-serializable fields](../code-quality/ca2235-mark-all-non-serializable-fields.md)  
+ [CA2235: 모두 serialize할 수 없는 필드로 표시하십시오.](../code-quality/ca2235-mark-all-non-serializable-fields.md)  
   
- [CA2237: Mark ISerializable types with SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
+ [CA2237: ISerializable 형식을 SerializableAttribute로 표시하십시오.](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
   
- [CA2120: Secure serialization constructors](../code-quality/ca2120-secure-serialization-constructors.md)
+ [CA2120: serialization 생성자를 안전하게 하십시오.](../code-quality/ca2120-secure-serialization-constructors.md)

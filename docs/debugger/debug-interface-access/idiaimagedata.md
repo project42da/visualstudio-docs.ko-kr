@@ -1,54 +1,53 @@
 ---
-title: "IDiaImageData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaImageData 인터페이스"
+title: IDiaImageData | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaImageData interface
 ms.assetid: b696f350-fc08-4352-9287-a15e87512c1e
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c76a173f137ede589b870f5119153a4233bcd730
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaImageData
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-기본 위치 및 메모리 오프셋 모듈 또는 이미지의 세부 정보를 제공합니다.  
+# <a name="idiaimagedata"></a>IDiaImageData
+모듈 또는 이미지의 기본 위치와 메모리 오프셋의 세부 정보를 노출합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-IDiaImageData : IUnknown  
+IDiaImageData : IUnknown  
 ```  
   
-## 메서드에서 Vtable 순서  
- 다음 표에서 메서드를 `IDiaImageData`.  
+## <a name="methods-in-vtable-order"></a>Vtable 순서의 메서드  
+ 다음 표에서의 메서드를 보여 줍니다. `IDiaImageData`합니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[IDiaImageData::get\_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|가상 메모리 모듈이 응용 프로그램에 상대적인 위치를 검색합니다.|  
-|[IDiaImageData::get\_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|가상 메모리에서 이미지의 위치를 검색합니다.|  
-|[IDiaImageData::get\_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|이미지를 기반으로 해야 합니다 메모리 위치를 검색 합니다.|  
+|------------|-----------------|  
+|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|응용 프로그램에 상대적인 모듈의 가상 메모리 내의 위치를 검색합니다.|  
+|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|이미지의 가상 메모리 내의 위치를 검색합니다.|  
+|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|여기서는 이미지의 기준이 되는 메모리 위치를 검색 합니다.|  
   
-## 설명  
- 일부 디버그 스트림을 \(XDATA, PDATA\) 또한 이미지에 저장 된 데이터의 복사본을 포함 합니다.  이러한 개체를 쿼리할 수 있는 데이터를 스트리밍하는 `IDiaImageData` 인터페이스입니다.  자세한 내용은이 항목의 "호출자에 대 한 참고 사항" 단원을 참조 하십시오.  
+## <a name="remarks"></a>설명  
+ 일부 디버그 스트림 (XDATA, PDATA) 이미지에도 저장 된 데이터의 복사본을 포함 합니다. 이러한 스트림 데이터에 대 한 개체를 쿼리할 수는 `IDiaImageData` 인터페이스입니다. 자세한 내용은이 항목의 "호출자 참고 사항" 섹션을 참조 합니다.  
   
-## 호출자에 대 한 참고 사항  
- 이 인터페이스를 호출 하 여 얻을 `QueryInterface` 에 있는 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) 개체입니다.  참고 모두 디버그 스트림을 지원의 `IDiaImageData` 인터페이스입니다.  XDATA 및 PDATA 스트림을 지 원하는 등 현재는 `IDiaImageData` 인터페이스입니다.  
+## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
+ 이 인터페이스를 호출 하 여 가져올 `QueryInterface` 에 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) 개체입니다. 디버그 일부는 지원 스트리밍하는 `IDiaImageData` 인터페이스입니다. 예를 들어, 현재 XDATA 및 PDATA 스트림을 지원는 `IDiaImageData` 인터페이스입니다.  
   
-## 예제  
- 이 예제는 디버그 스트림을 지 원하는 모든 스트림에 대 한 모든 검색은 `IDiaImageData` 인터페이스입니다.  이러한 스트림에서 발견 되 면 해당 스트림에 대 한 정보는 표시 됩니다.  
+## <a name="example"></a>예제  
+ 모든 지 원하는 모든 스트림에 대 한 디버그 스트림을 검색 하는이 예제는 `IDiaImageData` 인터페이스입니다. 이러한 스트림을 발견 되 면 그에 대 한 일부 정보가 표시 됩니다.  
   
-```cpp#  
+```C++  
 void ShowImageData(IDiaSession *pSession)  
 {  
     if (pSession != NULL)  
@@ -112,13 +111,13 @@ void ShowImageData(IDiaSession *pSession)
 }  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  헤더: Dia2.h  
   
  라이브러리: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 참고 항목  
- [인터페이스\(디버그 인터페이스 액세스 SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+## <a name="see-also"></a>참고 항목  
+ [인터페이스 (디버그 인터페이스 액세스 SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

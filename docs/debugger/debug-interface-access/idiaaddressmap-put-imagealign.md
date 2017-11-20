@@ -1,52 +1,51 @@
 ---
-title: "IDiaAddressMap::put_imageAlign | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaAddressMap::put_imageAlign 메서드"
+title: 'Idiaaddressmap:: Put_imagealign | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaAddressMap::put_imageAlign method
 ms.assetid: f9ce875d-c263-43e5-a534-f34c37f9866f
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 38856520641ff2ea191e3f712a1f355e841e1aff
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaAddressMap::put_imageAlign
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-이미지 맞춤을 설정 합니다.  
+# <a name="idiaaddressmapputimagealign"></a>IDiaAddressMap::put_imageAlign
+이미지 맞춤을 설정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT put_imageAlign (   
-   DWORD NewVal  
+```C++  
+HRESULT put_imageAlign (   
+   DWORD NewVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  NewVal  
- \[in\] 실행 파일의 새 이미지 맞춤 값입니다.  
+ [in] 새 이미지 맞춤 실행 파일에 대 한 값입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 이미지 \(로드 된 실행 파일\)에 지정 된 메모리 경계선에 정렬 됩니다.  이 맞춤 현재 시스템 아키텍처 및 컴파일 및 링크 시간 옵션이 달라질 수 있습니다.  이미지 맞춤 항상 바이트 경계에 있습니다.  다음 이미지 맞춤 값이 잘못 되었습니다: 1, 2, 4, 8, 16, 32 및 64 바이트 경계입니다.  
+## <a name="remarks"></a>설명  
+ 이미지 (로드 된 실행 파일) 지정 된 메모리 한도에 따라 정렬 됩니다. 현재 시스템 아키텍처 및 시간 옵션을 컴파일 및 연결 하 여이 맞춤을 달라질 수 있습니다. 이미지 맞춤은 항상 바이트 경계에서입니다. 다음 이미지 맞춤 값이 유효한 지: 1, 2, 4, 8, 16, 32, and 64 바이트 경계입니다.  
   
- 현재 이미지 맞춤을 검색할 수 있는 [IDiaAddressMap::get\_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) 메서드.  
+ 현재 이미지 맞춤을 호출 하 여 검색할 수는 [idiaaddressmap:: Get_imagealign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) 메서드.  
   
 > [!NOTE]
->  이미지는이 메서드를 호출 하는 시점에 이미 로드 되었습니다.  `put_imageAlign` 메서드는 이미지 이동 되거나 변경 되었으므로 새 맞춤 필요한 때 일반적으로 사용 됩니다.  
+>  이 메서드를 호출할 수 있습니다 때 이미지가 이미 로드 되었습니다. `put_imageAlign` 새 맞춤은 필수 및 이미지를 이동 하거나 변경 하는 경우 메서드는 일반적으로 사용 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [IDiaAddressMap::get\_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)
+ [IDiaAddressMap::get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)

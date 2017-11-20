@@ -1,65 +1,47 @@
 ---
-title: CA2141:Transparent methods must not satisfy LinkDemands | Microsoft Docs
+title: "CA2141: 투명 한 메서드는 LinkDemands를 충족 해서는 안 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- CA2141
+f1_keywords: CA2141
 ms.assetid: 2957f5f7-c511-4180-ba80-752034f10a77
-caps.latest.revision: 14
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: cc82ea81d02381c43d19d8fd55d4bd616085409e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 880f48a3fc6f9ae09191d8d63120e7d71091118b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2141transparent-methods-must-not-satisfy-linkdemands"></a>CA2141:Transparent methods must not satisfy LinkDemands
+# <a name="ca2141transparent-methods-must-not-satisfy-linkdemands"></a>CA2141: 투명한 메서드는 LinkDemands를 충족해서는 안 됩니다
 |||  
 |-|-|  
 |TypeName|TransparentMethodsMustNotSatisfyLinkDemands|  
 |CheckId|CA2141|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A security transparent method calls a method in an assembly that is not marked with the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) attribute, or a security transparent method satisfies a <xref:System.Security.Permissions.SecurityAction>`.LinkDemand` for a type or a method.  
+## <a name="cause"></a>원인  
+ 로 표시 되지 않으면 어셈블리의 메서드를 호출 하는 보안 투명 메서드는 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성 (APTCA) 또는 보안 투명 메서드가 충족는 <xref:System.Security.Permissions.SecurityAction> `.LinkDemand` 는 형식 또는 메서드에 대 한 합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- Satisfying a LinkDemand is a security sensitive operation which can cause unintentional elevation of privilege. Security transparent code must not satisfy LinkDemands, because it is not subject to the same security audit requirements as security critical code. Transparent methods in security rule set level 1 assemblies will cause all LinkDemands they satisfy to be converted to full demands at run time, which can cause performance problems. In security rule set level 2 assemblies, transparent methods will fail to compile in the just-in-time (JIT) compiler if they attempt to satisfy a LinkDemand.  
+## <a name="rule-description"></a>규칙 설명  
+ LinkDemand 충족은 보안에 중요 한 작업 의도 하지 않은 권한 상승을 초래할 수 있습니다. 보안 중요 한 코드와 같은 보안 감사 요구 사항이 적용 되지 않기 때문에 보안 투명 코드, LinkDemands을 충족 해야 합니다. 보안 규칙 집합 수준 1 어셈블리의 투명 한 메서드는 성능 문제가 발생할 수 있으며 런타임 시 전체 요청으로 변환할 수를 만족 하는 모든 LinkDemands를 발생 합니다. 보안 규칙 집합 수준 2 어셈블리에서 투명 한 메서드에 LinkDemand를 충족 하려고 하면 적시에 (JIT) 컴파일러에서 컴파일하는 데 실패 합니다.  
   
- In assemblies that usee Level 2 security, attempts by a security transparent method to satisfy a LinkDemand or call a method in a non-APTCA assembly raises a <xref:System.MethodAccessException>; in Level 1 assemblies the LinkDemand becomes a full Demand.  
+ 어셈블리에서 해당 usee 수준 2 보안, 보안 투명 메서드가 LinkDemand를 만족 하거나 APTCA가 아닌 어셈블리의 메서드를 호출 하 여 시도 발생 한 <xref:System.MethodAccessException>; 수준 1 어셈블리에 LinkDemand가 한 완전 요청이 발생 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, mark the accessing method with the <xref:System.Security.SecurityCriticalAttribute> or <xref:System.Security.SecuritySafeCriticalAttribute> attribute, or remove the LinkDemand from the accessed method.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 액세스 메서드를 표시는 <xref:System.Security.SecurityCriticalAttribute> 또는 <xref:System.Security.SecuritySafeCriticalAttribute> 특성 또는 액세스 되는 메서드의 LinkDemand를 제거 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- In this example, a transparent method attempts to call a method that has a LinkDemand. This rule will fire on this code.  
+## <a name="example"></a>예제  
+ 이 예제에서는 투명 메서드가 LinkDemand를 가진 메서드를 호출 하려고 합니다. 이 규칙은이 코드에 실행 됩니다.  
   
  [!code-csharp[FxCop.Security.CA2141.TransparentMethodsMustNotSatisfyLinkDemands#1](../code-quality/codesnippet/CSharp/ca2141-transparent-methods-must-not-satisfy-linkdemands_1.cs)]

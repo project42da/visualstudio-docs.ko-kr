@@ -1,11 +1,10 @@
 ---
-title: 'CA2227: Collection properties should be read only | Microsoft Docs'
+title: "CA2227: 컬렉션 속성은 읽기 전용 이어야 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,57 +14,44 @@ helpviewer_keywords:
 - CA2227
 - CollectionPropertiesShouldBeReadOnly
 ms.assetid: 26967aaf-6fbe-438a-b4d3-ac579b5dc0f9
-caps.latest.revision: 17
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 0134a75b966d0d65b30691c22cfd03e223c8bdbd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: df23ab2259bc8042b9a9782ff9f7a15ac349a1c6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2227-collection-properties-should-be-read-only"></a>CA2227: Collection properties should be read only
+# <a name="ca2227-collection-properties-should-be-read-only"></a>CA2227: 컬렉션 속성은 읽기 전용이어야 합니다.
 |||  
 |-|-|  
 |TypeName|CollectionPropertiesShouldBeReadOnly|  
 |CheckId|CA2227|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- An externally visible writable property is a type that implements <xref:System.Collections.ICollection?displayProperty=fullName>. Arrays, indexers (properties with the name 'Item'), and permission sets are ignored by the rule.  
+## <a name="cause"></a>원인  
+ 외부에서 볼 수 있는 쓰기 가능한 속성은 구현 하는 형식을 <xref:System.Collections.ICollection?displayProperty=fullName>합니다. 배열, 인덱서 (속성 이름 'Item'으로) 및 사용 권한 집합은 규칙에 의해 무시 됩니다.  
   
-## <a name="rule-description"></a>Rule Description  
- A writable collection property allows a user to replace the collection with a completely different collection. A read-only property stops the collection from being replaced but still allows the individual members to be set. If replacing the collection is a goal, the preferred design pattern is to include a method to remove all the elements from the collection and a method to re-populate the collection. See the <xref:System.Collections.ArrayList.Clear%2A> and <xref:System.Collections.ArrayList.AddRange%2A> methods of the <xref:System.Collections.ArrayList?displayProperty=fullName> class for an example of this pattern.  
+## <a name="rule-description"></a>규칙 설명  
+ 쓰기 가능한 컬렉션 속성을 사용 하면 완전히 다른 컬렉션으로 바꿀 수 있습니다. 읽기 전용 속성은 컬렉션을 바꾸지 못하도록 하지만 개별 멤버를 설정하는 것은 여전히 가능합니다. 이면 컬렉션 교체 목표를 선호 하는 디자인 패턴은 컬렉션에서 모든 요소를 제거 하는 메서드 및 컬렉션을 다시 채울 수 있는 방법을 포함입니다. 참조는 <xref:System.Collections.ArrayList.Clear%2A> 및 <xref:System.Collections.ArrayList.AddRange%2A> 의 메서드는 <xref:System.Collections.ArrayList?displayProperty=fullName> 이 패턴의 예에 대 한 클래스입니다.  
   
- Both binary and XML serialization support read-only properties that are collections. The <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> class has specific requirements for types that implement <xref:System.Collections.ICollection> and <xref:System.Collections.IEnumerable?displayProperty=fullName> in order to be serializable.  
+ 이진 및 XML serialization 모두 읽기 전용 컬렉션 속성을 지원 합니다. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 클래스에 구현 하는 형식에 대 한 특정 요구 사항이 <xref:System.Collections.ICollection> 및 <xref:System.Collections.IEnumerable?displayProperty=fullName> 직렬화 할 수 있도록 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, make the property read-only and, if the design requires it, add methods to clear and re-populate the collection.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 읽기 전용 속성을 설정 하 고 디자인에 필요한 경우를 지우고 다시 컬렉션을 채우는 메서드를 추가 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a type with a writable collection property and shows how the collection can be replaced directly. Additionally, the preferred manner of replacing a read-only collection property using `Clear` and `AddRange` methods is shown.  
+## <a name="example"></a>예제  
+ 다음 예에서는 쓰기 가능한 컬렉션 속성을 갖는 형식을 보여 줍니다 및 컬렉션을 직접 바꿀 수 있습니다 방법을 보여 줍니다. 또한 방법도 사용 하 여 읽기 전용 컬렉션 속성이 바꾸기 `Clear` 및 `AddRange` 메서드가 표시 됩니다.  
   
- [!code-csharp[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/CSharp/ca2227-collection-properties-should-be-read-only_1.cs)] [!code-vb[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/VisualBasic/ca2227-collection-properties-should-be-read-only_1.vb)] [!code-cpp[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/CPP/ca2227-collection-properties-should-be-read-only_1.cpp)]  
+ [!code-csharp[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/CSharp/ca2227-collection-properties-should-be-read-only_1.cs)]
+ [!code-vb[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/VisualBasic/ca2227-collection-properties-should-be-read-only_1.vb)]
+ [!code-cpp[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/CPP/ca2227-collection-properties-should-be-read-only_1.cpp)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1819: Properties should not return arrays](../code-quality/ca1819-properties-should-not-return-arrays.md)
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1819: 속성은 배열을 반환해서는 안 됩니다.](../code-quality/ca1819-properties-should-not-return-arrays.md)

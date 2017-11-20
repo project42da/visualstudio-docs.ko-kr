@@ -1,40 +1,40 @@
 ---
-title: "IDiaSymbol::get_subType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: IDiaSymbol::get_subType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0b3cbf77-8f11-434a-ad60-ea9829fec6fa
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c5eb3a65e635ba4785ccf2106f596ed20bbad178
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_subType
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-하위 형식을 검색합니다.  
+# <a name="idiasymbolgetsubtype"></a>IDiaSymbol::get_subType
+하위 유형을 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp  
+```C++  
 HRESULT get_subType(   
    IDiaSymbol** pRetVal);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 하위 형식에 대 한 포인터입니다.  
+ [out] 하위 형식에 대 한 포인터입니다.  
   
-## 반환 값  
- 성공하면 `S_OK`를 반환하고, 그렇지 않으면 `S_FALSE` 또는 오류 코드를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

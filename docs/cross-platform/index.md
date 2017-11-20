@@ -3,15 +3,14 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
-title: "C++을 사용한 모바일 개발 설명서"
+title: "C++를 사용한 모바일 개발 설명서 | Microsoft Docs"
 description: "Visual Studio에서 iOS, Android 및 Windows 장치용 네이티브 C++ 앱을 만듭니다."
-translationtype: Human Translation
-ms.sourcegitcommit: f161d39701feb5df93bfcfa3c0496f60fb366323
-ms.openlocfilehash: 58c1a8a76456caad830406758e6921de8b4ad1af
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 2d7dc3860091e11ab7b8983d9f1b739ffd383ba3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="mobile-development-with-c-documentation"></a>C++을 사용한 모바일 개발 설명서
 
 Visual Studio에서 iOS, Android 및 Windows 장치용 네이티브 C++ 앱을 만듭니다.

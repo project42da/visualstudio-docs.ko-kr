@@ -1,34 +1,36 @@
 ---
-title: "substring 메서드(String)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "substring"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "부분 문자열"
-  - "substring 메서드"
+title: "substring 메서드 (String) (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: substring
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- substrings
+- substring method
 ms.assetid: 9cf9a005-cbe3-42fd-828b-57a39f54224c
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 15ebaadc7b24fa97f531a22f6deb1453ff52b3e7
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# substring 메서드(String)(JavaScript)
-`String` 개체 안의 지정된 위치에 있는 부분 문자열을 반환합니다.  
+# <a name="substring-method-string-javascript"></a>substring 메서드(String)(JavaScript)
+내에서 지정 된 위치의 부분 문자열을 반환는 `String` 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -36,28 +38,28 @@ caps.handback.revision: 18
 "String Literal".substring(start [, end])   
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  `start`  
- 필수 요소.  부분 문자열의 시작을 나타내는 0부터 시작하는 인덱스입니다.  
+ 필수 요소. 부분 문자열의 시작 부분을 나타내는 0부터 시작 인덱스입니다.  
   
  `end`  
- 선택 사항입니다.  부분 문자열의 끝을 나타내는 0부터 시작하는 인덱스입니다.  부분 문자열은 `end`로 표시된 문자 앞까지만 포함합니다.  
+ 선택적 요소. 문자열의 끝을 나타내는 0부터 시작 인덱스입니다. 부분 문자열에 문자를까지 포함 되어 있지만 까지만으로 표시 되는 문자 `end`합니다.  
   
- `end`가 생략된 경우 `start`에서 원래 문자열 마지막까지의 문자가 반환됩니다.  
+ 경우 `end` 를 생략 하면에서 문자 `start` 원래 문자열의 끝까지 반환 됩니다.  
   
-## 설명  
- `substring` 메서드는 `start`에서 `end`까지\(end는 포함 안 함\) 부분 문자열을 포함하는 문자열을 반환합니다.  
+## <a name="remarks"></a>설명  
+ `substring` 의 부분 문자열을 포함 하는 문자열을 반환 하는 메서드 `start` 포함 하지 않고 까지의 `end`합니다.  
   
- **substring** 메서드는 부분 문자열의 시작점으로 `start`와 `end` 중 낮은 값을 사용합니다.  예를 들어, strvar.substring\(0, 3**\)** 및 strvar.substring\(3, 0\)은 같은 부분 문자열을 반환합니다.  
+ **부분 문자열** 메서드의 더 낮은 값을 사용 하 여 `start` 및 `end` 부분 문자열의 시작 지점으로 합니다. 예를 들어 strvar.substring (0, 3**)** 및 (3, 0) strvar.substring 동일한 부분 문자열을 반환 합니다.  
   
- `start`나 `end`가 `NaN` 또는 음수이면 0으로 바뀝니다.  
+ 경우 `start` 또는 `end` 은 `NaN` 또는 0으로 대체 음수 이면 됩니다.  
   
- 부분 문자열의 길이는 `start`와 `end` 사이의 차이에 대한 절대값과 같습니다.  예를 들어 strvar.substring\(0, 3\)과 strvar.substring\(3, 0\)에서 반환되는 부분 문자열의 길이는 3입니다.  
+ 부분 문자열의 길이 절대 값의 차이 `start` 및 `end`합니다. 예를 들어 strvar.substring (0, 3)에서 반환 되는 부분 문자열의 길이 및 strvar.substring (3, 0)는 3 개입니다.  
   
-## 예제  
- 다음 예제는 **substring** 메서드의 사용 예를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 **부분 문자열** 메서드.  
   
-```javascript  
+```JavaScript  
 var s = "The quick brown fox jumps over the lazy dog.";  
 var ss = s.substring(10, 15);  
 document.write(ss);  
@@ -67,8 +69,8 @@ document.write(ss);
   
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 참고 항목  
- [substr 메서드\(String\)](../../javascript/reference/substr-method-string-javascript.md)
+## <a name="see-also"></a>참고 항목  
+ [substr 메서드(String)](../../javascript/reference/substr-method-string-javascript.md)

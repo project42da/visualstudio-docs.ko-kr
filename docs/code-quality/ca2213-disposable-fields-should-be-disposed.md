@@ -1,11 +1,10 @@
 ---
-title: 'CA2213: Disposable fields should be disposed | Microsoft Docs'
+title: "CA2213: 삭제 가능한 필드가 삭제 해야 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,61 +14,46 @@ helpviewer_keywords:
 - CA2213
 - DisposableFieldsShouldBeDisposed
 ms.assetid: e99442c9-70e2-47f3-b61a-d8ac003bc6e5
-caps.latest.revision: 15
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 538f013849b8e3391fdc3cdad7fee707e9cbb072
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 77cd32f97e3798362371fc21f8b38c14ce22c7fb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2213-disposable-fields-should-be-disposed"></a>CA2213: Disposable fields should be disposed
+# <a name="ca2213-disposable-fields-should-be-disposed"></a>CA2213: 삭제 가능한 필드는 삭제해야 합니다.
 |||  
 |-|-|  
 |TypeName|DisposableFieldsShouldBeDisposed|  
 |CheckId|CA2213|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A type that implements <xref:System.IDisposable?displayProperty=fullName> declares fields that are of types that also implement <xref:System.IDisposable>. The <xref:System.IDisposable.Dispose%2A> method of the field is not called by the <xref:System.IDisposable.Dispose%2A> method of the declaring type.  
+## <a name="cause"></a>원인  
+ 구현 하는 형식은 <xref:System.IDisposable?displayProperty=fullName> 필드를 구현 하는 형식 선언 <xref:System.IDisposable>합니다. <xref:System.IDisposable.Dispose%2A> 필드의 메서드에 의해 호출 되지 않습니다는 <xref:System.IDisposable.Dispose%2A> 메서드 선언 형식입니다.  
   
-## <a name="rule-description"></a>Rule Description  
- A type is responsible for disposing of all its unmanaged resources; this is accomplished by implementing <xref:System.IDisposable>. This rule checks to see whether a disposable type `T` declares a field `F` that is an instance of a disposable type `FT`. For each field `F`, the rule attempts to locate a call to `FT.Dispose`. The rule searches the methods called by `T.Dispose`, and one level lower (the methods called by the methods called by `FT.Dispose`).  
+## <a name="rule-description"></a>규칙 설명  
+ 형식이 삭제 된 모든 관리 되지 않는 리소스의;에 대 한 책임 구현 하 여 이렇게 <xref:System.IDisposable>합니다. 이 규칙에서는 삭제 가능한 형식 되는지 여부를 확인할 `T` 필드를 선언 `F` 삭제 가능한 형식 인스턴스의 즉 `FT`합니다. 각 필드에 대 한 `F`, 규칙에 대 한 호출을 찾으려고 시도 `FT.Dispose`합니다. 호출 하는 메서드를 검색 하는 규칙 `T.Dispose`와 단일 수준 낮은 (호출한 메서드에 의해 호출 된 메서드 `FT.Dispose`).  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, call <xref:System.IDisposable.Dispose%2A> on fields that are of types that implement <xref:System.IDisposable> if you are responsible for allocating and releasing the unmanaged resources held by the field.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 호출 <xref:System.IDisposable.Dispose%2A> 구현 하는 형식의 필드에서 <xref:System.IDisposable> 할당에 대 한 책임이 있으며, 필드에서 보유 하는 관리 되지 않는 리소스를 해제 하는 경우.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if you are not responsible for releasing the resource held by the field, or if the call to <xref:System.IDisposable.Dispose%2A> occurs at a deeper calling level than the rule checks.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 자신이 담당 하지 않는 필드를 보유 하는 리소스를 해제에 대 한 또는 경우에이 규칙에서 경고를 표시를 안전 하 게 호출 <xref:System.IDisposable.Dispose%2A> 규칙 검사 보다 깊은 호출 수준에서 발생 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a type `TypeA` that implements <xref:System.IDisposable> (`FT` in the previosu discussion).  
+## <a name="example"></a>예제  
+ 다음 예제에서는 형식 `TypeA` 를 구현 하는 <xref:System.IDisposable> (`FT` 이전 설명의).  
   
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_1.cs)]  
   
-## <a name="example"></a>Example  
- The following example shows a type `TypeB` that violates this rule by declaring a field `aFieldOfADisposableType` (`F` in the previous discussion) as a disposable type (`TypeA`) and not calling <xref:System.IDisposable.Dispose%2A> on the field. `TypeB` corresponds to `T` in the previous discussion.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 형식 `TypeB` 필드를 선언 하 여이 규칙을 위반 하는 `aFieldOfADisposableType` (`F` 이전 설명의) 삭제 가능한 형식으로 (`TypeA`) 호출 하지 <xref:System.IDisposable.Dispose%2A> 필드입니다. `TypeB`에 해당 `T` 이전 설명의 합니다.  
   
  [!code-csharp[FxCop.Usage.IDisposableFields#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_2.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:System.IDisposable?displayProperty=fullName>   
- [Dispose Pattern](/dotnet/standard/design-guidelines/dispose-pattern)
+ [삭제 패턴](/dotnet/standard/design-guidelines/dispose-pattern)

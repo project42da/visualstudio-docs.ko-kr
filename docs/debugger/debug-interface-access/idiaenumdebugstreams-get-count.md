@@ -1,44 +1,43 @@
 ---
-title: "IDiaEnumDebugStreams::get_Count | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumDebugStreams::get_Count 메서드"
+title: 'Idiaenumdebugstreams:: Get_count | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumDebugStreams::get_Count method
 ms.assetid: 5c13fa9a-b35e-47b0-806f-1f53bfe1ba89
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0c50d618e188eb38bf20d637c2cb63b635ae79ac
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumDebugStreams::get_Count
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-디버그 스트림을 검색합니다.  
+# <a name="idiaenumdebugstreamsgetcount"></a>IDiaEnumDebugStreams::get_Count
+디버그 스트림 수를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_Count(   
-   LONG* pRetVal  
+```C++  
+HRESULT get_Count(   
+   LONG* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 이 열거자에 사용할 수 있는 디버그 스트림을 반환합니다.  
+ [out] 이 열거자에서 사용할 수 있는 디버그 스트림 수를 반환합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)   
  [IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)

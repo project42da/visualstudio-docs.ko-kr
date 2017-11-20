@@ -1,46 +1,45 @@
 ---
-title: "IDiaSectionContrib::get_comdat | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSectionContrib::get_comdat 메서드"
+title: 'Idiasectioncontrib:: Get_comdat | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSectionContrib::get_comdat method
 ms.assetid: 8bd9be8d-59ee-4698-b055-daba354b8dcc
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d3797f60e9ca6e97da3b7b6e44c89f802b086d13
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSectionContrib::get_comdat
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiasectioncontribgetcomdat"></a>IDiaSectionContrib::get_comdat
 섹션 COMDAT 레코드 인지 여부를 나타내는 플래그를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_comdat (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_comdat (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 반환 `TRUE` 경우 섹션 COMDAT 레코드입니다. 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` 섹션 COMDAT 레코드가; 경우는 그렇지 않으면 반환 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`.  반환 `S_FALSE` 이 속성이 지원 되지 않는 경우.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 경우이 속성이 지원 되지 않습니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## 설명  
- COMDAT 레코드 패키지 함수를 링커 볼 수 있게 COFF \(공용 개체 파일 형식\) 레코드가입니다.  
+## <a name="remarks"></a>설명  
+ COMDAT 레코드는 패키지 함수 링커에 보이도록 하는 파일 형식은 COFF (공용 개체) 레코드입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

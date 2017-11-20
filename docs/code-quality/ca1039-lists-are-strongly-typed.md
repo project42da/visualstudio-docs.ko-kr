@@ -1,11 +1,10 @@
 ---
-title: 'CA1039: Lists are strongly typed | Microsoft Docs'
+title: "CA1039: 목록은 강력한 형식 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,41 +14,26 @@ helpviewer_keywords:
 - CA1039
 - ListsAreStronglyTyped
 ms.assetid: 5ac366c4-fd87-4d5c-95d5-f755510c8e5c
-caps.latest.revision: 15
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b6063c818995f2b0c7c4d181ee3b6203f2c1f66a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 57bbb053c39680d8064fb757679ffadb3c87aeeb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1039-lists-are-strongly-typed"></a>CA1039: Lists are strongly typed
+# <a name="ca1039-lists-are-strongly-typed"></a>CA1039: 목록은 강력한 형식이어야 합니다.
 |||  
 |-|-|  
 |TypeName|ListsAreStronglyTyped|  
 |CheckId|CA1039|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- The public or protected type implements <xref:System.Collections.IList?displayProperty=fullName> but does not provide a strongly typed method for one or more of the following:  
+## <a name="cause"></a>원인  
+ Public 또는 protected 형식 구현 <xref:System.Collections.IList?displayProperty=fullName> 있지만 다음 중 하나 이상을 실행 하는 것에 대 한 강력한 형식의 메서드를 제공 하지 않습니다.  
   
 -   IList.Item  
   
@@ -63,30 +47,30 @@ ms.lasthandoff: 08/30/2017
   
 -   IList.Remove  
   
-## <a name="rule-description"></a>Rule Description  
- This rule requires <xref:System.Collections.IList> implementations to provide strongly typed members so that users are not required to cast arguments to the <xref:System.Object?displayProperty=fullName> type when they use the functionality that is provided by the interface. The <xref:System.Collections.IList> interface is implemented by collections of objects that can be accessed by index. This rule assumes that the type that implements <xref:System.Collections.IList> does this to manage a collection of instances of a type that is stronger than <xref:System.Object>.  
+## <a name="rule-description"></a>규칙 설명  
+ 이 규칙에 따라 <xref:System.Collections.IList> 사용자가 인수를 캐스팅할 필요가 있도록 구현 제공할 강력한 형식의 멤버가 <xref:System.Object?displayProperty=fullName> 인터페이스에서 제공 되는 기능을 사용할 때를 입력 합니다. <xref:System.Collections.IList> 인터페이스 인덱스에서 액세스할 수 있는 개체의 컬렉션에 의해 구현 됩니다. 이 규칙에서는 구현 하는 형식이 가정 <xref:System.Collections.IList> 보다 강력한 형식의 인스턴스 컬렉션을 관리 하는 <xref:System.Object>합니다.  
   
- <xref:System.Collections.IList> implements the <xref:System.Collections.ICollection?displayProperty=fullName> and <xref:System.Collections.IEnumerable?displayProperty=fullName> interfaces. If you implement <xref:System.Collections.IList>, you must provide the required strongly typed members for <xref:System.Collections.ICollection>. If the objects in the collection extend <xref:System.ValueType?displayProperty=fullName>, you must provide a strongly typed member for <xref:System.Collections.IEnumerable.GetEnumerator%2A> to avoid the decrease in performance that is caused by boxing; this is not required when the objects of the collection are a reference type.  
+ <xref:System.Collections.IList>구현 하는 <xref:System.Collections.ICollection?displayProperty=fullName> 및 <xref:System.Collections.IEnumerable?displayProperty=fullName> 인터페이스입니다. 구현 하는 경우 <xref:System.Collections.IList>에 필요한 강력한 형식의 멤버를 제공 해야 <xref:System.Collections.ICollection>합니다. 컬렉션의 개체를 확장할 경우 <xref:System.ValueType?displayProperty=fullName>에 대 한 강력한 형식의 멤버를 제공 해야 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 성능 저하를 방지 하기 위해 boxing 시킨;이 때는 필요 하지 않습니다는 컬렉션의 개체는 참조 형식입니다.  
   
- To comply with this rule, implement the interface members explicitly by using names in the form InterfaceName.InterfaceMemberName, such as <xref:System.Collections.IList.Add%2A>. The explicit interface members use the data types that are declared by the interface. Implement the strongly typed members by using the interface member name, such as `Add`. Declare the strongly typed members as public, and declare parameters and return values to be of the strong type that is managed by the collection. The strong types replace weaker types such as <xref:System.Object> and <xref:System.Array> that are declared by the interface.  
+ 이 규칙을 준수 하는 인터페이스 멤버를 명시적으로 구현와 같은 형태로 InterfaceName.InterfaceMemberName, 이름을 사용 하 여 <xref:System.Collections.IList.Add%2A>합니다. 명시적 인터페이스 멤버는 인터페이스에서 선언 된 데이터 형식을 사용 합니다. 와 같은 인터페이스 멤버 이름을 사용 하 여 강력한 형식의 멤버를 구현 `Add`합니다. Public으로 강력한 형식의 멤버를 선언 하 고 매개 변수를 선언 컬렉션에 의해 관리 되는 강력한 형식의 값을 반환 합니다. 강력한 형식 보다 약한 종류를 같은 바꿉니다 <xref:System.Object> 및 <xref:System.Array> 인터페이스에 선언 된 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, explicitly implement <xref:System.Collections.IList> members and provide strongly typed alternatives for the members that were noted previously. For code that correctly implements the <xref:System.Collections.IList> interface and provides the required strongly typed members, see the following example.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 명시적으로 구현 <xref:System.Collections.IList> 멤버 앞서 언급 하는 멤버에 대 한 강력한 형식의 대안을 제공 합니다. 제대로 구현 하는 코드는 <xref:System.Collections.IList> 인터페이스를 제공 필요한 강력한 형식의 멤버는 다음 예제를 참조 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a warning from this rule when you implement a new object-based collection, such as a linked list, where types that extend the new collection determine the strong type. These types should comply with this rule and expose strongly typed members.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 새 컬렉션을 확장 하는 형식이 강력한 형식을 결정 하는 연결 된 목록 같은 새 개체 기반 컬렉션을 구현 하는 경우에이 규칙에서 경고를 표시 합니다. 이러한 형식은이 규칙을 준수 하 고 강력한 형식의 멤버를 노출 해야 합니다.  
   
-## <a name="example"></a>Example  
- In the following example, the type `YourType` extends <xref:System.Collections.CollectionBase?displayProperty=fullName>, as should all strongly typed collections. Note that <xref:System.Collections.CollectionBase> provides the explicit implementation of the <xref:System.Collections.IList> interface for you. Therefore, you must only provide the strongly typed members for <xref:System.Collections.IList> and <xref:System.Collections.ICollection>.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 형식에서에서 `YourType` 확장 <xref:System.Collections.CollectionBase?displayProperty=fullName>와 마찬가지로 모든 강력한 형식의 컬렉션입니다. <xref:System.Collections.CollectionBase> 의 명시적 구현을 제공는 <xref:System.Collections.IList> 인터페이스입니다. 따라서 강력한 형식의 멤버를만 제공 해야 <xref:System.Collections.IList> 및 <xref:System.Collections.ICollection>합니다.  
   
  [!code-csharp[FxCop.Design.IListStrongTypes#1](../code-quality/codesnippet/CSharp/ca1039-lists-are-strongly-typed_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1035: ICollection implementations have strongly typed members](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA1035: ICollection 구현에 강력한 형식의 멤버가 있습니다.](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)  
   
- [CA1038: Enumerators should be strongly typed](../code-quality/ca1038-enumerators-should-be-strongly-typed.md)  
+ [CA1038: 열거자는 강력한 형식이어야 합니다.](../code-quality/ca1038-enumerators-should-be-strongly-typed.md)  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Collections.CollectionBase?displayProperty=fullName>   
  <xref:System.Collections.ICollection?displayProperty=fullName>   
  <xref:System.Collections.IEnumerable?displayProperty=fullName>   

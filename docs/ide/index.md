@@ -3,16 +3,14 @@ layout: LandingPage
 author: gewarren
 ms.author: gewarren
 ms.topic: landing-page
-title: "Visual Studio IDE 설명서"
+title: "Visual Studio IDE 설명서 | Microsoft Docs"
 description: "Visual Studio IDE(통합 개발 환경)가 거의 모든 코드 언어를 사용하여 앱을 개발하는 데 어떤 도움이 되는지 알아봅니다."
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
+ms.openlocfilehash: 7bb2f4ef10f4d209c4c4e2c70b10b3a70fdf5c6c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: 55a6cd52972758c82f2f03a51d34b601352bbb38
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-studio-ide-documentation"></a>Visual Studio IDE 설명서
 
@@ -184,4 +182,3 @@ Visual Studio IDE(통합 개발 환경)가 거의 모든 코드 언어를 사용
         </div>
     </li>
 </ul>
-

@@ -1,43 +1,42 @@
 ---
-title: "IDiaEnumSectionContribs::Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumSectionContribs::Skip 메서드"
+title: 'Idiaenumsectioncontribs:: Skip | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumSectionContribs::Skip method
 ms.assetid: 7471a178-5134-41b2-80a6-51ff96abe916
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 607ae2e6f78bc501ad1372c32f20451ca74f1c87
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumSectionContribs::Skip
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-지정한 수 만큼 열거 시퀀스에서 절 기 고물 건너뜁니다.  
+# <a name="idiaenumsectioncontribsskip"></a>IDiaEnumSectionContribs::Skip
+열거형 시퀀스에서 섹션 기여도의 지정 된 수를 건너뜁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT Skip(   
-   ULONG celt  
+```C++  
+HRESULT Skip(   
+   ULONG celt  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `celt`  
- \[in\] 절 기 고물 건너뛰려면 열거 시퀀스에서의 수입니다.  
+ [in] 열거형 시퀀스를 건너뛰려면에서 섹션 기여도의 수입니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 있는 경우 건너뛸 수 없음 자세한 절 기 고물.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 건너뛸 더 많은 섹션 기여 없는 경우.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

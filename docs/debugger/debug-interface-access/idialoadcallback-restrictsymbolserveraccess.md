@@ -1,40 +1,39 @@
 ---
-title: "IDiaLoadCallback::RestrictSymbolServerAccess | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaLoadCallback::RestrictSymbolServerAccess 메서드"
+title: 'Idialoadcallback:: Restrictsymbolserveraccess | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaLoadCallback::RestrictSymbolServerAccess method
 ms.assetid: db37ad9f-f75e-4f0c-83bf-21a6e66ba859
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: fa536c1a63abe6a58b6b92edb4f39343191f1796
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaLoadCallback::RestrictSymbolServerAccess
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-액세스 기호 서버의 기호를 확인할 수 있는지 여부를 결정 합니다.  
+# <a name="idialoadcallbackrestrictsymbolserveraccess"></a>IDiaLoadCallback::RestrictSymbolServerAccess
+기호를 확인 하도록 기호 서버에 대 한 액세스 허용 된 경우를 결정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
+```C++  
 HRESULT RestrictSymbolServerAccess();  
 ```  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 모든 코드 이외의 반환 `S_OK` 사용 하는 기호 서버에서 기호를 해결 하는 것을 금지 합니다.  
+## <a name="remarks"></a>설명  
+ 이외의 다른 모든 반환 코드 `S_OK` 기호를 확인 하도록 기호 서버 사용을 금지 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

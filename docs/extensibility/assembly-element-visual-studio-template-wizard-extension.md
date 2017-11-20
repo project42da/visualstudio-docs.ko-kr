@@ -1,63 +1,64 @@
 ---
-title: "Assembly 요소(Visual Studio 템플릿 마법사 확장명) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#Assembly"
-helpviewer_keywords: 
-  - "Assembly 요소[Visual Studio 템플릿 마법사 확장명]"
-  - "< 어셈블리 > 요소 [Visual Studio 템플릿 마법사 확장]"
+title: "Assembly 요소 (Visual Studio 템플릿 마법사 확장) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#Assembly
+helpviewer_keywords:
+- Assembly element [Visual Studio Template Wizard Extension]
+- <Assembly> element [Visual Studio Template Wizard Extension]
 ms.assetid: 0c3dc280-1753-4ea2-a13c-d31d13b935b2
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2adc2113d9ce1fbc2a80c9465ce403f03fc42db5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# Assembly 요소(Visual Studio 템플릿 마법사 확장명)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-이름 또는 구현 하는 어셈블리의 강력한 이름 지정은 `IWizard` 인터페이스입니다.  
+# <a name="assembly-element-visual-studio-template-wizard-extension"></a>Assembly 요소(Visual Studio 템플릿 마법사 확장명)
+이름이 나 구현 하는 어셈블리의 강력한 이름 지정은 `IWizard` 인터페이스입니다.  
   
- \<VSTemplate\>  
-\<WizardExtension\>  
-\<Assembly\>  
+ \<VSTemplate >  
+\<WizardExtension >  
+\<어셈블리 >  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <Assembly>AssemblyName</Assembly>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
  없음  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|템플릿 마법사를 사용자 지정 하기 위한 등록 요소가 포함 됩니다.|  
+|-------------|-----------------|  
+|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|템플릿 마법사 사용자 지정 하기 위한 등록 요소를 포함 합니다.|  
   
-## 텍스트 값  
+## <a name="text-value"></a>텍스트 값  
  텍스트 값은 필수입니다.  
   
- 구현 하는 어셈블리를 지정 하는이 텍스트는 `IWizard` 인터페이스입니다. 전체 어셈블리 이름으로이 어셈블리 이름을 지정 해야 합니다. 예를 들어, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`을 입력합니다.  
+ 구현 하는 어셈블리를 지정 하는이 텍스트는 `IWizard` 인터페이스입니다. 이 어셈블리 이름은 전체 어셈블리 이름으로 지정 해야 합니다. 예를 들어, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`을 입력합니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `Assembly`은 `WizardExtension`의 필수 자식 요소입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에 대 한 표준 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램입니다.  
   
 ```  
@@ -88,7 +89,7 @@ caps.handback.revision: 12
 </VSTemplate>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [사용자 지정 프로젝트 및 ItemTemplate 만들기](../ide/creating-project-and-item-templates.md)   
+ [프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)   
  [방법: 프로젝트 템플릿에 마법사 사용](../extensibility/how-to-use-wizards-with-project-templates.md)

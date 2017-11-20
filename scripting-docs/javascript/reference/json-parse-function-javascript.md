@@ -1,40 +1,42 @@
 ---
-title: "JSON.parse 함수(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "JSON.parse"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "JSON.parse 메서드"
-  - "parse JSON 메서드"
+title: "JSON.parse 함수 (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: JSON.parse
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- parse JSON method
+- JSON.parse method
 ms.assetid: 20f00d31-5ab5-4c3c-ab49-2534fc39a9b4
-caps.latest.revision: 41
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3d66aee32a191c8cc1879c9436788c196c05e7bd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# JSON.parse 함수(JavaScript)
-JSON\(JavaScript Object Notation\) 문자열을 개체로 변환합니다.  
+# <a name="jsonparse-function-javascript"></a>JSON.parse 함수(JavaScript)
+JSON(JavaScript Object Notation) 문자열을 개체로 변환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 JSON.parse(text [, reviver])  
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  `text`  
  필수 요소. 유효한 JSON 문자열입니다.  
   
@@ -47,29 +49,29 @@ JSON.parse(text [, reviver])
   
 -   `reviver`가 `null` 또는 `undefined`를 반환하면 멤버가 삭제됩니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  개체 또는 배열입니다.  
   
-## 예외  
- 이 함수로 인해 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 파서 오류\("SCRIPT1014: 잘못된 문자입니다."\)가 발생하는 경우 입력 텍스트가 JSON 구문을 따르지 않은 것입니다. 오류를 수정하려면 다음 중 하나를 수행합니다.  
+## <a name="exceptions"></a>예외  
+ 이 함수로 인해 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 파서 오류("SCRIPT1014: 잘못된 문자입니다.")가 발생하는 경우 입력 텍스트가 JSON 구문을 따르지 않은 것입니다. 오류를 수정하려면 다음 중 하나를 수행합니다.  
   
--   `text` 인수를 수정하여 JSON 구문을 따르도록 합니다. 자세한 내용은 JSON 개체의 [BNF 구문 표기법](http://go.microsoft.com/fwlink/?LinkId=125203)을 참조하세요.  
+-   `text` 인수를 수정하여 JSON 구문을 따르도록 합니다. 자세한 내용은 JSON 개체의 [BNF 구문 표기법](http://go.microsoft.com/fwlink/?LinkId=125203) 을 참조하세요.  
   
      예를 들어, 응답이 순수 JSON이 아닌 JSONP 형식으로 된 경우 응답 개체에서 다음 코드를 사용해 보십시오.  
   
-    ```javascript  
+    ```JavaScript  
     var fixedResponse = response.responseText.replace(/\\'/g, "'");  
     var jsonObj = JSON.parse(fixedResponse);  
     ```  
   
 -   `text` 인수가 `JSON.stringify`와 같은 JSON 규격 구현으로 serialize되는지 확인합니다.  
   
--   구문 오류 확인에 유용한 [JSLint](http://www.jslint.com/)와 같은 JSON 유효성 검사기에서 `text` 인수를 실행합니다.  
+-   구문 오류 확인에 유용한 `text` JSLint [와 같은 JSON 유효성 검사기에서](http://www.jslint.com/) 인수를 실행합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 `JSON.parse`를 사용하여 JSON 문자열을 개체로 변환합니다.  
   
-```javascript  
+```JavaScript  
 var jsontext = '{"firstname":"Jesper","surname":"Aaberg","phone":["555-0100","555-0120"]}';  
 var contact = JSON.parse(jsontext);  
 document.write(contact.surname + ", " + contact.firstname);  
@@ -79,10 +81,10 @@ document.write(contact.phone[1]);
 // 555-0100  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 `JSON.stringify`를 사용하여 배열을 JSON 문자열로 변환한 다음 `JSON.parse`를 사용하여 문자열을 다시 배열로 변환합니다.  
   
-```javascript  
+```JavaScript  
 var arr = ["a", "b", "c"];  
 var str = JSON.stringify(arr);  
 document.write(str);  
@@ -101,10 +103,10 @@ while (newArr.length > 0) {
 // a  
 ```  
   
-## 예제  
- `reviver` 함수는 ISO\(International Organization for Standardization\) 날짜 문자열의 JSON 표현을 UTC\(협정 세계시\) 형식 `Date` 개체로 변환하는 경우에 사용됩니다. 이 예제에서는 `JSON.parse`를 사용하여 ISO 형식의 날짜 문자열을 deserialize합니다.`dateReviver` 함수는 ISO 날짜 문자열처럼 형식이 지정된 멤버의 `Date` 개체를 반환합니다.  
+## <a name="example"></a>예제  
+ `reviver` 함수는 ISO(International Organization for Standardization) 날짜 문자열의 JSON 표현을 UTC(협정 세계시) 형식 `Date` 개체로 변환하는 경우에 사용됩니다. 이 예제에서는 `JSON.parse`를 사용하여 ISO 형식의 날짜 문자열을 deserialize합니다. `dateReviver` 함수는 ISO 날짜 문자열처럼 형식이 지정된 멤버의 `Date` 개체를 반환합니다.  
   
-```javascript  
+```JavaScript  
 var jsontext = '{ "hiredate": "2008-01-01T12:00:00Z", "birthdate": "2008-12-25T12:00:00Z" }';  
 var dates = JSON.parse(jsontext, dateReviver);  
 document.write(dates.birthdate.toUTCString());  
@@ -126,10 +128,10 @@ function dateReviver(key, value) {
   
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv58](../../javascript/reference/includes/jsv58-md.md)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [JSON.stringify 함수](../../javascript/reference/json-stringify-function-javascript.md)   
- [toJSON 메서드\(Date\)](../../javascript/reference/tojson-method-date-javascript.md)   
- [허브 템플릿 샘플 앱\(Windows 스토어\)](http://code.msdn.microsoft.com/Hub-template-sample-with-4b70002d)
+ [toJSON 메서드 (Date)](../../javascript/reference/tojson-method-date-javascript.md)   
+ [허브 템플릿 샘플 앱 (Windows 스토어)](http://code.msdn.microsoft.com/Hub-template-sample-with-4b70002d)

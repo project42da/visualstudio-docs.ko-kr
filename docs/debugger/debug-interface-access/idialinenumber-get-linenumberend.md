@@ -1,43 +1,42 @@
 ---
-title: "IDiaLineNumber::get_lineNumberEnd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaLineNumber::get_lineNumberEnd 메서드"
+title: 'Idialinenumber:: Get_linenumberend | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaLineNumber::get_lineNumberEnd method
 ms.assetid: b101853e-2bcf-47c1-acef-e13984c7ea9d
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 7d87d8b6975a68f74e6900ef85ea9a19c5cfa810
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaLineNumber::get_lineNumberEnd
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-문 또는 식을 끝나는 1 소스 줄 번호를 검색 합니다.  
+# <a name="idialinenumbergetlinenumberend"></a>IDiaLineNumber::get_lineNumberEnd
+문이나 식이 끝나는 1부터 소스 줄 번호를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_lineNumberEnd (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_lineNumberEnd (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 문 또는 식을 끝나는 줄 번호를 반환 합니다.  값이 0 이면 다음 최종 정보가 없습니다.  
+ [out] 문이나 식이 끝나는 줄 번호를 반환 합니다. 값이 0 인 경우 다음 최종 정보가 나타나지 않습니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`.  반환 `S_FALSE` 이 속성이 지원 되지 않는 경우.  그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 경우이 속성이 지원 되지 않습니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

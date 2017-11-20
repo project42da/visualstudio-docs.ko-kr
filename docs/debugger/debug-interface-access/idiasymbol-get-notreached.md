@@ -1,53 +1,52 @@
 ---
-title: "IDiaSymbol::get_notReached | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_notReached 메서드"
+title: 'Idiasymbol:: Get_notreached | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_notReached method
 ms.assetid: e44ba922-6cda-40c2-9b62-44e5a8628e63
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 67f6d6dbe596c2eb94910e1ce38868a7d38c8a49
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_notReached
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-함수 또는 레이블 절대로 도달할 수 있는지 여부를 지정 하는 플래그를 검색 합니다.  
+# <a name="idiasymbolgetnotreached"></a>IDiaSymbol::get_notReached
+함수 또는 레이블 도달한 적 있는지 여부를 지정 하는 플래그를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp  
+```C++  
 HRESULT get_notReached(  
-   BOOL *pFlag  
+   BOOL *pFlag  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  pFlag  
- \[out\] 반환 `TRUE` 함수 또는 레이블 도달할 경우. 그렇지 않으면 반환 `FALSE`.  
+ [out] 반환 `TRUE` 함수 또는 레이블에 도달 하지 않습니다; 그렇지 않으면 반환 `FALSE`합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그렇지 않으면 반환 `S_FALSE` 또는 오류 코드입니다.  
   
 > [!NOTE]
->  반환 값이 `S_FALSE` 속성의 기호를 사용할 수 없음을 의미 합니다.  
+>  반환 값이 `S_FALSE` 의미는 속성은 해당 기호를 사용할 수 없습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |요구 사항|설명|  
-|-----------|--------|  
-|머리글:|dia2.h|  
+|-----------------|-----------------|  
+|헤더:|dia2.h|  
 |버전:|DIA SDK v 8.0|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

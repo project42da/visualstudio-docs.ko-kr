@@ -1,47 +1,46 @@
 ---
-title: "IDiaSession::get_loadAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSession::get_loadAddress 메서드"
+title: 'Idiasession:: Get_loadaddress | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSession::get_loadAddress method
 ms.assetid: 5162ae1a-38e3-4571-8995-4ed9be1dec3e
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 131ad3ffdcaae554f6892119755de840023de154
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSession::get_loadAddress
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-기호 저장소의 기호에 해당 하는 실행 파일의 로드 주소를 검색 합니다.  
+# <a name="idiasessiongetloadaddress"></a>IDiaSession::get_loadAddress
+이 기호 저장소의 기호에 해당 하는 실행 파일에 대 한 부하 주소를 검색 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```cpp#  
-HRESULT get_loadAddress (   
-   ULONGLONG* pRetVal  
+```C++  
+HRESULT get_loadAddress (   
+   ULONGLONG* pRetVal  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pRetVal`  
- \[out\] 가상 주소 \(VA\)를.exe 파일이 나.dll 파일이 로드 되는 위치를 반환 합니다.  
+ [out] .Exe 파일이 나.dll 파일 로드 되는 가상 주소 (VA)를 반환 합니다.  
   
-## 반환 값  
- 성공 하면 반환 `S_OK`. 그렇지 않으면 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## 설명  
- 반환 된 로드 주소 0 하지 않는 것을 사용 하 여 설정할는 [IDiaSession::put\_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) 메서드.  
+## <a name="remarks"></a>설명  
+ 하지 않는 한 반환 된 부하 주소는 항상 0를 사용 하 여 구체적으로 설정 된 [idiasession:: Put_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) 메서드.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
- [IDiaSession::put\_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)
+ [IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)

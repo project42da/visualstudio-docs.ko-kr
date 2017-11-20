@@ -1,121 +1,100 @@
 ---
-title: Add new data sources | Microsoft Docs
+title: "새 데이터 원본을 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.datasource.datasourcefieldspicker
-dev_langs:
-- VB
-- CSharp
-- C++
-- aspx
+f1_keywords: vs.datasource.datasourcefieldspicker
 helpviewer_keywords:
 - data [Visual Studio], data sources
 - data sources
 ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
-caps.latest.revision: 56
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "56"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: b8e9d2a517e673cd7f44f1a392d6179f1c6b0801
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 0c83367d383ab72194e5f83609b0f93d8602fdcd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="add-new-data-sources"></a>Add new data sources
-In the context of .NET data tools in Visual Studio, the term *data source* refers to .NET objects that connect to a data store and expose the data to a .NET application. The Visual Studio designers can consume the output of the data source to generate the boilerplate code that binds the data to forms when you drag and drop database objects from the **Data Sources** window. This kind of data source can be:  
+# <a name="add-new-data-sources"></a>새 데이터 원본 추가
+Visual Studio에서.NET 데이터 도구의 컨텍스트에서 용어 *데이터 소스* 는 데이터 저장소에 연결 하 고.NET 응용 프로그램에 데이터를 노출 하는.NET 개체를 나타냅니다. Visual Studio 디자이너에서 데이터베이스 개체를 끌어서 폼에 데이터를 바인딩하는 상용구 코드를 생성 하는 데이터 원본의 출력을 사용할 수는 **데이터 소스** 창. 이 종류의 데이터 원본이 될 수 있습니다.  
   
--   A class in an Entity Framework model that is associated with some kind of database.  
+-   데이터베이스의 몇 가지 종류와 연결 된 Entity Framework 모델에서 사용 되는 클래스입니다.  
   
--   A dataset that is associated with some kind of database.  
+-   데이터베이스의 몇 가지 종류와 연결 된 데이터 집합입니다.  
   
--   A class that represents a network service such as a Windows Communication Foundation (WCF) data service or a REST service.  
+-   Windows Communication Foundation (WCF) 데이터 서비스 또는 REST 서비스와 같은 네트워크 서비스를 나타내는 클래스입니다.  
   
--   A class that represents a SharePoint service.  
+-   SharePoint 서비스를 나타내는 클래스입니다.  
   
--   A class or collection in your solution.  
+-   클래스 또는 솔루션의 컬렉션입니다.  
   
 > [!NOTE]
->  If you are not using data-binding features, datasets, Entity Framework, LINQ to SQL, WCF, or SharePoint, the concept of a "data source" does not apply. Just connect directly to the database by using the SQLCommand objects and communicate directly with the database.  
+>  데이터 바인딩 기능을 사용 하지 않는 데이터 집합, Entity Framework에서는 LINQ to SQL, WCF, 또는 SharePoint에서 "데이터 원본"의 개념 적용 되지 않습니다. SQLCommand 개체를 사용 하 여 데이터베이스에 직접 연결 하 고 데이터베이스와 직접 통신 합니다.  
   
- You create and edit data sources by using the **Data Source Configuration Wizard** in a Windows Forms or Windows Presentation Foundation application. For Entity Framework, first create your entity classes, and then start the wizard by selecting **Project** > **Add New Data Source** (described in more detail later in this article).  
+ 만들고 사용 하 여 데이터 원본 편집는 **데이터 소스 구성 마법사** Windows Forms 또는 Windows Presentation Foundation 응용 프로그램에서 합니다. Entity Framework에 대 한 먼저 엔터티 클래스를 만들고 다음을 선택 하 여 마법사를 시작 **프로젝트** > **새 데이터 소스 추가** (이 문서의 뒷부분에 보다 자세히 설명).  
   
- ![Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png "Data Source Configuration Wizard")  
+ ![데이터 소스 구성 마법사](../data-tools/media/data-source-configuration-wizard.png "데이터 소스 구성 마법사")  
   
- After you create a data source, it appears in the **Data Sources** tool window (Shift+Alt+D or **View** > **Other Windows** > **Data Source**). You can drag a data source from the **Data Sources** window onto a form design surface or control. This causes boilerplate code to be generated—code that displays the data that originates in the data store to the user. The following illustration shows a dataset that has been dropped onto a Windows form. If you selected F5 on the application, the data from the underlying database would appear in the form's controls.  
+ 데이터 원본을 만든 후에 저장 되는 **데이터 원본** 도구 창 (Shift + Alt + D 또는 **보기** > **다른 창**  >  **데이터 소스**). 데이터 소스를 끌 수는 **데이터 소스** 창 컨트롤 또는 양식 디자인 화면으로 합니다. 이 인해 상용구 코드를 생성-사용자에 게 데이터 저장소에서 발생 하는 데이터를 표시 하는 코드입니다. 다음 그림에서는 Windows form으로 삭제 된 데이터 집합을 보여 줍니다. 응용 프로그램에서 f5 키를 선택한 경우 기본 데이터베이스의 데이터 폼의 컨트롤에 나타납니다.  
   
- ![Data Source drag operation](../data-tools/media/raddata-data-source-drag-operation.png "raddata Data Source drag operation")  
+ ![데이터 원본으로 작업을 끌어](../data-tools/media/raddata-data-source-drag-operation.png "raddata 데이터 소스 끌기 작업")  
   
-## <a name="data-source-for-a-database-or-a-database-file"></a>Data source for a database or a database file  
+## <a name="data-source-for-a-database-or-a-database-file"></a>데이터베이스 또는 데이터베이스 파일에 대 한 데이터 원본  
   
-### <a name="dataset"></a>Dataset  
- To create a dataset as a data source, run the **Data Source Configuration Wizard** (**Project** > **Add New Data Source**) and choose the **Database** data-source type. Follow the prompts to specify a new or existing database connection, or a database file.  
+### <a name="dataset"></a>데이터 집합  
+ 실행 데이터 원본으로 데이터 집합을 만들려면는 **데이터 소스 구성 마법사** (**프로젝트** > **새 데이터 소스 추가**) 선택 하 고는  **데이터베이스** 데이터 원본 유형입니다. 지시에 따라 기존 또는 새 데이터베이스 연결 또는 데이터베이스 파일을 지정 합니다.  
   
-### <a name="entity-classes"></a>Entity classes  
- To create an Entity Framework model as a data source, first run the **Entity Data Model Wizard** to create the entity classes (**Project** > **Add New Item** > **ADO.NET Entity Data Model**).  
+### <a name="entity-classes"></a>엔터티 클래스  
+ 데이터 원본으로는 Entity Framework 모델을 만들려면 먼저 실행 하는 **엔터티 데이터 모델 마법사** 엔터티 클래스를 만드는 (**프로젝트** > **새 항목 추가**  >  **ADO.NET 엔터티 데이터 모델**).  
   
- ![New Entity Framework model project item](../data-tools/media/raddata-new-entity-framework-model-project-item.png "raddata New Entity Framework model project item")  
+ ![새 Entity Framework 모델 프로젝트 항목](../data-tools/media/raddata-new-entity-framework-model-project-item.png "raddata 새 Entity Framework 모델 프로젝트 항목")  
   
- Choose the method by which you want to generate the model.  
+ 모델을 생성 하려는 방법을 선택 합니다.  
   
- ![Entity Data Model Wizard](../data-tools/media/raddata-entity-data-model-wizard.png "raddata Entity Data Model Wizard")  
+ ![엔터티 데이터 모델 마법사](../data-tools/media/raddata-entity-data-model-wizard.png "raddata 엔터티 데이터 모델 마법사")  
   
- Add the model as a data source. The classes that were generated appear in the **Data Source Configuration Wizard** when you choose the **Objects** category.  
+ 데이터 원본으로 모델을 추가 합니다. 에 생성 된 클래스가 표시는 **데이터 소스 구성 마법사** 선택 하는 경우는 **개체** 범주입니다.  
   
- ![Data Source Configuration Wizard with Entity Classes](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png "raddata Data Source Configuration Wizard with Entity Classes")  
+ ![엔터티 클래스와 데이터 소스 구성 마법사](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png "raddata 엔터티 클래스와 데이터 소스 구성 마법사")  
   
-## <a name="data-source-for-a-service"></a>Data source for a service  
- To create a data source from a service, run the **Data Source Configuration Wizard** and choose the **Service** data-source type. This is really just a shortcut to the **Add Service Reference** dialog box, which you can also access by right-clicking the project in **Solution Explorer** and selecting **Add service reference**.  
+## <a name="data-source-for-a-service"></a>서비스에 대 한 데이터 원본  
+ 실행 서비스에서 데이터 원본을 만들려면는 **데이터 소스 구성 마법사** 선택 하 고는 **서비스** 데이터 원본 유형입니다. 이 실제로에 바로 가기는 **서비스 참조 추가** 대화 상자에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 액세스할 수도 있습니다를 **솔루션 탐색기** 선택 하 고 **서비스 참조 추가** .  
   
- When you create a data source from a service, Visual Studio adds a service reference to your project. Visual Studio also creates proxy objects that correspond to the objects that the service returns. For example, a service that returns a dataset is represented in your project as a dataset; a service that returns a specific type is represented in your project as the type returned.  
+ 서비스에서 데이터 소스를 만들 때 Visual Studio 프로젝트에 대 한 서비스 참조를 추가 합니다. 또한 visual Studio 서비스에서 반환 하는 개체에 해당 하는 프록시 개체를 만듭니다. 예를 들어 데이터 집합을 반환 하는 서비스는 데이터 집합;로 프로젝트에 표시 됩니다. 반환 형식으로 프로젝트에 표시 되는 특정 형식 반환 하는 서비스입니다.  
   
- You can create a data source from the following types of services:  
+ 데이터 소스는 다음 유형의 서비스를 만들 수 있습니다.  
   
--   WCF Data Services. For more information, see [Overview](/dotnet/framework/data/wcf/wcf-data-services-overview).  
+-   WCF Data Services. 자세한 내용은 참조 [개요](/dotnet/framework/data/wcf/wcf-data-services-overview)합니다.  
   
--   WCF data services. For more information, see [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md).  
+-   WCF 서비스입니다. 자세한 내용은 참조 [Windows Communication Foundation 서비스 및 Visual Studio에서 WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)합니다.  
   
--   Web services.  
+-   웹 서비스입니다.  
   
     > [!NOTE]
-    >  The items that appear in the **Data Sources** window are dependent on the data that the service returns. Some services might not provide enough information for the **Data Source Configuration Wizard** to create bindable objects. For example, if the service returns an untyped dataset, no items will appear in the **Data Sources** window when you complete the wizard. This is because untyped datasets do not provide a schema, and therefore the wizard does not have enough information to create the data source.  
+    >  에 표시 되는 항목의 **데이터 소스** 창 서비스에서 반환 되는 데이터에 따라 달라 집니다. 일부 서비스의 수에 대 한 충분 한 정보를 제공 하지는 **데이터 소스 구성 마법사** 바인딩 가능한 개체를 만들 수 있습니다. 예를 들어 서비스가 형식화 되지 않은 데이터 집합을 반환 하는 경우 항목이에 나타납니다는 **데이터 소스** 창 마법사를 완료 합니다. 형식화 되지 않은 데이터 집합은 스키마를 제공 하지 않으며 따라서 마법사에 없는 데이터 소스를 만드는 데 충분 한 정보 때문입니다.  
   
-## <a name="data-source-for-an-object"></a>Data source for an object  
- You can create a data source from any object that exposes one or more public properties by running the **Data Source Configuration Wizard** and then selecting the **Object** data-source type. All public properties of an object are displayed in the **Data Sources** window.   If you are using Entity Framework and have generated a model, this is where you find the entity classes that will be the data sources for your application.  
+## <a name="data-source-for-an-object"></a>개체에 대 한 데이터 원본  
+ 실행 하 여 하나 이상의 공용 속성을 노출 하는 모든 개체에서 데이터 소스를 만들 수 있습니다는 **데이터 소스 구성 마법사** 다음를 선택 하 고는 **개체** 데이터 원본 유형입니다. 개체의 모든 public 속성에 표시 됩니다는 **데이터 소스** 창.   Entity Framework를 사용 하는 모델을 생성 하는 경우 응용 프로그램에 대 한 데이터 원본 수 있는 엔터티 클래스를 찾을 위치입니다.  
   
- On the **Select the Data Objects** page, expand the nodes in the tree view to locate the objects that you want to bind to. The tree view contains nodes for your project and for assemblies and other projects that are referenced by your project.  
+ 에 **데이터 개체 선택** 페이지에 바인딩할 수 있는 개체를 찾으려면 트리 뷰에서 노드를 확장 합니다. 트리 보기에는 프로젝트 및 어셈블리와 프로젝트에서 참조 되는 다른 프로젝트에 대 한 노드가 포함 됩니다.  
   
- If you want to bind to an object in an assembly or project that does not appear in the tree view, click **Add Reference** and use the **Add Reference Dialog Box** to add a reference to the assembly or project. After you add the reference, the assembly or project is added to the tree view.  
-  
-> [!NOTE]
->  You may need to build the project that contains your objects before the objects appear in the tree view.  
+ 어셈블리 또는 트리 뷰에 표시 되지 않는 프로젝트에 있는 개체에 바인딩할 경우 클릭 **참조 추가** 사용 하는 **참조 추가 대화 상자** 어셈블리 또는 프로젝트에 대 한 참조를 추가 하려면. 참조를 추가한 후에 어셈블리 또는 프로젝트가 트리 뷰에 추가 됩니다.  
   
 > [!NOTE]
->  To support drag-and-drop data binding, objects that implement the <xref:System.ComponentModel.ITypedList> or <xref:System.ComponentModel.IListSource> interface must have a default constructor. Otherwise, Visual Studio cannot instantiate the data-source object, and it will display an error when you drag the item to the design surface.  
+>  개체가 포함 된 개체 트리 보기에 표시 하는 프로젝트를 빌드해야 할 수 있습니다.  
   
-## <a name="data-source-for-a-sharepoint-list"></a>Data source for a SharePoint list  
- You can create a data source from a SharePoint list by running the **Data Source Configuration Wizard** and selecting the **SharePoint** data-source type. SharePoint exposes data through [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], so creating a SharePoint data source is the same as creating a data source from a service. Selecting the **SharePoint** item in the **Data Source Configuration Wizard** opens the **Add Service Reference** dialog box, where you connect to the SharePoint data service by pointing to the SharePoint server.  This requires the SharePoint SDK.  
+> [!NOTE]
+>  끌어서 놓기 데이터 바인딩 구현 하는 개체를 지원 하려면는 <xref:System.ComponentModel.ITypedList> 또는 <xref:System.ComponentModel.IListSource> 인터페이스에는 기본 생성자가 있어야 합니다. 그렇지 않으면 Visual Studio에서 데이터 소스 개체를 인스턴스화할 수 없습니다 및 디자인 화면으로 항목을 끌 때 오류가 표시 됩니다.  
   
-## <a name="see-also"></a>See Also  
- [Visual Studio data tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)
+## <a name="data-source-for-a-sharepoint-list"></a>SharePoint 목록에 대 한 데이터 원본  
+ 실행 하 여 SharePoint 목록에서 데이터 원본을 만들 수 있습니다는 **데이터 소스 구성 마법사** 선택 하 고는 **SharePoint** 데이터 원본 유형입니다. SharePoint를 통해 데이터를 노출 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], SharePoint 데이터 원본 만들기는 서비스에서 데이터 원본을 만드는 것과 동일 합니다. 선택 하 고 **SharePoint** 항목에 **데이터 소스 구성 마법사** 열립니다는 **서비스 참조 추가** 대화 상자에서 SharePoint 데이터 서비스에 연결 SharePoint 서버에 알려 합니다.  SharePoint SDK 필요합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [.NET용 Visual Studio 데이터 도구](../data-tools/visual-studio-data-tools-for-dotnet.md)

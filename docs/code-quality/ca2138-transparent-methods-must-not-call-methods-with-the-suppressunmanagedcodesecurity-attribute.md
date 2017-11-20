@@ -1,62 +1,45 @@
 ---
-title: 'CA2138: Transparent methods must not call methods with the SuppressUnmanagedCodeSecurity attribute | Microsoft Docs'
+title: "CA2138: 투명 한 메서드는 SuppressUnmanagedCodeSecurity 특성으로 메서드를 호출 하지 해야 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- CA2138
+f1_keywords: CA2138
 ms.assetid: a14c4d32-f079-4f3a-956c-a1657cde0f66
-caps.latest.revision: 12
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b8c3d1b49e2fbb91fbf14da3bc8ae086c7f22e81
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: cf17c69673649ac1f3af64bafcb718e8c84eb213
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute"></a>CA2138: Transparent methods must not call methods with the SuppressUnmanagedCodeSecurity attribute
+# <a name="ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute"></a>CA2138: 투명한 메서드는 SuppressUnmanagedCodeSecurity 특성을 가진 메서드를 호출해서는 안 됩니다.
 |||  
 |-|-|  
 |TypeName|TransparentMethodsMustNotCallSuppressUnmanagedCodeSecurityMethods|  
 |CheckId|CA2138|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Security|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- A security transparent method calls a method that is marked with the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> attribute.  
+## <a name="cause"></a>원인  
+ 로 표시 된 메서드를 호출 하는 보안 투명 메서드는 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 특성입니다.  
   
-## <a name="rule-description"></a>Rule Description  
- This rule fires on any transparent method that calls directly into native code, for example, by using a via a P/Invoke (platform invoke) call. P/Invoke and COM interop methods that are marked with the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> attribute result in a LinkDemand being done against the calling method. Because security transparent code cannot satisfy LinkDemands, the code also cannot call methods that are marked with the SuppressUnmanagedCodeSecurity attribute, or methods of class that is marked with SuppressUnmanagedCodeSecurity attribute. The method will fail, or the demand will be converted to a full demand.  
+## <a name="rule-description"></a>규칙 설명  
+ 이 규칙은 사용 하 여 예를 들어, 네이티브 코드를 직접 호출 하는 모든 투명 메서드에 P/Invoke를 통해 (플랫폼 호출)를 호출 합니다. 로 표시 된 P/Invoke 및 COM interop 메서드는 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> linkdemand 호출 하는 메서드의 대해 수행 되 고 결과 특성입니다. 보안 투명 코드는 LinkDemands를 충족할 수 없는, 때문에 코드 또한 호출할 수 없습니다 SuppressUnmanagedCodeSecurity 특성으로 표시 된 메서드나 SuppressUnmanagedCodeSecurity 특성으로 표시 되는 클래스의 메서드. 메서드는 실패 하거나 요구 한 완전 요청이 발생으로 변환 됩니다.  
   
- Violations of this rule lead to a <xref:System.MethodAccessException> in the Level 2 security transparency model, and a full demand for <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> in the Level 1 transparency model.  
+ 이 규칙 위반을 <xref:System.MethodAccessException> 수준 2 보안 투명도 모델에 대 한 완전 요청이 <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> 수준 1 투명도 모델에 있습니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, remove the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> attribute and mark the method with the <xref:System.Security.SecurityCriticalAttribute> or the <xref:System.Security.SecuritySafeCriticalAttribute> attribute.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 제거의 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 특성으로 메서드를 표시 하 고는 <xref:System.Security.SecurityCriticalAttribute> 또는 <xref:System.Security.SecuritySafeCriticalAttribute> 특성입니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>예제  
  [!code-csharp[FxCop.Security.CA2138.TransparentMethodsMustNotCallSuppressUnmanagedCodeSecurityMethods#1](../code-quality/codesnippet/CSharp/ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute_1.cs)]

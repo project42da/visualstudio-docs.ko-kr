@@ -1,11 +1,10 @@
 ---
-title: 'CA2000: Dispose objects before losing scope | Microsoft Docs'
+title: "CA2000: 범위를 벗어나기 전에 개체를 삭제 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,89 +15,74 @@ helpviewer_keywords:
 - CA2000
 - DisposeObjectsBeforeLosingScope
 ms.assetid: 0c3d7d8d-b94d-46e8-aa4c-38df632c1463
-caps.latest.revision: 32
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 61903e0c6ec3a27648e69ca210e0a5fa71615c22
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+caps.latest.revision: "32"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 81c553a9ae45ed44e8c5d96f49f2063e6383e5ea
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: Dispose objects before losing scope
+# <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: 범위를 벗어나기 전에 개체를 삭제하십시오.
 |||  
 |-|-|  
 |TypeName|DisposeObjectsBeforeLosingScope|  
 |CheckId|CA2000|  
-|Category|Microsoft.Reliability|  
-|Breaking Change|Non-breaking|  
+|범주|Microsoft.Reliability|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A local object of a <xref:System.IDisposable> type is created but the object is not disposed before all references to the object are out of scope.  
+## <a name="cause"></a>원인  
+ 로컬 개체는 <xref:System.IDisposable> 형식을 만들 하지만 개체에 대 한 모든 참조가 범위를 벗어나기 전에 개체 삭제 되지 않습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.  
+## <a name="rule-description"></a>규칙 설명  
+ 모든 참조가 범위를 벗어나기 전에 삭제 가능한 개체를 명시적으로 삭제 되지 않습니다, 하는 경우 가비지 수집기가 개체의 종료자를 실행 하는 경우 임의의 시점에는 개체가 삭제 됩니다. 예외 이벤트가 발생할 수 있으므로 되지 못하도록 하는 종료 자가 실행에서 개체의 개체를 명시적으로 삭제 대신 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, call <xref:System.IDisposable.Dispose%2A> on the object before all references to it are out of scope.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 호출 <xref:System.IDisposable.Dispose%2A> 모든 참조가 범위를 벗어나기 전에 개체에 있습니다.  
   
- Note that you can use the `using` statement (`Using` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) to wrap objects that implement `IDisposable`. Objects that are wrapped in this manner will automatically be disposed at the close of the `using` block.  
+ 사용할 수 있는 참고는 `using` 문 (`Using` 에 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])를 구현 하는 개체를 래핑하 `IDisposable`합니다. 이런이 방식으로 래핑된 개체를 닫으면 자동으로 삭제 됩니다는 `using` 블록입니다.  
   
- The following are some situations where the using statement is not enough to protect IDisposable objects and can cause CA2000 to occur.  
+ 다음은 몇 가지 상황 여기서는 IDisposable 개체를 보호 하는 데 충분 하지 않습니다 문을 사용 하 고 적용 되려면 CA2000 발생할 수 있습니다.  
   
--   Returning a disposable object requires that the object is constructed in a try/finally block outside a using block.  
+-   삭제 가능한 개체 하려면 수행 해야 하는 개체를 사용 하 여 외부 try/finally 블록에 구성 되어 블록입니다.  
   
--   Initializing members of a disposable object should not be done in the constructor of a using statement.  
+-   삭제 가능한 개체에 대 한 초기화를 수행 하지 using의 생성자에 문의 합니다.  
   
--   Nesting constructors that are protected only by one exception handler. For example,  
+-   한 가지 예외 처리기로만 보호 되는 생성자를 중첩 합니다. 예를 들면 다음과 같습니다.  
   
     ```csharp
     using (StreamReader sr = new StreamReader(new FileStream("C:\myfile.txt", FileMode.Create)))  
     { ... }  
     ```
   
-     causes CA2000 to occur because a failure in the construction of the StreamReader object can result in the FileStream object never being closed.  
+     CA2000 절대로 닫히지 되 고 FileStream 개체 StreamReader 개체의 생성에 오류가 발생할 수 있기 때문에 발생 하도록 하면 됩니다.  
   
--   Dynamic objects should use a shadow object to implement the Dispose pattern of IDisposable objects.  
+-   동적 개체는 IDisposable 개체 삭제 패턴을 구현 하는 섀도 개체를 사용 해야 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule unless you have called a method on your object that calls `Dispose`, such as <xref:System.IO.Stream.Close%2A>, or if the method that raised the warning returns an IDisposable object wraps your object.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ `Dispose`와 같은 <xref:System.IO.Stream.Close%2A>를 호출하는 개체에 대해 메서드를 호출하지 않은 경우나 경고를 발생시킨 메서드가 사용자의 개체를 래핑하는 IDisposable 개체를 반환하는 경우 이 규칙에서 경고를 표시해야 합니다.  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2213: Disposable fields should be disposed](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA2213: 삭제 가능한 필드는 삭제해야 합니다.](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
   
- [CA2202: Do not dispose objects multiple times](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)  
+ [CA2202: 개체를 여러 번 삭제하지 마십시오.](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)  
   
-## <a name="example"></a>Example  
- If you are implementing a method that returns a disposable object, use a try/finally block without a catch block to make sure that the object is disposed. By using a try/finally block, you allow exceptions to be raised at the fault point and make sure that object is disposed.  
+## <a name="example"></a>예제  
+ 삭제 가능한 개체를 반환 하는 메서드를 구현 하는 경우 catch 블록 없이 try/finally 블록을 사용 하 여 개체가 삭제 되는지 되도록 합니다. Try/finally 블록을 사용 하 여 오류 지점에서 발생 하 고 해당 개체가 삭제 되었는지 확인 하는 예외를 허용 합니다.  
   
- In the OpenPort1 method, the call to open the ISerializable object SerialPort or the call to SomeMethod can fail. A CA2000 warning is raised on this implementation.  
+ OpenPort1 메서드에서 SomeMethod에 대 한 호출 나 SerialPort ISerializable 개체를 열기 호출이 실패할 수 있습니다. 이 구현 CA2000 경고가 발생 합니다.  
   
- In the OpenPort2 method, two SerialPort objects are declared and set to null:  
+ OpenPort2 메서드 두 SerialPort 개체에는 선언 된 및로 설정 하는 null입니다.  
   
--   `tempPort`, which is used to test that the method operations succeed.  
+-   `tempPort`성공 하는 메서드 작업을 테스트 하는 데 사용 됩니다.  
   
--   `port`, which is used for the return value of the method.  
+-   `port`메서드의 반환 값에 사용 됩니다.  
   
- The `tempPort` is constructed and opened in a `try` block, and any other required work is performed in the same `try` block. At the end of the `try` block, the opened port is assigned to the `port` object that will be returned and the `tempPort` object is set to `null`.  
+ `tempPort` 구현 되 고 열에 `try` 블록 및 기타 필요한에서 동일한 작업을 수행 `try` 블록입니다. 끝에는 `try` 블록, 열린된 포트에 할당 되는 `port` 반환 되는 개체 및 `tempPort` 개체로 설정 됩니다 `null`합니다.  
   
- The `finally` block checks the value of `tempPort`. If it is not null, an operation in the method has failed, and `tempPort` is closed to make sure that any resources are released. The returned port object will contain the opened SerialPort object if the operations of the method succeeded, or it will be null if an operation failed.  
+ `finally` 의 값을 확인 하는 블록 `tempPort`합니다. Null 인 경우 메서드는 작업이 실패 하 고 `tempPort` 리소스를 해제 되도록 닫혀 있습니다. 반환 된 포트 개체는 작업이 실패 한 경우 null 됩니다는 메서드의 연산을 성공한 경우 열려 있는 SerialPort 개체를 포함 됩니다.  
 
 ```csharp
 public SerialPort OpenPort1(string portName)
@@ -171,15 +155,15 @@ Public Function OpenPort2(ByVal PortName As String) As SerialPort
 End Function
 ```
  
-## <a name="example"></a>Example  
- By default, the [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] compiler has all arithmetic operators check for overflow. Therefore, any Visual Basic arithmetic operation might throw an <xref:System.OverflowException>. This could lead to unexpected violations in rules such as CA2000. For example, the following CreateReader1 function will produce a CA2000 violation because the Visual Basic compiler is emitting an overflow checking instruction for the addition that could throw an exception that would cause the StreamReader not to be disposed.  
+## <a name="example"></a>예제  
+ 기본적으로는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 컴파일러는 오버플로 검사 하는 모든 산술 연산자. 따라서 모든 Visual Basic의 산술 연산은 throw 될 수 있습니다는 <xref:System.OverflowException>합니다. CA2000 등의 규칙에서 예기치 않은 위반이 발생할 수 있습니다. 예를 들어 Visual Basic 컴파일러를 표시 하 고는 오버플로 StreamReader를 삭제 하지 못하도록 하는 예외를 throw 할 수 있는 추가 대 한 지침을 검사 하기 때문에 다음 CreateReader1 함수 CA2000 위반을 생성 합니다.  
   
- To fix this, you can disable the emitting of overflow checks by the Visual Basic compiler in your project or you can modify your code as in the following CreateReader2 function.  
+ 이 해결 하려면 프로젝트에서 Visual Basic 컴파일러에 의해 오버플로 검사 내보내기를 비활성화할 수 있습니다 또는 다음 CreateReader2 함수에서와 같이 코드를 수정할 수 있습니다.  
   
- To disable the emitting of overflow checks, right-click the project name in Solution Explorer and then click **Properties**. Click **Compile**, click **Advanced Compile Options**, and then check **Remove integer overflow checks**.  
+ 오버플로 검사 내보내기를 사용 하지 않으려면 솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 클릭 **속성**합니다. 클릭 **컴파일**, 클릭 **고급 컴파일 옵션**, 한 다음 확인 **정수 오버플로 검사 해제**합니다.  
   
   [!code-vb[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../code-quality/codesnippet/VisualBasic/ca2000-dispose-objects-before-losing-scope-vboverflow_1.vb)]
 
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:System.IDisposable>   
- [Dispose Pattern](/dotnet/standard/design-guidelines/dispose-pattern)
+ [삭제 패턴](/dotnet/standard/design-guidelines/dispose-pattern)

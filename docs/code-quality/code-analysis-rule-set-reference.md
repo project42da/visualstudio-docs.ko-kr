@@ -1,42 +1,42 @@
 ---
 title: "코드 분석 규칙 집합 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "코드 분석, 규칙 집합"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: code analysis, rule sets
 ms.assetid: 5874e854-e298-4d2e-bbe4-95e899d22587
-caps.latest.revision: 43
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 43
+caps.latest.revision: "43"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5a0f290fa42a04ddf60a49282d2f350111076ab0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 코드 분석 규칙 집합 참조
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], 또는 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]에서 관리 코드 프로젝트에 대한 코드 분석을 할때는 기본 제공 *규칙 집합* 목록이 제공됩니다.  표준 규칙 집합 중 하나를 사용 하거나 또는 프로젝트 요구 사항에 맞게 규칙을 사용자 지정할 수 있습니다.  
+# <a name="code-analysis-rule-set-reference"></a>코드 분석 규칙 집합 참조
+에 대 한 코드 분석을 구성할 때 관리 코드 프로젝트에서 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], 또는 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]의 기본 제공 목록으로 표시 된 *규칙 집합*합니다. 표준 규칙 집합 중 하나를 사용 하거나 또는 규칙 집합을 프로젝트 요구 사항에 맞게 사용자 지정할 수 있습니다.  
   
-## 사용 가능한 규칙 집합  
- 아래의 표는 기본 규칙 집합을 제공합니다.  
+## <a name="available-rule-sets"></a>사용 가능한 규칙 집합  
+ 다음 표에는 기본 규칙 집합이 나열됩니다.  
   
 |||  
 |-|-|  
-|[모든 규칙 규칙 집합](../code-quality/all-rules-rule-set.md)|이 규칙 집합에는 모든 규칙이 포함되어 있습니다.  이 규칙 집합을 실행하면 많은 수의 경고가 보고될 수 있습니다.  이 규칙 집합을 사용하여 코드에 있는 모든 문제의 포괄적인 그림을 가져오십시오.  이렇게 하면 프로젝트에 대해 실행하기에 가장 적합한 보다 중점적인 규칙 집합을 판단하는 데 도움이 됩니다.|  
-|[관리 코드에 대한 기본 수정 규칙 규칙 집합](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)|이러한 규칙은 프레임워크 API 사용 중 발생하는 논리 오류 및 일반적인 실수에 초점을 맞춥니다.  최소 권장 규칙에서 보고되는 경고 목록을 확장하려면 이 규칙 집합을 포함하십시오.|  
-|[관리 코드에 대한 기본 디자인 지침 규칙 규칙 집합](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md)|이러한 규칙은 유용한 정보를 적용하여 코드를 이해하고 사용하기 쉽게 만드는 데 초점을 맞춥니다.  프로젝트에 라이브러리 코드가 있거나 코드를 쉽게 유지 관리하기 위해 유용한 정보를 적용하려는 경우 이 규칙 집합을 포함하십시오.|  
-|[관리 코드에 대한 확장 수정 규칙 규칙 집합](../code-quality/extended-correctness-rules-rule-set-for-managed-code.md)|이러한 규칙은 기본 수정 규칙을 확장하여 보고되는 논리 및 프레임워크 사용 오류를 최대화합니다.  COM Interop 및 모바일 응용 프로그램 같은 특정 시나리오에 강조 사항이 추가됩니다.  이러한 시나리오 중 하나가 프로젝트에 적용되거나 프로젝트에서 추가 문제를 찾으려는 경우 이 규칙 집합을 포함해 보십시오.|  
-|[관리 코드에 대한 확장 디자인 지침 규칙 규칙 집합](../code-quality/extended-design-guidelines-rules-rule-set-for-managed-code.md)|이러한 규칙은 기본 디자인 지침 규칙을 확장하여 보고되는 유용성 및 유지 관리 문제를 최대화합니다.  명명 지침에 주안점을 둡니다.  프로젝트에 라이브러리 코드가 있거나 유지 관리 가능한 코드를 작성하는 데 가장 높은 표준을 적용하려는 경우 이 규칙 집합을 포함해 보십시오.|  
-|[관리 코드에 대한 전역화 규칙 규칙 집합](../code-quality/globalization-rules-rule-set-for-managed-code.md)|이러한 규칙은 응용 프로그램의 데이터가 다른 언어, 로캘 및 문화권에서 사용될 때 올바로 표시되지 않는 문제에 초점을 맞춥니다.  응용 프로그램이 지역화되거나 전역화되는 경우 이 규칙 집합을 포함하십시오.|  
-|[관리 코드에 대한 관리 최소 규칙 규칙 집합](../code-quality/managed-minimun-rules-rule-set-for-managed-code.md)|이러한 규칙은 코드 분석에서 가장 정확하게 확인하는 코드의 가장 중요한 문제에 초점을 맞춥니다.  이러한 규칙은 수가 적으며 제한된 Visual Studio 버전에서만 실행할 수 있습니다.  다른 Visual Studio 버전에서는 MinimumRecommendedRules.ruleset을 사용하십시오.|  
-|[관리 코드에 대한 관리 권장 규칙 규칙 집합](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)|이러한 규칙은 잠재적 보안 허점, 응용 프로그램 충돌 및 기타 중요한 논리 및 디자인 오류를 포함한 코드의 가장 중요한 문제에 초점을 맞춥니다.  프로젝트에 대해 만드는 모든 사용자 지정 규칙 집합에 이 규칙 집합을 포함해야 합니다.|  
-|[혼합 최소 규칙 규칙 집합](../code-quality/mixed-minimum-rules-rule-set.md)|이러한 규칙은 잠재적 보안 허점 및 응용 프로그램 충돌을 포함하여 공용 언어 런타임을 지원하는 C\+\+ 프로젝트의 가장 중요한 문제에 초점을 맞춥니다.  공용 언어 런타임을 지원하는 C\+\+ 프로젝트에 대해 만드는 모든 사용자 지정 규칙 집합에 이 규칙 집합을 포함해야 합니다.|  
-|[혼합 권장 규칙 규칙 집합](../code-quality/mixed-recommended-rules-rule-set.md)|이러한 규칙은 잠재적 보안 허점, 응용 프로그램 충돌 및 기타 중요한 논리 및 디자인 오류를 포함하여 공용 언어 런타임을 지원하는 C\+\+ 프로젝트의 가장 일반적으로 중요한 문제에 초점을 맞춥니다.  공용 언어 런타임을 지원하는 C\+\+ 프로젝트에 대해 만드는 모든 사용자 지정 규칙 집합에 이 규칙 집합을 포함해야 합니다.  이 규칙 집합은 Visual Studio Professional 이상 버전에서 구성하도록 디자인되었습니다.|  
-|[네이티브 최소 규칙 규칙 집합](../code-quality/native-minimum-rules-rule-set.md)|이러한 규칙은 잠재적 보안 허점 및 응용 프로그램 충돌을 포함하여 네이티브 코드의 가장 중요한 문제에 초점을 맞춥니다.  네이티브 프로젝트에 대해 만드는 모든 사용자 지정 규칙 집합에 이 규칙 집합을 포함해야 합니다.|  
-|[네이티브 권장 규칙 규칙 집합](../code-quality/native-recommended-rules-rule-set.md)|이러한 규칙은 잠재적 보안 허점 및 응용 프로그램 충돌을 포함하여 네이티브 코드의 가장 중요하고 일반적인 문제에 초점을 맞춥니다.  네이티브 프로젝트에 대해 만드는 모든 사용자 지정 규칙 집합에 이 규칙 집합을 포함해야 합니다.  이 규칙 집합은 Visual Studio Professional 이상 버전에서 사용하도록 디자인되었습니다.|  
-|[관리 코드에 대한 보안 규칙 규칙 집합](../code-quality/security-rules-rule-set-for-managed-code.md)|이 규칙 집합에는 모든 Microsoft 보안 규칙이 포함되어 있습니다.  보고되는 잠재적 보안 문제의 수를 최대화하려면 이 규칙 집합을 포함하십시오.|
+|[모든 규칙 규칙 집합](../code-quality/all-rules-rule-set.md)|이 규칙 집합에 있는 모든 규칙을 포함합니다. 이 규칙 집합 실행 되 고 보고 된 경고 수가 많은 발생할 수 있습니다. 이 규칙 집합 프로그램 코드에서 얻을 수 있는 모든 문제의 포괄적인 그림을 사용 합니다. 이 집합은 가장 적합 한 프로젝트에 대해 실행 하는 더욱 중점 둔된 규칙을 결정 하는 데 수 있습니다.|  
+|[관리 코드에 대한 기본 수정 규칙 규칙 집합](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)|이러한 규칙은 논리 오류 및 일반적인 실수 프레임 워크 Api 사용에 초점을 둡니다. 이 규칙 집합의 최소 권장된 규칙에 의해 보고 된 경고 목록에 확장을 포함 합니다.|  
+|[관리 코드에 대한 기본 디자인 지침 규칙 규칙 집합](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md)|이러한 규칙 코드를 더 쉽게 이해 하 고 모범 사례를 적용에 집중 합니다. 프로젝트에 라이브러리 코드가 있거나 유지 관리를 쉽게 코드에 대 한 모범 사례를 적용 하려는 경우이 규칙 집합을 포함 합니다.|  
+|[관리 코드에 대한 확장 수정 규칙 규칙 집합](../code-quality/extended-correctness-rules-rule-set-for-managed-code.md)|이러한 규칙은 기본 수정 규칙을 보고 되는 논리 및 프레임 워크 사용 오류를 최대화 하기 위해 확장 합니다. COM interop 및 모바일 응용 프로그램 같은 특정 시나리오에 주안점을 둡니다. 이러한 시나리오 중 하나가 적용 프로젝트 또는 프로젝트의 추가 문제를 찾을 경우이 규칙 집합을 포함 하는 것이 좋습니다.|  
+|[관리 코드에 대한 확장 디자인 지침 규칙 규칙 집합](../code-quality/extended-design-guidelines-rules-rule-set-for-managed-code.md)|이러한 규칙은 보고 되는 유용성 및 유지 관리 문제를 최대화 하기 위해 기본 디자인 지침 규칙에서 확장 됩니다. 명명 지침에 주안점을 둡니다. 프로젝트에 라이브러리 코드가 있거나 유지 관리 가능한 코드를 작성 하기 위한 가장 높은 표준을 적용 하려는 경우이 규칙 집합을 포함 하는 것이 좋습니다.|  
+|[관리 코드에 대한 전역화 규칙 규칙 집합](../code-quality/globalization-rules-rule-set-for-managed-code.md)|이러한 규칙 다양 한 언어, 로캘 및 문화권에서 사용 될 때 올바로 표시 응용 프로그램에서 데이터를 방해 하는 문제에 초점을 맞춥니다. 응용 프로그램이 지역화 되거나 전역화 되는 경우이 규칙 집합을 포함 합니다.|  
+|[관리 코드에 대 한 설정 관리 최소 규칙 규칙](../code-quality/managed-minimun-rules-rule-set-for-managed-code.md)|이러한 규칙은 코드 분석은 가장 정확한 코드의 가장 중요 한 문제에 집중 합니다.  이러한 규칙은 수가 적으며 하 고만 제한 된 버전의 Visual Studio에서 실행 하는 것은 키를 누릅니다.  다른 Visual Studio 버전 MinimumRecommendedRules.ruleset을 사용 합니다.|  
+|[관리 코드에 대한 관리 권장 규칙 규칙 집합](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)|이러한 규칙은 잠재적 보안 허점, 응용 프로그램 충돌 및 기타 중요 한 논리 및 디자인 오류를 비롯 하 여 코드의 가장 중요 한 문제에 집중 합니다. 프로젝트에 대해 만드는이 규칙 사용자 지정 규칙 집합에 있는 집합을 포함 해야 합니다.|  
+|[혼합 최소 규칙 규칙 집합](../code-quality/mixed-minimum-rules-rule-set.md)|이러한 규칙을 지 원하는 잠재적 보안 허점 및 응용 프로그램 충돌을 포함 하 여 공용 언어 런타임 c + + 프로젝트에서 가장 중요 한 문제에 초점을 맞춥니다. 공용 언어 런타임을 지 원하는 c + + 프로젝트에 대해 만드는이 규칙 사용자 지정 규칙 집합에 있는 집합을 포함 해야 합니다.|  
+|[혼합 권장 규칙 규칙 집합](../code-quality/mixed-recommended-rules-rule-set.md)|이러한 규칙을 지 원하는 잠재적 보안 허점, 응용 프로그램 충돌 및 기타 중요 한 논리 및 디자인 오류를 포함 하 여 공용 언어 런타임 c + + 프로젝트에서 가장 일반적이 고 중요 한 문제에 초점을 맞춥니다. 공용 언어 런타임을 지 원하는 c + + 프로젝트에 대해 만드는이 규칙 사용자 지정 규칙 집합에 있는 집합을 포함 해야 합니다.  이 규칙 집합은 Visual Studio Professional edition 이상 구성 하도록 설계 되었습니다.|  
+|[네이티브 최소 규칙 규칙 집합](../code-quality/native-minimum-rules-rule-set.md)|이러한 규칙은 잠재적 보안 허점 및 응용 프로그램 충돌을 비롯 하 여 네이티브 코드의 가장 중요 한 문제에 집중 합니다. 네이티브 프로젝트에 대해 만드는 모든 사용자 지정 규칙 집합에 이 규칙 집합을 포함해야 합니다.|  
+|[네이티브 권장 규칙 규칙 집합](../code-quality/native-recommended-rules-rule-set.md)|이러한 규칙은 잠재적 보안 허점 및 응용 프로그램 충돌을 비롯 하 여 네이티브 코드의 가장 중요 하 고 일반적인 문제에 집중 합니다.  네이티브 프로젝트에 대해 만드는 모든 사용자 지정 규칙 집합에 이 규칙 집합을 포함해야 합니다.  이 규칙 집합은 Visual Studio Professional edition 이상 사용할 수 있습니다.|  
+|[관리 코드에 대한 보안 규칙 규칙 집합](../code-quality/security-rules-rule-set-for-managed-code.md)|이 규칙 집합에는 모든 Microsoft 보안 규칙이 포함 되어 있습니다. 이 규칙을 보고 되는 잠재적 보안 문제의 수를 최대화 하기 위해 집합을 포함 합니다.|

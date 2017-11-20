@@ -1,11 +1,10 @@
 ---
-title: 'CA1051: Do not declare visible instance fields | Microsoft Docs'
+title: "CA1051: 표시 되는 인스턴스 필드를 선언 하지 마십시오 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,61 +14,45 @@ helpviewer_keywords:
 - CA1051
 - DoNotDeclareVisibleInstanceFields
 ms.assetid: 2805376c-824c-462c-81d1-c51aaf7cabe7
-caps.latest.revision: 17
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 3c4be3eb3862e462b840569460993b2ff8a1000b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c80ac321100ecc0f88811332c73bdfd99b5a6a99
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Do not declare visible instance fields
+# <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: 표시되는 인스턴스 필드를 선언하지 마십시오.
 |||  
 |-|-|  
 |TypeName|DoNotDeclareVisibleInstanceFields|  
 |CheckId|CA1051|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경|  
   
-## <a name="cause"></a>Cause  
- An externally visible type has an externally visible instance field.  
+## <a name="cause"></a>원인  
+ 외부에서 볼 수 있는 형식이 외부에서 표시 되는 인스턴스 필드를 있습니다.  
   
-## <a name="rule-description"></a>Rule Description  
- The primary use of a field should be as an implementation detail. Fields should be `private` or `internal` and should be exposed by using properties. It is as easy to access a property as it is to access a field, and the code in the accessors of a property can change as the features of the type expand without introducing breaking changes. Properties that just return the value of a private or internal field are optimized to perform on par with accessing a field; very little performance gain is associated with the use of externally visible fields over properties.  
+## <a name="rule-description"></a>규칙 설명  
+ 필드의 주된 용도는 구현을 세부적으로 설명하는 것입니다. 필드는 해야 `private` 또는 `internal` 및 속성을 사용 하 여 공개 해야 합니다. 속성에 액세스 하는 필드를 액세스 하는 것이 고 주요 변경 내용 없이 형식의 기능 확장 속성의 접근자의 코드를 변경할 수와 쉽습니다. 필드 액세스와 일치 하는 데 최적화 되어 방금 전용 또는 내부 필드의 값을 반환 하는 속성 속성에 대해 거의 성능 향상을 외부에서 볼 수 있는 필드를 사용 하 여 연결 됩니다.  
   
- Externally visible refers to `public`, `protected`, and `protected internal` (`Public`, `Protected`, and `Protected Friend` in Visual Basic) accessibility levels.  
+ 외부에서 볼 수 가리키는 `public`, `protected`, 및 `protected internal` (`Public`, `Protected`, 및 `Protected Friend` Visual Basic에서) 액세스 가능성 수준입니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, make the field `private` or `internal` and expose it by using an externally visible property.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 필드를 확인 `private` 또는 `internal` 및 외부에서 볼 수 있는 속성을 사용 하 여 노출 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule. Externally visible fields do not provide any benefits that are unavailable to properties. Additionally, public fields cannot be protected by [Link Demands](/dotnet/framework/misc/link-demands). See [CA2112: Secured types should not expose fields](../code-quality/ca2112-secured-types-should-not-expose-fields.md).  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다. 외부에서 표시 되는 필드 속성을 사용할 수 없는 모든 혜택을 제공 하지 않습니다. 또한 통해 public 필드를 보호할 수 없으므로 [링크 요청](/dotnet/framework/misc/link-demands)합니다. 참조 [CA2112: 보안된 형식은 필드를 노출 해야](../code-quality/ca2112-secured-types-should-not-expose-fields.md)합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a type (`BadPublicInstanceFields`) that violates this rule. `GoodPublicInstanceFields` shows the corrected code.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 형식을 보여 줍니다 (`BadPublicInstanceFields`)이이 규칙을 위반 하 합니다. `GoodPublicInstanceFields`수정 된 코드를 보여 줍니다.  
   
  [!code-csharp[FxCop.Design.TypesPublicInstanceFields#1](../code-quality/codesnippet/CSharp/ca1051-do-not-declare-visible-instance-fields_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2112: Secured types should not expose fields](../code-quality/ca2112-secured-types-should-not-expose-fields.md)  
+## <a name="related-rules"></a>관련된 규칙  
+ [CA2112: 보안 형식은 필드를 노출하면 안 됩니다.](../code-quality/ca2112-secured-types-should-not-expose-fields.md)  
   
-## <a name="see-also"></a>See Also  
- [Link Demands](/dotnet/framework/misc/link-demands)
+## <a name="see-also"></a>참고 항목  
+ [링크 요구](/dotnet/framework/misc/link-demands)

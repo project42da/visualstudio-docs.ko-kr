@@ -1,11 +1,10 @@
 ---
-title: 'CA2208: Instantiate argument exceptions correctly | Microsoft Docs'
+title: ": Ca2208 인수 예외 올바르게 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,79 +14,68 @@ helpviewer_keywords:
 - InstantiateArgumentExceptionsCorrectly
 - CA2208
 ms.assetid: e2a48939-d9fa-478c-b2f9-3bdbce07dff7
-caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 770dc36e002712905fc90652308bfd9a63b1b897
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 4cb25017750ee95d55f1c776dea1f062f24ec22c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2208-instantiate-argument-exceptions-correctly"></a>CA2208: Instantiate argument exceptions correctly
+# <a name="ca2208-instantiate-argument-exceptions-correctly"></a>CA2208: 인수 예외를 올바르게 인스턴스화하십시오.
 |||  
 |-|-|  
 |TypeName|InstantiateArgumentExceptionsCorrectly|  
 |CheckId|CA2208|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Usage|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- Possible causes include the following situations:  
+## <a name="cause"></a>원인  
+ 가능한 원인은 다음과를 같습니다.  
   
--   A call is made to the default (parameterless) constructor of an exception type that is, or derives from <xref:System.ArgumentException>.  
+-   즉, 또는에서 파생 된 예외 형식의 기본 (매개 변수가 없는) 생성자 호출 <xref:System.ArgumentException>합니다.  
   
--   An incorrect string argument is passed to a parameterized constructor of an exception type that is, or derives from <xref:System.ArgumentException>.  
+-   즉, 또는에서 파생 된 예외 형식의 매개 변수가 있는 생성자에 잘못 된 문자열 인수가 전달 <xref:System.ArgumentException>합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- Instead of calling the default constructor, call one of the constructor overloads that allows a more meaningful exception message to be provided. The exception message should target the developer and clearly explain the error condition and how to correct or avoid the exception.  
+## <a name="rule-description"></a>규칙 설명  
+ 기본 생성자를 호출 하는 대신 더 의미 있는 예외 메시지를 제공 해야 하는 생성자 오버 로드 중 하나를 호출 합니다. 예외 메시지는 개발자를 대상으로 하 고 수정 하거나 예외를 방지 하는 방법과 오류 조건을 명확 하 게 설명 해야 합니다.  
   
- The signatures of the one and two string constructors of <xref:System.ArgumentException> and its derived types are not consistent with respect to the `message` and `paramName` parameters. Make sure these constructors are called with the correct string arguments. The signatures are as follows:  
+ 하나 및 두 개의 문자열 생성자의 시그니처에 <xref:System.ArgumentException> 파생된 형식을 기준으로 일치 하지 않는 `message` 및 `paramName` 매개 변수입니다. 이러한 생성자는 올바른 문자열 인수와 함께 호출 하 고 있는지 확인 합니다. 시그니처에 다음과 같습니다.  
   
- <xref:System.ArgumentException>(string `message`)  
+ <xref:System.ArgumentException>(문자열 `message`)  
   
- <xref:System.ArgumentException>(string `message`, string `paramName`)  
+ <xref:System.ArgumentException>(문자열 `message`, 문자열 `paramName`)  
   
- <xref:System.ArgumentNullException>(string `paramName`)  
+ <xref:System.ArgumentNullException>(문자열 `paramName`)  
   
- <xref:System.ArgumentNullException>(string `paramName`, string `message`)  
+ <xref:System.ArgumentNullException>(문자열 `paramName`, 문자열 `message`)  
   
- <xref:System.ArgumentOutOfRangeException>(string `paramName`)  
+ <xref:System.ArgumentOutOfRangeException>(문자열 `paramName`)  
   
- <xref:System.ArgumentOutOfRangeException>(string `paramName`, string `message`)  
+ <xref:System.ArgumentOutOfRangeException>(문자열 `paramName`, 문자열 `message`)  
   
- <xref:System.DuplicateWaitObjectException>(string `parameterName`)  
+ <xref:System.DuplicateWaitObjectException>(문자열 `parameterName`)  
   
- <xref:System.DuplicateWaitObjectException>(string `parameterName`, string `message`)  
+ <xref:System.DuplicateWaitObjectException>(문자열 `parameterName`, 문자열 `message`)  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, call a constructor that takes a message, a parameter name, or both, and make sure the arguments are proper for the type of <xref:System.ArgumentException> being called.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 메시지, 매개 변수 이름 또는 둘 모두를 사용 하는 생성자를 호출 하 고 인수는 형식에 대해 적절 한 있는지 <xref:System.ArgumentException> 호출 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule only if a parameterized constructor is called with the correct string arguments.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 올바른 문자열 인수를 매개 변수화 된 생성자를 호출 하는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a constructor that incorrectly instantiates an instance of the ArgumentNullException type.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 ArgumentNullException 형식의 인스턴스를 제대로 인스턴스화하는 생성자를 보여 줍니다.  
   
- [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_1.cpp)] [!code-csharp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_1.cs)] [!code-vb[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/VisualBasic/ca2208-instantiate-argument-exceptions-correctly_1.vb)]  
+ [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_1.cpp)]
+ [!code-csharp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_1.cs)]
+ [!code-vb[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/VisualBasic/ca2208-instantiate-argument-exceptions-correctly_1.vb)]  
   
-## <a name="example"></a>Example  
- The following example fixes the above violation by switching the constructor arguments.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 생성자 인수를 전환 하 여 위의 위반을 해결 합니다.  
   
- [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_2.cpp)] [!code-csharp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_2.cs)] [!code-vb[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/VisualBasic/ca2208-instantiate-argument-exceptions-correctly_2.vb)]
+ [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_2.cpp)]
+ [!code-csharp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_2.cs)]
+ [!code-vb[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/VisualBasic/ca2208-instantiate-argument-exceptions-correctly_2.vb)]

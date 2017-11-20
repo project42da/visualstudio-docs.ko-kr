@@ -1,5 +1,5 @@
 ---
-title: Add validation to an n-tier dataset | Microsoft Docs
+title: "N 계층 데이터 집합에 유효성 검사를 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,56 +9,39 @@ ms.topic: article
 dev_langs:
 - VB
 - CSharp
-- C++
-- aspx
 helpviewer_keywords:
 - n-tier applications, validating
 - validation [Visual Basic], n-tier data applications
 - validating n-tier data applications
 ms.assetid: 34ce4db6-09bb-4b46-b435-b2514aac52d3
-caps.latest.revision: 23
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: fd436b1564350bdbddb02308ab093b3176f5a342
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: b4c204c7515e8bb178ba1ee541650593c0281f15
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="add-validation-to-an-n-tier-dataset"></a>Add validation to an n-tier dataset
-Adding validation to a dataset that is separated into an n-tier solution is basically the same as adding validation to a single-file dataset (a dataset in a single project). The suggested location for performing validation on data is during the <xref:System.Data.DataTable.ColumnChanging> and/or <xref:System.Data.DataTable.RowChanging> events of a data table.  
+# <a name="add-validation-to-an-n-tier-dataset"></a>N 계층 데이터 집합에 유효성 검사 추가
+N 계층 솔루션으로 분리 되어 있는 데이터 집합에 유효성 검사 추가 기본적으로 단일 파일 (단일 프로젝트에서 데이터 집합) 데이터 집합에 유효성 검사와 동일 합니다. 데이터에 유효성 검사를 수행 하기 위한 권장된 위치는 동안는 <xref:System.Data.DataTable.ColumnChanging> 및/또는 <xref:System.Data.DataTable.RowChanging> 데이터 테이블의 이벤트입니다.  
   
- The datasetprovides the functionality to create partial classes to which you can add user code to column- and row- changing events of the data tables in the dataset. For more information about adding code to a dataset in an n-tier solution, see [Add code to datasets in n-tier applications](../data-tools/add-code-to-datasets-in-n-tier-applications.md), and [Add code to TableAdapters in n-tier applications](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md). For more information about partial classes, see [How to: Split a Class into Partial Classes (Class Designer)](../ide/how-to-split-a-class-into-partial-classes-class-designer.md) or [Partial Classes and Methods](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).  
-  
-> [!NOTE]
->  When you separate datasets from TableAdapters (by setting the **DataSet Project** property), existing partial dataset classes in the project won't be moved automatically. Existing dataset partial classes must be moved manually to the dataset project.  
+ 데이터 집합을 데이터 집합에 있는 데이터 테이블의 열 및 행 변경 이벤트에 사용자 코드를 추가할 수는 partial 클래스를 생성 하는 기능을 제공 합니다. N 계층 솔루션에 대 한 데이터 집합에 코드를 추가 하는 방법에 대 한 자세한 내용은 참조 [n 계층 응용 프로그램에서 데이터 집합에 코드 추가](../data-tools/add-code-to-datasets-in-n-tier-applications.md), 및 [n 계층 응용 프로그램에서 Tableadapter에 코드를 추가할](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)합니다. Partial 클래스에 대 한 자세한 내용은 참조 [하는 방법: 클래스 (클래스 디자이너)를 부분 클래스로 분할](../ide/how-to-split-a-class-into-partial-classes-class-designer.md) 또는 [Partial 클래스 및 메서드](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)합니다.  
   
 > [!NOTE]
->  The Dataset Designer does not automatically create event handlers in C# for the <xref:System.Data.DataTable.ColumnChanging> and <xref:System.Data.DataTable.RowChanging> events. You have to manually create an event handler and hook up the event handler to the underlying event. The following procedures describe how to create the required event handlers in both Visual Basic and C#.  
+>  데이터 집합에서 TableAdapters 분리할 때는 (설정 하 여는 **데이터 집합 프로젝트** 속성), 프로젝트의 기존 부분 데이터 집합 클래스가 자동으로 이동할 수 없습니다. 기존 부분 데이터 집합 클래스는 데이터 집합 프로젝트에 수동으로 이동 해야 합니다.  
   
-## <a name="validatechanges-to-individual-columns"></a>Validatechanges to individual columns  
- Validate values in individual columns by handling the <xref:System.Data.DataTable.ColumnChanging> event. The <xref:System.Data.DataTable.ColumnChanging> event is raised when a value in a column is modified. Create an event handler for the <xref:System.Data.DataTable.ColumnChanging> event by double-clicking the desired column on the **Dataset Designer**.  
+> [!NOTE]
+>  데이터 집합 디자이너 자동으로 만들지 않으므로 이벤트 처리기에 대 한 C#에서 <xref:System.Data.DataTable.ColumnChanging> 및 <xref:System.Data.DataTable.RowChanging> 이벤트입니다. 수동으로 이벤트 처리기를 만들고 이벤트를 이벤트 처리기를 연결 해야 합니다. 다음 절차는 Visual Basic 및 C#에서 필요한 이벤트 처리기를 만드는 방법을 설명 합니다.  
   
- The first time that you double-click a column, the designer generates an event handler for the <xref:System.Data.DataTable.ColumnChanging> event. An `If...Then` statement is also created that tests for the specific column. For example, the following code is generated when you double-click the RequiredDate column on the Northwind Orders table:  
+## <a name="validate-changes-to-individual-columns"></a>개별 열에 변경 내용 유효성 검사  
+ 처리 하 여 개별 열에 값을 유효성 검사는 <xref:System.Data.DataTable.ColumnChanging> 이벤트입니다. <xref:System.Data.DataTable.ColumnChanging> 이벤트는 열에 값을 수정 하면 발생 합니다. 에 대 한 이벤트 처리기를 만들고는 <xref:System.Data.DataTable.ColumnChanging> 원하는 열을 두 번 클릭 하 여 이벤트는 **데이터 집합 디자이너**합니다.  
   
-```vb#  
+ 열을 두 번 클릭 처음으로 디자이너에 대 한 이벤트 처리기가 생성 된 <xref:System.Data.DataTable.ColumnChanging> 이벤트입니다. `If...Then` 문이 만들어집니다 특정 열에 대 한 테스트 하는 합니다. 예를 들어 다음 코드는 Northwind Orders 테이블에서 RequiredDate 열을 두 번 클릭할 때 생성 됩니다.  
+  
+```vb  
 Private Sub OrdersDataTable_ColumnChanging(ByVal sender As System.Object, ByVal e As System.Data.DataColumnChangeEventArgs) Handles Me.ColumnChanging  
     If (e.Column.ColumnName = Me.RequiredDateColumn.ColumnName) Then  
         ' Add validation code here.  
@@ -67,24 +50,24 @@ End Sub
 ```  
   
 > [!NOTE]
->  In C# projects, the Dataset Designer only creates partial classes for the dataset and individual tables in the dataset. The Dataset Designer does not automatically create event handlers for the <xref:System.Data.DataTable.ColumnChanging> and <xref:System.Data.DataTable.RowChanging> events in C# like it does in Visual Basic. In C# projects, you have to manually construct a method to handle the event and hook up the method to the underlying event. The following procedure provides the steps to create the required event handlers in both Visual Basic and C#.  
+>  C# 프로젝트에서 데이터 집합 디자이너는 데이터 집합 및 데이터 집합의 개별 테이블에 대 한 partial 클래스 만듭니다. 데이터 집합 디자이너가에 대 한 이벤트 처리기에 자동으로 만들지 않으므로 <xref:System.Data.DataTable.ColumnChanging> 및 <xref:System.Data.DataTable.RowChanging> C# 같은 Visual Basic에서의 이벤트입니다. C# 프로젝트에서 이벤트를 처리 하 고 메서드는 기본 이벤트를 후크 하는 메서드를 수동으로 구성 해야 합니다. 다음 절차는 Visual Basic 및 C#에서 필요한 이벤트 처리기를 만드는 단계를 제공 합니다.  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### <a name="to-add-validation-during-changes-to-individual-column-values"></a>To add validation during changes to individual column values  
+#### <a name="to-add-validation-during-changes-to-individual-column-values"></a>개별 열 값을 변경 하는 동안 유효성 검사를 추가 하려면  
   
-1.  Open the dataset in The dataset by double-clicking the **.xsd** file in **Solution Explorer**. For more information, see [Walkthrough: Creating a Dataset in the Dataset Designer](walkthrough-creating-a-dataset-with-the-dataset-designer.md).  
+1.  두 번 클릭 하 여 데이터 집합을 열고는 **.xsd** 파일 **솔루션 탐색기**합니다. 자세한 내용은 참조 [연습: 데이터 집합 디자이너에서 데이터 집합 만들기](walkthrough-creating-a-dataset-with-the-dataset-designer.md)합니다.  
   
-2.  Double-click the column you want to validate. This action creates the <xref:System.Data.DataTable.ColumnChanging> event handler.  
+2.  유효성을 검사 하려는 열을 두 번 클릭 합니다. 이 작업을 만듭니다는 <xref:System.Data.DataTable.ColumnChanging> 이벤트 처리기입니다.  
   
     > [!NOTE]
-    >  The Dataset Designer does not automatically create an event handler for the C# event. The code that's necessary to handle the event in C# is included in the next section. `SampleColumnChangingEvent` is created and then hooked up to the <xref:System.Data.DataTable.ColumnChanging> event in the <xref:System.Data.DataTable.EndInit%2A> method.  
+    >  데이터 집합 디자이너 자동으로 C# 이벤트에 대 한 이벤트 처리기를 만들지 않습니다. C#에서 이벤트를 처리 하는 코드는 다음 섹션에 포함 됩니다. `SampleColumnChangingEvent`생성 되 고 다음로 후크는 <xref:System.Data.DataTable.ColumnChanging> 이벤트에는 <xref:System.Data.DataTable.EndInit%2A> 메서드.  
   
-3.  Add code to verify that `e.ProposedValue` contains data that meets the requirements of your application. If the proposed value is unacceptable, set the column to indicate that it contains an error.  
+3.  코드를 확인 하는 추가 `e.ProposedValue` 응용 프로그램의 요구 사항을 충족 하는 데이터를 포함 합니다. 제안 된 값을 수용할 수 없으면 오류가 포함 되어 있음을 나타내도록 열을 설정 합니다.  
   
-     The following code example validates that the **Quantity** column contains more than 0. If **Quantity** is less than or equal to 0, the column is set to an error. The `Else` clause clears the error if **Quantity** is more than 0. The code in the column-changing event handler should resemble the following:  
+     다음 코드 예제를 확인 하 고 **수량** 열 0 보다 큰 값을 포함 합니다. 경우 **수량** 보다 작거나 0으로 열을 오류로 설정 되어 있습니다. `Else` 절 지웁니다 오류 **수량** 0 보다 큰 것입니다. 열 변경 이벤트 처리기의 코드는 다음과 같습니다.  
   
-    ```vb#  
+    ```vb  
     If (e.Column.ColumnName = Me.QuantityColumn.ColumnName) Then  
         If CType(e.ProposedValue, Short) <= 0 Then  
             e.Row.SetColumnError(e.Column, "Quantity must be greater than 0")  
@@ -92,60 +75,57 @@ End Sub
             e.Row.SetColumnError(e.Column, "")  
         End If  
     End If  
-    ```  
+    ```    
+    ```csharp  
+    // Add this code to the DataTable partial class.  
   
-    ```c#  
-    // C#  
-    // Add this code to the DataTable   
-    // partial class.  
+    public override void EndInit()  
+    {  
+        base.EndInit();  
+        // Hook up the ColumnChanging event  
+        // to call the SampleColumnChangingEvent method.  
+        ColumnChanging += SampleColumnChangingEvent;  
+    }  
   
-        public override void EndInit()  
+    public void SampleColumnChangingEvent(object sender, System.Data.DataColumnChangeEventArgs e)  
+    {  
+        if (e.Column.ColumnName == QuantityColumn.ColumnName)  
         {  
-            base.EndInit();  
-            // Hook up the ColumnChanging event  
-            // to call the SampleColumnChangingEvent method.  
-            ColumnChanging += SampleColumnChangingEvent;  
-        }  
-  
-        public void SampleColumnChangingEvent(object sender, System.Data.DataColumnChangeEventArgs e)  
-        {  
-            if (e.Column.ColumnName == QuantityColumn.ColumnName)  
+            if ((short)e.ProposedValue <= 0)  
             {  
-                if ((short)e.ProposedValue <= 0)  
-                {  
-                    e.Row.SetColumnError("Quantity", "Quantity must be greater than 0");  
-                }  
-                else  
-                {  
-                    e.Row.SetColumnError("Quantity", "");  
-                }  
+                e.Row.SetColumnError("Quantity", "Quantity must be greater than 0");  
+            }  
+            else  
+            {  
+                e.Row.SetColumnError("Quantity", "");  
             }  
         }  
+    }  
     ```  
   
-## <a name="validate-changes-to-whole-rows"></a>Validate changes to whole rows  
- Validate values in whole rows by handling the <xref:System.Data.DataTable.RowChanging> event. The <xref:System.Data.DataTable.RowChanging> event is raised when the values in all columns are committed. It is necessary to validate in the <xref:System.Data.DataTable.RowChanging> event when the value in one column relies on the value in another column. For example, consider OrderDate and RequiredDate in the Orders table in Northwind.  
+## <a name="validate-changes-to-whole-rows"></a>전체 열에 변경 내용 유효성 검사  
+ 처리 하 여 전체 행에서에서 값의 유효성 검사는 <xref:System.Data.DataTable.RowChanging> 이벤트입니다. <xref:System.Data.DataTable.RowChanging> 모든 열에 있는 값은 커밋할 때 이벤트가 발생 합니다. 유효성을 검사 해야 하는 <xref:System.Data.DataTable.RowChanging> 한 열에 값이 다른 열에 값에 의존 하는 경우 이벤트입니다. 예를 들어 Northwind의 Orders 테이블의 OrderDate 및 RequiredDate를 고려 합니다.  
   
- When orders are being entered, validation makes sure that an order is not entered with a RequiredDate that is on or before the OrderDate. In this example, the values for both the RequiredDate and OrderDate columns need to be compared, so validating an individual column change does not make sense.  
+ 주문 입력 되는 유효성 검사에서는 주문 OrderDate 앞에 있는 RequiredDate로 입력 되지 않도록 합니다. 이 예제에서는 OrderDate와 RequiredDate 열에 대 한 값 비교 될 필요 하므로 개별 열 변경 유효성을 검사 하는 의미가 없습니다.  
   
- Create an event handler for the <xref:System.Data.DataTable.RowChanging> event by double-clicking the table name in the title bar of the table on the **Dataset Designer**.  
+ 에 대 한 이벤트 처리기를 만들고는 <xref:System.Data.DataTable.RowChanging> 테이블의 제목 표시줄에 테이블 이름을 두 번 클릭 이벤트는 **데이터 집합 디자이너**합니다.  
   
-#### <a name="to-add-validation-during-changes-to-whole-rows"></a>To add validation during changes to whole rows  
+#### <a name="to-add-validation-during-changes-to-whole-rows"></a>전체 행을 변경 하는 동안 유효성 검사를 추가 하려면  
   
-1.  Open the dataset in The dataset by double-clicking the **.xsd** file in **Solution Explorer**. For more information, see [Walkthrough: Creating a Dataset in the Dataset Designer](walkthrough-creating-a-dataset-with-the-dataset-designer.md).  
+1.  두 번 클릭 하 여 데이터 집합을 열고는 **.xsd** 파일 **솔루션 탐색기**합니다. 자세한 내용은 참조 [연습: 데이터 집합 디자이너에서 데이터 집합 만들기](walkthrough-creating-a-dataset-with-the-dataset-designer.md)합니다.  
   
-2.  Double-click the title bar of the data table on the designer.  
+2.  디자이너에 있는 데이터 테이블의 제목 표시줄 두 번 클릭 합니다.  
   
-     A partial class is created with a `RowChanging` event handler and opens in the Code Editor.  
+     Partial 클래스 만들어집니다는 `RowChanging` 이벤트 처리기 및 코드 편집기에서 열립니다.  
   
     > [!NOTE]
-    >  The Dataset Designer does not automatically create an event handler for the <xref:System.Data.DataTable.RowChanging> event in C# projects. You have to create a method to handle the <xref:System.Data.DataTable.RowChanging> event and run code to hook up the event in the table's initialization method.  
+    >  데이터 집합 디자이너에서는 대 한 이벤트 처리기를 자동으로 만들어지지 않습니다는 <xref:System.Data.DataTable.RowChanging> C# 프로젝트에서 이벤트입니다. 처리 하는 메서드를 만들어야 할는 <xref:System.Data.DataTable.RowChanging> 이벤트 및 테이블의 초기화 메서드에서 이벤트를 후크 다음에 코드를 실행된 합니다.  
   
-3.  Add user code inside the partial class declaration.  
+3.  Partial 클래스 선언 내에 사용자 코드를 추가 합니다.  
   
-4.  The following code shows where to add user code to validate during the <xref:System.Data.DataTable.RowChanging> event for Visual Basic:  
+4.  다음 코드는 동안 유효성을 검사 하는 사용자 코드를 추가 하는 위치를 보여 줍니다.는 <xref:System.Data.DataTable.RowChanging> 이벤트입니다. C# 예제에는 또한 최대 이벤트 처리기 메서드를 연결 하는 코드가 포함 되어는 `OrdersRowChanging` 이벤트입니다.  
   
-    ```vb#  
+    ```vb  
     Partial Class OrdersDataTable  
         Private Sub OrdersDataTable_OrdersRowChanging(ByVal sender As System.Object, ByVal e As OrdersRowChangeEvent) Handles Me.OrdersRowChanging  
             ' Add logic to validate columns here.  
@@ -159,10 +139,7 @@ End Sub
         End Sub  
     End Class  
     ```  
-  
-5.  The following code shows how to create the `RowChanging` event handler and where to add user code to validate during the <xref:System.Data.DataTable.RowChanging> event for C#:  
-  
-    ```c#  
+    ```csharp  
     partial class OrdersDataTable  
     {  
         public override void EndInit()  
@@ -190,7 +167,7 @@ End Sub
     }  
     ```  
   
-## <a name="see-also"></a>See Also  
- [N-Tier Data Applications Overview](../data-tools/n-tier-data-applications-overview.md)   
- [Walkthrough: Creating an N-Tier Data Application](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   
- [Validate data in datasets](../data-tools/validate-data-in-datasets.md)
+## <a name="see-also"></a>참고 항목  
+ [N 계층 데이터 응용 프로그램 개요](../data-tools/n-tier-data-applications-overview.md)   
+ [연습: N 계층 데이터 응용 프로그램 만들기](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   
+ [데이터 집합의 데이터 유효성 검사](../data-tools/validate-data-in-datasets.md)

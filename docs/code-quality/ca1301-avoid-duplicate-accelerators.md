@@ -1,11 +1,10 @@
 ---
-title: 'CA1301: Avoid duplicate accelerators | Microsoft Docs'
+title: ": Ca1301 중복 액셀러레이터 키 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,59 +14,43 @@ helpviewer_keywords:
 - CA1301
 - AvoidDuplicateAccelerators
 ms.assetid: 20570a00-864b-459c-a1fa-a6e9db5f1001
-caps.latest.revision: 17
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 0e48aa6fd82a218e0184f80b1c4ec90736c46e66
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 13d2f36014ab15aea3148ab4175a89b77deb4846
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: Avoid duplicate accelerators
+# <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: 중복 액셀러레이터 키를 사용하지 마십시오.
 |||  
 |-|-|  
 |TypeName|AvoidDuplicateAccelerators|  
 |CheckId|CA1301|  
-|Category|Microsoft.Globalization|  
-|Breaking Change|Non-breaking|  
+|범주|Microsoft.Globalization|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A type extends <xref:System.Windows.Forms.Control?displayProperty=fullName> and contains two or more top level controls that have identical access keys that are stored in a resource file.  
+## <a name="cause"></a>원인  
+ 형식 확장 <xref:System.Windows.Forms.Control?displayProperty=fullName> 리소스 파일에 저장 된 동일한 액세스 키가 있는 두 개 이상의 최상위 컨트롤을 포함 합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- An access key, also known as an accelerator, enables keyboard access to a control by using the ALT key. When multiple controls have duplicate access keys, the behavior of the access key is not well defined. The user might not be able to access the intended control by using the access key and a control other than the one that is intended might be enabled.  
+## <a name="rule-description"></a>규칙 설명  
+ 액셀러레이터 키라고도 하는 선택키를 사용하면 Alt 키를 사용하여 키보드로 컨트롤에 액세스할 수 있습니다. 여러 컨트롤에 중복되는 선택키가 있으면 선택키의 동작이 제대로 정의되지 않은 경우입니다. 사용자 선택 키를 사용 하 여 원하는 컨트롤에 액세스할 수 수 있으며 되는 것과 다른 제어를 받아들일 수 있습니다.  
   
- The current implementation of this rule ignores menu items. However, menu items in the same submenu should not have identical access keys.  
+ 이 규칙의 현재 구현에서 메뉴 항목을 무시합니다. 그러나 동일한 하위 메뉴에 메뉴 항목에는 선택 키와 동일한 없어야 합니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, define unique access keys for all controls.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 이 규칙 위반 문제를 해결 하려면 모든 컨트롤에 대 한 고유 액세스 키를 정의 합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>Example  
- The following example shows a minimal form that contains two controls that have identical access keys. The keys are stored in a resource file, which is not shown; however, their values appear in the commented out `checkBox.Text` lines. The behavior of duplicate accelerators can be examined by exchanging the `checkBox.Text` lines with their commented out counterparts. However, in this case, the example will not generate a warning from the rule.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 동일한 액세스 키가 있는 두 컨트롤을 포함 하는 최소한의 형태를 보여 줍니다. 키가 표시 되지 않는; 리소스 파일에 저장 그러나 해당 값 표시는 주석 처리 된 아웃 `checkBox.Text` 선입니다. 중복 액셀러레이터 키의 동작을 교환 하 여 검사할 수 있습니다는 `checkBox.Text` 줄 주석 처리 합니다. 그러나이 경우이 예제에서는 생성 하지 않습니다는 경고 규칙에서.  
   
  [!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../code-quality/codesnippet/CSharp/ca1301-avoid-duplicate-accelerators_1.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Resources.ResourceManager?displayProperty=fullName>   
- [Resources in Desktop Apps](/dotnet/framework/resources/index)
+ [데스크톱 앱의 리소스](/dotnet/framework/resources/index)

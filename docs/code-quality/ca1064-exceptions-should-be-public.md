@@ -1,11 +1,10 @@
 ---
-title: 'CA1064: Exceptions should be public | Microsoft Docs'
+title: "CA1064: 예외는 public 이어야 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,54 +14,39 @@ helpviewer_keywords:
 - ExceptionsShouldBePublic
 - CA1064
 ms.assetid: 83eb224c-2456-4368-acf4-3b3378e67759
-caps.latest.revision: 11
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 3fd8a83eabc89bd44d60d470422f00849da87e87
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: cd39b4655f4a1bc98e408655e86fa1068820c9f9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1064-exceptions-should-be-public"></a>CA1064: Exceptions should be public
+# <a name="ca1064-exceptions-should-be-public"></a>CA1064: 예외는 public이어야 합니다.
 |||  
 |-|-|  
 |TypeName|ExceptionsShouldBePublic|  
 |CheckId|CA1064|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non Breaking|  
+|범주|Microsoft.Design|  
+|변경 수준|주요 변경 아님|  
   
-## <a name="cause"></a>Cause  
- A non-public exception derives directly from <xref:System.Exception>, <xref:System.SystemException>, or <xref:System.ApplicationException>.  
+## <a name="cause"></a>원인  
+ Public이 아닌 예외에서 직접 파생 <xref:System.Exception>, <xref:System.SystemException>, 또는 <xref:System.ApplicationException>합니다.  
   
-## <a name="rule-description"></a>Rule Description  
- An internal exception is only visible inside its own internal scope. After the exception falls outside the internal scope, only the base exception can be used to catch the exception. If the internal exception is inherited from <xref:System.Exception>, <xref:System.SystemException>, or <xref:System.ApplicationException>, the external code will not have sufficient information to know what to do with the exception.  
+## <a name="rule-description"></a>규칙 설명  
+ 만 내부 예외는 내부 범위 내에 표시 됩니다. 예외가 내부 범위 밖에 놓이게 되면 예외를 catch하는 데 기본 예외만 사용할 수 있습니다. 내부 예외가 상속 되 면 <xref:System.Exception>, <xref:System.SystemException>, 또는 <xref:System.ApplicationException>, 외부 코드의 예외와 수행할 작업을 이해 하는 데 충분 한 정보가 체계가 없습니다.  
   
- But, if the code has a public exception that later is used as the base for a internal exception, it is reasonable to assume the code further out will be able to do something intelligent with the base exception. The public exception will have more information than what is provided by T:System.Exception, T:System.SystemException, or T:System.ApplicationException.  
+ 하지만 코드는 나중에 사용 되는 기준으로 내부 예외에 대 한 공용 예외 있으면이 코드를 더 자세히 아웃 있을 것으로 가정 기본 예외 인텔리전트 수행할 수 있게 합니다. 공용 예외 T:System.Exception, T:System.SystemException 또는 있는 내용에 대 하 여 제공 하는 것 보다 더 많은 정보를 갖습니다.  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- Make the exception public, or derive the internal exception from a public exception that is not <xref:System.Exception>, <xref:System.SystemException>, or <xref:System.ApplicationException>.  
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
+ 예외 공용으로 만들거나 내부 예외가 아닌 공용 예외에서 파생 <xref:System.Exception>, <xref:System.SystemException>, 또는 <xref:System.ApplicationException>합니다.  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a message from this rule if you are sure in all cases that the private exception will be caught within its own internal scope.  
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+ 모든 경우에는 내부 범위 내에서 개인 예외를 발생 됩니다는 확신 하는 경우이 규칙에서 메시지를 표시 합니다.  
   
-## <a name="example"></a>Example  
- This rule fires on the first example method, FirstCustomException because the exception class derives directly from Exception and is internal. The rule does not fire on the SecondCustomException class because although the class also derives directly from Exception, the class is declared public. The third class also does not fire the rule because it does not derive directly from <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, or <xref:System.ApplicationException?displayProperty=fullName>.  
+## <a name="example"></a>예제  
+ 이 규칙은 첫 번째 예제에서는 메서드 FirstCustomException 예외 클래스 예외에서 직접 파생 되 고 내부 때문에 됩니다. 규칙은 클래스를 공용 선언 하지만 클래스도 예외에서 직접 파생 SecondCustomException 클래스에서 발생 하지 않습니다. 세 번째 클래스도 발생 하지 않습니다 규칙에서 직접 파생 되지 않는 <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, 또는 <xref:System.ApplicationException?displayProperty=fullName>합니다.  
   
  [!code-csharp[FxCop.Design.ExceptionsShouldBePublic.CA1064#1](../code-quality/codesnippet/CSharp/ca1064-exceptions-should-be-public_1.cs)]
