@@ -1,10 +1,13 @@
-# [R Tools for Visual Studio](index.md)
+# 개요
+## [R Tools for Visual Studio](index.md)
 ## [데이터 과학 및 분석 응용 프로그램 워크로드](data-science-workload.md)
+# 퀵 스타트
 ## [설치](installation.md)
+## [도움말 보기](getting-started-help.md)
+# 자습서
 ## [R 시작](getting-started-with-r.md)
-### [샘플](getting-started-samples.md)
-### [도움말 보기](getting-started-help.md)
-### [옵션](options.md)
+# [샘플](getting-started-samples.md)
+# 방법 가이드
 ## [R 프로젝트](projects.md)
 ### [패키지 관리자](package-manager.md)
 ### [작업 영역](workspaces.md)
@@ -18,3 +21,5 @@
 ## [코드 시각화](visualizing-data.md)
 ## [변수 탐색기](variable-explorer.md)
 ## [디버깅](debugging.md)
+# 참조
+## [옵션](options.md)

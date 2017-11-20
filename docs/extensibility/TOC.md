@@ -7,7 +7,6 @@
 ## [VSIX v3의 Ngen 지원](ngen-support.md)
 ## [확장 폴더 외부에 설치](set-install-root.md)
 ## [디버거 COM 등록 마이그레이션](migrate-debugger-com-registration.md)
-## [경량 솔루션 로드](lightweight-solution-load-extension-impact.md)
 ## [질문과 대답](faq-2017.md)
 # [방법: Visual Studio 2017로 확장성 프로젝트 마이그레이션](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
 # [방법: Visual Studio용 왕복 확장](how-to-roundtrip-VSIXs.md)
