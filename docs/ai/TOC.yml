@@ -1,0 +1,29 @@
+- name: AI용 Visual Studio Tools
+  href: index.yml
+  items:
+    - name: 개요
+      items:
+        - name: AI용 Visual Studio Tools 정보
+          href: about-ai-tools.md
+    - name: 설치
+      href: installation.md
+    - name: 빠른 시작
+      items:
+        - name: Tensorflow + Python
+          href: tensorflow-local.md
+    - name: 자습서
+      items:
+        - name: TensorFlow + Azure Deep Learning VM
+          href: tensorflow-vm.md
+    - name: 방법 가이드
+      items:
+        - name: 새 프로젝트 만들기
+          href: create-project.md
+        - name: 모델 교육
+          href: train-model.md
+    - name: 샘플
+      items:
+        - name: GitHub
+          href: 'https://github.com/Microsoft/samples-for-ai'
+        - name: Machine Learning 갤러리
+          href: 'https://gallery.cortanaintelligence.com/projects'

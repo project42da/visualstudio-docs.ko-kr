@@ -22,6 +22,8 @@
 ##### [SmartOffice4TFS + ModernRequirements4TFS](vs-modernreq.md)
 ##### [Microsoft Azure 종량제](vs-azure-payg.md) 
 #### 교육
+##### [DataCamp](vs-datacamp.md)
+##### [LinkedIn 학습](vs-linkedin-learning.md)
 ##### [Opsgility](vs-opsgility.md)
 ##### [Pluralsight](vs-pluralsight.md)
 ##### [Xamarin University 교육](vs-xamarin.md)
