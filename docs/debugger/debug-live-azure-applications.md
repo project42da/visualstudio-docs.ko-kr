@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 71facc3515bf90d378b19242bb804ce825131b4e
-ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
+ms.openlocfilehash: 02f91441c493d65e8abcdc80bd85b01f2bd423bf
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>스냅숏 디버거를 사용 하 여 라이브 Azure ASP.NET 응용 프로그램을 디버깅
 
@@ -29,7 +29,7 @@ Snappoints 및 logpoints 중단점 비슷합니다. 중단점, 달리 snappoints
 - .NET Framework 4.6.1에서 실행 되는 ASP.NET 응용 프로그램 이상.
 - .NET Core 2.0 또는 나중에 Windows에서 실행 되는 ASP.NET Core 응용 프로그램
 
-또한 스냅숏 디버거는 Visual Studio 2017 Enterprise 15.5 이상 버전에 사용할 수만 있습니다. 
+또한 스냅숏 디버거는 Visual Studio 2017 Enterprise 버전 15.5 이상이 및 기본 이상의 앱 서비스 계획에 사용할 수만 있습니다. 
 
 ## <a name="start-the-snapshot-debugger"></a>스냅숏 디버거 시작
 

@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5e111159029710684a1a49be2859f6ac5699a70a
-ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
+ms.openlocfilehash: 307e32587a7aac6e2595f35488ad057995c04f4b
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>스냅숏 Visual Studio의 디버깅에 대 한 문제 해결 및 알려진 문제
 
@@ -30,8 +30,7 @@ ms.lasthandoff: 11/17/2017
 
 이러한 단계를 따릅니다.
 
-1. 소스 코드를 빌드하고 앱을 배포 하는 데 사용 된 같은 버전이 있는지 확인 합니다.
-1. 올바른 기호를 로드 하는 배포에 있는지 확인 합니다. 이렇게 하려면 보기는 **모듈** 창 스냅숏 디버깅 도중 및 기호 파일 열 표시.pdb 파일을 디버깅 하는 모듈에 대 한 로드를 확인 합니다. Note 스냅숏 디버거가 자동으로 다운로드 하 고 배포에 대 한 기호를 사용 하 여 시도 합니다.
+1. 소스 코드를 빌드하고 app.isua1 프로그램을 배포 하는 데 사용 된 같은 버전이 있는지 확인 합니다. 올바른 기호를 로드 하는 배포에 있는지 확인 합니다. 이렇게 하려면 보기는 **모듈** 창 스냅숏 디버깅 도중 및 기호 파일 열 표시.pdb 파일을 디버깅 하는 모듈에 대 한 로드를 확인 합니다. Note 스냅숏 디버거가 자동으로 다운로드 하 고 배포에 대 한 기호를 사용 하 여 시도 합니다.
 
 ## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>문제: 스냅숏으로 열 때 기호 로드 하지 않음
 
@@ -70,9 +69,10 @@ ms.lasthandoff: 11/17/2017
 - Roslyn IL 최적화 ASP.NET Core 프로젝트에서 완전히 지원 되지 않습니다. 일부 ASP.NET Core 프로젝트에 대 한 일부 변수를 보거나 조건문에서 몇 가지 변수를 사용 하려면 못할 수 있습니다. 
 - 특별 한 변수와 같은 *$FUNCTION* 또는 *$CALLER*, ASP.NET Core 프로젝트에 대 한 logpoints 또는 조건문에서 계산할 수 없습니다.
 - 스냅숏 디버깅 된 응용 프로그램 서비스에서 작동 하지 않을 [로컬 캐싱](https://docs.microsoft.com/en-us/azure/app-service/app-service-local-cache) 켜져 있습니다.
+- API 앱을 디버깅 하는 스냅숏 현재 지원 되지 않습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [Visual Studio의 디버깅](../debugger/index.md)  
 [스냅숏 디버거를 사용 하 여 라이브 ASP.NET 앱 디버그](../debugger/debug-live-azure-applications.md)  
-[스냅숏 디버깅에 대 한 FAQ](../debugger/debug-live-azure-apps-faq.md)  
+[스냅숏 디버깅 FAQ](../debugger/debug-live-azure-apps-faq.md)  
