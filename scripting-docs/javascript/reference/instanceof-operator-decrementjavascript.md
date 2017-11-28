@@ -1,56 +1,57 @@
 ---
-title: "instanceof 연산자(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "instanceof_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "instanceOf 연산자"
+title: "instanceof 연산자 (JavaScript) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: instanceof_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: instanceOf operator
 ms.assetid: 92467bdc-56b5-42dc-adbd-a219776454d2
-caps.latest.revision: 17
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 672047cb066a812d16edc693638c3d6d8295798b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# instanceof 연산자(JavaScript)
+# <a name="instanceof-operator-javascript"></a>instanceof 연산자(JavaScript)
 개체가 특정 클래스의 인스턴스인지 여부를 나타내는 부울 값을 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 result = object instanceof class  
 ```  
   
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
  `result`  
- 필수 사항입니다.  모든 변수입니다.  
+ 필수 요소. 모든 변수입니다.  
   
  `object`  
- 필수 사항입니다.  모든 개체 식입니다.  
+ 필수 요소. 모든 개체 식입니다.  
   
  `class`  
- 필수 사항입니다.  정의된 모든 개체 클래스입니다.  
+ 필수 요소. 정의된 모든 개체 클래스입니다.  
   
-## 설명  
- `object`가 `class`의 인스턴스인 경우 `instanceof` 연산자가 `true`를 반환합니다.  `class`가 개체의 프로토타입 체인에 있는 경우 `true`를 반환합니다.  `object`가 `class`의 인스턴스가 아니거나 `object`가 `null`인 경우에는 `false`를 반환합니다.  
+## <a name="remarks"></a>설명  
+ `instanceof`가 `true`의 인스턴스인 경우 `object` 연산자가 `class`를 반환합니다. `true`가 개체의 프로토타입 체인에 있는 경우 `true` 경우 `class`를 반환합니다. `false`가 `object`의 인스턴스가 아니거나 `class`가 `object`인 경우에는 `null`를 반환합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 `instanceof` 연산자를 사용하는 방법을 보여 줍니다.  
   
-```javascript  
+```JavaScript  
 function objTest(obj){  
     var i, t, s = "";  
     t = new Array();  
@@ -77,9 +78,9 @@ document.write(objTest(obj));
 // obj is not an instance of Array  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  [!INCLUDE[jsv5](../../javascript/reference/includes/jsv5-md.md)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자 우선 순위](../../javascript/operator-subtractprecedence-javascript.md)   
- [연산자 개요\(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [연산자 개요(JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)
