@@ -50,6 +50,7 @@
 ### [편집기의 Managed Extensibility Framework](managed-extensibility-framework-in-the-editor.md)
 ### [언어 서비스 및 편집기 확장 지점](language-service-and-editor-extension-points.md)
 ### [편집기 가져오기](editor-imports.md)
+### [EditorConfig 지원](supporting-editorconfig.md)
 ### [연습: 파일 이름 확장명에 콘텐츠 형식 연결](walkthrough-linking-a-content-type-to-a-file-name-extension.md)
 ### [연습: 여백 문자 모양 만들기](walkthrough-creating-a-margin-glyph.md)
 ### [연습: 텍스트 뷰 사용자 지정](walkthrough-customizing-the-text-view.md)

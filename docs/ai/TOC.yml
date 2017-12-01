@@ -17,10 +17,26 @@
           href: tensorflow-vm.md
     - name: 방법 가이드
       items:
-        - name: 새 프로젝트 만들기
-          href: create-project.md
+        - name: 프로젝트 만들기
+          items:
+            - name: 샘플 갤러리에서 프로젝트 만들기
+              href: create-project-gallery.md
+            - name: 기존 코드로 프로젝트 만들기
+              href: create-project-existing.md
+            - name: 템플릿으로 프로젝트 만들기
+              href: create-project.md
+            - name: GitHub 리포지토리에서 프로젝트 만들기
+              href: create-project-repo.md
         - name: 모델 교육
           href: train-model.md
+        - name: 작업 세부 정보 보기
+          href: job-details.md
+        - name: GPU 사용률 모니터
+          href: monitor-gpu.md
+        - name: TensorBoard 모니터
+          href: monitor-tensorboard.md
+        - name: 저장소 관리
+          href: manage-storage.md
     - name: 샘플
       items:
         - name: GitHub
