@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7b4ad0cdadcb3d56af55af629b853e660dc9d86f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: c0527d33e47ce42449f2ae2bb75ee3e342b04c2b
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="remote-debug-aspnet-core-on-iis-and-azure-in-visual-studio-2017"></a>IIS 및 Visual Studio 2017에는 Azure에서 ASP.NET Core 원격 디버그
 Iis에서 Windows Server 컴퓨터에 ASP.NET 웹 응용 프로그램을 배포 하 고 원격 디버깅에 대해 설정할 수 있습니다. 이 설정 및 Visual Studio 2017 ASP.NET Core 응용 프로그램을 구성 하 고 Azure를 사용 하 여 IIS에 배포 하 고 Visual Studio에서 원격 디버거를 연결 하는 방법을 설명 합니다.
@@ -47,7 +47,7 @@ Azure VM에 대 한 Visual Studio에서 Azure에 응용 프로그램을 배포 �
 
 ## <a name="create-the-aspnet-core-application-on-the-visual-studio-2017-computer"></a>Visual Studio 2017 컴퓨터에서 ASP.NET Core 응용 프로그램 만들기 
 
-1. 새 ASP.NET Core 응용 프로그램을 만듭니다. (선택 **파일 > 새로 만들기 > 프로젝트**을 선택한 후 **Visual C# > 웹 > ASP.NET Core 웹 응용 프로그램 (.NET Core)**)
+1. 새 ASP.NET Core 응용 프로그램을 만듭니다. (선택 **파일 > 새로 만들기 > 프로젝트**을 선택한 후 **Visual C# > 웹 > ASP.NET Core 웹 응용 프로그램 (.NET Core)**).
 
     에 **ASP.NET Core** 템플릿 섹션 **웹 응용 프로그램**합니다.
 
@@ -59,7 +59,7 @@ Azure VM에 대 한 Visual Studio에서 Azure에 응용 프로그램을 배포 �
 
 ## <a name="remote-debug-aspnet-core-on-an-azure-app-service"></a>Azure 앱 서비스에서 ASP.NET Core 원격 디버그
 
-Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응용 프로그램을 디버깅할 신속 하 게 있습니다. 그러나 IIS 구성 사전 설정 되어 있으며 사용자 지정할 수 없습니다. 자세한 내용은 참조 [Visual Studio를 사용 하 여 Azure에 ASP.NET Core 웹 앱을 배포](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다. (IIS 사용자 지정 하는 기능, 필요한 경우 디버깅에서 시도 [Azure VM](#BKMK_azure_vm).) 
+Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응용 프로그램을 디버깅할 신속 하 게 있습니다. 그러나 IIS 구성 사전 설정 되어 있으며 사용자 지정할 수 없습니다. 자세한 내용은 참조 [Visual Studio를 사용 하 여 Azure에 ASP.NET Core 웹 앱을 배포](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다. (IIS 사용자 지정 하는 기능, 필요한 경우 디버깅에서 시도 [Azure VM](#BKMK_azure_vm).) 
 
 #### <a name="to-deploy-the-app-and-remote-debug"></a>배포 응용 프로그램 및 원격 디버그 하려면
 
@@ -67,7 +67,7 @@ Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응
 
 2. 선택 **Microsoft Azure 앱 서비스** 에서 **게시** 대화 상자에서 **새로 만들기**를 게시 하려면 프롬프트를 따릅니다.
 
-    자세한 내용은 참조 [Visual Studio를 사용 하 여 Azure에 ASP.NET Core 웹 앱을 배포](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다.
+    자세한 내용은 참조 [Visual Studio를 사용 하 여 Azure에 ASP.NET Core 웹 앱을 배포](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다.
 
 3. **서버 탐색기**앱 서비스 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **디버거 연결**합니다.
 
@@ -81,7 +81,7 @@ Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응
 
 Windows 서버에 대 한 Azure VM 만들 지정 하 고 설치 및 IIS 및 기타 필수 소프트웨어 구성 요소를 구성 합니다. 이 Azure 응용 프로그램 서비스를 배포 하는 보다 많은 시간이 소요 되며이 자습서의 나머지 단계를 수행 해야 합니다.
 
-먼저에 설명 된 모든 단계에 따라 [설치 및 실행된 IIS](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role)합니다.
+먼저에 설명 된 모든 단계에 따라 [설치 및 실행된 IIS](/azure/virtual-machines/virtual-machines-windows-hero-role)합니다.
 
 네트워크 보안 그룹에 포트 80을 여는 경우 원격 디버거에 대 한 포트 4022를 열 수도 있습니다. 이런 방식으로 나중에 열 필요가 없습니다.
 
@@ -94,13 +94,13 @@ Windows 서버에 대 한 Azure VM 만들 지정 하 고 설치 및 IIS 및 기�
 - download.microsoft.com
 - visualstudio.com
 
-Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있는 사이트를 추가할 수 있습니다 **인터넷 옵션 > 보안 > 신뢰할 수 있는 사이트 > 사이트**합니다. 이러한 단계는 다른 브라우저도 서로 다릅니다.
+Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있는 사이트를 추가할 수 있습니다 **인터넷 옵션 > 보안 > 신뢰할 수 있는 사이트 > 사이트**합니다. 이러한 단계는 다른 브라우저도 서로 다릅니다. (My.visualstudio.com에서 이전 버전의 원격 디버거를 다운로드 해야 할 경우 신뢰할 수 있는 사이트 추가로 몇 가지는 로그인 해야 합니다.)
 
 소프트웨어를 다운로드 하는 경우에 다양 한 웹 사이트 스크립트 및 리소스를 로드할 수 있는 권한을 부여 하는 요청 발생할 수 있습니다. 대부분의 경우에서 이러한 추가 리소스는 소프트웨어를 설치 하지 않아도 됩니다.
 
 ### <a name="install-aspnet-core-on-windows-server"></a>Windows Server에 ASP.NET Core를 설치 합니다.
 
-1. 설치는 [.NET 핵심 Windows Server 호스팅](https://go.microsoft.com/fwlink/?linkid=844461) 호스팅 시스템에서 번들입니다. 번들은.NET Core 런타임,.NET 핵심 라이브러리 및 ASP.NET Core 모듈을 설치 합니다.
+1. 설치는 [.NET 핵심 Windows Server 호스팅](https://aka.ms/dotnetcore-2-windowshosting) 호스팅 시스템에서 번들입니다. 번들은.NET Core 런타임,.NET 핵심 라이브러리 및 ASP.NET Core 모듈을 설치 합니다. 더 자세한 지침에 대 한 참조 [를 IIS에 게시](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)합니다.
 
     > [!NOTE]
     > 시스템으로 지정 되지 않은 인터넷에 연결 하는 경우 구하여 설치는  *[Microsoft Visual c + + 2015 재배포 가능](https://www.microsoft.com/download/details.aspx?id=53840)*  .NET 핵심 Windows Server 호스팅 번들을 설치 하기 전에.
@@ -209,7 +209,7 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
 대부분의 설치 프로그램에서 ASP.NET와 원격 디버거 설치를 통해 필요한 포트가 열립니다. 그러나 배포 문제를 해결 하는 경우 방화벽 뒤에 있는 응용 프로그램은 호스트에서 올바른 포트가 열려 있는지 확인 해야 합니다.
 
-Azure VM에서 포트를 열어야 통해는 [네트워크 보안 그룹](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)합니다. 
+Azure VM에서 포트를 열어야 통해는 [네트워크 보안 그룹](/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)합니다. 
 
 필요한 포트:
 

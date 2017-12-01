@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 89591535b232317abf395c237fdc267c847ca699
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: bb00d2c338ac1ef9e2be6d77d68ebfe2a246d807
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>방법: Visual Studio 2017로 확장성 프로젝트 마이그레이션
 
@@ -102,11 +102,6 @@ NuGet을 업데이트 하려면 Microsoft.VSSDK.BuildTools 참조 합니다.
   ![roslyn 필수 구성 요소를 추가 합니다.](media/add-roslyn-prerequisite.png)
 
 * Press **OK**.
-
-## <a name="if-migrating-from-preview-4-or-preview-5"></a>미리 보기 4 또는 5 미리 보기에서 마이그레이션하는 경우
-
-* 대체 `SetupDependencies` 와 `Prerequisites` 의 요소를 이동 하 고는 `Installer` 요소입니다. `Prerequisites`이제가 위치 직접 내부는 `PackageManifest` 요소입니다.
-* [선택 사항] 제거는 `GenerateVsixV3` 요소입니다. (이 했습니다 Preview 5에만 필요 합니다.) `GenerateVsixV3` 요소 버전 Preview 5 이상에서 무시 됩니다.
 
 ## <a name="update-debug-settings-for-project"></a>프로젝트에 대 한 디버그 설정 업데이트
 
@@ -197,3 +192,15 @@ Excel 시트에 4 개의 열이 없는: **구성 요소 이름**, **ComponentId*
 
 * 필터 단추를 클릭 디버거 확장이 있고 프로젝트가 VSDebugEng.dll VSDebug.dll에 대 한 참조를 갖고 있을 경우는 **이진 파일 / 파일 이름을** 헤더입니다.  "VSDebugEng.dll" 검색 하 고 확인을 선택 합니다.  필터 단추를 클릭는 **이진 파일 / 파일 이름을** 헤더 다시 고 "VSDebug.dll"를 검색 합니다.  "추가 현재 선택 영역을 필터링" 확인란을 선택 하 고 확인을 선택 합니다.  통해 이제 표시는 **구성 요소 이름을** 가장 하는 구성 요소를 찾으려고 확장 유형과 관련 된 합니다. 이 예제에서는 시간에만 선택한는 디버거를 프로그램 vsixmanifest에 추가 합니다.
 * 프로젝트 디버거 요소 다루는 알고 있는 경우 "디버거" 필터 검색 상자에 포함 된 이름에는 디버거 구성 요소 확인을 검색할 수 있습니다.
+
+## <a name="specifying-a-visual-studio-2017-release"></a>Visual Studio 2017 릴리스를 지정합니다.
+
+확장 프로그램이 특정 버전의 Visual Studio 2017이 필요한 경우 예를 들어 15.3에 릴리스된 기능에 종속, 프로그램 VSIX에 빌드 번호를 지정 해야 **InstallationTarget**합니다. 예를 들어, 릴리스 15.3 '15.0.26730.3'의 빌드 번호를 있습니다. 릴리스 빌드 번호를 매핑 나타나면 [여기](../install/visual-studio-build-numbers-and-release-dates.md)합니다. 릴리스 번호 '15.3'를 사용 하 여 제대로 작동 하지 않습니다.
+
+확장 해야 15.3 하거나 선언 합니다 이상 경우는 **InstallationTarget 버전** 으로 [15.0.26730.3, 16.0):
+
+```xml
+<Installation>
+  <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0.26730.3, 16.0)" />
+</Installation>
+```

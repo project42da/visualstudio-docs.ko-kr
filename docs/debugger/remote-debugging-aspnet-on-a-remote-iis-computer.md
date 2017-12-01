@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: abbbb1adf829361c5916f91ade5cb1a549444b72
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: b73dc5b153813811a0d2b839e69200a7e5f5a1e9
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio-2017"></a>Visual Studio 2017에 원격 IIS 컴퓨터에 원격 디버깅 ASP.NET Core
 IIS에 배포 된 ASP.NET 응용 프로그램을 디버깅 하려면 설치 및 응용 프로그램을 배포한 컴퓨터에서 원격 도구를 실행 하 고 Visual Studio에서 실행 중인 앱에 연결 합니다.
@@ -26,7 +26,7 @@ IIS에 배포 된 ASP.NET 응용 프로그램을 디버깅 하려면 설치 및 
 이 가이드에는 설정, Visual Studio 2017 ASP.NET Core 구성 및 IIS에 배포 하 고 Visual Studio에서 원격 디버거를 연결 하는 방법을 설명 합니다. 원격 디버깅 ASP.NET 4.5.2, 참조 [IIS 컴퓨터에 원격 디버깅 ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)합니다. 배포 하 고 Azure를 사용 하 여 IIS에서 디버깅할 수도 있습니다. 자세한 내용은 참조 [Azure에서 원격 디버깅](../debugger/remote-debugging-azure.md)합니다.
 
 이러한 절차 이러한 서버 구성에서 테스트 되었으며:
-* Windows Server 2012 R2 및 IIS 8.5
+* Windows Server 2012 R2 및 IIS 8
 * Windows Server 2016 및 IIS 10
 
 ## <a name="requirements"></a>요구 사항
@@ -35,7 +35,7 @@ IIS에 배포 된 ASP.NET 응용 프로그램을 디버깅 하려면 설치 및 
 
 ## <a name="create-the-aspnet-core-application-on-the-visual-studio-2017-computer"></a>Visual Studio 2017 컴퓨터에서 ASP.NET Core 응용 프로그램 만들기 
 
-1. 새 ASP.NET Core 응용 프로그램을 만듭니다. (**파일 > 새로 만들기 > 프로젝트**을 선택한 후 **Visual C# > 웹 > ASP.NET Core 웹 응용 프로그램 (.NET Core)** 합니다.
+1. 새 ASP.NET Core 응용 프로그램을 만듭니다. (**파일 > 새로 만들기 > 프로젝트**을 선택한 후 **Visual C# > 웹 > ASP.NET Core 웹 응용 프로그램 (.NET Core)**).
 
     에 **ASP.NET Core** 템플릿 섹션 **웹 응용 프로그램**합니다.
 
@@ -58,13 +58,13 @@ IIS에 배포 된 ASP.NET 응용 프로그램을 디버깅 하려면 설치 및 
 - download.microsoft.com
 - visualstudio.com
 
-Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있는 사이트를 추가할 수 있습니다 **인터넷 옵션 > 보안 > 신뢰할 수 있는 사이트 > 사이트**합니다. 이러한 단계는 다른 브라우저도 서로 다릅니다.
+Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있는 사이트를 추가할 수 있습니다 **인터넷 옵션 > 보안 > 신뢰할 수 있는 사이트 > 사이트**합니다. 이러한 단계는 다른 브라우저도 서로 다릅니다. (My.visualstudio.com에서 이전 버전의 원격 디버거를 다운로드 해야 할 경우 신뢰할 수 있는 사이트 추가로 몇 가지는 로그인 해야 합니다.)
 
 소프트웨어를 다운로드 하는 경우에 다양 한 웹 사이트 스크립트 및 리소스를 로드할 수 있는 권한을 부여 하는 요청 발생할 수 있습니다. 대부분의 경우에서 이러한 추가 리소스는 소프트웨어를 설치 하지 않아도 됩니다.
 
 ## <a name="install-aspnet-core-on-windows-server"></a>Windows Server에 ASP.NET Core를 설치 합니다.
 
-1. 설치는 [.NET 핵심 Windows Server 호스팅](https://go.microsoft.com/fwlink/?linkid=844461) 호스팅 시스템에서 번들입니다. .NET Core 런타임,.NET 핵심 라이브러리 및 ASP.NET Core 모듈 번들을 설치합니다.
+1. 설치는 [.NET 핵심 Windows Server 호스팅](https://aka.ms/dotnetcore-2-windowshosting) 호스팅 시스템에서 번들입니다. .NET Core 런타임,.NET 핵심 라이브러리 및 ASP.NET Core 모듈 번들을 설치합니다. 더 자세한 지침에 대 한 참조 [를 IIS에 게시](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)합니다.
 
     > [!NOTE]
     > 시스템으로 지정 되지 않은 인터넷에 연결 하는 경우 구하여 설치는  *[Microsoft Visual c + + 2015 재배포 가능](https://www.microsoft.com/download/details.aspx?id=53840)*  .NET 핵심 Windows Server 호스팅 번들을 설치 하기 전에.
@@ -139,7 +139,6 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
 5. **모든 사용자의 프로세스 표시**를 선택합니다.
 6. 빠르게 찾기 위해 프로세스 이름의 첫 글자를 입력 **dotnet.exe** (용 ASP.NET Core).
-    >참고: ASP.NET Core 응용 프로그램에 대 한 이전 프로세스 이름이 dnx.exe 이었습니다.
 
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg_attachtoprocess_aspnetcore.png "RemoteDBG_AttachToProcess")
 
@@ -148,6 +147,7 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 8. 원격 컴퓨터의 웹 사이트를 엽니다. 브라우저에서로 이동 **http://\<원격 컴퓨터 이름 >**합니다.
     
     ASP.NET 웹 페이지가 표시됩니다.
+
 9. 실행 중인 ASP.NET 응용 프로그램에서 링크를 클릭 하 여 **에 대 한** 페이지.
 
     Visual Studio에서 중단점이 적중됩니다.
@@ -157,7 +157,7 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 대부분의 설치 프로그램에서 ASP.NET와 원격 디버거 설치를 통해 필요한 포트가 열립니다. 그러나 포트가 열려 있는지 확인 해야 합니다.
 
 > [!NOTE]
-> Azure VM에서 포트를 열어야 통해는 [네트워크 보안 그룹](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)합니다. 
+> Azure VM에서 포트를 열어야 통해는 [네트워크 보안 그룹](/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)합니다. 
 
 필요한 포트:
 

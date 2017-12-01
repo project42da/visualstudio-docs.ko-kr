@@ -13,20 +13,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: dcac05939cd7f16de3bc5b6748134b52ac4f80d7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 109d9d8718a2c46dbd982e58b22dcf43e55b2205
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 11/29/2017
 ---
 1.  장치 또는 서버 디버깅 하려는 컴퓨터 (을 하지 않고 Visual Studio를 실행 하는 컴퓨터)에서 올바른 버전을의 원격 도구를 가져옵니다.
 
     |버전|링크|참고|
     |-|-|-|
     |Visual Studio 2017 업데이트 4|[원격 도구](https://www.visualstudio.com/downloads/#remote-tools-for-visual-studio-2017)|항상 장치 운영 체제 (x86 또는 x64)를 일치 하는 버전을 다운로드 합니다. 이전 버전의 브라우저에 대 한 이러한 직접 링크를 사용 하 여: [원격 도구 (x64)](https://go.microsoft.com/fwlink/?LinkId=746570&clcid=0x409) 및 [원격 도구 (x86)](https://go.microsoft.com/fwlink/?LinkId=746569&clcid=0x409)합니다.|
-    |Visual Studio 2017 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|메시지가 표시 되 면 무료 Visual Studio Dev Essentials 그룹에 가입 하거나 유효한 Visual Studio 구독 로그인 할 수 있습니다. 필요한 경우 링크를 다시 열어야 합니다.|
-    |Visual Studio 2015 업데이트 3|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|메시지가 표시 되 면 무료 Visual Studio Dev Essentials 그룹에 가입 하거나 유효한 Visual Studio 구독 로그인 할 수 있습니다. 필요한 경우 링크를 다시 열어야 합니다.|
-    |Visual Studio 2015 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|메시지가 표시 되 면 무료 Visual Studio Dev Essentials 그룹에 가입 하거나 유효한 Visual Studio 구독 로그인 할 수 있습니다. 필요한 경우 링크를 다시 열어야 합니다.|
+    |Visual Studio 2017 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|메시지가 표시 되 면 무료 Visual Studio Dev Essentials 그룹에 가입 하거나 유효한 Visual Studio 구독 로그인 할 수 있습니다. 이전 버전의 브라우저에 대 한 메시지가 표시 되 면 새 신뢰할 수 있는 사이트를 추가 해야 합니다.|
+    |Visual Studio 2015 업데이트 3|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|메시지가 표시 되 면 무료 Visual Studio Dev Essentials 그룹에 가입 하거나 유효한 Visual Studio 구독 로그인 할 수 있습니다. 이전 버전의 브라우저에 대 한 메시지가 표시 되 면 새 신뢰할 수 있는 사이트를 추가 해야 합니다.|
+    |Visual Studio 2015 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|메시지가 표시 되 면 무료 Visual Studio Dev Essentials 그룹에 가입 하거나 유효한 Visual Studio 구독 로그인 할 수 있습니다. 이전 버전의 브라우저에 대 한 메시지가 표시 되 면 새 신뢰할 수 있는 사이트를 추가 해야 합니다.|
     |Visual Studio 2013|[원격 도구](https://msdn.microsoft.com/library/bt727f1t(v=vs.120).aspx#BKMK_Installing_the_Remote_Tools)|Visual Studio 2013 설명서에서 페이지를 다운로드 합니다.|
     |Visual Studio 2012|[원격 도구](https://msdn.microsoft.com/library/bt727f1t(v=vs.110).aspx#BKMK_Installing_the_Remote_Tools)|Visual Studio 2012 설명서에서 페이지를 다운로드 합니다.|
   

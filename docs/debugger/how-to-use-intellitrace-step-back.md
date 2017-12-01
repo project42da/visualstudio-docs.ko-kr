@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fc7ad92e708666baf1ab0429c041ca9b7d2e0f95
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.openlocfilehash: 2e8da202cf8ae5680bede1ec4b2f2c8984624e4e
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="view-snapshots-using-intellitrace-step-back"></a>IntelliTrace 단계 백을 사용 하 여 스냅숏을 볼
 IntelliTrace 단계 다시 자동으로 스냅숏을에서 모든 중단점 및 디버거 응용 프로그램의 단계 이벤트입니다. 기록된 스냅숏을 사용 하 여 이전 중단점 또는 단계도 이동 하 고 과거에 포함 되어 응용 프로그램의 상태를 볼 수 있습니다. IntelliTrace 단계 백 시간을 절약할 수 이전 응용 프로그램 상태를 보려면 있지만 디버깅을 다시 시작 하거나 원하는 응용 프로그램 상태를 다시 만들지 않을 수 있습니다.
@@ -38,7 +38,7 @@ IntelliTrace 스냅숏을 응용 프로그램의 프로세스의 각 디버거�
 
 ## <a name="navigate-and-view-snapshots"></a>이동 하 고 스냅숏 보기
 
-사용 하 여 이벤트 간을 탐색할 수 있습니다는 **이전 단계** 및 **단계** 디버그 도구 모음 단추입니다. 에 나타나는 이벤트를 탐색 하는이 단추는 **이벤트** 탭에 **진단 도구 창을**합니다. 단계별 실행 뒤로 또는 앞으로 이벤트에 자동으로 선택된 된 이벤트에 기록 디버깅 활성화 합니다.
+사용 하 여 이벤트 간을 탐색할 수 있습니다는 **이전 (Alt + [)** 및 **단계 (Alt +])** 디버그 도구 모음 단추입니다. 에 나타나는 이벤트를 탐색 하는이 단추는 **이벤트** 탭에 **진단 도구 창을**합니다. 단계별 실행 뒤로 또는 앞으로 이벤트에 자동으로 선택된 된 이벤트에 기록 디버깅 활성화 합니다.
 
 ![뒤로 및 앞으로 단추](../debugger/media/intellitrace-step-back-icons-description.png "단계 뒤로 및 앞으로 단계 단추")
 
