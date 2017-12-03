@@ -10,7 +10,7 @@
 ### [제품 키 사용](product-keys.md)
 ### 혜택 활성화 방법
 #### 도구
-##### [Visual Studio Enterprise](vs-ide-benefit.md) 
+##### [Visual Studio IDE](vs-ide-benefit.md) 
 ##### [Visual Studio Team Services](vs-vsts.md)
 ##### [Microsoft Azure](vs-azure.md) 
 ##### [Parasoft](vs-parasoft.md)
@@ -33,7 +33,7 @@
 ##### [기술 지원](vs-tech-support.md)
 
 ## 관리자
-### [관리자 역할 및 책임](admin-responsibilities.md)
+### [관리자 개요](admin-responsibilities.md)
 ### [관리자 포털 액세스](access-admin-portal.md)
 ### [관리자 포털 사용](using-admin-portal.md)
 ### [구독 할당](assign-license.md)
