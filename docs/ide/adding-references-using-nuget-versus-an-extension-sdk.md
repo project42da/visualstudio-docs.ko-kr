@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 2175581e-83cb-444c-bb52-cc1fca8ea196
 caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 40f554f21cc2cee9fb6d457ef9f4a560740cebc6
-ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
+ms.openlocfilehash: 14e3d3432a62d54564c92a12a02204ffb5e05889
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>NuGet을 사용한 참조 추가와 확장명 SDK를 사용한 참조 추가
 
@@ -56,7 +55,7 @@ Visual Studio에 대한 NuGet 확장 또는 SDK(소프트웨어 개발 키트)�
 |메커니즘에서 클린 개발자 컴퓨터를 지원합니다. 즉, 설치할 필요가 없으며 소스 코드 제어에서 간단하게 검색할 수 있습니다.|N|SDK를 참조하기 때문에 솔루션과 SDK를 별도로 체크 인해야 합니다. MSBuild가 SDK를 반복하는, 레지스트리가 아닌 두 개의 기본 위치에서 SDK를 체크 인할 수 있습니다(자세한 내용은 [소프트웨어 개발 키트 만들기](../extensibility/creating-a-software-development-kit.md) 참조). 또는 사용자 지정 위치가 SDK로 구성된 경우 프로젝트 파일에서 다음 코드를 지정할 수 있습니다.<br /><br /> `<PropertyGroup>    <SDKReferenceDirectoryRoot>C:\MySDKs</SDKReferenceDirectoryRoot>   </PropertyGroup>`<br /><br /> 그런 다음 해당 위치에 SDK를 체크 인합니다.|Y|솔루션을 체크 아웃하면 Visual Studio에서 즉시 파일을 인식하고 작업을 수행합니다.|
 |기존의 대규모 패키지 작성자 커뮤니티에 연결할 수 있습니다.|N/A|커뮤니티는 새로운 기능입니다.|Y||
 |기존의 대규모 패키지 소비자 커뮤니티에 연결할 수 있습니다.|N/A|커뮤니티는 새로운 기능입니다.|Y||
-|파트너 에코시스템(사용자 지정 갤러리, 리포지토리 등)에 연결할 수 있습니다.|N/A|사용 가능한 리포지토리에는 Visual Studio 갤러리, Microsoft 다운로드 센터, [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] 등이 있습니다.|Y||
+|파트너 에코시스템(사용자 지정 갤러리, 리포지토리 등)에 연결할 수 있습니다.|N/A|사용 가능한 리포지토리로는 Visual Studio Marketplace, Microsoft 다운로드 센터, [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] 등이 있습니다.|Y||
 |패키지 생성 및 사용 둘 다를 위해 메커니즘이 연속 통합 빌드 서버와 통합됩니다.|Y|SDK에서 명령줄을 통해 체크 인된 위치(SDKReferenceDirectoryRoot 속성)를 MSBuild에 전달해야 합니다.|Y||
 |메커니즘에서 안정적인 패키지 버전과 시험판 패키지 버전을 둘 다 지원합니다.|Y|SDK에서 여러 버전에 대한 참조 추가를 지원합니다.|Y||
 |메커니즘에서 설치된 패키지에 대한 자동 업데이트를 지원합니다.|Y|VSIX 또는 Visual Studio 자동 업데이트의 일부로 제공된 경우 SDK에서 자동 알림을 제공합니다.|Y||
