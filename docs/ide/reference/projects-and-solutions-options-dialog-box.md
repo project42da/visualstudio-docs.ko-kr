@@ -18,11 +18,11 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f912a0aa6588895fb99da83396e2e5caf976e223
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.openlocfilehash: fee3419b6e041983fb3aa77cace5bb02e48e1b9a
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>프로젝트 및 솔루션, 옵션 대화 상자
 프로젝트 및 솔루션과 관련된 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 동작을 설정합니다. 이러한 옵션에 액세스하려면 **도구 > 옵션**을 선택하고 **프로젝트 및 솔루션**을 확장한 후 **일반**을 클릭합니다.
@@ -32,15 +32,7 @@ ms.lasthandoff: 11/02/2017
 > [!NOTE]
 >  대화 상자에서 사용할 수 있는 옵션과 메뉴 명령의 이름 및 위치는 실제 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 이 도움말 페이지는 **일반 개발 설정**을 염두에 두고 작성되었습니다. 설정을 보거나 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="general-tab-options"></a>일반 탭 옵션  
- 
-**경량 솔루션 로드** IDE에서 큰 솔루션을 로드하는 데 필요한 시간과 메모리 크기를 줄입니다. 많은 C#, Visual Basic 또는 C++ 프로젝트를 포함하는 큰 솔루션은 경량 솔루션 로드를 사용하면 성능이 향상될 가능성이 큽니다.
-
-- **Visual Studio에서 내 솔루션에 적합한 설정을 선택할 수 있도록 허용**: Visual Studio에서 솔루션의 특성에 따라 경량 솔루션 로드를 적용할지 여부를 자동으로 결정하도록 합니다.
-- **사용**: 솔루션을 로드할 때 항상 경량 솔루션 로드를 적용합니다.
-- **사용 안 함**: 경량 솔루션 로드를 적용하지 않습니다.
-
-자세한 내용은 [Visual Studio 시작 시간 최적화](../optimize-visual-studio-startup-time.md#speed_up_solution_load)를 참조하세요.
+## <a name="general-tab-options"></a>일반 탭 옵션
 
 **오류로 인해 빌드가 종료될 때 항상 오류 목록 표시**  
 프로젝트 빌드가 실패하는 경우에만 빌드 완료 시 **오류 목록** 창을 엽니다. 빌드 프로세스 중 발생하는 오류가 표시됩니다. 이 옵션을 선택 취소하면 오류는 계속 발생하지만 빌드 완료 시 창이 열리지 않습니다. 기본적으로 이 옵션은 사용하도록 설정됩니다.  
