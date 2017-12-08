@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c7679aff620b415a8b3c7f7b226d808d0f3f492
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: 0c69ff648e2a1ac8c60746f1e7879e80c2063c2a
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="navigate-a-debugging-session-in-visual-studio-xaml-and-c"></a>Visual Studio에서 디버깅 세션 탐색(XAML 및 C#)
 이 빠른 시작에서는 Visual Studio 디버그 세션을 탐색하는 방법 및 세션에서 프로그램 상태를 보고 변경하는 방법을 보여 줍니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/11/2017
   
  **MainPage.xaml.cs 소스 파일을 엽니다.** XAML 편집기의 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 선택합니다. MainPage.xaml.cs 코드 숨김 파일이 표시됩니다. 하나의 메서드인 `MainPage()` 생성자만 파일에 나열되어야 합니다.  
   
- **MainPage 생성자를 샘플 코드로 바꿉니다.** MainPage() 메서드를 삭제합니다. 이 링크를 따름: [디버거 탐색 샘플 코드 (Xaml 및 C#)](../debugger/debugger-navigation-sample-code-xaml-and-csharp.md), 클립보드에 C# 섹션에 나열 된 코드를 복사 합니다. (선택 **다시** 브라우저 또는 도움말 뷰어에서이 빠른 시작 페이지로 돌아갑니다.) Visual Studio 편집기에서 코드를 `partial class MainPage` 블록에 붙여넣습니다. Ctrl+s를 선택하여 파일을 저장합니다.  
+ **MainPage 생성자를 샘플 코드로 바꿉니다.** MainPage() 메서드를 삭제합니다. 이 링크를 따름: [디버거 탐색 샘플 코드 (Xaml 및 C#)](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/debugger/samples/debugger-navigation-sample-code-xaml-and-csharp.cs), 클립보드에 C# 섹션에 나열 된 코드를 복사 합니다. (선택 **다시** 브라우저 또는 도움말 뷰어에서이 빠른 시작 페이지로 돌아갑니다.) Visual Studio 편집기에서 코드를 `partial class MainPage` 블록에 붙여넣습니다. Ctrl+s를 선택하여 파일을 저장합니다.  
   
  이제 이 항목의 예제도 함께 수행할 수 있습니다.  
   

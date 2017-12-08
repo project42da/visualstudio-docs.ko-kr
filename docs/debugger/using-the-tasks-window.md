@@ -19,11 +19,11 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4eab796f0a3c6a7148c94e780439a727ee6fe450
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: b0b1d4f79be83f69989064ed7699df43b6930040
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="using-the-tasks-window"></a>작업 창 사용
 **작업** 창 유사한는 **스레드** 창에 대 한 정보를 표시 한다는 점을 제외 하 고 <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [task_handle](/cpp/parallel/concrt/reference/task-group-class.md), 또는 [WinJS.Promise ](http://msdn.microsoft.com/library/windows/apps/br211867.aspx) 각 스레드 대신 개체입니다. 스레드와 마찬가지로, 작업은 동시에 실행할 수 있는 비동기 작업을 나타내지만 여러 작업이 같은 스레드에서 실행될 수도 있습니다. 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/11/2017
   
  네이티브 코드에서 사용할 수 있습니다는 **작업** 창으로 작업할 때 [작업 그룹](/cpp/parallel/concrt/task-parallelism-concurrency-runtime), [병렬 알고리즘](/cpp/parallel/concrt/parallel-algorithms), [비동기 에이전트](/cpp/parallel/concrt/asynchronous-agents), 및 [간단한 작업](/cpp/parallel/concrt/task-scheduler-concurrency-runtime)합니다. 네이티브 코드의 작업에에서 대 한 자세한 내용은 참조 하십시오. [동시성 런타임](/cpp/parallel/concrt/concurrency-runtime)합니다.  
   
- JavaScript에서 promise .then 코드로 작업할 때 작업 창을 사용할 수 있습니다. 참조 [(UWP 앱) JavaScript에서 비동기 프로그래밍](http://msdn.microsoft.com/library/windows/apps/hh700330.aspx) 자세한 정보에 대 한 합니다.   
+ JavaScript에서 사용할 수 프로 미스를 사용 하 여 작업할 때 작업 창을 `.then` 코드입니다. 참조 [(UWP 앱) JavaScript에서 비동기 프로그래밍](http://msdn.microsoft.com/library/windows/apps/hh700330.aspx) 자세한 정보에 대 한 합니다.   
   
  사용할 수는 **작업** 때마다 디버거를 중단 합니다. 에 액세스할 수는 **디버그** 메뉴를 클릭 하 여 **Windows** 클릭 한 다음 **작업**합니다. 다음 그림에서는 **작업** 에서는 기본 모드 창.  
   

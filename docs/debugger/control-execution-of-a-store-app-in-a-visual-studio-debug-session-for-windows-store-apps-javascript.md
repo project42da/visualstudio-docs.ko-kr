@@ -17,11 +17,11 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 31353d1063bc6d4f29eaa0fcde308ce3c34fc218
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: 60b9465677ce033f8b285ce21e2b8332bf88a73a
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="control-execution-of-a-uwp-app-in-a-visual-studio-debug-session-javascript"></a>UWP 앱의 Visual Studio 디버그 세션 (JavaScript)에서 실행 제어
 이 빠른 시작에서는 Visual Studio 디버거에서 탐색하는 방법 및 세션에서 프로그램 상태를 보는 방법을 보여 줍니다.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/11/2017
   
 2.  **default.js 소스 파일을 엽니다.** 솔루션 탐색기에서 **js** 노드를 열고 `default.js`이라고 합니다.  
   
-3.  **페이지 내용을 샘플 코드로 바꿉니다.** `default.js` 파일에서 시작됩니다. 이 [Debugger navigation sample code (JavaScript)](../debugger/debugger-navigation-sample-code-javascript.md)링크를 따라 이동한 다음 JavaScript 섹션에 나열된 코드를 클립보드에 복사합니다. (선택 **다시** 브라우저 또는 도움말 뷰어에서이 빠른 시작 페이지로 돌아갑니다.) Visual Studio 편집기에서 코드를 현재 비어 있는 `default.js`에 붙여 넣습니다. **Ctrl+S** 를 선택하여 파일을 저장합니다.  
+3.  **페이지 내용을 샘플 코드로 바꿉니다.** `default.js` 파일에서 시작됩니다. 이 링크를 따름: [디버거 탐색 샘플 코드 (JavaScript)](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/debugger/samples/debugger-navigation-sample-code-javascript.js), 클립보드에 JavaScript 섹션에 나열 된 코드를 복사 합니다. (선택 **다시** 브라우저 또는 도움말 뷰어에서이 빠른 시작 페이지로 돌아갑니다.) Visual Studio 편집기에서 코드를 현재 비어 있는 `default.js`에 붙여 넣습니다. **Ctrl+S** 를 선택하여 파일을 저장합니다.  
   
  이제 이 항목의 예제도 함께 수행할 수 있습니다.  
   
