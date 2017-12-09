@@ -17,11 +17,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: d76ced1c908c832e9fd583eecc3419e57aeb76c7
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: 8102301ee098ef662f27c8a6dc586a683a85d177
+ms.sourcegitcommit: 1aa9282b1f0bc2795df3264cbd1e331cc44c23f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio에서 데이터 액세스
 
@@ -38,7 +38,7 @@ JavaScript, Python, PHP, Ruby, 또는 c + +에서 응용 프로그램의 경우�
 |SQL 데이터베이스|DocumentDB|저장소 (blob, 테이블, 큐, 파일)|
 |SQL 데이터 웨어하우스|SQL Server 스트레치 데이터베이스|StorSimple|
 
-그 밖의 기능
+기타...
 
 **SQL**
 
@@ -48,7 +48,7 @@ JavaScript, Python, PHP, Ruby, 또는 c + +에서 응용 프로그램의 경우�
 |MySQL|Oracle|PostgreSQL|
 |SQLite|||
 
-그 밖의 기능
+기타...
 
 **NoSQL**
 
@@ -58,7 +58,7 @@ JavaScript, Python, PHP, Ruby, 또는 c + +에서 응용 프로그램의 경우�
 |NDatabase|OrientDB|RavenDB|
 |VelocityDB|||
 
-그 밖의 기능
+기타...
 
 많은 데이터베이스 공급 업체 및 제 3 자 NuGet 패키지에서 Visual Studio 통합을 지원 합니다. Nuget.org 또는 Visual Studio에서 NuGet 패키지 관리자를 통해 제품을 탐색할 수 있습니다 (**도구** > **NuGet 패키지 관리자** > **NuGet 관리 솔루션에 대 한 패키지**). 다른 데이터베이스 제품 Visual Studio 확장으로 통합합니다. 로 이동 하 여 이러한 제공 되는 Visual Studio 마켓플레이스를 찾아볼 수 **도구**, **확장명 및 업데이트** 다음를 선택 하 고 **온라인** 의 왼쪽된 창에는 대화 상자입니다. 자세한 내용은 참조 [Visual Studio에 대 한 호환 데이터베이스 시스템](../data-tools/installing-database-systems-tools-and-samples.md)합니다.
 
@@ -104,7 +104,7 @@ REST 서비스를 사용 하는 c + + 프로그램에서 사용할 수는 [c + +
 
 Microsoft Azure 저장소를 사용 하는 c + + 프로그램에서 사용할 수는 [Microsoft Azure 저장소 클라이언트](http://www.nuget.org/packages/wastorage)합니다.
 
-데이터 모델링 &mdash; Visual Studio c + +에 대 한 ORM 계층을 제공 하지 않습니다. [ODB](http://www.codesynthesis.com/products/odb/) 인기 있는 오픈 소스 ORM을 c + +입니다.
+데이터 모델링&mdash;Visual Studio c + +에 대 한 ORM 계층을 제공 하지 않습니다. [ODB](http://www.codesynthesis.com/products/odb/) 인기 있는 오픈 소스 ORM을 c + +입니다.
 
 C + + 응용 프로그램에서 데이터베이스에 연결 하는 방법에 대 한 자세한 참조 [c + + 용 Visual Studio data tools](../data-tools/visual-studio-data-tools-for-cpp.md)합니다. 레거시 Visual c + + 데이터 액세스 기술에 대 한 자세한 내용은 참조 [데이터 액세스](http://msdn.microsoft.com/Library/a9455752-39c4-4457-b14e-197772d3df0b)합니다.
 

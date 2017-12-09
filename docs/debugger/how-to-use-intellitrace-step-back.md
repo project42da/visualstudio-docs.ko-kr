@@ -1,7 +1,7 @@
 ---
 title: "IntelliTrace 단계 백-Visual Studio를 사용 하 여 스냅숏 보기 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/08/2017
+ms.date: 12/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-debug
@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e8da202cf8ae5680bede1ec4b2f2c8984624e4e
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: c05905e8ffeec3aa699aac9dfa46c4b017b86be5
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="view-snapshots-using-intellitrace-step-back"></a>IntelliTrace 단계 백을 사용 하 여 스냅숏을 볼
 IntelliTrace 단계 다시 자동으로 스냅숏을에서 모든 중단점 및 디버거 응용 프로그램의 단계 이벤트입니다. 기록된 스냅숏을 사용 하 여 이전 중단점 또는 단계도 이동 하 고 과거에 포함 되어 응용 프로그램의 상태를 볼 수 있습니다. IntelliTrace 단계 백 시간을 절약할 수 이전 응용 프로그램 상태를 보려면 있지만 디버깅을 다시 시작 하거나 원하는 응용 프로그램 상태를 다시 만들지 않을 수 있습니다.
