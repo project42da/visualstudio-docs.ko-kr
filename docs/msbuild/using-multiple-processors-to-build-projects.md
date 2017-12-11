@@ -4,38 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - multiple processors
 - MSBuild, multiple processor systems
 ms.assetid: 49fa36c9-8e14-44f5-8a2b-34146cf6807b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2d8309ead037097b8205245feabdb67c68d0d6b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 8f29ea38ab6f30c9e2d5f014c50d01f14aece947
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="using-multiple-processors-to-build-projects"></a>다중 프로세서를 사용하여 프로젝트 빌드
 MSBuild에서는 다중 프로세서 또는 다중 핵심 프로세서가 있는 시스템을 사용할 수 있습니다. 사용 가능한 각 프로세서에 대해 별도 빌드 프로세스가 만들어집니다. 예를 들어 시스템에 4개의 프로세서가 있는 경우 네 개의 빌드 프로세스가 만들어집니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 이러한 빌드를 동시에 처리할 수 있기 때문에 전체 빌드 시간이 감소합니다. 그러나 병렬 빌드에서는 빌드 프로세스가 발생하는 방법과 관련하여 몇 가지 사항이 변경되었습니다. 이 항목에서는 이러한 변경 내용에 대해 설명합니다.  
@@ -47,7 +31,7 @@ MSBuild에서는 다중 프로세서 또는 다중 핵심 프로세서가 있는
  주기 검색은 현재 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]가 다른 시간이나 빌드에서 주기 검색을 보고할 수 있다는 점을 제외하고 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0의 경우와 동일하게 작동합니다.  
   
 ## <a name="errors-and-exceptions-during-parallel-builds"></a>병렬 빌드 중 오류 및 예외  
- 병렬 빌드에서는 비병렬 빌드에서 수행하는 것과는 다른 시간에 오류 및 예외가 발생할 수 있고, 하나의 프로젝트가 빌드되지 않을 때 다른 프로젝트가 계속 빌드될 수 있습니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 한 프로젝트 빌드가 실패한 경우에도 병렬로 수행 중인 다른 프로젝트 빌드가 중지되지 않습니다. 따라서 다른 프로젝트는 성공 또는 실패할 때까지 계속 빌드됩니다. 그러나 <xref:Microsoft.Build.Framework.IBuildEngine.ContinueOnError%2A>가 사용되도록 설정되면 오류가 발생하더라도 빌드는 중지되지 않습니다.  
+ 병렬 빌드에서는 비병렬 빌드에서 수행하는 것과는 다른 시간에 오류 및 예외가 발생할 수 있고, 하나의 프로젝트가 빌드되지 않을 때 다른 프로젝트가 계속 빌드될 수 있습니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 한 프로젝트 빌드가 실패한 경우에도 병렬로 수행 중인 다른 프로젝트 빌드가 중지되지 않습니다. 따라서 다른 프로젝트는 성공 또는 실패할 때까지 계속 빌드됩니다. 그러나 <xref:Microsoft.Build.Framework.IBuildEngine.ContinueOnError%2A>가 활성화된 경우 오류가 발생하더라도 빌드가 중지되지 않습니다.  
   
 ## <a name="visual-c-project-vcproj-and-solution-sln-files"></a>Visual C++ 프로젝트(.vcproj) 및 솔루션(.sln) 파일  
  [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 프로젝트(.vcproj) 및 솔루션(.sln) 파일 둘 다 [MSBuild 작업](../msbuild/msbuild-task.md)으로 전달될 수 있습니다. [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 프로젝트의 경우 VCWrapperProject가 호출된 다음 내부 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트가 만들어집니다. [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 솔루션의 경우 SolutionWrapperProject가 호출된 다음 내부 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트가 만들어집니다. 두 경우 모두 결과 프로젝트는 다른 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트와 동일하게 처리됩니다.  

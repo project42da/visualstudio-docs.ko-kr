@@ -1,28 +1,24 @@
 ---
 title: "Visual Studio에서 Python 환경 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/25/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/25/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8876f8c1-4770-44dc-97d8-bf0035ae8196
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 34e6898ce5c45033c8ac984d014d462a34552776
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
-ms.openlocfilehash: fa8a7616fe88f024ab299e5d115b66f8656e7cb3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="python-environments"></a>Python 환경
 
 Visual Studio에서 Python을 통해 여러 Python 환경을 간편하게 관리하고 다양한 프로젝트에 대해 쉽게 전환할 수 있습니다. 
@@ -46,9 +42,9 @@ Visual Studio에서 Python을 통해 여러 Python 환경을 간편하게 관리
 - [필수 패키지 관리](#managing-required-packages)
 - [검색 경로](#search-paths)
 
-동영상 소개는 [자세히 알아보기: Python 인터프리터](https://youtu.be/KY1GEOo3qy0)(영문)(youtube.com, 13분 27초)를 참조하세요.
+동영상 소개는 [Python 환경 관리](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=qrDmN4LWE_8305918567)(Microsoft Virtual Academy, 2분 35초)를 참조하세요.
 
-> [!VIDEO https://www.youtube.com/embed/KY1GEOo3qy0]
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Managing-Python-Environments-qrDmN4LWE_8305918567]
 
 ## <a name="selecting-and-installing-python-interpreters"></a>Python 인터프리터 선택 및 설치
 
@@ -56,7 +52,7 @@ Visual Studio 2017을 제외하고, Python 지원에는 Python 인터프리터�
 
 | 인터프리터 | 설명 | 
 | --- | --- | 
-| [CPython](https://www.python.org/) | 가장 널리 사용되는 “기본” 인터프리터로, 32비트 및 64비트 버전으로 사용 가능합니다(32비트 권장). 최신 언어 기능, 최대 Python 패키지 호환성, 완전한 디버깅 지원 및 [IPython](http://ipython.org/)과 상호 interop을 포함합니다. 참고 항목: [Python 2 또는 Python 3을 사용해야 하나요?](http://wiki.python.org/moin/Python2orPython3) |
+| [CPython](https://www.python.org/) | 가장 널리 사용되는 “기본” 인터프리터로, 32비트 및 64비트 버전으로 사용 가능합니다(32비트 권장). 최신 언어 기능, 최대 Python 패키지 호환성, 완전한 디버깅 지원 및 [IPython](http://ipython.org/)과 상호 interop을 포함합니다. [Python 2 또는 Python 3을 사용해야 하나요?](http://wiki.python.org/moin/Python2orPython3)도 참조하세요. Visual Studio 2015 및 이전 버전은 Python 3.6을 지원하지 않으며 “Python 버전 3.6 지원되지 않음” 오류가 표시될 수 있습니다. 대신 Python 3.5 또는 이전을 사용합니다. |
 | [IronPython](https://github.com/IronLanguages/main) | Python의 .NET 구현으로, 32비트 및 64비트 버전으로 사용 가능하며 C#/F#/Visual Basic interop, .NET API에 대한 액세스, 표준 Python 디버깅(그러나 C++ 혼합 모드 디버깅은 제외) 및 혼합 IronPython/C# 디버깅을 제공합니다. 하지만 IronPython에서는 가상 환경을 지원하지 않습니다. | 
 | [Anaconda](https://www.continuum.io) | Python에서 제공하는 개방형 데이터 과학 플랫폼으로, 최신 버전의 CPython과 설치하기 어려운 대부분의 패키지를 포함합니다. 달리 결정할 수 없는 경우 권장됩니다. |
 | [PyPy](http://www.pypy.org/) | Python의 고성능 추적 JIT 구현으로, 장기적으로 실행되는 프로그램과 성능 문제를 확인했으나 다른 해결 방법을 찾을 수 없는 상황에 적절합니다. Visual Studio에서 작동하지만 고급 디버깅 기능은 제한적으로 지원됩니다. |
@@ -307,4 +303,3 @@ Cleaning up...
 > Python 3.3을 사용하는 동안 Python 2.7 모듈에 대한 검색 경로를 추가할 수 있으며 그 결과 오류가 표시될 수 있습니다.
 
 정기적으로 동일한 검색 경로를 사용하고 그 내용이 자주 변경되지 않는 경우 site-packages 폴더에 설치하는 것이 더 효율적일 수 있습니다. 그러면 분석되어 IntelliSense 데이터베이스에 저장되며 항상 의도한 환경과 연결되고 각 프로젝트에 대해 검색 경로를 추가할 필요가 없습니다.
-

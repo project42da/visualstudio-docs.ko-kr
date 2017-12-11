@@ -1,50 +1,51 @@
 ---
-title: "AutoMark | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: AutoMark | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4de965e-0364-4f78-9936-1f509e85df74
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: cc5ad59520f8533527f5c17f6be4b04ad860f2d2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# AutoMark
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**AutoMark** 옵션은 Windows 소프트웨어 성능 카운터 이벤트의 수집 간격을 밀리초 단위로 지정합니다.  Windows 성능 카운터는 **WinCounter** 옵션에서 지정합니다.  
+# <a name="automark"></a>AutoMark
+**AutoMark** 옵션은 Windows 소프트웨어 성능 카운터 이벤트의 컬렉션 간 밀리초의 수를 지정합니다. Windows 성능 카운터는 **WinCounter** 옵션에서 지정됩니다.  
   
- **AutoMark** 옵션은 명령줄에서 하나만 지정할 수 있습니다.  **AutoMark**로 지정된 **WinCounter** 샘플링 간격은 주 샘플링 간격과는 상관이 없습니다.  
+ 하나의 **AutoMark** 옵션만 명령줄에서 지정할 수 있습니다. **AutoMark**에서 지정한 **WinCounter** 샘플링 간격은 주 샘플링 간격과 무관합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 VSPerfCmd.exe /Start:Method /WinCounter:Path /AutoMark:Milliseconds  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `Milliseconds`  
- Windows 성능 카운터 이벤트의 수집 간격\(밀리초\)을 지정합니다.  
+ Windows 성능 카운터 이벤트의 컬렉션 간 밀리초의 수를 지정합니다.  
   
-## 필수 옵션  
+## <a name="required-options"></a>필수 옵션  
  **WinCounter:** `Path`  
- 수집할 Windows 성능 카운터를 지정합니다.  계측 방법을 사용할 때는 Windows 카운터를 여러 개 지정할 수 있습니다.  샘플링 방법을 사용할 때는 소프트웨어 카운터 하나만 지정할 수 있습니다.  **WinCounter** 옵션은 **Start** 옵션이 포함된 명령줄에서 지정해야 합니다.  
+ 수집할 Windows 성능 카운터를 지정합니다. 계측 방법을 사용하는 경우 여러 Windows 카운터를 지정할 수 있습니다. 샘플링 방법을 사용하는 경우 하나의 Windows 카운터만 지정할 수 있습니다. **WinCounter** 옵션은 **Start** 옵션을 포함하는 명령줄에서 지정되어야 합니다.  
   
-## 예제  
- 이 예제에서는 두 개의 Windows 성능 카운터에 대해 샘플링 간격이 1000밀리초로 설정됩니다.  
+## <a name="example"></a>예제  
+ 이 예제에서 1000밀리초의 샘플링 간격은 두 개의 Windows 성능 카운터에 대해 설정됩니다.  
   
 ```  
 VSPerfCmd.exe /Start:Trace /Output:TestApp.exe.vsp /WinCounter:"\Process(*)\% Processor Time" /WinCounter:"\ASP.NET\Pages/sec" /AutoMark:1000  
 VSPerfCmd.exe /Launch:TestApp.exe  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [독립 실행형 응용 프로그램 프로파일링](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET 웹 응용 프로그램 프로파일링](../profiling/command-line-profiling-of-aspnet-web-applications.md)   

@@ -1,19 +1,17 @@
 ---
-title: "빌드 시스템 사용자 지정"
+title: "빌드 시스템 사용자 지정 | Microsoft Docs"
 description: 
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
+ms.openlocfilehash: 2d17a952c58e5ef7e593ee7aeb1980e09a376800
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: c261dbc285da6f488e6a328c997e2a9563c1c73a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="customizing-the-build-system"></a>빌드 시스템 사용자 지정
 
 MSbuild는 Microsoft에서 개발한 빌드 엔진으로, 주로 .NET 응용 프로그램의 빌드에 사용됩니다. Mono 프레임워크에는 **xbuild**라는 Microsoft 빌드 엔진의 자체 구현도 있습니다. 그러나 xbuild는 단계적으로 사용이 중단되므로 모든 운영 체제에서 MSBuild를 사용하는 것이 좋습니다.
@@ -105,8 +103,7 @@ PropertiesGroup을 사용하여 설정되며, 임의 개수의 속성을 포함�
 
 다음 리소스를 사용하여 MSBuild에 대해 자세히 알아볼 수 있습니다.
 
-* [MSDN - 개요](https://msdn.microsoft.com/en-us/library/dd393574.aspx)
-* [MSDN - 개념](https://msdn.microsoft.com/en-us/library/dd637714.aspx)
-
+* [MSDN - 개요](https://msdn.microsoft.com/library/dd393574.aspx)
+* [MSDN - 개념](https://msdn.microsoft.com/library/dd637714.aspx)
 
 

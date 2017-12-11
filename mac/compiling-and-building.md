@@ -1,19 +1,17 @@
 ---
-title: "Mac용 Visual Studio에서 컴파일 및 빌드"
+title: "Mac용 Visual Studio에서 컴파일 및 빌드 | Microsoft Docs"
 description: 
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
+ms.openlocfilehash: 9005cf64f4b72f39923d6525e78de745d79c3953
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: ea98f80d037a03912cf3d8212588ebb7520b4bbb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 컴파일 및 빌드
 
 Mac용 Visual Studio를 사용하면 프로젝트를 개발하는 동안 응용 프로그램을 빌드하고 어셈블리를 만들 수 있습니다. 형식 불일치 및 기타 컴파일 시간 오류를 식별할 수 있도록 조기에 자주 코드를 컴파일 및 빌드하는 것이 중요합니다.
@@ -46,9 +44,9 @@ Mac용 Visual Studio를 사용하여 다음 작업을 수행할 수도 있습니
 
 MSBuild 빌드 엔진을 사용하여 명령줄을 통해 응용 프로그램을 빌드할 수 있습니다.
 
-MSBuild 사용 방법에 대한 자세한 내용은 [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild) 콘텐츠를 참조하세요.
+MSBuild 사용 방법에 대한 자세한 내용은 [MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild) 콘텐츠를 참조하세요.
 
 ### <a name="using-visual-studio-team-services"></a>Visual Studio Team Services 사용
 
-* [Xamarin 앱 빌드](https://www.visualstudio.com/en-us/docs/build/apps/mobile/xamarin)
+* [Xamarin 앱 빌드](https://www.visualstudio.com/docs/build/apps/mobile/xamarin)
 * [Xamarin과의 연속 통합](https://developer.xamarin.com/guides/cross-platform/ci/)

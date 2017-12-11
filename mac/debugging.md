@@ -1,5 +1,5 @@
 ---
-title: "Xamarin을 사용한 디버깅"
+title: "Xamarin을 사용한 디버깅 | Microsoft Docs"
 description: "디버깅은 프로그래밍의 공통적인 필수 부분입니다. 완성도가 높은 IDE인 Mac용 Visual Studio에는 편리한 디버깅을 위한 전체 기능 모음이 포함되어 있습니다. 이 문서에서는 Mac용 Visual Studio에서 안전한 디버깅부터 데이터 시각화까지 디버깅의 잠재력을 완전히 활용하는 방법을 설명합니다."
 author: asb3993
 ms.author: amburns
@@ -7,15 +7,12 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
+ms.openlocfilehash: 6d85c318b60e065be86d242bf3199b3716c59ada
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: d416c0967daa3354e09660e3b618e0cc6f3b49f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
-
 # <a name="debugging-with-xamarin"></a>Xamarin을 사용한 디버깅
 
 
@@ -103,4 +100,3 @@ Xamarin 제품은 Mono 클래스 라이브러리에 대한 소스 코드와 함�
 이 기능을 사용하려면 **Mac용 Visual Studio > 기본 설정 > 디버거**로 이동한 다음, 아래 그림과 같이 “**프로젝트 코드만 디버깅합니다. 프레임워크 코드는 한 단계씩 실행하지 마세요.**” 옵션이 **선택 취소**되어 있어야 합니다.
 
  ![프레임워크 코드는 한 단계씩 실행하지 마세요 옵션](media/debugging-image8.png)
-

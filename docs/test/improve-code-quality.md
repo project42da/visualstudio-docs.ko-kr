@@ -1,40 +1,24 @@
 ---
-title: "코드 품질 향상"
+title: "코드 품질 향상 | Microsoft Docs"
 ms.custom: na
 ms.date: 02/17/2017
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: na
 ms.topic: article
 helpviewer_keywords:
 - Visual Studio ALM
 - team-based development
 ms.assetid: 73baa961-c21f-43fe-bb92-3f59ae9b5945
-caps.latest.revision: 39
+caps.latest.revision: "39"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
-ms.openlocfilehash: db500747061b436db2a0897e5b43a1cae4a3acae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/03/2017
-
+ms.openlocfilehash: 93847beaef971f9370d59a8c5c8ac9f3a59a0967
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="improve-code-quality"></a>코드 품질 향상
 코드 품질이란 무엇입니까? 좋은 코드를 만들 때는 정확성, 유지 관리의 편의성 및 정교함까지 고려해야 합니다. 어떻게 정의하든 Visual Studio 테스트 도구를 사용하면 사용자와 팀이 수준 높은 코드를 개발하고 유지할 수 있습니다.  
@@ -71,4 +55,3 @@ ms.lasthandoff: 06/03/2017
   
  [Visual Studio Online 또는 Team Foundation Server를 사용하여 작업 추적](https://www.visualstudio.com/docs/work/overview)  
  [!INCLUDE[vstsTfsLong](../test/includes/vststfslong_md.md)]를 사용하여 프로젝트에서 활성 프로세스, 공식 프로세스 또는 이러한 프로세스의 변형 중에서 무엇을 사용할지를 계획하고 추적할 수 있습니다. 프로젝트를 계획하고, 계획에 대한 진행률을 추적하고, 필요한 사항을 조정하면 위험을 줄이고, 원하지 않는 상황을 방지하고, 프로젝트 비용을 관리할 수 있습니다.
-

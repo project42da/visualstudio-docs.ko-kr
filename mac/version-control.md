@@ -1,19 +1,17 @@
 ---
-title: "버전 제어"
+title: "버전 제어 | Microsoft Docs"
 description: "Mac용 Visual Studio에서 Git 및 Subversion 사용"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 49917483-28AA-4598-A847-71F1F2E0DCB5
+ms.openlocfilehash: 6e467cf6acda75948a189309b7648b1c4c085941
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: a63ebdccc2a7cbde18715291a65ada613dc2c00e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="version-control"></a>버전 제어
 
 버전 제어는 파일의 다양한 버전을 관리하는 시스템으로서, 소프트웨어 개발에서는 일반적으로 여러 개발자가 서로 다른 버전을 생성합니다. 모든 _VCS_(버전 제어 시스템)의 주목적은 모든 사용자가 동시에 코드베이스에서 작업할 수 있는 솔루션을 찾는 것입니다.

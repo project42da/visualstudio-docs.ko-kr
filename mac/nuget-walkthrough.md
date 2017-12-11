@@ -1,19 +1,17 @@
 ---
-title: "연습 - 프로젝트에 NuGet 패키지 포함하기"
+title: "연습 - 프로젝트에 NuGet 패키지 포함하기 | Microsoft Docs"
 description: "이 문서에서는 Xamarin 프로젝트에 NuGet 패키지를 포함하는 방법을 다룹니다. 여기에서는 IDE 통합 기능을 소개할 뿐 아니라 패키지를 찾아 다운로드하는 방법도 살펴봅니다."
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
+ms.openlocfilehash: cb927b14e3637edd7e16c78fbed01fa4e9522652
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 0fa91c18592dee4f20832d7a0dad8aea069da93e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="including-a-nuget-package-in-your-project"></a>프로젝트에 NuGet 패키지 포함하기
 
 NuGet은 가장 인기 있는 .NET 개발용 패키지 관리자이며 Mac용 Visual Studio와 Windows용 Visual Studio에 내장되어 있습니다. 두 IDE 중 하나를 사용하여 패키지를 검색하고 Xamarin.iOS 및 Xamarin.Android 프로젝트에 추가할 수 있습니다.
@@ -118,5 +116,4 @@ NuGet 설명서에서는 [소스 제어에 패키지를 커밋하지 않고 NuGe
 ![패키지를 자동으로 복원](media/nuget-walkthrough-AutoRestore.png)
 
 추적 대상에서 `packages` 디렉터리를 제외하는 방법에 대한 자세한 내용은 해당 소스 제어 설명서를 참조하세요.
-
 

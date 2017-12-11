@@ -1,9 +1,8 @@
 ---
 title: Live Unit Testing FAQ | Microsoft Docs
-ms.date: 2017-08-15
+ms.date: 2017-10-03
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,47 +11,54 @@ helpviewer_keywords:
 ms.assetid: 61baf3bb-646f-4c5a-b7c0-a6bdff68f21c
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: de3ddc4288f2e14f0657f6bfb0ff3ee49ff7b5c9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c6a2c3b313aca87a77f7ad5b12a3d99c82c042b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 질문과 대답
 
-## <a name="whats-new-in-live-unit-testing-for-visual-studio-2017-version-153"></a>Visual Studio 2017 버전 15.3에서 Live Unit Testing의 새로운 기능은 무엇인가요? 
+## <a name="live-unit-testing-is-improved-and-enhanced-regularly-how-can-i-find-information-about-the-latest-new-features-and-enhancements"></a>Live Unit Testing은 정기적으로 개선 및 향상됩니다. 최신의 새로운 기능과 향상된 기능에 대한 정보를 어떻게 찾을 수 있나요?
 
 **대답:**
 
-- .NET Core/.NET Standard 지원과 성능 향상이 두 가지 주요 개선 사항입니다. 첫 번째 전체 빌드와 Live Unit Testing에서 테스트 실행 후에 성능이 매우 빨라졌음을 알 수 있습니다. 같은 솔루션에서 이후 Live Unit Testing을 시작할 때도 상당한 성능 향상을 확인할 수 있습니다. 이제 Live Unit Testing에서 생성된 데이터를 유지하고 최신 검사에서 최대한 많이 재사용합니다. 이러한 주요 추가 사항 외에 Live Unit Testing에서는 다음과 같은 사항도 개선되었습니다. 
+Visual Studio 2017 버전 15.3부터 적용되는 Live Unit Testing의 새로운 기능 및 향상된 기능에 대한 자세한 내용은 [Live Unit Testing의 새로운 기능](live-unit-testing-whats-new.md)을 참조하세요.
 
-  - 이제 테스트 메서드를 일반 메서드와 구분하기 위해 새 비커 아이콘이 사용됩니다. 빈 비커 아이콘은 특정 테스트가 Live Unit Testing에 포함되지 않음을 나타냅니다. 
 
-  - Live Unit Testing 검사 아이콘의 UI 팝업 창에서 테스트 메서드를 클릭할 때 이제 코드 편집기를 나가지 않고 UI 창 내의 해당 컨텍스트에서 직접 테스트를 디버그할 수 있는 옵션이 있습니다. 이 기능은 실패한 테스트를 찾을 때 특히 유용합니다.  
+## <a name="what-test-frameworks-does-live-unit-testing-support-and-what-are-the-minimum-supported-versions"></a>Live Unit Testing 에서 지원하는 테스트 프레임워크와 지원되는 최소 버전은 어떻게 되나요?  
 
-  - [도구]/[옵션]/[Live Unit Testing]/[일반]에 구성 가능한 옵션이 여러 가지 더 추가되었습니다. Live Unit Testing에 사용되는 메모리를 제한할 수 있습니다. 열려 있는 솔루션의 지속형 Live Unit Testing 데이터에 대한 파일 경로도 지정할 수 있습니다. 
+**대답:**
 
-  - [테스트]/[Live Unit Testing]의 메뉴 모음 아래에 여러 가지 메뉴 항목이 더 추가되었습니다. **Reset Clean(정리 다시 설정)**은 지속형 데이터를 삭제하고 다시 생성합니다. **옵션**을 선택하면 [도구]/[옵션]/[Live Unit Testing]/[일반]으로 이동합니다.
-  
-  - 이제 다음 특성을 사용하여 Live Unit Testing에서 제외하려는 대상 테스트 메서드를 소스 코드에 지정할 수 있습니다.
-    - xUnit: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
-    - NUnit: `[Category("SkipWhenLiveUnitTesting")]`
-    - MSTest: `[TestCategory("SkipWhenLiveUnitTesting")]`
+Live Unit Testing은 다음 테이블에 나열된 세 가지 인기 있는 단위 테스트 프레임워크를 사용합니다. 해당 어댑터와 프레임워크를 지원하는 최소 버전은 테이블에 나열됩니다. 단위 테스트 프레임워크는 NuGet.org에서 모두 사용할 수 있습니다.
+ 
+<table> 
+<tr>
+   <th>테스트 프레임워크</th>
+   <th>Visual Studio 어댑터 최소 버전</th>
+   <th>프레임워크 최소 버전</th>
+</tr>
+<tr>
+   <td>xUnit.net</td>
+   <td> xunit.runner.visualstudio 버전 2.2.0-beta3-build1187</td>
+   <td>xunit 1.9.2</td> 
+</tr>
+<tr>
+   <td>NUnit</td>
+   <td>NUnit3TestAdapter 버전 3.5.1</td>  
+   <td>NUnit 버전 3.5.0</td>
+</tr>
+<tr>
+   <td>MSTest</td>
+   <td>MSTest.TestAdapter 1.1.4-미리 보기</td>
+   <td>MSTest.TestFramework 1.0.5-미리 보기</td>
+</tr>
+</table>
+
+`Microsoft.VisualStudio.QualityTools.UnitTestFramework`를 참조하는 이전 MSTest 기반 테스트 프로젝트가 있고 최신 MSTest NuGet 패키지로 이동하지 않으려면 Visual Studio 2017 버전 15.4로 업그레이드하세요. 
+
+경우에 따라 Live Unit Testing이 작동하기 위해 솔루션의 프로젝트에서 참조하는 NuGet 패키지를 명시적으로 복원해야 합니다. 이렇게 하려면 솔루션의 명시적 빌드를 수행합니다(최상위 Visual Studio 메뉴에서 **빌드**, **솔루션 다시 빌드**를 선택). 또는 Living Unit Testing을 활성화하기 전에 솔루션에서 패키지를 복원합니다(솔루션을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 복원**을 선택). 
+
 
 ## <a name="does-live-unit-testing-work-with-net-core"></a>Live Unit Testing은 .NET Core와 호환되나요?  
 
@@ -200,7 +206,7 @@ public class Class1
 
 이전 버전의 Visual Studio 2017에서는 알려진 버그로 인해 Live Unit Testing 빌드가 다음 Win32 PE 헤더 데이터를 포함하는 데 실패할 수 있습니다. 
 
-- 파일 버전(코드에서 @System.Reflection.AssemblyFileVersionAttribute 로 지정됨) 
+- 파일 버전(코드에서 @System.Reflection.AssemblyFileVersionAttribute로 지정됨) 
 
 - Win32 아이콘(명령줄에서 `/win32icon:`로 지정됨) 
 
@@ -262,4 +268,3 @@ Live Unit Testing이 작동하는 어셈블리가 어떤 이유로든 계측되�
 
 [유닛 테스트](live-unit-testing.md)
  
-

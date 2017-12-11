@@ -4,38 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.classdesigner.inheritancelinelabel
-helpviewer_keywords:
-- Class Designer [Visual Studio], classes
+f1_keywords: vs.classdesigner.inheritancelinelabel
+helpviewer_keywords: Class Designer [Visual Studio], classes
 ms.assetid: 75e56f8c-11ef-42a3-b7ec-3d2cf25c581b
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 02cd1cabf8cf296130ace9a3dcf37a237805dfe9
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: b4ba110a67604a24517cac90c4645f118a33e722
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-c-classes-in-class-designer"></a>클래스 디자이너의 Visual C++ 클래스
 클래스 디자이너는 C++ 클래스를 지원하며, C++ 클래스가 여러 상속 관계를 포함한다는 점을 제외하고 Visual Basic 및 Visual C# 클래스 모양과 동일한 방식으로 네이티브 C++ 클래스를 시각화합니다. 클래스 모양을 확장하여 추가 필드와 메서드를 클래스에 표시하거나 축소하여 공간을 절약할 수 있습니다.  
@@ -69,7 +52,7 @@ class Penguin : public Bird, public Swimmer {};
 > [!NOTE]
 >  C++ 코드에는 **파생 클래스 표시** 명령이 지원되지 않습니다. 클래스 뷰로 이동하여 형식 노드를 확장하고 **파생 형식** 하위 폴더를 확장한 후 해당 형식을 클래스 다이어그램으로 끌어 파생 클래스를 표시할 수 있습니다.  
   
- 다중 클래스 상속에 대한 자세한 내용은 [(NOTINBUILD) 다중 상속](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca) 및 [다중 기본 클래스](/cpp/cpp/multiple-base-classes)를 참조하세요.  
+ 다중 클래스 상속에 대한 자세한 내용은 [다중 상속](https://msdn.microsoft.com/en-us/library/6td5yws2.aspx) 및 [다중 기본 클래스](/cpp/cpp/multiple-base-classes)를 참조하세요.  
   
 ## <a name="abstract-classes"></a>추상 클래스  
  클래스 디자이너는 추상 클래스(“추상 기본 클래스” 라고도 함)를 지원합니다. 추상 클래스는 인스턴스화하지는 않고 여기에서 다른 클래스를 파생할 수는 있는 클래스입니다. 이 문서 앞부분에 있는 “다중 상속”의 예제를 사용하여 `Bird` 클래스를 개별 개체로 인스턴스화할 수 있습니다.  
@@ -188,6 +171,6 @@ typedef struct
  [Visual C++ 코드 작업(클래스 디자이너)](../ide/working-with-visual-cpp-code-class-designer.md)   
  [클래스 및 구조체](/cpp/cpp/classes-and-structs-cpp)   
  [익명 클래스 형식](/cpp/cpp/anonymous-class-types)   
- [(NOTINBUILD) 다중 상속](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)   
+ [다중 상속](https://msdn.microsoft.com/en-us/library/6td5yws2.aspx)   
  [다중 기본 클래스](/cpp/cpp/multiple-base-classes)   
  [템플릿](/cpp/cpp/templates-cpp)

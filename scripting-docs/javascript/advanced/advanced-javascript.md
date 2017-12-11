@@ -1,34 +1,37 @@
 ---
 title: "고급 JavaScript | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "배열[JavaScript]"
-  - "재귀 프로시저, JavaScript"
-  - "스크립트 문제 해결"
-  - "문제 해결, JavaScript"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- troubleshooting, JavaScript
+- troubleshooting scripts
+- arrays [JavaScript]
+- recursive procedures, JavaScript
 ms.assetid: ea26b6a1-e5c6-40d5-ac33-3961f584f941
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8d28050e89b37fc6c2066b599e27789f0bebfd35
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 고급 JavaScript
-이 섹션에서는 재귀, 배열, 문제 해결 등의 고급 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 기능에 대해 설명합니다.  
+# <a name="advanced-javascript"></a>고급 JavaScript
+이 단원에서는 재귀, 배열, 문제 해결 등의 고급 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 기능에 대해 설명합니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [생성자를 사용하여 개체 만들기](../../javascript/advanced/using-constructors-to-define-types.md)  
  개체를 인스턴스화하는 방법으로 생성자를 작성하는 방법에 대해 설명합니다.  
   
@@ -80,5 +83,5 @@ caps.handback.revision: 18
  [조건부 컴파일 변수](../../javascript/advanced/conditional-compilation-variables-javascript.md)  
  조건부 컴파일에 사용할 수 있는 변수를 나열합니다.  
   
- [strict 모드](../../javascript/advanced/strict-mode-javascript.md)  
- strict 모드 사용에 대해 설명합니다.  strict 모드는 Internet Explorer 10 이전의 Internet Explorer 버전에서 지원되지 않습니다.
+ [Strict Mode](../../javascript/advanced/strict-mode-javascript.md)  
+ strict 모드 사용에 대해 설명합니다. strict 모드는 Internet Explorer 10 이전의 Internet Explorer 버전에서 지원되지 않습니다.

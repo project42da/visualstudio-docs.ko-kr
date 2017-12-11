@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,30 +15,15 @@ helpviewer_keywords:
 - world-ready applications
 - international applications [Visual Studio]
 ms.assetid: 4d9815ae-3e80-4b4d-933d-f8309aee18d5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 409becfa400b7275da07fd8ac0035660f8b941eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: f6e32c592894b5d44a2d257d183c11da01c90456
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="globalizing-and-localizing-applications"></a>응용 프로그램 전역화 및 지역화
 응용 프로그램을 전 세계의 대상에게 배포할 계획이라면 설계 및 개발 단계에서 몇 가지 사항을 고려해야 합니다. 이런 계획이 없더라도 응용 프로그램의 미래 버전에서 계획이 변경될 경우 미리 작은 노력으로 작업을 훨씬 더 간소화할 수 있습니다. [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]에 기본 제공된 서비스를 사용하면 Visual Studio에서 관리 개발을 통해 다양한 로캘에 맞게 조정될 수 있는 단일 응용 프로그램을 쉽게 개발할 수 있습니다.  
@@ -57,11 +41,11 @@ ms.lasthandoff: 05/30/2017
  여러 문화권을 지원하는 응용 프로그램을 만드는 방법에 대한 페이지의 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [앱 세계화(JavaScript 및 HTML을 사용하는 Windows 스토어 앱)](http://go.microsoft.com/fwlink/?LinkId=258266)  
- JavaScript 및 HTML을 사용하여 빌드된 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱을 전역화 및 지역화하도록 도와주는 방법 항목 및 지침을 포함합니다.  
+ [앱 세계화(HTML)](http://go.microsoft.com/fwlink/?LinkId=258266)  
+ HTML을 사용하여 빌드된 Windows 8.1 앱을 전역화 및 지역화하도록 도와주는 방법 항목 및 지침을 포함합니다.  
   
- [앱 세계화(C#/VB/C++ 및 XAML을 사용하는 Windows 스토어 앱)](http://go.microsoft.com/fwlink/?LinkId=258267)  
- XAML과 Visual C#, Visual Basic 또는 Visual C++를 사용하여 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱을 전역화 및 지역화하도록 도와주는 방법 항목 및 지침을 포함합니다.  
+ [앱 세계화(XAML)](http://go.microsoft.com/fwlink/?LinkId=258267)  
+ XAML을 사용하여 빌드된 Windows 8.1 앱을 전역화 및 지역화하도록 도와주는 방법 항목 및 지침을 포함합니다.  
   
  [지역화 대비 응용 프로그램 개발을 위한 최선의 구현 방법](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)  
  전 세계 대상을 위한 프로그래밍에 필요한 배경 정보를 제공합니다.  

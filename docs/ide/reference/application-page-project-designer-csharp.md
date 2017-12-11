@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,38 +14,22 @@ helpviewer_keywords:
 - Project Designer, Application page
 - Application page in Project Designer
 ms.assetid: f13701a8-4e2e-4474-9d60-bb43decbe0c1
-caps.latest.revision: 56
-author: kempb
-ms.author: kempb
+caps.latest.revision: "56"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
-ms.openlocfilehash: 3f0056a62dc11c5584e38e9912ccd94f5b9e9b0e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: 5f32dceca8a6b14e6b1777e5c525327f46adca47
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="application-page-project-designer-c"></a>프로젝트 디자이너, 응용 프로그램 페이지(C#)
 **프로젝트 디자이너**의 **응용 프로그램** 페이지를 사용하여 프로젝트의 응용 프로그램 설정과 속성을 지정할 수 있습니다.  
   
- **응용 프로그램** 페이지에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드(**솔루션** 노드 아님)를 선택합니다. 그런 다음 메뉴 모음에서 **프로젝트**, **속성**을 선택합니다. 프로젝트 디자이너가 나타나면 **응용 프로그램** 탭을 클릭합니다.  
+**응용 프로그램** 페이지에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드(**솔루션** 노드 아님)를 선택합니다. 그런 다음 메뉴 모음에서 **프로젝트**, **속성**을 선택합니다. 프로젝트 디자이너가 나타나면 **응용 프로그램** 탭을 클릭합니다.  
   
- [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
   
 ## <a name="general-application-settings"></a>일반 응용 프로그램 설정  
  다음 옵션을 사용하여 응용 프로그램에 대한 일반 설정을 구성할 수 있습니다.  
@@ -72,7 +55,7 @@ ms.lasthandoff: 05/26/2017
  자세한 내용은 [방법: 대상 .NET Framework 버전 지정](../../ide/how-to-target-a-version-of-the-dotnet-framework.md) 및 [Visual Studio 멀티 타기팅 개요](../../ide/visual-studio-multi-targeting-overview.md)를 참조하세요.  
   
  **응용 프로그램 종류**  
- 빌드할 응용 프로그램 종류를 지정합니다. [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] 앱의 경우 **Windows 스토어 앱**, **클래스 라이브러리** 또는 **WinMD 파일**을 지정할 수 있습니다. 다른 응용 프로그램 종류의 경우 대부분 **Windows 응용 프로그램**, **콘솔 응용 프로그램**, **클래스 라이브러리**, **Windows 서비스** 또는 **웹 컨트롤 라이브러리**를 지정할 수 있습니다.  
+ 빌드할 응용 프로그램 종류를 지정합니다. Windows 8.x 앱의 경우 **Windows Store 앱**, **클래스 라이브러리** 또는 **WinMD 파일**을 지정할 수 있습니다. 다른 응용 프로그램 종류의 경우 대부분 **Windows 응용 프로그램**, **콘솔 응용 프로그램**, **클래스 라이브러리**, **Windows 서비스** 또는 **웹 컨트롤 라이브러리**를 지정할 수 있습니다.  
   
  웹 응용 프로그램 프로젝트의 경우 **클래스 라이브러리**를 지정해야 합니다.  
   
@@ -111,11 +94,11 @@ ms.lasthandoff: 05/26/2017
   
 -   **Properties\app.manifest**. 이 옵션은 ClickOnce 또는 등록이 필요하지 않은 COM에 의해 배포된 응용 프로그램에 필요합니다. ClickOnce 배포를 사용하여 응용 프로그램을 게시하면 **매니페스트**가 자동으로 이 옵션으로 설정됩니다.  
   
- **리소스 파일**  
- 프로젝트에 대한 리소스 파일을 제공하는 경우 이 라디오 단추를 선택합니다. 이 옵션을 선택하면 **아이콘** 및 **매니페스트** 옵션이 사용되지 않습니다.  
+**리소스 파일**  
+프로젝트에 대한 리소스 파일을 제공하는 경우 이 라디오 단추를 선택합니다. 이 옵션을 선택하면 **아이콘** 및 **매니페스트** 옵션이 사용되지 않습니다.  
   
- 경로 이름을 입력하거나 찾아보기 단추(**...**)를 사용하여 Win32 리소스 파일을 프로젝트에 추가합니다.  
+경로 이름을 입력하거나 찾아보기 단추(**...**)를 사용하여 Win32 리소스 파일을 프로젝트에 추가합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [응용 프로그램 속성 관리](../../ide/application-properties.md)  
- [Office 솔루션에서 코드 작성](/office-dev/office-dev/writing-code-in-office-solutions)
+[Office 솔루션에서 코드 작성](/office-dev/office-dev/writing-code-in-office-solutions)

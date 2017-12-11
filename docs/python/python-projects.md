@@ -1,28 +1,24 @@
 ---
 title: "Visual Studio에서 Python 프로젝트 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9c53f76-d0ef-4095-8b39-b7eb9bb33aba
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 3ce10862b3d71be43a86c1a98a9edf822ac9baf6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 3898277e5520ccabea5fba488846e520ef52fc83
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="python-projects"></a>Python 프로젝트
 
 일반적으로 Python 응용 프로그램은 폴더 및 파일만 사용하여 정의되지만 응용 프로그램이 커질수록 이 구조는 복잡해질 수 있으며 자동 생성된 파일, 웹 응용 프로그램용 JavaScript 등을 포함할 수 있습니다. 이 복잡성을 관리하기 위해 Python 응용 프로그램용 Visual Studio 프로젝트를 만들 수 있습니다. Python 프로젝트(`.pyproj` 파일)는 프로젝트와 관련된 모든 소스 및 콘텐츠 파일을 식별하며 각 파일에 대한 빌드 정보를 포함하고 소스 제어 시스템과 통합할 정보를 유지 관리하며 응용 프로그램을 논리 구성 요소로 구성하는 데 도움을 줍니다.
@@ -46,14 +42,11 @@ Visual Studio는 기존 폴더 트리에서 프로젝트를 만드는 템플릿�
 >
 > 아래 [기존 파일에서 프로젝트 만들기](#creating-a-project-from-existing-files)에 설명된 대로 기존 코드에서 Visual Studio 프로젝트를 만드는 것이 간단합니다.
 
-Visual Studio에서 Python 프로젝트에 대한 소개는 [Python 도구 시작, 2부: 프로젝트](https://youtu.be/KHPoVpL7zHg?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)(youtube.com, 3분 18초)를 시청하세요.
+Visual Studio의 Python 프로젝트 소개의 경우 동영상 [Python 코드 가져오기](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=iLAv23LWE_3905918567)(Microsoft Virtual Academy, 2분 17초)를 참조하세요.
 
-> [!VIDEO https://www.youtube.com/embed/KHPoVpL7zHg]
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Getting-Python-Code-iLAv23LWE_3905918567]
 
-[자세히 알아보기: Python 프로젝트에서 소스 제어 사용](https://youtu.be/Aq8eqApnugM)(youtube.com, 8분 55초)(동영상)도 시청하세요.
-
-> [!VIDEO https://www.youtube.com/embed/Aq8eqApnugM]
-
+[자세히 알아보기: Python 프로젝트에서 소스 제어 사용](https://youtu.be/Aq8eqApnugM)(youtube.com, 8분 55초)도 시청할 수 있습니다.
 
 ## <a name="adding-files-assigning-a-startup-file-and-setting-environments"></a>파일 추가. 시작 파일 할당. 환경 설정
 
@@ -91,22 +84,13 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 | Python 확장 모듈 | 이 템플릿은 Python 워크로드와 함께 **Python 네이티브 개발 도구**를 Visual Studio 2017에 설치한 경우([설치](installation.md) 참조) Visual C++ 아래에 나타납니다. 이 템플릿은 [Python용 C++ 확장 만들기](cpp-and-python.md)에 설명된 대로 C++ 확장 DLL의 핵심 구조를 제공합니다. |
 
 <a name="create-project-from-existing-files"</a>
+
 ### <a name="creating-a-project-from-existing-files"></a>기존 파일에서 프로젝트 만들기
 
-1. **파일 > 새로 만들기 > 프로젝트...** 메뉴를 선택한 후 **From Existing Python Code**(기존 Python 코드에서) 템플릿을 선택합니다.
-1. 다음 대화 상자에서 기존 코드에 대한 경로, 파일 형식에 대한 필터, 프로젝트에 필요한 검색 경로를 설정한 후 **다음**을 선택합니다.
+> [!Important]
+> 여기에 설명된 프로세스는 원래 원본 파일을 이동하거나 복사하지 않습니다. 복사본으로 작업하려면 먼저 폴더를 복제합니다.
 
-    ![기존 코드의 새 프로젝트, 1단계](media/projects-from-existing-1.png)
-
-1. 프로젝트 및 시작 파일에 대한 환경을 선택한 후 **다음**을 누릅니다. (대화 상자에 폴더 트리 루트에 있는 파일만 표시됩니다. 원하는 파일이 하위 폴더에 있는 경우 시작 파일을 비워 두고 솔루션 탐색기에서 나중에 설정합니다.)
-
-    ![기존 코드의 새 프로젝트, 2단계](media/projects-from-existing-2.png)
-
-1. 프로젝트 파일을 저장할 위치를 선택합니다. 이 작업은 원래 소스 파일을 이동하거나 복사하지 않으므로 복사본이 필요할 경우 템플릿을 사용하기 전에 새로 만들어야 합니다. 이 대화 상자에서 가상 환경의 자동 검색을 포함하고 다양한 웹 프레임워크에 대한 프로젝트를 사용자 지정할 수도 있습니다.
-
-    ![기존 코드의 새 프로젝트, 3단계](media/projects-from-existing-3.png)
-
-1.  **마침**을 선택하면 Visual Studio가 프로젝트를 만들고 솔루션 탐색기에서 프로젝트가 열립니다. `.pyproj` 파일을 다른 위치로 이동하려면 솔루션 탐색기에서 선택하고 **파일 > 다른 이름으로 저장**을 선택합니다. 이 작업은 프로젝트에서 파일 참조를 업데이트하지만 코드 파일은 이동하지 않습니다.
+[!INCLUDE[project-from-existing](includes/project-from-existing.md)]
 
 ## <a name="linked-files"></a>연결된 파일
 

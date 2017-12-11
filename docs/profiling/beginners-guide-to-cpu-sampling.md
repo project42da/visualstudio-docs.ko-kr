@@ -4,41 +4,24 @@ ms.custom: H1Hack27Feb2017
 ms.date: 02/27/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords:
-- vs.performance.wizard.intropage
+f1_keywords: vs.performance.wizard.intropage
 helpviewer_keywords:
 - Profiling Tools, quick start
 - performance tools, wizard
 - Performance Wizard
 ms.assetid: 85161cc4-18ee-49b3-9487-33680e687597
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a13701dd85cfc2339650ec2df641ac1f5f15e75f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
-ms.openlocfilehash: 251b00c479c3853ba4fc00521f3e4cac74a93d27
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/13/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU 샘플링 초보자를 위한 지침
 Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성능 문제를 분석할 수 있습니다. 다음 절차에서는 **샘플링** 데이터 사용 방법을 보여 줍니다.
@@ -48,7 +31,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
   
  **샘플링**은 응용 프로그램에서 대부분의 사용자 모드 작업을 수행하는 함수를 표시하는 통계 프로파일링 방법입니다. 응용 프로그램의 속도를 빠르게 만드는 영역을 찾으려는 경우 샘플링으로 시작하면 좋습니다.  
   
- **샘플링** 방법은 응용 프로그램에서 실행되는 함수에 대한 정보를 지정된 간격으로 수집합니다. 프로파일링 실행이 끝나면 프로파일링 데이터의 **요약** 뷰에 **실행 부하 과다 경로**라고 하는 가장 활동적인 함수 호출 트리가 표시됩니다. 여기서 대부분의 응용 프로그램 작업이 수행됩니다. 또한 이 뷰에는 대부분의 개별 작업을 수행하는 함수가  표시되고 샘플링 세션의 특정 세그먼트를 집중적으로 확인할 수 있는 시간 표시 막대 그래프도 표시됩니다.  
+ **샘플링** 방법은 응용 프로그램에서 실행되는 함수에 대한 정보를 지정된 간격으로 수집합니다. 프로파일링 실행이 끝나면 프로파일링 데이터의 **요약** 뷰에 **실행 부하 과다 경로**라고 하는 가장 활동적인 함수 호출 트리가 표시됩니다. 여기서 대부분의 응용 프로그램 작업이 수행됩니다. 또한 이 뷰에는 대부분의 개별 작업을 수행하는 함수가 표시되고 샘플링 세션의 특정 세그먼트를 집중적으로 확인할 수 있는 시간 표시 막대 그래프도 표시됩니다.  
   
  **샘플링**으로 필요한 데이터를 얻지 못할 경우 다른 프로파일링 도구 수집 방법으로 유용한 다른 종류의 정보를 얻을 수 있습니다. 이러한 기타 방법에 대한 자세한 내용은 [방법: 컬렉션 메서드 선택](../profiling/how-to-choose-collection-methods.md)을 참조하세요.  
   
@@ -144,4 +127,6 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 ## <a name="see-also"></a>참고 항목  
  [성능 탐색기](../profiling/performance-explorer.md)   
  [시작](../profiling/getting-started-with-performance-tools.md)   
- [개요](../profiling/overviews-performance-tools.md) [Visual Studio의 프로파일링](../profiling/index.md) [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)
+ [개요](../profiling/overviews-performance-tools.md)  
+ [Visual Studio의 프로파일링](../profiling/index.md)  
+ [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)

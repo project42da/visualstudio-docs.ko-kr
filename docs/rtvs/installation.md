@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio용 R 도구 설치 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.tgt_pltfrm: 
 ms.devlang: r
 ms.topic: article
 ms.assetid: 3ff60292-1b88-4ee9-b2b2-edd957f1a519
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 7a509743ce09f2bbfb69b62060abedb48e9777b6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 8e35c82a5f8583a609e9fccbacb0b27d9c3eac8f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="how-to-install-r-tools-for-visual-studio"></a>Visual Studio용 R 도구를 설치하는 방법
 
 항목 내용:
@@ -32,7 +29,7 @@ ms.lasthandoff: 07/12/2017
 - [오프라인 설치](#offline-installation-of-visual-studio-and-rtvs)
 
 > [!Note]
-> R 도구를 설치한 후 [옵션](options.md#data-scientist-layout) 항목의 설명대로 최적화된 데이터 과학자 레이아웃을 사용하도록 Visual Studio를 구성해야 할 수 있습니다.
+> R 도구를 설치한 후 [옵션](options.md) 항목의 설명대로 최적화된 데이터 과학자 레이아웃을 사용하도록 Visual Studio를 구성해야 할 수 있습니다.
 
 ## <a name="supported-versions-of-visual-studio"></a>지원되는 Visual Studio 버전
 
@@ -69,9 +66,12 @@ Microsoft R Open 및 CRAN R은 둘 다 여러 개의 동시 버전을 허용합�
 
 ### <a name="install-the-r-tools"></a>R 도구 설치
 
-[https://aka.ms/rtvs-current](https://aka.ms/rtvs-current)에서 최신 RTVS를 다운로드합니다. RTVS는 적합한 Visual Studio 버전을 확인하고 해당 버전이 아직 없는 경우 R 인터프리터를 설치하도록 지원합니다.
+[https://aka.ms/rtvs-current](https://aka.ms/rtvs-current)에서 Visual Studio 2015용 최신 RTVS를 다운로드합니다. RTVS는 적합한 Visual Studio 버전을 확인하고 해당 버전이 아직 없는 경우 R 인터프리터를 설치하도록 지원합니다.
 
-RTVS는 `%ProgramFiles(x86)%\Microsoft Visual Studio 14\Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio`에 설치됩니다.
+> [!Note]
+> 독립 실행형 RTVS 설치 관리자는 Visual Studio 2015, Visual Studio 2017과만 작동합니다. 앞에서 설명한 대로 [데이터 과학 및 분석 응용 프로그램 작업](#installing-rtvs-in-visual-studio-2017)을 통해 R 지원을 설치합니다.
+
+Visual Studio 2015용 RTVS는 `%ProgramFiles(x86)%\Microsoft Visual Studio 14\Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio`에 설치됩니다.
 
 ## <a name="offline-installation-of-visual-studio-and-rtvs"></a>Visual Studio 및 RTVS의 오프라인 설치
 
@@ -82,7 +82,7 @@ RTVS는 `%ProgramFiles(x86)%\Microsoft Visual Studio 14\Common7\IDE\Extensions\M
     - [Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md)
     - [Visual Studio 2015](https://msdn.microsoft.com/library/mt706497.aspx)
 
-1. [https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) 및 [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip)에서 오프라인 RTVS 설치 관리자를 다운로드합니다. 
+1. Visual Studio 2015의 경우 [https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) 및 [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip)에서 오프라인 RTVS 설치 관리자를 다운로드합니다. 
 
 1. 오프라인 설치 관리자에서 Visual Studio 및 RTVS를 설치합니다.
 
@@ -92,4 +92,3 @@ RTVS는 `%ProgramFiles(x86)%\Microsoft Visual Studio 14\Common7\IDE\Extensions\M
 - [R 도구 샘플 프로젝트](getting-started-samples.md)
 - [도움말 보기](getting-started-help.md)
 - [옵션 설정](options.md)
-

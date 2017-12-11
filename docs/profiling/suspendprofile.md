@@ -1,28 +1,28 @@
 ---
-title: "SuspendProfile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SuspendProfile"
+title: SuspendProfile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: SuspendProfile
 ms.assetid: 7c8de6e6-bb88-4353-92c3-ce7290310d61
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f6b91542039544e085b6599923e9cc8dcb08d6c5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# SuspendProfile
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`SuspendProfile` 메서드는 지정된 프로파일링 수준에 대해 Suspend\/Resume 카운터를 증가시킵니다.  
+# <a name="suspendprofile"></a>SuspendProfile
+`SuspendProfile` 메서드는 지정된 프로파일링 수준에 대한 Suspend/Resume 카운터를 증가시킵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(  
@@ -30,49 +30,49 @@ PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(
                        unsigned int dwId);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `Level`  
   
- 성능 데이터 수집이 적용될 수 있는 프로필 수준을 나타냅니다.  다음 **PROFILE\_CONTROL\_LEVEL** 열거자를 사용하여 성능 데이터 수집이 적용될 수 있는 세 가지 수준 중 하나를 나타낼 수 있습니다.  
+ 성능 데이터 수집을 적용할 수 있는 프로필 수준을 나타냅니다. 다음 **PROFILE_CONTROL_LEVEL** 열거자는 성능 데이터 수집을 적용할 수 있는 세 가지 수준 중 하나를 나타내는 데 사용될 수 있습니다.  
   
 |열거자|설명|  
-|---------|--------|  
-|PROFILE\_GLOBALLEVEL|전역 수준 설정은 프로파일링 실행의 모든 프로세스와 스레드에 적용됩니다.|  
-|PROFILE\_PROCESSLEVEL|프로세스 수준 설정은 지정된 프로세스의 일부인 모든 스레드에 적용됩니다.|  
-|PROFILE\_THREADLEVEL|스레드 프로파일링 수준 설정은 지정된 스레드에 적용됩니다.|  
+|----------------|-----------------|  
+|PROFILE_GLOBALLEVEL|전역 수준 설정은 프로파일링 실행의 모든 프로세스와 스레드에 영향을 줍니다.|  
+|PROFILE_PROCESSLEVEL|프로세스 수준 설정은 지정된 프로세스의 일부인 모든 스레드에 영향을 줍니다.|  
+|PROFILE_THREADLEVEL|스레드 프로파일링 수준 설정은 지정된 스레드에 영향을 줍니다.|  
   
  `dwId`  
   
- 시스템에 의해 생성된 프로세스 또는 스레드 식별자입니다.  
+ 시스템에서 생성한 프로세스 또는 스레드 식별자입니다.  
   
-## 속성 값\/반환 값  
- 이 함수는 **PROFILE\_COMMAND\_STATUS** 열거형을 사용하여 성공 또는 실패를 나타냅니다.  반환 값은 다음 중 하나일 수 있습니다.  
+## <a name="property-valuereturn-value"></a>속성 값/반환 값  
+ 이 함수는 **PROFILE_COMMAND_STATUS** 열거형을 사용하여 성공 또는 실패를 나타냅니다. 반환 값은 다음 중 하나일 수 있습니다.  
   
 |열거자|설명|  
-|---------|--------|  
-|PROFILE\_ERROR\_ID\_NOEXIST|프로파일링 요소 ID가 없습니다.|  
-|PROFILE\_ERROR\_LEVEL\_NOEXIST|지정한 프로파일링 수준이 없습니다.|  
-|PROFILE\_ERROR\_MODE\_NEVER|함수가 호출될 때 프로파일링 모드가 NEVER로 설정되어 있었습니다.|  
-|PROFILE\_ERROR\_NOT\_YET\_IMPLEMENTED|프로파일링 함수 호출, 프로파일링 수준 또는 호출과 수준의 조합이 아직 구현되지 않았습니다.|  
-|PROFILE\_OK|호출을 완료했습니다.|  
+|----------------|-----------------|  
+|PROFILE_ERROR_ID_NOEXIST|프로파일링 요소 ID가 없습니다.|  
+|PROFILE_ERROR_LEVEL_NOEXIST|지정된 프로파일링 수준이 없습니다.|  
+|PROFILE_ERROR_MODE_NEVER|이 함수가 호출될 때 프로파일링 모드가 NEVER로 설정되었습니다.|  
+|PROFILE_ERROR_NOT_YET_IMPLEMENTED|프로파일링 함수 호출, 프로파일링 수준 또는 호출과 수준의 조합이 아직 구현되지 않았습니다.|  
+|PROFILE_OK|호출이 성공했습니다.|  
   
-## 설명  
- Suspend\/Resume 카운터의 초기 값은 0입니다.  SuspendProfile을 호출할 때마다 Suspend\/Resume 카운트가 1씩 증가하고 ResumeProfile을 호출할 때마다 1씩 감소합니다.  
+## <a name="remarks"></a>설명  
+ Suspend/Resume 카운터의 초기값은 0입니다. SuspendProfile에 대한 각 호출은 Suspend/Resume 카운트에 1을 추가합니다. ResumeProfile에 대한 각 호출은 1을 뺍니다.  
   
- Suspend\/Resume 카운터가 0보다 큰 경우, 해당 수준의 Suspend\/Resume 상태는 OFF입니다.  카운트가 0보다 작거나 같은 경우, Suspend\/Resume 상태는 ON입니다.  
+ Suspend/Resume 카운트가 0보다 큰 경우 수준에 대한 Suspend/Resume 상태는 OFF입니다. 카운트가 0보다 작거나 같은 경우 Suspend/Resume 상태는 ON입니다.  
   
- Start\/Stop 상태와 Suspend\/Resume 상태가 모두 ON인 경우, 해당 수준의 프로파일링 상태는 ON입니다.  프로파일링될 스레드의 경우, 해당 스레드에 대한 전역, 프로세스, 스레드 수준 상태는 모두 ON이어야 합니다.  
+ Start/Stop 상태와 Suspend/Resume 상태가 둘 다 ON인 경우 수준에 대한 프로파일링 상태는 ON입니다. 프로파일링될 스레드의 경우 스레드에 대한 전역, 프로세스 및 스레드 수준 상태는 모두 ON이어야 합니다.  
   
-## 해당 .NET Framework 항목  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
  Microsoft.VisualStudio.Profiler.dll  
   
-## 함수 정보  
- 헤더: VSPerf.h에 선언됨  
+## <a name="function-information"></a>함수 정보  
+ 헤더: VSPerf.h에서 선언됨  
   
  가져오기 라이브러리: VSPerf.lib  
   
-## 예제  
- 다음 예제에서는 SuspendProfile 메서드를 보여 줍니다.  이 예제에서는 [PROFILE\_CURRENTID](../profiling/profile-currentid.md)로 지정한 스레드나 프로세스에 대해 StartProfile을 미리 호출한 것으로 가정합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 SuspendProfile 메서드를 보여 줍니다. 이 예에서는 StartProfile에 대한 이전 호출이 [PROFILE_CURRENTID](../profiling/profile-currentid.md)에 의해 식별된 프로세스 또는 스레드에 대해 만들어졌다고 가정합니다.  
   
 ```  
 void ExerciseSuspendProfile()  
@@ -106,5 +106,5 @@ void ExerciseSuspendProfile()
 }  
 ```  
   
-## 참고 항목  
- [Visual Studio 프로파일러 API 참조\(네이티브\)](../profiling/visual-studio-profiler-api-reference-native.md)
+## <a name="see-also"></a>참고 항목  
+ [Visual Studio 프로파일러 API 참조(네이티브)](../profiling/visual-studio-profiler-api-reference-native.md)

@@ -1,26 +1,27 @@
 ---
 title: "PeopleTrax 샘플(프로파일링 도구) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "응용 프로그램 성능, 샘플"
-  - "PeopleTrax 샘플[Visual Studio ALM]"
-  - "성능 도구, 샘플"
-  - "성능, 샘플"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- performance tools, samples
+- PeopleTrax sample [Visual Studio ALM]
+- application performance, samples
+- performance, samples
 ms.assetid: 86d7f8f7-d812-4e76-bed1-e66d81709c15
-caps.latest.revision: 23
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f170ac2a1c72f7c9a10b7aecbafeaf95948db817
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# PeopleTrax 샘플(프로파일링 도구)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-PeopleTrax 샘플 응용 프로그램은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구에 대한 여러 단계별 연습에서 사용됩니다.  사람들이 Trax 응용 프로그램 코드를 포함 하는.zip 파일을 [MSDN 코드 갤러리](http://go.microsoft.com/fwlink/?LinkId=160299)에서 다운로드할 수 있습니다.
+# <a name="peopletrax-sample-profiling-tools"></a>PeopleTrax 샘플(프로파일링 도구)
+PeopleTrax 샘플 응용 프로그램은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구에 대한 다수의 단계별 연습에 사용됩니다. [MSDN 코드 갤러리](http://go.microsoft.com/fwlink/?LinkId=160299)에서 People Trax 응용 프로그램 코드가 포함된 .zip 파일을 다운로드할 수 있습니다.

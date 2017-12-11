@@ -1,40 +1,41 @@
 ---
 title: "코드 조각 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "코드 조각[Visual Studio], 함수"
-  - "IntelliSense 코드 조각, 함수"
-  - "조각[Visual Studio], 함수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- code snippets [Visual Studio], functions
+- snippets [Visual Studio], functions
+- IntelliSense code snippets, functions
 ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 0628e118ecf0d22591ff1f88208e2cc5396a6bc4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 코드 조각 함수
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 코드 조각에 사용할 수 있는 함수에는 세 가지가 있습니다.  함수는 코드 조각의 [Function](http://msdn.microsoft.com/ko-kr/572c5549-5821-4e15-8ecd-0fa86c1c65df) 요소에서 지정됩니다.  코드 조각을 만드는 방법에 대한 내용은 [코드 조각](../ide/code-snippets.md)을 참조하십시오.  
+# <a name="code-snippet-functions"></a>코드 조각 함수
+세 가지 함수를 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 코드 조각에 사용할 수 있습니다. 함수는 코드 조각의 [Function](http://msdn.microsoft.com/en-us/572c5549-5821-4e15-8ecd-0fa86c1c65df) 요소에 지정됩니다. 코드 조각을 만드는 방법에 대한 자세한 내용은 [코드 조각](../ide/code-snippets.md)을 참조하세요.  
   
-## 함수  
- 다음 표에서는 코드 조각의 `Function` 요소에 사용할 수 있는 함수에 대해 설명합니다.  
+## <a name="functions"></a>함수  
+ 다음 표에서는 코드 조각의 `Function` 요소에 사용할 수 있는 함수를 설명합니다.  
   
-|Function|설명|Language|  
-|--------------|--------|--------------|  
-|`GenerateSwitchCases(` `EnumerationLiteral` `)`|switch 문과 `EnumerationLiteral` 매개 변수에 지정된 열거형의 멤버에 대해 일련의 case 문을 생성합니다.  `EnumerationLiteral` 매개 변수는 열거형 형식 또는 열거형 리터럴에 대한 참조여야 합니다.|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
+|함수|설명|언어|  
+|--------------|-----------------|--------------|  
+|`GenerateSwitchCases(` `EnumerationLiteral` `)`|`EnumerationLiteral` 매개 변수로 지정된 열거형 멤버에 대한 switch 문과 case 문 집합을 생성합니다. `EnumerationLiteral` 매개 변수는 열거형 리터럴 또는 열거형 형식에 대한 참조여야 합니다.|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
 |`ClassName()`|삽입된 코드 조각을 포함하는 클래스의 이름을 반환합니다.|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
-|`SimpleTypeName(` `TypeName` `)`|*TypeName* 매개 변수를 코드 조각이 호출된 컨텍스트에서 가장 단순한 형태로 만듭니다.|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
+|`SimpleTypeName(` `TypeName` `)`|*TypeName* 매개 변수를 코드 조각이 호출되는 컨텍스트에서 가장 단순한 형태로 줄입니다.|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
   
-## 예제  
- 다음 예제에서는 `GenerateSwitchCases` 함수를 사용하는 방법을 보여 줍니다.  이 코드 조각이 삽입되고 열거형이 `$switch_on$` 리터럴에 입력되면 `$cases$` 리터럴은 열거형의 모든 값에 대해 `case` 문을 생성합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `GenerateSwitchCases` 함수를 사용하는 방법을 보여 줍니다. 이 코드 조각이 삽입되고 열거형이 `$switch_on$` 리터럴에 입력되면 `$cases$` 리터럴은 열거형의 모든 값에 대해 `case` 문을 생성합니다.  
   
 ```  
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
@@ -74,8 +75,8 @@ caps.handback.revision: 11
 </CodeSnippets>  
 ```  
   
-## 예제  
- 다음 예제에서는 `ClassName` 함수를 사용하는 방법을 보여 줍니다.  이 코드 조각이 삽입되면 `$classname$` 리터럴은 코드 파일의 해당 위치에 있는 바깥쪽 클래스 이름으로 바뀝니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `ClassName` 함수를 사용하는 방법을 보여 줍니다. 이 코드 조각이 삽입되면 `$classname$` 리터럴은 코드 파일의 해당 위치에 있는 바깥쪽 클래스의 이름으로 바뀝니다.  
   
 ```  
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
@@ -120,8 +121,8 @@ caps.handback.revision: 11
 </CodeSnippets>  
 ```  
   
-## 예제  
- 이 예제에서는 `SimpleTypeName` 함수를 사용하는 방법을 보여 줍니다.  이 코드 조각이 코드 파일에 삽입되면 `$SystemConsole$` 리터럴은 코드 조각이 호출된 컨텍스트에서 가장 단순한 형태의 <xref:System.Console> 형식으로 바뀝니다.  
+## <a name="example"></a>예제  
+ 이 예제는 `SimpleTypeName` 함수를 사용하는 방법을 보여 줍니다. 이 코드 조각이 코드 파일에 삽입되면 코드 조각이 호출된 컨텍스트에서 `$SystemConsole$` 리터럴이 가장 간단한 형태의 <xref:System.Console> 형식으로 바뀝니다.  
   
 ```  
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
@@ -152,6 +153,6 @@ caps.handback.revision: 11
 </CodeSnippets>  
 ```  
   
-## 참고 항목  
- [Function Element \(Intellisense Code Snippets\)](http://msdn.microsoft.com/ko-kr/572c5549-5821-4e15-8ecd-0fa86c1c65df)   
+## <a name="see-also"></a>참고 항목  
+ [Function 요소(Intellisense 코드 조각)](http://msdn.microsoft.com/en-us/572c5549-5821-4e15-8ecd-0fa86c1c65df)   
  [코드 조각 스키마 참조](../ide/code-snippets-schema-reference.md)

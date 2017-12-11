@@ -1,37 +1,33 @@
 ---
 title: "Visual Studio에서 Python 디버그 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2192dc77-b5da-4332-b753-fa20f03f81e0
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 7a6aac76bc3830dd6c003c9834b242c6d79f7821
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 92fd0f30dfbb09f0eca8d2c9bc98d7904d81353c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="debugging-your-python-code"></a>Python 코드 디버깅
 
 Visual Studio에서는 실행 중인 프로세스에 연결하고, 조사식 및 직접 실행 창에서 식을 계산하고, 지역 변수, 중단점, 문 단계별 실행/프로시저 나가기/프로시저 단위 실행, 다음 문 설정 등을 검사하는 작업을 포함한 포괄적인 디버깅 환경을 Python에 제공합니다. 
 
-디버깅 개요는 [PTVS 시작 4 부: 디버깅](https://youtu.be/bO7wpzgy74A?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)(youtube.com, 3분 30초)을 참조하세요.
+디버깅 개요의 경우 [Python 디버깅](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=Ep5dp5LWE_3805918567)(Microsoft Virtual Academy, 3분 32초)을 참조하세요.
 
-> [!VIDEO https://www.youtube.com/embed/bO7wpzgy74A]
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Debugging-Python-Ep5dp5LWE_3805918567]
 
-항목 내용
+항목 내용:
 
 - [기본적인 디버깅](#basic-debugging)
 - [프로젝트 디버깅 옵션](#project-debugging-options)
@@ -44,13 +40,15 @@ Visual Studio에서는 실행 중인 프로세스에 연결하고, 조사식 및
 - [Python/C++ 혼합 모드 디버깅](debugging-mixed-mode.md)
 - [혼합 모드 디버깅 기호](debugging-symbols-for-mixed-mode.md)
 
-<a name="debugging-without-a-project"</a>
+<a name="debugging-without-a-project"></a>
+
 > [!Tip]
-> Visual Studio의 Python은 프로젝트 없이 디버깅을 지원합니다. 편집기에서 독립 실행형 Python 파일을 마우스 오른쪽 단추로 클릭하여 열고 **디버깅 시작**을 선택하면 Visual Studio는 전역 기본 환경([Python 환경](python-environments.md) 참조)에서 인수 없이 스크립트를 실행합니다. 하지만 이때부터 디버깅을 전적으로 지원합니다.
+> Visual Studio의 Python은 프로젝트 없이 디버깅을 지원합니다. 편집기에서 마우스 오른쪽 단추를 클릭하여 독립 실행형 Python 파일을 열고 **디버깅 시작**을 선택하면 Visual Studio가 전역 기본 환경([Python 환경](python-environments.md) 참조)에서 인수 없이 스크립트를 실행합니다. 하지만 이때부터 디버깅을 전적으로 지원합니다.
 >
 > 환경 및 인수를 제어하려면 코드에 대한 프로젝트를 만듭니다. 이 작업은 [기존 Python 코드에서](python-projects.md#creating-a-project-from-existing-files) 프로젝트 템플릿으로 쉽게 수행할 수 있습니다.
 
-<a name="debugging-with-a-project"</a>
+<a name="debugging-with-a-project"></a>
+
 ## <a name="basic-debugging"></a>기본적인 디버깅
 
 기본적인 디버깅 워크플로에는 다음 섹션에서 설명한 대로 중단점 설정, 단계별 코드 실행, 값 검사 및 예외 처리가 포함됩니다. Visual Studio 디버거에 대한 자세한 내용은 [Visual Studio에서 디버깅](../debugger/debugging-in-visual-studio.md)을 참조하세요.

@@ -1,29 +1,26 @@
 ---
 title: "Visual Studio에서 컴파일 및 빌드 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/14/2017
+ms.date: 07/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - builds [Visual Studio], about building in Visual Studio
 - custom build steps, types of builds
 ms.assetid: c7958821-285f-4e28-9e7a-b5d8b40336a1
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
+ms.openlocfilehash: 5918c0070be747f7ebdca9d789d5706820b93e20
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 1a2db8a10664e1d4b38b1d6867c5a3bad1532b39
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="compiling-and-building-in-visual-studio"></a>Visual Studio에서 컴파일 및 빌드
 
 개발 주기의 특정 시점에 빌드를 실행하여 소스 코드에서 어셈블리 및 실행 가능한 응용 프로그램을 만들 수 있습니다. 일반적으로 빌드 프로세스는 Windows, ASP.NET, 모바일 앱 등 여러 다양한 프로젝트 형식에서 매우 유사합니다. 빌드 프로세스는 C#, Visual Basic, C++ 및 F# 같은 프로그래밍 언어에서도 매우 유사합니다. 
@@ -61,4 +58,3 @@ IDE에서 빌드하는 방법에 대한 가장 기본적인 개요는 [연습: �
 ## <a name="see-also"></a>참고 항목  
 
 - [웹 사이트 프로젝트 빌드(컴파일)](http://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)   
-

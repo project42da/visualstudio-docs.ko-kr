@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -13,32 +12,17 @@ dev_langs:
 - CSharp
 - C++
 - jsharp
-helpviewer_keywords:
-- MSBuild, tasks
+helpviewer_keywords: MSBuild, tasks
 ms.assetid: b3144b27-a426-4259-b8ae-5f7991b202b6
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 48f6019ef12e2637917a0b70fbc4eaf3e0eb6f20
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: c0d1474fb03acd838387677786656967e852fdf9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-task-reference"></a>MSBuild 작업 참조
 작업은 빌드 프로세스 동안 실행되는 코드를 제공합니다. 다음 목록의 작업이 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에 포함되어 있습니다. [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]가 설치되면 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 프로젝트를 빌드하는 데 사용되는 추가 작업을 사용할 수 있습니다. 자세한 내용은 [Visual C++ 작업](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)을 참조하세요.  
@@ -52,13 +36,13 @@ ms.lasthandoff: 02/22/2017
   
 ## <a name="in-this-section"></a>단원 내용  
  [Task 기본 클래스](../msbuild/task-base-class.md)  
- <xref:Microsoft.Build.Utilities.Task> 클래스에서 파생되는 작업에 여러 매개 변수를 추가합니다.  
+ <xref:Microsoft.Build.Utilities.Task> 클래스에서 파생되는 작업에 해당 매개 변수 몇 개를 추가합니다.  
   
  [TaskExtension 기본 클래스](../msbuild/taskextension-base-class.md)  
- <xref:Microsoft.Build.Tasks.TaskExtension> 클래스에서 파생되는 작업에 여러 매개 변수를 추가합니다.  
+ <xref:Microsoft.Build.Tasks.TaskExtension> 클래스에서 파생되는 작업에 해당 매개 변수 몇 개를 추가합니다.  
   
  [ToolTaskExtension 기본 클래스](../msbuild/tooltaskextension-base-class.md)  
- <xref:Microsoft.Build.Tasks.ToolTaskExtension> 클래스에서 파생되는 작업에 여러 매개 변수를 추가합니다.  
+ <xref:Microsoft.Build.Tasks.ToolTaskExtension> 클래스에서 파생되는 작업에 해당 매개 변수 몇 개를 추가합니다.  
   
  [AL(어셈블리 링커) 작업](../msbuild/al-assembly-linker-task.md)  
  모듈 또는 리소스 파일에 해당하는 하나 이상의 파일에 있는 매니페스트로 어셈블리를 만듭니다.  

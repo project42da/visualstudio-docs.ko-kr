@@ -4,40 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.performance.view.threadblocking
-helpviewer_keywords:
-- Concurrency Visualizer, Threads View (Parallel Performance)
+f1_keywords: vs.performance.view.threadblocking
+helpviewer_keywords: Concurrency Visualizer, Threads View (Parallel Performance)
 ms.assetid: 2e441103-a266-407b-88c3-fb58716257a3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1777df83f2c2764e173300f897b18a699a38c197
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: bdad50eff09e96c5d9c0513be1f571a901278871
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="threads-view-parallel-performance"></a>스레드 뷰(병렬 성능)
 스레드 뷰는 Concurrency 시각화에서 가장 자세하며 다양한 기능을 제공하는 뷰입니다. 이 보기를 사용하면 동기화, I/O 또는 기타 이유로 인해 스레드가 차단되는지 아니면 실행되고 있는지를 확인할 수 있습니다.  
@@ -86,7 +67,7 @@ ms.lasthandoff: 02/22/2017
   
  아래 그림에 스레드 뷰가 나와 있습니다.  
   
- ![스레드 뷰](~/profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
+ ![스레드 뷰](../profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
 스레드 뷰  
   
  초기에는 스레드가 만들어진 순서로 정렬되므로 주 응용 프로그램 스레드가 맨 먼저 표시됩니다. 뷰의 왼쪽 위에 있는 정렬 옵션을 사용하여 실행 작업이 가장 많이 수행된 순서대로 스레드를 정렬하는 등 다른 기준에 따라 스레드를 정렬할 수 있습니다.  

@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.chooseitems.wpfcomponents
+f1_keywords: vs.chooseitems.wpfcomponents
 helpviewer_keywords:
 - WPF Components tab, Choose Toolbox Items dialog box
 - Choose Toolbox Items dialog box, WPF Components tab
 ms.assetid: 6ce1d178-88c0-4295-8915-59fdeedabb11
-caps.latest.revision: 13
-author: kempb
-ms.author: kempb
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: b574aef447309842b5ff02be72dae291407f0ddb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: 8aaa76694a60aad5c8bfcc2dd6d26feac03ab6e1
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>도구 상자 항목 선택, WPF 구성 요소
 **도구 상자 항목 선택** 대화 상자의 이 탭에는 로컬 컴퓨터에서 사용할 수 있는 WPF(Windows Presentation Foundation) 컨트롤 목록이 표시됩니다. 이 목록을 표시하려면 **도구** 메뉴에서 **도구 상자 항목 선택**을 선택하여 **도구 상자 항목 선택** 대화 상자를 표시하고 **WPF 구성 요소** 탭을 선택합니다. 나열된 구성 요소를 정렬하려면 열 머리글을 선택합니다.  
@@ -53,46 +35,44 @@ ms.lasthandoff: 06/23/2017
     > [!NOTE]
     >  구성 요소의 아이콘이 **도구 상자**에 표시되는지 여부에 관계없이 컴퓨터에 설치된 .NET Framework 구성 요소를 계속 사용할 수 있습니다.  
 
- **WPF 구성 요소** 탭에는 다음 정보가 포함됩니다.  
+**WPF 구성 요소** 탭에는 다음 정보가 포함됩니다.  
 
- 이름  
- 컴퓨터의 레지스트리에 있는 항목에 대한 WPF 컨트롤의 이름을 나열합니다.  
+이름  
+컴퓨터의 레지스트리에 있는 항목에 대한 WPF 컨트롤의 이름을 나열합니다.  
 
- 네임스페이스  
- 구성 요소 구조를 정의하는 [.NET Framework 클래스 API](/dotnet/api/?view=netframework-4.7) 네임스페이스의 계층 구조를 표시합니다. 컴퓨터에 설치된 각 .NET Framework 네임스페이스 내에서 사용 가능한 구성 요소를 나열하려면 이 열을 기준으로 정렬합니다.  
+네임스페이스  
+구성 요소 구조를 정의하는 [.NET Framework 클래스 API](/dotnet/api/?view=netframework-4.7) 네임스페이스의 계층 구조를 표시합니다. 컴퓨터에 설치된 각 .NET Framework 네임스페이스 내에서 사용 가능한 구성 요소를 나열하려면 이 열을 기준으로 정렬합니다.  
 
- 어셈블리 이름  
- 각 구성 요소의 네임스페이스가 포함된 .NET Framework 어셈블리의 이름을 표시합니다. 컴퓨터에 설치된 각 .NET Framework 어셈블리에 포함된 네임스페이스를 나열하려면 이 열을 기준으로 정렬합니다.  
+어셈블리 이름  
+각 구성 요소의 네임스페이스가 포함된 .NET Framework 어셈블리의 이름을 표시합니다. 컴퓨터에 설치된 각 .NET Framework 어셈블리에 포함된 네임스페이스를 나열하려면 이 열을 기준으로 정렬합니다.  
 
- 디렉터리  
- .NET Framework 어셈블리의 위치를 표시합니다. 모든 어셈블리의 기본 위치는 전역 어셈블리 캐시(GAC)입니다. 전역 어셈블리 캐시에 대한 자세한 내용은 [어셈블리 및 전역 어셈블리 캐시 사용](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac)을 참조하세요.  
+디렉터리  
+.NET Framework 어셈블리의 위치를 표시합니다. 모든 어셈블리의 기본 위치는 전역 어셈블리 캐시(GAC)입니다. 전역 어셈블리 캐시에 대한 자세한 내용은 [어셈블리 및 전역 어셈블리 캐시 사용](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac)을 참조하세요.  
 
 ## <a name="uielement-list"></a>UI 요소 목록  
- **필터**  
- 입력란에 제공하는 문자열을 기준으로 WPF 컨트롤 목록을 필터링합니다. 4개 열에서 모든 일치 항목이 표시됩니다.  
+**필터**  
+입력란에 제공하는 문자열을 기준으로 WPF 컨트롤 목록을 필터링합니다. 4개 열에서 모든 일치 항목이 표시됩니다.  
 
- **지우기**  
- 필터 문자열을 지웁니다.  
+**지우기**  
+필터 문자열을 지웁니다.  
 
- **찾아보기**  
- WPF 컨트롤이 포함된 어셈블리로 이동할 수 있는 **열기** 대화 상자를 엽니다. 전역 어셈블리 캐시에 없는 어셈블리를 로드하려면 이 요소를 사용합니다.  
+**찾아보기**  
+WPF 컨트롤이 포함된 어셈블리로 이동할 수 있는 **열기** 대화 상자를 엽니다. 전역 어셈블리 캐시에 없는 어셈블리를 로드하려면 이 요소를 사용합니다.  
 
- **언어**  
- 선택된 WPF 컨트롤이 포함된 어셈블리의 지역화된 언어를 표시합니다.  
+**언어**  
+선택된 WPF 컨트롤이 포함된 어셈블리의 지역화된 언어를 표시합니다.  
 
 ## <a name="limitations"></a>제한 사항  
- 사용자 지정 컨트롤 또는 <xref:System.Windows.Controls.UserControl>을 도구 상자에 추가할 경우 다음과 같은 제한 사항이 있습니다.  
+사용자 지정 컨트롤 또는 <xref:System.Windows.Controls.UserControl>을 도구 상자에 추가할 경우 다음과 같은 제한 사항이 있습니다.  
 
 -   현재 프로젝트 외부에서 정의된 사용자 지정 컨트롤에만 적용됩니다.  
 
 -   솔루션 구성을 디버그에서 릴리스로 또는 릴리스에서 디버그로 변경하면 제대로 업데이트되지 않습니다. 이는 참조가 프로젝트 참조가 아니라 디스크의 어셈블리에 대한 참조이기 때문입니다. 컨트롤이 현재 솔루션에 포함된 경우 디버그에서 릴리스로 변경하면 프로젝트에서는 계속해서 컨트롤의 디버그 버전을 참조합니다.  
 
- 또한 디자인 타임 메타데이터가 사용자 지정 컨트롤에 적용되고 이 메타데이터에서 <xref:Microsoft.Windows.Design.ToolboxBrowsableAttribute>가 `false`로 설정되도록 지정하면 컨트롤이 도구 상자에 표시되지 않습니다.  
+또한 디자인 타임 메타데이터가 사용자 지정 컨트롤에 적용되고 이 메타데이터에서 <xref:Microsoft.Windows.Design.ToolboxBrowsableAttribute>가 `false`로 설정되도록 지정하면 컨트롤이 도구 상자에 표시되지 않습니다.  
 
- 컨트롤에 대한 네임스페이스 및 어셈블리를 매핑하면 XAML에서 직접 컨트롤을 참조할 수 있습니다.  
+컨트롤에 대한 네임스페이스 및 어셈블리를 매핑하면 XAML에서 직접 컨트롤을 참조할 수 있습니다.  
 
 ## <a name="see-also"></a>참고 항목  
- [도구 상자](../../ide/reference/toolbox.md)
-
- [WPF 시작](../../designers/getting-started-with-wpf.md)
-
+[도구 상자](../../ide/reference/toolbox.md)  
+[WPF 시작](../../designers/getting-started-with-wpf.md)

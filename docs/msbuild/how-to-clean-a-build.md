@@ -1,66 +1,67 @@
 ---
 title: "방법: 빌드 정리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "디렉터리[.NET Framework], 출력 항목용"
-  - "Exec 작업[MSBuild]"
-  - "MSBuild, 빌드 정리"
-  - "출력, 항목 제거"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Exec task [MSBuild]
+- MSBuild, cleaning a build
+- directories [.NET Framework], for output items
+- output, removing items
 ms.assetid: 999ba473-b0c4-45c7-930a-63ea7a510509
-caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 2b935e0d09bb80347ee17c796f83846cef02a39f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 빌드 정리
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-빌드를 정리할 경우 프로젝트와 구성 요소 파일만 남고 모든 중간 파일과 출력 파일이 삭제됩니다.  프로젝트와 구성 요소 파일을 사용하여 중간 파일과 출력 파일의 새 인스턴스를 빌드할 수 있습니다.  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]와 함께 제공되는 일반 작업 라이브러리에는 시스템 명령을 실행하는 데 사용할 수 있는 [Exec](../msbuild/exec-task.md) 작업이 포함되어 있습니다.  작업 라이브러리에 대한 자세한 내용은 [Task Reference](../msbuild/msbuild-task-reference.md)를 참조하십시오.  
+# <a name="how-to-clean-a-build"></a>방법: 빌드 정리
+빌드를 정리할 때 프로젝트 및 구성 요소 파일을 그대로 두고 모든 중간 파일과 출력 파일이 삭제됩니다. 그런 다음 프로젝트 및 구성 요소 파일에서 중간 파일과 출력 파일의 새 인스턴스를 빌드할 수 있습니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]를 통해 제공되는 일반 작업 라이브러리에는 시스템 명령을 실행하는 데 사용할 수 있는 [Exec](../msbuild/exec-task.md) 작업이 포함됩니다. 작업의 라이브러리에 자세한 내용은 [작업 참조](../msbuild/msbuild-task-reference.md)를 참조하세요.  
   
-## 출력 항목을 위한 디렉터리 만들기  
- 기본적으로 프로젝트를 컴파일할 때 만들어지는 .exe 파일은 프로젝트 및 소스 파일과 동일한 디렉터리에 배치됩니다.  그러나 일반적으로 출력 항목은 별도의 디렉터리에 만들어집니다.  
+## <a name="creating-a-directory-for-output-items"></a>출력 항목에 대한 디렉터리 만들기  
+ 기본적으로 프로젝트를 컴파일할 때 만들어진 .exe 파일은 프로젝트 및 원본 파일과 동일한 디렉터리에 배치됩니다. 그러나 일반적으로 출력 항목은 별도 디렉터리에 생성됩니다.  
   
-#### 출력 항목을 위한 디렉터리를 만들려면  
+#### <a name="to-create-a-directory-for-output-items"></a>출력 항목에 대한 디렉터리를 만들려면  
   
-1.  `Property` 요소를 사용하여 디렉터리의 위치와 이름을 정의합니다.  예를 들어, 프로젝트와 소스 파일이 들어 있는 디렉터리에 `BuiltApp`라는 디렉터리를 만듭니다.  
+1.  `Property` 요소를 사용하여 디렉터리의 위치 및 이름을 정의합니다. 예를 들어 프로젝트 및 원본 파일이 포함된 디렉터리에 `BuiltApp`이라는 디렉터리를 만듭니다.  
   
      `<builtdir>BuiltApp</builtdir>`  
   
-2.  해당 디렉터리가 없으면 [MakeDir](../msbuild/makedir-task.md) 작업을 사용하여 디렉터리를 만듭니다.  예를 들면 다음과 같습니다.  
+2.  디렉터리가 없는 경우 [MakeDir](../msbuild/makedir-task.md) 작업을 사용하여 디렉터리를 만듭니다. 예:  
   
      `<MakeDir Directories = "$(builtdir)"`  
   
      `Condition = "!Exists('$(builtdir)')" />`  
   
-## 출력 항목 제거  
- 중간 파일과 출력 파일의 새 인스턴스를 만들기 전에, 중간 파일과 출력 파일의 이전 인스턴스를 모두 지우고자 할 수 있습니다.  [RemoveDir](../msbuild/removedir-task.md) 작업을 사용하여 디렉터리 및 디렉터리에 포함된 모든 파일과 디렉터리를 디스크에서 삭제합니다.  
+## <a name="removing-the-output-items"></a>출력 항목 제거  
+ 중간 파일 및 출력 파일의 새 인스턴스를 만들기 전에 중간 파일 및 출력 파일의 모든 이전 인스턴스를 취소할 수 있습니다. [RemoveDir](../msbuild/removedir-task.md) 작업을 사용하여 디렉터리 및 모든 파일과 디스크에서 포함하는 디렉터리를 삭제합니다.  
   
-#### 디렉터리 및 디렉터리에 포함된 모든 파일을 제거하려면  
+#### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>디렉터리에 포함된 디렉터리 및 모든 파일을 제거하려면  
   
--   `RemoveDir` 작업을 사용하여 디렉터리를 제거합니다.  예를 들면 다음과 같습니다.  
+-   `RemoveDir` 작업을 사용하여 디렉터리를 제거합니다. 예:  
   
      `<RemoveDir Directories="$(builtdir)" />`  
   
-## 예제  
- 다음의 코드 예제 프로젝트에는 `RemoveDir` 작업을 사용하여 디렉터리 및 디렉터리가 포함된 모든 파일과 디렉터리를 삭제하는 `Clean`이라는 새 대상이 포함되어 있습니다.  또한 이 예제에서 `Compile` 대상은 빌드가 정리될 때 삭제되는 출력 항목을 위한 별도의 디렉터리를 만듭니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제 프로젝트는 `RemoveDir` 작업을 사용하여 디렉터리 및 모든 파일과 포함하는 디렉터리를 삭제하는 새 대상 `Clean`을 포함합니다. 또한 이 예제에서 `Compile` 대상은 빌드가 정리될 때 삭제된 출력 항목에 대한 별도 디렉터리를 만듭니다.  
   
- `Compile`이 기본 대상으로 정의되므로 다른 대상을 지정하지 않으면 이 대상이 자동으로 사용됩니다.  다른 대상을 지정하려면 명령줄 스위치 **\/target**을 사용합니다.  예를 들면 다음과 같습니다.  
+ `Compile`은 기본 대상으로 정의되므로 다른 대상 또는 대상을 지정하지 않으면 자동으로 사용됩니다. 명령줄 스위치 **/target**을 사용하여 다른 대상을 지정합니다. 예:  
   
  `msbuild <file name>.proj /target:Clean`  
   
- **\/target** 스위치는 간단하게 **\/t**로 사용될 수 있으며 대상을 두 개 이상 지정할 수 있습니다.  예를 들어, `Clean` 대상과 `Compile` 대상을 차례로 사용하려면 다음과 같이 입력합니다.  
+ **/target** 스위치는 **/t**로 단축할 수 있으며 둘 이상의 대상을 지정할 수 있습니다. 예를 들어 대상 `Compile` 대신 `Clean` 대상을 사용하려면 다음을 입력합니다.  
   
  `msbuild <file name>.proj /t:Clean;Compile`  
   
-```  
+```xml  
 <Project DefaultTargets = "Compile"  
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >  
   
@@ -100,9 +101,9 @@ caps.handback.revision: 13
 </Project>  
 ```  
   
-## 참고 항목  
- [Exec Task](../msbuild/exec-task.md)   
- [MakeDir Task](../msbuild/makedir-task.md)   
- [RemoveDir Task](../msbuild/removedir-task.md)   
- [Csc Task](../msbuild/csc-task.md)   
+## <a name="see-also"></a>참고 항목  
+ [Exec 작업](../msbuild/exec-task.md)   
+ [MakeDir 작업](../msbuild/makedir-task.md)   
+ [RemoveDir 작업](../msbuild/removedir-task.md)   
+ [Csc 작업](../msbuild/csc-task.md)   
  [대상](../msbuild/msbuild-targets.md)

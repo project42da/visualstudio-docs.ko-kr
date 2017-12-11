@@ -1,18 +1,16 @@
 ---
-title: "Mac용 Visual Studio 워크로드"
+title: "Mac용 Visual Studio 워크로드 | Microsoft Docs"
 author: asb3993
 ms.author: amburns
 ms.date: 08/03/2017
 ms.topic: article
 ms.assetid: DDC39599-8C5D-4CB9-8DA5-229E085384CA
+ms.openlocfilehash: 1281934b04ac064237246a851018fdfdcd71f665
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
-ms.openlocfilehash: 8870c8fa0a521ed5ac6e31aa0465f1dbe8578f63
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="visual-studio-for-mac-workloads"></a>Mac용 Visual Studio 워크로드
 
 Mac용 Visual Studio에는 다음과 같은 워크로드가 미리 설치되어 있습니다.
@@ -31,7 +29,7 @@ Mac용 Visual Studio에서 Xamarin을 사용하는 방법에 대한 자세한 �
 
 ## <a name="net-core-applications"></a>.NET Core 응용 프로그램
 
-.NET Core 사용에 대한 자세한 내용은 [설명서](https://docs.microsoft.com/en-us/dotnet/core/)를 참조하세요.
+.NET Core 사용에 대한 자세한 내용은 [설명서](https://docs.microsoft.com/dotnet/core/)를 참조하세요.
 
 ## <a name="aspnet-core-web-applications"></a>ASP.NET Core 웹 응용 프로그램
 
@@ -40,4 +38,3 @@ Mac용 Visual Studio에서 ASP.NET Core를 사용하는 방법에 대한 자세�
 ## <a name="cross-platform-unity-game-development"></a>플랫폼 간 Unity 게임 개발
 
 Unity 게임 개발을 시작하려면 [설정 페이지](~/setup-vsmac-tools-unity.md), [Unity Tools 사용 가이드](~/using-vsmac-tools-unity.md) 또는 Unity [실습 교육](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started)을 참조하세요.
-

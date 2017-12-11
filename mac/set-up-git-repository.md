@@ -1,19 +1,17 @@
 ---
-title: "Mac용 Visual Studio에서 Git 리포지토리 설정하기"
+title: "Mac용 Visual Studio에서 Git 리포지토리 설정 | Microsoft Docs"
 description: "Mac용 Visual Studio에서 Git 및 Subversion 사용"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
+ms.openlocfilehash: 2f6c06ff640007f28cfaed6512fdedc5dcb16e65
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 9f25eda17648ba7eb3c264660ee0eb3b8eee166c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="setting-up-a-git-repository"></a>Git 리포지토리 설정
 
 Git은 모든 팀원이 동일한 문서를 동시에 작업할 수 있는 분산형 버전 제어 시스템입니다. 즉, 모든 파일을 포함하는 단일 서버가 있더라도 이 중앙 소스에서 리포지토리를 체크 아웃할 때마다 리포지토리 전체가 로컬 컴퓨터에 복제됩니다.
@@ -85,14 +83,35 @@ Git 리포지토리를 설정하려면 다음 단계를 수행하세요.
 
 ![원격 리포지토리에 변경 사항 푸시](media/version-control-git12.png)
 
+## <a name="checkout-an-existing-repository"></a>기존 리포지토리 체크 아웃
+
+로컬 컴퓨터에는 없고 원격에만 존재하는 GitHub 리포지토리로 작업해야 하는 경우가 많습니다. Mac용 Visual Studio를 사용하면 이 리포지토리를 신속하게 체크 아웃할 수 있습니다. 다음 단계를 수행하여 컴퓨터로 복제합니다.
+
+1. 메뉴 모음에서 **버전 제어 > 체크 아웃...**을 선택합니다.
+
+2. 그러면 **리포지토리에 연결** 탭이 표시됩니다.
+
+    ![입력한 세부 정보가 표시된 리포지토리 탭에 연결](media/version-control-git13.png)
+
+3. 원격 리포지토리의 GitHub 페이지에서 **복제 또는 다운로드** 단추를 누르고 제공된 URL을 복사합니다.
+
+    ![표시된 GitHub URL](media/version-control-git14.png)
+
+4. **리포지토리에 연결** 탭에서 **URL** 입력 필드의 모든 텍스트를 바꿉니다. 그러면 2단계의 이미지에 나와 있는 것처럼 이 탭의 다른 대부분의 필드가 사용자에 맞게 채워집니다.
+
+5. 리포지토리를 복제할 디렉터리를 입력하고 **체크 아웃**을 누릅니다.
+
+> [!NOTE]
+리포지토리 크기가 4GB 이상인 경우 문제가 발생할 수 있습니다.
+
 ## <a name="troubleshooting"></a>문제 해결
 
 빈 원격 리포지토리로 프로젝트를 초기화하는 데 문제가 있을 경우 다음 단계를 시도하세요.
 
 - 솔루션 폴더로 이동합니다.
 - `Command + Shift + . `를 눌러 숨겨진 파일과 폴더를 표시합니다.
-- `.git` 폴더가 있으면 삭제합니다.
-- `gitignore` 파일이 있으면 삭제합니다.
+- **.git** 폴더가 있으면 삭제합니다.
+- **gitignore** 파일이 있으면 삭제합니다.
 - `Command + Shift + . `를 눌러 파일과 폴더를 숨깁니다.
 - 솔루션을 Mac용 VS에서 엽니다.
 - Solution Pad에서 솔루션 노드를 선택합니다.

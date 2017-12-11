@@ -1,0 +1,114 @@
+---
+title: "Visual Studio에서 C/C++에 대한 단위 테스트 작성 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 4f4b5f10-7314-4725-8c6e-e72f52eff918
+caps.latest.revision: "14"
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 83e44a28b0039c743724f3c70bee95e2ef2d419b
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/15/2017
+---
+# <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio에서 C/C++에 대한 단위 테스트 작성
+다른 언어처럼 **테스트 탐색기** 창을 사용하여 C++ 단위 테스트를 작성하여 실행할 수 있습니다. **테스트 탐색기**에 대한 자세한 내용은 [테스트 탐색기를 사용하여 단위 테스트 실행](run-unit-tests-with-test-explorer.md)을 참조하세요. 
+
+> [!NOTE]
+> Live Unit Testing, Coded UI Tests 및 IntelliTest 등의 일부 기능은 C++에서 지원되지 않습니다. 
+
+Visual Studio에는 다음 C++ 테스트 기능이 포함되어 있으며 추가 다운로드가 필요하지 않습니다.
+ -  C++에 대한 Microsoft 단위 테스트 프레임워크   
+ -  Google Test
+ -  Boost.Test
+ -  CTest
+
+설치 된 프레임워크 외에도 Visual Studio 내에서 사용하려는 프레임워크에 대해 자체 테스트 어댑터를 작성할 수 있습니다. 테스트 어댑터는 **테스트 탐색기** 창에 단위 테스트를 통합할 수 있습니다. 몇 가지 타사 어댑터를 [Visual Studio Marketplace](https://marketplace.visualstudio.com)에서 제공하고 있습니다. 자세한 내용은 [타사 단위 테스트 프레임워크 설치](install-third-party-unit-test-frameworks.md)를 참조하세요.
+
+**Visual Studio 2017 버전 15.5**  
+
+1) **Google Test 어댑터**는 **C++를 통합 데스크톱 개발** 워크로드의 기본 구성 요소로 포함되어 있습니다. **솔루션 탐색기**의 **새 프로젝트 추가** 바로 가기 메뉴에서 솔루션에 추가하고 **도구 | 옵션**을 통해 옵션에 추가할 수 있는 프로젝트 템플릿이 있습니다. 자세한 내용은 [방법: Visual Studio에서 Google Test 사용](how-to-use-google-test-for-cpp.md)을 참조하세요.
+
+2) **Boost.Test**는 **C++를 통합 데스크톱 개발** 워크로드의 기본 구성 요소로 포함되어 있습니다. **테스트 탐색기**와 통합되지만 현재는 프로젝트 템플릿을 갖지 않으므로 수동으로 구성해야 합니다. 자세한 내용은 [방법: Visual Studio에서 Boost.Test 사용](how-to-use-boost-test-for-cpp.md)을 참조하세요. 
+
+3) **CTest** 지원은 **C++를 통한 데스크톱 개발** 워크로드의 일부인 [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp.md) 구성 요소에 포함되어 있습니다. 그러나 CTest는 아직 **테스트 탐색기**에 완전히 통합되지는 않았습니다. 자세한 내용은 [방법: Visual Studio에서 CTest 사용](how-to-use-ctest-for-cpp.md)을 참조하세요.
+
+
+**Visual Studio 2015 및 이전 버전**
+  
+Google Test 어댑터와 Boost.Test 어댑터 확장은 Visual Studio Marketplace의 [Boost.Test용 테스트 어댑터](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.TestAdapterforBoostTest)와 [Google Test용 테스트 어댑터](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.TestAdapterforGoogleTest)에서 다운로드할 수 있습니다. 
+
+  
+## <a name="basic-test-workflow"></a>기본 테스트 워크플로
+다음 섹션에서는 C++ 단위 테스트를 시작하기 위한 기본 단계를 보여 줍니다. 기본 구성은 Microsoft 및 Google Test 프레임워크에서 매우 유사합니다. Boost.Test에서는 수동으로 테스트 프로젝트를 만들어야 합니다. 
+  
+### <a name="create-a-test-project"></a>테스트 프로젝트 만들기
+테스트하려는 코드와 동일한 솔루션 안에 있는 하나 이상의 프로젝트 안에서 테스트를 정의하여 실행합니다. 기존 솔루션에 새 테스트 프로젝트를 추가하려면 **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가 | 새 프로젝틀**를 선택합니다. 왼쪽 창에서 **Visual C++ 테스트**를 선택하고 가운데 창에서 프로젝트 형식 중 하나를 선택합니다. 다음 그림에서는 **C++를 통한 데스크톱 개발** 워크로드가 설치되었을 때 사용할 수 있는 테스트 프로젝트를 보여 줍니다.
+
+![C++ 테스트 프로젝트](media/cpp-new-test-project.png "C++ 새 테스트 프로젝트 템플릿")
+
+### <a name="create-references-to-other-projects-in-the-solution"></a>솔루션의 다른 프로젝트에 대한 참조 만들기
+테스트할 프로젝트에서 테스트 코드가 함수에 액세스할 수 있게 하려면 테스트 프로젝트에서 프로젝트에 대한 참조를 추가합니다. **솔루션 탐색기**에서 테스트 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **추가 | 참조**를 선택합니다. 그런 다음 대화 상자에서 테스트할 프로젝트를 선택합니다.
+
+![참조 추가](media/cpp-add-ref-test-project.png "C++ 테스트: 테스트할 프로젝트에 참조 추가")
+
+### <a name="add-include-directives-for-header-files"></a>헤더 파일에 대해 #include 지시문 추가
+이제 unit test .cpp 파일에서 테스트할 형식과 함수를 선언하는 모든 헤더 파일에 대해 `#include` 지시문을 추가합니다. `#include "`를 입력하면 Intellisense가 선택할 수 있게 활성화됩니다. 다른 헤더에 대해 반복합니다.
+
+![include 지시문 추가](media/cpp-add-includes-test-project.png "C++ 테스트: 헤더 파일에 대해 include 추가")
+
+### <a name="write-test-methods"></a>테스트 메서드 작성
+> [!NOTE] 
+> 이 섹션에서는 C/C++용 Microsoft 단위 테스트 프레임워크에 대한 구문을 보여 줍니다. 이 내용은 [Microsoft.VisualStudio.TestTools.CppUnitTestFramework API 참조](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)에서 설명합니다. Google Test 문서는 [Google Test 입문](https://github.com/google/googletest/blob/master/googletest/docs/Primer.md)을 참조하세요. Boost.Test는 [Boost Test 라이브러리: 단위 테스트 프레임워크](http://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html)를 참조하세요.
+
+테스트 프로젝트의 .cpp 파일에는 테스트 코드 작성 방법의 예제로 정의된 스텁 클래스와 메서드가 있습니다. 서명은 메소드를 테스트 탐색기 창에서 검색 가능하게 하는 TEST_CLASS 및 TEST_METHOD 매크로를 사용합니다.
+
+![include 지시문 추가](media/cpp-write-test-methods.png "C++ 테스트: 헤더 파일에 대해 include 추가")
+
+TEST_CLASS 및 TEST_METHOD는 [Microsoft 기본 테스트 프레임워크]((microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)의 일부입니다. **테스트 탐색기**는 유사한 방식으로 다른 지원되는 프레임워크에서 테스트 메서드를 검색합니다.
+
+TEST_METHOD는 void를 반환합니다. 테스트 결과를 내려면 `Assert` 클래스에서 고정 메서드를 사용하여 예상되는 항목에 대해 실제 결과를 테스트합니다. 다음 예제에서는 `MyClass`에 `std::string`을 취하는 생성자가 있다고 가정합니다. 생성자가 예상대로 클래스를 초기화하는지 테스트할 수 있습니다.
+
+```cpp
+        TEST_METHOD(TestClassInit)
+        {
+            std::string name = "Bill";
+            MyClass mc(name);
+            Assert::AreEqual(name, mc.GetName());
+        }
+```
+이전 예에서 `Assert::AreEqual` 호출의 결과가 테스트 통과 또는 실패 여부를 결정합니다. Assert 클래스에는 실제 결과와 예상 결과를 비교하는 여러 다른 메서드가 있습니다. 
+
+*특성*을 테스트 메서드에 추가하여 테스트 소유자, 우선 순위 및 기타 정보를 지정할 수 있습니다. 그런 다음 이 값을 사용하여 **테스트 탐색기**에서 테스트를 정렬하고 그룹화할 수 있습니다. 자세한 내용은 [테스트 탐색기를 사용하여 단위 테스트 실행](run-unit-tests-with-test-explorer.md)을 참조하세요.
+
+
+### <a name="run-the-tests"></a>테스트 실행  
+  
+1.  **테스트** 메뉴에서 **창**, **테스트 탐색기**를 선택합니다. 다음 그림에서는 테스트를 아직 실행하지 않은 테스트 프로젝트를 보여 줍니다. 
+
+![테스트 실행 전 테스트 탐색기](media/cpp-test-explorer.png "C++ 테스트 탐색기")
+
+> [!NOTE]
+> **테스트 탐색기**와의 CTest 통합은 아직 제공되지 않습니다. CMake 주 메뉴에서 CTest 테스트를 실행합니다.
+
+2. 창에 일부 테스트가 표시되지 않는 경우 **솔루션 탐색기**에서 노드를 마우스 오른쪽 단추로 클릭하고 **빌드** 또는 **다시 빌드**를 선택하여 테스트 프로젝트를 빌드합니다. 
+  
+3.  테스트 탐색기에서 **모두 실행**을 선택하거나 실행하려는 특정 테스트를 선택합니다. 테스트를 마우스 오른쪽 단추로 클릭하면 중단점을 사용하는 디버그 모드에서 실행 등, 다른 옵션이 표시됩니다. 모든 테스트를 실행한 후에는 창에 어떤 테스트에 통과했고 어떤 테스트에 실패했는지 표시됩니다.
+
+![테스트 실행 후 테스트 탐색기](media/cpp-test-explorer-passed.png "C++ 테스트: 테스트 실행 후 탐색기")
+
+실패한 테스트에 대해서는 원인 진단을 위해 상세 정보를 제공하는 메시지가 나타납니다. 실패한 테스트를 마우스 오른쪽 단추로 클릭하고 **선택한 테스트 디버그**를 선택하여 실패가 발생한 함수를 단계별로 살펴볼 수 있습니다. 
+
+**테스트 탐색기**에 대한 자세한 내용은 [테스트 탐색기를 사용하여 단위 테스트 실행](run-unit-tests-with-test-explorer.md)을 참조하세요.
+
+단위 테스트와 관련한 모범 사례는 [단위 테스트 기본 사항](unit-test-basics.md)을 참조하세요.
+
+## <a name="see-also"></a>참고 항목
+[코드 단위 테스트](unit-test-your-code.md)
+

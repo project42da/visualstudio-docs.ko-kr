@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b73c865c-74e0-420e-89cc-43524f4aafd0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 592cde9dac7ea7b49934200469e85caf1fd58f82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 42a66b69bb2c1736ddf3cb4c07e8ef8be86ed4d4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="work-with-multiple-user-accounts"></a>Work with multiple user accounts
 여러 Microsoft 계정 및/또는 회사나 학교 계정이 있는 경우 별도로 로그인하지 않고도 모든 계정에서 리소스에 액세스할 수 있도록 모든 계정을 Visual Studio에 추가할 수 있습니다. 현재 Azure, Application Insights, Team Foundation Server 및 Office 365 서비스는 간소화된 로그인 환경을 지원합니다. 시간이 지나면서 추가 서비스를 사용할 수 있게 됩니다.
@@ -61,12 +44,12 @@ ms.lasthandoff: 02/22/2017
 
 ### <a name="access-your-azure-account-via-add-connected-service-dialog"></a>연결된 서비스 추가 대화 상자를 통해 Azure 계정 액세스  
 
-1.  C#에서 유니버설 앱 프로젝트를 만듭니다.  
+1.  C#에서 UWP 앱 프로젝트를 만듭니다.  
 
 2.  솔루션 탐색기에서 프로젝트 노드를 선택한 다음 **추가, 연결된 서비스**를 선택합니다. **연결된 서비스 추가** 마법사가 나타나고 Visual Studio 로그인 ID와 연관된 Azure 계정의 서비스 목록이 표시됩니다. 별도로 Azure에 로그인할 필요가 없습니다. 그렇지만 지정된 컴퓨터에서 처음으로 해당 리소스에 액세스하려고 할 경우 다른 계정으로 로그인해야 합니다.  
 
     > [!WARNING]
-    >  특정 컴퓨터의 Visual Studio에서 스토어 앱을 처음 만드는 경우 컴퓨터의 **설정 &#124; 업데이트 및 보안 &#124; 개발자용**으로 이동하여 장치를 개발 모드에 사용할 수 있게 하라는 메시지가 표시됩니다. 자세한 내용은 [개발에 장치 사용](https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx)을 참조하세요.  
+    >  특정 컴퓨터의 Visual Studio에서 UWP 앱을 처음 만드는 경우 컴퓨터의 **설정 &#124; 업데이트 및 보안 &#124; 개발자용**으로 이동하여 장치를 개발 모드에 사용할 수 있게 하라는 메시지가 표시됩니다. 자세한 내용은 [개발에 장치 사용](https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx)을 참조하세요.  
 
 ###  <a name="access_azure"></a> 웹 프로젝트에서 Azure Active Directory 액세스  
  Azure AD는 ASP.NET MVC 웹 응용 프로그램에서의 최종 사용자 Single Sign-In 또는 웹 API 서비스에서의 AD 인증을 지원합니다. 도메인 인증은 개별 사용자 계정 인증과 다릅니다. Active Directory 도메인에 액세스할 수 있는 사용자는 기존 Azure AD 계정을 사용하여 웹 응용 프로그램에 연결할 수 있습니다. Office 365 앱은 도메인 인증도 사용할 수 있습니다. 이 작업의 실행 과정을 보려면 웹 응용 프로그램을 만듭니다(**파일, 새 프로젝트, C#, 클라우드, ASP.NET 웹 응용 프로그램**). 새 ASP.NET 프로젝트 대화 상자에서 **인증 변경**을 선택합니다. 인증 마법사가 나타나고 응용 프로그램에서 사용할 인증 종류를 선택할 수 있습니다.  
@@ -88,5 +71,7 @@ ms.lasthandoff: 02/22/2017
  ![계정 관리자](../ide/media/vs2015_accountmanager.gif "VS2015_AccountManager")  
 
 ## <a name="revisit-the-add-connected-services-wizard-and-server-explorer"></a>연결된 서비스 추가 마법사 및 서버 탐색기 다시 확인  
- 이제 **서버 탐색기** 로 다시 이동하고 Azure 노드를 마우스 오른쪽 단추로 클릭한 후 **구독 관리 및 필터링**을 선택합니다. 현재 계정 옆에 있는 드롭다운 화살표를 클릭하여 새 계정을 선택하고 서버 탐색기에서 표시할 구독을 선택합니다. 지정된 구독과 연결된 모든 서비스가 표시되어야 합니다. 두 번째 계정을 사용하여 Visual Studio IDE에 로그인하지 않더라도 해당 계정의 서비스 및 리소스에 로그인됩니다. **프로젝트, 연결된 서비스 추가** 및 **팀, Team Foundation Server에 연결**의 경우에도 마찬가지입니다.
+ 이제 **서버 탐색기** 로 다시 이동하고 Azure 노드를 마우스 오른쪽 단추로 클릭한 후 **구독 관리 및 필터링**을 선택합니다. 현재 계정 옆에 있는 드롭다운 화살표를 클릭하여 새 계정을 선택하고 서버 탐색기에서 표시할 구독을 선택합니다. 지정된 구독과 연결된 모든 서비스가 표시되어야 합니다. 두 번째 계정을 사용하여 Visual Studio IDE에 로그인하지 않더라도 해당 계정의 서비스 및 리소스에 로그인됩니다. **프로젝트, 연결된 서비스 추가** 및 **팀, Team Foundation Server에 연결**의 경우에도 마찬가지입니다.  
 
+ ## <a name="see-also"></a>참고 항목  
+[연결된 환경](../ide/connected-environment.md)  

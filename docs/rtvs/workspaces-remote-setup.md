@@ -1,34 +1,34 @@
 ---
 title: "Visual Studio용 R 도구를 사용한 원격 작업 영역 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/30/2017
+ms.date: 06/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5778c9cf-564d-47b0-8d64-e5dc09162479
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: aaea147589f274a5b3e1de4071f980b05e8f6745
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: b708aa33b490cb01ad1e1f31664804f658f1aa55
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="setting-up-remote-workspaces"></a>원격 작업 영역 설정
 
 이 항목에서는 SSL 및 적절한 R 서비스를 사용하여 원격 서버를 구성하는 방법을 설명합니다. 이렇게 하면 RTVS(Visual Studio용 R 도구)가 해당 서버의 원격 작업 영역에 연결할 수 있습니다. 
 
 - [원격 컴퓨터 요구 사항](#remote-computer-requirements)
 - [SSL 인증서 설치](#install-an-ssl-certificate)
-- [R Services 설치](#install-r-services)
+- [Windows에 SSL 인증 설치](#install-an-ssl-certificate-on-windows)
+- [Ubuntu에 SSL 인증 설치](#install-an-ssl-certificate-on-ubuntu)
+- [Windows에 R Services 설치](#install-r-services-on-windows)
+- [Ubuntu에 R Services 설치](#install-r-services-on-ubuntu)
 - [R Services 구성](#configure-r-services)
 - [문제 해결](#troubleshooting)
 
@@ -49,9 +49,12 @@ RTVS를 사용하려면 원격 서버와의 모든 통신이 HTTP를 통해 수�
 
 추가 배경에 대해서는 Wikipedia에서 [public key certificates](https://en.wikipedia.org/wiki/Public_key_certificate)(공개 키 인증서)를 참조하세요.
 
+## <a name="install-an-ssl-certificate-on-windows"></a>Windows에 SSL 인증 설치
+SSL 인증서를 Windows에서 수동으로 설치해야 합니다. 다음 지침에 따라 SSL 인증서를 설치합니다.
+
 ### <a name="obtaining-a-self-signed-certificate"></a>자체 서명된 인증서 가져오기
 
-신뢰할 수 있는 기관에 비해 자체 서명된 인증서는 신분증을 직접 만드는 것과 비슷합니다. 물론, 이 프로세스는 신뢰할 수 있는 기관을 이용하는 것보다 훨씬 더 간단하지만 철저한 인증이 부족하여 공격자가 이러한 인증서를 서명되지 않은 인증서로 대체하고 클라이언트와 서버 간의 모든 트래픽을 캡처할 수 있습니다. 따라서 *자체 서명된 인증서는 테스트 시나리오용으로 신뢰할 수 있는 네트워크에서만 사용해야 하고 프로덕션에서는 사용하면 안 됩니다.*
+신뢰할 수 있는 인증서가 있는 경우 이 섹션을 건너뜁니다. 신뢰할 수 있는 기관에 비해 자체 서명된 인증서는 신분증을 직접 만드는 것과 비슷합니다. 물론, 이 프로세스는 신뢰할 수 있는 기관을 이용하는 것보다 훨씬 더 간단하지만 철저한 인증이 부족하여 공격자가 이러한 인증서를 서명되지 않은 인증서로 대체하고 클라이언트와 서버 간의 모든 트래픽을 캡처할 수 있습니다. 따라서 *자체 서명된 인증서는 테스트 시나리오용으로 신뢰할 수 있는 네트워크에서만 사용해야 하고 프로덕션에서는 사용하면 안 됩니다.*
 
 이 이유로 RTVS는 자체 서명된 인증서로 서버에 연결할 때 항상 다음 경고를 표시합니다.
 
@@ -94,8 +97,48 @@ RTVS를 사용하려면 원격 서버와의 모든 통신이 HTTP를 통해 수�
 
 1. **확인**을 두 번 선택하여 대화 상자를 닫고 변경 내용을 커밋합니다.
 
+## <a name="install-an-ssl-certificate-on-ubuntu"></a>Ubuntu에 SSL 인증 설치
+`rtvs-daemon` 패키지는 기본적으로 설치의 일부로 자체 서명된 인증서를 설치합니다.
 
-## <a name="install-r-services"></a>R Services 설치
+### <a name="obtaining-a-self-signed-certificate"></a>자체 서명된 인증서 가져오기
+
+자체 서명된 인증서를 사용하는 장점 및 위험에 대해서는 Windows 설명을 참조하세요. `rtvs-daemon` 패키지는 설치하는 동안 자체 서명된 인증서를 생성 및 구성합니다. 자동 생성된 자체 서명된 인증서를 바꾸려는 경우 이 작업만 수행하면 됩니다.
+
+자체 서명된 인증서를 자체적으로 발급하려면 다음을 수행합니다.
+1. Linux 컴퓨터에 SSH 또는 로그인합니다.
+2. `ssl-cert` 패키지를 설치합니다.
+    ```sh
+    sudo apt-get install ssl-cert
+    ```
+3. `make-ssl-cert`를 실행하여 기본 자체 서명된 SSL 인증서를 생성합니다.
+    ```sh
+    sudo make-ssl-cert generate-default-snakeoil --force-overwrite
+    ```
+4. 생성된 키와 PEM 파일을 PFX로 변환합니다. 생성된 PFX는 홈 폴더에 있어야 합니다.
+    ```sh
+    openssl pkcs12 -export -out ~/ssl-cert-snakeoil.pfx -inkey /etc/ssl/private/ssl-cert-snakeoil.key -in /etc/ssl/certs/ssl-cert-snakeoil.pem -password pass:SnakeOil
+    ```
+
+### <a name="configuring-rtvs-daemon"></a>RTVS 디먼 구성
+
+SSL 인증서 파일 경로(PFX 경로)는 `/etc/rtvs/rtvsd.config.json`에 설정되어야 합니다. `X509CertificateFile` 및 `X509CertificatePassword`를 각각 파일 경로 및 암호로 업데이트합니다.
+
+    ```json
+    {
+      "logging": { "logFolder": "/tmp" },
+      "security": {
+        "allowedGroup": "",
+        "X509CertificateFile": "/etc/rtvs/ssl-cert-snakeoil.pfx",
+        "X509CertificatePassword": "SnakeOil"
+      },
+      "startup": { "name": "rtvsd" },
+      "urls": "https://0.0.0.0:5444"
+    }
+    ```
+
+파일을 저장하고, `sudo systemctl restart rtvsd`로 디먼을 다시 시작합니다.
+    
+## <a name="install-r-services-on-windows"></a>Windows에 R Services 설치
 
 R 코드를 실행하려면 다음과 같이 원격 컴퓨터에 R 인터프리터가 설치되어 있어야 합니다.
 
@@ -108,10 +151,10 @@ R 코드를 실행하려면 다음과 같이 원격 컴퓨터에 R 인터프리�
 
 1. [R Services 설치 관리자](https://aka.ms/rtvs-services)를 실행하고 메시지가 표시되면 다시 부팅합니다. 설치 관리자에서 다음을 수행합니다.
 
-    -   `%PROGRAMFILES%\R Tools for Visual Studio\1.0\`에서 폴더를 만들고 모든 필요한 이진 파일을 복사합니다.
-    -   `RHostBrokerService` 및 `RUserProfileService`를 설치하고 자동으로 시작되도록 구성합니다.
-    -   `seclogon` 서비스가 자동으로 시작되도록 구성합니다.
-    -   `Microsoft.R.Host.exe` 및 `Microsoft.R.Host.Broker.exe`를 기본 포트 5444의 방화벽 인바운드 규칙에 추가합니다.
+    - `%PROGRAMFILES%\R Tools for Visual Studio\1.0\`에서 폴더를 만들고 모든 필요한 이진 파일을 복사합니다.
+    - `RHostBrokerService` 및 `RUserProfileService`를 설치하고 자동으로 시작되도록 구성합니다.
+    - `seclogon` 서비스가 자동으로 시작되도록 구성합니다.
+    - `Microsoft.R.Host.exe` 및 `Microsoft.R.Host.Broker.exe`를 기본 포트 5444의 방화벽 인바운드 규칙에 추가합니다.
 
 컴퓨터가 다시 부팅되면 R Services가 자동으로 시작됩니다.
 
@@ -119,6 +162,33 @@ R 코드를 실행하려면 다음과 같이 원격 컴퓨터에 R 인터프리�
 - **R 사용자 프로필 서비스**에서는 Windows 사용자 프로필 생성을 처리하는 권한 있는 구성 요소입니다. 새 사용자가 R 서버 컴퓨터에 처음 로그온할 때 서비스가 호출됩니다.
 
 이러한 서비스는 서비스 관리 콘솔(`compmgmt.msc`)에서 확인할 수 있습니다.  
+
+## <a name="install-r-services-on-ubuntu"></a>Ubuntu에 R Services 설치
+
+R 코드를 실행하려면 다음과 같이 원격 컴퓨터에 R 인터프리터가 설치되어 있어야 합니다.
+
+1. 다음 중 하나를 다운로드하여 설치합니다.
+
+    - [Microsoft R Open](https://mran.microsoft.com/open/)
+    - [CRAN R for Windows](https://cran.r-project.org/bin/linux/ubuntu/)
+
+    두 항목의 기능은 똑같지만 Microsoft R Open은 [Intel Math Kernel Library](https://software.intel.com/intel-mkl)의 허가로 추가적인 하드웨어 가속화된 선형 대수 라이브러리를 활용합니다.
+
+1. 설치 스크립트 [RTVS 디먼 패키지](https://aka.ms/r-remote-services-linux-binary-current)를 다운로드, 추출 및 실행합니다. 다음과 같은 필수 패키지, 해당 종속성 및 RTVS 디먼을 설치해야 합니다.
+
+    - 다운로드: `wget -O rtvs-daemon.tar.gz https://aka.ms/rtvs-daemon-current`
+    - 추출: `tar -xvzf rtvs-daemon.tar.gz`
+    - 설치 프로그램: `sudo ./rtvs-install`. DotNet 패키지를 설치하려면 새로운 신뢰할 수 있는 서명 키를 추가해야 합니다. 자동으로 설치하거나 자동화하려면 `sudo ./rtvs-install -s` 명령을 사용합니다.
+    
+
+1. 디먼을 사용하도록 설정하고 시작합니다.
+
+    - 사용하도록 설정: `sudo systemctl enable rtvsd`
+    - 디먼 시작: `sudo systemctl start rtvsd`
+
+1. 디먼이 실행 중인지 확인하고, `ps -A -f | grep rtvsd` 명령을 실행합니다. `rtvssvc` 사용자로 실행 중인 프로세스가 표시되어야 합니다. 이제 이 Linux 컴퓨터에 대한 URL을 요청하여 Visual Studio용 R 도구에서 연결할 수 있습니다.
+
+`rtvs-daemon`을 구성하려면 `man rtvsd`를 참조하세요.
 
 ## <a name="configure-r-services"></a>R Services 구성
 
@@ -177,4 +247,3 @@ R 코드를 실행하려면 다음과 같이 원격 컴퓨터에 R 인터프리�
 **질문: 이러한 솔루션을 모두 시도했는데 여전히 작동하지 않습니다. 이제 무엇을 해야 할까요?**
 
 `C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Temp`에서 로그 파일을 찾습니다. 이 폴더에는 실행된 R Broker Service의 각 인스턴스에 대한 개별 로그 파일이 들어 있습니다. 서비스를 다시 시작할 때마다 새 로그 파일이 생성됩니다. 가장 최근 로그 파일에서 발생할 수 있는 문제에 대한 단서를 확인합니다.
-

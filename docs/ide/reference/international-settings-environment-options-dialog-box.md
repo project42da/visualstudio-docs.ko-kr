@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,30 +18,15 @@ helpviewer_keywords:
 - Options dialog box, international settings
 - languages, specifying default
 ms.assetid: e3a8815c-6995-4099-8e88-34f91fad55b2
-caps.latest.revision: 14
-author: kempb
-ms.author: kempb
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: b92985ecd674fe750504c3aa85634b8c09fcdd5a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 7a1cf847b87e7902ef535359420ea105a48dc9a4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="international-settings-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 국가별 설정
 국가별 설정 페이지를 사용하면 컴퓨터에 여러 언어 버전의 IDE(통합 개발 환경)가 설치된 경우 기본 언어를 변경할 수 있습니다. **도구** 메뉴에서 **옵션**을 선택한 다음 **환경** 폴더에서 **국가별 설정**을 선택하여 이 대화 상자에 액세스할 수 있습니다. 이 페이지가 목록에 나타나지 않으면 **옵션** 대화 상자에서 **모든 설정 표시**를 선택합니다.  
@@ -54,8 +38,8 @@ ms.lasthandoff: 05/24/2017
  설치된 제품 언어 버전에 대해 사용 가능한 언어를 나열합니다. 이 옵션은 컴퓨터에 여러 언어 버전이 설치되어 있지 않은 경우 사용할 수 없습니다. 제품의 여러 언어나 제품의 혼합 언어 설치가 환경을 공유하는 경우 선택 언어는 **Microsoft Windows와 같음**으로 변경됩니다.  
   
 > [!CAUTION]
->  여러 언어가 설치된 시스템에서 Visual C++ 빌드 도구(cl.exe, link.exe, nmake.exe, bscmake.exe 및 관련 파일)는 이 설정의 영향을 받지 않습니다. 이러한 도구는 마지막으로 설치된 언어 버전을 사용하며, Visual C++ 빌드 도구에서는 DLL 모델을 사용하지 않기 때문에 이전에 설치된 언어에 대한 도구가 덮어쓰입니다.  
+>  여러 언어가 설치된 시스템에서 Visual C++ 빌드 도구(cl.exe, link.exe, nmake.exe, bscmake.exe 및 관련 파일)는 이 설정의 영향을 받지 않습니다. 이러한 도구는 마지막으로 설치된 언어 버전을 사용합니다. Visual C++ 빌드 도구에서는 DLL 모델을 사용하지 않기 때문에 이전에 설치된 언어에 대한 빌드 도구가 덮어쓰입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [언어 팩 설치](../../install/install-visual-studio.md#install-language-packs)   
+ [언어 팩 설치](../../install/install-visual-studio.md#step-6---install-language-packs-optional)   
  [옵션 대화 상자, 환경](../../ide/reference/environment-options-dialog-box.md)

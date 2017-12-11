@@ -1,23 +1,12 @@
 ---
-title: "테스트 탐색기를 사용하여 기존 C++ 응용 프로그램 유닛 테스트 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 7d08de69-c32e-4f0b-89aa-75347b15fb82
-caps.latest.revision: "11"
-ms.author: douge
-manager: douge
-ms.openlocfilehash: 665e16720466faff5dd52635066198e36d58d117
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+redirect_url: /visualstudio/test/how-to-use-microsoft-test-framework-for-cpp
+ms.openlocfilehash: 7ab917a55d9a2d00a8d4635e2de45cd43cbe02f2
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="unit-testing-existing-c-applications-with-test-explorer"></a>테스트 탐색기를 사용하여 기존 C++ 응용 프로그램 유닛 테스트
+# <a name="how-to-use-the-microsoft-unit-testing-framework-for-c"></a>Microsoft Unit Testing Framework for C++ 사용 방법
 기존 응용 프로그램을 변경하기 전에 단위 테스트로 코드가 올바른지 확인해야 합니다. 이렇게 하면 변경으로 인해 버그가 발생하지 않았음을 확신할 수 있습니다. 응용 프로그램에 아직 단위 테스트가 없으면 이 항목에 설명된 기술을 사용하여 단위 테스트를 추가할 수 있습니다. 여기서는 기존 Visual C++ 코드에 대해 코드 테스트 방법을 결정하는 것으로 시작하여 테스트를 생성 및 작성하고 마지막으로 테스트를 실행하는 단위 테스트를 추가하는 방법에 대해 설명합니다.  
   
 ## <a name="deciding-how-to-test-your-code"></a>코드 테스트 방법 결정  
@@ -29,7 +18,7 @@ ms.lasthandoff: 10/27/2017
   
  테스트할 인터페이스를 노출할지 여부에 따라 제품 코드를 테스트하는 방법에는 여러 가지가 있습니다. 다음 방법 중 하나를 선택합니다.  
   
- **단위 테스트에는 테스트 중인 코드에서 내보낸 함수만 사용됩니다.**  
+ **단위 테스트가 테스트 중인 코드에서 내보낸 함수만 호출할 수 있음:**  
  개별 테스트 프로젝트를 추가합니다. 테스트 프로젝트에서 테스트 중인 프로젝트에 대한 참조를 추가합니다.  
   
  [테스트 프로젝트에서 내보낸 함수를 참조하려면](#projectRef) 절차로 이동합니다.  
@@ -46,7 +35,7 @@ ms.lasthandoff: 10/27/2017
   
  [테스트 중인 코드를 정적 라이브러리로 변경하려면](#staticLink) 절차로 이동합니다.  
   
- **단위 테스트는 개인 함수 및 데이터를 사용해야 하며 코드를 DLL(동적 연결 라이브러리)로 빌드해야 합니다.**  
+ **단위 테스트는 개인 멤버 함수 및 데이터를 사용해야 하며 코드를 DLL(동적 연결 라이브러리)로 빌드해야 함:**  
  제품 코드와 동일한 프로젝트에 단위 테스트를 추가합니다.  
   
  [동일한 프로젝트에 단위 테스트를 추가하려면](#sameProject) 절차로 이동합니다.  
@@ -65,9 +54,9 @@ ms.lasthandoff: 10/27/2017
   
  [개체 또는 라이브러리 파일에 테스트를 연결하려면](#objectRef) 절차를 계속 진행합니다.  
   
-###  <a name="projectRef"></a> 테스트 프로젝트에서 내보낸 함수를 참조하려면  
+###  <a name="projectRef"></a> 테스트 프로젝트에서 내보낸 DLL 함수를 참조하려면  
   
--   테스트 중인 프로젝트에서 테스트할 함수를 내보내는 경우 테스트 프로젝트에서 코드 프로젝트에 대한 참조를 추가할 수 있습니다.  
+-   테스트 중인 프로젝트가 테스트할 함수를 내보내는 DLL인 경우, 테스트 프로젝트에서 코드 프로젝트에 대한 참조를 추가할 수 있습니다.  
   
     1.  C++ 테스트 프로젝트를 만듭니다.  
   
@@ -162,8 +151,11 @@ ms.lasthandoff: 10/27/2017
   
 ## <a name="run-the-tests"></a>테스트 실행  
   
-1.  **보기** 메뉴에서 **다른 창**, **테스트 탐색기**를 선택합니다.  
+1.  **테스트** 메뉴에서 **창**, **테스트 탐색기**를 선택합니다.  
+2. 창에 일부 테스트가 표시되지 않는 경우 **솔루션 탐색기**에서 노드를 마우스 오른쪽 단추로 클릭하고 **빌드** 또는 **다시 빌드**를 선택하여 테스트 프로젝트를 빌드합니다. 
   
-2.  테스트 탐색기에서 **모두 실행**을 선택합니다.  
+2.  테스트 탐색기에서 **모두 실행**을 선택하거나 실행하려는 특정 테스트를 선택합니다. 테스트를 마우스 오른쪽 단추로 클릭하면 중단점을 사용하는 디버그 모드에서 실행 등, 다른 옵션이 표시됩니다.
   
- 자세한 내용은 [빠른 시작: 테스트 탐색기를 사용한 테스트 기반 개발](../test/quick-start-test-driven-development-with-test-explorer.md)을 참조하세요.
+## <a name="see-also"></a>참고 항목
+[빠른 시작: 테스트 탐색기를 사용한 테스트 기반 개발](../test/quick-start-test-driven-development-with-test-explorer.md)
+

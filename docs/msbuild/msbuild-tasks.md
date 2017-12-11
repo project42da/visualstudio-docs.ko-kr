@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - tasks
 - MSBuild, tasks
 ms.assetid: 5d3cc4a7-e5db-4f73-b707-8b6882fddcf8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: cde7cf37c372caff4faa9ec88ecc5958112f0c6f
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: fc2afbe7b0226cb5983aa3022ff4b24ac31fe7aa
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-tasks"></a>MSBuild 작업
 빌드 플랫폼에는 빌드 프로세스 중에 동작을 필요한 수만큼 실행할 수 있는 기능이 필요합니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서는 *작업*을 통해 이러한 동작을 수행합니다. 작업은 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서 원자성 빌드 작업을 수행하는 데 사용하는 실행 코드 단위입니다.  
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/22/2017
   
  또한 작업 클래스는 프로젝트 파일에서 작업에 사용 가능한 입력 및 출력 매개 변수를 정의합니다. 이름이 같은 해당 특성을 [작업](../msbuild/task-element-msbuild.md) 요소에 배치하면 작업 클래스가 표시하는 설정 가능한 모든 공용 비정적/비추상 속성에 액세스할 수 있습니다.  
   
- <xref:Microsoft.Build.Framework.ITask> 인터페이스를 구현하는 관리되는 클래스를 작성하여 작업을 직접 작성할 수 있습니다. 자세한 내용은 [작업 작성](../msbuild/task-writing.md)을 참조하세요.  
+ <xref:Microsoft.Build.Framework.ITask> 인터페이스를 구현하는 관리되는 클래스를 만들어 자체의 작업을 작성할 수 있습니다. 자세한 내용은 [작업 작성](../msbuild/task-writing.md)을 참조하세요.  
   
 ## <a name="executing-a-task-from-a-project-file"></a>프로젝트 파일에서 작업 실행  
  프로젝트 파일에서 작업을 실행하기 전에 먼저 [UsingTask](../msbuild/usingtask-element-msbuild.md) 요소를 사용하여 작업을 구현하는 어셈블리의 형식을 작업 이름에 매핑해야 합니다. 그러면 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]가 프로젝트 파일에서 작업을 찾을 때 작업의 실행 논리를 찾을 위치를 알 수 있습니다.  

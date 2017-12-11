@@ -1,27 +1,27 @@
 ---
-title: "문제 보고"
+title: "문제 보고 | Microsoft Docs"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 1C7AC52E-754E-473F-A5B5-00C3A40DAACD
+ms.openlocfilehash: f391ef0b21ba6d500e88908d806ea3958c771bed
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 41fd1949e7c3ea635b847c3e29648ed6e02a414e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 문제를 보고하는 방법
 
 Mac용 Visual Studio에서 문제가 발생할 경우 Microsoft에서 문제를 진단하여 해결할 수 있도록 알려주시기 바랍니다. 
 
 ## <a name="how-to-report-a-problem"></a>문제 보고 방법
 
-Mac용 Visual Studio의 문제를 보고하려면 홈페이지에 있는 **문제 보고** 링크를 사용하세요.
+Mac용 Visual Studio와 관련된 문제를 보고하려면 메뉴 모음에서 **도움말 > 문제 보고**를 선택합니다.
 
 ![문제 보고 링크](media/report-problem-image1.png)
+
+시작 페이지에 있는 **문제 보고** 링크를 사용할 수도 있습니다.
 
 그러면 **문제 보고** 웹 페이지가 표시됩니다. 이 페이지에서 기존 문제를 모두 확인하고, 유사한 문제에 투표하고, 다른 사람들이 보고한 문제에 대한 해결책을 제출할 수 있습니다.
 

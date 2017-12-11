@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio용 R 도구의 작업 영역 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/30/2017
+ms.date: 06/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d610279c-d6c3-4084-939a-bf042f64d4dd
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 559f5832be6d4fa87be39941401f2222e075b7a7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 4764fb9fc6b0cd2e6160540fdec3f33370d81128
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="controlling-where-r-code-runs-with-workspaces"></a>작업 영역에서 R 코드가 실행되는 위치 제어
 
 RTVS(Visual Studio용 R 도구)의 작업 영역에서는 R 세션이 실행되는 위치를 구성할 수 있고 이 구성은 로컬 및 원격 컴퓨터에서 둘 다 수행할 수 있습니다. 목적은 잠재적으로 더 강력한 클라우드 기반 컴퓨터를 활용하는 기능을 제공하는 비슷한 사용자 환경이 있는 한쪽 컴퓨터에서 작업하도록 허용하는 것입니다.
@@ -37,6 +34,7 @@ RTVS(Visual Studio용 R 도구)의 작업 영역에서는 R 세션이 실행되�
 - [작업 영역 저장 및 다시 설정](#saving-and-resetting-a-workspace)
 - [로컬 작업 영역](#local-workspaces)
 - [원격 작업 영역](#remote-workspaces)
+- [원격 작업 영역 로그온](#remote-workspace-logon)
 - [작업 영역 간 전환](#switching-between-workspaces)
 - [로컬 및 원격 컴퓨터의 디렉터리](#directories-on-local-and-remote-computers)
 - [원격 작업 영역으로 프로젝트 파일 복사](#copying-project-files-to-remote-workspaces)
@@ -75,6 +73,17 @@ Visual Studio는 원격 작업 영역을 자동으로 검색하지 않으므로 
 > [!Note]
 > 원격 작업 영역은 미리 보기에 효과적입니다. 향후 릴리스에서 파일 동기화 문제 구현을 개선하기 위한 작업이 진행 중이며 귀하의 아이디어와 피드백을 기다리고 있습니다.
 
+## <a name="remote-workspace-logon"></a>원격 작업 영역 로그온
+
+원격 작업 영역에 로그온하려면 사용자 이름 및 암호를 사용해야 합니다.
+
+### <a name="logon-to-windows-workspace"></a>Windows 작업 영역에 로그온
+
+원격 컴퓨터가 도메인 계정을 사용하도록 설정되어 있는 경우 도메인 로그온을 사용하여 원격 작업 영역에 액세스할 수 있습니다. 그렇지 않을 경우 `machine-name\username` 형식을 사용하여 원격 컴퓨터에서 컴퓨터 계정을 사용하여 로그온해야 합니다.
+
+### <a name="logon-to-linux-workspace"></a>Linux 작업 영역으로 로그온
+
+Linux 계정에 로그온하려면 `<<unix>>\username` 형식을 사용합니다. 예를 들어 이름이 `ruser`인 계정이 있는 경우 사용자 이름을 `<<unix>>\ruser`로 입력해야 합니다.
 
 ## <a name="switching-between-workspaces"></a>작업 영역 간 전환
 
@@ -139,4 +148,3 @@ Visual Studio에서 R 프로젝트를 사용할 경우 원격 작업 영역을 �
 ## <a name="copying-files-from-a-remote-workspace"></a>원격 작업 영역에서 파일 복사
 
 R 스크립트가 서버의 파일을 생성할 경우 `rtvs::fetch_file` 함수를 사용하여 해당 파일을 다시 클라이언트로 복사할 수 있습니다. 이 함수는 최소한 컴퓨터로 복사할 파일의 원격 경로를 허용하고 경우에 따라 컴퓨터의 대상 경로를 허용합니다. 경로를 지정하지 않으면 파일이 `%userprofile%\Downloads` 폴더로 복사됩니다.
-

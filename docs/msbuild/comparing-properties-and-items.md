@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- msbuild, msbuild properties
+helpviewer_keywords: msbuild, msbuild properties
 ms.assetid: b9da45ae-d6a6-4399-8628-397deed31486
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: cf04644c98062ffb2aee5b4b826f8426070c3d60
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: f1a0f6df56cebe769ec514abea49ade0083c512e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="comparing-properties-and-items"></a>속성 및 항목 비교
 MSBuild 속성 및 항목은 둘 다 작업에 정보를 전달하고, 조건을 확인한 다음 프로젝트 파일 전체에서 참조할 수 있는 값을 저장하는 데 사용됩니다.  
@@ -93,7 +76,7 @@ MSBuild 속성 및 항목은 둘 다 작업에 정보를 전달하고, 조건을
   
  속성은 특성으로 작업에 전달됩니다. 작업 내에서 MSBuild 속성은 값이 문자열 간에 변환될 수 있는 속성 형식으로 표시됩니다. 지원되는 속성 형식에는 `bool`, `char`, `DateTime`, `Decimal`, `Double`, `int`, `string` 및 <xref:System.Convert.ChangeType%2A>에서 처리할 수 있는 모든 형식이 포함되어 있습니다.  
   
- 항목은 작업에 <xref:Microsoft.Build.Framework.ITaskItem>개체로 전달됩니다. 작업 내에서 <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A>은 항목의 값을 나타내며 <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A>는 해당 메타데이터를 검색합니다.  
+ 항목은 <xref:Microsoft.Build.Framework.ITaskItem> 개체로 작업에 전달됩니다. 작업 내에서 <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A>는 항목의 값을 나타내며 <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A>는 해당 메타데이터를 검색합니다.  
   
  항목 종류의 항목 목록은 `ITaskItem` 개체의 배열로 전달될 수 있습니다. .NET Framework 3.5부터는 `Remove` 특성을 사용하여 항목 목록에서 항목을 제거할 수 없습니다. 항목 목록에서 항목을 제거할 수 있으므로, 항목 종류의 항목이 0개일 수도 있습니다. 항목 목록이 작업에 전달되면 작업의 코드에서 이러한 가능성을 확인해야 합니다.  
   

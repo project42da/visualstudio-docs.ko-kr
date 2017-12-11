@@ -1,99 +1,101 @@
 ---
 title: "연산자(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "JavaScript, 연산자"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: JavaScript, operators
 ms.assetid: b8602b69-aba9-46e8-86e1-cb533ad41410
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c9d0a098418399dba19b77a12c057a3fba334e31
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-# 연산자(JavaScript)
-[!INCLUDE[javascript](../javascript/includes/javascript-md.md)]에서는 산술, 논리, 비트 및 할당 연산자 뿐만 아니라 다른 연산자도 사용할 수 있습니다.  설명과 예제는 특정 연산자에 대한 항목을 참조하십시오.  
+# <a name="operators-javascript"></a>연산자(JavaScript)
+[!INCLUDE[javascript](../javascript/includes/javascript-md.md)]에는 산술, 논리, 비트 연산, 할당 및 일부 기타 연산자를 포함한 모든 범위의 연산자가 있습니다. 설명 및 예제를 보려면 특정 연산자에 대한 항목을 참조하세요.  
   
-## 계산 연산자  
-  
-|설명|기호|  
-|--------|--------|  
-|[단항 부정 연산자](../javascript/reference/subtraction-operator-decrement-javascript.md)|\-|  
-|[Increment](../javascript/reference/increment-and-decrement-operators-javascript.md)|\+\+|  
-|[Decrement](../javascript/reference/increment-and-decrement-operators-javascript.md)|\-\-|  
-|[곱하기](../javascript/reference/multiplication-operator-decrement-javascript.md)|\*|  
-|[나누기](../javascript/reference/division-operator-decrement-javascript.md)|\/|  
-|[나머지 연산자](../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
-|[추가](../javascript/reference/addition-operator-decrement-javascript.md)|\+|  
-|[빼기](../javascript/reference/subtraction-operator-decrement-javascript.md)|\-|  
-  
-## 논리 연산자  
+## <a name="computational-operators"></a>계산 연산자  
   
 |설명|기호|  
-|--------|--------|  
-|[논리 부정 연산자](../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|\!|  
+|-----------------|------------|  
+|[단항 부정](../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
+|[증분](../javascript/reference/increment-and-decrement-operators-javascript.md)|++|  
+|[감소](../javascript/reference/increment-and-decrement-operators-javascript.md)|--|  
+|[곱하기](../javascript/reference/multiplication-operator-decrement-javascript.md)|*|  
+|[나누기](../javascript/reference/division-operator-decrement-javascript.md)|/|  
+|[모듈러스 산술](../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
+|[더하기](../javascript/reference/addition-operator-decrement-javascript.md)|+|  
+|[빼기](../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
+  
+## <a name="logical-operators"></a>논리 연산자  
+  
+|설명|기호|  
+|-----------------|------------|  
+|[논리적 NOT](../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|!|  
 |[보다 작음](../javascript/reference/comparison-operators-javascript.md)|\<|  
-|[보다 큼](../javascript/reference/comparison-operators-javascript.md)|\>|  
-|[작거나 같음](../javascript/reference/comparison-operators-javascript.md)|\<\=|  
-|[크거나 같음](../javascript/reference/comparison-operators-javascript.md)|\>\=|  
-|[같음](../javascript/reference/comparison-operators-javascript.md)|\=\=|  
-|[같지 않음](../javascript/reference/comparison-operators-javascript.md)|\!\=|  
-|[논리곱](../javascript/reference/logical-and-operator-decrement-javascript.md)|&&|  
-|[논리합](../javascript/reference/logical-or-operator-decrement-javascript.md)|&#124;&#124;|  
-|[조건\(삼항\)](../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|?:|  
+|[보다 큼](../javascript/reference/comparison-operators-javascript.md)|>|  
+|[작거나 같음](../javascript/reference/comparison-operators-javascript.md)|\<=|  
+|[크거나 같음](../javascript/reference/comparison-operators-javascript.md)|>=|  
+|[같음](../javascript/reference/comparison-operators-javascript.md)|==|  
+|[같지 않음](../javascript/reference/comparison-operators-javascript.md)|!=|  
+|[논리적 AND](../javascript/reference/logical-and-operator-decrement-javascript.md)|&&|  
+|[논리적 OR](../javascript/reference/logical-or-operator-decrement-javascript.md)|&#124;&#124;|  
+|[조건부(삼항)](../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|?:|  
 |[쉼표](../javascript/reference/comma-operator-decrement-javascript.md)|,|  
-|[완전 같음](../javascript/reference/comparison-operators-javascript.md)|\=\=\=|  
-|[완전 같지 않음](../javascript/reference/comparison-operators-javascript.md)|\!\=\=|  
+|[완전 같음](../javascript/reference/comparison-operators-javascript.md)|===|  
+|[완전 같지 않음](../javascript/reference/comparison-operators-javascript.md)|!==|  
   
-## 비트 연산자  
+## <a name="bitwise-operators"></a>비트 연산자  
   
 |설명|기호|  
-|--------|--------|  
+|-----------------|------------|  
 |[비트 NOT](../javascript/reference/bitwise-not-operator-decrement-tilde-javascript.md)|~|  
-|[비트 왼쪽 시프트](../javascript/reference/bitwise-left-shift-operator-decrement-javascript.md)|\<\<|  
-|[비트 오른쪽 시프트](../javascript/reference/bitwise-right-shift-operator-decrement-javascript.md)|\>\>|  
-|[부호 없는 오른쪽 시프트](../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|\>\>\>|  
+|[비트 왼쪽 시프트](../javascript/reference/bitwise-left-shift-operator-decrement-javascript.md)|<\<|  
+|[비트 오른쪽 시프트](../javascript/reference/bitwise-right-shift-operator-decrement-javascript.md)|>>|  
+|[부호 없는 오른쪽 시프트](../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|>>>|  
 |[비트 AND](../javascript/reference/bitwise-and-operator-decrement-javascript.md)|&|  
 |[비트 XOR](../javascript/reference/bitwise-xor-operator-decrement-hat-javascript.md)|^|  
 |[비트 OR](../javascript/reference/bitwise-or-operator-decrement-javascript.md)|&#124;|  
   
-## 할당 연산자  
+## <a name="assignment-operators"></a>할당 연산자  
   
 |설명|기호|  
-|--------|--------|  
-|[할당 연산](../javascript/reference/assignment-operator-decrement-equal-javascript.md)|\=|  
-|[복합 할당](../javascript/reference/compound-assignment-operators-javascript.md)|*OP*\=\(예: \+\= 및 &\=\)|  
+|-----------------|------------|  
+|[할당](../javascript/reference/assignment-operator-decrement-equal-javascript.md)|=|  
+|[복합 할당](../javascript/reference/compound-assignment-operators-javascript.md)|*연산자*=(예: += 및 &=)|  
   
-## 기타 연산자  
+## <a name="miscellaneous-operators"></a>기타 연산자  
   
 |설명|기호|  
-|--------|--------|  
-|[삭제](../javascript/reference/delete-operator-decrementjavascript.md)|삭제|  
+|-----------------|------------|  
+|[delete](../javascript/reference/delete-operator-decrementjavascript.md)|삭제|  
 |[typeof](../javascript/reference/typeof-operator-decrementjavascript.md)|typeof|  
 |[void](../javascript/reference/void-operator-decrementjavascript.md)|void|  
 |[instanceof](../javascript/reference/instanceof-operator-decrementjavascript.md)|instanceof|  
 |[new](../javascript/reference/new-operator-decrementjavascript.md)|new|  
-|[in](../javascript/reference/in-operator-decrementjavascript.md)|in|  
+|[in](../javascript/reference/in-operator-decrementjavascript.md)|의|  
   
-## 같음 및 완전 같음  
- \=\=\(같음\) 및 \=\=\=\(완전 같음\)의 경우 같음 연산자가 같음을 확인하기 전에 서로 다른 형식의 값을 강제 변환한다는 차이점이 있습니다.  예를 들어 문자열 "1"과 숫자 1을 비교하면 두 값이 같은 것으로 비교됩니다.  반면에 완전 같음 연산자의 경우 값을 서로 다른 형식으로 강제 변환하지 않기 때문에 문자열 "1"이 숫자 1과 같은 것으로 비교되지 않습니다.  
+## <a name="equality-and-strict-equality"></a>같음 및 완전 같음  
+ ==(같음)과 ===(완전 같음)의 차이는 같음 연산자가 같음을 확인하기 전에 다른 형식의 값을 강제 변환한다는 것입니다. 예를 들어 문자열 "1"과 숫자 1을 비교할 때 true로 비교됩니다. 반면에, 완전 같음 연산자는 값을 다른 형식으로 강제 변환하지 않으므로 문자열 "1"을 숫자 1과 동일하게 비교합니다.  
   
- 기본 문자열, 숫자 및 부울은 해당 값으로 비교됩니다.  같은 값을 가진 경우 같은 것입니다.  `Array`, `Function`, `String`, **Number**, `Boolean`, **Error,** `Date`, `RegExp` 등의 개체는 참조를 사용하여 비교합니다.  이러한 형식의 두 변수가 동일한 값을 갖더라도 완전히 같은 개체를 참조하는 경우에만 같은 것입니다.  
+ 기본 문자열, 숫자 및 부울 값이 값으로 비교됩니다. 동일한 값이 있는 경우 같음입니다. 개체(`Array`, `Function`, `String`, **Number**, `Boolean`, **Error**, `Date` 및 `RegExp` 개체)는 참조로 비교됩니다. 이러한 형식의 두 변수가 동일한 값을 갖고 있어도 정확히 동일한 개체를 참조하는 경우에만 동일합니다.  
   
- 예를 들면 다음과 같습니다.  
+ 예:  
   
-```javascript  
+```JavaScript  
 // Two strings with the same value.  
 var string1 = "Hello";  
 var string2 = "Hello";  

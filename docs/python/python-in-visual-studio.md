@@ -1,34 +1,36 @@
 ---
 title: "Visual Studio에서 Python | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 09/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: hero-article
 ms.assetid: 33f4f6fb-0ae4-4234-9df2-531f2d3af17f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 652d69ed30c101e7ea8d9b85d9b71e597975d555
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 082ac09fcc1bb466de891d0daa7178e505c35770
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio에서 Python 작업
 
 Python은 안정적이고 유연하며 배우기 쉬울뿐만 아니라 모든 운영 체제에서 무료로 사용할 수 있으며, 유용한 개발자 커뮤니티와 다양한 무료 라이브러리에서 지원되며 널리 사용되는 프로그래밍 언어입니다. Python은 웹 응용 프로그램, 웹 서비스, 데스크톱 앱, 스크립팅 및 과학적 컴퓨팅 등 모든 방식의 개발을 지원하며 대학, 과학자, 아마추어 개발자 및 전문 개발자 등 많은 분야에 사용됩니다. [python.org](https://www.python.org) 및 [Python for Beginners](https://www.python.org/about/gettingstarted/)(초보자를 위한 Python)에서 이 언어에 대해 자세히 알아볼 수 있습니다.
 
 Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visual Studio 2017)와 무료 Visual Studio용 Python 도구 확장(Visual Studio 2015 및 이전 버전)을 통해 Python 언어에 대한 [오픈 소스](https://github.com/Microsoft/ptvs) 지원을 제공합니다. Python은 현재 Mac용 Visual Studio에서 지원되지 않지만 Visual Studio Code를 통해 Mac 및 Linux에서 사용할 수 있습니다([아래 질문 및 답변](#questions-and-answers) 참조).
 
-[설치 지침](installation.md)에 따라 Python 워크로드를 설치한 후 아래 링크를 사용하여 Python 관련 기능 및 Visual Studio 자체 기능에 대해 자세히 알아봅니다.
+시작하려면 다음을 수행합니다.
+
+- [설치 지침](installation.md)에 따라 Python 워크로드를 설치합니다.
+- 빠른 시작을 하나 이상 수행하여 프로젝트를 만듭니다. 확실하지 않은 경우 [템플릿에서 프로젝트 만들기](quickstart-02-project-from-template.md)부터 시작합니다.
+- 전체 종단 간 환경을 위한 [Visual Studio에서 Python 사용](vs-tutorial-01-01.md) 자습서를 수행합니다.
+- 그런 다음 아래 링크를 사용하여 Python 관련 기능 및 Visual Studio 자체의 기능을 탐색합니다.
 
 | 기능 | 설명 | 일반 Visual Studio 설명서 | 
 | --- | --- | --- |
@@ -44,9 +46,10 @@ Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visu
 
 또한 Python 워크로드는 Windows, Mac OS X, Linux 앱에서 Azure 서비스를 간편하게 사용할 수 있도록 해주는 [Python용 Azure SDK](azure-sdk-for-python.md)도 포함합니다.
 
-주요 기능에 대한 개요를 제공하는 YouTube의 [getting started and deep dive videos](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)(시작 및 자세히 알아보기 동영상) 시리즈입니다.
+동영상 소개는 Microsoft Virtual Academy에 있는 짤막한 [Visual Studio용 Python 도구](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121) 과정을 참조하세요(총 22분 정도). 
 
-[![Python 도구 동영상](media/video-general.png)](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567]
+
 
 ## <a name="questions-and-answers"></a>질문과 대답
 
@@ -195,4 +198,3 @@ Visual Studio 버전(version 및 edition)에서 지원되는 기능:
 - [IIS 및 Python 간 WFastCGI 브리지](https://pypi.python.org/pypi/wfastcgi)(영문)(python.org)
 - [Microsoft Virtual Academy의 무료 Python 코스](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 - [Microsoft Virtual Academy의 상위 Python 질문](https://aka.ms/mva-top-python-questions)
-

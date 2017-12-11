@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 05/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- unit testing, create unit tests
+helpviewer_keywords: unit testing, create unit tests
 ms.assetid: 9DE41406-8D39-427E-99D9-987E99103B73
-caps.latest.revision: 56
+caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
-ms.openlocfilehash: b36882588281fc95ff4814c148cd428d09196fa1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/08/2017
-
+ms.openlocfilehash: 8ca7133aa2cb4f02e3a8761d38fb22fcc2ce6122
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="developer-testing-tools-scenarios-and-capabilities"></a>개발자 테스트 도구, 시나리오 및 호환성
 
@@ -68,7 +51,7 @@ IntelliTest는 새로운 코드나 기존 코드에 대해 단위 테스트를 �
 
 최고 수준 또는 커뮤니티 승인 UI 테스트를 사용하여 UI(사용자 인터페이스)를 테스트합니다.
 코딩된 UI 테스트를 통해 완전 자동화된 테스트를 만들어 응용 프로그램 사용자 인터페이스 기능과 동작의 유효성을 검사할 수 있습니다.
-코딩된 UI 테스트는 XAML 기반 Windows 스토어 앱, 브라우저 앱, SharePoint 앱을 포함한 다양한 기술에서 UI 테스트를 자동화할 수 있습니다.
+코딩된 UI 테스트는 XAML 기반 UWP 앱, 브라우저 앱, SharePoint 앱을 포함한 다양한 기술에서 UI 테스트를 자동화할 수 있습니다.
 
 최고 수준의 코딩된 UI 테스트 또는 Selenium을 사용한 제네릭 브라우저 기반 UI 테스트를 선택할지 여부와 관계없이 Visual Studio는 필요한 모든 도구를 제공합니다. 
 
@@ -76,7 +59,7 @@ IntelliTest는 새로운 코드나 기존 코드에 대해 단위 테스트를 �
 
 * [UI 자동화를 사용하여 코드 테스트](use-ui-automation-to-test-your-code.md)
 * [코딩된 UI 테스트 만들기, 편집 및 유지 관리 시작](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
-* [코딩된 UI 테스트를 사용하여 Windows 스토어 앱 테스트](test-windows-store-8-1-apps-with-coded-ui-tests.md)
+* [코딩된 UI 테스트를 사용하여 UWP 앱 테스트](test-windows-store-8-1-apps-with-coded-ui-tests.md)
 * [코딩된 UI 테스트를 사용하여 Windows Phone 앱 테스트](test-windows-phone-8-1-apps-with-coded-ui-tests.md)
 * [코딩된 UI 테스트를 사용하여 SharePoint 응용 프로그램 테스트](testing-sharepoint-2010-applications-with-coded-ui-tests.md)
 * [Introduction to Coded UI Tests with Visual Studio Enterprise (Lab)](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Introduction%20to%20Coded%20UI%20Tests%20with%20Visual%20Studio%20Enterprise%202015.docx)(Visual Studio Enterprise의 코딩된 UI 테스트 소개(랩))
@@ -118,4 +101,3 @@ Visual Studio는 확장 가능하고 이제 NUnit 및 xUnit.net과 같은 타사
 * [Speeding up Unit Test Execution in Team Foundation Server](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/30/speeding-up-test-execution-in-tfs.aspx)(Team Foundation Server의 단위 테스트 실행 시간 단축)
 * [Parallel and Context Sensitive Unit Test Execution](https://blogs.msdn.microsoft.com/visualstudioalm/2016/02/08/parallel-and-context-sensitive-test-execution-with-visual-studio-2015-update-1/)(병렬 및 상황에 맞는 단위 테스트 실행)
 * [Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio (Lab)](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Unit%20Testing,%20Code%20Coverage%20and%20Code%20Clone%20Analysis%20with%20Visual%20Studio%202015.docx)(Visual Studio의 유닛 테스트, 코드 검사 및 코드 복제본 분석(랩))
-

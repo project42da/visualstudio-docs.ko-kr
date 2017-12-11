@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,30 +13,15 @@ helpviewer_keywords:
 - performance, analyzing
 - profiling applications, walkthroughs
 ms.assetid: 36f6f123-0c14-4763-99c3-bd60ecb95b87
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: a20a64818982484a56ba7dc82af890c729da40e4
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: d52f6bfe745cf7e8684094cf9244b6eedcba13a9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-identifying-performance-problems"></a>연습: 성능 문제 확인
 이 연습에서는 성능 문제를 파악하도록 응용 프로그램을 프로파일링하는 방법을 설명합니다.  
@@ -103,7 +87,7 @@ ms.lasthandoff: 04/05/2017
   
      **실행 부하 과다 경로** 목록을 조사하여 목록 끝부분에 있는 PeopleTrax 함수가 PeopleNS.People.GetNames 메서드임을 확인합니다. 이 메서드의 위치를 분석하면 효율적입니다. 함수 이름을 클릭하여 **함수 정보** 뷰에서 GetNames의 정보를 표시합니다.  
   
-2.  **함수 정보** 뷰에느 두 개의 창이 있습니다. 비용 배분 창에서는 함수가 수행한 작업, 해당 함수가 호출한 함수가 수행한 작업, 그리고 샘플링된 인스턴스 수에서 함수를 호출한 함수가 차지하는 비율을 보여 주는 그래픽 뷰가 제공됩니다. 함수 이름을 클릭하면 뷰에서 포커스가 설정된 함수를 변경할 수 있습니다. 예를 들어 PeopleNS.People.GetPeople을 클릭하여 GetPeople을 선택된 함수로 설정할 수 있습니다.  
+2.  **함수 정보** 뷰에는 두 개의 창이 있습니다. 비용 배분 창에서는 함수가 수행한 작업, 해당 함수가 호출한 함수가 수행한 작업, 그리고 샘플링된 인스턴스 수에서 함수를 호출한 함수가 차지하는 비율을 보여 주는 그래픽 뷰가 제공됩니다. 함수 이름을 클릭하면 뷰에서 포커스가 설정된 함수를 변경할 수 있습니다. 예를 들어 PeopleNS.People.GetPeople을 클릭하여 GetPeople을 선택된 함수로 설정할 수 있습니다.  
   
      **함수 코드 뷰** 창에는 함수의 소스 코드(사용 가능한 경우)가 표시되며, 선택한 함수에서 가장 비용이 높은 줄이 강조 표시됩니다. GetNames를 선택하면 이 함수가 응용 프로그램 리소스에서 문자열을 읽은 다음 <xref:System.IO.StringReader>를 사용하여 문자열의 각 줄을 <xref:System.Collections.ArrayList>에 추가함을 확인할 수 있습니다. 이 함수를 최적화하는 확실한 방법은 없습니다.  
   
@@ -158,7 +142,7 @@ ms.lasthandoff: 04/05/2017
   
 3.  Concat를 호출하는 메서드는 PeopleTrax.Form1.ExportData뿐임을 확인할 수 있습니다. **호출 함수**에서 **PeopleTrax.Form1.ExportData**를 클릭하여 함수 정보 뷰의 대상으로 해당 메서드를 선택합니다.  
   
-4.  함수 코드 뷰 창에서 메서드를 검사합니다. **System.String.Concat**에 대한 리터럴 호출은 없습니다. 대신 += 피연산자는 여러 번 사용됩니다. 컴파일러는 이 피연산자를 **System.String.Concat** 호출로 바꿉니다. .NET Framework에서는 문자열을 수정하면 새 문자열이 할당됩니다. .NET Framework에는 문자열 연결용으로 최적화된 <xref:System.Text.StringBuilder> 클래스가 포함됭어 있습니다.  
+4.  함수 코드 뷰 창에서 메서드를 검사합니다. **System.String.Concat**에 대한 리터럴 호출은 없습니다. 대신 += 피연산자는 여러 번 사용됩니다. 컴파일러는 이 피연산자를 **System.String.Concat** 호출로 바꿉니다. .NET Framework에서는 문자열을 수정하면 새 문자열이 할당됩니다. .NET Framework에는 문자열 연결용으로 최적화된 <xref:System.Text.StringBuilder> 클래스가 포함되어 있습니다.  
   
 5.  이 문제 영역을 최적화된 코드로 바꾸려면 PeoplexTrax 프로젝트의 조건부 컴파일 기호로 OPTIMIZED_EXPORTDATA를 추가합니다.  
   

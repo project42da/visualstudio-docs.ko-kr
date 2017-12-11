@@ -1,19 +1,17 @@
 ---
-title: "Git 작업"
+title: "Git 작업 | Microsoft Docs"
 description: "Mac용 Visual Studio에서 Git 사용"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
+ms.openlocfilehash: 76bb378297e29fa5967a43e4df38ca2ecc4e6361
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: b3ffe27e343cd02fa52f4f82dfe170d5d0efb8c3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="working-with-git"></a>Git 작업
 
 Git은 모든 팀원이 동일한 문서를 동시에 작업할 수 있는 분산형 버전 제어 시스템입니다. 즉, 모든 파일을 포함하는 중앙 서버가 있지만 이 중앙 소스에서 리포지토리를 체크 아웃하면 전체 리포지토리가 로컬 컴퓨터에 복제됩니다.

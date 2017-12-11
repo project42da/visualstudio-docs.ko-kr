@@ -1,18 +1,16 @@
 ---
-title: "Mac용 Visual Studio Tools for Unity"
+title: "Mac용 Visual Studio Tools for Unity | Microsoft Docs"
 author: dantogno
 ms.author: v-davian
 ms.date: 07/17/2017
 ms.topic: article
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
+ms.openlocfilehash: eae1aa9526d515e7d02d8e1727da9634e0501662
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: a9bd932341ab76feb9d91e96ac816ba6e1488064
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="visual-studio-for-mac-tools-for-unity"></a>Mac용 Visual Studio Tools for Unity
 
 ![Unity 및 Mac용 Visual Studio의 스타일 이미지](media/vsmac-tools-unity-image1.png)
@@ -65,4 +63,3 @@ Mac용 Visual Studio IDE 내에서 Unity 프로젝트를 탐색하고 [폴더, �
 
 * [IDE 사용자 지정](/visualstudio/mac/customizing-the-ide) - [시각 테마를 변경](/visualstudio/mac/customizing-the-ide#dark-theme)하거나 친숙한 [키 바인딩](/visualstudio/mac/customizing-the-ide#key-bindings) 구성표로 전환하는 방법을 알아봅니다.
 * [소스 편집기](/visualstudio/mac/source-editor) - 자주 사용되는 [바로 가기 키](/visualstudio/mac/keyboard-shortcuts)를 포함하여 Mac용 Visual Studio로 양질의 코드를 더 빠르고 쉽게 작성하는 방법을 알아봅니다.
-

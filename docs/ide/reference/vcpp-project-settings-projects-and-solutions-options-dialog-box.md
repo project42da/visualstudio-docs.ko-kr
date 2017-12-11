@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 08/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Projects.VCBuild
+f1_keywords: VS.ToolsOptionsPages.Projects.VCBuild
 helpviewer_keywords:
 - builds [Visual Studio], logs
 - build process [C++]
@@ -19,31 +17,15 @@ helpviewer_keywords:
 - extensions, files built by C or C++ compiler
 - BuildLog.htm
 ms.assetid: 56420efd-6a95-464e-b890-e2b38c48d66a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b0ccfd3d526cee44a30c8d4c33030f2eb2a585e5
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: 2581fdecd9a26c8d4500f83b9abd0e1f967e2ee6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>옵션 대화 상자, 프로젝트 및 솔루션, VC++ 프로젝트 설정
 이 대화 상자를 사용하면 로깅, 성능 및 지원 파일 형식과 관련된 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 빌드 및 프로젝트 설정을 정의할 수 있습니다.  
@@ -53,7 +35,6 @@ ms.lasthandoff: 09/26/2017
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
 2.  **프로젝트 및 솔루션**을 선택한 다음 **VC++ 프로젝트 설정**을 선택합니다.  
-  
  
 ## <a name="build-logging"></a>빌드 로깅  
  **예**  
@@ -95,17 +76,13 @@ ms.lasthandoff: 09/26/2017
  **모든 파일 표시**  
   프로젝트의 파일과 디스크의 파일을 프로젝트 폴더에 표시하도록 **솔루션 탐색기**를 구성합니다.  
 
-
 ## <a name="enable-project-caching"></a>프로젝트 캐싱 사용
-**예** 다음에 프로젝트를 열 때 Visual Studio가 프로젝트 파일에서 다시 계산하지 않고 캐시한 데이터를 로드할 수 있도록 Visual Studio에서 프로젝트 데이터를 캐시하도록 합니다. 캐시한 데이터를 사용하면 프로젝트 로드 시간이 상당히 빨라집니다.   
+**예**  
+다음에 프로젝트를 열 때 Visual Studio가 프로젝트 파일에서 다시 계산하지 않고 캐시한 데이터를 로드할 수 있도록 Visual Studio에서 프로젝트 데이터를 캐시하도록 합니다. 캐시한 데이터를 사용하면 프로젝트 로드 시간이 상당히 빨라집니다.   
 
-**아니요** 캐시된 프로젝트 데이터를 사용하지 않습니다. 프로젝트가 로드될 때마다 프로젝트 파일을 구문 분석합니다.
+**No**  
+캐시된 프로젝트 데이터를 사용하지 않습니다. 프로젝트가 로드될 때마다 프로젝트 파일을 구문 분석합니다.
 
-
-  
-
-  
-#
 ## <a name="see-also"></a>참고 항목  
  [C/C++ 프로그램 빌드](/cpp/build/building-c-cpp-programs)   
  [C/C++ 빌드 참조](/cpp/build/reference/c-cpp-building-reference)

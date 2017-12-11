@@ -1,28 +1,24 @@
 ---
 title: "Visual Studio에서 Python 코드 편집 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/10/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/10/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 03effe56-d6f6-461d-9005-e43c15bf537c
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 134442008dccbeac12dd328ed3b01c2b3a1a2e8c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: d16b8fcae5b7d1a14c8f6068dfd7103115cba291
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="editing-python-code"></a>Python 코드 편집
 
 개발자는 코드 편집기에서 많은 시간을 보내므로 [Visual Studio의 Python 지원](installation.md)에서 생산성 향상에 도움이 되는 기능을 제공합니다. 이러한 기능에는 IntelliSense 구문 강조 표시, 자동 완성, 시그니처 도움말, 메서드 재정의/검색 및 탐색이 포함됩니다. 
@@ -35,11 +31,11 @@ ms.lasthandoff: 07/18/2017
 
 Visual Studio에서 코드 편집에 대한 일반적 설명서는 [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)을 참조하세요. 또한 코드의 특정 섹션에 집중하는 데 도움이 되는 [Visual Studio 개요](../ide/outlining.md)도 참조하세요. Python 지원은 각 모듈에 정의된 클래스와 해당 클래스에 정의된 함수를 검사하기 위해 Visual Studio 개체 브라우저(**보기 > 다른 창 > 개체 브라우저** 또는 Ctrl+W, J) 사용을 포함합니다. 
 
-또한 편집기는 Visual Studio의 대화형 창과 통합되므로 편집기와 창 간에 코드를 쉽게 교환할 수 있습니다. 자세한 내용은 [시작 - 대화형 REPL 창 사용])(getting-started.md#using-the-interactive-repl-window) 및 [대화형 창 사용 - 대화형 명령으로 코드 보내기](interactive-repl.md#send-code-to-interactive-command)를 참조하세요.
+또한 편집기는 Visual Studio의 대화형 창과 통합되므로 편집기와 창 간에 코드를 쉽게 교환할 수 있습니다. 자세한 내용은 [자습서 3단계: 대화형 REPL 창 사용](vs-tutorial-01-03.md) 및 [대화형 창 - 대화형 명령에 코드 보내기](interactive-repl.md#send-code-to-interactive-command)를 참조하세요.
 
-Python 코드 편집에 대한 소개는 [Getting Started with Python in Visual Studio, Part 3: Editing](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)(Visual Studio에서 Python 시작, 3부: 편집)(youtube.com, 3분 48초)을 참조하세요.
+Python 코드 편집에 대한 소개는 [Python 코드 편집](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=r2iQH5LWE_4605918567)(Microsoft Virtual Academy, 2분 30초)을 참조하세요.
 
-> [!VIDEO https://www.youtube.com/embed/uZGZNEyyeKs]
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Editing-Python-Code-r2iQH5LWE_4605918567]
 
 ## <a name="intellisense"></a>IntelliSense
 
@@ -123,8 +119,7 @@ IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [�
 
 ![코드 조각 관리자](media/code-editing-code-snippets-manager.png)
 
-사용자 고유의 코드 조각을 만들려면 [연습: 코드 조각 만들기](../ide/walkthrough-creating-a-code-snippet.md)를 참조하세요.
-코드 조각은 [코드 조각을 만들고](https://msdn.microsoft.com/library/ms165394.aspx) 이를 가져와서 사용자 지정할 수 있습니다. 
+사용자 고유의 코드 조각을 만들려면 [연습: 코드 조각 만들기](../ide/walkthrough-creating-a-code-snippet.md)를 참조하세요. 
 
 공유하려는 중요한 코드 조각을 작성하는 경우 자유롭게 요점에 게시하고 [알려주세요](https://github.com/Microsoft/PTVS/issues). 그러면 Visual Studio의 향후 릴리스에 포함할 수 있습니다.
 

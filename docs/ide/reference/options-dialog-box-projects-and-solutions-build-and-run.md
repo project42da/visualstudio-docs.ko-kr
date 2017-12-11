@@ -1,11 +1,10 @@
 ---
 title: "옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/14/2017
+ms.date: 07/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +15,16 @@ helpviewer_keywords:
 - run actions
 - debugger, run options
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
+ms.openlocfilehash: e15880551e2a896bca473d463b253ec15dda7b36
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
-ms.openlocfilehash: 8e5165b4b17195e5f9172dd25962c9486a7aeeeb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
-
 # <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행
 
 이 대화 상자에서 동시에 빌드할 수 있는 Visual C++ 또는 Visual C# 프로젝트의 최대 개수, 특정 기본 빌드 동작 및 일부 빌드 로그 설정을 지정할 수 있습니다. 이러한 옵션에 액세스하려면 **도구 > 옵션**을 선택하고 **프로젝트 및 솔루션**을 확장한 후 **빌드 및 실행**을 선택합니다.
@@ -60,6 +57,6 @@ F5 키 또는 **디버그 > 시작** 명령으로 프로젝트 실행 시 기본
 \\...\\*ProjectName*\Debug\\*ProjectName*.log에 있는 빌드 로그 파일에 작성되는 정보의 양을 결정합니다.  
 
 ## <a name="see-also"></a>참고 항목  
--[컴파일 및 빌드](../../ide/compiling-and-building-in-visual-studio.md)
-- [옵션 대화 상자, 프로젝트 및 솔루션](projects-and-solutions-options-dialog-box.md)
-- [옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트](options-dialog-box-projects-and-solutions-web-projects.md)
+[컴파일 및 빌드](../../ide/compiling-and-building-in-visual-studio.md)  
+[옵션 대화 상자, 프로젝트 및 솔루션](projects-and-solutions-options-dialog-box.md)  
+[옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트](options-dialog-box-projects-and-solutions-web-projects.md)

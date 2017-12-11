@@ -1,19 +1,17 @@
 ---
-title: "Subversion 작업"
+title: "Subversion 작업 | Microsoft Docs"
 description: "Mac용 Visual Studio에서 Subversion 사용"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
+ms.openlocfilehash: 026e3625b4ee2d6582ce5539e5cab68c945f09c0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 70cf7a411141c5a59e275cb455ddcf91863c4f8b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="working-with-subversion"></a>Subversion 작업
 
 앞에서도 설명했듯이, Subversion은 중앙 데이터의 단일 마스터 복사본을 체크 아웃할 수 있는 중앙 버전 제어 시스템입니다. Subversion 리포지토리를 체크 아웃하면 Git과 달리 전체 리포지토리가 복제되지 않고 해당 시점의 스냅숏만 생성됩니다.
@@ -58,4 +56,3 @@ Mac용 Visual Studio에서 **체크 아웃** 기능을 사용하는 방법을 �
 ![파일 커밋](media/version-control-svnCommit.png)
 
 이렇게 하면 변경 내용이 리포지토리에 전송되고 모든 수정 사항이 포함된 새 수정 버전이 생성됩니다.
-

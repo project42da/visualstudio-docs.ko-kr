@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6337c35-acae-4c5f-b5d9-ac5ff687ef18
-caps.latest.revision: 16
+caps.latest.revision: "16"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
-ms.openlocfilehash: 01dc224a571144744028e98153df1c525c461156
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 64115171c64faf0f62b6530c37fa53c6631ac1d6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="customizing-code-coverage-analysis"></a>코드 검사 분석 사용자 지정
 기본적으로 Visual Studio Code 검사 도구는 단위 테스트 중 로드된 모든 솔루션 어셈블리(.exe/.dll)를 분석합니다. 이 기본값은 대부분은 문제 없이 작동하므로 유지하는 것이 좋습니다. 자세한 내용은 [코드 검사를 사용하여 테스트할 코드 범위 결정](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)을 참조하세요.  
@@ -117,7 +101,7 @@ ms.lasthandoff: 05/23/2017
 ### <a name="regular-expressions"></a>정규식  
  Include 및 exclude 노드는 정규식을 사용합니다. 자세한 내용은 [Visual Studio에서 정규식 사용](../ide/using-regular-expressions-in-visual-studio.md)을 참조하세요. 정규식은 와일드 카드와 다릅니다. 특히 다음과 같습니다.  
   
-1.  **.\*** 모든 문자의 문자열과 일치합니다.  
+1.  **.\***은(는) 모든 문자의 문자열과 일치합니다.  
   
 2.  **\\.** 점 “.”과 일치합니다.  
   
@@ -344,4 +328,3 @@ Included items must then not match any entries in the exclude list to remain inc
 ## <a name="see-also"></a>참고 항목  
  [코드 검사를 사용하여 테스트할 코드 범위 결정](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)   
  [코드 단위 테스트](../test/unit-test-your-code.md)
-

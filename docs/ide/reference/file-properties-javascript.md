@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,30 +25,15 @@ f1_keywords:
 - javascript.project.property.reference.resolvedpath
 - javascript.project.property.reference.version
 ms.assetid: 085913b8-a97b-45f7-85fa-bbb0902f3ee9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: 6c2b3c577685fcb09cd9e9c7eeee955b75e76e27
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: f732a23631de181524382914e954ad50a7f0385d
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="file-properties-javascript"></a>파일 속성, JavaScript
 파일 속성을 사용하여 프로젝트 시스템이 파일에 대해 수행해야 하는 작업을 지정할 수 있습니다. 예를 들어 파일 속성을 설정하여 파일을 패키지에 리소스 파일로 추가해야 하는지 여부를 지정할 수 있습니다.  
@@ -73,7 +57,7 @@ ms.lasthandoff: 06/23/2017
 
 -   **리소스** - 파일이 패키지 매니페스트에 포함되지 않습니다. 대신에 파일 콘텐츠가 패키지 매니페스트로 이동되는 PRI(패키지 리소스 인덱스)로 인덱싱됩니다. 일반적으로 리소스 파일에 사용됩니다.  
 
- **패키지 작업**의 기본값은 솔루션에 추가하는 파일의 확장명에 따라 달라집니다.  
+**패키지 작업**의 기본값은 솔루션에 추가하는 파일의 확장명에 따라 달라집니다.  
 
 ### <a name="file-name-property"></a>파일 이름 속성  
  파일 이름을 읽기 전용 값으로 표시합니다. 파일 이름을 바꾸려면 솔루션 탐색기를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다.  
@@ -82,7 +66,7 @@ ms.lasthandoff: 06/23/2017
  파일의 전체 경로를 읽기 전용 값으로 표시합니다. 파일 경로를 변경하려면 솔루션 탐색기에서 파일을 끌어서 놓을 수 있습니다.  
 
 ## <a name="reference-file-properties"></a>참조 파일 속성  
- 이 섹션에서는 [!INCLUDE[win8_app_js](../../ide/reference/includes/win8_app_js_md.md)]에서 참조되는 파일에 공통적인 속성을 설명합니다. 솔루션 탐색기에서 .winmd 파일, SDK 참조, 프로젝트 간 참조 또는 어셈블리 참조와 같은 참조를 선택하면 파일 형식에 따라 다른 속성이 속성 창에 표시될 수 있습니다.  
+ 이 섹션에서는 JavaScript를 사용하여 빌드된 UWP 앱에서 참조되는 파일에 공통적인 속성을 설명합니다. 솔루션 탐색기에서 .winmd 파일, SDK 참조, 프로젝트 간 참조 또는 어셈블리 참조와 같은 참조를 선택하면 파일 형식에 따라 다른 속성이 속성 창에 표시될 수 있습니다.  
 
 ### <a name="culture"></a>문화권  
  참조와 연결된 언어를 표시합니다.  
@@ -113,4 +97,3 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="see-also"></a>참고 항목  
  [프로젝트 및 솔루션 속성 관리](../../ide/managing-project-and-solution-properties.md)
-

@@ -1,19 +1,17 @@
 ---
-title: "편집기 동작"
+title: "편집기 동작 | Microsoft Docs"
 description: 
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 81EE4460-26EB-4BB0-9297-932E1F88E4B8
+ms.openlocfilehash: 3515dfbf3a7cf8c23178aa9df243638f955593e9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 894bcbe66bd071bff1a6d904759f468b519da0f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="editor-behavior"></a>편집기 동작
 
 작성된 대로 코드에 형식이 지정될 수 있도록 편집기 동작을 설정할 수 있습니다. 이러한 작업은 **Visual Studio > 기본 설정... > 텍스트 편집기 > 동작**에서 설정되며, 아래에서는 자주 사용하는 몇 가지 기능에 대해 설명합니다.

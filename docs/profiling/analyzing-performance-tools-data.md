@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,31 +16,15 @@ helpviewer_keywords:
 - Profiling Tools,data views
 - Profiling Tools,reports
 ms.assetid: ae3e198a-b994-4ecb-a633-dec98bd4fd45
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
-ms.openlocfilehash: f67e927ad2fdaa934027507441222af4bbde3394
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: 439c3f5e433de41a0a6f4bcaf7ec0392ca16fa49
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="analyzing-performance-tools-data"></a>성능 도구 데이터 분석
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구의 성능 보고서를 사용하면 응용 프로그램 성능 문제를 확인하고 분석할 수 있습니다. 이 섹션에서는 성능 데이터를 검사하는 데 사용할 수 있는 성능 보고서 및 뷰에 대한 개요를 제공합니다.  
@@ -60,4 +43,6 @@ ms.lasthandoff: 06/30/2017
  [성능 도구 데이터 저장 및 내보내기](../profiling/saving-and-exporting-performance-tools-data.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [성능 탐색기](../profiling/performance-explorer.md) [Visual Studio의 프로파일링](../profiling/index.md) [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)
+ [성능 탐색기](../profiling/performance-explorer.md)  
+ [Visual Studio의 프로파일링](../profiling/index.md)  
+ [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)

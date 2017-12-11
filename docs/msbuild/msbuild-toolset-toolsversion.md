@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,39 +13,24 @@ helpviewer_keywords:
 - MSBuild, targeting a specific .NET framework
 - multitargeting [MSBuild]
 ms.assetid: 40040ee7-4620-4043-a6d8-ccba921421d1
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 6a45db14ee055c4fbdf738cf36df503a4a1fffd0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/31/2017
-
+ms.openlocfilehash: 85d570564ba3e82808f0876ead938f535368ec29
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild 도구 집합(ToolsVersion)
 MSBuild는 응용 프로그램을 빌드하기 위한 작업, 대상 및 도구로 구성된 도구 집합을 사용합니다. 일반적으로 MSBuild 도구 집합에는 microsoft.common.tasks 파일, microsoft.common.targets 파일 및 컴파일러(예: csc.exe 및 vbc.exe)가 포함되어 있습니다. 대부분의 도구 집합을 사용하여 응용 프로그램을 둘 이상의 .NET Framework 버전 및 둘 이상의 시스템 플랫폼으로 컴파일할 수 있습니다. 그러나 MSBuild 2.0 도구 집합을 사용해서는 .NET Framework 2.0만 대상으로 할 수 있습니다.  
   
 ## <a name="toolsversion-attribute"></a>ToolsVersion 특성  
- 프로젝트 파일에서 [Project](../msbuild/project-element-msbuild.md) 요소의 `ToolsVersion` 특성에 도구 집합을 지정합니다. 다음 예제에서는 MSBuild 12.0 도구 집합을 사용하여 프로젝트를 빌드해야 하도록 지정합니다.  
+ 프로젝트 파일에서 [Project](../msbuild/project-element-msbuild.md) 요소의 `ToolsVersion` 특성에 도구 집합을 지정합니다. 다음 예제에서는 MSBuild 15.0 도구 집합을 사용하여 프로젝트를 빌드해야 하도록 지정합니다.  
   
 ```xml  
-<Project ToolsVersion="12.0" ... </Project>  
+<Project ToolsVersion="15.0" ... </Project>  
 ```  
   
 ## <a name="how-the-toolsversion-attribute-works"></a>ToolsVersion 특성의 작동 방식  
@@ -134,4 +118,3 @@ MSBuild는 응용 프로그램을 빌드하기 위한 작업, 대상 및 도구�
 ## <a name="see-also"></a>참고 항목  
  [표준 및 사용자 지정 도구 집합 구성](../msbuild/standard-and-custom-toolset-configurations.md)   
  [멀티 타기팅](../msbuild/msbuild-multitargeting-overview.md)
-

@@ -1,19 +1,17 @@
 ---
-title: "Mac용 Visual Studio에서 Subversion 리포지토리 설정하기"
+title: "Mac용 Visual Studio에서 Subversion 리포지토리 설정 | Microsoft Docs"
 description: "Mac용 Visual Studio에서 Git 및 Subversion 사용"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
+ms.openlocfilehash: 0757ad29b8614a86f059f525f6ffe3100595d09b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: ea2dffed0b9091dae61792783eb83c103ca9375c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="setting-up-a-subversion-repository"></a>Subversion 리포지토리 설정
 
 Subversion은 중앙 버전 제어 시스템입니다. 즉, 모든 파일과 수정 버전을 포함하는 단일 서버가 있으며 사용자는 여기에서 임의의 파일 버전을 체크 아웃할 수 있습니다. 원격 Subversion 리포지토리에서 파일을 체크 아웃하면 사용자는 해당 시점을 기준으로 리포지토리의 스냅숏을 가져옵니다.
@@ -45,5 +43,4 @@ Subversion을 사용하기 전에 올바른 svn 패키지를 포함하도록 Xco
     ![](media/version-control-subversion5.png)
 
 8.  이제 사용할 수 있는 모든 버전 제어 명령이 버전 제어 메뉴에 표시됩니다.
-
 

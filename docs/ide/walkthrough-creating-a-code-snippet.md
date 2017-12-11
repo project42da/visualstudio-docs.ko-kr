@@ -1,39 +1,38 @@
 ---
 title: "연습: 코드 조각 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "코드 조각, 만들기"
-  - "코드 조각, 가져오기"
-  - "코드 조각, 참조"
-  - "코드 조각, 바꾸기"
-  - "코드 조각, 바로 가기"
-  - "코드 조각, 템플릿"
+ms.custom: 
+ms.date: 10/27/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- code snippets, creating
+- code snippets, shortcut
+- code snippets, template
+- code snippets, replacements
+- code snippets, references
+- code snippets, imports
 ms.assetid: 0dcaae11-39cf-4463-9c90-2494321251c2
-caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+dev_langs: VB
+ms.openlocfilehash: 0ad7cdb245aa43deab22593fbbb5a5b10105f5af
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 연습: 코드 조각 만들기
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-몇 가지 단계만으로 코드 조각을 만들 수 있습니다.  사용자가 해야 하는 일은 XML 파일을 만들고 해당 요소에 채운 후 코드를 추가하는 것입니다.  또한 참조 및 대체 매개 변수를 코드에 추가할 수 있습니다.  코드 조각 관리자의 가져오기 단추를 사용하여 설치된 Visual Studio에 코드 조각을 추가할 수 있습니다\(**도구\/코드 조각 관리자**\).  
+# <a name="walkthrough-creating-a-code-snippet"></a>연습: 코드 조각 만들기
+몇 가지 단계로 코드 조각을 만들 수 있습니다. XML 파일을 만들고, 적절한 요소를 입력하고, 코드를 추가하기만 하면 됩니다. 또한 코드에 참조 및 대체 매개 변수를 추가할 수 있습니다. 코드 조각 관리자(**도구**, **코드 조각 관리자...**)에서 가져오기 단추를 사용하여 Visual Studio 설치에 코드 조각을 추가할 수 있습니다.  
   
-> [!TIP]
->  코드 조각을 보다 쉽게 작성하는 방법에 대한 자세한 내용은 [Snippet Editor](http://go.microsoft.com/fwlink/?LinkId=251033) 와 같은 커뮤니티 도구가 있는 CodePlex 웹 사이트를 검색합니다.  
+## <a name="snippet-template"></a>코드 조각 템플릿  
+ 다음은 기본 코드 조각 템플릿입니다.  
   
-## 코드 조각 템플릿  
- 다음은 기본적인 코드 조각 템플릿입니다.  
-  
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <CodeSnippets  
     xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
@@ -47,113 +46,109 @@ caps.handback.revision: 21
             </Code>  
         </Snippet>  
     </CodeSnippet>  
-</CodeSnippets>  
-  
+</CodeSnippets>
 ```  
   
-### 코드 조각을 만들려면  
+### <a name="to-create-a-code-snippet"></a>코드 조각을 만들려면  
   
 1.  Visual Studio에서 새 XML 파일을 만들고 위에 표시된 템플릿을 추가합니다.  
   
-2.  코드 조각의 제목을 채웁니다. 예: 제목 요소의 "Hello World VB".  
+2.  Title 요소에 코드 조각의 제목(예: "Hello World VB")을 입력합니다.   
   
-3.  코드 요소의 언어 특성에 있는 코드 조각 언어를 입력합니다.  이 예제에서는 "VB"를 사용합니다.  
+3.  Code 요소의 언어 특성에 코드 조각의 언어를 입력합니다. 예를 들어 "VB"를 사용합니다.  
   
-4.  코드 요소 안의 CDATA 섹션에 일부 코드를 추가합니다. 예를 들면 다음과 같습니다.  
+4.  Code 요소 안의 CDATA 섹션에 일부 코드를 추가합니다. 예를 들어 다음과 같습니다.  
   
-    ```  
+    ```xml  
     <Code Language="VB">  
         <![CDATA[Console.WriteLine("Hello, World!")]]>  
-    </Code>  
-  
+    </Code>
     ```  
   
-5.  코드 조각을 VBCodeSnippet.snippet으로 저장합니다.  
+5.  VBCodeSnippet.snippet으로 코드 조각을 저장합니다.  
   
-### Visual Studio에 코드 조각을 추가하려면  
+### <a name="to-add-a-code-snippet-to-visual-studio"></a>Visual Studio에 코드 조각을 추가하려면  
   
-1.  코드 조각 관리자를 사용하여 Visual Studio 설치에 사용자 고유의 조각을 직접 추가할 수 있습니다.  코드 조각 관리자를 엽니다\(**도구\/코드 조각 관리자**\).  
+1.  코드 조각 관리자를 사용하여 Visual Studio 설치에 사용자 고유의 코드 조각을 추가할 수 있습니다. 코드 조각 관리자(**도구**, **코드 조각 관리자...**)를 엽니다.  
   
-2.  **가져오기** 단추를 클릭합니다.  
+2.  **내보내기** 단추를 클릭합니다.  
   
-3.  이전 절차에서 코드 조각을 저장했던 위치로 이동하여 위치를 선택하고 **열기**를 클릭합니다.  
+3.  이전 절차에서 코드 조각을 저장한 위치로 이동하고, 선택하고, **열기**를 클릭합니다.  
   
-4.  **코드 조각 가져오기** 대화 상자를 열면 오른쪽 창 선택 항목에서 코드 조각을 추가할 위치를 선택하라는 메시지가 표시됩니다.  선택 항목 중 하나는 **내 코드 조각**이어야 합니다.  선택하고 **마침**을 클릭한 다음 **확인**을 클릭합니다.  
+4.  오른쪽 창의 선택 항목 중에서 코드 조각을 추가할 위치를 선택하라고 묻는 **코드 조각 가져오기** 대화 상자가 열립니다. 선택 사항 중 하나는 **내 코드 조각**이어야 합니다. **마침**, **확인**을 차례로 선택하고 클릭합니다.  
   
-5.  코드 조각은 다음 위치로 복사됩니다.  
+5.  코드 조각이 다음 위치에 복사됩니다.  
   
-     `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\내 코드 조각`  
+     %USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual Basic\내 코드 조각  
   
-6.  Visual Basic 프로젝트와 코드 파일을 차례로 열어서 코드 조각을 테스트합니다.  파일의 상황에 맞는 메뉴에서 **코드 조각 삽입**을 클릭한 후 **내 코드 조각**을 클릭합니다.  이름이 **내 Visual Basic 코드 조각**인 코드 조각이 표시되어야 합니다.  두 번 클릭합니다.  
+6.  Visual Basic 프로젝트를 열고 코드 파일을 열어 코드 조각을 테스트합니다. 파일의 상황에 맞는 메뉴에서 **코드 조각**, **코드 조각 삽입**을 선택한 다음 **내 코드 조각**을 선택합니다. **내 Visual Basic 코드 조각**이라는 코드 조각이 나타납니다. 폴더를 두 번 클릭합니다.  
   
-7.  코드에 삽입된 `Console.WriteLine("Hello, World!")`이 표시되어야 합니다.  
+    `Console.WriteLine("Hello, World!")`이 코드 파일에 삽입됩니다.  
   
-### 설명 및 바로 가기 필드 추가  
+### <a name="adding-description-and-shortcut-fields"></a>설명 및 바로 가기 필드 추가  
   
-1.  코드 조각 관리자에서 설명 필드는 코드 조각에 대한 자세한 정보를 제공합니다.  바로 가기는 코드 조각을 삽입하기 위해 입력할 수 있는 태그입니다.  `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet` 파일을 열어 추가한 코드 조각을 편집합니다.  
+1.  설명 필드는 코드 조각 관리자에서 볼 때 코드 조각에 대한 자세한 정보를 제공합니다. 바로 가기는 코드 조각을 삽입하기 위해 사용자가 입력할 수 있는 태그입니다. 파일 %USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet을 열어 추가한 코드 조각을 편집합니다.  
   
-2.  헤더 요소에 만든 이 및 설명 요소를 추가하고 채웁니다.  
+2.  Header 요소에 Author 및 Description 요소를 추가하고 채웁니다.  
   
-3.  헤더 요소는 다음과 같습니다.  
+3.  Header 요소는 다음과 비슷합니다.  
   
-    ```  
+    ```xml  
     <Header>  
         <Title>Hello World VB</Title>  
         <Author>Myself</Author>  
         <Description>Says Hello to the world.</Description>  
-    </Header>  
-  
+    </Header>
     ```  
   
-4.  코드 조각 관리자를 열고 코드 조각을 선택합니다.  오른쪽 창에는 설명 및 만든 이 필드가 이제 채워진 것을 볼 수 있습니다.  
+4.  코드 조각 관리자를 열고 코드 조각을 선택합니다. 오른쪽 창에서 이제 Description 및 Author 필드가 채워졌습니다.  
   
-5.  바로 가기를 추가하려면 만든 이 및 설명 요소 옆에 바로 가기 요소를 추가합니다.  
+5.  바로 가기를 추가하려면 Author 및 Description 요소와 함께 Shortcut 요소를 추가합니다.  
   
-    ```  
+    ```xml  
     <Header>  
         <Title>Hello World VB</Title>  
         <Author>Myself</Author>  
         <Description>Says Hello to the world.</Description>  
         <Shortcut>hello</Shortcut>  
-    </Header>  
-  
+    </Header>
     ```  
   
 6.  코드 조각 파일을 다시 저장합니다.  
   
-7.  바로 가기를 테스트하려면 Visual Basic 프로젝트를 열고 코드 파일을 엽니다.  파일에 `hello`를 입력하고 TAB을 누릅니다.  코드 조각은 삽입되어야 합니다.  
+7.  바로 가기를 테스트하려면 Visual Basic 프로젝트를 열고 코드 파일을 엽니다. 파일에 `hello`를 입력하고 **탭** 키를 두 번 누릅니다.
+
+    코드 조각이 삽입됩니다.
   
-### 참조 및 가져오기를 추가하려면  
+### <a name="to-add-references-and-imports"></a>참조 및 가져오기를 추가하려면  
   
-1.  Visual Basic 코드 조각을 사용하면 References 요소를 사용하여 프로젝트에 참조를 추가하고 Imports 요소를 사용하여 Imports 선언을 추가할 수 있습니다. \(다른 언어의 코드 조각에는 이 기능이 없습니다.\) 예를 들어 코드 샘플의 `Console.WriteLine`을 `MessageBox.Show`로 변경하는 경우 System.Windows.Forms.dll 어셈블리를 프로젝트에 추가할 필요가 있습니다.  
+1.  References 요소를 사용하여 프로젝트에 참조를 추가하고 Imports 요소를 사용하여 가져오기 선언을 추가할 수 있습니다. (이는 C#에 대해서도 작동합니다.) 예를 들어 코드 예제에서 `Console.WriteLine`을 `MessageBox.Show`로 변경하는 경우 System.Windows.Forms.dll 어셈블리를 프로젝트에 추가해야 합니다.  
   
 2.  코드 조각을 엽니다.  
   
-3.  코드 조각 요소 아래에 참조 요소를 추가합니다.  
+3.  Snippet 요소 아래에 References 요소를 추가합니다.  
   
-    ```  
+    ```xml  
     <References>  
         <Reference>  
             <Assembly>System.Windows.Forms.dll</Assembly>  
         </Reference>  
-    </References>  
-  
+    </References>
     ```  
   
-4.  코드 조각 요소 아래에 가져오기 요소를 추가합니다.  
+4.  Snippet 요소 아래에 Imports 요소를 추가합니다.  
   
-    ```  
+    ```xml  
     <Imports>  
         <Import>  
            <Namespace>System.Windows.Forms</Namespace>  
         </Import>  
-    </Imports>  
-  
+    </Imports>
     ```  
   
-5.  CDATA 섹션을 다음으로 변경합니다.  
+5.  CDATA 섹션을 다음과 같이 변경합니다.  
   
-    ```  
+    ```xml  
     <![CDATA[MessageBox.Show("Hello, World!")]]>  
     ```  
   
@@ -161,24 +156,23 @@ caps.handback.revision: 21
   
 7.  Visual Basic 프로젝트를 열고 코드 조각을 추가합니다.  
   
-8.  코드 파일의 맨 위에 가져오기 문이 표시됩니다.  
+8.  코드 파일 맨 위에 Imports문이 표시됩니다.  
   
+    ```vb  
+    Imports System.Windows.Forms
     ```  
-    Imports System.Windows.Forms  
   
-    ```  
+9. 프로젝트의 속성을 봅니다. References 탭은 System.Windows.Forms.dll에 대한 참조를 포함합니다.  
   
-9. 프로젝트의 속성을 찾습니다.  참조 탭에는 System.Windows.Forms.dll에 대한 참조가 포함되어 있습니다.  
+### <a name="adding-replacements"></a>대체 추가  
   
-### 대체 파일 추가  
-  
-1.  코드 조각의 일부를 사용자가 바꾸도록 하려는 경우가 있습니다. 예를 들어, 변수를 추가하고 사용자가 해당 변수를 현재 프로젝트의 변수로 바꾸도록 할 수 있습니다.  두 가지 형식의 교체인 리터럴과 개체를 제공할 수 있습니다.  리터럴은 몇 가지 유형\(문자열 리터럴, 변수 이름 또는 숫자 값의 문자열 표현\)의 문자열입니다.  문자열 이외의 일부 형식의 인스턴스 개체입니다.  이 절차에서 리터럴 대체 및 개체 대체를 선언하고 이러한 대체 사항을 참조하여 코드를 변경합니다.  
+1.  변수를 추가하고 사용자가 현재 프로젝트의 변수로 변수를 교체하도록 하려는 경우 코드 조각의 부분을 사용자가 바꿀 수 있습니다. 두 가지 유형의 대체(리터럴 및 개체)를 제공할 수 있습니다. 리터럴은 일부 형식(문자열 리터럴, 변수 이름 또는 숫자 값의 문자열 표현)의 문자열입니다. 개체는 문자열이 아닌 일부 형식의 인스턴스입니다. 이 절차에서는 리터럴 대체 및 개체 대체를 선언하고 이러한 대체를 참조하도록 코드를 변경합니다.  
   
 2.  코드 조각을 엽니다.  
   
-3.  이 예제에서는 SQL 연결 문자열을 사용하므로, 적절한 참조를 추가하려면 가져오기 및 참조 요소를 변경해야 합니다.  
+3.  이 예제에서는 SQL 연결 문자열을 사용하므로 적절한 참조를 추가하려면 Imports 및 References 요소를 변경해야 합니다.  
   
-    ```  
+    ```xml  
     <References>  
         <Reference>  
             <Assembly>System.Data.dll</Assembly>  
@@ -194,26 +188,24 @@ caps.handback.revision: 21
         <Import>  
             <Namespace>System.Data.SqlClient</Namespace>  
         </Import>  
-    </Imports>  
-  
+    </Imports>
     ```  
   
-4.  SQL 연결 문자열의 리터럴 대체를 선언하려면 Snippet 요소에서 Declarations 요소를 추가하고 그 안에 ID, 도구 설명, 대체 기본 값에 대한 하위 요소로 Literal 요소를 추가합니다.  
+4.  SQL 연결 문자열에 대한 리터럴 대체를 선언하려면 Snippet 요소 아래에 Declarations 요소를 추가하고, ID, 도구 설명 및 대체에 대한 기본값에 대한 하위 요소로 Literal 요소를 추가합니다.  
   
-    ```  
+    ```xml  
     <Declarations>  
         <Literal>  
             <ID>SqlConnString</ID>  
             <ToolTip>Replace with a SQL connection string.</ToolTip>  
             <Default>"SQL connection string"</Default>  
         </Literal>  
-    </Declarations>  
-  
+    </Declarations>
     ```  
   
-5.  SQL 연결을 위한 개체 대체를 선언하려면 Declarations 요소 안에 Object 요소를 추가하고 ID, 개체 형식, 도구 설명 및 기본 값에 대한 하위 요소를 추가합니다.  결과 Declarations 요소는 다음과 같습니다.  
+5.  SQL 연결에 대한 개체 대체를 선언하려면 Declarations 요소 내에 Object 요소를 추가하고, ID, 개체 유형, 도구 설명 및 기본값에 대한 하위 요소를 추가합니다. 결과 Declarations 요소는 다음과 같이 표시됩니다.  
   
-    ```  
+    ```xml  
     <Declarations>  
         <Literal>  
             <ID>SqlConnString</ID>  
@@ -229,9 +221,9 @@ caps.handback.revision: 21
     </Declarations>  
     ```  
   
-6.  코드 섹션에서 $ 기호로 둘러 쌓인 대체 항목을 참조합니다. 예: `$replacement$`:  
+6.  코드 섹션에서 주변 $ 기호로 대체를 참조합니다(예: `$replacement$`).  
   
-    ```  
+    ```xml  
     <Code Language="VB" Kind="method body">  
         <![CDATA[Dim daCustomers As SqlDataAdapter  
             Dim selectCommand As SqlCommand  
@@ -247,18 +239,17 @@ caps.handback.revision: 21
   
 8.  Visual Basic 프로젝트를 열고 코드 조각을 추가합니다.  
   
-9. 코드는 대체 `SQL 연결 문자열` 및 `dcConnection`가 밝은 오렌지색으로 강조 표시되는 것과 같이 표시되어야 합니다.  TAB을 눌러 서로 이동합니다.  
+9. 코드는 다음과 같아야 합니다. 여기서 대체 `SQL connection string` 및 `dcConnection`은 연한 주황색으로 강조 표시됩니다. **탭** 키를 선택하여 서로 간에 이동합니다.  
   
-    ```  
+    ```vb  
     Dim daCustomers As SqlDataAdapter  
     Dim selectCommand As SqlCommand  
   
     daCustomers = New SqlClient.SqlDataAdapter()  
     selectCommand = New SqlClient.SqlCommand("SQL connection string")  
     daCustomers.SelectCommand = selectCommand  
-    daCustomers.SelectCommand.Connection = dcConnection  
-  
+    daCustomers.SelectCommand.Connection = dcConnection
     ```  
   
-## 참고 항목  
- [코드 조각 스키마 참조](../ide/code-snippets-schema-reference.md)
+## <a name="see-also"></a>참고 항목  
+[코드 조각 스키마 참조](../ide/code-snippets-schema-reference.md)

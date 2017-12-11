@@ -1,36 +1,36 @@
 ---
-title: "PROFILE_CURRENTID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PROFILE_CURRENTID"
+title: PROFILE_CURRENTID | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: PROFILE_CURRENTID
 ms.assetid: 55ccf665-a05e-48c3-adf7-7714c0a9aaef
-caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: eaf85776b08f6df56b5e441d9e0c99e239bf8ca6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# PROFILE_CURRENTID
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-PROFILE\_CURRENTID는 NameProfile, StartProfile, StopProfile, SuspendProfile 및 ResumeProfile에 대한 호출에서 스레드 ID 또는 프로세스 ID에 대해 의사\(pseudo\) 토큰을 반환합니다.  이를 사용하면 구체적으로 지정된 스레드나 프로세스 대신 현재 스레드나 프로세스에 대해 함수가 실행됩니다.  
+# <a name="profilecurrentid"></a>PROFILE_CURRENTID
+PROFILE_CURRENTID는 NameProfile, StartProfile, StopProfile, SuspendProfile 및 ResumeProfile 함수에 대한 호출에서 스레드 ID 또는 프로세스 ID에 대한 의사(pseudo) 토큰을 반환합니다. 구체적으로 지정된 것보다 현재 스레드 또는 프로세스에서 작동하는 함수를 발생하는 데 사용합니다.  
   
-## 예제  
- PROFILE\_CURRENTID는 VSPerf.h에 다음과 같이 정의됩니다.  
+## <a name="example"></a>예제  
+ PROFILE_CURRENTID는 VSPerf.h에서 다음으로 정의됩니다.  
   
 ```  
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;  
 ```  
   
-## 예제  
- 다음 예제에서는 PROFILE\_CURRENTID를 보여 줍니다.  이 예제에서는 [StartProfile](../profiling/startprofile.md) 함수에 대한 호출의 현재 스레드를 식별하는 매개 변수로 PROFILE\_CURRENTID를 사용합니다.  
+## <a name="example"></a>예제  
+ 다음은 PROFILE_CURRENTID에 대한 예입니다. 예제는 [StartProfile](../profiling/startprofile.md) 함수에 대한 호출에서 현재 스레드를 식별하는 매개 변수로 PROFILE_CURRENTID를 사용합니다.  
   
 ```  
 void ExerciseProfileCurrentID()  
@@ -59,8 +59,8 @@ void ExerciseProfileCurrentID()
 }  
 ```  
   
-## 참고 항목  
- [Visual Studio 프로파일러 API 참조\(네이티브\)](../profiling/visual-studio-profiler-api-reference-native.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Studio 프로파일러 API 참조(네이티브)](../profiling/visual-studio-profiler-api-reference-native.md)   
  [NameProfile](../profiling/nameprofile.md)   
  [ResumeProfile](../profiling/resumeprofile.md)   
  [StartProfile](../profiling/startprofile.md)   

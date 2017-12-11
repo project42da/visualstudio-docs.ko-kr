@@ -1,39 +1,40 @@
 ---
 title: "방법: 공통 출력 디렉터리로 빌드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "빌드[Visual Studio], 공통 디렉터리"
-  - "공통 디렉터리"
-  - "출력 디렉터리"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output directory
+- builds [Visual Studio], common directory
+- common directory
 ms.assetid: 1fcc2c48-07cb-4c4f-9556-36945e7dfc4e
-caps.latest.revision: 7
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 0082f69e0c35bb84a15a8dd4798e7a17b6a3dd7c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 방법: 공통 출력 디렉터리로 빌드
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-기본적으로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 솔루션의 각 프로젝트를 솔루션 내의 자체 폴더에 빌드합니다.  프로젝트의 빌드 출력 경로를 변경하여 모든 출력이 같은 폴더에 배치되도록 할 수 있습니다.  
+# <a name="how-to-build-to-a-common-output-directory"></a>방법: 공통 출력 디렉터리로 빌드
+기본적으로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]은(는) 솔루션 내에서 고유 폴더에 있는 솔루션에서 각 프로젝트를 빌드합니다. 프로젝트의 빌드 출력 경로를 변경하여 모든 출력이 동일한 폴더에 배치되도록 할 수 있습니다.  
   
-### 모든 솔루션 출력을 공용 디렉터리에 배치하려면  
+### <a name="to-place-all-solution-outputs-in-a-common-directory"></a>모든 솔루션 출력을 공용 디렉터리에 배치하려면  
   
 1.  솔루션에서 한 프로젝트를 클릭합니다.  
   
-2.  **프로젝트** 메뉴에서 **속성**을 선택합니다.  
+2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-3.  프로젝트의 형식에 따라 **컴파일** 탭 또는 **빌드** 탭을 클릭하고 **출력 경로**를 솔루션의 모든 프로젝트에 사용할 폴더로 설정합니다.  
+3.  프로젝트의 유형에 따라 **컴파일** 탭 또는 **빌드** 탭을 클릭하고 **출력 경로**를 솔루션에 있는 모든 프로젝트에 사용할 폴더로 설정합니다.  
   
-4.  솔루션의 모든 프로젝트에 대해 1\-3단계를 반복합니다.  
+4.  솔루션의 모든 프로젝트에 대해 1-3단계를 반복합니다.  
   
-## 참고 항목  
- [Visual Studio에서 응용 프로그램　빌드](../ide/compiling-and-building-in-visual-studio.md)   
+## <a name="see-also"></a>참고 항목  
+ [컴파일 및 빌드](../ide/compiling-and-building-in-visual-studio.md)   
  [방법: 빌드 출력 디렉터리 변경](../ide/how-to-change-the-build-output-directory.md)

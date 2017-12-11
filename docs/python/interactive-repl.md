@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio의 Python 대화형 REPL | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 642dc47e-c265-44ea-a77d-3db14170a36f
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 0e524208684afa38916af858e6ec3a8adb1f5932
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 69943d19c0eec4702285d255ce0c26defde79b1c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="working-with-the-python-interactive-window"></a>Python 대화형 창 사용
 
 Visual Studio는 각 Python 환경에 대화형 읽기-평가-인쇄 루프(REPL) 창을 제공하여 명령줄에서 `python.exe`와 관련한 REPL을 개선합니다. 대화형 창(**보기 > 다른 창 > &lt;환경&gt; 대화형** 창 메뉴 명령으로 열 수 있음)을 사용하면 임의의 Python 코드를 입력하고 즉각적인 결과를 확인할 수 있습니다. 이러한 방식의 코딩은 API 및 라이브러리와 관련된 내용을 배우고 실험하는 데 도움이 되고, 프로젝트에 포함할 작업 코드를 대화형으로 개발하는 데에도 유용합니다.
@@ -39,9 +36,9 @@ Visual Studio에는 선택 가능한 다양한 Python REPL 모드가 있습니�
 
 이 항목에서는 **표준** 및 **디버그** REPL 모드를 설명합니다. IPython 모드에 대한 자세한 내용은 [IPython REPL 사용](interactive-repl-ipython.md)을 참조하세요.
 
-Ctrl+Enter 등의 편집기 조작을 포함하여 예제를 사용한 자세한 연습을 보려면 [시작 - 대화형 REPL 창 사용](getting-started.md#using-the-interactive-repl-window)을 참조하세요. 동영상 소개는 [Getting Started with Python in Visual Studio, Part 5: Interactive REPL](https://youtu.be/yc2CROtTsC0?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)(Visual Studio에서 Python 시작, 5부: 대화형 REPL)(youtube.com, 2분 51초)을 참조하세요.
+Ctrl+Enter 등의 편집기 조작을 포함하여 예제를 사용한 자세한 연습을 보려면 [자습서 3단계: 대화형 REPL 창 사용](vs-tutorial-01-03.md)을 참조하세요. 비디오 소개의 경우 [Python 대화형 창](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=gJYKY5LWE_4605918567)(Microsoft Virtual Academy, 2분 22초)을 참조하세요.
 
-> [!VIDEO https://www.youtube.com/embed/yc2CROtTsC0]
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Python-Interactive-Window-gJYKY5LWE_4605918567]
 
 ## <a name="opening-an-interactive-window"></a>대화형 창 열기
 
@@ -131,4 +128,3 @@ Ctrl+Enter 등의 편집기 조작을 포함하여 예제를 사용한 자세한
 IntelliSense가 소스 코드 분석만을 기반으로 하는 코드 편집기와 달리 대화형 창에는 라이브 개체에 기반을 둔 IntelliSense가 포함되어 있습니다. 동적으로 생성된 코드의 경우 특히 대화형 창의 제안이 더 정확합니다. 단점은 부작용(예: 로깅 메시지)이 있는 함수가 개발 환경에 영향을 줄 수 있다는 점입니다.
 
 이 동작이 문제가 될 경우 [옵션 - 대화형 Windows 옵션](options.md#interactive-windows-options)에 설명된 대로 **도구 > 옵션 > Python 도구 > 대화형 창** 아래의 **완료 모드** 그룹에서 설정을 변경합니다.
-

@@ -1,57 +1,56 @@
 ---
-title: "찾기/명령 상자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.findcommandbox"
-helpviewer_keywords: 
-  - "찾기/명령 상자"
+title: "찾기 명령 상자 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.findcommandbox
+helpviewer_keywords: Find/Command box
 ms.assetid: c81736dd-7a26-4e11-95c8-c2a2e56d7a41
-caps.latest.revision: 17
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c8bf4de0ff0dfb240f668ba3f6915268ee89e594
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 찾기/명령 상자
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-텍스트를 검색 하는 Visual Studio 명령을 실행 하면  **찾기\/명령** 상자.  **찾기\/명령** 상자 toolbar 컨트롤을 계속 사용할 수 있지만 기본적으로 표시 되지 않는.  표시할 수는  **찾기\/명령** 상자를 선택 하 여  **단추 추가 \/ 제거** 에  **표준** 선택 하 고 도구 모음  **찾기**.  
+# <a name="findcommand-box"></a>찾기/명령 상자
+텍스트를 검색하고 **찾기/명령** 상자에서 Visual Studio 명령을 실행할 수 있습니다. **찾기/명령** 상자를 도구 모음 컨트롤로 사용할 수 있지만 이 상자는 더 이상 기본적으로 표시되지 않습니다. **찾기/명령** 상자를 표시하려면 **표준** 도구 모음에서 **단추 추가/제거**를 선택하고 나서 **찾기**를 선택합니다.  
   
- 실행 하는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명령, 큼 앞 보다 \(\>\) 기호.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명령을 실행하려면 앞에 보다 큼(>) 기호를 붙입니다.  
   
- **찾기\/명령** 입력란은 최근에 입력된 20개의 항목을 유지하며 이들 항목을 드롭다운 목록에 표시합니다.  화살표 키를 선택 하 여 목록을 탐색할 수 있습니다.  
+ **찾기/명령** 상자는 입력된 마지막 20개 항목을 유지하고 드롭다운 목록에 표시합니다. 화살표 키를 선택하여 목록을 이동할 수 있습니다.  
   
- ![찾기&#47;명령 상자](~/ide/media/findcommandbox.png "FindCommandBox")  
-찾기\/명령 입력란  
+ ![찾기&#47;명령 상자](../ide/media/findcommandbox.png "FindCommandBox")  
+찾기/명령 상자  
   
-## 텍스트 검색  
- 텍스트를 지정 하는 경우 기본적으로는  **찾기\/명령** 상자을 입력 한 다음 선택 키를 Visual Studio 지정 된 옵션을 사용 하 여 현재 문서 또는 도구 창의 검색은  **파일에서 찾기** 대화 상자.  자세한 내용은 [텍스트 찾기 및 바꾸기](../ide/finding-and-replacing-text.md)을 참조하십시오.  
+## <a name="searching-for-text"></a>텍스트 검색  
+ 기본적으로 **찾기/명령** 상자에 텍스트를 지정한 다음 Enter 키를 선택하면 Visual Studio는 **파일에서 찾기** 대화 상자에 지정된 옵션을 사용하여 현재 문서 또는 도구 창을 검색합니다. 자세한 내용은 [텍스트 찾기 및 바꾸기](../ide/finding-and-replacing-text.md)를 참조하세요.  
   
-## 명령 입력  
- 사용 하는  **찾기\/명령** 상자 하나를 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명령 또는 별칭 입력 텍스트를 검색 하는 대신의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명령을 앞에 큰 보다 \(\>\) 기호.  예를 들면 다음과 같습니다.  
+## <a name="entering-commands"></a>명령 입력  
+ 텍스트 검색보다는 **찾기/명령** 상자를 사용하여 단일 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명령이나 별칭을 실행하려면 앞에 보다 큼(>) 기호를 배치하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명령을 입력합니다. 예:  
   
 ```  
 >File.NewFile c:\temp\MyFile /t:"General\Text File"  
 ```  
   
- 다른 방법으로, 명령 창을 사용하여 하나 또는 여러 명령을 입력하고 실행할 수 있습니다.  일부 명령이나 별칭은 독립적으로 입력하고 실행할 수 있지만 구문에 인수를 필요로 하는 명령이나 별칭도 있습니다.  인수가 있는 명령 목록을 보려면 [Visual Studio 명령](../ide/reference/visual-studio-commands.md)을 참조하십시오.  
+ 또는 명령 창을 사용하여 단일 또는 여러 명령을 입력하고 실행할 수도 있습니다. 일부 명령 또는 별칭은 직접 입력 및 실행할 수 있으며 구문에 인수가 필요한 명령도 있습니다. 인수가 있는 명령 목록은 [Visual Studio 명령](../ide/reference/visual-studio-commands.md)을 참조하세요.  
   
-## 이스케이프 문자  
- 명령줄에 있는 캐럿\(^\) 문자는 캐럿 문자 바로 다음에 오는 문자가 제어 문자로 해석되는 대신 문자 그대로 해석됨을 의미합니다.  이 문자는 큰따옴표\("\), 공백, 선행 슬래시, 캐럿 등의 리터럴 문자를 매개 변수나 스위치 값에 포함시키는 데 사용할 수 있으며 스위치 이름은 예외입니다.  다음 예제를 참조하십시오.  
+## <a name="escape-characters"></a>이스케이프 문자  
+ 명령줄의 캐럿(^) 문자는 캐럿 바로 뒤의 문자가 제어 문자가 아닌 문자 그대로 해석된다는 것을 의미합니다. 이스케이프 문자는 매개 변수 또는 스위치 값에 곧은 큰따옴표("), 공백, 선행 슬래시, 캐럿 등 또는 리터럴 문자를 포함하기 위해 사용할 수 있습니다(스위치 이름 제외). 예를 들면 다음과 같습니다.  
   
 ```  
 >Edit.Find ^^t /regex  
 ```  
   
- 캐럿은 따옴표의 내부 또는 외부에 있는지에 관계 없이 동일한 기능을 수행하며  줄의 마지막에 오는 캐럿 문자는 무시됩니다.  
+ 캐럿은 따옴표 내부에 있든 외부에 있든 기능이 동일합니다. 캐럿이 줄에서 마지막 문자인 경우 무시됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [명령 창](../ide/reference/command-window.md)   
  [텍스트 찾기 및 바꾸기](../ide/finding-and-replacing-text.md)

@@ -1,17 +1,16 @@
 ---
-title: "프로젝트 항목 추가 및 제거"
+title: "프로젝트 항목 추가 및 제거 | Microsoft Docs"
 description: "이 문서에서는 Mac용 Visual Studio에서 프로젝트 항목을 추가 및 제거하는 방법을 설명합니다."
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 4071689D-1C21-42D7-8963-550E7BCB4B67
+ms.openlocfilehash: 2a7211fe6989bd51e59a22a0905e29300c64503e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: ad2e7f50f9b45fda1006dc131439f532a613ddca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="adding-and-removing-project-items"></a>프로젝트 항목 추가 및 제거
 

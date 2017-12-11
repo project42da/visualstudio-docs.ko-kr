@@ -1,19 +1,17 @@
 ---
-title: "리팩터링"
+title: "Mac용 Visual Studio에서 코드 리팩터링 | Microsoft Docs"
 description: "소스 분석을 사용하면 Mac용 Visual Studio에서 코드를 간편하게 재구성할 수 있습니다."
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
+ms.openlocfilehash: ba92cd9a0e9ca28d132116f65fd41758bce1a1f0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 4133b35d7bafd37a44150c6af0d730562a639874
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="refactoring"></a>리팩터링
 
 코드를 리팩터링하면 코드의 전체적인 동작을 변경하지 않으면서 기존의 코드를 재정렬 및 재구성하고 명확하게 나타낼 수 있습니다.
@@ -109,5 +107,4 @@ Mac용 Visual Studio는 Microsoft의 오픈 소스 .NET 컴파일러 플랫폼�
 상단의 원을 클릭하면 심각도가 가장 높은 문제부터 순서대로 표시된 상태에서 각 제안을 반복할 수 있습니다. 개별 결과나 줄을 마우스로 가리키면 문제가 표시되며, 이는 컨텍스트 작업을 통해 수정 가능합니다.
 
  ![소스 분석 항목](media/refactoring-image5.png)
-
 

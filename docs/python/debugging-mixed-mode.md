@@ -1,35 +1,31 @@
 ---
 title: "Visual Studio에서 Python에 대한 혼합 모드 디버깅 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/12/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4ca86a87-e254-4ab7-b3ba-a0ab99c1da93
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 2f7253e91535e5c9f3214b712da135db46ed7cf9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: a185a7888b693d37aa5df8f3a051679d6b7e9ec5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="debugging-python-and-c-together"></a>Python과 C++로 디버깅
 
 대부분의 일반 Python 디버거는 Python 코드만 디버그할 수 있습니다. 그러나 실제로 Python은 고성능 또는 플랫폼 API를 직접 호출하는 기능이 필요한 C 또는 C++와 함께 사용됩니다. 예제는 [Python용 C++ 확장 만들기](cpp-and-python.md)를 참조하세요. Python 프로젝트가 로드될 경우 Visual Studio는 결합된 호출 스택, Python과 네이티브 코드 간 단계별 실행 기능, 두 가지 코드 형식의 중단점 및 네이티브 프레임에서 개체의 Python 표현과 Python 프레임에서 개체의 네이티브 표현을 볼 수 있는 기능을 통해 Python과 네이티브 C/C++를 위한 통합된 동시 혼합 모드 디버깅을 제공합니다.
 
 ![혼합 모드 디버깅](media/mixed-mode-debugging.png) 
 
-Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 방법에 대한 소개는 [자세히 알아보기: 네이티브 모듈 만들기](https://youtu.be/D9RlT06a1EI)(youtube.com, 9분 9초)를 참조하세요.
+Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 방법에 대한 소개는 [자세히 알아보기: 네이티브 모듈 만들기](https://youtu.be/D9RlT06a1EI)(youtube.com, 9분 9초)를 참조하세요. 이 동영상은 Visual Studio 2015 및 2017 모두에 적용됩니다.
 
 > [!VIDEO https://www.youtube.com/embed/D9RlT06a1EI]
 

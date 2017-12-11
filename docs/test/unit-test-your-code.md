@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,29 +12,14 @@ helpviewer_keywords:
 - unit tests, verifying code with
 - testing code, automated tests
 ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
-caps.latest.revision: 62
+caps.latest.revision: "62"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
-ms.openlocfilehash: 2e777b966cd332871533434728a6a565c51a5336
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: e6e0b55e86130f316c09583d4a52e1ad3dc22608
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="unit-test-your-code"></a>코드 단위 테스트
 개발자와 테스터는 단위 테스트를 통해 [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)], [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] 및 [!INCLUDE[cpp_current_short](../misc/includes/cpp_current_short_md.md)] 프로젝트에서 클래스의 메서드에 있는 논리 오류를 빠르게 찾을 수 있습니다.  
@@ -89,7 +73,7 @@ ms.lasthandoff: 05/26/2017
 ## <a name="external-resources"></a>외부 리소스  
   
 ### <a name="videos"></a>비디오  
- [채널 9: XAML을 사용하여 빌드한 Windows 스토어 앱 유닛 테스트](http://go.microsoft.com/fwlink/?LinkId=226285)  
+ [채널 9: XAML을 사용하여 빌드한 UWP 앱 유닛 테스트](http://go.microsoft.com/fwlink/?LinkId=226285)  
   
 ### <a name="forums"></a>포럼  
  [Visual Studio 단위 테스트](http://go.microsoft.com/fwlink/?LinkId=224477)  
@@ -103,4 +87,3 @@ ms.lasthandoff: 05/26/2017
 ## <a name="see-also"></a>참고 항목  
  [코드 품질 향상](/visualstudio/test/improve-code-quality)   
  [응용 프로그램 테스트](/devops-test-docs/test/test-apps-early-and-often)
-
