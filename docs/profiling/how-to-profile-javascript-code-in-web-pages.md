@@ -1,35 +1,38 @@
 ---
-title: "방법: 웹 페이지에서 JavaScript(ECMA) 코드 프로파일링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "JavaScript 성능 프로파일링"
-  - "프로파일링 도구, JavaScript"
-  - "웹 사이트 성능 프로파일링"
+title: "방법: 웹 페이지에서 JavaScript 코드 프로파일링 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JavaScript performance profiling
+- Profiling Tools,JavaScript
+- web site performance profiling
 ms.assetid: 37d02aad-ca4d-4eb0-bf66-ca3ecef31fbe
-caps.latest.revision: 27
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8e33605b75dfe80bf755081692bc8a4991def801
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="how-to-profile-javascript-code-in-web-pages"></a>방법: 웹 페이지에서 JavaScript 코드 프로파일링
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구는 계측 프로파일링 방법을 사용하여 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램, 임의 웹 페이지 또는 JavaScript 응용 프로그램에서 실행되는 JavaScript 코드에 대한 성능 데이터를 수집할 수 있습니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
 -   Internet Explorer 8 이상.  
   
 > [!WARNING]
->  Windows 스토어 앱에서 JavaScript를 프로파일링하려면 [JavaScript 메모리](../profiling/javascript-memory.md)를 참조하세요. 
+>  UWP에서 JavaScript를 프로파일링하려면 [JavaScript 메모리](../profiling/javascript-memory.md)를 참조하세요. 
   
  프로파일링 마법사를 사용하여 성능 세션을 만들 수 있습니다. 계측 방법을 지정한 다음 성능 세션에 대한 속성 대화 상자의 계측 페이지에서 JavaScript 프로파일링 옵션을 지정합니다.  
   
@@ -78,8 +81,3 @@ caps.handback.revision: 27
 7.  프로파일링하려는 기능을 실행합니다.  
   
 8.  프로파일링 세션을 종료하려면 브라우저를 닫습니다.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

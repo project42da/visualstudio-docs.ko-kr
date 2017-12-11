@@ -4,8 +4,7 @@ description: "Visual Studio의 엔터프라이즈 배포에 대한 도메인 정
 ms.date: 05/05/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-install
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,27 +17,11 @@ ms.assetid: 9B7B4608-7A3F-4FF4-BDCE-42D9F7CE6DBA
 author: heaths
 ms.author: heaths
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8f38b2707376d4bee8852ad107980fa925114d99
-ms.openlocfilehash: 05c5fd9e4be4cbf7d40e27c7c97793bc2466efe3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/05/2017
-
+ms.openlocfilehash: ff6cc33a9bd7e5feddf83f770ef008ff6c33e4a9
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="set-defaults-for-enterprise-deployments-of-visual-studio"></a>Visual Studio의 엔터프라이즈 배포에 대한 기본값 설정
 
@@ -58,7 +41,10 @@ Visual Studio의 배포에 영향을 주는 레지스트리 정책을 설정할 
 2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\Setup`
 3. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\Setup`(64비트 운영 체제)
 
-일부 레지스트리 값은 처음 사용될 때 자동으로 설정됩니다(설정되어 있지 않은 경우). 따라서 이후 설치에는 같은 값이 사용됩니다. 이러한 값은 두 번째 레지스트리 키 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\Setup`에 저장됩니다.
+> [!IMPORTANT]
+> `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\Setup` 키를 설정하지 않은 대신 다른 키 중에 하나를 설치한 경우 64비트 운영 체제에서 다를 키를 둘 다 설정해야 합니다. 이 문제는 향후 제품 업데이트에서 해결됩니다.
+
+일부 레지스트리 값은 처음 사용될 때 자동으로 설정됩니다(설정되어 있지 않은 경우). 이 연습을 통해 이후 설치에 같은 값이 사용됩니다. 이러한 값은 두 번째 레지스트리 키 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\Setup`에 저장됩니다.
 
 다음 레지스트리 값을 설정할 수 있습니다.
 
@@ -72,10 +58,17 @@ Visual Studio의 배포에 영향을 주는 레지스트리 정책을 설정할 
 > 설치한 후 `CachePath` 레지스트리 정책을 변경할 경우 기존 패키지 캐시를 새 위치로 이동하고 `SYSTEM` 및 `Administrators`에 모든 권한을 부여하고 `Everyone`에 읽기 권한을 부여하여 해당 캐시가 보호되도록 해야 합니다.
 > 기존 캐시를 이동하거나 보호하지 못하면 이후 설치에 관련된 문제가 발생할 수 있습니다.
 
+## <a name="get-support"></a>지원 받기
+때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 문제 해결](troubleshooting-installation-issues.md) 페이지를 참조하세요. 문제 해결 단계가 도움이 되지 않는 경우 라이브 채팅을 통해 Microsoft에 설치 지원을 문의할 수 있습니다(영어만 가능). 자세한 내용은 [Visual Studio 지원 페이지](https://www.visualstudio.com/vs/support/#talktous)를 참조하세요.
+
+몇 가지 추가 지원 옵션은 다음과 같습니다.
+* Visual Studio 설치 관리자와 Visual Studio IDE에 모두 표시되는 [문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md) 도구를 통해 Microsoft에 제품 문제를 보고할 수 있습니다.
+* [UserVoice](https://visualstudio.uservoice.com/forums/121579)에서 Microsoft와 제품 제안을 공유할 수 있습니다.
+* [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고 질문을 하고 답을 찾을 수 있습니다.
+* [Gitter 커뮤니티의 Visual Studio 관련 대화](https://gitter.im/Microsoft/VisualStudio)를 통해 Microsoft 및 다른 Visual Studio 개발자와 소통할 수도 있습니다.  (이 옵션을 사용하려면 [GitHub](https://github.com/) 계정이 필요합니다.)
+
 ## <a name="see-also"></a>참고 항목
 
  * [Visual Studio 설치](install-visual-studio.md)
  * [패키지 캐시를 사용하지 않도록 설정 또는 이동](disable-or-move-the-package-cache.md)
  * [명령줄 매개 변수를 사용하여 Visual Studio 설치](use-command-line-parameters-to-install-visual-studio.md)
- * [Visual Studio의 문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
-

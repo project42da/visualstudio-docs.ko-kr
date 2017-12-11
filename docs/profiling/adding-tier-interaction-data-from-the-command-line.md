@@ -1,29 +1,32 @@
 ---
-title: "명령줄에서 계층 상호 작용 데이터 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "계층 상호 작용 프로파일링 방법"
-  - "프로파일링 도구, 계층 상호 작용 방법"
+title: "명령줄에서 계층 상호 작용 데이터 추가 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tier interaction profiling method
+- profiling tools,tier interaction method
 ms.assetid: 5a35647f-03f2-4555-8eeb-fda7e0080e67
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a210ce1f6aeac113033bd82306bb5b682a5e21b9
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="adding-tier-interaction-data-from-the-command-line"></a>명령줄에서 계층 상호 작용 데이터 추가
 계층 상호 작용 프로파일링은 하나 이상의 데이터베이스와 통신하는 다중 계층 응용 프로그램의 함수에서 동기 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] 호출의 실행 시간에 대한 추가 정보를 제공합니다.  
   
  **Windows 8 및 Windows Server 2012**  
   
- Windows 8 데스크톱 앱 및 Windows Server 2012 앱에서 계층 상호 작용 데이터를 수집하려면 계측 방법을 사용해야 합니다. Windows 스토어 앱에서 계층 상호 작용 데이터를 수집하는 것은 지원되지 않습니다.  
+ Windows 8 데스크톱 앱 및 Windows Server 2012 앱에서 계층 상호 작용 데이터를 수집하려면 계측 방법을 사용해야 합니다. UWP 앱에서 계층 상호 작용 데이터를 수집하는 것은 지원되지 않습니다.  
   
  **Visual Studio 버전**  
   
@@ -151,8 +154,3 @@ vsperfaspnetcmd /tip /trace http://localhost/MyWebApp
 ```  
   
  VSPerfASPNETCmd에 대한 자세한 내용은 [VSPerfASPNETCmd를 사용한 빠른 웹 사이트 프로파일링](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)을 참조하세요.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

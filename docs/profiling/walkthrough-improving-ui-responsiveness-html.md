@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,39 +13,23 @@ dev_langs:
 - FSharp
 - C++
 helpviewer_keywords:
-- performance tools, JavaScript [Store apps]
-- performance, JavaScript [Store apps]
-- performance, HTML [Store apps]
-- performance tools, HTML [Store apps]
+- performance tools, JavaScript [UWP apps]
+- performance, JavaScript [UWP apps]
+- performance, HTML [UWP apps]
+- performance tools, HTML [UWP apps]
 ms.assetid: 7e5a2524-dbf5-4a40-b5d6-2d1ed7fff3de
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 753b4abd76b56ff46406b3a2f5ab5b8fb008c526
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: cf4747a1e2c0d9d7c20fe0856becb4cd42d1e847
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="walkthrough-improving-ui-responsiveness-html"></a>연습: UI 응답성 개선(HTML)
-이 연습에서는 [HTML UI 응답성 프로파일러](../profiling/html-ui-responsiveness.md)를 사용하여 간단한 성능 문제를 식별하고 해결하는 과정을 안내합니다. 프로파일러는 JavaScript를 사용하는 Windows 유니버설 및 Windows 스토어 앱용 Visual Studio에서 사용 가능합니다. 이 시나리오에서는 DOM 요소를 너무 자주 업데이트하는 성능 테스트 앱을 만들고 프로파일러를 사용하여 이 문제를 식별 및 수정합니다.  
+이 연습에서는 [HTML UI 응답성 프로파일러](../profiling/html-ui-responsiveness.md)를 사용하여 간단한 성능 문제를 식별하고 해결하는 과정을 안내합니다. 프로파일러는 JavaScript를 사용하는 Windows 유니버설 및 UWP 앱용 Visual Studio에서 사용 가능합니다. 이 시나리오에서는 DOM 요소를 너무 자주 업데이트하는 성능 테스트 앱을 만들고 프로파일러를 사용하여 이 문제를 식별 및 수정합니다.  
   
 ### <a name="creating-and-running-the-performance-test-app"></a>성능 테스트 앱 만들기 및 실행  
   
