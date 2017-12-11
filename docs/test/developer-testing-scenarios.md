@@ -12,11 +12,11 @@ ms.assetid: 9DE41406-8D39-427E-99D9-987E99103B73
 caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 8ca7133aa2cb4f02e3a8761d38fb22fcc2ce6122
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.openlocfilehash: feb31e2a5c4abf0013ee4d3ec0a20c7f3cfdff2a
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="developer-testing-tools-scenarios-and-capabilities"></a>개발자 테스트 도구, 시나리오 및 호환성
 
@@ -88,7 +88,7 @@ IntelliTest는 새로운 코드나 기존 코드에 대해 단위 테스트를 �
 
 * [유닛 테스트 시작](unit-test-your-code.md)
 * [테스트 탐색기를 사용하여 단위 테스트 실행](run-unit-tests-with-test-explorer.md)
-* [C/C++에 대한 단위 테스트 작성](writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)
+* [C/C++에 대한 단위 테스트 작성](writing-unit-tests-for-c-cpp.md)
 * [타사 단위 테스트 프레임워크 설치](install-third-party-unit-test-frameworks.md)
 
 Visual Studio는 확장 가능하고 이제 NUnit 및 xUnit.net과 같은 타사 유닛 테스트 어댑터에도 사용할 수 있습니다. 또한 코드 복제본 기능은 일반적인 버그 수정 또는 리팩터링의 후보가 될 수 있는 의미상 비슷한 코드 블록을 식별하도록 지원함으로써 고품질 소프트웨어 제공과 관련되어 있습니다.

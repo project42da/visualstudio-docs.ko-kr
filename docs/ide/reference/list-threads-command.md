@@ -1,54 +1,54 @@
 ---
 title: "스레드 목록 표시 명령 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "debug.listthreads"
-helpviewer_keywords: 
-  - "Debug.ListThreads 명령"
-  - "스레드 목록 표시 명령"
-  - "ListThreads 명령"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: debug.listthreads
+helpviewer_keywords:
+- ListThreads command
+- list threads command
+- Debug.ListThreads command
 ms.assetid: 34b665c0-d46f-4c1a-a066-b678eba5ac54
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: fa71ec1c6eb8ac50d957782dda02a2c3fb59a3c2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 스레드 목록 표시 명령
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-현재 프로그램에 있는 스레드의 목록을 표시합니다.  
+# <a name="list-threads-command"></a>스레드 목록 표시 명령
+현재 프로그램의 스레드 목록을 표시합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 Debug.ListThreads [index]  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  `index`  
- 선택적 요소.  인덱스를 사용하여 현재 스레드가 될 스레드를 선택합니다.  
+ 선택 사항입니다. 해당 인덱스별로 현재 스레드가 될 스레드를 선택합니다.  
   
-## 설명  
- `index` 인수를 지정하면 지정된 스레드가 현재 스레드로 표시됩니다.  목록에서 현재 스레드 옆에 별표\(\*\)가 표시됩니다.  
+## <a name="remarks"></a>설명  
+ 지정하는 경우 `index` 인수는 현재 스레드로 지정된 스레드를 표시합니다. 별표(*)는 현재 스레드 옆에 있는 목록에 표시됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 >Debug.ListThreads   
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [호출 스택 목록 표시 명령](../../ide/reference/list-call-stack-command.md)   
  [디스어셈블리 목록 표시 명령](../../ide/reference/list-disassembly-command.md)   
  [Visual Studio 명령](../../ide/reference/visual-studio-commands.md)   
  [명령 창](../../ide/reference/command-window.md)   
- [찾기\/명령 상자](../../ide/find-command-box.md)   
+ [찾기/명령 상자](../../ide/find-command-box.md)   
  [Visual Studio 명령 별칭](../../ide/reference/visual-studio-command-aliases.md)

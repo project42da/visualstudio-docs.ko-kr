@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,30 +13,15 @@ helpviewer_keywords:
 - application manifests [Visual Studio]
 - assemblies [Visual Studio], signing
 ms.assetid: 6c1ef36b-25f7-4ad0-b29a-51801b7a5420
-caps.latest.revision: 15
-author: kempb
-ms.author: kempb
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 62e9060c812666f671f1c2d3378fad510d6524f6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
-ms.openlocfilehash: 6a28915840af1b22dffe704ac931a57f25ca6879
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>어셈블리 및 매니페스트 서명 관리
 강력한 이름 서명은 소프트웨어 구성 요소에 전역적으로 고유한 ID를 제공합니다. 강력한 이름은 어셈블리가 다른 사용자에 의해 스푸핑되지 않도록 보장하고 구성 요소 종속성 및 구성 문이 올바른 구성 요소 및 구성 요소 버전에 매핑되도록 하는 데 사용됩니다.  
@@ -62,15 +46,15 @@ ms.lasthandoff: 08/01/2017
   
 -   공유 구성 요소 어셈블리(.dll)  
   
- 다음 자산 형식에 서명해야 합니다.  
+다음 자산 형식에 서명해야 합니다.  
   
-1.  어셈블리(GAC(전역 어셈블리 캐시)에 배포하려는 경우).  
+1.  GAC(전역 어셈블리 캐시)에 배포하려는 경우 어셈블리입니다.  
   
 2.  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 및 배포 매니페스트. Visual Studio에서는 이러한 응용 프로그램에 기본적으로 서명할 수 있습니다.  
   
 3.  주 interop 어셈블리(COM 상호 운용성에 사용됨). TLBIMP 유틸리티는 COM 형식 라이브러리에서 주 interop 어셈블리를 만들 때 강력한 이름 지정을 적용합니다.  
   
- 일반적으로 실행 파일에는 서명하면 안 됩니다. 강력한 이름의 구성 요소는 응용 프로그램과 함께 배포되는 강력한 이름이 아닌 구성 요소를 참조할 수 없습니다. Visual Studio에서는 응용 프로그램 실행 파일에 서명하지 않고 약한 이름의 실행 파일을 가리키는 응용 프로그램 매니페스트에 서명합니다. 일반적으로 응용 프로그램 전용의 구성 요소에는 서명하지 않는 것이 좋습니다. 서명으로 인해 종속성 관리가 더 어려워질 수 있기 때문입니다.  
+일반적으로 실행 파일에는 서명하면 안 됩니다. 강력한 이름의 구성 요소는 응용 프로그램과 함께 배포되는 강력한 이름이 아닌 구성 요소를 참조할 수 없습니다. Visual Studio에서는 응용 프로그램 실행 파일에 서명하지 않고 약한 이름의 실행 파일을 가리키는 응용 프로그램 매니페스트에 서명합니다. 일반적으로 응용 프로그램 전용의 구성 요소에는 서명하지 않는 것이 좋습니다. 서명으로 인해 종속성 관리가 더 어려워질 수 있기 때문입니다.  
   
 ## <a name="how-to-sign-an-assembly-in-visual-studio"></a>Visual Studio에서 어셈블리에 서명하는 방법  
  [프로젝트 속성] 창의 **서명** 탭을 사용하여 응용 프로그램 또는 구성 요소에 서명합니다(**솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하거나, **빠른 실행** 창에 **프로젝트 속성**을 입력하거나, **솔루션 탐색기** 창 내에서 ALT+ ENTER를 누름). **서명** 탭을 선택하고 나서 **어셈블리 서명** 확인란을 선택합니다.  

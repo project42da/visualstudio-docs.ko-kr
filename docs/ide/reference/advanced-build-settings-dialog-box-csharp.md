@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 06/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- cs.AdvancedBuildSettings
-helpviewer_keywords:
-- Build options [C#], advanced
+f1_keywords: cs.AdvancedBuildSettings
+helpviewer_keywords: Build options [C#], advanced
 ms.assetid: 141f2dee-1563-4ce6-ba37-32920b082519
-caps.latest.revision: 13
-author: kempb
-ms.author: kempb
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b7b29ffadcb069b6c918dfbe89f0ae49d0da172a
-ms.openlocfilehash: a281313904bb8881d2e96065a024447d151cddbd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/20/2017
-
+ms.openlocfilehash: c7df850e46f8f5d81b9127a9885128452900b84b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>고급 빌드 설정 대화 상자(C#)
 
@@ -46,8 +28,7 @@ ms.lasthandoff: 06/20/2017
 
  다음 옵션을 사용하여 일반 고급 설정을 설정할 수 있습니다.
 
- **언어 버전**
- 사용할 언어의 버전을 지정합니다. 기능 집합은 버전에 따라 다르므로 이 옵션을 사용하여 컴파일러에서 구현된 기능의 하위 집합만 허용하도록 하거나 기존 표준과 호환되는 기능만 사용하도록 설정할 수 있습니다. 이 설정에는 다음과 같은 옵션이 있습니다.
+ **언어 버전** 사용할 언어의 버전을 지정합니다. 기능 집합은 버전에 따라 다르므로 이 옵션을 사용하여 컴파일러에서 구현된 기능의 하위 집합만 허용하도록 하거나 기존 표준과 호환되는 기능만 사용하도록 설정할 수 있습니다. 이 설정에는 다음과 같은 옵션이 있습니다.
 
  - **default**
 
@@ -72,8 +53,7 @@ ms.lasthandoff: 06/20/2017
 
  다음 옵션을 사용하여 고급 출력 옵션을 지정할 수 있습니다.
 
- **디버그 정보**
- 컴파일러에서 생성되는 디버깅 정보 형식을 지정합니다. 응용 프로그램의 디버그 성능을 구성하는 방법에 대한 자세한 내용은 [쉽게 디버깅할 수 있도록 이미지 만들기](http://msdn.microsoft.com/Library/7d90ea7a-150f-4f97-98a7-f9c26541b9a3)를 참조하세요. 이 설정에는 다음과 같은 옵션이 있습니다.
+ **디버그 정보** 컴파일러에서 생성되는 디버깅 정보 형식을 지정합니다. 응용 프로그램의 디버그 성능을 구성하는 방법에 대한 자세한 내용은 [쉽게 디버깅할 수 있도록 이미지 만들기](http://msdn.microsoft.com/Library/7d90ea7a-150f-4f97-98a7-f9c26541b9a3)를 참조하세요. 이 설정에는 다음과 같은 옵션이 있습니다.
 
 - **none**
 
@@ -102,6 +82,4 @@ ms.lasthandoff: 06/20/2017
 
 ## <a name="see-also"></a>참고 항목
 
- [C# 컴파일러 옵션](/dotnet/csharp/language-reference/compiler-options/index)
- [프로젝트 디자이너, 빌드 페이지(C#)](../../ide/reference/build-page-project-designer-csharp.md)
-
+ [C# 컴파일러 옵션](/dotnet/csharp/language-reference/compiler-options/index) [프로젝트 디자이너, 빌드 페이지(C#)](../../ide/reference/build-page-project-designer-csharp.md)

@@ -1,14 +1,12 @@
 ---
 title: "Dotfuscator CE(Community Edition) 업그레이드 | Microsoft 문서"
 ms.date: 2017-02-08
-ms.prod: visual-studio-dev15
 ms.devlang: dotnet
-ms.technology:
-- dotfuscator
+ms.technology: vs-ide-general
 ms.topic: article
 keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 보호, community edition, obfuscation, .NET, 무료, Visual Studio 2017, 업그레이드, 명령줄"
 helpviewer_keywords:
-- PreEmptive Protection - Dotfuscator
+- PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
 - Dotfuscator CE
 - Dotfuscator
@@ -25,44 +23,26 @@ description: "Visual Studio 2017에 포함된 무료 Dotfuscator Community Editi
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
-ms.openlocfilehash: 60ca38639f6523cdbace4efa4aa48b48d5e9a886
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: 261fc98312914f5a80d2302a90e360dfde2ca17f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-
-# Dotfuscator CE(Community Edition) 업그레이드
-<a id="upgrade-dotfuscator-community-edition-ce" class="xliff"></a>
+# <a name="upgrade-dotfuscator-community-edition-ce"></a>Dotfuscator CE(Community Edition) 업그레이드
 
 Dotfuscator CE(Dotfuscator Community Edition)는 Microsoft Visual Studio를 사용하는 모든 개발자에게 즉시 다양한 응용 프로그램 보호 및 강화 기능을 제공합니다.
 그러나 Dotfuscator 버전을 업그레이드하는 사용자에게는 더 많은 기능이 제공됩니다.
 
-## Dotfuscator CE 등록
-<a id="registering-dotfuscator-ce" class="xliff"></a>
+## <a name="registering-dotfuscator-ce"></a>Dotfuscator CE 등록
 
 Dotfuscator CE의 등록된 사용자는 [명령줄 지원][cli]과 같은 추가 기능에 액세스할 수 있어 Dotfuscator CE를 자동화된 빌드 프로세스에 쉽게 통합할 수 있습니다.
+또한 등록은 [난독 처리된 스택 추적 디코딩][decode-obfuscated]을 위한 기본 제공 도구인 Lucidator에 대한 액세스 권한을 부여합니다.
 
 등록은 빠르고 간단하며 무료입니다.
 Dotfuscator CE를 등록하려면 [전체 Dotfuscator CE 사용자 가이드의 Getting Started(시작) 페이지에 있는 Registering Dotfuscator CE(Dotfuscator CE 등록) 섹션][register-ce]을 참조하세요.
 
-## Dotfuscator Professional
-<a id="dotfuscator-professional" class="xliff"></a>
+## <a name="dotfuscator-professional"></a>Dotfuscator Professional
 
 Dotfuscator Community Edition은 기본적인 보호를 제공하지만 **_PreEmptive Protection - Dotfuscator_ Professional Edition**에는 향상된 난독 변환 및 보호 기능이 포함됩니다.
 여기에는 다음이 포함됩니다.
@@ -77,7 +57,6 @@ Dotfuscator Community Edition은 기본적인 보호를 제공하지만 **_PreEm
   * 전달되는 중요한 코드의 양을 줄이도록 [자동으로 응용 프로그램에서 사용되지 않는 코드를 제거][pruning]하는 기능.
 * *응용 프로그램 무결성 보호*
   * 추가적인 [응용 프로그램 방어 동작][check-actions].
-  * 조작 방지 및 디버그 방지 코드를 `.dll` 어셈블리에 삽입하는 기능.
   * 응용 프로그램의 수명 종료 기한 전에 경고 기간을 제공하는 기능.
   * 수명 종료 경고 기간 중에 또는 기한 후에 응용 프로그램 코드를 알리는 기능.
   * 원격 분석 암호화.
@@ -95,8 +74,7 @@ Dotfuscator Professional은 산업 표준 [.NET Obfuscator][net-obfuscator]이�
 Dotfuscator Professional의 고급 응용 프로그램 보호 기능에 대한 자세한 내용은 PreEmptive Solutions의 [Dotfuscator Overview(Dotfuscator 개요) 페이지][product-about]를 방문해서 [Community Edition과 비교][product-compare]해 보세요.
 [preemptive.com][eval]에서 요청 시 전체 기능이 지원되는 평가판을 사용할 수 있습니다.
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 [전체 Dotfuscator CE 사용자 가이드의 이 항목][full]
 
@@ -108,8 +86,8 @@ Dotfuscator Professional의 고급 응용 프로그램 보호 기능에 대한 �
 [linking]: https://www.preemptive.com/products/dotfuscator/features#linking
 [pruning]: https://www.preemptive.com/products/dotfuscator/features#pruning
 
-[check-actions]: https://www.preemptive.com/images/stories/Dotfuscator/webframe.html#Check%20Actions.html
-[features]: https://www.preemptive.com/images/stories/Dotfuscator/webframe.html#Feature_Usage_Tracking_and_the_Feature_Attribute.html
+[check-actions]: https://www.preemptive.com/dotfuscator/pro/userguide/en/protection_checks_overview.html#actions
+[features]: https://www.preemptive.com/dotfuscator/pro/userguide/en/instrumentation_features.html
 
 [net-obfuscator]: https://www.preemptive.com/products/dotfuscator/overview
 [eval]: https://www.preemptive.com/eval-request
@@ -121,4 +99,4 @@ Dotfuscator Professional의 고급 응용 프로그램 보호 기능에 대한 �
 [register-ce]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html#register
 
 [full]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_upgrades.html
-
+[decode-obfuscated]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_decode_stack_trace.html

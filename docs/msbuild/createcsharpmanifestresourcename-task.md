@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,29 +16,15 @@ helpviewer_keywords:
 - MSBuild, CreateCSharpManifestResourceName task
 - CreateCSharpManifestResourceName task [MSBuild]
 ms.assetid: 2ace88c1-d757-40a7-8158-c1d3f5ff0511
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 574e04aa1c741c0a1720adf3fc77c2765f9dc1d3
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 9d18d7809357c8f4fa7bce796e7f05981a0f8c99
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="createcsharpmanifestresourcename-task"></a>CreateCSharpManifestResourceName 작업
 지정된 .resx 파일 이름 또는 기타 리소스에서 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 스타일 매니페스트 이름을 만듭니다.  
@@ -49,7 +34,7 @@ ms.lasthandoff: 02/22/2017
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|`ManifestResourceNames`|<xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 읽기 전용 매개 변수입니다.<br /><br /> 결과 매니페스트 이름입니다.|  
+|`ManifestResourceNames`|<xref:Microsoft.Build.Framework.ITaskItem> `[]` 읽기 전용 출력 매개 변수입니다.<br /><br /> 결과 매니페스트 이름입니다.|  
 |`ResourceFiles`|필수 `String` 매개 변수입니다.<br /><br /> 리소스 파일의 이름입니다. 이 이름에서 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 매니페스트 이름을 만듭니다.|  
 |`RootNamespace`|선택적 `String` 매개 변수입니다.<br /><br /> 일반적으로 프로젝트 파일에서 가져온 리소스 파일의 루트 네임스페이스입니다. `null`일 수 있습니다.|  
 |`PrependCultureAsDirectory`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`이면 문화권 이름이 매니페스트 리소스 이름 바로 앞에 디렉터리 이름으로 추가됩니다. 기본값은 `true`입니다.|  
@@ -58,7 +43,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="remarks"></a>설명  
  [CreateVisualBasicManifestResourceName 작업](../msbuild/createvisualbasicmanifestresourcename-task.md)은 지정된 .resx 또는 기타 리소스 파일에 할당할 적절한 매니페스트 리소스 이름을 결정합니다. 이 작업은 리소스 파일에 대한 논리적 이름을 제공한 후 출력 매개 변수에 메타데이터로 추가합니다.  
   
- 이 작업은 위에 나와 있는 매개 변수 외에 <xref:Microsoft.Build.Tasks.TaskExtension> 클래스의 매개 변수를 상속합니다. 이 클래스는 <xref:Microsoft.Build.Utilities.Task> 클래스에서 매개 변수를 상속합니다. 이러한 추가 매개 변수 및 해당 설명이 포함된 목록은 [TaskExtension 기본 클래스](../msbuild/taskextension-base-class.md)를 참조하세요.  
+ 이 작업은 위에 나와 있는 매개 변수 외에 <xref:Microsoft.Build.Utilities.Task> 클래스에서 직접 상속하는 <xref:Microsoft.Build.Tasks.TaskExtension> 클래스의 매개 변수도 상속합니다. 이러한 추가 매개 변수 및 해당 설명이 포함된 목록은 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [작업](../msbuild/msbuild-tasks.md)   

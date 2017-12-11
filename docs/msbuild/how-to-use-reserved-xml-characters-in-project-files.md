@@ -1,22 +1,25 @@
 ---
-title: "방법: 프로젝트 파일에서 예약된 XML 문자 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "예약 된 XML 문자를 사용 하 여 MSBuild"
-  - "MSBuild에 예약 된 XML 문자"
+title: "방법: 프로젝트 파일에서 예약된 XML 문자 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, using reserved XML characters
+- MSBuild, reserved XML characters
 ms.assetid: 1ae37275-96bf-4e6e-897b-6b048e5bbe93
-caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: c477cd9160a765a554cfa432b023b20eb6ef6b4e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-use-reserved-xml-characters-in-project-files"></a>방법: 프로젝트 파일에서 예약된 XML 문자 사용
 프로젝트 파일을 작성할 경우 속성 값이나 작업 매개 변수 값 등에서 예약된 XML 문자를 사용해야 합니다. 그러나 프로젝트 파일을 구문 분석할 수 있도록 일부 예약된 문자를 명명된 엔터티로 바꿔야 합니다.  
@@ -71,10 +74,4 @@ caps.handback.revision: 14
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [MSBuild 참조](../msbuild/msbuild-reference.md)
- [MSBuild](../msbuild/msbuild.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
+ [MSBuild 참조](../msbuild/msbuild-reference.md) [MSBuild](../msbuild/msbuild.md)

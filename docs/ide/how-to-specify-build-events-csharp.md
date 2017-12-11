@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,30 +14,15 @@ helpviewer_keywords:
 - build events [Visual Studio]
 - builds [Visual Studio], events
 ms.assetid: b4ce1ad9-5215-4b6f-b6a2-798b249aa335
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 3058bf7c6714f18291353224a192218c1b59a480
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 6f4f13cabe47bc55a78733ea2bee5504d404c5c4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-specify-build-events-c"></a>방법: 빌드 이벤트 지정(C#)
 빌드 이벤트를 사용하여 빌드 시작 전 또는 빌드 완료 후 실행되는 명령을 지정합니다. 빌드 이벤트는 빌드가 빌드 프로세스의 해당 지점에 성공적으로 도달할 경우에만 실행됩니다.  
@@ -163,7 +147,7 @@ ms.lasthandoff: 05/13/2017
   
 1.  프로젝트를 게시할 Windows 응용 프로그램을 만듭니다. **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-2.  **새 프로젝트** 대화 상자에서 **Visual C#**을 확장하고, **창**을 클릭하고 나서, **Windows Forms 응용 프로그램** 템플릿을 클릭합니다. 프로젝트 이름을 `CSWinApp`로 지정합니다.  
+2.  **새 프로젝트** 대화 상자에서 **Visual C#**을 확장하고, **Windows 클래식 바탕 화면**을 클릭하고 나서, **Windows Forms 응용 프로그램** 템플릿을 클릭합니다. 프로젝트 이름을 `CSWinApp`로 지정합니다.  
   
 3.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   

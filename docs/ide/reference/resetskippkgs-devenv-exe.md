@@ -1,45 +1,45 @@
 ---
-title: "/ResetSkipPkgs(devenv.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/ResetSkipPkgs 스위치"
-  - "Devenv, /ResetSkipPkgs 스위치"
-  - "ResetSkipPkgs 스위치"
+title: -ResetSkipPkgs(devenv.exe) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- /ResetSkipPkgs Devenv switch
+- Devenv, /ResetSkipPkgs switch
+- ResetSkipPkgs switch
 ms.assetid: 7ece64f9-cfa4-4b34-b0d9-1c338b9557b3
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 1d9e639379ca16e6544cac1368cd4012c981bd24
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# /ResetSkipPkgs(devenv.exe)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-문제 있는 VSPackages가 로드되지 않도록 사용자가 VSPackages에 추가한 로딩 건너뛰기 옵션을 모두 지운 다음 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 시작합니다.  
+# <a name="resetskippkgs-devenvexe"></a>/ResetSkipPkgs(devenv.exe)
+모든 옵션의 선택을 취소하여 VSPackages 로딩 문제를 방지하기 위해 사용자가 VSPackages에 추가된 로딩을 건너뛴 다음 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 시작합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 Devenv /ResetSkipPkgs  
 ```  
   
-## 설명  
- SkipLoading 태그가 있으면 VSPakage 로딩이 비활성화됩니다. 태그를 지우면 VSPackage 로딩이 다시 활성화됩니다.  
+## <a name="remarks"></a>설명  
+ SkipLoading 태그가 존재하면 VSPackage를 로드할 수 없습니다. 해당 태그를 지우면 VSPackage를 다시 로드할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 모든 SkipLoading 태그를 지웁니다.  
   
 ```  
 Devenv.exe /ResetSkipPkgs  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Devenv 명령줄 스위치](../../ide/reference/devenv-command-line-switches.md)

@@ -1,36 +1,36 @@
 ---
 title: "IDE에서 빌드 시작 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "빌드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: build
 ms.assetid: 936317aa-63b7-4eb0-b9db-b260a0306196
-caps.latest.revision: 5
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 081bcfd01d8c28959bf0dd4d038e91895e9c3983
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# IDE에서 빌드 시작
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-사용자 지정 프로젝트 시스템에서는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor>를 사용하여 빌드를 시작해야 합니다.  이 항목에서는 이렇게 해야 하는 이유에 대해 설명하고 이렇게 하는 절차에 대해 간략하게 설명합니다.  
+# <a name="starting-a-build-from-within-the-ide"></a>IDE에서 빌드 시작
+사용자 지정 프로젝트 시스템은 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor>를 사용하여 빌드를 시작해야 합니다. 이 항목에서는 이에 대한 이유를 설명하고 프로시저를 간략하게 설명합니다.  
   
-## 병렬 빌드 및 스레드  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 공용 리소스에 액세스하려면 중재가 필요한 병렬 빌드를 허용합니다.  프로젝트 시스템에서는 빌드를 비동기적으로 실행할 수 있습니다. 그러나 이러한 시스템에서는 빌드 관리자에게 제공된 콜백 내에서 빌드 함수를 호출하면 안 됩니다.  
+## <a name="parallel-builds-and-threads"></a>병렬 빌드 및 스레드  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]는 공통 리소스에 액세스하기 위한 중재를 필요로 하는 병렬 빌드를 허용합니다. 프로젝트 시스템은 빌드를 비동기적으로 실행할 수 있지만 이러한 시스템은 빌드 관리자에게 다시 제공되는 호출 내에서 빌드 함수를 호출하지 않아야 합니다.  
   
- 프로젝트 시스템에서 환경 변수를 수정하는 경우 빌드의 NodeAffinity를 OutOfProc로 설정해야 합니다.  이는 호스트 개체를 사용하려면 in\-proc 노드가 있어야 하기 때문에 호스트 개체를 사용할 수 없음을 의미합니다.  
+ 프로젝트 시스템이 환경 변수를 수정할 경우 빌드의 NodeAffinity를 OutOfProc로 설정해야 합니다. 즉, in-proc 노드가 필요하므로 호스트 개체를 사용할 수 없습니다.  
   
-## IVSBuildManagerAccessor 사용  
- 다음 코드는 프로젝트 시스템에서 빌드를 시작하는 데 사용할 수 있는 메서드를 요약한 것입니다.  
+## <a name="using-ivsbuildmanageraccessor"></a>IVSBuildManagerAccessor 사용  
+ 아래 코드는 프로젝트 시스템이 빌드를 시작하는 데 사용할 수 있는 메서드를 간략하게 설명합니다.  
   
-```  
+```csharp
   
 public bool Build(Project project, bool isDesignTimeBuild)  
 {  

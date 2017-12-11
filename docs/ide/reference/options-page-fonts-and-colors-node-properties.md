@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Tools Options settings, Fonts and Colors node properties
 - automation [Visual Studio], controlling Tools Options
 ms.assetid: 8e1ab784-5f85-4e2b-8ef9-e5d59ca4dbcb
-caps.latest.revision: 8
-author: kempb
-ms.author: kempb
+caps.latest.revision: "8"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: b54f38aa51904ca502ab7298359fdc7124a807a9
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 0c2618dbaad3fcae95219e2b6a8a1f9b3d87bf09
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="options-page-fonts-and-colors-node-properties"></a>옵션 페이지, 글꼴 및 색 노드 속성
 이 문서에서는 **옵션** 대화 상자의 **환경** 범주에 있는 **글꼴 및 색** 범주 아래에 표시되도록 등록된 도구 창의 글꼴 및 색 속성을 설명합니다. 이는 VSPackage가 설치 또는 제거될 경우 변경할 수 있는 색 항목 그룹의 동적 특성을 지원합니다.  
@@ -55,7 +40,7 @@ ms.lasthandoff: 02/22/2017
 |속성 항목 이름|값|설명|  
 |------------------------|-----------|-----------------|  
 |FontFamily|Get/Set(문자열)|사용할 글꼴 이름(예: "Courier New").|  
-|FontCharacterSet|Get/Set(<xref:EnvDTE.vsFontCharSet>)|사용할 문자 집합의 형식을 지정하는 <xref:EnvDTE.vsFontCharSet> 값(예: 히브리어 또는 러시아어).|  
+|FontCharacterSet|Get/Set (<xref:EnvDTE.vsFontCharSet>)|사용할 문자 집합의 형식을 지정하는 <xref:EnvDTE.vsFontCharSet> 값(예: 히브리어 또는 러시아어)입니다.|  
 |FontSize|Get/Set(Short)|사용할 글꼴 크기(포인트). 예: 10 또는 12.|  
   
 ## <a name="see-also"></a>참고 항목  

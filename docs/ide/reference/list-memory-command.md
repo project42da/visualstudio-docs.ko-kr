@@ -1,91 +1,91 @@
 ---
 title: "메모리 목록 표시 명령 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "debug.listmemory"
-helpviewer_keywords: 
-  - "Debug.ListMemory 명령"
-  - "메모리 목록 표시 명령"
-  - "ListMemory 명령"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: debug.listmemory
+helpviewer_keywords:
+- Debug.ListMemory command
+- ListMemory command
+- list memory command
 ms.assetid: a84de361-a6a6-4f6d-96aa-a0d4a424371e
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ae04c23a986107125edc9be149d6317a05c5b58a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 메모리 목록 표시 명령
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-지정된 범위의 메모리 내용을 표시합니다.  
+# <a name="list-memory-command"></a>메모리 목록 표시 명령
+지정된 메모리 범위의 내용을 표시합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]  
 [/Hex|Signed|Unsigned] [expression]  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  `expression`  
- 선택적 요소.  메모리 표시를 시작할 메모리 주소입니다.  
+ 선택 사항입니다. 메모리를 표시하기 시작할 메모리 주소입니다.  
   
-## 스위치  
- \/ANSI&#124;Unicode  
- 선택적 요소.  메모리 바이트\(ANSI 또는 유니코드\)에 해당하는 문자로 메모리를 표시합니다.  
+## <a name="switches"></a>스위치  
+ /ANSI&#124;Unicode  
+ 선택 사항입니다. 메모리에 해당하는 문자(ANSI 또는 유니코드)로 메모리를 표시합니다.  
   
- \/Count:`number`  
- 선택적 요소.  `expression`에서부터 시작하여 표시되는 메모리 바이트 수를 결정합니다.  
+ /Count:`number`  
+ 선택 사항입니다. `expression`에서 시작하여 표시할 메모리의 바이트 수를 결정합니다.  
   
- \/Format:`formattype`  
- 선택적 요소.  **메모리** 창에 메모리 정보를 표시하는 형식으로서 1바이트, 2바이트, 4바이트, 8바이트, Float\(32비트\) 또는 Double\(64비트\)이 있습니다.  1바이트를 사용하는 경우에는 `/Unicode`를 사용할 수 없습니다.  
+ /Format:`formattype`  
+ 선택 사항입니다. **메모리** 창에서 메모리 정보를 볼 형식(OneByte, TwoBytes, FourBytes, EightBytes, Float(32비트) 또는 Double(64비트))을 지정합니다. OneByte를 사용하는 경우 `/Unicode`를 사용할 수 없습니다.  
   
- \/Hex&#124;Signed&#124;Unsigned  
- 선택적 요소.  숫자 보기 형식을 부호 있는 형식, 부호 없는 형식, 또는 16진수로 지정합니다.  
+ /Hex&#124;Signed&#124;Unsigned  
+ 선택 사항입니다. 서명됨, 서명하지 않음 또는 16진수로 숫자를 볼 형식을 지정합니다.  
   
-## 설명  
- 모든 스위치와 함께 전체 **Debug.ListMemory** 명령을 작성하는 대신, 특정 스위치가 지정된 값으로 미리 설정되어 있는 미리 정의된 별칭을 사용하여 명령을 호출할 수 있습니다.  예를 들면, 다음과 같습니다.  
+## <a name="remarks"></a>설명  
+ 모든 스위치를 포함한 전체 **Debug.ListMemory** 명령을 작성하는 대신 특정 스위치를 지정된 값으로 미리 설정한 미리 정의된 별칭을 사용하여 명령을 호출할 수 있습니다. 예를 들어, 다음을 입력하는 대신  
   
 ```  
 >Debug.ListMemory /Format:float /Count:30 /Unicode  
 ```  
   
- 다음 코드를 작성할 수 있습니다.  
+ 다음과 같이 작성할 수 있습니다.  
   
 ```  
 >df /Count:30 /Unicode  
 ```  
   
- 다음은 **Debug.ListMemory** 명령에 사용할 수 있는 별칭 목록입니다.  
+ **Debug.ListMemory** 명령에 사용할 수 있는 별칭 목록은 다음과 같습니다.  
   
 |Alias|명령 및 스위치|  
-|-----------|--------------|  
-|**d**|디버그.메모리목록표시|  
-|**da**|디버그.메모리목록표시 \/Ansi|  
-|**db**|디버그.메모리목록표시 \/Format:OneByte|  
-|**dc**|디버그.메모리목록표시 \/Format:FourBytes \/Ansi|  
-|**dd**|디버그.메모리목록표시 \/Format:FourBytes|  
-|**df**|디버그.메모리목록표시 \/Format:Float|  
-|**dq**|디버그.메모리목록표시 \/Format:EightBytes|  
-|**du**|디버그.메모리목록표시 \/Unicode|  
+|-----------|--------------------------|  
+|**d**|Debug.ListMemory|  
+|**da**|Debug.ListMemory /Ansi|  
+|**db**|Debug.ListMemory /Format:OneByte|  
+|**dc**|Debug.ListMemory /Format:FourBytes /Ansi|  
+|**dd**|Debug.ListMemory /Format:FourBytes|  
+|**df**|Debug.ListMemory /Format:Float|  
+|**dq**|Debug.ListMemory /Format:EightBytes|  
+|**du**|Debug.ListMemory /Unicode|  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 >Debug.ListMemory /Format:float /Count:30 /Unicode  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [호출 스택 목록 표시 명령](../../ide/reference/list-call-stack-command.md)   
  [스레드 목록 표시 명령](../../ide/reference/list-threads-command.md)   
  [Visual Studio 명령](../../ide/reference/visual-studio-commands.md)   
  [명령 창](../../ide/reference/command-window.md)   
- [찾기\/명령 상자](../../ide/find-command-box.md)   
+ [찾기/명령 상자](../../ide/find-command-box.md)   
  [Visual Studio 명령 별칭](../../ide/reference/visual-studio-command-aliases.md)

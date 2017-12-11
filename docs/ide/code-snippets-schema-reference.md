@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,30 +13,15 @@ helpviewer_keywords:
 - code snippets [Visual Studio], schema reference
 - IntelliSense Code Snippets, XML Schema
 ms.assetid: 58a60621-725f-4763-93b7-62ea5424ef88
-caps.latest.revision: 17
-author: kempb
-ms.author: kempb
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 18627c9f14e82bef85ff433eea14d99653f78e68
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 14e043feae7a201ff5b31ee17aa790fe6f338341
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="code-snippets-schema-reference"></a>코드 조각 스키마 참조
 IntelliSense 코드 조각은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 응용 프로그램에 삽입되도록 미리 작성된 코드 부분입니다. 코드 조각을 제공함으로써 반복 코드를 입력하거나 샘플 검색에 드는 시간을 줄여 생산성을 높일 수 있습니다. IntelliSense 코드 조각 XML 스키마를 사용하여 사용자 지정 코드 조각을 만들어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에 이미 포함되어 있는 코드 조각에 추가할 수 있습니다.  
@@ -58,10 +42,7 @@ IntelliSense 코드 조각은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_
 |[Header 요소](../ide/code-snippets-schema-reference.md#header)|[Reference 요소](../ide/code-snippets-schema-reference.md#reference)||  
   
 ##  <a name="assembly"></a> Assembly 요소  
- 코드 조각이 참조하는 어셈블리의 이름을 지정합니다.  
-  
-> [!NOTE]
->  `Assembly` 요소는 Visual Basic 코드 조각에서만 지원됩니다.  
+ 코드 조각이 참조하는 어셈블리의 이름을 지정합니다.
   
  **Assembly** 요소의 텍스트 값은 이 어셈블리의 텍스트 이름(예: `System.dll`)이거나 강력한 이름(예: `System,Version=1.0.0.1,Culture=neutral,PublicKeyToken=9b35aa323c18d4fb1`)입니다.  
   
@@ -83,8 +64,7 @@ IntelliSense 코드 조각은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_
 ```xml  
 <Author>  
    Code Snippet Author  
-</Author>  
-  
+</Author>    
 ```  
   
 |부모 요소|설명|  
@@ -93,36 +73,39 @@ IntelliSense 코드 조각은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_
   
  텍스트 값은 필수입니다. 이 텍스트는 코드 조각의 작성자를 지정합니다.  
   
-##  <a name="code"></a> Code 요소  
- 짧은 코드 블록에 대한 컨테이너를 제공합니다.  
+## <a name="a-namecode--code-element"></a><a name="code" />Code 요소  
+짧은 코드 블록에 대한 컨테이너를 제공합니다.  
   
- `Code` 요소의 텍스트에는 `$end$` 및 `$selected$`의 두 예약어를 사용할 수 있습니다. `$end$`는 코드 조각을 삽입하고 나서 커서를 놓을 위치를 표시합니다. `$selected$`는 코드 조각을 호출하면 조각으로 삽입되는 문서에서 선택한 텍스트를 나타냅니다. 다음을 포함하는 코드 조각의 예를 들어 보겠습니다.  
+### <a name="keywords"></a>키워드
+`Code` 요소의 텍스트에는 `$end$` 및 `$selected$`의 두 예약어를 사용할 수 있습니다. `$end$`는 코드 조각을 삽입하고 나서 커서를 놓을 위치를 표시합니다. `$selected$`는 코드 조각을 호출하면 조각으로 삽입되는 문서에서 선택한 텍스트를 나타냅니다. 다음을 포함하는 코드 조각의 예를 들어 보겠습니다.  
   
-```xml  
+```  
 $selected$ is a great color.  
 ```  
   
- 사용자가 템플릿을 호출할 때 "Blue"라는 단어를 선택하면 결과는 다음과 같이 표시됩니다.  
+사용자가 템플릿을 호출할 때 "Blue"라는 단어를 선택하면 결과는 다음과 같이 표시됩니다.  
   
-```xml  
+```  
 Blue is a great color.  
 ```  
   
- `$end$` 또는 `$selected$`를 코드 조각 하나에서 두 번 이상 사용할 수는 없습니다. 이렇게 하면 두 번째 인스턴스만 인식됩니다. 이번에는 다음을 포함하는 코드 조각을 살펴보겠습니다.  
+`$end$` 또는 `$selected$`를 코드 조각 하나에서 두 번 이상 사용할 수는 없습니다. 이렇게 하면 두 번째 인스턴스만 인식됩니다. 이번에는 다음을 포함하는 코드 조각을 살펴보겠습니다.  
   
 ```  
 $selected$ is a great color. I love $selected$.  
 ```  
   
- 여기서는 "Blue"라는 단어를 선택하면 결과가 다음과 같이 표시됩니다.  
+여기서는 "Blue"라는 단어를 선택하면 결과가 다음과 같이 표시됩니다.  
   
 ```  
-is a great color. I love Blue.  
+ is a great color. I love Blue.  
 ```  
   
- `$selected$` 및 `is` 사이에 공백이 있기 때문에 첫 번째 항목은 공백으로 표시됩니다.  
+`$selected$` 및 `is` 사이에 공백이 있기 때문에 첫 번째 항목은 공백으로 표시됩니다.  
   
- 다른 모든 `$` 키워드는 `<Literal>` 및 `<Object>` 태그에서 동적으로 정의됩니다.  
+다른 모든 `$` 키워드는 `<Literal>` 및 `<Object>` 태그에서 동적으로 정의됩니다.  
+
+코드 요소의 구조는 다음과 같습니다.
   
 ```xml  
 <Code Language="Language"  
@@ -130,37 +113,41 @@ is a great color. I love Blue.
     Delimiter="Delimiter">  
     Code to insert  
 </Code>  
-```  
-  
-|특성|설명|  
-|---------------|-----------------|  
-|`Delimiter`|선택적 특성입니다. 코드의 리터럴 및 개체를 설명하는 데 사용되는 구분 기호를 지정합니다. 기본값으로 사용되는 구분 기호는 `$`입니다.|  
-|`Kind`|선택적 특성입니다. 코드 조각에 포함되는 코드 종류를 지정하고 코드 조각 컴파일을 위해 해당 코드 조각을 삽입해야 하는 위치를 지정합니다. 사용할 수 있는 값은 `method body`, `method decl`, `type decl`, `file` 및 `any`입니다.|  
-|`Language`|필수 특성입니다. 코드 조각의 언어를 지정합니다.|  
-  
-|Kind 특성 값|설명|  
-|--------------------------|-----------------|  
-|`method body`|코드 조각이 메서드 본문이므로 메서드 선언 안에 삽입되도록 지정합니다.|  
-|`method decl`|코드 조각이 메서드이므로 클래스나 모듈 안에 삽입되도록 지정합니다.|  
-|`type decl`|코드 조각이 형식이므로 클래스, 모듈 또는 네임스페이스 안에 삽입되도록 지정합니다.|  
-|`file`|코드 조각이 완전한 코드 파일임을 지정합니다. 이러한 코드 조각은 코드 파일이나 네임스페이스 안에 단독으로 삽입될 수 있습니다.|  
-|`any`|코드 조각이 어디든지 삽입될 수 있도록 지정합니다. 이 태그는 주석과 같이 컨텍스트와 상관없는 코드 조각에 사용됩니다.|  
-  
-|Language 특성 값|설명|  
-|------------------------------|-----------------|  
-|`VB`|Visual Basic 코드 조각을 식별합니다.|  
-|`CSharp`|C# 코드 조각을 식별합니다.|  
-|`CPP`|C++ 코드 조각을 식별합니다.|  
-|`XML`|XML 코드 조각을 식별합니다.|  
-|`JavaScript`|JavaScript 코드 조각을 식별합니다.|  
-|`SQL`|SQL 코드 조각을 식별합니다.|  
-|`HTML`|HTML 코드 조각을 식별합니다.|  
-  
+```
+
+텍스트 값은 필수입니다. 이 텍스트는 이 코드 조각이 코드 파일에 삽입될 때 사용할 수 있는 코드를 리터럴 및 개체와 함께 지정합니다.  
+
+### <a name="attributes"></a>특성
+코드 요소에 세 가지 특성을 사용할 수 있습니다.
+
+- 코드 조각의 언어를 지정하는 **언어** - _필수_ 특성입니다. 값은 다음 중 하나일 수 있습니다.
+
+   |값|설명|  
+   |-----|-----------|  
+   |`VB`|Visual Basic 코드 조각을 식별합니다.|  
+   |`CSharp`|C# 코드 조각을 식별합니다.|  
+   |`CPP`|C++ 코드 조각을 식별합니다.|  
+   |`XML`|XML 코드 조각을 식별합니다.|  
+   |`JavaScript`|JavaScript 코드 조각을 식별합니다.|  
+   |`SQL`|SQL 코드 조각을 식별합니다.|  
+   |`HTML`|HTML 코드 조각을 식별합니다.|
+ 
+- 코드 조각에 포함되는 코드 종류를 지정하고 코드 조각 컴파일을 위해 해당 코드 조각을 삽입해야 하는 위치를 지정하는 **종류** - _선택 사항_ 특성입니다. 값은 다음 중 하나일 수 있습니다.
+
+   |값|설명|  
+   |-----|-----------|  
+   |`method body`|코드 조각이 메서드 본문이므로 메서드 선언 안에 삽입되도록 지정합니다.|  
+   |`method decl`|코드 조각이 메서드이므로 클래스나 모듈 안에 삽입되도록 지정합니다.|  
+   |`type decl`|코드 조각이 형식이므로 클래스, 모듈 또는 네임스페이스 안에 삽입되도록 지정합니다.|  
+   |`file`|코드 조각이 완전한 코드 파일임을 지정합니다. 이러한 코드 조각은 코드 파일이나 네임스페이스 안에 단독으로 삽입될 수 있습니다.|  
+   |`any`|코드 조각이 어디든지 삽입될 수 있도록 지정합니다. 이 태그는 주석과 같이 컨텍스트와 상관없는 코드 조각에 사용됩니다.|
+
+- 코드의 리터럴 및 개체를 설명하는 데 사용되는 구분 기호를 지정하는 **구분 기호** - _선택 사항_ 특성입니다. 기본값으로 사용되는 구분 기호는 `$`입니다.
+
+### <a name="parent-element"></a>부모 요소
 |부모 요소|설명|  
 |--------------------|-----------------|  
-|[Snippet 요소](../ide/code-snippets-schema-reference.md#snippet)|코드 조각에 대한 참조, 가져오기, 선언 및 코드가 포함되어 있습니다.|  
-  
- 텍스트 값은 필수입니다. 이 텍스트는 이 코드 조각이 프로젝트에 삽입될 때 사용할 수 있는 코드를 리터럴 및 개체와 함께 지정합니다.  
+|[Snippet 요소](../ide/code-snippets-schema-reference.md#snippet)|코드 조각에 대한 참조, 가져오기, 선언 및 코드가 포함되어 있습니다.|
   
 ##  <a name="codesnippet"></a> CodeSnippet 요소  
  Visual Studio Code 파일에 삽입할 수 있는 여러 IntelliSense 코드 조각 및 제목을 지정할 수 있습니다.  
@@ -170,7 +157,6 @@ is a great color. I love Blue.
     <Header>... </Header>  
     <Snippet>... </Snippet>  
 </CodeSnippet>  
-  
 ```  
   
 |특성|설명|  
@@ -193,7 +179,6 @@ is a great color. I love Blue.
 <CodeSnippets>  
     <CodeSnippet>... </CodeSnippet>  
 </CodeSnippets>  
-  
 ```  
   
 |자식 요소|설명|  
@@ -208,7 +193,6 @@ is a great color. I love Blue.
     <Literal>... </Literal>  
     <Object>... </Object>  
 </Declarations>  
-  
 ```  
   
 |자식 요소|설명|  
@@ -227,7 +211,6 @@ is a great color. I love Blue.
 <Default>  
     Default value  
 </Default>  
-  
 ```  
   
 |부모 요소|설명|  
@@ -284,7 +267,6 @@ is a great color. I love Blue.
     <Keywords>... </Keywords>  
     <Shortcut>... </Shortcut>  
 </Header>  
-  
 ```  
   
 |자식 요소|설명|  
@@ -311,7 +293,6 @@ is a great color. I love Blue.
 <HelpUrl>  
     www.microsoft.com  
 </HelpUrl>  
-  
 ```  
   
 |부모 요소|설명|  
@@ -327,7 +308,6 @@ is a great color. I love Blue.
 <ID>  
     Unique Identifier  
 </ID>  
-  
 ```  
   
 |부모 요소|설명|  
@@ -347,7 +327,6 @@ is a great color. I love Blue.
 <Import>  
     <Namespace>... </Namespace>  
 </Import>  
-  
 ```  
   
 |자식 요소|설명|  
@@ -488,10 +467,7 @@ is a great color. I love Blue.
 |[Declarations 요소](../ide/code-snippets-schema-reference.md#declarations)|편집할 수 있는 코드 조각의 리터럴과 개체가 포함되어 있습니다.|  
   
 ##  <a name="reference"></a> Reference 요소  
- 코드 조각에 필요한 어셈블리 참조에 대한 정보를 지정합니다.  
-  
-> [!NOTE]
->  `Reference` 요소는 Visual Basic 프로젝트에서만 지원됩니다.  
+ 코드 조각에 필요한 어셈블리 참조에 대한 정보를 지정합니다. 
   
 ```xml  
 <Reference>  
@@ -511,9 +487,6 @@ is a great color. I love Blue.
   
 ##  <a name="references"></a> References 요소  
  개별 `Reference` 요소를 그룹화합니다.  
-  
-> [!NOTE]
->  `References` 요소는 Visual Basic 프로젝트에서만 지원됩니다.  
   
 ```xml  
 <References>  
@@ -556,8 +529,7 @@ is a great color. I love Blue.
     <Imports>... </Imports>  
     <Declarations>... </Declarations>  
     <Code>... </Code>  
-</Snippet>  
-  
+</Snippet>    
 ```  
   
 |자식 요소|설명|  

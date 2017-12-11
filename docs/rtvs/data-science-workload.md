@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio의 데이터 과학 및 분석 응용 프로그램 워크로드 | Microsoft Docs"
 ms.custom: 
-ms.date: 9/5/2017
+ms.date: 09/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -10,16 +10,15 @@ ms.technology:
 - devlang-fsharp
 ms.tgt_pltfrm: 
 ms.topic: landing-page
-ms.assetid: 018069f3-6d1a-4143-a851-d86d2ff5fbfc
 caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 976bd73c7740e474e4fa7ea3e4cf89f880c7900c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 5e7738d03fa0c9b8b460fe1b2fb4bc17076fa3b5
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="data-science-and-analytical-applications-workload"></a>데이터 과학 및 분석 응용 프로그램 워크로드
 
@@ -42,17 +41,16 @@ R 및 Python은 데이터 과학에 사용되는 두 가지 기본 스크립팅 
 
 - F# 언어 지원
 - Python:
-    - Python 언어 지원
-    - Python 웹 지원
-    - [Anaconda3 64비트](https://www.continuum.io)(광범위한 데이터 과학 라이브러리 및 Python 인터프리터를 포함하는 Python 배포판)
-    - Cookiecutter 템플릿 지원
+  - Python 언어 지원
+  - Python 웹 지원
+  - [Anaconda3 64비트](https://www.continuum.io)(광범위한 데이터 과학 라이브러리 및 Python 인터프리터를 포함하는 Python 배포판)
+  - Cookiecutter 템플릿 지원
 - R:
-    - R 언어 지원    
-    - [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started)(단일 노드 또는 클러스터에서 더 빠른 계산을 위해 ScaleR 라이브러리를 사용하는 Microsoft의 완전히 호환되는, 커뮤니티 지원 R 인터프리터입니다. [CRAN](https://cran.r-project.org/)에서 R을 사용할 수도 있습니다.)
-    - R 개발 도구에 대한 런타임 지원
+  - R 언어 지원
+  - [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client)(단일 노드 또는 클러스터에서 더 빠른 계산을 위해 ScaleR 라이브러리를 사용하는 Microsoft의 완전히 호환되는, 커뮤니티 지원 R 인터프리터입니다. [CRAN](https://cran.r-project.org/)에서 R을 사용할 수도 있습니다.)
+  - R 개발 도구에 대한 런타임 지원
 
-> [!Note]
-> F#이 다양한 다른 작업에 포함되어 있고 Python에 고유한 워크로드가 있더라도 데이터 과학 및 분석 응용 프로그램은 워크로드에 독립적인 R을 포함하는 현재 유일한 워크로드이며 세 가지 R 구성 요소는 설치 관리자의 **개별 구성 요소** 탭에서 선택 가능합니다. 옵션 **개발 작업 > R 언어 지원**, **개발 작업 > Microsoft R Client** 및 **컴파일러, 빌드 도구 및 런타임 > R 개발 도구에 대한 런타임 지원**을 선택합니다.
+F#이 다양한 다른 작업에 포함되어 있고 Python에 고유한 워크로드가 있더라도 데이터 과학 및 분석 응용 프로그램은 워크로드에 독립적인 R을 포함하는 현재 유일한 워크로드이며 세 가지 R 구성 요소는 설치 관리자의 **개별 구성 요소** 탭에서 선택 가능합니다. 옵션 **개발 작업 > R 언어 지원**, **개발 작업 > Microsoft R Client** 및 **컴파일러, 빌드 도구 및 런타임 > R 개발 도구에 대한 런타임 지원**을 선택합니다.
 
 ## <a name="sql-server-integration"></a>SQL Server 통합
 
@@ -73,7 +71,6 @@ SQL Server는 SQL Server 내에서 직접 고급 분석을 수행하도록 R 및
 SQL Server 통합을 모두 활용하려면 **SQL Server Data Tools** 옵션으로 **데이터 저장소 및 처리** 워크로드도 설치해야 합니다. 이 옵션은 SQL IntelliSense, 구문 강조 표시 및 배포를 활성화합니다.
 
 ![데이터 저장소 및 처리 워크로드](media/data-storage-workload.png) &nbsp;&nbsp; &nbsp;&nbsp; ![데이터 저장소 및 처리 워크로드 옵션](media/data-storage-workload-options.png)
-
 
 추가 정보
 

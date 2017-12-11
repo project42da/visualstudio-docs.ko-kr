@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 3ebe300aa4e2a7314b55f8418bcfa0ad9fafdc59
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 73c9289d95c7df352819546eab6d95084576215c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>자습서 1: 사진 뷰어 만들기
 이 자습서에서는 파일에서 그림을 로드하여 창에 표시하는 프로그램을 빌드합니다. 또한 단추와 그림 상자 같은 컨트롤을 폼으로 끌어서 놓고, 이러한 컨트롤의 속성을 설정하고, 컨테이너를 사용하여 폼의 크기를 자연스럽게 조정하는 방법에 대해 배우고 코드 작성을 시작합니다. 여기에서는 다음과 같은 작업을 수행하는 방법에 대해 배우게 됩니다.  
@@ -58,14 +42,14 @@ ms.lasthandoff: 05/24/2017
   
  샘플의 전체 버전을 다운로드하려면 [전체 사진 뷰어 자습서 샘플](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8)을 참조하세요.  
   
- ![비디오 링크](~/data-tools/media/playvideo.gif "PlayVideo")이 항목의 비디오 버전을 보려면 [How Do I: Create a Picture Viewer in Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207)(방법: Visual Basic에서 사진 뷰어 만들기) 또는 [How Do I: Create a Picture Viewer in C#?](http://go.microsoft.com/fwlink/?LinkId=205198)(방법: C#에서 사진 뷰어 만들기)를 참조하세요.  
+ ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo")이 항목의 비디오 버전을 보려면 [How Do I: Create a Picture Viewer in Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207)(방법: Visual Basic에서 사진 뷰어 만들기) 또는 [How Do I: Create a Picture Viewer in C#?](http://go.microsoft.com/fwlink/?LinkId=205198)(방법: C#에서 사진 뷰어 만들기)를 참조하세요.  
   
 > [!NOTE]
 >  이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다. 그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다. 이 자습서에는 Visual C#과 Visual Basic이 둘 다 설명되어 있으므로 사용 중인 프로그래밍 언어와 관련된 정보를 참조하십시오.  
 >   
 >  Visual Basic의 코드를 보려면 코드 블록의 맨 위에 있는 **VB** 탭을 선택하고 Visual C#의 코드를 보려면 **C#** 탭을 선택합니다. Visual C++에 대한 자세한 내용은 [시작](../ide/getting-started-with-cpp-in-visual-studio.md) 및 [C++ Language Tutorial](http://www.cplusplus.com/doc/tutorial/)(C++ 언어 자습서)를 참조하세요.  
 >   
->  Windows 스토어용 Visual C# 또는 Visual Basic 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic을 사용하여 첫 Windows 스토어 앱 만들기](http://msdn.microsoft.com/library/windows/apps/hh974581.aspx)를 참조하세요. Windows 스토어용 JavaScript 앱을 만드는 방법에 대한 자세한 내용은 [JavaScript를 사용하여 첫 Windows 스토어 앱 만들기](http://msdn.microsoft.com/library/windows/apps/br211385.aspx)를 참조하세요.  
+>  Visual C# 또는 Visual Basic UWP 앱을 작성하는 방법을 알아보려면 [UWP 앱 빌드](https://developer.microsoft.com/windows/apps)를 참조하세요.
   
 ## <a name="related-topics"></a>관련 항목  
   

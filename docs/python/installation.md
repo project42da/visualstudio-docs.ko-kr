@@ -8,16 +8,15 @@ ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: ce3d3656-7ba2-490d-92df-0bb3e3badf92
 caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 2706cbc68ea9ff14477134ca01577e4f5850f36d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 066612a132bf6a092771afd5fc4a876d4b3be425
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치
 
@@ -42,10 +41,10 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 1. 최신 Visual Studio 2017 설치 관리자를 다운로드하고 실행합니다.
 
     > [!div class="nextstepaction"]
-    > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Community 설치</a>
+    > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Community 설치</a>
 
     >[!Tip]
-    > 커뮤니티 에디션은 개인 개발자, 교실 학습, 학술 연구 및 오픈 소스 개발용입니다. 다른 용도의 경우 <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Professional</a> 또는 <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Enterprise</a>를 설치합니다.
+    > 커뮤니티 에디션은 개인 개발자, 교실 학습, 학술 연구 및 오픈 소스 개발용입니다. 다른 용도의 경우 <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Professional</a> 또는 <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Enterprise</a>를 설치합니다.
 
 1. 설치 관리자는 특정 개발 영역에 대한 관련 옵션의 그룹인 워크로드 목록을 제공합니다. Python의 경우 **Python 개발** 워크로드를 선택합니다.
 

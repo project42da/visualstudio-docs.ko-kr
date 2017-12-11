@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 99c73344-86ba-4b08-9e15-f6111cc04185
-caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+caps.latest.revision: "18"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 65b94b58da1e06febb1c189ddff85f792fef1737
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 48f2bb4e61ca6a4f9a9464a6b67a3218b418c8ab
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="getting-started-with-c-in-visual-studio"></a>Visual Studio에서 C++ 시작
 이 연습을 완료하면 Visual Studio를 사용하여 응용 프로그램을 개발할 때 사용할 수 있는 여러 도구 및 대화 상자에 익숙해집니다. 간단한 “Hello, World” 스타일 응용 프로그램을 만들면서 IDE(통합 개발 환경)에서 작업하는 방법을 배워 보겠습니다.  
@@ -124,7 +107,7 @@ ms.lasthandoff: 05/13/2017
   
 -   디버거를 시작합니다.  
   
-     ![디버그 메뉴의 디버깅 시작 명령](~/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
+     ![디버그 메뉴의 디버깅 시작 명령](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
   
      디버거가 시작되고 코드가 실행됩니다. 콘솔 창(명령 프롬프트외 비슷한 별도의 창)이 몇 초간 나타나지만 디버거에서 실행이 중지되면 바로 닫힙니다. 텍스트를 보려면 중단점을 설정하여 프로그램 실행을 중지해야 합니다.  
   
@@ -157,7 +140,7 @@ ms.lasthandoff: 05/13/2017
   
 2.  GreetingsConsoleApp의 빌드 구성을 **디버그** 에서 **릴리스**로 변경합니다.  
   
-     ![응용 프로그램 릴리스 버전 빌드](~/ide/media/c--ide_changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
+     ![응용 프로그램 릴리스 버전 빌드](../ide/media/c--ide_changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
   
 3.  솔루션을 빌드합니다.  
   

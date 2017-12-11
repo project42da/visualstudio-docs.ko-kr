@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccc5e543-7dcf-465c-97dd-e133e869800c
-caps.latest.revision: 28
-author: kempb
-ms.author: kempb
+caps.latest.revision: "28"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: cc0ac8b3418c725579b25712e14c373028fca339
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: f4778bde9903ce3e264f0209c147eedc227b7d8d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio 생산성 팁
 아래의 팁을 사용하면 Visual Studio에서 더욱 신속하고 효과적으로 코드를 작성, 탐색 및 디버깅할 수 있습니다. 공통된 바로 가기 키에 대한 자세한 내용은 [팁과 요령](../ide/tips-and-tricks-for-visual-studio.md)을 참조하세요. 자세한 목록은 [바로 가기 키 식별 및 사용자 지정](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) 및 [기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.  
@@ -91,23 +75,11 @@ ms.lasthandoff: 05/24/2017
   
      코드 조각을 삽입하려면 메뉴 모음에서 **편집**, **IntelliSense**, **코드 조각 삽입**을 선택하거나 파일의 바로 가기 메뉴를 열고 **코드 조각 삽입**을 선택합니다. 자세한 내용은 [코드 조각](../ide/code-snippets.md)을 참조하세요.  
   
--   **코드 오류를 인라인으로 수정** 코드 줄 아래 파란색이나 빨간색 상자로 스마트 태그가 나타납니다. 상자 중 하나를 가리키거나 코드 줄에 커서를 놓고 Ctrl+.(마침표)를 선택하여 스마트 태그 옵션을 표시할 수 있습니다.  
-  
-     파란 상자는 코드의 오류를 수정하는 방법을 제안합니다.  
-  
-     그림 1: 오류 스마트 태그  
-  
-     ![오류 스마트 태그 제안](../ide/media/productivity_bluesmarttags.png "Productivity_BlueSmartTags")  
-  
-     빨간 상자는 코드를 리팩터링하는 방법을 제안합니다.  
-  
-     그림 2: 스마트 태그 리팩터링  
-  
-     ![리팩터링 스마트 태그 제안](../ide/media/productivity_redsmarttags.png "Productivity_RedSmartTags")  
-  
+-   **코드 오류를 인라인으로 수정** 빠른 작업을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다. 이러한 작업은 전구 아이콘 ![작은 전구 아이콘](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Alt + Enter** 또는 **Ctrl + .**를 눌러 적용할 수 있습니다. 자세한 내용은 [빠른 작업](quick-actions.md)을 참조하세요.  
+
 -   **코드 요소의 정의 표시 및 편집** 멤버, 변수 또는 로컬 같은 코드 요소가 정의된 모듈을 신속하게 표시하고 편집할 수 있습니다.  
   
-     팝업 창에서 정의를 열려면 요소를 강조 표시하고 Alt+F12를 선택하거나 요소의 바로 가기 메뉴를 열고 **정의 피킹(Peeking)**을 선택합니다. 별도의 코드 창에서 정의를 열려면 해당 요소의 바로 가기 메뉴를 열고 **정의로 이동**을 선택합니다.  
+     팝업 창에서 정의를 열려면 요소를 강조 표시하고 **Alt+F12** 키를 선택하거나 요소의 바로 가기 메뉴를 열고 **정의 피킹(Peeking)**을 선택합니다. 별도의 코드 창에서 정의를 열려면 해당 요소의 바로 가기 메뉴를 열고 **정의로 이동**을 선택합니다.  
   
 ##  <a name="BKMK_Navigating"></a> 코드 내에서 탐색  
  다양한 기술을 사용하여 코드에서 특정 위치를 신속하게 찾고 이동할 수 있습니다.  
@@ -142,7 +114,7 @@ ms.lasthandoff: 05/24/2017
   
 -   **여러 브라우저에서 같은 페이지, 응용 프로그램 또는 사이트 테스트** 코드를 디버그할 때 **브라우저 선택** 대화 상자를 열지 않고도 [페이지 검사기(Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209) 등의 설치된 웹 브라우저 간에 쉽게 전환할 수 있습니다. **디버깅 시작** 단추 옆에 있는 **표준** 도구 모음에서 **디버그 대상** 목록을 사용하여 디버그 또는 보기 페이지로 사용 중인 브라우저를 빠르게 확인할 수 있습니다.  
   
-     ![웹 브라우저 디버그 옵션 선택](~/ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")  
+     ![웹 브라우저 디버그 옵션 선택](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")  
   
 -   **임시 중단점 설정** 코드의 현재 줄에 임시 중단점을 만들고 디버거를 동시에 시작할 수 있습니다. 해당 코드 줄에 도달하면 디버거 중단 모드가 시작됩니다. 자세한 내용은 [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.  
   

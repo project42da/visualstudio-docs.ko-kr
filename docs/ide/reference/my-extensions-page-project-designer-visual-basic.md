@@ -1,46 +1,46 @@
 ---
-title: "프로젝트 디자이너, My 확장 페이지(Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ProjectPropertiesMyExtensions"
-helpviewer_keywords: 
-  - "프로젝트 디자이너, My 확장 페이지"
-  - "프로젝트 디자이너의 My 확장 페이지"
+title: "내 확장 페이지, 프로젝트 디자이너(Visual Basic) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vb.ProjectPropertiesMyExtensions
+helpviewer_keywords:
+- Project Designer, My Extensions page
+- My Extensions page in Project Designer
 ms.assetid: 2f08494e-84c1-444b-872b-900fbbcf0364
-caps.latest.revision: 6
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b95a691f3246fd3745ce90bffa7967bd5ad52d31
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# 프로젝트 디자이너, My 확장 페이지(Visual Basic)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-**프로젝트 디자이너**의 **My 확장** 페이지를 사용하여 프로젝트의 `My` 네임스페이스 확장을 관리할 수 있습니다.  `My` 네임스페이스 확장을 사용하면 `My` 네임스페이스를 사용자 지정하여 고유한 사용자 지정 멤버를 추가할 수 있습니다.  사용자 지정 `My` 네임스페이스 확장을 만드는 것에 대한 자세한 내용은 [Extending the My Namespace in Visual Basic](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)을 참조하십시오.  
+# <a name="my-extensions-page-project-designer-visual-basic"></a>프로젝트 디자이너, My 확장 페이지(Visual Basic)
+**프로젝트 디자이너**의 **내 확장** 페이지를 사용하여 프로젝트에서 `My` 네임스페이스 확장을 관리합니다. `My` 네임스페이스 확장을 사용하면 `My` 네임스페이스를 사용자 지정하여 고유한 사용자 지정 멤버를 추가할 수 있습니다. 사용자 지정 `My` 네임스페이스 확장을 만드는 방법에 대한 내용은 [Visual Basic에서 내 네임스페이스 확장](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)을 참조하세요.  
   
- **My 확장** 페이지에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드의 **My Project**를 두 번 클릭합니다.  **프로젝트 디자이너**가 나타나면 **My 확장** 탭을 클릭합니다.  
+ **내 확장** 페이지에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드의 **내 프로젝트**를 두 번 클릭합니다. **프로젝트 디자이너**가 나타나면 **내 확장** 탭을 클릭합니다.  
   
-## UI 요소 목록  
- 다음 옵션을 사용하여 프로젝트에 `My` 네임스페이스 확장을 추가하거나 제거할 수 있습니다.  하지만 `My` 네임스페이스 확장을 추가하려면 먼저 이 네임스페이스 확장을 Visual Studio 항목 템플릿으로 설치해야 합니다.  `My` 네임스페이스를 게시하고 설치하는 방법에 대한 자세한 내용은 [Packaging and Deploying Custom My Extensions](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions)를 참조하십시오.  
+## <a name="uielement-list"></a>UI 요소 목록  
+ 다음 옵션을 사용하면 프로젝트에서 `My` 네임스페이스 확장을 추가하거나 제거할 수 있습니다. Visual Studio 항목 템플릿을 추가할 수 있도록 `My` 네임스페이스 확장을 먼저 설치해야 합니다. `My` 네임스페이스 확장을 게시하고 설치하는 방법에 대한 내용은 [사용자 지정 내 확장 패키징 및 배포](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions)를 참조하세요.  
   
- **My 네임스페이스 확장**  
- 이 목록에는 프로젝트에 설치되어 있는 모든 `My` 네임스페이스 확장이 표시됩니다.  
+ **내 네임스페이스 확장**  
+ 이 목록에는 프로젝트에 설치된 `My` 네임스페이스 확장이 모두 표시됩니다.  
   
  **확장 추가**  
- 이 단추를 클릭하면 설치되어 있는 `My` 네임스페이스 확장을 프로젝트에 추가할 수 있습니다.  사용 가능한 모든 `My` 네임스페이스 확장이 목록에 나타납니다.  프로젝트에 추가할 `My` 네임스페이스 확장을 선택하고 **확인**을 클릭하여 추가합니다.  
+ 이 단추를 클릭하면 프로젝트에 설치된 `My` 네임스페이스 확장을 추가합니다. 가능한 모든 `My` 네임스페이스 확장의 목록이 나타납니다. 프로젝트에 추가하려는 `My` 네임스페이스 확장을 선택하고 **확인**을 클릭하여 추가합니다.  
   
  **확장 제거**  
- **My 네임스페이스 확장** 목록에서 하나 이상의 참조를 선택한 다음 이 단추를 클릭하여 프로젝트에서 해당 `My` 네임스페이스 확장을 제거할 수 있습니다.  
+ **내 네임스페이스 확장** 목록에서 하나 이상의 참조를 선택하고 이 단추를 클릭하여 프로젝트에서 `My` 네임스페이스 확장을 제거합니다.  
   
-## 참고 항목  
- [Extending the My Namespace in Visual Basic](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)   
- [Packaging and Deploying Custom My Extensions](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions)   
- [Extending the Visual Basic Application Model](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model)   
- [Customizing Which Objects are Available in My](/dotnet/visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my)
+## <a name="see-also"></a>참고 항목  
+ [Visual Basic의 내 네임스페이스 확장](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)   
+ [사용자 지정 내 확장 패키징 및 배포](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions)   
+ [Visual Basic 응용 프로그램 모델 확장](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model)   
+ [My에 사용할 수 있는 개체 사용자 지정](/dotnet/visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my)

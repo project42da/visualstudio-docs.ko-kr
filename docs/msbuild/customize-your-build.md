@@ -4,38 +4,22 @@ ms.custom:
 ms.date: 06/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - MSBuild, transforms
 - transforms [MSBuild]
 ms.assetid: d0bceb3b-14fb-455c-805a-63acefa4b3ed
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3fb5627d2cc92c36e9dcf34f4b94796b6620321f
-ms.openlocfilehash: 86f7fef0365a47e8ea88bc3fc46cb0016efd4628
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/15/2017
-
+ms.openlocfilehash: 9392776d44602ee81358e31708d331e09d0d7a70
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="customize-your-build"></a>빌드 사용자 지정
 MSBuild 15 이전 버전에서는 솔루션의 프로젝트에 대한 새로운 사용자 지정 속성을 제공하려면 해당 속성에 대한 참조를 솔루션의 모든 프로젝트 파일에 수동으로 추가해야 했습니다. 또는 .props 파일에서 속성을 정의하고 나서 무엇보다 솔루션의 모든 프로젝트에서 .props 파일을 명시적으로 가져와야 했습니다.
@@ -76,7 +60,39 @@ Directory.Build.props는 Microsoft.Common.props에서 초기에 가져오므로 
 
 Directory.Build.targets는 NuGet 패키지에서 .targets 파일을 가져온 후 Microsoft.Common.targets에서 가져옵니다. 따라서 대부분의 빌드 논리에 정의된 속성 및 대상을 재정의하는 데 사용될 수 있지만, 마지막으로 가져온 후 프로젝트 파일 내에서 사용자 지정을 수행해야 할 수 있습니다.
 
+## <a name="use-case-multi-level-merging"></a>사용 사례: 다단계 병합
+
+이 표준 솔루션 구조체가 있다고 가정합니다.
+
+````
+\
+  MySolution.sln
+  Directory.Build.props     (1)
+  \src
+    Directory.Build.props   (2-src)
+    \Project1
+    \Project2
+  \test
+    Directory.Build.props   (2-test)
+    \Project1Tests
+    \Project2Tests
+````
+
+모든 프로젝트 `(1)`의 공통 속성, `src` 프로젝트 `(2-src)`의 공통 속성 및 `test` 프로젝트 `(2-test)`의 공통 속성이 있는 것이 바람직할 수도 있습니다.
+
+msbuild에서 "내부" 파일(`2-src` 및 `2-test`)을 "외부" 파일(`1`)과 올바르게 병합하려면 msbuild가 `Directory.Build.props` 파일을 찾으면 추가 검사를 중지하도록 고려해야 합니다. 계속 검사하고 외부 파일에 병합하려면 해당 항목을 모든 내부 파일에 배치합니다.
+
+`<Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />`
+
+msbuild의 일반적인 방법의 요약 정보는 다음과 같습니다.
+
+- 지정된 프로젝트의 경우 msbuild는 솔루션 구조체에서 위쪽으로 첫 번째 `Directory.Build.props`를 찾고, 기본값과 병합하고, 추가 검사를 중지합니다.
+- 다단계를 찾고 병합하려는 경우 "내부" 파일에서 "외부" 파일을 [`<Import...>`](http://docs.microsoft.com/en-us/visualstudio/msbuild/property-functions#msbuild-getpathoffileabove)(위에 표시)합니다.
+- "외부" 파일이 자체로 상위 항목을 가져오지 않으면 거기서 검색을 중지합니다.
+- 검사/병합 프로세스를 제어하려면 `$(DirectoryBuildPropsPath)` 및 `$(ImportDirectoryBuildProps)`를 사용합니다.
+
+간단히 말하면 아무 것도 가져오지 않는 첫 번째 `Directory.Build.props`에서 msbuild가 중지됩니다.
+
 ## <a name="see-also"></a>참고 항목  
  [MSBuild 개념](../msbuild/msbuild-concepts.md)   
  [MSBuild 참조](../msbuild/msbuild-reference.md)   
-
