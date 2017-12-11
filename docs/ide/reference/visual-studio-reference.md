@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4ddcffd-d5b7-4ce8-8775-14e649c34518
-caps.latest.revision: 35
-author: kempb
-ms.author: kempb
+caps.latest.revision: "35"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: e32d7a177a1a6ff0e26fba7f418f368a64bb1337
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 3fb02550aef01a16dbdb1c5e5cff4219ccd15100
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="visual-studio-reference"></a>Visual Studio 참조
 이 섹션에는 사용자 인터페이스 참조, 해당하는 언어 관련 사항 및 기타 참조 문서가 포함되어 있습니다.  
@@ -50,20 +34,13 @@ ms.lasthandoff: 04/05/2017
  [Visual Studio의 XML 도구](../../xml-tools/xml-tools-in-visual-studio.md)  
  Visual Studio의 XML 도구에 대한 문서를 포함하고 자세한 정보에 대한 링크를 제공합니다.  
   
- [Visual Studio for Applications 참조](../../ide/reference/visual-studio-for-applications-reference.md)  
- .NET Framework 스크립트 엔진을 응용 프로그램에 통합하는 데 사용할 수 있는 인터페이스에 대한 참조 설명서가 포함되어 있습니다.  
-  
- [MSBuild](../../msbuild/msbuild.md)
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에 통합된 Microsoft 빌드 플랫폼을 사용하는 방법에 대한 문서가 포함되어 있습니다.  
-  
- [IDE 오류 문제 해결을 위한 리소스](../../ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md)  
- IDE 오류 메시지를 해결하는 데 도움이 되는 리소스에 대한 링크를 제공합니다.  
-  
- [의견 보내기](../../ide/talk-to-us.md)  
- Visual Studio에 대한 고객 지원을 찾는 방법에 대한 정보를 제공합니다.  
+ [MSBuild](../../msbuild/msbuild.md) [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에 통합된 Microsoft 빌드 플랫폼을 사용하는 방법에 대한 문서가 포함되어 있습니다.  
   
  [장애가 있는 사용자를 위한 접근성](../../ide/reference/accessibility-for-people-with-disabilities.md)  
  내게 필요한 옵션을 변경하는 방법에 대한 팁을 제공합니다.  
+  
+ [IDE 오류 문제 해결을 위한 리소스](../../ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md)  
+ IDE 오류 메시지를 해결하는 데 도움이 되는 리소스에 대한 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [Visual Basic 참조](/dotnet/visual-basic/reference/index)  

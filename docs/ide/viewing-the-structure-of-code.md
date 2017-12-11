@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,30 +27,15 @@ helpviewer_keywords:
 - class view
 - object browser
 ms.assetid: e6064f58-5ad9-4f05-8c3f-12e994b6583f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: cf7325de6a4d5ee4cac1b48a7da33202034fde0c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: f85bcde09d6748aa781ceefd85ccbf138245aca6
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="viewing-the-structure-of-code"></a>코드 구조 보기
 Visual Studio 프로젝트의 개체 및 멤버, .NET Framework 구성 요소의 개체 및 멤버, COM 구성 요소, DLL(동적 연결 라이브러리) 및 TLB(형식 라이브러리)를 검사할 수 있습니다.  
@@ -164,7 +148,7 @@ Visual Studio 프로젝트의 개체 및 멤버, .NET Framework 구성 요소의
   
 -   사용자 지정 구성 요소 집합  
   
- 사용자 지정 구성 요소에는 관리 코드 실행 파일, 라이브러리 어셈블리, 형식 라이브러리 및 .ocx 파일이 포함될 수 있습니다. C++ 사용자 지정 구성 요소는 추가할 수 없습니다. 사용자 지정 설정은 Visual Studio 사용자 응용 프로그램 디렉터리, %APPDATA%\Roaming\Microsoft\VisualStudio\11.0\ObjBrowEX.dat에 저장됩니다.  
+ 사용자 지정 구성 요소에는 관리 코드 실행 파일, 라이브러리 어셈블리, 형식 라이브러리 및 .ocx 파일이 포함될 수 있습니다. C++ 사용자 지정 구성 요소는 추가할 수 없습니다. 사용자 지정 설정은 Visual Studio 사용자 응용 프로그램 디렉터리, %APPDATA%\Microsoft\VisualStudio\15.0\ObjBrowEX.dat에 저장됩니다.  
   
  **개체 브라우저**의 왼쪽 창에는 .NET Framework 및 COM 구성 요소와 같은 물리적 컨테이너가 표시됩니다. 컨테이너 노드를 확장하여 해당 노드가 포함하는 네임스페이스를 표시한 후 네임스페이스를 확장하여 해당 네임스페이스가 포함하는 형식을 표시할 수 있습니다. 형식을 선택한 경우 해당 멤버(예: 속성 및 메서드)가 오른쪽 창에 나열됩니다. 오른쪽 아래 창에는 선택한 항목에 대한 자세한 정보가 표시됩니다.  
   

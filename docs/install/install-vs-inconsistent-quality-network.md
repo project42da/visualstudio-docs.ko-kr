@@ -1,11 +1,10 @@
 ---
 title: "낮은 대역폭 또는 불안정한 네트워크 환경에 설치 | Microsoft Docs"
 description: "불안정한 네트워크 조건에서 Visual Studio 설치 관리자가 어떻게 작동하는지 설명하고 설치를 시작하기 전에 설치 파일을 다운로드하는 방법을 설명합니다."
-ms.date: 04/14/2017
-ms.reviewer: 
+ms.date: 08/30/2017
+ms.reviewer: tims
 ms.suite: 
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,41 +14,27 @@ ms.assetid: 44DB1998-68CD-4560-870A-EE5B993DCF6E
 author: timsneath
 ms.author: tims
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: 9dbe70bce6c246416df64de304b06cd211320f2a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/09/2017
-
+ms.openlocfilehash: 57665c39c875b57a1e90c4f57de68f069823cc86
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="install-visual-studio-2017-on-low-bandwidth-or-unreliable-network-environments"></a>낮은 대역폭 또는 불안정한 네트워크 환경에 Visual Studio 2017 설치
-새로운 Visual Studio 2017 설치 관리자는 매우 다양한 네트워크 및 컴퓨터 조건에서 제대로 작동하도록 구성되어 있습니다.
 
-- Visual Studio 설치에 필요한 파일은 전역 배달 네트워크에 배포되므로 로컬 서버에서 해당 파일을 가져올 수 있습니다.
-- 설치하는 동안 바이러스 백신 및 프록시 소프트웨어의 간섭을 최소화하기 위해 세 가지 다운로드 기술(WebClient, BITS 및 WinInet)이 시도됩니다.
-- 새 워크로드 기반 모델에서는 Visual Studio의 이전 버전을 포함한 것보다 적게 설치해야 합니다.
+따라서 Visual Studio 웹 설치 관리자를 시도하는 것이 좋습니다.&mdash;대부분 좋은 경험이 될 것입니다.
 
-따라서 새 웹 설치 관리자를 시도하는 것이 좋습니다. 좋은 경험이 될 것입니다. 하지만 Visual Studio 설치를 시작하기 전에 설치 파일을 성공적으로 다운로드했는지 확인하려는 경우 쉽게 확인할 수 있습니다. 명령줄을 사용하여 설치를 시작하기 전에 필요한 파일의 로컬 캐시를 만들 수 있습니다.
+ > [!div class="button"]
+ > [Visual Studio 2017 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocsOL)
+<br/>
 
-방법은 다음과 같습니다.
+그러나 인터넷 연결을 찾을 수 없거나 안정적이지 않다면 명령줄을 사용하여 오프라인 설치를 완료하기 필요한 파일의 로컬 캐시를 만들 수 있습니다. 방법은 다음과 같습니다.
 
-## <a name="download-the-visual-studio-bootstrapper"></a>Visual Studio 부트스트래퍼 다운로드
+> [!NOTE]
+> 인터넷에서 방화벽이 사용되는 클라이언트 워크스테이션의 네트워크에 대해 Visual Studio 2017의 배포를 수행하려고 하는 엔터프라이즈 관리자인 경우 [Visual Studio 2017의 네트워크 설치 만들기](../install/create-a-network-installation-of-visual-studio.md) 및 [오프라인 환경에서 Visual Studio 설치에 대한 특별 고려 사항](../install/install-visual-studio-in-offline-environment.md) 페이지를 참조하세요.
+
+## <a name="step-1---download-the-visual-studio-bootstrapper"></a>1단계 - Visual Studio 부트스트래퍼 다운로드
+
 먼저 선택한 Visual Studio 버전에 대한 Visual Studio 부트스트래퍼를 다운로드합니다.
 
 설치 파일&mdash;또는 더 구체적으로 부트스트래퍼 파일&mdash;다음 중 하나와 일치하거나 비슷합니다.
@@ -60,47 +45,51 @@ ms.lasthandoff: 05/09/2017
 | Visual Studio Professional | [vs_professional.exe](https://aka.ms/vs/15/release/vs_professional.exe) |
 | Visual Studio Enterprise   | [vs_enterprise.exe](https://aka.ms/vs/15/release/vs_enterprise.exe)     |
 
-## <a name="create-a-local-install-cache"></a>로컬 설치 캐시 만들기
-로컬 레이아웃을 만들려면 명령 프롬프트를 열고 다음 예제의 명령 중 하나를 사용합니다. 이 문서의 예제에서는 Visual Studio Community 부트스트래퍼를 다운로드했다고 가정합니다. 사용 주인 버전에 맞게 명령을 조정하세요.
+## <a name="step-2---create-a-local-install-cache"></a>2다계 - 로컬 설치 캐시 만들기
+
+이 단계를 완료하려면 인터넷 연결이 있어야 합니다. 로컬 레이아웃을 만들려면 명령 프롬프트를 열고 다음 예제에 나오는 명령 중 하나를 사용합니다(여기에 있는 예제는 Visual Studio의 커뮤니티 에디션을 사용하고 있는 것으로 가정하고, 에디션에 적절하게 명령을 조정합니다).
 
 - .NET 웹 및 .NET 데스크톱 개발의 경우 다음을 실행합니다.
-  ```
-  vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
-  ```
-- .NET 데스크톱 및 Office 개발의 경우 다음을 실행합니다.
-  ```
-  vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US
-  ```
-- C++ 데스크톱 개발의 경우 다음을 실행합니다.
-  ```
-  vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
-  ```
 
-- 모든 기능이 포함된 전체 로컬 레이아웃을 만들려면(_수많은_ 기능이 있어서 오래 걸릴 수 있음) 다음을 실행합니다.
-  ```
-  vs_community.exe --layout c:\vs2017layout --lang en-US
-  ```
+   ```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US```
+
+- .NET 데스크톱 및 Office 개발의 경우 다음을 실행합니다.
+
+   ```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US```
+
+- C++ 데스크톱 개발의 경우 다음을 실행합니다.
+
+   ```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US```
+
+- 모든 기능이 포함된 전체 로컬 레이아웃을 만들려면(&mdash;_수많은_ 기능이 있어서 오래 걸릴 수 있음) 다음을 실행합니다.
+
+   ```vs_community.exe --layout c:\vs2017layout --lang en-US```
 
 영어 이외의 언어를 설치하려면 이 페이지 아래쪽에 있는 목록에서 `en-US`를 로캘로 변경합니다. 이 [사용 가능한 구성 요소 및 워크로드 목록](workload-and-component-ids.md)을 사용하여 필요에 따라 설치 캐시를 추가로 사용자 지정합니다.
 
-## <a name="install-from-the-local-cache"></a>로컬 캐시에서 설치
-로컬 설치 캐시에서 실행할 경우 이러한 각 파일의 로컬 버전을 사용하게 됩니다. 하지만 설치하는 동안 캐시에 없는 구성 요소를 선택하면 인터넷에서 해당 구성 요소를 다운로드하려고 시도합니다.
+> [!IMPORTANT]
+> 전체 Visual Studio 2017 레이아웃에는 35GB 이상의 디스크 공간이 필요하며 다운로드하는 데 다소 시간이 걸릴 수 있습니다. 설치하려는 구성 요소로만 레이아웃을 만드는 방법에 대한 자세한 내용은 [명령줄 매개 변수를 사용하여 Visual Studio 2017 설치](use-command-line-parameters-to-install-visual-studio.md)를 참조하세요.
+
+## <a name="step-3---install-visual-studio-from-the-local-cache"></a>3단계 - 로컬 캐시에서 Visual Studio 설치
+
+> [!TIP]
+> 로컬 설치 캐시에서 실행할 경우 설치 시 이러한 각 파일의 로컬 버전을 사용하게 됩니다. 하지만 설치하는 동안 캐시에 없는 구성 요소를 선택하면 인터넷에서 해당 구성 요소를 다운로드하려고 시도합니다.
 
 다운로드한 파일만 설치하려면 레이아웃 캐시를 만드는 데 사용한 것과 같은 명령줄 옵션을 사용하세요. 예를 들어 다음 명령으로 레이아웃 캐시를 만든 경우
 
-```
-vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
-```
+```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US```
 
 이 명령을 사용하여 설치를 실행합니다.
 
-```
-c:\vs2017layout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
-```
+```c:\vs2017layout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional```
+
+  > [!NOTE]
+  > 서명이 올바르지 않다는 오류가 발생하면 업데이트된 인증서를 설치해야 합니다. 오프라인 캐시에서 인증서 폴더를 엽니다. 각 인증서 파일을 두 번 클릭하고 인증서 관리자 마법사를 클릭합니다. 암호를 묻는 메시지가 표시되면 비워 두세요.
 
 ## <a name="list-of-language-locales"></a>언어 로캘 목록
+
 | **언어 로캘** | **언어** |
-| ----------------------- | --------------- |  
+| ----------------------- | --------------- |
 | cs-CZ | 체코어 |
 | de-DE | 독일어 |
 | ko-KR | 영어 |
@@ -116,8 +105,10 @@ c:\vs2017layout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDe
 | zh-CN | 중국어 - 간체 |
 | zh-TW | 중국어 - 번체 |
 
+## <a name="get-support"></a>지원 받기
+때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 문제 해결](troubleshooting-installation-issues.md) 페이지에서 문제 해결 팁을 참조하세요. 또한 Visual Studio IDE의 [문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md) 도구를 통해 제품 문제를 보고하거나 [UserVoice](https://visualstudio.uservoice.com/forums/121579)에서 제안을 공유할 수 있습니다. [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고 질문을 하고 답을 찾을 수 있습니다. [Gitter 커뮤니티](https://gitter.im/Microsoft/VisualStudio)([GitHub](https://github.com/) 계정 필요)의 Visual Studio 관련 대화를 통해 Microsoft 및 다른 Visual Studio 개발자와 소통할 수도 있습니다.
+
 ## <a name="see-also"></a>참고 항목
 * [Visual Studio 설치](install-visual-studio.md)
 * [Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
 * [명령줄 매개 변수를 사용하여 Visual Studio 설치](use-command-line-parameters-to-install-visual-studio.md)
-

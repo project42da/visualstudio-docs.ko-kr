@@ -1,13 +1,15 @@
 ---
 title: "Visual Studio 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/22/2017
+ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
+ms.technology:
+- vs-ide-general
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.StartPage.WhatsNew
+f1_keywords: VS.StartPage.WhatsNew
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,26 +17,24 @@ ms.assetid: 7307e180-ba28-4774-8a43-cbb980085a71
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.technology:
-- vs-acquisition
+ms.openlocfilehash: 1e616fb0c223a30152b9cd18e6ea53e989690f9b
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
 ms.translationtype: HT
-ms.sourcegitcommit: 3cd705d703b3d745c502290422e29b3c6da39ee5
-ms.openlocfilehash: 5bf00b7e5ed79f8679b837d0dcabf03550d2b849
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
-#### <a name="updated-for-the-153-release"></a>15.3 릴리스용으로 업데이트됨
-모든 개발, 앱 및 플랫폼에서 뛰어난 생산성을 제공합니다. Visual Studio 2017를 사용하여 Android, iOS, Windows, Linux, 웹 및 클라우드용 앱을 개발합니다. 빠르게 코딩하고, 간단하게 디버그 및 진단하고, 자주 테스트하며, 안심하고 릴리스하세요. 개발자 고유의 확장을 빌드하여 Visual Studio를 확장하고 사용자 지정할 수도 있습니다. 이 릴리스로 버전 제어를 사용하고, 민첩하게 대처하고, 효율적으로 공동 작업하세요.
+#### <a name="updated-for-the-154-release"></a>15.4 릴리스용으로 업데이트됨
+Visual Studio의 이전 버전에서 업그레이드하려고 하십니까? Visual Studio 2017에서 제공하는 기능 소개: 모든 개발, 앱 및 플랫폼에서 탁월한 생산성 Visual Studio 2017를 사용하여 Android, iOS, Windows, Linux, 웹 및 클라우드용 앱을 개발합니다. 빠르게 코딩하고, 간단하게 디버그 및 진단하고, 자주 테스트하며, 안심하고 릴리스하세요. 개발자 고유의 확장을 빌드하여 Visual Studio를 확장하고 사용자 지정할 수도 있습니다. 이 릴리스로 버전 제어를 사용하고, 민첩하게 대처하고, 효율적으로 공동 작업하세요.
 
-변경 내용의 대략적인 요약은 다음과 같습니다.
+이전 버전 Visual Studio 2015부터 적용해 온 변경을 높은 수준에서 요약한 사항입니다.
 
 * **재정의된 기본 사항**. 새로운 설치 환경을 통해 더 빠르게 설치하고, 필요할 때 원하는 항목을 설치할 수 있습니다. 대규모 솔루션과 프로젝트를 로드하든, 코드 폴더 또는 단일 코드 파일에서 작업하든 Visual Studio는 더 빠르게 시작됩니다. 또한 Visual Studio를 사용하는 경우 특히 DevOps를 수용하는 팀에서 큰 그림에 계속 집중할 수 있습니다.
 * **성능 및 생산성** 새로운 최신 모바일, 클라우드 및 데스크톱 개발 기능에 집중했습니다. 또한 전반적인 취득, 성능 및 일반 개발자 생산성 환경도 향상했습니다. Visual Studio는 더 빨리 시작하고, 더 빨리 응답하며, 이전보다 적은 메모리를 사용합니다.
 * **Azure로 클라우드 앱 개발** 기본 제공 Azure 도구 모음을 통해 Microsoft Azure 기반의 클라우드 중심 앱을 쉽게 만들 수 있습니다. Visual Studio를 사용하면 Azure에서 직접 앱과 서비스를 쉽게 구성, 빌드, 디버그, 패키징 및 배포할 수 있습니다.
 * **모바일 앱 개발** Visual Studio 2017에서는 하나의 핵심 코드베이스와 기술 집합을 사용하여 다중 플랫폼 모바일 요구 사항을 통합하는 Xamarin에서 혁신적인 결과를 빠르게 얻을 수 있습니다. 기존 팀, 기술 투자 및 C# 코드와 더불어 모바일로 이동하여 예정보다 빨리 예산 수준 이하의 소비자급 환경을 제공합니다. 사용자의 역량을 강화할 수 있도록 모바일 수명 주기의 각 단계를 모두 가속화하여 세계 최고의 소비자 환경 또는 생산성 앱 포트폴리오를 제공합니다.
-* **플랫폼 간 개발** 모든 대상 플랫폼에 소프트웨어를 원활하게 제공할 수 있습니다. Redgate 데이터 도구를 통해 DevOps 프로세스를 SQL Server로 확장하고 Visual Studio에서 데이터베이스 배포를 안전하게 자동화할 수 있습니다. Visual Studio Tools for Unity를 사용하여 다중 플랫폼 게임을 개발하고 릴리스할 수 있습니다. 또는 .NET Core를 사용하여 Windows, Linux 및 macOS 운영 체제에서 수정되지 않고 실행되는 앱 및 라이브러리를 작성할 수 있습니다. (그리고 15.3의 새로운 기능: .NET Core 2.0 SDK에 대한 side-by-side 지원을 받으세요.)
+* **플랫폼 간 개발**. 모든 대상 플랫폼에 소프트웨어를 원활하게 제공할 수 있습니다. Redgate 데이터 도구를 통해 DevOps 프로세스를 SQL Server로 확장하고 Visual Studio에서 데이터베이스 배포를 안전하게 자동화할 수 있습니다. 또는 .NET Core를 사용하여 Windows, Linux 및 macOS 운영 체제에서 수정되지 않고 실행되는 앱 및 라이브러리를 작성할 수 있습니다. (그리고 **15.3의 새로운 기능**: .NET Core 2.0 SDK에 대한 side-by-side 지원을 받으세요.)
+* **게임 개발**. VSTU(Visual Studio Tools for Unity)를 사용하면 Visual Studio를 통해 게임 및 편집기 스크립트를 C#으로 작성한 다음 강력한 디버거를 사용하여 오류를 찾고 수정할 수 있습니다. VSTU의 최신 릴리스에는 Unity의 ShaderLab 셰이더 언어를 위한 구문 색 지정, 향상된 디버거 시각화 및 MonoBehavior 마법사에 대한 코드 생성 기능이 포함되어 있습니다. VSTU는 Unity 프로젝트 파일, 콘솔 메시지 및 Visual Studio에서 게임을 시작하는 기능도 제공하므로 코드를 작성하는 동안 Unity 편집기 전환에 소요되는 시간을 단축할 수 있습니다.
 
 > [!NOTE]
 > Visual Studio 2017의 새로운 기능에 대한 전체 목록은 [릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)를 참조하세요.
@@ -58,9 +58,14 @@ Visual Studio 2017에서 가장 두드러진 개선 사항과 새로운 기능�
 
 단계별 지침을 포함하여 새로운 설치 환경에 대한 자세한 내용은 [Visual Studio 설치](../install/install-visual-studio.md) 페이지를 참조하세요.
 
+### <a name="a-focus-on-accessibility"></a>액세스 가능성에 집중
+**15.3의 새로운 기능**: Visual Studio와 고객들이 많이 사용하는 보조 기술 간의 호환성을 개선하기 위해 1,700가지가 넘는 대상 수정 사항을 적용했습니다. 화면 판독기, 고대비 테마 및 기타 보조 기술과 이전보다 더 높은 호환성을 제공하는 수십 가지 시나리오가 있습니다. 디버거, 편집기 및 셸 역시 모두 크게 향상되었습니다.
+
+자세한 내용은 [Accessibility improvements in Visual Studio 2017 version 15.3(Visual Studio 2017 버전 15.3의 접근성 향상)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/) 블로그 게시물을 참조하세요.
+
 ## <a name="performance-and-productivity"></a>성능 및 생산성
 ### <a name="sign-in-across-multiple-accounts"></a>여러 계정에 로그인  
-팀 탐색기, Azure 도구, Windows 스토어 게시 등에서 사용자 계정을 공유할 수 있는 새로운 ID 서비스를 Visual Studio에 도입했습니다.
+팀 탐색기, Azure 도구, Microsoft 스토어 게시 등에서 사용자 계정을 공유할 수 있는 새로운 ID 서비스를 Visual Studio에 도입했습니다.
 
 더 오랫동안 로그인 상태를 유지할 수도 있습니다. Visual Studio에서 12시간마다 다시 로그인하라는 메시지가 표시하되 않습니다. 자세한 내용은 [Fewer Visual Studio Sign-in Prompts](https://blogs.msdn.microsoft.com/visualstudio/2016/08/15/fewer-visual-studio-sign-in-prompts/)(Visual Studio 로그인 프롬프트 횟수 감소) 블로그 게시물을 참조하세요.
 
@@ -110,7 +115,7 @@ Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 �
 
 ![라이브 단위 테스트](../ide/media/lut-codewindow.png "Visual Studio Enterprise 버전에 있는 새 라이브 단위 테스트 기능의 예")
 
-자세한 내용은 [Visual Studio 2017 Enterprise의 Live Unit Testing](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/) 블로그 게시물을 참조하세요.
+자세한 내용은 [Live Unit Testing 소개](../test/live-unit-testing-intro.md)를 참조하세요. Visual Studio Enterprise 2017의 각 릴리스에 추가된 새로운 기능 목록은 [Live Unit Testing의 새로운 기능](../test/live-unit-testing-whats-new.md)을 참조하세요.
 
 #### <a name="set-up-a-cicd-pipeline-to-run-automated-tests-efficiently"></a>CI/CD 파이프라인을 설정하여 자동화된 테스트를 효율적으로 실행
 자동화된 테스트는 DevOps 파이프라인의 핵심 부분입니다. 자동화된 테스트를 통해 솔루션을 일관되고 안정적으로 테스트하고 더 짧은 주기로 릴리스할 수 있습니다. CI/CD(연속 통합 및 지속적인 업데이트) 흐름은 이 프로세스의 효율성을 더 높일 수 있습니다.
@@ -119,14 +124,9 @@ Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 �
 
 또한 [Continuous Delivery Tools for Visual Studio(Visual Studio의 지속적인 업데이트 도구)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 확장의 새로운 기능에 대한 자세한 내용은 [Committing with Confidence: Commit Time Code Quality(정확하게 커밋: 커밋 타임 코드 품질)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/) 블로그 게시물을 참조하세요.
 
-### <a name="a-focus-on-accessibility"></a>액세스 가능성에 집중
-15.3에서는 Visual Studio와 고객들이 많이 사용하는 보조 기술 간의 호환성을 개선하기 위해 1,700가지가 넘는 대상 수정 사항을 적용했습니다. 화면 판독기, 고대비 테마 및 기타 보조 기술과 이전보다 더 높은 호환성을 제공하는 수십 가지 시나리오가 있습니다. 디버거, 편집기 및 셸 역시 모두 크게 향상되었습니다.
-
-자세한 내용은 [Accessibility improvements in Visual Studio 2017 version 15.3(Visual Studio 2017 버전 15.3의 접근성 향상)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/) 블로그 게시물을 참조하세요.
-
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE 향상
 #### <a name="use-new-refactorings"></a>새 리팩터링 사용
-15.3에서는 다음을 포함하는 많은 새 리팩터링을 추가했습니다.
+**15.3의 새로운 기능**: 다음을 포함하는 많은 새 리팩터링을 추가했습니다.
 *   병합 충돌 해결
 *   매개 변수 추가(호출 사이트에서)
 *   재정의 생성
@@ -137,25 +137,21 @@ Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 �
 *   if-to-switch 변환
 *   사용하지 않는 변수 제거
 
-자세한 내용은 [Visual Studio의 리팩터링, 코드 생성 및 빠른 작업](refactoring-code-generation-quick-actions.md) 페이지를 참조하세요.
-
+자세한 내용은 [Visual Studio의 리팩터링, 코드 생성 및 빠른 작업](refactoring-code-generation-quick-actions.md) 페이지를 참조하세요.  
 
 #### <a name="interact-with-git"></a>Git과 상호 작용
 Visual Studio에서 프로젝트를 작업할 때 코드를 설정하고 빠르게 커밋하여 Git 서비스에 게시할 수 있습니다. 또한 IDE의 오른쪽 아래 모서리에 있는 단추의 메뉴 클릭을 사용하여 Git 리포지토리를 관리할 수도 있습니다.
 
 ![Visual Studio 2017과 Git 대화 상자의 상호 작용](../ide/media/vsIDE-GitInteraction.png "Visual Studio IDE의 Git 도구")
 
-#### <a name="view-and-navigate-code-with-structure-visualizer"></a>구조 시각화 도우미를 사용하여 코드 보기 및 탐색
-구조 시각화 도우미는 코드에 구조 안내선(들여쓰기 안내선이라고도 함)을 그립니다. 이 안내선을 사용하면 언제든지 스크롤하지 않고도 작업 중인 코드 블록을 시각화하고 검색할 수 있습니다. 선 위로 마우스를 가리키면 해당 블록과 그 부모를 열어서 볼 수 있는 도구 설명이 표시됩니다. TextMate 문법 검사뿐만 아니라 C#, Visual Basic 및 XAML을 통해 지원되는 모든 언어에서 사용할 수 있습니다.
-
-![Visual Studio 2017 구조 시각화 도우미](../ide/media/vsIDE-StructureVisualizer.png "Visual Studio의 구조 시각화 도우미")
-
 #### <a name="experience-improved-navigation-controls"></a>향상된 컨트롤 탐색 환경
 A에서 B로 이동하는 데 도움이 되는 탐색 환경을 새로 고쳐 자신감 있게 더욱 집중할 수 있게 했습니다.
 
-* **다음으로 이동**(Ctrl+F12) &ndash; 모든 베이스 형식 또는 멤버에서 다양한 구현으로 이동합니다.
+* **15.4의 새로운 기능**: **정의로 이동(Ctrl+클릭 또는 F12)** &ndash; 마우스 사용자는 **Ctrl** 키를 누르고 해당 멤버를 클릭하여 멤버 정의로 이동할 수 있는 더 쉬운 방법이 있습니다. **Ctrl** 키를 누르고 코드 기호에 마우스를 올려 놓으면 밑줄이 쳐지고 링크로 바뀝니다. 자세한 내용은 [정의로 이동 및 정의 피킹(Peeking)](../ide/go-to-and-peek-definition.md)을 참조하세요.  
 
-* **모두로 이동**(Ctrl+T 또는 Ctrl+,) &ndash; 모든 파일/형식/멤버/기호 선언으로 직접 이동합니다. 결과 목록을 필터링하거나 쿼리 구문을 사용할 수 있습니다(예: 파일의 경우 “f searchTerm”, 형식의 경우 “t searchTerm”).
+* **구현으로 이동(Ctrl+F12)** &ndash; 모든 베이스 형식 또는 멤버에서 다양한 구현으로 이동합니다.
+
+* **전체로 이동(Ctrl+T or Ctrl+,)** &ndash; 모든 파일/형식/멤버/기호 선언으로 직접 이동합니다. 결과 목록을 필터링하거나 쿼리 구문을 사용할 수 있습니다(예: 파일의 경우 “f searchTerm”, 형식의 경우 “t searchTerm”).
 
  ![향상된 모두로 이동](../ide/media/vs2017ide-navigation-go-to.png "향상된 모두로 이동 기능의 예")
 
@@ -163,7 +159,9 @@ A에서 B로 이동하는 데 도움이 되는 탐색 환경을 새로 고쳐 �
 
  ![새로운 모든 참조 찾기 도구](../ide/media/vs2017ide-find-all-references.png "새로운 모든 참조 찾기 도구의 예")
 
-* **들여쓰기 안내선** &ndash; 회색 세로 점선은 코드에서 랜드마크로 작용하여 보기의 프레임 내에서 컨텍스트를 제공합니다. 이러한 기능은 인기 있는 생산성 파워 도구에서 확인할 수 있습니다.
+* **구조체 시각화 도우미** &ndash; 회색 세로 점선(들여쓰기 가이드)은 코드에서 랜드마크로 작용하여 보기의 프레임 내에서 컨텍스트를 제공합니다. 이러한 기능은 인기 있는 생산성 파워 도구에서 확인할 수 있습니다. 이 안내선을 사용하면 언제든지 스크롤하지 않고도 작업 중인 코드 블록을 시각화하고 검색할 수 있습니다. 선 위로 마우스를 가리키면 해당 블록과 그 부모를 열어서 볼 수 있는 도구 설명이 표시됩니다. TextMate 문법 검사뿐만 아니라 C#, Visual Basic 및 XAML을 통해 지원되는 모든 언어에서 사용할 수 있습니다.  
+
+![Visual Studio 2017 구조 시각화 도우미](../ide/media/vsIDE-StructureVisualizer.png "Visual Studio의 구조 시각화 도우미")
 
 새로운 생산성 기능에 대한 자세한 내용은 Mark Wilson-Thomas의 [Visual Studio 2017의 생산성](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/productivity-in-visual-studio-2017-rc/)(영문) 블로그 게시물을 참조하세요.
 
@@ -206,7 +204,7 @@ Visual Studio에서 C++ 핵심 지침을 배포하고, C++11 및 C++ 기능에 �
 
 ## <a name="cross-platform-development"></a>플랫폼 간 개발
 ### <a name="redgate-data-tools"></a>Redgate 데이터 도구
-DevOps 기능을 SQL Server 데이터베이스 개발로 확장하기 위해 Visual Studio 2017의 다음 버전에서 Redgate 데이터 도구를 사용할 수 있습니다.
+DevOps 기능을 SQL Server 데이터베이스 개발로 확장하기 위해 Visual Studio에서 현재 Redgate 데이터 도구를 사용할 수 있습니다.
 
 Visual Studio 2017 Enterprise에는 다음이 포함되어 있습니다.
 - [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs)는 마이그레이션 스크립트를 개발하고, 소스 제어를 사용하여 데이터베이스 변경 내용을 관리하고, SQL Server 데이터베이스 변경 내용을 응용 프로그램 변경 내용과 함께 자동으로 안전하게 배포하는 데 도움이 됩니다.
@@ -217,32 +215,33 @@ Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
 
 자세한 내용은 [Visual Studio 2017의 Redgate 데이터 도구](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/) 블로그 게시물을 참조하세요.
 
-### <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
-“Unity용 게임 개발” 워크로드의 일부로, 플랫폼 간 개발을 통해 2D 및 3D 게임과 대화형 콘텐츠를 만드는 데 도움이 되는 도구를 포함했습니다. Visual Studio 2017과 Unity 5.6을 사용하여 게임을 한 번 만들면 모든 모바일 플랫폼과 WebGL, Mac, PC, Linux 데스크톱, 웹 또는 콘솔을 포함한 21개 플랫폼에 게시할 수 있습니다.
-
-자세한 내용은 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) 페이지를 참조하세요.
-
 ### <a name="net-core"></a>.NET Core
 .NET Core는 .NET Standard의 일반적인 용도를 위한 모듈식 플랫폼 간 오픈 소스 구현이며 .NET Framework와 동일한 API를 다수 포함합니다.
 
 .NET Core 플랫폼은 관리되는 컴파일러, 런타임, 기본 클래스 라이브러리 및 ASP.NET Core와 같은 다양한 응용 프로그램 모델을 포함하는 여러 요소로 구성됩니다. .NET Core는 Windows, Linux 및 macOS의 세 개 주요 운영 체제를 지원합니다. 장치, 클라우드 및 포함/IoT 시나리오에 .NET Core를 사용할 수 있습니다.
 
-그리고 이제 Docker 지원도 포함합니다.
+그리고 이제 Docker 지원도 포함합니다.  
 
-**15.3의 새로운 기능**: Visual Studio 2017 버전 15.3은 .NET Core 2.0 개발을 지원합니다. 15.3에서 .NET Core 2.0을 사용하려면 .NET Core 2.0 SDK를 별도로 다운로드하여 설치해야 합니다.
+**15.3의 새로운 기능**: Visual Studio 2017 버전 15.3은 .NET Core 2.0 개발을 지원합니다. .NET Core 2.0을 사용하려면 .NET Core 2.0 SDK를 별도로 다운로드하여 설치해야 합니다.  
 
 자세한 내용은 [.NET Core 가이드](https://docs.microsoft.com/dotnet/core/index) 페이지를 참조하세요.
 
-## <a name="talk-to-us"></a>의견 보내기  
- 피드백을 보낼 때는 Visual Studio 팀에 피드백을 보내는 이유도 함께 알려 주세요. 고객 여러분의 피드백은 소중하며 Microsoft가 수행하는 작업에 많은 영향을 줍니다.
+## <a name="games-development"></a>게임 개발
+### <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
+“Unity용 게임 개발” 워크로드의 일부로, 플랫폼 간 개발을 통해 2D 및 3D 게임과 대화형 콘텐츠를 만드는 데 도움이 되는 도구를 포함했습니다. Visual Studio 2017과 Unity 5.6을 사용하여 게임을 한 번 만들면 모든 모바일 플랫폼과 WebGL, Mac, PC, Linux 데스크톱, 웹 또는 콘솔을 포함한 21개 플랫폼에 게시할 수 있습니다.
 
-Visual Studio를 개선하는 방법을 제안하거나 문제를 보고하려는 경우 자세한 내용은 [의견 보내기](../ide/talk-to-us.md) 페이지를 참조하세요.
+자세한 내용은 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) 페이지를 참조하세요.
+
+## <a name="talk-to-us"></a>의견 보내기  
+ 피드백을 보낼 때는 Visual Studio 팀에 피드백을 보내는 이유도 함께 알려 주세요. Microsoft는 고객 여러분의 피드백을 소중하게 생각하며, Microsoft에서 추진하는 업무에 큰 역할을 합니다.  
+
+Visual Studio를 개선하는 방법을 제안하거나 문제를 보고하려는 경우 [의견 보내기](../ide/talk-to-us.md) 페이지를 참조하세요.  
 
 ### <a name="report-a-problem"></a>문제 보고  
- 발생한 문제의 전반적인 영향을 메시지만으로 전달할 수 없는 경우도 있습니다. 시스템 중단, 충돌 또는 기타 성능 문제가 발생하는 경우 **문제 보고** 도구를 사용하여 쉽게 재현 단계 및 지원 파일(예: 스크린샷, 추적 및 힙 덤프 파일)을 공유할 수 있습니다. 이 도구를 사용하는 방법에 대한 자세한 내용은 [문제를 보고하는 방법](how-to-report-a-problem-with-visual-studio-2017.md) 페이지를 참조하세요.
+ 발생한 문제의 전반적인 영향을 메시지만으로 전달할 수 없는 경우도 있습니다. 시스템 중단, 충돌 또는 기타 성능 문제가 발생하는 경우 **문제 보고** 도구를 사용하여 쉽게 재현 단계 및 지원 파일(예: 스크린샷, 추적 및 힙 덤프 파일)을 공유할 수 있습니다. 이 도구를 사용하는 방법에 대한 자세한 내용은 [문제를 보고하는 방법](how-to-report-a-problem-with-visual-studio-2017.md) 페이지를 참조하세요.  
 
 ### <a name="track-your-issue-in-connect"></a>Connect에서 문제 추적  
- Visual Studio 피드백의 상태를 추적하려는 경우 [Connect](http://connect.microsoft.com/)로 이동하여 버그를 보고하세요. 버그를 신고한 후에는 Connect로 돌아와 상태를 추적할 수 있습니다.
+ Visual Studio 피드백의 상태를 추적하려는 경우 [Connect](http://connect.microsoft.com/)로 이동하여 버그를 보고하세요. 버그를 신고한 후에는 Connect로 돌아와 상태를 추적할 수 있습니다.  
 
 ## <a name="see-also"></a>참고 항목
 * [Visual Studio 2017 릴리스 정보](https://www.visualstudio.com/news/vs2015-vs)
@@ -250,4 +249,3 @@ Visual Studio를 개선하는 방법을 제안하거나 문제를 보고하려�
 * [C#의 새로운 기능](https://docs.microsoft.com/dotnet/csharp/csharp-7)  
 * [Team Foundation Server의 새로운 기능](https://www.visualstudio.com/docs/whats-new)
 * [Mac용 Visual Studio의 새로운 기능](https://www.visualstudio.com/vs/visual-studio-mac/)
-

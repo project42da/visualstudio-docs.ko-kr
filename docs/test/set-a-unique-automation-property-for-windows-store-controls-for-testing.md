@@ -1,40 +1,24 @@
 ---
-title: "테스트를 위해 Windows 스토어 컨트롤에 대한 고유 자동화 속성 설정 | Microsoft Docs"
+title: "테스트를 위해 UWP 컨트롤에 대한 고유 자동화 속성 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9bdd74ff-2534-4fc7-a5c3-a77bf7843037
-caps.latest.revision: 10
+caps.latest.revision: "10"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3038f70405239d69f0924be022040bcc8c7db9a4
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e931c898147cb93683ae618f96eed53ae13607ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>테스트를 위해 Windows 스토어 컨트롤에 대한 고유 자동화 속성 설정
-XAML 기반 Windows 스토어 응용 프로그램용 코딩된 UI 테스트를 실행하려는 경우 각 컨트롤을 식별하는 고유한 자동화 속성이 있어야 합니다.  
+# <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>테스트를 위해 UWP 컨트롤에 대한 고유 자동화 속성 설정
+XAML 기반 UWP 스토어 응용 프로그램용 코딩된 UI 테스트를 실행하려는 경우 각 컨트롤을 식별하는 고유한 자동화 속성이 있어야 합니다.  
   
  응용 프로그램에서 XAML 컨트롤의 형식에 따라 고유한 자동화 속성을 할당할 수 있습니다. 다음과 같은 상황에서 이 고유한 자동화 속성을 할당하는 방법은 다음과 같습니다.  
   
@@ -219,5 +203,4 @@ private void CreateCheckBox(string txt, StackPanel panel)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [코딩된 UI 테스트를 사용하여 Windows UWP 및 8.1 스토어 앱 테스트](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)
-
+ [코딩된 UI 테스트를 사용하여 Windows UWP 앱 테스트](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)

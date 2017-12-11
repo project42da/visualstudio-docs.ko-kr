@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,37 +22,21 @@ helpviewer_keywords:
 - solution build configurations, build order
 - builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
-caps.latest.revision: 35
-author: kempb
-ms.author: kempb
+caps.latest.revision: "35"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: f43b470f07e8b90c62d17c7905ad458a22d41ff1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 2e66af6d2d38685bdd905b7991c6e8f782e4f696
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Visual Studio에서 프로젝트 및 솔루션 빌드 및 정리
 이 항목의 절차에 따라 솔루션에 포함된 프로젝트 또는 프로젝트 항목의 전체 또는 일부를 빌드, 다시 빌드 또는 정리할 수 있습니다. 단계별 자습서는 [연습: 응용 프로그램 빌드](../ide/walkthrough-building-an-application.md)를 참조하세요.  
   
 > [!NOTE]
->  사용 중인 Visual Studio 버전의 UI는 활성 설정에 따라 이 항목의 설명과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴를 열고 **설정 가져오기 및 내보내기**를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
+> 사용 중인 Visual Studio 버전의 UI는 활성 설정에 따라 이 항목의 설명과 다를 수 있습니다. 설정을 **일반** 또는 **Visual C++** 설정 등으로 변경하려면 **도구**, **설정 가져오기 및 내보내기**를 선택한 다음 **모두 다시 설정**을 선택합니다.
   
 ### <a name="to-build-rebuild-or-clean-an-entire-solution"></a>전체 솔루션을 빌드, 다시 빌드 또는 정리하려면  
   
@@ -96,7 +79,7 @@ ms.lasthandoff: 05/24/2017
   
     -   메뉴 모음에서 **빌드**, **솔루션 빌드**(Ctrl+Shift+B)를 선택합니다.  
   
-     이 확인란의 선택을 취소하면 이전 명령 중 하나를 실행할 때 모든 프로젝트, 해당 종속성 및 솔루션 파일이 빌드됩니다. 이 확인란은 기본적으로 선택되어 있지 않습니다.  
+    이 확인란의 선택을 취소하면 이전 명령 중 하나를 실행할 때 모든 프로젝트, 해당 종속성 및 솔루션 파일이 빌드됩니다. 이 확인란은 기본적으로 선택되어 있지 않습니다.  
   
 ### <a name="to-build-only-the-selected-visual-c-project"></a>선택한 Visual C++ 프로젝트만 빌드하려면  
   
@@ -110,13 +93,13 @@ ms.lasthandoff: 05/24/2017
   
     -   *ProjectName***만 링크**  
   
-     이러한 명령은 프로젝트 종속성 또는 솔루션 파일을 빌드, 다시 빌드, 정리 또는 링크하지 않고 선택한 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 프로젝트에만 적용됩니다. 사용 중인 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 버전에 따라 **프로젝트만** 하위 메뉴에 추가 명령이 포함될 수 있습니다.  
+    이러한 명령은 프로젝트 종속성 또는 솔루션 파일을 빌드, 다시 빌드, 정리 또는 링크하지 않고 선택한 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 프로젝트에만 적용됩니다. 사용 중인 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 버전에 따라 **프로젝트만** 하위 메뉴에 추가 명령이 포함될 수 있습니다.  
   
 ### <a name="to-compile-multiple-c-project-items"></a>여러 C++ 프로젝트 항목을 컴파일하려면  
   
 1.  **솔루션 탐색기**에서 작업으로 컴파일할 수 있는 여러 파일을 선택하고 해당 파일 중 하나의 바로 가기 메뉴를 연 다음 **컴파일**을 선택합니다.  
   
-     파일에 종속성이 있는 경우 종속성 순서에 따라 파일이 컴파일됩니다. 컴파일 시 사용할 수 없는 미리 컴파일된 헤더가 파일에 필요한 경우 컴파일 작업이 실패합니다. 컴파일 작업은 현재 활성 솔루션 구성을 사용합니다.  
+    파일에 종속성이 있는 경우 종속성 순서에 따라 파일이 컴파일됩니다. 컴파일 시 사용할 수 없는 미리 컴파일된 헤더가 파일에 필요한 경우 컴파일 작업이 실패합니다. 컴파일 작업은 현재 활성 솔루션 구성을 사용합니다.  
   
 ### <a name="to-stop-a-build"></a>빌드를 중지하려면  
   
@@ -126,12 +109,12 @@ ms.lasthandoff: 05/24/2017
   
     -   Ctrl+Break 키를 선택합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [방법: 빌드 로그 파일 보기, 저장 및 구성](../ide/how-to-view-save-and-configure-build-log-files.md)   
- [빌드 로그 가져오기](../msbuild/obtaining-build-logs-with-msbuild.md)   
- [컴파일 및 빌드](../ide/compiling-and-building-in-visual-studio.md)   
- [빌드 구성 이해](../ide/understanding-build-configurations.md)   
- [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)   
- [C/C++ 빌드 참조](/cpp/build/reference/c-cpp-building-reference)   
- [Devenv 명령줄 스위치](../ide/reference/devenv-command-line-switches.md)   
- [솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)
+## <a name="see-also"></a>참고 항목
+[방법: 빌드 로그 파일 보기, 저장 및 구성](../ide/how-to-view-save-and-configure-build-log-files.md)   
+[빌드 로그 가져오기](../msbuild/obtaining-build-logs-with-msbuild.md)   
+[컴파일 및 빌드](../ide/compiling-and-building-in-visual-studio.md)   
+[빌드 구성 이해](../ide/understanding-build-configurations.md)   
+[디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)   
+[C/C++ 빌드 참조](/cpp/build/reference/c-cpp-building-reference)   
+[Devenv 명령줄 스위치](../ide/reference/devenv-command-line-switches.md)   
+[솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)

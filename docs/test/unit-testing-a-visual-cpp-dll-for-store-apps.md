@@ -1,40 +1,24 @@
 ---
-title: "스토어 앱의 Visual C++ DLL 단위 테스트 | Microsoft 문서"
+title: "UWP 앱의 Visual C++ DLL 단위 테스트 | Microsoft 문서"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 24afc90a-8774-4699-ab01-6602a7e6feb2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 571ea6daab6ea9cbfb30976514e163b5dcbe398d
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: a900c779401277e4b8694e75f69203fee82d73f0
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="unit-testing-a-visual-c-dll-for-store-apps"></a>스토어 앱의 Visual C++ DLL 유닛 테스트
-이 항목에서는 Windows 스토어 앱의 C++ DLL에 대한 단위 테스트를 만드는 방법을 보여 줍니다. RooterLib DLL은 지정된 숫자의 예상 제곱근을 계산하는 함수를 구현하여 미적분학 한계 이론에 대한 희미한 기억을 보여 줍니다. 이러한 DLL은 수학을 활용하여 수행할 수 있는 재미 있는 사항들을 사용자에게 보여 주는 Windows 스토어 앱에 포함할 수 있습니다.  
+# <a name="unit-testing-a-visual-c-dll-for-uwp-apps"></a>UWP 앱의 Visual C++ DLL 단위 테스트
+이 항목에서는 UWP 앱의 C++ DLL에 대한 단위 테스트를 만드는 방법을 보여 줍니다. RooterLib DLL은 지정된 숫자의 예상 제곱근을 계산하는 함수를 구현하여 미적분학 한계 이론에 대한 희미한 기억을 보여 줍니다. DLL은 UWP 앱에 포함하여 사용자에게 수학으로 할 수 있는 재밌는 것을 보여줄 수 있습니다.  
   
  이 항목에서는 개발의 첫 단계로 단위 테스트를 사용하는 방법을 보여 줍니다. 이 방법에서는 먼저 테스트하고 있는 시스템에서 특정 동작을 확인하는 테스트 메서드를 작성한 다음 테스트를 통과하는 코드를 작성합니다. 다음 절차의 순서를 변경함으로써 이 전략을 반대로 적용하여 먼저 테스트할 코드를 작성한 다음 단위 테스트를 작성할 수 있습니다.  
   
@@ -61,7 +45,7 @@ ms.lasthandoff: 04/04/2017
   
 1.  **파일** 메뉴에서 **새로 만들기**를 선택하고 **새 프로젝트**를 선택합니다.  
   
-2.  새 프로젝트 대화 상자에서 **설치됨**, **Visual C++**를 차례로 확장하고 **Windows 스토어**를 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **단위 테스트 라이브러리(Windows 스토어 앱)**를 선택합니다.  
+2.  새 프로젝트 대화 상자에서 **설치됨**, **Visual C++**를 차례로 확장하고 **Windows 유니버셜**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **단위 테스트 라이브러리(범용 Windows)**를 선택합니다.  
   
      ![C&#43;&#43; 단위 테스트 라이브러리 만들기](../test/media/ute_cpp_windows_unittestlib_create.png "UTE_Cpp_windows_UnitTestLib_Create")  
   
@@ -108,7 +92,7 @@ ms.lasthandoff: 04/04/2017
   
      ![RooterLib 프로젝트 만들기](../test/media/ute_cpp_windows_rooterlib_create.png "UTE_Cpp_windows_RooterLib_Create")  
   
-2.  **새 프로젝트 추가** 대화 상자에서 **DLL(Windows 스토어 앱)**을 선택합니다.  
+2.  **새 프로젝트 추가** 대화 상자에서 **DLL(UWP 앱)**을 선택합니다.  
   
 3.  **RooterLib.h** 파일에 다음 코드를 추가합니다.  
   
@@ -364,4 +348,3 @@ ms.lasthandoff: 04/04/2017
     >  훌륭한 단위 테스트의 안정적인 집합은 코드를 변경할 때 버그를 만들지 않았다는 확신을 줍니다.  
     >   
     >  리팩터링은 다른 변경 사항과 구분해서 관리합니다.
-

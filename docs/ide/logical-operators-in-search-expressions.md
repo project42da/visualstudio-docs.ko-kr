@@ -1,38 +1,70 @@
 ---
-title: "검색 식의 논리 연산자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "도움말 뷰어 2.0, 검색의 논리 연산자"
-  - "검색의 논리 연산자[도움말 뷰어 2.0]"
+title: "검색 식의 논리 연산자 및 고급 연산자 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-help-viewer
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Help Viewer, logical operators in search
+- logical operators in search [Help Viewer]
 ms.assetid: 0c38ae7d-3e20-4d47-a020-9677cd285916
-caps.latest.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3378a554a9e576bde011a70916c48597218bb512
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
-# 검색 식의 논리 연산자
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="logical-and-advanced-operators-in-search-expressions"></a>검색 식의 논리 및 고급 연산자
+논리 연산자 및 고급 검색 연산자를 사용하여 도움말 뷰어에서 도움말 콘텐츠의 검색을 구체화합니다.
 
-논리 연산자를 사용하면 간단한 검색 표현으로부터 더 복잡한 검색 표현을 만들어 콘텐츠 검색을 상세하게 할 수 있다.  다음 표에서 알 수 있듯이 논리 연산자로 검색 쿼리에 검색어를 몇 개나 조합할 수 있는지 지정한다.  
+## <a name="logical-operators"></a>논리 연산자
+논리 연산자는 여러 검색어가 검색 쿼리에서 결합되는 방식을 지정합니다. 다음 표는 논리 연산자 AND, OR, NOT 및 NEAR을 보여줍니다.
+  
+|검색 대상|기능|예제|결과|  
+|-------------------|---------|-------------|------------|  
+|동일한 아티클에 두 용어가 모두 있음|AND|dib AND palette|"dib" 및 "palette"를 둘 다 포함하는 항목|  
+|아티클에 두 용어 중 하나가 있음|또는|raster OR vector|"raster" 또는 "vector"를 포함하는 항목|  
+|동일한 아티클에 첫 번째 용어는 있고 두 번째 용어는 없음|NOT|"operating system" NOT DOS|"operating system"을 포함하지만 "DOS"를 포함하지 않는 항목|  
+|한 아티클에 두 용어가 서로 가까이 있음|근사값|user NEAR kernel|"kernel"의 근접 범위 내에 "user"를 포함하는 항목|  
   
 > [!IMPORTANT]
->  논리 연산자는 모두 대문자로 입력해야 검색 엔진에서 식별할 수 있습니다.  
+> 검색 엔진에서 인식할 수 있도록 논리 연산자는 모두 대문자로 입력해야 합니다.
+
+## <a name="advanced-operators"></a>고급 연산자
+고급 검색 연산자는 아티클에서 검색어를 찾을 위치를 지정하여 콘텐츠 검색을 구체화합니다. 다음 표에서 4개의 사용 가능한 고급 검색 연산자를 설명합니다.
+
+|검색 대상|기능|예제|결과|  
+|-------------------|---------|-------------|------------|  
+|아이클 제목의 용어|title:|title:binaryreader|제목에 “binaryreader”가 포함된 항목입니다.|  
+|코드 예제의 용어|code:|code:readdouble|코드 예제에 “readdouble”이 포함된 항목입니다.|  
+|특정 프로그래밍 언어 예제의 용어|code:vb:|code:vb:string|Visual Basic 코드 예제에 “string”이 포함된 항목입니다.|  
+|특정 인덱스 키워드와 연결된 아티클|keyword:|keyword:readbyte|“readbyte” 인덱스 키워드와 연결된 항목입니다.|  
+
+> [!IMPORTANT]
+> 검색 엔진이 이러한 연산자를 인식하려면 고급 검색 연산자 뒤에 불필요한 공백 없이 마지막으로 콜론을 입력해야 합니다.    
+
+### <a name="programming-languages-for-code-examples"></a>코드 예제에 대한 프로그래밍 언어
+**코드:** 연산자를 사용하여 여러 프로그래밍 언어에 대한 콘텐츠를 찾을 수 있습니다. 특정 프로그래밍 언어에 대한 예제를 반환하려면 다음과 같은 프로그래밍 언어 값 중 하나를 사용합니다.  
+
+|프로그래밍 언어|검색 연산자 구문|  
+|--------------------|---------|  
+|Visual Basic|code:vb<br/>code:visualbasic|  
+|C#|code:c#<br/>code:csharp|  
+|C++|code:cpp<br/>code:c++<br/>code:cplusplus|  
+|F#|code:f#<br/>code:fsharp|  
+|JavaScript|code:javascript<br/>code:js|  
+|XAML|code:xaml|
+
+> [!NOTE]
+> **코드:** 연산자는 일반적으로 코드로 표시되는 콘텐츠와는 반대로, 프로그래밍 언어 레이블로 표시되는 콘텐츠만 찾습니다. 
   
-|검색하기|사용할 도구|예제|결과|  
-|----------|------------|--------|--------|  
-|두 용어가 항목이 같음|AND|dib AND 색상표|"dib" 및 "색상표"를 모두 포함하는 항목입니다.|  
-|두 용어 중 하나가 항목에 포함됨|또는|래스터 OR 벡터|"래스터" 또는 "벡터" 중 하나를 포함하는 항목입니다.|  
-|첫 번째 용어만 같은 항목이고 두 번째 용어는 아님|NOT|"운영 체제"는 DOS가 아님|"DOS"를 제외한 "운영 체제"를 포함하는 항목입니다.|  
-|두 용어가 한 항목에서 서로 밀접하게 연관됨|근사값|사용자 NEAR 커널|"커널"과 매우 유사한 항목 중 "사용자"를 포함하는 항목입니다.|  
-  
-## 참고 항목  
- [전체 텍스트 검색 팁](../ide/full-text-search-tips.md)   
- [정보 찾기](../ide/locate-information.md)
+## <a name="see"></a>보기 
+[방법: 항목 검색](how-to-search-for-topics.md)  
+[Microsoft 도움말 뷰어](microsoft-help-viewer.md)

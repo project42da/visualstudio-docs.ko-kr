@@ -1,38 +1,23 @@
 ---
-title: "Visual Studio에서 스토어 앱에 대한 단위 테스트 실행 | Microsoft Docs"
+title: "Visual Studio에서 UWP 앱에 대한 단위 테스트 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5a6f5b32-bfce-4a63-81e9-02d54c592539
-caps.latest.revision: 12
+caps.latest.revision: "12"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4ecdcce4d45b15e6574ca70044249e4d32776fdd
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: cdb13478a7e403be916d7773dab6315429508e9c
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="run-unit-tests-for-store-apps-in-visual-studio"></a>Visual Studio에서 스토어 앱에 대한 단위 테스트 실행
+# <a name="run-unit-tests-for-uwp-apps-in-visual-studio"></a>Visual Studio에서 UWP 앱에 대한 단위 테스트 실행
 이 항목에서는 Microsoft Visual Studio에서 테스트 탐색기를 사용하여 단위 테스트를 실행하는 방법에 대해 설명합니다.  
   
 > [!NOTE]
@@ -65,12 +50,12 @@ ms.lasthandoff: 02/22/2017
  [단위 테스트 디버그](#BKMK_Debugging_unit_tests)  
   
 ##  <a name="BKMK_Unit_test_frameworks_and_test_projects"></a> 단위 테스트 프레임워크 및 테스트 프로젝트  
- Windows 스토어 앱용 Visual Studio Express에는 관리 코드 및 네이티브 C++ 코드에 대한 Microsoft 유닛 테스트 프레임워크가 포함되어 있습니다. 테스트 탐색기는 솔루션의 여러 테스트 프로젝트 및 프로덕션 코드 프로젝트의 일부인 테스트 클래스에서 테스트를 실행할 수 있습니다. 테스트 프로젝트는 Visual C++ 또는 Visual C# 및 Visual Basic 단위 테스트 프레임워크의 조합일 수 있습니다. 테스트 중인 코드가 .NET Framework용으로 작성된 경우 테스트 프로젝트는 대상 코드의 언어에 관계없이 모든 .NET Framework 언어로 작성할 수 있습니다. 네이티브 C/C++ 코드 프로젝트는 C++ 단위 테스트 프레임워크를 사용하여 테스트해야 합니다.  
+ UWP 앱용 Visual Studio Express에는 관리 코드 및 네이티브 C++ 코드에 대한 Microsoft 유닛 테스트 프레임워크가 포함되어 있습니다. 테스트 탐색기는 솔루션의 여러 테스트 프로젝트 및 프로덕션 코드 프로젝트의 일부인 테스트 클래스에서 테스트를 실행할 수 있습니다. 테스트 프로젝트는 Visual C++ 또는 Visual C# 및 Visual Basic 단위 테스트 프레임워크의 조합일 수 있습니다. 테스트 중인 코드가 .NET Framework용으로 작성된 경우 테스트 프로젝트는 대상 코드의 언어에 관계없이 모든 .NET Framework 언어로 작성할 수 있습니다. 네이티브 C/C++ 코드 프로젝트는 C++ 단위 테스트 프레임워크를 사용하여 테스트해야 합니다.  
   
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> 테스트 탐색기에서 테스트 실행  
  테스트 프로젝트를 빌드하면 테스트가 테스트 탐색기에 나타납니다. 테스트 탐색기가 표시되지 않는 경우 Visual Studio 메뉴에서 **테스트** 를 선택하고 **Windows**를 선택한 다음 **테스트 탐색기**를 선택합니다.  
   
- ![단위 테스트 탐색기](~/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![단위 테스트 탐색기](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  테스트를 실행하고 작성하고 다시 실행하면 테스트 탐색기는 **실패한 테스트**, **통과한 테스트**, **건너뛴 테스트** 및 **실행하지 않은 테스트**의 기본 그룹에 결과를 표시합니다. 테스트 탐색기의 테스트 그룹화 방식을 변경할 수 있습니다.  
   
@@ -119,7 +104,7 @@ ms.lasthandoff: 02/22/2017
   
 |||  
 |-|-|  
-|![테스트 탐색기 그룹 단추](~/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|테스트를 실행하는 데 걸리는 시간을 기준으로 테스트를 그룹화하려면 **그룹화 방법** 목록을 열고 **기간**을 선택합니다. **테스트 결과**를 선택하여 원래 그룹화로 전환합니다.|  
+|![테스트 탐색기 그룹 단추](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|테스트를 실행하는 데 걸리는 시간을 기준으로 테스트를 그룹화하려면 **그룹화 방법** 목록을 열고 **기간**을 선택합니다. **테스트 결과**를 선택하여 원래 그룹화로 전환합니다.|  
   
 ###  <a name="BKMK_Searching_and_filtering_the_test_list"></a> 테스트 목록 검색 및 필터링  
  테스트 수가 많은 경우 테스트 탐색기 검색 상자에 입력하여 지정된 문자열로 목록을 필터링할 수 있습니다. 검색 문자열을 입력하기 전에 필터 목록에서 선택하여 특정 형식의 문자열로 필터를 제한할 수 있습니다.  
@@ -137,4 +122,3 @@ ms.lasthandoff: 02/22/2017
 2.  테스트 탐색기에서 테스트 메서드를 선택한 다음 바로 가기 메뉴에서 **선택한 테스트 디버그**를 선택합니다.  
   
  디버거에 대한 자세한 내용은 [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md)항목을 참조하세요.
-

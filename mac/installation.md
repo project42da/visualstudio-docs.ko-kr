@@ -1,5 +1,5 @@
 ---
-title: "Mac용 Visual Studio 설치"
+title: "Mac용 Visual Studio 설치 | Microsoft Docs"
 description: "Mac용 Visual Studio 및 플랫폼 간 개발에 필요한 추가 구성 요소를 설치하는 방법에 대한 지침입니다."
 author: asb3993
 ms.author: amburns
@@ -7,14 +7,12 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
+ms.openlocfilehash: 25d3227bcf8a18a2fc6ba68c194e9cac75b2e919
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 24d2fa5f9054e621cd5167692a2571e9275c2bae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="setup-and-install-visual-studio-for-mac"></a>Mac용 Visual Studio 설정 및 설치
 
 ## <a name="setup"></a>설정
@@ -76,3 +74,22 @@ Visual Studio에서 iOS를 사용하는 경우 다음 사항이 필요합니다.
 > [!NOTE]
 원래 설치 중 #6단계에서 선택 취소하여 플랫폼 또는 도구를 설치하지 않도록 선택한 경우 나중에 구성 요소를 추가하려면 [설치 관리자](https://www.visualstudio.com/vs/)를 다시 실행해야 합니다.
 
+## <a name="manual-installation"></a>수동 설치
+
+설치에 실패하거나 설치의 모든 단일 구성 요소가 실패할 경우 수동 설치를 통해 문제를 해결할 수도 있습니다. 필수 구성 요소를 확인하고 각 구성 요소를 다운로드하려면 다음 단계를 따릅니다.
+
+1. Visual Studio 설치 관리자의 두 번째 화면에서 메뉴 모음으로 이동하고 **수동 설치 지침 보기**를 선택합니다.
+
+    ![수동 설치 메뉴 항목을 보여주는 옵션](media/installer-image12.png)
+
+2. 지침에 따라 구성 요소를 수동으로 다운로드하고 설치합니다.
+
+  ![수동 설치 대화 상자](media/installer-image13.png)
+
+## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>방화벽 또는 프록시 서버 뒤에 Mac용 Visual Studio 설치
+
+방화벽 뒤에 있는 Mac용 Visual Studio를 설치하려면 소프트웨어에 필요한 도구 및 업데이트의 다운로드를 허용하기 위해 일부 끝점에 액세스가 가능해야 합니다.
+
+다음 위치에 액세스할 수 있도록 네트워크를 구성합니다.
+
+* [Visual Studio 끝점](https://docs.microsoft.com/visualstudio/install/install-visual-studio-behind-a-firewall-or-proxy-server)

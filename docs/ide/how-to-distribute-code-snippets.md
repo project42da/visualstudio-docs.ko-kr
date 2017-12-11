@@ -4,47 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- code snippets, distributing
+helpviewer_keywords: code snippets, distributing
 ms.assetid: 5f717abd-e167-47ae-818c-6b0bae100ceb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 8700d4814494aafb6558f354d5904ed647c1f5a7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+dev_langs: VB
+ms.openlocfilehash: e4c103aec04a9012b82c5fe979f8d5d23cfa1680
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="how-to-distribute-code-snippets"></a>방법: 코드 조각 배포
 친구에게 코드 조각을 제공하고 코드 조각 관리자를 사용하여 각자의 컴퓨터에 조각을 설치하도록 하면 됩니다. 그러나 배포할 조각이 여러 개이거나 조각을 더 광범위하게 배포하려는 경우 Visual Studio 사용자가 설치할 수 있는 Visual Studio 확장에 조각 파일을 포함합니다.  
 
- Visual Studio 확장을 만들려면 Visual Studio SDK를 설치해야 합니다. [Visual Studio Downloads](https://www.visualstudio.com/downloads/)(Visual Studio 다운로드)에서 사용 중인 Visual Studio와 일치하는 VSSDK 버전을 찾습니다.  
+Visual Studio 확장을 만들려면 Visual Studio SDK를 설치해야 합니다. [Visual Studio Downloads](https://www.visualstudio.com/downloads/)(Visual Studio 다운로드)에서 사용 중인 Visual Studio와 일치하는 VSSDK 버전을 찾습니다.  
 
 ## <a name="setting-up-the-extension"></a>확장명 설정  
- 이 절차에서는 [연습: 코드 조각 만들기](../ide/walkthrough-creating-a-code-snippet.md)에서 만들어진 같은 Hello World 코드 조각을 사용합니다. .snippet text가 제공되므로 돌아가서 코드 조각을 만들 필요가 없습니다.  
+이 절차에서는 [연습: 코드 조각 만들기](../ide/walkthrough-creating-a-code-snippet.md)에서 만들어진 같은 Hello World 코드 조각을 사용합니다. .snippet text가 제공되므로 돌아가서 코드 조각을 만들 필요가 없습니다.  
 
-1.  **TestSnippet**이라는 새 VSIX 프로젝트를 만듭니다. (**파일/새로 만들기/프로젝트/Visual C#(또는 Visual Basic)/확장성**)  
+1.  **TestSnippet**이라는 새 VSIX 프로젝트를 만듭니다. (**파일**, **새로 만들기**, **프로젝트**, **Visual C#(또는 Visual Basic)**, **확장성**)  
 
 2.  **TestSnippet** 프로젝트에서 새 XML 파일을 추가하고 **VBCodeSnippet.snippet**을 호출합니다. 콘텐츠를 다음으로 바꿉니다.  
 
@@ -84,7 +68,7 @@ ms.lasthandoff: 05/13/2017
 
 1.  **HelloWorldVB** 폴더에 텍스트 파일을 추가하고 이름을 **HelloWorldVB.pkgdef**로 지정합니다. 이 파일을 사용하여 특정 키를 레지스트리에 추가합니다. 이 경우 새 키를  
 
-     **HKCU\Software\Microsoft\VisualStudio\14.0\Languages\CodeExpansions\Basic**.  
+     **HKCU\Software\Microsoft\VisualStudio\15.0\Languages\CodeExpansions\Basic**.  
 
 2.  파일에 다음 줄을 추가합니다.  
 
@@ -94,13 +78,13 @@ ms.lasthandoff: 05/13/2017
     "HelloWorldVB"="$PackageFolder$"  
     ```  
 
-     이 키를 검토하면 다른 언어를 지정하는 방법을 알 수 있습니다.  
+    이 키를 검토하면 다른 언어를 지정하는 방법을 알 수 있습니다.  
 
 3.  솔루션 탐색기에서 .pkgdef 파일을 선택하고 **속성** 창에서 **빌드 작업**이 **콘텐츠**로 설정되고, **출력 디렉터리에 복사**가 **항상 복사**로 설정되고, **VSIX에 포함**이 **true**로 설정되었는지 확인합니다.  
 
 4.  .pkgdef 파일을 VSIX 매니페스트의 자산으로 추가합니다. source.extension.vsixmanifest 파일에서 **자산** 탭으로 이동하고 **새로 만들기**를 클릭합니다.  
 
-5.  **새 자산 추가** 대화 상자에서 **형식**을 **Microsoft.VisualStudio.VsPackage**로 설정하고, **형식**을 **파일 시스템의 파일**로 설정하고, **경로**를 **HelloWorldVB.pkgdef**(드롭다운에 표시되어야 함)로 설정합니다.  
+5.  **새 자산 추가** 대화 상자에서 **형식**을 **Microsoft.VisualStudio.VsPackage**로 설정하고, **원본**을 **파일 시스템의 파일**로 설정하고, **경로**를 **HelloWorldVB.pkgdef**(드롭다운에 표시되어야 함)로 설정합니다.  
 
 ### <a name="testing-the-snippet"></a>조각 테스트  
 
@@ -112,12 +96,11 @@ ms.lasthandoff: 05/13/2017
 
 4.  조각을 테스트합니다. 실험적 인스턴스에서 Visual Basic 프로젝트를 열고 코드 파일의 하나를 엽니다. 코드의 임의 위치에 커서를 놓고 마우스 오른쪽 단추를 클릭하고 나서 상황에 맞는 메뉴에서 **조각 삽입**을 선택합니다.  
 
-5.  HelloWorldVB가 폴더의 하나로 표시되어야 합니다. 폴더를 두 번 클릭합니다. 드롭다운 **HelloWorldVB**가 포함된 **코드 조각 삽입: HellowWorldVB >** 팝업이 표시되어야 합니다. HelloWorldVB 드롭다운을 클릭합니다. 파일에 추가된 다음 줄을 확인해야 합니다.  
+5.  HelloWorldVB가 폴더의 하나로 표시되어야 합니다. 폴더를 두 번 클릭합니다. 드롭다운 **HelloWorldVB**가 포함된 **코드 조각 삽입: HelloWorldVB >** 팝업이 표시되어야 합니다. HelloWorldVB 드롭다운을 클릭합니다. 파일에 추가된 다음 줄을 확인해야 합니다.  
 
     ```vb  
     Console.WriteLine("Hello, World!")  
     ```  
 
 ## <a name="see-also"></a>참고 항목  
- [코드 조각](../ide/code-snippets.md)
-
+[코드 조각](../ide/code-snippets.md)

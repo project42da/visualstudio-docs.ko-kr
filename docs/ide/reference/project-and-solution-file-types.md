@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,29 +29,15 @@ helpviewer_keywords:
 - file extensions, Visual Studio
 - file types
 ms.assetid: 0ba5007b-465d-4efa-b1e4-f0ee68527649
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: b8f389deae83848893e59daec16630c911925f19
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 744b35962a196e0372d1bd1fa916f247a9195da6
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="project-and-solution-file-types"></a>프로젝트 및 솔루션 파일 형식
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서는 다양한 파일 형식을 지원합니다. 특정 설치에서는 설치된 구성 요소에 따라 지원되는 파일 형식이 결정됩니다. 이 항목에서는 일반적인 설치에서 지원되는 솔루션 및 프로젝트 파일 형식을 소개합니다. 기타 파일 형식에 대한 정보는 각 형식의 파일 이름 확장명을 사용하여 검색하세요.  
@@ -69,10 +54,8 @@ ms.lasthandoff: 04/05/2017
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서는 다양한 파일 형식을 사용하여 프로젝트에 대한 정보를 저장합니다. 자세한 내용은 다음 도움말 항목을 참조하세요.  
   
  [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]  
- [Visual C++ 프로젝트용 파일 형식](/cpp/ide/file-types-created-for-visual-cpp-projects)  
-  
- [Visual C++ 프로젝트 만들기 및 관리](/cpp/ide/creating-and-managing-visual-cpp-projects)  
-  
+ [Visual C++ 프로젝트용 파일 형식](/cpp/ide/file-types-created-for-visual-cpp-projects)    
+ [Visual C++ 프로젝트 만들기 및 관리](/cpp/ide/creating-and-managing-visual-cpp-projects)    
  [유니코드](/cpp/mfc/unicode-in-mfc)  
   
 ## <a name="see-also"></a>참고 항목  

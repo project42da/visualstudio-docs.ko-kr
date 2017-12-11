@@ -1,12 +1,11 @@
 ---
-title: Remove Visual Studio 2017 | Microsoft Docs
-description: Learn how to remove Visual Studio, step-by-step.
+title: "Visual Studio 2017 제거 | Microsoft Docs"
+description: "Visual Studio를 제거하는 방법을 단계별로 알아봅니다."
 ms.custom: 
 ms.date: 09/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,41 +21,40 @@ ms.assetid: 9c81a777-9c95-4934-b517-c60c6dc78799
 author: heaths
 ms.author: heaths
 manager: erickn
+ms.openlocfilehash: 7a93922bd33b3e5aa42d4bb271369d2d9b0a0c3d
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
 ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 37e7e36c04115dc1ccf4d0b8d78f047459108c80
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
+# <a name="remove-visual-studio"></a>Visual Studio 제거
 
-# <a name="remove-visual-studio"></a>Remove Visual Studio
+치명적인 오류가 발생하고 Visual Studio를 복구 또는 제거할 수 없는 경우 `InstallCleanup.exe` 도구를 실행하여 설치 파일 및 제품 정보를 제거할 수 있습니다. 이 도구는 복구 또는 제거가 실패할 경우 마지막 수단으로 실행해야 하며 복구가 필요한 다른 Visual Studio 설치 또는 기타 제품에서 기능을 제거할 수 있습니다.
 
-If you encounter a catastrophic error and cannot repair or uninstall Visual Studio, you can run the `InstallCleanup.exe` tool to remove installation files and product information. This is to be done as a last resort if repair or uninstall fail, and may uninstall features from other Visual Studio installations or other products which will need to be repaired.
+아래 지침에서는 다음과 같은 동작의 다른 명령줄 스위치로 도구를 실행할 수 있습니다.
 
-In the instructions below, you can run the tool with different command line switches with the following behavior.
-
-| Switch | Behavior |
+| 스위치 | 동작 |
 | ------ | -------- |
-| `-i`   | This is the default if no other switch is passed and will remove only the main installation directory and product information. This behavior is preferable if you intend to reinstall the same version after you run the `InstallCleanup.exe` tool. |
-| `-f`   | This will remove the main installation directory, product information, and most other features installed outside the installation directory that may be shared with other Visual Studio installations or other products. This behavior is preferable if you intend to remove Visual Studio without reinstalling later. |
+| `-i`   | 이 스위치는 전달된 다른 스위치가 없을 경우 기본값이며 기본 설치 디렉터리 및 제품 정보만 제거합니다. 이 동작은 `InstallCleanup.exe` 도구를 실행한 후 동일한 버전을 다시 설치하려는 경우 사용하는 것이 좋습니다. |
+| `-f`   | 이 스위치를 지정하면 기본 설치 디렉터리, 제품 정보는 물론, 다른 Visual Studio 설치 또는 기타 제품과 공유할 수 있는 설치 디렉터리 외부에 설치된 대부분 기타 기능이 제거됩니다. 이 동작은 나중에 다시 설치하지 않고 Visual Studio를 제거하려는 경우에 사용하는 것이 좋습니다. |
 
-1. Close the Visual Studio Installer.
-2. Open an administrator command prompt. To do this, follow these steps:
-   * On the **Start** menu, click **Run** (Start + R).
-   * Type **cmd**.
-   * Right-click **Command Prompt**, and then click **Run as administrator**.
-3. Type the full path of the `InstallCleanup.exe` utility and pass whichever command line switch you desire. By default, the path of the utility is as follows:
+1. Visual Studio 설치 관리자를 닫습니다.
+2. 관리자 명령 프롬프트를 엽니다. 관리자 명령 프롬프트를 열려면 다음 단계를 따릅니다.
+   * **시작** 메뉴에서 **실행**을 클릭합니다([시작] + R).
+   * **cmd**를 입력합니다.
+   * **명령 프롬프트**를 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.
+3. `InstallCleanup.exe` 유틸리티의 전체 경로를 입력하고 원하는 명령줄 스위치를 전달합니다. 기본적으로 유틸리티 경로는 다음과 같습니다.
    ```
    C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe
    ```
 
-If you do not find `InstallCleanup.exe` under the Visual Studio Installer directory - always located at `%ProgramFiles(x86)%\Microsoft Visual Studio` - please follow the instructions to [install Visual Studio](install-visual-studio.md) and when the workload selection screen is displayed, close the window and follow the steps above again.
+Visual Studio 설치 관리자 디렉터리에서 항상 `%ProgramFiles(x86)%\Microsoft Visual Studio`에 있는 `InstallCleanup.exe`을 찾지 못한 경우 지침에 따라 [Visual Studio를 설치](install-visual-studio.md)하고 워크로드 선택 화면이 표시되면 창을 닫고 이전 단계를 다시 따릅니다.
 
-## <a name="see-also"></a>See also
-* [Install Visual Studio 2017](install-visual-studio.md)
-* [Update Visual Studio 2017](update-visual-studio.md)
-* [Modify Visual Studio 2017](modify-visual-studio.md)
-* [Uninstall Visual Studio 2017](uninstall-visual-studio.md)
-* [How to Report a Problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+## <a name="get-support"></a>지원 받기
+때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 문제 해결](troubleshooting-installation-issues.md) 페이지에서 문제 해결 팁을 참조하세요. 또한 Visual Studio IDE의 [문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md) 도구를 통해 제품 문제를 보고하거나 [UserVoice](https://visualstudio.uservoice.com/forums/121579)에서 제안을 공유할 수 있습니다. [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고 질문을 하고 답을 찾을 수 있습니다. [Gitter 커뮤니티](https://gitter.im/Microsoft/VisualStudio)([GitHub](https://github.com/) 계정 필요)의 Visual Studio 관련 대화를 통해 Microsoft 및 다른 Visual Studio 개발자와 소통할 수도 있습니다.
 
+## <a name="see-also"></a>참고 항목
+* [Visual Studio 2017 설치](install-visual-studio.md)
+* [Visual Studio 2017 업데이트](update-visual-studio.md)
+* [Visual Studio 2017 수정](modify-visual-studio.md)
+* [Visual Studio 2017 제거](uninstall-visual-studio.md)

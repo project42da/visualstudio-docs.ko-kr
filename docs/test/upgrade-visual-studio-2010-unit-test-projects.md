@@ -4,35 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f1502b51-d6db-4894-9fbf-4a5723e4bb1a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: d6550f2aa1aab249eda569ff84ddf4dcf488aa18
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 2e3e99bfad1ebf33f23c3b38189568935d0cedee
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="upgrade-visual-studio-2010-unit-test-projects"></a>Visual Studio 2010 단위 테스트 프로젝트 업그레이드
 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에는 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 테스트 프로젝트에 대한 테스트 프로젝트 호환성이 포함됩니다. 예를 들어 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1에서 만든 테스트 프로젝트는 업그레이드 없이도 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]를 사용해서 열 수 있습니다. 따라서 팀에서 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 및 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]를 둘 다 사용해서 동일한 테스트 프로젝트를 진행할 수 있습니다. 자세한 내용은 [Visual Studio 2010에서 테스트 업그레이드](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)를 참조하세요.  
@@ -43,14 +26,14 @@ ms.lasthandoff: 05/13/2017
 >  [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 테스트 프로젝트에 있는 기존 단위 테스트는 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 및 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 사이에 문제 없이 작동합니다. 단위 테스트가 포함된 Visual Studio 2010 테스트 프로젝트를 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 열거나 그 반대로 할 때 테스트 프로젝트 파일은 변경되지 않습니다.  
   
 > [!CAUTION]
->  Visual Studio 2010은 11.0 도구 집합을 대상으로 하는 C++/CLI 프로젝트(즉, Visual Studio 2012에서 만든 프로젝트)를 열 수 없습니다. 이러한 제한은 C++/CLI 단위 테스트 프로젝트 뿐만 아니라 모든 C++/CLI 프로젝트에 적용됩니다.  
+>  Visual Studio 2010은 11.0 도구 집합을 대상으로 하는 C++/CLI 프로젝트(즉, Visual Studio 2012 이상에서 만든 프로젝트)를 열 수 없습니다. 이러한 제한은 C++/CLI 단위 테스트 프로젝트 뿐만 아니라 모든 C++/CLI 프로젝트에 적용됩니다.  
   
 > [!NOTE]
 >  명령줄에서 vstest.console.exe를 사용해서 새 단위 테스트를 실행할 수 있습니다. vstest.console.exe 사용에 대한 자세한 내용은 [VSTest.Console.exe 명령줄 옵션](/devops-test-docs/test/vstest-console-exe-command-line-options)을 참조하거나 도움말 스위치 **vstest.console.exe /?**를 사용해서 명령을 실행합니다. MStest.exe를 사용해서 기존 단위 테스트를 계속 실행할 수 있습니다. 자세한 내용은 [MSTest를 사용하여 명령줄에서 자동화된 테스트 실행](/devops-test-docs/test/run-automated-tests-from-the-command-line-using-mstest) 및 [MSTest.exe 명령줄 옵션](/devops-test-docs/test/mstest-exe-command-line-options)을 참조하세요.  
   
  또 다른 중요한 변경 사항은 새로운 테스트 탐색기입니다. [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서는 테스트 뷰 창과 같이 이전 버전의 Visual Studio에서 익숙하게 사용하던 일부 테스트 창이 더 이상 사용되지 않습니다. 테스트 탐색기는 소프트웨어 개발 방법에 유닛 테스트를 포함하는 개발자 및 팀을 보다 효과적으로 지원하도록 설계되었습니다. 자세한 내용은 [테스트 탐색기를 사용하여 단위 테스트 실행](../test/run-unit-tests-with-test-explorer.md)을 참조하세요.  
   
-## <a name="compatibility-issues-between-visual-studio-2010-sp1-and-visual-studio-2012"></a>Visual Studio 2010 SP1과 Visual Studio 2012 사이의 호환성 문제  
+## <a name="compatibility-issues-between-visual-studio-2010-sp1-and-visual-studio-2012-or-later"></a>Visual Studio 2010 SP1과 Visual Studio 2012 이상 사이의 호환성 문제  
  Visual Studio 2010 SP1과 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 사이에 단위 테스트를 마이그레이션할 때는 주의해야 할 문제는 다음과 같습니다.  
   
 |단위 테스트 기능|문제|솔루션|  
@@ -65,4 +48,3 @@ ms.lasthandoff: 05/13/2017
  [코드 단위 테스트](../test/unit-test-your-code.md)   
  [이전 버전의 Visual Studio에서 테스트 업그레이드](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)   
  [Visual Studio 2010에서 코딩된 UI 테스트 업그레이드](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)
-

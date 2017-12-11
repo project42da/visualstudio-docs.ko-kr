@@ -1,28 +1,24 @@
 ---
 title: "옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/14/2017
+ms.date: 07/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Projects.WebProjects
+f1_keywords: VS.ToolsOptionsPages.Projects.WebProjects
 ms.assetid: ea813046-1ae6-4c9f-9784-dc41494101b9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
+ms.openlocfilehash: 9ab80c499a95f8fd1dee764edea9f971d9429688
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
-ms.openlocfilehash: cebc1598001459d6ab1c920fa390273242e893e0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
-
 # <a name="options-dialog-box-projects-and-solutions-web-projects"></a>옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트
 
 웹 프로젝트가 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 내에서 개발에 사용할 웹 서버를 설정합니다. 이러한 옵션에 액세스하려면 **도구 > 옵션**을 선택하고 **프로젝트 및 솔루션**을 확장한 후 **웹 프로젝트**를 선택합니다.
@@ -41,5 +37,5 @@ Visual Studio 개발 서버 대신 IIS Express를 사용하려면 이 옵션을 
 이 옵션을 설정하면 오류 없이 컴파일되지 않을 때 웹 응용 프로그램을 실행하려는 경우 경고가 표시됩니다.
 
 ## <a name="see-also"></a>참고 항목  
-- [옵션 대화 상자, 프로젝트 및 솔루션](projects-and-solutions-options-dialog-box.md)
-- [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](options-dialog-box-projects-and-solutions-web-projects.md)
+[옵션 대화 상자, 프로젝트 및 솔루션](projects-and-solutions-options-dialog-box.md)  
+[옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](options-dialog-box-projects-and-solutions-web-projects.md)

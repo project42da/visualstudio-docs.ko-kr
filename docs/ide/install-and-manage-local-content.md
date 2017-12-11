@@ -1,61 +1,44 @@
 ---
-title: "로컬 콘텐츠 설치 및 관리 | Microsoft Docs"
+title: "로컬 Visual Studio 설명서 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-help-viewer
+ms.technology: vs-help-viewer
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- hv_manage
+f1_keywords: hv_manage
 helpviewer_keywords:
-- changing content installation source [Help Viewer 2.0]
-- updating local content [Help Viewer 2.0]
-- Help Viewer 2.0, content installation source
-- Help Viewer 2.0, updating local content
-- Help Viewer 2.0, changing content installation source
-- installing local content [Help Viewer 2.0]
-- content installation source [Help Viewer 2.0]
-- downloading content [Help Viewer 2.0]
-- removing local content [Help Viewer 2.0]
-- Help Viewer 2.0, removing local content
-- Help Viewer 2.0, installing local content
-- Help Viewer 2.0, downloading content
+- changing content installation source [Help Viewer]
+- updating local content [Help Viewer]
+- Help Viewer, content installation source
+- Help Viewer, updating local content
+- Help Viewer, changing content installation source
+- installing local content [Help Viewer]
+- content installation source [Help Viewer]
+- downloading content [Help Viewer]
+- removing local content [Help Viewer]
+- Help Viewer, removing local content
+- Help Viewer, installing local content
+- Help Viewer, downloading content
 ms.assetid: efd9df4c-2e69-4c50-992c-9678a8d8cf19
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b016ce5c67f1aa7242d7af3f3fb1142b61145f63
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 3bd498004568bab80565782e11b46691a7d0ef1f
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="install-and-manage-local-content"></a>로컬 콘텐츠 설치 및 관리
 Microsoft 도움말 뷰어를 사용하여 소프트웨어 개발 요구 사항에 따라 컴퓨터에 설치된 도움말 콘텐츠를 추가, 제거, 업데이트 및 이동할 수 있습니다.  
   
- 로컬 컴퓨터에서 콘텐츠를 관리하려면 관리 권한이 있는 계정으로 로그온해야 합니다. 또한 엔터프라이즈 환경에서 작업하는 경우에는 로컬 콘텐츠를 관리하지 못할 수도 있습니다. 시스템 관리자가 조직을 위해 해당 결정을 내릴 수도 있기 때문입니다. 자세한 내용은 [도움말 뷰어 관리자 가이드](../ide/help-viewer-administrator-guide.md)를 참조하세요.  
+로컬 컴퓨터에서 콘텐츠를 관리하려면 관리자 권한이 있는 계정으로 로그온해야 합니다. 또한 엔터프라이즈 환경에서 작업하는 경우에는 로컬 콘텐츠를 관리하지 못할 수도 있습니다. 시스템 관리자가 조직을 위해 해당 결정을 내릴 수도 있기 때문입니다. 자세한 내용은 [도움말 뷰어 관리자 가이드](../ide/help-viewer-administrator-guide.md)를 참조하세요.  
   
 ## <a name="changing-the-content-installation-source"></a>콘텐츠 설치 소스 변경  
- 기본적으로 도움말 뷰어는 Microsoft 온라인 서비스를 소스로 사용하여 콘텐츠를 설치합니다. 시스템 관리자가 다른 위치에 이미 콘텐츠를 설치한 엔터프라이즈 환경에서 작업하지 않는 한 일반적으로 콘텐츠 소스를 변경하지 않아야 합니다.  
+기본적으로 도움말 뷰어는 Microsoft 온라인 서비스를 소스로 사용하여 콘텐츠를 설치합니다. 시스템 관리자가 다른 위치에 이미 콘텐츠를 설치한 엔터프라이즈 환경에서 작업하지 않는 한 일반적으로 콘텐츠 소스를 변경하지 않아야 합니다.  
   
 #### <a name="to-change-the-content-installation-source"></a>콘텐츠 설치 소스를 변경하려면  
   
@@ -73,12 +56,13 @@ Microsoft 도움말 뷰어를 사용하여 소프트웨어 개발 요구 사항�
     -   목록에서 가장 최근에 사용된 항목을 선택합니다.  
   
 ## <a name="download-and-install-content-locally"></a>로컬로 콘텐츠 다운로드 및 설치  
- 로컬 컴퓨터에 콘텐츠를 다운로드하고 설치하는 경우 인터넷에 연결하지 않고 항목을 볼 수 있습니다.  
+로컬 컴퓨터에 콘텐츠를 다운로드하고 설치하는 경우 인터넷에 연결하지 않고 항목을 볼 수 있습니다.  
   
 > [!IMPORTANT]
->  콘텐츠를 설치하려면 관리 권한이 있는 계정으로 로그온해야 합니다.  
+> 콘텐츠를 설치하려면 관리 권한이 있는 계정으로 로그온해야 합니다.  
   
- Visual Studio IDE가 영어 이외의 언어로 설정된 경우 영어 콘텐츠나 지역화된 콘텐츠 중 하나나 둘 모두를 설치할 수 있습니다. 그러나 영어 버전만 설치하고 **뷰어 옵션** 대화 상자에서 **모든 탐색 탭과 F1 요청에 영어 콘텐츠 포함** 확인란의 선택을 취소한 경우 콘텐츠가 나타나지 않습니다.  
+> [!NOTE]
+> Visual Studio IDE가 영어 이외의 언어로 설정된 경우 영어 콘텐츠나 지역화된 콘텐츠 중 하나나 둘 모두를 설치할 수 있습니다. 그러나 영어 버전만 설치하고 **뷰어 옵션** 대화 상자에서 **모든 탐색 탭과 F1 요청에 영어 콘텐츠 포함** 확인란의 선택을 취소한 경우 콘텐츠가 나타나지 않습니다.  
   
 #### <a name="to-download-and-install-content"></a>콘텐츠를 다운로드하고 설치하려면  
   
@@ -93,12 +77,13 @@ Microsoft 도움말 뷰어를 사용하여 소프트웨어 개발 요구 사항�
      지정한 책이 컴퓨터에 이미 있는 책의 업데이트와 함께 설치됩니다. 설치 시간은 각기 다르지만 상태 표시줄에서 진행률을 볼 수 있습니다.  
   
 ## <a name="removing-local-content"></a>로컬 콘텐츠 제거  
- 원하지 않는 콘텐츠를 컴퓨터에서 제거하여 디스크 공간을 절약할 수 있습니다.  
+원하지 않는 콘텐츠를 컴퓨터에서 제거하여 디스크 공간을 절약할 수 있습니다.  
   
 > [!IMPORTANT]
->  콘텐츠를 제거하려면 관리 권한이 있어야 합니다.  
+> 콘텐츠를 제거하려면 관리 권한이 있어야 합니다.  
   
- Visual Studio IDE가 영어 이외의 언어로 설정되어 있고 **뷰어 옵션** 대화 상자에서 **모든 탐색 탭과 F1 요청에 영어 콘텐츠 포함** 확인란의 선택이 취소된 경우 지역화된 콘텐츠를 제거하면 콘텐츠가 표시되지 않습니다.  
+> [!NOTE]
+> Visual Studio IDE가 영어 이외의 언어로 설정되어 있고 **뷰어 옵션** 대화 상자에서 **모든 탐색 탭과 F1 요청에 영어 콘텐츠 포함** 확인란의 선택이 취소된 경우 지역화된 콘텐츠를 제거하면 콘텐츠가 표시되지 않습니다.  
   
 #### <a name="to-remove-content"></a>콘텐츠를 제거하려면  
   
@@ -141,4 +126,4 @@ Microsoft 도움말 뷰어를 사용하여 소프트웨어 개발 요구 사항�
 3.  콘텐츠가 이동되면 **닫기** 단추를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Microsoft 도움말 뷰어](../ide/microsoft-help-viewer.md)
+[Microsoft 도움말 뷰어](../ide/microsoft-help-viewer.md)

@@ -4,35 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSBuild, properties
+helpviewer_keywords: MSBuild, properties
 ms.assetid: 962912ac-8931-49bf-a88c-0200b6e37362
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: 6a83d555cf8968b6c1419633730e4b80d3b9aa3d
-
+ms.openlocfilehash: 0fe5627c7307b2d06e894a236d60f4188e6cf427
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msbuild-properties"></a>MSBuild 속성
 빌드를 구성하는 데 사용될 수 있는 이름/값 쌍인 속성은 작업에 값을 전달하고, 조건을 평가하고, 프로젝트 파일 전체에서 참조할 값을 저장하는 데 유용합니다.  
@@ -68,7 +53,7 @@ ms.openlocfilehash: 6a83d555cf8968b6c1419633730e4b80d3b9aa3d
   
  각 MSBuild 프로젝트에는 격리된 환경 블록을 가지고 있습니다. 오직 읽거나 자체 블록에 기록만 합니다.  MSBuild는 프로젝트 파일을 평가하거나 빌드하기 전에 속성 컬렉션을 초기화하는 경우에만 환경 변수를 읽습니다. 그 후 환경 속성은 고정됩니다. 즉, 각 생성된 도구가 같은 이름과 값으로 시작합니다.  
   
- 생성된 도구 내에서 환경 변수의 현재 값을 가져오려면 [속성 함수](../msbuild/property-functions.md) System.Environment.GetEnvironmentVariable을 사용합니다. 그러나 기본적으로는 <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A> 작업 매개 변수를 사용합니다. 이 문자열 배열에 설정된 환경 속성은 시스템 환경 변수에 영향을 주지 않고 생성된 도구에 전달할 수 있습니다.  
+ 생성된 도구 내에서 환경 변수의 현재 값을 가져오려면 [속성 함수](../msbuild/property-functions.md) System.Environment.GetEnvironmentVariable을 사용합니다. 그러나 작업 매개 변수 <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A>를 사용하는 메서드가 좋습니다. 이 문자열 배열에 설정된 환경 속성은 시스템 환경 변수에 영향을 주지 않고 생성된 도구에 전달할 수 있습니다.  
   
 > [!TIP]
 >  모든 환경 변수가 읽어들여져 초기 속성이 되는 것은 아닙니다. "386" 같은 유효한 MSBuild 속성 이름이 아닌 모든 환경 변수는 무시됩니다.  
@@ -93,7 +78,7 @@ $(registry:Hive\MyKey\MySubKey)
 ```xml  
 <PropertyGroup>  
   <VisualStudioWebBrowserHomePage>  
-    $(registry:HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\12.0\WebBrowser@HomePage)  
+    $(registry:HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\WebBrowser@HomePage)  
   </VisualStudioWebBrowserHomePage>  
 <PropertyGroup>  
 ```  
@@ -107,7 +92,7 @@ $(registry:Hive\MyKey\MySubKey)
 msbuild.exe MyProj.proj /p:Configuration=DEBUG  
 ```  
   
- MSBuild 작업의 `Properties` 특성을 사용하여 다중 프로젝트 빌드의 자식 프로젝트에 대해 전역 속성을 설정하거나 수정할 수도 있습니다. 자세한 내용은 [MSBuild 작업](../msbuild/msbuild-task.md)을 참조하세요.  
+ MSBuild 작업의 `Properties` 특성을 사용하여 다중 프로젝트 빌드의 자식 프로젝트에 대해 전역 속성을 설정하거나 수정할 수도 있습니다. MSBuild 작업의 `RemoveProperties` 특성을 사용하여 전달되지 않도록 속성 목록을 지정하지 않을 경우 전역 속성도 자식 프로젝트로 전달됩니다. 자세한 내용은 [MSBuild 작업](../msbuild/msbuild-task.md)을 참조하세요.
   
  프로젝트 태그에 `TreatAsLocalProperty` 특성을 사용하여 속성을 지정할 경우, 해당 전역 속성 값은 프로젝트 파일에 설정된 속성 값을 재정의하지 않습니다. 자세한 내용은 [Project 요소(MSBuild)](../msbuild/project-element-msbuild.md) 및 [방법: 동일한 소스 파일을 다른 옵션을 사용하여 빌드](../msbuild/how-to-build-the-same-source-files-with-different-options.md)를 참조하세요.  
   
@@ -144,7 +129,7 @@ msbuild.exe MyProj.proj /p:Configuration=DEBUG
                     ImageVersion="$(MySupportedVersion)"  
                     Version="$(MySupportedVersion)"/>  
                 <RequiredRuntime  
-                    ImageVersion="$(MyRequiredVersion)  
+                    ImageVersion="$(MyRequiredVersion)"  
                     Version="$(MyRequiredVersion)"  
                     SafeMode="$(MySafeMode)"/>  
             </Startup>  
@@ -161,8 +146,3 @@ msbuild.exe MyProj.proj /p:Configuration=DEBUG
  [방법: 동일한 소스 파일을 다른 옵션을 사용하여 빌드](../msbuild/how-to-build-the-same-source-files-with-different-options.md)   
  [MSBuild의 예약된 속성 및 잘 알려진 속성](../msbuild/msbuild-reserved-and-well-known-properties.md)   
  [Property 요소(MSBuild)](../msbuild/property-element-msbuild.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

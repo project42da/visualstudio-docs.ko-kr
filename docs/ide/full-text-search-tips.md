@@ -1,53 +1,22 @@
 ---
-title: "전체 텍스트 검색 팁 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- hv_search
-helpviewer_keywords:
-- Help Viewer 2.0, full-text search tips
-- full-text search tips [Help Viewer 2.0]
-ms.assetid: bcaad23d-2ca7-4bec-8b54-b884bc34e70b
-caps.latest.revision: 13
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b03bbfbe9f96931ad9b64dd8542529ee258f0392
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+redirect_url: /visualstudio/ide/how-to-search-for-topics
+ms.openlocfilehash: a66c168ca81b22c32fc05afddd01266950791d1e
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
+---
+제목: "전체 텍스트 검색 팁 | Microsoft Docs" ms.custom: "" ms.date: "11/04/2016" ms.reviewer: "" ms.suite: "" ms.technology: 
+  - "vs-help-viewer" ms.tgt_pltfrm: "" ms.topic: "article" f1_keywords: 
+  - "hv_search" helpviewer_keywords: 
+  - "도움말 뷰어, 전체 텍스트 검색 팁"
+  - "전체 텍스트 검색 팁 [도움말 뷰어]" ms.assetid: bcaad23d-2ca7-4bec-8b54-b884bc34e70b caps.latest.revision: 13 author: "gewarren" ms.author: "gewarren" manager: ghogen
 ---
 # <a name="full-text-search-tips"></a>전체 텍스트 검색 팁
-도움말에서 정보를 찾는 유용한 방법 중 하나는 전체 텍스트 검색을 수행하는 것입니다. 결과를 구체화하고 사용자 지정하려면 구문이 쿼리에 미치는 영향을 이해해야 합니다. 이 항목에서는 쿼리 작성에 도움이 되는 팁, 절차 및 자세한 구문 정보를 제공합니다.  
-  
-## <a name="full-text-search-tips"></a>전체 텍스트 검색 팁  
- 도움말에서 쿼리 형식을 해석하는 방법을 알고 있으면 관련된 항목만 반환하는 대상 지정 검색을 만들 수 있습니다. 이러한 형식에는 특수 문자, 예약어 및 필터가 포함됩니다.  
+도움말에서 정보를 찾는 유용한 방법 중 하나는 전체 텍스트 검색을 수행하는 것입니다. 구문이 쿼리에 영향을 미치는 방법을 알고 있다면 관련된 항목만 반환하는 대상 지정 검색을 만들 수 있습니다. 이러한 구문에는 특수 문자, 예약어 및 필터가 포함됩니다. 이 항목에서는 쿼리 작성에 도움이 되는 팁, 절차 및 자세한 구문 정보를 제공합니다.
   
 ### <a name="general-guidelines"></a>일반 지침  
- 다음 표에는 도움말의 검색 쿼리를 작성하기 위한 몇 가지 기본 규칙과 지침이 나와 있습니다.  
+다음 표에는 도움말의 검색 쿼리를 작성하기 위한 몇 가지 기본 규칙과 지침이 나와 있습니다.  
   
 |구문|설명|  
 |------------|-----------------|  
@@ -59,11 +28,11 @@ ms.lasthandoff: 05/13/2017
  여러 단어를 포함하는 검색 문자열(예: "word1 word2")을 지정하는 경우 해당 문자열은 "word1 AND word2"를 입력하는 것과 같으며, 검색 문자열의 개별 단어를 모두 포함하는 항목만 반환됩니다.  
   
 > [!IMPORTANT]
->  1.  문구 검색은 지원되지 않습니다. 검색 문자열에 여러 단어를 지정하는 경우 지정한 단어를 모두 포함하지만 지정한 정확한 문구가 아닌 항목도 반환됩니다.  
-> 2.  검색 문구에서 단어 간의 관계를 지정하려면 논리 연산자를 사용합니다. AND, OR, NOT, NEAR 등의 논리 연산자를 포함하여 검색을 구체화할 수 있습니다. 예를 들어 "declaring NEAR union"을 검색하는 경우 "declaring" 및 "union" 단어를 포함하고 그 사이에 몇 단어만 있는 항목이 검색 결과에 포함됩니다. 자세한 내용은 [검색 식의 논리 연산자](../ide/logical-operators-in-search-expressions.md)를 참조하세요.  
+> - 문구 검색은 지원되지 않습니다. 검색 문자열에 여러 단어를 지정하는 경우 지정한 단어를 모두 포함하지만 지정한 정확한 문구가 아닌 항목도 반환됩니다.  
+> - 검색 문구에서 단어 간의 관계를 지정하려면 논리 연산자를 사용합니다. AND, OR, NOT, NEAR 등의 논리 연산자를 포함하여 검색을 구체화할 수 있습니다. 예를 들어 "declaring NEAR union"을 검색하는 경우 "declaring" 및 "union" 단어를 포함하고 그 사이에 몇 단어만 있는 항목이 검색 결과에 포함됩니다. 자세한 내용은 [검색 식의 논리 연산자](../ide/logical-operators-in-search-expressions.md)를 참조하세요.  
   
 ### <a name="filters"></a>필터  
- 고급 검색 연산자를 사용하여 검색 결과를 더욱 제한할 수 있습니다. 도움말에는 전체 텍스트 검색 결과를 필터링하는 데 사용할 수 있는 세 가지 범주(제목, 코드 및 키워드)가 포함되어 있습니다. 자세한 내용은 [검색 식의 고급 검색 연산자](../ide/advanced-search-operators-in-search-expressions.md)를 참조하세요.  
+ 고급 검색 연산자를 사용하여 검색 결과를 더욱 제한할 수 있습니다. 도움말에는 전체 텍스트 검색 결과를 필터링하는 데 사용할 수 있는 세 가지 범주(제목, 코드 및 키워드)가 포함되어 있습니다.
   
 ### <a name="ranking-of-search-results"></a>검색 결과의 순위 지정  
  검색 알고리즘은 특정 조건을 적용하여 결과 목록에서 검색 결과의 순위를 위나 아래로 조정합니다. 일반적으로 다음과 같이 작동합니다.  
@@ -77,6 +46,6 @@ ms.lasthandoff: 05/13/2017
 ### <a name="words-ignored-in-searches-stop-words"></a>검색에서 무시되는 단어(중지 단어)  
  자주 사용되는 단어 또는 숫자(중지 단어라고도 함)는 전체 텍스트 검색 시 자동으로 무시됩니다. 예를 들어 "pass through" 문구를 검색하는 경우 검색 결과에 "pass" 단어를 포함하는 항목이 표시되지만 "through" 단어를 포함하는 항목은 표시되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [정보 찾기](../ide/locate-information.md)   
- [검색 식의 논리 연산자](../ide/logical-operators-in-search-expressions.md)
+## <a name="see-also"></a>참고 항목
+[정보 찾기](../ide/locate-information.md)   
+[검색 식의 논리 연산자](../ide/logical-operators-in-search-expressions.md)

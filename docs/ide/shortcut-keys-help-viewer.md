@@ -1,41 +1,25 @@
 ---
 title: "바로 가기 키(도움말 뷰어) | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-help-viewer
+ms.technology: vs-help-viewer
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- shortcut keys [Help Viewer 2.0]
-- Help Viewer 2.0, shortcut keys
+- shortcut keys [Help Viewer]
+- Help Viewer, shortcut keys
 ms.assetid: ec14c85d-7efb-441c-a46b-bee34a227e39
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 3d5a655a82180b7ffc82cf279b28750f55f5d4c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 04d63762eda13bd0b21f6532f1d401cdef638ea6
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="shortcut-keys-help-viewer"></a>바로 가기 키(도움말 뷰어)
 다음 표의 바로 가기 키를 사용하여 Microsoft 도움말 뷰어에서 이동할 수 있습니다.  
@@ -132,3 +116,6 @@ ms.lasthandoff: 05/13/2017
 |위쪽 화살표 및 아래쪽 화살표|**보류 중인 변경 내용** 목록을 스크롤합니다.|  
 |공백|**보류 중인 변경 내용** 목록에서 항목을 제거합니다.|  
 |Alt+T|모든 보류 중인 변경 내용을 적용합니다.|
+
+## <a name="see-also"></a>참고 항목
+[도움말 뷰어의 접근성 기능](../ide/accessibility-features-of-the-help-viewer.md)
