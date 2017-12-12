@@ -1,11 +1,10 @@
 ---
 title: "Visual Studio의 Python 옵션 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,19 +13,18 @@ f1_keywords:
 - VS.ToolsOptionsPages.Python_Tools
 - VS.ToolsOptionsPages.Python_Tools.General
 - VS.ToolsOptionsPages.Python_Tools.Debugging
+- VS.ToolsOptionsPages.Python_Tools.Diagnostics
 - VS.ToolsOptionsPages.Python_Tools.Interactive_Windows
 - VS.ToolsOptionsPages.Text_Editor.Python.Advanced
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 24293c3362249f2afcbcbb4b0266a478eaa1c9ab
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: a71d076e85e1e7ae070014e83186c0011ca9e58f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
-
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio의 Python 옵션
 
 Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **모든 설정 표시**가 선택되었는지 확인한 다음 **Python Tools**로 이동합니다.
@@ -39,6 +37,7 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 
 - [일반 옵션](#general-options)
 - [디버깅 옵션](#debugging-options)
+- [진단 옵션](#diagnostics-options)
 - [대화형 Windows 옵션](#interactive-windows-options)
 - [고급 Python 편집기 옵션](#advanced-python-editor-options)
 
@@ -70,6 +69,17 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 | Python 표준 라이브러리 디버깅 사용 | 끄기 | 디버깅하는 동안 표준 라이브러리 소스 코드를 한 단계씩 실행할 수 있지만 디버거를 시작하는 데 걸리는 시간이 증가합니다.|
 
 ![Python 옵션 대화 상자, 디버깅 탭](media/options-debugging.png)
+
+
+## <a name="diagnostics-options"></a>진단 옵션
+
+| 옵션 | 기본 | 설명 |
+| --- | --- | --- |
+| 분석 로그 포함 | 켜기 | 진단을 파일에 저장하거나 단추를 사용하여 클립보드에 복사할 경우 설치된 Python 환경의 분석과 관련된 세부 로그를 포함합니다. 이 옵션으로 생성된 파일의 크기가 늘어나고 IntelliSense 문제를 자주 진단해야 합니다. |
+| 파일에 진단 저장(단추) | 해당 없음 | 파일 이름을 묻는 메시지를 표시한 다음 텍스트 파일에 로그를 저장합니다. |
+| 클립보드에 진단 복사(단추) | 해당 없음 | 로그 전체를 클립보드에 넣습니다. 이 작업은 로그 크기에 따라 시간이 걸릴 수 있습니다. |
+
+![Python 옵션 대화 상자, 진단 탭](media/options-diagnostics.png)
 
 ## <a name="interactive-windows-options"></a>대화형 Windows 옵션
 

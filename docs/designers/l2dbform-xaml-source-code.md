@@ -1,45 +1,45 @@
 ---
-title: "L2DBForm.xaml 원본 코드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "L2DBForm.xaml 소스 코드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-designers
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 624e96d4-6d27-4195-8ac2-2f3835f6c57e
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c3ccc6fcfa8471d767356f1e30d1e5f8b0ed15d0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# L2DBForm.xaml 원본 코드
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-이 항목에서는 [LINQ to XML을 사용한 WPF 데이터 바인딩 예제](../designers/wpf-data-binding-using-linq-to-xml-example.md)에 대한 XAML 소스 파일인 L2DBForm.xaml을 제공하며 이 파일에 대해 설명합니다.  
+# <a name="l2dbformxaml-source-code"></a>L2DBForm.xaml 원본 코드
+이 항목에서는 [WPF Data Binding Using LINQ to XML Example](../designers/wpf-data-binding-using-linq-to-xml-example.md)에 대한 XAML 소스 파일인 L2DBForm.xaml을 제공하며 이 파일에 대해 설명합니다.  
   
-## 전체적인 UI 구조  
- WPF 프로젝트에 일반적이듯이 이 파일에는 부모 요소가 하나 포함되어 있습니다. 이 부모 요소는 <xref:System.Windows.Window> 네임스페이스의 파생된 클래스 `L2XDBFrom`과 연결된 `LinqToXmlDataBinding` XML 요소입니다.  
+## <a name="overall-ui-structure"></a>전체적인 UI 구조  
+ WPF 프로젝트에 일반적이듯이 이 파일에는 부모 요소가 하나 포함되어 있습니다. 이 부모 요소는 <xref:System.Windows.Window> 네임스페이스의 파생된 클래스 `L2XDBFrom` 과 연결된 `LinqToXmlDataBinding` XML 요소입니다.  
   
- 클라이언트 영역은 연한 파랑색 배경이 제공되는 <xref:System.Windows.Controls.StackPanel>에 포함되어 있습니다. 이 패널에는 <xref:System.Windows.Controls.DockPanel> 표시줄로 구분된 <xref:System.Windows.Controls.Separator> UI 섹션이 4개 포함되어 있습니다. 이러한 섹션의 목적은 **이전 항목**의 [설명](../designers/walkthrough-linqtoxmldatabinding-example.md)에 설명되어 있습니다.  
+ 클라이언트 영역은 연한 파랑색 배경이 제공되는 <xref:System.Windows.Controls.StackPanel> 에 포함되어 있습니다. 이 패널에는 <xref:System.Windows.Controls.DockPanel> 표시줄로 구분된 <xref:System.Windows.Controls.Separator> UI 섹션이 4개 포함되어 있습니다. 이러한 섹션의 목적은 **이전 항목** 의 [설명](../designers/walkthrough-linqtoxmldatabinding-example.md)에 설명되어 있습니다.  
   
- 각 섹션에는 해당 섹션을 식별하는 레이블이 포함되어 있습니다. 처음 두 섹션에서 이 레이블은 <xref:System.Windows.FrameworkElement.LayoutTransform%2A>을 사용하여 90도 회전됩니다. 섹션의 나머지 부분에는 해당 섹션의 목적에 적합한 텍스트 블록, 텍스트 상자, 단추 등의 UI 요소가 포함되어 있습니다. 때때로 자식 <xref:System.Windows.Controls.StackPanel>이 이러한 자식 컨트롤을 정렬하는 데 사용됩니다.  
+ 각 섹션에는 해당 섹션을 식별하는 레이블이 포함되어 있습니다. 처음 두 섹션에서 이 레이블은 <xref:System.Windows.FrameworkElement.LayoutTransform%2A>을 사용하여 90도 회전됩니다. 섹션의 나머지 부분에는 해당 섹션의 목적에 적합한 텍스트 블록, 텍스트 상자, 단추 등의 UI 요소가 포함되어 있습니다. 때때로 자식 <xref:System.Windows.Controls.StackPanel> 이 이러한 자식 컨트롤을 정렬하는 데 사용됩니다.  
   
-## 창 리소스 섹션  
+## <a name="window-resource-section"></a>창 리소스 섹션  
  9번째 줄의 여는 `<Window.Resources>` 태그는 창 리소스 섹션의 시작을 나타냅니다. 창 리소스 섹션은 35번째 줄의 닫는 태그에서 끝납니다.  
   
- 11\-25번째 줄에 있는 `<ObjectDataProvider>` 태그는 <xref:System.Windows.Data.ObjectDataProvider>를 소스로 사용하는 `LoadedBooks`라는 <xref:System.Xml.Linq.XElement>를 선언합니다. 이 <xref:System.Xml.Linq.XElement>는 포함된 XML 문서\(`CDATA` 요소\)의 구문을 분석하여 초기화됩니다. 포함된 XML 문서를 선언하는 경우와 이 문서의 구문을 분석하는 경우에도 공백이 유지됩니다. 이 작업은 원시 XML을 표시하는 데 사용되는 <xref:System.Windows.Controls.TextBlock> 컨트롤에 특별한 XML 서식 지정 기능이 없기 때문에 수행되었습니다.  
+ 11-25번째 줄에 있는 `<ObjectDataProvider>` 태그는 <xref:System.Windows.Data.ObjectDataProvider>를 소스로 사용하는 `LoadedBooks`라는 <xref:System.Xml.Linq.XElement> 를 선언합니다. 이 <xref:System.Xml.Linq.XElement> 는 포함된 XML 문서( `CDATA` 요소)의 구문을 분석하여 초기화됩니다. 포함된 XML 문서를 선언하는 경우와 이 문서의 구문을 분석하는 경우에도 공백이 유지됩니다. 이 작업은 원시 XML을 표시하는 데 사용되는 <xref:System.Windows.Controls.TextBlock> 컨트롤에 특별한 XML 서식 지정 기능이 없기 때문에 수행되었습니다.  
   
- 마지막으로 <xref:System.Windows.DataTemplate>이라는 `BookTemplate`이 28\-34번째 줄에 정의되어 있습니다. 이 템플릿은 **Book List** UI 섹션에 항목을 표시하는 데 사용됩니다. 이 템플릿에서는 데이터 바인딩과 LINQ to XML 동적 속성을 사용하여 다음 할당을 통해 책 ID와 책 이름을 검색합니다.  
+ 마지막으로 <xref:System.Windows.DataTemplate> 이라는 `BookTemplate` 이 28-34번째 줄에 정의되어 있습니다. 이 템플릿은 **Book List** UI 섹션에 항목을 표시하는 데 사용됩니다. 이 템플릿에서는 데이터 바인딩과 LINQ to XML 동적 속성을 사용하여 다음 할당을 통해 책 ID와 책 이름을 검색합니다.  
   
 ```  
 Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"  
 ```  
   
-## 데이터 바인딩 코드  
+## <a name="data-binding-code"></a>데이터 바인딩 코드  
  <xref:System.Windows.DataTemplate> 요소 외에도 데이터 바인딩이 이 파일의 여러 위치에서 사용됩니다.  
   
  38번째 줄의 여는 `<StackPanel>` 태그에서 이 패널의 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성은 `LoadedBooks` 데이터 공급자로 설정됩니다.  
@@ -48,19 +48,19 @@ Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"
 DataContext="{Binding Source={StaticResource LoadedBooks}}  
 ```  
   
- 이를 통해\(46번째 줄\) <xref:System.Windows.Controls.TextBlock>이라는 `tbRawXml`이 이 데이터 공급자의 `Xml` 속성에 바인딩하여 원시 XML을 표시할 수 있습니다.  
+ 이를 통해(46번째 줄) <xref:System.Windows.Controls.TextBlock> 이라는 `tbRawXml` 이 이 데이터 공급자의 `Xml` 속성에 바인딩하여 원시 XML을 표시할 수 있습니다.  
   
 ```  
 Text="{Binding Path=Xml}"   
 ```  
   
- 58\-62번째 줄의 **Book List** UI 섹션에 있는 <xref:System.Windows.Controls.ListBox>는 표시 항목에 대한 템플릿을 창 리소스 섹션에 정의된 `BookTemplate`으로 설정합니다.  
+ 58-62번째 줄의 <xref:System.Windows.Controls.ListBox> Book List **UI 섹션에 있는** 는 표시 항목에 대한 템플릿을 창 리소스 섹션에 정의된 `BookTemplate` 으로 설정합니다.  
   
 ```  
 ItemTemplate ="{StaticResource BookTemplate}"   
 ```  
   
- 그런 다음 59\-62번째 줄에서 책의 실제 값이 이 목록 상자에 바인딩됩니다.  
+ 그런 다음 59-62번째 줄에서 책의 실제 값이 이 목록 상자에 바인딩됩니다.  
   
 ```  
 <ListBox.ItemsSource>  
@@ -68,7 +68,7 @@ ItemTemplate ="{StaticResource BookTemplate}"
 </ListBox.ItemsSource>  
 ```  
   
- 세 번째 UI 섹션인 **Edit Selected Book**은 먼저 부모 <xref:System.Windows.FrameworkElement.DataContext%2A>의 <xref:System.Windows.Controls.StackPanel>를 **Book List** UI 섹션\(82번째 줄\)에서 현재 선택된 항목에 바인딩합니다.  
+ 세 번째 UI 섹션인 **Edit Selected Book**은 먼저 부모 <xref:System.Windows.FrameworkElement.DataContext%2A> 의 <xref:System.Windows.Controls.StackPanel> 를 **Book List** UI 섹션(82번째 줄)에서 현재 선택된 항목에 바인딩합니다.  
   
 ```  
 DataContext="{Binding ElementName=lbBooks, Path=SelectedItem}"  
@@ -82,14 +82,14 @@ Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
   
  마지막 UI 섹션인 **Add New Book**에서는 XAML 코드에서 데이터 바인딩을 사용하지 않습니다. 이러한 코드는 L2DBForm.xaml.cs 파일의 이벤트 처리 코드에 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
+### <a name="description"></a>설명  
   
 > [!NOTE]
->  줄 번호를 추적하기 쉽도록 아래의 코드를 Visual Studio의 C\# 소스 코드 편집기와 같은 코드 편집기에 복사하는 것이 좋습니다.  
+>  줄 번호를 추적하기 쉽도록 아래의 코드를 Visual Studio의 C# 소스 코드 편집기와 같은 코드 편집기에 복사하는 것이 좋습니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```xml  
 <Window x:Class="LinqToXmlDataBinding.L2XDBForm"  
@@ -238,9 +238,9 @@ Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
   
 ```  
   
-### 설명  
- WPF UI 요소와 연결된 이벤트 처리기의 C\# 소스 코드는 [L2DBForm.xaml.cs 소스 코드](../designers/l2dbform-xaml-cs-source-code.md)를 참조하세요.  
+### <a name="comments"></a>설명  
+ WPF UI 요소와 연결된 이벤트 처리기의 C# 소스 코드는 [L2DBForm.xaml.cs Source Code](../designers/l2dbform-xaml-cs-source-code.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [연습: LinqToXmlDataBinding 예제](../designers/walkthrough-linqtoxmldatabinding-example.md)   
  [L2DBForm.xaml.cs 소스 코드](../designers/l2dbform-xaml-cs-source-code.md)

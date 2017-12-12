@@ -1,30 +1,32 @@
 ---
+redirect_url: /azure/app-service-mobile/app-service-mobile-windows-store-dotnet-get-started
 title: "연습: Azure 모바일 서비스에 연결된 WPF 데스크톱 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 10/10/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-designers
+ms.technology: vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8d42620f-553b-4b04-a38b-f6b306d73a50
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 8bf11425439387a13db2bb77f0ce798bef076461
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: d21c7fcc7c22c3a260d79856c66bb15d5166c444
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>연습: Azure 모바일 서비스에 연결된 WPF 데스크톱 응용 프로그램 만들기
 WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스를 통해 데이터를 저장 및 제공하는 최신 데스크톱 응용 프로그램을 신속하게 만들 수 있습니다.  
   
-##  <a name="Requirements"></a> 필수 조건  
- 이 연습을 완료하려면 다음이 필요합니다.  
+## <a name="prerequisites"></a>필수 구성 요소  
+이 연습을 완료하려면 다음이 필요합니다.  
   
 -   Visual Studio 2017 또는 WPF 개발을 지원하는 모든 버전.  
   
@@ -41,19 +43,19 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
   
 1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
-2.  **새 프로젝트** 대화 상자에서 **Visual C#** 또는 **Visual Basic** 노드를 확장하고 **Windows** 노드를 선택한 다음 **Windows** 노드를 확장하고 **클래식 바탕 화면** 노드를 선택합니다.  
+2.  **새 프로젝트** 대화 상자에서 **Visual C#** 또는 **Visual Basic** 노드를 펼치고 **Windows 클래식 바탕 화면** 노드를 선택합니다.  
   
-3.  템플릿 목록에서 **WPF 응용 프로그램** 템플릿을 선택합니다.  
+3.  템플릿 목록에서 **WPF 앱(.NET Framework)** 템플릿을 선택합니다.  
   
 4.  **이름** 텍스트 상자에 `WPFQuickStart`를 입력하고 **확인** 단추를 선택합니다.  
   
-     프로젝트가 생성되고 프로젝트 파일이 **솔루션 탐색기**에 추가된 다음 **MainWindow.xaml** 이라는 기본 응용 프로그램 창에 대한 디자이너가 표시됩니다.  
+     프로젝트가 만들어지고 **솔루션 탐색기**에 프로젝트 파일이 추가됩니다. **MainWindow.xaml**이라는 기본 응용 프로그램 창에 대한 디자이너가 표시됩니다.  
   
 #### <a name="to-add-a-reference-to-the-windows-azure-mobile-services-sdk"></a>Microsoft Azure Mobile Services SDK에 대한 참조를 추가하려면  
   
-1.  **솔루션 탐색기**에서 **참조** 노드의 바로 가기 메뉴를 열고 **NuGet 패키지 관리**를 선택합니다.  
+1.  **솔루션 탐색기**에서 **참조** 노드의 바로 가기 메뉴를 열고 **NuGet 패키지 관리...**를 선택합니다.  
   
-2.  **NuGet 패키지 관리자**에서 **검색** 필드를 선택하고 `mobileservices`를 입력합니다.  
+2.  **NuGet 패키지 관리자**에서 위쪽에 있는 **찾아보기**를 선택한 다음 검색 상자에서 `mobileservices`를 입력합니다.  
   
 3.  왼쪽 창에서 **WindowsAzure.MobileServices**를 선택한 다음 오른쪽 창에서 **설치** 단추를 선택합니다.  
   
@@ -68,7 +70,7 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
     >  사용 조건에 동의하지 않을 경우 **동의 안 함** 단추를 선택합니다. 연습의 나머지 부분을 완료할 수 없습니다.  
   
 ## <a name="create-the-user-interface"></a>사용자 인터페이스 만들기  
- 다음 단계는 응용 프로그램에 대한 사용자 인터페이스를 만드는 것입니다. 먼저 두 개의 창이 나란히 표시되는 표준 레이아웃을 표시하는 재사용 가능한 사용자 정의 컨트롤을 만듭니다. 주 응용 프로그램 창에 사용자 정의 컨트롤을 추가하고 데이터를 입력 및 표시하는 컨트롤을 추가한 다음 모바일 서비스 백 엔드와의 상호 작용을 정의하는 일부 코드를 작성합니다.  
+다음 단계는 응용 프로그램에 대한 사용자 인터페이스를 만드는 것입니다. 먼저 두 개의 창이 나란히 표시되는 표준 레이아웃을 표시하는 재사용 가능한 사용자 정의 컨트롤을 만듭니다. 주 응용 프로그램 창에 사용자 정의 컨트롤을 추가하고 데이터를 입력 및 표시하는 컨트롤을 추가한 다음 모바일 서비스 백 엔드와의 상호 작용을 정의하는 일부 코드를 작성합니다.  
   
 #### <a name="to-add-a-user-control"></a>사용자 컨트롤을 추가하려면  
   
@@ -85,17 +87,17 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
 5.  디자이너의 아래쪽 창에서 `<Grid>` 및 `</Grid>` 태그를 선택하고 다음 XAML 코드로 바꿉니다.  
   
     ```xaml  
-    <Grid VerticalAlignment="Top">  
-            <StackPanel Orientation="Horizontal">  
-                <Border BorderThickness="0,0,1,0" BorderBrush="DarkGray" Margin="0,10" MinWidth="70">  
-                    <TextBlock Text="{Binding Number}" FontSize="45" Foreground="DarkGray" Margin="20,0"/>  
-                </Border>  
-                <StackPanel>  
-                    <TextBlock Text="{Binding Title}" Margin="10,10,0,0" FontSize="16" FontWeight="Bold" />  
-                    <TextBlock Text="{Binding Description}" Margin="10,0,0,0" TextWrapping="Wrap" MaxWidth="500" />  
-                </StackPanel>  
-            </StackPanel>  
-        </Grid>  
+    <Grid VerticalAlignment="Top">
+        <StackPanel Orientation="Horizontal">
+            <Border BorderThickness="0,0,1,0" BorderBrush="DarkGray" Margin="0,10" MinWidth="70">
+                <TextBlock Text="{Binding Number}" FontSize="45" Foreground="DarkGray" Margin="20,0"/>
+            </Border>
+            <StackPanel>
+                <TextBlock Text="{Binding Title}" Margin="10,10,0,0" FontSize="16" FontWeight="Bold" />
+                <TextBlock Text="{Binding Description}" Margin="10,0,0,0" TextWrapping="Wrap" MaxWidth="500" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>  
     ```  
   
      이 XAML 코드는 번호, 제목 및 설명 필드에 자리 표시자를 사용하여 재사용할 수 있는 레이아웃을 만듭니다. 런타임에 자리 표시자는 다음 그림과 같이 텍스트로 대체될 수 있습니다.  
@@ -104,7 +106,7 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
   
 6.  **솔루션 탐색기**에서 **QuickStartTask.xaml** 노드를 확장하고 **QuickStartTask.xaml.cs** 또는 **QuickStartTask.xaml.vb** 파일을 엽니다.  
   
-7.  코드 편집기에서 `namespace WPFQuickStart.Common` (C#) 네임스페이스 또는 `Public Class QuickStartTask` (VB) 메서드를 다음 코드로 바꿉니다.  
+7.  코드 편집기에서 `namespace WPFQuickStart.Common`(C#) 네임스페이스 또는 `Public Class QuickStartTask`(VB) 클래스를 다음 코드로 바꿉니다.  
   
     ```csharp  
     namespace WPFQuickStart.Common  
@@ -225,62 +227,52 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
 5.  `<Grid>` 및 `</Grid>` 태그를 선택하고 다음 XAML 코드로 바꿉니다.  
   
     ```xaml  
-    <Grid>  
-  
-            <Grid Margin="50,50,10,10">  
-                <Grid.ColumnDefinitions>  
-                    <ColumnDefinition Width="*" />  
-                    <ColumnDefinition Width="*" />  
-                </Grid.ColumnDefinitions>  
-                <Grid.RowDefinitions>  
-                    <RowDefinition Height="Auto" />  
-                    <RowDefinition Height="*" />  
-                </Grid.RowDefinitions>  
-  
-                <Grid Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,20">  
-                    <StackPanel>  
-                        <TextBlock Foreground="#0094ff" FontFamily="Segoe UI Light" Margin="0,0,0,6">MICROSOFT AZURE MOBILE SERVICES</TextBlock>  
-                        <TextBlock Foreground="Gray" FontFamily="Segoe UI Light" FontSize="45" ><Run Text="My Todo List"/></TextBlock>  
-                    </StackPanel>  
-                </Grid>  
-  
-                <Grid Grid.Row="1">  
-                    <StackPanel>  
-  
-                        <local:QuickStartTask Number="1" Title="Insert a TodoItem" Description="Enter some text below and click Save to insert a new todo item into the list." />  
-  
-                        <StackPanel Orientation="Horizontal" Margin="72,0,0,0">  
-                            <TextBox x:Name="TodoInput" Margin="5" MinWidth="300"/>  
-                            <Button x:Name="ButtonSave" Click="ButtonSave_Click" Content="Save"/>  
-                        </StackPanel>  
-  
-                    </StackPanel>  
-                </Grid>  
-  
-                <Grid Grid.Row="1" Grid.Column="1">  
-                    <Grid.RowDefinitions>  
-                        <RowDefinition Height="Auto" />  
-                        <RowDefinition />  
-                    </Grid.RowDefinitions>  
-                    <StackPanel>  
-                        <local:QuickStartTask Number="2" Title="Query and Update Data" Description="Click the Refresh button to load the unfinished TodoItems from the Azure Mobile Service. Select the checkbox to mark a ToDo item as complete and update the list." />  
-                        <Button Margin="72,0,0,0" Name="ButtonRefresh" Click="ButtonRefresh_Click">Refresh</Button>  
-                    </StackPanel>  
-  
-                    <ListView Name="ListItems" Margin="62,10,0,0" Grid.Row="1">  
-                        <ListView.ItemTemplate>  
-                            <DataTemplate>  
-                                <StackPanel Orientation="Horizontal">  
-                                    <CheckBox Name="CheckBoxComplete" IsChecked="{Binding Complete, Mode=TwoWay}" Checked="CheckBoxComplete_Checked" Content="{Binding Text}" Margin="10,5" VerticalAlignment="Center"/>  
-                                </StackPanel>  
-                            </DataTemplate>  
-                        </ListView.ItemTemplate>  
-                    </ListView>  
-  
-                </Grid>  
-  
-            </Grid>  
-        </Grid>  
+    <Grid>
+        <Grid Margin="50,50,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,20">
+                <StackPanel>
+                    <TextBlock Foreground="#0094ff" FontFamily="Segoe UI Light" Margin="0,0,0,6">MICROSOFT AZURE MOBILE SERVICES</TextBlock>
+                    <TextBlock Foreground="Gray" FontFamily="Segoe UI Light" FontSize="45" ><Run Text="My Todo List"/></TextBlock>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackPanel>
+                    <local:QuickStartTask Number="1" Title="Insert a TodoItem" Description="Enter some text below and click Save to insert a new todo item into the list." />
+                    <StackPanel Orientation="Horizontal" Margin="72,0,0,0">
+                        <TextBox x:Name="TodoInput" Margin="5" MinWidth="300"/>
+                        <Button x:Name="ButtonSave" Click="ButtonSave_Click" Content="Save"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <StackPanel>
+                    <local:QuickStartTask Number="2" Title="Query and Update Data" Description="Click the Refresh button to load the unfinished TodoItems from the Azure Mobile Service. Select the checkbox to mark a ToDo item as complete and update the list." />
+                    <Button Margin="72,0,0,0" Name="ButtonRefresh" Click="ButtonRefresh_Click">Refresh</Button>
+                </StackPanel>
+                <ListView Name="ListItems" Margin="62,10,0,0" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox Name="CheckBoxComplete" IsChecked="{Binding Complete, Mode=TwoWay}" Checked="CheckBoxComplete_Checked" Content="{Binding Text}" Margin="10,5" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </Grid>  
     ```  
   
      디자인 창에 변경 내용이 반영됩니다. **도구 상자** 창에서 컨트롤을 추가하고 **속성** 창에서 속성을 설정하여 사용자 인터페이스를 정의할 수도 있습니다. 디자이너에서 수행할 수 있는 모든 작업은 XAML 코드로 수행할 수 있으며, 그 반대의 경우도 마찬가지입니다.  
@@ -486,7 +478,7 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
     > [!NOTE]
     >  URL의 숫자 부분을 변경해야 할 수도 있습니다. Microsoft Azure에서는 각 모바일 서비스에 대한 고유한 URL이 필요합니다.  
   
-     이렇게 하면 서비스의 URL이 *https://wpfquickstart01.azure-mobile.net/*으로 설정됩니다.  
+    이렇게 하면 서비스의 URL이 *https://wpfquickstart01.azure-mobile.net/*으로 설정됩니다.  
   
 4.  **데이터베이스** 목록에서 데이터베이스 옵션을 선택합니다. 자주 사용되지 않는 응용 프로그램이므로 **무료 20MB SQL 데이터베이스 만들기** 옵션을 선택하거나 구독과 이미 연결되어 있는 무료 데이터베이스를 선택할 수도 있습니다.  
   
@@ -549,7 +541,7 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
   
 #### <a name="to-run-the-application"></a>응용 프로그램을 실행하려면  
   
-1.  메뉴 모음에서 **디버그**, **디버깅 시작** 을 차례로 선택합니다(또는 F5 키를 누름).  
+1.  메뉴 모음에서 **디버그**, **디버깅 시작**을 차례로 선택합니다(또는 **F5** 키를 누름).  
   
 2.  **Insert a TodoItem** 텍스트 상자에 `Do something`를 입력한 후 **저장** 단추를 선택합니다.  
   

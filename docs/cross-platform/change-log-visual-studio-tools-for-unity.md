@@ -4,39 +4,53 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b7545bb4eaf437223e79bccdb1ad2a082e37bd4a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: a2cfae1be1415a2d770d1467a09f207f73eafd05
-ms.openlocfilehash: 5b872f1d28c132fe2910bed16882ba6fb01e6782
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>변경 로그(Visual Studio Tools for Unity)
 Visual Studio Tools for Unity에 대한 변경 로그입니다.  
+
+## <a name="3402"></a>3.4.0.2
+ 릴리스됨 2017-09-19
+
+### <a name="new-features"></a>새 기능  
+
+-   **Project Generation:**  
+
+    -   assembly.json 컴파일 단위 지원이 추가되었습니다.
+
+    -   프로젝트 폴더에 Unity 어셈블리 복사가 중지되었습니다.
+    
+-   **디버거:**  
+
+    -   새 Unity 런타임에서 다음 문을 설정하는 지원이 추가되었습니다.
+    
+    -   새 Unity 런타임에서 10진수 형식 지원이 추가되었습니다.
+    
+    -   암시적/명시적 변환에 대한 지원이 추가되었습니다.
+    
+### <a name="bug-fixes"></a>버그 수정  
+  
+-   **평가:**  
+
+    -   암시적 크기의 배열 만들기를 수정했습니다.
+    
+    -   로컬로 컴파일러가 생성한 항목을 수정했습니다.
+   
+-   **Project Generation:**  
+   
+    -   4.6 API 수준의 Microsoft.CSharp에 대한 참조가 수정되었습니다.
 
 ## <a name="3302"></a>3.3.0.2
  릴리스됨 2017-08-15
@@ -1021,4 +1035,3 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
   
 ## <a name="1000---initial-release"></a>1.0.0.0 - 초기 릴리스  
  릴리스됨 2012-08-22
-

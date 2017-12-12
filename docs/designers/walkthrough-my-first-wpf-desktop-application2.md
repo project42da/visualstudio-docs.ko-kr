@@ -1,45 +1,31 @@
 ---
-title: "연습: 내 첫 번째 WPF 데스크톱 응용 프로그램2 | Microsoft Docs"
+title: "연습: 내 첫 번째 WPF 데스크톱 응용 프로그램 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-designers
+ms.technology: vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3c460fa9-2ea1-413f-ae54-54a1f2a499d1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 75a333c7e5948e13db0c0c91b41128914e23222b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: d0e8435092fb5f7090c3631fd079e28de351704d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
-<a name="introduction"></a> 이 연습에서는 WPF(Windows Presentation Foundation) 개발에 대해 소개합니다. XAML 태그, 코드 숨김, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩, 스타일 등 대부분의 WPF 데스크톱 응용 프로그램에 공통된 요소를 포함하는 기본 응용 프로그램을 만듭니다.  
+이 연습에서는 WPF(Windows Presentation Foundation) 개발에 대해 소개합니다. XAML 태그, 코드 숨김, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩, 스타일 등 대부분의 WPF 데스크톱 응용 프로그램에 공통된 요소를 포함하는 기본 응용 프로그램을 만듭니다.  
   
-##  <a name="Create_The_Application_Code_Files"></a> 응용 프로그램 프로젝트 만들기  
- 이 섹션에서는 프로젝트와 주 창 또는 폼을 포함하는 응용 프로그램 인프라를 만듭니다.  
+## <a name="creating-the-application-project"></a>응용 프로그램 프로젝트 만들기  
+이 섹션에서는 프로젝트와 주 창 또는 폼을 포함하는 응용 프로그램 인프라를 만듭니다.  
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
@@ -88,8 +74,7 @@ ms.lasthandoff: 09/26/2017
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
             xmlns:local="clr-namespace:ExpenseIt"  
             mc:Ignorable="d"  
-            Title="ExpenseIt" Height="375" Width="500">  
-  
+            Title="ExpenseIt" Height="375" Width="500">    
     </NavigationWindow>  
     ```  
   
@@ -103,8 +88,7 @@ ms.lasthandoff: 09/26/2017
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
             xmlns:local="clr-namespace:ExpenseIt"  
             mc:Ignorable="d"  
-            Title="ExpenseIt" Height="375" Width="500">  
-  
+            Title="ExpenseIt" Height="375" Width="500">    
     </NavigationWindow>  
     ```  
   
@@ -116,7 +100,7 @@ ms.lasthandoff: 09/26/2017
   
      이렇게 하면 `MainWindow` 클래스가 `NavigationWindow`에서 파생되도록 변경됩니다. Visual Basic에서는 XAML에서 창을 변경할 때 이 작업이 자동으로 수행되므로 코드를 변경해야 합니다.  
   
-##  <a name="add_files_to_the_application"></a> 응용 프로그램에 파일 추가  
+## <a name="adding-files-to-the-application"></a>응용 프로그램에 파일 추가  
  이 섹션에서는 응용 프로그램에 두 페이지와 이미지를 추가합니다.  
   
 #### <a name="to-add-a-home-screen"></a>홈 화면을 추가하려면  
@@ -142,30 +126,17 @@ ms.lasthandoff: 09/26/2017
           xmlns:local="clr-namespace:ExpenseIt"  
           mc:Ignorable="d"   
           d:DesignHeight="300" d:DesignWidth="300"  
-          Title="ExpenseIt - Home">  
-  
+          Title="ExpenseIt - Home">    
         <Grid>  
   
         </Grid>  
     </Page>  
     ```  
   
-     또는 Visual Basic에서 다음과 같이 표시됩니다.  
+    Visual Basic에서 첫 번째 줄은 약간 다릅니다.  
   
     ```xaml  
     <Page x:Class="ExpenseItHome"  
-          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"   
-          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"   
-          xmlns:local="clr-namespace:ExpenseIt"  
-          mc:Ignorable="d"   
-          d:DesignHeight="300" d:DesignWidth="300"  
-          Title="ExpenseIt - Home">  
-        <Grid>  
-  
-        </Grid>  
-    </Page>  
     ```  
   
 5.  디자이너에서 **MainWindow.xaml** 탭을 선택합니다.  
@@ -182,24 +153,14 @@ ms.lasthandoff: 09/26/2017
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
             xmlns:local="clr-namespace:ExpenseIt"  
             mc:Ignorable="d"  
-            Title="ExpenseIt" Height="375" Width="500" Source="ExpenseItHome.xaml">  
-  
+            Title="ExpenseIt" Height="375" Width="500" Source="ExpenseItHome.xaml">    
     </NavigationWindow>  
     ```  
   
-     또는 Visual Basic에서 다음과 같이 표시됩니다.  
+    Visual Basic에서 첫 번째 줄은 약간 다릅니다.  
   
     ```xaml  
-    NavigationWindow x:Class="MainWindow"  
-            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
-            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
-            xmlns:local="clr-namespace:ExpenseIt"  
-            mc:Ignorable="d"  
-            Title="ExpenseIt" Height="375" Width="500" Source="ExpenseItHome.xaml">  
-  
-    </NavigationWindow>  
+    <NavigationWindow x:Class="MainWindow"
     ```  
   
      앞에서 설정한 속성과 마찬가지로 `Source` 속성 **창의** 기타 **범주에서** 속성을 설정했을 수 있습니다.  
@@ -219,7 +180,7 @@ ms.lasthandoff: 09/26/2017
      이제 C#에서 ExpenseReportPage.xaml 파일이 다음과 같이 표시됩니다.  
   
     ```xaml  
-    Page x:Class="ExpenseIt.ExpenseReportPage"  
+    <Page x:Class="ExpenseIt.ExpenseReportPage"  
           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"   
@@ -227,30 +188,17 @@ ms.lasthandoff: 09/26/2017
           xmlns:local="clr-namespace:ExpenseIt"  
           mc:Ignorable="d"   
           d:DesignHeight="300" d:DesignWidth="300"  
-          Title="ExpenseIt - View Expense">  
-  
+          Title="ExpenseIt - View Expense">    
         <Grid>  
   
         </Grid>  
     </Page>  
     ```  
   
-     또는 Visual Basic에서 다음과 같이 표시됩니다.  
+    Visual Basic에서 첫 번째 줄은 약간 다릅니다.  
   
     ```xaml  
     <Page x:Class="ExpenseReportPage"  
-          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"   
-          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"   
-          xmlns:local="clr-namespace:ExpenseIt"  
-          mc:Ignorable="d"   
-          d:DesignHeight="300" d:DesignWidth="300"  
-          Title="ExpenseIt - View Expense">  
-        <Grid>  
-  
-        </Grid>  
-    </Page>  
     ```  
   
 5.  메뉴 모음에서 **디버그**, **디버깅 시작** 을 선택하거나 F5 키를 눌러 응용 프로그램을 실행합니다.  
@@ -261,7 +209,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  디자인 모드로 돌아가려면 응용 프로그램을 닫습니다.  
   
-##  <a name="Add_Layout"></a> 사용자 인터페이스 만들기  
+## <a name="creating-the-user-interface"></a>사용자 인터페이스 만들기  
  레이아웃은 요소를 배치하는 순서가 지정된 방법을 제공하며 폼의 크기를 조정할 때 해당 요소의 크기와 위치도 관리합니다. 이 섹션에서는 3개의 행이 있는 단일 열 그리드를 만듭니다. 두 페이지에 컨트롤을 추가하고, 일부 코드를 추가하고, 마지막으로 컨트롤에 대해 재사용 가능한 스타일을 정의합니다.  
   
 #### <a name="to-create-the-layout"></a>레이아웃을 만들려면  
@@ -289,7 +237,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  **ExpenseItHome.xaml**을 엽니다.  
   
-2.  다음 XAML 코드를 `</Grid>` 태그 바로 위에 추가하여 `Border`, `ListBox` 및 `Button` 컨트롤을 만듭니다.  
+2.  `</Grid>` 태그 바로 위에 다음 XAML 코드를 추가하여 `Border`, `ListBox` 및 `Button` 컨트롤을 만듭니다.  
   
     ```xaml  
     <!-- People list -->  
@@ -305,8 +253,7 @@ ms.lasthandoff: 09/26/2017
   
       <!-- View report button -->  
       <Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"  
-    Height="25" HorizontalAlignment="Right">View</Button>  
-  
+    Height="25" HorizontalAlignment="Right">View</Button>    
     ```  
   
      컨트롤이 디자인 창에 나타납니다. 또한 **도구 상자** 창에서 디자인 창으로 끌고 **속성** 창에서 해당 속성을 설정하여 컨트롤을 만들었을 수도 있습니다.  
@@ -338,8 +285,7 @@ ms.lasthandoff: 09/26/2017
     ```xaml  
     <Grid.Background>  
         <ImageBrush ImageSource="watermark.png"/>  
-    </Grid.Background>  
-  
+    </Grid.Background>    
     ```  
   
 #### <a name="to-add-a-title"></a>제목을 추가하려면  
@@ -349,8 +295,7 @@ ms.lasthandoff: 09/26/2017
 2.  `<Grid.ColumnDefinitions>` 줄을 찾은 다음 바로 아래에 다음을 추가합니다.  
   
     ```xaml  
-    <ColumnDefinition Width="230" />  
-  
+    <ColumnDefinition Width="230" />    
     ```  
   
      이렇게 하면 다른 열의 왼쪽에 고정 너비가 230픽셀인 열이 추가로 만들어집니다.  
@@ -358,8 +303,7 @@ ms.lasthandoff: 09/26/2017
 3.  `<Grid.RowDefinitions>` 줄을 찾은 다음 바로 아래에 다음을 추가합니다.  
   
     ```xaml  
-    <RowDefinition />  
-  
+    <RowDefinition />    
     ```  
   
      이렇게 하면 그리드의 맨 위에 행이 추가됩니다.  
@@ -378,8 +322,7 @@ ms.lasthandoff: 09/26/2017
     <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS"   
             FontWeight="Bold" FontSize="18" Foreground="#0066cc">  
         View Expense Report  
-    </Label>  
-  
+    </Label>    
     ```  
   
      이제 C#에서 **ExpenseItHome.xaml** 의 내용이 다음과 같이 표시됩니다.  
@@ -430,52 +373,10 @@ ms.lasthandoff: 09/26/2017
     </Page>  
     ```  
   
-     또는 Visual Basic에서 다음과 같이 표시됩니다.  
+    Visual Basic에서 첫 번째 줄은 약간 다릅니다.  
   
     ```xaml  
     <Page x:Class="ExpenseItHome"  
-          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"   
-          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"   
-          xmlns:local="clr-namespace:ExpenseIt"  
-          mc:Ignorable="d"   
-          d:DesignHeight="300" d:DesignWidth="300"  
-          Title="ExpenseIt - Home" >  
-        <Grid Margin="10,0,10,10">  
-            <Grid.ColumnDefinitions>  
-                <ColumnDefinition Width="230" />  
-                <ColumnDefinition />  
-            </Grid.ColumnDefinitions>  
-            <Grid.RowDefinitions>  
-                <RowDefinition />  
-                <RowDefinition Height="Auto"/>  
-                <RowDefinition />  
-                <RowDefinition Height="Auto"/>  
-            </Grid.RowDefinitions>  
-            <Border Grid.Column="1" Grid.Row="1" Height="35" Padding="5" Background="#4E87D4">  
-                <Label VerticalAlignment="Center" Foreground="White">Names</Label>  
-            </Border>  
-            <!-- People list -->  
-            <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS"   
-            FontWeight="Bold" FontSize="18" Foreground="#0066cc">  
-                View Expense Report  
-            </Label>  
-            <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2">  
-                <ListBoxItem>Mike</ListBoxItem>  
-                <ListBoxItem>Lisa</ListBoxItem>  
-                <ListBoxItem>John</ListBoxItem>  
-                <ListBoxItem>Mary</ListBoxItem>  
-            </ListBox>  
-  
-            <!-- View report button -->  
-            <Button Grid.Column="1" Grid.Row="3" Margin="0,10,0,0" Width="125"  
-    Height="25" HorizontalAlignment="Right">View</Button>  
-            <Grid.Background>  
-                <ImageBrush ImageSource="watermark.png"/>  
-            </Grid.Background>  
-        </Grid>  
-    </Page>  
     ```  
   
 6.  이때 응용 프로그램을 빌드 및 실행하는 경우 다음 그림과 같이 표시되어야 합니다.  
@@ -486,11 +387,11 @@ ms.lasthandoff: 09/26/2017
   
 1.  **ExpenseItHome.xaml**을 엽니다.  
   
-2.  `<Button` 요소를 선택하고 다음 XAML 코드를 **HorizontalAlignment = "Right"** 요소 바로 뒤에 추가합니다. `Click="Button_Click"`.  
+2.  `Button` 요소를 선택하고 `HorizontalAlignment="Right"` 요소 바로 뒤에 `Click="Button_Click"` XAML 코드를 추가합니다.  
   
-     이렇게 하면 단추의 `Click` 이벤트에 대한 이벤트 처리기가 추가됩니다. 이제 **<Button** 요소 코드가 다음과 같이 표시됩니다.  
+     이렇게 하면 단추의 `Click` 이벤트에 대한 이벤트 처리기가 추가됩니다. 이제 **Button** 요소 코드가 다음과 같이 표시됩니다.  
   
-    ```  
+    ```xaml  
     <!-- View report button -->  
       <Button Grid.Column="1" Grid.Row="3" Margin="0,10,0,0" Width="125"  
     Height="25" HorizontalAlignment="Right" Click="Button_Click">View</Button>  
@@ -505,8 +406,7 @@ ms.lasthandoff: 09/26/2017
     {  
         // View Expense Report  
         ExpenseReportPage expenseReportPage = new ExpenseReportPage();  
-        this.NavigationService.Navigate(expenseReportPage);  
-  
+        this.NavigationService.Navigate(expenseReportPage);    
     }  
     ```  
   
@@ -671,7 +571,7 @@ ms.lasthandoff: 09/26/2017
   
     -   `buttonStyle`: `Button` ExpenseItHome.xaml **pppage에 있는** 의 형식을 지정합니다.  
   
-3.  **ExpenseItHome.xaml** 을 열고 `<Grid>` 및 `</Grid>` 요소 사이에 있는 모든 내용을 다음 XAML로 바꿉니다.  
+3.  **ExpenseItHome.xaml**을 열고 `<Grid>` 및 `</Grid>` 요소 사이에 있는 모든 내용을 다음 XAML로 바꿉니다.  
   
     ```xaml  
     <Grid.ColumnDefinitions>  
@@ -708,7 +608,7 @@ ms.lasthandoff: 09/26/2017
   
      스타일을 적용하면 각 컨트롤의 모양을 정의하는 `VerticalAlignment` 및 `FontFamily` 와 같은 속성이 제거되고 바뀝니다.  
   
-4.  **ExpenseReportPage.xaml** 을 열고 `<Grid>` 및 최종 `</Grid>` 요소 사이에 있는 모든 내용을 다음 XAML로 바꿉니다.  
+4.  **ExpenseReportPage.xaml**을 열고 `<Grid>` 및 최종 `</Grid>` 요소 사이에 있는 모든 내용을 다음 XAML로 바꿉니다.  
   
     ```xaml  
     <Grid.Background>  
@@ -760,8 +660,7 @@ ms.lasthandoff: 09/26/2017
                 </DataGrid.Columns>  
             </DataGrid>  
         </Grid>  
-    </Grid>  
-  
+    </Grid>    
     ```  
   
      이렇게 하면 `<Label>` 및 `<Border>` 요소에 스타일이 추가됩니다.  
@@ -775,8 +674,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  다음 XAML 코드를 추가합니다.  
   
-    ```xaml  
-  
+    ```xaml    
     <Grid.Resources>  
     <!-- Expense Report Data -->  
     <XmlDataProvider x:Key="ExpenseDataSource" XPath="Expenses">  
@@ -838,27 +736,26 @@ ms.lasthandoff: 09/26/2017
   
     ```csharp  
     // Custom constructor to pass expense report data  
-        public ExpenseReportPage(object data):this()  
-        {  
-            // Bind to expense report data.  
-            this.DataContext = data;  
-        }  
+    public ExpenseReportPage(object data):this()  
+    {  
+        // Bind to expense report data.  
+        this.DataContext = data;  
+    }  
     ```  
   
     ```vb  
     Partial Public Class ExpenseReportPage  
     Inherits Page  
-    Public Sub New()  
-    InitializeComponent()  
-    End Sub  
+        Public Sub New()  
+        InitializeComponent()  
+        End Sub  
   
-    ' Custom constructor to pass expense report data  
-    Public Sub New(ByVal data As Object)  
-    Me.New()  
-    ' Bind to expense report data.  
-    Me.DataContext = data  
-    End Sub  
-  
+        ' Custom constructor to pass expense report data  
+        Public Sub New(ByVal data As Object)  
+            Me.New()  
+            ' Bind to expense report data.  
+            Me.DataContext = data  
+        End Sub    
     End Class  
     ```  
   
@@ -873,8 +770,7 @@ ms.lasthandoff: 09/26/2017
     {  
         // View Expense Report  
         ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);  
-        this.NavigationService.Navigate(expenseReportPage);  
-  
+        this.NavigationService.Navigate(expenseReportPage);    
     }  
     ```  
   
@@ -905,8 +801,7 @@ ms.lasthandoff: 09/26/2017
     <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">  
         <Label Style="{StaticResource labelStyle}">Department:</Label>  
         <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Department}"></Label>  
-    </StackPanel>  
-  
+    </StackPanel>    
     ```  
   
      이렇게 하면 **Label** 컨트롤이 해당 데이터 원본 속성에 바인딩됩니다.  
@@ -924,8 +819,7 @@ ms.lasthandoff: 09/26/2017
         <DataTemplate x:Key="amountItemTemplate">  
             <Label Content="{Binding XPath=@ExpenseAmount}"/>  
         </DataTemplate>  
-    </Grid.Resources>  
-  
+    </Grid.Resources>    
     ```  
   
      이렇게 하면 경비 보고서 데이터를 표시하는 방법이 정의됩니다.  
@@ -993,5 +887,4 @@ ms.lasthandoff: 09/26/2017
 -   [WPF의 문서](https://msdn.microsoft.com/en-us/library/ms748388\(v=vs.100\).aspx)  
   
 ## <a name="see-also"></a>참고 항목  
- [연습: Azure 모바일 서비스에 연결된 WPF 데스크톱 응용 프로그램 만들기](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   
- [Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+[Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
