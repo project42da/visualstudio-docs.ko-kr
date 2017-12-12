@@ -4,38 +4,20 @@ ms.custom: H1HackMay2017
 ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- debugger
+helpviewer_keywords: debugger
 ms.assetid: d2ee0301-ea78-43d8-851a-71b7b2043d73
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9e2422774a9bf588b77aeaff81f8529906b68549
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
 ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: b4f4e312fb7717edfe950cf6977279a1bd67a458
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="profiling-feature-tour"></a>프로파일링 기능 둘러보기
 
@@ -114,7 +96,7 @@ CPU 사용량 및 메모리 사용량과 같은 프로파일링 도구를 디버
 
 ## <a name="analyze-resource-consumption-xaml"></a>리소스 사용 분석(XAML)
 
-XAML 앱(예: Windows 데스크톱 WPF 앱 및 Windows 스토어 앱)에서 응용 프로그램 타임라인 도구를 사용하여 리소스 소비를 분석할 수 있습니다. 예를 들어 응용 프로그램 UI 프레임(레이아웃 및 렌더링)을 준비하고, 네트워크 및 디스크 요청을 처리하여, 응용 프로그램 시작, 페이지 로드 및 창 크기 조정과 같은 시나리오에서 응용 프로그램이 보낸 시간을 분석할 수 있습니다. 이 도구를 사용하려면 성능 프로파일러에서 **응용 프로그램 타임라인**을 선택한 다음 **시작**을 선택합니다. 앱에서 리소스 소비 문제가 의심되는 시나리오를 확인한 다음 **컬렉션 중지**를 선택하여 보고서를 생성합니다.
+XAML 앱(예: Windows 데스크톱 WPF 앱 및 UWP 앱)에서 응용 프로그램 타임라인 도구를 사용하여 리소스 사용을 분석할 수 있습니다. 예를 들어 응용 프로그램 UI 프레임(레이아웃 및 렌더링)을 준비하고, 네트워크 및 디스크 요청을 처리하여, 응용 프로그램 시작, 페이지 로드 및 창 크기 조정과 같은 시나리오에서 응용 프로그램이 보낸 시간을 분석할 수 있습니다. 이 도구를 사용하려면 성능 프로파일러에서 **응용 프로그램 타임라인**을 선택한 다음 **시작**을 선택합니다. 앱에서 리소스 소비 문제가 의심되는 시나리오를 확인한 다음 **컬렉션 중지**를 선택하여 보고서를 생성합니다.
 
 **시각적 처리량** 그래프에서 낮은 framerate는 앱을 실행할 때 표시되는 시각적 문제에 해당할 수 있습니다. 마찬가지로 **UI 스레드 사용률** 그래프에서 높은 숫자는 UI 응답성 문제에 해당할 수 있습니다. 보고서에서 성능 문제가 의심되는 기간을 선택한 다음 타임라인 세부 정보 뷰(아래쪽 창)에서 세부 UI 스레드 활동을 검사할 수 있습니다.
 

@@ -4,45 +4,28 @@ ms.custom:
 ms.date: 06/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a704215d-d252-4087-921b-ac81ebe2a9c9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: baf12bba10dfba15f10d75fd1f7a4cdc4000e441
-ms.openlocfilehash: a5d885f8604bdb52907adae4f231b41e0881017f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/21/2017
-
+ms.openlocfilehash: b6e71a7cc3200de9570ee0545bbc60e59943a693
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 및 Windows Server 2012 응용 프로그램의 성능 도구
-Windows 8 및 Windows Server 2012부터 강화된 보안 기능을 위해 Visual Studio 성능 도구가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. Windows 스토어 앱에는 새로운 수집 기술도 필요합니다. 이 항목에서는 Windows 8 및 Windows Server 2012 플랫폼부터 시작된 성능 도구 관련 변경 내용에 대해 설명합니다.
+Windows 8 및 Windows Server 2012부터 강화된 보안 기능을 위해 Visual Studio 성능 도구가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. 또한 UWP 앱에는 새로운 수집 기술도 필요합니다. 이 항목에서는 Windows 8 및 Windows Server 2012 플랫폼부터 시작된 성능 도구 관련 변경 내용에 대해 설명합니다.
   
 > [!NOTE]
 >  기타 지원되는 버전의 Windows(Windows 7, Windows Server 2008 R2)용 성능 도구는 변경되지 않았습니다.
   
 ##  <a name="BKMK_In_this_topic"></a> 항목 내용  
- [Visual Studio IDE에서 Windows 스토어 앱에 대한 데이터 수집](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
+ [Visual Studio IDE에서 UWP 앱에 대한 데이터 수집](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Visual Studio IDE에서 Windows 8 데스크톱 또는 Windows Server 2012에서 실행되는 앱에 대한 데이터 수집](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
   
@@ -52,10 +35,10 @@ Windows 8 및 Windows Server 2012부터 강화된 보안 기능을 위해 Visual
   
  [TIP(계층 상호 작용) 데이터 수집](#BKMK_Collecting_tier_interaction__TIP__data)  
   
-##  <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a> Visual Studio IDE에서 Windows 스토어 앱에 대한 데이터 수집  
- JavaScript 및 HTML 5로 작성된 Windows 스토어 앱을 프로파일링하는 경우 JavaScript 코드에 대한 계측 데이터를 수집합니다. Visual C++, Visual C# 또는 Visual Basic으로 작성된 Windows 스토어 앱 또는 구성 요소를 프로파일링하는 경우 네이티브 코드 및 관리 코드에 대한 샘플링 데이터를 수집합니다. 로컬이나 원격 컴퓨터에서 앱을 프로파일링할 수 있습니다.  
+##  <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a> Visual Studio IDE에서 UWP 앱에 대한 데이터 수집  
+ JavaScript 및 HTML 5로 작성된 UWP 앱을 프로파일링하는 경우 JavaScript 코드에 대한 계측 데이터를 수집합니다. Visual C++, Visual C# 또는 Visual Basic으로 작성된 UWP 앱 또는 구성 요소를 프로파일링하는 경우 네이티브 코드 및 관리 코드에 대한 샘플링 데이터를 수집합니다. 로컬이나 원격 컴퓨터에서 앱을 프로파일링할 수 있습니다.  
   
- Windows 스토어 앱을 프로파일링하는 경우 다음 프로파일링 기능과 옵션은 지원되지 않습니다.  
+ UWP 앱을 프로파일링하는 경우 다음 프로파일링 기능과 옵션은 지원되지 않습니다.  
   
 -   샘플링 방법을 사용하여 JavaScript 앱 프로파일링  
   
@@ -71,21 +54,21 @@ Windows 8 및 Windows Server 2012부터 강화된 보안 기능을 위해 Visual
   
 -   성능 및 Windows 카운터 데이터 수집 또는 추가 명령줄 옵션 지정과 같은 계측 옵션  
   
- Windows 스토어 앱을 프로파일링하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.  
+ UWP 앱을 프로파일링하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
- [로컬 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-the-local-machine.md)  
+ [로컬 컴퓨터에서 UWP 앱 실행](../debugger/run-windows-store-apps-on-the-local-machine.md)  
   
- [원격 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md)  
+ [원격 컴퓨터에서 UWP 앱 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md)  
   
  [프로파일링 도구](profiling-tools.md)  
   
 -   [JavaScript 메모리](../profiling/javascript-memory.md)
   
--   [로컬 컴퓨터의 Windows 스토어 앱에서 Visual C++, Visual C# 및 Visual Basic 코드 프로파일링](http://msdn.microsoft.com/en-us/2d0c939e-0bac-48c5-b727-46f6c6113060)  
+-   [로컬 컴퓨터의 UWP 앱에서 Visual C++, Visual C# 및 Visual Basic 코드 프로파일링](http://msdn.microsoft.com/en-us/2d0c939e-0bac-48c5-b727-46f6c6113060)  
   
--   [원격 장치의 Windows 스토어 앱에서 Visual C++, Visual C# 및 Visual Basic 코드 프로파일링](http://msdn.microsoft.com/en-us/b932a2be-11b0-40fd-b996-75c6b6a79d22)  
+-   [원격 장치의 UWP 앱에서 Visual C++, Visual C# 및 Visual Basic 코드 프로파일링](http://msdn.microsoft.com/en-us/b932a2be-11b0-40fd-b996-75c6b6a79d22)  
   
--   [Windows 스토어 앱의 Visual C++, Visual C# 및 Visual Basic 코드에 대한 성능 데이터 분석](http://msdn.microsoft.com/en-us/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
+-   [UWP 앱에서 Visual C++, Visual C# 및 Visual Basic 코드에 대한 성능 데이터 분석](http://msdn.microsoft.com/en-us/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
   
  [항목 내용](#BKMK_In_this_topic)  
   
@@ -106,7 +89,7 @@ Windows 8 및 Windows Server 2012부터 강화된 보안 기능을 위해 Visual
   
 |도구 이름|설명|  
 |---------------|-----------------|  
-|[VSPerf](../profiling/vsperf.md)|Windows 스토어 앱에서 프로파일링 데이터를 수집하고 Windows 8 데스크톱 응용 프로그램 및 Windows Server 2012 응용 프로그램에서 샘플 프로파일링 데이터를 수집합니다.|  
+|[VSPerf](../profiling/vsperf.md)|UWP 앱에서 프로파일링 데이터를 수집하고, Windows 8 데스크톱 응용 프로그램 및 Windows Server 2012 응용 프로그램에서 샘플 프로파일링 데이터를 수집합니다.|  
 |[VSPerfCmd](../profiling/vsperfcmd.md)|Windows 8 데스크톱 또는 Windows Server 2012에서 실행되는 앱에서 계측, 동시성 및 계층 상호 작용 프로파일링 데이터를 수집합니다. 이전 버전의 Windows에서 모든 유형의 프로파일링 데이터를 수집합니다.|  
   
  두 도구는 로컬 컴퓨터에서 사용하기 위해 Visual Studio와 함께 설치됩니다.  
@@ -139,7 +122,7 @@ Windows 8 및 Windows Server 2012부터 강화된 보안 기능을 위해 Visual
   
 1.  Windows 8 데스크톱 또는 Windows Server 2012에서 실행되는 앱에서 계층 상호 작용 데이터를 수집하려면 계측 방법을 사용해야 합니다.  
   
-2.  Windows 스토어 앱에 대한 계층 상호 작용 데이터는 수집할 수 없습니다.  
+2.  UWP 앱에 대한 계층 상호 작용 데이터는 수집할 수 없습니다.  
   
 3.  지원되는 다른 Windows 버전의 모든 프로파일링 방법에 계층 상호 작용 데이터를 포함할 수 있습니다.  
   

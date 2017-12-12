@@ -4,8 +4,7 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -23,34 +22,18 @@ helpviewer_keywords:
 - analyzing memory, JavaScript
 - memory analyzer, JavaScript
 ms.assetid: 78f8532b-7b4e-4b50-b8b7-68ca0926dd4e
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 24250d68042f77a653fe9ef36c743dd4f32ee57c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: e52bef93735efc1ec5e43230ba46c7aa90cb67bc
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP 앱에서 JavaScript 메모리 사용량 분석
-Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 JavaScript로 만든 Windows용 스토어 앱의 메모리 사용을 파악하고 메모리 누수를 찾을 수 있습니다. 지원되는 앱으로는 유니버설 Windows 앱을 위한 앱이 있습니다.
+Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하면 JavaScript를 사용하여 Windows용으로 작성된 UWP 앱의 메모리 사용량을 파악하고 메모리 누수를 찾을 수 있습니다. 지원되는 앱으로는 유니버설 Windows 앱을 위한 앱이 있습니다.
   
  JavaScript 메모리 분석기는 다음과 같은 작업을 수행할 수 있습니다.  
   
@@ -85,15 +68,15 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
  [메모리 문제 식별 팁](#Tips)  
   
 ##  <a name="Run"></a> JavaScript 메모리 분석기 실행  
- 정상 작동하는 Windows 스토어 앱이 Visual Studio에서 열려 있거나 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 이상을 실행하는 컴퓨터에 설치된 경우 메모리 분석기를 사용할 수 있습니다.  
+ 작업 중인 UWP 앱이 Visual Studio에서 열려 있거나 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 이상을 실행하는 컴퓨터에 설치된 경우 메모리 분석기를 사용할 수 있습니다.  
   
 #### <a name="to-run-the-memory-analyzer"></a>메모리 분석기를 실행하려면  
   
 1.  Visual Studio를 엽니다.  
   
-2.  Visual Studio에서 앱을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 Windows Phone 에뮬레이터 또는 Windows 스토어 앱의 경우 **로컬 컴퓨터**, **시뮬레이터**, **원격 컴퓨터**중에서 프로젝트의 디버그 대상을 선택합니다.  
+2.  Visual Studio에서 앱을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 Windows Phone 에뮬레이터 또는 UWP 앱 프로젝트에 대한 디버그 대상을 **로컬 컴퓨터**, **시뮬레이터**, **원격 컴퓨터** 중에서 선택합니다.  
   
-     이러한 옵션에 대한 자세한 내용은 [Visual Studio에서 앱 실행](../debugger/run-store-apps-from-visual-studio.md)을 참조하세요.  
+     이러한 옵션에 대한 자세한 내용은 [Run apps from Visual Studio](../debugger/run-store-apps-from-visual-studio.md)을 참조하세요.  
   
 3.  메뉴 모음에서 **디버그**, **성능 프로파일러...**를 차례로 선택합니다.  
   
@@ -105,11 +88,11 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
   
     -   **시작 프로젝트**. 현재 시작 프로젝트를 분석합니다. 원격 컴퓨터에서 앱을 실행 중인 경우 기본값인 이 옵션을 선택해야 합니다.  
   
-    -   **실행 중인 응용 프로그램**. 실행 중인 앱 목록에서 Windows 스토어 앱을 선택할 수 있습니다. 원격 컴퓨터에서 앱을 실행 중인 경우 이 옵션을 사용할 수 없습니다.  
+    -   **실행 중인 응용 프로그램**. 실행 중인 앱 목록에서 UWP 앱을 선택할 수 있습니다. 원격 컴퓨터에서 앱을 실행 중인 경우 이 옵션을 사용할 수 없습니다.  
   
          소스 코드에 액세스할 수 없을 때 이 옵션을 사용하여 컴퓨터에서 실행 중인 앱의 메모리 사용을 분석할 수 있습니다.  
   
-    -   **설치된 응용 프로그램**. 설치된 Windows 스토어 앱을 선택하여 분석할 수 있습니다. 원격 컴퓨터에서 앱을 실행 중인 경우 이 옵션을 사용할 수 없습니다.  
+    -   **설치된 응용 프로그램**. 설치된 UWP 앱을 선택하여 분석할 수 있습니다. 원격 컴퓨터에서 앱을 실행 중인 경우 이 옵션을 사용할 수 없습니다.  
   
          소스 코드에 액세스할 수 없을 때 이 옵션을 사용하여 컴퓨터에 설치된 앱의 메모리 사용을 분석할 수 있습니다. 사용자가 직접 개발하지 않은 앱의 메모리 사용을 분석하려는 경우에도 이 옵션이 유용할 수 있습니다.  
   
@@ -308,7 +291,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
   
 -   **스냅숏 #\<number>**의 모든 개체. 이 필터 설정은 힙에서 어떤 개체도 필터링하지 않습니다.  
   
- 현재 **범위** 필터와 일치하지 않는 개체 참조를 표시하려면 창의 오른쪽 상단에 있는 설정 목록 ![메모리 분석기의 설정 드롭다운 목록](~/profiling/media/js_mem_settings.png "JS_Mem_Settings")에서 **일치하지 않는 참조 표시**를 선택합니다. 이 설정을 사용하도록 설정하는 경우 일치하지 않는 참조가 회색 텍스트로 표시됩니다.  
+ 현재 **범위** 필터와 일치하지 않는 개체 참조를 표시하려면 창의 오른쪽 상단에 있는 설정 목록 ![메모리 분석기의 설정 드롭다운 목록](../profiling/media/js_mem_settings.png "JS_Mem_Settings")에서 **일치하지 않는 참조 표시**를 선택합니다. 이 설정을 사용하도록 설정하는 경우 일치하지 않는 참조가 회색 텍스트로 표시됩니다.  
   
 > [!TIP]
 >  메모리가 누수되는 개체를 식별하려면 [Isolate a memory leak](#Isolate) 단계에 따라 **범위** 필터를 통해 남은 개체를 사용하여 메모리가 누수되는 개체를 사용하는 것이 좋습니다.  
@@ -316,7 +299,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
 ##  <a name="FoldObjects"></a> 도미네이터별 개체 보기  
  형식 및 도미네이터 뷰에서 도미네이터로 접힌 개체를 볼지 여부를 선택할 수 있습니다(도미네이터 탭의 기본 뷰). 이 뷰를 선택하는 경우 개체의 최상위 뷰에 도미네이터만 표시됩니다. 비전역 개체의 하위 항목에 해당하는 개체는 최상위 뷰에서 숨겨집니다. 일부 앱에서는 이를 통해 데이터의 노이즈를 줄임으로써 메모리 누수를 유발하는 개체를 확인할 수 있습니다.  
   
- 도미네이터별로 개체 뷰를 전환하려면 **도미네이터별 개체 접기** 단추를 선택합니다. ![개체를 도미네이터로 정리](~/profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")  
+ 도미네이터별로 개체 뷰를 전환하려면 **도미네이터별 개체 접기** 단추를 선택합니다. ![개체를 도미네이터로 정리](../profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")  
   
  지배자에 대한 자세한 내용은 [스냅숏 정보 보기](#SnapshotDetails)을(를) 참조하세요.  
   
@@ -334,7 +317,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
 > [!NOTE]
 >  순환 참조는 별표(*) 및 정보 도구 설명과 함께 표시되며 확장될 수 없습니다. 그렇지 않으면 순환 참조는 참조 트리에서 위로 이동하는 것을 금지해 메모리를 보유 중인 개체를 식별하지 못하게 합니다.  
   
- 해당하는 개체를 식별하는 데 더 자세한 도움이 필요하면 위쪽 창의 오른쪽 상단에 있는 설정 목록 ![메모리 분석기의 설정 드롭다운 목록](~/profiling/media/js_mem_settings.png "JS_Mem_Settings")에서 **개체 ID 표시**를 선택합니다. 이 옵션을 선택하면 **식별자** 목록의 개체 이름 옆에 개체 ID가 표시됩니다(개체 참조 목록뿐 아니라 모든 뷰에 ID가 표시됨). ID가 동일한 개체들은 공유되는 참조입니다.  
+ 해당하는 개체를 식별하는 데 더 자세한 도움이 필요하면 위쪽 창의 오른쪽 상단에 있는 설정 목록 ![메모리 분석기의 설정 드롭다운 목록](../profiling/media/js_mem_settings.png "JS_Mem_Settings")에서 **개체 ID 표시**를 선택합니다. 이 옵션을 선택하면 **식별자** 목록의 개체 이름 옆에 개체 ID가 표시됩니다(개체 참조 목록뿐 아니라 모든 뷰에 ID가 표시됨). ID가 동일한 개체들은 공유되는 참조입니다.  
   
  다음 그림에는 선택한 항목의 개체 참조 목록이 ID와 함께 표시되어 있습니다.  
   
@@ -343,7 +326,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하여 
 ##  <a name="BuiltInValues"></a> 기본 제공 개체 표시  
  지배자 및 형식 뷰에는 기본적으로 앱에서 만든 개체만 표시됩니다. 이는 불필요한 정보를 필터링하고 앱 관련 문제를 격리하는 데 도움이 됩니다. 그러나 JavaScript 런타임에서 앱에 대해 생성하는 모든 개체를 보아야 할 경우도 있습니다.  
   
- 이러한 개체를 표시하려면 창 오른쪽 상단의 설정 목록 ![메모리 분석기의 설정 드롭다운 목록](~/profiling/media/js_mem_settings.png "JS_Mem_Settings")에서 **기본 제공 항목 표시**를 선택합니다.  
+ 이러한 개체를 표시하려면 창 오른쪽 상단의 설정 목록 ![메모리 분석기의 설정 드롭다운 목록](../profiling/media/js_mem_settings.png "JS_Mem_Settings")에서 **기본 제공 항목 표시**를 선택합니다.  
   
 ##  <a name="Save"></a> 진단 세션 파일 저장  
  진단 스냅숏 요약과 관련 정보 뷰는 .diagsession 파일로 저장됩니다. **솔루션 탐색기** 의 진단 세션 폴더에는 이전 진단 세션이 표시됩니다. **솔루션 탐색기**에서 이전 세션을 열거나 파일을 제거하거나 파일 이름을 바꿀 수 있습니다.  
@@ -407,7 +390,7 @@ if (performance && performance.mark) {
   
 -   JavaScript 메모리 분석기에 대한 Build 2013 컨퍼런스에서 [이 비디오](http://channel9.msdn.com/Events/Build/2013/3-316) 의 뒷부분을 시청하세요.  
   
--   [Windows 스토어 앱에서 메모리 관리](http://msdn.microsoft.com/magazine/jj651575.aspx)를 참조합니다.  
+-   [UWP 앱에서 메모리 관리](http://msdn.microsoft.com/magazine/jj651575.aspx)를 참조하세요.  
   
 -   임시로 코드를 수정하여 문제를 격리하는 방법도 있습니다. 예를 들어, 다음을 수행합니다.  
   

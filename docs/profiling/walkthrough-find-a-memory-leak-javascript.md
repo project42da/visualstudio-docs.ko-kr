@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -13,39 +12,22 @@ dev_langs:
 - VB
 - FSharp
 - C++
-helpviewer_keywords:
-- memory leaks, JavaScript example
+helpviewer_keywords: memory leaks, JavaScript example
 ms.assetid: f595412f-776b-49a2-8433-ea0062c6904d
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7e848a57962636a8ca346e809f3dadad675a7963
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 1f31221f52e9e944dcfc82c98d18e2cf5ec263bf
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="walkthrough-find-a-memory-leak-javascript"></a>연습: 메모리 누수 찾기(JavaScript)
-![Windows 및 Windows Phone에 적용됨](~/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- 이 연습에서는 JavaScript 메모리 분석기를 사용하여 간단한 메모리 문제를 식별하고 수정하는 과정을 안내합니다. JavaScript 메모리 분석기는 JavaScript를 사용하여 Windows용으로 작성된 Visual Studio for Windows 스토어 앱에서 사용할 수 있습니다. 이 시나리오에서는 DOM 요소를 만들어질 때와 같은 속도로 삭제하지 않고 메모리에 잘못 유지하는 앱을 만듭니다.  
+ 이 연습에서는 JavaScript 메모리 분석기를 사용하여 간단한 메모리 문제를 식별하고 수정하는 과정을 안내합니다. JavaScript를 사용하여 Windows용으로 작성된 UWP 앱에 대한 JavaScript 메모리 분석기는 Visual Studio에서 사용할 수 있습니다. 이 시나리오에서는 DOM 요소를 만들어질 때와 같은 속도로 삭제하지 않고 메모리에 잘못 유지하는 앱을 만듭니다.  
   
  이 앱의 메모리 누수 원인은 매우 구체적이지만 여기에 나와 있는 단계에서는 메모리가 누수되는 개체를 격리하는 데 일반적으로 효과적인 워크플로를 보여줍니다.  
   
@@ -154,13 +136,13 @@ ms.lasthandoff: 02/22/2017
 1.  **디버그** 도구 모음의 **디버깅 시작** 목록에서 업데이트된 프로젝트의 디버그 대상을 Windows Phone 에뮬레이터 또는 **시뮬레이터**중에 선택합니다.  
   
     > [!TIP]
-    >  Windows 스토어 앱의 경우 이 목록에서 **로컬 컴퓨터** 또는 **원격 컴퓨터** 를 선택할 수도 있습니다. 그러나 에뮬레이터 또는 시뮬레이터를 사용하면 Visual Studio 옆에 두고 실행 중인 앱과 JavaScript 메모리 분석기 간을 쉽게 전환할 수 있습니다. 자세한 내용은 [Visual Studio에서 앱 실행](../debugger/run-store-apps-from-visual-studio.md) 및 [원격 컴퓨터에서 Windows 스토어 앱 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md)을 참조하세요.  
+    >  UWP 앱의 경우 이 목록에서 **로컬 컴퓨터** 또는 **원격 컴퓨터**를 선택할 수도 있습니다. 
   
 2.  **디버그** 메뉴에서 **성능 프로파일러...**를 선택합니다.  
   
 3.  **사용 가능한 도구**에서 **JavaScript 메모리**를 선택한 다음 **시작**을 선택합니다.  
   
-     이 자습서에서는 시작 프로젝트에 메모리 분석기를 연결합니다. 설치된 앱에 메모리 분석기 연결 등의 기타 옵션에 대한 자세한 내용은 [JavaScript 메모리](../profiling/javascript-memory.md)를 참조하세요.  
+     이 자습서에서는 시작 프로젝트에 메모리 분석기를 연결합니다. 설치된 앱에 메모리 분석기 연결 등의 기타 옵션에 대한 자세한 내용은 [JavaScript 메모리](../profiling/javascript-memory.md)를 선택합니다.  
   
      메모리 분석기를 시작하면 VsEtwCollector.exe 실행 권한을 요청하는 사용자 계정 컨트롤이 표시될 수 있습니다. **예**를 선택합니다.  
   
@@ -175,7 +157,7 @@ ms.lasthandoff: 02/22/2017
   
      Visual Studio 새 탭에 JavaScript 메모리 분석기가 표시됩니다.  
   
-     이 요약 뷰의 메모리 그래프는 시간별 프로세스 메모리 사용을 보여 줍니다. 뷰에서는 **힙 스냅숏 만들기**와 같은 명령도 제공합니다. 스냅숏은 특정 시간의 메모리 사용에 대한 자세한 정보를 제공합니다. 자세한 내용은 [JavaScript 메모리](../profiling/javascript-memory.md)를 참조하세요.  
+     이 요약 뷰의 메모리 그래프는 시간별 프로세스 메모리 사용을 보여 줍니다. 뷰에서는 **힙 스냅숏 만들기**와 같은 명령도 제공합니다. 스냅숏은 특정 시간의 메모리 사용에 대한 자세한 정보를 제공합니다. 자세한 내용은 [JavaScript 메모리](../profiling/javascript-memory.md)를 선택합니다.  
   
 6.  **힙 스냅숏 만들기**를 클릭합니다.  
   
@@ -228,7 +210,7 @@ ms.lasthandoff: 02/22/2017
   
 15. 다음과 같이 개체 트리의 맨위에 있는 HTMLDivElement 개체를 엽니다.  
   
-     ![힙의 개체 개수 차이 뷰](~/profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
+     ![힙의 개체 개수 차이 뷰](../profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
   
      이 뷰에서는 다음과 같이 메모리 누수에 대한 유용한 정보를 보여 줍니다.  
   
@@ -254,7 +236,7 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-     '`elem.removeNode(true)`는 올바르게 작동하지 않을 것입니다. 코드가 DOM 요소를 어떻게 캐시하는지 검사하고 문제를 찾습니다. 캐시된 요소에 대한 참조는 업데이트되지 않습니다.  
+     '`elem.removeNode(true)` 는 올바르게 작동하지 않을 것입니다. 코드가 DOM 요소를 어떻게 캐시하는지 검사하고 문제를 찾습니다. 캐시된 요소에 대한 참조는 업데이트되지 않습니다.  
   
 2.  default.js에서 `appendChild`호출 직전에 다음 코드 줄을 load 함수에 추가합니다.  
   

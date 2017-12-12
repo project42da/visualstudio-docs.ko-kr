@@ -4,8 +4,7 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,37 +13,21 @@ dev_langs:
 - FSharp
 - C++
 helpviewer_keywords:
-- performance, JavaScript [Windows Store apps]
-- performance tools, JavaScript [Windows Store apps]
+- performance, JavaScript [UWP apps]
+- performance tools, JavaScript [UWP apps]
 - UI Responsiveness Profiler [JavaScript]
 - profiler, UI responsiveness [JavaScript]
-- profiler, JavaScript [Windows Store apps]
+- profiler, JavaScript [UWP apps]
 ms.assetid: da13070a-ba40-47dd-a846-ad72eed70d0b
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 90fed413835f118e59bc32f0b94cb62a40baaca1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: bee8bdc56586f1c79ff10d8d2b70e30801f54254
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>유니버설 Windows 앱의 HTML UI 응답성 분석
 이 항목에서는 유니버설 Windows 앱에 사용할 수 있는 성능 도구인 UI 응답성 프로파일러를 사용하여 앱에서 성능 문제를 격리하는 방법에 대해 설명합니다.  
@@ -58,7 +41,7 @@ ms.lasthandoff: 05/13/2017
 -   예상보다 빈도가 낮은 시각적 개체 업데이트. UI 스레드의 사용량이 너무 많아 부드러운 프레임 속도를 유지할 수 없을 경우 발생합니다. 예를 들어, UI 스레드가 사용 중인 경우 프레임이 손실될 수도 있습니다. 또한 네트워크 요청, 이미지 디코딩, 그리기 등의 일부 UI가 아닌 스레드 작업이 시각적 개체 업데이트 빈도를 제한할 수도 있습니다. (모든 그리기가 UI 스레드에서 수행되지는 않습니다.)  
   
 ##  <a name="RunningProfiler"></a> HTML UI 응답성 도구 실행  
- Visual Studio에 작업 중인 Windows 유니버설 또는 Windows 스토어 앱이 열려 있거나 Windows 8 이상을 실행 중인 컴퓨터에 설치되어 있는 경우 HTML UI 응답성 도구를 사용할 수 있습니다.  
+ 작업 중인 UWP 또는 Windows 8.1 앱이 Visual Studio에서 열려 있거나 Windows 8 이상을 실행하는 컴퓨터에 설치되어 있는 경우 HTML UI 응답성 도구를 사용할 수 있습니다.  
   
 1.  Visual Studio에서 응용 프로그램을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 Windows Phone 에뮬레이터, **로컬 컴퓨터**, **시뮬레이터**또는 **원격 컴퓨터**등의 배포 대상을 선택합니다.  
   
@@ -72,7 +55,7 @@ ms.lasthandoff: 05/13/2017
   
     -   **시작 프로젝트**. 현재 시작 프로젝트를 분석하려면 이 옵션을 선택합니다. 원격 컴퓨터 또는 장치에서 앱을 실행 중인 경우 기본값인 이 설정을 사용해야 합니다.  
   
-    -   **실행 중인 응용 프로그램**. 실행 중인 응용 프로그램 목록에서 Windows 스토어 앱을 선택하려면 이 옵션을 선택합니다. 원격 컴퓨터 또는 장치에서 앱을 실행 중인 경우 이 옵션을 사용할 수 없습니다.  
+    -   **실행 중인 응용 프로그램**. 실행 중인 앱 목록에서 UWP 앱을 선택하려면 이 옵션을 선택합니다. 원격 컴퓨터 또는 장치에서 앱을 실행 중인 경우 이 옵션을 사용할 수 없습니다.  
   
          소스 코드에 액세스할 수 없을 때 이 옵션을 사용하여 컴퓨터에서 실행 중인 앱의 성능을 분석할 수 있습니다.  
   
@@ -80,7 +63,8 @@ ms.lasthandoff: 05/13/2017
   
          소스 코드에 액세스할 수 없을 때 이 옵션을 사용하여 컴퓨터에 설치한 앱의 성능을 분석할 수 있습니다. 사용자가 직접 개발하는 응용 프로그램을 제외한 모든 응용 프로그램의 성능을 분석하려는 경우에도 이 옵션이 유용할 수 있습니다.  
   
-3.  **사용 가능한 도구**에서 **HTML UI 응답성**을 선택한 다음 **시작**을 선택합니다.  
+3.  
+                **사용 가능한 도구**에서 **HTML UI 응답성**을 선택한 다음 **시작**을 선택합니다.  
   
 4.  UI 응답성 프로파일러를 시작할 때 사용자 계정 컨트롤 창이 표시되어 Visual Studio ETW Collector.exe를 실행할 수 있는 권한을 요청할 수 있습니다. **예**를 선택합니다.  
   
@@ -170,7 +154,7 @@ if (performance && performance.mark) {
  사용자 표시 위에 마우스 포인터를 놓으면 이벤트에 대한 이 설명이 도구 설명으로 표시됩니다. 필요한 만큼 사용자 표식을 추가할 수 있습니다.  
   
 > [!NOTE]
-> Chrome 명령인 `console.timeStamp`명령도 사용자 표식으로 표시됩니다.  
+>  Chrome 명령인`console.timeStamp`명령도 사용자 표식으로 표시됩니다.  
   
  다음 그림은 단일 사용자 표시 및 해당 도구 설명이 포함된 진단 눈금자를 나타냅니다.  
   
@@ -375,7 +359,7 @@ if (performance.mark && performance.measure) {
   
 -   UI 응답성 프로파일러에 대한 Build 2013 컨퍼런스에서 [이 비디오](http://channel9.msdn.com/Events/Build/2013/3-316) 를 시청하십시오.  
   
--   JavaScript를 사용하여 Windows에 대해 빌드된 Windows 저장소 앱의 성능 팁을 읽어 보세요. 자세한 내용은 [JavaScript를 사용하는 Windows 스토어 앱의 성능 모범 사례](http://msdn.microsoft.com/library/windows/apps/hh465194.aspx)를 참조하십시오.  
+-   JavaScript를 사용하여 Windows용으로 작성된 UWP 앱에 대한 성능 팁을 참조하세요. 자세한 내용은 [JavaScript를 사용하는 UWP 앱의 성능 모범 사례](http://msdn.microsoft.com/library/windows/apps/hh465194.aspx)를 참조하세요.  
   
 -   단일 스레드 코드 실행 모델 및 성능에 대한 자세한 내용은 [코드 실행 중](http://msdn.microsoft.com/library/windows/apps/hh781217.aspx)을 참조하십시오.  
   
