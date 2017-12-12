@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-display-an-item-list-separated-with-commas"></a>방법: 항목 목록을 쉼표로 구분하여 표시
-[!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)]([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)])에서 항목 목록을 사용할 때 쉽게 읽을 수 있는 방식으로 해당 항목 목록의 내용을 표시하는 데 유용합니다. 또는 특별한 구분 기호 문자열로 구분된 항목의 목록을 사용하는 작업이 있을 수 있습니다. 이러한 모든 경우에 항목 목록에 대한 구분 기호 문자열을 지정할 수 있습니다.  
+[!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)])에서 항목 목록을 사용할 때 쉽게 읽을 수 있는 방식으로 해당 항목 목록의 내용을 표시하는 데 유용합니다. 또는 특별한 구분 기호 문자열로 구분된 항목의 목록을 사용하는 작업이 있을 수 있습니다. 이러한 모든 경우에 항목 목록에 대한 구분 기호 문자열을 지정할 수 있습니다.  
   
 ## <a name="separating-items-in-a-list-with-commas"></a>목록에서 항목을 쉼표로 구분  
  기본적으로 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 세미콜론을 사용하여 목록에서 항목을 구분합니다. 예를 들어 다음 값을 가진 `Message` 요소가 있습니다.  
