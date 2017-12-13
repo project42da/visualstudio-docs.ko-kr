@@ -13,11 +13,11 @@ caps.latest.revision: "65"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 5ac7781ecb53727572a9d8594f4a65c5e9c6628c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 9d35ce547e216f632f56cf8bf445b115290486cc
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="get-started-developing-with-visual-studio"></a>Get Started Developing with Visual Studio
 클라우드를 비롯한 다양한 환경에서 제품을 [다운로드](http://www.visualstudio.com/community) 한 후 다음 페이지에서 코딩을 시작하는 데 도움을 얻을 수 있습니다.  
@@ -32,11 +32,11 @@ ms.lasthandoff: 10/31/2017
 
 -   **[C# 또는 Visual Basic(Xamarin)으로 플랫폼 간 모바일 앱 만들기](../cross-platform/visual-studio-and-xamarin.md)**: Visual Studio 및 Xamarin용 도구를 사용하여 Android, iOS 및 유니버설 Windows 플랫폼에서 실행되는 모바일 앱을 공유 코드베이스를 활용하여 만들기 시작할 수 있습니다.  
 
-     샘플 로드: [Tasky Portable](http://developer.xamarin.com/samples/mobile/TaskyPortable/)(네이티브 UI) 또는 [Xamarin Forms Todo 샘플](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)(Xamarin.Forms 공유 UI) &#124; [자습서 수행](https://msdn.microsoft.com/library/dn879698.aspx) &#124; [문서 찾아보기](https://msdn.microsoft.com/en-us/library/mt299001.aspx) &#124; [동영상 시청](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)  
+     샘플 로드: [Tasky Portable](http://developer.xamarin.com/samples/mobile/TaskyPortable/)(네이티브 UI) 또는 [Xamarin Forms Todo 샘플](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)(Xamarin.Forms 공유 UI) &#124; [자습서 수행](../cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md) &#124; [문서 찾아보기](../cross-platform/visual-studio-and-xamarin.md) &#124; [동영상 시청](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)  
 
 -   **[C++로 네이티브 플랫폼 간 앱 및 라이브러리 만들기](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)** Android, iOS 및 유니버설 Windows 플랫폼에서 실행되는 C++ 앱 및 라이브러리를 만들기 시작하려면 여기로 이동하세요.  
 
-     [샘플 로드](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549) &#124;   [자습서 수행](https://msdn.microsoft.com/en-us/library/dn707595.aspx) &#124;                               [문서 찾아보기](https://msdn.microsoft.com/en-us/library/dn707591.aspx) &#124;                                [동영상 시청](https://channel9.msdn.com/Series/ConnectOn-Demand/239)  
+     [샘플 로드](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549) &#124;   [자습서 수행](../cross-platform/create-an-android-native-activity-app.md) &#124;                               [문서 찾아보기](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md) &#124;                                [동영상 시청](https://channel9.msdn.com/Series/ConnectOn-Demand/239)  
 
 -   **[DirectX로 게임 만들기](https://msdn.microsoft.com/en-us/library/windows/desktop/ee663274.aspx)**: DirectX를 사용하여 유니버설 Windows 플랫폼 게임을 만들기 시작할 수 있습니다.  
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 10/31/2017
 
 -   **[Unity로 게임 만들기](../cross-platform/visual-studio-tools-for-unity.md)**: Unity 프레임워크를 사용하여 플랫폼 간 게임을 만들기 시작할 수 있습니다.  
 
-     [샘플 로드](http://unity3d.com/learn/resources/downloads) &#124;                    [자습서 수행](http://unity3d.com/learn/tutorials/projects/roll-ball-tutorial) &#124;                               [문서 찾아보기](https://msdn.microsoft.com/en-us/library/dn940019.aspx) &#124;                                [동영상 시청](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)  
+     [샘플 로드](http://unity3d.com/learn/resources/downloads) &#124;                    [자습서 수행](http://unity3d.com/learn/tutorials/projects/roll-ball-tutorial) &#124;                               [문서 찾아보기](../cross-platform/visual-studio-tools-for-unity.md) &#124;                                [동영상 시청](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)  
 
 -   **[유니버설 Windows 플랫폼 앱 만들기](https://dev.windows.com/en-us/windows-apps)** : 유니버설 Windows 플랫폼(XBox, PC, 태블릿, Windows Phone, Surface Hub 및 사물 인터넷)에서 실행되는 앱을 만들기 시작할 수 있습니다.  
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 10/31/2017
 
 -   **[데스크톱 응용 프로그램 만들기](https://dev.windows.com/en-us/desktop)** : Windows PC에서 실행되는 기존 데스크톱 응용 프로그램을 만들기 시작하려면 여기로 이동하세요.  
 
-     [샘플 로드](https://github.com/microsoft/windows-classic-samples) &#124;                     [자습서 수행](https://msdn.microsoft.com/en-us/library/dd492171.aspx) &#124;                               [문서 찾아보기](https://dev.windows.com/en-us/desktop)  
+     [샘플 로드](https://github.com/microsoft/windows-classic-samples) &#124;                     [자습서 수행](getting-started-with-visual-csharp-and-visual-basic.md) &#124;                               [문서 찾아보기](https://dev.windows.com/en-us/desktop)  
 
 -   **[Office 응용 프로그램 만들기](https://msdn.microsoft.com/en-us/library/fp161347.aspx)** : Office 365 서비스를 사용하여 Word, Excel, Outlook 및 Powerpoint를 확장 및 사용자 지정하는 Office 응용 프로그램을 만들기 시작할 수 있습니다.  
 

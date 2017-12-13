@@ -11,11 +11,11 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: dba101890bd2f27c85e8e6053944d8781fa03ed4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 4f525157e9e34838be4379f8df0845b294880f11
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="setup-and-install"></a>설정 및 설치
 Xamarin을 사용하여 일반적인 C#/.NET 코드베이스에서 네이티브 iOS, Android 및 Windows 앱을 빌드하려면 다음이 필요합니다.  
@@ -50,7 +50,7 @@ Xamarin을 사용하여 일반적인 C#/.NET 코드베이스에서 네이티브 
 ##  <a name="windows"></a> Windows 설치(Visual Studio 및 Xamarin)  
   
 > [!TIP]
->  이러한 지침은 Visual Studio 2017에 적용됩니다. Visual Studio 2015에 대해서는 [MSDN](https://msdn.microsoft.com/en-us/library/mt613162.aspx)을 참조하세요. Visual Studio 2013(업데이트 2 필요)에서 Xamarin을 사용하려면 [직접 Xamarin 설치](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install)(xamarin.com)의 지침을 따릅니다.  
+>  이러한 지침은 Visual Studio 2017에 적용됩니다. Visual Studio 2015에 대해서는 [MSDN](setup-and-install.md)을 참조하세요. Visual Studio 2013(업데이트 2 필요)에서 Xamarin을 사용하려면 [직접 Xamarin 설치](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install)(xamarin.com)의 지침을 따릅니다.  
   
 1.  [어떤 버전이든 Visual Studio 2017 설치 관리자를 다운로드하여 설치합니다](https://www.visualstudio.com/downloads/)(Community, Professional 또는 Enterprise). Visual Studio 2017 Community는 무료 버전이고, Professional 및 Enterprise 버전은 30일 평가판으로 사용할 수 있으며 평가 기간 이후에는 라이선스를 구매해야 합니다.  
   

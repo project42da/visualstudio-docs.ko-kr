@@ -15,11 +15,11 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 75a333c7e5948e13db0c0c91b41128914e23222b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: fb4da07f2ee8d4c30717209ee07221285a8275ee
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
 이 연습에서는 WPF(Windows Presentation Foundation) 개발에 대해 소개합니다. XAML 태그, 코드 숨김, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩, 스타일 등 대부분의 WPF 데스크톱 응용 프로그램에 공통된 요소를 포함하는 기본 응용 프로그램을 만듭니다.  
@@ -851,40 +851,40 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="Best_Practices"></a> 모범 사례  
  이 샘플은 WPF의 기본 사항을 보여 주므로 응용 프로그램 개발 모범 사례를 따르지 않습니다. WPF 및 .NET Framework 응용 프로그램 개발 모범 사례에 대한 자세한 내용은 다음 항목을 적절하게 참조하세요.  
   
--   접근성 - [접근성에 대한 유용한 정보](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)  
+-   접근성 - [접근성에 대한 유용한 정보](/dotnet/framework/ui-automation/accessibility-best-practices)  
   
--   보안 - [Windows Presentation Foundation 보안](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
+-   보안 - [Windows Presentation Foundation 보안](/dotnet/framework/wpf/security-wpf)  
   
--   지역화 - [WPF 전역화 및 지역화 개요](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
+-   지역화 - [WPF 전역화 및 지역화 개요](/dotnet/framework/wpf/advanced/wpf-globalization-and-localization-overview)  
   
--   성능 - [WPF 응용 프로그램 성능 최적화](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
+-   성능 - [WPF 응용 프로그램 성능 최적화](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)  
   
 ##  <a name="Whats_Next"></a> 새로운 기능  
  이제 WPF를 사용하여 데스크톱 응용 프로그램을 만들기 위한 다양한 기술을 사용할 수 있습니다. 데이터 바인딩된 WPF 응용 프로그램의 구성 요소에 대해 기본적인 내용을 이해하고 있을 것입니다. 이 항목은 전체 목록이 아니며 이 항목에 설명된 기술 외의 가능성을 스스로 발견할 수도 있습니다.  
   
  WPF 아키텍처 및 프로그래밍 모델에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [WPF 아키텍처](https://msdn.microsoft.com/en-us/library/ms750441\(v=vs.100\).aspx)  
+-   [WPF 아키텍처](/dotnet/framework/wpf/advanced/wpf-architecture)  
   
--   [XAML 개요](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)  
+-   [XAML 개요](/dotnet/framework/wpf/advanced/xaml-overview-wpf)  
   
--   [종속성 속성 개요](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx)  
+-   [종속성 속성 개요](/dotnet/framework/wpf/advanced/dependency-properties-overview)  
   
--   [레이아웃 시스템](https://msdn.microsoft.com/en-us/library/ms745058\(v=vs.100\).aspx)  
+-   [레이아웃 시스템](/dotnet/framework/wpf/advanced/layout)  
   
--   [스타일 및 템플릿](https://msdn.microsoft.com/en-us/library/bb613570\(v=vs.100\).aspx)  
+-   [스타일 및 템플릿](/dotnet/framework/wpf/controls/styles-and-templates)  
   
  응용 프로그램을 만드는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [응용 프로그램 개발 개요](https://msdn.microsoft.com/en-us/library/bb613549\(v=vs.100\).aspx)  
+-   [응용 프로그램 개발 개요](/dotnet/framework/wpf/app-development/index)  
   
--   [컨트롤 개요](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)  
+-   [컨트롤 개요](/dotnet/framework/wpf/controls/index)  
   
--   [데이터 바인딩 개요](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)  
+-   [데이터 바인딩 개요](/dotnet/framework/wpf/data/data-binding-overview)  
   
--   [WPF 그래픽, 애니메이션 및 미디어 개요](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)  
+-   [WPF 그래픽, 애니메이션 및 미디어 개요](https://msdn.microsoft.com/en-us/library/ms742562)  
   
--   [WPF의 문서](https://msdn.microsoft.com/en-us/library/ms748388\(v=vs.100\).aspx)  
+-   [WPF의 문서](/dotnet/framework/wpf/advanced/documents-in-wpf)  
   
 ## <a name="see-also"></a>참고 항목  
 [Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

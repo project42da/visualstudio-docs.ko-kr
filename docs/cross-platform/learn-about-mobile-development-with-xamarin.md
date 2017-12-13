@@ -11,11 +11,11 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d203bf88f5af6e69b97404ef8da4548f646750b3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: fe983de5dab35a031d6c99b37f2da77a200212f9
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Xamarin을 사용한 모바일 개발에 대해 알아보기
 이 항목에서는 Xamarin을 사용한 플랫폼 간 모바일 앱 개발을 이해하는 데 도움되는 개요 자료를 안내합니다. 아직 Visual Studio 및 Xamarin을 설치하지 않았으면 먼저 [Setup and install](../cross-platform/setup-and-install.md) 프로세스를 시작하고 여기로 돌아와서 설치 관리자가 실행되는 동안 이러한 리소스를 살펴봅니다.  
@@ -94,7 +94,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  **Apple iOS 시뮬레이터.** 자세한 내용은 [iOS 시뮬레이터 시작](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1) (영문)(apple.com)을 참조하세요.  
   
-3.  **Microsoft's Windows Phone Emulator.** 자세한 내용은 [Windows Phone 8용 Windows Phone Emulator](https://msdn.microsoft.com/library/dn632391.aspx)(영문)를 참조하세요.  
+3.  **Microsoft's Windows Phone Emulator.** 자세한 내용은 [Windows Phone 8용 Windows Phone Emulator](../debugger/run-windows-phone-apps-in-the-emulator.md)(영문)를 참조하세요.  
   
 ##  <a name="components"></a> Deeper Dive: Xamarin Components  
  *10분*  

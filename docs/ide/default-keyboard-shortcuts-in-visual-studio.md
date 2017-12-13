@@ -13,25 +13,23 @@ helpviewer_keywords:
 - Help [Visual Studio], shortcut keys
 - keyboard shortcuts [Visual Studio], keyboard binding schemes
 - keyboard shortcuts
-ms.assetid: c2c64648-00f8-4e48-a8a0-96c67cfd968c
-caps.latest.revision: "55"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2926543ca041ac2b2cc25bc178b99bbafd2407db
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 335589c6487d99726b86921fa988dce64dd384b8
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio의 기본 바로 가기 키
 키보드 접근성에 대한 자세한 내용은 [접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md) 및 [방법: 단독으로 키보드 사용](../ide/reference/how-to-use-the-keyboard-exclusively.md)을 참조하세요.
 
 해당 바로 가기 키를 선택하여 Visual Studio의 다양한 명령 및 창에 액세스할 수 있습니다. 이 항목에는 Visual Studio를 설치할 때 선택한 일반 개발 프로필의 기본 바로 가기 목록이 나와 있습니다. 선택한 프로필에 관계없이 **옵션** 대화 상자를 열고 **환경** 노드를 확장한 다음 **키보드**를 선택하여 명령의 바로 가기를 확인할 수 있습니다. 또한 지정한 명령에 다른 바로 가기를 할당하여 바로 가기를 사용자 지정할 수도 있습니다.
 
- 일반적인 바로 가기 키 목록과 기타 생산성 정보는 [Visual Studio에서 자주 사용되는 명령의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md), [팁과 요령](../ide/tips-and-tricks-for-visual-studio.md) 및 [생산성 팁](../ide/productivity-tips-for-visual-studio.md)을 참조하세요.
+일반적인 바로 가기 키 목록과 기타 생산성 정보는 [Visual Studio에서 자주 사용되는 명령의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md), [팁과 요령](../ide/tips-and-tricks-for-visual-studio.md) 및 [생산성 팁](../ide/productivity-tips-for-visual-studio.md)을 참조하세요.
 
- 다음 표의 섹션에는 Visual Studio의 어디서나 바로 가기 키를 사용하여 액세스할 수 있는 전역 명령이 나와 있습니다.  
+다음 표의 섹션에는 Visual Studio의 어디서나 바로 가기 키를 사용하여 액세스할 수 있는 전역 명령이 나와 있습니다.
 
 |||||  
 |-|-|-|-|  
@@ -43,12 +41,12 @@ ms.lasthandoff: 10/31/2017
 |[디버거 상황에 맞는 메뉴](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debugger)|[기타 상황에 맞는 메뉴](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_otherContext)|[Team Foundation 상황에 맞는 메뉴](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFcontext)|[Azure](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_windowsazure)|  
 |[진단 허브](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diagnostics)||||  
 
- 다음 표의 각 섹션에는 섹션 이름에 해당하는 컨텍스트와 관련된 바로 가기 키의 명령이 나와 있습니다.  
+다음 표의 각 섹션에는 섹션 이름에 해당하는 컨텍스트와 관련된 바로 가기 키의 명령이 나와 있습니다.
 
 |||||  
 |-|-|-|-|  
 |[ADO.NET 엔터티 데이터 모델 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_ADONET)|[레이어 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_layerDiagram)|[설정 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SettingsDesigner)|[VC 이미지 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcimageeditor)|  
-|[클래스 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classDiagram)|[관리되는 리소스 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_managedResources)|[솔루션 탐색기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SolutionExplorer)|[VC 문자열 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcstringeditor)|  
+|[클래스 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classDiagram)|[관리되는 리소스 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_managedResources)|[솔루션 탐색기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SolutionExplorer)|[VC 문자열 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcstringeditor)|
 |[코딩된 UI 테스트 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_codedUItest)|[병합 편집기 창](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_MergeEditor)|[팀 탐색기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TeamExplorer)|[뷰 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_viewDesigner)|  
 |[데이터 집합 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_dataset)|[Microsoft SQL Server Data Tools, 스키마 비교](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SchemaCompare)|[Team Foundation Build 정보 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFBuild)|[Visual Studio](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_visualstudio)|  
 |[차이점 뷰어](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diff)|[Microsoft SQL Server Data Tools, 테이블 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TableDesigner)|[테스트 탐색기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TestExplorer)|[Windows Forms 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_wfdesigner)|  
@@ -56,26 +54,26 @@ ms.lasthandoff: 10/31/2017
 |[F# Interactive](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_FSharp)|[Microsoft SQL Server Data Tools, T-SQL PDW 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_linkfix)|[UML 동작 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLactivityDiagram)|[작업 항목 쿼리 뷰](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_WIqueryview)|  
 |[그래프 문서 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_graphDoc)|[페이지 검사기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_PageInspector)|[UML 클래스 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLclassDiagram)|[작업 항목 결과 뷰](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_WIresultsview)|  
 |[그래픽 진단](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_graphicsDebugger)|[쿼리 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_QueryDesigner)|[UML 구성 요소 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLcomponentDiagram)|[워크플로 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_workflowdesigner)|  
-|[HTML 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditor)|[쿼리 결과](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_QueryResults)|[UML 사용 사례 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLusecaseDiagram)|[XAML UI 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xamluidesigner)|  
+|[HTML 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditor)|[쿼리 결과](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_QueryResults)|[UML 사용 사례 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLusecaseDiagram)|[XAML UI 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xamluidesigner)|
 |[HTML 편집기 디자인 뷰](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditorDesign)|[보고서 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_ReportDesigner)|[VC 액셀러레이터 키 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcaccelerator)|[XML(텍스트) 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xmlTextEditor)|  
 |[HTML 편집기 소스 뷰](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditorSource)|[시퀀스 다이어그램](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SequenceDiagram)|[VC 대화 상자 편집기](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcdialogeditor)|[XML 스키마 디자이너](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xmlSchemaDesigner)|  
 
-##  <a name="bkmk_global"></a> 전역  
+##  <a name="bkmk_global"></a> 전역
 
-###  <a name="bkmk_analyze"></a> 분석  
+###  <a name="bkmk_analyze"></a> 분석
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Analyze.NavigateBackward|Shift+Alt+3|  
 |Analyze.NavigateForward|Shift+Alt+4|  
 
-###  <a name="bkmk_architecture"></a> 아키텍처  
+###  <a name="bkmk_architecture"></a> 아키텍처
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Architecture.NewDiagram|Ctrl+\\, Ctrl+N|  
 
-###  <a name="bkmk_build"></a> 빌드  
+###  <a name="bkmk_build"></a> 빌드
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -84,13 +82,13 @@ ms.lasthandoff: 10/31/2017
 |빌드.컴파일|Ctrl+F7|  
 |Build.RunCodeAnalysisonSolution|Alt+F11|  
 
-###  <a name="bkmk_classview"></a> 클래스 뷰 상황에 맞는 메뉴  
+###  <a name="bkmk_classview"></a> 클래스 뷰 상황에 맞는 메뉴
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |ClassViewContextMenus.ClassViewMultiselectProjectreferencesItems.Properties|Alt+Enter|  
 
-###  <a name="bkmk_debug"></a> 디버그  
+###  <a name="bkmk_debug"></a> 디버그
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -158,7 +156,7 @@ ms.lasthandoff: 10/31/2017
 |디버그.조사식3|Ctrl+Alt+W, 3|  
 |디버그.조사식4|Ctrl+Alt+W, 4|  
 
-###  <a name="bkmk_debugger"></a> 디버거 상황에 맞는 메뉴  
+###  <a name="bkmk_debugger"></a> 디버거 상황에 맞는 메뉴
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -166,13 +164,13 @@ ms.lasthandoff: 10/31/2017
 |디버거상황에맞는메뉴.중단점창.디스어셈블리로이동|Alt+F9, A|  
 |디버거상황에맞는메뉴.중단점창.소스코드로이동|Alt+F9, S|  
 
-###  <a name="bkmk_diagnostics"></a> 진단 허브  
+###  <a name="bkmk_diagnostics"></a> 진단 허브
 
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |DiagnosticsHub.StopCollection|Ctrl+Alt+F2|  
 
-###  <a name="bkmk_edit"></a> 편집  
+###  <a name="bkmk_edit"></a> 편집
 
 |명령||  
 |--------------|-|  
@@ -231,7 +229,7 @@ ms.lasthandoff: 10/31/2017
 |편집.코드감싸기|Ctrl+K, Ctrl+S|  
 |편집.실행취소|Ctrl+Z<br /><br /> 또는<br /><br /> Alt+백스페이스|  
 
-###  <a name="bkmk_editorContext"></a> 편집기 상황에 맞는 메뉴  
+###  <a name="bkmk_editorContext"></a> 편집기 상황에 맞는 메뉴
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -242,7 +240,7 @@ ms.lasthandoff: 10/31/2017
 |EditorContextMenus.CodeWindow.ToggleHeaderCodeFile|Ctrl+K, Ctrl+O|  
 |EditorContextMenus.CodeWindow.ViewCallHierarchy|Ctrl+K, Ctrl+T<br /><br /> 또는<br /><br /> Ctrl+K, T|  
 
-###  <a name="bkmk_file"></a> 파일  
+###  <a name="bkmk_file"></a> 파일
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -258,7 +256,7 @@ ms.lasthandoff: 10/31/2017
 |파일.선택한항목저장|Ctrl+S|  
 |파일.브라우저에서보기|Ctrl+Shift+W|  
 
-###  <a name="bkmk_help"></a> 도움말  
+###  <a name="bkmk_help"></a> 도움말
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -267,19 +265,19 @@ ms.lasthandoff: 10/31/2017
 |도움말.도움말보기|Ctrl+F1|  
 |도움말.창도움말|Shift+F1|  
 
-###  <a name="bkmk_loadtest"></a> 부하 테스트  
+###  <a name="bkmk_loadtest"></a> 부하 테스트
 
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |LoadTest.JumpToCounterPane|Ctrl+R, Q|  
 
-###  <a name="bkmk_otherContext"></a> 기타 상황에 맞는 메뉴  
+###  <a name="bkmk_otherContext"></a> 기타 상황에 맞는 메뉴
 
 |명령|바로 가기 키|  
 |-------------|-----------------------|  
 |OtherContextMenus.MicrosoftDataEntityDesignContext.AddNewDiagram|Insert|  
 
-###  <a name="bkmk_project"></a> 프로젝트  
+###  <a name="bkmk_project"></a> 프로젝트
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -291,14 +289,14 @@ ms.lasthandoff: 10/31/2017
 |Project.Publishselectedfiles|Alt+;, Alt+P|  
 |Project.Replaceselectedfilesfromserver|Alt+;, Alt+R|  
 
-###  <a name="bkmk_projectContext"></a> 프로젝트 및 솔루션 상황에 맞는 메뉴  
+###  <a name="bkmk_projectContext"></a> 프로젝트 및 솔루션 상황에 맞는 메뉴
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |ProjectandSolutionContextMenus.Item.MoveDown|Alt+아래쪽 화살표|  
 |ProjectandSolutionContextMenus.Item.MoveUp|Alt+위쪽 화살표|  
 
-###  <a name="bkmk_refactor"></a> 리팩터링  
+###  <a name="bkmk_refactor"></a> 리팩터링
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -309,7 +307,7 @@ ms.lasthandoff: 10/31/2017
 |리팩터링.이름바꾸기|Ctrl+R, Ctrl+R|  
 |리팩터링.매개변수다시정렬|Ctrl+R, Ctrl+O|  
 
-###  <a name="bkmk_solutionexplorerGLOBAL"></a> 솔루션 탐색기  
+###  <a name="bkmk_solutionexplorerGLOBAL"></a> 솔루션 탐색기
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -317,7 +315,7 @@ ms.lasthandoff: 10/31/2017
 |SolutionExplorer.PendingChangesFilter|Ctrl+[, P<br /><br /> 또는<br /><br /> Ctrl+[, Ctrl+P|  
 |SolutionExplorer.SyncWithActiveDocument|Ctrl+[, S<br /><br /> 또는<br /><br /> Ctrl+[, Ctrl+S|  
 
-###  <a name="bkmk_team"></a> 팀  
+###  <a name="bkmk_team"></a> 팀
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -326,7 +324,7 @@ ms.lasthandoff: 10/31/2017
 |Team.Git.GoToGitCommits|Ctrl+0, Ctrl+O<br /><br /> 또는<br /><br /> Ctrl+0, O|  
 |Team.TeamExplorerSearch|Ctrl+'|  
 
-###  <a name="bkmk_TFcontext"></a> Team Foundation 상황에 맞는 메뉴  
+###  <a name="bkmk_TFcontext"></a> Team Foundation 상황에 맞는 메뉴
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -341,14 +339,14 @@ ms.lasthandoff: 10/31/2017
 |TeamFoundationContextMenus.Commands.GoToWebAccess|Ctrl+0, Ctrl+A<br /><br /> 또는<br /><br /> Ctrl+0, A|  
 |TeamFoundationContextMenus.Commands.GoToWorkItems|Ctrl+0, Ctrl+W<br /><br /> 또는<br /><br /> Ctrl+0, W|  
 
-###  <a name="bkmk_test"></a> 테스트  
+###  <a name="bkmk_test"></a> 테스트
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
 |Test.UseCodedUITestBuilder|Ctrl+\\, Ctrl+C|  
 |Test.UseExistingActionRecording|Ctrl+\\, Ctrl+A|  
 
-###  <a name="bkmk_testexplorerGLOBAL"></a> 테스트 탐색기  
+###  <a name="bkmk_testexplorerGLOBAL"></a> 테스트 탐색기
 
 |명령|바로 가기 키|  
 |--------------|------------------------|  
@@ -1166,6 +1164,7 @@ ms.lasthandoff: 10/31/2017
 |XSD디자이너.그래프뷰표시|Ctrl+3|  
 |XSD디자이너.시작뷰표시|Ctrl+1|  
 
-## <a name="see-also"></a>참고 항목  
- [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)   
- [IntelliSense 사용](../ide/using-intellisense.md)
+## <a name="see-also"></a>참고 항목
+ 
+[아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)  
+[IntelliSense 사용](../ide/using-intellisense.md)

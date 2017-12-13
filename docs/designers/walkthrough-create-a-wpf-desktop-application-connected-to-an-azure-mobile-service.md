@@ -16,11 +16,11 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 8bf11425439387a13db2bb77f0ce798bef076461
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 28f06905820d890f2f13c3c7e77fd57fb75fe4b6
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>연습: Azure 모바일 서비스에 연결된 WPF 데스크톱 응용 프로그램 만들기
 WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스를 통해 데이터를 저장 및 제공하는 최신 데스크톱 응용 프로그램을 신속하게 만들 수 있습니다.  
@@ -556,7 +556,7 @@ WPF(Windows Presentation Foundation)를 사용하여 Azure 모바일 서비스�
      이렇게 하면 **UpdateCheckedTodoItem** 메서드가 호출되고 목록 및 데이터베이스 둘 다에서 항목이 제거됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- Azure 백 엔드를 사용한 WPF 데스크톱 응용 프로그램의 매우 간단한 예제를 완료했습니다. 물론, 실제 응용 프로그램은 훨씬 더 복잡할 수 있지만 동일한 기본 개념이 적용됩니다. [.NET Framework의 WPF](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)를 참조하세요.  
+ Azure 백 엔드를 사용한 WPF 데스크톱 응용 프로그램의 매우 간단한 예제를 완료했습니다. 물론, 실제 응용 프로그램은 훨씬 더 복잡할 수 있지만 동일한 기본 개념이 적용됩니다. [.NET Framework의 WPF](https://msdn.microsoft.com/en-us/library/ms754130)를 참조하세요.  
   
  색, 모양, 그래픽 및 심지어 애니메이션을 추가하여 사용자 인터페이스를 보다 매력적으로 만들 수 있습니다. [Visual Studio에서 XAML 디자이너를 사용하여 UI 만들기](creating-a-ui-by-using-xaml-designer-in-visual-studio.md) 및 [Blend for Visual Studio를 사용하여 UI 만들기](creating-a-ui-by-using-blend-for-visual-studio.md)를 참조하세요. 도구 비교를 보려면 [Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](../designers/designing-xaml-in-visual-studio.md)을 참조하세요.  
 
