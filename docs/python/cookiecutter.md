@@ -8,22 +8,21 @@ ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 783da5fd-726c-4716-994e-aa04d6b75896
 caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: da14e15713e7c02dbd99bc0595e6ca19217a5cbb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: ac891c48a4d3d2276fa925dd6092d1bf1d72176d
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="using-the-cookiecutter-extension"></a>Cookiecutter 확장 사용
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/)는 템플릿을 검색하고, 템플릿 옵션을 입력하며, 프로젝트와 파일을 만들 수 있는 그래픽 사용자 인터페이스를 제공합니다. Visual Studio 2017에 포함되어 있으며, 이전 버전의 Visual Studio에서는 개별적으로 설치할 수 있습니다.
 
-Cookiecutter에는 Python 3.3 이상(32비트 또는 64비트) 또는 Anaconda 3 4.2 이상(32비트 또는 64비트)이 필요합니다. 적합한 Python 인터프리터를 사용할 수 없는 경우 Visual Studio에서 경고가 표시됩니다. Visual Studio를 실행하는 중에 Python 인터프리터를 설치하는 경우 Cookiecutter 도구 모음에서 [홈] 단추를 클릭하여 새로 설치된 인터프리터를 검색합니다.
+Cookiecutter에는 Python 3.3 이상(32비트 또는 64비트) 또는 Anaconda 3 4.2 이상(32비트 또는 64비트)이 필요합니다. 적합한 Python 인터프리터를 사용할 수 없는 경우 Visual Studio에서 경고가 표시됩니다. Visual Studio를 실행하는 중에 Python 인터프리터를 설치하는 경우 Cookiecutter 도구 모음에서 [홈] 단추를 클릭하여 새로 설치된 인터프리터를 검색합니다. (일반적으로 환경에 대한 자세한 내용은 [Python 환경](python-environments.md)을 참조하세요.)
 
 설치되면 **보기 > Cookiecutter 탐색기**를 선택하여 다음 창을 엽니다.
 

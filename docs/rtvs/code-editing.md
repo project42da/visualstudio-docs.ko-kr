@@ -1,26 +1,25 @@
 ---
 title: "Visual Studio용 R 도구를 사용하여 코드 편집 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/29/2017
+ms.date: 12/04/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: a198ccc3-5506-48e7-b3b2-9399661b80d5
 caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 5c856bb02ca33f999273fd6da782226be5f0f2d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: c36afd0483a49537eac67e5fa219699f2366750e
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="editing-r-code-in-visual-studio"></a>Visual Studio에서 R 코드 편집
- 
+
 RTVS(Visual Studio용 R 도구)에서는 모든 기능과 확장 사용 기능을 유지하면서 특히 R에 맞게 Visual Studio 편집 환경을 조정합니다. 예를 들어 VIM 키 바인딩을 원하는 경우 Visual Studio 갤러리에서 무료 [VsVim 확장](https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329)을 설치할 수 있습니다.
 
 항목 내용:
@@ -33,8 +32,7 @@ RTVS(Visual Studio용 R 도구)에서는 모든 기능과 확장 사용 기능�
 - [Roxygen 주석 삽입](#inserting-roxygen-comments)
 - [편집기 옵션](#editor-options)
 
-[IntelliSense](code-intellisense.md), [코드 조각](code-snippets.md) 및 [R Markdown](rmarkdown.md)에 대한 항목도 참조하세요.
-
+[IntelliSense](code-intellisense.md), [linting](code-linting.md), [코드 조각](code-snippets.md) 및 [R Markdown](rmarkdown.md)에 대한 항목도 참조하세요.
 
 ## <a name="syntax-highlighting"></a>구문 강조 
 
@@ -107,9 +105,9 @@ f <- function(a) { return(a + 1) }
 전체 코드 파일의 서식을 다시 지정하려면 **편집 > 고급 > 문서 서식**(Ctrl+E,D)을 선택합니다.
 
 자동 서식 지정은 실행 취소할 수 있는 별도의 작업입니다. 예를 들어 코드를 편집기에 붙여넣고 서식을 적용한 경우 **편집 > 실행 취소**를 선택하거나 Ctrl+Z를 한 번 누르면 서식 지정이 되돌려집니다. 두 번째 실행 취소는 붙여넣기 자체를 되돌립니다.
- 
+
 서식 지정 옵션(서식 지정 끄기 포함)은 **텍스트 편집기 > R > 고급** 탭의 **도구 > 옵션**을 통해 설정됩니다. 이 페이지에는 **R 도구 > 편집기 옵션...** 명령을 사용하여 직접 이동하거나 편집기에서 마우스 오른쪽 단추를 클릭하고 **서식 지정 옵션...**을 선택하여 이동할 수 있습니다. 자세한 내용은 [편집기 옵션](#editor-options)을 참조하세요.
- 
+
 ## <a name="inserting-roxygen-comments"></a>Roxygen 주석 삽입
 
 RTVS에서는 함수의 매개 변수 이름을 사용하여 [Roxygen](http://roxygen.org/) 주석을 생성할 수 있는 바로 가기를 제공합니다. 함수 정의 위의 빈 줄에 `###`을 입력하면 됩니다.
@@ -144,5 +142,5 @@ RTVS에서는 함수의 매개 변수 이름을 사용하여 [Roxygen](http://ro
 | | Tab 키를 누를 때 완성 목록 | 끄기 | 하나 이상의 문자를 입력하고 Tab 키를 눌러서 완성 목록을 호출합니다. |
 | | 일부만 입력된 인수 이름 일치 | 끄기 | 함수 호출에 인수 이름을 입력하면 시그니처 도움말에는 가장 일치하는 인수에 대한 설명이 표시됩니다. |
 | 대화형 창 | R 콘솔의 구문 검사 | 끄기 | 대화형 창에서 구문 검사를 적용합니다. 여러 줄 문에서는 구문 검사가 제대로 작동하지 않을 수 있습니다. | 
-| 개요 | 코드 개요 | 켜기 | 여러 줄 문 같은 영역에 대한 접을 수 있는 영역을 자동으로 만듭니다. | 
+| 개요 | 코드 개요 | 켜기 | 여러 줄 문 같은 영역에 대한 접을 수 있는 영역을 자동으로 만듭니다. |
 | 구문 검사 | 구문 오류 표시 | 켜기 | 코드의 자동 구문 검사를 사용하도록 설정합니다. |
