@@ -3,11 +3,11 @@ layout: HubPage
 hide_bc: True
 title: "Visual Studio 설명서 | Microsoft Docs"
 description: "Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 개발하는 방법에 대해 알아봅니다."
-ms.openlocfilehash: f33fce2ca2020827e2013199e596c0e6be2e9793
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a113a0782694c0cae5c69f52aadcec3a4b98c79f
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -558,7 +558,7 @@ ms.lasthandoff: 10/31/2017
                                 </a>
                             </li>
                             <li>
-                                <a href="/vsts/#pivot=services&panel=code">
+                                <a href="https://go.microsoft.com/fwlink/?linkid=865130">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
