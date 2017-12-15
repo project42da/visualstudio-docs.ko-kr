@@ -1,10 +1,10 @@
 ---
 title: "설치 문제 해결 | Microsoft Docs"
 description: "때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치 또는 업그레이드에 실패할 경우 이 페이지가 도움이 될 수 있습니다."
-ms.date: 11/08/2017
+ms.date: 11/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-install
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 ms.assetid: 556EDD3F-E365-43EE-B3DD-03AA4353F75B
 author: timsneath
-ms.author: tims
+ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: f0f71dab64a99965facac9ccaa0fff9b53a6e3f6
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: 4c864a05b267889720ba64a6427861aa2c42e3b2
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-issues"></a>Visual Studio 2017 설치 및 업그레이드 문제 해결
 
@@ -37,7 +37,8 @@ Microsoft에서 수정을 진행하고 있는 Visual Studio 설치 관리자에 
 ### <a name="step-3---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems"></a>3단계 - Visual Studio 설치 관리자 디렉터리를 삭제하여 업그레이드 문제 해결
 Visual Studio 설치 관리자 부트스트래퍼는 나머지 Visual Studio 설치 관리자를 설치하는 최소한의 간단한 실행 파일입니다. Visual Studio 설치 관리자 파일을 삭제하고 부트스트래퍼를 다시 실행하면 몇 가지 업데이트 실패가 해결될 수 있습니다.
 
-**참고:** 다음 작업을 수행하여 Visual Studio 설치 관리자 파일을 다시 설치하고 설치 메타데이터를 다시 설정합니다.
+>[!NOTE]
+다음 작업을 수행하여 Visual Studio 설치 관리자 파일을 다시 설치하고 설치 메타데이터를 다시 설정합니다.
 
 1. Visual Studio 설치 관리자를 닫습니다.
 2. Visual Studio 설치 관리자 디렉터리를 삭제합니다. 일반적으로 디렉터리는 `C:\Program Files (x86)\Microsoft Visual Studio\Installer`입니다.
@@ -57,7 +58,7 @@ Visual Studio 설치 관리자 부트스트래퍼는 나머지 Visual Studio 설
 마지막 수단으로 [Visual Studio를 제거](remove-visual-studio.md)하여 모든 설치 파일 및 제품 정보를 제거합니다.
 
 1. [Visual Studio 제거](remove-visual-studio.md)의 지침을 따릅니다.
-2. [3단계 - Visual Studio 설치 관리자 디렉터리를 삭제하여 업그레이드 문제 해결](#step-3--delete-the-visual-studio-installer-directory-to-fix-upgrade-problems)에 설명된 부트스트래퍼를 다시 실행하세요.
+2. [3단계 - Visual Studio 설치 관리자 디렉터리를 삭제하여 업그레이드 문제 해결](#step-3---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems)에 설명된 부트스트래퍼를 다시 실행하세요.
 3. Visual Studio를 다시 설치하거나 업데이트해 보세요.
 
 ### <a name="step-6---contact-us-optional"></a>6단계-문의(선택 사항)
@@ -88,10 +89,10 @@ Microsoft 지원에 문의하는 경우 [Microsoft Visual Studio 및.NET Framewo
 
 ## <a name="more-support-options"></a>추가 지원 옵션
 
-Visual Studio 설치 관리자와 Visual Studio IDE에 모두 표시되는 [문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md) 도구를 통해 Microsoft에 제품 문제를 보고할 수 있습니다.
+문제 해결 단계가 도움이 되지 않는 경우 라이브 채팅을 통해 설치 지원을 문의할 수 있습니다(영어만 가능). 자세한 내용은 [Visual Studio 지원 페이지](https://www.visualstudio.com/vs/support/#talktous)를 참조하세요.
 
 몇 가지 추가 옵션은 다음과 같습니다.
-
+* Visual Studio 설치 관리자와 Visual Studio IDE에 모두 표시되는 [문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md) 도구를 통해 Microsoft에 제품 문제를 보고할 수 있습니다.
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579)에서 Microsoft와 제품 제안을 공유할 수 있습니다.
 * [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고 질문을 하고 답을 찾을 수 있습니다.
 * [Gitter 커뮤니티의 Visual Studio 관련 대화](https://gitter.im/Microsoft/VisualStudio)를 통해 Microsoft 및 다른 Visual Studio 개발자와 소통할 수도 있습니다.  (이 옵션을 사용하려면 [GitHub](https://github.com/) 계정이 필요합니다.)

@@ -1,7 +1,7 @@
 ---
-title: "UWP 앱의 Visual C++ DLL 단위 테스트 | Microsoft 문서"
+title: "UWP 앱의 Visual C++ DLL 테스트 방법 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/04/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
@@ -9,43 +9,42 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 24afc90a-8774-4699-ab01-6602a7e6feb2
 caps.latest.revision: "13"
-ms.author: douge
-manager: douge
-ms.openlocfilehash: a900c779401277e4b8694e75f69203fee82d73f0
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4fc133d96f8306b46e4d820b6f7256db8c471122
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="unit-testing-a-visual-c-dll-for-uwp-apps"></a>UWP 앱의 Visual C++ DLL 단위 테스트
-이 항목에서는 UWP 앱의 C++ DLL에 대한 단위 테스트를 만드는 방법을 보여 줍니다. RooterLib DLL은 지정된 숫자의 예상 제곱근을 계산하는 함수를 구현하여 미적분학 한계 이론에 대한 희미한 기억을 보여 줍니다. DLL은 UWP 앱에 포함하여 사용자에게 수학으로 할 수 있는 재밌는 것을 보여줄 수 있습니다.  
+# <a name="how-to-test-a-visual-c-dll-for-uwp-apps"></a>UWP 앱의 Visual C++ DLL 테스트 방법 
+이 문서에서는 C++용 Microsoft 테스트 프레임워크를 사용하여 UWP(유니버설 Windows 플랫폼) 앱용 C++ DLL에 대한 단위 테스트를 만드는 한 가지 방법을 설명합니다. RooterLib DLL은 지정된 숫자의 제곱근 예상 값을 계산하는 함수를 구현하여 미적분법의 한계 이론에 대한 희미한 기억을 보여 줍니다. DLL은 UWP 앱에 포함하여 사용자에게 수학으로 할 수 있는 재밌는 것을 보여줄 수 있습니다.  
   
  이 항목에서는 개발의 첫 단계로 단위 테스트를 사용하는 방법을 보여 줍니다. 이 방법에서는 먼저 테스트하고 있는 시스템에서 특정 동작을 확인하는 테스트 메서드를 작성한 다음 테스트를 통과하는 코드를 작성합니다. 다음 절차의 순서를 변경함으로써 이 전략을 반대로 적용하여 먼저 테스트할 코드를 작성한 다음 단위 테스트를 작성할 수 있습니다.  
   
  또한 이 항목에서는 단일 Visual Studio 솔루션과 테스트할 DLL 및 단위 테스트에 대한 별도의 프로젝트를 만듭니다. DLL 프로젝트에 직접 단위 테스트를 포함하거나 단위 테스트 및 .DLL에 대한 별도의 솔루션을 만들 수도 있습니다. 사용할 구조에 대한 팁은 [기존 C++ 응용 프로그램에 단위 테스트 추가](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)를 참조하세요.  
   
-##  <a name="BKMK_In_this_topic"></a> 항목 내용  
- 이 항목에서는 다음 작업을 안내합니다.  
+##  <a name="In_this_topic"></a> 항목 내용  
+
+ [솔루션 및 단위 테스트 프로젝트 만들기](#Create_the_solution_and_the_unit_test_project)  
   
- [솔루션 및 단위 테스트 프로젝트 만들기](#BKMK_Create_the_solution_and_the_unit_test_project)  
+ [테스트 탐색기에서 테스트가 실행되는지 확인](#Verify_that_the_tests_run_in_Test_Explorer)  
   
- [테스트 탐색기에서 테스트가 실행되는지 확인](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)  
+ [솔루션에 DLL 프로젝트 추가](#Add_the_DLL_project_to_the_solution)  
   
- [솔루션에 DLL 프로젝트 추가](#BKMK_Add_the_DLL_project_to_the_solution)  
+ [DLL 함수가 테스트 코드에 표시되도록 설정](#make_the_dll_functions_visible_to_the_test_code)  
   
- [DLL 프로젝트에 테스트 프로젝트 연결](#BKMK_Couple_the_test_project_to_the_dll_project)  
+ [반복적으로 테스트를 확장하고 통과하도록 만들기](#Iteratively_augment_the_tests_and_make_them_pass)  
   
- [반복적으로 테스트를 확장하고 통과하도록 만들기](#BKMK_Iteratively_augment_the_tests_and_make_them_pass)  
+ [실패한 테스트 디버그](#Debug_a_failing_test)  
   
- [실패한 테스트 디버그](#BKMK_Debug_a_failing_test)  
+ [테스트를 변경하지 않고 코드 리팩터링](#Refactor_the_code_without_changing_tests)  
   
- [테스트를 변경하지 않고 코드 리팩터링](#BKMK_Refactor_the_code_without_changing_tests)  
-  
-##  <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> 솔루션 및 단위 테스트 프로젝트 만들기  
+##  <a name="Create_the_solution_and_the_unit_test_project"></a> 솔루션 및 단위 테스트 프로젝트 만들기  
   
 1.  **파일** 메뉴에서 **새로 만들기**를 선택하고 **새 프로젝트**를 선택합니다.  
   
-2.  새 프로젝트 대화 상자에서 **설치됨**, **Visual C++**를 차례로 확장하고 **Windows 유니버셜**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **단위 테스트 라이브러리(범용 Windows)**를 선택합니다.  
+2.  새 프로젝트 대화 상자에서 **설치됨**, **Visual C++**를 차례로 확장하고 **UWP**를 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **단위 테스트 라이브러리(UWP 앱)**를 선택합니다.  
   
      ![C&#43;&#43; 단위 테스트 라이브러리 만들기](../test/media/ute_cpp_windows_unittestlib_create.png "UTE_Cpp_windows_UnitTestLib_Create")  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 11/02/2017
   
          테스트를 실행하면 각 테스트 클래스의 인스턴스가 생성됩니다. 테스트 메서드는 지정되지 않은 순서로 호출됩니다. 각 모듈, 클래스 또는 메서드의 전/후에 호출되는 특별한 메서드를 정의할 수 있습니다. 자세한 내용은 MSDN 라이브러리의 [Microsoft.VisualStudio.TestTools.CppUnitTestFramework 사용](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)을 참조하세요.  
   
-##  <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> 테스트 탐색기에서 테스트가 실행되는지 확인  
+##  <a name="Verify_that_the_tests_run_in_Test_Explorer"></a> 테스트 탐색기에서 테스트가 실행되는지 확인  
   
 1.  일부 테스트 코드를 삽입합니다.  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 11/02/2017
   
      ![테스트 탐색기](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
   
-##  <a name="BKMK_Add_the_DLL_project_to_the_solution"></a> 솔루션에 DLL 프로젝트 추가  
+##  <a name="Add_the_DLL_project_to_the_solution"></a> 솔루션에 DLL 프로젝트 추가  
   
 1.  솔루션 탐색기에서 솔루션 이름을 선택합니다. 바로 가기 메뉴에서 **추가**를 선택한 다음 **새 프로젝트 추가**를 선택합니다.  
   
@@ -146,7 +145,7 @@ ms.lasthandoff: 11/02/2017
   
     ```  
   
-##  <a name="BKMK_Couple_the_test_project_to_the_dll_project"></a> DLL 프로젝트에 테스트 프로젝트 연결  
+##  <a name="make_the_dll_functions_visible_to_the_test_code"></a> dll 함수가 테스트 코드에 표시되도록 설정  
   
 1.  RooterLibTests 프로젝트에 RooterLib를 추가합니다.  
   
@@ -199,7 +198,7 @@ ms.lasthandoff: 11/02/2017
   
  테스트 및 코드 프로젝트를 설정하고 코드 프로젝트에서 함수를 실행하는 테스트를 실행할 수 있는지 확인했습니다. 이제 실제 테스트 및 코드 작성을 시작할 수 있습니다.  
   
-##  <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> 반복적으로 테스트를 확장하고 통과하도록 만들기  
+##  <a name="Iteratively_augment_the_tests_and_make_them_pass"></a> 반복적으로 테스트를 확장하고 통과하도록 만들기  
   
 1.  새 테스트 추가:  
   
@@ -260,7 +259,7 @@ ms.lasthandoff: 11/02/2017
 > [!TIP]
 >  한 번에 하나씩 테스트를 추가하여 코드를 개발합니다. 각 반복 후 모든 테스트가 통과하는지 확인합니다.  
   
-##  <a name="BKMK_Debug_a_failing_test"></a> 실패한 테스트 디버그  
+##  <a name="Debug_a_failing_test"></a> 실패한 테스트 디버그  
   
 1.  **unittest1.cpp**에 다른 테스트를 추가합니다.  
   
@@ -330,7 +329,7 @@ ms.lasthandoff: 11/02/2017
   
  ![모든 테스트 통과](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
   
-##  <a name="BKMK_Refactor_the_code_without_changing_tests"></a> 테스트를 변경하지 않고 코드 리팩터링  
+##  <a name="Refactor_the_code_without_changing_tests"></a> 테스트를 변경하지 않고 코드 리팩터링  
   
 1.  `SquareRoot` 함수에서 중앙 계산을 단순화합니다.  
   

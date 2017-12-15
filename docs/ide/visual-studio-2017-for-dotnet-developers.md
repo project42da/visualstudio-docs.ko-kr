@@ -8,11 +8,11 @@ ms.technology: vs-ide-general
 ms.date: 11/08/2017
 ms.topic: article
 helpviewer_keywords: editor
-ms.openlocfilehash: 6fe98cea71bb49ea3e705a22cb696184966ea0ed
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: 6650faa7ed519c6237b459ac4278b6e90d7a5bc6
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="visual-studio-2017-for-net-developers"></a>.NET 개발자용 Visual Studio 2017
 
@@ -69,6 +69,8 @@ Azure에서 서비스를 실행하는 경우 *스냅숏 디버깅*을 사용하�
 
 git 또는 TFVC를 사용하여 Visual Studio에서 코드를 저장하고 업데이트합니다. 편집기 내부에서 팀 탐색기로 로컬 변경 사항을 정리하고 상태 표시줄로 보류 중인 커밋과 변경 사항을 추적합니다. [Visual Studio용 지속적인 업데이트 도구](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) 확장으로 Visual Studio 내부에 지속적인 통합 및 전달을 설정하여 민첩한 개발자 워크플로를 채택합니다.
 
+![Visual Studio에서 소스 제어](../ide/media/VSIDE_Productivity_SourceControl.png "VSIDE_Productivity_SourceControl")
+
 ## <a name="extensibility"></a>확장성
 [설명서: Visual Studio 확장](../extensibility/index.md)
 
@@ -79,8 +81,10 @@ Visual Studio에는 필요에 따라 설치하거나 만들 수 있는 확장의
 ## <a name="popular-extensions--shortcuts"></a>자주 사용되는 확장 기능 및 바로 가기
 다른 IDE 또는 코딩 환경에서 왔다면 다음 확장 중 하나를 설치하면 유용할 수 있습니다.
 - [Emacs 에뮬레이션](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.Emacsemulation)
-- [Visual Studio용 핫키(IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys2017-KeyboardShortcuts)
+- [Visual Studio용 바로 가기 키(ReSharper/IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys2017-KeyboardShortcuts)
 - [VSVim](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
+
+다음은 많이 사용되는 Visual Studio 바로 가기입니다. 일부 확장은 기본 Visual Studio 키 바인딩을 해제하며 아래 명령을 사용하려면 키 바인딩을 복원해야 합니다. Visual Studio의 기본값으로 키 바인딩을 복원하려면 **도구 > 설정 가져오기 및 내보내기... > 모든 설정 다시 설정**으로 이동합니다.
 
 | 바로 가기(모든 프로필) | 명령 | 설명 |
 |-|-|-| 
@@ -93,6 +97,6 @@ Visual Studio에는 필요에 따라 설치하거나 만들 수 있는 확장의
 | **F5** | 디버깅 시작 | 응용 프로그램 디버깅 시작 |
 | **Ctrl+F5** | 디버깅하지 않고 실행 | 디버깅하지 않고 응용 프로그램을 로컬에서 실행 |
 | **Ctrl + K,D**(기본 프로필) 또는 **Ctrl + E,D**(C# 프로필) | 문서 서식 | 줄 바꿈, 간격 및 들여쓰기 설정에 따라 파일에서 서식 위반 정리 |
-| **Ctrl+\,E**(기본 프로필) 또는 **Ctrl+W,E**(C# 프로필) | 오류 목록 보기 | 문서, 프로젝트 또는 솔루션의 모든 오류 보기 |
+| **Ctrl+\\,E**(기본 프로필) 또는 **Ctrl+W,E**(C# 프로필) | 오류 목록 보기 | 문서, 프로젝트 또는 솔루션의 모든 오류 보기 |
 
 

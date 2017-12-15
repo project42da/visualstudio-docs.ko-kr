@@ -1,12 +1,10 @@
 ---
 title: "Visual Studio 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/06/2017
+ms.date: 12/04/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
-- vs-acquisition
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: VS.StartPage.WhatsNew
@@ -17,14 +15,14 @@ ms.assetid: 7307e180-ba28-4774-8a43-cbb980085a71
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 1e616fb0c223a30152b9cd18e6ea53e989690f9b
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: dc865fe81a51ff3ae2ca497b8982292ffda18372
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
-#### <a name="updated-for-the-154-release"></a>15.4 릴리스용으로 업데이트됨
+#### <a name="updated-for-the-155-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.5 릴리스](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)용으로 업데이트
 Visual Studio의 이전 버전에서 업그레이드하려고 하십니까? Visual Studio 2017에서 제공하는 기능 소개: 모든 개발, 앱 및 플랫폼에서 탁월한 생산성 Visual Studio 2017를 사용하여 Android, iOS, Windows, Linux, 웹 및 클라우드용 앱을 개발합니다. 빠르게 코딩하고, 간단하게 디버그 및 진단하고, 자주 테스트하며, 안심하고 릴리스하세요. 개발자 고유의 확장을 빌드하여 Visual Studio를 확장하고 사용자 지정할 수도 있습니다. 이 릴리스로 버전 제어를 사용하고, 민첩하게 대처하고, 효율적으로 공동 작업하세요.
 
 이전 버전 Visual Studio 2015부터 적용해 온 변경을 높은 수준에서 요약한 사항입니다.
@@ -32,19 +30,21 @@ Visual Studio의 이전 버전에서 업그레이드하려고 하십니까? Visu
 * **재정의된 기본 사항**. 새로운 설치 환경을 통해 더 빠르게 설치하고, 필요할 때 원하는 항목을 설치할 수 있습니다. 대규모 솔루션과 프로젝트를 로드하든, 코드 폴더 또는 단일 코드 파일에서 작업하든 Visual Studio는 더 빠르게 시작됩니다. 또한 Visual Studio를 사용하는 경우 특히 DevOps를 수용하는 팀에서 큰 그림에 계속 집중할 수 있습니다.
 * **성능 및 생산성** 새로운 최신 모바일, 클라우드 및 데스크톱 개발 기능에 집중했습니다. 또한 전반적인 취득, 성능 및 일반 개발자 생산성 환경도 향상했습니다. Visual Studio는 더 빨리 시작하고, 더 빨리 응답하며, 이전보다 적은 메모리를 사용합니다.
 * **Azure로 클라우드 앱 개발** 기본 제공 Azure 도구 모음을 통해 Microsoft Azure 기반의 클라우드 중심 앱을 쉽게 만들 수 있습니다. Visual Studio를 사용하면 Azure에서 직접 앱과 서비스를 쉽게 구성, 빌드, 디버그, 패키징 및 배포할 수 있습니다.
+* **Windows 앱 개발**. Visual Studio 2017의 UWP 템플릿을 사용하여 모든 Windows 10 장치 &ndash; PC, 태블릿, 전화, Xbox, HoloLens, Surface Hub 등에 대한 단일 프로젝트를 만듭니다. 그런 다음 앱 패키지를 만들어 Visual Studio 내에서 Microsoft Store에 제출하여 앱을 고객에게 제공합니다.
 * **모바일 앱 개발** Visual Studio 2017에서는 하나의 핵심 코드베이스와 기술 집합을 사용하여 다중 플랫폼 모바일 요구 사항을 통합하는 Xamarin에서 혁신적인 결과를 빠르게 얻을 수 있습니다. 기존 팀, 기술 투자 및 C# 코드와 더불어 모바일로 이동하여 예정보다 빨리 예산 수준 이하의 소비자급 환경을 제공합니다. 사용자의 역량을 강화할 수 있도록 모바일 수명 주기의 각 단계를 모두 가속화하여 세계 최고의 소비자 환경 또는 생산성 앱 포트폴리오를 제공합니다.
 * **플랫폼 간 개발**. 모든 대상 플랫폼에 소프트웨어를 원활하게 제공할 수 있습니다. Redgate 데이터 도구를 통해 DevOps 프로세스를 SQL Server로 확장하고 Visual Studio에서 데이터베이스 배포를 안전하게 자동화할 수 있습니다. 또는 .NET Core를 사용하여 Windows, Linux 및 macOS 운영 체제에서 수정되지 않고 실행되는 앱 및 라이브러리를 작성할 수 있습니다. (그리고 **15.3의 새로운 기능**: .NET Core 2.0 SDK에 대한 side-by-side 지원을 받으세요.)
 * **게임 개발**. VSTU(Visual Studio Tools for Unity)를 사용하면 Visual Studio를 통해 게임 및 편집기 스크립트를 C#으로 작성한 다음 강력한 디버거를 사용하여 오류를 찾고 수정할 수 있습니다. VSTU의 최신 릴리스에는 Unity의 ShaderLab 셰이더 언어를 위한 구문 색 지정, 향상된 디버거 시각화 및 MonoBehavior 마법사에 대한 코드 생성 기능이 포함되어 있습니다. VSTU는 Unity 프로젝트 파일, 콘솔 메시지 및 Visual Studio에서 게임을 시작하는 기능도 제공하므로 코드를 작성하는 동안 Unity 편집기 전환에 소요되는 시간을 단축할 수 있습니다.
+* **AI 개발**. With Visual Studio Tools for AI(**15.5의 새로운 기능**)를 통해 Visual Studio의 생산성 기능을 사용하여 AI 혁신을 가속화할 수 있습니다. 데이터 준비 및 모델 교육 작업을 다양한 계산 대상에 투명하게 제출하는 등의 강력한 실험 기능을 위해 Azure Machine Learning과 완벽하게 통합되는 딥 러닝/AI 솔루션을 빌드, 테스트 및 배포합니다. 또한 Visual Studio Tools for AI는 사용자 지정 메트릭 및 실행 기록 추적을 지원하므로 데이터 과학의 재현성과 감사가 가능합니다.
 
 > [!NOTE]
-> Visual Studio 2017의 새로운 기능에 대한 전체 목록은 [릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)를 참조하세요.
+> Visual Studio 2017의 새로운 기능에 대한 전체 목록은 [현재 릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)를 참조하세요. 향후 제공할 기능을 살펴보려면 [미리 보기 릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-preview-relnotes)를 참조하세요.
 
 Visual Studio 2017에서 가장 두드러진 개선 사항과 새로운 기능에 대한 자세한 내용은 다음과 같습니다.
 
 ## <a name="redefined-fundamentals"></a>재정의된 기본 사항
 ### <a name="a-new-setup-experience"></a>새로운 설치 환경
 
-[Visual Studio 2017 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 또는 [Visual Studio 시스템 요구 사항 확인](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)
+[Visual Studio 2017 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 또는 [Visual Studio 시스템 요구 사항 확인](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs)
 
  Visual Studio를 사용하면 필요할 때 필요한 기능만 쉽고 빠르게 설치할 수 있습니다. 또한 완전히 제거됩니다.
 
@@ -72,11 +72,6 @@ Visual Studio 2017에서 가장 두드러진 개선 사항과 새로운 기능�
 ### <a name="start-visual-studio-faster"></a>더 빨리 Visual Studio 시작
 새로운 Visual Studio 성능 센터는 IDE 시작 시간을 최적화하는 데 유용합니다. 성능 센터에는 IDE 시작을 늦출 수 있는 모든 확장 및 도구 창이 나열됩니다. 성능 센터를 사용하여 확장 시작 시간 또는 시작 시 도구 창을 열지 여부를 결정하여 시작 성능을 개선할 수 있습니다.
 
-### <a name="decrease-solution-load-time"></a>솔루션 로드 시간 감소
-많은 수의 프로젝트가 포함된 솔루션에서 작업한다고 해서 한 번에 모든 파일이나 프로젝트로 작업해야 하는 것은 아닙니다. 이제 Visual Studio에서 모든 프로젝트가 로드되기를 기다리지 않고 편집 및 디버그할 수 있습니다. 관리되는 프로젝트에서 이 작업을 시도해보려면 도구-> 옵션-> 프로젝트 및 솔루션에서 **경량 솔루션 로드**를 켭니다.
-
-  ![Visual Studio 2017의 옵션 대화 상자](../ide/media/vs2017ide-lightweight-solution-load.png "Visual Studio 2017 - 옵션 대화 상자 - 모든 솔루션에 대한 경량 솔루션 로드")
-
 ### <a name="faster-on-demand-loading-of-extensions"></a>요청 시 더 빠르게 확장 로드
 Visual Studio는 IDE 시작이 아닌 요청 시에 로드되도록 확장을 전환하고 있습니다(타사 확장과도 작업). 어떤 확장이 시작, 솔루션 로드 및 입력 성능에 영향을 주는지 궁금하세요? 이 정보는 도움말-> Visual Studio 성능 관리에서 확인할 수 있습니다.
 
@@ -103,21 +98,15 @@ Visual Studio의 확장 목록을 보려면 도구 > 확장 및 업데이트를 
 
 로그인한 상태에서 다운로드하는 모든 확장은 **로밍 및 설치**로 목록에 추가되며, 모든 컴퓨터에서 액세스할 수 있는 로밍 목록의 일부가 됩니다.
 
-### <a name="experience-live-architecture-dependency-validation-and-live-unit-testing"></a>라이브 아키텍처 종속성 유효성 검사 및 Live Unit Testing 경험
-텍스트 편집기에서 코드를 입력하면 Visual Studio에서 종속성 유효성 검사 다이어그램(레이어 다이어그램이라고도 함)을 사용하여 아키텍처 종속성 규칙 위반을 실시간으로 알립니다.
-
-오류 목록에 오류가 표시되고, 정확한 위반 위치를 보여 주는 물결선이 텍스트 편집기에 표시됩니다. 이제 원치 않는 종속성이 늘어날 가능성이 줄었습니다.
-
-![라이브 아키텍처 유효성 검사](../ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "라이브 아키텍처 종속성 유효성 검사")
-
-#### <a name="live-unit-testing"></a>Live Unit Testing
+### <a name="experience-live-unit-testing"></a>Live Unit Testing 환경
 Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 동안 편집기에 라이브 단위 테스트 결과와 코드 검사를 제공합니다. .NET Framework 및 .NET Core용 C# 및 Visual Basic 프로젝트에서 작동하고, MSTest, xUnit, NUnit의 세 가지 테스트 프레임워크를 지원합니다.
 
-![라이브 단위 테스트](../ide/media/lut-codewindow.png "Visual Studio Enterprise 버전에 있는 새 라이브 단위 테스트 기능의 예")
+![Live Unit Testing](../ide/media/lut-codewindow.png "Visual Studio Enterprise 버전에 있는 새로운 Live Unit Testing 기능의 예")
 
 자세한 내용은 [Live Unit Testing 소개](../test/live-unit-testing-intro.md)를 참조하세요. Visual Studio Enterprise 2017의 각 릴리스에 추가된 새로운 기능 목록은 [Live Unit Testing의 새로운 기능](../test/live-unit-testing-whats-new.md)을 참조하세요.
 
-#### <a name="set-up-a-cicd-pipeline-to-run-automated-tests-efficiently"></a>CI/CD 파이프라인을 설정하여 자동화된 테스트를 효율적으로 실행
+#### <a name="setting-up-a-cicd-pipeline"></a>CI/CD 파이프라인 설정
+#### <a name="automated-testing"></a>자동화된 테스트
 자동화된 테스트는 DevOps 파이프라인의 핵심 부분입니다. 자동화된 테스트를 통해 솔루션을 일관되고 안정적으로 테스트하고 더 짧은 주기로 릴리스할 수 있습니다. CI/CD(연속 통합 및 지속적인 업데이트) 흐름은 이 프로세스의 효율성을 더 높일 수 있습니다.
 
 자동화된 테스트에 대한 자세한 내용은 [CI/CD pipeline for automated tests in DevOps(DevOps에서 자동화된 테스트에 대한 CI/CD 파이프라인)](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/20/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently/) 블로그 게시물을 참조하세요.
@@ -126,8 +115,8 @@ Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 �
 
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE 향상
 #### <a name="use-new-refactorings"></a>새 리팩터링 사용
-**15.3의 새로운 기능**: 다음을 포함하는 많은 새 리팩터링을 추가했습니다.
-*   병합 충돌 해결
+리팩터링은 코드를 작성한 후에 개선하는 프로세스입니다. 리팩터링은 코드의 동작을 변경하지 않고 코드의 내부 구조를 변경합니다. 새로운 리펙터링은 자주 추가되며, 다음은 몇 가지 예입니다.
+
 *   매개 변수 추가(호출 사이트에서)
 *   재정의 생성
 *   명명된 인수 추가
@@ -185,11 +174,56 @@ Visual Studio에서 C++ 핵심 지침을 배포하고, C++11 및 C++ 기능에 �
 
 자세한 내용은 [Using the New Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/)(Visual Studio에서 새 예외 도우미 사용) 블로그 게시물을 참조하세요.
 
+#### <a name="snapshots-and-intellitrace-step-back"></a>스냅숏 및 IntelliTrace 뒤로 이동:
+**15.5의 새로운 기능**: IntelliTrace 뒤로 이동은 모든 중단점 및 디버거 단계 이벤트에서 응용 프로그램의 스냅숏을 자동으로 생성합니다. 기록된 스냅숏을 통해 이전 중단점 또는 단계로 돌아가서 응용 프로그램의 과거 상태를 볼 수 있습니다. IntelliTrace 뒤로 이동을 사용하면 이전 응용 프로그램 상태를 보고 싶지만 디버깅을 다시 시작하거나 원하는 앱 상태를 다시 만들지 않으려는 경우에 시간을 절약할 수 있습니다.
+
+디버그 도구 모음의 **뒤로 가기**와 **앞으로 가기** 단추를 사용하여 이동하고 스냅숏을 볼 수 있습니다. 이 단추를 사용하여 **진단 도구** 창의 **이벤트** 탭에 나타나는 이벤트를 탐색할 수 있습니다. 이벤트의 앞이나 뒤로 이동하면 선택한 이벤트에 대한 기록 디버깅이 자동으로 활성화됩니다.
+
+![Visual Studio의 새 예외 도우미 대화 상자](../debugger/media/intellitrace-step-back-icons-description.png  "뒤로 가기 및 앞으로 가기 단추")
+
+자세한 내용은 [IntelliTrace 뒤로 이동을 사용하여 스냅숏 보기](../debugger/how-to-use-intellitrace-step-back.md) 페이지를 참조하세요.
+
+### <a name="containerization"></a>컨테이너화
+컨테이너는 향상된 생산성 및 DevOps 민첩성과 더불어 향상된 앱 밀도와 낮은 배포 비용을 제공합니다.
+
+#### <a name="docker-container-tooling"></a>Docker 컨테이너 도구
+**15.5의 새로운 기능**
+* Visual Studio에 이제 다단계 Dockerfile을 지원하는 Docker 컨테이너용 도구가 포함되어 최적화된 컨테이너 이미지 만들기가 간소화됩니다.
+* 기본적으로 Visual Studio는 Docker 지원이 포함된 프로젝트를 열 때 백그라운드에서 필요한 컨테이너 이미지를 자동으로 끌어오고, 빌드하고 실행합니다. Visual Studio에서 **백그라운드에서 컨테이너를 자동으로 시작** 설정을 통해 비활성화할 수 있습니다.
+
 ## <a name="cloud-app-development-with-azure"></a>Azure로 클라우드 앱 개발
 ### <a name="azure-functions-tools"></a>Azure Functions 도구
 미리 컴파일된 C# 클래스 라이브러리를 사용하여 Azure Functions를 개발하는 데 도움이 되는 도구를 “Azure 개발” 워크로드의 일부로 포함했습니다. 이제 로컬 개발 컴퓨터에서 빌드, 실행 및 디버그한 다음 Visual Studio에서 Azure에 직접 게시할 수 있습니다.
 
 자세한 내용은 [Visual Studio용 Azure Functions 도구](https://docs.microsoft.com/azure/azure-functions/functions-develop-vs) 페이지를 참조하세요.
+
+### <a name="debug-live-aspnet-apps-using-snappoints-and-logpoints-in-live-azure-applications"></a>라이브 Azure 응용 프로그램에서 snappoint와 logpoint를 사용하여 라이브 ASP.NET 앱 디버그
+**15.5의 새로운 기능**: 스냅숏 디버거는 관심이 있는 코드가 실행될 때 프로덕션 상태 앱의 스냅숏을 생성합니다. 디버거가 스냅숏을 생성하도록 명령하려면 코드에서 snappoint와 logpoint를 설정합니다. 디버거를 통해 프로덕션 응용 프로그램의 트래픽에 영향을 미치지 않으면서 정확히 무엇이 잘못되었는지를 볼 수 있습니다. 스냅샷 디버거를 사용하면 프로덕션 환경에서 발생하는 문제를 해결하는 데 걸리는 시간을 상당히 줄일 수 있습니다.
+
+스냅숏 컬렉션은 Azure App Service에서 실행되는 다음 웹앱에서 사용할 수 있습니다.
+
+* .NET Framework 4.6.1 이상에서 실행되는 ASP.NET 응용 프로그램
+* Windows의 .NET Core 2.0 이상에서 실행되는 ASP.NET Core 응용 프로그램
+
+자세한 내용은 [snappoint와 logpoint를 사용하여 라이브 ASP.NET 앱 디버그](../debugger/debug-live-azure-applications.md)를 참조하세요.
+
+## <a name="windows-app-development"></a>Windows 앱 개발
+### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
+UWP(Universal Windows Platform)는 Windows 10용 앱 플랫폼입니다. API 집합 하나, 앱 패키지 하나 및 스토어 하나만으로 UWP용 앱을 개발하여 모든 Windows 10 장치 &ndash; PC, 태블릿, 전화, Xbox, HoloLens, Surface Hub 등에 연결할 수 있습니다. UWP는 다양한 화면 크기와 터치, 마우스와 키보드, 게임 컨트롤러 또는 펜을 비롯한 다양한 인터랙션 모델을 지원합니다. UWP 앱의 핵심은 작업 환경이 사용자의 모든 장치에서 이동이 가능하여 현재 진행 중인 작업에 가장 편리하거나 생산적인 장치를 사용하기를 바란다는 점입니다.
+
+ ![유니버설 Windows 플랫폼](../cross-platform/media/uwp_coreextensions.png "UWP_CoreExtensions")
+
+&mdash;C#, Visual Basic, C++ 또는 JavaScript&mdash; 중에서 원하는 개발 언어를 선택하여 Windows 10 장치용 유니버설 Windows 플랫폼 앱을 만듭니다. Visual Studio 2017은 모든 장치에 대해 단일 프로젝트를 만들 수 있도록 각 언어에 UWP 앱 템플릿을 제공합니다. 작업을 마치면 Visual Studio 내에서 앱 패키지를 생성하고 Microsoft Store에 제출하여 Windows 10 장치를 사용하는 고객에게 앱을 제공할 수 있습니다.
+
+**15.5의 새로운 기능**<br/>
+Visual Studio 2017 버전 15.5는 Windows 10 Fall Creators Update SDK(10.0.16299.0)를 가장 잘 지원합니다. Windows 10 Fall Creators Update는 UWP 개발자를 위해 많은 사항이 개선되었습니다. 다음은 큰 변화 중 일부입니다. 
+
+* **.NET Standard 2.0에 대한 지원**<br/>
+간소화된 앱 배포 외에, Windows 10 Fall Creators Update는 .NET Standard 2.0 지원을 제공하는 첫 번째 Windows 10 릴리스입니다. 사실상, [.NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)는 모든 .NET 플랫폼에서 구현할 수 있는 기본 클래스 라이브러리의 참조 구현입니다. .NET Standard의 목표는 .NET 개발자가 작업하는 모든 .NET 플랫폼 전반에서 코드를 최대한 쉽게 공유할 수 있도록 하는 것입니다.
+* **UWP와 Win32의 장점** <br/>
+Windows 10 플랫폼은 [데스크톱 브리지](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)를 통해 개발자가 중점을 두는 것이 UWP, WPF, Windows Forms 또는 Xamarin 중 무엇이든 모든 .NET 개발자가 Windows 10을 더 잘 활용할 수 있도록 향상되었습니다. Visual Studio 2017 버전 15.5의 새로운 앱 패키징 프로젝트 형식을 사용하면 UWP 프로젝트에서 하듯이 WPF 또는 Windows Forms 프로젝트용 Windows 앱 패키지를 만들 수 있습니다. 앱을 패키지하면 Windows 10 앱 배포의 모든 이점과 Microsoft Store(소비자 앱) 또는 비즈니스 및 교육용 Microsoft Store를 통해 배포할 수 있는 옵션이 제공됩니다. 패키지된 앱은 데스크톱의 전체 UWP API 표면과 Win32 API 모두에 액세스할 수 있기 때문에 UWP API 및 Windows 10 기능을 사용하여 WPF 및 Windows Forms 응용 프로그램을 점진적으로 현대화할 수 있습니다. 또한 모든 Win32 기능을 갖춘 데스크톱에서 실행되는 UWP 응용 프로그램에 Win32 구성 요소를 포함할 수 있습니다. 
+
+UWP에 대한 자세한 내용은 [UWP(유니버설 Windows 플랫폼)용 앱 개발](https://docs.microsoft.com/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp) 페이지를 참조하세요.
 
 ## <a name="mobile-app-development"></a>모바일 앱 개발
 ### <a name="xamarin"></a>Xamarin
@@ -202,6 +236,18 @@ Visual Studio에서 C++ 핵심 지침을 배포하고, C++11 및 C++ 기능에 �
 
 ![Xamarin용 자격 편집기](../ide/media/xamarin-entitlements-editor.png "Xamarin용 자격 편집기")
 
+### <a name="visual-studio-tools-for-xamarin"></a>Visual Studio Tools for Xamarin
+**15.4의 새로운 기능**: Xamarin Live를 사용하면 개발자가 iOS 및 Android 장치에서 직접 자신의 앱을 계속해서 배포, 테스트 및 디버그할 수 있습니다. &mdash;앱 스토어 또는 Google Play에서 사용할 수 있는&mdash; Xamarin Live Player를 다운로드한 후 장치를 Visual Studio와 연결하고 모바일 앱을 빌드하는 방법을 혁신적으로 개선할 수 있습니다. 이 기능은 이제 Visual Studio에 포함되었으며 도구 > 옵션 > Xamarin > 기타 > Xamarin Live Player 사용으로 이동하여 사용하도록 설정할 수 있습니다.
+
+![Xamarin Live Player 쌍, 배포 및 라이브 편집 모드의 애니메이션](../ide/media/xamarinliveplayer.gif)
+
+### <a name="visual-studio-app-center"></a>Visual Studio 앱 센터
+**15.5의 새로운 기능**: Visual Studio App Center&mdash;Android, iOS, macOS 및 Windows 앱용으로 일반 공급됨&mdash;에는 자동화된 빌드, 클라우드의 실제 장치에서 테스트, 베타 테스터 및 앱 스토어 배포, 충돌 및 분석 데이터를 통한 실제 사용 모니터링을 비롯하여 앱의 수명 주기를 관리하는 데 필요한 모든 것이 있습니다. Objective-C, Swift, Java, C#, Xamarin, React Native로 작성된 앱이 모든 기능에서 지원됩니다.
+
+  ![Visual Studio App Center 테스트 환경](../ide/media/app-center-test-env.png)
+
+자세한내 내용은 [App Center 소개: 클라우드에서 앱 빌드, 테스트, 배포 및 모니터링](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/)(영문) 블로그 게시물을 참조하세요.
+
 ## <a name="cross-platform-development"></a>플랫폼 간 개발
 ### <a name="redgate-data-tools"></a>Redgate 데이터 도구
 DevOps 기능을 SQL Server 데이터베이스 개발로 확장하기 위해 Visual Studio에서 현재 Redgate 데이터 도구를 사용할 수 있습니다.
@@ -213,7 +259,7 @@ Visual Studio 2017 Enterprise에는 다음이 포함되어 있습니다.
 Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
 - [Redgate SQL 검색](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs)은 여러 데이터베이스에서 SQL 조각 및 개체를 빠르게 찾을 수 있도록 하여 생산성을 높입니다.
 
-자세한 내용은 [Visual Studio 2017의 Redgate 데이터 도구](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/) 블로그 게시물을 참조하세요.
+자세히 알아보려면 [Visual Studio 2017의 Redgate 데이터 도구](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/)(영문) 블로그 게시물을 참조하세요.
 
 ### <a name="net-core"></a>.NET Core
 .NET Core는 .NET Standard의 일반적인 용도를 위한 모듈식 플랫폼 간 오픈 소스 구현이며 .NET Framework와 동일한 API를 다수 포함합니다.
@@ -232,6 +278,15 @@ Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
 
 자세한 내용은 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) 페이지를 참조하세요.
 
+## <a name="ai-development"></a>AI 개발
+### <a name="visual-studio-tools-for-ai"></a>AI용 Visual Studio Tools
+**15.5의 새로운 기능**:Visual Studio의 생산성 기능을 사용하여 현재의 AI 혁신을 가속화하세요. 구문 강조 표시, IntelliSense 및 텍스트 자동 서식 지정과 같이 기본 제공되는 코드 편집기 기능을 사용하세요. 지역 변수 및 모델에 대한 단계별 디버깅을 사용하여 로컬 환경에서 딥 러닝 응용 프로그램을 대화형으로 테스트할 수 있습니다.
+
+  ![딥 러닝 IDE](../ai/media/about/ide.png)
+
+자세한 내용은 [Visual Studio Tools for AI](../ai/about-ai-tools.md) 페이지를 참조하세요.
+
+
 ## <a name="talk-to-us"></a>의견 보내기  
  피드백을 보낼 때는 Visual Studio 팀에 피드백을 보내는 이유도 함께 알려 주세요. Microsoft는 고객 여러분의 피드백을 소중하게 생각하며, Microsoft에서 추진하는 업무에 큰 역할을 합니다.  
 
@@ -244,7 +299,7 @@ Visual Studio를 개선하는 방법을 제안하거나 문제를 보고하려�
  Visual Studio 피드백의 상태를 추적하려는 경우 [Connect](http://connect.microsoft.com/)로 이동하여 버그를 보고하세요. 버그를 신고한 후에는 Connect로 돌아와 상태를 추적할 수 있습니다.  
 
 ## <a name="see-also"></a>참고 항목
-* [Visual Studio 2017 릴리스 정보](https://www.visualstudio.com/news/vs2015-vs)
+* [Visual Studio 2017 릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)
 * [Visual C++의 새로운 기능](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 * [C#의 새로운 기능](https://docs.microsoft.com/dotnet/csharp/csharp-7)  
 * [Team Foundation Server의 새로운 기능](https://www.visualstudio.com/docs/whats-new)

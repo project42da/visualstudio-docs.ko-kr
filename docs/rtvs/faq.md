@@ -1,23 +1,22 @@
 ---
 title: "Visual Studio용 R 도구 FAQ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/13/2017
+ms.date: 12/04/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: e656ac64-915a-40bb-8196-93d33250ef98
 caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 79420e09f7ca0b01ce97fc19a063a8b15431b544
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.openlocfilehash: 22d114500ca602806facbf6f6e81ab7497e07526
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -97,7 +96,7 @@ Q **Microsoft R Server가 무엇인가요?**
 
 질문. **RTVS가 Azure의 데이터 과학 VM 이미지를 사용하여 만든 VM에 연결할 수 있나요?**
 
-대답: 예. 데이터 과학 VM 이미지는 Visual Studio용 원격 R 서비스에 미리 설치되어 제공됩니다.
+대답: 예. [데이터 과학 VM - Windows 2016](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) 이미지는 Visual Studio용 원격 R 서비스에 미리 설치되어 제공됩니다.
 
 Q **RTVS가 R이 설치된 원격 컴퓨터에 연결할 수 있나요?**
 

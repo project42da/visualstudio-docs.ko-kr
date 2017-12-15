@@ -5,15 +5,15 @@ Ms.author: jaunger
 Manager: evelynp
 Ms.date: 10/3/2017
 Ms.topic: Get-Started-Article
-Description: "Visual Studio 구독에 대한 구입 옵션 탐색"
+Description: Explore your purchasing options for Visual Studio subscriptions
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: c751048084e7f5e6ae65aee5b5fa52cff84c4439
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: d78531fd3635c010f83a4ebe3c446c8c4c33e943
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
 #   <a name="how-to-buy-a-subscription"></a>구독을 구입하는 방법
 Visual Studio 구독을 구입하는 방법은 세 가지가 있습니다.  
@@ -27,9 +27,9 @@ Visual Studio 구독을 구입하는 방법은 세 가지가 있습니다.
 ### <a name="before-you-start"></a>시작하기 전에
 
 *   구매를 청구하려면 [Azure 구독](https://azure.microsoft.com/en-us/pricing/purchase-options/)이 필요합니다. Visual Studio Marketplace에서 첫 번째 구매 전에 또는 첫 번째 구매를 진행하면서 [등록](https://account.windowsazure.com/Subscriptions)할 수 있습니다.
-Visual Studio Marketplace 구매에 사용할 수 있는 [Azure 구독](https://docs.microsoft.com/en-us/vsts/marketplace/marketplace-billing-qa)에 대해 알아봅니다. 
+Visual Studio Marketplace 구매에 어떤 Azure 구독을 사용할 수 있는지 [알아봅니다](https://docs.microsoft.com/en-us/vsts/marketplace/marketplace-billing-qa). 
 
-*   Azure 구독에 등록하고 Visual Studio Marketplace에서 구매하려면 [“개인” Microsoft 계정](https://www.microsoft.com/account) 또는 조직에서 사용할 목적으로 구매하고 Azure AD(Azure Active Directory)로 ID를 관리하는 경우 [“회사 또는 학교 계정”](https://azure.microsoft.com/en-us/documentation/articles/sign-up-organization/)이 필요합니다.
+*   Azure 구독에 등록하고 Visual Studio Marketplace에서 구매하려면 “개인” [Microsoft 계정](https://www.microsoft.com/account) 또는 조직에서 사용할 목적으로 구매하고 Azure AD(Azure Active Directory)로 ID를 관리하는 경우 [“회사 또는 학교 계정”](https://azure.microsoft.com/en-us/documentation/articles/sign-up-organization/)이 필요합니다.
 
 ### <a name="buy-subscriptions"></a>구독 구입
 
@@ -66,7 +66,7 @@ Visual Studio Marketplace 구매에 사용할 수 있는 [Azure 구독](https://
 <a name="manage-subscriptions"></a>
 ###  <a name="manage-purchased-visual-studio-subscriptions-as-administrator"></a>관리자로서 구매한 Visual Studio 구독을 관리
 
-구독 관리자로서 Visual Studio Marketplace에서 구매한 모든 Visual Studio 구독 및 사용자에 대한 할당을 확인하거나, 이러한 구독을 변경하거나, 이러한 구독을 취소하려면 [Visual Studio 구독 관리 포털](https://manage.visualstudio.com/cloud)로 이동하여 이러한 구독을 구입하는 데 사용한 ID로 로그인합니다.
+구독 관리자로서 Visual Studio Marketplace에서 구매한 모든 Visual Studio 구독 및 사용자에 대한 할당을 확인하거나, 이러한 구독을 변경하거나, 이러한 구독을 취소하려면 Visual Studio 구독 관리 [포털](https://manage.visualstudio.com/cloud)로 이동하여 이러한 구독을 구입하는 데 사용한 ID로 로그인합니다.
 
 *   구매한 구독의 수를 변경하려면 다음을 수행합니다.
 
@@ -76,11 +76,11 @@ Visual Studio Marketplace 구매에 사용할 수 있는 [Azure 구독](https://
 
 ### <a name="view-visual-studio-subscriptions-assigned-to-you"></a>자신에게 할당된 Visual Studio 구독 보기
 
-특별히 사용자에게 할당된 Visual Studio 구독 및 구독 혜택을 보려면 Visual Studio 구독 포털(```https://my.visualstudio.com```)로 이동합니다.
+특별히 사용자에게 할당된 Visual Studio 구독 및 구독 혜택을 보려면 Visual Studio 구독 포털 [https://my.visualstudio.com](https://my.visualstudio.com)으로 이동합니다.
 
-<img alt="Visual Studio subscriptions portal, Subscriptions" src="_img/buy-vs-subscriptions/view-assigned-subscription-list-subscriptions-portal.png" style="border: 1px solid #CCCCCC" />
+   <img alt="Visual Studio subscriptions portal, Subscriptions" src="_img/buy-vs-subscriptions/view-assigned-subscription-list-subscriptions-portal.png" style="border: 1px solid #CCCCCC" />
 
-<img alt="Visual Studio subscriptions portal, Benefits" src="_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png" style="border: 1px solid #CCCCCC" />
+   <img alt="Visual Studio subscriptions portal, Benefits" src="_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png" style="border: 1px solid #CCCCCC" />
 
 ### <a name="marketplace-and-billing-qa"></a>Marketplace 및 청구 Q&A
 
@@ -89,23 +89,23 @@ Visual Studio Marketplace 구매에 사용할 수 있는 [Azure 구독](https://
 ## <a name="buying-standard-subscriptions-through-the-microsoft-store"></a>Microsoft Store를 통한 표준 구독 구입
 Visual Studio 표준 구독은 Microsoft Store를 통해 구매할 수 있습니다.  구독을 구입하거나 갱신하려면 다음을 수행합니다.
 
-1. [Microsoft Store](https://www.microsoft.com)에 연결합니다.
+1. [Microsoft Store](https://www.microsoft.com/store)에 연결합니다.
 2. **소프트웨어** 탭을 클릭합니다.
 3. **Professional 소프트웨어**를 선택합니다.
 
-<img alt="Software Menu" src="_img/buy-vs-subscriptions/professional-software.png" style="border: 1px solid #CCCCCC" />
+    <img alt="Software Menu" src="_img/buy-vs-subscriptions/professional-software.png" style="border: 1px solid #CCCCCC" />
 
 4. **쇼핑 범주** 목록에서 **Visual Studio**를 선택합니다.
 
-<img alt="Categories List" src="_img/buy-vs-subscriptions/shop-categories.png" style="border: 1px solid #CCCCCC" />
+    <img alt="Categories List" src="_img/buy-vs-subscriptions/shop-categories.png" style="border: 1px solid #CCCCCC" />
 
 5. **Visual Studio 쇼핑** 목록에서 구입하려는 구독을 선택합니다. (Visual Studio Professional 2017은 IDE에 대한 독립 실행형 라이선스이며 구독을 포함하지 않습니다.)
 
-<img alt="Visual Studio Products" src="_img/buy-vs-subscriptions/shop-visual-studio.png" style="border: 1px solid #CCCCCC" />
+    <img alt="Visual Studio Products" src="_img/buy-vs-subscriptions/shop-visual-studio.png" style="border: 1px solid #CCCCCC" />
 
 6. 제품 설명 페이지에 갱신을 구입하거나 새로 구매하는 옵션이 표시됩니다.  원하는 구독 유형을 선택하고 카트에 추가합니다. 
 
-<img alt="Visual Studio Enterprise options" src="_img/buy-vs-subscriptions/enterprise-options.png" style="border: 1px solid #CCCCCC" />
+    <img alt="Visual Studio Enterprise options" src="_img/buy-vs-subscriptions/enterprise-options.png" style="border: 1px solid #CCCCCC" />
 
 7. 카트에서 **체크 아웃** 단추를 클릭하여 **검토 및 주문하기** 페이지로 이동합니다.  (계속하려면 Microsoft 계정에 로그인해야 할 수 있습니다.) 
 
@@ -138,5 +138,5 @@ Microsoft Store를 통해 Visual Studio 구독을 구입한 경우 지불 확인
 
 
 여러 구독의 혜택이 필요한 조직은 다양한 VL(볼륨 라이선스) 프로그램을 통해 구매할 수 있습니다.  볼륨 라이선스는 공인된 Microsoft 파트너를 통해 판매됩니다.  
-[볼륨 라이선스를 통해 구매](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx)하는 방법을 알아봅니다. [Marketplace 및 청구 Q&A](/vsts/marketplace/marketplace-billing-qa)에 방문하여 Visual Studio Marketplace와 Azure 청구에 관련한 일반적인 여러 질문에 대한 답을 찾을 수 있습니다. 
+[볼륨 라이선싱](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx)을 통해 구매하는 방법을 알아봅니다. [Marketplace 및 청구 Q&A](/vsts/marketplace/marketplace-billing-qa)에 방문하여 Visual Studio Marketplace와 Azure 청구에 관련한 일반적인 여러 질문에 대한 답을 찾을 수 있습니다. 
 

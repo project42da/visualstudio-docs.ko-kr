@@ -15,11 +15,11 @@ ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
 caps.latest.revision: "62"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: e6e0b55e86130f316c09583d4a52e1ad3dc22608
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.openlocfilehash: 7d4b3634f651cd8fc0ebc9c2e5254914a62e3771
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="unit-test-your-code"></a>코드 단위 테스트
 개발자와 테스터는 단위 테스트를 통해 [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)], [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] 및 [!INCLUDE[cpp_current_short](../misc/includes/cpp_current_short_md.md)] 프로젝트에서 클래스의 메서드에 있는 논리 오류를 빠르게 찾을 수 있습니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/02/2017
   
 2.  **관리 코드용 Microsoft 단위 테스트 프레임워크.** 관리 코드용 Microsoft 단위 테스트 프레임워크는 Visual Studio와 함께 설치되며 .NET 코드 테스트용 프레임워크를 제공합니다.  
   
-3.  **C++용 Microsoft 단위 테스트 프레임워크.** C++용 Microsoft 단위 테스트 프레임워크는 Visual Studio와 함께 설치되며 네이티브 코드 테스트용 프레임워크를 제공합니다.  
+3.  **C++용 Microsoft 단위 테스트 프레임워크.** C++용 Microsoft 단위 테스트 프레임워크는 Visual Studio와 함께 설치되며 네이티브 코드 테스트용 프레임워크를 제공합니다.  Google Test, Boost.Test 및 CTest 프레임워크 역시 Visual Studio에 포함되어 있으며 타사 어댑터를 추가 테스트 프레임 워크에서 사용할 수 있습니다. 자세한 내용은 [C/C++에 대한 단위 테스트 작성](writing-unit-tests-for-c-cpp.md)을 참조하세요. 
   
 4.  **코드 검사 도구.** 단위 테스트가 테스트 탐색기의 명령 하나에서 실행하는 제품 코드의 양을 결정할 수 있습니다.  
   

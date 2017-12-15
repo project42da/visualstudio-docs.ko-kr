@@ -1,32 +1,22 @@
 ---
-title: "Visual Studio에서 솔루션 로딩 최적화 | Microsoft Docs"
-ms.custom: 
-ms.date: 08/31/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- startup time [Visual Studio]
-- optimizing startup time [Visual Studio]
-- speed up start time [Visual Studio]
-ms.assetid: 84989983-84bc-4f81-97a8-2131e3a25138
-caps.latest.revision: "4"
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-f1_keywords: vs.performancecenter
-ms.technology: vs-ide-general
-ms.openlocfilehash: 2102fc026b566c89108f0d74dcf604020653e358
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+redirect_url: /visualstudio/ide/optimize-visual-studio-startup-time/
+ms.openlocfilehash: 6ba351d5b395caaddd12021b09f8792cd19b2905
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
+---
+title: "Visual Studio에서 솔루션 로딩 최적화 | Microsoft Docs" ms.custom: "" ms.date: 08/31/2017 ms.reviewer: "" ms.suite: "" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
+  - "시작 시간 [Visual Studio]"
+  - "시작 시간 최적화 [Visual Studio]"
+  - "시작 시간 속도 개선 [Visual Studio]" ms.assetid: 84989983-84bc-4f81-97a8-2131e3a25138 caps.latest.revision: 4 author: "gewarren" ms.author: "gewarren" manager: ghogen f1_keywords: 
+  - "vs.performancecenter" ms.technology: 
+  - "vs-ide-general"
 ---
 # <a name="optimize-solution-loading-in-visual-studio"></a>Visual Studio에서 솔루션 로딩 최적화
 많은 솔루션에는 해당 솔루션을 로드하는 데 걸린 시간에 영향을 주는 다수의 프로젝트가 포함됩니다. 하지만 팀 환경에서 개발자는 일반적으로 해당 프로젝트의 다른 하위 집합을 사용하고 모든 개별 프로젝트를 로드할 필요가 없습니다.
 
-Visual Studio 2017은 **경량 솔루션 로드**를 지원합니다. LSL(경량 솔루션 로드) 모드가 설정된 경우 Visual Studio 2017은 큰 솔루션에 있는 모든 프로젝트를 로드하는 대신 프로젝트의 작은 하위 집합을 로드합니다. 일반적으로 사용되는 IDE 기능은 대부분 LSL 모드에서 작동하고, 사용자에게 전체 솔루션에서 빌드, 검색 및 디버그하는 기능을 제공합니다. (LSL 모드에서 지원되지 않는 기본 기능은 편집 및 계속입니다.)
+Visual Studio 2017은 **경량 솔루션 로드**를 지원합니다. LSL(경량 솔루션 로드) 모드가 설정된 경우 Visual Studio 2017은 큰 솔루션에 있는 모든 프로젝트를 로드하는 대신 프로젝트의 작은 하위 집합을 로드합니다. 일반적으로 사용되는 IDE 기능은 대부분 LSL 모드에서 작동하고, 사용자에게 전체 솔루션에서 빌드, 검색 및 디버그하는 기능을 제공합니다. (LSL 모드에서 지원되지 않는 기본 기능은 편집 및 계속입니다.)  
 
 > [!NOTE]
 > 이 콘텐츠는 Visual Studio 2017 업데이트 3에 적용됩니다.
@@ -54,16 +44,13 @@ Visual Studio 2017은 **경량 솔루션 로드**를 지원합니다. LSL(경량
 
 ## <a name="how-does-lightweight-solution-load-work-behind-the-scenes"></a>백그라운드에서 경량 솔루션 로드는 어떻게 작동하나요?
 
-솔루션을 로드할 때 Visual Studio는 이전에 열린 프로젝트를 기억하고 해당 프로젝트만을 로드합니다. 다른 모든 프로젝트는 솔루션 탐색기에서 볼 수 있지만 로드되지 않습니다. 프로젝트를 확장하거나 마우스 오른쪽 단추로 클릭하는 즉시 Visual Studio는 해당 프로젝트를 자동 로드합니다. 일반적으로 프로젝트를 자동으로 로드하는 데 1초 미만이 걸리지만 일부 프로젝트는 시간이 더 걸릴 수 있습니다.
-그러나 Visual Studio를 사용하면 전체 솔루션에서 작동하는 검색, 디버그, 빌드 및 소스 제어와 같은 IDE 기능을 사용할 수 있습니다. 예를 들어 몇 가지 프로젝트만을 경량 모드에서 로드하는 경우에도 전체 솔루션에서 검색할 수 있습니다. 
+솔루션을 로드할 때 Visual Studio는 이전에 열린 프로젝트를 기억하고 해당 프로젝트만을 로드합니다. 다른 모든 프로젝트는 솔루션 탐색기에서 볼 수 있지만 로드되지 않습니다. 프로젝트를 확장하거나 마우스 오른쪽 단추로 클릭하는 즉시 Visual Studio는 해당 프로젝트를 자동 로드합니다. 일반적으로 프로젝트를 자동으로 로드하는 데 1초 미만이 걸리지만 일부 프로젝트는 시간이 더 걸릴 수 있습니다. 그러나 Visual Studio를 사용하면 전체 솔루션에서 작동하는 검색, 디버그, 빌드 및 소스 제어와 같은 IDE 기능을 사용할 수 있습니다. 예를 들어 몇 가지 프로젝트만을 경량 모드에서 로드하는 경우에도 전체 솔루션에서 검색할 수 있습니다. 
 
 더 많은 프로젝트를 확장하면 Visual Studio는 확장된 프로젝트 목록을 기억합니다. 솔루션을 다시 열 때 Visual Studio는 이전에 확장된 프로젝트를 자동 로드합니다.
 
 ## <a name="visual-studio-prompts-developers-likely-to-see-significant-performance-gains"></a>Visual Studio는 개발자에게 상당한 성능 이점을 확인할 수 있는 메시지를 표시합니다.
 
-Visual Studio 원격 분석에서 30개 이상의 프로젝트를 포함하는 큰 솔루션은 LSL 모드에서 상당한 혜택을 얻습니다. 따라서 LSL 모드를 사용하도록 큰 솔루션을 가진 개발자에게 메시지를 표시합니다. 처음으로 LSL을 사용하는 대부분의 개발자는 해당 기능을 정기적으로 사용하게 됩니다. 
-
-Visual Studio 사용 원격 분석을 지속적으로 검토하여 가장 많은 혜택을 얻는 개발자에게 LSL 모드를 제공하도록 추론을 개선합니다. 
+Visual Studio 원격 분석에서 30개 이상의 프로젝트를 포함하는 큰 솔루션은 LSL 모드에서 상당한 혜택을 얻습니다. 따라서 LSL 모드를 사용하도록 큰 솔루션을 가진 개발자에게 메시지를 표시합니다. 처음으로 LSL을 사용해 본 대부분의 개발자는 해당 기능을 정기적으로 사용하게 됩니다. 
 
 ## <a name="visual-studio-makes-recommendations-to-turn-on-lightweight-solution-load-based-on-heuristics"></a>Visual Studio에서는 추론에 따라 경량 솔루션 로드를 사용하는 것이 좋습니다.
 
@@ -71,7 +58,7 @@ Visual Studio 사용 원격 분석을 지속적으로 검토하여 가장 많은
 
 ![팝업 창](../ide/media/VSIDE_LSL_Popup.png)
 
-## <a name="ide-features-fully-supported-in-lightweight-mode"></a>경량 모드에서 완전하게 지원되는 IDE 기능
+## <a name="ide-features-fully-supported-in-lightweight-mode"></a>경량 모드에서 완벽히 지원되는 IDE 기능
 
 |기능|경량 모드에서 지원되나요?|
 |-|-|-|
@@ -131,4 +118,4 @@ LSL 모드에서 작동하지 않고 추가 프로젝트 또는 전체 솔루션
 개발자를 위한 솔루션 로드 시간 성능을 최적화하기 위해 혁신할 생각입니다. 새로운 기능이므로 적극적으로 고객 피드백을 확인하고 알려진 문제를 해결하려고 노력하고 있습니다. 여러분의 피드백을 기다리겠습니다. lslsupport@microsoft.com에서 Visual Studio 솔루션 로드 최적화 팀에 전자 메일을 보낼 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
-[Visual Studio 성능 팁과 요령](../ide/visual-studio-performance-tips-and-tricks.md)
+[Visual Studio 성능 팁과 요령](../ide/visual-studio-performance-tips-and-tricks.md)  

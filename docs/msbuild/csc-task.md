@@ -21,11 +21,11 @@ caps.latest.revision: "26"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 0e36e4c9e01d7ee8f12a59f2fd72ee4ef6b83e9a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: d91a1a5fca1530f42e9781a09b2e9364daf8e15f
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="csc-task"></a>Csc 작업
 CSC.exe를 래핑하고 실행(.exe) 파일, 동적 연결 라이브러리(.dll) 파일 또는 코드 모듈(.netmodule) 파일을 생성합니다. CSC.exe에 대한 자세한 내용은 [C# 컴파일러 옵션](/dotnet/csharp/language-reference/compiler-options/index)을 참조하세요.  
@@ -63,6 +63,7 @@ CSC.exe를 래핑하고 실행(.exe) 파일, 동적 연결 라이브러리(.dll)
 |`NoWin32Manifest`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`인 경우 기본 Win32 매니페스트를 포함하지 않습니다.|  
 |`Optimize`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`인 경우 최적화를 사용할 수 있습니다. `false`인 경우 최적화를 사용하지 않습니다. 자세한 내용은 [/optimize(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option)를 참조하세요.|  
 |`OutputAssembly`|선택적 `String` 출력 매개 변수입니다.<br /><br /> 출력 파일의 이름을 지정합니다. 자세한 내용은 [/out(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option)을 참조하세요.|  
+|`OutputRefAssembly`|선택적 `String` 매개 변수입니다.<br /><br /> 출력 참조 어셈블리 파일의 이름을 지정합니다. 자세한 내용은 [/refout(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/refout-compiler-option)을 참조하세요.|  
 |`PdbFile`|선택적 `String` 매개 변수입니다.<br /><br /> 디버그 정보 파일 이름을 지정합니다. 기본 이름은 확장명이 .pdb인 출력 파일 이름입니다.|  
 |`Platform`|선택적 `String` 매개 변수입니다.<br /><br /> 출력 파일의 대상으로 프로세서 플랫폼을 지정합니다. 이 매개 변수는 `x86`, `x64` 또는 `anycpu` 값을 가질 수 있습니다. 기본값은 `anycpu`입니다. 자세한 내용은 [/platform(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)을 참조하세요.|  
 |`References`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 매개 변수입니다.<br /><br /> 작업에서 지정된 항목의 공용 형식 정보를 현재 프로젝트로 가져옵니다. 자세한 내용은 [/reference(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option)를 참조하세요.<br /><br /> 메타데이터 `Aliases`를 원래 "참조" 항목에 추가하여 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 파일에서 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 참조 별칭을 지정할 수 있습니다. 예를 들어 다음 CSC 명령줄에서 별칭 "LS1"을 설정하려면<br /><br /> `csc /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> 다음과 같이 사용합니다.<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>`|  

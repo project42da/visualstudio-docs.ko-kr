@@ -8,22 +8,21 @@ ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 8876f8c1-4770-44dc-97d8-bf0035ae8196
 caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 34e6898ce5c45033c8ac984d014d462a34552776
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 6476de086aad812e40d3c5b638c2076d50adfb27
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="python-environments"></a>Python 환경
 
-Visual Studio에서 Python을 통해 여러 Python 환경을 간편하게 관리하고 다양한 프로젝트에 대해 쉽게 전환할 수 있습니다. 
+Visual Studio에서 Python을 통해 여러 Python 환경을 간편하게 관리하고 다양한 프로젝트에 대해 쉽게 전환할 수 있습니다.
 
-참고: Visual Studio에서 Python을 처음 사용하는 경우 현재 이 토론의 근간이 되는 다음 항목을 먼저 참조하세요.
+**참고**: Visual Studio에서 Python을 처음 사용하는 경우 현재 이 토론의 근간이 되는 다음 항목을 먼저 참조하세요.
 
 - [Visual Studio에서 Python 작업](python-in-visual-studio.md)
 - [Visual Studio에서 Python 지원 설치](installation.md)
@@ -50,8 +49,8 @@ Visual Studio에서 Python을 통해 여러 Python 환경을 간편하게 관리
 
 Visual Studio 2017을 제외하고, Python 지원에는 Python 인터프리터가 함께 제공되지 않으므로 코드를 실행하려면 다음 중 하나를 설치해야 합니다. 일반적으로 Visual Studio는 새로 설치된 인터프리터를 자동으로 검색하고 이에 대한 환경을 설정합니다. 설치된 환경을 감지하는 경우 [기존 인터프리터에 대한 환경 만들기](#creating-an-environment-for-an-existing-interpreter)를 참조하세요.
 
-| 인터프리터 | 설명 | 
-| --- | --- | 
+| 인터프리터 | 설명 |
+| --- | --- |
 | [CPython](https://www.python.org/) | 가장 널리 사용되는 “기본” 인터프리터로, 32비트 및 64비트 버전으로 사용 가능합니다(32비트 권장). 최신 언어 기능, 최대 Python 패키지 호환성, 완전한 디버깅 지원 및 [IPython](http://ipython.org/)과 상호 interop을 포함합니다. [Python 2 또는 Python 3을 사용해야 하나요?](http://wiki.python.org/moin/Python2orPython3)도 참조하세요. Visual Studio 2015 및 이전 버전은 Python 3.6을 지원하지 않으며 “Python 버전 3.6 지원되지 않음” 오류가 표시될 수 있습니다. 대신 Python 3.5 또는 이전을 사용합니다. |
 | [IronPython](https://github.com/IronLanguages/main) | Python의 .NET 구현으로, 32비트 및 64비트 버전으로 사용 가능하며 C#/F#/Visual Basic interop, .NET API에 대한 액세스, 표준 Python 디버깅(그러나 C++ 혼합 모드 디버깅은 제외) 및 혼합 IronPython/C# 디버깅을 제공합니다. 하지만 IronPython에서는 가상 환경을 지원하지 않습니다. | 
 | [Anaconda](https://www.continuum.io) | Python에서 제공하는 개방형 데이터 과학 플랫폼으로, 최신 버전의 CPython과 설치하기 어려운 대부분의 패키지를 포함합니다. 달리 결정할 수 없는 경우 권장됩니다. |
@@ -68,7 +67,7 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 1. 솔루션 탐색기에서 **Python 환경**을 마우스 오른쪽 단추로 클릭하고 **View All Python Environments(모든 Python 환경 보기)**를 선택합니다.
 
     ![솔루션 탐색기에서 모든 환경 명령 보기](media/environments-view-all.png)
-    
+
 두 경우 모두 Python 환경 창은 솔루션 탐색기의 형제 탭으로 나타납니다.
 
 ![Python 환경 창](media/environments-default-view.png)
@@ -87,7 +86,7 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 
 Visual Studio는 레지스트리를 확인하여 정상적으로 설치된 Python 인터프리터를 찾습니다([PEP 514 - Windows 레지스트리의 Python 등록](https://www.python.org/dev/peps/pep-0514/) 수행). 그러나 인터프리터가 비표준 방식으로 설치된 경우 Visual Studio는 해당 인터프리터를 찾을 수 없습니다. 이 경우 다음과 같이 Visual Studio에서 인터프리터를 직접 가리키도록 할 수 있습니다.
 
-1. 환경 창에서 **+ 사용자 지정...**을 선택하면 새 환경이 생성되고 아래 설명된 [**구성** 탭](#configure-tab)이 열립니다.
+1. [Python 환경 창](#managing-python-environments-in-visual-studio)에서 **+ 사용자 지정...**을 선택하면 새 환경이 생성되고 아래 설명된 [**구성** 탭](#configure-tab)이 열립니다.
 
     ![새 사용자 지정 환경의 기본 보기](media/environments-custom-1.png)
 
@@ -130,7 +129,6 @@ Visual Studio는 레지스트리를 확인하여 정상적으로 설치된 Pytho
 
 1. **도구 > 옵션 > Python 도구 > 대화형 Windows** 탭([대화형 windows 옵션](options.md#interactive-windows-options) 참조)에 있는 **스크립트** 컨트롤은 모든 환경에서 로드 및 실행되는 시작 스크립트에 대한 추가 폴더를 지정하기 위한 것입니다. 그러나 이 기능은 현재 작동하지 않습니다.
 
-
 ### <a name="configure-tab"></a>구성 탭
 
 표시된 경우, 아래 표에 설명된 세부 정보를 포함합니다. 이 탭이 없는 경우 Visual Studio에서 모든 세부 정보를 자동으로 관리하는 것입니다.
@@ -166,7 +164,6 @@ Visual Studio는 레지스트리를 확인하여 정상적으로 설치된 Pytho
 
 동일한 옵션 탭에서 **항상 관리자로 pip 실행**을 선택하여 모든 환경에 대해 대화 상자를 표시하지 않을 수도 있습니다. [옵션 - 일반 탭](options.md#general-options)을 참조하세요.
 
-
 ### <a name="intellisense-tab"></a>IntelliSense 탭
 
 IntelliSense 완성 데이터베이스의 현재 상태를 보여 줍니다.
@@ -179,7 +176,7 @@ IntelliSense 완성 데이터베이스의 현재 상태를 보여 줍니다.
 
 ## <a name="global-environments"></a>글로벌 환경
 
-글로벌(또는 시스템 차원) 환경은 컴퓨터의 모든 프로젝트에 사용 가능합니다. 일반적으로 Visual Studio는 자동으로 글로벌 환경을 검색하며 Python 환경 창에서 이를 볼 수 있습니다. 그렇지 않은 경우 [Visual Studio에서 Python 환경 관리](#managing-python-environments-in-visual-studio)에서 설명한 것처럼 수동으로 환경을 추가할 수 있습니다.
+글로벌(또는 시스템 차원) 환경은 컴퓨터의 모든 프로젝트에 사용 가능합니다. 일반적으로 Visual Studio는 자동으로 글로벌 환경을 검색하며 [Python 환경 창](#managing-python-environments-in-visual-studio)에서 이를 볼 수 있습니다. 그렇지 않은 경우 동일한 창을 통해 수동으로 환경을 추가할 수 있습니다.
 
 Visual Studio는 실행, 디버깅, 구문 검사, 가져오기 및 멤버 완성 표시 및 환경이 필요한 기타 모든 작업을 위한 새로운 모든 프로젝트에 대해 기본 환경을 사용합니다. 기본 환경을 변경하면 [프로젝트별 환경](#project-specific-environments)이 추가되지 않은 모든 프로젝트에 영향을 주며 이에 대해서는 다음에 설명합니다.
 
@@ -208,7 +205,6 @@ Visual Studio는 실행, 디버깅, 구문 검사, 가져오기 및 멤버 완�
 
 > [!Tip]
 > pip에서 패키지 설치에 실패하는 일반적인 상황은 패키지가 `*.pyd` 파일에 기본 구성 요소에 대한 소스 코드를 포함하는 경우입니다. 필요한 Visual Studio 버전이 설치되어 있지 않으면 pip에서 해당 구성 요소를 컴파일할 수 없습니다. 이 경우 표시되는 오류 메시지는 `error: Unable to find vcvarsall.bat`입니다. 대체로 `easy_install`은 미리 컴파일된 이진 파일을 다운로드할 수 있으며, [http://aka.ms/VCPython27](http://aka.ms/VCPython27)에서 이전 버전의 Python에 적합한 컴파일러를 다운로드할 수 있습니다. 자세한 내용은 Python 도구 팀 블로그에서 ["vcvarsallbat을 찾을 수 없는" 어려움을 해결하는 방법](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/)(영문)을 참조하세요.
-
 
 ## <a name="virtual-environments"></a>가상 환경
 
@@ -242,11 +238,11 @@ Visual Studio는 실행, 디버깅, 구문 검사, 가져오기 및 멤버 완�
 
 기술적으로, 파일 이름을 사용하여 요구 사항을 추적할 수 있으나(패키지 설치 시 `-r <full path to file>` 사용) Visual Studio에서 `requirements.txt`에 대한 구체적인 지원을 제공합니다.
 
-- `requirements.txt`가 포함된 프로젝트를 로드하고 해당 파일에 나열된 모든 패키지를 설치하려는 경우 프로젝트를 마우스 오른쪽 단추로 클릭하고 **requirements.txt에서 설치**를 선택합니다.
+- `requirements.txt`가 포함된 프로젝트를 로드하여 이 파일에 나열된 모든 패키지를 설치하려면 **솔루션 탐색기**에서 **Python 환경** 노드를 확장한 다음 환경 노드를 마우스 오른쪽 단추로 클릭하고 **requirements.txt에서 설치**를 선택합니다.
 
     ![requirements.txt에서 설치](media/environments-requirements-txt-install.png)
 
-- 프로젝트에 필요한 모든 패키지가 설치되었으면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **requirements.txt 생성**을 선택하여 필요한 파일을 만듭니다. 파일이 이미 있는 경우 업데이트 방법을 묻는 메시지가 표시됩니다.
+- 프로젝트에 필요한 모든 패키지가 설치되었으면 솔루션 탐색기에서 환경을 마우스 오른쪽 단추로 클릭하고 **requirements.txt 생성**을 선택하여 필요한 파일을 만듭니다. 파일이 이미 있는 경우 업데이트 방법을 묻는 메시지가 표시됩니다.
 
     ![requirements.txt 옵션 업데이트](media/environments-requirements-txt-replace.png)
 

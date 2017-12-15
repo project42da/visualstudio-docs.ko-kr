@@ -11,11 +11,11 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.technology: vs-acquisition
-ms.openlocfilehash: aec5948ed985b6ff2abde47a48198cf1a67c4337
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: 283fec9bcaa4f678f30f3a0eb0dda667146b03b9
+ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017의 문제를 보고하는 방법
 Visual Studio에 문제가 발생하는 경우와 관련하여 자세히 알려고 합니다. 진단하고 해결할 수 있도록 문제를 보고하는 방법은 다음과 같습니다.  
@@ -65,6 +65,12 @@ Visual Studio에 문제가 발생하는 경우와 관련하여 자세히 알려�
 ## <a name="submit-the-report"></a>보고서 제출  
 ###  <a name="submit_the_report"></a>  
  **제출** 단추를 클릭하여 이미지와 추적 또는 덤프 파일과 함께 보고서를 보냅니다. **제출** 단추가 회색으로 표시되는 경우 보고서의 제목과 설명을 입력했는지 확인합니다.  
+
+## <a name="alternate-reporting"></a>대체 보고
+###  <a name="alternate_reporting"></a>  
+ Visual Studio 설치를 완료할 수 없거나 Visual Studio 내에서 피드백 도구에 액세스할 수 없는 경우에는 Visual Studio 설치 관리자에서도 피드백 도구를 사용할 수 있습니다. Visual Studio 설치 관리자의 오른쪽 위 모서리에 있는 피드백 아이콘을 클릭한 다음이 이 문서에 설명된 단계를 수행합니다.
+
+ ![Visual Studio 설치 관리자의 피드백 제공 단추를 탭하여 피드백 도구를 열 수 있습니다.](../install/media/report-a-problem.png)
 
 ## <a name="see-also"></a>참고 항목  
  [의견 보내기](../ide/talk-to-us.md)

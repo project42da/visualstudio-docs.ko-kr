@@ -13,11 +13,11 @@ caps.latest.revision: "32"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 0fe5627c7307b2d06e894a236d60f4188e6cf427
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: c603e0c235b37c63719abb8e9a5e6dbb3ca3e652
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="msbuild-properties"></a>MSBuild 속성
 빌드를 구성하는 데 사용될 수 있는 이름/값 쌍인 속성은 작업에 값을 전달하고, 조건을 평가하고, 프로젝트 파일 전체에서 참조할 값을 저장하는 데 유용합니다.  
@@ -92,7 +92,7 @@ $(registry:Hive\MyKey\MySubKey)
 msbuild.exe MyProj.proj /p:Configuration=DEBUG  
 ```  
   
- MSBuild 작업의 `Properties` 특성을 사용하여 다중 프로젝트 빌드의 자식 프로젝트에 대해 전역 속성을 설정하거나 수정할 수도 있습니다. MSBuild 작업의 `RemoveProperties` 특성을 사용하여 전달되지 않도록 속성 목록을 지정하지 않을 경우 전역 속성도 자식 프로젝트로 전달됩니다. 자세한 내용은 [MSBuild 작업](../msbuild/msbuild-task.md)을 참조하세요.
+ MSBuild 작업의 `Properties` 특성을 사용하여 다중 프로젝트 빌드의 자식 프로젝트에 대해 전역 속성을 설정하거나 수정할 수도 있습니다. MSBuild 작업의 `RemoveProperties` 특성을 사용하여 전달하지 않을 속성 목록을 지정하지 않을 경우 전역 속성도 자식 프로젝트로 전달됩니다. 자세한 내용은 [MSBuild 작업](../msbuild/msbuild-task.md)을 참조하세요.
   
  프로젝트 태그에 `TreatAsLocalProperty` 특성을 사용하여 속성을 지정할 경우, 해당 전역 속성 값은 프로젝트 파일에 설정된 속성 값을 재정의하지 않습니다. 자세한 내용은 [Project 요소(MSBuild)](../msbuild/project-element-msbuild.md) 및 [방법: 동일한 소스 파일을 다른 옵션을 사용하여 빌드](../msbuild/how-to-build-the-same-source-files-with-different-options.md)를 참조하세요.  
   

@@ -18,16 +18,17 @@ caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9b76decbfcb314733d0b195baeda24474e9574d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 362daf0d3044841260ae7e9b8f0eb42bad8e610b
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="concurrency-visualizer"></a>동시성 시각화 도우미
 > [!NOTE]
 >  동시성 시각화 도우미는 Visual Studio의 선택적 확장입니다. 다음 링크에서 동시성 시각화 도우미와 동시성 시각화 수집 도구를 다운로드하세요.  
 >   
+>  -   [Visual Studio 2017용 동시성 시각화 도우미](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ConcurrencyVisualizer2017#overview) 확장을 다운로드합니다.  
 >  -   [Visual Studio 2015용 동시성 시각화 도우미](https://visualstudiogallery.msdn.microsoft.com/a6c24ce9-beec-4545-9261-293061436ee9) 확장을 다운로드합니다.  
 > -   [Visual Studio 2015용 동시성 시각화 수집 도구](http://www.microsoft.com/en-in/download/details.aspx?id=49103)를 다운로드합니다.  
 >   
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
  동시성 시각화 도우미를 사용하여 다중 스레드 앱이 어떻게 작업을 수행하는지 확인할 수 있습니다. 동시성 시각화 도우미의 뷰에서는 프로그램의 스레드와 시스템 전체의 일시적 관계를 보여 주는 그래픽, 표 및 텍스트 형식의 데이터를 제공합니다. 동시성 시각화 도우미를 사용하여 성능 병목 지점, 불충분한 CPU 사용률, 스레드 경합, 코어 스레드 간 마이그레이션, 동기화 지연, DirectX 동작, 겹쳐 있는 I/O 영역 및 기타 정보를 찾을 수 있습니다. 뷰에서는 항상 그래픽 출력을 호출 스택 및 소스 코드에 연결하여 실행 가능한 데이터를 제공합니다.  
 
 > [!NOTE]
->  Visual Studio 2017의 경우 아직 동시성 시각화 도우미를 사용할 수 없습니다. 동시성 시각화 도우미는 웹 프로젝트를 지원하지 않습니다.  
+>  동시성 시각화 도우미는 웹 프로젝트를 지원하지 않습니다.  
   
  동시성 시각화 도우미는 [Windows용 이벤트 추적](http://go.microsoft.com/fwlink/?LinkId=234579) 기능에 의존합니다.  
   

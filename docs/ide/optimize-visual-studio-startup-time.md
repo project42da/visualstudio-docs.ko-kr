@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 성능 최적화 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 11/15/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.performancecenter
 ms.technology: vs-ide-general
-ms.openlocfilehash: d1058ca5762db28f0afc678a9d31cc6f0f3be6bc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 78a2a4dc41b4c6b3154951f6f48b95b3894fc92e
+ms.sourcegitcommit: 15907b980eadeaa646f010cb197cfd188579d0f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="optimize-visual-studio-performance"></a>Visual Studio 성능 최적화
 Visual Studio는 최대한 신속하고 효율적으로 시작되도록 설계되었습니다. 그러나 특정 Visual Studio 확장명 및 도구 창이 로드 될 때 시작 시간에 부정적 영향을 미칠 수 있습니다. **Visual Studio 성능 관리** 대화 상자에서 느린 확장 및 도구 창이라는 동작을 제어할 수 있습니다. 성능 향상에 대한 더 일반적인 팁은 [Visual Studio 성능 팁과 요령](../ide/visual-studio-performance-tips-and-tricks.md)을 참조하세요.  
@@ -66,17 +66,8 @@ Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를
 
     ![Visual Studio 성능 관리 - 도구 창 보기](../ide/media/vside_perfdialog_toolwindows.png)
 
-## <a name="speed_up_solution_load"></a>Visual Studio 2017에 큰 솔루션을 더 빠르게 로드
-
-Visual Studio 2017에서는 IDE에서 큰 솔루션을 로드하는 데 필요한 시간과 메모리 크기를 줄이는 경량 솔루션 로드라는 새로운 기능이 도입되었습니다. 많은 C#, VB 또는 C++ 프로젝트를 포함하는 큰 솔루션이 있는 경우 경량 솔루션 로드를 사용하면 성능이 향상될 가능성이 큽니다. 이 기능을 사용하면 어떤 이점이 있는지 자세히 알아보려면 [솔루션 로딩 최적화](../ide/optimize-solution-loading-in-visual-studio.md)를 참조하세요.
-
-### <a name="enable-or-disable-lightweight-solution-load"></a>경량 솔루션 로드를 사용 또는 사용하지 않도록 설정
-
-솔루션 탐색기에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **경량 솔루션 로드 사용**을 선택합니다. 옵션을 선택한 후 경량 솔루션 로드를 활성화하려면 솔루션을 닫았다가 다시 열어야 합니다.
-
-![솔루션 탐색기](../ide/media/VSIDE_LSL_Solution_Setting.png)
-
-경량 솔루션 로드에 대한 전역 설정을 구성하려면 [솔루션 로딩 최적화](../ide/optimize-solution-loading-in-visual-studio.md#global_solution_load_settings)를 참조하세요.
+> [!NOTE]
+> 버전 15.5 이전의 Visual Studio 버전에는 **경량 솔루션 로드**라는 기능이 있습니다. Visual Studio 2017 버전 15.5 이상에서는 이 기능을 더 이상 사용할 수 없습니다. Visual Studio 버전 15.5 이상에서는 경량 솔루션 로드 없이도 관리 코드가 포함된 대규모 솔루션이 이전보다 훨씬 빠르게 로드됩니다.  
 
 ## <a name="see-also"></a>참고 항목
 [Visual Studio 성능 팁과 요령](../ide/visual-studio-performance-tips-and-tricks.md)

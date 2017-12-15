@@ -8,17 +8,16 @@ ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-ms.assetid: f7dbda92-21bf-4af0-bb34-29b8bf231f32
 description: "Visual Studio에서 Python용 C++ 확장 또는 모듈을 작성하는 프로세스 amd 단계"
 caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 0438a2d0f2524ea2163cb3454fdcf50f2ae7f499
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 08f91846340e2acc993e5302badfc846db5f4a9c
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="creating-a-c-extension-for-python"></a>Python용 C++ 확장 만들기
 
@@ -184,12 +183,12 @@ C++ DLL을 Python용 확장으로 만들려면 내보낸 메서드를 Python 형
     };
     ```
 
-1. Python에 표시되는 대로 모듈을 정의하는 구조체를 추가합니다.
+1. Python 코드를 통해 표시된 대로 모듈을 정의하는 구조체를 추가합니다. (module.cpp와 같은 C++ 프로젝트 내부의 파일 이름은 중요하지 않습니다.)
 
     ```cpp
     static PyModuleDef superfastcode_module = {
         PyModuleDef_HEAD_INIT,
-        "superfastcode",                        // Module name
+        "superfastcode",                        // Module name as Python sees it
         "Provides some functions, but faster",  // Module description
         0,
         superfastcode_methods                   // Structure that defines the methods

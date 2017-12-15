@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 61baf3bb-646f-4c5a-b7c0-a6bdff68f21c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de3ddc4288f2e14f0657f6bfb0ff3ee49ff7b5c9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 4a585310f19a03524d73deeb863b080d1d335c6c
+ms.sourcegitcommit: 15907b980eadeaa646f010cb197cfd188579d0f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 질문과 대답
 
@@ -226,7 +226,9 @@ Live Unit Testing은 원본 파일이 변경되었음을 감지할 때마다 빌
 
 **대답:**
 
-Live Unit Testing은 현재 경량 솔루션 로드 기능에서 제대로 작동하지 않습니다. 하나 이상의 테스트 프로젝트를 로드한 후에만 작동합니다. 그 전에는 현재 Live Unit Testing이 로드 중인 테스트 어댑터(MSTest, xUnit 또는 NUnit)를 참조하는 하나 이상의 테스트 프로젝터에 종속되어 있으므로 작동하지 않습니다.
+Live Unit Testing은 현재 경량 솔루션 로드 기능에서 제대로 작동하지 않습니다. 하나 이상의 테스트 프로젝트를 로드한 후에만 작동합니다. 그 전에는 Live Unit Testing이 로드 중인 테스트 어댑터(MSTest, xUnit 또는 NUnit)를 참조하는 하나 이상의 테스트 프로젝트에 종속되어 있으므로 작동하지 않습니다.
+
+참고: Visual Studio 2017 버전 15.5 이상에서는 경량 솔루션 로드를 더 이상 사용할 수 없습니다. Visual Studio 버전 15.5 이상에서는 경량 솔루션 로드 없이도 관리 코드가 포함된 대규모 솔루션이 이전보다 훨씬 빠르게 로드됩니다.
  
 ## <a name="why-does-live-unit-testing-does-not-capture-coverage-from-a-new-process-created-by-a-test"></a>Live Unit Testing이 테스트에서 만든 새 프로세스의 검사를 캡처하지 않는 이유는 무엇인가요?
  
