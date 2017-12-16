@@ -18,11 +18,11 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 25fd80168e78feda70b86f512598a850acae7010
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: f990336f84a518a754615eb878e41100d7ccb3f3
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca1414-mark-boolean-pinvoke-arguments-with-marshalas"></a>CA1414: 부울 P/Invoke 인수를 MarshalAs로 표시하십시오.
 |||  
@@ -38,7 +38,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="rule-description"></a>규칙 설명  
  플랫폼 비관리 코드에 액세스 메서드를 호출 하 고 사용 하 여 정의 된 `Declare` 키워드 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 또는 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>합니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute>관리 코드와 비관리 코드 간에 데이터 형식을 변환 하는 데 사용 되는 마샬링 동작을 지정 합니다. 와 같은 대부분의 간단한 데이터 형식은 <xref:System.Byte?displayProperty=fullName> 및 <xref:System.Int32?displayProperty=fullName>; 공용 언어 런타임에 올바른 동작을 자동으로 제공, 비관리 코드에서 단일 표현이 및 마샬링 동작을 지정할 필요가 없습니다.  
   
- <xref:System.Boolean> 데이터 형식은 비관리 코드에서 여러 표현이 가지입니다. 경우는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 기본 마샬링 동작을 지정 하지 않으면는 <xref:System.Boolean> 데이터 형식이 <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>합니다. 모든 경우에 적합 하지 않는 32 비트 정수입니다. 관리 되지 않는 메서드가에 필요한 부울 표현을 결정 하 고 적절 한 일치 해야 <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>합니다. UnmanagedType.Bool는은 항상 4 바이트 Win32 BOOL 형식. C + +에 사용할 UnmanagedType.U1 `bool` 또는 기타 1 바이트 형식입니다. 자세한 내용은 참조 [부울 형식에 대 한 마샬링을 기본](http://msdn.microsoft.com/en-us/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)합니다.  
+ <xref:System.Boolean> 데이터 형식은 비관리 코드에서 여러 표현이 가지입니다. 경우는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 기본 마샬링 동작을 지정 하지 않으면는 <xref:System.Boolean> 데이터 형식이 <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>합니다. 모든 경우에 적합 하지 않는 32 비트 정수입니다. 관리 되지 않는 메서드가에 필요한 부울 표현을 결정 하 고 적절 한 일치 해야 <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>합니다. UnmanagedType.Bool는은 항상 4 바이트 Win32 BOOL 형식. C + +에 사용할 UnmanagedType.U1 `bool` 또는 기타 1 바이트 형식입니다.  
   
 ## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
  이 규칙 위반 문제를 해결 하려면 적용 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 에 <xref:System.Boolean> 매개 변수 또는 반환 값입니다. 특성의 값을 적절 한 설정 <xref:System.Runtime.InteropServices.UnmanagedType>합니다.  
@@ -60,5 +60,4 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>   
- [부울 형식에 대 한 마샬링](http://msdn.microsoft.com/en-us/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)   
  [비관리 코드와의 상호 운용](/dotnet/framework/interop/index)

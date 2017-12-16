@@ -18,11 +18,11 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 92c6a91cffc3ce388a3dfb9000b9f432672018f4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 5c1b61e8895258a4f27d3803bf7fb5e4e2a0fba3
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: APTCA 메서드는 APTCA 메서드만 호출해야 합니다.
 |||  
@@ -49,7 +49,7 @@ ms.lasthandoff: 10/31/2017
  부분적으로 신뢰할 수 있는 호출자 `X` 메서드를 호출할 수 `M1`이며, `M1` 호출할 `M2`합니다. 때문에 `M2` APTCA 특성이, 직접 호출자 (`M1`) 완전 신뢰에 대 한 링크 요청을 충족 해야 합니다 `M1` 완전 신뢰를 포함 하 고 따라서이 검사를 충족 합니다. 보안 위험 때문에 `X` 만족 보호 하는 링크 요청에 참여 하지 않는 `M2` 신뢰할 수 없는 호출자 로부터 합니다. 따라서 APTCA 특성이 있는 메서드에 특성이 없는 메서드 호출 해서는 안 됩니다.  
   
 ## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
- APCTA 특성이 필요한 경우 완전 신뢰 어셈블리를 호출 하는 메서드를 보호 하는 요청을 사용 합니다. 요구가 메서드에서 노출 하는 기능에 따라 달라 집니다 정확한 권한입니다. 가능한 경우 기본 기능이 부분적으로 신뢰할 수 있는 호출자에 게 노출 되지 않도록 하려면 완전 신뢰에 대 한 요청으로 메서드를 보호 합니다. 없는 경우는 노출 된 기능을 효과적으로 보호 하는 사용 권한 집합을 선택 합니다. 요청에 대 한 자세한 내용은 참조 [요구](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)합니다.  
+ APCTA 특성이 필요한 경우 완전 신뢰 어셈블리를 호출 하는 메서드를 보호 하는 요청을 사용 합니다. 요구가 메서드에서 노출 하는 기능에 따라 달라 집니다 정확한 권한입니다. 가능한 경우 기본 기능이 부분적으로 신뢰할 수 있는 호출자에 게 노출 되지 않도록 하려면 완전 신뢰에 대 한 요청으로 메서드를 보호 합니다. 없는 경우는 노출 된 기능을 효과적으로 보호 하는 사용 권한 집합을 선택 합니다.  
   
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를에서 표시 하지 않으려면, 메서드에서 노출 하는 기능이을 직접 또는 간접적으로 허용 하지 호출자가 중요 한 정보, 작업 또는 악용에서 사용할 수 있는 리소스에 액세스 하도록 확인 해야 합니다.  
@@ -78,8 +78,6 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="see-also"></a>참고 항목  
  [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
- [.NET framework 어셈블리를 호출할 수 부분적으로 신뢰할 수 있는 코드](http://msdn.microsoft.com/en-us/a417fcd4-d3ca-4884-a308-3a1a080eac8d)   
  [부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   
- [요구 사항](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)   
  [링크 요구](/dotnet/framework/misc/link-demands)   
  [데이터 및 모델링](/dotnet/framework/data/index)

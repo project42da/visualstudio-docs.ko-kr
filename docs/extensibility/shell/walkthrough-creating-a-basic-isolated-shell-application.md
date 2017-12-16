@@ -16,11 +16,11 @@ caps.latest.revision: "54"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0bd87c01367ea7f120413ad4aae2ae61b0332f6b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 886185c61f407906ff059b84b5f1f8b18e3ace98
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>연습: 기본 격리 셸 응용 프로그램 만들기
 이 연습에는 격리 셸 솔루션을 만들고 도움말 정보 도구 창을 사용자 지정, 격리 셸을 설치 하는 설치 프로그램을 만드는 방법을 보여 줍니다.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  솔루션을 빌드하고 디버깅을 시작합니다.  
   
-4.  **보기 / 다른 창**, 클릭 **웹 브라우저**합니다. **웹 브라우저** 창 Microsoft Corporation 홈 페이지에 표시 됩니다.  
+4.  **보기 > 다른 창**, 클릭 **웹 브라우저**합니다. **웹 브라우저** 창 Microsoft Corporation 홈 페이지에 표시 됩니다.  
   
 ## <a name="removing-the-print-command"></a>인쇄 명령 제거  
  격리 셸 UI 프로젝트에.vsct 파일 형식의 선언이의 집합으로 구성 `<Define name=No_` *요소*`>`여기서 *요소* 표준 Visual Studio 메뉴 및 명령 중 하나입니다.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  이렇게 하면 인쇄 명령을 제거 합니다.  
   
-5.  격리 셸 응용 프로그램 디버깅을 시작 합니다. 되어 있는지 확인는 **파일 / 인쇄** 명령은 사라집니다.  
+5.  격리 셸 응용 프로그램 디버깅을 시작 합니다. 되어 있는지 확인는 **파일 > 인쇄** 명령은 사라집니다.  
   
 ## <a name="removing-features-from-the-isolated-shell"></a>격리 셸에서 기능 제거  
  일부 사용자 지정 격리 셸 응용 프로그램에서 이러한 기능이 필요 하지 않은 경우.pkgundef 파일을 편집 하 여 Visual Studio와 함께 로드 되는 패키지를 제거할 수 있습니다. $RootKey$ \Packages 레지스트리 키의 하위 키 중 하나에 패키지를 지정 합니다.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 10/31/2017
     [assembly: AssemblyDescription("The description of Fabrikam Music editor.")]  
     ```  
   
-4.  디버깅을 시작 하 고 격리 셸 응용 프로그램에서 엽니다는 **도움말 / 약** 상자입니다. 변경 된 문자열에 표시 됩니다. 도움말/상자에 대 한 title와 같은지는 `AssemblyTitle` AssemblyInfo.cs의 값입니다.  
+4.  디버깅을 시작 하 고 격리 셸 응용 프로그램에서 열고는 **도움말 >에 대 한** 상자입니다. 변경 된 문자열에 표시 됩니다. 도움말/상자에 대 한 title와 같은지는 `AssemblyTitle` AssemblyInfo.cs의 값입니다.  
   
 5.  속성은 **도움말/정보** MyVSShellStub.AboutBoxPackage\AboutBox.xaml 파일에 있는 자체 상자입니다. 도움말/상자에 대 한 너비를 변경 하려면로 이동는 `AboutDialogStyle` 차단 하 고 설정의 `Width` 200 속성:  
   

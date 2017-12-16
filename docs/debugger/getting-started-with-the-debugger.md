@@ -1,7 +1,7 @@
 ---
-title: "디버거 시작 | Microsoft Docs"
+title: "Visual Studio를 사용 하 여 디버깅 하는 방법을 설명 | Microsoft Docs"
 ms.custom: H1HackMay2017
-ms.date: 05/18/2017
+ms.date: 10/11/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-debug
@@ -13,13 +13,13 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0f6bcc75341297ad20d66514c92f92513ef44d2f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 645546f373582bb0a81d7ab23df1a467b27f8e47
+ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/15/2017
 ---
-# <a name="get-started-with-the-visual-studio-debugger"></a>Visual Studio 디버거 시작
+# <a name="learn-to-debug-using-visual-studio"></a>Visual Studio를 사용 하 여 디버깅 하는 방법을 알아봅니다
 
 이 항목의 단계별 연습에서는 Visual Studio 디버거 기능을 소개 합니다. 참조의 디버거 기능을 더 자세히 분석 하려는 경우 [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)합니다.
 
@@ -138,19 +138,81 @@ ms.lasthandoff: 10/31/2017
 
      ![Update 메서드를 한 단계씩 실행의 결과](../debugger/media/dbg-tour-update-method.png "단계에 Update 메서드")
 
-    을 알 수 코드입니다. 응용 프로그램에는 모든 *.jpg 파일 특정 디렉터리에 있는 한 다음 각 파일에 대 한 사진 개체를 만드는 것입니다. 이 코드 목록 디버거를 사용 하면 응용 프로그램 상태가 (변수) 검사를 시작할 수 있는 좋은 기회에 있습니다.
+    을 알 수 코드입니다. 응용 프로그램에는 모든 *.jpg 파일 특정 디렉터리에 있는 한 다음 각 파일에 대 한 사진 개체를 만드는 것입니다. 이 코드 목록 디버거를 사용 하면 응용 프로그램 상태가 (변수) 검사를 시작할 수 있는 좋은 기회에 있습니다. 이 자습서의 다음 섹션에 있는 수행 합니다.
 
     변수를 검사 하는 사용할 수 있는 기능 디버거의 가장 유용한 기능 중 하나 이며 여러 가지 방법으로 작업을 수행할을 합니다. 종종 문제를 디버깅 하려고 할 때 변수는 특정 한 번에 있어야 하는 값을 저장 하는 여부를 알아보려면 하려고 합니다.
 
+## <a name="examine-the-call-stack"></a>호출 스택을 검사합니다
+
+- 일시 중지 된 동안는 `Update` 메서드를 클릭 하 여는 **호출 스택** 은 기본적으로 오른쪽 아래 창에서 열려 있는 창을 합니다.
+
+     ![호출 스택을 검사](../debugger/media/dbg-tour-call-stack.png "ExamineCallStack")
+
+    **호출 스택** 창에 있는 메서드 및 함수 호출 되는 순서를 가져오는 표시 합니다. 맨 윗줄로 현재 함수를 보여 줍니다 (의 `Update` 둘러보기 응용 프로그램에서 메서드). 두 번째 줄을 보여 줍니다 `Update` 에서 호출한는 `Path.set` 속성 및 기타 등등.
+
+    >  [!NOTE]
+    > **호출 스택** 창은 Eclipse와 같은 일부 Ide에서 디버그 관점 비슷합니다.
+
+    호출 스택은 검토 하 고 응용 프로그램의 실행 흐름을 이해 하는 좋은 방법입니다.
+
+    해당 소스 코드를 이동 하는 코드 줄을 두 번 클릭 수 및도 디버거를 통해 검사 중인 현재 범위를 변경 하는 합니다. 이 그러면 디버거를 진행 하지 않습니다.
+
+    오른쪽 클릭 메뉴에서 사용할 수도 있습니다는 **호출 스택** 창의 다른 작업을 수행 합니다. 지정 된 함수에 중단점을 삽입, 사용 하 여 디버거를 이동할 수 예를 들어 **커서까지 실행**, 소스 코드를 검사 이동 합니다. 자세한 내용은 참조 [하는 방법: 호출 스택 검사](../debugger/how-to-use-the-call-stack-window.md)합니다.
+
+## <a name="step-out"></a>프로시저 나가기
+
+작업이 완료 되는 경우를 가정해 검사 하는 `Update` Data.cs의 방법으로 함수에서 벗어나기 표시 하지만 디버거에서 유지 하려고 합니다. 사용 하 여 수행할 수 있습니다는 **나가기** 명령입니다.
+
+1. Shift + F11 키를 누릅니다 (또는 **디버그 > 프로시저 나가기**).
+
+     응용 프로그램 실행을 다시 시작 (및 디버거를 앞으로 이동)이이 명령은 현재 함수에서 반환 될 때까지 합니다.
+
+     다시 해야 할는 `Update` Data.cs에서 메서드를 호출 합니다.
+
+2. Shift + F11 다시 및 디버거 키를 눌러이 되는 호출 스택을 다시는 `OnApplicationStartup` 이벤트 처리기입니다.
+
+## <a name="run-to-cursor"></a>커서까지 실행
+
+1. 선택 된 **디버깅 중지** 빨간색 단추 ![디버깅 중지](../debugger/media/dbg-tour-stop-debugging.png "디버깅 중지") 또는 Shift + f 5를 눌러 합니다.
+
+2. 에 `Update` 메서드 Data.cs에서 마우스 오른쪽 단추로 클릭는 `Add` 메서드를 호출 하 고 선택 **커서까지 실행**합니다. 이 명령은 디버깅을 시작 하 고 코드의 현재 줄에 임시 중단점을 설정 합니다.
+
+     ![실행 커서 기능을 사용 하 여](../debugger/media/dbg-tour-run-to-cursor.png "커서까지 실행")
+
+    중단점에서 일시 중지 해야 `MainWindow` (이므로 첫 번째 중단점 설정).
+
+3. F5 키를 눌러으로 이동 하는 `Add` 하면 선택한 메서드가 **커서까지 실행**합니다.
+
+    이 명령은 코드를 편집 하 고 신속 하 게 임시 중단점을 설정 하 고 디버거를 시작 하려고 할 때 유용 합니다.
+
+## <a name="change-the-execution-flow"></a>실행 흐름 변경
+
+1. 일시 중지 디버거는 `Add` 메서드 호출에서 왼쪽에 노란색 화살표는 (실행 포인터)을 가져올 마우스를 사용 하 고 노란색 화살표를 한 줄 위로 이동 하는 `foreach` 루프입니다.
+
+     ![실행 포인터 이동](../debugger/media/dbg-tour-move-the-execution-pointer.gif "실행 포인터를 이동 합니다.")
+
+    실행 흐름을 변경 하 여 서로 다른 코드 실행 경로 테스트 하거나 디버거를 다시 시작 하지 않고 코드를 다시 실행 하는 등의 작업을 수행할 수 있습니다.
+
+2. 이제 F5 키를 누릅니다.
+
+    응용 프로그램 창에 추가 하는 이미지를 볼 수 있습니다. 코드를 다시 실행 하는 때문에 `foreach` 일부 이미지 루프를 두 번 추가 되었습니다!
+    
+    > [!WARNING]
+    > 종종이 기능에 주의 해야 하 고 도구 설명에 경고를 표시 합니다. 너무 다른 경고를 볼 수 있습니다. 포인터를 이동 하면 이전 응용 프로그램 상태로 응용 프로그램 되돌릴 수 없습니다.
+
 ## <a name="inspect-variables-with-data-tips"></a>데이터 팁을 사용 하 여 변수를 검사 합니다.
 
-1. 디버거를 일시 중지 하는 `Add` 메서드 호출에서 마우스 포인터를 놓고는 `Add` 메서드를 호출 하 고 클릭는 **클릭에 실행** 단추 ![클릭에 실행](../debugger/media/dbg-tour-run-to-click.png "RunToClick")합니다.
+1. 사진 뷰어 데모 응용 프로그램에서 Data.cs를 열려면 마우스 오른쪽 단추로 클릭는 `private void Update` 함수 선언 하 고 선택 **커서까지 실행** (응용 프로그램을 먼저 중지 이미 실행 중인 경우).
 
-2. 이제 파일 개체 위로 마우스를 가져가고 (`f`)의 기본 속성 값, 파일 이름 참조 및 `market 031.jpg`합니다.
+    디버거가 연결 된 응용 프로그램을 멈춥니다. 이 통해 상태를 검사할 수 있습니다.
+
+2. 위로 마우스를 가져가고는 `Add` 메서드를 호출 하 고 클릭는 **클릭에 실행** 단추 ![클릭에 실행](../debugger/media/dbg-tour-run-to-click.png "RunToClick")합니다.
+
+3. 이제 파일 개체 위로 마우스를 가져가고 (`f`)의 기본 속성 값, 파일 이름 참조 및 `market 031.jpg`합니다.
 
      ![데이터 팁 보기](../debugger/media/dbg-tour-data-tips.gif "데이터 팁을 보려면")
 
-3. 개체와 같은 속성은 모두 표시를 확장 하 고 `FullPath` 속성입니다.
+4. 개체와 같은 속성은 모두 표시를 확장 하 고 `FullPath` 속성입니다.
 
     종종를 디버깅할 때 신속 하 게 개체에 속성 값을 확인 하 고 데이터 팁 설정을 수행 하는 좋은 방법입니다.
 
@@ -192,66 +254,6 @@ ms.lasthandoff: 10/31/2017
 
     자세한 내용은 참조 하세요. [조사식 및 간략 한 조사식 창 사용 하 여 감시를 설정 합니다.](../debugger/watch-and-quickwatch-windows.md)
 
-## <a name="examine-the-call-stack"></a>호출 스택을 검사합니다
-
-1. 클릭는 **호출 스택** 은 기본적으로 오른쪽 아래 창에서 열려 있는 창을 합니다.
-
-     ![호출 스택을 검사](../debugger/media/dbg-tour-call-stack.png "ExamineCallStack")
-
-    **호출 스택** 창에 있는 메서드 및 함수 호출 되는 순서를 가져오는 표시 합니다. 맨 윗줄로 현재 함수를 보여 줍니다 (의 `Update` 둘러보기 응용 프로그램에서 메서드). 두 번째 줄을 보여 줍니다 `Update` 에서 호출한는 `Path.set` 속성 및 기타 등등.
-
-    >  [!NOTE]
-    > **호출 스택** 창은 Eclipse와 같은 일부 Ide에서 디버그 관점 비슷합니다.
-
-    호출 스택은 검토 하 고 응용 프로그램의 실행 흐름을 이해 하는 좋은 방법입니다.
-
-    해당 소스 코드를 이동 하는 코드 줄을 두 번 클릭 수 및도 디버거를 통해 검사 중인 현재 범위를 변경 하는 합니다. 이 그러면 디버거를 진행 하지 않습니다.
-
-    오른쪽 클릭 메뉴에서 사용할 수도 있습니다는 **호출 스택** 창의 다른 작업을 수행 합니다. 지정 된 함수에 중단점을 삽입, 사용 하 여 디버거를 이동할 수 예를 들어 **커서까지 실행**, 소스 코드를 검사 이동 합니다. 자세한 내용은 참조 [하는 방법: 호출 스택 검사](../debugger/how-to-use-the-call-stack-window.md)합니다.
-
-## <a name="change-the-execution-flow"></a>실행 흐름 변경
-
-1. 일시 중지 디버거는 `Add` 메서드 호출에서 왼쪽에 노란색 화살표는 (실행 포인터)을 가져올 마우스를 사용 하 고 노란색 화살표를 한 줄 위로 이동 하는 `foreach` 루프입니다.
-
-     ![실행 포인터 이동](../debugger/media/dbg-tour-move-the-execution-pointer.gif "실행 포인터를 이동 합니다.")
-
-    실행 흐름을 변경 하 여 서로 다른 코드 실행 경로 테스트 하거나 디버거를 다시 시작 하지 않고 코드를 다시 실행 하는 등의 작업을 수행할 수 있습니다.
-
-2. 이제 F5 키를 누릅니다.
-
-    응용 프로그램 창에 추가 하는 이미지를 볼 수 있습니다. 코드를 다시 실행 하는 때문에 `foreach` 일부 이미지 루프를 두 번 추가 되었습니다!
-    
-    > [!WARNING]
-    > 종종이 기능에 주의 해야 하 고 도구 설명에 경고를 표시 합니다. 너무 다른 경고를 볼 수 있습니다. 포인터를 이동 하면 이전 응용 프로그램 상태로 응용 프로그램 되돌릴 수 없습니다.
-
-## <a name="run-to-cursor"></a>커서까지 실행
-
-1. 선택 된 **디버깅 중지** 빨간색 단추 ![디버깅 중지](../debugger/media/dbg-tour-stop-debugging.png "디버깅 중지") 또는 Shift + f 5를 눌러 합니다.
-
-2. 에 `Update` 메서드를 마우스 오른쪽 단추로 클릭는 `Add` 메서드를 호출 하 고 선택 **커서까지 실행**합니다. 이 명령은 디버깅을 시작 하 고 코드의 현재 줄에 임시 중단점을 설정 합니다.
-
-     ![실행 커서 기능을 사용 하 여](../debugger/media/dbg-tour-run-to-cursor.png "커서까지 실행")
-
-    중단점에서 일시 중지 해야 `MainWindow` (이므로 첫 번째 중단점입니다.
-
-3. F5 키를 눌러으로 이동 하는 `Add` 하면 선택한 메서드가 **커서까지 실행**합니다.
-
-    이 명령은 코드를 편집 하 고 신속 하 게 임시 중단점을 설정 하 고 디버거를 시작 하려고 할 때 유용 합니다.
-
-## <a name="step-out"></a>프로시저 나가기
-
-작업이 완료 되는 경우를 가정해 검사 하는 `Update` Data.cs의 방법으로 함수에서 벗어나기 표시 하지만 디버거에서 유지 하려고 합니다. 사용 하 여 수행할 수 있습니다는 **나가기** 명령입니다.
-
-1. Shift + F11 키를 누릅니다 (또는 **디버그 > 프로시저 나가기**).
-
-     응용 프로그램 실행을 다시 시작 (및 디버거를 앞으로 이동)이이 명령은 현재 함수에서 반환 될 때까지 합니다.
-
-     다시 해야 할는 `Update` Data.cs에서 메서드를 호출 합니다.
-
-2. Shift + F11 다시 및 디버거 키를 눌러이 되는 호출 스택을 다시는 `OnApplicationStartup` 이벤트 처리기입니다.
-
-3. F5 키를 눌러 계속 합니다.
-
 ## <a name="examine-an-exception"></a>예외를 검사 합니다.
 
 1. 실행 중인 응용 프로그램 창에서 텍스트를 삭제는 **경로** 입력 상자는 **변경** 단추입니다.
@@ -283,6 +285,7 @@ ms.lasthandoff: 10/31/2017
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171" frameborder="0" allowfullscreen></iframe>
 </div>
 
-## <a name="see-also"></a>참고 항목  
- [Visual Studio의 디버깅](../debugger/index.md)  
- [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)
+## <a name="see-also"></a>참고 항목
+
+[Visual Studio의 디버깅](../debugger/index.md)  
+[디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)

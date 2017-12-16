@@ -12,11 +12,11 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ff1f5d9c7c28c63e2f1f1c0783f1032888e3c645
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: b6d287e7e85ef908f9504f8e1f66e0c221042553
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>색 및 Visual Studio에 대 한 스타일 지정
 ## <a name="using-color-in-visual-studio"></a>Visual Studio에서 색을 사용 하 여  
@@ -320,7 +320,7 @@ UI, 색 집합을 제한이 적용 될 때 *"일반" 테마에 있던 것 미묘
 ### <a name="building-a-vspackage-for-your-customizable-colors"></a>에 대 한 색을 사용자 지정할 수 있는 VSPackage를 작성합니다.  
 VSPackage는 글꼴 및 색 사용자 지정 범주를 통해 제어 하 고 글꼴 및 색 속성 페이지에서 항목을 표시할 수입니다. 이 메커니즘을 사용할 경우 Vspackage를 구현 해야 합니다는 [IVsFontAndColorDefaultsProvider](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.aspx) 인터페이스와 연결 된 해당 인터페이스입니다.  
   
-기본적으로이 메커니즘 모든 기존 항목 및 포함 된 범주를 수정 하려면 사용할 수 있습니다. 그러나 텍스트 편집기 범주 또는 해당 표시 항목을 수정 하려면 사용 하지 해야 합니다. 텍스트 편집기 범주에 대 한 자세한 내용은 참조 하십시오. [글꼴 및 색 개요](https://msdn.microsoft.com/en-us/library/bb165065.aspx)합니다.  
+기본적으로이 메커니즘 모든 기존 항목 및 포함 된 범주를 수정 하려면 사용할 수 있습니다. 그러나 텍스트 편집기 범주 또는 해당 표시 항목을 수정 하려면 사용 하지 해야 합니다. 텍스트 편집기 범주에 대 한 자세한 내용은 참조 하십시오. [글꼴 및 색 개요](../font-and-color-overview.md)합니다.  
   
 를 사용자 지정 범주를 구현 하거나 항목을 표시 하려면 VSPackage 수행 해야 합니다.  
   
@@ -397,7 +397,7 @@ VSPackage를 표시 하는 텍스트의 색 지정을 올바르게 지원 하려
   
  **OR**  
   
--   **변경 내용에 대 한 IDE를 폴링할**합니다. 시스템 구현를 통해 이렇게 [IVsFontAndColorStorage](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx) 인터페이스입니다. 지 속성 지원을 위해 주로 있지만 [GetItem](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx) 메서드 표시 항목에 대 한 글꼴 및 색 정보를 얻을 수 있습니다. 글꼴 및 색 설정에 대 한 자세한 내용은 MSDN 문서를 참조 하십시오. [에 액세스 하는 저장 된 글꼴 및 색 설정](https://msdn.microsoft.com/en-us/library/bb166382.aspx)합니다.  
+-   **변경 내용에 대 한 IDE를 폴링할**합니다. 시스템 구현를 통해 이렇게 [IVsFontAndColorStorage](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx) 인터페이스입니다. 지 속성 지원을 위해 주로 있지만 [GetItem](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx) 메서드 표시 항목에 대 한 글꼴 및 색 정보를 얻을 수 있습니다. 글꼴 및 색 설정에 대 한 자세한 내용은 MSDN 문서를 참조 하십시오. [에 액세스 하는 저장 된 글꼴 및 색 설정](../accessing-stored-font-and-color-settings.md)합니다.  
   
 > **참고:** 폴링 결과가 올바른지 위해 사용 된 [IVsFontAndColorCacheManager](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx) 의 검색 메서드를 호출 하기 전에 캐시 플러시 및 업데이트는 필요한 경우를 확인 하는 인터페이스는 [ IVsFontAndColorStorage](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx) 인터페이스입니다.
   

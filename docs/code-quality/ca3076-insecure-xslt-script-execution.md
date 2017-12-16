@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5bf7da81e41a00bd0d673e3522f944dc17a549c9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a304d5b405431bca78b3978e25b00d3cf7cc96c2
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: 안전하지 않은 XSLT 스크립트 실행
 |||  
@@ -27,12 +27,12 @@ ms.lasthandoff: 10/31/2017
 |변경 수준|주요 변경 아님|  
   
 ## <a name="cause"></a>원인  
- .NET 응용 프로그램에서 비보안 방식으로 [XSLT(Extensible Stylesheets Language Transformations)](https://support.microsoft.com/en-us/kb/313997) 를 실행하는 경우 프로세서는 공격자에게 중요한 정보를 노출하여 서비스 거부 및 사이트 간 공격을 유발할 수 있는 [신뢰할 수 없는 URI 참조를 확인](http://msdn.microsoft.com/en-us/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a) 할 수 있습니다.  
+ 실행 하면 [Stylesheets Language Transformations XSLT (Extensible)](https://support.microsoft.com/en-us/kb/313997) .NET 응용 프로그램에서 비보안 방식으로 프로세서 수를 확인할를 공격자에 게 중요 한 정보를 공개할 수 있는 신뢰할 수 없는 URI 참조 서비스 및 사이트 간 공격을 거부 합니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- [XSLT](http://msdn.microsoft.com/en-us/6377ce5f-3c45-42a6-b7a9-ec8da588b60c) 는 XML 데이터를 변환하기 위한 W3C(World Wide Web 콘소시엄) 표준입니다. XSLT는 XML 데이터를 HTML, 고정 길이 텍스트, 쉼표로 구분된 텍스트 또는 기타 XML 형식 등으로 변환하기 위한 스타일시트를 작성하는 데 일반적으로 사용됩니다. 이 기능은 프로젝트에서 기본적으로는 금지되어 있지만 사용하도록 설정할 수 있습니다.  
+ **XSLT** 는 XML 데이터를 변환에 대 한 World Wide Web Consortium (W3C) 표준입니다. XSLT는 XML 데이터를 HTML, 고정 길이 텍스트, 쉼표로 구분된 텍스트 또는 기타 XML 형식 등으로 변환하기 위한 스타일시트를 작성하는 데 일반적으로 사용됩니다. 이 기능은 프로젝트에서 기본적으로는 금지되어 있지만 사용하도록 설정할 수 있습니다.  
   
- 공격 영역을 노출하지 않도록 하기 위해 이 규칙은 XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>가 안전하지 않은 <xref:System.Xml.Xsl.XsltSettings> 및 <xref:System.Xml.XmlResolver> 인스턴스가 함께 수신될 때마다 트리거되어 악성 스크립트를 처리합니다.  
+ 공격 영역을 노출하지 않도록 하기 위해 이 규칙은 XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 가 안전하지 않은 <xref:System.Xml.Xsl.XsltSettings> 및 <xref:System.Xml.XmlResolver>인스턴스가 함께 수신될 때마다 트리거되어 악성 스크립트를 처리합니다.  
   
 ## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
   

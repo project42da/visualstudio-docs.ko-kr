@@ -12,11 +12,11 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e9660e2dc94cf23269b923c6ba5426a7cc384161
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 955587b0fbf9a0fa48d2a7083bea04e102b7a622
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075: 안전하지 않은 DTD 처리
 |||  
@@ -30,15 +30,15 @@ ms.lasthandoff: 10/31/2017
  안전하지 않은 <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> 인스턴스를 사용하거나 외부 엔터티 소스를 참조하면 파서는 신뢰할 수 없는 입력을 허용하고 공격자에게 중요 한 정보를 공개할 수 있습니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- [DTD(문서 종류 정의)](https://msdn.microsoft.com/en-us/library/aa468547.aspx) 는 XML 파서가  [W3C(World Wide Web Consortium) XML(Extensible Markup Language) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/)에 정의된 대로 문서의 유효성을 확인할 수 있는 두 가지 방법 중 하나입니다. 이 규칙은 신뢰할 수 없는 데이터가 허용되는 속성 및 인스턴스를 찾아 [DoS(서비스 거부)](/dotnet/framework/wcf/feature-details/information-disclosure) 공격을 야기할 수 있는 잠재적인 [Information Disclosure](/dotnet/framework/wcf/feature-details/denial-of-service) 위협을 개발자에게 경고합니다. 다음 경우에 이 규칙이 트리거됩니다.  
+ A *문서 유형 정의 (DTD)* 에 정의 된 대로 XML 파서가 문서의 유효성을 확인할 수 있는 두 가지 방법 중 하나는 [World Wide Web Consortium (W3C) 태그 XML (Extensible Language) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/)합니다. 이 규칙은 신뢰할 수 없는 데이터가 허용되는 속성 및 인스턴스를 찾아 [DoS(서비스 거부)](/dotnet/framework/wcf/feature-details/information-disclosure) 공격을 야기할 수 있는 잠재적인 [Information Disclosure](/dotnet/framework/wcf/feature-details/denial-of-service) 위협을 개발자에게 경고합니다. 다음 경우에 이 규칙이 트리거됩니다.  
   
--   <xref:System.Xml.XmlUrlResolver>를 사용하여 외부 XML 엔터티를 확인하는 <xref:System.Xml.XmlReader> 인스턴스에서 DtdProcessing이 사용되도록 설정된 경우  
+-   <xref:System.Xml.XmlReader> 를 사용하여 외부 XML 엔터티를 확인하는 <xref:System.Xml.XmlUrlResolver>인스턴스에서 DtdProcessing이 사용되도록 설정된 경우  
   
 -   XML의 <xref:System.Xml.XmlNode.InnerXml%2A> 속성이 설정된 경우  
   
 -   <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>속성이는 Parse로 설정 됩니다.  
   
--   신뢰할 수 없는 입력이 <xref:System.Xml.XmlSecureResolver> 대신 <xref:System.Xml.XmlResolver>를 사용하여 처리되는 경우  
+-   신뢰할 수 없는 입력이 <xref:System.Xml.XmlResolver> 대신 <xref:System.Xml.XmlSecureResolver> 를 사용하여 처리되는 경우  
   
 -   XmlReader.<xref:System.Xml.XmlReader.Create%2A> 메서드가 안전하지 않은 <xref:System.Xml.XmlReaderSettings> 인스턴스를 사용하거나 인스턴스 없이 호출되는 경우  
   
@@ -60,11 +60,11 @@ ms.lasthandoff: 10/31/2017
   
 -    <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> 속성을 **true** 로 설정하여 신뢰할 수 없는 소스를 처리하는 경우 DTD 처리를 사용하지 않도록 설정합니다.  
   
--   XmlTextReader 클래스에는 완전 신뢰 상속 요청이 있습니다. 참조 [상속 요청](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9) 자세한 정보에 대 한 합니다.  
+-   XmlTextReader 클래스에는 완전 신뢰 상속 요청이 있습니다.  
   
  .NET 4 이상  
   
--   신뢰할 수 없는 출처의 DtdProcessing 속성을 설정 하 여 처리 하는 경우 DtdProcessing을 사용 하지 않도록 설정 [Prohibit 또는 Ignore](https://msdn.microsoft.com/en-us/library/system.xml.dtdprocessing.aspx)  
+-   신뢰할 수 없는 소스를 설정 하 여 처리 하는 경우 DtdProcessing을 사용 하지 않도록 설정 된 <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A?displayProperty=nameWithType> 속성을 **금지** 또는 **무시**합니다.  
   
 -   Load() 메서드가 모든 InnerXml 경우에서 XmlReader 인스턴스를 사용하는지 확인합니다.  
   

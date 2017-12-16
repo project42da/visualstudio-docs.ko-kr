@@ -17,11 +17,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 8102301ee098ef662f27c8a6dc586a683a85d177
-ms.sourcegitcommit: 1aa9282b1f0bc2795df3264cbd1e331cc44c23f3
+ms.openlocfilehash: da7176d3fd64591064bfd33a0780ba7939621182
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio에서 데이터 액세스
 
@@ -67,7 +67,7 @@ JavaScript, Python, PHP, Ruby, 또는 c + +에서 응용 프로그램의 경우�
 
 ## <a name="net-languages"></a>.NET 언어
 
-.NET Core에서는 포함 하 여 모든.NET 데이터 액세스 ADO.NET에서는 어떤 유형의 관계형 / 비관계형 데이터 원본에 액세스 하기 위한 인터페이스를 정의 하는 클래스의 집합을 기반으로 합니다. Visual Studio에 여러 가지 도구와 데이터베이스에 연결할 수 있도록 ADO.NET을 사용 하는 디자이너에 데이터를 조작 하 고 사용자에 게 데이터를 표시 합니다. 이 섹션의 설명서에는 이러한 도구를 사용 하는 방법을 설명 합니다. ADO.NET 명령 개체에 대해 직접 프로그래밍할 수 있습니다. ADO.NET Api를 직접 호출 하는 방법에 대 한 자세한 내용은 참조 [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx) MSDN 라이브러리에서.
+.NET Core에서는 포함 하 여 모든.NET 데이터 액세스 ADO.NET에서는 어떤 유형의 관계형 / 비관계형 데이터 원본에 액세스 하기 위한 인터페이스를 정의 하는 클래스의 집합을 기반으로 합니다. Visual Studio에 여러 가지 도구와 데이터베이스에 연결할 수 있도록 ADO.NET을 사용 하는 디자이너에 데이터를 조작 하 고 사용자에 게 데이터를 표시 합니다. 이 섹션의 설명서에는 이러한 도구를 사용 하는 방법을 설명 합니다. ADO.NET 명령 개체에 대해 직접 프로그래밍할 수 있습니다. ADO.NET Api를 직접 호출 하는 방법에 대 한 자세한 내용은 참조 [ADO.NET](/dotnet/framework/data/adonet/index)합니다.
 
 ASP.NET과 특별히 관련 된 데이터 액세스 설명서를 참조 하십시오. [데이터로 작업](http://www.asp.net/web-forms/overview/presenting-and-managing-data) ASP.NET 사이트의 합니다. Entity Framework를 사용 하 여 ASP.NET mvc에 대 한 자습서를 참조 하십시오. [Entity Framework 6 Code First MVC 5를 사용 하 여 시작](http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)합니다.
 
@@ -98,7 +98,7 @@ ADO.NET에서 사용할 수 있으려면 데이터베이스에 대 한 사용자
 
 ## <a name="native-c"></a>네이티브 C++
 
-SQL Server에 연결 하는 c + + 응용 프로그램을 사용할지는 [SQL Server 용 Microsoft® ODBC Driver 13.1](https://www.microsoft.com/download/details.aspx?id=53339) 대부분의 경우에서. 서버가 연결 되어 OLE DB는 필요한 고에 대 한 사용는 [SQL Server Native Client](https://msdn.microsoft.com/sqlserver/aa937733.aspx)합니다. 사용 하 여 다른 데이터베이스에 액세스할 수 있습니다 [ODBC](https://msdn.microsoft.com/library/ms710252\(v=vs.85\).aspx) 또는 OLE DB 드라이버 직접 합니다. ODBC는 현재 표준 데이터베이스 인터페이스 하지만 대부분의 데이터베이스 시스템 ODBC 인터페이스를 통해 액세스할 수 없는 사용자 지정 기능을 제공 합니다. OLE DB는 계속 지원 하지만 새 응용 프로그램에는 권장 되지 않는 레거시 COM 데이터 액세스 기술입니다. 자세한 내용은 참조 [Visual c + +에서 데이터 액세스](https://docs.microsoft.com/cpp/data/)합니다.
+SQL Server에 연결 하는 c + + 응용 프로그램을 사용할지는 [SQL Server 용 Microsoft® ODBC Driver 13.1](https://www.microsoft.com/download/details.aspx?id=53339) 대부분의 경우에서. 서버가 연결 되어 OLE DB는 필요한 고에 대 한 사용는 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)합니다. 사용 하 여 다른 데이터베이스에 액세스할 수 있습니다 [ODBC](https://msdn.microsoft.com/library/ms710252\(v=vs.85\).aspx) 또는 OLE DB 드라이버 직접 합니다. ODBC는 현재 표준 데이터베이스 인터페이스 하지만 대부분의 데이터베이스 시스템 ODBC 인터페이스를 통해 액세스할 수 없는 사용자 지정 기능을 제공 합니다. OLE DB는 계속 지원 하지만 새 응용 프로그램에는 권장 되지 않는 레거시 COM 데이터 액세스 기술입니다. 자세한 내용은 참조 [Visual c + +에서 데이터 액세스](/cpp/data/data-access-in-cpp)합니다.
 
 REST 서비스를 사용 하는 c + + 프로그램에서 사용할 수는 [c + + REST SDK](https://github.com/Microsoft/cpprestsdk)합니다.
 
@@ -106,11 +106,11 @@ Microsoft Azure 저장소를 사용 하는 c + + 프로그램에서 사용할 �
 
 데이터 모델링&mdash;Visual Studio c + +에 대 한 ORM 계층을 제공 하지 않습니다. [ODB](http://www.codesynthesis.com/products/odb/) 인기 있는 오픈 소스 ORM을 c + +입니다.
 
-C + + 응용 프로그램에서 데이터베이스에 연결 하는 방법에 대 한 자세한 참조 [c + + 용 Visual Studio data tools](../data-tools/visual-studio-data-tools-for-cpp.md)합니다. 레거시 Visual c + + 데이터 액세스 기술에 대 한 자세한 내용은 참조 [데이터 액세스](http://msdn.microsoft.com/Library/a9455752-39c4-4457-b14e-197772d3df0b)합니다.
+C + + 응용 프로그램에서 데이터베이스에 연결 하는 방법에 대 한 자세한 참조 [c + + 용 Visual Studio data tools](../data-tools/visual-studio-data-tools-for-cpp.md)합니다. 레거시 Visual c + + 데이터 액세스 기술에 대 한 자세한 내용은 참조 [데이터 액세스](/cpp/data/data-access-in-cpp)합니다.
 
 ## <a name="javascript"></a>JavaScript
 
-[Visual Studio의 JavaScript](https://msdn.microsoft.com/library/hh334522.aspx) 는 플랫폼 간 앱을 UWP 앱, 클라우드 서비스, 웹 사이트 및 웹 응용 프로그램을 구축 하기 위한 첫 번째 클래스는 언어입니다. 즐겨 찾는 JavaScript 라이브러리 및 데이터베이스 제품을 설치 하려면 Bower, Grunt, Gulp, npm 및 Visual Studio 내에서 NuGet을 사용할 수 있습니다. Sdk를 다운로드 하 여 Azure 저장소 및 서비스에 연결 된 [Azure 웹 사이트](https://azure.microsoft.com/)합니다. Edge.js 서버 쪽 JavaScript (Node.js) ADO.NET 데이터 원본에 연결 하는 라이브러리입니다.
+[Visual Studio의 JavaScript](/scripting/javascript/javascript-language-reference) 는 플랫폼 간 앱을 UWP 앱, 클라우드 서비스, 웹 사이트 및 웹 응용 프로그램을 구축 하기 위한 첫 번째 클래스는 언어입니다. 즐겨 찾는 JavaScript 라이브러리 및 데이터베이스 제품을 설치 하려면 Bower, Grunt, Gulp, npm 및 Visual Studio 내에서 NuGet을 사용할 수 있습니다. Sdk를 다운로드 하 여 Azure 저장소 및 서비스에 연결 된 [Azure 웹 사이트](https://azure.microsoft.com/)합니다. Edge.js 서버 쪽 JavaScript (Node.js) ADO.NET 데이터 원본에 연결 하는 라이브러리입니다.
 
 ## <a name="python"></a>Python
 
@@ -127,7 +127,7 @@ Azure 저장소 및 Azure blob, 테이블, 큐 및 파일을 사용 하 여 응�
 [Azure SQL 데이터베이스](https://azure.microsoft.com/documentation/services/sql-database/)  
 Azure SQL 데이터베이스, 서비스는 관계형 데이터베이스에 연결 하는 방법을 설명 합니다.
 
-[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686\(v=vs.103\).aspx)  
+[SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt)  
 디자인, 탐색, 테스트 및 데이터에 연결 된 응용 프로그램 및 데이터베이스의 배포를 단순화 하는 도구에 설명 합니다.
 
 [ADO.NET](/dotnet/framework/data/adonet/index)  
@@ -142,7 +142,7 @@ ADO.NET 아키텍처 및 응용 프로그램 데이터를 관리 하 고 데이�
 [Office 솔루션의 데이터](/office-dev/office-dev/data-in-office-solutions)  
 Office 솔루션에서 데이터가 작동 하는 방법을 설명 하는 항목에 대 한 링크를 포함 합니다. 스키마 지향 프로그래밍, 데이터 캐싱 및 서버 쪽 데이터 액세스에 대 한 정보가 포함 됩니다.
 
-[LINQ(Language-Integrated Query)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+[LINQ(Language-Integrated Query)](/dotnet/csharp/linq/)  
 C# 및 Visual Basic 및 관계형 데이터베이스, XML 문서, 데이터 집합 및 메모리 내 컬렉션을 쿼리 하기 위한 일반적인 모델에 내장 된 쿼리 기능을 설명 합니다.
 
 [Visual Studio의 XML 도구](../xml-tools/xml-tools-in-visual-studio.md)  

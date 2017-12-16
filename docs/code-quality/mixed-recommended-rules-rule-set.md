@@ -12,11 +12,11 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9602b5af2506daebe88aac8459ea9da9c9a6ae08
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 44bc05bc6ba27dffdc267ad2cad1e15bc9b0a61a
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>혼합 권장 규칙 규칙 집합
 Microsoft 혼합 권장 규칙을 지 원하는 잠재적 보안 허점, 응용 프로그램 충돌 및 기타 중요 한 논리 및 디자인 오류를 포함 하 여 공용 언어 런타임 c + + 프로젝트에서 가장 일반적이 고 중요 한 문제에 집중 합니다. 공용 언어 런타임을 지 원하는 c + + 프로젝트에 대해 만드는이 규칙 사용자 지정 규칙 집합에 있는 집합을 포함 해야 합니다. 이 규칙 집합은 Visual Studio Professional edition 이상 구성 하도록 설계 되었습니다.  
@@ -116,7 +116,6 @@ Microsoft 혼합 권장 규칙을 지 원하는 잠재적 보안 허점, 응용 
 |[C6504](../code-quality/c6504.md)|비포인터에 대한 Null|  
 |[C6505](../code-quality/c6505.md)|Void에 대한 MustCheck|  
 |[C6506](../code-quality/c6506.md)|비포인터 또는 배열에 대한 버퍼 크기|  
-|[C6507](http://msdn.microsoft.com/en-us/18f88cd1-d035-4403-a6a4-12dd0affcf21)|역참조 0에서의 Null 불일치|  
 |[C6508](../code-quality/c6508.md)|상수에 대한 쓰기 액세스|  
 |[C6509](../code-quality/c6509.md)|사전 조건에서 반환이 사용됨|  
 |[C6510](../code-quality/c6510.md)|비포인터에 대한 Null 종료|  
@@ -127,12 +126,8 @@ Microsoft 혼합 권장 규칙을 지 원하는 잠재적 보안 허점, 응용 
 |[C6516](../code-quality/c6516.md)|특성에 대한 속성 없음|  
 |[C6517](../code-quality/c6517.md)|읽기 불가능 버퍼에 대한 유효 크기|  
 |[C6518](../code-quality/c6518.md)|쓰기 불가능 버퍼에 대한 쓰기 가능 크기|  
-|[C6519](http://msdn.microsoft.com/en-us/2b6326b0-0539-4d26-8fb1-720114933232)|주석이 잘못되었습니다. 'NeedsRelease' 속성의 값은 Yes 또는 No여야 합니다.|  
-|[C6521](http://msdn.microsoft.com/en-us/e98d0ae3-6f13-47b2-9a15-15d4055af9ef)|잘못된 크기 문자열 역참조|  
 |[C6522](../code-quality/c6522.md)|잘못된 크기 문자열 유형|  
-|[C6523](http://msdn.microsoft.com/en-us/11397a31-b224-46b0-afb7-d49ca576a3bb)|잘못된 크기 문자열 매개 변수|  
 |[C6525](../code-quality/c6525.md)|잘못된 크기 문자열 접근할 수 없는 위치|  
-|[C6526](http://msdn.microsoft.com/en-us/59c590c7-0098-4166-a1ac-87f324596002)|잘못된 크기 문자열 버퍼 유형|  
 |[C6527](../code-quality/c6527.md)|주석이 잘못되었습니다. 'NeedsRelease' 속성은 void 형식 값에 사용할 수 없습니다.|  
 |[C6530](../code-quality/c6530.md)|인식할 수 없는 형식 문자열 스타일|  
 |[C6540](../code-quality/c6540.md)|이 함수에 특성 주석을 사용하면 기존의 모든 __declspec 주석이 무효화됩니다.|  
@@ -221,8 +216,7 @@ Microsoft 혼합 권장 규칙을 지 원하는 잠재적 보안 허점, 응용 
 |[C28253](../code-quality/c28253.md)|함수에 대한 주석이 일치하지 않습니다. 이 인스턴스에 대한 다른 주석이 매개 변수에 있습니다.|  
 |[C28254](../code-quality/c28254.md)|dynamic_cast<>()는 주석에서 지원되지 않습니다.|  
 |[C28262](../code-quality/c28262.md)|주석에 대한 주석 구문 오류가 함수에 있습니다.|  
-|[C28263](../code-quality/c28263.md)|내장 주석에 대한 조건부 주석에 구문 오류가 있습니다.|  
-|[C28264](http://msdn.microsoft.com/en-us/bf6ea983-a06e-4752-a042-747a7dbf338c)|결과 목록 값은 상수여야 합니다.|  
+|[C28263](../code-quality/c28263.md)|내장 주석에 대한 조건부 주석에 구문 오류가 있습니다.| 
 |[C28267](../code-quality/c28267.md)|함수 주석에서 주석 구문 오류가 발견되었습니다.|  
 |[C28272](../code-quality/c28272.md)|함수, 매개 변수에 대한 주석이 검사 시 함수 선언과 일치하지 않습니다.|  
 |[C28273](../code-quality/c28273.md)|함수의 경우 단서가 함수 선언과 일치하지 않습니다.|  

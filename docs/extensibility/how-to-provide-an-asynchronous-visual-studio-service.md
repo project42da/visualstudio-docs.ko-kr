@@ -11,11 +11,11 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c71d76e3b085260043f6f07de8b352ab74c3930f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 1bcf34f730411589624075bde4ace0b5457e07a7
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>방법: 비동기 Visual Studio 서비스를 제공 합니다.
 UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비동기 서비스 만들고 백그라운드 스레드에서 패키지를 로드 해야 합니다. 이 목적을 위해 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 아닌 <xref:Microsoft.VisualStudio.Shell.Package>, 비동기 패키지의 특별 한 비동기 메서드 사용 하 여 서비스를 추가 하 고  
@@ -24,9 +24,9 @@ UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비
   
 ## <a name="implementing-an-asynchronous-service"></a>비동기 서비스 구현  
   
-1.  VSIX 프로젝트를 만듭니다 (**파일 / 새로 만들기 / 프로젝트 / Visual C# / Extensiblity / VSIX 프로젝트**). 프로젝트 이름을 **TestAsync**합니다.  
+1.  VSIX 프로젝트를 만듭니다 (**파일 > 새로 만들기 > 프로젝트 > Visual C# > Extensiblity > VSIX 프로젝트**). 프로젝트 이름을 **TestAsync**합니다.  
   
-2.  VSPackage 프로젝트에 추가 합니다. 프로젝트 노드를 선택는 **솔루션 탐색기** 클릭 **추가 / 새 항목 / Visual C# 항목 / 확장성 / Visual Studio 패키지**합니다. 이 파일의 이름을 **TestAsyncPackage.cs**합니다.  
+2.  VSPackage 프로젝트에 추가 합니다. 프로젝트 노드를 선택는 **솔루션 탐색기** 클릭 **추가 > 새 항목 > Visual C# 항목 > 확장성 > Visual Studio 패키지**합니다. 이 파일의 이름을 **TestAsyncPackage.cs**합니다.  
   
 3.  TestAsyncPackage.cs를 패키지가 아닌 AsyncPackage에서 상속 하도록 패키지를 변경 합니다.  
   

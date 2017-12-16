@@ -16,7 +16,6 @@ helpviewer_keywords:
 - debugging Windows applications
 - Windows applications, debugging
 - debugging [Visual Studio], Windows applications
-- debugging [J#], Windows applications
 - debugging [C#], Windows applications
 - debugging [Visual Basic], Windows applications
 ms.assetid: 7092ee7f-8378-4def-aef8-1695bd97cf14
@@ -24,11 +23,11 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d2d8f123359e4dfff02f05709d8028c2b9fcd3e9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 873b7dd10a2e39aa795626bc7d387df7017740d8
+ms.sourcegitcommit: 1e08318a8a684b21609af7a5e48b56abcc3239e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="debugging-preparation-windows-forms-applications"></a>디버깅 준비: Windows Forms 응용 프로그램
 Windows Forms 프로젝트 템플릿은 Windows Forms 응용 프로그램을 만듭니다. 이러한 형식의 응용 프로그램은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 쉽게 디버깅할 수 있습니다. 자세한 내용은 참조 [Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)합니다.  
@@ -71,7 +70,7 @@ Windows Forms 프로젝트 템플릿은 Windows Forms 응용 프로그램을 만
  [Debugging Managed Code](../debugger/debugging-managed-code.md) (관리 코드 디버그)  
  [C#, F# 및 Visual Basic 프로젝트 형식](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
  [방법: 디버그 및 릴리스 구성](../debugger/how-to-set-debug-and-release-configurations.md)   
- [C#에 대 한 프로젝트 설정 디버그 구성](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [디버그 구성에 대 한 Visual Basic 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [C# 디버그 구성을 위한 프로젝트 설정](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Visual Basic 디버그 구성을 위한 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
  [실행 중인 프로세스에 연결](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [Windows Forms](/dotnet/framework/winforms/index)

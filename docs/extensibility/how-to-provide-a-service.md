@@ -13,11 +13,11 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d0adc9f69f1b0e873d2e1f38c9317070dc0d6a08
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 3c37f4dc215027752da9c16fbdfba44b4e10c41c
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="how-to-provide-a-service"></a>방법: 서비스 제공
 VSPackage는 다른 Vspackage에서 사용할 수 있는 서비스를 제공할 수 있습니다. 서비스를 제공 하려면 VSPackage는 Visual Studio와 함께 서비스를 등록 하 고 서비스를 추가 해야 합니다.  
@@ -31,9 +31,9 @@ VSPackage는 다른 Vspackage에서 사용할 수 있는 서비스를 제공할 
   
 #### <a name="implementing-a-service"></a>서비스 구현  
   
-1.  VSIX 프로젝트를 만듭니다 (**파일 / 새로 만들기 / 프로젝트 / Visual C# / Extensiblity / VSIX 프로젝트**).  
+1.  VSIX 프로젝트를 만듭니다 (**파일 > 새로 만들기 > 프로젝트 > Visual C# > Extensiblity > VSIX 프로젝트**).  
   
-2.  VSPackage 프로젝트에 추가 합니다. 프로젝트 노드를 선택는 **솔루션 탐색기** 클릭 **추가 / 새 항목 / Visual C# 항목 / 확장성 / Visual Studio 패키지**합니다.  
+2.  VSPackage 프로젝트에 추가 합니다. 프로젝트 노드를 선택는 **솔루션 탐색기** 클릭 **추가 > 새 항목 > Visual C# 항목 > 확장성 > Visual Studio 패키지**합니다.  
   
 3.  서비스를 구현 하려면 세 가지 형식을 만들려면:  
   
@@ -109,7 +109,7 @@ VSPackage는 다른 Vspackage에서 사용할 수 있는 서비스를 제공할 
   
 2.  생성 및 서비스를 반환 하거나 만들 수 없는 경우 null 해야 하는 콜백 메서드를 구현 합니다.  
   
-    ```  
+    ```csharp  
     private object CreateService(IServiceContainer container, Type serviceType)  
     {  
         if (typeof(SMyService) == serviceType)  

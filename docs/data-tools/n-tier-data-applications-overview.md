@@ -17,11 +17,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 3949d49f763c2513e86c2cd3f1b20c20fb858ecc
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: 0fb26eddd3a7bf6af9a2888b6fbc8efa79e33bf5
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="n-tier-data-applications-overview"></a>N 계층 데이터 응용 프로그램 개요
 *N 계층* 데이터 응용 프로그램은 여러도 분리 되어 있는 데이터 응용 프로그램 *계층*합니다. N 계층 응용 프로그램 "분산된 응용 프로그램" 및 "다중 계층 응용 프로그램" 라고도 함, 클라이언트와 서버 간에 배포 된 개별 계층으로 처리를 구분 합니다. 데이터에 액세스 하는 응용 프로그램을 개발 하는 경우 응용 프로그램을 구성 하는 다양 한 계층 간의 분리를 있어야 합니다.  
@@ -34,7 +34,7 @@ Visual Studio는 개발자가 n 계층 응용 프로그램을 만들 수 있도�
   
 -   [LINQ to SQL 도구 Visual Studio에서](../data-tools/linq-to-sql-tools-in-visual-studio2.md) 별도 네임 스페이스로 DataContext 및 데이터 클래스를 생성 하는 설정을 제공 합니다. 이 통해 데이터 액세스 및 데이터 엔터티 계층의 논리적 분리 합니다.  
   
--   [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) 제공는 <xref:System.Data.Linq.Table%601.Attach%2A> 메서드를 응용 프로그램에서 다른 계층에서 DataContext를 가져오는 데 사용할 수 있습니다. 자세한 내용은 참조 [N 계층 및 LINQ 사용 하 여 원격 응용 프로그램을 SQL](http://msdn.microsoft.com/Library/854a1cdd-53cb-45f5-83ca-63962a9b3598)합니다.  
+-   [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) 제공는 <xref:System.Data.Linq.Table%601.Attach%2A> 메서드를 응용 프로그램에서 다른 계층에서 DataContext를 가져오는 데 사용할 수 있습니다. 자세한 내용은 참조 [N 계층 및 LINQ 사용 하 여 원격 응용 프로그램을 SQL](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)합니다.  
   
 ## <a name="presentation-tier"></a>프레젠테이션 계층  
 *프레젠테이션 계층* 은 사용자가 응용 프로그램 상호 작용 하는 계층입니다. 여기에 포함 된 추가 응용 프로그램 논리도 합니다. 일반적인 프레젠테이션 계층 구성 요소는 다음과 같습니다.  
@@ -82,7 +82,7 @@ Visual Studio는 개발자가 n 계층 응용 프로그램을 만들 수 있도�
   
 [연습: N 계층 데이터 응용 프로그램 만들기](../data-tools/walkthrough-creating-an-n-tier-data-application.md)  
 
-[N 계층 및 to SQL LINQ 통한 원격 응용 프로그램](http://msdn.microsoft.com/Library/854a1cdd-53cb-45f5-83ca-63962a9b3598)  
+[LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)  
   
 ## <a name="see-also"></a>참고 항목
 [연습: N 계층 데이터 응용 프로그램 만들기](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   

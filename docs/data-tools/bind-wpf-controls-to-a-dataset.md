@@ -19,11 +19,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: d7609215f7145ae05d978ba10d556782c886ee3b
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: 96d5407672ff94749731f9d00088b27e8c4da036
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>데이터 집합에 WPF 컨트롤 바인딩
 이 연습에서는 데이터 바인딩된 컨트롤을 포함하는 WPF 응용 프로그램을 만듭니다. 이러한 컨트롤은 데이터 집합에서 캡슐화된 제품 레코드에 바인딩됩니다. 또한 제품을 찾아보고 제품 레코드 변경 내용을 저장할 수 있는 단추도 추가합니다.  
@@ -50,8 +50,6 @@ ms.lasthandoff: 11/09/2017
 또한 다음 개념에 대한 지식은 연습을 완료하는 데 반드시 필요하지는 않지만 사전에 파악해 두면 유용할 수 있습니다.  
   
 -   데이터 집합 및 TableAdapter. 자세한 내용은 참조 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md) 및 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)합니다.  
-  
--   WPF 디자이너 사용법. 자세한 내용은 참조 [WPF 및 Silverlight 디자이너 개요](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)합니다.  
   
 -   WPF 데이터 바인딩. 자세한 내용은 [데이터 바인딩 개요](/dotnet/framework/wpf/data/data-binding-overview)를 참조하세요.  
   
@@ -257,5 +255,4 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>참고 항목
 [Visual Studio에서 데이터에에서 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)   
-[WPF 및 Silverlight 디자이너 개요](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)   
 [데이터 바인딩 개요](/dotnet/framework/wpf/data/data-binding-overview)

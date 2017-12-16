@@ -12,14 +12,14 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 6b48b16d33c62c2d0ca96eb1d55ce22682458029
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: bc63c636d58bcde7aefeb7d35939008387bb6808
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="visual-studio-data-tools-for-net"></a>.NET 용 visual Studio data tools
-Visual Studio 및.NET Framework에는 광범위 한 API와 도구를 데이터베이스에 연결, 데이터를 메모리에 모델링 및 데이터의 사용자 인터페이스에 표시에 대 한 지원 제공 함께 합니다. 데이터 액세스 기능을 제공 하는.NET Framework 클래스 라고 [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)합니다. Visual Studio에서 도구는 데이터와 함께 ADO.NET 관계형 데이터베이스 및 XML을 지원 하기 위해 주로 원래 설계 되었습니다. 많은 NoSQL 데이터베이스 공급 업체 또는 제 3 자가 이러한 일 전 부터는 ADO.NET 공급자에 제공합니다.  
+Visual Studio 및.NET Framework에는 광범위 한 API와 도구를 데이터베이스에 연결, 데이터를 메모리에 모델링 및 데이터의 사용자 인터페이스에 표시에 대 한 지원 제공 함께 합니다. 데이터 액세스 기능을 제공 하는.NET Framework 클래스 라고 [ADO.NET](/dotnet/framework/data/adonet/index)합니다. Visual Studio에서 도구는 데이터와 함께 ADO.NET 관계형 데이터베이스 및 XML을 지원 하기 위해 주로 원래 설계 되었습니다. 많은 NoSQL 데이터베이스 공급 업체 또는 제 3 자가 이러한 일 전 부터는 ADO.NET 공급자에 제공합니다.  
   
 [.NET core](https://www.dotnetfoundation.org/netcore) ADO.NET 데이터 집합 및 관련 된 형식을 제외 하 고 지원 합니다. .NET Core 대상으로 하는 개체-관계형 매핑 (ORM) 계층을 필요로 하는 경우 사용 하 여 [Entity Framework Core](https://docs.microsoft.com/ef/core/)합니다.  
   
@@ -39,7 +39,7 @@ Visual Studio 및.NET Framework에는 광범위 한 API와 도구를 데이터�
   
 5.  비즈니스 규칙, 검색 및 데이터 유효성 검사와 같은 또는 기본 데이터베이스를 노출 하는 사용자 지정 기능을 활용 하는 항목에 대 한 사용자 지정 코드를 추가 합니다.  
   
-3 단계를 건너뛰고 모델을 사용 하지 않고 데이터베이스에 직접 명령 실행 하는.NET 응용 프로그램을 프로그래밍할 수 있습니다. 이 경우에 관련 설명서를 찾을 수 있습니다: [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)합니다. Note 여전히 사용할 수 있는 데이터 소스 구성 마법사 및 디자이너에 메모리와 해당 개체에 데이터 바인딩 UI 컨트롤에 사용자 정의 개체를 채울 때 데이터 바인딩 코드를 생성 합니다.
+3 단계를 건너뛰고 모델을 사용 하지 않고 데이터베이스에 직접 명령 실행 하는.NET 응용 프로그램을 프로그래밍할 수 있습니다. 이 경우에 관련 설명서를 찾을 수 있습니다: [ADO.NET](/dotnet/framework/data/adonet/index)합니다. Note 여전히 사용할 수 있는 데이터 소스 구성 마법사 및 디자이너에 메모리와 해당 개체에 데이터 바인딩 UI 컨트롤에 사용자 정의 개체를 채울 때 데이터 바인딩 코드를 생성 합니다.
   
 ## <a name="see-also"></a>참고 항목
 [Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)

@@ -18,11 +18,11 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d9784ae650a411ef4fe5086ae8bf756147fd2365
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: ac633134b5b8037eb9e45131128b0ee0cf2887ab
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: 메서드 보안은 형식의 상위 집합이어야 합니다.
 |||  
@@ -33,7 +33,7 @@ ms.lasthandoff: 10/31/2017
 |변경 수준|주요 변경|  
   
 ## <a name="cause"></a>원인  
- 형식에 선언적 보안 및 해당 메서드 중 하나에 동일한 보안 작업에 대 한 선언적 보안 및 보안 작업은 없습니다 [링크 요청](/dotnet/framework/misc/link-demands) 또는 [상속 요청](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9), 한 권한과 메서드에서 검사 권한의 하위 집합이 아닌 형식에서 검사 합니다.  
+ 형식에 선언적 보안 및 해당 메서드 중 하나에 동일한 보안 작업에 대 한 선언적 보안 및 보안 작업은 없습니다 [링크 요청](/dotnet/framework/misc/link-demands), 형식에서 검사 하는 권한이 없는 권한의 하위 집합 메서드에서 검사 합니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
  메서드가 동일한 작업에 대해 메서드 수준과 형식 수준의 선언적 보안이 모두 없어야 합니다. 두 가지 검사 결합 되지 않습니다. 메서드 수준 요청에만 적용 됩니다. 예를 들어, 권한을 요구 하는 형식 `X`, 권한을 요구 하는 메서드 중 하나 및 `Y`, 코드 권한이 없는 `X` 메서드를 실행 하 합니다.  
@@ -63,6 +63,5 @@ ms.lasthandoff: 10/31/2017
 **[읽기 권한 (메서드에 의해 요구) 없음] 개인 정보에 액세스할 수 없습니다: 요청에 실패 했습니다.**   
 ## <a name="see-also"></a>참고 항목  
  [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
- [상속 요청](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)   
  [링크 요구](/dotnet/framework/misc/link-demands)   
  [데이터 및 모델링](/dotnet/framework/data/index)

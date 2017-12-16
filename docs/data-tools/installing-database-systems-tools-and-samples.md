@@ -16,11 +16,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 17bdaffa8fdbb6ddff9d7fe5590db021997aa01f
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: 2b3a551f19e3410b5f56ebe994676666cdc3d4e1
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio에 대 한 호환 데이터베이스 시스템
 
@@ -30,7 +30,7 @@ Visual Studio에서 데이터에 연결 된 응용 프로그램을 개발 하려
 
 Azure 저장소 Api를 사용 하는 경우 설치 하 여 Azure 저장소 에뮬레이터 로컬 컴퓨터에서 개발 하는 동안 프로덕션에 배포할 준비가 될 때까지 요금을 방지 하기 위해 합니다. 자세한 내용은 참조 [개발 및 테스트에 Azure 저장소 에뮬레이터를 사용 하 여](https://azure.microsoft.com/en-us/documentation/articles/storage-use-emulator/)합니다.
 
-다음 목록에는 Visual Studio 프로젝트에 사용할 수 있는 더 인기가 데이터베이스 시스템의 일부를 포함 합니다. 이 목록은 완전 한 목록이 없습니다. 목록이 Visual Studio 도구와 완벽 한 통합을 사용 하도록 설정 하는 ADO.NET 데이터 공급자를 제공 하는 공급 업체에 대 한 참조 [ADO.NET 데이터 공급자](https://msdn.microsoft.com/en-us/library/dd363565.aspx)합니다.
+다음 목록에는 Visual Studio 프로젝트에 사용할 수 있는 더 인기가 데이터베이스 시스템의 일부를 포함 합니다. 이 목록은 완전 한 목록이 없습니다. 목록이 Visual Studio 도구와 완벽 한 통합을 사용 하도록 설정 하는 ADO.NET 데이터 공급자를 제공 하는 공급 업체에 대 한 참조 [ADO.NET 데이터 공급자](/dotnet/framework/data/adonet/data-providers)합니다.
 
 ## <a name="microsoft-sql-server"></a>Microsoft SQL Server
 

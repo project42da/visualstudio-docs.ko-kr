@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: BertanAygun
 ms.author: bertaygu
 manager: ghogen
-ms.openlocfilehash: 7ff2aeecfbabb055f0fa9740623bc2bd949b11c7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: c2d8b27937be4580da8ff33c5b3c1d57654b4c89
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="measuring-extension-impact-in-startup"></a>시작에 확장 영향을 측정합니다.
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 10/31/2017
 
 이러한 기능에 대 한 자세한 내용은 다음 문서에서 찾을 수 있습니다.
 
-[규칙 기반 UI 컨텍스트](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md): UI 컨텍스트 기반을 두고 다양 한 규칙 기반 엔진을 사용 하면 프로젝트 형식, 버전 및 기능에 따라 사용자 지정 컨텍스트를 만들 수 있도록 합니다. 패키지 시작; 대신 특정 기능을 사용 하 여 프로젝트의 존재 여부와 같은 보다 구체적인 시나리오 중 로드 하려면 이러한 사용자 지정 컨텍스트를 사용할 수 있습니다. 허용 또는 [와 사용자 지정 컨텍스트 연결에 대 한 가시성 명령](https://msdn.microsoft.com/en-us/library/bb166512.aspx) 명령 상태 쿼리 처리기를 등록 하려면 프로젝트 기능 또는 패키지를 로드 하려면 필요가 없도록 표시 되어 있는 다른 용어 기반 합니다.
+[규칙 기반 UI 컨텍스트](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md): UI 컨텍스트 기반을 두고 다양 한 규칙 기반 엔진을 사용 하면 프로젝트 형식, 버전 및 기능에 따라 사용자 지정 컨텍스트를 만들 수 있도록 합니다. 패키지 시작; 대신 특정 기능을 사용 하 여 프로젝트의 존재 여부와 같은 보다 구체적인 시나리오 중 로드 하려면 이러한 사용자 지정 컨텍스트를 사용할 수 있습니다. 허용 또는 [와 사용자 지정 컨텍스트 연결에 대 한 가시성 명령](visibilityconstraints-element.md) 명령 상태 쿼리 처리기를 등록 하려면 프로젝트 기능 또는 패키지를 로드 하려면 필요가 없도록 표시 되어 있는 다른 용어 기반 합니다.
 
 [비동기 패키지 지원](how-to-use-asyncpackage-to-load-vspackages-in-the-background.md): Visual Studio 2015의 새로운 AsyncPackage 기본 클래스가 로드 되도록 백그라운드에서 비동기적으로 자동 부하 특성 또는 비동기 서비스 쿼리에서 패키지 로드를 요청한 경우 Visual Studio 패키지를 수 있습니다. . 이 백그라운드 로드를 사용 하면 IDE에서이 확장은 백그라운드에서 초기화 되 고 시작 하 고 솔루션 로드 같은 중요 시나리오에 영향을 미칠 수 없게 하는 동안 응답성이 계속 합니다.
 

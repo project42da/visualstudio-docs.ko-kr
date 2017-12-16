@@ -17,11 +17,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 26e74c43e79012adc6b241390cd463a35c9f58c1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 0826d241cc1f3741a35e635bc27dff1d69ad86af
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="configure-service-reference-dialog-box"></a>서비스 참조 구성 대화 상자
 **서비스 참조 구성** 대화 상자를 사용 하면 동작을 구성할 수 있습니다 [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] 서비스입니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 10/31/2017
  WCF 서비스 메서드를 동기적으로(기본값) 호출할지 아니면 비동기적으로 호출할지를 결정합니다.  
   
  **작업 기반 작업 생성**  
- 비동기 코드를 작성하는 경우 이 옵션을 사용하면 .Net 4에 도입된 TPL(작업 병렬 라이브러리)을 활용할 수 있습니다. 참조 [작업 병렬 라이브러리 (TPL)](http://msdn.microsoft.com/library/dd460717.aspx)합니다.  
+ 비동기 코드를 작성하는 경우 이 옵션을 사용하면 .Net 4에 도입된 TPL(작업 병렬 라이브러리)을 활용할 수 있습니다. 참조 [작업 병렬 라이브러리 (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)합니다.  
   
  **항상 메시지 계약 생성**  
  WCF 클라이언트에 대해 메시지 계약 형식을 생성할지 여부를 결정합니다. 메시지 계약에 대 한 자세한 내용은 참조 [메시지 계약을 사용 하 여](/dotnet/framework/wcf/feature-details/using-message-contracts)합니다.  
@@ -97,4 +97,4 @@ ms.lasthandoff: 10/31/2017
 ## <a name="see-also"></a>참고 항목  
 
  [방법: 웹 서비스에 대 한 참조를 추가 합니다.](how-to-add-update-or-remove-a-wcf-data-service-reference.md)   
- [Windows Communication Foundation 서비스 및 WCF 데이터 서비스](../data-tools/configure-service-reference-dialog-box.md)
+ [Windows Communication Foundation 서비스 및 WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)

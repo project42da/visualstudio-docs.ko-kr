@@ -22,11 +22,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 191206e9cc16271e64abbeaba87d86ac0108924b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: d2b0ea1999c9742c04d1bb118d9a036ff2bed5ea
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>데이터를 저장 하기 전에 데이터 바인딩된 컨트롤에서 in-process 편집 커밋
 데이터 바인딩된 컨트롤의 값을 편집할 때 사용자가 컨트롤에 바인딩되는 데이터 원본에 값이 업데이트를 적용 하려면 현재 레코드 탐색 해야 합니다. 항목을 끌면는 [데이터 소스 창](add-new-data-sources.md) 폼으로 끌어 놓으면 첫 번째 항목에는 코드를 생성 된 **저장** 단추 클릭 이벤트의는 <xref:System.Windows.Forms.BindingNavigator>합니다. 이 코드는 호출 된 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 의 메서드는 <xref:System.Windows.Forms.BindingSource>합니다. 따라서에 대 한 호출에서 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드가 첫 번째에 대해서만 생성 됩니다 <xref:System.Windows.Forms.BindingSource> 폼에 추가 된 합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  디자이너는 추가 `BindingSource.EndEdit` 폼에 놓은 첫 번째 항목에 대해서만 코드입니다. 따라서 호출 하는 코드 줄을 추가 해야는 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드 각각에 대해 <xref:System.Windows.Forms.BindingSource> 폼에 있습니다. 호출 하는 코드 줄을 수동으로 추가할 수 있습니다는 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드 각각에 대해 <xref:System.Windows.Forms.BindingSource>합니다. 추가할 수 있습니다는 `EndEditOnAllBindingSources` 메서드를 폼 버전을 저장 하기 전에 호출 됩니다.  
   
- 다음 코드에서는 [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d) 모두 반복 하는 쿼리 <xref:System.Windows.Forms.BindingSource> 구성 요소 및 호출은 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드 각각에 대해 <xref:System.Windows.Forms.BindingSource> 폼에 있습니다.  
+ 다음 코드에서는 [LINQ (Language-Integrated Query)](/dotnet/csharp/linq/) 모두 반복 하는 쿼리 <xref:System.Windows.Forms.BindingSource> 구성 요소 및 호출은 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드 각각에 대해 <xref:System.Windows.Forms.BindingSource> 폼에 있습니다.  
   
 ## <a name="to-call-endedit-for-all-bindingsource-components-on-a-form"></a>폼에 모든 BindingSource 구성 요소에 대 한 EndEdit를 호출 하려면  
   

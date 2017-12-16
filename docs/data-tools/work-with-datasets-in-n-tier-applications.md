@@ -23,11 +23,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 85062fe6ea82a73fbc2d64e1d1ce9136d16831cf
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: 2274ac9bcfd3ba7c87364f5c4c79cd155844fe73
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>N 계층 응용 프로그램에서 데이터 집합 작업
 *N 계층 데이터 응용 프로그램* 은 여러 논리 계층으로 분리 되어 있는 데이터 중심 응용 프로그램 (또는 *계층*). 다시 말해서 N 계층 데이터 응용 프로그램은 여러 프로젝트로 구분되며 데이터 액세스 계층, 비즈니스 논리 계층 및 표시 계층이 각 프로젝트에 포함되는 응용 프로그램입니다. 자세한 내용은 참조 [N 계층 데이터 응용 프로그램 개요](../data-tools/n-tier-data-applications-overview.md)합니다.  
@@ -51,4 +51,4 @@ TableAdapter 및 데이터 클래스를 개별 프로젝트로 생성할 수 있
 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)  
 [Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)  
 [만들기 및 Tableadapter를 구성 합니다.](../data-tools/create-and-configure-tableadapters.md)  
-[N 계층 및 to SQL LINQ 통한 원격 응용 프로그램](http://msdn.microsoft.com/Library/854a1cdd-53cb-45f5-83ca-63962a9b3598)
+[LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)

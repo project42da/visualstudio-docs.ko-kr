@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eabddaea271eb07873fc50bd4824a5108514444c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 679b5c78330bb8be151a1b9f89625c8f2178456d
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: 손상된 상태 예외 처리 방지
 |||  
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/31/2017
  [CSE(손상된 상태 예외)](https://msdn.microsoft.com/en-us/magazine/dd419661.aspx) 는 프로세스에 메모리 손상이 있음을 나타냅니다. 프로세스 충돌을 허용하는 대신 catch하면 공격자가 손상된 메모리 영역에 익스플로잇을 배치할 수 있는 경우 보안 취약점이 발생할 수 있습니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- CSE는 프로세스의 상태가 손상되었으며 시스템에 의해 catch되지 않았음을 나타냅니다. 손상된 상태 시나리오에서 일반 처리기는 적절한 `HandleProcessCorruptedStateExceptions` 특성으로 메서드를 표시하는 경우에만 예외를 catch합니다. 기본적으로 [CLR(공용 언어 런타임)](https://msdn.microsoft.com/en-us/library/8bs2ecf4.aspx) 은 CSE에 대한 catch 처리기를 호출하지 않습니다.  
+ CSE는 프로세스의 상태가 손상되었으며 시스템에 의해 catch되지 않았음을 나타냅니다. 손상된 상태 시나리오에서 일반 처리기는 적절한 `HandleProcessCorruptedStateExceptions` 특성으로 메서드를 표시하는 경우에만 예외를 catch합니다. 기본적으로는 [공용 언어 런타임 (CLR)](/dotnet/standard/clr) Cse에 대 한 catch 처리기를 호출 하지 것입니다.  
   
  로깅 코드조차 공격자가 메모리 손상 버그를 악용할 수 있게 하므로 이러한 종류의 예외를 catch하지 않고 프로세스 충돌을 허용하는 것이 가장 안전한 옵션입니다.  
   

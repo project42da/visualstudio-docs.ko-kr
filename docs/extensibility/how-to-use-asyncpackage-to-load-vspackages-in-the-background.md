@@ -10,17 +10,17 @@ ms.assetid: dedf0173-197e-4258-ae5a-807eb3abc952
 caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-ms.openlocfilehash: 8adc348553ba613898117f10ccd21a6e5cd02ab8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: b89f021b181e653dff97368cc5c1f2d993f04323
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>방법: AsyncPackage를 사용 하 여 백그라운드에서 Vspackage를 로드 합니다.
 디스크 I/O 로드 되 고 VS 패키지 초기화 될 수 있습니다. UI 스레드에서 오류가 발생 해도 이러한 I/O 응답성 문제가 발생할 수 있습니다. 이 문제를 해결 하려면 Visual Studio 2015 도입는 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 백그라운드 스레드에서 로드 수 있는 클래스입니다.  
   
 ## <a name="creating-an-asyncpackage"></a>AsyncPackage 만들기  
- VSIX 프로젝트를 만들어서 시작할 수 있습니다 (**파일 / 새로 만들기 / 프로젝트 / Visual C# / 확장성 / VSIX 프로젝트**) VSPackage 프로젝트에 추가 하 고 (프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가/새 항목 / C# 항목/확장성/Visual Studio 패키지**). 그런 다음 서비스 만들고 패키지에 해당 서비스를 추가할 수 있습니다.  
+ VSIX 프로젝트를 만들어서 시작할 수 있습니다 (**파일 > 새로 만들기 > 프로젝트 > Visual C# > 확장성 > VSIX 프로젝트**) VSPackage 프로젝트에 추가 하 고 (프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가/새 항목 / C# 항목 / Extensibility/Visual Studio 패키지**). 그런 다음 서비스 만들고 패키지에 해당 서비스를 추가할 수 있습니다.  
   
 1.  패키지를 파생 <xref:Microsoft.VisualStudio.Shell.AsyncPackage>합니다.  
   

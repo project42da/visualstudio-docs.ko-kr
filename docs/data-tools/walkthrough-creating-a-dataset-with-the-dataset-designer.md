@@ -12,34 +12,32 @@ helpviewer_keywords:
 - data [Visual Studio], Dataset Designer
 - Dataset Designer, walkthroughs
 - datasets [Visual Basic], creating
-ms.assetid: 12360f54-db6c-45d2-a91f-fee43214b555
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-robots: noindex,nofollow
 ms.technology: vs-data-tools
-ms.openlocfilehash: f327d2010105c12c4b137317ed2406cae6cad9a3
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: f826f7d33a8d35719afacb053995629433b27642
+ms.sourcegitcommit: e951faab601f5c05ad6606d8fd0cd2059fc4cc25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="walkthrough-creating-a-dataset-with-the-dataset-designer"></a>연습: 데이터 집합 디자이너를 사용하여 데이터 집합 만들기
+
 이 연습에서는 만듭니다 사용 하 여 데이터 집합의 **데이터 집합 디자이너**합니다. 새 프로젝트를 만들고 새 추가 과정을 단계별로 걸리는 **데이터 집합** 항목 것입니다. 마법사를 사용 하지 않고 데이터베이스의 테이블에 따라 테이블을 만드는 방법에 설명 합니다.  
-  
- 이 연습에서 설명하는 작업은 다음과 같습니다.  
-  
+
+이 연습에서 설명하는 작업은 다음과 같습니다.  
+
 -   새 **Windows Forms 응용 프로그램** 프로젝트.  
-  
+
 -   빈 추가 **DataSet** 항목을 프로젝트입니다.  
-  
+
 -   만들고 있는 데이터 집합을 작성 하 여 응용 프로그램에서 데이터 원본 구성의 **데이터 집합 디자이너**합니다.  
-  
+ 
 -   Northwind 데이터베이스에 연결을 만들면 **서버 탐색기**합니다.  
-  
+
 -   데이터베이스의 테이블을 기반으로 데이터 집합에서 TableAdapters를 사용 하 여 테이블 만들기  
-  
+
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
 ## <a name="prerequisites"></a>필수 구성 요소  

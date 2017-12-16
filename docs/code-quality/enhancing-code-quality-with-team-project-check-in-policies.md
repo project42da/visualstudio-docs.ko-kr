@@ -15,11 +15,11 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5b421f5512e51d83e7f6e4edfbbe2869a1484200
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 4924bea8651f491c39adcde1e35387973d661dff
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="enhancing-code-quality-with-team-project-check-in-policies"></a>팀 프로젝트 체크 인 정책을 사용하여 코드 품질 향상
 TFVC(Team Foundation Version Control)를 사용할 때는 팀 프로젝트에 대한 체크 인 정책을 만들어 코드 품질을 향상시키고 그룹 개발을 보다 효율적으로 수행할 수 있게 해주는 방법을 적용할 수 있습니다. 체크 인 정책은 팀 프로젝트 수준에서 설정되어 코드 체크 인이 허용되기 전에 개발자 컴퓨터에서 적용되는 규칙입니다.  
@@ -41,17 +41,15 @@ TFVC(Team Foundation Version Control)를 사용할 때는 팀 프로젝트에 �
   
 |작업|지원 내용|  
 |----------|------------------------|  
-|**체크 인 정책 만들기 및 사용:** [!INCLUDE[esprscc](../code-quality/includes/esprscc_md.md)]의 팀 프로젝트 설정을 사용하여 체크 인 정책을 만듭니다.|[품질 게이트 설정 및 적용](http://msdn.microsoft.com/Library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|  
 |**코드 분석 체크 인 정책 만들기 및 사용:** 표준 코드 분석 규칙 집합에서 선택하거나 사용자 지정 집합을 만들 수 있습니다.|[코드 분석 체크 인 정책 만들기 및 사용](../code-quality/creating-and-using-code-analysis-check-in-policies.md)|  
   
 ## <a name="related-tasks"></a>관련 작업  
   
 |작업|지원 내용|  
 |----------|------------------------|  
-|**개발 환경 설정:** 코드를 만들거나 수정하려면 먼저 적절한 소스 코드를 사용하여 개발 및 테스트 환경을 설정해야 합니다. 데이터베이스로 작업하는 경우 해당 오프라인 표현에도 액세스할 수 있어야 합니다.|[개발 환경 설정](http://msdn.microsoft.com/en-us/7b686610-d379-4ca0-9608-73ef0e576e3a)|  
 |**개발 프로세스에서 코드 분석 사용:** 팀 멤버는 해당 개발 컴퓨터에서 코드 분석을 실행합니다. Visual Studio에서 개발자는 개별 코드 프로젝트에 대해 코드 분석 실행을 구성 및 실행하고, 해당 실행을 통해 발견된 문제를 확인 및 분석하며, 경고에 대한 작업 항목을 만듭니다.|[응용 프로그램 품질 분석](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)|  
 |**단위 테스트 만들기 및 실행:** 단위 테스트를 통해 개발자와 테스터는 C#, Visual Basic .NET 및 C++ 프로젝트의 클래스 메서드에서 논리 오류를 신속하게 찾을 수 있습니다. 단위 테스트를 한 번 만든 후 해당 소스 코드가 변경될 때마다 실행하여 버그가 없는지 확인할 수 있습니다.|[코드 단위 테스트](../test/unit-test-your-code.md)|  
-|**작업 항목 및 결함 추적:** 작업 항목을 사용하여 팀 프로젝트에 대한 작업 및 정보 둘 다를 추적 및 관리할 수 있습니다. 작업 항목은 [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] 에서 작업의 할당 및 진행률을 추적하는 데 사용하는 데이터베이스 레코드입니다. 다양한 유형의 작업 항목을 사용하여 고객 요구 사항, 제품 버그 및 개발 작업과 같은 여러 유형의 작업을 추적할 수 있습니다.|[작업 추적 및 관리 워크플로 &#91; redirected &#93;](http://msdn.microsoft.com/en-us/d2d8637d-0ef8-4ca3-874e-a04713344032)|  
+|**작업 항목 및 결함 추적:** 작업 항목을 사용하여 팀 프로젝트에 대한 작업 및 정보 둘 다를 추적 및 관리할 수 있습니다. 작업 항목은 [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] 에서 작업의 할당 및 진행률을 추적하는 데 사용하는 데이터베이스 레코드입니다. 다양한 유형의 작업 항목을 사용하여 고객 요구 사항, 제품 버그 및 개발 작업과 같은 여러 유형의 작업을 추적할 수 있습니다.|[작업 항목](/vsts/work/work-items/index)|  
   
 ## <a name="external-resources"></a>외부 리소스  
   

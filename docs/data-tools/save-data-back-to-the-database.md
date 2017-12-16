@@ -24,11 +24,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 2c309bd30fb364c36b9e98640a02eb3cf2611aef
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: f5d50dff4b71402184e0c1127242c1ddb0b1827f
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="save-data-back-to-the-database"></a>데이터베이스에 다시 데이터를 저장 합니다.
 데이터 집합은 데이터의 메모리 내 복사본입니다. 해당 데이터를 수정 하면 인지 다시 데이터베이스에 변경 내용을 저장 하는 것이 좋습니다. 다음 세 가지 방법 중 하나에서 이렇게합니다.  
@@ -217,7 +217,7 @@ Tableadapter에 익숙한 경우에 다음이 항목 중 하나에 직접 이동
 -   데이터 원본에 데이터를 전송 하 여 데이터 백 엔드에서-예를 들어 데이터베이스-하므로 적용 하거나 데이터를 취소 하 고 있습니다. 데이터베이스에 복잡 한 데이터 유효성 검사 및 오류 정보를 제공 하는 기능에 작업 하는 경우 어디에서 가져왔는지에 관계 없이 데이터를 확인할 수 없으므로 실용적인 방법이 될 수 있습니다. 그러나이 방법은 응용 프로그램 관련 요구 사항을 사용할 수 없는 수 있습니다. 그리고 데이터 유효성 검사 데이터 소스 수 발생할 다양 한 왕복에 응용 프로그램이 쉽게 백 엔드에 의해 발생 하는 유효성 검사 오류 해결 방법에 따라 데이터 원본에 있습니다.  
   
     > [!IMPORTANT]
-    >  데이터 명령을 사용 하는 경우는 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 속성으로 설정 된 <xref:System.Data.CommandType.Text>, 신중 하 게 데이터베이스에 전달 하기 전에 클라이언트에서 전송 되는 정보를 확인 합니다. 악의적인 사용자가를 보내려고 시도할 수 있습니다 (주입) 데이터베이스를 훼손 하거나 무단으로 액세스 하기 위해 SQL 문을 수정 또는 추가 합니다. 데이터베이스에 사용자 입력을 전송 하기 전에 항상 정보가 올바른지 확인 합니다. 항상 매개 변수가 있는 쿼리 또는 가능한 경우 저장된 프로시저를 사용 하는 것이 좋습니다. 자세한 내용은 [Script Exploits Overview](http://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)를 참조하세요.  
+    >  데이터 명령을 사용 하는 경우는 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 속성으로 설정 된 <xref:System.Data.CommandType.Text>, 신중 하 게 데이터베이스에 전달 하기 전에 클라이언트에서 전송 되는 정보를 확인 합니다. 악의적인 사용자가를 보내려고 시도할 수 있습니다 (주입) 데이터베이스를 훼손 하거나 무단으로 액세스 하기 위해 SQL 문을 수정 또는 추가 합니다. 데이터베이스에 사용자 입력을 전송 하기 전에 항상 정보가 올바른지 확인 합니다. 항상 매개 변수가 있는 쿼리 또는 가능한 경우 저장된 프로시저를 사용 하는 것이 좋습니다.  
   
 ## <a name="transmitting-updates-to-the-data-source"></a>데이터 원본에 대 한 전송 업데이트  
 데이터 집합을 변경한 후에 데이터 원본에 변경 내용을 전송할 수 있습니다. 가장 일반적으로이 호출 하 여 수행 된 `Update` 메서드 TableAdapter (또는 데이터 어댑터). 데이터 테이블의 각 레코드를 통해 메서드 루프는 업데이트 형식을 필요한 결정 (업데이트, 삽입 또는 삭제), 한 다음 적절 한 명령을 실행 합니다.  
@@ -258,7 +258,7 @@ Tableadapter에 익숙한 경우에 다음이 항목 중 하나에 직접 이동
   
  <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A?displayProperty=fullName> 각 매개 변수의 속성 데이터 테이블의 열을 가리킵니다. 예를 들어는 `SourceColumn` 속성에 대 한는 `au_id` 및 `Original_au_id` 매개 변수 작성자 id를 포함 하는 데이터 테이블의 열으로 설정 됩니다. 때 어댑터의 `Update` 메서드 실행 레코드를 업데이트 하는 문을 값을 입력에서 만든이 id 열을 읽습니다.  
   
- UPDATE 문에서 (레코드에 기록 됩니다 하)는 모두 새 값을 이전 값 (되도록 데이터베이스에서 레코드를 찾을 수)도 지정 해야 합니다. 따라서 각 값에 대해 두 개의 매개 변수는: WHERE 절에 대 한와 SET 절에 대 한 합니다. 두 매개 변수 데이터를 업데이트 하는 레코드에서 읽지만 매개 변수의에 따라 열 값의 여러 버전을 받게 [SqlParameter.SourceVersion 속성](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlparameter.sourceversion.aspx)합니다. SET 절에 대 한 매개 변수는 현재 버전에 가져오고 WHERE 절에 대 한 매개 변수는 원래 버전을 가져옵니다.  
+ UPDATE 문에서 (레코드에 기록 됩니다 하)는 모두 새 값을 이전 값 (되도록 데이터베이스에서 레코드를 찾을 수)도 지정 해야 합니다. 따라서 각 값에 대해 두 개의 매개 변수는: WHERE 절에 대 한와 SET 절에 대 한 합니다. 두 매개 변수 데이터를 업데이트 하는 레코드에서 읽지만 매개 변수의에 따라 열 값의 여러 버전을 받게 <xref:System.Data.SqlClient.SqlParameter.SourceVersion> 속성입니다. SET 절에 대 한 매개 변수는 현재 버전에 가져오고 WHERE 절에 대 한 매개 변수는 원래 버전을 가져옵니다.  
   
 > [!NOTE]
 >  값을 설정할 수는 `Parameters` 컬렉션 데이터 어댑터에 대 한 이벤트 처리기에서 일반적으로 수행 하려면 코드에서 직접 <xref:System.Data.DataTable.RowChanging> 이벤트입니다.  

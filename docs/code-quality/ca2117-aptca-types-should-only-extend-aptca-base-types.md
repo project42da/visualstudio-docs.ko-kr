@@ -18,11 +18,11 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5619de2512e18cbe9d7dbfb3d992886ae23a25bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 977f721ed45343e247f8639accc0fa5dc83263c6
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: APTCA 형식은 APTCA 기본 형식만 확장해야 합니다.
 |||  
@@ -36,7 +36,7 @@ ms.lasthandoff: 10/31/2017
  가진 어셈블리의 public 또는 protected 형식이 고 <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> 특성은 특성이 없는 어셈블리에 선언 된 형식에서 상속 합니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- 기본적으로 강력한 이름의 어셈블리에서 public 또는 protected 형식이 암시적으로 보호는 [상속 요청](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9) 완전 신뢰에 대 한 합니다. 강력한 이름의 어셈블리는 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성 (APTCA)이이 보호 필요가 없습니다. 특성 상속 요청을 해제합니다. 따라서 완전 신뢰 되지 않은 형식에 의해 노출 된 형식 상속 가능한 어셈블리에 선언 합니다.  
+ 기본적으로 강력한 이름의 어셈블리에서 public 또는 protected 형식이 암시적으로 보호는 <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> 완전 신뢰에 대 한 합니다. 강력한 이름의 어셈블리는 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성 (APTCA)이이 보호 필요가 없습니다. 특성 상속 요청을 해제합니다. 따라서 완전 신뢰 되지 않은 형식에 의해 노출 된 형식 상속 가능한 어셈블리에 선언 합니다.  
   
  완전히 신뢰할 수 있는 어셈블리에 APTCA 특성이 있으면 어셈블리의 형식이 부분적으로 신뢰할 수 있는 호출자를 허용 하지 않는 형식에서 상속 하는 경우 보안 허점이 불가능 합니다. 두 개의 입력 된 경우 `T1` 및 `T2` 다음 조건을 충족, 악의적인 호출자가 형식을 사용할 수 `T1` 를 보호 하는 암시적 완전 신뢰 상속 요청을 사용 하지 않을 `T2`:  
   
@@ -85,6 +85,4 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="see-also"></a>참고 항목  
  [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
- [.NET framework 어셈블리를 호출할 수 부분적으로 신뢰할 수 있는 코드](http://msdn.microsoft.com/en-us/a417fcd4-d3ca-4884-a308-3a1a080eac8d)   
- [부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   
- [상속 요청](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)
+ [부분적으로 신뢰할 수 있는 코드에서 라이브러리를 사용 하 여](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   

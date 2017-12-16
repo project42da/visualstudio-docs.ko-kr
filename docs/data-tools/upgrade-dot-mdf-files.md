@@ -13,41 +13,39 @@ helpviewer_keywords:
 - SQLEXPRESS
 - upgrading SQLExpress to SQLExpress
 - upgrading to LocalDB
-ms.assetid: 14ca6f76-f80e-4926-8020-3fee2d802b75
-caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-robots: noindex,nofollow
 ms.technology: vs-data-tools
-ms.openlocfilehash: 8ed511eed7b0ace46bbc61c1d486ade608d4b5a5
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: c02ae1ba7091871f92d1fdf00f55f7d0ded6024f
+ms.sourcegitcommit: e951faab601f5c05ad6606d8fd0cd2059fc4cc25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="upgrade-mdf-files"></a>.Mdf 파일을 업그레이드
-이 항목에서는 새 버전의 Visual Studio를 설치한 후 데이터베이스 파일 (.mdf)을 업그레이드 하기 위한 옵션을 설명 합니다. 다음 작업에 대 한 지침이 포함 됩니다.  
-  
--   최신 버전의 SQL Server Express LocalDB를 사용 하려면 데이터베이스 파일을 업그레이드  
-  
--   최신 버전의 SQL Server Express를 사용 하려면 데이터베이스 파일을 업그레이드  
-  
--   Visual Studio에서 데이터베이스 파일에서 작동 하지만 이전 버전의 SQL Server Express 또는 LocalDB와의 호환성을 유지 합니다.  
-  
--   기본 데이터베이스 엔진의 SQL Server Express 확인  
-  
-이전 버전의 SQL Server Express 또는 LocalDB를 사용 하 여 만든 데이터베이스 파일 (.mdf)을 포함 하는 프로젝트를 열려면 Visual Studio를 사용할 수 있습니다. 그러나 Visual Studio를 사용 하 여 프로젝트 개발을 계속 하려면 해당 버전의 SQL Server Express 또는 LocalDB Visual Studio와 동일한 컴퓨터에 설치 되어 있어야 하거나 데이터베이스 파일을 업그레이드 해야 합니다. 데이터베이스 파일을 업그레이드 하는 경우에 이전 버전의 SQL Server Express 또는 LocalDB를 사용 하 여 액세스할 수 없습니다.  
-  
-도 메시지가 표시 되는 파일의 버전의 SQL Server Express 또는 현재 설치 된 LocalDB 인스턴스와 호환 되지 않는 경우 이전 버전의 SQL Server Express 또는 LocalDB를 통해 생성 된 데이터베이스 파일을 업그레이드 합니다. 이 문제를 해결 하려면 Visual Studio 하 라는 메시지가 나타납니다 파일을 업그레이드 합니다.  
-  
+
+이 항목에서는 새 버전의 Visual Studio를 설치한 후 데이터베이스 파일 (.mdf)을 업그레이드 하는 방법을 설명 합니다. 다음 작업에 대 한 지침이 포함 됩니다.
+
+- 최신 버전의 SQL Server Express LocalDB를 사용 하려면 데이터베이스 파일을 업그레이드
+
+- 최신 버전의 SQL Server Express를 사용 하려면 데이터베이스 파일을 업그레이드
+
+- Visual Studio에서 데이터베이스 파일에서 작동 하지만 이전 버전의 SQL Server Express 또는 LocalDB와의 호환성을 유지 합니다.
+
+- 기본 데이터베이스 엔진의 SQL Server Express 확인
+
+이전 버전의 SQL Server Express 또는 LocalDB를 사용 하 여 만든 데이터베이스 파일 (.mdf)을 포함 하는 프로젝트를 열려면 Visual Studio를 사용할 수 있습니다. 그러나 Visual Studio를 사용 하 여 프로젝트 개발을 계속 하려면 해당 버전의 SQL Server Express 또는 LocalDB Visual Studio와 동일한 컴퓨터에 설치 되어 있어야 하거나 데이터베이스 파일을 업그레이드 해야 합니다. 데이터베이스 파일을 업그레이드 하는 경우에 이전 버전의 SQL Server Express 또는 LocalDB를 사용 하 여 액세스할 수 없습니다.
+
+도 메시지가 표시 되는 파일의 버전의 SQL Server Express 또는 현재 설치 된 LocalDB 인스턴스와 호환 되지 않는 경우 이전 버전의 SQL Server Express 또는 LocalDB를 통해 생성 된 데이터베이스 파일을 업그레이드 합니다. 이 문제를 해결 하려면 Visual Studio 하 라는 메시지가 나타납니다 파일을 업그레이드 합니다.
+
 > [!IMPORTANT]
-> 업그레이드 하기 전에 데이터베이스 파일을 백업 하는 것이 좋습니다.  
-  
+> 업그레이드 하기 전에 데이터베이스 파일을 백업 하는 것이 좋습니다.
+
 > [!WARNING]
 > LocalDB 2014 (V12) 32 비트 정수를 (V13) LocalDB 2016 이상에서 생성 된.mdf 파일을 업그레이드 하는 경우 32 비트 버전의 LocalDB에 파일을 다시 열 수 없습니다.
-  
-데이터베이스를 업그레이드 하기 전에 다음 조건을 고려 합니다.  
+
+데이터베이스를 업그레이드 하기 전에 다음 조건을 고려 합니다.
   
 -   이전 버전과 새 버전의 Visual Studio에서 프로젝트에 작업 하려는 경우 업그레이드 하지 마십시오.  
   
@@ -116,4 +114,5 @@ ms.lasthandoff: 11/09/2017
     SQL Server Express 응용 프로그램에 대 한 기본 데이터베이스 엔진 됩니다.
 
 ## <a name="see-also"></a>참고 항목
+
 [Visual Studio에서 데이터 액세스](accessing-data-in-visual-studio.md)

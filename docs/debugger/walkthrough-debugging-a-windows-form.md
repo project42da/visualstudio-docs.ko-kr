@@ -26,11 +26,11 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a21450dda35addae55019545d67ab7f1e4ebe99a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 02db9a01286e65f371ab4d8388102a3db4c5602e
+ms.sourcegitcommit: 1e08318a8a684b21609af7a5e48b56abcc3239e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>연습: Windows Form 디버깅
 Windows Form에는 가장 일반적인 관리 되는 응용 프로그램 중 하나입니다. Windows Form Windows 표준 응용 프로그램을 만듭니다. Visual Basic, C# 또는 c + +를 사용 하 여이 연습을 완료할 수 있습니다.  
@@ -126,7 +126,7 @@ Windows Form에는 가장 일반적인 관리 되는 응용 프로그램 중 하
   
 4.  에 **디버그** 메뉴 선택 **Windows**, 다음 **조사식**를 클릭 하 고 **조사식 1**합니다.  
   
-5.  에 **조사식 1** 창에서 빈 행을 클릭 합니다. 에 **이름** 열, 형식 `textBox1.Text` (하는 경우 사용할 Visual Basic, Visual C# 또는 J#) 또는 `textBox1->Text` (사용 중인 경우 c + +), 한 다음 ENTER 키를 누릅니다.  
+5.  에 **조사식 1** 창에서 빈 행을 클릭 합니다. 에 **이름** 열, 형식 `textBox1.Text` (하는 경우 사용할 Visual Basic 또는 Visual C#) 또는 `textBox1->Text` (사용 중인 경우 c + +), 한 다음 ENTER 키를 누릅니다.  
   
      **조사식 1** 창으로 인용 부호 안에이 변수의 값을 표시 합니다.  
   

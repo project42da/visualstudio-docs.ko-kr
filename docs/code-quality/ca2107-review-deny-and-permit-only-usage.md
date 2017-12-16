@@ -18,11 +18,11 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fb802e0d97d265c01540ca10ffe8d0dcf9b273cf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: edd0bd14a75dfd58ca043bfaa663e2cfb2660e75
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Deny 및 PermitOnly 사용을 검토하십시오.
 |||  
@@ -36,7 +36,7 @@ ms.lasthandoff: 10/31/2017
  Deny 또는 PermitOnly 보안 동작을 지정 하는 보안 검사를 포함 하는 메서드입니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- [PermitOnly 메서드를 사용 하 여](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649) 및 <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> 잘된 알고 있는 사용자에 게 의해서만 보안 동작을 사용 해야의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 보안 합니다. 이러한 보안 동작을 사용하는 코드는 보안 검토를 거쳐야 합니다.  
+ <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> 잘된 알고 있는 사용자에 게 의해서만 보안 동작을 사용 해야의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 보안 합니다. 이러한 보안 동작을 사용하는 코드는 보안 검토를 거쳐야 합니다.  
   
  거부 하는 보안 요청에 대 한 응답에서 발생 하는 스택 워크의 기본 동작을 변경 합니다. 호출 스택의 호출자의 실제 권한에 상관 없이 거부 메서드 중에 부여 되지 않아야 하는 권한을 지정할 수 있습니다. 스택 워크 Deny로 보호 되는 메서드를 검색 하 고 요청 된 권한이 거부 된 권한에 포함 하는 경우에 스택 워크 실패 합니다. 또한 PermitOnly는 스택 워크의 기본 동작을 변경합니다. 코드를에서 호출자의 권한에 관계 없이 부여할 수 있는 권한만 지정할 수 있습니다. 스택 워크 PermitOnly로 보호 되는 메서드를 검색 하 고 있는 것은 아니며는 PermitOnly에서 지정 된 사용 권한에 포함 되지 않은, 스택 워크가 실패 합니다.  
   
@@ -82,5 +82,4 @@ ms.lasthandoff: 10/31/2017
  <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>   
  <xref:System.Security.IStackWalk.PermitOnly%2A?displayProperty=fullName>   
  [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
- [보안 검사 재정의](http://msdn.microsoft.com/en-us/4acdeff5-fc05-41bf-8505-7387cdbfca28)   
- [PermitOnly 메서드를 사용 하 여](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649)
+

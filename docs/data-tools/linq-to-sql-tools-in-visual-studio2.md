@@ -12,11 +12,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: cba3d5568ee2fa2b4af0eb9c10995c813fe09c01
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: c493a7ea448277275072ab71cf013333ccb9b4ea
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>LINQ to SQL 도구 Visual Studio에서
 LINQ to SQL에는 Microsoft에서 릴리스한 첫 번째 개체-관계형 매핑 기술을 했습니다. 기본 시나리오에서 잘 작동 하 고 계속 Visual Studio에서 지원 하지만 더 이상 현재 개발에 포함 됩니다. LINQ to SQL을 이미 사용 하는 레거시 응용 프로그램 유지 관리 하는 경우 또는 SQL Server를 사용 하는 다중 테이블 매핑이 필요 하지 않은 간단한 응용 프로그램에서 사용 합니다. 일반적으로 새 응용 프로그램 개체 관계형 매퍼 계층에 필요한 경우 Entity Framework를 사용 해야 합니다.  
@@ -62,7 +62,7 @@ Visual Studio에서 LINQ to SQL 클래스 개체 관계형 디자이너 (O/R 디
  다른 개체와 마찬가지로 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 클래스도 상속을 사용할 수 있고 다른 클래스에서 파생될 수 있습니다. 데이터베이스에서 상속 관계는 여러 가지 방법으로 만들어집니다. [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]는 관계형 시스템에서 주로 구현되는 단일 테이블 상속 개념을 지원합니다. 자세한 내용은 참조 [하는 방법: O/R 디자이너를 사용 하 여 상속 구성](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)합니다.  
   
 ## <a name="linq-to-sql-queries"></a>LINQ to SQL 쿼리  
- 만든 엔터티 클래스는 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 사용 하도록 설계 [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d)합니다. 자세한 내용은 참조 [하는 방법: 정보에 대 한 쿼리](/dotnet/framework/data/adonet/sql/linq/how-to-query-for-information)합니다.  
+ 만든 엔터티 클래스는 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 사용 하도록 설계 [LINQ (Language-Integrated Query)](/dotnet/csharp/linq/)합니다. 자세한 내용은 참조 [하는 방법: 정보에 대 한 쿼리](/dotnet/framework/data/adonet/sql/linq/how-to-query-for-information)합니다.  
   
 ## <a name="separating-the-generated-datacontext-and-entity-class-code-into-different-namespaces"></a>생성된 DataContext와 엔터티 클래스 코드를 별도의 네임스페이스로 분리  
  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 제공는 **컨텍스트 Namespace** 및 **엔터티 Namespace** 속성에는 <xref:System.Data.Linq.DataContext>합니다. 이들 속성은 <xref:System.Data.Linq.DataContext> 및 엔터티 클래스 코드가 어떤 네임스페이스로 생성되는지를 결정합니다. 기본적으로 이들 속성은 비어 있으며 <xref:System.Data.Linq.DataContext> 및 엔터티 클래스는 응용 프로그램의 네임스페이스로 생성됩니다. 응용 프로그램의 네임 스페이스 이외의 네임 스페이스에 코드를 생성 하는 값을 입력에서 **컨텍스트 Namespace** 및/또는 **엔터티 Namespace** 속성입니다.
