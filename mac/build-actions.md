@@ -5,11 +5,11 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
-ms.openlocfilehash: 347378da197b5c6d22bbd145c2ac8673d53a63bf
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 78b0e715ca44c613b6a7ee839c0656e301308588
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="build-actions"></a>빌드 작업 
 
@@ -26,4 +26,4 @@ C# 프로젝트에 대한 몇 가지 일반적인 빌드 작업은 다음과 같
 
 솔루션 탐색기에서 둘 이상의 파일을 선택하여 한 번에 여러 파일에 빌드 작업을 설정할 수 있습니다.
 
-또한 특정 프로젝트에 대한 빌드 작업이 있습니다. 예를 들어 Xamarin.iOS 프로젝트에는 앱 번들의 일부로 파일을 추가하는 **BundeledResource** 빌드 작업이 있습니다. Xamarin.Android 특정 빌드 작업에 대한 정보는 developer.xamarin.com의 [빌드 프로세스](https://developer.xamarin.com/guides/android/under_the_hood/build_process/#Build_Actions) 가이드에서 확인할 수 있습니다.
+또한 특정 프로젝트에 대한 빌드 작업이 있습니다. 예를 들어 Xamarin.iOS 프로젝트에는 앱 번들의 일부로 파일을 추가하는 **BundleResource** 빌드 작업이 있습니다. Xamarin.Android 특정 빌드 작업에 대한 정보는 developer.xamarin.com의 [빌드 프로세스](https://developer.xamarin.com/guides/android/under_the_hood/build_process/#Build_Actions) 가이드에서 확인할 수 있습니다.

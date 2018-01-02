@@ -7,11 +7,11 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
-ms.openlocfilehash: 25d3227bcf8a18a2fc6ba68c194e9cac75b2e919
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: 7f91a28449ffad135058438ec767095818cc8527
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="setup-and-install-visual-studio-for-mac"></a>Mac용 Visual Studio 설정 및 설치
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 11/09/2017
 Visual Studio에서 iOS를 사용하는 경우 다음 사항이 필요합니다.
 
 * macOS Sierra 10.12 이상이 설치된 Mac
-* Xcode 8.3
+* Xcode 8.3 이상 대개 안정적인 최신 버전을 사용하는 것이 좋습니다.
 * Apple ID. Apple ID가 없으면 https://appleid.apple.com에서 새로 만들 수 있습니다. Xcode를 설치하고 서명하려면 Apple ID가 있어야 합니다.
 
 ## <a name="install"></a>설치

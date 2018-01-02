@@ -5,25 +5,25 @@ Ms.author: jaunger
 Manager: evelynp
 Ms.date: 10/3/2017
 Ms.topic: Get-Started-Article
-Description: "Visual Studio 구독에 포함된 Azure 혜택을 활성화하는 방법을 알아봅니다."
+Description: Learn how to activate the Azure benefit included in your Visual Studio subscription.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 0ed03e61e9f62535e80ad5891c314f26121cfd7d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 32cb58f86a3664764f645f133a42d298e72dedbc
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="using-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio 구독에서 Microsoft Azure 사용
 Visual Studio 구독자는 추가 비용 없이 Microsoft Azure를 사용할 수 있습니다.  [월간 Azure 크레딧](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)을 사용하면 Azure는 개발/테스트를 위한 개인용 샌드박스가 됩니다.  가상 머신, 클라우드 서비스 및 기타 Azure 리소스를 프로비전할 수 있습니다.  크레딧 금액은 구독 수준에 따라 다릅니다. 
 
 [구독자 포털](https://my.visualstudio.com/benefits)의 [혜택] 페이지에 있는 **도구** 범주에서 활성화합니다: 
 
-1.  혜택 타일의 아래쪽에 있는 "활성화" 링크를 클릭합니다.   
+1.  혜택 타일의 아래쪽에 있는 **활성화** 링크를 클릭합니다.   
 ![Azure 타일](_img\vs-azure\vs-azure-tile.png)
 
-2.  Azure 구독을 만드는 데 필요한 정보를 입력하고 ![Azure 등록](_img\vs-azure\vs-azure-sign-up-cropped.png)을 클릭합니다.
+2.  필수 정보를 입력하여 Azure 구독을 만들고, 확인란을 클릭하여 사용 약관에 동의하고, **등록**: ![Azure 등록](_img\vs-azure\vs-azure-sign-up-cropped.png)을 클릭합니다.
 
  
 3.  계정이 준비되면 Azure 지원 계획(별도 판매)을 선택하거나 Azure 구독을 시작할 수 있는 옵션이 제공됩니다.  

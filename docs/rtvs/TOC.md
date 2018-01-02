@@ -10,7 +10,7 @@
 # 방법 가이드
 ## [R 프로젝트](projects.md)
 ### [패키지 관리자](package-manager.md)
-### [SQL Server Integration](sql-server.md)
+### [SQL Server 통합](sql-server.md)
 ## [코드 편집](code-editing.md)
 ### [IntelliSense](code-intellisense.md)
 ### [Linting](code-linting.md)

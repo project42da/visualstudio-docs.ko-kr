@@ -15,11 +15,11 @@ ms.assetid: 7307e180-ba28-4774-8a43-cbb980085a71
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: dc865fe81a51ff3ae2ca497b8982292ffda18372
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.openlocfilehash: a08f5a15cd83af05c91eb35ad2ad4a2c4c229458
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
 #### <a name="updated-for-the-155-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.5 릴리스](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)용으로 업데이트
@@ -126,7 +126,7 @@ Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 �
 *   if-to-switch 변환
 *   사용하지 않는 변수 제거
 
-자세한 내용은 [Visual Studio의 리팩터링, 코드 생성 및 빠른 작업](refactoring-code-generation-quick-actions.md) 페이지를 참조하세요.  
+자세한 내용은 [빠른 작업](../ide/quick-actions.md#common-quick-actions)을 참조하세요.
 
 #### <a name="interact-with-git"></a>Git과 상호 작용
 Visual Studio에서 프로젝트를 작업할 때 코드를 설정하고 빠르게 커밋하여 Git 서비스에 게시할 수 있습니다. 또한 IDE의 오른쪽 아래 모서리에 있는 단추의 메뉴 클릭을 사용하여 Git 리포지토리를 관리할 수도 있습니다.
@@ -279,7 +279,7 @@ Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
 자세한 내용은 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) 페이지를 참조하세요.
 
 ## <a name="ai-development"></a>AI 개발
-### <a name="visual-studio-tools-for-ai"></a>AI용 Visual Studio Tools
+### <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 **15.5의 새로운 기능**:Visual Studio의 생산성 기능을 사용하여 현재의 AI 혁신을 가속화하세요. 구문 강조 표시, IntelliSense 및 텍스트 자동 서식 지정과 같이 기본 제공되는 코드 편집기 기능을 사용하세요. 지역 변수 및 모델에 대한 단계별 디버깅을 사용하여 로컬 환경에서 딥 러닝 응용 프로그램을 대화형으로 테스트할 수 있습니다.
 
   ![딥 러닝 IDE](../ai/media/about/ide.png)

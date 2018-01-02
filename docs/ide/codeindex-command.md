@@ -16,11 +16,11 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b68d1a67055e14fce0af48fa58f805216205d4ad
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: eaf790d8c02c95047e28ca4d911d7f42a33bbd4f
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="codeindex-command"></a>CodeIndex 명령
 **CodeIndex** 명령을 사용하여 Team Foundation Server의 코드 인덱싱을 관리합니다. 예를 들어 인덱싱을 다시 설정하여 CodeLens 정보를 수정하거나 인덱싱을 해제하여 서버 성능 문제를 조사할 수 있습니다.  
@@ -124,8 +124,8 @@ TFSConfig CodeIndex /temporaryDataSizeLimit:disable /collectionName:"Fabrikam We
 TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Web Site"  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [CodeLens에서 코드 변경 내용 및 기타 기록 찾기](../ide/find-code-changes-and-other-history-with-codelens.md)  
+## <a name="see-also"></a>참고 항목
 
- [TFSConfig를 사용하여 서버 구성 관리](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62)   
- [TFS용 명령줄 도구](http://msdn.microsoft.com/en-us/be8c997a-b97b-4e59-97f5-04db0a601a6c)
+[CodeLens에서 코드 변경 내용 및 기타 기록 찾기](../ide/find-code-changes-and-other-history-with-codelens.md)  
+[TFSConfig를 사용하여 서버 구성 관리](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62)  
+[TFS용 명령줄 도구](http://msdn.microsoft.com/en-us/be8c997a-b97b-4e59-97f5-04db0a601a6c)

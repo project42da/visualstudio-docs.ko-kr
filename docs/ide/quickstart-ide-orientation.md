@@ -10,11 +10,11 @@ ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 096b5651f9d8133712d9296f09178fc9c8bc6086
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: 7f10ee7dc03ffe0f80b6ee3d7ff47f5fcd6a1624
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>빠른 시작: 먼저 Visual Studio IDE 살펴보기
 
@@ -98,4 +98,6 @@ Visual Studio를 사용하는 동안 문제가 발생하거나 제품을 개선�
 
 ## <a name="see-also"></a>참고 항목
 
-[빠른 시작: IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)
+[빠른 시작: IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)  
+[빠른 시작: 편집기에서 코딩](../ide/quickstart-editor.md)  
+[빠른 시작: 프로젝트 및 솔루션](../ide/quickstart-projects-solutions.md)  

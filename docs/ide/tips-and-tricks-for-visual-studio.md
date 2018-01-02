@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio에 대한 팁과 요령 | Microsoft 문서"
+title: "Visual Studio 바로 가기 키 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/21/2017
 ms.reviewer: 
@@ -7,21 +7,20 @@ ms.suite:
 ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 20489db9-7441-4f8b-97de-c72070d569b1
-caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 40172defbd56f31de9aedbb4cc422c10d1a68dfd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 8ba4284fa53447a1444040a903c915be4bfdf728
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
-# <a name="tips-and-tricks-for-visual-studio"></a>Visual Studio에 대한 유용한 정보
-이 항목에 나온 바로 가기를 사용하여 [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]에서 쉽게 이동할 수 있습니다. 이 항목은 사용 가능한 바로 가기 키의 하위 집합일 뿐입니다. 더 자세한 목록은 [Visual Studio의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요. 접근성을 위해 Visual Studio를 최적화하는 방법에 대한 자세한 내용은 [접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md)을 참조하세요.  
+# <a name="tips-and-tricks-for-visual-studio"></a>Visual Studio에 대한 팁과 요령
 
-##  <a name="BKMK_WindowMgmt"></a> 창 관리  
+이 항목에 나온 바로 가기를 사용하여 Visual Studio에서 쉽게 이동할 수 있습니다. 이 항목은 사용 가능한 바로 가기 키의 하위 집합일 뿐입니다. 더 자세한 목록은 [Visual Studio의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요. 접근성을 위해 Visual Studio를 최적화하는 방법에 대한 자세한 내용은 [접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md)을 참조하세요.
+
+##  <a name="BKMK_WindowMgmt"></a> 창 관리
 
 |||  
 |-|-|  
@@ -32,7 +31,7 @@ ms.lasthandoff: 10/31/2017
 |열린 파일 목록 표시|Ctrl+Alt+아래쪽 화살표|  
 |모든 부동 창 표시|Ctrl+Shift+M|  
 
-##  <a name="BKMK_WindowShortcuts"></a> 창 바로 가기  
+##  <a name="BKMK_WindowShortcuts"></a> 창 바로 가기
 
 |||  
 |-|-|  
@@ -42,7 +41,7 @@ ms.lasthandoff: 10/31/2017
 |새 인스턴스 시작|Win+Shift+n|  
 |창 간 전환|Win+n|  
 
-##  <a name="BKMK_Search"></a> Visual Studio 검색  
+##  <a name="BKMK_Search"></a> Visual Studio 검색
 
 |||  
 |-|-|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 10/31/2017
 |빠른 실행 범위 결과|-   @opt 옵션<br />-   @cmd 명령<br />-   @mru 가장 최근에 사용됨<br />-   @doc 문서 열기|  
 |도구 옵션에서 검색|Ctrl+E|  
 
-##  <a name="BKMK_EditorFind"></a> 편집기 찾기  
+##  <a name="BKMK_EditorFind"></a> 편집기 찾기
 
 |||  
 |-|-|  
@@ -67,7 +66,7 @@ ms.lasthandoff: 10/31/2017
 |파일에서 찾기|Ctrl+Shift+F|  
 |파일에서 바꾸기|Ctrl+Shift+H|  
 
-##  <a name="BKMK_CodeEditor"></a> 코드 편집기  
+##  <a name="BKMK_CodeEditor"></a> 코드 편집기
 
 |||  
 |-|-|  
@@ -91,7 +90,7 @@ ms.lasthandoff: 10/31/2017
 |여러 결과 피킹 간에 이동|F8 및 Shift+F8|  
 |코드 편집기 창 및 정의 피킹(Peeking) 창 간에 전환|Shift+Esc|  
 
-##  <a name="BKMK_Toolbars"></a> 도구 모음  
+##  <a name="BKMK_Toolbars"></a> 도구 모음
 
 |||  
 |-|-|  
@@ -100,7 +99,7 @@ ms.lasthandoff: 10/31/2017
 |찾기 텍스트 상자 명령 모드|“>” 입력|  
 |새 별칭 만들기|>별칭 NewAlias 명령|  
 
-##  <a name="BKMK_Debugging"></a> 디버깅  
+##  <a name="BKMK_Debugging"></a> 디버깅
 
 |||  
 |-|-|  
@@ -119,12 +118,14 @@ ms.lasthandoff: 10/31/2017
 |직접 실행 창 버퍼 지우기|>cls|  
 |직접 실행 창 인쇄 값|?varname|  
 
-##  <a name="BKMK_ALM"></a> 애플리케이션 수명 주기 관리  
- [바로 가기 키: Visual Studio Online, TFS 웹 포털 및 팀 탐색기](http://msdn.microsoft.com/en-us/35ea128b-7565-4ee3-8266-b9f0d32aecf4)를 참조하세요.  
+##  <a name="BKMK_ALM"></a> 애플리케이션 수명 주기 관리
 
-## <a name="see-also"></a>참고 항목  
- [Visual Studio 블로그](http://blogs.msdn.com/b/visualstudio)   
- [Visual Studio 팁과 요령 블로그](http://blogs.msdn.com/b/zainnab)   
- [Channel 9의 Visual Studio 도구 상자](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)   
- [Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)   
- [Visual Studio Connect 버그](http://connect.microsoft.com/VisualStudio)
+[바로 가기 키: Visual Studio Online, TFS 웹 포털 및 팀 탐색기](http://msdn.microsoft.com/en-us/35ea128b-7565-4ee3-8266-b9f0d32aecf4)를 참조하세요.  
+
+## <a name="see-also"></a>참고 항목
+
+[Visual Studio 블로그](http://blogs.msdn.com/b/visualstudio)  
+[Visual Studio 팁과 요령 블로그](http://blogs.msdn.com/b/zainnab)  
+[Channel 9의 Visual Studio 도구 상자](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)  
+[Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)  
+[Visual Studio Connect 버그](http://connect.microsoft.com/VisualStudio)

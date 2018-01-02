@@ -16,34 +16,32 @@ f1_keywords:
 helpviewer_keywords:
 - regular expressions [Visual Studio]
 - regular expressions
-- Visual Studio, regular expressions
-ms.assetid: 718a617d-0e05-47e1-a218-9746971527f4
-caps.latest.revision: "53"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c01023649879c34838cbca3172aec6b5a053f4bd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 577c6a7b76bcecb3c3f5fc7889d75b5fd3ff1ce0
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio에서 정규식 사용
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 .NET Framework 정규식을 사용하여 텍스트를 찾고 바꿉니다. .NET 정규식에 대한 자세한 내용은 [.NET Framework 정규식](/dotnet/standard/base-types/regular-expressions)을 참조하세요.  
-  
- Visual Studio 2012 이전의 Visual Studio에서는 찾기 및 바꾸기 창에서 사용자 지정 정규식 구문을 사용했습니다. 더 일반적으로 사용되는 일부 사용자 지정 정규식 기호를 .NET 버전으로 변환하는 방법에 대한 자세한 내용은 [Visual Studio Regular Expression Conversions](https://msdn.microsoft.com/en-us/library/2k3te2cs\(v=vs.110\).aspx)(Visual Studio 정규식 변환)를 참조하세요.  
-  
+
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 .NET Framework 정규식을 사용하여 텍스트를 찾고 바꿉니다. .NET 정규식에 대한 자세한 내용은 [.NET Framework 정규식](/dotnet/standard/base-types/regular-expressions)을 참조하세요.
+
 > [!TIP]
->  Windows 운영 체제에서 대부분 줄은 “\r\n”(캐리지 리턴 뒤에 줄 바꿈)으로 끝납니다. 이들 문자는 표시되지 않지만 편집기에 있고 .NET 정규식 서비스에 전달됩니다.  
+> Windows 운영 체제에서 대부분 줄은 “\r\n”(캐리지 리턴 뒤에 줄 바꿈)으로 끝납니다. 이들 문자는 표시되지 않지만 편집기에 있고 .NET 정규식 서비스에 전달됩니다.
+
+## <a name="replacement-patterns"></a>대체 패턴
+
+바꾸기 패턴에서 사용되는 정규식에 대한 자세한 내용은 [정규식의 대체](/dotnet/standard/base-types/substitutions-in-regular-expressions)를 참조하세요. 번호가 있는 캡처 그룹을 사용하려는 경우 번호가 있는 그룹을 지정하려면 `$1` 구문을 사용하고 특정 그룹을 지정하려면 `(x)` 구문을 사용합니다. 예를 들어 그룹화된 정규식 `(\d)([a-z])`는 문자열 **1a 2b 3c 4d**에서 일치 항목 4개를 찾습니다. 바꾸기 문자열 `z$1`은 해당 문자열을 **z1 z2 z3 z4**로 변환합니다.
   
-> [!TIP]
->  바꾸기 패턴에서 사용되는 정규식에 대한 자세한 내용은 [정규식의 대체](/dotnet/standard/base-types/substitutions-in-regular-expressions)를 참조하세요. 번호가 있는 캡처 그룹을 사용하려는 경우 번호가 있는 그룹을 지정하려면 `$1` 구문을 사용하고 특정 그룹을 지정하려면 `(x)` 구문을 사용합니다. 예를 들어 그룹화된 정규식 `(\d)([a-z])`는 문자열 **1a 2b 3c 4d**에서 일치 항목 4개를 찾습니다. 바꾸기 문자열 `z$1`은 해당 문자열을 **z1 z2 z3 z4**로 변환합니다.  
-  
-## <a name="regular-expressions-in-visual-studio"></a>Visual Studio의 정규식  
- 다음은 몇 가지 예입니다.  
-  
-|용도|식|예제|  
-|-------------|----------------|-------------|  
+## <a name="regular-expression-examples"></a>정규식 예제
+
+다음은 몇 가지 예입니다.
+
+|용도|식|예제|
+|-------------|----------------|-------------|
 |줄 바꿈 이외의 모든 단일 문자를 찾습니다.|입니다.|`a.o`는 "around"의 "aro" 및 "about"의 "abo"와 일치하지만 "across"의 "acro"와 일치하지 않습니다.|  
 |이전 식에서 일치 항목 0개 이상을 찾습니다(가능한 한 많은 문자를 찾음).|*|`a*r`는 "rack"의 "r", "ark"의 "ar", "aardvark"의 "aar"과 일치합니다.|  
 |임의의 문자를 0회 이상 찾습니다(와일드카드 *).|.*|c.*e는 “racket”의 “cke”, “comment”의 “comme”, “code”의 “code”와 일치합니다.|  
@@ -72,6 +70,7 @@ ms.lasthandoff: 10/31/2017
 |따옴표 안의 문자열을 찾습니다.|((\\".+?\\")&#124;('.+?'))|작은따옴표 또는 큰따옴표 안의 문자열을 찾습니다.|  
 |16진수를 찾습니다.|\b0[xX]([0-9a-fA-F]\)\b|"0xc67f"와 일치하지만 "0xc67fc67f"와 일치하지 않습니다.|  
 |정수 및 소수를 찾습니다.|\b[0-9]*\\.\*[0-9]+\b|"1.333"과 일치합니다.|  
-  
-## <a name="see-also"></a>참고 항목  
- [텍스트 찾기 및 바꾸기](../ide/finding-and-replacing-text.md)
+
+## <a name="see-also"></a>참고 항목
+
+[텍스트 찾기 및 바꾸기](../ide/finding-and-replacing-text.md)

@@ -1,7 +1,7 @@
 ---
 title: "EditorConfig에 대한 .NET Coding 규칙 설정 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 12/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -14,17 +14,15 @@ helpviewer_keywords:
 - EditorConfig coding conventions
 - language conventions [EditorConfig]
 - formatting conventions [EditorConfig]
-ms.assetid: 
-caps.latest.revision: "1"
 author: kuhlenh
 ms.author: kaseyu
 manager: ghogen
 ms.technology: vs-ide-general
-ms.openlocfilehash: 25db1488faef4ddb54af9831bee7ccd3d8479f76
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: e6ce48d060e340076b336083cb73bdd8145fc1a0
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig에 대한 .NET 코딩 규칙 설정
 
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/01/2017
 
 심각도 | 효과
 :------- | ------
-없음 또는 자동 | 이 규칙을 위반하는 경우 사용자에게 아무 것도 표시되지 않습니다. 그러나 코드 생성 기능은 이 스타일의 코드를 생성합니다.  
+none or silent | 이 규칙을 위반하는 경우 사용자에게 아무 것도 표시되지 않습니다. 그러나 코드 생성 기능은 이 스타일의 코드를 생성합니다.  
 suggestion | 이 스타일 규칙을 위반하는 경우 이를 사용자에게 제안으로 표시합니다. 제안은 처음 두 개의 문자 아래에 세 개의 회색 점으로 표시됩니다.  
 경고 | 이 스타일 규칙을 위반하는 경우 컴파일러 경고가 표시됩니다.  
 오류 | 이 스타일 규칙을 위반하는 경우 컴파일러 오류가 표시됩니다.  
@@ -283,9 +281,9 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 
 | 규칙 이름 | 규칙 ID | 해당 언어 | Visual Studio 기본값 | 지원되는 버전 |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| dotnet_style_require_accessibility_modifiers | IDE0040 | C# 및 Visual Basic | for_non_interface_members:none | Visual Studio 2017 15.5 버전 |
-| csharp_preferred_modifier_order | IDE0036 | C# | public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:none | Visual Studio 2017 15.5 버전 |
-| visual_basic_preferred_modifier_order | IDE0036 | Visual Basic | Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:none | Visual Studio 2017 15.5 버전 |
+| dotnet_style_require_accessibility_modifiers | IDE0040 | C# 및 Visual Basic | for_non_interface_members:none | Visual Studio 2017 v. 15.5 |
+| csharp_preferred_modifier_order | IDE0036 | C# | 공용, 개인, 보호됨, 내부, 고정, 외부, 새로운, 가상, 추상, 봉인됨, 재정의, 읽기 전용, 안전하지 않음, 변동, 비동기: 없음 | Visual Studio 2017 v. 15.5 |
+| visual_basic_preferred_modifier_order | IDE0036 | Visual Basic | 부분, 기본, 개인, 보호됨, 공용, 친구, NotOverridable, 재정의 가능, MustOverride, 오버로드, 재정의, MustInherit, NotInheritable, 고정, 공유, 그림자, 읽기 전용, 쓰기 전용, 차원, Const, WithEvents, 확대, 축소, 사용자 지정, 비동기: 없음 | Visual Studio 2017 v. 15.5 |
 
 **dotnet\_style\_require\_accessibility_modifiers**  
 이 규칙은 **true** 또는 **false** 값을 허용하지 않습니다. 대신 다음 테이블의 값을 허용합니다.  
@@ -293,7 +291,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 | 값 | 설명 |
 | ----- |:----------- |
 | always | 액세스 가능성 한정자가 지정되는 것을 선호합니다. |
-| for_non_interface_members | 공용 인터페이스 멤버를 제외하고 액세스 가능성 한정자를 선언하는 것을 선호합니다. 이것은 현재 **always**와 다르지 않으며 C#에서 기본 인터페이스 메서드를 추가할 경우 향후 교정으로 작동합니다. |
+| for\_non\_interface_members | 공용 인터페이스 멤버를 제외하고 액세스 가능성 한정자를 선언하는 것을 선호합니다. 이것은 현재 **always**와 다르지 않으며 C#에서 기본 인터페이스 메서드를 추가할 경우 향후 교정으로 작동합니다. |
 | never | 액세스 가능성 한정자를 지정하지 않는 것이 좋습니다. | 
 
 코드 예제:  
@@ -577,126 +575,126 @@ csharp_style_var_elsewhere = true:suggestion
 
 | 규칙 이름 | 규칙 ID | 해당 언어 | Visual Studio 기본값 | 지원되는 버전 |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| csharp_style_expression_bodied_methods | IDE0022 | C# 6.0+ | never:none | Visual Studio 2017 15.3 버전 |
-| csharp_style_expression_bodied_constructors | IDE0021 | C# 7.0+ | never:none | Visual Studio 2017 15.3 버전 |
-| csharp_style_expression_bodied_operators | IDE0023 및 IDE0024 | C# 7.0+ | never:none | Visual Studio 2017 15.3 버전 |
-| csharp_style_expression_bodied_properties | IDE0025 | C# 7.0+ | when_possible:none | Visual Studio 2017 15.3 버전 |
-| csharp_style_expression_bodied_indexers | IDE0026 | C# 7.0+ | when_possible:none | Visual Studio 2017 15.3 버전 |
-| csharp_style_expression_bodied_accessors | IDE0027 | C# 7.0+ | when_possible:none | Visual Studio 2017 15.3 버전 |  
+| csharp_style_expression_bodied_methods | IDE0022 | C# 6.0+ | false:none | Visual Studio 2017 v. 15.3 |
+| csharp_style_expression_bodied_constructors | IDE0021 | C# 7.0+ | false:none | Visual Studio 2017 v. 15.3 |
+| csharp_style_expression_bodied_operators | IDE0023 및 IDE0024 | C# 7.0+ | false:none | Visual Studio 2017 v. 15.3 |
+| csharp_style_expression_bodied_properties | IDE0025 | C# 7.0+ | true:none | Visual Studio 2017 v. 15.3 |
+| csharp_style_expression_bodied_indexers | IDE0026 | C# 7.0+ | true:none | Visual Studio 2017 v. 15.3 |
+| csharp_style_expression_bodied_accessors | IDE0027 | C# 7.0+ | true:none | Visual Studio 2017 v. 15.3 |  
 
 **csharp\_style\_expression\_bodied_methods**  
-이 규칙은 **true** 또는 **false** 값을 허용하지 않습니다. 대신 다음 테이블의 값을 허용합니다.  
+이 규칙은 다음 표의 값을 허용합니다.  
 
 | 값 | 설명 |
 | ----- |:----------- |
-| when_possible | 메서드에 식 본문 멤버를 사용하는 것이 좋습니다. |
+| true | 메서드에 식 본문 멤버를 사용하는 것이 좋습니다. |
 | when_on_single_line | 한 줄이 될 때 메서드에 식 본문 멤버를 사용하는 것이 좋습니다. |
-| never | 메서드에 대한 블록 본문을 선호합니다. | 
+| false | 메서드에 대한 블록 본문을 선호합니다. | 
 
 코드 예제:  
 
 ```csharp
-// csharp_style_expression_bodied_methods = when_possible
+// csharp_style_expression_bodied_methods = true
 public int GetAge() => this.Age;
 
-// csharp_style_expression_bodied_methods = never
+// csharp_style_expression_bodied_methods = false
 public int GetAge() { return this.Age; }
 ```  
 
 **csharp\_style\_expression\_bodied_constructors**  
-이 규칙은 **true** 또는 **false** 값을 허용하지 않습니다. 대신 다음 테이블의 값을 허용합니다.  
+이 규칙은 다음 표의 값을 허용합니다.   
 
 | 값 | 설명 |
 | ----- |:----------- |
-| when_possible | 생성자에 식 본문 멤버를 사용하는 것이 좋습니다. |
+| true | 생성자에 식 본문 멤버를 사용하는 것이 좋습니다. |
 | when_on_single_line | 한 줄이 될 때 생성자에 식 본문 멤버를 사용하는 것이 좋습니다. |
-| never | 생성자에 대한 본문을 선호합니다. |  
+| false | 생성자에 대한 본문을 선호합니다. |  
 
 코드 예제:  
 
 ```csharp
-// csharp_style_expression_bodied_constructors = when_possible
+// csharp_style_expression_bodied_constructors = true
 public Customer(int age) => Age = age;
 
-// csharp_style_expression_bodied_constructors = never
+// csharp_style_expression_bodied_constructors = false
 public Customer(int age) { Age = age; }
 ```  
 
 **csharp\_style\_expression\_bodied_operators**  
-이 규칙은 **true** 또는 **false** 값을 허용하지 않습니다. 대신 다음 테이블의 값을 허용합니다.  
+이 규칙은 다음 표의 값을 허용합니다.    
 
 | 값 | 설명 |
 | ----- |:----------- |
-| when_possible | 연산자에 식 본문 멤버를 사용하는 것이 좋습니다. |
+| true | 연산자에 식 본문 멤버를 사용하는 것이 좋습니다. |
 | when_on_single_line | 한 줄이 될 때 연산자에 식 본문 멤버를 사용하는 것이 좋습니다. |
-| never | 연산자에 대한 블록 본문을 선호합니다. |  
+| false | 연산자에 대한 블록 본문을 선호합니다. |  
 
 코드 예제:  
 
 ```csharp
-// csharp_style_expression_bodied_operators = when_possible
-public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)
+// csharp_style_expression_bodied_operators = true
+public static ComplexNumber operator + (ComplexNumber c1, ComplexNumber c2)
     => new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);
 
-// csharp_style_expression_bodied_operators = never
-public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)
+// csharp_style_expression_bodied_operators = false
+public static ComplexNumber operator + (ComplexNumber c1, ComplexNumber c2)
 { return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }
 ```  
 
 **csharp\_style\_expression\_bodied_properties**  
-이 규칙은 **true** 또는 **false** 값을 허용하지 않습니다. 대신 다음 테이블의 값을 허용합니다.  
+이 규칙은 다음 표의 값을 허용합니다.   
 
 | 값 | 설명 |
 | ----- |:----------- |
-| when_possible | 속성에 식 본문 멤버를 사용하는 것이 좋습니다. |
+| true | 속성에 식 본문 멤버를 사용하는 것이 좋습니다. |
 | when_on_single_line | 한 줄이 될 때 속성에 식 본문 멤버를 사용하는 것이 좋습니다. |
-| never | 속성에 대한 블록 본문을 선호합니다. |  
+| false | 속성에 대한 블록 본문을 선호합니다. |  
 
 코드 예제:  
 
 ```csharp
-// csharp_style_expression_bodied_properties = when_possible
+// csharp_style_expression_bodied_properties = true
 public int Age => _age;
 
-// csharp_style_expression_bodied_properties = never
+// csharp_style_expression_bodied_properties = false
 public int Age { get { return _age; }}
 ```  
 
 **csharp\_style\_expression\_bodied_indexers**  
-이 규칙은 **true** 또는 **false** 값을 허용하지 않습니다. 대신 다음 테이블의 값을 허용합니다.  
+이 규칙은 다음 표의 값을 허용합니다.  
 
 | 값 | 설명 |
 | ----- |:----------- |
-| when_possible | 인덱서에 식 본문 멤버를 사용하는 것이 좋습니다. |
+| true | 인덱서에 식 본문 멤버를 사용하는 것이 좋습니다. |
 | when_on_single_line | 한 줄이 될 때 인덱서에 식 본문 멤버를 사용하는 것이 좋습니다. |
-| never | 인덱서에 대한 블록 본문을 선호합니다. | 
+| false | 인덱서에 대한 블록 본문을 선호합니다. | 
 
 코드 예제:  
 
 ```csharp
-// csharp_style_expression_bodied_indexers = when_possible
+// csharp_style_expression_bodied_indexers = true
 public T this[int i] => _value[i];
 
-// csharp_style_expression_bodied_indexers = never
+// csharp_style_expression_bodied_indexers = false
 public T this[int i] { get { return _values[i]; } }
 ```  
 
 **csharp\_style\_expression\_bodied_accessors**  
-이 규칙은 **true** 또는 **false** 값을 허용하지 않습니다. 대신 다음 테이블의 값을 허용합니다.  
+이 규칙은 다음 표의 값을 허용합니다.   
 
 | 값 | 설명 |
 | ----- |:----------- |
-| when_possible | 접근자에 식 본문 멤버를 사용하는 것이 좋습니다. |
+| true | 접근자에 식 본문 멤버를 사용하는 것이 좋습니다. |
 | when_on_single_line | 한 줄이 될 때 접근자에 식 본문 멤버를 사용하는 것이 좋습니다. |
-| never | 접근자에 대한 블록 본문을 선호합니다. | 
+| false | 접근자에 대한 블록 본문을 선호합니다. | 
 
 코드 예제:  
 
 ```csharp
-// csharp_style_expression_bodied_accessors = when_possible
+// csharp_style_expression_bodied_accessors = true
 public int Age { get => _age; set => _age = value; }
 
-// csharp_style_expression_bodied_accessors = never
+// csharp_style_expression_bodied_accessors = false
 public int Age { get { return _age; } set { _age = value; } }
 ```  
 
@@ -705,12 +703,12 @@ public int Age { get { return _age; } set { _age = value; } }
 ```
 # CSharp code style settings:
 [*.cs]
-csharp_style_expression_bodied_methods = never:none
-csharp_style_expression_bodied_constructors = never:none
-csharp_style_expression_bodied_operators = never:none
-csharp_style_expression_bodied_properties = when_possible:suggestion
-csharp_style_expression_bodied_indexers = when_possible:suggestion
-csharp_style_expression_bodied_accessors = when_possible:suggestion
+csharp_style_expression_bodied_methods = false:none
+csharp_style_expression_bodied_constructors = false:none
+csharp_style_expression_bodied_operators = false:none
+csharp_style_expression_bodied_properties = true:suggestion
+csharp_style_expression_bodied_indexers = true:suggestion
+csharp_style_expression_bodied_accessors = true:suggestion
 ```  
 
 #### <a name="pattern_matching">패턴 일치</a>

@@ -7,45 +7,28 @@ ms.suite:
 ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 803a1a94fe3eaa1bc63d59e9de2a42711f502262
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: fe42e4d2a61b4166d8a69b7c90cf212c36610bd2
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio 생산성 팁
 
-아래의 팁을 사용하면 Visual Studio에서 더욱 신속하고 효과적으로 코드를 작성, 탐색 및 디버깅할 수 있습니다. 공통된 바로 가기 키에 대한 자세한 내용은 [팁과 요령](../ide/tips-and-tricks-for-visual-studio.md)을 참조하세요. 자세한 목록은 [바로 가기 키 식별 및 사용자 지정](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) 및 [기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.
+아래의 팁을 사용하면 Visual Studio에서 더욱 신속하고 효과적으로 코드를 작성, 탐색 및 디버깅할 수 있습니다.
+
+공통된 바로 가기 키에 대한 자세한 내용은 [팁과 요령](../ide/tips-and-tricks-for-visual-studio.md)을 참조하세요. 자세한 목록은 [바로 가기 키 식별 및 사용자 지정](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) 및 [기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.
 
 ## <a name="accessing-visual-studio-tools"></a>Visual Studio Tools 액세스
 
-개발자 명령 프롬프트 또는 다른 도구를 시작 화면이나 작업 표시줄에 고정하여 더욱 간편하게 액세스할 수 있습니다.
+개발자 명령 프롬프트 또는 다른 Visual Studio 도구를 시작 화면이나 작업 표시줄에 고정하여 더욱 신속하게 액세스할 수 있습니다.
 
-1. 시작 화면에서 `Visual Studio Tools`를 입력한 다음 **Enter** 키를 누릅니다.
+1. Windows 탐색기에서 `%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools`로 이동합니다.
 
-1. **파일 탐색기**에서 원하는 항목의 바로 가기 메뉴를 엽니다.
-
-    - 빌드 알림
-
-    - 디버깅 가능한 패키지 관리자
-
-    - VS2013용 개발자 명령 프롬프트
-
-    - Microsoft Feedback Client 2013
-
-    - VS2013 ARM Cross Tools 명령 프롬프트
-
-    - VS2013 x64 Cross Tools 명령 프롬프트
-
-    - VS2013 x64 네이티브 도구 명령 프롬프트
-
-    - VS2013 x86 네이티브 도구 명령 프롬프트
-
-1. **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 선택합니다.
+1. **개발자 명령 프롬프트**를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴를 열고 **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 선택합니다.
 
 ## <a name="writing-code"></a>코드 작성
 
@@ -91,11 +74,11 @@ ms.lasthandoff: 11/22/2017
 
 - **해결하려는 오류만 표시** **오류 목록** 도구 모음에서 **필터** 단추를 선택하면 **오류 목록** 창에 나타나는 오류 수를 줄일 수 있습니다. 편집기에서 열려 있는 파일의 오류만, 현재 파일의 오류만 또는 현재 프로젝트의 오류만 표시할 수 있습니다. 특정 오류를 찾기 위해 오류 목록 창 내에서 검색할 수도 있습니다.
 
-- **대화 상자, 메뉴 명령 및 옵션 찾기** [옵션 대화 상자, 환경, 빠른 실행](../ide/reference/quick-launch-environment-options-dialog-box.md) 상자에 검색하려는 항목의 키워드나 문구를 입력합니다. 예를 들어 `new project`를 입력하면 다음 옵션이 나타납니다.
+- **대화 상자, 메뉴 명령 및 옵션 찾기** [빠른 실행](../ide/reference/quick-launch-environment-options-dialog-box.md) 상자에 검색하려는 항목의 키워드나 문구를 입력합니다. 예를 들어 `new project`를 입력하면 다음 옵션이 나타납니다.
 
-     !['새 프로젝트'의 빠른 실행 결과](../ide/media/productivity_quicklaunch.png "Productivity_QuickLaunch")
+    !['새 프로젝트'의 빠른 실행 결과](../ide/media/productivity_quicklaunch.png "Productivity_QuickLaunch")
 
-     **빠른 실행**에는 **새 프로젝트** 대화 상자, **새 항목 추가** 대화 상자 및 **옵션** 대화 상자의 프로젝트 및 솔루션 페이지에 대한 링크가 표시됩니다. 빠른 실행 결과에 프로젝트 파일 및 도구 창이 포함될 수 있습니다.
+    **빠른 실행**에는 **새 프로젝트** 대화 상자, **새 항목 추가** 대화 상자 및 **옵션** 대화 상자의 프로젝트 및 솔루션 페이지에 대한 링크가 표시됩니다. 빠른 실행 결과에 프로젝트 파일 및 도구 창이 포함될 수 있습니다.
 
 ## <a name="debugging-code"></a>코드 디버깅
 
@@ -103,11 +86,11 @@ ms.lasthandoff: 11/22/2017
 
 - **여러 브라우저에서 같은 페이지, 응용 프로그램 또는 사이트 테스트** 코드를 디버그할 때 **브라우저 선택** 대화 상자를 열지 않고도 [페이지 검사기(Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209) 등의 설치된 웹 브라우저 간에 쉽게 전환할 수 있습니다. **디버깅 시작** 단추 옆에 있는 **표준** 도구 모음에서 **디버그 대상** 목록을 사용하여 디버그 또는 보기 페이지로 사용 중인 브라우저를 빠르게 확인할 수 있습니다.
 
-     ![웹 브라우저 디버그 옵션 선택](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")
+    ![웹 브라우저 디버그 옵션 선택](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")
 
 - **임시 중단점 설정** 코드의 현재 줄에 임시 중단점을 만들고 디버거를 동시에 시작할 수 있습니다. 해당 코드 줄에 도달하면 디버거 중단 모드가 시작됩니다. 자세한 내용은 [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.
 
-     이 기능을 사용하려면 **Ctrl** + **F10** 키를 선택하거나 중단할 코드 줄의 바로 가기 메뉴를 열고 **커서까지 실행**을 선택합니다.
+    이 기능을 사용하려면 **Ctrl** + **F10** 키를 선택하거나 중단할 코드 줄의 바로 가기 메뉴를 열고 **커서까지 실행**을 선택합니다.
 
 - **디버그하는 동안 실행 지점 이동** 현재 실행 지점을 코드의 다른 섹션으로 이동하고 해당 지점에서 디버깅을 다시 시작할 수 있습니다. 이 기술은 해당 섹션에 도달하는 데 필요한 모든 단계를 다시 만들 필요 없이 코드 섹션을 디버깅하려는 경우 유용합니다. 자세한 내용은 [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.
 

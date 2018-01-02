@@ -1,7 +1,7 @@
 ---
 title: "빠른 작업 | Microsoft 문서"
 ms.custom: 
-ms.date: 05/08/2017
+ms.date: 11/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
@@ -13,11 +13,11 @@ manager: ghogen
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 22a6c84608f8955e3a751af4ee2b9fb113645590
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: e9196f3e4bc76e53d50bc480b8e0860186fe778e
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="quick-actions"></a>빠른 작업
 
@@ -42,6 +42,7 @@ ms.lasthandoff: 12/01/2017
 ## <a name="common-quick-actions"></a>일반적인 빠른 작업
 
 다음은 C# 및 Visual Basic 코드 모두에 적용할 수 있는 일반적인 빠른 작업 중 일부입니다.
+
 - [오류를 수정하는 작업](#fix)
 - [불필요한 코드를 제거하는 작업](#remove)
 - [누락된 코드를 추가하는 작업](#add)
@@ -49,12 +50,13 @@ ms.lasthandoff: 12/01/2017
 
 ### <a id="fix"></a>오류를 수정하는 작업
 
-#### <a name="correct-misspelled-type"></a>철자가 잘못된 형식 수정
+#### <a name="correct-misspelled-symbol-or-keyword"></a>철자가 틀린 기호 또는 키워드 수정
+
 |  오류 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | CS0103, BC30002 | C# 및 Visual Basic | Visual Studio 2015 업데이트 2 |
 
-Visual Studio에서 실수로 형식의 철자를 잘못 입력한 경우 이 빠른 작업은 자동으로 수정합니다.  이러한 항목은 전구 메뉴에 **"Change '*misspelled type*' to '*correct type*'(‘철자가 잘못된 형식’을(를) ‘올바른 형식’(으)로 변경)**으로 표시됩니다.  예:
+Visual Studio에서 실수로 형식 또는 키워드의 철자를 잘못 입력한 경우 이 빠른 작업은 자동으로 수정합니다. 이러한 항목은 전구 메뉴에 **“Change ‘*misspelled word*’ to ‘*correct word*(‘철자가 잘못된 단어’을(를) ‘올바른 형식’(으)로 변경)**로 표시됩니다.  예:
 
 ```csharp
 // Before
@@ -83,6 +85,7 @@ End Function
 ```
 
 #### <a name="resolve-git-merge-conflict"></a>Git 병합 충돌 해결
+
 |  오류 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | CS8300, BC37284  | C# 및 Visual Basic | Visual Studio 2017 15.3 버전 |
@@ -90,7 +93,7 @@ End Function
 이러한 빠른 작업을 통해 충돌 코드 및 표식을 제거하는 "변경을 적용"하여 Git 병합 충돌을 해결할 수 있습니다.  
 
 ```csharp
-// Before     
+// Before
 private void MyMethod()
 {
 <<<<<<< HEAD
@@ -108,7 +111,7 @@ private void MyMethod()
 
 // Take changes from 'HEAD'
 
-// After 
+// After
 private void MyMethod()
 {
     if (true)
@@ -119,11 +122,12 @@ private void MyMethod()
 ```
 
 #### <a name="make-method-synchronous"></a>메서드 동기화
+
 |  오류 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | CS1998, BC42356 | C# 및 Visual Basic | Visual Studio 2015 업데이트 2 |
 
-메서드에서 `async`/`Async` 키워드를 사용하면 해당 메서드 내 어딘가에서 `await`/`Await` 키워드도 사용될 것으로 예상됩니다.  그러나 그렇지 않을 경우 빠른 작업은 `async`/`Async` 키워드를 제거하고 반환 형식을 변경하여 메서드를 동기화할 수 있음을 나타냅니다.  [빠른 작업] 메뉴에서 **Make method synchronous**(메서드 동기화) 옵션을 사용합니다.
+메서드에서 `async` 또는 `Async` 키워드를 사용하면 해당 메서드 내 어딘가에서 `await` 또는 `Await` 키워드도 사용될 것으로 예상됩니다.  그러나 그렇지 않을 경우 빠른 작업은 `async` 또는 `Async` 키워드를 제거하고 반환 형식을 변경하여 메서드를 동기화할 수 있음을 나타냅니다. [빠른 작업] 메뉴에서 **Make method synchronous**(메서드 동기화) 옵션을 사용합니다.
 
 ```csharp
 // Before
@@ -156,11 +160,12 @@ End Function
 ```
 
 #### <a name="make-method-asynchronous"></a>메서드 비동기화
+
 |  오류 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | CS4032, BC37057 | C# 및 Visual Basic | Visual Studio 2017 |
 
-메서드 내에서 `await`/`Await` 키워드를 사용하는 경우 메서드 자체가 `async`/`Async` 키워드로 표시되는 것으로 예상됩니다.  그러나 그렇지 않을 경우 빠른 작업은 메서드를 비동기화할 수 있음을 나타냅니다.  [빠른 작업] 메뉴에서 **Make method/Function asynchronous**(메서드/함수 비동기화) 옵션을 사용합니다.
+메서드 내에서 `await` 또는 `Await` 키워드를 사용하는 경우 메서드 자체가 `async` 또는 `Async` 키워드로 표시되는 것으로 예상됩니다.  그러나 그렇지 않을 경우 빠른 작업은 메서드를 비동기화할 수 있음을 나타냅니다. [빠른 작업] 메뉴에서 **Make method/Function asynchronous**(메서드/함수 비동기화) 옵션을 사용합니다.
 
 ```csharp
 // Before
@@ -203,6 +208,7 @@ End Function
 **Remove Unnecessary Usings/Imports**(불필요한 Using/Import 제거) 빠른 작업은 현재 파일에 대해 사용되지 않은 `using` 및 `Import` 문을 제거합니다.  이 항목을 선택하면 사용되지 않은 네임스페이스 가져오기가 바로 제거됩니다.
 
 #### <a name="remove-unnecessary-cast"></a>불필요한 캐스트 제거
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0004 | C# 및 Visual Basic | Visual Studio 2015 RTW |
@@ -218,6 +224,7 @@ int number = (int)3;
 // after
 int number = 3;
 ```
+
 ```vb
 ' Before
 Dim number as Integer = CType(3, Integer)
@@ -229,6 +236,7 @@ Dim number as Integer = 3
 ```
 
 #### <a name="remove-unused-variables"></a>사용하지 않는 변수 제거
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | CS0219, BC42024 | C# 및 Visual Basic | Visual Studio 2017 15.3 버전 |
@@ -255,13 +263,14 @@ public MyMethod()
 ```
 
 #### <a name="remove-type-from-default-value-expression"></a>**기본** 값 식에서 형식 제거
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0034 | C# 7.1+ | Visual Studio 2017 15.3 버전 |
 
 이 빠른 작업은 기본 값 식에서 값 형식을 제거하고 컴파일러가 식의 형식을 유추할 수 있는 경우 [`default` 리터럴](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference)을 사용합니다.
 
-```csharp 
+```csharp
 // Before
 void DoWork(CancellationToken cancellationToken = default(CancellationToken)) { ... }
 
@@ -275,14 +284,15 @@ void DoWork(CancellationToken cancellationToken = default) { ... }
 ### <a id="add"></a>누락된 코드를 추가하는 작업
 
 #### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>참조 어셈블리나 NuGet 패키지의 형식 또는 솔루션의 다른 형식에 대해 using/Import 추가
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | CS0103, BC30451 | C# 및 Visual Basic| Visual Studio 2015 업데이트 2 |
 
-솔루션의 다른 프로젝트에 있는 형식을 사용하면 빠른 작업이 자동으로 표시되지만 **도구 > 옵션 > C#** 또는 **Basic > 고급** 탭에서 다른 작업을 사용하도록 설정해야 합니다.  
+솔루션의 다른 프로젝트에 있는 형식을 사용하면 빠른 작업이 자동으로 표시되지만 **도구 > 옵션 > C#** 또는 **Basic > 고급** 탭에서 다른 작업을 사용하도록 설정해야 합니다.
 
-* 참조 어셈블리의 형식에 대해 using/import 제안
-* NuGet 패키지의 형식에 대해 using/import 제안
+- 참조 어셈블리의 형식에 대해 using/import 제안
+- NuGet 패키지의 형식에 대해 using/import 제안
 
 사용하도록 설정한 경우 현재 가져오지 않고 참조 어셈블리 또는 NuGet 패키지에 있는 네임스페이스의 형식을 사용하면 using/import 문이 생성됩니다.
 
@@ -311,11 +321,14 @@ Debug.WriteLine("Hello")
 ```
 
 #### <a name="add-missing-casesdefault-caseboth"></a>누락된 사례/기본 사례/모두 추가
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0010 | C# 및 Visual Basic| Visual Studio 2017 15.3 버전 |
 
-C#의 `switch` 문이나 Visual Basic의 `Select Case` 문을 만들 때 코드 동작을 사용하여 누락된 사례 항목, 기본 사례 문 또는 모두를 자동으로 추가할 수 있습니다.  빈 문의 경우 다음과 같습니다.
+C#의 `switch` 문이나 Visual Basic의 `Select Case` 문을 만들 때 코드 동작을 사용하여 누락된 사례 항목, 기본 사례 문 또는 모두를 자동으로 추가할 수 있습니다.
+
+다음 열거형 및 빈 `switch` 또는 `Select Case` 문을 고려하세요.
 
 ```csharp
 enum MyEnum
@@ -349,7 +362,7 @@ Select Case myEnum
 End Select
 ```
 
-**Add Both**(모두 추가) 빠른 작업을 사용하여 누락된 사례와 기본 사례를 모두 입력하면 다음과 같이 생성됩니다.
+**Add Both**(둘 다 추가)를 사용하면 빠른 작업에서 누락된 사례를 채우고 기본 사례를 추가합니다.
 
 ```csharp
 switch(myEnum)
@@ -364,6 +377,7 @@ switch(myEnum)
         break;
 }
 ```
+
 ```vb
 Select Case myEnum
     Case MyEnum.Item1
@@ -376,6 +390,7 @@ End Select
 ```
 
 #### <a name="add-null-checks-for-parameters"></a>매개 변수에 대한 null 검사 추가
+
 | 해당 언어 |  지원되는 버전 |
 | -------------------- | ----------------  |
 | C# 및 Visual Basic| Visual Studio 2017 15.3 버전 |
@@ -409,6 +424,7 @@ class MyClass
 ```
 
 #### <a name="add-argument-name"></a>인수 이름 추가
+
 | 해당 언어 |  지원되는 버전 |
 | -------------------- | ----------------  |
 | C# 및 Visual Basic| Visual Studio 2017 15.3 버전 |
@@ -424,6 +440,7 @@ var date = new DateTime(year: 1997, month: 7, day: 8);
 ```
 
 #### <a name="add-braces"></a>중괄호 추가
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0011 | C# | Visual Studio 2017 RTW |
@@ -438,13 +455,14 @@ if (true)
 // Add braces
 
 // After
-if (true) 
+if (true)
 {
     return "hello,world";
 }
 ```
 
 #### <a name="add-and-order-modifiers"></a>한정자 추가 및 정렬
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0036 | C# 및 Visual Basic| Visual Studio 2017 15.5 버전 |
@@ -467,6 +485,7 @@ internal enum Color
     Red, White, Blue
 }
 ```
+
 ```csharp
 // Before
 static private int thisFieldIsPublic;
@@ -475,12 +494,12 @@ static private int thisFieldIsPublic;
 
 // After
 private static int thisFieldIsPublic;
-
 ```
 
 ### <a id="transform"></a>코드 변환
 
 #### <a name="convert-if-construct-to-switch"></a>**if** 구문을 **switch**로 변환
+
 | 해당 언어 |  지원되는 버전 |
 | -------------------- | ----------------  |
 | C# 및 Visual Basic| Visual Studio 2017 15.3 버전 |
@@ -535,6 +554,7 @@ End Select
 ```
 
 #### <a name="convert-to-interpolated-string"></a>보간된 문자열로 변환
+
 | 해당 언어 |  지원되는 버전 |
 | -------------------- | ----------------  |
 | C# 6.0 이상 및 Visual Basic 14 이상 | Visual Studio 2017 RTW |
@@ -552,6 +572,7 @@ string s = string.Format("My string with {0} in the middle", num);
 int num = 3;
 string s = $"My string with {num} in the middle";
 ```
+
 ```vb
 ' Before
 Dim num as Integer = 3
@@ -565,6 +586,7 @@ Dim s As String = $"My string with {num} in the middle"
 ```
 
 #### <a name="use-object-initializers"></a>개체 이니셜라이저 사용
+
 | 진단 ID | 해당 언어 | 지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0017 | C# 및 Visual Basic | Visual Studio 2017 RTW |
@@ -581,6 +603,7 @@ c.Age = 21;
 // After
 var c = new Customer() { Age = 21 };
 ```
+
 ```vb
 ' Before
 Dim c = New Customer()
@@ -593,6 +616,7 @@ Dim c = New Customer() With {.Age = 21}
 ```
 
 #### <a name="use-collection-initializers"></a>컬렉션 이니셜라이저 사용
+
 | 진단 ID | 해당 언어 | 지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0028 | C# 및 Visual Basic | Visual Studio 2017 RTW |
@@ -611,6 +635,7 @@ list.Add(3);
 // After
 var list = new List<int> { 1, 2, 3 };
 ```
+
 ```vb
 ' Before
 Dim list = New List(Of Integer)
@@ -623,9 +648,10 @@ list.Add(3)
 ' After
 Dim list = New List(Of Integer) From {1, 2, 3}
 
-```  
+```
 
 #### <a name="convert-auto-property-to-full-property"></a>자동 속성을 전체 속성으로 변환
+
 |  해당 언어 |  지원되는 버전 |
 |  -------------------- | ----------------  |
 | C# 및 Visual Basic | Visual Studio 2017 15.5 버전 |
@@ -642,9 +668,10 @@ private int MyProperty { get; set; }
 private int MyProperty
 {
     get { return _myProperty; }
-    set { _myProperty = value; } 
+    set { _myProperty = value; }
 }
 ```
+
 ```vb
 ' Before
 Public Property Name As String
@@ -662,10 +689,10 @@ Public Property Name As String
         _Name = Value
     End Set
 End Property
-
 ```
 
 #### <a name="convert-block-body-to-expression-bodied-member"></a>블록 본문을 식 본문 멤버로 변환
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0021-27 | C# 6.0+ | Visual Studio 2017 RTW |
@@ -718,13 +745,14 @@ class MyClass4
 ```
 
 #### <a name="convert-anonymous-function-to-local-function"></a>익명 함수를 로컬 함수로 변환
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0039 | C# 7.0+ | Visual Studio 2017 15.5 버전 |
 
 이 빠른 작업은 익명 함수를 로컬 함수로 변환합니다.
 
-```csharp 
+```csharp
 // Before
 Func<int, int> fibonacci = null;
 fibonacci = (int n) =>
@@ -739,10 +767,10 @@ int fibonacci(int n)
 {
     return n <= 1 ? 1 : fibonacci(n-1) + fibonacci(n-2);
 }
-
 ```
 
 #### <a name="convert-referenceequals-to-is-null"></a>`ReferenceEquals`를 `is null`로 변환
+
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0041 | C# 7.0+ | Visual Studio 2017 15.5 버전 |
@@ -768,6 +796,7 @@ if (value is null)
 ```
 
 #### <a name="introduce-pattern-matching"></a>패턴 일치 소개
+
 | 진단 ID | 해당 언어 | 지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0020 | C# 7.0+ | Visual Studio 2017 RTW |
@@ -777,25 +806,26 @@ if (value is null)
 
 ```csharp
 // Before
-if (o is int) 
+if (o is int)
 {
-    var i = (int)o; 
-    ... 
+    var i = (int)o;
+    ...
 }
 
 // Use pattern matching
 
 // After
-if (o is int i) 
+if (o is int i)
 {
     ...
 }
 
 ```
+
 ```csharp
 // Before
 var s = o as string;
-if (s != null) 
+if (s != null)
 {
     ...
 }
@@ -803,13 +833,14 @@ if (s != null)
 // Use pattern matching
 
 // After
-if (o is string s) 
+if (o is string s)
 {
     ...
 }
 ```
 
 #### <a name="change-base-for-numeric-literals"></a>숫자 리터럴에 대한 기본 변경
+
 | 해당 언어 | 지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | C# 7.0+ 및 Visual Basic 14+ | Visual Studio 2017 15.3 버전 |
@@ -825,6 +856,7 @@ int countdown = 2097152;
 // After
 int countdown = 0x200000;
 ```
+
 ```vb
 ' Before
 Dim countdown As Integer = 2097152
@@ -836,11 +868,12 @@ Dim countdown As Integer = &H200000
 ```
 
 #### <a name="insert-digit-separators-into-literals"></a>자릿수 구분 기호를 리터럴로 삽입
+
 | 해당 언어 | 지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | C# 7.0+ 및 Visual Basic 14+ | Visual Studio 2017 15.3 버전 |
 
-이 빠른 작업을 통해 구분 기호 문자를 리터럴 값으로 추가할 수 있습니다.  
+이 빠른 작업을 통해 구분 기호 문자를 리터럴 값으로 추가할 수 있습니다.
 
 ```csharp
 // Before
@@ -851,6 +884,7 @@ int countdown = 1000000;
 // After
 int countdown = 1_000_000;
 ```
+
 ```vb
 ' Before
 Dim countdown As Integer = 1000000
@@ -862,6 +896,7 @@ Dim countdown As Integer = 1_000_000
 ```
 
 #### <a name="use-explicit-tuple-names"></a>명시적 튜플 이름 사용
+
 | 진단 ID | 해당 언어 | 지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0033 | C# 7.0+ 및 Visual Basic 15+ | Visual Studio 2017 RTW |
@@ -879,6 +914,7 @@ var name = customer.Item1;
 (string name, int age) customer = GetCustomer();
 var name = customer.name;
 ```
+
 ```vb
 ' Before
 Dim customer As (name As String, age As Integer) = GetCustomer()
@@ -892,6 +928,7 @@ Dim name = customer.name
 ```
 
 #### <a name="use-inferred-names"></a>유추된 이름 사용
+
 | 진단 ID | 해당 언어 | 지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0037 | C# | Visual Studio 2017 v. 15.5 |
@@ -899,7 +936,7 @@ Dim name = customer.name
 
 이러한 빠른 작업은 사용자가 익명 형식의 유추된 멤버 이름을 사용할 수 있는 경우 또는 C# 7.1의 유추된 튜플 요소 이름을 사용할 수 있는 경우를 가려냅니다.
 
-```csharp 
+```csharp
 // Before
 var anon = new { age = age, name = name };
 
@@ -908,6 +945,7 @@ var anon = new { age = age, name = name };
 // After
 var anon = new { age, name };
 ```
+
 ```csharp
 // Before
 var tuple = (age: age, name: name);
@@ -916,17 +954,17 @@ var tuple = (age: age, name: name);
 
 // After
 var tuple = (age, name);
-
 ```
 
 #### <a name="deconstruct-tuple-declaration"></a>튜플 선언 해체
+
 | 진단 ID | 해당 언어 | 지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0042 | C# 7.0+ | Visual Studio 2017 v. 15.5 |
 
 이 빠른 작업을 사용하면 튜플 변수 선언을 해체할 수 있습니다. 
 
-```csharp 
+```csharp
 // Before
 var person = GetPersonTuple();
 Console.WriteLine($"{person.name} {person.age}");
@@ -945,5 +983,6 @@ Console.WriteLine($"{x} {y}");
 ```
 
 ## <a name="see-also"></a>참고 항목
-* [코드 스타일 및 빠른 작업](code-styles-and-quick-actions.md)  
-* [코드 작성 및 리팩터링(C++)](/cpp/ide/writing-and-refactoring-code-cpp)
+
+[코드 스타일 및 빠른 작업](code-styles-and-quick-actions.md)  
+[코드 작성 및 리팩터링(C++)](/cpp/ide/writing-and-refactoring-code-cpp)

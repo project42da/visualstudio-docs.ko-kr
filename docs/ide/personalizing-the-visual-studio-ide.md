@@ -11,15 +11,15 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 49a42bdc9f8ec979e47f0977abdf36f614141c89
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: e9ae492d7fc4d110c6e5015c782f97a2561c8bd8
+ms.sourcegitcommit: 1aa9282b1f0bc2795df3264cbd1e331cc44c23f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Visual Studio IDE 개인 설정
 
-사용자 고유의 개발 스타일 및 요구 사항을 가장 효과적으로 지원하기 위해 다양한 방식으로 Visual Studio를 개인 설정할 수 있습니다. 많은 설정이 Visual Studio 인스턴스에서 사용자와 함께 로밍됩니다. &mdash; [동기화 설정](../ide/synchronized-settings-in-visual-studio.md)을 참조하세요. 이 항목에서는 다양한 개인 설정과 추가 정보를 확인할 수 있는 위치를 간략하게 설명합니다.
+사용자 고유의 개발 스타일 및 요구 사항을 가장 효과적으로 지원하기 위해 다양한 방식으로 Visual Studio를 개인 설정할 수 있습니다. 많은 설정이 Visual Studio 인스턴스에서 사용자와 함께 로밍됩니다.&mdash; [동기화 설정](../ide/synchronized-settings-in-visual-studio.md)을 참조하세요. 이 항목에서는 다양한 개인 설정과 추가 정보를 확인할 수 있는 위치를 간략하게 설명합니다.
 
 ## <a name="general-environment-options"></a>일반 환경 옵션
 

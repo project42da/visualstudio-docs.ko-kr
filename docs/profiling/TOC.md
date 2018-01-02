@@ -1,7 +1,16 @@
-# [프로파일링 기능 둘러보기](profiling-feature-tour.md)
-## [초보자를 위한 성능 프로파일링 지침](beginners-guide-to-performance-profiling.md)
-## [프로파일링 도구의 새로운 기능](what-s-new-in-profiling-tools.md)
+
+# [프로파일링 설명서](index.md)
+# 개요
+## [프로파일링 기능 둘러보기](profiling-feature-tour.md)
+# 빠른 시작
+## [CPU 사용량 분석(관리)](quickstart-cpu-usage-managed.md)
+## [CPU 사용량 분석(네이티브)](quickstart-cpu-usage-native.md)
+## [CPU 사용량 분석(ASP.NET)](quickstart-cpu-usage-aspnet.md)
+# 자습서
+## [Visual Studio에서 응용 프로그램 성능 프로파일링](beginners-guide-to-performance-profiling.md)
+# 개념
 ## [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](running-profiling-tools-with-or-without-the-debugger.md)
+# 방법 가이드
 ## [메모리 사용 분석](memory-usage.md)
 ### [사용자 지정 네이티브 ETW 힙 이벤트](custom-native-etw-heap-events.md)
 ### [디버거 없이 메모리 사용](memory-usage-without-debugging2.md)
@@ -366,4 +375,6 @@
 ##### [CvWriteFlag 함수](cvwriteflag-function.md)
 ##### [CvWriteMessage 함수](cvwritemessage-function.md)
 ### [동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd)](concurrency-visualizer-command-line-utility-cvcollectioncmd.md)
-## [UWP 앱의 에너지 사용 분석](analyze-energy-use-in-store-apps.md)
+## [스토어 앱의 에너지 사용 분석](analyze-energy-use-in-store-apps.md)
+# 리소스
+## [프로파일링 도구의 새로운 기능](what-s-new-in-profiling-tools.md)

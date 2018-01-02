@@ -1,6 +1,6 @@
 # [개요](python-in-visual-studio.md)
 # [설치](installation.md)
-# 퀵 스타트
+# 빠른 시작
 ## [기존 코드로 프로젝트 만들기](quickstart-01-project-from-existing.md)
 ## [템플릿으로 프로젝트 만들기](quickstart-02-project-from-template.md)
 ## [리포지토리에서 프로젝트 만들기](quickstart-03-project-from-repository.md)
@@ -35,11 +35,11 @@
 ### [Azure 원격 디버깅](debugging-azure-remote.md)
 ### [Azure 원격 디버깅 문제 해결](debugging-azure-remote-troubleshooting.md)
 ## C++ 조작
-### [Python용 C++ 확장명 만들기](cpp-and-python.md)
+### [Python용 C++ 확장 만들기](cpp-and-python.md)
 ### [Python/C++ 혼합 모드 디버깅](debugging-mixed-mode.md)
-### [혼합 모드 디버깅에 대한 기호](debugging-symbols-for-mixed-mode.md)
+### [혼합 모드 디버깅 기호](debugging-symbols-for-mixed-mode.md)
 ## [프로파일링](profiling.md)
-## [단위 테스트](unit-testing.md)
+## [유닛 테스트](unit-testing.md)
 ## [Cookiecutter 확장 사용](cookiecutter.md)
 # 참조
 ## [옵션](options.md)

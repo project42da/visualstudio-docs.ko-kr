@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 48f29ec016b426319241c1a72701ed529ec7dddd
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: a9364a6eb9e46503a257cdc066e3d9ecd1a6c9d0
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>ALM(Application Lifecycle Management) 및 Unity 앱
 최신 플랫폼용 앱을 개발하려면 코드 작성 이외에도 많은 작업을 수행해야 합니다. DevOps(개발+운영)라는 이러한 활동은 앱의 전체 수명 주기에 걸쳐 있으며 민첩한 작업 계획 및 추적, 코드 디자인 및 구현, 소스 코드 리포지토리 관리, 빌드 실행, 연속 통합 및 배포 관리, 테스트(단위 테스트 및 UI 테스트 포함), 개발 및 프로덕션 환경에서 다양한 형태의 진단 실행, 원격 분석 및 분석을 통해 실시간으로 앱 성능과 사용자 동작 모니터링을 포함합니다.  
@@ -73,12 +73,12 @@ ms.lasthandoff: 11/29/2017
 3.  질감 또는 오디오 파일과 같은 Unity 프로젝트의 이진 자산은 많은 저장 공간을 차지할 수 있습니다. Git와 같은 다양한 소스 제어 시스템은 변경 내용이 파일의 일부에만 영향을 주는 경우에도 변경될 때마다 파일의 고유 복사본을 저장합니다. 이로 인해 Git 리포지토리가 너무 커질 수 있습니다. 이 문제를 해결하기 위해 대개 Unity 개발자는 최종 자산만 리포지토리에 추가하고 OneDrive, DropBox, git-annex 등의 다른 방법으로 자산의 작업 기록을 유지합니다. 일반적으로 이러한 자산은 소스 코드 변경에 따라 버전을 관리할 필요가 없으므로 이 접근 방식은 유용합니다. 또한 개발자는 일반적으로 프로젝트 편집기의 Asset Serialization Mode를 Force Text로 설정하여 이진 형식이 아니라 텍스트에 장면 파일을 저장하므로 소스 제어에서 병합할 수 있습니다. 자세한 내용은 [편집기 설정](http://docs.unity3d.com/Manual/class-EditorManager.html)(Unity 설명서)을 참조하세요.  
 
 ## <a name="build"></a>빌드  
- 참조 링크: **[빌드](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)**  
+ 참조 링크: **[빌드 및 릴리스](/vsts/build-release/index)**  
 
 |기능|Unity에서 지원 여부|추가 설명|  
 |-------------|--------------------------|-------------------------|  
 |온-프레미스 TFS 서버|가능|Unity 프로젝트는 Visual Studio 빌드 시스템이 아니라 Unity 환경을 통해 빌드됩니다(Visual Studio Tools for Unity 내에서 빌드하면 스크립트가 컴파일되지만 실행 파일은 생성되지 않음). [명령줄에서 Unity 프로젝트를 빌드](http://docs.unity3d.com/Manual/CommandLineArguments.html)(Unity 설명서)할 수 있으므로 Unity 자체가 해당 컴퓨터에 설치되어 있는 경우 적절한 Unity 명령을 실행하도록 TFS 서버의 MSBuild 프로세스를 구성할 수 있습니다.<br /><br /> 또한 Unity는 Git 또는 SVN 리포지토리를 모니터링하고 정기적 빌드를 실행하는 [Unity 클라우드 빌드](https://build.cloud.unity3d.com/landing/)를 제공합니다. 현재 Team Foundation 버전 제어 또는 Visual Studio Team Services에서는 작동하지 않습니다.|  
-|Visual Studio Team Services에 연결된 온-프레미스 빌드 서버|가능|위와 동일한 조건에서 Visual Studio Team Services를 통해 트리거된 빌드가 온-프레미스 TFS 컴퓨터를 사용하도록 추가로 지정할 수 있습니다.  자세한 내용은 [빌드 서버](http://msdn.microsoft.com/Library/2d258a0a-f178-4e93-9da1-eba61151af3c)를 참조하세요.|  
+|Visual Studio Team Services에 연결된 온-프레미스 빌드 서버|가능|위와 동일한 조건에서 Visual Studio Team Services를 통해 트리거된 빌드가 온-프레미스 TFS 컴퓨터를 사용하도록 추가로 지정할 수 있습니다.  지침은 [에이전트 빌드 및 릴리스](/vsts/build-release/concepts/agents/agents)를 참조하세요.|  
 |Visual Studio Team Services의 호스트된 컨트롤러 서비스|아니요|Unity 빌드는 현재 지원되지 않습니다.|  
 |사전 및 사후 스크립트로 정의 작성|예|사전 및 사후 빌드 스크립트에 대해 Unity 명령줄을 사용하여 빌드를 실행하는 사용자 지정 빌드 정의를 구성할 수도 있습니다.|  
 |제어된 체크 인을 포함하는 연속 통합|예|Git는 체크 인이 아니라 끌어오기 요청 모델로 작동하므로 TFVC에 대한 제어된 체크 인에만 해당|  

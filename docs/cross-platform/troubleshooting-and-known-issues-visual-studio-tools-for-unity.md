@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: ede4bd9594e3bb19f081d8a7343f5a0c08003cad
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: 338f80724598a3c89dcde3806511427b81bffca4
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>문제 해결 및 알려진 문제(Visual Studio Tools for Unity)
 이 섹션에서는 Visual Stuio Tools for Unity와 관련된 일반적인 문제에 대한 솔루션, 알려진 문제의 설명을 찾아보고 오류를 보고하여 Visual Studio Tools for Unity를 개선하는 데 도움이 되는 방법을 알아봅니다.  
@@ -25,7 +25,7 @@ ms.lasthandoff: 11/29/2017
 Visual Studio Tools for Unity에 대한 몇 가지 일반적인 문제를 해결하려면 다음 섹션을 참조하세요.  
 
 ### <a name="visual-studio-crashes"></a>Visual Studio 크래시
-Visual Studio MEF 캐시가 손상되었기 때문일 수 있습니다.
+Visual Studio MEF 캐시가 손상되었기 때문에 발생할 수 있습니다.
 
 MEF 캐시를 다시 설정하려면 다음 폴더를 제거해야 합니다. 먼저 Visual Studio를 닫은 후에 이 작업을 수행하세요.
 
@@ -63,6 +63,7 @@ Visual Studio에서 특정 중단점에 대한 원본 위치를 찾을 수 없�
 -   VS 및 Unity 모두에 대해 바이러스 백신을 일시적으로 사용하지 않도록 설정하거나 제외 규칙을 만들어 봅니다.
 -   방화벽을 일시적으로 사용하지 않도록 설정하거나 VS와 Unity 간에 TCP/UDP 네트워킹을 허용하는 규칙을 만들어 봅니다.
 -   팀 뷰어와 같은 프로그램이 프로세스 검색을 방해하고 있음을 확인했습니다. 모든 추가 소프트웨어를 일시적으로 중지하여 변경된 소프트웨어가 있는지 확인해 볼 수도 있습니다.
+-   VSTU가 "Unity.exe" 프로세스를 모니터링하는 경우 기본 Unity 실행 파일의 이름을 바꾸지 않습니다.
 
 ### <a name="unable-to-debug-android-players"></a>Android 플레이어를 디버그할 수 없음
 플레이어 검색(Unity에서 사용하는 기본 메커니즘)에 멀티캐스트를 사용하지만, 이후에는 일반 TCP 연결을 사용하여 디버거를 연결합니다. 검색 단계는 Android 장치에 대한 주요 문제입니다.

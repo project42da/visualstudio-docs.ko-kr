@@ -15,11 +15,11 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1f703c1eefe535906f287c9e7b50e0b7ad99677f
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: 5dacd44d72e5be7a898ba90c074dedf4b2f2bb4b
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-wpf"></a>WPF 소개
 WPF(Windows Presentation Foundation)를 사용하면 시각적으로 뛰어난 사용자 환경을 통해 Windows용 데스크톱 클라이언트 응용 프로그램을 만들 수 있습니다.  
@@ -33,7 +33,7 @@ WPF(Windows Presentation Foundation)를 사용하면 시각적으로 뛰어난 �
 ##  <a name="Programming_with_WPF"></a> WPF를 사용한 프로그래밍  
  WPF는 대부분 <xref:System.Windows> 네임스페이스에 있는 .NET Framework 형식의 하위 집합으로 존재합니다. 이전에 ASP.NET 및 Windows Forms와 같은 관리되는 기술을 사용하여 .NET Framework로 응용 프로그램을 빌드한 적이 있는 경우 기본적인 WPF 프로그래밍 환경이 친숙할 것입니다. 모두 C# 또는 Visual Basic과 같은 원하는 .NET 프로그래밍 언어를 사용하여 클래스를 인스턴스화하고, 속성을 설정하고, 메서드를 호출하고, 이벤트를 처리합니다.  
   
- WPF에는 속성 및 이벤트를 향상시키는 [종속성 속성](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx) 및 [라우트된 이벤트](https://msdn.microsoft.com/en-us/library/ms742806\(v=vs.100\).aspx)와 같은 추가 프로그래밍 구문이 포함되어 있습니다.  
+ WPF에는 속성 및 이벤트를 향상시키는 [종속성 속성](/dotnet/framework/wpf/advanced/dependency-properties-overview) 및 [라우트된 이벤트](/dotnet/framework/wpf/advanced/routed-events-overview)와 같은 추가 프로그래밍 구문이 포함되어 있습니다.  
   
 ##  <a name="Markup_And_Codebehind"></a> 태그 및 코드 숨김  
  WPF를 사용하면 ASP.NET 개발자에게 익숙한 환경인 *태그* 및 *코드 숨김*둘 다를 통해 응용 프로그램을 개발할 수 있습니다. 일반적으로 XAML 태그를 사용하여 응용 프로그램의 모양을 구현하고 관리되는 프로그래밍 언어(코드 숨김)를 사용하여 해당 동작을 구현합니다. 모양 및 동작의 이러한 분리는 다음과 같은 이점이 있습니다.  
@@ -42,7 +42,7 @@ WPF(Windows Presentation Foundation)를 사용하면 시각적으로 뛰어난 �
   
 -   디자이너가 응용 프로그램의 동작을 구현하는 개발자와 동시에 응용 프로그램의 모양을 구현할 수 있으므로 개발이 보다 효율적입니다.  
   
--   WPF 응용 프로그램에 대한[전역화 및 지역화](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx) 가 간소화됩니다.  
+-   WPF 응용 프로그램에 대한[전역화 및 지역화](/dotnet/framework/wpf/advanced/wpf-globalization-and-localization-overview) 가 간소화됩니다.  
   
  다음은 WPF 태그 및 코드 숨김에 대한 간략한 소개입니다.  
   
@@ -69,7 +69,7 @@ WPF(Windows Presentation Foundation)를 사용하면 시각적으로 뛰어난 �
   
  ![단추가 있는 창](../designers/media/wpfintrofigure10.png "WPFIntroFigure10")  
   
- XAML은 XML 기반이기 때문에 XAML로 작성한 UI는 [요소 트리](https://msdn.microsoft.com/en-us/library/ms753391\(v=vs.100\).aspx)라고 하는 중첩된 요소 계층 구조로 어셈블됩니다. 요소 트리는 UI를 만들고 관리하는 논리적이고 직관적인 방법을 제공합니다.  
+ XAML은 XML 기반이기 때문에 XAML로 작성한 UI는 [요소 트리](/dotnet/framework/wpf/advanced/trees-in-wpf)라고 하는 중첩된 요소 계층 구조로 어셈블됩니다. 요소 트리는 UI를 만들고 관리하는 논리적이고 직관적인 방법을 제공합니다.  
   
 ### <a name="code-behind"></a>코드 숨김  
  응용 프로그램의 기본 동작은 이벤트 처리(예: 메뉴, 도구 모음 또는 단추 클릭) 및 응답으로 비즈니스 논리 및 데이터 액세스 논리 호출을 포함하여 사용자 조작에 응답하는 기능을 구현하는 것입니다. WPF에서 이 동작은 일반적으로 태그와 연결된 코드에서 구현됩니다. 이러한 종류의 코드를 코드 숨김이라고 합니다. 다음 예제에서는 이전 예제의 업데이트된 태그 및 코드 숨김을 보여 줍니다.  
@@ -181,9 +181,9 @@ End Namespace
 -   **사용자 정보**: <xref:System.Windows.Controls.AccessText>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Primitives.Popup>, <xref:System.Windows.Controls.ProgressBar>, <xref:System.Windows.Controls.Primitives.StatusBar>, <xref:System.Windows.Controls.TextBlock>및 <xref:System.Windows.Controls.ToolTip>  
   
 ##  <a name="Input_And_Commanding"></a> 입력 및 명령  
- 컨트롤은 대체로 사용자 입력을 감지하고 응답합니다. [WPF 입력 시스템](https://msdn.microsoft.com/en-us/library/ms754010\(v=vs.100\).aspx) 은 직접 및 라우트된 이벤트를 사용하여 텍스트 입력, 포커스 관리 및 마우스 위치 지정을 지원합니다.  
+ 컨트롤은 대체로 사용자 입력을 감지하고 응답합니다. [WPF 입력 시스템](/dotnet/framework/wpf/advanced/input-overview) 은 직접 및 라우트된 이벤트를 사용하여 텍스트 입력, 포커스 관리 및 마우스 위치 지정을 지원합니다.  
   
- 응용 프로그램에 복잡한 입력 요구 사항이 있는 경우가 많습니다. WPF는 사용자 입력 작업을 이러한 작업에 응답하는 코드에서 분리하는 [명령 시스템](https://msdn.microsoft.com/en-us/library/ms752308\(v=vs.100\).aspx) 을 제공합니다.  
+ 응용 프로그램에 복잡한 입력 요구 사항이 있는 경우가 많습니다. WPF는 사용자 입력 작업을 이러한 작업에 응답하는 코드에서 분리하는 [명령 시스템](/dotnet/framework/wpf/advanced/commanding-overview) 을 제공합니다.  
   
 ##  <a name="Layout"></a> 레이아웃  
  사용자 인터페이스를 만들 때 위치 및 크기별로 컨트롤을 정렬하여 레이아웃을 구성합니다. 모든 레이아웃의 주요 요구 사항은 창 크기와 표시 설정의 변경 내용에 맞게 조정되는 것입니다. 이러한 상황에서 레이아웃을 조정하는 코드를 작성하도록 요구하는 대신 WPF는 확장 가능한 뛰어난 레이아웃 시스템을 제공합니다.  
@@ -211,7 +211,7 @@ End Namespace
  <xref:System.Windows.Controls.DockPanel>을 사용하면 자식 <xref:System.Windows.Controls.TextBox> 컨트롤이 정렬 방법을 알려줄 수 있습니다. 이렇게 하려면 <xref:System.Windows.Controls.DockPanel>은 각각 도킹 스타일을 지정할 수 있도록 자식 컨트롤에 노출되는 `Dock` 속성을 구현합니다.  
   
 > [!NOTE]
->  자식 컨트롤에서 사용할 수 있도록 부모 컨트롤이 구현하는 속성은 [연결된 속성](https://msdn.microsoft.com/en-us/library/ms749011\(v=vs.100\).aspx)이라는 WPF 구문입니다.  
+>  자식 컨트롤에서 사용할 수 있도록 부모 컨트롤이 구현하는 속성은 [연결된 속성](/dotnet/framework/wpf/advanced/attached-properties-overview)이라는 WPF 구문입니다.  
   
  다음 그림에서는 이전 예제의 XAML 태그 결과를 보여 줍니다.  
   
@@ -254,7 +254,7 @@ End Namespace
   
  WPF 데이터 바인딩 엔진은 유효성 검사, 정렬, 필터링 및 그룹화를 포함하는 추가 지원을 제공합니다. 또한 데이터 바인딩은 표준 WPF 컨트롤에 의해 표시되는 사용자 인터페이스가 적절하지 않은 경우 데이터 템플릿을 사용하여 바인딩된 데이터에 대한 사용자 지정 사용자 인터페이스를 만들 수 있도록 지원합니다.  
   
- 자세한 내용은 [데이터 바인딩 개요](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [데이터 바인딩 개요](/dotnet/framework/wpf/data/data-binding-overview)를 참조하세요.  
   
 ##  <a name="Graphics"></a> 그래픽  
  WPF는 다음과 같은 이점이 있는 광범위하고 확장 가능하며 유연한 그래픽 집합을 도입합니다.  
@@ -283,7 +283,7 @@ End Namespace
   
  !["you clicked the ellipse&#33;" 텍스트가 있는 창](../designers/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
- 자세한 내용은 [WPF에서 Shape 및 기본 그리기 개요](https://msdn.microsoft.com/en-us/library/ms747393\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [WPF에서 Shape 및 기본 그리기 개요](/dotnet/framework/wpf/data/data-binding-overview)를 참조하세요.  
   
 ### <a name="2-d-geometries"></a>2차원 기하 도형  
  WPF에서 제공하는 2차원 도형은 기본 도형의 표준 집합을 다룹니다. 그러나 사용자 지정 사용자 인터페이스의 디자인이 용이하도록 사용자 지정 도형을 만들어야 할 수도 있습니다. 이 용도로 WPF는 기하 도형을 제공합니다. 다음 그림은 기하 도형을 사용하여 직접 그리거나, 브러시로 사용하거나, 다른 도형 및 컨트롤을 자르는 데 사용할 수 있는 사용자 지정 도형을 만드는 과정을 보여 줍니다.  
@@ -294,28 +294,28 @@ End Namespace
   
  ![Path의 다양한 용도](../designers/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
- 자세한 내용은 [기하 도형 개요](https://msdn.microsoft.com/en-us/library/ms751808\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [기하 도형 개요](/dotnet/framework/wpf/graphics-multimedia/geometry-overview)를 참조하세요.  
   
 ### <a name="2-d-effects"></a>2차원 효과  
  WPF 2차원 기능의 하위 집합에는 그라데이션, 비트맵, 그리기, 비디오로 그리기, 회전, 크기 조정 및 기울이기와 같은 시각 효과가 포함됩니다. 브러시를 통해 이러한 모든 효과를 얻을 수 있습니다. 다음 그림에서는 몇 가지 예를 보여 줍니다.  
   
  ![여러 브러시의 설명](../designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
- 자세한 내용은 [WPF 브러시 개요](https://msdn.microsoft.com/en-us/library/aa970904\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [WPF 브러시 개요](/dotnet/framework/wpf/graphics-multimedia/wpf-brushes-overview)를 참조하세요.  
   
 ### <a name="3-d-rendering"></a>3차원 렌더링  
  WPF에는 더 흥미로운 사용자 인터페이스를 만들 수 있도록 2차원 그래픽을 통합하는 3차원 렌더링 기능도 포함되어 있습니다. 예를 들어 다음 그림에서는 3차원 도형에 렌더링된 2차원 이미지를 보여 줍니다.  
   
  ![Visual3D 샘플 스크린샷](../designers/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
- 자세한 내용은 [3차원 그래픽 개요](https://msdn.microsoft.com/en-us/library/ms747437\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [3차원 그래픽 개요](/dotnet/framework/wpf/graphics-multimedia/3-d-graphics-overview)를 참조하세요.  
   
 ##  <a name="Animation"></a> 애니메이션  
  WPF 애니메이션 지원을 사용하면 컨트롤이 커지거나, 흔들리거나, 회전하거나, 사라지도록 하여 흥미로운 페이지 전환 등을 만들 수 있습니다. 사용자 지정 클래스를 비롯한 대부분의 WPF 클래스에 애니메이션 효과를 줄 수 있습니다. 다음 그림에서는 간단한 애니메이션의 작동을 보여 줍니다.  
   
  ![애니메이션 효과가 적용된 큐브의 이미지](../designers/media/wpfintrofigure7.png "WPFIntroFigure7")  
   
- 자세한 내용은 [애니메이션 개요](https://msdn.microsoft.com/en-us/library/ms752312\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [애니메이션 개요](/dotnet/framework/wpf/graphics-multimedia/animation-overview)를 참조하세요.  
   
 ##  <a name="Media"></a> 미디어  
  풍부한 콘텐츠를 전달하는 한 가지 방법은 시청각 미디어를 사용하는 것입니다. WPF는 이미지, 비디오 및 오디오에 대한 특별한 지원을 제공합니다.  
@@ -325,7 +325,7 @@ End Namespace
   
  ![축소판 이미지 및 전체 크기 이미지](../designers/media/wpfintrofigure8.PNG "WPFIntroFigure8")  
   
- 자세한 내용은 [이미징 개요](https://msdn.microsoft.com/en-us/library/ms748873\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [이미징 개요](/dotnet/framework/wpf/graphics-multimedia/imaging-overview)를 참조하세요.  
   
 ### <a name="video-and-audio"></a>비디오 및 오디오  
  <xref:System.Windows.Controls.MediaElement> 컨트롤은 비디오와 오디오를 둘 다 재생할 수 있으며 사용자 지정 미디어 플레이어의 토대가 될 수 있을 정도로 유연합니다. 다음 XAML 태그는 미디어 플레이어를 구현합니다.  
@@ -336,7 +336,7 @@ End Namespace
   
  ![오디오와 비디오가 있는 MediaElement 컨트롤](../designers/media/wpfintrofigure1.png "WPFIntroFigure1")  
   
- 자세한 내용은 [WPF 그래픽, 애니메이션 및 미디어 개요](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [그래픽 및 멀티미디어](/dotnet/framework/wpf/graphics-multimedia)를 참조하세요.  
   
 ##  <a name="Text_and_Typography"></a> 텍스트 및 입력 체계  
  고품질 텍스트 렌더링이 용이하도록 WPF는 다음 기능을 제공합니다.  
@@ -355,7 +355,7 @@ End Namespace
   
  ![다양한 텍스트 장식이 적용된 텍스트](../designers/media/wpfintrofigure23.png "WPFIntroFigure23")  
   
- 자세한 내용은 [Windows Presentation Foundation의 입력 체계](https://msdn.microsoft.com/en-us/library/ms742190\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [Windows Presentation Foundation의 입력 체계](/dotnet/framework/wpf/advanced/typography-in-wpf)를 참조하세요.  
   
 ##  <a name="WPF_Customization"></a> WPF 응용 프로그램 사용자 지정  
  지금까지 응용 프로그램을 개발하기 위한 핵심 WPF 구성 요소를 살펴봤습니다. 응용 프로그램 모델을 사용하여 주로 컨트롤로 구성된 응용 프로그램 콘텐츠를 호스트 및 제공합니다. 사용자 인터페이스에서 컨트롤 정렬을 간소화하고 창 크기 및 디스플레이 설정이 변경되어도 정렬이 유지되도록 하기 위해 WPF 레이아웃 시스템을 사용합니다. 대부분의 응용 프로그램은 사용자의 데이터 조작을 허용하므로 데이터 바인딩을 사용하여 사용자 인터페이스와 데이터 통합 작업을 줄입니다. 응용 프로그램의 시각적 모양을 개선하려면 WPF에서 제공하는 광범위한 그래픽, 애니메이션 및 미디어 지원을 사용합니다.  
@@ -408,10 +408,10 @@ End Namespace
   
  ![여러 형식의 콘텐츠가 포함된 단추](../designers/media/wpfintrofigure22.png "WPFIntroFigure22")  
   
- 다양한 컨트롤에서 지원하는 콘텐츠 종류에 대한 자세한 내용은 [WPF 콘텐츠 모델](https://msdn.microsoft.com/en-us/library/bb613548\(v=vs.100\).aspx)을 참조하세요.  
+ 다양한 컨트롤에서 지원하는 콘텐츠 종류에 대한 자세한 내용은 [WPF 콘텐츠 모델](/dotnet/framework/wpf/controls/wpf-content-model)을 참조하세요.  
   
 ### <a name="triggers"></a>트리거  
- XAML 태그의 주요 용도는 응용 프로그램의 모양을 구현하는 것이지만 XAML을 사용하여 응용 프로그램 동작의 일부 측면을 구현할 수도 있습니다. 한 가지 예는 트리거를 사용하여 사용자 조작에 따라 응용 프로그램의 모양을 변경하는 것입니다. 자세한 내용은 [스타일 지정 및 템플릿](https://msdn.microsoft.com/en-us/library/ms745683\(v=vs.100\).aspx)을 참조하세요.  
+ XAML 태그의 주요 용도는 응용 프로그램의 모양을 구현하는 것이지만 XAML을 사용하여 응용 프로그램 동작의 일부 측면을 구현할 수도 있습니다. 한 가지 예는 트리거를 사용하여 사용자 조작에 따라 응용 프로그램의 모양을 변경하는 것입니다. 자세한 내용은 [스타일 지정 및 템플릿](/dotnet/framework/wpf/controls/styling-and-templating)을 참조하세요.  
   
 ### <a name="control-templates"></a>컨트롤 템플릿  
  WPF 컨트롤의 기본 사용자 인터페이스는 일반적으로 다른 컨트롤 및 도형에서 구성됩니다. 예를 들어 <xref:System.Windows.Controls.Button> 은 <xref:Microsoft.Windows.Themes.ButtonChrome> 및 <xref:System.Windows.Controls.ContentPresenter> 컨트롤 둘 다로 구성됩니다. <xref:Microsoft.Windows.Themes.ButtonChrome> 은 표준 단추 모양을 제공하는 반면, <xref:System.Windows.Controls.ContentPresenter> 는 <xref:System.Windows.Controls.ContentControl.Content%2A> 속성에 지정된 대로 단추의 콘텐츠를 표시합니다.  
@@ -491,7 +491,7 @@ End Namespace
   
  <xref:System.Windows.Controls.ListBox>의 동작과 전반적인 모양은 유지되고 목록 상자에 표시되는 콘텐츠의 모양만 변경되었습니다.  
   
- 자세한 내용은 [데이터 템플릿 개요](https://msdn.microsoft.com/en-us/library/ms742521\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [데이터 템플릿 개요](/dotnet/framework/wpf/data/data-templating-overview)를 참조하세요.  
   
 ### <a name="styles"></a>스타일  
  스타일을 사용하면 개발자와 디자이너가 해당 제품에 대해 특정 모양을 표준화할 수 있습니다. WPF는 <xref:System.Windows.Style> 요소를 기반으로 하는 강력한 스타일 모델을 제공합니다. 다음 예제에서는 창에 있는 모든 <xref:System.Windows.Controls.Button> 의 배경색을 `Orange`로 설정하는 스타일을 만듭니다.  
@@ -525,7 +525,7 @@ End Namespace
   
  ![두 개의 주황색 단추](../designers/media/wpfintrofigure20.png "WPFIntroFigure20")  
   
- 자세한 내용은 [스타일 지정 및 템플릿](https://msdn.microsoft.com/en-us/library/ms745683\(v=vs.100\).aspx)을 참조하세요.  
+ 자세한 내용은 [스타일 지정 및 템플릿](/dotnet/framework/wpf/controls/styling-and-templating)을 참조하세요.  
   
 ### <a name="resources"></a>리소스  
  응용 프로그램의 컨트롤은 글꼴 및 배경색부터 컨트롤 템플릿, 데이터 템플릿 및 스타일까지 모든 항목을 포함할 수 있는 동일한 모양을 공유해야 합니다. 사용자 인터페이스 리소스에 대한 WPF 지원을 사용하여 재사용을 위해 이러한 리소스를 단일 위치에 캡슐화할 수 있습니다.  
@@ -596,7 +596,7 @@ End Namespace
   
  리소스 및 리소스 사전은 테마 및 스킨에 대한 WPF 지원의 기반이 됩니다.  
   
- 자세한 내용은 [리소스 개요](https://msdn.microsoft.com/en-us/library/ms750613\(v=vs.100\).aspx)를 참조하세요.  
+ 자세한 내용은 [리소스 개요](/dotnet/framework/wpf/advanced/xaml-resources)를 참조하세요.  
   
 ### <a name="custom-controls"></a>사용자 지정 컨트롤  
  WPF는 다양한 사용자 지정 지원을 제공하지만 기존 WPF 컨트롤이 응용 프로그램 또는 해당 사용자의 요구를 충족하지 않는 경우가 발생할 수 있습니다. 이 오류는 다음과 같은 경우에 발생할 수 있습니다.  
@@ -628,18 +628,18 @@ End Namespace
   
  ![사용자 지정 UserControl](../designers/media/wpfintrofigure3.png "WPFIntroFigure3")  
   
- 사용자 지정 컨트롤에 대한 자세한 내용은 [컨트롤 제작 개요](https://msdn.microsoft.com/en-us/library/ms745025\(v=vs.100\).aspx)를 참조하세요.  
+ 사용자 지정 컨트롤에 대한 자세한 내용은 [컨트롤 제작 개요](/dotnet/framework/wpf/controls/control-authoring-overview)를 참조하세요.  
   
 ##  <a name="WPF_Best_Practices"></a> WPF 모범 사례  
  모든 개발 플랫폼과 마찬가지로 WPF를 다양한 방법으로 사용하여 원하는 결과를 얻을 수 있습니다. WPF 응용 프로그램이 필요한 사용자 환경을 제공하고 일반적인 사용자 요구를 충족하도록 하는 한 가지 방법으로 접근성, 전역화 및 지역화, 성능에 대한 권장 모범 사례가 있습니다. 자세한 내용은 다음을 참조하세요.  
   
--   [접근성 모범 사례](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)접근성 모범 사례  
+-   [접근성 모범 사례](/dotnet/framework/ui-automation/accessibility-best-practices)접근성 모범 사례  
   
--   [WPF 전역화 및 지역화 개요](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
+-   [WPF 전역화 및 지역화 개요](/dotnet/framework/wpf/advanced/wpf-globalization-and-localization-overview)  
   
--   [WPF 응용 프로그램 성능 최적화](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
+-   [WPF 응용 프로그램 성능 최적화](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)  
   
--   [Windows Presentation Foundation 보안](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
+-   [Windows Presentation Foundation 보안](/dotnet/framework/wpf/security-wpf)  
   
 ##  <a name="Summary"></a> 요약  
  WPF는 시각적으로 멋진 다양한 클라이언트 응용 프로그램을 빌드하기 위한 포괄적인 프레젠테이션 기술입니다. 이 소개에서는 WPF의 주요 기능을 살펴봤습니다.  
@@ -651,4 +651,4 @@ End Namespace
 ## <a name="see-also"></a>참고 항목  
  [WPF 시작](../designers/getting-started-with-wpf.md)   
  [Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)   
- [Windows Presentation Foundation](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)
+ [Windows Presentation Foundation](/dotnet/framework/wpf/index)

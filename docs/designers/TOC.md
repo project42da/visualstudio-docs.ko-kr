@@ -24,6 +24,7 @@
 ### [WPF 시작](getting-started-with-wpf.md)
 #### [WPF 소개](introduction-to-wpf.md)
 #### [연습: 내 첫 WPF 데스크톱 응용 프로그램](walkthrough-my-first-wpf-desktop-application2.md)
+#### [C# 또는 Visual Basic을 사용하여 WPF 앱 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
 #### [WPF 커뮤니티 리소스](wpf-community-resources.md)
 #### [LINQ to XML로 WPF 데이터 바인딩](wpf-data-binding-with-linq-to-xml.md)
 ##### [LINQ to XML로 WPF 데이터 바인딩 개요](wpf-data-binding-with-linq-to-xml-overview.md)

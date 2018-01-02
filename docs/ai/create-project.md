@@ -1,62 +1,27 @@
----
-title: "Visual Studio용 AI 도구에서 프로젝트 만들기"
-description: "Azure Machine Learning 갤러리에서 샘플을 사용하여 프로젝트 만들기"
-keywords: AI, Visual Studio, Azure Machine Learning
-author: lisawong19
-ms.author: liwong
-manager: routlaw
-ms.date: 11/13/2017
-ms.topic: how to article
-ms.technology: visual studio
-ms.devlang: multiple
-ms.service: multiple
-ms.openlocfilehash: 2d8b5f1d06d31eaba9c75e0f0515b2526fc7efdf
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
----
-## <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Visual Studio의 Azure Machine Learning 갤러리에서 AI 프로젝트 만들기
+# <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Visual Studio의 템플릿에서 AI 프로젝트 만들기
 
-Azure Machine Learning은 Visual Studio Tools for AI와 통합됩니다. Azure 가상 머신, Spark 클러스터 등과 같은 원격 계산 대상에 기계 학습 작업을 제출할 수 있습니다. [Azure Machine Learning 실험](https://docs.microsoft.com/azure/machine-learning/preview/experimentation-service-configuration)에 대해 자세히 알아보세요. 
+[AI에 Visual Studio Tools를 설치](installation.md)하면 다양한 템플릿을 사용하여 새 Python 프로젝트를 쉽게 만들 수 있습니다.
 
-[Visual Studio Tools for AI](installation.md)가 설치되면 Azure Machine Learning 샘플 갤러리에서 미리 만들어진 방법을 사용하여 새 Python 프로젝트를 쉽게 만들 수 있습니다.
+1. Visual Studio를 실행합니다.
 
-> ! Azure Machine Learning Workbench가 설치되어 있어야 합니다. 설치하려면 [Azure Machine Learning 설치 빠른 시작](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation)을 참조하세요. 
+1. **파일 > 새로 만들기 > 프로젝트**(Ctrl+Shift+N)를 선택합니다. **새 프로젝트** 대화 상자에서 "**AI 도구**"를 검색하고, 원하는 템플릿을 선택합니다. 템플릿을 선택하면 템플릿이 제공하는 것의 간단한 설명이 표시됩니다. 
 
-1. Visual Studio를 실행합니다. **AI 도구** 메뉴를 열고 **클러스터 선택**을 선택하여 **서버 탐색기**를 엽니다.  
+    ![Python 템플릿이 있는 VS2017 새 프로젝트 대화 상자](media\create-project\new-ai-project.png)
 
-    ![클러스터 선택](media\create-project\select-cluster.png)
+1. 이 빠른 시작의 경우 "**TensorFlow 응용 프로그램**" 템플릿을 선택하고, 프로젝트에 이름(예: "MNIST") 및 위치를 지정하고, **확인**을 선택합니다. 
 
-1. [서버 탐색기]에서 **Azure Machine Learning** 노드를 마우스 오른쪽 단추로 클릭한 다음 **로그인**을 선택하여 Azure Machine Learning 구독에 로그인하고 지시를 따릅니다.
+1. Visual Studio는 템플릿에 설명된 대로 다른 파일과 함께 프로젝트 파일(디스크의 `.pyproj` 파일)을 만듭니다. "TensorFlow 응용 프로그램" 템플릿을 사용하여 프로젝트는 프로젝트와 같은 이름이 지정된 하나의 파일만을 포함합니다. 파일은 기본적으로 Visual Studio 편집기에서 열립니다.
 
-    ![로그인](media\create-project\azureml-login.png)
- 
-2. **AI 도구 > Azure 컴퓨터 학습 샘플 갤러리**를 차례로 선택합니다. 
-    
-    ![샘플 갤러리](media\create-project\gallery.png)
+    ![Python 응용 프로그램 템플릿을 사용하는 경우의 결과 프로젝트](media\create-project\new-tensorflowapp.png)
 
-1. 이 빠른 시작의 경우 "**TensorFlow를 사용하는 MNIST**" 샘플을 선택하고 **설치**를 클릭합니다. 다음을 제공합니다. 
-2.
- - **리소스 그룹**: 메타데이터가 저장될 Azure 리소스 그룹
- - **계정**: Azure Machine Learning 실험 계정
- - **작업 영역**: Azure Machine Learning 작업 영역
- - **프로젝트 형식**: 기계 학습 프레임워크이며, 여기서는 **TensorFlow**를 선택합니다.
- - **솔루션에 추가**: 현재 Visual Studio 솔루션에 추가할지, 아니면 새 솔루션을 만들어 열지를 결정합니다.
- - **프로젝트 경로**: 코드를 저장할 위치
- - **프로젝트 이름**: **TensorFlowMNIST**를 입력합니다.
-   
+1. 코드가 이미 TensorFlow, numpy, sys 등을 비롯한 여러 라이브러리를 가져옵니다. 또한 입력 학습 데이터, 출력 모델 및 로그 파일의 위치를 쉽게 전환할 수 있기 위해 몇 가지 입력 인수를 갖는 응용 프로그램을 준비하기 시작합니다. 이러한 매개 변수는 여러 계산 컨텍스트에 작업을 제출하는 경우에 유용합니다(예: Azure 파일 공유가 아닌 로컬 개발 상자의 다른 디렉터리). 
 
-    ![Python 응용 프로그램 템플릿을 사용하는 경우의 결과 프로젝트](media\create-project\new-AzureSampleProject.png)
+1. 프로젝트에는 이러한 입력 매개 변수에 명령줄 인수를 자동으로 전달하여 앱을 디버그하기 쉽도록 하기 위해 만든 몇 가지 속성이 있습니다. 프로젝트를 **마우스 오른쪽 단추로 클릭**하고 **속성**을 선택합니다. 
 
-1. Visual Studio는 샘플에 정의된 다른 파일과 함께 프로젝트 파일(디스크의 `.pyproj` 파일)을 만듭니다. "MNIST" 템플릿을 사용하면 프로젝트에 여러 파일이 포함됩니다.
+    ![속성](media\create-project\project-properties.png)
 
-    ![mnist](media\create-project\azml-mnist.png)
+1. **디버그** 탭을 클릭하여 스크립트 인수가 자동으로 추가되었는지 확인합니다. 필요에 따라 입력 데이터의 위치 및 출력을 저장할 위치로 변경할 수 있습니다.
 
-1. Azure Machine Learning에 작업을 제출합니다. 
+    ![속성](media\create-project\/project-properties_1.png)
 
-    ![mnist](media\create-project\submit-azml.png)
-
-1. Docker 컨테이너 또는 로컬 컴퓨터에서 실행합니다.
-
-    ![mnist](media\create-project\azml-local.png)
+1. Ctrl+F5 키를 누르거나 메뉴에서 **디버그 > 디버깅하지 않고 시작**을 선택하여 프로그램을 실행합니다. 결과는 콘솔 창에 표시됩니다.

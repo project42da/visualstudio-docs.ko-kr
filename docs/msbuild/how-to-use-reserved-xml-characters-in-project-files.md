@@ -15,11 +15,11 @@ caps.latest.revision: "14"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: c477cd9160a765a554cfa432b023b20eb6ef6b4e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 8acc59afdd050998f2269cc9be1986b7f4f426ae
+ms.sourcegitcommit: 38097344f3ff74ba7b03bcfa45910015ca6bc2be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="how-to-use-reserved-xml-characters-in-project-files"></a>방법: 프로젝트 파일에서 예약된 XML 문자 사용
 프로젝트 파일을 작성할 경우 속성 값이나 작업 매개 변수 값 등에서 예약된 XML 문자를 사용해야 합니다. 그러나 프로젝트 파일을 구문 분석할 수 있도록 일부 예약된 문자를 명명된 엔터티로 바꿔야 합니다.  
@@ -29,18 +29,18 @@ ms.lasthandoff: 10/31/2017
   
 |예약된 문자|명명된 엔터티|  
 |------------------------|------------------|  
-|\<|&lt;|  
-|>|&gt;|  
-|&|&amp;|  
-|"|&quot;|  
-|'|&apos;|  
+|\<|&amp;lt;|  
+|>|&amp;gt;|  
+|&|&amp;amp;|  
+|"|&amp;quot;|  
+|'|&amp;apos;|  
   
 #### <a name="to-use-double-quotes-in-a-project-file"></a>프로젝트 파일에서 큰따옴표를 사용하려면  
   
--   큰따옴표를 해당 명명된 엔터티 &quot;로 바꿉니다. 예를 들어 `EXEFile` 항목 목록 주위에 큰따옴표를 배치하려면 다음을 입력합니다.  
+-   큰따옴표를 해당 명명된 엔터티 &amp;quot;로 바꿉니다. 예를 들어 `EXEFile` 항목 목록 주위에 큰따옴표를 배치하려면 다음을 입력합니다.  
   
     ```xml  
-    <Message Text="The output file is "@(EXEFile)"."/>  
+    <Message Text="The output file is &quot;@(EXEFile)&quot;."/>  
     ```  
   
 ## <a name="example"></a>예제  
@@ -68,10 +68,11 @@ ms.lasthandoff: 10/31/2017
                 ItemName = "EXEFile"/>  
         </Csc>  
         <!-- Log the file name of the output file -->  
-        <Message Text="The output file is "@(EXEFile)"."/>  
+        <Message Text="The output file is &quot;@(EXEFile)&quot;."/>  
     </Target>  
 </Project>  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [MSBuild 참조](../msbuild/msbuild-reference.md) [MSBuild](../msbuild/msbuild.md)
+ [MSBuild 참조](../msbuild/msbuild-reference.md)    
+ [MSBuild](../msbuild/msbuild.md)    

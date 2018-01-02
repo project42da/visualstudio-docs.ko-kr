@@ -10,11 +10,11 @@ ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7adb1ec7badaefceb8430d0fcacd8e54e7404ea7
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: a08bcc91159182043b68391bc869243909d6df8b
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>빠른 시작: Visual Studio IDE 및 편집기 개인 설정
 
@@ -79,11 +79,13 @@ Visual Studio 2017의 기본 색 테마는 **파랑**이라고 합니다. **어�
 
 1. **환경** 아래에서 **글꼴 및 색** 범주를 선택합니다.
 
-   **설정 표시** 아래의 텍스트에 **텍스트 편집기**라고 표시됩니다. 이것이 우리가 원하는 설정입니다. 드롭다운 목록을 확장하여 글꼴 및 텍스트 색을 사용자 지정할 수 있는 위치의 광범위한 목록을 표시할 수 있습니다.
+   **설정 표시** 아래의 텍스트에 **텍스트 편집기**&mdash;라고 표시됩니다. 이것이 우리가 원하는 설정입니다. 드롭다운 목록을 확장하여 글꼴 및 텍스트 색을 사용자 지정할 수 있는 위치의 광범위한 목록을 표시할 수 있습니다.
 
 1. 줄 번호 텍스트의 색을 변경하려면 **표시 항목** 목록에서 **줄 번호**를 선택합니다. **항목 전경** 상자에서 **올리브**를 선택합니다.
 
    ![옵션 대화 상자, 글꼴 및 색 범주](media/quickstart-personalize-line-number-color.png)
+
+   일부 언어에는 고유한 특정 글꼴 및 색 설정이 있습니다. 예를 들어 C++ 개발자가 함수에 사용되는 색을 변경하려는 경우 **항목 표시** 목록에서 **C++ 함수**를 찾을 수 있습니다.
 
 1. 대화 상자를 종료하기 전에 XML 특성의 색도 변경해 보겠습니다. **표시 항목** 목록에서 **XML 특성**이 표시될 때까지 아래로 스크롤하여 선택합니다. **항목 전경** 상자에서 **라임**을 선택합니다. **확인**을 선택하여 선택 항목을 저장하고 대화 상자를 닫습니다.
 
@@ -96,6 +98,8 @@ Visual Studio에서 색을 사용자 지정하는 몇 가지 방법을 살펴보
 ## <a name="see-also"></a>참고 항목
 
 [빠른 시작: 먼저 Visual Studio IDE 살펴보기](../ide/quickstart-ide-orientation.md)  
+[빠른 시작: 편집기에서 코딩](../ide/quickstart-editor.md)  
+[빠른 시작: 프로젝트 및 솔루션](../ide/quickstart-projects-solutions.md)  
 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)  
 [편집기 사용자 지정](../ide/customizing-the-editor.md)  
 [Visual Studio IDE 개요](../ide/visual-studio-ide.md)

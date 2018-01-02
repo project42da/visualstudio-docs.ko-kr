@@ -12,14 +12,47 @@ caps.latest.revision: "12"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 3f5569a6f6d5bb51db61292e3ba12b16dbc201b9
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: f33a7f43fdd52103fcd041d1f6502b88677eef1e
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>변경 로그(Visual Studio Tools for Unity)
 Visual Studio Tools for Unity에 대한 변경 로그입니다.  
+
+## <a name="3502"></a>3.5.0.2
+ 릴리스됨 2017-12-04
+
+### <a name="new-features"></a>새 기능  
+
+-   **통합:**  
+
+    -   통합 프로젝트는 이제 통합에서 스크립트를 추가하거나 제거할 때 Visual Studio에서 자동으로 리로드됩니다.
+
+-   **디버거:**  
+
+    -   Xamarin 및 Mac용 Visual Studio에서 공유된 Mono 디버거를 사용하여 통합 편집기를 디버깅하는 옵션을 추가했습니다.
+
+    -   휴대용 디버그 기호 파일에 대한 지원을 추가했습니다.
+
+### <a name="bug-fixes"></a>버그 수정  
+
+-   **통합:**  
+
+    -   설치 종속성 문제를 수정했습니다.
+
+    -   Unity API 도움말 메뉴를 표시하지 않도록 수정했습니다.
+    
+-   **프로젝트 생성:**  
+
+    -   IL2CPP/.NET 4.6 백 엔드에서 UWP 게임을 사용할 때 Player 프로젝트 생성을 수정했습니다.
+    
+    -   어셈블리 파일 이름에 잘못 추가된 추가 .dll 확장명을 수정했습니다.
+    
+    -   글로벌 수준 대신 특정 프로젝트 API 호환성 수준의 사용량을 수정했습니다.
+    
+    -   이제 기본값이 'true'이므로 AllowAttachedDebuggingOfEditor Unity 플래그를 강제하지 않습니다.
 
 ## <a name="3402"></a>3.4.0.2
  릴리스됨 2017-09-19
