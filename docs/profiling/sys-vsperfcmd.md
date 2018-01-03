@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4c733e9ce91ede2e8944616c5db1a727349854b1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2fa8b11d6f7ca080980234fde4fef5659f376a2c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sys-vsperfcmd"></a>Sys(VSPerfCmd)
 VSPerfCmd.exe **Sys** 옵션은 시스템 호출 이벤트(프로파일링된 응용 프로그램에서 운영 체제로 함수 호출)로 샘플링되는 프로파일링 이벤트를 설정하고 필요에 따라 기본값 10의 샘플링 간격에서 시스템 호출 수를 변경합니다.  
@@ -61,7 +62,7 @@ VSPerfCmd.exe {/Launch:AppName|Attach:PID} /Sys[:Events] [Options]
  **GC**[**:**{**Allocation**&#124;**Lifetime**}]  
  .NET 메모리 데이터를 수집합니다. 기본적으로(**Allocation**) 모든 메모리 할당 이벤트에서 데이터가 수집됩니다. **Lifetime** 매개변수가 지정되면 데이터는 각 가비지 컬렉션 이벤트에서도 수집됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제는 프로파일러 샘플링 이벤트를 시스템 호출로 설정하는 방법 및 샘플링 간격을 샘플당 20 호출로 설정하는 방법을 보여 줍니다.  
   
 ```  

@@ -19,11 +19,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 577c6a7b76bcecb3c3f5fc7889d75b5fd3ff1ce0
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 888f8f39b409559ac4d5c219f024a867f71b2263
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio에서 정규식 사용
 
@@ -40,9 +41,9 @@ ms.lasthandoff: 12/07/2017
 
 다음은 몇 가지 예입니다.
 
-|용도|식|예제|
+|용도|식|예|
 |-------------|----------------|-------------|
-|줄 바꿈 이외의 모든 단일 문자를 찾습니다.|입니다.|`a.o`는 "around"의 "aro" 및 "about"의 "abo"와 일치하지만 "across"의 "acro"와 일치하지 않습니다.|  
+|줄 바꿈 이외의 모든 단일 문자를 찾습니다.|이어야 합니다.|`a.o`는 "around"의 "aro" 및 "about"의 "abo"와 일치하지만 "across"의 "acro"와 일치하지 않습니다.|  
 |이전 식에서 일치 항목 0개 이상을 찾습니다(가능한 한 많은 문자를 찾음).|*|`a*r`는 "rack"의 "r", "ark"의 "ar", "aardvark"의 "aar"과 일치합니다.|  
 |임의의 문자를 0회 이상 찾습니다(와일드카드 *).|.*|c.*e는 “racket”의 “cke”, “comment”의 “comme”, “code”의 “code”와 일치합니다.|  
 |이전 식에서 일치 항목 1개 이상을 찾습니다(가능한 한 많은 문자를 찾음).|+|`e.+e`는 "feeder"의 "eede"와 일치하지만 "ee"와 일치하지 않습니다.|  

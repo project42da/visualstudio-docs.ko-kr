@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c23bc80fff6bf088d10c788b92a52b1c43fc5db9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 53dd29671e20f19c0ef83d5920581c7038f32c9f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd)
 동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd.exe)를 사용하면 명령줄에서 추적을 수집하여 Visual Studio용 동시성 시각화 도우미에서 확인할 수 있습니다. 이러한 도구는 Visual Studio가 설치되어 있지 않은 컴퓨터에서도 사용할 수 있습니다.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/31/2017
 |Markers|표식 공급자 목록을 포함합니다.|MarkerProvider 요소를 0개 이상 포함할 수 있습니다.|  
 |MarkerProvider|단일 표식 공급자를 지정합니다.|다음 요소를 포함해야 합니다.<br /><br /> -   Level<br />-   GUID<br />-   Name<br /><br /> 다음 요소를 포함할 수 있습니다.<br /><br /> -   Categories<br />-   IsEnabled|  
 |수준|MarkerProvider의 중요도 수준을 설정합니다.|-   Low<br />-   Normal<br />-   High<br />-   Critical<br />-   Everything|  
-|Guid|ETW 표식 공급자의 고유한 전역 식별자입니다.|GUID|  
+|GUID|ETW 표식 공급자의 고유한 전역 식별자입니다.|GUID|  
 |이름|표식 공급자에 대한 설명을 지정합니다.|문자열|  
 |범주|표식 공급자에 대해 수집된 범주를 지정합니다.|쉼표로 구분된 숫자 문자열 또는 숫자 범위|  
 |IsEnabled|표식 공급자를 수집에 사용할지 여부를 결정하는 값을 설정합니다.|-   True<br />-   False|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/31/2017
 |JustMyCode|내 코드만 디렉터리의 목록을 지정합니다.|MyCodeDirectory 요소 0개 이상으로 구성된 목록|  
 |MyCodeDirectory|코드가 포함된 디렉터리를 지정합니다.|절대 경로|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  처음부터 구성 파일을 만드는 대신 다음 예제를 복사한 다음 요구 사항에 맞춰 수정할 수 있습니다.  
   
 ```xml  

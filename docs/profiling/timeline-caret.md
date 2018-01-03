@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bdb416aa4f3825c954c78106bd5e147f83705d2a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a0ca44152702c3669d791f67da8f41ad09f9bc72
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timeline-caret"></a>시간 표시 막대 캐럿
 실행 중인 스레드 세그먼트의 타임라인에서 한 지점을 선택하면 타임라인 캐럿이 위에 표시됩니다. 현재 스택 탭에 표시되는 호출 스택은 세그먼트를 클릭한위치와 시간상 가장 가까운 스택입니다. 캐럿은 호출 스택을 연결하는 데 사용됩니다. 호출 스택은 샘플링된 시간과 함께 **현재** 탭 아래에 표시됩니다. 캐럿에는 호출 스택의 정확한 위치(사용자가 선택한 위치와 가장 가까운 호출 스택)가 표시됩니다.  

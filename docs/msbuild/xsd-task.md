@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: df309f6b4d28da051dca9b824d06dcae221b2a9e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e45350598a50709a411da270e3607197a36ee20b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xsd-task"></a>XSD 작업
 소스에서 스키마 또는 클래스 파일을 생성하는 XML 스키마 정의 도구(xsd.exe)를 래핑합니다.  
@@ -38,13 +39,13 @@ ms.lasthandoff: 10/31/2017
   
 -   **AdditionalOptions**  
   
-     선택적 **String** 매개 변수입니다.  
+     선택적 **문자열** 매개 변수입니다.  
   
      명령줄에 지정된 것처럼 옵션 목록입니다. 예를 들면 "*/option1 /option2 /option#*"과 같습니다. 이 매개 변수를 사용하여 다른 **XSD** 작업 매개 변수로 표현되지 않는 옵션을 지정합니다.  
   
 -   **GenerateFromSchema**  
   
-     선택적 **String** 매개 변수입니다.  
+     선택적 **문자열** 매개 변수입니다.  
   
      지정한 스키마에서 생성되는 유형을 지정합니다.  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/31/2017
   
 -   **Namespace**  
   
-     선택적 **String** 매개 변수입니다.  
+     선택적 **문자열** 매개 변수입니다.  
   
      생성된 형식에 대한 런타임 네임스페이스를 지정합니다.  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
   
 -   **TrackerLogDirectory**  
   
-     선택적 **String** 매개 변수입니다.  
+     선택적 **문자열** 매개 변수입니다.  
   
      추적기 로그용 디렉터리를 지정합니다.  
   

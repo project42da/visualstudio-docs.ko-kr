@@ -20,11 +20,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fe926dffa1230c5608d84e732740509a7c7e1a4a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7b57de7b2cbc0838920df5f83d6d1e2bd8d733f2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-visual-studio-image-library"></a>Visual Studio 이미지 라이브러리
 Visual Studio 이미지 라이브러리에는 Microsoft Visual Studio, Microsoft Windows, Office system 및 기타 Microsoft 소프트웨어에 나타나는 응용 프로그램 이미지가 포함되어 있습니다. 1,000개가 넘는 이러한 이미지를 사용하여 Microsoft 소프트웨어와 일관된 모양의 응용 프로그램을 만들 수 있습니다.  

@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 6bdca24340f301fc19f3bc8d1e86c97c3b98c5c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 20548574a15c1ac7867ff7142033e94328a40ddf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lib-task"></a>LIB 작업
 Microsoft 32비트 라이브러리 관리자 도구인 lib.exe를 래핑합니다. 라이브러리 관리자는 COFF(공용 개체 파일 형식) 개체 파일의 라이브러리를 만들고 관리합니다. 또한 라이브러리 관리자를 사용하여 내보내기 파일을 만들고 내보낸 정의를 참조하는 라이브러리를 가져올 수 있습니다. 자세한 내용은 [LIB 참조](/cpp/build/reference/lib-reference) 및 [LIB 실행](/cpp/build/reference/running-lib)을 참조하세요.  
@@ -56,7 +57,7 @@ Microsoft 32비트 라이브러리 관리자 도구인 lib.exe를 래핑합니�
 |**LinkTimeCodeGeneration**|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`인 경우 링크 타임 코드 생성을 지정합니다.<br /><br /> 이 매개 변수는 lib.exe의 **/LCTG** 옵션에 해당합니다.|  
 |**MinimumRequiredVersion**|선택적 **문자열** 매개 변수입니다.<br /><br /> 하위 시스템의 최소 필수 버전을 지정합니다. 0~65535 범위의 10진수의 쉼표로 구분된 목록을 지정합니다.|  
 |**ModuleDefinitionFile**|선택적 **문자열** 매개 변수입니다.<br /><br /> 모듈 정의 파일(.def)의 이름을 지정합니다.<br /><br /> 이 매개 변수는 `filename` 인수를 사용하는 lib.exe의 **/DEF** 옵션에 해당합니다.|  
-|**Name**|선택적 **문자열** 매개 변수입니다.<br /><br /> 가져오기 라이브러리를 빌드할 때 사용할 DLL의 이름을 지정합니다.<br /><br /> 이 매개 변수는 `filename` 인수를 사용하는 lib.exe의 **/NAME** 옵션에 해당합니다.|  
+|**이름**|선택적 **문자열** 매개 변수입니다.<br /><br /> 가져오기 라이브러리를 빌드할 때 사용할 DLL의 이름을 지정합니다.<br /><br /> 이 매개 변수는 `filename` 인수를 사용하는 lib.exe의 **/NAME** 옵션에 해당합니다.|  
 |**OutputFile**|선택적 **문자열** 매개 변수입니다.<br /><br /> lib.exe에서 만드는 프로그램의 기본 이름과 위치는 무시됩니다.<br /><br /> 이 매개 변수는 `filename` 인수를 사용하는 lib.exe의 **/OUT** 옵션에 해당합니다.|  
 |**RemoveObjects**|선택적 **String[]** 매개 변수입니다.<br /><br /> 지정된 개체를 출력 라이브러리에서 제거합니다. Lib.exe는 모든 개체(개체 파일 또는 라이브러리)를 결합하여 출력 라이브러리를 만든 다음 이 개체로 지정된 개체를 삭제합니다.<br /><br /> 이 매개 변수는 `membername` 인수를 사용하는 lib.exe의 **/REMOVE** 옵션에 해당합니다.|  
 |**Sources**|필수 `ITaskItem[]` 매개 변수입니다.<br /><br /> 공백으로 구분된 소스 파일 목록을 지정합니다.|  

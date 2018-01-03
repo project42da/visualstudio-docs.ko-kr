@@ -11,11 +11,12 @@ ms.assetid: 26de91b8-45e3-4976-a20e-a3bd1942ddcb
 caps.latest.revision: "11"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: c3e5410769ba10a905c8116677ae5d03d0df656e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 1612856fa4c098b5b7ff081020a84324bd5f8c4f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-code-coverage"></a>코드 검사 문제 해결
 Visual Studio의 코드 검사 분석 도구는 네이티브 및 관리되는 어셈블리(.dll 또는 .exe 파일)에 대한 데이터를 수집합니다. 그러나 코드 검사 결과 창에 "빈 결과 작성됨: ..."과 유사한 오류가 표시될 수 있습니다. 이 문제가 발생하는 이유는 여러 가지가 있습니다. 이 항목은 이러한 문제를 해결하는 데 유용합니다.  

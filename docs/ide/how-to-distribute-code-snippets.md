@@ -14,11 +14,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 dev_langs: VB
-ms.openlocfilehash: e4c103aec04a9012b82c5fe979f8d5d23cfa1680
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 39f6006ec6dfe754efc58f2ccdc7b09d803de6b3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-distribute-code-snippets"></a>방법: 코드 조각 배포
 친구에게 코드 조각을 제공하고 코드 조각 관리자를 사용하여 각자의 컴퓨터에 조각을 설치하도록 하면 됩니다. 그러나 배포할 조각이 여러 개이거나 조각을 더 광범위하게 배포하려는 경우 Visual Studio 사용자가 설치할 수 있는 Visual Studio 확장에 조각 파일을 포함합니다.  

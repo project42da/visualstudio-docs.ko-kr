@@ -24,11 +24,12 @@ caps.latest.revision: "29"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 094e3968b527261125753002d9b6a31c7bd5d244
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 10dffd6ea1a07c33df07f27ee8268932f18d8c32
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resolveassemblyreference-task"></a>ResolveAssemblyReference 작업
 지정된 어셈블리에 종속된 모든 어셈블리를 결정합니다. 여기에는 2차 및 `n`차 종속성이 포함됩니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
 |`CopyLocalDependenciesWhenParentReferenceInGac`|선택적 <xref:System.Boolean> 매개 변수입니다.<br /><br /> true일 경우 종속성을 로컬로 복사해야 할지 결정하기 위해 확인해야 할 사항 중 하나는 프로젝트 파일에 있는 부모 참조에 개인 메타데이터가 설정되어 있는지 확인하는 것입니다. 설정되어 있다면 개인 값이 종속성으로 사용됩니다.<br /><br /> 메타데이터를 설정되어 있지 않으면 종속성은 부모 참조와 동일한 검사를 통과합니다. 이러한 검사 중 하나는 참조가 GAC에 있는지 확인하는 것입니다. 참조가 GAC에 있으면 참조가 대상 컴퓨터의 GAC에 있는 것으로 간주되므로 로컬로 복사되지 않습니다. 이것은 특정 참조에만 적용되고 해당 종속성에는 적용되지 않습니다.<br /><br /> 예를 들어 GAC에 있는 프로젝트 파일에 있는 참조는 로컬로 복사되지 않지만, 해당 종속성은 GAC에 없으므로 로컬로 복사됩니다.<br /><br /> false일 경우, 프로젝트 파일 참조는 이 참조가 GAC에 있는지 알기 위해 확인되며 적절하게 로컬로 복사됩니다.<br /><br /> 종속성은 GAC에 있는지 알기 위해 확인되고, 프로젝트 파일의 부모 참조가 GAC에 있는지 알기 위해서도 확인됩니다.<br /><br /> 프로젝트 파일의 부모 참조가 GAC에 있으면 종속성은 로컬로 복사되지 않습니다.<br /><br /> 이 매개 변수가 true든 false든 상관없이, 여러 부모 참조가 있고 이 중 어느 것도 GAC에 없다면, 이것들은 모두 로컬로 복사됩니다.|  
 |`CopyLocalFiles`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 읽기 전용 출력 매개 변수입니다.<br /><br /> 값이 `ResolvedFiles`인 `ResolvedDependencyFiles`인 `RelatedFiles`인 `SatelliteFiles`, `ScatterFiles` , `CopyLocal` , `true`여야 합니다.|  
 |`FilesWritten`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 매개 변수입니다.<br /><br /> 디스크에 기록된 항목을 포함합니다.|  
-|`FindDependencies`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`일 경우, 종속성이 검색됩니다. 그렇지 않은 경우에는 기본 참조만 검색됩니다. 기본값은 `true`여야 합니다.|  
+|`FindDependencies`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`일 경우, 종속성이 검색됩니다. 그렇지 않은 경우에는 기본 참조만 검색됩니다. 기본값은 `true`입니다.|  
 |`FindRelatedFiles`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`일 경우 .pdb 파일 및 .xml 파일과 같은 관련 파일이 검색됩니다. 기본값은 `true`입니다.|  
 |`FindSatellites`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`일 경우 위성 어셈블리가 검색됩니다. 기본값은 `true.`|  
 |`FindSerializationAssemblies`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`일 경우, 작업에서 serialization 어셈블리를 검색합니다. 기본값은 `true`입니다.|  

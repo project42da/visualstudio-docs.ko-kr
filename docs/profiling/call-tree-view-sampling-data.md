@@ -15,17 +15,18 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 82c34ef71777c42b2fa743817d731a66b2b8bee9
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: 3759133ef7a2be2a7c4c7d04d1b2d444269b7005
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="call-tree-view---sampling-data"></a>호출 트리 뷰 - 샘플링 데이터
 호출 트리 뷰는 프로파일링된 응용 프로그램에서 트래버스된 함수 실행 경로를 표시합니다.  
   
 > [!NOTE]
->  Windows 8 및 Windows Server 2012의 강화된 보안 기능을 위해 Visual Studio 프로파일러가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. 그래서 UWP 앱에는 새로운 수집 기술도 필요합니다. [Windows 8 및 Windows Server 2012 응용 프로그램의 성능 도구](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)를 참조하세요.  
+>  Windows 8 및 Windows Server 2012의 강화된 보안 기능을 위해 Visual Studio 프로파일러가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. 또한 UWP 앱에는 새로운 수집 기술도 필요합니다. [Windows 8 및 Windows Server 2012 응용 프로그램의 성능 도구](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)를 참조하세요.  
   
  트리의 루트는 응용 프로그램 또는 구성 요소에 대한 진입점입니다. 각 함수 노드에는 호출한 모든 함수 및 이러한 함수 호출에 대한 성능 데이터가 나열됩니다.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/11/2017
 |**함수 이름**|함수의 정규화된 이름입니다.|  
 |**함수 줄 번호**|소스 파일에서 이 함수가 시작되는 줄 번호입니다.|  
 |**함수 주소**|함수의 주소입니다.|  
-|**수준**|호출 트리에서 이 함수의 수준입니다. [VSPerfReport](../profiling/vsperfreport.md) 명령줄 보고서에만 해당합니다.|  
+|**수준**|호출 트리에서 이 함수의 수준입니다. [VSPerfReport](../profiling/vsperfreport.md) 명령줄 보고서에서만 사용됩니다.|  
 |**전용 샘플**|호출 트리의 부모 함수가 이 함수를 호출한 경우 이 함수에서 수집된 샘플 수입니다. 이 수에는 해당 함수가 호출한 함수에서 수집된 샘플이 포함되지 않습니다.|  
 |**전용 샘플 비율(%)**|호출 트리의 부모 함수가 이 함수를 호출한 경우 이 함수의 전용 샘플이었던 모든 샘플의 비율입니다(프로파일링 실행 시).|  
 |**포괄 샘플**|호출 트리의 부모 함수가 이 함수를 호출한 경우 이 함수에서 수집된 샘플 수입니다. 이 수에는 해당 함수가 호출한 함수에서 수집된 샘플이 포함됩니다.|  

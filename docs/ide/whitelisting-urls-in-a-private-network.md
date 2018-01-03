@@ -11,11 +11,12 @@ ms.assetid:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 94348821e44b5ed07e3df5e4859796342919a833
-ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
+ms.workload: multiple
+ms.openlocfilehash: 4a4093c7ebba74493a64833bfbf83ee6d28ef1ef
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whitelisting-urls-in-a-private-network"></a>개인 네트워크의 허용 목록 URL
 
@@ -57,5 +58,4 @@ Visual Studio는 TLS(전송 계층 보안) 1.2 프로토콜을 사용하여 네�
 ## <a name="see-also"></a>참고 항목
 
 [프록시 권한 필요 오류](../ide/reference/proxy-authorization-required.md)  
-[Visual Studio에 사용되는 인터넷 리소스](../ide/connected-environment.md)  
 [방화벽 또는 프록시 서버 뒤에 Visual Studio 설치](../install/install-visual-studio-behind-a-firewall-or-proxy-server.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 99865ecf81fbc7873fef43c51f543f224e281928
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7a6e681c703847c970d79c1523ab12ce89e68d28
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="summary-view---resource-contention-view"></a>요약 뷰 - 리소스 경합 뷰
 요약 뷰에는 스레드 또는 프로세스가 리소스 액세스를 대기하던 중 일시 중단된 응용 프로그램의 이벤트에 대한 정보가 표시됩니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
 |열|설명|  
 |------------|-----------------|  
-|**Name**|리소스의 이름입니다.|  
+|**이름**|리소스의 이름입니다.|  
 |**경합 비율(%)**|이 리소스에 대해 경합이 발생한 프로파일링 데이터 내 모든 경합 이벤트의 백분율입니다.|  
   
 ## <a name="most-contended-thread"></a>경합이 가장 많은 스레드  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/31/2017
 |열|설명|  
 |------------|-----------------|  
 |**ID**|스레드 식별자입니다.|  
-|**Name**|스레드를 소유하는 프로세스의 이름입니다.|  
+|**이름**|스레드를 소유하는 프로세스의 이름입니다.|  
 |**경합 비율(%)**|이 리소스에 대해 경합이 발생한 프로파일링 데이터 내 모든 경합 이벤트의 백분율입니다.|

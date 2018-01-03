@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: c88c90fcc150187bd10e3100cd703522f86bc191
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 8cd00fe33cf463227dd09f93047350a96cee3b92
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio에서 Python 작업
 
@@ -35,10 +36,10 @@ Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visu
 | --- | --- | --- |
 | [Visual Studio 프로젝트 시스템](python-projects.md) | Python 코드의 폴더 구조를 암시적으로 선택할 뿐만 아니라 앱 코드, 테스트 코드, 웹 페이지, JavaScript, 빌드 스크립트 등을 식별할 수 있도록 명시적으로 제어할 수 있습니다. | [Visual Studio의 솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md) |
 | [프로젝트 템플릿](python-projects.md#project-templates) | 콘솔, 웹, Azure, 데이터 과학 및 기타 형식의 프로젝트에 대한 프로젝트 구조를 신속하게 만듭니다. | [Visual Studio 템플릿](../ide/creating-project-and-item-templates.md#visual-studio-templates) |
-| 다양한 인터프리터 지원 | CPython 및 IronPython의 다양한 버전을 지원합니다. | 해당 없음 |
-| IPython 지원 | 인라인 플롯, .NET 및 WPF(Windows Presentation Foundation)에 대한 REPL의 IPython/Jupyter에 대한 지원을 포함합니다. | 해당 없음 |
+| 다양한 인터프리터 지원 | CPython 및 IronPython의 다양한 버전을 지원합니다. | N/A |
+| IPython 지원 | 인라인 플롯, .NET 및 WPF(Windows Presentation Foundation)에 대한 REPL의 IPython/Jupyter에 대한 지원을 포함합니다. | N/A |
 | [다양한 편집 기능, IntelliSense 및 코드 이해](code-editing.md) | 구문 색 지정, 모든 코드 및 라이브러리에 대한 자동 완성, [코드 서식 지정](code-formatting.md), 시그니처 도움말, 클래스 뷰, 정의로 이동, 모든 참조 찾기, 코드 조각, [리팩터링](code-refactoring.md), [PyLint](code-pylint.md) 등을 포함합니다. | [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md) |
-| [대화형 창](interactive-repl.md) | 코드 부분을 간편하게 강조 표시하고 이를 대화형 창으로 보내는 기능을 포함하는 Python에 대한 신속한 REPL 환경을 제공합니다. | 해당 없음 |
+| [대화형 창](interactive-repl.md) | 코드 부분을 간편하게 강조 표시하고 이를 대화형 창으로 보내는 기능을 포함하는 Python에 대한 신속한 REPL 환경을 제공합니다. | N/A |
 | [완전한 기능의 디버깅](debugging.md) | Visual Studio 프로젝트 유무와 관계없이 풍부한 디버깅이 가능하며, 기존 실행 파일 디버그 기능, [Python/C++ 혼합 모드 디버깅](debugging-mixed-mode.md), Windows/Linux/Mac으로 [원격 디버깅](debugging-cross-platform-remote.md), [Azure로 원격 디버깅](debugging-azure-remote.md), 대화형 창 내에서 디버깅 등을 수행할 수 있습니다. | [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md) |
 | [포괄적인 보고를 제공하는 프로파일링 도구](profiling.md) | 서로 다른 프로파일링 실행 간에 성능을 비교하는 기능을 포함하여 응용 프로그램 내에서 시간이 어떻게 소요되는지 살펴봅니다. | [프로파일링 도구](../profiling/profiling-tools.md)(Python에 대해 일부 Visual Studio 프로파일링 기능만 사용할 수 있음) |
 | [단위 테스트 도구](unit-testing.md) | Visual Studio 테스트 탐색기에서 테스트를 검색, 실행 및 관리하고 단위 테스트를 쉽게 디버깅합니다. | [코드 단위 테스트](../test/unit-test-your-code.md) |

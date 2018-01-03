@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e63b69c9d97edf5049dfb6e55b8f9d5010984d4d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 296b33a5582f9a7ba9ed9540b90444376ead91be
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setup-devenvexe"></a>/Setup(devenv.exe)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 가 모든 사용 가능한 VSPackages에서 메뉴, 도구 모음 및 명령 그룹을 설명하는 리소스 메타데이터를 병합하도록 합니다.  
@@ -36,7 +37,7 @@ devenv /setup
   
  `devenv` 및 [devenv](../../ide/reference/setup-devenv-exe.md) 스위치를 사용하려면 관리자 권한으로 [devenv](../../ide/reference/installvstemplates-devenv-exe.md) 를 실행해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예는 VSPackages를 포함하는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 버전의 설치에서 마지막 단계를 보여 줍니다.  
   
 ```  

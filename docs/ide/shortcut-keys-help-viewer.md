@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 04d63762eda13bd0b21f6532f1d401cdef638ea6
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 17f71324031bfdf01b32151288257b97c036056b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shortcut-keys-help-viewer"></a>바로 가기 키(도움말 뷰어)
 다음 표의 바로 가기 키를 사용하여 Microsoft 도움말 뷰어에서 이동할 수 있습니다.  
@@ -33,12 +34,12 @@ ms.lasthandoff: 11/07/2017
 |Toolbar|Alt+오른쪽 화살표|다음 페이지를 표시합니다.|  
 |Toolbar|Alt+Home|도움말 검토자 홈페이지를 표시합니다.|  
 |Toolbar|Ctrl+S|**목차** 탭의 목차에서 현재 항목을 강조 표시합니다.|  
-|ToolBar|Ctrl+D|**즐겨찾기** 탭에 현재 항목을 추가합니다.|  
-|ToolBar|Ctrl+F|현재 항목 내에서 텍스트를 검색할 수 있도록 항목 영역에 찾기 표시줄을 표시합니다.|  
+|Toolbar|Ctrl+D|**즐겨찾기** 탭에 현재 항목을 추가합니다.|  
+|Toolbar|Ctrl+F|현재 항목 내에서 텍스트를 검색할 수 있도록 항목 영역에 찾기 표시줄을 표시합니다.|  
 |Toolbar|Ctrl+P|현재 페이지를 인쇄합니다.|  
 |Toolbar|Ctrl+F2|현재 페이지의 인쇄 미리 보기를 표시합니다.|  
 |Toolbar|Ctrl+O|**뷰어 옵션** 대화 상자를 표시합니다.|  
-|ToolBar|Ctrl+Shift+M|**콘텐츠 관리** 탭을 표시합니다.|  
+|Toolbar|Ctrl+Shift+M|**콘텐츠 관리** 탭을 표시합니다.|  
 |탐색기|Alt+C<br /><br /> -또는-<br /><br /> Ctrl+Shift+C|**목차** 탭을 표시합니다.|  
 |탐색기|Alt+I<br /><br /> -또는-<br /><br /> Ctrl+Shift+I|**인덱스** 탭을 표시합니다.|  
 |탐색기|Alt+F<br /><br /> -또는-<br /><br /> Ctrl+Shift+F|**즐겨찾기** 탭을 표시합니다.|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/07/2017
 |뷰어 옵션|Alt+H|포커스를 **저장되는 최대 기록 항목** 목록으로 이동합니다.|  
 |뷰어 옵션|Alt+E|사용하도록 설정된 경우 **모든 탐색 탭과 F1 요청에 영어 콘텐츠 포함** 확인란을 선택하거나 선택 취소합니다.|  
 |뷰어 옵션|Alt+O|**Go online to check for content updates**(온라인으로 콘텐츠 업데이트 확인) 확인란을 선택하거나 선택 취소합니다.|  
-|Find|입력|포커스를 다음 항목으로 이동합니다.|  
+|Find|Enter 키|포커스를 다음 항목으로 이동합니다.|  
 |Find|Shift+Enter|포커스를 이전 항목으로 이동합니다.|  
 |Find|Esc|**찾기** 텍스트 상자를 숨깁니다.|  
 |상태 표시줄|Alt+E|상태 표시줄에 오류가 발생했다고 표시될 경우 **오류** 대화 상자를 엽니다.|  

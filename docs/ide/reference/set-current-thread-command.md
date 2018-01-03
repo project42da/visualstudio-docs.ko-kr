@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 18c417016071cc25bdccde1c85e97431f20195d9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 24a3f7d50d90769fe64b3657a0327eb8c96b7b42
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-current-thread-command"></a>현재 스레드 설정 명령
 지정한 스레드를 현재 스레드로 설정합니다.  
@@ -33,9 +34,9 @@ Debug.SetCurrentThread index
   
 ## <a name="arguments"></a>인수  
  `index`  
- 필수 요소. 해당 인덱스로 스레드를 선택합니다.  
+ 필수. 해당 인덱스로 스레드를 선택합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 >Debug.SetCurrentThread 1  

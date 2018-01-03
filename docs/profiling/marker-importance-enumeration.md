@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d09138f90b94d3b37c4a20fbe53f311fa29a36e9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ae7bb9f300a1d57707966a3b4dbae202eea78d8c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markerimportance-enumeration"></a>marker_importance 열거형
 동시성 시각화 도우미 표식의 중요도 수준을 나타냅니다.  
@@ -33,7 +34,7 @@ enum marker_importance;
   
 ### <a name="values"></a>값  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |`critical_importance`|표식의 중요도를 매우 중요로 지정합니다.|  
 |`high_importance`|표식의 중요도를 높음으로 지정합니다.|  
@@ -46,4 +47,4 @@ enum marker_importance;
  **네임스페이스:** Concurrency::diagnostic  
   
 ## <a name="see-also"></a>참고 항목  
- [진단 네임스페이스](../profiling/diagnostic-namespace.md)
+ [diagnostic 네임스페이스](../profiling/diagnostic-namespace.md)

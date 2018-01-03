@@ -8,23 +8,18 @@ ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: Microsoft.VisualStudio.Publish.ClickOnceProvider.Dialog.PropertyPage
-dev_langs:
-- VB
-- CSharp
-- C++
 helpviewer_keywords:
 - Project Designer, Publish page
 - Publish page in Project Designer
-ms.assetid: 153527c6-8b95-4003-8e8e-03a489d0a629
-caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0829c1514e8d98d32914c4cc8f59de822d6b7f4d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cbe2be8ec1012295f84fbbec4cc0f614fd86d8d8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publish-page-project-designer"></a>프로젝트 디자이너, 게시 페이지
 **프로젝트 디자이너** 의 **게시** 페이지를 통해 ClickOnce 배포를 위한 속성을 구성합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 10/31/2017
  기본적으로 게시 위치는 IIS를 설치한 경우 `http://localhost/<projectname>/` , 또는 IIS를 설치하지 않은 경우 `publish\` 디렉터리입니다. 컴퓨터에서 Windows Vista가 실행 중인 경우 IIS의 설치 여부와 상관없이 기본값은 항상 `publish\` 디렉터리입니다.  
   
  **설치 폴더 URL**  
- 선택적 요소. 사용자가 응용 프로그램을 설치할 웹 사이트를 지정합니다. **게시 위치**와 다른 경우(예: 응용 프로그램이 준비 서버에 게시된 경우)에만 이 옵션이 필요합니다.  
+ 선택 사항입니다. 사용자가 응용 프로그램을 설치할 웹 사이트를 지정합니다. **게시 위치**와 다른 경우(예: 응용 프로그램이 준비 서버에 게시된 경우)에만 이 옵션이 필요합니다.  
   
  **설치 모드 및 설정**  
  응용 프로그램을 **게시 위치** 에서 직접 실행할지( **온라인으로만 응용 프로그램 사용 가능** 선택 시), 또는 설치하여 **시작** 메뉴 및 **제어판** 의 **프로그램 추가/제거** 항목에 추가할지( **오프라인으로도 응용 프로그램 사용 가능** 선택 시)를 결정합니다.  
@@ -66,7 +61,7 @@ ms.lasthandoff: 10/31/2017
  ClickOnce를 사용하여 응용 프로그램 버전을 둘 이상 설치하면 이전 응용 프로그램 버전이 지정한 게시 위치의 Archive 폴더로 이동합니다. 이러한 방식으로 이전 버전이 보관되므로 설치 디렉터리에 이전 버전의 폴더가 남지 않습니다.  
   
  **게시할 때마다 자동으로 수정 번호 증가**  
- 선택적 요소. 이 옵션이 선택된 경우(기본값), 응용 프로그램을 게시할 때마다 게시 버전 번호의 **수정** 부분이 1씩 증가합니다. 그러면 응용 프로그램이 업데이트로 게시됩니다.  
+ 선택 사항입니다. 이 옵션이 선택된 경우(기본값), 응용 프로그램을 게시할 때마다 게시 버전 번호의 **수정** 부분이 1씩 증가합니다. 그러면 응용 프로그램이 업데이트로 게시됩니다.  
   
  **게시 마법사**  
  [Publish Wizard](http://msdn.microsoft.com/en-us/fc6abebd-13d6-48e4-a567-fbc52dad0872)를 엽니다. 게시 마법사를 완료하는 것은 **빌드** 메뉴의 **게시** 명령을 실행하는 것과 효과가 동일합니다.  

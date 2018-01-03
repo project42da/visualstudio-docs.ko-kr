@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: c01007e3a1fd71af8c5204130a90b448f28c93f1
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: 9ee06a96eeb0d7fd0cec7c0f2e22159741767e01
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-r-projects-in-visual-studio"></a>Visual Studio에서 R 프로젝트 만들기
 
@@ -40,7 +41,7 @@ R 프로젝트(`.rxproj` 파일)는 프로젝트와 관련된 모든 소스 및 
 
 `rproject.rproj` 파일에서는 Visual Studio에서 관리되지 않는 R 관련 프로젝트 설정이 유지 관리됩니다.
 
-| 속성 | 기본값 | 설명 |
+| 속성 | 기본 | 설명 |
 | --- | --- | --- |
 | 버전 | 1.0 | 프로젝트를 만드는 데 사용되는 Visual Studio용 R 도구 버전. |
 | RestoreWorkspace | 기본 | `.RData` 파일에서 이전 작업 영역 변수를 프로젝트 디렉터리에 자동으로 로드합니다. |
@@ -106,7 +107,6 @@ RTVS에는 특정 파일 형식에 대한 다양한 템플릿이 포함되어 �
 | R 설명서(데이터 집합) | 데이터 집합을 설명하기 위한 많은 필드가 주석과 함께 포함된 R 설명서 파일입니다. |
 | SQL 쿼리 | 빈 `.sql` 파일입니다. [SQL Server 통합](sql-server.md)을 참조하세요. |
 | 저장 프로시저(R 사용) | 자식 SQL 쿼리 및 자식 저장 프로시저 템플릿 파일이 있는 R 파일입니다. [SQL Server 통합](sql-server.md)을 참조하세요. |
-
 
 ## <a name="use-multiple-project-types-in-visual-studio"></a>Visual Studio에서 여러 프로젝트 형식 사용
 

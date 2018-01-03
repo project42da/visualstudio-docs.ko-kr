@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1e9ccf0c77f28d2f57d6861dd39591a7cbbce36c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ccb81bffa6845e4e644294916a508820445da263
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replace-in-files-command"></a>파일에서 바꾸기 명령
 **찾기 및 바꾸기** 창의 **파일에서 바꾸기**에서 사용할 수 있는 옵션의 하위 집합을 사용하여 파일의 텍스트를 바꿉니다.  
@@ -36,10 +37,10 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
   
 ## <a name="arguments"></a>인수  
  `findwhat`  
- 필수 요소. 일치하는 텍스트입니다.  
+ 필수. 일치하는 텍스트입니다.  
   
  `replacewith`  
- 필수 요소. 일치된 텍스트를 대체할 텍스트입니다.  
+ 필수. 일치된 텍스트를 대체할 텍스트입니다.  
   
 ## <a name="switches"></a>스위치  
  /all 또는 /a  
@@ -85,7 +86,7 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
  /word 또는 /w  
  선택 사항입니다. 단어 단위로 검색합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `btnCancel`을 검색하고, "내 Visual Studio 프로젝트" 폴더에 있는 모든 .cls 파일에서 `btnReset`으로 바꾸고, **찾기 결과 2** 창에서 대체 정보를 표시합니다.  
   
 ```  

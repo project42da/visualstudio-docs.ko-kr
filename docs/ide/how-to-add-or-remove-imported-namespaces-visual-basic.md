@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 43947a2e239833459923f6991d4ee54d12876fe3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 015f2efa352b5ff2d8b87e356972270c175d0168
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>방법: 가져온 네임스페이스 추가 또는 제거(Visual Basic)
 네임스페이스를 가져오면 해당 네임스페이스의 요소를 정규화하지 않고 코드에서 사용할 수 있습니다. 예를 들어 `System.Messaging.MessageQueue` 클래스의 `Create` 메서드에 액세스하려면 `System.Messaging` 네임스페이스를 가져오고 코드에 필요한 요소를 `MessageQueue.Create`로 참조하면 됩니다.  

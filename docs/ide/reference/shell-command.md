@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fa005388b0b8ec79e2647cc269ff20868ca647e1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7744feca20a14a85c7a035a9b74ed415a43553b3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shell-command"></a>셸 명령
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 내에서 실행 프로그램을 시작합니다.  
@@ -38,7 +39,7 @@ Tools.Shell [/command] [/output] [/dir:folder] path [args]
   
 ## <a name="arguments"></a>인수  
  `path`  
- 필수 요소. 실행할 파일의 경로와 파일 이름 또는 열 문서. 지정된 파일이 PATH 환경 변수에 있는 디렉터리 중 하나에 없으면 전체 경로가 필요합니다.  
+ 필수. 실행할 파일의 경로와 파일 이름 또는 열 문서. 지정된 파일이 PATH 환경 변수에 있는 디렉터리 중 하나에 없으면 전체 경로가 필요합니다.  
   
  `args`  
  선택 사항입니다. 호출된 프로그램에 전달할 인수입니다.  
@@ -74,7 +75,7 @@ Tools.Shell """C:\Program Files\SomeFile.exe"""
 > [!CAUTION]
 >  리터럴 따옴표(""")로 경로 문자열을 묶지 않으면 Windows는 첫 번째 공백까지의 문자열 부분만 사용합니다. 예를 들어 위의 경로 문자열이 제대로 인용되지 않으면 Windows는 C:\ 루트 디렉터리에 있는 "Program"이라는 파일을 찾습니다. C:\Program.exe 실행 파일을 실제로 사용할 수 있는 경우 Windows는 불법적 인 변조로 설치한 경우 조차도 원하는 "c:\Program Files\SomeFile.exe" 프로그램 대신 해당 프로그램을 실행하려고 시도합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령은 xcopy.exe를 사용하여 `MyText.txt` 파일을 `Text` 폴더에 복사합니다. xcopy.exe 출력은 **명령 창** 및 **출력** 창 모두에 표시됩니다.  
   
 ```  

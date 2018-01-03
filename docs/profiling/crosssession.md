@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 196107019a43f8f76beeb55cde6a56034375b9d9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 079e0ec1b2bad2ca01a698c474c37de6d5d7dfd6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="crosssession"></a>CrossSession
 VSPerfCmd.exe **CrossSession** 옵션을 통해 프로파일러는 모든 콘솔 세션에서 데이터를 수집할 수 있습니다. **CrossSession** 옵션은 **Start** 옵션과 함께 사용되어야 합니다.  
@@ -44,7 +45,7 @@ VSPerfCmd.exe /Start:Method /CrossSession [Options]
  **Detach**[**:***PID*[,*PID*]]  
  지정된 프로세스의 프로파일링을 중지합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서 **CrossSession** 옵션은 다른 콘솔 세션에서 시작된 응용 프로그램에 연결하는 데 사용됩니다.  
   
 ```  

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7e80bd33d9351c6b2dd5ce65d327e6cdb40fc70a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5e5e83629bdb2b93db3a34ba577da4df84b119cc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-report-view-columns"></a>방법: 보고서 뷰 열 사용자 지정
 Visual Studio Team System Development Edition의 성능 도구는 효율적인 사용자 환경을 제공할 수 있도록 IDE(통합 개발 환경)에 완전히 통합되어 있습니다. 다음 목록은 열을 추가, 제거 및 재정렬하여 사용자 지정할 수 있는 뷰를 나타냅니다.  

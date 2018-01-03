@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 7fbe62b55fde85127756b9d73be333068bb9aad3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7768d6ba35c2116c658dcd1b7968080932b99543
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="target-build-order"></a>대상 빌드 순서
 단일 대상에 대한 입력이 다른 대상의 출력을 사용하는 경우에는 대상의 순서를 지정해야 합니다. 다음과 같은 특성을 사용하여 대상이 실행되는 순서를 지정할 수 있습니다.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/31/2017
  초기 대상, 기본 대상 또는 명령줄 대상이 없으면 MSBuild는 프로젝트 파일이나 가져온 프로젝트 파일에서 처음으로 나오는 대상을 실행합니다.  
   
 ## <a name="target-dependencies"></a>대상 종속성  
- 대상은 상호 간의 종속 관계를 설명할 수 있습니다. `DependsOnTargets` 특성은 대상이 다른 대상에 종속됨을 나타냅니다. 예를 들면 다음과 같습니다.  
+ 대상은 상호 간의 종속 관계를 설명할 수 있습니다. `DependsOnTargets` 특성은 대상이 다른 대상에 종속됨을 나타냅니다. 예를 들어 개체에 적용된  
   
 ```xml  
 <Target Name="Serve" DependsOnTargets="Chop;Cook" />  

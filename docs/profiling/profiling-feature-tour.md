@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4899f59362f623f6ecf92927e8a15ed4762fa367
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 25e4397ac3f3b2a8191dc9d9850f643e0be3d539
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-feature-tour"></a>프로파일링 기능 둘러보기
 
@@ -151,16 +152,16 @@ CPU 사용량 또는 메모리 사용량 도구에 현재 표시되지 않는 �
   
 |성능 도구|Windows 바탕 화면|Windows 유니버설/스토어|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
-|[메모리 사용](../profiling/memory-usage.md)|예|예|예|  
+|[메모리 사용량](../profiling/memory-usage.md)|예|예|예|  
 |[CPU 사용량](../profiling/cpu-usage.md)|예|예|예(.NET Core/ASP.NET Core의 경우 아니요)|  
 |[GPU 사용량](../debugger/gpu-usage.md)|예|예|no|  
-|[응용 프로그램 타임라인](../profiling/application-timeline.md)|예|예|no|  
+|[응용 프로그램 타임라인](../profiling/application-timeline.md)|예|예|아니요|  
 |[PerfTips](../profiling/perftips.md)|예|XAML은 예, HTML은 no|예|  
-|[성능 탐색기](../profiling/performance-explorer.md)|예|no|예(ASP.NET Core의 경우 아니요)|  
+|[성능 탐색기](../profiling/performance-explorer.md)|예|아니요|예(ASP.NET Core의 경우 아니요)|  
 |[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise만 해당|.NET Enterprise만 해당|.NET Enterprise만 해당|
-|[네트워크 사용량](../profiling/network-usage.md)|no|예|no| 
-|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|HTML은 예, XAML은 no|no|  
-|[JavaScript 메모리](../profiling/javascript-memory.md)|no|HTML은 예, XAML은 no|no|  
+|[네트워크 사용량](../profiling/network-usage.md)|아니요|예|아니요| 
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|아니요|HTML은 예, XAML은 no|아니요|  
+|[JavaScript 메모리](../profiling/javascript-memory.md)|아니요|HTML은 예, XAML은 no|아니요|  
 
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)

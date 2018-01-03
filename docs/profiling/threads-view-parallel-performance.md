@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bdad50eff09e96c5d9c0513be1f571a901278871
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 21b341f8900664c57fa21d33bc138a969a273759
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="threads-view-parallel-performance"></a>스레드 뷰(병렬 성능)
 스레드 뷰는 Concurrency 시각화에서 가장 자세하며 다양한 기능을 제공하는 뷰입니다. 이 보기를 사용하면 동기화, I/O 또는 기타 이유로 인해 스레드가 차단되는지 아니면 실행되고 있는지를 확인할 수 있습니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
  스레드가 실행 중이면 Concurrency 시각화가 샘플을 수집합니다. 스레드 뷰에서는 실행 세그먼트 중에 하나 이상의 스레드가 실행한 코드를 분석할 수 있습니다. 차단 보고서 및 호출 스택 트리 실행을 프로파일링하는 보고서도 검사할 수 있습니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  다음은 스레드 뷰를 사용할 수 있는 몇 가지 방법입니다.  
   
 -   특정 실행 단계 중에 앱의 UI(사용자 인터페이스)가 응답하지 않는 원인을 파악합니다.  
@@ -148,4 +149,4 @@ ms.lasthandoff: 10/31/2017
  이 탭에는 현재 프로세스를 대신하여 디스크 I/O에서 사용된 프로세스와 스레드, 이러한 스레드와 프로세스가 사용한 파일(예: 로드된 DLL), 읽은 바이트 수 및 기타 정보가 표시됩니다. 이 보고서를 사용하면 특히 프로세스가 I/O에 바인딩된 것으로 보이는 경우 실행 중에 파일에 액세스하는 데 소요된 시간을 평가할 수 있습니다. 자세한 내용은 [디스크 작업 보고서](../profiling/disk-operations-report-threads-view.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Concurrency 시각화](../profiling/concurrency-visualizer.md)
+ [동시성 시각화 도우미](../profiling/concurrency-visualizer.md)

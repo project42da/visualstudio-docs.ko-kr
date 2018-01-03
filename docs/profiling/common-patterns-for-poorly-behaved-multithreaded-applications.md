@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 744e3031c94a3b152728000e7c5425f85fb9e9ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8c938f5effc963fa881506f55d0e4b271ae3a914
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴
 동시성 시각화 도우미를 사용하면 개발자는 다중 스레드 응용 프로그램의 동작을 시각화할 수 있습니다. 이 도구에는 잘못 동작하는 다중 스레드 응용 프로그램에 대한 일반적인 패턴의 갤러리가 포함되어 있습니다. 갤러리에는 각 패턴으로 표시되는 동작에 대한 설명, 해당 동작의 가능한 결과 및 그 동작을 해결하는 가장 일반적인 방법과 함께 도구를 통해 노출되는 일반적이고 인식 가능한 시각적 패턴이 포함되어 있습니다.  

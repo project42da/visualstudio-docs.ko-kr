@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 58f419d52d2d89f998f64e236cfc1f0053c9cfd1
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: e352baf834f026462cb35921f7f79e75b3aecd96
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-snippet-picker"></a>코드 조각 선택
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 코드 편집기는 사용자가 몇 번의 마우스 클릭으로 현재 문서에 미리 만들어진 코드 블록을 삽입할 수 있는 **코드 조각 선택**을 제공합니다.  

@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 9392776d44602ee81358e31708d331e09d0d7a70
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 72bcca85f57a5c68e70dfa942ec607072af86561
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customize-your-build"></a>빌드 사용자 지정
 MSBuild 15 이전 버전에서는 솔루션의 프로젝트에 대한 새로운 사용자 지정 속성을 제공하려면 해당 속성에 대한 참조를 솔루션의 모든 프로젝트 파일에 수동으로 추가해야 했습니다. 또는 .props 파일에서 속성을 정의하고 나서 무엇보다 솔루션의 모든 프로젝트에서 .props 파일을 명시적으로 가져와야 했습니다.
@@ -87,7 +88,7 @@ msbuild에서 "내부" 파일(`2-src` 및 `2-test`)을 "외부" 파일(`1`)과 �
 msbuild의 일반적인 방법의 요약 정보는 다음과 같습니다.
 
 - 지정된 프로젝트의 경우 msbuild는 솔루션 구조체에서 위쪽으로 첫 번째 `Directory.Build.props`를 찾고, 기본값과 병합하고, 추가 검사를 중지합니다.
-- 다단계를 찾고 병합하려는 경우 "내부" 파일에서 "외부" 파일을 [`<Import...>`](http://docs.microsoft.com/en-us/visualstudio/msbuild/property-functions#msbuild-getpathoffileabove)(위에 표시)합니다.
+- 다단계를 찾고 병합하려는 경우 "내부" 파일에서 "외부" 파일을 [`<Import...>`](http://docs.microsoft.com/visualstudio/msbuild/property-functions#msbuild-getpathoffileabove)(위에 표시)합니다.
 - "외부" 파일이 자체로 상위 항목을 가져오지 않으면 거기서 검색을 중지합니다.
 - 검사/병합 프로세스를 제어하려면 `$(DirectoryBuildPropsPath)` 및 `$(ImportDirectoryBuildProps)`를 사용합니다.
 

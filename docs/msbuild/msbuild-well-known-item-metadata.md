@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: dd9e082834af6194b84c7975e4a42337d66a429a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b2f48162ed4c37358980c40b5c71c4f955880358
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-well-known-item-metadata"></a>MSBuild 잘 알려인 항목 메타데이터
 다음 표에서는 만들어질 때 모든 항목에 할당된 메타데이터에 대해 설명합니다. 각 예제에서 프로젝트에 파일 `C:\MyProject\Source\Program.cs`를 포함하는 데 다음과 같은 항목 선언이 사용되었습니다.  

@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 552e08a653c576a0f2e4bc916beaf4749ff490ee
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 48e849df1cb918682176befa25c688fe7b436460
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
 별칭은 명령을 실행하는 데 필요한 텍스트를 단축함으로써 **찾기/명령** 상자 또는 **명령** 창에 명령을 입력하는 수단을 제공합니다. 예를 들어 **열려 있는 파일** 대화 상자를 표시하는 `>File.OpenFile`을 입력하는 대신 미리 정의된 별칭인 `>of`를 사용할 수 있습니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
 |모두 지우기|cls|Edit.ClearAll|  
 |명령 모드|cmd|보기.명령창|  
 |코드 보기|코드|보기.코드보기|  
-|[메모리 목록 표시 명령](../../ide/reference/list-memory-command.md)|일|Debug.ListMemory|  
+|[메모리 목록 표시 명령](../../ide/reference/list-memory-command.md)|d|Debug.ListMemory|  
 |ANSI로 [메모리 목록 표시 명령](../../ide/reference/list-memory-command.md)|da|Debug.ListMemory /Ansi|  
 |[메모리 명령 목록](../../ide/reference/list-memory-command.md) One Byte 형식|db|Debug.ListMemory /Format:OneByte|  
 |Four Byte 형식인 ANSI로 [메모리 명령 목록](../../ide/reference/list-memory-command.md)|dc|Debug.ListMemory /Format:FourBytes /Ansi|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/31/2017
 |이전 책갈피|PrevBook|편집.이전책갈피|  
 |파일 인쇄|print|파일.인쇄|  
 |속성 창|props|보기.속성창|  
-|중지|q|디버그.디버깅중지|  
+|Stop|q|디버그.디버깅중지|  
 |다시 실행|redo|편집.다시실행|  
 |레지스터 창|레지스터|디버그.레지스터|  
 |커서까지 실행|rtc|디버그.커서까지실행|  

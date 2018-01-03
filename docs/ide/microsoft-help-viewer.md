@@ -22,11 +22,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d770c1b7d05117243643680898348b71cf0a978d
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 9902ca6ff157713573eb2f8ccc806bb9f2a0dfc0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft 도움말 뷰어
 Microsoft 도움말 뷰어를 사용하여 Visual Studio, .NET Framework, 언어 참조, SQL Server 및 Windows Development를 포함해 로컬 컴퓨터에서 다양한 제품 및 기술에 대한 콘텐츠를 설치하고 볼 수 있습니다. 도움말 뷰어를 통해 다음을 수행할 수 있습니다.  

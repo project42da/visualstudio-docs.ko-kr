@@ -10,11 +10,12 @@ ms.topic: article
 ms.technology: visual studio
 ms.devlang: multiple
 ms.service: multiple
-ms.openlocfilehash: 90fcbd7e07ee4f18682d5cf914794982007088d0
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: multiple
+ms.openlocfilehash: acb674176374e532b59bf704890afd5869b3ebac
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
@@ -44,5 +45,5 @@ Visual Studio Tools for AI는 Azure Machine Learning과 통합되어 CNTK, Tenso
 ## <a name="supported-operating-systems"></a>Supported Operating Systems
 이 확장은 현재 Windows 64비트 운영 체제를 지원합니다.
 
-# <a name="support"></a>지원
+# <a name="support"></a>Support(지원)
 이 확장에 대한 지원은 [GitHub 문제 추적](http://github.com/Microsoft/vs-tools-for-ai/issues)에 제공됩니다. 버그 보고서, 기능 제안을 제출하거나 토론에 참여할 수 있습니다.

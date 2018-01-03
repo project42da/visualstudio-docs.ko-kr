@@ -12,16 +12,17 @@ ms.assetid: d5aef766-a24c-4f1f-ac9b-e5462b6627d4
 caps.latest.revision: "39"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 76727d06b3f7c41436ae2939518986baba4b8e5c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 02b36856fff43e443040a0ffc9a437c51fdf3f35
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>최선의 코딩된 UI 테스트 방법
 이 항목에서는 코딩된 UI 테스트를 개발할 때 따라야 할 모범 사례를 설명합니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   Visual Studio Enterprise  
   

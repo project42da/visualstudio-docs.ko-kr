@@ -19,11 +19,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8b20e30cc983d6dd809daa264e4fedbb3a879386
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: caac984e7d281740c322d535bebe84032c15a38e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="class-view-and-object-browser-icons"></a>클래스 뷰 및 개체 브라우저 아이콘
 
@@ -35,12 +36,12 @@ ms.lasthandoff: 12/07/2017
 |![클래스 아이콘](../ide/media/vxclass_icon.gif "vxClass_Icon")|클래스|![연산자 기호](../ide/media/vxoperator_icon.gif "vxOperator_Icon")|연산자|  
 |![롤리팝 인터페이스 기호](../ide/media/vxinterface_icon.gif "vxInterface_Icon")|인터페이스|![속성 기호](../ide/media/vxproperty_icon.gif "vxProperty_Icon")|속성|
 |![구조체 기호](../ide/media/vxstruct_icon.gif "vxStruct_Icon")|구조체|![필드 아이콘](../ide/media/vxfield_icon.gif "vxField_Icon")|필드 또는 변수|  
-|![공용 구조체 기호](../ide/media/vxunion_icon.gif "vxUnion_Icon")|공용 구조체|![이벤트 기호](../ide/media/vxevent_icon.gif "vxEvent_Icon")|이벤트|  
+|![공용 구조체 기호](../ide/media/vxunion_icon.gif "vxUnion_Icon")|공용 구조체|![이벤트 기호](../ide/media/vxevent_icon.gif "vxEvent_Icon")|이벤트(event)|  
 |![열거형 기호](../ide/media/vxenum_icon.gif "vxEnum_Icon")|Enum|![상수 아이콘](../ide/media/vxconstant_icon.gif "vxConstant_Icon")|상수|  
 |![형식 정의 기호](../ide/media/vxtypedef_icon.gif "vxTypeDef_Icon")|TypeDef|![항목 열거 기호](../ide/media/vxenumitem_icon.gif "vxEnumItem_Icon")|항목 열거|  
-|![Visual Studio 모듈 기호](../ide/media/vxmodule_icon.gif "vxModule_Icon")|모듈|![맵 항목 기호](../ide/media/vxmapitem_icon.gif "vxMapItem_Icon")|맵 항목|  
+|![Visual Studio 모듈 기호](../ide/media/vxmodule_icon.gif "vxModule_Icon")|Module|![맵 항목 기호](../ide/media/vxmapitem_icon.gif "vxMapItem_Icon")|맵 항목|  
 |![확장명 메서드 기호](../ide/media/extensionmethod.gif "ExtensionMethod")|확장명 메서드|![선언 기호](../ide/media/vxmethod_icon.gif "vxMethod_Icon")|외부 선언|  
-|![대리자 기호](../ide/media/vxdelegate_icon.gif "vxDelegate_Icon")|대리자|![클래스 뷰 및 개체 브라우저의 오류 아이콘](../ide/media/erroricon.gif "ErrorIcon")|오류|  
+|![대리자 기호](../ide/media/vxdelegate_icon.gif "vxDelegate_Icon")|대리자|![클래스 뷰 및 개체 브라우저의 오류 아이콘](../ide/media/erroricon.gif "ErrorIcon")|Error|  
 |![예외 기호](../ide/media/vxexception_icon.gif "vxException_Icon")|예외|![템플릿 기호](../ide/media/vxtemplate_icon.gif "vxTemplate_Icon")|템플릿|  
 |![맵 기호](../ide/media/vxmap_icon.gif "vxMap_Icon")|맵|![오류 느낌표 기호](../ide/media/vxerror_icon.gif "vxError_Icon")|알 수 없음|  
 |![형식 전달 기호](../ide/media/ob_type_forward.gif "ob_type_forward")|형식 전달|||  

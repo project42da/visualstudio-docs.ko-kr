@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 96c5864deb3f5db0599eaca26a3b99bb9691c9b2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cordova
+ms.openlocfilehash: 0df91521f768a2389655339472c6d4a896347053
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-tools-for-apache-cordova"></a>Apache Cordova용 Visual Studio Tools
 iOS, Android 및 Windows 장치에서 실행되고 코드를 100% 가까이 공유하는 앱을 빌드하세요. 선호하는 웹 기술을 사용하여 앱을 빌드할 수 있습니다. Apache Cordova는 휴대폰의 카메라 같은 장치 기능에 대한 기본 액세스를 제공하며 무엇보다 좋은 점은, 무료입니다. Visual Studio는 다음과 같은 추가 항목을 추가하여 앱을 훨씬 더 쉽게 만들 수 있도록 합니다.  

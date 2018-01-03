@@ -22,17 +22,18 @@ caps.latest.revision: "7"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 16ed7f4207a65915afbf18a496a0152e04e9a8d0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 70f83ba6a48df66f9105d39570e0d5490f818e73
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vcmessage-task"></a>VCMessage 작업
 빌드 중에 경고 및 오류 메시지를 로깅합니다.  
   
 ## <a name="remarks"></a>설명  
- 이 작업은 Visual C++에 대한 MSBuild 구현을 도우며 사용자가 호출할 수 없습니다. 자세한 내용은 <xref:Microsoft.Build.Utilities.TaskLoggingHelper>을 참조하십시오.  
+ 이 작업은 Visual C++에 대한 MSBuild 구현을 도우며 사용자가 호출할 수 없습니다. 자세한 내용은 <xref:Microsoft.Build.Utilities.TaskLoggingHelper>을 참조하세요.  
   
 ## <a name="parameters"></a>매개 변수  
  다음 표에서는 **VCMessage** 작업의 매개 변수에 대해 설명합니다.  

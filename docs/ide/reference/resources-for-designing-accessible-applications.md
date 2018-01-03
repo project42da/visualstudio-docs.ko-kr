@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: a5469b3e6f09df75561cf85ba56c96721494aabf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 789eafd7bc7137026bb6c144615f1234f7288f29
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-for-designing-accessible-applications"></a>내게 필요한 옵션을 제공하는 응용 프로그램 설계를 위한 리소스
 다음 링크를 사용하면 내게 필요한 옵션이 있는 Windows 응용 프로그램과 웹 사이트 개발을 위한 팁과 예제뿐만 아니라 내게 필요한 옵션이 있는 응용 프로그램 디자인을 지원하는 기술 관련 정보를 찾을 수 있습니다. 내게 필요한 옵션에 대한 일반적인 내용은 [http://www.microsoft.com/enable/](http://www.microsoft.com/enable/)에서 온라인으로 찾을 수 있습니다.  

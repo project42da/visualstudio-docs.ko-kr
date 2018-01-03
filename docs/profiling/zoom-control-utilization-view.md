@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6b055b6970ae4ae20bcb6b2b4ce7c010baa2268f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e0a0ec9286131b7e1f9b02633dc782920a24a53e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="zoom-control-utilization-view"></a>확대/축소 컨트롤(사용률 뷰)
 확대/축소 컨트롤은 관심 있는 특정 영역에 초점을 맞출 수 있도록 CPU 사용률 차트를 확대하는 데 유용합니다. 이 컨트롤은 뷰의 가운데로 확대합니다. 따라서 확대하기 전에 관심 영역을 가운데에 배치해야 합니다.  

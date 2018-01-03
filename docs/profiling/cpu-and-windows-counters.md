@@ -16,21 +16,22 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 62889012c5640fb0f29eadb6f70e678f941ff286
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: d22300bc675de5074497589af53b304b9a1caa4d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cpu-and-windows-counters"></a>CPU 및 Windows 카운터
 Visual Studio 프로파일러를 사용하면 운영 체제(Windows 카운터)에 의해 생성된 성능 데이터 및 프로세서 단위(CPU 카운터)에 의해 생성된 성능 데이터를 수집할 수 있습니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
 > [!NOTE]
->  Windows 8 및 Windows Server 2012의 강화된 보안 기능을 위해 Visual Studio 프로파일러가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. 그래서 UWP 앱에는 새로운 수집 기술도 필요합니다. [Windows 8 및 Windows Server 2012 응용 프로그램의 성능 도구](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)를 참조하세요.  
+>  Windows 8 및 Windows Server 2012의 강화된 보안 기능을 위해 Visual Studio 프로파일러가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. 또한 UWP 앱에는 새로운 수집 기술도 필요합니다. [Windows 8 및 Windows Server 2012 응용 프로그램의 성능 도구](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)를 참조하세요.  
   
 ## <a name="windows-counters"></a>Windows 카운터  
  Windows 카운터는 운영 체제, 응용 프로그램, 서비스 또는 드라이버의 성능에 대한 정보를 제공하는 Windows 진단 인프라의 일부입니다. Windows 카운터는 현재 컴퓨터의 구성에 따라 다르며 다른 컴퓨터에서 사용하지 못할 수 있습니다. Windows 성능 카운터는 프로파일링 데이터 파일에 프로파일링 표시로 수집되므로 보기 및 보고서를 필터링하는 데 사용할 수 있습니다.  

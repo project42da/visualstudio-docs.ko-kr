@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 52e3714249ceabd79a490a084fe44d4d1a69fcf4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 891204811a0c27471e8ab4be315da14be4b80794
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
 솔루션을 실행, 빌드, 다시 빌드 또는 배포하는 경우 오류를 저장하고 표시할 파일을 지정합니다.  
@@ -39,14 +40,14 @@ devenv /out FileName
   
 ## <a name="arguments"></a>인수  
  `FileName`  
- 필수 요소. 실행 파일을 빌드할 때 오류를 수신할 파일의 경로 및 이름입니다.  
+ 필수. 실행 파일을 빌드할 때 오류를 수신할 파일의 경로 및 이름입니다.  
   
 ## <a name="remarks"></a>설명  
  존재하지 않는 파일 이름을 지정하는 경우 파일이 자동으로 만들어집니다. 파일이 이미 있는 경우 결과는 파일의 기존 내용에 추가됩니다.  
   
  명령줄 빌드 오류는 **명령** 창 및 **출력** 창의 솔루션 작성기 보기에 표시됩니다. 이 옵션은 무인 빌드를 실행하고 결과를 봐야 하는 경우에 유용합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `MySolution`을 실행하고 `MyErrorLog.txt` 파일에 오류를 기록합니다.  
   
 ```  

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a7e3d7541075642d3aaa417874aa51f7f3f7faa7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 275ec14b1b6a0d43d2c8fdb88bbf1056db86d097
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="callercallee-view---net-memory-sampling-data"></a>호출자/호출 수신자 뷰 - .NET 메모리 샘플링 데이터
 호출자/호출 수신자 뷰는 선택한 함수와 해당 부모 및 자식 함수에 대한 .NET 메모리 프로파일링 데이터를 표시합니다. 호출자/호출 수신자 뷰에는 세 개의 표가 포함되어 있습니다.  
@@ -40,8 +41,8 @@ ms.lasthandoff: 10/31/2017
 |**함수 이름**|함수의 정규화된 이름입니다.|  
 |**함수 줄 번호**|소스 파일에서 이 함수가 시작되는 줄 번호입니다.|  
 |**함수 주소**|함수의 주소입니다.|  
-|**Type**|함수의 컨텍스트:<br /><br /> **0** - 현재 함수<br /><br /> **1** - 현재 함수를 호출하는 함수<br /><br /> **2** - 현재 함수가 호출하는 함수<br /><br /> [VSPerfReport](../profiling/vsperfreport.md) 명령줄 보고서에만 해당합니다.|  
-|**수준**|호출 트리에서 함수의 깊이입니다. [VSPerfReport](../profiling/vsperfreport.md) 명령줄 보고서에만 해당합니다.|  
+|**Type**|함수의 컨텍스트:<br /><br /> **0** - 현재 함수<br /><br /> **1** - 현재 함수를 호출하는 함수<br /><br /> **2** - 현재 함수가 호출하는 함수<br /><br /> [VSPerfReport](../profiling/vsperfreport.md) 명령줄 보고서에서만 사용됩니다.|  
+|**수준**|호출 트리에서 함수의 깊이입니다. [VSPerfReport](../profiling/vsperfreport.md) 명령줄 보고서에서만 사용됩니다.|  
 |**포함 할당**|- 현재 함수의 경우 프로파일링 실행 시 함수가 할당한 개체의 수입니다. 이 수에는 호출 수신자 함수에 생성된 개체가 포함됩니다.<br />- 호출자 함수의 경우 이 함수의 호출에 의해 생성된 현재 함수의 포함 할당 수입니다.<br />- 호출 수신자 함수의 경우 현재 함수가 호출한 이 함수의 인스턴스에 의해 할당된 개체의 수입니다. 이 수에는 호출 수신자 함수가 호출한 함수에서 수행한 할당이 포함됩니다.|  
 |**포함 할당 비율(%)**|이 함수의 포함 할당으로, 프로파일링 실행 시 생성된 모든 개체의 비율입니다.|  
 |**제외 할당**|- 현재 함수의 경우 함수가 함수 본문의 코드를 실행하고 있을 때(즉, 함수가 호출 스택의 맨 위에 있을 때) 생성된 개체의 수입니다. 이 수에는 함수가 호출한 함수에 생성된 개체는 포함되지 않습니다.<br />- 호출자 함수의 경우 이 함수의 호출에 의해 생성된 현재 함수의 제외 할당 수입니다.<br />- 호출 수신자 함수의 경우 현재 함수가 호출한 이 함수의 인스턴스에 의해 생성된 개체의 수입니다. 이 수에는 호출 수신자 함수가 호출한 함수에 의해 생성된 개체는 포함되지 않습니다.|  

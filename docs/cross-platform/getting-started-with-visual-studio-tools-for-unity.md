@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 1727330a559b5a9aed41ea9063f3394e01bc45ab
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: unity
+ms.openlocfilehash: 47b355d9b07ba2dab78111c36344eec94c935091
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity 시작
 이 섹션에서는 Visual Studio Tools for Unity를 설치하고 Visual Studio와 함께 작동하도록 Unity 프로젝트를 구성하는 방법을 설명합니다.  
@@ -24,7 +25,7 @@ ms.lasthandoff: 11/29/2017
 > [!IMPORTANT]
 >  Unity 5.2에서는 프로젝트 설정을 간소화하는 Visual Studio Tools for Unity 2.1에 대한 기본 제공 지원이 추가되었습니다. 이 지원을 이용하려면 Windows에서 Unity 버전 5.2.0 이상과 Visual Studio Tools for Unity 버전 2.1 이상이 필요합니다.  
 
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  Visual Studio Tools for Unity를 사용하려면 다음이 필요합니다.  
 
 -   Visual Studio Community, Professional, Premium 또는 Enterprise와 같은 확장을 지원하는 **Visual Studio** 버전. Visual Studio Community를 무료로 다운로드할 수 있습니다.  

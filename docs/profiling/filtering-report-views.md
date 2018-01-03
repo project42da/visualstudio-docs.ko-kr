@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c5aaff542f654928a7ed56313232a6e6ead67f9d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b4e82450286d5da47a11217401ebbc17133530b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering-report-views"></a>보고서 뷰 필터링
 프로파일링 데이터 파일에 필터를 적용하여 성능 보고서 뷰에 표시되고 보고서 파일로 내보내는 프로파일링 데이터를 제한할 수 있습니다. 타임스탬프 값 사이의 데이터로 보고서를 제한하고, 특정 프로세스 및 스레드로 데이터를 제한할 수 있습니다. 파일에 필터를 저장한 다음 저장된 필터를 가져와서 다른 프로파일링 데이터 파일에서 필터를 만들 수 있습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
     |**및/또는**|이 절과 다음 절이 둘 다 true여야 결과와 일치하는 경우 **및**을 선택합니다. 이 절이나 다음 절 중 하나가 true이면 결과와 일치하는 경우 **또는**을 선택합니다.|  
     |**필드**|데이터 필드의 표시된 목록에서 필터 절에서 사용할 보고서 필드를 선택합니다.|  
     |**Operator**|필드와 값 간의 절에 원하는 관계를 지정하는 연산자를 선택합니다.<br /><br /> =    같음<br /><br /> <>  같지 않음<br /><br /> <    보다 작음<br /><br /> >    보다 큼<br /><br /> <=  작거나 같음<br /><br /> >=  크거나 같음|  
-    |**Value**|찾을 값을 선택하거나 입력합니다. 필드에 대해 사용 가능한 값이 나열되는 필드도 있습니다.|  
+    |**값**|찾을 값을 선택하거나 입력합니다. 필드에 대해 사용 가능한 값이 나열되는 필드도 있습니다.|  
   
 3.  
   

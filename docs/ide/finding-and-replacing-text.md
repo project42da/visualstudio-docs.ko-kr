@@ -40,11 +40,12 @@ caps.latest.revision: "31"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a2b925e32711e1624a4dfbe74fb5614ee6e0b062
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 72081f6c140c4634918e67098493cb37bb324848
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="finding-and-replacing-text"></a>Finding and Replacing Text
 **찾기 및 바꾸기** 컨트롤 또는 **파일에서 찾기/바꾸기**를 사용하여 **찾기 결과** 창과 같은 특정 텍스트 기반 출력 창 또는 Visual Studio Code 편집기에서 텍스트를 찾아서 바꿀 수 있습니다. XAML 디자이너, Windows Forms 디자이너와 같은 일부 디자이너 창 및 도구 창에서 검색하여 바꿀 수도 있습니다.  

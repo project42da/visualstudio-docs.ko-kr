@@ -12,11 +12,12 @@ caps.latest.revision: "23"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: e31746567a300ea8f9a62079ab1392fe9f1e0ec8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ae35bafc612b4fd7b76a06c47300fee4f35ce5ff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15의 새로운 기능
 MSBuild는 현재 [.NET Core SDK](https://www.microsoft.com/net/download/core)의 일부로 제공되며 Windows, macOS 및 Linux에서 .NET Core 프로젝트를 빌드할 수 있습니다.  

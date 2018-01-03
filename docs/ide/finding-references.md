@@ -13,11 +13,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4a402d8541f7056ebcb57885197d001b39c8d9b0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 92c12e4d51255849843f938c032ca17b611eeeab
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="finding-references-in-your-code"></a>코드에서 참조 찾기  
 코드베이스 전체에서 특정 코드 요소가 참조되는 위치를 찾으려면 **모든 참조 찾기** 명령을 사용할 수 있습니다. **모든 참조 찾기** 명령은 참조를 찾으려는 요소의 상황에 맞는 메뉴(마우스 오른쪽 단추 클릭)에서 사용할 수 있습니다. 또는 키보드 사용자인 경우 **Shift + F12** 키를 누릅니다.  

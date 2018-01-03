@@ -29,11 +29,12 @@ caps.latest.revision: "44"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e9531a49ced6e8f72154cbdd59fce271ff673f59
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2d1d3c327101e535c037dba30ed19af3dcf7faaa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>프로젝트 또는 솔루션 없이 Visual Studio에서 코드 개발  
 Visual Studio 2017에서는 솔루션이나 프로젝트 파일 없이 거의 모든 유형의 디렉터리 기반 프로젝트에서 Visual Studio로 코드를 열 수 있습니다. 예를 들어 Git에서 코드 프로젝트를 찾고 복제한 다음 Visual Studio로 직접 열고, 솔루션이나 프로젝트를 만들지 않고도 개발을 시작할 수 있습니다.  
@@ -85,7 +86,7 @@ Visual Studio에서 다음과 같은 방법으로 코드를 열 수 있습니다
 
 |         |         |
 |---------|---------|
-|  ![비디오의 동영상 카메라 아이콘](../install/media/video-icon.png "비디오 시청")  |    Visual Studio의 GitHub 리포지토리에서 코드를 복제하고 여는 방법에 대한 [비디오를 시청](https://mva.microsoft.com/en-us/training-courses/getting-started-with-visual-studio-2017-17798?l=lp3TOKD6D_6711787171)합니다. |
+|  ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기")  |    Visual Studio의 GitHub 리포지토리에서 코드를 복제하고 여는 방법에 대한 [비디오를 시청](https://mva.microsoft.com/en-us/training-courses/getting-started-with-visual-studio-2017-17798?l=lp3TOKD6D_6711787171)합니다. |
 
 ## <a name="debug-your-code"></a>코드 디버그  
 Visual Studio에서 프로젝트 또는 솔루션 없이 코드를 디버깅할 수 있습니다. 일부 언어를 디버그하려면 스크립트, 실행 파일 또는 프로젝트와 같은 유효한 *시작 파일*을 코드 프로젝트에 지정해야 할 수 있습니다. 코드를 디버그할 때는 먼저 지정된 해당 코드를 Visual Studio에서 실행합니다.  

@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: a7fca3c4981a038bba4d84c520704f1a43e01b1e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 68b72f5a674aede45cb938976f37a2fbd6eed762
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="warning-task"></a>경고 작업
 평가된 조건부 문에 따라 빌드 중에 경고를 로깅합니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
   
  이 작업은 위에 나와 있는 매개 변수 외에 <xref:Microsoft.Build.Utilities.Task> 클래스에서 직접 상속하는 <xref:Microsoft.Build.Tasks.TaskExtension> 클래스의 매개 변수도 상속합니다. 이러한 추가 매개 변수 및 해당 설명이 포함된 목록은 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 명령줄에서 설정된 속성을 확인합니다. 설정된 속성이 없는 경우 프로젝트에서는 경고 이벤트를 발생시키고 `Warning` 작업의 `Text` 매개 변수 값을 기록합니다.  
   
 ```xml  

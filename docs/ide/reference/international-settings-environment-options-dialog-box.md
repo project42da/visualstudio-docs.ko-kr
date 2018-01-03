@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7a1cf847b87e7902ef535359420ea105a48dc9a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e086111be924d1262866f882b77d821659af909d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="international-settings-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 국가별 설정
 국가별 설정 페이지를 사용하면 컴퓨터에 여러 언어 버전의 IDE(통합 개발 환경)가 설치된 경우 기본 언어를 변경할 수 있습니다. **도구** 메뉴에서 **옵션**을 선택한 다음 **환경** 폴더에서 **국가별 설정**을 선택하여 이 대화 상자에 액세스할 수 있습니다. 이 페이지가 목록에 나타나지 않으면 **옵션** 대화 상자에서 **모든 설정 표시**를 선택합니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 93efd5d0e0eb391a164f4997b7ddeedab09b4201
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0ec3bfc47829bce2fe5ad836c970cb28f8a1294e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="updateconfiguration-devenvexe"></a>/Updateconfiguration (devenv.exe)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에 시스템의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 패키지를 병합하고 MEF 캐시에서 변경 내용을 확인하도록 알립니다.  
@@ -34,7 +35,7 @@ devenv /updateconfiguration
 ## <a name="remarks"></a>설명  
  VSIX 패키지를 설치하는 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서 이 명령을 자동으로 실행합니다. 파일을 패치한 후 `devenv.exe /updateconfiguration`을 실행하여 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서 MEF 캐시를 업데이트하도록 해야 합니다. 이렇게 하면 수정 내용이 적합한지 여부를 평가할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령줄은 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에 시스템의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 패키지를 병합하고 MEF 캐시에서 변경 내용을 확인하도록 합니다.  
   
 ```  

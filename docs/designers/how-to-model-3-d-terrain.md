@@ -12,11 +12,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ff68a2c9d7552c474fe8760a471f97a5c0267e8e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cccd65c62d8b5a0f75052c3121e313507ad5d8b8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-model-3-d-terrain"></a>방법: 3차원 지형 모델 만들기
 이 문서에서는 모델 편집기를 사용하여 3D 지형 모델을 만드는 방법을 설명합니다.  

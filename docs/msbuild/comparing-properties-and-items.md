@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: f1a0f6df56cebe769ec514abea49ade0083c512e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6210f6e96c4e0b1330ee83a3f0f19ae58849dfce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-properties-and-items"></a>속성 및 항목 비교
 MSBuild 속성 및 항목은 둘 다 작업에 정보를 전달하고, 조건을 확인한 다음 프로젝트 파일 전체에서 참조할 수 있는 값을 저장하는 데 사용됩니다.  
@@ -42,7 +43,7 @@ MSBuild 속성 및 항목은 둘 다 작업에 정보를 전달하고, 조건을
 </PropertyGroup>  
 ```  
   
- `BuildDependsOn` 속성은 일반적으로 대상 `DependsOnTargets` 특성의 인수로 사용되며, 해당 특성을 효과적으로 항목 목록으로 변환합니다. 대상을 추가하거나 대상 실행 순서를 변경하기 위해 이 속성을 재정의할 수 있습니다. 예를 들면 다음과 같습니다.  
+ `BuildDependsOn` 속성은 일반적으로 대상 `DependsOnTargets` 특성의 인수로 사용되며, 해당 특성을 효과적으로 항목 목록으로 변환합니다. 대상을 추가하거나 대상 실행 순서를 변경하기 위해 이 속성을 재정의할 수 있습니다. 예를 들어 개체에 적용된  
   
 ```xml  
 <PropertyGroup>  

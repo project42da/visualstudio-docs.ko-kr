@@ -12,11 +12,14 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: d328897a4d7644e76634ecff3bfbaef4dbd0c3ec
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload:
+- python
+- azure
+ms.openlocfilehash: 5ebbded093da4b3a6bb5b829628de481d43355dd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service에서 Python 관리
 
@@ -28,7 +31,7 @@ ms.lasthandoff: 12/01/2017
 > 기본적으로 App Service는 서버의 루트 폴더에 Python 2.7 및 Python 3.4가 설치되어 있지만, 이러한 환경에서 패키지를 사용자 지정하거나 설치할 수도 없고, 현재 상태에 의존할 수도 없습니다. 대신 이 항목에 설명된 대로 사용자가 제어하는 사이트 확장을 사용해야 합니다.
 
 > [!Important]
-> 여기서 설명한 프로세스는 변경될 수 있으며, 특히 개선될 수 있습니다. 변경 내용은 [Python Engineering at Microsoft(Microsoft의 Python 엔지니어링) 블로그](https://blogs.msdn.microsoft.com/pythonengineering/)>에 공지됩니다.
+> 여기서 설명한 프로세스는 변경될 수 있으며, 특히 개선될 수 있습니다. 변경 내용은 [Python Engineering at Microsoft](https://blogs.msdn.microsoft.com/pythonengineering/)(Microsoft의 Python 엔지니어링) 블로그에 공지됩니다.
 
 ## <a name="choosing-a-python-version-through-the-azure-portal"></a>Azure Portal을 통해 Python 버전 선택
 
@@ -162,7 +165,7 @@ HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 
 
 서버 환경에서 직접 패키지를 설치하려면 다음 방법 중 하나를 사용합니다.
 
-| 메서드 | 용도 | 
+| 메서드 | 사용법 | 
 | --- | --- |
 | [Azure App Service Kudu 콘솔](#azure-app-service-kudu-console) | 대화형으로 패키지를 설치합니다. 패키지는 순수한 Python이거나 휠을 게시해야 합니다. |
 | [Kudu REST API](#kudu-rest-api) | 패키지 설치를 자동화하는 데 사용할 수 있습니다.  패키지는 순수한 Python이거나 휠을 게시해야 합니다. |

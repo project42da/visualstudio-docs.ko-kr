@@ -21,11 +21,12 @@ caps.latest.revision: "5"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: eb71632ba87fdfe7d9770c592c552d9cffdc618c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5e594972fc4dc7be99b8978c8f0432c83614d52e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-targets-files"></a>WPF .Targets 파일
 [!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)]는 특수 .targets 파일인 **Microsoft.WinFX.targets**에 결합되는 [!INCLUDE[TLA2#tla_wpf](../msbuild/includes/tla2sharptla_wpf_md.md)] 관련 작업 집합을 추가하여 [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)]를 확장합니다. 이 파일은 [!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)]에서 [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] 프로젝트를 빌드하는 데 필요한 [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] 작업 집합을 조합합니다.  

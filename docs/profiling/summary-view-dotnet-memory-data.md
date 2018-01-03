@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 968d46c4fe771229647282c719815982d81bf416
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: c0223950fb5082c84de8026cb07778d1f7381a33
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="summary-view---net-memory-data"></a>요약 뷰 - .NET 메모리 데이터
 요약 뷰에는 .NET 함수 및 메모리를 가장 많이 할당한 형식과 프로파일링 실행에서 가장 여러 번 생성된 형식에 대한 정보가 표시됩니다. 알림 링크 및 보고서 목록에 대한 설명을 비롯한 자세한 내용은 [요약 뷰](../profiling/summary-view.md)를 참조하세요.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
   
 |열|설명|  
 |------------|-----------------|  
-|**Name**|함수의 이름.|  
+|**이름**|함수의 이름.|  
 |**바이트 %**|프로파일링 실행에서 이 함수 또는 이 함수가 호출한 자식 함수에 의해 할당된 모든 바이트의 백분율입니다.|  
   
 ## <a name="types-with-most-memory-allocated"></a>대부분의 메모리가 할당된 형식  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
   
 |열|설명|  
 |------------|-----------------|  
-|**Name**|형식의 이름입니다.|  
+|**이름**|형식의 이름입니다.|  
 |**바이트 %**|프로파일링 실행에서 이 형식에 대해 할당된 모든 바이트의 백분율입니다.|  
   
 ## <a name="types-with-most-instances"></a>대부분의 인스턴스가 있는 형식  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
   
 |열|설명|  
 |------------|-----------------|  
-|**Name**|형식의 이름입니다.|  
+|**이름**|형식의 이름입니다.|  
 |**인스턴스 %**|프로파일링 실행에서 생성된 이 형식의 인스턴스인 .NET 개체의 총 수 백분율입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2f94f7bea2f4742fa975948d838e0cb01ce5e11e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bb3f3e6cb441697fb8546fcec485d292e979690b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="list-source-command"></a>소스 목록 표시 명령
 소스 코드의 지정된 줄을 표시합니다.  
@@ -51,7 +52,7 @@ Debug.ListSource [/Count:number] [/Current] [/File:filename]
   
 ## <a name="remarks"></a>설명  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 줄 번호를 표시하여 Form1.vb 파일의 줄 4 소스 코드를 나열합니다.  
   
 ```  

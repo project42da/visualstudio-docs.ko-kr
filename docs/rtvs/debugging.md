@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: cb5128bf6412fa0f06c211f06f0d7f87353d52e0
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: aca1fc0200e57867418c2a4c5ca7a718afdbc469
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-r-in-visual-studio"></a>Visual Studio에서 R 디버그
 
@@ -57,12 +58,12 @@ add <- function(x, y) {
 
 환경 브라우저에서는 다양한 특수 명령을 지원합니다.
 
-| 명령 | 설명 | 
+| 명령 | 설명 |
 | --- | --- |
 | n | 다음: 코드 파일에서 다음 문을 실행합니다(단위 실행과 같음). |
-| s | 한 단계씩 코드 실행: 코드 파일에서 다음 문을 실행하여 다음 문이 함수 호출인 경우 함수 범위로 한 단계씩 코드를 실행합니다. | 
+| s | 한 단계씩 코드 실행: 코드 파일에서 다음 문을 실행하여 다음 문이 함수 호출인 경우 함수 범위로 한 단계씩 코드를 실행합니다. |
 | f | 마침: 현재 함수 범위의 나머지를 실행하고 호출자로 돌아갑니다(단계 출력과 같음). |
-| c, cont | 계속: 프로그램을 다음 중단점까지 실행합니다. | 
+| c, cont | 계속: 프로그램을 다음 중단점까지 실행합니다. |
 | Q | 끝내기: 디버깅 세션을 종료합니다. |
 | 형식에 대한 설명 | 스택 표시: 대화형 창에 호출 스택을 표시합니다. |
 | 도움말 | 도움말 표시: 대화형 창에 사용 가능한 명령을 표시합니다. |

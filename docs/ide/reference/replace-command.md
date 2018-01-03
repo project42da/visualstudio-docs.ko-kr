@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7201086ade629dc7c6d39039c088333be815cc26
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ea63db35d5bb1eeca08f3e948ffcf5183259ef1c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replace-command"></a>바꾸기 명령
 **찾기 및 바꾸기** 창의 **파일에서 바꾸기**에서 사용할 수 있는 옵션의 하위 집합을 사용하여 파일의 텍스트를 바꿉니다.  
@@ -35,10 +36,10 @@ Edit.Replace findwhat replacewith [/all] [/case]
   
 ## <a name="arguments"></a>인수  
  `findwhat`  
- 필수 요소. 일치하는 텍스트입니다.  
+ 필수. 일치하는 텍스트입니다.  
   
  `replacewith`  
- 필수 요소. 일치된 텍스트를 대체할 텍스트입니다.  
+ 필수. 일치된 텍스트를 대체할 텍스트입니다.  
   
 ## <a name="switches"></a>스위치  
  /all 또는 /a  
@@ -80,7 +81,7 @@ Edit.Replace findwhat replacewith [/all] [/case]
  /word 또는 /w  
  선택 사항입니다. 전체 단어만을 검색합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 열린 모든 문서에서 `btnSend`를 `btnSubmit`으로 바꿉니다.  
   
 ```  

@@ -12,16 +12,17 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 206049d850b1f2f3c6b225b0c0d9c51d2a449a07
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 01f10f3d9c2f0f61708c14f2d7a8307f9db850f4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-line-profiling-tools-reference"></a>명령줄 프로파일링 도구 참조
 명령줄 성능 도구를 사용하여 프로그래머는 명령 프롬프트에서 응용 프로그램을 프로파일링할 수 있습니다. 다음 명령줄 프로파일링 도구를 사용하여 명령 프롬프트에서 코드를 프로파일링할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [VSInstr](../profiling/vsinstr.md)  
  VSInstr.exe 계측 옵션을 나열합니다.  
   

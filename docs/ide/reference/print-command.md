@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6eaf5d77da1dbc6e005764087dad338458e7ce8c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bba20817c03b7ff542c3af11a440ad8e619f5567
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="print-command"></a>인쇄 명령
 식을 계산하거나 지정된 텍스트를 표시합니다.  
@@ -34,7 +35,7 @@ Debug.Print text
   
 ## <a name="arguments"></a>인수  
  `text`  
- 필수 요소. 계산할 식 또는 표시할 텍스트입니다.  
+ 필수. 계산할 식 또는 표시할 텍스트입니다.  
   
 ## <a name="remarks"></a>설명  
  이 명령에 대한 별칭으로 물음표(?)를 사용할 수 있습니다. 따라서 예를 들면  
@@ -51,7 +52,7 @@ Debug.Print text
   
  이 명령의 두 버전은 모두 `expA` 식의 현재 값을 반환합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 >Debug.Print varA  

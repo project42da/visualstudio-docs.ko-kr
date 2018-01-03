@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7d95781c2c5c4370e09c13b382016b015ec1a0d5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 43b45f70e8ac7a6eeadfd3fb216b53540ec9a8b8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-project-and-item-templates"></a>프로젝트 템플릿 및 항목 템플릿 만들기
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 및 항목 템플릿은 사용자 용도에 맞게 사용할 수 있는 구조체와 일부 기본 코드를 제공하는 재사용 가능한 스텁을 제공합니다.  

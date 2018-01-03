@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 04da9c7db2c42bd071610dcb6e66b4bac7fb2807
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c6f002ec676ab74f9fa135ebba9270a724f3e8c1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="no-thread-activity-to-show-threads-view"></a>표시할 스레드 작업 없음(스레드 뷰)
 이 영역은 현재 표시된 시간 범위에서 숨겨지지 않은 스레드에 대한 데이터를 보여 줍니다.  

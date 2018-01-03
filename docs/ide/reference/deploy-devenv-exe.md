@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4561c8955f0ce4b1b5b50be8e31b5ff2ef5751d9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2f7697217d59d430e2b4661548b7f922f8fd8c95
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploy-devenvexe"></a>/Deploy (devenv.exe)
 빌드 또는 다시 빌드 후 솔루션을 배포합니다. 관리 코드 프로젝트에만 적용됩니다.  
@@ -34,10 +35,10 @@ devenv SolutionName /deploy SolnConfigName [/project ProjName] [/projectconfig P
   
 ## <a name="arguments"></a>인수  
  `SolnConfigName`  
- 필수 요소. `SolutionName`으로 명명된 솔루션을 빌드하는 데 사용할 솔루션 구성의 이름입니다.  
+ 필수. `SolutionName`으로 명명된 솔루션을 빌드하는 데 사용할 솔루션 구성의 이름입니다.  
   
  `SolutionName`  
- 필수 요소. 솔루션 파일의 전체 경로 및 이름입니다.  
+ 필수. 솔루션 파일의 전체 경로 및 이름입니다.  
   
  /project `ProjName`  
  선택 사항입니다. 솔루션 내에 있는 프로젝트 파일의 경로와 이름입니다. `SolutionName` 폴더에서 프로젝트 파일, 프로젝트의 표시 이름 또는 프로젝트 파일의 전체 경로와 이름까지의 상대 경로를 입력할 수 있습니다.  
@@ -52,7 +53,7 @@ devenv SolutionName /deploy SolnConfigName [/project ProjName] [/projectconfig P
   
  오류를 포함한 빌드에 대한 요약 정보는 **명령** 창 또는 `/out` 스위치로 지정된 로그 파일에 표시할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `MySolution`의 `Release` 솔루션 구성 내에 있는 `Release` 프로젝트 빌드 구성을 사용하여 `CSharpConsoleApp` 프로젝트를 배포합니다.  
   
 ```  

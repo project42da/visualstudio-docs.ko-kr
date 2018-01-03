@@ -17,11 +17,12 @@ caps.latest.revision: "53"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d52f6bfe745cf7e8684094cf9244b6eedcba13a9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: da961d153713c996c6f057e7bb0366c747c87205
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-identifying-performance-problems"></a>연습: 성능 문제 확인
 이 연습에서는 성능 문제를 파악하도록 응용 프로그램을 프로파일링하는 방법을 설명합니다.  
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/31/2017
   
      **실행 부하 과다 경로** 목록을 조사하여 목록 끝부분에 있는 PeopleTrax 함수가 PeopleNS.People.GetNames 메서드임을 확인합니다. 이 메서드의 위치를 분석하면 효율적입니다. 함수 이름을 클릭하여 **함수 정보** 뷰에서 GetNames의 정보를 표시합니다.  
   
-2.  **함수 정보** 뷰에는 두 개의 창이 있습니다. 비용 배분 창에서는 함수가 수행한 작업, 해당 함수가 호출한 함수가 수행한 작업, 그리고 샘플링된 인스턴스 수에서 함수를 호출한 함수가 차지하는 비율을 보여 주는 그래픽 뷰가 제공됩니다. 함수 이름을 클릭하면 뷰에서 포커스가 설정된 함수를 변경할 수 있습니다. 예를 들어 PeopleNS.People.GetPeople을 클릭하여 GetPeople을 선택된 함수로 설정할 수 있습니다.  
+2.  **함수 정보** 뷰에느 두 개의 창이 있습니다. 비용 배분 창에서는 함수가 수행한 작업, 해당 함수가 호출한 함수가 수행한 작업, 그리고 샘플링된 인스턴스 수에서 함수를 호출한 함수가 차지하는 비율을 보여 주는 그래픽 뷰가 제공됩니다. 함수 이름을 클릭하면 뷰에서 포커스가 설정된 함수를 변경할 수 있습니다. 예를 들어 PeopleNS.People.GetPeople을 클릭하여 GetPeople을 선택된 함수로 설정할 수 있습니다.  
   
      **함수 코드 뷰** 창에는 함수의 소스 코드(사용 가능한 경우)가 표시되며, 선택한 함수에서 가장 비용이 높은 줄이 강조 표시됩니다. GetNames를 선택하면 이 함수가 응용 프로그램 리소스에서 문자열을 읽은 다음 <xref:System.IO.StringReader>를 사용하여 문자열의 각 줄을 <xref:System.Collections.ArrayList>에 추가함을 확인할 수 있습니다. 이 함수를 최적화하는 확실한 방법은 없습니다.  
   

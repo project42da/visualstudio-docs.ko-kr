@@ -12,11 +12,12 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0aa46133a2ad57444b563adea0df2e1ff6a4aec0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 8887b9ef7663f3c1748c4de3571a076a89d63087
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-instrument-a-native-stand-alone-component-and-collect-timing-data-with-the-profiler-from-the-command-line"></a>방법: 명령줄에서 프로파일러를 사용하여 네이티브 독립 실행형 구성 요소 계측 및 타이밍 데이터 수집
 이 항목에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 C++ .exe 또는.dll 파일과 같은 네이티브 구성 요소를 계측하고 자세한 타이밍 데이터를 수집하는 방법을 설명합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  **VSInstr** 도구를 사용하여 대상 응용 프로그램의 계측된 버전을 생성합니다.  
   
-3.  프로파일러를 시작합니다. 형식:  
+3.  프로파일러를 시작합니다. 유형:  
   
      **VSPerfCmd /start:trace /output:** `OutputFile` [`Options`]  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  일반적인 방법으로 대상 프로그램을 시작합니다.  
   
-## <a name="controlling-data-collection"></a>데이터 수집 제어  
+## <a name="controlling-data-collection"></a>데이터 컬렉션 제어  
  대상 응용 프로그램이 실행 중이면 **VSPerfCmd.exe** 옵션을 사용하여 파일에 대한 데이터 쓰기를 시작하고 중지하는 방식으로 데이터 수집을 제어할 수 있습니다. 데이터 수집을 제어하면 응용 프로그램의 시작 또는 종료와 같이 프로그램 실행의 특정 부분에 대한 데이터를 수집할 수 있습니다.  
   
 #### <a name="to-start-and-stop-data-collection"></a>데이터 수집을 시작 및 중지하려면  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  대상 응용 프로그램을 닫습니다.  
   
-2.  프로파일러를 종료합니다. 형식:  
+2.  프로파일러를 종료합니다. 유형:  
   
      **VSPerfCmd /shutdown**  
   

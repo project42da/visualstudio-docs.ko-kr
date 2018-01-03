@@ -11,16 +11,17 @@ ms.assetid: 7e795873-1d4b-4a13-a52a-a411d87fb759
 caps.latest.revision: "13"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 39ed1ba397fd1c0a9ff1f30acea1cff4a38529a2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: af89bbfadfa992fad4b2ba114ffb006e4b0f818a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>코딩된 UI 테스트 로그를 사용하여 코딩된 UI 테스트 분석
 코딩된 UI 테스트 로그는 코딩된 UI 테스트 실행에 대한 중요한 정보를 필터링하고 기록합니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   Visual Studio Enterprise  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 10/27/2017
   
      ![코딩된 UI 테스트 로그 파일](../test/media/cuit_htmlactionlog3.png "CUIT_HTMLActionLog3")  
   
-## <a name="q--a"></a>Q & A  
+## <a name="q--a"></a>Q&A  
   
 ### <a name="q-what-happened-to-the-enablehtmllogger-key"></a>Q: EnableHtmlLogger 키는 어떻게 되나요?  
  이전 버전의 Visual Studio에는 코딩된 UI 테스트에서 HtmlLogger를 사용하도록 설정하는 다음과 같은 구성 설정이 두 개 더 있었습니다.  

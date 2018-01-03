@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a910c3f43dc0cb49e6b7f6f70355c6c195df7a82
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 372a1efccbfa211167930710418905d95411760c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-3-d-models"></a>3차원 모델 작업
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 모델 편집기를 사용하여 3차원 모델을 만들 수 있습니다. DirectX 기반 게임 또는 앱에서 이 모델을 사용할 수 있습니다.  

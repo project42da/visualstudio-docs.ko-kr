@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b19f65870212435904c29a2f60fb86c60921635a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 078568d4711794b58500399e4e8a58505056fd88
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-user-interfaces"></a>사용자 인터페이스 디자인
 Visual Studio의 다양한 도구를 사용하여 응용 프로그램용 사용자 인터페이스를 만들고 디자인할 수 있습니다.

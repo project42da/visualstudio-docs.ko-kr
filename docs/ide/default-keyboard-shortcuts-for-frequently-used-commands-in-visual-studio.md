@@ -10,11 +10,12 @@ ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2232c2564963a236c5698e081f2bd79c76ae3bf6
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 45aaccf19518572211bf9468a133989e651504bf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio에서 자주 사용되는 명령의 기본 바로 가기 키
 
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/07/2017
 |편집.구분선|Enter[텍스트 편집기, 보고서 디자이너, Windows Forms 디자이너]<br /><br /> 또는 Shift+Enter[텍스트 편집기]|  
 |편집.정의부분만보이기|Ctrl+M, Ctrl+O[텍스트 편집기]|  
 |편집.선택영역을주석으로처리|Ctrl+K, Ctrl+C[텍스트 편집기]|  
-|편집.단어자동완성|Alt+오른쪽 화살표[텍스트 편집기, Workflow Designer]<br /><br /> 또는 Ctrl+스페이스바[텍스트 편집기, Workflow Designer]<br /><br /> 또는 Ctrl+K, W[Workflow Designer]<br /><br /> 또는 Ctrl+K, Ctrl+W[Workflow Designer]|  
+|편집.단어자동완성|Alt+오른쪽 화살표[텍스트 편집기, Workflow Designer]<br /><br /> 또는 Ctrl+스페이스바[텍스트 편집기, 워크플로 디자이너]<br /><br /> 또는 Ctrl+K, W[Workflow Designer]<br /><br /> 또는 Ctrl+K, Ctrl+W[워크플로 디자이너]|  
 |편집.복사|Ctrl+C[전역]<br /><br /> 또는 Ctrl+Insert[전역]|  
 |편집.잘라내기|Ctrl+X[전역]<br /><br /> 또는 Shift+Delete[전역]|  
 |편집.삭제|Delete[전역, 팀 탐색기]<br /><br /> 또는 Shift+Delete[시퀀스 다이어그램, UML 동작 다이어그램, 레이어 다이어그램]<br /><br /> 또는 Ctrl+Delete[클래스 다이어그램]|  

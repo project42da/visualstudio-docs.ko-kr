@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5be97e75ac7dc29a6dd0244293259bcd17591233
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 97e4339546eda741ba961b0015f9f62edf231d24
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 지정한 프로젝트 또는 솔루션을 컴파일하고 실행합니다.  
@@ -36,10 +37,10 @@ devenv {/run|/r} {SolutionName|ProjectName}
   
 ## <a name="arguments"></a>인수  
  `SolutionName`  
- 필수 요소. 솔루션 파일의 전체 경로 및 이름입니다.  
+ 필수. 솔루션 파일의 전체 경로 및 이름입니다.  
   
  `ProjectName`  
- 필수 요소. 프로젝트 파일의 전체 경로 및 이름입니다.  
+ 필수. 프로젝트 파일의 전체 경로 및 이름입니다.  
   
 ## <a name="remarks"></a>설명  
  활성 솔루션 구성에 대해 지정된 설정에 따라 지정된 프로젝트 또는 솔루션을 컴파일하고 실행합니다. 이 스위치는 IDE(통합 개발 환경)를 시작하고 프로젝트 또는 솔루션 실행이 완료된 후 활성 상태로 둡니다.  
@@ -48,7 +49,7 @@ devenv {/run|/r} {SolutionName|ProjectName}
   
 -   오류를 포함한 요약 정보는 **명령** 창 또는 `/out` 스위치로 지정된 로그 파일에 표시할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 활성 배포 구성을 사용하여 `MySolution` 솔루션을 실행합니다.  
   
 ```  

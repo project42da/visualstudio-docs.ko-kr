@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 24b6a19ed79db2625fc7e1ad339ab2396635767a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: afdf338d300d67964499fc67ce260fc32b8664af
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-shortcuts-in-blend"></a>Blend의 바로 가기 키
 ## <a name="project-shortcuts"></a>프로젝트 바로 가기  
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="view-shortcuts"></a>보기 바로 가기  
   
-|수행할 작업|수행할 작업|  
+|수행할 작업|방법|  
 |----------------|-------------|  
 |**디자인**, **코드** 및 **분할** 보기 간 전환|F11|  
 |아트보드 확대|Ctrl+등호|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="workspace-shortcuts"></a>작업 영역 바로 가기  
   
-|수행할 작업|수행할 작업|  
+|수행할 작업|방법|  
 |----------------|-------------|  
 |**애니메이션** 작업 영역과 **디자인** 작업 영역 간 전환|Ctrl+F11|  
 |**자산** 패널 표시/숨기기|Ctrl+마침표|  

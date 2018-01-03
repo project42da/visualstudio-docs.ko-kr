@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 296faf330e23d65ae0ab7e9f434ab831ee520ac5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e486f7df85081ce010e6d2f518978f0952412ea1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="summary-view---instrumentation-data"></a>요약 뷰 - 계측 데이터
 요약 뷰에는 프로파일링 실행에서 성능상 가장 많은 비용이 소요된 함수에 대한 정보가 표시됩니다. 알림 링크 및 보고서 목록에 대한 설명을 비롯한 자세한 내용은 [요약 뷰](../profiling/summary-view.md)를 참조하세요.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
   
 |열|설명|  
 |------------|-----------------|  
-|**Name**|함수의 이름.|  
+|**이름**|함수의 이름.|  
 |**경과된 포괄 시간 %**|함수가 함수 본문과 자신이 호출한 함수의 코드를 실행하는 데 소요된 프로파일링 데이터 내 모든 시간의 백분율입니다.|  
 |**경과된 전용 시간 %**|함수가 함수 본문의 코드를 실행하는 데 소요된 프로파일링 데이터 내 모든 시간의 백분율입니다. 해당 함수가 호출한 함수에서 소요된 시간은 포함되지 않습니다.|  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/31/2017
   
 |열|설명|  
 |------------|-----------------|  
-|**Name**|함수의 이름.|  
+|**이름**|함수의 이름.|  
 |**전용 시간 비율(%)**|함수가 함수 본문의 코드를 실행하는 데 소요된 프로파일링 데이터 내 모든 시간의 백분율입니다. 해당 함수가 호출한 함수에서 소요된 시간은 포함되지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  

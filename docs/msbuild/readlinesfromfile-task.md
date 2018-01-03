@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: d489cc152d0f5652c8e6a787d9539b246d0f5285
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8db8c8414e4ce347ca8dbb59bec0f682911cf777
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="readlinesfromfile-task"></a>ReadLinesFromFile 작업
 텍스트 파일에서 항목 목록을 읽습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>설명  
  이 작업은 위에 나와 있는 매개 변수 외에 <xref:Microsoft.Build.Utilities.Task> 클래스에서 직접 상속하는 <xref:Microsoft.Build.Tasks.TaskExtension> 클래스의 매개 변수도 상속합니다. 이러한 추가 매개 변수 및 해당 설명이 포함된 목록은 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제는 `ReadLinesFromFile` 작업을 사용하여 텍스트 파일의 목록에서 항목을 만듭니다. 파일에서 읽은 항목은 `ItemsFromFile` 항목 컬렉션에 저장됩니다.  
   
 ```xml  

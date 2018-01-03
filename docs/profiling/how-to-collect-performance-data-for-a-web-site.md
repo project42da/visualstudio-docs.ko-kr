@@ -22,11 +22,12 @@ caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6acfbee87e64e71ae85290ba74f1464af7181228
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ff9927357b23ced05bbee6db354cbe8e82e62b4d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>방법: 웹 사이트에 대한 성능 데이터 수집
 **웹 응용 프로그램에 대한 성능 데이터를 수집하려면** 성능 마법사 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 를 사용할 수 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에 열려 있는 웹 응용 프로그램을 프로파일링하거나, 로컬 컴퓨터에 있고 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] IDE에 열려 있지 않은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 웹 사이트를 프로파일링할 수 있습니다.  

@@ -16,16 +16,17 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f7edc6e37b21b8810e8967c160e44e82c0903b24
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: dc3da69cd89421ed3f8b04f5c47a190d8453411d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalizing-applications"></a>응용 프로그램 전역화
 전역화는 여러 문화권에서 작동하도록 소프트웨어를 디자인하고 개발하는 프로세스입니다. 이 섹션은 Windows Forms 및 Web Forms 페이지에 둘 다 적용됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [전역 Windows Forms 및 Web Forms을 위한 문화권 관련 클래스](../ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)  
  문화권 설정에 따라 날짜, 시간, 숫자, 통화 및 기타 정보의 서식을 지정하는 클래스를 설명합니다.  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 16df4a6823bfb23847cd49b97d7b4a29edf0fa4b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: da3598568d0f607e37a3d42fbb080f0a70dfda57
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cores-view-zoom-tool"></a>코어 뷰 확대/축소 도구
 확대/축소 컨트롤은 특정 관심 영역을 중점적으로 확인하기 위해 시간 표시 막대를 확대/축소하는 데 사용할 수 있는 슬라이더입니다. 이 컨트롤은 현재 보기의 중심에서 확대/축소하므로 확대하기 전에 보기를 조정합니다.  

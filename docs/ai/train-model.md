@@ -10,17 +10,18 @@ ms.topic: how-to article
 ms.technology: visual studio
 ms.devlang: multiple
 ms.service: multiple
-ms.openlocfilehash: d8289a482bc83741a6b6bf31499925f5d24d0192
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: azure
+ms.openlocfilehash: af2307638209a54c7ce20df6412a1f95ea51d84d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI에서 AI 모델 학습
 
 Batch AI는 데이터 과학자와 AI 연구자들이 GPU 지원이 적용된 VM을 포함하여 Azure Virtual Machines 클러스터에서 AI 및 기타 기계 학습 모델을 교육시킬 수 있게 하는 관리되는 서비스입니다. 작업 요구 사항, 입력 확인 및 출력 저장 위치를 설명하면 Batch AI가 나머지를 처리합니다. [Azure Batch AI에 대한 자세한 정보](https://docs.microsoft.com/azure/batch-ai/overview) 
 
-Visual Studio Tools for AI에 통합되므로 Azure에서 동적으로 학습 모델을 확장할 수 있습ㄴ디ㅏ.  [Visual Studio Tools for AI](installation.md)를 설치한 후에는 Azure Machine Learning Sample Gallery에서 미리 제작된 방법을 사용하여 새 Python 프로젝트를 간편하게 만들 수 있습니다.
+Visual Studio Tools for AI에 통합되므로 Azure에서 동적으로 학습 모델을 확장할 수 있습ㄴ디ㅏ.  [Visual Studio Tools for AI](installation.md)가 설치되면 Azure Machine Learning 샘플 갤러리에서 미리 만들어진 방법을 사용하여 새 Python 프로젝트를 쉽게 만들 수 있습니다.
 
 1. Visual Studio를 실행합니다. **AI 도구** 메뉴를 열고 **클러스터 선택**을 선택하여 **서버 탐색기**를 엽니다.  
 

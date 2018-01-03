@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: f076985edeeec43d9f5a71e0e53b3937d6b8358f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: da81862b736605b93d4429e0e574ca5558a529c9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>7단계: 폼에 대화 상자 구성 요소 추가
 이 단계에서, 그림 파일을 열고 배경색을 선택할 수 있도록 프로그램을 설정하려면 **OpenFileDialog** 구성 요소 및 **ColorDialog** 구성 요소를 폼에 추가합니다.  

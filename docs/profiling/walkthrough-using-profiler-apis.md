@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fa7ba54d15697c02b62f13c3fa54a3005f410bd9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a592082cac8cf493a742c9ce6f7de3bb0c706aad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-profiler-apis"></a>연습: 프로파일러 API 사용
 연습에서는 C# 응용 프로그램을 사용하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 API를 사용하는 방법을 보여 줍니다. 프로파일러 API를 사용하여 계측 프로파일링 동안 수집되는 데이터 양을 제한합니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
  네이티브 코드의 경우 Visual Studio 프로파일러 API는 VSPerf.dll에 있습니다. 헤더 파일, VSPerf.h 및 가져오기 라이브러리, VSPerf.lib는 Microsoft Visual Studio 9\Team Tools\Performance Tools 디렉터리에 있습니다.  
   
- 관리되는 코드의 경우 프로파일러 API는 Microsoft.VisualStudio.Profiler.dll에 있습니다. 이 DLL은 Microsoft Visual Studio 9\Team Tools\Performance Tools 디렉터리에 있습니다. 자세한 내용은 <xref:Microsoft.VisualStudio.Profiler>을 참조하십시오.  
+ 관리되는 코드의 경우 프로파일러 API는 Microsoft.VisualStudio.Profiler.dll에 있습니다. 이 DLL은 Microsoft Visual Studio 9\Team Tools\Performance Tools 디렉터리에 있습니다. 자세한 내용은 <xref:Microsoft.VisualStudio.Profiler>을 참조하세요.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 연습에서는 사용자가 선택한 개발 환경이 디버깅 및 샘플링을 지원하도록 구성되었다고 가정합니다. 다음 항목에서는 이러한 필수 구성 요소의 개요를 제공합니다.  

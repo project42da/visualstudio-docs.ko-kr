@@ -12,11 +12,12 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0b16ef90f0babc8f9acd1999fd474bd4d122f523
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: dotnet
+ms.openlocfilehash: ac1157981811338381977e1363f18c94da56b2cb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-memory-data-by-using-the-command-line"></a>방법: 명령줄을 통해 .NET 서비스에 프로파일러를 연결하여 메모리 데이터 수집
 이 항목에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 프로파일러를 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 서비스에 연결하고 메모리 데이터를 수집하는 방법에 대해 설명합니다. 메모리 할당의 수와 크기에 대한 데이터를 수집할 수 있으며, 메모리 개체의 수명에 대한 데이터도 수집할 수 있습니다.  
@@ -90,9 +91,9 @@ ms.lasthandoff: 11/11/2017
   
     -   서비스의 프로세스 ID 또는 프로세스 이름을 지정합니다. Windows 작업 관리자에서 실행 중인 모든 프로세스의 프로세스 ID와 이름을 볼 수 있습니다.  
   
-    -   **targetclr:** `Version`은 한 응용 프로그램에 두 개 이상의 런타임 버전이 로드된 경우 프로파일링할 CLR(공용 언어 런타임) 버전을 지정합니다. 선택적 요소.  
+    -   **targetclr:** `Version`은 한 응용 프로그램에 두 개 이상의 런타임 버전이 로드된 경우 프로파일링할 CLR(공용 언어 런타임) 버전을 지정합니다. 선택 사항입니다.  
   
-## <a name="controlling-data-collection"></a>데이터 수집 제어  
+## <a name="controlling-data-collection"></a>데이터 컬렉션 제어  
  서비스가 실행되는 동안 **VSPerfCmd.exe** 옵션을 사용하여 프로파일러 데이터 파일에 대한 데이터 쓰기를 시작하고 중지할 수 있습니다. 데이터 수집을 제어하면 응용 프로그램의 시작 또는 종료와 같이 프로그램 실행의 특정 부분에 대한 데이터를 수집할 수 있습니다.  
   
 #### <a name="to-start-and-stop-data-collection"></a>데이터 수집을 시작 및 중지하려면  
@@ -118,7 +119,7 @@ ms.lasthandoff: 11/11/2017
   
     -   **VSPerfCmd /detach** 입력  
   
-2.  프로파일러를 종료합니다. 형식:  
+2.  프로파일러를 종료합니다. 유형:  
   
      **VSPerfCmd /shutdown**  
   

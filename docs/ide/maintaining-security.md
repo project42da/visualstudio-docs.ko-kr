@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 4dcb40a02de239c8061ae2559ce6adb581625b8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 01c2867c60a3aa7b00462503da08bda0a8ac80fb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maintaining-security"></a>보안 유지 관리
 지속적인 경계가 보안의 대가라는 말이 있습니다. 응용 프로그램을 디자인하고 개발하는 동안 보안 문제에 최대한 신경을 많이 써도 배포 후에 보안 결함이 나타날 수 있습니다. 응용 프로그램을 감사하고 이벤트 로그를 분석하면 이전에 몰랐던 결함을 발견할 수도 있습니다.  

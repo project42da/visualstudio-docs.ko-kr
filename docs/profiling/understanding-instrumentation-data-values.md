@@ -15,16 +15,17 @@ caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b7f0fc8530e45831132f3ec3f357ff0113fa4abe
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e1addb93dfe5c4c39bb29507aa39eba66131f888
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-instrumentation-data-values"></a>계측 데이터 값 이해
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 *계측* 프로파일링 방법은 함수 호출, 줄 및 프로파일링된 응용 프로그램의 명령에 대해 자세한 타이밍 정보를 기록합니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
 -   운영 체제가 간격 중에 작업을 수행했는지 여부. 운영 체제가 디스크 읽기/쓰기를 수행했거나 다른 프로세스에서 대상 스레드와 다른 프로세스 간을 전환한 경우를 예로 들 수 있습니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   

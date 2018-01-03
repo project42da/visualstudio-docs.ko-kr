@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 8503de5c90544e06fa7119482f67726655a4ffed
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6152cfe60a7628ce830cbf589a6808f5ca87fae2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="item-functions"></a>항목 함수
 MSBuild 4.0부터 작업 및 대상의 코드는 프로젝트의 항목에 대한 정보를 얻기 위해 item 함수를 호출할 수 있습니다. 이러한 함수를 사용하면 Distinct() 항목을 간편하게 가져올 수 있으며 항목을 반복하는 방식보다 속도도 더 빠릅니다.  
@@ -53,7 +54,7 @@ MSBuild 4.0부터 작업 및 대상의 코드는 프로젝트의 항목에 대�
 ## <a name="intrinsic-item-functions"></a>내장 항목 함수  
  아래 표는 항목에 사용할 수 있는 내장 함수를 나열합니다.  
   
-|함수|예제|설명|  
+|함수|예|설명|  
 |--------------|-------------|-----------------|  
 |`Count`|`@(MyItem->Count())`|항목 수를 반환합니다.|  
 |`DirectoryName`|`@(MyItem->DirectoryName())`|각 항목에 대한 해당 `Path.DirectoryName`을 반환합니다.|  
@@ -62,7 +63,7 @@ MSBuild 4.0부터 작업 및 대상의 코드는 프로젝트의 항목에 대�
 |`Reverse`|`@(MyItem->Reverse())`|항목을 역순으로 반환합니다.|  
 |`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|모든 항목에 지정된 메타데이터 이름 및 값이 있는지 여부를 나타내도록 `boolean`을 반환합니다. 비교 시 대/소문자가 구분되지 않습니다.|  
 |`ClearMetadata`|`@(MyItem->ClearMetadata())`|해당 메타데이터가 지워진 항목을 반환합니다. `itemspec`만 유지됩니다.|  
-|`HasMetadata`|`@(MyItem->HasMetadataValue("MetadataName"))`|지정된 메타데이터 이름을 가진 항목을 반환합니다. 비교 시 대/소문자가 구분되지 않습니다.|  
+|`HasMetadata`|`@(MyItem->HasMetadata("MetadataName"))`|지정된 메타데이터 이름을 가진 항목을 반환합니다. 비교 시 대/소문자가 구분되지 않습니다.|  
 |`Metadata`|`@(MyItem->Metadata("MetadataName"))`|메타데이터 이름을 포함하는 메타데이터의 값을 반환합니다.|  
 |`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue"))`|지정된 메타데이터 이름 및 값을 가진 항목을 반환합니다. 비교 시 대/소문자가 구분되지 않습니다.|  
   

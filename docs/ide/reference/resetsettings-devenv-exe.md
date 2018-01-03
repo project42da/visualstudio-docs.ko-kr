@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c4f65035e1030406ced4c5f0c98ebd1d1e66c5d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 52d01cfc3ae6a453330c2dda5da137f449ff5cbd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings(devenv.exe)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 기본 설정을 복원하고 자동으로 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE를 시작합니다. 필요에 따라 설정을 지정한 .vssettings 파일로 다시 설정합니다.  
@@ -42,7 +43,7 @@ Devenv /ResetSettings SettingsFile
 ## <a name="remarks"></a>설명  
  `SettingsFile`이 지정되지 않은 경우에는 다음번에 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 시작할 때 기본 설정 컬렉션을 선택할지 묻는 메시지가 표시됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령줄은 `MySettings.vssettings` 파일에 저장된 설정을 적용합니다.  
   
 ```  

@@ -11,11 +11,12 @@ ms.assetid: 9bdd74ff-2534-4fc7-a5c3-a77bf7843037
 caps.latest.revision: "10"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 3038f70405239d69f0924be022040bcc8c7db9a4
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: uwp
+ms.openlocfilehash: 6f7b32031d99b6286595ca5ef05215fc88b20ea2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>테스트를 위해 UWP 컨트롤에 대한 고유 자동화 속성 설정
 XAML 기반 UWP 스토어 응용 프로그램용 코딩된 UI 테스트를 실행하려는 경우 각 컨트롤을 식별하는 고유한 자동화 속성이 있어야 합니다.  

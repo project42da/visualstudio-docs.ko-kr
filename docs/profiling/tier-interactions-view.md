@@ -14,16 +14,17 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9aac5f9ac8886bef61d700209f77b4b1852fe2bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a42e748e45d7db0606d585d774be254a7358d6b0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tier-interactions-view"></a>계층 상호 작용 뷰
 상호 작용 프로파일링은 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]을 통해 데이터베이스와 통신하는 다중 계층 응용 프로그램의 함수 실행 시간에 대한 추가 정보를 제공합니다. 동기 함수 호출에 대해서만 데이터가 수집됩니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
 |열|설명|  
 |------------|-----------------|  
-|**Name**|-   최상위 행의 경우 프로파일링된 프로세스 또는 웹 페이지의 이름입니다.<br />-   데이터베이스 연결 행의 경우 데이터베이스를 호스트하는 서버의 이름입니다.|  
+|**이름**|-   최상위 행의 경우 프로파일링된 프로세스 또는 웹 페이지의 이름입니다.<br />-   데이터베이스 연결 행의 경우 데이터베이스를 호스트하는 서버의 이름입니다.|  
 |**데이터베이스**|데이터베이스의 이름입니다(데이터베이스 연결 행에만 해당됨).|  
 |**Count**|프로세스, 웹 페이지 또는 데이터베이스 연결에 의해 생성된 요청의 총 수입니다.|  
 |**총 경과 시간**|프로세스, 웹 페이지 또는 데이터베이스 연결에서 단일 요청을 실행하는 데 소요된 총 시간입니다.|  

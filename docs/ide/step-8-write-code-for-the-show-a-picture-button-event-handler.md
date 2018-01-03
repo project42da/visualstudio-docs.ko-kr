@@ -12,11 +12,12 @@ caps.latest.revision: "24"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: aab9138f4dc47395764607c3783df76b8708212b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b7c76492e3d07b0c32edb4ea91a5b3c152f1a206
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>8단계: 그림 단추 이벤트 처리기 표시를 위한 코드 작성
 이 단계에서는 **사진 표시** 단추가 다음과 같이 작동하도록 합니다.  

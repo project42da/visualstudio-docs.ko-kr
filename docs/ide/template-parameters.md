@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c9a719e39506e080ce55bad45124e34d79dbbfac
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7218b5bdcc95ed5db7f87c6fb17230895db579cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="template-parameters"></a>템플릿 매개 변수
 템플릿에 매개 변수를 사용하여 템플릿이 인스턴스화될 때 클래스 이름 및 네임스페이스 등 템플릿의 주요 부분 값을 바꿀 수 있습니다. 사용자가 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에서 **확인**을 클릭하는 경우 이러한 매개 변수는 백그라운드에서 실행되는 템플릿 마법사로 바뀝니다.  

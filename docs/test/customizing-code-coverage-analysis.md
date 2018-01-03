@@ -11,11 +11,12 @@ ms.assetid: f6337c35-acae-4c5f-b5d9-ac5ff687ef18
 caps.latest.revision: "16"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 64115171c64faf0f62b6530c37fa53c6631ac1d6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2bbac737c6f5bbb3dbe99b0ceae2eb648bcf4295
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-code-coverage-analysis"></a>코드 검사 분석 사용자 지정
 기본적으로 Visual Studio Code 검사 도구는 단위 테스트 중 로드된 모든 솔루션 어셈블리(.exe/.dll)를 분석합니다. 이 기본값은 대부분은 문제 없이 작동하므로 유지하는 것이 좋습니다. 자세한 내용은 [코드 검사를 사용하여 테스트할 코드 범위 결정](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)을 참조하세요.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/27/2017
 >  기호 확인은 어셈블리가 많은 원격 파일 위치를 사용할 경우 특히 오래 걸릴 수 있습니다. 따라서 원격 .pdb 파일을 이진(.dll 및.exe) 파일과 같은 로컬 위치에 복사하는 것이 좋습니다.  
   
 ### <a name="excluding-and-including"></a>제외 및 포함  
- 코드 검사 분석에서 지정한 어셈블리를 제외할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 코드 검사 분석에서 지정한 어셈블리를 제외할 수 있습니다. 예:  
   
 ```minterastlib  
 <ModulePaths>  
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/27/2017
   
  모든 일치 항목은 대소문자를 구분하지 않습니다.  
   
- 예를 들면 다음과 같습니다.  
+ 예:  
   
 ```xml  
 <ModulePaths>  
@@ -153,7 +154,7 @@ ms.lasthandoff: 10/27/2017
   
  **함수 이름 일치**  
   
- 정규식은 네임스페이스, 클래스 이름, 메서드 이름, 매개 변수 목록을 포함한 함수의 정규화된 이름과 일치해야 합니다. 예를 들면 다음과 같습니다.  
+ 정규식은 네임스페이스, 클래스 이름, 메서드 이름, 매개 변수 목록을 포함한 함수의 정규화된 이름과 일치해야 합니다. 예를 들어 개체에 적용된  
   
 -   C# 또는 Visual Basic의 경우: `Fabrikam.Math.LocalMath.SquareRoot(double)`입니다.  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b326e88e18e3a7c5515cc11bfda7e5c35ae4a063
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9bb2cbe0a87e61a50f3f2b071aef9ef9e12663a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markerseries-class"></a>marker_series 클래스
 단일 공급자가 생성한 이벤트의 직렬 채널을 나타냅니다.  
@@ -40,7 +41,7 @@ class marker_series;
   
 ### <a name="public-methods"></a>Public 메서드  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[marker_series::is_enabled 메서드](../profiling/marker-series-is-enabled-method.md)|모든 세션에서 공급자를 사용하도록 설정했는지 확인합니다.|  
 |[marker_series::write_alert 메서드](../profiling/marker-series-write-alert-method.md)|동시성 시각화 도우미 추적 파일에 경고를 씁니다.|  
@@ -56,4 +57,4 @@ class marker_series;
  **네임스페이스:** Concurrency::diagnostic  
   
 ## <a name="see-also"></a>참고 항목  
- [진단 네임스페이스](../profiling/diagnostic-namespace.md)
+ [diagnostic 네임스페이스](../profiling/diagnostic-namespace.md)

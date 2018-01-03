@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7669d8ca915a32496399c526b112e877a8bce57c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: aspnet
+ms.openlocfilehash: 7c4a1e48d5e9bdbf28569656b580608a6c35034a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-aspnet-load-tests"></a>ASP.NET 부하 테스트 프로파일링
 ASP.NET 웹 사이트 프로젝트에 대해 실행하는 자동화된 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 웹 테스트에서 프로파일링 데이터를 수집할 수 있습니다. 샘플링 및 계층 상호 작용 데이터를 수집할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  

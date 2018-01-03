@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 580d3b5f1dab03e34dac7c452da08e00e453a503
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a8f41fdf3a337fb2dea5ccca7131de34743c9096
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 VSPerfCLREnv 도구는 .NET Framework 응용 프로그램을 프로파일링하는 데 필요한 환경 변수를 설정하는 데 사용됩니다. 이 도구는 다음 구문을 사용합니다.  
@@ -39,7 +40,7 @@ VsPerfCLREnv [/option]
  **계층 상호 작용 데이터를 포함하기 위한 VSPerfCLREnv 옵션**  
   
 > [!WARNING]
->  [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]또는 [!INCLUDE[vs_pro_current_short](../profiling/includes/vs_pro_current_short_md.md)]을 사용하여 계층 상호 작용 프로파일링 데이터를 수집할 수 있습니다. 그러나 계층 상호 작용 프로파일링 데이터는 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] 및 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]에서만 볼 수 있습니다.  
+>  [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] 또는 [!INCLUDE[vs_pro_current_short](../profiling/includes/vs_pro_current_short_md.md)]를 사용하여 계층 상호 작용 프로파일링을 수집할 수 있습니다. 그러나 계층 상호 작용 프로파일링 데이터는 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] 및 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]에서만 볼 수 있습니다.  
   
  계층 상호 작용 프로파일링에서는 다층 계층 응용 프로그램의 ADO.NET 쿼리에 대한 추가 정보를 제공합니다. 동기 함수 호출에 대해서만 데이터가 수집됩니다. 원하는 프로파일링 방법을 사용하여 상호 작용 데이터를 프로파일링 실행에 추가할 수 있습니다.  
   

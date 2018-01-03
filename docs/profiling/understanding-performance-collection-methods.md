@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5ad7ecfb61e1d8ecb7bcb000a659b798eb651461
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: a126ec0329695455013ca8625a8aeb774cf2ad36
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-performance-collection-methods"></a>성능 데이터 수집 방법 이해
 Visual Studio 프로파일링 도구는 성능 데이터를 수집하는 데 사용할 수 있는 5가지 방법을 제공합니다. 이 항목에서는 각 방법에 대해 설명하고, 특정 방법으로 데이터를 수집하는 것이 적절한 몇 가지 시나리오를 제시합니다.  
@@ -93,7 +94,7 @@ Visual Studio 프로파일링 도구는 성능 데이터를 수집하는 데 사
   
  [리소스 경합 데이터 뷰](../profiling/resource-contention-data-views.md)  
   
- [Concurrency 시각화](../profiling/concurrency-visualizer.md)  
+ [동시성 시각화 도우미](../profiling/concurrency-visualizer.md)  
   
 ##  <a name="net_memory"></a> .NET 메모리  
  .NET 메모리 할당 프로파일링 방법은 프로파일링된 응용 프로그램에서 .NET Framework 개체를 할당할 때마다 컴퓨터 프로세서를 중단합니다. 개체 수명 데이터도 수집되는 경우 프로파일러는 각 .NET Framework 가비지 수집 후에 프로세서를 중단합니다.  

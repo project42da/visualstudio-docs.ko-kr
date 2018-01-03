@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8bd2365752e31ce463610b75fee3884271841b3c
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: ea6214987e12b8c5cf7e563b666822989d3a7015
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsperf"></a>VSPerf
 **VsPerf** 명령줄 도구를 사용하면 다음을 수행할 수 있습니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/11/2017
 |**/app:{AppName}**|프로파일러를 시작하고 지정한 앱이 시작 메뉴에서 시작될 때까지 기다립니다.<br /><br /> 설치된 앱의 앱 Name 및 PackageFullName을 보려면 `vsperf /listapps`를 실행합니다.|  
 |**/package:{PackageFullName}**|프로파일러를 시작하고 지정한 앱이 시작 메뉴에서 시작될 때까지 기다립니다.<br /><br /> 설치된 앱의 앱 Name 및 PackageFullName을 보려면 `vsperf /listapps`를 실행합니다.|  
 |**/js**|JavaScript 앱을 프로파일링하는 데 필요합니다.<br /><br /> JavaScript 앱에서 성능 데이터를 수집합니다.<br /><br /> /package 또는 /attach와 함께 사용해야 합니다.|  
-|**/noclr**|선택적 요소. CLR 데이터를 수집하지 않습니다.<br /><br /> /package 또는 /attach와 함께 사용해야 합니다.<br /><br /> 최적화 상태이며 관리되는 기호를 확인하지 않습니다.|  
+|**/noclr**|선택 사항입니다. CLR 데이터를 수집하지 않습니다.<br /><br /> /package 또는 /attach와 함께 사용해야 합니다.<br /><br /> 최적화 상태이며 관리되는 기호를 확인하지 않습니다.|  
 |**/listapps**|설치된 응용 프로그램 Name 및 PackageFullNames의 목록을 표시합니다.|  
   
 ##  <a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a> Windows 8 데스크톱 응용 프로그램 및 Windows Server 2012 응용 프로그램 전용  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/11/2017
 |||  
 |-|-|  
 |**/attach:{PID&#124;ProcessName}[,PID&#124;ProcessName]...**|지정된 프로세스에서 데이터를 수집합니다.<br /><br /> 작업 관리자를 사용하여 실행 중인 앱의 PID(프로세스 ID) 및 프로세스 이름을 확인합니다.|  
-|**/file:{ReportName}**|선택적 요소. 기존 파일을 덮어쓰는 출력 파일을 지정합니다.<br /><br /> /package 또는 /attach와 함께 사용해야 합니다.|  
+|**/file:{ReportName}**|선택 사항입니다. 기존 파일을 덮어쓰는 출력 파일을 지정합니다.<br /><br /> /package 또는 /attach와 함께 사용해야 합니다.|  
 |**/pause**|데이터 수집을 일시 중지합니다.|  
 |**/resume**|데이터 수집을 다시 시작합니다.|  
 |**/stop**|데이터 수집을 중지하고 대상 프로세스를 종료합니다.|  

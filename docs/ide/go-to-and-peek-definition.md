@@ -15,11 +15,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 467d119e67db254b6e15630c08c411bb15283351
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: db67f01ff2a58ee856e4588df8770fc4edef8ca2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="go-to-definition-and-peek-definition"></a>정의로 이동 및 정의 피킹(Peeking)  
 정의로 이동 및 정의 피킹(Peeking) 기능을 사용하여 형식 또는 멤버의 정의를 쉽게 볼 수 있습니다.
@@ -36,7 +37,7 @@ Visual Studio 2017 15.4 버전에는 마우스 사용자가 정의로 이동에 
 
 ![마우스 클릭 정의로 이동 사용](../ide/media/editor_options_mouse_click_gotodef.png)  
 
-## <a name="peek-definition"></a>정의 피킹
+## <a name="peek-definition"></a>정의 피킹(Peeking)
 정의 피킹 기능을 사용하면 편집기에서 현재 위치를 벗어나지 않고 형식 정의를 미리 볼 수 있습니다. 키보드 사용자인 경우 텍스트 커서를 형식 또는 멤버 이름의 어딘가에 놓고 **Alt + F12** 키를 누릅니다. 마우스 사용자인 경우 바로 가기 메뉴에서 **정의 피킹**을 선택할 수 있습니다. Visual Studio 2017 버전 15.4 이상에는 마우스를 사용하여 정의 보기를 피킹(Peeking)하는 새로운 방법이 있습니다. 먼저 **도구**, **옵션**, **텍스트 편집기**, **일반**으로 이동합니다. **Peek 뷰에서 정의 열기** 옵션을 선택하고 **확인**을 클릭하여 **옵션** 대화 상자를 닫습니다.  
 
 ![마우스 클릭 정의 피킹 옵션 설정](../ide/media/editor_options_peek_view.png)  

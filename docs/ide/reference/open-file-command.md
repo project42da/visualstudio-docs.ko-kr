@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f7b1576ce7c34e953c45d7b303190a00d77e86cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 59b0c421fa5a62394a32a2b9ad9926df58a40cb9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="open-file-command"></a>파일 열기 명령
 기존 파일을 열고 편집기를 지정할 수 있습니다.  
@@ -34,7 +35,7 @@ File.OpenFile filename [/e:editorname]
   
 ## <a name="arguments"></a>인수  
  `filename`  
- 필수 요소. 열려는 파일의 전체 또는 부분 경로와 파일 이름입니다. 공백을 포함한 경로는 따옴표로 묶어야 합니다.  
+ 필수. 열려는 파일의 전체 또는 부분 경로와 파일 이름입니다. 공백을 포함한 경로는 따옴표로 묶어야 합니다.  
   
 ## <a name="switches"></a>스위치  
  /e:`editorname`  
@@ -51,7 +52,7 @@ File.OpenFile filename [/e:editorname]
 ## <a name="remarks"></a>설명  
  경로를 입력하여 자동 완성에서 올바른 경로와 파일 이름을 찾으려고 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 소스 코드 편집기에서 스타일 파일을 "Test1.css"를 엽니다.  
   
 ```  

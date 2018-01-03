@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 23eabbdf18650238aa4eb078d0f73a8f583e70f7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 72419c37293a5ba0a9a7fd0583a1092356462a84
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cores-view-logical-cores"></a>코어 뷰 논리 코어
 각 채널 이름은 프로파일링된 시스템에 존재하는 논리 코어 중 하나를 나타냅니다. 명명은 0에서 논리 코어의 총 수까지 셉니다. 예를 들어 4코어 시스템은 논리 코어 0에서 논리 코어 3까지 셉니다.  

@@ -21,11 +21,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0c4c7613cca7f9dec7c2db7ceffef1cc542cfa61
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7b81517d8d8e0cc6dd1386525f7a2129ed18851c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigating-code"></a>코드 탐색  
 Visual Studio는 편집기에서 코드를 탐색하는 다양한 방법을 제공합니다. 이 항목에서는 코드를 탐색할 수 있는 다른 방법을 간략하게 설명하고, 보다 자세히 설명하는 항목에 대한 링크를 제공합니다.  
@@ -94,7 +95,7 @@ Visual Studio는 편집기에서 코드를 탐색하는 다양한 방법을 제�
 **키보드** | 형식 이름 내부에 텍스트 커서를 놓고 **F12** 키를 누릅니다.
 **마우스**    | 형식 이름을 마우스 오른쪽 단추로 클릭하고, **정의로 이동**을 선택하거나 **Ctrl** 키를 누르고, 형식 이름(Visual Studio 2017 15.4 버전의 경우 새로 만들기)을 클릭합니다.  
 
-## <a name="peek-definition"></a>정의 피킹  
+## <a name="peek-definition"></a>정의 피킹(Peeking)  
 정의 피킹은 코드 편집기에서 현재 위치를 벗어나지 않고 창에서 선택한 요소의 정의를 표시합니다. 자세한 내용은 [방법: 정의 피킹(Peeking)을 사용하여 코드 보기 및 편집](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md) 및 [정의로 이동 및 정의 피킹(Peeking)](../ide/go-to-and-peek-definition.md)을 참조하세요.  
 
 입력        | 함수 

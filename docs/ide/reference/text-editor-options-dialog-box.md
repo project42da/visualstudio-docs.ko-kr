@@ -24,16 +24,17 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 423b2537b425066ca490eb8ae3c20d17fbc31253
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 80668df65b1250eb579597653cf32ab79d30218c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="text-editor-options-dialog-box"></a>텍스트 편집기 옵션 대화 상자
 **옵션** 대화 상자의 편집기 옵션은 편집기의 모양 및 동작을 사용자 지정하는 방법을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 편집기의 글꼴 및 색 변경](../../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)  
  편집기 글꼴 및 색을 변경하는 방법을 설명합니다.  
   

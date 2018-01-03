@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 62e9060c812666f671f1c2d3378fad510d6524f6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d8227a514887150e3477e026a238df608fe98d11
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>어셈블리 및 매니페스트 서명 관리
 강력한 이름 서명은 소프트웨어 구성 요소에 전역적으로 고유한 ID를 제공합니다. 강력한 이름은 어셈블리가 다른 사용자에 의해 스푸핑되지 않도록 보장하고 구성 요소 종속성 및 구성 문이 올바른 구성 요소 및 구성 요소 버전에 매핑되도록 하는 데 사용됩니다.  

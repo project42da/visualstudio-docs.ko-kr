@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f4beda1530fb36b4cad751c143a3a3962029f2fd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1986f1cf206774303ea9d3c040d7f10c05ffe491
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-categories-are-present"></a>범주가 여러 개 있는 경우
 지정된 시간 범위에 대한 여러 종류의 작업을 포함하는 섹션이 선택되어 있습니다. 두 색이 표시되며 하나는 다른 하나에 세로로 누적됩니다. 이러한 색은 지정된 시간 범위에 상위 두 개의 빈도가 가장 높은 작업을 나타냅니다. 이러한 두 작업의 빈도는 세로 막대의 1/3 또는 1/2로 다른 작업에 상대적으로 표시됩니다. 자세한 정보를 보려면 스레드 보기의 이 섹션에서 확대/축소합니다.  

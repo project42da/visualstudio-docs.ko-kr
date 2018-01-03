@@ -15,16 +15,17 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 894d3f137787617de88ddcd2bed586c64dd22117
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 9c2e584b467141557d6a8e2a586643417a47edf0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-net-framework-runtime"></a>방법: .NET Framework 런타임 지정
 [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)] 릴리스에서는 다양한 버전의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 런타임을 사용하여 빌드된 모듈로 응용 프로그램을 구성할 수 있습니다. 기본적으로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구는 응용 프로그램이 로드한 첫 번째 런타임을 프로파일링합니다. 프로파일러를 사용하여 응용 프로그램을 시작할 때, 그리고 프로파일러를 이미 실행 중인 응용 프로그램에 연결할 때 프로파일링할 런타임을 지정할 수 있습니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 93ec728b6e7ab3a197382bbd66cb34906d248747
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: dde6bed2fda4dbf68a37636df83044e945a1f5d7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="find-command"></a>찾기 명령
 **찾기 및 바꾸기** 창의 **파일에서 바꾸기** 탭에서 사용할 수 있는 옵션의 하위 집합을 사용하여 파일을 검색합니다.  
@@ -34,7 +35,7 @@ Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]
   
 ## <a name="arguments"></a>인수  
  `findwhat`  
- 필수 요소. 일치하는 텍스트입니다.  
+ 필수. 일치하는 텍스트입니다.  
   
 ## <a name="switches"></a>스위치  
  /case 또는 /c  
@@ -73,7 +74,7 @@ Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]
  /word 또는 /w  
  선택 사항입니다. 전체 단어만을 검색합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 코드의 현재 선택된 섹션에서 "somestring"이라는 단어에 대해 대/소문자 구분 검색을 수행합니다.  
   
 ```  

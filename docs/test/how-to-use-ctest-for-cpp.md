@@ -11,11 +11,12 @@ ms.assetid: a8b30934-5f38-4a18-8819-263e0733cdbe
 caps.latest.revision: "14"
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e1d00460a4acf26f23c256f8eb0180360315a98
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: 1b471b90748442369cd9cf917e65fd283c5c52ed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-ctest-for-c-in-visual-studio"></a>Visual Studio에서 CTest for C++를 사용하는 방법 | Microsoft Docs
 CMake(CTest 포함)는 **C++를 통한 데스크톱 개발** 워크로드의 구성 요소로 Visual Studio IDE에 통합되어 있습니다. 사용자의 컴퓨터에 설치하려면 Visual Studio 설치 관리자를 열고 워크로드 구성 요소 목록에서 [CMake Tools for Visual C++](/cpp/ide/cmake-tools-for-visual-cpp)를 찾습니다.

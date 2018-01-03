@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ce6e9ca93d9cdca191db7db8f2eb3d144b74e40d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 31409c96a63a82898fcc999fa9f441a8c766b190
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="console"></a>콘솔
 VSPerfCmd.exe **콘솔** 옵션은 새 명령 프롬프트 창에서 지정된 응용 프로그램을 시작합니다. **콘솔**은 VSPerfCmd **Launch** 옵션에만 사용할 수 있습니다. 응용 프로그램이 명령줄 응용 프로그램이 아닌 경우 **콘솔**에 영향을 주지 않습니다.  

@@ -27,11 +27,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e99dff1fbe5638c81572f9b370f94c0337f9f7e3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b6f8adfd3ce7d585cffe3c7506c4fdd56cad4a11
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-list-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 작업 목록
 이 옵션 페이지에서는 **작업 목록** 미리 알림을 생성하는 주석 토큰을 추가, 삭제 및 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션**을 선택하고 **환경** 폴더를 확장한 후 **작업 목록**을 선택합니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
  우선 순위  
  선택한 토큰을 사용하는 작업의 우선 순위를 설정합니다. 이 토큰으로 시작되는 작업 주석에 **작업 목록**에 지정된 우선 순위가 자동으로 할당됩니다.  
   
- 이름  
+ name  
  토큰 문자열을 입력합니다. 이렇게 하면 **추가** 단추를 사용할 수 있게 됩니다. **추가**하면 이 문자열이 **토큰 목록**에 포함되고 이 이름으로 시작되는 주석이 **작업 목록**에 표시됩니다.  
   
  추가  

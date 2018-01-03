@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ad433ea0b1627d3e3ddcd80640f21a519d0264de
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 877f1e556498a31ec7ddfac12b1907d159c713cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-editor-windows"></a>방법: 편집기 창 관리
 한 번에 여러 위치에서 코드로 작업할 수 있습니다. 편집기 창을 분할하거나 편집기 창의 여러 인스턴스를 열어 이 작업을 수행합니다.  

@@ -18,11 +18,12 @@ caps.latest.revision: "64"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b5483245e7f2ae341d08618485a4f49e91eb8fa9
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 13d04bde21f46fd8950e79464beccfe2228633aa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
 프로젝트 디자이너의 **응용 프로그램** 페이지를 사용하여 프로젝트의 응용 프로그램 설정과 속성을 지정할 수 있습니다.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/02/2017
   
  **응용 프로그램 프레임워크 사용**이 선택된 경우(기본값), 이 목록에 **시작 폼**이라는 제목이 지정되고, 응용 프로그램 프레임워크에서 개체가 아니라 시작 폼만 지원하기 때문에 폼만 표시됩니다.  
   
- 프로젝트가 WPF 브라우저 응용 프로그램인 경우 이 목록에 **시작 URI**라는 제목이 지정되고 기본값은 **Page1.xaml**입니다. **시작 URI** 목록을 사용하면 응용 프로그램이 시작 시 표시하는 사용자 인터페이스 리소스(XAML 요소)를 지정할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.StartupUri%2A>을 참조하십시오.  
+ 프로젝트가 WPF 브라우저 응용 프로그램인 경우 이 목록에 **시작 URI**라는 제목이 지정되고 기본값은 **Page1.xaml**입니다. **시작 URI** 목록을 사용하면 응용 프로그램이 시작 시 표시하는 사용자 인터페이스 리소스(XAML 요소)를 지정할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.StartupUri%2A>을 참조하세요.  
   
  **응용 프로그램 프레임워크 사용**의 선택이 취소된 경우 이 목록은 **시작 개체**가 되고 `Sub Main`을 포함하는 폼과 클래스 또는 모듈을 둘 다 표시합니다.  
   

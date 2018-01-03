@@ -23,11 +23,12 @@ caps.latest.revision: "47"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bee8bdc56586f1c79ff10d8d2b70e30801f54254
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: 3c0bc7195fd862d5131a4a70b4e59ecea2afc0bc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>유니버설 Windows 앱의 HTML UI 응답성 분석
 이 항목에서는 유니버설 Windows 앱에 사용할 수 있는 성능 도구인 UI 응답성 프로파일러를 사용하여 앱에서 성능 문제를 격리하는 방법에 대해 설명합니다.  
@@ -325,26 +326,26 @@ if (performance.mark && performance.measure) {
   
 -   **이미지 디코딩.** 이미지의 압축을 풀고 디코딩하는 데 걸린 시간을 나타냅니다.  
   
- 스크립트 및 스타일 지정 범주의 경우, UI 응답성 프로파일러에서 시간 표시 막대 정보 그래프에 작업할 수 있는 데이터를 제공할 수 있습니다. 스크립팅 이슈를 문제로 식별한 경우, UI 응답성 프로파일러로 CPU 샘플링 프로파일러를 실행할 수 있습니다. 또는 Visual Studio 함수 프로파일러를 사용하여 보다 자세한 데이터를 얻을 수도 있습니다. 자세한 내용은 [JavaScript 메모리](../profiling/javascript-memory.md)를 참조하세요.  
+ 스크립트 및 스타일 지정 범주의 경우, UI 응답성 프로파일러에서 시간 표시 막대 정보 그래프에 작업할 수 있는 데이터를 제공할 수 있습니다. 스크립팅 이슈를 문제로 식별한 경우, UI 응답성 프로파일러로 CPU 샘플링 프로파일러를 실행할 수 있습니다. 또는 Visual Studio 함수 프로파일러를 사용하여 보다 자세한 데이터를 얻을 수도 있습니다. 자세한 내용은 [JavaScript 메모리](../profiling/javascript-memory.md)를 선택합니다.  
   
  다른 이벤트 범주의 경우 앱에 기능을 추가하여 발생하는 플랫폼의 의도하지 않은 결과를 식별할 수 있지만, 이 경우 UI 응답 프로파일러를 사용하여 특정 성능 문제를 해결할 수는 없습니다.  
   
  다음 표에서는 이벤트 및 해당 설명을 보여 줍니다.  
   
-|이벤트|이벤트 범주|발생 경우|  
+|이벤트(event)|이벤트 범주|발생 경우|  
 |-----------|--------------------|-----------------|  
 |CSS 구문 분석|로드|새 CSS 콘텐츠가 발견되어 이 CSS 콘텐츠를 구문 분석하려고 했습니다.|  
 |HTML 구문 분석|로드|새 HTML 콘텐츠가 발견되어 이 콘텐츠를 노드로 구문 분석하고 DOM 트리에 콘텐츠를 삽입하려고 했습니다.|  
 |HTTP 요청|로드|DOM에서 원격 리소스가 발견되었거나 XMLHttpRequest가 생성되어 HTTP 요청이 발생했습니다.|  
 |잘못된 다운로드|로드|페이지의 HTML 콘텐츠가 필요한 리소스에 대해 검색되어 해당 리소스에 대한 후속 HTTP 요청이 빠르게 예약될 수 있습니다.|  
-|애니메이션 프레임 콜백 함수|스크립팅|브라우저에서 다른 프레임을 렌더링하려고 했고, 이것이 앱 제공 콜백 함수를 트리거했습니다.|  
-|DOM 이벤트|스크립팅|DOM 이벤트가 발생하여 실행되었습니다.<br /><br /> `context` 또는  `DOMContentLoaded` 과 같은 DOM 이벤트에 대한 `click`속성이 괄호 안에 표시됩니다.|  
-|이벤트 수신기|스크립팅|이벤트 수신기가 호출되어 실행되었습니다.|  
+|애니메이션 프레임 콜백 함수|스크립팅 중|브라우저에서 다른 프레임을 렌더링하려고 했고, 이것이 앱 제공 콜백 함수를 트리거했습니다.|  
+|DOM 이벤트|스크립팅 중|DOM 이벤트가 발생하여 실행되었습니다.<br /><br /> `context` 또는  `DOMContentLoaded` 과 같은 DOM 이벤트에 대한 `click`속성이 괄호 안에 표시됩니다.|  
+|이벤트 수신기|스크립팅 중|이벤트 수신기가 호출되어 실행되었습니다.|  
 |미디어 쿼리 수신기|스크립팅|등록된 미디어 쿼리가 무효화되어 연결된 수신기가 실행되었습니다.|  
 |Mutation observer|스크립팅|하나 이상의 관찰된 DOM 요소가 수정되어 MutationObserver의 연결된 콜백이 실행되었습니다.|  
 |스크립트 계산|스크립팅|새 SCRIPT 요소가 DOM에서 발견되어 이 스크립트를 구문 분석하고 실행하려고 했습니다.|  
 |Timer|스크립팅|예약된 타이머의 시간이 지나 연결된 해당 콜백 함수가 실행되었습니다.|  
-|Windows 런타임 비동기 콜백 함수|스크립팅|Windows 런타임 개체에서 `Promise` 콜백 함수를 트리거한 비동기 작업이 완료되었습니다.|  
+|Windows 런타임 비동기 콜백 함수|스크립팅 중|Windows 런타임 개체에서 `Promise` 콜백 함수를 트리거한 비동기 작업이 완료되었습니다.|  
 |Windows 런타임 이벤트|스크립팅|Windows 런타임 개체에서 등록된 수신기를 트리거한 이벤트가 발생했습니다.|  
 |가비지 수집|GC|더 이상 사용 중이 아닌 개체의 메모리 수집에 걸린 시간입니다.|  
 |CSS 계산|스타일 지정|DOM에서 영향을 받는 모든 요소의 스타일 속성을 다시 계산해야 하는 항목이 변경되었습니다.|  

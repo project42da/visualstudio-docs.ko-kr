@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 8356a9d4ab470b67a6e495d753fa498237e530f4
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 46048b135dc0023e2a7b918b72ec226af3ed22b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-6-working-with-git"></a>6단계: Git 작업
 
@@ -48,7 +49,6 @@ Visual Studio는 로컬 Git 리포지토리 및 GitHub 및 Visual Studio Team Se
 
 Git 작업에 대한 보다 광범위한 자습서는 [Visual Studio 2017 및 VSTS Git와 코드 공유](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs-2017)를 참조하세요.
 
-
 ## <a name="tutorial-review"></a>자습서 검토
 
 Visual Studio의 Python에 대한 이 자습서 완료를 축하합니다. 이 자습서에서는 다음 방법을 학습했습니다.
@@ -62,7 +62,7 @@ Visual Studio의 Python에 대한 이 자습서 완료를 축하합니다. 이 �
 
 여기에서 다음을 포함하여 개념 및 방법 가이드를 살펴봅니다.
 
-- [Python용 C++ 확장명 만들기](cpp-and-python.md)
+- [Python용 C++ 확장 만들기](cpp-and-python.md)
 - [Azure App Service에 게시](publishing-to-azure.md)
 - [프로파일링](profiling.md)
-- [단위 테스트](unit-testing.md)
+- [유닛 테스트](unit-testing.md)

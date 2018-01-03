@@ -12,11 +12,12 @@ ms.assetid: d3de7b31-0262-4373-ba84-e74eda7651e4
 caps.latest.revision: "26"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 5a6a1a314e837b441e2fc563baabf935659adcf8
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: uwp
+ms.openlocfilehash: f5f61b5c2c0fc5f252ed331e58137f970f6705df
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-and-run-unit-tests-for-a-uwp-app-in-visual-studio"></a>Visual Studio에서 UWP 앱에 대한 단위 테스트 만들기 및 실행
 Visual Studio 단위 테스트 도구는 소프트웨어 개발 방식에 단위 테스트를 통합하려는 개발자 및 팀을 지원하기 위해 마련되었습니다. 단위 테스트는 Visual C#, Visual Basic 및 Visual C++ 프로젝트의 클래스 메서드에서 논리 오류를 찾는 효율적이고 유지 관리할 수 있는 방법을 개발자 및 테스터에게 제공합니다.  

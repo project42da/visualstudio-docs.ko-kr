@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 15928f639465f6d8abbaa3735fee40e59ae5045c
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: 4e2cfe9faba79f955146bf929c4c8c1238d14fb0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-where-r-code-runs-with-workspaces"></a>작업 영역에서 R 코드가 실행되는 위치 제어
 
@@ -28,7 +29,7 @@ RTVS(Visual Studio용 R 도구)의 작업 영역에서는 R 세션이 실행되�
 
 이 창에서 녹색 확인 표시는 RTVS가 바인딩된 활성 작업 영역을 나타냅니다. 녹색 화살표를 선택하면 활성 작업 영역이 설정됩니다. 각 작업 영역의 오른쪽에 있는 설정(기어) 아이콘을 사용하여 이름, 위치 및 명령줄 인수를 변경할 수 있습니다. 빨간색 X를 선택하면 수동으로 추가된 작업 영역이 제거됩니다.
 
-항목 내용
+항목 내용:
 
 - [작업 영역 저장 및 다시 설정](#saving-and-resetting-a-workspace)
 - [로컬 작업 영역](#local-workspaces)

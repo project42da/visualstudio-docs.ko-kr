@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d348bdc52d53d7ba671b455e10893c578418a892
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 37306636da74637cb950ca1502b94a750a51ccba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saving-and-exporting-performance-tools-data"></a>성능 도구 데이터 저장 및 내보내기
 이 항목에서는 성능 데이터 파일을 저장하고 내보내는 방법을 설명합니다.  

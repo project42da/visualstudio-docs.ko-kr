@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 42c447625093adb84f3db0c495efb7b0cfa2664e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8d1b19cb452d937b018a1ecd7ffb1c4c9567349f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-a-project-that-has-resources"></a>방법: 리소스를 사용하는 프로젝트 빌드
 프로젝트의 현지화된 버전을 빌드할 경우 모든 사용자 인터페이스 요소를 언어에 따라 다른 리소스 파일로 분리해야 합니다. 프로젝트에서 문자열만 사용할 경우 리소스 파일에는 텍스트 파일이 사용됩니다. 또는 .resx 파일을 리소스 파일로 사용할 수 있습니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  `Output` 요소에서 생성된 항목을 다른 작업에 대한 입력으로 사용합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 `Output` 요소를 사용하여 `GenerateResource` 작업의 `OutputResources` 특성에 컴파일된 리소스 파일 `alpha.resources` 및 `beta.resources`가 포함되고 이러한 두 파일이 `Resources` 항목 목록 내에 배치되도록 지정하는 방법을 보여 줍니다. 이러한 .resources 파일을 같은 이름의 항목 모음으로 식별하면 해당 파일을 [Csc](../msbuild/csc-task.md) 작업 등의 다른 작업에 대한 입력으로 쉽게 사용할 수 있습니다.  
   
  이 작업은 [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)에 **/compile** 스위치를 사용하는 것과 같습니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
 </GenerateResource>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제 프로젝트에는 리소스를 컴파일하는 `GenerateResource` 작업 및 소스 코드 파일과 컴파일된 리소스 파일을 둘 다 컴파일하는 `Csc` 작업이 포함됩니다. `GenerateResource` 작업으로 컴파일된 리소스 파일은 `Resources` 항목에 저장되고 `Csc` 작업에 전달됩니다.  
   
 ```xml  

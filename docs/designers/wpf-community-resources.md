@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f5f010ee5d72723ec0ef4f20b13b895dc9b75f1f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a760336194482485f7b46cd35600fcb102d7113b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-community-resources"></a>WPF 커뮤니티 리소스
 Microsoft는 WPF 팀 멤버 및 커뮤니티 리더가 생성한 블로그, 포럼 및 Microsoft Connect 피드백 센터를 포함하여 배우고, 토론하고, WPF(Windows Presentation Foundation)에 대한 피드백을 제공하는 다양한 커뮤니티 리소스를 제공합니다.  

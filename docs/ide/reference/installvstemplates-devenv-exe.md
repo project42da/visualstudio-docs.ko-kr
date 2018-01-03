@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6d9c9862a212e448ea46c03e94b45f6dfde57bf1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 22a748a21eecc1769a05250eda31f6c10078ea77
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installvstemplates-devenvexe"></a>/InstallVSTemplates(devenv.exe)
 *\<Visual Studio 설치 경로>*\Common7\IDE\ProjectTemplates\ 또는 *\<Visual Studio 설치 경로>*\Common7\IDE\ItemTemplates\에 있는 프로젝트 또는 항목 템플릿을 등록하여 **새 프로젝트** 및 **새 항목 추가** 대화 상자를 통해 액세스할 수 있도록 합니다.  

@@ -12,11 +12,12 @@ caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca6318b5280e2098858bdcf523a3131cf68b7c84
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: a9a6996c990783a4ad077211d79616ba32531822
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line"></a>방법: 명령줄을 통해 .NET Framework 독립 실행형 응용 프로그램에 프로파일러를 연결하여 메모리 데이터 수집
 이 항목은 [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 프로파일러를 실행 중인 .NET Framework 독립 실행형(클라이언트) 응용 프로그램에 연결하고 메모리 데이터를 수집하는 방법을 설명합니다.  
@@ -45,9 +46,9 @@ ms.lasthandoff: 10/31/2017
         |**/samplegc**|메모리 할당 데이터만 수집합니다.|  
         |**/samplegclife**|메모리 할당 및 개체 수명 데이터를 둘 다 수집합니다.|  
   
-    -   **/samplelineoff** 옵션은 소스 코드 줄 번호 데이터의 컬렉션을 해제합니다.  
+    -   **/samplelineoff** 옵션은 소스 코드 줄 번호 데이터를 수집하지 않도록 합니다.  
   
-3.  프로파일러를 시작합니다. 형식:  
+3.  프로파일러를 시작합니다. 유형:  
   
      **VSPerfCmd /start:sample /output:** `OutputFile` [`Options`]  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/31/2017
   
     -   **/targetclr:** `Version`은 한 응용 프로그램에 두 개 이상의 런타임 버전이 로드된 경우 프로파일링할 CLR(공용 언어 런타임) 버전을 지정합니다. 선택 사항입니다.  
   
-## <a name="controlling-data-collection"></a>데이터 수집 제어  
+## <a name="controlling-data-collection"></a>데이터 컬렉션 제어  
  대상 응용 프로그램이 실행 중이면 **VSPerfCmd.exe** 옵션을 사용하여 파일에 대한 데이터 쓰기를 시작하고 중지하는 방식으로 데이터 수집을 제어할 수 있습니다. 데이터 수집을 제어하면 응용 프로그램의 시작 또는 종료와 같이 프로그램 실행의 특정 부분에 대한 데이터를 수집할 수 있습니다.  
   
 #### <a name="to-start-and-stop-data-collection"></a>데이터 수집을 시작 및 중지하려면  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/31/2017
     |옵션|설명|  
     |------------|-----------------|  
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|모든 프로세스에 대한 데이터 수집을 시작(**/globalon**) 또는 중지(**/globaloff**)합니다.|  
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|`PID`로 지정된 프로세스에 대한 데이터 수집을 시작(**/processon**) 또는 중지(**/processoff**)합니다.|  
+    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|`PID`에 지정된 프로세스에 대한 데이터 수집을 시작(**/processon**) 또는 중지(**/processoff**)합니다.|  
     |[/attach](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/attach**는 `PID` 또는 프로세스 이름(ProcName)으로 지정된 프로세스에 대한 데이터 수집을 시작합니다. **/detach**는 지정된 프로세스 또는 모든 프로세스(특정 프로세스가 지정되지 않은 경우)에 대한 데이터 수집을 중지합니다.|  
   
 ## <a name="ending-the-profiling-session"></a>프로파일링 세션 종료  
@@ -100,11 +101,11 @@ ms.lasthandoff: 10/31/2017
   
     -   대상 응용 프로그램을 닫습니다.  
   
-2.  프로파일러를 종료합니다. 형식:  
+2.  프로파일러를 종료합니다. 유형:  
   
      **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)  
   
-3.  (선택 사항) 프로파일링 환경 변수를 지웁니다. 형식:  
+3.  (선택 사항) 프로파일링 환경 변수를 지웁니다. 유형:  
   
      **VSPerfCmd /off**  
   

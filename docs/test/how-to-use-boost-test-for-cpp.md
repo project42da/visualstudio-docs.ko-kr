@@ -11,11 +11,12 @@ ms.assetid: 2e0710a8-8e8a-4f6e-8415-5ab3eb830079
 caps.latest.revision: "14"
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bfce4aa4153d8f01fa9ef6cd6dc0d4b08eedbc4
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: af55f9f124b2ec609c4f0a590e7c2fab738624d4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio에서 Boost.Test for C++를 사용하는 방법
 **Visual Studio 2017 버전 15.5** 이상에서 Boost.Test는 **C++로 데스크톱 개발** 워크로드의 구성 요소로 Visual Studio IDE에 통합되어 있습니다. 컴퓨터에 설치하려면 Visual Studio 설치 관리자를 열고 워크로드 구성 요소 목록에서 **Boost.Test 어댑터**를 찾습니다.

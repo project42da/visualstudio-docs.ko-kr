@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9666f4f26476544baa6afc5dad17798b4e8360d1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9db6306126c64b0f2d5243ce443659f910be299c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>연습: 여러 컴퓨터 빌드 환경 만들기
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/31/2017
   
 -   [소스 컨트롤로 체크 인할 수 있도록 빌드 환경 만들기](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#CreatingForSourceControl)  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   Visual Studio Ultimate, Visual Studio Premium 또는 Visual Studio Professional 정품  
   
@@ -289,8 +290,8 @@ ms.lasthandoff: 10/31/2017
     |Vcvarsall.bat 인수|컴파일러|빌드 컴퓨터 아키텍처|출력 아키텍처 빌드|  
     |----------------------------|--------------|---------------------------------|-------------------------------|  
     |x86(기본값)|32비트 네이티브|x86, x64|x86|  
-    |x86_amd64|x64 크로스|x86, x64|x64|  
-    |amd64|x64 네이티브|x64|x64|  
+    |x86_amd64|x64 크로스|x86, x64|X64|  
+    |amd64|x64 네이티브|X64|X64|  
   
      vcvarsall.bat가 실행되면, 즉 오류 메시지가 표시되지 않으면 다음 단계를 건너뛰고 이 문서의 [빌드 컴퓨터의 GAC(전역 어셈블리 캐시)에 MSBuild 어셈블리 설치](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#InstallingMSBuildToGAC) 섹션에서 계속할 수 있습니다.  
   

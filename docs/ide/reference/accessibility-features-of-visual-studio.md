@@ -14,11 +14,12 @@ ms.assetid: aa1ada29-4d93-4bf0-af8b-03633fcb0fba
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 0ee9f615ad28e486566fb117124a1b69634a4b57
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e947fa523b2d5e79e1df1966e6a4c3d9b6c8e7af
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility-features-of-visual-studio"></a>Visual Studio의 내게 필요한 옵션 기능
 > [!TIP]
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
 > [!IMPORTANT]
 >  이 섹션의 정보는 미국에서 Microsoft 제품 사용 허가를 받은 사용자에게만 적용됩니다. 미국 이외의 국가에서 이 제품을 구입한 경우 소프트웨어 패키지에 동봉된 자회사 정보 카드를 참조하거나 [Microsoft 지원 문의처 페이지](http://support.microsoft.com/ContactUs)를 방문하여 페이지 아래쪽의 **전 세계 Microsoft 주소 찾기** 링크를 클릭할 수 있습니다. 이 페이지에서는 Microsoft 지원 서비스의 전화 번호 및 주소 목록을 제공합니다. 자회사에 연락하여 이 섹션에서 설명하는 제품 및 서비스 유형이 해당 지역에서 제공되는지 확인할 수 있습니다. 내게 필요한 옵션에 대한 정보는 일본어, 프랑스어 등 다른 언어로도 제공됩니다.  
 
- 자세한 내용은 다음 항목을 참조하십시오.  
+ 자세한 내용은 다음 항목을 참조하세요.  
 
 -   [방법: IDE 접근성 옵션 설정](../../ide/reference/how-to-set-ide-accessibility-options.md)  
 

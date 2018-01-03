@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7a27b275d8b1516b6ad00e6dcf2ddf16570b8f3f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6ecd2e18cf162308159297744c7834d8965d496a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="thread-ready-connector"></a>스레드 준비 커넥터
 호출 스택 및 해당 차단 해제 스택을 보기 위해 차단 세그먼트를 클릭하면 스레드 준비 커넥터가 나타날 수도 있습니다. 차단 해제 이벤트가 현재 프로세스의 다른 스레드에서 발생한 경우 스레드 준비 커넥터는 실행을 계속하기 위해 차단된 스레드를 활성화한 스레드 및 실행 세그먼트를 시각적으로 식별합니다.

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 060221e5abe0ff9082a04f8b75561a7e4dec9f64
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0ba6b4d3ce4aa362c63cace8481bacec90c91716
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-radix-command"></a>기수 설정 명령
 정수 값을 표시하는 데 사용할 숫자 기준을 설정하거나 반환합니다.  
@@ -35,7 +36,7 @@ Debug.SetRadix [10 | 16 | hex | dec]
  `10`, `16`, `hex` 또는 `dec`  
  선택 사항입니다. 10진수(10 또는 dec) 또는 16진수(16 또는 hex)를 나타냅니다. 인수를 생략하면 현재 기수 값이 반환됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 16진수 형식의 정수 값을 표시하도록 환경을 설정합니다.  
   
 ```  

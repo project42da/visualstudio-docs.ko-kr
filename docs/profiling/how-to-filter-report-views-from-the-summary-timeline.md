@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 827e9702f495816a7cce4cb450bafa2590ddbba5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 17e837e43a1de3b052e8296a49d5b48956db0be6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-filter-report-views-from-the-summary-timeline"></a>방법: 요약 시간 표시 막대에서 보고서 뷰 필터링
 요약 뷰의 시간 표시 막대 그래프에 시간 세그먼트를 지정하여 성능 보고서에 표시되는 데이터를 필터링할 수 있습니다. 보고서를 필터링할 때 지정된 시간 세그먼트만 포함하도록 프로파일링 데이터 파일이 다시 분석됩니다.  

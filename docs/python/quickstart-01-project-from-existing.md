@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: f0090c5c7cceabdfc8fde313b7d3ad23337ad409
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 5f8f5b3baa26bf9c17b016c2a480443af3990256
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>빠른 시작: 기존 코드에서 Python 프로젝트를 만들려면
 
@@ -29,7 +30,6 @@ ms.lasthandoff: 12/01/2017
 
 8. 원하는 경우 Ctrl+F5 키를 누르거나 **디버그 > 디버깅하지 않고 시작**을 선택하여 프로그램을 실행합니다. 
 
-
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
@@ -39,4 +39,4 @@ ms.lasthandoff: 12/01/2017
 
 - [기존 Python 인터프리터에 대한 환경 만들기](python-environments.md#creating-an-environment-for-an-existing-interpreter)
 - [Visual Studio 2015 이하 버전에서 Python 지원 설치](installation.md)
-- [설치 위치](installation.md#install-locations)
+- [설치 위치](installation.md#install-locations).

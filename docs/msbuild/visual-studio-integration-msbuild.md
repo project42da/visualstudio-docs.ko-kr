@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 5aff5914d9b278b206f81abd4f28ce9f4dfa409c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2458203cdaa23509e35c61eb71a9e9cfa6e214ec
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio 통합(MSBuild)
 Visual Studio는 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 를 호스팅하여 관리되는 프로젝트를 로드하고 빌드합니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 에서 프로젝트를 관리하므로 프로젝트가 다른 도구에서 작성되어 사용자 지정된 빌드 프로세스를 가지더라도 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 형식의 프로젝트는 대부분 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 사용될 수 있습니다.  
@@ -125,7 +126,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
  출력 어셈블리를 찾아서 시작하고 디버거를 연결하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서 `OutputPath`, `AssemblyName`및 `OutputType` 속성이 올바르게 정의되어 있어야 합니다. 빌드 프로세스에서 컴파일러를 통해 .pdb 파일을 생성하지 않으면 디버거가 연결되지 않습니다.  
   
 ## <a name="design-time-target-execution"></a>디자인 타임 대상 실행  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서는 프로젝트를 로드할 때 특정 이름의 대상을 실행하려고 시도합니다. 이러한 대상에는 `Compile`, `ResolveAssemblyReferences`, `ResolveCOMReferences`, `GetFrameworkPaths`및 `CopyRunEnvironmentFiles`가 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서는 이러한 대상을 실행하여 컴파일러가 IntelliSense를 제공하도록 초기화되거나, 디버거가 초기화되거나, 솔루션 탐색기에 표시된 참조가 확인될 수 있도록 할 수 있습니다. 이러한 대상이 없어도 프로젝트를 제대로 로드하고 빌드할 수는 있지만 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서 디자인 타임 환경이 완전하게 작동하지 않습니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서는 프로젝트를 로드할 때 특정 이름의 대상을 실행하려고 시도합니다. 이러한 대상에는 `Compile`, `ResolveAssemblyReferences`, `ResolveCOMReferences`, `GetFrameworkPaths` 및 `CopyRunEnvironmentFiles`가 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서는 이러한 대상을 실행하여 컴파일러가 IntelliSense를 제공하도록 초기화되거나, 디버거가 초기화되거나, 솔루션 탐색기에 표시된 참조가 확인될 수 있도록 할 수 있습니다. 이러한 대상이 없어도 프로젝트를 제대로 로드하고 빌드할 수는 있지만 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서 디자인 타임 환경이 완전하게 작동하지 않습니다.  
   
 ##  <a name="BKMK_EditingProjects"></a> Editing Project Files in Visual Studio  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트를 직접 편집하려면 Visual Studio XML 편집기에서 프로젝트 파일을 열 수 있습니다.  

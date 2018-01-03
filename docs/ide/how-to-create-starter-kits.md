@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e93d1f3e49384097cdadf6623dae2415fe63cd18
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7a5994739df03752521b60ac4f415323c6bc4a8f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-starter-kits"></a>방법: 시작 키트 만들기
 시작 키트에는 완전한 응용 프로그램에 대한 코드와 응용 프로그램을 수정하거나 확장하는 방법에 대한 설명서가 들어 있습니다. 시작 키트를 만드는 것은 근본적으로 일반 프로젝트 템플릿을 만드는 것과 동일합니다. 단, 시작 키트에 기초한 프로젝트가 생성될 때 열리도록 설정된 설명서 파일이 시작 키트에 포함된다는 점이 다릅니다.  

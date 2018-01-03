@@ -14,16 +14,17 @@ ms.assetid: 6e1ae9ec-e9b1-458a-bd96-0eb15e46f1d5
 caps.latest.revision: "22"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 0be707ec592265c75ce6e0c36954010e496ac91c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2ecea317b60e100b282428d953694238b5c63f21
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="testing-a-large-application-with-multiple-ui-maps"></a>여러 UI 맵이 포함된 대형 응용 프로그램 테스트
 이 항목에서는 여러 UI 맵을 사용하여 대규모 응용 프로그램을 테스트하는 경우 코딩된 UI 테스트를 사용하는 방법에 대해 설명합니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   Visual Studio Enterprise  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/27/2017
   
  이러한 영향을 최소화하려면 `CopyFrom()` 메서드를 사용하여 해당 UI 맵의 새 최상위 창이 주 최상위 창과 동일한지 확인할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예는 다양한 UI 맵에서 생성된 클래스로 표현되는 각 구성 요소 및 해당 자식 컨트롤에 액세스할 수 있는 유틸리티 클래스의 일부입니다.  
   
  이 예제에서는 `Contoso`라는 웹 응용 프로그램에 홈 페이지, 제품 페이지 및 쇼핑 카트 페이지가 있습니다. 이러한 각 페이지는 브라우저 창인 공통 최상위 창을 공유합니다. 각 페이지에 대한 UI 맵이 있으며 유틸리티 클래스에는 다음과 유사한 코드가 있습니다.  

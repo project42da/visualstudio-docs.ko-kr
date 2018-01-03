@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: aa33b329002991c5629f3d48361c6f4fa3c694e0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bdc04655ccfc8ca5f6c1e45e4378f15221b99f4c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 IDE(통합 개발 환경) 내의 텍스트, 통화 및 다른 값에 사용된 기본 언어를 설정합니다.  
@@ -37,7 +38,7 @@ devenv {/LCID|/l} LocaleID
   
 ## <a name="arguments"></a>인수  
  `LocaleID`  
- 필수 요소. 지정한 언어의 LCID(로캘 ID)입니다.  
+ 필수. 지정한 언어의 LCID(로캘 ID)입니다.  
   
 ## <a name="remarks"></a>설명  
  IDE를 로드하고 환경에 대한 기본 자연 언어를 설정합니다. 이 변경은 세션 간에 유지되고 IDE의 **옵션** 대화 상자에 있는 **환경** 옵션의 **국가별 설정** 창에 반영됩니다.  
@@ -46,9 +47,9 @@ devenv {/LCID|/l} LocaleID
   
  다음 표에서는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서 지원하는 언어의 LCID 목록을 보여 줍니다.  
   
-|언어|LCID|  
+|언어|인 DWORD 값의 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\|  
 |--------------|----------|  
-|중국어(간체)|2052|  
+|및|2052|  
 |옵션 대신,|1028|  
 |영어|1033|  
 |프랑스어|1036|  
@@ -58,7 +59,7 @@ devenv {/LCID|/l} LocaleID
 |한국어|1042|  
 |스페인어|3082|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예에서는 영어 리소스 문자열을 사용하는 IDE를 로드합니다.  
   
 ```  

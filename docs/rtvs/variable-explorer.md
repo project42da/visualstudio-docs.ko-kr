@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: c56250677e99a11c52ac368037525803394242b3
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: c75e15def5f9abe98be3f062650c84693716c87e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="variable-explorer"></a>변수 탐색기
 
@@ -27,22 +28,22 @@ x <- 42
 y <- 43
 n <- c(1,2,3,5,8,13)
 ```
- 
+
 [변수 탐색기] 창이 다음과 같이 표시됩니다.
 
 ![Visual Studio의 변수 탐색기 창](media/variable-explorer-window.png)
 
 세션에 정의된 더 복잡한 R 데이터 프레임이 있는 경우 데이터로 이동할 수 있습니다. 예를 들어 `cars <- mtcars`를 실행한 후 변수 탐색기에서 다른 노드를 확장하여 데이터 집합을 탐색할 수 있습니다.
- 
+
 ![변수 탐색기의 확장된 보기](media/variable-explorer-expanded-results.png)
- 
+
 변수를 삭제하려면 마우스 오른쪽 단추를 클릭하고 **삭제**를 선택하거나, 변수를 선택하고 Delete 키를 누릅니다.
 
 증분 검색을 사용하여 데이터 프레임에서 관찰을 검색할 수도 있습니다. 먼저 검색할 데이터 프레임에서 노드를 확장하고 검색 상자에 검색어를 입력합니다.
 
 ## <a name="details-table-view"></a>세부 정보(테이블) 보기
 
-데이터는 테이블 형식으로 제공되는 경우가 많으므로 돋보기 아이콘을 선택하거나 마우스 오른쪽 단추를 클릭하고 **자세한 정보 표시**를 선택하여 복잡한 데이터 형식을 개별 테이블로 볼 수 있습니다. 
+데이터는 테이블 형식으로 제공되는 경우가 많으므로 돋보기 아이콘을 선택하거나 마우스 오른쪽 단추를 클릭하고 **자세한 정보 표시**를 선택하여 복잡한 데이터 형식을 개별 테이블로 볼 수 있습니다.
 
 ![변수 탐색기 테이블 뷰](media/variable-explorer-table-view.png)
 
@@ -69,7 +70,6 @@ n <- c(1,2,3,5,8,13)
 ![디버그 중인 데이터 프레임이 표시된 변수 탐색기](media/variable-explorer-as-locals-window.png)
 
 변수 탐색기에서는 디버거에서 함수의 로컬 변수 표시와 같이 코드를 단계별로 진행함에 따라 자동으로 함수 범위를 변경합니다.
-
 
 ## <a name="importing-data-into-variable-explorer"></a>변수 탐색기로 데이터 가져오기
 

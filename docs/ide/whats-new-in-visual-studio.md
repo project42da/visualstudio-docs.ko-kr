@@ -15,11 +15,12 @@ ms.assetid: 7307e180-ba28-4774-8a43-cbb980085a71
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: a08f5a15cd83af05c91eb35ad2ad4a2c4c229458
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 011c86caae5eaa00577dcc9a5d9c372849eb28f0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
 #### <a name="updated-for-the-155-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.5 릴리스](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)용으로 업데이트
@@ -301,6 +302,6 @@ Visual Studio를 개선하는 방법을 제안하거나 문제를 보고하려�
 ## <a name="see-also"></a>참고 항목
 * [Visual Studio 2017 릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)
 * [Visual C++의 새로운 기능](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
-* [C#의 새로운 기능](https://docs.microsoft.com/dotnet/csharp/csharp-7)  
+* [C#의 새로운 기능](/dotnet/csharp/whats-new)  
 * [Team Foundation Server의 새로운 기능](https://www.visualstudio.com/docs/whats-new)
 * [Mac용 Visual Studio의 새로운 기능](https://www.visualstudio.com/vs/visual-studio-mac/)

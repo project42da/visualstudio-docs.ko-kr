@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2393d254ee2864291a0a3ae5bbed6e78d80d3863
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bff905ae4f280d106eea34d513af35ee3de663b2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shader-designer-nodes"></a>셰이더 디자이너 노드
 설명서의 이 섹션에 있는 문서에는 그래픽 효과를 만드는 데 사용할 수 있는 다양한 셰이더 디자이너 노드에 대한 정보가 포함되어 있습니다.  

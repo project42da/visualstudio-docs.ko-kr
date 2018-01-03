@@ -10,23 +10,18 @@ ms.topic: article
 f1_keywords:
 - vb.ProjectPropertiesSecurity
 - vb.XBAPProjectPropertiesSecurity
-dev_langs:
-- VB
-- CSharp
-- C++
 helpviewer_keywords:
 - Project Designer, Security page
 - Security page in Project Designer
-ms.assetid: 641d9cd3-fa07-498a-8568-3c169bb4d3d5
-caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4eaa6a746f67c891e9e4979f9c5b06202383e5f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3d7a0f5651171d8c3b361d9e8b30b004a4e3136c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-page-project-designer"></a>프로젝트 디자이너, 보안 페이지
 **프로젝트 디자이너**의 **보안** 페이지는 [!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] 배포를 사용하여 배포된 응용 프로그램에 대한 코드 액세스 보안을 구성하는 데 사용됩니다. 자세한 내용은 [ClickOnce 응용 프로그램의 코드 액세스 보안](../../deployment/code-access-security-for-clickonce-applications.md)을 참조하세요.  

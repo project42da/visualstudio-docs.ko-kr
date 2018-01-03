@@ -21,11 +21,12 @@ caps.latest.revision: "57"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 07beb4cfbc8acad0184ff93d12121699f3b27b03
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8fa07e9e489dd6334e0075da4cd8c265e71aa1db
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild 명령줄 참조
 MSBuild.exe를 사용하여 프로젝트 또는 솔루션 파일을 빌드할 경우 여러 스위치를 포함하여 프로세스의 다양한 측면을 지정할 수 있습니다.  
@@ -75,14 +76,14 @@ MSBuild.exe [Switches] [ProjectFile]
 |/logger:<br /><br /> `logger`|/l:`logger`|MSBuild의 이벤트를 로그하는 데 사용할 로거를 지정합니다. 여러 로거를 지정하려면 각 로거를 개별적으로 지정합니다.<br /><br /> `logger`에 대해 다음 구문을 사용합니다. `[``LoggerClass``,]``LoggerAssembly``[;``LoggerParameters``]`<br /><br /> `LoggerClass`에 대해 다음 구문을 사용합니다. `[``PartialOrFullNamespace``.]``LoggerClassName`<br /><br /> 어셈블리가 정확히 하나의 로거를 포함하는 경우 로거 클래스를 지정할 필요가 없습니다.<br /><br /> `LoggerAssembly`에 대해 다음 구문을 사용합니다. `{``AssemblyName``[,``StrongName``] &#124;` `AssemblyFile``}`<br /><br /> 로거 매개 변수는 선택적이며 정확히 입력한 대로 로거에 전달됩니다.<br /><br /> 다음 예제에서는 **/logger** 스위치를 사용합니다.<br /><br /> `/logger:XMLLogger,MyLogger,Version=1.0.2,Culture=neutral`<br /><br /> `/logger:XMLLogger,C:\Loggers\MyLogger.dll;OutputAsHTML`|  
 |/noconsolelogger|/noconlog|기본 콘솔 로거를 사용하지 않도록 설정하고 콘솔에 이벤트를 로깅하지 않습니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `rebuild` 프로젝트의 `MyProject.proj` 대상을 빌드합니다.  
   
 ```  
 MSBuild.exe MyProject.proj /t:rebuild  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  MSBuild.exe를 사용하여 보다 복잡한 빌드를 수행할 수 있습니다. 예를 들어 이 프로그램을 사용하여 솔루션에 특정 프로젝트의 특정 대상을 빌드할 수 있습니다. 다음 예제에서는 `NotInSolutionFolder` 프로젝트를 다시 빌드하고, `InSolutionFolder` 솔루션 폴더에 있는 `NewFolder` 프로젝트를 정리합니다.  
   
 ```  

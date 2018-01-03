@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 561913dc4a215869bd33fde39527cfb0b0232b9a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: uwp
+ms.openlocfilehash: 58462b6cb20efd441c99f335b56b06944dbdf206
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="insert-images-videos-and-audio-clips-in-xaml-designer"></a>XAML 디자이너에서 이미지, 동영상 및 오디오 클립 삽입
 이미지, 비디오 및 오디오 클립은 앱에 시각적 효과를 추가합니다.  

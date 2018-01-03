@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 54c91b8238b21f214edda0941c0c91fd4bdda8e4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 29a68dc22a348c787d192bebecea91caed7aa0cc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-command-line-profiling-using-instrumentation"></a>연습: 계측을 사용하여 명령줄 프로파일링
 이 연습에서는 프로파일링 도구의 계측 방법을 사용하여 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 독립 실행형 응용 프로그램을 프로파일링해 자세한 타이밍 및 호출 수 데이터를 수집하는 과정을 안내합니다. 이 연습에서는 다음 작업을 수행합니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 -   프로파일링을 통해 제공되는 정보를 사용하려면 디버깅 기호 정보를 준비해 두는 것이 가장 좋습니다. 자세한 내용은 [방법: Windows 기호 정보 참조](../profiling/how-to-reference-windows-symbol-information.md)를 참조하세요.  
   
 ## <a name="command-line-profiling-using-the-instrumentation-method"></a>계측 방법을 사용하여 명령줄 프로파일링  
- 계측은 계측된 모듈의 함수에 대한 진입 및 종료 시 타이밍 정보를 수집하는 프로브 함수를 특수하게 작성된 버전의 프로파일링된 이진 파일에 포함할 수 있는 프로파일링 방법입니다. 이 프로파일링 방법은 샘플링보다 침입성이 높으므로 오버헤드가 더 많이 발생합니다. 계측된 이진 파일도 디버그 또는 릴리스 이진 파일보다 더 크므로 배포할 수 없습니다.  
+ 계측은 계측된 모듈의 함수에 대한 진입 및 종료 시 타이밍 정보를 수집하는 프로브 함수를 특수하게 작성된 버전의 프로파일링된 이진 파일에 포함할 수 있는 프로파일링 방법입니다. 이 프로파일링 방법은 샘플링보다 침입성이 높으므로오버헤드가 더 많이 발생합니다. 계측된 이진 파일도 디버그 또는 릴리스 이진 파일보다 더 크므로 배포할 수 없습니다.  
   
 > [!NOTE]
 >  고객에게는 계측된 이진 파일을 전송하지 마세요. 계측된 이진 파일에는 여러 가지 위험 요소가 포함될 수 있습니다. 이진 파일에는 응용 프로그램을 보다 쉽게 리버스 엔지니어링할 수 있도록 만드는 정보와 보안 위험이 포함되어 있습니다.  

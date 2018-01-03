@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3170c28527aa4ecfe335a946624ad95489b75280
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8d2dfd25176ef6931fbebab9704b41abe716c599
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-project-and-item-templates"></a>프로젝트 템플릿 및 항목 템플릿 사용자 지정
 프로젝트 및 항목 템플릿을 만든 후에도 필요에 맞게 추가로 사용자 지정할 수 있습니다.  

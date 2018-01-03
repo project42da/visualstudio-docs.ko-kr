@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9ec355d4798da9a5134396801d744623fffc2da2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ef7469677a9d6eb01514b9117ed4c303ae5346de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-build-platforms"></a>빌드 플랫폼 이해
 다양한 대상 플랫폼에 적용되는 여러 버전의 솔루션 및 프로젝트 속성을 저장할 수 있습니다. 예를 들어 x86 플랫폼을 대상으로 하는 디버그 구성과 x64 플랫폼을 대상으로 하는 디버그 구성을 만들 수 있습니다. 여러 구성을 쉽게 빌드할 수 있도록 활성 플랫폼을 신속하게 변경할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 플랫폼을 대상으로 한 프로젝트 구성](../ide/how-to-configure-projects-to-target-platforms.md)  
  특정 플랫폼을 대상으로 한 프로젝트를 구성하는 방법을 설명합니다.  
   

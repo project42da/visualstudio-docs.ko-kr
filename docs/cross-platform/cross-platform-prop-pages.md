@@ -11,11 +11,12 @@ ms.assetid: 3a7ba14f-a628-4c1b-bb89-73b9195769f1
 author: corob
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2278f0964a65481df48b1ae4f3db70d362263dd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: xplat-cplusplus
+ms.openlocfilehash: 7165ba8f6615a56f41f058716fe0f3b515c53f04
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="c-cross-platform-property-page-reference"></a>C++ 플랫폼 간 속성 페이지 참조
 이 섹션에는 C++ 플랫폼 간 프로젝트의 프로젝트 속성에 대한 정보가 포함되어 있습니다.

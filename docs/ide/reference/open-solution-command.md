@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bae1a28c7d9d0a87eeec3148301234cc0f45c286
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a67e3884fbb5e0c4bbb3a5aefe2cdcc8ac7d683e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="open-solution-command"></a>솔루션 열기 명령
 기존 솔루션을 열고 다른 열려 있는 솔루션을 모두 닫습니다.  
@@ -33,14 +34,14 @@ File.OpenSolution filename
   
 ## <a name="arguments"></a>인수  
  `Filename`  
- 필수 요소. 열려는 솔루션의 전체 경로와 파일 이름입니다.  
+ 필수. 열려는 솔루션의 전체 경로와 파일 이름입니다.  
   
  `filename` 인수 구문에서 공백을 포함하는 경로에는 따옴표를 사용해야 합니다.  
   
 ## <a name="remarks"></a>설명  
  입력 시 자동 완성에서 올바른 경로와 파일 이름을 찾으려고 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 Test1.sln 솔루션을 엽니다.  
   
 ```  

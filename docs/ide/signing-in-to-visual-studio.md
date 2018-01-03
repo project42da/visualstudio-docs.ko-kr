@@ -12,11 +12,12 @@ caps.latest.revision: "30"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a7f31880813d5c1c7807ebd908ca83fa10c4b209
-ms.sourcegitcommit: 24f81b8fb59722cf4a856005227f6a29bb2990cd
+ms.workload: multiple
+ms.openlocfilehash: 7e2fbc1c603886eecfa929406dfd91a1ed4e400b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio에 로그인
 
@@ -67,4 +68,4 @@ Visual Studio를 처음 시작할 때 로그인할지 묻는 메시지가 나타
 ## <a name="see-also"></a>참고 항목
 
 [Visual Studio 잠금을 해제하는 방법](../ide/how-to-unlock-visual-studio.md)  
-[Visual Studio에 사용되는 인터넷 리소스](../ide/connected-environment.md)
+[Visual Studio IDE 개요](../ide/visual-studio-ide.md)

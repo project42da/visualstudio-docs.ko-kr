@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: e2ad60b0b0f98cee23de911a8ca7cf2e5d43b364
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 68977ca672aae84cd65ca169c4ca13feda6d7887
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-batching"></a>MSBuild 일괄 처리
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에는 항목 목록을 항목 메타데이터에 따라 여러 다른 범주 또는 일괄 처리로 나누고 각 일괄 처리를 사용하여 한 번에 하나의 대상 또는 작업을 실행하는 기능이 있습니다.  
@@ -88,13 +89,13 @@ ms.lasthandoff: 10/31/2017
  대상 일괄 처리의 또 다른 예제는 [대상 일괄 처리의 항목 메타데이터](../msbuild/item-metadata-in-target-batching.md)를 참조하세요.  
   
 ## <a name="property-functions-using-metadata"></a>메타데이터를 사용하는 속성 함수  
- 메타데이터를 포함하는 속성 함수에서 일괄 처리를 제어할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 메타데이터를 포함하는 속성 함수에서 일괄 처리를 제어할 수 있습니다. 예를 들어 개체에 적용된  
   
  `$([System.IO.Path]::Combine($(RootPath),%(Compile.Identity)))`  
   
  <xref:System.IO.Path.Combine%2A>를 사용하여 컴파일 항목 경로와 루트 폴더 경로를 결합합니다.  
   
- 속성 함수는 메타데이터 값 내에 나타나지 않을 수 있습니다.  예를 들면 다음과 같습니다.  
+ 속성 함수는 메타데이터 값 내에 나타나지 않을 수 있습니다.  예를 들어 개체에 적용된  
   
  `%(Compile.FullPath.Substring(0,3))`  
   

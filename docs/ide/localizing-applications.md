@@ -18,16 +18,17 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 55e4156552c58f7505ec8a497d7ebb9d6d3f2c94
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c389f8dd13514d940941bcefc228236b3418e317
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localizing-applications"></a>응용 프로그램 지역화
 *지역화*란 지정된 문화권이나 로캘로 응용 프로그램을 사용자 지정하는 프로세스입니다. 지역화는 주로 사용자 인터페이스 번역으로 구성됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [지역화를 위한 리소스의 계층적 구성](../ide/hierarchical-organization-of-resources-for-localization.md)  
  Visual Studio에서 지역화된 리소스가 저장 및 액세스되는 방식을 설명합니다.  
   

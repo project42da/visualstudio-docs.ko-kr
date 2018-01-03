@@ -18,18 +18,19 @@ caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dcdf2ff51c0ed1aeb667c33a519d540251799c01
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 44f67dd4b1c6717dfaf48ada0f093a845899e16c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-permissions"></a>방법: 권한 설정
 이 항목에서는 컴퓨터 관리자가 해당 컴퓨터에 대한 관리자 권한이 없는 사용자 또는 그룹에게 프로파일링에 필요한 보안 권한을 부여하는 방식을 설명합니다.  
   
  기본 보안 원칙에 의하면 응용 프로그램은 필요한 권한보다 크지 않은 권한으로 실행되어야 합니다. 이 원칙은 사용자에게도 적용됩니다. 사용자가 Administrators 그룹이 아닌 사용자 그룹의 구성원으로 로그온할 때 전체 권한을 가질 수 있다면 사용자에게 관리자 권한을 부여하면 안 됩니다. 첫 번째 절차 "사용자 권한을 가진 사용자 계정을 만들려면"에서는 사용자 그룹의 구성원에 대한 사용자 계정을 만드는 방법을 설명합니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   

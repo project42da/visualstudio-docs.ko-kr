@@ -26,11 +26,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3bd498004568bab80565782e11b46691a7d0ef1f
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: be2145f95ac28654852ad4e6d77aa6f33e0ecf8f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-and-manage-local-content"></a>로컬 콘텐츠 설치 및 관리
 Microsoft 도움말 뷰어를 사용하여 소프트웨어 개발 요구 사항에 따라 컴퓨터에 설치된 도움말 콘텐츠를 추가, 제거, 업데이트 및 이동할 수 있습니다.  

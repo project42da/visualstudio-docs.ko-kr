@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 07ee7317eb4499d45a6eaefeb4fa50399bd7430b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cd3e068b457a0e4924aabe0ad2e7d20eb189b770
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="no-disk-activity-to-show-threads-view"></a>표시할 디스크 작업 없음(스레드 뷰)
 디스크 I/O 채널의 현재 시간 범위에 대한 디스크 작업은 표시될 수 없습니다. 축소하거나 스크롤하면 디스크 작업이 표시될 수 있습니다. 또한 디스크 채널이 숨겨져 있지 않은지 확인하세요.  

@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7f52d57d45c0f78a5bd64b16f10c9bb7c2256cd7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8235f246a52e3f8f53536abdf1aba2c0dede875d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>지역화를 위한 리소스의 계층적 구성
 Visual Studio에서 지역화된 리소스(각 문화권에 적절한 문자열 및 이미지와 같은 데이터)는 별도의 파일에 저장되며 UI 문화권 설정에 따라 로드됩니다. 지역화된 리소스가 로드되는 방식을 이해하려면 이러한 리소스를 계층 구조 방식으로 구성된 것으로 생각하는 것이 좋습니다.  

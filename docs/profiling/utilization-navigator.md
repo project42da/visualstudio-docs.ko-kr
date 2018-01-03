@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cfd9f46f6ad8421cfb3e2b2eb83360504614d317
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c68443f15330a63e8372445fcbd80be8bd0dfc18
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="utilization-navigator"></a>사용률 탐색기
 동시성 시각화 도우미의 사용률 탐색기를 사용하면 추적에서 시간 간격을 선택할 수 있습니다. 동시성 시각화 도우미는 시간 경과에 따라 대상 프로세스의 CPU 코어 사용률을 보여줍니다. 그러면 CPU 사용률 패턴을 쉽게 검토할 수 있으며, 사용률 데이터와 다른 보기의 데이터를 비교할 수 있습니다. 사용률 탐색기는 동시성 시각화 도우미에서 모든 보기의 맨 위에 나타납니다. 다음 그림은 사용률 탐색기를 보여줍니다.  

@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 775cafd5f8fc5bb2908447d7f34b13e0377d6711
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b67cf22f38366625d8aa7ff59ad1603a24074882
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-surround-with-code-snippets"></a>방법: 코드 감싸기 코드 조각 사용
 다음 프로시저에서는 코드 감싸기 코드 조각을 사용하는 방법을 설명합니다. 코드 감싸기 코드 조각은 세 가지 방법 즉, 바로 가기 키, [편집] 메뉴 및 바로 가기 메뉴를 통해 사용할 수 있습니다.  

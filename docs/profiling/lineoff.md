@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6914a94300cd7fdb06db8743159698047451fd74
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ebab610e9f684cf55054fae6916e6d1b1fb40d67
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lineoff"></a>LineOff
 기본적으로 프로파일러는 샘플링 프로파일링 방법을 사용하는 경우 소스 코드 줄 번호 및 줄 번호 오프셋 데이터를 수집합니다. VSPerfCmd **LineOff** 옵션은 응용 프로그램을 시작하는 데 VSPerfCmd를 사용하는 경우 줄 번호 데이터 수집을 비활성화합니다. **LineOff**가 지정될 때 프로파일링 데이터는 함수 수준에 수집됩니다.  
@@ -38,7 +39,7 @@ VSPerfCmd.exe /Launch:AppName /LineOff [Options]
  **Launch:** `AppName`  
  지정된 응용 프로그램을 시작하고 샘플링 방법으로 프로파일링을 시작합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 응용 프로그램 및 프로파일러를 시작하고 줄 수준 샘플링을 비활성화합니다.  
   
 ```  

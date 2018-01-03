@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f7da3855a699ae350c24646386d3b1a7e39520b4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 78e052b11046f3af517a97da7fea089625613fb9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="start"></a>시작
 **Start** 옵션은 지정된 프로파일링 방법으로 프로파일러를 초기화하는 VSPerfCmd.exe 옵션입니다.  
@@ -66,7 +67,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
  **Shutdown**[**:**`Timeout`]  
  프로파일러를 해제합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 VSPerfCmd.exe **Start** 옵션을 사용하여 프로파일러를 초기화하는 방법을 보여 줍니다.  
   
 ```  
