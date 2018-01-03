@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dab9b5c631edde1883d4e4d2dcfa0dbf530b0441
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bd49879c6c23981bc88eb4309fb6c7da8e215bd7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-realistic-3-d-billiard-ball"></a>연습: 사실적인 3차원 당구공 만들기
 이 연습에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 셰이더 디자이너 및 이미지 편집기를 사용하여 사실적인 3차원 당구공을 만드는 방법을 보여 줍니다. 당구공의 3차원 모양을 만들려면 여러 셰이더 기술을 적절한 질감 리소스와 결합합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/31/2017
   
 -   환경을 반영하여 공간감 만들기.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 완료하려면 다음 구성 요소와 기술이 필요합니다.  
   
 -   질감을 큐브 맵으로 어셈블하는 도구(예: June 2010 DirectX SDK에 포함된 DirectX Texture Tool).  

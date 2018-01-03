@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c4f3001eb630ce2f5a03d8e3f5169d25e413a6c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e001d58b37dadbc075c39964cea0da58656d6931
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-in-visual-studio"></a>Visual Studio에서 코드 생성
 Visual Studio는 소스 코드 생성을 지원하여 실제 작업에 집중할 수 있도록 합니다.  몇 가지 일반적인 코드 생성 기능은 다음과 같습니다.  

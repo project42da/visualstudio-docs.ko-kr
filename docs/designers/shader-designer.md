@@ -15,11 +15,12 @@ caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fb3a7122f561f2c1beaa5674be2220a565586aa4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c8d0f7a2ee52930a74566e0f7b4ddc10747204ce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shader-designer"></a>셰이더 디자이너
 이 문서에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 셰이더 디자이너를 사용하여 *셰이더*라는 사용자 지정 시각 효과를 만들고 수정하고 내보내는 방법을 설명합니다.  
@@ -185,6 +186,6 @@ ms.lasthandoff: 10/31/2017
   
 |제목|설명|  
 |-----------|-----------------|  
-|[게임 및 앱을 위한 3D 자산 작업](../designers/working-with-3-d-assets-for-games-and-apps.md)|질감 및 이미지, 3D 모델 및 셰이더 효과를 작업하는 데 사용할 수 있는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 도구에 대한 개요를 제공합니다.|  
+|[게임 및 응용 프로그램을 위한 3D 자산 작업](../designers/working-with-3-d-assets-for-games-and-apps.md)|질감 및 이미지, 3D 모델 및 셰이더 효과를 작업하는 데 사용할 수 있는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 도구에 대한 개요를 제공합니다.|  
 |[이미지 편집기](../designers/image-editor.md)|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 이미지 편집기를 사용하여 질감과 이미지 작업을 수행하는 방법을 설명합니다.|  
 |[모델 편집기](../designers/model-editor.md)|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 모델 편집기를 사용하여 3차원 모델 작업을 수행하는 방법을 설명합니다.|

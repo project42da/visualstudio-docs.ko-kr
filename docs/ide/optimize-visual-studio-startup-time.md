@@ -17,11 +17,12 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.performancecenter
 ms.technology: vs-ide-general
-ms.openlocfilehash: 78a2a4dc41b4c6b3154951f6f48b95b3894fc92e
-ms.sourcegitcommit: 15907b980eadeaa646f010cb197cfd188579d0f5
+ms.workload: multiple
+ms.openlocfilehash: 44e620ed0092f9761b3a6c72e306898fe6ea06af
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimize-visual-studio-performance"></a>Visual Studio 성능 최적화
 Visual Studio는 최대한 신속하고 효율적으로 시작되도록 설계되었습니다. 그러나 특정 Visual Studio 확장명 및 도구 창이 로드 될 때 시작 시간에 부정적 영향을 미칠 수 있습니다. **Visual Studio 성능 관리** 대화 상자에서 느린 확장 및 도구 창이라는 동작을 제어할 수 있습니다. 성능 향상에 대한 더 일반적인 팁은 [Visual Studio 성능 팁과 요령](../ide/visual-studio-performance-tips-and-tricks.md)을 참조하세요.  

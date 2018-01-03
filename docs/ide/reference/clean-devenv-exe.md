@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bd4b344860190d0dcfc01adf6ccf553d34c5b038
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5982cfd7b9201008f4ecc5930041200fd4980dca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clean-devenvexe"></a>/Clean (devenv.exe)
 모든 중간 파일 및 출력 디렉터리를 정리합니다.  
@@ -34,7 +35,7 @@ devenv FileName /Clean [ /project projectnameorfile [/projectconfig name ] ]
   
 ## <a name="arguments"></a>인수  
  `FileName`  
- 필수 요소. 솔루션 파일 또는 프로젝트 파일의 전체 경로 및 이름입니다.  
+ 필수. 솔루션 파일 또는 프로젝트 파일의 전체 경로 및 이름입니다.  
   
  /project `ProjName`  
  선택 사항입니다. 솔루션 내에 있는 프로젝트 파일의 경로와 이름입니다. `SolutionName` 폴더에서 프로젝트 파일, 프로젝트의 표시 이름 또는 프로젝트 파일의 전체 경로와 이름까지의 상대 경로를 입력할 수 있습니다.  
@@ -49,7 +50,7 @@ devenv FileName /Clean [ /project projectnameorfile [/projectconfig name ] ]
   
  오류를 포함한 정리 및 빌드에 대한 요약 정보는 **명령** 창 또는 `/out` 스위치로 지정된 로그 파일에 표시할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  첫 번째 예제는 솔루션 파일에 지정된 기본 구성을 사용하여 `MySolution` 솔루션을 정리합니다.  
   
  두 번째 예제에서는 `MySolution`의 `Debug` 솔루션 구성 내에 있는 `Debug` 프로젝트 빌드 구성을 사용하여 `CSharpConsoleApp` 프로젝트를 정리합니다.  

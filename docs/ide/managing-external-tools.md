@@ -12,11 +12,12 @@ helpviewer_keywords: external tools [Visual Studio]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 65cd18ea74ced278d53841cb8204f7cc4d163dc3
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 3e796b1e5a1773183c04409781cf6e2026bfe96e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manage-external-tools"></a>외부 도구 관리
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/22/2017
 
 다음은 외부 도구를 정의할 때 사용할 수 있는 전체 인수 목록입니다.
 
-|이름|인수|설명|  
+|name|인수|설명|  
 |----------|--------------|-----------------|  
 |항목 경로|$(ItemPath)|현재 파일의 전체 파일 이름(드라이브 + 경로 + 파일 이름)입니다.|  
 |항목 디렉터리|$(ItemDir)|현재 파일의 디렉터리(드라이브 + 경로)입니다.|  

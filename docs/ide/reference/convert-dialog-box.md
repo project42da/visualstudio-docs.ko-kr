@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9342a06550427162219bf84a59178783e26473d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: febbc4e398fb2611a2968c2dbd9a922b12f45e5f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="convert-dialog-box"></a>변환 대화 상자
 **변환** 대화 상자에서는 변환 도구를 선택하여 이전 프로젝트에서 새 프로젝트를 만들 수 있습니다(예: Visual Basic 6 프로젝트에서 [!INCLUDE[vbprvblong](../../ide/reference/includes/vbprvblong_md.md)] 프로젝트 만들기). Visual Studio의 이전 버전에서 만든 프로젝트를 업그레이드하려면 [Visual Studio 프로젝트 변환기](https://github.com/ssvaidya/VSProjectConverter)를 사용할 수도 있습니다.   

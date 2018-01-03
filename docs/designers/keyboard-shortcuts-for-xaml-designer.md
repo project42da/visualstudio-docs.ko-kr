@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6a36865fa1016e43d6ca58d77832e4ec683e75bd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: uwp
+ms.openlocfilehash: e1c7bfc773e0efe9570a7d91c188787d83716857
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-shortcuts--for-xaml-designer"></a>XAML 디자이너에 대한 바로 가기 키
 XAML 디자이너의 바로 가기 키를 사용하면 마우스 단추를 여러 번 클릭해야 하는 동작을 바로 가기 키 하나로 줄일 수 있으므로 작업 속도를 향상시킬 수 있습니다.  

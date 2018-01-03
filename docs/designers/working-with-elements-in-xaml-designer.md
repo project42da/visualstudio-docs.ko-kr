@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e5e4729ffacfbe1a561af98be202a21dbf958de9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: uwp
+ms.openlocfilehash: cd4d65a4e14f274a167c971383702a789cc2c539
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-elements-in-xaml-designer"></a>Working with elements in XAML Designer
 코드의 XAML에 또는 XAML 디자이너를 사용하여 컨트롤, 레이아웃 및 모양과 같은 요소를 추가할 수 있습니다. 이 항목에서는 Visual Studio 또는 Blend for Visual Studio의 XAML 디자이너에서 요소에 대해 작업하는 방법을 설명합니다.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 10/31/2017
     >  <xref:Windows.UI.Xaml.Controls.Canvas>와 같은 일부 레이아웃 컨테이너에 배치된 요소에는 여백 표시기가 없습니다. <xref:Windows.UI.Xaml.Controls.StackPanel>에 배치된 요소에는 `StackPanel`의 방향에 따라 왼쪽 및 오른쪽 여백이나 위쪽 및 아래쪽 여백에 대한 여백 표시기가 있습니다.  
   
 ## <a name="grouping-and-ungrouping-elements"></a>요소 그룹화 및 그룹 해제  
- XAML 디자이너에서 둘 이상의 요소를 그룹화하면 새로운 레이아웃 컨테이너가 생성되고 해당 컨테이너 내에 이러한 요소가 배치됩니다. 레이아웃 컨테이너에 둘 이상의 요소를 함께 배치하면 해당 그룹의 요소가 하나의 요소인 것처럼 그룹을 쉽게 선택하고, 이동하고, 변환할 수 있습니다. 그룹화는 탐색 요소를 구성하는 단추와 같이 특정 방법으로 서로 관련된 요소를 식별하는 데 유용합니다. 요소를 그룹 해제할 때 요소가 포함된 레이아웃 컨테이너를 삭제하면 됩니다.  
+ XAML 디자이너에서 둘 이상의 요소를 그룹화하면 새로운 레이아웃 컨테이너가 생성되고 해당 컨테이너 내에 이러한 요소가 배치됩니다. 레이아웃 컨테이너에 둘 이상의 요소를 함께 배치하면 해당 그룹의 요소가 하나의 요소인 것처럼 그룹을 쉽게 선택하고, 이동하고, 변환할 수 있습니다. 요소를 그룹화하면 탐색 요소를 구성하는 단추처럼 특정 방식으로 서로 관련된 요소를 식별하는 데 도움이 됩니다. 요소를 그룹 해제할 때 요소가 포함된 레이아웃 컨테이너를 삭제하면 됩니다.  
   
 #### <a name="to-group-elements-into-a-new-layout-container"></a>새 레이아웃 컨테이너에 요소를 그룹화하려면  
   

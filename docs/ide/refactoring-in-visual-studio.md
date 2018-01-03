@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f3ce9677f344b8d97992d78b08ed44341657d51c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c4c5b0e1cb14e32ae4303da76baca7b7ef88590f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="refactoring-in-visual-studio"></a>Visual Studio에서 리팩터링
 리팩터링은 동작을 변경하지 않으면서도 보다 간편하게 유지 관리하고 파악하며 확장할 수 있도록 코드를 수정하는 프로세스입니다. 공통된 몇 가지 *리팩터링*에는 다음과 같은 항목이 있습니다.  

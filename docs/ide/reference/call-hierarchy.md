@@ -14,11 +14,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 065806ec223273bbacba6da7702f21bc25510983
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 4aed087f8280049018818e68f7db56960db7e690
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="call-hierarchy"></a>호출 계층 구조
 호출 계층 구조를 사용하면 선택된 메서드, 속성 또는 생성자에서 모든 호출을 표시하여 코드를 탐색할 수 있습니다. 이렇게 하면 코드가 흐르는 방식을 더 잘 이해하고 코드에 대한 변경 사항의 영향을 평가할 수 있습니다. 메서드 호출의 복합 체인과 코드에 대한 추가적인 진입점을 보기 위해 여러 수주의 코드를 검토하여 모든 가능한 실행 경로를 탐색할 수 있습니다.  

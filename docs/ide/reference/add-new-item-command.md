@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ef0373d148d386d0b725d74ea639f1b8b0719cc3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 70290f588fe3fac83a5cf0b0ab0339d5e0741186
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-new-item-command"></a>새 항목 추가 명령
 현재 솔루션에 .htm, .css, .txt 또는 프레임셋 같은 새 솔루션 항목을 추가하고 엽니다.  
@@ -33,7 +34,7 @@ File.AddNewItem [filename] [/t:templatename] [/e:editorname]
   
 ## <a name="arguments"></a>인수  
  `filename`  
- 선택적 요소. 솔루션에 추가할 항목의 경로와 파일 이름입니다.  
+ 선택 사항입니다. 솔루션에 추가할 항목의 경로와 파일 이름입니다.  
   
 ## <a name="switches"></a>스위치  
  /t: `templatename`  
@@ -58,7 +59,7 @@ File.AddNewItem [filename] [/t:templatename] [/e:editorname]
 /e:"Source Code (text) Editor"  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 새 솔루션 항목인 MyHTMLpg를 현재 솔루션에 추가합니다.  
   
 ```  

@@ -15,36 +15,29 @@ caps.latest.revision: "19"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 44429ccde6dece8ff0b8a0c41fd4cff328d1160f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 3490d9d4f88bbcc104132e35c3f86d3fe75622b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>연습: Visual C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기
-이 연습을 완료하면 Visual Studio를 사용하여 응용 프로그램을 개발할 때 사용할 수 있는 여러 도구, 대화 상자 및 디자이너에 익숙해집니다. IDE(통합 개발 환경)의 작업에 대해 배우면서 간단한 “Hello, World” 응용 프로그램을 만들고, UI를 디자인하고, 코드를 추가하고, 오류를 디버그하게 됩니다.  
-  
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
-  
- [IDE 구성](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_ConfigureIDE)  
-  
- [간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_CreateApp)  
-  
- [응용 프로그램 디버깅 및 테스트](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_DebugTest)  
+이 연습을 완료하면 Visual Studio를 사용하여 응용 프로그램을 개발할 때 사용할 수 있는 여러 도구, 대화 상자 및 디자이너에 익숙해집니다. IDE(통합 개발 환경)의 작업에 대해 배우면서 간단한 “Hello, World” 응용 프로그램을 만들고, UI를 디자인하고, 코드를 추가하고, 오류를 디버그하게 됩니다.
   
 ##  <a name="BKMK_ConfigureIDE"></a> IDE 구성  
 처음으로 Visual Studio를 시작하는 경우 로그인하라는 메시지가 표시됩니다. 이 단계는 이 연습에 대한 옵션입니다. 다음으로 개발 설정과 색 테마를 선택하라는 대화 상자가 표시될 수 있습니다. 기본값을 유지하고 **Visual Studio 시작**을 선택합니다.  
 
 ![설정 선택 대화 상자](../ide/media/exploreide-settings.png "exploreide-settings")
   
- Visual Studio를 시작하면 도구 창, 메뉴 및 도구 모음, 주 창 공간이 표시됩니다. **빠른 실행**, 메뉴 모음 및 상단의 표준 도구 모음이 포함된 도구 창은 응용 프로그램 창 왼쪽과 오른쪽에 도킹되어 있습니다. 응용 프로그램 창의 가운데에 **시작 페이지**가 있습니다. 솔루션이나 프로젝트를 로드하는 경우 편집기 및 디자이너가 **시작 페이지** 가 있는 공간에 나타납니다. 응용 프로그램을 개발할 때 이 중앙 영역에서 대부분의 시간을 보냅니다.  
+Visual Studio를 시작하면 도구 창, 메뉴 및 도구 모음, 주 창 공간이 표시됩니다. **빠른 실행**, 메뉴 모음 및 상단의 표준 도구 모음이 포함된 도구 창은 응용 프로그램 창 왼쪽과 오른쪽에 도킹되어 있습니다. 응용 프로그램 창의 가운데에 **시작 페이지**가 있습니다. 솔루션이나 프로젝트를 로드하는 경우 편집기 및 디자이너가 **시작 페이지** 가 있는 공간에 나타납니다. 응용 프로그램을 개발할 때 이 중앙 영역에서 대부분의 시간을 보냅니다.  
   
- ![일반 설정이 적용된 IDE](../ide/media/exploreide-idewithgeneralsettings.png "ExploreIDE-IDEwithgeneralsettings")  
+![일반 설정이 적용된 IDE](../ide/media/exploreide-idewithgeneralsettings.png "ExploreIDE-IDEwithgeneralsettings")  
   
 ##  <a name="BKMK_CreateApp"></a> 간단한 응용 프로그램 만들기  
   
 ### <a name="create-the-project"></a>프로젝트를 만듭니다.  
- Visual Studio에서 응용 프로그램을 만들 때 먼저 프로젝트와 솔루션을 만들어야 합니다. 이 예제에서는 WPF(Windows Presentation Foundation) 프로젝트를 만듭니다.  
+Visual Studio에서 응용 프로그램을 만들 때 먼저 프로젝트와 솔루션을 만들어야 합니다. 이 예제에서는 WPF(Windows Presentation Foundation) 프로젝트를 만듭니다.  
   
 #### <a name="to-create-the-wpf-project"></a>WPF 프로젝트를 만들려면  
   
@@ -56,11 +49,11 @@ ms.lasthandoff: 10/31/2017
   
      ![C# WPF 프로젝트, HelloWPFApp 만들기](../ide/media/exploreide-newprojectcsharp.png "ExploreIDE-NewProjectcsharp")  
   
- HelloWPFApp 프로젝트 및 솔루션이 만들어지고 **솔루션 탐색기** 에 다양한 파일이 표시됩니다. WPF Designer는 분할 뷰에 디자인 뷰와 MainWindow.xaml의 XAML 뷰를 표시합니다. 분할자를 밀어 뷰를 더 많이 표시하거나 더 적게 표시할 수 있습니다.  시각적 뷰만 표시하거나 XAML 뷰만 표시하도록 선택할 수 있습니다. (자세한 내용은 [Windows Forms 개발자용 WPF 디자이너](http://msdn.microsoft.com/47ad0909-e89b-4996-b4ac-874d929f94ca)를 참조하세요.) 다음 항목이 **솔루션 탐색기**에 나타납니다.  
+HelloWPFApp 프로젝트 및 솔루션이 만들어지고 **솔루션 탐색기** 에 다양한 파일이 표시됩니다. WPF Designer는 분할 뷰에 디자인 뷰와 MainWindow.xaml의 XAML 뷰를 표시합니다. 분할자를 밀어 뷰를 더 많이 표시하거나 더 적게 표시할 수 있습니다.  시각적 뷰만 표시하거나 XAML 뷰만 표시하도록 선택할 수 있습니다. (자세한 내용은 [Windows Forms 개발자용 WPF 디자이너](http://msdn.microsoft.com/47ad0909-e89b-4996-b4ac-874d929f94ca)를 참조하세요.) 다음 항목이 **솔루션 탐색기**에 나타납니다.  
   
- ![HelloWPFApp 파일이 로드된 솔루션 탐색기](../ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
+![HelloWPFApp 파일이 로드된 솔루션 탐색기](../ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
   
- 프로젝트를 만든 후 사용자 지정할 수 있습니다. **보기** 메뉴에 있는 **속성** 창을 사용하여 프로젝트 항목, 컨트롤 및 응용 프로그램의 기타 항목에 대한 옵션을 표시하고 변경할 수 있습니다.  
+프로젝트를 만든 후 사용자 지정할 수 있습니다. **보기** 메뉴에 있는 **속성** 창을 사용하여 프로젝트 항목, 컨트롤 및 응용 프로그램의 기타 항목에 대한 옵션을 표시하고 변경할 수 있습니다.  
   
 #### <a name="to-change-the-name-of-mainwindowxaml"></a>MainWindow.xaml의 이름을 변경하려면  
 MainWindow에 보다 구체적인 이름을 지정하겠습니다.  
@@ -73,7 +66,7 @@ MainWindow에 보다 구체적인 이름을 지정하겠습니다.
      이제 **솔루션 탐색기**에 파일 이름이 Greetings.xaml로, 중첩된 코드 파일이 Greetings.xaml.vb 또는 Greetings.xaml.cs로 표시됩니다. 이 코드 파일은 .xaml 파일과 서로 밀접하게 관련되어 있음을 나타내기 위해 이 파일 노드 아래에 중첩됩니다.  
   
 ### <a name="design-the-user-interface-ui"></a>사용자 인터페이스(UI) 디자인  
- 이 응용 프로그램에 TextBlock 컨트롤 1개, RadioButton 컨트롤 2개 및 Button 컨트롤 1개 등 세 가지 유형의 컨트롤을 추가합니다.  
+이 응용 프로그램에 TextBlock 컨트롤 1개, RadioButton 컨트롤 2개 및 Button 컨트롤 1개 등 세 가지 유형의 컨트롤을 추가합니다.  
   
 #### <a name="to-add-a-textblock-control"></a>TextBlock 컨트롤을 추가하려면  
   
@@ -85,16 +78,16 @@ MainWindow에 보다 구체적인 이름을 지정하겠습니다.
   
 3.  **TextBlock** 항목을 선택한 후 디자인 화면의 창으로 끌어와서 디자인 화면에 TextBlock 컨트롤을 추가합니다. 컨트롤을 창 상단의 가운데에 배치합니다.  
   
- 해당 창은 다음 그림과 유사합니다.  
+해당 창은 다음 그림과 유사합니다.  
   
- ![Greetings 양식의 TextBlock 컨트롤](../ide/media/exploreide-greetingswithtextblockonly.png "ExploreIDE-GreetingswithTextblockonly")  
+![Greetings 양식의 TextBlock 컨트롤](../ide/media/exploreide-greetingswithtextblockonly.png "ExploreIDE-GreetingswithTextblockonly")  
   
- XAML 태그는 다음과 유사합니다.  
+XAML 태그는 다음과 유사합니다.  
   
-     ```xaml  
-     <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="4.08,2.312" Margin="237,57,221,238"><Run Text="TextBlock"/><InlineUIContainer><TextBlock TextWrapping="Wrap" Text="TextBlock"/>  
-     ```  
-  
+```xaml  
+<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="4.08,2.312" Margin="237,57,221,238"><Run Text="TextBlock"/><InlineUIContainer><TextBlock TextWrapping="Wrap" Text="TextBlock"/>  
+```  
+
 #### <a name="to-customize-the-text-in-the-text-block"></a>텍스트 블록의 텍스트를 사용자 지정하려면  
   
 1.  XAML 뷰에서 TextBlock의 태그를 찾아 Text 특성을 다음과 같이 변경합니다.  
@@ -158,7 +151,7 @@ IsChecked="True"
      ![컨트롤 레이블이 있는 Greetings 양식](../ide/media/exploreide-greetingswithconrollabels.png "ExploreIDE-Greetingswithconrollabels")  
   
 ### <a name="add-code-to-the-display-button"></a>표시 버튼에 코드 추가  
- 이 응용 프로그램을 실행하면 사용자가 라디오 단추를 선택한 다음 **표시** 단추를 선택하면 메시지 상자가 나타납니다. Hello에 대한 메시지 상자가 하나 나타나고 Goodbye에 대한 메시지 상자가 하나 나타납니다. 이 동작을 만들려면 Greetings.xaml.vb 또는 Greetings.xaml.cs에서 Button_Click 이벤트에 코드를 추가합니다.  
+이 응용 프로그램을 실행하면 사용자가 라디오 단추를 선택한 다음 **표시** 단추를 선택하면 메시지 상자가 나타납니다. Hello에 대한 메시지 상자가 하나 나타나고 Goodbye에 대한 메시지 상자가 하나 나타납니다. 이 동작을 만들려면 Greetings.xaml.vb 또는 Greetings.xaml.cs에서 Button_Click 이벤트에 코드를 추가합니다.  
   
 #### <a name="add-code-to-display-message-boxes"></a>메시지 상자를 표시하는 코드를 추가합니다.    
 1.  디자인 화면에서 **표시** 단추를 두 번 클릭합니다.  
@@ -201,10 +194,10 @@ IsChecked="True"
 3.  응용 프로그램을 저장합니다.  
   
 ##  <a name="BKMK_DebugTest"></a> 응용 프로그램 디버깅 및 테스트  
- 그런 다음 응용 프로그램을 디버그하여 오류를 검색하고 두 메시지 상자가 모두 제대로 나타나는지 테스트합니다. 다음 지침에서는 디버거를 빌드하고 시작하는 방법을 설명하지만 나중에 [WPF 응용 프로그램 빌드(WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf) 및 [WPF 디버그](../debugger/debugging-wpf.md)에서 추가 정보를 확인할 수 있습니다.  
+그런 다음 응용 프로그램을 디버그하여 오류를 검색하고 두 메시지 상자가 모두 제대로 나타나는지 테스트합니다. 다음 지침에서는 디버거를 빌드하고 시작하는 방법을 설명하지만 나중에 [WPF 응용 프로그램 빌드(WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf) 및 [Debugging WPF](../debugger/debugging-wpf.md) 에서 추가 정보를 확인할 수 있습니다.  
   
 ### <a name="find-and-fix-errors"></a>오류 찾기 및 수정  
- 이 단계에서는 이전에 MainWindow.xaml 파일의 이름을 변경해서 발생시킨 오류를 찾습니다.  
+이 단계에서는 이전에 MainWindow.xaml 파일의 이름을 변경해서 발생시킨 오류를 찾습니다.  
   
 #### <a name="to-start-debugging-and-find-the-error"></a>디버깅을 시작하고 오류를 찾으려면  
   
@@ -218,7 +211,7 @@ IsChecked="True"
   
      ![디버그 메뉴의 디버깅 중지 명령](../ide/media/exploreide-stopdebugging.png "ExploreIDE-StopDebugging")  
   
- 이 연습을 시작할 때 MainWindow.xaml의 이름을 Greetings.xaml로 바꾸었지만 코드가 여전히 응용 프로그램의 시작 URI로 mainwindow.xaml을 나타내고 있으므로 프로젝트를 시작할 수 없습니다.  
+이 연습을 시작할 때 MainWindow.xaml의 이름을 Greetings.xaml로 바꾸었지만 코드가 여전히 응용 프로그램의 시작 URI로 mainwindow.xaml을 나타내고 있으므로 프로젝트를 시작할 수 없습니다.  
   
 #### <a name="to-specify-greetingsxaml-as-the-startup-uri"></a>Greetings.xaml을 시작 URI로 지정하려면  
   
@@ -284,7 +277,7 @@ IsChecked="True"
   
 이 연습을 완료한 것을 축하 드립니다! 솔루션 및 프로젝트 디렉터리(...\HelloWPFApp\HelloWPFApp\bin\Release\\)에서 빌드한 .exe를 찾을 수 있습니다. 더 많은 예제를 탐색하려는 경우 [Visual Studio 샘플](../ide/visual-studio-samples.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Studio 2017의 새로운 기능](../ide/whats-new-in-visual-studio.md)   
- [Visual Studio에서 개발 시작](../ide/get-started-developing-with-visual-studio.md)   
- [생산성 팁](../ide/productivity-tips-for-visual-studio.md)
+## <a name="see-also"></a>참고 항목
+[Visual Studio 2017의 새로운 기능](../ide/whats-new-in-visual-studio.md)   
+[Visual Studio에서 개발 시작](../ide/get-started-developing-with-visual-studio.md)   
+[생산성 팁](../ide/productivity-tips-for-visual-studio.md)

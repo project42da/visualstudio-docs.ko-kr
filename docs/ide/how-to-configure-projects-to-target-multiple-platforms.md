@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6f862319d29502f1e3e242990072fbe0d2410fab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7686e792d804af85bb8f9588f3ae78fd6b6ec3e3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>방법: 여러 플랫폼을 대상으로 한 프로젝트 구성
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]은(는) 여러 가지 다양한 CPU 아키텍처 또는 플랫폼을 대상으로 한 솔루션을 한 번에 제공할 수 있는 방법을 제공합니다. 이를 설정하는 속성은 **Configuration Manager** 대화 상자를 통해 액세스합니다.  

@@ -13,23 +13,24 @@ caps.latest.revision: "11"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 26a166779ae0a217e9522e7c3b577ec85507c0a2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a2b2267a47ec88f948402ee54e8c84468b5e6a63
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="logging-in-msbuild"></a>MSBuild 로그인
 로깅은 빌드의 진행률을 모니터링할 수 있는 방법을 제공합니다. 로깅은 빌드 이벤트, 메시지, 경고 및 오류를 로그 파일에 캡처합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [빌드 로그 가져오기](../msbuild/obtaining-build-logs-with-msbuild.md)  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서 로깅의 다양한 측면에 대해 설명합니다.  
   
  [빌드 로거](../msbuild/build-loggers.md)  
  프로세서 로거를 만드는 데 필요한 단계를 간략하게 설명합니다.  
   
- [다중 프로세서 환경에서의 로깅](../msbuild/logging-in-a-multi-processor-environment.md)  
+ [다중 프로세서 환경에서의 로그인](../msbuild/logging-in-a-multi-processor-environment.md)  
  다중 프로세스 환경 및 두 개의 다중 프로세서 로깅 모델에서 로깅이 작동하는 방식에 대해 설명합니다.  
   
  [다중 프로세서 인식 로거 작성](../msbuild/writing-multi-processor-aware-loggers.md)  

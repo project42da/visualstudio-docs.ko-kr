@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: af35812ba5d01c174d8b9d53bcd9572a45b8e793
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a94546b8e480a661c175f946cc376fa92b30cbf8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-existing-item-command"></a>기존 항목 추가 명령
 현재 솔루션에 기존 파일을 추가하고 엽니다.  
@@ -33,7 +34,7 @@ File.AddExistingItem filename [/e:editorname]
   
 ## <a name="arguments"></a>인수  
  `filename`  
- 필수 요소. 현재 솔루션에 추가할 항목의 전체 경로 및 파일 이름(확장명 포함)입니다. 파일 경로 또는 파일 이름은 공백을 포함하며 전체 경로를 따옴표로 묶습니다.  
+ 필수. 현재 솔루션에 추가할 항목의 전체 경로 및 파일 이름(확장명 포함)입니다. 파일 경로 또는 파일 이름은 공백을 포함하며 전체 경로를 따옴표로 묶습니다.  
   
 ## <a name="switches"></a>스위치  
  /e: `editorname`  
@@ -48,7 +49,7 @@ File.AddExistingItem filename [/e:editorname]
 ## <a name="remarks"></a>설명  
  입력 시 자동 완성에서 올바른 경로와 파일 이름을 찾으려고 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 Form1.frm 파일을 현재 솔루션에 추가합니다.  
   
 ```  

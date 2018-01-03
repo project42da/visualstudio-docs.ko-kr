@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3c4c034b6aec75499d2e38af35f22cd852fa2e15
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 5f509b0ace14c4e0becd714e25ee9ec26770c6e9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="help-viewer-administrator-guide"></a>도움말 뷰어 관리자 가이드
 도움말 뷰어에서는 인터넷에 액세스하거나 액세스하지 않고 네트워크 환경에 대한 로컬 도움말 설치를 관리할 수 있습니다. 로컬 도움말 콘텐츠는 컴퓨터별로 구성됩니다. 기본적으로 사용자가 로컬 도움말 설치를 업데이트하려면 관리자 권한을 갖고 있어야 합니다.  
@@ -54,7 +55,7 @@ HlpCtntMgr.exe 명령줄 구문에 대한 자세한 내용은 [도움말 콘텐�
   
 -   도움말에 대한 기본 원본은 여전히 온라인입니다.
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
 다음 예제에서는 클라이언트 컴퓨터에 Visual Studio에 대한 영어 콘텐츠를 설치합니다.  
   
 ##### <a name="to-install-english-content-from-the-internet"></a>인터넷에서 영어 콘텐츠를 설치하려면  

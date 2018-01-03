@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: f33a7f43fdd52103fcd041d1f6502b88677eef1e
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: unity
+ms.openlocfilehash: 45a06d17b2a3033af64c9d9a007af4a74dedabba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>변경 로그(Visual Studio Tools for Unity)
 Visual Studio Tools for Unity에 대한 변경 로그입니다.  
@@ -44,7 +45,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 
     -   Unity API 도움말 메뉴를 표시하지 않도록 수정했습니다.
     
--   **프로젝트 생성:**  
+-   **Project Generation:**  
 
     -   IL2CPP/.NET 4.6 백 엔드에서 UWP 게임을 사용할 때 Player 프로젝트 생성을 수정했습니다.
     
@@ -90,7 +91,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 
 ### <a name="bug-fixes"></a>버그 수정  
 
--   **프로젝트 생성:**  
+-   **Project Generation:**  
 
     -   Unity 5.5 및 이전 버전에서 Visual Studio 솔루션 생성을 수정합니다.
 
@@ -149,7 +150,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 
     -   새로운 Unity 런타임에 대한 지원(.NET 4.6/C# 6 호환성 포함)이 추가되었습니다.
 
--   **프로젝트 생성:**  
+-   **Project Generation:**  
 
     -   .NET 4.6 프로필에 대한 지원이 추가되었습니다.
 
@@ -165,7 +166,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 
     -   자동 완성을 사용하여 메서드를 편집한 후 캐럿 위치가 수정되었습니다.
 
--   **프로젝트 생성:**  
+-   **Project Generation:**  
 
     -   어셈블리 버전 후 처리가 제거되었습니다.
 
@@ -198,7 +199,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 
     -   바인딩할 수 없는 중단점의 경우(해당 소스 위치를 찾을 수 없는 경우) 경고가 추가되었습니다.
 
--   **프로젝트 생성:**  
+-   **Project Generation:**  
 
     -   특수/지역화된 문자가 포함된 csproj 생성이 수정되었습니다.
 
@@ -243,7 +244,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 
     -   형식이 예상되거나 형식을 찾을 수 없는 경우 더 나은 오류 메시지가 추가되었습니다.
 
--   **프로젝트 생성:**  
+-   **Project Generation:**  
 
     -   프로젝트 이름에서 CSharp 접미사가 제거되었습니다.
 
@@ -271,7 +272,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 
     -   새 C# 컴파일러에서 반복기 프레임을 디버그하기 위한 지원이 수정되었습니다.
 
--   **프로젝트 생성:**  
+-   **Project Generation:**  
 
     -   Unity 웹 플레이어를 대상으로 할 때 컴파일을 막는 버그가 수정되었습니다.
 

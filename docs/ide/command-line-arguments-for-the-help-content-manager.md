@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0fa94458b1b3b02e2df666af099d97bb7e115c22
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: b7eaa5214a87c2931a260f1c5adb6bac56dfa288
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-line-arguments-for-the-help-content-manager"></a>도움말 콘텐츠 관리자에 대한 명령줄 인수
 도움말 콘텐츠 관리자(HlpCtntMgr.exe)의 명령줄 인수를 사용하여 로컬 도움말 콘텐츠를 배포하고 관리하는 방법을 지정할 수 있습니다. 관리자 권한으로 이 명령줄 도구에 대한 스크립트를 실행해야 하며 이러한 스크립트를 서비스로 실행할 수는 없습니다. 이 도구를 사용하여 다음과 같은 작업을 수행할 수 있습니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/07/2017
 HlpCtntmgr.exe /operation Value /catalogname CatalogName /locale Locale /sourceuri InstallationPoint  
 ```  
   
-예를 들면 다음과 같습니다.  
+예:  
   
 ```  
 hlpctntmgr.exe /operation install /catalogname VisualStudio15 /locale en-us /sourceuri d:\productDocumentation\HelpContentSetup.msha  

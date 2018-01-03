@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b0ec26ec3305cf56f5b03312816737ed7131f4d2
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: fdb49d915871bd9ac955ed61cdc7850bf35d6f41
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-topics-in-the-table-of-contents"></a>방법: 목차에서 항목 찾기
 **콘텐츠** 탭에서 목차를 사용하여 정보를 찾을 수 있습니다. 목차는 설치된 책의 모든 항목을 포함하는 확장명 가능한 목록입니다. 목차를 탐색하는 방법에 대한 내게 필요한 옵션 정보를 보려면 [바로 가기 키(도움말 뷰어)](../ide/shortcut-keys-help-viewer.md)를 참조하세요.  

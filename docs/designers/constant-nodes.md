@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a47eb4e129ac90e8a397c936922a8cc3aeb80277
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1edbe90bf9f1002392374a17b8dd85270ec2fef5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constant-nodes"></a>상수 노드
 셰이더 디자이너에서 상수 노드는 픽셀 셰이더 계산의 리터럴 값과 보간된 꼭짓점 특성을 나타냅니다. 꼭짓점 특성이 보간되므로(따라서 각 픽셀마다 다름), 각 픽셀 셰이더 인스턴스에서 다른 버전의 상수를 받습니다. 이렇게 하면 각 픽셀의 모양이 고유합니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="constant-node-reference"></a>상수 노드 참조  
   
-|노드|세부 정보|속성|  
+|노드|설명|속성|  
 |----------|-------------|----------------|  
 |**카메라 벡터**|현재 픽셀에서 세계 좌표 공간의 카메라를 확장하는 벡터입니다.<br /><br /> 이를 사용하여 세계 좌표 공간에서 반사를 계산할 수 있습니다.<br /><br /> **출력**<br /><br /> `Output`: `float3`<br /> 현재 픽셀에서 카메라까지의 벡터입니다.|없음|  
 |**색 상수**|상수 색상 값입니다.<br /><br /> **출력**<br /><br /> `Output`: `float4`<br /> 색 값입니다.|**출력**<br /> 색 값입니다.|  

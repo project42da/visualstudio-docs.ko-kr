@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ea90dba4090565143c84d510b5e4f9e998cfb5fc
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 0e6c9df2254108b778eb1478311ddaa386f70d74
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="finding-topics-by-using-the-help-viewer-index"></a>도움말 뷰어 인덱스를 사용하여 항목 찾기
 색인에는 설치된 콘텐츠 항목과 연결된 키워드 목록이 포함되어 있습니다. 각 항목에 둘 이상의 키워드가 연결되어 있을 수 있으며, 각 키워드가 둘 이상의 항목에 연결되어 있을 수도 있습니다. 책의 색인과 동일한 방식으로 이 색인을 사용합니다.  

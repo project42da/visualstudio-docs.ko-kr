@@ -28,11 +28,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 18cf7c7ee9c7f40231482b7c0466929bd0290fb1
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: dotnet
+ms.openlocfilehash: 2032b0b50c9f22396d63b32b1d050eb40ea70a79
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-text-editor-c-formatting"></a>옵션, 텍스트 편집기, C#, 서식
 **서식** 속성 페이지 대화 상자를 사용하여 코드 편집기의 서식 코드에 대한 옵션을 설정합니다. 이 대화 상자에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고, **텍스트 편집기**를 확장하고, **C#**을 확장하고, **서식**을 클릭합니다.  

@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f732a23631de181524382914e954ad50a7f0385d
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: bd95d18cfbf1ce04c1178a0befbc8cbf7613862e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="file-properties-javascript"></a>파일 속성, JavaScript
 파일 속성을 사용하여 프로젝트 시스템이 파일에 대해 수행해야 하는 작업을 지정할 수 있습니다. 예를 들어 파일 속성을 설정하여 파일을 패키지에 리소스 파일로 추가해야 하는지 여부를 지정할 수 있습니다.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/02/2017
 ### <a name="file-version"></a>파일 버전  
  참조의 파일 버전을 표시합니다.  
 
-### <a name="identity"></a>ID  
+### <a name="identity"></a>클레임  
  프로젝트 파일에 저장되는 프로젝트에서 사용되는 참조의 ID를 표시합니다.  
 
 ### <a name="package"></a>패키지  

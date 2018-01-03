@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0082f69e0c35bb84a15a8dd4798e7a17b6a3dd7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f45831618e7d685da1f50ae634770ef735a6ff78
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-to-a-common-output-directory"></a>방법: 공통 출력 디렉터리로 빌드
 기본적으로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]은(는) 솔루션 내에서 고유 폴더에 있는 솔루션에서 각 프로젝트를 빌드합니다. 프로젝트의 빌드 출력 경로를 변경하여 모든 출력이 동일한 폴더에 배치되도록 할 수 있습니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3058e19d4ac6211c741efd973344a1af14238d10
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: uwp
+ms.openlocfilehash: 459642fde4d695317a453e223edd54f223569603
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-designer-options-page"></a>XAML 디자이너 옵션 페이지
 **XAML 디자이너** 옵션 페이지를 사용하여 XAML 문서에서 요소와 특성의 서식을 설정하는 방법을 지정합니다. 이 페이지를 열려면 **도구** 메뉴를 선택한 다음 **옵션**을 선택합니다. **XAML 디자이너** 속성 페이지에 액세스하려면 **XAML 디자이너** 노드를 선택합니다. XAML 디자이너에 대한 설정은 문서를 열 때 적용됩니다. 따라서 설정을 변경하는 경우 변경 내용을 보려면 Visual Studio를 닫았다가 다시 열어야 합니다.

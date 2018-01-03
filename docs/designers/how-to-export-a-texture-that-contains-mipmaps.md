@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 04d150c517d4ac0b4f3c47c5e9e4758e24d697c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ef8f94ae451902c8f7b5e5d2b5f3156d01107589
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-a-texture-that-contains-mipmaps"></a>방법: 밉 맵을 포함하는 질감 내보내기
 이미지 콘텐츠 파이프라인은 프로젝트의 빌드 단계 중에 소스 이미지에서 MIP 맵을 생성할 수 있습니다. 각 MIP 수준의 이미지 콘텐츠를 수동으로 지정할 필요가 없는 경우(이 작업은 특정 효과를 적용하기 위해 수행할 수 있음) 빌드 시 MIP 맵을 생성하면 MIP 맵 콘텐츠가 동기화되지 않고 런타임에 MIP 맵을 생성하는 동안 성능이 저하되지 않습니다.  

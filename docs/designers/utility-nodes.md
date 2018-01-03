@@ -12,18 +12,19 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5d3d01a13acf68bbf8e58ca0fa1cb41b145d9d3a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e2920642c46aa3f6cdf85f4f80c2334d18095718
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="utility-nodes"></a>유틸리티 노드
 셰이더 디자이너에서 유틸리티 노드는 다른 범주에 명확하게 맞지 않는 일반적인 유용한 셰이더 계산을 나타냅니다. 벡터를 함께 추가하거나 결과를 조건부로 선택하는 등의 단순한 작업을 수행하는 유틸리티 노드도 있고, 널리 사용되는 조명 모델에 따라 조명의 기여도를 계산하는 등의 복잡한 작업을 수행하는 유틸리티 노드도 있습니다.  
   
 ## <a name="utility-node-reference"></a>유틸리티 노드 참조  
   
-|노드|세부 정보|속성|  
+|노드|설명|속성|  
 |----------|-------------|----------------|  
 |**추가 벡터**|지정된 입력을 함께 추가하여 벡터를 만듭니다.<br /><br /> **입력:**<br /><br /> `Vector`: `float`, `float2` 또는 `float3`<br /> 입력을 추가할 값입니다.<br /><br /> `Value to Append`: `float`<br /> 추가할 값입니다.<br /><br /> **출력:**<br /><br /> `Output`: 입력 `Vector`의 유형에 따라 `float2`, `float3` 또는 `float4`<br /> 새 벡터입니다.|없음|  
 |**프레스넬**|지정한 표면 법선을 기준으로 하여 프레스넬 대칭을 계산합니다.<br /><br /> 프레스넬 대칭 값은 현재 픽셀의 표면 법선이 보기 벡터와 얼마나 근접하게 일치하는지를 표현합니다. 벡터가 정렬되어 있으면 함수 결과는 0이고, 벡터의 유사성이 낮아질수록 결과 값이 커지며, 벡터가 직교 상태가 되면 결과는 최대값이 됩니다. 현재 픽셀과 카메라의 방향 간 관계에 따라 특정 효과를 보다 뚜렷하게 또는 흐리게 표시하는 데 사용할 수 있습니다.<br /><br /> **입력:**<br /><br /> `Surface Normal`: `float3`<br /> 현재 픽셀의 접선 공간에서 정의된 현재 픽셀의 표면 법선입니다. 일반 매핑에서와 같이 명확한 표면 법선을 변경하는 데 사용할 수 있습니다.<br /><br /> **출력:**<br /><br /> `Output`: `float`<br /> 현재 픽셀의 반사입니다.|**지수**<br /> 프레스넬 대칭을 계산하는 데 사용되는 지수입니다.|  
