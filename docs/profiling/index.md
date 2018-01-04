@@ -3,11 +3,11 @@ layout: LandingPage
 title: "Visual Studio로 앱 프로파일링 | Microsoft Docs"
 description: "Visual Studio 2017을 사용하여 원하는 언어로 응용 프로그램, 서비스 및 도구의 성능을 프로파일링하는 방법을 알아보세요."
 ms.technology: vs-ide-debug
-ms.openlocfilehash: e671683cf0ea257bf6170a3c2e41b8d0db503450
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.openlocfilehash: 763740cd5f0f7e6da935dfd92418067f12a204c2
+ms.sourcegitcommit: 8dfdbe6dc01331c811707be2057b65c0b1f67e40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="profiling-in-visual-studio"></a>Visual Studio의 프로파일링
 
@@ -151,7 +151,7 @@ ms.lasthandoff: 12/14/2017
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>에너지 사용 분석(스토어 앱)</h3>
+                        <h3>에너지 사용 분석(UWP 앱)</h3>
                     </div>
                 </div>
             </div>
