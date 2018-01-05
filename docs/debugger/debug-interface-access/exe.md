@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ab02eacffe01c267a2f3d4ff463b729591bb8b19
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5e2675d821a29b53926b2145366ae98f3d8adceb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exe"></a>Exe
 .Exe 또는.dll 파일의 전역 범위를 나타내므로 Exe는 유일한 어휘는 포함 하지 않고 기호 또는 부모 클래스. 하나의 기호가 없는 `SymTagExe` 파일당 태그입니다. [idiasession:: Get_globalscope](../../debugger/debug-interface-access/idiasession-get-globalscope.md) 메서드 기호를 반환 합니다.  

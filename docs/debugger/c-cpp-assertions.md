@@ -32,11 +32,12 @@ caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eaa6ba7a5ba88d3a7f5ff2b8f9f7571c26a3baf4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 46ea417ccd8b4dbecd0c6584699e9f2e98330d69
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cc-assertions"></a>C/C++ 어설션
 어설션 문은 프로그램의 한 지점에서 true가 될 조건을 지정 합니다. 조건이 true가 아닐 경우 어설션이 실패, 프로그램의 실행이 중단 되 고 [어설션 오류 대화 상자](../debugger/assertion-failed-dialog-box.md) 나타납니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b89d240980746a0a6a606bd43ff67f86e454bfdc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8c303bf0da1c3f6e5728681d697d2eedb84357d5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="funcdebugstart"></a>FuncDebugStart
 함수는 디버깅에 정의 된 지점에는 시작 지점에 대 한 기호도 식별 되는 `SymTagFuncDebugStart` 태그입니다.  

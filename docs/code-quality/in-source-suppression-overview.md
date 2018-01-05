@@ -15,11 +15,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f35833df8e84a4e4caba8fd46f8daea8dd5119a1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 92babbf3c7a5863d178463b69525bdb722bf28ad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="in-source-suppression-overview"></a>ISS 개요
 소스에서은 표시 하거나 추가 하 여 관리 코드에서 코드 분석 위반을 무시 하는 **SuppressMessage** 특성을 위반을 발생 시키는 코드 세그먼트입니다. **SuppressMessage** 컴파일 타임에 CODE_ANALYSIS 컴파일 기호가 정의 되어 있는 경우에 관리 코드 어셈블리의 IL 메타 데이터에 포함 된 조건부 특성입니다.  
@@ -64,7 +65,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
   
 -   **범위** -경고가 표시 되 고 대상입니다. 대상이 지정 되지 않은 경우 특성의 대상으로 설정 됩니다. 지원 되는 범위는 다음과 같습니다.  
   
-    -   모듈  
+    -   Module  
   
     -   네임스페이스  
   
@@ -79,11 +80,11 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 ## <a name="suppressmessage-usage"></a>SuppressMessage 사용  
  있는 수준에서 코드 분석 경고는 표시 되지 않습니다.의 인스턴스는 **SuppressMessage** 특성은 적용 됩니다. 이 목적은 코드를 억제 (suppression) 정보를 위반이 발생 합니다.  
   
- 일반적인 형태의 억제 (suppression) 규칙 범주와 선택적 사람이 읽을 수의 표현이 들어 있는 규칙 이름에 규칙 식별자를 포함 합니다. 예를 들면 다음과 같습니다.  
+ 일반적인 형태의 억제 (suppression) 규칙 범주와 선택적 사람이 읽을 수의 표현이 들어 있는 규칙 이름에 규칙 식별자를 포함 합니다. 예를 들어 개체에 적용된  
   
  `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`  
   
- 소스에서 메타 데이터 최소화 엄격한 성능상의 이유로 인 규칙 이름은 생략할 수 있습니다. 규칙 범주와 규칙 ID는 충분히 고유한 규칙 식별자를 구성 합니다. 예를 들면 다음과 같습니다.  
+ 소스에서 메타 데이터 최소화 엄격한 성능상의 이유로 인 규칙 이름은 생략할 수 있습니다. 규칙 범주와 규칙 ID는 충분히 고유한 규칙 식별자를 구성 합니다. 예를 들어 개체에 적용된  
   
  `[SuppressMessage("Microsoft.Design", "CA1039")]`  
   

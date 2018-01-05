@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 72fa36bd077a08484c225e1349134929e541d074
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6b7cfaf3e2cf7331576ca79b9820bafb761fc44c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
 기호를 쿼리 하기 위한 세션을 엽니다.  
@@ -49,7 +50,7 @@ HRESULT openSession (
   
  `IDiaSession`개체는 데이터 소스에 쿼리를 구현합니다. 세션을 각 집합 디버그 기호에 대 한 주소 공간을 관리합니다. 데이터 원본 기호에 의해 설명 하는.exe 또는.dll 파일은 여러 주소에 활성 범위 (예를 들어 여러 프로세스가 있으므로 로드) 한 다음 각 주소 범위에 대 한 세션을 사용 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C++  
 IDiaSession* pSession;  

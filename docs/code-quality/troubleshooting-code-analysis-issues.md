@@ -12,25 +12,26 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6e552570eb48b9210b366ebbfe157fe656ab3fe0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a0773c429ad8e738e0de280b4fe2abbf2fa6e5c3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-code-analysis-issues"></a>코드 분석 문제 해결
-이 항목에는 다음 Visual Studio 코드 분석 문제에 대 한 문제 해결 정보가 있습니다.  
+이 항목에는 다음 Visual Studio 코드 분석 문제에 대한 문제 해결 정보가 포함되어 있습니다.  
   
--   [Visual Studio 2010 규칙 집합 되지 않는다 이전 Visual Studio 버전에 반영의 변경 내용](#ChildRuleSetChangesInPreviousVersions)  
+-   [Visual Studio 2010 규칙 집합의 변경 내용이 이전 Visual Studio 버전에 반영되지 않음](#ChildRuleSetChangesInPreviousVersions)  
   
-##  <a name="ChildRuleSetChangesInPreviousVersions"></a>Visual Studio 2010 규칙 집합 되지 않는다 이전 Visual Studio 버전에 반영의 변경 내용  
- 규칙 집합을 만들 때 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 자식 규칙 집합을 포함 하 되, 자식 규칙 집합에 대 한 변경 코드 분석 실행을 이전 버전의 Visual Studio를 사용 하는 컴퓨터에 적용 될 수 있습니다. 이 문제를 해결 하려면 다시 부모 규칙 집합은 자식 규칙 집합을 포함 하는 규칙 집합을 작성 해야 합니다.  
+##  <a name="ChildRuleSetChangesInPreviousVersions"></a> Visual Studio 2010 규칙 집합의 변경 내용이 이전 Visual Studio 버전에 반영되지 않음  
+ 자식 규칙 집합이 포함된 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]에서 규칙 집합을 만드는 경우, 자식 규칙 집합의 변경 내용이 이전 버전의 Visual Studio를 사용하는 컴퓨터에서 실행되는 코드 분석에 적용되지 않을 수 있습니다. 이 문제를 해결하려면 자식 규칙 집합을 포함하는 규칙 집합인 부모 규칙 집합을 다시 작성해야 합니다.  
   
-1.  부모 규칙 집합을 엽니다 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]합니다.  
+1.  [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]에서 부모 규칙 집합을 엽니다.  
   
-2.  추가 하거나 제거 하는 규칙 등을 변경 하 고 규칙 집합을 저장 합니다.  
+2.  규칙 추가 또는 제거와 같은 변경을 수행한 후 규칙 집합을 저장합니다.  
   
-3.  규칙 집합을 다시 열고, 반대로 변경 하 고 규칙 집합을 다시을 저장 합니다.  
+3.  규칙 집합을 다시 열고, 변경을 취소한 후 다시 저장합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [응용 프로그램 품질 분석](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)   

@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 956f6ab5180475bf0abb03e4353fe0343f876ae1
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: abd7ba49b3a9bb449f4f323deee588c3942d37a4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-selected-connection-uses-an-unsupported-database-provider"></a>선택한 연결에서 지원되지 않는 데이터베이스 공급자를 사용합니다.
 .NET Framework Data Provider for SQL Server에서 사용 하지 않는 항목을 끌어 올 때이 메시지가 표시 **서버 탐색기**/**데이터베이스 탐색기** 에 [LINQ to SQL Visual Studio의 도구](../data-tools/linq-to-sql-tools-in-visual-studio2.md)합니다.  

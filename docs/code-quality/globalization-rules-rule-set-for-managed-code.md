@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 09bfa2101acd4bce8fa825ce9a8ffcd91c940ca1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 07a2e8da87eb486f8247a79263ec371a8fd4afc5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalization-rules-rule-set-for-managed-code"></a>관리 코드에 대한 전역화 규칙 규칙 집합
 Microsoft 전역화 규칙 규칙 집합 다양 한 언어, 로캘 및 문화권에서 올바르게 표시 응용 프로그램에서 데이터를 방해할 수 있는 문제에 초점을 사용할 수 있습니다. 응용 프로그램이 지역화 되거나 전역화 되는 경우이 규칙 집합 중 하나 또는 둘 다를 포함 해야 합니다.  

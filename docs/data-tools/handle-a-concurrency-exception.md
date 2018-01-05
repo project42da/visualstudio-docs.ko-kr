@@ -22,11 +22,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 9162274d234c22e8bbe299389d2b41f57a69d714
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: data-storage
+ms.openlocfilehash: 52243e28dbc35fbefb67fa1b52ce9fb6cdbda98d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handle-a-concurrency-exception"></a>동시성 예외 처리
 동시성 예외 (<xref:System.Data.DBConcurrencyException>)는 두 명의 사용자가 동시에 데이터베이스에 동일한 데이터를 변경 하려고 할 때 발생 합니다. Catch 하는 방법을 보여 주는 Windows 응용 프로그램을 만들면이 연습에서는 한 <xref:System.Data.DBConcurrencyException>를 오류를 발생 하는 행 키를 찾아 처리 하는 방법에 대 한 전략에 알아봅니다.  

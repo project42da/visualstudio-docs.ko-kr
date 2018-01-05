@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d5e53d813d9b2dcefd2b2d19da2a76b6c0d1f989
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 549914476db028cc5135de3c954ac841ab2da628
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remove-parameters-refactoring-c"></a>리팩터링 매개 변수 제거(C#)
 `Remove Parameters`메서드, 인덱서 또는 대리자에서 매개 변수를 제거 하는 쉬운 방법을 제공 하는 리팩터링 작업 합니다. 선언; 매개 변수 변경 내용이 제거 멤버가 호출 되는 모든 위치에서 매개 변수는 새 선언 반영 하기 위해 제거 됩니다.  

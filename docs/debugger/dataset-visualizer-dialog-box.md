@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95261dd96b6fdd7350254c74ae895965a3a8eeed
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 56cfc8dfdcb3c61b5f1eb1b0f14f3ad1af5fb89e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataset-visualizer-dialog-box"></a>데이터 집합 시각화 도우미 대화 상자
 데이터 집합 시각화 도우미를 사용하면 DataSet, DataTable, DataView 또는 DataViewManager 개체의 내용을 볼 수 있습니다. 디버거 변수 창이나 DataTip에서 이러한 개체 중 하나의 값 옆에 나타나는 돋보기 아이콘을 클릭하면 이 시각화 도우미에 액세스할 수 있습니다.  

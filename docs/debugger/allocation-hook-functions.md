@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5e00d43898fbc29ba238a670d39cf8d3e7638122
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 4fe5ac5ec207bb52884c097d1562a85a3414ba7d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="allocation-hook-functions"></a>할당 후크 함수
 할당 후크 함수를 사용 하 여 설치 [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook), 메모리 할당, 다시 할당 하거나 해제할 때마다 호출 됩니다. 이러한 후크 형식은 여러 가지 목적으로 사용할 수 있습니다. 예를 들어, 메모리가 부족할 때 응용 프로그램이 이 상황을 어떻게 처리하는지 테스트하거나 할당 패턴을 검사하거나 나중에 분석하기 위해 할당 정보를 기록하는 데 사용할 수 있습니다.  

@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 318acd282090dd17fcfd7fd12e7370e906c67806
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 3d295cc9527aae2f566f5ec4d1ba92a2b129fbd4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>방법: LINQ to SQL 클래스 매핑 테이블 및 뷰에 (O/R 디자이너) 만들기
 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]데이터베이스 테이블 및 뷰에 매핑된 클래스 라고 *엔터티 클래스*합니다. 엔터티 클래스는 레코드에 매핑되지만 레코드를 구성 하는 개별 열에 매핑되는 엔터티 클래스의 각 속성입니다. 엔터티 클래스를 기반으로 하는 데이터베이스 테이블 또는 뷰에에서 테이블 또는 뷰를 끌어 만들 **서버 탐색기**/**데이터베이스 탐색기** 에 [LINQ to SQL 도구에서 Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)합니다. [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 는 클래스를 생성 하 고 특정 적용 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 특성이 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 기능 (데이터 통신 및 편집 기능과 <xref:System.Data.Linq.DataContext>). 에 대 한 자세한 내용은 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 클래스 참조 [LINQ to SQL 개체 모델](/dotnet/framework/data/adonet/sql/linq/the-linq-to-sql-object-model)합니다.  

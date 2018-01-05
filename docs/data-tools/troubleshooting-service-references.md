@@ -20,17 +20,18 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: e46c8bf778ff18ea25096e524716bcb44916f460
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: b57547aa9a5fa3c036a534c85cb55bb1749a421b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-service-references"></a>서비스 참조 문제 해결
 이 항목에서는 사용 하 여 작업할 때 발생할 수 있는 일반적인 문제 [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] 또는 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 에서 참조 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
   
 ## <a name="error-returning-data-from-a-service"></a>서비스에서 데이터를 반환 하는 오류  
- 반환 하는 `DataSet` 또는 `DataTable` 는 서비스에서 "들어오는 메시지에 대 한 최대 크기 할당량 초과 했습니다." 예외가 나타날 수 있습니다. 기본적으로는 `MaxReceivedMessageSize` 일부 바인딩에 대 한 속성은 상대적으로 작은 값으로 서비스 거부 공격에 대 한 노출을 제한 합니다. 예외를 방지 하기 위해이 값을 늘릴 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>을 참조하십시오.  
+ 반환 하는 `DataSet` 또는 `DataTable` 는 서비스에서 "들어오는 메시지에 대 한 최대 크기 할당량 초과 했습니다." 예외가 나타날 수 있습니다. 기본적으로는 `MaxReceivedMessageSize` 일부 바인딩에 대 한 속성은 상대적으로 작은 값으로 서비스 거부 공격에 대 한 노출을 제한 합니다. 예외를 방지 하기 위해이 값을 늘릴 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>을 참조하세요.  
   
  이 오류를 해결 하려면  
   

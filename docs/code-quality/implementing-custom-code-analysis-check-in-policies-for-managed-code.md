@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3d8747ddb78c257ae0ba38d24fb2c5cc529f67b9
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: dotnet
+ms.openlocfilehash: 1c940c10c85901e5da7425c33f4bdbd726be7627
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-custom-code-analysis-check-in-policies-for-managed-code"></a>관리 코드에 대한 사용자 지정 코드 분석 체크 인 정책 구현
 코드 분석 체크 인 정책은 팀 프로젝트 멤버를 버전 제어에 체크 인하기 전에 소스 코드에서 실행 해야 하는 규칙의 집합을 지정 합니다. Microsoft 표준 집합을 제공 *규칙 집합* 기능 영역으로 그룹 코드 분석 규칙. *사용자 지정 체크 인 정책 규칙 집합* 팀 프로젝트에만 적용 되는 코드 분석 규칙 집합을 지정 합니다. 규칙 집합.ruleset 파일에 저장 됩니다.  

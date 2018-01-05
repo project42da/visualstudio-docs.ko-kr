@@ -17,11 +17,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 12b8c166873802e3c0e6a8d4e73ff1b686229222
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 5556a5d9a537684a8d1e73ee363b4c9ac8f6baa8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>데이터 소스 창에서 끌어올 때 만들 컨트롤 설정
 항목을 끌어 데이터 바인딩된 컨트롤을 만들 수 있습니다는 **데이터 소스** 창에서 WPF 디자이너 또는 Windows Forms 디자이너입니다. 각 항목에는 **데이터 소스** 창을 디자이너로 끌어옵니다 때 만들어지는 기본 컨트롤이 있습니다. 그러나 다른 컨트롤을 만들 수 있습니다.  

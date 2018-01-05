@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ad51388ae1580ada61442798b46048ad71ece64
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: f78a3f48ce6e8d08134694bc03c80f9c2e9b3363
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-rule-sets-to-specify-the-c-rules-to-run"></a>규칙 집합을 사용하여 실행할 C++ 규칙 지정
 [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] 및 [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)]를 만들고 사용자 지정을 수정할 수 *규칙 집합* 코드 분석와 관련 된 특정 프로젝트 요구 사항에 맞게 합니다. 사용자 지정 C++ 규칙 집합을 만들기 위해서는 C/C++ 프로젝트를 Visual Studio IDE에서 열어야 합니다. 그런 다음 규칙 집합 편집기에서 표준 규칙 집합을 열고, 특정 규칙을 추가 또는 제거하고, 필요에 따라 코드 분석으로 규칙이 위반된 것으로 확인될 때 발생하는 작업을 변경합니다.  

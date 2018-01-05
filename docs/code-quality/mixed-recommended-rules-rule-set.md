@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 44bc05bc6ba27dffdc267ad2cad1e15bc9b0a61a
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 44c01069539ef5b67a9f208bc89786dfd0ac40a8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>혼합 권장 규칙 규칙 집합
 Microsoft 혼합 권장 규칙을 지 원하는 잠재적 보안 허점, 응용 프로그램 충돌 및 기타 중요 한 논리 및 디자인 오류를 포함 하 여 공용 언어 런타임 c + + 프로젝트에서 가장 일반적이 고 중요 한 문제에 집중 합니다. 공용 언어 런타임을 지 원하는 c + + 프로젝트에 대해 만드는이 규칙 사용자 지정 규칙 집합에 있는 집합을 포함 해야 합니다. 이 규칙 집합은 Visual Studio Professional edition 이상 구성 하도록 설계 되었습니다.  

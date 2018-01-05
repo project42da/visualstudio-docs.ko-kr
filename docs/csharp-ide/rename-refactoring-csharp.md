@@ -17,11 +17,12 @@ caps.latest.revision: "45"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eba5a9f55e5d3d08eee48dc083a7e2f848118162
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 42c5f99b3bf5ba95bc279cd5e117745ccc8e02c3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rename-refactoring-c"></a>이름 바꾸기 리팩터링(C#)
 **이름 바꾸기** 는 필드, 지역 변수, 메서드, 네임 스페이스, 속성 및 형식 등의 코드 기호에 대 한 식별자 이름을 바꿀 수 있는 간편한 방법을 제공 하는 Visual Studio 통합된 개발 환경 (IDE)에서 리팩터링 기능입니다. **이름 바꾸기** 주석 문자열 이름을 변경 하 고 선언과 식별자의 호출을 사용할 수 있습니다.  
@@ -163,5 +164,5 @@ var orderIDs =
  위의 코드에서 이름 바꾸기 `ID` 의 한 인스턴스 이름을 바꿀만 됩니다 `ID` 때문에 `companyIDs` 및 `orderIDs` 동일한 속성이 없는 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [리팩터링 (C#)](refactoring-csharp.md)   
+ [리팩터링(C#)](refactoring-csharp.md)   
  [익명 형식](/dotnet/csharp/programming-guide/classes-and-structs/anonymous-types)

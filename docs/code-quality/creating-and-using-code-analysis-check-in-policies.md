@@ -13,11 +13,12 @@ caps.latest.revision: "39"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a7d8ab4732938721da8e72c5a4c5f7387a4e67e2
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: b7187ef8d3342ad050c66debf939e9c6a6213957
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-and-using-code-analysis-check-in-policies"></a>코드 분석 체크 인 정책 만들기 및 사용
 버전 제어 TFVC (Team Foundation)를 사용 하면.NET Framework 및 팀 프로젝트에서 네이티브 (C/c + +) 코드 프로젝트에 대 한 코드 분석 체크 인 정책을 만들 수 있습니다. 코드 분석 체크 인 정책 제어 하 고 코드 베이스에 체크 인 되는 코드의 품질 향상에 사용할 수 있습니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/12/2017
   
  팀 프로젝트 설정을 사용 하 여 코드 분석 체크 인 정책을 만들어 [!INCLUDE[esprscc](../code-quality/includes/esprscc_md.md)]합니다. 체크 인 정책을 지정 되 고, 팀 프로젝트에 대 한 적용 하지만 코드 분석 실행 구성 되 고 로컬 개발 컴퓨터에서 개별 코드 프로젝트에 대해 실행 됩니다. 이 섹션에는 팀 프로젝트에 대 한 코드 분석 체크 인 정책을 지정 하는 방법 및 관리 코드에 대 한 사용자 지정 코드 분석 정책을 구현 하는 방법을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 표준 코드 분석 체크 인 정책 만들기 또는 업데이트](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)  
  설정 하 고 수정할 팀 프로젝트에 대 한 코드 분석 정책을 사용 하는 단계에 설명 합니다.  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3b2424f62db5c77de2030e641093802593f7094
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 31e7f3415a502d2bf7737a498f235fd38a75ec48
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumdebugstreamdata"></a>IDiaEnumDebugStreamData
 디버그 데이터 스트림에 레코드에 대 한 액세스를 제공합니다.  
@@ -49,7 +50,7 @@ IDiaEnumDebugStreamData : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  호출 된 [idiaenumdebugstreams:: Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md) 또는 [idiaenumdebugstreams:: Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md) 방법으로 확인할는 `IDiaEnumDebugStreamData` 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에는 단일 데이터 스트림 및 해당 레코드에 액세스 하는 방법을 보여 줍니다.  
   
 ```C++  

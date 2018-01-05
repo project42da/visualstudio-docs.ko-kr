@@ -229,11 +229,12 @@ ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
 ms.technology: vs-data-tools
-ms.openlocfilehash: d578457776afb058ee0f40bba4bb0d208f2f5e66
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: ea895859550d1ebb5ddfebe743388dc971d82592
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-resources-for-troubleshooting-data-access-errors"></a>데이터 액세스 오류 문제 해결을 위한 추가 리소스
 MSDN(Microsoft Developer Network) 공개 포럼에서 오류 및 경고 문제 해결 관련 지원 정보를 찾을 수 있습니다. 다음 표에서 MSDN에서 사용할 수 있는 데이터 관련 포럼을 나열합니다.  

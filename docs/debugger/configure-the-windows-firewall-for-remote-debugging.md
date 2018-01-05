@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9432c65ec6a481b23655fb2a92915a4a4365ed5e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f7458c2f35bfd29c53b939b6300d2759f0e7897f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configure-the-windows-firewall-for-remote-debugging"></a>원격 디버깅을 위해 Windows 방화벽 구성
 이 항목에서는 다음 운영 체제를 실행하는 컴퓨터에서 원격 디버깅을 사용하도록 방화벽을 구성하는 방법을 설명합니다.  
@@ -117,8 +118,8 @@ Visual Studio 또는 원격 디버거를 설치할 때 소프트웨어는 올바
 |||||  
 |-|-|-|-|  
 |**포트**|**들어오는/나가는 포트**|**프로토콜**|**설명**|  
-|135, 139, 445|나가는 포트|TCP|필수 요소.|  
-|137, 138|나가는 포트|UDP|필수 요소.|  
+|135, 139, 445|나가는 포트|TCP|필수.|  
+|137, 138|나가는 포트|UDP|필수.|  
 |500, 4500|나가는 포트|UDP|도메인 정책에 따라 IPSec을 통해 네트워크 통신을 수행해야 하는 경우에 필요합니다.|  
 |80|나가는 포트|TCP|웹 서버 디버깅에 필요합니다.|
   

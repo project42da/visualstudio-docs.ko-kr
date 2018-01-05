@@ -18,11 +18,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 1f67a87f4a704d3f76ccddba62112983c058a9f3
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 8d55ecd52b3fa817e9a5ee199a69e3d29644346e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Access 데이터베이스 (Windows Forms)의 데이터에 연결
 Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.accdb 파일)에 연결할 수 있습니다. 에 표시할 연결을 정의한 후의 데이터는 **데이터 소스** 창. 그 창에서 테이블 또는 뷰를 폼으로 끌 수 있습니다.   

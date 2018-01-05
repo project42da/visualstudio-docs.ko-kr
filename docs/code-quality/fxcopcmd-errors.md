@@ -13,18 +13,19 @@ caps.latest.revision: "12"
 ms.author: gewarren
 author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2439b04c921de6e06b98bd1bb5a9fc0af3ea56d1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 48b082f5b00f260d2f8e2519a4551fab23dc1011
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fxcopcmd-errors"></a>FxCopCmd 오류
 FxCopCmd 심각한 되도록 모든 오류를 고려 하지 않습니다. FxCopCmd 부분 분석을 수행할 수 있는 충분 한 정보가 있으면 발생 하는 분석 및 보고서 오류를 수행 합니다. 32 비트 정수가 된 오류 코드에 오류에 해당 하는 숫자 값의 비트 조합 포함 되어 있습니다.  
   
  다음 표에서 FxCopCmd에서 반환 된 오류 코드를 설명 합니다.  
   
-|오류|숫자 값|  
+|Error|숫자 값|  
 |-----------|-------------------|  
 |오류 없이|0x0|  
 |분석 오류|0 x 1|  

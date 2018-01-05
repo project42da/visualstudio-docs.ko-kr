@@ -16,11 +16,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 26dd5500f50b185c31809d9882e03e56541a567a
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 775c03583a2fac35f2b62525bf5a18a67f250cef
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-code-to-datasets-in-n-tier-applications"></a>N 계층 응용 프로그램에서 데이터 집합에 코드 추가
 데이터 집합에 대 한 partial 클래스 파일을 만들고 코드를 추가 하 여 데이터 집합의 기능을 확장할 수 있습니다 (코드를 추가 하는 대신는 *DatasetName*합니다. Dataset.Designer 파일)입니다. Partial 클래스는 여러 개의 물리적 파일에서 나눌 수 특정 클래스에 대 한 코드를 사용 합니다. 자세한 내용은 참조 [부분](/dotnet/visual-basic/language-reference/modifiers/partial) 또는 [Partial 클래스 및 메서드](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)합니다.  

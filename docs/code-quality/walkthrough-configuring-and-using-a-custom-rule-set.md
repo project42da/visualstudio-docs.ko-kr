@@ -15,11 +15,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 28f572ff80888f9d207c9ade9042414127abb154
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 054cf016dba69561591ad6bc8b18029272e85d8f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-configuring-and-using-a-custom-rule-set"></a>연습: 사용자 지정 규칙 집합 구성 및 사용
 이 연습에서는 사용자 지정을 사용 하도록 구성 된 코드 분석 도구를 사용 하는 방법을 보여 줍니다. *규칙 집합* 클래스 라이브러리에 있습니다. 대체 규칙 집합을 특정 요구 사항에 줄 바꿈하지 않는 방법으로 해결할 수 있는 문제에 대 한 레거시 코드를 검사 하는 등, 솔루션에 대해 지정한 하거나 선택할 수 있는 프로젝트 형식에 관련 된 규칙 집합을 선택할 수 있습니다. 두 경우 모두 규칙 집합 또한 사용자 지정할 수 있습니다 프로젝트 요구 사항에를 세부 조정 하도록 합니다.  
@@ -38,9 +39,9 @@ ms.lasthandoff: 10/31/2017
   
 -   코드 분석을 실행 하 고 규칙 사용자 지정 내용이 동작을 설정 하는 방법을 확인 합니다.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] 또는 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]또는 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
 ## <a name="using-rule-sets-with-code-analysis"></a>에 코드 분석 규칙 집합 사용  
  먼저 간단한 클래스 라이브러리를 만듭니다.  

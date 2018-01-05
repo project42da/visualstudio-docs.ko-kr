@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: acd88eb0d4a485f01f9ced8cc1d2b2cebd182a71
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: data-storage
+ms.openlocfilehash: 5313269a4575cb41ebe6e8b9cedb5ca02d49b493
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="display-related-data-in-wpf-applications"></a>WPF 응용 프로그램에서 관련된 데이터 표시
 일부 응용 프로그램에서 가져온 여러 테이블이 나 부모-자식 관계에서 서로 관련 된 엔터티 데이터를 사용 하는 것이 좋습니다. 예를 들어 고객을 표시 하는 표를 표시 하려면 수는 `Customers` 테이블입니다. 다른 그리드에서 관련 된 해당 고객에 대 한 주문이 표시 됩니다는 사용자가 특정 고객을 선택 `Orders` 테이블입니다.

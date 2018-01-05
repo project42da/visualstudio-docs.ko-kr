@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: cc60c4fe5ff014b1088509c8e5c4982bf7f4322a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: e5b38288cc8d0d58e18e4aea3de2b80470783ea6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-extend-code-generated-by-the-or-designer"></a>방법: O/R 디자이너에서 생성된 코드 확장
 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 생성한 코드는 디자이너 화면에서 엔터티 클래스 및 다른 개체를 변경하면 다시 생성됩니다. 이러한 코드의 다시 생성으로 인해 일반적으로 디자이너에서 코드를 다시 생성하면 생성된 코드에 추가한 모든 코드를 덮어씁니다. [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서는 덮어쓸 수 없는 코드를 추가할 수 있는 partial 클래스 파일을 생성할 수 있는 기능을 제공합니다. 사용자 고유의 코드를 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 생성한 코드에 추가하는 예는 데이터 유효성 검사를 LINQ to SQL(엔터티) 클래스에 추가하는 것입니다. 자세한 내용은 참조 [하는 방법: 엔터티 클래스에 유효성 검사 추가](../data-tools/how-to-add-validation-to-entity-classes.md)합니다.  

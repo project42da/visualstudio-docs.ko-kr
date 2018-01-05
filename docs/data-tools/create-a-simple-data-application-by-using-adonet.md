@@ -15,11 +15,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 05a0a339b413495aadfa397e5fec3b826f920026
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: b1f6e8ed06f9f2355ac3a740319bb75924bf3d6b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET을 사용 하 여 간단한 데이터 응용 프로그램 만들기
 데이터베이스의 데이터를 조작 하는 응용 프로그램을 만들 때 연결 문자열 정의 데이터를 삽입 및 저장된 프로시저를 실행 하는 등의 기본 작업을 수행 합니다. 이 항목에 따라 Visual C# 또는 Visual Basic 및 ADO.NET을 사용 하 여 간단한 Windows Forms "데이터 폼" 응용 프로그램 내에서 데이터베이스와 상호 작용 하는 방법을 확인할 수 있습니다.  모든.NET 데이터 기술-데이터 집합, LINQ to SQL 및 Entity Framework를 포함 하 여-궁극적으로이 문서에 표시 된 것과 매우 유사한 단계를 수행 합니다.  

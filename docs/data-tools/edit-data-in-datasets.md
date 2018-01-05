@@ -18,11 +18,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: bc42474ff9cb4762b43463e5e0929f11d58ad7d0
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: afb484c1d3bfdd705c5a28f150e4631048ead49d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="edit-data-in-datasets"></a>데이터 집합의 데이터 편집
 모든 데이터베이스의 테이블에 데이터를 편집할 때 처럼 데이터 테이블의에서 데이터를 편집 합니다. 삽입, 업데이트 및 테이블의 레코드를 삭제 하는 프로세스 포함할 수 있습니다. 데이터 바인딩된 폼에 있는 사용자가 편집 가능한 필드를 지정할 수 있습니다. 이 경우 데이터 바인딩 인프라는 모든 변경 내용 추적 나중에 변경 내용을 데이터베이스에 다시 보낼 수 있도록 처리 합니다. 프로그래밍 방식으로 데이터를 편집을 수행한 경우 해당 변경 내용을 데이터베이스에 다시 보내려는 개체 및 사용자에 대 한 변경 내용 추적을 수행 하는 메서드를 사용 해야 합니다.  

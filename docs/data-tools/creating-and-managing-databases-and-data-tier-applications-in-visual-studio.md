@@ -17,11 +17,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 7f538c51bd5f15f91dfae0d13a9dae8cf4f8afb1
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 8e599e1d309ab254c2b2d5a3a490c0cd912b8823
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="database-projects-and-data-tier-applications-in-visual-studio"></a>데이터베이스 프로젝트와 Visual Studio에서 데이터 계층 응용 프로그램  
 데이터베이스 프로젝트를 사용 하 여 새 데이터베이스를 만들 새 데이터 계층 응용 프로그램 (Dac)를 기존 데이터베이스 및 데이터 계층 응용 프로그램을 업데이트 합니다. 데이터베이스 프로젝트와 DAC 프로젝트를 사용 거의 동일한 방법으로 관리 또는 네이티브 코드에 이러한 기법을 적용 하는 데이터베이스 개발 작업에 버전 제어 및 프로젝트 관리 기술을 적용할 수 있습니다. 개발 팀을 만들어 데이터베이스 및 데이터베이스 서버에 변경 내용을 관리할 수 있습니다는 *DAC 프로젝트*, *데이터베이스 프로젝트*, 또는 *서버 프로젝트* 를 후 버전 제어 합니다. 팀의 멤버 수 다음 파일을 체크 아웃 확인, 빌드 및에서 변경 내용을 테스트 하는 *격리 된 개발 환경*, 또는 샌드박스는 팀과 공유 하기 전에. 코드 품질을 보장 하기 위해 팀 완료 하 고 프로덕션 환경에 변경 내용을 배포 하기 전에 스테이징 환경에서 데이터베이스의 특정 릴리스에 대 한 모든 변경 내용을 테스트할 수 있습니다.  

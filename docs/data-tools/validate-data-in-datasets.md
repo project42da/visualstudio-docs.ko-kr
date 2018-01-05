@@ -25,11 +25,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 0f328cbaac03680885bdbda97dff7bc9ac3cf2cf
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: b5cc63d5a83c9f1400dd183982fa68864d35fdbf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validate-data-in-datasets"></a>데이터 집합의 데이터 유효성 검사
 데이터 집합의 스키마 내에서 제약 조건에 따르는 데이터 개체에 입력할 값 확인 과정은 데이터 유효성을 검사 합니다. 유효성 검사 프로세스는 또한 이러한 값은 다음 응용 프로그램에 대해 설정 된 규칙을 확인 합니다. 업데이트를 내부 데이터베이스에 보내기 전에 데이터 유효성 검사는 것이 좋습니다. 이렇게 하면 오류 뿐 아니라 잠재적인 응용 프로그램과 데이터베이스 간의 왕복 수가 줄어듭니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="data-update-events"></a>데이터 업데이트 이벤트  
   
-|이벤트|설명|  
+|이벤트(event)|설명|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.ColumnChanging>|열에 값이 변경 됩니다. 이 이벤트는 제안 된 새 값과 함께 사용자에 게 행 및 열을 전달합니다.|  
 |<xref:System.Data.DataTable.ColumnChanged>|열에 값이 변경 되었습니다. 이 이벤트는 제안 된 값과 함께 사용자에 게 행 및 열을 전달합니다.|  

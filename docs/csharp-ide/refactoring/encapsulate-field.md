@@ -14,11 +14,12 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.csharp.refactoring.encapsulatefield
 dev_langs: csharp
-ms.openlocfilehash: f934d33d2c7bdc698b00305f3c86f904eae99e33
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 59b71a0716415dcedeab9954486ef27e0fc438d7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="encapsulate-a-field-in-c"></a>C#에서 필드 캡슐화 #
 **:** 필드를 속성으로 설정 하 고 새로 만든된 속성을 사용 하려면 해당 필드의 모든 사용을 업데이트할 수 있습니다.

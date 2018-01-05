@@ -14,11 +14,12 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vsl.GenerateFromUsage
 dev_langs: csharp
-ms.openlocfilehash: b6825be5447718e47f7145b0b3b16ec6d0ee076c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: c72b9e898bd150e0d4ec1cc6a7a91d1eb7e6b7a8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-a-class-or-type-in-c"></a>C#에서 클래스 또는 형식 생성 #
 **:** 즉시 클래스 또는 형식에 대 한 코드를 생성할 수 있습니다. 
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/31/2017
    --- | ---
    액세스 | 한 유형을 설정 *기본*, *내부* 또는 *공용* 액세스 합니다.
    종류 | 으로 설정할 수 있습니다 *클래스* 또는 *구조체*합니다.
-   이름 | 이 변경할 수 없습니다 및 이미 입력 한 이름이 됩니다.
+   name | 이 변경할 수 없습니다 및 이미 입력 한 이름이 됩니다.
    프로젝트 | 솔루션에 여러 프로젝트가 있는 경우 라이브 클래스/구조체 원하는 위치를 선택할 수 있습니다.
    파일 이름 | 새 파일을 만들거나 기존 파일에 형식을 추가할 수 있습니다.
 

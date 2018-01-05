@@ -21,11 +21,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: bc71529f852e87ca206509e06cb80940c11ac36d
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 77d2780200fd8be7a42d396cdade39b271b04bae
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>데이터베이스의 그림에 컨트롤 바인딩
 사용할 수는 **데이터 소스** 창 응용 프로그램에서 컨트롤을 데이터베이스에 이미지를 바인딩할 수 있습니다. 예를 들어 이미지를 바인딩할 수 있습니다는 <xref:System.Windows.Controls.Image> WPF 응용 프로그램에서 또는 제어는 <xref:System.Windows.Forms.PictureBox> Windows Forms 응용 프로그램에서 제어 합니다.  

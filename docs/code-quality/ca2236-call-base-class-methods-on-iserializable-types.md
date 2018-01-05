@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a5379defde7ace66f43cad0983c9b14b554fb232
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c2e4db6ac698dba6a24bf0f485deb8b1d2e1488a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2236-call-base-class-methods-on-iserializable-types"></a>CA2236: ISerializable 형식에서 기본 클래스 메서드를 호출하십시오.
 |||  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 serialization 생성자를 호출 하 여 규칙을 충족 하는 파생 된 형식 및 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> 기본 클래스의 메서드.  
   
  [!code-vb[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/VisualBasic/ca2236-call-base-class-methods-on-iserializable-types_1.vb)]

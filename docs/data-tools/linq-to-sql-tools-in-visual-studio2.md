@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: c493a7ea448277275072ab71cf013333ccb9b4ea
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: data-storage
+ms.openlocfilehash: a160cce25814cd2e110f8896ed6752a18b5dd0da
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>LINQ to SQL 도구 Visual Studio에서
 LINQ to SQL에는 Microsoft에서 릴리스한 첫 번째 개체-관계형 매핑 기술을 했습니다. 기본 시나리오에서 잘 작동 하 고 계속 Visual Studio에서 지원 하지만 더 이상 현재 개발에 포함 됩니다. LINQ to SQL을 이미 사용 하는 레거시 응용 프로그램 유지 관리 하는 경우 또는 SQL Server를 사용 하는 다중 테이블 매핑이 필요 하지 않은 간단한 응용 프로그램에서 사용 합니다. 일반적으로 새 응용 프로그램 개체 관계형 매퍼 계층에 필요한 경우 Entity Framework를 사용 해야 합니다.  

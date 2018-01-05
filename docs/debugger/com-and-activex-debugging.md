@@ -24,16 +24,17 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b6d892c4c0c8f580d9a3f219fd61211f8e0e9e22
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2854a74bd8da32db5d954a0e68a33a484b7eb493
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com-and-activex-debugging"></a>COM 및 ActiveX 디버깅
 이 단원에서는 COM 응용 프로그램과 ActiveX 컨트롤의 디버깅에 대한 팁을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [COM 서버 및 컨테이너 디버깅](../debugger/com-server-and-container-debugging.md)  
  COM 응용 프로그램을 디버깅할 때 특별히 고려해야 할 사항에 대해 설명합니다. 여기에는 같은 솔루션 내에서 두 프로젝트를 사용하는 COM 서버 및 컨테이너 디버깅, 프로세스 간 호출 추적, 콜백 함수에 중단점 설정, 컨테이너와 서버 사이의 단계적 실행 등과 같은 내용이 제공됩니다.  
   

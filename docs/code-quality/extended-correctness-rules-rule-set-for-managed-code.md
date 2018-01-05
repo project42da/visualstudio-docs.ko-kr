@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 68524053107052094d53b21cac93fbbc053881dd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 498b3b3eced8e21cb2079715a0bd6c2375eb8dfe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>관리 코드에 대한 확장 수정 규칙 규칙 집합
 코드 분석에 의해 보고 되는 논리 및 프레임 워크 사용 오류를 최대화 하는 Microsoft 확장 수정 규칙 규칙 집합입니다. COM 상호 운용성 및 모바일 응용 프로그램 같은 특정 시나리오에 주안점을 둡니다. 이러한 시나리오 중 하나가 적용 프로젝트 또는 프로젝트의 추가 문제를 찾을 경우이 규칙 집합을 포함 하는 것이 좋습니다.  

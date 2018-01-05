@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33080a55043f9c88fa8e44a71a863e3a62ab3a1b
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: 5fe47a5e0bb2eb8c2002c8a516ef10aa81aa0e58
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quick-start-code-analysis-for-cc"></a>퀵 스타트: C/C++용 코드 분석
 C 또는 C++ 코드에 대한 코드 분석을 정기적으로 실행하여 응용 프로그램의 품질을 향상시킬 수 있습니다. 이 테스트를 통해 발견 하기 어려운 결함 또는 프로그래밍 관행의 위반의 일반적인 문제를 찾을 수 있습니다. 코드 분석에서는 올바르지만 해당 코드를 사용하는 당사자나 다른 사용자에게 문제를 일으킬 수 있는 특정 코드 패턴을 검색하므로 코드 분석 경고는 컴파일러 오류 및 경고와 다릅니다.  

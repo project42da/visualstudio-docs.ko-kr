@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 78322512fdc59b4ba661bca0d40d1532ac4c98e2
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 4b403d3bbe2e42ee74af7a2f7babe8b2700dd0d4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>WPF 응용 프로그램에서 조회 테이블 만들기
 용어 *조회 테이블* (라고도 *조회 바인딩*) 다른 테이블의 외래 키 필드의 값에 따라 하나 이상의 데이터 테이블의에서 정보를 표시 하는 컨트롤에 설명 합니다. 부모 테이블의 기본 노드 드래그 하 여 조회 테이블을 만들 수도 있고 개체는 **데이터 소스** 창으로 열 이나 속성 관련된 자식 테이블에 이미 바인딩되어 있는 컨트롤입니다.  

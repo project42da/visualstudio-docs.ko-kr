@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cdba59674b53f82707a586aa3f94695666db695e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 78b9d5a2c2f147ade02e3123e2e5c08f130b29de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>관리 코드에 대한 확장 디자인 지침 규칙 규칙 집합
 Microsoft 확장 디자인 지침 규칙 규칙 집합을 보고 되는 유용성 및 유지 관리 문제를 최대화 하기 위해 기본 디자인 지침 규칙을 확장 합니다. 명명 지침에 주안점을 둡니다. 프로젝트에 라이브러리 코드가 있거나 유지 관리 하기 쉬운 코드를 작성 하는 데 가장 높은 표준을 적용 하려는 경우이 규칙 집합을 포함 하는 것이 좋습니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bfff9eb7e2040d5a4b75fa82c2a504f2aaeceda
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: eaca3429ccc1defe51ee849bf46146931390a571
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-when-and-where-an-annotation-applies"></a>주석 적용 시기 및 위치 지정
 주석을 이면 조건부 분석기 되도록 지정 하려면 다른 주석이 필요할 수 있습니다.  예를 들어 함수에는 동기 또는 비동기 일 수 있는 변수, 있으면 함수는 다음과 같이 동작: 동기 경우에서 항상 결국 성공 하지만 비동기 작업의 경우에 오류를 보고 즉시 성공할 수 없는 경우. 함수를 동기적으로 호출 되 면 반환 하지는 하기 때문에 코드 분석기 한 값을 제공 결과 값을 확인 합니다.  그러나 함수를 비동기적으로 호출 하는 경우 함수 결과 선택 하지 않으면 심각한 오류가 발생할 수 있습니다. 사용할 수 있는 상황을 보여 주는이 예제는 `_When_` 주석-이 문서의 뒷부분에 설명 된-확인을 사용 하 합니다.  

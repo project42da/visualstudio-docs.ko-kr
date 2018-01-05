@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 097e7a2eac78fe85b2a3ab62d5cdf1fd18908d56
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 707100d33e91d1b0920d008140dc2fb6f1e078fe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>방법: C# 프로젝트에 응용 프로그램 구성 파일 추가
 응용 프로그램 구성 파일 (app.config 파일)에 C# 프로젝트를 추가 하면 공용 언어 런타임 찾아서 어셈블리 파일을 로드을 사용자 지정할 수 있습니다. 응용 프로그램 구성 파일에 대 한 자세한 내용은 참조 [런타임에서 어셈블리를 찾는 방법을](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)합니다.  

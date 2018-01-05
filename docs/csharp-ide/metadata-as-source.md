@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 118d19a1be813b0488503be86a316ccc82bd7b37
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 29b783e20925b3eaa4a7b0956fdcfdbcab06a328
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-as-source"></a>소스로서의 메타데이터
 메타데이터를 소스로 사용하면 읽기 전용 버퍼에 C# 소스 코드로 표시되는 메타데이터를 볼 수 있습니다. 이 경우 구현 없이 형식 및 멤버의 선언을 볼 수 있습니다. 프로젝트 또는 솔루션에서 해당 소스 코드를 사용할 수 없는 형식 또는 멤버에 대해 **정의로 이동** 명령을 실행하면 메타데이터를 소스로 볼 수 있습니다.  

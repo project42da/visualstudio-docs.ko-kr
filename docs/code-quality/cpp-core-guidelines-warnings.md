@@ -11,11 +11,12 @@ author: mblome
 ms.author: mblome
 manager: ghogen
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: 65f4e7ed865a3a620d58b45580914d6e0b589660
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: d03330ce8213e7df56ec9f8df73458b3819180ca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C + + 코어 지침 검사기를 사용 하 여
 C + + 코어 지침은 휴대용 집합이 지침, 규칙 및 c + +의 c + + 전문가 디자이너에서 만든 코딩 하는 방법에 대 한 모범 사례입니다. 현재 visual Studio c + +에 대 한 코드 분석 도구는의 일부로 이러한 규칙의 하위 집합을 지원합니다. 코어 지침 검사기는 Visual Studio 2017에 기본적으로 설치 및는 [Visual Studio 2015 용 NuGet 패키지로 사용할 수 있는](#vs2015_corecheck)합니다.
@@ -62,7 +63,7 @@ int main()
   
 -   규칙 Bounds.3 C26485: 배열 포인터 decay 없습니다.  
   
--   규칙 Bounds.1 C26481: 포인터 산술 연산을 사용 하지 마십시오. 대신 `span` 를 사용하세요.  
+-   규칙 Bounds.1 C26481: 포인터 산술 연산을 사용 하지 마십시오. 대신 `span`를 사용하세요.  
   
  C + + 코어 확인 코드 분석 규칙 설치 되 고이 코드를 컴파일할 때 사용 하도록 설정, 처음 두 가지 경고 출력을 있더라도 세 번째 표시 되지 않습니다. 예제 코드에서 빌드 출력은 다음과 같습니다.  
   

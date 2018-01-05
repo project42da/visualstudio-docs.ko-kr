@@ -21,11 +21,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 2450ed950227b6755b57f20f3520a1e75034aafe
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 1ebb2621aa8da474c08d12e187feadef85840663
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="insert-new-records-into-a-database"></a>데이터베이스에 새 레코드를 삽입 합니다.
 데이터베이스에 새 레코드를 삽입 하려면 사용할 수 있습니다는 `TableAdapter.Update` 메서드 또는 TableAdapter의 DBDirect 메서드 중 하나 (특히 여 `TableAdapter.Insert` 메서드). 자세한 내용은 참조 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)합니다.  

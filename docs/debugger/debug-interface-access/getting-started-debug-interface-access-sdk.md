@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 938aaf760a2a6305580331945875391e6ad819af
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d37843917be3a2668e9a2887f046eaee00600dc8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>시작(디버그 인터페이스 액세스 SDK)
 디버그 인터페이스 액세스 (DIA) SDK 사용 안내 설명서와 DIA API를 사용 하는 방법을 보여 주는 샘플을 제공 합니다. DIA sdk에서는 인터페이스 및 메서드를 사용 하 여.pdb 및.dbg 파일을 열고 기호, 값, 특성, 주소 및 기타 디버깅 정보에 대 한 콘텐츠를 검색 하는 사용자 지정 응용 프로그램을 개발 하 합니다. 이 SDK는 또한 c + + 응용 프로그램에 있는 기호와 연결 된 속성에 대 한 참조 테이블을 제공 합니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/31/2017
   
  IDL: idl\dia2.idl  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [개요](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)  
  DIA.의 기본 아키텍처를 검토합니다.  
   

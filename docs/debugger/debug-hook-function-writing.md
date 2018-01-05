@@ -24,16 +24,17 @@ caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 30d645042908a7ff307017d090c2789b9d40b99a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b5071e2fd7c8114cb13697eef4a4ddfa32d95718
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-hook-function-writing"></a>디버그 후크 함수 작성
 이 단원에서는 디버거의 표준 처리 과정에서 미리 정의된 특정 지점에 코드를 삽입하기 위해 작성할 수 있는 여러 가지 사용자 지정 디버그 후크 함수에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [클라이언트 블록 후크 함수](../debugger/client-block-hook-functions.md)  
  _CLIENT_BLOCK 블록에 저장되는 데이터의 내용을 보고하거나 그 유효성을 검사하는 함수의 프로토타입과 작성 지침을 제공합니다.  
   

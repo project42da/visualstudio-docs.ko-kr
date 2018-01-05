@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3469e9ae7101c9e180fba5558fce389c6dfcc72d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 3a011794599bf1e56e905a40c6269b5639abadb2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reorder-parameters-refactoring-c"></a>매개 변수 리팩터링 다시 정렬(C#)
 `Reorder Parameters`메서드, 인덱서 및 대리자에 대 한 매개 변수의 순서를 변경 하는 쉬운 방법을 제공 하는 작업은 Visual C# 리팩터링 합니다. `Reorder Parameters`선언을 변경 멤버가 호출 되는 모든 위치에서 매개 변수 새 순서를 반영 하도록 다시 정렬 됩니다.  

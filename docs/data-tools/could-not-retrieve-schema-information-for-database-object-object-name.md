@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: da148a7258a055e230e8a1377d90adffebaff6d7
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: e29edf31a0ad3535b671ed2e972e994553c78547
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="could-not-retrieve-schema-information-for-database-object-object-name"></a>데이터베이스 개체에 대 한 스키마 정보를 검색할 수 \<개체 이름 >
 경우에 개체에 일반적으로이 메시지가 표시 **서버 탐색기/데이터베이스 탐색기** 클립보드에 복사, 데이터베이스에서 삭제 하 고 디자이너에 붙여넣은 다음 됩니다. 즉, 데이터베이스 개체가 더 이상 존재하지 않으므로 이 메시지가 나타납니다.  

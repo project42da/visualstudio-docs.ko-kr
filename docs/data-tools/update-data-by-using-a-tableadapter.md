@@ -22,11 +22,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 7d49f0ddc965327334aea471b1276b4e78987ec2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 4968eab5e1d355543a8658e72540bc66fa2543b9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="update-data-by-using-a-tableadapter"></a>TableAdapter를 사용 하 여 데이터 업데이트
 데이터 집합의 데이터를 수정 하 고 유효성을 검사 된 후 보낼 수 있습니다 업데이트 된 데이터를 데이터베이스에 다시 호출 하 여는 `Update` 의 메서드는 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)합니다. `Update` 메서드는 단일 데이터 테이블을 업데이트 하 고 올바른 명령 (INSERT, UPDATE 또는 DELETE)에 따라 실행 되는 <xref:System.Data.DataRow.RowState%2A> 테이블의 각 데이터 행입니다. 데이터 집합에는 관련 테이블을 사용 하 여 업데이트를 수행 하는 TableAdapterManager 클래스를 생성 됩니다. TableAdapterManager 클래스를 사용 하면 업데이트 데이터베이스에 정의 된 외래 키 제약 조건에 따라 올바른 순서로 수행 됩니다. 데이터 바인딩된 컨트롤을 사용 하면 데이터 바인딩 아키텍처 tableAdapterManager 호출 되는 TableAdapterManager 클래스의 멤버 변수를 만듭니다. 

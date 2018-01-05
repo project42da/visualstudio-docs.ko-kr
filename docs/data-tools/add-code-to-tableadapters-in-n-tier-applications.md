@@ -18,11 +18,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 396e1132015c2eb37f06095f135dae878bfeb574
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 54df2144511e847988c6f11212e9c9a4941d0b38
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>N 계층 응용 프로그램에서 Tableadapter에 코드 추가
 TableAdapter에 대 한 partial 클래스 파일을 만들고 코드를 추가 하 여 TableAdapter의 기능을 확장할 수 있습니다 (코드를 추가 하는 대신는 *DatasetName*합니다. DataSet.Designer 파일)입니다. Partial 클래스는 여러 개의 물리적 파일에서 나눌 수 특정 클래스에 대 한 코드를 사용 합니다. 자세한 내용은 참조 [부분](/dotnet/visual-basic/language-reference/modifiers/partial) 또는 [부분 (형식)](/dotnet/csharp/language-reference/keywords/partial-type)합니다.  

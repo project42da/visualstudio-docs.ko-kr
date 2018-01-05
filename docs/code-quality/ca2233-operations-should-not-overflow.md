@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d8b602d83eee4be49f63eef0ee8d2cd3d77f5040
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f5d048476997517a835337b568930367f97c2c92
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233: 연산은 오버플로되지 않아야 합니다.
 |||  
@@ -109,7 +110,7 @@ End Sub
   
 1.  **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.  
   
-2.  선택 된 **빌드** 탭을 클릭 **고급**합니다.  
+2.  **빌드** 탭을 선택하고 **고급**을 클릭합니다.  
   
 3.  선택 **산술 연산 오버플로/언더플로 확인** 클릭 **확인**합니다.  
   

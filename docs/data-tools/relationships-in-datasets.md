@@ -19,11 +19,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: bfc537118f6c1769ec98893099daa0c61d1b5b1d
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 95bfef50e7ce5016b68df1442e625a88beb22181
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-relationships-between-datasets"></a>데이터 집합 간에 관계 만들기
 관련된 데이터를 포함 하는 데이터 집합 테이블을 사용 하 여 <xref:System.Data.DataRelation> 서로 관련된 레코드를 반환 하 고 테이블 간의 부모/자식 관계를 나타내기 위해 개체입니다. 관련된 테이블을 사용 하 여 데이터 집합에 추가 **데이터 소스 구성 마법사**, 또는 **데이터 집합 디자이너**, 작성 및 구성의 <xref:System.Data.DataRelation> 있습니다에 대 한 개체입니다.  
@@ -97,7 +98,7 @@ Visual Studio에서 데이터 디자인 도구를 사용 하 여 데이터 테�
   
 8.  선택 하거나 선택 취소 된 **중첩 관계** 상자입니다. 이 옵션을 선택 하는 <xref:System.Data.DataRelation.Nested%2A> 속성을 `true`, 해당 하면 자식 행은 해당 행은 XML 데이터로 작성 되거나와 동기화 하는 경우 부모 열 내에 중첩 될 해당 관계의 및 <xref:System.Xml.XmlDataDocument>합니다. 자세한 내용은 참조 [Datarelation 중첩](/dotnet/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations)합니다.  
   
-9. 이러한 테이블에서 레코드를 변경 하는 경우 적용할 규칙을 설정 합니다. 자세한 내용은 <xref:System.Data.Rule>을 참조하십시오.  
+9. 이러한 테이블에서 레코드를 변경 하는 경우 적용할 규칙을 설정 합니다. 자세한 내용은 <xref:System.Data.Rule>을 참조하세요.  
   
 10. 클릭 **확인** 관계를 만듭니다. 디자이너는 두 테이블 사이 관계 선이 나타납니다.  
   

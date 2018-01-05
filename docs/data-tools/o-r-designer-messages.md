@@ -12,16 +12,17 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 11d7c7b510f2714af13d84614daba8d2a10bf099
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 0c3e399e7c1885f8c288bc05c49ac0a020fc7470
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="or-designer-messages"></a>O/R 디자이너 메시지
 이 항목에서는 O/R 디자이너를 사용할 때 발생할 수 있는 다음과 같은 메시지에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [연결을 만들 수 없습니다 \<연결 이름 >-속성이 두 번 나열](../data-tools/cannot-create-an-association-association-name-property-listed-twice.md)  
   
  [연결을 만들 수 없습니다 \<연결 이름 >-속성 형식이 일치 하지 않습니다](../data-tools/cannot-create-an-association-association-name-property-types-do-not-match.md)  

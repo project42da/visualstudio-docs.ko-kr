@@ -25,11 +25,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1634250d97e83b21cccd3ada90933fc0806d35f
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: cplusplus
+ms.openlocfilehash: 84ba9274258fe41b93a980c815bfd808454b9061
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++용 코드 분석 개요
 C/C++ 코드 분석 도구는 C/C++ 소스 코드에서 발생할 수 있는 오류에 대한 정보를 개발자에게 제공합니다. 이 도구를 통해 보고되는 일반적인 코딩 오류에는 버퍼 오버런, 초기화되지 않은 메모리, null 포인터 역참조, 메모리 및 리소스 누수 등이 포함됩니다.  

@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1fc52fb07cd4da994df07410953787272e3cb724
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 1cae22698a0200dc0971f45dbcfd7b28005f8f0c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="context-operator-in-the-visual-studio-debugger-c"></a>컨텍스트 연산자는 Visual Studio 디버거에서 (c + +)
 C++에서 컨텍스트 연산자를 사용하여 중단점 위치, 변수 이름 또는 식을 한정할 수 있습니다. 컨텍스트 연산자는 로컬 이름에 의해 숨겨진 외부 범위에서 이름을 지정하는 데 유용합니다.  
@@ -55,7 +56,7 @@ C++에서 컨텍스트 연산자를 사용하여 중단점 위치, 변수 이름
   
 -   *모듈* 은 모듈의 이름입니다. 이름이 같은 여러 모듈을 구분하기 위해 전체 경로를 사용할 수 있습니다.  
   
-     *모듈* 경로에 쉼표, 공백 또는 중괄호가 포함되어 있으면 컨텍스트 파서가 문자열을 적절하게 인식할 수 있도록 경로에 큰따옴표를 사용해야 합니다. 작은따옴표는 Windows 파일 이름의 일부로 간주되므로 큰따옴표를 사용해야 합니다. 예를 들면 다음과 같습니다.  
+     *모듈* 경로에 쉼표, 공백 또는 중괄호가 포함되어 있으면 컨텍스트 파서가 문자열을 적절하게 인식할 수 있도록 경로에 큰따옴표를 사용해야 합니다. 작은따옴표는 Windows 파일 이름의 일부로 간주되므로 큰따옴표를 사용해야 합니다. 예를 들어 개체에 적용된  
   
     ```C++  
     {,,"a long, long, library name.dll"} g_Var  

@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 685f57286a022be6b7acbdaf2b8ffed33457fef1
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 77c56d70c6fc3dd3dac9a563c146d8bab2c6f699
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio에서 데이터에에서 WPF 컨트롤 바인딩
 데이터를 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 컨트롤에 바인딩하여 응용 프로그램 사용자에게 데이터를 표시할 수 있습니다. 이러한 데이터 바인딩된 컨트롤을 만들려면에서 항목을 이동할 수는 **데이터 원본** 창으로는 [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)] 에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 이 항목에서는 데이터 바인딩된 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 응용 프로그램을 만드는 데 사용할 수 있는 가장 일반적인 몇 가지 작업, 도구 및 클래스에 대해 설명합니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/09/2017
 |데이터 집합|예|예|  
 |[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]|예|예|  
 |서비스|예|아니요|  
-|개체|예|아니요|  
+|Object|예|아니요|  
   
 ### <a name="datasets"></a>데이터 집합  
  테이블 또는 열을 끌면는 **데이터 원본** 창에서 디자이너로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 생성 [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] 다음을 수행 하는:  

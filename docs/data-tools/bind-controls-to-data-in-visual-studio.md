@@ -17,11 +17,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 9361380aa53b8f6070f4ff9d956620c5344eec7e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: d6a1ab26dc402d039a5e858896ec25668be8df9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio에서 데이터에 컨트롤 바인딩
 데이터를 컨트롤에 바인딩하여 응용 프로그램 사용자에게 데이터를 표시할 수 있습니다. 항목을 끌어 데이터 바인딩된 컨트롤을 만들 수 있습니다는 **데이터 소스** 창 디자인 화면 또는 Visual Studio에서 화면에 컨트롤에 있습니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
 |엔터티 데이터 모델|예<sup>1</sup>|예|예|  
 |LINQ to SQL 클래스|더<sup>2</sup>|더<sup>2</sup>|더<sup>2</sup>|  
 |서비스 (포함 하 여 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], WCF 서비스 및 웹 서비스)|예|예|예|  
-|개체|예|예|예|  
+|Object|예|예|예|  
 |SharePoint|예|예|예|  
   
  1. 사용 하 여 모델 생성은 **엔터티 데이터 모델** 마법사, 다음 해당 개체를 디자이너로 끌어 합니다.  

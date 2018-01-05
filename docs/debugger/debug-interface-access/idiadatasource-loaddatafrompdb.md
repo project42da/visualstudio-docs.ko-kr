@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4b9192484e2ac9c957bc53a2e5a5a5965fd7a46a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 01348d666b4e6a3b9333a242bb285eff44f5b7c5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiadatasourceloaddatafrompdb"></a>IDiaDataSource::loadDataFromPdb
 페이지를 열고 디버그 데이터 원본으로 하는 프로그램 데이터베이스 (.pdb) 파일을 준비 합니다.  
@@ -54,7 +55,7 @@ HRESULT loadDataFromPdb (
   
  사용 하 여 메모리에서 직접.pdb 파일을 로드 하려면는 [idiadatasource:: Loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C++  
 HRESULT hr = pSource->loadDataFromPdb( L"myprog.pdb" );  

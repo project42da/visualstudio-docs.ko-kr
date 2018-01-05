@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6b0607013b6c40fc4276a233556320efcaa9e20a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 683e5588a9d0d7355af4efd531e6e3889f943c03
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-quality-tools"></a>품질 도구 문제 해결
 Visual Studio 품질 도구를 실행할 때 문제가 발생하면 이 섹션의 항목을 통해 문제를 진단하고 해결할 수 있습니다.  

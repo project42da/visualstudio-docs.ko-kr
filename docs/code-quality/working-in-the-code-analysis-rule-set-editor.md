@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d5a0fc10230c4c2b7638e1be75770872e0dcf4aa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c832b29512bfd7339ab60044ece81f1626be9bc7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-in-the-code-analysis-rule-set-editor"></a>코드 분석 규칙 집합 편집기에서 작업
 코드 분석 규칙 집합 편집기를 사용 하면 사용자 지정 규칙 집합에 포함 되는 규칙을 지정 하 고 작업을 지정할 수 있습니다. 코드 분석 규칙 위반이 발생할 때 수행할 동작을 지정할 수도 있습니다.  
@@ -63,8 +64,8 @@ ms.lasthandoff: 10/31/2017
 |-----------|-----------------|  
 |**ID**|규칙의 식별자입니다.|  
 |**범주**|규칙 집합의 멤버 자격은, 외에도 코드 분석 규칙도 범주별으로 그룹화 됩니다. 자세한 내용은 참조 [관리 코드 경고에 대 한 코드 분석](../code-quality/code-analysis-for-managed-code-warnings.md)합니다.|  
-|**Name**|규칙의 제목입니다.|  
-|**Namespace**|규칙의 네임 스페이스입니다.|  
+|**이름**|규칙의 제목입니다.|  
+|**네임스페이스**|규칙의 네임 스페이스입니다.|  
 |**대상 유형**|규칙입니다. 네이티브, 관리, 여부 데이터베이스 코드를 나타냅니다.|  
 |**작업**|실행할 코드 분석에서 규칙을 위반 하는 경우 수행할 동작입니다.<br /><br /> **경고** -경고를 생성 합니다.<br /><br /> **오류** -오류가 발생 합니다.<br /><br /> **None** -규칙을 비활성화 합니다.<br /><br /> 작업 필드를 편집할 수 있습니다. 값을 None으로 설정 된 규칙에 대 한 확인란의 선택을 취소와 같습니다.|  
 |**소스 규칙 집합**|규칙을 포함 하는 규칙 집합입니다.|  

@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 5309ce8676723b712790f061771e6d965a73ae21
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 35e0f7e8b84c5f2ea38b9f5871393955795faa2c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-designer-cannot-be-modified-while-debugging"></a>디버깅하는 동안에는 디자이너를 수정할 수 없습니다.
 이 메시지는 응용 프로그램이 디버그 모드로 실행 중일 때 O/R 디자이너에서 항목을 수정하려는 경우 나타납니다. 응용 프로그램이 디버그 모드로 실행 중인 경우 O/R 디자이너는 읽기 전용입니다.  

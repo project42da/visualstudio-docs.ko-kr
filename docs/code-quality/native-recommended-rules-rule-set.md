@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 07704e589ae56b04dc28ceb465afad7812a29111
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: f7728a293c1d93ab95a73d829bcdb37f5c09cc59
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="native-recommended-rules-rule-set"></a>네이티브 권장 규칙 규칙 집합
 네이티브 권장 규칙은 잠재적 보안 허점 및 응용 프로그램 충돌을 비롯 하 여 네이티브 코드의 가장 중요 하 고 일반적인 문제에 집중 합니다.  네이티브 프로젝트에 대해 만드는 모든 사용자 지정 규칙 집합에 이 규칙 집합을 포함해야 합니다.  이 규칙 집합은 Visual Studio Professional edition 이상 사용할 수 있습니다.  

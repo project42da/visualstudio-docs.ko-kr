@@ -77,11 +77,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 947da9ccdbf67a71edfaa122de8861912a9e9596
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cc7b945a8c53d290f573eac4565f2240ec7a2d7b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="crt-debug-heap-details"></a>CRT 디버그 힙 정보
 이 항목에서는 CRT 디버그 힙에 대해 자세히 설명합니다.  
@@ -193,7 +194,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
   
  **_crtDbgFlag** 플래그 비트 필드가 있습니다.  
   
-|비트 필드|기본값<br /><br /> 값|설명|  
+|비트 필드|기본<br /><br /> 값|설명|  
 |---------------|-----------------------|-----------------|  
 |**_CRTDBG_ALLOC_MEM_DF**|켜기|디버그 할당을 사용합니다. 함께 연결 하는 경우이 비트가 해제, 할당 되지만 블록 형식은 **_IGNORE_BLOCK**합니다.|  
 |**_CRTDBG_DELAY_FREE_MEM_DF**|끄기|부족한 메모리 조건을 시뮬레이션하는 것과 관련해서 메모리가 실제로 해제되는 것을 방지합니다. 해제 된 블록이 디버그 힙의 연결된 리스트에 있지만로 표시 된이 비트를 설정 하면 **_FREE_BLOCK** 는 특별 한 바이트 값으로 채워집니다.|  

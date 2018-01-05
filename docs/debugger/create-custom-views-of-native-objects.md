@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2aa3a6f515ca039c86d453f5729800fe8e1637c0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 340d0d7366749f402cb76f3075778fb2b7ea215b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 기본 개체의 사용자 지정 뷰 만들기
 Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 네이티브 형식을 표시 하는 방법을 사용자 지정할 수 있습니다 (예를 들어는 **조사식** 창 **지역** 창 및  **DataTips**합니다.
@@ -39,7 +40,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
   
  ![TextBox 기본 시각화](../debugger/media/dbg_natvis_textbox_default.png "DBG_NATVIS_TextBox_Default")  
   
- 강조 표시된 행은 `TextBox` 클래스의 `Text` 속성을 보여 줍니다. 복잡 한 클래스 계층 구조가 어렵습니다;이 값을 찾으려면 또한 디버거 때문에 텍스트 상자 내에 들어 있는 문자열을 확인할 수 없습니다는 개체에 의해 사용 되는 사용자 지정 문자열 형식을 해석 하는 방법을 모릅니다.  
+ 강조 표시된 행은 `Text` 클래스의 `TextBox` 속성을 보여 줍니다. 복잡 한 클래스 계층 구조가 어렵습니다;이 값을 찾으려면 또한 디버거 때문에 텍스트 상자 내에 들어 있는 문자열을 확인할 수 없습니다는 개체에 의해 사용 되는 사용자 지정 문자열 형식을 해석 하는 방법을 모릅니다.  
   
  동일한 `TextBox` 사용자 지정 시각화 규칙이 적용 되 면 변수 창에서 훨씬 간편 하 게 표시 합니다. 클래스의 중요한 멤버를 모두 한꺼번에 확인할 수 있으며 디버거에서는 사용자 지정 문자열 형식의 기본 문자열 값을 표시합니다.  
   
@@ -158,9 +159,9 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
   
  다음을 지정합니다.  
   
-1.  이 시각화가 사용되는 대상 형식(`Type Name` 특성).  
+1.  이 시각화가 사용되는 대상 형식( `Type Name` 특성).  
   
-2.  이 형식의 개체 값이 표시되는 모양(`DisplayString` 요소)  
+2.  이 형식의 개체 값이 표시되는 모양( `DisplayString` 요소)  
   
 3.  사용자가 변수 창에서 확장할 경우 형식 멤버가 표시되는 모양( `Expand` 노드)  
   
@@ -189,10 +190,10 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 </Type>  
 ```  
   
- `Inheritable`의 기본값은 `true`입니다.  
+ `Inheritable` 의 기본값은 `true`입니다.  
   
 #### <a name="priority-attribute"></a>Priority 특성  
- `Priority` 특성은 정의를 구문 분석하지 못하는 경우 대체 정의가 사용되는 순서를 지정합니다. `Priority`의 가능한 값은 `Low`, `MediumLow`, `Medium`, `MediumHigh`, `High`이며 기본값은 `Medium`입니다.  
+ `Priority` 특성은 정의를 구문 분석하지 못하는 경우 대체 정의가 사용되는 순서를 지정합니다. `Priority` 의 가능한 값은 `Low`, `MediumLow`,`Medium`, `MediumHigh`, `High`이며 기본값은 `Medium`입니다.  
   
  Priority 특성은 서로 다른 파일 간이 아닌 동일한 .natvis 파일 내의 우선 순위를 구분하기 위해서만 사용해야 합니다.  
   
@@ -217,7 +218,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 ```  
   
 ####  <a name="BKMK_Versioning"></a> Version 요소  
- `Version` 요소를 사용하면 이름 충돌을 최소화하고 각기 다른 시각화를 다양한 버전의 형식에 사용할 수 있도록 시각화 범위를 특정 모듈 및 해당 버전으로 지정할 수 있습니다. 예를 들면 다음과 같습니다.  
+ `Version` 요소를 사용하면 이름 충돌을 최소화하고 각기 다른 시각화를 다양한 버전의 형식에 사용할 수 있도록 시각화 범위를 특정 모듈 및 해당 버전으로 지정할 수 있습니다. 예:  
   
 ```xml
 <Type Name="DirectUI::Border">  
@@ -229,10 +230,10 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 </Type>  
 ```  
   
- 이 예제에서는 버전 1.0부터 1.5 사이의 `Windows.UI.Xaml.dll`에서 확인할 수 있는 `DirectUI::Border` 형식에만 시각화를 적용할 수 있습니다. 버전 요소를 추가 하면 시각화 항목에서 특정 모듈 및 버전의 범위가 되 고 실수로 인 한 불일치 항목이 합니다. 그러나 서로 다른 모듈에서 사용 되는 공통 헤더 파일에는 형식이 정의 되어, 형식 지정된 된 모듈에 없으면 버전이 지정 된 시각화 적용 되지 않습니다.  
+ 이 예제에서는 버전 1.0부터 1.5 사이의 `DirectUI::Border` 에서 확인할 수 있는 `Windows.UI.Xaml.dll` 형식에만 시각화를 적용할 수 있습니다. 버전 요소를 추가 하면 시각화 항목에서 특정 모듈 및 버전의 범위가 되 고 실수로 인 한 불일치 항목이 합니다. 그러나 서로 다른 모듈에서 사용 되는 공통 헤더 파일에는 형식이 정의 되어, 형식 지정된 된 모듈에 없으면 버전이 지정 된 시각화 적용 되지 않습니다.  
   
 #### <a name="optional-attribute"></a>Optional 특성  
- `Optional` 특성은 모든 노드에 나타날 수 있습니다. 선택적 노드 내의 모든 부분식을 구문 분석할 수 없는 경우 해당 노드는 무시 되지만 Type 요소의 나머지 부분은 여전히 유효 합니다. 다음 형식에서 `[State]`는 필수이지만 `[Exception]`은 선택적입니다.  즉 `MyNamespace::MyClass` 필드가 포함 된다고 _`M_exceptionHolder`, 계속 나타나면 둘 다 `[State]` 노드 및 `[Exception]` 노드의 경우는 `_M_exceptionHolder` 누락, 표시는 `[State]` 노드.
+ `Optional` 특성은 모든 노드에 나타날 수 있습니다. 선택적 노드 내의 모든 부분식을 구문 분석할 수 없는 경우 해당 노드는 무시 되지만 Type 요소의 나머지 부분은 여전히 유효 합니다. 다음 형식에서 `[State]` 는 필수이지만 `[Exception]` 은 선택적입니다.  즉 `MyNamespace::MyClass` 필드가 포함 된다고 _`M_exceptionHolder`, 계속 나타나면 둘 다 `[State]` 노드 및 `[Exception]` 노드의 경우는 `_M_exceptionHolder` 누락, 표시는 `[State]` 노드.
   
 ```xml
 <Type Name="MyNamespace::MyClass">  
@@ -276,7 +277,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 </Type>  
 ```  
   
- simple 뷰에 [size]와 [capacity] 항목을 표시하지 않습니다. `ExcludeView` 대신 `IncludeView="simple"`을 사용하면 `[size]` 및 `[capacity]` 항목이 기본 뷰가 아닌 simple 뷰에 표시됩니다.  
+ simple 뷰에 [size]와 [capacity] 항목을 표시하지 않습니다. `IncludeView="simple"` 대신 `ExcludeView`을 사용하면 `[size]` 및 `[capacity]` 항목이 기본 뷰가 아닌 simple 뷰에 표시됩니다.  
   
  `IncludeView` 및 `ExcludeView` 특성은 개별 멤버뿐만 아니라 형식에도 사용할 수 있습니다.  
   
@@ -294,7 +295,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
   
  ![DisplayString 요소를 사용 하 여](../debugger/media/dbg_natvis_cpoint_displaystring.png "DBG_NATVIS_CPoint_DisplayString")  
   
- `DisplayString` 식에서 `x` 멤버의 `y` 및 `CPoint`는 중괄호 내에 있으므로 해당 값이 평가됩니다. 또한 이 식에서는 이중 중괄호(`{{` 또는 `}}`)를 사용하여 중괄호를 이스케이프하는 방법을 확인할 수 있습니다.  
+ `DisplayString` 식에서 `x` 멤버의 `y`및 `CPoint`는 중괄호 내에 있으므로 해당 값이 평가됩니다. 또한 이 식에서는 이중 중괄호( `{{` 또는 `}}` )를 사용하여 중괄호를 이스케이프하는 방법을 확인할 수 있습니다.  
   
 > [!NOTE]
 >  `DisplayString` 요소는 임의 문자열 및 중괄호 구문을 허용하는 유일한 요소입니다. 다른 모든 시각화 요소는 디버거에서 평가하는 식만 사용합니다.  
@@ -326,7 +327,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
  ![StringView 시각화 도우미가 있는 CStringT 데이터](../debugger/media/dbg_natvis_stringview_cstringt.png "DBG_NATVIS_StringView_CStringT")  
   
 > [!NOTE]
->  `{m_pszData,su}` 식에는 값을 유니코드 문자열로 표시하기 위한 C++ 형식 지정자 `su`가 포함되어 있습니다. 자세한 내용은 [Format Specifiers in C++](../debugger/format-specifiers-in-cpp.md) 를 참조하세요.  
+>  `{m_pszData,su}` 식에는 값을 유니코드 문자열로 표시하기 위한 C++ 형식 지정자 `su` 가 포함되어 있습니다. 자세한 내용은 [Format Specifiers in C++](../debugger/format-specifiers-in-cpp.md) 를 참조하세요.  
   
 ###  <a name="BKMK_Expand"></a> Expand  
  `Expand` 노드는 변수 창에서 확장된 시각화된 형식의 자식을 사용자 지정하는 데 사용됩니다. 또한 자식 요소를 정의하는 자식 노드의 목록을 허용합니다.  
@@ -338,7 +339,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 -   경우는 `Expand` 노드가 그 아래 자식 노드 없이 지정 되어 형식을 디버거 창에서 확장할 수 없습니다.  
   
 ####  <a name="BKMK_Item_expansion"></a> 항목 확장  
- `Item` 요소는 `Expand` 노드에서 사용되는 가장 기본적이면서 일반적인 요소입니다. `Item`은 단일 자식 요소를 정의합니다. 예를 들어 `CRect`, `top`, `left` 및 `right`을 해당 필드로 가지고 있는 `bottom` 클래스와 다음과 같은 시각화 항목이 있다고 가정해 보겠습니다.  
+ `Item` 요소는 `Expand` 노드에서 사용되는 가장 기본적이면서 일반적인 요소입니다. `Item` 은 단일 자식 요소를 정의합니다. 예를 들어 `CRect` , `top`, `left`및 `right`을 해당 필드로 가지고 있는 `bottom` 클래스와 다음과 같은 시각화 항목이 있다고 가정해 보겠습니다.  
   
 ```xml
 <Type Name="CRect">  
@@ -361,7 +362,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 >  항목 요소의 식이 복합 형식을 가리키는 경우 `Item` 노드 자체를 확장할 수 있습니다.  
   
 ####  <a name="BKMK_ArrayItems_expansion"></a> Size  
- `ArrayItems` 노드를 사용하면 Visual Studio 디버거가 형식을 배열로 해석하고 해당 개별 요소를 표시하도록 할 수 있습니다. `std::vector`에 대한 시각화는 좋은 예입니다.  
+ `ArrayItems` 노드를 사용하면 Visual Studio 디버거가 형식을 배열로 해석하고 해당 개별 요소를 표시하도록 할 수 있습니다. `std::vector` 에 대한 시각화는 좋은 예입니다.  
   
 ```xml
 <Type Name="std::vector&lt;*&gt;">  
@@ -377,7 +378,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 </Type>  
 ```  
   
- `std::vector`는 변수 창에서 확장되는 경우 개별 요소를 표시합니다.  
+ `std::vector` 는 변수 창에서 확장되는 경우 개별 요소를 표시합니다.  
   
  ![ArrayItems 확장을 사용 하는 std:: vector](../debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "DBG_NATVIS_Expand_ArrayItems_StdVector")  
   
@@ -385,11 +386,11 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
   
 1.  디버거에서 배열의 길이를 파악하기 위한 `Size` 식(정수로 계산되어야 함)  
   
-2.  첫 번째 요소를 가리켜야 하는 `ValuePointer` 식(`void*`가 아닌 요소 형식의 포인터여야 함).  
+2.  첫 번째 요소를 가리켜야 하는 `ValuePointer` 식( `void*`가 아닌 요소 형식의 포인터여야 함).  
   
  배열 하한의 기본값은 0입니다. 이 값은 `LowerBound` 요소를 사용하여 재정의할 수 있습니다(예는 Visual Studio와 함께 제공되는 .natvis 파일 참조).  
   
- `[]` 연산자는 `ArrayItems` 확장과 함께 사용할 수 있습니다(예: `vector[i]`). [] 연산자는 형식 자체가 이 연산자를 허용하지 않는 경우(예: `CATLArray`)에도 `ArrayItems` 또는 `IndexListItems`를 사용하는 단일 차원 배열의 모든 시각화에 사용될 수 있습니다.  
+ `[]` 연산자는 `ArrayItems` 확장과 함께 사용할 수 있습니다(예: `vector[i]`). [] 연산자는 형식 자체가 이 연산자를 허용하지 않는 경우(예: `ArrayItems` )에도 `IndexListItems`또는 `CATLArray`를 사용하는 단일 차원 배열의 모든 시각화에 사용될 수 있습니다.  
   
  다차원 배열도 지정할 수 있습니다. 디버거 바로 약간 더 많은 정보를이 경우 자식 요소를 올바르게 표시 해야 합니다.  
   
@@ -408,7 +409,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 </Type>  
 ```  
   
- `Direction`은 배열이 행 중심 순서인지 열 중심 순서인지를 지정합니다. `Rank`는 배열의 차수를 지정합니다. `Size` 요소에는 암시적 `$i` 해당 차원에서 배열의 길이 확인 하기 위해 차원 인덱스로 대체 되는 매개 변수입니다. 예를 들어 이전 예에서 `_M_extent.M_base[0]` 식 위에는 0차원의 길이를 지정하고, `_M_extent._M_base[1]` 식 위에는 1차원의 길이를 지정해야 할 것입니다.  
+ `Direction` 은 배열이 행 중심 순서인지 열 중심 순서인지를 지정합니다. `Rank` 는 배열의 차수를 지정합니다. `Size` 요소에는 암시적 `$i` 해당 차원에서 배열의 길이 확인 하기 위해 차원 인덱스로 대체 되는 매개 변수입니다. 예를 들어 이전 예에서 `_M_extent.M_base[0]` 식 위에는 0차원의 길이를 지정하고, `_M_extent._M_base[1]` 식 위에는 1차원의 길이를 지정해야 할 것입니다.  
   
  2 차원 방법 같습니다 `Concurrency::array` 디버거에서 개체를 찾습니다.  
   
@@ -452,16 +453,16 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 </Type>  
 ```  
   
- `Size` 요소는 목록의 길이를 참조합니다. `HeadPointer`는 첫 번째 요소를 가리키고, `NextPointer`는 다음 요소를 참조하며, `ValueNode`는 항목의 값을 참조합니다.  
+ `Size` 요소는 목록의 길이를 참조합니다. `HeadPointer` 는 첫 번째 요소를 가리키고, `NextPointer` 는 다음 요소를 참조하며, `ValueNode` 는 항목의 값을 참조합니다.  
   
--   `NextPointer` 및 `ValueNode` 식은 부모 목록 형식이 아닌 링크된 목록 노드 요소의 컨텍스트에서 평가됩니다. 앞의 예제에서 `CAtlList` 에 `CNode` 클래스 (에 `atlcoll.h`) 연결 된 목록의 노드를 나타내는입니다. `m_pNext` 및 `m_element`는 `CNode` 클래스가 아닌 `CAtlList` 클래스의 필드입니다.  
+-   `NextPointer` 및 `ValueNode` 식은 부모 목록 형식이 아닌 링크된 목록 노드 요소의 컨텍스트에서 평가됩니다. 앞의 예제에서 `CAtlList` 에 `CNode` 클래스 (에 `atlcoll.h`) 연결 된 목록의 노드를 나타내는입니다. `m_pNext` 및 `m_element` 는 `CNode` 클래스가 아닌 `CAtlList` 클래스의 필드입니다.  
   
 -   `ValueNode`는 비워 둘 수도 있고, `this`가 링크된 목록 노드를 참조하도록 할 수도 있습니다.  
   
 #### <a name="customlistitems-expansion"></a>CustomListItems 확장  
  `CustomListItems` 확장을 사용하여 해시 테이블 같은 데이터 구조 전송에 대한 사용자 지정 논리를 작성할 수 있습니다. 사용 해야 `CustomListItems` 구조 평가 해야 하는 모든 c + + 식을 통해 표현 가능 하지만 대 한 작업이 적합 하지 않은 데이터를 시각화 `ArrayItems`, `TreeItems`, 또는`LinkedListItems.`  
   
- CAtlMap의 시각화 도우미는 `CustomListItems`가 적합한 가장 좋은 예입니다.  
+ CAtlMap의 시각화 도우미는 `CustomListItems` 가 적합한 가장 좋은 예입니다.  
   
 ```xml
 <Type Name="ATL::CAtlMap&lt;*,*,*,*&gt;">  
@@ -532,7 +533,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 </Type>  
 ```  
   
- 구문은 유사는 `LinkedListItems` 노드. `LeftPointer`, `RightPointer` 및 `ValueNode`는 트리 노드 클래스의 컨텍스트에서 평가되며, `ValueNode`는 비워 둘 수도 있고 `this`가 트리 노드를 참조하도록 할 수도 있습니다.  
+ 구문은 유사는 `LinkedListItems` 노드. `LeftPointer`, `RightPointer`및 `ValueNode` 는 트리 노드 클래스의 컨텍스트에서 평가되며, `ValueNode` 는 비워 둘 수도 있고 `this` 가 트리 노드를 참조하도록 할 수도 있습니다.  
   
 ####  <a name="BKMK_ExpandedItem_expansion"></a> ExpandedItem 확장  
  `ExpandedItem` 요소는 기본 클래스 또는 데이터 멤버를 시각화된 형식의 자식이었던 것처럼 표시하는 방식으로 집계된 자식 뷰를 생성하는 데 사용할 수 있습니다. 지정된 식이 평가되고 결과의 자식 노드가 시각화된 형식의 자식 목록에 추가됩니다. 예를 들어 스마트 포인터 형식이 `auto_ptr<vector<int>>`, 일반적으로 표시 하 합니다.  
@@ -634,4 +635,4 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 ### <a name="customvisualizer-element"></a>CustomVisualizer 요소  
  `CustomVisualizer` 는 Visual Studio에서 실행되는 코드에서 시각화를 제어하기 위해 작성할 수 있는 VSIX 확장을 지정하는 확장성 지점입니다. VSIX 확장 작성 방법에 대한 자세한 내용은 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)를 참조하세요. 사용자 지정 시각화 도우미를 작성 하는 것 보다 훨씬 더 많은 작업은 XML natvis 정의 작성 하지만 어떤 natvis 지원 하거나 지원 하지 않는 하는 방법에 대 한 제약 조건에서 자유롭게. 사용자 지정 시각화 도우미는 디버기 프로세스를 쿼리하고 수정하거나 Visual Studio의 다른 부분과 통신하는 데 사용할 수 있는 전체 디버거 확장성 API에 액세스할 수 있습니다.  
   
- `Condition`, `IncludeView` 및 `ExcludeView` 특성을 CustomVisualizer 요소에 사용할 수 있습니다.
+ `Condition`, `IncludeView`및 `ExcludeView` 특성을 CustomVisualizer 요소에 사용할 수 있습니다.

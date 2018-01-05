@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 05e638be5cc11f66052e5a1f6116e7205b824106
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 85a8e5883a8d78297336016ac295f9b5d76ce337
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="you-have-selected-a-database-object-from-an-unsupported-database-provider"></a>지원되지 않는 데이터베이스 공급자에서 데이터베이스 공급자를 선택했습니다.
 O/R 디자이너는는.NET Framework Data Provider for SQL Server 지원 (<xref:System.Data.SqlClient>). 클릭할 수 있지만 **확인** 하며 지원 되지 않는 데이터베이스 공급자의에서 개체를 작성 하려면 계속 하기, 실행 시 예기치 않은 동작이 발생할 수 있습니다.  

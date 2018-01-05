@@ -17,16 +17,17 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e404f0b893453fa319d5c4df97319f8e77720805
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cd84741d006304f7dfefe8ee4a1060ba64ffdb8b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-interface-access-sdk"></a>디버그 인터페이스 액세스 SDK
 Microsoft 디버그 인터페이스 액세스 SDK 소프트웨어 개발 키트 (DIA)는 Microsoft 사후 컴파일러 도구에서 생성 한 프로그램 데이터베이스 (.pdb) 파일에 저장 된 디버그 정보에 대 한 액세스를 제공 합니다. 사후 컴파일러 도구에서 생성 한.pdb 파일의 형식에서 상수 수정 버전을 하기 때문에 형식을 노출은 바람직하지 않습니다. DIA API를 사용 하 여.pdb 파일에 저장 된 디버그 정보를 검색에 대 한를 검색 하는 응용 프로그램을 개발할 수 있습니다. 이러한 응용 프로그램 수, 예를 들어, 스택 추적 정보를 보고 하 고 성능 데이터를 분석 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [시작](../../debugger/debug-interface-access/getting-started-debug-interface-access-sdk.md)  
  DIA SDK의 개요에는 기능을 제공 하 고 뿐만 아니라 필요한 헤더 및 라이브러리 파일 DIA SDK가 설치 하는 위치를 지정 합니다.  
   

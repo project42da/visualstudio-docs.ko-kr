@@ -19,11 +19,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 1c7e99ce49df969fae439afac5d65369fae9c37a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: e7078e6814abeb0db2afd2cffe698f923e530179
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>개체에서 데이터를 데이터베이스에 저장
 TableAdapter의 DBDirect 메서드 중 하나에 개체에서 값을 전달 하 여 개체를 데이터베이스에 데이터를 저장할 수 있습니다 (예를 들어 `TableAdapter.Insert`). 자세한 내용은 참조 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)합니다.  

@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 64360c57f0d4b09f0dc7e8026208c7ec542709c4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 689fe39cfb8a7719efbba15b412800d9dfa78361
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>관리 코드 경고에 대한 코드 분석
 관리 코드 분석 도구는 관리 코드 라이브러리의 규칙 위반을 나타내는 경고를 제공합니다. 경고는 디자인, 지역화, 성능, 보안 등의 규칙 영역으로 구성됩니다. 각 경고는 관리 코드 분석 규칙을 위반했음을 나타냅니다. 이 섹션에서는 각 관리 코드 분석 경고에 대한 자세한 논의와 예제를 제공합니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
 |예제 코드|규칙을 위반하는 예제와 규칙을 충족하는 수정된 예제입니다.|  
 |관련 경고|관련 경고입니다.|  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |||  
 |-|-|  

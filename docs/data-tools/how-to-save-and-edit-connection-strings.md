@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 4a7482c269cd978d2c1848c896985b1194797e42
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: bb3ddcf8a4d1ac14b356bfabac2378ff345ef65b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-save-and-edit-connection-strings"></a>방법: 연결 문자열 저장 및 편집
 Visual Studio 응용 프로그램의 연결 문자열 (응용 프로그램 설정 라고도 함) 응용 프로그램 구성 파일에 저장 하거나 응용 프로그램에 직접 하드 코드 될 수 있습니다. 응용 프로그램 구성 파일에 연결 문자열을 저장하면 응용 프로그램 유지 관리 작업을 간소화할 수 있습니다. 연결 문자열을 변경해야 하는 경우 소스 코드에서 문자열을 변경한 다음 응용 프로그램을 다시 컴파일하는 대신 응용 프로그램 설정 파일에서 문자열을 업데이트할 수 있습니다.

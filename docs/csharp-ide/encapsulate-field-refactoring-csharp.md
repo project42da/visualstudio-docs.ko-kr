@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7bd9e255b35ffb843c15d5ffa9c1547891bf437d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: d587edebcea443e0bfff52004b128c70923470d4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="encapsulate-field-refactoring-c"></a>필드 캡슐화 리팩터링(C#)
 **필드 캡슐화** 신속 하 게 속성에서 기존 필드를 만들고 다음 새 속성에 대 한 참조로 원활 하 게 코드를 업데이트할 수 있습니다 리팩터링 작업 합니다.  
@@ -104,5 +105,5 @@ ms.lasthandoff: 10/31/2017
  이 리팩터링 작업으로 생성된 코드는 필드 캡슐화 코드 조각 기능을 통해 모델링됩니다. 코드 조각은 수정 가능합니다. 자세한 내용은 [코드 조각](../ide/visual-csharp-code-snippets.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [리팩터링 (C#)](refactoring-csharp.md)   
+ [리팩터링(C#)](refactoring-csharp.md)   
  [Visual C# 코드 조각](../ide/visual-csharp-code-snippets.md)

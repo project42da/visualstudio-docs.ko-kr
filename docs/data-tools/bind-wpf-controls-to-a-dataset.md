@@ -19,11 +19,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 96d5407672ff94749731f9d00088b27e8c4da036
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: data-storage
+ms.openlocfilehash: 072adcf912e5921164647cf77ee561617f844786
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>데이터 집합에 WPF 컨트롤 바인딩
 이 연습에서는 데이터 바인딩된 컨트롤을 포함하는 WPF 응용 프로그램을 만듭니다. 이러한 컨트롤은 데이터 집합에서 캡슐화된 제품 레코드에 바인딩됩니다. 또한 제품을 찾아보고 제품 레코드 변경 내용을 저장할 수 있는 단추도 추가합니다.  

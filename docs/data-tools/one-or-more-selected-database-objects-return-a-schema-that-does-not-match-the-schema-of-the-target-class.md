@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 40842e1067a0b764a4b35ac679ee774f04347359
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: e188947f51cb8e277c71a072dfcee72922f37982
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>선택한 데이터베이스 개체 중 하나 이상이 대상 클래스의 스키마와 일치하지 않는 스키마를 반환합니다.
 선택한 하나 이상의 데이터베이스 개체에서 대상 데이터 클래스 스키마와 일치하지 않는 스키마를 반환합니다. 디자이너에 아무 것도 추가되지 않았습니다.  

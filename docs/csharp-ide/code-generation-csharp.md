@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 773fecba4b3a635d86d6b06937151e38ad94912e
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: dotnet
+ms.openlocfilehash: f70130a0652f6a7f9d7947ef0cebafb038ea6335
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-features-for-c"></a>C#에 대 한 코드 생성 기능 #
 Visual Studio는 소스 코드 생성을 지원하여 실제 작업에 집중할 수 있도록 합니다.  다음 코드 생성 기능이 C#에 대 한 Visual Studio에서 제공 됩니다.

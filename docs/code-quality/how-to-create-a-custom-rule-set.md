@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7e9cba33565af81a76d043a3fc3f63eef831e1ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 36b5e9e0a3ca0a994547679ba71e545b4235b6c5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-rule-set"></a>방법: 사용자 지정 규칙 집합 만들기
 [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)], [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)], 및 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]를 만들고 사용자 지정을 수정할 수 *규칙 집합* 코드 분석와 관련 된 특정 프로젝트 요구 사항에 맞게 합니다. 사용자 지정 규칙 집합을 만들려면, 또는 하나를 더 표준 규칙 규칙 집합 편집기에 설정 합니다. 다음 추가 하거나 특정 규칙을 제거할 수 있으며 코드 분석 규칙 위반을 판단 하는 경우 발생 하는 동작을 변경할 수 있습니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: de3a7bfaccec45dc6b7fce1def45a6e6de8e75f2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 899f9026b2e7c86ad1bd9f722dc7e1904cab2b9b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy"></a>방법: 코드 프로젝트 규칙 집합을 팀 프로젝트 체크 인 정책과 동기화
 최소한 규칙 체크 인 정책에 대 한 집합에 지정 된 규칙을 포함 하는 규칙 집합을 지정 하 여 동기화 할 팀 프로젝트에 대 한 체크 인 정책에 코드 프로젝트에 대 한 코드 분석 설정이 있습니다. 수석 개발자는 사용자 이름 및 규칙 체크 인 정책에 대 한 집합의 위치에 알릴 수 있습니다. 코드 분석 프로젝트에 대 한 올바른 규칙 집합이 사용 하도록 다음 옵션 중 하나를 사용할 수 있습니다.  

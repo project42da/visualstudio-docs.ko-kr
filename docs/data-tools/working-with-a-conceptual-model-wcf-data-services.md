@@ -16,11 +16,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: d9c0fa3846380b58e78b449083eab486954fd8a5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 86a7a4c253aa9bdd2d311d72f40e8b9374a37ff4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-a-conceptual-model-wcf-data-services"></a>작업을 개념적 모델 (WCF Data Services)
 개념적 모델을 사용 하 여 데이터베이스의 데이터에 설명 하는 경우 데이터베이스 스키마 및 개체 모델 간의 간에 변환할 필요 없이 개체를 통해 데이터를 쿼리할 수 있습니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
 |항목|설명|  
 |-----------|-----------------|  
-|[방법: 추가, 수정 및 엔터티 삭제](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|생성, 업데이트 및 데이터 서비스에서 엔터티 데이터를 삭제 하는 방법을 보여 줍니다.|  
+|[방법: 엔터티 추가, 수정 및 삭제](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|생성, 업데이트 및 데이터 서비스에서 엔터티 데이터를 삭제 하는 방법을 보여 줍니다.|  
 |[방법: 엔터티 관계 정의](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|데이터 서비스에서 관계를 변경 또는 만드는 방법을 보여 줍니다.|  
   
 ## <a name="see-also"></a>참고 항목  

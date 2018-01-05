@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ea233e8bf26b3bbb9dd7b1e962e3729e172b5a7e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1f50ae8c40da9c895773330f488e63850013d35b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-debug-interface-access-sdk"></a>데이터(디버그 인터페이스 액세스 SDK)
 모든 변수, 매개 변수, 지역 변수, 전역 변수, 클래스 멤버 등으로 식별 됩니다 `SymTagData` 기호입니다. 상수 값 (`LocIsConstant`)이이 형식으로 구분 됩니다.  

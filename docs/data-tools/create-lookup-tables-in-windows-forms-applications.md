@@ -15,11 +15,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 00686648576ecc0f8054fe56112c5c47bb54adb8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: f27fdbe216b6ba2a738f6d9f45d746344d542b38
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-lookup-tables-in-windows-forms-applications"></a>Windows Forms 응용 프로그램에서 조회 테이블 만들기
 용어 *조회 테이블* 두 관련된 데이터 테이블에 바인딩되는 컨트롤에 설명 합니다. 이러한 조회 컨트롤에는 두 번째 테이블에서 선택한 값에 따라 첫 번째 테이블의에서 데이터를 표시 합니다.  

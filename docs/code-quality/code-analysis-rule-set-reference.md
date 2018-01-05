@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5a0f290fa42a04ddf60a49282d2f350111076ab0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f396bb289e7e4288dbb80c6e08990960861e970c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-analysis-rule-set-reference"></a>코드 분석 규칙 집합 참조
 에 대 한 코드 분석을 구성할 때 관리 코드 프로젝트에서 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], 또는 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]의 기본 제공 목록으로 표시 된 *규칙 집합*합니다. 표준 규칙 집합 중 하나를 사용 하거나 또는 규칙 집합을 프로젝트 요구 사항에 맞게 사용자 지정할 수 있습니다.  

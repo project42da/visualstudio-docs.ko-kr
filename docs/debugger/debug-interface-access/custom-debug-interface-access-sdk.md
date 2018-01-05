@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3c1f768c5e4e7f76d63841bb59f07a403e1d78f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0e367a96bd24840e734ada21d45ee35dfaee36b1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-debug-interface-access-sdk"></a>사용자 지정(디버그 인터페이스 액세스 SDK)
 일부 컴파일러에서는 표준 어휘 기호 형식으로 식별 되지 않은 기호를 소개 합니다. 이러한 기호에 의해 식별 됩니다는 `SymTagCustom` 태그입니다.  

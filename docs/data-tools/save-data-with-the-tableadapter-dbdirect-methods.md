@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 3ed52a167b607236b8493e4c8c1736ee597162b9
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: data-storage
+ms.openlocfilehash: fb85f9cfb2b70838d32761b412541bf15b2884c6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect 메서드 데이터 저장
 이 연습에서는 TableAdapter의 DBDirect 메서드를 사용 하 여 데이터베이스에 대해 직접 SQL 문을 실행 하는 자세한 지침을 제공 합니다. TableAdapter의 DBDirect 메서드 제어 데이터베이스 업데이트에 대 한 상세 수준을 제공합니다. 사용 하 여 개별을 호출 하 여 특정 SQL 문과 저장된 프로시저를 실행할 수 있습니다 `Insert`, `Update`, 및 `Delete` 응용 프로그램에서 필요에 따라 메서드 (오버 로드 된 달리 `Update` 업데이트를 수행 하는 메서드 INSERT 및 DELETE 문을 모두 한 번의 호출에에서).  
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/07/2017
   
 2.  다음 설정 **이름** 및 **텍스트** 각 단추에 대해 속성입니다.  
   
-    |이름|텍스트|  
+    |name|텍스트|  
     |----------|----------|  
     |`InsertButton`|**삽입**|  
     |`UpdateButton`|**업데이트**|  

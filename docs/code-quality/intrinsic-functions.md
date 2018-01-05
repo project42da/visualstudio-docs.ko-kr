@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be65ae9177591b015cd8b29b3dbdc262b66a30ab
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: c25c76ba43c983a6029c8d50e183ccf839ef08bd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intrinsic-functions"></a>내장 함수
 의도 하지 않은 식 않는다는 점을 SAL에 식을 C/c + + 식 수-예를 들어, + +,--, 및이 컨텍스트에서 의도 하지 않은 모든 함수 호출 합니다.  그러나 SAL는 일부 함수와 비슷한 개체 및 SAL 식에 사용할 수 있는 일부 예약 된 기호를 제공 합니다. 이 라고 *내장 함수*합니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/15/2017
 |`_Inexpressible_(expr)`|버퍼의 크기를 너무 복잡해 서 주석 식을 사용 하 여 표시할 수는 경우에 따라 표시-예를 들어 구성원을 선택는 입력된 데이터 집합을 검색 한 다음를 계산 하 여 계산 됩니다.|  
 |`_Nullterm_length_(param)`|`param`최대 버퍼를 제외 하는 null 종결자에 있는 요소의 수가입니다. 비 집계, void가 아닌 형식의 모든 버퍼에 적용할 수 있습니다.|  
 |`_Old_(expr)`|사전 조건에서 평가 되는 경우 `_Old_` 입력된 값을 반환 `expr`합니다.  값을 반환 한다는 사후 조건에서 계산할 때 `expr` 것 평가 사전 조건에서으로 합니다.|  
-|`_Param_(n)`|`n`번째 매개 변수 1부터 계산 하는 함수를 `n`, 및 `n` 리터럴 정수 계열 상수입니다. 매개 변수 이름이이 주석은 매개 변수 이름으로 액세스 합니다. **참고:** `n` , 줄임표로 정의 된 또는 이름이 사용 되지 않습니다 함수 프로토타입을에 사용할 수 있습니다 하는 위치 매개 변수를 참조할 수 있습니다.  |  
+|`_Param_(n)`|`n`번째 매개 변수 1부터 계산 하는 함수를 `n`, 및 `n` 리터럴 정수 계열 상수입니다. 매개 변수 이름이이 주석은 매개 변수 이름으로 액세스 합니다. **참고:** `n` , 줄임표로 정의 된 또는 이름이 사용 되지 않습니다 함수 프로토타입을에 사용할 수 있습니다 하는 위치 매개 변수를 참조할 수 있습니다.|  
 |`return`|C/c + + 예약 키워드 `return` 함수의 반환 값을 나타내는 SAL 식에 사용할 수 있습니다.  값 에서만 사용 가능 게시물 상태 이면 것은 사전 상태에서 사용 하는 구문 오류입니다.|  
   
 ## <a name="string-specific"></a>특정 문자열  

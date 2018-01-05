@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 334f31dcd68e031bfb25b4e0dcd6ce55b9d2f20c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 58d22a756edd625a9c664862d05de5fe405fd9f0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>방법: 서비스의 데이터에 연결
 응용 프로그램을 실행 하 여 서비스에서 반환 되는 데이터 연결의 [데이터 소스 구성 마법사](../data-tools/media/data-source-configuration-wizard.png) 선택 하 고 **서비스** 에 **데이터소스형식선택**페이지.  

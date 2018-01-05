@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e5b0ddc7a8f521101e09f41b5036b4233a8bcdc6
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 430984d0f34c7596e78408d4138cd7506fdc7ba3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>혼합 최소 규칙 규칙 집합
 Microsoft 혼합 최소 규칙은 잠재적 보안 허점 및 응용 프로그램 충돌을 포함 하 여, 공용 언어 런타임을 지 원하는 c + + 프로젝트에서 가장 중요 한 문제에 집중 합니다. 공용 언어 런타임을 지 원하는 c + + 프로젝트에 대해 만드는이 규칙 사용자 지정 규칙 집합에 있는 집합을 포함 해야 합니다.  

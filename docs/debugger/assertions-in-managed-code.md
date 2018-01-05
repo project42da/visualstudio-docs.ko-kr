@@ -26,11 +26,12 @@ caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 283903076a5f6e465f3cb87be7d6710af8d914ef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: e60235e497f770d7e8ce30e27c3a86143f7144e4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assertions-in-managed-code"></a>관리 코드에 어설션 사용
 어설션 또는 `Assert` 문은 `Assert` 문에 대한 인수로 지정하는 조건을 테스트합니다. 조건이 true로 평가되면 동작이 발생하지 않고, 조건이 false로 평가되면 어설션이 실패합니다. 디버그 빌드로 실행 중인 경우 프로그램 중단 모드가 시작됩니다.  
@@ -141,7 +142,7 @@ Debug.Assert ( temp != 0 );
  [항목 내용](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Trace_and_Debug_Requirements"></a>Trace 및 Debug 요구 사항  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 마법사를 사용하여 프로젝트를 만드는 경우 릴리스 구성과 디버그 구성 모두에서 기본적으로 TRACE 기호가 정의됩니다. DEBUG 기호는 기본적으로 디버그 빌드에서만 정의됩니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 마법사를 사용하여 프로젝트를 만드는 경우 릴리스 구성과 디버그 구성 모두에서 기본적으로 TRACE 기호가 정의됩니다. 디버그 기호는 기본적으로 디버그 빌드에서만 정의됩니다.  
   
  그 밖의 경우에 <xref:System.Diagnostics.Trace> 메서드가 작동하려면 프로그램의 소스 파일 맨 위에 다음 중 하나가 있어야 합니다.  
   
@@ -155,7 +156,7 @@ Debug.Assert ( temp != 0 );
   
 -   Visual C# 및 C++에서는 `/d:TRACE`  
   
- C# 또는 Visual Basic 릴리스 빌드에서 Debug 메서드를 사용해야 하는 경우 릴리스 구성에서 DEBUG 기호를 정의해야 합니다.  
+ C# 또는 Visual Basic 릴리스 빌드에서 Debug 메서드를 사용해야 하는 경우 릴리스 구성에서 디버그 기호를 정의해야 합니다.  
   
  C++는 <xref:System.Diagnostics.Debug> 클래스 메서드를 지원하지 않습니다. 사용 하 여 동일한 결과 얻을 수는 <xref:System.Diagnostics.Trace> 와 같은 클래스에 조건부 컴파일을 `#ifdef DEBUG`... `#endif`. 이러한 기호를 정의할 수는  **\<프로젝트 > 속성 페이지** 대화 상자. 자세한 내용은 참조 [Visual Basic 디버그 구성에 대 한 프로젝트 설정 변경](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) 또는 [C 또는 c + + 디버그 구성에 대 한 프로젝트 설정 변경](../debugger/project-settings-for-a-cpp-debug-configuration.md)합니다.  
   

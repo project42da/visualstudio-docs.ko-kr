@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b8206ed1f1215a88408db6f3ef0be387932ec11a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c1349a2d92f8c824fe61844ba04606ed16075d3d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-interface-access-sdk-reference"></a>디버그 인터페이스 액세스 SDK 참조
 모든 인터페이스 및 지원 열거형 및 구조 DIA sdk에서에 대 한 전체 참조 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [인터페이스(디버그 인터페이스 액세스 SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)  
  DIA SDK에서 제공 하는 인터페이스의 모든 전체 참조 합니다.  
   

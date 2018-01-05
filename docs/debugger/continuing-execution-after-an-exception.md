@@ -29,11 +29,12 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9491eb19796c766d216af458ca122b1fa5032596
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 84ade967c00e33390402e16a1b2980277f89ed5a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="continuing-execution-after-an-exception"></a>예외 후 실행 계속
 예외로 인해 디버거에서 실행을 중단 될 때 표시 됩니다는 **예외 도우미**, 기본적으로 합니다. 사용 하지 않도록 설정한 경우는 **예외 도우미** 에 **옵션** 대화 상자, 표시 됩니다는 **예외 도우미** (C# 또는 Visual Basic) 또는 **예외**  대화 상자 (c + +).  

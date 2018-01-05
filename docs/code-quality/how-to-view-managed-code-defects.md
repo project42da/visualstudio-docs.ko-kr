@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cab0c6607865f82fab0320d171ba0a7671b01ea1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 4b509a1943419e9e12f13575da2fb7f9991c7ee5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-managed-code-defects"></a>방법: 관리 코드 오류 보기
 코드 분석에서 오류, 경고 및 메시지는 코드 분석 창에 보고됩니다. 코드 분석 창은 프로젝트 또는 솔루션에서 코드 분석을 실행할 때 자동으로 나타납니다.  

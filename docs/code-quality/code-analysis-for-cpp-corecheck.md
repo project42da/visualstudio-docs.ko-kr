@@ -12,11 +12,12 @@ ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a129fcc5cfabb46dfa545d7f70e291b121ee5353
-ms.sourcegitcommit: 24f81b8fb59722cf4a856005227f6a29bb2990cd
+ms.workload: cplusplus
+ms.openlocfilehash: c17574722804409b58d648af66b255888e945db2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C + + 핵심 지침 검사기 참조
 이 섹션에는 c + + 코어 지침 검사기 경고가 나열 됩니다. 코드 분석에 대 한 정보를 참조 하십시오. [/analyze (코드 분석)](/cpp/build/reference/analyze-code-analysis) 및 [빠른 시작: C/c + +에 대 한 코드 분석](../code-quality/quick-start-code-analysis-for-c-cpp.md)합니다.  

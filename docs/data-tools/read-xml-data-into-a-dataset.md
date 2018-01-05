@@ -24,11 +24,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 31c17df9b8b3e0a0b54d99f95e8a3d5704140cf7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 093dbb5ee8f088a7f2e4ccd1dd063cfeecc2c5e3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="read-xml-data-into-a-dataset"></a>데이터 집합에 XML 데이터 읽기
 ADO.NET에는 XML 데이터 작업을 위한 간단한 방법을 제공 합니다. 이 연습에서는 데이터 집합에 XML 데이터를 로드 하는 Windows 응용 프로그램을 만듭니다. 데이터 집합은 다음에 표시 되는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 마지막으로, XML 파일의 내용에 따라 XML 스키마 텍스트 상자에 표시 됩니다.  
@@ -165,13 +166,13 @@ ADO.NET에는 XML 데이터 작업을 위한 간단한 방법을 제공 합니�
   
 3.  다음 속성을 설정합니다.  
   
-    |컨트롤|속성|설정|  
+    |Control|속성|설정|  
     |-------------|--------------|-------------|  
     |`TextBox1`|**Multiline**|`true`|  
     ||**스크롤 막대**|**세로**|  
-    |`Button1`|**Name**|`ReadXmlButton`|  
+    |`Button1`|**이름**|`ReadXmlButton`|  
     ||**텍스트**|`Read XML`|  
-    |`Button2`|**Name**|`ShowSchemaButton`|  
+    |`Button2`|**이름**|`ShowSchemaButton`|  
     ||**텍스트**|`Show Schema`|  
   
 ## <a name="create-the-dataset-that-receives-the-xml-data"></a>XML 데이터를 수신 하는 데이터 집합 만들기  
@@ -241,7 +242,7 @@ ADO.NET에는 XML 데이터 작업을 위한 간단한 방법을 제공 합니�
 ## <a name="next-steps"></a>다음 단계  
  이 연습에서는 데이터 집합에 XML 파일을 읽을 수 있을 뿐만 아니라 XML 파일의 내용에 따라 스키마 만들기의 기본 사항을 보여 줍니다. 다음은 다음에 수행할 수 있는 몇 가지 작업입니다.  
   
--   데이터 집합 및 XML로 다시 씁니다에서 데이터를 편집 합니다. 자세한 내용은 <xref:System.Data.DataSet.WriteXml%2A>을 참조하십시오.  
+-   데이터 집합 및 XML로 다시 씁니다에서 데이터를 편집 합니다. 자세한 내용은 <xref:System.Data.DataSet.WriteXml%2A>을 참조하세요.  
   
 -   데이터 집합의 데이터를 편집 하 고 데이터베이스에이 기록 합니다. 자세한 내용은 참조 [Data](../data-tools/saving-data.md)합니다.  
   

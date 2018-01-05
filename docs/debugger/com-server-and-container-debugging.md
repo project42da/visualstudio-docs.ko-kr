@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 558640368021f3556db479fc431c66dae266c9a1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8d1e4ec34b55e9e24c33157446cd74262a640d4f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com-server-and-container-debugging"></a>COM 서버 및 컨테이너 디버깅
 COM 응용 프로그램은 프로그래머가 직접 제어할 수 없는 많은 작업을 수행합니다. DLL 사이의 통신, 개체 사용 횟수, 클립보드 작업 등 제한된 몇 가지 영역에서 프로그램이 비정상적으로 작동할 수 있습니다. 이러한 문제가 발생하면 먼저 문제가 발생한 위치를 추적해야 합니다.  

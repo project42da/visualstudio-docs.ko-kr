@@ -22,16 +22,17 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dfa752c56d26b16f1fac569ba05cfa44693c77a2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ce246c0ff960c78aed1901618fdc26bff97779d2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="suppress-warnings-by-using-the-suppressmessage-attribute"></a>SuppressMessage 특성을 사용하여 경고 표시 안 함
 경고 코드를 검토 하 고 경고를 표시 되지 않아야 결정 했음을 팀 멤버에 게 나타냄으로써 임을 나타내기 위해는 것이 유용 합니다. 소스 비 표시 오류 (ISS)에서 사용 하면 경고를 생성 하는 위치 가까이 경고를 억제 하는 특성을 배치 하는 개발자 수 있습니다. 소스 파일에 직접 ISS 특성을 추가할 수 있습니다 또는 바로 가기 메뉴에서 사용할 수 있습니다는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |||  
 |-|-|  

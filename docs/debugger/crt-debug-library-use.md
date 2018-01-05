@@ -31,11 +31,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2774eacfb0472145edb84d5c3becf77513ee986
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 420dcc98aad4f4ca2ad76d16b7f4c6c7c51d2beb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="crt-debug-library-use"></a>CRT 디버그 라이브러리 사용
 C 런타임 라이브러리는 디버깅을 폭넓게 지원합니다. 와 연결 해야 CRT 디버그 라이브러리 중 하나를 사용 하려면 [/debug](/cpp/build/reference/debug-generate-debug-info) 컴파일하여 **/MDd**, **/MTd**, 또는 **/LDd**합니다.  

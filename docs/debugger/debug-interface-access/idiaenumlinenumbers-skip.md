@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 96b1d63a0a76bb0fe2217cc0dedc18e3c66dc2ea
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 60a782f095a9ea26bc2d4bb57b8492b461dc9e45
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumlinenumbersskip"></a>IDiaEnumLineNumbers::Skip
 열거형 시퀀스에 줄 번호의 지정 된 수를 건너뜁니다.  

@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: aed66709c89c84c6dc4062ca8a4c2c3f38b368ec
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: data-storage
+ms.openlocfilehash: 5c1d86d634579370565f2def7af233b4edffae53
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>연습: WPF 및 Entity Framework를 사용 하 여 WCF 데이터 서비스를 만들기
 이 연습에서는 간단한을 만드는 방법을 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] 에 호스트 되는 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램 및 Windows Forms 응용 프로그램에서 다음 서비스에 액세스 합니다.  

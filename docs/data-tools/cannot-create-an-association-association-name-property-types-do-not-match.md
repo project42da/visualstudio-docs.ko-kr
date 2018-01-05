@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: c950abb08e937ded4511408367f7163f3b2e16de
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: be8bbbec67b70576aa3a059dd400d46c92137ab9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>연결을 만들 수 없습니다 &lt;association 이름이&gt; -속성 형식이 일치 하지 않습니다
 연결을 만들 수 없습니다 \<연결 이름 >-속성 형식이 일치 하지 않습니다. 속성 일치 하는 형식에는 없습니다: \<속성 이름 >.  

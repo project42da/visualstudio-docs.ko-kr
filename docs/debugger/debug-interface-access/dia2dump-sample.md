@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1a3166065680c193875c451626846a090e50cbc1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bd21806dee94031c6d5486daf1696e1f97e2956f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dia2dump-sample"></a>Dia2dump 샘플
 Dia2dump 샘플 Visual Studio와 함께 설치 되어 있고 Dia2dump.cpp 소스 파일을 포함 합니다. 명령줄에서 실행 하 고 전체 프로그램 데이터베이스 (.pdb) 파일의 내용을 표시 하는 컴파일된 실행 파일입니다.  

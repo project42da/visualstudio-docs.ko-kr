@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 44d64b7371f1b27afaa7796dc42d4b7864d20819
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 51b282cb86ca83ecf2ace1e4b12c8444928b15e1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-rule-sets-to-group-code-analysis-rules"></a>규칙 집합을 사용하여 코드 분석 규칙 그룹화
 코드 분석을 구성할 때 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], 또는 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)], Microsoft 기본 제공 목록에서 선택할 수 있습니다 *규칙 집합*합니다. 규칙 집합은 대상된 문제 및 특정 조건을 식별 하는 코드 분석 규칙의 논리적 그룹입니다. 예를 들어 공개적으로 사용할 수 있는 Api에 대 한 코드를 검색 하도록 디자인 된 규칙 집합을 적용할 수 하거나 최소 권장 규칙을 포함 하는 규칙 집합을 적용할 수 있습니다. 또한 모든 규칙을 포함 하는 규칙 집합을 적용할 수 있습니다.  
