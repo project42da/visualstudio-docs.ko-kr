@@ -16,11 +16,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: a2c836364092aa71f40d4d7aa4566b2d12def00e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0bb8155f2ec1ed6815ac37f1124dfbf57cf838b2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-feature-suspension"></a>자동 기능 일시 중단
 사용 가능한 시스템 메모리 200MB 이하로 떨어지면, Visual Studio 코드 편집기에서 다음 메시지를 표시 합니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
 -   모든 참조 찾기  
   
--   다음 탐색  
+-   탐색  
   
 -   사용 하 여 추가  
   
