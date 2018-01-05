@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e9218d3908872871ff5dab13529e8b1cbcec0c8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2b94cb7c11c803e713609036db12c47e2027cb61
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: 특성을 AttributeUsageAttribute로 표시하십시오.
 |||  
@@ -41,12 +42,12 @@ ms.lasthandoff: 10/31/2017
  <xref:System.AttributeTargets?displayProperty=fullName> 열거형을 사용자 지정 특성에 대해 지정할 수 있는 대상을 정의 합니다. 생략 하면 <xref:System.AttributeUsageAttribute>, 사용자 지정 특성에 정의 된 대로 모든 대상에 대해 유효 하지 됩니다는 `All` 값 <xref:System.AttributeTargets> 열거 합니다.  
   
 ## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결 하려면 사용 하 여 특성에 대 한 대상을 지정 <xref:System.AttributeUsageAttribute>합니다. 다음 예제를 참조하십시오.  
+ 이 규칙 위반 문제를 해결 하려면 사용 하 여 특성에 대 한 대상을 지정 <xref:System.AttributeUsageAttribute>합니다. 다음 예제를 참조하세요.  
   
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  메시지를 제외 하는 대신이 규칙 위반 문제를 해결 해야 합니다. 특성을 상속 하는 경우에 <xref:System.AttributeUsageAttribute>, 코드 유지 관리를 간소화 하는 특성이 있어야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 가지 특성을 정의합니다. `BadCodeMaintainerAttribute`생략 된 올바르지 않은 <xref:System.AttributeUsageAttribute> 문, 및 `GoodCodeMaintainerAttribute` 올바르게이 단원의 앞에서 설명한 특성을 구현 합니다. 속성 `DeveloperName` 설계 규칙에 필요한 [CA1019: 특성 인수의 접근자를 정의](../code-quality/ca1019-define-accessors-for-attribute-arguments.md) 완전성을 위해 포함 됩니다.  
   
  [!code-csharp[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/CSharp/ca1018-mark-attributes-with-attributeusageattribute_1.cs)]

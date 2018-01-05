@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 414a533e781be82cd0ffef1e9db234738ef07f16
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b716a809f1d2a5bcf73b9dda77b94d637b2e8493
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: AssemblyVersionAttribute로 어셈블리 표시
 |||  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
 -   버전 번호  
   
--   문화권  
+-   culture  
   
 -   강력한 이름의 어셈블리 공개 키입니다.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  제 3 자에서 또는 프로덕션 환경에서 사용 되는 어셈블리에 대 한이 규칙에서는 경고를에서 표시 하지 마십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 어셈블리를는 <xref:System.Reflection.AssemblyVersionAttribute> 특성이 적용 합니다.  
   
  [!code-csharp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CSharp/ca1016-mark-assemblies-with-assemblyversionattribute_1.cs)]

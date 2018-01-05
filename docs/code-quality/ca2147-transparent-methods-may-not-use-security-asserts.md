@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4893dbf799a964024fef59b7b0092b3066e8fdd4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 38ac5492c987515c7c6504c91d2e035f8b8645ff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2147-transparent-methods-may-not-use-security-asserts"></a>CA2147: 투명 메서드는 보안 어설션을 사용할 수 없습니다.
 |||  
@@ -51,12 +52,12 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서 메시지를 표시 하지 마십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 코드는 경우 실패 `SecurityTestClass` 경우는 투명 하 고는 `Assert` 메서드가 throw 한 <xref:System.InvalidOperationException>합니다.  
   
  [!code-csharp[FxCop.Security.CA2147.TransparentMethodsMustNotUseSecurityAsserts#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  첫 번째 방법은 다음 예제에서 SecurityTransparentMethod 메서드 코드 검토 하 고 메서드가 권한 상승로 간주 되 면 표시 SecurityTransparentMethod with 보안에 중요 한이 있어야 하는 자세한, 완료 및 오류 없이 보안 함께 모든 설명선 Assert 메서드 내에서 발생 하는 방법에 감사를 수행 해야 합니다.  
   
  [!code-csharp[FxCop.Security.SecurityTransparentCode2#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_2.cs)]  

@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 98833f1feccd70c3bdf140b4d2be7a4ad1a5d6bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: f767c923d319a0accce655eea84a6fff22dc5069
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: 네이티브 리소스를 사용하는 경우에는 GC.KeepAlive를 호출하십시오.
 |||  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
  제외 하기 전에 다른 메시지를 주의 깊게 검토 합니다. 이 규칙에서는 디버그 하 고 재현 하기 어려운 오류를 감지 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 `BadMethod`에는 `GC.KeepAlive`에 대한 호출이 포함되지 않으므로 규칙을 위반합니다. `GoodMethod`수정 된 코드를 포함합니다.  
   
 > [!NOTE]

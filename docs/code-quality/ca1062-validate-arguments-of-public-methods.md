@@ -19,11 +19,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8f225159e551dac2327c35774db846eec4ccc6fc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: eb659fa8bfd18d8caf4a7473f6cd53809d0a126b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: public 메서드의 인수의 유효성을 검사하십시오.
 |||  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  역참조 매개 변수는 함수에서 다른 메서드 호출 검증 된 확신 하는 경우이 규칙에서는 경고를에서 억제할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 규칙을 위반 하는 메서드 및 규칙을 충족 하는 메서드를 보여 줍니다.  
   
  ```csharp
@@ -116,7 +117,7 @@ Namespace DesignLibrary
 End Namespace
 ```
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!INCLUDE[vsprvslong](../code-quality/includes/vsprvslong_md.md)],이 규칙 매개 변수 유효성 검사를 수행 하는 다른 메서드에 전달 되는 검색 하지 않습니다.  
 
 ```csharp
@@ -150,7 +151,7 @@ Private Sub EnsureNotNull(ByVal value As String)
 End Sub
 ```
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  개체를 참조 하는 필드 또는 속성을 채우는 복사 생성자는 CA1062 규칙을 위반할 수 있습니다. 복사 생성자에 전달 되는 복사 된 개체 수 있기 때문에 위반이 발생 `null` (`Nothing` Visual basic에서). 위반을 해결 하려면 정적 (Visual Basic의 경우 Shared) 메서드를 사용 하 여 복사한 개체 null 인지 확인 합니다.  
   
  다음에서 `Person` 클래스 예제는 `other` 에 전달 되는 개체는 `Person` 복사 생성자 수도 `null`합니다.  
@@ -176,7 +177,7 @@ public class Person
 }  
 ```
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 수정 된 `Person` 예제에서는 `other` 에서 null에 대 한 복사 생성자에 전달 되는 개체를 먼저 검사는 `PassThroughNonNull` 메서드.  
   
 ```csharp  

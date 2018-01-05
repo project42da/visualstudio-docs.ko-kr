@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 72892328e9e0cd2f85176cfc4a514d64f853d209
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 72b72ce474a24d77b3b40513c2e69fb5ab4aea59
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-additional-code-information-by-using-analysisassume"></a>How to: Using __analysis_assume 사용하여 추가 코드 정보 지정
 C/c + + 코드를 분석 프로세스는 데 도움이 되 고 줄어들지만 경고에 대 한 코드 분석 도구에 대 한 힌트를 제공할 수 있습니다. 추가 정보를 제공 하려면 다음 함수를 사용 합니다.  
@@ -32,7 +33,7 @@ C/c + + 코드를 분석 프로세스는 데 도움이 되 고 줄어들지만 �
 > [!NOTE]
 >  `__analysis_assume`코드 최적화를 영향을 주지 않습니다. 코드 분석 도구를 사용 하는 외부 `__analysis_assume` no-op으로 정의 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `__analysis_assume` 코드 분석 경고를 해결 하려면 [C6388](../code-quality/c6388.md):  
   
 ```  

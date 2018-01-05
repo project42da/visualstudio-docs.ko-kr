@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dbc2ba8f78cc8f38bce62adbd3d91604875bffa3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: aspnet
+ms.openlocfilehash: 51ece959ad0c33c4676e81203cacc025d9ef2884
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-code-analysis-for-an-aspnet-web-application"></a>방법: ASP.NET 웹 응용 프로그램에 대한 코드 분석 구성
 [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] 및 [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)] 코드 분석의 목록에서 선택할 수 있습니다 *규칙 집합* 에 적용할 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램입니다. 기본 규칙 집합은 Microsoft Mininimum 권장 규칙입니다. 웹 사이트에 적용 되도록 설정 하는 또 다른 규칙을 선택할 수 있습니다.  

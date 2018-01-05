@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9a6fc1bac1b13d432f395842c7de4ce6250dd708
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9fc94331b95f70f5ee73eae24172f1930d0ab8bf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1302-do-not-hardcode-locale-specific-strings"></a>CA1302: 로캘별 문자열을 하드 코딩하지 마십시오.
 |||  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  와 연결 된 시스템 위치 중 하나를 참조 하려면 리터럴 문자열을 사용 하지 않는 경우이 규칙에서는 경고를에서 표시 하지 않는를 안전 하 게는 <xref:System.Environment.SpecialFolder> 열거형입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는이 규칙에서 세 가지 경고를 생성 하는 일반적인 응용 프로그램 데이터 폴더의 경로 빌드합니다. 이 예제를 사용 하 여 경로 검색 하는 다음으로 <xref:System.Environment.GetFolderPath%2A> 메서드.  
   
  [!code-csharp[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/CSharp/ca1302-do-not-hardcode-locale-specific-strings_1.cs)]

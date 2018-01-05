@@ -15,11 +15,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 198e4b6d0ba2f3517cf907007cc544ca2e154013
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: multiple
+ms.openlocfilehash: c259a1d303c741d4e36af46250073b0378a65f8b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-code-metrics-data"></a>코드 메트릭 데이터 작업
 
@@ -103,7 +104,7 @@ ms.lasthandoff: 12/14/2017
 
 만들 수는 [VSTS Visual Studio Team Services ()](/vsts/index) 기반으로 하는 작업 항목으로 인해는 **코드 메트릭 결과** 창. 작업 항목을 만들 때 Visual Studio의 제목을 자동으로 입력 된 **제목** 필드 코드 메트릭 데이터는 **기록** 탭 합니다.
 
-VSTS에 대 한 자세한 내용은 작업 항목을 참조 하십시오 [작업 항목](/vsts/work/work-items/index)합니다.
+VSTS에 대 한 자세한 내용은 작업 항목을 참조 하십시오 [작업 항목 (VSTS)](/vsts/work/work-items/index)합니다.
 
 ### <a name="to-create-a-work-item-based-on-a-result"></a>결과에 따라 작업 항목을 만들려면
 

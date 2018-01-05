@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7caff553adfd812e671a2d8643b2352d9868ca43
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d20496fae54b0fdf2b0f0d17de0590c325bab0ee
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903: 대상 프레임워크에서 API만 사용하십시오.
 |||  
@@ -56,12 +57,12 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 관리 팩은 지정 된 서비스 팩 의도적인 종속성 아닌 경우에이 규칙에서는 경고를에서 표시 하지 마십시오. 이 경우 응용 프로그램이 서비스 팩이 설치 되지 않은 시스템에서 실행 하지 못할 수 있습니다. 경고를 억제 또는 의도적인 종속성이 경우이 규칙을 해제 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 DateTimeOffset만.NET 2.0 서비스 팩 1에서 사용할 수 있는 형식을 사용 하는 클래스를 보여 줍니다. 이 예제에서는.NET Framework 2.0가 선택한 프로젝트 속성에 대상 프레임 워크 드롭다운 목록에서 필요 합니다.  
   
  [!code-csharp[FxCop.Portability.UseOnlyApiFromTargetedFramework#1](../code-quality/codesnippet/CSharp/ca1903-use-only-api-from-targeted-framework_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 앞에서 설명한 위반 DateTimeOffset 형식의 사용 날짜/시간 형식으로 대체 하 여 문제를 해결 합니다.  
   
  [!code-csharp[FxCop.Portability.UseOnlyApiFromTargetedFramework2#1](../code-quality/codesnippet/CSharp/ca1903-use-only-api-from-targeted-framework_2.cs)]  

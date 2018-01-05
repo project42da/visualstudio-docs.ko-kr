@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 977f721ed45343e247f8639accc0fa5dc83263c6
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: be208c156e8710b6aa6b2821a5a85131f3c2e4b2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: APTCA 형식은 APTCA 기본 형식만 확장해야 합니다.
 |||  
@@ -60,17 +61,17 @@ ms.lasthandoff: 12/12/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를에서 표시 하지 않으려면,는 해당 형식에서 노출 하는 보호 된 멤버 직접 또는 간접적으로 불가 신뢰할 수 없는 호출자가 중요 한 정보, 작업 또는 악용에서 사용할 수 있는 리소스에 액세스할 수를 확인 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 어셈블리와 테스트 응용 프로그램을 사용 하 여이 규칙으로 검색 하는 보안 문제를 나타냅니다. 첫 번째 어셈블리에 APTCA 특성이 없고 부분적으로 신뢰할 수 있는 형식 상속 되지 않습니다 (나타내는 `T2` 이전 설명의).  
   
  [!code-csharp[FxCop.Security.NoAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  나타내는 두 번째 어셈블리는 `T1` 이전 설명의 되므로 완전히 신뢰할 수 있는 부분적으로 신뢰할 수 있는 호출자를 허용 합니다.  
   
  [!code-csharp[FxCop.Security.YesAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_2.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  에 표시 된 테스트 형식을 `X` 부분적으로 신뢰할 수 있는 어셈블리에는 이전 설명 합니다.  
   
  [!code-csharp[FxCop.Security.TestAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_3.cs)]  

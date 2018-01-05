@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: edd0bd14a75dfd58ca043bfaa663e2cfb2660e75
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 3d6f514546c298a134785740fe7bbf948031bc74
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Deny 및 PermitOnly 사용을 검토하십시오.
 |||  
@@ -58,14 +59,14 @@ ms.lasthandoff: 12/12/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  보안 검토를 완료 한 후에이 규칙에서 경고를 표시 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 몇 가지 제한 사항이 deny 보여 줍니다.  
   
  다음 라이브러리는 보호 하는 보안 요구 사항 이외에 동일한 두 메서드가 있는 클래스를 포함 합니다.  
   
  [!code-csharp[FxCop.Security.PermitAndDeny#1](../code-quality/codesnippet/CSharp/ca2107-review-deny-and-permit-only-usage_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 응용 프로그램 라이브러리에서 Deny의 보안이 유지 되는 방법에 영향을 보여 줍니다.  
   
  [!code-csharp[FxCop.Security.TestPermitAndDeny#1](../code-quality/codesnippet/CSharp/ca2107-review-deny-and-permit-only-usage_2.cs)]  

@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 47b872afd70a357938b8a9fd3fc7ecf7b180f77b
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: ad19c3fa245998d57542a5dfe1b9da0c61984626
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408: AutoDual ClassInterfaceType을 사용하지 마십시오.
 |||  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/12/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이후 버전에서 해당 형식과 그 기본 형식의 레이아웃이 변경 되지 않습니다 특정은 아닌 경우이 규칙에서는 경고를에서 표시 하지 마십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 명시적 인터페이스를 사용 하는 클래스를 다시 선언 규칙을 위반 하는 클래스를 보여 줍니다.  
   
  [!code-csharp[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/CSharp/ca1408-do-not-use-autodual-classinterfacetype_1.cs)]

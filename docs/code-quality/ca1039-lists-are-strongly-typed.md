@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 57bbb053c39680d8064fb757679ffadb3c87aeeb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 358ae06a2913f7b89338027c79f81c298253d23b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1039-lists-are-strongly-typed"></a>CA1039: 목록은 강력한 형식이어야 합니다.
 |||  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  새 컬렉션을 확장 하는 형식이 강력한 형식을 결정 하는 연결 된 목록 같은 새 개체 기반 컬렉션을 구현 하는 경우에이 규칙에서 경고를 표시 합니다. 이러한 형식은이 규칙을 준수 하 고 강력한 형식의 멤버를 노출 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 형식에서에서 `YourType` 확장 <xref:System.Collections.CollectionBase?displayProperty=fullName>와 마찬가지로 모든 강력한 형식의 컬렉션입니다. <xref:System.Collections.CollectionBase> 의 명시적 구현을 제공는 <xref:System.Collections.IList> 인터페이스입니다. 따라서 강력한 형식의 멤버를만 제공 해야 <xref:System.Collections.IList> 및 <xref:System.Collections.ICollection>합니다.  
   
  [!code-csharp[FxCop.Design.IListStrongTypes#1](../code-quality/codesnippet/CSharp/ca1039-lists-are-strongly-typed_1.cs)]  

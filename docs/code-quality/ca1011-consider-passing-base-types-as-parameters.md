@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ae6923e369d0f4245759bff2c66dc931dc51baf8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b8107edf5206e86c270c1e7e66d5cd39ea0da145
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: 기본 형식을 매개 변수로 전달해 보십시오.
 |||  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
  이러한 경우, 컴파일러와 런타임은에서 제공 하는 강력한 형식 검사로 인해 코드 보다 강력한 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 메서드를 `ManipulateFileStream`에 사용할 수 있는 한 <xref:System.IO.FileStream> 이 규칙을 위반 하는 개체입니다. 두 번째 방법은 `ManipulateAnyStream`, 대체 하 여 규칙을 충족는 <xref:System.IO.FileStream> 를 사용 하 여 매개 변수는 <xref:System.IO.Stream>합니다.  
   
  [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]

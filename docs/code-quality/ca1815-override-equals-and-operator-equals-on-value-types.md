@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 20b31e4ea20fd3d1a4ec254507962bf4e8946bb4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 927e13266bf308096592fb5714e1247f4b596ca8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1815-override-equals-and-operator-equals-on-value-types"></a>CA1815: 값 형식에서 Equals 또는 같음 연산자를 재정의하십시오.
 |||  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
  공용 값 형식을 재정의 하지 않는 <xref:System.Object.Equals%2A?displayProperty=fullName>, 또는 같음 연산자 (= =)를 구현 하지 않습니다. 이 규칙에서 열거형을 확인 하지 않습니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- 값 형식의 경우의 상속 된 구현 <xref:System.Object.Equals%2A> Reflection 라이브러리를 사용 하 고 모든 필드의 내용을 비교 합니다. Reflection에는 많은 계산이 요구되며 모든 필드의 일치 여부를 비교하는 것이 불필요할 수 있습니다. 비교 또는 정렬할 경우 사용자가 자격 증명 또는 해시 테이블 키로 사용할 경우에 값 형식을 구현 해야 <xref:System.Object.Equals%2A>합니다. 선택한 프로그래밍 언어 연산자 오버 로드를 지 원하는 경우 같음 및 같지 않음 연산자를 구현도 제공 해야 합니다.  
+ 값 형식의 경우의 상속 된 구현 <xref:System.Object.Equals%2A> Reflection 라이브러리를 사용 하 고 모든 필드의 내용을 비교 합니다. Reflection에는 많은 계산이 요구되며 모든 필드의 일치 여부를 비교하는 것이 불필요할 수 있습니다. 비교 또는 정렬할 경우 사용자가 자격 증명 또는 해시 테이블 키로 사용할 경우에 값 형식을 구현 해야 <xref:System.Object.Equals%2A>합니다. 프로그래밍 언어가 연산자 오버로드를 지원하는 경우 같음 및 같지 않음 연산자의 구현도 제공해야 합니다.  
   
 ## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
  이 규칙 위반 문제를 해결 하려면의 구현을 제공 <xref:System.Object.Equals%2A>합니다. 가능 하면 같음 연산자를 구현 합니다.  

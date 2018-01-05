@@ -18,11 +18,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d07e63363542a9bf5a1dd756026183349659abe1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9c8eedd58df2665b9e00051e40a07a0ac226ec6c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1036-override-methods-on-comparable-types"></a>CA1036: 비교 가능한 형식에 메서드를 재정의하십시오.
 |||  
@@ -54,12 +55,12 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  누락 된 연산자에 의해 위반이 발생 하 고 선택한 프로그래밍 언어는 Visual Basic.NET의 경우와 연산자 오버 로드를 지원 하지 하는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다. Op_Equality 연산자를 구현 하는 경우 의미가 없으며 응용 프로그램 컨텍스트에 이외의 같음 연산자에서 발생할 경우이 규칙에 대 한 경고를 표시 하지 않아도 안전 이기도 합니다. 그러나 해야 항상 op_Equality 통해 및 Object.Equals를 재정의 하는 경우 연산자 = = 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에는 올바르게 구현 하는 형식이 포함 되어 <xref:System.IComparable>합니다. 관련 된 다양 한 규칙을 만족 하는 메서드를 식별 하는 코드 주석을 <xref:System.Object.Equals%2A> 및 <xref:System.IComparable> 인터페이스입니다.  
   
  [!code-csharp[FxCop.Design.IComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 응용 프로그램의 동작을 테스트는 <xref:System.IComparable> 앞에 나온 구현 합니다.  
   
  [!code-csharp[FxCop.Design.TestIComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_2.cs)]  

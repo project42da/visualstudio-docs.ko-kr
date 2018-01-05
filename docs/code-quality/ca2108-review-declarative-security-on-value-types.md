@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a2d7ecd899b4da51e6ff200f1e18b00366db6669
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b05873b87767fa39cc6e0d675980bf658d76c584
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: 값 형식에서 선언적 보안을 검토하십시오.
 |||  
@@ -44,12 +45,12 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  모든 호출자가 보안 위협을 하지 않고 기본 상태로에서 값 형식의 인스턴스를 얻을 수 있는 경우이 규칙에서는 경고를에서 표시 하지 않을 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는이 규칙을 위반 하는 값 형식을 포함 하는 라이브러리를 보여 줍니다. `StructureManager` 유형 값 형식의 인스턴스를 전달 하는 호출자가 만들거나 인스턴스에 액세스할 수 있는 권한이 있다고 가정 합니다.  
   
  [!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 응용 프로그램 라이브러리의 약점을 보여 줍니다.  
   
  [!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]  

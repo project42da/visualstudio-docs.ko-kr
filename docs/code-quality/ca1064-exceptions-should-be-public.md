@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cd39b4655f4a1bc98e408655e86fa1068820c9f9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7779be831b32572addb6198b5a5be46616cdb1b4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1064-exceptions-should-be-public"></a>CA1064: 예외는 public이어야 합니다.
 |||  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  모든 경우에는 내부 범위 내에서 개인 예외를 발생 됩니다는 확신 하는 경우이 규칙에서 메시지를 표시 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 규칙은 첫 번째 예제에서는 메서드 FirstCustomException 예외 클래스 예외에서 직접 파생 되 고 내부 때문에 됩니다. 규칙은 클래스를 공용 선언 하지만 클래스도 예외에서 직접 파생 SecondCustomException 클래스에서 발생 하지 않습니다. 세 번째 클래스도 발생 하지 않습니다 규칙에서 직접 파생 되지 않는 <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, 또는 <xref:System.ApplicationException?displayProperty=fullName>합니다.  
   
  [!code-csharp[FxCop.Design.ExceptionsShouldBePublic.CA1064#1](../code-quality/codesnippet/CSharp/ca1064-exceptions-should-be-public_1.cs)]

@@ -18,11 +18,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 42fb569dbf469ed91f96b25818b717353d53bf0b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7a0c0bc8b24ef3ae5fd520a1f277896b533f5194
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1024-use-properties-where-appropriate"></a>CA1024: 적합한 속성을 사용하십시오.
 |||  
@@ -116,7 +117,7 @@ namespace Microsoft.Samples
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 여러 가지 방법을 속성로 변환 되어야 하 고 필드 처럼 작동 하지 않기 때문이 아니라 해야 하는 몇 가지 포함 되어 있습니다.  
   
  [!code-csharp[FxCop.Design.MethodsProperties#1](../code-quality/codesnippet/CSharp/ca1024-use-properties-where-appropriate_1.cs)]

@@ -18,11 +18,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a4836bdb470bf993bdc6f2b8f581859030016600
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 206d93d748a1d1033df48f9156997bd37b27f482
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-visual-studio-development-environment-for-c"></a>C#에 대 한 Visual Studio 개발 환경 사용 #
 Visual Studio 통합된 개발 환경 (IDE)은 공용 사용자 인터페이스를 통해 노출 되는 개발 도구의 컬렉션입니다. 일부 도구는 다른 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 언어와 공유되는 반면 C# 컴파일러 같은 일부 도구는 Visual C#에만 사용됩니다. 이 항목에서는 가장 중요한 C# 도구에 대한 링크를 제공합니다.  

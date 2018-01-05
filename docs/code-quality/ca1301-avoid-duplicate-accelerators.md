@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 13d2f36014ab15aea3148ab4175a89b77deb4846
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a61e4c0ab9957772609c20623f0bc6ef7659a9d2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: 중복 액셀러레이터 키를 사용하지 마십시오.
 |||  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 동일한 액세스 키가 있는 두 컨트롤을 포함 하는 최소한의 형태를 보여 줍니다. 키가 표시 되지 않는; 리소스 파일에 저장 그러나 해당 값 표시는 주석 처리 된 아웃 `checkBox.Text` 선입니다. 중복 액셀러레이터 키의 동작을 교환 하 여 검사할 수 있습니다는 `checkBox.Text` 줄 주석 처리 합니다. 그러나이 경우이 예제에서는 생성 하지 않습니다는 경고 규칙에서.  
   
  [!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../code-quality/codesnippet/CSharp/ca1301-avoid-duplicate-accelerators_1.cs)]  

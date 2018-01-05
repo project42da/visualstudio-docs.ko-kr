@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4cd654145fed46594fd2fcd076a20b30e393a23b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 932ac7e8f731974896991cea5ae504e452e9a036
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1304-specify-cultureinfo"></a>CA1304: CultureInfo를 지정하십시오.
 |||  
@@ -60,12 +61,12 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  기본 문화권/형식 공급자가 올바른은 것이 확실 및 코드 유지 관리는 중요 한 개발 우선 순위 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서 `BadMethod` 이 규칙을 두 번 위반 합니다. `GoodMethod`첫 번째 위반 System.String.Compare, 고정 문화권을 전달 하 여 수정 하 고 현재 문화권을 전달 하 여 두 번째 위반 수정 <xref:System.String.ToLower%2A> 때문에 `string3` 사용자에 게 표시 됩니다.  
   
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../code-quality/codesnippet/CSharp/ca1304-specify-cultureinfo_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 기본에서 현재 문화권의 효과 보여 줍니다. <xref:System.IFormatProvider> 으로 선택 되어 있는 <xref:System.DateTime> 유형입니다.  
   
  [!code-csharp[FxCop.Globalization.IFormatProvider#1](../code-quality/codesnippet/CSharp/ca1304-specify-cultureinfo_2.cs)]  

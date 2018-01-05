@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84a66d16241ff9f1f385bda8c1def6a82e5971a5
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 60cebdd015263ac5d05045e168d3f1063e0527a1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotating-function-behavior"></a>함수 동작에 주석 지정
 주석을 추가 하는 것 외에도 [함수 매개 변수 및 반환 값](../code-quality/annotating-function-parameters-and-return-values.md), 전체 함수의 속성을 주석 처리할 수 있습니다.  

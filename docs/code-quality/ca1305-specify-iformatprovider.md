@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3bb11846ed204ee15525266a750b218295c8d662
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8bb3d993cc79ebf683f0a2622628bfc87d7c065a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1305-specify-iformatprovider"></a>CA1305: IFormatProvider를 지정하십시오.
 |||  
@@ -60,12 +61,12 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  기본 문화권/형식 공급자가 올바르게 선택 하 고 코드 유지 관리 되지 않는 한 중요 한 개발 우선 순위는 것이 확실 한 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서 `BadMethod` 이 규칙을 두 번 위반 합니다. `GoodMethod`고정 문화권을 전달 하 여 첫 번째 위반이 해결 <xref:System.String.Compare%2A>, 현재 문화권을 전달 하 여 두 번째 위반을 해결 하 고 <xref:System.String.ToLower%2A> 때문에 `string3` 사용자에 게 표시 됩니다.  
   
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../code-quality/codesnippet/CSharp/ca1305-specify-iformatprovider_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 기본에서 현재 문화권의 효과 보여 줍니다. <xref:System.IFormatProvider> 으로 선택 되어 있는 <xref:System.DateTime> 유형입니다.  
   
  [!code-csharp[FxCop.Globalization.IFormatProvider#1](../code-quality/codesnippet/CSharp/ca1305-specify-iformatprovider_2.cs)]  

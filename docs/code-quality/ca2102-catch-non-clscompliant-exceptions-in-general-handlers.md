@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c241766a38ffc172924516e70b86ebdc22e117e2
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 17238e140f8672e9d2d5a67594eb26b415c0b8d8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102: 일반 처리기에서 비 CLSCompliant 예외를 catch하십시오.
 |||  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/12/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  Try 블록 비 CLS 비규격 예외가 생성 하는 모든 문이 포함 되어 있지 않으면이 규칙에서 경고를 표시 하지 않아도 안전 합니다. 네이티브 또는 관리 코드 비 CLS 비규격 예외 throw 할 수 있습니다, 때문에이 try 블록 내의 모든 코드 경로에 실행 될 수 있는 모든 코드에 대 한 지식이 필요 합니다. 공용 언어 런타임에 의해 비 CLS 규격 예외가 throw 되지 않습니다 확인 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 비 CLS 비규격 예외를 throw 하는 MSIL 클래스를 보여 줍니다.  
   
 ```  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/12/2017
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 규칙을 충족 하는 일반 catch 블록을 포함 하는 메서드를 보여 줍니다.  
   
  [!code-csharp[FxCop.Security.CatchNonClsCompliantException#1](../code-quality/codesnippet/CSharp/ca2102-catch-non-clscompliant-exceptions-in-general-handlers_1.cs)]  

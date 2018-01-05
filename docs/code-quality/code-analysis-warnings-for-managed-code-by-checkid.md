@@ -262,11 +262,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 11ad6bea31523474bb5b07aaad4be63de5741830
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 4f08a53f5af8342387ce5b523e29e007de3a0524
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>관리되는 코드에 대한 CheckId별 코드 분석 경고
 다음 표에서는 관리 코드에 대한 코드 분석 경고를 경고의 CheckId 식별자별로 보여 줍니다.  
@@ -455,7 +456,7 @@ ms.lasthandoff: 10/31/2017
 |CA2134|[CA2134: 메서드는 기본 메서드를 재정의할 때 일관성 있는 방식을 유지해야 합니다.](../code-quality/ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods.md)|이 규칙은 SecurityCriticalAttribute를 사용하여 표시된 메서드가 SecuritySafeCriticalAttribute를 사용하여 표시되거나 투명한 메서드를 재정의할 때 적용됩니다. 또한 SecuritySafeCriticalAttribute를 사용하여 표시되거나 투명한 메서드가 SecurityCriticalAttribute를 사용하여 표시된 메서드를 재정의할 때도 이 규칙이 적용됩니다. 이 규칙은 가상 메서드를 재정의하거나 인터페이스를 구현할 때 적용됩니다.|  
 |CA2135|[CA2135: 수준 2 어셈블리는 LinkDemands를 포함해서는 안 됩니다.](../code-quality/ca2135-level-2-assemblies-should-not-contain-linkdemands.md)|LinkDemands는 수준 2 보안 규칙 집합에서 사용되지 않습니다. JIT 컴파일 시 보안을 적용하는 데 LinkDemands를 사용하는 대신, 해당 메서드, 형식 및 필드를 SecurityCriticalAttribute 특성으로 표시하십시오.|  
 |CA2136|[CA2136: 멤버는 충돌하는 투명도 주석을 가져서는 안 됩니다.](../code-quality/ca2136-members-should-not-have-conflicting-transparency-annotations.md)|투명성 특성은 큰 범위의 코드 요소에서 작은 범위의 요소에 적용됩니다. 범위가 큰 코드 요소의 투명성 특성은 첫 번째 요소에 포함된 코드 요소의 투명성 특성보다 우선합니다. 예를 들어 SecurityCriticalAttribute를 사용하여 표시된 클래스에는 SecuritySafeCriticalAttribute 특성을 사용하여 표시된 메서드가 포함될 수 없습니다.|  
-|CA2137|[CA2137: 투명한 메서드는 안정형 IL만 포함해야 합니다.](../code-quality/ca2137-transparent-methods-must-contain-only-verifiable-il.md)|메서드가 확인할 수 없는 코드를 포함하거나 형식을 참조로 반환합니다. 이 규칙은 보안 투명 코드에서 확인할 수 없는 MSIL(Microsoft Intermediate Language)을 실행하려고 할 때 적용됩니다. 그러나 이 규칙은 완전한 IL 검증 도구를 포함하지 않으며 대신 휴리스틱을 사용하여 MSIL 확인 시 대부분의 위반을 catch합니다.|  
+|CA2137|[CA2137: 투명한 메서드는 안정형 IL만 포함해야 합니다.](../code-quality/ca2137-transparent-methods-must-contain-only-verifiable-il.md)|메서드가 확인할 수 없는 코드를 포함하거나 형식을 참조로 반환합니다. 이 규칙은 보안 투명 코드에서 확인할 수 없는 MSIL(Microsoft Intermediate Language)을 실행하려고 할 때 적용됩니다. 그러나 이 규칙은 완전한 IL 검증 도구를 포함하지 않으며 대신 추론을 사용하여 MSIL 확인 시 대부분의 위반을 catch합니다.|  
 |CA2138|[CA2138: 투명한 메서드는 SuppressUnmanagedCodeSecurity 특성을 가진 메서드를 호출해서는 안 됩니다.](../code-quality/ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute.md)|보안 투명 메서드가 SuppressUnmanagedCodeSecurityAttribute 특성을 사용하여 표시된 메서드를 호출합니다.|  
 |CA2139|[CA2139: 투명한 메서드는 HandleProcessCorruptingExceptions 특성을 사용할 수 없습니다.](../code-quality/ca2139-transparent-methods-may-not-use-the-handleprocesscorruptingexceptions-attribute.md)|이 규칙은 HandleProcessCorruptedStateExceptionsAttribute 특성을 사용하여 프로세스 손상 예외를 처리하려고 시도하는 모든 투명한 메서드에 적용됩니다. 프로세스 손상 예외는 AccessViolationException과 같은 예외의 CLR 버전 4.0 예외 분류입니다. HandleProcessCorruptedStateExceptionsAttribute 특성은 보안에 중요한 메서드에서만 사용할 수 있으며 투명 메서드에 적용되는 경우 무시됩니다.|  
 |CA2140|[CA2140: 투명 코드는 보안에 중요한 항목을 참조해서는 안 됩니다.](../code-quality/ca2140-transparent-code-must-not-reference-security-critical-items.md)|SecurityCriticalAttribute 특성을 사용하여 표시된 코드 요소는 보안에 중요합니다. 투명 메서드는 보안에 중요한 요소를 사용할 수 없습니다. 투명 형식이 보안에 중요한 형식을 사용하려고 시도하는 경우 TypeAccessException, MethodAccessException 또는 FieldAccessException이 발생합니다.|  

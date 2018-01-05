@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cbdc02843d0a2982a129dafd5948a4c1ab287427
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: ea1c408e524614009c8c12bda85afad397faf607
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Win32 API에 있는 동일한 기능의 관리되는 항목을 사용하십시오.
 |||  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  제안된 된 대체 메서드가 필요한 기능을 제공 하지 않는 경우에이 규칙에서 경고를 표시 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  플랫폼에는 다음 예제와 규칙을 위반 하는 메서드 정의 호출 합니다. 또한 플랫폼에 대 한 호출 메서드를 호출 하 고 해당 하는 관리 되는 메서드 표시 됩니다.  
   
  [!code-csharp[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/CSharp/ca2205-use-managed-equivalents-of-win32-api_1.cs)]

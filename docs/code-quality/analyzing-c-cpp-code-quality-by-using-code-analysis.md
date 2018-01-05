@@ -20,16 +20,17 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9694985711ee8bc9b46725214ecc6df2d5020b1d
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: e1f714756d13fd4606362f8923f4746a5a85c8ec
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analyzing-cc-code-quality-by-using-code-analysis"></a>코드 분석을 사용하여 C/C++ 코드 품질 분석
 Visual Studio에서 코드 분석을 통해 코드 오류를 찾고 수정하여 C/C++ 코드를 향상시킬 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |||  
 |-|-|  

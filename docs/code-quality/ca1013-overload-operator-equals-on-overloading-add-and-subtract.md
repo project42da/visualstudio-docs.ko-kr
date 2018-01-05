@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 65f8802e0eb4e06466d5178b0af56753d537dd74
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d668760159af34e8f22a69bed41de185fa4254e4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: 더하기 및 빼기를 오버로드할 때 같음 연산자를 오버로드하십시오.
 |||  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="rule-description"></a>규칙 설명  
  더하기 및 빼기와 같은 작업을 사용 하 여 형식의 인스턴스를 결합할 수 있습니다를 반환 하는 같음 정의 거의 항상 해야 `true` 구성 값이 같은 두 개의 인스턴스에 대해 합니다.  
   
- 같음 연산자의 오버 로드 된 구현에서 기본 같음 연산자를 사용할 수 없습니다. 이렇게 하면 스택 오버플로가 발생 합니다. 같음 연산자를 구현 하려면 구현에서 Object.Equals 메서드를 사용 합니다. 다음 예제를 참조하십시오.  
+ 같음 연산자의 오버 로드 된 구현에서 기본 같음 연산자를 사용할 수 없습니다. 이렇게 하면 스택 오버플로가 발생 합니다. 같음 연산자를 구현 하려면 구현에서 Object.Equals 메서드를 사용 합니다. 다음 예제를 참조하세요.  
   
 ```vb  
 If (Object.ReferenceEquals(left, Nothing)) Then  
@@ -64,12 +65,12 @@ return left.Equals(right);
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  같음 연산자의 기본 구현에서 형식에 대 한 올바른 동작을 제공 하는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 형식 정의 (`BadAddableType`)이이 규칙을 위반 하 합니다. 이 형식은 테스트 필드 값이 같은 두 인스턴스에 확인 하도록 같음 연산자를 구현 해야 `true` 같음에 대 한 합니다. 형식 `GoodAddableType` 수정 된 구현을 보여 줍니다. 이 형식은 또한 같지 않음 연산자를 구현 및 재정의 <xref:System.Object.Equals%2A> 다른 규칙을 충족 하기 위해 합니다. 완전 한 구현도 구현 <xref:System.Object.GetHashCode%2A>합니다.  
   
  [!code-csharp[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 같음 연산자에 대 한 기본 및 올바른 동작을 설명 하기 위해이 항목에서 이전에 정의 된 형식의 인스턴스를 사용 하 여 같음을 테스트 합니다.  
   
  [!code-csharp[FxCop.Design.TestAddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_2.cs)]  

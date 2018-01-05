@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 39d9697c7d6a216c08e34eb19287d22a76d67a55
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 19d8761abea6934c59673c332ea09e8a0b4e6997
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>방법: 코드 분석 체크 인 정책을 통해 유지 관리할 수 있는 코드 적용
 개발자가 코드 메트릭 도구를 사용 하 여 복잡성 및 코드의 유지 관리 용이성 측정 하도록 있지만 코드 메트릭 체크 인 정책의 일부로 호출할 수 없습니다. 그러나 팀 코드 메트릭 표준 코드의 준수를 확인 하 고 체크 인 정책을 통해 규칙을 적용 하는 코드 분석 규칙을 설정할 수 있습니다. 코드 메트릭에 대 한 자세한 내용은 참조는 [코드 메트릭 값](../code-quality/code-metrics-values.md)합니다.  

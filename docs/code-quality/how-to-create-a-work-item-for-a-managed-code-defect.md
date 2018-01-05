@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7f416f8000240101d8ac6e29603d1b2f662e1b76
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: d42545329cfce4486e17fac000035c77307f07b9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-work-item-for-a-managed-code-defect"></a>방법: 관리 코드 오류에 대한 작업 항목 만들기
 작업 항목 추적 내에서 작업 항목을 기록할 기능을 사용할 수 있습니다 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]합니다. 이 기능을 사용 하려면 프로젝트의 팀 프로젝트의 일부 여야 합니다 [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)]합니다.  
