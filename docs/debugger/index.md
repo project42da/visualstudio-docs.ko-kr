@@ -3,11 +3,11 @@ layout: LandingPage
 title: "Visual Studio에서 앱 디버그 | Microsoft Docs"
 description: "Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 디버그하는 방법에 대해 알아봅니다."
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 5a526302d11b259c87317ee14c660b0d6fef5541
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.openlocfilehash: 87f55a02e4e37d4daa8da0282182f7e3a45a0efa
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="debugging-in-visual-studio"></a>Visual Studio의 디버깅
 
@@ -69,7 +69,7 @@ Visual Studio 디버거를 사용하여 프로그램의 런타임 동작을 관�
         </a>
     </li>
         <li>
-        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/getting-started-with-the-debugger#video">
+        <a href="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
